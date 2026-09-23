@@ -11,4 +11,8 @@
 - [RFC 8200 IPv6 Specification](https://www.rfc-editor.org/rfc/rfc8200) — 128-bit addressing, anycast, header/MTU semantics.
 - [Oracle Java Language Specification](https://docs.oracle.com/javase/specs/jls/se26/html/jls-4.html) — primitive types, `char`, `boolean` and numeric widths.
 
+- [PostgreSQL SELECT documentation](https://www.postgresql.org/docs/17/queries-order.html) — `WHERE`/`GROUP BY`/`HAVING`/`ORDER BY` reasoning and result ordering.
+- [Python control-flow tutorial](https://docs.python.org/3/tutorial/controlflow.html) — `for`, `continue`, `break` and trace behavior.
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/CSRF_Prevention_Cheat_Sheet.html) — token and SameSite defense limits.
+
 외부 자료는 기술 사실을 검증하기 위한 참고이며, 실제 응시 전에는 Q-Net 출제기준의 최신 게시물을 우선한다.

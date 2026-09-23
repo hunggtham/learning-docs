@@ -1,8 +1,8 @@
-# 2. 모듈 (Module) & 독립성 (Independence)
+# 3. 모듈 (Module)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **2. 모듈 (Module) & 독립성 (Independence)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **3. 모듈 (Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -22,14 +22,13 @@
 
 ---
 
-## 2. 모듈 (Module) & 독립성 (Independence)
-**개념 (Khái niệm):** 시스템의 기능을 분리한 단위. 단독 컴파일과 재사용 가능 (Module là các đơn vị chức năng được phân tách của hệ thống, có thể biên dịch độc lập và tái sử dụng).
-
-*   **기능적 독립성 (Functional Independence - Tính độc lập chức năng):**
-    *   **Korean:** 각 모듈이 하나의 기능만을 수행하고 상호작용을 최소화하는 것. 결합도(Coupling)는 약하게(Weak), 응집도(Cohesion)는 강하게(Strong) 해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Mỗi module chỉ thực hiện một chức năng và hạn chế tương tác với bên ngoài. Cần Độ phụ thuộc (Coupling) thấp và Độ gắn kết (Cohesion) cao. Kích thước module nên nhỏ gọn.
-    *   **Example:**
-        *   *KR:* 독립된 로그인 모듈은 다른 모듈 변경 시 영향을 받지 않음.
-        *   *VN:* Module đăng nhập đứng độc lập, khi sửa giỏ hàng thì module đăng nhập không bị ảnh hưởng.
-
----
+## 3. 모듈 (Module)
+- **결합도 (Coupling - Độ kết dính giữa các module)**: Càng thấp càng tốt.
+  - 자료 (Data - Tốt nhất) < 스탬프 (Stamp) < 제어 (Control) < 외부 (External) < 공통 (Common) < 내용 (Content - Tệ nhất).
+  - 💡 **Mẹo ghi nhớ**: T/S/C/N/C/N (Tốt -> Tệ) -> **Tính Sao Cho Nhẹ Cả Người**
+- **응집도 (Cohesion - Độ gắn kết trong 1 module)**: Càng cao càng tốt.
+  - 기능적 (Functional - Tốt nhất) > 순차적 (Sequential) > 통신적 (Communication) > 절차적 (Procedural) > 시간적 (Temporal) > 논리적 (Logical) > 우연적 (Coincidental - Tệ nhất).
+  - 💡 **Mẹo ghi nhớ**: K/T/T/T/T/L/N (Tốt -> Tệ) -> **Không Thể Tin Thằng Trẻ Làm Ngốc**
+- **팬인 (Fan-In) / 팬아웃 (Fan-Out)**:
+  - Fan-in (Số module gọi nó): Cao thì tốt (tái sử dụng nhiều).
+  - Fan-out (Số module nó gọi): Càng thấp càng tốt.

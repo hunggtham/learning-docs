@@ -1,12 +1,12 @@
-# 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
+# 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-서브네팅, IPv4, IPv6
+OSI, 계층과, 네트워크, 프로토콜
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,29 +22,19 @@
 
 ---
 
-## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
-- **IPv4 헤더 필드**: Version, Header Length, TOS, Total Length, TTL (수명), Source/Destination Address 등.
-- **IPv4 클래스**:
-  - Class A: `0.~` (거대 망)
-  - Class B: `128.~` (중형 망)
-  - Class C: `192.~` (소형 망)
-- **IPv4 vs IPv6**:
-  - 주소 길이: IPv4(32비트) -> **IPv6(128비트)** 확장.
-  - IPv6 특징: 호스트 주소 자동 설정 지원, 기본 헤더 단순화, 플로 레이블링(QoS) 필드, 이동성 지원. 패킷 크기는 IPv6의 최대 패킷 크기와 경로 MTU 규칙을 따르며, IPsec 지원이 정의되어도 사용 여부는 별도 설정이다.
-- **데이터 전송 방법**:
-  - **유니캐스트 (Unicast)**: 1:1 통신.
-  - **멀티캐스트 (Multicast)**: 1:N (특정 그룹).
-  - **브로드캐스트 (Broadcast)**: 1:전체 (IPv4에서만 사용, 과부하 원인).
-  - **애니캐스트 (Anycast)**: 1:가장 가까운 1개 노드 (IPv6에서 도입).
+## 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
+- **응용 계층 (Application, 7계층)**: HTTP(웹), FTP(파일), SMTP(메일), DNS(도메인->IP 변환), SNMP(네트워크 관리).
+- **전송 계층 (Transport, 4계층)**:
+  - **TCP**: 연결형, 신뢰성 보장, 양방향. 흐름 제어.
+  - **UDP**: 비연결형, 신뢰성 낮음. 속도가 빨라 스트리밍에 유리.
+- **인터넷/네트워크 계층 (Network, 3계층)**: 라우터 사용.
+  - **IP**: 경로 설정.
+  - **ICMP**: 오류 보고 및 제어.
+  - **ARP**: IP 주소 -> MAC 주소 변환. (**RARP**는 반대).
+- **데이터 링크/네트워크 액세스 계층 (Data Link, 2계층)**: Ethernet(CSMA/CD 방식), HDLC.
 
 **Giải thích (Vietnamese):**
-IPv4 sắp hết số (vì chỉ có 32 bit = khoảng 4 tỷ địa chỉ). Nên người ta sinh ra IPv6 (128 bit = số lượng vô hạn). IPv6 bảo mật tốt hơn, không cần cấu hình DHCP phức tạp (tự gán địa chỉ) và loại bỏ Broadcast để tránh nghẽn mạng.
-
-**💡 Mẹo ghi nhớ (Mnemonics):**
-Các kiểu truyền:
-- Unicast = Nói chuyện riêng.
-- Multicast = Nhắn tin vào group chat Zalo.
-- Broadcast = Cầm loa hét cho cả trường nghe (Chỉ IPv4).
-- Anycast = Gọi tổng đài, ai rảnh thì nhấc máy nghe trước (Chỉ IPv6).
+- **ARP**: Khi biết địa chỉ IP, dùng ARP để hỏi xem "Máy nào có IP này, cho xin địa chỉ MAC của card mạng (phần cứng)".
+- **ICMP**: Lệnh `ping` hay dùng trên máy tính chính là chạy giao thức ICMP để kiểm tra mạng có thông không.
 
 ---

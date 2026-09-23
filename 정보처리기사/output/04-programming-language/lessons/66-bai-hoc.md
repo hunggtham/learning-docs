@@ -1,12 +1,12 @@
-# 251. 단순 if문 (Simple if Statement)
+# 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **251. 단순 if문 (Simple if Statement)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-단순
+에서의, 표준, 출력
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,10 @@
 
 ---
 
-## 251. 단순 if문 (Simple if Statement)
-- 조건의 참/거짓에 따라 실행할 문장 결정.
-- 문장이 두 개 이상이면 반드시 중괄호 `{ }`로 묶어야 함.
-- C언어에서는 조건식 결과가 0이면 거짓(False), **0 이외의 모든 값은 참(True)**으로 간주.
+## 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
+- `System.out.print()`: 형식 없이 그대로 출력 (줄바꿈 없음).
+- `System.out.println()`: 출력 후 자동으로 줄바꿈(Enter) 수행.
+- `System.out.printf()`: C언어처럼 서식 문자열(`%d` 등)을 사용하여 출력.
+- 문자열과 변수를 섞어 쓸 때 `+` 연산자로 연결 가능.
 
 ---

@@ -1,12 +1,12 @@
-# 운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)
+# 스크립트 및 운영체제 (Script Languages & Operating Systems)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **스크립트 및 운영체제 (Script Languages & Operating Systems)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-운영체제, 메모리, 프로세스, 관리
+스크립트, 운영체제
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,29 +22,48 @@
 
 ---
 
-## 운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)
-### 200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)
-- **최초 적합 (First Fit)**: 첫 번째 분할 영역에 배치 (Vị trí trống đầu tiên đủ lớn).
-- **최적 적합 (Best Fit)**: 단편화가 가장 작은 영역 (Vị trí trống vừa vặn nhất, để lại ít rác nhất).
-- **최악 적합 (Worst Fit)**: 단편화가 가장 큰 영역 (Vị trí trống lớn nhất).
-  - 💡 *Mẹo ghi nhớ*: First = Nhanh nhất. Best = Tiết kiệm nhất. Worst = Còn lại khoảng trống lớn nhất.
+## 스크립트 및 운영체제 (Script Languages & Operating Systems)
+### 193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)
+- **자바스크립트 (JavaScript)**: 클라이언트용 웹 동작 제어 (Phía client, điều khiển hành vi web).
+- **PHP**: 서버용 스크립트 언어 (Phía server, dùng trên Linux, Unix, Windows).
+- **파이썬 (Python)**: 대화형 인터프리터 언어 (Ngôn ngữ thông dịch tương tác).
+- **쉘 스크립트 (Shell Script)**: 명령어들의 조합 (Tập hợp các lệnh shell).
+- **Basic**: 절차지향 대화형 인터프리터 (Thông dịch tương tác, hướng thủ tục).
+  - 💡 *Mẹo ghi nhớ*: JS = Client Web, PHP = Server, Python = Thông dịch, Shell = Lệnh HĐH.
 
-### 201. 페이지 교체 알고리즘 - FIFO (Page Replacement - FIFO / Thuật toán thay thế trang)
-- 가장 먼저 들어와서 가장 오래 있었던 페이지를 교체 (Thay thế trang vào bộ nhớ sớm nhất - First In First Out).
+### 194. 쉘 스크립트 제어문 (Shell Script Control Statements)
+- **선택형 (Điều kiện)**: `if`, `case`
+- **반복형 (Vòng lặp)**: `for`, `while`, `until`
 
-### 202. 스래싱 (Thrashing)
-- 프로세스 처리 시간보다 페이지 교체 시간이 더 많아지는 현상 (Hiện tượng mất nhiều thời gian cho việc tráo đổi trang bộ nhớ hơn là thực thi tiến trình).
-  - 💡 *Mẹo ghi nhớ*: Thrashing = Kẹt xe bộ nhớ (quá tải).
+### 195. 라이브러리 (Libraries / Thư viện)
+- **표준 (Standard)**: 기본적으로 포함된 모듈 (Tích hợp sẵn trong ngôn ngữ).
+- **외부 (External)**: 다운받아 설치한 후 사용 (Phải tải và cài đặt từ bên ngoài).
+  - 💡 *Mẹo ghi nhớ*: Built-in = Không cần cài, External = Cần pip/npm/v.v.
 
-### 203. 프로세스 상태 (Process States / Trạng thái tiến trình)
-- 제출(Submit) → 접수(Hold) → 준비(Ready) → 실행(Run) → 대기(Wait/Block) → 종료(Exit).
-  - 💡 *Mẹo ghi nhớ*: Nộp -> Nhận -> Chờ chạy -> Chạy -> (Tạm dừng nếu cần) -> Xong.
+### 196. C언어의 stdlib.h (Standard Library in C)
+- 자료형 변환, 난수 발생, 메모리 할당 기능을 제공한다. (Cung cấp chức năng ép kiểu, tạo số ngẫu nhiên, cấp phát bộ nhớ).
+- 주요 함수 (Các hàm chính): `atoi`, `atof`, `srand`, `rand`, `malloc`, `free`.
 
-### 204. 스케줄링 - SJF (Shortest Job First / Việc ngắn làm trước)
-- 실행 시간이 가장 짧은 프로세스에게 먼저 CPU 할당 (Ưu tiên tiến trình có thời gian thực thi ngắn nhất).
+### 197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)
+- 대부분 C 언어로 작성 (Viết chủ yếu bằng C -> tính di động cao).
+- 다중 사용자 (Multi User), 다중 작업 (Multi Tasking) 지원 (Hỗ trợ đa người dùng, đa nhiệm).
+- 트리 구조의 파일 시스템 (Hệ thống tập tin cấu trúc cây).
+  - 💡 *Mẹo ghi nhớ*: UNIX = C + Cây (Tree) + Đa nhiệm/Đa người dùng.
 
-### 205. 스케줄링 - HRN (Highest Response-ratio Next)
-- 우선순위 = `(대기 시간 + 서비스 시간) / 서비스 시간`
-- (Priority = (Wait time + Service time) / Service time).
-  - *Example / Ví dụ*: Đợi 10, Chạy 5 => `(10+5)/5 = 3`.
-  - 💡 *Mẹo ghi nhớ*: Công thức = `(Đợi + Chạy) / Chạy`. Số càng lớn càng ưu tiên. Giải quyết nhược điểm của SJF (tiến trình dài bị bỏ đói).
+### 198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)
+- 프로세스, 기억장치, 파일 시스템, 입출력 관리 (Quản lý tiến trình, bộ nhớ, hệ thống tập tin, I/O).
+  - 💡 *Mẹo ghi nhớ*: Kernel là "Trái tim" làm mọi công việc cốt lõi phần cứng.
+
+### 199. UNIX - 쉘(Shell)
+- 명령어 해석기, 시스템과 사용자 간의 인터페이스 담당. (Trình biên dịch dòng lệnh, giao diện giữa người dùng và HĐH).
+  - 💡 *Mẹo ghi nhớ*: Shell là "Vỏ bọc" giao tiếp với Kernel.
+
+### 206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)
+- `fork`: 새로운 프로세스 생성 (Tạo tiến trình mới).
+- `uname`: 시스템 정보 표시 (Hiển thị thông tin hệ thống).
+- `wait`: 자식 프로세스 종료 대기 (Chờ tiến trình con kết thúc).
+- `chmod`: 파일 보호 모드 설정 (Đổi quyền truy cập file).
+- `ls`: 파일 목록 확인 (Liệt kê file).
+- `cat`: 파일 내용 표시 (Xem nội dung file).
+- `chown`: 소유자 변경 (Đổi chủ sở hữu file).
+  - 💡 *Mẹo ghi nhớ*: fork (nhân bản, nĩa), chmod (change mode), chown (change owner).

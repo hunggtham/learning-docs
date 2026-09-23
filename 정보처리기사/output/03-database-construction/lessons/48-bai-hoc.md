@@ -1,12 +1,12 @@
-# 194. 파티션 (Partition)
+# 190. CRUD 분석
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **194. 파티션 (Partition)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **190. CRUD 분석**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-파티션
+CRUD, 분석
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,6 @@
 
 ---
 
-## 194. 파티션 (Partition)
-- 대용량 테이블/인덱스를 작은 논리적 단위로 분할.
-- 종류: 범위(Range - 예: 월별), 해시(Hash), 조합(Composite), 목록(List), 라운드 로빈(Round Robin).
-- **VI (Vietnamese) (Tiếng Việt):** Phân vùng dữ liệu (Partition). Chia bảng lớn thành phần nhỏ: theo Khoảng (Range), Băm (Hash), Danh sách (List)...
+## 190. CRUD 분석
+- Create, Read, Update, Delete 연산의 매트릭스 분석으로 데이터 양 유추.
+- **VI (Vietnamese) (Tiếng Việt):** Phân tích ma trận CRUD (Tạo, Đọc, Sửa, Xóa).

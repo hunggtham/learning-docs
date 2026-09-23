@@ -71,7 +71,7 @@ def main() -> int:
         errors.append("output/RESEARCH_REGISTER.md: missing research register")
     else:
         research_text = research.read_text(encoding="utf-8")
-        for required in ("Q-Net", "RFC 8200", "Oracle Java Language Specification"):
+        for required in ("Q-Net", "RFC 8200", "Oracle Java Language Specification", "PostgreSQL", "Python", "OWASP"):
             if required not in research_text:
                 errors.append(f"output/RESEARCH_REGISTER.md: missing source {required}")
 

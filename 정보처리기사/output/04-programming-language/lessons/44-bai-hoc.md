@@ -1,12 +1,12 @@
-# 네트워크 통신 (Network Communication)
+# 297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **네트워크 통신 (Network Communication)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-네트워크, 통신
+프로세스와, 스레드, 스케줄링
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,31 +22,16 @@
 
 ---
 
-## 네트워크 통신 (Network Communication)
-### 207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)
-- 8비트씩 4부분, 총 32비트 (4 phần, mỗi phần 8 bit -> 32 bit). A~E 클래스.
+## 297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)
+- **프로세스(Process)**: **PCB(Process Control Block)를 가진** 실행 중인 프로그램.
+- **상태 전이**:
+  - **Dispatch**: 준비(Ready) -> 실행(Run) (CPU 할당 받음).
+  - **Timeout**: 실행(Run) -> 준비(Ready) (시간 초과).
+  - **Wake Up**: 대기(Wait) -> 준비(Ready) (입출력 완료).
+- **스레드(Thread)**: 프로세스 내의 독립적인 실행 흐름 (최소 작업 단위). 프로세스의 자원을 공유하여 병행성 증대 및 문맥 교환 오버헤드 감소.
+- **비선점 스케줄링 (Non-Preemptive)**:
+  - FCFS: 먼저 온 순서대로.
+  - SJF: 실행 시간이 가장 짧은 것 먼저.
+  - **HRN**: 대기 시간과 서비스 시간을 고려해 기아(Starvation) 현상 해결. 공식: **(대기시간 + 서비스시간) / 서비스시간** (값이 클수록 우선).
 
-### 208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)
-- 16비트씩 8부분, 총 128비트 (8 phần, mỗi phần 16 bit -> 128 bit, dùng hệ Hex).
-- 유니캐스트(Unicast), 멀티캐스트(Multicast), 애니캐스트(Anycast).
-  - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`).
-
-### OSI 7계층 (OSI 7 Layers)
-- **209. 데이터 링크 계층 (Data Link)**: 인접 시스템 간 신뢰성 있는 전송. 흐름/오류 제어 (HDLC, PPP). (Truyền tải tin cậy giữa các nút lân cận).
-- **210. 네트워크 계층 (Network)**: 경로 설정, 패킷 라우팅. (Định tuyến, chuyển mạch gói).
-- **211. 전송 계층 (Transport)**: 종단 간 투명한 데이터 전송. (Truyền tải End-to-End, TCP/UDP).
-- **212. 세션 계층 (Session)**: 대화 제어, 동기화 (Quản lý phiên, đồng bộ hóa hội thoại).
-  - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token.
-
-### 213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)
-- **리피터 (Repeater)**: 신호 재생 (Khuếch đại tín hiệu).
-- **브리지 (Bridge)**: LAN 연결 (Kết nối mạng LAN cùng loại).
-- **라우터 (Router)**: 최적 경로 선택 (Chọn đường đi tối ưu).
-- **스위치 (Switch)**: 여러 랜선 연결 (Chuyển mạch mạng LAN).
-- **브라우터 (Brouter)**: Bridge + Router.
-
-### TCP/IP 프로토콜 (TCP/IP Protocols)
-- **214. MQTT**: IoT에서 사용하는 발행-구독 메시징 (Giao thức Publish/Subscribe cho IoT).
-- **215. TCP**: 신뢰성 있는 양방향 연결형 서비스 (Kết nối hai chiều, đáng tin cậy).
-- **216. UDP**: 비연결형, 빠른 속도, 실시간 전송 유리 (Không kết nối, truyền nhanh, hợp với Real-time).
-  - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game).
+---

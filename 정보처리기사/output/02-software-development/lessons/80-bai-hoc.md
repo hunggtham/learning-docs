@@ -1,12 +1,12 @@
-# 33. DBMS (데이터베이스 관리 시스템)
+# 28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **33. DBMS (데이터베이스 관리 시스템)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-DBMS
+선형, 리스트, 심화, 연속, 연결
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,16 +22,17 @@ DBMS
 
 ---
 
-## 33. DBMS (데이터베이스 관리 시스템)
-* 사용자와 데이터베이스 사이에서 정보를 생성하고 데이터베이스를 관리해 주는 소프트웨어.
-* **필수 기능 3가지**:
-  * **정의 기능 (Definition)**: 데이터 형, 구조, 제약조건 등 명시.
-  * **조작 기능 (Manipulation)**: 데이터 검색, 갱신, 삽입, 삭제(인터페이스 제공).
-  * **제어 기능 (Control)**: 데이터 무결성 유지, 보안, 정확성 제어.
-* **장점**: 데이터 중복 최소화, 독립성 보장, 일관성/무결성/보안 유지, 실시간 처리.
-* **단점**: 전문가 부족, 전산화 비용 증가, 과부하 발생 시 백업/회복 어려움, 시스템 복잡.
-* **VI (Vietnamese) (Tiếng Việt):** Hệ quản trị CSDL.
-  * 3 chức năng: Định nghĩa (Cấu trúc), Thao tác (Thêm/Sửa/Xóa/Tìm), Điều khiển (Bảo mật, toàn vẹn).
-  * Ưu điểm: Giảm trùng lặp, nhất quán. Nhược điểm: Tốn kém, phức tạp.
-* **Example**: Oracle, MySQL 등이 대표적인 DBMS입니다.
-* 💡 **Mẹo ghi nhớ**: Đ-T-Đ (Định nghĩa, Thao tác, Điều khiển) = D-M-C (Define, Manipulate, Control).
+## 28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
+* 앞서 배운 선형 리스트는 두 가지로 나뉩니다.
+* **연속 리스트 (Contiguous List - 예: 배열)**:
+  * 연속되는 기억장소에 저장. 기억장소 이용 효율 밀도가 1(가장 좋음).
+  * 중간에 데이터를 삽입/삭제 시 자료의 이동이 필요(오버헤드 발생).
+* **연결 리스트 (Linked List)**:
+  * 임의의 기억공간에 저장하며, 포인터(링크)를 이용해 서로 연결.
+  * 노드의 삽입/삭제가 용이. 순차 리스트에 비해 기억 공간 이용 효율은 낮고, 포인터를 찾는 시간 때문에 접근 속도가 느림.
+  * 중간 노드가 끊어지면 다음 노드를 찾기 힘듦.
+* **오버플로/언더플로 (Overflow/Underflow)**: 스택/리스트가 꽉 찬 상태에서 삽입하면 Overflow, 빈 상태에서 삭제하면 Underflow 발생.
+* **VI (Vietnamese) (Tiếng Việt):**
+  * Contiguous List (Mảng): Dữ liệu lưu liên tiếp. Chèn/Xóa chậm do phải dịch chuyển dữ liệu. Mật độ = 1.
+  * Linked List (Danh sách liên kết): Dữ liệu lưu rải rác, nối bằng pointer. Chèn/Xóa nhanh, nhưng truy cập chậm.
+* 💡 **Mẹo ghi nhớ**: Array = Nhà chung cư sát vách. Linked List = Các nhà rải rác nhưng có bản đồ chỉ đường đến nhà tiếp theo.

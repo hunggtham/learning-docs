@@ -1,12 +1,12 @@
-# 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
+# 254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로그래밍, 언어의, 종류
+반복문과, 제어, 키워드
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,12 +22,17 @@
 
 ---
 
-## 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
-- **절차적 언어**: 실행 순서 중시.
-  - `COBOL` (사무용), `FORTRAN` (과학 기술 계산용), `C` (시스템 프로그래밍), `ALGOL`.
-- **객체지향 언어**: 데이터+기능 캡슐화. 재사용성 높음.
-  - `JAVA` (플랫폼 독립성, JVM), `C++` (C의 객체지향 확장), `Smalltalk` (최초 GUI, 순수 객체지향).
-- **선언형 언어**: '무엇(What)'을 할지 기술 (함수형/논리형).
-  - `LISP` (연결리스트, AI용), `PROLOG` (논리 추론, AI용), `Haskell` (순수 함수형), `XML` (구조화 문서).
+## 254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)
+- **for문**: 횟수가 정해진 반복(초기화, 조건검사, 증감식). 배열 순회에 주로 사용.
+- **while문**: 조건이 참인 동안 반복(선행 판단). 조건이 항상 참이면 무한 루프 발생.
+- **do~while문**: **최소 1번은 무조건 실행**한 후 조건을 검사(후행 판단).
+- **break**: 현재 실행 중인 루프(블록)를 즉시 완전히 빠져나감.
+- **continue**: 루프를 완전히 빠져나가지 않고, **다음 반복 회차로 건너뜀**.
+
+**Giải thích (Vietnamese):**
+- `for`: Biết trước số lần lặp (VD: đếm từ 1 đến 10).
+- `while`: Lặp cho đến khi điều kiện sai (VD: lặp tới khi game over).
+- `break`: Dừng cuộc chơi ngay lập tức, thoát ra ngoài.
+- `continue`: Bỏ qua vòng lặp hiện tại, đi tới vòng lặp tiếp theo (VD: đếm từ 1 đến 10, nếu gặp số 5 thì `continue` -> in ra 1 2 3 4 6 7 8 9 10).
 
 ---

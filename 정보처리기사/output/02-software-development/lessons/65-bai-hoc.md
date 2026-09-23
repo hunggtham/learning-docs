@@ -1,12 +1,12 @@
-# 55. APM (애플리케이션 성능 관리/모니터링)
+# 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **55. APM (애플리케이션 성능 관리/모니터링)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-APM
+애플리케이션, 성능, 측정, 지표
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,35 +22,11 @@ APM
 
 ---
 
-## 55. APM (애플리케이션 성능 관리/모니터링)
-* 애플리케이션의 성능 관리를 위해 자원 현황, 트랜잭션 등을 모니터링.
-* **리소스 방식**: Nagios, Zabbix, Cacti.
-* **엔드투엔드(End-to-End) 방식**: VisualVM, 제니퍼(Jennifer), 스카우터(Scouter).
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ giám sát hiệu năng (APM). Có 2 loại: Theo dõi tài nguyên (Nagios) và Từ đầu đến cuối (VisualVM, Scouter).
-
----
-*(이하 전자계산기 구조 파트 - Computer Architecture)*
-
----
-
-자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
-
-### 선형 구조 (Linear - Nối tiếp nhau)
-- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
-  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
-  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
-- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
-- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
-- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
-
-### 비선형 구조 (Non-linear - Không nối tiếp)
-- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
-- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
-
-- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin.
-  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
-  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
-  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
-
----
+## 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
+* **처리량 (Throughput)**: 일정 시간 내 처리하는 일의 양.
+* **응답 시간 (Response Time)**: 요청을 전달한 후 '응답이 도착할 때'까지 걸린 시간.
+* **경과 시간 (Turn Around Time)**: 작업을 의뢰한 후 '처리가 완료될 때'까지 걸린 시간.
+* **자원 사용률 (Resource Usage)**: CPU, 메모리, 네트워크 등의 자원 사용량.
+* **VI (Vietnamese) (Tiếng Việt):** Các chỉ số hiệu năng: Thông lượng (Throughput), Thời gian phản hồi (Response), Thời gian hoàn thành (Turn Around), Mức sử dụng tài nguyên (Resource Usage).
+* **Example**: 식당에서 주문하고 물이 나오는 시간(응답 시간), 음식을 다 먹고 나오는 시간(경과 시간).
+* 💡 **Mẹo ghi nhớ**: Response = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ.

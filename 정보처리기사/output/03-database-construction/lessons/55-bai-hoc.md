@@ -1,12 +1,12 @@
-# 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
+# 21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-기타, 주요, 개념
+데이터, 전환, 정제
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,21 @@
 
 ---
 
-## 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
+## 21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)
 
-### CRUD 분석 (Phân tích CRUD)
-- Tạo ma trận (Matrix) giữa **Process (Tiến trình)** và **Table (Bảng)**.
-- Đánh dấu **C**reate, **R**ead, **U**pdate, **D**elete để xem bảng nào bị thao tác nhiều/ít, phát hiện bảng bị bỏ sót (ít nhất mỗi bảng phải có 1 thao tác).
+### 데이터 전환 (Data Migration - Di chuyển dữ liệu)
+Là quá trình chuyển dữ liệu từ hệ thống cũ sang hệ thống mới.
+- **ETL 3 bước:**
+  1. **E**xtraction (추출): Trích xuất từ nguồn.
+  2. **T**ransformation (변환): Biến đổi cho phù hợp chuẩn mới.
+  3. **L**oad (적재): Nạp vào hệ thống đích.
 
-### MyBatis (프레임워크)
-- Khung làm việc (Framework) giúp đơn giản hóa JDBC trong Java.
-- **Đặc điểm:** Tách mã SQL ra khỏi mã Java (lưu trong file XML hoặc Annotation), thân thiện với lập trình viên SQL.
+### 오류 데이터 정제 (Error Data Cleansing)
+Quản lý trạng thái lỗi trong quá trình chuyển đổi:
+- **Open (Mở):** Phát hiện lỗi, chưa phân tích.
+- **Assigned (Đã giao):** Giao cho lập trình viên sửa.
+- **Fixed (Đã sửa):** Đã sửa xong.
+- **Closed (Đóng):** Đã test lại và xác nhận bình thường.
+- **Deferred (Trì hoãn):** Quyết định chưa sửa lúc này (hoặc không phải lỗi).
 
-### 시스템 카탈로그 (System Catalog)
-- **Định nghĩa:** CSDL đặc biệt chứa "dữ liệu về dữ liệu" (Metadata / Data Dictionary).
-- **Đặc điểm:** Chỉ có hệ thống (DBMS) mới được quyền cập nhật (Tự động cập nhật). Người dùng chỉ có quyền **SELECT (Đọc)**.
-
-### 연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)
-- 산술 연산자 (Toán học: `* / + -`) **>** 관계 연산자 (So sánh: `< > = !=`) **>** 논리 연산자 (Logic: `NOT > AND > OR`).
-
-> 💡 **Mẹo ghi nhớ:** **Toán - Quan - Lo** (Toán học - Quan hệ - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR.
+---

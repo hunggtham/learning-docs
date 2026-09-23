@@ -1,12 +1,12 @@
-# 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
+# 9. 효과적인 모듈 설계 방안 (Effective Module Design)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **9. 효과적인 모듈 설계 방안 (Effective Module Design)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 품질, 특성
+효과적인, 모듈, 설계, 방안
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,9 @@
 
 ---
 
-## 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
-- 6 tiêu chuẩn chất lượng:
-  1. **기능성 (Functionality - Chức năng)**: Bảo mật, Tương tác, Chính xác.
-  2. **신뢰성 (Reliability - Độ tin cậy)**: Không lỗi, Phục hồi (회복성), Chịu lỗi (고장 허용성).
-  3. **사용성 (Usability - Khả năng sử dụng)**: Dễ học, Dễ hiểu, Hấp dẫn.
-  4. **효율성 (Efficiency - Hiệu quả)**: Thời gian phản hồi, Tiết kiệm tài nguyên.
-  5. **유지 보수성 (Maintainability - Khả năng bảo trì)**: Dễ phân tích, Dễ thay đổi, Ổn định.
-  6. **이식성 (Portability - Khả năng thay thế/di chuyển)**: Cài đặt dễ, Tương thích, Thay thế.
+## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
+*   **Korean:** 결합도↓, 응집도↑. 모듈의 영향 영역(Scope of Effect)이 제어 영역(Scope of Control) 안에 있어야 함. 단일 입구/단일 출구(Single Entry, Single Exit). 복잡도와 중복성 감소.
+*   **VI (Vietnamese) (Tiếng Việt):** Coupling thấp, Cohesion cao. **Phạm vi ảnh hưởng (Scope of Effect) phải nằm TRONG Phạm vi kiểm soát (Scope of Control)** của module. Chỉ có 1 đầu vào và 1 đầu ra. Giảm độ phức tạp và dư thừa.
+*   **Example:** Một hàm sắp xếp chỉ nên thay đổi mảng truyền vào nó (trong vùng kiểm soát), không nên vô tình thay đổi giao diện UI (vùng ảnh hưởng ngoài kiểm soát).
+
+---

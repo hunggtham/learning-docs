@@ -1,12 +1,12 @@
-# 5. UML 구성요소 상세 (UML Components Detail)
+# 4. UML (Unified Modeling Language)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **5. UML 구성요소 상세 (UML Components Detail)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. UML (Unified Modeling Language)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-UML, 구성요소, 상세
+UML
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,14 @@ UML, 구성요소, 상세
 
 ---
 
-## 5. UML 구성요소 상세 (UML Components Detail)
-- **클래스 다이어그램 (Class Diagram)**: Class Name, Attribute, Operation.
-  - 접근 제어자 (Access Modifier): `+` (Public), `-` (Private), `#` (Protected), `~` (Package).
-- **유스케이스 다이어그램 (Use Case Diagram)**: System, Use Case, Actor.
-  - Quan hệ: `<<include>>` (Bắt buộc), `<<extend>>` (Tùy chọn), Generalization (Kế thừa).
-- **순차 다이어그램 (Sequence Diagram)**: Object, Lifeline, Activation, Message, Self-Message.
-  - Thể hiện sự tương tác theo thời gian.
+## 4. UML (Unified Modeling Language)
+- **개념**: Ngôn ngữ mô hình hóa hướng đối tượng chuẩn.
+- **구성요소**: 사물 (Things), 관계 (Relationships), 다이어그램 (Diagrams).
+- **관계 (Relationships)**:
+  - 연관 (Association), 의존 (Dependency), 집합 (Aggregation), 포함 (Composition), 일반화 (Generalization - Kế thừa), 실체화 (Realization - Interface).
+- **다이어그램 (Diagrams)**:
+  - **구조적/정적 (Structural/Static)**: Class, Object, Component, Deployment, Composite Structure, Package.
+  - **행위적/동적 (Behavioral/Dynamic)**: Use Case, Sequence, Communication, State, Activity, Timing.
+- 💡 **Mẹo ghi nhớ**:
+  - 정적 다이어그램: 클/객/컴/배/복/패 (Class, Object, Component, Deployment, Composite, Package)
+  - 동적 다이어그램: 유/순/커/상/활/타 (Use case, Sequence, Comm, State, Activity, Timing)

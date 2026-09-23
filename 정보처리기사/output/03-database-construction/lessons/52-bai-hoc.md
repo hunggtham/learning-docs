@@ -1,12 +1,12 @@
-# 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
+# 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-집합연산자, 조인
+DDL, DML, DCL, 상세
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,19 +22,37 @@
 
 ---
 
-## 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
+## 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
-### 집합 연산자 (Toán tử tập hợp)
-- `UNION`: Hợp (Loại bỏ trùng lặp).
-- `UNION ALL`: Hợp tất cả (Giữ nguyên trùng lặp).
-- `INTERSECT`: Giao (Chỉ lấy phần chung).
-- `MINUS` / `EXCEPT`: Hiệu (Lấy bảng 1 trừ đi các dòng có trong bảng 2).
+### 6.1 DDL 문법 (Cú pháp DDL)
+- `CREATE TABLE`: Tạo bảng. Các ràng buộc: `PRIMARY KEY` (Khóa chính), `FOREIGN KEY` (Khóa ngoại), `UNIQUE` (Duy nhất), `CONSTRAINT` (Điều kiện), `CHECK` (Kiểm tra), `DEFAULT` (Mặc định), `NOT NULL` (Không được rỗng).
+- `ALTER TABLE`:
+  - `ADD` (Thêm cột): `ALTER TABLE table_name ADD col_name datatype;`
+  - `MODIFY` (Sửa kiểu/ràng buộc cột): `ALTER TABLE table_name MODIFY col_name datatype;`
+  - `DROP` (Xóa cột): `ALTER TABLE table_name DROP col_name;`
+  - `RENAME COLUMN`: Đổi tên cột.
+- `DROP TABLE` [CASCADE | RESTRICT]: Xóa bảng. CASCADE (xóa luôn đối tượng phụ thuộc), RESTRICT (không xóa nếu đang bị tham chiếu).
+- `TRUNCATE TABLE`: Xóa nhanh toàn bộ dữ liệu, giữ lại cấu trúc, **không thể ROLLBACK**.
 
-### 조인 (JOIN)
-- **INNER JOIN**: Lấy các dòng có dữ liệu khớp nhau (Giao). `SELECT * FROM A INNER JOIN B ON A.id = B.id;`
-- **OUTER JOIN (LEFT, RIGHT, FULL)**: Lấy cả dữ liệu không khớp. Bên thiếu dữ liệu sẽ điền NULL.
-  - Cú pháp Oracle (+): `WHERE A.id = B.id(+)` (Đây là LEFT OUTER JOIN vì dấu (+) nằm ở bảng B, tức là bảng B thiếu cũng không sao).
-- **SELF JOIN**: Bảng tự JOIN với chính nó. (Dùng `AS` để tạo bí danh).
-- **CROSS JOIN**: Tích Đề-các (Cartesian product), bắt cặp tất cả các dòng của 2 bảng.
+### 6.2 DCL 문법 (Cú pháp DCL)
+- `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
+- `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
+
+### 6.3 TCL 문법 (Cú pháp TCL)
+- `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
+- `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
+- `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
+
+### 6.3 DML 문법 (Cú pháp DML)
+- `SELECT [DISTINCT] 속성명 FROM 테이블 WHERE 조건 GROUP BY 속성명 HAVING 조건 ORDER BY 속성명 [ASC|DESC];`
+  - `DISTINCT`: Loại bỏ dòng trùng lặp.
+  - `GROUP BY`: Nhóm dữ liệu (ROLLUP, CUBE để tính tổng phụ).
+  - `HAVING`: Điều kiện cho nhóm (GROUP BY).
+- **집계 함수 (Hàm tập hợp):** `COUNT`, `SUM`, `AVG`, `MAX`, `MIN`, `STDDEV` (độ lệch chuẩn), `VARIANCE` (phương sai).
+- **순위 함수 (Hàm xếp hạng):** `RANK` (bỏ qua số hạng: 1, 1, 3), `DENSE_RANK` (không bỏ qua: 1, 1, 2), `ROW_NUMBER` (đánh số thứ tự: 1, 2, 3).
+- **WHERE 연산자 (Toán tử điều kiện):** `LIKE '%'` (Nhiều ký tự), `LIKE '_'` (1 ký tự), `BETWEEN A AND B`, `IN()`, `IS NULL`.
+- `UPDATE 테이블 SET 속성 = 데이터 WHERE 조건;` (Sửa dữ liệu).
+- `DELETE FROM 테이블 WHERE 조건;` (Xóa dữ liệu, có thể ROLLBACK).
+- `INSERT INTO 테이블 (속성) VALUES (데이터);` (Thêm dữ liệu).
 
 ---

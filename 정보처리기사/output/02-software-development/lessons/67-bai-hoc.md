@@ -1,12 +1,12 @@
-# 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
+# 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-인터페이스, 구현, 검증, 도구
+인터페이스, 보안, 네트워크, 영역
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,8 @@
 
 ---
 
-## 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
-* **xUnit**: 다양한 언어에 적용되는 단위 테스트 프레임워크 (JUnit, CppUnit, NUnit).
-* **STAF**: 서비스 호출 및 컴포넌트 재사용 등 다양한 환경 지원.
-* **FitNesse**: 웹 기반 테스트 케이스 설계, 실행, 결과 확인.
-* **NTAF**: FitNesse와 STAF의 장점을 통합한 NHN(Naver)의 테스트 자동화 프레임워크.
-* **watir**: Ruby 기반 웹 애플리케이션 테스트 프레임워크.
-* **VI (Vietnamese) (Tiếng Việt):** Các công cụ kiểm thử giao diện. xUnit (kiểm thử đơn vị), STAF, FitNesse (Web), NTAF (Naver), watir (Ruby).
-* 💡 **Mẹo ghi nhớ**: xUnit là phổ biến nhất cho Unit Test. NTAF có chữ N (Naver).
+## 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
+* 네트워크 트래픽에 대한 암호화 설정.
+* **방식**: IPSec, SSL, S-HTTP 등.
+* **VI (Vietnamese) (Tiếng Việt):** Bảo mật giao diện vùng mạng (mã hóa lưu lượng). Dùng IPSec, SSL, S-HTTP.
+* **Example**: 웹사이트 주소가 `https://`로 시작하면 SSL이 적용된 것입니다.

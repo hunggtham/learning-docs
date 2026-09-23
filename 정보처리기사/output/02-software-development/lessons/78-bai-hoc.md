@@ -1,12 +1,12 @@
-# 27. JSON 및 AJAX (JSON & AJAX)
+# 25. 트립와이어 (tripwire)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **27. JSON 및 AJAX (JSON & AJAX)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **25. 트립와이어 (tripwire)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-JSON, AJAX
+트립와이어
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,7 @@ JSON, AJAX
 
 ---
 
-## 27. JSON 및 AJAX (JSON & AJAX)
-* **JSON (JavaScript Object Notation)**: 속성-값 쌍(Attribute-Value Pairs)으로 이루어진 데이터 객체를 전달하기 위한 개방형 표준 포맷. 사람이 읽기 쉬움.
-* **AJAX (Asynchronous JavaScript and XML)**: 자바스크립트를 이용한 비동기 통신 기술. 클라이언트-서버 간 XML(또는 JSON) 데이터를 교환 및 제어.
-* **VI (Vietnamese) (Tiếng Việt):**
-  * JSON: Định dạng dữ liệu dạng Key-Value dễ đọc.
-  * AJAX: Công nghệ giao tiếp bất đồng bộ, tải dữ liệu mà không cần tải lại toàn bộ trang.
-* **Example**: 좋아요 버튼을 눌렀을 때 페이지 이동 없이 하트가 채워지는 것이 AJAX 기술입니다.
+## 25. 트립와이어 (tripwire)
+* 크래커가 침입하여 백도어를 만들어 놓거나, 설정 파일을 변경했을 때 분석하는 데이터 무결성 검사 도구.
+* **VI (Vietnamese) (Tiếng Việt):** Công cụ kiểm tra tính toàn vẹn dữ liệu, phát hiện backdoor hoặc thay đổi file cấu hình.
+* 💡 **Mẹo ghi nhớ**: Tripwire = Dây bẫy, chạm vào là báo động.

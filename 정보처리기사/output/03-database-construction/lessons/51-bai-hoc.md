@@ -1,12 +1,12 @@
-# 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
+# 220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-DDL, DML, DCL, 상세
+하위, 질의, 트리거, DBMS, 접속, 데이터, 전환
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,37 +22,19 @@ DDL, DML, DCL, 상세
 
 ---
 
-## 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
+## 220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환
+- **하위 질의 (Subquery):** 조건절에 주어진 질의를 먼저 수행하여 결과를 피연산자로 사용.
+- **트리거 (Trigger):** 데이터의 삽입/갱신/삭제 등 이벤트 발생 시 관련 작업이 자동 수행되는 절차형 SQL. DCL 사용 불가.
+- **DBMS 접속 기술:** JDBC(Java 표준 API), ODBC(개방형 표준 API), MyBatis(SQL Mapping 프레임워크), ORM(객체와 DB 매핑).
+- **데이터 전환 (Data Migration/ETL):** 기존 시스템에서 데이터를 추출(Extraction), 변환(Transformation), 적재(Loading)하는 과정.
+- **VI (Vietnamese) (Tiếng Việt):** Truy vấn con, Trigger, Kết nối DBMS & Chuyển đổi dữ liệu.
+  - Subquery: Truy vấn lồng nhau.
+  - Trigger: Tự động kích hoạt khi có sự kiện (INSERT/UPDATE/DELETE). Không dùng DCL trong Trigger.
+  - Kết nối: JDBC (cho Java), ODBC (chuẩn mở), ORM (Ánh xạ đối tượng - quan hệ).
+  - ETL: Trích xuất (E), Chuyển đổi (T), Tải (L) dữ liệu sang hệ thống mới.
 
-### 6.1 DDL 문법 (Cú pháp DDL)
-- `CREATE TABLE`: Tạo bảng. Các ràng buộc: `PRIMARY KEY` (Khóa chính), `FOREIGN KEY` (Khóa ngoại), `UNIQUE` (Duy nhất), `CONSTRAINT` (Điều kiện), `CHECK` (Kiểm tra), `DEFAULT` (Mặc định), `NOT NULL` (Không được rỗng).
-- `ALTER TABLE`:
-  - `ADD` (Thêm cột): `ALTER TABLE table_name ADD col_name datatype;`
-  - `MODIFY` (Sửa kiểu/ràng buộc cột): `ALTER TABLE table_name MODIFY col_name datatype;`
-  - `DROP` (Xóa cột): `ALTER TABLE table_name DROP col_name;`
-  - `RENAME COLUMN`: Đổi tên cột.
-- `DROP TABLE` [CASCADE | RESTRICT]: Xóa bảng. CASCADE (xóa luôn đối tượng phụ thuộc), RESTRICT (không xóa nếu đang bị tham chiếu).
-- `TRUNCATE TABLE`: Xóa nhanh toàn bộ dữ liệu, giữ lại cấu trúc, **không thể ROLLBACK**.
+---
 
-### 6.2 DCL 문법 (Cú pháp DCL)
-- `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
-- `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
-
-### 6.3 TCL 문법 (Cú pháp TCL)
-- `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
-- `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
-- `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
-
-### 6.3 DML 문법 (Cú pháp DML)
-- `SELECT [DISTINCT] 속성명 FROM 테이블 WHERE 조건 GROUP BY 속성명 HAVING 조건 ORDER BY 속성명 [ASC|DESC];`
-  - `DISTINCT`: Loại bỏ dòng trùng lặp.
-  - `GROUP BY`: Nhóm dữ liệu (ROLLUP, CUBE để tính tổng phụ).
-  - `HAVING`: Điều kiện cho nhóm (GROUP BY).
-- **집계 함수 (Hàm tập hợp):** `COUNT`, `SUM`, `AVG`, `MAX`, `MIN`, `STDDEV` (độ lệch chuẩn), `VARIANCE` (phương sai).
-- **순위 함수 (Hàm xếp hạng):** `RANK` (bỏ qua số hạng: 1, 1, 3), `DENSE_RANK` (không bỏ qua: 1, 1, 2), `ROW_NUMBER` (đánh số thứ tự: 1, 2, 3).
-- **WHERE 연산자 (Toán tử điều kiện):** `LIKE '%'` (Nhiều ký tự), `LIKE '_'` (1 ký tự), `BETWEEN A AND B`, `IN()`, `IS NULL`.
-- `UPDATE 테이블 SET 속성 = 데이터 WHERE 조건;` (Sửa dữ liệu).
-- `DELETE FROM 테이블 WHERE 조건;` (Xóa dữ liệu, có thể ROLLBACK).
-- `INSERT INTO 테이블 (속성) VALUES (데이터);` (Thêm dữ liệu).
+# 3과목 운영체제 (Operating System - 추가 포함된 내용)
 
 ---

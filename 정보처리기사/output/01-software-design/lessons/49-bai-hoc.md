@@ -1,12 +1,12 @@
-# 6. 구조적 분석 도구 (Structured Analysis Tools)
+# 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **6. 구조적 분석 도구 (Structured Analysis Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-구조적, 분석, 도구
+운영, 환경, 구축, 고려사항
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,9 @@
 
 ---
 
-## 6. 구조적 분석 도구 (Structured Analysis Tools)
-- Phân tích Top-down (하향식), dùng biểu đồ (도형).
-- **DFD (Biểu đồ luồng dữ liệu)**: Process (Tròn), Flow (Mũi tên), Data Store (Vạch ngang), Terminator (Vuông).
-- **DD (Từ điển dữ liệu)**:
-  - `=`: Định nghĩa
-  - `+`: Nối
-  - `( )`: Tùy chọn (Optional)
-  - `[ | ]`: Chọn 1 trong các (Or)
-  - `{ }`: Lặp (Iteration)
-  - `* *`: Chú thích
-- **HIPO**: Biểu đồ phân cấp (가시적, 총체적, 세부적).
+## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
+- **운영체제 (OS)** & **DBMS**: 가용성 (Availability), 성능 (Performance), 기술 지원 (Tech Support), 구축 비용 (Cost).
+  - OS có thêm: 주변 기기 (Thiết bị ngoại vi).
+  - DBMS có thêm: 상호 호환성 (Khả năng tương thích - JDBC/ODBC).
+- **WAS (Web Application Server)**: Xử lý nội dung động. Có thêm **가비지 컬렉션 (GC - Dọn rác)**.
+- **오픈 소스 (Open Source)**: Cần chú ý 라이선스 (Bản quyền), 사용자 수 (Số lượng người dùng), 기술의 지속 가능성 (Khả năng duy trì công nghệ).

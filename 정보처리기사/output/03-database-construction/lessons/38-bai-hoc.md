@@ -1,12 +1,12 @@
-# 201-203. 스토리지 시스템 (Storage Systems)
+# 17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **201-203. 스토리지 시스템 (Storage Systems)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-스토리지, 시스템
+스토리지와, 분산, 데이터베이스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,23 @@
 
 ---
 
-## 201-203. 스토리지 시스템 (Storage Systems)
-- **DAS (Direct Attached Storage):** 서버와 저장장치를 전용 케이블로 직접 연결. (외장하드 방식). 확장성 떨어짐.
-- **NAS (Network Attached Storage):** 네트워크를 통해 연결. 파일 공유 가능, 확장성 우수.
-- **SAN (Storage Area Network):** 서버와 저장장치를 연결하는 전용 네트워크 구성. (광 채널 스위치). DAS의 속도 + NAS의 공유 장점.
-- **VI (Vietnamese) (Tiếng Việt):** Hệ thống lưu trữ.
-  - DAS: Kết nối trực tiếp (cáp).
-  - NAS: Kết nối qua mạng LAN (chia sẻ file).
-  - SAN: Mạng lưu trữ chuyên dụng (tốc độ cao + chia sẻ).
+## 17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)
+
+### 스토리지 (Storage - Thiết bị lưu trữ)
+- **DAS (Direct Attached Storage):** Kết nối trực tiếp bằng cáp. Nhanh, an toàn nhưng khó mở rộng.
+- **NAS (Network Attached Storage):** Kết nối qua mạng (Network-based, File-level). Mềm dẻo nhưng có thể nghẽn mạng.
+- **SAN (Storage Area Network):** Dùng cáp quang (Fiber Channel), tốc độ cực cao, đắt tiền.
+- **SDS (Software-defined Storage):** Quản lý toàn bộ tài nguyên lưu trữ bằng phần mềm (Ảo hóa lưu trữ).
+
+### 분산 데이터베이스 (Distributed Database - CSDL Phân tán)
+Dữ liệu phân bố ở nhiều nơi (máy chủ khác nhau) nhưng người dùng cảm giác như đang dùng 1 CSDL duy nhất.
+- **장점 (Ưu điểm):** Đáng tin cậy, dễ mở rộng, tính tự trị khu vực cao.
+- **단점 (Nhược điểm):** Thiết kế khó, chi phí cao, bảo mật phức tạp.
+
+**4대 투명성 (4 Đặc tính Trong suốt - Transparency):**
+1. **위치 투명성 (Location):** Người dùng không cần biết dữ liệu nằm ở máy chủ nào.
+2. **중복(복제) 투명성 (Replication):** Không cần biết dữ liệu được nhân bản ra sao.
+3. **병행 투명성 (Concurrency):** Nhiều người truy cập cùng lúc vẫn không bị lỗi kết quả.
+4. **장애 투명성 (Failure):** Một Node chết, toàn hệ thống vẫn hoạt động bình thường.
+
+---

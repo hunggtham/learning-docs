@@ -1,12 +1,12 @@
-# 21. 외계인 코드 (Alien Code)
+# 19. 클린 코드 작성 원칙 (Clean Code Principles)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **21. 외계인 코드 (Alien Code)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **19. 클린 코드 작성 원칙 (Clean Code Principles)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-외계인, 코드
+클린, 코드, 작성, 원칙
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,8 +22,8 @@
 
 ---
 
-## 21. 외계인 코드 (Alien Code)
-* 아주 오래되거나 참고문서/개발자가 없어 유지보수 작업이 어려운 코드.
-* **VI (Vietnamese) (Tiếng Việt):** Alien Code là mã nguồn quá cũ, không có tài liệu hoặc người phát triển gốc, rất khó bảo trì.
-* **Example**: 20년 전에 퇴사한 직원이 주석 없이 짠 코드가 외계인 코드입니다.
-* 💡 **Mẹo ghi nhớ**: Alien = Người ngoài hành tinh, đọc không hiểu gì cả.
+## 19. 클린 코드 작성 원칙 (Clean Code Principles)
+* **가독성 (Readability)**: 누구든지 코드를 쉽게 읽을 수 있도록 작성.
+* **단순성 (Simplicity)**: 코드를 간단하게 작성.
+* **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc viết code sạch. Dễ đọc, đơn giản.
+* **Example**: 변수 이름을 `a` 대신 `userCount`로 짓는 것이 가독성을 높이는 것입니다.

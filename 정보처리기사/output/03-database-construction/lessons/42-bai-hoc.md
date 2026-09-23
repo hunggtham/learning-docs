@@ -1,12 +1,12 @@
-# 106-107. 튜플(Tuple)과 속성(Attribute)
+# 19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **106-107. 튜플(Tuple)과 속성(Attribute)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-튜플
+암호화, 기법과, 접근, 통제
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,27 @@
 
 ---
 
-## 106-107. 튜플(Tuple)과 속성(Attribute)
-- **튜플 (Tuple):** 릴레이션을 구성하는 행(Row). 튜플의 수 = 카디널리티 (Cardinality).
-- **속성 (Attribute):** 데이터베이스를 구성하는 가장 작은 논리적 단위. 열(Column). 속성의 수 = 디그리 (Degree).
-- **VI (Vietnamese) (Tiếng Việt):** Tuple (Hàng) và Attribute (Cột).
-  - Tuple: Hàng. Số hàng = Cardinality.
-  - Attribute: Cột, đơn vị logic nhỏ nhất. Số cột = Degree.
-- **Example:** 학생 테이블의 '홍길동' 데이터 한 줄이 튜플, '이름', '학번' 열이 속성. / Một dòng dữ liệu 'Hong Gil-dong' là Tuple, các cột 'Tên', 'Mã SV' là Attribute.
-- 💡 **Mẹo ghi nhớ:** Tu-Car (Tuple = Cardinality), At-De (Attribute = Degree).
+## 19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)
+
+### 개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)
+- **개념 (Khái niệm):** Dùng **CÙNG MỘT KHÓA** để mã hóa và giải mã (단일키 - Khóa đơn).
+- **장점 (Ưu điểm):** Tốc độ xử lý cực kỳ nhanh.
+- **단점 (Nhược điểm):** Khó phân phối và quản lý khóa khi có quá nhiều người dùng.
+- **종류 (Thuật toán tiêu biểu):** DES, AES, SEED, ARIA. (Chia làm 2 dạng: Block - theo khối, Stream - theo luồng bit).
+
+> 💡 **Mẹo ghi nhớ:** **Đối-Cá-Nhanh-Khó** (Khóa Đối xứng = Khóa Cá nhân = Nhanh = Khó quản lý khóa).
+
+### 접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)
+| 종류 (Loại) | 기준 (Tiêu chí) | 특징 (Đặc điểm VN) |
+|---|---|---|
+| **DAC (임의 접근통제)** | 소유자 (Chủ sở hữu) | Chủ dữ liệu tự do cấp/thu quyền (GRANT/REVOKE). |
+| **MAC (강제 접근통제)** | 보안 등급 (Mức độ bảo mật) | Hệ thống ép buộc dựa trên cấp độ bảo mật (VD: Top Secret). |
+| **RBAC (역할기반 접근통제)** | 역할 (Vai trò) | Quyền gắn với chức vụ (VD: Manager, Staff). Đổi chức vụ = tự đổi quyền. |
+
+### MAC 보안 모델 (Các mô hình bảo mật của MAC)
+- **벨-라파듈라 (Bell-LaPadula):** Tập trung vào **기밀성 (Tính Bảo mật / Kín đáo)** (Quân đội). Không đọc lên trên, Không ghi xuống dưới.
+- **비바 (Biba):** Tập trung vào **무결성 (Tính Toàn vẹn)**. Ngăn chặn việc sửa đổi trái phép.
+- **클락-윌슨 (Clark-Wilson):** Dành cho thương mại, chỉ cho phép sửa qua phần mềm được ủy quyền.
+- **만리장성 (Chinese Wall):** Tránh xung đột lợi ích (người xem hồ sơ công ty A thì không được xem của đối thủ B).
+
+---

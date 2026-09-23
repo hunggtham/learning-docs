@@ -2079,3 +2079,37 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 - 문맥 교환(Context Switching) 시, 현재까지 진행 상황을 PCB에 저장. (Khi chuyển đổi ngữ cảnh, lưu tiến độ vào PCB để sau này chạy tiếp.)
 - **예시 (Ví dụ)**: 병원에서 환자(프로세스)마다 차트(PCB)를 만들어 병력과 현재 상태를 기록하는 것과 같음. 퇴원하면 차트를 닫음. (Giống như Bệnh án (PCB) của từng bệnh nhân (Process), ghi lại tình trạng, xuất viện thì đóng hồ sơ.)
 - 💡 **Mẹo ghi nhớ**: PCB giống như "Thẻ căn cước + Hồ sơ bệnh án" của một tiến trình.
+
+## A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
+
+### 1. Java의 `==`는 문맥을 먼저 본다
+
+```java
+int a = 1;
+double b = 1.0;
+System.out.println(a == b);        // true: 수치 승격 후 비교
+String x = new String("A");
+String y = new String("A");
+System.out.println(x == y);        // false: 서로 다른 객체 참조
+System.out.println(x.equals(y));   // true: 내용 비교
+```
+
+- 숫자형 피연산자는 binary numeric promotion 후 비교한다.
+- 참조형 `==`는 같은 객체를 가리키는지 비교하고, 문자열 내용 비교에는 `equals`를 사용한다.
+- `a == b == c`는 “세 값이 모두 같은가”가 아니라 왼쪽부터 계산되므로 별도 비교식이 필요하다.
+
+### 2. Python `for`와 `while`의 trace 포인트
+
+```python
+items = [1, 2, 3]
+total = 0
+for value in items:
+    if value == 2:
+        continue
+    total += value
+print(total)  # 4
+```
+
+`continue`는 현재 반복의 나머지를 건너뛰고 다음 반복으로 이동한다. `break`는 반복문 전체를 종료한다. 문제를 풀 때 초기값, 조건 검사 시점, 증감/자료 갱신 위치를 표로 추적한다.
+
+> **시험 함정:** Java 문자열의 `==`와 `equals`, Python의 `continue`와 `break`를 섞지 않는다.

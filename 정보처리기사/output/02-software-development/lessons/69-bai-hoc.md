@@ -1,12 +1,12 @@
-# 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
+# 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 인터페이스, 보안, 기능, 구현, 검증
+핵심, 인터페이스, 설계, 확인
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,26 +22,17 @@
 
 ---
 
-## 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
+## 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
 
-### 네트워크 보안 기술 (Kỹ thuật bảo mật mạng)
-- **IPSec (IP Security):** 네트워크 계층 (Network Layer). Chống giả mạo, ẩn giấu gói tin IP.
-- **SSL (Secure Socket Layer):** TCP/IP ~ 애플리케이션 계층 사이. Chứng thực, mã hóa (thường dùng cho HTTPS).
-- **S-HTTP:** 애플리케이션 계층 (Application Layer). Mã hóa mọi tin nhắn giữa Client và Server.
+- **EAI (Enterprise Application Integration):** Doanh nghiệp có nhiều phần mềm (Kế toán, Nhân sự, Kho...), EAI giúp chúng nói chuyện được với nhau.
 
-### 인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)
-- **AJAX:** Bất đồng bộ (Asynchronous), dùng JS và XML để cập nhật một phần trang web mà không cần tải lại toàn bộ trang.
-- **JSON:** Cặp "Key-Value", định dạng nhẹ, dễ đọc (Thay thế cho XML rất nhiều).
-- **XML:** Thẻ Markup đa mục đích (như HTML nhưng tự tạo thẻ được).
-- **YAML:** "YAML Ain't Markup Language". Định dạng dữ liệu tuần tự hóa, rất dễ đọc cho con người (hay dùng làm file config).
+| 유형 (Kiểu) | 기능 (Chức năng) |
+|---|---|
+| **Point-to-Point** | 1:1로 연결 (Nối trực tiếp 1-1). Không có Middleware ở giữa. Khó thay đổi. |
+| **Hub & Spoke** | 단일 접점인 허브 시스템을 통해 데이터를 전송하는 중앙 집중형. (Nối kiểu nan hoa xe đạp. Tập trung vào cái Hub ở giữa. Hub sập là chết hết.) |
+| **Message Bus** | 미들웨어(버스)를 두어 처리하는 방식. 확장성이 뛰어나며 대용량 처리가 가능. (Dùng một trục xe bus (Middleware) ở giữa. Rất dễ mở rộng và xử lý lượng lớn.) |
+| **Hybrid** | 그룹 내에서는 Hub & Spoke, 그룹 간에는 Message Bus. (Lai tạp: Trong nhóm thì dùng Hub, giữa các nhóm thì dùng Bus.) |
 
-### 인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)
-- **xUnit:** Test từng "Đơn vị" (Unit) - jUnit, cppUnit.
-- **STAF:** Test trong "Môi trường phân tán" (Distributed environment).
-- **FitNesse:** Framework test nền web (Điền bảng là tự chạy test).
-- **NTAF:** Kết hợp FitNesse + STAF (Do Naver làm).
-
-- **Vietnamese Explanation:** Khi gửi dữ liệu giữa các máy, JSON đang là vua vì nhẹ và dễ nhìn. YAML thì thường dùng để cấu hình server. Khi test xem các máy tính nói chuyện với nhau ổn không, người ta dùng xUnit (Test từng hàm) hoặc STAF (Test qua nhiều máy).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = Phân tán (Phân tán (Distributed)).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Hub & Spoke = Nan hoa (Có tâm Hub, sập tâm là chết). Message Bus = Xe buýt (Chở được nhiều, dễ mở rộng).
 
 ---

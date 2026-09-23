@@ -1,12 +1,12 @@
-# 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
+# 라이브러리 및 예외 처리 (Libraries & Exception Handling)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **라이브러리 및 예외 처리 (Libraries & Exception Handling)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-라이브러리와, 예외처리
+라이브러리, 예외, 처리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,17 @@
 
 ---
 
-## 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
-- **C언어 표준 라이브러리**:
-  - `stdio.h`: 입출력 (`printf`, `scanf`).
-  - `stdlib.h`: 자료형 변환 (`atoi`: char->int).
-  - `string.h`: 문자열 처리 (`strlen`, `strcpy`).
-  - `math.h`: 수학 함수 (`sqrt`: 제곱근).
-- **예외처리 (Exception Handling)**:
-  - JAVA: `try { 실행 } catch (예외객체 e) { 에러처리 } finally { 무조건 실행 }`
-  - Python: `try: ... except 예외객체: ... finally: ...`
-  - 주요 예외객체: `NullPointerException` (객체가 없을 때), `ZeroDivisionError` (0으로 나눌 때).
+## 라이브러리 및 예외 처리 (Libraries & Exception Handling)
+### 280. C언어의 표준 라이브러리 (C Standard Libraries / Thư viện chuẩn C)
+- **stdio.h**: 입출력 (`printf`, `scanf`, `fopen`).
+- **math.h**: 수학 함수 (`sqrt`, `pow`, `abs`).
+- **string.h**: 문자열 처리 (`strlen`, `strcpy`, `strcmp`).
+- **stdlib.h**: 자료형 변환, 메모리 할당, 난수 (`atoi`, `rand`, `malloc`, `free`).
+- **time.h**: 시간 처리 (`time`, `clock`).
+  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String.
 
----
+### 281. 예외 처리 (Exception Handling / Xử lý ngoại lệ)
+- 프로그램의 정상적인 실행을 방해하는 조건을 예외라고 한다. (Điều kiện làm gián đoạn chương trình gọi là ngoại lệ).
+- 예외 발생 시 대처하는 루틴을 작성하는 것 (Viết mã để xử lý các sự cố này mà không làm sập chương trình).
+- C++, Java, JS는 내장 기능 제공. (Các ngôn ngữ hiện đại có tích hợp sẵn như `try-catch`).
+  - 💡 *Mẹo ghi nhớ*: Exception = Bắt lỗi chủ động.

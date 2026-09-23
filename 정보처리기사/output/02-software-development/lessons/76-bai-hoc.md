@@ -1,12 +1,12 @@
-# 23. EAI 구축 유형 (Enterprise Application Integration Types)
+# 22. 정적 분석 도구 (Static Analysis Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **23. EAI 구축 유형 (Enterprise Application Integration Types)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **22. 정적 분석 도구 (Static Analysis Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-EAI, 구축, 유형
+정적, 분석, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,8 @@ EAI, 구축, 유형
 
 ---
 
-## 23. EAI 구축 유형 (Enterprise Application Integration Types)
-* **Point-to-Point**: 애플리케이션을 1:1로 직접 연결.
-* **Hub & Spoke**: 단일 접점인 허브 시스템을 통해 데이터를 전송하는 중앙 집중형 방식.
-* **Message Bus (ESB 방식)**: 애플리케이션 사이에 미들웨어를 두어 처리하는 방식.
-* **Hybrid**: Hub & Spoke와 Message Bus의 혼합 방식.
-* **VI (Vietnamese) (Tiếng Việt):** Các kiểu kiến trúc tích hợp hệ thống (EAI).
-  * Point-to-Point: Nối 1-1.
-  * Hub & Spoke: Tập trung qua 1 Hub trung tâm.
-  * Message Bus: Dùng middleware (trục thông điệp).
-  * Hybrid: Lai giữa Hub & Spoke và Message Bus.
-* **Example**: 여러 부서의 시스템을 가운데 중앙 서버 하나(Hub)를 통해 연결하는 방식이 Hub & Spoke입니다.
-* 💡 **Mẹo ghi nhớ**: Hub là cái trục xe đạp (trung tâm), Spoke là nan hoa (tỏa ra xung quanh).
+## 22. 정적 분석 도구 (Static Analysis Tools)
+* 코드를 실행하지 않고(하드웨어/소프트웨어적으로) 소스 코드 품질을 분석하는 도구.
+* **종류**: pmd, checkstyle, cppcheck 등.
+* **VI (Vietnamese) (Tiếng Việt):** Công cụ phân tích tĩnh, phân tích source code mà không cần chạy chương trình.
+* **Example**: 코딩 표준을 잘 지켰는지 검사하는 Checkstyle.

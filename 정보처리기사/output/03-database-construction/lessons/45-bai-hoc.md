@@ -1,12 +1,12 @@
-# 183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)
+# 178. 관계해석 (Relational Calculus)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **178. 관계해석 (Relational Calculus)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-함수적, 종속과, 이행적, 종속
+관계해석
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,9 @@
 
 ---
 
-## 183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)
-- **함수적 종속 (Functional Dependency):** X -> Y (X가 결정되면 Y가 결정됨).
-- **이행적 종속 (Transitive Dependency):** A -> B, B -> C 일 때 A -> C 인 관계.
-- **VI (Vietnamese) (Tiếng Việt):** Phụ thuộc hàm và Phụ thuộc bắc cầu.
+## 178. 관계해석 (Relational Calculus)
+- E.F. Codd가 제안, 비절차적(원하는 정보가 무엇인지만 정의) 특성.
+- 튜플 관계해석과 도메인 관계해석으로 나뉨. 관계대수와 능력 동등.
+- **VI (Vietnamese) (Tiếng Việt):** Giải tích quan hệ (Relational Calculus).
+  - Do E.F. Codd đề xuất. Tính phi thủ tục (chỉ cần biết 'là gì' thay vì 'làm thế nào').
+  - Có sức mạnh tính toán tương đương đại số quan hệ.

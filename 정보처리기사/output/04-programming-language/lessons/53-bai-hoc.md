@@ -1,12 +1,12 @@
-# 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
+# 소프트웨어 공학 및 실무 (Software Engineering & Practice)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **소프트웨어 공학 및 실무 (Software Engineering & Practice)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로그래밍, 언어, 종류, 특징
+소프트웨어, 공학, 실무
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,24 +22,28 @@
 
 ---
 
-## 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
-### 275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)
-- **C**: 1972년 데니스 리치 개발, UNIX 일부 구현, 포인터 제공. 고급+저급 특징 모두 가짐. (Phát triển bởi Dennis Ritchie năm 1972, có con trỏ, kết hợp đặc điểm của ngôn ngữ bậc cao và bậc thấp).
-- **ALGOL**: 과학 기술 계산용. PASCAL과 C의 모체. (Ngôn ngữ tính toán khoa học, là tiền thân của Pascal và C).
-- **COBOL**: 사무 처리용. 영어 문장 형식, 4개의 DIVISION. (Ngôn ngữ xử lý nghiệp vụ, cú pháp giống tiếng Anh, chia làm 4 phần - DIVISION).
-- **FORTRAN**: 과학 기술 계산용. 수학 공식 형태. (Ngôn ngữ tính toán khoa học kỹ thuật, cú pháp như công thức toán).
-  - 💡 *Mẹo ghi nhớ*: C = Pointer, ALGOL = Algorithm, COBOL = Business, FORTRAN = Formula Translation.
+## 소프트웨어 공학 및 실무 (Software Engineering & Practice)
 
-### 276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)
-- **JAVA**: 분산 네트워크, 멀티스레드, 운영체제에 독립적(이식성 강함). (Hỗ trợ mạng phân tán, đa luồng, chạy độc lập không phụ thuộc hệ điều hành nhờ JVM).
-- **C++**: C언어에 객체지향 개념 적용. (Bổ sung tính năng OOP vào ngôn ngữ C).
-- **Smalltalk**: 1세대, 순수한 객체지향, 최초의 GUI 제공. (Ngôn ngữ OOP thuần túy thế hệ 1, ngôn ngữ đầu tiên cung cấp giao diện đồ họa).
-  - 💡 *Mẹo ghi nhớ*: Java = Đa luồng/Độc lập HĐH, Smalltalk = Thuần OOP/GUI đầu tiên.
+---
 
-### 278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)
-- **HTML**: 하이퍼텍스트 문서. 단순 텍스트. (Ngôn ngữ đánh dấu văn bản siêu liên kết).
-- **XML**: 웹에서 구조화된 문서 상호 교환, 사용자 정의 태그. (Ngôn ngữ đánh dấu mở rộng, cho phép tự định nghĩa thẻ Tag, dùng để trao đổi dữ liệu).
-- **LISP**: 인공지능(AI), 연결 리스트, 재귀 호출. (Dùng trong AI, dùng danh sách liên kết, đệ quy nhiều).
-- **PROLOG**: 인공지능, 논리적 추론. (Dùng trong AI, suy luận logic).
-- **Haskell**: 함수형 언어, 부작용(Side Effect) 없음. (Ngôn ngữ hàm, không có hiệu ứng phụ).
-  - 💡 *Mẹo ghi nhớ*: AI = LISP & PROLOG. XML = Tag tự định nghĩa. Haskell = Hàm thuần túy.
+### 236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)
+- **리스트 (List)**: Khác kiểu dữ liệu, thêm xóa được.
+- **튜플 (Tuple)**: Không thể thay đổi (immutable).
+- **range**: Sinh dãy số liên tiếp.
+
+### 구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)
+- C언어: `struct sawon { char name[10]; int pay; };`
+
+### 235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)
+- **문자 (Char)**: `char` (2Byte - Khác với C là 1Byte).
+- **정수 (Integer)**: `byte` (1Byte), `short` (2Byte), `int` (4Byte), `long` (8Byte).
+- **실수 (Float)**: `float` (4Byte), `double` (8Byte).
+- **논리 (Boolean)**: `boolean` (1Byte).
+  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte).
+
+### 237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)
+- **헝가리안 표기법 (Hungarian Notation)**: 변수 선언 시 변수명에 데이터 타입을 명시하는 것. (Gắn tiền tố kiểu dữ liệu vào tên biến, vd: `strName`, `nAge`).
+- Mọi câu lệnh khai báo biến trong C/Java đều phải kết thúc bằng dấu chấm phẩy `;`.
+
+### 238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)
+- 메모리 공간을 강제로 해제 (Giải phóng không gian bộ nhớ không còn sử dụng).

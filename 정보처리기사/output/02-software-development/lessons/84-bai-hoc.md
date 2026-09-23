@@ -1,12 +1,12 @@
-# 53. EAI와 ESB 심화 (EAI vs ESB)
+# 52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **53. EAI와 ESB 심화 (EAI vs ESB)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-ESB, 심화
+소스, 코드, 최적화와, 순환, 복잡도
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,14 @@ ESB, 심화
 
 ---
 
-## 53. EAI와 ESB 심화 (EAI vs ESB)
-* **EAI**: 기업 내 애플리케이션들을 연동하는 솔루션 (Point-to-Point, Hub&Spoke, Message Bus, Hybrid).
-* **ESB (Enterprise Service Bus)**: 애플리케이션 간 표준 기반 인터페이스 제공. 애플리케이션 통합보다는 **서비스 중심 통합** 지향. 결합도(Coupling)를 **약하게(Loosely)** 유지.
-* **VI (Vietnamese) (Tiếng Việt):** So sánh EAI và ESB. EAI tập trung tích hợp ứng dụng, ESB tập trung tích hợp dịch vụ (Service-oriented) với độ kết dính lỏng lẻo (Loosely coupled) dùng tiêu chuẩn chung.
+## 52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)
+* **소스 코드 최적화**: 배제해야 할 '나쁜 코드(Bad Code - 스파게티 코드, 외계인 코드)'와 작성해야 할 '클린 코드(Clean Code - 가독성, 단순성, 의존성 배제, 중복성 최소화, 추상화)'가 있음.
+* **순환 복잡도 (McCabe's Cyclomatic Complexity)**: 프로그램 논리의 복잡도를 측정.
+  * 계산 방법: `V(G) = 화살표 수(E) - 노드 수(N) + 2` 또는 제어 흐름도의 닫힌 영역 수 + 1.
+* **소스 코드 품질 분석 도구 심화**:
+  * **정적 분석 도구**: pmd, cppcheck, SonarQube, checkstyle, ccm.
+  * **동적 분석 도구**: Avalanche, Valgrind (메모리 누수, 스레드 결함 발견).
+* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe).
+  * Clean code > Bad code (Spaghetti/Alien).
+  * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng test case cơ bản cần thiết.
+  * Công cụ tĩnh (không chạy code): SonarQube. Động (chạy code tìm rò rỉ bộ nhớ): Valgrind.

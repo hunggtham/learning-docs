@@ -1,12 +1,12 @@
-# 14. 파레토 법칙 (Pareto Principle)
+# 9. 스키마 3계층 (Three-Schema Architecture)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **14. 파레토 법칙 (Pareto Principle)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **9. 스키마 3계층 (Three-Schema Architecture)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-파레토, 법칙
+스키마, 계층
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,8 +22,13 @@
 
 ---
 
-## 14. 파레토 법칙 (Pareto Principle)
-* 소프트웨어 테스트에서 오류의 80%는 전체 모듈의 20% 내에서 발견된다는 법칙.
-* **VI (Vietnamese) (Tiếng Việt):** Nguyên lý 80/20. 80% lỗi nằm trong 20% module cốt lõi.
-* **Example**: 시스템에 10개의 모듈이 있다면, 대부분의 버그는 핵심 모듈 2개에 몰려있습니다.
-* 💡 **Mẹo ghi nhớ**: Pareto = 80/20.
+## 9. 스키마 3계층 (Three-Schema Architecture)
+* **외부 스키마 (External Schema)**: 사용자나 프로그래머 입장에서 필요한 논리적 구조.
+* **개념 스키마 (Conceptual Schema)**: 전체적인 논리적 구조, 개체 간 관계/제약조건, 보안/무결성 규칙.
+* **내부 스키마 (Internal Schema)**: 물리적 저장장치 입장에서 본 구조 (레코드 형식, 물리적 순서).
+* **VI (Vietnamese) (Tiếng Việt):**
+  * External: Góc nhìn của người dùng (User view).
+  * Conceptual: Cấu trúc logic tổng thể, quan hệ, bảo mật.
+  * Internal: Cấu trúc lưu trữ vật lý.
+* **Example**: DB의 전체 테이블 구조는 개념 스키마, 사용자가 보는 뷰(View)는 외부 스키마, 파일 저장 방식은 내부 스키마.
+* 💡 **Mẹo ghi nhớ**: Ngoài (Người dùng) - Giữa/Khái niệm (Tổng thể logic) - Trong (Lưu trữ vật lý).

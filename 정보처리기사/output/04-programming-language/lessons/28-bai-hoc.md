@@ -1,12 +1,12 @@
-# 라이브러리 및 예외 처리 (Libraries & Exception Handling)
+# A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **라이브러리 및 예외 처리 (Libraries & Exception Handling)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-라이브러리, 예외, 처리
+Deep, Dive, Java, 비교, 연산과, Python, 제어, 흐름
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,17 +22,36 @@
 
 ---
 
-## 라이브러리 및 예외 처리 (Libraries & Exception Handling)
-### 280. C언어의 표준 라이브러리 (C Standard Libraries / Thư viện chuẩn C)
-- **stdio.h**: 입출력 (`printf`, `scanf`, `fopen`).
-- **math.h**: 수학 함수 (`sqrt`, `pow`, `abs`).
-- **string.h**: 문자열 처리 (`strlen`, `strcpy`, `strcmp`).
-- **stdlib.h**: 자료형 변환, 메모리 할당, 난수 (`atoi`, `rand`, `malloc`, `free`).
-- **time.h**: 시간 처리 (`time`, `clock`).
-  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String.
+## A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
 
-### 281. 예외 처리 (Exception Handling / Xử lý ngoại lệ)
-- 프로그램의 정상적인 실행을 방해하는 조건을 예외라고 한다. (Điều kiện làm gián đoạn chương trình gọi là ngoại lệ).
-- 예외 발생 시 대처하는 루틴을 작성하는 것 (Viết mã để xử lý các sự cố này mà không làm sập chương trình).
-- C++, Java, JS는 내장 기능 제공. (Các ngôn ngữ hiện đại có tích hợp sẵn như `try-catch`).
-  - 💡 *Mẹo ghi nhớ*: Exception = Bắt lỗi chủ động.
+### 1. Java의 `==`는 문맥을 먼저 본다
+
+```java
+int a = 1;
+double b = 1.0;
+System.out.println(a == b);        // true: 수치 승격 후 비교
+String x = new String("A");
+String y = new String("A");
+System.out.println(x == y);        // false: 서로 다른 객체 참조
+System.out.println(x.equals(y));   // true: 내용 비교
+```
+
+- 숫자형 피연산자는 binary numeric promotion 후 비교한다.
+- 참조형 `==`는 같은 객체를 가리키는지 비교하고, 문자열 내용 비교에는 `equals`를 사용한다.
+- `a == b == c`는 “세 값이 모두 같은가”가 아니라 왼쪽부터 계산되므로 별도 비교식이 필요하다.
+
+### 2. Python `for`와 `while`의 trace 포인트
+
+```python
+items = [1, 2, 3]
+total = 0
+for value in items:
+    if value == 2:
+        continue
+    total += value
+print(total)  # 4
+```
+
+`continue`는 현재 반복의 나머지를 건너뛰고 다음 반복으로 이동한다. `break`는 반복문 전체를 종료한다. 문제를 풀 때 초기값, 조건 검사 시점, 증감/자료 갱신 위치를 표로 추적한다.
+
+> **시험 함정:** Java 문자열의 `==`와 `equals`, Python의 `continue`와 `break`를 섞지 않는다.

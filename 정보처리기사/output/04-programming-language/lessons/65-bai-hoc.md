@@ -1,12 +1,12 @@
-# 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
+# 238. 가비지 콜렉터 (Garbage Collector)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **238. 가비지 콜렉터 (Garbage Collector)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-에서의, 표준, 출력
+가비지, 콜렉터
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,11 @@
 
 ---
 
-## 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
-- `System.out.print()`: 형식 없이 그대로 출력 (줄바꿈 없음).
-- `System.out.println()`: 출력 후 자동으로 줄바꿈(Enter) 수행.
-- `System.out.printf()`: C언어처럼 서식 문자열(`%d` 등)을 사용하여 출력.
-- 문자열과 변수를 섞어 쓸 때 `+` 연산자로 연결 가능.
+## 238. 가비지 콜렉터 (Garbage Collector)
+- 더 이상 사용되지 않고 메모리를 점유하고 있는 변수/객체를 시스템이 **자동으로 해제**하여 자원을 회수하는 모듈.
+- 메모리 누수(Memory Leak)를 방지. JAVA 등에서 사용됨.
+
+**Giải thích (Vietnamese):**
+"Người dọn rác" tự động. Bạn cứ việc tạo biến dùng, khi không dùng nữa, hệ thống sẽ tự động xoá nó khỏi RAM để giải phóng bộ nhớ. Trong C/C++ bạn phải tự dọn dẹp, nhưng Java/Python có tính năng này.
 
 ---

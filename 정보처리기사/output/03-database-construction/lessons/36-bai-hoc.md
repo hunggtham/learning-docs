@@ -1,12 +1,12 @@
-# 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
+# 195-196. 분산 데이터베이스 목표 (Distributed DB Goals)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-분산, 데이터베이스의, 장단점
+분산, 데이터베이스, 목표
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,6 @@
 
 ---
 
-## 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
-- **장점:** 지역 자치성, 자료 공유성 향상, 시스템 성능 및 신뢰성/가용성 향상.
-- **단점:** 설계 및 소프트웨어 개발 어려움, 처리 비용 및 잠재적 오류 증가.
-- **VI (Vietnamese) (Tiếng Việt):** Ưu nhược điểm của CSDL phân tán.
-  - Ưu điểm: Độc lập cục bộ, tăng chia sẻ, tin cậy cao, dễ mở rộng.
-  - Nhược điểm: Phức tạp, khó thiết kế, tăng chi phí và lỗi tiềm ẩn.
+## 195-196. 분산 데이터베이스 목표 (Distributed DB Goals)
+- 위치 투명성(Location), 중복 투명성(Replication), 병행 투명성(Concurrency), 장애 투명성(Failure).
+- **VI (Vietnamese) (Tiếng Việt):** Mục tiêu CSDL phân tán (Tính trong suốt về: vị trí, nhân bản, đồng thời, sự cố).

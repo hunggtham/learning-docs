@@ -1,12 +1,12 @@
-# 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
+# 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-메모리, 관리, 가상, 기억장치
+메모리, 관리, 기법, 배치, 전략
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,16 +22,15 @@
 
 ---
 
-## 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
-- **배치 전략 (Placement)**: 최초 적합(First Fit, 빠름), 최적 적합(Best Fit, 단편화 최소), 최악 적합(Worst Fit, 큰 공간 남김).
-- **페이징(Paging)**: 메모리를 **동일한 고정 크기**로 나눔. **내부 단편화** 발생 (빈 공간이 남아버림).
-- **세그먼테이션(Segmentation)**: 논리적 의미(함수 등)에 따라 **가변 크기**로 나눔. **외부 단편화** 발생 (공간이 작아서 못 들어감).
-- **페이지 크기**: 페이지가 작으면 내부 단편화는 줄지만, 맵 테이블이 커져 매핑 속도가 느려짐.
-- **스래싱 (Thrashing)**: 빈번한 페이지 교체로 인해 시스템 처리량보다 교체 시간이 더 많아져 CPU 이용률이 급감하는 마비 상태.
+## 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
+- **최초 적합 (First fit)**: 가장 처음 만나는 빈 공간에 할당 (빠름).
+- **최적 적합 (Best fit)**: 자원 낭비(단편화)가 가장 적은 핏(딱 맞는) 공간에 할당.
+- **최악 적합 (Worst fit)**: 단편화가 가장 큰(넓은) 공간에 할당 (남은 공간을 다시 쓰기 위해).
 
 **Giải thích (Vietnamese):**
-- Paging (Phân trang): Cắt bánh thành các miếng bằng nhau. Điểm yếu: Ăn không hết 1 miếng sẽ dư thừa (Nội phân mảnh).
-- Segmentation (Phân đoạn): Cắt bánh theo sức ăn của mỗi người (to nhỏ khác nhau). Điểm yếu: Chừa lại các khoảng trống lắt nhắt không ai nhét vừa (Ngoại phân mảnh).
-- Thrashing: Máy quá tải, giật lag do mải lấy dữ liệu từ ổ cứng đắp vào RAM.
+Khi một phần mềm cần RAM, OS sẽ nhét nó vào đâu?
+- First fit: Thấy chỗ nào trống nhét vào luôn (Nhanh).
+- Best fit: Tìm chỗ nào vừa khít nhất để nhét (Tiết kiệm chỗ).
+- Worst fit: Cố tình nhét vào chỗ rộng nhất (Để chừa lại không gian rộng cho các app sau).
 
 ---

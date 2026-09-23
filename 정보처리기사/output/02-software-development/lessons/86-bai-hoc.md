@@ -1,12 +1,12 @@
-# 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
+# 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-알고리즘, 설계, 기법과, 시간, 복잡도
+XML, 데이터, 무결성, 검사, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,9 @@
 
 ---
 
-## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
-
-### 알고리즘 설계 기법 (Kỹ thuật thiết kế thuật toán)
-- **분할과 정복 (Divide & Conquer):** Chia để trị. Chia nhỏ vấn đề đến khi không chia được nữa rồi gộp lại. (VD: Merge Sort, Quick Sort).
-- **동적계획법 (Dynamic Programming - Quy hoạch động):** Chia bài toán, nhưng CÓ lưu lại kết quả (bộ nhớ) để tận dụng cho lần sau. (VD: Fibonacci).
-- **탐욕법 (Greedy):** Tham lam. Chọn cái tốt nhất ở *ngay thời điểm hiện tại*, không cần biết tương lai.
-- **백트래킹 (Backtracking):** Quay lui. Đi thử, nếu thấy bế tắc (không triển vọng - promising) thì quay lại nút cha.
-
-### 시간 복잡도 (Time Complexity - Độ phức tạp thời gian)
-- Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best case thì mới gắn với trường hợp đó.
-- **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
-- O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
-
-- **Vietnamese Explanation:** Greedy giống như đi nhặt tiền: cứ thấy tờ to nhất trước mặt là nhặt, bất chấp sau đó dẫn vào ngõ cụt. Dynamic Programming giống như làm toán: kết quả bài 1 lưu ra nháp để dùng cho bài 2.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Divide = Cắt nhỏ. Dynamic = Nhớ bài cũ. Greedy = Tham bát bỏ mâm. Backtrack = Đi lùi. O(1) là nhanh nhất.
-
----
+## 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
+* **XML (eXtensible Markup Language)**: HTML의 비호환성과 SGML의 복잡성을 해결하기 위해 만든 다목적 마크업 언어.
+* **인터페이스 보안 - 네트워크 영역 (IPSec)**: 네트워크 계층에서 IP 패킷 단위의 데이터 변조 방지 (양방향 암호화 지원).
+* **데이터 무결성 검사 도구**: 시스템 파일 변경 유무 확인 (해시 함수 이용). 백도어 탐지.
+  * **종류**: Tripwire, AIDE, Samhain, Claymore, Slipwire, Fcheck.
+* **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm Hash: Tripwire, AIDE.

@@ -630,6 +630,42 @@ List và Tuple đều dùng để lưu danh sách. Nhưng List có thể sửa �
 
 ---
 
+## A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
+
+### 1. Java의 `==`는 문맥을 먼저 본다
+
+```java
+int a = 1;
+double b = 1.0;
+System.out.println(a == b);        // true: 수치 승격 후 비교
+String x = new String("A");
+String y = new String("A");
+System.out.println(x == y);        // false: 서로 다른 객체 참조
+System.out.println(x.equals(y));   // true: 내용 비교
+```
+
+- 숫자형 피연산자는 binary numeric promotion 후 비교한다.
+- 참조형 `==`는 같은 객체를 가리키는지 비교하고, 문자열 내용 비교에는 `equals`를 사용한다.
+- `a == b == c`는 “세 값이 모두 같은가”가 아니라 왼쪽부터 계산되므로 별도 비교식이 필요하다.
+
+### 2. Python `for`와 `while`의 trace 포인트
+
+```python
+items = [1, 2, 3]
+total = 0
+for value in items:
+    if value == 2:
+        continue
+    total += value
+print(total)  # 4
+```
+
+`continue`는 현재 반복의 나머지를 건너뛰고 다음 반복으로 이동한다. `break`는 반복문 전체를 종료한다. 문제를 풀 때 초기값, 조건 검사 시점, 증감/자료 갱신 위치를 표로 추적한다.
+
+> **시험 함정:** Java 문자열의 `==`와 `equals`, Python의 `continue`와 `break`를 섞지 않는다.
+
+---
+
 ## 라이브러리 및 예외 처리 (Libraries & Exception Handling)
 ### 280. C언어의 표준 라이브러리 (C Standard Libraries / Thư viện chuẩn C)
 - **stdio.h**: 입출력 (`printf`, `scanf`, `fopen`).

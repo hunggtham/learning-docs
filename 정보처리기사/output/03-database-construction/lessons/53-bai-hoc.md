@@ -1,12 +1,12 @@
-# 15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)
+# 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-관계, 데이터, 언어
+집합연산자, 조인
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,22 +22,19 @@
 
 ---
 
-## 15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)
+## 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
 
-### 일반 집합 연산자 (Toán tử tập hợp cơ bản)
-- **합집합 (UNION, ∪):** Hợp (lấy tất cả, bỏ trùng lặp).
-- **교집합 (INTERSECTION, ∩):** Giao (lấy phần chung).
-- **차집합 (DIFFERENCE, —):** Hiệu (R - S: có trong R nhưng không có trong S).
-- **교차곱 (CARTESIAN PRODUCT, Х):** Tích Đề-các (kết hợp tất cả các dòng của 2 bảng).
+### 집합 연산자 (Toán tử tập hợp)
+- `UNION`: Hợp (Loại bỏ trùng lặp).
+- `UNION ALL`: Hợp tất cả (Giữ nguyên trùng lặp).
+- `INTERSECT`: Giao (Chỉ lấy phần chung).
+- `MINUS` / `EXCEPT`: Hiệu (Lấy bảng 1 trừ đi các dòng có trong bảng 2).
 
-### 순수 관계 연산자 (Toán tử quan hệ thuần túy)
-| 연산자 (Toán tử) | 기호 (Ký hiệu) | 설명 (Mô tả) |
-|---|---|---|
-| **Select (선택)** | **σ (Sigma)** | Lấy các **Hàng (Tuple)** thỏa mãn điều kiện (Phép toán nằm ngang - 수평). |
-| **Project (추출)** | **π (Pi)** | Lấy các **Cột (Attribute)** được chỉ định, loại bỏ trùng lặp (Phép toán dọc - 수직). |
-| **Join (조인)** | **⋈ (Bowtie)** | Kết hợp 2 bảng dựa trên thuộc tính chung. |
-| **Division (나누기)** | **÷ (Divide)** | Trả về các 튜플 của bảng R mà khớp với tất cả giá trị thuộc tính của bảng S. |
-
-> 💡 **Mẹo ghi nhớ:** **Se-Hàng, Pro-Cột** (Select = Hàng/Tuple, Project = Cột/Attribute).
+### 조인 (JOIN)
+- **INNER JOIN**: Lấy các dòng có dữ liệu khớp nhau (Giao). `SELECT * FROM A INNER JOIN B ON A.id = B.id;`
+- **OUTER JOIN (LEFT, RIGHT, FULL)**: Lấy cả dữ liệu không khớp. Bên thiếu dữ liệu sẽ điền NULL.
+  - Cú pháp Oracle (+): `WHERE A.id = B.id(+)` (Đây là LEFT OUTER JOIN vì dấu (+) nằm ở bảng B, tức là bảng B thiếu cũng không sao).
+- **SELF JOIN**: Bảng tự JOIN với chính nó. (Dùng `AS` để tạo bí danh).
+- **CROSS JOIN**: Tích Đề-các (Cartesian product), bắt cặp tất cả các dòng của 2 bảng.
 
 ---

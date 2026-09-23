@@ -1,12 +1,12 @@
-# 네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)
+# 네트워크 통신 (Network Communication)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **네트워크 통신 (Network Communication)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-네트워크, 프로토콜, 장비, 심화
+네트워크, 통신
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,31 @@
 
 ---
 
-## 네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)
-### 서브네팅 및 IP 클래스 (Subnetting & IP Classes)
-- **A Class**: 0~127. 대형 통신망 (Mạng rất lớn).
-- **B Class**: 128~191. 중대형 통신망 (Mạng trung-lớn).
-- **C Class**: 192~223. 소규모 통신망 (Mạng nhỏ).
-- **D Class**: 224~239. 멀티캐스트 (Multicast).
-- **서브네팅 (Subnetting)**: 서브넷 마스크를 이용해 네트워크 주소를 분할. (Dùng Subnet Mask để chia nhỏ mạng).
+## 네트워크 통신 (Network Communication)
+### 207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)
+- 8비트씩 4부분, 총 32비트 (4 phần, mỗi phần 8 bit -> 32 bit). A~E 클래스.
 
-### 계층별 주요 프로토콜 (Major Protocols by Layer / Giao thức theo tầng)
-- **응용 계층 (Application)**: FTP (파일 전송), SMTP (메일), TELNET (원격 접속), SNMP (네트워크 관리), DNS (도메인-IP 변환), HTTP (웹 문서).
-- **전송 계층 (Transport)**: TCP (신뢰성), UDP (빠른 속도), RTCP (실시간 제어).
-- **네트워크/인터넷 계층 (Network/Internet)**: IP (주소 지정, 비연결형), ICMP (오류 제어 메시지), IGMP (멀티캐스트 그룹 관리), ARP (IP -> MAC), RARP (MAC -> IP).
-- **데이터 링크 계층 (Data Link)**: Ethernet, HDLC, X.25.
-  - 💡 *Mẹo ghi nhớ*: ARP = "A"ddress Resolution (Tìm MAC từ IP). RARP = "R"everse (Ngược lại).
+### 208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)
+- 16비트씩 8부분, 총 128비트 (8 phần, mỗi phần 16 bit -> 128 bit, dùng hệ Hex).
+- 유니캐스트(Unicast), 멀티캐스트(Multicast), 애니캐스트(Anycast).
+  - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`).
 
-### 네트워크 장비 (Network Devices - Bổ sung)
-- **게이트웨이 (Gateway)**: 다른 네트워크로부터 데이터를 주고받는 출입구 역할, 프로토콜 구조가 다른 네트워크 연결. (Cổng ra vào giữa các mạng có giao thức hoàn toàn khác nhau).
-- **NIC (Network Interface Card)**: 랜카드, 컴퓨터를 네트워크에 연결. (Card mạng).
+### OSI 7계층 (OSI 7 Layers)
+- **209. 데이터 링크 계층 (Data Link)**: 인접 시스템 간 신뢰성 있는 전송. 흐름/오류 제어 (HDLC, PPP). (Truyền tải tin cậy giữa các nút lân cận).
+- **210. 네트워크 계층 (Network)**: 경로 설정, 패킷 라우팅. (Định tuyến, chuyển mạch gói).
+- **211. 전송 계층 (Transport)**: 종단 간 투명한 데이터 전송. (Truyền tải End-to-End, TCP/UDP).
+- **212. 세션 계층 (Session)**: 대화 제어, 동기화 (Quản lý phiên, đồng bộ hóa hội thoại).
+  - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token.
+
+### 213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)
+- **리피터 (Repeater)**: 신호 재생 (Khuếch đại tín hiệu).
+- **브리지 (Bridge)**: LAN 연결 (Kết nối mạng LAN cùng loại).
+- **라우터 (Router)**: 최적 경로 선택 (Chọn đường đi tối ưu).
+- **스위치 (Switch)**: 여러 랜선 연결 (Chuyển mạch mạng LAN).
+- **브라우터 (Brouter)**: Bridge + Router.
+
+### TCP/IP 프로토콜 (TCP/IP Protocols)
+- **214. MQTT**: IoT에서 사용하는 발행-구독 메시징 (Giao thức Publish/Subscribe cho IoT).
+- **215. TCP**: 신뢰성 있는 양방향 연결형 서비스 (Kết nối hai chiều, đáng tin cậy).
+- **216. UDP**: 비연결형, 빠른 속도, 실시간 전송 유리 (Không kết nối, truyền nhanh, hợp với Real-time).
+  - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game).

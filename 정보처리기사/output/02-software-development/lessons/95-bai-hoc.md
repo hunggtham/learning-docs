@@ -1,12 +1,12 @@
-# 305 - 308. IP 주소 체계 (IPv4 vs IPv6)
+# 120-1: 소프트웨어의 분류 (Software Classification)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **120-1: 소프트웨어의 분류 (Software Classification)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-주소, 체계
+소프트웨어의, 분류
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,9 @@
 
 ---
 
-## 305 - 308. IP 주소 체계 (IPv4 vs IPv6)
-- **IPv4**: 32비트 (8비트씩 4부분). 클래스 A~E로 나뉨.
-- **IPv6**: 128비트 (16비트씩 8부분). 콜론(`:`)으로 구분, 16진수 사용.
-- **IPv6의 특징**: 무한대에 가까운 주소, 보안 강화, 패킷 크기 확장, PnP(자동 설정).
-- **IPv6 전송 방식**: 유니캐스트(1:1), 멀티캐스트(1:N), 애니캐스트(가장 가까운 1:1).
+## 120-1: 소프트웨어의 분류 (Software Classification)
 
-**💡 Mẹo ghi nhớ (Mnemonics):**
-IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadcast는 IPv4에만 있음!*
+- **상용 소프트웨어 (Commercial):** Bán lấy tiền (Product). VD: Windows, Office, Game.
+- **서비스 제공 소프트웨어 (Service Provision / SI):** Làm theo đơn đặt hàng của 1 tổ chức (Dự án nội bộ). VD: Hệ thống ngân hàng.
 
 ---

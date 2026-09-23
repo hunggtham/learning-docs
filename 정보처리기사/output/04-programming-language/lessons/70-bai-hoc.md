@@ -1,12 +1,12 @@
-# 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
+# 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-매시업과, SOA
+프로그래밍, 언어의, 종류
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,12 @@
 
 ---
 
-## 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
-- **매시업 (Mashup)**: 웹 서비스나 콘텐츠를 조합하여 **새로운 서비스를 만드는 기술** (예: 구글 지도 + 부동산 정보).
-- **SOA (Service Oriented Architecture, 서비스 지향 아키텍처)**: 시스템을 **공유/재사용 가능한 서비스 단위**로 구축하는 구조. (계층: 표현, 업무 프로세스, 서비스 중간, 애플리케이션, 데이터 저장).
-
-**Giải thích (Vietnamese):**
-- Mashup: Lấy dữ liệu bản đồ của Google kết hợp với dữ liệu danh sách quán ăn để tạo ra app "Tìm quán ăn gần đây". (Trộn lẫn dữ liệu có sẵn để làm ra cái mới).
+## 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
+- **절차적 언어**: 실행 순서 중시.
+  - `COBOL` (사무용), `FORTRAN` (과학 기술 계산용), `C` (시스템 프로그래밍), `ALGOL`.
+- **객체지향 언어**: 데이터+기능 캡슐화. 재사용성 높음.
+  - `JAVA` (플랫폼 독립성, JVM), `C++` (C의 객체지향 확장), `Smalltalk` (최초 GUI, 순수 객체지향).
+- **선언형 언어**: '무엇(What)'을 할지 기술 (함수형/논리형).
+  - `LISP` (연결리스트, AI용), `PROLOG` (논리 추론, AI용), `Haskell` (순수 함수형), `XML` (구조화 문서).
 
 ---

@@ -1,12 +1,12 @@
-# 104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)
+# 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 매뉴얼
+기타, 협업, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,20 @@
 
 ---
 
-## 104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)
+## 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
-### 설치 매뉴얼 (Installation Manual - Hướng dẫn cài đặt)
-- **사용자 기준 (Góc nhìn người dùng):** Viết cho khách hàng, không phải cho Dev.
-- **순서대로 (Theo trình tự):** Từ lúc bấm Next đến lúc Finish.
-- **예외 상황 / 오류 메시지:** Phải có cách xử lý khi cài đặt bị lỗi.
-- **Uninstall (Xóa cài đặt):** Bắt buộc phải hướng dẫn cách gỡ cài đặt sạch sẽ.
-- **서문 (Lời nói đầu) bao gồm:**
-  - 문서 이력 (Lịch sử chỉnh sửa v1.0, v1.1).
-  - 주석 (Chú ý/Tham khảo).
-  - 설치 환경 체크 (Kiểm tra OS, tắt app khác trước khi cài).
+### 빌드 도구 (Build Tool)
+- 소스 코드를 실행할 수 있는 제품으로 변환(빌드)하는 과정을 자동화. (Công cụ tự động biên dịch và gom file code lại thành file chạy `.exe`, `.apk`...).
+- **Ant:** Cổ điển, dùng cho Java, của Apache.
+- **Maven:** Nâng cấp của Ant, quản lý thư viện (Dependencies) tự động.
+- **Gradle:** Hiện đại nhất, lai giữa Ant và Maven, dùng nhiều cho Android.
 
-### 사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)
-- **컴포넌트 단위 (Theo từng Component):** Chia nhỏ theo từng tính năng (Ví dụ: Hướng dẫn riêng cho Word, Excel).
-- **버전 관리 (Quản lý phiên bản):** App update tính năng thì Manual cũng phải update theo.
-- **시각 자료 (Hình ảnh):** Bắt buộc phải có hình chụp màn hình UI để dễ hiểu.
+### 기타 협업 도구 (Groupware / Collaboration Tools)
+- **프로젝트 및 일정 관리 (Quản lý dự án):** Jira (지라), Trello, Google Calendar.
+- **메신저 (Giao tiếp):** Slack, Jandi.
+- **디자인 (Thiết kế UI -> Code):** Zeplin, Sketch.
+- **기타:** Evernote (Ghi chú), Swagger (Tài liệu API tự động), GitHub (Lưu source code).
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Jira = Quản lý công việc (Ticket). Slack = Chat. Zeplin = Thiết kế. Swagger = Viết Document cho API. Gradle = Build Android.
 
 ---

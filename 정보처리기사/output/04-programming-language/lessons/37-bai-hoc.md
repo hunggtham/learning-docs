@@ -1,12 +1,12 @@
-# 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
+# 283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-메모리, 관리, 기법, 배치, 전략
+운영체제, 구성, UNIX, 시스템
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,19 @@
 
 ---
 
-## 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
-- **최초 적합 (First fit)**: 가장 처음 만나는 빈 공간에 할당 (빠름).
-- **최적 적합 (Best fit)**: 자원 낭비(단편화)가 가장 적은 핏(딱 맞는) 공간에 할당.
-- **최악 적합 (Worst fit)**: 단편화가 가장 큰(넓은) 공간에 할당 (남은 공간을 다시 쓰기 위해).
+## 283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)
+- **운영체제 구성**:
+  - **제어 프로그램**: 감시(Supervisor, 핵심), 작업 제어, 데이터 관리.
+  - **처리 프로그램**: 언어 번역(컴파일러), 서비스(유틸리티).
+- **UNIX의 특징**: 대화식 운영체제, **C언어로 작성**되어 이식성이 높음. 트리(Tree) 구조의 파일 시스템.
+  - **커널(Kernel)**: UNIX의 핵심. 하드웨어/메모리/프로세스 관리.
+  - **쉘(Shell)**: 사용자의 명령어를 해석하여 커널에 전달하는 인터페이스.
+- **파일 디스크립터 (File Descriptor)**: 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 속성을 담는 FCB/inode와 동일한 제어 블록이 아니다.
+- **UNIX 환경 변수**: `$HOME`(홈 디렉터리), `$PATH`(명령어 검색 경로), `$PWD`(현재 작업 폴더).
+- **UNIX 명령어**: `chmod`(권한 변경), `fork`(프로세스 복제).
 
 **Giải thích (Vietnamese):**
-Khi một phần mềm cần RAM, OS sẽ nhét nó vào đâu?
-- First fit: Thấy chỗ nào trống nhét vào luôn (Nhanh).
-- Best fit: Tìm chỗ nào vừa khít nhất để nhét (Tiết kiệm chỗ).
-- Worst fit: Cố tình nhét vào chỗ rộng nhất (Để chừa lại không gian rộng cho các app sau).
+- Kernel là não bộ, Shell là lớp vỏ giao tiếp với người dùng.
+- Lệnh `fork` trong Unix dùng để nhân bản một Process đang chạy thành một Process con mới.
 
 ---

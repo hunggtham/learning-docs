@@ -1,12 +1,12 @@
-# 108. 도메인 (Domain)
+# 106-107. 튜플(Tuple)과 속성(Attribute)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **108. 도메인 (Domain)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **106-107. 튜플(Tuple)과 속성(Attribute)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-도메인
+튜플
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,11 @@
 
 ---
 
-## 108. 도메인 (Domain)
-- 하나의 애트리뷰트가 취할 수 있는 같은 타입의 원자(Atomic) 값들의 집합.
-- **VI (Vietnamese) (Tiếng Việt):** Miền giá trị. Tập hợp các giá trị nguyên tử (không thể chia nhỏ) cùng kiểu mà một thuộc tính có thể nhận.
-- **Example:** '성별' 속성의 도메인은 {남, 여}. / Miền giá trị của thuộc tính 'Giới tính' là {Nam, Nữ}.
+## 106-107. 튜플(Tuple)과 속성(Attribute)
+- **튜플 (Tuple):** 릴레이션을 구성하는 행(Row). 튜플의 수 = 카디널리티 (Cardinality).
+- **속성 (Attribute):** 데이터베이스를 구성하는 가장 작은 논리적 단위. 열(Column). 속성의 수 = 디그리 (Degree).
+- **VI (Vietnamese) (Tiếng Việt):** Tuple (Hàng) và Attribute (Cột).
+  - Tuple: Hàng. Số hàng = Cardinality.
+  - Attribute: Cột, đơn vị logic nhỏ nhất. Số cột = Degree.
+- **Example:** 학생 테이블의 '홍길동' 데이터 한 줄이 튜플, '이름', '학번' 열이 속성. / Một dòng dữ liệu 'Hong Gil-dong' là Tuple, các cột 'Tên', 'Mã SV' là Attribute.
+- 💡 **Mẹo ghi nhớ:** Tu-Car (Tuple = Cardinality), At-De (Attribute = Degree).

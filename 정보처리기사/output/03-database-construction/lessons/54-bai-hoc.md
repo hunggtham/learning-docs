@@ -1,12 +1,12 @@
-# 21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)
+# 15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-데이터, 전환, 정제
+관계, 데이터, 언어
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,22 @@
 
 ---
 
-## 21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)
+## 15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)
 
-### 데이터 전환 (Data Migration - Di chuyển dữ liệu)
-Là quá trình chuyển dữ liệu từ hệ thống cũ sang hệ thống mới.
-- **ETL 3 bước:**
-  1. **E**xtraction (추출): Trích xuất từ nguồn.
-  2. **T**ransformation (변환): Biến đổi cho phù hợp chuẩn mới.
-  3. **L**oad (적재): Nạp vào hệ thống đích.
+### 일반 집합 연산자 (Toán tử tập hợp cơ bản)
+- **합집합 (UNION, ∪):** Hợp (lấy tất cả, bỏ trùng lặp).
+- **교집합 (INTERSECTION, ∩):** Giao (lấy phần chung).
+- **차집합 (DIFFERENCE, —):** Hiệu (R - S: có trong R nhưng không có trong S).
+- **교차곱 (CARTESIAN PRODUCT, Х):** Tích Đề-các (kết hợp tất cả các dòng của 2 bảng).
 
-### 오류 데이터 정제 (Error Data Cleansing)
-Quản lý trạng thái lỗi trong quá trình chuyển đổi:
-- **Open (Mở):** Phát hiện lỗi, chưa phân tích.
-- **Assigned (Đã giao):** Giao cho lập trình viên sửa.
-- **Fixed (Đã sửa):** Đã sửa xong.
-- **Closed (Đóng):** Đã test lại và xác nhận bình thường.
-- **Deferred (Trì hoãn):** Quyết định chưa sửa lúc này (hoặc không phải lỗi).
+### 순수 관계 연산자 (Toán tử quan hệ thuần túy)
+| 연산자 (Toán tử) | 기호 (Ký hiệu) | 설명 (Mô tả) |
+|---|---|---|
+| **Select (선택)** | **σ (Sigma)** | Lấy các **Hàng (Tuple)** thỏa mãn điều kiện (Phép toán nằm ngang - 수평). |
+| **Project (추출)** | **π (Pi)** | Lấy các **Cột (Attribute)** được chỉ định, loại bỏ trùng lặp (Phép toán dọc - 수직). |
+| **Join (조인)** | **⋈ (Bowtie)** | Kết hợp 2 bảng dựa trên thuộc tính chung. |
+| **Division (나누기)** | **÷ (Divide)** | Trả về các 튜플 của bảng R mà khớp với tất cả giá trị thuộc tính của bảng S. |
+
+> 💡 **Mẹo ghi nhớ:** **Se-Hàng, Pro-Cột** (Select = Hàng/Tuple, Project = Cột/Attribute).
 
 ---

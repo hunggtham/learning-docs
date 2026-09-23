@@ -1,12 +1,12 @@
-# 198. 암호화 심화 (Encryption Deep Dive)
+# 201-203. 스토리지 시스템 (Storage Systems)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **198. 암호화 심화 (Encryption Deep Dive)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **201-203. 스토리지 시스템 (Storage Systems)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-암호화, 심화
+스토리지, 시스템
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,11 @@
 
 ---
 
-## 198. 암호화 심화 (Encryption Deep Dive)
-- **개인키(비밀키) 암호 방식 (Private/Symmetric Key):** 암호화와 복호화 키가 동일. 단일키, 대칭 암호. (예: DES)
-- **공개키 암호 방식 (Public/Asymmetric Key):** 암호화 키는 공개(Public), 복호화 키는 비밀(Secret). 비대칭 암호. (예: RSA)
-- **VI (Vietnamese) (Tiếng Việt):** Mã hóa dữ liệu.
-  - Khóa cá nhân (Đối xứng): Khóa mã hóa và giải mã giống nhau (DES).
-  - Khóa công khai (Bất đối xứng): Khóa mã hóa công khai, khóa giải mã bí mật (RSA).
+## 201-203. 스토리지 시스템 (Storage Systems)
+- **DAS (Direct Attached Storage):** 서버와 저장장치를 전용 케이블로 직접 연결. (외장하드 방식). 확장성 떨어짐.
+- **NAS (Network Attached Storage):** 네트워크를 통해 연결. 파일 공유 가능, 확장성 우수.
+- **SAN (Storage Area Network):** 서버와 저장장치를 연결하는 전용 네트워크 구성. (광 채널 스위치). DAS의 속도 + NAS의 공유 장점.
+- **VI (Vietnamese) (Tiếng Việt):** Hệ thống lưu trữ.
+  - DAS: Kết nối trực tiếp (cáp).
+  - NAS: Kết nối qua mạng LAN (chia sẻ file).
+  - SAN: Mạng lưu trữ chuyên dụng (tốc độ cao + chia sẻ).

@@ -1,12 +1,12 @@
-# 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
+# 53. EAI와 ESB 심화 (EAI vs ESB)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **53. EAI와 ESB 심화 (EAI vs ESB)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-XML, 데이터, 무결성, 검사, 도구
+ESB, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,7 @@ XML, 데이터, 무결성, 검사, 도구
 
 ---
 
-## 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
-* **XML (eXtensible Markup Language)**: HTML의 비호환성과 SGML의 복잡성을 해결하기 위해 만든 다목적 마크업 언어.
-* **인터페이스 보안 - 네트워크 영역 (IPSec)**: 네트워크 계층에서 IP 패킷 단위의 데이터 변조 방지 (양방향 암호화 지원).
-* **데이터 무결성 검사 도구**: 시스템 파일 변경 유무 확인 (해시 함수 이용). 백도어 탐지.
-  * **종류**: Tripwire, AIDE, Samhain, Claymore, Slipwire, Fcheck.
-* **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm Hash: Tripwire, AIDE.
+## 53. EAI와 ESB 심화 (EAI vs ESB)
+* **EAI**: 기업 내 애플리케이션들을 연동하는 솔루션 (Point-to-Point, Hub&Spoke, Message Bus, Hybrid).
+* **ESB (Enterprise Service Bus)**: 애플리케이션 간 표준 기반 인터페이스 제공. 애플리케이션 통합보다는 **서비스 중심 통합** 지향. 결합도(Coupling)를 **약하게(Loosely)** 유지.
+* **VI (Vietnamese) (Tiếng Việt):** So sánh EAI và ESB. EAI tập trung tích hợp ứng dụng, ESB tập trung tích hợp dịch vụ (Service-oriented) với độ kết dính lỏng lẻo (Loosely coupled) dùng tiêu chuẩn chung.

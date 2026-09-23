@@ -1,12 +1,12 @@
-# 1. 객체지향 설계 5대 원칙 (SOLID)
+# 2. 객체지향 (OOP - Object Oriented Programming)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **1. 객체지향 설계 5대 원칙 (SOLID)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **2. 객체지향 (OOP - Object Oriented Programming)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-객체지향, 설계, 원칙
+객체지향
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,40 +22,18 @@
 
 ---
 
-## 1. 객체지향 설계 5대 원칙 (SOLID)
-**개념 (Khái niệm):** 시스템의 변경이나 확장에 유연하게 대응하기 위해 지켜야 할 5가지 원칙 (5 nguyên tắc thiết kế hướng đối tượng giúp hệ thống linh hoạt trước các thay đổi và mở rộng).
-
-*   **SRP (Single Responsibility Principle - 단일 책임 원칙):**
-    *   **Korean:** 객체는 '단 하나의 책임'만 가져야 함. 클래스를 수정해야 할 이유는 단 하나여야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đơn trách nhiệm. Một đối tượng (hoặc lớp) chỉ nên có một trách nhiệm duy nhất. Lý do để sửa đổi một lớp chỉ nên có một.
-    *   **Example:**
-        *   *KR:* 보고서를 생성하는 클래스와 출력하는 클래스를 분리.
-        *   *VN:* Tách biệt lớp tạo báo cáo và lớp in báo cáo, không để chung một lớp.
-*   **OCP (Open-Closed Principle - 개방-폐쇄 원칙):**
-    *   **Korean:** 기능 추가에는 열려(Open) 있어야 하고, 기존 코드 변경에는 닫혀(Closed) 있어야 함. 인터페이스로 캡슐화.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đóng - Mở. Mở rộng chức năng thì dễ dàng (Open), nhưng không được sửa đổi mã nguồn hiện tại (Closed). Thường dùng Interface để đóng gói.
-    *   **Example:**
-        *   *KR:* 결제 수단(카드, 페이 등)을 인터페이스로 구현하여 새로운 결제 수단 추가 시 기존 코드 수정 없이 확장.
-        *   *VN:* Dùng Interface cho phương thức thanh toán, khi thêm phương thức mới (ví dụ: ví điện tử) thì không cần sửa mã cũ.
-*   **LSP (Liskov Substitution Principle - 리스코프 치환 원칙):**
-    *   **Korean:** 자식 클래스는 최소한 부모 클래스의 행위를 수행할 수 있어야 함. 부모의 의도를 훼손하지 않고 확장.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Thay thế Liskov. Lớp con phải có thể thay thế lớp cha mà không làm hỏng tính đúng đắn của chương trình. Lớp con chỉ nên mở rộng, không làm sai lệch ý định của lớp cha.
-    *   **Example:**
-        *   *KR:* 새(Bird) 부모 클래스를 상속받은 펭귄(Penguin)이 날기(fly) 메서드를 가지면 LSP 위반.
-        *   *VN:* Chim cánh cụt kế thừa từ lớp Chim, nhưng nếu gọi hàm bay() sẽ bị lỗi, vi phạm LSP. Cần thiết kế lại.
-*   **ISP (Interface Segregation Principle - 인터페이스 분리 원칙):**
-    *   **Korean:** 사용하지 않는 인터페이스에 의존하지 않도록 분리.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Phân tách Interface. Không nên ép các lớp phụ thuộc vào những interface mà chúng không sử dụng. Hãy chia nhỏ interface khổng lồ thành các interface cụ thể.
-    *   **Example:**
-        *   *KR:* 복합기 인터페이스를 프린터, 스캐너, 팩스 인터페이스로 분리.
-        *   *VN:* Tách interface của máy photocopy đa năng thành các interface riêng: In, Quét, Fax.
-*   **DIP (Dependency Inversion Principle - 의존 역전 원칙):**
-    *   **Korean:** 구체적인 클래스보다 추상화된 클래스(인터페이스)에 의존해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đảo ngược phụ thuộc. Các module cấp cao không nên phụ thuộc vào module cấp thấp, cả hai nên phụ thuộc vào abstractions (interface).
-    *   **Example:**
-        *   *KR:* 자동차가 스노우타이어(구체) 대신 타이어(추상) 인터페이스에 의존.
-        *   *VN:* Lớp xe hơi phụ thuộc vào interface "Lốp xe" nói chung, thay vì phụ thuộc trực tiếp vào "Lốp đi tuyết".
-
-💡 **Mẹo ghi nhớ (Mnemonics):** **SOLID** (S = Single, O = Open, L = Liskov, I = Interface, D = Dependency)
-
----
+## 2. 객체지향 (OOP - Object Oriented Programming)
+- **구성요소**: 클래스 (Class), 객체 (Object), 메서드 (Method), 메시지 (Message), 인스턴스 (Instance), 속성 (Property).
+- **객체지향 기법 (OOP Techniques)**:
+  - **캡슐화 (Encapsulation)**: Đóng gói dữ liệu và phương thức, giảm kết dính (Coupling).
+  - **정보 은닉 (Information Hiding)**: Giấu thông tin chi tiết.
+  - **다형성 (Polymorphism)**: Đa hình (Overloading - Cùng tên khác tham số, Overriding - Ghi đè phương thức cha).
+- **객체지향 설계 원칙 (SOLID)**:
+  - **S (SRP)**: Đơn trách nhiệm (Một lớp một việc).
+  - **O (OCP)**: Đóng-Mở (Mở rộng thì dễ, sửa đổi thì cấm).
+  - **L (LSP)**: Thay thế Liskov (Lớp con thay thế được lớp cha).
+  - **I (ISP)**: Phân tách Interface (Interface nhỏ gọn).
+  - **D (DIP)**: Đảo ngược phụ thuộc (Phụ thuộc vào Interface, không phụ thuộc vào triển khai chi tiết).
+- **분석 방법론 (OOA Methods)**:
+  - **람바우 (Rumbaugh - OMT)**: 객체 모형 (Object) -> 동적 모형 (Dynamic) -> 기능 모형 (Functional - DFD).
+  - 💡 **Mẹo ghi nhớ**: K/Đ/C -> **Không Đợi Chờ**

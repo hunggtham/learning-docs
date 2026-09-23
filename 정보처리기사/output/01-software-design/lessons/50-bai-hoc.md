@@ -1,12 +1,12 @@
-# 10. 소프트웨어 설계 원리 (Software Design Principles)
+# 6. 구조적 분석 도구 (Structured Analysis Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **10. 소프트웨어 설계 원리 (Software Design Principles)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **6. 구조적 분석 도구 (Structured Analysis Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 설계, 원리
+구조적, 분석, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,14 @@
 
 ---
 
-## 10. 소프트웨어 설계 원리 (Software Design Principles)
-- **모듈화 (Modularity)**:
-  - Module quá nhỏ -> Chi phí tích hợp (Integration Cost) tăng.
-  - Module quá lớn -> Chi phí phát triển từng module (Development Cost) tăng.
-- **추상화 (Abstraction)**: 3 loại (과정 - Quá trình, 데이터 - Dữ liệu, 제어 - Điều khiển).
-- **단계적 분해 (Stepwise Refinement)**: Đi từ trên xuống (Top-down).
-- **정보 은닉 (Information Hiding)**: Giấu thông tin để giảm phụ thuộc.
-- **시스템 타입 (System Types)**:
-  - **대화형 (Interactive)**: Tương tác (VD: Web bán hàng).
-  - **이벤트 중심 (Event-driven)**: Dựa trên sự kiện (VD: Chuông báo cháy).
-  - **변환형 (Transformational)**: Biến đổi dữ liệu (VD: Trình biên dịch - Compiler).
-  - **객체 영속형 (Object Persistence)**: Lưu trữ lâu dài (VD: Database Server).
+## 6. 구조적 분석 도구 (Structured Analysis Tools)
+- Phân tích Top-down (하향식), dùng biểu đồ (도형).
+- **DFD (Biểu đồ luồng dữ liệu)**: Process (Tròn), Flow (Mũi tên), Data Store (Vạch ngang), Terminator (Vuông).
+- **DD (Từ điển dữ liệu)**:
+  - `=`: Định nghĩa
+  - `+`: Nối
+  - `( )`: Tùy chọn (Optional)
+  - `[ | ]`: Chọn 1 trong các (Or)
+  - `{ }`: Lặp (Iteration)
+  - `* *`: Chú thích
+- **HIPO**: Biểu đồ phân cấp (가시적, 총체적, 세부적).

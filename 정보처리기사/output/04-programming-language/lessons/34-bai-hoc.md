@@ -1,12 +1,12 @@
-# 082. 운영체제 기능 및 종류 (Operating System OS)
+# 운영체제 (Operating Systems)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **082. 운영체제 기능 및 종류 (Operating System OS)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **운영체제 (Operating Systems)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-운영체제, 기능, 종류
+운영체제
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,24 +22,47 @@
 
 ---
 
-## 082. 운영체제 기능 및 종류 (Operating System OS)
-- **운영체제의 주요 프로그램**:
-  - **제어 프로그램 (Control Program)**: 감시(Kernel), 작업 제어, 데이터 관리.
-  - **처리 프로그램 (Processing Program)**: 언어 번역(컴파일러), 서비스, 문제 프로그램.
-- **쉘(Shell)과 커널(Kernel)**:
-  - **쉘 (Shell)**: 사용자의 명령어를 해석하여 커널로 전달 (사용자 인터페이스).
-  - **커널 (Kernel)**: 핵심 모듈. 하드웨어/메모리/프로세스를 직접 제어 및 관리.
-- **운영체제 종류**:
-  - **Windows**: GUI, 선점형 멀티태스킹, PnP(자동 감지) 기능.
-  - **Linux / Unix**: 오픈소스 (Linux), 트리 구조 파일 시스템. 시분할 시스템.
-  - **Unix 파일 시스템 구조**: 부트 블록 -> 슈퍼 블록 (전체 정보) -> 아이노드(i-node) 블록 (파일 메타데이터) -> 데이터 블록 (실제 파일 내용).
+## 운영체제 (Operating Systems)
+### 282. 운영체제의 정의 및 평가 기준 (OS Definition & Evaluation Criteria / Định nghĩa và tiêu chí đánh giá HĐH)
+- 자원을 효율적으로 관리하고 사용자 환경을 제공하는 시스템 소프트웨어. (Phần mềm hệ thống quản lý tài nguyên và cung cấp môi trường làm việc cho người dùng).
+- **평가 기준 (Tiêu chí đánh giá)**:
+  1. **처리 능력 (Throughput)**: 양 (Số lượng công việc xử lý trong 1 đơn vị thời gian - Càng cao càng tốt).
+  2. **반환 시간 (Turn Around Time)**: 걸린 시간 (Thời gian từ lúc gửi yêu cầu đến lúc hoàn thành - Càng thấp càng tốt).
+  3. **사용 가능도 (Availability)**: 즉시 사용 가능 정도 (Độ sẵn sàng, sử dụng được ngay khi cần - Càng cao càng tốt).
+  4. **신뢰도 (Reliability)**: 정확하게 해결하는 정도 (Mức độ tin cậy, tính toán chính xác - Càng cao càng tốt).
 
-**Giải thích (Vietnamese):**
-OS giống như quản gia của máy tính.
-- Kernel (Hạt nhân) là bộ não xử lý phần cứng. Shell (Vỏ) là cái dòng lệnh hoặc giao diện để con người nói chuyện với bộ não đó.
-- Hệ thống tệp của UNIX chia làm 4 phần: Boot (chứa code khởi động) -> Super (Thông tin tổng quan) -> i-node (Lưu tên file, quyền truy cập...) -> Data (Nội dung file thực tế).
+### 283. 운영체제의 구성 (OS Components / Cấu trúc HĐH)
+- **제어 프로그램 (Control Program - Chương trình điều khiển)**:
+  1. **감시 (Supervisor)**: 핵심, 자원 할당 감시 (Giám sát cốt lõi, cấp phát tài nguyên).
+  2. **작업 관리 (Job Management)**: 작업 순서와 방법 관리 (Quản lý thứ tự và phương pháp chạy job).
+  3. **데이터 관리 (Data Management)**: 파일/데이터 처리 및 전송 (Quản lý file và dữ liệu).
+- **처리 프로그램 (Processing Program - Chương trình xử lý)**:
+  1. **언어 번역 (Language Translator)**: 컴파일러, 어셈블러 (Trình biên dịch, hợp ngữ).
+  2. **서비스 (Service)**: 정렬/병합, 유틸리티 (Các tiện ích, sắp xếp, gộp).
+  - 💡 *Mẹo ghi nhớ*: Điều khiển gồm Giám sát, Công việc, Dữ liệu (GCD - Giám đốc Công ty Dữ liệu). Xử lý gồm Dịch ngôn ngữ, Tiện ích (DT - Dịch Thuật).
 
-**💡 Mẹo ghi nhớ (Mnemonics):**
-**제어 프로그램**: 감작데 (감시, 작업, 데이터). / **처리 프로그램**: 언서문 (언어, 서비스, 문제).
+### 284. 운영체제의 기능 (OS Functions / Chức năng HĐH)
+- 프로세서, 기억장치, 입출력 장치, 파일 등의 자원 관리. (Quản lý CPU, Bộ nhớ, I/O, File).
+- **선점형 멀티태스킹 (Preemptive Multi-Tasking)**: 응용 프로그램 강제 종료 및 자원 반환 가능. (Đa nhiệm ưu tiên, OS có quyền thu hồi CPU từ tiến trình bị treo).
+- **PnP (Plug and Play)**: 환경 자동 구성. (Cắm là chạy, tự động nhận cấu hình phần cứng).
 
----
+### 285. Windows 특징 (Windows OS Features)
+- **GUI (Graphic User Interface)**: 마우스로 아이콘 선택 (Giao diện đồ họa người dùng).
+- **선점형 멀티태스킹 (Preemptive Multi-Tasking)**: 응용 프로그램 강제 종료 가능.
+- **PnP (Plug and Play)**: 하드웨어 설치 시 환경 자동 구성 (Cắm là chạy).
+- **OLE (Object Linking and Embedding)**: 개체를 다른 문서에 연결/삽입 (Chèn hoặc liên kết đối tượng giữa các ứng dụng).
+- **255자의 긴 파일명**: 최대 255자 (VFAT), 한글 127자. (Tên file tối dài tối đa 255 ký tự).
+
+### 286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)
+- **시분할 시스템 (Time Sharing System)**: 시간을 분할하여 대화식으로 운영.
+- **개방형 시스템 (Open System)**: 표준 인터페이스와 이식성을 중시하며, 개방형이라는 사실이 곧 소스 코드 공개나 오픈 소스 라이선스를 뜻하지는 않는다.
+- **네트워킹 (Networking)**: 통신망 관리용으로 적합.
+
+### 287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)
+- **커널 (Kernel)**: 핵심, 메모리 상주, 하드웨어 보호 및 자원 관리. (Lõi HĐH, thường trú trong RAM).
+- **쉘 (Shell)**: 명령어 해석기, 인터페이스, 주기억장치에 상주하지 않음. (Trình thông dịch lệnh, giao diện người dùng, không thường trú trong RAM).
+- **유틸리티 (Utility)**: 에디터, 컴파일러 등. (Các chương trình tiện ích).
+
+### 288. 파일 디스크립터 (File Descriptor)
+- 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 상태를 담는 FCB(또는 inode 등 커널 자료구조)와 동일한 개념이 아니다.
+- 응용 프로그램은 디스크립터 값을 통해 읽기·쓰기·닫기 연산을 요청한다.

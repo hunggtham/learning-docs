@@ -1,12 +1,12 @@
-# 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
+# 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-스크럼, 추가, 개념
+스크럼
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,12 +22,13 @@
 
 ---
 
-## 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
-- **스크럼 프로세스 (Scrum Process)**:
-  - **일일 스크럼 (Daily Scrum)**: Họp đứng 15 phút. Cập nhật tiến độ lên Burn-down Chart (Biểu đồ tiêu hao).
-  - **스프린트 검토 (Sprint Review)**: Demo sản phẩm cho khách hàng xem có đúng ý không.
-  - **스프린트 회고 (Sprint Retrospective)**: Nội bộ team họp để rút kinh nghiệm, cải tiến quy trình.
-- **XP 기법 상세 (XP Details)**:
-  - **사용자 스토리 (User Story)**: Kịch bản do khách hàng viết (đơn vị chức năng), có thể chứa Test Case.
-  - **릴리즈 계획 (Release Planning)**: Kế hoạch phát hành từng phần sản phẩm (v1.0, v1.1).
-  - **스파이크 (Spike)**: Chương trình nhỏ, code thử nghiệm nhanh để kiểm tra tính khả thi của công nghệ nhằm giảm rủi ro (기술적 위험 감소). Code này có thể bị vứt đi sau khi test.
+## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
+- **스크럼 (Scrum)**: Quản lý dự án Agile theo nhóm.
+  - **용어**: 제품 백로그 (Product Backlog - Yêu cầu tổng), 스프린트 (Sprint - Chu kỳ 2-4 tuần), 속도 (Velocity), 번 다운 차트 (Burn Down Chart - Biểu đồ tiến độ), PO (Product Owner), SM (Scrum Master).
+  - **프로세스**: Backlog -> Sprint Planning -> Sprint Execution (Daily Scrum) -> Sprint Review (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
+- **XP (eXtreme Programming)**: Tối ưu hóa phát triển phần mềm cùng khách hàng.
+  - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback).
+  - 💡 **Mẹo ghi nhớ**: Y/Đ/D/T/P -> **Ý Định Dũng Tướng Phàm**
+  - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
+
+---

@@ -1,12 +1,12 @@
-# 52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)
+# 51. 빅오 표기법 (Big-O Notation) 심화
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **51. 빅오 표기법 (Big-O Notation) 심화**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소스, 코드, 최적화와, 순환, 복잡도
+빅오, 표기법
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,11 @@
 
 ---
 
-## 52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)
-* **소스 코드 최적화**: 배제해야 할 '나쁜 코드(Bad Code - 스파게티 코드, 외계인 코드)'와 작성해야 할 '클린 코드(Clean Code - 가독성, 단순성, 의존성 배제, 중복성 최소화, 추상화)'가 있음.
-* **순환 복잡도 (McCabe's Cyclomatic Complexity)**: 프로그램 논리의 복잡도를 측정.
-  * 계산 방법: `V(G) = 화살표 수(E) - 노드 수(N) + 2` 또는 제어 흐름도의 닫힌 영역 수 + 1.
-* **소스 코드 품질 분석 도구 심화**:
-  * **정적 분석 도구**: pmd, cppcheck, SonarQube, checkstyle, ccm.
-  * **동적 분석 도구**: Avalanche, Valgrind (메모리 누수, 스레드 결함 발견).
-* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe).
-  * Clean code > Bad code (Spaghetti/Alien).
-  * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng test case cơ bản cần thiết.
-  * Công cụ tĩnh (không chạy code): SonarQube. Động (chạy code tìm rò rỉ bộ nhớ): Valgrind.
+## 51. 빅오 표기법 (Big-O Notation) 심화
+* **O(1)**: 스택 삽입/삭제.
+* **O(log_2 n)**: 이진 트리, 이진 검색 (단계가 절반씩 줄어듦).
+* **O(n)**: 1중 for문.
+* **O(n log_2 n)**: 힙 정렬, 2-Way 합병 정렬.
+* **O(n^2)**: 삽입, 선택, 버블, 퀵 정렬(최악). 2중 for문.
+* **O(2^n)**: 피보나치 수열.
+* **VI (Vietnamese) (Tiếng Việt):** Độ phức tạp thuật toán Big-O. O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n).

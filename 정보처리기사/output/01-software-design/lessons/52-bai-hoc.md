@@ -1,12 +1,12 @@
-# 4. 응집도 (Cohesion - Độ gắn kết)
+# 3. 결합도 (Coupling - Độ phụ thuộc)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **4. 응집도 (Cohesion - Độ gắn kết)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **3. 결합도 (Coupling - Độ phụ thuộc)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-응집도
+결합도
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,32 +22,35 @@
 
 ---
 
-## 4. 응집도 (Cohesion - Độ gắn kết)
-**개념 (Khái niệm):** 모듈 내부 요소들이 서로 밀접하게 관련되어 있는 정도 (Mức độ liên quan chặt chẽ của các thành phần BÊN TRONG 1 module). **강할수록 좋음 (Càng cao càng tốt).**
+## 3. 결합도 (Coupling - Độ phụ thuộc)
+**개념 (Khái niệm):** 모듈 간의 의존성 정도 (Mức độ phụ thuộc giữa các module với nhau). **낮을수록 좋음 (Càng thấp càng tốt).**
 
-순서 (Từ Tốt nhất đến Xấu nhất): **기능(Functional) -> 순차(Sequential) -> 교환(Communication) -> 절차(Procedural) -> 시간(Temporal) -> 논리(Logical) -> 우연(Coincidental)**
-💡 **Mẹo ghi nhớ:** K-S-K-C-S-N-U (Kì-Sun-Kiều-Chul-Shi-Non-U) -> **Không Tin Kiều Chỉ Sợ Người Ù**
+순서 (Từ Tốt nhất đến Xấu nhất): **자료(Data) -> 스탬프(Stamp) -> 제어(Control) -> 외부(External) -> 공통(Common) -> 내용(Content)**
+💡 **Mẹo ghi nhớ:** T-S-C-N-C-N (Data-Stamp-Control-External-Common-Content) -> **Tính Sao Cho Nhẹ Cả Người**
 
-1.  **기능적 응집도 (Functional):**
-    *   **Korean:** 단일 문제와 연관되어 수행. (Tốt nhất)
-    *   **VI (Vietnamese) (Tiếng Việt):** Mọi thành phần trong module cùng giải quyết MỘT bài toán duy nhất.
-2.  **순차적 응집도 (Sequential):**
-    *   **Korean:** 출력 데이터가 다음 활동의 입력 데이터로 사용됨.
-    *   **VI (Vietnamese) (Tiếng Việt):** Đầu ra của bước này là đầu vào của bước kia (trong cùng module).
-3.  **교환(통신)적 응집도 (Communication):**
-    *   **Korean:** 동일한 입출력을 사용하여 서로 다른 기능 수행.
-    *   **VI (Vietnamese) (Tiếng Việt):** Các chức năng khác nhau dùng chung một tập dữ liệu đầu vào / đầu ra.
-4.  **절차적 응집도 (Procedural):**
-    *   **Korean:** 기능들을 순차적으로 수행.
-    *   **VI (Vietnamese) (Tiếng Việt):** Các phần tử được thực hiện theo trình tự thời gian / kịch bản nhất định.
-5.  **시간적 응집도 (Temporal):**
-    *   **Korean:** 특정 시간에 처리되는 기능들을 모음.
-    *   **VI (Vietnamese) (Tiếng Việt):** Gom các tác vụ xảy ra cùng một thời điểm (VD: khối khởi tạo hệ thống Init).
-6.  **논리적 응집도 (Logical):**
-    *   **Korean:** 유사한 성격/형태로 분류되는 요소들을 모음.
-    *   **VI (Vietnamese) (Tiếng Việt):** Gom các hàm có tính chất logic giống nhau (VD: Hàm in các loại báo cáo, mặc dù báo cáo khác nhau).
-7.  **우연적 응집도 (Coincidental) - XẤU NHẤT:**
-    *   **Korean:** 아무 관련 없이 구성됨.
-    *   **VI (Vietnamese) (Tiếng Việt):** Các phần tử gom lại ngẫu nhiên, không liên quan gì nhau.
+1.  **자료 결합도 (Data Coupling) - TỐT NHẤT:**
+    *   **Korean:** 파라미터(자료 요소)만 전달.
+    *   **VI (Vietnamese) (Tiếng Việt):** Chỉ truyền tham số dữ liệu cần thiết.
+    *   **Example:** `sum(a, b)` truyền đúng 2 số a, b.
+2.  **스탬프 결합도 (Stamp Coupling):**
+    *   **Korean:** 배열/레코드 등 자료구조가 전달됨.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truyền toàn bộ cấu trúc dữ liệu (mảng, đối tượng) nhưng chỉ dùng 1 phần.
+    *   **Example:** Truyền đối tượng `User` nhưng chỉ dùng `User.name`.
+3.  **제어 결합도 (Control Coupling):**
+    *   **Korean:** 제어 신호(Flag)를 전달하여 모듈 흐름 제어.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào logic của module khác.
+    *   **Example:** Truyền `isExpress=true` để quyết định cách xử lý.
+4.  **외부 결합도 (External Coupling):**
+    *   **Korean:** 외부 변수/데이터 참조.
+    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / file / thiết bị bên ngoài.
+    *   **Example:** Hai module dùng chung một file `config.txt`.
+5.  **공통 결합도 (Common Coupling):**
+    *   **Korean:** 공통 데이터 영역(전역 변수) 공유.
+    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều module dùng chung biến toàn cục (global variables).
+    *   **Example:** Sử dụng `public static int totalCount` chung.
+6.  **내용 결합도 (Content Coupling) - XẤU NHẤT:**
+    *   **Korean:** 내부 기능/자료 직접 참조. 스파게티 코드.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/logic nội bộ của module khác.
+    *   **Example:** `moduleB.internalValue = 10` từ module A.
 
 ---
