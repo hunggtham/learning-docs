@@ -101,6 +101,7 @@
 93. [104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)](lessons/93-bai-hoc.md)
 94. [113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)](lessons/94-bai-hoc.md)
 95. [120-1: 소프트웨어의 분류 (Software Classification)](lessons/95-bai-hoc.md)
+96. [Exam Pattern Pack 02 — 소프트웨어 개발](lessons/96-bai-hoc.md)
 
 ## Ghi chú học
 

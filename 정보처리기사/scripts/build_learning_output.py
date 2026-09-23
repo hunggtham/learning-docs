@@ -203,6 +203,7 @@ def main() -> None:
         "- Bản source hiện đối chiếu theo 출제기준 Q-Net giai đoạn **2023.1.1–2025.12.31**; đây không phải cam kết cho kỳ thi 2026. Trước khi thi, hãy kiểm tra bản mới nhất trên [Q-Net](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602).\n\n"
         "- [Coverage matrix / ma trận độ phủ](COVERAGE_MATRIX.md) ghi số lesson, source canonical và trạng thái rà soát của từng môn.\n\n"
         "- [Research register / sổ nguồn nghiên cứu](RESEARCH_REGISTER.md) ghi nguồn Q-Net và tài liệu kỹ thuật dùng để fact-check.\n\n"
+        "- [Exam pattern register / pattern đề thi](EXAM_PATTERN_REGISTER.md) ghi dạng câu hỏi đã nghiên cứu và link tới bộ luyện tập biến thể nguyên bản.\n\n"
         "## Các môn\n\n" + "\n".join(index_rows) + "\n\n"
         "## Phạm vi nguồn đã rà soát\n\n"
         "- `raw/`: PDF, DOCX và bản tóm tắt gốc.\n"
@@ -235,6 +236,26 @@ def main() -> None:
         "- [Python control-flow tutorial](https://docs.python.org/3/tutorial/controlflow.html) — `for`, `continue`, `break` and trace behavior.\n"
         "- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/CSRF_Prevention_Cheat_Sheet.html) — token and SameSite defense limits.\n\n"
         "외부 자료는 기술 사실을 검증하기 위한 참고이며, 실제 응시 전에는 Q-Net 출제기준의 최신 게시물을 우선한다.\n",
+        encoding="utf-8",
+    )
+    (OUTPUT / "EXAM_PATTERN_REGISTER.md").write_text(
+        "# 정보처리기사 필기 — Exam Pattern Register\n\n"
+        "## Phạm vi nghiên cứu\n\n"
+        "Q-Net ghi rõ bài thi CBT không công khai nguyên đề trên Internet. Vì vậy, các pattern dưới đây được tổng hợp từ 출제기준 và bản phục dựng công khai; phần câu hỏi trong output là biến thể nguyên bản, không phải đề chính thức.\n\n"
+        "- [Q-Net 안내 về CBT và việc không công khai nguyên đề](https://q-net.or.kr/anc002.do?gSite=Q&id=anc00203)\n"
+        "- [Bản phục dựng 2025년 1회 (PDF)](https://www.sinagong.co.kr/file/download?file_name=2025%EB%85%841%ED%9A%8C_%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EA%B8%B0%EC%82%AC%ED%95%84%EA%B8%B0%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C.pdf&path=sinagong%2Fbook-qnas%2F2025%2F06%2FZSK45N6oGkZSdJ47baJzVC4wpAEmbi9xOwnWzU7n.pdf)\n"
+        "- [2024년 1회 CBT listing](https://morningstudy.com/engineer/solve-past-papers/57/)\n\n"
+        "| Môn | Pattern quan sát | Pack trong output |\n"
+        "|---|---|---|\n"
+        "| 1 | SCM, EAI Hybrid, N-S chart, UML, coupling/independence | Exam Pattern Pack 01 |\n"
+        "| 2 | static analysis, white-box, sorting trace, build tools, stack/queue | Exam Pattern Pack 02 |\n"
+        "| 3 | DCL/TCL, locking, normalization/BCNF, SQL, view/cardinality | Exam Pattern Pack 03 |\n"
+        "| 4 | C/Python/Java trace, operators, pointers, IPv6, address translation | Exam Pattern Pack 04 |\n"
+        "| 5 | COCOMO, RIP, crypto classification, SDLC, access control, DoS | Exam Pattern Pack 05 |\n\n"
+        "## 사용 규칙\n\n"
+        "- 원문 기출을 정답 암기용으로 복제하지 않는다.\n"
+        "- 각 문제는 정답뿐 아니라 판단 근거와 함정을 함께 읽는다.\n"
+        "- 출제기준이 바뀌면 pattern register와 coverage matrix를 함께 갱신한다.\n",
         encoding="utf-8",
     )
 

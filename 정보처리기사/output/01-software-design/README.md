@@ -63,6 +63,7 @@
 55. [6. N-S 차트 (Nassi-Schneiderman Chart)](lessons/55-bai-hoc.md)
 56. [8. 재사용 (Reuse)](lessons/56-bai-hoc.md)
 57. [10. 코드 (Code) 개요 & 종류](lessons/57-bai-hoc.md)
+58. [Exam Pattern Pack 01 — 소프트웨어 설계](lessons/58-bai-hoc.md)
 
 ## Ghi chú học
 

@@ -12,6 +12,8 @@ Tài liệu được chia thành 5 môn. Mỗi folder có một bài học đầ
 
 - [Research register / sổ nguồn nghiên cứu](RESEARCH_REGISTER.md) ghi nguồn Q-Net và tài liệu kỹ thuật dùng để fact-check.
 
+- [Exam pattern register / pattern đề thi](EXAM_PATTERN_REGISTER.md) ghi dạng câu hỏi đã nghiên cứu và link tới bộ luyện tập biến thể nguyên bản.
+
 ## Các môn
 
 - [Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)](01-software-design/README.md)
