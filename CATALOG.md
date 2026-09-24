@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-23
+last_reviewed: 2026-09-24
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -212,10 +212,10 @@ domains:
     path: economics/
     entrypoint: economics/README.md
     status: canonical
-    last_reviewed: 2026-09-23
-    scope: Economic reasoning, microeconomics, macroeconomics, market structure, game theory, applied fields, econometrics, and economic history and institutions.
+    last_reviewed: 2026-09-24
+    scope: Economic reasoning; deep microeconomics and market-structure/game-theory foundations; planned macroeconomics, applied fields, econometrics, and economic history/institutions.
     prerequisites: [mathematics]
-    related: [investing, korea_business_economy, psychology, world_history]
+    related: [investing, korea_business_economy, psychology, world_history, world_geography, computer_science]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -363,11 +363,11 @@ Mỗi entry trong YAML front matter có các field tối thiểu:
 
 Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong file này. Không rename/move hàng loạt folder nếu chưa có kế hoạch cập nhật internal links.
 
-## 7. Economics: bắt đầu tách thành domain độc lập
+## 7. Economics: canonical foundation đã vượt bootstrap
 
-Đã tạo [`economics/`](economics/README.md) ở mức bootstrap để học Economics như một ngành độc lập với investment. Lộ trình mới bao phủ consumer/producer theory, market structure, game theory, labor economics, public economics, international trade, development economics, industrial organization, econometrics và economic history.
+[`economics/`](economics/README.md) hiện đã có foundation, Microeconomics và Market Structure & Game Theory ở dạng canonical learning path. Micro đi từ consumer/producer theory qua welfare, externalities, public goods/common resources đến information asymmetry/contracts; market structure đi từ competition/monopoly qua oligopoly, repeated games/entry/collusion đến auctions/mechanism design.
 
-Phần Economics hiện có trong [`investing/04_economics/`](investing/04_economics/) vẫn là nguồn chuyên sâu cho bối cảnh đầu tư. Hai nhánh sẽ được migrate và cross-link dần; không copy hàng loạt nội dung hoặc làm hỏng internal links. Trong giai đoạn chuyển tiếp, `economics/` giữ foundation và các chủ đề general-purpose, còn `investing/04_economics/` giữ macro/policy/market-transmission phục vụ investment.
+Các module `03–06` — Macroeconomics, Applied Economics, Econometrics và Economic History & Institutions — vẫn là khoảng trống chính. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ macro/policy/market-transmission trong bối cảnh đầu tư cho tới khi boundary general-purpose đủ rõ để migrate mà không duplicate hoặc làm hỏng internal links.
 
 ## 8. P3 — Electrical / Electronics / Control
 
