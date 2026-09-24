@@ -6,6 +6,10 @@ Lĩnh vực này xem giao dịch như một hệ thống xác suất có chi ph�
 
 [00_MASTER_TRADING_FOREX_RISK.md](./00_MASTER_TRADING_FOREX_RISK.md) là bản tổng quan dài về biểu đồ, cấu trúc thị trường, Forex, đòn bẩy, ký quỹ, quy mô vị thế, kỳ vọng toán học, XAUUSD, kiểm thử chiến lược, nhật ký và tâm lý giao dịch.
 
+### Forex — nhánh học chuyên sâu
+
+[forex/README.md](./forex/README.md) tách Forex thành learning path riêng nhưng vẫn nằm dưới `05_trading_derivatives/`. Phần này đi từ cấu trúc thị trường OTC và các instrument, cách đọc quote/pip/lot/P&L, leverage–margin–position sizing, relative macro/rates/carry tới execution, broker, transaction cost và operational risk. Đây là phần nên đọc nếu mục tiêu là học Forex sâu; file master phía trên vẫn giữ vai trò bản đồ chung để không duplicate Trading & Derivatives.
+
 [01_DERIVATIVES_FUTURES_OPTIONS_CFD.md](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md) xây khung theo hợp đồng từ forward/futures, giá trị danh nghĩa, ký quỹ ban đầu/duy trì/biến đổi, basis, carry/roll, đường cong hàng hóa, tài sản rẻ nhất để giao (CTD) và thanh toán tới nền tảng quyền chọn, hoán đổi lãi suất/OIS, hoán đổi tiền tệ, TRS, CDS, chỉ số tín dụng, biến động, CFD, tài sản thế chấp, bù trừ ròng, rủi ro sai chiều, tỷ lệ phòng vệ đa tài sản, quản lý đáo hạn/roll và kiểm thử căng thẳng lãi/lỗ cùng ký quỹ.
 
 [02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md](./02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md) biến một ý tưởng thành quy trình nghiên cứu có thể triển khai thực tế: giả thuyết nhân quả, dữ liệu đúng thời điểm, kiểm tra dấu thời gian và chất lượng dữ liệu, kỳ vọng/mức suy giảm, thiên lệch nhìn trước, thiên lệch sống sót, đào dữ liệu quá mức, tập huấn luyện/xác nhận/kiểm tra, purging/embargo, walk-forward, bề mặt tham số, kiểm định giả, mô hình chi phí/tác động thị trường/vay chứng khoán/roll futures, bootstrap, Monte Carlo, cỡ mẫu hiệu dụng, giới hạn quy mô, phát hiện trôi mô hình, đối soát, chống gửi lệnh trùng và cơ chế dừng khẩn cấp.
