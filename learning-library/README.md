@@ -14,12 +14,13 @@ npm run build:library
 npm run serve
 ```
 
-Without Supabase environment variables, the generated client config is empty and the UI shows `Local only`. The site still stores everything in localStorage.
+Study Library reuses the Supabase project already linked by `planner/study-planner` (`hunggtham/my-study-planner`), project ref `suvknhgjcgeudjqmgzwt`. The project URL therefore defaults to `https://suvknhgjcgeudjqmgzwt.supabase.co`. Without the existing Planner anon/publishable key, the UI stays `Local only` and continues using localStorage.
 
 To test cloud sync locally:
 
 ```bash
 cp .env.example .env
+# put the existing Study Planner anon/publishable key in .env
 set -a
 source .env
 set +a
@@ -37,7 +38,9 @@ npm run build:library
 
 ## Shared Supabase progress
 
-Apply `supabase/migrations/20260924111500_create_learning_progress.sql` to the same Supabase project already used by the learning apps. Do not create a new project unless the existing project cannot be reused. The shared table is `public.learning_progress`; it is intentionally generic so `study-library`, `languages-docs`, and future apps can share it.
+Apply `supabase/migrations/20260924111500_create_learning_progress.sql` to the same Supabase project used by Study Planner. The equivalent migration is also stored in `hunggtham/my-study-planner` as `supabase/migrations/20260924_shared_learning_progress.sql`, so it is part of the linked Planner project's migration chain. Do not create a separate Supabase project.
+
+The shared table is `public.learning_progress`; it is intentionally generic so `study-library`, `languages-docs`, and future apps can share it.
 
 Study Library uses `app_id = "study-library"`. Document records use a namespace derived from the document category and `content_type = "document"`. If the catalogue provides an explicit `contentId`, it is used directly; otherwise Study Library derives a deterministic ID from stable document metadata, not from the URL/path. `content_path` is stored only as a migration/display hint.
 
@@ -64,18 +67,18 @@ See `/SHARED_PROGRESS_SCHEMA.md` for the shared contract.
 
 ## Supabase Auth / RLS setup
 
-Enable the authentication method already used by Study Planner. This frontend supports both magic-link email auth and email/password sign-in. For magic links, add the GitHub Pages URL and the local preview URL to Supabase Auth redirect URLs.
+Study Library follows Study Planner's current authentication convention: email/password sign-in plus account registration with `supabase.auth.signInWithPassword()` and `supabase.auth.signUp()`. Sessions persist through the Supabase JS client, so the same account can be used on MacBook, phone, and other devices.
 
-The migration enables RLS and grants authenticated users access only when `user_id = auth.uid()`. Anonymous table access is revoked. The static site must use only the project URL and anon key; never expose a service-role key.
+The migration enables RLS and grants authenticated users access only when `user_id = auth.uid()`. Anonymous table access is revoked. The static site uses only the project URL and anon/publishable key; never expose a service-role key.
 
-## GitHub Pages Secrets
+## GitHub Pages configuration
 
-Create these repository/environment Secrets:
+The Planner project URL is already used as the safe fallback. Add the existing Study Planner client key as a GitHub Actions Secret:
 
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_ANON_KEY`
+- `VITE_SUPABASE_ANON_KEY` — required for cloud auth/sync
+- `VITE_SUPABASE_URL` — optional override; when absent the Planner project URL above is used
 
-The Pages workflow injects them only while generating `site/supabase-config.js`. That generated file is ignored by git. If either Secret is absent, deployment still succeeds in local-only mode.
+The Pages workflow injects environment values only while generating `site/supabase-config.js`. That generated file is ignored by git. If the anon key is absent, deployment still succeeds in local-only mode.
 
 ## Publication safety
 
