@@ -213,7 +213,7 @@ domains:
     entrypoint: economics/README.md
     status: canonical
     last_reviewed: 2026-09-24
-    scope: Economic reasoning with deep canonical foundations in microeconomics, market structure/game theory, and macroeconomics; applied fields, econometrics, and economic history/institutions remain the next expansion layers.
+    scope: Economic reasoning with deep canonical foundations in microeconomics, market structure/game theory, macroeconomics, and econometrics; applied fields and economic history/institutions remain the next expansion layers.
     prerequisites: [mathematics]
     related: [investing, korea_business_economy, psychology, world_history, world_geography, computer_science]
   - id: world_geography
@@ -363,11 +363,11 @@ Mỗi entry trong YAML front matter có các field tối thiểu:
 
 Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong file này. Không rename/move hàng loạt folder nếu chưa có kế hoạch cập nhật internal links.
 
-## 7. Economics: canonical foundation đã mở rộng qua Macroeconomics
+## 7. Economics: canonical foundation đã mở rộng qua Econometrics
 
-[`economics/`](economics/README.md) hiện có bốn lớp canonical: Foundations, Microeconomics, Market Structure & Game Theory và Macroeconomics. Macro đã được tách thành general-purpose learning path từ national accounts/measurement qua growth/productivity, labor/inflation, money/banking/monetary policy, fiscal/business cycles đến open economy/exchange rates/crises.
+[`economics/`](economics/README.md) hiện có năm lớp canonical: Foundations, Microeconomics, Market Structure & Game Theory, Macroeconomics và Econometrics. Econometrics đã được xây theo luồng measurement/estimand → regression/inference → causal experiments/selection → IV/RDD → panel/DiD → time series/macro identification → robustness/external validity.
 
-Các module còn thiếu chính là `05 Econometrics`, `04 Applied Economics` và `06 Economic History & Institutions`. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ application layer về macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics cross-link thay vì duplicate. Econometrics được ưu tiên triển khai trước Applied Economics để các case sau này có identification discipline.
+Hai module còn thiếu chính là `04 Applied Economics` và `06 Economic History & Institutions`. Econometrics được triển khai trước Applied Economics để các chapter labor/public/trade/development/industrial organization sau này phải nối theory với estimand và identification strategy thay vì chỉ correlation. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ application layer về macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics cross-link thay vì duplicate.
 
 ## 8. P3 — Electrical / Electronics / Control
 
