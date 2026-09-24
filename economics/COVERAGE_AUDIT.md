@@ -2,90 +2,104 @@
 
 ## Kết luận hiện tại
 
-Economics hiện đã có sáu lớp canonical đủ sâu để đọc liên tục: `00 Foundations`, `01 Microeconomics`, `02 Market Structure & Game Theory`, `03 Macroeconomics`, `04 Applied Economics` và `05 Econometrics`. Applied Economics đã được xây sau Econometrics để mọi chapter ứng dụng phải nối theory với estimand, source of variation, identification assumptions, incidence và scale-up thay vì chỉ ghép model với correlation.
+Economics core hiện đã hoàn chỉnh ở cấp canonical learning path: `00 Foundations`, `01 Microeconomics`, `02 Market Structure & Game Theory`, `03 Macroeconomics`, `04 Applied Economics`, `05 Econometrics` và `06 Economic History & Institutions` đều có learning spine, depth gate, evidence boundary và cross-domain integration.
 
-Khoảng trống canonical lớn còn lại là `06 Economic History & Institutions`. `investing/04_economics/` tiếp tục là application layer cho macro market transmission, liquidity, crisis cases, macro data và nowcasting; canonical theory/measurement giữ ở Economics.
+Điều này không có nghĩa mọi advanced subfield đã được viết. Nó nghĩa người đọc hiện có một route đầy đủ từ first principles → individual/firm choice → strategic markets → aggregate economy → causal empirical methods → applied fields → institutions/history mà không cần nhảy ra ngoài chỉ để lấp các khái niệm core.
 
 ## Coverage matrix
 
-| Module | Trạng thái | Coverage hiện có | Khoảng trống chính |
+| Module | Trạng thái | Coverage hiện có | Advanced gaps chỉ mở khi cần |
 |---|---|---|---|
-| 00 Foundations | Đã có baseline | scarcity, opportunity cost, marginal analysis, incentives, equilibrium, PPF, efficiency/equity, positive/normative, comparative statics | uncertainty formal hơn, institutions và behavioral limits |
-| 01 Microeconomics | **Depth pass hoàn tất** | consumer/producer; welfare; externality; public goods/commons; information asymmetry, contracts và principal–agent | advanced general equilibrium, expected utility, intertemporal choice có thể mở rộng sau |
-| 02 Market Structure & Game Theory | **Depth pass hoàn tất** | competition/monopoly, market power, oligopoly, Cournot/Bertrand, sequential/repeated games, entry/collusion, auctions, mechanism design | advanced dynamic/structural games nếu có nhu cầu thực |
-| 03 Macroeconomics | **Depth pass hoàn tất** | measurement; growth/productivity; labor/inflation; money/banking/monetary policy; fiscal/business cycles; open economy/FX/crises | heterogeneous-agent/advanced DSGE/structural macro có thể mở rộng sau |
-| 04 Applied Economics | **Core depth pass hoàn tất** | labor; public economics; international trade; development; industrial organization | environmental/health/education/urban/spatial can be added only if route needs them |
-| 05 Econometrics | **Foundation depth pass hoàn tất** | measurement/estimands; OLS/inference; experiments/selection; IV/RDD; panel/DiD; time series/macro identification; robustness/external validity | causal ML, structural estimation, duration/count/spatial methods are advanced extensions |
-| 06 Economic History & Institutions | Chưa viết | cross-domain material có trong History/Korea/Geography | institutions, technology, finance, trade, state capacity, path dependence và comparative cases |
+| 00 Foundations | Canonical baseline | scarcity, opportunity cost, marginal analysis, incentives, equilibrium, PPF, efficiency/equity, positive/normative, comparative statics | uncertainty formal hơn, behavioral/institutional foundations |
+| 01 Microeconomics | **Core complete** | consumer/producer; welfare; externality; public goods/commons; information asymmetry/contracts | intertemporal choice, expected utility, general equilibrium |
+| 02 Market Structure & Game Theory | **Core complete** | monopoly/competition, oligopoly, Cournot/Bertrand, sequential/repeated games, entry/collusion, auctions/mechanism design | dynamic games, advanced mechanism design |
+| 03 Macroeconomics | **Core complete** | measurement; growth; labor/inflation; money/banking; monetary/fiscal policy; business cycles; open economy/crises | heterogeneous-agent macro, advanced DSGE/structural macro |
+| 04 Applied Economics | **Core complete** | labor; public; trade; development; industrial organization | environmental, health, education, urban/spatial if needed |
+| 05 Econometrics | **Foundation complete** | measurement/estimands; OLS; experiments/selection; IV/RDD; panel/DiD; time series/macro identification; robustness/external validity | causal ML, structural estimation, duration/count/spatial methods |
+| 06 Economic History & Institutions | **Core complete** | property/contracts/state capacity; money/finance/fiscal states; industrialization/globalization; crises/regimes/path dependence | deeper regional/period case studies via cross-links, not duplicated chronology |
 
-## 04 — Applied Economics depth gate
+## 06 — Economic History & Institutions depth gate
 
 Canonical sequence:
 
 ```text
-00 Labor Economics
-01 Public Economics
-02 International Trade
-03 Development Economics
-04 Industrial Organization
+00 Institutions, Property Rights & State Capacity
+01 Money, Finance & Fiscal States
+02 Technology, Industrialization & Globalization
+03 Crises, Regime Change & Path Dependence
 ```
 
 Depth gate gồm:
 
-- **Labor:** derived demand, task substitution/complementarity, labor supply margins, human capital/signaling, search/matching, monopsony, minimum wage, unions, discrimination, migration và equilibrium effects.
-- **Public:** tax incidence, taxable-income response, redistribution, social insurance, health/education provision, administrative burden, environmental/corporate/consumption/property taxation và fiscal externalities.
-- **Trade:** comparative advantage, factor distribution, gravity, heterogeneous firms, tariffs/quotas, global value chains, trade adjustment, shift-share designs và input-output propagation.
-- **Development:** poverty/inequality measurement, credit/risk constraints, health/education, structural transformation, urbanization, infrastructure, institutions/state capacity, aid/cash/industrial policy và scale-up.
-- **Industrial Organization:** demand estimation, substitution/diversion, markups, entry, vertical relationships, mergers, procurement, platforms, switching/network effects, innovation và structural counterfactuals.
+- formal vs informal institutions; rules vs enforcement; property/contract rights; fiscal/information/legal state capacity; credible commitment; rent-seeking và political power;
+- money/payment institutions, banking/clearing, public debt, fiscal capacity, corporate forms, financial deepening, regulation và crisis infrastructure;
+- Malthusian constraint, energy, general-purpose technologies, diffusion, factory/management organization, transport, structural transformation, globalization, migration và dynamic comparative advantage;
+- leverage/amplification, banking/sovereign/currency crises, policy regimes, reconstruction, Lucas critique, hysteresis, lock-in, multiple equilibria và historical identification.
 
-Applied chapters phải dùng contract sau:
+History is used as a mechanism laboratory. Chronology, political actors and detailed event sequence remain canonical in `world_history/` and `korean_history/`.
 
-```text
-Economic mechanism
-→ measurable treatment/exposure + outcome
-→ estimand
-→ identification problem
-→ credible design/evidence
-→ incidence/distribution
-→ equilibrium/dynamics/scale-up
-→ policy/interpretation limits
-```
+## Economics-wide evidence discipline
 
-Không coi một paper, raw correlation, exporter premium, concentration ratio hoặc historical anecdote là universal proof.
-
-## Evidence discipline
-
-Giữ ba rule bắt buộc:
+Giữ bốn rules:
 
 ```text
 Model ≠ Evidence
 Accounting Identity ≠ Causal Theory
 Estimator ≠ Identification Strategy
-```
-
-Thêm một applied rule:
-
-```text
 Causal Estimate ≠ Policy Recommendation
 ```
 
-Policy còn phụ thuộc costs, distributional weights, implementation capacity, legal/institutional constraints, rights, equilibrium response và uncertainty.
+Historical layer thêm:
 
-## Connection audit
+```text
+Persistence ≠ Path Dependence
+Formal Rule ≠ Effective Enforcement
+```
 
-- **Math:** optimization/probability/statistics nền cho models và estimators.
-- **History:** sequence và institutional context; không tự đóng vai causal design.
-- **Psychology:** behavior, salience, take-up, expectations, heterogeneity.
-- **Geography:** spatial exposure, market access, migration, trade/resource shocks và spillovers.
-- **Investing:** company/asset/market transmission application layer; không duplicate Applied Economics.
-- **Korea Business:** natural case layer cho labor, chaebol, trade, industrial policy và competition structure.
-- **Computer Science:** platform markets, auctions, causal computation và reproducible pipelines.
+Một historical association chỉ trở thành causal claim khi assignment/source of variation và alternative persistent channels được xử lý đủ rõ.
 
-## Next audit gates
+## Integration rules
 
-1. **Mở `06 Economic History & Institutions`** theo mechanisms thay vì chronology: institutional formation → state capacity/taxation → property/contract systems → money/finance → technology/industrialization → trade/globalization → crises/regime change → comparative development/path dependence.
-2. Không copy `world_history/` hoặc `korean_history/`; chỉ cross-link historical sequence và dùng history để test economic mechanisms/institutional persistence.
-3. Sau `06`, Economics có thể được coi là complete ở core-domain level. Chỉ quay lại advanced gaps khi có learning value rõ: intertemporal/uncertainty micro, heterogeneous-agent macro, structural IO/econometrics hoặc spatial methods.
-4. Sau Economics core, repo-wide content priority quay lại **Research Methods → Sociology**, rồi structural gaps như Frontend canonical entrypoint và audit automation.
+- **History:** Economics cross-link chronology; không copy timeline.
+- **Geography:** geography có thể là constraint, treatment, confounder hoặc instrument; phải nêu mechanism.
+- **Psychology:** behavior/expectations/salience bổ sung rational baseline.
+- **Investing:** market/asset interpretation giữ ở Investing; Economics giữ mechanism và evidence foundation.
+- **Korea Business:** contemporary Korean institutional/company cases ở case layer riêng.
+- **Computer Science:** computational methods/platforms/auctions được cross-link khi relevant.
 
-Chỉ đánh dấu Economics hoàn tất toàn domain khi `06` có canonical learning path và catalog/integration metadata được đồng bộ.
+## Advanced expansion gate
+
+Không tiếp tục mở Economics theo logic “còn subfield là phải có folder”. Chỉ thêm advanced chapter khi ít nhất một điều kiện đúng:
+
+1. existing chapter cần prerequisite đó để không giải thích nửa chừng;
+2. một domain khác phụ thuộc trực tiếp vào nó;
+3. topic tạo learning value khác biệt, không duplicate;
+4. có thể viết đủ assumptions/evidence/failure modes, không chỉ glossary.
+
+Các ứng viên sau này: intertemporal choice/uncertainty, heterogeneous-agent macro, structural IO, causal ML, spatial/environmental/health economics.
+
+## Repo-wide priority sau Economics
+
+Sau depth pass này, Economics không còn là domain ưu tiên cần mở rộng tiếp ngay. Priority nên quay sang các vùng còn mỏng hơn:
+
+```text
+Research Methods
+→ Sociology
+→ Frontend canonical/root structure
+→ repo-wide audit automation
+```
+
+Sau đó mới chạy cross-domain review để tìm gaps thật sự thay vì tiếp tục thêm files vào các library đã đủ core.
+
+## Completion criterion
+
+Economics được đánh dấu **core-domain complete** khi:
+
+- tất cả `00–06` có canonical route;
+- README + coverage audit + catalog phản ánh source of truth;
+- internal boundaries với Investing/History/Korea/Geography rõ;
+- theory, evidence và normative conclusions được tách;
+- applied chapters có estimand + identification;
+- historical chapters có enforcement/power/persistence mechanism.
+
+Các tiêu chí trên hiện đã đạt sau depth pass này, subject to final catalog synchronization on `main`.
