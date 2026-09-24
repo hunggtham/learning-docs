@@ -1,11 +1,12 @@
 {
   "name": "study-shelf",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
-    "build:library": "node scripts/build-library.mjs",
+    "build:library": "node scripts/build-library.mjs && node scripts/write-supabase-config.mjs",
     "audit:library": "node scripts/audit-library.mjs",
+    "check:sync": "node --check site/progress-sync.js && node --check scripts/write-supabase-config.mjs",
     "serve": "python3 -m http.server 4173 --directory site"
   }
 }

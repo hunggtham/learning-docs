@@ -30,12 +30,20 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Check sync frontend
+        working-directory: learning-library
+        run: npm run check:sync
+
       - name: Audit publication manifest
         working-directory: learning-library
         run: npm run audit:library
 
       - name: Build Study Shelf
-        run: node learning-library/scripts/build-library.mjs
+        working-directory: learning-library
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        run: npm run build:library
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
