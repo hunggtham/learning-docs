@@ -1,5 +1,5 @@
-const SHELL_CACHE = 'study-shelf-shell-v4';
-const CONTENT_CACHE = 'study-shelf-content-v4';
+const SHELL_CACHE = 'study-shelf-shell-v5';
+const CONTENT_CACHE = 'study-shelf-content-v5';
 const USER_CACHE = 'study-shelf-user-v1';
 const SHELL = [
   './',
@@ -10,6 +10,7 @@ const SHELL = [
   './app.js',
   './learning-os.js',
   './progress-sync.js',
+  './study-planner-auth.js',
   './manifest.webmanifest',
   './library/library.json'
 ];
