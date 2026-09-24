@@ -27,13 +27,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Check diff whitespace
-        run: git diff --check HEAD^ HEAD
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "push" && "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]]; then
+            git diff --check "${{ github.event.before }}" "${{ github.sha }}"
+          else
+            git diff --check HEAD^ HEAD
+          fi
 
       - name: Check sync frontend
         working-directory: learning-library
