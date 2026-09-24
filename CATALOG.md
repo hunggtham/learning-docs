@@ -63,7 +63,17 @@ domains:
     last_reviewed: 2026-09-23
     scope: Philosophical reasoning, epistemology, metaphysics, philosophy of science, philosophy of mind, ethics, social-political philosophy, technology, history, and cross-domain connections.
     prerequisites: []
-    related: [mathematics, physics, biology, psychology, computer_science]
+    related: [mathematics, physics, biology, psychology, computer_science, research_methods]
+  - id: research_methods
+    title: Research Methods
+    group: Methods
+    path: research_methods/
+    entrypoint: research_methods/README.md
+    status: canonical
+    last_reviewed: 2026-09-24
+    scope: Research questions and design, measurement and sampling, survey design, qualitative methods, systematic review and evidence synthesis, mixed methods, ethics, reproducibility, and open science.
+    prerequisites: []
+    related: [philosophy, mathematics, economics, psychology, world_history, computer_science]
 
   - id: computer_science
     title: Computer Science
@@ -155,7 +165,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Psychology as a science with concepts, mechanisms, evidence status, limitations, and cross-domain connections.
     prerequisites: [biology]
-    related: [computer_science, korean_culture]
+    related: [computer_science, korean_culture, research_methods]
   - id: korean_history
     title: Korean History
     group: Human & Society
@@ -175,7 +185,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: World history as a causal system from human origins through agrarian states, classical and medieval networks, industrialisation, imperialism, world wars, the Cold War, decolonisation, and the post-Cold-War world.
     prerequisites: []
-    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life]
+    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods]
   - id: korean_culture
     title: Korean Culture
     group: Human & Society
@@ -215,7 +225,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Core-domain complete Economics library covering foundations, microeconomics, market structure/game theory, macroeconomics, applied economics, econometrics, and economic history/institutions with explicit evidence and integration boundaries.
     prerequisites: [mathematics]
-    related: [investing, korea_business_economy, psychology, world_history, world_geography, computer_science]
+    related: [investing, korea_business_economy, psychology, world_history, world_geography, computer_science, research_methods]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -315,6 +325,9 @@ Science
 Engineering
 └── Electrical Engineering
 
+Methods
+└── Research Methods
+
 Computing
 ├── Computer Science
 ├── Backend Development
@@ -369,9 +382,13 @@ Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong f
 
 Economics giữ explicit boundaries: theory không thay evidence, accounting identity không thay causal theory, estimator không thay identification strategy, causal estimate không tự trở thành policy recommendation. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ market/application layer về macro data, liquidity, transmission, crisis cases và nowcasting; World/Korean History giữ chronology; Korea Business giữ Korean company/institution cases.
 
-Từ đây không tiếp tục mở Economics chỉ để tăng coverage count. Advanced topics chỉ được thêm khi một learning dependency hoặc cross-domain need thực sự yêu cầu. Repo-wide content priority chuyển sang các vùng mỏng hơn như Research Methods và Sociology.
+## 8. Research Methods: cross-domain methodology foundation
 
-## 8. P3 — Electrical / Electronics / Control
+[`research_methods/`](research_methods/README.md) giữ methodology dùng chung cho toàn repository: research question/design, measurement/sampling/surveys, qualitative methods, systematic reviews/evidence synthesis, mixed methods, ethics, reproducibility và open science. Estimator-level causal/statistical methods tiếp tục nằm ở [`economics/05_econometrics/`](economics/05_econometrics/README.md); Philosophy giữ epistemology/philosophy-of-science foundation.
+
+Mục tiêu là tránh mỗi domain tự lặp lại generic research methods và tạo một evidence contract thống nhất cho các library sau này, đặc biệt Sociology.
+
+## 9. P3 — Electrical / Electronics / Control
 
 Physics hiện đã rất mạnh, bao gồm Maxwell, circuits, transmission line, semiconductor, MOSFET, signal/noise và các nền tảng liên quan. Nhưng **Physics không đồng nghĩa với Electrical Engineering**: engineering cần thêm topology, design trade-off, measurement, timing, power, control, verification và failure handling.
 
