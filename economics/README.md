@@ -4,13 +4,14 @@
 
 ## Trạng thái hiện tại
 
-Library đã vượt giai đoạn bootstrap ban đầu ở microeconomics. Ba vùng đầu tiên hiện có canonical learning path thực:
+Library hiện đã có bốn lớp canonical đủ để đọc liên tục:
 
 - [00 — Foundations](./00_foundations/00_economic_reasoning.md) xây reasoning baseline: scarcity, opportunity cost, marginal analysis, incentives, equilibrium, efficiency/equity, positive/normative analysis và comparative statics.
-- [01 — Microeconomics](./01_microeconomics/README.md) đã có chuỗi hoàn chỉnh từ consumer/producer theory → welfare → externality → public goods/common resources → information asymmetry/contracts.
-- [02 — Market Structure & Game Theory](./02_market_structure_game_theory/README.md) đã được nâng từ roadmap thành module đọc liên tục: competition/monopoly → oligopoly/strategic interaction → repeated games/entry/collusion → auctions/mechanism design.
+- [01 — Microeconomics](./01_microeconomics/README.md) đi từ consumer/producer theory → welfare → externality → public goods/common resources → information asymmetry/contracts.
+- [02 — Market Structure & Game Theory](./02_market_structure_game_theory/README.md) đi từ competition/monopoly → oligopoly/strategic interaction → repeated games/entry/collusion → auctions/mechanism design.
+- [03 — Macroeconomics](./03_macroeconomics/README.md) đi từ national accounts/measurement → long-run growth → labor/inflation → money/banking/monetary policy → fiscal/business cycles → open economy/exchange rates/crises.
 
-`03–06` vẫn chưa có module độc lập hoàn chỉnh. Trong giai đoạn chuyển tiếp, [Investing Economics](../investing/04_economics/README.md) là nguồn tham chiếu cho macro, monetary system, capital flows, crisis transmission, public debt, demographics, productivity và policy regime trong bối cảnh đầu tư. Không copy hàng loạt nội dung chỉ để đổi vị trí; chỉ migrate khi boundary, prerequisite và internal links đã rõ.
+`04 Applied Economics`, `05 Econometrics` và `06 Economic History & Institutions` vẫn là các khoảng trống chính. [`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ application layer cho macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics chỉ cross-link thay vì copy các nội dung đó.
 
 ## Learning route và coverage target
 
@@ -33,16 +34,22 @@ Mũi tên biểu thị dependency học tập, không có nghĩa module phía sa
 → auctions & mechanism design
 
 03 Macroeconomics
-→ national accounts
-→ growth
-→ unemployment
-→ inflation
-→ money
-→ banking
-→ monetary policy
-→ fiscal policy
-→ business cycle
-→ open economy
+→ national accounts & measurement
+→ long-run growth & productivity
+→ labor, unemployment & inflation
+→ money, banking & monetary policy
+→ fiscal policy & business cycles
+→ open economy, exchange rates & crises
+
+05 Econometrics
+→ measurement
+→ identification
+→ regression
+→ experiments / quasi-experiments
+→ IV
+→ DiD
+→ panel
+→ time series
 
 04 Applied Economics
 → labor
@@ -51,18 +58,10 @@ Mũi tên biểu thị dependency học tập, không có nghĩa module phía sa
 → development
 → industrial organization
 
-05 Econometrics
-→ identification
-→ regression
-→ causal inference
-→ experiments
-→ IV
-→ DiD
-→ panel
-→ time series
-
 06 Economic History & Institutions
 ```
+
+Econometrics được đặt trước Applied Economics trong **thứ tự triển khai tiếp theo**, dù numbering vẫn giữ `04` và `05`, vì applied case không nên phát triển thành narrative thiếu identification discipline.
 
 Demand–supply, elasticity, technology, cost và profit là ngôn ngữ nền nằm bên trong Microeconomics; chúng không được tách thành formula notes. Industrial organization được giữ ở Applied Economics vì nó dùng cả market-structure theory lẫn empirical evidence để phân tích industry và policy.
 
@@ -76,7 +75,7 @@ Economics có giá trị nhất khi được đọc như một lớp nối các 
 - [World Geography](../world_geography/README.md) bổ sung không gian, tài nguyên, location, transport, trade networks và development constraints.
 - [Investing](../investing/README.md) là application layer cho asset, company, capital-flow và policy transmission; không thay thế Economics general-purpose.
 - [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md) là case layer để nối theory với chaebol, labor, trade, industrial policy, finance và thể chế kinh tế Hàn Quốc.
-- [Computer Science](../computer_science/README.md) trở nên đặc biệt liên quan ở auction/mechanism design, platform markets, matching, optimization và computational constraints.
+- [Computer Science](../computer_science/README.md) liên quan trực tiếp ở auctions, mechanism design, platform markets, matching, optimization và computational constraints.
 
 Khi một chapter dùng case lịch sử, địa lý, đầu tư hoặc Hàn Quốc, case phải làm rõ mechanism và boundary của mô hình; không được dùng một ví dụ riêng lẻ như bằng chứng cho quy luật phổ quát.
 
@@ -84,6 +83,6 @@ Khi một chapter dùng case lịch sử, địa lý, đầu tư hoặc Hàn Qu�
 
 Mỗi chapter đi từ vấn đề cần giải quyết đến intuition, formal model, assumptions, cơ chế nhân quả, prediction/comparative statics, evidence và failure modes. Thuật ngữ quan trọng giữ English keyword và thêm tiếng Hàn khi có liên hệ phù hợp. Positive economics (“điều gì xảy ra?”) phải được tách khỏi normative economics (“nên chọn gì?”), và kết quả cân bằng không được dùng để thay thế cho lịch sử, quyền lực, thể chế hoặc phân phối.
 
-Không coi model là evidence. Model nói variable nào cần quan sát và counterfactual nào có ý nghĩa; Econometrics quyết định data có đủ để identify causal effect hay không.
+Không coi model là evidence. Model nói variable nào cần quan sát và counterfactual nào có ý nghĩa; Econometrics quyết định data có đủ để identify causal effect hay không. Với macro, accounting identity cũng không được dùng như causal explanation nếu chưa có behavioral mechanism và regime assumptions.
 
-Xem [Coverage Audit](./COVERAGE_AUDIT.md) để theo dõi phần đã hoàn thiện, phần còn thiếu và các điều kiện migrate từ Investing.
+Xem [Coverage Audit](./COVERAGE_AUDIT.md) để theo dõi phần đã hoàn thiện, phần còn thiếu và các điều kiện migrate/cross-link với Investing.
