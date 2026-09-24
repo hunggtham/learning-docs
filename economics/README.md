@@ -4,14 +4,17 @@
 
 ## Trạng thái hiện tại
 
-Library hiện đã có bốn lớp canonical đủ để đọc liên tục:
+Library hiện đã có năm lớp canonical đủ để đọc liên tục:
 
 - [00 — Foundations](./00_foundations/00_economic_reasoning.md) xây reasoning baseline: scarcity, opportunity cost, marginal analysis, incentives, equilibrium, efficiency/equity, positive/normative analysis và comparative statics.
 - [01 — Microeconomics](./01_microeconomics/README.md) đi từ consumer/producer theory → welfare → externality → public goods/common resources → information asymmetry/contracts.
 - [02 — Market Structure & Game Theory](./02_market_structure_game_theory/README.md) đi từ competition/monopoly → oligopoly/strategic interaction → repeated games/entry/collusion → auctions/mechanism design.
 - [03 — Macroeconomics](./03_macroeconomics/README.md) đi từ national accounts/measurement → long-run growth → labor/inflation → money/banking/monetary policy → fiscal/business cycles → open economy/exchange rates/crises.
+- [05 — Econometrics](./05_econometrics/README.md) đi từ measurement/estimand → regression/inference → experiments/selection → IV/RDD → panel/DiD → time series/macro identification → robustness/external validity.
 
-`04 Applied Economics`, `05 Econometrics` và `06 Economic History & Institutions` vẫn là các khoảng trống chính. [`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ application layer cho macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics chỉ cross-link thay vì copy các nội dung đó.
+`04 Applied Economics` và `06 Economic History & Institutions` là hai khoảng trống lớn còn lại. Folder numbering giữ taxonomy nội dung, còn thứ tự triển khai đã cố ý đưa Econometrics lên trước Applied Economics để case studies phía sau có identification discipline.
+
+[`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ application layer cho macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics chỉ cross-link thay vì copy các nội dung đó.
 
 ## Learning route và coverage target
 
@@ -42,14 +45,13 @@ Mũi tên biểu thị dependency học tập, không có nghĩa module phía sa
 → open economy, exchange rates & crises
 
 05 Econometrics
-→ measurement
-→ identification
-→ regression
-→ experiments / quasi-experiments
-→ IV
-→ DiD
-→ panel
-→ time series
+→ measurement, data & estimands
+→ regression, prediction & inference
+→ experiments, selection & causal inference
+→ endogeneity, IV & RDD
+→ panel, fixed effects & DiD
+→ time series & macro identification
+→ robustness, external validity & workflow
 
 04 Applied Economics
 → labor
@@ -60,8 +62,6 @@ Mũi tên biểu thị dependency học tập, không có nghĩa module phía sa
 
 06 Economic History & Institutions
 ```
-
-Econometrics được đặt trước Applied Economics trong **thứ tự triển khai tiếp theo**, dù numbering vẫn giữ `04` và `05`, vì applied case không nên phát triển thành narrative thiếu identification discipline.
 
 Demand–supply, elasticity, technology, cost và profit là ngôn ngữ nền nằm bên trong Microeconomics; chúng không được tách thành formula notes. Industrial organization được giữ ở Applied Economics vì nó dùng cả market-structure theory lẫn empirical evidence để phân tích industry và policy.
 
@@ -83,6 +83,13 @@ Khi một chapter dùng case lịch sử, địa lý, đầu tư hoặc Hàn Qu�
 
 Mỗi chapter đi từ vấn đề cần giải quyết đến intuition, formal model, assumptions, cơ chế nhân quả, prediction/comparative statics, evidence và failure modes. Thuật ngữ quan trọng giữ English keyword và thêm tiếng Hàn khi có liên hệ phù hợp. Positive economics (“điều gì xảy ra?”) phải được tách khỏi normative economics (“nên chọn gì?”), và kết quả cân bằng không được dùng để thay thế cho lịch sử, quyền lực, thể chế hoặc phân phối.
 
-Không coi model là evidence. Model nói variable nào cần quan sát và counterfactual nào có ý nghĩa; Econometrics quyết định data có đủ để identify causal effect hay không. Với macro, accounting identity cũng không được dùng như causal explanation nếu chưa có behavioral mechanism và regime assumptions.
+Giữ hai rule xuyên suốt:
+
+```text
+Model ≠ Evidence
+Accounting Identity ≠ Causal Theory
+```
+
+Econometrics thêm rule thứ ba: **Estimator ≠ Identification Strategy**. OLS, IV, DiD, RDD hay VAR chỉ có causal interpretation khi source of variation và assumptions phù hợp.
 
 Xem [Coverage Audit](./COVERAGE_AUDIT.md) để theo dõi phần đã hoàn thiện, phần còn thiếu và các điều kiện migrate/cross-link với Investing.
