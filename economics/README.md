@@ -4,92 +4,80 @@
 
 ## Trạng thái hiện tại
 
-Library hiện đã có năm lớp canonical đủ để đọc liên tục:
+Library hiện đã có sáu lớp canonical đủ để đọc liên tục:
 
-- [00 — Foundations](./00_foundations/00_economic_reasoning.md) xây reasoning baseline: scarcity, opportunity cost, marginal analysis, incentives, equilibrium, efficiency/equity, positive/normative analysis và comparative statics.
-- [01 — Microeconomics](./01_microeconomics/README.md) đi từ consumer/producer theory → welfare → externality → public goods/common resources → information asymmetry/contracts.
-- [02 — Market Structure & Game Theory](./02_market_structure_game_theory/README.md) đi từ competition/monopoly → oligopoly/strategic interaction → repeated games/entry/collusion → auctions/mechanism design.
-- [03 — Macroeconomics](./03_macroeconomics/README.md) đi từ national accounts/measurement → long-run growth → labor/inflation → money/banking/monetary policy → fiscal/business cycles → open economy/exchange rates/crises.
-- [05 — Econometrics](./05_econometrics/README.md) đi từ measurement/estimand → regression/inference → experiments/selection → IV/RDD → panel/DiD → time series/macro identification → robustness/external validity.
+- [00 — Foundations](./00_foundations/00_economic_reasoning.md) — scarcity, opportunity cost, marginal analysis, incentives, equilibrium, efficiency/equity và comparative statics.
+- [01 — Microeconomics](./01_microeconomics/README.md) — consumer/producer theory → welfare → externality → public goods/common resources → information asymmetry/contracts.
+- [02 — Market Structure & Game Theory](./02_market_structure_game_theory/README.md) — competition/monopoly → oligopoly → repeated games/entry/collusion → auctions/mechanism design.
+- [03 — Macroeconomics](./03_macroeconomics/README.md) — measurement → growth → labor/inflation → money/banking/monetary policy → fiscal/business cycles → open economy/crises.
+- [04 — Applied Economics](./04_applied_economics/README.md) — labor → public economics → international trade → development → industrial organization, với theory + estimand + identification + incidence/equilibrium boundary.
+- [05 — Econometrics](./05_econometrics/README.md) — measurement/estimand → regression → experiments/selection → IV/RDD → panel/DiD → time series/macro identification → robustness/external validity.
 
-`04 Applied Economics` và `06 Economic History & Institutions` là hai khoảng trống lớn còn lại. Folder numbering giữ taxonomy nội dung, còn thứ tự triển khai đã cố ý đưa Econometrics lên trước Applied Economics để case studies phía sau có identification discipline.
+`06 Economic History & Institutions` là khoảng trống canonical lớn còn lại. Sau khi lớp này hoàn tất, các advanced expansions chỉ nên mở khi phục vụ learning route thực thay vì tăng số file.
 
-[`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ application layer cho macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics chỉ cross-link thay vì copy các nội dung đó.
+[`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ application layer cho macro data, liquidity, market transmission, crisis cases, policy regimes và nowcasting; Economics cross-link thay vì duplicate.
 
-## Learning route và coverage target
-
-Mũi tên biểu thị dependency học tập, không có nghĩa module phía sau đã được viết. Một topic chỉ được coi là hoàn thành khi có intuition, model/assumptions, mechanism, comparative statics hoặc prediction, evidence boundary và failure modes phù hợp.
+## Learning route
 
 ```text
 00 Foundations
+→ 01 Microeconomics
+→ 02 Market Structure & Game Theory
+→ 03 Macroeconomics
+→ 05 Econometrics foundation
+→ 04 Applied Economics
+→ 06 Economic History & Institutions
+```
 
-01 Microeconomics
-→ consumer & producer
-→ welfare & market efficiency
-→ externalities & policy
-→ public goods & common resources
-→ information asymmetry & contracts
+Folder numbering phản ánh taxonomy, không ép thứ tự học tuyệt đối. Econometrics được đặt trước Applied Economics trong learning dependency để empirical case không biến thành correlation narrative.
 
-02 Market Structure & Game Theory
-→ competition & monopoly
-→ oligopoly & strategic interaction
-→ repeated games, entry & collusion
-→ auctions & mechanism design
+## Applied route
 
-03 Macroeconomics
-→ national accounts & measurement
-→ long-run growth & productivity
-→ labor, unemployment & inflation
-→ money, banking & monetary policy
-→ fiscal policy & business cycles
-→ open economy, exchange rates & crises
-
-05 Econometrics
-→ measurement, data & estimands
-→ regression, prediction & inference
-→ experiments, selection & causal inference
-→ endogeneity, IV & RDD
-→ panel, fixed effects & DiD
-→ time series & macro identification
-→ robustness, external validity & workflow
-
-04 Applied Economics
-→ labor
-→ public
+```text
+Labor
+→ taxation / redistribution / social insurance
 → international trade
 → development
 → industrial organization
-
-06 Economic History & Institutions
 ```
 
-Demand–supply, elasticity, technology, cost và profit là ngôn ngữ nền nằm bên trong Microeconomics; chúng không được tách thành formula notes. Industrial organization được giữ ở Applied Economics vì nó dùng cả market-structure theory lẫn empirical evidence để phân tích industry và policy.
+Applied chapter chỉ đạt chuẩn khi có đủ:
+
+```text
+mechanism / model
+→ treatment/exposure + outcome
+→ estimand
+→ identification problem
+→ empirical design
+→ incidence / distribution
+→ equilibrium / dynamics / scale-up
+→ interpretation limits
+```
 
 ## Các connection làm spine của library
 
-Economics có giá trị nhất khi được đọc như một lớp nối các domain, không như một tập công thức tách rời:
+- [Mathematics](../mathematics/README.md): calculus, optimization, probability/statistics, linear algebra và dynamical systems.
+- [World History](../world_history/README.md) + [Korean History](../korean_history/README.md): technology, trade, institutions, war, demographics, finance và state capacity qua thời gian.
+- [Psychology](../psychology/README.md): bounded rationality, behavior, salience, expectations và decision-making.
+- [World Geography](../world_geography/README.md): resources, location, transport, spatial interaction, market access và trade networks.
+- [Investing](../investing/README.md): asset/company/capital-flow application layer.
+- [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md): case layer cho labor, chaebol, trade, industrial policy và Korean institutions.
+- [Computer Science](../computer_science/README.md): auctions, mechanism design, platforms, matching, optimization và computational methods.
 
-- [Mathematics](../mathematics/README.md) cung cấp calculus, optimization, probability, statistics, linear algebra và dynamical systems cho marginal choice, equilibrium, game theory, econometrics và macro dynamics.
-- [World History](../world_history/README.md) và [Korean History](../korean_history/README.md) cung cấp sequence về công nghệ, thương mại, chiến tranh, demography, finance và state capacity để kiểm tra giới hạn của mô hình tĩnh.
-- [Psychology](../psychology/README.md) mở rộng rational-choice baseline bằng bounded rationality, behavior, belief formation và decision-making.
-- [World Geography](../world_geography/README.md) bổ sung không gian, tài nguyên, location, transport, trade networks và development constraints.
-- [Investing](../investing/README.md) là application layer cho asset, company, capital-flow và policy transmission; không thay thế Economics general-purpose.
-- [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md) là case layer để nối theory với chaebol, labor, trade, industrial policy, finance và thể chế kinh tế Hàn Quốc.
-- [Computer Science](../computer_science/README.md) liên quan trực tiếp ở auctions, mechanism design, platform markets, matching, optimization và computational constraints.
-
-Khi một chapter dùng case lịch sử, địa lý, đầu tư hoặc Hàn Quốc, case phải làm rõ mechanism và boundary của mô hình; không được dùng một ví dụ riêng lẻ như bằng chứng cho quy luật phổ quát.
+Case ở domain khác phải làm rõ mechanism/boundary; không dùng một historical/country/company example như universal proof.
 
 ## Quy ước biên soạn
 
-Mỗi chapter đi từ vấn đề cần giải quyết đến intuition, formal model, assumptions, cơ chế nhân quả, prediction/comparative statics, evidence và failure modes. Thuật ngữ quan trọng giữ English keyword và thêm tiếng Hàn khi có liên hệ phù hợp. Positive economics (“điều gì xảy ra?”) phải được tách khỏi normative economics (“nên chọn gì?”), và kết quả cân bằng không được dùng để thay thế cho lịch sử, quyền lực, thể chế hoặc phân phối.
+Mỗi chapter đi từ vấn đề → intuition → formal model/estimand → assumptions → mechanism → prediction → evidence/identification → failure modes → connections. Thuật ngữ quan trọng giữ English keyword và thêm tiếng Hàn khi phù hợp.
 
-Giữ hai rule xuyên suốt:
+Giữ ba rule xuyên suốt:
 
 ```text
 Model ≠ Evidence
 Accounting Identity ≠ Causal Theory
+Estimator ≠ Identification Strategy
 ```
 
-Econometrics thêm rule thứ ba: **Estimator ≠ Identification Strategy**. OLS, IV, DiD, RDD hay VAR chỉ có causal interpretation khi source of variation và assumptions phù hợp.
+Positive economics phải tách khỏi normative judgment. Estimate causal effect cũng không tự động trở thành policy recommendation: distributional weights, implementation capacity, rights, legal constraints và uncertainty vẫn là tầng riêng.
 
-Xem [Coverage Audit](./COVERAGE_AUDIT.md) để theo dõi phần đã hoàn thiện, phần còn thiếu và các điều kiện migrate/cross-link với Investing.
+Xem [Coverage Audit](./COVERAGE_AUDIT.md) để theo dõi depth gate và khoảng trống còn lại.
