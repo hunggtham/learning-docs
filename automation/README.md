@@ -76,3 +76,90 @@ Lần chạy thử đầu tiên đặt `TARGET_PARTS=1`, `MAX_CHUNKS_PER_PART=1`
 - Worker reset local clone về branch GitHub trước mỗi lượt; GitHub vẫn là source of truth.
 - Nếu AI lỗi, API trả HTTP 500 và không push output dở lên GitHub.
 - Xem `quality-report.md` trước khi dùng tài liệu để ôn thi.
+
+---
+
+## Repository QA — catalog và Markdown links
+
+Repo QA là flow độc lập với worker tạo giáo trình ở trên. Nó không gọi OpenAI, không gọi GitHub API và không cần secret; mục tiêu là phát hiện structural drift ngay trong working tree trước khi tài liệu được merge.
+
+Các file liên quan:
+
+```text
+automation/repo_audit.py
+automation/test_repo_audit.py
+.github/workflows/repo-audit.yml
+```
+
+### Auditor kiểm tra gì?
+
+`repo_audit.py` dùng Python standard library và kiểm tra hai lớp chính.
+
+**Catalog contract** kiểm tra:
+
+```text
+CATALOG.md tồn tại
+→ canonical domains parse được
+→ domain id không trùng
+→ domain path tồn tại
+→ entrypoint tồn tại
+→ last_reviewed có date hợp lệ
+→ scope không bị bỏ trống
+```
+
+Auditor cũng report domain chưa có root `README.md` hoặc `COVERAGE_AUDIT.md`, nhưng hai trường hợp này chỉ là thông tin vì một số domain có thể cố ý dùng entrypoint khác.
+
+**Markdown local links** kiểm tra link nội bộ trỏ tới file/path trong repository. Fragment như `#section` không cần file lookup riêng; external URL không được gọi qua network.
+
+Không kiểm tra live availability của website ngoài repository vì network check dễ flaky, chậm và không phù hợp với nhiệm vụ chính là bảo toàn cấu trúc canonical nội bộ.
+
+### Chạy local
+
+Chạy unit tests:
+
+```bash
+python -m unittest automation/test_repo_audit.py
+```
+
+Quét toàn bộ repository:
+
+```bash
+python automation/repo_audit.py --root .
+```
+
+Muốn broken local link trở thành lỗi blocking:
+
+```bash
+python automation/repo_audit.py --root . --strict-links
+```
+
+Có thể audit chỉ một tập file Markdown bằng danh sách newline-separated:
+
+```bash
+python automation/repo_audit.py \
+  --root . \
+  --files-from /tmp/changed-markdown.txt \
+  --strict-links
+```
+
+### GitHub Actions policy
+
+Workflow `Repository audit` chạy unit tests trước.
+
+Trên **pull request**, workflow lấy các Markdown file thay đổi trong diff và kiểm tra local links ở `strict` mode. Điều này ngăn một PR mới đưa broken internal link vào repository mà không bắt toàn bộ legacy debt phải được sửa trong cùng PR.
+
+Trên **push vào `main`** hoặc chạy thủ công, auditor quét toàn bộ Markdown repository ở report mode. Broken local links cũ được hiển thị như warning để tạo backlog; catalog structural errors vẫn là lỗi vì chúng làm source-of-truth metadata không còn đáng tin.
+
+Mental model của policy:
+
+```text
+New change
+→ must not introduce new broken structure
+
+Existing repository
+→ continuously expose legacy debt
+→ fix incrementally
+→ tighten policy only after baseline is clean
+```
+
+Workflow chỉ có quyền `contents: read` và không thay đổi file tự động. Fix vẫn phải đi qua branch/PR bình thường để diff có thể review.
