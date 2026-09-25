@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-25
+last_reviewed: 2026-09-26
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -101,8 +101,8 @@ domains:
     path: 10_frontend/
     entrypoint: 10_frontend/javascript/javascript_beginner_rebuilt.md
     status: canonical
-    last_reviewed: 2026-09-23
-    scope: Web platform, JavaScript, TypeScript, React, CSS, XML, WebSquare, and frontend production practice.
+    last_reviewed: 2026-09-26
+    scope: Web platform, HTML/CSS/JavaScript/TypeScript, React, WebSquare and XML with cross-framework request-to-pixel tracing, rendering-performance evidence, accessibility, security, build/deployment provenance, and production debugging practice.
     prerequisites: [computer_science]
     related: [backend, native, devops_platform_engineering]
   - id: native
