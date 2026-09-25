@@ -53,7 +53,7 @@ Trading system production controls
 → ../06_TRADING_SYSTEM_DESIGN_RISK_AND_EXECUTION_LAB.md
 ```
 
-General open-economy macro theory, monetary policy, exchange-rate crises và econometric identification vẫn thuộc [`../../../../economics/`](../../../../economics/README.md). `90_connections/` chỉ giữ **FX-specific implementation and interpretation**: forward/NDF/basis/funding plumbing và cách reserves/intervention/REER đi vào currency analysis.
+General open-economy macro theory, monetary policy, exchange-rate crises và econometric identification vẫn thuộc [`../../../economics/`](../../../economics/README.md). `90_connections/` chỉ giữ **FX-specific implementation and interpretation**: forward/NDF/basis/funding plumbing và cách reserves/intervention/REER đi vào currency analysis.
 
 `70_systematic_project/` chỉ giữ **FX-specific implementation semantics**: bid/ask, session/DST, macro vintage, rollover, account-currency conversion, margin, currency-factor aggregation, execution-aware backtest và live reconciliation. Generic software/database/cloud engineering vẫn thuộc domain computing tương ứng.
 
