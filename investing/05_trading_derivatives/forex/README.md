@@ -1,6 +1,6 @@
 # Forex — Foreign Exchange Learning Path
 
-Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam**.
+Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → jurisdiction → institutional funding/valuation**.
 
 Forex cần được học như giao điểm của nhiều lớp:
 
@@ -15,9 +15,12 @@ Macroeconomics
 + Execution
 + Statistical Research
 + Jurisdiction / Regulation
++ Funding / Basis / Intervention / Valuation
 ```
 
 Nếu chỉ biết đọc chart nhưng không hiểu các lớp này, người học có thể mô tả chuyển động giá nhưng khó giải thích vì sao exposure tồn tại, vì sao cùng một setup thay đổi theo regime, hoặc vì sao một chiến lược có vẻ tốt trên chart nhưng thất bại sau spread, financing, slippage và margin.
+
+Xem [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) để biết depth gate, boundary và phần nào **không nên** tiếp tục mở rộng chỉ để tăng số file.
 
 ## Vị trí trong Investing library
 
@@ -28,6 +31,7 @@ investing/
     ├── ...
     └── forex/
         ├── README.md
+        ├── COVERAGE_AUDIT.md
         ├── 01_MARKET_STRUCTURE_AND_INSTRUMENTS.md
         ├── 02_QUOTES_PIPS_LOTS_AND_PNL.md
         ├── 03_LEVERAGE_MARGIN_POSITION_SIZING.md
@@ -42,7 +46,9 @@ investing/
         ├── 12_TRADING_JOURNAL_REVIEW_AND_PERFORMANCE_ATTRIBUTION.md
         ├── 13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md
         ├── 14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md
-        └── 15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md
+        ├── 15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md
+        ├── 16_NDF_FORWARD_POINTS_BASIS_AND_FUNDING.md
+        └── 17_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md
 ```
 
 File `00_MASTER_TRADING_FOREX_RISK.md` ở thư mục cha vẫn là bản đồ tổng quan của Trading & Derivatives. Folder này đi sâu riêng vào Forex để tránh làm file master phình to và tránh duplicate nội dung options, derivatives hay systematic trading đã có ở nhánh cha.
@@ -121,7 +127,7 @@ Học strategy families thay vì các setup rời rạc: carry, time-series/cros
 
 Đây là lớp chống tự lừa mình: point-in-time/vintage data, bid/ask, bar conventions, fill model, financing, margin accounting, look-ahead, data snooping, walk-forward, purging/embargo, multiple testing, parameter surfaces, Monte Carlo và backtest-to-live gap.
 
-# Phase D — Portfolio, review và institutional depth
+# Phase D — Portfolio, review và market microstructure
 
 ## 11 — Portfolio FX risk, correlation and factor exposure
 
@@ -153,7 +159,21 @@ Biến journal thành research database. Tách process khỏi outcome, R/MAE/MFE
 
 [15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md](./15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md)
 
-Chapter time-sensitive được research lại từ nguồn chính thức. Korea: Seoul FX market reform, RFI, extended hours, USD/KRW, KOFIA FX-margin framework và intermediary requirements. Vietnam: SBV-authorized FX institutions, domestic FX framework, USD/VND regime, foreign-exchange controls, IFC-specific 2025 rules và Korea–Vietnam corporate exposures.
+Chapter time-sensitive được research lại từ nguồn chính thức. Korea: Seoul FX market reform, RFI, extended hours, USD/KRW, KOFIA FX-margin framework và intermediary requirements. Vietnam: SBV-authorized FX institutions, domestic FX framework, USD/VND regime, foreign-exchange controls, IFC-specific rules và Korea–Vietnam corporate exposures.
+
+# Phase F — Institutional funding, policy và valuation
+
+## 16 — NDF, forward points, basis and funding
+
+[16_NDF_FORWARD_POINTS_BASIS_AND_FUNDING.md](./16_NDF_FORWARD_POINTS_BASIS_AND_FUNDING.md)
+
+Đi từ covered-interest-parity intuition sang forward points, FX swaps, cross-currency basis, dealer balance-sheet constraints, collateral, synthetic funding và NDF. Chương này tách onshore/offshore market, fixing convention và capital-control wedge để tránh gọi mọi price gap là arbitrage.
+
+## 17 — Intervention, reserves, REER and currency valuation
+
+[17_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md](./17_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md)
+
+Nối PPP/REER, external balance, NIIP, reserve adequacy, sterilized/unsterilized intervention, exchange-rate regimes, BEER/FEER intuition và model uncertainty. Mục tiêu là hiểu valuation như slow anchor, không dùng “currency rẻ” hay reserve headline như automatic trading signal.
 
 # Milestone kiểm tra kiến thức
 
@@ -167,6 +187,8 @@ Sau Phase D, phải tổng hợp risk theo currency/factor/strategy, biết attr
 
 Sau Phase E, phải biết rằng **product access và market structure phụ thuộc jurisdiction**; không suy từ broker marketing rằng một route hợp pháp hoặc có cùng investor protection ở Korea/Vietnam.
 
+Sau Phase F, phải phân biệt spot direction với forward/funding economics; hiểu NDF/onshore-offshore segmentation; đọc reserves/intervention/REER theo regime và model assumptions thay vì như single-variable signals.
+
 ## Nguyên tắc an toàn nghiên cứu
 
 Forex có thể sử dụng đòn bẩy lớn. Tài liệu phục vụ **học cơ chế, phân tích và quản trị rủi ro**, không đưa ra personalized buy/sell signals hay hứa hẹn lợi nhuận.
@@ -175,8 +197,9 @@ Forex có thể sử dụng đòn bẩy lớn. Tài liệu phục vụ **học c
 
 ## Nguồn nền xuyên suốt
 
-- Bank for International Settlements (BIS), 2025 Triennial Central Bank Survey.
+- Bank for International Settlements (BIS), Triennial Central Bank Survey và research về FX/funding markets.
 - CFTC retail FX risk and registration guidance.
+- IMF/BIS/central-bank materials cho exchange-rate regimes, reserves, intervention và effective exchange rates.
 - Federal Reserve, ECB, Bank of Korea và các central banks/statistical agencies tương ứng.
 - Korea Financial Investment Association (KOFIA) cho FX-margin investor guidance tại Korea.
 - State Bank of Vietnam và official legal databases cho Vietnam FX rules.
