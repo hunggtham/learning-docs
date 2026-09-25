@@ -1,0 +1,65 @@
+name: Repository audit
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - 'automation/repo_audit.py'
+      - 'automation/test_repo_audit.py'
+      - '.github/workflows/repo-audit.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.md'
+      - 'automation/repo_audit.py'
+      - 'automation/test_repo_audit.py'
+      - '.github/workflows/repo-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Run auditor unit tests
+        run: python -m unittest automation/test_repo_audit.py
+
+      - name: Collect changed Markdown files
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          git diff --name-only --diff-filter=ACMR \
+            '${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}' \
+            -- '*.md' > /tmp/changed-markdown.txt
+          echo 'Changed Markdown files:'
+          cat /tmp/changed-markdown.txt
+
+      - name: Audit changed docs strictly
+        if: github.event_name == 'pull_request'
+        run: |
+          python automation/repo_audit.py \
+            --root . \
+            --files-from /tmp/changed-markdown.txt \
+            --strict-links \
+            --github-summary
+
+      - name: Audit full repository in report mode
+        if: github.event_name != 'pull_request'
+        run: |
+          python automation/repo_audit.py \
+            --root . \
+            --github-summary
