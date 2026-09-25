@@ -8,7 +8,7 @@ Lĩnh vực này xem giao dịch như một hệ thống xác suất có chi ph�
 
 ### Forex — nhánh học chuyên sâu
 
-[forex/README.md](./forex/README.md) tách Forex thành learning path riêng nhưng vẫn nằm dưới `05_trading_derivatives/`. Phần này đi từ cấu trúc thị trường OTC và các instrument, cách đọc quote/pip/lot/P&L, leverage–margin–position sizing, relative macro/rates/carry tới execution, broker, transaction cost và operational risk. Đây là phần nên đọc nếu mục tiêu là học Forex sâu; file master phía trên vẫn giữ vai trò bản đồ chung để không duplicate Trading & Derivatives.
+[forex/README.md](./forex/README.md) tách Forex thành learning path riêng nhưng vẫn nằm dưới `05_trading_derivatives/`. Path hiện đi từ cấu trúc OTC và instrument, quote/P&L, leverage–margin–position sizing, relative macro/rates/carry tới execution, strategy research, portfolio/microstructure/options, Korea–Vietnam market context, rồi institutional FX với NDF, forward points, cross-currency basis, funding, intervention, reserves, REER và valuation. Xem thêm [Forex Coverage Audit](./forex/COVERAGE_AUDIT.md) để kiểm tra depth gate và boundary; không mở rộng theo kiểu indicator/candlestick encyclopedia.
 
 [01_DERIVATIVES_FUTURES_OPTIONS_CFD.md](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md) xây khung theo hợp đồng từ forward/futures, giá trị danh nghĩa, ký quỹ ban đầu/duy trì/biến đổi, basis, carry/roll, đường cong hàng hóa, tài sản rẻ nhất để giao (CTD) và thanh toán tới nền tảng quyền chọn, hoán đổi lãi suất/OIS, hoán đổi tiền tệ, TRS, CDS, chỉ số tín dụng, biến động, CFD, tài sản thế chấp, bù trừ ròng, rủi ro sai chiều, tỷ lệ phòng vệ đa tài sản, quản lý đáo hạn/roll và kiểm thử căng thẳng lãi/lỗ cùng ký quỹ.
 
@@ -29,6 +29,8 @@ Bạn cần có khả năng đọc một công cụ phái sinh bằng chuỗi `t
 Một chiến lược chỉ thực sự có lợi thế khi tín hiệu vẫn tạo kỳ vọng dương sau chênh lệch mua bán, trượt giá, tác động thị trường, chi phí vốn và lỗi vận hành. Bạn cũng phải tổng hợp rủi ro ở cấp danh mục theo beta, FX, lãi suất, biến động và thanh khoản thay vì chỉ đếm số lệnh; đồng thời kiểm thử cả lãi/lỗ lẫn khả năng đáp ứng ký quỹ.
 
 Với quyền chọn, cần đọc vị thế bằng `hướng giá + biến động + thời gian + độ lồi + thanh khoản + ký quỹ`, hiểu vì sao trung hòa Delta không đồng nghĩa ít rủi ro và kiểm thử nhiều trạng thái giá/IV/thời gian trước khi giao dịch.
+
+Với Forex, cần tách thêm `spot direction` khỏi `forward/funding economics`: NDF, basis, collateral, hedge roll và intervention/regime có thể thay đổi economics dù chart spot nhìn giống nhau.
 
 ## Bài tập tích hợp
 
