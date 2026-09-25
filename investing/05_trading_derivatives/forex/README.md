@@ -1,6 +1,6 @@
 # Forex — Foreign Exchange Learning Path
 
-Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam → institutional funding/policy connections → practice/review → historical stress regimes**.
+Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam → institutional funding/policy connections → practice/review → historical stress regimes → systematic implementation**.
 
 Forex cần được học như giao điểm của nhiều lớp:
 
@@ -45,6 +45,7 @@ investing/
         ├── 13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md
         ├── 14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md
         ├── 15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md
+        ├── 70_systematic_project/
         ├── 80_case_studies/
         ├── 90_connections/
         └── 90_labs/
@@ -200,7 +201,27 @@ Các lab yêu cầu tạo artifact có thể review, không phải trả lời q
 → offshore dollar shortage + FX swaps/basis + central-bank swap lines
 ```
 
-Sau khi đọc case, quay lại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md) để phân biệt phần đã có theory/practice/case/connection depth với các extension thực sự còn thiếu.
+# Phase H — Systematic implementation project
+
+[70_systematic_project/README.md](./70_systematic_project/README.md) biến theory, institutional connections và research thành một system có thể audit:
+
+```text
+01 Data pipeline & time normalization
+→ point-in-time data, UTC/DST, bid/ask, macro vintage, validation, lineage
+
+02 Backtest engine & execution model
+→ causal event loop, order state, executable fills, cost, financing, margin ledger
+
+03 Portfolio risk & attribution engine
+→ currency legs, factors, stress, margin, hedge quality, P/L attribution
+
+04 Forward test, monitoring & kill switch
+→ paper/small-live gates, reconciliation, drift, safety controls, retirement rules
+```
+
+Project này không nhằm tạo bot tự động sinh lợi; mục tiêu là nối `data → research → execution → portfolio risk → forward test → safe failure` thành một process reproducible.
+
+Sau Phase H, quay lại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md) để phân biệt phần đã có theory/connection/practice/case/implementation depth với extension thực sự còn thiếu.
 
 # Milestone kiểm tra kiến thức
 
@@ -219,6 +240,8 @@ Sau institutional connections, phải phân biệt spot direction với forward/
 Sau Phase F, phải có ít nhất một bộ output hoàn chỉnh từ `position-risk sheet → event study → backtest report → portfolio-risk dashboard → regulatory verification checklist`.
 
 Sau Phase G, phải có thể giải thích vì sao **low historical volatility, policy commitment hoặc diversified-looking positions vẫn có thể che giấu jump/funding/factor risk**.
+
+Sau Phase H, phải có thể trace một live/paper trade từ **raw point-in-time data → signal → order/fill → margin/risk → P/L attribution → monitoring decision**, và system phải có safe-state/kill-switch semantics rõ ràng.
 
 ## Nguyên tắc an toàn nghiên cứu
 
