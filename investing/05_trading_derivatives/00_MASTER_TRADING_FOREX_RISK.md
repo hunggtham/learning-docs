@@ -416,7 +416,11 @@ Trước khi quan tâm setup, cần hiểu broker legal entity, custody/margin r
 
 ## 43. Từ master map tới chapter chuyên sâu
 
-Đọc tiếp:
+Nếu mục tiêu chính là **Forex**, đi vào learning path riêng:
+
+- [forex/README.md](./forex/README.md): từ market structure, P/L, leverage, macro và execution tới price action, strategy research, backtesting, portfolio risk, microstructure, FX options và Korea/Vietnam context.
+
+Các chapter Trading & Derivatives dùng chung:
 
 - [01_DERIVATIVES_FUTURES_OPTIONS_CFD.md](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md): hợp đồng phái sinh;
 - [02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md](./02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md): nghiên cứu hệ thống;
