@@ -8,7 +8,7 @@ Lĩnh vực này xem giao dịch như một hệ thống xác suất có chi ph�
 
 ### Forex — nhánh học chuyên sâu
 
-[forex/README.md](./forex/README.md) tách Forex thành learning path riêng nhưng vẫn nằm dưới `05_trading_derivatives/`. Phần này đi từ cấu trúc thị trường OTC và các instrument, cách đọc quote/pip/lot/P&L, leverage–margin–position sizing, relative macro/rates/carry tới execution, broker, transaction cost và operational risk. Đây là phần nên đọc nếu mục tiêu là học Forex sâu; file master phía trên vẫn giữ vai trò bản đồ chung để không duplicate Trading & Derivatives.
+[forex/README.md](./forex/README.md) tách Forex thành learning path riêng nhưng vẫn nằm dưới `05_trading_derivatives/`. Phần này đi từ cấu trúc thị trường OTC và các instrument, cách đọc quote/pip/lot/P&L, leverage–margin–position sizing, relative macro/rates/carry tới execution, broker, transaction cost, strategy research, portfolio FX risk, microstructure/options và context Korea/Vietnam. Sau phần lý thuyết, [forex/90_labs/README.md](./forex/90_labs/README.md) chuyển kiến thức thành các lab về sizing, event analysis, point-in-time backtest, portfolio risk và regulatory verification; [forex/COVERAGE_AUDIT.md](./forex/COVERAGE_AUDIT.md) dùng để tránh duplicate chapter khi mở rộng sau này.
 
 [01_DERIVATIVES_FUTURES_OPTIONS_CFD.md](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md) xây khung theo hợp đồng từ forward/futures, giá trị danh nghĩa, ký quỹ ban đầu/duy trì/biến đổi, basis, carry/roll, đường cong hàng hóa, tài sản rẻ nhất để giao (CTD) và thanh toán tới nền tảng quyền chọn, hoán đổi lãi suất/OIS, hoán đổi tiền tệ, TRS, CDS, chỉ số tín dụng, biến động, CFD, tài sản thế chấp, bù trừ ròng, rủi ro sai chiều, tỷ lệ phòng vệ đa tài sản, quản lý đáo hạn/roll và kiểm thử căng thẳng lãi/lỗ cùng ký quỹ.
 
@@ -31,6 +31,8 @@ Một chiến lược chỉ thực sự có lợi thế khi tín hiệu vẫn t�
 Với quyền chọn, cần đọc vị thế bằng `hướng giá + biến động + thời gian + độ lồi + thanh khoản + ký quỹ`, hiểu vì sao trung hòa Delta không đồng nghĩa ít rủi ro và kiểm thử nhiều trạng thái giá/IV/thời gian trước khi giao dịch.
 
 ## Bài tập tích hợp
+
+Nếu đang học riêng Forex, hoàn thành [Forex Practice Labs](./forex/90_labs/README.md) trước hoặc song song với Module 5 để bảo đảm tự tính được exposure, event transmission, backtest point-in-time và portfolio risk.
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện thực thi quanh sự kiện, ghép đúng công cụ phòng vệ, rủi ro IV và phân rã kết quả sau sự kiện. Đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để luyện căng thẳng ký quỹ/tài sản thế chấp, giảm đòn bẩy cưỡng bức, thứ bậc thanh khoản và thực thi trong khủng hoảng.
 
