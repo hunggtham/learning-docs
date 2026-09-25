@@ -38,14 +38,16 @@ jobs:
       - name: Run auditor unit tests
         run: python -m unittest automation/test_repo_audit.py
 
-      - name: Collect changed Markdown files
+      - name: Collect changed canonical Markdown files
         if: github.event_name == 'pull_request'
         shell: bash
         run: |
           git diff --name-only --diff-filter=ACMR \
             '${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}' \
-            -- '*.md' > /tmp/changed-markdown.txt
-          echo 'Changed Markdown files:'
+            -- '*.md' \
+            | grep -Ev '(^|/)(raw|raw_md|workflow-output)/' \
+            > /tmp/changed-markdown.txt || true
+          echo 'Changed canonical Markdown files:'
           cat /tmp/changed-markdown.txt
 
       - name: Audit changed docs strictly
@@ -57,9 +59,19 @@ jobs:
             --strict-links \
             --github-summary
 
-      - name: Audit full repository in report mode
+      - name: Collect canonical Markdown baseline
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          git ls-files '*.md' \
+            | grep -Ev '(^|/)(raw|raw_md|workflow-output)/' \
+            > /tmp/canonical-markdown.txt || true
+          echo "Canonical Markdown files: $(wc -l < /tmp/canonical-markdown.txt)"
+
+      - name: Audit full canonical repository in report mode
         if: github.event_name != 'pull_request'
         run: |
           python automation/repo_audit.py \
             --root . \
+            --files-from /tmp/canonical-markdown.txt \
             --github-summary

@@ -33,7 +33,7 @@ Danh mục domain đầy đủ, metadata YAML, prerequisite và related links đ
 - [Economics Knowledge Library](economics/README.md): core-domain complete từ foundations, micro, market structure/game theory, macro, applied economics và econometrics đến economic history/institutions; phần macro ứng dụng đầu tư tiếp tục nằm tại `investing/04_economics/`.
 - [Native Mobile Development](11_native/00_INDEX.md): lộ trình Swift/iOS và Kotlin/Android từ Beginner → Intermediate → Advanced/Senior → Master, gồm cả modern stack, legacy interoperability và production engineering.
 - [Investing Knowledge Library](investing/README.md): thư viện đầu tư theo 6 domain chính — Foundations, Asset Classes, Company Analysis, applied Economics, Trading & Derivatives, Korea & Vietnam Markets — cộng glossary/quy chuẩn nghiên cứu, Advanced Labs, [Advanced Depth Path](investing/ADVANCED_DEPTH_PATH.md), [Advanced Practice Workbook](investing/ADVANCED_PRACTICE_WORKBOOK.md) và capstone tích hợp; phần Economics general-purpose được tách dần sang [Economics Knowledge Library](economics/README.md), còn investing giữ macro/policy/market-transmission phục vụ investment.
-- [Study Planner](planner/study-planner/README.md): ứng dụng lập kế hoạch học tập đồng bộ Supabase.
+- [Study Planner](https://github.com/hunggtham/my-study-planner): ứng dụng lập kế hoạch học tập đồng bộ Supabase; repository này được mount tại `planner/study-planner` dưới dạng Git submodule.
 - [Study Library](learning-library/README.md): trình đọc Markdown/PDF tĩnh cho GitHub Pages.
 
 ## Quy ước biên soạn
