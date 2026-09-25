@@ -11,6 +11,8 @@
 5. [Social Institutions](./04_social_institutions_family_education_work_media_and_civic_life.md) — family, education, work, religion, media, civic associations, law/health institutions, organizational implementation và institutional interdependence.
 6. [Population, Urbanization, Collective Behavior & Social Change](./05_population_urbanization_collective_behavior_and_social_change.md) — demography, migration, cities/segregation, collective behavior, social movements, globalization, modernization/dependency, path dependence và environmental sociology.
 
+Sau core route, dùng [Cross-domain Integration Bridge](./90_connections/00_sociology_psychology_economics_history_and_methods.md) để xác định khi nào một phenomenon nên được giải thích ở level Psychology, Sociology, Economics, History/Geography hay Research Methods/ Econometrics. Bridge này không tạo theory mới; nó giữ ownership và evidence category rõ khi chuyển domain.
+
 ## Learning spine
 
 ```text
