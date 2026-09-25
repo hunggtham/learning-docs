@@ -1,6 +1,6 @@
 # Forex — Foreign Exchange Learning Path
 
-Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam → institutional funding/policy connections → practice/review → historical stress regimes → systematic implementation**.
+Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam → institutional funding/policy → corporate/institutional hedging → practice/review → historical stress regimes → systematic implementation**.
 
 Forex cần được học như giao điểm của nhiều lớp:
 
@@ -16,6 +16,7 @@ Macroeconomics
 + Statistical Research
 + Jurisdiction / Regulation
 + Funding / Basis / Intervention / Valuation
++ Corporate / Institutional Treasury
 ```
 
 Nếu chỉ biết đọc chart nhưng không hiểu các lớp này, người học có thể mô tả chuyển động giá nhưng khó giải thích vì sao exposure tồn tại, vì sao cùng một setup thay đổi theo regime, hoặc vì sao một chiến lược có vẻ tốt trên chart nhưng thất bại sau spread, financing, slippage và margin.
@@ -45,6 +46,7 @@ investing/
         ├── 13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md
         ├── 14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md
         ├── 15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md
+        ├── 60_institutional_hedging_cases/
         ├── 70_systematic_project/
         ├── 80_case_studies/
         ├── 90_connections/
@@ -169,6 +171,26 @@ Chapter time-sensitive được research lại từ nguồn chính thức. Korea
 
 Hai connection files không mở thêm linear `16/17`; chúng là bridge vào institutional FX và cross-link Economics/Derivatives để giữ canonical route gọn.
 
+# Institutional hedging cases — từ market exposure sang balance-sheet risk
+
+[60_institutional_hedging_cases/README.md](./60_institutional_hedging_cases/README.md) áp dụng Forex vào treasury và asset management:
+
+```text
+Korean exporter
+→ USD receivable, natural hedge, layered forward, forecast/over-hedge risk
+
+Korean importer
+→ USD payable, procurement margin, forward/option, payment-timing risk
+
+Global asset manager
+→ local-asset return + FX return, hedge ratio, roll/carry, benchmark and collateral
+
+Cross-currency funding
+→ debt currency transformation, FX/CCS, basis, collateral, rollover and counterparty risk
+```
+
+Điểm kiểm tra không phải hedge derivative “lãi hay lỗ”, mà là **underlying exposure + hedge + funding/carry + residual risk** có đạt objective của balance sheet hay không.
+
 # Phase F — Practice và review
 
 Lý thuyết `01–15` cùng institutional connections được chuyển thành bài tập tại [90_labs/README.md](./90_labs/README.md):
@@ -221,7 +243,7 @@ Các lab yêu cầu tạo artifact có thể review, không phải trả lời q
 
 Project này không nhằm tạo bot tự động sinh lợi; mục tiêu là nối `data → research → execution → portfolio risk → forward test → safe failure` thành một process reproducible.
 
-Sau Phase H, quay lại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md) để phân biệt phần đã có theory/connection/practice/case/implementation depth với extension thực sự còn thiếu.
+Sau Phase H, quay lại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md) để phân biệt phần đã có theory/connection/hedging/practice/case/implementation depth với extension thực sự còn thiếu.
 
 # Milestone kiểm tra kiến thức
 
@@ -236,6 +258,8 @@ Sau Phase D, phải tổng hợp risk theo currency/factor/strategy, biết attr
 Sau Phase E, phải biết rằng **product access và market structure phụ thuộc jurisdiction**; không suy từ broker marketing rằng một route hợp pháp hoặc có cùng investor protection ở Korea/Vietnam.
 
 Sau institutional connections, phải phân biệt spot direction với forward/funding economics; hiểu NDF/onshore-offshore segmentation; đọc reserves/intervention/REER theo regime và model assumptions thay vì như single-variable signals.
+
+Sau institutional hedging cases, phải map được **business/asset cash flow → currency exposure → hedge objective → instrument/tenor/ratio → carry/collateral → residual risk → combined attribution**, và không đánh giá hedge bằng derivative P/L riêng lẻ.
 
 Sau Phase F, phải có ít nhất một bộ output hoàn chỉnh từ `position-risk sheet → event study → backtest report → portfolio-risk dashboard → regulatory verification checklist`.
 
