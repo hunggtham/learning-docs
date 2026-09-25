@@ -243,10 +243,10 @@ domains:
     path: investing/
     entrypoint: investing/README.md
     status: canonical
-    last_reviewed: 2026-09-23
-    scope: Investing foundations, asset classes, company analysis, applied economics, trading, derivatives, and Korea/Vietnam markets.
+    last_reviewed: 2026-09-25
+    scope: Coverage-complete Investing library spanning foundations, asset classes, company analysis, applied macro/economics, trading and derivatives with dedicated Forex institutional/practice/case layers, Korea/Vietnam markets, and integrated cases/capstone.
     prerequisites: [mathematics]
-    related: [economics, korea_business_economy, pmp, sql]
+    related: [economics, korea_business_economy, research_methods, data_engineering, pmp, sql]
   - id: pmp
     title: Project Management / PMP
     group: Professional
