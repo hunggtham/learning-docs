@@ -146,6 +146,21 @@ Khi framework có behavior riêng, tài liệu phải tách ba lớp:
 Tách lớp như vậy giúp đọc code legacy, migrate framework và kiểm tra lỗi production
 mà không cần học lại toàn bộ domain từ đầu.
 
+## Case studies và evidence lab
+
+[`90_case_studies/README.md`](./90_case_studies/README.md) là lớp integration cấp
+domain. Nó không tạo owner theory mới mà buộc người học nối các owner hiện có
+thành causal trace có thể đo và review.
+
+Bắt đầu với:
+
+- [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để trace một màn hình từ document request, parser, DOM/CSSOM và rendering tới async state, security boundary và deployed artifact.
+- [`Rendering Performance Measurement Lab`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md) để đo scripting/style/layout/paint/composite, layout invalidation và framework/browser rendering bằng baseline → trace → hypothesis → one change → re-measure.
+
+Hai case này là evidence path cho các gap cấp domain mà theory riêng lẻ khó kiểm
+tra: người đọc phải chứng minh browser đang làm work gì thay vì suy nguyên nhân
+từ tên CSS property hoặc framework abstraction.
+
 ## Kiểm tra coverage
 
 [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) là checklist cấp domain. Audit không
