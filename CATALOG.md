@@ -145,16 +145,6 @@ domains:
     scope: Linux foundations, filesystem, shell, identity, processes, resources, networking, operations, and production systems.
     prerequisites: [computer_science]
     related: [devops_platform_engineering, backend]
-  - id: automation
-    title: Automation
-    group: Computing
-    path: automation/
-    entrypoint: automation/README.md
-    status: canonical
-    last_reviewed: 2026-09-23
-    scope: Automation workflows, prompts, and operational tooling for the learning repository.
-    prerequisites: [computer_science]
-    related: [devops_platform_engineering, backend]
 
   - id: psychology
     title: Psychology
@@ -304,6 +294,10 @@ supporting:
     path: dev_everyday/
     status: support
     scope: Personal developer notes and local workflow configuration; not a canonical knowledge library.
+  - id: automation
+    path: automation/
+    status: support
+    scope: Workflow/worker tooling for automated textbook generation and repository operations; not a canonical knowledge domain.
   - id: study_planner
     path: planner/
     status: support
@@ -345,8 +339,7 @@ Computing
 ├── Native Mobile Development
 ├── Data Engineering
 ├── DevOps / Platform Engineering
-├── Linux
-└── Automation
+└── Linux
 
 Human & Society
 ├── Philosophy
@@ -370,6 +363,8 @@ Certifications
 └── KIIP / Korean Society
 
 Supporting
+├── Developer Notes
+├── Automation
 ├── Study Planner
 ├── Study Library
 └── Templates
