@@ -15,6 +15,7 @@
   const docStateKey = path => `study-shelf-doc-state:${path}`;
   const progressKey = path => `study-shelf-progress:${path}`;
   const bookmarksKey = path => `study-shelf-section-bookmarks:${path}`;
+  const readLaterKey = 'study-shelf-read-later';
   const statusLabels = { unread: 'Chưa đọc', reading: 'Đang đọc', review: 'Cần ôn lại', completed: 'Hoàn thành' };
 
   function readJson(key, fallback = null) {
@@ -42,6 +43,29 @@
   function bookmarksFor(path) {
     const value = readJson(bookmarksKey(path), []);
     return Array.isArray(value) ? value : [];
+  }
+  function readLaterItems() {
+    const value = readJson(readLaterKey, []);
+    return Array.isArray(value) ? value.filter(item => item && typeof item.path === 'string') : [];
+  }
+  function isReadLater(path) {
+    return readLaterItems().some(item => item.path === path);
+  }
+  function readLaterDocuments() {
+    return readLaterItems()
+      .map(item => ({ item, doc: docByPath(item.path) }))
+      .filter(entry => entry.doc)
+      .sort((a, b) => new Date(b.item.savedAt || 0) - new Date(a.item.savedAt || 0));
+  }
+  function setReadLater(path, force) {
+    const items = readLaterItems();
+    const index = items.findIndex(item => item.path === path);
+    const shouldAdd = typeof force === 'boolean' ? force : index < 0;
+    if (shouldAdd && index < 0) items.unshift({ path, savedAt: new Date().toISOString() });
+    if (!shouldAdd && index >= 0) items.splice(index, 1);
+    writeJson(readLaterKey, items);
+    window.dispatchEvent(new CustomEvent('study-shelf-read-later-change', { detail: { path, saved: shouldAdd } }));
+    return shouldAdd;
   }
   function percentFor(path) {
     const state = readDocState(path);
@@ -118,17 +142,47 @@
 
   function decorateCards() {
     document.querySelectorAll('.doc-card').forEach(card => {
-      if (card.querySelector('.los-card-meta')) return;
+      if (card.querySelector('.los-card-meta')) {
+        const shell = card.closest('.doc-card-shell');
+        const path = shell?.dataset.path;
+        const button = shell?.querySelector('.los-card-read-later');
+        if (path && button) updateReadLaterButton(button, path);
+        return;
+      }
       const match = card.getAttribute('href')?.match(/^#\/read\/([^?]+)/);
       if (!match) return;
       const path = decodeURIComponent(match[1]);
       const state = readDocState(path);
       const pct = percentFor(path);
+      const shell = document.createElement('div');
+      shell.className = 'doc-card-shell';
+      shell.dataset.path = path;
+      card.replaceWith(shell);
+      shell.append(card);
       const meta = document.createElement('div');
       meta.className = 'los-card-meta';
       meta.innerHTML = `<span class="los-status-chip">${esc(statusLabels[state.status] || statusLabels.unread)}</span>${pct ? `<span class="los-card-progress">${Math.round(pct)}%</span>` : ''}`;
       card.append(meta);
+      const later = document.createElement('button');
+      later.type = 'button';
+      later.className = 'los-card-read-later';
+      later.dataset.path = path;
+      later.onclick = event => {
+        event.preventDefault();
+        event.stopPropagation();
+        setReadLater(path);
+      };
+      shell.append(later);
+      updateReadLaterButton(later, path);
     });
+  }
+
+  function updateReadLaterButton(button, path) {
+    const saved = isReadLater(path);
+    button.textContent = saved ? '★ Đã lưu đọc sau' : '☆ Đọc sau';
+    button.setAttribute('aria-pressed', String(saved));
+    button.classList.toggle('active', saved);
+    button.setAttribute('aria-label', saved ? 'Bỏ khỏi danh sách đọc sau' : 'Lưu vào danh sách đọc sau');
   }
 
   function recentDocuments() {
@@ -151,15 +205,17 @@
     const recent = recentDocuments();
     const bookmarks = readAllBookmarks().sort((a, b) => new Date(b.savedAt || 0) - new Date(a.savedAt || 0)).slice(0, 6);
     const review = LOS.docs.filter(doc => readDocState(doc.path).status === 'review').slice(0, 6);
+    const readLater = readLaterDocuments();
     const recentBody = recent.length ? `<div class="los-list">${recent.map(({ doc, pct, state }) => `<a class="los-item" href="${hrefFor(doc.path)}"><strong>${esc(doc.title)}</strong><span>${esc(statusLabels[state.status] || '')} · ${Math.round(pct)}%</span><div class="los-progress"><i style="width:${pct}%"></i></div></a>`).join('')}</div>` : '<p class="los-empty">Chưa có lịch sử đọc.</p>';
     const bookmarkBody = bookmarks.length ? `<div class="los-list">${bookmarks.map(item => docMiniItem(docByPath(item.path), item.title || 'Bookmark', item.headingId || '')).join('')}</div>` : '<p class="los-empty">Chưa có bookmark.</p>';
     const reviewBody = review.length ? `<div class="los-list">${review.map(doc => docMiniItem(doc, 'Cần ôn lại')).join('')}</div>` : '<p class="los-empty">Review queue đang trống.</p>';
+    const readLaterBody = readLater.length ? `<div class="los-list">${readLater.slice(0, 6).map(({ doc, item }) => docMiniItem(doc, `Đã lưu ${new Date(item.savedAt).toLocaleDateString()}`)).join('')}</div>` : '<p class="los-empty">Chưa có tài liệu nào.</p>';
     const section = document.createElement('section');
     section.id = 'los-dashboard';
     section.className = 'los-dashboard';
-    section.innerHTML = `<div class="library-heading"><div><p class="eyebrow">LEARNING OS</p><h2>Tiếp tục học</h2></div><button class="los-action" type="button" data-los-open="review">Mở Learning OS</button></div><div class="los-dashboard-grid">${dashboardPanel('Continue Reading', recent.length, recentBody)}${dashboardPanel('Global Bookmarks', readAllBookmarks().length, bookmarkBody)}${dashboardPanel('Review Queue', LOS.docs.filter(doc => readDocState(doc.path).status === 'review').length, reviewBody)}</div>`;
+    section.innerHTML = `<div class="library-heading"><div><p class="eyebrow">LEARNING OS</p><h2>Tiếp tục học</h2></div><button class="los-action" type="button" data-los-open="read-later">Mở Learning OS</button></div><div class="los-dashboard-grid">${dashboardPanel('Continue Reading', recent.length, recentBody)}${dashboardPanel('Đọc sau', readLater.length, readLaterBody)}${dashboardPanel('Global Bookmarks', readAllBookmarks().length, bookmarkBody)}${dashboardPanel('Review Queue', LOS.docs.filter(doc => readDocState(doc.path).status === 'review').length, reviewBody)}</div>`;
     home.before(section);
-    section.querySelector('[data-los-open]').onclick = () => openModal('review');
+    section.querySelector('[data-los-open]').onclick = () => openModal('read-later');
   }
 
   let searchTimer = 0;
@@ -327,7 +383,7 @@
       const controls = document.createElement('div');
       controls.id = 'los-reader-controls';
       controls.className = 'los-reader-controls';
-      controls.innerHTML = `<label><span class="sr-only">Reading status</span><select id="los-status" class="los-select"><option value="unread">Chưa đọc</option><option value="reading">Đang đọc</option><option value="review">Cần ôn lại</option><option value="completed">Hoàn thành</option></select></label><button id="los-offline" class="los-action" type="button">↓ Lưu offline</button><button id="los-tools" class="los-action" type="button">Learning OS</button><span class="los-offline-badge">Progress ${Math.round(percentFor(path))}%</span>`;
+      controls.innerHTML = `<label><span class="sr-only">Reading status</span><select id="los-status" class="los-select"><option value="unread">Chưa đọc</option><option value="reading">Đang đọc</option><option value="review">Cần ôn lại</option><option value="completed">Hoàn thành</option></select></label><button id="los-read-later" class="los-action" type="button"></button><button id="los-offline" class="los-action" type="button">↓ Lưu offline</button><button id="los-tools" class="los-action" type="button">Learning OS</button><span class="los-offline-badge">Progress ${Math.round(percentFor(path))}%</span>`;
       header.append(controls);
       const select = controls.querySelector('#los-status');
       select.value = state.status || 'reading';
@@ -337,6 +393,13 @@
         writeDocState(path, patch);
         toast(`Trạng thái: ${statusLabels[select.value]}`);
       };
+      const later = controls.querySelector('#los-read-later');
+      later.onclick = () => {
+        const saved = setReadLater(path);
+        updateReadLaterButton(later, path);
+        toast(saved ? 'Đã thêm vào danh sách đọc sau.' : 'Đã bỏ khỏi danh sách đọc sau.');
+      };
+      updateReadLaterButton(later, path);
       controls.querySelector('#los-offline').onclick = () => cacheDocument(doc);
       controls.querySelector('#los-tools').onclick = () => openModal('bookmarks');
     }
@@ -384,7 +447,7 @@
     modal = document.createElement('div');
     modal.id = 'los-modal';
     modal.className = 'los-modal';
-    modal.innerHTML = `<button class="los-backdrop" type="button" aria-label="Đóng Learning OS"></button><section class="los-sheet" role="dialog" aria-modal="true" aria-label="Learning OS"><header class="los-sheet-head"><h2>Learning OS</h2><button class="los-close" type="button" aria-label="Đóng">×</button></header><nav class="los-tabs"><button class="los-tab" data-tab="bookmarks">Bookmarks</button><button class="los-tab" data-tab="review">Review</button><button class="los-tab" data-tab="graph">Graph</button><button class="los-tab" data-tab="sync">Sync</button><button class="los-tab" data-tab="offline">Offline</button></nav><div id="los-sheet-body" class="los-sheet-body"></div></section>`;
+    modal.innerHTML = `<button class="los-backdrop" type="button" aria-label="Đóng Learning OS"></button><section class="los-sheet" role="dialog" aria-modal="true" aria-label="Learning OS"><header class="los-sheet-head"><h2>Learning OS</h2><button class="los-close" type="button" aria-label="Đóng">×</button></header><nav class="los-tabs"><button class="los-tab" data-tab="read-later">Đọc sau</button><button class="los-tab" data-tab="bookmarks">Bookmarks</button><button class="los-tab" data-tab="review">Review</button><button class="los-tab" data-tab="graph">Graph</button><button class="los-tab" data-tab="sync">Sync</button><button class="los-tab" data-tab="offline">Offline</button></nav><div id="los-sheet-body" class="los-sheet-body"></div></section>`;
     document.body.append(modal);
     modal.querySelector('.los-backdrop').onclick = closeModal;
     modal.querySelector('.los-close').onclick = closeModal;
@@ -401,7 +464,10 @@
     const modal = ensureModal();
     modal.querySelectorAll('[data-tab]').forEach(button => button.classList.toggle('active', button.dataset.tab === tab));
     const body = modal.querySelector('#los-sheet-body');
-    if (tab === 'bookmarks') {
+    if (tab === 'read-later') {
+      const items = readLaterDocuments();
+      body.innerHTML = `<section class="los-tool-section"><h3>Đọc sau</h3><p>${items.length} tài liệu đang chờ đọc. Danh sách chỉ lưu trên thiết bị này.</p><div class="los-list">${items.length ? items.map(({ doc, item }) => docMiniItem(doc, `Đã lưu ${new Date(item.savedAt).toLocaleDateString()}`)).join('') : '<p class="los-empty">Chưa có tài liệu nào. Bấm “☆ Đọc sau” khi đang xem tài liệu.</p>'}</div></section>`;
+    } else if (tab === 'bookmarks') {
       const items = readAllBookmarks().sort((a,b) => new Date(b.savedAt || 0) - new Date(a.savedAt || 0));
       body.innerHTML = `<section class="los-tool-section"><h3>Global Bookmarks</h3><p>${items.length} section đã lưu trên toàn library.</p><div class="los-list">${items.length ? items.map(item => docMiniItem(docByPath(item.path), `${item.title || 'Bookmark'} · ${item.category || ''}`, item.headingId || '')).join('') : '<p class="los-empty">Chưa có bookmark.</p>'}</div></section>`;
     } else if (tab === 'review') {
@@ -484,6 +550,7 @@
     const app = document.querySelector('#app');
     if (app) new MutationObserver(scheduleEnhance).observe(app, { childList: true, subtree: true });
     addEventListener('hashchange', scheduleEnhance);
+    addEventListener('study-shelf-read-later-change', scheduleEnhance);
     addEventListener('online', () => toast('Đã online trở lại.'));
     addEventListener('offline', () => toast('Đang offline. Tài liệu đã cache vẫn đọc được.'));
     addEventListener('beforeinstallprompt', event => { event.preventDefault(); LOS.installPrompt = event; });
