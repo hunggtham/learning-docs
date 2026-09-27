@@ -4,6 +4,8 @@ Welfare economics hỏi một câu khác với consumer hoặc producer theory. 
 
 Điểm quan trọng là không đồng nhất ba câu hỏi khác nhau: hiệu quả (`efficiency`), phân phối (`distribution`) và công bằng (`equity`). Một allocation có thể hiệu quả theo nghĩa Pareto nhưng phân phối rất bất bình đẳng. Ngược lại, một policy có thể giảm total surplus nhưng được xã hội chấp nhận vì mục tiêu phân phối hoặc bảo hiểm rủi ro.
 
+Nói đơn giản, chapter này không chỉ hỏi “chiếc bánh có to hơn không?”. Nó tách hai câu hỏi: tổng giá trị tạo ra có tăng không, và phần giá trị đó rơi vào tay ai. Một giao dịch có thể làm tổng surplus tăng nhưng vẫn khiến một nhóm mất việc hoặc chịu chi phí lớn; khi đó phân tích efficiency chưa đủ để kết luận policy tốt.
+
 ## 1. Willingness to pay và willingness to accept
 
 Ở phía consumer, willingness to pay (WTP) là mức tối đa người mua sẵn sàng trả cho một đơn vị hàng hóa tại margin. Trong mô hình demand chuẩn, demand curve có thể đọc như marginal willingness to pay.

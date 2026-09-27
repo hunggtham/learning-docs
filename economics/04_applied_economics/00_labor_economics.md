@@ -4,6 +4,8 @@ Labor economics áp dụng microeconomics, information economics, market power v
 
 Vì vậy wage không thể được hiểu chỉ như intersection của một supply curve và demand curve tĩnh. Nó phản ánh productivity, bargaining, search frictions, outside options, institutions và market power.
 
+Nói đơn giản, một mức lương là kết quả của nhiều lực kéo cùng lúc. Người lao động có kỹ năng và lựa chọn thay thế nào? Doanh nghiệp có dễ tìm người khác không? Hai bên có biết đầy đủ thông tin không? Có công đoàn, luật lương tối thiểu, chi phí chuyển nơi ở hoặc hợp đồng dài hạn không? Chỉ nhìn vào một đường cung và một đường cầu sẽ bỏ sót các kênh này.
+
 ## 1. Labor demand là derived demand
 
 Firm thuê labor vì labor tạo output có market value. Trong competitive output/labor benchmark, firm thuê đến khi:

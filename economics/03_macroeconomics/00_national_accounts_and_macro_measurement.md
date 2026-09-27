@@ -4,6 +4,8 @@ Macroeconomics bắt đầu bằng measurement. Trước khi hỏi “nền kinh
 
 Một lỗi phổ biến là nhảy thẳng vào interest rate, inflation hoặc policy mà không có accounting identity rõ. National accounts cung cấp ngôn ngữ nền để các model phía sau không bị mơ hồ.
 
+Nói đơn giản, national accounts là hệ thống sổ sách giúp trả lời “nền kinh tế đã sản xuất bao nhiêu, ai nhận thu nhập, và số tiền đó được chi vào đâu?”. Sổ sách này rất cần thiết, nhưng nó không tự giải thích nguyên nhân. Con số GDP tăng chỉ cho biết production flow tăng theo cách đo đó; muốn biết tại sao, cần chuyển sang model về hành vi và thể chế.
+
 ## 1. GDP đo production flow, không đo toàn bộ welfare
 
 Gross Domestic Product (GDP) là market value của final goods và services được sản xuất trong lãnh thổ một nền kinh tế trong một khoảng thời gian.

@@ -2,6 +2,8 @@
 
 Econometrics không bắt đầu bằng việc chọn một model. Nó bắt đầu bằng câu hỏi: **economic concept nào cần đo, population nào đang được nói tới, outcome/treatment là gì, và quantity nào thật sự cần estimate?** Nếu measurement hoặc estimand sai, một regression chạy hoàn hảo về kỹ thuật vẫn trả lời sai câu hỏi.
 
+Nói đơn giản, trước khi tính toán cần biết mình đang cầm thước đo nào và muốn đo vật gì. “Income”, “employment”, “productivity” hay “poverty” đều có nhiều cách định nghĩa. Nếu định nghĩa thay đổi giữa các nhóm hoặc giữa các thời điểm, chênh lệch trong data có thể là chênh lệch về cách đo chứ chưa chắc là chênh lệch kinh tế thật.
+
 ## 1. Data không phải reality nguyên bản
 
 Một dataset là kết quả của measurement process: definitions, sampling frame, reporting incentives, missing data, timing, revisions và transformations.
