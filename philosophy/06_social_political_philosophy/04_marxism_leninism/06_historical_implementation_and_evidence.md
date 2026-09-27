@@ -73,7 +73,7 @@ Vietnam đặc biệt hữu ích vì postwar centrally planned arrangements về
 
 Case này cho thấy ideological continuity không đồng nghĩa institutional immobility. Một political system có thể giữ Marxism–Leninism trong official ideological foundation nhưng thay đổi mạnh economic coordination mechanism. Vì vậy “ideology” và “economic institution” phải được coded thành separate variables nếu muốn hiểu causal change.
 
-Chapter [Vietnam context](07_vietnam_context.md) sẽ giải thích riêng vì sao Marxism–Leninism có vị trí institutional trong Vietnamese education và political framework.
+Chapter [Vietnam context](07_vietnam_context.md) giải thích riêng vì sao Marxism–Leninism có vị trí institutional trong Vietnamese education và political framework.
 
 ## Evaluation framework
 
@@ -91,10 +91,23 @@ stated goal
 
 Sau đó mới quay lại hỏi doctrine nào giải thích hoặc justify arrangement đó. Sequence này ngăn ideology thay thế evidence.
 
+## Worked-case route
+
+Framework trên được áp dụng trực tiếp trong bốn chapter sau:
+
+1. [Soviet industrialization, planning và collectivization](12_case_soviet_industrialization_planning_and_collectivization.md) — centralized mobilization, quota, coercion, industrial capacity và human/economic trade-offs.
+2. [China after 1978](13_case_china_reform_opening_and_dual_track_transition.md) — household responsibility, dual-track reform, TVEs, SEZs, marketization và continued state/party role.
+3. [Vietnam và Đổi Mới](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md) — agricultural incentives, price reform, private/FDI expansion, SOEs và socialist-oriented market economy.
+4. [Comparative synthesis](15_comparative_case_synthesis_soviet_china_vietnam.md) — so sánh bằng cùng một variable set thay vì bằng ideology label.
+
+Route này biến formula `ideas → institutions → policies → outcomes` thành worked analysis. Điểm cần giữ khi đọc là outcome luôn là **vector**, không phải một score duy nhất: growth, productivity, consumption, food security, poverty, inequality, political rights, coercion, environment và resilience có thể di chuyển theo hướng khác nhau.
+
 ## Sources và reading anchors
 
 - Library of Congress, “Internal Workings of the Soviet Union — Collectivization and Industrialization”: https://www.loc.gov/exhibits/archives/intn.html
 - Encyclopaedia Britannica, “New Economic Policy (NEP)”.
+- NBER research on Soviet industrialization and structural transformation: https://www.nber.org/books-and-chapters/growth-industrial-production-soviet-union
+- World Bank historical analyses of China’s reform period: https://www.worldbank.org/en/country/china
 - World Bank historical analyses of Vietnam’s Đổi Mới reforms: https://www.worldbank.org/en/country/vietnam
 - [Crises, Regime Change và Path Dependence](../../../economics/06_economic_history_institutions/03_crises_regime_change_and_path_dependence.md) cung cấp framework rộng hơn để tránh monocausal explanation.
 
