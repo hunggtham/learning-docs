@@ -1,60 +1,87 @@
 # Master Knowledge Book — Lịch sử Việt Nam
 
-Bộ tài liệu này được thiết kế như một **knowledge library** độc lập về lịch sử Việt Nam, viết chủ yếu bằng tiếng Việt. Nó không phải timeline để học thuộc, cũng không phải tập hợp chiến công hay danh sách triều đại. Mục tiêu là giải thích **vì sao một trật tự lịch sử hình thành, cơ chế nào giữ nó tồn tại, cú sốc nào làm nó thay đổi và phần nào của quá khứ vẫn còn tác động đến hiện tại**.
+Bộ tài liệu này là **knowledge library** về lịch sử Việt Nam, viết chủ yếu bằng tiếng Việt. Nó không phải timeline để học thuộc, tập hợp chiến công hay danh sách triều đại. Mục tiêu là giải thích **vì sao một trật tự lịch sử hình thành, mechanism nào giữ nó tồn tại, shock nào làm nó thay đổi và phần nào của quá khứ tiếp tục tác động tới hiện tại**.
 
-Lịch sử ở đây được đọc theo First-Principles Thinking. Một triều đại không chỉ là tên vua và niên đại. Ta sẽ hỏi nhà nước huy động thuế và quân đội bằng cách nào, settlement và river network ảnh hưởng production ra sao, ai kiểm soát land, technology thay đổi productivity thế nào, religion và education tạo legitimacy ra sao, chiến tranh làm biến đổi population như thế nào, và vì sao một institution có thể tiếp tục tồn tại dù regime đã thay đổi.
+Lịch sử được đọc theo First-Principles Thinking: state huy động tax/army bằng cách nào; river/settlement ảnh hưởng production ra sao; ai kiểm soát land; technology thay đổi productivity/warfare thế nào; writing/religion tạo information/legitimacy ra sao; household và minority communities trải nghiệm policy như thế nào; environment thay đổi constraint ra sao.
 
-Bộ này cũng không ép toàn bộ quá khứ của lãnh thổ Việt Nam hiện nay vào một narrative duy nhất của Đại Việt/người Kinh. Champa, Óc Eo/Mekong Delta, Khmer world, upland societies và maritime networks sẽ được đọc như những historical systems có logic riêng rồi mới nối vào các quá trình interaction, conflict, migration, exchange và integration.
+Bộ này không ép toàn bộ quá khứ của lãnh thổ Việt Nam hiện nay vào một narrative duy nhất của Đại Việt/người Kinh. Champa, Mekong/Khmer worlds, upland societies, merchant diasporas và maritime networks được đọc như historical systems có logic riêng rồi mới nối vào interaction, conflict, migration, exchange và integration.
 
-Đây là một case study khu vực trong [World History](../world_history/README.md): các chapter thế giới cung cấp context về East Asian empires, Indian Ocean trade, Mongol expansion, early modern commerce, colonialism, World Wars và Cold War; library này đi sâu vào cách những lực đó được các xã hội trên không gian Việt Nam tiếp nhận, thương lượng và biến đổi.
+Đây là case study khu vực của [World History](../world_history/README.md): world-history chapters cung cấp context về East Asian empires, Indian Ocean/South China Sea trade, Mongol expansion, early-modern commerce, colonialism, World Wars, Cold War và globalization; library này đi sâu vào cách các lực đó được tiếp nhận và biến đổi tại Việt Nam.
 
-## Cách sử dụng
+## Cách dùng
 
-Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Sau đó đọc tuyến tính từ 01 trở đi nếu muốn thấy causal chain đầy đủ.
+Bắt đầu ở [`00_index_and_dependency.md`](00_index_and_dependency.md).
 
-Các chapter hiện đã triển khai từ phương pháp đọc lịch sử đến hết chiến tranh năm 1975:
+Library hiện có ba layer hoàn chỉnh:
 
-- [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md): evidence, myth, periodization và causal reasoning.
-- [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md): sông, đồng bằng, núi, biển và historical space.
-- [`03_prehistory_to_dong_son.md`](03_prehistory_to_dong_son.md): tiền sử đến Đông Sơn.
-- [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md): Văn Lang, Âu Lạc và Cổ Loa.
-- [`05_nanyue_han_and_imperial_integration.md`](05_nanyue_han_and_imperial_integration.md): Nam Việt, Hán và imperial integration.
-- [`06_northern_rule_society_economy_and_resistance.md`](06_northern_rule_society_economy_and_resistance.md): Bắc thuộc dài hạn, society, economy và resistance.
-- [`07_tenth_century_autonomy_and_state_building.md`](07_tenth_century_autonomy_and_state_building.md): thế kỷ X từ autonomy đến durable state.
-- [`08_ly_thang_long_state_and_economy.md`](08_ly_thang_long_state_and_economy.md): nhà Lý, Thăng Long, agriculture, Buddhism và state consolidation.
-- [`09_tran_society_trade_and_mongol_wars.md`](09_tran_society_trade_and_mongol_wars.md): nhà Trần, trade, society và Mongol–Yuan wars.
-- [`10_ho_ming_occupation_and_lam_son.md`](10_ho_ming_occupation_and_lam_son.md): Hồ reforms, Minh occupation và Lam Sơn.
-- [`11_le_so_bureaucracy_law_land_and_education.md`](11_le_so_bureaucracy_law_land_and_education.md): Lê sơ, bureaucracy, law, land và examinations.
-- [`12_mac_and_north_south_courts.md`](12_mac_and_north_south_courts.md): Mạc, Lê restoration và Nam–Bắc triều.
-- [`13_trinh_nguyen_trade_and_two_realms.md`](13_trinh_nguyen_trade_and_two_realms.md): Trịnh–Nguyễn, hai political economy và maritime trade.
-- [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md): Champa, Khmer, uplands, migration và frontier formation.
-- [`15_tay_son_rebellion_war_and_reunification.md`](15_tay_son_rebellion_war_and_reunification.md): Tây Sơn, rice, fiscal crisis, regional war và Nguyễn recovery.
-- [`16_early_nguyen_hue_administration_and_economy.md`](16_early_nguyen_hue_administration_and_economy.md): Huế, early Nguyễn administration, infrastructure và centralization.
-- [`17_french_conquest_colonial_state_and_economy.md`](17_french_conquest_colonial_state_and_economy.md): French conquest, colonial state, land, tax, infrastructure và labor.
-- [`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md): colonial society, print, competing nationalist/revolutionary projects, World War II và August 1945.
-- [`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md): post-1945 state-building, First Indochina War, Điện Biên Phủ và Geneva.
-- [`20_two_vietnams_cold_war_and_1975.md`](20_two_vietnams_cold_war_and_1975.md): hai nhà nước, insurgency, internationalized Cold War, escalation, diplomacy và 1975.
+### 1. Timeline causal — 01 đến 23
 
-Các file tiếp theo sẽ tiếp tục theo dependency trong index, không đổi sang kiểu tóm tắt chronology.
+- 01 method/evidence;
+- 02 historical geography;
+- 03–06 tiền sử, Cổ Loa, Nam Việt/Hán và Bắc thuộc;
+- 07–12 state-building từ thế kỷ X tới Lê–Mạc;
+- 13–16 Trịnh–Nguyễn, frontier, Tây Sơn và Nguyễn;
+- 17–20 colonial period, revolution và wars tới 1975;
+- 21–23 reunification, Đổi Mới và Việt Nam thế kỷ XXI.
+
+Mỗi chapter nối timeline với geography, economy, society, technology, institutions và di tích.
+
+### 2. Structural histories — 24 đến 30
+
+- [`24_economic_history_land_tax_markets_and_reform.md`](24_economic_history_land_tax_markets_and_reform.md)
+- [`25_social_history_household_village_gender_migration_ethnicity.md`](25_social_history_household_village_gender_migration_ethnicity.md)
+- [`26_writing_education_and_knowledge_systems.md`](26_writing_education_and_knowledge_systems.md)
+- [`27_religion_belief_and_ritual_history.md`](27_religion_belief_and_ritual_history.md)
+- [`28_technology_infrastructure_and_information_history.md`](28_technology_infrastructure_and_information_history.md)
+- [`29_environment_disaster_and_adaptation_history.md`](29_environment_disaster_and_adaptation_history.md)
+- [`30_historiography_collective_memory_and_heritage.md`](30_historiography_collective_memory_and_heritage.md)
+
+Những file này không phải summary lại 01–23. Chúng theo một variable qua hàng nghìn năm để thấy continuity/change.
+
+### 3. Reference & field layer — 31 đến 33
+
+- [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): timeline tra nhanh.
+- [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + source/evidence discipline.
+- [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md): Đền Hùng, Cổ Loa, Hoa Lư, Thăng Long, Vân Đồn, Thành Nhà Hồ, Mỹ Sơn, Hội An, Huế, Mekong, Điện Biên, DMZ, industrial corridors… như learning checkpoints.
 
 ## Cách đọc mỗi thời kỳ
 
 Mỗi giai đoạn cố gắng giữ đồng thời nhiều layer:
 
-**Timeline** để không đảo trước–sau. **Geography** để hiểu vì sao capital, battlefield, trade route và settlement nằm ở vị trí đó. **Economy** để biết food, land, tax, labor và exchange nuôi political order như thế nào. **Society** để thấy village, household, elite, migration và status. **Technology & infrastructure** để nối metallurgy, irrigation, road, port, writing và military technology với capacity. **Religion / ideas / education** để hiểu legitimacy và information system. **Di tích và địa điểm** để biến historical mechanism thành landscape có thể quan sát hôm nay.
-
-Di tích luôn được đọc theo lớp. Một temple hiện tồn có thể tưởng niệm sự kiện cổ nhưng kiến trúc hiện tại được xây lại nhiều thế kỷ sau. Một archaeological site có thể cho direct material evidence mạnh hơn, nhưng artifact cũng không tự động xác nhận toàn bộ later legend.
+**Timeline** để không đảo trước–sau. **Geography** để hiểu capital/battlefield/trade route. **Economy** để biết food, land, tax, labor và exchange nuôi order thế nào. **Society** để thấy household, village, elite, gender, ethnicity, migration. **Technology & infrastructure** để nối metallurgy, irrigation, road, port, printing, rail, electricity và digital network với capacity. **Religion / ideas / education** để hiểu legitimacy/information. **Environment** để thấy flood, disease, delta và climate constraint. **Di tích** để kiểm tra mechanism bằng landscape.
 
 ## Nguyên tắc evidence
 
-Các chương cố ý phân biệt giữa **fact tương đối chắc**, **archaeological inference**, **historical interpretation**, **tradition / legend**, **collective memory** và **national narrative**. Khi chronology hoặc interpretation còn debate, tài liệu nói rõ uncertainty thay vì tạo false precision.
+Các chapter cố ý phân biệt **fact tương đối chắc**, **archaeological inference**, **historical interpretation**, **contested interpretation**, **tradition/legend**, **collective memory** và **national narrative**.
 
-Với lịch sử thế kỷ XX, quy tắc này còn nghiêm ngặt hơn: các chapter tách documented event khỏi retrospective political narrative, dùng nhiều scale phân tích cùng lúc và không biến ngôn ngữ tưởng niệm của bất kỳ phía nào thành terminology trung tính mặc định.
+Một nguồn sơ cấp không tự động đúng hơn source thứ cấp: chronicle có court bias; colonial police record có governance bias; memoir có memory limitation. Archaeology mạnh về material context nhưng institutional meaning vẫn cần inference.
 
-Một narrative quen thuộc không được dùng để thay thế evidence; ngược lại, myth, ritual và memory cũng không bị loại bỏ. Chúng là evidence về identity, legitimacy và cách society sử dụng quá khứ.
+Với issue còn debate, library nói rõ uncertainty thay vì tạo false precision.
+
+## Di tích: không đọc như photo caption
+
+Temple hiện tồn có thể tưởng niệm event ancient nhưng kiến trúc rebuilt centuries later. Archaeological site có direct material evidence mạnh hơn nhưng artifact không tự động xác nhận later legend.
+
+Mỗi site dùng three-layer model:
+
+```text
+date of historical event
+≠ date of cult/commemoration
+≠ date of present structure
+```
+
+Field method chi tiết nằm ở file 33.
+
+## Naming và terminology
+
+Tên địa danh dùng historical name theo context rồi note modern locator khi cần. Ví dụ Thăng Long/Đông Kinh/Hà Nội và Gia Định/Sài Gòn/Thành phố Hồ Chí Minh không được thay lẫn nhau vô điều kiện.
+
+Important scholarly keyword được giữ/note bằng English. Korean term chỉ thêm khi connection thực sự hữu ích với các bộ Korean docs, ví dụ **civil examination / 과거제** hoặc **Classical Chinese / 한문**.
 
 ## Nguồn nền
 
-Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim, John K. Whitmore, James A. Anderson, Tana Li và *The Cambridge History of the Vietnam War*; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
+Xương sống chronology/interpretation dùng scholarship chuyên ngành về Vietnam/Southeast Asia, including major university presses; archaeology/heritage đối chiếu Viện/Bảo tàng/Cục Di sản và UNESCO khi phù hợp; modern economy/integration dùng sources như World Bank, WTO, ASEAN và dated official/statistical material.
 
-> Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, technology, geography, beliefs và lựa chọn của con người.
+For politically/interpretively contested twentieth-century topics, library avoids turning one side's terminology into analytical conclusion; it separates documented event, source position and scholarly interpretation.
+
+> Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, resource, technology, geography, environment, beliefs và lựa chọn của con người.
