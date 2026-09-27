@@ -1,12 +1,12 @@
-# 245. 연산자 우선순위 (Operator Precedence)
+# 입출력 (Input/Output)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **245. 연산자 우선순위 (Operator Precedence)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **입출력 (Input/Output)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-연산자, 우선순위
+입출력
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,21 @@
 
 ---
 
-## 245. 연산자 우선순위 (Operator Precedence)
-- 하나의 수식에 여러 연산자가 있을 때 계산되는 순서.
-- 순위: **단항**(`!`, `++`, `~`) > **산술**(`*`, `/` > `+`, `-`) > **관계**(`>`, `==`) > **논리**(`&&` > `||`) > **대입**(`=`, `+=`).
-- 괄호 `()`가 가장 우선.
+## 입출력 (Input/Output)
+### 169. 주요 서식 문자열 (Format String / Chuỗi định dạng)
+- `%d`: 정수형 10진수 (Số nguyên hệ thập phân).
+- `%c`: 문자 (Ký tự).
+- `%s`: 문자열 (Chuỗi ký tự).
+  - *Example / Ví dụ*: `printf("Tuổi: %d", 20);`
+  - 💡 *Mẹo ghi nhớ*: d = decimal (số thập phân), c = character (ký tự), s = string (chuỗi).
 
-**Giải thích (Vietnamese):**
-Thứ tự ưu tiên tính toán: Ngoặc () -> Đơn nguyên (phủ định, tăng giảm) -> Nhân chia cộng trừ -> So sánh -> Logic (AND trước OR sau) -> Gán.
+### 170. printf() 함수 (printf() Function / Hàm in C)
+- 인수로 주어진 값을 화면에 출력하는 함수이다. (Hàm in giá trị ra màn hình theo định dạng).
+  - *Example / Ví dụ*: `printf("%d, %c", a, b);`
+  - 💡 *Mẹo ghi nhớ*: 'f' trong printf là 'format' (định dạng).
 
-**💡 Mẹo ghi nhớ (Mnemonics):**
-**단산관논대** (Đơn - Toán - Quan - Luận - Gán): 단항 -> 산술 -> 관계 -> 논리 -> 대입.
-
----
+### 171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)
+- `printf()`: Định dạng đầu ra. `System.out.printf("%d", r);`
+- `print()`: In không xuống dòng. `System.out.print(r + s);`
+- `println()`: In và xuống dòng. `System.out.println(r + "은 소수");`
+  - 💡 *Mẹo ghi nhớ*: 'ln' trong println là 'line new' (xuống dòng mới).

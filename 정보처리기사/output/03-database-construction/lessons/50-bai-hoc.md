@@ -1,12 +1,12 @@
-# 220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환
+# 199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-하위, 질의, 트리거, DBMS, 접속, 데이터, 전환
+접근통제, 모델, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,19 +22,15 @@
 
 ---
 
-## 220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환
-- **하위 질의 (Subquery):** 조건절에 주어진 질의를 먼저 수행하여 결과를 피연산자로 사용.
-- **트리거 (Trigger):** 데이터의 삽입/갱신/삭제 등 이벤트 발생 시 관련 작업이 자동 수행되는 절차형 SQL. DCL 사용 불가.
-- **DBMS 접속 기술:** JDBC(Java 표준 API), ODBC(개방형 표준 API), MyBatis(SQL Mapping 프레임워크), ORM(객체와 DB 매핑).
-- **데이터 전환 (Data Migration/ETL):** 기존 시스템에서 데이터를 추출(Extraction), 변환(Transformation), 적재(Loading)하는 과정.
-- **VI (Vietnamese) (Tiếng Việt):** Truy vấn con, Trigger, Kết nối DBMS & Chuyển đổi dữ liệu.
-  - Subquery: Truy vấn lồng nhau.
-  - Trigger: Tự động kích hoạt khi có sự kiện (INSERT/UPDATE/DELETE). Không dùng DCL trong Trigger.
-  - Kết nối: JDBC (cho Java), ODBC (chuẩn mở), ORM (Ánh xạ đối tượng - quan hệ).
-  - ETL: Trích xuất (E), Chuyển đổi (T), Tải (L) dữ liệu sang hệ thống mới.
-
----
-
-# 3과목 운영체제 (Operating System - 추가 포함된 내용)
-
----
+## 199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)
+- **DAC (임의 접근통제):** 데이터 소유자가 사용자 신원에 따라 권한 부여 (GRANT/REVOKE).
+- **MAC (강제 접근통제):** 시스템이 주체와 객체의 보안 등급을 비교해 권한 부여.
+  - **벨 라파듈라 (Bell-LaPadula):** 기밀성(Confidentiality) 중심.
+  - **비바 (Biba):** 무결성(Integrity) 중심. (비인가자 데이터 변형 방지).
+  - **클락-윌슨 (Clark-Wilson):** 상업용 무결성 모델. 프로그램에 의한 접근.
+  - **만리장성 (Chinese Wall):** 이해 충돌 관계 객체 간 정보 접근 통제.
+- **RBAC (역할기반 접근통제):** 중앙관리자가 사용자의 역할(Role)에 따라 권한 부여.
+- **VI (Vietnamese) (Tiếng Việt):** Mô hình kiểm soát truy cập.
+  - DAC: Dựa trên danh tính (Người dùng cấp quyền).
+  - MAC: Dựa trên cấp độ bảo mật (Hệ thống cấp quyền). Các mô hình: Bell-LaPadula (Bảo mật), Biba (Toàn vẹn)...
+  - RBAC: Dựa trên vai trò (Role).

@@ -1,12 +1,12 @@
-# Python 기초 (Python Basics)
+# Python 기본 문법 (Python Basic Syntax)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **Python 기초 (Python Basics)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **Python 기본 문법 (Python Basic Syntax)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-Python, 기초
+Python, 기본, 문법
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,65 +22,18 @@ Python, 기초
 
 ---
 
-## Python 기초 (Python Basics)
-### 161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)
-- **리스트 (List)**: 요소의 추가, 삭제, 변경 가능 (Có thể thêm, xóa, sửa phần tử).
-- **튜플 (Tuple)**: 요소의 추가, 삭제, 변경 불가능함 (Không thể thay đổi phần tử).
-- **range**: 연속된 숫자를 생성함 (Tạo dãy số liên tiếp).
-  - *Example / Ví dụ*: List `[1, 2]`, Tuple `(1, 2)`.
-  - 💡 *Mẹo ghi nhớ*: List dùng `[]` và linh hoạt. Tuple dùng `()` và cố định (bất biến).
+## Python 기본 문법 (Python Basic Syntax)
+### 264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)
+- **자료형 선언 없음**: 변수 선언 시 타입을 명시하지 않는다. (Không cần khai báo kiểu dữ liệu).
+- **세미콜론 생략**: 문장 끝에 `;`이 필요 없다. (Không cần dấu chấm phẩy ở cuối câu).
+- **연속 할당**: `x, y, z = 10, 20, 30` (Có thể gán liên tiếp nhiều biến).
+- **코드 블록**: 콜론(`:`)과 여백(Indentation)으로 구분한다. (Dùng dấu hai chấm và thụt lề để xác định khối lệnh, thay vì dùng `{ }`).
+  - 💡 *Mẹo ghi nhớ*: Python yêu cầu thụt lề (thường là 4 spaces) vô cùng khắt khe. Sai thụt lề = Lỗi (IndentationError).
 
-### 185. Python의 리스트 (Python List / Danh sách trong Python)
-- 크기를 지정하지 않는다. 하나의 리스트에 다양한 자료형을 섞어 저장할 수 저장할 수 있다. (Không cần chỉ định kích thước. Có thể chứa nhiều kiểu dữ liệu khác nhau).
-- 위치는 0부터 시작한다. (Chỉ số bắt đầu từ 0).
-  - *Example / Ví dụ*: `a = [10, 'mike', 23.45]`
-  - 💡 *Mẹo ghi nhớ*: Python List giống như một cái túi thần kỳ, có thể bỏ bất cứ thứ gì vào.
-
-### 186. Python의 딕셔너리 (Dictionary / Từ điển)
-- 연관된 값을 묶어서 저장하는 용도. (Dùng để lưu trữ dữ liệu theo cặp Khóa - Giá trị).
-- 위치값 대신 사용자가 원하는 키를 직접 지정하여 사용한다. (Dùng Khóa tự định nghĩa thay vì chỉ số số học).
-  - *Example / Ví dụ*: `d = {'name': 'John', 'age': 25}`
-  - 💡 *Mẹo ghi nhớ*: Key-Value (Khóa-Giá trị). Dùng `{}` giống như một từ điển thực sự (tra từ -> ra nghĩa).
-
-### 187. Python의 Range (Python Range / Dãy số)
-- 연속된 숫자를 생성하는 것. (Tạo dãy số liên tiếp).
-  - `range(5)` -> 0, 1, 2, 3, 4
-  - `range(4, 9)` -> 4, 5, 6, 7, 8
-  - `range(1, 15, 3)` -> 1, 4, 7, 10, 13
-  - 💡 *Mẹo ghi nhớ*: `range(start, stop, step)`. Bao gồm `start`, nhưng **không** bao gồm `stop`.
-
-### 188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)
-- 객체에서 일부를 잘라 반환하는 기능. (Trích xuất một phần của chuỗi hoặc mảng).
-- `a[1:3]`: Lấy từ index 1 đến 2.
-- `a[0:5:2]`: Lấy từ 0 đến 4, bước nhảy 2.
-- `a[3:]`: Lấy từ index 3 đến cuối.
-- `a[:3]`: Lấy từ đầu đến index 2.
-- `a[::-1]`: Đảo ngược mảng.
-  - 💡 *Mẹo ghi nhớ*: `[start : stop : step]`. Giống range, không bao gồm `stop`.
-
-### 182. Python의 input() 함수 (Python input() Function / Hàm nhập)
-- 키보드로 입력받아 변수에 저장하는 함수이다. (Nhập từ bàn phím và lưu vào biến).
-- 입력되는 값은 기본적으로 문자열로 취급된다. (Giá trị mặc định luôn là chuỗi).
-  - *Example / Ví dụ*: `a = input('Nhập tên:')`
-
-### 183. Python의 print() 함수 (Python print() Function / Hàm in)
-- 인수로 주어진 값을 출력한다. (In giá trị ra màn hình).
-  - *Example / Ví dụ*: `print(82, 24, sep='-', end=',')` -> `82-24,`
-  - 💡 *Mẹo ghi nhớ*: `sep` = phân cách giữa các đối số, `end` = ký tự kết thúc (mặc định là xuống dòng `\n`).
-
-### 184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)
-- `input()` 함수는 무조건 문자열로 저장하므로, 숫자로 사용하려면 형 변환이 필요하다. (Vì `input()` trả về chuỗi, cần ép kiểu nếu muốn dùng số).
-- 변환할 데이터가 1개: `a = int(input())`
-- 변환할 데이터가 2개 이상: `a, b = map(int, input().split())`
-  - 💡 *Mẹo ghi nhớ*: `split()` để cắt khoảng trắng, `map()` để ép tất cả sang kiểu nguyên `int`.
-
-### 189. Python의 for문 (Python for loop)
-- **range를 이용하는 방식 (Dùng range)**: `for i in range(1, 11): sum = sum + i`
-- **리스트를 이용하는 방식 (Dùng list)**: `for i in a:` (với `a` là list).
-  - 💡 *Mẹo ghi nhớ*: `for item in tập_hợp`. Lặp qua từng phần tử.
-
-### 191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)
-- 클래스 없이 메소드만 단독으로 사용할 수 있다. (Có thể sử dụng phương thức độc lập mà không cần lớp).
-- 클래스를 사용하려면 속성과 메소드를 정의한 후 객체를 선언한다. (Để dùng lớp, định nghĩa thuộc tính và phương thức, sau đó khởi tạo đối tượng).
-  - *Example / Ví dụ*: `def calc(x, y): return x * y` (Hàm độc lập). `class Cls: x = 10` (Lớp).
-  - 💡 *Mẹo ghi nhớ*: Python hỗ trợ cả lập trình thủ tục (như C) và hướng đối tượng (OOP). Tham số đầu tiên của hàm trong lớp luôn là `self`.
+### 265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)
+*(Các khái niệm này đã được đề cập kỹ ở phần trước, dưới đây là tóm tắt nhanh các điểm chú ý)*:
+- **`input()`**: Luôn trả về chuỗi. Dùng `int(input())` để ép kiểu. Đa trị: `map(int, input().split())`.
+- **`print()`**: Có thể dùng `sep` (ký tự phân tách) và `end` (ký tự kết thúc).
+- **리스트 (List)**: Khai báo bằng `[]` hoặc `list()`. Hỗ trợ chứa nhiều kiểu dữ liệu hỗn hợp.
+- **딕셔너리 (Dictionary)**: Khai báo bằng `{}` hoặc `dict()`. Cấu trúc Key:Value.
+- **슬라이스 (Slice)**: Cắt `[start:stop:step]`. Nếu bỏ trống `start` thì lấy từ đầu, bỏ trống `stop` thì lấy đến cuối.

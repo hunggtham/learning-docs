@@ -1,12 +1,12 @@
-# 55. APM (애플리케이션 성능 관리/모니터링)
+# 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **55. APM (애플리케이션 성능 관리/모니터링)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-APM
+애플리케이션, 성능, 측정, 지표
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,11 @@ APM
 
 ---
 
-## 55. APM (애플리케이션 성능 관리/모니터링)
-* 애플리케이션의 성능 관리를 위해 자원 현황, 트랜잭션 등을 모니터링.
-* **리소스 방식**: Nagios, Zabbix, Cacti.
-* **엔드투엔드(End-to-End) 방식**: VisualVM, 제니퍼(Jennifer), 스카우터(Scouter).
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ giám sát hiệu năng (APM). Có 2 loại: Theo dõi tài nguyên (Nagios) và Từ đầu đến cuối (VisualVM, Scouter).
-
----
-*(이하 전자계산기 구조 파트 - Computer Architecture)*
-
----
+## 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
+* **처리량 (Throughput)**: 일정 시간 내 처리하는 일의 양.
+* **응답 시간 (Response Time)**: 요청을 전달한 후 '응답이 도착할 때'까지 걸린 시간.
+* **경과 시간 (Turn Around Time)**: 작업을 의뢰한 후 '처리가 완료될 때'까지 걸린 시간.
+* **자원 사용률 (Resource Usage)**: CPU, 메모리, 네트워크 등의 자원 사용량.
+* **VI (Vietnamese) (Tiếng Việt):** Các chỉ số hiệu năng: Thông lượng (Throughput), Thời gian phản hồi (Response), Thời gian hoàn thành (Turn Around), Mức sử dụng tài nguyên (Resource Usage).
+* **Example**: 식당에서 주문하고 물이 나오는 시간(응답 시간), 음식을 다 먹고 나오는 시간(경과 시간).
+* 💡 **Mẹo ghi nhớ**: Response = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ.

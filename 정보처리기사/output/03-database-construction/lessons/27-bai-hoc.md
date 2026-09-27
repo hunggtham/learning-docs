@@ -23,17 +23,16 @@ SQL, 명령어, 심화
 ---
 
 ## 204-219. SQL 명령어 심화 (SQL Commands Detail)
-- **DDL (204, 207-209):** , , .
-  -  옵션:  (참조하는 모든 개체 연쇄 제거),  (참조 중이면 제거 취소).
-- **DML (205, 214-218):** , , , .
-  - : 중복 튜플 제거.
-  - : 정렬 (오름차순/내림차순).
-- **DCL (206, 210-213):** , , , .
-  - : 권한 부여. (옵션: 남에게 권한 부여 가능).
-  - : 권한 회수.
-  - : 변경 내용을 DB에 영구 반영.
-  - : 변경 취소, 이전 상태로 복구.
+- **DDL (204, 207-209):** `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.
+  - `CASCADE`: 참조하는 모든 개체를 연쇄 처리; `RESTRICT`: 참조 중이면 처리 취소.
+- **DML (205, 214-218):** `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+  - `DISTINCT`: 중복 튜플 제거; `ORDER BY`: 오름차순/내림차순 정렬.
+- **DCL (206, 210-213):** `GRANT`, `REVOKE`.
+  - `GRANT`: 권한 부여 (`WITH GRANT OPTION`으로 재부여 허용).
+  - `REVOKE`: 권한 회수.
+- **TCL:** `COMMIT`, `ROLLBACK`, `SAVEPOINT`.
+  - `COMMIT`: 변경 내용을 DB에 영구 반영; `ROLLBACK`: 변경 취소; `SAVEPOINT`: 부분 복귀 지점 설정.
 - **VI (Vietnamese) (Tiếng Việt):** Chi tiết các lệnh SQL.
-  - : Xóa dây chuyền các phần phụ thuộc. : Không cho xóa nếu đang bị phụ thuộc.
-  - : Cấp quyền và cho phép người đó cấp quyền tiếp cho người khác.
-  - : Xác nhận lưu thay đổi. : Hoàn tác.
+  - `CASCADE`: Xử lý dây chuyền các đối tượng phụ thuộc. `RESTRICT`: Không xử lý nếu đang bị tham chiếu.
+  - `GRANT`/`REVOKE`: Cấp và thu hồi quyền.
+  - `COMMIT`/`ROLLBACK`/`SAVEPOINT`: Xác nhận, hoàn tác hoặc đánh dấu điểm khôi phục giao dịch.

@@ -1,12 +1,12 @@
-# 28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
+# 27. JSON 및 AJAX (JSON & AJAX)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **27. JSON 및 AJAX (JSON & AJAX)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-선형, 리스트, 심화, 연속, 연결
+JSON, AJAX
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,17 +22,10 @@
 
 ---
 
-## 28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
-* 앞서 배운 선형 리스트는 두 가지로 나뉩니다.
-* **연속 리스트 (Contiguous List - 예: 배열)**:
-  * 연속되는 기억장소에 저장. 기억장소 이용 효율 밀도가 1(가장 좋음).
-  * 중간에 데이터를 삽입/삭제 시 자료의 이동이 필요(오버헤드 발생).
-* **연결 리스트 (Linked List)**:
-  * 임의의 기억공간에 저장하며, 포인터(링크)를 이용해 서로 연결.
-  * 노드의 삽입/삭제가 용이. 순차 리스트에 비해 기억 공간 이용 효율은 낮고, 포인터를 찾는 시간 때문에 접근 속도가 느림.
-  * 중간 노드가 끊어지면 다음 노드를 찾기 힘듦.
-* **오버플로/언더플로 (Overflow/Underflow)**: 스택/리스트가 꽉 찬 상태에서 삽입하면 Overflow, 빈 상태에서 삭제하면 Underflow 발생.
+## 27. JSON 및 AJAX (JSON & AJAX)
+* **JSON (JavaScript Object Notation)**: 속성-값 쌍(Attribute-Value Pairs)으로 이루어진 데이터 객체를 전달하기 위한 개방형 표준 포맷. 사람이 읽기 쉬움.
+* **AJAX (Asynchronous JavaScript and XML)**: 자바스크립트를 이용한 비동기 통신 기술. 클라이언트-서버 간 XML(또는 JSON) 데이터를 교환 및 제어.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Contiguous List (Mảng): Dữ liệu lưu liên tiếp. Chèn/Xóa chậm do phải dịch chuyển dữ liệu. Mật độ = 1.
-  * Linked List (Danh sách liên kết): Dữ liệu lưu rải rác, nối bằng pointer. Chèn/Xóa nhanh, nhưng truy cập chậm.
-* 💡 **Mẹo ghi nhớ**: Array = Nhà chung cư sát vách. Linked List = Các nhà rải rác nhưng có bản đồ chỉ đường đến nhà tiếp theo.
+  * JSON: Định dạng dữ liệu dạng Key-Value dễ đọc.
+  * AJAX: Công nghệ giao tiếp bất đồng bộ, tải dữ liệu mà không cần tải lại toàn bộ trang.
+* **Example**: 좋아요 버튼을 눌렀을 때 페이지 이동 없이 하트가 채워지는 것이 AJAX 기술입니다.

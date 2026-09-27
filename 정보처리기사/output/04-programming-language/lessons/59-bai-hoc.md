@@ -1,12 +1,12 @@
-# 084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)
+# 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-페이지, 교체, 알고리즘
+프로그래밍, 언어의, 종류
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,23 +22,16 @@
 
 ---
 
-## 084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)
-- 메모리가 꽉 찼을 때 어떤 페이지를 내보낼지 결정.
-- **FIFO (First In First Out)**: 가장 먼저 들어온 페이지를 교체.
-- **OPT (Optimal)**: 앞으로 가장 오랫동안 사용되지 않을 페이지를 교체 (이론상 최적).
-- **LRU (Least Recently Used)**: (과거 기준) 가장 오랫동안 사용되지 않은 페이지를 교체.
-- **LFU (Least Frequently Used)**: 사용(참조) 횟수가 가장 적은 페이지 교체.
-- **NUR (Not Used Recently)**: 최근에 사용하지 않은 페이지 교체 (참조 비트 사용).
-- **지역성 (Locality)**: 프로세스가 특정 메모리 영역을 집중적으로 참조하는 현상.
-  - 공간 지역성: 근처 메모리 참조 (배열).
-  - 시간 지역성: 방금 참조한 곳 다시 참조 (루프, 변수).
-- **스레싱 (Thrashing)**: 실제 CPU 연산보다 페이지 교체에 더 많은 시간이 소요되어 시스템 성능이 뚝 떨어지는 현상.
+## 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
+- **절차적 언어 (Procedural)**: 코드를 순차적인 함수(Procedure) 단위로 나누어 해결. (C, FORTRAN, ALGOL 등).
+- **객체지향 언어 (Object-Oriented)**: 데이터와 메소드를 묶어 '객체'로 만듦 (캡슐화, 상속, 다형성 지원). (C++, JAVA 등). JAVA는 '가비지 컬렉터(Garbage Collector)'가 메모리를 자동 관리함.
+- **스크립트 언어 (Scripting)**: 컴파일 없이 인터프리터 방식으로 바로 실행되는 언어. (Python, JavaScript, PHP, Bash 등).
+  - PHP: 웹 서버용 스크립트. `@`를 쓰면 에러 무시.
+  - JavaScript: 웹 브라우저 제어 (클래스와 프로토타입 기반).
 
 **Giải thích (Vietnamese):**
-Khi RAM đầy, máy phải đẩy tạm dữ liệu ra ổ cứng.
-- LRU: Đuổi cái nào lâu nhất không ai thèm đụng tới (Thường xuyên dùng nhất).
-- LFU: Đuổi cái nào ít được gọi tên nhất.
-- Locality: Chương trình có xu hướng dùng lại những dữ liệu gần nhau (Ví dụ chạy vòng lặp `for`).
-- Thrashing: Tình trạng máy tính bị đơ, giật lag vì RAM quá đầy, máy mải mê swap dữ liệu ra vào ổ cứng mà không chịu tính toán xử lý.
+- Ngôn ngữ thủ tục (như C) chạy từ trên xuống dưới, gọi các hàm.
+- Ngôn ngữ OOP (như Java, C++) nhóm code thành các "Thực thể" (Object). Java có Garbage Collector tự động dọn dẹp RAM không dùng đến.
+- Ngôn ngữ Script (Python, JS) không cần biên dịch ra file `.exe` mà chạy trực tiếp, rất linh hoạt.
 
 ---

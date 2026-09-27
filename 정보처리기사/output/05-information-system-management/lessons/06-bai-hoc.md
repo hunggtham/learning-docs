@@ -1,12 +1,12 @@
-# 3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)
+# 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-다중화, 전송, 제어
+프로젝트, 관리, 비용, 산정
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,43 +22,43 @@
 
 ---
 
-## 3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)
+## 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
-### 3.1 다중화기 (Multiplexer)
-- 여러 단말기가 하나의 통신 회선을 공유.
-- **FDM (주파수 분할 다중화):** 주파수를 분할. 보호 대역(Guard Band) 필요(대역폭 낭비). 아날로그, 비동기식.
-- **TDM (시분할 다중화):** 시간을 분할(Time Slot). 동기식/디지털.
-  - **STDM (동기식):** 데이터 유무 상관없이 고정 시간 폭 할당 (효율 낮음).
-  - **ATDM (비동기식/통계적):** 데이터가 있는 단말에만 시간 할당 (효율 높음).
-- **역 다중화기 (Inverse MUX):** 하나의 고속 채널을 2개의 저속 채널로 분할.
-- **집중화기 (Concentrator):** 회선이 부족할 때 동적으로 할당(버퍼 필요). (입력 > 출력 회선).
-- **Tiếng Việt:** 
-  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band). 
-  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê). 
-  - Concentrator: Gom kênh, cần bộ đệm, số đầu vào > đầu ra.
+### 3.1 소프트웨어 프로젝트 관리 (Software Project Management)
+- 주어진 기간 내에 최소의 비용으로 사용자를 만족시키는 시스템을 개발하기 위한 전반적인 활동.
+- **Tiếng Việt:** Hoạt động tổng thể để phát triển hệ thống làm hài lòng người dùng với chi phí tối thiểu trong thời gian quy định.
 
-### 3.2 통신 속도 (Speed Metrics)
-- **변조 속도 (Baud):** 1초 동안 신호 변화 횟수. (Baud = Bps / 상태 변화 수).
-- **신호 속도 (Bps):** 1초 동안 전송 비트 수.
-- **상태 변화 수:** Mono(1), Di(2), Tri(3), Quad(4) bit.
-- **Tiếng Việt:** Baud: Số lần đổi trạng thái/s. Bps: Số bit/s.
+### 3.2 하향식/상향식 비용 산정 (Cost Estimation)
+#### LOC 기법 (Lines of Code)
+- 각 기능의 원시 코드 라인 수의 비관치, 낙관치, 기대치를 측정하여 예측.
+- **공식 (Formulas):**
+  - 노력(인월, Person-Month) = 개발 기간 × 투입 인원 = LOC / 1인당 월평균 생산 코드 라인 수
+  - 개발 비용 = 노력(인월) × 단위 비용
+  - 개발 기간 = 노력(인월) / 투입 인원
+  - 생산성 = LOC / 노력(인월)
+- **Tiếng Việt:** Ước tính dựa trên số dòng code. Tính toán Nỗ lực (Person-Month) = Số dòng code / Số dòng code 1 người viết trong 1 tháng.
 
-### 3.3 전송 제어 (Transmission Control)
-- **5단계 절차:** 회선 접속 → 링크 설정 → 메시지 전송 → 링크 해제 → 회선 절단.
-- **전송 제어 문자:**
-  - `SYN`: 동기화
-  - `SOH`/`STX`/`ETX`/`ETB`/`EOT`: 헤더, 텍스트(본문), 블록, 전송 종료
-  - `ENQ`: 링크 설정 요구
-  - `DLE`: 데이터 링크 이스케이프 (투과성 확보)
-  - `ACK`/`NAK`: 긍정/부정 응답
-- **Tiếng Việt:** Các ký tự điều khiển: SYN (Đồng bộ), STX (Bắt đầu văn bản), ETX (Kết thúc văn bản), ACK (Xác nhận), NAK (Từ chối).
+#### 수학적 산정 기법 (Mathematical Models)
+- **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
+- **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
+- **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
+- **Tiếng Việt:**
+  - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
+  - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
+  - FP (Function Point): Dựa trên tính năng.
 
-### 3.4 HDLC 프로토콜 (High-level Data Link Control)
-- **비트(Bit) 위주**의 프로토콜. 전이중/반이중 지원, 동기식 전송.
-- **비트 투과성 (Bit Stuffing):** 연속된 '1'이 5개면 강제로 '0' 추가 (플래그 `01111110`과 구분).
-- **프레임 종류:**
-  - **I (정보):** 데이터 전달 (0으로 시작).
-  - **S (감독):** 오류/흐름 제어 (10).
-  - **U (비번호):** 링크 모드 설정 (11).
-- **전송 모드:** NRM (정규), ARM (비동기), ABM (비동기 균형 - 전이중 P2P).
-- **Tiếng Việt:** HDLC là giao thức truyền theo bit. Dùng "Bit Stuffing" để chèn bit '0' sau 5 bit '1' liên tiếp. 3 loại Frame: I (Thông tin), S (Giám sát), U (Không số).
+### 3.3 일정 관리 (Schedule Management)
+- **PERT (프로그램 평가 및 검토 기술):** 낙관, 가능, 비관적인 경우로 나누어 종료 시기를 결정. 결정 경로와 임계 경로를 알 수 있음.
+- **CPM (임계 경로 기법):** 임계 경로는 프로젝트에서 가장 긴(최장) 경로를 의미한다.
+- **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
+- **Tiếng Việt:**
+  - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
+  - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
+  - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.
+
+### 3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)
+- **위험 관리 (Risk Analysis):** 돌발 상황(위험)을 미리 예상하고 적절한 대책을 수립.
+- **방법론 테일러링 (Tailoring):** 프로젝트 상황에 맞게 방법론 절차나 기법을 수정/보완.
+  - 내부적 기준: 목표 환경, 요구사항, 프로젝트 규모, 보유 기술.
+  - 외부적 기준: 법적 제약사항(Compliance), 표준 품질 기준.
+- **Tiếng Việt:** Quản lý rủi ro (lên phương án phòng ngừa) và Cắt may phương pháp (Tailoring) - điều chỉnh quy trình phát triển cho phù hợp với đặc thù dự án.

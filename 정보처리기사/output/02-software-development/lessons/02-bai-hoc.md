@@ -1,12 +1,12 @@
-# 2. 스택 (Stack) 및 응용 (Applications)
+# 073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **2. 스택 (Stack) 및 응용 (Applications)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-스택
+자료, 구조의, 정의, 선형, 리스트
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,21 @@
 
 ---
 
-## 2. 스택 (Stack) 및 응용 (Applications)
-* 리스트의 한쪽 끝으로만 자료의 삽입, 삭제 작업이 이루어지는 자료 구조.
-* 가장 나중에 삽입된 자료가 가장 먼저 삭제되는 후입선출(**LIFO**, Last-In First-Out) 방식.
-* **응용 분야 (Applications)**: 인터럽트 처리 (Interrupt handling), 수식 계산 및 표기법 (Expression evaluation), 서브루틴 호출 및 복귀 주소 저장 (Subroutine calls).
-* **삽입/삭제 (Push/Pop)**: `PUSH`는 자료 입력, `POP`은 자료 출력.
-* **VI (Vietnamese) (Tiếng Việt):**
-  * Stack là cấu trúc dữ liệu LIFO, thêm/xóa dữ liệu ở một đầu.
-  * Ứng dụng: Xử lý ngắt, tính toán biểu thức, lưu địa chỉ khi gọi hàm.
-* **Example**: 브라우저의 '뒤로 가기' 버튼은 스택 구조를 사용합니다. (Nút "Back" trên trình duyệt sử dụng cấu trúc stack).
-* 💡 **Mẹo ghi nhớ**: LIFO - Vào sau ra trước, giống như xếp đĩa, lấy đĩa trên cùng ra trước.
+## 073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)
+
+### 자료 구조의 분류 (Phân loại)
+- **선형 구조 (Linear - Tuyến tính):** 배열 (Array), 리스트 (List), 스택 (Stack), 큐 (Queue), 데크 (Deque).
+- **비선형 구조 (Non-Linear - Phi tuyến):** 트리 (Tree), 그래프 (Graph).
+
+### 배열 (Array - Mảng)
+
+---
+
+- **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
+- **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
+
+### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
+- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
+- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
+
+---

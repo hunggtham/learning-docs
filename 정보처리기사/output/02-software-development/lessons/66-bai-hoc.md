@@ -1,12 +1,12 @@
-# 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
+# 55. APM (애플리케이션 성능 관리/모니터링)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **55. APM (애플리케이션 성능 관리/모니터링)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-인터페이스, 보안, 네트워크, 영역
+APM
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,8 +22,35 @@
 
 ---
 
-## 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
-* 네트워크 트래픽에 대한 암호화 설정.
-* **방식**: IPSec, SSL, S-HTTP 등.
-* **VI (Vietnamese) (Tiếng Việt):** Bảo mật giao diện vùng mạng (mã hóa lưu lượng). Dùng IPSec, SSL, S-HTTP.
-* **Example**: 웹사이트 주소가 `https://`로 시작하면 SSL이 적용된 것입니다.
+## 55. APM (애플리케이션 성능 관리/모니터링)
+* 애플리케이션의 성능 관리를 위해 자원 현황, 트랜잭션 등을 모니터링.
+* **리소스 방식**: Nagios, Zabbix, Cacti.
+* **엔드투엔드(End-to-End) 방식**: VisualVM, 제니퍼(Jennifer), 스카우터(Scouter).
+* **VI (Vietnamese) (Tiếng Việt):** Công cụ giám sát hiệu năng (APM). Có 2 loại: Theo dõi tài nguyên (Nagios) và Từ đầu đến cuối (VisualVM, Scouter).
+
+---
+*(이하 전자계산기 구조 파트 - Computer Architecture)*
+
+---
+
+자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
+
+### 선형 구조 (Linear - Nối tiếp nhau)
+- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
+  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
+  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
+- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
+- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
+- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
+
+### 비선형 구조 (Non-linear - Không nối tiếp)
+- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
+- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
+
+- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin.
+  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
+  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
+  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
+
+---

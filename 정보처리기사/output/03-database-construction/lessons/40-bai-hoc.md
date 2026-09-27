@@ -1,12 +1,12 @@
-# 18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)
+# 198. 암호화 심화 (Encryption Deep Dive)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **198. 암호화 심화 (Encryption Deep Dive)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-파티셔닝과, 암호화
+암호화, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,18 +22,9 @@
 
 ---
 
-## 18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)
-
-### 파티셔닝 (Partitioning)
-Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản lý và tăng hiệu suất.
-- **범위 분할 (Range):** Phân chia theo khoảng (VD: Tháng 1, Tháng 2).
-- **해시 분할 (Hash):** Dùng hàm băm để chia đều. Dữ liệu phân bố đều nhưng khó tìm theo khoảng.
-- **목록 분할 (List):** Phân chia theo danh sách giá trị (VD: Nước: VN, KR, US).
-- **조합 분할 (Composite):** Kết hợp các phương pháp trên.
-- **라운드 로빈 (Round Robin):** Chia xoay vòng đều nhau tuần tự (Không cần khóa).
-
-### 데이터베이스 암호화 (Mã hóa CSDL)
-- **암호화 (Encryption):** Biến 평문 (Plaintext - Văn bản gốc) thành 암호문 (Ciphertext - Bản mã).
-- **복호화 (Decryption):** Giải mã từ Ciphertext về Plaintext.
-- **키 (Key):** Chìa khóa dùng để mã hóa và giải mã.
----
+## 198. 암호화 심화 (Encryption Deep Dive)
+- **개인키(비밀키) 암호 방식 (Private/Symmetric Key):** 암호화와 복호화 키가 동일. 단일키, 대칭 암호. (예: DES)
+- **공개키 암호 방식 (Public/Asymmetric Key):** 암호화 키는 공개(Public), 복호화 키는 비밀(Secret). 비대칭 암호. (예: RSA)
+- **VI (Vietnamese) (Tiếng Việt):** Mã hóa dữ liệu.
+  - Khóa cá nhân (Đối xứng): Khóa mã hóa và giải mã giống nhau (DES).
+  - Khóa công khai (Bất đối xứng): Khóa mã hóa công khai, khóa giải mã bí mật (RSA).

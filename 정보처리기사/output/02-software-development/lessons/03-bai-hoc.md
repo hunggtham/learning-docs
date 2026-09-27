@@ -1,12 +1,12 @@
-# 29. 큐 (Queue)
+# 2. 스택 (Stack) 및 응용 (Applications)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **29. 큐 (Queue)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **2. 스택 (Stack) 및 응용 (Applications)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-29. 큐 (Queue)
+스택
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,13 @@
 
 ---
 
-## 29. 큐 (Queue)
-* 삽입은 한쪽 끝에서, 삭제는 반대쪽 끝에서 이루어지는 자료 구조.
-* 선입선출(**FIFO**, First-In First-Out) 방식.
-* 시작과 끝을 표시하는 두 개의 포인터(Front, Rear)가 있음.
-* **VI (Vietnamese) (Tiếng Việt):** Hàng đợi FIFO (Vào trước ra trước). Dùng 2 con trỏ chỉ vị trí đầu và cuối.
-* **Example**: 프린터의 인쇄 대기열이나 매표소 줄서기와 같습니다.
-* 💡 **Mẹo ghi nhớ**: Queue = Xếp hàng.
+## 2. 스택 (Stack) 및 응용 (Applications)
+* 리스트의 한쪽 끝으로만 자료의 삽입, 삭제 작업이 이루어지는 자료 구조.
+* 가장 나중에 삽입된 자료가 가장 먼저 삭제되는 후입선출(**LIFO**, Last-In First-Out) 방식.
+* **응용 분야 (Applications)**: 인터럽트 처리 (Interrupt handling), 수식 계산 및 표기법 (Expression evaluation), 서브루틴 호출 및 복귀 주소 저장 (Subroutine calls).
+* **삽입/삭제 (Push/Pop)**: `PUSH`는 자료 입력, `POP`은 자료 출력.
+* **VI (Vietnamese) (Tiếng Việt):**
+  * Stack là cấu trúc dữ liệu LIFO, thêm/xóa dữ liệu ở một đầu.
+  * Ứng dụng: Xử lý ngắt, tính toán biểu thức, lưu địa chỉ khi gọi hàm.
+* **Example**: 브라우저의 '뒤로 가기' 버튼은 스택 구조를 사용합니다. (Nút "Back" trên trình duyệt sử dụng cấu trúc stack).
+* 💡 **Mẹo ghi nhớ**: LIFO - Vào sau ra trước, giống như xếp đĩa, lấy đĩa trên cùng ra trước.

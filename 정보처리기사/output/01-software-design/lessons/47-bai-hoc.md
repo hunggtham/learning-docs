@@ -1,12 +1,12 @@
-# 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
+# 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-운영, 환경, 구축, 고려사항
+스크럼
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,13 @@
 
 ---
 
-## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
-- **운영체제 (OS)** & **DBMS**: 가용성 (Availability), 성능 (Performance), 기술 지원 (Tech Support), 구축 비용 (Cost). 
-  - OS có thêm: 주변 기기 (Thiết bị ngoại vi).
-  - DBMS có thêm: 상호 호환성 (Khả năng tương thích - JDBC/ODBC).
-- **WAS (Web Application Server)**: Xử lý nội dung động. Có thêm **가비지 컬렉션 (GC - Dọn rác)**.
-- **오픈 소스 (Open Source)**: Cần chú ý 라이선스 (Bản quyền), 사용자 수 (Số lượng người dùng), 기술의 지속 가능성 (Khả năng duy trì công nghệ).
+## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
+- **스크럼 (Scrum)**: Quản lý dự án Agile theo nhóm.
+  - **용어**: 제품 백로그 (Product Backlog - Yêu cầu tổng), 스프린트 (Sprint - Chu kỳ 2-4 tuần), 속도 (Velocity), 번 다운 차트 (Burn Down Chart - Biểu đồ tiến độ), PO (Product Owner), SM (Scrum Master).
+  - **프로세스**: Backlog -> Sprint Planning -> Sprint Execution (Daily Scrum) -> Sprint Review (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
+- **XP (eXtreme Programming)**: Tối ưu hóa phát triển phần mềm cùng khách hàng.
+  - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback).
+  - 💡 **Mẹo ghi nhớ**: Y/Đ/D/T/P -> **Ý Định Dũng Tướng Phàm**
+  - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
+
+---

@@ -1,12 +1,12 @@
-# 178. 관계해석 (Relational Calculus)
+# 108. 도메인 (Domain)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **178. 관계해석 (Relational Calculus)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **108. 도메인 (Domain)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-관계해석
+도메인
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,7 @@
 
 ---
 
-## 178. 관계해석 (Relational Calculus)
-- E.F. Codd가 제안, 비절차적(원하는 정보가 무엇인지만 정의) 특성.
-- 튜플 관계해석과 도메인 관계해석으로 나뉨. 관계대수와 능력 동등.
-- **VI (Vietnamese) (Tiếng Việt):** Giải tích quan hệ (Relational Calculus).
-  - Do E.F. Codd đề xuất. Tính phi thủ tục (chỉ cần biết 'là gì' thay vì 'làm thế nào').
-  - Có sức mạnh tính toán tương đương đại số quan hệ.
+## 108. 도메인 (Domain)
+- 하나의 애트리뷰트가 취할 수 있는 같은 타입의 원자(Atomic) 값들의 집합.
+- **VI (Vietnamese) (Tiếng Việt):** Miền giá trị. Tập hợp các giá trị nguyên tử (không thể chia nhỏ) cùng kiểu mà một thuộc tính có thể nhận.
+- **Example:** '성별' 속성의 도메인은 {남, 여}. / Miền giá trị của thuộc tính 'Giới tính' là {Nam, Nữ}.

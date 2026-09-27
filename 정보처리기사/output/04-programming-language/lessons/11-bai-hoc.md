@@ -1,12 +1,12 @@
-# 244. 조건(삼항) 연산자 (Ternary Operator)
+# 245. 연산자 우선순위 (Operator Precedence)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **244. 조건(삼항) 연산자 (Ternary Operator)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **245. 연산자 우선순위 (Operator Precedence)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-조건
+연산자, 우선순위
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,12 +22,15 @@
 
 ---
 
-## 244. 조건(삼항) 연산자 (Ternary Operator)
-- 조건의 참/거짓에 따라 서로 다른 값을 반환.
-- 형식: `조건 ? 참일때_값 : 거짓일때_값;`
-- (예: `int max = (a > b) ? a : b;`)
+## 245. 연산자 우선순위 (Operator Precedence)
+- 하나의 수식에 여러 연산자가 있을 때 계산되는 순서.
+- 순위: **단항**(`!`, `++`, `~`) > **산술**(`*`, `/` > `+`, `-`) > **관계**(`>`, `==`) > **논리**(`&&` > `||`) > **대입**(`=`, `+=`).
+- 괄호 `()`가 가장 우선.
 
 **Giải thích (Vietnamese):**
-Toán tử 3 ngôi giúp viết tắt câu lệnh if-else trên 1 dòng. Trả về giá trị 1 nếu điều kiện đúng, giá trị 2 nếu sai.
+Thứ tự ưu tiên tính toán: Ngoặc () -> Đơn nguyên (phủ định, tăng giảm) -> Nhân chia cộng trừ -> So sánh -> Logic (AND trước OR sau) -> Gán.
+
+**💡 Mẹo ghi nhớ (Mnemonics):**
+**단산관논대** (Đơn - Toán - Quan - Luận - Gán): 단항 -> 산술 -> 관계 -> 논리 -> 대입.
 
 ---

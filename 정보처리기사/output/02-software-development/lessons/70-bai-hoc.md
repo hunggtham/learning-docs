@@ -1,12 +1,12 @@
-# 9. 스키마 3계층 (Three-Schema Architecture)
+# 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 스키마 3계층 (Three-Schema Architecture)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-스키마, 계층
+핵심, 인터페이스, 보안, 기능, 구현, 검증
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,13 +22,26 @@
 
 ---
 
-## 9. 스키마 3계층 (Three-Schema Architecture)
-* **외부 스키마 (External Schema)**: 사용자나 프로그래머 입장에서 필요한 논리적 구조.
-* **개념 스키마 (Conceptual Schema)**: 전체적인 논리적 구조, 개체 간 관계/제약조건, 보안/무결성 규칙.
-* **내부 스키마 (Internal Schema)**: 물리적 저장장치 입장에서 본 구조 (레코드 형식, 물리적 순서).
-* **VI (Vietnamese) (Tiếng Việt):**
-  * External: Góc nhìn của người dùng (User view).
-  * Conceptual: Cấu trúc logic tổng thể, quan hệ, bảo mật.
-  * Internal: Cấu trúc lưu trữ vật lý.
-* **Example**: DB의 전체 테이블 구조는 개념 스키마, 사용자가 보는 뷰(View)는 외부 스키마, 파일 저장 방식은 내부 스키마.
-* 💡 **Mẹo ghi nhớ**: Ngoài (Người dùng) - Giữa/Khái niệm (Tổng thể logic) - Trong (Lưu trữ vật lý).
+## 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
+
+### 네트워크 보안 기술 (Kỹ thuật bảo mật mạng)
+- **IPSec (IP Security):** 네트워크 계층 (Network Layer). Chống giả mạo, ẩn giấu gói tin IP.
+- **SSL (Secure Socket Layer):** TCP/IP ~ 애플리케이션 계층 사이. Chứng thực, mã hóa (thường dùng cho HTTPS).
+- **S-HTTP:** 애플리케이션 계층 (Application Layer). Mã hóa mọi tin nhắn giữa Client và Server.
+
+### 인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)
+- **AJAX:** Bất đồng bộ (Asynchronous), dùng JS và XML để cập nhật một phần trang web mà không cần tải lại toàn bộ trang.
+- **JSON:** Cặp "Key-Value", định dạng nhẹ, dễ đọc (Thay thế cho XML rất nhiều).
+- **XML:** Thẻ Markup đa mục đích (như HTML nhưng tự tạo thẻ được).
+- **YAML:** "YAML Ain't Markup Language". Định dạng dữ liệu tuần tự hóa, rất dễ đọc cho con người (hay dùng làm file config).
+
+### 인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)
+- **xUnit:** Test từng "Đơn vị" (Unit) - jUnit, cppUnit.
+- **STAF:** Test trong "Môi trường phân tán" (Distributed environment).
+- **FitNesse:** Framework test nền web (Điền bảng là tự chạy test).
+- **NTAF:** Kết hợp FitNesse + STAF (Do Naver làm).
+
+- **Vietnamese Explanation:** Khi gửi dữ liệu giữa các máy, JSON đang là vua vì nhẹ và dễ nhìn. YAML thì thường dùng để cấu hình server. Khi test xem các máy tính nói chuyện với nhau ổn không, người ta dùng xUnit (Test từng hàm) hoặc STAF (Test qua nhiều máy).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = Phân tán (Phân tán (Distributed)).
+
+---

@@ -37,5 +37,3 @@
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
 
 ---
-
-# Chapter 3. 제품 소프트웨어 패키징 (Product Software Packaging)

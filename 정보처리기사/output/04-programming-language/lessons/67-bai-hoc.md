@@ -1,12 +1,12 @@
-# 253. switch문 (switch Statement)
+# 251. 단순 if문 (Simple if Statement)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **253. switch문 (switch Statement)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **251. 단순 if문 (Simple if Statement)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-253. switch문 (switch Statement)
+단순
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,5 +22,9 @@
 
 ---
 
-## 253. switch문 (switch Statement)
-- 변수의 값에 따라 일치하는 `case` 문장을 실행하는 다분기 제어문.
+## 251. 단순 if문 (Simple if Statement)
+- 조건의 참/거짓에 따라 실행할 문장 결정.
+- 문장이 두 개 이상이면 반드시 중괄호 `{ }`로 묶어야 함.
+- C언어에서는 조건식 결과가 0이면 거짓(False), **0 이외의 모든 값은 참(True)**으로 간주.
+
+---

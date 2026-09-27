@@ -1,12 +1,12 @@
-# 10. 소프트웨어 설계 원리 (Software Design Principles)
+# 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **10. 소프트웨어 설계 원리 (Software Design Principles)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 설계, 원리
+운영, 환경, 구축, 고려사항
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,17 +22,9 @@
 
 ---
 
-## 10. 소프트웨어 설계 원리 (Software Design Principles)
-- **모듈화 (Modularity)**: 
-  - Module quá nhỏ -> Chi phí tích hợp (Integration Cost) tăng.
-  - Module quá lớn -> Chi phí phát triển từng module (Development Cost) tăng.
-- **추상화 (Abstraction)**: 3 loại (과정 - Quá trình, 데이터 - Dữ liệu, 제어 - Điều khiển).
-- **단계적 분해 (Stepwise Refinement)**: Đi từ trên xuống (Top-down).
-- **정보 은닉 (Information Hiding)**: Giấu thông tin để giảm phụ thuộc.
-- **시스템 타입 (System Types)**:
-  - **대화형 (Interactive)**: Tương tác (VD: Web bán hàng).
-  - **이벤트 중심 (Event-driven)**: Dựa trên sự kiện (VD: Chuông báo cháy).
-  - **변환형 (Transformational)**: Biến đổi dữ liệu (VD: Trình biên dịch - Compiler).
-  - **객체 영속형 (Object Persistence)**: Lưu trữ lâu dài (VD: Database Server).
-
-# Subject 1 - Part 3
+## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
+- **운영체제 (OS)** & **DBMS**: 가용성 (Availability), 성능 (Performance), 기술 지원 (Tech Support), 구축 비용 (Cost).
+  - OS có thêm: 주변 기기 (Thiết bị ngoại vi).
+  - DBMS có thêm: 상호 호환성 (Khả năng tương thích - JDBC/ODBC).
+- **WAS (Web Application Server)**: Xử lý nội dung động. Có thêm **가비지 컬렉션 (GC - Dọn rác)**.
+- **오픈 소스 (Open Source)**: Cần chú ý 라이선스 (Bản quyền), 사용자 수 (Số lượng người dùng), 기술의 지속 가능성 (Khả năng duy trì công nghệ).

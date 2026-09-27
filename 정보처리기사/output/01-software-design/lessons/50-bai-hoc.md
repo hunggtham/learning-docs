@@ -1,12 +1,12 @@
-# 3. 결합도 (Coupling - Độ phụ thuộc)
+# 6. 구조적 분석 도구 (Structured Analysis Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **3. 결합도 (Coupling - Độ phụ thuộc)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **6. 구조적 분석 도구 (Structured Analysis Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-결합도
+구조적, 분석, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,35 +22,14 @@
 
 ---
 
-## 3. 결합도 (Coupling - Độ phụ thuộc)
-**개념 (Khái niệm):** 모듈 간의 의존성 정도 (Mức độ phụ thuộc giữa các module với nhau). **낮을수록 좋음 (Càng thấp càng tốt).**
-
-순서 (Từ Tốt nhất đến Xấu nhất): **자료(Data) -> 스탬프(Stamp) -> 제어(Control) -> 외부(External) -> 공통(Common) -> 내용(Content)**
-💡 **Mẹo ghi nhớ:** T-S-C-N-C-N (Data-Stamp-Control-External-Common-Content) -> **Tính Sao Cho Nhẹ Cả Người**
-
-1.  **자료 결합도 (Data Coupling) - TỐT NHẤT:**
-    *   **Korean:** 파라미터(자료 요소)만 전달.
-    *   **VI (Vietnamese) (Tiếng Việt):** Chỉ truyền tham số dữ liệu cần thiết.
-    *   **Example:** `sum(a, b)` truyền đúng 2 số a, b.
-2.  **스탬프 결합도 (Stamp Coupling):**
-    *   **Korean:** 배열/레코드 등 자료구조가 전달됨.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truyền toàn bộ cấu trúc dữ liệu (mảng, đối tượng) nhưng chỉ dùng 1 phần.
-    *   **Example:** Truyền đối tượng `User` nhưng chỉ dùng `User.name`.
-3.  **제어 결합도 (Control Coupling):**
-    *   **Korean:** 제어 신호(Flag)를 전달하여 모듈 흐름 제어.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào logic của module khác.
-    *   **Example:** Truyền `isExpress=true` để quyết định cách xử lý.
-4.  **외부 결합도 (External Coupling):**
-    *   **Korean:** 외부 변수/데이터 참조.
-    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / file / thiết bị bên ngoài.
-    *   **Example:** Hai module dùng chung một file `config.txt`.
-5.  **공통 결합도 (Common Coupling):**
-    *   **Korean:** 공통 데이터 영역(전역 변수) 공유.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều module dùng chung biến toàn cục (global variables).
-    *   **Example:** Sử dụng `public static int totalCount` chung.
-6.  **내용 결합도 (Content Coupling) - XẤU NHẤT:**
-    *   **Korean:** 내부 기능/자료 직접 참조. 스파게티 코드.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/logic nội bộ của module khác.
-    *   **Example:** `moduleB.internalValue = 10` từ module A.
-
----
+## 6. 구조적 분석 도구 (Structured Analysis Tools)
+- Phân tích Top-down (하향식), dùng biểu đồ (도형).
+- **DFD (Biểu đồ luồng dữ liệu)**: Process (Tròn), Flow (Mũi tên), Data Store (Vạch ngang), Terminator (Vuông).
+- **DD (Từ điển dữ liệu)**:
+  - `=`: Định nghĩa
+  - `+`: Nối
+  - `( )`: Tùy chọn (Optional)
+  - `[ | ]`: Chọn 1 trong các (Or)
+  - `{ }`: Lặp (Iteration)
+  - `* *`: Chú thích
+- **HIPO**: Biểu đồ phân cấp (가시적, 총체적, 세부적).

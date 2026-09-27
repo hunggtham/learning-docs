@@ -55,7 +55,7 @@
 
 ### 286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)
 - **시분할 시스템 (Time Sharing System)**: 시간을 분할하여 대화식으로 운영.
-- **개방형 시스템 (Open System)**: 소스 공개. (Hệ thống mở, mã nguồn mở).
+- **개방형 시스템 (Open System)**: 표준 인터페이스와 이식성을 중시하며, 개방형이라는 사실이 곧 소스 코드 공개나 오픈 소스 라이선스를 뜻하지는 않는다.
 - **네트워킹 (Networking)**: 통신망 관리용으로 적합.
 
 ### 287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)
@@ -63,6 +63,6 @@
 - **쉘 (Shell)**: 명령어 해석기, 인터페이스, 주기억장치에 상주하지 않음. (Trình thông dịch lệnh, giao diện người dùng, không thường trú trong RAM).
 - **유틸리티 (Utility)**: 에디터, 컴파일러 등. (Các chương trình tiện ích).
 
-### 288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)
-- 파일을 관리하기 위한 시스템 제어 블록 (Khối dữ liệu chứa thông tin quản lý tập tin).
-- 사용자가 직접 참조할 수 없다. (Người dùng không thể truy cập trực tiếp).
+### 288. 파일 디스크립터 (File Descriptor)
+- 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 상태를 담는 FCB(또는 inode 등 커널 자료구조)와 동일한 개념이 아니다.
+- 응용 프로그램은 디스크립터 값을 통해 읽기·쓰기·닫기 연산을 요청한다.

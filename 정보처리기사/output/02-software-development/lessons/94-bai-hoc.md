@@ -31,7 +31,7 @@
 | **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). Copy (Clone) từ Server (Remote Repo) về. Server chết vẫn làm việc bình thường ở máy cá nhân, lúc nào Server sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
 
 - **Vietnamese Explanation:** SVN là kiểu "Đi mượn sách thư viện", mất thư viện là khỏi đọc. Git là kiểu "Photo cuốn sách về nhà", thư viện cháy mình vẫn còn sách đọc, sửa sách thoải mái.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
-  - 공유 폴더 (Share folder) = RCS, PVCS. 
-  - 클라이언트/서버 = CVS, SVN (Server tập trung). 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
+  - 공유 폴더 (Share folder) = RCS, PVCS.
+  - 클라이언트/서버 = CVS, SVN (Server tập trung).
   - 분산 (Phân tán) = Git.

@@ -1,12 +1,12 @@
-# 입출력 심화 (Input/Output - Advanced)
+# 074. 데이터 입출력 (Data Input/Output)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **입출력 심화 (Input/Output - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **074. 데이터 입출력 (Data Input/Output)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-입출력, 심화
+데이터, 입출력
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,40 +22,19 @@
 
 ---
 
-## 입출력 심화 (Input/Output - Advanced)
-### 246. scanf() 함수 (scanf() Function / Hàm nhập trong C)
-- C언어의 표준 입력 함수로, 키보드로 입력받아 변수에 저장한다. (Hàm nhập chuẩn của C, lấy dữ liệu từ bàn phím lưu vào biến).
-- 형식: `scanf(서식 문자열, &변수)` (Định dạng, &Tên_biến).
-- 변수에 주소연산자 `&`를 붙여야 한다. (Bắt buộc phải có toán tử địa chỉ `&` trước tên biến, trừ chuỗi).
-  - *Example / Ví dụ*: `scanf("%3d", &a);` (Nhập số nguyên tối đa 3 chữ số vào địa chỉ biến a).
-  - 💡 *Mẹo ghi nhớ*: "Scan" là quét (đọc vào), luôn nhớ phải có dấu `&` để chỉ đường cho dữ liệu đi vào bộ nhớ.
+## 074. 데이터 입출력 (Data Input/Output)
+- **표준 입력 함수 (C언어)**: `scanf("서식 문자열", &변수명);` (변수의 주소 `&`를 붙임).
+- **표준 출력 함수 (C언어)**: `printf("서식 문자열", 변수);`
+- **서식 문자열 유형 (Format Strings)**:
+  - `%d`: 정수형 10진수 (Decimal)
+  - `%f`: 실수형 (Float)
+  - `%c`: 문자형 1개 (Character)
+  - `%s`: 문자열 (String)
+- **이스케이프 문자**: `\n` (줄바꿈), `\t` (탭), `\b` (백스페이스).
+- **JAVA 입출력**: `System.out.println()` (출력 후 자동 개행), `System.out.print()` (개행 없음).
+- **Python 입출력**: `print(문자열, end='')` (끝에 개행 대신 다른 문자 삽입).
 
-### 247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)
-- `%u`: 부호없는 정수 10진수 (Số nguyên hệ 10 không dấu).
-- `%o`: 정수 8진수 (Hệ bát phân - Octal).
-- `%x`: 정수 16진수 (Hệ thập lục phân - Hexadecimal).
-- `%e`: 지수형 실수 (Số thực dạng số mũ - Exponential).
-- `%p`: 주소를 16진수로 (Địa chỉ con trỏ hệ 16).
-  - 💡 *Mẹo ghi nhớ*: o = octal, x = hex, u = unsigned, p = pointer.
+**Giải thích (Vietnamese):**
+Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người dùng nhập (nhớ có dấu `&` trước tên biến) và `printf` để in ra màn hình. Dấu `%d` dùng cho số nguyên, `%f` cho số thập phân. Java dùng `System.out.println()`. Python thì ngắn gọn hơn chỉ cần `print()`.
 
-### 249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)
-- `\n`: new line (Xuống dòng).
-- `\b`: backspace (Lùi lại 1 ký tự).
-- `\t`: tab (Lùi khoảng cách tab).
-- `\r`: carriage return (Về đầu dòng hiện tại).
-- `\0`: null (Ký tự rỗng).
-- `\'`: in dấu nháy đơn.
-- `\"`: in dấu nháy kép.
-- `\\`: in dấu xuyệt ngược.
-
-### 250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)
-- **출력 포맷**: `System.out.printf("%-8.2f", 200.2);`
-  - `-`: Căn trái (왼쪽 정렬).
-  - `8`: Tổng 8 ký tự (8자리).
-  - `.2`: 2 chữ số thập phân (소수점 이하 2자리).
-  - Kết quả: `200.20   ` (Thêm khoảng trắng phía sau).
-- **문자열 연결**: `System.out.print("abc" + "def");` (Dùng dấu `+` để nối chuỗi).
-
-### 251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)
-- Nếu có nhiều hơn 1 câu lệnh thực thi, phải bọc trong `{ }` (Ngoặc nhọn).
-  - *Example / Ví dụ*: `if(a > 10) { b = a - 10; printf("%d", b); }`
+---

@@ -1,12 +1,12 @@
-# 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
+# 6. 정렬 알고리즘 (Sorting Algorithms)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **6. 정렬 알고리즘 (Sorting Algorithms)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-추가, 정렬, 알고리즘
+정렬, 알고리즘
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,13 @@
 
 ---
 
-## 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
-* **퀵 정렬 (Quick Sort)**: 키를 기준으로 작은 값은 왼쪽, 큰 값은 오른쪽 서브파일로 분해시키는 방식. 분할(Divide)과 정복(Conquer)을 통해 자료를 정렬. 
-  * 평균 시간 복잡도: O(n log n), 최악: O(n^2).
-* **2-Way 합병 정렬 (Merge Sort)**: 정렬되어 있는 두 개의 파일을 한 개의 파일로 합병하는 방식. 평균/최악 모두 O(n log n).
-* **힙 정렬 (Heap Sort)**: 전이진 트리(Complete Binary Tree)를 이용한 정렬 방식. 평균/최악 모두 O(n log n).
-* **VI (Vietnamese) (Tiếng Việt):** Các thuật toán sắp xếp bổ sung:
-  * Quick Sort: Chia để trị (Divide & Conquer), dùng chốt (pivot).
-  * Merge Sort: Trộn 2 mảng đã sắp xếp.
-  * Heap Sort: Dùng cây nhị phân hoàn chỉnh.
-* **Example**: 퀵 정렬은 반장(기준)을 뽑아서 키 작은 사람은 왼쪽, 큰 사람은 오른쪽으로 세우는 방식입니다.
-* 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/Heap = Luôn ổn định O(n log n).
+## 6. 정렬 알고리즘 (Sorting Algorithms)
+* **삽입 정렬 (Insertion Sort)**: 두 번째 값부터 시작해 앞의 값들과 비교하여 알맞은 위치에 삽입.
+* **선택 정렬 (Selection Sort)**: 가장 작은 값을 선택해 첫 번째와 교환, 그 다음 작은 값을 두 번째와 교환하는 방식.
+* **버블 정렬 (Bubble Sort)**: 인접한 두 값을 비교하여 큰 값을 뒤로 보내는 과정을 반복.
+* **VI (Vietnamese) (Tiếng Việt):**
+  * Insertion: Chèn phần tử vào đúng vị trí của dãy đã sắp xếp.
+  * Selection: Chọn phần tử nhỏ nhất đưa lên đầu.
+  * Bubble: Nổi bọt, so sánh 2 phần tử kề nhau, lớn hơn thì đổi chỗ.
+* **Example**: `8, 5, 6` 버블 정렬 1회전: 5, 8, 6 -> 5, 6, 8. (Bubble sort đổi chỗ 8 và 5, rồi 8 và 6).
+* 💡 **Mẹo ghi nhớ**: Insertion: bốc bài và chèn. Selection: tìm người lùn nhất xếp hàng. Bubble: bong bóng lớn nổi lên cuối cùng.

@@ -1,12 +1,12 @@
-# 14. 미들웨어 (Middleware)
+# 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **14. 미들웨어 (Middleware)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-미들웨어
+시스템, 연계, 인터페이스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,16 +22,26 @@
 
 ---
 
-## 14. 미들웨어 (Middleware)
-**개념 (Khái niệm):** 운영체제와 응용 프로그램 사이의 중재자 (Phần mềm trung gian đứng giữa OS và Ứng dụng).
-💡 **Mẹo ghi nhớ 미들웨어:** DB, RPC, MOM, TP-Monitor, ORB, WAS
+## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
+### 13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
+1.  **DB Link:** DB 객체 이용 (Kết nối trực tiếp qua DB Link).
+2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
+3.  **EAI (연계 솔루션):** 중계 서버/클라이언트 사용 (Dùng máy chủ trung gian Enterprise Application Integration).
+4.  **Socket:** 포트 할당하여 연결 (Mở port mạng Socket để truyền dữ liệu).
+5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
 
-1.  **DB 미들웨어:** 2-Tier 원격 연결 (ODBC, IDAPI, Glue). (Kết nối CSDL 2 lớp).
-2.  **RPC (Remote Procedure Call):** 원격을 로컬처럼 호출 (Entera, ONC/RPC). (Gọi hàm từ xa như gọi hàm cục bộ).
-3.  **MOM (Message Oriented Middleware):** 비동기 메시지, 데이터 동기 (IBM MQ, JMS). (Truyền tin nhắn bất đồng bộ, đồng bộ dữ liệu hệ thống khác nền tảng).
-4.  **TP-Monitor (Transaction Processing):** 항공/철도 예약, 빠른 응답/트랜잭션 감시 (tuxedo, tmax). (Giám sát giao dịch, đảm bảo tốc độ phản hồi nhanh cho đặt vé).
-5.  **ORB (Object Request Broker):** 객체 지향, CORBA 표준 (Orbix). (Môi giới yêu cầu đối tượng, chuẩn CORBA).
-6.  **WAS (Web Application Server):** 동적 콘텐츠, 웹 환경 핵심(Java/EJB) (WebLogic, WebSphere). (Xử lý nội dung web động, tác vụ doanh nghiệp quan trọng).
-    *   *Example:* Apache là Web Server (tĩnh), còn WebLogic/Tomcat là WAS (động).
+### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
+*   **통신 유형 (Loại Giao tiếp):**
+    *   **단방향 (Unidirectional):** 응답 없음 (Chỉ gửi, không cần phản hồi).
+    *   **동기 (Synchronous):** 응답 대기 (Gửi và đợi phản hồi).
+    *   **비동기 (Asynchronous):** 다른 작업 수행 (Gửi xong làm việc khác, trả lời sau).
+*   **처리 유형 (Loại Xử lý):**
+    *   **실시간 (Real-time):** 즉시 처리 (Xử lý ngay lập tức).
+    *   **지연 처리 (Deferred):** 비용 절감을 위해 모아서 처리 (Trì hoãn xử lý để tiết kiệm chi phí).
+    *   **배치 (Batch):** 대용량 일괄 처리 (Gom dữ liệu lớn xử lý 1 lần).
 
-*   **솔루션 식별 & 명세서 작성:** 아키텍처 구성 정보, 구매 내역 확인 -> 제약사항 확인 (Xác định Middleware dựa trên kiến trúc và hóa đơn mua sắm -> Kiểm tra các hạn chế / constraints).
+### 13.3 명세화 (Specification)
+*   **송수신 데이터 명세화:** 데이터 필드명, 타입, 사이즈, **암호화 여부** 정의 (Đặc tả dữ liệu: Tên trường, Kiểu, Kích thước, và có Cần Mã hóa không).
+*   **오류 식별 및 처리 방안 명세화:** 오류 코드, 메시지, 해결 방법 정의 (Đặc tả lỗi: Mã lỗi, Thông báo, Cách xử lý để dễ vận hành).
+
+---

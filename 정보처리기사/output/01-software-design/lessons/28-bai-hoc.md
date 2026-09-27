@@ -1,12 +1,12 @@
-# 2. 객체지향 (OOP - Object Oriented Programming)
+# 14. 객체지향 심화 (OOP chuyên sâu)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **2. 객체지향 (OOP - Object Oriented Programming)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **14. 객체지향 심화 (OOP chuyên sâu)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-객체지향
+객체지향, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,18 +22,9 @@
 
 ---
 
-## 2. 객체지향 (OOP - Object Oriented Programming)
-- **구성요소**: 클래스 (Class), 객체 (Object), 메서드 (Method), 메시지 (Message), 인스턴스 (Instance), 속성 (Property).
-- **객체지향 기법 (OOP Techniques)**:
-  - **캡슐화 (Encapsulation)**: Đóng gói dữ liệu và phương thức, giảm kết dính (Coupling).
-  - **정보 은닉 (Information Hiding)**: Giấu thông tin chi tiết.
-  - **다형성 (Polymorphism)**: Đa hình (Overloading - Cùng tên khác tham số, Overriding - Ghi đè phương thức cha).
-- **객체지향 설계 원칙 (SOLID)**:
-  - **S (SRP)**: Đơn trách nhiệm (Một lớp một việc).
-  - **O (OCP)**: Đóng-Mở (Mở rộng thì dễ, sửa đổi thì cấm).
-  - **L (LSP)**: Thay thế Liskov (Lớp con thay thế được lớp cha).
-  - **I (ISP)**: Phân tách Interface (Interface nhỏ gọn).
-  - **D (DIP)**: Đảo ngược phụ thuộc (Phụ thuộc vào Interface, không phụ thuộc vào triển khai chi tiết).
-- **분석 방법론 (OOA Methods)**:
-  - **람바우 (Rumbaugh - OMT)**: 객체 모형 (Object) -> 동적 모형 (Dynamic) -> 기능 모형 (Functional - DFD). 
-  - 💡 **Mẹo ghi nhớ**: K/Đ/C -> **Không Đợi Chờ**
+## 14. 객체지향 심화 (OOP chuyên sâu)
+
+### 다형성 (Polymorphism) 추가 설명
+- **오버로딩 (Overloading):** 인수를 받는 자료형과 개수를 달리하여 여러 기능을 정의. (Cùng tên hàm, khác tham số).
+- **오버라이딩 (Overriding / 메소드 재정의):** 상위 클래스의 메소드 안의 코드를 자식 클래스에서 재정의. (Lớp con định nghĩa lại hàm của lớp cha).
+- 💡 **Mẹo ghi nhớ (Mnemonic):** **Over-load** = Chở thêm đồ (Thêm tham số). **Over-ride** = Lái đè lên vết xe cũ (Ghi đè nội dung hàm).

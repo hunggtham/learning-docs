@@ -1,12 +1,12 @@
-# 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
+# 프레임워크 특징 및 SW 신기술 (Framework & SW Tech)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로세스, 품질, 표준
+프레임워크, 특징, 신기술
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,30 +22,22 @@
 
 ---
 
-## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
+## 프레임워크 특징 및 SW 신기술 (Framework & SW Tech)
 
-### 4.1 ISO/IEC 12207
-- **기본 생명 주기:** 획득, 공급, 개발, 운영, 유지보수.
-- **지원 생명 주기:** 품질 보증, 검증, 확인, 문서화, 형상 관리 등.
-- **조직 생명 주기:** 관리, 기반 구조, 훈련, 개선.
-- **Tiếng Việt:** Tiêu chuẩn vòng đời phần mềm gồm: Cơ bản, Hỗ trợ, Tổ chức.
+### 1. 프레임워크의 특성 (Characteristics of Framework)
+- **모듈화 (Modularity)**: 캡슐화로 모듈화를 강화하여 변경 영향을 최소화.
+- **재사용성 (Reusability)**: 재사용 가능한 모듈 제공으로 생산성 향상.
+- **확장성 (Extensibility)**: 다형성을 통한 인터페이스 확장.
+- **제어의 역흐름 (Inversion of Control)**: 개발자가 아닌 프레임워크가 객체들을 제어하고 통제.
 
-### 4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)
-1. **초기 (Initial):** 프로세스 없음.
-2. **관리 (Managed):** 프로젝트 단위 관리.
-3. **정의 (Defined):** 조직 차원 표준화.
-4. **정량적 관리 (Quantitatively Managed):** 통계적 측정.
-5. **최적화 (Optimizing):** 지속적 개선.
-- **Tiếng Việt:** 5 cấp độ trưởng thành: Khởi tạo -> Được quản lý -> Được định nghĩa -> Quản lý định lượng -> Tối ưu hóa.
-- 💡 **Mẹo ghi nhớ:** I - M - D - Q - O.
+### 2. SDE (Software-Defined Everything)
+하드웨어 자원을 가상화하여 소프트웨어만으로 제어 및 관리하는 기술.
+- **SDN**: 소프트웨어 정의 네트워킹 (네트워크 가상화)
+- **SDDC**: 소프트웨어 정의 데이터 센터 (데이터 센터 전체 가상화)
+- **SDS**: 소프트웨어 정의 스토리지 (스토리지 가상화)
 
-### 4.3 SPICE (ISO/IEC 15504)
-- 소프트웨어 프로세스 평가 및 개선 국제 표준.
-- **수행 능력 6단계 (Capability Levels):**
-  - 0: 불완전 (Incomplete)
-  - 1: 수행 (Performed)
-  - 2: 관리 (Managed)
-  - 3: 확립 (Established)
-  - 4: 예측 (Predictable)
-  - 5: 최적화 (Optimizing)
-- **Tiếng Việt:** Đánh giá năng lực quy trình phần mềm từ Cấp 0 (Chưa hoàn chỉnh) đến Cấp 5 (Tối ưu hóa).
+### 3. 주요 SW 및 관련 용어
+- **SOA (Service Oriented Architecture)**: 서비스나 컴포넌트 중심으로 구축하는 아키텍처.
+- **디지털 트윈 (Digital Twin)**: 물리적 자산을 소프트웨어로 가상화(복제)하여 효율성을 높이는 기술.
+- **텐서플로 (TensorFlow)**: 구글이 만든 딥러닝/데이터 흐름용 오픈소스 라이브러리.
+- **도커 (Docker)**: 컨테이너(Container) 기술을 자동화하는 오픈소스 프로젝트.

@@ -1,12 +1,12 @@
-# 190. CRUD 분석
+# 186. 시스템 카탈로그 (System Catalog)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **190. CRUD 분석**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **186. 시스템 카탈로그 (System Catalog)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-CRUD, 분석
+시스템, 카탈로그
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,6 +22,9 @@ CRUD, 분석
 
 ---
 
-## 190. CRUD 분석
-- Create, Read, Update, Delete 연산의 매트릭스 분석으로 데이터 양 유추.
-- **VI (Vietnamese) (Tiếng Việt):** Phân tích ma trận CRUD (Tạo, Đọc, Sửa, Xóa).
+## 186. 시스템 카탈로그 (System Catalog)
+- DBMS의 객체(테이블, 뷰 등) 정보를 포함하는 시스템 데이터베이스. (데이터 사전, 메타 데이터)
+- 사용자가 조회는 가능하나 직접 갱신(INSERT/UPDATE/DELETE)은 불가 (시스템 자동 갱신).
+- **VI (Vietnamese) (Tiếng Việt):** Danh mục hệ thống (System Catalog / Data Dictionary).
+  - Chứa thông tin (metadata) về các đối tượng trong DB.
+  - Người dùng có thể xem (SELECT) nhưng KHÔNG thể sửa đổi trực tiếp.

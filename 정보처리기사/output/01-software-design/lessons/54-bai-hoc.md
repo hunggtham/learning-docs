@@ -1,12 +1,12 @@
-# 8. 재사용 (Reuse)
+# 5. Fan-In / Fan-Out (팬인 / 팬아웃)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **8. 재사용 (Reuse)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **5. Fan-In / Fan-Out (팬인 / 팬아웃)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-재사용
+Fan-In, Fan-Out
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,16 @@
 
 ---
 
-## 8. 재사용 (Reuse)
-**개념 (Khái niệm):** 기존 기능을 최적화하여 다시 쓰는 것 (Tái sử dụng chức năng để tiết kiệm thời gian và chi phí).
+## 5. Fan-In / Fan-Out (팬인 / 팬아웃)
+**개념 (Khái niệm):** 모듈 간의 호출 관계를 나타내는 지표 (Chỉ số thể hiện mức độ gọi lẫn nhau giữa các module).
 
-*   **Korean:** 결합도는 낮고 응집도는 높아야 함.
-*   **VI (Vietnamese) (Tiếng Việt):** Yêu cầu: Độ phụ thuộc (Coupling) THẤP và Độ gắn kết (Cohesion) CAO.
-*   **분류 (Phân loại):**
-    *   **함수와 객체 (Function & Object):** 소스 코드 단위 (Mức mã nguồn / Class).
-    *   **컴포넌트 (Component):** 인터페이스 통신 (Mức Interface, không sửa code gốc).
-    *   **애플리케이션 (Application):** 시스템 전체 (Mức ứng dụng hoàn chỉnh).
+*   **Fan-In (들어옴 / Đi vào):**
+    *   **Korean:** 나를 호출하는 모듈 수. **높게(High)** 설계하는 것이 재사용성 측면에서 좋음. (단, 단일 장애점 주의)
+    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng module gọi đến module hiện tại. Fan-In CAO là tốt vì chứng tỏ module được tái sử dụng nhiều, nhưng cần cẩn thận vì nó là trung tâm (Single Point of Failure).
+*   **Fan-Out (나감 / Đi ra):**
+    *   **Korean:** 내가 호출하는 모듈 수. **낮게(Low)** 설계하여 단순화해야 함.
+    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng module mà module hiện tại gọi. Fan-Out THẤP là tốt, tránh việc module phụ thuộc vào quá nhiều nơi khác.
+
+💡 **Mẹo ghi nhớ:** Fan-In = Gọi VÀO tôi (High is good) / Fan-Out = Tôi gọi RA (Low is good).
 
 ---

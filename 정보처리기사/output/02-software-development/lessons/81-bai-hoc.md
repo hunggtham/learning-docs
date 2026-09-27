@@ -1,12 +1,12 @@
-# 38. 릴리즈 노트 (Release Note)
+# 33. DBMS (데이터베이스 관리 시스템)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **38. 릴리즈 노트 (Release Note)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **33. DBMS (데이터베이스 관리 시스템)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-릴리즈, 노트
+DBMS
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,16 @@
 
 ---
 
-## 38. 릴리즈 노트 (Release Note)
-* 소프트웨어 배포(릴리즈) 정보를 최종 사용자와 공유하기 위한 문서 (초기/추가 배포 시 제공).
-* 개발팀에서 직접 현재 시제로 정확한 완전한 정보를 기반으로 작성.
-* **항목**: 머릿말(Header), 개요, 목적, 문제 요약, 재현 항목, 수정/개선 내용, 사용자 영향도, SW 지원 영향도, 면책 조항 등.
-* **VI (Vietnamese) (Tiếng Việt):** Ghi chú phát hành. Chia sẻ thông tin cập nhật, lỗi đã sửa cho người dùng.
-* **Example**: 앱스토어에서 앱 업데이트 시 적혀있는 "새로운 기능 및 버그 수정" 목록이 릴리즈 노트입니다.
-* 💡 **Mẹo ghi nhớ**: Release Note = Nhật ký cập nhật phần mềm.
+## 33. DBMS (데이터베이스 관리 시스템)
+* 사용자와 데이터베이스 사이에서 정보를 생성하고 데이터베이스를 관리해 주는 소프트웨어.
+* **필수 기능 3가지**:
+  * **정의 기능 (Definition)**: 데이터 형, 구조, 제약조건 등 명시.
+  * **조작 기능 (Manipulation)**: 데이터 검색, 갱신, 삽입, 삭제(인터페이스 제공).
+  * **제어 기능 (Control)**: 데이터 무결성 유지, 보안, 정확성 제어.
+* **장점**: 데이터 중복 최소화, 독립성 보장, 일관성/무결성/보안 유지, 실시간 처리.
+* **단점**: 전문가 부족, 전산화 비용 증가, 과부하 발생 시 백업/회복 어려움, 시스템 복잡.
+* **VI (Vietnamese) (Tiếng Việt):** Hệ quản trị CSDL.
+  * 3 chức năng: Định nghĩa (Cấu trúc), Thao tác (Thêm/Sửa/Xóa/Tìm), Điều khiển (Bảo mật, toàn vẹn).
+  * Ưu điểm: Giảm trùng lặp, nhất quán. Nhược điểm: Tốn kém, phức tạp.
+* **Example**: Oracle, MySQL 등이 대표적인 DBMS입니다.
+* 💡 **Mẹo ghi nhớ**: Đ-T-Đ (Định nghĩa, Thao tác, Điều khiển) = D-M-C (Define, Manipulate, Control).

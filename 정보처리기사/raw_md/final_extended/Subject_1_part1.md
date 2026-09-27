@@ -23,7 +23,7 @@
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **KNKK** (Kế - Nguy - Khai - Khách): **Kế Nguy Khách Khóc** (Lập KH - Rủi ro - Phát triển - Khách hàng).
 
 ### 004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)
-- 스크럼 (Scrum
+- 스크럼 (Scrum)
 - XP (eXtreme Programming)
 - 기능 중심 개발 (FDD; Feature Driven Development)
 - 칸반 (Kanban)

@@ -1,8 +1,8 @@
-# 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
+# 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -22,15 +22,15 @@
 
 ---
 
-## 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
-- `char`: 1바이트 (문자 하나)
-- `short`: 2바이트 (짧은 정수)
-- `int` / `long`: 4바이트 (기본 정수)
-- `long long`: 8바이트 (긴 정수)
-- `float`: 4바이트 (실수)
-- `double`: 8바이트 (정밀도 높은 실수)
+## 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
+- `byte`: 1바이트 (작은 숫자)
+- `boolean`: 1바이트 (참/거짓)
+- **`char`: 2바이트** (유니코드 지원으로 인해 C언어와 달리 2바이트를 차지함)
+- `int`: 4바이트
+- `long`: 8바이트 (C언어는 보통 4바이트지만 JAVA는 8바이트)
+- `float`: 4바이트 / `double`: 8바이트
 
 **Giải thích (Vietnamese):**
-Kích thước bộ nhớ các biến trong C/C++. Chữ cái (char) chiếm 1 byte. Số nguyên (int) chiếm 4 byte. Số thực (float) 4 byte, double (gấp đôi) là 8 byte.
+Java có 2 điểm khác biệt lớn với C: `char` chiếm 2 byte (để lưu bảng mã Unicode đa ngôn ngữ), và có kiểu `boolean` (chỉ lưu True/False).
 
 ---

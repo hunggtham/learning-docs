@@ -1,12 +1,12 @@
-# 8. 서브쿼리와 뷰 (Truy vấn con và View)
+# 193. 뷰 (View)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **8. 서브쿼리와 뷰 (Truy vấn con và View)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **193. 뷰 (View)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-서브쿼리와
+193. 뷰 (View)
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,17 +22,7 @@
 
 ---
 
-## 8. 서브쿼리와 뷰 (Truy vấn con và View)
-
-### 서브쿼리 (Subquery)
-- **단일 행 서브쿼리 (Single-row Subquery):** Trả về 1 dòng. Dùng toán tử `=`, `>`, `<`.
-- **다중 행 서브쿼리 (Multi-row Subquery):** Trả về nhiều dòng. Dùng `IN`, `ANY`, `ALL`.
-- **인라인 뷰 (Inline View):** Subquery nằm trong mệnh đề `FROM`, tạo thành bảng ảo tạm thời.
-
-### 뷰 (VIEW - Bảng ảo)
-- `CREATE VIEW 뷰명 AS (SELECT문);`
-- `DROP VIEW 뷰명;`
-- **장점 (Ưu điểm):** Bảo mật (chỉ cho xem cột cần thiết), Đơn giản hóa truy vấn phức tạp, Đảm bảo tính toàn vẹn dữ liệu.
-- **단점 (Nhược điểm):** Không thể sửa đổi cấu trúc dễ dàng, cơ bản là Read Only, **Không thể gắn Index (인덱스 불가능)**.
-
----
+## 193. 뷰 (View)
+- 기본 테이블로부터 유도된 가상 테이블 (물리적 구현 X).
+- 장점: 논리적 데이터 독립성, 보안 강화. 단점: 인덱스 불가, 뷰 정의 변경 불가, 갱신 제약.
+- **VI (Vietnamese) (Tiếng Việt):** Khung nhìn (View). Bảng ảo. Ưu điểm: Độc lập dữ liệu, bảo mật. Nhược điểm: Không có index độc lập, khó cập nhật.

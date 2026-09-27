@@ -39,5 +39,3 @@
 - 💡 **Mẹo ghi nhớ (Mnemonics):** 6 Đặc tính của 9126: "Chức Tín Dùng Hiệu Bảo Di" (Chức năng - Đáng tin - Dễ dùng - Hiệu quả - Bảo trì - Di động). ISO 25000 = Chuẩn xịn nhất tổng hợp tất cả.
 
 ---
-
-# Chapter 4. 애플리케이션 테스트 관리 (Application Test Management)

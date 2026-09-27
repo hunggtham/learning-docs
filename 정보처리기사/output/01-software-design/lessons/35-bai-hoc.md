@@ -1,12 +1,12 @@
-# 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
+# 7. 공통 모듈 (Common Module)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **7. 공통 모듈 (Common Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 품질, 특성
+공통, 모듈
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,15 @@
 
 ---
 
-## 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
-- 6 tiêu chuẩn chất lượng:
-  1. **기능성 (Functionality - Chức năng)**: Bảo mật, Tương tác, Chính xác.
-  2. **신뢰성 (Reliability - Độ tin cậy)**: Không lỗi, Phục hồi (회복성), Chịu lỗi (고장 허용성).
-  3. **사용성 (Usability - Khả năng sử dụng)**: Dễ học, Dễ hiểu, Hấp dẫn.
-  4. **효율성 (Efficiency - Hiệu quả)**: Thời gian phản hồi, Tiết kiệm tài nguyên.
-  5. **유지 보수성 (Maintainability - Khả năng bảo trì)**: Dễ phân tích, Dễ thay đổi, Ổn định.
-  6. **이식성 (Portability - Khả năng thay thế/di chuyển)**: Cài đặt dễ, Tương thích, Thay thế.
+## 7. 공통 모듈 (Common Module)
+**개념 (Khái niệm):** 여러 프로그램에서 공통적으로 사용할 수 있는 모듈 (Module dùng chung cho nhiều chương trình, ví dụ: Đăng nhập, tính toán).
+
+*   **명세 기법 5가지 (5 nguyên tắc viết đặc tả module):**
+    1.  **정확성 (Correctness):** 정확히 작성 (Chính xác).
+    2.  **명확성 (Clarity):** 중의적이지 않게 (Rõ ràng, không mơ hồ).
+    3.  **완전성 (Completeness):** 모든 것을 빠짐없이 (Đầy đủ).
+    4.  **일관성 (Consistency):** 상호 충돌 없게 (Nhất quán).
+    5.  **추적성 (Traceability):** 출처, 관계 추적 가능 (Có thể truy xuất nguồn gốc).
+💡 **Mẹo ghi nhớ:** C-M-H-N-T (Chính-Rõ-Đủ-Nhất-Truy) -> **Chỉ Mong Học Nhất Trường**
+
+---

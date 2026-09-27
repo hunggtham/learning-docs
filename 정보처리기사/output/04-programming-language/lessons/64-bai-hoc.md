@@ -1,12 +1,12 @@
-# 238. 가비지 콜렉터 (Garbage Collector)
+# 234. C언어의 구조체 (struct in C)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **238. 가비지 콜렉터 (Garbage Collector)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **234. C언어의 구조체 (struct in C)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-가비지, 콜렉터
+언어의, 구조체
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,11 +22,11 @@
 
 ---
 
-## 238. 가비지 콜렉터 (Garbage Collector)
-- 더 이상 사용되지 않고 메모리를 점유하고 있는 변수/객체를 시스템이 **자동으로 해제**하여 자원을 회수하는 모듈.
-- 메모리 누수(Memory Leak)를 방지. JAVA 등에서 사용됨.
+## 234. C언어의 구조체 (struct in C)
+- 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형.
+- 배열(Array)은 **동일한 자료형**만 모으지만, 구조체(Struct)는 **상이한 자료형**을 모을 수 있음.
 
 **Giải thích (Vietnamese):**
-"Người dọn rác" tự động. Bạn cứ việc tạo biến dùng, khi không dùng nữa, hệ thống sẽ tự động xoá nó khỏi RAM để giải phóng bộ nhớ. Trong C/C++ bạn phải tự dọn dẹp, nhưng Java/Python có tính năng này.
+Struct (Cấu trúc) dùng để gom nhóm nhiều biến khác kiểu lại với nhau. Ví dụ tạo kiểu `SinhVien` gồm tên (chuỗi) và tuổi (số). Trong khi Mảng (Array) chỉ được lưu cùng một kiểu (hoặc toàn chuỗi, hoặc toàn số).
 
 ---

@@ -1,12 +1,12 @@
-# 5. 요구공학 (Requirements Engineering)
+# 1. 사용자 인터페이스 (User Interface - UI)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **5. 요구공학 (Requirements Engineering)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **1. 사용자 인터페이스 (User Interface - UI)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-요구공학
+사용자, 인터페이스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,12 +22,20 @@
 
 ---
 
-## 5. 요구공학 (Requirements Engineering)
-- **도출 (Elicitation)**: Lặp đi lặp lại trong suốt vòng đời (SDLC).
-- **분석 (Analysis)**: Giải quyết xung đột (중재), dùng DFD, DD.
-- **명세 (Specification)**: Viết tài liệu (Mini-Spec), đảm bảo tính truy xuất (추적성).
-  - 정형 (Toán học, VDM) vs 비정형 (Ngôn ngữ tự nhiên, ERD).
-- **확인 (Validation)**: 
-  - 확인 (Validation): Có đúng sản phẩm khách cần không? (Right product).
-  - 검증 (Verification): Có làm đúng quy trình không? (Product right).
-  - Cần quản lý cấu hình (형상 관리).
+## 1. 사용자 인터페이스 (User Interface - UI)
+- **UI 유형 (UI Types)**:
+  - CLI (Dòng lệnh), GUI (Đồ họa), NUI (Cử chỉ tự nhiên như chạm, vuốt), OUI (Hữu cơ).
+  - **모바일 제스처 (Mobile Gestures)**: Tap (Chạm), Double Tap, Drag (Kéo), Pan (Di chuyển liên tục), Press (Nhấn giữ), Flick (Vuốt nhanh), Pinch (Phóng to/thu nhỏ bằng 2 ngón).
+- **UI 기본 원칙 (4 Principles)**:
+  - **직관성 (Intuitiveness)**: Dễ hiểu, trực quan.
+  - **유효성 (Effectiveness)**: Đạt được mục tiêu của người dùng một cách chính xác và đầy đủ.
+  - **학습성 (Learnability)**: Dễ học.
+  - **유연성 (Flexibility)**: Linh hoạt, giảm thiểu lỗi.
+  - 💡 **Mẹo ghi nhớ**: T/H/H/N -> **Trực Học Hằng Ngày**
+- **UI 설계 도구 (UI Design Tools)**:
+  - **와이어프레임 (Wireframe)**: Khung xương (Tĩnh).
+  - **목업 (Mockup)**: Thiết kế tĩnh, giống thật nhất.
+  - **스토리보드 (Storyboard)**: Bản hướng dẫn chi tiết, có luồng di chuyển.
+  - **프로토타입 (Prototype)**: Mô hình động, có thể tương tác.
+
+---

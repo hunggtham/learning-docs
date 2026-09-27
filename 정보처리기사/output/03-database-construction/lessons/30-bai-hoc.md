@@ -1,12 +1,12 @@
-# 150-155. 데이터 조작어 (DML) 확장 및 조건 연산자
+# A+ Deep Dive: SQL 결과를 행 단위로 추적하기
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-데이터, 조작어
+Deep, Dive, SQL, 결과를, 단위로, 추적하기
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,19 +22,41 @@
 
 ---
 
-## 150-155. 데이터 조작어 (DML) 확장 및 조건 연산자
-- **DELETE (150):** 튜플을 삭제. `DELETE FROM 테이블명 [WHERE 조건];`
-- **UPDATE (151):** 튜플 내용 변경. `UPDATE 테이블명 SET 속성명 = 데이터 [WHERE 조건];`
-- **SELECT (152, 153):** 데이터 검색. `SELECT [DISTINCT] 속성명 FROM 테이블명 [WHERE] [GROUP BY] [HAVING] [ORDER BY ASC|DESC];`
-- **LIKE (154):** 문자 패턴 일치 검색. 
-  - `%`: 모든 문자
-  - `_`: 문자 하나
-  - `#`: 숫자 하나
-- **BETWEEN (155):** 두 숫자 사이의 값 검색.
-- **VI (Vietnamese) (Tiếng Việt):** Mở rộng DML và toán tử điều kiện.
-  - DELETE: Xóa dữ liệu (hàng).
-  - UPDATE: Cập nhật dữ liệu.
-  - SELECT: Truy vấn dữ liệu (DISTINCT: Loại bỏ trùng lặp).
-  - LIKE: Tìm kiếm theo mẫu ký tự. `%` đại diện cho chuỗi, `_` đại diện 1 ký tự, `#` đại diện 1 số.
-  - BETWEEN: Trong khoảng giá trị.
-- **Example:** `SELECT * FROM 학생 WHERE 이름 LIKE '김%';` / Tìm tất cả sinh viên có tên bắt đầu bằng họ 'Kim' (김).
+## A+ Deep Dive: SQL 결과를 행 단위로 추적하기
+
+### 1. 샘플 스키마와 데이터
+
+```sql
+CREATE TABLE sales (
+  dept CHAR(1), amount INT
+);
+INSERT INTO sales VALUES ('A', 120), ('A', 80), ('B', 90), ('B', 40);
+```
+
+### 2. WHERE와 HAVING의 순서
+
+```sql
+SELECT dept, SUM(amount) AS total
+FROM sales
+WHERE amount >= 80
+GROUP BY dept
+HAVING SUM(amount) >= 150
+ORDER BY total DESC;
+```
+
+행 필터를 먼저 적용하면 `(A,120)`, `(A,80)`, `(B,90)`만 남는다. 그룹별 합계는
+`A=200`, `B=90`이므로 `HAVING`을 통과하는 최종 결과는 `A | 200` 한 행이다.
+
+- `WHERE`: 그룹화 **전** 개별 행을 제거.
+- `GROUP BY`: 같은 키를 그룹으로 묶고 집계.
+- `HAVING`: 그룹화 **후** 집계 결과를 제거.
+- `ORDER BY`: 최종 결과의 표시 순서를 정함. 명시하지 않으면 순서를 가정하지 않는다.
+
+> **시험 함정:** 집계 함수 조건을 `WHERE`에 넣지 않고 `HAVING`에 둔다. 별칭(alias)은 구현/문맥에 따라 `WHERE`에서 바로 사용할 수 없으므로 원래 표현식을 확인한다.
+
+### 자주 혼동하는 판별 포인트
+
+- `GRANT`/`REVOKE`는 권한을 다루는 **DCL**, `COMMIT`/`ROLLBACK`/`SAVEPOINT`는 트랜잭션을 다루는 **TCL**이다.
+- 로킹 단위를 작게 하면 동시성·공유도는 커지지만 잠금 관리 오버헤드도 증가한다. 작은 단위가 교착상태를 자동으로 제거하지는 않는다.
+- 2NF는 부분 함수 종속, 3NF는 이행 함수 종속, BCNF는 모든 결정자가 후보키여야 한다는 조건으로 구별한다.
+- 뷰는 보안·논리적 독립성에 활용할 수 있지만, 갱신 가능 여부는 정의 방식과 제약에 따라 달라지고 일반적으로 독립 인덱스를 갖지 않는다.

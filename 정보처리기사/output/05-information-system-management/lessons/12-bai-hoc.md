@@ -1,12 +1,12 @@
-# 7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)
+# 1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-데이터베이스, 핵심, 기술
+데이터, 통신, 개요
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,30 @@
 
 ---
 
-## 7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)
+## 1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)
 
-### 7.1 회복 및 동시성 제어 (Recovery & Concurrency)
-- **회복 (Recovery):** 장애 발생 시 손상 이전의 정상 상태로 복구.
-- **즉각 갱신 기법 (Immediate Update):** 트랜잭션 부분 완료 전이라도 즉시 DB에 반영. 갱신 내용은 **Log에 보관**하여 회복에 대비.
-- **로킹 단위 (Locking Granularity):** 병행제어에서 한꺼번에 로킹하는 객체 크기.
-  - **단위가 크면:** 로크 수가 작아 관리하기 쉽지만 병행성 저하.
-  - **단위가 작으면:** 로크 수가 많아 관리 복잡/오버헤드 증가, 하지만 병행성 상승.
-- **타임 스탬프 순서 (Time Stamp Ordering):** 직렬성 순서를 결정하기 위해 트랜잭션 처리 순서를 미리 선택.
-- **Tiếng Việt:** 
-  - Immediate Update: Cập nhật ngay lập tức (dùng Log để phục hồi).
-  - Locking Granularity: Kích thước khóa. Khóa lớn -> dễ quản lý, đồng thời thấp. Khóa nhỏ -> khó quản lý, đồng thời cao.
+### 1.1 데이터 통신 및 주요 발전
+- **데이터 통신:** 컴퓨터와 통신기기 사이에서 디지털(0과 1) 정보를 송수신. (데이터 통신 = 데이터 전송 기술 + 데이터 처리 기술).
+- **정보 통신:** 전기 통신 + 컴퓨터 (정보 처리). 통신의 3요소: 정보원, 수신원, 전송 매체.
+- **주요 시스템:**
+  - `SAGE`: 최초의 데이터 통신 시스템.
+  - `SABRE`: 최초 상업용.
+  - `ARPANET`: 인터넷의 효시.
+  - `ALOHA`: 최초 무선 패킷 교환.
+- **Tiếng Việt:** Truyền thông dữ liệu truyền thông tin số (0, 1). 3 yếu tố: Nguồn, Đích, Môi trường truyền. ARPANET là tiền thân của Internet.
 
-### 7.2 교착상태 (Deadlock)
-- **발생 4가지 조건:** 상호 배제(Mutual Exclusion), 점유와 대기(Hold and Wait), 비선점(Non-preemption), 환형 대기(Circular Wait).
-- **회피 기법 (Avoidance):** 교착상태 가능성을 피해 나가는 방법. 주로 **은행원 알고리즘 (Banker's Algorithm, E. J. Dijkstra)** 사용.
-- **Tiếng Việt:** 4 điều kiện Deadlock: Loại trừ lẫn nhau, Giữ & Chờ, Không trưng dụng, Chờ vòng tròn. Tránh Deadlock dùng Thuật toán Nhà băng.
-- 💡 **Mẹo ghi nhớ:** Điều kiện Deadlock: Độc Giữ Không Vòng (Độc quyền, Giữ và chờ, Không ưu tiên, Vòng tròn).
+### 1.2 통신 회선 및 매체 (Transmission Media)
+- **꼬임선 (Twisted Pair):** 저렴하고 설치 간편, 간섭에 취약.
+- **동축 케이블 (Coaxial Cable):** 대역폭이 넓고 누화 적음, 중계기 필요.
+- **광섬유 케이블 (Optical Fiber):** 빛의 반사 원리. 가장 빠르고 대역폭 큼. 도청 어려워 보안성 우수. 무유도, 무누화.
+- **마이크로파/위성 통신:** 장거리 대용량 통신. 다중 접속 방식: FDMA(주파수), TDMA(시간), CDMA(코드).
+- **Tiếng Việt:**
+  - Twisted Pair: Rẻ, dễ nhiễu.
+  - Coaxial: Băng thông rộng, ít nhiễu.
+  - Optical Fiber: Cáp quang (phản xạ ánh sáng), siêu tốc, siêu bảo mật.
+  - Vệ tinh: Phân chia theo Tần số (FDMA), Thời gian (TDMA), Mã (CDMA).
+
+### 1.3 통신 제어장치 (CCU) & 전처리기 (FEP)
+- **CCU:** 데이터 신호의 직·병렬 변환 등 전반적인 제어.
+- **FEP (Front-End Processor):** 호스트와 단말기 사이에 위치해 통신 제어를 전담하여 메인 컴퓨터의 부하를 줄임.
+- **Tiếng Việt:** CCU điều khiển truyền tải. FEP xử lý tiền kỳ để giảm tải cho máy chủ (Host).

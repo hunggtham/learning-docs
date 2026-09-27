@@ -25,7 +25,7 @@
 ## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
 
 - 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
-- **4대 기능 (4 Chức năng chính):** 
+- **4대 기능 (4 Chức năng chính):**
   - 코딩 (Coding): Gõ code.
   - 컴파일 (Compile): Dịch ra mã máy.
   - 디버깅 (Debugging): Tìm và sửa lỗi (Bug).

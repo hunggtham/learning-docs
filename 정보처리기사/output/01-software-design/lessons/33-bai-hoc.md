@@ -1,12 +1,12 @@
-# 7. 공통 모듈 (Common Module)
+# 3. 모듈 (Module)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 공통 모듈 (Common Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **3. 모듈 (Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-공통, 모듈
+모듈
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,13 @@
 
 ---
 
-## 7. 공통 모듈 (Common Module)
-**개념 (Khái niệm):** 여러 프로그램에서 공통적으로 사용할 수 있는 모듈 (Module dùng chung cho nhiều chương trình, ví dụ: Đăng nhập, tính toán).
-
-*   **명세 기법 5가지 (5 nguyên tắc viết đặc tả module):**
-    1.  **정확성 (Correctness):** 정확히 작성 (Chính xác).
-    2.  **명확성 (Clarity):** 중의적이지 않게 (Rõ ràng, không mơ hồ).
-    3.  **완전성 (Completeness):** 모든 것을 빠짐없이 (Đầy đủ).
-    4.  **일관성 (Consistency):** 상호 충돌 없게 (Nhất quán).
-    5.  **추적성 (Traceability):** 출처, 관계 추적 가능 (Có thể truy xuất nguồn gốc).
-💡 **Mẹo ghi nhớ:** C-M-H-N-T (Chính-Rõ-Đủ-Nhất-Truy) -> **Chỉ Mong Học Nhất Trường**
-
----
+## 3. 모듈 (Module)
+- **결합도 (Coupling - Độ kết dính giữa các module)**: Càng thấp càng tốt.
+  - 자료 (Data - Tốt nhất) < 스탬프 (Stamp) < 제어 (Control) < 외부 (External) < 공통 (Common) < 내용 (Content - Tệ nhất).
+  - 💡 **Mẹo ghi nhớ**: T/S/C/N/C/N (Tốt -> Tệ) -> **Tính Sao Cho Nhẹ Cả Người**
+- **응집도 (Cohesion - Độ gắn kết trong 1 module)**: Càng cao càng tốt.
+  - 기능적 (Functional - Tốt nhất) > 순차적 (Sequential) > 통신적 (Communication) > 절차적 (Procedural) > 시간적 (Temporal) > 논리적 (Logical) > 우연적 (Coincidental - Tệ nhất).
+  - 💡 **Mẹo ghi nhớ**: K/T/T/T/T/L/N (Tốt -> Tệ) -> **Không Thể Tin Thằng Trẻ Làm Ngốc**
+- **팬인 (Fan-In) / 팬아웃 (Fan-Out)**:
+  - Fan-in (Số module gọi nó): Cao thì tốt (tái sử dụng nhiều).
+  - Fan-out (Số module nó gọi): Càng thấp càng tốt.

@@ -1,12 +1,12 @@
-# 093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)
+# 핵심 031: 모듈 구현 (Module Implementation)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **핵심 031: 모듈 구현 (Module Implementation)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-단위, 모듈, 명세서
+핵심, 모듈, 구현
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,18 +22,14 @@
 
 ---
 
-## 093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)
+## 핵심 031: 모듈 구현 (Module Implementation)
 
-### 단위 모듈 (Unit Module)
-- 프로그램의 단위 기능을 구현하는 독립적인 최소 소프트웨어 단위. (Đơn vị phần mềm nhỏ nhất, độc lập, thực hiện 1 chức năng duy nhất).
+- **구현 (Implementation):** 설계 명세서가 컴퓨터가 알 수 있는 모습으로 변환되는 과정. 프로그래밍 또는 코딩. (Quá trình chuyển thiết kế thành code.)
+- **작업 절차 (Trình tự):** 코딩 계획 (Lập kế hoạch) → 코딩 (Code) → 컴파일 (Compile) → 테스트 (Test).
+- **모듈 (Module):** 독립적인 기능을 갖는 단위. 모듈이 모이면 프로그램이 됨. (Một đơn vị độc lập thực hiện một chức năng cụ thể.)
+- **컴포넌트 (Component):** 독립적으로 존재할 수 있는 부분, 재사용되는 단위, 인터페이스를 통해서만 접근. (Thành phần có thể tái sử dụng, giao tiếp qua Interface.)
 
-### 단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)
-- **추상화 (Abstraction):** 복잡한 시스템을 단순하게 구현. (Trừu tượng hóa - ẩn đi sự phức tạp).
-- **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
-- **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
-
-### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
-- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
-- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
+- **Vietnamese Explanation:** Module là một khối code (như một hàm hoặc một class). Component là một khối lớn hơn, đóng gói sẵn và có thể lắp ráp vào nhiều phần mềm khác nhau (như một nút bấm UI, một bộ lịch).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Kế hoạch -> Code -> Dịch (Compile) -> Thử (Test). Module = Ghép lại thành chương trình. Component = Tái sử dụng qua Interface.
 
 ---

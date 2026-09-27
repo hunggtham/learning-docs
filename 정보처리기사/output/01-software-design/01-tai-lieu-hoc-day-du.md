@@ -20,14 +20,18 @@
 
 ---
 
+## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
+
+---
+
 ## 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 - **개념**: Toàn bộ quá trình phát triển (Yêu cầu -> Thiết kế -> Code -> Test -> Bảo trì). Là tiêu chuẩn để quản lý dự án, chi phí, nhân lực.
-- **폭포수 모형 (Waterfall Model)**: 
+- **폭포수 모형 (Waterfall Model)**:
   - Tuần tự (선형 순차적). Xong bước này mới qua bước khác. Không quay lại được.
   - Phù hợp dự án có yêu cầu rõ ràng, hệ thống nhà nước/ngân hàng. Tài liệu là trọng tâm.
 - **나선형 모형 (Spiral Model)**:
   - Do Boehm đề xuất. Trọng tâm: Phân tích rủi ro (위험 분석).
-  - Chu trình: Kế hoạch (계획) -> Phân tích rủi ro (위험) -> Phát triển (개발) -> Đánh giá (평가). 
+  - Chu trình: Kế hoạch (계획) -> Phân tích rủi ro (위험) -> Phát triển (개발) -> Đánh giá (평가).
   - Phù hợp dự án lớn, rủi ro cao.
 - **프로토타입 모형 (Prototype Model)**:
   - Làm bản nháp (시제품) trước khi phát triển thật. Phù hợp khi yêu cầu chưa rõ ràng.
@@ -47,7 +51,7 @@
 
 ### 002. 폭포수 모형 (Waterfall Model / Mô hình thác nước)
 - 이전 단계로 돌아갈 수 없다는 전제하에 각 단계를 확실히 매듭짓고 다음 단계를 진행하는 개발 방법론이다. (Là phương pháp phát triển với tiền đề không thể quay lại giai đoạn trước, hoàn thành dứt điểm từng giai đoạn rồi mới tiến sang giai đoạn tiếp theo.)
-- 보헴이 제시한 고전적 생명 주기 모형이다. (Là mô hình vòng đời cổ điển do Boehm đề xuất.)
+- 고전적 생명 주기 모형이다. 보헴(Boehm)은 나선형 모형(Spiral Model)을 제안했다. (Là mô hình vòng đời cổ điển. Boehm là người đề xuất mô hình xoắn ốc.)
 - 요구사항을 반영하기 어렵다. (Khó phản ánh/thay đổi yêu cầu.)
 - **Ví dụ (Example):** Xây dựng một ngôi nhà, bạn không thể xây mái nhà khi chưa làm xong móng. (Phải theo tuần tự).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** Nước chảy từ trên xuống, không chảy ngược lại (이전 단계로 돌아갈 수 없음).
@@ -59,7 +63,7 @@
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **KNKK** (Kế - Nguy - Khai - Khách): **Kế Nguy Khách Khóc** (Lập KH - Rủi ro - Phát triển - Khách hàng).
 
 ### 004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)
-- 스크럼 (Scrum
+- 스크럼 (Scrum)
 - XP (eXtreme Programming)
 - 기능 중심 개발 (FDD; Feature Driven Development)
 - 칸반 (Kanban)
@@ -209,7 +213,7 @@
 ## 2. 요구사항 정의 (Requirements Definition)
 - **기능 요구사항 (Functional)**: Chức năng hệ thống phải có (Ví dụ: Đăng nhập).
 - **비기능 요구사항 (Non-Functional)**: Hiệu năng, bảo mật, chất lượng, ràng buộc (Ví dụ: Phản hồi dưới 1s).
-- **개발 프로세스 (Development Process)**: 
+- **개발 프로세스 (Development Process)**:
   1. 도출 (Elicitation) -> 2. 분석 (Analysis) -> 3. 명세 (Specification) -> 4. 확인/검증 (Validation).
 - 💡 **Mẹo ghi nhớ**: Đ/P/M/X (Elicitation, Analysis, Spec, Validation) -> **Đi Phượt Một Xe**
 - **명세 기법 (Specification Techniques)**:
@@ -221,7 +225,7 @@
 ## 3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)
 - **자료 흐름도 (DFD - Data Flow Diagram)**:
   - 프로세스 (Process - Tròn), 자료 흐름 (Data Flow - Mũi tên), 자료 저장소 (Data Store - Đường thẳng), 단말 (Terminator - Vuông).
-- **자료 사전 (DD - Data Dictionary)**: 
+- **자료 사전 (DD - Data Dictionary)**:
   - `=`: Định nghĩa (is composed of)
   - `+`: Kết nối (and)
   - `( )`: Tùy chọn (Optional)
@@ -268,10 +272,39 @@
 
 ---
 
+## A+ Deep Dive: 개발 모형 선택과 요구사항 검증
+
+### 1. 모형 선택 비교표
+
+| 모형 | 가장 강한 신호 | 변경 대응 | 시험 함정 |
+|---|---|---|---|
+| 폭포수 (Waterfall) | 요구사항이 안정적이고 단계 산출물이 명확함 | 낮음 | 순차적이라는 뜻이 곧 테스트가 없다는 뜻은 아님 |
+| 프로토타입 (Prototype) | 사용자가 원하는 결과를 말로 확정하기 어려움 | 요구사항 확인에 유리 | 시제품을 그대로 운영 제품으로 착각하지 않음 |
+| 나선형 (Spiral) | 대규모·고위험·불확실성이 큼 | 반복마다 위험 분석 | 보헴(Boehm)과 연결되는 모형은 나선형 |
+| 애자일 (Agile) | 짧은 주기와 지속적인 고객 피드백 | 높음 | Agile은 단일 방법론이 아니라 가치와 원칙의 묶음 |
+
+### 2. 요구사항 검증 미니 트레이스
+
+1. **완전성(Completeness)**: 모든 기능·제약이 빠짐없이 적혔는가?
+2. **일관성(Consistency)**: 서로 모순되는 요구가 없는가?
+3. **추적성(Traceability)**: 요구사항 ID가 설계·테스트 항목과 연결되는가?
+4. **검증 가능성(Verifiability)**: `빠른 응답` 대신 `95% 요청을 2초 이내 처리`처럼 시험 가능한가?
+
+> **시험 함정:** 검증(Verification)은 명세에 맞게 만들었는지, 확인(Validation)은 사용자의 실제 목적에 맞는지를 묻는다.
+
+### 자주 혼동하는 판별 포인트
+
+- **형상 관리 항목**은 소스 코드만이 아니라 요구사항·설계서·설치/운영 문서처럼 변경 이력을 추적해야 하는 산출물까지 포함한다. 개인 일정이나 예산 자체는 형상 항목이 아니다.
+- **EAI Hybrid**는 Hub-and-Spoke와 Message Bus를 조합한다. 모든 애플리케이션을 직접 연결하는 Point-to-Point와 다르다.
+- **N-S 차트**는 순차·선택·반복이라는 구조적 제어 흐름을 표현한다. 클래스 메모리 배치나 패킷 헤더를 표현하는 도구가 아니다.
+- 내부 자료를 직접 참조하는 모듈은 **내용 결합도**가 강하다. 독립성을 높이려면 결합도는 낮추고 응집도는 높인다.
+
+---
+
 ## 1. 현행 시스템 분석 (Current System Analysis)
-- **플랫폼 성능 (Platform Performance)**: 
+- **플랫폼 성능 (Platform Performance)**:
   - 가용성 (Availability), 경과 시간 (Turnaround Time), 응답 시간 (Response Time), 사용률 (Utilization).
-- **운영체제 및 DBMS 고려사항 (OS & DBMS Considerations)**: 
+- **운영체제 및 DBMS 고려사항 (OS & DBMS Considerations)**:
   - 신뢰도 (Reliability), 성능 (Performance), 기술 지원 (Tech Support), 주변 기기 (Peripherals), 구축 비용 (Cost), 상호 호환성 (Compatibility).
 
 ---
@@ -382,12 +415,12 @@
 ## 4. UML (Unified Modeling Language)
 - **개념**: Ngôn ngữ mô hình hóa hướng đối tượng chuẩn.
 - **구성요소**: 사물 (Things), 관계 (Relationships), 다이어그램 (Diagrams).
-- **관계 (Relationships)**: 
+- **관계 (Relationships)**:
   - 연관 (Association), 의존 (Dependency), 집합 (Aggregation), 포함 (Composition), 일반화 (Generalization - Kế thừa), 실체화 (Realization - Interface).
 - **다이어그램 (Diagrams)**:
   - **구조적/정적 (Structural/Static)**: Class, Object, Component, Deployment, Composite Structure, Package.
   - **행위적/동적 (Behavioral/Dynamic)**: Use Case, Sequence, Communication, State, Activity, Timing.
-- 💡 **Mẹo ghi nhớ**: 
+- 💡 **Mẹo ghi nhớ**:
   - 정적 다이어그램: 클/객/컴/배/복/패 (Class, Object, Component, Deployment, Composite, Package)
   - 동적 다이어그램: 유/순/커/상/활/타 (Use case, Sequence, Comm, State, Activity, Timing)
 
@@ -440,12 +473,12 @@
 ---
 
 ## 1. 사용자 인터페이스 (User Interface - UI)
-- **UI 유형 (UI Types)**: 
+- **UI 유형 (UI Types)**:
   - CLI (Dòng lệnh), GUI (Đồ họa), NUI (Cử chỉ tự nhiên như chạm, vuốt), OUI (Hữu cơ).
   - **모바일 제스처 (Mobile Gestures)**: Tap (Chạm), Double Tap, Drag (Kéo), Pan (Di chuyển liên tục), Press (Nhấn giữ), Flick (Vuốt nhanh), Pinch (Phóng to/thu nhỏ bằng 2 ngón).
 - **UI 기본 원칙 (4 Principles)**:
   - **직관성 (Intuitiveness)**: Dễ hiểu, trực quan.
-  - **유효성 (Efficiency)**: Đạt được mục tiêu chính xác.
+  - **유효성 (Effectiveness)**: Đạt được mục tiêu của người dùng một cách chính xác và đầy đủ.
   - **학습성 (Learnability)**: Dễ học.
   - **유연성 (Flexibility)**: Linh hoạt, giảm thiểu lỗi.
   - 💡 **Mẹo ghi nhớ**: T/H/H/N -> **Trực Học Hằng Ngày**
@@ -456,7 +489,6 @@
   - **프로토타입 (Prototype)**: Mô hình động, có thể tương tác.
 
 ---
-# Chapter 3. 애플리케이션 설계 (Application Design)
 
 ---
 
@@ -508,7 +540,7 @@
 - **분석 (Analysis)**: Giải quyết xung đột (중재), dùng DFD, DD.
 - **명세 (Specification)**: Viết tài liệu (Mini-Spec), đảm bảo tính truy xuất (추적성).
   - 정형 (Toán học, VDM) vs 비정형 (Ngôn ngữ tự nhiên, ERD).
-- **확인 (Validation)**: 
+- **확인 (Validation)**:
   - 확인 (Validation): Có đúng sản phẩm khách cần không? (Right product).
   - 검증 (Verification): Có làm đúng quy trình không? (Product right).
   - Cần quản lý cấu hình (형상 관리).
@@ -743,7 +775,7 @@
   - **I (ISP)**: Phân tách Interface (Interface nhỏ gọn).
   - **D (DIP)**: Đảo ngược phụ thuộc (Phụ thuộc vào Interface, không phụ thuộc vào triển khai chi tiết).
 - **분석 방법론 (OOA Methods)**:
-  - **람바우 (Rumbaugh - OMT)**: 객체 모형 (Object) -> 동적 모형 (Dynamic) -> 기능 모형 (Functional - DFD). 
+  - **람바우 (Rumbaugh - OMT)**: 객체 모형 (Object) -> 동적 모형 (Dynamic) -> 기능 모형 (Functional - DFD).
   - 💡 **Mẹo ghi nhớ**: K/Đ/C -> **Không Đợi Chờ**
 
 ---
@@ -951,7 +983,6 @@
 - **행위 패턴 (Behavioral - 11)**: Strategy, Mediator, Command, Observer, State, Iterator, Visitor, Chain of Responsibility, Interpreter, Memento, Template Method. (Hành vi, tương tác)
 
 ---
-# Chapter 4. 인터페이스 설계 (Interface Design)
 
 ---
 
@@ -1005,7 +1036,7 @@
   - **워크 스루 (Walk Through)**: Gửi tài liệu trước, họp review ngắn để tìm lỗi nhanh.
   - **인스펙션 (Inspection)**: Chuyên gia khác (không phải tác giả) kiểm tra chặt chẽ để tìm lỗi.
   - 💡 **Mẹo ghi nhớ**: 동료(Tự thuyết trình) / 워크스루(Họp ngắn) / 인스펙션(Chuyên gia chém).
-- **연계 기술 (Connection Tech)**: 
+- **연계 기술 (Connection Tech)**:
   - DB Link, API, Socket (Cấp phát cổng), JDBC.
 - **미들웨어 (Middleware)**: Phần mềm trung gian kết nối các hệ thống khác biệt.
   - **TP Monitor**: Giám sát Transaction (Giao dịch).
@@ -1014,7 +1045,6 @@
   - **WAS (Web Application Server)**: Xử lý nội dung web động (동적인 콘텐츠).
 
 ---
-# 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
 
 ---
 
@@ -1113,12 +1143,11 @@
   - **용어**: 제품 백로그 (Product Backlog - Yêu cầu tổng), 스프린트 (Sprint - Chu kỳ 2-4 tuần), 속도 (Velocity), 번 다운 차트 (Burn Down Chart - Biểu đồ tiến độ), PO (Product Owner), SM (Scrum Master).
   - **프로세스**: Backlog -> Sprint Planning -> Sprint Execution (Daily Scrum) -> Sprint Review (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
 - **XP (eXtreme Programming)**: Tối ưu hóa phát triển phần mềm cùng khách hàng.
-  - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback). 
+  - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback).
   - 💡 **Mẹo ghi nhớ**: Y/Đ/D/T/P -> **Ý Định Dũng Tướng Phàm**
   - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
 
 ---
-# Chapter 2. 화면 설계 (Screen Design)
 
 ---
 
@@ -1135,7 +1164,7 @@
 ---
 
 ## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
-- **운영체제 (OS)** & **DBMS**: 가용성 (Availability), 성능 (Performance), 기술 지원 (Tech Support), 구축 비용 (Cost). 
+- **운영체제 (OS)** & **DBMS**: 가용성 (Availability), 성능 (Performance), 기술 지원 (Tech Support), 구축 비용 (Cost).
   - OS có thêm: 주변 기기 (Thiết bị ngoại vi).
   - DBMS có thêm: 상호 호환성 (Khả năng tương thích - JDBC/ODBC).
 - **WAS (Web Application Server)**: Xử lý nội dung động. Có thêm **가비지 컬렉션 (GC - Dọn rác)**.
@@ -1146,7 +1175,7 @@
 ## 6. 구조적 분석 도구 (Structured Analysis Tools)
 - Phân tích Top-down (하향식), dùng biểu đồ (도형).
 - **DFD (Biểu đồ luồng dữ liệu)**: Process (Tròn), Flow (Mũi tên), Data Store (Vạch ngang), Terminator (Vuông).
-- **DD (Từ điển dữ liệu)**: 
+- **DD (Từ điển dữ liệu)**:
   - `=`: Định nghĩa
   - `+`: Nối
   - `( )`: Tùy chọn (Optional)
@@ -1158,7 +1187,7 @@
 ---
 
 ## 10. 소프트웨어 설계 원리 (Software Design Principles)
-- **모듈화 (Modularity)**: 
+- **모듈화 (Modularity)**:
   - Module quá nhỏ -> Chi phí tích hợp (Integration Cost) tăng.
   - Module quá lớn -> Chi phí phát triển từng module (Development Cost) tăng.
 - **추상화 (Abstraction)**: 3 loại (과정 - Quá trình, 데이터 - Dữ liệu, 제어 - Điều khiển).
@@ -1169,8 +1198,6 @@
   - **이벤트 중심 (Event-driven)**: Dựa trên sự kiện (VD: Chuông báo cháy).
   - **변환형 (Transformational)**: Biến đổi dữ liệu (VD: Trình biên dịch - Compiler).
   - **객체 영속형 (Object Persistence)**: Lưu trữ lâu dài (VD: Database Server).
-
-# Subject 1 - Part 3
 
 ---
 

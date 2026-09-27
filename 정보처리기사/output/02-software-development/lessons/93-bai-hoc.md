@@ -29,7 +29,7 @@
 - **순서대로 (Theo trình tự):** Từ lúc bấm Next đến lúc Finish.
 - **예외 상황 / 오류 메시지:** Phải có cách xử lý khi cài đặt bị lỗi.
 - **Uninstall (Xóa cài đặt):** Bắt buộc phải hướng dẫn cách gỡ cài đặt sạch sẽ.
-- **서문 (Lời nói đầu) bao gồm:** 
+- **서문 (Lời nói đầu) bao gồm:**
   - 문서 이력 (Lịch sử chỉnh sửa v1.0, v1.1).
   - 주석 (Chú ý/Tham khảo).
   - 설치 환경 체크 (Kiểm tra OS, tắt app khác trước khi cài).

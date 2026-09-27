@@ -397,29 +397,30 @@ Dùng để tăng tốc độ tìm kiếm.
 ## 143-145. SQL 분류 (SQL Categories)
 - **DDL (데이터 정의어):** CREATE, ALTER, DROP (스키마, 테이블 등 정의/변경/삭제).
 - **DML (데이터 조작어):** SELECT, INSERT, DELETE, UPDATE (데이터 조회 및 변경).
-- **DCL (데이터 제어어):** COMMIT, ROLLBACK, GRANT, REVOKE (보안, 무결성, 권한 제어).
+- **DCL (데이터 제어어):** GRANT, REVOKE (권한 제어).
+- **TCL (트랜잭션 제어어):** COMMIT, ROLLBACK, SAVEPOINT (트랜잭션 제어).
 - **VI (Vietnamese) (Tiếng Việt):** Phân loại SQL.
   - DDL (Định nghĩa dữ liệu): CREATE, ALTER, DROP.
   - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, UPDATE.
-  - DCL (Điều khiển dữ liệu): COMMIT, ROLLBACK, GRANT, REVOKE.
+  - DCL (Điều khiển dữ liệu): GRANT, REVOKE (điều khiển quyền).
+  - TCL (Điều khiển giao dịch): COMMIT, ROLLBACK, SAVEPOINT (điều khiển giao dịch).
 
 ---
 
 ## 204-219. SQL 명령어 심화 (SQL Commands Detail)
-- **DDL (204, 207-209):** , , .
-  -  옵션:  (참조하는 모든 개체 연쇄 제거),  (참조 중이면 제거 취소).
-- **DML (205, 214-218):** , , , .
-  - : 중복 튜플 제거.
-  - : 정렬 (오름차순/내림차순).
-- **DCL (206, 210-213):** , , , .
-  - : 권한 부여. (옵션: 남에게 권한 부여 가능).
-  - : 권한 회수.
-  - : 변경 내용을 DB에 영구 반영.
-  - : 변경 취소, 이전 상태로 복구.
+- **DDL (204, 207-209):** `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.
+  - `CASCADE`: 참조하는 모든 개체를 연쇄 처리; `RESTRICT`: 참조 중이면 처리 취소.
+- **DML (205, 214-218):** `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+  - `DISTINCT`: 중복 튜플 제거; `ORDER BY`: 오름차순/내림차순 정렬.
+- **DCL (206, 210-213):** `GRANT`, `REVOKE`.
+  - `GRANT`: 권한 부여 (`WITH GRANT OPTION`으로 재부여 허용).
+  - `REVOKE`: 권한 회수.
+- **TCL:** `COMMIT`, `ROLLBACK`, `SAVEPOINT`.
+  - `COMMIT`: 변경 내용을 DB에 영구 반영; `ROLLBACK`: 변경 취소; `SAVEPOINT`: 부분 복귀 지점 설정.
 - **VI (Vietnamese) (Tiếng Việt):** Chi tiết các lệnh SQL.
-  - : Xóa dây chuyền các phần phụ thuộc. : Không cho xóa nếu đang bị phụ thuộc.
-  - : Cấp quyền và cho phép người đó cấp quyền tiếp cho người khác.
-  - : Xác nhận lưu thay đổi. : Hoàn tác.
+  - `CASCADE`: Xử lý dây chuyền các đối tượng phụ thuộc. `RESTRICT`: Không xử lý nếu đang bị tham chiếu.
+  - `GRANT`/`REVOKE`: Cấp và thu hồi quyền.
+  - `COMMIT`/`ROLLBACK`/`SAVEPOINT`: Xác nhận, hoàn tác hoặc đánh dấu điểm khôi phục giao dịch.
 
 ---
 
@@ -441,14 +442,56 @@ Dùng để tăng tốc độ tìm kiếm.
 |---|---|---|---|
 | **DDL** (Data Definition Language) | CREATE, ALTER, DROP, TRUNCATE | 데이터베이스를 **정의**하는 언어, 구조 결정. (Ngôn ngữ định nghĩa dữ liệu - Cấu trúc). | Dùng để Tạo (CREATE), Sửa (ALTER), Xóa hoàn toàn (DROP), hoặc Xóa trắng (TRUNCATE) bảng. Giống như việc xây/đập một ngôi nhà. |
 | **DML** (Data Manipulation Language) | SELECT, INSERT, UPDATE, DELETE | 저장된 자료를 조회, 삽입, 수정, 삭제. (Ngôn ngữ thao tác dữ liệu - Nội dung). | Dùng để Thêm, Sửa, Xóa, Lấy dữ liệu bên trong bảng. Giống như việc sắp xếp đồ đạc trong nhà. |
-| **DCL** (Data Control Language) | GRANT, REVOKE, COMMIT, ROLLBACK | 데이터 보안, 무결성, 권한, 병행 수행제어. (Ngôn ngữ điều khiển dữ liệu - Quyền & Giao dịch). | Dùng để Cấp quyền (GRANT), Thu hồi quyền (REVOKE), hoặc kiểm soát giao dịch (COMMIT/ROLLBACK). |
+| **DCL** (Data Control Language) | GRANT, REVOKE | 데이터 보안과 권한 제어. (Ngôn ngữ điều khiển dữ liệu - Quyền). | Dùng để cấp quyền hoặc thu hồi quyền. |
+| **TCL** (Transaction Control Language) | COMMIT, ROLLBACK, SAVEPOINT | 트랜잭션의 확정, 취소, 부분 복귀. (Ngôn ngữ điều khiển giao dịch). | Dùng để xác nhận, hoàn tác hoặc đặt điểm khôi phục giao dịch. |
 
 > 💡 **Mẹo ghi nhớ:**
 > DDL: **CADT** (Create, Alter, Drop, Truncate - "Cắt" cấu trúc).
 > DML: **SUDI** (Select, Update, Delete, Insert - "Sửa đi" dữ liệu).
-> DCL: **GRCR** (Grant, Revoke, Commit, Rollback - "Gác cổng" bảo vệ).
+> DCL: **GR** (Grant, Revoke - "Gác quyền"). TCL: **CRS** (Commit, Rollback, Savepoint - "Chốt/Rút/Save").
 
 ---
+
+---
+
+## A+ Deep Dive: SQL 결과를 행 단위로 추적하기
+
+### 1. 샘플 스키마와 데이터
+
+```sql
+CREATE TABLE sales (
+  dept CHAR(1), amount INT
+);
+INSERT INTO sales VALUES ('A', 120), ('A', 80), ('B', 90), ('B', 40);
+```
+
+### 2. WHERE와 HAVING의 순서
+
+```sql
+SELECT dept, SUM(amount) AS total
+FROM sales
+WHERE amount >= 80
+GROUP BY dept
+HAVING SUM(amount) >= 150
+ORDER BY total DESC;
+```
+
+행 필터를 먼저 적용하면 `(A,120)`, `(A,80)`, `(B,90)`만 남는다. 그룹별 합계는
+`A=200`, `B=90`이므로 `HAVING`을 통과하는 최종 결과는 `A | 200` 한 행이다.
+
+- `WHERE`: 그룹화 **전** 개별 행을 제거.
+- `GROUP BY`: 같은 키를 그룹으로 묶고 집계.
+- `HAVING`: 그룹화 **후** 집계 결과를 제거.
+- `ORDER BY`: 최종 결과의 표시 순서를 정함. 명시하지 않으면 순서를 가정하지 않는다.
+
+> **시험 함정:** 집계 함수 조건을 `WHERE`에 넣지 않고 `HAVING`에 둔다. 별칭(alias)은 구현/문맥에 따라 `WHERE`에서 바로 사용할 수 없으므로 원래 표현식을 확인한다.
+
+### 자주 혼동하는 판별 포인트
+
+- `GRANT`/`REVOKE`는 권한을 다루는 **DCL**, `COMMIT`/`ROLLBACK`/`SAVEPOINT`는 트랜잭션을 다루는 **TCL**이다.
+- 로킹 단위를 작게 하면 동시성·공유도는 커지지만 잠금 관리 오버헤드도 증가한다. 작은 단위가 교착상태를 자동으로 제거하지는 않는다.
+- 2NF는 부분 함수 종속, 3NF는 이행 함수 종속, BCNF는 모든 결정자가 후보키여야 한다는 조건으로 구별한다.
+- 뷰는 보안·논리적 독립성에 활용할 수 있지만, 갱신 가능 여부는 정의 방식과 제약에 따라 달라지고 일반적으로 독립 인덱스를 갖지 않는다.
 
 ---
 
@@ -456,7 +499,7 @@ Dùng để tăng tốc độ tìm kiếm.
 - **DELETE (150):** 튜플을 삭제. `DELETE FROM 테이블명 [WHERE 조건];`
 - **UPDATE (151):** 튜플 내용 변경. `UPDATE 테이블명 SET 속성명 = 데이터 [WHERE 조건];`
 - **SELECT (152, 153):** 데이터 검색. `SELECT [DISTINCT] 속성명 FROM 테이블명 [WHERE] [GROUP BY] [HAVING] [ORDER BY ASC|DESC];`
-- **LIKE (154):** 문자 패턴 일치 검색. 
+- **LIKE (154):** 문자 패턴 일치 검색.
   - `%`: 모든 문자
   - `_`: 문자 하나
   - `#`: 숫자 하나
@@ -472,7 +515,7 @@ Dùng để tăng tốc độ tìm kiếm.
 ---
 
 ## 193. 뷰 (View)
-- 기본 테이블로부터 유도된 가상 테이블 (물리적 구현 X). 
+- 기본 테이블로부터 유도된 가상 테이블 (물리적 구현 X).
 - 장점: 논리적 데이터 독립성, 보안 강화. 단점: 인덱스 불가, 뷰 정의 변경 불가, 갱신 제약.
 - **VI (Vietnamese) (Tiếng Việt):** Khung nhìn (View). Bảng ảo. Ưu điểm: Độc lập dữ liệu, bảo mật. Nhược điểm: Không có index độc lập, khó cập nhật.
 
@@ -716,6 +759,8 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 ### 6.2 DCL 문법 (Cú pháp DCL)
 - `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
 - `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
+
+### 6.3 TCL 문법 (Cú pháp TCL)
 - `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
 - `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
 - `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
@@ -781,7 +826,7 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 
 ### 데이터 전환 (Data Migration - Di chuyển dữ liệu)
 Là quá trình chuyển dữ liệu từ hệ thống cũ sang hệ thống mới.
-- **ETL 3 bước:** 
+- **ETL 3 bước:**
   1. **E**xtraction (추출): Trích xuất từ nguồn.
   2. **T**ransformation (변환): Biến đổi cho phù hợp chuẩn mới.
   3. **L**oad (적재): Nạp vào hệ thống đích.
@@ -816,5 +861,3 @@ Quản lý trạng thái lỗi trong quá trình chuyển đổi:
 - 산술 연산자 (Toán học: `* / + -`) **>** 관계 연산자 (So sánh: `< > = !=`) **>** 논리 연산자 (Logic: `NOT > AND > OR`).
 
 > 💡 **Mẹo ghi nhớ:** **Toán - Quan - Lo** (Toán học - Quan hệ - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR.
-
-EOF

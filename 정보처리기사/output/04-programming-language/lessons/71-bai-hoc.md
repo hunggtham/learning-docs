@@ -1,12 +1,12 @@
-# 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
+# 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-데이터베이스, 접속, 기술
+매시업과, SOA
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,10 +22,11 @@
 
 ---
 
-## 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
-- **JDBC (Java DataBase Connectivity)**: **자바(Java)** 프로그램 내에서 데이터베이스(DBMS)에 접속하여 SQL 문을 실행하기 위한 표준 API. 운영체제에 독립적.
-- **ODBC (Open DataBase Connectivity)**: 프로그래밍 **언어에 관계없이** (C, C++, VB 등) 다양한 DBMS에 접근할 수 있게 마이크로소프트가 만든 개방형 표준 API.
+## 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
+- **매시업 (Mashup)**: 웹 서비스나 콘텐츠를 조합하여 **새로운 서비스를 만드는 기술** (예: 구글 지도 + 부동산 정보).
+- **SOA (Service Oriented Architecture, 서비스 지향 아키텍처)**: 시스템을 **공유/재사용 가능한 서비스 단위**로 구축하는 구조. (계층: 표현, 업무 프로세스, 서비스 중간, 애플리케이션, 데이터 저장).
 
 **Giải thích (Vietnamese):**
-- JDBC: Dành riêng cho ngôn ngữ Java.
-- ODBC: Mở (Open) cho mọi ngôn ngữ khác, dùng chung thông qua một "người quản lý tài xế" (Driver Manager) để dịch lệnh SQL gửi xuống Database.
+- Mashup: Lấy dữ liệu bản đồ của Google kết hợp với dữ liệu danh sách quán ăn để tạo ra app "Tìm quán ăn gần đây". (Trộn lẫn dữ liệu có sẵn để làm ra cái mới).
+
+---

@@ -1,12 +1,12 @@
-# 25. 트립와이어 (tripwire)
+# 23. EAI 구축 유형 (Enterprise Application Integration Types)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **25. 트립와이어 (tripwire)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **23. EAI 구축 유형 (Enterprise Application Integration Types)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-트립와이어
+EAI, 구축, 유형
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,7 +22,15 @@
 
 ---
 
-## 25. 트립와이어 (tripwire)
-* 크래커가 침입하여 백도어를 만들어 놓거나, 설정 파일을 변경했을 때 분석하는 데이터 무결성 검사 도구.
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ kiểm tra tính toàn vẹn dữ liệu, phát hiện backdoor hoặc thay đổi file cấu hình.
-* 💡 **Mẹo ghi nhớ**: Tripwire = Dây bẫy, chạm vào là báo động.
+## 23. EAI 구축 유형 (Enterprise Application Integration Types)
+* **Point-to-Point**: 애플리케이션을 1:1로 직접 연결.
+* **Hub & Spoke**: 단일 접점인 허브 시스템을 통해 데이터를 전송하는 중앙 집중형 방식.
+* **Message Bus (ESB 방식)**: 애플리케이션 사이에 미들웨어를 두어 처리하는 방식.
+* **Hybrid**: Hub & Spoke와 Message Bus의 혼합 방식.
+* **VI (Vietnamese) (Tiếng Việt):** Các kiểu kiến trúc tích hợp hệ thống (EAI).
+  * Point-to-Point: Nối 1-1.
+  * Hub & Spoke: Tập trung qua 1 Hub trung tâm.
+  * Message Bus: Dùng middleware (trục thông điệp).
+  * Hybrid: Lai giữa Hub & Spoke và Message Bus.
+* **Example**: 여러 부서의 시스템을 가운데 중앙 서버 하나(Hub)를 통해 연결하는 방식이 Hub & Spoke입니다.
+* 💡 **Mẹo ghi nhớ**: Hub là cái trục xe đạp (trung tâm), Spoke là nan hoa (tỏa ra xung quanh).

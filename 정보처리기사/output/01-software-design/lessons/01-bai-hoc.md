@@ -1,12 +1,12 @@
-# 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
+# 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 생명, 주기
+소프트웨어, 생명, 주기, 개발, 방법론
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,16 +22,4 @@
 
 ---
 
-## 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
-- **개념**: Toàn bộ quá trình phát triển (Yêu cầu -> Thiết kế -> Code -> Test -> Bảo trì). Là tiêu chuẩn để quản lý dự án, chi phí, nhân lực.
-- **폭포수 모형 (Waterfall Model)**: 
-  - Tuần tự (선형 순차적). Xong bước này mới qua bước khác. Không quay lại được.
-  - Phù hợp dự án có yêu cầu rõ ràng, hệ thống nhà nước/ngân hàng. Tài liệu là trọng tâm.
-- **나선형 모형 (Spiral Model)**:
-  - Do Boehm đề xuất. Trọng tâm: Phân tích rủi ro (위험 분석).
-  - Chu trình: Kế hoạch (계획) -> Phân tích rủi ro (위험) -> Phát triển (개발) -> Đánh giá (평가). 
-  - Phù hợp dự án lớn, rủi ro cao.
-- **프로토타입 모형 (Prototype Model)**:
-  - Làm bản nháp (시제품) trước khi phát triển thật. Phù hợp khi yêu cầu chưa rõ ràng.
-- **V-모형 (V-Model)**:
-  - Mỗi bước phát triển tương ứng với một bước Test (Ánh xạ Dev-Test). Yêu cầu chất lượng cực cao (Y tế, Hàng không).
+## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)

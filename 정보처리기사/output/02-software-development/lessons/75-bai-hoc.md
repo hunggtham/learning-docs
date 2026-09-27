@@ -1,12 +1,12 @@
-# 22. 정적 분석 도구 (Static Analysis Tools)
+# 21. 외계인 코드 (Alien Code)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **22. 정적 분석 도구 (Static Analysis Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **21. 외계인 코드 (Alien Code)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-정적, 분석, 도구
+외계인, 코드
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,8 +22,8 @@
 
 ---
 
-## 22. 정적 분석 도구 (Static Analysis Tools)
-* 코드를 실행하지 않고(하드웨어/소프트웨어적으로) 소스 코드 품질을 분석하는 도구.
-* **종류**: pmd, checkstyle, cppcheck 등.
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ phân tích tĩnh, phân tích source code mà không cần chạy chương trình.
-* **Example**: 코딩 표준을 잘 지켰는지 검사하는 Checkstyle.
+## 21. 외계인 코드 (Alien Code)
+* 아주 오래되거나 참고문서/개발자가 없어 유지보수 작업이 어려운 코드.
+* **VI (Vietnamese) (Tiếng Việt):** Alien Code là mã nguồn quá cũ, không có tài liệu hoặc người phát triển gốc, rất khó bảo trì.
+* **Example**: 20년 전에 퇴사한 직원이 주석 없이 짠 코드가 외계인 코드입니다.
+* 💡 **Mẹo ghi nhớ**: Alien = Người ngoài hành tinh, đọc không hiểu gì cả.

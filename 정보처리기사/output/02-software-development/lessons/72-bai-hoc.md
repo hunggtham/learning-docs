@@ -1,12 +1,12 @@
-# 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
+# 14. 파레토 법칙 (Pareto Principle)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **14. 파레토 법칙 (Pareto Principle)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-최악의, 시간, 복잡도
+파레토, 법칙
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,8 +22,8 @@
 
 ---
 
-## 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
-* **O(1)**: 입력값 크기에 관계 없이 일정. (스택 삽입/삭제).
-* **O(n log n)**: n log n번 수행. (힙 정렬, 병합 정렬).
-* **VI (Vietnamese) (Tiếng Việt):** Độ phức tạp thời gian. O(1) là hằng số, O(n log n) cho Heap/Merge sort.
-* **Example**: 데이터가 아무리 많아도 스택의 최상단에 값을 넣는 것은 1번의 연산만 필요하므로 O(1)입니다.
+## 14. 파레토 법칙 (Pareto Principle)
+* 소프트웨어 테스트에서 오류의 80%는 전체 모듈의 20% 내에서 발견된다는 법칙.
+* **VI (Vietnamese) (Tiếng Việt):** Nguyên lý 80/20. 80% lỗi nằm trong 20% module cốt lõi.
+* **Example**: 시스템에 10개의 모듈이 있다면, 대부분의 버그는 핵심 모듈 2개에 몰려있습니다.
+* 💡 **Mẹo ghi nhớ**: Pareto = 80/20.

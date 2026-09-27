@@ -1,12 +1,12 @@
-# 프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)
+# 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로그래밍, 언어, 기초
+데이터, 타입, 변수, 연산자
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,25 +22,21 @@
 
 ---
 
-## 프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)
-### 236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)
-- **리스트 (List)**: Khác kiểu dữ liệu, thêm xóa được.
-- **튜플 (Tuple)**: Không thể thay đổi (immutable).
-- **range**: Sinh dãy số liên tiếp.
-
-### 구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)
-- C언어: `struct sawon { char name[10]; int pay; };`
-
-### 235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)
-- **문자 (Char)**: `char` (2Byte - Khác với C là 1Byte).
-- **정수 (Integer)**: `byte` (1Byte), `short` (2Byte), `int` (4Byte), `long` (8Byte).
-- **실수 (Float)**: `float` (4Byte), `double` (8Byte).
-- **논리 (Boolean)**: `boolean` (1Byte).
-  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte).
-
-### 237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)
-- **헝가리안 표기법 (Hungarian Notation)**: 변수 선언 시 변수명에 데이터 타입을 명시하는 것. (Gắn tiền tố kiểu dữ liệu vào tên biến, vd: `strName`, `nAge`).
-- Mọi câu lệnh khai báo biến trong C/Java đều phải kết thúc bằng dấu chấm phẩy `;`.
-
-### 238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)
-- 메모리 공간을 강제로 해제 (Giải phóng không gian bộ nhớ không còn sử dụng).
+## 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
+- **데이터 타입 (Data Types)**:
+  - 정수형 (Integer): `int`, `short`, `long` (Ví dụ: 1, -1).
+  - 부동 소수형 (Float Point): `float`, `double` (실수, 소수점) (Ví dụ: 3.14).
+  - 문자형 (Character): `char` ('A').
+  - 문자열 (String): `char` 배열, `string` ("ABC").
+  - 논리형 (Boolean): 참/거짓 (True/False).
+- **변수 작성 규칙 (Variable Naming Rules)**:
+  - 영문자, 숫자, 밑줄(`_`) 사용 가능.
+  - **숫자로 시작 불가**, 중간 공백 특수문자 불가, 예약어(`if`, `for` 등) 사용 불가.
+- **연산자 (Operators)**:
+  - 산술 (Arithmetic): `+`, `-`, `*`, `/` (몫), `%` (나머지).
+  - 증감 (Increment/Decrement): `++` (1 증가), `--` (1 감소).
+    - 전치 (`++A`): 연산 전 증가.
+    - 후치 (`A++`): 연산 후 증가.
+  - 관계 (Relational): `>`, `<`, `==` (같다), `!=` (다르다).
+  - 논리 (Logical): `&&` (AND), `||` (OR), `!` (NOT).
+  - 삼항 (Ternary): `(조건) ? (참) : (거짓);`

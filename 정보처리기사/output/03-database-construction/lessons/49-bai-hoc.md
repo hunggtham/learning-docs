@@ -1,12 +1,12 @@
-# 199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)
+# 194. 파티션 (Partition)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **194. 파티션 (Partition)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-접근통제, 모델, 심화
+파티션
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,15 +22,7 @@
 
 ---
 
-## 199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)
-- **DAC (임의 접근통제):** 데이터 소유자가 사용자 신원에 따라 권한 부여 (GRANT/REVOKE).
-- **MAC (강제 접근통제):** 시스템이 주체와 객체의 보안 등급을 비교해 권한 부여.
-  - **벨 라파듈라 (Bell-LaPadula):** 기밀성(Confidentiality) 중심.
-  - **비바 (Biba):** 무결성(Integrity) 중심. (비인가자 데이터 변형 방지).
-  - **클락-윌슨 (Clark-Wilson):** 상업용 무결성 모델. 프로그램에 의한 접근.
-  - **만리장성 (Chinese Wall):** 이해 충돌 관계 객체 간 정보 접근 통제.
-- **RBAC (역할기반 접근통제):** 중앙관리자가 사용자의 역할(Role)에 따라 권한 부여.
-- **VI (Vietnamese) (Tiếng Việt):** Mô hình kiểm soát truy cập.
-  - DAC: Dựa trên danh tính (Người dùng cấp quyền).
-  - MAC: Dựa trên cấp độ bảo mật (Hệ thống cấp quyền). Các mô hình: Bell-LaPadula (Bảo mật), Biba (Toàn vẹn)...
-  - RBAC: Dựa trên vai trò (Role).
+## 194. 파티션 (Partition)
+- 대용량 테이블/인덱스를 작은 논리적 단위로 분할.
+- 종류: 범위(Range - 예: 월별), 해시(Hash), 조합(Composite), 목록(List), 라운드 로빈(Round Robin).
+- **VI (Vietnamese) (Tiếng Việt):** Phân vùng dữ liệu (Partition). Chia bảng lớn thành phần nhỏ: theo Khoảng (Range), Băm (Hash), Danh sách (List)...

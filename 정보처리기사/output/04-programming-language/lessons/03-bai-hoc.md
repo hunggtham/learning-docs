@@ -1,12 +1,12 @@
-# 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
+# 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-데이터, 타입, 변수, 연산자
+데이터, 타입, 크기
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,15 @@
 
 ---
 
-## 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
-- **데이터 타입 (Data Types)**:
-  - 정수형 (Integer): `int`, `short`, `long` (Ví dụ: 1, -1).
-  - 부동 소수형 (Float Point): `float`, `double` (실수, 소수점) (Ví dụ: 3.14).
-  - 문자형 (Character): `char` ('A').
-  - 문자열 (String): `char` 배열, `string` ("ABC").
-  - 논리형 (Boolean): 참/거짓 (True/False).
-- **변수 작성 규칙 (Variable Naming Rules)**:
-  - 영문자, 숫자, 밑줄(`_`) 사용 가능.
-  - **숫자로 시작 불가**, 중간 공백 특수문자 불가, 예약어(`if`, `for` 등) 사용 불가.
-- **연산자 (Operators)**:
-  - 산술 (Arithmetic): `+`, `-`, `*`, `/` (몫), `%` (나머지).
-  - 증감 (Increment/Decrement): `++` (1 증가), `--` (1 감소).
-    - 전치 (`++A`): 연산 전 증가.
-    - 후치 (`A++`): 연산 후 증가.
-  - 관계 (Relational): `>`, `<`, `==` (같다), `!=` (다르다).
-  - 논리 (Logical): `&&` (AND), `||` (OR), `!` (NOT).
-  - 삼항 (Ternary): `(조건) ? (참) : (거짓);`
+## 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
+- `char`: 1바이트 (문자 하나)
+- `short`: 2바이트 (짧은 정수)
+- `int` / `long`: 4바이트 (기본 정수)
+- `long long`: 8바이트 (긴 정수)
+- `float`: 4바이트 (실수)
+- `double`: 8바이트 (정밀도 높은 실수)
+
+**Giải thích (Vietnamese):**
+Kích thước bộ nhớ các biến trong C/C++. Chữ cái (char) chiếm 1 byte. Số nguyên (int) chiếm 4 byte. Số thực (float) 4 byte, double (gấp đôi) là 8 byte.
+
+---

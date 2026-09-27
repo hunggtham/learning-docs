@@ -1,12 +1,12 @@
-# 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
+# 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 인터페이스, 설계, 확인
+인터페이스, 구현, 검증, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,17 +22,11 @@
 
 ---
 
-## 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
-
-- **EAI (Enterprise Application Integration):** Doanh nghiệp có nhiều phần mềm (Kế toán, Nhân sự, Kho...), EAI giúp chúng nói chuyện được với nhau.
-
-| 유형 (Kiểu) | 기능 (Chức năng) |
-|---|---|
-| **Point-to-Point** | 1:1로 연결 (Nối trực tiếp 1-1). Không có Middleware ở giữa. Khó thay đổi. |
-| **Hub & Spoke** | 단일 접점인 허브 시스템을 통해 데이터를 전송하는 중앙 집중형. (Nối kiểu nan hoa xe đạp. Tập trung vào cái Hub ở giữa. Hub sập là chết hết.) |
-| **Message Bus** | 미들웨어(버스)를 두어 처리하는 방식. 확장성이 뛰어나며 대용량 처리가 가능. (Dùng một trục xe bus (Middleware) ở giữa. Rất dễ mở rộng và xử lý lượng lớn.) |
-| **Hybrid** | 그룹 내에서는 Hub & Spoke, 그룹 간에는 Message Bus. (Lai tạp: Trong nhóm thì dùng Hub, giữa các nhóm thì dùng Bus.) |
-
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Hub & Spoke = Nan hoa (Có tâm Hub, sập tâm là chết). Message Bus = Xe buýt (Chở được nhiều, dễ mở rộng).
-
----
+## 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
+* **xUnit**: 다양한 언어에 적용되는 단위 테스트 프레임워크 (JUnit, CppUnit, NUnit).
+* **STAF**: 서비스 호출 및 컴포넌트 재사용 등 다양한 환경 지원.
+* **FitNesse**: 웹 기반 테스트 케이스 설계, 실행, 결과 확인.
+* **NTAF**: FitNesse와 STAF의 장점을 통합한 NHN(Naver)의 테스트 자동화 프레임워크.
+* **watir**: Ruby 기반 웹 애플리케이션 테스트 프레임워크.
+* **VI (Vietnamese) (Tiếng Việt):** Các công cụ kiểm thử giao diện. xUnit (kiểm thử đơn vị), STAF, FitNesse (Web), NTAF (Naver), watir (Ruby).
+* 💡 **Mẹo ghi nhớ**: xUnit là phổ biến nhất cho Unit Test. NTAF có chữ N (Naver).

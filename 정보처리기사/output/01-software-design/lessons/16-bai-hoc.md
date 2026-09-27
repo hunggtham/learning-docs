@@ -1,12 +1,12 @@
-# 7. UML 심화 (Advanced UML)
+# 4. UML (Unified Modeling Language)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. UML 심화 (Advanced UML)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. UML (Unified Modeling Language)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-UML, 심화
+UML
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,9 +22,14 @@ UML, 심화
 
 ---
 
-## 7. UML 심화 (Advanced UML)
-- Do OMG chuẩn hóa từ phương pháp của Rumbaugh, Booch, Jacobson.
+## 4. UML (Unified Modeling Language)
+- **개념**: Ngôn ngữ mô hình hóa hướng đối tượng chuẩn.
+- **구성요소**: 사물 (Things), 관계 (Relationships), 다이어그램 (Diagrams).
+- **관계 (Relationships)**:
+  - 연관 (Association), 의존 (Dependency), 집합 (Aggregation), 포함 (Composition), 일반화 (Generalization - Kế thừa), 실체화 (Realization - Interface).
 - **다이어그램 (Diagrams)**:
-  - 구조적 (Structural / Tĩnh): Class, Object, Component, Deployment, Composite, Package.
-  - 행위적 (Behavioral / Động): Use Case, Sequence, Communication, State, Activity, Timing.
-- **스테레오 타입 (Stereotype)**: Mở rộng UML bằng dấu `<< >>` (Guillemet). Ví dụ: `<<include>>`, `<<extend>>`.
+  - **구조적/정적 (Structural/Static)**: Class, Object, Component, Deployment, Composite Structure, Package.
+  - **행위적/동적 (Behavioral/Dynamic)**: Use Case, Sequence, Communication, State, Activity, Timing.
+- 💡 **Mẹo ghi nhớ**:
+  - 정적 다이어그램: 클/객/컴/배/복/패 (Class, Object, Component, Deployment, Composite, Package)
+  - 동적 다이어그램: 유/순/커/상/활/타 (Use case, Sequence, Comm, State, Activity, Timing)

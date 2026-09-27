@@ -1,12 +1,12 @@
-# 입출력 (Input/Output)
+# 입출력 심화 (Input/Output - Advanced)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **입출력 (Input/Output)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **입출력 심화 (Input/Output - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-입출력
+입출력, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,21 +22,40 @@
 
 ---
 
-## 입출력 (Input/Output)
-### 169. 주요 서식 문자열 (Format String / Chuỗi định dạng)
-- `%d`: 정수형 10진수 (Số nguyên hệ thập phân).
-- `%c`: 문자 (Ký tự).
-- `%s`: 문자열 (Chuỗi ký tự).
-  - *Example / Ví dụ*: `printf("Tuổi: %d", 20);`
-  - 💡 *Mẹo ghi nhớ*: d = decimal (số thập phân), c = character (ký tự), s = string (chuỗi).
+## 입출력 심화 (Input/Output - Advanced)
+### 246. scanf() 함수 (scanf() Function / Hàm nhập trong C)
+- C언어의 표준 입력 함수로, 키보드로 입력받아 변수에 저장한다. (Hàm nhập chuẩn của C, lấy dữ liệu từ bàn phím lưu vào biến).
+- 형식: `scanf(서식 문자열, &변수)` (Định dạng, &Tên_biến).
+- 변수에 주소연산자 `&`를 붙여야 한다. (Bắt buộc phải có toán tử địa chỉ `&` trước tên biến, trừ chuỗi).
+  - *Example / Ví dụ*: `scanf("%3d", &a);` (Nhập số nguyên tối đa 3 chữ số vào địa chỉ biến a).
+  - 💡 *Mẹo ghi nhớ*: "Scan" là quét (đọc vào), luôn nhớ phải có dấu `&` để chỉ đường cho dữ liệu đi vào bộ nhớ.
 
-### 170. printf() 함수 (printf() Function / Hàm in C)
-- 인수로 주어진 값을 화면에 출력하는 함수이다. (Hàm in giá trị ra màn hình theo định dạng).
-  - *Example / Ví dụ*: `printf("%d, %c", a, b);`
-  - 💡 *Mẹo ghi nhớ*: 'f' trong printf là 'format' (định dạng).
+### 247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)
+- `%u`: 부호없는 정수 10진수 (Số nguyên hệ 10 không dấu).
+- `%o`: 정수 8진수 (Hệ bát phân - Octal).
+- `%x`: 정수 16진수 (Hệ thập lục phân - Hexadecimal).
+- `%e`: 지수형 실수 (Số thực dạng số mũ - Exponential).
+- `%p`: 주소를 16진수로 (Địa chỉ con trỏ hệ 16).
+  - 💡 *Mẹo ghi nhớ*: o = octal, x = hex, u = unsigned, p = pointer.
 
-### 171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)
-- `printf()`: Định dạng đầu ra. `System.out.printf("%d", r);`
-- `print()`: In không xuống dòng. `System.out.print(r + s);`
-- `println()`: In và xuống dòng. `System.out.println(r + "은 소수");`
-  - 💡 *Mẹo ghi nhớ*: 'ln' trong println là 'line new' (xuống dòng mới).
+### 249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)
+- `\n`: new line (Xuống dòng).
+- `\b`: backspace (Lùi lại 1 ký tự).
+- `\t`: tab (Lùi khoảng cách tab).
+- `\r`: carriage return (Về đầu dòng hiện tại).
+- `\0`: null (Ký tự rỗng).
+- `\'`: in dấu nháy đơn.
+- `\"`: in dấu nháy kép.
+- `\\`: in dấu xuyệt ngược.
+
+### 250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)
+- **출력 포맷**: `System.out.printf("%-8.2f", 200.2);`
+  - `-`: Căn trái (왼쪽 정렬).
+  - `8`: Tổng 8 ký tự (8자리).
+  - `.2`: 2 chữ số thập phân (소수점 이하 2자리).
+  - Kết quả: `200.20   ` (Thêm khoảng trắng phía sau).
+- **문자열 연결**: `System.out.print("abc" + "def");` (Dùng dấu `+` để nối chuỗi).
+
+### 251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)
+- Nếu có nhiều hơn 1 câu lệnh thực thi, phải bọc trong `{ }` (Ngoặc nhọn).
+  - *Example / Ví dụ*: `if(a > 10) { b = a - 10; printf("%d", b); }`

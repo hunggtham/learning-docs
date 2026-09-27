@@ -1,12 +1,12 @@
-# 17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)
+# 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-스토리지와, 분산, 데이터베이스
+분산, 데이터베이스의, 장단점
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,23 +22,9 @@
 
 ---
 
-## 17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)
-
-### 스토리지 (Storage - Thiết bị lưu trữ)
-- **DAS (Direct Attached Storage):** Kết nối trực tiếp bằng cáp. Nhanh, an toàn nhưng khó mở rộng.
-- **NAS (Network Attached Storage):** Kết nối qua mạng (Network-based, File-level). Mềm dẻo nhưng có thể nghẽn mạng.
-- **SAN (Storage Area Network):** Dùng cáp quang (Fiber Channel), tốc độ cực cao, đắt tiền.
-- **SDS (Software-defined Storage):** Quản lý toàn bộ tài nguyên lưu trữ bằng phần mềm (Ảo hóa lưu trữ).
-
-### 분산 데이터베이스 (Distributed Database - CSDL Phân tán)
-Dữ liệu phân bố ở nhiều nơi (máy chủ khác nhau) nhưng người dùng cảm giác như đang dùng 1 CSDL duy nhất.
-- **장점 (Ưu điểm):** Đáng tin cậy, dễ mở rộng, tính tự trị khu vực cao.
-- **단점 (Nhược điểm):** Thiết kế khó, chi phí cao, bảo mật phức tạp.
-
-**4대 투명성 (4 Đặc tính Trong suốt - Transparency):**
-1. **위치 투명성 (Location):** Người dùng không cần biết dữ liệu nằm ở máy chủ nào.
-2. **중복(복제) 투명성 (Replication):** Không cần biết dữ liệu được nhân bản ra sao.
-3. **병행 투명성 (Concurrency):** Nhiều người truy cập cùng lúc vẫn không bị lỗi kết quả.
-4. **장애 투명성 (Failure):** Một Node chết, toàn hệ thống vẫn hoạt động bình thường.
-
----
+## 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
+- **장점:** 지역 자치성, 자료 공유성 향상, 시스템 성능 및 신뢰성/가용성 향상.
+- **단점:** 설계 및 소프트웨어 개발 어려움, 처리 비용 및 잠재적 오류 증가.
+- **VI (Vietnamese) (Tiếng Việt):** Ưu nhược điểm của CSDL phân tán.
+  - Ưu điểm: Độc lập cục bộ, tăng chia sẻ, tin cậy cao, dễ mở rộng.
+  - Nhược điểm: Phức tạp, khó thiết kế, tăng chi phí và lỗi tiềm ẩn.

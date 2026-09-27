@@ -1,12 +1,12 @@
-# 6. 구조적 분석 도구 (Structured Analysis Tools)
+# 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **6. 구조적 분석 도구 (Structured Analysis Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-구조적, 분석, 도구
+스크럼, 추가, 개념
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,14 +22,12 @@
 
 ---
 
-## 6. 구조적 분석 도구 (Structured Analysis Tools)
-- Phân tích Top-down (하향식), dùng biểu đồ (도형).
-- **DFD (Biểu đồ luồng dữ liệu)**: Process (Tròn), Flow (Mũi tên), Data Store (Vạch ngang), Terminator (Vuông).
-- **DD (Từ điển dữ liệu)**: 
-  - `=`: Định nghĩa
-  - `+`: Nối
-  - `( )`: Tùy chọn (Optional)
-  - `[ | ]`: Chọn 1 trong các (Or)
-  - `{ }`: Lặp (Iteration)
-  - `* *`: Chú thích
-- **HIPO**: Biểu đồ phân cấp (가시적, 총체적, 세부적).
+## 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
+- **스크럼 프로세스 (Scrum Process)**:
+  - **일일 스크럼 (Daily Scrum)**: Họp đứng 15 phút. Cập nhật tiến độ lên Burn-down Chart (Biểu đồ tiêu hao).
+  - **스프린트 검토 (Sprint Review)**: Demo sản phẩm cho khách hàng xem có đúng ý không.
+  - **스프린트 회고 (Sprint Retrospective)**: Nội bộ team họp để rút kinh nghiệm, cải tiến quy trình.
+- **XP 기법 상세 (XP Details)**:
+  - **사용자 스토리 (User Story)**: Kịch bản do khách hàng viết (đơn vị chức năng), có thể chứa Test Case.
+  - **릴리즈 계획 (Release Planning)**: Kế hoạch phát hành từng phần sản phẩm (v1.0, v1.1).
+  - **스파이크 (Spike)**: Chương trình nhỏ, code thử nghiệm nhanh để kiểm tra tính khả thi của công nghệ nhằm giảm rủi ro (기술적 위험 감소). Code này có thể bị vứt đi sau khi test.

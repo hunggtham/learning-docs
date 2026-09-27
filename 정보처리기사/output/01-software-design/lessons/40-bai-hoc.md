@@ -1,12 +1,12 @@
-# 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
+# 4. 디자인 패턴 (Design Patterns - GoF)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. 디자인 패턴 (Design Patterns - GoF)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-인터페이스, 검토, 연계, 기술
+디자인, 패턴
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,19 +22,9 @@
 
 ---
 
-## 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
-- **정형 기술 검토 (FTR - Formal Technical Review)**:
-  - **동료검토 (Peer Review)**: Tác giả tự giải thích tài liệu, đồng nghiệp tìm lỗi.
-  - **워크 스루 (Walk Through)**: Gửi tài liệu trước, họp review ngắn để tìm lỗi nhanh.
-  - **인스펙션 (Inspection)**: Chuyên gia khác (không phải tác giả) kiểm tra chặt chẽ để tìm lỗi.
-  - 💡 **Mẹo ghi nhớ**: 동료(Tự thuyết trình) / 워크스루(Họp ngắn) / 인스펙션(Chuyên gia chém).
-- **연계 기술 (Connection Tech)**: 
-  - DB Link, API, Socket (Cấp phát cổng), JDBC.
-- **미들웨어 (Middleware)**: Phần mềm trung gian kết nối các hệ thống khác biệt.
-  - **TP Monitor**: Giám sát Transaction (Giao dịch).
-  - **MOM (Message-Oriented)**: Bất đồng bộ (비동기), dùng hàng đợi tin nhắn (메시지 큐).
-  - **ORB (Object Request Broker)**: Hướng đối tượng, chuẩn CORBA.
-  - **WAS (Web Application Server)**: Xử lý nội dung web động (동적인 콘텐츠).
+## 4. 디자인 패턴 (Design Patterns - GoF)
+- **생성 패턴 (Creational - 5)**: Abstract Factory, Builder, Factory Method, Prototype, Singleton. (Tạo đối tượng)
+- **구조 패턴 (Structural - 7)**: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. (Cấu trúc, ghép nối)
+- **행위 패턴 (Behavioral - 11)**: Strategy, Mediator, Command, Observer, State, Iterator, Visitor, Chain of Responsibility, Interpreter, Memento, Template Method. (Hành vi, tương tác)
 
 ---
-# 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)

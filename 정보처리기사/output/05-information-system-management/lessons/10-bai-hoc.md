@@ -1,12 +1,12 @@
-# 6. 통신 프로토콜 (Giao thức Truyền thông)
+# 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **6. 통신 프로토콜 (Giao thức Truyền thông)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+이 단원을 읽은 뒤 **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
 ## 핵심 키워드 (Từ khóa)
 
-통신, 프로토콜
+프로세스, 품질, 표준
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
@@ -22,39 +22,30 @@
 
 ---
 
-## 6. 통신 프로토콜 (Giao thức Truyền thông)
+## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
-### 6.1 통신 프로토콜 3요소 (Protocol 3 Elements)
-- **구문 (Syntax):** 데이터 형식, 코딩.
-- **의미 (Semantics):** 제어 정보 및 오류 관리.
-- **시간 (Timing):** 속도 조절, 동기화.
-- **Tiếng Việt:** 3 yếu tố của giao thức: Cú pháp (Syntax), Ngữ nghĩa (Semantics), Thời gian (Timing).
+### 4.1 ISO/IEC 12207
+- **기본 생명 주기:** 획득, 공급, 개발, 운영, 유지보수.
+- **지원 생명 주기:** 품질 보증, 검증, 확인, 문서화, 형상 관리 등.
+- **조직 생명 주기:** 관리, 기반 구조, 훈련, 개선.
+- **Tiếng Việt:** Tiêu chuẩn vòng đời phần mềm gồm: Cơ bản, Hỗ trợ, Tổ chức.
 
-### 6.2 OSI 7계층 (OSI 7 Layers)
-1. **물리 계층 (Physical):** 기계/전기적 특성 (RS-232C, 리피터).
-2. **데이터 링크 계층 (Data Link):** 인접 시스템 간 신뢰성 보장, 오류/흐름 제어 (HDLC, LLC).
-3. **네트워크 계층 (Network):** 경로 설정(Routing), 데이터 교환 (IP, X.25, 라우터).
-4. **전송 계층 (Transport):** 종단 간(End-to-End) 투명한 데이터 전송 (TCP, UDP).
-5. **세션 계층 (Session):** 대화 제어 및 동기점(체크점) 관리.
-6. **표현 계층 (Presentation):** 데이터 포맷 변환, 암호화, 압축.
-7. **응용 계층 (Application):** 사용자에게 네트워크 서비스 제공.
-- **Tiếng Việt:** Mô hình OSI 7 lớp: Vật lý -> Liên kết dữ liệu -> Mạng -> Giao vận -> Phiên -> Trình diễn -> Ứng dụng.
-- 💡 **Mẹo ghi nhớ:** Vật Liên Mạng Giao Phiên Trình Ứng (Vật lý -> Liên kết dữ liệu -> Mạng -> Giao vận -> Phiên -> Trình diễn -> Ứng dụng).
+### 4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)
+1. **초기 (Initial):** 프로세스 없음.
+2. **관리 (Managed):** 프로젝트 단위 관리.
+3. **정의 (Defined):** 조직 차원 표준화.
+4. **정량적 관리 (Quantitatively Managed):** 통계적 측정.
+5. **최적화 (Optimizing):** 지속적 개선.
+- **Tiếng Việt:** 5 cấp độ trưởng thành: Khởi tạo -> Được quản lý -> Được định nghĩa -> Quản lý định lượng -> Tối ưu hóa.
+- 💡 **Mẹo ghi nhớ:** I - M - D - Q - O.
 
-### 6.3 주요 네트워크 프로토콜
-- **X.25:** 패킷 교환망 프로토콜 (물리 - 프레임 - 패킷 계층). LAPB 사용.
-- **TCP/IP:**
-  - **응용 계층:** FTP, SMTP, HTTP, DNS 등.
-  - **전송 계층:** 
-    - **TCP:** 연결형, 신뢰성 보장, 순서/흐름 제어, 스트림 전송.
-    - **UDP:** 비연결형, 빠른 전송.
-  - **인터넷 계층:** 
-    - **IP:** 비연결형(데이터그램), 경로 선택(Routing).
-    - **ICMP:** IP 오류 처리 및 제어 메시지.
-    - **ARP:** IP → MAC / **RARP:** MAC → IP.
-  - **네트워크 액세스 계층:** 이더넷, X.25, RS-232C.
-- **Tiếng Việt:** 
-  - TCP: Tin cậy, hướng kết nối. UDP: Nhanh, không kết nối.
-  - IP: Định tuyến. ICMP: Báo lỗi mạng. ARP: Đổi IP sang MAC.
-
-# 정보처리기사 (Information Processing Engineer) - Part 2
+### 4.3 SPICE (ISO/IEC 15504)
+- 소프트웨어 프로세스 평가 및 개선 국제 표준.
+- **수행 능력 6단계 (Capability Levels):**
+  - 0: 불완전 (Incomplete)
+  - 1: 수행 (Performed)
+  - 2: 관리 (Managed)
+  - 3: 확립 (Established)
+  - 4: 예측 (Predictable)
+  - 5: 최적화 (Optimizing)
+- **Tiếng Việt:** Đánh giá năng lực quy trình phần mềm từ Cấp 0 (Chưa hoàn chỉnh) đến Cấp 5 (Tối ưu hóa).
