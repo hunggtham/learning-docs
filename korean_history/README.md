@@ -4,6 +4,8 @@ Bộ tài liệu này được thiết kế như một **knowledge library** đ�
 
 Lịch sử ở đây được đọc theo First-Principles Thinking (제1원리 사고). Một triều đại không chỉ là tên vua và niên đại. Ta sẽ hỏi nhà nước huy động thuế và quân đội bằng cách nào, tri thức được lưu trữ ra sao, ai có quyền tiếp cận đất đai, công nghệ làm thay đổi năng suất thế nào, chiến tranh làm biến dạng demographic structure ra sao, và vì sao một institution có thể tiếp tục tồn tại dù regime đã thay đổi.
 
+Từ bản cập nhật hiện tại, mỗi giai đoạn còn được neo bằng bốn layer thực tế: **mốc thời gian rõ ràng → economy và đời sống → Việt Nam cùng thời → di tích/địa điểm còn có thể quan sát hôm nay**. Mục tiêu là để người đọc không gặp một dynasty như một “tên lạ trên timeline”, mà hình dung được xã hội đó đang sản xuất gì, ai trả thuế, người thường sống trong constraint nào, Đông Á đang biến động ra sao và dấu vết vật chất của giai đoạn nằm ở đâu.
+
 ## Quy ước tên riêng Việt – Hàn – Anh
 
 Trong toàn bộ library, tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.
@@ -16,7 +18,13 @@ Quy tắc chi tiết nằm tại [`32_naming_translation_conventions.md`](32_nam
 
 Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Nếu cần một đường đọc tuyến tính, hãy đi từ 01 đến 25. Nếu đã có kiến thức lịch sử cơ bản, các file 26–29 cho phép đọc theo các trục xuyên thời gian như social history, economic history, history of knowledge và public memory. File 30 là chronology để tra nhanh; file 31 là glossary Việt–Hàn–Anh và bản đồ nguồn; file 32 quy định cách ghi tên riêng Việt–Hàn–Anh.
 
-Các chương cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối.
+Để tránh đọc lịch sử như danh sách sự kiện, dùng thêm ba contextual companion:
+
+- [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md): đặt Korea và Việt Nam trên cùng trục thời gian, đồng thời giải thích economy, regional context và transition mà không đánh đồng hai lịch sử.
+- [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md): biến dolmen, Gyeongju, Ganghwa, palace, fortress, prison, DMZ, industrial city và memorial site thành evidence để đọc lịch sử ngoài đời.
+- [`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md): theo dõi production, land, tax, trade, labor, household và đời sống thường ngày từ tiền sử đến hiện đại.
+
+Các chapter cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối. Comparison với Việt Nam cũng tuân theo nguyên tắc này: dùng để tạo temporal/geographic context, không để xếp hạng hay kết luận hai xã hội “giống nhau”.
 
 ## KIIP 연계
 
@@ -28,6 +36,6 @@ Bản đồ từ fact KIIP sang các chapter lịch sử chuyên sâu nằm tạ
 
 ## Nguồn nền
 
-Xương sống periodization và chronology được đối chiếu với National Institute of Korean History (국사편찬위원회, NIKH), đặc biệt *A History of Korea* và 우리역사넷; các vấn đề văn hoá–xã hội tham chiếu Academy of Korean Studies (한국학중앙연구원) và 한국민족문화대백과사전; hiện vật và lịch sử vật chất đối chiếu National Museum of Korea. Những nguồn này không loại bỏ nhu cầu đọc nghiên cứu học thuật đa góc nhìn, nhưng tạo một baseline tốt để tránh sai niên đại và nhầm thuật ngữ.
+Xương sống periodization và chronology được đối chiếu với National Institute of Korean History (국사편찬위원회, NIKH), đặc biệt *A History of Korea* và 우리역사넷; các vấn đề văn hoá–xã hội tham chiếu Academy of Korean Studies (한국학중앙연구원) và 한국민족문화대백과사전; hiện vật và lịch sử vật chất đối chiếu National Museum of Korea. Với di tích/địa điểm, contextual layer mới ưu tiên thêm hồ sơ UNESCO World Heritage Centre và institution quản lý di sản tương ứng. Những nguồn này không loại bỏ nhu cầu đọc nghiên cứu học thuật đa góc nhìn, nhưng tạo một baseline tốt để tránh sai niên đại và nhầm thuật ngữ.
 
 > Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, công nghệ, tư tưởng, môi trường và lựa chọn của con người.

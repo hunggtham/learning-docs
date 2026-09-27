@@ -70,7 +70,36 @@ Các trục xuyên thời gian:
 02 → 27 Economic History
 02 → 28 Education / Writing / Science / Technology
 01 → 29 Historiography / Collective Memory / Public History
+30 → Timeline tra cứu mốc
+31 → Glossary & reference map
+32 → Naming / translation conventions
 ```
+
+## Lớp đọc mới: timeline + kinh tế + Việt Nam + địa điểm
+
+Từ bản cập nhật này, lịch sử Hàn Quốc không nên được đọc chỉ theo chuỗi dynasty/event. Ba file dưới đây tạo một **context layer** chạy song song toàn bộ `02`–`23`:
+
+[`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md) đặt từng giai đoạn Hàn Quốc vào cùng trục thời gian với Việt Nam, đồng thời giải thích economy, state capacity, everyday context và transition. Comparison dùng để tạo mốc neo thời gian, không giả định hai xã hội có cùng trajectory.
+
+[`34_historical_places_field_guide.md`](34_historical_places_field_guide.md) nối từng giai đoạn với physical evidence: dolmen, Gyeongju, Baekje Historic Areas, Gaya tumuli, Ganghwa, Haeinsa, Gyeongbokgung, Hwaseong, Deoksugung, Seodaemun Prison, DMZ, Gwangju, Ulsan/Pohang và urban landscape hiện đại. Mục tiêu là biết **đến đó thì phải nhìn gì và câu hỏi lịch sử nào có thể đọc ra từ không gian**.
+
+[`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md) theo dõi production, land, tax, trade, labor, household, class/status, industrialization và đời sống thường ngày qua từng thời kỳ. Nó đóng vai trò bridge dễ đọc trước khi đi sâu vào các chapter thematic như `26` và `27`.
+
+Đường đọc khuyến nghị từ nay là:
+
+```text
+chapter chronology 02–23
+        ↓
+33: cùng lúc Việt Nam ở đâu + context khu vực
+        ↓
+35: economy và người bình thường sống thế nào
+        ↓
+34: dấu vết vật chất hôm nay nằm ở đâu
+        ↓
+26–29: thematic deep dive khi cần
+```
+
+Không bắt buộc mở bốn file cùng lúc. Mỗi chapter chính vẫn phải tự giải thích được vấn đề; các file `33`–`35` giúp tăng chiều sâu và tạo mental map khi cần.
 
 ## Vì sao dependency này không phải Beginner → Advanced
 
@@ -108,11 +137,16 @@ graph TD
     W --> X[Contemporary Structural Change]
     P --> Y[Inter-Korean Relations]
     R --> Y
+    B --> Z[Parallel Korea–Vietnam Context]
+    Z --> ZA[Economy Society Everyday Life]
+    ZA --> ZB[Historical Places Field Guide]
 ```
 
 ## Mental Model chung
 
 > Hãy đọc mỗi giai đoạn như một hệ thống có “state”: population, territory, institutions, technology, resource flows, status rules và beliefs. Một sự kiện lớn tạo shock, nhưng state mới luôn kế thừa một phần data và constraint của state cũ. Vì vậy lịch sử có cả rupture lẫn continuity.
+
+Với mỗi giai đoạn, thêm bốn câu hỏi bắt buộc: **mốc thời gian nào là anchor; economy tạo và chuyển surplus ra sao; cùng lúc Việt Nam đang ở phase nào; và ngày nay còn có thể nhìn thấy system đó ở địa điểm/di tích nào?** Nếu một lời giải thích chỉ trả lời “ai lên ngôi, ai đánh ai” mà không trả lời được các câu này, nó chưa đủ cho mục tiêu của library.
 
 ## Liên kết với bộ Văn hoá Hàn Quốc
 
