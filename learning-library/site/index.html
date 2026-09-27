@@ -19,13 +19,179 @@
       .doc-card h3 { margin-bottom: 8px; }
       .doc-language { margin: 0 0 8px; color: var(--muted); font-size: .75rem; }
       .publish-note { margin: 18px 0 0; color: var(--muted); font-size: .84rem; }
-      .folder-tree { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 4px; }
-      .folder-button { min-height: 42px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); color: var(--ink); cursor: pointer; text-align: left; }
-      .folder-button.active { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 700; }
-      .folder-button.navigation { color: var(--accent); }
-      .folder-count { color: var(--muted); font-size: .75rem; }
-      .folder-summary { align-self: center; color: var(--muted); font-size: .8rem; }
-      @media (max-width: 760px) { .doc-language { font-size: .7rem; } }
+
+      .library-browser {
+        display: grid;
+        grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+        margin-top: 24px;
+      }
+      .folder-sidebar {
+        position: sticky;
+        top: 88px;
+        max-height: calc(100dvh - 112px);
+        overflow: auto;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: color-mix(in srgb, var(--panel) 92%, transparent);
+        scrollbar-width: thin;
+      }
+      .folder-sidebar-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 4px 7px 10px;
+        color: var(--muted);
+        font-size: .72rem;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      .folder-tree { display: grid; gap: 2px; }
+      .folder-tree-row {
+        --depth: 0;
+        position: relative;
+        display: grid;
+        grid-template-columns: 24px minmax(0, 1fr);
+        align-items: center;
+        margin-left: calc(var(--depth) * 15px);
+      }
+      .folder-tree-row:not([data-depth="0"])::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        bottom: -3px;
+        left: -8px;
+        width: 1px;
+        background: color-mix(in srgb, var(--line) 82%, transparent);
+      }
+      .folder-tree-row.trail:not(.active)::before { background: color-mix(in srgb, var(--accent) 42%, var(--line)); }
+      .folder-toggle,
+      .folder-toggle-spacer {
+        width: 24px;
+        height: 34px;
+      }
+      .folder-toggle {
+        display: grid;
+        place-items: center;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        border-radius: 7px;
+      }
+      .folder-toggle:hover,
+      .folder-toggle:focus-visible { background: var(--accent-soft); color: var(--accent); outline: 0; }
+      .folder-node {
+        min-width: 0;
+        min-height: 38px;
+        display: grid;
+        grid-template-columns: 20px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 8px;
+        border: 0;
+        border-radius: 9px;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        text-align: left;
+      }
+      .folder-node:hover,
+      .folder-node:focus-visible { background: color-mix(in srgb, var(--accent-soft) 52%, transparent); color: var(--ink); outline: 0; }
+      .folder-tree-row.active .folder-node { background: var(--accent-soft); color: var(--accent); font-weight: 750; }
+      .folder-tree-row.trail .folder-node { color: var(--ink); }
+      .folder-node-icon { font-size: .95rem; line-height: 1; }
+      .folder-node-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .folder-count {
+        min-width: 24px;
+        padding: 1px 6px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--line) 60%, transparent);
+        color: var(--muted);
+        font-size: .67rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      .folder-tree-row.active .folder-count { background: color-mix(in srgb, var(--accent) 13%, transparent); color: var(--accent); }
+
+      .folder-content { min-width: 0; }
+      .folder-breadcrumb {
+        min-height: 42px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+        margin: 0 0 14px;
+        padding: 7px 9px;
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: color-mix(in srgb, var(--panel) 76%, transparent);
+      }
+      .breadcrumb-button {
+        min-height: 28px;
+        max-width: min(260px, 55vw);
+        padding: 3px 7px;
+        border: 0;
+        border-radius: 7px;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .breadcrumb-button:hover,
+      .breadcrumb-button:focus-visible,
+      .breadcrumb-button.current { background: var(--accent-soft); color: var(--accent); outline: 0; }
+      .breadcrumb-separator { color: var(--muted); opacity: .55; }
+
+      .folder-children {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+      .folder-card {
+        min-width: 0;
+        min-height: 72px;
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 13px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        color: var(--ink);
+        cursor: pointer;
+        text-align: left;
+        transition: transform .14s, border-color .14s, box-shadow .14s;
+      }
+      .folder-card:hover,
+      .folder-card:focus-visible { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 52%, var(--line)); box-shadow: 0 8px 20px #2221; outline: 0; }
+      .folder-card-icon { font-size: 1.15rem; }
+      .folder-card-copy { min-width: 0; }
+      .folder-card-name { display: block; overflow: hidden; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; }
+      .folder-card-meta { display: block; margin-top: 2px; color: var(--muted); font-size: .7rem; }
+      .folder-card-arrow { color: var(--muted); font-size: 1.1rem; }
+      .folder-empty-note { margin: 4px 0 18px; color: var(--muted); font-size: .8rem; }
+
+      @media (max-width: 960px) {
+        .library-browser { grid-template-columns: 220px minmax(0, 1fr); gap: 16px; }
+        .folder-children { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 760px) {
+        .doc-language { font-size: .7rem; }
+        .library-browser { display: block; }
+        .folder-sidebar { position: static; max-height: 330px; margin-bottom: 16px; }
+        .folder-children { grid-template-columns: 1fr; }
+        .folder-tree-row { margin-left: calc(var(--depth) * 13px); }
+      }
     </style>
   </head>
   <body>
@@ -55,10 +221,17 @@
           <div><p class="eyebrow">LIBRARY</p><h2 id="result-title">모든 자료</h2></div>
           <p id="result-count" class="muted"></p>
         </div>
-        <div id="folder-tree" class="folder-tree" aria-label="Folder browser"></div>
-        <div id="format-filters" class="filters" aria-label="File type filters"></div>
-        <div id="filters" class="filters" aria-label="Document category filters"></div>
-        <div id="document-grid" class="document-grid"></div>
+        <div class="library-browser">
+          <aside class="folder-sidebar" aria-label="Folder navigation">
+            <div class="folder-sidebar-heading"><span>Folders</span><span>Depth</span></div>
+            <nav id="folder-tree" class="folder-tree" aria-label="Folder browser"></nav>
+          </aside>
+          <section class="folder-content" aria-label="Folder contents">
+            <nav id="folder-breadcrumb" class="folder-breadcrumb" aria-label="Folder path"></nav>
+            <div id="folder-children" class="folder-children"></div>
+            <div id="document-grid" class="document-grid"></div>
+          </section>
+        </div>
       </section>
     </template>
 
