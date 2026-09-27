@@ -1,41 +1,46 @@
 # Master Knowledge Book — Lịch sử Việt Nam
 
-Bộ tài liệu này đọc lịch sử Việt Nam như một **hệ thống đang biến đổi**, không phải danh sách triều đại, vua, chiến tranh và niên đại để học thuộc. Câu hỏi trung tâm là: trong mỗi giai đoạn, con người sống trên không gian tương ứng với Việt Nam ngày nay dựa vào nguồn lực nào, sản xuất và trao đổi ra sao, quyền lực được tổ chức bằng cơ chế gì, địa lý tạo constraint nào, chiến tranh hoặc thương mại làm thay đổi xã hội thế nào, và dấu vết nào của quá khứ vẫn có thể quan sát tại di tích, đô thị, làng xóm, hiện vật hoặc cảnh quan hiện nay.
+Bộ tài liệu này được thiết kế như một **knowledge library** độc lập về lịch sử Việt Nam, viết chủ yếu bằng tiếng Việt. Nó không phải timeline để học thuộc, cũng không phải tập hợp chiến công hay danh sách triều đại. Mục tiêu là giải thích **vì sao một trật tự lịch sử hình thành, cơ chế nào giữ nó tồn tại, cú sốc nào làm nó thay đổi và phần nào của quá khứ vẫn còn tác động đến hiện tại**.
 
-Library kế thừa [`../prompt/COMMON_PROMPT.md`](../prompt/COMMON_PROMPT.md). Vì vậy mỗi chapter phải có prerequisite, câu hỏi trung tâm, mechanism, evidence, boundary dễ nhầm và đường bàn giao sang phần tiếp theo; thuật ngữ quan trọng được note English khi hữu ích, nhưng nội dung vẫn ưu tiên tiếng Việt tự nhiên và có thể đọc liền mạch.
+Lịch sử ở đây được đọc theo First-Principles Thinking. Một triều đại không chỉ là tên vua và niên đại. Ta sẽ hỏi nhà nước huy động thuế và quân đội bằng cách nào, settlement và river network ảnh hưởng production ra sao, ai kiểm soát land, technology thay đổi productivity thế nào, religion và education tạo legitimacy ra sao, chiến tranh làm biến đổi population như thế nào, và vì sao một institution có thể tiếp tục tồn tại dù regime đã thay đổi.
 
-## Phạm vi: “lịch sử Việt Nam” không đồng nghĩa với một quốc gia bất biến từ thời tiền sử
+Bộ này cũng không ép toàn bộ quá khứ của lãnh thổ Việt Nam hiện nay vào một narrative duy nhất của Đại Việt/người Kinh. Champa, Óc Eo/Mekong Delta, Khmer world, upland societies và maritime networks sẽ được đọc như những historical systems có logic riêng rồi mới nối vào các quá trình interaction, conflict, migration, exchange và integration.
 
-Biên giới, tên nước, trung tâm chính trị và thành phần dân cư thay đổi rất mạnh qua thời gian. Khi đọc thời Đông Sơn, không nên chiếu bản đồ nước Cộng hòa Xã hội Chủ nghĩa Việt Nam hiện nay ngược về quá khứ rồi giả định toàn bộ lãnh thổ đã thuộc một political community duy nhất. Miền Bắc, duyên hải miền Trung, Tây Nguyên và đồng bằng sông Cửu Long từng nằm trong những mạng lưới và polity khác nhau; lịch sử Champa, Óc Eo–Phù Nam, cộng đồng Khmer, các nhóm miền núi và nhiều cộng đồng khác là một phần cần thiết để hiểu quá trình hình thành không gian Việt Nam hiện đại.
+Đây là một case study khu vực trong [World History](../world_history/README.md): các chapter thế giới cung cấp context về East Asian empires, Indian Ocean trade, Mongol expansion, early modern commerce, colonialism, World Wars và Cold War; library này đi sâu vào cách những lực đó được các xã hội trên không gian Việt Nam tiếp nhận, thương lượng và biến đổi.
 
-Đó là lý do library này dùng **historical geography (địa lý lịch sử)** cùng chronology. Một địa danh hiện đại được nhắc tới để người đọc định vị, nhưng luôn phải phân biệt địa lý hôm nay với landscape và political boundary của thời đang học.
+## Cách sử dụng
 
-## Cách đọc mỗi giai đoạn
+Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Sau đó đọc tuyến tính từ 01 trở đi nếu muốn thấy causal chain đầy đủ.
 
-Một chapter không kết thúc ở câu “ai thắng ai”. Nó cần nối ít nhất sáu lớp: **thời gian → không gian → sinh kế/kinh tế → cấu trúc xã hội → nhà nước/quyền lực → di sản vật chất và ký ức**. Khi thích hợp, chapter còn nối thêm công nghệ, tôn giáo, chữ viết, thương mại khu vực, môi trường, dân số và đời sống thường ngày.
+Các chapter hiện đã triển khai đến nhà Lý:
 
-Ví dụ, Cổ Loa không chỉ được đọc như “kinh đô Âu Lạc”. Ta cần hỏi vì sao vị trí ở vùng châu thổ sông Hồng có giá trị, một hệ thống thành–hào quy mô lớn đòi hỏi năng lực huy động lao động nào, sản xuất đồng và vũ khí cho biết gì về specialization, và phần nào thuộc archaeology trong khi phần nào đến từ truyền thuyết An Dương Vương – nỏ thần – Mỵ Châu, Trọng Thủy.
+- [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md): evidence, myth, periodization và causal reasoning.
+- [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md): sông, đồng bằng, núi, biển và historical space.
+- [`03_prehistory_to_dong_son.md`](03_prehistory_to_dong_son.md): tiền sử đến Đông Sơn.
+- [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md): Văn Lang, Âu Lạc và Cổ Loa.
+- [`05_nanyue_han_and_imperial_integration.md`](05_nanyue_han_and_imperial_integration.md): Nam Việt, Hán và imperial integration.
+- [`06_northern_rule_society_economy_and_resistance.md`](06_northern_rule_society_economy_and_resistance.md): Bắc thuộc dài hạn, society, economy và resistance.
+- [`07_tenth_century_autonomy_and_state_building.md`](07_tenth_century_autonomy_and_state_building.md): thế kỷ X từ autonomy đến durable state.
+- [`08_ly_thang_long_state_and_economy.md`](08_ly_thang_long_state_and_economy.md): nhà Lý, Thăng Long, agriculture, Buddhism và state consolidation.
 
-## Di tích không phải hình minh họa trang trí
+Các file tiếp theo sẽ tiếp tục theo dependency trong index, không đổi sang kiểu tóm tắt chronology.
 
-Mỗi giai đoạn sẽ cố gắng gắn với nơi còn có thể quan sát hôm nay. Tuy nhiên một đền thờ hoặc lễ hội hiện tồn không tự động là bằng chứng trực tiếp cho mọi chi tiết của câu chuyện mà nó tưởng niệm. Library phân biệt:
+## Cách đọc mỗi thời kỳ
 
-**archaeological evidence (bằng chứng khảo cổ)** — thành lũy, tầng văn hóa, mộ, công cụ, gốm, xương, hạt thực vật;
+Mỗi giai đoạn cố gắng giữ đồng thời nhiều layer:
 
-**written source (sử liệu thành văn)** — bi ký, chính sử, địa chí, thư từ, hồ sơ hành chính;
+**Timeline** để không đảo trước–sau. **Geography** để hiểu vì sao capital, battlefield, trade route và settlement nằm ở vị trí đó. **Economy** để biết food, land, tax, labor và exchange nuôi political order như thế nào. **Society** để thấy village, household, elite, migration và status. **Technology & infrastructure** để nối metallurgy, irrigation, road, port, writing và military technology với capacity. **Religion / ideas / education** để hiểu legitimacy và information system. **Di tích và địa điểm** để biến historical mechanism thành landscape có thể quan sát hôm nay.
 
-**collective memory (ký ức tập thể)** — truyền thuyết, lễ hội, tín ngưỡng, cách cộng đồng kể về quá khứ.
+Di tích luôn được đọc theo lớp. Một temple hiện tồn có thể tưởng niệm sự kiện cổ nhưng kiến trúc hiện tại được xây lại nhiều thế kỷ sau. Một archaeological site có thể cho direct material evidence mạnh hơn, nhưng artifact cũng không tự động xác nhận toàn bộ later legend.
 
-Ba lớp có thể bổ sung nhau nhưng không được trộn thành một mức độ chắc chắn duy nhất.
+## Nguyên tắc evidence
 
-## Đường đọc
+Các chương cố ý phân biệt giữa **fact tương đối chắc**, **archaeological inference**, **historical interpretation**, **tradition / legend**, **collective memory** và **national narrative**. Khi chronology hoặc interpretation còn debate, tài liệu nói rõ uncertainty thay vì tạo false precision.
 
-Bắt đầu ở [`00_index_and_dependency.md`](00_index_and_dependency.md), sau đó đọc [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md) để có phương pháp, [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) để dựng “bản đồ trong đầu”, rồi mới sang [`03_prehistory_to_dong_son.md`](03_prehistory_to_dong_son.md) và [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md).
+Một narrative quen thuộc không được dùng để thay thế evidence; ngược lại, myth và ritual cũng không bị loại bỏ chỉ vì không thể đọc literal. Chúng là evidence về memory, identity và legitimacy của thời đã kể hoặc tái kể chúng.
 
-Các chapter sau sẽ tiếp tục đến Bắc thuộc, các nhà nước độc lập trung đại, Đại Việt–Champa và quá trình mở rộng không gian, thời Nguyễn, thuộc địa, chiến tranh thế kỷ XX, thống nhất, Đổi Mới và Việt Nam đương đại. Song song sẽ có các trục xuyên thời gian về economic history, social history, technology, environment, education/writing, religion và public memory.
+## Nguồn nền
 
-## Nguồn nền cho giai đoạn đầu
+Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim và nhiều nghiên cứu Cambridge/Oxford; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
 
-Phần tiền sử và Cổ Loa ưu tiên đối chiếu khảo cổ học thay vì biến truyền thống hậu kỳ thành fact trực tiếp. Nguồn nền ban đầu gồm công trình của Nam C. Kim, *The Origins of Ancient Vietnam* (Oxford University Press, 2015); nghiên cứu khảo cổ Cổ Loa của Nam C. Kim, Lại Văn Tới và Trịnh Hoàng Hiệp; tài liệu của Bảo tàng Lịch sử Quốc gia về văn hóa Đông Sơn; và hồ sơ di tích của Cục Di sản Văn hóa. Các niên đại khảo cổ được ghi **xấp xỉ** khi scholarship còn khác nhau.
-
-Bộ này đồng thời là một regional case study của [`../world_history/`](../world_history/README.md): World History cung cấp mạng lưới Đông Á, Đông Nam Á, thương mại biển, đế quốc, công nghiệp hóa và Chiến tranh Lạnh; library này đi sâu vào cách những lực đó vận hành trên không gian Việt Nam.
+> Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, technology, geography, beliefs và lựa chọn của con người.
