@@ -2,6 +2,8 @@
 
 Consumer và producer theory là hai mô hình nền tảng của microeconomics. Mục tiêu không phải gán cho con người một công thức utility “đúng tuyệt đối”, mà tạo một ngôn ngữ để hỏi: tác nhân đang tối ưu gì, constraint nào ràng buộc, và thay đổi nào làm lựa chọn ở biên đổi hướng?
 
+Hai mô hình có cùng một khung đọc: **ai ra quyết định → mục tiêu là gì → lựa chọn nào khả thi → phương án nào tốt nhất → khi constraint đổi thì phản ứng ra sao**. Consumer chọn bundle hàng hóa dưới giới hạn ngân sách; producer chọn input hoặc output dưới giới hạn công nghệ và chi phí. Nếu bỏ qua một mắt xích, công thức có thể vẫn đúng về đại số nhưng khó hiểu về kinh tế.
+
 ## 1. Consumer bắt đầu từ budget constraint
 
 Với hai hàng hóa `x` và `y`, thu nhập `m` và giá `p_x`, `p_y`, budget constraint là:
@@ -13,6 +15,8 @@ p_x x + p_y y ≤ m
 Đường ngân sách có intercept `m / p_x` và `m / p_y`, độ dốc `-p_x / p_y`. Giá tương đối, không chỉ giá tuyệt đối, quyết định trade-off. Thu nhập tăng làm đường ngân sách dịch song song; giá một hàng hóa đổi làm đường xoay quanh intercept của hàng hóa kia nếu thu nhập danh nghĩa giữ nguyên.
 
 Budget constraint không nói household chắc chắn chọn điểm nào. Nó chỉ cho biết tập lựa chọn khả thi. Để chọn một điểm, cần mô hình hóa preferences hoặc quy tắc quyết định.
+
+Ví dụ, nếu `m = 100`, `p_x = 10` và `p_y = 20`, household mua tối đa 10 đơn vị `x` hoặc 5 đơn vị `y`, hoặc một phối hợp nằm giữa. Độ dốc `-p_x/p_y = -0.5` nghĩa là để mua thêm 1 đơn vị `x`, household phải bỏ 0.5 đơn vị `y` khi đã dùng hết ngân sách. Đây là trade-off mà **thị trường** áp đặt; nó chưa nói household thích bundle nào.
 
 ## 2. Preferences, utility và indifference curve
 
@@ -27,6 +31,8 @@ Các giả định thường dùng:
 
 Indifference curve nối các bundles đem lại cùng utility. Độ dốc của nó là marginal rate of substitution (MRS): consumer sẵn sàng bỏ bao nhiêu `y` để có thêm một đơn vị `x` mà vẫn giữ utility.
 
+MRS là trade-off chủ quan của consumer; `p_x/p_y` là trade-off do giá thị trường tạo ra. Khi hai trade-off bằng nhau, consumer không còn lý do đổi một bundle rất nhỏ theo hướng này hay hướng kia. Utility ở đây là cách biểu diễn thứ tự ưu tiên, không phải thước đo khách quan để so sánh hạnh phúc giữa hai người.
+
 ## 3. Optimal choice là tiếp điểm giữa objective và constraint
 
 Trong nghiệm nội bộ, consumer chọn bundle thỏa:
@@ -36,6 +42,8 @@ MRS = p_x / p_y
 ```
 
 Trực giác: willingness to trade ở biên phải bằng market trade-off. Nếu MRS lớn hơn price ratio, `x` tương đối đáng giá nên consumer muốn tăng `x`; nếu nhỏ hơn, consumer muốn giảm `x`.
+
+Điều kiện trên chỉ áp dụng cho nghiệm nằm bên trong tập lựa chọn. Nếu consumer chỉ mua một hàng hóa, hàng hóa bán theo gói, hoặc có chi phí cố định, optimum có thể nằm ở biên; khi đó phải so sánh các phương án khả thi chứ không chỉ giải `MRS = p_x/p_y`.
 
 Điều kiện tiếp điểm không áp dụng máy móc khi có corner solution, perfect substitutes, perfect complements, discrete choice, fixed cost hoặc non-convex preferences. Khi đó phải kiểm tra toàn bộ boundary của feasible set.
 
@@ -60,6 +68,8 @@ price elasticity of demand = %ΔQ_d / %ΔP
 
 Elasticity là local hoặc theo một khoảng giá cụ thể. Doanh thu tăng hay giảm khi giá đổi phụ thuộc độ co giãn, không thể kết luận chỉ từ hướng của giá.
 
+Nói đơn giản, elasticity hỏi “giá đổi 1% thì lượng cầu đổi khoảng bao nhiêu %?”. Nếu người mua dễ tìm hàng thay thế hoặc dễ trì hoãn mua, cầu thường co giãn hơn. Nếu hàng hóa thiết yếu và khó thay thế trong ngắn hạn, cầu thường kém co giãn hơn; nhưng đây là kết luận theo bối cảnh, không phải tính chất bất biến của sản phẩm.
+
 ## 6. Producer bắt đầu từ technology
 
 Firm biến inputs thành output qua production function:
@@ -71,6 +81,8 @@ q = f(K, L, A, ...)
 `K` có thể là capital, `L` là labor, `A` là technology hoặc productivity shifter. Production function mô tả khả năng kỹ thuật, chưa tự nói firm nên sản xuất bao nhiêu hay ai sở hữu surplus.
 
 Trong ngắn hạn, ít nhất một input bị cố định. Trong dài hạn, firm có thể điều chỉnh tất cả inputs, thay đổi quy mô plant và chọn technology. Vì vậy short-run cost curve không thể đọc như long-run cost curve.
+
+“Ngắn hạn” không nhất thiết là vài ngày và “dài hạn” không nhất thiết là nhiều năm. Đây là tên cho khả năng điều chỉnh: nhà hàng có thể đổi số ca làm ngay, nhưng chưa thể mở rộng bếp trong tuần này. Cùng một doanh nghiệp có thể ở short run đối với mặt bằng nhưng ở long run đối với nhân công.
 
 ## 7. Cost: fixed, variable, average và marginal
 
@@ -86,6 +98,8 @@ ATC(q) = TC(q) / q
 ```
 
 Marginal cost có thể tăng vì diminishing marginal product của input biến đổi. Average cost có thể giảm khi fixed cost được phân bổ trên nhiều đơn vị, nhưng diseconomies of scale hoặc coordination cost có thể làm nó tăng lại.
+
+`MC` trả lời “sản xuất thêm một đơn vị làm tổng chi phí tăng bao nhiêu?”, còn `ATC` trả lời “mỗi đơn vị đang gánh trung bình bao nhiêu chi phí?”. Khi `MC < ATC`, đơn vị mới kéo chi phí trung bình xuống; khi `MC > ATC`, nó kéo chi phí trung bình lên. Đây là lý do `MC` thường cắt `ATC` tại điểm thấp nhất của `ATC`.
 
 ## 8. Profit maximization và supply
 
@@ -115,6 +129,8 @@ social marginal benefit = private marginal benefit + external benefit
 ```
 
 Externality, public good và asymmetric information tạo lý do để phân tích market failure. Nhưng “có market failure” không tự động chứng minh một can thiệp cụ thể tốt hơn laissez-faire; cần tính policy implementation cost, government failure, incidence và phản ứng hành vi.
+
+Ví dụ, nhà máy có thể chỉ tính chi phí điện, nguyên liệu và nhân công, trong khi người dân quanh đó chịu thêm chi phí bệnh tật. Private equilibrium khi ấy tạo output cao hơn mức tối ưu xã hội. Thuế, tiêu chuẩn hoặc giấy phép phát thải có thể giúp, nhưng hiệu quả còn phụ thuộc việc đo lường, thực thi và doanh nghiệp chuyển chi phí sang giá hoặc tiền lương ra sao.
 
 ## 10. Checklist mô hình
 
