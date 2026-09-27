@@ -12,7 +12,7 @@ Bộ này cũng không ép toàn bộ quá khứ của lãnh thổ Việt Nam hi
 
 Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Sau đó đọc tuyến tính từ 01 trở đi nếu muốn thấy causal chain đầy đủ.
 
-Các chapter hiện đã triển khai đến nhà Nguyễn đầu thế kỷ XIX:
+Các chapter hiện đã triển khai từ phương pháp đọc lịch sử đến hết chiến tranh năm 1975:
 
 - [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md): evidence, myth, periodization và causal reasoning.
 - [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md): sông, đồng bằng, núi, biển và historical space.
@@ -30,6 +30,10 @@ Các chapter hiện đã triển khai đến nhà Nguyễn đầu thế kỷ XIX
 - [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md): Champa, Khmer, uplands, migration và frontier formation.
 - [`15_tay_son_rebellion_war_and_reunification.md`](15_tay_son_rebellion_war_and_reunification.md): Tây Sơn, rice, fiscal crisis, regional war và Nguyễn recovery.
 - [`16_early_nguyen_hue_administration_and_economy.md`](16_early_nguyen_hue_administration_and_economy.md): Huế, early Nguyễn administration, infrastructure và centralization.
+- [`17_french_conquest_colonial_state_and_economy.md`](17_french_conquest_colonial_state_and_economy.md): French conquest, colonial state, land, tax, infrastructure và labor.
+- [`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md): colonial society, print, competing nationalist/revolutionary projects, World War II và August 1945.
+- [`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md): post-1945 state-building, First Indochina War, Điện Biên Phủ và Geneva.
+- [`20_two_vietnams_cold_war_and_1975.md`](20_two_vietnams_cold_war_and_1975.md): hai nhà nước, insurgency, internationalized Cold War, escalation, diplomacy và 1975.
 
 Các file tiếp theo sẽ tiếp tục theo dependency trong index, không đổi sang kiểu tóm tắt chronology.
 
@@ -45,10 +49,12 @@ Di tích luôn được đọc theo lớp. Một temple hiện tồn có thể t
 
 Các chương cố ý phân biệt giữa **fact tương đối chắc**, **archaeological inference**, **historical interpretation**, **tradition / legend**, **collective memory** và **national narrative**. Khi chronology hoặc interpretation còn debate, tài liệu nói rõ uncertainty thay vì tạo false precision.
 
-Một narrative quen thuộc không được dùng để thay thế evidence; ngược lại, myth và ritual cũng không bị loại bỏ chỉ vì không thể đọc literal. Chúng là evidence về memory, identity và legitimacy của thời đã kể hoặc tái kể chúng.
+Với lịch sử thế kỷ XX, quy tắc này còn nghiêm ngặt hơn: các chapter tách documented event khỏi retrospective political narrative, dùng nhiều scale phân tích cùng lúc và không biến ngôn ngữ tưởng niệm của bất kỳ phía nào thành terminology trung tính mặc định.
+
+Một narrative quen thuộc không được dùng để thay thế evidence; ngược lại, myth, ritual và memory cũng không bị loại bỏ. Chúng là evidence về identity, legitimacy và cách society sử dụng quá khứ.
 
 ## Nguồn nền
 
-Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim, John K. Whitmore, James A. Anderson, Tana Li và nhiều nghiên cứu Cambridge/Oxford; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
+Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim, John K. Whitmore, James A. Anderson, Tana Li và *The Cambridge History of the Vietnam War*; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
 
 > Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, technology, geography, beliefs và lựa chọn của con người.
