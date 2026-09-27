@@ -1,72 +1,340 @@
-# Major critiques và những câu hỏi còn mở
+# Major critiques — kiểm tra từng lớp của Marxian và Marxist–Leninist theory
 
-Sau khi đã đi từ Marx đến Lenin, Marxism–Leninism và historical implementation, bước tiếp theo không phải chọn một verdict kiểu “đúng/sai toàn bộ”. Một theory lớn thường chứa nhiều claim khác loại: có claim về human nature, claim về history, claim kinh tế, claim về state, claim chuẩn tắc và claim dự báo. Mỗi loại phải bị kiểm tra bằng một tiêu chuẩn khác nhau. Chapter này vì vậy dùng [Historical implementation và evidence](06_historical_implementation_and_evidence.md) làm prerequisite, rồi tách các tranh luận lớn thành những câu hỏi có thể phân tích được.
+Sau khi đi từ Marx tới Lenin, doctrine và historical implementation, critique không nên bắt đầu bằng verdict “đúng/sai toàn bộ”. Một tradition lớn chứa claims khác loại: theory of history, value theory, class analysis, account of state, transition strategy, institutional design và normative critique. Một objection chỉ có force trong phạm vi claim nó thực sự chạm tới.
 
-## 1. Historical materialism có phải một theory tất định?
+Chapter này vì vậy dùng nguyên tắc:
 
-Một cách đọc đơn giản thường biến **historical materialism** (chủ nghĩa duy vật lịch sử, 역사적 유물론) thành công thức: productive forces phát triển → relations of production trở thành rào cản → class conflict → một mode of production mới xuất hiện. Nhưng các văn bản của Marx không tạo thành một mô hình đơn nhất, khép kín và được formalize như một theory hiện đại. Trong scholarship, tranh luận quan trọng là nên đọc Marx như đang đưa ra một quy luật lịch sử mạnh, một bộ causal tendencies, hay một framework để phân tích cách production, class và institutions giới hạn tập lựa chọn của con người.
+```text
+identify claim
+→ identify mechanism
+→ identify evidence standard
+→ state strongest objection
+→ state possible reply
+→ mark what remains unresolved
+```
 
-Nếu hiểu theo phiên bản tất định mạnh, theory gặp một bài toán empirical rõ ràng: lịch sử thế kỷ XX và XXI không đi theo một sequence duy nhất. Industrial capitalism không ở mọi nơi tự động dẫn đến cùng một political outcome, working class không hành động như một actor đồng nhất, và nationalism, religion, ethnicity, institutions hay geopolitical shocks có thể trở thành causal variables độc lập hoặc tương tác với class.
+Mục tiêu không phải cân bằng giả tạo giữa mọi position, mà tránh lỗi dùng one criticism để bác bỏ toàn bộ tradition hoặc dùng one surviving insight để bảo vệ mọi historical implementation.
 
-Nhưng từ việc một deterministic reading thất bại không suy ra rằng mọi Marxian analysis về class, production hoặc institutional conflict đều vô giá trị. Bài học phương pháp là phải hạ claim xuống đúng độ mạnh: “economic structure constrains politics” khác rất xa với “economic structure uniquely determines politics”.
+## Historical materialism: law of history hay constraint framework?
 
-## 2. Class có giải thích đủ social conflict không?
+Strong deterministic reading có thể được viết như:
 
-Marx đặt class relation ở trung tâm vì quyền kiểm soát productive assets và vị trí trong production tạo ra khác biệt có cấu trúc về income, bargaining power và political influence. Đây vẫn là một câu hỏi sống trong sociology và political economy hiện đại. Tuy nhiên, một model lấy class làm biến chính phải trả lời vì sao con người nhiều khi mobilize theo nation, race, ethnicity, religion, gender hoặc status group thay vì theo class.
+```text
+productive forces develop
+→ existing relations become fetters
+→ class conflict intensifies
+→ new mode of production emerges
+```
 
-Max Weber là một đối chiếu quan trọng vì ông phân biệt **class**, **status** và **party** thay vì giảm social stratification về một trục duy nhất. Các tradition feminist và race theory về sau cũng chỉ ra rằng unpaid care work, legal status, household power hoặc racial hierarchy có thể tạo domination mà một class-only model không mô tả đầy đủ.
+Problem is that twentieth- and twenty-first-century history does not follow one universal sequence. Industrialization has coexisted with liberal democracy, authoritarian capitalism, social democracy, fascism, communist revolution and many hybrid paths.
 
-Điểm cần giữ là distinction giữa “class matters” và “class explains everything”. Claim thứ nhất có thể được kiểm tra bằng data về ownership, labor market và political influence. Claim thứ hai đòi một explanatory burden cao hơn nhiều.
+A strong deterministic theory therefore faces counterevidence unless it specifies scope conditions broad enough to explain variation without becoming unfalsifiable.
 
-## 3. Labor theory of value và surplus value bị tranh luận ở đâu?
+A weaker reading treats production relations and productive capacity as **constraints and causal pressures**, not a unique historical clock. Then claim becomes more plausible but also less predictive:
 
-Trong Marxian political economy, **surplus value** (giá trị thặng dư, 잉여가치) được xây trên distinction giữa labor và labor power, cùng một theory về value của commodity. [Marxian political economy](02_marxian_political_economy.md) đã trình bày internal logic của model này. Khi chuyển sang economics hiện đại, không nên giả định hai vocabulary có thể map trực tiếp từng từ.
+```text
+material structure shapes feasible institutions and conflicts
+≠
+material structure uniquely determines political outcome
+```
 
-Mainstream microeconomics thường giải thích price và factor income bằng scarcity, preferences, marginal productivity, market structure, bargaining, risk và institutions. Marxian economics lại hỏi thêm một câu khác: vì sao wage labor và ownership structure cho phép một group kiểm soát surplus do production process tạo ra? Vì hai frameworks chọn explanatory objects khác nhau, tranh luận không chỉ là một equation nào tính price tốt hơn mà còn là “ta đang cố giải thích price formation, distribution, social relation hay accumulation?”.
+This is a recurring trade-off in social theory: stronger claims predict more but are easier to falsify; weaker frameworks travel better but explain less by themselves.
 
-Một critique mạnh đối với Marxian value theory phải cho thấy model nào không khớp evidence hoặc không còn cần thiết sau khi dùng framework khác. Ngược lại, người bảo vệ Marx không thể chỉ đổi nghĩa “value” mỗi khi model gặp counterexample. Cả hai phía phải giữ definition ổn định và nói rõ empirical target.
+## Functional explanation: does capitalism fall because it blocks productive forces?
 
-## 4. Exploitation có phải chỉ là một khái niệm kinh tế?
+Some reconstructions of Marxian history use functional explanation: relations of production persist because they help develop productive forces, then are replaced when they become obstacles.
 
-**Exploitation** (bóc lột, 착취) trong Marx không đơn thuần đồng nghĩa với “lương thấp” hoặc “đối xử xấu”. Nó được nối với structure của wage labor, ownership và appropriation of surplus. Điều này tạo một debate chuẩn tắc quan trọng: một exchange có thể voluntary theo contract law nhưng vẫn exploitative hay không?
+The critique is causal: saying institution exists **because of the function it performs** requires a mechanism of selection. In biology, natural selection can provide such mechanism. In social institutions, what selects the more productivity-enhancing arrangement? Competition? Class struggle? State capacity? War? Political coalition?
 
-Một liberal hoặc libertarian framework thường đặt trọng tâm vào consent, property rights và freedom of contract. Một Marxian hoặc socialist framework thường hỏi thêm về background distribution: ai sở hữu productive assets, exit option của worker mạnh đến đâu, và contract được ký trong điều kiện dependency nào. Hai phía vì vậy có thể đồng ý về facts nhưng khác criterion của fairness.
+Without selection mechanism, functional explanation risks reading outcome backward.
 
-Đây là nơi descriptive economics không đủ để kết luận. Data có thể cho biết wage, productivity, concentration, mobility hay bargaining power; nhưng từ đó đi đến “just/unjust” cần normative premises. Internal link thích hợp là [Justice, power và political legitimacy](../00_justice_power_and_legitimacy.md).
+A stronger version therefore needs:
 
-## 5. Revolution, reform và transition problem
+```text
+institutional variation
+→ differential performance / power
+→ mechanism selecting or preserving some arrangements
+→ observed historical change
+```
 
-Một trong những câu hỏi khó nhất của Marxist politics không phải mục tiêu cuối cùng mà là **transition**. Nếu một movement muốn thay đổi property structure và state power, mechanism nào ngăn transitional authority trở thành một center of domination mới? Lenin trả lời bằng organization, revolutionary state và party leadership; các critics lại hỏi ai kiểm soát party, ai kiểm soát coercive institutions, dissent được xử lý thế nào và authority sẽ thực sự “wither away” bằng mechanism nào.
+Analytical Marxists such as G. A. Cohen made this issue explicit, which is one reason the tradition is useful even when one rejects parts of its answer.
 
-Đây là một institutional-design problem chứ không chỉ là ideological disagreement. Một transition theory tốt cần mô tả incentives, accountability, information flow, succession, local autonomy và constraints on coercive power. Nếu chỉ nói “state sẽ biến mất khi class antagonism biến mất”, ta chưa có mechanism giải thích vì sao actor đang nắm state power sẽ từ bỏ nó.
+## Class: central variable versus total explanation
 
-## 6. Planning và knowledge problem
+Marxian class analysis is strongest when it identifies durable differences in ownership, control, bargaining position and dependence on labor markets. It becomes weaker when every social cleavage is reduced to class.
 
-Nếu market coordination bị thay thế một phần hoặc toàn bộ bằng planning, planner phải biết cái gì? Production cần information về demand, local conditions, inventories, technology, substitution và opportunity cost. Critics của centralized planning nhấn mạnh **knowledge problem**: information thường dispersed, contextual và thay đổi nhanh. Socialist responses phát triển nhiều hướng khác nhau, từ decentralized planning đến market socialism và worker-managed firms.
+A multidimensional model can hold:
 
-Vì vậy không nên đồng nhất “socialism” với “abolish all markets”. Contemporary socialist theory bao gồm các mô hình giữ market signals nhưng thay đổi ownership và control. Stanford Encyclopedia of Philosophy cũng phân biệt central planning với market-socialist proposals. Điều này quan trọng vì nếu critique nhắm vào một command economy nhưng conclusion lại áp cho mọi model socialism, phạm vi suy luận đã bị mở rộng quá mức.
+```text
+class
+status
+race / ethnicity
+citizenship
+religion
+nation
+ gender / household relation
+organization
+```
 
-## 7. Political concentration và freedom
+These variables can interact. For example, class position can shape exposure to risk while citizenship controls legal access to jobs; gender can shape unpaid care burden; race can alter housing/credit access; nationalism can override class coalition.
 
-Marxist traditions thường phân biệt formal freedom với substantive freedom: một người có legal right nhưng không có material capacity để sử dụng right đó có thể chưa thực sự autonomous. Liberal traditions lại cảnh báo rằng concentration of political power có thể phá civil liberty ngay cả khi authority tuyên bố đại diện cho collective interests.
+The burden of proof depends on claim strength. “Class matters” is empirically modest. “Class is the ultimately decisive explanation of all major conflict” is much stronger and requires evidence showing why alternative dimensions are derivative rather than independently causal.
 
-Hai mối lo này không loại trừ nhau. Một institution có thể vừa tạo economic dependency vừa tạo political coercion. Vì vậy comparative analysis nên hỏi hai chiều: market/property structure phân phối private power thế nào, và state/party structure phân phối public power thế nào. Chapter [Comparative political economy](10_comparative_political_economy.md) sẽ dùng chính hai trục này.
+## From class position to class consciousness: missing mechanism
 
-## 8. Prediction và retrospective reinterpretation
+A structural relation does not automatically produce common political identity. Collective action faces coordination, information, trust and free-rider problems.
 
-Một theory có nguy cơ trở nên unfalsifiable nếu mọi outcome đều được giải thích lại sau sự kiện. Khi prediction không xảy ra, ta cần hỏi: auxiliary assumption nào sai, scope condition nào thiếu, hay core claim phải sửa? Analytical Marxism là một ví dụ đáng học vì một số scholars tự nhận Marxist nhưng chủ động dùng analytical philosophy, game theory hoặc economics để loại bỏ những claim họ cho là không đứng vững thay vì bảo vệ toàn bộ corpus như doctrine.
+A more complete chain is:
 
-Đây cũng là distinction giữa intellectual tradition và dogma. Một tradition có thể sống bằng việc sửa theory; dogma thường bảo vệ conclusion trước rồi mới điều chỉnh explanation.
+```text
+shared structural position
+→ perceived common interest
+→ communication
+→ organization
+→ identity / consciousness
+→ collective action
+```
 
-## Mental model sau chapter
+Break any arrow and similar class positions can produce different political behavior. This is one place where Marxist theory benefits from political sociology rather than relying on class structure alone.
 
-Không có một “critique of Marxism” duy nhất. Có ít nhất các lớp khác nhau: critique theory of history, critique value theory, critique account of class, critique transition mechanism, critique institutional design và critique normative premises. Một objection chỉ mạnh trong phạm vi nó thực sự chạm tới.
+## Labor theory of value: what exactly is being challenged?
 
-Boundary quan trọng nhất là không dùng outcome của một state để tự động chứng minh hoặc bác bỏ từng sentence của Marx; ngược lại cũng không bảo vệ institutional outcome bằng cách chỉ trích dẫn philosophical intent. Từ đây, [Later Marxist traditions](09_later_marxist_traditions.md) cho thấy chính các thinker trong và gần tradition Marxist đã sửa framework theo những hướng rất khác nhau.
+Marx's value theory is often criticized as if it were simply the claim that observed market price equals embodied labor time. That is too crude. His framework distinguishes value from market price and later tries to explain production prices and average profit.
+
+The serious debate asks whether labor-value magnitudes are necessary or successful explanatory variables for:
+
+- relative prices;
+- profit and exploitation;
+- allocation of social labor;
+- dynamics of accumulation;
+- reproduction of class relations.
+
+Mainstream economics generally explains price and factor income using preferences, scarcity, production functions, marginal conditions, risk, bargaining and market structure without requiring labor values.
+
+The critique therefore has two levels:
+
+```text
+price-theory critique:
+can the model explain observed relative prices and profit rates?
+
+social-theory critique:
+does rejecting labor values remove the explanation of power/exploitation?
+```
+
+They are not the same.
+
+## Transformation problem: values, production prices and profit rates
+
+A major technical issue arises because industries use different ratios of labor to machinery/materials. If only living labor creates surplus value in Marx's framework, industries with more labor should mechanically generate different profit rates. Yet competition tends to equalize profit rates across capitals.
+
+Marx addresses this in *Capital* Volume III through transformation from values to **prices of production**, but the consistency and interpretation of this transformation generated a long literature.
+
+The important learning point is not to memorize one “solution.” It is to see why the problem exists:
+
+```text
+surplus tied to living labor
++
+different capital compositions
++
+competitive profit-rate equalization
+→ need a mapping from values to production prices
+```
+
+Any reconstruction has to show that its equations and definitions remain coherent.
+
+## Exploitation without labor theory of value
+
+Stanford Encyclopedia of Philosophy notes that thinkers including G. A. Cohen and John Roemer attempted to reconstruct exploitation without making it wholly dependent on labor theory of value.
+
+This matters because “Marxian exploitation” can refer to at least three ideas:
+
+1. **surplus-labor relation** — workers perform more labor than embodied in goods they receive;
+2. **asset inequality** — unequal ownership forces some actors into disadvantageous exchange;
+3. **domination/dependency** — one side has power because the other lacks acceptable alternatives.
+
+If labor-value theory fails, (1) may need reformulation. Claims (2) and (3) can still be analyzed using property, bargaining and power.
+
+Therefore the rational structure is not:
+
+```text
+labor theory false → exploitation impossible
+```
+
+but:
+
+```text
+which definition of exploitation?
+→ which premises does it require?
+→ which evidence supports those premises?
+```
+
+## Voluntary contract versus structural dependency
+
+A central normative disagreement is whether a voluntarily signed employment contract can still be exploitative.
+
+Libertarian approaches often emphasize legitimate property acquisition and consent. Marxian/socialist approaches emphasize background distribution and dependence: if access to productive assets is highly unequal, “choice” may occur inside a constrained option set.
+
+The core distinction is:
+
+```text
+transaction-level voluntariness
+≠
+background fairness / independence
+```
+
+Both can be evaluated separately. Contract can be non-coerced in a narrow legal sense while background institutions remain unequal; conversely inequality alone does not prove every transaction unjust.
+
+This is why normative analysis needs explicit premises rather than importing moral conclusion from economic vocabulary.
+
+## Profit: surplus value versus entrepreneurship, risk and rents
+
+Modern economics distinguishes returns associated with capital, risk, innovation, entrepreneurship, monopoly rent and scarcity. Marxian theory analyzes profit through surplus value at the level of capitalist production and distribution.
+
+A good comparison asks what each framework explains rather than replacing one term with another.
+
+For a concrete firm, observed profit can reflect multiple components:
+
+```text
+normal return / financing cost
+innovation rent
+market power
+risk compensation
+scarcity rent
+accounting conventions
+labor bargaining outcomes
+```
+
+Therefore an empirical claim that all observed profit maps directly to one Marxian category needs additional work.
+
+## Crisis theory: tendency is not a single prediction
+
+Marx discusses several crisis-generating mechanisms across his works: disproportionality, credit, overaccumulation, realization problems, competitive pressure and profitability dynamics. Later Marxists developed different crisis theories.
+
+This plurality matters. If every recession is explained by whichever mechanism fits afterward, theory becomes too flexible. A strong crisis explanation needs ex ante mechanism and measurable indicators.
+
+For example:
+
+```text
+hypothesis
+→ expected leading conditions
+→ mechanism
+→ observable pattern
+→ rival explanation
+```
+
+A banking crisis driven by leverage and liquidity is not automatically evidence for every Marxian crisis theory.
+
+## Falling rate of profit: tendency, countertendencies and testability
+
+Marx's discussion of a **tendency of the rate of profit to fall** links accumulation and rising capital intensity with pressure on profitability, while also discussing counteracting forces.
+
+The empirical challenge is specification. Which profit rate? Which denominator? At firm, sector or economy level? How value categories map to national accounts? What countertendencies are allowed?
+
+If countertendencies can explain every reversal, the hypothesis risks weak falsifiability. If definitions are fixed and data mapping transparent, it becomes a legitimate empirical research program—even if results disagree.
+
+## Revolution versus reform: transition burden
+
+Revolutionary strategy argues that existing state/property structures may be too deeply tied to class power for incremental reform to transform them. Reformist socialist and social-democratic traditions point to historical gains through elections, unions, welfare states and regulation.
+
+The debate is not merely “fast versus slow.” It concerns institutional reversibility and power:
+
+```text
+Can reform alter ownership/control deeply enough?
+Can revolutionary concentration of power remain accountable?
+Which path preserves correction mechanisms?
+Which path can survive organized opposition from losers?
+```
+
+Historical cases show both reform durability and rollback, as well as revolutionary transformation and authoritarian consolidation. No general answer follows from one case.
+
+## Transition problem: who constrains the transition authority?
+
+Marxist-Leninist transition concentrates political capacity to transform property and suppress counterrevolution. Critics ask how this capacity is prevented from becoming a new durable hierarchy.
+
+A complete transition theory needs at least:
+
+```text
+selection of leaders
+constraints on coercion
+independent information channels
+succession rules
+rights of dissent
+local autonomy
+error correction
+conditions for decentralization
+```
+
+Without these, “withering away” remains an endpoint description rather than mechanism.
+
+## Planning and knowledge: computational power is not the whole problem
+
+Central planning critiques often invoke dispersed knowledge: local conditions, tacit knowledge and changing preferences are difficult to aggregate centrally. Modern computation reduces some processing constraints but does not automatically solve:
+
+- truthful reporting;
+- objective selection;
+- incentive compatibility;
+- innovation under uncertainty;
+- political legitimacy;
+- error correction.
+
+Likewise markets do not solve every information problem. Prices can be distorted by monopoly, externalities, asymmetric information or missing markets.
+
+The real comparison is architecture:
+
+```text
+what information exists?
+who observes it?
+what incentive exists to report truthfully?
+how is information aggregated?
+how fast does error feed back?
+who bears cost of error?
+```
+
+This lets planning and market institutions be compared symmetrically.
+
+## Public power and private power
+
+Liberal critique of Marxism–Leninism emphasizes concentration of state/party power and risks to civil liberty. Marxian critique of capitalism emphasizes private power through ownership, employment, credit and market concentration.
+
+These can both be true in different dimensions. Political economy should measure both:
+
+```text
+public domination risk
+private domination risk
+```
+
+A framework that recognizes only one kind of power will systematically miss institutional failures on the other side.
+
+## Prediction, retrodiction and unfalsifiability
+
+A theory is easy to protect if every failure can be reclassified as “not the real theory” and every success counted as confirmation. The mirror-image error also exists: treating every bad historical outcome under a self-described Marxist state as proof against every Marxian analytical claim.
+
+A disciplined test records before evaluation:
+
+```text
+claim
+scope condition
+expected observation
+possible falsifier
+auxiliary assumptions
+```
+
+Then historical evidence can actually revise belief rather than only decorate prior commitments.
+
+## What survives decomposition?
+
+Decomposing the tradition leaves a mixed picture rather than one verdict. Some claims—such as the centrality of ownership, bargaining power, institutional reproduction and capital concentration—remain live research questions. Other claims, especially strong deterministic readings or technical value-theory propositions, face substantial theoretical and empirical criticism.
+
+This is exactly why a knowledge library should not store “Marxism = true/false.” It should store a map of claims, mechanisms, objections and evidence boundaries.
+
+The next chapter [Later Marxist traditions](09_later_marxist_traditions.md) shows how thinkers within or near the tradition responded by revising class theory, culture, exploitation, methodology and institutional design rather than preserving every component unchanged.
 
 ## Nguồn định hướng
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Analytical Marxism”: https://plato.stanford.edu/entries/marxism-analytical/
+- Stanford Encyclopedia of Philosophy, “Exploitation”: https://plato.stanford.edu/entries/exploitation/
 - Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/
 - Stanford Encyclopedia of Philosophy, “Markets”: https://plato.stanford.edu/entries/markets/
+
+Use primary texts to establish what Marx or Lenin argued; use economics, history and political philosophy separately to evaluate whether each claim survives contemporary evidence and argument.
