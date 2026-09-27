@@ -120,17 +120,53 @@
       .folder-tree-row.active .folder-count { background: color-mix(in srgb, var(--accent) 13%, transparent); color: var(--accent); }
 
       .folder-content { min-width: 0; }
+      .folder-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 14px;
+      }
       .folder-breadcrumb {
+        min-width: 0;
         min-height: 42px;
+        flex: 1;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 4px;
-        margin: 0 0 14px;
+        margin: 0;
         padding: 7px 9px;
         border: 1px solid var(--line);
         border-radius: 11px;
         background: color-mix(in srgb, var(--panel) 76%, transparent);
+      }
+      .compact-format-filter {
+        min-height: 34px;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 5px 3px 8px;
+        border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+        border-radius: 9px;
+        background: color-mix(in srgb, var(--panel) 52%, transparent);
+        color: var(--muted);
+        opacity: .72;
+        transition: opacity .14s, border-color .14s;
+      }
+      .compact-format-filter:hover,
+      .compact-format-filter:focus-within { opacity: 1; border-color: var(--line); }
+      .format-filter-icon { font-size: .72rem; line-height: 1; }
+      .compact-format-filter select {
+        max-width: 106px;
+        padding: 2px 2px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-size: .7rem;
+        cursor: pointer;
       }
       .breadcrumb-button {
         min-height: 28px;
@@ -191,6 +227,9 @@
         .folder-sidebar { position: static; max-height: 330px; margin-bottom: 16px; }
         .folder-children { grid-template-columns: 1fr; }
         .folder-tree-row { margin-left: calc(var(--depth) * 13px); }
+        .folder-toolbar { align-items: flex-start; }
+        .compact-format-filter { margin-top: 4px; }
+        .compact-format-filter select { max-width: 86px; }
       }
     </style>
   </head>
@@ -227,7 +266,15 @@
             <nav id="folder-tree" class="folder-tree" aria-label="Folder browser"></nav>
           </aside>
           <section class="folder-content" aria-label="Folder contents">
-            <nav id="folder-breadcrumb" class="folder-breadcrumb" aria-label="Folder path"></nav>
+            <div class="folder-toolbar">
+              <nav id="folder-breadcrumb" class="folder-breadcrumb" aria-label="Folder path"></nav>
+              <label class="compact-format-filter" title="Lọc theo định dạng file">
+                <span class="format-filter-icon" aria-hidden="true">▤</span>
+                <select id="format-filter" aria-label="Lọc theo định dạng file">
+                  <option value="all">All</option>
+                </select>
+              </label>
+            </div>
             <div id="folder-children" class="folder-children"></div>
             <div id="document-grid" class="document-grid"></div>
           </section>
@@ -240,5 +287,99 @@
     <script src="./study-planner-auth.js"></script>
     <script src="./app.js"></script>
     <script src="./learning-os.js"></script>
+    <script>
+      (() => {
+        let selectedFormat = 'all';
+        let libraryDocuments = [];
+        let applying = false;
+
+        const typeGroup = type => {
+          const value = String(type || '').toUpperCase();
+          if (value === 'MD' || value === 'MARKDOWN') return 'MD';
+          if (value === 'PDF') return 'PDF';
+          if (['DOC', 'DOCX', 'ODT', 'RTF'].includes(value)) return 'DOCS';
+          return value;
+        };
+        const typeLabel = type => ({ MD: 'Markdown', PDF: 'PDF', DOCS: 'Docs' }[type] || type);
+
+        async function loadFormatOptions() {
+          if (libraryDocuments.length) return libraryDocuments;
+          try {
+            const response = await fetch('./library/library.json');
+            if (!response.ok) return [];
+            libraryDocuments = (await response.json()).documents || [];
+          } catch {
+            libraryDocuments = [];
+          }
+          return libraryDocuments;
+        }
+
+        async function enhanceFormatFilter() {
+          const select = document.querySelector('#format-filter');
+          if (!select || select.dataset.ready === 'true') return;
+          const documents = await loadFormatOptions();
+          const groups = [...new Set(documents.map(doc => typeGroup(doc.type)).filter(Boolean))];
+          const preferred = ['MD', 'PDF', 'DOCS'];
+          groups.sort((a, b) => {
+            const ai = preferred.indexOf(a);
+            const bi = preferred.indexOf(b);
+            if (ai >= 0 || bi >= 0) return (ai < 0 ? 99 : ai) - (bi < 0 ? 99 : bi);
+            return a.localeCompare(b);
+          });
+          select.innerHTML = '<option value="all">All</option>' + groups.map(group => `<option value="${group}">${typeLabel(group)}</option>`).join('');
+          if (![...select.options].some(option => option.value === selectedFormat)) selectedFormat = 'all';
+          select.value = selectedFormat;
+          select.dataset.ready = 'true';
+          select.addEventListener('change', () => {
+            selectedFormat = select.value;
+            applyFormatFilter();
+          });
+          applyFormatFilter();
+        }
+
+        function applyFormatFilter() {
+          if (applying) return;
+          const grid = document.querySelector('#document-grid');
+          if (!grid) return;
+          applying = true;
+          const cards = [...grid.querySelectorAll('.doc-card')];
+          let visible = 0;
+          for (const card of cards) {
+            const type = typeGroup(card.querySelector('.type-badge')?.textContent);
+            const show = selectedFormat === 'all' || type === selectedFormat;
+            const shell = card.closest('.doc-card-shell') || card;
+            shell.hidden = !show;
+            if (show) visible += 1;
+          }
+
+          if (selectedFormat !== 'all') {
+            const count = document.querySelector('#result-count');
+            if (count) {
+              const folderCount = document.querySelectorAll('#folder-children .folder-card').length;
+              const searching = Boolean(document.querySelector('#search')?.value.trim());
+              count.textContent = searching ? `${visible} kết quả` : `${visible} file · ${folderCount} folder`;
+            }
+          }
+          applying = false;
+        }
+
+        let queued = false;
+        const refresh = () => {
+          if (queued) return;
+          queued = true;
+          requestAnimationFrame(() => {
+            queued = false;
+            enhanceFormatFilter();
+            applyFormatFilter();
+          });
+        };
+
+        const observer = new MutationObserver(refresh);
+        const appRoot = document.querySelector('#app');
+        if (appRoot) observer.observe(appRoot, { childList: true, subtree: true });
+        window.addEventListener('hashchange', refresh);
+        refresh();
+      })();
+    </script>
   </body>
 </html>
