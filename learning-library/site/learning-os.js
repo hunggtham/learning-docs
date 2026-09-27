@@ -330,6 +330,167 @@
     } catch { toast('Không thể lưu offline trên trình duyệt này.'); }
   }
 
+  function speechLanguage(doc) {
+    const raw = String(doc.language || document.documentElement.lang || 'en').toLowerCase();
+    const first = raw.split(/[-_,\s]+/)[0];
+    return ['ko', 'vi', 'en', 'ja', 'zh', 'fr', 'de', 'es'].includes(first) ? first : 'en';
+  }
+
+  function speechBlocks(content) {
+    const clone = content.cloneNode(true);
+    clone.querySelectorAll('pre,.open-file,.los-related').forEach(node => node.remove());
+    const blocks = [...clone.querySelectorAll('h1,h2,h3,p,li,blockquote,th,td')]
+      .map(node => node.textContent.replace(/\s+/g, ' ').trim())
+      .filter(Boolean);
+    return blocks.length ? blocks : [clone.textContent.replace(/\s+/g, ' ').trim()].filter(Boolean);
+  }
+
+  function speechChunks(blocks, maxLength = 1100) {
+    const chunks = [];
+    let current = '';
+    const flush = () => {
+      if (current) chunks.push(current);
+      current = '';
+    };
+    blocks.forEach(block => {
+      let rest = block;
+      while (rest.length > maxLength) {
+        let boundary = rest.lastIndexOf(' ', maxLength);
+        if (boundary < Math.floor(maxLength * 0.6)) boundary = maxLength;
+        const part = rest.slice(0, boundary).trim();
+        if (part) chunks.push(part);
+        rest = rest.slice(boundary).trim();
+      }
+      if (!rest) return;
+      const candidate = current ? `${current} ${rest}` : rest;
+      if (candidate.length > maxLength) {
+        flush();
+        current = rest;
+      } else {
+        current = candidate;
+      }
+    });
+    flush();
+    return chunks;
+  }
+
+  function enhanceSpeechReader(doc, content, path) {
+    const toolbar = document.querySelector('#reader-toolbar');
+    if (!toolbar || !content || document.querySelector('#los-speech-controls')) return;
+    if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return;
+    const chunks = speechChunks(speechBlocks(content));
+    if (!chunks.length) return;
+
+    const synth = window.speechSynthesis;
+    const language = speechLanguage(doc);
+    const controls = document.createElement('div');
+    controls.id = 'los-speech-controls';
+    controls.className = 'los-speech-controls';
+    controls.innerHTML = `<button class="los-action" id="los-speech-start" type="button">🔊 Đọc trang</button><button class="los-action" id="los-speech-pause" type="button" disabled>⏸ Tạm dừng</button><button class="los-action" id="los-speech-stop" type="button" disabled>■ Dừng</button><label class="los-speech-rate"><span>Tốc độ</span><select class="los-select" id="los-speech-rate"><option value="0.8">0,8×</option><option value="1">1×</option><option value="1.2">1,2×</option><option value="1.5">1,5×</option></select></label><span class="los-speech-status" id="los-speech-status" aria-live="polite">Sẵn sàng · ${chunks.length} đoạn</span>`;
+    toolbar.append(controls);
+
+    const startButton = controls.querySelector('#los-speech-start');
+    const pauseButton = controls.querySelector('#los-speech-pause');
+    const stopButton = controls.querySelector('#los-speech-stop');
+    const rateSelect = controls.querySelector('#los-speech-rate');
+    const status = controls.querySelector('#los-speech-status');
+    const savedRate = Number(readJson('study-shelf-speech-rate', 1));
+    if ([0.8, 1, 1.2, 1.5].includes(savedRate)) rateSelect.value = String(savedRate);
+
+    let chunkIndex = 0;
+    let active = false;
+    let paused = false;
+    let runId = 0;
+
+    const setStatus = message => { status.textContent = message; };
+    const updateButtons = () => {
+      startButton.disabled = active;
+      pauseButton.disabled = !active;
+      stopButton.disabled = !active;
+      pauseButton.textContent = paused ? '▶ Tiếp tục' : '⏸ Tạm dừng';
+    };
+    const pickVoice = () => {
+      const voices = synth.getVoices();
+      return voices.find(voice => voice.lang?.toLowerCase() === language)
+        || voices.find(voice => voice.lang?.toLowerCase().startsWith(`${language}-`));
+    };
+    const speakNext = () => {
+      if (!active || paused || routePath() !== path) return;
+      if (chunkIndex >= chunks.length) {
+        active = false;
+        paused = false;
+        updateButtons();
+        setStatus('Đã đọc xong trang.');
+        return;
+      }
+      const currentRun = runId;
+      const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+      const voice = pickVoice();
+      utterance.lang = voice?.lang || language;
+      if (voice) utterance.voice = voice;
+      utterance.rate = Number(rateSelect.value) || 1;
+      utterance.onstart = () => setStatus(`Đang đọc · ${chunkIndex + 1}/${chunks.length}`);
+      utterance.onend = () => {
+        if (currentRun !== runId || !active) return;
+        chunkIndex += 1;
+        speakNext();
+      };
+      utterance.onerror = event => {
+        if (currentRun !== runId || ['canceled', 'interrupted'].includes(event.error)) return;
+        active = false;
+        paused = false;
+        updateButtons();
+        setStatus('Không thể đọc trên trình duyệt này.');
+      };
+      synth.speak(utterance);
+    };
+    const start = () => {
+      synth.cancel();
+      runId += 1;
+      chunkIndex = 0;
+      active = true;
+      paused = false;
+      updateButtons();
+      setStatus(`Đang chuẩn bị · ${chunks.length} đoạn`);
+      window.setTimeout(speakNext, 0);
+    };
+    const togglePause = () => {
+      if (!active) return;
+      if (paused) {
+        paused = false;
+        synth.resume();
+        setStatus(`Đang đọc · ${chunkIndex + 1}/${chunks.length}`);
+      } else {
+        paused = true;
+        synth.pause();
+        setStatus('Đã tạm dừng.');
+      }
+      updateButtons();
+    };
+    const stop = () => {
+      runId += 1;
+      synth.cancel();
+      active = false;
+      paused = false;
+      updateButtons();
+      setStatus('Đã dừng.');
+    };
+
+    startButton.onclick = start;
+    pauseButton.onclick = togglePause;
+    stopButton.onclick = stop;
+    rateSelect.onchange = () => writeJson('study-shelf-speech-rate', Number(rateSelect.value));
+    synth.addEventListener?.('voiceschanged', pickVoice);
+    updateButtons();
+
+    const previousCleanup = LOS.readerCleanup;
+    LOS.readerCleanup = () => {
+      previousCleanup();
+      stop();
+      synth.removeEventListener?.('voiceschanged', pickVoice);
+    };
+  }
+
   async function renderRelated(doc, host) {
     if (!host || host.querySelector('.los-related') || host.dataset.losRelatedLoading === '1') return;
     host.dataset.losRelatedLoading = '1';
@@ -408,6 +569,7 @@
     if (content) {
       linkifyInternalMarkdown(content, path);
       renderRelated(doc, content);
+      enhanceSpeechReader(doc, content, path);
     }
   }
 

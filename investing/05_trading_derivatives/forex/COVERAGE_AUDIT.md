@@ -128,11 +128,12 @@ Lab 01 — macro event analysis without hindsight
 Lab 02 — point-in-time backtest and robustness
 Lab 03 — portfolio FX factor risk
 Lab 04 — Korea/Vietnam context and regulatory verification
+Lab 05 — FX options pricing, Greeks, scenarios and delta-hedging attribution
 ```
 
 Các lab được thiết kế để tạo artifact reviewable thay vì quiz ghi nhớ.
 
-Institutional connections/hedging cases chưa cần lab riêng chỉ để đủ số lượng. Chỉ tạo lab mới khi có data/payoff task cụ thể, ví dụ hedge roll attribution hoặc options-volatility calculation.
+Institutional connections/hedging cases chưa cần lab riêng chỉ để đủ số lượng. Lab 05 được thêm vì có data/payoff task cụ thể: option pricing, volatility-surface conventions, delta-hedging ledger và implied-versus-realized attribution.
 
 ## 6. Historical case-study coverage
 
@@ -178,9 +179,9 @@ Project intentionally stops at specification/architecture depth. Nó không dupl
 
 Các phần dưới đây **không phải gap nền tảng**. Chỉ mở rộng nếu có mục tiêu học cụ thể.
 
-### A. FX options quantitative lab
+### A. FX options quantitative lab — completed
 
-Đây hiện là extension có value cao nhất nếu muốn bổ sung quantitative derivatives practice:
+`90_labs/05_FX_OPTIONS_QUANTITATIVE_LAB.md` đã chuyển extension này thành bài tập có artifact reviewable:
 
 ```text
 Delta / Gamma / Vega P&L decomposition
@@ -188,7 +189,7 @@ Risk reversal / butterfly quote conventions
 Volatility surface interpolation
 Delta-hedged option P/L
 Event implied-vs-realized volatility
-Barrier/event gap scenarios
+Barrier/event gap scenarios vẫn là phần mở rộng trong lab, chưa phải claim coverage đầy đủ cho mọi exotic payoff.
 ```
 
 ### B. Additional historical/regime cases
@@ -273,4 +274,4 @@ Coverage governance       → COVERAGE_AUDIT.md
 
 Coverage đã đi từ **beginner mechanics → macro/strategy research → portfolio/microstructure/options → jurisdiction context → institutional funding/policy → corporate/asset-manager hedging → practical application → historical stress regimes → reproducible systematic implementation semantics**.
 
-Bước tiếp theo không nên là tạo thêm linear theory hoặc generic coding tutorial. Extension rõ nhất còn thiếu là **FX-options quantitative lab**; sau đó chỉ nên mở rộng theo mục tiêu cụ thể như additional regime case hoặc accounting/legal implementation có source chuẩn.
+Bước tiếp theo không nên là tạo thêm linear theory hoặc generic coding tutorial. Sau quantitative lab, chỉ nên mở rộng theo mục tiêu cụ thể như additional regime case hoặc accounting/legal implementation có source chuẩn.
