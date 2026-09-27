@@ -28,8 +28,12 @@ Phân biệt này là invariant của toàn bộ module. Mỗi chapter sẽ luô
 14. [13 — China after 1978: reform, opening và dual-track transition](13_case_china_reform_opening_and_dual_track_transition.md)
 15. [14 — Vietnam: Đổi Mới, market reform và socialist orientation](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md)
 16. [15 — Comparative synthesis: Soviet Union, China và Vietnam](15_comparative_case_synthesis_soviet_china_vietnam.md)
+17. [16 — Close reading *Capital*: commodity → value → labour-power → surplus → accumulation](16_capital_close_reading_commodity_value_surplus_accumulation.md)
+18. [17 — Soviet evidence: measurement, counterfactual và human cost](17_soviet_evidence_measurement_counterfactual_and_human_cost.md)
+19. [18 — China HRS: incentives, decision rights và gradual reform](18_china_household_responsibility_system_incentives_and_gradual_reform.md)
+20. [19 — Vietnam Đổi Mới evidence: growth, poverty và institutional change](19_vietnam_doi_moi_data_growth_poverty_and_institutional_change.md)
 
-Flow này có chủ đích. Nếu nhảy thẳng vào `dialectical materialism`, `dictatorship of the proletariat` hoặc `vanguard party`, người đọc dễ học thành khẩu hiệu. Ta bắt đầu từ problem và context, dựng model, theo dõi genealogy, kiểm tra historical implementation, mở sang critique và rival frameworks, quay về primary sources, rồi cuối cùng đưa framework vào worked cases có economic/historical evidence.
+Flow này có chủ đích. Nếu nhảy thẳng vào `dialectical materialism`, `dictatorship of the proletariat` hoặc `vanguard party`, người đọc dễ học thành khẩu hiệu. Ta bắt đầu từ problem và context, dựng model, theo dõi genealogy, kiểm tra historical implementation, mở sang critique và rival frameworks, quay về primary sources, rồi cuối cùng đưa framework vào worked cases và evidence-specific depth pass.
 
 ## Worked-case route
 
@@ -57,6 +61,26 @@ starting condition
 ```
 
 Unit of analysis là **country × period × institution × policy × outcome**, không phải `country = ideology`.
+
+## Evidence-depth route
+
+Sau worked-case route, các chapter `16–19` dùng để kiểm tra những chỗ dễ bị biến thành slogan hoặc single-number conclusion:
+
+```text
+16 Capital close reading
+   author's argument phải được reconstruct trước khi critique
+
+17 Soviet evidence
+   output ≠ productivity ≠ welfare; counterfactual phải explicit
+
+18 China HRS
+   ownership/control/residual rights phải tách thành variables
+
+19 Vietnam Đổi Mới data
+   growth/poverty series phải giữ unit, methodology và competing causes visible
+```
+
+Route này là depth pass, không phải prerequisite bắt buộc. Nó tồn tại để người đọc có thể chuyển từ “biết câu chuyện” sang “kiểm tra claim”.
 
 ## Ba lớp phải giữ tách
 
@@ -101,11 +125,14 @@ Không nên ghi nhớ các từ này như glossary rời. Mỗi thuật ngữ ch
 - Stanford Encyclopedia of Philosophy, “Antonio Gramsci”: https://plato.stanford.edu/entries/gramsci/
 - Stanford Encyclopedia of Philosophy, “Critical Theory”: https://plato.stanford.edu/entries/critical-theory/
 - Stanford Encyclopedia of Philosophy, “Analytical Marxism”: https://plato.stanford.edu/entries/marxism-analytical/
+- Karl Marx, *Capital, Volume I*: https://www.marxists.org/archive/marx/works/1867-c1/
 - Marxists Internet Archive, Lenin, *What Is To Be Done?*: https://www.marxists.org/archive/lenin/works/1901/witbd/
 - Marxists Internet Archive, Lenin, *The State and Revolution*: https://www.marxists.org/archive/lenin/works/1917/staterev/
 - Marxists Internet Archive, Lenin, *Imperialism, the Highest Stage of Capitalism*: https://www.marxists.org/archive/lenin/works/1916/imp-hsc/
-- NBER historical research on Soviet industrialization: https://www.nber.org/books-and-chapters/growth-industrial-production-soviet-union
-- World Bank China reform overview: https://www.worldbank.org/en/country/china
-- World Bank Viet Nam reform/development overview: https://www.worldbank.org/en/country/vietnam/overview
+- NBER, *Was Stalin Necessary for Russia's Economic Development?*: https://www.nber.org/papers/w19425
+- Library of Congress, Soviet collectivization/industrialization archives: https://www.loc.gov/exhibits/archives/intn.html
+- World Bank historical research on China rural/HRS reform: https://documents1.worldbank.org/curated/en/759681468160181821/pdf/493190PUB0Spat101Official0Use0Only1.pdf
+- World Bank Viet Nam reform/development overview: https://www.worldbank.org/en/country/vietnam
+- World Bank WDI: https://data.worldbank.org/
 
-Các nguồn trên là điểm vào, không phải authority duy nhất. Khi một interpretation có tranh luận, chapter phải nói rõ boundary thay vì trình bày nó như consensus; khi một quantitative claim dựa trên model, model assumptions phải được giữ visible.
+Các nguồn trên là điểm vào, không phải authority duy nhất. Khi một interpretation có tranh luận, chapter phải nói rõ boundary thay vì trình bày nó như consensus; khi một quantitative claim dựa trên model hoặc series, assumptions, units và methodology phải được giữ visible.
