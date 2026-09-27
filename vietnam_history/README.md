@@ -12,7 +12,7 @@ Bộ này cũng không ép toàn bộ quá khứ của lãnh thổ Việt Nam hi
 
 Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Sau đó đọc tuyến tính từ 01 trở đi nếu muốn thấy causal chain đầy đủ.
 
-Các chapter hiện đã triển khai đến Lê–Mạc/Nam–Bắc triều:
+Các chapter hiện đã triển khai đến nhà Nguyễn đầu thế kỷ XIX:
 
 - [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md): evidence, myth, periodization và causal reasoning.
 - [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md): sông, đồng bằng, núi, biển và historical space.
@@ -26,6 +26,10 @@ Các chapter hiện đã triển khai đến Lê–Mạc/Nam–Bắc triều:
 - [`10_ho_ming_occupation_and_lam_son.md`](10_ho_ming_occupation_and_lam_son.md): Hồ reforms, Minh occupation và Lam Sơn.
 - [`11_le_so_bureaucracy_law_land_and_education.md`](11_le_so_bureaucracy_law_land_and_education.md): Lê sơ, bureaucracy, law, land và examinations.
 - [`12_mac_and_north_south_courts.md`](12_mac_and_north_south_courts.md): Mạc, Lê restoration và Nam–Bắc triều.
+- [`13_trinh_nguyen_trade_and_two_realms.md`](13_trinh_nguyen_trade_and_two_realms.md): Trịnh–Nguyễn, hai political economy và maritime trade.
+- [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md): Champa, Khmer, uplands, migration và frontier formation.
+- [`15_tay_son_rebellion_war_and_reunification.md`](15_tay_son_rebellion_war_and_reunification.md): Tây Sơn, rice, fiscal crisis, regional war và Nguyễn recovery.
+- [`16_early_nguyen_hue_administration_and_economy.md`](16_early_nguyen_hue_administration_and_economy.md): Huế, early Nguyễn administration, infrastructure và centralization.
 
 Các file tiếp theo sẽ tiếp tục theo dependency trong index, không đổi sang kiểu tóm tắt chronology.
 
@@ -45,6 +49,6 @@ Một narrative quen thuộc không được dùng để thay thế evidence; ng
 
 ## Nguồn nền
 
-Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim, John K. Whitmore, James A. Anderson và nhiều nghiên cứu Cambridge/Oxford; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
+Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim, John K. Whitmore, James A. Anderson, Tana Li và nhiều nghiên cứu Cambridge/Oxford; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
 
 > Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, technology, geography, beliefs và lựa chọn của con người.
