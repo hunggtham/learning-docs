@@ -45,3 +45,43 @@ Abolition of formal status distinctions, reform of examination and administratio
 ## Rail, telegraph và time-space compression
 
 Late nineteenth/early twentieth-century infrastructure như telegraph và railway giảm communication/transport time. Political control, military response và market integration vì vậy operate at new speed. Modernity có một physical meaning: distance measured in hours rather than days.
+
+## Neo thời gian: vì sao 1876–1910 cảm giác dồn dập
+
+**1876** Treaty of Ganghwa mở một phase treaty-port mới. **1882** Imo Mutiny và **1884** Gapsin Coup cho thấy domestic reform conflict đã gắn chặt với foreign intervention. **1894** Donghak Peasant Movement bùng nổ đồng thời với Sino-Japanese War và Gabo Reforms. **1897** Korean Empire được tuyên bố. Sau Russo-Japanese War, **1905** Korea bị đặt dưới protectorate của Japan; đến **1910**, annexation chấm dứt sovereignty của Korean Empire.
+
+Nếu chỉ học từng event riêng lẻ, 34 năm này trông như một chuỗi biến cố hỗn loạn. Nếu nhìn system, pattern rõ hơn: state cũ phải reform fiscal–military–administrative structure đúng lúc balance of power ở East Asia thay đổi cực nhanh.
+
+## Nếu sống ở Seoul khoảng năm 1900
+
+Bạn có thể cùng lúc thấy palace ritual của một monarchy lâu đời và những technology mới: telegraph, electric streetcar, modern school, newspaper, foreign legation và railway. Người dân không bước từ “truyền thống” sang “hiện đại” trong một đêm; nhiều institutional layer tồn tại chồng lên nhau.
+
+Một scholar có thể học classical text nhưng con cái lại tiếp xúc new school. Merchant phải thích nghi với imported goods và currency change. Official đối diện foreign adviser và reform decree. Farmer ở vùng khác lại cảm nhận thời đại qua tax, debt, landlord relation hoặc local conflict nhiều hơn qua streetcar ở capital.
+
+## Kinh tế: mở cửa làm thay đổi price network trước khi thay đổi toàn xã hội
+
+Treaty ports kéo domestic market vào regional trade network sâu hơn. Commodity price, export demand và imported goods có thể thay đổi incentive ở countryside. Nhưng market integration không tự động tạo prosperity đồng đều. Ai có land, access to capital, transport route và legal protection sẽ hưởng cơ hội khác với tenant hoặc household chịu debt.
+
+Railway và telegraph làm state và business xử lý distance theo cách mới. Tuyến Seoul–Incheon cuối thế kỷ XIX giúp thấy technology không chỉ “tiện hơn”: nó thay đổi military mobility, market radius, information speed và strategic value của port.
+
+## Việt Nam cùng thời: một comparison rất hữu ích
+
+Trong khi Korea bị ép mở cửa năm 1876 nhưng vẫn giữ formal sovereignty thêm vài thập kỷ, Việt Nam đã bước vào quá trình Pháp xâm lược từ **1858**; các hiệp ước trong thế kỷ XIX làm sovereignty của triều Nguyễn bị thu hẹp, và **1887** Liên bang Đông Dương được thành lập.
+
+Hai trajectory không giống nhau, nhưng đặt cạnh nhau giúp nhìn rõ imperialism Đông Á cuối thế kỷ XIX: military technology, treaty system, customs, port, finance và international recognition đều trở thành công cụ power. Cả Korea lẫn Việt Nam phải giải bài toán reform khi room for autonomous decision đang co lại.
+
+Điều nên tránh là hỏi đơn giản “nước nào cải cách nhanh hơn”. Câu tốt hơn là: mỗi state còn bao nhiêu fiscal capacity, military capacity, diplomatic option và thời gian để reform?
+
+## Địa điểm nên nối trực tiếp với chapter này
+
+**Ganghwa (강화도)** giúp hiểu vì sao treaty mang tên đảo này và vì sao coastal defense quan trọng. **Jeongdong (정동)** ở Seoul cho thấy foreign legation, missionary institution và modern school tập trung gần royal capital ra sao. **Deoksugung (덕수궁)** gắn với Korean Empire và tạo một physical scene nơi palace tradition đứng cạnh architecture mới. **Independence Gate (독립문)** và khu vực former Independence Club activity giúp nhìn public discourse cuối thế kỷ XIX như một phần của modern political transformation.
+
+Khi đến các nơi này, đừng chỉ hỏi “xây năm nào”. Hãy hỏi: ai tài trợ, ai sử dụng, nó nối với road/port nào, và building này thể hiện sovereignty hay foreign presence theo cách nào?
+
+## Cầu nối sang colonial period
+
+1910 không phải một switch rơi từ trên trời. Nó là outcome của long erosion of diplomatic and military autonomy trong bối cảnh imperial competition. Nhưng điều đó cũng không có nghĩa annexation là “tất yếu”. Historical explanation phải phân biệt **constraint ngày càng mạnh** với **inevitability**.
+
+Chapter tiếp theo nên được đọc với câu hỏi: khi sovereignty chuyển sang colonial Government-General, những railway, registry, school và bureaucratic technique đã xuất hiện trước 1910 được tiếp tục, biến đổi hay sử dụng cho mục tiêu gì mới?
+
+Đọc song song: [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md), [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md), [`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md).
