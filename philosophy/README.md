@@ -28,7 +28,7 @@ philosophy/
 ├── 03_philosophy_of_science/         (4 chapters)
 ├── 04_philosophy_of_mind/            (3 chapters)
 ├── 05_ethics/                        (4 chapters)
-├── 06_social_political_philosophy/   (4 chapters)
+├── 06_social_political_philosophy/   (4 core chapters + Marxism–Leninism module)
 ├── 07_philosophy_of_technology/      (3 chapters)
 ├── 08_history_of_philosophy/         (4 chapters)
 └── 90_connections/                   (5 chapters)
@@ -55,10 +55,11 @@ Hai file điều phối nằm ở root: [Conceptual Dependencies](CONCEPTUAL_DEP
 - [Modality, time và free will](02_metaphysics/01_modality_time_and_free_will.md) → [Reduction và emergence](02_metaphysics/02_reduction_emergence_and_naturalism.md) → [Scientific realism](03_philosophy_of_science/01_scientific_realism_laws_and_underdetermination.md).
 - [Measurement, statistics và replication](03_philosophy_of_science/02_measurement_statistics_and_replication.md) → [Mental causation và embodiment](04_philosophy_of_mind/01_mental_causation_embodiment_and_extended_mind.md) → [Metaethics](05_ethics/01_metaethics_and_normative_frameworks.md).
 - [Bioethics, climate và AI ethics](05_ethics/02_bioethics_climate_and_ai_ethics.md) → [Democracy và public reason](06_social_political_philosophy/01_democracy_rights_and_public_reason.md) → [Technology ethics](07_philosophy_of_technology/01_technology_ethics_data_and_automation.md) → [AI alignment](90_connections/03_ai_alignment_and_moral_agency.md).
+- [Capitalism, Labor và Institutions](06_social_political_philosophy/02_capitalism_labor_and_institutions.md) → [Marx, Marxism, Lenin và Marxism–Leninism](06_social_political_philosophy/04_marxism_leninism/README.md) → [Economic History & Institutions](../economics/06_economic_history_institutions/README.md). Route này tách intellectual history, doctrine, institutional implementation và empirical economics để không biến một hệ tư tưởng thành một block cần ghi nhớ.
 
 Các route nâng cao không phải thứ tự bắt buộc. Chúng làm lộ dependency: logic giúp kiểm tra argument; epistemology kiểm tra warrant; philosophy of science kiểm tra model/evidence; ethics và political philosophy kiểm tra action/institution; technology và AI đưa toàn bộ chuỗi vào case thực tế.
 
-Depth pass hiện tại không mở thêm namespace. Các node trung tâm về epistemology, causality, free will, consciousness, ethics, justice và technology đã được viết lại theo chuỗi `question → definition → strongest argument → premises → objection → reply → rival position → empirical boundary → implication`; primary-source context chỉ dùng để định vị tranh luận, không biến chapter thành tuyển tập trích dẫn.
+Depth pass hiện tại không mở thêm top-level namespace. Các node trung tâm về epistemology, causality, free will, consciousness, ethics, justice và technology đã được viết lại theo chuỗi `question → definition → strongest argument → premises → objection → reply → rival position → empirical boundary → implication`; module Marxism–Leninism bổ sung một route political-philosophy có primary-text context, doctrinal genealogy và explicit handoff sang economic/history evidence. Primary-source context chỉ dùng để định vị tranh luận, không biến chapter thành tuyển tập trích dẫn.
 
 ## Knowledge connections
 
@@ -67,6 +68,7 @@ Depth pass hiện tại không mở thêm namespace. Các node trung tâm về e
 - [Mathematics](../mathematics/README.md) cung cấp logic, probability, uncertainty và formal models.
 - [Physics](../physics/README.md) và [Biology](../biology/README.md) cung cấp các trường hợp về model, explanation, emergence và reduction.
 - [Psychology](../psychology/README.md) kiểm tra các claim về cognition, consciousness, identity và moral judgment bằng evidence thực nghiệm.
+- [Economics](../economics/README.md) là owner canonical khi political philosophy tạo claim về price, profit, market structure, growth, planning, institutions hoặc historical economic outcomes.
 - [Computer Science / AI](../computer_science/README.md) mở rộng các câu hỏi về computation, representation, agency, alignment và responsibility.
 
 ## Chuẩn biên soạn
