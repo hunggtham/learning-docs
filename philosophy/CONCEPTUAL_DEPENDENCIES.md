@@ -24,6 +24,9 @@ flowchart TD
     Meta --> Ethics[Moral reasoning and action]
     Ethics --> Applied[Bio, climate, professional, animal ethics]
     Ethics --> Pol[Justice, rights, democracy, power]
+    Pol --> EconPol[Capitalism, labor, institutions]
+    EconPol --> ML[Marx, Lenin, Marxism–Leninism]
+    ML -. empirical check .-> Econ[Economics and economic history]
     Pol --> Global[Global justice, identity, difference]
     Ethics --> Tech[Technology, design, agency]
     Tech --> Info[Information, platforms, automation]
@@ -32,6 +35,7 @@ flowchart TD
     Math --> AI
     History[History of traditions] -. context .-> R
     History -. concepts .-> Meta
+    History -. intellectual context .-> ML
 ```
 
 ## Các route chính
@@ -47,6 +51,12 @@ flowchart TD
 ### Value → institution → technology
 
 `05_ethics` → `06_social_political_philosophy` → `07_philosophy_of_technology` → `90_connections/03–04`.
+
+### Political economy → Marx/Lenin → evidence
+
+`06_social_political_philosophy/02_capitalism_labor_and_institutions.md` → `06_social_political_philosophy/04_marxism_leninism/README.md` → `../economics/06_economic_history_institutions/README.md`.
+
+Route này giữ ba layer tách biệt: philosophical argument về property/power, intellectual genealogy của Marx–Lenin–Marxism–Leninism, và empirical evaluation bằng economics/history. Một layer không được dùng làm shortcut thay layer khác.
 
 ### History as context
 
