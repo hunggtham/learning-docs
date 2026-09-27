@@ -1,6 +1,6 @@
 # Marx, Marxism, Lenin và Marxism–Leninism
 
-Module này đặt **Marxism (chủ nghĩa Marx, 마르크스주의)** và **Marxism–Leninism (chủ nghĩa Mác–Lênin, 마르크스-레닌주의)** vào đúng vị trí trong political philosophy, history of political economy và modern political history. Mục tiêu không phải học thuộc một hệ thống thuật ngữ, cũng không mặc định một truyền thống là đúng hoặc sai. Mục tiêu là hiểu một chuỗi câu hỏi: Marx đang cố giải thích điều gì trong xã hội công nghiệp thế kỷ XIX; mô hình của ông vận hành bằng các khái niệm nào; Lenin đã thay đổi hoặc mở rộng những gì khi đưa Marxism vào bối cảnh Nga đầu thế kỷ XX; vì sao về sau xuất hiện một doctrine được gọi là Marxism–Leninism; và các claim của tradition này bị sửa, phản biện hoặc phát triển tiếp như thế nào.
+Module này đặt **Marxism (chủ nghĩa Marx, 마르크스주의)** và **Marxism–Leninism (chủ nghĩa Mác–Lênin, 마르크스-레닌주의)** vào đúng vị trí trong political philosophy, history of political economy và modern political history. Mục tiêu không phải học thuộc một hệ thống thuật ngữ, cũng không mặc định một truyền thống là đúng hoặc sai. Mục tiêu là hiểu một chuỗi câu hỏi: Marx đang cố giải thích điều gì trong xã hội công nghiệp thế kỷ XIX; mô hình của ông vận hành bằng các khái niệm nào; Lenin đã thay đổi hoặc mở rộng những gì khi đưa Marxism vào bối cảnh Nga đầu thế kỷ XX; vì sao về sau xuất hiện một doctrine được gọi là Marxism–Leninism; các claim của tradition này bị sửa, phản biện hoặc phát triển tiếp như thế nào; và khi ideas đi vào state institutions thì outcome thực tế phải được kiểm tra ra sao.
 
 Điểm xuất phát nên là [Capitalism, Labor và Institutions](../02_capitalism_labor_and_institutions.md). Chapter đó đã đặt vấn đề về property, market, wage labor, bargaining power và institutions. Module này đi sâu vào một trong những truyền thống có ảnh hưởng lớn nhất khi phân tích các quan hệ đó. Khi cần kiểm tra claim kinh tế bằng mô hình và evidence hiện đại, quay sang [Economics](../../../economics/README.md), đặc biệt [Economic History & Institutions](../../../economics/06_economic_history_institutions/README.md).
 
@@ -24,8 +24,39 @@ Phân biệt này là invariant của toàn bộ module. Mỗi chapter sẽ luô
 10. [09 — Later Marxist traditions: Gramsci, Critical Theory, Analytical Marxism và các nhánh khác](09_later_marxist_traditions.md)
 11. [10 — Comparative political economy: property, market, planning, freedom và power](10_comparative_political_economy.md)
 12. [11 — Primary-text reading guide: đọc Marx, Engels và Lenin theo problem](11_primary_text_reading_guide.md)
+13. [12 — Soviet case: industrialization, planning và collectivization](12_case_soviet_industrialization_planning_and_collectivization.md)
+14. [13 — China after 1978: reform, opening và dual-track transition](13_case_china_reform_opening_and_dual_track_transition.md)
+15. [14 — Vietnam: Đổi Mới, market reform và socialist orientation](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md)
+16. [15 — Comparative synthesis: Soviet Union, China và Vietnam](15_comparative_case_synthesis_soviet_china_vietnam.md)
 
-Flow này có chủ đích. Nếu nhảy thẳng vào `dialectical materialism`, `dictatorship of the proletariat` hoặc `vanguard party`, người đọc dễ học thành khẩu hiệu. Ta bắt đầu từ problem và context, dựng model, theo dõi genealogy, kiểm tra historical implementation, sau đó mới mở sang critique, rival frameworks và primary-source verification.
+Flow này có chủ đích. Nếu nhảy thẳng vào `dialectical materialism`, `dictatorship of the proletariat` hoặc `vanguard party`, người đọc dễ học thành khẩu hiệu. Ta bắt đầu từ problem và context, dựng model, theo dõi genealogy, kiểm tra historical implementation, mở sang critique và rival frameworks, quay về primary sources, rồi cuối cùng đưa framework vào worked cases có economic/historical evidence.
+
+## Worked-case route
+
+Nếu đã nắm conceptual baseline và muốn đi thẳng vào empirical layer, dùng route ngắn:
+
+```text
+06 Historical implementation
+→ 12 Soviet industrialization/planning
+→ 13 China reform and opening
+→ 14 Vietnam Đổi Mới
+→ 15 Comparative synthesis
+```
+
+Ba case không được dùng như ba “verdict” về socialism. Chúng được đọc bằng cùng một grammar:
+
+```text
+starting condition
+→ stated goal
+→ actual institution
+→ incentive + information mechanism
+→ implementation method
+→ measurable outcomes
+→ unintended consequences
+→ correction / adaptation
+```
+
+Unit of analysis là **country × period × institution × policy × outcome**, không phải `country = ideology`.
 
 ## Ba lớp phải giữ tách
 
@@ -38,6 +69,17 @@ author's text
 ```
 
 Một câu trong Marx không tự động mô tả Lenin; một argument của Lenin không tự động mô tả mọi Marxist tradition; và một policy của một state tự nhận Marxist–Leninist không tự động chứng minh đó là consequence trực tiếp của một sentence trong Marx. Genealogy phải được trace bằng source và mechanism.
+
+Worked cases thêm một lớp nữa:
+
+```text
+declared doctrine
+→ actual institution
+→ policy
+→ measured outcome
+```
+
+Giữa các arrow luôn có context, competing causes và uncertainty. Chính vì vậy historical outcome không được dùng như shortcut để “chứng minh” một philosophy.
 
 ## Cách đọc các claim trong module
 
@@ -62,5 +104,8 @@ Không nên ghi nhớ các từ này như glossary rời. Mỗi thuật ngữ ch
 - Marxists Internet Archive, Lenin, *What Is To Be Done?*: https://www.marxists.org/archive/lenin/works/1901/witbd/
 - Marxists Internet Archive, Lenin, *The State and Revolution*: https://www.marxists.org/archive/lenin/works/1917/staterev/
 - Marxists Internet Archive, Lenin, *Imperialism, the Highest Stage of Capitalism*: https://www.marxists.org/archive/lenin/works/1916/imp-hsc/
+- NBER historical research on Soviet industrialization: https://www.nber.org/books-and-chapters/growth-industrial-production-soviet-union
+- World Bank China reform overview: https://www.worldbank.org/en/country/china
+- World Bank Viet Nam reform/development overview: https://www.worldbank.org/en/country/vietnam/overview
 
-Các nguồn trên là điểm vào, không phải authority duy nhất. Khi một interpretation có tranh luận, chapter phải nói rõ boundary thay vì trình bày nó như consensus.
+Các nguồn trên là điểm vào, không phải authority duy nhất. Khi một interpretation có tranh luận, chapter phải nói rõ boundary thay vì trình bày nó như consensus; khi một quantitative claim dựa trên model, model assumptions phải được giữ visible.
