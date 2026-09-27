@@ -2,6 +2,8 @@
 
 `economics/` là thư viện Economics độc lập của repository. Mục tiêu là giải thích cách cá nhân, doanh nghiệp, thị trường, nhà nước và các nền kinh tế lựa chọn và phối hợp dưới điều kiện khan hiếm, thông tin không hoàn hảo và ràng buộc thể chế. Economics ở đây là domain nền tảng; phần ứng dụng vào tài sản, doanh nghiệp và danh mục vẫn nằm ở [Investing](../investing/README.md).
 
+Nếu mới bắt đầu, hãy đọc Economics như một câu chuyện thay vì một danh sách thuật ngữ. Trước hết, một người hoặc một doanh nghiệp phải chọn trong điều kiện bị giới hạn. Sau đó, nhiều lựa chọn gặp nhau trong thị trường. Khi các thị trường nối với nhau, ta có nền kinh tế vĩ mô. Cuối cùng, Econometrics hỏi liệu những cơ chế đó có thật sự xuất hiện trong dữ liệu hay chỉ là một câu chuyện hợp lý trên giấy.
+
 ## Trạng thái hiện tại
 
 Economics core hiện đã hoàn chỉnh ở cấp canonical learning path:
@@ -31,6 +33,26 @@ Từ đây Economics không còn khoảng trống core bắt buộc. Advanced ex
 ```
 
 Folder numbering phản ánh taxonomy, không ép thứ tự học tuyệt đối. Econometrics được đặt trước Applied Economics trong learning dependency để empirical case không biến thành correlation narrative.
+
+## Cách đọc cho người mới
+
+Ở lần đọc đầu, không cần cố nhớ toàn bộ công thức. Với mỗi đoạn, hãy trả lời bốn câu hỏi:
+
+1. Ai đang quyết định và họ muốn tối đa hóa hoặc bảo vệ điều gì?
+2. Điều gì đang giới hạn lựa chọn của họ?
+3. Nếu một biến thay đổi, hành vi thay đổi qua kênh nào?
+4. Kết luận này là mô hình lý thuyết, mô tả dữ liệu hay bằng chứng nhân quả?
+
+Một số thuật ngữ xuất hiện thường xuyên:
+
+- **Constraint**: giới hạn về tiền, thời gian, công suất, luật lệ hoặc thông tin.
+- **Marginal**: phần thay đổi khi làm thêm một đơn vị, không phải giá trị trung bình.
+- **Equilibrium**: trạng thái các lựa chọn hiện tại tương thích với nhau; không đồng nghĩa với công bằng.
+- **Surplus**: lợi ích còn lại sau khi trừ chi phí hoặc khoản phải trả.
+- **Externality**: chi phí hoặc lợi ích rơi sang người không trực tiếp giao dịch.
+- **Counterfactual**: điều lẽ ra xảy ra nếu treatment hoặc policy không xảy ra.
+
+Nếu một công thức khó đọc, hãy đọc câu giải thích trước và sau công thức. Mỗi chapter phải nói rõ ký hiệu là gì, công thức mô tả cơ chế nào, và assumption nào khiến công thức có thể sai.
 
 ## Depth contract
 

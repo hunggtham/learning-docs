@@ -2,11 +2,15 @@
 
 Economics bắt đầu từ một thực tế đơn giản: nhu cầu và mục tiêu có thể mở rộng, nhưng thời gian, thu nhập, lao động, vốn, đất đai, năng lượng và sự chú ý đều hữu hạn. Vì vậy mọi lựa chọn đều có chi phí cơ hội, và câu hỏi kinh tế tốt phải chỉ ra nguồn lực nào bị ràng buộc, ai ra quyết định, động lực nào thay đổi và kết quả được đo bằng gì.
 
+Khi đọc một câu hỏi kinh tế, hãy đi theo thứ tự đơn giản: **ai** đang quyết định, họ muốn đạt **mục tiêu** nào, họ bị giới hạn bởi **điều gì**, và ta đang so sánh với **phương án thay thế** nào. Chỉ sau khi trả lời bốn câu hỏi này mới nên chọn công thức. Cách đọc đó giúp phân biệt một mô hình đang giải thích cơ chế với một nhận xét chỉ mô tả kết quả.
+
 ## 1. Khan hiếm biến mong muốn thành bài toán lựa chọn
 
 Khan hiếm (scarcity) không có nghĩa mọi thứ đều tuyệt đối thiếu. Nó có nghĩa không thể đồng thời đạt tất cả mục tiêu với nguồn lực và công nghệ hiện tại. Một hộ gia đình phải phân bổ thu nhập giữa tiêu dùng hôm nay, tiết kiệm và bảo hiểm. Một doanh nghiệp phải phân bổ vốn, nhân lực và năng lực sản xuất giữa các dự án. Một chính phủ phải lựa chọn giữa các chương trình công, dù có thể tài trợ bằng thuế hoặc nợ.
 
 Đơn vị phân tích cần được nói rõ: cá nhân, hộ gia đình, doanh nghiệp, ngành, chính phủ hay toàn nền kinh tế. Cùng một chính sách có thể làm một nhóm được lợi và nhóm khác chịu chi phí.
+
+Constraint không chỉ là tiền. Một bệnh viện có thể còn ngân sách nhưng thiếu bác sĩ; một nhà máy có thể có đơn hàng nhưng thiếu công suất; một hộ gia đình có thể có thu nhập nhưng không có thời gian. Khi constraint khác nhau, cùng một thay đổi về giá hoặc chính sách có thể tạo phản ứng khác nhau.
 
 ## 2. Opportunity cost là giá trị của phương án tốt nhất bị bỏ qua
 
@@ -16,7 +20,7 @@ Chi phí kinh tế không chỉ là khoản tiền đã thanh toán. Nếu dùng
 opportunity cost = value of the best forgone alternative
 ```
 
-Sunk cost đã xảy ra không nên quyết định lựa chọn biên hiện tại. Quyết định tiếp tục hay dừng phải so sánh lợi ích và chi phí tăng thêm từ hôm nay, đồng thời tính các nghĩa vụ không thể tránh.
+**Sunk cost** là khoản chi phí đã phát sinh và không thể thu hồi bằng quyết định hiện tại. Nó không nên quyết định lựa chọn biên hiện tại. Quyết định tiếp tục hay dừng phải so sánh lợi ích và chi phí tăng thêm từ hôm nay, đồng thời tính các nghĩa vụ không thể tránh. Ví dụ, tiền vé xem phim đã mua không làm bộ phim trở nên đáng xem hơn nếu bạn đang bị ốm; khoản tiền đó đã mất dù bạn ở nhà hay đi xem.
 
 ## 3. Marginal analysis hỏi “thêm một đơn vị có đáng không?”
 
@@ -28,15 +32,21 @@ choose more activity while marginal benefit ≥ marginal cost
 
 Điều kiện này là mental model, không phải quy tắc mù quáng. Nếu có externality, ràng buộc công suất, discontinuity hoặc uncertainty lớn, private marginal cost có thể khác social marginal cost và điểm lựa chọn sẽ bị lệch.
 
+Nói ngắn gọn, marginal analysis hỏi: “Nếu làm thêm một chút, phần được thêm vào có đáng với phần chi phí phát sinh thêm không?”. **Externality** là chi phí hoặc lợi ích rơi sang người không trực tiếp tham gia; **uncertainty** là khi kết quả chưa biết chắc. Hai yếu tố này khiến chi phí mà cá nhân tự nhìn thấy có thể khác chi phí của toàn xã hội.
+
 ## 4. Incentives truyền constraint vào hành vi
 
-Giá, thuế, trợ cấp, tiền lương, phạt, quyền sở hữu, deadline và quy tắc tiếp cận thông tin đều thay đổi payoff của các hành động. Không nên mô tả incentive chỉ bằng ý định của nhà thiết kế; cần hỏi người tham gia thực sự tối ưu điều gì sau khi luật chơi thay đổi.
+Giá, thuế, trợ cấp, tiền lương, phạt, quyền sở hữu, deadline và quy tắc tiếp cận thông tin đều thay đổi **payoff**, tức lợi ích hoặc chi phí mà người tham gia nhận được từ một hành động. Không nên mô tả incentive chỉ bằng ý định của nhà thiết kế; cần hỏi người tham gia thực sự tối ưu điều gì sau khi luật chơi thay đổi.
+
+Chuỗi đọc dễ nhất là: **luật chơi đổi → lợi ích/chi phí đổi → hành vi ở biên đổi → kết quả trực tiếp và phản ứng phụ xuất hiện**. Ví dụ, trợ cấp mua xe điện làm giá phải trả giảm, nhưng số người mua còn phụ thuộc vào trạm sạc, giá điện và khả năng cung ứng xe.
 
 Một incentive có thể tạo phản ứng bậc hai. Trợ cấp sản lượng có thể tăng output nhưng cũng làm tăng giá đầu vào hoặc khuyến khích đầu tư vào hoạt động có lợi suất xã hội thấp. Thưởng theo chỉ tiêu có thể cải thiện số đo nhưng làm người thực hiện game metric nếu metric không đại diện đúng outcome.
 
 ## 5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt
 
-Equilibrium là cấu hình mà với beliefs, prices, rules và actions hiện tại, không tác nhân nào có động lực đơn phương thay đổi. Một equilibrium có thể hiệu quả, kém hiệu quả, bất bình đẳng hoặc không ổn định khi kỳ vọng đổi.
+Equilibrium là cấu hình mà với **beliefs** (niềm tin về điều người khác sẽ làm), prices, rules và actions hiện tại, không tác nhân nào có động lực đơn phương thay đổi. Một equilibrium có thể hiệu quả, kém hiệu quả, bất bình đẳng hoặc không ổn định khi kỳ vọng đổi.
+
+Vì vậy, câu “thị trường đang ở equilibrium” chỉ có nghĩa các hành động hiện tại tương thích với nhau. Nó không có nghĩa mọi người hài lòng hoặc kết quả là công bằng. Muốn đánh giá tốt hay xấu, cần thêm tiêu chuẩn welfare, equity hoặc stability.
 
 Khi đọc một mô hình cân bằng, cần ghi rõ:
 
@@ -52,11 +62,15 @@ Khi đọc một mô hình cân bằng, cần ghi rõ:
 
 Tách hai lớp không có nghĩa economics không liên quan đến chính sách. Nó giúp người đọc biết phần nào là cơ chế thực chứng, phần nào là lựa chọn về phân phối, quyền lợi, công bằng và rủi ro.
 
+Ví dụ, “tăng thuế thuốc lá làm lượng mua giảm” là claim positive có thể kiểm tra bằng dữ liệu. “Nên tăng thuế thuốc lá dù người thu nhập thấp chịu gánh nặng lớn hơn” là claim normative; nó cần thêm judgment về sức khỏe, quyền tự chủ và phân phối.
+
 ## 7. PPF biến trade-off thành một biên có thể nhìn thấy
 
 Production Possibility Frontier (PPF) biểu diễn các phối hợp sản lượng tối đa có thể đạt được với công nghệ và nguồn lực hiện tại. Điểm nằm trên biên cho biết sử dụng hiệu quả nguồn lực theo mô hình; điểm bên trong gợi ý slack hoặc misallocation; điểm bên ngoài chưa khả thi trong điều kiện hiện tại.
 
 Độ dốc của PPF tại một điểm là chi phí cơ hội cận biên của sản phẩm này tính bằng sản phẩm kia. Nếu chi phí cơ hội tăng khi chuyên môn hóa, PPF cong lõm về phía gốc. Công nghệ, vốn, kỹ năng hoặc thể chế tốt hơn có thể dịch chuyển biên ra ngoài, nhưng không đảm bảo mọi nhóm đều nhận lợi ích như nhau.
+
+PPF chỉ mô tả **nền kinh tế có thể sản xuất được bao nhiêu**, không nói trực tiếp ai sở hữu sản lượng. Công nghệ mới có thể đẩy PPF ra ngoài nhưng lợi ích vẫn tập trung vào một nhóm. Vì vậy productive capacity và distribution phải được phân tích riêng.
 
 ## 8. Efficiency khác equity
 
@@ -64,11 +78,15 @@ Production Possibility Frontier (PPF) biểu diễn các phối hợp sản lư�
 
 Một chính sách có thể làm tổng surplus tăng nhưng phân phối lại thu nhập mạnh. Ngược lại, một chính sách có thể cải thiện phân phối nhưng làm giảm một phần output. Phân tích phải báo cáo hai lớp thay vì gọi mọi kết quả “hiệu quả” như thể nó đã giải quyết câu hỏi công bằng.
 
+Efficiency là câu hỏi về việc chiếc bánh có được tạo ra hoặc phân bổ tốt không; equity là câu hỏi ai nhận phần nào của chiếc bánh. Hai câu hỏi có thể dẫn đến hai đánh giá khác nhau về cùng một chính sách.
+
 ## 9. Comparative statics thay đổi một giả định tại một thời điểm
 
-Comparative statics so sánh equilibrium trước và sau một thay đổi trong parameter, giữ các điều kiện khác theo đúng phạm vi của mô hình. Ví dụ: thu nhập tăng làm budget set mở rộng; giá hàng hóa thay thế tăng có thể làm cầu đối với hàng hóa đang xét tăng; thuế trên mỗi đơn vị làm wedge giữa giá người mua trả và giá người bán nhận.
+Comparative statics so sánh equilibrium trước và sau một thay đổi trong **parameter** (điều kiện được coi là cho trước trong mô hình), giữ các điều kiện khác theo đúng phạm vi của mô hình. Ví dụ: thu nhập tăng làm budget set mở rộng; giá hàng hóa thay thế tăng có thể làm cầu đối với hàng hóa đang xét tăng; thuế trên mỗi đơn vị làm **wedge**, tức khoảng cách giữa giá người mua trả và giá người bán nhận.
 
 Không nên gọi mọi biến động là comparative statics. Nếu adjustment path, kỳ vọng, uncertainty, learning hoặc dynamic feedback quan trọng, cần mô hình động hoặc mô tả transition path thay vì chỉ so sánh hai điểm cân bằng.
+
+Ví dụ, tăng lãi suất có thể làm đầu tư giảm trong mô hình tĩnh. Nhưng trong thực tế còn có tái cấp vốn, tỷ giá, giá tài sản, kỳ vọng lạm phát và chất lượng tín dụng. So sánh trước–sau cho biết hướng có thể xảy ra, nhưng chưa giải thích nền kinh tế đi tới trạng thái mới bằng con đường nào.
 
 ## 10. Checklist đọc một claim kinh tế
 

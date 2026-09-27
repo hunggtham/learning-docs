@@ -2,6 +2,8 @@
 
 Economic History & Institutions là lớp cuối của Economics core. Module này không lặp chronology của World History/Korean History; nó dùng lịch sử như laboratory để kiểm tra mechanisms về institutions, state capacity, finance, technology, globalization, crises và path dependence.
 
+Nói đơn giản, module này hỏi: vì sao hai xã hội có tài nguyên tương tự lại có kết quả phát triển khác nhau, và vì sao một luật lệ tồn tại lâu hơn nhiều so với người đã ban hành nó? Câu trả lời không chỉ nằm ở “sự kiện gì đã xảy ra”, mà ở việc ai có quyền đặt luật, ai thực thi, ai hưởng lợi, và cơ chế đó tự củng cố hay bị phá vỡ như thế nào.
+
 ## Thứ tự học canonical
 
 1. [Institutions, Property Rights & State Capacity](./00_institutions_property_rights_and_state_capacity.md) — formal/informal rules, enforcement, property/contract rights, fiscal/information/legal capacity, credible commitment, rent-seeking, political power và persistence.
@@ -27,6 +29,8 @@ Rules + enforcement + distribution of power
 [World History](../../world_history/README.md) và [Korean History](../../korean_history/README.md) giữ chronology, actors, wars, political sequence và historical detail. Module này chỉ lấy case khi cần làm rõ economic mechanism hoặc test institutional claim.
 
 Không copy timeline thành một “economic history timeline” thứ hai.
+
+Khi đọc một case lịch sử, hãy tách ba lớp: **mô tả** (điều gì đã xảy ra), **cơ chế** (vì sao nó xảy ra), và **khả năng khái quát** (điều kiện nào cho phép áp dụng bài học sang nơi khác). Một case minh họa cơ chế không tự chứng minh rằng cơ chế đó luôn đúng.
 
 ## Boundary với Econometrics
 

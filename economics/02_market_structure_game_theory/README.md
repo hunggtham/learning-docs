@@ -2,6 +2,8 @@
 
 Market structure mô tả constraint mà firm đối mặt; game theory mô tả cách payoff của một tác nhân phụ thuộc vào hành động của tác nhân khác. Module này nối trực tiếp từ competitive benchmark của Microeconomics sang market power, oligopoly, repeated interaction và mechanism design.
 
+Nói đơn giản, module này giải thích vì sao một doanh nghiệp không thể luôn hành động như thể mình đứng một mình. Nếu đối thủ giảm giá, doanh nghiệp phải phản ứng; nếu khách hàng khó chuyển sang nhà cung cấp khác, doanh nghiệp có thêm quyền định giá; nếu luật đấu giá thay đổi, người tham gia sẽ đổi cách ra giá. Mỗi mô hình dưới đây chỉ là một cách cô lập một cơ chế trong câu chuyện đó.
+
 ## Thứ tự học canonical
 
 1. [Competition, Monopoly & Market Power](./00_competition_monopoly_and_market_power.md) — perfect competition, monopoly, markup, elasticity, natural monopoly, price discrimination, contestability và empirical market-power boundary.
@@ -25,6 +27,8 @@ Competitive benchmark
 ```
 
 Perfect competition và monopoly là benchmarks chứ không phải two labels đủ để classify mọi market. Oligopoly outcome phụ thuộc action variable, product differentiation, capacity, information và timing. Repeated games thêm history/future punishment. Mechanism design đảo chiều reasoning: thay vì nhận rules có sẵn rồi tìm equilibrium, designer chọn rules để tạo incentive mong muốn.
+
+Khi chưa biết chọn mô hình nào, hãy hỏi: các firm đang cạnh tranh bằng **giá**, **sản lượng**, **công suất**, hay **chất lượng**? Họ hành động cùng lúc hay lần lượt? Họ biết gì về đối thủ? Chỉ cần một câu trả lời thay đổi, equilibrium có thể thay đổi theo.
 
 ## Kết quả cần đạt
 

@@ -2,6 +2,8 @@
 
 Macroeconomics nghiên cứu nền kinh tế ở cấp aggregate nhưng không được biến aggregate thành một “actor duy nhất”. Module này bắt đầu từ measurement, đi qua long-run productive capacity, labor/inflation, money/banking, fiscal–monetary stabilization và kết thúc ở open-economy constraints. Mỗi chapter phải tách accounting identity khỏi causal model, short run khỏi long run, và domestic mechanism khỏi application vào financial markets.
 
+Nói đơn giản, Macro không hỏi “nền kinh tế muốn gì?” như thể nền kinh tế là một con người. Nó hỏi hàng triệu hộ gia đình, doanh nghiệp, ngân hàng và chính phủ đang cùng làm gì, rồi các quyết định đó cộng lại thành GDP, việc làm, lạm phát, tín dụng và tỷ giá như thế nào. Vì vậy một con số Macro luôn cần được đọc cùng với thời điểm, mẫu số, cơ chế và phản ứng chính sách.
+
 ## Thứ tự học canonical
 
 1. [National Accounts & Macro Measurement](./00_national_accounts_and_macro_measurement.md) — GDP/GNI, nominal–real, price indices, saving–investment identities, stock–flow, potential output, labor/inflation/productivity measurement và real-time revisions.
@@ -24,6 +26,8 @@ Measurement / accounting identities
 ```
 
 Module cố ý bắt đầu bằng measurement vì macro rất dễ nhầm identity với theory. `S = I + NX`, government budget constraint hay balance-of-payments equality là accounting structures; chúng không tự nói direction of causality. Causal interpretation phải đi qua behavioral assumptions, institutional regime và evidence.
+
+Ví dụ, `S = I + NX` nói các đại lượng tiết kiệm, đầu tư và xuất khẩu ròng phải khớp nhau theo cách hạch toán. Nó không tự nói tiết kiệm tăng gây đầu tư tăng, hay đầu tư giảm làm xuất khẩu ròng tăng. Muốn biết chiều nhân quả, cần thêm mô hình hành vi và dữ liệu.
 
 ## Kết quả cần đạt
 

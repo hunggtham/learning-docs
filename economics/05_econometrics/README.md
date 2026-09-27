@@ -2,6 +2,8 @@
 
 Econometrics nối economic questions với data bằng measurement, probability, statistical inference và causal identification. Module này không coi regression là điểm bắt đầu. Thứ tự canonical là: xác định **data + estimand + counterfactual** trước, sau đó mới chọn estimator phù hợp với source of variation và dependence structure.
 
+Nói đơn giản, Econometrics không chỉ hỏi “con số ước lượng là bao nhiêu?”. Nó hỏi thêm: con số đó đang đo điều gì, được so sánh với tình huống nào, và tại sao ta tin nhóm so sánh là hợp lý? Một regression có thể chạy không lỗi nhưng vẫn trả lời sai nếu người nhận policy tự chọn, biến được đo không đúng, hoặc dữ liệu không đại diện cho nhóm ta muốn kết luận.
+
 ## Thứ tự học canonical
 
 1. [Measurement, Data & Estimands](./00_measurement_data_and_estimands.md) — units/population, sampling/selection, missingness, measurement error, descriptive vs causal targets, potential outcomes, ATE/ATT/LATE, DAG/collider/bad controls và internal/external validity.
@@ -28,6 +30,8 @@ Economic question
 
 Tool choice comes after design. `OLS`, `IV`, `DiD`, `RDD` hay `VAR` không phải labels cho sophistication; chúng answer different questions under different assumptions.
 
+Có thể hiểu các phương pháp này bằng một câu ngắn: **OLS** mô tả quan hệ có điều kiện; **IV** tìm một nguồn biến động bên ngoài để xử lý endogeneity; **DiD** so sánh thay đổi giữa nhóm treatment và control theo thời gian; **RDD** dùng một ngưỡng phân loại; **VAR** theo dõi quan hệ động giữa nhiều chuỗi thời gian. Mỗi phương pháp chỉ đáng tin khi assumptions tương ứng có lý do thuyết phục.
+
 ## Ba mục tiêu phải tách riêng
 
 ### Description
@@ -44,6 +48,8 @@ Estimate effect của intervention/treatment. Cần credible counterfactual/sour
 
 Một model có thể excellent ở một mục tiêu và weak ở mục tiêu khác.
 
+Ví dụ, một mô hình dự báo giá có thể dự báo tốt mà không cho biết biến nào gây ra giá thay đổi. Ngược lại, một thiết kế causal có thể ước lượng được effect của một policy nhưng không dự báo tốt giá trị tương lai. Vì vậy cần xác định mục tiêu trước khi đánh giá model “tốt” hay “xấu”.
+
 ## Evidence discipline
 
 Mọi empirical claim nên trả lời được:
@@ -59,6 +65,8 @@ How local is the result?
 ```
 
 `p < 0.05`, high `R²`, large N hoặc many controls không thay thế identification.
+
+Nói cách khác, số liệu trông đẹp không tự biến một association thành causal effect. Nếu không biết variation dùng để so sánh đến từ đâu, ta chưa biết coefficient đang phản ánh policy, selection, reverse causality hay một yếu tố bị bỏ sót.
 
 ## Boundary với Mathematics
 

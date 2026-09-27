@@ -2,6 +2,8 @@
 
 Applied Economics dùng theory từ Microeconomics, Market Structure/Game Theory và Macroeconomics cùng identification discipline từ Econometrics để phân tích labor, taxation/public policy, trade, development và industries cụ thể. Module này không phải tập hợp case studies. Mỗi chapter phải trả lời đồng thời: **mechanism nào đang hoạt động, estimand nào cần đo, variation nào identify effect, ai chịu incidence, và result có generalize/scale được không?**
 
+Nói đơn giản, Applied Economics lấy một câu hỏi đời thực như “tăng lương tối thiểu có làm mất việc không?” hoặc “thuế này rơi vào ai?” rồi tách nó thành các phần nhỏ: cơ chế lý thuyết là gì, dữ liệu đo biến nào, nhóm so sánh nào tạo counterfactual, và kết quả có còn đúng khi chính sách được mở rộng không. Vì thế một ví dụ thực tế chỉ là điểm bắt đầu; nó chưa phải bằng chứng.
+
 ## Thứ tự học canonical
 
 1. [Labor Economics](./00_labor_economics.md) — labor demand/supply, human capital, signaling, search/matching, monopsony, minimum wage, unions, discrimination, migration và labor-policy identification.
@@ -25,6 +27,8 @@ Economic mechanism
 ```
 
 Nếu một chapter chỉ có theory mà không nói data/design, nó chưa đủ applied. Nếu chỉ có empirical correlation mà không có mechanism/counterfactual, nó cũng chưa đủ applied.
+
+Đọc theo thứ tự: **câu hỏi → cơ chế → đại lượng cần đo → thiết kế nhận diện → phân phối lợi ích/chi phí → giới hạn khi áp dụng**. Cách này giúp tránh hai lỗi phổ biến: dùng một mô hình đẹp để trả lời sai câu hỏi, hoặc dùng một con số thực nghiệm mà không biết nó đo effect nào.
 
 ## Dependency
 

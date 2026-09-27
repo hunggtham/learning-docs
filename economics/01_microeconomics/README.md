@@ -2,6 +2,8 @@
 
 Microeconomics nghiên cứu cách household, firm và các tổ chức lựa chọn dưới constraint, cách giá và thông tin phối hợp các lựa chọn đó, và khi nào equilibrium tạo ra hoặc không tạo ra kết quả hiệu quả. Module đi từ individual optimization đến welfare và market failure; không coi một equilibrium đơn giản là câu trả lời đầy đủ cho phân phối, thể chế hoặc policy.
 
+Nói đơn giản, Microeconomics trả lời hai câu hỏi. Một người hoặc doanh nghiệp sẽ làm gì khi giá, thu nhập, công nghệ hay luật lệ thay đổi? Và khi rất nhiều lựa chọn riêng lẻ gặp nhau, thị trường tạo ra kết quả gì? Vì vậy mỗi chapter luôn đi từ **mục tiêu + giới hạn** của một tác nhân, rồi mới chuyển sang equilibrium và tác động lên những người khác.
+
 ## Thứ tự học canonical
 
 1. [Consumer & Producer Theory](./00_consumer_and_producer_theory.md) — budget constraint, preferences, utility, MRS, income/substitution effects, demand, elasticity, technology, cost, profit và supply.
@@ -11,6 +13,8 @@ Microeconomics nghiên cứu cách household, firm và các tổ chức lựa ch
 5. [Information Asymmetry & Contracts](./04_information_asymmetry_and_contracts.md) — adverse selection, moral hazard, signaling, screening, principal–agent, incomplete contracts, reputation, collateral và incentive design.
 
 Demand–supply và elasticity không được tách thành một “formula chapter” độc lập vì chúng là ngôn ngữ xuyên suốt consumer, producer, welfare và policy. Người học cần hiểu curve là kết quả của objective + constraint + ceteris-paribus assumptions, không phải hình vẽ tồn tại độc lập.
+
+Nếu một đoạn nói “đường cầu dịch chuyển”, hãy đọc tiếp để tìm nguyên nhân cụ thể: thu nhập, giá hàng thay thế, kỳ vọng, số người mua hay thông tin đã thay đổi? Nếu chỉ biết đường cong đi lên hoặc đi xuống mà không biết biến nào tạo ra thay đổi, ta mới nhớ hình dạng chứ chưa hiểu cơ chế.
 
 ## Learning spine
 
