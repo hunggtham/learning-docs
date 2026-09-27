@@ -12,7 +12,7 @@ Bộ này cũng không ép toàn bộ quá khứ của lãnh thổ Việt Nam hi
 
 Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Sau đó đọc tuyến tính từ 01 trở đi nếu muốn thấy causal chain đầy đủ.
 
-Các chapter hiện đã triển khai đến nhà Lý:
+Các chapter hiện đã triển khai đến Lê–Mạc/Nam–Bắc triều:
 
 - [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md): evidence, myth, periodization và causal reasoning.
 - [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md): sông, đồng bằng, núi, biển và historical space.
@@ -22,6 +22,10 @@ Các chapter hiện đã triển khai đến nhà Lý:
 - [`06_northern_rule_society_economy_and_resistance.md`](06_northern_rule_society_economy_and_resistance.md): Bắc thuộc dài hạn, society, economy và resistance.
 - [`07_tenth_century_autonomy_and_state_building.md`](07_tenth_century_autonomy_and_state_building.md): thế kỷ X từ autonomy đến durable state.
 - [`08_ly_thang_long_state_and_economy.md`](08_ly_thang_long_state_and_economy.md): nhà Lý, Thăng Long, agriculture, Buddhism và state consolidation.
+- [`09_tran_society_trade_and_mongol_wars.md`](09_tran_society_trade_and_mongol_wars.md): nhà Trần, trade, society và Mongol–Yuan wars.
+- [`10_ho_ming_occupation_and_lam_son.md`](10_ho_ming_occupation_and_lam_son.md): Hồ reforms, Minh occupation và Lam Sơn.
+- [`11_le_so_bureaucracy_law_land_and_education.md`](11_le_so_bureaucracy_law_land_and_education.md): Lê sơ, bureaucracy, law, land và examinations.
+- [`12_mac_and_north_south_courts.md`](12_mac_and_north_south_courts.md): Mạc, Lê restoration và Nam–Bắc triều.
 
 Các file tiếp theo sẽ tiếp tục theo dependency trong index, không đổi sang kiểu tóm tắt chronology.
 
@@ -41,6 +45,6 @@ Một narrative quen thuộc không được dùng để thay thế evidence; ng
 
 ## Nguồn nền
 
-Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim và nhiều nghiên cứu Cambridge/Oxford; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
+Xương sống chronology và interpretation được đối chiếu với scholarship về lịch sử Việt Nam và Đông Nam Á, trong đó có các công trình của K. W. Taylor, Nam C. Kim, John K. Whitmore, James A. Anderson và nhiều nghiên cứu Cambridge/Oxford; archaeology và heritage checkpoint được đối chiếu với Cục Di sản Văn hóa, Bảo tàng Lịch sử Quốc gia, UNESCO và các cơ quan bảo tồn địa phương khi phù hợp.
 
 > Lịch sử không phải một chuỗi “sự kiện đã xảy ra”. Nó là quá trình một state của xã hội chuyển thành state khác dưới tác động đồng thời của quyền lực, tài nguyên, technology, geography, beliefs và lựa chọn của con người.
