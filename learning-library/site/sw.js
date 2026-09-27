@@ -1,5 +1,5 @@
-const SHELL_CACHE = 'study-shelf-shell-v5';
-const CONTENT_CACHE = 'study-shelf-content-v5';
+const SHELL_CACHE = 'study-shelf-shell-v6';
+const CONTENT_CACHE = 'study-shelf-content-v6';
 const USER_CACHE = 'study-shelf-user-v1';
 const SHELL = [
   './',
@@ -63,7 +63,14 @@ self.addEventListener('fetch', event => {
     event.respondWith(networkFirst(event.request).then(async response => response.status === 503 ? (await caches.match('./index.html')) || response : response));
     return;
   }
-  if (url.pathname.endsWith('/supabase-config.js') || url.pathname.endsWith('/library/library.json') || url.pathname.endsWith('/library/search-index.json') || url.pathname.endsWith('/library/graph.json')) {
+  if (
+    url.pathname.endsWith('/supabase-config.js') ||
+    url.pathname.endsWith('/progress-sync.js') ||
+    url.pathname.endsWith('/study-planner-auth.js') ||
+    url.pathname.endsWith('/library/library.json') ||
+    url.pathname.endsWith('/library/search-index.json') ||
+    url.pathname.endsWith('/library/graph.json')
+  ) {
     event.respondWith(networkFirst(event.request));
     return;
   }
