@@ -1,110 +1,464 @@
-# Comparative political economy — so sánh bằng cùng một bộ câu hỏi
+# Comparative political economy — so sánh bằng institutional architecture
 
-Sau khi thấy Marxism phân nhánh theo nhiều hướng, ta cần một framework để so sánh mà không biến chapter thành “trường phái A tốt hơn trường phái B”. Prerequisite của chapter này là [Later Marxist traditions](09_later_marxist_traditions.md), [Justice, power và political legitimacy](../00_justice_power_and_legitimacy.md) và phần nền của [Economics](../../../economics/README.md).
+Sau khi thấy Marxism phân nhánh theo nhiều hướng, comparison phải đi sâu hơn labels như “capitalism”, “socialism”, “market” hay “planning”. Những labels này che giấu rất nhiều institutional variation bên trong.
 
-Câu hỏi trung tâm là: khi một society tổ chức production, exchange, ownership và redistribution, **quyền quyết định nằm ở đâu, information chạy bằng cơ chế nào, incentive được tạo ra ra sao, và failure mode nào xuất hiện?** Một ideology chỉ trở nên có thể so sánh khi được hạ xuống thành institutional questions như vậy.
-
-## 1. Property — ai kiểm soát productive assets?
-
-Trong classical liberal và libertarian traditions, **private property** thường được nối với individual liberty, decentralized choice và limits on state power. Quyền sở hữu cho phép individuals giữ resources, contract, invest và tổ chức enterprise mà không cần xin phép một central authority.
-
-Trong Marxian analysis, cùng structure đó lại được nhìn từ relation giữa owner và non-owner. Nếu productive assets tập trung vào một class, những người không sở hữu assets phải bán labor power để tiếp cận means of production. Vì vậy property không chỉ là bundle of rights với object; nó còn phân phối bargaining power và control over production.
-
-Socialist traditions đưa ra nhiều alternatives, từ state ownership, cooperative ownership, worker control đến social investment funds. Do đó “public vs private” là distinction quá thô. Câu hỏi chính xác hơn là: **ai có residual control, ai nhận residual income, ai có quyền exit, ai quyết định investment và ai chịu downside risk?**
-
-## 2. Coordination — market, hierarchy hay planning?
-
-Markets phối hợp distributed decisions qua price. Khi demand tăng tương đối với supply, price thay đổi và tạo signals cho production/consumption. Đây là một cơ chế mạnh vì không cần một actor biết toàn bộ local information.
-
-Nhưng market coordination không giải quyết mọi problem. Externalities, monopoly, asymmetric information, public goods và unequal bargaining power tạo khoảng cách giữa private transaction và social outcome. Vì vậy real-world capitalism luôn có một lớp institutions: contract law, competition policy, central banking, taxation, social insurance và regulation.
-
-Planning cố thay một phần price coordination bằng conscious allocation. Lợi thế tiềm năng là society có thể theo đuổi goals mà market price không internalize tốt, chẳng hạn infrastructure hoặc certain public goods. Failure mode là information bottleneck, incentive problem và concentration of decision power.
-
-Market socialism xuất hiện chính vì binary “market = capitalism / planning = socialism” không đứng vững. Một system có thể socialise ownership nhưng vẫn dùng markets cho substantial allocation. Stanford Encyclopedia of Philosophy về socialism xem market socialism như một family nghiêm túc của socialist institutional design.
-
-## 3. Freedom — freedom khỏi coercion hay capacity để act?
-
-Liberal traditions thường bảo vệ **negative liberty**: một người tự do khi không bị actor khác cưỡng bức vượt quá những giới hạn hợp pháp cần thiết. Private property và plural centers of economic power có thể được xem là buffer chống state domination.
-
-Socialist và egalitarian traditions thường nhấn mạnh **substantive freedom**: legal permission không đủ nếu người đó không có resources, education, health, bargaining position hoặc real alternatives để sử dụng quyền của mình. Một worker về formal law có thể tự do từ chối job, nhưng mức độ freedom thực tế phụ thuộc fallback option.
-
-Hai cách nhìn không buộc phải loại trừ nhau. Institutional analysis nên kiểm tra cả **public coercion** lẫn **private dependency**. Một society có thể bị domination bởi state bureaucracy, private monopoly, household hierarchy hoặc nhiều nguồn cùng lúc.
-
-## 4. Equality — equality của cái gì?
-
-Marx không đơn giản xây theory quanh equal income. Ông quan tâm class relation và control over production. Liberal egalitarian traditions như Rawls lại hỏi basic institutions phân phối rights, opportunities và economic advantages thế nào. Social democracy thường chấp nhận market economy nhưng dùng collective bargaining, public services, progressive taxation và social insurance để giảm risks và unequal life chances.
-
-Do đó “ủng hộ equality” chưa đủ để biết một framework muốn thiết kế institution thế nào. Có thể nói về equality before law, political equality, equality of opportunity, distribution of wealth, workplace democracy hoặc capability. Mỗi target tạo ra policy implications khác nhau.
-
-## 5. Power — state power và private power phải được đo cùng lúc
-
-Một weakness của debate ideology là mỗi phía đôi khi chỉ nhìn power ở nơi đối thủ mạnh. Critics of socialism có thể tập trung vào centralized state power nhưng bỏ qua monopoly, employer dependency hoặc wealth-to-political-influence channels. Critics of capitalism có thể tập trung vào capital concentration nhưng đánh giá thấp coercive capacity của centralized political institutions.
-
-Một framework tốt phải lập hai sổ cái cùng lúc:
-
-```text
-public power  → law, taxation, policing, licensing, censorship, redistribution
-private power → ownership, employment, credit, platform access, monopoly, information control
-```
-
-Sau đó mới hỏi accountability, exit, voice và countervailing power hoạt động ở đâu.
-
-## 6. Incentives — system muốn actor làm gì khi không ai “tốt” sẵn?
-
-Institutional design không nên giả định capitalist luôn greedy, worker luôn solidaristic, bureaucrat luôn public-spirited hay voter luôn informed. Ta cần hỏi mechanism khi actor có mixed motives.
-
-Private ownership có thể tạo incentive cho innovation và cost control vì owner hưởng upside và chịu downside, nhưng cũng có incentive externalize costs hoặc build monopoly. Public ownership có thể internalize broader goals, nhưng nếu performance feedback yếu và managers không chịu consequences, inefficiency hoặc political allocation có thể xuất hiện. Cooperative ownership có thể align workers với firm performance nhưng gặp issues về capital raising, risk concentration hoặc decision costs.
-
-Vì vậy question không phải “incentive có tồn tại không” mà là **system reward hành vi nào, ai chịu cost khi quyết định sai và feedback đến nhanh đến đâu?**
-
-## 7. Information — ai biết gì, vào lúc nào?
-
-Hayekian market critique nhấn mạnh dispersed knowledge: không ai có toàn bộ information về local scarcity, preference và production possibilities. Price là compressed signal giúp actors coordinate.
-
-Marxian critique lại nhấn mạnh rằng price system có thể che khuất social relations và không biểu diễn tốt power, unpaid work hoặc external costs. Contemporary institutional design vì vậy thường kết hợp nhiều channels: market prices, accounting, democratic decision, expert planning, regulation và statistical measurement.
-
-Digital systems và modern computation làm planning problem thay đổi về scale nhưng không xóa nó. More compute không tự động tạo truthful local data, correct objective function hay legitimate authority. Đây là bridge trực tiếp sang [Technology, design and human agency](../../07_philosophy_of_technology/00_technology_design_and_human_agency.md).
-
-## 8. Failure mode — so sánh feasible systems, không so ideal với failure của đối thủ
-
-Một lỗi tranh luận phổ biến là so **ideal theory của phía mình** với **historical failure của phía khác**. Comparative political economy cần symmetric standard:
-
-- capitalism phải được đánh giá ở cả competitive và concentrated markets;
-- socialism phải được đánh giá ở cả democratic/decentralized proposals và historical centralized implementations;
-- social democracy phải tính cả fiscal/incentive constraints lẫn gains về insurance/public goods;
-- market reforms phải tính transition costs và institutional prerequisites chứ không chỉ equilibrium cuối.
-
-Không có reason để giả định một label tự quyết định outcome. Rule of law, state capacity, competition, democratic accountability, social trust, education, technology và international environment có thể thay đổi kết quả rất lớn bên trong cùng một broad family.
-
-## 9. Một worked example: housing
-
-Housing giúp thấy các frameworks khác nhau đặt câu hỏi khác nhau. Market-oriented analysis hỏi supply elasticity, zoning, interest rates, construction costs và price signals. Marxian analysis có thể hỏi land ownership, rent extraction, financialization và class relation giữa landlords/owners/non-owners. Social-democratic design có thể thêm public housing, housing allowance hoặc tenant protection. Cooperative/socialist proposals có thể thử community land trust hoặc cooperative ownership.
-
-Không framework nào được “thắng” chỉ vì nó nhìn thấy một variable. Đánh giá policy cụ thể cần data: quantity, quality, affordability, waiting time, fiscal cost, mobility, construction response và distributional effects. Đây là cách common prompt chuyển ideology thành reasoning thay vì memorization.
-
-## Mental model sau chapter
-
-Khi gặp một policy hoặc political-economic claim, đừng hỏi trước “nó thuộc capitalism hay socialism?”. Hãy trace:
+Một framework có ích hơn bắt đầu từ cùng một bộ variables cho mọi system:
 
 ```text
 ownership
 → decision rights
+→ coordination mechanism
 → information flow
 → incentives
-→ bargaining power
+→ firm governance
+→ labor relation
+→ public finance / redistribution
 → accountability
-→ distribution
+→ innovation and investment
 → failure mode
+→ correction mechanism
 ```
 
-Sau đó mới xem tradition nào cung cấp concept hữu ích cho từng mắt xích.
+Mục tiêu không phải tìm một winner abstract. Political economy chỉ meaningful khi institutional package được specified đủ rõ để có thể hỏi causal và normative questions.
 
-Boundary quan trọng là political philosophy không thay thế empirical economics. Nó giúp làm rõ values, rights và power; economics và history phải kiểm tra causal claims về productivity, prices, growth, inequality hoặc crisis. Chapter tiếp theo, [Primary-text reading guide](11_primary_text_reading_guide.md), quay lại source để người học phân biệt điều Marx/Engels/Lenin thực sự lập luận với textbook formulations xuất hiện về sau.
+## Property: “private” và “public” đều là bundles of rights
+
+Property không phải một binary switch. Một productive asset có nhiều rights:
+
+```text
+right to use
+right to exclude
+right to sell
+right to receive residual income
+right to appoint managers
+right to change purpose
+right to borrow against asset
+right to liquidate
+```
+
+Private shareholder, worker cooperative member, municipality, sovereign wealth fund và state-owned enterprise có thể phân phối các rights này khác nhau.
+
+Marxian analysis nhấn mạnh **control over means of production** vì ownership structures bargaining power and access to productive activity. Liberal traditions nhấn mạnh secure private property như một protection cho decentralized choice và boundary against arbitrary state interference.
+
+A deeper comparison therefore asks not merely “who owns?” but:
+
+```text
+who has residual control?
+who receives residual returns?
+who bears losses?
+who can sell the asset?
+who chooses investment?
+who can remove management?
+```
+
+## Ownership versus coordination: đừng ghép market = private property
+
+Stanford Encyclopedia of Philosophy notes that **market socialism** preserves extensive markets while changing ownership/control of productive assets. Conversely, capitalist economies contain large internal hierarchies: inside a corporation, most resources are allocated by managerial commands rather than spot markets.
+
+This means:
+
+```text
+ownership axis ≠ coordination axis
+```
+
+Examples:
+
+```text
+private ownership + market coordination
+state ownership + administrative planning
+state ownership + market competition
+cooperative ownership + market competition
+mixed ownership + regulated market
+```
+
+Without this distinction, “socialism vs capitalism” debates often compare categories too broad to explain outcomes.
+
+## Markets: institutions, not absence of institutions
+
+Markets require property rules, contract enforcement, payment systems, information standards and dispute resolution. They vary from highly competitive commodity markets to concentrated platform markets.
+
+Price can coordinate decentralized decisions because actors respond to changing exchange ratios. SEP's market entry emphasizes that markets differ by object, scope and structure; normative assessment depends on how markets interact with justice, liberty and other institutions.
+
+A market mechanism is strongest when:
+
+- participants can enter/exit;
+- prices can adjust;
+- external costs are limited or priced;
+- market power is constrained;
+- participants have usable information;
+- contracts can be enforced.
+
+When these conditions fail, “market outcome” may reflect monopoly rent, information asymmetry or bargaining power rather than a simple competitive signal.
+
+## Planning: planning exists in every complex economy
+
+The relevant contrast is not “market versus planning” because firms, households and governments all plan. The question is **scope and level of centralized allocation**.
+
+A firm centrally plans production internally because transaction costs and coordination can make hierarchy efficient. A government plans infrastructure, defense or public health because goals and externalities may not be represented by private market demand.
+
+Central economic planning extends this logic across much larger domains. Its potential strengths include mobilizing resources toward explicit social priorities and coordinating large investments. Its vulnerabilities include information bottlenecks, quota gaming, weak local feedback and concentration of decision authority.
+
+## Hayekian knowledge problem: contextual knowledge, not simply computing power
+
+Hayek's critique is deeper than “a computer is too slow.” SEP's account of Hayek emphasizes that economically relevant knowledge is dispersed, contextual and often generated through market interaction itself.
+
+Therefore more compute solves only part of the problem. A planner still needs:
+
+```text
+local information
+truthful reporting
+changing preferences
+opportunity costs
+substitution possibilities
+innovation signals
+```
+
+If actors are rewarded for meeting target metrics, they may optimize the metric rather than social need. This is a general principal-agent issue as much as a computational one.
+
+## Planning replies: markets are not the only information architecture
+
+Socialist and planning theorists have responded in several ways:
+
+- decentralized planning;
+- enterprise autonomy;
+- iterative planning;
+- market socialism;
+- participatory planning;
+- use of administered prices plus market signals;
+- worker self-management.
+
+The important point is not that any one model solves the problem. It is that critique of Soviet-style command planning does not logically refute every socialist institutional design.
+
+SEP on socialism explicitly distinguishes central planning from market-socialist proposals that retain markets to match supply and demand while changing ownership structure.
+
+## Firms: markets stop at the factory gate
+
+Standard economic intuition often contrasts market choice with centralized planning, but firms themselves are hierarchical organizations. Workers typically do not renegotiate every task as market transaction; managers allocate roles, schedules and resources.
+
+This creates a separate political-economy problem: **what legitimizes authority inside firms?**
+
+Economic-democracy literature studies worker participation, codetermination and worker cooperatives. SEP's recent entry on economic democracy highlights workplace control, ownership and financial governance as distinct institutional dimensions.
+
+This yields a comparison:
+
+```text
+external market freedom
+≠
+internal workplace governance
+```
+
+A person can have choice among employers but little voice within a firm, or strong workplace voice but limited external exit options.
+
+## Labor relation: wage contract contains both exchange and authority
+
+A wage contract exchanges labor power for compensation, but once inside organization, employer often has authority over tasks, schedules, evaluation and discipline within legal limits.
+
+Marxian analysis focuses on ownership and surplus appropriation. Liberal analysis emphasizes freedom of contract and exit. Republican/economic-democracy approaches add **non-domination** and voice.
+
+To compare labor institutions, track:
+
+```text
+wage level
+bargaining power
+exit options
+unemployment insurance
+union rights
+workplace voice
+managerial discretion
+job security
+skill mobility
+```
+
+No single dimension fully represents “freedom at work.”
+
+## Worker cooperatives: alternative ownership changes incentives and risks
+
+Worker-owned firms change residual control and residual income: workers can elect governance and share surplus. This may reduce owner-worker conflict and increase voice.
+
+But cooperatives face their own constraints:
+
+- workers may concentrate both job and savings risk in same firm;
+- raising external capital may dilute control;
+- collective decision-making has coordination costs;
+- incumbent members may restrict new membership;
+- time horizons can differ from outside investors.
+
+So “worker ownership” is not an automatic solution; it changes the failure-mode profile.
+
+## Investment: who decides the future structure of production?
+
+Political economy often focuses on current consumption and wages, but investment determines future productive capacity.
+
+Under private capital markets, investment flows toward expected risk-adjusted returns. Strength: decentralized discovery and competitive experimentation. Possible failure: underinvestment in public goods, long-horizon infrastructure or benefits not privately capturable.
+
+Under public investment, society can target infrastructure, industrial policy or strategic capacity. Possible failure: political favoritism, soft budget constraints or misallocation when feedback is weak.
+
+Socialist models sometimes propose social investment funds or public banks to separate social ownership from detailed central planning.
+
+Therefore ownership of firms and allocation of investment finance are distinct variables.
+
+## Innovation: incentives include more than profit
+
+Market systems can reward successful innovation through profit, equity appreciation or temporary market power. But innovation also comes from public research, universities, mission-driven programs, open-source communities and professional motivation.
+
+A deeper framework asks:
+
+```text
+who funds risky experimentation?
+who captures upside?
+who bears failure?
+how quickly can unsuccessful projects be stopped?
+how are spillovers shared?
+```
+
+Competition can discipline firms, but excessive monopoly can reduce competitive pressure. Public systems can fund high-risk/basic research but may face bureaucratic selection problems. Innovation therefore depends on institutional ecology, not one universal incentive.
+
+## Soft budget constraint: survival without correction
+
+State-owned or politically protected organizations may expect rescue when losses occur, creating a **soft budget constraint**. This can weaken discipline on costs and investment choices.
+
+But private institutions can also become effectively protected if they are “too big to fail” or politically connected. The deeper variable is not ownership label but **credible consequence for failure**.
+
+Track:
+
+```text
+can firm exit?
+who absorbs losses?
+are managers replaced?
+can capital move away?
+can political connections block correction?
+```
+
+## Competition policy: capitalism without competition changes the model
+
+Classical defense of markets often assumes meaningful competition. When network effects, scale economies, patents, land scarcity or mergers produce concentration, private ownership can create substantial private power.
+
+Therefore real capitalist systems depend on competition law, utility regulation, interoperability rules or public provision in some sectors.
+
+This reinforces a general principle:
+
+```text
+market ≠ competition automatically
+private ownership ≠ decentralized power automatically
+```
+
+## Social insurance: redistribution changes the meaning of market dependence
+
+A worker with unemployment insurance, healthcare, pension and transferable education has different bargaining position from someone whose survival depends immediately on one employer.
+
+Social democracy often retains private firms and markets while **socializing part of risk** through taxation and public insurance.
+
+This can alter Marxian dependency without abolishing wage labor:
+
+```text
+market income remains important
+but fallback position improves
+→ bargaining dependence may decrease
+```
+
+The trade-off includes taxation, fiscal sustainability, work incentives and political support. Evaluation must use actual program design and evidence.
+
+## Equality: distinguish income, wealth, opportunity, power and status
+
+“Equality” is too broad. Possible targets include:
+
+```text
+legal equality
+political equality
+income equality
+wealth equality
+opportunity
+capability
+workplace power
+access to education/health
+```
+
+A society can be relatively equal in income but highly unequal in political authority; another can have formal political equality but extreme wealth concentration.
+
+Marx focuses more on class relation and production control than equal incomes. Rawlsian liberal egalitarianism focuses on basic liberties, fair equality of opportunity and distributional principles. Market socialism may target ownership/control while keeping price mechanisms.
+
+## Freedom: negative liberty, effective capacity and non-domination
+
+Three useful lenses:
+
+**Negative liberty** — absence of interference/coercion.
+
+**Effective/substantive capacity** — resources and real options needed to act.
+
+**Non-domination** — freedom from being subject to another actor's arbitrary power.
+
+These can conflict or reinforce each other. Strong welfare provision may increase effective capacity while taxation limits some property choices; strong employer discretion may coexist with formal freedom to quit but create domination when exit is costly.
+
+A comparative framework should specify which freedom is being measured.
+
+## Public power and private power: same accounting standard
+
+Debate becomes asymmetric when one side counts only state coercion and the other only capital power.
+
+Keep two ledgers:
+
+```text
+PUBLIC POWER
+law
+police/coercion
+taxation
+licensing
+censorship
+public employment
+administrative discretion
+
+PRIVATE POWER
+employment
+ownership
+credit
+landlord power
+platform access
+monopoly
+control of information/infrastructure
+```
+
+Then measure constraints:
+
+```text
+exit
+voice
+competition
+rights
+transparency
+appeal
+countervailing institutions
+```
+
+## Macroeconomic stabilization: neither market nor planning eliminates cycles automatically
+
+Capitalist market economies use central banks, fiscal policy, deposit insurance and automatic stabilizers because decentralized markets can experience financial crises and demand shortfalls.
+
+Planned economies can avoid some forms of open unemployment or market collapse but face shortages, hidden inflation, investment misallocation and inventory imbalances.
+
+Thus macro stability must be measured directly: inflation, unemployment, shortages, financial stress, output volatility and fiscal/monetary constraints. System label does not substitute for those metrics.
+
+## Transition costs and path dependence
+
+Moving from one institutional architecture to another creates temporary and permanent distributional effects. Liberalization can improve price signals while destroying firms protected by old rules. Privatization can create competitive ownership or insider oligarchy depending on legal institutions. Collectivization can change scale and state extraction while disrupting agricultural incentives.
+
+Therefore evaluate transition separately from steady-state theory:
+
+```text
+initial institutions
+→ reform sequence
+→ winners/losers
+→ institutional capacity
+→ adaptation
+→ long-run configuration
+```
+
+China and Vietnam cases later in the module are especially useful because reforms were gradual and path-dependent rather than one-step replacement.
+
+## Feasible comparison: compare real institutional packages
+
+The fairest unit is not:
+
+```text
+ideal capitalism vs historical socialism
+```
+
+or the reverse. Compare **feasible systems** under similar constraints.
+
+For example:
+
+```text
+competitive regulated capitalism
+social-democratic mixed economy
+market socialism
+worker-cooperative sector
+state-led market economy
+central command planning
+```
+
+Each package should be scored descriptively across multiple outcomes rather than collapsed into a political ranking.
+
+## Outcome vector instead of one number
+
+Institutional systems can trade off dimensions:
+
+```text
+growth
+productivity
+innovation
+consumption
+employment
+income distribution
+wealth distribution
+health
+education
+political rights
+workplace autonomy
+security
+environment
+resilience
+```
+
+Choosing weights among them is normative. Empirical analysis should first keep the vector visible.
+
+## Worked example: housing with full institutional decomposition
+
+Housing exposes several layers at once.
+
+**Market layer:** land prices, construction cost, interest rates, zoning, supply elasticity.
+
+**Ownership layer:** owner-occupiers, landlords, developers, public housing, cooperatives, community land trusts.
+
+**Power layer:** tenant bargaining, eviction law, mortgage leverage, developer concentration.
+
+**Public layer:** zoning, infrastructure, property tax, housing allowance, public construction.
+
+A Marxian analysis may emphasize rent extraction, land ownership and financialization. A market-oriented analysis emphasizes supply restrictions and price signals. Social-democratic design may add public housing and allowances. Cooperative proposals alter ownership.
+
+Evaluation needs common outcomes:
+
+```text
+new units
+quality
+affordability
+waiting time
+mobility
+segregation
+fiscal cost
+construction response
+distributional incidence
+```
+
+No framework “wins” merely by naming a variable the others neglected.
+
+## Mental model sau chapter
+
+When encountering an economic institution, trace:
+
+```text
+ownership
+→ control
+→ coordination
+→ information
+→ incentives
+→ investment
+→ labor relation
+→ public/private power
+→ distribution
+→ failure mode
+→ correction
+```
+
+Only after this decomposition should ideological traditions be used as lenses.
+
+Political philosophy clarifies liberty, justice, power and legitimacy. Economics tests prices, productivity, growth and incentives. History identifies path dependence and implementation. The module needs all three because no ideology label contains enough information to predict institutional performance by itself.
 
 ## Nguồn định hướng
 
-- Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/
-- Stanford Encyclopedia of Philosophy, “Liberalism”: https://plato.stanford.edu/entries/liberalism/
 - Stanford Encyclopedia of Philosophy, “Markets”: https://plato.stanford.edu/entries/markets/
-- Stanford Encyclopedia of Philosophy, “Libertarianism”: https://plato.stanford.edu/entries/libertarianism/
+- Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/
+- Stanford Encyclopedia of Philosophy, “Friedrich Hayek”: https://plato.stanford.edu/entries/friedrich-hayek/
+- Stanford Encyclopedia of Philosophy, “Economic Democracy”: https://plato.stanford.edu/entries/economic-democracy/
+- Stanford Encyclopedia of Philosophy, “Liberalism”: https://plato.stanford.edu/entries/liberalism/
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
+
+Use these as conceptual maps; actual comparative performance claims still require country-, period- and institution-specific empirical evidence.
