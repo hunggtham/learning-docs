@@ -47,3 +47,41 @@ Sau full-scale Sino-Japanese War 1937 và Pacific War, empire tăng mobilization
 ## Demographic displacement
 
 Labor migration sang Japan, Manchuria, Sakhalin và elsewhere tạo diaspora patterns kéo dài sau 1945. Liberation không tự động đưa mọi người về quê; citizenship, repatriation và property problems tiếp tục qua nhiều thập kỷ.
+
+## Neo thời gian: 35 năm không phải một chế độ bất biến
+
+**1910** annexation đặt Korea dưới Government-General. **1919**, March First Movement trở thành một mass independence movement và sau đó Korean Provisional Government được hình thành ở Shanghai. Trong thập niên 1920, colonial authorities chuyển sang policy thường được gọi là “cultural rule”, nhưng political control và censorship vẫn tiếp tục. Từ **1931** khi Japan mở rộng ở Manchuria và đặc biệt từ **1937** với chiến tranh Trung–Nhật toàn diện, Korea ngày càng bị tích hợp vào wartime economy. Đến 1940s, mobilization về labor, military và ideology trở nên mạnh hơn cho tới khi Japanese rule kết thúc tháng 8 **1945**.
+
+Chia period như vậy giúp tránh một lỗi lớn: dùng một policy của 1939 để mô tả 1912, hoặc dùng không khí thập niên 1920 để mô tả toàn bộ thuộc địa.
+
+## Nếu sống ở Seoul hoặc countryside trong thập niên 1920–1930
+
+Ở Seoul, bạn có thể thấy tram, railway station, department store, newspaper và modern school cùng tồn tại với hanok neighborhood, traditional market và household economy cũ. “Modern city” không có nghĩa population có equal access. Colonial status, class, gender và occupation quyết định rất nhiều về school, housing và employment.
+
+Ở countryside, land relation và tenancy có thể quan trọng hơn city modernity. Price of rice, landlord contract, tax/fee, debt và migration decision quyết định household survival. Khi agricultural market gắn mạnh hơn với Japan, một harvest không còn chỉ là local subsistence issue mà còn nằm trong wider commodity network.
+
+## Infrastructure: hỏi function chứ đừng chỉ hỏi có hay không
+
+Railway, port và factory expansion là real material changes. Nhưng historical analysis phải hỏi **network được thiết kế để nối đâu với đâu và phục vụ flow nào**. Railway có thể vận chuyển passenger, nhưng cũng vận chuyển rice, mineral, military supply và labor. Factory có thể tạo employment, nhưng ownership, wage relation và strategic purpose cần được phân tích riêng.
+
+Vì vậy hai câu “có modernization” và “đó là colonial rule” không loại trừ nhau. Infrastructure có thể hiện đại về technology đồng thời nằm trong một unequal imperial system.
+
+## Việt Nam cùng thời
+
+Trong 1910–1945, Việt Nam nằm trong French Indochina. Cả Korea và Việt Nam đều trải nghiệm colonial administration, modern school, transport infrastructure, commodity integration và nationalist movement, nhưng colonial regime, legal structure và imperial center khác nhau.
+
+Từ **1940**, Japanese forces hiện diện ở French Indochina trong bối cảnh World War II, trong khi Korea đã nằm dưới Japanese colonial rule từ 1910. Đến **1945**, cả hai nơi đều bước vào political rupture lớn sau sự sụp đổ của Japanese empire, nhưng hậu quả diễn ra theo hai path rất khác: bán đảo Triều Tiên bị chia khu vực chiếm đóng của Soviet Union và United States; Việt Nam đi vào cuộc đấu tranh giành và xác lập sovereignty trong bối cảnh hậu thuộc địa riêng.
+
+Comparison này hữu ích để thấy “decolonization” không phải một template. End of empire mở ra power vacuum, nhưng outcome phụ thuộc occupation arrangement, local political organization và international system.
+
+## Địa điểm để nhìn colonial period mà không biến nó thành abstract debate
+
+**Seodaemun Prison History Hall (서대문형무소역사관)** giúp nhìn repression và independence movement qua cell, execution space và prisoner record. **Tapgol Park (탑골공원)** gắn trực tiếp với memory của March First Movement. Former **Seoul Station** và railway landscape giúp đặt câu hỏi về mobility, commodity flow và colonial urban transformation. Các khu phố cũ ở Seoul cũng cho thấy city layer chồng lên nhau thay vì một đô thị bị “reset” năm 1910.
+
+Khi nhìn một colonial building, không nên mặc định rằng architecture tự kể cho ta moral meaning. Hãy hỏi ai xây, institution nào dùng, nguồn tiền và labor từ đâu, và building đó đổi function thế nào sau 1945.
+
+## 1945 không xoá ngay colonial legacy
+
+Khi Japanese rule kết thúc, people, factory, railway, legal record, trained administrator và social conflict không biến mất. Property ownership, collaboration accusation, repatriation, language policy và institutional staffing trở thành post-liberation problems. Đây là lý do chapter 16 về 1945–1950 cần được đọc như một **state transition under occupation and division**, không phải simple liberation celebration followed by normal politics.
+
+Đọc song song: [`15_independence_movements_and_provisional_government.md`](15_independence_movements_and_provisional_government.md), [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md), [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md).
