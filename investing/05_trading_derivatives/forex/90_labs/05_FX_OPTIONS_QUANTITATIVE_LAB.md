@@ -242,6 +242,16 @@ IV quote không tự nói về executable bid/ask hoặc hedge cost
 
 Vẽ hoặc lập bảng volatility smile đơn giản. Không dùng RR dương như một directional signal tự động; nó có thể phản ánh hedging demand, supply/demand imbalance hoặc risk premium.
 
+Nếu có dữ liệu strike/delta dày hơn, nội suy một điểm ở giữa hai quote bằng một rule đã khóa trước, chẳng hạn linear theo delta hoặc linear theo log-moneyness. So sánh kết quả của hai rule và kiểm tra:
+
+```text
+interpolated IV không nhảy bất thường giữa các quote
+strike ordering và delta ordering vẫn nhất quán
+surface không bị dùng như executable price nếu chưa có bid/ask
+```
+
+Mục tiêu là hiểu interpolation là một giả định của research pipeline, không phải quan sát trực tiếp từ thị trường.
+
 ## 7. Case F — Delta hedge ledger
 
 Chọn long call ở Case A. Giả sử hedge tại các thời điểm:

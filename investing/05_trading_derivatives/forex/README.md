@@ -201,6 +201,7 @@ Lab 01 — event-driven FX analysis without hindsight
 Lab 02 — point-in-time backtest and robustness
 Lab 03 — portfolio FX factor risk
 Lab 04 — Korea/Vietnam FX context and regulatory verification
+Lab 05 — FX options pricing, Greeks, scenarios and delta-hedging attribution
 ```
 
 Các lab yêu cầu tạo artifact có thể review, không phải trả lời quiz ghi nhớ.

@@ -378,7 +378,10 @@
     const toolbar = document.querySelector('#reader-toolbar');
     if (!toolbar || !content || document.querySelector('#los-speech-controls')) return;
     if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return;
-    const chunks = speechChunks(speechBlocks(content));
+    const title = document.querySelector('.reader-header h1')?.textContent.replace(/\s+/g, ' ').trim();
+    const blocks = speechBlocks(content);
+    if (title) blocks.unshift(title);
+    const chunks = speechChunks(blocks);
     if (!chunks.length) return;
 
     const synth = window.speechSynthesis;
@@ -442,11 +445,18 @@
         updateButtons();
         setStatus('Không thể đọc trên trình duyệt này.');
       };
-      synth.speak(utterance);
+      try {
+        synth.speak(utterance);
+      } catch {
+        active = false;
+        paused = false;
+        updateButtons();
+        setStatus('Không thể khởi động đọc chữ.');
+      }
     };
     const start = () => {
-      synth.cancel();
       runId += 1;
+      synth.cancel();
       chunkIndex = 0;
       active = true;
       paused = false;
@@ -458,7 +468,8 @@
       if (!active) return;
       if (paused) {
         paused = false;
-        synth.resume();
+        if (synth.speaking || synth.pending) synth.resume();
+        else speakNext();
         setStatus(`Đang đọc · ${chunkIndex + 1}/${chunks.length}`);
       } else {
         paused = true;
