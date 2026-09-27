@@ -106,6 +106,30 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "investing",
+      "category": "Investing",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "korea_business_economy_knowledge_library",
+      "category": "Korea business and economy",
+      "language": "vi-en-ko",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "research_methods",
+      "category": "Research Methods",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "sociology",
+      "category": "Sociology",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "mathematics",
       "category": "Mathematics",
       "language": "vi-en-ko",
