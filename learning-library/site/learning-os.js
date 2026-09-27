@@ -336,13 +336,23 @@
     return ['ko', 'vi', 'en', 'ja', 'zh', 'fr', 'de', 'es'].includes(first) ? first : 'en';
   }
 
-  function speechBlocks(content) {
+  function speechBlocks(content, startAt = 0) {
     const clone = content.cloneNode(true);
     clone.querySelectorAll('pre,.open-file,.los-related').forEach(node => node.remove());
     const blocks = [...clone.querySelectorAll('h1,h2,h3,p,li,blockquote,th,td')]
       .map(node => node.textContent.replace(/\s+/g, ' ').trim())
       .filter(Boolean);
-    return blocks.length ? blocks : [clone.textContent.replace(/\s+/g, ' ').trim()].filter(Boolean);
+    return (blocks.length ? blocks : [clone.textContent.replace(/\s+/g, ' ').trim()].filter(Boolean)).slice(startAt);
+  }
+
+  function visibleSpeechBlock(content) {
+    const nodes = [...content.querySelectorAll('h1,h2,h3,p,li,blockquote,th,td')]
+      .filter(node => !node.closest('.los-related'))
+      .filter(node => node.textContent.replace(/\s+/g, ' ').trim());
+    if (!nodes.length) return 0;
+    const readingLine = Math.min(180, Math.max(84, window.innerHeight * 0.18));
+    const index = nodes.findIndex(node => node.getBoundingClientRect().bottom > readingLine);
+    return index < 0 ? nodes.length - 1 : index;
   }
 
   function speechChunks(blocks, maxLength = 1100) {
@@ -379,9 +389,10 @@
     if (!toolbar || !content || document.querySelector('#los-speech-controls')) return;
     if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return;
     const title = document.querySelector('.reader-header h1')?.textContent.replace(/\s+/g, ' ').trim();
-    const blocks = speechBlocks(content);
+    const allBlocks = speechBlocks(content);
+    const blocks = allBlocks.slice();
     if (title) blocks.unshift(title);
-    const chunks = speechChunks(blocks);
+    let chunks = speechChunks(blocks);
     if (!chunks.length) return;
 
     const synth = window.speechSynthesis;
@@ -397,6 +408,15 @@
     const stopButton = controls.querySelector('#los-speech-stop');
     const rateSelect = controls.querySelector('#los-speech-rate');
     const status = controls.querySelector('#los-speech-status');
+    const edgeActions = document.querySelector('.reader-edge-actions');
+    let edgeSpeech = edgeActions?.querySelector('#edge-speech') || null;
+    if (edgeActions && !edgeSpeech) {
+      edgeSpeech = document.createElement('button');
+      edgeSpeech.id = 'edge-speech';
+      edgeSpeech.className = 'edge-button';
+      edgeSpeech.type = 'button';
+      edgeActions.prepend(edgeSpeech);
+    }
     const savedRate = Number(readJson('study-shelf-speech-rate', 1));
     if ([0.8, 1, 1.2, 1.5].includes(savedRate)) rateSelect.value = String(savedRate);
 
@@ -411,6 +431,12 @@
       pauseButton.disabled = !active;
       stopButton.disabled = !active;
       pauseButton.textContent = paused ? '▶ Tiếp tục' : '⏸ Tạm dừng';
+      if (edgeSpeech) {
+        edgeSpeech.textContent = active ? (paused ? '▶' : '⏸') : '🔊';
+        edgeSpeech.setAttribute('aria-label', active ? (paused ? 'Tiếp tục đọc' : 'Tạm dừng đọc') : 'Đọc từ vị trí hiện tại');
+        edgeSpeech.title = active ? (paused ? 'Tiếp tục đọc' : 'Tạm dừng đọc') : 'Đọc từ vị trí hiện tại';
+        edgeSpeech.classList.toggle('active', active);
+      }
     };
     const pickVoice = () => {
       const voices = synth.getVoices();
@@ -454,7 +480,10 @@
         setStatus('Không thể khởi động đọc chữ.');
       }
     };
-    const start = () => {
+    const start = (fromCurrent = false) => {
+      const sourceBlocks = fromCurrent ? speechBlocks(content, visibleSpeechBlock(content)) : blocks;
+      chunks = speechChunks(sourceBlocks);
+      if (!chunks.length) return;
       runId += 1;
       synth.cancel();
       chunkIndex = 0;
@@ -487,9 +516,11 @@
       setStatus('Đã dừng.');
     };
 
-    startButton.onclick = start;
+    startButton.textContent = '🔊 Đọc từ đây';
+    startButton.onclick = () => start(true);
     pauseButton.onclick = togglePause;
     stopButton.onclick = stop;
+    if (edgeSpeech) edgeSpeech.onclick = () => active ? togglePause() : start(true);
     rateSelect.onchange = () => writeJson('study-shelf-speech-rate', Number(rateSelect.value));
     synth.addEventListener?.('voiceschanged', pickVoice);
     updateButtons();

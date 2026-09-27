@@ -73,6 +73,8 @@ def study_guide(title: str, content: str) -> str:
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
+> **Mạch nối:** Mỗi mục trong guide phải được đọc như một bước của cùng một chuỗi suy luận. Hãy dùng phần cuối của mục trước để đặt câu hỏi cho mục sau, rồi quay lại checklist để kiểm tra khái niệm vừa được mở rộng; không coi mỗi heading là một ghi chú tách rời.
+
 ---
 
 {clean_source(content)}"""
@@ -95,7 +97,7 @@ def order_lessons(folder: str, lessons: list[str]) -> list[str]:
     return sorted(lessons, key=key)
 
 
-def lesson_document(title: str, lesson: str) -> str:
+def lesson_document(title: str, lesson: str, previous: str | None, following: str | None) -> str:
     body_lines = lesson.splitlines()
     heading = body_lines[0] if body_lines else title
     plain = re.sub(r"^##\s*", "", heading).strip()
@@ -116,7 +118,7 @@ def lesson_document(title: str, lesson: str) -> str:
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+{f'이 단원은 앞의 **{previous}**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다.' if previous else '이 단원은 이 과목의 핵심 질문을 세우는 출발점이다.'} {f'읽은 뒤에는 **{following}**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다.' if following else '마지막에는 이 기준이 다른 과목의 문제와 어떻게 만나는지 점검한다.'} 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -125,6 +127,8 @@ def lesson_document(title: str, lesson: str) -> str:
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **{plain}** và nối nó với {f'**{following}**' if following else 'phần ôn tập cuối môn'}; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -167,7 +171,16 @@ def main() -> None:
         # Rebuild the full guide from the same ordered lesson blocks so the
         # contents page and the detailed guide never disagree.
         ordered_lessons = order_lessons(folder, split_lessons(content))
-        ordered_content = "\n\n---\n\n".join(ordered_lessons)
+        bridged_lessons = []
+        for index, lesson in enumerate(ordered_lessons):
+            if index:
+                previous_heading = ordered_lessons[index - 1].splitlines()[0].removeprefix("## ").strip()
+                current_heading = lesson.splitlines()[0].removeprefix("## ").strip()
+                bridged_lessons.append(
+                    f"> **Mạch chuyển:** Từ **{previous_heading}**, chuyển sang **{current_heading}** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới."
+                )
+            bridged_lessons.append(lesson)
+        ordered_content = "\n\n---\n\n".join(bridged_lessons)
         target = OUTPUT / folder
         target.mkdir(exist_ok=True)
         guide_name = "01-tai-lieu-hoc-day-du.md"
@@ -183,7 +196,9 @@ def main() -> None:
         for number, lesson in enumerate(lessons, start=1):
             heading = lesson.splitlines()[0].removeprefix("## ")
             lesson_name = f"{number:02d}-bai-hoc.md"
-            (lessons_dir / lesson_name).write_text(lesson_document(heading, lesson), encoding="utf-8")
+            previous = lessons[number - 2].splitlines()[0].removeprefix("## ").strip() if number > 1 else None
+            following = lessons[number].splitlines()[0].removeprefix("## ").strip() if number < len(lessons) else None
+            (lessons_dir / lesson_name).write_text(lesson_document(heading, lesson, previous, following), encoding="utf-8")
             lesson_rows.append(f"{number}. [{heading}](lessons/{lesson_name})")
         readme = subject_readme(title, guide_name, lesson_rows)
         if folder == "01-software-design":

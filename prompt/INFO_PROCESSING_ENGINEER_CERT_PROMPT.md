@@ -74,6 +74,16 @@ Mỗi lesson giữ format hiện tại và có các phần sau:
 Không thêm TẦNG B cho đủ hình thức. Không dùng cùng một đoạn boilerplate cho
 선행·연결 개념 hoặc 읽는 방법 nếu topic đó có quan hệ và cách đọc riêng.
 
+### Mạch nối của từng lesson
+
+Mỗi lesson phải giúp người học biết mình đang đứng ở đâu trong chuỗi kiến thức:
+
+- phần mở đầu nối topic với `선행·연결 개념` thật sự cần dùng, thuật ngữ hoặc câu hỏi đã mở ở lesson trước;
+- phần giải thích đi theo `định nghĩa → cơ chế/quy tắc → điều kiện/ngoại lệ → ví dụ hoặc bẫy đề` khi phù hợp;
+- phần kết thúc chốt điểm phân biệt và nói rõ lesson sau sẽ dùng, mở rộng hoặc đối chiếu điều gì.
+
+Không copy một câu “tiếp theo là…” cho mọi bài. Với `README`, bảng tra cứu hoặc checklist, câu nối phải hướng người đọc về lesson/subject owner cụ thể; với output được generate, sửa generator/source rồi regenerate thay vì sửa tay từng file.
+
 ## 4. Quy tắc thuật ngữ và ngôn ngữ
 
 - Giữ nguyên thuật ngữ Hàn dùng trong đề.
