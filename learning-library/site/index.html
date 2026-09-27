@@ -352,13 +352,11 @@
             if (show) visible += 1;
           }
 
-          if (selectedFormat !== 'all') {
-            const count = document.querySelector('#result-count');
-            if (count) {
-              const folderCount = document.querySelectorAll('#folder-children .folder-card').length;
-              const searching = Boolean(document.querySelector('#search')?.value.trim());
-              count.textContent = searching ? `${visible} kết quả` : `${visible} file · ${folderCount} folder`;
-            }
+          const count = document.querySelector('#result-count');
+          if (count) {
+            const folderCount = document.querySelectorAll('#folder-children .folder-card').length;
+            const searching = Boolean(document.querySelector('#search')?.value.trim());
+            count.textContent = searching ? `${visible} kết quả` : `${visible} file · ${folderCount} folder`;
           }
           applying = false;
         }
