@@ -1,5 +1,5 @@
 const app = document.querySelector('#app');
-const state = { docs: [], query: '', filter: 'all', format: 'all', folder: '' };
+const state = { docs: [], query: '', folder: '', expandedFolders: new Set() };
 let disposeReader = () => {};
 
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[char]);
@@ -50,8 +50,43 @@ function writeSectionBookmarks(doc, bookmarks) {
 }
 
 function formatSize(bytes) { return bytes < 1024 * 1024 ? `${Math.ceil(bytes / 1024)} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`; }
-function folderLabel(folder) { return folder ? `📁 ${folder}` : 'Tất cả thư mục'; }
+function folderName(folder) { return folder ? folder.split('/').filter(Boolean).pop() : 'Mọi tài liệu'; }
+function folderParent(folder) { return folder.includes('/') ? folder.split('/').slice(0, -1).join('/') : ''; }
 function folderCount(folder) { return state.docs.filter(doc => !folder || doc.folder === folder || (doc.folder || '').startsWith(`${folder}/`)).length; }
+function folderDirectCount(folder) { return state.docs.filter(doc => (doc.folder || '') === folder).length; }
+function folderPaths() {
+  const paths = new Set();
+  state.docs.forEach(doc => {
+    const parts = (doc.folder || '').split('/').filter(Boolean);
+    parts.forEach((_, index) => paths.add(parts.slice(0, index + 1).join('/')));
+  });
+  return [...paths].sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+}
+function folderChildren(folder) {
+  return folderPaths().filter(path => folderParent(path) === folder);
+}
+function folderAncestors(folder) {
+  const parts = folder.split('/').filter(Boolean);
+  return parts.map((_, index) => parts.slice(0, index + 1).join('/'));
+}
+function folderVisible(folder) {
+  const parts = folder.split('/').filter(Boolean);
+  for (let index = 1; index < parts.length; index += 1) {
+    if (!state.expandedFolders.has(parts.slice(0, index).join('/'))) return false;
+  }
+  return true;
+}
+function selectFolder(folder, { clearSearch = true } = {}) {
+  state.folder = folder;
+  folderAncestors(folder).forEach(path => state.expandedFolders.add(path));
+  if (clearSearch) {
+    state.query = '';
+    const search = document.querySelector('#search');
+    if (search) search.value = '';
+  }
+  renderFolderTree();
+  renderCards();
+}
 
 function renderHome() {
   disposeReader();
@@ -60,45 +95,83 @@ function renderHome() {
   search.value = state.query;
   search.addEventListener('input', event => { state.query = event.target.value; renderCards(); });
   window.addEventListener('keydown', event => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); search.focus(); } }, { once: true });
-  renderFolderTree(); renderFormats(); renderFilters(); renderCards();
+  renderFolderTree();
+  renderCards();
+}
+
+function renderBreadcrumb() {
+  const breadcrumb = document.querySelector('#folder-breadcrumb');
+  const segments = folderAncestors(state.folder);
+  const rootCurrent = !state.folder;
+  const items = [`<button class="breadcrumb-button ${rootCurrent ? 'current' : ''}" type="button" data-breadcrumb-folder="" ${rootCurrent ? 'aria-current="page"' : ''}>⌂ Library</button>`];
+  segments.forEach((path, index) => {
+    const current = index === segments.length - 1;
+    items.push('<span class="breadcrumb-separator" aria-hidden="true">›</span>');
+    items.push(`<button class="breadcrumb-button ${current ? 'current' : ''}" type="button" data-breadcrumb-folder="${escapeHtml(path)}" ${current ? 'aria-current="page"' : ''}>${escapeHtml(folderName(path))}</button>`);
+  });
+  breadcrumb.innerHTML = items.join('');
+  breadcrumb.querySelectorAll('[data-breadcrumb-folder]').forEach(button => button.onclick = () => selectFolder(button.dataset.breadcrumbFolder));
 }
 
 function renderFolderTree() {
-  const current = state.folder;
-  const prefix = current ? `${current}/` : '';
-  const childNames = [...new Set(state.docs.map(doc => doc.folder || '').filter(folder => folder.startsWith(prefix) && folder !== current).map(folder => folder.slice(prefix.length).split('/')[0]).filter(Boolean))].sort();
-  const parent = current.includes('/') ? current.split('/').slice(0, -1).join('/') : '';
-  const directFiles = state.docs.filter(doc => (doc.folder || '') === current).length;
-  const controls = [];
-  if (current) controls.push(`<button class="folder-button navigation" data-folder="${escapeHtml(parent)}">↩ Lên một cấp</button>`);
-  controls.push(`<button class="folder-button navigation ${current ? '' : 'active'}" data-folder="">⌂ Tất cả thư mục</button>`);
-  const folders = childNames.map(name => {
-    const value = prefix + name;
-    return `<button class="folder-button" data-folder="${escapeHtml(value)}">📁 ${escapeHtml(name)} <span class="folder-count">(${folderCount(value)})</span></button>`;
+  const tree = document.querySelector('#folder-tree');
+  const allFolders = folderPaths();
+  const rootRow = `<div class="folder-tree-row ${state.folder ? '' : 'active'}" data-depth="0" style="--depth:0"><span class="folder-toggle-spacer" aria-hidden="true"></span><button class="folder-node" type="button" data-folder="" ${state.folder ? '' : 'aria-current="page"'}><span class="folder-node-icon">⌂</span><span class="folder-node-label">Library</span><span class="folder-count">${state.docs.length}</span></button></div>`;
+  const rows = allFolders.filter(folderVisible).map(folder => {
+    const depth = folder.split('/').length;
+    const children = allFolders.filter(path => folderParent(path) === folder);
+    const expanded = state.expandedFolders.has(folder);
+    const active = state.folder === folder;
+    const trail = state.folder.startsWith(`${folder}/`);
+    const toggle = children.length
+      ? `<button class="folder-toggle" type="button" data-folder-toggle="${escapeHtml(folder)}" aria-label="${expanded ? 'Thu gọn' : 'Mở rộng'} ${escapeHtml(folderName(folder))}" aria-expanded="${expanded}">${expanded ? '⌄' : '›'}</button>`
+      : '<span class="folder-toggle-spacer" aria-hidden="true"></span>';
+    return `<div class="folder-tree-row ${active ? 'active' : ''} ${trail ? 'trail' : ''}" data-depth="${depth}" style="--depth:${depth}">${toggle}<button class="folder-node" type="button" data-folder="${escapeHtml(folder)}" ${active ? 'aria-current="page"' : ''}><span class="folder-node-icon">${expanded && children.length ? '📂' : '📁'}</span><span class="folder-node-label">${escapeHtml(folderName(folder))}</span><span class="folder-count">${folderCount(folder)}</span></button></div>`;
   });
-  const summary = current ? `<span class="folder-summary">${directFiles} file trong folder này</span>` : `<span class="folder-summary">Chọn folder để mở nội dung</span>`;
-  document.querySelector('#folder-tree').innerHTML = `${controls.join('')} ${folders.join('')} ${summary}`;
-  document.querySelectorAll('[data-folder]').forEach(button => button.onclick = () => { state.folder = button.dataset.folder; renderFolderTree(); renderCards(); });
-}
+  tree.innerHTML = rootRow + rows.join('');
 
-function renderFormats() {
-  const formats = ['all', ...new Set(state.docs.map(doc => doc.type))];
-  document.querySelector('#format-filters').innerHTML = formats.map(format => `<button class="filter ${state.format === format ? 'active' : ''}" data-format="${escapeHtml(format)}">${format === 'all' ? 'Tất cả định dạng' : format === 'MD' ? 'Markdown' : 'PDF'}</button>`).join('');
-  document.querySelectorAll('[data-format]').forEach(button => button.onclick = () => { state.format = button.dataset.format; renderFormats(); renderCards(); });
-}
-
-function renderFilters() {
-  const groups = ['all', ...new Set(state.docs.map(doc => doc.category))];
-  document.querySelector('#filters').innerHTML = groups.map(group => `<button class="filter ${state.filter === group ? 'active' : ''}" data-filter="${escapeHtml(group)}">${group === 'all' ? '전체' : escapeHtml(group)}</button>`).join('');
-  document.querySelectorAll('[data-filter]').forEach(button => button.onclick = () => { state.filter = button.dataset.filter; renderFilters(); renderCards(); });
+  tree.querySelectorAll('[data-folder]').forEach(button => button.onclick = () => selectFolder(button.dataset.folder));
+  tree.querySelectorAll('[data-folder-toggle]').forEach(button => button.onclick = event => {
+    event.stopPropagation();
+    const folder = button.dataset.folderToggle;
+    if (state.expandedFolders.has(folder)) {
+      state.expandedFolders.delete(folder);
+      if (state.folder.startsWith(`${folder}/`)) state.folder = folder;
+    } else {
+      state.expandedFolders.add(folder);
+    }
+    renderFolderTree();
+    renderCards();
+  });
+  renderBreadcrumb();
 }
 
 function renderCards() {
   const term = state.query.trim().toLowerCase();
-  const docs = state.docs.filter(doc => (doc.folder || '') === state.folder && (state.filter === 'all' || doc.category === state.filter) && (state.format === 'all' || doc.type === state.format) && (!term || `${titleOf(doc)} ${doc.displayPath || doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term)));
-  document.querySelector('#result-count').textContent = state.folder ? `${docs.length} file` : `${state.docs.length} tài liệu`;
-  document.querySelector('#result-title').textContent = state.folder ? folderLabel(state.folder) : 'Mọi tài liệu';
-  document.querySelector('#document-grid').innerHTML = docs.length ? docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('') : state.folder ? '<p class="empty">Folder này chưa có file trực tiếp. Hãy mở folder con hoặc quay lên một cấp.</p>' : '<p class="empty">Chọn một folder ở trên để xem các file bên trong.</p>';
+  const childFolders = term ? [] : folderChildren(state.folder);
+  const docs = state.docs.filter(doc => {
+    const inScope = term ? true : (doc.folder || '') === state.folder;
+    const matches = !term || `${titleOf(doc)} ${doc.displayPath || doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term);
+    return inScope && matches;
+  });
+
+  document.querySelector('#result-count').textContent = term ? `${docs.length} kết quả` : `${docs.length} file · ${childFolders.length} folder`;
+  document.querySelector('#result-title').textContent = term ? `Kết quả cho “${state.query.trim()}”` : folderName(state.folder);
+
+  const childContainer = document.querySelector('#folder-children');
+  childContainer.innerHTML = childFolders.map(folder => `<button class="folder-card" type="button" data-folder-card="${escapeHtml(folder)}"><span class="folder-card-icon">📁</span><span class="folder-card-copy"><span class="folder-card-name">${escapeHtml(folderName(folder))}</span><span class="folder-card-meta">${folderDirectCount(folder)} file trực tiếp · ${folderCount(folder)} tổng</span></span><span class="folder-card-arrow" aria-hidden="true">›</span></button>`).join('');
+  childContainer.querySelectorAll('[data-folder-card]').forEach(button => button.onclick = () => selectFolder(button.dataset.folderCard));
+
+  const grid = document.querySelector('#document-grid');
+  if (docs.length) {
+    grid.innerHTML = docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('');
+  } else if (term) {
+    grid.innerHTML = '<p class="empty">Không tìm thấy tài liệu phù hợp.</p>';
+  } else if (!childFolders.length) {
+    grid.innerHTML = '<p class="empty">Folder này chưa có tài liệu.</p>';
+  } else {
+    grid.innerHTML = '';
+  }
 }
 
 function markdownToHtml(markdown) {
