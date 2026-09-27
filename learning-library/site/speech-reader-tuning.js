@@ -17,7 +17,7 @@
   ].sort((a, b) => b.length - a.length);
 
   const TERM_RE = new RegExp(`\\b(${ENGLISH_TERMS.map(term => term.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
-  const ACRONYM_RE = /\\b(?:API|CPU|GPU|RAM|SQL|HTML|CSS|HTTP|HTTPS|JSON|XML|DOM|URL|URI|JWT|OAuth|REST|GraphQL|TTS|AI|IT)\\b/g;
+  const ACRONYM_RE = /\b(?:API|CPU|GPU|RAM|SQL|HTML|CSS|HTTP|HTTPS|JSON|XML|DOM|URL|URI|JWT|OAuth|REST|GraphQL|TTS|AI|IT)\b/g;
   const SKIP = new Set(['CODE', 'PRE', 'KBD', 'SAMP', 'SCRIPT', 'STYLE', 'A', 'TEXTAREA', 'SELECT', 'OPTION']);
 
   function wrapMatches(textNode, regex) {
