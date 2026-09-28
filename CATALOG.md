@@ -1,9 +1,6 @@
 ---
-# Mạch học: dùng prerequisites/related để định vị domain, entrypoint để dựng mental model,
-# rồi đi theo canonical route trước khi mở deep dive/case study; catalog không thay prose giải thích.
-# Audit cấp repository: [MASTER_COVERAGE_AUDIT.md](./MASTER_COVERAGE_AUDIT.md)
 catalog_version: 1
-last_reviewed: 2026-09-28
+last_reviewed: 2026-09-26
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -119,13 +116,13 @@ domains:
     prerequisites: [computer_science, frontend]
     related: [backend, frontend]
   - id: data_engineering
-    title: data Engineering
+    title: Data Engineering
     group: Computing
     path: data_engineering/
     entrypoint: data_engineering/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: data lifecycle and pipeline semantics; analytical storage; modeling and transformation; distributed and streaming processing; orchestration/backfill; warehouse/lakehouse; serving and semantic metrics; governance, lineage, security, cost/capacity; and end-to-end case studies.
+    scope: Data lifecycle and pipeline semantics; analytical storage; modeling and transformation; distributed and streaming processing; orchestration/backfill; warehouse/lakehouse; serving and semantic metrics; governance, lineage, security, cost/capacity; and end-to-end case studies.
     prerequisites: [computer_science, mathematics]
     related: [backend, devops_platform_engineering, sql]
   - id: devops_platform_engineering
@@ -135,7 +132,7 @@ domains:
     entrypoint: devops_platform_engineering/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: runtime, delivery, containers, infrastructure, Kubernetes, GitOps, SRE, security, platform, and production practice.
+    scope: Runtime, delivery, containers, infrastructure, Kubernetes, GitOps, SRE, security, platform, and production practice.
     prerequisites: [computer_science, linux]
     related: [backend, data_engineering, linux]
   - id: linux
@@ -268,7 +265,7 @@ domains:
     entrypoint: 정보처리기사/output/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: Korean information Processing Engineer certification subjects and structured study outputs.
+    scope: Korean Information Processing Engineer certification subjects and structured study outputs.
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
   - id: sql
@@ -278,7 +275,7 @@ domains:
     entrypoint: sql/output/README.md
     status: canonical
     last_reviewed: 2026-09-23
-    scope: data modeling, SQL fundamentals, query patterns, normalization, and database reasoning.
+    scope: Data modeling, SQL fundamentals, query patterns, normalization, and database reasoning.
     prerequisites: [computer_science]
     related: [data_engineering, investing]
   - id: kiip
@@ -387,7 +384,7 @@ Khi thêm library mới, cập nhật cả YAML metadata và cây domain trong f
 
 ## 7. Economics: core-domain complete
 
-[`economics/`](economics/README.md) hiện có full canonical route từ Foundations → Microeconomics → Market structure & Game Theory → Macroeconomics → Econometrics → Applied Economics → Economic History & Institutions. Applied layer bao phủ labor, public economics, trade, development và industrial organization; historical/institutional layer bao phủ state capacity, finance/fiscal states, industrialization/globalization và crises/path dependence.
+[`economics/`](economics/README.md) hiện có full canonical route từ Foundations → Microeconomics → Market Structure & Game Theory → Macroeconomics → Econometrics → Applied Economics → Economic History & Institutions. Applied layer bao phủ labor, public economics, trade, development và industrial organization; historical/institutional layer bao phủ state capacity, finance/fiscal states, industrialization/globalization và crises/path dependence.
 
 Economics giữ explicit boundaries: theory không thay evidence, accounting identity không thay causal theory, estimator không thay identification strategy, causal estimate không tự trở thành policy recommendation. [`investing/04_economics/`](investing/04_economics/) tiếp tục giữ market/application layer về macro data, liquidity, transmission, crisis cases và nowcasting; World/Korean History giữ chronology; Korea Business giữ Korean company/institution cases.
 
@@ -401,9 +398,9 @@ Mục tiêu là tránh mỗi domain tự lặp lại generic research methods v�
 
 [`sociology/`](sociology/README.md) giữ canonical sociological mechanisms từ agency/structure, culture/socialization/identity và deviance đến groups/networks/organizations, stratification/mobility, family/education/work/media/civic institutions và population/urbanization/social change. Generic methodology được cross-link sang Research Methods; individual cognition/behavior sang Psychology; markets/incentives sang Economics; chronology sang History.
 
-domain được tổ chức theo levels và mechanisms thay vì các “vấn đề xã hội” rời rạc, nhằm giúp người đọc phân biệt individual attribute với relational/institutional explanations.
+Domain được tổ chức theo levels và mechanisms thay vì các “vấn đề xã hội” rời rạc, nhằm giúp người đọc phân biệt individual attribute với relational/institutional explanations.
 
-## 10. P3 — Electrical / Electronics / control
+## 10. P3 — Electrical / Electronics / Control
 
 Physics hiện đã rất mạnh, bao gồm Maxwell, circuits, transmission line, semiconductor, MOSFET, signal/noise và các nền tảng liên quan. Nhưng **Physics không đồng nghĩa với Electrical Engineering**: engineering cần thêm topology, design trade-off, measurement, timing, power, control, verification và failure handling.
 
@@ -435,6 +432,6 @@ Physics
 
 Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
 
-## domain entrypoints
+## Domain entrypoints
 
 Các link entrypoint đầy đủ nằm trong YAML ở đầu file để máy đọc được; README root chỉ là phần giới thiệu ngắn. Đây là catalog cấp repository, không thay thế README chuyên sâu của từng library.
