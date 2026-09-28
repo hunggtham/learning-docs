@@ -1,10 +1,10 @@
-# Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)
+# Nam Việt, nhà Hán và việc Bắc Bộ đi vào hệ thống đế chế (imperial system / 제국 체계)
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md) kết thúc ở một society đã có trung tâm quyền lực lớn tại Cổ Loa nhưng nằm trong môi trường cạnh tranh rộng hơn của nam Trung Hoa và Bắc Việt. Chapter này bắt đầu từ chính điểm đó: **vì sao một polity bản địa ở châu thổ sông Hồng lại bị hút vào một hệ thống đế quốc lớn hơn, và việc đó thay đổi đời sống, economy và institution như thế nào?**
 
-Không nên học giai đoạn này bằng công thức “Âu Lạc mất → Bắc thuộc bắt đầu”. Trước nhà Hán còn có **Nam Việt (Nanyue / 南越)**; sau khi Hán thôn tính Nam Việt, quyền lực đế quốc cũng không phủ đều xuống từng làng. Cần nhìn theo nhiều tầng: quân sự, tuyến (route / 경로) giao thông, administrative center, cục bộ (local / 로컬) elite và household.
+Không nên học giai đoạn này bằng công thức “Âu Lạc mất → Bắc thuộc bắt đầu”. Trước nhà Hán còn có **Nam Việt (Nanyue / 南越)**; sau khi Hán thôn tính Nam Việt, quyền lực đế quốc cũng không phủ đều xuống từng làng. Cần nhìn theo nhiều tầng: quân sự, tuyến giao thông (route / 경로), trung tâm hành chính, tầng lớp địa phương và hộ gia đình. Mốc **111 TCN**, lợi ích về lương thực–thuế–nhân lực của châu thổ, bối cảnh Nam Việt–Hán và các điểm Luy Lâu–Mê Linh sẽ được đọc như một chuỗi nguyên nhân, không phải bốn mảnh rời.
 
 ## Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại
 

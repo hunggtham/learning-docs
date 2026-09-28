@@ -1,10 +1,10 @@
-# Từ tiền sử đến Đông Sơn: economy, technology và xã hội trước nhà nước thành văn
+# Từ tiền sử đến Đông Sơn: kinh tế (economy / 경제), công nghệ (technology / 기술) và xã hội trước nhà nước thành văn
 
 ## Prerequisite, phạm vi và câu hỏi trung tâm
 
 Ta đã biết từ [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) rằng Bắc Bộ và Bắc Trung Bộ là mạng (network / 네트워크) sông–đồng bằng–trung du chứ không phải một mặt phẳng. Chapter này hỏi: **trước khi có chính sử mô tả rõ nhà nước, archaeology cho thấy xã hội đã thay đổi như thế nào về settlement, nông nghiệp, metallurgy, specialization và inequality?**
 
-Mục tiêu không phải học thuộc taxonomy khảo cổ. Phùng Nguyên → Đồng Đậu → Gò Mun → Đông Sơn được dùng như các coordinate để nhìn một tiến trình (process / 프로세스) kéo dài nhiều thế kỷ. Niên đại của từng culture thay đổi đôi chút theo site và scholarship, nên các phạm vi (range / 범위) dưới đây là xấp xỉ.
+Mục tiêu không phải học thuộc phân loại khảo cổ. Phùng Nguyên → Đồng Đậu → Gò Mun → Đông Sơn được dùng như các mốc tọa độ để nhìn một tiến trình (process / 프로세스) kéo dài nhiều thế kỷ. Niên đại của từng văn hóa thay đổi đôi chút theo địa điểm và nghiên cứu, nên các phạm vi (range / 범위) dưới đây là xấp xỉ. Khi đọc, hãy đồng thời hỏi bốn điều: cư dân sống bằng gì, họ trao đổi với vùng nào, công cụ thay đổi sức chứa xã hội ra sao, và hôm nay có thể nhìn thấy dấu vết ở đâu.
 
 ## Một timeline vật chất thay vì timeline vua chúa
 

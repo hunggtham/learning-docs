@@ -6,6 +6,8 @@
 
 Đây là nơi dễ nhầm nhất giữa tradition và lịch sử (history / 이력), nên cần giữ hai tầng (layer / 계층) song song thay vì ép chúng thành một câu chuyện duy nhất.
 
+Với Âu Lạc, bốn lớp đọc phải đi cùng nhau: **mốc** cuối thiên niên kỷ I TCN, **kinh tế** lúa nước–luyện kim và lao động công trình, **bối cảnh** Nam Việt cùng các mạng phía nam Trung Hoa, và **địa điểm** Cổ Loa–Đền Hùng. Nếu bỏ một lớp, ta hoặc biến truyền thuyết thành niên đại chắc chắn, hoặc biến thành lũy thành một vật thể quân sự không có xã hội đứng sau.
+
 ## Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn
 
 Trong truyền thống sử Việt, **Văn Lang** gắn với các vua Hùng và vùng Phong Châu. Con số “18 đời Hùng Vương” và niên đại rất sớm thường xuất hiện trong narrative phổ thông. Nhưng nguồn thành văn ghi lại những tradition này muộn hơn rất nhiều so với thời kỳ chúng mô tả, còn archaeology không cho phép xác nhận một danh sách 18 vị vua hay mốc 2879 TCN như một chronology chính xác.

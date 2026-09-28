@@ -1,10 +1,10 @@
-# Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót
+# Thế kỷ X: từ tự trị (autonomy / 자치) đến nhà nước độc lập có khả năng sống sót
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`06_northern_rule_society_economy_and_resistance.md`](06_northern_rule_society_economy_and_resistance.md) kết thúc bằng một cục bộ (local / 로컬) society đã có administrative experience, elite networks và military sức chứa (capacity / 용량), trong khi nhà Đường suy yếu rồi sụp đổ. Điều đó mở ra opportunity, nhưng opportunity chưa phải trạng thái (state / 상태).
 
-Câu hỏi trung tâm của thế kỷ X là: **làm thế nào một vùng từng là peripheral province chuyển thành một polity có thể tự thu tài nguyên (resource / 자원), dẹp rival, chống bên ngoài (external / 외부) intervention và duy trì succession?**
+Câu hỏi trung tâm của thế kỷ X là: **làm thế nào một vùng từng là tỉnh biên viễn chuyển thành một thực thể chính trị (polity / 정치체) có thể tự thu tài nguyên (resource / 자원), dẹp đối thủ, chống can thiệp bên ngoài và duy trì kế vị?** Mốc 905–938–968–981, nguồn thu nông nghiệp và đường sông, cạnh tranh Nam Hán–Tống, cùng Hoa Lư–Bạch Đằng là bốn điểm phải giữ cùng lúc.
 
 Đây là lý do 938 rất quan trọng nhưng không đủ để giải thích toàn bộ chuyển tiếp (transition / 전이).
 

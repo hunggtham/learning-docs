@@ -1,10 +1,10 @@
-# Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance
+# Bắc thuộc dài hạn: quản trị (administration / 행정), kinh tế (economy / 경제), xã hội địa phương và kháng cự (resistance / 저항)
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`05_nanyue_han_and_imperial_integration.md`](05_nanyue_han_and_imperial_integration.md) đã giải thích cơ chế (mechanism / 메커니즘) cơ bản của imperial tích hợp (integration / 통합): conquest → administrative district → thông tin (information / 정보) → extraction → dependence on cục bộ (local / 로컬) intermediaries. Chapter này hỏi câu khó hơn: **vì sao một vùng có thể ở trong các imperial các hệ thống (systems / 시스템들) phương bắc nhiều thế kỷ nhưng cuối cùng vẫn phát triển khả năng tự trị và một political định danh (identity / 식별자) đủ mạnh để hình thành trạng thái (state / 상태) độc lập?**
 
-Câu trả lời không thể là “người Việt liên tục chống lại suốt một nghìn năm”. Có rebellion, nhưng cũng có long periods of accommodation, intermarriage, trade, office-holding, di chuyển (migration / 마이그레이션) và institutional borrowing. Lịch sử thật nằm trong tension giữa **tích hợp (integration / 통합) và localization**.
+Câu trả lời không thể là “người Việt liên tục chống lại suốt một nghìn năm”. Có nổi dậy, nhưng cũng có những giai đoạn dài thích nghi, hôn phối, thương mại, giữ chức vụ, di chuyển (migration / 마이그레이션) và tiếp nhận thể chế. Lịch sử thật nằm trong tension giữa **tích hợp (integration / 통합) và bản địa hóa (localization / 현지화)**. Vì vậy mỗi phần cần nối mốc triều đại với nền kinh tế, mạng địa phương, bối cảnh đế chế và địa điểm như Luy Lâu, chùa Dâu, Mê Linh hay Thanh Hóa.
 
 ## “Bắc thuộc” là một convenience label, không phải một regime duy nhất
 
