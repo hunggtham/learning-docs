@@ -1,8 +1,5 @@
 # Biểu thức hữu tỉ, miền xác định và tiệm cận
 
-> **Mạch đọc:** Đọc **Biểu thức hữu tỉ, miền xác định và tiệm cận** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Miền xác định không phải chi tiết phụ** sang **Phương trình hữu tỉ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-
 Biểu thức hữu tỉ (Rational Expression / 유리식) là thương của hai đa thức. Dạng tổng quát là
 
 ```math
@@ -31,14 +28,11 @@ Với `x\neq1`, có thể rút gọn:
 f(x)=x+1.
 ```
 
-Nhưng điều này không biến hàm ban đầu thành đúng hoàn toàn với `x=1`. Biểu thức gốc vẫn không xác định tại đó. đồ thị (graph / 그래프) của `f` giống đường thẳng `y=x+1` nhưng có một lỗ tại `(1,2)`.
+Nhưng điều này không biến hàm ban đầu thành đúng hoàn toàn với `x=1`. Biểu thức gốc vẫn không xác định tại đó. Graph của `f` giống đường thẳng `y=x+1` nhưng có một lỗ tại `(1,2)`.
 
-Đây là ví dụ điển hình cho việc **biểu thức đại số tương đương trên một miền** chứ không nhất thiết tương đương trên mọi giá trị. Khi biến đổi, ta phải mang theo lĩnh vực (domain / 도메인) như một phần của đối tượng (object / 객체) toán học.
+Đây là ví dụ điển hình cho việc **biểu thức đại số tương đương trên một miền** chứ không nhất thiết tương đương trên mọi giá trị. Khi biến đổi, ta phải mang theo domain như một phần của object toán học.
 
-Trong lập trình, cùng mô hình tư duy (mental model / 사고 모델) xuất hiện khi một hàm (function / 함수) có precondition. Một biểu thức có thể syntactically hợp lệ nhưng đầu vào (input / 입력) cụ thể làm thao tác (operation / 연산) trở nên undefined, chẳng hạn chia cho 0 hoặc truy cập phần tử ngoài phạm vi (range / 범위).
-
-
-> **Chuyển mạch:** Từ **Miền xác định không phải chi tiết phụ**, ta sang **Phương trình hữu tỉ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Trong lập trình, cùng mental model xuất hiện khi một function có precondition. Một biểu thức có thể syntactically hợp lệ nhưng input cụ thể làm operation trở nên undefined, chẳng hạn chia cho 0 hoặc truy cập phần tử ngoài range.
 
 ## Phương trình hữu tỉ
 
@@ -48,7 +42,7 @@ Xét
 \frac{1}{x-1}=\frac{2}{x+2}.
 ```
 
-Trước hết lĩnh vực (domain / 도메인) yêu cầu
+Trước hết domain yêu cầu
 
 ```math
 x\neq1,\qquad x\neq-2.
@@ -72,12 +66,9 @@ và
 x=4.
 ```
 
-`x=4` không vi phạm lĩnh vực (domain / 도메인) nên là nghiệm hợp lệ.
+`x=4` không vi phạm domain nên là nghiệm hợp lệ.
 
-Việc “nhân chéo” thực chất chỉ là nhân hai vế với một quantity chung. Phép biến đổi chỉ bảo toàn nghiệm khi quantity đó khác 0 trên các giá trị đang xét. Vì vậy lĩnh vực (domain / 도메인) phải được xác định trước, không phải kiểm tra tùy hứng sau cùng.
-
-
-> **Chuyển mạch:** Từ **Phương trình hữu tỉ**, ta sang **Tiệm cận đứng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Việc “nhân chéo” thực chất chỉ là nhân hai vế với một quantity chung. Phép biến đổi chỉ bảo toàn nghiệm khi quantity đó khác 0 trên các giá trị đang xét. Vì vậy domain phải được xác định trước, không phải kiểm tra tùy hứng sau cùng.
 
 ## Tiệm cận đứng
 
@@ -103,9 +94,6 @@ Ta gọi `x=2` là tiệm cận đứng (Vertical Asymptote / 수직점근선).
 
 Không phải mọi zero của mẫu đều tạo tiệm cận. Nếu factor tương ứng bị cancel với tử, ta có thể chỉ nhận được removable discontinuity, tức một lỗ như ví dụ `(x^2-1)/(x-1)`.
 
-
-> **Chuyển mạch:** Từ **Tiệm cận đứng**, ta sang **Tiệm cận ngang và hành vi ở vô cực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Tiệm cận ngang và hành vi ở vô cực
 
 Xét
@@ -128,16 +116,13 @@ f(x)\to2.
 
 Do đó `y=2` là tiệm cận ngang (Horizontal Asymptote / 수평점근선).
 
-Đây không phải mẹo “so bậc” vô lý. Quy tắc so bậc chỉ là shortcut của việc factor ra power lớn nhất của `x` rồi quan sát các lower-order terms trở nên không đáng kể ở quy mô (scale / 규모) lớn.
+Đây không phải mẹo “so bậc” vô lý. Quy tắc so bậc chỉ là shortcut của việc factor ra power lớn nhất của `x` rồi quan sát các lower-order terms trở nên không đáng kể ở scale lớn.
 
 Nếu bậc tử nhỏ hơn bậc mẫu, limit thường là 0. Nếu bằng nhau, limit là tỉ số hệ số leading. Nếu tử lớn hơn đúng một bậc, polynomial division thường dẫn đến tiệm cận xiên (Oblique Asymptote / 사선점근선).
 
+## Partial fractions: biến một rational function phức tạp thành các khối đơn giản
 
-> **Chuyển mạch:** Từ **Tiệm cận ngang và hành vi ở vô cực**, ta sang **Partial fractions: biến một rational hàm (function / 함수) phức tạp thành các khối đơn giản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Partial fractions: biến một rational hàm (function / 함수) phức tạp thành các khối đơn giản
-
-Một rational hàm (function / 함수) như
+Một rational function như
 
 ```math
 \frac{3x+5}{(x-1)(x+2)}
@@ -155,55 +140,38 @@ Quy đồng:
 3x+5=A(x+2)+B(x-1).
 ```
 
-So hệ số hoặc thay các giá trị thuận tiện giúp tìm `A,B`. Ý tưởng này quan trọng trong tích hợp (integration / 통합), differential equations, Laplace transforms và tín hiệu (signal / 신호) phân tích (analysis / 분석): ta phân rã một đối tượng (object / 객체) phức tạp thành các chế độ (mode / 모드) đơn giản hơn mà ta đã biết cách xử lý.
+So hệ số hoặc thay các giá trị thuận tiện giúp tìm `A,B`. Ý tưởng này quan trọng trong integration, differential equations, Laplace transforms và signal analysis: ta phân rã một object phức tạp thành các mode đơn giản hơn mà ta đã biết cách xử lý.
 
+## Rational function trong mô hình thực tế
 
-> **Chuyển mạch:** Từ **Partial fractions: biến một rational hàm (function / 함수) phức tạp thành các khối đơn giản**, ta sang **Rational hàm (function / 함수) trong mô hình thực tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Rational hàm (function / 함수) trong mô hình thực tế
-
-Các tỉ lệ thường xuất hiện khi một tác động (effect / 효과) tăng lúc đầu nhưng bị giới hạn bởi sức chứa (capacity / 용량). Ví dụ một thông lượng (throughput / 처리량) mô hình (model / 모델) đơn giản có thể có dạng
+Các tỉ lệ thường xuất hiện khi một effect tăng lúc đầu nhưng bị giới hạn bởi capacity. Ví dụ một throughput model đơn giản có thể có dạng
 
 ```math
 T(n)=\frac{an}{b+n}.
 ```
 
-Khi `n` nhỏ, thông lượng (throughput / 처리량) gần tăng tuyến tính. Khi `n` rất lớn,
+Khi `n` nhỏ, throughput gần tăng tuyến tính. Khi `n` rất lớn,
 
 ```math
 T(n)\to a.
 ```
 
-Nghĩa là hệ thống tiến tới một ceiling. Rational functions vì thế thường xuất hiện trong kinetics, saturation các mô hình (models / 모델들), điều khiển (control / 제어) các hệ thống (systems / 시스템들) và approximation.
+Nghĩa là hệ thống tiến tới một ceiling. Rational functions vì thế thường xuất hiện trong kinetics, saturation models, control systems và approximation.
 
+## Knowledge Connection
 
-> **Chuyển mạch:** Từ **Rational hàm (function / 함수) trong mô hình thực tế**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Rational expressions nối đại số với calculus qua limits và asymptotes. Chúng nối với numerical computing qua domain checks và singularities. Trong matrix computation, phép nghịch đảo cũng tạo singularity khi determinant bằng 0. Trong probability, ratio xuất hiện trong odds và likelihood ratios. Cùng một mental model lặp lại: **phép chia luôn yêu cầu denominator mang đủ thông tin để operation tồn tại**.
 
-## Liên kết kiến thức (knowledge connection / 지식 연결)
+## Mental Model
 
-Rational expressions nối đại số với calculus qua limits và asymptotes. Chúng nối với numerical computing qua lĩnh vực (domain / 도메인) checks và singularities. Trong ma trận (matrix / 행렬) computation, phép nghịch đảo cũng tạo singularity khi determinant bằng 0. Trong xác suất (probability / 확률), ratio xuất hiện trong odds và likelihood ratios. Cùng một mô hình tư duy (mental model / 사고 모델) lặp lại: **phép chia luôn yêu cầu denominator mang đủ thông tin để thao tác (operation / 연산) tồn tại**.
+> Một rational expression không chỉ là “phân số của hai đa thức”. Nó là một phép chia có cấu trúc, và vì thế domain, singularity và hành vi ở scale lớn là một phần của bản chất. Mỗi lần rút gọn hay nhân chéo, hãy hỏi operation đó hợp lệ trên những input nào.
 
+## Common Misconceptions
 
-> **Chuyển mạch:** Từ **liên kết kiến thức (knowledge connection / 지식 연결)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Mô hình tư duy (mental model / 사고 모델)
-
-> Một rational expression không chỉ là “phân số của hai đa thức”. Nó là một phép chia có cấu trúc, và vì thế lĩnh vực (domain / 도메인), singularity và hành vi ở quy mô (scale / 규모) lớn là một phần của bản chất. Mỗi lần rút gọn hay nhân chéo, hãy hỏi thao tác (operation / 연산) đó hợp lệ trên những đầu vào (input / 입력) nào.
-
-
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Dùng chung (common / 공통) Misconceptions
-
-Rút gọn `(x-1)` không tự động thêm lại `x=1` vào lĩnh vực (domain / 도메인). Zero của denominator không phải lúc nào cũng là vertical asymptote; factor có thể cancel và tạo hole. Tiệm cận ngang không có nghĩa đồ thị (graph / 그래프) không bao giờ cắt đường tiệm cận. “So bậc” chỉ là hệ quả của limit, không phải quy tắc độc lập cần học thuộc.
-
-
-> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Liên kết kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Rút gọn `(x-1)` không tự động thêm lại `x=1` vào domain. Zero của denominator không phải lúc nào cũng là vertical asymptote; factor có thể cancel và tạo hole. Tiệm cận ngang không có nghĩa graph không bao giờ cắt đường tiệm cận. “So bậc” chỉ là hệ quả của limit, không phải quy tắc độc lập cần học thuộc.
 
 ## Liên kết kiến thức
 
-Prerequisite gần nhất là [Phương trình và bất phương trình](./01_equations_and_inequalities.md), [Đa thức và phân tích nhân tử](./04_polynomials_and_factorization.md) và [Hàm số](../02_functions/00_function_concept.md). Khi chuyển sang hành vi (behavior / 동작) ở singularity và vô cực, đọc [Giới hạn và tính liên tục](../05_calculus/00_limits_and_continuity.md).
+Prerequisite gần nhất là [Phương trình và bất phương trình](./01_equations_and_inequalities.md), [Đa thức và phân tích nhân tử](./04_polynomials_and_factorization.md) và [Hàm số](../02_functions/00_function_concept.md). Khi chuyển sang behavior ở singularity và vô cực, đọc [Giới hạn và tính liên tục](../05_calculus/00_limits_and_continuity.md).
 
-Partial fractions và pole-like hành vi (behavior / 동작) được dùng tiếp trong [Phương trình vi phân](../05_calculus/05_differential_equations.md), [Laplace/Z-transform và Dynamic Systems](../09_connections/06_laplace_z_transform_and_dynamic_systems.md), còn vấn đề singularity/conditioning nối trực tiếp với [Toán số](../08_optimization_numerical/02_numerical_methods_and_error.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algebraic language](./00_algebraic_language.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Partial fractions và pole-like behavior được dùng tiếp trong [Phương trình vi phân](../05_calculus/05_differential_equations.md), [Laplace/Z-transform và Dynamic Systems](../09_connections/06_laplace_z_transform_and_dynamic_systems.md), còn vấn đề singularity/conditioning nối trực tiếp với [Toán số](../08_optimization_numerical/02_numerical_methods_and_error.md).
