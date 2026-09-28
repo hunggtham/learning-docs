@@ -1,10 +1,8 @@
 # 14 — FX options, volatility và hedging
 
-> **Mạch đọc:** Đặt **14 — FX options, volatility và hedging** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. lời gọi (call / 호출) và put** sang **2. FX option có hai currencies**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+FX options thêm một chiều mới vào trading: payoff không còn chỉ phụ thuộc hướng spot mà còn phụ thuộc **implied volatility, time, rates và convexity**. Vì vậy đúng hướng spot vẫn có thể lỗ nếu option premium, timing hoặc volatility view sai.
 
-FX options thêm một chiều mới vào trading: payoff không còn chỉ phụ thuộc hướng spot mà còn phụ thuộc **implied volatility, thời gian (time / 시간), rates và convexity**. Vì vậy đúng hướng spot vẫn có thể lỗ nếu option premium, timing hoặc volatility view sai.
-
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Spot / forward state
@@ -18,9 +16,9 @@ Spot / forward state
 → P/L path
 ```
 
-## 1. lời gọi (call / 호출) và put
+## 1. Call và put
 
-Một lời gọi (call / 호출) cho quyền mua underlying theo strike `K`.
+Một call cho quyền mua underlying theo strike `K`.
 
 Một put cho quyền bán.
 
@@ -31,13 +29,13 @@ Call = max(S_T - K, 0)
 Put  = max(K - S_T, 0)
 ```
 
-Nhưng trước expiry, option giá trị (value / 값) còn chứa thời gian (time / 시간) giá trị (value / 값).
+Nhưng trước expiry, option value còn chứa time value.
 
 ## 2. FX option có hai currencies
 
 Trong FX, underlying là tỷ giá giữa hai currencies. Rates của cả hai phía ảnh hưởng forward và option valuation.
 
-Không nên bản sao (copy / 복사) intuition equity option mà bỏ qua domestic/foreign-rate cấu trúc (structure / 구조).
+Không nên copy intuition equity option mà bỏ qua domestic/foreign-rate structure.
 
 ## 3. Spot, forward và option
 
@@ -53,7 +51,7 @@ Spot
 → option value
 ```
 
-## 4. Intrinsic và thời gian (time / 시간) giá trị (value / 값)
+## 4. Intrinsic và time value
 
 Option premium gồm:
 
@@ -62,19 +60,19 @@ intrinsic value
 + time value
 ```
 
-Out-of-the-money option có intrinsic 0 nhưng vẫn có thời gian (time / 시간) giá trị (value / 값) nếu còn khả năng finish in-the-money.
+Out-of-the-money option có intrinsic 0 nhưng vẫn có time value nếu còn khả năng finish in-the-money.
 
 ## 5. Implied volatility
 
-**Implied volatility (IV)** là volatility parameter khiến pricing mô hình (model / 모델) match thị trường (market / 시장) option price.
+**Implied volatility (IV)** là volatility parameter khiến pricing model match market option price.
 
 Nó không phải trực tiếp “dự báo chính xác volatility tương lai”. Nó phản ánh:
 
 - expected movement;
-- rủi ro (risk / 위험) premium;
+- risk premium;
 - supply/demand;
 - hedging pressure;
-- mô hình (model / 모델) convention.
+- model convention.
 
 ## 6. Realized volatility
 
@@ -88,23 +86,23 @@ vs
 Future Realized Vol
 ```
 
-Nhưng option P/L còn phụ thuộc đường dẫn (path / 경로), skew, giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và hedging.
+Nhưng option P/L còn phụ thuộc path, skew, transaction cost và hedging.
 
 ## 7. Delta
 
-Delta xấp xỉ sensitivity option giá trị (value / 값) với small spot move.
+Delta xấp xỉ sensitivity option value với small spot move.
 
 ```text
 Delta ≈ ∂V/∂S
 ```
 
-Lời gọi (call / 호출) delta thường positive, put delta negative theo convention phổ biến.
+Call delta thường positive, put delta negative theo convention phổ biến.
 
-Delta thay đổi theo spot/thời gian (time / 시간)/volatility.
+Delta thay đổi theo spot/time/volatility.
 
 ## 8. Gamma
 
-Gamma đo thay đổi (change / 변경) của delta theo spot:
+Gamma đo change của delta theo spot:
 
 ```text
 Gamma = ∂²V/∂S²
@@ -114,7 +112,7 @@ Long option thường long gamma: delta thay đổi theo hướng có lợi cho 
 
 ## 9. Theta
 
-Theta đo thời gian (time / 시간) decay, all else equal.
+Theta đo time decay, all else equal.
 
 Long option thường chịu negative theta.
 
@@ -126,11 +124,11 @@ Vega đo sensitivity với implied volatility.
 
 Long option thường positive vega.
 
-Nếu IV giảm mạnh sau sự kiện (event / 이벤트), option buyer có thể lỗ dù spot direction đúng nhẹ.
+Nếu IV giảm mạnh sau event, option buyer có thể lỗ dù spot direction đúng nhẹ.
 
-## 11. Rho / tỷ lệ (rate / 비율) sensitivity
+## 11. Rho / rate sensitivity
 
-FX options phụ thuộc tỷ lệ (rate / 비율) differential, nên sensitivity với rates relevant hơn simple equity-option intuition trong một số maturities.
+FX options phụ thuộc rate differential, nên sensitivity với rates relevant hơn simple equity-option intuition trong một số maturities.
 
 ## 12. Delta-neutral không risk-neutral
 
@@ -140,10 +138,10 @@ Một portfolio delta ≈ 0 vẫn có:
 - vega;
 - theta;
 - skew;
-- jump rủi ro (risk / 위험);
-- liquidity rủi ro (risk / 위험).
+- jump risk;
+- liquidity risk.
 
-Neutralizing first-order direction không xóa nonlinear rủi ro (risk / 위험).
+Neutralizing first-order direction không xóa nonlinear risk.
 
 ## 13. Gamma scalping intuition
 
@@ -154,9 +152,9 @@ price rises → sell some underlying
 price falls → buy some underlying
 ```
 
-Nếu realized movement đủ lớn relative to option premium/chi phí (cost / 비용), rehedging can monetize convexity.
+Nếu realized movement đủ lớn relative to option premium/cost, rehedging can monetize convexity.
 
-Nhưng giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và discrete jumps matter.
+Nhưng transaction cost và discrete jumps matter.
 
 ## 14. Volatility surface
 
@@ -173,27 +171,27 @@ Collection này là volatility surface.
 
 Different strikes can trade at different IV.
 
-FX thị trường (market / 시장) thường quote skew via conventions như rủi ro (risk / 위험) reversals/butterflies.
+FX market thường quote skew via conventions như risk reversals/butterflies.
 
-Skew phản ánh asymmetric demand/rủi ro (risk / 위험) perceptions, không chỉ statistical phân phối (distribution / 분포).
+Skew phản ánh asymmetric demand/risk perceptions, không chỉ statistical distribution.
 
-## 16. rủi ro (risk / 위험) reversal
+## 16. Risk reversal
 
-Conceptually, rủi ro (risk / 위험) reversal compares IV of out-of-the-money lời gọi (call / 호출) vs put at matched delta convention.
+Conceptually, risk reversal compares IV of out-of-the-money call vs put at matched delta convention.
 
-It gives thông tin (information / 정보) about relative demand for upside vs downside protection.
+It gives information about relative demand for upside vs downside protection.
 
-Chính xác (exact / 정확한) quoting conventions depend on pair/thị trường (market / 시장).
+Exact quoting conventions depend on pair/market.
 
 ## 17. Butterfly
 
 Butterfly quote captures curvature/smile relative to ATM and wings.
 
-It helps construct surface, not a directional spot tín hiệu (signal / 신호) by itself.
+It helps construct surface, not a directional spot signal by itself.
 
 ## 18. Delta conventions in FX
 
-FX options have market-specific delta conventions, including spot/forward delta and premium-adjusted variants depending on pair/thị trường (market / 시장).
+FX options have market-specific delta conventions, including spot/forward delta and premium-adjusted variants depending on pair/market.
 
 Never assume a quoted “25-delta option” has one universal formula without checking convention.
 
@@ -205,7 +203,7 @@ ATM can mean different things:
 - forward ATM;
 - delta-neutral straddle conventions.
 
-Thị trường (market / 시장) documentation matters.
+Market documentation matters.
 
 ## 20. Straddle
 
@@ -216,33 +214,33 @@ long call + long put
 same strike/maturity
 ```
 
-It is primarily a long-volatility/large-move cấu trúc (structure / 구조), not simply “bet price goes up or down”.
+It is primarily a long-volatility/large-move structure, not simply “bet price goes up or down”.
 
 Break-even depends on premium and final move.
 
 ## 21. Strangle
 
-Long OTM lời gọi (call / 호출) + OTM put.
+Long OTM call + OTM put.
 
 Cheaper than comparable straddle but requires larger move to profit at expiry.
 
-## 22. rủi ro (risk / 위험) reversal trade
+## 22. Risk reversal trade
 
-Buy lời gọi (call / 호출)/sell put or opposite creates directional + skew exposure.
+Buy call/sell put or opposite creates directional + skew exposure.
 
 It is not pure direction because option vols and convexity differ.
 
 ## 23. Butterfly structures
 
-Can express view on phân phối (distribution / 분포) around central region vs tails.
+Can express view on distribution around central region vs tails.
 
 Payoff shape must be understood exactly before using labels.
 
-## 24. sự kiện (event / 이벤트) volatility
+## 24. Event volatility
 
-Before CPI/FOMC/election-like or major chính sách (policy / 정책) sự kiện (event / 이벤트), option IV may rise.
+Before CPI/FOMC/election-like or major policy event, option IV may rise.
 
-After sự kiện (event / 이벤트) bất định (uncertainty / 불확실성) resolves, IV can collapse.
+After event uncertainty resolves, IV can collapse.
 
 This is **vol crush** intuition.
 
@@ -252,30 +250,30 @@ A trader long options needs spot movement/vol dynamics sufficient to offset prem
 
 Traders sometimes translate short-dated option premium into approximate market-implied move.
 
-This is heuristic/model-dependent, not hard hỗ trợ (support / 지원)/resistance.
+This is heuristic/model-dependent, not hard support/resistance.
 
-## 26. Volatility rủi ro (risk / 위험) premium
+## 26. Volatility risk premium
 
-Option sellers may earn premium because implied volatility can exceed subsequently realized volatility on average in some samples, but compensation comes with convex tail/jump rủi ro (risk / 위험).
+Option sellers may earn premium because implied volatility can exceed subsequently realized volatility on average in some samples, but compensation comes with convex tail/jump risk.
 
 “Short vol earns theta” is incomplete without crash exposure.
 
-## 27. Jump rủi ro (risk / 위험)
+## 27. Jump risk
 
-Discrete chính sách (policy / 정책)/geopolitical events can move spot beyond continuous-model các giả định (assumptions / 가정들).
+Discrete policy/geopolitical events can move spot beyond continuous-model assumptions.
 
-Delta hedging cannot eliminate jump rủi ro (risk / 위험).
+Delta hedging cannot eliminate jump risk.
 
-## 28. Gap and liquidity rủi ro (risk / 위험)
+## 28. Gap and liquidity risk
 
 During stress:
 
 - IV spikes;
 - spreads widen;
 - hedges slip;
-- correlations thay đổi (change / 변경).
+- correlations change.
 
-Option portfolio marks may move even if theoretical mô hình (model / 모델) inputs seem manageable.
+Option portfolio marks may move even if theoretical model inputs seem manageable.
 
 ## 29. Vol-of-vol
 
@@ -289,17 +287,17 @@ They become important when portfolio is large/complex; beginner should first mas
 
 ## 31. Barrier options
 
-Barrier option activates/deactivates when spot touches mức (level / 수준).
+Barrier option activates/deactivates when spot touches level.
 
-Near barrier, hedging hành vi (behavior / 동작) can become nonlinear and path-dependent.
+Near barrier, hedging behavior can become nonlinear and path-dependent.
 
 Retail structured products can embed barrier-like risks without obvious “option” label.
 
 ## 32. Digital options
 
-Pay fixed amount conditional on threshold sự kiện (event / 이벤트).
+Pay fixed amount conditional on threshold event.
 
-Payoff discontinuity creates concentrated rủi ro (risk / 위험) near strike/expiry.
+Payoff discontinuity creates concentrated risk near strike/expiry.
 
 ## 33. Exotic FX options
 
@@ -311,7 +309,7 @@ Examples include:
 - lookbacks;
 - accumulators/structured variants.
 
-Độ phức tạp (complexity / 복잡도) adds mô hình (model / 모델), liquidity and legal-product rủi ro (risk / 위험).
+Complexity adds model, liquidity and legal-product risk.
 
 ## 34. Hedging corporate FX exposure with options
 
@@ -324,7 +322,7 @@ Importer needs USD later
 → buy USD call / local-currency put
 ```
 
-Premium is tường minh (explicit / 명시적) insurance chi phí (cost / 비용).
+Premium is explicit insurance cost.
 
 ## 35. Forward vs option hedge
 
@@ -344,31 +342,31 @@ protect adverse tail
 retain favorable move subject to structure
 ```
 
-Choice depends on mục tiêu (objective / 목표)/chi phí (cost / 비용)/accounting/liquidity.
+Choice depends on objective/cost/accounting/liquidity.
 
 ## 36. Collar
 
-Collar can reduce option premium by buying protection and selling upside beyond another mức (level / 수준).
+Collar can reduce option premium by buying protection and selling upside beyond another level.
 
-But sold option creates obligation/cap on favorable kết quả (outcome / 결과).
+But sold option creates obligation/cap on favorable outcome.
 
 ## 37. Hedge ratio and delta
 
-Option hedge notional should consider delta, which changes over thời gian (time / 시간).
+Option hedge notional should consider delta, which changes over time.
 
 A static “same notional” hedge may not remain equivalent.
 
-## 38. động (dynamic / 동적) hedging chi phí (cost / 비용)
+## 38. Dynamic hedging cost
 
 Frequent delta rebalancing incurs:
 
 - spread;
 - slippage;
-- thị trường (market / 시장) impact.
+- market impact.
 
-Theoretical continuous hedge is impossible in real thị trường (market / 시장).
+Theoretical continuous hedge is impossible in real market.
 
-## 39. Surface marking rủi ro (risk / 위험)
+## 39. Surface marking risk
 
 P/L attribution should separate:
 
@@ -381,20 +379,20 @@ rates
 hedging cost
 ```
 
-Without attribution, option hiệu năng (performance / 성능) is opaque.
+Without attribution, option performance is opaque.
 
 ## 40. Options backtest difficulty
 
 Need historical:
 
-- full option chuỗi (chain / 사슬)/surface;
+- full option chain/surface;
 - bid/ask;
 - conventions;
 - expiries;
 - rates/forwards;
 - realistic hedging.
 
-Backtesting options from spot OHLC + hiện tại (current / 현재) IV giả định (assumption / 가정) is usually inadequate.
+Backtesting options from spot OHLC + current IV assumption is usually inadequate.
 
 ## 41. Stale/missing quotes
 
@@ -402,13 +400,13 @@ OTC option datasets may be indicative, sparse or interpolation-heavy.
 
 Research must know whether quotes are executable, composite or model-derived.
 
-## 42. Greeks are cục bộ (local / 로컬) approximations
+## 42. Greeks are local approximations
 
 Delta/gamma Taylor approximation works for small moves.
 
 Large jump changes Greeks themselves; full revaluation needed.
 
-## 43. kiểm thử sức chịu tải (stress test / 스트레스 테스트)
+## 43. Stress test
 
 Option book should shock:
 
@@ -423,7 +421,7 @@ liquidity spread widening
 
 Not just delta move.
 
-## 44. Tail hedge chi phí (cost / 비용)
+## 44. Tail hedge cost
 
 Buying protection repeatedly can drag return.
 
@@ -439,23 +437,23 @@ basis to risk being hedged
 
 ## 45. Selling options and margin
 
-Short option has potentially large nonlinear mất mát (loss / 손실) and margin requirements can rise sharply as thị trường (market / 시장) moves/volatility rises.
+Short option has potentially large nonlinear loss and margin requirements can rise sharply as market moves/volatility rises.
 
 Margin stress must be modeled before premium income.
 
-## 46. Broker OTC option/sản phẩm (product / 제품) rủi ro (risk / 위험)
+## 46. Broker OTC option/product risk
 
-If using retail OTC products, legal thực thể (entity / 엔터티), settlement and pricing transparency are part of rủi ro (risk / 위험) mô hình (model / 모델) just as with spot/CFD.
+If using retail OTC products, legal entity, settlement and pricing transparency are part of risk model just as with spot/CFD.
 
-## 47. Do not infer xác suất (probability / 확률) directly from delta
+## 47. Do not infer probability directly from delta
 
-Option delta is sometimes loosely interpreted as probability-like. Under specific các mô hình (models / 모델들)/conventions it relates to risk-neutral measures, but it is not a simple real-world xác suất (probability / 확률) of expiring ITM.
+Option delta is sometimes loosely interpreted as probability-like. Under specific models/conventions it relates to risk-neutral measures, but it is not a simple real-world probability of expiring ITM.
 
-## 48. Risk-neutral vs real-world xác suất (probability / 확률)
+## 48. Risk-neutral vs real-world probability
 
-Option prices encode risk-neutral valuation plus rủi ro (risk / 위험) premia, not pure vật lý (physical / 물리적) xác suất (probability / 확률) forecast.
+Option prices encode risk-neutral valuation plus risk premia, not pure physical probability forecast.
 
-This distinction matters when using options thị trường (market / 시장) as macro expectation indicator.
+This distinction matters when using options market as macro expectation indicator.
 
 ## 49. Minimal option position sheet
 
@@ -487,20 +485,18 @@ Bạn cần tự giải thích được:
 3. Delta/gamma/theta/vega.
 4. Why delta-neutral is not risk-neutral.
 5. Surface/skew/risk-reversal concepts.
-6. sự kiện (event / 이벤트) vol and vol crush.
-7. Forward vs option hedge sự đánh đổi (trade-off / 트레이드오프).
-8. động (dynamic / 동적) hedging costs/jump rủi ro (risk / 위험).
-9. Why option backtesting needs surface dữ liệu (data / 데이터).
-10. Why short-vol premium income carries tail rủi ro (risk / 위험).
+6. Event vol and vol crush.
+7. Forward vs option hedge trade-off.
+8. Dynamic hedging costs/jump risk.
+9. Why option backtesting needs surface data.
+10. Why short-vol premium income carries tail risk.
 
 ## Đọc tiếp
 
 → [15 — Korea / Vietnam FX market context and regulations](./15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md)
 
-## Nội bộ (internal / 내부) links
+## Internal links
 
 - [Options, Volatility Surface, Greeks and Hedging](../05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md)
 - [04 — Macro drivers](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 - [11 — Portfolio FX risk](./11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
-
-> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

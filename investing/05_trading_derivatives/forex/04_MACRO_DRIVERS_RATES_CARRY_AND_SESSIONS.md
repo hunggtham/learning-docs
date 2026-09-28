@@ -1,11 +1,8 @@
 # 04 — Macro drivers, interest rates, carry và trading sessions
 
-> **Mạch đọc:** Đặt **04 — Macro drivers, interest rates, carry và trading sessions** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Forex là bài toán relative macro** sang **2. hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율) không đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-
 Một currency pair là **giá tương đối giữa hai đồng tiền**. Vì vậy không có một biến đơn lẻ kiểu “lãi suất tăng thì currency tăng” có thể dùng như quy luật cơ học.
 
-Mô hình tư duy (mental model / 사고 모델) phù hợp hơn là:
+Mental model phù hợp hơn là:
 
 ```text
 New Information
@@ -44,9 +41,9 @@ European risk premium vs US risk premium
 Capital demand for EUR assets vs USD assets
 ```
 
-Một nền kinh tế có thể tăng trưởng tốt nhưng currency vẫn giảm nếu phía đối diện cải thiện mạnh hơn hoặc thị trường (market / 시장) đã price in kết quả tốt trước đó.
+Một nền kinh tế có thể tăng trưởng tốt nhưng currency vẫn giảm nếu phía đối diện cải thiện mạnh hơn hoặc market đã price in kết quả tốt trước đó.
 
-## 2. hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율) không đủ
+## 2. Current policy rate không đủ
 
 Trader mới thường nhìn:
 
@@ -57,13 +54,13 @@ ECB rate = Y
 
 rồi suy luận currency có lãi suất cao hơn sẽ mạnh hơn.
 
-Thị trường (market / 시장) lại định giá **expected đường dẫn (path / 경로)**.
+Market lại định giá **expected path**.
 
-Ví dụ central bank đang giữ chính sách (policy / 정책) tỷ lệ (rate / 비율) 5%, nhưng thị trường (market / 시장) trước đó kỳ vọng giữ 5% thêm sáu tháng. Nếu dữ liệu (data / 데이터) mới khiến thị trường (market / 시장) tin tỷ lệ (rate / 비율) cuts sẽ bắt đầu sớm hơn và sâu hơn, short-term yields có thể giảm ngay dù hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율) chưa thay đổi.
+Ví dụ central bank đang giữ policy rate 5%, nhưng market trước đó kỳ vọng giữ 5% thêm sáu tháng. Nếu data mới khiến market tin rate cuts sẽ bắt đầu sớm hơn và sâu hơn, short-term yields có thể giảm ngay dù current policy rate chưa thay đổi.
 
 FX có thể phản ứng trước cuộc họp chính thức vì expectation đã đổi.
 
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Spot FX today
@@ -72,9 +69,9 @@ expected future policy / rates
 not only today's policy rate
 ```
 
-## 3. Central-bank reaction hàm (function / 함수)
+## 3. Central-bank reaction function
 
-**Hàm phản ứng của ngân hàng trung ương (central-bank reaction function)** là cách chính sách (policy / 정책) maker có xu hướng phản ứng với inflation, labor thị trường (market / 시장), growth, financial stability và mandate của mình.
+**Hàm phản ứng của ngân hàng trung ương (central-bank reaction function)** là cách policy maker có xu hướng phản ứng với inflation, labor market, growth, financial stability và mandate của mình.
 
 Không nên học kiểu:
 
@@ -95,25 +92,25 @@ vs prior expectation
 
 Một CPI cao nhưng thấp hơn fear scenario có thể làm yields và currency giảm. Một CPI giảm nhưng vẫn cao hơn consensus có thể tạo phản ứng ngược lại.
 
-## 4. Surprise quan trọng hơn headline mức (level / 수준) trong ngắn hạn
+## 4. Surprise quan trọng hơn headline level trong ngắn hạn
 
 Giả sử consensus CPI YoY là 3.0%.
 
-Trường hợp (case / 사례) A:
+Case A:
 
 ```text
 Actual = 3.4%
 ```
 
-Trường hợp (case / 사례) B:
+Case B:
 
 ```text
 Actual = 2.7%
 ```
 
-Cùng một country, cùng một bản phát hành (release / 릴리스), nhưng tín hiệu (signal / 신호) đối với expected chính sách (policy / 정책) có thể trái ngược.
+Cùng một country, cùng một release, nhưng signal đối với expected policy có thể trái ngược.
 
-Trong event-driven phân tích (analysis / 분석), cần ghi:
+Trong event-driven analysis, cần ghi:
 
 ```text
 Previous
@@ -139,7 +136,7 @@ Real Yield
 
 Nếu nominal yield tăng vì inflation expectation tăng mạnh hơn, real return có thể không cải thiện.
 
-Currency valuation và capital flows có thể nhạy với real yield, nhưng quan hệ (relation / 관계) thay đổi theo regime, rủi ro (risk / 위험) sentiment và hedging chi phí (cost / 비용).
+Currency valuation và capital flows có thể nhạy với real yield, nhưng relation thay đổi theo regime, risk sentiment và hedging cost.
 
 Vì vậy:
 
@@ -158,26 +155,26 @@ Ví dụ conceptual:
 US 2Y yield - Germany 2Y yield
 ```
 
-có thể cung cấp thông tin (information / 정보) về relative monetary-policy expectations có liên quan EUR/USD.
+có thể cung cấp information về relative monetary-policy expectations có liên quan EUR/USD.
 
 Nhưng correlation không cố định. Một pair còn chịu:
 
-- rủi ro (risk / 위험) premium;
+- risk premium;
 - capital flows;
 - reserve demand;
-- bên ngoài (external / 외부) balance;
+- external balance;
 - fiscal concerns;
 - hedging flows;
 - positioning;
 - geopolitical shocks.
 
-Yield spread là một explanatory variable, không phải universal trading tín hiệu (signal / 신호).
+Yield spread là một explanatory variable, không phải universal trading signal.
 
 ## 7. Forward points và interest-rate differential
 
-Trong simplified no-arbitrage khung phần mềm (framework / 프레임워크), spot và forward liên hệ với interest rates của hai currencies.
+Trong simplified no-arbitrage framework, spot và forward liên hệ với interest rates của hai currencies.
 
-Nếu quote là `A/B`, một biểu diễn (representation / 표현) của covered interest parity có dạng gần:
+Nếu quote là `A/B`, một representation của covered interest parity có dạng gần:
 
 ```text
 F = S × (1 + r_B × T) / (1 + r_A × T)
@@ -185,9 +182,9 @@ F = S × (1 + r_B × T) / (1 + r_A × T)
 
 với convention chính xác phụ thuộc cách định nghĩa pair/rates/day count.
 
-Ý nghĩa quan trọng hơn công thức: nếu hai currencies có funding return khác nhau, forward tỷ lệ (rate / 비율) phải điều chỉnh để ngăn arbitrage đơn giản.
+Ý nghĩa quan trọng hơn công thức: nếu hai currencies có funding return khác nhau, forward rate phải điều chỉnh để ngăn arbitrage đơn giản.
 
-Do đó forward price **không phải đơn thuần thị trường (market / 시장) forecast của future spot**.
+Do đó forward price **không phải đơn thuần market forecast của future spot**.
 
 ## 8. Carry trade
 
@@ -202,19 +199,19 @@ buy high-yield currency
 
 Nếu spot không đi ngược quá mạnh, trader có thể hưởng carry. Nhưng high yield thường không phải “free money”. Nó có thể bù cho:
 
-- inflation rủi ro (risk / 위험);
-- devaluation rủi ro (risk / 위험);
-- sovereign/political rủi ro (risk / 위험);
-- liquidity rủi ro (risk / 위험);
-- crash rủi ro (risk / 위험).
+- inflation risk;
+- devaluation risk;
+- sovereign/political risk;
+- liquidity risk;
+- crash risk.
 
 Một currency có yield cao có thể mất giá mạnh đúng lúc risk-off, xóa nhiều tháng carry trong vài ngày.
 
 ## 9. Uncovered interest parity và carry puzzle
 
-Một textbook intuition nói rằng currency có interest tỷ lệ (rate / 비율) cao hơn có xu hướng depreciate đủ để offset yield advantage trong expectation, nếu không sẽ tồn tại easy excess return.
+Một textbook intuition nói rằng currency có interest rate cao hơn có xu hướng depreciate đủ để offset yield advantage trong expectation, nếu không sẽ tồn tại easy excess return.
 
-Thực nghiệm FX historically cho thấy quan hệ (relation / 관계) này không ổn định; carry strategies từng tạo excess returns trong nhiều mẫu (sample / 표본) nhưng đi kèm crash/tail rủi ro (risk / 위험) và regime dependence.
+Thực nghiệm FX historically cho thấy relation này không ổn định; carry strategies từng tạo excess returns trong nhiều sample nhưng đi kèm crash/tail risk và regime dependence.
 
 Bài học không phải “UIP sai nên carry luôn thắng”. Bài học là:
 
@@ -246,11 +243,11 @@ or
 already be fully priced
 ```
 
-Không có deterministic ánh xạ (mapping / 매핑).
+Không có deterministic mapping.
 
 Điểm cần theo dõi là **growth surprise relative to the other economy and to expectations**.
 
-## 11. Inflation: cùng headline nhưng khác cơ chế (mechanism / 메커니즘)
+## 11. Inflation: cùng headline nhưng khác mechanism
 
 Inflation tăng do demand overheating khác inflation tăng do supply shock.
 
@@ -260,7 +257,7 @@ Có thể làm central bank hawkish hơn nếu growth vẫn mạnh.
 
 ### Supply shock
 
-Ví dụ năng lượng (energy / 에너지) import shock có thể vừa tăng inflation vừa làm household real income giảm, khiến chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프) khó hơn.
+Ví dụ energy import shock có thể vừa tăng inflation vừa làm household real income giảm, khiến policy trade-off khó hơn.
 
 Vì vậy currency reaction cần phân tích:
 
@@ -272,15 +269,15 @@ source of inflation
 → external balance
 ```
 
-## 12. Labor-market dữ liệu (data / 데이터)
+## 12. Labor-market data
 
-Employment, unemployment, wage growth, vacancies và participation có thể ảnh hưởng chính sách (policy / 정책) expectations.
+Employment, unemployment, wage growth, vacancies và participation có thể ảnh hưởng policy expectations.
 
-Ví dụ US payroll dữ liệu (data / 데이터) không chỉ là số jobs. thị trường (market / 시장) có thể chú ý:
+Ví dụ US payroll data không chỉ là số jobs. Market có thể chú ý:
 
-- payroll thay đổi (change / 변경);
+- payroll change;
 - revisions;
-- unemployment tỷ lệ (rate / 비율);
+- unemployment rate;
 - labor-force participation;
 - average hourly earnings;
 - hours worked.
@@ -289,7 +286,7 @@ Một headline “strong” nhưng revisions yếu và wage pressure giảm có 
 
 ## 13. Balance of payments
 
-Một country liên hệ với thế giới qua hiện tại (current / 현재) account và financial/capital flows.
+Một country liên hệ với thế giới qua current account và financial/capital flows.
 
 Simplified:
 
@@ -304,13 +301,13 @@ Country có trade surplus không tự động có appreciating currency vì resi
 
 Cần nhìn cả hai phía.
 
-## 14. hiện tại (current / 현재) account
+## 14. Current account
 
 **Cán cân vãng lai (current account)** gồm trade in goods/services, primary income và transfers.
 
-Persistent deficit nghĩa là country cần counterpart financing từ abroad hoặc asset sales/capital inflows theo accounting định danh (identity / 식별자).
+Persistent deficit nghĩa là country cần counterpart financing từ abroad hoặc asset sales/capital inflows theo accounting identity.
 
-Nếu foreign funding confidence giảm đột ngột, currency có thể chịu pressure mạnh — đặc biệt khi bên ngoài (external / 외부) debt, short-term funding hoặc reserve adequacy yếu.
+Nếu foreign funding confidence giảm đột ngột, currency có thể chịu pressure mạnh — đặc biệt khi external debt, short-term funding hoặc reserve adequacy yếu.
 
 ## 15. Capital flows
 
@@ -329,25 +326,25 @@ FDI thường có horizon dài hơn hot-money portfolio flows. Short-term levera
 
 ## 16. Risk-on / risk-off chỉ là shorthand
 
-Thị trường (market / 시장) commentary thường gọi một currency “risk-on” hoặc “safe haven”. Những nhãn này hữu ích như shorthand nhưng không nên trở thành law.
+Market commentary thường gọi một currency “risk-on” hoặc “safe haven”. Những nhãn này hữu ích như shorthand nhưng không nên trở thành law.
 
 Một currency có thể phản ứng khác nhau tùy:
 
-- nguồn (source / 소스) của shock;
+- source của shock;
 - domestic exposure;
 - funding role;
-- bên ngoài (external / 외부) balance;
-- tỷ lệ (rate / 비율) differential;
+- external balance;
+- rate differential;
 - positioning;
 - intervention expectation.
 
-Nên hỏi cơ chế (mechanism / 메커니즘) thay vì gắn label cố định.
+Nên hỏi mechanism thay vì gắn label cố định.
 
 ## 17. Funding currencies
 
-Currency có low funding chi phí (cost / 비용) đôi khi được dùng để finance positions ở tài sản/currencies có expected return cao hơn.
+Currency có low funding cost đôi khi được dùng để finance positions ở tài sản/currencies có expected return cao hơn.
 
-Khi rủi ro (risk / 위험) sentiment đảo chiều:
+Khi risk sentiment đảo chiều:
 
 ```text
 leveraged positions unwind
@@ -355,7 +352,7 @@ leveraged positions unwind
 → funding currency may strengthen
 ```
 
-Đây là một cơ chế (mechanism / 메커니즘) giúp giải thích một số safe-haven-like moves mà không cần giả định investor “thích” currency đó về fundamental.
+Đây là một mechanism giúp giải thích một số safe-haven-like moves mà không cần giả định investor “thích” currency đó về fundamental.
 
 ## 18. Commodity-linked currencies
 
@@ -370,26 +367,26 @@ commodity export price rises
 → currency-supportive flow may increase
 ```
 
-Nhưng quan hệ (relation / 관계) còn phụ thuộc:
+Nhưng relation còn phụ thuộc:
 
 - import side;
 - hedging;
-- fiscal chính sách (policy / 정책);
-- toàn cục (global / 전역) rủi ro (risk / 위험) appetite;
-- China/toàn cục (global / 전역) demand;
-- domestic chính sách (policy / 정책).
+- fiscal policy;
+- global risk appetite;
+- China/global demand;
+- domestic policy.
 
-Không nên trade chỉ vì dầu/gold tăng mà bỏ qua ngữ cảnh (context / 맥락).
+Không nên trade chỉ vì dầu/gold tăng mà bỏ qua context.
 
 ## 19. Terms of trade
 
 **Điều kiện thương mại (terms of trade)** so sánh export prices với import prices.
 
-Nếu country xuất khẩu commodity A và nhập khẩu năng lượng (energy / 에너지) B, relative price changes có thể thay đổi national income ngay cả khi export volume không đổi.
+Nếu country xuất khẩu commodity A và nhập khẩu energy B, relative price changes có thể thay đổi national income ngay cả khi export volume không đổi.
 
-FX có thể phản ánh redistribution này thông qua expected trade balance, income và chính sách (policy / 정책).
+FX có thể phản ánh redistribution này thông qua expected trade balance, income và policy.
 
-## 20. Fiscal chính sách (policy / 정책) cũng có thể tác động FX theo nhiều hướng
+## 20. Fiscal policy cũng có thể tác động FX theo nhiều hướng
 
 Fiscal expansion có thể:
 
@@ -407,9 +404,9 @@ raise debt concern / inflation risk
 → weaken confidence
 ```
 
-Phản ứng phụ thuộc starting conditions và monetary-policy tương tác (interaction / 상호작용).
+Phản ứng phụ thuộc starting conditions và monetary-policy interaction.
 
-Không có quy tắc (rule / 규칙) “deficit tăng = currency giảm” hoạt động mọi thời điểm.
+Không có rule “deficit tăng = currency giảm” hoạt động mọi thời điểm.
 
 ## 21. Political/geopolitical events nên được phân tích qua channels
 
@@ -430,32 +427,32 @@ Shock
 → policy response?
 ```
 
-FX reaction đến từ channels cụ thể và positioning, không phải từ tên của sự kiện (event / 이벤트).
+FX reaction đến từ channels cụ thể và positioning, không phải từ tên của event.
 
-## 22. thị trường (market / 시장) expectation là hidden variable quan trọng
+## 22. Market expectation là hidden variable quan trọng
 
 Một central bank hike 25 bps:
 
-- nếu thị trường (market / 시장) expected 50 bps → có thể bị đọc là dovish surprise;
-- nếu thị trường (market / 시장) expected 0 bps → có thể là hawkish surprise;
+- nếu market expected 50 bps → có thể bị đọc là dovish surprise;
+- nếu market expected 0 bps → có thể là hawkish surprise;
 - nếu 25 bps đã fully priced → reaction có thể nhỏ;
 - guidance sau cuộc họp có thể quan trọng hơn hike hiện tại.
 
-Do đó sự kiện (event / 이벤트) notebook nên lưu **pre-event pricing**.
+Do đó event notebook nên lưu **pre-event pricing**.
 
 ## 23. Positioning
 
-Hai thị trường (market / 시장) có cùng fundamental news nhưng reaction khác nhau nếu positioning khác.
+Hai market có cùng fundamental news nhưng reaction khác nhau nếu positioning khác.
 
-Nếu thị trường (market / 시장) đã extremely long currency A, thêm positive news có thể chỉ tạo limited buying, trong khi mild disappointment kích hoạt crowded exit.
+Nếu market đã extremely long currency A, thêm positive news có thể chỉ tạo limited buying, trong khi mild disappointment kích hoạt crowded exit.
 
-Positioning không nói intrinsic giá trị (value / 값), nhưng ảnh hưởng **đường dẫn (path / 경로)** của price adjustment.
+Positioning không nói intrinsic value, nhưng ảnh hưởng **path** của price adjustment.
 
 ## 24. Sessions và participant mix
 
-FX gần như liên tục trong nghiệp vụ (business / 비즈니스) week, nhưng không có cùng participant mix 24/5.
+FX gần như liên tục trong business week, nhưng không có cùng participant mix 24/5.
 
-Một simplified chuỗi (sequence / 시퀀스):
+Một simplified sequence:
 
 ```text
 Asia
@@ -464,7 +461,7 @@ Asia
 → late US / Asia handoff
 ```
 
-Các trung tâm overlap làm liquidity và thông tin (information / 정보) processing thay đổi.
+Các trung tâm overlap làm liquidity và information processing thay đổi.
 
 Ví dụ:
 
@@ -474,17 +471,17 @@ Ví dụ:
 
 Đây là tendency, không phải guarantee mỗi ngày.
 
-## 25. Daylight-saving thời gian (time / 시간) là research bài toán (problem / 문제) thật
+## 25. Daylight-saving time là research problem thật
 
-Nếu backtest “London open breakout” bằng fixed UTC/cục bộ (local / 로컬) hour mà không xử lý DST, dataset có thể trộn hai thị trường (market / 시장) states khác nhau theo mùa.
+Nếu backtest “London open breakout” bằng fixed UTC/local hour mà không xử lý DST, dataset có thể trộn hai market states khác nhau theo mùa.
 
-Time-series chuỗi xử lý (pipeline / 파이프라인) nên lưu timezone-aware timestamps và map session theo actual financial-centre clock.
+Time-series pipeline nên lưu timezone-aware timestamps và map session theo actual financial-centre clock.
 
 ## 26. Fixing flows
 
 Institutional benchmark fixing windows có thể tập trung hedging/rebalancing orders vào thời điểm nhất định.
 
-Điều này có thể tạo temporary volume/volatility mà không nhất thiết phản ánh new macro thông tin (information / 정보).
+Điều này có thể tạo temporary volume/volatility mà không nhất thiết phản ánh new macro information.
 
 Bài học:
 
@@ -493,35 +490,35 @@ price move
 ≠ always new fundamental information
 ```
 
-Có thể là mechanical luồng (flow / 흐름).
+Có thể là mechanical flow.
 
 ## 27. Month-end / quarter-end rebalancing
 
 Large portfolios thay đổi FX hedge hoặc rebalance asset weights quanh reporting periods.
 
-Ví dụ equity thị trường (market / 시장) A outperform thị trường (market / 시장) B có thể làm international portfolio weights drift, dẫn đến hedging luồng (flow / 흐름) cuối tháng.
+Ví dụ equity market A outperform market B có thể làm international portfolio weights drift, dẫn đến hedging flow cuối tháng.
 
-Không nên biến month-end tác động (effect / 효과) thành deterministic tín hiệu (signal / 신호). Cần xác định:
+Không nên biến month-end effect thành deterministic signal. Cần xác định:
 
-- expected luồng (flow / 흐름);
-- kích thước (size / 크기) relative to liquidity;
-- whether thị trường (market / 시장) already anticipates it;
-- historical conditional phân phối (distribution / 분포).
+- expected flow;
+- size relative to liquidity;
+- whether market already anticipates it;
+- historical conditional distribution.
 
 ## 28. Central-bank intervention
 
-Một central bank có thể tham gia FX thị trường (market / 시장) để giảm disorderly moves, influence exchange-rate conditions hoặc thực hiện chính sách (policy / 정책) khung phần mềm (framework / 프레임워크) tùy jurisdiction.
+Một central bank có thể tham gia FX market để giảm disorderly moves, influence exchange-rate conditions hoặc thực hiện policy framework tùy jurisdiction.
 
 Intervention có thể là:
 
-- direct giao dịch (transaction / 트랜잭션);
+- direct transaction;
 - verbal communication;
-- liquidity thao tác (operation / 연산);
-- coordinated hành động (action / 동작).
+- liquidity operation;
+- coordinated action.
 
-Hiệu quả phụ thuộc credibility, kích thước (size / 크기), monetary-policy consistency và thị trường (market / 시장) regime.
+Hiệu quả phụ thuộc credibility, size, monetary-policy consistency và market regime.
 
-Không nên coi một price mức (level / 수준) là guaranteed defense line nếu authority không cam kết như vậy.
+Không nên coi một price level là guaranteed defense line nếu authority không cam kết như vậy.
 
 ## 29. Managed/fixed exchange-rate regimes khác free float
 
@@ -537,17 +534,17 @@ peg / band
 capital controls
 ```
 
-Với managed currency, chính sách (policy / 정책) mục tiêu (objective / 목표), reserves, capital controls và offshore/onshore thị trường (market / 시장) distinction có thể quan trọng hơn textbook technical phân tích (analysis / 분석).
+Với managed currency, policy objective, reserves, capital controls và offshore/onshore market distinction có thể quan trọng hơn textbook technical analysis.
 
-## 30. CNH và CNY minh họa thị trường (market / 시장) segmentation
+## 30. CNH và CNY minh họa market segmentation
 
-Một currency có thể có onshore/offshore markets với khả năng tiếp cận (accessibility / 접근성), liquidity và chính sách (policy / 정책) các ràng buộc (constraints / 제약조건들) khác nhau.
+Một currency có thể có onshore/offshore markets với accessibility, liquidity và policy constraints khác nhau.
 
 Do đó ticker gần giống nhau không có nghĩa instrument fungibility hoàn hảo.
 
-Thị trường (market / 시장) cấu trúc (structure / 구조) phải được hiểu trước khi áp dụng mô hình (model / 모델).
+Market structure phải được hiểu trước khi áp dụng model.
 
-## 31. Korea ngữ cảnh (context / 맥락): USD/KRW
+## 31. Korea context: USD/KRW
 
 Với USD/KRW:
 
@@ -561,14 +558,14 @@ Các channels có thể bao gồm:
 
 - Fed/BOK expected-rate differential;
 - Korean export cycle;
-- semiconductor/toàn cục (global / 전역) trade conditions;
-- năng lượng (energy / 에너지) import chi phí (cost / 비용);
+- semiconductor/global trade conditions;
+- energy import cost;
 - foreign portfolio flows;
 - broad USD move;
-- toàn cục (global / 전역) rủi ro (risk / 위험) sentiment;
-- domestic chính sách (policy / 정책)/intervention expectations.
+- global risk sentiment;
+- domestic policy/intervention expectations.
 
-Đây là ngữ cảnh (context / 맥락) để hiểu terminology, không phải trading quy tắc (rule / 규칙).
+Đây là context để hiểu terminology, không phải trading rule.
 
 Một số thuật ngữ Hàn Quốc:
 
@@ -581,7 +578,7 @@ Một số thuật ngữ Hàn Quốc:
 
 ## 32. Một event-analysis template
 
-Khi có macro sự kiện (event / 이벤트), ghi theo chuỗi (chain / 사슬):
+Khi có macro event, ghi theo chain:
 
 ```text
 1. Prior market narrative
@@ -598,11 +595,11 @@ Khi có macro sự kiện (event / 이벤트), ghi theo chuỗi (chain / 사슬)
 
 Template này giúp tránh hindsight story kiểu “giá tăng nên chắc do X”.
 
-## 33. Ví dụ chuỗi nhân quả (causal chain / 인과 사슬): inflation surprise
+## 33. Ví dụ causal chain: inflation surprise
 
 Giả sử US CPI cao hơn consensus đáng kể.
 
-Một possible chuỗi (chain / 사슬):
+Một possible chain:
 
 ```text
 Higher CPI surprise
@@ -612,7 +609,7 @@ Higher CPI surprise
 → USD strengthens
 ```
 
-Nhưng chuỗi (chain / 사슬) có thể đứt nếu:
+Nhưng chain có thể đứt nếu:
 
 ```text
 inflation surprise is supply-driven
@@ -621,11 +618,11 @@ inflation surprise is supply-driven
 + risk-off creates other flows
 ```
 
-Do đó chuỗi nhân quả (causal chain / 인과 사슬) là hypothesis phải kiểm tra, không phải guarantee.
+Do đó causal chain là hypothesis phải kiểm tra, không phải guarantee.
 
-## 34. Ví dụ chuỗi nhân quả (causal chain / 인과 사슬): weak growth but stronger currency
+## 34. Ví dụ causal chain: weak growth but stronger currency
 
-GDP dữ liệu (data / 데이터) yếu nhưng currency vẫn tăng có thể xảy ra nếu:
+GDP data yếu nhưng currency vẫn tăng có thể xảy ra nếu:
 
 ```text
 data was less weak than feared
@@ -639,9 +636,9 @@ or
 positioning forces short covering
 ```
 
-Price không “sai” chỉ vì một textbook quy tắc (rule / 규칙) không hoạt động.
+Price không “sai” chỉ vì một textbook rule không hoạt động.
 
-## 35. Macro mô hình (model / 모델) tốt phải có vô hiệu hóa (invalidation / 무효화)
+## 35. Macro model tốt phải có invalidation
 
 Một FX thesis nên viết như:
 
@@ -664,7 +661,7 @@ Invalidation:
 Data/policy path moves materially against hypothesis.
 ```
 
-Đây là research cấu trúc (structure / 구조) tốt hơn “RSI oversold nên buy”.
+Đây là research structure tốt hơn “RSI oversold nên buy”.
 
 ## 36. Carry return phải tách khỏi spot return
 
@@ -677,13 +674,13 @@ Total Return
 - Transaction Cost
 ```
 
-Nếu chiến lược (strategy / 전략) kiếm tiền nhờ spot move nhưng mất carry, hoặc ngược lại, hiệu năng (performance / 성능) attribution phải tách hai nguồn.
+Nếu strategy kiếm tiền nhờ spot move nhưng mất carry, hoặc ngược lại, performance attribution phải tách hai nguồn.
 
 Nếu không, trader có thể hiểu sai edge.
 
 ## 37. Regime dependence
 
-Một quan hệ (relation / 관계) như:
+Một relation như:
 
 ```text
 yield differential ↑ → currency ↑
@@ -696,39 +693,37 @@ Do đó research cần conditioning variables:
 - volatility regime;
 - growth regime;
 - inflation regime;
-- chính sách (policy / 정책) divergence;
-- rủi ro (risk / 위험) sentiment;
+- policy divergence;
+- risk sentiment;
 - liquidity stress.
 
 Correlation full-sample có thể che nhiều sub-regimes trái nhau.
 
-## 38. Checklist trước khi sang thực thi (execution / 실행)/broker rủi ro (risk / 위험)
+## 38. Checklist trước khi sang execution/broker risk
 
 Bạn cần tự giải thích được:
 
 1. Vì sao FX là relative macro.
-2. Vì sao expected tỷ lệ (rate / 비율) đường dẫn (path / 경로) quan trọng hơn chỉ hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율).
-3. Vì sao surprise vs consensus ảnh hưởng sự kiện (event / 이벤트) reaction.
+2. Vì sao expected rate path quan trọng hơn chỉ current policy rate.
+3. Vì sao surprise vs consensus ảnh hưởng event reaction.
 4. Nominal và real yield khác nhau thế nào.
 5. Forward points liên hệ interest differential nhưng không đơn thuần forecast spot.
-6. Carry kiếm return từ đâu và crash rủi ro (risk / 위험) đến từ đâu.
-7. hiện tại (current / 현재) account và capital flows liên kết currency demand như thế nào.
+6. Carry kiếm return từ đâu và crash risk đến từ đâu.
+7. Current account và capital flows liên kết currency demand như thế nào.
 8. Vì sao risk-on/safe-haven chỉ là shorthand.
 9. Vì sao sessions/DST ảnh hưởng backtest.
-10. Vì sao flow-driven move không nhất thiết là fundamental thông tin (information / 정보).
+10. Vì sao flow-driven move không nhất thiết là fundamental information.
 
 ## Nối sang chương tiếp theo
 
-Macro giải thích **vì sao participant muốn thay đổi exposure**. Chương tiếp theo giải thích **lệnh đó được truyền qua broker/dealer như thế nào, chi phí thực tế hình thành ở đâu và vì sao thực thi (execution / 실행)/counterparty rủi ro (risk / 위험) có thể phá một chiến lược (strategy / 전략) đúng về direction**.
+Macro giải thích **vì sao participant muốn thay đổi exposure**. Chương tiếp theo giải thích **lệnh đó được truyền qua broker/dealer như thế nào, chi phí thực tế hình thành ở đâu và vì sao execution/counterparty risk có thể phá một strategy đúng về direction**.
 
 → [05 — Execution, brokers, costs and operational risk](./05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 
-## Nội bộ (internal / 내부) links
+## Internal links
 
 - [Macro Data Playbook](../../04_economics/03_MACRO_DATA_PLAYBOOK.md)
 - [Global Economy, Capital Flows and Crisis](../../04_economics/02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md)
 - [Monetary System, Liquidity and Crisis Transmission](../../04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md)
 - [03 — Leverage, margin and position sizing](./03_LEVERAGE_MARGIN_POSITION_SIZING.md)
 - [Glossary, formulas and research conventions](../../00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md)
-
-> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

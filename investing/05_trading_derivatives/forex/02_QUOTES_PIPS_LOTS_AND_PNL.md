@@ -1,13 +1,10 @@
 # 02 — Quotes, pips, lots và cơ chế P/L trong Forex
 
-> **Mạch đọc:** Đặt **02 — Quotes, pips, lots và cơ chế P/L trong Forex** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. cơ sở (base / 기반) currency và quote currency** sang **2. Long và short một currency pair nghĩa là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-
 Sau khi hiểu Forex không phải một centralized exchange duy nhất, bước tiếp theo là hiểu **một quote thực sự nói điều gì và biến động của quote biến thành tiền lời/lỗ như thế nào**.
 
-Đây là phần nên có khả năng tự tính bằng tay. Calculator của broker tiện lợi, nhưng nếu không tự suy luận được P/L thì rất dễ nhầm giữa lot, notional, margin và rủi ro (risk / 위험).
+Đây là phần nên có khả năng tự tính bằng tay. Calculator của broker tiện lợi, nhưng nếu không tự suy luận được P/L thì rất dễ nhầm giữa lot, notional, margin và risk.
 
-Mô hình tư duy (mental model / 사고 모델) của chương:
+Mental model của chương:
 
 ```text
 Currency pair
@@ -18,7 +15,7 @@ Currency pair
 → conversion into account currency
 ```
 
-## 1. cơ sở (base / 기반) currency và quote currency
+## 1. Base currency và quote currency
 
 Với:
 
@@ -100,7 +97,7 @@ Buy / open long  → thường khớp gần Ask
 Sell / open short → thường khớp gần Bid
 ```
 
-Nếu ngay lập tức đóng position mà thị trường (market / 시장) không thay đổi, bạn thường chịu spread.
+Nếu ngay lập tức đóng position mà market không thay đổi, bạn thường chịu spread.
 
 ## 4. Spread
 
@@ -116,13 +113,13 @@ Với quote trên:
 1.12003 - 1.11998 = 0.00005
 ```
 
-Nếu pip kích thước (size / 크기) là `0.0001`, spread là:
+Nếu pip size là `0.0001`, spread là:
 
 ```text
 0.5 pip
 ```
 
-Spread là một phần giao dịch (transaction / 트랜잭션) chi phí (cost / 비용). Effective chi phí (cost / 비용) còn có thể gồm:
+Spread là một phần transaction cost. Effective cost còn có thể gồm:
 
 ```text
 commission
@@ -131,7 +128,7 @@ commission
 + market impact
 ```
 
-Vì vậy một chiến lược (strategy / 전략) gross-profitable có thể net-unprofitable sau chi phí.
+Vì vậy một strategy gross-profitable có thể net-unprofitable sau chi phí.
 
 ## 5. Pip là gì?
 
@@ -165,7 +162,7 @@ USD/JPY
 = +1 pip
 ```
 
-Nền tảng (platform / 플랫폼) hiện đại thường quote thêm một decimal nhỏ hơn pip, thường gọi là **pipette / fractional pip**.
+Platform hiện đại thường quote thêm một decimal nhỏ hơn pip, thường gọi là **pipette / fractional pip**.
 
 Ví dụ:
 
@@ -175,11 +172,11 @@ EUR/USD = 1.12003
 
 decimal cuối cùng `0.00001` tương ứng 1/10 pip theo convention phổ biến của pair này.
 
-Không nên hard-code convention mà không kiểm tra đặc tả hợp đồng (contract / 계약) specification, đặc biệt với exotic pair hoặc sản phẩm (product / 제품) khác FX spot convention.
+Không nên hard-code convention mà không kiểm tra contract specification, đặc biệt với exotic pair hoặc product khác FX spot convention.
 
 ## 6. Lot là gì?
 
-Trong retail FX, **lot** thường là cách biểu diễn trade kích thước (size / 크기) theo số units của cơ sở (base / 기반) currency.
+Trong retail FX, **lot** thường là cách biểu diễn trade size theo số units của base currency.
 
 Convention rất phổ biến:
 
@@ -196,7 +193,7 @@ Ví dụ:
 = 10,000 EUR exposure on base side
 ```
 
-Nhưng `lot` là **đặc tả hợp đồng (contract / 계약) convention**, không phải định luật tự nhiên. Broker hoặc instrument khác có thể dùng đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) khác. Luôn đọc specification.
+Nhưng `lot` là **contract convention**, không phải định luật tự nhiên. Broker hoặc instrument khác có thể dùng contract size khác. Luôn đọc specification.
 
 ## 7. Notional là exposure, không phải số tiền ký quỹ
 
@@ -208,7 +205,7 @@ Nếu long:
 100,000 EUR at EUR/USD = 1.1200
 ```
 
-Cơ sở (base / 기반) notional là:
+base notional là:
 
 ```text
 100,000 EUR
@@ -231,7 +228,7 @@ Với pair:
 A/B
 ```
 
-trade kích thước (size / 크기) `Q` units của cơ sở (base / 기반) currency A.
+trade size `Q` units của base currency A.
 
 Một long position có P/L theo quote currency B gần bằng:
 
@@ -255,7 +252,7 @@ với `Signed_Q > 0` cho long và `< 0` cho short.
 
 ## 9. Ví dụ EUR/USD
 
-Long 1 tiêu chuẩn (standard / 표준) lot:
+Long 1 standard lot:
 
 ```text
 Q = 100,000 EUR
@@ -263,7 +260,7 @@ Entry = 1.1200
 Exit  = 1.1250
 ```
 
-Price thay đổi (change / 변경):
+Price change:
 
 ```text
 1.1250 - 1.1200 = 0.0050
@@ -282,7 +279,7 @@ P/L:
 = 500 USD
 ```
 
-Đây là lý do với `100,000` units EUR/USD, khi pip kích thước (size / 크기) là `0.0001`:
+Đây là lý do với `100,000` units EUR/USD, khi pip size là `0.0001`:
 
 ```text
 Pip Value
@@ -292,7 +289,7 @@ Pip Value
 
 50 pips × 10 USD = 500 USD.
 
-## 10. Pip giá trị (value / 값) được suy ra, không cần học thuộc
+## 10. Pip value được suy ra, không cần học thuộc
 
 Với pair `A/B`:
 
@@ -315,19 +312,19 @@ Ví dụ `100,000 GBP` trên GBP/USD:
 = 10 USD/pip
 ```
 
-Điểm quan trọng là pip giá trị (value / 값) phụ thuộc trade kích thước (size / 크기) và quote convention.
+Điểm quan trọng là pip value phụ thuộc trade size và quote convention.
 
-## 11. JPY pair: vì sao pip giá trị (value / 값) khác?
+## 11. JPY pair: vì sao pip value khác?
 
 Long `100,000 USD` trên USD/JPY.
 
-Pip kích thước (size / 크기) thường là:
+Pip size thường là:
 
 ```text
 0.01 JPY per USD
 ```
 
-Pip giá trị (value / 값) theo JPY:
+Pip value theo JPY:
 
 ```text
 100,000 × 0.01
@@ -349,7 +346,7 @@ thì:
 ≈ 6.67 USD/pip
 ```
 
-Pip giá trị (value / 값) theo USD do đó thay đổi khi USD/JPY thay đổi. Đây là lý do không nên học thuộc “1 lot luôn = 10 USD/pip”. Điều đó chỉ đúng cho một số cấu trúc pair/account currency nhất định.
+Pip value theo USD do đó thay đổi khi USD/JPY thay đổi. Đây là lý do không nên học thuộc “1 lot luôn = 10 USD/pip”. Điều đó chỉ đúng cho một số cấu trúc pair/account currency nhất định.
 
 ## 12. Khi account currency khác quote currency
 
@@ -362,16 +359,16 @@ EUR/USD trade
 → P/L in USD
 ```
 
-sau đó nền tảng (platform / 플랫폼) phải quy đổi:
+sau đó platform phải quy đổi:
 
 ```text
 USD P/L
 → KRW P/L
 ```
 
-Do đó account-level kết quả (outcome / 결과) còn chịu conversion tỷ lệ (rate / 비율).
+Do đó account-level outcome còn chịu conversion rate.
 
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Instrument P/L currency
@@ -379,13 +376,13 @@ Instrument P/L currency
 → final account P/L
 ```
 
-Nếu account currency khác cả cơ sở (base / 기반) lẫn quote, đừng bỏ qua bước conversion.
+Nếu account currency khác cả base lẫn quote, đừng bỏ qua bước conversion.
 
 ## 13. Cross currency pair
 
 Một **cross** là pair không dùng USD trực tiếp, ví dụ EUR/JPY hay EUR/GBP.
 
-Cross tỷ lệ (rate / 비율) có thể được suy ra từ các pair liên quan.
+Cross rate có thể được suy ra từ các pair liên quan.
 
 Nếu:
 
@@ -403,7 +400,7 @@ EUR/JPY
 ≈ 168.00
 ```
 
-Thực tế executable cross phải xử lý bid/ask đúng phía, giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và venue differences. Nhưng phép nhân này cho thấy cross tỷ lệ (rate / 비율) không phải một con số tách rời khỏi hệ thống FX.
+Thực tế executable cross phải xử lý bid/ask đúng phía, transaction cost và venue differences. Nhưng phép nhân này cho thấy cross rate không phải một con số tách rời khỏi hệ thống FX.
 
 ## 14. Khi nào chia thay vì nhân?
 
@@ -441,7 +438,7 @@ Cách tốt nhất không phải học công thức nhân/chia, mà kiểm tra �
 USD cancels out
 ```
 
-## 15. đơn vị (unit / 단위) phân tích (analysis / 분석) giúp tránh nhầm công thức
+## 15. Unit analysis giúp tránh nhầm công thức
 
 Viết quote như fraction của units:
 
@@ -459,7 +456,7 @@ Nhân:
 
 USD bị triệt tiêu, còn lại JPY per EUR → chính là EUR/JPY quote.
 
-Cách đơn vị (unit / 단위) phân tích (analysis / 분석) này đáng tin hơn học thuộc mnemonic.
+Cách unit analysis này đáng tin hơn học thuộc mnemonic.
 
 ## 16. Direct quote và indirect quote
 
@@ -474,7 +471,7 @@ USD/KRW
 
 là cách trực tiếp biểu diễn một USD trị giá bao nhiêu KRW.
 
-Trong tài liệu quốc tế, các pair conventions đã được thị trường (market / 시장) tiêu chuẩn (standard / 표준) hóa theo ticker, nên khi trading tốt hơn hết đọc cơ sở (base / 기반)/quote rõ ràng thay vì phụ thuộc vào từ “direct” có thể gây nhầm theo viewpoint.
+Trong tài liệu quốc tế, các pair conventions đã được market standard hóa theo ticker, nên khi trading tốt hơn hết đọc base/quote rõ ràng thay vì phụ thuộc vào từ “direct” có thể gây nhầm theo viewpoint.
 
 ## 17. Percentage return và pip move không phải cùng một thứ
 
@@ -491,9 +488,9 @@ là `100 pips`, nhưng percentage move gần:
 ≈ 0.91%
 ```
 
-USD/JPY đi `100 pips` nghĩa là thay đổi `1.00` JPY, nhưng percentage move còn tùy starting mức (level / 수준).
+USD/JPY đi `100 pips` nghĩa là thay đổi `1.00` JPY, nhưng percentage move còn tùy starting level.
 
-Do đó so volatility giữa pair chỉ bằng số pip có thể gây sai. Percentage return hoặc normalized volatility thường phù hợp hơn cho cross-asset/rủi ro (risk / 위험) phân tích (analysis / 분석).
+Do đó so volatility giữa pair chỉ bằng số pip có thể gây sai. Percentage return hoặc normalized volatility thường phù hợp hơn cho cross-asset/risk analysis.
 
 ## 18. Price return của pair và return của currency không hoàn toàn đối xứng
 
@@ -525,7 +522,7 @@ ln(A/B return) = -ln(B/A return)
 
 ## 19. Gross P/L khác net P/L
 
-Ví dụ chiến lược (strategy / 전략) tạo gross profit:
+Ví dụ strategy tạo gross profit:
 
 ```text
 +500 USD
@@ -547,11 +544,11 @@ Net:
 = 340 USD
 ```
 
-Một backtest bỏ chi phí (cost / 비용) đang mô hình hóa một thị trường không tồn tại.
+Một backtest bỏ cost đang mô hình hóa một thị trường không tồn tại.
 
 ## 20. Rollover / financing làm P/L thay đổi theo thời gian giữ lệnh
 
-Leveraged FX position giữ qua rollover có thể phát sinh financing debit hoặc credit tùy sản phẩm (product / 제품), currency-rate relationship và broker terms.
+Leveraged FX position giữ qua rollover có thể phát sinh financing debit hoặc credit tùy product, currency-rate relationship và broker terms.
 
 Không nên suy luận đơn giản:
 
@@ -563,24 +560,24 @@ high-yield currency long
 vì retail financing còn phụ thuộc:
 
 - broker markup;
-- benchmark/tham chiếu (reference / 참조) tỷ lệ (rate / 비율);
+- benchmark/reference rate;
 - day-count convention;
 - holiday/weekend adjustment;
-- sản phẩm (product / 제품) cấu trúc (structure / 구조);
+- product structure;
 - long/short asymmetry.
 
 Luôn đọc swap/financing specification thực tế.
 
 ## 21. XAU/USD không phải currency pair theo nghĩa giống EUR/USD
 
-Retail nền tảng (platform / 플랫폼) thường đặt `XAU/USD` cạnh Forex pairs. XAU là mã (code / 코드) cho gold, nên:
+Retail platform thường đặt `XAU/USD` cạnh Forex pairs. XAU là code cho gold, nên:
 
 ```text
 XAU/USD
 = USD price per unit of gold defined by contract
 ```
 
-Đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) có thể khác giữa broker/sản phẩm (product / 제품). Không được áp dụng máy móc:
+Contract size có thể khác giữa broker/product. Không được áp dụng máy móc:
 
 ```text
 1 standard FX lot = 100,000 base units
@@ -588,9 +585,9 @@ XAU/USD
 
 cho XAU/USD.
 
-Cần kiểm tra đặc tả hợp đồng (contract / 계약) kích thước (size / 크기), tick kích thước (size / 크기), margin, financing và price nguồn (source / 소스) riêng.
+Cần kiểm tra contract size, tick size, margin, financing và price source riêng.
 
-## 22. Từ lot đến rủi ro (risk / 위험): còn thiếu stop distance
+## 22. Từ lot đến risk: còn thiếu stop distance
 
 Giả sử hai trader cùng trade `0.1 lot EUR/USD`.
 
@@ -598,14 +595,14 @@ Trader A stop 10 pips.
 
 Trader B stop 100 pips.
 
-Pip giá trị (value / 값) giả sử 1 USD/pip:
+Pip value giả sử 1 USD/pip:
 
 ```text
 A initial price risk ≈ 10 USD
 B initial price risk ≈ 100 USD
 ```
 
-Cùng lot nhưng rủi ro (risk / 위험) khác 10 lần.
+Cùng lot nhưng risk khác 10 lần.
 
 Vì vậy:
 
@@ -613,7 +610,7 @@ Vì vậy:
 Lot Size ≠ Risk
 ```
 
-Rủi ro (risk / 위험) phải kết hợp:
+Risk phải kết hợp:
 
 ```text
 position size
@@ -624,16 +621,16 @@ position size
 
 Đây là cầu nối sang chương leverage và position sizing.
 
-## 23. Công thức sizing từ allowed mất mát (loss / 손실)
+## 23. Công thức sizing từ allowed loss
 
-Nếu rủi ro (risk / 위험) ngân sách (budget / 예산) là `R_account` và stop distance `D_pips`:
+Nếu risk budget là `R_account` và stop distance `D_pips`:
 
 ```text
 Required Pip Value
 ≈ R_account / D_pips
 ```
 
-Sau đó suy ra cơ sở (base / 기반) units:
+Sau đó suy ra base units:
 
 ```text
 Base Units
@@ -642,7 +639,7 @@ Base Units
 
 nếu P/L quote currency trùng account currency.
 
-Ví dụ muốn rủi ro (risk / 위험) khoảng 100 USD với stop 25 pips trên EUR/USD:
+Ví dụ muốn risk khoảng 100 USD với stop 25 pips trên EUR/USD:
 
 ```text
 Required Pip Value
@@ -657,7 +654,7 @@ Vì:
 = 0.0001 USD/pip
 ```
 
-nên approximate kích thước (size / 크기):
+nên approximate size:
 
 ```text
 4 / 0.0001
@@ -665,7 +662,7 @@ nên approximate kích thước (size / 크기):
 ≈ 0.4 standard lot
 ```
 
-Đây mới là lô-gic (logic / 논리) đúng chiều:
+Đây mới là logic đúng chiều:
 
 ```text
 Allowed Loss
@@ -680,9 +677,9 @@ Broker offers 1:100 leverage
 → maximize lot size
 ```
 
-## 24. Slippage phá vỡ giả định (assumption / 가정) “stop = chính xác (exact / 정확한) mất mát (loss / 손실)”
+## 24. Slippage phá vỡ assumption “stop = exact loss”
 
-Nếu stop ở 25 pips, expected mất mát (loss / 손실) theo sizing có thể là 100 USD. Nhưng stop thứ tự (order / 순서) không bảo đảm fill đúng trigger price trong mọi thị trường (market / 시장) điều kiện (condition / 조건).
+Nếu stop ở 25 pips, expected loss theo sizing có thể là 100 USD. Nhưng stop order không bảo đảm fill đúng trigger price trong mọi market condition.
 
 News gap hoặc liquidity vacuum có thể tạo:
 
@@ -691,9 +688,9 @@ planned stop = 25 pips
 actual fill = 40 pips away
 ```
 
-Actual mất mát (loss / 손실) khi đó lớn hơn modeled mất mát (loss / 손실).
+Actual loss khi đó lớn hơn modeled loss.
 
-Vì vậy rủi ro (risk / 위험) sizing phải có an toàn (safety / 안전) margin cho instrument/sự kiện (event / 이벤트) regime phù hợp, và không được coi stop-loss là hard guarantee.
+Vì vậy risk sizing phải có safety margin cho instrument/event regime phù hợp, và không được coi stop-loss là hard guarantee.
 
 ## 25. Portfolio exposure có thể ẩn sau nhiều pair
 
@@ -705,9 +702,9 @@ Long GBP/USD
 Short USD/JPY
 ```
 
-cả ba đều chứa directional thành phần (component / 컴포넌트) có thể tương đồng: **short USD** theo các đối trọng khác nhau.
+cả ba đều chứa directional component có thể tương đồng: **short USD** theo các đối trọng khác nhau.
 
-Rủi ro (risk / 위험) không nên tính đơn giản:
+Risk không nên tính đơn giản:
 
 ```text
 3 trades × 1% risk = 3 independent risks
@@ -746,27 +743,27 @@ Journal như vậy nối trade notation với actual economic exposure.
 
 ### “1 lot = 100.000 USD”
 
-Không chính xác. tiêu chuẩn (standard / 표준) lot phổ biến là `100,000 units of base currency`. Với EUR/USD đó là 100.000 EUR; với GBP/USD là 100.000 GBP.
+Không chính xác. Standard lot phổ biến là `100,000 units of base currency`. Với EUR/USD đó là 100.000 EUR; với GBP/USD là 100.000 GBP.
 
 ### “1 pip luôn = 10 USD”
 
-Sai. Phụ thuộc pair, trade kích thước (size / 크기) và account currency.
+Sai. Phụ thuộc pair, trade size và account currency.
 
 ### “Notional = tiền tôi bỏ vào”
 
 Sai khi leveraged. Margin/collateral có thể nhỏ hơn notional rất nhiều.
 
-### “Stop 1% giá = rủi ro (risk / 위험) 1% tài khoản”
+### “Stop 1% giá = risk 1% tài khoản”
 
-Không đúng nếu chưa sizing position dựa trên account rủi ro (risk / 위험).
+Không đúng nếu chưa sizing position dựa trên account risk.
 
-### “100 pips trên mọi pair có cùng economic rủi ro (risk / 위험)”
+### “100 pips trên mọi pair có cùng economic risk”
 
-Sai. Pip kích thước (size / 크기), pip giá trị (value / 값), volatility và percentage move khác nhau.
+Sai. Pip size, pip value, volatility và percentage move khác nhau.
 
 ## 28. Bài tự kiểm tra
 
-### Trường hợp (case / 사례) A
+### Case A
 
 EUR/USD = `1.1000`, bạn long `20,000 EUR`, exit `1.1050`.
 
@@ -776,9 +773,9 @@ Pip value = 20,000 × 0.0001 = 2 USD
 P/L ≈ 100 USD
 ```
 
-### Trường hợp (case / 사례) B
+### Case B
 
-USD/JPY = `150.00`, trade kích thước (size / 크기) `100,000 USD`, move 30 pips.
+USD/JPY = `150.00`, trade size `100,000 USD`, move 30 pips.
 
 ```text
 Pip value = 100,000 × 0.01 = 1,000 JPY
@@ -787,37 +784,37 @@ P/L = 30,000 JPY
 
 Sau đó mới convert JPY sang account currency.
 
-### Trường hợp (case / 사례) C
+### Case C
 
-Account USD, rủi ro (risk / 위험) ngân sách (budget / 예산) 200 USD, stop 40 pips trên EUR/USD.
+Account USD, risk budget 200 USD, stop 40 pips trên EUR/USD.
 
 ```text
 Required pip value = 200 / 40 = 5 USD/pip
 Base units ≈ 5 / 0.0001 = 50,000 EUR
 ```
 
-Approximate kích thước (size / 크기) = 0.5 tiêu chuẩn (standard / 표준) lot theo convention 100.000 units.
+Approximate size = 0.5 standard lot theo convention 100.000 units.
 
 ## 29. Checklist trước khi sang leverage/margin
 
 Bạn nên tự tính được:
 
-- cơ sở (base / 기반) và quote currency;
+- base và quote currency;
 - bid/ask và spread;
-- pip kích thước (size / 크기);
-- cơ sở (base / 기반) units từ lot;
+- pip size;
+- base units từ lot;
 - notional;
 - P/L theo quote currency;
 - conversion sang account currency;
-- cross tỷ lệ (rate / 비율) bằng đơn vị (unit / 단위) phân tích (analysis / 분석);
-- pip giá trị (value / 값);
-- position kích thước (size / 크기) từ allowed mất mát (loss / 손실) và stop distance.
+- cross rate bằng unit analysis;
+- pip value;
+- position size từ allowed loss và stop distance.
 
 Nếu calculator là cách duy nhất bạn biết để có đáp án, nên luyện lại mechanics.
 
 ## Nối sang chương tiếp theo
 
-Pip và lot cho biết **position thay đổi P/L bao nhiêu khi price move**. Nhưng chúng chưa trả lời vì sao account có thể kiểm soát notional lớn hơn vốn, khi nào margin lời gọi (call / 호출)/stop-out xảy ra và mức leverage nào đang ẩn trong danh mục.
+Pip và lot cho biết **position thay đổi P/L bao nhiêu khi price move**. Nhưng chúng chưa trả lời vì sao account có thể kiểm soát notional lớn hơn vốn, khi nào margin call/stop-out xảy ra và mức leverage nào đang ẩn trong danh mục.
 
 → [03 — Leverage, margin and position sizing](./03_LEVERAGE_MARGIN_POSITION_SIZING.md)
 
@@ -826,5 +823,3 @@ Pip và lot cho biết **position thay đổi P/L bao nhiêu khi price move**. N
 - [01 — Market structure and instruments](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md)
 - [Trading & Forex master map](../00_MASTER_TRADING_FOREX_RISK.md)
 - [Glossary, formulas and research conventions](../../00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md)
-
-> **Bàn giao:** Sau **Liên kết liên quan**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,10 @@
 # Bản đồ tổng quan Trading, Forex và quản trị rủi ro
 
-> **Mạch đọc:** Đặt **Bản đồ tổng quan Trading, Forex và quản trị rủi ro** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. mô hình tư duy (mental model / 사고 모델) cốt lõi** sang **2. Chart chỉ là biểu diễn dữ liệu giá**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> File này là bản đồ học tập cho toàn bộ `05_trading_derivatives/`. Mục tiêu không phải thay thế các chapter chuyên sâu, mà giúp người đọc hiểu trading là một hệ thống gồm **tín hiệu → quy mô vị thế → thực thi → chi phí → quản trị danh mục → review**.
 
-> tệp (file / 파일) này là bản đồ học tập cho toàn bộ `05_trading_derivatives/`. Mục tiêu không phải thay thế các chapter chuyên sâu, mà giúp người đọc hiểu trading là một hệ thống gồm **tín hiệu → quy mô vị thế → thực thi → chi phí → quản trị danh mục → rà soát (review / 검토)**.
+Trading không phải tập hợp các pattern vào lệnh. Một chiến lược chỉ có ý nghĩa khi lợi thế kỳ vọng còn tồn tại sau spread, slippage, financing, drawdown và lỗi vận hành.
 
-Trading không phải tập hợp các mẫu (pattern / 패턴) vào lệnh. Một chiến lược chỉ có ý nghĩa khi lợi thế kỳ vọng còn tồn tại sau spread, slippage, financing, drawdown và lỗi vận hành.
-
-## 1. mô hình tư duy (mental model / 사고 모델) cốt lõi
+## 1. Mental model cốt lõi
 
 ```text
 Hypothesis
@@ -40,12 +38,12 @@ Timeframe càng nhỏ:
 
 - noise càng lớn;
 - spread/slippage chiếm tỷ trọng cao hơn;
-- thực thi (execution / 실행) quan trọng hơn;
+- execution quan trọng hơn;
 - số lượng giao dịch nhiều hơn.
 
-Không có timeframe “tốt nhất”; nó phải phù hợp chiến lược (strategy / 전략), chi phí (cost / 비용) và thời gian của trader.
+Không có timeframe “tốt nhất”; nó phải phù hợp strategy, cost và thời gian của trader.
 
-## 4. Trend, phạm vi (range / 범위) và regime
+## 4. Trend, range và regime
 
 Một thị trường có thể ở:
 
@@ -57,43 +55,43 @@ Low Volatility
 Event-Driven State
 ```
 
-Một setup tốt trong trend có thể hoạt động kém trong phạm vi (range / 범위).
+Một setup tốt trong trend có thể hoạt động kém trong range.
 
-## 5. thị trường (market / 시장) cấu trúc (structure / 구조)
+## 5. Market structure
 
-Thị trường (market / 시장) cấu trúc (structure / 구조) thường mô tả chuỗi swing high, swing low và cách giá phản ứng quanh vùng có thứ tự (order / 순서) luồng (flow / 흐름) lớn.
+Market structure thường mô tả chuỗi swing high, swing low và cách giá phản ứng quanh vùng có order flow lớn.
 
-Các thuật ngữ như break of cấu trúc (structure / 구조) hoặc thay đổi (change / 변경) of character chỉ nên dùng như cách mô tả dữ liệu, không phải quy luật tất định.
+Các thuật ngữ như break of structure hoặc change of character chỉ nên dùng như cách mô tả dữ liệu, không phải quy luật tất định.
 
-## 6. hỗ trợ (support / 지원) và resistance
+## 6. Support và resistance
 
-Hỗ trợ (support / 지원)/resistance là vùng giá nơi hành vi mua/bán từng thay đổi đáng kể.
+Support/resistance là vùng giá nơi hành vi mua/bán từng thay đổi đáng kể.
 
 Nên nghĩ theo vùng xác suất, không phải một đường chính xác tuyệt đối.
 
 ## 7. Breakout
 
-Breakout chỉ có edge nếu sau chi phí, false break và slippage, kết quả (outcome / 결과) phân phối vẫn có expectancy dương.
+Breakout chỉ có edge nếu sau chi phí, false break và slippage, outcome phân phối vẫn có expectancy dương.
 
 ## 8. Pullback
 
-Pullback chiến lược (strategy / 전략) thường đánh cược rằng trend chính còn tiếp tục sau điều chỉnh tạm thời.
+Pullback strategy thường đánh cược rằng trend chính còn tiếp tục sau điều chỉnh tạm thời.
 
-Điểm quan trọng là định nghĩa trend, vô hiệu hóa (invalidation / 무효화) và rủi ro (risk / 위험)/reward rõ ràng.
+Điểm quan trọng là định nghĩa trend, invalidation và risk/reward rõ ràng.
 
 ## 9. Mean reversion
 
 Mean reversion giả định giá có xu hướng quay về một mức tham chiếu sau khi đi quá xa.
 
-Nó có thể thất bại nặng khi thị trường chuyển từ phạm vi (range / 범위) sang trend.
+Nó có thể thất bại nặng khi thị trường chuyển từ range sang trend.
 
 ## 10. Volume và liquidity
 
 Volume cao không luôn đồng nghĩa liquidity tốt. Cần nhìn thêm:
 
 - spread;
-- độ sâu (depth / 깊이);
-- thị trường (market / 시장) impact;
+- depth;
+- market impact;
 - thời điểm trong ngày.
 
 ## 11. Volatility
@@ -101,28 +99,28 @@ Volume cao không luôn đồng nghĩa liquidity tốt. Cần nhìn thêm:
 Volatility quyết định:
 
 - stop distance hợp lý;
-- position kích thước (size / 크기);
+- position size;
 - expected move;
-- margin rủi ro (risk / 위험);
+- margin risk;
 - option pricing.
 
-Cùng một chiến lược (strategy / 전략) không nên dùng kích thước (size / 크기) giống nhau trong mọi volatility regime.
+Cùng một strategy không nên dùng size giống nhau trong mọi volatility regime.
 
 ## 12. Indicator
 
 MA, RSI, MACD, ATR hay Bollinger Bands đều là biến đổi của price/volume.
 
-Indicator hữu ích khi nó phục vụ quy tắc (rule / 규칙) rõ ràng, không phải vì thêm nhiều indicator làm hệ thống “chắc chắn” hơn.
+Indicator hữu ích khi nó phục vụ rule rõ ràng, không phải vì thêm nhiều indicator làm hệ thống “chắc chắn” hơn.
 
 ## 13. SMC / ICT
 
-Các khái niệm như liquidity sweep, thứ tự (order / 순서) khối (block / 블록), fair giá trị (value / 값) gap có thể dùng như ngôn ngữ mô tả price hành động (action / 동작).
+Các khái niệm như liquidity sweep, order block, fair value gap có thể dùng như ngôn ngữ mô tả price action.
 
-Nhưng phải chuyển chúng thành quy tắc (rule / 규칙) kiểm chứng được nếu muốn backtest.
+Nhưng phải chuyển chúng thành rule kiểm chứng được nếu muốn backtest.
 
 ## 14. Multi-timeframe
 
-Timeframe lớn có thể cung cấp ngữ cảnh (context / 맥락); timeframe nhỏ dùng cho timing.
+Timeframe lớn có thể cung cấp context; timeframe nhỏ dùng cho timing.
 
 Tuy nhiên thêm quá nhiều timeframe dễ tạo hindsight narrative.
 
@@ -135,7 +133,7 @@ EUR/USD
 = giá EUR theo USD
 ```
 
-Phân tích cần nhìn relative rates, relative growth, rủi ro (risk / 위험) sentiment và luồng (flow / 흐름).
+Phân tích cần nhìn relative rates, relative growth, risk sentiment và flow.
 
 ## 16. Pip và lot
 
@@ -172,9 +170,9 @@ Required Margin
 ≈ Notional / Leverage
 ```
 
-Margin không phải maximum mất mát (loss / 손실).
+Margin không phải maximum loss.
 
-## 19. Equity, free margin và margin mức (level / 수준)
+## 19. Equity, free margin và margin level
 
 ```text
 Equity = Balance + Floating P/L
@@ -185,7 +183,7 @@ Margin Level
 = Equity / Used Margin × 100%
 ```
 
-Nếu equity giảm quá mức, broker có thể margin lời gọi (call / 호출) hoặc stop-out theo rules riêng.
+Nếu equity giảm quá mức, broker có thể margin call hoặc stop-out theo rules riêng.
 
 ## 20. Position sizing
 
@@ -200,15 +198,15 @@ Không nên bắt đầu từ “broker cho leverage bao nhiêu”.
 
 ## 21. Stop-loss
 
-Stop là một thực thi (execution / 실행) instruction, không phải guarantee giá thoát.
+Stop là một execution instruction, không phải guarantee giá thoát.
 
-Trong gap hoặc sự kiện (event / 이벤트) lớn, fill có thể xa trigger.
+Trong gap hoặc event lớn, fill có thể xa trigger.
 
 ## 22. R-multiple
 
 `R` là lượng rủi ro ban đầu.
 
-Ví dụ rủi ro (risk / 위험) 100 USD:
+Ví dụ risk 100 USD:
 
 ```text
 -1R = -100 USD
@@ -225,13 +223,13 @@ Expectancy
 - Loss Rate × Average Loss
 ```
 
-Win tỷ lệ (rate / 비율) cao không bảo đảm có edge.
+Win rate cao không bảo đảm có edge.
 
-## 24. rủi ro (risk / 위험) of ruin
+## 24. Risk of ruin
 
-Rủi ro (risk / 위험) of ruin tăng khi:
+Risk of ruin tăng khi:
 
-- rủi ro (risk / 위험)/trade lớn;
+- risk/trade lớn;
 - edge nhỏ;
 - drawdown kéo dài;
 - correlation giữa trade cao.
@@ -242,18 +240,18 @@ Survival quan trọng hơn tối đa hóa short-term return.
 
 Forex có đặc điểm khác nhau theo Asia, London và New York session.
 
-Liquidity và volatility thường thay đổi quanh overlap và dữ liệu (data / 데이터) bản phát hành (release / 릴리스).
+Liquidity và volatility thường thay đổi quanh overlap và data release.
 
-## 26. News sự kiện (event / 이벤트)
+## 26. News event
 
-CPI, NFP, central-bank quyết định (decision / 결정) hoặc geopolitical shock có thể làm:
+CPI, NFP, central-bank decision hoặc geopolitical shock có thể làm:
 
 - spread widen;
 - slippage tăng;
 - stop gap;
 - margin thay đổi.
 
-Sự kiện (event / 이벤트) trading đòi hỏi thực thi (execution / 실행) plan trước bản phát hành (release / 릴리스).
+Event trading đòi hỏi execution plan trước release.
 
 ## 27. XAUUSD
 
@@ -291,36 +289,36 @@ Call = max(S-K, 0)
 Put  = max(K-S, 0)
 ```
 
-Trước expiry, giá option còn phụ thuộc volatility, thời gian (time / 시간), rates và Greeks.
+Trước expiry, giá option còn phụ thuộc volatility, time, rates và Greeks.
 
 ## 30. CFD
 
-CFD thường là bilateral đặc tả hợp đồng (contract / 계약) với broker.
+CFD thường là bilateral contract với broker.
 
 Cần kiểm tra:
 
-- legal thực thể (entity / 엔터티);
-- financing chi phí (cost / 비용);
+- legal entity;
+- financing cost;
 - spread;
-- mô hình thực thi (execution model / 실행 모델);
+- execution model;
 - stop-out;
 - jurisdiction.
 
 ## 31. Backtest
 
-Backtest phải cố tái tạo thông tin và thực thi (execution / 실행) có thể có thật tại thời điểm quá khứ.
+Backtest phải cố tái tạo thông tin và execution có thể có thật tại thời điểm quá khứ.
 
 Sai lầm phổ biến:
 
-- look-ahead độ lệch (bias / 편향);
-- survivorship độ lệch (bias / 편향);
-- dữ liệu (data / 데이터) snooping;
-- bỏ giao dịch (transaction / 트랜잭션) chi phí (cost / 비용);
+- look-ahead bias;
+- survivorship bias;
+- data snooping;
+- bỏ transaction cost;
 - bỏ slippage.
 
-## 32. Forward kiểm thử (test / 테스트)
+## 32. Forward test
 
-Sau backtest nên có out-of-sample hoặc forward kiểm thử (test / 테스트) trước khi dùng capital đáng kể.
+Sau backtest nên có out-of-sample hoặc forward test trước khi dùng capital đáng kể.
 
 ## 33. Trading journal
 
@@ -340,12 +338,12 @@ Lesson
 
 ## 34. Psychology
 
-Tâm lý không thể sửa một chiến lược (strategy / 전략) không có edge.
+Tâm lý không thể sửa một strategy không có edge.
 
-Nhưng một chiến lược (strategy / 전략) có edge vẫn có thể thất bại nếu trader:
+Nhưng một strategy có edge vẫn có thể thất bại nếu trader:
 
-- tăng kích thước (size / 크기) sau mất mát (loss / 손실);
-- bỏ quy tắc (rule / 규칙);
+- tăng size sau loss;
+- bỏ rule;
 - revenge trade;
 - stop quá sớm;
 - overtrade.
@@ -356,7 +354,7 @@ Nhiều trade riêng lẻ có thể cùng chịu một factor.
 
 Ví dụ long EUR/USD, long GBP/USD và long gold có thể cùng là short-USD exposure.
 
-Cần nhìn tổng rủi ro (risk / 위험), không chỉ rủi ro (risk / 위험)/trade.
+Cần nhìn tổng risk, không chỉ risk/trade.
 
 ## 36. Kelly
 
@@ -365,14 +363,14 @@ Kelly criterion cho sizing tối ưu theo growth trong điều kiện giả đ�
 Thực tế thường dùng fractional Kelly vì:
 
 - edge estimate không chắc;
-- phân phối (distribution / 분포) có fat tail;
+- distribution có fat tail;
 - drawdown tâm lý lớn.
 
 ## 37. Monte Carlo
 
-Monte Carlo giúp kiểm tra nhiều thứ tự trade khác nhau để thấy drawdown phân phối (distribution / 분포) và rủi ro (risk / 위험) of ruin.
+Monte Carlo giúp kiểm tra nhiều thứ tự trade khác nhau để thấy drawdown distribution và risk of ruin.
 
-Nó không sửa được mẫu (sample / 표본) kém chất lượng.
+Nó không sửa được sample kém chất lượng.
 
 ## 38. MAE và MFE
 
@@ -380,7 +378,7 @@ Nó không sửa được mẫu (sample / 표본) kém chất lượng.
 
 **Maximum Favorable Excursion (MFE)** đo mức có lợi lớn nhất.
 
-Hai chỉ số (metric / 지표) giúp cải thiện stop và exit quy tắc (rule / 규칙).
+Hai metric giúp cải thiện stop và exit rule.
 
 ## 39. Profit factor
 
@@ -389,20 +387,20 @@ Profit Factor
 = Gross Profit / Gross Loss
 ```
 
-Cần đọc cùng cỡ mẫu (sample size / 표본 크기), drawdown và chi phí (cost / 비용).
+Cần đọc cùng sample size, drawdown và cost.
 
 ## 40. Sharpe / Sortino / Calmar
 
-Các ratio này mô tả return so với rủi ro (risk / 위험) theo góc khác nhau nhưng không thay thế:
+Các ratio này mô tả return so với risk theo góc khác nhau nhưng không thay thế:
 
-- tail rủi ro (risk / 위험);
+- tail risk;
 - liquidity;
 - leverage;
-- operational rủi ro (risk / 위험).
+- operational risk.
 
 ## 41. Regime dependence
 
-Một chiến lược (strategy / 전략) có thể kiếm tiền chỉ trong một regime.
+Một strategy có thể kiếm tiền chỉ trong một regime.
 
 Cần biết edge phụ thuộc:
 
@@ -410,17 +408,17 @@ Cần biết edge phụ thuộc:
 - volatility;
 - carry;
 - liquidity;
-- macro môi trường (environment / 환경).
+- macro environment.
 
-## 42. Broker an toàn (safety / 안전)
+## 42. Broker safety
 
-Trước khi quan tâm setup, cần hiểu broker legal thực thể (entity / 엔터티), custody/margin rules và khả năng rút tiền.
+Trước khi quan tâm setup, cần hiểu broker legal entity, custody/margin rules và khả năng rút tiền.
 
 ## 43. Từ master map tới chapter chuyên sâu
 
-Nếu mục tiêu chính là **Forex**, đi vào lộ trình học (learning path / 학습 경로) riêng:
+Nếu mục tiêu chính là **Forex**, đi vào learning path riêng:
 
-- [forex/README.md](./forex/README.md): từ thị trường (market / 시장) cấu trúc (structure / 구조), P/L, leverage, macro và thực thi (execution / 실행) tới price hành động (action / 동작), chiến lược (strategy / 전략) research, backtesting, portfolio rủi ro (risk / 위험), microstructure, FX options và Korea/Vietnam ngữ cảnh (context / 맥락).
+- [forex/README.md](./forex/README.md): từ market structure, P/L, leverage, macro và execution tới price action, strategy research, backtesting, portfolio risk, microstructure, FX options và Korea/Vietnam context.
 
 Các chapter Trading & Derivatives dùng chung:
 
@@ -442,6 +440,4 @@ Edge
 × Discipline
 ```
 
-Leverage không tạo lợi thế. mẫu (pattern / 패턴) không thay thế expectancy. Và một chiến lược (strategy / 전략) chỉ đáng dùng khi nó sống sót sau chi phí, stress và sai số thực tế.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 DERIVATIVES FUTURES OPTIONS CFD](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Leverage không tạo lợi thế. Pattern không thay thế expectancy. Và một strategy chỉ đáng dùng khi nó sống sót sau chi phí, stress và sai số thực tế.

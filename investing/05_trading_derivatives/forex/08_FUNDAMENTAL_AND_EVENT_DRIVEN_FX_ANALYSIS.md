@@ -1,11 +1,8 @@
-# 08 — Fundamental và event-driven FX phân tích (analysis / 분석)
+# 08 — Fundamental và event-driven FX analysis
 
-> **Mạch đọc:** Đặt **08 — Fundamental và event-driven FX phân tích (analysis / 분석)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. sự kiện (event / 이벤트) kết quả (outcome / 결과) không đủ; surprise mới quan trọng** sang **2. “thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Fundamental FX analysis không phải danh sách quy tắc kiểu “CPI tăng → currency tăng”. Nó là bài toán **expectation, relative valuation và transmission**: dữ liệu mới thay đổi kỳ vọng về tăng trưởng, lạm phát, chính sách, dòng vốn và risk premium như thế nào so với phía còn lại của currency pair.
 
-
-Fundamental FX phân tích (analysis / 분석) không phải danh sách quy tắc kiểu “CPI tăng → currency tăng”. Nó là bài toán **expectation, relative valuation và transmission**: dữ liệu mới thay đổi kỳ vọng về tăng trưởng, lạm phát, chính sách, dòng vốn và rủi ro (risk / 위험) premium như thế nào so với phía còn lại của currency pair.
-
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Prior expectations
@@ -17,9 +14,9 @@ Prior expectations
 → follow-through or reversal
 ```
 
-## 1. sự kiện (event / 이벤트) kết quả (outcome / 결과) không đủ; surprise mới quan trọng
+## 1. Event outcome không đủ; surprise mới quan trọng
 
-Một dữ liệu (data / 데이터) bản phát hành (release / 릴리스) có ba lớp:
+Một data release có ba lớp:
 
 ```text
 Previous
@@ -31,17 +28,17 @@ Thêm vào đó còn:
 
 - revisions;
 - composition/detail;
-- thị trường (market / 시장) positioning;
-- chính sách (policy / 정책) reaction hàm (function / 함수);
-- mức đã được price in trước sự kiện (event / 이벤트).
+- market positioning;
+- policy reaction function;
+- mức đã được price in trước event.
 
-Ví dụ CPI 3.0% có thể hawkish nếu consensus 2.7%, nhưng dovish nếu thị trường (market / 시장) feared 3.4%.
+Ví dụ CPI 3.0% có thể hawkish nếu consensus 2.7%, nhưng dovish nếu market feared 3.4%.
 
-## 2. “thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)
+## 2. “Market expectation” phải được ghi lại trước event
 
-Nếu chỉ xem chart sau sự kiện (event / 이벤트) rồi giải thích, rất dễ tạo hindsight narrative.
+Nếu chỉ xem chart sau event rồi giải thích, rất dễ tạo hindsight narrative.
 
-Sự kiện (event / 이벤트) notebook nên lưu trước bản phát hành (release / 릴리스):
+Event notebook nên lưu trước release:
 
 ```text
 Consensus
@@ -52,25 +49,25 @@ Recent trend / volatility
 Key alternative scenarios
 ```
 
-Sau sự kiện (event / 이벤트) mới ghi reaction.
+Sau event mới ghi reaction.
 
-## 3. Central-bank reaction hàm (function / 함수)
+## 3. Central-bank reaction function
 
-Mỗi central bank có mandate, khung phần mềm (framework / 프레임워크) và các ràng buộc (constraints / 제약조건들) khác nhau. Cần hiểu họ phản ứng với:
+Mỗi central bank có mandate, framework và constraints khác nhau. Cần hiểu họ phản ứng với:
 
 - inflation outlook;
-- labor thị trường (market / 시장);
+- labor market;
 - growth;
 - financial stability;
 - exchange-rate pass-through;
 - credit/housing conditions;
 - fiscal/financial-system stress.
 
-Một quyết định (decision / 결정) chỉ có meaning khi đặt trong reaction hàm (function / 함수).
+Một decision chỉ có meaning khi đặt trong reaction function.
 
-## 4. hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)
+## 4. Current rate khác expected path
 
-FX thường phản ứng với thay đổi của **expected future tỷ lệ (rate / 비율) đường dẫn (path / 경로)**, không chỉ hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율).
+FX thường phản ứng với thay đổi của **expected future rate path**, không chỉ current policy rate.
 
 Ví dụ:
 
@@ -84,9 +81,9 @@ but guidance becomes more hawkish
 
 Ngược lại, hike hiện tại nhưng dovish future guidance có thể tạo reaction trái dấu.
 
-## 5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)
+## 5. FOMC/ECB/BOK event nên đọc theo nhiều layer
 
-Một central-bank sự kiện (event / 이벤트) có thể gồm:
+Một central-bank event có thể gồm:
 
 ```text
 Policy decision
@@ -97,24 +94,24 @@ Implementation details
 Balance-sheet guidance
 ```
 
-Không nên lấy headline tỷ lệ (rate / 비율) quyết định (decision / 결정) làm toàn bộ sự kiện (event / 이벤트).
+Không nên lấy headline rate decision làm toàn bộ event.
 
-Nguồn chuẩn gốc (canonical / 정본) nên là website chính thức của central bank. Với Fed, lịch FOMC, statements, minutes và projection materials được công bố theo calendar chính thức; với ECB/BOK cũng nên dùng press bản phát hành (release / 릴리스)/quyết định (decision / 결정) chính thức thay vì chỉ secondary headline.
+Nguồn canonical nên là website chính thức của central bank. Với Fed, lịch FOMC, statements, minutes và projection materials được công bố theo calendar chính thức; với ECB/BOK cũng nên dùng press release/decision chính thức thay vì chỉ secondary headline.
 
 ## 6. CPI
 
-Không chỉ đọc headline CPI. Tùy economy, thị trường (market / 시장) có thể chú ý:
+Không chỉ đọc headline CPI. Tùy economy, market có thể chú ý:
 
 - headline;
-- cốt lõi (core / 핵심);
+- core;
 - services;
 - housing/rent components;
 - goods;
-- năng lượng (energy / 에너지);
+- energy;
 - month-on-month momentum;
 - annualized short-run measures.
 
-Chuỗi nhân quả (causal chain / 인과 사슬) cần hỏi:
+Causal chain cần hỏi:
 
 ```text
 Which component surprised?
@@ -123,12 +120,12 @@ Does it alter policy path?
 Does it alter real growth?
 ```
 
-## 7. Employment dữ liệu (data / 데이터)
+## 7. Employment data
 
-Employment bản phát hành (release / 릴리스) có thể chứa:
+Employment release có thể chứa:
 
-- payroll/employment thay đổi (change / 변경);
-- unemployment tỷ lệ (rate / 비율);
+- payroll/employment change;
+- unemployment rate;
 - participation;
 - wages;
 - hours worked;
@@ -138,7 +135,7 @@ Nếu headline jobs mạnh nhưng prior months revised sharply down và wage gro
 
 ## 8. GDP
 
-GDP là broad activity measure nhưng có lag và revisions. FX có thể phản ứng nhiều hơn với forward-looking components hoặc high-frequency dữ liệu (data / 데이터) nếu GDP đã anticipated.
+GDP là broad activity measure nhưng có lag và revisions. FX có thể phản ứng nhiều hơn với forward-looking components hoặc high-frequency data nếu GDP đã anticipated.
 
 Một strong GDP print không tự động bullish nếu:
 
@@ -147,50 +144,50 @@ Một strong GDP print không tự động bullish nếu:
 - inflation implications are dovish;
 - other side of pair is stronger.
 
-## 9. PMI / nghiệp vụ (business / 비즈니스) surveys
+## 9. PMI / business surveys
 
-PMI-like surveys có thể cung cấp earlier tín hiệu (signal / 신호) về activity, orders, employment, prices và sentiment.
+PMI-like surveys có thể cung cấp earlier signal về activity, orders, employment, prices và sentiment.
 
-Nhưng survey diffusion indices không phải GDP growth tỷ lệ (rate / 비율) trực tiếp. Cần hiểu construction và historical relationship.
+Nhưng survey diffusion indices không phải GDP growth rate trực tiếp. Cần hiểu construction và historical relationship.
 
 ## 10. Retail sales / consumption
 
-Consumption dữ liệu (data / 데이터) ảnh hưởng growth outlook và đôi khi inflation pressure.
+Consumption data ảnh hưởng growth outlook và đôi khi inflation pressure.
 
 Nhưng nominal sales có thể tăng vì prices tăng, không phải real volume. Nếu có thể, phân biệt nominal và real.
 
 ## 11. Inflation expectations
 
-Market-based hoặc survey inflation expectations ảnh hưởng real yields và chính sách (policy / 정책) pricing.
+Market-based hoặc survey inflation expectations ảnh hưởng real yields và policy pricing.
 
 Một nominal yield tăng 30 bps nhưng expected inflation tăng 40 bps có thể làm real yield giảm.
 
-Do đó FX phân tích (analysis / 분석) cần nhìn decomposition khi relevant.
+Do đó FX analysis cần nhìn decomposition khi relevant.
 
 ## 12. Yield curve
 
 Different maturities encode different combinations của:
 
-- expected chính sách (policy / 정책) rates;
+- expected policy rates;
 - inflation expectations;
 - term premium;
-- rủi ro (risk / 위험)/liquidity premium.
+- risk/liquidity premium.
 
-FX short-horizon sự kiện (event / 이벤트) reaction thường nhạy với front-end repricing, nhưng medium-term thesis có thể liên quan broader curve.
+FX short-horizon event reaction thường nhạy với front-end repricing, nhưng medium-term thesis có thể liên quan broader curve.
 
 ## 13. OIS / money-market pricing
 
-Overnight-indexed instruments thường được dùng để infer market-implied chính sách (policy / 정책) expectations.
+Overnight-indexed instruments thường được dùng để infer market-implied policy expectations.
 
-Không nên đọc implied đường dẫn (path / 경로) như certainty. Nó là price incorporating expectations và rủi ro (risk / 위험) premia.
+Không nên đọc implied path như certainty. Nó là price incorporating expectations và risk premia.
 
-## 14. Surprise chỉ mục (index / 인덱스)
+## 14. Surprise index
 
-Một economic surprise chỉ mục (index / 인덱스) tổng hợp actual-vs-consensus across releases.
+Một economic surprise index tổng hợp actual-vs-consensus across releases.
 
-Nó có thể giúp đo liệu luồng dữ liệu (data flow / 데이터 흐름) đang systematically vượt hay hụt expectation, nhưng construction/nguồn (source / 소스) khác nhau và không phải direct trading tín hiệu (signal / 신호).
+Nó có thể giúp đo liệu data flow đang systematically vượt hay hụt expectation, nhưng construction/source khác nhau và không phải direct trading signal.
 
-## 15. Relative dữ liệu (data / 데이터) surprise
+## 15. Relative data surprise
 
 Với currency pair A/B, có thể nghiên cứu:
 
@@ -202,7 +199,7 @@ thay vì chỉ surprise của một economy.
 
 Đây phù hợp với bản chất relative của FX.
 
-## 16. Trade balance và hiện tại (current / 현재) account
+## 16. Trade balance và current account
 
 Trade surplus/deficit không tự động quyết định currency. Cần xem:
 
@@ -216,11 +213,11 @@ Hedging
 Reserve/intervention activity
 ```
 
-Balance of payments là hệ thống (system / 시스템), không phải một dòng headline.
+Balance of payments là system, không phải một dòng headline.
 
 ## 17. Terms of trade
 
-Commodity import/export prices có thể thay đổi national income và bên ngoài (external / 외부) balance.
+Commodity import/export prices có thể thay đổi national income và external balance.
 
 Một energy-importing economy có thể chịu:
 
@@ -232,20 +229,20 @@ energy price shock
 → growth weakens
 ```
 
-FX tác động (effect / 효과) phụ thuộc chính sách (policy / 정책) phản hồi (response / 응답) và thị trường (market / 시장) pricing.
+FX effect phụ thuộc policy response và market pricing.
 
 ## 18. Fiscal news
 
-Ngân sách (budget / 예산), tax, spending hoặc debt issuance có thể tác động qua:
+Budget, tax, spending hoặc debt issuance có thể tác động qua:
 
 - growth;
 - inflation;
 - bond supply;
 - term premium;
-- sovereign rủi ro (risk / 위험);
-- central-bank phản hồi (response / 응답).
+- sovereign risk;
+- central-bank response.
 
-Không dùng quy tắc (rule / 규칙) đơn giản “fiscal expansion bullish/bearish currency”.
+Không dùng rule đơn giản “fiscal expansion bullish/bearish currency”.
 
 ## 19. Geopolitical shock
 
@@ -261,27 +258,27 @@ Inflation hit?
 Policy reaction?
 ```
 
-Cùng một geopolitical sự kiện (event / 이벤트) có thể tác động khác nhau tới JPY, EUR, KRW, CHF, USD tùy origin và exposure.
+Cùng một geopolitical event có thể tác động khác nhau tới JPY, EUR, KRW, CHF, USD tùy origin và exposure.
 
-## 20. Intervention rủi ro (risk / 위험)
+## 20. Intervention risk
 
-Với currencies nơi authority có thể can thiệp, cần theo dõi official communication và chính sách (policy / 정책) khung phần mềm (framework / 프레임워크).
+Với currencies nơi authority có thể can thiệp, cần theo dõi official communication và policy framework.
 
-Không được biến một mức (level / 수준) được báo chí nhắc đến thành “guaranteed defense line”.
+Không được biến một level được báo chí nhắc đến thành “guaranteed defense line”.
 
 Intervention thesis phải ghi:
 
 - official statements;
-- historical cơ chế (mechanism / 메커니즘);
-- reserve/liquidity sức chứa (capacity / 용량) if relevant;
-- chính sách (policy / 정책) consistency;
-- thị trường (market / 시장) positioning.
+- historical mechanism;
+- reserve/liquidity capacity if relevant;
+- policy consistency;
+- market positioning.
 
 ## 21. Fixing và benchmark flows
 
-Một move quanh benchmark fixing có thể đến từ mechanical thực thi (execution / 실행)/rebalancing thay vì new macro thông tin (information / 정보).
+Một move quanh benchmark fixing có thể đến từ mechanical execution/rebalancing thay vì new macro information.
 
-Sự kiện (event / 이벤트) phân tích (analysis / 분석) phải phân biệt:
+Event analysis phải phân biệt:
 
 ```text
 information shock
@@ -291,22 +288,22 @@ flow shock
 
 vì expected persistence có thể khác nhau.
 
-## 22. Options thị trường (market / 시장) như expectation proxy
+## 22. Options market như expectation proxy
 
-FX options có thể cung cấp thông tin (information / 정보) về:
+FX options có thể cung cấp information về:
 
 - implied volatility;
-- sự kiện (event / 이벤트) premium;
-- skew/rủi ro (risk / 위험) reversal;
+- event premium;
+- skew/risk reversal;
 - demand for asymmetric protection.
 
-Nhưng implied volatility không phải direct xác suất (probability / 확률) forecast không điều chỉnh; nó chứa rủi ro (risk / 위험) premium và thị trường (market / 시장) microstructure.
+Nhưng implied volatility không phải direct probability forecast không điều chỉnh; nó chứa risk premium và market microstructure.
 
-## 23. sự kiện (event / 이벤트) volatility
+## 23. Event volatility
 
-Trước major bản phát hành (release / 릴리스), implied/realized volatility expectation có thể tăng.
+Trước major release, implied/realized volatility expectation có thể tăng.
 
-Sau bản phát hành (release / 릴리스):
+Sau release:
 
 ```text
 uncertainty resolves
@@ -317,7 +314,7 @@ Vì vậy directional view đúng chưa chắc option trade có profit nếu opt
 
 ## 24. First reaction và second reaction
 
-Sự kiện (event / 이벤트) có thể có:
+Event có thể có:
 
 ```text
 0–5 seconds: algorithmic headline reaction
@@ -325,39 +322,39 @@ Sự kiện (event / 이벤트) có thể có:
 1d–1w: broader repricing
 ```
 
-Chiến lược (strategy / 전략) horizon phải xác định mình nghiên cứu tầng (layer / 계층) nào.
+Strategy horizon phải xác định mình nghiên cứu layer nào.
 
-Không nên backtest daily close rồi suy luận về edge vài giây quanh bản phát hành (release / 릴리스).
+Không nên backtest daily close rồi suy luận về edge vài giây quanh release.
 
 ## 25. Revisions
 
-Macro dữ liệu (data / 데이터) có thể được revised. Backtest dùng final revised dataset có nguy cơ **look-ahead / vintage độ lệch (bias / 편향)** nếu live trader lúc đó chỉ biết first bản phát hành (release / 릴리스).
+Macro data có thể được revised. Backtest dùng final revised dataset có nguy cơ **look-ahead / vintage bias** nếu live trader lúc đó chỉ biết first release.
 
-Sự kiện (event / 이벤트) research nên dùng point-in-time vintage dữ liệu (data / 데이터) khi possible.
+Event research nên dùng point-in-time vintage data khi possible.
 
-## 26. bản phát hành (release / 릴리스) timestamp
+## 26. Release timestamp
 
 Timestamp phải đúng timezone và daylight-saving convention.
 
-Nếu một bản phát hành (release / 릴리스) xảy ra lúc 08:30 New York thời gian (time / 시간), UTC timestamp thay đổi theo DST. dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) phải dùng timezone-aware conversion.
+Nếu một release xảy ra lúc 08:30 New York time, UTC timestamp thay đổi theo DST. Data pipeline phải dùng timezone-aware conversion.
 
-## 27. thông tin (information / 정보) leakage / pre-release moves
+## 27. Information leakage / pre-release moves
 
-Nếu price move trước scheduled bản phát hành (release / 릴리스), có nhiều explanations:
+Nếu price move trước scheduled release, có nhiều explanations:
 
-- unrelated thị trường (market / 시장) luồng (flow / 흐름);
+- unrelated market flow;
 - positioning adjustment;
-- correlated thông tin (information / 정보);
+- correlated information;
 - rumor;
 - leakage in rare cases.
 
 Không nên tự động kết luận cause từ chart.
 
-Research cần sự kiện (event / 이벤트) cửa sổ (window / 윈도우) và điều khiển (control / 제어) windows.
+Research cần event window và control windows.
 
-## 28. sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)
+## 28. Event study framework
 
-Một basic sự kiện (event / 이벤트) study:
+Một basic event study:
 
 ```text
 Define event timestamp
@@ -373,18 +370,18 @@ Include bid/ask cost
 Group by surprise magnitude / regime
 ```
 
-Sau đó kiểm tra phân phối (distribution / 분포), không chỉ average.
+Sau đó kiểm tra distribution, không chỉ average.
 
-## 29. Conditional phản hồi (response / 응답)
+## 29. Conditional response
 
 Một hawkish surprise có thể tạo USD reaction khác khi:
 
 - USD positioning already extreme;
-- rủi ro (risk / 위험) crisis dominates;
+- risk crisis dominates;
 - surprise comes from inflation vs growth;
-- sự kiện (event / 이벤트) was anticipated.
+- event was anticipated.
 
-Do đó regression/sự kiện (event / 이벤트) study có thể include interactions.
+Do đó regression/event study có thể include interactions.
 
 ## 30. Narrative phải được falsifiable
 
@@ -401,9 +398,9 @@ If front-end yield differential widens beyond threshold Y while risk regime rema
 Invalidation: data and policy pricing move opposite, or USD fails to respond despite widening differential over specified horizon.
 ```
 
-## 31. sự kiện (event / 이벤트) journal
+## 31. Event journal
 
-Một bản ghi (record / 레코드) nên có:
+Một record nên có:
 
 ```text
 Event
@@ -436,18 +433,18 @@ Official central bank / statistical agency
 
 Tài liệu cần phân biệt fact với analyst interpretation.
 
-## 33. Không trade headline văn bản (text / 텍스트) bằng cảm giác
+## 33. Không trade headline text bằng cảm giác
 
 Một word như “hawkish” hoặc “dovish” là compressed interpretation. Hai analysts có thể disagree.
 
-Nếu research NLP/sự kiện (event / 이벤트) tín hiệu (signal / 신호), cần formalize văn bản (text / 텍스트) features và train/kiểm thử (test / 테스트) chronologically, không label bằng future thị trường (market / 시장) reaction.
+Nếu research NLP/event signal, cần formalize text features và train/test chronologically, không label bằng future market reaction.
 
 ## 34. Scheduled vs unscheduled events
 
 Scheduled:
 
 - CPI;
-- labor dữ liệu (data / 데이터);
+- labor data;
 - central-bank meetings;
 - GDP/PMI.
 
@@ -455,16 +452,16 @@ Unscheduled:
 
 - surprise intervention;
 - political/geopolitical shock;
-- emergency chính sách (policy / 정책) hành động (action / 동작);
+- emergency policy action;
 - financial accident.
 
-Unscheduled events có tail/thực thi (execution / 실행) rủi ro (risk / 위험) lớn hơn vì thị trường (market / 시장) chưa chuẩn bị liquidity giống scheduled sự kiện (event / 이벤트).
+Unscheduled events có tail/execution risk lớn hơn vì market chưa chuẩn bị liquidity giống scheduled event.
 
-## 35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)
+## 35. Fundamental analysis không loại bỏ technical/execution layer
 
-Một macro thesis có thể đúng trong tuần nhưng entry thực thi (execution / 실행) tệ làm trade thất bại.
+Một macro thesis có thể đúng trong tuần nhưng entry execution tệ làm trade thất bại.
 
-Chuỗi xử lý (pipeline / 파이프라인) đầy đủ:
+Pipeline đầy đủ:
 
 ```text
 Fundamental hypothesis
@@ -475,27 +472,27 @@ Fundamental hypothesis
 → attribution
 ```
 
-Không nên dùng fundamental story để bỏ stop/vô hiệu hóa (invalidation / 무효화).
+Không nên dùng fundamental story để bỏ stop/invalidation.
 
 ## 36. Current-source examples
 
-Khi học bằng dữ liệu hiện hành, luôn lấy ngày cụ thể. Ví dụ calendar FOMC chính thức liệt kê meeting dates, statements, minutes và projection materials theo từng kỳ; ECB và Bank of Korea cũng công bố chính sách (policy / 정책) decisions trực tiếp. Những tài liệu này thích hợp để xây sự kiện (event / 이벤트) dataset hơn bài báo tóm tắt.
+Khi học bằng dữ liệu hiện hành, luôn lấy ngày cụ thể. Ví dụ calendar FOMC chính thức liệt kê meeting dates, statements, minutes và projection materials theo từng kỳ; ECB và Bank of Korea cũng công bố policy decisions trực tiếp. Những tài liệu này thích hợp để xây event dataset hơn bài báo tóm tắt.
 
-Không bản sao (copy / 복사) hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율) vào tài liệu như một fact vĩnh viễn; nếu cần ví dụ thời điểm phải ghi rõ ngày.
+Không copy current policy rate vào tài liệu như một fact vĩnh viễn; nếu cần ví dụ thời điểm phải ghi rõ ngày.
 
 ## 37. Checklist
 
 Bạn cần tự giải thích được:
 
 1. Actual khác surprise như thế nào.
-2. Vì sao expected tỷ lệ (rate / 비율) đường dẫn (path / 경로) quan trọng hơn headline tỷ lệ (rate / 비율).
-3. Reaction hàm (function / 함수) là gì.
-4. Vì sao revisions gây vintage độ lệch (bias / 편향).
-5. Vì sao sự kiện (event / 이벤트) timestamp/DST quan trọng.
+2. Vì sao expected rate path quan trọng hơn headline rate.
+3. Reaction function là gì.
+4. Vì sao revisions gây vintage bias.
+5. Vì sao event timestamp/DST quan trọng.
 6. First reaction và follow-through khác nhau.
-7. luồng (flow / 흐름) shock khác thông tin (information / 정보) shock thế nào.
-8. Cách viết một fundamental thesis có vô hiệu hóa (invalidation / 무효화).
-9. Vì sao official nguồn (source / 소스) nên là nguồn (source / 소스) of bản ghi (record / 레코드).
+7. Flow shock khác information shock thế nào.
+8. Cách viết một fundamental thesis có invalidation.
+9. Vì sao official source nên là source of record.
 
 ## Đọc tiếp
 
@@ -504,9 +501,7 @@ Bạn cần tự giải thích được:
 ## Nguồn nền
 
 - Federal Reserve — FOMC calendars and official monetary-policy releases: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
-- ECB — Monetary chính sách (policy / 정책) decisions: https://www.ecb.europa.eu/press/govcdec/mopo/html/chỉ mục (index / 인덱스).en.html
-- Bank of Korea — Monetary chính sách (policy / 정책) Decisions: https://www.bok.or.kr/eng/main/contents.do?menuNo=400015
+- ECB — Monetary policy decisions: https://www.ecb.europa.eu/press/govcdec/mopo/html/index.en.html
+- Bank of Korea — Monetary Policy Decisions: https://www.bok.or.kr/eng/main/contents.do?menuNo=400015
 - [Macro Data Playbook](../../04_economics/03_MACRO_DATA_PLAYBOOK.md)
 - [04 — Macro drivers, rates, carry and sessions](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
-
-> **Bàn giao:** Sau **Nguồn nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

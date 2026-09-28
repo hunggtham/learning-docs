@@ -1,11 +1,8 @@
-# 13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)
+# 13 — Advanced FX microstructure và order flow
 
-> **Mạch đọc:** Đặt **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. thứ tự (order / 순서) luồng (flow / 흐름) khác volume** sang **2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Ở cấp nâng cao, FX không chỉ là chuỗi price bars mà là một mạng lưới dealer, venue, client flow, inventory, hedging và latency. **Microstructure** nghiên cứu cách những cơ chế này tạo ra executable prices, spreads, liquidity và short-horizon price discovery.
 
-
-Ở cấp nâng cao, FX không chỉ là chuỗi price bars mà là một mạng lưới dealer, venue, máy khách (client / 클라이언트) luồng (flow / 흐름), inventory, hedging và độ trễ (latency / 지연 시간). **Microstructure** nghiên cứu cách những cơ chế này tạo ra executable prices, spreads, liquidity và short-horizon price discovery.
-
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Information / client demand
@@ -16,17 +13,17 @@ Information / client demand
 → observed price path
 ```
 
-## 1. thứ tự (order / 순서) luồng (flow / 흐름) khác volume
+## 1. Order flow khác volume
 
-**thứ tự (order / 순서) luồng (flow / 흐름)** thường nhấn mạnh hướng và chuỗi (sequence / 시퀀스) của trading demand, ví dụ signed buys/sells.
+**Order flow** thường nhấn mạnh hướng và sequence của trading demand, ví dụ signed buys/sells.
 
 Raw volume chỉ nói activity magnitude.
 
 Hai periods có cùng volume nhưng net aggressive buying khác nhau có thể tạo price impact khác.
 
-## 2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ
+## 2. FX order flow khó quan sát toàn bộ
 
-OTC FX phân mảnh. Không có một toàn cục (global / 전역) tape chứa tất cả transactions.
+OTC FX phân mảnh. Không có một global tape chứa tất cả transactions.
 
 Dữ liệu có thể đến từ:
 
@@ -34,27 +31,27 @@ Dữ liệu có thể đến từ:
 - ECN/venue;
 - futures exchange;
 - broker clients;
-- aggregated institutional nguồn (source / 소스).
+- aggregated institutional source.
 
-Mỗi nguồn (source / 소스) chỉ quan sát một phần thị trường (market / 시장).
+Mỗi source chỉ quan sát một phần market.
 
 ## 3. Dealer inventory
 
-Dealer nhận máy khách (client / 클라이언트) luồng (flow / 흐름) có thể tạm thời tích lũy inventory.
+Dealer nhận client flow có thể tạm thời tích lũy inventory.
 
 Nếu inventory quá lệch, dealer có thể:
 
 - adjust quote;
 - hedge externally;
-- internalize với opposite máy khách (client / 클라이언트) luồng (flow / 흐름).
+- internalize với opposite client flow.
 
-Price thay đổi (change / 변경) ngắn hạn có thể phản ánh inventory management chứ không chỉ công khai (public / 공개) news.
+Price change ngắn hạn có thể phản ánh inventory management chứ không chỉ public news.
 
 ## 4. Adverse selection
 
-Liquidity provider sợ giao dịch với counterparty có thông tin (information / 정보) advantage.
+Liquidity provider sợ giao dịch với counterparty có information advantage.
 
-Khi perceived adverse-selection rủi ro (risk / 위험) tăng:
+Khi perceived adverse-selection risk tăng:
 
 ```text
 spread widens
@@ -68,9 +65,9 @@ News windows là ví dụ rõ.
 
 Conceptually spread bù cho:
 
-- inventory rủi ro (risk / 위험);
+- inventory risk;
 - adverse selection;
-- operating/technology chi phí (cost / 비용);
+- operating/technology cost;
 - capital/funding;
 - expected profit.
 
@@ -78,7 +75,7 @@ Relative importance thay đổi theo venue/regime.
 
 ## 6. Price discovery
 
-Price discovery là tiến trình (process / 프로세스) thị trường (market / 시장) incorporates thông tin (information / 정보) vào quotes/trades.
+Price discovery là process market incorporates information vào quotes/trades.
 
 Trong FX, discovery có thể diễn ra across:
 
@@ -94,15 +91,15 @@ Một venue có thể lead ở một horizon nhưng không mọi lúc.
 
 Cùng currency pair có nhiều liquidity pools.
 
-Arbitrage/thị trường (market / 시장) making giữ prices gần nhau nhưng độ trễ (latency / 지연 시간) và venue rules tạo temporary differences.
+Arbitrage/market making giữ prices gần nhau nhưng latency và venue rules tạo temporary differences.
 
-Do đó “thị trường (market / 시장) price” thường là constructed tham chiếu (reference / 참조) từ multiple quotes.
+Do đó “market price” thường là constructed reference từ multiple quotes.
 
-## 8. Top-of-book vs độ sâu (depth / 깊이)
+## 8. Top-of-book vs depth
 
-Best bid/ask chỉ là mức (level / 수준) đầu.
+Best bid/ask chỉ là level đầu.
 
-Institutional thực thi (execution / 실행) quan tâm:
+Institutional execution quan tâm:
 
 ```text
 available size at best
@@ -113,59 +110,59 @@ resiliency after trade
 
 Tight spread nhưng shallow book vẫn có poor liquidity cho large orders.
 
-## 9. thị trường (market / 시장) resilience
+## 9. Market resilience
 
-Sau large thứ tự (order / 순서), liquidity có quay lại nhanh không?
+Sau large order, liquidity có quay lại nhanh không?
 
-Resilience là dimension khác của liquidity bên cạnh spread/độ sâu (depth / 깊이).
+Resilience là dimension khác của liquidity bên cạnh spread/depth.
 
 ## 10. Impact
 
-Large aggressive thứ tự (order / 순서) có thể move price.
+Large aggressive order có thể move price.
 
-Temporary impact có thể mean-revert; permanent thành phần (component / 컴포넌트) có thể reflect thông tin (information / 정보).
+Temporary impact có thể mean-revert; permanent component có thể reflect information.
 
-Tách hai phần là thực thi (execution / 실행)/research bài toán (problem / 문제) khó.
+Tách hai phần là execution/research problem khó.
 
 ## 11. Square-root-like impact intuition
 
-Nhiều markets cho thấy impact tăng sublinearly với kích thước (size / 크기) trong empirical research, nhưng không nên hard-code universal law cho mọi FX venue/regime.
+Nhiều markets cho thấy impact tăng sublinearly với size trong empirical research, nhưng không nên hard-code universal law cho mọi FX venue/regime.
 
 Need instrument/venue-specific calibration.
 
 ## 12. Internalization
 
-Dealer có thể match opposite máy khách (client / 클라이언트) flows internally thay vì hedge mọi trade ra street.
+Dealer có thể match opposite client flows internally thay vì hedge mọi trade ra street.
 
-Điều này giảm bên ngoài (external / 외부) footprint nhưng tạo inventory/xung đột (conflict / 충돌) considerations.
+Điều này giảm external footprint nhưng tạo inventory/conflict considerations.
 
-Internalization ratio có thể ảnh hưởng thực thi (execution / 실행) hành vi (behavior / 동작) nhưng dữ liệu (data / 데이터) không phải luôn công khai (public / 공개).
+Internalization ratio có thể ảnh hưởng execution behavior nhưng data không phải luôn public.
 
 ## 13. Last look
 
-Một số FX electronic protocols cho liquidity provider short acceptance cửa sổ (window / 윈도우) sau yêu cầu (request / 요청)/trade attempt.
+Một số FX electronic protocols cho liquidity provider short acceptance window sau request/trade attempt.
 
-Purpose có thể liên quan stale-price/độ trễ (latency / 지연 시간) rủi ro (risk / 위험); máy khách (client / 클라이언트) perspective quan tâm rejection/asymmetric thực thi (execution / 실행).
+Purpose có thể liên quan stale-price/latency risk; client perspective quan tâm rejection/asymmetric execution.
 
-Khi đánh giá, cần empirical stats và giao thức (protocol / 프로토콜) disclosure, không chỉ label.
+Khi đánh giá, cần empirical stats và protocol disclosure, không chỉ label.
 
 ## 14. Request-for-stream / request-for-quote
 
-Institutional clients có thể nhận streaming prices hoặc yêu cầu (request / 요청) quote từ dealers.
+Institutional clients có thể nhận streaming prices hoặc request quote từ dealers.
 
-Thực thi (execution / 실행) choice depends on:
+Execution choice depends on:
 
-- kích thước (size / 크기);
-- thông tin (information / 정보) leakage;
+- size;
+- information leakage;
 - urgency;
 - relationship;
 - expected impact.
 
-## 15. thông tin (information / 정보) leakage
+## 15. Information leakage
 
-Large thứ tự (order / 순서) bị lộ có thể làm thị trường (market / 시장) move trước completion.
+Large order bị lộ có thể làm market move trước completion.
 
-Thực thi (execution / 실행) algorithms cố balance:
+Execution algorithms cố balance:
 
 ```text
 urgency
@@ -176,19 +173,19 @@ market impact / information leakage
 ## 16. TWAP/VWAP/POV concepts
 
 ### TWAP
-Spread thứ tự (order / 순서) across thời gian (time / 시간).
+Spread order across time.
 
 ### VWAP
-mục tiêu (target / 대상) volume-weighted benchmark where meaningful volume dữ liệu (data / 데이터) exists.
+Target volume-weighted benchmark where meaningful volume data exists.
 
 ### POV
-Trade as fraction of observed thị trường (market / 시장) volume.
+Trade as fraction of observed market volume.
 
-Trong OTC FX, benchmark/dữ liệu (data / 데이터) nguồn (source / 소스) phải được định nghĩa cẩn thận.
+Trong OTC FX, benchmark/data source phải được định nghĩa cẩn thận.
 
-## 17. hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)
+## 17. Implementation shortfall algorithm
 
-Optimize sự đánh đổi (trade-off / 트레이드오프):
+Optimize trade-off:
 
 ```text
 waiting risk
@@ -197,13 +194,13 @@ immediate market impact
 ```
 
 High urgency → execute faster, accept impact.
-Low urgency → wait, accept price rủi ro (risk / 위험).
+Low urgency → wait, accept price risk.
 
-## 18. Fixing benchmark thực thi (execution / 실행)
+## 18. Fixing benchmark execution
 
 WM/R-like fixing windows và institutional benchmarks có thể concentrate orders.
 
-Participants hedging benchmark rủi ro (risk / 위험) can create predictable activity, nhưng exploitability after chi phí (cost / 비용)/crowding không được assumed.
+Participants hedging benchmark risk can create predictable activity, nhưng exploitability after cost/crowding không được assumed.
 
 ## 19. Stop clusters
 
@@ -221,11 +218,11 @@ triggered market orders
 → faster move
 ```
 
-Đây là cơ chế (mechanism / 메커니즘) có thể giải thích acceleration mà không cần conspiracy narrative.
+Đây là mechanism có thể giải thích acceleration mà không cần conspiracy narrative.
 
 ## 20. Liquidity sweep terminology
 
-“Liquidity sweep” có thể map vào tiến trình (process / 프로세스):
+“Liquidity sweep” có thể map vào process:
 
 ```text
 price reaches area with clustered conditional orders
@@ -235,7 +232,7 @@ price reaches area with clustered conditional orders
 → continuation or reversal depends on subsequent flow
 ```
 
-Term hữu ích nếu quy tắc (rule / 규칙)/dữ liệu (data / 데이터) rõ; không nên biến thành deterministic setup.
+Term hữu ích nếu rule/data rõ; không nên biến thành deterministic setup.
 
 ## 21. Order-book imbalance
 
@@ -245,32 +242,32 @@ Trong centralized/visible venue:
 Imbalance = (Bid Depth - Ask Depth) / (Bid Depth + Ask Depth)
 ```
 
-có thể be short-horizon tính năng (feature / 기능).
+có thể be short-horizon feature.
 
-Nhưng FX venue book chỉ là one pool, không toàn cục (global / 전역) thị trường (market / 시장).
+Nhưng FX venue book chỉ là one pool, không global market.
 
 ## 22. Futures as proxy
 
-Currency futures cung cấp centralized order-book/volume dữ liệu (data / 데이터) và có thể dùng nghiên cứu price discovery/thứ tự (order / 순서) luồng (flow / 흐름).
+Currency futures cung cấp centralized order-book/volume data và có thể dùng nghiên cứu price discovery/order flow.
 
-Nhưng ánh xạ (mapping / 매핑) sang OTC spot cần account:
+Nhưng mapping sang OTC spot cần account:
 
 - basis;
 - trading hours;
-- đặc tả hợp đồng (contract / 계약) roll;
+- contract roll;
 - participant mix.
 
-## 23. COT dữ liệu (data / 데이터)
+## 23. COT data
 
 Commitments of Traders cung cấp positioning categories cho futures, thường weekly và lagged.
 
-Useful for broad positioning ngữ cảnh (context / 맥락), không phù hợp microsecond thứ tự (order / 순서) luồng (flow / 흐름).
+Useful for broad positioning context, không phù hợp microsecond order flow.
 
-## 24. Dealer-client luồng (flow / 흐름) datasets
+## 24. Dealer-client flow datasets
 
-Nếu có institutional dataset, luồng (flow / 흐름) có thể predictive ở horizons khác nhau.
+Nếu có institutional dataset, flow có thể predictive ở horizons khác nhau.
 
-Nhưng mẫu (sample / 표본) representativeness là central question:
+Nhưng sample representativeness là central question:
 
 ```text
 Which clients?
@@ -279,44 +276,44 @@ Which dealer?
 How much market share?
 ```
 
-## 25. Toxic luồng (flow / 흐름)
+## 25. Toxic flow
 
-Dealer gọi luồng (flow / 흐름) “toxic” khi counterparty trades systematically before adverse price moves hoặc exploits stale quotes/độ trễ (latency / 지연 시간).
+Dealer gọi flow “toxic” khi counterparty trades systematically before adverse price moves hoặc exploits stale quotes/latency.
 
-Term phụ thuộc perspective và mô hình thực thi (execution model / 실행 모델), không đồng nghĩa misconduct.
+Term phụ thuộc perspective và execution model, không đồng nghĩa misconduct.
 
-## 26. độ trễ (latency / 지연 시간) arbitrage
+## 26. Latency arbitrage
 
 Nếu one venue updates faster than another, fast participant có thể trade stale quote.
 
-Thị trường (market / 시장) makers respond bằng:
+Market makers respond bằng:
 
-- faster hạ tầng (infrastructure / 인프라);
+- faster infrastructure;
 - wider spread;
 - last look;
 - quote throttling.
 
 ## 27. Co-location và speed
 
-Ở ultra-short horizon, vật lý (physical / 물리적)/mạng (network / 네트워크) độ trễ (latency / 지연 시간) matters.
+Ở ultra-short horizon, physical/network latency matters.
 
-Retail internet trader không nên assume edge based on stale retail chart can compete with institutional low-latency các hệ thống (systems / 시스템들).
+Retail internet trader không nên assume edge based on stale retail chart can compete with institutional low-latency systems.
 
 ## 28. Session handoff
 
-Liquidity providers/participants thay đổi (change / 변경) across Asia–Europe–US.
+Liquidity providers/participants change across Asia–Europe–US.
 
-Spread/độ sâu (depth / 깊이) and price discovery hành vi (behavior / 동작) vary by cục bộ (local / 로컬) nghiệp vụ (business / 비즈니스) hours and overlap.
+Spread/depth and price discovery behavior vary by local business hours and overlap.
 
-## 29. Rollover cửa sổ (window / 윈도우)
+## 29. Rollover window
 
-Retail platforms may show poor liquidity/spread around daily rollover. chính xác (exact / 정확한) timing/sản phẩm (product / 제품) hành vi (behavior / 동작) broker-specific.
+Retail platforms may show poor liquidity/spread around daily rollover. Exact timing/product behavior broker-specific.
 
-Short-term chiến lược (strategy / 전략) should exclude/stress this cửa sổ (window / 윈도우) rather than assume daytime spread.
+Short-term strategy should exclude/stress this window rather than assume daytime spread.
 
 ## 30. News microstructure
 
-Near high-impact bản phát hành (release / 릴리스):
+Near high-impact release:
 
 ```text
 quotes pulled/widened
@@ -326,28 +323,28 @@ quotes pulled/widened
 → liquidity gradually rebuilds
 ```
 
-Historical candle cannot fully reconstruct executable đường dẫn (path / 경로).
+Historical candle cannot fully reconstruct executable path.
 
 ## 31. Flash events
 
-Phản hồi (feedback / 피드백) loops among stops, leverage, thin liquidity and algorithms can create extreme short-lived moves.
+Feedback loops among stops, leverage, thin liquidity and algorithms can create extreme short-lived moves.
 
-Rủi ro (risk / 위험) controls need:
+Risk controls need:
 
-- max slippage các giả định (assumptions / 가정들);
+- max slippage assumptions;
 - price sanity checks;
 - kill switch;
 - leverage headroom.
 
 ## 32. Quote stuffing / manipulation claims
 
-Specific manipulative practices require bằng chứng (evidence / 증거) and regulatory definitions. Do not label unusual quote hành vi (behavior / 동작) as manipulation from chart alone.
+Specific manipulative practices require evidence and regulatory definitions. Do not label unusual quote behavior as manipulation from chart alone.
 
-Use venue/regulator bằng chứng (evidence / 증거) where available.
+Use venue/regulator evidence where available.
 
-## 33. Spread phân phối (distribution / 분포)
+## 33. Spread distribution
 
-Rather than average spread only, store phân phối (distribution / 분포):
+Rather than average spread only, store distribution:
 
 ```text
 median
@@ -357,35 +354,35 @@ event windows
 stress periods
 ```
 
-Tail spread drives stop/thực thi (execution / 실행) rủi ro (risk / 위험).
+Tail spread drives stop/execution risk.
 
-## 34. Slippage phân phối (distribution / 분포)
+## 34. Slippage distribution
 
 Average slippage can hide asymmetric tail.
 
-Bản ghi (record / 레코드) positive and negative separately, especially stop orders.
+Record positive and negative separately, especially stop orders.
 
 ## 35. Markout
 
-Thực thi (execution / 실행) chất lượng (quality / 품질) can use post-trade markout:
+Execution quality can use post-trade markout:
 
 ```text
 price after 1s / 10s / 1m relative to fill
 ```
 
-For liquidity provider, adverse markout suggests informed/toxic luồng (flow / 흐름); for taker, it can measure thực thi (execution / 실행) timing.
+For liquidity provider, adverse markout suggests informed/toxic flow; for taker, it can measure execution timing.
 
 ## 36. TCA
 
-Giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) phân tích (analysis / 분석) decomposes thực thi (execution / 실행) vs benchmark.
+Transaction Cost Analysis decomposes execution vs benchmark.
 
 Metrics:
 
 - arrival price;
-- hiện thực (implementation / 구현) shortfall;
-- spread capture/chi phí (cost / 비용);
+- implementation shortfall;
+- spread capture/cost;
 - delay;
-- thị trường (market / 시장) impact;
+- market impact;
 - post-trade markout.
 
 ## 37. Retail TCA
@@ -401,27 +398,27 @@ slippage
 exit fill
 ```
 
-Across many trades this reveals broker/session/sự kiện (event / 이벤트) thực thi (execution / 실행) chất lượng (quality / 품질).
+Across many trades this reveals broker/session/event execution quality.
 
 ## 38. Microstructure alpha decays fast
 
 Short-horizon order-flow signals often have short half-life.
 
-If hạ tầng (infrastructure / 인프라) độ trễ (latency / 지연 시간) exceeds tín hiệu (signal / 신호) half-life, research alpha không executable.
+If infrastructure latency exceeds signal half-life, research alpha không executable.
 
-## 39. dữ liệu (data / 데이터) synchronization
+## 39. Data synchronization
 
 Combining spot, futures, rates, options requires clock synchronization.
 
-Milliseconds/seconds mismatch can reverse lead-lag suy luận (inference / 추론).
+Milliseconds/seconds mismatch can reverse lead-lag inference.
 
 ## 40. Causality caution
 
-If futures move 50 ms before spot in mẫu (sample / 표본), that does not automatically prove futures “cause” spot fundamentally. Could reflect dùng chung (common / 공통) thông tin (information / 정보) processed at different speeds.
+If futures move 50 ms before spot in sample, that does not automatically prove futures “cause” spot fundamentally. Could reflect common information processed at different speeds.
 
-## 41. From microstructure to chiến lược (strategy / 전략)
+## 41. From microstructure to strategy
 
-A microstructure chiến lược (strategy / 전략) specification must include:
+A microstructure strategy specification must include:
 
 ```text
 venue/source
@@ -441,25 +438,23 @@ Otherwise paper alpha can be impossible live.
 
 Bạn cần tự giải thích được:
 
-1. thứ tự (order / 순서) luồng (flow / 흐름) vs volume.
-2. Why no toàn cục (global / 전역) FX thứ tự (order / 순서) book exists.
+1. Order flow vs volume.
+2. Why no global FX order book exists.
 3. Dealer inventory/adverse selection.
-4. độ sâu (depth / 깊이)/resilience vs spread.
+4. Depth/resilience vs spread.
 5. Internalization/last look.
 6. Stop clustering mechanics.
 7. Limits of futures/order-book proxies.
 8. TCA and markout.
 9. Why microstructure alpha is execution-dependent.
-10. Why unusual price hành vi (behavior / 동작) is not proof of manipulation.
+10. Why unusual price behavior is not proof of manipulation.
 
 ## Đọc tiếp
 
 → [14 — FX options, volatility and hedging](./14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 
-## Nội bộ (internal / 내부) links
+## Internal links
 
 - [01 — Market structure and instruments](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md)
 - [05 — Execution, brokers, costs and risk](./05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 - [Execution, Microstructure and Trading Portfolio](../03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md)
-
-> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,11 +1,8 @@
-# 09 — Carry, momentum, giá trị (value / 값) và macro FX strategies
+# 09 — Carry, momentum, value và macro FX strategies
 
-> **Mạch đọc:** Đặt **09 — Carry, momentum, giá trị (value / 값) và macro FX strategies** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. chiến lược (strategy / 전략) family khác setup đơn lẻ** sang **2. Carry**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Sau khi hiểu mechanics, regime, indicator và event analysis, có thể bắt đầu nghiên cứu **strategy families**. Mục tiêu của chương này không phải đưa ra tín hiệu giao dịch mà giải thích các nguồn return hypothesis thường gặp trong FX và cách phân biệt chúng.
 
-
-Sau khi hiểu mechanics, regime, indicator và sự kiện (event / 이벤트) phân tích (analysis / 분석), có thể bắt đầu nghiên cứu **chiến lược (strategy / 전략) families**. Mục tiêu của chương này không phải đưa ra tín hiệu giao dịch mà giải thích các nguồn return hypothesis thường gặp trong FX và cách phân biệt chúng.
-
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Economic / behavioral hypothesis
@@ -16,24 +13,24 @@ Economic / behavioral hypothesis
 → attribution
 ```
 
-Một chiến lược (strategy / 전략) family chỉ đáng tin khi return không phụ thuộc vào một chart example đẹp hoặc một parameter cụ thể.
+Một strategy family chỉ đáng tin khi return không phụ thuộc vào một chart example đẹp hoặc một parameter cụ thể.
 
-## 1. chiến lược (strategy / 전략) family khác setup đơn lẻ
+## 1. Strategy family khác setup đơn lẻ
 
-Một setup như “RSI < 30 rồi buy” là quy tắc (rule / 규칙) rất cụ thể.
+Một setup như “RSI < 30 rồi buy” là rule rất cụ thể.
 
-Một chiến lược (strategy / 전략) family như **trend/momentum** rộng hơn: nó giả định price changes có persistence ở một horizon nào đó.
+Một strategy family như **trend/momentum** rộng hơn: nó giả định price changes có persistence ở một horizon nào đó.
 
 Family-level thinking giúp hỏi:
 
-- cơ chế (mechanism / 메커니즘) là gì;
+- mechanism là gì;
 - horizon nào phù hợp;
 - regimes nào thuận lợi/bất lợi;
-- hiện thực (implementation / 구현) nào robust.
+- implementation nào robust.
 
 ## 2. Carry
 
-Carry chiến lược (strategy / 전략) trong FX khai thác chênh lệch yield/financing giữa currencies.
+Carry strategy trong FX khai thác chênh lệch yield/financing giữa currencies.
 
 Simplified intuition:
 
@@ -57,17 +54,17 @@ Carry chỉ profitable nếu adverse spot move không xóa financing advantage.
 
 High yield có thể phản ánh:
 
-- inflation rủi ro (risk / 위험);
-- devaluation rủi ro (risk / 위험);
-- sovereign/political rủi ro (risk / 위험);
-- liquidity rủi ro (risk / 위험);
-- crash rủi ro (risk / 위험).
+- inflation risk;
+- devaluation risk;
+- sovereign/political risk;
+- liquidity risk;
+- crash risk.
 
 Do đó carry portfolios có thể kiếm nhỏ đều rồi mất mạnh trong risk-off unwind.
 
-Rủi ro (risk / 위험) chỉ số (metric / 지표) cần chú ý skew/tail, không chỉ Sharpe.
+Risk metric cần chú ý skew/tail, không chỉ Sharpe.
 
-## 4. Forward discount/premium và carry tín hiệu (signal / 신호)
+## 4. Forward discount/premium và carry signal
 
 Institutional research thường dùng forward points hoặc interest differential thay vì retail swap quote thô.
 
@@ -78,7 +75,7 @@ academic carry signal
 ≠ exact retail realized carry
 ```
 
-Backtest hiện thực (implementation / 구현) phải dùng instrument-specific financing.
+Backtest implementation phải dùng instrument-specific financing.
 
 ## 5. Momentum / trend following
 
@@ -91,12 +88,12 @@ may continue outperforming over holding horizon
 
 Possible mechanisms:
 
-- gradual chính sách (policy / 정책) repricing;
+- gradual policy repricing;
 - capital-flow persistence;
 - underreaction;
-- institutional thực thi (execution / 실행) over thời gian (time / 시간).
+- institutional execution over time.
 
-Hiện thực (implementation / 구현) có thể dùng:
+Implementation có thể dùng:
 
 - time-series momentum;
 - cross-sectional momentum;
@@ -107,7 +104,7 @@ Hiện thực (implementation / 구현) có thể dùng:
 
 ### Time-series
 
-So một currency pair với chính lịch sử (history / 이력) của nó:
+So một currency pair với chính history của nó:
 
 ```text
 Past return > 0 → long
@@ -116,7 +113,7 @@ Past return < 0 → short
 
 ### Cross-sectional
 
-Rank nhiều currencies theo past hiệu năng (performance / 성능):
+Rank nhiều currencies theo past performance:
 
 ```text
 Long strongest group
@@ -125,7 +122,7 @@ Short weakest group
 
 Hai cách có exposure và portfolio dynamics khác nhau.
 
-## 7. Trend chiến lược (strategy / 전략) thường có profile khác carry
+## 7. Trend strategy thường có profile khác carry
 
 Trend following thường có:
 
@@ -137,15 +134,15 @@ Carry thường có thể có:
 - frequent positive carry;
 - occasional sharp reversals.
 
-Kết hợp chiến lược (strategy / 전략) families cần nhìn correlation trong stress, không chỉ full-sample correlation.
+Kết hợp strategy families cần nhìn correlation trong stress, không chỉ full-sample correlation.
 
-## 8. giá trị (value / 값) trong FX
+## 8. Value trong FX
 
-FX giá trị (value / 값) cố ước lượng currency “cheap/expensive” so với fundamental anchor.
+FX value cố ước lượng currency “cheap/expensive” so với fundamental anchor.
 
-Một anchor phổ biến trong academic discussion là purchasing power parity (PPP), nhưng FX giá trị (value / 값) có thể dùng nhiều các mô hình (models / 모델들) khác.
+Một anchor phổ biến trong academic discussion là purchasing power parity (PPP), nhưng FX value có thể dùng nhiều models khác.
 
-Giá trị (value / 값) thường có horizon dài hơn intraday technical setup.
+Value thường có horizon dài hơn intraday technical setup.
 
 ## 9. Purchasing Power Parity
 
@@ -163,17 +160,17 @@ Nhưng PPP deviations có thể tồn tại nhiều năm vì:
 - non-tradables;
 - productivity differences;
 - capital flows;
-- rủi ro (risk / 위험) premium;
-- chính sách (policy / 정책)/regime differences;
-- đo lường (measurement / 측정) issues.
+- risk premium;
+- policy/regime differences;
+- measurement issues.
 
-Do đó PPP không phải short-term timing mô hình (model / 모델).
+Do đó PPP không phải short-term timing model.
 
-## 10. Real exchange tỷ lệ (rate / 비율)
+## 10. Real exchange rate
 
 A simplified real exchange-rate concept combines nominal FX với relative price levels.
 
-Giá trị (value / 값) chiến lược (strategy / 전략) có thể rank currencies theo deviation của real exchange tỷ lệ (rate / 비율) khỏi long-run tham chiếu (reference / 참조).
+Value strategy có thể rank currencies theo deviation của real exchange rate khỏi long-run reference.
 
 Nhưng “mean” có thể shift structurally. Stationarity phải được tested, không assumed.
 
@@ -185,13 +182,13 @@ Behavioral/equilibrium exchange-rate frameworks có thể relate FX valuation t�
 - productivity;
 - net foreign assets;
 - real interest differentials;
-- fiscal/bên ngoài (external / 외부) balance.
+- fiscal/external balance.
 
-Mô hình (model / 모델) choice tạo mô hình (model / 모델) rủi ro (risk / 위험) lớn. Không nên có một “fair giá trị (value / 값)” với false precision.
+Model choice tạo model risk lớn. Không nên có một “fair value” với false precision.
 
-## 12. Macro directional chiến lược (strategy / 전략)
+## 12. Macro directional strategy
 
-Macro FX chiến lược (strategy / 전략) xây thesis từ:
+Macro FX strategy xây thesis từ:
 
 ```text
 policy divergence
@@ -205,9 +202,9 @@ risk regime
 
 Vì vậy macro trader thường cần catalyst hoặc price confirmation.
 
-## 13. Event-driven chiến lược (strategy / 전략)
+## 13. Event-driven strategy
 
-Sự kiện (event / 이벤트) chiến lược (strategy / 전략) tập trung quanh scheduled/unscheduled releases.
+Event strategy tập trung quanh scheduled/unscheduled releases.
 
 Có thể nghiên cứu:
 
@@ -215,24 +212,24 @@ Có thể nghiên cứu:
 - initial overreaction mean reversion;
 - post-announcement drift;
 - volatility expansion;
-- option sự kiện (event / 이벤트) premium.
+- option event premium.
 
 Mỗi hypothesis cần timestamp resolution phù hợp.
 
 ## 14. Mean reversion
 
-Mean-reversion chiến lược (strategy / 전략) giả định displacement hiện tại tạm thời và price sẽ quay về tham chiếu (reference / 참조).
+Mean-reversion strategy giả định displacement hiện tại tạm thời và price sẽ quay về reference.
 
 Possible mechanisms:
 
 - liquidity shock;
 - temporary inventory imbalance;
 - short-term overreaction;
-- fixing/rebalancing luồng (flow / 흐름).
+- fixing/rebalancing flow.
 
 Rủi ro chính: temporary move thực ra là beginning của new trend/regime.
 
-## 15. Relative-value / cross chiến lược (strategy / 전략)
+## 15. Relative-value / cross strategy
 
 Thay vì directional USD exposure, có thể trade relative view:
 
@@ -243,43 +240,43 @@ Short currency B
 
 chọn B để isolate factor tốt hơn.
 
-Ví dụ nếu thesis là Europe outperform Japan, EUR/JPY có thể express thesis trực tiếp hơn EUR/USD nếu USD factor không liên quan — nhưng instrument/liquidity/rủi ro (risk / 위험) vẫn phải đánh giá.
+Ví dụ nếu thesis là Europe outperform Japan, EUR/JPY có thể express thesis trực tiếp hơn EUR/USD nếu USD factor không liên quan — nhưng instrument/liquidity/risk vẫn phải đánh giá.
 
 ## 16. Dollar-neutral không đồng nghĩa risk-neutral
 
 Một basket có net USD exposure gần zero vẫn có:
 
-- EUR/JPY/AUD factor rủi ro (risk / 위험);
-- carry rủi ro (risk / 위험);
-- toàn cục (global / 전역) rủi ro (risk / 위험) sentiment;
-- liquidity rủi ro (risk / 위험).
+- EUR/JPY/AUD factor risk;
+- carry risk;
+- global risk sentiment;
+- liquidity risk.
 
 Neutrality luôn phải nói neutral đối với factor nào.
 
-## 17. Statistical relative giá trị (value / 값)
+## 17. Statistical relative value
 
-Pairs/spread các mô hình (models / 모델들) có thể tìm mean-reverting relationship giữa FX rates hoặc related markets.
+Pairs/spread models có thể tìm mean-reverting relationship giữa FX rates hoặc related markets.
 
 Nhưng correlation cao không đủ. Cần kiểm tra:
 
 - economic linkage;
 - stationarity/cointegration if relevant;
 - structural breaks;
-- thực thi (execution / 실행) chi phí (cost / 비용).
+- execution cost.
 
-## 18. Volatility chiến lược (strategy / 전략)
+## 18. Volatility strategy
 
-FX options cho phép chiến lược (strategy / 전략) trên volatility thay vì chỉ direction:
+FX options cho phép strategy trên volatility thay vì chỉ direction:
 
 - long/short volatility;
 - relative vol;
-- skew/rủi ro (risk / 위험) reversal;
-- sự kiện (event / 이벤트) volatility;
+- skew/risk reversal;
+- event volatility;
 - carry from option premium.
 
-Đây là separate rủi ro (risk / 위험) dimension và được học sâu ở chapter 14.
+Đây là separate risk dimension và được học sâu ở chapter 14.
 
-## 19. Hedging chiến lược (strategy / 전략) khác alpha chiến lược (strategy / 전략)
+## 19. Hedging strategy khác alpha strategy
 
 Một corporate/portfolio FX hedge có mục tiêu giảm variance hoặc protect liabilities, không phải maximize standalone P/L.
 
@@ -295,7 +292,7 @@ liquidity
 
 Không nên gọi hedge “thất bại” chỉ vì position hedge mất tiền khi underlying exposure tăng giá.
 
-## 20. tín hiệu (signal / 신호) combination
+## 20. Signal combination
 
 Có thể combine:
 
@@ -318,16 +315,16 @@ Một cách:
 Score = w1*Carry_z + w2*Momentum_z + w3*Value_z
 ```
 
-Nhưng weights tạo estimation rủi ro (risk / 위험).
+Nhưng weights tạo estimation risk.
 
-Nên kiểm thử (test / 테스트):
+Nên test:
 
 - equal weights;
 - broad stable ranges;
 - walk-forward weights;
 - sensitivity to normalization.
 
-## 22. Ranking vs absolute tín hiệu (signal / 신호)
+## 22. Ranking vs absolute signal
 
 Cross-sectional strategies thường rank currencies:
 
@@ -340,7 +337,7 @@ Bottom quantile → short
 
 ## 23. Volatility scaling
 
-Để rủi ro (risk / 위험) across pairs comparable, position kích thước (size / 크기) có thể quy mô (scale / 규모) inversely với volatility:
+Để risk across pairs comparable, position size có thể scale inversely với volatility:
 
 ```text
 Weight_i ∝ Signal_i / Volatility_i
@@ -348,11 +345,11 @@ Weight_i ∝ Signal_i / Volatility_i
 
 Nhưng volatility estimate lags shocks. Stress cap vẫn cần.
 
-## 24. rủi ro (risk / 위험) parity không tạo alpha
+## 24. Risk parity không tạo alpha
 
-Equalizing rủi ro (risk / 위험) contribution chỉ là portfolio construction. Nó không làm signals có positive expectancy.
+Equalizing risk contribution chỉ là portfolio construction. Nó không làm signals có positive expectancy.
 
-Alpha hypothesis và rủi ro (risk / 위험) allocation phải tách riêng.
+Alpha hypothesis và risk allocation phải tách riêng.
 
 ## 25. Currency basket exposure
 
@@ -368,15 +365,15 @@ Short USD/JPY
 
 có concentrated short-USD factor.
 
-Portfolio optimizer phải nhìn factor/currency ma trận (matrix / 행렬), không chỉ ticket weights.
+Portfolio optimizer phải nhìn factor/currency matrix, không chỉ ticket weights.
 
 ## 26. Carry + momentum
 
 Một practical research question:
 
-> Carry tín hiệu (signal / 신호) có tốt hơn khi aligned với momentum không?
+> Carry signal có tốt hơn khi aligned với momentum không?
 
-Kiểm thử (test / 테스트) conditional groups:
+Test conditional groups:
 
 ```text
 High carry + positive momentum
@@ -385,21 +382,21 @@ Low carry + positive momentum
 Low carry + negative momentum
 ```
 
-Sau đó so phân phối (distribution / 분포) net of chi phí (cost / 비용).
+Sau đó so distribution net of cost.
 
-Không assume combination better trước kiểm thử (test / 테스트).
+Không assume combination better trước test.
 
-## 27. giá trị (value / 값) + momentum
+## 27. Value + momentum
 
-Giá trị (value / 값) có thể bắt falling knife; momentum có thể buy expensive currency.
+Value có thể bắt falling knife; momentum có thể buy expensive currency.
 
-Combination đôi khi dùng momentum làm timing filter cho long-horizon giá trị (value / 값).
+Combination đôi khi dùng momentum làm timing filter cho long-horizon value.
 
-Nhưng filter có thể làm giảm cỡ mẫu (sample size / 표본 크기) và tăng data-mining rủi ro (risk / 위험).
+Nhưng filter có thể làm giảm sample size và tăng data-mining risk.
 
-## 28. Regime-conditioned chiến lược (strategy / 전략)
+## 28. Regime-conditioned strategy
 
-Một chiến lược (strategy / 전략) có thể chỉ active khi:
+Một strategy có thể chỉ active khi:
 
 ```text
 volatility below threshold
@@ -409,9 +406,9 @@ liquidity normal
 
 Conditioning phải có economic reason và được xác định trước, nếu không rất dễ overfit.
 
-## 29. chiến lược (strategy / 전략) turnover
+## 29. Strategy turnover
 
-Turnover quyết định sensitivity với chi phí (cost / 비용).
+Turnover quyết định sensitivity với cost.
 
 ```text
 Annual turnover
@@ -420,62 +417,62 @@ Annual turnover
 
 có thể ăn phần lớn gross alpha.
 
-Tín hiệu (signal / 신호) frequency cao chưa chắc tốt nếu edge per trade nhỏ.
+Signal frequency cao chưa chắc tốt nếu edge per trade nhỏ.
 
-## 30. sức chứa (capacity / 용량)
+## 30. Capacity
 
-Retail major-FX chiến lược (strategy / 전략) thường có sức chứa (capacity / 용량) lớn so với account nhỏ, nhưng không nên bỏ concept.
+Retail major-FX strategy thường có capacity lớn so với account nhỏ, nhưng không nên bỏ concept.
 
-Sức chứa (capacity / 용량) giảm khi:
+Capacity giảm khi:
 
 - pair illiquid;
 - horizon ngắn;
-- thứ tự (order / 순서) kích thước (size / 크기) lớn;
-- sự kiện (event / 이벤트) thực thi (execution / 실행);
+- order size lớn;
+- event execution;
 - exotic/offshore instruments.
 
 ## 31. Crowding
 
-Một chiến lược (strategy / 전략) widely known như carry/momentum có thể bị crowded.
+Một strategy widely known như carry/momentum có thể bị crowded.
 
 Crowding có thể:
 
 - compress expected return;
 - increase unwind correlation;
-- worsen crash rủi ro (risk / 위험).
+- worsen crash risk.
 
-Không dễ đo trực tiếp, nên positioning/liquidity proxies chỉ là partial thông tin (information / 정보).
+Không dễ đo trực tiếp, nên positioning/liquidity proxies chỉ là partial information.
 
 ## 32. Structural break
 
 FX regimes thay đổi vì:
 
-- monetary khung phần mềm (framework / 프레임워크);
+- monetary framework;
 - capital controls;
-- thị trường (market / 시장) cấu trúc (structure / 구조);
+- market structure;
 - intervention;
 - crisis;
 - regulation.
 
-Một chiến lược (strategy / 전략) profitable 1990–2010 không tự động representative 2020s.
+Một strategy profitable 1990–2010 không tự động representative 2020s.
 
-Kiểm tra hợp lệ (validation / 검증) phải span multiple regimes và emphasize recent relevance without discarding lịch sử (history / 이력) arbitrarily.
+Validation phải span multiple regimes và emphasize recent relevance without discarding history arbitrarily.
 
-## 33. chiến lược (strategy / 전략) decay
+## 33. Strategy decay
 
-Sau triển khai (deployment / 배포), edge có thể giảm vì:
+Sau deployment, edge có thể giảm vì:
 
-- thị trường (market / 시장) adaptation;
-- chi phí (cost / 비용) changes;
-- dữ liệu (data / 데이터) relationship breaks;
+- market adaptation;
+- cost changes;
+- data relationship breaks;
 - crowding;
-- hiện thực (implementation / 구현) drift.
+- implementation drift.
 
-Monitoring cần compare live phân phối (distribution / 분포) với research các giả định (assumptions / 가정들).
+Monitoring cần compare live distribution với research assumptions.
 
-## 34. Attribution by return nguồn (source / 소스)
+## 34. Attribution by return source
 
-Một FX chiến lược (strategy / 전략) P/L nên tách nếu có thể:
+Một FX strategy P/L nên tách nếu có thể:
 
 ```text
 Spot move
@@ -486,20 +483,20 @@ Hedge effect
 Currency conversion
 ```
 
-Nếu không, trader có thể tưởng tín hiệu (signal / 신호) kiếm tiền trong khi actual return chủ yếu đến từ carry hoặc broad USD beta.
+Nếu không, trader có thể tưởng signal kiếm tiền trong khi actual return chủ yếu đến từ carry hoặc broad USD beta.
 
 ## 35. Benchmark
 
-Chiến lược (strategy / 전략) cần benchmark phù hợp:
+Strategy cần benchmark phù hợp:
 
 - cash/risk-free;
 - passive currency exposure;
-- simple carry/momentum quy tắc (rule / 규칙);
+- simple carry/momentum rule;
 - equal-risk baseline.
 
-Một complex mô hình (model / 모델) chỉ có giá trị (value / 값) nếu vượt simple baseline sau chi phí (cost / 비용) và độ phức tạp (complexity / 복잡도) penalty.
+Một complex model chỉ có value nếu vượt simple baseline sau cost và complexity penalty.
 
-## 36. chiến lược (strategy / 전략) specification template
+## 36. Strategy specification template
 
 ```text
 Universe:
@@ -536,9 +533,9 @@ Kill criteria:
 Conditions for research review or shutdown.
 ```
 
-## 37. Không đánh giá bằng win tỷ lệ (rate / 비율)
+## 37. Không đánh giá bằng win rate
 
-Carry/trend/giá trị (value / 값) có payoff distributions khác nhau.
+Carry/trend/value có payoff distributions khác nhau.
 
 Cần nhìn:
 
@@ -546,17 +543,17 @@ Cần nhìn:
 - volatility;
 - drawdown;
 - skew;
-- tail mất mát (loss / 손실);
+- tail loss;
 - turnover;
-- chi phí (cost / 비용);
+- cost;
 - correlation;
-- cỡ mẫu (sample size / 표본 크기).
+- sample size.
 
-Win tỷ lệ (rate / 비율) alone gần như không đủ.
+Win rate alone gần như không đủ.
 
-## 38. Không chọn chiến lược (strategy / 전략) vì backtest đẹp nhất
+## 38. Không chọn strategy vì backtest đẹp nhất
 
-Nếu thử 100 chiến lược (strategy / 전략) families/settings rồi chọn top Sharpe, estimate bị selection độ lệch (bias / 편향).
+Nếu thử 100 strategy families/settings rồi chọn top Sharpe, estimate bị selection bias.
 
 Chapter 10 sẽ đi sâu cách backtest point-in-time, multiple testing và robustness.
 
@@ -566,24 +563,22 @@ Bạn cần phân biệt được:
 
 1. Carry return và spot return.
 2. Time-series và cross-sectional momentum.
-3. giá trị (value / 값) horizon và timing bài toán (problem / 문제).
-4. Macro chiến lược (strategy / 전략) với sự kiện (event / 이벤트) chiến lược (strategy / 전략).
-5. Mean reversion rủi ro (risk / 위험) khi regime shifts.
-6. Alpha tín hiệu (signal / 신호) và portfolio construction.
+3. Value horizon và timing problem.
+4. Macro strategy với event strategy.
+5. Mean reversion risk khi regime shifts.
+6. Alpha signal và portfolio construction.
 7. Currency-factor aggregation.
-8. Turnover/chi phí (cost / 비용)/sức chứa (capacity / 용량).
-9. chiến lược (strategy / 전략) family và parameterized hiện thực (implementation / 구현).
+8. Turnover/cost/capacity.
+9. Strategy family và parameterized implementation.
 10. Vì sao attribution quan trọng.
 
 ## Đọc tiếp
 
 → [10 — Backtesting and point-in-time FX data](./10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 
-## Nội bộ (internal / 내부) links
+## Internal links
 
 - [08 — Fundamental and event-driven FX analysis](./08_FUNDAMENTAL_AND_EVENT_DRIVEN_FX_ANALYSIS.md)
 - [07 — Technical indicators](./07_TECHNICAL_INDICATORS_AS_DATA_TRANSFORMATIONS.md)
 - [Strategy research and robustness](../04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md)
 - [Systematic risk, backtest and execution](../02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md)
-
-> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
