@@ -12,7 +12,7 @@ Bộ này không ép toàn bộ quá khứ của lãnh thổ Việt Nam hiện n
 
 Bắt đầu ở [`00_index_and_dependency.md`](00_index_and_dependency.md).
 
-Library hiện có ba layer hoàn chỉnh:
+Library hiện có bốn layer:
 
 ### 1. Timeline causal — 01 đến 23
 
@@ -36,9 +36,20 @@ Mỗi chapter nối timeline với geography, economy, society, technology, inst
 - [`29_environment_disaster_and_adaptation_history.md`](29_environment_disaster_and_adaptation_history.md)
 - [`30_historiography_collective_memory_and_heritage.md`](30_historiography_collective_memory_and_heritage.md)
 
-Những file này không phải summary lại 01–23. Chúng theo một variable qua hàng nghìn năm để thấy continuity/change.
+Những file này không summary lại 01–23. Chúng theo một variable qua hàng nghìn năm để thấy continuity/change.
 
-### 3. Reference & field layer — 31 đến 33
+### 3. Regional & network deep dives — 34 đến 37
+
+Layer này tránh bias xem vùng ngoài Red River/Đại Việt chỉ là “frontier” của central state.
+
+- [`34_champa_polities_religion_trade_and_continuity.md`](34_champa_polities_religion_trade_and_continuity.md): Champa như multiple regional polities, basin–port economy, Mỹ Sơn, Vijaya, Panduranga và continuity sau 1471.
+- [`35_oc_eo_funan_and_early_mekong_world.md`](35_oc_eo_funan_and_early_mekong_world.md): Óc Eo/Funan, delta ecology, canal, craft production và Indian Ocean–South China Sea connectivity.
+- [`36_uplands_highlands_and_lowland_state_relations.md`](36_uplands_highlands_and_lowland_state_relations.md): upland trade, indirect rule, ethnic classification, Central Highlands, war và land/integration.
+- [`37_maritime_vietnam_ports_diasporas_and_sea_routes.md`](37_maritime_vietnam_ports_diasporas_and_sea_routes.md): Vân Đồn, Champa ports, Hội An, Hà Tiên, colonial ports và container/GVC economy.
+
+Sau khi đọc 34–37, nên quay lại chapter 14: frontier lúc đó sẽ hiện ra như interaction zone giữa nhiều system, không phải một arrow “Nam tiến”.
+
+### 4. Reference & field layer — 31 đến 33
 
 - [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): timeline tra nhanh.
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + source/evidence discipline.
@@ -50,13 +61,15 @@ Mỗi giai đoạn cố gắng giữ đồng thời nhiều layer:
 
 **Timeline** để không đảo trước–sau. **Geography** để hiểu capital/battlefield/trade route. **Economy** để biết food, land, tax, labor và exchange nuôi order thế nào. **Society** để thấy household, village, elite, gender, ethnicity, migration. **Technology & infrastructure** để nối metallurgy, irrigation, road, port, printing, rail, electricity và digital network với capacity. **Religion / ideas / education** để hiểu legitimacy/information. **Environment** để thấy flood, disease, delta và climate constraint. **Di tích** để kiểm tra mechanism bằng landscape.
 
+Regional deep dives thêm một câu hỏi nữa: **unit of analysis đúng là gì?** Một river basin, port network hoặc upland corridor có thể hữu ích hơn modern province/national border.
+
 ## Nguyên tắc evidence
 
 Các chapter cố ý phân biệt **fact tương đối chắc**, **archaeological inference**, **historical interpretation**, **contested interpretation**, **tradition/legend**, **collective memory** và **national narrative**.
 
 Một nguồn sơ cấp không tự động đúng hơn source thứ cấp: chronicle có court bias; colonial police record có governance bias; memoir có memory limitation. Archaeology mạnh về material context nhưng institutional meaning vẫn cần inference.
 
-Với issue còn debate, library nói rõ uncertainty thay vì tạo false precision.
+Với issue còn debate, library nói rõ uncertainty thay vì tạo false precision. External name như Funan/Lâm Ấp hoặc colonial ethnic label cũng không được coi tự động là self-identification bất biến của local society.
 
 ## Di tích: không đọc như photo caption
 
@@ -81,6 +94,8 @@ Important scholarly keyword được giữ/note bằng English. Korean term ch�
 ## Nguồn nền
 
 Xương sống chronology/interpretation dùng scholarship chuyên ngành về Vietnam/Southeast Asia, including major university presses; archaeology/heritage đối chiếu Viện/Bảo tàng/Cục Di sản và UNESCO khi phù hợp; modern economy/integration dùng sources như World Bank, WTO, ASEAN và dated official/statistical material.
+
+Regional deep dives bổ sung scholarship chuyên về Champa/Panduranga, Funan–Óc Eo/Lower Mekong, Southeast Asian uplands và maritime trade để national narrative không thay thế regional evidence.
 
 For politically/interpretively contested twentieth-century topics, library avoids turning one side's terminology into analytical conclusion; it separates documented event, source position and scholarly interpretation.
 
