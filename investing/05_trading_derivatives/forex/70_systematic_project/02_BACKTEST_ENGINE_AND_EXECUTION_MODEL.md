@@ -1,13 +1,10 @@
-# 02 — Backtest Engine và mô hình thực thi (execution model / 실행 모델) cho Systematic FX
+# 02 — Backtest Engine và Execution Model cho Systematic FX
 
-> **Mạch đọc:** Đặt **02 — Backtest Engine và mô hình thực thi (execution model / 실행 모델) cho Systematic FX** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Causality trước hiệu năng (performance / 성능)** sang **2. Bốn timestamp nên tách riêng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Một backtest engine tốt không phải là hàm `signal → return`. Nó là một **state machine theo thời gian** mô phỏng những gì strategy biết, lệnh nào được tạo, giá nào có thể thực thi, account thay đổi ra sao và chi phí nào phát sinh.
 
+Nếu engine cho phép strategy vô tình nhìn future bar, fill tại mid-price không tồn tại, hoặc bỏ qua financing/margin thì kết quả đẹp đến đâu cũng không phải bằng chứng cho edge.
 
-Một backtest engine tốt không phải là hàm `signal → return`. Nó là một **máy trạng thái (state machine / 상태 머신) theo thời gian** mô phỏng những gì chiến lược (strategy / 전략) biết, lệnh nào được tạo, giá nào có thể thực thi, account thay đổi ra sao và chi phí nào phát sinh.
-
-Nếu engine cho phép chiến lược (strategy / 전략) vô tình nhìn future bar, fill tại mid-price không tồn tại, hoặc bỏ qua financing/margin thì kết quả đẹp đến đâu cũng không phải bằng chứng cho edge.
-
-## 1. Causality trước hiệu năng (performance / 성능)
+## 1. Causality trước performance
 
 Mỗi quyết định phải theo thứ tự:
 
@@ -22,7 +19,7 @@ Market / event data becomes available
 → risk is recomputed
 ```
 
-Không được cập nhật (update / 업데이트) position trước khi thực thi (execution / 실행) sự kiện (event / 이벤트) xảy ra.
+Không được update position trước khi execution event xảy ra.
 
 ## 2. Bốn timestamp nên tách riêng
 
@@ -35,11 +32,11 @@ order_arrival_timestamp
 fill_timestamp
 ```
 
-Với daily chiến lược (strategy / 전략), các timestamp có thể gần nhau. Với event-driven chiến lược (strategy / 전략), chênh lệch milliseconds/seconds có thể material.
+Với daily strategy, các timestamp có thể gần nhau. Với event-driven strategy, chênh lệch milliseconds/seconds có thể material.
 
-Backtest phải define độ trễ (latency / 지연 시간) giả định (assumption / 가정) thay vì implicitly cho `signal_timestamp = fill_timestamp`.
+Backtest phải define latency assumption thay vì implicitly cho `signal_timestamp = fill_timestamp`.
 
-## 3. quyết định (decision / 결정) price không phải fill price
+## 3. Decision price không phải fill price
 
 Lưu ít nhất:
 
@@ -50,20 +47,20 @@ arrival_ask
 fill_price
 ```
 
-Hiện thực (implementation / 구현) shortfall có thể tách:
+Implementation shortfall có thể tách:
 
 ```text
 Decision → Arrival
 Arrival → Fill
 ```
 
-Nếu chỉ lưu final P/L, bạn không biết edge mất ở tín hiệu (signal / 신호) hay thực thi (execution / 실행).
+Nếu chỉ lưu final P/L, bạn không biết edge mất ở signal hay execution.
 
 ## 4. Executable side
 
-Long entry bằng thị trường (market / 시장) thứ tự (order / 순서) thường cross ask.
+Long entry bằng market order thường cross ask.
 
-Long exit bằng thị trường (market / 시장) sell thường hit bid.
+Long exit bằng market sell thường hit bid.
 
 Short entry thường sell at bid; buy-to-cover thường cross ask.
 
@@ -74,11 +71,11 @@ Buy ≠ mid
 Sell ≠ mid
 ```
 
-Một backtest dùng mid cho cả hai phía đang xóa spread khỏi thị trường (market / 시장).
+Một backtest dùng mid cho cả hai phía đang xóa spread khỏi market.
 
-## 5. thứ tự (order / 순서) mô hình (model / 모델) phải tường minh (explicit / 명시적)
+## 5. Order model phải explicit
 
-Tối thiểu hỗ trợ (support / 지원) conceptual states:
+Tối thiểu support conceptual states:
 
 ```text
 CREATED
@@ -92,11 +89,11 @@ EXPIRED
 UNKNOWN
 ```
 
-Không phải mọi chiến lược (strategy / 전략) cần simulate mọi broker giao thức (protocol / 프로토콜), nhưng trạng thái (state / 상태) ngữ nghĩa (semantics / 의미론) phải rõ để sau này nối live hệ thống (system / 시스템) không phải viết lại mô hình tư duy (mental model / 사고 모델).
+Không phải mọi strategy cần simulate mọi broker protocol, nhưng state semantics phải rõ để sau này nối live system không phải viết lại mental model.
 
-## 6. thị trường (market / 시장) thứ tự (order / 순서)
+## 6. Market order
 
-Thực thi (execution / 실행) giả định (assumption / 가정) tối thiểu:
+Execution assumption tối thiểu:
 
 ```text
 Buy market
@@ -106,18 +103,18 @@ Sell market
 → fill at current bid - adverse slippage
 ```
 
-Slippage có thể stochastic hoặc deterministic theo mô hình (model / 모델), nhưng phải versioned.
+Slippage có thể stochastic hoặc deterministic theo model, nhưng phải versioned.
 
-## 7. Limit thứ tự (order / 순서)
+## 7. Limit order
 
-Limit thứ tự (order / 순서) cần hai questions:
+Limit order cần hai questions:
 
 ```text
 Did market become executable at limit?
 If yes, was enough liquidity available to fill requested size?
 ```
 
-Bar-only dữ liệu (data / 데이터) không biết hàng đợi (queue / 큐) position.
+Bar-only data không biết queue position.
 
 Vì vậy nếu dùng OHLC:
 
@@ -127,15 +124,15 @@ Low <= buy_limit
 
 không đủ để biết full fill chắc chắn.
 
-Có thể dùng conservative quy tắc (rule / 규칙) như:
+Có thể dùng conservative rule như:
 
 ```text
 price must trade through limit by buffer
 ```
 
-hoặc assign fill xác suất (probability / 확률), nhưng limitation phải ghi rõ.
+hoặc assign fill probability, nhưng limitation phải ghi rõ.
 
-## 8. Stop thứ tự (order / 순서)
+## 8. Stop order
 
 Stop trigger không đồng nghĩa fill tại stop price.
 
@@ -151,7 +148,7 @@ Gap qua stop phải fill tại first modeled executable price, không force fill
 
 ## 9. Stop-limit
 
-Stop-limit có hai rủi ro (risk / 위험):
+Stop-limit có hai risk:
 
 ```text
 Trigger risk
@@ -173,7 +170,7 @@ Low = 90
 Close = 105
 ```
 
-Nếu chiến lược (strategy / 전략) có stop 95 và mục tiêu (target / 대상) 108, OHLC không cho biết cái nào xảy ra trước.
+Nếu strategy có stop 95 và target 108, OHLC không cho biết cái nào xảy ra trước.
 
 Các lựa chọn:
 
@@ -184,11 +181,11 @@ Use explicit intrabar path assumption
 Reject ambiguous trades from evaluation
 ```
 
-Không chọn thứ tự (ordering / 순서) làm equity curve đẹp nhất.
+Không chọn ordering làm equity curve đẹp nhất.
 
 ## 11. Same-bar entry and exit
 
-Nếu tín hiệu (signal / 신호) xuất hiện từ close của bar, chiến lược (strategy / 전략) không thể entry ở chính close rồi cũng dùng high/low cùng bar để stop/mục tiêu (target / 대상) như thể đã ở trong thị trường (market / 시장) cả bar.
+Nếu signal xuất hiện từ close của bar, strategy không thể entry ở chính close rồi cũng dùng high/low cùng bar để stop/target như thể đã ở trong market cả bar.
 
 Define:
 
@@ -197,7 +194,7 @@ Signal computed at close T
 → earliest execution at T+1 open/quote
 ```
 
-trừ khi dữ liệu (data / 데이터)/sự kiện (event / 이벤트) timing thực sự cho phép khác.
+trừ khi data/event timing thực sự cho phép khác.
 
 ## 12. Partial fills
 
@@ -217,11 +214,11 @@ cancel
 expire
 ```
 
-according to thứ tự (order / 순서) chính sách (policy / 정책).
+according to order policy.
 
 ## 13. Rejection
 
-Thứ tự (order / 순서) có thể rejected vì:
+Order có thể rejected vì:
 
 ```text
 insufficient margin
@@ -232,35 +229,35 @@ risk limit
 instrument unavailable
 ```
 
-Engine nên bản ghi (record / 레코드) rejection as sự kiện (event / 이벤트), không biến thành silent no-trade.
+Engine nên record rejection as event, không biến thành silent no-trade.
 
-## 14. Slippage mô hình (model / 모델)
+## 14. Slippage model
 
 Một hierarchy đơn giản:
 
-### Mức (level / 수준) 1 — fixed
+### Level 1 — fixed
 
 ```text
 slippage = constant pips
 ```
 
-### Mức (level / 수준) 2 — volatility/session-aware
+### Level 2 — volatility/session-aware
 
 ```text
 slippage = f(pair, session, volatility)
 ```
 
-### Mức (level / 수준) 3 — sự kiện (event / 이벤트)/liquidity-aware
+### Level 3 — event/liquidity-aware
 
 ```text
 slippage = f(spread, volatility, event flag, size, depth proxy)
 ```
 
-Không cần mô hình (model / 모델) phức tạp hơn dữ liệu (data / 데이터) chất lượng (quality / 품질).
+Không cần model phức tạp hơn data quality.
 
-## 15. chi phí (cost / 비용) scenario ma trận (matrix / 행렬)
+## 15. Cost scenario matrix
 
-Mọi chiến lược (strategy / 전략) nên chạy ít nhất:
+Mọi strategy nên chạy ít nhất:
 
 ```text
 Base cost
@@ -269,9 +266,9 @@ Base cost
 Stress-event cost
 ```
 
-Nếu edge biến mất ngay ở 1.2x normal chi phí (cost / 비용), chiến lược (strategy / 전략) có little hiện thực (implementation / 구현) margin.
+Nếu edge biến mất ngay ở 1.2x normal cost, strategy có little implementation margin.
 
-## 16. Spread mô hình (model / 모델)
+## 16. Spread model
 
 Nếu historical bid/ask có sẵn, dùng observed spread.
 
@@ -281,7 +278,7 @@ Nếu không:
 spread_by_pair_session_regime
 ```
 
-nên conservative hơn một toàn cục (global / 전역) constant.
+nên conservative hơn một global constant.
 
 Store:
 
@@ -289,9 +286,9 @@ Store:
 spread_model_version
 ```
 
-trong experiment siêu dữ liệu (metadata / 메타데이터).
+trong experiment metadata.
 
-## 17. Commission mô hình (model / 모델)
+## 17. Commission model
 
 Commission có thể theo:
 
@@ -302,7 +299,7 @@ per ticket
 minimum fee
 ```
 
-Không hard-code giả định (assumption / 가정) từ một broker nếu chiến lược (strategy / 전략) mục tiêu (target / 대상) instrument khác.
+Không hard-code assumption từ một broker nếu strategy target instrument khác.
 
 ## 18. Financing / rollover
 
@@ -335,7 +332,7 @@ slippage_cost
 conversion_pnl
 ```
 
-Chiến lược (strategy / 전략) carry chỉ có thể được hiểu nếu attribution riêng.
+Strategy carry chỉ có thể được hiểu nếu attribution riêng.
 
 ## 20. Account currency conversion
 
@@ -354,13 +351,13 @@ Nếu account KRW:
 GBP → USD → KRW
 ```
 
-hoặc direct tỷ lệ (rate / 비율) nếu available.
+hoặc direct rate nếu available.
 
-Conversion phải dùng tỷ lệ (rate / 비율) tại relevant accounting timestamp.
+Conversion phải dùng rate tại relevant accounting timestamp.
 
-## 21. Position đối tượng (object / 객체)
+## 21. Position object
 
-Một position trạng thái (state / 상태) có thể gồm:
+Một position state có thể gồm:
 
 ```text
 position_id
@@ -375,18 +372,18 @@ margin_required
 strategy_id
 ```
 
-Không chỉ lưu lot kích thước (size / 크기).
+Không chỉ lưu lot size.
 
 ## 22. Balance và equity
 
-Dùng chung (common / 공통) ngữ nghĩa (semantics / 의미론):
+Common semantics:
 
 ```text
 Balance = realized account cash/equity base before open P/L
 Equity = Balance + Unrealized P/L
 ```
 
-Define chính xác (exact / 정확한) ngữ nghĩa (semantics / 의미론) của engine và giữ nhất quán.
+Define exact semantics của engine và giữ nhất quán.
 
 ## 23. Margin accounting
 
@@ -399,17 +396,17 @@ free_margin = equity - used_margin
 margin_level = equity / used_margin × 100%
 ```
 
-Actual broker quy tắc (rule / 규칙) có thể phức tạp hơn.
+Actual broker rule có thể phức tạp hơn.
 
-Engine phải phiên bản (version / 버전) margin chính sách (policy / 정책).
+Engine phải version margin policy.
 
-## 24. Margin quy tắc (rule / 규칙) is product-specific
+## 24. Margin rule is product-specific
 
 Retail FX, CFD và exchange futures có margin mechanics khác nhau.
 
 Do not create one universal formula.
 
-Use giao diện (interface / 인터페이스) concept:
+Use interface concept:
 
 ```text
 MarginModel
@@ -432,7 +429,7 @@ Không close positions at perfect threshold price.
 
 Liquidation itself may incur adverse slippage.
 
-## 26. Portfolio thứ tự (ordering / 순서) during liquidation
+## 26. Portfolio ordering during liquidation
 
 Broker có thể liquidate:
 
@@ -442,9 +439,9 @@ largest margin first
 all positions proportionally
 ```
 
-Quy tắc (rule / 규칙) depends on provider.
+Rule depends on provider.
 
-If unknown, choose conservative tường minh (explicit / 명시적) giả định (assumption / 가정) and sensitivity-test alternatives.
+If unknown, choose conservative explicit assumption and sensitivity-test alternatives.
 
 ## 27. Effective leverage
 
@@ -454,13 +451,13 @@ At each timestamp:
 Gross Leverage = Σ|notional_i| / equity
 ```
 
-Bản ghi (record / 레코드) thời gian (time / 시간) series.
+Record time series.
 
 Drawdown can increase effective leverage even without new trade.
 
 ## 28. Currency-factor exposure
 
-Engine should expose position legs to rủi ro (risk / 위험) tầng (layer / 계층):
+Engine should expose position legs to risk layer:
 
 ```text
 Long EUR/USD
@@ -469,9 +466,9 @@ Long EUR/USD
 
 Do not wait until reporting stage to discover all positions are short USD.
 
-## 29. rủi ro (risk / 위험) check before thứ tự (order / 순서) acceptance
+## 29. Risk check before order acceptance
 
-Thứ tự (order / 순서) chuỗi xử lý (pipeline / 파이프라인):
+Order pipeline:
 
 ```text
 signal
@@ -492,7 +489,7 @@ margin buffer
 max event risk
 ```
 
-## 30. sự kiện (event / 이벤트) sourcing / ledger
+## 30. Event sourcing / ledger
 
 Prefer append-only events conceptually:
 
@@ -507,7 +504,7 @@ ORDER_CANCELED
 POSITION_CLOSED
 ```
 
-Then reconstruct account trạng thái (state / 상태) from events.
+Then reconstruct account state from events.
 
 This improves auditability.
 
@@ -515,7 +512,7 @@ This improves auditability.
 
 ### Trade ledger
 
-Tracks chiến lược (strategy / 전략) vòng đời (lifecycle / 생명주기).
+Tracks strategy lifecycle.
 
 ### Account ledger
 
@@ -532,7 +529,7 @@ margin
 
 Một trade có thể map nhiều fills và ledger entries.
 
-## 32. Deterministic sự kiện (event / 이벤트) thứ tự (order / 순서)
+## 32. Deterministic event order
 
 When two events share timestamp, define priority.
 
@@ -546,7 +543,7 @@ Example:
 5. financing/accounting event
 ```
 
-Different thứ tự (ordering / 순서) can thay đổi (change / 변경) kết quả (result / 결과).
+Different ordering can change result.
 
 Document it.
 
@@ -560,9 +557,9 @@ random_seed
 
 must be stored.
 
-Run multiple seeds and report phân phối (distribution / 분포), not one lucky simulation.
+Run multiple seeds and report distribution, not one lucky simulation.
 
-## 34. chiến lược (strategy / 전략) giao diện (interface / 인터페이스)
+## 34. Strategy interface
 
 Conceptual API:
 
@@ -572,29 +569,29 @@ on_fill(fill_event) -> state update
 on_timer(timer_event) -> proposed_orders
 ```
 
-Chiến lược (strategy / 전략) should not directly mutate broker/account ledger.
+Strategy should not directly mutate broker/account ledger.
 
 Separation reduces accidental cheating.
 
-## 35. mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)
+## 35. Execution model interface
 
 ```text
 execute(order, market_state) -> fills/rejection
 ```
 
-Mô hình thực thi (execution model / 실행 모델) must not truy cập (access / 접근) future thị trường (market / 시장) trạng thái (state / 상태).
+Execution model must not access future market state.
 
-## 36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)
+## 36. Financing model interface
 
 ```text
 accrue(position, timestamp, calendar) -> cashflow
 ```
 
-Keeps carry lô-gic (logic / 논리) separate from chiến lược (strategy / 전략) tín hiệu (signal / 신호).
+Keeps carry logic separate from strategy signal.
 
-## 37. đơn vị (unit / 단위) tests — P/L
+## 37. Unit tests — P/L
 
-Example bất biến (invariant / 불변식):
+Example invariant:
 
 ```text
 Long 100,000 EUR/USD
@@ -603,11 +600,11 @@ Exit 1.1010
 Gross price P/L = 100 USD
 ```
 
-Kiểm thử (test / 테스트) long and short, JPY pairs, cross pairs and non-USD account currency.
+Test long and short, JPY pairs, cross pairs and non-USD account currency.
 
-## 38. đơn vị (unit / 단위) tests — spread
+## 38. Unit tests — spread
 
-If no thị trường (market / 시장) move and trader:
+If no market move and trader:
 
 ```text
 buy at ask
@@ -616,9 +613,9 @@ immediately sell at bid
 
 P/L should be negative by spread plus fees.
 
-If engine returns zero, chi phí (cost / 비용) ngữ nghĩa (semantics / 의미론) are wrong.
+If engine returns zero, cost semantics are wrong.
 
-## 39. đơn vị (unit / 단위) tests — margin
+## 39. Unit tests — margin
 
 Create position where:
 
@@ -646,14 +643,14 @@ same seed + inputs = same outputs
 
 ## 41. Stress replay
 
-Run sự kiện (event / 이벤트) windows like:
+Run event windows like:
 
 ```text
 CHF 2015
 March 2020 USD stress
 ```
 
-not to optimize chiến lược (strategy / 전략), but to kiểm thử (test / 테스트) whether engine handles:
+not to optimize strategy, but to test whether engine handles:
 
 ```text
 large gaps
@@ -665,15 +662,15 @@ without impossible fills.
 
 ## 42. Survivorship of broker terms
 
-If backtest retail sản phẩm (product / 제품) across years, hiện tại (current / 현재) margin/financing terms may not equal historical terms.
+If backtest retail product across years, current margin/financing terms may not equal historical terms.
 
-If historical rules unavailable, disclose giả định (assumption / 가정) and sensitivity-test.
+If historical rules unavailable, disclose assumption and sensitivity-test.
 
 ## 43. Multi-strategy portfolio
 
-Engine should not run each chiến lược (strategy / 전략) in isolated account then add returns naively if real account shares margin/capital.
+Engine should not run each strategy in isolated account then add returns naively if real account shares margin/capital.
 
-Need dùng chung (common / 공통) portfolio/account trạng thái (state / 상태) for:
+Need common portfolio/account state for:
 
 ```text
 capital
@@ -682,7 +679,7 @@ currency exposure
 risk limits
 ```
 
-## 44. Same tín hiệu (signal / 신호) from multiple strategies
+## 44. Same signal from multiple strategies
 
 Two strategies may both long EUR/USD.
 
@@ -694,33 +691,33 @@ separate virtual strategy lots
 
 while broker/account net position is combined.
 
-Attribution requires virtual lots even if thực thi (execution / 실행) is netted.
+Attribution requires virtual lots even if execution is netted.
 
-## 45. Netting vs hedging account chế độ (mode / 모드)
+## 45. Netting vs hedging account mode
 
 Some retail accounts net opposing positions; others represent separate tickets.
 
-Hệ thống (system / 시스템) ngữ nghĩa (semantics / 의미론) must match intended sản phẩm (product / 제품).
+System semantics must match intended product.
 
-Do not assume both long and short EUR/USD can coexist economically without understanding account chế độ (mode / 모드).
+Do not assume both long and short EUR/USD can coexist economically without understanding account mode.
 
 ## 46. Position sizing timing
 
-Kích thước (size / 크기) should use equity/rủi ro (risk / 위험) trạng thái (state / 상태) **at quyết định (decision / 결정) thời gian (time / 시간)**.
+Size should use equity/risk state **at decision time**.
 
-Do not kích thước (size / 크기) all historical trades using final/hiện tại (current / 현재) capital.
+Do not size all historical trades using final/current capital.
 
 ## 47. Volatility targeting
 
-If kích thước (size / 크기) uses estimated volatility:
+If size uses estimated volatility:
 
 ```text
 vol_estimate_t
 ```
 
-must only use dữ liệu (data / 데이터) available through `t`.
+must only use data available through `t`.
 
-No future full-sample tiêu chuẩn (standard / 표준) deviation.
+No future full-sample standard deviation.
 
 ## 48. Backtest outputs
 
@@ -744,19 +741,19 @@ Partial fills
 Stress-period performance
 ```
 
-## 49. chi phí (cost / 비용) attribution ratio
+## 49. Cost attribution ratio
 
-Useful chỉ số (metric / 지표):
+Useful metric:
 
 ```text
 Implementation Cost / Gross Strategy Edge
 ```
 
-If chi phí (cost / 비용) consumes 80–90% of gross edge, live fragility is high.
+If cost consumes 80–90% of gross edge, live fragility is high.
 
-## 50. Paper chiến lược (strategy / 전략) vs executable chiến lược (strategy / 전략)
+## 50. Paper strategy vs executable strategy
 
-A paper quy tắc (rule / 규칙) can say:
+A paper rule can say:
 
 ```text
 buy when x > y
@@ -776,9 +773,9 @@ what margin?
 
 Only latter is deployable research.
 
-## 51. lỗi (error / 오류) handling
+## 51. Error handling
 
-Engine should thất bại (fail / 실패) loudly on:
+Engine should fail loudly on:
 
 ```text
 NaN executable price
@@ -790,7 +787,7 @@ impossible order state
 
 Do not silently fill with zero/previous price.
 
-## 52. Experiment siêu dữ liệu (metadata / 메타데이터)
+## 52. Experiment metadata
 
 Store:
 
@@ -808,7 +805,7 @@ config_hash
 
 ## 53. Completion criteria
 
-Mô-đun (module / 모듈) complete when reviewer can dấu vết (trace / 추적) any trade:
+Module complete when reviewer can trace any trade:
 
 ```text
 Why signal existed
@@ -844,5 +841,3 @@ Liên quan:
 - [05 — Execution, brokers, costs and risk](../05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 - [10 — Backtesting and point-in-time FX data](../10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 - [11 — Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
-
-> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 DATA PIPELINE AND TIME NORMALIZATION](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

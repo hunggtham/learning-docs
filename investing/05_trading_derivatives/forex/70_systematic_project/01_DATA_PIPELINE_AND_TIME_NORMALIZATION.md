@@ -1,15 +1,12 @@
-# 01 — dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) và thời gian (time / 시간) Normalization cho Systematic FX
+# 01 — Data Pipeline và Time Normalization cho Systematic FX
 
-> **Mạch đọc:** Đặt **01 — dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) và thời gian (time / 시간) Normalization cho Systematic FX** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu bằng dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)** sang **2. sự kiện (event / 이벤트) thời gian (time / 시간) và receive thời gian (time / 시간)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Một backtest FX có thể sai ngay từ tầng dữ liệu dù strategy code hoàn toàn đúng. Các lỗi phổ biến nhất không nằm ở machine learning hay indicator, mà ở những chi tiết rất “nhàm chán”: candle được cắt theo timezone nào, timestamp là event time hay receive time, bid/ask có bị trộn với mid không, DST có dịch session hay không, macro value là bản công bố ban đầu hay bản revised nhiều tháng sau.
 
+Mục tiêu của module này là biến data thành một **point-in-time research dataset** có thể audit.
 
-Một backtest FX có thể sai ngay từ tầng dữ liệu dù chiến lược (strategy / 전략) mã (code / 코드) hoàn toàn đúng. Các lỗi phổ biến nhất không nằm ở machine học tập (learning / 학습) hay indicator, mà ở những chi tiết rất “nhàm chán”: candle được cắt theo timezone nào, timestamp là sự kiện (event / 이벤트) thời gian (time / 시간) hay receive thời gian (time / 시간), bid/ask có bị trộn với mid không, DST có dịch session hay không, macro giá trị (value / 값) là bản công bố ban đầu hay bản revised nhiều tháng sau.
+## 1. Bắt đầu bằng data contract
 
-Mục tiêu của mô-đun (module / 모듈) này là biến dữ liệu (data / 데이터) thành một **point-in-time research dataset** có thể kiểm tra (audit / 감사).
-
-## 1. Bắt đầu bằng dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)
-
-Trước khi tải dữ liệu (data / 데이터), định nghĩa từng dataset dùng để trả lời câu hỏi gì.
+Trước khi tải data, định nghĩa từng dataset dùng để trả lời câu hỏi gì.
 
 Ví dụ FX quote dataset:
 
@@ -41,13 +38,13 @@ source
 
 Nếu chỉ có mid OHLC, phải ghi rõ limitation.
 
-## 2. sự kiện (event / 이벤트) thời gian (time / 시간) và receive thời gian (time / 시간)
+## 2. Event time và receive time
 
-**sự kiện (event / 이벤트) thời gian (time / 시간)** là lúc thị trường/dữ liệu (data / 데이터) nguồn (source / 소스) nói sự kiện (event / 이벤트) xảy ra.
+**Event time** là lúc thị trường/data source nói event xảy ra.
 
-**Receive thời gian (time / 시간)** là lúc hệ thống (system / 시스템) của bạn nhận được sự kiện (event / 이벤트).
+**Receive time** là lúc system của bạn nhận được event.
 
-Trong live hệ thống (system / 시스템):
+Trong live system:
 
 ```text
 market event happens
@@ -56,15 +53,15 @@ market event happens
 → your system receives
 ```
 
-Nếu backtest dùng sự kiện (event / 이벤트) thời gian (time / 시간) nhưng live hệ thống (system / 시스템) chỉ có dữ liệu (data / 데이터) sau độ trễ (latency / 지연 시간), kết quả (result / 결과) có thể optimistic.
+Nếu backtest dùng event time nhưng live system chỉ có data sau latency, result có thể optimistic.
 
-Với low-frequency daily chiến lược (strategy / 전략), độ trễ (latency / 지연 시간) vài giây có thể không đáng kể. Với event-driven chiến lược (strategy / 전략), nó có thể quyết định toàn bộ edge.
+Với low-frequency daily strategy, latency vài giây có thể không đáng kể. Với event-driven strategy, nó có thể quyết định toàn bộ edge.
 
-## 3. UTC làm chuẩn gốc (canonical / 정본) timeline
+## 3. UTC làm canonical timeline
 
-Research lưu trữ (storage / 저장소) nên chuẩn hóa timestamp về UTC.
+Research storage nên chuẩn hóa timestamp về UTC.
 
-Display tầng (layer / 계층) có thể convert sang:
+Display layer có thể convert sang:
 
 ```text
 New York
@@ -73,9 +70,9 @@ Seoul
 Tokyo
 ```
 
-Nhưng nội bộ (internal / 내부) joins nên dựa trên chuẩn gốc (canonical / 정본) timezone để tránh ambiguity.
+Nhưng internal joins nên dựa trên canonical timezone để tránh ambiguity.
 
-Không lưu cục bộ (local / 로컬) datetime không timezone như:
+Không lưu local datetime không timezone như:
 
 ```text
 2026-03-08 02:30
@@ -85,7 +82,7 @@ vì DST có thể làm thời điểm đó không tồn tại hoặc xuất hi�
 
 ## 4. DST là lỗi research thật
 
-Một quy tắc (rule / 규칙) như:
+Một rule như:
 
 ```text
 Trade London open at 08:00
@@ -93,9 +90,9 @@ Trade London open at 08:00
 
 không thể encode đơn giản bằng `08:00 UTC` quanh năm.
 
-London cục bộ (local / 로컬) thời gian (time / 시간) thay đổi theo daylight-saving regime.
+London local time thay đổi theo daylight-saving regime.
 
-Chuỗi xử lý (pipeline / 파이프라인) nên:
+Pipeline nên:
 
 ```text
 Store event in UTC
@@ -103,13 +100,13 @@ Keep exchange/financial-centre timezone metadata
 Derive session label from timezone-aware calendar
 ```
 
-Không hard-code session bằng một constant UTC hour nếu chiến lược (strategy / 전략) tồn tại nhiều năm.
+Không hard-code session bằng một constant UTC hour nếu strategy tồn tại nhiều năm.
 
-## 5. nghiệp vụ (business / 비즈니스) calendar
+## 5. Business calendar
 
 FX gần như 24/5 nhưng không có nghĩa mỗi giờ giống nhau.
 
-Calendar tầng (layer / 계층) nên biết:
+Calendar layer nên biết:
 
 ```text
 weekend close/reopen
@@ -120,11 +117,11 @@ DST transitions
 value-date holidays
 ```
 
-Nếu mô hình (model / 모델) roll/financing, holiday calendar còn ảnh hưởng number of days charged.
+Nếu model roll/financing, holiday calendar còn ảnh hưởng number of days charged.
 
 ## 6. Instrument master
 
-Không hard-code pip kích thước (size / 크기) và đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) trong chiến lược (strategy / 전략).
+Không hard-code pip size và contract size trong strategy.
 
 Tạo instrument master:
 
@@ -165,15 +162,15 @@ Broker C:
 EURUSD.r
 ```
 
-Không phép nối (join / 조인) raw ticker trực tiếp.
+Không join raw ticker trực tiếp.
 
-Dùng chuẩn gốc (canonical / 정본) instrument ID:
+Dùng canonical instrument ID:
 
 ```text
 FX_EUR_USD_SPOT
 ```
 
-và ánh xạ (mapping / 매핑) bảng (table / 테이블) versioned theo nguồn (source / 소스).
+và mapping table versioned theo source.
 
 ## 8. Bid/ask trước mid
 
@@ -197,11 +194,11 @@ stop trigger side
 liquidity stress proxy
 ```
 
-Do đó raw tầng (layer / 계층) nên giữ highest-fidelity dữ liệu (data / 데이터) available.
+Do đó raw layer nên giữ highest-fidelity data available.
 
 ## 9. Spread sanity checks
 
-Kiểm tra hợp lệ (validation / 검증) rules:
+Validation rules:
 
 ```text
 ask >= bid
@@ -210,7 +207,7 @@ price > 0
 spread < extreme threshold unless flagged
 ```
 
-Không auto-delete extreme spreads. Chúng có thể là real stress sự kiện (event / 이벤트).
+Không auto-delete extreme spreads. Chúng có thể là real stress event.
 
 Thay vì delete:
 
@@ -218,11 +215,11 @@ Thay vì delete:
 quality_flag = OUTLIER_SPREAD
 ```
 
-rồi rà soát (review / 검토) nguồn (source / 소스)/sự kiện (event / 이벤트) ngữ cảnh (context / 맥락).
+rồi review source/event context.
 
 ## 10. Duplicate events
 
-Dữ liệu (data / 데이터) vendor có thể gửi duplicate tick.
+Data vendor có thể gửi duplicate tick.
 
 Dedup key có thể dựa trên:
 
@@ -232,9 +229,9 @@ instrument
 source_sequence_id
 ```
 
-Nếu không có chuỗi (sequence / 시퀀스) ID, timestamp+price dedup có thể accidentally remove legitimate repeated quotes.
+Nếu không có sequence ID, timestamp+price dedup có thể accidentally remove legitimate repeated quotes.
 
-Phải hiểu vendor ngữ nghĩa (semantics / 의미론) trước khi dedup.
+Phải hiểu vendor semantics trước khi dedup.
 
 ## 11. Missing intervals
 
@@ -259,11 +256,11 @@ DATA_MISSING
 UNKNOWN
 ```
 
-Nếu fill-forward cần cho mô hình (model / 모델), retain flag để tính năng (feature / 기능) biết giá trị (value / 값) không phải observed trade.
+Nếu fill-forward cần cho model, retain flag để feature biết value không phải observed trade.
 
 ## 12. Bar construction
 
-Nếu bản dựng (build / 빌드) candles từ ticks, định nghĩa:
+Nếu build candles từ ticks, định nghĩa:
 
 ```text
 bar boundary
@@ -273,15 +270,15 @@ first/last event rule
 empty-bar policy
 ```
 
-Ví dụ 1-minute bar `[10:00:00, 10:01:00)` khác bar `(10:00:00, 10:01:00]` ở sự kiện (event / 이벤트) ranh giới (boundary / 경계).
+Ví dụ 1-minute bar `[10:00:00, 10:01:00)` khác bar `(10:00:00, 10:01:00]` ở event boundary.
 
 Hai backtest khác nhau có thể diverge từ detail này.
 
-## 13. Tick volume không phải toàn cục (global / 전역) FX volume
+## 13. Tick volume không phải global FX volume
 
-Retail vendor tick count hoặc broker volume chỉ reflect nguồn (source / 소스) đó.
+Retail vendor tick count hoặc broker volume chỉ reflect source đó.
 
-Do not label trường dữ liệu (field / 필드) simply `volume` unless ngữ nghĩa (semantics / 의미론) are clear.
+Do not label field simply `volume` unless semantics are clear.
 
 Prefer:
 
@@ -291,11 +288,11 @@ broker_reported_volume
 exchange_futures_volume
 ```
 
-Mỗi loại có thông tin (information / 정보) content khác nhau.
+Mỗi loại có information content khác nhau.
 
-## 14. Futures dữ liệu (data / 데이터) vs OTC spot
+## 14. Futures data vs OTC spot
 
-Currency futures có centralized exchange volume/thứ tự (order / 순서) book, nhưng không phải toàn bộ toàn cục (global / 전역) FX thị trường (market / 시장).
+Currency futures có centralized exchange volume/order book, nhưng không phải toàn bộ global FX market.
 
 Nếu dùng futures as proxy:
 
@@ -308,13 +305,13 @@ basis
 trading hours
 ```
 
-phải tường minh (explicit / 명시적).
+phải explicit.
 
-Không phép nối (join / 조인) futures price vào spot chiến lược (strategy / 전략) mà bỏ basis/maturity differences.
+Không join futures price vào spot strategy mà bỏ basis/maturity differences.
 
-## 15. Macro bản phát hành (release / 릴리스) dataset
+## 15. Macro release dataset
 
-Một macro bảng (table / 테이블) nên có nhiều timestamps:
+Một macro table nên có nhiều timestamps:
 
 ```text
 indicator_id
@@ -330,24 +327,24 @@ source
 
 Điều quan trọng là `value_first_release` và `previous_value_as_known_then`.
 
-## 16. Revised dữ liệu (data / 데이터) leakage
+## 16. Revised data leakage
 
-Nếu backtest 2018 CPI chiến lược (strategy / 전략) dùng 2026 cơ sở dữ liệu (database / 데이터베이스) export với historical series đã revised, mô hình (model / 모델) có thể thấy thông tin (information / 정보) chưa tồn tại lúc đó.
+Nếu backtest 2018 CPI strategy dùng 2026 database export với historical series đã revised, model có thể thấy information chưa tồn tại lúc đó.
 
-Need vintage lưu trữ (storage / 저장소):
+Need vintage storage:
 
 ```text
 What did the researcher know
 at timestamp T?
 ```
 
-Point-in-time truy vấn (query / 쿼리) phải answer được câu đó.
+Point-in-time query phải answer được câu đó.
 
-## 17. Consensus is also timestamped dữ liệu (data / 데이터)
+## 17. Consensus is also timestamped data
 
-Consensus forecast thay đổi tới gần bản phát hành (release / 릴리스).
+Consensus forecast thay đổi tới gần release.
 
-Một chiến lược (strategy / 전략) dùng surprise:
+Một strategy dùng surprise:
 
 ```text
 actual - consensus
@@ -361,11 +358,11 @@ phải define consensus snapshot:
 latest available before release?
 ```
 
-Không dùng final consensus compiled after sự kiện (event / 이벤트).
+Không dùng final consensus compiled after event.
 
-## 18. Central-bank quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터)
+## 18. Central-bank decision metadata
 
-Một chính sách (policy / 정책) sự kiện (event / 이벤트) bảng (table / 테이블) có thể lưu:
+Một policy event table có thể lưu:
 
 ```text
 meeting_date
@@ -377,9 +374,9 @@ guidance_label or structured fields
 press_conference_timestamp
 ```
 
-Nếu chiến lược (strategy / 전략) reacts to statement vs press conference, timestamps phải tách riêng.
+Nếu strategy reacts to statement vs press conference, timestamps phải tách riêng.
 
-## 19. News văn bản (text / 텍스트) and point-in-time availability
+## 19. News text and point-in-time availability
 
 Nếu dùng NLP/news:
 
@@ -391,11 +388,11 @@ source
 version
 ```
 
-Không dùng updated article văn bản (text / 텍스트) như thể phiên bản (version / 버전) đó tồn tại ngay khi headline đầu tiên phát hành.
+Không dùng updated article text như thể version đó tồn tại ngay khi headline đầu tiên phát hành.
 
-## 20. dữ liệu (data / 데이터) lineage
+## 20. Data lineage
 
-Mỗi transformed dataset nên biết nguồn (source / 소스) parents.
+Mỗi transformed dataset nên biết source parents.
 
 Example:
 
@@ -406,9 +403,9 @@ fx_1m_features_v3
 ← instrument_master_v4
 ```
 
-Lineage giúp gỡ lỗi (debug / 디버그) khi kết quả (result / 결과) thay đổi sau dữ liệu (data / 데이터) cập nhật (update / 업데이트).
+Lineage giúp debug khi result thay đổi sau data update.
 
-## 21. Raw / clean / tính năng (feature / 기능) layers
+## 21. Raw / clean / feature layers
 
 Một cấu trúc đơn giản:
 
@@ -421,13 +418,13 @@ research_snapshots/
 
 `raw` immutable nếu có thể.
 
-`clean` apply documented kiểm tra hợp lệ (validation / 검증)/correction.
+`clean` apply documented validation/correction.
 
 `features` derived variables.
 
-`research_snapshots` freeze chính xác (exact / 정확한) inputs used in a published experiment.
+`research_snapshots` freeze exact inputs used in a published experiment.
 
-## 22. Never silently overwrite historical dữ liệu (data / 데이터)
+## 22. Never silently overwrite historical data
 
 Nếu vendor correction arrives:
 
@@ -435,11 +432,11 @@ Nếu vendor correction arrives:
 create new dataset version
 ```
 
-Không silently replace old tệp (file / 파일) rồi để old backtest trở nên unreproducible.
+Không silently replace old file rồi để old backtest trở nên unreproducible.
 
 ## 23. Hashing and versioning
 
-Một run siêu dữ liệu (metadata / 메타데이터) có thể lưu:
+Một run metadata có thể lưu:
 
 ```text
 data_version
@@ -448,11 +445,11 @@ config_hash
 code_commit
 ```
 
-Nếu raw dataset rất lớn, băm (hash / 해시) manifest thay vì mỗi row.
+Nếu raw dataset rất lớn, hash manifest thay vì mỗi row.
 
-Mục tiêu là detect đầu vào (input / 입력) changes.
+Mục tiêu là detect input changes.
 
-## 24. Currency conversion dữ liệu (data / 데이터)
+## 24. Currency conversion data
 
 P/L reporting cần FX conversion.
 
@@ -463,7 +460,7 @@ P/L initially in GBP
 → need GBP/USD conversion
 ```
 
-Backtest phải dùng conversion tỷ lệ (rate / 비율) available at that timestamp, không hiện tại (current / 현재) tỷ lệ (rate / 비율).
+Backtest phải dùng conversion rate available at that timestamp, không current rate.
 
 ## 25. Triangular consistency checks
 
@@ -481,7 +478,7 @@ source mismatch
 wrong timestamp alignment
 ```
 
-Nhưng bid/ask và độ trễ (latency / 지연 시간) làm chính xác (exact / 정확한) equality không expected.
+Nhưng bid/ask và latency làm exact equality không expected.
 
 ## 26. Corporate actions analogy does not apply directly
 
@@ -496,7 +493,7 @@ vendor symbol change
 contract specification change
 ```
 
-Chuỗi xử lý (pipeline / 파이프라인) vẫn cần historical siêu dữ liệu (metadata / 메타데이터).
+Pipeline vẫn cần historical metadata.
 
 ## 27. Price sanity by return
 
@@ -510,7 +507,7 @@ Flag extreme values based on broad threshold.
 
 Nhưng không auto-remove 2015 CHF-like jump chỉ vì z-score huge.
 
-Extreme return may be most important observation in rủi ro (risk / 위험) research.
+Extreme return may be most important observation in risk research.
 
 ## 28. Cross-source comparison
 
@@ -522,11 +519,11 @@ compare spread
 compare timestamps
 ```
 
-Persistent divergence can reveal ánh xạ (mapping / 매핑)/timezone bài toán (problem / 문제).
+Persistent divergence can reveal mapping/timezone problem.
 
 Occasional micro-difference may be normal OTC fragmentation.
 
-## 29. dữ liệu (data / 데이터) chất lượng (quality / 품질) report
+## 29. Data quality report
 
 Mỗi ingest batch nên produce:
 
@@ -542,23 +539,23 @@ duplicate count
 timezone anomalies
 ```
 
-Chất lượng (quality / 품질) report should be stored with dataset phiên bản (version / 버전).
+Quality report should be stored with dataset version.
 
-## 30. lược đồ (schema / 스키마) evolution
+## 30. Schema evolution
 
-Nếu thêm trường dữ liệu (field / 필드) mới:
+Nếu thêm field mới:
 
 ```text
 schema_version++
 ```
 
-Downstream mã (code / 코드) must know whether trường dữ liệu (field / 필드) exists historically.
+Downstream code must know whether field exists historically.
 
-Do not infer missing trường dữ liệu (field / 필드) ngữ nghĩa (semantics / 의미론) silently.
+Do not infer missing field semantics silently.
 
-## 31. tính năng (feature / 기능) causality
+## 31. Feature causality
 
-Mỗi tính năng (feature / 기능) cần answer:
+Mỗi feature cần answer:
 
 ```text
 What raw data does it use?
@@ -574,7 +571,7 @@ centered rolling window
 
 because it uses future observations.
 
-Use trailing cửa sổ (window / 윈도우) unless chiến lược (strategy / 전략) genuinely has future dữ liệu (data / 데이터)—which it cannot.
+Use trailing window unless strategy genuinely has future data—which it cannot.
 
 ## 32. Session features
 
@@ -598,13 +595,13 @@ minutes_to_next_known_central_bank_event
 minutes_since_last_macro_release
 ```
 
-Future scheduled calendar is known, but **future kết quả (outcome / 결과)** is not.
+Future scheduled calendar is known, but **future outcome** is not.
 
-Distinguish known schedule from unknown kết quả (result / 결과).
+Distinguish known schedule from unknown result.
 
-## 34. dữ liệu (data / 데이터) split must preserve thời gian (time / 시간)
+## 34. Data split must preserve time
 
-Do not random-shuffle thời gian (time / 시간) series observations before train/kiểm thử (test / 테스트) split if dependence matters.
+Do not random-shuffle time series observations before train/test split if dependence matters.
 
 Basic:
 
@@ -627,9 +624,9 @@ freeze split dates
 
 Then run.
 
-Do not keep mutating dataset until kết quả (result / 결과) becomes attractive.
+Do not keep mutating dataset until result becomes attractive.
 
-## 36. Minimal dữ liệu (data / 데이터) manifest
+## 36. Minimal data manifest
 
 `data_manifest.md` should include:
 
@@ -647,7 +644,7 @@ Version/hash
 Used by which strategy
 ```
 
-## 37. Example relational lược đồ (schema / 스키마)
+## 37. Example relational schema
 
 ```text
 instrument_master
@@ -662,9 +659,9 @@ experiment_run
 
 Keys should prefer stable IDs over vendor labels.
 
-## 38. SQL-style point-in-time phép nối (join / 조인)
+## 38. SQL-style point-in-time join
 
-Conceptual lô-gic (logic / 논리):
+Conceptual logic:
 
 ```text
 for each decision_timestamp T:
@@ -679,9 +676,9 @@ join on reference_month
 and accidentally pull revised future value
 ```
 
-## 39. Reproducibility kiểm thử (test / 테스트)
+## 39. Reproducibility test
 
-A successful chuỗi xử lý (pipeline / 파이프라인) passes:
+A successful pipeline passes:
 
 ```text
 same code version
@@ -690,11 +687,11 @@ same code version
 → same feature rows
 ```
 
-If đầu ra (output / 출력) changes nondeterministically, fix before interpreting backtest.
+If output changes nondeterministically, fix before interpreting backtest.
 
-## 40. thất bại (failure / 실패) injection
+## 40. Failure injection
 
-Kiểm thử (test / 테스트) chuỗi xử lý (pipeline / 파이프라인) with:
+Test pipeline with:
 
 ```text
 missing hour
@@ -706,13 +703,13 @@ vendor outage
 symbol rename
 ```
 
-Hệ thống (system / 시스템) should thất bại (fail / 실패) loudly or flag degraded dữ liệu (data / 데이터), not silently continue.
+System should fail loudly or flag degraded data, not silently continue.
 
-## 41. dữ liệu (data / 데이터) chất lượng (quality / 품질) vs chiến lược (strategy / 전략) chất lượng (quality / 품질)
+## 41. Data quality vs strategy quality
 
-If chiến lược (strategy / 전략) stops working after correcting a timezone bug, chiến lược (strategy / 전략) was not robust bằng chứng (evidence / 증거).
+If strategy stops working after correcting a timezone bug, strategy was not robust evidence.
 
-Never preserve wrong dữ liệu (data / 데이터) hành vi (behavior / 동작) just because equity curve looked better.
+Never preserve wrong data behavior just because equity curve looked better.
 
 ## 42. Deliverables
 
@@ -730,7 +727,7 @@ point_in_time_join_spec.md
 
 ## 43. Completion criteria
 
-Mô-đun (module / 모듈) complete when a reviewer can answer:
+Module complete when a reviewer can answer:
 
 ```text
 What did the strategy know at each decision timestamp?
@@ -740,7 +737,7 @@ How were revisions handled?
 Can the exact dataset be reconstructed?
 ```
 
-Nếu một câu trả lời vẫn là “probably”, chuỗi xử lý (pipeline / 파이프라인) chưa đủ chuẩn cho serious research.
+Nếu một câu trả lời vẫn là “probably”, pipeline chưa đủ chuẩn cho serious research.
 
 ## Đọc tiếp
 
@@ -750,5 +747,3 @@ Liên quan:
 
 - [10 — Backtesting and point-in-time FX data](../10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 - [05 — Execution, brokers, costs and risk](../05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
-
-> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 BACKTEST ENGINE AND EXECUTION MODEL](./02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,9 +1,6 @@
-# 03 — Portfolio rủi ro (risk / 위험) và Attribution Engine cho Systematic FX
+# 03 — Portfolio Risk và Attribution Engine cho Systematic FX
 
-> **Mạch đọc:** Đặt **03 — Portfolio rủi ro (risk / 위험) và Attribution Engine cho Systematic FX** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ticket không phải true exposure** sang **2. chuẩn gốc (canonical / 정본) currency-leg biểu diễn (representation / 표현)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-
-Một chiến lược (strategy / 전략) có thể đúng ở từng trade nhưng portfolio vẫn nguy hiểm nếu nhiều position thực chất là cùng một factor bet. mô-đun (module / 모듈) này xây tầng (layer / 계층) biến **tickets → currency legs → factor exposures → portfolio rủi ro (risk / 위험) → P/L attribution**.
+Một strategy có thể đúng ở từng trade nhưng portfolio vẫn nguy hiểm nếu nhiều position thực chất là cùng một factor bet. Module này xây layer biến **tickets → currency legs → factor exposures → portfolio risk → P/L attribution**.
 
 Mục tiêu là để hệ thống trả lời được hai câu hỏi khác nhau:
 
@@ -12,7 +9,7 @@ What risks are we carrying now?
 Why did the portfolio make or lose money?
 ```
 
-Nếu không answer được cả hai, rủi ro (risk / 위험) management và research vòng phản hồi (feedback loop / 피드백 루프) đều thiếu.
+Nếu không answer được cả hai, risk management và research feedback loop đều thiếu.
 
 ## 1. Ticket không phải true exposure
 
@@ -34,9 +31,9 @@ Ba tickets nhưng decomposition:
 
 USD short factor xuất hiện ba lần.
 
-Rủi ro (risk / 위험) engine phải aggregate legs thay vì chỉ đếm positions.
+Risk engine phải aggregate legs thay vì chỉ đếm positions.
 
-## 2. chuẩn gốc (canonical / 정본) currency-leg biểu diễn (representation / 표현)
+## 2. Canonical currency-leg representation
 
 Mỗi FX position `A/B` có thể biểu diễn:
 
@@ -45,7 +42,7 @@ Long A/B  → +A, -B
 Short A/B → -A, +B
 ```
 
-Quy mô (scale / 규모) legs theo notional và hiện tại (current / 현재) price để có comparable reporting currency exposure.
+Scale legs theo notional và current price để có comparable reporting currency exposure.
 
 ## 3. Reporting currency
 
@@ -60,7 +57,7 @@ conversion timestamp
 conversion rate source
 ```
 
-Không overwrite bản địa (native / 네이티브) amount sau conversion; giữ cả hai để kiểm tra (audit / 감사).
+Không overwrite native amount sau conversion; giữ cả hai để audit.
 
 ## 4. Gross và net exposure
 
@@ -71,7 +68,7 @@ Gross Exposure = Σ absolute economic exposures
 Net Currency Exposure = sum of signed legs by currency
 ```
 
-Net nhỏ không đồng nghĩa rủi ro (risk / 위험) nhỏ vì gross exposure vẫn tạo:
+Net nhỏ không đồng nghĩa risk nhỏ vì gross exposure vẫn tạo:
 
 ```text
 liquidity risk
@@ -86,7 +83,7 @@ execution cost
 Gross Leverage = Σ|notional_i| / Equity
 ```
 
-Nhánh học (track / 트랙) phân phối (distribution / 분포) theo thời gian:
+Track distribution theo thời gian:
 
 ```text
 median
@@ -107,11 +104,11 @@ financing
 spread/slippage
 ```
 
-Rủi ro (risk / 위험) dashboard nên show cả gross và net.
+Risk dashboard nên show cả gross và net.
 
 ## 7. Factor buckets
 
-Ngoài currency legs, map positions vào factors tùy chiến lược (strategy / 전략):
+Ngoài currency legs, map positions vào factors tùy strategy:
 
 ```text
 Broad USD
@@ -124,7 +121,7 @@ Funding currency
 Volatility
 ```
 
-Factor ánh xạ (mapping / 매핑) có thể model-based hoặc heuristic, nhưng phải versioned.
+Factor mapping có thể model-based hoặc heuristic, nhưng phải versioned.
 
 ## 8. Factor loading is conditional
 
@@ -138,11 +135,11 @@ regime label
 confidence / error
 ```
 
-Không trình bày estimated beta như vật lý (physical / 물리적) constant.
+Không trình bày estimated beta như physical constant.
 
-## 9. Currency exposure bảng (table / 테이블)
+## 9. Currency exposure table
 
-Đầu ra (output / 출력) ví dụ:
+Output ví dụ:
 
 ```text
 Currency | Long Equivalent | Short Equivalent | Net | Stress Loss
@@ -154,7 +151,7 @@ AUD
 KRW
 ```
 
-Rows phải derive từ positions, không manual spreadsheet nếu hệ thống (system / 시스템) có thể calculate.
+Rows phải derive từ positions, không manual spreadsheet nếu system có thể calculate.
 
 ## 10. Pair correlation vs currency-factor overlap
 
@@ -162,25 +159,25 @@ Correlation giữa EUR/USD và GBP/USD có thể thay đổi.
 
 Nhưng cả hai structurally contain USD leg.
 
-Factor decomposition cung cấp thông tin (information / 정보) mà mẫu (sample / 표본) correlation có thể bỏ lỡ.
+Factor decomposition cung cấp information mà sample correlation có thể bỏ lỡ.
 
-## 11. Covariance ma trận (matrix / 행렬)
+## 11. Covariance matrix
 
-Với return véc-tơ (vector / 벡터) `r` và weights `w`:
+Với return vector `r` và weights `w`:
 
 ```text
 Portfolio Variance = w' Σ w
 ```
 
-Useful nhưng phụ thuộc mẫu (sample / 표본).
+Useful nhưng phụ thuộc sample.
 
-Store covariance mô hình (model / 모델) phiên bản (version / 버전) và estimation period.
+Store covariance model version và estimation period.
 
 ## 12. Stress correlation
 
 Normal correlation thường underestimate crisis clustering.
 
-Compute separately nếu dữ liệu (data / 데이터) đủ:
+Compute separately nếu data đủ:
 
 ```text
 normal regime correlation
@@ -189,24 +186,24 @@ downside correlation
 funding-stress correlation
 ```
 
-Do not assume one covariance ma trận (matrix / 행렬) describes all states.
+Do not assume one covariance matrix describes all states.
 
 ## 13. Volatility targeting
 
-Mục tiêu (target / 대상) rủi ro (risk / 위험) example:
+Target risk example:
 
 ```text
 Position Risk Budget
 = Target Volatility / Estimated Instrument Volatility
 ```
 
-Nhưng cap kích thước (size / 크기) bằng liquidity/margin các ràng buộc (constraints / 제약조건들).
+Nhưng cap size bằng liquidity/margin constraints.
 
 Vol targeting without leverage cap can increase exposure dramatically in calm regime just before volatility jumps.
 
-## 14. rủi ro (risk / 위험) contribution
+## 14. Risk contribution
 
-Approximate marginal/thành phần (component / 컴포넌트) rủi ro (risk / 위험) giúp biết position nào đóng góp portfolio volatility.
+Approximate marginal/component risk giúp biết position nào đóng góp portfolio volatility.
 
 Mục tiêu:
 
@@ -215,23 +212,23 @@ Portfolio weight
 ≠ Portfolio risk contribution
 ```
 
-A small position can dominate rủi ro (risk / 위험) if volatility/correlation high.
+A small position can dominate risk if volatility/correlation high.
 
-## 15. Planned mất mát (loss / 손실) vs statistical rủi ro (risk / 위험)
+## 15. Planned loss vs statistical risk
 
-Trade stop-based rủi ro (risk / 위험):
+Trade stop-based risk:
 
 ```text
 planned loss if stop executes normally
 ```
 
-Statistical rủi ro (risk / 위험):
+Statistical risk:
 
 ```text
 distribution-based loss estimate
 ```
 
-Stress rủi ro (risk / 위험):
+Stress risk:
 
 ```text
 loss under specified extreme scenario
@@ -241,7 +238,7 @@ Store all three; none replaces the others.
 
 ## 16. Portfolio heat
 
-Define one practical chỉ số (metric / 지표):
+Define one practical metric:
 
 ```text
 Portfolio Heat = Σ planned stop losses
@@ -253,11 +250,11 @@ Then enhance with cluster stress:
 Correlated Heat = stressed loss if common factor moves and slippage widens
 ```
 
-Naive heat ignores dùng chung (shared / 공유) USD/carry factor.
+Naive heat ignores shared USD/carry factor.
 
 ## 17. Scenario engine
 
-Scenario đối tượng (object / 객체):
+Scenario object:
 
 ```text
 scenario_id
@@ -283,7 +280,7 @@ Risk-off + spread 3x
 KRW -10% vs USD
 ```
 
-Scenarios are not forecasts. They kiểm thử (test / 테스트) survivability.
+Scenarios are not forecasts. They test survivability.
 
 ## 19. Combined scenario
 
@@ -301,7 +298,7 @@ Margin requirement +50%
 
 Combined scenario often reveals hidden fragility.
 
-## 20. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
+## 20. Reverse stress test
 
 Instead of choosing shock first, solve:
 
@@ -312,7 +309,7 @@ margin level < threshold
 or forced liquidation?
 ```
 
-Reverse stress identifies thất bại (failure / 실패) ranh giới (boundary / 경계).
+Reverse stress identifies failure boundary.
 
 ## 21. VaR
 
@@ -323,9 +320,9 @@ Under model assumptions,
 what loss threshold corresponds to confidence level X?
 ```
 
-It cannot answer maximum possible mất mát (loss / 손실).
+It cannot answer maximum possible loss.
 
-Store mô hình (model / 모델)/phương thức (method / 메서드):
+Store model/method:
 
 ```text
 historical
@@ -335,13 +332,13 @@ Monte Carlo
 
 ## 22. Expected Shortfall
 
-Expected Shortfall estimates average mất mát (loss / 손실) beyond VaR threshold.
+Expected Shortfall estimates average loss beyond VaR threshold.
 
-Still depends on dữ liệu (data / 데이터)/mô hình (model / 모델) and may underestimate regime breaks absent from mẫu (sample / 표본).
+Still depends on data/model and may underestimate regime breaks absent from sample.
 
 Use alongside scenario tests.
 
-## 23. Tail events outside mẫu (sample / 표본)
+## 23. Tail events outside sample
 
 CHF 2015-style discontinuity demonstrates:
 
@@ -350,7 +347,7 @@ Historical distribution
 may exclude relevant future regime break
 ```
 
-Rủi ro (risk / 위험) engine needs tường minh (explicit / 명시적) jump scenarios not just empirical quantiles.
+Risk engine needs explicit jump scenarios not just empirical quantiles.
 
 ## 24. Margin stress
 
@@ -365,9 +362,9 @@ Gross Leverage
 Positions liquidated under policy
 ```
 
-Price rủi ro (risk / 위험) and margin rủi ro (risk / 위험) must be simulated together.
+Price risk and margin risk must be simulated together.
 
-## 25. động (dynamic / 동적) margin chính sách (policy / 정책)
+## 25. Dynamic margin policy
 
 Provider may raise margin during stress.
 
@@ -390,7 +387,7 @@ slippage multiplier
 max executable size reduction
 ```
 
-A position may be small in notional but hard to exit in stressed thị trường (market / 시장).
+A position may be small in notional but hard to exit in stressed market.
 
 ## 27. Concentration limits
 
@@ -406,11 +403,11 @@ max stressed loss
 max margin utilization
 ```
 
-Limits should be chiến lược (strategy / 전략)/account specific, not universal percentages.
+Limits should be strategy/account specific, not universal percentages.
 
-## 28. Pre-trade rủi ro (risk / 위험) check
+## 28. Pre-trade risk check
 
-Before thứ tự (order / 순서):
+Before order:
 
 ```text
 Current portfolio
@@ -426,15 +423,15 @@ Do not check only position after fill.
 
 ## 29. Post-fill check
 
-Actual fill may differ from requested kích thước (size / 크기)/price.
+Actual fill may differ from requested size/price.
 
-Recompute rủi ro (risk / 위험) using filled quantity immediately.
+Recompute risk using filled quantity immediately.
 
 Partial fill changes hedge ratio.
 
-## 30. Hedge biểu diễn (representation / 표현)
+## 30. Hedge representation
 
-A hedge must have mục tiêu (target / 대상):
+A hedge must have target:
 
 ```text
 hedged factor
@@ -460,7 +457,7 @@ Residual basis risk
 
 A hedge can reduce variance while increasing negative carry.
 
-## 32. P/L attribution kiến trúc (architecture / 아키텍처)
+## 32. P/L attribution architecture
 
 Portfolio P/L should decompose:
 
@@ -497,17 +494,17 @@ Gross Signal P/L
 = Net Strategy P/L
 ```
 
-Research should not lời gọi (call / 호출) gross paper return “alpha”.
+Research should not call gross paper return “alpha”.
 
 ## 34. Factor attribution
 
-If portfolio gains because broad USD moves, but chiến lược (strategy / 전략) thesis was pair-specific giá trị (value / 값):
+If portfolio gains because broad USD moves, but strategy thesis was pair-specific value:
 
 ```text
 factor attribution reveals mismatch
 ```
 
-This is crucial for học tập (learning / 학습) whether edge came from intended cơ chế (mechanism / 메커니즘).
+This is crucial for learning whether edge came from intended mechanism.
 
 ## 35. Benchmark attribution
 
@@ -520,13 +517,13 @@ broad USD factor
 risk-parity FX basket
 ```
 
-Benchmark depends on chiến lược (strategy / 전략) mục tiêu (objective / 목표).
+Benchmark depends on strategy objective.
 
-Do not choose benchmark after seeing hiệu năng (performance / 성능).
+Do not choose benchmark after seeing performance.
 
 ## 36. R-multiple attribution
 
-At trade mức (level / 수준):
+At trade level:
 
 ```text
 Realized R = Net P/L / Planned Initial Risk
@@ -582,7 +579,7 @@ regime dependence
 liquidity shock
 ```
 
-Portfolio of strategies is not diversified merely because chiến lược (strategy / 전략) names differ.
+Portfolio of strategies is not diversified merely because strategy names differ.
 
 ## 40. Risk-adjusted metrics
 
@@ -598,9 +595,9 @@ Expected Shortfall
 
 but always alongside leverage, liquidity and tail scenarios.
 
-## 41. Turnover and sức chứa (capacity / 용량)
+## 41. Turnover and capacity
 
-Nhánh học (track / 트랙):
+Track:
 
 ```text
 turnover
@@ -608,11 +605,11 @@ average ticket size
 size relative to liquidity proxy
 ```
 
-A scalable chiến lược (strategy / 전략) should not assume unlimited thực thi (execution / 실행) at top-of-book.
+A scalable strategy should not assume unlimited execution at top-of-book.
 
 ## 42. Exposure by session
 
-Rủi ro (risk / 위험) may cluster around:
+Risk may cluster around:
 
 ```text
 Asia
@@ -624,9 +621,9 @@ macro-event windows
 
 Report exposure before major scheduled events.
 
-## 43. sự kiện (event / 이벤트) rủi ro (risk / 위험) inventory
+## 43. Event risk inventory
 
-At any thời gian (time / 시간) hệ thống (system / 시스템) can danh sách (list / 목록):
+At any time system can list:
 
 ```text
 positions
@@ -637,9 +634,9 @@ weekend holding
 
 This supports event-specific limits.
 
-## 44. chiến lược (strategy / 전략) virtual books
+## 44. Strategy virtual books
 
-If broker nets positions but multiple strategies share pair, maintain nội bộ (internal / 내부) virtual books:
+If broker nets positions but multiple strategies share pair, maintain internal virtual books:
 
 ```text
 strategy_A +50k EUR/USD
@@ -649,9 +646,9 @@ broker net +30k
 
 Attribution remains possible.
 
-## 45. Allocation of thực thi (execution / 실행) chi phí (cost / 비용)
+## 45. Allocation of execution cost
 
-When orders are netted, need quy tắc (rule / 규칙) to allocate savings/costs among strategies.
+When orders are netted, need rule to allocate savings/costs among strategies.
 
 Possible:
 
@@ -663,11 +660,11 @@ Document consistently.
 
 ## 46. Allocation of financing
 
-Financing charged to net broker position may differ from sum of virtual chiến lược (strategy / 전략) positions.
+Financing charged to net broker position may differ from sum of virtual strategy positions.
 
-Define attribution chính sách (policy / 정책); otherwise strategy-level P/L won't reconcile to account P/L.
+Define attribution policy; otherwise strategy-level P/L won't reconcile to account P/L.
 
-## 47. Reconciliation bất biến (invariant / 불변식)
+## 47. Reconciliation invariant
 
 At end of period:
 
@@ -679,7 +676,7 @@ At end of period:
 
 Difference must be zero within rounding tolerance.
 
-## 48. rủi ro (risk / 위험) snapshot lược đồ (schema / 스키마)
+## 48. Risk snapshot schema
 
 Example:
 
@@ -696,9 +693,9 @@ stress_loss_base
 stress_loss_severe
 ```
 
-Store snapshots for later rà soát (review / 검토).
+Store snapshots for later review.
 
-## 49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)
+## 49. Scenario result schema
 
 ```text
 scenario_id
@@ -710,7 +707,7 @@ largest_loss_factor
 liquidation_flag
 ```
 
-## 50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)
+## 50. Attribution record schema
 
 ```text
 trade_id
@@ -726,7 +723,7 @@ net_pnl
 factor_tags
 ```
 
-## 51. đơn vị (unit / 단위) tests — decomposition
+## 51. Unit tests — decomposition
 
 Example:
 
@@ -743,11 +740,11 @@ negative USD leg equal to quote value
 
 within defined valuation convention.
 
-## 52. đơn vị (unit / 단위) tests — aggregation
+## 52. Unit tests — aggregation
 
 Long EUR/USD + long GBP/USD should show larger negative USD aggregate than either trade alone.
 
-## 53. đơn vị (unit / 단위) tests — P/L reconciliation
+## 53. Unit tests — P/L reconciliation
 
 For known fills and costs:
 
@@ -755,23 +752,23 @@ For known fills and costs:
 Gross P/L - costs = Net P/L
 ```
 
-and sum of chiến lược (strategy / 전략) attribution equals account ledger.
+and sum of strategy attribution equals account ledger.
 
 ## 54. Stress regression tests
 
-Keep fixed scenarios so mã (code / 코드) changes don't silently alter rủi ro (risk / 위험) calculation.
+Keep fixed scenarios so code changes don't silently alter risk calculation.
 
 Example expected outputs can use tolerance ranges.
 
-## 55. mô hình (model / 모델) thay đổi (change / 변경) quản trị (governance / 거버넌스)
+## 55. Model change governance
 
-If rủi ro (risk / 위험) mô hình (model / 모델) changes:
+If risk model changes:
 
 ```text
 risk_model_version++
 ```
 
-Do not overwrite historical rủi ro (risk / 위험) snapshots with new methodology without label.
+Do not overwrite historical risk snapshots with new methodology without label.
 
 ## 56. Completion criteria
 
@@ -810,5 +807,3 @@ Liên quan:
 - [11 — Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [12 — Journal, review and attribution](../12_TRADING_JOURNAL_REVIEW_AND_PERFORMANCE_ATTRIBUTION.md)
 - [03 — Leverage, margin and position sizing](../03_LEVERAGE_MARGIN_POSITION_SIZING.md)
-
-> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 DATA PIPELINE AND TIME NORMALIZATION](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,10 +1,8 @@
-# Systematic FX hiện thực (implementation / 구현) dự án (project / 프로젝트)
+# Systematic FX Implementation Project
 
-> **Mạch đọc:** Đọc **Systematic FX hiện thực (implementation / 구현) dự án (project / 프로젝트)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kiến trúc tổng quát** sang **Các mô-đun (module / 모듈)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Project này biến phần Forex từ tài liệu phân tích thành một research system có thể audit. Mục tiêu không phải tạo bot giao dịch “tự kiếm tiền”, mà là buộc toàn bộ chuỗi **data → feature → signal → sizing → execution assumption → portfolio → review** phải explicit và reproducible.
 
-Dự án (project / 프로젝트) này biến phần Forex từ tài liệu phân tích thành một research hệ thống (system / 시스템) có thể kiểm tra (audit / 감사). Mục tiêu không phải tạo bot giao dịch “tự kiếm tiền”, mà là buộc toàn bộ chuỗi **dữ liệu (data / 데이터) → tính năng (feature / 기능) → tín hiệu (signal / 신호) → sizing → thực thi (execution / 실행) giả định (assumption / 가정) → portfolio → rà soát (review / 검토)** phải tường minh (explicit / 명시적) và reproducible.
-
-Dự án (project / 프로젝트) nên được làm sau khi đã đọc ít nhất:
+Project nên được làm sau khi đã đọc ít nhất:
 
 ```text
 01–05  mechanics, leverage, execution
@@ -35,24 +33,18 @@ Raw Data
 → Production Controls
 ```
 
-Nếu không thể dấu vết (trace / 추적) một P/L observation ngược lại raw dữ liệu (data / 데이터), timestamp, quy tắc (rule / 규칙) và thực thi (execution / 실행) giả định (assumption / 가정), research chưa đủ auditability.
+Nếu không thể trace một P/L observation ngược lại raw data, timestamp, rule và execution assumption, research chưa đủ auditability.
 
+## Các module
 
-> **Chuyển mạch:** Từ **Kiến trúc tổng quát**, ta sang **Các mô-đun (module / 모듈)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Các mô-đun (module / 모듈)
-
-1. [01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) — dữ liệu (data / 데이터) lược đồ (schema / 스키마), bid/ask, timezone, DST, macro vintage, chất lượng (quality / 품질) checks và reproducibility.
-2. [02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md](./02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md) — deterministic vòng lặp sự kiện (event loop / 이벤트 루프), tín hiệu (signal / 신호) timing, fills, spread/slippage, financing, margin và portfolio accounting.
-3. [03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md](./03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md) — currency-leg aggregation, leverage, rủi ro (risk / 위험) limits, stress tests, factor attribution và trade-level decomposition.
+1. [01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) — data schema, bid/ask, timezone, DST, macro vintage, quality checks và reproducibility.
+2. [02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md](./02_BACKTEST_ENGINE_AND_EXECUTION_MODEL.md) — deterministic event loop, signal timing, fills, spread/slippage, financing, margin và portfolio accounting.
+3. [03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md](./03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md) — currency-leg aggregation, leverage, risk limits, stress tests, factor attribution và trade-level decomposition.
 4. [04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md](./04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md) — paper/small-live progression, reconciliation, drift monitoring, operational controls và retirement rules.
-
-
-> **Chuyển mạch:** Từ **Các mô-đun (module / 모듈)**, ta sang **Deliverables** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Deliverables
 
-Dự án (project / 프로젝트) hoàn chỉnh nên tạo được:
+Project hoàn chỉnh nên tạo được:
 
 ```text
 data_manifest.md
@@ -69,14 +61,11 @@ monitoring_spec.md
 retirement_rule.md
 ```
 
-Có thể implement bằng Python, Java, SQL hoặc ngăn xếp (stack / 스택) khác. Ngôn ngữ không quan trọng bằng ngữ nghĩa (semantics / 의미론). Hai hiện thực (implementation / 구현) khác nhau đọc cùng specification phải cho kết quả giống nhau trong tolerance định trước.
-
-
-> **Chuyển mạch:** Từ **Deliverables**, ta sang **Nguyên tắc thiết kế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Có thể implement bằng Python, Java, SQL hoặc stack khác. Ngôn ngữ không quan trọng bằng semantics. Hai implementation khác nhau đọc cùng specification phải cho kết quả giống nhau trong tolerance định trước.
 
 ## Nguyên tắc thiết kế
 
-Research hệ thống (system / 시스템) không được “sửa kết quả” bằng cách chỉnh dữ liệu (data / 데이터)/parameter sau khi nhìn equity curve mà không ghi lại experiment lịch sử (history / 이력).
+Research system không được “sửa kết quả” bằng cách chỉnh data/parameter sau khi nhìn equity curve mà không ghi lại experiment history.
 
 Mỗi experiment cần có:
 
@@ -93,15 +82,10 @@ cost_model_version
 result_summary
 ```
 
-Nếu một kết quả (result / 결과) không thể reproduce từ các siêu dữ liệu (metadata / 메타데이터) trên, không dùng nó làm bằng chứng cho edge.
+Nếu một result không thể reproduce từ các metadata trên, không dùng nó làm bằng chứng cho edge.
 
+## Scope boundary
 
-> **Chuyển mạch:** Từ **Nguyên tắc thiết kế**, ta sang **phạm vi (scope / 범위) ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Folder này không duplicate kiến thức software engineering tổng quát. Nó chỉ giải thích **FX-specific research semantics**: timezone/session, bid/ask, rollover, macro vintage, currency conversion, margin, portfolio factor exposure và execution modeling.
 
-## Phạm vi (scope / 범위) ranh giới (boundary / 경계)
-
-Folder này không duplicate kiến thức kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) tổng quát. Nó chỉ giải thích **FX-specific research ngữ nghĩa (semantics / 의미론)**: timezone/session, bid/ask, rollover, macro vintage, currency conversion, margin, portfolio factor exposure và thực thi (execution / 실행) modeling.
-
-Hiện thực (implementation / 구현) sâu về cơ sở dữ liệu (database / 데이터베이스), phân tán (distributed / 분산) processing, CI/CD hay cloud hạ tầng (infrastructure / 인프라) nên tham chiếu các lĩnh vực (domain / 도메인) computing tương ứng trong repository thay vì nhét toàn bộ vào Forex.
-
-> **Bàn giao:** Sau **phạm vi (scope / 범위) ranh giới (boundary / 경계)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 DATA PIPELINE AND TIME NORMALIZATION](./01_DATA_PIPELINE_AND_TIME_NORMALIZATION.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Implementation sâu về database, distributed processing, CI/CD hay cloud infrastructure nên tham chiếu các domain computing tương ứng trong repository thay vì nhét toàn bộ vào Forex.

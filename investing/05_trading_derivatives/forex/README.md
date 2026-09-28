@@ -1,6 +1,6 @@
 # Forex — Foreign Exchange Learning Path
 
-Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam → practice/review**.
+Forex (foreign exchange, **thị trường ngoại hối**, tiếng Hàn: **외환**) là một nhánh con của `05_trading_derivatives/`. Phần này không được tổ chức như một bộ mẹo giao dịch hay danh sách indicator. Mục tiêu là xây mental model hoàn chỉnh từ **market structure → quote/P&L → leverage/risk → macro → execution → price/regime → strategy research → portfolio → microstructure/options → context pháp lý Korea/Vietnam → institutional funding/policy connections → practice/review → historical stress regimes → systematic implementation**.
 
 Forex cần được học như giao điểm của nhiều lớp:
 
@@ -15,6 +15,7 @@ Macroeconomics
 + Execution
 + Statistical Research
 + Jurisdiction / Regulation
++ Funding / Basis / Intervention / Valuation
 ```
 
 Nếu chỉ biết đọc chart nhưng không hiểu các lớp này, người học có thể mô tả chuyển động giá nhưng khó giải thích vì sao exposure tồn tại, vì sao cùng một setup thay đổi theo regime, hoặc vì sao một chiến lược có vẻ tốt trên chart nhưng thất bại sau spread, financing, slippage và margin.
@@ -44,6 +45,9 @@ investing/
         ├── 13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md
         ├── 14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md
         ├── 15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md
+        ├── 70_systematic_project/
+        ├── 80_case_studies/
+        ├── 90_connections/
         └── 90_labs/
 ```
 
@@ -157,9 +161,17 @@ Biến journal thành research database. Tách process khỏi outcome, R/MAE/MFE
 
 Chapter time-sensitive được research lại từ nguồn chính thức. Korea: Seoul FX market reform, RFI, extended hours, USD/KRW, KOFIA FX-margin framework và intermediary requirements. Vietnam: SBV-authorized FX institutions, domestic FX framework, USD/VND regime, foreign-exchange controls, IFC-specific 2025 rules và Korea–Vietnam corporate exposures.
 
+# Institutional connections — đọc sau core route khi cần institutional depth
+
+[`90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md`](./90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md) nối spot với forward points, covered interest parity, FX swaps, cross-currency basis, dealer balance-sheet constraints, synthetic funding, NDF, fixing và onshore/offshore segmentation. Mục tiêu là phân biệt **directional FX** với **funding/hedging economics**.
+
+[`90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md`](./90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md) nối PPP/REER, NIIP, reserves, sterilized/unsterilized intervention, exchange-rate regimes và valuation-model uncertainty. Mục tiêu là tránh dùng “currency cheap”, reserve headline hay intervention như automatic trading signals.
+
+Hai connection files không mở thêm linear `16/17`; chúng là bridge vào institutional FX và cross-link Economics/Derivatives để giữ canonical route gọn.
+
 # Phase F — Practice và review
 
-Lý thuyết `01–15` được chuyển thành bài tập tại [90_labs/README.md](./90_labs/README.md):
+Lý thuyết `01–15` cùng institutional connections được chuyển thành bài tập tại [90_labs/README.md](./90_labs/README.md):
 
 ```text
 Lab 00 — quote / pip / P&L / margin / position sizing
@@ -169,7 +181,47 @@ Lab 03 — portfolio FX factor risk
 Lab 04 — Korea/Vietnam FX context and regulatory verification
 ```
 
-Các lab yêu cầu tạo artifact có thể review, không phải trả lời quiz ghi nhớ. Sau khi hoàn thành, dùng [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md) để xem phần nào đã có foundation/depth/practice và phần nào chỉ nên mở rộng khi có mục tiêu cụ thể.
+Các lab yêu cầu tạo artifact có thể review, không phải trả lời quiz ghi nhớ.
+
+# Phase G — Historical stress regimes
+
+[80_case_studies/README.md](./80_case_studies/README.md) dùng các regime cực đoan để stress-test mental model thay vì học lịch sử như timeline:
+
+```text
+1992 ERM / sterling
+→ exchange-rate commitment vs domestic-policy constraint
+
+1997 Asian Financial Crisis
+→ currency mismatch + short-term foreign funding + banking feedback loop
+
+2015 CHF floor removal
+→ policy floor + liquidity discontinuity + stop/broker risk
+
+2020 global USD funding stress
+→ offshore dollar shortage + FX swaps/basis + central-bank swap lines
+```
+
+# Phase H — Systematic implementation project
+
+[70_systematic_project/README.md](./70_systematic_project/README.md) biến theory, institutional connections và research thành một system có thể audit:
+
+```text
+01 Data pipeline & time normalization
+→ point-in-time data, UTC/DST, bid/ask, macro vintage, validation, lineage
+
+02 Backtest engine & execution model
+→ causal event loop, order state, executable fills, cost, financing, margin ledger
+
+03 Portfolio risk & attribution engine
+→ currency legs, factors, stress, margin, hedge quality, P/L attribution
+
+04 Forward test, monitoring & kill switch
+→ paper/small-live gates, reconciliation, drift, safety controls, retirement rules
+```
+
+Project này không nhằm tạo bot tự động sinh lợi; mục tiêu là nối `data → research → execution → portfolio risk → forward test → safe failure` thành một process reproducible.
+
+Sau Phase H, quay lại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md) để phân biệt phần đã có theory/connection/practice/case/implementation depth với extension thực sự còn thiếu.
 
 # Milestone kiểm tra kiến thức
 
@@ -183,7 +235,13 @@ Sau Phase D, phải tổng hợp risk theo currency/factor/strategy, biết attr
 
 Sau Phase E, phải biết rằng **product access và market structure phụ thuộc jurisdiction**; không suy từ broker marketing rằng một route hợp pháp hoặc có cùng investor protection ở Korea/Vietnam.
 
+Sau institutional connections, phải phân biệt spot direction với forward/funding economics; hiểu NDF/onshore-offshore segmentation; đọc reserves/intervention/REER theo regime và model assumptions thay vì như single-variable signals.
+
 Sau Phase F, phải có ít nhất một bộ output hoàn chỉnh từ `position-risk sheet → event study → backtest report → portfolio-risk dashboard → regulatory verification checklist`.
+
+Sau Phase G, phải có thể giải thích vì sao **low historical volatility, policy commitment hoặc diversified-looking positions vẫn có thể che giấu jump/funding/factor risk**.
+
+Sau Phase H, phải có thể trace một live/paper trade từ **raw point-in-time data → signal → order/fill → margin/risk → P/L attribution → monitoring decision**, và system phải có safe-state/kill-switch semantics rõ ràng.
 
 ## Nguyên tắc an toàn nghiên cứu
 
@@ -193,10 +251,12 @@ Forex có thể sử dụng đòn bẩy lớn. Tài liệu phục vụ **học c
 
 ## Nguồn nền xuyên suốt
 
-- Bank for International Settlements (BIS), 2025 Triennial Central Bank Survey.
+- Bank for International Settlements (BIS), 2025 Triennial Central Bank Survey và research về FX/funding markets.
 - CFTC retail FX risk and registration guidance.
+- IMF/BIS/central-bank materials cho exchange-rate regimes, reserves, intervention và effective exchange rates.
 - Federal Reserve, ECB, Bank of Korea và các central banks/statistical agencies tương ứng.
 - Korea Financial Investment Association (KOFIA) cho FX-margin investor guidance tại Korea.
 - State Bank of Vietnam và official legal databases cho Vietnam FX rules.
+- Historical case studies ưu tiên central-bank, IMF, BIS và official contemporary documentation.
 
-Với số liệu hoặc quy định theo thời điểm, luôn ghi ngày/kỳ dữ liệu và source. Không biến một snapshot thành quy luật vĩnh viễn.
+Với số liệu hoặc quy định theo thời điểm, luôn ghi ngày/kỳ dữ liệu và source. Không biến một snapshot hoặc historical regime thành quy luật vĩnh viễn.
