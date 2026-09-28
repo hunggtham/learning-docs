@@ -2,15 +2,15 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md) kết thúc với một economy chịu đồng thời shortage, inflation, incentive bài toán (problem / 문제) và bên ngoài (external / 외부) ràng buộc (constraint / 제약조건). **Đổi Mới (Renovation)** được chính thức đặt thành hướng lớn tại Đại hội VI năm **1986**, nhưng reform không phải một switch bật từ “plan” sang “thị trường (market / 시장)”.
+[`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md) kết thúc với một nền kinh tế đồng thời chịu thiếu hụt, lạm phát, bài toán động lực và ràng buộc bên ngoài. **Đổi Mới (Renovation / 개혁)** được chính thức đặt thành hướng lớn tại Đại hội VI năm **1986**, nhưng cải cách không phải một công tắc chuyển từ “kế hoạch” sang thị trường.
 
 Câu hỏi của chương này là: **những cơ chế nào thực sự thay đổi cách nền kinh tế phối hợp, vì sao nông nghiệp phản ứng nhanh, vì sao hội nhập quốc tế trở thành một phần của cải cách trong nước, và vì sao tăng trưởng không đồng nghĩa mọi ngành hay vùng thay đổi giống nhau?** Hãy đi từ mốc **1986** qua khoán hộ, ổn định giá, đầu tư nước ngoài, ASEAN và WTO; các chặng này nối chính sách với ruộng đất, khu công nghiệp, đô thị và chênh lệch vùng miền.
 
-Mô hình tư duy (mental model / 사고 모델) cần giữ là **chuyển tiếp (transition / 전이) economy (nền kinh tế chuyển đổi)**: old institution không biến mất ngay, new thị trường (market / 시장) cơ chế (mechanism / 메커니즘) cũng không xuất hiện đồng bộ.
+Mô hình tư duy cần giữ là **nền kinh tế chuyển đổi (transition economy / 전환 경제)**: thiết chế cũ không biến mất ngay, còn cơ chế thị trường mới cũng không xuất hiện đồng bộ.
 
 ## Đổi Mới là tiến trình (process / 프로세스), không phải một ngày
 
-Năm 1986 là turning điểm (point / 지점) về chính sách (policy / 정책) direction. Nhưng nhiều practice market-oriented đã tồn tại trước đó dưới dạng cục bộ (local / 로컬) experiment, household exchange và đặc tả hợp đồng (contract / 계약) workaround. Sau 1986, direction này được mở rộng, institutionalized và kết nối với macroeconomic stabilization.
+Năm 1986 là điểm ngoặt về định hướng chính sách. Nhưng nhiều thực hành hướng thị trường đã tồn tại trước đó dưới dạng thử nghiệm địa phương, trao đổi hộ gia đình và cách vận dụng hợp đồng linh hoạt. Sau 1986, hướng này được mở rộng, thể chế hóa và kết nối với ổn định kinh tế vĩ mô.
 
 Có thể hình dung reform như nhiều tầng (layer / 계층):
 

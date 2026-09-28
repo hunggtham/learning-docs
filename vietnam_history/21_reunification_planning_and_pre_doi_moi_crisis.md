@@ -2,15 +2,15 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`20_two_vietnams_cold_war_and_1975.md`](20_two_vietnams_cold_war_and_1975.md) kết thúc khi chiến tranh chấm dứt trên quy mô toàn quốc năm **1975**. Nhưng military victory không tự động tạo một economy, legal hệ thống (system / 시스템) và administrative hệ thống (system / 시스템) thống nhất.
+[`20_two_vietnams_cold_war_and_1975.md`](20_two_vietnams_cold_war_and_1975.md) kết thúc khi chiến tranh chấm dứt trên quy mô toàn quốc năm **1975**. Nhưng thắng lợi quân sự không tự động tạo ra một nền kinh tế, hệ thống pháp lý và hệ thống hành chính thống nhất.
 
 Câu hỏi của chương này là: **một quốc gia vừa trải qua nhiều thập niên chiến tranh phải hợp nhất hai hệ thống kinh tế–xã hội rất khác nhau bằng cách nào, và vì sao mô hình sau thống nhất nhanh chóng gặp những giới hạn nghiêm trọng?** Hãy nối mốc **1975–1976**, cải tạo kinh tế, tem phiếu, chiến tranh biên giới và khủng hoảng lạm phát với Hà Nội, Thành phố Hồ Chí Minh và các vùng nông nghiệp; phần sau sẽ giải thích vì sao Đổi Mới 1986 xuất hiện như một quá trình tháo gỡ từng nút thắt.
 
-Để trả lời, cần đặt reconstruction, socialist transformation, international isolation, chiến tranh biên giới, population movement và experimentation về kinh tế trong cùng một nhân quả (causal / 인과적) đồ thị (graph / 그래프).
+Để trả lời, cần đặt tái thiết, chuyển đổi xã hội chủ nghĩa, cô lập quốc tế, chiến tranh biên giới, dịch chuyển dân cư và thử nghiệm kinh tế trong cùng một đồ thị nhân quả (causal graph / 인과 그래프).
 
 ## 1975 không phải “reset”
 
-Miền Bắc và miền Nam bước vào 1975 với khác biệt lớn về institution, quyền sở hữu (ownership / 소유권), thị trường (market / 시장) mạng (network / 네트워크), urban economy và bên ngoài (external / 외부) liên kết (connection / 연결). Miền Bắc đã có nhiều thập niên central planning và collective agriculture; miền Nam có private commerce, urban services, private thuộc tính (property / 속성) networks và một economy chịu ảnh hưởng mạnh của war expenditure và foreign aid.
+Miền Bắc và miền Nam bước vào năm 1975 với khác biệt lớn về thiết chế, quyền sở hữu, mạng lưới thị trường, kinh tế đô thị và liên kết bên ngoài. Miền Bắc đã có nhiều thập niên kế hoạch hóa tập trung và nông nghiệp tập thể; miền Nam có thương mại tư nhân, dịch vụ đô thị, mạng lưới sở hữu tư nhân và nền kinh tế chịu ảnh hưởng mạnh của chi tiêu chiến tranh và viện trợ nước ngoài.
 
 Khi lãnh thổ thống nhất, trạng thái (state / 상태) phải đồng thời giải quyết:
 
@@ -25,7 +25,7 @@ war damage
 very high reconstruction cost
 ```
 
-Vì vậy “thống nhất” về constitutional và territorial sense không đồng nghĩa toàn bộ daily economy lập tức trở thành một hệ thống (system / 시스템) coherent.
+Vì vậy “thống nhất” về hiến định và lãnh thổ không đồng nghĩa toàn bộ đời sống kinh tế lập tức trở thành một hệ thống thống nhất.
 
 ## 1976: institutional reunification
 
@@ -37,7 +37,7 @@ Năm **1976**, nước **Cộng hòa Xã hội Chủ nghĩa Việt Nam** đượ
 
 ## Socialist transformation ở miền Nam
 
-Sau chiến tranh, trạng thái (state / 상태) thúc đẩy transformation của commerce, industry và agriculture theo socialist mô hình (model / 모델). Nhiều private businesses được reorganized; cooperative và trạng thái (state / 상태) sector được mở rộng; phân phối (distribution / 분포) chịu nhiều administrative điều khiển (control / 제어) hơn.
+Sau chiến tranh, nhà nước thúc đẩy chuyển đổi thương mại, công nghiệp và nông nghiệp theo mô hình xã hội chủ nghĩa. Nhiều doanh nghiệp tư nhân được tổ chức lại; hợp tác xã và khu vực nhà nước được mở rộng; phân phối chịu sự điều tiết hành chính nhiều hơn.
 
 Lô-gic (logic / 논리) chính sách (policy / 정책) có thể hiểu được từ mục tiêu lúc đó: giảm private concentration, đưa tài nguyên (resource / 자원) vào planning hệ thống (system / 시스템) và tạo một economic cấu trúc (structure / 구조) thống nhất với miền Bắc.
 

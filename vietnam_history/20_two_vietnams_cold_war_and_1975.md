@@ -2,17 +2,17 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md) kết thúc với a provisional military division near the 17th parallel. Điều xảy ra sau đó không phải simply “Mỹ thay Pháp”.
+[`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md) kết thúc với việc quân sự tạm thời chia cắt gần vĩ tuyến 17. Điều xảy ra sau đó không đơn giản là “Mỹ thay Pháp”.
 
 Câu hỏi trung tâm của chương là: **vì sao việc tập kết tạm thời lại cứng hóa thành hai nhà nước đối địch, và vì sao xung đột giữa các lực lượng Việt Nam trở thành một trong những cuộc chiến quốc tế lớn của Chiến tranh Lạnh?** Hãy theo mốc **1954, 1955, 1968 và 1975**, đồng thời đặt cạnh di cư, cải cách ruộng đất, viện trợ, đô thị hóa và địa đạo Củ Chi; như vậy “hai miền” hiện ra vừa là cạnh tranh nhà nước vừa là đời sống của gia đình và cộng đồng.
 
-Hiện đại (modern / 현대적) scholarship emphasizes that xung đột (conflict / 충돌) này có nhiều tầng (layer / 계층) cùng lúc: struggle over national reunification, civil war, revolutionary war, anticommunist state-building và toàn cục (global / 전역) Cold War intervention. Không tầng (layer / 계층) nào một mình giải thích toàn bộ.
+Nghiên cứu hiện đại nhấn mạnh rằng xung đột này có nhiều tầng cùng lúc: tranh chấp thống nhất quốc gia, nội chiến, chiến tranh cách mạng, xây dựng nhà nước chống cộng và can thiệp toàn cầu trong Chiến tranh Lạnh. Không tầng nào một mình giải thích toàn bộ.
 
 ## Hai state-building dự án (project / 프로젝트) sau Geneva
 
-Ở north, **Democratic Republic of Vietnam (DRV)** consolidated a socialist revolutionary trạng thái (state / 상태) headquartered in Hanoi.
+Ở miền Bắc, **nước Việt Nam Dân chủ Cộng hòa (Democratic Republic of Vietnam, DRV)** củng cố một nhà nước cách mạng xã hội chủ nghĩa đặt thủ đô tại Hà Nội.
 
-Ở south, **Trạng thái (state / 상태) of Vietnam** transitioned into **Republic of Vietnam (RVN)** under Ngô Đình Diệm after 1955, with increasing United States hỗ trợ (support / 지원) and declining direct French influence.
+Ở miền Nam, **Quốc gia Việt Nam (State of Vietnam)** chuyển thành **Việt Nam Cộng hòa (Republic of Vietnam, RVN)** dưới thời Ngô Đình Diệm sau năm 1955, với sự hỗ trợ ngày càng tăng của Hoa Kỳ và ảnh hưởng trực tiếp của Pháp giảm dần.
 
 Both governments claimed national legitimacy beyond the territory they controlled. Vì vậy division was not treated by either as an ideal permanent settlement.
 

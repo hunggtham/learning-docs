@@ -4,13 +4,13 @@
 
 [`22_doi_moi_market_transition_and_global_reintegration.md`](22_doi_moi_market_transition_and_global_reintegration.md) cho thấy Đổi Mới đã thay đổi động lực, giá cả, doanh nghiệp và hội nhập bên ngoài. Khi bước vào thế kỷ XXI, câu hỏi không còn chỉ là **làm sao thoát khỏi thiếu thốn và nghèo đói** mà dần chuyển thành: **làm sao tăng năng suất, nâng vị trí trong chuỗi giá trị, quản lý đô thị hóa, già hóa và rủi ro môi trường trong một nền kinh tế đã hội nhập sâu?** Hãy nối mốc gia nhập WTO **2007**, các chuỗi sản xuất điện tử, đô thị Hà Nội–Thành phố Hồ Chí Minh và áp lực đồng bằng sông Cửu Long để thấy chương này tiếp tục câu chuyện Đổi Mới.
 
-Đây là chuyển tiếp (transition / 전이) từ **low-income catch-up bài toán (problem / 문제)** sang **middle-income structural transformation bài toán (problem / 문제)**.
+Đây là quá trình chuyển từ **bài toán bắt kịp của nước thu nhập thấp** sang **bài toán chuyển đổi cơ cấu của nước thu nhập trung bình**.
 
-## WTO-era tích hợp (integration / 통합): factory không phải một island
+## Hội nhập thời WTO: nhà máy không phải một hòn đảo
 
-Sau WTO accession năm 2007, Việt Nam tiếp tục tích hợp sâu vào toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). Electronics, machinery, garment, footwear và nhiều manufacturing sector được tổ chức theo **toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)**.
+Sau khi gia nhập WTO năm 2007, Việt Nam tiếp tục hội nhập sâu vào mạng lưới sản xuất toàn cầu. Điện tử, máy móc, dệt may, giày dép và nhiều ngành chế tạo được tổ chức theo **chuỗi giá trị toàn cầu (global value chain / 글로벌 가치사슬)**.
 
-Một sản phẩm (product / 제품) “Made in Vietnam” có thể chứa thành phần (component / 컴포넌트) từ nhiều nước, thiết kế (design / 설계) ở nơi khác, assembly tại Việt Nam và sale trên toàn cục (global / 전역) thị trường (market / 시장).
+Một sản phẩm “Made in Vietnam” có thể chứa linh kiện từ nhiều nước, được thiết kế ở nơi khác, lắp ráp tại Việt Nam và bán trên thị trường toàn cầu.
 
 ```text
 design / IP

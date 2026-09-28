@@ -2,13 +2,13 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md) kết thúc với Democratic Republic of Vietnam (DRV) được tuyên bố ngày 2 September 1945. Nhưng proclamation không đồng nghĩa uncontested sovereignty.
+[`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md) kết thúc với nước Việt Nam Dân chủ Cộng hòa (Democratic Republic of Vietnam, DRV) được tuyên bố ngày 2/9/1945. Nhưng tuyên bố độc lập không đồng nghĩa chủ quyền đã được mọi bên thừa nhận.
 
 Câu hỏi trung tâm của chương này là: **làm thế nào khoảng trống quyền lực sau chiến tranh biến thành cuộc chiến giành độc lập ngày càng quốc tế hóa, và vì sao năm 1954 kết thúc chiến tranh Pháp–Việt nhưng chưa giải quyết tranh chấp về trật tự chính trị tương lai của Việt Nam?** Hãy nối mốc **2/9/1945, 1946 và Điện Biên Phủ 1954** với nạn đói, tài chính, vùng căn cứ và Hiệp định Geneva; phần sau sẽ theo dõi vì sao đường chia cắt 17° trở thành trải nghiệm xã hội lâu dài.
 
 ## 1945: independence claim trong một international occupation khung phần mềm (framework / 프레임워크)
 
-Sau Japanese surrender, Allied arrangements phân công việc giải giáp Japanese forces: Chinese Nationalist forces vào northern Vietnam, British forces vào south. French forces gradually returned, particularly in southern Vietnam.
+Sau khi Nhật đầu hàng, các thỏa thuận Đồng minh phân công việc giải giáp quân Nhật: quân Quốc dân đảng Trung Hoa vào miền Bắc Việt Nam, quân Anh vào miền Nam. Quân Pháp dần quay trở lại, đặc biệt ở miền Nam.
 
 Điều này tạo multi-layer sovereignty bài toán (problem / 문제). DRV có revolutionary legitimacy và cục bộ (local / 로컬) điều khiển (control / 제어) ở nhiều nơi, nhưng không được các major powers immediate recognition như một fully secure sovereign trạng thái (state / 상태).
 
@@ -18,7 +18,7 @@ Vì vậy late 1945 politics không phải simple DRV vs France nhị phân (bin
 
 ## State-building under scarcity
 
-DRV phải đồng thời đối mặt famine aftermath, low fiscal sức chứa (capacity / 용량), weak administrative reach và foreign troops. Currency, food supply, tax và cục bộ (local / 로컬) bảo mật (security / 보안) là existential problems.
+Chính phủ DRV đồng thời phải đối mặt với hậu quả nạn đói, năng lực tài chính thấp, tầm với hành chính yếu và quân đội nước ngoài. Tiền tệ, nguồn lương thực, thuế và an ninh địa phương là những vấn đề sống còn.
 
 A new trạng thái (state / 상태) needs more than flag:
 
@@ -44,7 +44,7 @@ Negotiation thất bại (failure / 실패) should not be reduced to one meeting
 
 ## December 1946: full-scale war
 
-Fighting escalated into full-scale war in **December 1946**, commonly marking start of First Indochina War at national quy mô (scale / 규모).
+Giao tranh leo thang thành chiến tranh toàn diện vào **tháng 12/1946**, thường được xem là khởi đầu Chiến tranh Đông Dương lần thứ nhất trên quy mô cả nước.
 
 French forces had superiority in conventional weaponry, urban bases and mobility in some corridors. DRV/Viet Minh chiến lược (strategy / 전략) increasingly relied on rural bases, political mobilization, guerrilla warfare and gradual development of regular forces.
 

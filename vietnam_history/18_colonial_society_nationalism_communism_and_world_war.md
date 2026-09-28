@@ -2,7 +2,7 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`17_french_conquest_colonial_state_and_economy.md`](17_french_conquest_colonial_state_and_economy.md) cho thấy colonialism vừa extract resources vừa tạo hạ tầng (infrastructure / 인프라), schools, cities và thông tin (information / 정보) networks mới. Những các hệ thống (systems / 시스템들) này không tạo một phản hồi (response / 응답) duy nhất.
+[`17_french_conquest_colonial_state_and_economy.md`](17_french_conquest_colonial_state_and_economy.md) cho thấy chủ nghĩa thực dân vừa khai thác tài nguyên vừa tạo hạ tầng, trường học, đô thị và mạng lưới thông tin mới. Những hệ thống này không tạo ra một phản ứng duy nhất.
 
 Câu hỏi trung tâm của chương này là: **vì sao cùng sống dưới chế độ thuộc địa, các lực lượng chính trị Việt Nam lại đề xuất những con đường rất khác nhau—cải cách, quân chủ, dân tộc chủ nghĩa cộng hòa, chính trị lập hiến, cộng sản và cách mạng vũ trang?** Hãy dùng mốc **1900–1945** cùng báo chí, trường học, Đông Du, Xô viết Nghệ–Tĩnh và tác động của Thế chiến II để nối tư tưởng với đời sống đô thị, nông thôn và bước ngoặt tháng Tám.
 
@@ -10,15 +10,15 @@ Muốn hiểu 1945, phải hiểu competition giữa các visions trước đó.
 
 ## “Phong trào yêu nước” không phải một ideology duy nhất
 
-Early twentieth-century anti-colonial politics có nhiều khung phần mềm (framework / 프레임워크). Một số leaders nhìn Nhật Bản và modernization East Asia như mô hình (model / 모델); một số nhấn mạnh education và xã hội (social / 사회적) reform; một số ưu tiên armed resistance; một số xây republican nationalism; communists đặt colonial liberation trong lớp (class / 클래스) revolution và international communist movement.
+Chính trị chống thuộc địa đầu thế kỷ XX có nhiều khung tư tưởng (framework / 사상 체계). Một số nhà lãnh đạo nhìn Nhật Bản và hiện đại hóa Đông Á như mô hình; một số nhấn mạnh giáo dục và cải cách xã hội; một số ưu tiên kháng chiến vũ trang; một số xây dựng chủ nghĩa dân tộc cộng hòa; những người cộng sản đặt giải phóng thuộc địa trong cách mạng giai cấp và phong trào cộng sản quốc tế.
 
-Các group có thể cùng muốn giảm hoặc chấm dứt French domination nhưng disagree sâu về trạng thái (state / 상태) form, xã hội (social / 사회적) thứ tự (order / 순서) và chiến lược (strategy / 전략).
+Các nhóm có thể cùng muốn giảm hoặc chấm dứt sự thống trị của Pháp nhưng bất đồng sâu sắc về hình thức nhà nước, trật tự xã hội và chiến lược.
 
 Historical narrative tốt cần giữ disagreement này thay vì retrospectively merge tất cả thành một line duy nhất dẫn tới 1945.
 
 ## Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)
 
-**Phan Bội Châu** gắn với Đông Du và attempts xây overseas hỗ trợ (support / 지원), đặc biệt từ Japan. Chiến lược (strategy / 전략) của ông phản ánh một lesson từ thời đại: weak anti-colonial movement có thể tìm bên ngoài (external / 외부) patron, huấn luyện (training / 학습) và safe mạng (network / 네트워크).
+**Phan Bội Châu** gắn với Đông Du và nỗ lực xây dựng hỗ trợ ở nước ngoài, đặc biệt từ Nhật Bản. Chiến lược của ông phản ánh một bài học của thời đại: phong trào chống thuộc địa yếu có thể tìm kiếm người bảo trợ, huấn luyện và mạng lưới an toàn bên ngoài.
 
 Nhưng bên ngoài (external / 외부) hỗ trợ (support / 지원) luôn có ràng buộc (constraint / 제약조건). Foreign government có interest riêng và có thể thay chính sách (policy / 정책) khi diplomatic chi phí (cost / 비용) tăng.
 
