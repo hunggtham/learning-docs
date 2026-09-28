@@ -30,13 +30,13 @@ Bureaucratization không xóa patronage, nhưng làm trạng thái (state / 상�
 
 ## Early Lê: reconstruction sau hai decades disruption
 
-Ming occupation và Lam Sơn war làm fields, settlements và elite cấu trúc (structure / 구조) bị disruption. Postwar government cần restore agriculture, resettle population và regularize tax cơ sở (base / 기반).
+Chiếm đóng của nhà Minh và chiến tranh Lam Sơn làm ruộng đất, cư trú và cấu trúc tinh hoa bị gián đoạn. Chính quyền hậu chiến cần khôi phục nông nghiệp, tái định cư dân chúng và ổn định nền thuế.
 
 Land chính sách (policy / 정책) vì vậy không chỉ là ideology. Nếu peasants thiếu trường dữ liệu (field / 필드) hoặc fields abandoned, trạng thái (state / 상태) mất grain và labor. Reconstruction chính sách (policy / 정책) trực tiếp tied to fiscal survival.
 
 ## Quân điền: land allocation như fiscal-military cơ chế (mechanism / 메커니즘)
 
-Lê sơ thường gắn với **quân điền**, tức periodic allocation/use rights over công khai (public / 공개) or communal land according to status and obligation. Details vary by thời gian (time / 시간) and nguồn (source / 소스), nên không nên hình dung trạng thái (state / 상태) literally redistributing every parcel nationwide from a central spreadsheet.
+Lê sơ thường gắn với **quân điền**, tức phân bổ định kỳ quyền sử dụng đất công hoặc đất công xã theo địa vị và nghĩa vụ. Chi tiết thay đổi theo thời gian và nguồn, nên không nên hình dung nhà nước thực sự phân phối lại từng thửa ruộng trên toàn quốc từ một bảng tính trung tâm.
 
 Mô hình tư duy (mental model / 사고 모델) quan trọng hơn: ruler muốn keep cultivators attached to productive land while preserving a taxable/service-bearing population.
 
@@ -52,7 +52,7 @@ Nếu elite concentration quá mạnh, central trạng thái (state / 상태) lo
 
 ## Lê Thánh Tông 1460–1497: bureaucratization tăng tốc
 
-Reign của **Lê Thánh Tông** thường được xem là peak của Lê sơ. Scholarship của John Whitmore nhấn mạnh growth of bureaucracy và paperwork dưới reign này.
+Triều **Lê Thánh Tông** thường được xem là đỉnh cao của Lê sơ. Nghiên cứu của John Whitmore nhấn mạnh sự phát triển của bộ máy quan liêu và hồ sơ giấy tờ dưới triều vua này.
 
 Điều đó rất đáng chú ý. Trạng thái (state / 상태) sức chứa (capacity / 용량) không chỉ là soldiers; nó là ability to create and circulate **records**: personnel lists, geography, law, memorials, examinations, maps.
 
@@ -62,7 +62,7 @@ Thông tin (information / 정보) reduces ruler's blindness. Một center biết
 
 Lê trạng thái (state / 상태) refine provincial administration và ánh xạ (mapping / 매핑). **Hồng Đức bản đồ** trong tradition của reign Lê Thánh Tông biểu tượng cho effort represent territory as governable không gian (space / 공간).
 
-Map không chỉ mô tả. Nó là quản trị (governance / 거버넌스) công cụ (tool / 도구): border, tuyến (route / 경로), district và tài nguyên (resource / 자원) location trở thành thông tin (information / 정보) objects.
+Bản đồ không chỉ mô tả. Nó là công cụ quản trị: biên giới, tuyến đường, huyện và vị trí tài nguyên trở thành những đối tượng thông tin có thể ghi nhận và xử lý.
 
 Đây là một historical parallel với cơ sở dữ liệu (database / 데이터베이스): trạng thái (state / 상태) cannot manage what it cannot identify consistently.
 

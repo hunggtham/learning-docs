@@ -30,11 +30,11 @@ Thăng Long becomes durable political center
 
 ## Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay
 
-Khu trung tâm **Hoàng thành Thăng Long** ngày nay là một rare place để thấy political geography kéo dài nhiều thế kỷ. UNESCO nhấn mạnh site được Lý xây dựng ở thế kỷ XI trên nền một fortress thời trước và tiếp tục là center of power qua nhiều dynasty.
+Khu trung tâm **Hoàng thành Thăng Long** ngày nay là một địa điểm hiếm để thấy địa lý quyền lực kéo dài nhiều thế kỷ. UNESCO nhấn mạnh nơi này được nhà Lý xây dựng ở thế kỷ XI trên nền một pháo đài thời trước và tiếp tục là trung tâm quyền lực qua nhiều triều đại.
 
 Khu khảo cổ **18 Hoàng Diệu** đặc biệt quan trọng vì các architectural foundation, drainage, ceramics và other remains nằm thành nhiều lớp. Đây là vật lý (physical / 물리적) bằng chứng (evidence / 증거) của continuity + rebuilding.
 
-Nếu đứng tại site, câu hỏi tốt là: capital cần palace, wall, water management, lưu trữ (storage / 저장소), workshop và road organization ra sao? Một royal city không chỉ là nơi vua ở; nó là **coordination hạ tầng (infrastructure / 인프라)**.
+Nếu đứng tại di tích, câu hỏi tốt là: kinh đô cần cung điện, tường thành, quản lý nước, kho chứa, xưởng và tổ chức đường sá ra sao? Một đô thị hoàng gia không chỉ là nơi vua ở; nó là **hạ tầng phối hợp (coordination infrastructure / 조정 인프라)**.
 
 ## Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)
 
@@ -54,7 +54,7 @@ more stable surplus when coordination works
 larger urban / military / religious population can be supported
 ```
 
-Hydraulic công việc (work / 작업) không tự động chứng minh absolute centralization. Village communities và regional actors có thể đóng vai trò lớn trong construction và maintenance.
+Công việc thủy lợi (hydraulic work / 수리 사업) không tự động chứng minh tập quyền tuyệt đối. Cộng đồng làng và các lực lượng vùng có thể đóng vai trò lớn trong xây dựng và bảo trì.
 
 ## Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)
 
@@ -76,7 +76,7 @@ Tuy nhiên gọi Buddhism là “quốc giáo” có thể làm người đọc 
 
 Năm **1070**, Văn Miếu được dựng tại Thăng Long; **1075** thường được xem là mốc khoa thi đầu tiên của triều Lý; **1076** gắn với Quốc Tử Giám.
 
-Điểm cần hiểu không phải memorizing three dates mà là cơ chế (mechanism / 메커니즘): một expanding trạng thái (state / 상태) cần officials có dùng chung (shared / 공유) literacy và political vocabulary. Examination/education giúp ruler recruit ngoài narrow kin mạng (network / 네트워크), dù early hệ thống (system / 시스템) vẫn small và elite-dominated.
+Điểm cần hiểu không phải học thuộc ba ngày mà là cơ chế: một nhà nước đang mở rộng cần quan lại cùng sử dụng năng lực đọc viết và vốn từ chính trị. Khoa cử và giáo dục giúp người cai trị tuyển người ngoài mạng lưới họ hàng hẹp, dù hệ thống ban đầu vẫn nhỏ và thiên về tinh hoa.
 
 **Literacy chuỗi xử lý (pipeline / 파이프라인)** có thể nhìn như:
 

@@ -28,15 +28,15 @@ Mạc Đăng Dung nổi lên trong ngữ cảnh (context / 맥락) này.
 
 ## 1527: Mạc Đăng Dung lập triều Mạc
 
-Năm **1527**, Mạc Đăng Dung thay nhà Lê và lập Mạc dynasty tại Thăng Long. Traditional Lê historiography thường frame sự kiện (event / 이벤트) bằng ngôn ngữ (language / 언어) usurpation. Hiện đại (modern / 현대적) historical reading vẫn cần acknowledge dynastic seizure nhưng cũng hỏi why it was possible.
+Năm **1527**, Mạc Đăng Dung thay nhà Lê và lập triều Mạc tại Thăng Long. Sử học truyền thống của nhà Lê thường đóng khung sự kiện bằng ngôn ngữ tiếm quyền. Cách đọc lịch sử hiện đại vẫn cần ghi nhận việc chuyển ngôi bằng cưỡng đoạt, nhưng cũng hỏi vì sao điều đó có thể xảy ra.
 
-Mạc had military điều khiển (control / 제어), administrative truy cập (access / 접근) và enough elite hỗ trợ (support / 지원) to operate government. Một regime tồn tại nhiều decades, tổ chức examinations và diplomacy không thể explain solely as one man's coup.
+Nhà Mạc có quyền kiểm soát quân sự, khả năng tiếp cận bộ máy hành chính và đủ sự ủng hộ của tinh hoa để vận hành chính quyền. Một chế độ tồn tại nhiều thập niên, tổ chức khoa cử và ngoại giao không thể chỉ được giải thích như cuộc đảo chính của một người.
 
 ## Legitimacy là tài nguyên (resource / 자원) có thể mobilize
 
 Lê dynasty chưa mất symbolic giá trị (value / 값). Loyalist forces gathered around surviving Lê claimants. Từ **1533**, Lê restoration movement phát triển ở Thanh Hóa dưới figures như Nguyễn Kim, sau đó Trịnh Kiểm.
 
-Từ đây hình thành mẫu (pattern / 패턴) thường gọi **Nam triều – Bắc triều**: Mạc điều khiển (control / 제어) north/Thăng Long trong nhiều giai đoạn, Lê restoration cơ sở (base / 기반) ở Thanh Hóa–Nghệ An.
+Từ đây hình thành cục diện thường gọi **Nam triều – Bắc triều**: nhà Mạc kiểm soát miền Bắc và Thăng Long trong nhiều giai đoạn, còn lực lượng phục hồi nhà Lê đặt căn cứ ở Thanh Hóa–Nghệ An.
 
 Terms “Nam” và “Bắc” là useful coordinate, nhưng territory changed repeatedly; không nên imagine a fixed hiện đại (modern / 현대적) border.
 
@@ -50,7 +50,7 @@ Lê dynastic bộ nhớ (memory / 메모리) ở Lam Kinh tạo symbolic capital
 
 Mạc usurpation đặt nhà Minh trước difficult choice. Một faction favored intervention to restore Lê; others remembered high chi phí (cost / 비용) of 1407–1427 occupation and preferred caution.
 
-Cambridge scholarship notes Ming court debated whether to intervene and became increasingly cautious. Mạc Đăng Dung eventually used ritual submission and border diplomacy to avoid full-scale invasion.
+Nghiên cứu của Cambridge cho thấy triều Minh tranh luận về việc can thiệp rồi ngày càng thận trọng. Mạc Đăng Dung cuối cùng dùng nghi lễ quy phục và ngoại giao biên giới để tránh một cuộc xâm lược toàn diện.
 
 Đây là excellent example of **diplomatic signaling**. A weaker trạng thái (state / 상태) may accept humiliating ritual forms if doing so reduces xác suất (probability / 확률) of catastrophic war.
 
@@ -66,7 +66,7 @@ A regime seeking legitimacy often preserves institutions people already recogniz
 
 ## Civil war economy: fragmentation không có nghĩa economy stops everywhere
 
-Long war raises tax, conscription and insecurity, but effects vary geographically. Some corridors become battle zones; others may benefit from trade diversion or cục bộ (local / 로컬) autonomy.
+Chiến tranh kéo dài làm tăng thuế, trưng binh và bất an, nhưng tác động khác nhau theo địa lý. Một số hành lang trở thành vùng chiến sự; nơi khác có thể hưởng lợi từ việc chuyển hướng thương mại hoặc quyền tự chủ địa phương.
 
 This is a general quy tắc (rule / 규칙): **political fragmentation and commercial activity can coexist**. In later sixteenth and seventeenth centuries, maritime trade becomes even more significant despite competing regimes.
 

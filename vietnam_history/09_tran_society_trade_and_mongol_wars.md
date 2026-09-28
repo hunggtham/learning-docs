@@ -30,7 +30,7 @@ Một dynasty có cơ sở (base / 기반) mạnh ở coastal zone có thể hi�
 
 ## Buddhism, Confucian học tập (learning / 학습) và plural political culture
 
-Buddhism tiếp tục có ảnh hưởng sâu dưới Trần. Sau các wars, vua Trần Nhân Tông gắn với **Thiền phái Trúc Lâm** và Yên Tử, tạo một form Buddhist practice có strong court association.
+Phật giáo tiếp tục có ảnh hưởng sâu dưới Trần. Sau các cuộc chiến, vua Trần Nhân Tông gắn với **Thiền phái Trúc Lâm** và Yên Tử, tạo một hình thức thực hành Phật giáo có liên hệ chặt với triều đình.
 
 Đồng thời Confucian education và examinations tiếp tục mở rộng. Đây không phải replacement tức thì Buddhism → Confucianism, mà là coexistence của nhiều legitimacy các hệ thống (systems / 시스템들): royal ancestor cult, Buddhism, classical học tập (learning / 학습) và cục bộ (local / 로컬) ritual.
 
@@ -38,7 +38,7 @@ Văn Miếu–Quốc Tử Giám tiếp tục được tu sửa và sử dụng d
 
 ## Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia
 
-Để hiểu Đại Việt thế kỷ XIII, phải zoom out. Mongol conquests không phải một xung đột (conflict / 충돌) song phương “Việt Nam–Trung Quốc”. Mongol armies đã đánh từ Central Asia tới Eastern Europe, chinh phục Dali/Yunnan, hủy Southern Song và pressure nhiều states ở Southeast Asia.
+Để hiểu Đại Việt thế kỷ XIII, phải mở rộng khung nhìn. Các cuộc chinh phục của Mông Cổ không phải một xung đột song phương “Việt Nam–Trung Quốc”. Quân Mông Cổ đã đánh từ Trung Á tới Đông Âu, chinh phục Đại Lý–Vân Nam, tiêu diệt Nam Tống và gây sức ép lên nhiều nhà nước Đông Nam Á.
 
 Vì vậy Đại Việt đối diện một **systemic shock**: một military empire có mobility, manpower và regional reach chưa từng thấy đang tiến xuống phía nam.
 
@@ -64,7 +64,7 @@ food / forage / disease / local resistance raise cost
 defender counterattacks when attacker weakens
 ```
 
-Đây là **defense in độ sâu (depth / 깊이) (phòng ngự chiều sâu)**, không phải đơn giản “bỏ chạy rồi thắng”.
+Đây là **phòng ngự chiều sâu (defense in depth / 종심 방어)**, không phải đơn giản “bỏ chạy rồi thắng”.
 
 ## 1285: chiến tranh lớn hơn, mobilization cũng lớn hơn
 
@@ -76,7 +76,7 @@ Các chiến thắng như Hàm Tử, Chương Dương thường được nhớ n
 
 Trong campaign cuối, Yuan chuẩn bị cả land force và maritime supply. Trần forces đánh vào supply fleet, khiến invading army ở Thăng Long không nhận được đủ food. Khi Yuan retreat, naval force của Ô Mã Nhi đi qua Bạch Đằng và bị Trần Hưng Đạo phục kích.
 
-Đây là reason Bạch Đằng 1288 nên học như **logistics war**, không chỉ trap bằng cọc.
+Đây là lý do Bạch Đằng 1288 nên học như **chiến tranh hậu cần (logistics war / 군수전)**, không chỉ là một cái bẫy bằng cọc.
 
 ```text
 large invasion army
