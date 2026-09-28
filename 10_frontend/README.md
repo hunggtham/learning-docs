@@ -179,6 +179,21 @@ từ tên CSS thuộc tính (property / 속성) hoặc khung phần mềm (frame
 
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab**, ta sang **Kiểm tra coverage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
+## Case studies và evidence lab
+
+[`90_case_studies/README.md`](./90_case_studies/README.md) là lớp integration cấp
+domain. Nó không tạo owner theory mới mà buộc người học nối các owner hiện có
+thành causal trace có thể đo và review.
+
+Bắt đầu với:
+
+- [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để trace một màn hình từ document request, parser, DOM/CSSOM và rendering tới async state, security boundary và deployed artifact.
+- [`Rendering Performance Measurement Lab`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md) để đo scripting/style/layout/paint/composite, layout invalidation và framework/browser rendering bằng baseline → trace → hypothesis → one change → re-measure.
+
+Hai case này là evidence path cho các gap cấp domain mà theory riêng lẻ khó kiểm
+tra: người đọc phải chứng minh browser đang làm work gì thay vì suy nguyên nhân
+từ tên CSS property hoặc framework abstraction.
+
 ## Kiểm tra coverage
 
 [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) là checklist cấp lĩnh vực (domain / 도메인). kiểm tra (audit / 감사) không
