@@ -1,10 +1,10 @@
-# Nhà Trần: society, trade và chiến tranh trong Mongol world
+# Nhà Trần: xã hội, thương mại và chiến tranh trong thế giới Mông–Nguyên
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`08_ly_thang_long_state_and_economy.md`](08_ly_thang_long_state_and_economy.md) kết thúc với một Đại Việt đã có capital bền vững ở Thăng Long, agrarian cơ sở (base / 기반) lớn, court Buddhism, literate administration và các frontier cần quản lý. Đầu thế kỷ XIII, hệ thống (system / 시스템) này không biến mất; nó rơi vào succession crisis và được một elite mạng (network / 네트워크) khác tiếp quản.
 
-Câu hỏi trung tâm của chapter là: **nhà Trần đã kế thừa gì từ Lý, thay đổi cách tổ chức elite và military ra sao, và vì sao một polity tương đối nhỏ có thể sống sót trước áp lực của Mongol–Yuan empire?**
+Câu hỏi trung tâm của chương là: **nhà Trần đã kế thừa gì từ Lý, thay đổi cách tổ chức tầng lớp tinh hoa và quân đội ra sao, và vì sao một thực thể chính trị (polity / 정치체) tương đối nhỏ có thể sống sót trước áp lực của đế chế Mông–Nguyên?** Mốc 1225 và các cuộc xâm lược 1258–1288 phải được nối với ruộng đất, thương mại biển, hậu cần sông–biển và đời sống xã hội.
 
 Để trả lời, phải đặt chiến tranh cạnh economy, logistics và xã hội (social / 사회적) organization. Nếu chỉ học “ba lần chống Nguyên–Mông”, ta thấy kết quả nhưng không thấy cơ chế (mechanism / 메커니즘).
 

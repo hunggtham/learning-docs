@@ -1,10 +1,10 @@
-# Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV
+# Lê sơ: bộ máy quan liêu, luật, ruộng đất và giáo dục ở Đại Việt thế kỷ XV
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`10_ho_ming_occupation_and_lam_son.md`](10_ho_ming_occupation_and_lam_son.md) kết thúc ở **1428**, khi Lê Lợi lập dynasty sau một decade resistance. Winning independence tạo legitimacy lớn, nhưng new regime vẫn phải convert wartime coalition thành peacetime government.
 
-Câu hỏi trung tâm của chapter là: **làm thế nào nhà Lê biến military coalition thành bureaucratic trạng thái (state / 상태) có rules về officials, land, law, education và territory?**
+Câu hỏi trung tâm của chương là: **làm thế nào nhà Lê biến liên minh quân sự thành một nhà nước quan liêu (bureaucratic state / 관료 국가) có quy tắc về quan lại, ruộng đất, luật, giáo dục và lãnh thổ?** Mốc 1428 và thời Hồng Đức cần được đọc cùng sổ sách, bia tiến sĩ, ruộng làng, kinh đô Thăng Long và những nhóm không xuất hiện đầy đủ trong văn bản triều đình.
 
 Đây là phase mà paperwork itself trở thành historical bằng chứng (evidence / 증거) quan trọng.
 

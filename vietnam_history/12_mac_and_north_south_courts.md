@@ -1,10 +1,10 @@
-# Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation
+# Lê–Mạc và Nam–Bắc triều: chính danh, dòng họ quân sự và phân mảnh quyền lực
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`11_le_so_bureaucracy_law_land_and_education.md`](11_le_so_bureaucracy_law_land_and_education.md) mô tả một Lê sơ có bureaucracy mạnh hơn, examination hệ thống (system / 시스템) dày hơn và central monarchy nhiều tài nguyên (resource / 자원) hơn. Chính vì throne kiểm soát nhiều tài nguyên (resource / 자원), succession crisis có stakes rất lớn.
 
-Câu hỏi của chapter này là: **khi central legitimacy vỡ, tại sao bureaucracy không tự giữ trạng thái (state / 상태) together, và vì sao competing dynasties có thể cùng claim một political tradition trong nhiều decades?**
+Câu hỏi của chương này là: **khi tính chính danh trung tâm vỡ, tại sao bộ máy quan liêu không tự giữ nhà nước (state / 국가) together, và vì sao các triều đại cạnh tranh có thể cùng tuyên bố kế thừa một truyền thống chính trị trong nhiều thập niên?** Mốc 1527, Thanh Hóa, Thăng Long, ngoại giao Minh và các gia tộc quân sự cần được đặt trên cùng một mạch.
 
 Đây là cầu nối (bridge / 브리지) từ centralized Lê sơ sang era của militarized family alliances.
 

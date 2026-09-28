@@ -1,4 +1,4 @@
-# Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ
+# Nhà Lý: Thăng Long, củng cố nhà nước (state consolidation / 국가 강화), Phật giáo (Buddhism / 불교) và kinh tế châu thổ
 
 ## Điểm tựa và câu hỏi trung tâm
 
@@ -6,7 +6,7 @@
 
 Câu hỏi trung tâm bây giờ là: **khi một trạng thái (state / 상태) không còn chỉ lo tồn tại, nó quy mô (scale / 규모) administration, capital, agriculture, legitimacy và frontier như thế nào?**
 
-Nhà Lý thường được mô tả như thời kỳ “xây dựng nhà nước phong kiến tập quyền”. Cụm này useful nhưng dễ quá phẳng. Scholarship đã tranh luận mức độ central điều khiển (control / 제어) thực sự mạnh tới đâu; village và regional powers vẫn có autonomy đáng kể. Vì vậy ta nên nói **trạng thái (state / 상태) consolidation (củng cố nhà nước)** thay vì giả định một bureaucracy hiện đại phủ đều lãnh thổ.
+Nhà Lý thường được mô tả như thời kỳ “xây dựng nhà nước phong kiến tập quyền”. Cụm này hữu ích nhưng dễ quá phẳng. Nghiên cứu còn tranh luận mức độ trung tâm điều khiển (control / 제어) thực sự mạnh tới đâu; làng và thế lực vùng vẫn có quyền tự chủ đáng kể. Vì vậy ta nên nói **củng cố nhà nước (state consolidation / 국가 강화)** thay vì giả định một bộ máy quan liêu hiện đại phủ đều lãnh thổ. Mốc 1010, nền lúa nước–thủy lợi, Phật giáo triều đình, bối cảnh Tống–Champa và Hoàng thành Thăng Long phải được đọc cùng nhau.
 
 ## 1009–1010: triều đại mới và quyết định rời Hoa Lư
 

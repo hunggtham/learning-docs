@@ -1,10 +1,10 @@
-# Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction
+# Nhà Hồ → Minh thuộc → Lam Sơn: cải cách, chinh phục và tái thiết
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`09_tran_society_trade_and_mongol_wars.md`](09_tran_society_trade_and_mongol_wars.md) kết thúc với một nhà Trần đã thắng bên ngoài (external / 외부) invasions nhưng về sau gặp fiscal stress, elite fragmentation và military pressure. Trong ngữ cảnh (context / 맥락) đó, **Hồ Quý Ly** nổi lên như một reformer rất mạnh.
 
-Câu hỏi trung tâm của chapter là: **vì sao reform có thể cần thiết nhưng vẫn thất bại về legitimacy và bảo mật (security / 보안), và làm thế nào Minh conquest lại tạo conditions cho một coalition mới ở Thanh Hóa dưới Lê Lợi?**
+Câu hỏi trung tâm của chương là: **vì sao cải cách có thể cần thiết nhưng vẫn thất bại về tính chính danh (legitimacy / 정당성) và an ninh (security / 보안), và làm thế nào cuộc chinh phục của nhà Minh lại tạo điều kiện cho một liên minh mới ở Thanh Hóa dưới Lê Lợi?** Thành Nhà Hồ, Lam Kinh, vùng núi Thanh Hóa và mạng lương thực–nhân lực giúp nối mốc 1400–1428 với cơ chế, không chỉ với tên nhân vật.
 
 Đây là period rất tốt để thấy reform chính sách (policy / 정책) không thể tách khỏi power cơ sở (base / 기반).
 
