@@ -1,10 +1,10 @@
-# Champa, Khmer, uplands và southern frontiers: không có “đất trống” trên bản đồ
+# Champa, Khmer, vùng cao và biên giới phía Nam: không có “đất trống” trên bản đồ
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`13_trinh_nguyen_trade_and_two_realms.md`](13_trinh_nguyen_trade_and_two_realms.md) đã cho thấy Đàng Trong sống bằng một combination khác Đàng Ngoài: coastal settlement, cổng (port / 포트) trade, military frontier và exchange với uplands. Vì vậy khi Nguyễn power mở rộng về phía nam, ta không thể dùng một arrow trên bản đồ rồi gọi toàn bộ tiến trình (process / 프로세스) là “Nam tiến”.
 
-Câu hỏi trung tâm của chapter là: **territorial expansion thực tế diễn ra qua những cơ chế (mechanism / 메커니즘) nào, và chuyện gì xảy ra với các xã hội vốn đã tồn tại trong những vùng đó?**
+Câu hỏi trung tâm của chương là: **mở rộng lãnh thổ thực tế diễn ra qua những cơ chế (mechanism / 메커니즘) nào, và chuyện gì xảy ra với các xã hội vốn đã tồn tại trong những vùng đó?** Hãy nối mốc Champa **1471**, quá trình hình thành vùng biên thế kỷ XVII–XVIII và việc sáp nhập Nam Bộ thế kỷ XIX với các điểm Mỹ Sơn, Hội An, Châu Đốc và mạng sông Mekong; phần sau sẽ dùng các địa điểm ấy để kiểm tra xem bản đồ chính trị thay đổi ra sao trong đời sống cụ thể.
 
 Ta cần giữ cùng lúc warfare, treaty, di chuyển (migration / 마이그레이션), intermarriage, settlement, taxation, trade, religious institution và administrative incorporation. Một ranh giới (boundary / 경계) chính trị có thể đổi nhanh hơn ngôn ngữ (language / 언어), landholding mẫu (pattern / 패턴) hay cục bộ (local / 로컬) định danh (identity / 식별자).
 

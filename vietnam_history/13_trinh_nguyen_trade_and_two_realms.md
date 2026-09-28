@@ -4,7 +4,7 @@
 
 [`12_mac_and_north_south_courts.md`](12_mac_and_north_south_courts.md) kết thúc ở một hệ thống mà nhà Lê đã được phục hồi nhưng quyền lực thực tế không còn tập trung đơn giản trong tay hoàng đế. Ở phía bắc, họ Trịnh trở thành de facto ruler dưới danh nghĩa vua Lê; ở phía nam, họ Nguyễn xây dựng một căn cứ ngày càng tự chủ tại Thuận–Quảng.
 
-Câu hỏi trung tâm của chapter này là: **vì sao một không gian từng nằm trong cùng political tradition lại có thể vận hành lâu dài như hai political economy khác nhau, và vì sao biển, thương mại quốc tế cùng geography miền Trung trở thành một phần của trạng thái (state / 상태) sức chứa (capacity / 용량)?**
+Câu hỏi trung tâm của chương này là: **vì sao một không gian từng nằm trong cùng truyền thống chính trị lại có thể vận hành lâu dài như hai nền kinh tế–chính trị khác nhau, và vì sao biển, thương mại quốc tế cùng địa lý miền Trung trở thành một phần của năng lực nhà nước (state capacity / 국가 역량)?** Hãy giữ các mốc **1527–1771** và chiến tranh Trịnh–Nguyễn **1627–1672** làm trục: từ đó ta nối được quyền lực, nguồn thu, đời sống ven biển và các địa điểm như Hội An, lũy Quảng Bình vào cùng một câu chuyện.
 
 Đây là nơi cần tránh cách kể “hai họ đánh nhau vì tranh quyền” quá đơn giản. Quyền lực cần revenue, manpower, logistics, military technology và administrative networks. Hai realm tồn tại lâu vì mỗi bên dần tạo được những cơ chế riêng để nuôi chiến tranh và quản lý xã hội.
 

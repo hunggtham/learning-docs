@@ -1,4 +1,4 @@
-# Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ
+# Tây Sơn: nổi dậy, lúa gạo, chiến tranh và khủng hoảng trật tự cũ
 
 ## Điểm tựa và câu hỏi trung tâm
 
@@ -6,7 +6,7 @@
 
 Đầu thế kỷ XVIII, hệ thống (system / 시스템) này vẫn có sức chứa (capacity / 용량) đáng kể. Nhưng tới nửa sau thế kỷ, fiscal pressure, elite xung đột (conflict / 충돌), corruption narratives, commercial disruption và hardship tạo ra môi trường dễ bùng nổ rebellion.
 
-Câu hỏi trung tâm: **vì sao một uprising xuất phát từ vùng Tây Sơn có thể phá hủy cả Nguyễn lẫn Trịnh thứ tự (order / 순서), rồi vẫn không tạo được một stable dynasty lâu dài?**
+Câu hỏi trung tâm: **vì sao một cuộc nổi dậy xuất phát từ vùng Tây Sơn có thể phá hủy cả trật tự Nguyễn lẫn Trịnh, rồi vẫn không tạo được một triều đại ổn định lâu dài?** Hãy theo mốc **1771–1789–1802**: từ Bình Định, lương thực và mạng huy động, đến Phú Xuân, Đống Đa và sự tái lập của nhà Nguyễn. Chuỗi mốc này sẽ nối chiến trường với thuế khóa, vận chuyển gạo và trải nghiệm của cộng đồng địa phương.
 
 ## 1771 là beginning coordinate, không phải explanation
 

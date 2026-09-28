@@ -1,10 +1,10 @@
-# Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài
+# Nhà Nguyễn đầu thế kỷ XIX: Huế, tập quyền và bài toán quản lý một lãnh thổ dài
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`15_tay_son_rebellion_war_and_reunification.md`](15_tay_son_rebellion_war_and_reunification.md) kết thúc năm **1802**, khi Nguyễn Ánh lên ngôi **Gia Long** sau nhiều thập niên civil war. Đây thường được gọi là “thống nhất đất nước”, nhưng unification trên battlefield chỉ tạo ra starting trạng thái (state / 상태).
 
-Câu hỏi khó hơn là: **làm thế nào biến một territory dài, có nhiều regional institutions, populations và frontier histories thành một administrative hệ thống (system / 시스템) đủ coherent để collect tax, move army, adjudicate law và reproduce authority?**
+Câu hỏi khó hơn là: **làm thế nào biến một lãnh thổ dài, có nhiều thiết chế vùng, cộng đồng và lịch sử biên giới thành một hệ thống hành chính đủ mạch lạc để thu thuế, chuyển quân, xử lý luật lệ và duy trì quyền lực?** Hãy dùng các mốc **1802, 1832 và 1858** cùng Huế, kênh Vĩnh Tế và các tuyến trạm làm cầu nối: phần này giải thích bộ máy, còn chương sau sẽ cho thấy bộ máy ấy va chạm với chủ nghĩa đế quốc công nghiệp như thế nào.
 
 Đây là bài toán (problem / 문제) of trạng thái (state / 상태) tích hợp (integration / 통합), không chỉ dynastic succession.
 

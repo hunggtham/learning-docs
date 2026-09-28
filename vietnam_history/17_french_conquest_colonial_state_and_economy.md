@@ -1,10 +1,10 @@
-# Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc
+# Pháp chinh phục và thuộc địa: khoảng cách quân sự, nhà nước thuộc địa và nền kinh tế bị tái cấu trúc
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`16_early_nguyen_hue_administration_and_economy.md`](16_early_nguyen_hue_administration_and_economy.md) cho thấy Nguyễn trạng thái (state / 상태) đầu thế kỷ XIX có sức chứa (capacity / 용량) đáng kể: unify territory, reorganize provinces, bản dựng (build / 빌드) hạ tầng (infrastructure / 인프라) và mobilize labor. Vì vậy câu hỏi “vì sao Pháp thắng vì nhà Nguyễn yếu” là quá đơn giản.
 
-Câu hỏi trung tâm của chapter này là: **vì sao một premodern centralized trạng thái (state / 상태) có thể mất dần sovereignty trước một industrial imperial power, và colonial quy tắc (rule / 규칙) sau đó thay đổi land, tax, hạ tầng (infrastructure / 인프라), labor và cities như thế nào?**
+Câu hỏi trung tâm của chương này là: **vì sao một nhà nước tập quyền tiền hiện đại có thể mất dần chủ quyền trước một cường quốc đế quốc công nghiệp, và chính quyền thuộc địa sau đó thay đổi đất đai, thuế, hạ tầng, lao động và đô thị như thế nào?** Hãy theo mốc **1858–1862–1867–1884/85**, từ Đà Nẵng và Sài Gòn đến Hà Nội, Hải Phòng; các địa điểm này sẽ giúp nối khoảng cách công nghệ, lúa gạo Nam Bộ và mạng đường sắt–cảng vào cùng tiến trình thuộc địa hóa.
 
 Ta cần nối ba quy mô (scale / 규모): toàn cục (global / 전역) imperial competition, military-technology/finance gap, và cục bộ (local / 로컬) political-economic các ràng buộc (constraints / 제약조건들).
 
