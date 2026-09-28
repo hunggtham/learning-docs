@@ -1,10 +1,10 @@
-# Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới
+# Đổi Mới từ 1986: chuyển đổi thị trường, nông nghiệp và tái hội nhập thế giới
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md) kết thúc với một economy chịu đồng thời shortage, inflation, incentive bài toán (problem / 문제) và bên ngoài (external / 외부) ràng buộc (constraint / 제약조건). **Đổi Mới (Renovation)** được chính thức đặt thành hướng lớn tại Đại hội VI năm **1986**, nhưng reform không phải một switch bật từ “plan” sang “thị trường (market / 시장)”.
 
-Câu hỏi của chapter này là: **những cơ chế nào thực sự thay đổi coordination của economy, vì sao agriculture phản ứng nhanh, vì sao international tích hợp (integration / 통합) trở thành part của domestic reform, và vì sao growth không đồng nghĩa mọi sector/region thay đổi giống nhau?**
+Câu hỏi của chương này là: **những cơ chế nào thực sự thay đổi cách nền kinh tế phối hợp, vì sao nông nghiệp phản ứng nhanh, vì sao hội nhập quốc tế trở thành một phần của cải cách trong nước, và vì sao tăng trưởng không đồng nghĩa mọi ngành hay vùng thay đổi giống nhau?** Hãy đi từ mốc **1986** qua khoán hộ, ổn định giá, đầu tư nước ngoài, ASEAN và WTO; các chặng này nối chính sách với ruộng đất, khu công nghiệp, đô thị và chênh lệch vùng miền.
 
 Mô hình tư duy (mental model / 사고 모델) cần giữ là **chuyển tiếp (transition / 전이) economy (nền kinh tế chuyển đổi)**: old institution không biến mất ngay, new thị trường (market / 시장) cơ chế (mechanism / 메커니즘) cũng không xuất hiện đồng bộ.
 

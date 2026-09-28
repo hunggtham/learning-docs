@@ -1,10 +1,10 @@
-# 1900–1945: colonial society, báo chí, nationalism, communism và World War II
+# 1900–1945: xã hội thuộc địa, báo chí, chủ nghĩa dân tộc, cộng sản và Thế chiến II
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`17_french_conquest_colonial_state_and_economy.md`](17_french_conquest_colonial_state_and_economy.md) cho thấy colonialism vừa extract resources vừa tạo hạ tầng (infrastructure / 인프라), schools, cities và thông tin (information / 정보) networks mới. Những các hệ thống (systems / 시스템들) này không tạo một phản hồi (response / 응답) duy nhất.
 
-Câu hỏi trung tâm của chapter này là: **vì sao cùng sống dưới colonial quy tắc (rule / 규칙), các Vietnamese political actors lại đề xuất những con đường rất khác nhau—reform, monarchy, republican nationalism, constitutional politics, communism và armed revolution?**
+Câu hỏi trung tâm của chương này là: **vì sao cùng sống dưới chế độ thuộc địa, các lực lượng chính trị Việt Nam lại đề xuất những con đường rất khác nhau—cải cách, quân chủ, dân tộc chủ nghĩa cộng hòa, chính trị lập hiến, cộng sản và cách mạng vũ trang?** Hãy dùng mốc **1900–1945** cùng báo chí, trường học, Đông Du, Xô viết Nghệ–Tĩnh và tác động của Thế chiến II để nối tư tưởng với đời sống đô thị, nông thôn và bước ngoặt tháng Tám.
 
 Muốn hiểu 1945, phải hiểu competition giữa các visions trước đó.
 

@@ -1,10 +1,10 @@
-# 1945–1954: revolution, state-building, First Indochina War và Geneva
+# 1945–1954: cách mạng, dựng nhà nước, Kháng chiến chống Pháp và Geneva
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`18_colonial_society_nationalism_communism_and_world_war.md`](18_colonial_society_nationalism_communism_and_world_war.md) kết thúc với Democratic Republic of Vietnam (DRV) được tuyên bố ngày 2 September 1945. Nhưng proclamation không đồng nghĩa uncontested sovereignty.
 
-Câu hỏi trung tâm của chapter này là: **làm thế nào xung đột (conflict / 충돌) từ postwar power vacuum biến thành một cuộc chiến decolonization ngày càng internationalized, và vì sao 1954 kết thúc French war nhưng không kết thúc xung đột (conflict / 충돌) về future political thứ tự (order / 순서) của Vietnam?**
+Câu hỏi trung tâm của chương này là: **làm thế nào khoảng trống quyền lực sau chiến tranh biến thành cuộc chiến giành độc lập ngày càng quốc tế hóa, và vì sao năm 1954 kết thúc chiến tranh Pháp–Việt nhưng chưa giải quyết tranh chấp về trật tự chính trị tương lai của Việt Nam?** Hãy nối mốc **2/9/1945, 1946 và Điện Biên Phủ 1954** với nạn đói, tài chính, vùng căn cứ và Hiệp định Geneva; phần sau sẽ theo dõi vì sao đường chia cắt 17° trở thành trải nghiệm xã hội lâu dài.
 
 ## 1945: independence claim trong một international occupation khung phần mềm (framework / 프레임워크)
 

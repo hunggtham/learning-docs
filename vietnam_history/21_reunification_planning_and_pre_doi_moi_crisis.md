@@ -4,7 +4,7 @@
 
 [`20_two_vietnams_cold_war_and_1975.md`](20_two_vietnams_cold_war_and_1975.md) kết thúc khi chiến tranh chấm dứt trên quy mô toàn quốc năm **1975**. Nhưng military victory không tự động tạo một economy, legal hệ thống (system / 시스템) và administrative hệ thống (system / 시스템) thống nhất.
 
-Câu hỏi của chapter này là: **một quốc gia vừa trải qua nhiều thập niên chiến tranh phải hợp nhất hai hệ thống kinh tế–xã hội rất khác nhau bằng cách nào, và vì sao mô hình sau thống nhất nhanh chóng gặp ràng buộc (constraint / 제약조건) nghiêm trọng?**
+Câu hỏi của chương này là: **một quốc gia vừa trải qua nhiều thập niên chiến tranh phải hợp nhất hai hệ thống kinh tế–xã hội rất khác nhau bằng cách nào, và vì sao mô hình sau thống nhất nhanh chóng gặp những giới hạn nghiêm trọng?** Hãy nối mốc **1975–1976**, cải tạo kinh tế, tem phiếu, chiến tranh biên giới và khủng hoảng lạm phát với Hà Nội, Thành phố Hồ Chí Minh và các vùng nông nghiệp; phần sau sẽ giải thích vì sao Đổi Mới 1986 xuất hiện như một quá trình tháo gỡ từng nút thắt.
 
 Để trả lời, cần đặt reconstruction, socialist transformation, international isolation, chiến tranh biên giới, population movement và experimentation về kinh tế trong cùng một nhân quả (causal / 인과적) đồ thị (graph / 그래프).
 

@@ -1,10 +1,10 @@
-# 1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War
+# 1954–1975: hai nhà nước, nội chiến và Chiến tranh Lạnh toàn cầu
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md) kết thúc với a provisional military division near the 17th parallel. Điều xảy ra sau đó không phải simply “Mỹ thay Pháp”.
 
-Câu hỏi trung tâm của chapter là: **vì sao temporary regrouping hardened into two rival states, và vì sao xung đột (conflict / 충돌) giữa Vietnamese actors trở thành một trong những major international wars của Cold War?**
+Câu hỏi trung tâm của chương là: **vì sao việc tập kết tạm thời lại cứng hóa thành hai nhà nước đối địch, và vì sao xung đột giữa các lực lượng Việt Nam trở thành một trong những cuộc chiến quốc tế lớn của Chiến tranh Lạnh?** Hãy theo mốc **1954, 1955, 1968 và 1975**, đồng thời đặt cạnh di cư, cải cách ruộng đất, viện trợ, đô thị hóa và địa đạo Củ Chi; như vậy “hai miền” hiện ra vừa là cạnh tranh nhà nước vừa là đời sống của gia đình và cộng đồng.
 
 Hiện đại (modern / 현대적) scholarship emphasizes that xung đột (conflict / 충돌) này có nhiều tầng (layer / 계층) cùng lúc: struggle over national reunification, civil war, revolutionary war, anticommunist state-building và toàn cục (global / 전역) Cold War intervention. Không tầng (layer / 계층) nào một mình giải thích toàn bộ.
 
