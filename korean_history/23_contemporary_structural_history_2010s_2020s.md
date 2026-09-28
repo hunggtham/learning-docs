@@ -63,3 +63,7 @@ Các khu căn hộ và tuyến tàu điện vùng thủ đô cho thấy mật đ
 ## Bàn giao cho người học
 
 Với lịch sử rất gần, mục tiêu không phải tiên đoán kết cục cuối cùng mà là giữ **sổ theo dõi biến số (variable ledger / 변수 기록)**: dân số, nhà ở, việc làm, nền tảng, giới, quan hệ liên Triều và khí hậu. Khi có dữ liệu mới, ta cập nhật mô hình thay vì sửa quá khứ để khớp một khẩu hiệu. Từ đây có thể quay lại [`29_collective_memory_historiography_public_history.md`](29_collective_memory_historiography_public_history.md) để hỏi ai được quyền đặt tên cho “hiện tại” và bằng chứng nào sẽ còn lại.
+
+## Cầu nối sang lịch sử đang hình thành
+
+Các biến số này chưa có kết luận cuối cùng. Nhưng chúng đã nối trực tiếp với những chapter trước: khủng hoảng việc làm và hộ gia đình quay về bài toán phân phối trong [`22_imf_crisis_digitalization_hallyu_1997_2010s.md`](22_imf_crisis_digitalization_hallyu_1997_2010s.md); tập trung vùng thủ đô và tài sản nối với [`27_economic_history_land_industry_chaebol.md`](27_economic_history_land_industry_chaebol.md); quan hệ liên Triều và ký ức chiến tranh nối với [`24_north_korea_parallel_history.md`](24_north_korea_parallel_history.md), [`25_interkorean_relations_and_cold_war.md`](25_interkorean_relations_and_cold_war.md) và [`29_collective_memory_historiography_public_history.md`](29_collective_memory_historiography_public_history.md). Đọc như vậy giúp hiện tại không bị tách khỏi lịch sử, nhưng cũng không bị đóng đinh vào một dự đoán.
