@@ -36,7 +36,7 @@ Một câu hỏi trung tâm trở thành: vì sao hiện đại (modern / 현대
 
 Điểm quan trọng là đây không phải một continuation đơn giản của Leninism. Western Marxism thường ít tập trung hơn vào vanguard party và nhiều hơn vào critique of society, culture và forms of rationality. Stanford Encyclopedia of Philosophy mô tả Trọng yếu (critical / 중요) Lý thuyết (theory / 이론) như một tradition vừa materialist, interdisciplinary, self-reflexive vừa oriented toward emancipation.
 
-Nội bộ (internal / 내부) link tự nhiên từ đây là [Philosophy of Technology](../../07_philosophy_of_technology/README.md), vì một số câu hỏi Frankfurt School về technology, rationalization và điều khiển (control / 제어) tiếp tục sống trong technology studies hiện đại.
+Nội bộ (internal / 내부) link tự nhiên từ đây là [Philosophy of Technology](../../07_philosophy_of_technology/00_technology_design_and_human_agency.md), vì một số câu hỏi Frankfurt School về technology, rationalization và điều khiển (control / 제어) tiếp tục sống trong technology studies hiện đại.
 
 ## 5. Maoism — revolution trong xã hội chủ yếu nông nghiệp
 

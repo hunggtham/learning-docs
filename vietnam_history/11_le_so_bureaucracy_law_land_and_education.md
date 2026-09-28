@@ -108,7 +108,7 @@ Bureaucratic stability can lower giao dịch (transaction / 트랜잭션) rủi 
 
 Năm **1471**, Lê Thánh Tông dẫn major campaign against Vijaya/Champa, producing a decisive shift in central Vietnam. Chapter này chỉ cần thấy một cơ chế (mechanism / 메커니즘): bureaucratic-fiscal trạng thái (state / 상태) có larger mobilization sức chứa (capacity / 용량) than earlier fragmented courts.
 
-Nhưng không nên kể sự kiện (event / 이벤트) này như empty “mở rộng lãnh thổ”. Nó involved war, population displacement, surviving Cham polities và long-term frontier tương tác (interaction / 상호작용). [`14_dai_viet_champa_khmer_and_frontiers.md`](14_dai_viet_champa_khmer_and_frontiers.md) sẽ xử lý đầy đủ from multiple sides.
+Nhưng không nên kể sự kiện (event / 이벤트) này như empty “mở rộng lãnh thổ”. Nó involved war, population displacement, surviving Cham polities và long-term frontier tương tác (interaction / 상호작용). [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) sẽ xử lý đầy đủ from multiple sides.
 
 ## Lam Kinh và Thăng Long: two centers of legitimacy
 

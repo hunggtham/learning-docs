@@ -56,4 +56,4 @@ Không nên biến dạng thất bại (failure mode / 실패 모드) của mộ
 
 ## Handoff
 
-Các chapter sau sẽ giữ nguyên khung phần mềm (framework / 프레임워크) này để người đọc so sánh apples-to-apples. Sau cùng, [Comparative synthesis](08_comparative_synthesis.md) sẽ quay lại từng axis và chỉ ra nơi traditions thực sự bất đồng về giá trị (value / 값), nơi chúng bất đồng về empirical giả định (assumption / 가정), và nơi labels che mất hybrid institutions trong real societies.
+Các chapter sau sẽ giữ nguyên khung phần mềm (framework / 프레임워크) này để người đọc so sánh apples-to-apples. Sau cùng, [Comparative synthesis](09_comparative_synthesis.md) sẽ quay lại từng axis và chỉ ra nơi traditions thực sự bất đồng về giá trị (value / 값), nơi chúng bất đồng về empirical giả định (assumption / 가정), và nơi labels che mất hybrid institutions trong real societies.

@@ -182,7 +182,7 @@ A museum is not neutral raw bằng chứng (evidence / 증거); exhibition thi�
 
 The war ended militarily in 1975 and trạng thái (state / 상태) reunification followed in 1976. But ending war did not remove economic destruction, di chuyển (migration / 마이그레이션), regional distrust or international isolation.
 
-Chapter tiếp theo, [`21_reunification_planned_economy_and_postwar_crisis.md`](21_reunification_planned_economy_and_postwar_crisis.md), sẽ therefore begin with reconstruction các ràng buộc (constraints / 제약조건들)—not celebration or defeat narrative—and explain why postwar chính sách (policy / 정책), collectivization, foreign xung đột (conflict / 충돌), embargo/isolation and tài nguyên (resource / 자원) scarcity led into the crisis that made **Đổi Mới 1986** increasingly necessary.
+Chapter tiếp theo, [`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md), sẽ therefore begin with reconstruction các ràng buộc (constraints / 제약조건들)—not celebration or defeat narrative—and explain why postwar chính sách (policy / 정책), collectivization, foreign xung đột (conflict / 충돌), embargo/isolation and tài nguyên (resource / 자원) scarcity led into the crisis that made **Đổi Mới 1986** increasingly necessary.
 
 ### Nguồn nền
 

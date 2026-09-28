@@ -124,7 +124,7 @@ The useful question is not “ai thật sự chính thống?” as timeless fact
 
 Lê sơ bureaucracy did not prevent collapse when succession and elite trust failed. Mạc seized central government in 1527; Lê loyalists rebuilt an alternative court from Thanh Hóa. Ming diplomacy, exams, ritual and military alliances became tools in a decades-long legitimacy struggle. By 1592, Mạc lost Thăng Long but multi-center politics remained.
 
-[`13_trinh_nguyen_trade_and_two_centers.md`](13_trinh_nguyen_trade_and_two_centers.md) will follow the next transformation: **Lê legitimacy + Trịnh power in north, Nguyễn power in south, international trade, firearms, ports and a territorial frontier moving toward central and southern Vietnam**.
+[`13_trinh_nguyen_trade_and_two_realms.md`](13_trinh_nguyen_trade_and_two_realms.md) will follow the next transformation: **Lê legitimacy + Trịnh power in north, Nguyễn power in south, international trade, firearms, ports and a territorial frontier moving toward central and southern Vietnam**.
 
 ### Nguồn nền
 
