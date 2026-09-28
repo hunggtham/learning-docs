@@ -1,5 +1,8 @@
 # Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu
 
+> **Mạch đọc:** Đọc **Polymer — khi kiến trúc chuỗi trở thành tính chất vật liệu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao chiều dài chuỗi làm vật liệu đổi bản chất?** sang **Kiến trúc chuỗi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Polymer (고분자)** là đại phân tử được tạo từ nhiều đơn vị lặp hoặc nhiều đơn vị có quan hệ cấu trúc. Chỉ biết loại monomer chưa đủ để dự đoán vật liệu cuối cùng. Tính chất xuất hiện từ **chiều dài chuỗi, kiến trúc chuỗi, lập thể, lực liên phân tử, độ kết tinh, sự vướng chuỗi, liên kết ngang và tốc độ chuyển động phân tử theo thời gian**.
 
 Vật liệu polymer vì vậy không chỉ là “một phân tử rất lớn”. Nó là quần thể chuỗi dài có phân bố kích thước, cấu dạng và cách sắp xếp khác nhau. Hành vi tập thể của quần thể này tạo độ dẻo, độ đàn hồi, độ nhớt, độ bền và khả năng gia công.
@@ -357,7 +360,7 @@ Chuỗi dài hơn thường tạo nhiều vướng hơn, làm độ bền cơ t�
 
 Vì vậy vật liệu có tính cơ học tốt hơn có thể cần nhiệt độ hoặc áp suất gia công cao hơn.
 
-Đây là trade-off giữa **hiệu năng cơ học và khả năng gia công**.
+Đây là sự đánh đổi (trade-off / 트레이드오프) giữa **hiệu năng cơ học và khả năng gia công**.
 
 ## Những hiểu lầm thường gặp
 
@@ -398,3 +401,5 @@ hóa học cục bộ
 Khi đánh giá một polymer, luôn cần hỏi: **nhiệt độ bao nhiêu, thang thời gian nào, lịch sử gia công ra sao và chuỗi được tổ chức thế nào?**
 
 Xem tiếp: [Chất bán dẫn](./03_semiconductors.md), [Vật liệu nano](./04_nanomaterials.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

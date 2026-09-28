@@ -1,14 +1,17 @@
 # Hợp chất vô cơ — bản đồ lớn của hóa học vô cơ
 
+> **Mạch đọc:** Đọc **Hợp chất vô cơ — bản đồ lớn của hóa học vô cơ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao ranh giới hữu cơ – vô cơ không tuyệt đối** sang **Từ nguyên tử tới hợp chất: bốn câu hỏi cần hỏi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa học vô cơ (inorganic chemistry / 무기화학)** nghiên cứu hóa học của các nguyên tố và hợp chất vượt ra ngoài khung lấy carbon làm trung tâm của hóa học hữu cơ. Lĩnh vực này bao phủ chất rắn ion, hợp chất phân tử, kim loại, khoáng vật, phức phối trí, chất xúc tác, gốm, chất bán dẫn và nhiều loại vật liệu có cấu trúc mở rộng.
 
 Điểm cốt lõi của hóa vô cơ không phải là một danh sách chất cần ghi nhớ. Nó là cách dùng **xu hướng tuần hoàn (periodic trends), cấu trúc electron (electronic structure), số oxy hóa (oxidation state), liên kết, hình học và nhiệt động lực học** để suy luận vì sao các nguyên tố khác nhau tạo ra những kiểu hợp chất và phản ứng khác nhau.
 
 ## Vì sao ranh giới hữu cơ – vô cơ không tuyệt đối
 
-Cách phân chia “hữu cơ = có carbon, vô cơ = không có carbon” chỉ là một quy tắc học nhanh rất thô. Carbon dioxide, carbonate, bicarbonate, cyanide, carbide và nhiều carbonyl kim loại đều chứa carbon nhưng thường được học trong hóa vô cơ. Ngược lại, hóa học cơ kim (organometallic chemistry) nằm đúng ở vùng giao giữa hai lĩnh vực vì nó có liên kết kim loại–carbon nhưng sử dụng cả logic cơ chế của hóa hữu cơ lẫn hóa học phối trí.
+Cách phân chia “hữu cơ = có carbon, vô cơ = không có carbon” chỉ là một quy tắc học nhanh rất thô. Carbon dioxide, carbonate, bicarbonate, cyanide, carbide và nhiều carbonyl kim loại đều chứa carbon nhưng thường được học trong hóa vô cơ. Ngược lại, hóa học cơ kim (organometallic chemistry) nằm đúng ở vùng giao giữa hai lĩnh vực vì nó có liên kết kim loại–carbon nhưng sử dụng cả lô-gic (logic / 논리) cơ chế của hóa hữu cơ lẫn hóa học phối trí.
 
-Một cách nhìn hữu ích hơn là xem mỗi nhánh ưu tiên những **mô-típ cấu trúc (structural motifs)** và **logic phản ứng** khác nhau. Hóa hữu cơ thường xoay quanh khung carbon, nhóm chức và sự biến đổi nhóm chức. Hóa vô cơ mở rộng không gian đó ra toàn bảng tuần hoàn, nên phải xử lý nhiều trạng thái oxy hóa, chất rắn mạng mở rộng, hình học phối trí, ảnh hưởng của mạng tinh thể và hóa học phụ thuộc mạnh vào bản chất cụ thể của từng nguyên tố.
+Một cách nhìn hữu ích hơn là xem mỗi nhánh ưu tiên những **mô-típ cấu trúc (structural motifs)** và **lô-gic (logic / 논리) phản ứng** khác nhau. Hóa hữu cơ thường xoay quanh khung carbon, nhóm chức và sự biến đổi nhóm chức. Hóa vô cơ mở rộng không gian đó ra toàn bảng tuần hoàn, nên phải xử lý nhiều trạng thái oxy hóa, chất rắn mạng mở rộng, hình học phối trí, ảnh hưởng của mạng tinh thể và hóa học phụ thuộc mạnh vào bản chất cụ thể của từng nguyên tố.
 
 ## Từ nguyên tử tới hợp chất: bốn câu hỏi cần hỏi
 
@@ -62,7 +65,7 @@ Vì vậy AlCl3 có đặc tính cộng hóa trị đáng kể hơn NaCl dù c�
 
 ## Oxide: một xu hướng tuần hoàn rất giàu thông tin
 
-Hóa học oxide cho thấy rõ cách bảng tuần hoàn biến thành hóa học. Khi đi từ trái sang phải trong một chu kỳ, tính điện dương giảm và đặc tính cộng hóa trị tăng. Oxide kim loại như Na2O thường có tính base vì \(O^{2-}\) dễ nhận proton từ nước; oxide trung gian như Al2O3 có thể lưỡng tính; oxide phi kim như SO3 thường có tính acid vì phản ứng với nước hoặc hydroxide tạo oxoacid/oxoanion.
+Hóa học oxide cho thấy rõ cách bảng tuần hoàn biến thành hóa học. Khi đi từ trái sang phải trong một chu kỳ, tính điện dương giảm và đặc tính cộng hóa trị tăng. Oxide kim loại như Na2O thường có tính cơ sở (base / 기반) vì \(O^{2-}\) dễ nhận proton từ nước; oxide trung gian như Al2O3 có thể lưỡng tính; oxide phi kim như SO3 thường có tính acid vì phản ứng với nước hoặc hydroxide tạo oxoacid/oxoanion.
 
 Ví dụ:
 
@@ -100,7 +103,7 @@ Hóa học silicate là ví dụ tốt cho việc một đơn vị xây dựng t
 
 Khác biệt về độ liên kết của mạng làm thay đổi khối lượng riêng, mặt cát khai, độ bền hóa học và khả năng trao đổi ion. Vì vậy tính chất khoáng vật không chỉ phụ thuộc “thành phần”; **cấu trúc liên kết của mạng (network topology)** cũng rất quan trọng.
 
-Logic tương tự xuất hiện ở oxide kim loại, perovskite, zeolite và polymer phối trí.
+Lô-gic (logic / 논리) tương tự xuất hiện ở oxide kim loại, perovskite, zeolite và polymer phối trí.
 
 ## Độ tan không chỉ là “hợp chất ion thì tan”
 
@@ -147,3 +150,5 @@ Không. Cùng thành phần có thể tạo đa hình tinh thể, đồng phân 
 > Hãy xem hóa vô cơ như **hóa học của bảng tuần hoàn được đặt trong một cấu trúc và môi trường cụ thể**. Bản chất nguyên tố cho biết những khả năng hóa trị; liên kết và hình học chọn cấu trúc; nhiệt động lực học quyết định trạng thái nào được ưu tiên; động học quyết định chúng chuyển đổi nhanh đến đâu.
 
 Từ đây, [Hóa học nhóm chính](./01_main_group_chemistry.md) sẽ dùng chính mô hình tư duy này để giải thích các họ nguyên tố s- và p-block thay vì học từng nguyên tố như một danh sách riêng.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 main group chemistry](./01_main_group_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

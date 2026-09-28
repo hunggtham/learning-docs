@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **13. 형상 관리 (SCM - Software Configuration Management)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** và nối nó với **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -31,9 +33,9 @@
      * **SVN (Subversion)**: `trunk`에서 주로 개발, `branches`에서 추가 작업 후 병합(merge). 커밋 시 리비전(Revision) 1씩 증가.
   3. **분산 저장소 방식 (Distributed)**: 로컬 저장소와 원격 저장소에 함께 저장. (Git 등).
      * **Git**: 로컬에서 버전 관리가 가능해 빠르고 네트워크 문제 시에도 작업 가능. 스냅샷(Snapshot)으로 파일 변화를 저장.
-* **주요 기능**: Repository, Import, Check-Out(가져오기), Check-In/Commit(반영), Update(동기화).
+* **주요 기능**: Repository, Import, Check-Out(가져오기), Check-In/lần ghi nhận (commit / 커밋), cập nhật (update / 업데이트).
 * **VI (Vietnamese) (Tiếng Việt):** Quản lý cấu hình (SCM) và các cách quản lý phiên bản.
-  * Shared Folder: Lưu ở thư mục chung.
-  * C/S: Lưu ở server trung tâm (SVN).
-  * Distributed: Lưu phân tán cả local và server (Git). Git dùng Snapshot để lưu thay đổi.
+  * dùng chung (shared / 공유) Folder: Lưu ở thư mục chung.
+  * C/S: Lưu ở máy chủ (server / 서버) trung tâm (SVN).
+  * phân tán (distributed / 분산): Lưu phân tán cả cục bộ (local / 로컬) và máy chủ (server / 서버) (Git). Git dùng Snapshot để lưu thay đổi.
 * **Example**: 회사에서 SVN을 쓰면 중앙 서버가 죽었을 때 작업을 올릴 수 없지만, Git을 쓰면 내 PC(Local)에 저장해뒀다가 서버가 복구되면 올릴 수 있습니다.

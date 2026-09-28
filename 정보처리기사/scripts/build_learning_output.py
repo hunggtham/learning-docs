@@ -57,9 +57,9 @@ def study_guide(title: str, content: str) -> str:
 
 ## 학습 목표 (Mục tiêu học tập)
 
-- 시험에서 사용하는 한국어 용어를 영어와 베트남어 뜻까지 함께 인식한다.
-- 각 개념을 정의 → 구성요소/절차 → 비교 포인트 → 예시 순서로 설명할 수 있다.
-- 앞에서 배운 개념과 뒤의 심화 개념을 연결하여 문제의 조건을 빠르게 해석한다.
+- Nhận diện thuật ngữ 한국어 (tiếng Hàn), đối chiếu với từ khóa English và nắm được nghĩa tiếng Việt dùng trong đề thi.
+- Giải thích mỗi khái niệm theo thứ tự: định nghĩa → thành phần/quy trình → điểm so sánh → ví dụ.
+- Nối khái niệm đã học với phần nâng cao tiếp theo để đọc nhanh điều kiện của câu hỏi.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -69,7 +69,7 @@ def study_guide(title: str, content: str) -> str:
 
 > **Nguồn:** tổng hợp từ các Markdown đã generate trong `raw_md/final`, được đối chiếu với các nguồn `raw` và `raw_md` cùng môn. Nội dung gốc được giữ lại; chỉ chuẩn hoá cấu trúc bài học.
 
-> **Quy ước đọc:** thuật ngữ được ưu tiên theo mẫu `한국어 (English) (Tiếng Việt)`. Mỗi ý tiếng Hàn có phần giải thích Việt ngữ liền kề hoặc ngay sau đó; khi gặp từ kỹ thuật trong ngoặc, hãy xem đó là nghĩa cần nhớ khi làm đề.
+> **Quy ước ngôn ngữ:** phần giải thích ưu tiên tiếng Việt; ở mọi lần xuất hiện, thuật ngữ đề thi dùng dạng `nghĩa Việt (English / 한국어)` để không phải quay lại tìm nghĩa.
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
@@ -110,7 +110,7 @@ def lesson_document(title: str, lesson: str, previous: str | None, following: st
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **{plain}**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **{plain}**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -126,7 +126,7 @@ def lesson_document(title: str, lesson: str, previous: str | None, following: st
 2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
 > **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **{plain}** và nối nó với {f'**{following}**' if following else 'phần ôn tập cuối môn'}; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
@@ -138,6 +138,8 @@ def lesson_document(title: str, lesson: str, previous: str | None, following: st
 def subject_readme(title: str, guide_name: str, lesson_rows: list[str]) -> str:
     return f"""# {title}
 
+> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
+
 ## Bài học
 
 1. [Tài liệu học đầy đủ]({guide_name})
@@ -148,16 +150,16 @@ def subject_readme(title: str, guide_name: str, lesson_rows: list[str]) -> str:
 
 ## Ghi chú học
 
-- Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
+- Ở mọi lần xuất hiện, thuật ngữ dùng nghĩa tiếng Việt trước rồi giữ English/한국어 ngay cạnh để đối chiếu đề thi.
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 
-- [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
-- [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
-- [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
-- [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
+- [ ] Nhìn thuật ngữ 한국어 có thể nói được từ khóa English và nghĩa tiếng Việt không?
+- [ ] Có thể giải thích định nghĩa và mục đích trong một câu không?
+- [ ] Có thể nêu tiêu chí phân biệt với khái niệm gần giống không?
+- [ ] Có thể áp dụng khái niệm vào ví dụ hoặc câu hỏi ngắn không?
 """
 
 
@@ -229,6 +231,7 @@ def main() -> None:
     (OUTPUT / "COVERAGE_MATRIX.md").write_text(
         "# 정보처리기사 필기 — Coverage Matrix\n\n"
         "> Baseline của branch: 출제기준 Q-Net 2023.1.1–2025.12.31. Kiểm tra lại Q-Net trước kỳ thi; ma trận này không xác nhận syllabus 2026.\n\n"
+        "> **Mạch nối:** Dùng ma trận để định vị độ phủ và quay về guide/lesson tương ứng; nó là bản đồ kiểm tra, không thay phần giải thích cơ chế trong từng môn.\n\n"
         "| Môn | Lessons | Source canonical | Status |\n"
         "|---|---:|---|---|\n"
         + "\n".join(coverage_rows)
@@ -241,6 +244,7 @@ def main() -> None:
     (OUTPUT / "RESEARCH_REGISTER.md").write_text(
         "# 정보처리기사 필기 — Research Register\n\n"
         "이 문서는 시험 범위의 canonical source와 기술 사실 확인에 사용한 1차/공식 자료를 구분한다.\n\n"
+        "> **Mạch nối:** Đọc register này khi cần kiểm tra claim trong guide hoặc lesson; sau khi xác minh nguồn, quay lại đúng topic để nối evidence với cơ chế và bẫy đề.\n\n"
         "## 시험 범위\n\n"
         "- [Q-Net 정보처리기사 출제기준(2023.1.1~2025.12.31)](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602) — 시험 범위 baseline.\n\n"
         "## 기술 사실 확인\n\n"

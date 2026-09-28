@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,14 +20,16 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** và nối nó với **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
 - **IEEE 802 표준**: 802.3 (Ethernet, 유선랜), 802.11 (무선랜, Wi-Fi).
 - **OSI 7계층 (상위 계층부터)**:
-  7. **응용 계층 (Application)**: 사용자 인터페이스. (HTTP, FTP, DNS) - 데이터 단위: Data.
-  6. **표현 계층 (Presentation)**: 암호화, 압축, 포맷 변환. - 데이터 단위: Data.
-  5. **세션 계층 (Session)**: 응용 프로그램 간 논리적 연결 생성/유지. - 데이터 단위: Data.
+  7. **응용 계층 (Application)**: 사용자 인터페이스. (HTTP, FTP, DNS) - 데이터 단위: dữ liệu (data / 데이터).
+  6. **표현 계층 (Presentation)**: 암호화, 압축, 포맷 변환. - 데이터 단위: dữ liệu (data / 데이터).
+  5. **세션 계층 (Session)**: 응용 프로그램 간 논리적 연결 생성/유지. - 데이터 단위: dữ liệu (data / 데이터).
   4. **전송 계층 (Transport)**: 종단 간(End-to-End) 신뢰성 있는 전송. 포트 번호 사용. (TCP, UDP). 장비: L4 스위치. - 데이터 단위: Segment.
   3. **네트워크 계층 (Network)**: 경로 설정(Routing). IP 주소 사용. (IP, ICMP, ARP). 장비: 라우터, L3 스위치. - 데이터 단위: Packet.
   2. **데이터 링크 계층 (Data Link)**: 인접 노드 간 전송 제어, 오류/흐름 제어. MAC 주소 사용. (HDLC, PPP). 장비: 브리지, L2 스위치. - 데이터 단위: Frame.

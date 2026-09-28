@@ -1,5 +1,8 @@
 # Điện tĩnh học dạng bài toán biên: phương pháp ảnh điện và khai triển đa cực
 
+> **Mạch đọc:** Đọc **Điện tĩnh học dạng bài toán biên: phương pháp ảnh điện và khai triển đa cực** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ định luật Gauss đến phương trình Poisson** sang **Vì sao điện thế thường dễ giải hơn điện trường?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Định luật Coulomb cho trường của các điện tích điểm đã biết. Nhưng trong nhiều bài thực tế, phân bố điện tích bề mặt lại **không được biết trước**. Ta chỉ biết hình học của vật dẫn, điện thế trên biên hoặc tổng điện tích, rồi điện tích tự sắp xếp để thỏa điều kiện cân bằng điện tĩnh.
 
 Vì vậy nhiều bài điện tĩnh nên được nhìn như **bài toán giá trị biên (boundary-value problem / 경계값 문제)**: tìm điện thế `\phi` thỏa phương trình Poisson hoặc Laplace cùng các điều kiện biên phù hợp.
@@ -42,7 +45,7 @@ nên
 
 ## Vì sao điện thế thường dễ giải hơn điện trường?
 
-Điện trường là vectơ có ba thành phần, trong khi điện thế là vô hướng. Khi giải được `\phi`, ta lấy gradient để thu lại điện trường:
+Điện trường là vectơ có ba thành phần, trong khi điện thế là vô hướng. Khi giải được `\phi`, ta lấy độ dốc (gradient / 기울기) để thu lại điện trường:
 
 ```math
 \mathbf E=-\nabla\phi.
@@ -75,7 +78,7 @@ phương trình trường + điều kiện biên,
 
 thì ta không cần tiếp tục tìm “một nghiệm vật lý khác tốt hơn”.
 
-Định lý duy nhất là nền tảng logic của nhiều kỹ thuật như phương pháp ảnh điện.
+Định lý duy nhất là nền tảng lô-gic (logic / 논리) của nhiều kỹ thuật như phương pháp ảnh điện.
 
 ## Phương pháp ảnh điện
 
@@ -191,7 +194,7 @@ Y''-k^2Y=0.
 
 Điều kiện biên chọn các giá trị `k` cho phép và các hệ số của chuỗi nghiệm.
 
-Cấu trúc này giống bài toán mode chuẩn: điều kiện biên biến một phổ liên tục các hàm thử thành một tập mode được phép.
+Cấu trúc này giống bài toán chế độ (mode / 모드) chuẩn: điều kiện biên biến một phổ liên tục các hàm thử thành một tập chế độ (mode / 모드) được phép.
 
 ## Nguyên lý cực đại của hàm điều hòa
 
@@ -284,7 +287,7 @@ Khi biên quá phức tạp để giải giải tích, cùng bài toán Poisson/
 
 Điều này tạo cầu nối trực tiếp giữa điện từ học và vật lý tính toán: phương trình vật lý, hình học biên và thuật toán số cùng quyết định nghiệm.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Điện tĩnh thực tế thường không phải bài “cộng các lực Coulomb”. Cách nhìn mạnh hơn là:
 
@@ -312,8 +315,10 @@ Không. Cần điều kiện biên để chọn nghiệm cụ thể.
 
 Thường không. Khai triển đa cực cho thấy vài moment thấp bậc có thể chứa gần như toàn bộ thông tin trường xa cần thiết.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Điện tĩnh học](00_electrostatics.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Thế điện từ và tự do chuẩn](06_potentials_gauge.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

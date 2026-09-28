@@ -1,33 +1,36 @@
-# Probabilistic Reasoning trong Artificial Intelligence
+# Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence
 
-Classical logic asks whether proposition follows or not. Real AI often cannot work with binary certainty. Sensor noisy, diagnosis ambiguous, user intent uncertain và knowledge incomplete. **Probabilistic Reasoning (확률적 추론)** extends reasoning by assigning and updating degrees of belief under a probability model.
+> **Mạch đọc:** Đặt **Probabilistic lập luận (reasoning / 추론) trong Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **bất định (uncertainty / 불확실성) is not ignorance alone** sang **Bayesian cập nhật (update / 업데이트)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-The core question changes from:
+
+Classical lô-gic (logic / 논리) asks whether proposition follows or not. Real AI often cannot công việc (work / 작업) with nhị phân (binary / 이진) certainty. Sensor noisy, diagnosis ambiguous, người dùng (user / 사용자) intent uncertain và kiến thức (knowledge / 지식) incomplete. **Probabilistic lập luận (reasoning / 추론)** extends lập luận (reasoning / 추론) by assigning and updating degrees of belief under a xác suất (probability / 확률) mô hình (model / 모델).
+
+The cốt lõi (core / 핵심) question changes from:
 
 > Is hypothesis H logically entailed?
 
 to:
 
-> Given evidence E, how should belief `P(H|E)` change?
+> Given bằng chứng (evidence / 증거) E, how should belief `P(H|E)` thay đổi (change / 변경)?
 
 Xem trước: [Probability for AI](../01_mathematical_foundations/02_probability_for_ai.md) và [Inference and Reasoning](./03_inference_and_reasoning.md).
 
-## Uncertainty is not ignorance alone
+## Bất định (uncertainty / 불확실성) is not ignorance alone
 
-Uncertainty can come from:
+Bất định (uncertainty / 불확실성) can come from:
 
 - inherent randomness;
-- measurement noise;
+- đo lường (measurement / 측정) noise;
 - hidden variables;
-- incomplete knowledge;
-- limited data;
-- model approximation.
+- incomplete kiến thức (knowledge / 지식);
+- limited dữ liệu (data / 데이터);
+- mô hình (model / 모델) approximation.
 
-A single probability number may mix several sources. Good system design tries separate what can be reduced by more information from what is irreducible.
+A single xác suất (probability / 확률) number may mix several sources. Good hệ thống (system / 시스템) thiết kế (design / 설계) tries separate what can be reduced by more thông tin (information / 정보) from what is irreducible.
 
-## Bayesian update
+## Bayesian cập nhật (update / 업데이트)
 
-Bayes' rule:
+Bayes' quy tắc (rule / 규칙):
 
 \[
 P(H\mid E)=\frac{P(E\mid H)P(H)}{P(E)}
@@ -57,21 +60,21 @@ Bayes can be expressed with odds:
 \frac{P(E\mid H)}{P(E\mid\neg H)}
 \]
 
-Likelihood ratio tells how strongly evidence shifts odds.
+Likelihood ratio tells how strongly bằng chứng (evidence / 증거) shifts odds.
 
-This is useful in medical testing and evidence accumulation.
+This is useful in medical testing and bằng chứng (evidence / 증거) accumulation.
 
-## Base rate matters
+## Cơ sở (base / 기반) tỷ lệ (rate / 비율) matters
 
 Rare-event detection often suffers base-rate neglect.
 
-Even high sensitivity/specificity may yield low posterior positive probability when prevalence very low.
+Even high sensitivity/specificity may yield low posterior positive xác suất (probability / 확률) when prevalence very low.
 
-Fraud, anomaly detection and security alerts require careful base rates; otherwise false positives dominate.
+Fraud, anomaly detection and bảo mật (security / 보안) alerts require careful cơ sở (base / 기반) rates; otherwise false positives dominate.
 
-## Multiple evidence
+## Multiple bằng chứng (evidence / 증거)
 
-If evidence `E1,E2` conditionally independent given H:
+If bằng chứng (evidence / 증거) `E1,E2` conditionally independent given H:
 
 \[
 P(E_1,E_2\mid H)=P(E_1\mid H)P(E_2\mid H)
@@ -79,13 +82,13 @@ P(E_1,E_2\mid H)=P(E_1\mid H)P(E_2\mid H)
 
 Then likelihoods multiply.
 
-But naive independence assumptions can double-count correlated evidence.
+But naive independence các giả định (assumptions / 가정들) can double-count correlated bằng chứng (evidence / 증거).
 
-Example two fraud signals derived from same IP reputation source are not independent just because represented as separate features.
+Example two fraud signals derived from same IP reputation nguồn (source / 소스) are not independent just because represented as separate features.
 
 ## Naive Bayes
 
-Naive Bayes assumes features conditionally independent given class:
+Naive Bayes assumes features conditionally independent given lớp (class / 클래스):
 
 \[
 P(x_1,...,x_d\mid y)=\prod_i P(x_i\mid y)
@@ -97,19 +100,19 @@ Then:
 P(y\mid x)\propto P(y)\prod_i P(x_i\mid y)
 \]
 
-Assumption often false, yet classifier can work surprisingly well because decision boundary may still be useful and estimation easy.
+Giả định (assumption / 가정) often false, yet classifier can công việc (work / 작업) surprisingly well because quyết định (decision / 결정) ranh giới (boundary / 경계) may still be useful and estimation easy.
 
-This is lesson: model assumptions can be wrong literally but useful operationally.
+This is lesson: mô hình (model / 모델) các giả định (assumptions / 가정들) can be wrong literally but useful operationally.
 
 ## Generative vs discriminative modeling
 
-Generative classifier models joint structure:
+Generative classifier các mô hình (models / 모델들) joint cấu trúc (structure / 구조):
 
 \[
 P(X,Y)=P(Y)P(X\mid Y)
 \]
 
-Discriminative model directly models:
+Discriminative mô hình (model / 모델) directly các mô hình (models / 모델들):
 
 \[
 P(Y\mid X)
@@ -117,11 +120,11 @@ P(Y\mid X)
 
 Naive Bayes generative; logistic regression discriminative.
 
-Generative model can sample/model input conditional on class; discriminative focuses decision boundary.
+Generative mô hình (model / 모델) can mẫu (sample / 표본)/mô hình (model / 모델) đầu vào (input / 입력) conditional on lớp (class / 클래스); discriminative focuses quyết định (decision / 결정) ranh giới (boundary / 경계).
 
 ## Latent variables
 
-A latent variable `Z` is not directly observed but helps explain observed data `X`.
+A latent variable `Z` is not directly observed but helps explain observed dữ liệu (data / 데이터) `X`.
 
 \[
 P(X)=\sum_z P(X,Z)
@@ -131,11 +134,11 @@ or continuous integral.
 
 Examples:
 
-- hidden topic causing word distribution;
+- hidden topic causing word phân phối (distribution / 분포);
 - hidden disease causing symptoms;
-- hidden state causing sensor observations.
+- hidden trạng thái (state / 상태) causing sensor observations.
 
-Latent variables compress explanatory structure but introduce inference challenge.
+Latent variables compress explanatory cấu trúc (structure / 구조) but introduce suy luận (inference / 추론) challenge.
 
 ## Marginalization
 
@@ -147,17 +150,17 @@ P(X)=\sum_z P(X,Z)
 
 This “sum over possibilities” can be computationally expensive when many hidden variables.
 
-Probabilistic inference complexity often comes from exponential number joint assignments.
+Probabilistic suy luận (inference / 추론) độ phức tạp (complexity / 복잡도) often comes from exponential number joint assignments.
 
 ## Conditioning
 
-When observe evidence `E=e`, posterior restricts/renormalizes distribution:
+When observe bằng chứng (evidence / 증거) `E=e`, posterior restricts/renormalizes phân phối (distribution / 분포):
 
 \[
 P(X\mid E=e)
 \]
 
-In graphical models, evidence can propagate belief through network.
+In graphical các mô hình (models / 모델들), bằng chứng (evidence / 증거) can propagate belief through mạng (network / 네트워크).
 
 Observation can make previously independent variables dependent — phenomenon called **explaining away**.
 
@@ -171,9 +174,9 @@ B → A ← E
 
 Before observing alarm, B and E may be independent.
 
-After observe `A=true`, learning `B=true` reduces need to believe earthquake caused alarm, so B and E become dependent conditioned on A.
+After observe `A=true`, học tập (learning / 학습) `B=true` reduces need to believe earthquake caused alarm, so B and E become dependent conditioned on A.
 
-Collider structure is central in probabilistic/causal graphs.
+Collider cấu trúc (structure / 구조) is central in probabilistic/nhân quả (causal / 인과적) graphs.
 
 ## Conditional independence
 
@@ -185,9 +188,9 @@ X\perp Y\mid Z
 
 means X and Y independent when conditioned on Z.
 
-Graphical Models encode many conditional independence relations compactly, allowing factorization of huge joint distribution.
+Graphical các mô hình (models / 모델들) encode many conditional independence relations compactly, allowing factorization of huge joint phân phối (distribution / 분포).
 
-Without factorization, joint table over `n` binary variables requires:
+Without factorization, joint bảng (table / 테이블) over `n` nhị phân (binary / 이진) variables requires:
 
 \[
 2^n
@@ -203,27 +206,27 @@ Instead of full joint:
 P(X_1,...,X_n)
 \]
 
-use product local factors:
+use sản phẩm (product / 제품) cục bộ (local / 로컬) factors:
 
 \[
 \prod_i \phi_i(X_{S_i})
 \]
 
-Bayesian Network factors conditional distributions; Markov Random Field uses undirected potentials.
+Bayesian mạng (network / 네트워크) factors conditional distributions; Markov Random trường dữ liệu (field / 필드) uses undirected potentials.
 
-Factorization is the probabilistic equivalent of exploiting structure instead of brute force enumeration.
+Factorization is the probabilistic equivalent of exploiting cấu trúc (structure / 구조) instead of brute force enumeration.
 
-## Exact inference
+## Chính xác (exact / 정확한) suy luận (inference / 추론)
 
-Exact methods compute posterior exactly under model:
+Chính xác (exact / 정확한) methods compute posterior exactly under mô hình (model / 모델):
 
 - variable elimination;
 - belief propagation on trees/polytrees;
-- junction tree.
+- junction cây (tree / 트리).
 
-Complexity depends graph structure/treewidth, not just number variables.
+Độ phức tạp (complexity / 복잡도) depends đồ thị (graph / 그래프) cấu trúc (structure / 구조)/treewidth, not just number variables.
 
-Dense dependencies can make exact inference exponential.
+Dense dependencies can make chính xác (exact / 정확한) suy luận (inference / 추론) exponential.
 
 ## Variable elimination
 
@@ -233,29 +236,29 @@ Suppose want:
 P(A\mid E=e)
 \]
 
-We multiply relevant factors and sum hidden variables in chosen order.
+We multiply relevant factors and sum hidden variables in chosen thứ tự (order / 순서).
 
-Elimination order strongly affects size of intermediate factors.
+Elimination thứ tự (order / 순서) strongly affects kích thước (size / 크기) of intermediate factors.
 
-This resembles database join-order optimization: mathematically same result, computational cost can vary dramatically.
+This resembles cơ sở dữ liệu (database / 데이터베이스) join-order tối ưu hóa (optimization / 최적화): mathematically same kết quả (result / 결과), computational chi phí (cost / 비용) can vary dramatically.
 
-## Approximate inference
+## Approximate suy luận (inference / 추론)
 
-When exact inference too expensive, use approximation:
+When chính xác (exact / 정확한) suy luận (inference / 추론) too expensive, use approximation:
 
 - Monte Carlo sampling;
 - importance sampling;
 - MCMC;
-- variational inference;
+- variational suy luận (inference / 추론);
 - loopy belief propagation.
 
-Approximation trades correctness exactness for tractability.
+Approximation trades tính đúng đắn (correctness / 정확성) exactness for tractability.
 
-Need monitor convergence/error; “algorithm returned number” does not mean posterior accurate.
+Need monitor convergence/lỗi (error / 오류); “thuật toán (algorithm / 알고리즘) returned number” does not mean posterior accurate.
 
 ## Monte Carlo
 
-Sample hidden configurations:
+Mẫu (sample / 표본) hidden configurations:
 
 \[
 z^{(1)},...,z^{(N)}\sim P
@@ -267,11 +270,11 @@ estimate expectation:
 \mathbb{E}[f(Z)]\approx\frac1N\sum_i f(z^{(i)})
 \]
 
-Error typically shrinks around `O(1/√N)` under standard independent sampling, making high precision expensive.
+Lỗi (error / 오류) typically shrinks around `O(1/√N)` under tiêu chuẩn (standard / 표준) independent sampling, making high precision expensive.
 
 ## Importance sampling
 
-If target distribution hard sample but proposal `q` easy:
+If mục tiêu (target / 대상) phân phối (distribution / 분포) hard mẫu (sample / 표본) but proposal `q` easy:
 
 \[
 \mathbb{E}_p[f(X)]
@@ -283,9 +286,9 @@ Importance weights explode if `q` poorly covers regions where `p` has mass, caus
 
 This theme appears again in off-policy RL.
 
-## Markov Chain Monte Carlo
+## Markov chuỗi (chain / 사슬) Monte Carlo
 
-MCMC constructs Markov chain whose stationary distribution is target.
+MCMC constructs Markov chuỗi (chain / 사슬) whose stationary phân phối (distribution / 분포) is mục tiêu (target / 대상).
 
 Methods include Metropolis–Hastings, Gibbs Sampling.
 
@@ -293,9 +296,9 @@ Samples correlated; burn-in/mixing/convergence diagnostic matter.
 
 High-dimensional multimodal distributions can mix slowly.
 
-## Variational inference
+## Variational suy luận (inference / 추론)
 
-Choose tractable distribution family `q_φ(z)` approximate posterior `p(z|x)` by optimization.
+Choose tractable phân phối (distribution / 분포) family `q_φ(z)` approximate posterior `p(z|x)` by tối ưu hóa (optimization / 최적화).
 
 Often minimize:
 
@@ -310,27 +313,27 @@ Equivalent maximize ELBO:
 \mathbb{E}_{q}[\log p(x,z)-\log q(z)]
 \]
 
-Variational inference turns inference into optimization, usually faster but introduces approximation bias.
+Variational suy luận (inference / 추론) turns suy luận (inference / 추론) into tối ưu hóa (optimization / 최적화), usually faster but introduces approximation độ lệch (bias / 편향).
 
-## Maximum likelihood and Bayesian inference
+## Maximum likelihood and Bayesian suy luận (inference / 추론)
 
-MLE chooses point estimate:
+MLE chooses điểm (point / 지점) estimate:
 
 \[
 \theta_{MLE}=\arg\max_\theta P(D\mid\theta)
 \]
 
-Bayesian inference keeps posterior distribution:
+Bayesian suy luận (inference / 추론) keeps posterior phân phối (distribution / 분포):
 
 \[
 P(\theta\mid D)
 \]
 
-Full posterior expresses parameter uncertainty but is often computationally expensive in neural networks.
+Full posterior expresses parameter bất định (uncertainty / 불확실성) but is often computationally expensive in neural networks.
 
-Approximate Bayesian deep learning uses ensembles, variational methods or other uncertainty approximations.
+Approximate Bayesian deep học tập (learning / 학습) uses ensembles, variational methods or other bất định (uncertainty / 불확실성) approximations.
 
-## Predictive distribution
+## Predictive phân phối (distribution / 분포)
 
 Bayesian prediction integrates parameters:
 
@@ -338,59 +341,59 @@ Bayesian prediction integrates parameters:
 P(y\mid x,D)=\int P(y\mid x,\theta)P(\theta\mid D)d\theta
 \]
 
-Rather than commit to one `θ`, average predictions weighted by posterior plausibility.
+Rather than lần ghi nhận (commit / 커밋) to one `θ`, average predictions weighted by posterior plausibility.
 
-Deep ensembles approximate model uncertainty differently by training multiple models.
+Deep ensembles approximate mô hình (model / 모델) bất định (uncertainty / 불확실성) differently by huấn luyện (training / 학습) multiple các mô hình (models / 모델들).
 
 ## Calibration
 
 Probabilistic reasoner should not only rank correctly but probabilities should match empirical frequencies when interpretation requires.
 
-Calibration can degrade under distribution shift.
+Calibration can degrade under phân phối (distribution / 분포) shift.
 
-A model calibrated on US customers may be miscalibrated on Korean customers if conditional relationships differ.
+A mô hình (model / 모델) calibrated on US customers may be miscalibrated on Korean customers if conditional relationships differ.
 
-## Evidence and likelihood are model-dependent
+## Bằng chứng (evidence / 증거) and likelihood are model-dependent
 
-Posterior is only as good as likelihood/prior assumptions.
+Posterior is only as good as likelihood/prior các giả định (assumptions / 가정들).
 
-Bayes theorem itself is mathematically exact, but wrong model gives wrong posterior.
+Bayes theorem itself is mathematically chính xác (exact / 정확한), but wrong mô hình (model / 모델) gives wrong posterior.
 
-This mirrors formal logic: valid inference from false premises is still formal-valid but real-world wrong.
+This mirrors formal lô-gic (logic / 논리): valid suy luận (inference / 추론) from false premises is still formal-valid but real-world wrong.
 
 ## Prior sensitivity
 
-With little data, prior strongly influences posterior. With abundant informative data, likelihood often dominates under regular conditions.
+With little dữ liệu (data / 데이터), prior strongly influences posterior. With abundant informative dữ liệu (data / 데이터), likelihood often dominates under regular conditions.
 
-In high-dimensional models, “uninformative prior” is not simple; parameterization matters.
+In high-dimensional các mô hình (models / 모델들), “uninformative prior” is not simple; parameterization matters.
 
-Prior encodes inductive bias, not something to hide.
+Prior encodes inductive độ lệch (bias / 편향), not something to hide.
 
-## Bayesian decision theory
+## Bayesian quyết định (decision / 결정) lý thuyết (theory / 이론)
 
-Posterior alone not action. Choose action minimize posterior expected loss:
+Posterior alone not hành động (action / 동작). Choose hành động (action / 동작) minimize posterior expected mất mát (loss / 손실):
 
 \[
 a^*=\arg\min_a\mathbb{E}_{\theta\mid D}[L(a,\theta)]
 \]
 
-This connects probabilistic inference to [Decision Making Under Uncertainty](../02_search_reasoning_and_planning/06_decision_making_under_uncertainty.md).
+This connects probabilistic suy luận (inference / 추론) to [Decision Making Under Uncertainty](../02_search_reasoning_and_planning/06_decision_making_under_uncertainty.md).
 
-## Probabilistic graphical models
+## Probabilistic graphical các mô hình (models / 모델들)
 
 Two major forms:
 
-**Bayesian Network** — directed acyclic graph; local conditional probabilities.
+**Bayesian mạng (network / 네트워크)** — directed acyclic đồ thị (graph / 그래프); cục bộ (local / 로컬) conditional probabilities.
 
-**Markov Random Field** — undirected graph; potentials/factors.
+**Markov Random trường dữ liệu (field / 필드)** — undirected đồ thị (graph / 그래프); potentials/factors.
 
-Factor Graph explicitly separates variable and factor nodes.
+Factor đồ thị (graph / 그래프) explicitly separates variable and factor nodes.
 
-These representations expose conditional structure for inference.
+These representations expose conditional cấu trúc (structure / 구조) for suy luận (inference / 추론).
 
 ## HMM
 
-Hidden Markov Model has latent state sequence:
+Hidden Markov mô hình (model / 모델) has latent trạng thái (state / 상태) chuỗi (sequence / 시퀀스):
 
 ```text
 Z1 → Z2 → Z3 → ...
@@ -398,45 +401,45 @@ Z1 → Z2 → Z3 → ...
 X1   X2   X3
 ```
 
-Assumptions:
+Các giả định (assumptions / 가정들):
 
 \[
 P(Z_t\mid Z_{<t})=P(Z_t\mid Z_{t-1})
 \]
 
-and observations conditionally dependent on current state.
+and observations conditionally dependent on trạng thái hiện tại (current state / 현재 상태).
 
 Algorithms:
 
-- Forward algorithm → likelihood/filtering;
-- Viterbi → most likely state sequence;
+- Forward thuật toán (algorithm / 알고리즘) → likelihood/filtering;
+- Viterbi → most likely trạng thái (state / 상태) chuỗi (sequence / 시퀀스);
 - Forward–Backward → posterior marginals.
 
-HMM historically central in speech/NLP before Deep Learning.
+HMM historically central in speech/NLP before Deep học tập (learning / 학습).
 
 ## Kalman Filter
 
-Linear-Gaussian state-space model permits exact recursive Bayesian filtering with Gaussian beliefs.
+Linear-Gaussian state-space mô hình (model / 모델) permits chính xác (exact / 정확한) recursive Bayesian filtering with Gaussian beliefs.
 
-It predicts next state then corrects using observation.
+It predicts next trạng thái (state / 상태) then corrects using observation.
 
-Kalman gain balances model uncertainty and measurement uncertainty.
+Kalman gain balances mô hình (model / 모델) bất định (uncertainty / 불확실성) and đo lường (measurement / 측정) bất định (uncertainty / 불확실성).
 
-This is probabilistic reasoning deployed in navigation/tracking/control.
+This is probabilistic lập luận (reasoning / 추론) deployed in điều hướng (navigation / 내비게이션)/tracking/điều khiển (control / 제어).
 
 ## Probabilistic programming
 
-Languages like Stan, PyMC-like ecosystems let user specify generative model and perform inference via MCMC/VI.
+Languages like Stan, PyMC-like ecosystems let người dùng (user / 사용자) specify generative mô hình (model / 모델) and perform suy luận (inference / 추론) via MCMC/VI.
 
-This separates model specification from inference engine similarly to declarative logic.
+This separates mô hình (model / 모델) specification from bộ máy suy luận (inference engine / 추론 엔진) similarly to declarative lô-gic (logic / 논리).
 
-But inference quality/computation still depend model geometry and algorithm.
+But suy luận (inference / 추론) chất lượng (quality / 품질)/computation still depend mô hình (model / 모델) hình học (geometry / 기하학) and thuật toán (algorithm / 알고리즘).
 
-## Uncertainty in LLMs
+## Bất định (uncertainty / 불확실성) in LLMs
 
-LLM next-token probabilities are conditional sequence probabilities, not directly “truth probabilities”.
+LLM next-token probabilities are conditional chuỗi (sequence / 시퀀스) probabilities, not directly “truth probabilities”.
 
-A token can have high probability because it is linguistically likely despite claim being false.
+A đơn vị từ (token / 토큰) can have high xác suất (probability / 확률) because it is linguistically likely despite claim being false.
 
 Therefore:
 
@@ -450,13 +453,13 @@ This distinction is fundamental to hallucination/grounding.
 
 ## Self-reported confidence
 
-Asking LLM “How confident are you?” produces text generated from same model, not automatically calibrated posterior about correctness.
+Asking LLM “How confident are you?” produces văn bản (text / 텍스트) generated from same mô hình (model / 모델), not automatically calibrated posterior about tính đúng đắn (correctness / 정확성).
 
-Confidence estimation requires explicit evaluation/calibration methods, ensembles, consistency signals, external verification or task-specific models.
+Confidence estimation requires tường minh (explicit / 명시적) evaluation/calibration methods, ensembles, consistency signals, bên ngoài (external / 외부) xác minh (verification / 확인) or task-specific các mô hình (models / 모델들).
 
 ## Probabilistic RAG
 
-Retrieval introduces uncertainty:
+Retrieval introduces bất định (uncertainty / 불확실성):
 
 ```text
 query intent uncertain
@@ -465,11 +468,11 @@ document truth/freshness uncertain
 LLM interpretation uncertain
 ```
 
-Reliable RAG should treat retrieval score as ranking signal, not guaranteed relevance/truth.
+Reliable RAG should treat retrieval score as ranking tín hiệu (signal / 신호), not guaranteed relevance/truth.
 
-Reranking, citations and source validation reduce uncertainty at different stages.
+Reranking, citations and nguồn (source / 소스) kiểm tra hợp lệ (validation / 검증) reduce bất định (uncertainty / 불확실성) at different stages.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Logic         → what must follow if premises true
@@ -481,24 +484,26 @@ Approximation → trade exactness for tractability
 Decision      → combine posterior with utility/cost
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Bayesian means probabilities are always correct”
 
-Posterior depends model, prior, likelihood and data quality.
+Posterior depends mô hình (model / 모델), prior, likelihood and dữ liệu (data / 데이터) chất lượng (quality / 품질).
 
-### “LLM probability = factual confidence”
+### “LLM xác suất (probability / 확률) = factual confidence”
 
-Next-token likelihood is not calibrated truth probability.
+Next-token likelihood is not calibrated truth xác suất (probability / 확률).
 
-### “Exact inference is always preferable”
+### “chính xác (exact / 정확한) suy luận (inference / 추론) is always preferable”
 
-Exact may be infeasible; approximate inference can be only practical option.
+Chính xác (exact / 정확한) may be infeasible; approximate suy luận (inference / 추론) can be only practical option.
 
 ### “Conditional independence means variables unrelated”
 
 They can be dependent marginally but independent given a third variable.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Probabilistic Reasoning bridges Probability, Knowledge Representation and Decision Theory. [Bayesian Networks](./05_bayesian_networks.md) will make the conditional-dependency structure concrete, while later Machine Learning chapters will show how models estimate these distributions from data.
+Probabilistic lập luận (reasoning / 추론) bridges xác suất (probability / 확률), kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and quyết định (decision / 결정) lý thuyết (theory / 이론). [Bayesian Networks](./05_bayesian_networks.md) will make the conditional-dependency cấu trúc (structure / 구조) concrete, while later Machine học tập (learning / 학습) chapters will show how các mô hình (models / 모델들) estimate these distributions from dữ liệu (data / 데이터).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

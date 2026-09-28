@@ -10,7 +10,7 @@ IDE
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **10. 빌드 자동화 도구 (Build Automation Tools)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,10 +20,12 @@ IDE
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** và nối nó với **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)
 * **IDE**: 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리.
   * **기능**: 코딩(Coding), 컴파일(Compile), 디버깅(Debugging), 배포(Deployment).
 * **빌드 도구**: 소스 코드를 실행 가능한 제품 소프트웨어로 변환(Ant, Maven, Gradle).
-* **VI (Vietnamese) (Tiếng Việt):** Môi trường phát triển tích hợp (IDE - như Eclipse, VS Code). Chức năng: Code, Dịch, Gỡ lỗi, Triển khai.
+* **VI (Vietnamese) (Tiếng Việt):** Môi trường phát triển tích hợp (IDE - như Eclipse, VS Code). Chức năng: mã (code / 코드), Dịch, Gỡ lỗi, Triển khai.

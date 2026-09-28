@@ -1,111 +1,116 @@
-# DevOps / Platform Engineering Glossary
+# DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary
 
-File này dùng để tra nhanh thuật ngữ, không thay thế chapter giải thích cơ chế.
+> **Mạch đọc:** Đặt **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
 
-| Thuật ngữ | Ý nghĩa trong library |
+
+Tệp (file / 파일) này dùng để tra nhanh thuật ngữ, không thay thế chapter giải thích cơ chế.
+
+| Thuật ngữ | Ý nghĩa trong thư viện (library / 라이브러리) |
 |---|---|
-| Luồng giá trị (value stream / 가치 흐름) | Chuỗi từ nhu cầu, thay đổi source, kiểm chứng, phát hành đến kết quả production và feedback quay lại team. |
-| Hiện vật (artifact / 산출물) | Output bất biến của quá trình build như image, package, binary hoặc bundle; nên được định danh để cùng một artifact đi qua các môi trường. |
-| Tái lập được (reproducible) | Cùng input và toolchain đã khóa cho output tương đương theo contract đã định, giúp giảm “works on my machine”. |
-| Trạng thái mong muốn (desired state) | State hệ thống mà người dùng/controller khai báo muốn đạt tới. |
-| Trạng thái thực tế (actual state) | State hệ thống hiện đang có tại thời điểm quan sát. |
-| Đối soát (reconciliation / 조정) | Control loop liên tục so desired state với actual state và thực hiện action để thu hẹp sai khác. |
-| Sai lệch cấu hình (drift) | Actual infrastructure/config khác state được quản lý hoặc mong muốn do thay đổi ngoài luồng, lỗi hoặc dependency biến đổi. |
-| Tính lặp an toàn (idempotency) | Thực hiện cùng operation nhiều lần không làm state tiếp tục lệch sau khi đã đạt kết quả mong muốn. |
-| Bán kính ảnh hưởng (blast radius) | Phạm vi user, workload, region hoặc data có thể bị ảnh hưởng bởi một failure/change. |
-| Promotion | Chuyển cùng một artifact/config version sang stage tiếp theo sau khi đủ evidence; khác với build lại ở từng môi trường. |
-| Rollback | Quay workload/config/traffic về trạng thái tương thích trước đó; không phải lúc nào cũng đơn giản khi schema hoặc external state đã đổi. |
-| Roll forward | Khắc phục bằng phiên bản mới thay vì quay lại, thường cần khi state migration không thể đảo. |
-| Telemetry | Dữ liệu hệ thống phát ra để suy luận behavior, thường gồm metrics, logs, traces và events. |
-| Khả năng quan sát (observability / 관측 가능성) | Khả năng suy luận trạng thái nội tại từ evidence bên ngoài; không đồng nghĩa với “có nhiều dashboard”. |
-| Chỉ báo mức dịch vụ (Service Level Indicator — SLI) | Phép đo gần với trải nghiệm hoặc contract của service, ví dụ tỷ lệ request hợp lệ thành công. |
-| Mục tiêu mức dịch vụ (Service Level Objective — SLO) | Mục tiêu định lượng cho SLI trong một cửa sổ thời gian. |
-| Error budget | Phần không hoàn hảo được chấp nhận bởi SLO; dùng để cân bằng tốc độ thay đổi và reliability. |
-| Toil | Công việc vận hành lặp lại, thủ công, có thể tự động hóa, tăng gần tuyến tính theo quy mô và ít tạo learning lâu dài. |
-| Runbook | Quy trình thao tác cho tình huống vận hành đã biết, phải nêu điều kiện, evidence, action và cách kiểm chứng thay vì chỉ liệt kê lệnh. |
+| Luồng giá trị (value stream / 가치 흐름) | Chuỗi từ nhu cầu, thay đổi nguồn (source / 소스), kiểm chứng, phát hành đến kết quả môi trường vận hành (production / 운영 환경) và phản hồi (feedback / 피드백) quay lại nhóm (team / 팀). |
+| Hiện vật (artifact / 산출물) | đầu ra (output / 출력) bất biến của quá trình bản dựng (build / 빌드) như ảnh (image / 이미지), gói (package / 패키지), nhị phân (binary / 이진) hoặc bundle; nên được định danh để cùng một sản phẩm tạo ra (artifact / 산출물) đi qua các môi trường. |
+| Tái lập được (reproducible) | Cùng đầu vào (input / 입력) và toolchain đã khóa cho đầu ra (output / 출력) tương đương theo đặc tả hợp đồng (contract / 계약) đã định, giúp giảm “works on my machine”. |
+| Trạng thái mong muốn (desired state) | trạng thái (state / 상태) hệ thống mà người dùng/controller khai báo muốn đạt tới. |
+| Trạng thái thực tế (actual state) | trạng thái (state / 상태) hệ thống hiện đang có tại thời điểm quan sát. |
+| Đối soát (reconciliation / 조정) | vòng điều khiển (control loop / 제어 루프) liên tục so desired trạng thái (state / 상태) với actual trạng thái (state / 상태) và thực hiện hành động (action / 동작) để thu hẹp sai khác. |
+| Sai lệch cấu hình (drift) | Actual hạ tầng (infrastructure / 인프라)/cấu hình (config / 설정) khác trạng thái (state / 상태) được quản lý hoặc mong muốn do thay đổi ngoài luồng, lỗi hoặc phụ thuộc (dependency / 의존성) biến đổi. |
+| Tính lặp an toàn (idempotency) | Thực hiện cùng thao tác (operation / 연산) nhiều lần không làm trạng thái (state / 상태) tiếp tục lệch sau khi đã đạt kết quả mong muốn. |
+| Bán kính ảnh hưởng (blast radius) | Phạm vi người dùng (user / 사용자), tải công việc (workload / 워크로드), region hoặc dữ liệu (data / 데이터) có thể bị ảnh hưởng bởi một thất bại (failure / 실패)/thay đổi (change / 변경). |
+| Promotion | Chuyển cùng một sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정) phiên bản (version / 버전) sang stage tiếp theo sau khi đủ bằng chứng (evidence / 증거); khác với bản dựng (build / 빌드) lại ở từng môi trường. |
+| quay lui (rollback / 롤백) | Quay tải công việc (workload / 워크로드)/cấu hình (config / 설정)/traffic về trạng thái tương thích trước đó; không phải lúc nào cũng đơn giản khi lược đồ (schema / 스키마) hoặc bên ngoài (external / 외부) trạng thái (state / 상태) đã đổi. |
+| Roll forward | Khắc phục bằng phiên bản mới thay vì quay lại, thường cần khi trạng thái (state / 상태) di chuyển (migration / 마이그레이션) không thể đảo. |
+| Telemetry | Dữ liệu hệ thống phát ra để suy luận hành vi (behavior / 동작), thường gồm metrics, logs, traces và events. |
+| khả năng quan sát (observability / 관측 가능성) | Khả năng suy luận trạng thái nội tại từ bằng chứng (evidence / 증거) bên ngoài; không đồng nghĩa với “có nhiều dashboard”. |
+| Chỉ báo mức dịch vụ (service Level Indicator — SLI) | Phép đo gần với trải nghiệm hoặc đặc tả hợp đồng (contract / 계약) của dịch vụ (service / 서비스), ví dụ tỷ lệ yêu cầu (request / 요청) hợp lệ thành công. |
+| Mục tiêu mức dịch vụ (service Level Objective — SLO) | Mục tiêu định lượng cho SLI trong một cửa sổ thời gian. |
+| lỗi (error / 오류) ngân sách (budget / 예산) | Phần không hoàn hảo được chấp nhận bởi SLO; dùng để cân bằng tốc độ thay đổi và độ tin cậy (reliability / 신뢰성). |
+| Toil | Công việc vận hành lặp lại, thủ công, có thể tự động hóa, tăng gần tuyến tính theo quy mô và ít tạo học tập (learning / 학습) lâu dài. |
+| Runbook | Quy trình thao tác cho tình huống vận hành đã biết, phải nêu điều kiện, bằng chứng (evidence / 증거), hành động (action / 동작) và cách kiểm chứng thay vì chỉ liệt kê lệnh. |
 | Playbook | Khung phản ứng rộng hơn cho loại sự cố, có thể cần judgment và nhiều nhánh quyết định. |
-| Hạ tầng dưới dạng mã (Infrastructure as Code — IaC / 코드형 인프라) | Quản lý desired infrastructure bằng file/versioned change và engine có khả năng lập kế hoạch, đối chiếu state, tạo/sửa/xóa resource. |
-| Policy as Code | Biểu diễn policy dưới dạng rule có thể kiểm tra tự động trong CI hoặc admission/reconciliation path. |
-| GitOps | Operating model dùng Git/version control làm interface cho desired state và agent/controller tự đối soát state thực tế. |
-| Chuỗi cung ứng phần mềm (software supply chain) | Toàn bộ đường đi từ source, dependency, build environment, artifact, registry đến deployment. |
-| Provenance | Bằng chứng về artifact được tạo từ source, process và builder nào. |
-| SBOM | Software Bill of Materials; danh mục thành phần/dependency được dùng để tạo software artifact. |
-| Golden path | Đường đi chuẩn đã được platform tối ưu cho use case phổ biến. |
-| Guardrail | Cơ chế giúp hoặc ép lựa chọn nằm trong boundary an toàn mà không tạo handoff thủ công không cần thiết. |
-| Internal Developer Platform — IDP | Tập capability, interface và workflow nội bộ giúp product team tự phục vụ phần hạ tầng/delivery phổ biến. |
-| Control plane | Thành phần giữ desired state, policy và quyết định orchestration; thường không trực tiếp phục vụ user request của application. |
-| Data plane | Thành phần thực thi traffic/workload/data path theo quyết định từ control plane. |
-| Multi-tenancy | Nhiều team/workload dùng chung một platform với isolation, quota, policy và ownership boundary. |
-| FinOps | Discipline phối hợp kỹ thuật, tài chính và sản phẩm để làm chi phí cloud có visibility, ownership và trade-off rõ ràng. |
-| Mean Time to Restore/Recover — MTTR | Thời gian phục hồi service sau failure theo định nghĩa đo đã thống nhất; dễ bị hiểu sai nếu không xác định mốc bắt đầu/kết thúc. |
-| RTO | Recovery Time Objective; thời gian tối đa mục tiêu để phục hồi capability sau thảm họa. |
-| RPO | Recovery Point Objective; mức mất dữ liệu theo thời gian mà tổ chức chấp nhận trong recovery scenario. |
-| Immutable infrastructure | Thay vì sửa trực tiếp server/workload đang chạy, tạo phiên bản mới từ source of truth rồi thay thế instance cũ. |
-| Cattle, not pets | Mental model coi instance là thay thế được; không có nghĩa bỏ qua stateful workload hoặc forensic evidence. |
-| Day 0 / Day 1 / Day 2 | Thiết kế/provision ban đầu, đưa hệ thống vào hoạt động, rồi vận hành dài hạn gồm upgrade, backup, scaling, incident, rotation và cleanup. |
-| Lead time | Thời gian từ lúc một nhu cầu/thay đổi bắt đầu đến khi tạo giá trị hoặc chạm trạng thái đích; gồm cả processing time và thời gian chờ. |
-| Cycle/processing time | Thời gian work item thực sự được xử lý trong một bước hoặc một flow; cần phân biệt với lead time chứa queue/handoff. |
-| Công việc đang dở (Work in Progress — WIP) | Số work item đang nằm trong flow nhưng chưa hoàn tất; WIP cao thường kéo queue và thời gian hoàn thành tăng. |
-| Build kín (hermetic build) | Build chỉ được thấy các input đã khai báo thay vì phụ thuộc ngầm vào host, network hoặc tool cài sẵn. |
-| Attestation | Statement có subject và predicate được một identity xác nhận/ký, dùng để chứng minh provenance, verification hoặc policy fact cho artifact. |
-| Trust domain | Boundary trong đó identity/output được coi có mức tin cậy tương đương; output từ trust domain thấp không nên trở thành input ngầm của domain cao. |
-| Pressure Stall Information — PSI | Telemetry của Linux mô tả thời gian task bị trì hoãn do thiếu CPU, memory hoặc I/O; bổ sung cho utilization metric. |
-| Capacity có thể schedule (schedulable capacity) | Capacity thật mà một workload cụ thể có thể được đặt vào sau khi xét kích thước request, constraint và fragmentation; khác tổng capacity còn trống. |
-| PodDisruptionBudget — PDB | Budget giới hạn một số voluntary eviction của Pod; không phải guarantee chống node crash hoặc mọi failure. |
-| Preemption | Cơ chế cho workload priority cao giành resource bằng cách loại workload priority thấp hơn; phân bổ lại scarcity chứ không tạo thêm capacity. |
-| Burn rate | Tốc độ tiêu error budget tương đối, thường nhìn như observed bad-event rate chia allowed bad-event rate. |
-| Backpressure | Cơ chế truyền tín hiệu ngược khi downstream không theo kịp để upstream giảm tốc hoặc giới hạn work mới. |
-| Load shedding | Chủ động từ chối/bỏ bớt work theo policy khi capacity thiếu để bảo vệ core capability khỏi collapse. |
-| Field ownership | Contract chỉ rõ controller/actor nào chịu trách nhiệm cho từng phần state; thiếu ownership dễ tạo reconciliation conflict/oscillation. |
-| Partial apply | IaC/provisioning thay được một phần remote state rồi fail; không có guarantee transaction atomic xuyên nhiều resource. |
-| Eventual consistency | State mới cần thời gian lan truyền giữa subsystem; API create success không luôn đồng nghĩa resource đã usable ở mọi dependency. |
-| Schedulability fragmentation | Tổng resource còn đủ nhưng bị chia trên nhiều node/failure domain nên một workload lớn không fit vào bất kỳ placement hợp lệ nào. |
-| Coordinated omission | Sai lệch benchmark khi load generator giảm gửi work đúng lúc hệ thống chậm, khiến latency/saturation nhìn tốt hơn production thật. |
-| Effective configuration | Configuration mà process/workload thực sự đang sử dụng tại runtime, có thể khác object/source-of-truth vừa được cập nhật. |
-| Ephemeral port | Source port tạm thời mà OS cấp cho outbound connection; có thể trở thành capacity boundary khi connection churn hoặc NAT fan-out rất lớn. |
-| Connection tracking — conntrack | State kernel/firewall/NAT giữ để theo dõi flow; table hoặc translation capacity cạn có thể gây network failure dù application còn resource. |
-| PID 1 | Process đầu tiên trong PID namespace; trong container thường là process chính và có trách nhiệm signal/child-reaping cần được hiểu rõ. |
-| Writable layer | Layer ghi tạm phía trên image read-only khi container chạy; không phải durable storage contract. |
-| Multi-architecture image | Image index/manifest có variant theo kiến trúc như `amd64`/`arm64`; runtime chọn artifact tương thích node. |
-| Time-to-capacity | Thời gian từ lúc demand cần thêm resource đến khi capacity mới thực sự sẵn sàng phục vụ traffic/work. |
+| Hạ tầng dưới dạng mã (Infrastructure as Code — IaC / 코드형 인프라) | Quản lý desired hạ tầng (infrastructure / 인프라) bằng tệp (file / 파일)/versioned thay đổi (change / 변경) và engine có khả năng lập kế hoạch, đối chiếu trạng thái (state / 상태), tạo/sửa/xóa tài nguyên (resource / 자원). |
+| chính sách (policy / 정책) as mã (code / 코드) | Biểu diễn chính sách (policy / 정책) dưới dạng quy tắc (rule / 규칙) có thể kiểm tra tự động trong CI hoặc admission/reconciliation đường dẫn (path / 경로). |
+| GitOps | Operating mô hình (model / 모델) dùng Git/phiên bản (version / 버전) điều khiển (control / 제어) làm giao diện (interface / 인터페이스) cho desired trạng thái (state / 상태) và tác nhân (agent / 에이전트)/controller tự đối soát trạng thái (state / 상태) thực tế. |
+| Chuỗi cung ứng phần mềm (software supply chain) | Toàn bộ đường đi từ nguồn (source / 소스), phụ thuộc (dependency / 의존성), bản dựng (build / 빌드) môi trường (environment / 환경), sản phẩm tạo ra (artifact / 산출물), registry đến triển khai (deployment / 배포). |
+| Provenance | Bằng chứng về sản phẩm tạo ra (artifact / 산출물) được tạo từ nguồn (source / 소스), tiến trình (process / 프로세스) và builder nào. |
+| SBOM | Software Bill of Materials; danh mục thành phần/phụ thuộc (dependency / 의존성) được dùng để tạo software sản phẩm tạo ra (artifact / 산출물). |
+| Golden đường dẫn (path / 경로) | Đường đi chuẩn đã được nền tảng (platform / 플랫폼) tối ưu cho use trường hợp (case / 사례) phổ biến. |
+| Guardrail | Cơ chế giúp hoặc ép lựa chọn nằm trong ranh giới (boundary / 경계) an toàn mà không tạo handoff thủ công không cần thiết. |
+| nội bộ (internal / 내부) nhà phát triển (developer / 개발자) nền tảng (platform / 플랫폼) — IDP | Tập năng lực (capability / 역량), giao diện (interface / 인터페이스) và workflow nội bộ giúp sản phẩm (product / 제품) nhóm (team / 팀) tự phục vụ phần hạ tầng/delivery phổ biến. |
+| điều khiển (control / 제어) plane | Thành phần giữ desired trạng thái (state / 상태), chính sách (policy / 정책) và quyết định orchestration; thường không trực tiếp phục vụ người dùng (user / 사용자) yêu cầu (request / 요청) của ứng dụng (application / 애플리케이션). |
+| mặt phẳng dữ liệu (data plane / 데이터 플레인) | Thành phần thực thi traffic/tải công việc (workload / 워크로드)/dữ liệu (data / 데이터) đường dẫn (path / 경로) theo quyết định từ điều khiển (control / 제어) plane. |
+| Multi-tenancy | Nhiều nhóm (team / 팀)/tải công việc (workload / 워크로드) dùng chung một nền tảng (platform / 플랫폼) với isolation, quota, chính sách (policy / 정책) và quyền sở hữu (ownership / 소유권) ranh giới (boundary / 경계). |
+| FinOps | Discipline phối hợp kỹ thuật, tài chính và sản phẩm để làm chi phí cloud có visibility, quyền sở hữu (ownership / 소유권) và sự đánh đổi (trade-off / 트레이드오프) rõ ràng. |
+| Mean thời gian (time / 시간) to Restore/Recover — MTTR | Thời gian phục hồi dịch vụ (service / 서비스) sau thất bại (failure / 실패) theo định nghĩa đo đã thống nhất; dễ bị hiểu sai nếu không xác định mốc bắt đầu/kết thúc. |
+| RTO | khôi phục (recovery / 복구) thời gian (time / 시간) mục tiêu (objective / 목표); thời gian tối đa mục tiêu để phục hồi năng lực (capability / 역량) sau thảm họa. |
+| RPO | khôi phục (recovery / 복구) điểm (point / 지점) mục tiêu (objective / 목표); mức mất dữ liệu theo thời gian mà tổ chức chấp nhận trong khôi phục (recovery / 복구) scenario. |
+| Immutable hạ tầng (infrastructure / 인프라) | Thay vì sửa trực tiếp máy chủ (server / 서버)/tải công việc (workload / 워크로드) đang chạy, tạo phiên bản mới từ nguồn chuẩn (source of truth / 정본) rồi thay thế instance cũ. |
+| Cattle, not pets | mô hình tư duy (mental model / 사고 모델) coi instance là thay thế được; không có nghĩa bỏ qua stateful tải công việc (workload / 워크로드) hoặc forensic bằng chứng (evidence / 증거). |
+| Day 0 / Day 1 / Day 2 | Thiết kế/provision ban đầu, đưa hệ thống vào hoạt động, rồi vận hành dài hạn gồm upgrade, backup, scaling, sự cố (incident / 인시던트), rotation và cleanup. |
+| Lead thời gian (time / 시간) | Thời gian từ lúc một nhu cầu/thay đổi bắt đầu đến khi tạo giá trị hoặc chạm trạng thái đích; gồm cả processing thời gian (time / 시간) và thời gian chờ. |
+| Cycle/processing thời gian (time / 시간) | Thời gian công việc (work / 작업) item thực sự được xử lý trong một bước hoặc một luồng (flow / 흐름); cần phân biệt với lead thời gian (time / 시간) chứa hàng đợi (queue / 큐)/handoff. |
+| Công việc đang dở (Work in Progress — WIP) | Số công việc (work / 작업) item đang nằm trong luồng (flow / 흐름) nhưng chưa hoàn tất; WIP cao thường kéo hàng đợi (queue / 큐) và thời gian hoàn thành tăng. |
+| bản dựng (build / 빌드) kín (hermetic build) | bản dựng (build / 빌드) chỉ được thấy các đầu vào (input / 입력) đã khai báo thay vì phụ thuộc ngầm vào host, mạng (network / 네트워크) hoặc công cụ (tool / 도구) cài sẵn. |
+| Attestation | Statement có subject và predicate được một định danh (identity / 식별자) xác nhận/ký, dùng để chứng minh provenance, xác minh (verification / 확인) hoặc chính sách (policy / 정책) fact cho sản phẩm tạo ra (artifact / 산출물). |
+| Trust lĩnh vực (domain / 도메인) | ranh giới (boundary / 경계) trong đó định danh (identity / 식별자)/đầu ra (output / 출력) được coi có mức tin cậy tương đương; đầu ra (output / 출력) từ trust lĩnh vực (domain / 도메인) thấp không nên trở thành đầu vào (input / 입력) ngầm của lĩnh vực (domain / 도메인) cao. |
+| Pressure Stall thông tin (information / 정보) — PSI | Telemetry của Linux mô tả thời gian tác vụ (task / 작업) bị trì hoãn do thiếu CPU, bộ nhớ (memory / 메모리) hoặc I/O; bổ sung cho utilization chỉ số (metric / 지표). |
+| sức chứa (capacity / 용량) có thể schedule (schedulable capacity) | sức chứa (capacity / 용량) thật mà một tải công việc (workload / 워크로드) cụ thể có thể được đặt vào sau khi xét kích thước yêu cầu (request / 요청), ràng buộc (constraint / 제약조건) và fragmentation; khác tổng sức chứa (capacity / 용량) còn trống. |
+| PodDisruptionBudget — PDB | ngân sách (budget / 예산) giới hạn một số voluntary eviction của Pod; không phải guarantee chống nút (node / 노드) crash hoặc mọi thất bại (failure / 실패). |
+| Preemption | Cơ chế cho tải công việc (workload / 워크로드) priority cao giành tài nguyên (resource / 자원) bằng cách loại tải công việc (workload / 워크로드) priority thấp hơn; phân bổ lại scarcity chứ không tạo thêm sức chứa (capacity / 용량). |
+| Burn tỷ lệ (rate / 비율) | Tốc độ tiêu lỗi (error / 오류) ngân sách (budget / 예산) tương đối, thường nhìn như observed bad-event tỷ lệ (rate / 비율) chia allowed bad-event tỷ lệ (rate / 비율). |
+| Backpressure | Cơ chế truyền tín hiệu ngược khi downstream không theo kịp để upstream giảm tốc hoặc giới hạn công việc (work / 작업) mới. |
+| tải (load / 로드) shedding | Chủ động từ chối/bỏ bớt công việc (work / 작업) theo chính sách (policy / 정책) khi sức chứa (capacity / 용량) thiếu để bảo vệ cốt lõi (core / 핵심) năng lực (capability / 역량) khỏi collapse. |
+| trường dữ liệu (field / 필드) quyền sở hữu (ownership / 소유권) | đặc tả hợp đồng (contract / 계약) chỉ rõ controller/actor nào chịu trách nhiệm cho từng phần trạng thái (state / 상태); thiếu quyền sở hữu (ownership / 소유권) dễ tạo reconciliation xung đột (conflict / 충돌)/oscillation. |
+| Partial apply | IaC/provisioning thay được một phần remote trạng thái (state / 상태) rồi thất bại (fail / 실패); không có guarantee giao dịch (transaction / 트랜잭션) atomic xuyên nhiều tài nguyên (resource / 자원). |
+| Eventual consistency | trạng thái (state / 상태) mới cần thời gian lan truyền giữa subsystem; API create success không luôn đồng nghĩa tài nguyên (resource / 자원) đã usable ở mọi phụ thuộc (dependency / 의존성). |
+| Schedulability fragmentation | Tổng tài nguyên (resource / 자원) còn đủ nhưng bị chia trên nhiều nút (node / 노드)/miền lỗi (failure domain / 장애 도메인) nên một tải công việc (workload / 워크로드) lớn không fit vào bất kỳ placement hợp lệ nào. |
+| Coordinated omission | Sai lệch benchmark khi tải (load / 로드) generator giảm gửi công việc (work / 작업) đúng lúc hệ thống chậm, khiến độ trễ (latency / 지연 시간)/saturation nhìn tốt hơn môi trường vận hành (production / 운영 환경) thật. |
+| Effective cấu hình (configuration / 구성) | cấu hình (configuration / 구성) mà tiến trình (process / 프로세스)/tải công việc (workload / 워크로드) thực sự đang sử dụng tại thời gian chạy (runtime / 런타임), có thể khác đối tượng (object / 객체)/source-of-truth vừa được cập nhật. |
+| Ephemeral cổng (port / 포트) | nguồn (source / 소스) cổng (port / 포트) tạm thời mà OS cấp cho outbound liên kết (connection / 연결); có thể trở thành sức chứa (capacity / 용량) ranh giới (boundary / 경계) khi liên kết (connection / 연결) churn hoặc NAT fan-out rất lớn. |
+| liên kết (connection / 연결) tracking — conntrack | trạng thái (state / 상태) kernel/firewall/NAT giữ để theo dõi luồng (flow / 흐름); bảng (table / 테이블) hoặc translation sức chứa (capacity / 용량) cạn có thể gây mạng (network / 네트워크) thất bại (failure / 실패) dù ứng dụng (application / 애플리케이션) còn tài nguyên (resource / 자원). |
+| PID 1 | tiến trình (process / 프로세스) đầu tiên trong PID không gian tên (namespace / 네임스페이스); trong bộ chứa (container / 컨테이너) thường là tiến trình (process / 프로세스) chính và có trách nhiệm tín hiệu (signal / 신호)/child-reaping cần được hiểu rõ. |
+| Writable tầng (layer / 계층) | tầng (layer / 계층) ghi tạm phía trên ảnh (image / 이미지) read-only khi bộ chứa (container / 컨테이너) chạy; không phải durable lưu trữ (storage / 저장소) đặc tả hợp đồng (contract / 계약). |
+| Multi-architecture ảnh (image / 이미지) | ảnh (image / 이미지) chỉ mục (index / 인덱스)/manifest có variant theo kiến trúc như `amd64`/`arm64`; thời gian chạy (runtime / 런타임) chọn sản phẩm tạo ra (artifact / 산출물) tương thích nút (node / 노드). |
+| Time-to-capacity | Thời gian từ lúc demand cần thêm tài nguyên (resource / 자원) đến khi sức chứa (capacity / 용량) mới thực sự sẵn sàng phục vụ traffic/công việc (work / 작업). |
 | Durability | Khả năng dữ liệu tồn tại lâu dài mà không bị mất/corrupt; khác availability là khả năng truy cập/phục vụ tại thời điểm cần. |
-| Availability | Khả năng capability truy cập và phục vụ theo contract trong thời gian quan sát; không tự động đồng nghĩa dữ liệu durable hoặc có backup. |
-| Showback | Hiển thị chi phí cho owner/team để tạo visibility và incentive mà chưa hạch toán trực tiếp vào ngân sách của họ. |
-| Chargeback | Phân bổ/hạch toán chi phí shared platform/cloud về đơn vị sử dụng theo mô hình đã định. |
-| Unit cost | Chi phí trên một đơn vị work/value như successful request, order, build minute hoặc GB processed; denominator phải phản ánh outcome có ý nghĩa. |
-| Control-plane fairness | Bảo vệ tài nguyên điều khiển dùng chung như API server, scheduler, controller hoặc CI coordinator khỏi một tenant/workload gây starvation cho tenant khác. |
-| Evidence freshness | Độ mới của evidence so với actual state; dữ liệu đúng nhưng quá cũ vẫn có thể dẫn tới quyết định production sai. |
-| Compensation | Action mới nhằm phục hồi invariant sau partial side effect khi không thể rollback chính xác về state cũ. |
-| Adoption | Quy trình đưa một external resource đã tồn tại vào ownership/reconciliation của platform sau khi xác minh identity, policy và state mapping. |
-| Orphan resource | Resource còn tồn tại nhưng không còn ownership/state mapping đáng tin trong control plane; cần quarantine/adoption/cleanup semantics thay vì xóa mù. |
-| Break-glass access | Phiên nâng quyền khẩn cấp có scope, TTL, reason, audit và lifecycle riêng; không nên là admin account cố định dùng hằng ngày. |
-| Policy audit mode | Chạy policy để ghi nhận violation/impact mà chưa chặn request, thường dùng trước staged enforcement. |
-| Recovery convergence | Quá trình sau mitigation đưa backlog, data invariant, capacity và degraded mode trở lại steady state có kiểm soát. |
-| Causal graph | Biểu diễn quan hệ mechanism giữa trigger, amplifier và hậu quả thay vì chỉ xếp sự kiện theo timestamp. |
-| Circuit breaker | Cơ chế tạm ngừng gửi work tới dependency đang fail theo policy để bảo vệ caller và giảm work vô ích; không tự chữa dependency. |
-| Bulkhead | Tách concurrency/resource pool theo dependency hoặc workload class để một failure không chiếm toàn bộ resource caller. |
-| Hedged request | Gửi thêm attempt khi request đầu chậm để giảm tail latency; đổi lại tăng load và cần idempotency/cancellation semantics. |
-| Backfill | Workload di chuyển/bổ sung dữ liệu sau schema change; cần throttle, checkpoint, resume và invariant cho mixed state. |
-| Dual-write | Tạm ghi cùng logical update sang nhiều representation/store; không atomic mặc định nên cần source-of-truth, reconciliation và discrepancy evidence. |
-| Telemetry priority | Chính sách ưu tiên signal khi observability pipeline quá tải để giữ evidence critical thay vì drop ngẫu nhiên mọi dữ liệu. |
-| Safe mode | Trạng thái degraded của control plane cho phép một tập operation an toàn trong khi chặn mutation rủi ro lúc dependency/state chưa đáng tin. |
-| Recoverable capacity | Capacity có thể được thu hồi/sẵn sàng trong deadline recovery, khác với capacity chỉ đang được workload khác mượn trên giấy. |
-| Release composition | Tổ hợp artifact, runtime configuration, feature-flag state và migration phase thực sự tạo behavior production tại một thời điểm. |
-| Feature-flag lifecycle | Chu trình tạo flag an toàn, mở theo cohort, promote thành default rồi xóa old code path và flag definition; tránh để temporary state trở thành permanent complexity. |
-| Shadow traffic | Copy workload thật sang candidate để đo behavior mà không dùng response cho user; cần side-effect isolation, capacity budget và comparison semantics. |
-| Disruption source | Actor/mechanism làm workload rời runtime như rollout, drain, autoscaler, pressure, preemption hay node failure; cần giữ như evidence vì recovery semantics khác nhau. |
-| Multi-controller composition | Reasoning về nhiều controller cùng tác động một workload/state; từng loop có thể đúng cục bộ nhưng tương tác tạo oscillation, churn hoặc conflict. |
-| Resilience recovered | Trạng thái không chỉ phục hồi đủ replica/capacity mà còn phục hồi topology, redundancy và failure tolerance theo invariant ban đầu. |
-| Evidence survivability | Khả năng giữ và truy cập được tập evidence tối thiểu cần cho diagnosis/recovery ngay cả khi primary observability/control-plane failure domain bị mất. |
-| Recovery debt | Temporary exception/workaround sau incident còn tồn tại như bypass policy, break-glass authority, pinned routing hoặc excess capacity và làm thay đổi assumption cho failure tiếp theo. |
-| Version skew | Trạng thái các client, API schema, controller hoặc cell chạy version khác nhau trong một compatibility window; cần contract rõ thay vì giả định upgrade đồng thời. |
-| Defaulting | Cơ chế platform điền quyết định khi user không khai báo field; default là behavior/versioned policy và có thể đổi effective state dù source manifest không đổi. |
-| Conversion | Chuyển representation giữa các API/schema version; an toàn khi bảo toàn intent hoặc lossiness được explicit, không chỉ khi JSON parse thành công. |
-| Capability negotiation | Consumer/orchestrator xác minh capability được một cell/version hỗ trợ trước admission/execution thay vì giả định mọi nơi đã nâng đồng thời. |
-| Status API | Evidence surface machine-readable mô tả actual state/condition/observed revision; cần compatibility discipline giống spec/intent API. |
-| Negative-space verification | Kiểm tra các state/hành vi bị cấm sau recovery như old writer còn ghi, traffic còn tới failure domain cũ hoặc credential revoked vẫn hoạt động. |
-| Egress identity | Source identity mà dependency bên ngoài thực sự quan sát sau SNAT/NAT/egress proxy; vừa ảnh hưởng allowlist/audit vừa gắn với failure domain và capacity của egress path. |
-| DNS cache stampede | Burst lookup khi nhiều cache/client hết hạn gần đồng thời, có thể làm resolver saturation và kích hoạt retry amplification. |
-| Accept queue | Queue kernel giữ connection đã hoàn tất handshake nhưng chưa được application `accept()`; saturation có thể làm connect path xấu trước business handler. |
-| Connection budget | Giới hạn concurrency/state cho socket, pool, file descriptor, ephemeral/SNAT port, conntrack và downstream; cần tính cùng arrival rate và holding time. |
-| Stale connection | Connection được reuse nhưng topology/peer state đã thay đổi hoặc socket đã half-closed; thường gây lỗi rải rác sau cutover/failover cho tới khi pool refresh. |
+| Availability | Khả năng năng lực (capability / 역량) truy cập và phục vụ theo đặc tả hợp đồng (contract / 계약) trong thời gian quan sát; không tự động đồng nghĩa dữ liệu durable hoặc có backup. |
+| Showback | Hiển thị chi phí cho đơn vị sở hữu (owner / 오너)/nhóm (team / 팀) để tạo visibility và incentive mà chưa hạch toán trực tiếp vào ngân sách của họ. |
+| Chargeback | Phân bổ/hạch toán chi phí dùng chung (shared / 공유) nền tảng (platform / 플랫폼)/cloud về đơn vị sử dụng theo mô hình đã định. |
+| đơn vị (unit / 단위) chi phí (cost / 비용) | Chi phí trên một đơn vị công việc (work / 작업)/giá trị (value / 값) như successful yêu cầu (request / 요청), thứ tự (order / 순서), bản dựng (build / 빌드) minute hoặc GB processed; denominator phải phản ánh kết quả (outcome / 결과) có ý nghĩa. |
+| Control-plane fairness | Bảo vệ tài nguyên điều khiển dùng chung như API máy chủ (server / 서버), scheduler, controller hoặc CI coordinator khỏi một tenant/tải công việc (workload / 워크로드) gây starvation cho tenant khác. |
+| bằng chứng (evidence / 증거) freshness | Độ mới của bằng chứng (evidence / 증거) so với actual trạng thái (state / 상태); dữ liệu đúng nhưng quá cũ vẫn có thể dẫn tới quyết định môi trường vận hành (production / 운영 환경) sai. |
+| Compensation | hành động (action / 동작) mới nhằm phục hồi bất biến (invariant / 불변식) sau partial side tác động (effect / 효과) khi không thể quay lui (rollback / 롤백) chính xác về trạng thái (state / 상태) cũ. |
+| Adoption | Quy trình đưa một bên ngoài (external / 외부) tài nguyên (resource / 자원) đã tồn tại vào quyền sở hữu (ownership / 소유권)/reconciliation của nền tảng (platform / 플랫폼) sau khi xác minh định danh (identity / 식별자), chính sách (policy / 정책) và trạng thái (state / 상태) ánh xạ (mapping / 매핑). |
+| Orphan tài nguyên (resource / 자원) | tài nguyên (resource / 자원) còn tồn tại nhưng không còn quyền sở hữu (ownership / 소유권)/trạng thái (state / 상태) ánh xạ (mapping / 매핑) đáng tin trong điều khiển (control / 제어) plane; cần quarantine/adoption/cleanup ngữ nghĩa (semantics / 의미론) thay vì xóa mù. |
+| Break-glass truy cập (access / 접근) | Phiên nâng quyền khẩn cấp có phạm vi (scope / 범위), TTL, reason, kiểm tra (audit / 감사) và vòng đời (lifecycle / 생명주기) riêng; không nên là admin account cố định dùng hằng ngày. |
+| chính sách (policy / 정책) kiểm tra (audit / 감사) chế độ (mode / 모드) | Chạy chính sách (policy / 정책) để ghi nhận violation/impact mà chưa chặn yêu cầu (request / 요청), thường dùng trước staged enforcement. |
+| khôi phục (recovery / 복구) convergence | Quá trình sau mitigation đưa backlog, dữ liệu (data / 데이터) bất biến (invariant / 불변식), sức chứa (capacity / 용량) và degraded chế độ (mode / 모드) trở lại steady trạng thái (state / 상태) có kiểm soát. |
+| nhân quả (causal / 인과적) đồ thị (graph / 그래프) | Biểu diễn quan hệ cơ chế (mechanism / 메커니즘) giữa trigger, amplifier và hậu quả thay vì chỉ xếp sự kiện theo timestamp. |
+| Circuit breaker | Cơ chế tạm ngừng gửi công việc (work / 작업) tới phụ thuộc (dependency / 의존성) đang thất bại (fail / 실패) theo chính sách (policy / 정책) để bảo vệ caller và giảm công việc (work / 작업) vô ích; không tự chữa phụ thuộc (dependency / 의존성). |
+| Bulkhead | Tách tính đồng thời (concurrency / 동시성)/tài nguyên (resource / 자원) pool theo phụ thuộc (dependency / 의존성) hoặc tải công việc (workload / 워크로드) lớp (class / 클래스) để một thất bại (failure / 실패) không chiếm toàn bộ tài nguyên (resource / 자원) caller. |
+| Hedged yêu cầu (request / 요청) | Gửi thêm attempt khi yêu cầu (request / 요청) đầu chậm để giảm tail độ trễ (latency / 지연 시간); đổi lại tăng tải (load / 로드) và cần idempotency/cancellation ngữ nghĩa (semantics / 의미론). |
+| Backfill | tải công việc (workload / 워크로드) di chuyển/bổ sung dữ liệu sau lược đồ (schema / 스키마) thay đổi (change / 변경); cần throttle, checkpoint, resume và bất biến (invariant / 불변식) cho mixed trạng thái (state / 상태). |
+| Dual-write | Tạm ghi cùng logical cập nhật (update / 업데이트) sang nhiều biểu diễn (representation / 표현)/store; không atomic mặc định nên cần source-of-truth, reconciliation và discrepancy bằng chứng (evidence / 증거). |
+| Telemetry priority | Chính sách ưu tiên tín hiệu (signal / 신호) khi khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인) quá tải để giữ bằng chứng (evidence / 증거) trọng yếu (critical / 중요) thay vì drop ngẫu nhiên mọi dữ liệu. |
+| Safe chế độ (mode / 모드) | Trạng thái degraded của điều khiển (control / 제어) plane cho phép một tập thao tác (operation / 연산) an toàn trong khi chặn mutation rủi ro lúc phụ thuộc (dependency / 의존성)/trạng thái (state / 상태) chưa đáng tin. |
+| Recoverable sức chứa (capacity / 용량) | sức chứa (capacity / 용량) có thể được thu hồi/sẵn sàng trong deadline khôi phục (recovery / 복구), khác với sức chứa (capacity / 용량) chỉ đang được tải công việc (workload / 워크로드) khác mượn trên giấy. |
+| bản phát hành (release / 릴리스) composition | Tổ hợp sản phẩm tạo ra (artifact / 산출물), thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성), feature-flag trạng thái (state / 상태) và di chuyển (migration / 마이그레이션) phase thực sự tạo hành vi (behavior / 동작) môi trường vận hành (production / 운영 환경) tại một thời điểm. |
+| Feature-flag vòng đời (lifecycle / 생명주기) | Chu trình tạo flag an toàn, mở theo cohort, promote thành default rồi xóa old đường đi mã (code path / 코드 경로) và flag definition; tránh để temporary trạng thái (state / 상태) trở thành permanent độ phức tạp (complexity / 복잡도). |
+| Shadow traffic | bản sao (copy / 복사) tải công việc (workload / 워크로드) thật sang candidate để đo hành vi (behavior / 동작) mà không dùng phản hồi (response / 응답) cho người dùng (user / 사용자); cần side-effect isolation, sức chứa (capacity / 용량) ngân sách (budget / 예산) và comparison ngữ nghĩa (semantics / 의미론). |
+| Disruption nguồn (source / 소스) | Actor/cơ chế (mechanism / 메커니즘) làm tải công việc (workload / 워크로드) rời thời gian chạy (runtime / 런타임) như rollout, drain, autoscaler, pressure, preemption hay nút (node / 노드) thất bại (failure / 실패); cần giữ như bằng chứng (evidence / 증거) vì khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론) khác nhau. |
+| Multi-controller composition | lập luận (reasoning / 추론) về nhiều controller cùng tác động một tải công việc (workload / 워크로드)/trạng thái (state / 상태); từng vòng lặp (loop / 루프) có thể đúng cục bộ nhưng tương tác tạo oscillation, churn hoặc xung đột (conflict / 충돌). |
+| Resilience recovered | Trạng thái không chỉ phục hồi đủ replica/sức chứa (capacity / 용량) mà còn phục hồi topology, redundancy và thất bại (failure / 실패) tolerance theo bất biến (invariant / 불변식) ban đầu. |
+| bằng chứng (evidence / 증거) survivability | Khả năng giữ và truy cập được tập bằng chứng (evidence / 증거) tối thiểu cần cho diagnosis/khôi phục (recovery / 복구) ngay cả khi primary khả năng quan sát (observability / 관측 가능성)/control-plane miền lỗi (failure domain / 장애 도메인) bị mất. |
+| khôi phục (recovery / 복구) debt | Temporary exception/workaround sau sự cố (incident / 인시던트) còn tồn tại như bypass chính sách (policy / 정책), break-glass authority, pinned routing hoặc excess sức chứa (capacity / 용량) và làm thay đổi giả định (assumption / 가정) cho thất bại (failure / 실패) tiếp theo. |
+| phiên bản (version / 버전) skew | Trạng thái các máy khách (client / 클라이언트), API lược đồ (schema / 스키마), controller hoặc cell chạy phiên bản (version / 버전) khác nhau trong một tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우); cần đặc tả hợp đồng (contract / 계약) rõ thay vì giả định upgrade đồng thời. |
+| Defaulting | Cơ chế nền tảng (platform / 플랫폼) điền quyết định khi người dùng (user / 사용자) không khai báo trường dữ liệu (field / 필드); default là hành vi (behavior / 동작)/versioned chính sách (policy / 정책) và có thể đổi effective trạng thái (state / 상태) dù nguồn (source / 소스) manifest không đổi. |
+| Conversion | Chuyển biểu diễn (representation / 표현) giữa các API/lược đồ (schema / 스키마) phiên bản (version / 버전); an toàn khi bảo toàn intent hoặc lossiness được tường minh (explicit / 명시적), không chỉ khi JSON parse thành công. |
+| năng lực (capability / 역량) negotiation | bên tiêu thụ (consumer / 소비자)/orchestrator xác minh năng lực (capability / 역량) được một cell/phiên bản (version / 버전) hỗ trợ trước admission/thực thi (execution / 실행) thay vì giả định mọi nơi đã nâng đồng thời. |
+| Status API | bằng chứng (evidence / 증거) surface machine-readable mô tả actual trạng thái (state / 상태)/điều kiện (condition / 조건)/observed revision; cần tính tương thích (compatibility / 호환성) discipline giống spec/intent API. |
+| Negative-space xác minh (verification / 확인) | Kiểm tra các trạng thái (state / 상태)/hành vi bị cấm sau khôi phục (recovery / 복구) như old writer còn ghi, traffic còn tới miền lỗi (failure domain / 장애 도메인) cũ hoặc credential revoked vẫn hoạt động. |
+| Egress định danh (identity / 식별자) | nguồn (source / 소스) định danh (identity / 식별자) mà phụ thuộc (dependency / 의존성) bên ngoài thực sự quan sát sau SNAT/NAT/egress proxy; vừa ảnh hưởng allowlist/kiểm tra (audit / 감사) vừa gắn với miền lỗi (failure domain / 장애 도메인) và sức chứa (capacity / 용량) của egress đường dẫn (path / 경로). |
+| DNS bộ nhớ đệm (cache / 캐시) stampede | Burst lookup khi nhiều bộ nhớ đệm (cache / 캐시)/máy khách (client / 클라이언트) hết hạn gần đồng thời, có thể làm resolver saturation và kích hoạt thử lại (retry / 재시도) amplification. |
+| Accept hàng đợi (queue / 큐) | hàng đợi (queue / 큐) kernel giữ liên kết (connection / 연결) đã hoàn tất handshake nhưng chưa được ứng dụng (application / 애플리케이션) `accept()`; saturation có thể làm connect đường dẫn (path / 경로) xấu trước nghiệp vụ (business / 비즈니스) handler. |
+| liên kết (connection / 연결) ngân sách (budget / 예산) | Giới hạn tính đồng thời (concurrency / 동시성)/trạng thái (state / 상태) cho socket, pool, tệp (file / 파일) descriptor, ephemeral/SNAT cổng (port / 포트), conntrack và downstream; cần tính cùng arrival tỷ lệ (rate / 비율) và holding thời gian (time / 시간). |
+| Stale liên kết (connection / 연결) | liên kết (connection / 연결) được reuse nhưng topology/peer trạng thái (state / 상태) đã thay đổi hoặc socket đã half-closed; thường gây lỗi rải rác sau cutover/failover cho tới khi pool refresh. |
+
+> **Bàn giao:** Sau **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

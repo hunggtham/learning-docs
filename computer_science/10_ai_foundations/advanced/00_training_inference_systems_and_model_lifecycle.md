@@ -1,12 +1,15 @@
-# Training, inference systems và model lifecycle
+# Huấn luyện (training / 학습), suy luận (inference / 추론) các hệ thống (systems / 시스템들) và mô hình (model / 모델) vòng đời (lifecycle / 생명주기)
 
-Foundation ML thường tập trung model, loss và generalization. Production AI cần thêm mental model systems: **data, model, optimizer state và serving runtime đi qua một lifecycle versioned**, và mỗi stage có invariant, resource bottleneck, failure mode và evidence riêng.
+> **Mạch đọc:** Đặt **huấn luyện (training / 학습), suy luận (inference / 추론) các hệ thống (systems / 시스템들) và mô hình (model / 모델) vòng đời (lifecycle / 생명주기)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. bất biến (invariant / 불변식) đầu tiên: phải biết chính xác sản phẩm tạo ra (artifact / 산출물) nào tạo ra hành vi (behavior / 동작)** sang **2. huấn luyện (training / 학습) hệ thống (system / 시스템) là dataflow + tối ưu hóa (optimization / 최적화) trạng thái (state / 상태)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Model weights chỉ là một artifact. Một production model thực tế phụ thuộc tokenizer/preprocessing, feature/data schema, code, checkpoint state, runtime kernels, hardware, serving config và evaluation contract.
 
-## 1. Invariant đầu tiên: phải biết chính xác artifact nào tạo ra behavior
+Foundation ML thường tập trung mô hình (model / 모델), mất mát (loss / 손실) và generalization. môi trường vận hành (production / 운영 환경) AI cần thêm mô hình tư duy (mental model / 사고 모델) các hệ thống (systems / 시스템들): **dữ liệu (data / 데이터), mô hình (model / 모델), optimizer trạng thái (state / 상태) và serving thời gian chạy (runtime / 런타임) đi qua một vòng đời (lifecycle / 생명주기) versioned**, và mỗi stage có bất biến (invariant / 불변식), tài nguyên (resource / 자원) bottleneck, dạng thất bại (failure mode / 실패 모드) và bằng chứng (evidence / 증거) riêng.
 
-Nếu production trả output sai, câu “đang dùng model v42” chưa đủ. Cần biết bundle:
+Mô hình (model / 모델) weights chỉ là một sản phẩm tạo ra (artifact / 산출물). Một môi trường vận hành (production / 운영 환경) mô hình (model / 모델) thực tế phụ thuộc tokenizer/preprocessing, tính năng (feature / 기능)/dữ liệu (data / 데이터) lược đồ (schema / 스키마), mã (code / 코드), checkpoint trạng thái (state / 상태), thời gian chạy (runtime / 런타임) kernels, hardware, serving cấu hình (config / 설정) và evaluation đặc tả hợp đồng (contract / 계약).
+
+## 1. bất biến (invariant / 불변식) đầu tiên: phải biết chính xác sản phẩm tạo ra (artifact / 산출물) nào tạo ra hành vi (behavior / 동작)
+
+Nếu môi trường vận hành (production / 운영 환경) trả đầu ra (output / 출력) sai, câu “đang dùng mô hình (model / 모델) v42” chưa đủ. Cần biết bundle:
 
 ```text
 training data/version/provenance
@@ -19,11 +22,11 @@ serving config + thresholds
 prompt/template nếu system có layer đó
 ```
 
-Reproducibility invariant là: từ artifact identity và provenance, team phải có khả năng giải thích model nào, data nào và runtime nào tạo behavior đang quan sát.
+Reproducibility bất biến (invariant / 불변식) là: từ sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자) và provenance, nhóm (team / 팀) phải có khả năng giải thích mô hình (model / 모델) nào, dữ liệu (data / 데이터) nào và thời gian chạy (runtime / 런타임) nào tạo hành vi (behavior / 동작) đang quan sát.
 
-## 2. Training system là dataflow + optimization state
+## 2. huấn luyện (training / 학습) hệ thống (system / 시스템) là dataflow + tối ưu hóa (optimization / 최적화) trạng thái (state / 상태)
 
-Một training step thường là:
+Một huấn luyện (training / 학습) step thường là:
 
 ```text
 storage
@@ -39,13 +42,13 @@ storage
 → checkpoint/metrics
 ```
 
-GPU utilization thấp không tự động nghĩa GPU yếu. Input pipeline, data loader, synchronization hoặc host→device transfer có thể làm accelerator starve.
+GPU utilization thấp không tự động nghĩa GPU yếu. đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인), dữ liệu (data / 데이터) loader, synchronization hoặc host→thiết bị (device / 장치) transfer có thể làm accelerator starve.
 
-Performance reasoning phải profile toàn pipeline thay vì chỉ kernel compute.
+Hiệu năng (performance / 성능) lập luận (reasoning / 추론) phải profile toàn chuỗi xử lý (pipeline / 파이프라인) thay vì chỉ kernel compute.
 
 ## 3. Checkpoint không chỉ là weights
 
-Để resume training gần tương đương trajectory trước interruption, thường cần:
+Để resume huấn luyện (training / 학습) gần tương đương trajectory trước interruption, thường cần:
 
 ```text
 model parameters
@@ -57,15 +60,15 @@ training step/epoch/data position
 parallelism/sharding metadata
 ```
 
-Chỉ lưu weights có thể tiếp tục từ cùng model parameters nhưng không phải cùng optimization state.
+Chỉ lưu weights có thể tiếp tục từ cùng mô hình (model / 모델) parameters nhưng không phải cùng tối ưu hóa (optimization / 최적화) trạng thái (state / 상태).
 
-Invariant recovery cần được định nghĩa rõ: “resume usable model” hay “resume equivalent training state”.
+Bất biến (invariant / 불변식) khôi phục (recovery / 복구) cần được định nghĩa rõ: “resume usable mô hình (model / 모델)” hay “resume equivalent huấn luyện (training / 학습) trạng thái (state / 상태)”.
 
-## 4. Data ordering và randomness cũng là state
+## 4. dữ liệu (data / 데이터) thứ tự (ordering / 순서) và randomness cũng là trạng thái (state / 상태)
 
-Shuffle seed, sampler position, data augmentation randomness và distributed worker partitioning có thể thay training trajectory.
+Shuffle seed, sampler position, dữ liệu (data / 데이터) augmentation randomness và phân tán (distributed / 분산) worker partitioning có thể thay huấn luyện (training / 학습) trajectory.
 
-Reproducibility tuyệt đối trên accelerators đôi khi khó vì nondeterministic kernels, reduction order hoặc floating-point behavior. Điều quan trọng là phân biệt:
+Reproducibility tuyệt đối trên accelerators đôi khi khó vì nondeterministic kernels, reduction thứ tự (order / 순서) hoặc floating-point hành vi (behavior / 동작). Điều quan trọng là phân biệt:
 
 ```text
 bitwise reproducibility
@@ -73,43 +76,43 @@ statistical reproducibility
 model-quality reproducibility
 ```
 
-Không hứa mức mạnh hơn stack thực sự đảm bảo.
+Không hứa mức mạnh hơn ngăn xếp (stack / 스택) thực sự đảm bảo.
 
-## 5. Distributed training thêm communication invariant
+## 5. phân tán (distributed / 분산) huấn luyện (training / 학습) thêm communication bất biến (invariant / 불변식)
 
-Data parallelism replicate model và aggregate gradients. Tensor/model/pipeline parallelism chia computation/state theo dimension khác.
+Dữ liệu (data / 데이터) parallelism replicate mô hình (model / 모델) và aggregate gradients. Tensor/mô hình (model / 모델)/chuỗi xử lý (pipeline / 파이프라인) parallelism chia computation/trạng thái (state / 상태) theo dimension khác.
 
-Mỗi strategy cần giữ một invariant tương đương với optimization step mong muốn: gradients/parameters phải được combine theo protocol đúng, không để worker dùng state lệch không được model semantics cho phép.
+Mỗi chiến lược (strategy / 전략) cần giữ một bất biến (invariant / 불변식) tương đương với tối ưu hóa (optimization / 최적화) step mong muốn: gradients/parameters phải được combine theo giao thức (protocol / 프로토콜) đúng, không để worker dùng trạng thái (state / 상태) lệch không được mô hình (model / 모델) ngữ nghĩa (semantics / 의미론) cho phép.
 
-Failure một worker có thể làm collective communication treo hoặc cả job restart. Distributed training vì thế là distributed-systems problem chứ không chỉ linear algebra.
+Thất bại (failure / 실패) một worker có thể làm collective communication treo hoặc cả job restart. phân tán (distributed / 분산) huấn luyện (training / 학습) vì thế là distributed-systems bài toán (problem / 문제) chứ không chỉ tuyến tính (linear / 선형) algebra.
 
-## 6. Straggler quyết định step time trong synchronous training
+## 6. Straggler quyết định step thời gian (time / 시간) trong synchronous huấn luyện (training / 학습)
 
-Synchronous step thường phải chờ participants cần thiết. Một GPU/node chậm do thermal throttling, network congestion, data-loader stall hoặc hardware error có thể kéo toàn job.
+Synchronous step thường phải chờ participants cần thiết. Một GPU/nút (node / 노드) chậm do thermal throttling, mạng (network / 네트워크) congestion, data-loader stall hoặc hardware lỗi (error / 오류) có thể kéo toàn job.
 
-Step latency gần với slowest required participant, tương tự tail amplification trong fan-out service.
+Step độ trễ (latency / 지연 시간) gần với slowest required participant, tương tự tail amplification trong fan-out dịch vụ (service / 서비스).
 
-Evidence cần per-rank/per-stage timing, không chỉ global tokens/s.
+Bằng chứng (evidence / 증거) cần per-rank/per-stage timing, không chỉ toàn cục (global / 전역) tokens/s.
 
-## 7. Communication topology là lower layer quan trọng
+## 7. Communication topology là lower tầng (layer / 계층) quan trọng
 
-All-reduce hoặc tensor-parallel communication phụ thuộc PCIe/NVLink/InfiniBand/Ethernet topology, bandwidth và latency.
+All-reduce hoặc tensor-parallel communication phụ thuộc PCIe/NVLink/InfiniBand/Ethernet topology, bandwidth và độ trễ (latency / 지연 시간).
 
-Model có arithmetic intensity cao có thể scale tốt; model nhỏ hoặc communication-heavy có thể đạt speedup rất kém khi thêm accelerators.
+Mô hình (model / 모델) có arithmetic intensity cao có thể quy mô (scale / 규모) tốt; mô hình (model / 모델) nhỏ hoặc communication-heavy có thể đạt speedup rất kém khi thêm accelerators.
 
-Performance invariant không phải “GPU count gấp đôi thì throughput gấp đôi”. Speedup bị giới hạn bởi compute/communication ratio, synchronization và load imbalance.
+Hiệu năng (performance / 성능) bất biến (invariant / 불변식) không phải “GPU count gấp đôi thì thông lượng (throughput / 처리량) gấp đôi”. Speedup bị giới hạn bởi compute/communication ratio, synchronization và tải (load / 로드) imbalance.
 
 ## 8. Mixed precision và numerical stability
 
-FP16/BF16/TF32/low precision tăng throughput và giảm memory bandwidth/footprint nhưng đổi numerical behavior.
+FP16/BF16/TF32/low precision tăng thông lượng (throughput / 처리량) và giảm bộ nhớ (memory / 메모리) bandwidth/footprint nhưng đổi numerical hành vi (behavior / 동작).
 
-Loss scaling, accumulation precision và kernel choice quyết định stability. NaN/Inf có thể xuất hiện khi dynamic range không đủ hoặc optimizer state bất ổn.
+Mất mát (loss / 손실) scaling, accumulation precision và kernel choice quyết định stability. NaN/Inf có thể xuất hiện khi động (dynamic / 동적) phạm vi (range / 범위) không đủ hoặc optimizer trạng thái (state / 상태) bất ổn.
 
-Đây là connection giữa numerical representation và systems performance: chọn precision là một correctness-performance trade-off, không chỉ hardware flag.
+Đây là liên kết (connection / 연결) giữa numerical biểu diễn (representation / 표현) và các hệ thống (systems / 시스템들) hiệu năng (performance / 성능): chọn precision là một correctness-performance sự đánh đổi (trade-off / 트레이드오프), không chỉ hardware flag.
 
-## 9. Inference có objective khác training
+## 9. suy luận (inference / 추론) có mục tiêu (objective / 목표) khác huấn luyện (training / 학습)
 
-Training thường tối ưu throughput/cost theo samples hoặc tokens processed. Online inference quan tâm:
+Huấn luyện (training / 학습) thường tối ưu thông lượng (throughput / 처리량)/chi phí (cost / 비용) theo samples hoặc tokens processed. Online suy luận (inference / 추론) quan tâm:
 
 ```text
 p50/p95/p99 latency
@@ -121,13 +124,13 @@ availability
 cost per request/token
 ```
 
-Một optimization tăng total throughput nhưng làm p99 vượt SLO có thể không phù hợp production API.
+Một tối ưu hóa (optimization / 최적화) tăng total thông lượng (throughput / 처리량) nhưng làm p99 vượt SLO có thể không phù hợp môi trường vận hành (production / 운영 환경) API.
 
-## 10. Dynamic/continuous batching là queueing decision
+## 10. động (dynamic / 동적)/continuous batching là queueing quyết định (decision / 결정)
 
-Batching tăng accelerator utilization nhưng request phải chờ batch formation. Continuous batching tái sử dụng slots khi sequences hoàn tất khác thời điểm.
+Batching tăng accelerator utilization nhưng yêu cầu (request / 요청) phải chờ batch formation. Continuous batching tái sử dụng slots khi sequences hoàn tất khác thời điểm.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 batch lớn hơn
@@ -136,13 +139,13 @@ batch lớn hơn
 → memory pressure/concurrency thay đổi
 ```
 
-Batch scheduler vì vậy là một admission/queueing controller tương tự Software Systems.
+Batch scheduler vì vậy là một admission/queueing controller tương tự Software các hệ thống (systems / 시스템들).
 
-## 11. KV cache biến context thành memory-capacity problem
+## 11. KV bộ nhớ đệm (cache / 캐시) biến ngữ cảnh (context / 맥락) thành memory-capacity bài toán (problem / 문제)
 
-Autoregressive Transformer lưu key/value states của prior tokens để không recompute toàn prefix mỗi token.
+Autoregressive Transformer lưu key/giá trị (value / 값) states của prior tokens để không recompute toàn prefix mỗi đơn vị từ (token / 토큰).
 
-KV cache memory tăng theo roughly:
+KV bộ nhớ đệm (cache / 캐시) bộ nhớ (memory / 메모리) tăng theo roughly:
 
 ```text
 sequence length
@@ -152,29 +155,29 @@ sequence length
 × concurrent sequences
 ```
 
-Context length dài có thể giảm concurrency mạnh dù weights không đổi. Khi memory gần đầy, allocator fragmentation hoặc cache eviction/offload có thể làm latency phase-change.
+Ngữ cảnh (context / 맥락) length dài có thể giảm tính đồng thời (concurrency / 동시성) mạnh dù weights không đổi. Khi bộ nhớ (memory / 메모리) gần đầy, allocator fragmentation hoặc bộ nhớ đệm (cache / 캐시) eviction/offload có thể làm độ trễ (latency / 지연 시간) phase-change.
 
-Inference bottleneck lúc đó là memory capacity/bandwidth, không phải raw FLOPS.
+Suy luận (inference / 추론) bottleneck lúc đó là bộ nhớ (memory / 메모리) sức chứa (capacity / 용량)/bandwidth, không phải raw FLOPS.
 
 ## 12. Quantization không đồng nghĩa luôn nhanh hơn
 
-INT8/FP8/low-bit weights giảm footprint/bandwidth, nhưng speedup phụ thuộc kernel support, dequantization overhead, packing layout và hardware execution units.
+INT8/FP8/low-bit weights giảm footprint/bandwidth, nhưng speedup phụ thuộc kernel hỗ trợ (support / 지원), dequantization overhead, packing bố cục (layout / 레이아웃) và hardware thực thi (execution / 실행) units.
 
-Một model nhỏ fit cache tốt sẵn có thể không được lợi nhiều. Quantization cũng có quality impact khác theo layer/task/data distribution.
+Một mô hình (model / 모델) nhỏ fit bộ nhớ đệm (cache / 캐시) tốt sẵn có thể không được lợi nhiều. Quantization cũng có chất lượng (quality / 품질) impact khác theo tầng (layer / 계층)/tác vụ (task / 작업)/dữ liệu (data / 데이터) phân phối (distribution / 분포).
 
-Do đó phải evaluate **quality + latency + throughput + memory** cùng nhau trên deployment workload.
+Do đó phải evaluate **chất lượng (quality / 품질) + độ trễ (latency / 지연 시간) + thông lượng (throughput / 처리량) + bộ nhớ (memory / 메모리)** cùng nhau trên triển khai (deployment / 배포) tải công việc (workload / 워크로드).
 
-## 13. Model loading và cold start là production phase riêng
+## 13. mô hình (model / 모델) loading và cold start là môi trường vận hành (production / 운영 환경) phase riêng
 
-Large model start có thể gồm download artifact, checksum, deserialize, allocate memory, compile kernels/JIT, warm caches và create KV allocator.
+Large mô hình (model / 모델) start có thể gồm download sản phẩm tạo ra (artifact / 산출물), checksum, deserialize, allocate bộ nhớ (memory / 메모리), compile kernels/JIT, warm caches và create KV allocator.
 
 Autoscaling chỉ dựa CPU/GPU utilization có thể phản ứng quá chậm nếu new replica mất nhiều phút mới ready.
 
-Capacity design cần model warm capacity, startup time và deployment headroom.
+Sức chứa (capacity / 용량) thiết kế (design / 설계) cần mô hình (model / 모델) warm sức chứa (capacity / 용량), startup thời gian (time / 시간) và triển khai (deployment / 배포) headroom.
 
-## 14. Model registry là provenance system, không chỉ file store
+## 14. mô hình (model / 모델) registry là provenance hệ thống (system / 시스템), không chỉ tệp (file / 파일) store
 
-Registry cần nối artifact với:
+Registry cần nối sản phẩm tạo ra (artifact / 산출물) với:
 
 ```text
 code commit/config
@@ -185,19 +188,19 @@ runtime compatibility
 rollback target
 ```
 
-Version weights nhưng không version tokenizer/schema có thể tạo silent incompatibility.
+Phiên bản (version / 버전) weights nhưng không phiên bản (version / 버전) tokenizer/lược đồ (schema / 스키마) có thể tạo silent incompatibility.
 
-“Model” nên được coi là bundle có contract, không phải một `.bin` đơn lẻ.
+“mô hình (model / 모델)” nên được coi là bundle có đặc tả hợp đồng (contract / 계약), không phải một `.bin` đơn lẻ.
 
-## 15. Offline metric và online outcome khác nhau
+## 15. Offline chỉ số (metric / 지표) và online kết quả (outcome / 결과) khác nhau
 
-Validation accuracy/F1/loss không tự động dự đoán business outcome do threshold, latency, population shift, user adaptation hoặc feedback loop.
+Kiểm tra hợp lệ (validation / 검증) accuracy/F1/mất mát (loss / 손실) không tự động dự đoán nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과) do threshold, độ trễ (latency / 지연 시간), population shift, người dùng (user / 사용자) adaptation hoặc vòng phản hồi (feedback loop / 피드백 루프).
 
-Deployment có thể cần shadow, canary hoặc A/B tùy risk. Nhưng online experiment cũng phải giữ system invariant: cohort assignment ổn định, exposure logged, safety constraints enforce trước model decision nếu cần.
+Triển khai (deployment / 배포) có thể cần shadow, canary hoặc A/B tùy rủi ro (risk / 위험). Nhưng online experiment cũng phải giữ hệ thống (system / 시스템) bất biến (invariant / 불변식): cohort assignment ổn định, exposure logged, an toàn (safety / 안전) các ràng buộc (constraints / 제약조건들) enforce trước mô hình (model / 모델) quyết định (decision / 결정) nếu cần.
 
-## 16. Data/model drift không có một metric universal
+## 16. dữ liệu (data / 데이터)/mô hình (model / 모델) drift không có một chỉ số (metric / 지표) universal
 
-Input distribution thay đổi không luôn làm quality xấu; quality có thể xấu mà simple feature distribution không drift rõ.
+Đầu vào (input / 입력) phân phối (distribution / 분포) thay đổi không luôn làm chất lượng (quality / 품질) xấu; chất lượng (quality / 품질) có thể xấu mà simple tính năng (feature / 기능) phân phối (distribution / 분포) không drift rõ.
 
 Khi labels đến chậm, monitoring thường phải kết hợp:
 
@@ -212,11 +215,11 @@ late-arriving labeled evaluation
 
 Không nên gọi một divergence score là “accuracy real-time” nếu không có ground truth.
 
-## 17. Retraining là state transition có regression risk
+## 17. Retraining là chuyển tiếp trạng thái (state transition / 상태 전이) có regression rủi ro (risk / 위험)
 
-Retrain hàng ngày không tự động tốt. Data window, label delay, concept drift, cost và poisoning/bad-data risk cần policy.
+Retrain hàng ngày không tự động tốt. dữ liệu (data / 데이터) cửa sổ (window / 윈도우), label delay, concept drift, chi phí (cost / 비용) và poisoning/bad-data rủi ro (risk / 위험) cần chính sách (policy / 정책).
 
-Pipeline hợp lý là:
+Chuỗi xử lý (pipeline / 파이프라인) hợp lý là:
 
 ```text
 new data
@@ -228,11 +231,11 @@ new data
 → promote hoặc rollback
 ```
 
-Mỗi retrain tạo artifact mới; auto-promotion càng mạnh thì guardrail/provenance càng phải mạnh.
+Mỗi retrain tạo sản phẩm tạo ra (artifact / 산출물) mới; auto-promotion càng mạnh thì guardrail/provenance càng phải mạnh.
 
-## 18. Failure modes cần được phân lớp
+## 18. thất bại (failure / 실패) modes cần được phân lớp
 
-Training:
+Huấn luyện (training / 학습):
 
 ```text
 input starvation
@@ -244,7 +247,7 @@ checkpoint corruption/incompatibility
 bad-data regression
 ```
 
-Inference:
+Suy luận (inference / 추론):
 
 ```text
 queue overload
@@ -256,11 +259,11 @@ latency regression
 bad model output dưới distribution shift
 ```
 
-Gom mọi thứ thành “model issue” làm investigation sai layer.
+Gom mọi thứ thành “mô hình (model / 모델) issue” làm investigation sai tầng (layer / 계층).
 
-## 19. Production evidence
+## 19. bằng chứng vận hành (production evidence / 운영 증거)
 
-Training evidence nên có:
+Huấn luyện (training / 학습) bằng chứng (evidence / 증거) nên có:
 
 ```text
 samples/tokens per second
@@ -273,7 +276,7 @@ loss/gradient statistics
 checkpoint duration/failure
 ```
 
-Inference evidence nên có:
+Suy luận (inference / 추론) bằng chứng (evidence / 증거) nên có:
 
 ```text
 time-to-first-token / inter-token latency
@@ -286,26 +289,28 @@ OOM/rejection rate
 quality/evaluation slices
 ```
 
-Metrics phải giữ artifact identity để regression có thể correlate với model/runtime/config rollout.
+Metrics phải giữ sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자) để regression có thể correlate với mô hình (model / 모델)/thời gian chạy (runtime / 런타임)/cấu hình (config / 설정) rollout.
 
-## 20. Lower abstraction nào quyết định behavior?
+## 20. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?
 
-GPU utilization thấp có thể do storage/data loader/CPU, không phải GPU. Inference p99 tăng có thể do queue/batching, allocator hoặc network. Distributed training hang có thể do interconnect/collective library. Quality regression có thể do tokenizer/data schema chứ không phải weights.
+GPU utilization thấp có thể do lưu trữ (storage / 저장소)/dữ liệu (data / 데이터) loader/CPU, không phải GPU. suy luận (inference / 추론) p99 tăng có thể do hàng đợi (queue / 큐)/batching, allocator hoặc mạng (network / 네트워크). phân tán (distributed / 분산) huấn luyện (training / 학습) hang có thể do interconnect/collective thư viện (library / 라이브러리). chất lượng (quality / 품질) regression có thể do tokenizer/dữ liệu (data / 데이터) lược đồ (schema / 스키마) chứ không phải weights.
 
-AI systems debugging phải đi xuống đúng abstraction layer như mọi distributed/software system khác.
+AI các hệ thống (systems / 시스템들) debugging phải đi xuống đúng lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층) như mọi phân tán (distributed / 분산)/software hệ thống (system / 시스템) khác.
 
-## 21. Connection với Reliability và System Design
+## 21. liên kết (connection / 연결) với độ tin cậy (reliability / 신뢰성) và hệ thống (system / 시스템) thiết kế (design / 설계)
 
-Model serving là service có finite capacity. Retry, admission control, load shedding và graceful degradation vẫn áp dụng.
+Mô hình (model / 모델) serving là dịch vụ (service / 서비스) có finite sức chứa (capacity / 용량). thử lại (retry / 재시도), admission điều khiển (control / 제어), tải (load / 로드) shedding và graceful degradation vẫn áp dụng.
 
-Ví dụ context quá dài làm KV cache đầy → queue tăng → timeout → gateway retry → duplicate inference work → overload. Fix không nhất thiết là “GPU mạnh hơn”; có thể cần token limit, concurrency admission, retry budget và overload response.
+Ví dụ ngữ cảnh (context / 맥락) quá dài làm KV bộ nhớ đệm (cache / 캐시) đầy → hàng đợi (queue / 큐) tăng → hết thời gian chờ (timeout / 타임아웃) → gateway thử lại (retry / 재시도) → duplicate suy luận (inference / 추론) công việc (work / 작업) → overload. Fix không nhất thiết là “GPU mạnh hơn”; có thể cần đơn vị từ (token / 토큰) limit, tính đồng thời (concurrency / 동시성) admission, thử lại (retry / 재시도) ngân sách (budget / 예산) và overload phản hồi (response / 응답).
 
-AI không đứng ngoài Computer Science systems principles; nó chỉ có resource shape khác.
+AI không đứng ngoài Khoa học máy tính (computer science / 컴퓨터 과학) các hệ thống (systems / 시스템들) principles; nó chỉ có tài nguyên (resource / 자원) shape khác.
 
 ## 22. Mô hình tư duy
 
-> Production AI là **versioned dataflow + optimization state + distributed compute + serving queue + evaluation feedback loop**. Invariant về provenance/recovery/correctness phải được giữ qua data/model/runtime versions; performance bị quyết định bởi compute, memory, communication và queueing; evidence phải nối model quality với system behavior thay vì coi weights là toàn bộ hệ thống.
+> môi trường vận hành (production / 운영 환경) AI là **versioned dataflow + tối ưu hóa (optimization / 최적화) trạng thái (state / 상태) + phân tán (distributed / 분산) compute + serving hàng đợi (queue / 큐) + evaluation vòng phản hồi (feedback loop / 피드백 루프)**. bất biến (invariant / 불변식) về provenance/khôi phục (recovery / 복구)/tính đúng đắn (correctness / 정확성) phải được giữ qua dữ liệu (data / 데이터)/mô hình (model / 모델)/thời gian chạy (runtime / 런타임) versions; hiệu năng (performance / 성능) bị quyết định bởi compute, bộ nhớ (memory / 메모리), communication và queueing; bằng chứng (evidence / 증거) phải nối mô hình (model / 모델) chất lượng (quality / 품질) với hệ thống (system / 시스템) hành vi (behavior / 동작) thay vì coi weights là toàn bộ hệ thống.
 
 ## Kết nối
 
 Đọc cùng [ML foundation](../../basic/10_ai_foundations/02_machine_learning_foundations.md), [Transformer/KV cache](./01_transformer_attention_kv_cache_and_inference_cost.md), [Distributed training](./02_distributed_training_data_model_and_pipeline_parallelism.md), [Capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md) và [Deployment safety](../../09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 transformer attention kv cache and inference cost](./01_transformer_attention_kv_cache_and_inference_cost.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

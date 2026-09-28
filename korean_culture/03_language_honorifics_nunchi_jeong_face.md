@@ -1,12 +1,15 @@
 # Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch
 
+> **Mạch đọc:** Đặt **Ngôn ngữ, kính ngữ và những khái niệm quan hệ khó dịch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiếng Hàn mã hoá quan hệ vào câu nói** sang **Ba lớp kính ngữ cần tách ra**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tiếng Hàn mã hoá quan hệ vào câu nói
 
 Một trong những con đường nhanh nhất để hiểu văn hoá Hàn Quốc là quan sát cách tiếng Hàn buộc người nói phải lựa chọn cách thể hiện quan hệ. Trong tiếng Anh, câu “Eat” có thể thêm “please” để lịch sự. Trong tiếng Hàn, động từ, đuôi câu, từ vựng và danh xưng có thể đổi theo quan hệ giữa người nói, người nghe và chủ thể.
 
 **Kính ngữ (높임말·존댓말 / honorifics)** không chỉ là “nói lịch sự”. Nó là hệ thống mã hoá quan hệ xã hội vào ngữ pháp. `먹다` là “ăn”; `드시다` là từ kính ngữ cho hành động ăn của người cần được nâng; `먹어요`, `먹습니다`, `먹어` tạo ra các **sắc thái lời nói (register)** khác nhau. Vì vậy người học không thể chọn một câu chỉ dựa vào nội dung ngữ nghĩa; họ còn phải chọn cấu hình quan hệ xã hội phù hợp.
 
-Một **mô hình tư duy (mental model)** hữu ích là xem mỗi câu tiếng Hàn có ít nhất hai lớp thông tin chạy song song:
+Một **mô hình tư duy (mental model / 사고 모델)** hữu ích là xem mỗi câu tiếng Hàn có ít nhất hai lớp thông tin chạy song song:
 
 ```text
 nội dung ngữ nghĩa: tôi muốn truyền thông tin gì?
@@ -31,7 +34,7 @@ Ba lớp này có thể kết hợp. Vì vậy kính ngữ không phải lựa c
 
 `존댓말` thường được hiểu là lời nói lịch sự hoặc kính trọng, còn `반말` là lời nói thân mật không dùng kính ngữ. Tuy nhiên cặp này không hoàn toàn tương ứng với “trang trọng / không trang trọng”. Có cách nói thân mật nhưng vẫn lịch sự, và cách nói rất trang trọng chưa chắc thể hiện sự thân thiết.
 
-`합니다체` tạo cảm giác trang trọng, công khai hoặc phù hợp môi trường công việc hơn; `해요체` lịch sự nhưng gần gũi và rất phổ biến trong đời sống. `해체` như `먹어`, `가자`, `알았어` thường xuất hiện khi quan hệ cho phép dùng 반말. Ngoài ra còn nhiều kiểu lời nói mang tính lịch sử hoặc văn chương, nhưng người học tiếng Hàn đời thường trước hết nên hiểu logic của ba nhóm này.
+`합니다체` tạo cảm giác trang trọng, công khai hoặc phù hợp môi trường công việc hơn; `해요체` lịch sự nhưng gần gũi và rất phổ biến trong đời sống. `해체` như `먹어`, `가자`, `알았어` thường xuất hiện khi quan hệ cho phép dùng 반말. Ngoài ra còn nhiều kiểu lời nói mang tính lịch sử hoặc văn chương, nhưng người học tiếng Hàn đời thường trước hết nên hiểu lô-gic (logic / 논리) của ba nhóm này.
 
 Việc chuyển từ 존댓말 sang 반말 thường mang ý nghĩa quan hệ: “chúng ta đã đủ gần để giảm khoảng cách xã hội chưa?”. Vì vậy câu `말 놓을까요?` — “chúng ta nói thoải mái hơn nhé?” — thực chất là một cuộc thương lượng về **giao thức quan hệ (relationship protocol)**.
 
@@ -39,7 +42,7 @@ Một lỗi phổ biến của người học là thấy người kia trẻ hơn
 
 ## 호칭: tên gọi là một phần của quan hệ
 
-**Danh xưng (호칭 / forms of address)** như `선생님`, `팀장님`, `사장님`, `형`, `누나`, `언니`, `오빠` không chỉ để gọi người. Chúng định nghĩa mô hình quan hệ. Nhiều từ thân tộc được mở rộng sang quan hệ phi huyết thống, cho thấy logic gia đình được dùng như một ẩn dụ xã hội.
+**Danh xưng (호칭 / forms of address)** như `선생님`, `팀장님`, `사장님`, `형`, `누나`, `언니`, `오빠` không chỉ để gọi người. Chúng định nghĩa mô hình quan hệ. Nhiều từ thân tộc được mở rộng sang quan hệ phi huyết thống, cho thấy lô-gic (logic / 논리) gia đình được dùng như một ẩn dụ xã hội.
 
 Hậu tố `-님` có chức năng tôn kính. Trong công ty, một người có thể được gọi bằng chức vụ cộng `님`, ví dụ `팀장님`. Một số doanh nghiệp cố giảm thứ bậc bằng cách gọi tên + `님` hoặc dùng tên tiếng Anh. Tuy nhiên thay cách xưng hô không tự động làm thay đổi cấu trúc quyền hạn thực tế.
 
@@ -312,7 +315,7 @@ Vì vậy trong nhóm đa văn hoá, đừng dùng sắc thái chat làm bằng 
 
 ## Mô hình tư duy
 
-> Tiếng Hàn không chỉ truyền “nội dung”; nó truyền luôn một phần cấu trúc quan hệ. Kính ngữ mã hoá vai trò, cách nói giảm nhẹ quản lý nguy cơ làm mất mặt, `눈치` giải mã bối cảnh, `정` là lịch sử tích luỹ trong quan hệ, còn `체면` là ràng buộc đối với cách xử lý thông tin nhạy cảm. Trong nhóm đa ngôn ngữ, cần thêm một lớp nữa: **quản lý độ mơ hồ**. Cùng một câu đúng về logic có thể vẫn sai về giao thức xã hội, còn một câu rất lịch sự vẫn có thể thiếu chủ thể, thời hạn hoặc tiêu chí hoàn thành.
+> Tiếng Hàn không chỉ truyền “nội dung”; nó truyền luôn một phần cấu trúc quan hệ. Kính ngữ mã hoá vai trò, cách nói giảm nhẹ quản lý nguy cơ làm mất mặt, `눈치` giải mã bối cảnh, `정` là lịch sử tích luỹ trong quan hệ, còn `체면` là ràng buộc đối với cách xử lý thông tin nhạy cảm. Trong nhóm đa ngôn ngữ, cần thêm một lớp nữa: **quản lý độ mơ hồ**. Cùng một câu đúng về lô-gic (logic / 논리) có thể vẫn sai về giao thức xã hội, còn một câu rất lịch sự vẫn có thể thiếu chủ thể, thời hạn hoặc tiêu chí hoàn thành.
 
 ## Những hiểu lầm phổ biến
 
@@ -335,3 +338,5 @@ Vì vậy trong nhóm đa văn hoá, đừng dùng sắc thái chat làm bằng 
 ## Đọc tiếp
 
 Đọc cùng [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) để nối ngôn ngữ với quyền lực, danh tính, nhắn tin và tổ chức.
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

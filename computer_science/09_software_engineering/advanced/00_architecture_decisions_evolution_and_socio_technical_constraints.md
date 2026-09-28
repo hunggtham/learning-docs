@@ -1,14 +1,17 @@
-# Architecture decisions, evolution và socio-technical constraints
+# Kiến trúc (architecture / 아키텍처) decisions, evolution và socio-technical các ràng buộc (constraints / 제약조건들)
 
-Advanced software architecture không phải thuộc nhiều pattern hơn. Nó là khả năng chọn boundary và trade-off phù hợp với **workload, invariant, rate of change, failure domain, ownership, data consistency, deployment topology và organizational communication**.
+> **Mạch đọc:** Đặt **kiến trúc (architecture / 아키텍처) decisions, evolution và socio-technical các ràng buộc (constraints / 제약조건들)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. kiến trúc (architecture / 아키텍처) là tập các ràng buộc (constraints / 제약조건들) trên thay đổi và thất bại (failure / 실패)** sang **2. Bắt đầu từ bất biến (invariant / 불변식), không bắt đầu từ thành phần (component / 컴포넌트)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-System Design cũng không phải ghép các hộp “load balancer + cache + queue + database”. Một thiết kế tốt bắt đầu từ property hệ thống phải giữ, pressure mà nó phải chịu, failure nào được phép, rồi mới chọn topology và technology.
 
-## 1. Architecture là tập constraints trên thay đổi và failure
+Advanced software kiến trúc (architecture / 아키텍처) không phải thuộc nhiều mẫu (pattern / 패턴) hơn. Nó là khả năng chọn ranh giới (boundary / 경계) và sự đánh đổi (trade-off / 트레이드오프) phù hợp với **tải công việc (workload / 워크로드), bất biến (invariant / 불변식), tỷ lệ (rate / 비율) of thay đổi (change / 변경), miền lỗi (failure domain / 장애 도메인), quyền sở hữu (ownership / 소유권), dữ liệu (data / 데이터) consistency, triển khai (deployment / 배포) topology và organizational communication**.
 
-Một architecture tốt làm một số thay đổi dễ và một số thay đổi khó có chủ đích. Module boundary tốt cho phép implementation bên trong đổi mà consumer không cần biết chi tiết. Failure boundary tốt ngăn một component bị lỗi kéo cả system sập.
+Hệ thống (system / 시스템) thiết kế (design / 설계) cũng không phải ghép các hộp “bộ cân bằng tải (load balancer / 로드 밸런서) + bộ nhớ đệm (cache / 캐시) + hàng đợi (queue / 큐) + cơ sở dữ liệu (database / 데이터베이스)”. Một thiết kế tốt bắt đầu từ thuộc tính (property / 속성) hệ thống phải giữ, pressure mà nó phải chịu, thất bại (failure / 실패) nào được phép, rồi mới chọn topology và technology.
 
-Do đó đánh giá architecture phải hỏi hai loại scenario:
+## 1. kiến trúc (architecture / 아키텍처) là tập các ràng buộc (constraints / 제약조건들) trên thay đổi và thất bại (failure / 실패)
+
+Một kiến trúc (architecture / 아키텍처) tốt làm một số thay đổi dễ và một số thay đổi khó có chủ đích. ranh giới mô-đun (module boundary / 모듈 경계) tốt cho phép hiện thực (implementation / 구현) bên trong đổi mà bên tiêu thụ (consumer / 소비자) không cần biết chi tiết. thất bại (failure / 실패) ranh giới (boundary / 경계) tốt ngăn một thành phần (component / 컴포넌트) bị lỗi kéo cả hệ thống (system / 시스템) sập.
+
+Do đó đánh giá kiến trúc (architecture / 아키텍처) phải hỏi hai loại scenario:
 
 ```text
 change scenario:
@@ -25,11 +28,11 @@ failure scenario:
 - cache outage
 ```
 
-Diagram tĩnh không đủ để trả lời behavior dưới change/failure.
+Diagram tĩnh không đủ để trả lời hành vi (behavior / 동작) dưới thay đổi (change / 변경)/thất bại (failure / 실패).
 
-## 2. Bắt đầu từ invariant, không bắt đầu từ component
+## 2. Bắt đầu từ bất biến (invariant / 불변식), không bắt đầu từ thành phần (component / 컴포넌트)
 
-Ví dụ một payment system có thể có invariant:
+Ví dụ một payment hệ thống (system / 시스템) có thể có bất biến (invariant / 불변식):
 
 ```text
 một payment intent không bị charge hai lần
@@ -37,15 +40,15 @@ successful charge phải có audit trail
 caller timeout không được làm mất khả năng xác định outcome
 ```
 
-Từ đây mới suy ra idempotency key, state machine, durable log/outbox, retry semantics và reconciliation.
+Từ đây mới suy ra idempotency key, máy trạng thái (state machine / 상태 머신), durable log/outbox, thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론) và reconciliation.
 
-Nếu bắt đầu bằng “dùng Kafka hay RabbitMQ?”, ta đang chọn implementation trước khi biết property cần giữ.
+Nếu bắt đầu bằng “dùng Kafka hay RabbitMQ?”, ta đang chọn hiện thực (implementation / 구현) trước khi biết thuộc tính (property / 속성) cần giữ.
 
-## 3. Quality attributes tạo trade-off thật
+## 3. chất lượng (quality / 품질) attributes tạo sự đánh đổi (trade-off / 트레이드오프) thật
 
-Latency, availability, consistency, security, operability, modifiability và cost thường xung đột.
+Độ trễ (latency / 지연 시간), availability, consistency, bảo mật (security / 보안), operability, modifiability và chi phí (cost / 비용) thường xung đột.
 
-Tách service có thể scale/deploy độc lập nhưng thêm:
+Tách dịch vụ (service / 서비스) có thể quy mô (scale / 규모)/deploy độc lập nhưng thêm:
 
 ```text
 network partial failure
@@ -56,13 +59,13 @@ cross-service data consistency
 more operational surfaces
 ```
 
-“Microservices scalable hơn” là statement quá thô. Cần hỏi scale **resource nào**, failure boundary nào và coordination cost nào.
+“Microservices scalable hơn” là statement quá thô. Cần hỏi quy mô (scale / 규모) **tài nguyên (resource / 자원) nào**, thất bại (failure / 실패) ranh giới (boundary / 경계) nào và coordination chi phí (cost / 비용) nào.
 
-## 4. Workload model là input kiến trúc
+## 4. tải công việc (workload / 워크로드) mô hình (model / 모델) là đầu vào (input / 입력) kiến trúc
 
-Thiết kế cho 100 RPS đều khác 100k RPS bursty; 99% read khác write-heavy; object 1 KB khác 100 MB; global users khác single region.
+Thiết kế cho 100 RPS đều khác 100k RPS bursty; 99% read khác write-heavy; đối tượng (object / 객체) 1 KB khác 100 MB; toàn cục (global / 전역) users khác single region.
 
-Workload model nên gồm:
+Tải công việc (workload / 워크로드) mô hình (model / 모델) nên gồm:
 
 ```text
 arrival distribution, không chỉ average
@@ -75,13 +78,13 @@ retention/growth
 failure/recovery target
 ```
 
-System Design không có meaning nếu assumptions workload không được nói rõ.
+Hệ thống (system / 시스템) thiết kế (design / 설계) không có meaning nếu các giả định (assumptions / 가정들) tải công việc (workload / 워크로드) không được nói rõ.
 
-## 5. Bottleneck resource quyết định topology hữu ích
+## 5. Bottleneck tài nguyên (resource / 자원) quyết định topology hữu ích
 
-Scale-out application nodes không tăng capacity nếu bottleneck là shared database lock, storage IOPS hoặc third-party quota.
+Scale-out ứng dụng (application / 애플리케이션) nodes không tăng sức chứa (capacity / 용량) nếu bottleneck là dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) khóa (lock / 잠금), lưu trữ (storage / 저장소) IOPS hoặc third-party quota.
 
-Mỗi scale decision nên hỏi:
+Mỗi quy mô (scale / 규모) quyết định (decision / 결정) nên hỏi:
 
 ```text
 resource nào đang giới hạn throughput?
@@ -91,13 +94,13 @@ partition key có tạo hot spot không?
 queue nằm đâu trước resource?
 ```
 
-Điều này nối trực tiếp system design với [capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).
+Điều này nối trực tiếp hệ thống (system / 시스템) thiết kế (design / 설계) với [capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).
 
-## 6. State placement là decision trung tâm
+## 6. trạng thái (state / 상태) placement là quyết định (decision / 결정) trung tâm
 
-Stateless compute dễ replicate nhưng application thực tế luôn có state ở đâu đó: database, cache, object store, queue, session, local filesystem hoặc external service.
+Stateless compute dễ replicate nhưng ứng dụng (application / 애플리케이션) thực tế luôn có trạng thái (state / 상태) ở đâu đó: cơ sở dữ liệu (database / 데이터베이스), bộ nhớ đệm (cache / 캐시), đối tượng (object / 객체) store, hàng đợi (queue / 큐), session, cục bộ (local / 로컬) filesystem hoặc bên ngoài (external / 외부) dịch vụ (service / 서비스).
 
-State placement quyết định:
+Trạng thái (state / 상태) placement quyết định:
 
 ```text
 failure/recovery behavior
@@ -108,21 +111,21 @@ latency/locality
 backup/retention
 ```
 
-“Stateless service” chỉ có nghĩa state được đẩy sang boundary khác, không phải state biến mất.
+“Stateless dịch vụ (service / 서비스)” chỉ có nghĩa trạng thái (state / 상태) được đẩy sang ranh giới (boundary / 경계) khác, không phải trạng thái (state / 상태) biến mất.
 
-## 7. Data ownership và transaction boundary phải khớp invariant
+## 7. dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) và giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải khớp bất biến (invariant / 불변식)
 
-Hai services có API riêng nhưng cùng sửa tables của nhau chưa có data autonomy. Ngược lại, tách database chỉ để đạt purity có thể tạo saga/eventual-consistency complexity không cần thiết.
+Hai services có API riêng nhưng cùng sửa tables của nhau chưa có dữ liệu (data / 데이터) autonomy. Ngược lại, tách cơ sở dữ liệu (database / 데이터베이스) chỉ để đạt purity có thể tạo saga/eventual-consistency độ phức tạp (complexity / 복잡도) không cần thiết.
 
-Nếu hai facts phải commit atomically rất thường xuyên vì cùng business invariant, việc tách chúng qua network có thể đang cắt sai aggregate boundary.
+Nếu hai facts phải lần ghi nhận (commit / 커밋) atomically rất thường xuyên vì cùng nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식), việc tách chúng qua mạng (network / 네트워크) có thể đang cắt sai aggregate ranh giới (boundary / 경계).
 
-Boundary nên được chọn từ **ownership + invariant + change rate**, không từ sơ đồ tổ chức mong muốn đơn lẻ.
+Ranh giới (boundary / 경계) nên được chọn từ **quyền sở hữu (ownership / 소유권) + bất biến (invariant / 불변식) + thay đổi (change / 변경) tỷ lệ (rate / 비율)**, không từ sơ đồ tổ chức mong muốn đơn lẻ.
 
-## 8. Synchronous call tạo temporal coupling
+## 8. Synchronous lời gọi (call / 호출) tạo temporal coupling
 
-Service A gọi B synchronously nghĩa A's latency/availability phụ thuộc B trong request window.
+Dịch vụ (service / 서비스) A gọi B synchronously nghĩa A's độ trễ (latency / 지연 시간)/availability phụ thuộc B trong yêu cầu (request / 요청) cửa sổ (window / 윈도우).
 
-Async queue/event có thể giảm temporal coupling nhưng tạo semantic complexity mới:
+Async hàng đợi (queue / 큐)/sự kiện (event / 이벤트) có thể giảm temporal coupling nhưng tạo ngữ nghĩa (semantic / 의미적) độ phức tạp (complexity / 복잡도) mới:
 
 ```text
 delivery duplicate
@@ -133,13 +136,13 @@ schema evolution
 reconciliation
 ```
 
-Không có “async = resilient” tự động. Nó đổi failure shape từ request timeout sang backlog/state convergence.
+Không có “async = resilient” tự động. Nó đổi thất bại (failure / 실패) shape từ yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) sang backlog/trạng thái (state / 상태) convergence.
 
-## 9. Queue là state và debt
+## 9. hàng đợi (queue / 큐) là trạng thái (state / 상태) và debt
 
-Queue hấp thụ mismatch tạm thời giữa producer/consumer, nhưng queue dài là outstanding work phải trả sau.
+Hàng đợi (queue / 큐) hấp thụ mismatch tạm thời giữa producer/bên tiêu thụ (consumer / 소비자), nhưng hàng đợi (queue / 큐) dài là outstanding công việc (work / 작업) phải trả sau.
 
-System Design cần định nghĩa:
+Hệ thống (system / 시스템) thiết kế (design / 설계) cần định nghĩa:
 
 ```text
 max backlog?
@@ -149,17 +152,17 @@ retry/DLQ semantics?
 consumer recovery rate > arrival rate sau outage không?
 ```
 
-Nếu recovery throughput chỉ bằng arrival throughput, backlog sau incident không bao giờ được trả.
+Nếu khôi phục (recovery / 복구) thông lượng (throughput / 처리량) chỉ bằng arrival thông lượng (throughput / 처리량), backlog sau sự cố (incident / 인시던트) không bao giờ được trả.
 
-## 10. Cache là consistency decision
+## 10. bộ nhớ đệm (cache / 캐시) là consistency quyết định (decision / 결정)
 
-Cache không chỉ “giảm DB load”. Nó tạo replica state và freshness contract.
+Bộ nhớ đệm (cache / 캐시) không chỉ “giảm DB tải (load / 로드)”. Nó tạo replica trạng thái (state / 상태) và freshness đặc tả hợp đồng (contract / 계약).
 
-Khi thiết kế cache, hỏi source of truth, staleness tolerance, invalidation ordering, hot-key behavior và origin capacity khi cache fail.
+Khi thiết kế bộ nhớ đệm (cache / 캐시), hỏi nguồn chuẩn (source of truth / 정본), staleness tolerance, vô hiệu hóa (invalidation / 무효화) thứ tự (ordering / 순서), hot-key hành vi (behavior / 동작) và origin sức chứa (capacity / 용량) khi bộ nhớ đệm (cache / 캐시) thất bại (fail / 실패).
 
 Xem [Caching consistency](../../08_software_systems/advanced/02_caching_consistency_invalidation_stampede_and_hot_keys.md).
 
-## 11. Failure domain phải cụ thể
+## 11. miền lỗi (failure domain / 장애 도메인) phải cụ thể
 
 “Highly available” không đủ. Cần nói survive cái gì:
 
@@ -173,23 +176,23 @@ operator error?
 credential compromise?
 ```
 
-Replication trong cùng rack không bảo vệ rack failure. Multi-region replication không bảo vệ bad write đã replicate. Backup không giúp request availability ngay lập tức.
+Replication trong cùng rack không bảo vệ rack thất bại (failure / 실패). Multi-region replication không bảo vệ bad ghi (write / 쓰기) đã replicate. Backup không giúp yêu cầu (request / 요청) availability ngay lập tức.
 
-Reliability design phải map mechanism vào failure model cụ thể.
+Độ tin cậy (reliability / 신뢰성) thiết kế (design / 설계) phải map cơ chế (mechanism / 메커니즘) vào thất bại (failure / 실패) mô hình (model / 모델) cụ thể.
 
-## 12. Retry policy là architecture, không phải client helper
+## 12. thử lại (retry / 재시도) chính sách (policy / 정책) là kiến trúc (architecture / 아키텍처), không phải máy khách (client / 클라이언트) helper
 
-Retry thay đổi load và side-effect semantics toàn call graph. Proxy, SDK và application cùng retry có thể nhân attempts ngoài dự kiến.
+Thử lại (retry / 재시도) thay đổi tải (load / 로드) và side-effect ngữ nghĩa (semantics / 의미론) toàn lời gọi (call / 호출) đồ thị (graph / 그래프). Proxy, SDK và ứng dụng (application / 애플리케이션) cùng thử lại (retry / 재시도) có thể nhân attempts ngoài dự kiến.
 
-Architectural review cần biết tầng nào được retry, budget bao nhiêu, operation có idempotent không, deadline còn bao nhiêu và overload feedback loop được chặn ở đâu.
+Architectural rà soát (review / 검토) cần biết tầng nào được thử lại (retry / 재시도), ngân sách (budget / 예산) bao nhiêu, thao tác (operation / 연산) có idempotent không, deadline còn bao nhiêu và overload vòng phản hồi (feedback loop / 피드백 루프) được chặn ở đâu.
 
 Xem [end-to-end request + overload](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
 
-## 13. Security boundary cũng là architecture boundary
+## 13. ranh giới bảo mật (security boundary / 보안 경계) cũng là kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계)
 
-Identity đổi khi request đi qua browser → edge → service → database/KMS. TLS termination, token exchange hoặc proxy header đều thay trust model.
+Định danh (identity / 식별자) đổi khi yêu cầu (request / 요청) đi qua trình duyệt (browser / 브라우저) → edge → dịch vụ (service / 서비스) → cơ sở dữ liệu (database / 데이터베이스)/KMS. TLS termination, đơn vị từ (token / 토큰) exchange hoặc proxy header đều thay trust mô hình (model / 모델).
 
-Architecture review phải hỏi:
+Kiến trúc (architecture / 아키텍처) rà soát (review / 검토) phải hỏi:
 
 ```text
 principal ở mỗi hop là ai?
@@ -198,11 +201,11 @@ secret/capability scope là gì?
 compromise một service lan được tới đâu?
 ```
 
-Security không phải checklist thêm sau topology; trust graph là một phần topology.
+Bảo mật (security / 보안) không phải checklist thêm sau topology; trust đồ thị (graph / 그래프) là một phần topology.
 
-## 14. Reversibility quyết định mức đầu tư decision
+## 14. Reversibility quyết định mức đầu tư quyết định (decision / 결정)
 
-Decision dễ đảo như local cache library nên thử nhanh. Decision khó đảo như partition key, public protocol, identity model hoặc data ownership cần nhiều evidence hơn.
+Quyết định (decision / 결정) dễ đảo như cục bộ (local / 로컬) bộ nhớ đệm (cache / 캐시) thư viện (library / 라이브러리) nên thử nhanh. quyết định (decision / 결정) khó đảo như partition key, công khai (public / 공개) giao thức (protocol / 프로토콜), định danh (identity / 식별자) mô hình (model / 모델) hoặc dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) cần nhiều bằng chứng (evidence / 증거) hơn.
 
 ADR hữu ích khi ghi:
 
@@ -215,11 +218,11 @@ failure consequences
 revisit trigger
 ```
 
-ADR là snapshot reasoning, không phải bằng chứng decision sẽ đúng mãi.
+ADR là snapshot lập luận (reasoning / 추론), không phải bằng chứng quyết định (decision / 결정) sẽ đúng mãi.
 
-## 15. Migration path quan trọng hơn target diagram
+## 15. di chuyển (migration / 마이그레이션) đường dẫn (path / 경로) quan trọng hơn mục tiêu (target / 대상) diagram
 
-Production architecture hiếm khi rewrite một lần. Safe evolution thường cần:
+Kiến trúc vận hành (production architecture / 운영 아키텍처) hiếm khi rewrite một lần. Safe evolution thường cần:
 
 ```text
 old system
@@ -230,27 +233,27 @@ old system
 → retire old path
 ```
 
-Dual-write nguy hiểm nếu thiếu idempotency/reconciliation. Backfill có thể phá production capacity. Migration design phải có observability và rollback/roll-forward story.
+Dual-write nguy hiểm nếu thiếu idempotency/reconciliation. Backfill có thể phá môi trường vận hành (production / 운영 환경) sức chứa (capacity / 용량). di chuyển (migration / 마이그레이션) thiết kế (design / 설계) phải có khả năng quan sát (observability / 관측 가능성) và quay lui (rollback / 롤백)/roll-forward story.
 
-## 16. Compatibility là distributed protocol theo thời gian
+## 16. tính tương thích (compatibility / 호환성) là phân tán (distributed / 분산) giao thức (protocol / 프로토콜) theo thời gian
 
-Khi old/new binaries cùng chạy, API/schema/data phải hợp lệ trong overlap window.
+Khi old/new binaries cùng chạy, API/lược đồ (schema / 스키마)/dữ liệu (data / 데이터) phải hợp lệ trong overlap cửa sổ (window / 윈도우).
 
-Deployment topology vì thế biến compatibility thành distributed constraint. “Code mới compile” không chứng minh mixed-version fleet hoạt động đúng.
+Triển khai (deployment / 배포) topology vì thế biến tính tương thích (compatibility / 호환성) thành phân tán (distributed / 분산) ràng buộc (constraint / 제약조건). “mã (code / 코드) mới compile” không chứng minh mixed-version fleet hoạt động đúng.
 
-Expand-contract và tolerant reader/writer strategies nên được reasoning từ coexistence window cụ thể.
+Expand-contract và tolerant reader/writer strategies nên được lập luận (reasoning / 추론) từ coexistence cửa sổ (window / 윈도우) cụ thể.
 
-## 17. Conway's Law là coupling giữa communication graph và software graph
+## 17. Conway's Law là coupling giữa communication đồ thị (graph / 그래프) và software đồ thị (graph / 그래프)
 
-Nếu hai teams phải thay cùng component liên tục nhưng ownership tách rời, coordination cost trở thành architecture reality. Nếu service boundaries cắt qua capability sai, system có chatty network calls và cross-team transactions.
+Nếu hai teams phải thay cùng thành phần (component / 컴포넌트) liên tục nhưng quyền sở hữu (ownership / 소유권) tách rời, coordination chi phí (cost / 비용) trở thành kiến trúc (architecture / 아키텍처) reality. Nếu dịch vụ (service / 서비스) boundaries cắt qua năng lực (capability / 역량) sai, hệ thống (system / 시스템) có chatty mạng (network / 네트워크) calls và cross-team transactions.
 
-Socio-technical design nhìn code graph, data graph và communication graph cùng lúc.
+Socio-technical thiết kế (design / 설계) nhìn mã (code / 코드) đồ thị (graph / 그래프), dữ liệu (data / 데이터) đồ thị (graph / 그래프) và communication đồ thị (graph / 그래프) cùng lúc.
 
-Một monolith modular có thể ít coupling hơn một fleet microservices phải release đồng bộ.
+Một monolith modular có thể ít coupling hơn một fleet microservices phải bản phát hành (release / 릴리스) đồng bộ.
 
-## 18. Architecture review nên dùng stress/failure scenarios
+## 18. kiến trúc (architecture / 아키텍처) rà soát (review / 검토) nên dùng stress/thất bại (failure / 실패) scenarios
 
-Thay vì hỏi “có clean architecture không?”, dùng scenarios:
+Thay vì hỏi “có clean kiến trúc (architecture / 아키텍처) không?”, dùng scenarios:
 
 ```text
 traffic 10x trong 5 phút
@@ -263,11 +266,11 @@ credential service A bị compromise
 storage flush latency spike
 ```
 
-Scenario buộc design reveal hidden assumptions, queues và failure propagation.
+Scenario buộc thiết kế (design / 설계) reveal hidden các giả định (assumptions / 가정들), queues và thất bại (failure / 실패) propagation.
 
-## 19. Production evidence phải kiểm chứng assumption
+## 19. bằng chứng vận hành (production evidence / 운영 증거) phải kiểm chứng giả định (assumption / 가정)
 
-Architecture không chỉ tồn tại trong document. Các assumption cần metrics/traces/logs hoặc tests:
+Kiến trúc (architecture / 아키텍처) không chỉ tồn tại trong document. Các giả định (assumption / 가정) cần metrics/traces/logs hoặc tests:
 
 ```text
 actual traffic/skew
@@ -280,18 +283,20 @@ security policy decisions
 cost per workload unit
 ```
 
-Nếu ADR nói “cache outage không ảnh hưởng origin” nhưng chaos test làm DB sập, architecture evidence đã phủ định assumption.
+Nếu ADR nói “bộ nhớ đệm (cache / 캐시) outage không ảnh hưởng origin” nhưng chaos kiểm thử (test / 테스트) làm DB sập, kiến trúc (architecture / 아키텍처) bằng chứng (evidence / 증거) đã phủ định giả định (assumption / 가정).
 
-## 20. Lower abstraction nào thực sự quyết định behavior?
+## 20. Lower lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
-Một architecture diagram có thể nói “database durable”, nhưng guarantee cuối phụ thuộc WAL/filesystem/storage. Diagram nói “service isolated”, nhưng cgroup/DB pool/shared KMS có thể là hidden shared fate. Diagram nói “secure mTLS”, nhưng authorization policy có thể vẫn allow-all.
+Một kiến trúc (architecture / 아키텍처) diagram có thể nói “cơ sở dữ liệu (database / 데이터베이스) durable”, nhưng guarantee cuối phụ thuộc WAL/filesystem/lưu trữ (storage / 저장소). Diagram nói “dịch vụ (service / 서비스) isolated”, nhưng cgroup/DB pool/dùng chung (shared / 공유) KMS có thể là hidden dùng chung (shared / 공유) fate. Diagram nói “secure mTLS”, nhưng authorization chính sách (policy / 정책) có thể vẫn allow-all.
 
-Advanced system design luôn hỏi: abstraction nào bên dưới thực sự giữ property đang hứa?
+Advanced hệ thống (system / 시스템) thiết kế (design / 설계) luôn hỏi: lớp trừu tượng (abstraction / 추상화) nào bên dưới thực sự giữ thuộc tính (property / 속성) đang hứa?
 
 ## 21. Mô hình tư duy
 
-> Architecture là **thiết kế invariant, cost-of-change và failure boundaries dưới workload + organizational constraints**. System Design bắt đầu từ properties và pressure, không từ technology boxes. Pattern là vocabulary; decision quality đến từ explicit assumptions, bottleneck model, failure scenarios, migration path và production evidence.
+> kiến trúc (architecture / 아키텍처) là **thiết kế bất biến (invariant / 불변식), cost-of-change và thất bại (failure / 실패) boundaries dưới tải công việc (workload / 워크로드) + organizational các ràng buộc (constraints / 제약조건들)**. hệ thống (system / 시스템) thiết kế (design / 설계) bắt đầu từ properties và pressure, không từ technology boxes. mẫu (pattern / 패턴) là vocabulary; quyết định (decision / 결정) chất lượng (quality / 품질) đến từ tường minh (explicit / 명시적) các giả định (assumptions / 가정들), bottleneck mô hình (model / 모델), thất bại (failure / 실패) scenarios, di chuyển (migration / 마이그레이션) đường dẫn (path / 경로) và bằng chứng vận hành (production evidence / 운영 증거).
 
 ## Kết nối
 
 Đọc cùng [System decomposition foundation](../../basic/08_software_systems/07_system_decomposition_services_and_boundaries.md), [Distributed consistency](../../06_networks_distributed_systems/advanced/06_time_clocks_ordering_and_causality.md), [Capacity engineering](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md), [Security containment](../../90_connections/advanced/00_debugging_across_abstraction_layers.md) và [Deployment safety](./05_deployment_safety_canary_blue_green_flags_and_rollback.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 modular monolith vs services boundary economics](./01_modular_monolith_vs_services_boundary_economics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

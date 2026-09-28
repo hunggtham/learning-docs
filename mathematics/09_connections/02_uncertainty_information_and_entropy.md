@@ -1,8 +1,11 @@
-# Knowledge Connection — Uncertainty, Information và Entropy: từ probability đến decision
+# Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)
 
-Xác suất định lượng uncertainty. Information theory hỏi một observation giảm uncertainty bao nhiêu, representation nào encode uncertainty hiệu quả, và channel nào truyền được bao nhiêu information.
+> **Mạch đọc:** Đọc **liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. xác suất (probability / 확률) không phải thông tin (information / 정보)** sang **2. Vì sao logarithm xuất hiện?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental flow:
+
+Xác suất định lượng bất định (uncertainty / 불확실성). thông tin (information / 정보) lý thuyết (theory / 이론) hỏi một observation giảm bất định (uncertainty / 불확실성) bao nhiêu, biểu diễn (representation / 표현) nào encode bất định (uncertainty / 불확실성) hiệu quả, và channel nào truyền được bao nhiêu thông tin (information / 정보).
+
+Mental luồng (flow / 흐름):
 
 ```text
 uncertainty
@@ -14,11 +17,11 @@ uncertainty
 → decision / loss
 ```
 
-Điểm quan trọng là probability, information và decision là ba tầng khác nhau.
+Điểm quan trọng là xác suất (probability / 확률), thông tin (information / 정보) và quyết định (decision / 결정) là ba tầng khác nhau.
 
-## 1. Probability không phải information
+## 1. xác suất (probability / 확률) không phải thông tin (information / 정보)
 
-Một event có probability `p`.
+Một sự kiện (event / 이벤트) có xác suất (probability / 확률) `p`.
 
 Self-information:
 
@@ -26,20 +29,20 @@ Self-information:
 I(x)=-\log_2 p(x).
 ```
 
-Event chắc chắn:
+Sự kiện (event / 이벤트) chắc chắn:
 
 ```math
 p=1
 → I=0
 ```
 
-Event probability `1/8`:
+Sự kiện (event / 이벤트) xác suất (probability / 확률) `1/8`:
 
 ```math
 I=3\text{ bits}.
 ```
 
-Rare event tạo surprise lớn hơn khi xảy ra.
+Rare sự kiện (event / 이벤트) tạo surprise lớn hơn khi xảy ra.
 
 ## 2. Vì sao logarithm xuất hiện?
 
@@ -49,7 +52,7 @@ Với independent events:
 P(A,B)=P(A)P(B).
 ```
 
-Ta muốn information cộng:
+Ta muốn thông tin (information / 정보) cộng:
 
 ```math
 I(A,B)=I(A)+I(B).
@@ -57,7 +60,7 @@ I(A,B)=I(A)+I(B).
 
 Logarithm biến multiplication thành addition.
 
-Base 2 cho unit bits; base `e` cho nats.
+Cơ sở (base / 기반) 2 cho đơn vị (unit / 단위) bits; cơ sở (base / 기반) `e` cho nats.
 
 ## 3. Entropy là expected surprise
 
@@ -67,7 +70,7 @@ Với discrete random variable:
 H(X)=-\sum_xp(x)\log_2p(x).
 ```
 
-Entropy không đo magnitude của values. Nó đo uncertainty của probability distribution.
+Entropy không đo magnitude của values. Nó đo bất định (uncertainty / 불확실성) của xác suất (probability / 확률) phân phối (distribution / 분포).
 
 Fair coin:
 
@@ -81,7 +84,7 @@ Biased coin `p=0.9`:
 H(X)\approx0.469\text{ bits}.
 ```
 
-Outcome predictable hơn nên entropy thấp hơn.
+Kết quả (outcome / 결과) predictable hơn nên entropy thấp hơn.
 
 ## 4. Entropy khác variance
 
@@ -91,7 +94,7 @@ Variance:
 \operatorname{Var}(X)
 ```
 
-phụ thuộc numerical values và scale.
+phụ thuộc numerical values và quy mô (scale / 규모).
 
 Entropy phụ thuộc probabilities.
 
@@ -99,9 +102,9 @@ Hai distributions có thể cùng entropy nhưng variance rất khác, hoặc ng
 
 Không nên coi entropy là “một kiểu variance”.
 
-## 5. Compression: predictability thành shorter representation
+## 5. Compression: predictability thành shorter biểu diễn (representation / 표현)
 
-Nếu symbols không equally likely, fixed-length code waste bits.
+Nếu symbols không equally likely, fixed-length mã (code / 코드) waste bits.
 
 Idea:
 
@@ -110,11 +113,11 @@ frequent symbol → short code
 rare symbol     → longer code
 ```
 
-Entropy cho lower-bound-like quantity cho expected lossless code length trong suitable asymptotic setup.
+Entropy cho lower-bound-like quantity cho expected lossless mã (code / 코드) length trong suitable asymptotic setup.
 
-Huffman coding tạo prefix code gần optimal theo symbol frequencies.
+Huffman coding tạo prefix mã (code / 코드) gần optimal theo symbol frequencies.
 
-Arithmetic coding encode entire sequence theo probability intervals và có thể approach entropy closer.
+Arithmetic coding encode entire chuỗi (sequence / 시퀀스) theo xác suất (probability / 확률) intervals và có thể approach entropy closer.
 
 ## 6. Prefix codes và Kraft inequality
 
@@ -124,19 +127,19 @@ Nếu codeword lengths `l_i`:
 \sum_i2^{-l_i}\le1
 ```
 
-là capacity condition cho binary prefix code.
+là sức chứa (capacity / 용량) điều kiện (condition / 조건) cho nhị phân (binary / 이진) prefix mã (code / 코드).
 
-Tree viewpoint:
+Cây (tree / 트리) viewpoint:
 
 ```text
 short codeword = leaf gần root
 ```
 
-Chọn leaf sớm block toàn bộ descendants, nên short codes consume more code-tree capacity.
+Chọn leaf sớm khối (block / 블록) toàn bộ descendants, nên short codes consume more code-tree sức chứa (capacity / 용량).
 
-Combinatorics và tree structure gặp information theory ở đây.
+Combinatorics và cây (tree / 트리) cấu trúc (structure / 구조) gặp thông tin (information / 정보) lý thuyết (theory / 이론) ở đây.
 
-## 7. Joint entropy và chain rule
+## 7. Joint entropy và chuỗi (chain / 사슬) quy tắc (rule / 규칙)
 
 Joint entropy:
 
@@ -144,7 +147,7 @@ Joint entropy:
 H(X,Y)
 ```
 
-đo uncertainty của pair.
+đo bất định (uncertainty / 불확실성) của pair.
 
 Conditional entropy:
 
@@ -152,17 +155,17 @@ Conditional entropy:
 H(Y|X)
 ```
 
-đo uncertainty còn lại về `Y` sau khi biết `X`.
+đo bất định (uncertainty / 불확실성) còn lại về `Y` sau khi biết `X`.
 
-Chain rule:
+Chuỗi (chain / 사슬) quy tắc (rule / 규칙):
 
 ```math
 H(X,Y)=H(X)+H(Y|X).
 ```
 
-Đây là uncertainty accounting.
+Đây là bất định (uncertainty / 불확실성) accounting.
 
-## 8. Mutual information: biết Y giảm uncertainty về X bao nhiêu?
+## 8. Mutual thông tin (information / 정보): biết Y giảm bất định (uncertainty / 불확실성) về X bao nhiêu?
 
 ```math
 I(X;Y)=H(X)-H(X|Y).
@@ -180,11 +183,11 @@ Nếu independent:
 I(X;Y)=0.
 ```
 
-Khác correlation, mutual information có thể detect nonlinear statistical dependence.
+Khác correlation, mutual thông tin (information / 정보) có thể detect nonlinear statistical dependence.
 
-Nhưng estimate MI từ finite high-dimensional data không trivial.
+Nhưng estimate MI từ finite high-dimensional dữ liệu (data / 데이터) không trivial.
 
-## 9. Data processing inequality
+## 9. dữ liệu (data / 데이터) processing inequality
 
 Nếu:
 
@@ -192,27 +195,27 @@ Nếu:
 X → Y → Z
 ```
 
-là Markov chain, processing `Y` thành `Z` không thể tạo thêm information về original `X`:
+là Markov chuỗi (chain / 사슬), processing `Y` thành `Z` không thể tạo thêm thông tin (information / 정보) về original `X`:
 
 ```math
 I(X;Z)\le I(X;Y).
 ```
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
-> deterministic/noisy processing có thể giữ hoặc mất relevant information, không thể magic tạo information về source mà input không chứa.
+> deterministic/noisy processing có thể giữ hoặc mất relevant thông tin (information / 정보), không thể magic tạo thông tin (information / 정보) về nguồn (source / 소스) mà đầu vào (input / 입력) không chứa.
 
-Đây là important principle trong feature extraction và representation learning.
+Đây là important principle trong tính năng (feature / 기능) extraction và biểu diễn (representation / 표현) học tập (learning / 학습).
 
-## 10. Cross-entropy là expected log loss
+## 10. Cross-entropy là expected log mất mát (loss / 손실)
 
-Nếu true distribution `p` và model predicts `q`:
+Nếu true phân phối (distribution / 분포) `p` và mô hình (model / 모델) predicts `q`:
 
 ```math
 H(p,q)=-\sum_xp(x)\log q(x).
 ```
 
-Nếu one-hot classification target:
+Nếu one-hot classification mục tiêu (target / 대상):
 
 ```math
 L=-\log q(y_{true}).
@@ -220,7 +223,7 @@ L=-\log q(y_{true}).
 
 Confident wrong predictions bị phạt mạnh vì `-log q` tăng lớn khi `q→0`.
 
-## 11. KL divergence là extra coding/log-loss cost
+## 11. KL divergence là extra coding/log-loss chi phí (cost / 비용)
 
 ```math
 D_{KL}(p\|q)
@@ -242,7 +245,7 @@ không symmetric
 không satisfy triangle inequality
 ```
 
-nên không phải ordinary metric.
+nên không phải ordinary chỉ số (metric / 지표).
 
 ## 12. Maximum likelihood và cross-entropy
 
@@ -264,13 +267,13 @@ Negative log-likelihood:
 -\sum_i\log p_\theta(y_i|x_i).
 ```
 
-với categorical output chính là empirical cross-entropy up to normalization.
+với categorical đầu ra (output / 출력) chính là empirical cross-entropy up to normalization.
 
-Loss function vì vậy xuất phát từ probabilistic model, không phải arbitrary choice.
+Hàm mất mát (loss function / 손실 함수) vì vậy xuất phát từ probabilistic mô hình (model / 모델), không phải arbitrary choice.
 
 ## 13. Entropy và calibration khác nhau
 
-Model có low-entropy prediction có thể rất confident.
+Mô hình (model / 모델) có low-entropy prediction có thể rất confident.
 
 Nhưng confidence cao không đảm bảo calibrated.
 
@@ -281,37 +284,37 @@ among predictions around 0.8,
 roughly 80% có đúng không?
 ```
 
-Entropy đo uncertainty của prediction distribution; calibration đo alignment probability với empirical frequency.
+Entropy đo bất định (uncertainty / 불확실성) của prediction phân phối (distribution / 분포); calibration đo alignment xác suất (probability / 확률) với empirical frequency.
 
-## 14. Expected loss: probability chưa đủ cho action
+## 14. Expected mất mát (loss / 손실): xác suất (probability / 확률) chưa đủ cho hành động (action / 동작)
 
-Decision `a` với outcome `x` có loss:
+Quyết định (decision / 결정) `a` với kết quả (outcome / 결과) `x` có mất mát (loss / 손실):
 
 ```math
 L(x,a).
 ```
 
-Expected loss:
+Expected mất mát (loss / 손실):
 
 ```math
 R(a)=E[L(X,a)].
 ```
 
-Optimal decision:
+Optimal quyết định (decision / 결정):
 
 ```math
 a^*=\arg\min_aR(a).
 ```
 
-Một event probability 1% có thể demand action nếu consequence rất lớn.
+Một sự kiện (event / 이벤트) xác suất (probability / 확률) 1% có thể demand hành động (action / 동작) nếu consequence rất lớn.
 
-Probability answer:
+Xác suất (probability / 확률) answer:
 
 ```text
 khả năng bao nhiêu?
 ```
 
-Decision theory answer:
+Quyết định (decision / 결정) lý thuyết (theory / 이론) answer:
 
 ```text
 nên làm gì với uncertainty đó?
@@ -319,58 +322,58 @@ nên làm gì với uncertainty đó?
 
 ## 15. Proper scoring rules
 
-Log loss và Brier score là examples of **proper scoring rules**: expected score incentivizes reporting true probabilities under suitable assumptions.
+Log mất mát (loss / 손실) và Brier score là examples of **proper scoring rules**: expected score incentivizes reporting true probabilities under suitable các giả định (assumptions / 가정들).
 
 Điều này quan trọng vì classification accuracy alone không reward calibrated probabilistic forecasts.
 
-## 16. Information gain trong trees
+## 16. thông tin (information / 정보) gain trong trees
 
-Decision-tree split có thể choose feature giảm entropy nhiều nhất.
+Decision-tree split có thể choose tính năng (feature / 기능) giảm entropy nhiều nhất.
 
-Information gain:
+Thông tin (information / 정보) gain:
 
 ```math
 IG=H(Y)-H(Y|split).
 ```
 
-Tức split hữu ích nếu biết branch làm label distribution predictable hơn.
+Tức split hữu ích nếu biết branch làm label phân phối (distribution / 분포) predictable hơn.
 
-Nhưng greedy tree splits không guarantee globally optimal tree.
+Nhưng greedy cây (tree / 트리) splits không guarantee globally optimal cây (tree / 트리).
 
-## 17. Entropy rate cho sequences
+## 17. Entropy tỷ lệ (rate / 비율) cho sequences
 
-Nếu data có temporal dependence, per-symbol entropy không đủ.
+Nếu dữ liệu (data / 데이터) có temporal dependence, per-symbol entropy không đủ.
 
-Entropy rate roughly đo new uncertainty per additional symbol khi conditioning on longer past.
+Entropy tỷ lệ (rate / 비율) roughly đo new bất định (uncertainty / 불확실성) per additional symbol khi conditioning on longer past.
 
-Predictable sequence có entropy rate thấp dù marginal symbol distribution có thể nhìn balanced.
+Predictable chuỗi (sequence / 시퀀스) có entropy tỷ lệ (rate / 비율) thấp dù marginal symbol phân phối (distribution / 분포) có thể nhìn balanced.
 
-Compression algorithms exploit repeated/conditional structure, không chỉ one-symbol frequency.
+Compression algorithms exploit repeated/conditional cấu trúc (structure / 구조), không chỉ one-symbol frequency.
 
-## 18. Channel capacity
+## 18. Channel sức chứa (capacity / 용량)
 
 Communication channel thêm noise.
 
-Capacity hỏi maximum reliable information rate dưới specified channel model.
+Sức chứa (capacity / 용량) hỏi maximum reliable thông tin (information / 정보) tỷ lệ (rate / 비율) dưới specified channel mô hình (model / 모델).
 
-Binary symmetric channel crossover probability `p` có capacity:
+Nhị phân (binary / 이진) symmetric channel crossover xác suất (probability / 확률) `p` có sức chứa (capacity / 용량):
 
 ```math
 C=1-H_2(p)
 ```
 
-bits/use, với `H_2` binary entropy.
+bits/use, với `H_2` nhị phân (binary / 이진) entropy.
 
-Nếu `p=0`, capacity 1 bit/use.
-Nếu `p=1/2`, output independent source nên capacity 0.
+Nếu `p=0`, sức chứa (capacity / 용량) 1 bit/use.
+Nếu `p=1/2`, đầu ra (output / 출력) independent nguồn (source / 소스) nên sức chứa (capacity / 용량) 0.
 
-## 19. Redundancy có thể tăng reliability
+## 19. Redundancy có thể tăng độ tin cậy (reliability / 신뢰성)
 
 Compression remove redundancy để save bits.
 
 Error-correcting coding add structured redundancy để survive noise.
 
-Hai goals ngược hướng nhưng cùng information-theoretic framework:
+Hai goals ngược hướng nhưng cùng information-theoretic khung phần mềm (framework / 프레임워크):
 
 ```text
 source coding → represent efficiently
@@ -381,7 +384,7 @@ channel coding → transmit reliably
 
 Thermodynamic entropy và Shannon entropy có deep mathematical connections, nhưng không nên translate informal statements trực tiếp giữa domains.
 
-Trong ML, “maximize entropy” có exact objective tùy context:
+Trong ML, “maximize entropy” có chính xác (exact / 정확한) mục tiêu (objective / 목표) tùy ngữ cảnh (context / 맥락):
 
 ```text
 maximum entropy modeling
@@ -389,11 +392,11 @@ entropy regularization in RL
 uncertainty measures
 ```
 
-Always check definition and distribution.
+Always check definition and phân phối (distribution / 분포).
 
-## 21. Rare event không đồng nghĩa important event
+## 21. Rare sự kiện (event / 이벤트) không đồng nghĩa important sự kiện (event / 이벤트)
 
-Self-information lớn khi probability nhỏ.
+Self-information lớn khi xác suất (probability / 확률) nhỏ.
 
 Nhưng practical importance depends on consequence.
 
@@ -405,15 +408,15 @@ vs
 rare catastrophic safety failure
 ```
 
-same probability class có very different decision significance.
+same xác suất (probability / 확률) lớp (class / 클래스) có very different quyết định (decision / 결정) significance.
 
-Information và utility phải tách.
+Thông tin (information / 정보) và utility phải tách.
 
-## 22. Common failure modes
+## 22. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
 ### Equating entropy with disorder colloquially
 
-Mathematical entropy cần specified probability model.
+Mathematical entropy cần specified xác suất (probability / 확률) mô hình (model / 모델).
 
 ### Treating cross-entropy as distance
 
@@ -421,17 +424,17 @@ Nó không symmetric theo general distributions.
 
 ### Ignoring calibration
 
-Low loss/accuracy không automatically imply reliable probabilities.
+Low mất mát (loss / 손실)/accuracy không automatically imply reliable probabilities.
 
 ### Estimating MI naively in high dimensions
 
-Finite-sample bias có thể lớn.
+Finite-sample độ lệch (bias / 편향) có thể lớn.
 
-### Forgetting model dependence
+### Forgetting mô hình (model / 모델) dependence
 
-Entropy depends on chosen random variable/representation.
+Entropy depends on chosen random variable/biểu diễn (representation / 표현).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 ```text
 Probability → uncertainty
@@ -445,6 +448,8 @@ Decision theory → expected loss
 Communication → capacity / error correction
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Probability mô tả uncertainty trước khi biết outcome. Information đo uncertainty giảm khi observation đến. Entropy là average uncertainty/surprise theo distribution. Nhưng action cần thêm loss/utility; information nhiều không đồng nghĩa consequence lớn.
+> xác suất (probability / 확률) mô tả bất định (uncertainty / 불확실성) trước khi biết kết quả (outcome / 결과). thông tin (information / 정보) đo bất định (uncertainty / 불확실성) giảm khi observation đến. Entropy là average bất định (uncertainty / 불확실성)/surprise theo phân phối (distribution / 분포). Nhưng hành động (action / 동작) cần thêm mất mát (loss / 손실)/utility; thông tin (information / 정보) nhiều không đồng nghĩa consequence lớn.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

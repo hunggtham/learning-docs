@@ -1,5 +1,8 @@
 # Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch
 
+> **Mạch đọc:** Đọc **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hạt nhân là hệ nhiều hạt tương tác mạnh** sang **Năng lượng liên kết và độ hụt khối**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Hạt nhân là hệ nhiều hạt tương tác mạnh
 
 Hạt nhân nguyên tử gồm proton và neutron, gọi chung là nucleon. Proton mang điện tích dương; neutron trung hòa điện tổng thể. Cả hai đều là trạng thái liên kết của quark và gluon, nhưng ở thang hạt nhân ta thường dùng nucleon như các bậc tự do hiệu dụng.
@@ -112,7 +115,7 @@ Nếu năng lượng va chạm gần một trạng thái kích thích của hạ
 \tau\sim\frac{\hbar}{\Gamma}.
 ```
 
-Đây là cùng cấu trúc lifetime–linewidth đã gặp trong quang phổ nguyên tử.
+Đây là cùng cấu trúc thời gian tồn tại (lifetime / 수명)–linewidth đã gặp trong quang phổ nguyên tử.
 
 ## Phân rã phóng xạ
 
@@ -226,7 +229,7 @@ Neutron nhanh có thể được làm chậm bằng va chạm đàn hồi với 
 
 Thanh điều khiển chứa vật liệu hấp thụ neutron như boron hoặc cadmium để điều chỉnh quần thể neutron.
 
-Lò phản ứng vì vậy là bài toán kết hợp transport neutron, nhiệt học, chất lưu và phản hồi vật liệu.
+Lò phản ứng vì vậy là bài toán kết hợp vận chuyển (transport / 전송) neutron, nhiệt học, chất lưu và phản hồi vật liệu.
 
 ## Phản hồi nhiệt độ
 
@@ -285,7 +288,7 @@ Các nguyên tố nặng hơn được tạo qua nhiều giai đoạn đốt h�
 
 Vật lý hạt nhân vì vậy trực tiếp giải thích nguồn gốc hóa học của vật chất trong vũ trụ.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Hạt nhân là hệ nhiều nucleon nơi ba cấu trúc cùng tồn tại:
 
@@ -295,7 +298,7 @@ xu hướng tập thể
 + phản ứng và phân rã xác suất
 ```
 
-Mô hình giọt chất lỏng giải thích xu hướng tập thể; shell model giải thích mức và số magic; reaction theory giải thích cách hệ chuyển giữa các cấu hình.
+Mô hình giọt chất lỏng giải thích xu hướng tập thể; shell mô hình (model / 모델) giải thích mức và số magic; reaction lý thuyết (theory / 이론) giải thích cách hệ chuyển giữa các cấu hình.
 
 Năng lượng hạt nhân không đến từ “phá nguyên tử” một cách chung chung mà từ chênh lệch năng lượng liên kết giữa trạng thái đầu và cuối.
 
@@ -303,7 +306,7 @@ Năng lượng hạt nhân không đến từ “phá nguyên tử” một các
 
 ### “Mọi hạt nhân có thể mô tả bằng cùng một mô hình đơn giản”
 
-Không. Collective models, shell model và reaction models nhấn mạnh các cấu trúc khác nhau.
+Không. Collective các mô hình (models / 모델들), shell mô hình (model / 모델) và reaction các mô hình (models / 모델들) nhấn mạnh các cấu trúc khác nhau.
 
 ### “Cross section là diện tích vật lý thật của hạt nhân”
 
@@ -317,12 +320,14 @@ Thông thường chỉ chênh lệch khối lượng giữa trạng thái đầu
 
 Không. Mật độ và thời gian giam giữ cũng thiết yếu.
 
-### “Critical reactor nghĩa sắp phát nổ”
+### “trọng yếu (critical / 중요) reactor nghĩa sắp phát nổ”
 
 Trong kỹ thuật lò phản ứng, `critical` chỉ có nghĩa `k_eff=1`, tức quần thể neutron duy trì ổn định qua các thế hệ.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Các hệ lượng tử](../08_quantum/01_quantum_systems.md), [Động lực học lượng tử và tán xạ](../08_quantum/06_time_dependent_scattering.md), [Năng lượng tương đối tính](../07_relativity/00_special_relativity.md).
 
 **Liên hệ tiếp:** [Bức xạ và detector](02_radiation_detection.md), [Plasma](../10_condensed_matter_devices/03_plasma_physics.md), [Vật lý sao](../11_astrophysics_cosmology/00_stars_compact_objects.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic physics](./00_atomic_physics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

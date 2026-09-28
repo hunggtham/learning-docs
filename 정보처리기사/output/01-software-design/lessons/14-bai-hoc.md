@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **3. 현행 시스템 파악 (Understanding Current System)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 모델링 및 UML (Mô hình hóa và UML)** và nối nó với **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -44,7 +46,7 @@
 - 배치 다이어그램 (Deployment Diagram)
 - 복합체 구조 다이어그램 (Composite Structure Diagram)
 - 패키지 다이어그램 (Package Diagram)
-- **Ví dụ (Example):** Class Diagram thể hiện cấu trúc tĩnh của hệ thống, giống như sơ đồ tổ chức của một công ty.
+- **Ví dụ (Example):** lớp (class / 클래스) Diagram thể hiện cấu trúc tĩnh của hệ thống, giống như sơ đồ tổ chức của một công ty.
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **LĐCBPG** (Lớp - Đối - Com - Bố - Phức - Gói): **Làm Được Có Bữa Phải Giỏi**. Các biểu đồ này thể hiện cấu trúc "Tĩnh" (정적).
 
 ### 016. 행위(Behavioral) 다이어그램의 종류 (Các loại biểu đồ hành vi - Động)
@@ -55,13 +57,13 @@
 - 활동 다이어그램 (Activity Diagram)
 - 상호작용 개요 다이어그램 (Interaction Overview Diagram)
 - 타이밍 다이어그램 (Timing Diagram)
-- **Ví dụ (Example):** Sequence Diagram thể hiện trình tự thời gian gửi tin nhắn (메시지) giữa các đối tượng (hành vi động).
+- **Ví dụ (Example):** chuỗi (sequence / 시퀀스) Diagram thể hiện trình tự thời gian gửi tin nhắn (메시지) giữa các đối tượng (hành vi động).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **UTCTHTT** (Use - Trình - Com - Trạng - Hoạt - Tương - Time): **Uống Trà Chiều Thấy Hay Thật Tuyệt**. Các biểu đồ này thể hiện đặc tính "Động" (동적).
 
 ### 017. 스테레오 타입 (Stereotype)
 - UML에서 표현하는 기본 기능 외에 추가적인 기능을 표현하기 위해 사용한다. (Dùng để biểu diễn các chức năng bổ sung ngoài chức năng cơ bản trong UML.)
 - 길러멧(Guilemet)이라고 부르는 겹화살괄호(`<< >>`) 사이에 표현할 형태를 기술한다. (Viết hình thái muốn biểu diễn giữa cặp dấu ngoặc nhọn kép `<< >>` gọi là Guilemet.)
-- **Ví dụ (Example):** `<<include>>` hoặc `<<extend>>` trong Use Case Diagram.
+- **Ví dụ (Example):** `<<include>>` hoặc `<<extend>>` trong Use trường hợp (case / 사례) Diagram.
 
 ### 018. 유스케이스 다이어그램 - 액터(Actor) (Biểu đồ Use Case - Tác nhân)
 - 시스템과 상호작용을 하는 모든 외부 요소로, 사람이나 외부 시스템을 의미한다. (Là tất cả các yếu tố bên ngoài tương tác với hệ thống, có nghĩa là con người hoặc hệ thống bên ngoài.)
@@ -74,4 +76,4 @@
 - 생명선 (Lifeline - Đường đời)
 - 실행 상자 (Active Box - Hộp thực thi)
 - 메시지 (Message - Thông điệp)
-- **Ví dụ (Example):** Khi user (Actor) ấn nút mua hàng, một mũi tên (Message) sẽ được gửi đến Giỏ hàng (Object). Đường nét đứt sổ dọc xuống từ Giỏ hàng là 생명선 (Lifeline).
+- **Ví dụ (Example):** Khi người dùng (user / 사용자) (Actor) ấn nút mua hàng, một mũi tên (Message) sẽ được gửi đến Giỏ hàng (Object). Đường nét đứt sổ dọc xuống từ Giỏ hàng là 생명선 (Lifeline).

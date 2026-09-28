@@ -1,5 +1,8 @@
 # Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô
 
+> **Mạch đọc:** Đọc **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Molecularity khác reaction thứ tự (order / 순서)** sang **“Intermediate là chuyển tiếp (transition / 전이) trạng thái (state / 상태)”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Cơ chế phản ứng (reaction mechanism / 반응 메커니즘)** là mô hình mô tả chuỗi các bước vi mô biến chất phản ứng thành sản phẩm. Phương trình hóa học tổng chỉ là hạch toán đầu vào–đầu ra; cơ chế cố gắng giải thích **liên kết nào thay đổi trước, chất trung gian nào xuất hiện, trạng thái chuyển tiếp nào phải vượt qua và bước nào kiểm soát tốc độ trong từng điều kiện**.
 
 Hai phản ứng có cùng phương trình tổng có thể đi qua cơ chế hoàn toàn khác nhau và vì thế có tốc độ, độ chọn lọc và đáp ứng với xúc tác khác nhau. Do đó cơ chế không thể suy ra chỉ từ việc cân bằng phương trình.
@@ -20,15 +23,15 @@ nếu thực sự là một bước cơ bản lưỡng phân tử, định luậ
 r=k[A][B]
 \]
 
-Nhưng nếu cùng phương trình \(A+B\to I\) chỉ là viết tắt cho ba bước bên trong, không được tự động dùng hệ số stoichiometric làm reaction order.
+Nhưng nếu cùng phương trình \(A+B\to I\) chỉ là viết tắt cho ba bước bên trong, không được tự động dùng hệ số stoichiometric làm reaction thứ tự (order / 순서).
 
-## Molecularity khác reaction order
+## Molecularity khác reaction thứ tự (order / 순서)
 
-**Số phân tử tham gia bước cơ bản (molecularity)** là số tiểu phần cùng tham gia một elementary event. Nó chỉ có ý nghĩa cho bước cơ bản và thường là một hoặc hai; ba hạt cùng gặp đúng cấu hình ít phổ biến hơn nhiều.
+**Số phân tử tham gia bước cơ bản (molecularity)** là số tiểu phần cùng tham gia một elementary sự kiện (event / 이벤트). Nó chỉ có ý nghĩa cho bước cơ bản và thường là một hoặc hai; ba hạt cùng gặp đúng cấu hình ít phổ biến hơn nhiều.
 
-**Bậc phản ứng (reaction order)** là số mũ thực nghiệm trong rate law và có thể bằng 0, phân số hoặc âm.
+**Bậc phản ứng (reaction order)** là số mũ thực nghiệm trong tỷ lệ (rate / 비율) law và có thể bằng 0, phân số hoặc âm.
 
-Hai khái niệm chỉ trùng trong trường hợp đơn giản của elementary step tuân mass action.
+Hai khái niệm chỉ trùng trong trường hợp đơn giản của elementary step tuân mass hành động (action / 동작).
 
 # Chất trung gian và chất xúc tác
 
@@ -82,8 +85,8 @@ Tuy nhiên một mạng thật có thể có:
 - nhiều hàng rào gần tương đương;
 - intermediate tích lũy;
 - nhiều nhánh sản phẩm;
-- catalyst resting state;
-- thay đổi rate control theo nồng độ hoặc nhiệt độ.
+- catalyst resting trạng thái (state / 상태);
+- thay đổi tỷ lệ (rate / 비율) điều khiển (control / 제어) theo nồng độ hoặc nhiệt độ.
 
 Vì thế câu “rate-determining step” là một approximation. Trong cơ chế phức tạp, **mức kiểm soát tốc độ (degree of rate control)** được phân bố trên nhiều bước và có thể thay đổi theo điều kiện.
 
@@ -117,7 +120,7 @@ Tốc độ tạo P:
 r=k_2[I]=k_2K[A][B]
 \]
 
-Rate law quan sát được chứa A và B dù bước tạo sản phẩm trực tiếp chỉ chứa I.
+Tỷ lệ (rate / 비율) law quan sát được chứa A và B dù bước tạo sản phẩm trực tiếp chỉ chứa I.
 
 Đây là ví dụ cho cách một intermediate vô hình được loại bằng quan hệ nhiệt động.
 
@@ -169,7 +172,7 @@ Từ đó có thể suy tốc độ tạo P và Q.
 input → intermediate → product → output
 ```
 
-Tế bào sống và reactor liên tục thường ở steady state rất xa equilibrium. Nhầm hai khái niệm này làm sai cách hiểu cả sinh hóa và engineering.
+Tế bào sống và reactor liên tục thường ở steady trạng thái (state / 상태) rất xa equilibrium. Nhầm hai khái niệm này làm sai cách hiểu cả sinh hóa và kỹ thuật (engineering / 엔지니어링).
 
 # Trạng thái chuyển tiếp không phải intermediate
 
@@ -203,9 +206,9 @@ Trong simulation, chọn sai reaction coordinate có thể che mất barrier th�
 
 **Thuận nghịch vi mô (microscopic reversibility)** nói rằng ở equilibrium, đường vi mô thuận và nghịch phải tương thích với nhau.
 
-Nếu một cơ chế thuận đi qua các intermediate cụ thể, cơ chế nghịch không thể tùy ý dùng một chuỗi hoàn toàn không tương thích mà vẫn tuyên bố cùng equilibrium elementary process.
+Nếu một cơ chế thuận đi qua các intermediate cụ thể, cơ chế nghịch không thể tùy ý dùng một chuỗi hoàn toàn không tương thích mà vẫn tuyên bố cùng equilibrium elementary tiến trình (process / 프로세스).
 
-Điều này tạo liên kết giữa kinetics và thermodynamics, và đặt constraint lên ratio của forward/reverse rate constants.
+Điều này tạo liên kết giữa kinetics và thermodynamics, và đặt ràng buộc (constraint / 제약조건) lên ratio của forward/reverse tỷ lệ (rate / 비율) constants.
 
 # Detailed balance
 
@@ -215,13 +218,13 @@ Trong một mạng ở equilibrium, với các điều kiện thích hợp, từ
 r_i^+=r_i^-
 \]
 
-Khái niệm **cân bằng chi tiết (detailed balance)** mạnh hơn chỉ nói tổng concentration không đổi. Nó giúp kiểm tra thermodynamic consistency của kinetic models.
+Khái niệm **cân bằng chi tiết (detailed balance)** mạnh hơn chỉ nói tổng concentration không đổi. Nó giúp kiểm tra thermodynamic consistency của kinetic các mô hình (models / 모델들).
 
-Một model số vi phạm detailed balance có thể dự đoán “máy chuyển động vĩnh cửu” hóa học dù từng rate law riêng trông hợp lý.
+Một mô hình (model / 모델) số vi phạm detailed balance có thể dự đoán “máy chuyển động vĩnh cửu” hóa học dù từng tỷ lệ (rate / 비율) law riêng trông hợp lý.
 
 # Reaction intermediate có thể được phát hiện như thế nào?
 
-Intermediate thường có lifetime ngắn, vì vậy việc phát hiện phụ thuộc thang thời gian.
+Intermediate thường có thời gian tồn tại (lifetime / 수명) ngắn, vì vậy việc phát hiện phụ thuộc thang thời gian.
 
 Các chiến lược gồm:
 
@@ -231,10 +234,10 @@ Các chiến lược gồm:
 - isotope labeling;
 - mass spectrometry;
 - rapid quench;
-- product stereochemistry;
+- sản phẩm (product / 제품) stereochemistry;
 - kinetic isotope effects.
 
-Không quan sát được intermediate không chứng minh nó không tồn tại; lifetime có thể nằm ngoài cửa sổ của phương pháp đo.
+Không quan sát được intermediate không chứng minh nó không tồn tại; thời gian tồn tại (lifetime / 수명) có thể nằm ngoài cửa sổ của phương pháp đo.
 
 # Đánh dấu đồng vị — theo dõi nguyên tử đi đâu
 
@@ -246,7 +249,7 @@ Nếu oxygen trong sản phẩm đến từ nước thay vì molecular oxygen, i
 
 # Hiệu ứng đồng vị động học
 
-Thay H bằng D làm thay đổi tần số dao động và zero-point energy của liên kết. Nếu phá hoặc hình thành liên kết X–H có vai trò đáng kể trong transition state, tốc độ có thể thay đổi.
+Thay H bằng D làm thay đổi tần số dao động và zero-point năng lượng (energy / 에너지) của liên kết. Nếu phá hoặc hình thành liên kết X–H có vai trò đáng kể trong chuyển tiếp (transition / 전이) trạng thái (state / 상태), tốc độ có thể thay đổi.
 
 **Hiệu ứng đồng vị động học (kinetic isotope effect, KIE)**:
 
@@ -256,7 +259,7 @@ KIE=\frac{k_H}{k_D}
 
 là một probe cơ chế quan trọng.
 
-Tuy nhiên KIE lớn không tự động chứng minh một cơ chế duy nhất; cần kết hợp với evidence khác và hiểu equilibrium isotope effects.
+Tuy nhiên KIE lớn không tự động chứng minh một cơ chế duy nhất; cần kết hợp với bằng chứng (evidence / 증거) khác và hiểu equilibrium isotope effects.
 
 # Hammett và quan hệ năng lượng tự do tuyến tính
 
@@ -268,9 +271,9 @@ Trong organic chemistry, thay substituent trên một series cấu trúc có th�
 
 liên hệ ảnh hưởng điện tử của substituent với sensitivity của reaction center.
 
-Nếu một tập dữ liệu đổi slope hoặc không còn tuyến tính, đó có thể là dấu hiệu mechanism hoặc transition-state character thay đổi.
+Nếu một tập dữ liệu đổi slope hoặc không còn tuyến tính, đó có thể là dấu hiệu cơ chế (mechanism / 메커니즘) hoặc transition-state character thay đổi.
 
-Đây là ví dụ cho cách kinetics dùng series thực nghiệm để suy electronic structure của transition state.
+Đây là ví dụ cho cách kinetics dùng series thực nghiệm để suy electronic cấu trúc (structure / 구조) của chuyển tiếp (transition / 전이) trạng thái (state / 상태).
 
 # Curtin–Hammett — population nhỏ vẫn có thể cho sản phẩm chính
 
@@ -280,7 +283,7 @@ Nếu hai conformer interconvert nhanh hơn phản ứng tạo sản phẩm:
 A\rightleftharpoons B
 \]
 
-và mỗi conformer đi tới sản phẩm khác, tỉ lệ sản phẩm không chỉ phụ thuộc population của A/B mà phụ thuộc **năng lượng tự do của các transition states tính từ equilibrium ensemble**.
+và mỗi conformer đi tới sản phẩm khác, tỉ lệ sản phẩm không chỉ phụ thuộc population của A/B mà phụ thuộc **năng lượng tự do của các chuyển tiếp (transition / 전이) states tính từ equilibrium ensemble**.
 
 Một conformer ít tồn tại vẫn có thể tạo sản phẩm chính nếu barrier từ nó thấp hơn đủ nhiều.
 
@@ -318,9 +321,9 @@ A\xrightarrow{k_1}I\xrightarrow{k_2}P
 
 intermediate I thường tăng rồi giảm theo thời gian. Nếu mục tiêu là thu I, thời điểm dừng phản ứng trở thành biến thiết kế quan trọng.
 
-Trong manufacturing, residence time có thể quyết định selectivity nhiều không kém catalyst identity.
+Trong manufacturing, residence thời gian (time / 시간) có thể quyết định selectivity nhiều không kém catalyst định danh (identity / 식별자).
 
-# Chain reactions và radicals
+# Chuỗi (chain / 사슬) reactions và radicals
 
 Một phản ứng chuỗi thường gồm:
 
@@ -331,9 +334,9 @@ khơi mào
 → kết thúc
 ```
 
-Trong combustion, một radical có thể tạo nhiều radical mới, dẫn tới chain branching và tốc độ tăng cực nhanh.
+Trong combustion, một radical có thể tạo nhiều radical mới, dẫn tới chuỗi (chain / 사슬) branching và tốc độ tăng cực nhanh.
 
-Trong polymerization, radical propagation kéo dài chain, còn termination kiểm soát molecular-weight distribution.
+Trong polymerization, radical propagation kéo dài chuỗi (chain / 사슬), còn termination kiểm soát molecular-weight phân phối (distribution / 분포).
 
 Do đó “một phản ứng” có thể là một population động của reactive intermediates chứ không phải một sự kiện đơn.
 
@@ -345,42 +348,42 @@ Với nhiều species:
 \frac{d\mathbf C}{dt}=S\mathbf r(\mathbf C)
 \]
 
-Mỗi column của \(S\) mô tả stoichiometry của một elementary reaction; vector \(\mathbf r\) chứa rate laws.
+Mỗi column của \(S\) mô tả stoichiometry của một elementary reaction; véc-tơ (vector / 벡터) \(\mathbf r\) chứa tỷ lệ (rate / 비율) laws.
 
 Solver số cho phép dự đoán concentration theo thời gian. Nhưng simulation chỉ đáng tin nếu:
 
 - species set hợp lý;
-- rate constants có evidence;
+- tỷ lệ (rate / 비율) constants có bằng chứng (evidence / 증거);
 - thermodynamic reversibility được tôn trọng;
-- transport không bị bỏ qua khi nó chi phối.
+- vận chuyển (transport / 전송) không bị bỏ qua khi nó chi phối.
 
 Mô hình lớn không tự động là mô hình đúng.
 
 # Phân tích độ nhạy
 
-Nếu model có hàng trăm reactions, không phải tất cả đều quan trọng như nhau trong mọi điều kiện.
+Nếu mô hình (model / 모델) có hàng trăm reactions, không phải tất cả đều quan trọng như nhau trong mọi điều kiện.
 
-**Phân tích độ nhạy (sensitivity analysis)** hỏi output thay đổi bao nhiêu khi một \(k_i\) thay đổi:
+**Phân tích độ nhạy (sensitivity analysis)** hỏi đầu ra (output / 출력) thay đổi bao nhiêu khi một \(k_i\) thay đổi:
 
 \[
 S_i=\frac{\partial y}{\partial k_i}
 \]
 
-Điều này giúp tìm reaction pathways chi phối và ưu tiên rate constant nào cần đo chính xác hơn.
+Điều này giúp tìm reaction pathways chi phối và ưu tiên tỷ lệ (rate / 비율) constant nào cần đo chính xác hơn.
 
 # Identifiability — cùng dữ liệu có thể hỗ trợ nhiều cơ chế
 
-Một rate law khớp dữ liệu không chứng minh cơ chế là duy nhất.
+Một tỷ lệ (rate / 비율) law khớp dữ liệu không chứng minh cơ chế là duy nhất.
 
 Hai networks khác nhau có thể tạo concentration curves gần giống nhau trong một tập điều kiện. Đây là vấn đề **khả năng nhận dạng cơ chế (mechanism identifiability)**.
 
-Muốn phân biệt, cần thiết kế thí nghiệm nơi hai cơ chế dự đoán khác nhau: thay isotope, temperature, pressure, concentration range hoặc đo intermediate trực tiếp.
+Muốn phân biệt, cần thiết kế thí nghiệm nơi hai cơ chế dự đoán khác nhau: thay isotope, temperature, pressure, concentration phạm vi (range / 범위) hoặc đo intermediate trực tiếp.
 
-Đây là tư duy mạnh hơn việc “fit một đường rồi chọn mechanism”.
+Đây là tư duy mạnh hơn việc “fit một đường rồi chọn cơ chế (mechanism / 메커니즘)”.
 
 # Cơ chế không nên chi tiết hơn bằng chứng
 
-Nếu dữ liệu chỉ hỗ trợ một rate law hiệu dụng, việc vẽ mười intermediate đẹp mắt không làm cơ chế đáng tin hơn.
+Nếu dữ liệu chỉ hỗ trợ một tỷ lệ (rate / 비율) law hiệu dụng, việc vẽ mười intermediate đẹp mắt không làm cơ chế đáng tin hơn.
 
 Một cơ chế khoa học tốt phải phân biệt rõ:
 
@@ -395,30 +398,35 @@ Một cơ chế khoa học tốt phải phân biệt rõ:
 
 # Những hiểu lầm thường gặp
 
-### “Intermediate là transition state”
+### “Intermediate là chuyển tiếp (transition / 전이) trạng thái (state / 상태)”
 
-Không. Intermediate là minimum tương đối; transition state là barrier region giữa các minima.
+Không. Intermediate là minimum tương đối; chuyển tiếp (transition / 전이) trạng thái (state / 상태) là barrier region giữa các minima.
 
 ### “Bước chậm nhất luôn quyết định tốc độ”
 
-Đây chỉ là approximation. Rate control có thể phân bố và thay đổi theo điều kiện.
+Đây chỉ là approximation. tỷ lệ (rate / 비율) điều khiển (control / 제어) có thể phân bố và thay đổi theo điều kiện.
 
-### “Mechanism cộng đúng phương trình tổng thì mechanism đúng”
+### “cơ chế (mechanism / 메커니즘) cộng đúng phương trình tổng thì cơ chế (mechanism / 메커니즘) đúng”
 
-Đó chỉ là điều kiện cần. Cơ chế còn phải phù hợp rate law và evidence độc lập.
+Đó chỉ là điều kiện cần. Cơ chế còn phải phù hợp tỷ lệ (rate / 비율) law và bằng chứng (evidence / 증거) độc lập.
 
-### “Khớp rate law chứng minh mechanism duy nhất”
+### “Khớp tỷ lệ (rate / 비율) law chứng minh cơ chế (mechanism / 메커니즘) duy nhất”
 
-Không. Nhiều mechanisms có thể tạo cùng rate law hiệu dụng.
+Không. Nhiều mechanisms có thể tạo cùng tỷ lệ (rate / 비율) law hiệu dụng.
 
 ### “Không nhìn thấy intermediate nghĩa nó không tồn tại”
 
-Không. Detection phụ thuộc lifetime, concentration và time resolution.
+Không. Detection phụ thuộc thời gian tồn tại (lifetime / 수명), concentration và thời gian (time / 시간) resolution.
+
+
+> **Chuyển mạch:** Từ **Molecularity khác reaction thứ tự (order / 순서)**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
-Phương trình tổng giống **API contract** nói hệ nhận gì và trả gì. Cơ chế giống **implementation bên trong** gồm nhiều trạng thái, nhánh và vòng lặp. Kinetics, isotope labeling, spectroscopy và computation là những cách quan sát implementation gián tiếp.
+Phương trình tổng giống **Đặc tả API (API contract / API 계약)** nói hệ nhận gì và trả gì. Cơ chế giống **hiện thực (implementation / 구현) bên trong** gồm nhiều trạng thái, nhánh và vòng lặp. Kinetics, isotope labeling, spectroscopy và computation là những cách quan sát hiện thực (implementation / 구현) gián tiếp.
 
 Một cơ chế tốt không chỉ giải thích dữ liệu cũ mà phải tạo ra **dự đoán mới có thể bị kiểm chứng**.
 
 Xem tiếp: [Năng lượng hoạt hóa và Arrhenius](./03_activation_energy_and_arrhenius.md), [Xúc tác](./04_catalysis.md) và [Mạng phản ứng](../04_chemical_quantities/06_stoichiometric_matrices_and_reaction_networks.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reaction rates](./00_reaction_rates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

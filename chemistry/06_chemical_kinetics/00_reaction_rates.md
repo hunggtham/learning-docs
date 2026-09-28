@@ -1,5 +1,7 @@
 # Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian
 
+> **Mạch đọc:** Đọc **Tốc độ phản ứng — đo sự thay đổi hóa học theo thời gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tốc độ là mức thay đổi theo thời gian** sang **Tốc độ trung bình và tốc độ tức thời**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Động học hóa học (chemical kinetics / 화학 반응 속도론)** nghiên cứu phản ứng xảy ra nhanh đến mức nào, tốc độ phụ thuộc điều kiện ra sao và những bước vi mô nào tạo nên tốc độ quan sát được. Nhiệt động lực học cho biết một biến đổi có thuận lợi hay không; động học cho biết hệ có thể đi tới trạng thái đó trong microsecond, vài giờ hay hàng triệu năm.
 
 Một phản ứng có thể rất thuận lợi về năng lượng tự do nhưng vẫn gần như không xảy ra ở nhiệt độ phòng nếu con đường phản ứng có hàng rào lớn. Vì vậy muốn hiểu một quá trình hóa học thực tế phải luôn tách hai câu hỏi:
@@ -187,7 +189,7 @@ Một mô hình tốc độ không được phép vi phạm bảo toàn nguyên 
 \frac{d\mathbf n}{dt}=S\mathbf r
 \]
 
-ma trận hóa lượng \(S\) chuyển vector tốc độ các phản ứng cơ bản thành tốc độ thay đổi số mol của các loài.
+ma trận hóa lượng \(S\) chuyển véc-tơ (vector / 벡터) tốc độ các phản ứng cơ bản thành tốc độ thay đổi số mol của các loài.
 
 Điều này cho thấy động học phức tạp có thể được tổ chức bằng đại số tuyến tính thay vì viết riêng từng phương trình một cách rời rạc.
 
@@ -250,3 +252,5 @@ Hãy xem động học như một bài toán ba tầng:
 Nhiệt động lực học cho “địa hình”; động học cho biết hệ di chuyển trên địa hình đó bằng con đường nào và nhanh đến mức nào.
 
 Xem tiếp: [Phương trình tốc độ](./01_rate_laws.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 rate laws](./01_rate_laws.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,16 +1,19 @@
-# Kotlin + Android Version Evolution — từ Kotlin 1.x đến 2.4 và cách đọc project cũ/mới
+# Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới
 
-Version trong Kotlin + Android phức tạp hơn việc nhìn một con số như `2.4.20`. Một project Android thực tế có nhiều trục version độc lập nhưng liên quan với nhau: version của ngôn ngữ Kotlin, Kotlin compiler, Kotlin Gradle Plugin, Compose compiler, Android Gradle Plugin, Gradle, JDK, `jvmTarget`, Android SDK, Jetpack libraries và policy của Google Play.
+> **Mạch đọc:** Đặt **Kotlin + Android phiên bản (version / 버전) Evolution — từ Kotlin 1.x đến 2.4 và cách đọc dự án (project / 프로젝트) cũ/mới** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trước hết phải phân biệt các loại phiên bản (version / 버전)** sang **1.1 Kotlin bản phát hành (release / 릴리스) phiên bản (version / 버전)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Nếu chỉ nhớ “project đang dùng Kotlin 2.4” mà không hiểu các trục này, rất dễ gặp lỗi kiểu compiler plugin không tương thích, AGP không hỗ trợ API level mới, library compile được nhưng consumer cũ không dùng được, hoặc app chạy tốt trên Android cũ nhưng đổi behavior sau khi tăng `targetSdk`.
 
-File này được viết như **version map + migration guide**, tương tự cách học version evolution của Java, JavaScript/ECMAScript hoặc Swift: không chỉ hỏi phiên bản nào mới hơn, mà phải hiểu **mỗi thế hệ đã thay đổi mental model nào, code cũ trông ra sao, code mới nên viết như thế nào, và khi upgrade phải kiểm tra những boundary nào**.
+Phiên bản (version / 버전) trong Kotlin + Android phức tạp hơn việc nhìn một con số như `2.4.20`. Một dự án (project / 프로젝트) Android thực tế có nhiều trục phiên bản (version / 버전) độc lập nhưng liên quan với nhau: phiên bản (version / 버전) của ngôn ngữ Kotlin, Kotlin trình biên dịch (compiler / 컴파일러), Kotlin Gradle Plugin, Compose trình biên dịch (compiler / 컴파일러), Android Gradle Plugin, Gradle, JDK, `jvmTarget`, Android SDK, Jetpack libraries và chính sách (policy / 정책) của Google Play.
+
+Nếu chỉ nhớ “dự án (project / 프로젝트) đang dùng Kotlin 2.4” mà không hiểu các trục này, rất dễ gặp lỗi kiểu trình biên dịch (compiler / 컴파일러) plugin không tương thích, AGP không hỗ trợ API mức (level / 수준) mới, thư viện (library / 라이브러리) compile được nhưng bên tiêu thụ (consumer / 소비자) cũ không dùng được, hoặc app chạy tốt trên Android cũ nhưng đổi hành vi (behavior / 동작) sau khi tăng `targetSdk`.
+
+Tệp (file / 파일) này được viết như **phiên bản (version / 버전) map + di chuyển (migration / 마이그레이션) guide**, tương tự cách học phiên bản (version / 버전) evolution của Java, JavaScript/ECMAScript hoặc Swift: không chỉ hỏi phiên bản nào mới hơn, mà phải hiểu **mỗi thế hệ đã thay đổi mô hình tư duy (mental model / 사고 모델) nào, mã (code / 코드) cũ trông ra sao, mã (code / 코드) mới nên viết như thế nào, và khi upgrade phải kiểm tra những ranh giới (boundary / 경계) nào**.
 
 ---
 
-## 1. Trước hết phải phân biệt các loại version
+## 1. Trước hết phải phân biệt các loại phiên bản (version / 버전)
 
-### 1.1 Kotlin release version
+### 1.1 Kotlin bản phát hành (release / 릴리스) phiên bản (version / 버전)
 
 Ví dụ:
 
@@ -23,7 +26,7 @@ Ví dụ:
 2.4.20
 ```
 
-Đây là version của Kotlin toolchain/release line. Nó ảnh hưởng compiler, standard library, Kotlin Gradle Plugin và các language/tooling feature đi kèm.
+Đây là phiên bản (version / 버전) của Kotlin toolchain/bản phát hành (release / 릴리스) line. Nó ảnh hưởng trình biên dịch (compiler / 컴파일러), thư viện chuẩn (standard library / 표준 라이브러리), Kotlin Gradle Plugin và các ngôn ngữ (language / 언어)/tooling tính năng (feature / 기능) đi kèm.
 
 Tại thời điểm snapshot của bộ tài liệu này, stable line hiện tại là:
 
@@ -33,13 +36,13 @@ Released: 2026-09-07
 Release line: 2.4
 ```
 
-Kotlin 2.4 được JetBrains liệt kê với support window tới cuối năm 2027. Con số này là snapshot, không phải version phải giữ cố định mãi mãi.
+Kotlin 2.4 được JetBrains liệt kê với hỗ trợ (support / 지원) cửa sổ (window / 윈도우) tới cuối năm 2027. Con số này là snapshot, không phải phiên bản (version / 버전) phải giữ cố định mãi mãi.
 
 ---
 
 ### 1.2 `languageVersion`
 
-`languageVersion` quyết định **bộ quy tắc ngôn ngữ** mà compiler cho phép source code sử dụng.
+`languageVersion` quyết định **bộ quy tắc ngôn ngữ** mà trình biên dịch (compiler / 컴파일러) cho phép mã nguồn (source code / 소스 코드) sử dụng.
 
 Ví dụ conceptually:
 
@@ -51,7 +54,7 @@ kotlin {
 }
 ```
 
-Một compiler mới có thể đôi khi compile code theo language level cũ để hỗ trợ migration/library compatibility.
+Một trình biên dịch (compiler / 컴파일러) mới có thể đôi khi compile mã (code / 코드) theo ngôn ngữ (language / 언어) mức (level / 수준) cũ để hỗ trợ di chuyển (migration / 마이그레이션)/thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성).
 
 Điểm quan trọng:
 
@@ -59,15 +62,15 @@ Một compiler mới có thể đôi khi compile code theo language level cũ đ
 compiler version != language version bắt buộc phải giống tuyệt đối
 ```
 
-Compiler 2.x có thể hỗ trợ một số language/API version cũ, nhưng support window không vô hạn. Ví dụ từ Kotlin 2.2, language version 1.6 và 1.7 không còn được compiler hỗ trợ nữa.
+Trình biên dịch (compiler / 컴파일러) 2.x có thể hỗ trợ một số ngôn ngữ (language / 언어)/API phiên bản (version / 버전) cũ, nhưng hỗ trợ (support / 지원) cửa sổ (window / 윈도우) không vô hạn. Ví dụ từ Kotlin 2.2, ngôn ngữ (language / 언어) phiên bản (version / 버전) 1.6 và 1.7 không còn được trình biên dịch (compiler / 컴파일러) hỗ trợ nữa.
 
 ---
 
 ### 1.3 `apiVersion`
 
-`apiVersion` giới hạn version của Kotlin standard library API mà source code được phép gọi.
+`apiVersion` giới hạn phiên bản (version / 버전) của Kotlin thư viện chuẩn (standard library / 표준 라이브러리) API mà mã nguồn (source code / 소스 코드) được phép gọi.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 languageVersion
@@ -77,13 +80,13 @@ apiVersion
 = API stdlib tới version nào được phép dùng
 ```
 
-Điều này hữu ích cho library author muốn compile bằng compiler mới nhưng vẫn tránh vô tình sử dụng API quá mới so với consumer target.
+Điều này hữu ích cho thư viện (library / 라이브러리) author muốn compile bằng trình biên dịch (compiler / 컴파일러) mới nhưng vẫn tránh vô tình sử dụng API quá mới so với bên tiêu thụ (consumer / 소비자) mục tiêu (target / 대상).
 
 ---
 
 ### 1.4 `jvmTarget`
 
-`jvmTarget` quyết định bytecode JVM output được tạo cho JVM level nào.
+`jvmTarget` quyết định bytecode JVM đầu ra (output / 출력) được tạo cho JVM mức (level / 수준) nào.
 
 Ví dụ:
 
@@ -110,13 +113,13 @@ Android minSdk
 
 đều là cùng một thứ.
 
-Chúng liên quan nhưng là các contract khác nhau.
+Chúng liên quan nhưng là các đặc tả hợp đồng (contract / 계약) khác nhau.
 
 ---
 
 ### 1.5 JDK toolchain
 
-JDK toolchain là Java compiler/runtime toolchain dùng trong build.
+JDK toolchain là Java trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) toolchain dùng trong bản dựng (build / 빌드).
 
 Ví dụ:
 
@@ -126,7 +129,7 @@ kotlin {
 }
 ```
 
-Android Gradle Plugin cũng có yêu cầu JDK riêng theo version. Vì vậy upgrade AGP có thể buộc project nâng JDK dù source Kotlin không thay đổi.
+Android Gradle Plugin cũng có yêu cầu JDK riêng theo phiên bản (version / 버전). Vì vậy upgrade AGP có thể buộc dự án (project / 프로젝트) nâng JDK dù nguồn (source / 소스) Kotlin không thay đổi.
 
 ---
 
@@ -140,9 +143,9 @@ plugins {
 }
 ```
 
-KGP nối Gradle với Kotlin compiler/toolchain.
+KGP nối Gradle với Kotlin trình biên dịch (compiler / 컴파일러)/toolchain.
 
-Khi nói “upgrade Kotlin trong Android project”, trên thực tế thường đang thay đổi version KGP trong build configuration.
+Khi nói “upgrade Kotlin trong Android dự án (project / 프로젝트)”, trên thực tế thường đang thay đổi phiên bản (version / 버전) KGP trong bản dựng (build / 빌드) cấu hình (configuration / 구성).
 
 ---
 
@@ -158,7 +161,7 @@ AGP
 = Gradle ↔ Android build model
 ```
 
-AGP quyết định cách Android module được build, resource/manifest merge, variant, packaging, D8/R8, SDK support và nhiều behavior build khác.
+AGP quyết định cách Android mô-đun (module / 모듈) được bản dựng (build / 빌드), tài nguyên (resource / 자원)/manifest merge, variant, packaging, D8/R8, SDK hỗ trợ (support / 지원) và nhiều hành vi (behavior / 동작) bản dựng (build / 빌드) khác.
 
 Vì vậy:
 
@@ -168,9 +171,9 @@ không đồng nghĩa
 AGP phải là 2.4.20
 ```
 
-Chúng có release cadence khác nhau.
+Chúng có bản phát hành (release / 릴리스) cadence khác nhau.
 
-Snapshot đang dùng trong library:
+Snapshot đang dùng trong thư viện (library / 라이브러리):
 
 ```text
 Kotlin: 2.4.20
@@ -179,11 +182,11 @@ AGP baseline: 9.4.1
 
 ---
 
-### 1.8 Gradle version
+### 1.8 Gradle phiên bản (version / 버전)
 
-Gradle là build system bên dưới.
+Gradle là hệ thống dựng (build system / 빌드 시스템) bên dưới.
 
-Ta có chuỗi dependency:
+Ta có chuỗi phụ thuộc (dependency / 의존성):
 
 ```text
 Gradle
@@ -193,15 +196,15 @@ AGP / KGP
 Android/Kotlin modules
 ```
 
-Một KGP hoặc AGP mới có minimum/maximum Gradle compatibility riêng.
+Một KGP hoặc AGP mới có minimum/maximum Gradle tính tương thích (compatibility / 호환성) riêng.
 
-Kotlin 2.4.20 hỗ trợ chính thức Gradle 7.6.3 tới 9.7.0; dùng version khác có thể vẫn chạy nhưng không nằm trong fully supported range.
+Kotlin 2.4.20 hỗ trợ chính thức Gradle 7.6.3 tới 9.7.0; dùng phiên bản (version / 버전) khác có thể vẫn chạy nhưng không nằm trong fully supported phạm vi (range / 범위).
 
 ---
 
 ### 1.9 Android `minSdk`, `compileSdk`, `targetSdk`
 
-Đây là ba version axis khác hẳn Kotlin.
+Đây là ba phiên bản (version / 버전) axis khác hẳn Kotlin.
 
 ```kotlin
 android {
@@ -241,31 +244,31 @@ và đây là cấu hình hoàn toàn có nghĩa.
 
 ## 2. Timeline tổng quan Kotlin
 
-Bảng dưới không cố liệt kê mọi bug-fix release. Nó tập trung vào những release làm thay đổi cách đọc hoặc viết code.
+Bảng dưới không cố liệt kê mọi bug-fix bản phát hành (release / 릴리스). Nó tập trung vào những bản phát hành (release / 릴리스) làm thay đổi cách đọc hoặc viết mã (code / 코드).
 
 | Thế hệ | Thời gian | Ý nghĩa chính |
 |---|---:|---|
 | Kotlin 1.0 | 2016 | Ngôn ngữ JVM stable; nền móng Kotlin hiện đại |
 | Kotlin 1.1 | 2017 | Coroutine xuất hiện ở experimental stage; ecosystem Android tăng mạnh |
 | Kotlin 1.2 | 2017 | Multiplatform bắt đầu hình thành rõ hơn |
-| Kotlin 1.3 | 2018 | Coroutine trở thành language feature stable; multiplatform/tooling trưởng thành hơn |
-| Kotlin 1.4 | 2020 | Compiler/type inference/build backend bắt đầu chuyển thế hệ |
-| Kotlin 1.5 | 2021 | JVM IR backend mặc định, sealed interface, value class, JVM record support |
-| Kotlin 1.6 | 2021 | `when` exhaustiveness và coroutine-related language semantics được siết chặt |
-| Kotlin 1.7 | 2022 | K2 Alpha, builder inference và definitely-non-null types stable |
-| Kotlin 1.8 | 2022–2023 | JVM baseline cũ được dọn dẹp; stdlib JVM target chuyển hẳn sang 1.8 |
+| Kotlin 1.3 | 2018 | Coroutine trở thành ngôn ngữ (language / 언어) tính năng (feature / 기능) stable; multiplatform/tooling trưởng thành hơn |
+| Kotlin 1.4 | 2020 | trình biên dịch (compiler / 컴파일러)/kiểu (type / 타입) suy luận (inference / 추론)/bản dựng (build / 빌드) backend bắt đầu chuyển thế hệ |
+| Kotlin 1.5 | 2021 | JVM IR backend mặc định, sealed giao diện (interface / 인터페이스), giá trị (value / 값) lớp (class / 클래스), JVM bản ghi (record / 레코드) hỗ trợ (support / 지원) |
+| Kotlin 1.6 | 2021 | `when` exhaustiveness và coroutine-related ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) được siết chặt |
+| Kotlin 1.7 | 2022 | K2 Alpha, builder suy luận (inference / 추론) và definitely-non-null types stable |
+| Kotlin 1.8 | 2022–2023 | JVM baseline cũ được dọn dẹp; stdlib JVM mục tiêu (target / 대상) chuyển hẳn sang 1.8 |
 | Kotlin 1.9 | 2023–2024 | K2 Beta, `data object`, enum `entries`, KMP stable ở 1.9.20 |
-| Kotlin 2.0 | 2024 | K2 compiler Stable; Compose compiler chuyển vào Kotlin repository |
-| Kotlin 2.1 | 2024–2025 | K2 ecosystem/tooling trưởng thành; preview nhiều language feature mới |
-| Kotlin 2.2 | 2025 | Nhiều feature mới stable; migration Gradle DSL mạnh hơn sang `compilerOptions` |
-| Kotlin 2.3 | 2025–2026 | Tiếp tục stabilize language; explicit backing field xuất hiện experimental |
-| Kotlin 2.4 | 2026 | Context parameters và explicit backing fields stable; Java 26 support và toolchain mới |
+| Kotlin 2.0 | 2024 | K2 trình biên dịch (compiler / 컴파일러) Stable; Compose trình biên dịch (compiler / 컴파일러) chuyển vào Kotlin repository |
+| Kotlin 2.1 | 2024–2025 | K2 ecosystem/tooling trưởng thành; preview nhiều ngôn ngữ (language / 언어) tính năng (feature / 기능) mới |
+| Kotlin 2.2 | 2025 | Nhiều tính năng (feature / 기능) mới stable; di chuyển (migration / 마이그레이션) Gradle DSL mạnh hơn sang `compilerOptions` |
+| Kotlin 2.3 | 2025–2026 | Tiếp tục stabilize ngôn ngữ (language / 언어); tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) xuất hiện experimental |
+| Kotlin 2.4 | 2026 | ngữ cảnh (context / 맥락) parameters và tường minh (explicit / 명시적) backing fields stable; Java 26 hỗ trợ (support / 지원) và toolchain mới |
 
 ---
 
 # 3. Kotlin 1.0 — nền tảng stable đầu tiên
 
-Kotlin/JVM 1.0 đặt nền móng cho phần lớn syntax người dùng vẫn thấy ngày nay:
+Kotlin/JVM 1.0 đặt nền móng cho phần lớn cú pháp (syntax / 문법) người dùng vẫn thấy ngày nay:
 
 ```kotlin
 val
@@ -281,11 +284,11 @@ nullable type T?
 ?:
 ```
 
-Một điểm đáng chú ý của Kotlin là phần lớn syntax nền tảng này không bị thay đổi triệt để khi lên 2.x. Kotlin tiến hóa theo hướng compatibility tương đối mạnh thay vì liên tục viết lại language core.
+Một điểm đáng chú ý của Kotlin là phần lớn cú pháp (syntax / 문법) nền tảng này không bị thay đổi triệt để khi lên 2.x. Kotlin tiến hóa theo hướng tính tương thích (compatibility / 호환성) tương đối mạnh thay vì liên tục viết lại ngôn ngữ (language / 언어) cốt lõi (core / 핵심).
 
-Vì vậy project Kotlin rất cũ vẫn có thể trông “quen” với developer Kotlin hiện tại.
+Vì vậy dự án (project / 프로젝트) Kotlin rất cũ vẫn có thể trông “quen” với nhà phát triển (developer / 개발자) Kotlin hiện tại.
 
-Điều thay đổi mạnh hơn qua các version thường nằm ở:
+Điều thay đổi mạnh hơn qua các phiên bản (version / 버전) thường nằm ở:
 
 ```text
 compiler backend
@@ -306,11 +309,11 @@ deprecation cycle
 
 Kotlin 1.1 là thời kỳ coroutine bắt đầu xuất hiện nhưng chưa có ecosystem ổn định như hiện nay.
 
-Nếu đọc code rất cũ, có thể gặp coroutine API hoặc experimental annotation khác xa code hiện đại.
+Nếu đọc mã (code / 코드) rất cũ, có thể gặp coroutine API hoặc experimental annotation khác xa mã (code / 코드) hiện đại.
 
-Không nên copy nguyên tutorial Kotlin 1.1/1.2 về coroutine vào project hiện tại.
+Không nên bản sao (copy / 복사) nguyên tutorial Kotlin 1.1/1.2 về coroutine vào dự án (project / 프로젝트) hiện tại.
 
-Mental model cần giữ là:
+Mô hình tư duy (mental model / 사고 모델) cần giữ là:
 
 ```text
 language coroutine support
@@ -318,9 +321,9 @@ language coroutine support
 kotlinx.coroutines library
 ```
 
-là hai layer khác nhau.
+là hai tầng (layer / 계층) khác nhau.
 
-Compiler hiểu `suspend`, state machine và coroutine language semantics; library cung cấp `CoroutineScope`, `Dispatchers`, `launch`, `async`, Flow và structured-concurrency abstractions.
+Trình biên dịch (compiler / 컴파일러) hiểu `suspend`, máy trạng thái (state machine / 상태 머신) và coroutine ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론); thư viện (library / 라이브러리) cung cấp `CoroutineScope`, `Dispatchers`, `launch`, `async`, luồng (flow / 흐름) và structured-concurrency abstractions.
 
 ---
 
@@ -328,7 +331,7 @@ Compiler hiểu `suspend`, state machine và coroutine language semantics; libra
 
 Kotlin 1.3 là một mốc lớn vì coroutine chuyển sang giai đoạn stable đủ để ecosystem sử dụng rộng rãi.
 
-Từ đây Android gradually chuyển từ callback-heavy code:
+Từ đây Android gradually chuyển từ callback-heavy mã (code / 코드):
 
 ```kotlin
 api.load(object : Callback {
@@ -343,60 +346,60 @@ sang suspend-style:
 suspend fun load(): Data
 ```
 
-và structured concurrency hiện đại.
+và structured tính đồng thời (concurrency / 동시성) hiện đại.
 
-Khi maintain project Kotlin đời 1.3, cần để ý:
+Khi maintain dự án (project / 프로젝트) Kotlin đời 1.3, cần để ý:
 
-- coroutine library version có thể rất cũ;
-- Android Architecture Components khi đó thường dùng LiveData nhiều hơn Flow;
-- XML/Fragment là UI architecture chính;
-- Jetpack Compose chưa phải production UI stack.
+- coroutine thư viện (library / 라이브러리) phiên bản (version / 버전) có thể rất cũ;
+- Android kiến trúc (architecture / 아키텍처) Components khi đó thường dùng LiveData nhiều hơn luồng (flow / 흐름);
+- XML/Fragment là UI kiến trúc (architecture / 아키텍처) chính;
+- Jetpack Compose chưa phải môi trường vận hành (production / 운영 환경) UI ngăn xếp (stack / 스택).
 
 ---
 
-# 6. Kotlin 1.4 — giai đoạn chuyển compiler backend
+# 6. Kotlin 1.4 — giai đoạn chuyển trình biên dịch (compiler / 컴파일러) backend
 
-Kotlin 1.4 không chỉ thêm syntax. Đây là thời kỳ compiler architecture bắt đầu chuyển mạnh sang IR — Intermediate Representation.
+Kotlin 1.4 không chỉ thêm cú pháp (syntax / 문법). Đây là thời kỳ trình biên dịch (compiler / 컴파일러) kiến trúc (architecture / 아키텍처) bắt đầu chuyển mạnh sang IR — Intermediate biểu diễn (representation / 표현).
 
-IR giúp Kotlin có architecture compiler thống nhất hơn giữa JVM, JS, Native và về sau là nền tảng quan trọng cho compiler plugin như Compose.
+IR giúp Kotlin có kiến trúc (architecture / 아키텍처) trình biên dịch (compiler / 컴파일러) thống nhất hơn giữa JVM, JS, bản địa (native / 네이티브) và về sau là nền tảng quan trọng cho trình biên dịch (compiler / 컴파일러) plugin như Compose.
 
 Kotlin 1.4.30 đưa JVM IR backend lên Beta.
 
-Đây là ví dụ quan trọng cho cách đọc version history:
+Đây là ví dụ quan trọng cho cách đọc phiên bản (version / 버전) lịch sử (history / 이력):
 
 ```text
 user-visible syntax chỉ thay đổi ít
 nhưng generated bytecode/compiler plugin behavior có thể thay đổi lớn
 ```
 
-Vì vậy migration Kotlin không chỉ cần compile source code; với project có serialization/reflection/compiler plugin/R8 cần test runtime behavior.
+Vì vậy di chuyển (migration / 마이그레이션) Kotlin không chỉ cần compile mã nguồn (source code / 소스 코드); với dự án (project / 프로젝트) có serialization/reflection/trình biên dịch (compiler / 컴파일러) plugin/R8 cần kiểm thử (test / 테스트) hành vi thời gian chạy (runtime behavior / 런타임 동작).
 
 ---
 
-# 7. Kotlin 1.5 — JVM IR mặc định và modern type modeling
+# 7. Kotlin 1.5 — JVM IR mặc định và hiện đại (modern / 현대적) kiểu (type / 타입) modeling
 
-Kotlin 1.5 là một release rất quan trọng đối với Android/JVM.
+Kotlin 1.5 là một bản phát hành (release / 릴리스) rất quan trọng đối với Android/JVM.
 
 ## 7.1 JVM IR backend trở thành mặc định
 
-Trước 1.5, JVM compiler dùng backend cũ theo default.
+Trước 1.5, JVM trình biên dịch (compiler / 컴파일러) dùng backend cũ theo default.
 
 Từ Kotlin 1.5, IR backend trở thành stable/default.
 
 Điều này ảnh hưởng tới:
 
 - bytecode shape;
-- field ordering;
-- compiler plugin integration;
-- incremental build;
-- reflection/serialization edge case;
-- R8/proguard behavior trong một số project legacy.
+- trường dữ liệu (field / 필드) thứ tự (ordering / 순서);
+- trình biên dịch (compiler / 컴파일러) plugin tích hợp (integration / 통합);
+- incremental bản dựng (build / 빌드);
+- reflection/serialization trường hợp biên (edge case / 경계 사례);
+- R8/proguard hành vi (behavior / 동작) trong một số dự án (project / 프로젝트) legacy.
 
 ---
 
-## 7.2 Sealed interface
+## 7.2 Sealed giao diện (interface / 인터페이스)
 
-Modern Kotlin có thể viết:
+Hiện đại (modern / 현대적) Kotlin có thể viết:
 
 ```kotlin
 sealed interface UiState
@@ -410,22 +413,22 @@ data class Error(val message: String) : UiState
 
 `sealed interface` stable từ Kotlin 1.5.
 
-Project cũ có thể dùng `sealed class` ở những nơi hiện nay interface phù hợp hơn.
+Dự án (project / 프로젝트) cũ có thể dùng `sealed class` ở những nơi hiện nay giao diện (interface / 인터페이스) phù hợp hơn.
 
 ---
 
-## 7.3 Value class
+## 7.3 giá trị (value / 값) lớp (class / 클래스)
 
 ```kotlin
 @JvmInline
 value class UserId(val value: String)
 ```
 
-Value class cho phép tạo strong domain type mà nhiều trường hợp không cần allocation wrapper thông thường.
+Giá trị (value / 값) lớp (class / 클래스) cho phép tạo strong lĩnh vực (domain / 도메인) kiểu (type / 타입) mà nhiều trường hợp không cần allocation wrapper thông thường.
 
-Code rất cũ có thể gọi chúng là **inline class**.
+Mã (code / 코드) rất cũ có thể gọi chúng là **inline lớp (class / 클래스)**.
 
-Mental migration:
+Mental di chuyển (migration / 마이그레이션):
 
 ```text
 inline class   → legacy naming
@@ -436,20 +439,20 @@ value class    → modern naming
 
 ## 7.4 JVM records
 
-Kotlin 1.5 bổ sung interop với Java record:
+Kotlin 1.5 bổ sung interop với Java bản ghi (record / 레코드):
 
 ```kotlin
 @JvmRecord
 data class Point(val x: Int, val y: Int)
 ```
 
-Điều này quan trọng khi Kotlin library phải expose model cho Java ecosystem.
+Điều này quan trọng khi Kotlin thư viện (library / 라이브러리) phải expose mô hình (model / 모델) cho Java ecosystem.
 
 ---
 
-# 8. Kotlin 1.6 — exhaustive `when` và stricter correctness
+# 8. Kotlin 1.6 — exhaustive `when` và stricter tính đúng đắn (correctness / 정확성)
 
-Kotlin 1.6 bắt đầu siết nhiều semantic rule mà code cũ từng được phép bỏ qua.
+Kotlin 1.6 bắt đầu siết nhiều ngữ nghĩa (semantic / 의미적) quy tắc (rule / 규칙) mà mã (code / 코드) cũ từng được phép bỏ qua.
 
 Ví dụ với sealed hierarchy:
 
@@ -460,7 +463,7 @@ data object Success : Result
 data object Failure : Result
 ```
 
-Modern code nên viết exhaustive `when`:
+Hiện đại (modern / 현대적) mã (code / 코드) nên viết exhaustive `when`:
 
 ```kotlin
 when (result) {
@@ -469,9 +472,9 @@ when (result) {
 }
 ```
 
-Compiler dần chuyển những trường hợp non-exhaustive từ warning sang error qua release cycle.
+Trình biên dịch (compiler / 컴파일러) dần chuyển những trường hợp non-exhaustive từ warning sang lỗi (error / 오류) qua bản phát hành (release / 릴리스) cycle.
 
-Đây là pattern thường gặp trong Kotlin evolution:
+Đây là mẫu (pattern / 패턴) thường gặp trong Kotlin evolution:
 
 ```text
 allow
@@ -480,15 +483,15 @@ allow
 → compile error
 ```
 
-Do đó khi upgrade nhiều version một lúc, warnings của version cũ không nên bị xem nhẹ.
+Do đó khi upgrade nhiều phiên bản (version / 버전) một lúc, warnings của phiên bản (version / 버전) cũ không nên bị xem nhẹ.
 
 ---
 
 # 9. Kotlin 1.7 — K2 xuất hiện
 
-Kotlin 1.7.0 đưa K2 compiler ra Alpha cho JVM.
+Kotlin 1.7.0 đưa K2 trình biên dịch (compiler / 컴파일러) ra Alpha cho JVM.
 
-K2 không chỉ là “compiler nhanh hơn”. Mục tiêu lớn hơn là:
+K2 không chỉ là “trình biên dịch (compiler / 컴파일러) nhanh hơn”. Mục tiêu lớn hơn là:
 
 ```text
 một compiler frontend mới
@@ -499,33 +502,33 @@ một compiler frontend mới
 → unify platform behavior tốt hơn
 ```
 
-Tại 1.7, K2 chưa phù hợp cho production Android thông thường vì compiler plugin support còn hạn chế.
+Tại 1.7, K2 chưa phù hợp cho môi trường vận hành (production / 운영 환경) Android thông thường vì trình biên dịch (compiler / 컴파일러) plugin hỗ trợ (support / 지원) còn hạn chế.
 
-Cùng thời kỳ này, các feature như:
+Cùng thời kỳ này, các tính năng (feature / 기능) như:
 
-- builder inference;
+- builder suy luận (inference / 추론);
 - definitely non-null types;
 - opt-in requirements
 
 được stabilize.
 
-Definitely non-null type đặc biệt quan trọng khi làm generic Java interop:
+Definitely non-null kiểu (type / 타입) đặc biệt quan trọng khi làm generic Java interop:
 
 ```kotlin
 T & Any
 ```
 
-Nó biểu diễn generic `T` nhưng bắt buộc non-null ở boundary cần thiết.
+Nó biểu diễn generic `T` nhưng bắt buộc non-null ở ranh giới (boundary / 경계) cần thiết.
 
 ---
 
 # 10. Kotlin 1.8 — bỏ legacy JVM baseline
 
-Kotlin 1.8 là mốc dễ thấy khi maintain build cũ.
+Kotlin 1.8 là mốc dễ thấy khi maintain bản dựng (build / 빌드) cũ.
 
-Standard library chuyển sang JVM target 1.8 và không còn giữ baseline JVM 1.6/1.7.
+Thư viện chuẩn (standard library / 표준 라이브러리) chuyển sang JVM mục tiêu (target / 대상) 1.8 và không còn giữ baseline JVM 1.6/1.7.
 
-Các artifact riêng:
+Các sản phẩm tạo ra (artifact / 산출물) riêng:
 
 ```text
 kotlin-stdlib-jdk7
@@ -534,21 +537,21 @@ kotlin-stdlib-jdk8
 
 không còn cần khai báo như trước vì functionality đã được nhập vào `kotlin-stdlib`.
 
-Nếu thấy build cũ có:
+Nếu thấy bản dựng (build / 빌드) cũ có:
 
 ```kotlin
 implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:...")
 ```
 
-hãy hiểu đó thường là dấu hiệu project đến từ thế hệ cũ, không phải template nên tiếp tục copy.
+hãy hiểu đó thường là dấu hiệu dự án (project / 프로젝트) đến từ thế hệ cũ, không phải template nên tiếp tục bản sao (copy / 복사).
 
 ---
 
-# 11. Kotlin 1.9 — bridge giữa K1 và K2
+# 11. Kotlin 1.9 — cầu nối (bridge / 브리지) giữa K1 và K2
 
 Kotlin 1.9 là thế hệ cuối rất phổ biến trước Kotlin 2.x.
 
-Nhiều production Android codebase hiện nay vẫn có lịch sử từ 1.9.
+Nhiều môi trường vận hành (production / 운영 환경) Android codebase hiện nay vẫn có lịch sử từ 1.9.
 
 ## 11.1 `Enum.entries`
 
@@ -558,7 +561,7 @@ Legacy:
 Color.values()
 ```
 
-Modern:
+Hiện đại (modern / 현대적):
 
 ```kotlin
 Color.entries
@@ -570,29 +573,29 @@ Color.entries
 
 ## 11.2 `data object`
 
-Legacy sealed state thường viết:
+Legacy sealed trạng thái (state / 상태) thường viết:
 
 ```kotlin
 object Loading : UiState
 ```
 
-Modern Kotlin có thể dùng:
+Hiện đại (modern / 현대적) Kotlin có thể dùng:
 
 ```kotlin
 data object Loading : UiState
 ```
 
-`data object` tạo behavior `toString`/`equals`/`hashCode` đối xứng hơn với `data class` trong sealed hierarchy.
+`data object` tạo hành vi (behavior / 동작) `toString`/`equals`/`hashCode` đối xứng hơn với `data class` trong sealed hierarchy.
 
 ---
 
-## 11.3 Open-ended range
+## 11.3 Open-ended phạm vi (range / 범위)
 
 ```kotlin
 0..<size
 ```
 
-trở thành syntax rõ ràng cho range loại trừ upper bound.
+trở thành cú pháp (syntax / 문법) rõ ràng cho phạm vi (range / 범위) loại trừ upper bound.
 
 So với:
 
@@ -608,7 +611,7 @@ cả hai đều có thể gặp trong codebase.
 
 K2 tiến từ Alpha sang Beta trong thế hệ 1.9.
 
-Điều này báo hiệu Kotlin 2.0 sắp đổi compiler frontend mặc định.
+Điều này báo hiệu Kotlin 2.0 sắp đổi trình biên dịch (compiler / 컴파일러) frontend mặc định.
 
 ---
 
@@ -616,32 +619,32 @@ K2 tiến từ Alpha sang Beta trong thế hệ 1.9.
 
 Kotlin 1.9.20 là mốc quan trọng khi Kotlin Multiplatform được JetBrains công bố Stable.
 
-Điều này không có nghĩa mọi target/library/interoperability feature KMP đều stable; cần phân biệt stability của **platform/product** với từng feature cụ thể.
+Điều này không có nghĩa mọi mục tiêu (target / 대상)/thư viện (library / 라이브러리)/interoperability tính năng (feature / 기능) KMP đều stable; cần phân biệt stability của **nền tảng (platform / 플랫폼)/sản phẩm (product / 제품)** với từng tính năng (feature / 기능) cụ thể.
 
 ---
 
 # 12. Kotlin 2.0 — mốc chuyển thế hệ
 
-Kotlin 2.0.0 phát hành ngày 2024-05-21 và đánh dấu K2 compiler Stable.
+Kotlin 2.0.0 phát hành ngày 2024-05-21 và đánh dấu K2 trình biên dịch (compiler / 컴파일러) Stable.
 
-Đây là mốc lớn nhất kể từ Kotlin 1.0 nếu nhìn từ compiler architecture.
+Đây là mốc lớn nhất kể từ Kotlin 1.0 nếu nhìn từ trình biên dịch (compiler / 컴파일러) kiến trúc (architecture / 아키텍처).
 
 ---
 
-## 12.1 K2 trở thành compiler chính
+## 12.1 K2 trở thành trình biên dịch (compiler / 컴파일러) chính
 
 K2 cải thiện:
 
-- frontend architecture;
-- analysis;
-- type inference consistency;
-- compiler performance;
+- frontend kiến trúc (architecture / 아키텍처);
+- phân tích (analysis / 분석);
+- kiểu (type / 타입) suy luận (inference / 추론) consistency;
+- trình biên dịch (compiler / 컴파일러) hiệu năng (performance / 성능);
 - compiler-plugin foundation;
-- multiplatform compiler consistency.
+- multiplatform trình biên dịch (compiler / 컴파일러) consistency.
 
-Nhưng migration 1.9 → 2.0 không nên được xem là chỉ đổi số version.
+Nhưng di chuyển (migration / 마이그레이션) 1.9 → 2.0 không nên được xem là chỉ đổi số phiên bản (version / 버전).
 
-Cần test:
+Cần kiểm thử (test / 테스트):
 
 ```text
 source compatibility
@@ -656,22 +659,22 @@ binary compatibility của internal libraries
 
 ---
 
-## 12.2 Compose compiler chuyển vào Kotlin repository
+## 12.2 Compose trình biên dịch (compiler / 컴파일러) chuyển vào Kotlin repository
 
 Đây là thay đổi cực kỳ quan trọng với Android.
 
 ### Trước Kotlin 2.0
 
-Compose compiler có release/version mapping riêng với Kotlin compiler.
+Compose trình biên dịch (compiler / 컴파일러) có bản phát hành (release / 릴리스)/phiên bản (version / 버전) ánh xạ (mapping / 매핑) riêng với Kotlin trình biên dịch (compiler / 컴파일러).
 
-Developer phải kiểm tra compatibility map:
+Nhà phát triển (developer / 개발자) phải kiểm tra tính tương thích (compatibility / 호환성) map:
 
 ```text
 Kotlin version
 ↔ Compose compiler extension version
 ```
 
-Config cũ có thể trông như:
+Cấu hình (config / 설정) cũ có thể trông như:
 
 ```kotlin
 android {
@@ -683,7 +686,7 @@ android {
 
 ### Từ Kotlin 2.0+
 
-Compose compiler nằm cùng Kotlin repository và có Gradle plugin riêng:
+Compose trình biên dịch (compiler / 컴파일러) nằm cùng Kotlin repository và có Gradle plugin riêng:
 
 ```kotlin
 plugins {
@@ -692,14 +695,14 @@ plugins {
 }
 ```
 
-Mental model mới:
+Mô hình tư duy (mental model / 사고 모델) mới:
 
 ```text
 Kotlin 2.x
 ↔ Compose compiler plugin cùng Kotlin version
 ```
 
-Jetpack Compose libraries vẫn có version/BOM riêng.
+Jetpack Compose libraries vẫn có phiên bản (version / 버전)/BOM riêng.
 
 Do đó phải phân biệt:
 
@@ -713,15 +716,15 @@ Compose UI library version
 
 # 13. Kotlin 2.1 — K2 ecosystem trưởng thành
 
-Kotlin 2.1 tiếp tục hoàn thiện K2 và giới thiệu preview cho nhiều language feature mới.
+Kotlin 2.1 tiếp tục hoàn thiện K2 và giới thiệu preview cho nhiều ngôn ngữ (language / 언어) tính năng (feature / 기능) mới.
 
 Ví dụ:
 
-- guard condition trong `when`;
+- guard điều kiện (condition / 조건) trong `when`;
 - non-local `break`/`continue`;
 - multi-dollar string interpolation.
 
-Ví dụ guard condition:
+Ví dụ guard điều kiện (condition / 조건):
 
 ```kotlin
 when (user) {
@@ -731,7 +734,7 @@ when (user) {
 }
 ```
 
-Ở thời điểm 2.1 đây là preview; các feature sau đó được stabilize ở release sau.
+Ở thời điểm 2.1 đây là preview; các tính năng (feature / 기능) sau đó được stabilize ở bản phát hành (release / 릴리스) sau.
 
 Bài học quan trọng:
 
@@ -755,21 +758,21 @@ Deprecated
 
 ## 13.1 kapt và K2
 
-Kotlin 2.1.20 đưa K2 implementation của kapt thành mặc định.
+Kotlin 2.1.20 đưa K2 hiện thực (implementation / 구현) của kapt thành mặc định.
 
-Tuy vậy với Android project hiện đại, nếu annotation processor hỗ trợ KSP thì thường nên đánh giá migration:
+Tuy vậy với Android dự án (project / 프로젝트) hiện đại, nếu annotation processor hỗ trợ KSP thì thường nên đánh giá di chuyển (migration / 마이그레이션):
 
 ```text
 kapt → KSP
 ```
 
-Không phải vì kapt lập tức “không dùng được”, mà vì KSP thường tích hợp tốt hơn với Kotlin symbol model và build performance.
+Không phải vì kapt lập tức “không dùng được”, mà vì KSP thường tích hợp tốt hơn với Kotlin symbol mô hình (model / 모델) và bản dựng (build / 빌드) hiệu năng (performance / 성능).
 
 ---
 
-# 14. Kotlin 2.2 — modern compiler DSL và dọn legacy language levels
+# 14. Kotlin 2.2 — hiện đại (modern / 현대적) trình biên dịch (compiler / 컴파일러) DSL và dọn legacy ngôn ngữ (language / 언어) levels
 
-Kotlin 2.2 tiếp tục ổn định các feature từ 2.1.
+Kotlin 2.2 tiếp tục ổn định các tính năng (feature / 기능) từ 2.1.
 
 Một số thay đổi đáng nhớ khi đọc Gradle script:
 
@@ -786,7 +789,7 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 ```
 
-Modern:
+Hiện đại (modern / 현대적):
 
 ```kotlin
 kotlin {
@@ -796,13 +799,13 @@ kotlin {
 }
 ```
 
-Trong Kotlin 2.2, DSL `kotlinOptions {}` cũ đã bị nâng deprecation level mạnh và nên migrate sang `compilerOptions {}`.
+Trong Kotlin 2.2, DSL `kotlinOptions {}` cũ đã bị nâng deprecation mức (level / 수준) mạnh và nên migrate sang `compilerOptions {}`.
 
 ---
 
-## 14.2 Không giữ language level quá cũ vô hạn
+## 14.2 Không giữ ngôn ngữ (language / 언어) mức (level / 수준) quá cũ vô hạn
 
-Từ Kotlin 2.2, compiler không còn hỗ trợ `language-version=1.6` và `1.7`.
+Từ Kotlin 2.2, trình biên dịch (compiler / 컴파일러) không còn hỗ trợ `language-version=1.6` và `1.7`.
 
 Điều này quan trọng cho enterprise codebase:
 
@@ -811,46 +814,46 @@ compiler mới
 không thể mãi đóng băng source ở language mode cực cũ
 ```
 
-Upgrade strategy nên thường xuyên nâng từng bước thay vì nhảy 5–7 năm một lần.
+Upgrade chiến lược (strategy / 전략) nên thường xuyên nâng từng bước thay vì nhảy 5–7 năm một lần.
 
 ---
 
-# 15. Kotlin 2.3 — stabilization và explicit backing field
+# 15. Kotlin 2.3 — stabilization và tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드)
 
-Kotlin 2.3 tiếp tục ổn định feature mới và giới thiệu **explicit backing field** ở trạng thái experimental.
+Kotlin 2.3 tiếp tục ổn định tính năng (feature / 기능) mới và giới thiệu **tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드)** ở trạng thái experimental.
 
-Pattern cũ:
+Mẫu (pattern / 패턴) cũ:
 
 ```kotlin
 private val _state = MutableStateFlow<State>(State.Loading)
 val state: StateFlow<State> = _state
 ```
 
-Explicit backing field model:
+Tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) mô hình (model / 모델):
 
 ```kotlin
 val state: StateFlow<State>
     field = MutableStateFlow(State.Loading)
 ```
 
-Trong private scope, compiler có thể hiểu backing field có implementation type cụ thể hơn.
+Trong private phạm vi (scope / 범위), trình biên dịch (compiler / 컴파일러) có thể hiểu backing trường dữ liệu (field / 필드) có hiện thực (implementation / 구현) kiểu (type / 타입) cụ thể hơn.
 
-Điểm quan trọng khi đọc version history:
+Điểm quan trọng khi đọc phiên bản (version / 버전) lịch sử (history / 이력):
 
 ```text
 2.3 introduced/experimented
 2.4 stabilized
 ```
 
-không nên viết tài liệu như thể feature đã Stable ngay từ ngày đầu xuất hiện.
+không nên viết tài liệu như thể tính năng (feature / 기능) đã Stable ngay từ ngày đầu xuất hiện.
 
 ---
 
-# 16. Kotlin 2.4 — baseline hiện tại của bộ note
+# 16. Kotlin 2.4 — baseline hiện tại của bộ ghi chú (note / 노트)
 
-Kotlin 2.4 là baseline chính của library tại thời điểm tháng 9/2026.
+Kotlin 2.4 là baseline chính của thư viện (library / 라이브러리) tại thời điểm tháng 9/2026.
 
-Stable release dùng trong tài liệu:
+Stable bản phát hành (release / 릴리스) dùng trong tài liệu:
 
 ```text
 Kotlin 2.4.20
@@ -858,18 +861,18 @@ Kotlin 2.4.20
 
 Các điểm nổi bật của 2.4 generation:
 
-- context parameters trở thành Stable;
-- explicit backing fields trở thành Stable;
-- annotation use-site target được cải thiện;
-- Java 26 support trên Kotlin/JVM;
-- compiler/tooling/Gradle integration tiếp tục hiện đại hóa;
-- Kotlin/Native, JS, Wasm và build-tools API tiếp tục tiến hóa.
+- ngữ cảnh (context / 맥락) parameters trở thành Stable;
+- tường minh (explicit / 명시적) backing fields trở thành Stable;
+- annotation use-site mục tiêu (target / 대상) được cải thiện;
+- Java 26 hỗ trợ (support / 지원) trên Kotlin/JVM;
+- trình biên dịch (compiler / 컴파일러)/tooling/Gradle tích hợp (integration / 통합) tiếp tục hiện đại hóa;
+- Kotlin/bản địa (native / 네이티브), JS, Wasm và build-tools API tiếp tục tiến hóa.
 
 ---
 
-## 16.1 Context parameters
+## 16.1 ngữ cảnh (context / 맥락) parameters
 
-Context parameters giúp truyền dependency/context theo lexical context mà không buộc đưa mọi thứ thành parameter trực tiếp hoặc global singleton.
+Ngữ cảnh (context / 맥락) parameters giúp truyền phụ thuộc (dependency / 의존성)/ngữ cảnh (context / 맥락) theo lexical ngữ cảnh (context / 맥락) mà không buộc đưa mọi thứ thành parameter trực tiếp hoặc toàn cục (global / 전역) singleton.
 
 Ví dụ conceptual:
 
@@ -882,31 +885,31 @@ fun saveUser(user: User) {
 
 Đây không phải lý do để thay toàn bộ constructor injection/Hilt.
 
-Nên xem context parameters như một language mechanism mới cho những API phù hợp, đặc biệt DSL/library/domain context; lifecycle-heavy Android dependencies vẫn cần ownership rõ ràng.
+Nên xem ngữ cảnh (context / 맥락) parameters như một ngôn ngữ (language / 언어) cơ chế (mechanism / 메커니즘) mới cho những API phù hợp, đặc biệt DSL/thư viện (library / 라이브러리)/lĩnh vực (domain / 도메인) ngữ cảnh (context / 맥락); lifecycle-heavy Android dependencies vẫn cần quyền sở hữu (ownership / 소유권) rõ ràng.
 
 ---
 
-## 16.2 Explicit backing field stable
+## 16.2 tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) stable
 
-Modern code có thể giảm boilerplate trong một số API dạng mutable-inside/read-only-outside.
+Hiện đại (modern / 현대적) mã (code / 코드) có thể giảm boilerplate trong một số API dạng mutable-inside/read-only-outside.
 
-Tuy nhiên đừng migrate mọi `_state` chỉ vì syntax mới tồn tại. Cần cân nhắc:
+Tuy nhiên đừng migrate mọi `_state` chỉ vì cú pháp (syntax / 문법) mới tồn tại. Cần cân nhắc:
 
-- readability của team;
-- minimum Kotlin version của module/library consumer;
+- readability của nhóm (team / 팀);
+- minimum Kotlin phiên bản (version / 버전) của mô-đun (module / 모듈)/thư viện (library / 라이브러리) bên tiêu thụ (consumer / 소비자);
 - Java interop;
-- public API compatibility;
-- mức quen thuộc của developer.
+- API công khai (public API / 공개 API) tính tương thích (compatibility / 호환성);
+- mức quen thuộc của nhà phát triển (developer / 개발자).
 
 ---
 
 ## 16.3 `when` compilation qua `invokedynamic`
 
-Kotlin 2.4.20 ổn định thêm compiler optimization cho một số `when` trên JVM 21+ bằng `invokedynamic`.
+Kotlin 2.4.20 ổn định thêm trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화) cho một số `when` trên JVM 21+ bằng `invokedynamic`.
 
-Đây là ví dụ về feature version mà source code gần như không đổi nhưng generated bytecode/runtime strategy đổi.
+Đây là ví dụ về tính năng (feature / 기능) phiên bản (version / 버전) mà mã nguồn (source code / 소스 코드) gần như không đổi nhưng generated bytecode/thời gian chạy (runtime / 런타임) chiến lược (strategy / 전략) đổi.
 
-Senior developer cần nhớ:
+Cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) cần nhớ:
 
 ```text
 same source
@@ -914,32 +917,32 @@ same source
 same bytecode
 ```
 
-đặc biệt khi profiling, reflection, instrumentation hoặc binary tooling tham gia.
+đặc biệt khi profiling, reflection, instrumentation hoặc nhị phân (binary / 이진) tooling tham gia.
 
 ---
 
-# 17. K1 vs K2 — bảng so sánh mental model
+# 17. K1 vs K2 — bảng so sánh mô hình tư duy (mental model / 사고 모델)
 
-| Khía cạnh | K1 compiler | K2 compiler |
+| Khía cạnh | K1 trình biên dịch (compiler / 컴파일러) | K2 trình biên dịch (compiler / 컴파일러) |
 |---|---|---|
-| Thế hệ | Kotlin 1.x truyền thống | Compiler frontend thế hệ mới |
-| Production mặc định | Trước Kotlin 2.0 | Kotlin 2.0+ |
-| Mục tiêu | Compiler architecture ban đầu | Unified/faster/extensible architecture |
-| Analysis | Frontend cũ | FIR-based frontend |
-| Language feature development | Chậm/phức tạp hơn | Thiết kế để tiến hóa dễ hơn |
-| Compiler plugin ecosystem | Mature legacy ecosystem | Modern ecosystem đang là mặc định |
-| Compose compiler | Tách release mapping | Tích hợp Kotlin repository từ 2.0 |
-| kapt | K1 implementation truyền thống | K2 implementation được đưa thành default ở 2.1.20 |
+| Thế hệ | Kotlin 1.x truyền thống | trình biên dịch (compiler / 컴파일러) frontend thế hệ mới |
+| môi trường vận hành (production / 운영 환경) mặc định | Trước Kotlin 2.0 | Kotlin 2.0+ |
+| Mục tiêu | trình biên dịch (compiler / 컴파일러) kiến trúc (architecture / 아키텍처) ban đầu | Unified/faster/extensible kiến trúc (architecture / 아키텍처) |
+| phân tích (analysis / 분석) | Frontend cũ | FIR-based frontend |
+| ngôn ngữ (language / 언어) tính năng (feature / 기능) development | Chậm/phức tạp hơn | Thiết kế để tiến hóa dễ hơn |
+| trình biên dịch (compiler / 컴파일러) plugin ecosystem | Mature legacy ecosystem | hiện đại (modern / 현대적) ecosystem đang là mặc định |
+| Compose trình biên dịch (compiler / 컴파일러) | Tách bản phát hành (release / 릴리스) ánh xạ (mapping / 매핑) | Tích hợp Kotlin repository từ 2.0 |
+| kapt | K1 hiện thực (implementation / 구현) truyền thống | K2 hiện thực (implementation / 구현) được đưa thành default ở 2.1.20 |
 
-Không nên nói K1 là “compiler sai” và K2 là “compiler đúng”. K1 là compiler đã vận hành Kotlin ecosystem nhiều năm; K2 là thế hệ kế tiếp nhằm giải quyết scale/evolution/tooling limitation.
+Không nên nói K1 là “trình biên dịch (compiler / 컴파일러) sai” và K2 là “trình biên dịch (compiler / 컴파일러) đúng”. K1 là trình biên dịch (compiler / 컴파일러) đã vận hành Kotlin ecosystem nhiều năm; K2 là thế hệ kế tiếp nhằm giải quyết quy mô (scale / 규모)/evolution/tooling limitation.
 
 ---
 
-# 18. Compose version evolution dành cho Android developer
+# 18. Compose phiên bản (version / 버전) evolution dành cho Android nhà phát triển (developer / 개발자)
 
-Compose có ít nhất ba version concern khác nhau.
+Compose có ít nhất ba phiên bản (version / 버전) concern khác nhau.
 
-## 18.1 Compose compiler
+## 18.1 Compose trình biên dịch (compiler / 컴파일러)
 
 ```text
 < Kotlin 2.0
@@ -949,7 +952,7 @@ Compose compiler có compatibility mapping riêng
 Compose compiler plugin dùng cùng version với Kotlin
 ```
 
-Modern:
+Hiện đại (modern / 현대적):
 
 ```kotlin
 plugins {
@@ -973,7 +976,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 
 ## 18.2 Compose UI libraries
 
-Compose UI runtime/foundation/material libraries không dùng Kotlin version number.
+Compose UI thời gian chạy (runtime / 런타임)/foundation/material libraries không dùng Kotlin phiên bản (version / 버전) number.
 
 Nên quản lý qua BOM:
 
@@ -983,7 +986,7 @@ implementation(composeBom)
 androidTestImplementation(composeBom)
 ```
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Kotlin 2.4.20
@@ -997,7 +1000,7 @@ ba con số này có thể đồng thời tồn tại và không mâu thuẫn.
 
 ## 18.3 Compose và `compileSdk`
 
-Compose libraries mới dần yêu cầu Android API compile level mới hơn.
+Compose libraries mới dần yêu cầu Android API compile mức (level / 수준) mới hơn.
 
 Ví dụ các thế hệ Compose mới có thể yêu cầu `compileSdk 37` và AGP 9+.
 
@@ -1014,13 +1017,13 @@ chứ không chỉ đổi BOM.
 
 ---
 
-# 19. Android API version evolution — không gắn trực tiếp với Kotlin
+# 19. Android API phiên bản (version / 버전) evolution — không gắn trực tiếp với Kotlin
 
-Kotlin version và Android OS version độc lập.
+Kotlin phiên bản (version / 버전) và Android OS phiên bản (version / 버전) độc lập.
 
-Ví dụ Kotlin 2.4 có thể build app chạy trên Android API cũ nếu `minSdk` và library dependencies cho phép.
+Ví dụ Kotlin 2.4 có thể bản dựng (build / 빌드) app chạy trên Android API cũ nếu `minSdk` và thư viện (library / 라이브러리) dependencies cho phép.
 
-Một app Android modern cần reasoning trên ma trận:
+Một app Android hiện đại (modern / 현대적) cần lập luận (reasoning / 추론) trên ma trận:
 
 ```text
 Kotlin/KGP version
@@ -1034,40 +1037,40 @@ Kotlin/KGP version
 × Jetpack library versions
 ```
 
-Vì vậy lỗi “sau khi update Kotlin app crash trên Android X” không thể kết luận nguyên nhân là Kotlin chỉ từ tên version; cần xác định chính xác trục nào đã đổi.
+Vì vậy lỗi “sau khi cập nhật (update / 업데이트) Kotlin app crash trên Android X” không thể kết luận nguyên nhân là Kotlin chỉ từ tên phiên bản (version / 버전); cần xác định chính xác trục nào đã đổi.
 
 ---
 
-# 20. Legacy → Modern map
+# 20. Legacy → hiện đại (modern / 현대적) map
 
-Bảng này rất hữu ích khi đọc code Android/Kotlin cũ.
+Bảng này rất hữu ích khi đọc mã (code / 코드) Android/Kotlin cũ.
 
-| Legacy / thế hệ cũ | Modern direction | Ghi chú |
+| Legacy / thế hệ cũ | hiện đại (modern / 현대적) direction | Ghi chú |
 |---|---|---|
-| Java-only Android | Kotlin-first Android | Java vẫn được support và interop quan trọng |
-| Kotlin Android Extensions synthetic view | View Binding / Compose | Synthetic bị loại khỏi modern workflow |
-| `findViewById` everywhere | View Binding / Compose | `findViewById` vẫn hợp lệ ở View code |
-| XML-only UI | Compose + XML interop | XML không “sai”; nhiều app production vẫn dùng |
-| `AsyncTask` | Coroutine / WorkManager tùy lifetime | `AsyncTask` deprecated |
-| callback pyramid | `suspend`, Flow | Callback vẫn cần ở platform boundary |
-| LiveData everywhere | StateFlow/Flow cho modern data/state | LiveData vẫn supported |
+| Java-only Android | Kotlin-first Android | Java vẫn được hỗ trợ (support / 지원) và interop quan trọng |
+| Kotlin Android Extensions synthetic view | View Binding / Compose | Synthetic bị loại khỏi hiện đại (modern / 현대적) workflow |
+| `findViewById` everywhere | View Binding / Compose | `findViewById` vẫn hợp lệ ở View mã (code / 코드) |
+| XML-only UI | Compose + XML interop | XML không “sai”; nhiều app môi trường vận hành (production / 운영 환경) vẫn dùng |
+| `AsyncTask` | Coroutine / WorkManager tùy thời gian tồn tại (lifetime / 수명) | `AsyncTask` deprecated |
+| callback pyramid | `suspend`, luồng (flow / 흐름) | Callback vẫn cần ở nền tảng (platform / 플랫폼) ranh giới (boundary / 경계) |
+| LiveData everywhere | StateFlow/luồng (flow / 흐름) cho hiện đại (modern / 현대적) dữ liệu (data / 데이터)/trạng thái (state / 상태) | LiveData vẫn supported |
 | SharedPreferences cho structured settings | DataStore | SharedPreferences chưa biến mất |
-| `startActivityForResult` | Activity Result API | Modern lifecycle-aware contract |
-| manual service cho durable deferred work | WorkManager | Service vẫn đúng với use case khác |
-| RxJava-heavy Android | Coroutine/Flow phổ biến hơn | RxJava vẫn tồn tại trong legacy/large codebase |
-| `kapt` everywhere | KSP khi processor hỗ trợ | kapt vẫn dùng được cho tool chưa migrate |
-| `kotlinOptions {}` | `compilerOptions {}` | Modern KGP DSL |
-| Compose compiler compatibility map | Kotlin Compose compiler plugin cùng version | Kotlin 2.0+ |
-| K1 compiler | K2 compiler | K2 stable/default từ Kotlin 2.0 |
+| `startActivityForResult` | Activity kết quả (result / 결과) API | hiện đại (modern / 현대적) lifecycle-aware đặc tả hợp đồng (contract / 계약) |
+| manual dịch vụ (service / 서비스) cho durable deferred công việc (work / 작업) | WorkManager | dịch vụ (service / 서비스) vẫn đúng với use trường hợp (case / 사례) khác |
+| RxJava-heavy Android | Coroutine/luồng (flow / 흐름) phổ biến hơn | RxJava vẫn tồn tại trong legacy/large codebase |
+| `kapt` everywhere | KSP khi processor hỗ trợ | kapt vẫn dùng được cho công cụ (tool / 도구) chưa migrate |
+| `kotlinOptions {}` | `compilerOptions {}` | hiện đại (modern / 현대적) KGP DSL |
+| Compose trình biên dịch (compiler / 컴파일러) tính tương thích (compatibility / 호환성) map | Kotlin Compose trình biên dịch (compiler / 컴파일러) plugin cùng phiên bản (version / 버전) | Kotlin 2.0+ |
+| K1 trình biên dịch (compiler / 컴파일러) | K2 trình biên dịch (compiler / 컴파일러) | K2 stable/default từ Kotlin 2.0 |
 | `Color.values()` | `Color.entries` | `values()` vẫn tồn tại |
-| `object Loading` trong sealed state | `data object Loading` khi phù hợp | Không bắt buộc đổi mọi object |
-| backing property `_state` + public `state` | explicit backing field có thể dùng | Stable từ 2.4, không phải migration bắt buộc |
+| `object Loading` trong sealed trạng thái (state / 상태) | `data object Loading` khi phù hợp | Không bắt buộc đổi mọi đối tượng (object / 객체) |
+| backing thuộc tính (property / 속성) `_state` + công khai (public / 공개) `state` | tường minh (explicit / 명시적) backing trường dữ liệu (field / 필드) có thể dùng | Stable từ 2.4, không phải di chuyển (migration / 마이그레이션) bắt buộc |
 
 ---
 
-# 21. Code cũ không đồng nghĩa code sai
+# 21. mã (code / 코드) cũ không đồng nghĩa mã (code / 코드) sai
 
-Đây là nguyên tắc quan trọng nhất khi học version.
+Đây là nguyên tắc quan trọng nhất khi học phiên bản (version / 버전).
 
 Ví dụ:
 
@@ -1093,22 +1096,22 @@ Cần phân loại thành bốn nhóm:
 4. Historical API chỉ cần biết để đọc legacy code
 ```
 
-Senior engineer không rewrite code chỉ vì version number mới hơn. Migration cần mua được giá trị cụ thể như:
+Cấp cao (senior / 시니어) engineer không rewrite mã (code / 코드) chỉ vì phiên bản (version / 버전) number mới hơn. di chuyển (migration / 마이그레이션) cần mua được giá trị cụ thể như:
 
 - giảm bug;
 - tăng maintainability;
-- giảm build time;
-- support platform requirement mới;
-- security/compliance;
-- performance;
-- loại dependency deprecated;
-- đơn giản hóa architecture.
+- giảm bản dựng (build / 빌드) thời gian (time / 시간);
+- hỗ trợ (support / 지원) nền tảng (platform / 플랫폼) yêu cầu (requirement / 요구사항) mới;
+- bảo mật (security / 보안)/compliance;
+- hiệu năng (performance / 성능);
+- loại phụ thuộc (dependency / 의존성) deprecated;
+- đơn giản hóa kiến trúc (architecture / 아키텍처).
 
 ---
 
-# 22. Upgrade Kotlin: không nhảy version một cách mù quáng
+# 22. Upgrade Kotlin: không nhảy phiên bản (version / 버전) một cách mù quáng
 
-Một upgrade Kotlin production nên theo pipeline.
+Một upgrade Kotlin môi trường vận hành (production / 운영 환경) nên theo chuỗi xử lý (pipeline / 파이프라인).
 
 ## Bước 1 — chụp baseline
 
@@ -1129,11 +1132,11 @@ targetSdk
 minSdk
 ```
 
-Nếu không có baseline, khi build hỏng sẽ không biết dependency axis nào đã thay đổi.
+Nếu không có baseline, khi bản dựng (build / 빌드) hỏng sẽ không biết phụ thuộc (dependency / 의존성) axis nào đã thay đổi.
 
 ---
 
-## Bước 2 — đọc compatibility/release notes
+## Bước 2 — đọc tính tương thích (compatibility / 호환성)/bản phát hành (release / 릴리스) notes
 
 Không chỉ đọc “What's New”.
 
@@ -1151,7 +1154,7 @@ JVM target changes
 
 ---
 
-## Bước 3 — upgrade compiler/toolchain trước khi đổi source style
+## Bước 3 — upgrade trình biên dịch (compiler / 컴파일러)/toolchain trước khi đổi nguồn (source / 소스) style
 
 Tránh cùng một PR vừa:
 
@@ -1165,7 +1168,7 @@ upgrade Kotlin
 
 Nếu lỗi xảy ra, quá nhiều biến thay đổi đồng thời.
 
-Tách migration theo axis giúp forensic debugging dễ hơn.
+Tách di chuyển (migration / 마이그레이션) theo axis giúp forensic debugging dễ hơn.
 
 ---
 
@@ -1173,7 +1176,7 @@ Tách migration theo axis giúp forensic debugging dễ hơn.
 
 Không chỉ compile `debug`.
 
-Cần đặc biệt test:
+Cần đặc biệt kiểm thử (test / 테스트):
 
 ```text
 release
@@ -1184,11 +1187,11 @@ instrumented tests
 consumer sample nếu là library
 ```
 
-Rất nhiều R8/compiler plugin issue chỉ xuất hiện ở release.
+Rất nhiều R8/trình biên dịch (compiler / 컴파일러) plugin issue chỉ xuất hiện ở bản phát hành (release / 릴리스).
 
 ---
 
-## Bước 5 — test generated-code boundary
+## Bước 5 — kiểm thử (test / 테스트) generated-code ranh giới (boundary / 경계)
 
 Kiểm tra:
 
@@ -1197,17 +1200,17 @@ Kiểm tra:
 - KSP;
 - kapt;
 - kotlinx.serialization;
-- Compose compiler;
+- Compose trình biên dịch (compiler / 컴파일러);
 - Parcelize;
-- custom compiler plugins.
+- custom trình biên dịch (compiler / 컴파일러) plugins.
 
-Compiler upgrade có thể làm lỗi xuất hiện ở generated code trước khi handwritten source có vấn đề.
+Trình biên dịch (compiler / 컴파일러) upgrade có thể làm lỗi xuất hiện ở generated mã (code / 코드) trước khi handwritten nguồn (source / 소스) có vấn đề.
 
 ---
 
-## Bước 6 — test binary compatibility nếu publish library
+## Bước 6 — kiểm thử (test / 테스트) nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) nếu publish thư viện (library / 라이브러리)
 
-Library author phải quan tâm:
+Thư viện (library / 라이브러리) author phải quan tâm:
 
 ```text
 source compatibility
@@ -1215,13 +1218,13 @@ binary compatibility
 behavioral compatibility
 ```
 
-App nội bộ compile lại toàn bộ source có thể không thấy lỗi mà binary consumer cũ sẽ gặp.
+App nội bộ compile lại toàn bộ nguồn (source / 소스) có thể không thấy lỗi mà nhị phân (binary / 이진) bên tiêu thụ (consumer / 소비자) cũ sẽ gặp.
 
 ---
 
-# 23. Upgrade `targetSdk` là migration khác với upgrade Kotlin
+# 23. Upgrade `targetSdk` là di chuyển (migration / 마이그레이션) khác với upgrade Kotlin
 
-Không nên gộp hai việc này trong mental model.
+Không nên gộp hai việc này trong mô hình tư duy (mental model / 사고 모델).
 
 ```text
 Upgrade Kotlin
@@ -1231,26 +1234,26 @@ Upgrade targetSdk
 = Android platform behavior-contract migration
 ```
 
-Nếu cùng release train phải thực hiện cả hai, nên tách commit/test matrix rõ ràng.
+Nếu cùng bản phát hành (release / 릴리스) train phải thực hiện cả hai, nên tách lần ghi nhận (commit / 커밋)/kiểm thử (test / 테스트) ma trận (matrix / 행렬) rõ ràng.
 
-Ví dụ target SDK mới có thể thay đổi:
+Ví dụ mục tiêu (target / 대상) SDK mới có thể thay đổi:
 
-- permission behavior;
-- background execution;
-- foreground service policy;
+- permission hành vi (behavior / 동작);
+- background thực thi (execution / 실행);
+- foreground dịch vụ (service / 서비스) chính sách (policy / 정책);
 - notification;
-- storage;
-- implicit intent/exported behavior;
-- local network access;
-- edge-to-edge/window behavior.
+- lưu trữ (storage / 저장소);
+- implicit intent/exported hành vi (behavior / 동작);
+- cục bộ (local / 로컬) truy cập mạng (network access / 네트워크 접근);
+- edge-to-edge/cửa sổ (window / 윈도우) hành vi (behavior / 동작).
 
-Không có liên hệ trực tiếp với việc K2 compile source như thế nào.
+Không có liên hệ trực tiếp với việc K2 compile nguồn (source / 소스) như thế nào.
 
 ---
 
-# 24. Version Catalog — nơi quản lý version modern Android project
+# 24. phiên bản (version / 버전) danh mục (catalog / 카탈로그) — nơi quản lý phiên bản (version / 버전) hiện đại (modern / 현대적) Android dự án (project / 프로젝트)
 
-Một project hiện đại thường centralize version trong `libs.versions.toml`.
+Một dự án (project / 프로젝트) hiện đại thường centralize phiên bản (version / 버전) trong `libs.versions.toml`.
 
 Ví dụ:
 
@@ -1266,13 +1269,13 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ```
 
-Ưu điểm không chỉ là “đỡ viết lặp”. Nó tạo một điểm review rõ ràng cho toolchain version.
+Ưu điểm không chỉ là “đỡ viết lặp”. Nó tạo một điểm rà soát (review / 검토) rõ ràng cho toolchain phiên bản (version / 버전).
 
-Tuy nhiên Version Catalog không tự giải quyết compatibility. Nó chỉ centralize declaration.
+Tuy nhiên phiên bản (version / 버전) danh mục (catalog / 카탈로그) không tự giải quyết tính tương thích (compatibility / 호환성). Nó chỉ centralize declaration.
 
 ---
 
-# 25. Version compatibility không nên đoán từ số lớn/nhỏ
+# 25. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) không nên đoán từ số lớn/nhỏ
 
 Ví dụ sai:
 
@@ -1286,9 +1289,9 @@ Hoặc:
 Compose BOM 2026.09 phải dùng Kotlin 2026.09
 ```
 
-Các project có nhiều independent release train.
+Các dự án (project / 프로젝트) có nhiều independent bản phát hành (release / 릴리스) train.
 
-Luôn kiểm tra official compatibility/documentation của từng boundary:
+Luôn kiểm tra official tính tương thích (compatibility / 호환성)/documentation của từng ranh giới (boundary / 경계):
 
 ```text
 Kotlin ↔ Gradle
@@ -1302,9 +1305,9 @@ KSP ↔ Kotlin
 
 ---
 
-# 26. Progressive mode
+# 26. Progressive chế độ (mode / 모드)
 
-Kotlin hỗ trợ progressive mode để áp dụng một số language fix/deprecation behavior sớm hơn.
+Kotlin hỗ trợ progressive chế độ (mode / 모드) để áp dụng một số ngôn ngữ (language / 언어) fix/deprecation hành vi (behavior / 동작) sớm hơn.
 
 Concept:
 
@@ -1316,9 +1319,9 @@ progressive mode
 = opt-in sớm vào correction/change mới
 ```
 
-Library/application team có thể dùng progressive mode để phát hiện technical debt sớm hơn, nhưng cần test compiler/plugin compatibility.
+Thư viện (library / 라이브러리)/ứng dụng (application / 애플리케이션) nhóm (team / 팀) có thể dùng progressive chế độ (mode / 모드) để phát hiện technical debt sớm hơn, nhưng cần kiểm thử (test / 테스트) trình biên dịch (compiler / 컴파일러)/plugin tính tương thích (compatibility / 호환성).
 
-Không bật chỉ vì “modern hơn”. Nó là policy decision của codebase.
+Không bật chỉ vì “hiện đại (modern / 현대적) hơn”. Nó là chính sách (policy / 정책) quyết định (decision / 결정) của codebase.
 
 ---
 
@@ -1335,9 +1338,9 @@ fun useExperimentalFeature() {
 }
 ```
 
-Version migration phải inventory experimental API vì chúng có compatibility guarantee thấp hơn Stable API.
+Phiên bản (version / 버전) di chuyển (migration / 마이그레이션) phải inventory experimental API vì chúng có tính tương thích (compatibility / 호환성) guarantee thấp hơn Stable API.
 
-Nếu project dùng nhiều:
+Nếu dự án (project / 프로젝트) dùng nhiều:
 
 ```text
 -X...
@@ -1346,15 +1349,15 @@ internal compiler flag
 unstable plugin API
 ```
 
-thì upgrade risk cao hơn project chỉ dùng stable surface.
+thì upgrade rủi ro (risk / 위험) cao hơn dự án (project / 프로젝트) chỉ dùng stable surface.
 
 ---
 
-# 28. Version strategy cho Android application
+# 28. phiên bản (version / 버전) chiến lược (strategy / 전략) cho Android ứng dụng (application / 애플리케이션)
 
-Application có lợi thế là thường compile toàn bộ code cùng một toolchain.
+Ứng dụng (application / 애플리케이션) có lợi thế là thường compile toàn bộ mã (code / 코드) cùng một toolchain.
 
-Recommended strategy:
+Recommended chiến lược (strategy / 전략):
 
 ```text
 1. Theo dõi stable Kotlin line
@@ -1366,13 +1369,13 @@ Recommended strategy:
 7. Benchmark nếu compiler/generated-code/runtime behavior thay đổi đáng kể
 ```
 
-Không cần chạy version mới trong ngày đầu release nếu product risk cao. Nhưng cũng không nên ở lại release line quá cũ tới khi cả compiler, AGP và dependencies cùng hết support.
+Không cần chạy phiên bản (version / 버전) mới trong ngày đầu bản phát hành (release / 릴리스) nếu sản phẩm (product / 제품) rủi ro (risk / 위험) cao. Nhưng cũng không nên ở lại bản phát hành (release / 릴리스) line quá cũ tới khi cả trình biên dịch (compiler / 컴파일러), AGP và dependencies cùng hết hỗ trợ (support / 지원).
 
 ---
 
-# 29. Version strategy cho Android/Kotlin library
+# 29. phiên bản (version / 버전) chiến lược (strategy / 전략) cho Android/Kotlin thư viện (library / 라이브러리)
 
-Library cần conservative hơn application vì consumer có thể dùng toolchain khác.
+Thư viện (library / 라이브러리) cần conservative hơn ứng dụng (application / 애플리케이션) vì bên tiêu thụ (consumer / 소비자) có thể dùng toolchain khác.
 
 Cần quyết định rõ:
 
@@ -1386,9 +1389,9 @@ SemVer policy
 experimental API policy
 ```
 
-Một library nâng language/API version có thể vô tình loại consumer cũ dù public API nhìn không thay đổi.
+Một thư viện (library / 라이브러리) nâng ngôn ngữ (language / 언어)/API phiên bản (version / 버전) có thể vô tình loại bên tiêu thụ (consumer / 소비자) cũ dù API công khai (public API / 공개 API) nhìn không thay đổi.
 
-Do đó trước publish nên test matrix ít nhất:
+Do đó trước publish nên kiểm thử (test / 테스트) ma trận (matrix / 행렬) ít nhất:
 
 ```text
 old supported consumer
@@ -1399,30 +1402,30 @@ Java consumer nếu public API hỗ trợ Java
 
 ---
 
-# 30. Current baseline — September 2026
+# 30. hiện tại (current / 현재) baseline — September 2026
 
 Snapshot dùng để đọc repository này:
 
 | Thành phần | Baseline |
 |---|---|
 | Kotlin | `2.4.20` |
-| Kotlin compiler generation | K2 |
-| Compose compiler | Kotlin Compose compiler plugin cùng Kotlin version |
+| Kotlin trình biên dịch (compiler / 컴파일러) generation | K2 |
+| Compose trình biên dịch (compiler / 컴파일러) | Kotlin Compose trình biên dịch (compiler / 컴파일러) plugin cùng Kotlin phiên bản (version / 버전) |
 | Compose BOM | `2026.09.00` |
 | Android Studio | Quail 4 / `2026.1.4 Patch 1` |
 | Android Gradle Plugin | `9.4.1` |
-| Android platform reference | Android 17 / API 37 |
-| Google Play ordinary app target requirement | API 36+ từ 2026-08-31 |
+| Android nền tảng (platform / 플랫폼) tham chiếu (reference / 참조) | Android 17 / API 37 |
+| Google Play ordinary app mục tiêu (target / 대상) yêu cầu (requirement / 요구사항) | API 36+ từ 2026-08-31 |
 
-Đây là **documentation snapshot**, không phải hardcoded architecture rule.
+Đây là **documentation snapshot**, không phải hardcoded kiến trúc (architecture / 아키텍처) quy tắc (rule / 규칙).
 
 ---
 
-# 31. Checklist khi gặp một project Kotlin/Android lạ
+# 31. Checklist khi gặp một dự án (project / 프로젝트) Kotlin/Android lạ
 
-Trước khi đọc code sâu, hãy xác định version fingerprint.
+Trước khi đọc mã (code / 코드) sâu, hãy xác định phiên bản (version / 버전) fingerprint.
 
-### Build system
+### Hệ thống dựng (build system / 빌드 시스템)
 
 ```text
 Gradle wrapper version?
@@ -1453,7 +1456,7 @@ View/XML hay Compose?
 Fragment-heavy hay single-activity Compose?
 ```
 
-### Architecture generation
+### Kiến trúc (architecture / 아키텍처) generation
 
 ```text
 callbacks / AsyncTask?
@@ -1465,13 +1468,13 @@ DataStore?
 WorkManager?
 ```
 
-Chỉ cần fingerprint này đã giúp ước lượng project thuộc thế hệ nào và migration debt nằm ở đâu.
+Chỉ cần fingerprint này đã giúp ước lượng dự án (project / 프로젝트) thuộc thế hệ nào và di chuyển (migration / 마이그레이션) debt nằm ở đâu.
 
 ---
 
-# 32. Cách đọc nhanh code theo generation
+# 32. Cách đọc nhanh mã (code / 코드) theo generation
 
-## Project rất cũ
+## Dự án (project / 프로젝트) rất cũ
 
 Dấu hiệu:
 
@@ -1487,11 +1490,11 @@ kapt-heavy
 old Gradle DSL
 ```
 
-Không được rewrite ngay. Trước hết xác định test coverage và behavior contract.
+Không được rewrite ngay. Trước hết xác định kiểm thử (test / 테스트) coverage và hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약).
 
 ---
 
-## Project transitional
+## Dự án (project / 프로젝트) transitional
 
 Dấu hiệu:
 
@@ -1503,13 +1506,13 @@ kapt + KSP coexist
 ViewModel modern nhưng navigation cũ
 ```
 
-Đây là trạng thái rất phổ biến ở production.
+Đây là trạng thái rất phổ biến ở môi trường vận hành (production / 운영 환경).
 
-Migration nên incremental.
+Di chuyển (migration / 마이그레이션) nên incremental.
 
 ---
 
-## Project modern
+## Dự án (project / 프로젝트) hiện đại (modern / 현대적)
 
 Dấu hiệu thường gặp:
 
@@ -1526,15 +1529,15 @@ WorkManager
 modern AGP/Gradle/JDK toolchain
 ```
 
-Nhưng “modern stack” vẫn không bảo đảm architecture tốt. State ownership, lifetime, consistency, testing và release discipline vẫn quyết định chất lượng.
+Nhưng “hiện đại (modern / 현대적) ngăn xếp (stack / 스택)” vẫn không bảo đảm kiến trúc (architecture / 아키텍처) tốt. quyền sở hữu trạng thái (state ownership / 상태 소유권), thời gian tồn tại (lifetime / 수명), consistency, testing và bản phát hành (release / 릴리스) discipline vẫn quyết định chất lượng.
 
 ---
 
-# 33. Version timeline nên được dùng như thế nào khi học
+# 33. phiên bản (version / 버전) timeline nên được dùng như thế nào khi học
 
-Không cần học thuộc ngày release.
+Không cần học thuộc ngày bản phát hành (release / 릴리스).
 
-Điều nên nhớ là **các mốc chuyển mental model**:
+Điều nên nhớ là **các mốc chuyển mô hình tư duy (mental model / 사고 모델)**:
 
 ```text
 1.3 → coroutine trở thành nền tảng practical
@@ -1561,13 +1564,13 @@ Java/XML era
 → modern build/distribution/runtime engineering
 ```
 
-Version history có giá trị vì nó giải thích **vì sao codebase cũ có hình dạng hiện tại**, không phải để đánh giá code cũ bằng tiêu chuẩn hiện đại mà không xét bối cảnh.
+Phiên bản (version / 버전) lịch sử (history / 이력) có giá trị vì nó giải thích **vì sao codebase cũ có hình dạng hiện tại**, không phải để đánh giá mã (code / 코드) cũ bằng tiêu chuẩn hiện đại mà không xét bối cảnh.
 
 ---
 
-# 34. Senior Notes — version là một dependency graph
+# 34. cấp cao (senior / 시니어) Notes — phiên bản (version / 버전) là một phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
-Ở mức Senior/Master, đừng nhìn version thành một list:
+Ở mức cấp cao (senior / 시니어)/Master, đừng nhìn phiên bản (version / 버전) thành một danh sách (list / 목록):
 
 ```text
 Kotlin 2.4.20
@@ -1575,7 +1578,7 @@ AGP 9.4.1
 Gradle X
 ```
 
-Hãy nhìn chúng thành dependency graph:
+Hãy nhìn chúng thành phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프):
 
 ```text
 JDK
@@ -1597,9 +1600,9 @@ Jetpack libraries ───── compileSdk requirements
 runtime behavior on Android OS
 ```
 
-Một version change ở node trên có thể cascade xuống nhiều node khác.
+Một phiên bản (version / 버전) thay đổi (change / 변경) ở nút (node / 노드) trên có thể cascade xuống nhiều nút (node / 노드) khác.
 
-Đó là lý do upgrade production cần:
+Đó là lý do upgrade môi trường vận hành (production / 운영 환경) cần:
 
 ```text
 compatibility matrix
@@ -1610,21 +1613,23 @@ compatibility matrix
 + rollout observability
 ```
 
-chứ không phải chỉ sửa version string tới khi Gradle hết báo đỏ.
+chứ không phải chỉ sửa phiên bản (version / 버전) string tới khi Gradle hết báo đỏ.
 
 ---
 
-# 35. Nguồn chính thức nên kiểm tra khi update file này
+# 35. Nguồn chính thức nên kiểm tra khi cập nhật (update / 업데이트) tệp (file / 파일) này
 
-Khi version thay đổi, ưu tiên các nguồn chính thức sau:
+Khi phiên bản (version / 버전) thay đổi, ưu tiên các nguồn chính thức sau:
 
-- Kotlin release process: `https://kotlinlang.org/docs/releases.html`
-- Kotlin What's New: `https://kotlinlang.org/docs/whatsnew24.html` và các release tương ứng
-- Kotlin compatibility guides: `https://kotlinlang.org/docs/compatibility-guides.html`
-- Kotlin language features/proposals: `https://kotlinlang.org/docs/kotlin-language-features-and-proposals.html`
-- Compose compiler migration: `https://kotlinlang.org/docs/compose-compiler-migration-guide.html`
-- Android Compose compiler setup: `https://developer.android.com/develop/ui/compose/setup-compose-dependencies-and-compiler`
-- Android Gradle Plugin release notes và API support: Android Developers
-- Android behavior changes theo OS/target SDK: Android Developers
+- Kotlin quy trình phát hành (release process / 릴리스 프로세스): `https://kotlinlang.org/docs/releases.html`
+- Kotlin What's New: `https://kotlinlang.org/docs/whatsnew24.html` và các bản phát hành (release / 릴리스) tương ứng
+- Kotlin tính tương thích (compatibility / 호환성) guides: `https://kotlinlang.org/docs/compatibility-guides.html`
+- Kotlin ngôn ngữ (language / 언어) features/proposals: `https://kotlinlang.org/docs/kotlin-language-features-and-proposals.html`
+- Compose trình biên dịch (compiler / 컴파일러) di chuyển (migration / 마이그레이션): `https://kotlinlang.org/docs/compose-compiler-migration-guide.html`
+- Android Compose trình biên dịch (compiler / 컴파일러) setup: `https://developer.android.com/develop/ui/compose/setup-compose-dependencies-and-compiler`
+- Android Gradle Plugin bản phát hành (release / 릴리스) notes và API hỗ trợ (support / 지원): Android Developers
+- Android hành vi (behavior / 동작) changes theo OS/mục tiêu (target / 대상) SDK: Android Developers
 
-Mỗi lần baseline trong README thay đổi, file version evolution này cũng nên được review để tránh tình trạng README nói toolchain mới nhưng migration guide vẫn dừng ở thế hệ cũ.
+Mỗi lần baseline trong README thay đổi, tệp (file / 파일) phiên bản (version / 버전) evolution này cũng nên được rà soát (review / 검토) để tránh tình trạng README nói toolchain mới nhưng di chuyển (migration / 마이그레이션) guide vẫn dừng ở thế hệ cũ.
+
+> **Bàn giao:** Sau **dự án (project / 프로젝트) hiện đại (modern / 현대적)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

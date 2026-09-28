@@ -1,6 +1,9 @@
-# Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo gradient
+# Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)
 
-## Một cấu trúc lặp lại: gradient tạo thông lượng
+> **Mạch đọc:** Đọc **Hiện tượng vận chuyển: khuếch tán, dẫn nhiệt và dòng theo độ dốc (gradient / 기울기)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Một cấu trúc lặp lại: độ dốc (gradient / 기울기) tạo thông lượng** sang **Định luật Fick và khuếch tán**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+## Một cấu trúc lặp lại: độ dốc (gradient / 기울기) tạo thông lượng
 
 Nhiều quá trình tưởng khác nhau có cùng cấu trúc toán học. Khi mật độ, nhiệt độ, nồng độ hoặc thế hóa học không đồng đều trong không gian, hệ thường tạo một thông lượng (flux / 선속) làm giảm chênh lệch đó.
 
@@ -12,7 +15,7 @@ Cấu trúc chung là
 -\nabla(\text{driving field}).
 ```
 
-Dấu âm nói dòng đi theo hướng làm giảm gradient.
+Dấu âm nói dòng đi theo hướng làm giảm độ dốc (gradient / 기울기).
 
 Ý tưởng này nối cơ học chất lưu, nhiệt động lực học, hóa học, bán dẫn, vật lý vật liệu và cả một số mô hình dữ liệu ngẫu nhiên.
 
@@ -186,7 +189,7 @@ suy ra thời gian truyền nhiệt khuếch tán qua chiều dài `L` có bậc
 t_D\sim\frac{L^2}{\alpha}.
 ```
 
-Quan hệ `L^2` rất quan trọng trong engineering: làm một chi tiết dày gấp đôi có thể làm thời gian cân bằng nhiệt tăng gần bốn lần nếu cơ chế vẫn là dẫn nhiệt thuần.
+Quan hệ `L^2` rất quan trọng trong kỹ thuật (engineering / 엔지니어링): làm một chi tiết dày gấp đôi có thể làm thời gian cân bằng nhiệt tăng gần bốn lần nếu cơ chế vẫn là dẫn nhiệt thuần.
 
 ## Vận chuyển động lượng và độ nhớt
 
@@ -207,7 +210,7 @@ Với chất lưu Newton,
 
 cũng có đơn vị `m^2/s`.
 
-Sự giống đơn vị giữa `D`, `\alpha` và `\nu` không phải ngẫu nhiên: cả ba đều mô tả tốc độ một đại lượng được san bằng trong không gian bởi transport vi mô.
+Sự giống đơn vị giữa `D`, `\alpha` và `\nu` không phải ngẫu nhiên: cả ba đều mô tả tốc độ một đại lượng được san bằng trong không gian bởi vận chuyển (transport / 전송) vi mô.
 
 ## Advection và diffusion
 
@@ -258,7 +261,7 @@ Một hệ có thể diffusion-dominated ở thang nhỏ nhưng advection-domina
 
 ## Drift và diffusion trong bán dẫn
 
-Dòng hạt tải trong bán dẫn có cả thành phần drift do điện trường và diffusion do gradient nồng độ.
+Dòng hạt tải trong bán dẫn có cả thành phần drift do điện trường và diffusion do độ dốc (gradient / 기울기) nồng độ.
 
 Schematic:
 
@@ -272,7 +275,7 @@ với dấu cụ thể phụ thuộc loại hạt tải và quy ước dòng đi
 
 Trong tiếp giáp P–N, diffusion ban đầu do chênh nồng độ tạo vùng điện tích không gian. Điện trường bên trong sinh drift ngược lại. Ở cân bằng, hai cơ chế triệt tiêu dòng ròng.
 
-Do đó transport không phải chủ đề tách biệt; nó là nền của electronics.
+Do đó vận chuyển (transport / 전송) không phải chủ đề tách biệt; nó là nền của electronics.
 
 ## Quan hệ Einstein
 
@@ -294,7 +297,7 @@ cho hạt tải không suy biến trong điều kiện thích hợp.
 
 Đây là một dạng của quan hệ thăng giáng–tiêu tán: cùng coupling vi mô gây drag cũng quyết định độ mạnh của diffusion nhiệt.
 
-## Boundary conditions quyết định bài toán transport
+## Ranh giới (boundary / 경계) conditions quyết định bài toán vận chuyển (transport / 전송)
 
 Cùng phương trình diffusion nhưng biên khác cho nghiệm khác hoàn toàn.
 
@@ -316,16 +319,16 @@ c|_{boundary}=c_b.
 
 Thông lượng có thể tỉ lệ với chênh lệch nồng độ hoặc nhiệt độ ở biên.
 
-Trong heat transfer, boundary condition kiểu đối lưu thường có dạng
+Trong heat transfer, ranh giới (boundary / 경계) điều kiện (condition / 조건) kiểu đối lưu thường có dạng
 
 ```math
 -k\frac{\partial T}{\partial n}
 =h(T-T_\infty).
 ```
 
-Nếu đặt boundary condition sai, solver có thể hội tụ rất đẹp tới nghiệm của **một bài toán khác**.
+Nếu đặt ranh giới (boundary / 경계) điều kiện (condition / 조건) sai, solver có thể hội tụ rất đẹp tới nghiệm của **một bài toán khác**.
 
-## Steady state không có nghĩa không có dòng
+## Steady trạng thái (state / 상태) không có nghĩa không có dòng
 
 Nếu
 
@@ -337,9 +340,9 @@ hệ ở trạng thái dừng.
 
 Nhưng `\mathbf J` không nhất thiết bằng 0.
 
-Một gradient nhiệt ổn định qua thanh kim loại có thể duy trì thông lượng nhiệt không đổi. Đây là trạng thái dừng không cân bằng: profile không đổi theo thời gian nhưng năng lượng vẫn liên tục đi qua hệ.
+Một độ dốc (gradient / 기울기) nhiệt ổn định qua thanh kim loại có thể duy trì thông lượng nhiệt không đổi. Đây là trạng thái dừng không cân bằng: profile không đổi theo thời gian nhưng năng lượng vẫn liên tục đi qua hệ.
 
-## Transport coefficients phụ thuộc trạng thái vật liệu
+## Vận chuyển (transport / 전송) coefficients phụ thuộc trạng thái vật liệu
 
 Các hệ số `D,k,\mu,\nu` thường không phải hằng số tuyệt đối.
 
@@ -364,7 +367,7 @@ Do đó dùng một hệ số hằng chỉ là xấp xỉ trong một miền v�
 
 Diffusion là nền của:
 
-- phản ứng bị giới hạn bởi transport;
+- phản ứng bị giới hạn bởi vận chuyển (transport / 전송);
 - điện hóa;
 - pin;
 - corrosion;
@@ -373,13 +376,13 @@ Diffusion là nền của:
 
 Nếu phản ứng hóa học nhanh hơn nhiều diffusion, tốc độ quan sát được có thể bị giới hạn bởi việc reactant tới được vùng phản ứng, không phải bởi kinetic barrier của phản ứng.
 
-Các số vô thứ nguyên như Damköhler so sánh reaction timescale với transport timescale.
+Các số vô thứ nguyên như Damköhler so sánh reaction timescale với vận chuyển (transport / 전송) timescale.
 
-## Liên hệ với Computer Science và mô phỏng
+## Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학) và mô phỏng
 
 Phương trình diffusion là PDE parabolic.
 
-Với finite difference explicit một chiều,
+Với finite difference tường minh (explicit / 명시적) một chiều,
 
 ```math
 T_i^{n+1}
@@ -393,25 +396,25 @@ trong đó
 r=\frac{\alpha\Delta t}{\Delta x^2}.
 ```
 
-Phương pháp explicit đơn giản có điều kiện ổn định; trong trường hợp chuẩn 1D thường cần
+Phương pháp tường minh (explicit / 명시적) đơn giản có điều kiện ổn định; trong trường hợp chuẩn 1D thường cần
 
 ```math
 r\le\frac12.
 ```
 
-Nếu timestep quá lớn, mô phỏng có thể dao động và phát nổ dù hệ nhiệt thật luôn làm trơn gradient.
+Nếu timestep quá lớn, mô phỏng có thể dao động và phát nổ dù hệ nhiệt thật luôn làm trơn độ dốc (gradient / 기울기).
 
 Do đó numerical stability là tính chất của scheme, không phải bằng chứng hệ vật lý bất ổn.
 
 ## Miền áp dụng và giới hạn
 
-Định luật Fick và Fourier là quan hệ tuyến tính gần cân bằng và giả sử local equilibrium đủ tốt.
+Định luật Fick và Fourier là quan hệ tuyến tính gần cân bằng và giả sử cục bộ (local / 로컬) equilibrium đủ tốt.
 
-Ở thang rất nhỏ hoặc thời gian cực ngắn, transport có thể không còn khuếch tán cổ điển. Trong ballistic transport, mean free path có thể so sánh kích thước thiết bị.
+Ở thang rất nhỏ hoặc thời gian cực ngắn, vận chuyển (transport / 전송) có thể không còn khuếch tán cổ điển. Trong ballistic vận chuyển (transport / 전송), mean free đường dẫn (path / 경로) có thể so sánh kích thước thiết bị.
 
-Khi gradient rất lớn, vật liệu phi tuyến hoặc có memory, flux có thể không còn tỉ lệ tức thời với gradient.
+Khi độ dốc (gradient / 기울기) rất lớn, vật liệu phi tuyến hoặc có bộ nhớ (memory / 메모리), flux có thể không còn tỉ lệ tức thời với độ dốc (gradient / 기울기).
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Hiện tượng vận chuyển có thể được tổ chức thành hai lớp:
 
@@ -433,20 +436,22 @@ Một câu tóm tắt hữu ích là:
 
 Không nhất thiết. Trong diffusion thuần, mean displacement có thể bằng 0 trong khi variance tăng.
 
-### “Steady state nghĩa không có transport”
+### “Steady trạng thái (state / 상태) nghĩa không có vận chuyển (transport / 전송)”
 
 Không. Một dòng không đổi có thể tồn tại dù profile không thay đổi theo thời gian.
 
 ### “Thermal conductivity lớn nghĩa vật sẽ nóng lên nhanh nhất”
 
-Chưa đủ. Tốc độ cân bằng nhiệt còn phụ thuộc `\rho c_p`, hình học và boundary condition; thermal diffusivity `\alpha` mới phản ánh thang thời gian diffusion nhiệt trực tiếp hơn.
+Chưa đủ. Tốc độ cân bằng nhiệt còn phụ thuộc `\rho c_p`, hình học và ranh giới (boundary / 경계) điều kiện (condition / 조건); thermal diffusivity `\alpha` mới phản ánh thang thời gian diffusion nhiệt trực tiếp hơn.
 
 ### “Hệ số diffusion luôn là một hằng số vật liệu cố định”
 
 Không. Nó có thể phụ thuộc nhiệt độ, nồng độ và cấu trúc vi mô.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Gradient và PDE](../00_foundations/03_mathematical_language.md), [PDE và điều kiện biên](../00_foundations/05_pde_boundary_green_tensors.md), [Nhiệt động lực học](../04_thermal_statistical/00_thermodynamics.md).
 
 **Liên hệ tiếp:** [Động lực ngẫu nhiên](../04_thermal_statistical/04_stochastic_nonequilibrium.md), [Thăng giáng–tiêu tán](../04_thermal_statistical/07_linear_response_fluctuation_dissipation.md), [Thiết bị bán dẫn](../10_condensed_matter_devices/01_semiconductors_devices.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 fluids](./00_fluids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

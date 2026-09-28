@@ -1,5 +1,8 @@
 # Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc
 
+> **Mạch đọc:** Đặt **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **이름: tên không chỉ là một nhãn** sang **성씨 và 본관: cùng họ chưa chắc cùng dòng họ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Trong nhiều xã hội, tên và tuổi chủ yếu là thông tin nhận dạng. Trong đời sống Hàn Quốc, chúng thường còn đóng vai trò như **siêu dữ liệu xã hội (social metadata / 사회적 메타데이터)**: dữ liệu giúp người tham gia suy ra cách xưng hô, mức độ thân mật, vai trò và đôi khi cả kỳ vọng hành vi. Vì vậy câu hỏi `몇 살이에요?` có thể mang chức năng khác hẳn câu hỏi tuổi trong một số nền văn hoá khác.
 
 ## 이름: tên không chỉ là một nhãn
@@ -64,11 +67,11 @@ chọn danh xưng + cấp độ lời nói
 
 Khái niệm **빠른년생** từng xuất hiện do hệ thống nhập học cho phép một số trẻ sinh đầu năm vào trường cùng khoá với người sinh cuối năm trước. Vì vậy tuổi theo ngày sinh và khoá học có thể không trùng nhau.
 
-Đây là một trường hợp biên (edge case) thú vị. Nếu thứ bậc chỉ dựa trên tuổi sinh học thì gần như không có mơ hồ. Nhưng vì `친구`, `선후배`, năm học và tuổi cùng tham gia xác định quan hệ, xung đột có thể phát sinh. Hệ thống tuyển sinh đã thay đổi nên khái niệm này ít tạo ra những khoá mới, nhưng người trưởng thành thuộc các thế hệ trước vẫn có thể nhắc tới.
+Đây là một trường hợp biên (edge case / 경계 사례) thú vị. Nếu thứ bậc chỉ dựa trên tuổi sinh học thì gần như không có mơ hồ. Nhưng vì `친구`, `선후배`, năm học và tuổi cùng tham gia xác định quan hệ, xung đột có thể phát sinh. Hệ thống tuyển sinh đã thay đổi nên khái niệm này ít tạo ra những khoá mới, nhưng người trưởng thành thuộc các thế hệ trước vẫn có thể nhắc tới.
 
 ## 동갑, 친구 và sự tương đương về tuổi
 
-**동갑 (same age / đồng tuổi)** thường làm việc chuyển sang quan hệ `친구` dễ hơn, nhưng không tự động đồng nghĩa thân thiết về cảm xúc. Trong logic quan hệ Hàn Quốc, `친구` có thể mang nghĩa cấu trúc: hai người cùng tuổi có thể chuyển sang `반말` dễ hơn sau khi thống nhất.
+**동갑 (same age / đồng tuổi)** thường làm việc chuyển sang quan hệ `친구` dễ hơn, nhưng không tự động đồng nghĩa thân thiết về cảm xúc. Trong lô-gic (logic / 논리) quan hệ Hàn Quốc, `친구` có thể mang nghĩa cấu trúc: hai người cùng tuổi có thể chuyển sang `반말` dễ hơn sau khi thống nhất.
 
 Vì vậy từ tiếng Anh `friend` không ánh xạ hoàn toàn một-một sang `친구`. Một đồng nghiệp rất thân nhưng lớn hơn vài tuổi có thể không được gọi là `친구`, trong khi hai người mới gặp nhưng đồng tuổi có thể sớm dùng phạm trù này.
 
@@ -153,7 +156,7 @@ tuổi giúp đặt giả thuyết
 
 ## Tối thiểu hoá dữ liệu: không phải siêu dữ liệu nào hữu ích cũng nên thu thập
 
-Vì tuổi, năm sinh, chức danh, quê quán và quan hệ có thể giúp giảm bất định, tổ chức dễ rơi vào logic “càng biết nhiều càng tốt”. Nhưng dữ liệu hữu ích về mặt xã hội không đồng nghĩa cần thiết về mặt nghiệp vụ.
+Vì tuổi, năm sinh, chức danh, quê quán và quan hệ có thể giúp giảm bất định, tổ chức dễ rơi vào lô-gic (logic / 논리) “càng biết nhiều càng tốt”. Nhưng dữ liệu hữu ích về mặt xã hội không đồng nghĩa cần thiết về mặt nghiệp vụ.
 
 Trong bảo vệ dữ liệu, **tối thiểu hoá dữ liệu (data minimization)** nghĩa là chỉ thu thập những gì cần cho mục đích đã xác định. Đây là đối trọng quan trọng với văn hoá tiện lợi dựa trên định danh dày đặc.
 
@@ -211,3 +214,5 @@ Không đúng. Tuổi chỉ là một trục; chức vụ, mức thân thiết, 
 ## Nguồn tham khảo định hướng
 
 Khi cần xác nhận quy tắc tuổi hiện hành, ưu tiên Ministry of Government Legislation (`법제처`) và văn bản pháp luật cụ thể. Với họ, bản quán và lịch sử đặt tên, tham khảo Academy of Korean Studies và các bách khoa Korean Studies.
+
+> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

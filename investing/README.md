@@ -1,16 +1,19 @@
 # Thư viện Kiến thức Đầu tư (Investing Knowledge Library)
 
-Bộ tài liệu này được tổ chức theo từng lĩnh vực (domain) thay vì gom vào một cuốn tổng hợp quá lớn. Mỗi thư mục có mục tiêu học rõ ràng, tài liệu nền tảng và các chương chuyên sâu để chuyển từ kiến thức sang phân tích thực tế.
+> **Mạch đọc:** Đọc **Thư viện Kiến thức Đầu tư (Investing Knowledge Library)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ranh giới với Economics thư viện (library / 라이브러리) độc lập** sang **00 — Thuật ngữ, công thức và quy chuẩn nghiên cứu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một file quy chuẩn chung về thuật ngữ, công thức và phương pháp nghiên cứu, cùng một phần bài tập tích hợp (capstone) để nối toàn bộ quá trình từ lý thuyết → phân tích → xây vị thế → thực thi → đánh giá lại.
 
-Để kiểm tra phần nào đã đủ sâu, phần nào time-sensitive và phần nào **không nên tiếp tục mở rộng chỉ để tăng số file**, xem [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Sau core route, dùng [Advanced Depth Path](./ADVANCED_DEPTH_PATH.md) và [Advanced Practice Workbook](./ADVANCED_PRACTICE_WORKBOOK.md) để chuyển kiến thức sang artifact có thể review.
+Bộ tài liệu này được tổ chức theo từng lĩnh vực (domain / 도메인) thay vì gom vào một cuốn tổng hợp quá lớn. Mỗi thư mục có mục tiêu học rõ ràng, tài liệu nền tảng và các chương chuyên sâu để chuyển từ kiến thức sang phân tích thực tế.
 
-### Ranh giới với Economics library độc lập
+Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một tệp (file / 파일) quy chuẩn chung về thuật ngữ, công thức và phương pháp nghiên cứu, cùng một phần bài tập tích hợp (capstone) để nối toàn bộ quá trình từ lý thuyết → phân tích → xây vị thế → thực thi → đánh giá lại.
 
-Economics hiện là canonical library độc lập tại [`../economics/README.md`](../economics/README.md), đã bao phủ general-purpose economic reasoning, microeconomics, market structure/game theory, macroeconomics, applied economics, econometrics và economic history/institutions.
+Để kiểm tra phần nào đã đủ sâu, phần nào time-sensitive và phần nào **không nên tiếp tục mở rộng chỉ để tăng số tệp (file / 파일)**, xem [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Advanced Depth Path](./ADVANCED_DEPTH_PATH.md) và [Advanced Practice Workbook](./ADVANCED_PRACTICE_WORKBOOK.md) để chuyển kiến thức sang sản phẩm tạo ra (artifact / 산출물) có thể rà soát (review / 검토).
 
-`investing/04_economics/` giữ application layer cho macro data, monetary/funding conditions, capital flows, crisis transmission, public debt, demographics, productivity, policy regime và cách chúng truyền vào asset/company/portfolio. Hai nhánh cross-link theo ownership này; không duplicate hàng loạt theory general-purpose.
+### Ranh giới với Economics thư viện (library / 라이브러리) độc lập
+
+Economics hiện là chuẩn gốc (canonical / 정본) thư viện (library / 라이브러리) độc lập tại [`../economics/README.md`](../economics/README.md), đã bao phủ general-purpose economic lập luận (reasoning / 추론), microeconomics, thị trường (market / 시장) cấu trúc (structure / 구조)/game lý thuyết (theory / 이론), macroeconomics, applied economics, econometrics và economic lịch sử (history / 이력)/institutions.
+
+`investing/04_economics/` giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), monetary/funding conditions, capital flows, crisis transmission, công khai (public / 공개) debt, demographics, productivity, chính sách (policy / 정책) regime và cách chúng truyền vào asset/company/portfolio. Hai nhánh cross-link theo quyền sở hữu (ownership / 소유권) này; không duplicate hàng loạt lý thuyết (theory / 이론) general-purpose.
 
 ## 00 — Thuật ngữ, công thức và quy chuẩn nghiên cứu
 
@@ -19,6 +22,9 @@ Economics hiện là canonical library độc lập tại [`../economics/README.
 Đây là tài liệu tham chiếu dùng xuyên suốt toàn bộ thư viện. Nội dung chuẩn hóa cách dùng các khái niệm như lợi suất danh nghĩa và lợi suất thực, CAGR, độ biến động, tương quan, phương sai danh mục, beta, alpha, Sharpe, Sortino, mức suy giảm (drawdown), VaR, Expected Shortfall, định giá dòng tiền, EV, FCFF, FCFE, ROIC, duration, DV01, tổn thất tín dụng kỳ vọng, phân rã lợi suất ngoại tệ, giá trị danh nghĩa của phái sinh, kỳ vọng toán học, chỉ số tham chiếu, dữ liệu đúng thời điểm, thứ bậc nguồn dữ liệu, kịch bản và điều kiện vô hiệu hóa luận điểm.
 
 Quy tắc ngôn ngữ của toàn thư viện cũng nằm ở đây: phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc khi cần tra cứu.
+
+
+> **Chuyển mạch:** Từ **00 — Thuật ngữ, công thức và quy chuẩn nghiên cứu**, ta sang **Cấu trúc lĩnh vực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cấu trúc lĩnh vực
 
@@ -44,15 +50,15 @@ Học báo cáo tài chính, kế toán, chất lượng doanh nghiệp, lợi t
 
 [04_economics/README.md](./04_economics/README.md)
 
-Học cách dữ liệu vĩ mô, ngân hàng trung ương, đường cong lợi suất, tiền tệ, repo/tài sản thế chấp, nguồn vốn USD, capital flows và policy regime truyền vào thị trường, ngành, doanh nghiệp và danh mục. General-purpose economic theory nằm ở [`../economics/`](../economics/README.md); nhánh này giữ investment application, nowcasting, liquidity/funding và crisis transmission.
+Học cách dữ liệu vĩ mô, ngân hàng trung ương, đường cong lợi suất, tiền tệ, repo/tài sản thế chấp, nguồn vốn USD, capital flows và chính sách (policy / 정책) regime truyền vào thị trường, ngành, doanh nghiệp và danh mục. General-purpose economic lý thuyết (theory / 이론) nằm ở [`../economics/`](../economics/README.md); nhánh này giữ investment ứng dụng (application / 애플리케이션), nowcasting, liquidity/funding và crisis transmission.
 
 ### 05 — Giao dịch và phái sinh (Trading & Derivatives)
 
 [05_trading_derivatives/README.md](./05_trading_derivatives/README.md)
 
-Học Forex, hợp đồng tương lai, quyền chọn, hoán đổi, CFD, đòn bẩy, ký quỹ, tài sản bảo đảm, quy mô vị thế, kỳ vọng toán học, kiểm thử chiến lược, thực thi lệnh, vi cấu trúc và quản trị rủi ro ở cấp danh mục giao dịch. Phần nghiên cứu nâng cao bao gồm kiểm định ngoài mẫu, walk-forward, thiên lệch dữ liệu, độ ổn định tham số, chi phí giao dịch, tác động thị trường, Monte Carlo, suy giảm chiến lược, danh mục chiến lược, bề mặt biến động, Greek, phòng vệ động và production controls.
+Học Forex, hợp đồng tương lai, quyền chọn, hoán đổi, CFD, đòn bẩy, ký quỹ, tài sản bảo đảm, quy mô vị thế, kỳ vọng toán học, kiểm thử chiến lược, thực thi lệnh, vi cấu trúc và quản trị rủi ro ở cấp danh mục giao dịch. Phần nghiên cứu nâng cao bao gồm kiểm định ngoài mẫu, walk-forward, thiên lệch dữ liệu, độ ổn định tham số, chi phí giao dịch, tác động thị trường, Monte Carlo, suy giảm chiến lược, danh mục chiến lược, bề mặt biến động, Greek, phòng vệ động và môi trường vận hành (production / 운영 환경) controls.
 
-Forex có dedicated path tại [`05_trading_derivatives/forex/README.md`](./05_trading_derivatives/forex/README.md): core `01–15`, institutional connections về NDF/basis/funding/intervention/REER, practice labs và historical stress cases.
+Forex có dedicated đường dẫn (path / 경로) tại [`05_trading_derivatives/forex/README.md`](./05_trading_derivatives/forex/README.md): cốt lõi (core / 핵심) `01–15`, institutional connections về NDF/basis/funding/intervention/REER, practice labs và historical stress cases.
 
 ### 06 — Thị trường Hàn Quốc và Việt Nam
 
@@ -60,7 +66,7 @@ Forex có dedicated path tại [`05_trading_derivatives/forex/README.md`](./05_t
 
 Áp dụng toàn bộ khung kiến thức vào KRX/KOSPI/KOSDAQ và HOSE/HNX/UPCoM. Nội dung bao gồm bản đồ ngành, KRW/VND, BOK/SBV, bán dẫn, ngân hàng, bất động sản, FDI, dòng vốn nước ngoài, cú sốc liên thị trường và quy trình nghiên cứu thực tế. Phần đầu tư xuyên biên giới bổ sung khung bốn loại tiền tệ, phòng vệ ngoại hối, quỹ niêm yết nội địa, nơi thành lập quỹ, tiếp cận thị trường, thanh toán, lưu ký, giới hạn sở hữu nước ngoài, chuyển tiền về nước, thuế khấu trừ và khả năng chống chịu vận hành.
 
-### 07 — Bài tập tích hợp (Integrated Case Studies)
+### 07 — Bài tập tích hợp (Integrated case Studies)
 
 [07_integrated_case_studies/README.md](./07_integrated_case_studies/README.md)
 
@@ -70,19 +76,22 @@ Forex có dedicated path tại [`05_trading_derivatives/forex/README.md`](./05_t
 - [Khủng hoảng tín dụng và thanh khoản](./07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md): lệch kỳ hạn → căng thẳng nguồn vốn → tài sản thế chấp và haircut → bán cưỡng bức → chênh lệch tín dụng → co hẹp tín dụng → phản ứng chính sách → thanh khoản danh mục.
 - [Chu kỳ bán dẫn Hàn Quốc](./07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md): chi tiêu AI → tồn kho, ASP và công suất sử dụng → cơ cấu HBM → capex và nhà cung cấp → điều chỉnh dự báo lợi nhuận → định giá chuẩn hóa → quy mô vị thế.
 - [Chu kỳ bất động sản–ngân hàng Việt Nam](./07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md): pháp lý → bán trước và dòng tiền → tái cấp vốn → ngân hàng, NPL và dự phòng → thanh khoản trong nước và SBV → định giá → khả năng thoát vị thế khi căng thẳng.
-- [Full Investment Process](./07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md): research question → model/valuation → expected-return distribution → sizing → execution → monitoring → attribution → post-mortem.
-- [Macro → Rates → Liquidity → Company → Valuation → Portfolio](./07_integrated_case_studies/06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md): buộc cùng một shock đi xuyên macro, funding, doanh nghiệp, valuation và portfolio exposure thay vì dừng ở market narrative.
-- [USD Funding / FX / Korea–Vietnam Cross-Border](./07_integrated_case_studies/07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md): global USD funding → FX/basis → Korea/Vietnam balance-sheet/access channels → asset/company exposure → hedge/portfolio decision.
+- [Full Investment Process](./07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md): research question → mô hình (model / 모델)/valuation → expected-return phân phối (distribution / 분포) → sizing → thực thi (execution / 실행) → monitoring → attribution → post-mortem.
+- [Macro → Rates → Liquidity → Company → Valuation → Portfolio](./07_integrated_case_studies/06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md): buộc cùng một shock đi xuyên macro, funding, doanh nghiệp, valuation và portfolio exposure thay vì dừng ở thị trường (market / 시장) narrative.
+- [USD Funding / FX / Korea–Vietnam Cross-Border](./07_integrated_case_studies/07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md): toàn cục (global / 전역) USD funding → FX/basis → Korea/Vietnam balance-sheet/truy cập (access / 접근) channels → asset/company exposure → hedge/portfolio quyết định (decision / 결정).
+
+
+> **Chuyển mạch:** Từ **Cấu trúc lĩnh vực**, ta sang **Lộ trình học khuyến nghị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lộ trình học khuyến nghị
 
-Nếu bắt đầu gần như từ số 0, dùng file `00` như tài liệu tham chiếu rồi học theo:
+Nếu bắt đầu gần như từ số 0, dùng tệp (file / 파일) `00` như tài liệu tham chiếu rồi học theo:
 
 ```text
 00 → 01 → 02 → 03 → 04 → 05 → 06 → 07
 ```
 
-Không cần học thuộc file `00`. Hãy quay lại khi gặp thuật ngữ, công thức hoặc cần kiểm tra quy chuẩn nghiên cứu.
+Không cần học thuộc tệp (file / 파일) `00`. Hãy quay lại khi gặp thuật ngữ, công thức hoặc cần kiểm tra quy chuẩn nghiên cứu.
 
 Nếu mục tiêu chính là đầu tư dài hạn:
 
@@ -98,9 +107,12 @@ Nếu mục tiêu là vĩ mô hoặc Forex:
 
 Vẫn nên quay lại phần Phân tích doanh nghiệp để hiểu kênh lợi nhuận và vì sao cùng một cú sốc vĩ mô tạo kết quả khác nhau giữa các ngành và doanh nghiệp.
 
+
+> **Chuyển mạch:** Từ **Lộ trình học khuyến nghị**, ta sang **Cách học để không biến thành đọc thụ động** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cách học để không biến thành đọc thụ động
 
-Sau phần Nền tảng, tự viết tuyên bố chính sách đầu tư (Investment Policy Statement, IPS), kiểm thử danh mục theo ít nhất ba kịch bản và làm một lần phân rã kết quả hàng tháng.
+Sau phần Nền tảng, tự viết tuyên bố chính sách đầu tư (Investment policy Statement, IPS), kiểm thử danh mục theo ít nhất ba kịch bản và làm một lần phân rã kết quả hàng tháng.
 
 Sau phần Các nhóm tài sản, phân tích một ETF, một ETF trái phiếu, một sản phẩm gần tiền mặt và một sản phẩm cấu trúc hoặc tài sản tư nhân theo quyền lợi pháp lý, nguồn lợi suất, tính thanh khoản, quyền chọn ẩn và rủi ro đi kèm.
 
@@ -113,6 +125,9 @@ Sau phần Giao dịch, kiểm thử một chiến lược duy nhất, làm ki�
 Sau phần Hàn Quốc/Việt Nam, tạo sổ nghiên cứu cho một cổ phiếu Hàn Quốc và một cổ phiếu Việt Nam, ghi rõ chu kỳ ngành, tiền tệ, tiếp cận thị trường, rủi ro bảng cân đối, định giá, chất xúc tác và điều kiện vô hiệu hóa luận điểm.
 
 Cuối cùng, dùng phần 07 như bài kiểm tra tích hợp: trước khi đọc lời giải tiếp theo, tự viết chuỗi nguyên nhân–kết quả và dữ liệu cần kiểm tra.
+
+
+> **Chuyển mạch:** Từ **Cách học để không biến thành đọc thụ động**, ta sang **Mẫu ghi chú nghiên cứu chuẩn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mẫu ghi chú nghiên cứu chuẩn
 
@@ -133,6 +148,9 @@ Một ghi chú hoàn chỉnh nên trả lời tối thiểu:
 12. Chu kỳ đánh giá lại và kế hoạch phân rã kết quả là gì?
 ```
 
+
+> **Chuyển mạch:** Từ **Mẫu ghi chú nghiên cứu chuẩn**, ta sang **Mô hình tư duy toàn thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy toàn thư viện
 
 ```text
@@ -152,8 +170,13 @@ Quyền lợi pháp lý
 
 Mục tiêu cuối cùng không phải dự báo mọi biến động giá. Mục tiêu là xây một hệ thống tư duy đủ rõ để biết mình đang sở hữu gì, lợi suất đến từ đâu, rủi ro nằm ở đâu, thị trường đang kỳ vọng điều gì, điều kiện nào làm luận điểm sai và bằng chứng nào cần được cập nhật.
 
+
+> **Chuyển mạch:** Từ **Mô hình tư duy toàn thư viện**, ta sang **Quy tắc cập nhật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Quy tắc cập nhật
 
 Các nguyên lý nền tảng, kế toán, định giá, lý thuyết danh mục và vi cấu trúc thị trường có thể dùng lâu dài. Các phần về lãi suất chính sách, thuế, thanh toán, giới hạn sở hữu nước ngoài, phân loại chỉ số, thông số sản phẩm và quy định pháp lý phải được kiểm tra lại theo nguồn chính thức trước khi ra quyết định thật.
 
 Dữ liệu vĩ mô mang tính thời điểm phải ghi rõ ngày hoặc kỳ tham chiếu. Khi nội dung trùng giữa tài liệu tổng quan và chương chuyên sâu, tài liệu tổng quan chỉ giữ vai trò bản đồ; chương chuyên sâu là nguồn tham chiếu chính về cơ chế.
+
+> **Bàn giao:** Sau **Quy tắc cập nhật**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 GLOSSARY FORMULAS AND RESEARCH CONVENTIONS](./00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **298. PCB (Process Control Block)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,15 +20,17 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** và nối nó với **298. PCB (Process Control Block)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)
-### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+### TẦNG A – ghi chú (note / 노트) NÉN (ÔN / ĐI THI)
 - **개념 (Khái niệm)**: 주기억장치 빈 공간이 없을 때 어떤 페이지를 내보낼지 결정하는 기법. (Kỹ thuật chọn trang để loại bỏ khi bộ nhớ chính đã đầy để nhường chỗ cho trang mới.)
 - **핵심 키워드 (Từ khóa)**: OPT, FIFO, LRU, LFU, NUR.
 - **시험 포인트 (Điểm thi)**: 각 알고리즘별 교체 대상 선정 기준 묻는 문제. (Tiêu chí chọn trang của từng thuật toán.)
 
-### TẦNG B – NOTE 보충 (HIỂU SÂU)
+### TẦNG B – ghi chú (note / 노트) 보충 (HIỂU SÂU)
 - **OPT (Optimal)**: 앞으로 가장 오랫동안 안 쓸 페이지 교체 (이론적 최고). (Thay trang sẽ lâu nhất không được dùng trong tương lai - Tốt nhất nhưng chỉ trên lý thuyết.)
 - **FIFO (First-In First-Out)**: 들어온 지 가장 오래된 페이지 교체. (Thay trang vào bộ nhớ sớm nhất.)
 - **LRU (Least Recently Used)**: 최근에 가장 오랫동안 안 쓴 페이지 교체. (Thay trang lâu nhất chưa được sử dụng tính từ hiện tại.)

@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)** và nối nó với **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -30,12 +32,12 @@
 - Cả hai đều phải viết theo góc nhìn của **사용자 (Người dùng)**.
 
 ### 빌드 및 모니터링 도구 (Công cụ Build & Monitoring)
-- **빌드 자동화 도구 (Build Automation):** Biến source code thành file chạy một cách tự động. Ví dụ: Ant, Maven, Gradle, **Jenkins**.
+- **빌드 자동화 도구 (Build Automation):** Biến mã nguồn (source code / 소스 코드) thành tệp (file / 파일) chạy một cách tự động. Ví dụ: Ant, Maven, Gradle, **Jenkins**.
 - **버전 관리 도구 (Version Control):** Git, SVN.
-- **정적 분석 도구 (Static Analysis):** Phân tích code tìm lỗi mà **KHÔNG CHẠY** chương trình. Ví dụ: PMD, Cppcheck, SonarQube.
+- **정적 분석 도구 (Static Analysis):** Phân tích mã (code / 코드) tìm lỗi mà **KHÔNG CHẠY** chương trình. Ví dụ: PMD, Cppcheck, SonarQube.
 - **동적 분석 도구 (Dynamic Analysis):** Vừa **CHẠY** chương trình vừa tìm lỗi (tràn bộ nhớ, v.v.). Ví dụ: Avalanche, Valgrind.
 
-- **Vietnamese Explanation:** "Tĩnh" (Static) nghĩa là code nằm im trên giấy, dùng tool soi từng dòng xem có viết sai cú pháp hay không. "Động" (Dynamic) là bấm nút chạy phần mềm rồi xem nó có bị sập hay tốn RAM không.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Tĩnh (Static) = PMD, SonarQube (Soi code). Động (Dynamic) = Valgrind (Chạy thử). Build = Jenkins (Ông quản gia tự động).
+- **Vietnamese Explanation:** "Tĩnh" (Static) nghĩa là mã (code / 코드) nằm im trên giấy, dùng công cụ (tool / 도구) soi từng dòng xem có viết sai cú pháp hay không. "Động" (Dynamic) là bấm nút chạy phần mềm rồi xem nó có bị sập hay tốn RAM không.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Tĩnh (Static) = PMD, SonarQube (Soi code). động (dynamic / 동적) = Valgrind (Chạy thử). bản dựng (build / 빌드) = Jenkins (Ông quản gia tự động).
 
 ---

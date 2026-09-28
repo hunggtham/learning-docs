@@ -1,18 +1,20 @@
 # Khí quyển, thời tiết và cơ chế tạo thời tiết
 
+> **Mạch đọc:** Đọc **Khí quyển, thời tiết và cơ chế tạo thời tiết** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Weather là trạng thái, climate là phân bố** sang **Thành phần và cấu trúc thẳng đứng của khí quyển**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Weather là trạng thái, climate là phân bố
 
 **Thời tiết (weather / 날씨)** là trạng thái khí quyển trong giờ–ngày: temperature, pressure, humidity, wind, cloud và precipitation. **Khí hậu (climate / 기후)** mô tả phân bố thống kê dài hạn của các biến đó: trung bình, variance, seasonality, extreme và persistence.
 
-Vì vậy một ngày lạnh không bác bỏ warming trend, và một ngày nóng không tự chứng minh climate change. Cần tách **event** khỏi **distribution**.
+Vì vậy một ngày lạnh không bác bỏ warming trend, và một ngày nóng không tự chứng minh climate thay đổi (change / 변경). Cần tách **sự kiện (event / 이벤트)** khỏi **phân phối (distribution / 분포)**.
 
 ## Thành phần và cấu trúc thẳng đứng của khí quyển
 
-Khí quyển gần mặt đất chủ yếu gồm nitrogen và oxygen, cùng argon, water vapor và trace gases. Water vapor biến đổi mạnh theo không gian và thời gian, đóng vai trò lớn trong cloud, precipitation và greenhouse effect.
+Khí quyển gần mặt đất chủ yếu gồm nitrogen và oxygen, cùng argon, water vapor và dấu vết (trace / 추적) gases. Water vapor biến đổi mạnh theo không gian và thời gian, đóng vai trò lớn trong cloud, precipitation và greenhouse tác động (effect / 효과).
 
 Theo profile nhiệt, khí quyển thường chia thành troposphere, stratosphere, mesosphere và thermosphere. Phần lớn weather xảy ra trong **troposphere** vì ở đây water vapor và vertical mixing tập trung.
 
-Stratosphere có ozone hấp thụ UV, làm temperature tăng theo height trong một phần layer. Cấu trúc này hạn chế vertical mixing khác troposphere.
+Stratosphere có ozone hấp thụ UV, làm temperature tăng theo height trong một phần tầng (layer / 계층). Cấu trúc này hạn chế vertical mixing khác troposphere.
 
 ## Pressure là weight của air column
 
@@ -24,47 +26,47 @@ Wind không chỉ “đi từ cao sang thấp” vì rotation và friction làm 
 
 ## Coriolis đổi hướng, không tạo năng lượng cho wind
 
-Do Earth quay, vật chuyển động trong reference frame Trái Đất có apparent deflection. Ở Northern Hemisphere lệch về phải, Southern Hemisphere về trái.
+Do Earth quay, vật chuyển động trong tham chiếu (reference / 참조) frame Trái Đất có apparent deflection. Ở Northern Hemisphere lệch về phải, Southern Hemisphere về trái.
 
-**Coriolis parameter** tăng với latitude và bằng 0 tại Equator. Coriolis không khởi động wind; pressure gradient tạo acceleration, còn Coriolis làm đổi direction.
+**Coriolis parameter** tăng với latitude và bằng 0 tại Equator. Coriolis không khởi động wind; pressure độ dốc (gradient / 기울기) tạo acceleration, còn Coriolis làm đổi direction.
 
-Ở scale lớn và friction nhỏ, pressure-gradient và Coriolis có thể gần cân bằng, tạo **geostrophic wind** chạy gần song song isobar.
+Ở quy mô (scale / 규모) lớn và friction nhỏ, pressure-gradient và Coriolis có thể gần cân bằng, tạo **geostrophic wind** chạy gần song song isobar.
 
 ## Friction làm surface wind cắt isobar
 
-Gần surface, friction làm wind chậm lại, Coriolis giảm tương đối và wind có component hướng vào low pressure.
+Gần surface, friction làm wind chậm lại, Coriolis giảm tương đối và wind có thành phần (component / 컴포넌트) hướng vào low pressure.
 
-Vì vậy surface convergence quanh low pressure có thể hỗ trợ uplift, còn divergence quanh high pressure hỗ trợ subsidence tùy hemisphere và context.
+Vì vậy surface convergence quanh low pressure có thể hỗ trợ uplift, còn divergence quanh high pressure hỗ trợ subsidence tùy hemisphere và ngữ cảnh (context / 맥락).
 
-Topography và roughness đô thị làm boundary layer phức tạp hơn simple textbook model.
+Topography và roughness đô thị làm ranh giới (boundary / 경계) tầng (layer / 계층) phức tạp hơn simple textbook mô hình (model / 모델).
 
-## Radiation budget: atmosphere được sưởi cả từ trên và dưới
+## Radiation ngân sách (budget / 예산): atmosphere được sưởi cả từ trên và dưới
 
 Solar shortwave đi vào hệ; một phần reflect bởi cloud/surface, phần còn lại absorb. Surface phát longwave và truyền heat bằng sensible/latent flux.
 
-Troposphere được sưởi mạnh từ surface, nhưng greenhouse gases và cloud tương tác longwave. Vì vậy temperature structure là kết quả của radiation + convection + phase change + dynamics.
+Troposphere được sưởi mạnh từ surface, nhưng greenhouse gases và cloud tương tác longwave. Vì vậy temperature cấu trúc (structure / 구조) là kết quả của radiation + convection + phase thay đổi (change / 변경) + dynamics.
 
-## Stability và lapse rate
+## Stability và lapse tỷ lệ (rate / 비율)
 
-Một air parcel nâng lên gặp pressure thấp hơn, expand và cool **adiabatically**. Nếu parcel dry/unsaturated, cooling rate gần dry adiabatic lapse rate; khi saturated, condensation release latent heat làm cooling chậm hơn.
+Một air parcel nâng lên gặp pressure thấp hơn, expand và cool **adiabatically**. Nếu parcel dry/unsaturated, cooling tỷ lệ (rate / 비율) gần dry adiabatic lapse tỷ lệ (rate / 비율); khi saturated, condensation bản phát hành (release / 릴리스) latent heat làm cooling chậm hơn.
 
-Atmospheric **stability** phụ thuộc so sánh parcel lapse với environmental lapse rate. Unstable atmosphere hỗ trợ convection; stable layer suppress vertical motion.
+Atmospheric **stability** phụ thuộc so sánh parcel lapse với environmental lapse tỷ lệ (rate / 비율). Unstable atmosphere hỗ trợ convection; stable tầng (layer / 계층) suppress vertical motion.
 
 Đây là cơ chế nền của thunderstorm, fog, inversion và pollution trapping.
 
 ## Temperature inversion và air pollution
 
-Thông thường temperature giảm theo height trong troposphere thấp. Nhưng **inversion** là layer nơi temperature tăng theo height, tạo stability mạnh.
+Thông thường temperature giảm theo height trong troposphere thấp. Nhưng **inversion** là tầng (layer / 계층) nơi temperature tăng theo height, tạo stability mạnh.
 
 Trong basin city, inversion có thể giữ pollutant gần surface. Seoul và nhiều đô thị bao quanh bởi mountain có thể trải nghiệm ventilation khác open coast.
 
-Pollution episode vì thế là interaction giữa emission + boundary-layer meteorology + topography, không chỉ “thành phố xả nhiều”.
+Pollution episode vì thế là tương tác (interaction / 상호작용) giữa emission + boundary-layer meteorology + topography, không chỉ “thành phố xả nhiều”.
 
-## Water vapor, relative humidity và dew point
+## Water vapor, relative humidity và dew điểm (point / 지점)
 
 **Relative humidity** là ratio giữa vapor hiện tại và mức saturation ở temperature đó. Air ấm có saturation vapor pressure cao hơn, nên RH có thể giảm khi air warms dù absolute moisture không đổi.
 
-**Dew point** phản ánh moisture content trực tiếp hơn trong nhiều context: air phải cool tới temperature nào để saturation đạt được.
+**Dew điểm (point / 지점)** phản ánh moisture content trực tiếp hơn trong nhiều ngữ cảnh (context / 맥락): air phải cool tới temperature nào để saturation đạt được.
 
 Cloud formation cần saturation và thường cần condensation nuclei.
 
@@ -72,80 +74,82 @@ Cloud formation cần saturation và thường cần condensation nuclei.
 
 Air có thể nâng do **convection**, **orographic lifting**, **front**, hoặc **convergence**.
 
-Mỗi cơ chế tạo cloud/precipitation pattern khác nhau. Mountain tạo windward rain và leeward rain shadow; front tạo band precipitation; convection tạo storm cell cục bộ nhưng mạnh.
+Mỗi cơ chế tạo cloud/precipitation mẫu (pattern / 패턴) khác nhau. Mountain tạo windward rain và leeward rain shadow; front tạo band precipitation; convection tạo storm cell cục bộ nhưng mạnh.
 
-Khi đọc rainfall map, cần hỏi “air bị nâng bằng mechanism nào?”.
+Khi đọc rainfall map, cần hỏi “air bị nâng bằng cơ chế (mechanism / 메커니즘) nào?”.
 
 ## Cloud không chỉ là indicator; chúng tương tác radiation
 
-Cloud low/thick thường reflect solar mạnh và có cooling effect; high thin cloud có thể cho shortwave đi qua nhưng trap longwave, tạo warming effect tương đối.
+Cloud low/thick thường reflect solar mạnh và có cooling tác động (effect / 효과); high thin cloud có thể cho shortwave đi qua nhưng trap longwave, tạo warming tác động (effect / 효과) tương đối.
 
-Net effect phụ thuộc cloud type, altitude, optical thickness và time of day. Đây là lý do cloud feedback là phần phức tạp trong climate system.
+Net tác động (effect / 효과) phụ thuộc cloud kiểu (type / 타입), altitude, optical thickness và thời gian (time / 시간) of day. Đây là lý do cloud phản hồi (feedback / 피드백) là phần phức tạp trong climate hệ thống (system / 시스템).
 
 ## Air mass và front
 
-**Air mass** là khối air có đặc tính temperature/moisture tương đối đồng nhất do source region và history. Khi air mass khác nhau gặp nhau, **front** hình thành.
+**Air mass** là khối air có đặc tính temperature/moisture tương đối đồng nhất do nguồn (source / 소스) region và lịch sử (history / 이력). Khi air mass khác nhau gặp nhau, **front** hình thành.
 
-Warm front, cold front và occluded front trong textbook là idealized structure của mid-latitude cyclone. Real atmosphere có deformation và fronts phức tạp nhưng model giúp xây causal intuition.
+Warm front, cold front và occluded front trong textbook là idealized cấu trúc (structure / 구조) của mid-latitude cyclone. Real atmosphere có deformation và fronts phức tạp nhưng mô hình (model / 모델) giúp xây nhân quả (causal / 인과적) intuition.
 
 ## Mid-latitude cyclone và jet stream
 
-Ở mid-latitude, strong horizontal temperature gradient chứa potential energy. Baroclinic instability có thể phát triển wave và cyclone.
+Ở mid-latitude, strong horizontal temperature độ dốc (gradient / 기울기) chứa potential năng lượng (energy / 에너지). Baroclinic instability có thể phát triển wave và cyclone.
 
-**Jet stream** gắn với strong upper-level wind và temperature gradient. Position/shape của jet ảnh hưởng storm track và blocking.
+**Jet stream** gắn với strong upper-level wind và temperature độ dốc (gradient / 기울기). Position/shape của jet ảnh hưởng storm nhánh học (track / 트랙) và blocking.
 
-Không nên giải thích cyclone chỉ bằng “low pressure hút gió”; pressure field là phần của một circulation 3D có conservation of momentum và heat transport.
+Không nên giải thích cyclone chỉ bằng “low pressure hút gió”; pressure trường dữ liệu (field / 필드) là phần của một circulation 3D có conservation of momentum và heat vận chuyển (transport / 전송).
 
 ## Tropical cyclone: heat engine trên ocean ấm
 
 Tropical cyclone phát triển khi ocean đủ ấm, atmosphere moist, vertical wind shear không quá mạnh và disturbance có rotation phù hợp.
 
-Storm lấy energy từ latent heat của water vapor. Low central pressure và organized convection duy trì circulation.
+Storm lấy năng lượng (energy / 에너지) từ latent heat của water vapor. Low central pressure và organized convection duy trì circulation.
 
-Khi lên land hoặc water lạnh, energy/moisture source suy giảm; nhưng flood risk có thể tiếp tục do rainfall và river response.
+Khi lên land hoặc water lạnh, năng lượng (energy / 에너지)/moisture nguồn (source / 소스) suy giảm; nhưng flood rủi ro (risk / 위험) có thể tiếp tục do rainfall và river phản hồi (response / 응답).
 
 Wind category không mô tả đầy đủ storm surge và rain hazard.
 
 ## Monsoon là seasonal circulation, không chỉ “mùa mưa”
 
-**Monsoon** mô tả seasonal reorganization của wind và precipitation do land–ocean thermal contrast, migration của tropical circulation, topography và large-scale dynamics.
+**Monsoon** mô tả seasonal reorganization của wind và precipitation do land–ocean thermal contrast, di chuyển (migration / 마이그레이션) của tropical circulation, topography và large-scale dynamics.
 
-South Asia và East/Southeast Asia có monsoon regime khác nhau. Mountain như Himalaya–Tibetan Plateau và biển lân cận làm pattern regional phức tạp.
+South Asia và East/Southeast Asia có monsoon regime khác nhau. Mountain như Himalaya–Tibetan Plateau và biển lân cận làm mẫu (pattern / 패턴) regional phức tạp.
 
 Vietnam và Korea cùng chịu seasonal circulation nhưng rainfall timing, typhoon exposure và winter monsoon influence khác nhau.
 
-## Local wind và terrain
+## Cục bộ (local / 로컬) wind và terrain
 
-Sea breeze, land breeze, valley wind và mountain wind xuất hiện do differential heating ở scale nhỏ hơn.
+Sea breeze, land breeze, valley wind và mountain wind xuất hiện do differential heating ở quy mô (scale / 규모) nhỏ hơn.
 
 Urban heat island cũng tạo circulation cục bộ. Building morphology thay đổi turbulence và ventilation.
 
-Đây là lý do forecast model global phải **parameterize** hoặc downscale nhiều process dưới grid size.
+Đây là lý do forecast mô hình (model / 모델) toàn cục (global / 전역) phải **parameterize** hoặc downscale nhiều tiến trình (process / 프로세스) dưới grid kích thước (size / 크기).
 
 ## Numerical Weather Prediction
 
-**Dự báo thời tiết số (Numerical Weather Prediction, NWP)** giải hệ phương trình conservation của momentum, mass, energy và moisture trên grid.
+**Dự báo thời tiết số (Numerical Weather Prediction, NWP)** giải hệ phương trình conservation của momentum, mass, năng lượng (energy / 에너지) và moisture trên grid.
 
-Initial condition đến từ observation: satellite, radar, radiosonde, aircraft, buoy, station. **Data assimilation** kết hợp observation với model forecast để tạo state estimate tốt hơn.
+Initial điều kiện (condition / 조건) đến từ observation: satellite, radar, radiosonde, aircraft, buoy, station. **dữ liệu (data / 데이터) assimilation** kết hợp observation với mô hình (model / 모델) forecast để tạo trạng thái (state / 상태) estimate tốt hơn.
 
-Model không “đọc thời tiết tương lai”; nó tích phân equations từ state ước lượng.
+Mô hình (model / 모델) không “đọc thời tiết tương lai”; nó tích phân equations từ trạng thái (state / 상태) ước lượng.
 
 ## Chaos và ensemble forecast
 
-Atmosphere nhạy với initial condition. Sai số nhỏ phát triển theo thời gian, nên deterministic forecast giảm skill khi lead time tăng.
+Atmosphere nhạy với initial điều kiện (condition / 조건). Sai số nhỏ phát triển theo thời gian, nên deterministic forecast giảm skill khi lead thời gian (time / 시간) tăng.
 
-**Ensemble forecast** chạy nhiều simulation với initial/model perturbation để ước distribution outcome. Spread không phải lỗi cần giấu; nó là thông tin uncertainty.
+**Ensemble forecast** chạy nhiều simulation với initial/mô hình (model / 모델) perturbation để ước phân phối (distribution / 분포) kết quả (outcome / 결과). Spread không phải lỗi cần giấu; nó là thông tin bất định (uncertainty / 불확실성).
 
-Người dùng tốt nên đọc “xác suất mưa 70%” như probability/ensemble evidence, không như model do dự.
+Người dùng tốt nên đọc “xác suất mưa 70%” như xác suất (probability / 확률)/ensemble bằng chứng (evidence / 증거), không như mô hình (model / 모델) do dự.
 
-## Radar, satellite và observation bias
+## Radar, satellite và observation độ lệch (bias / 편향)
 
-Weather radar đo backscatter từ precipitation particle; satellite đo radiation ở nhiều wavelength. Cả hai cần algorithm để suy rain rate, cloud top hoặc temperature.
+Weather radar đo backscatter từ precipitation particle; satellite đo radiation ở nhiều wavelength. Cả hai cần thuật toán (algorithm / 알고리즘) để suy rain tỷ lệ (rate / 비율), cloud top hoặc temperature.
 
-Mountain có thể block radar; satellite IR không “nhìn xuyên” cloud như radar; surface station phân bố không đều. Observation field luôn có sampling bias.
+Mountain có thể khối (block / 블록) radar; satellite IR không “nhìn xuyên” cloud như radar; surface station phân bố không đều. Observation trường dữ liệu (field / 필드) luôn có sampling độ lệch (bias / 편향).
 
 ## Mô hình tư duy
 
-Weather tại một nơi là kết quả của **energy gradient + pressure + rotation + moisture + stability + vertical motion + surface/terrain**. Forecast là bài toán ước state rồi mô phỏng evolution dưới uncertainty.
+Weather tại một nơi là kết quả của **năng lượng (energy / 에너지) độ dốc (gradient / 기울기) + pressure + rotation + moisture + stability + vertical motion + surface/terrain**. Forecast là bài toán ước trạng thái (state / 상태) rồi mô phỏng evolution dưới bất định (uncertainty / 불확실성).
 
 Xem tiếp: [Hệ khí hậu toàn cầu](./03_global_climate_system.md), [Oceans](./05_oceans_coasts.md), [Natural hazards](./07_natural_hazards_risk.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plate tectonics geologic time](./00_plate_tectonics_geologic_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

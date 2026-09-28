@@ -1,20 +1,23 @@
 # Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)
 
-Hai chapter trước đi từ DNA sequence tới protein rồi sang inheritance. Bây giờ ta zoom out. Một cell không vận hành bằng một gene riêng lẻ mà bằng **toàn bộ genome và mạng lưới điều hòa (regulatory network)**. Hàng nghìn gene có thể thay expression cùng lúc; chromatin quyết định vùng nào accessible; environmental signal đổi transcriptional program; population chứa hàng triệu variant.
+> **Mạch đọc:** Đọc **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Genome không chỉ là danh sách gene** sang **2. Chromatin tạo tầng (layer / 계층) organization đầu tiên**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Hai chapter trước đi từ DNA chuỗi (sequence / 시퀀스) tới protein rồi sang inheritance. Bây giờ ta zoom out. Một cell không vận hành bằng một gene riêng lẻ mà bằng **toàn bộ genome và mạng lưới điều hòa (regulatory network)**. Hàng nghìn gene có thể thay expression cùng lúc; chromatin quyết định vùng nào accessible; environmental tín hiệu (signal / 신호) đổi transcriptional program; population chứa hàng triệu variant.
 
 Chapter này trả lời câu hỏi: **làm thế nào genome lớn được tổ chức, điều hòa và đo lường ở quy mô toàn hệ?**
 
-> **Mô hình tư duy (mental model):** genomics không phải “genetics nhưng nhiều gene hơn”. Nó thay đổi đơn vị tư duy từ locus riêng lẻ sang pattern toàn genome, network và tín hiệu thống kê (statistical signal) trong dữ liệu lớn.
+> **mô hình tư duy (mental model / 사고 모델):** genomics không phải “genetics nhưng nhiều gene hơn”. Nó thay đổi đơn vị tư duy từ locus riêng lẻ sang mẫu (pattern / 패턴) toàn genome, mạng (network / 네트워크) và tín hiệu thống kê (statistical signal) trong dữ liệu lớn.
 
 ## 1. Genome không chỉ là danh sách gene
 
-Eukaryotic genome gồm coding gene, RNA không mã hóa (noncoding RNA) gen (gene), promoter, enhancer, repeat, centromere, telomere và nhiều region có chức năng (function)/regulatory history khác nhau.
+Eukaryotic genome gồm coding gene, RNA không mã hóa (noncoding RNA) gen (gene), promoter, enhancer, repeat, centromere, telomere và nhiều region có chức năng (function)/regulatory lịch sử (history / 이력) khác nhau.
 
 Protein (protein)-trình tự mã hóa (coding sequence) chỉ chiếm một phần nhỏ genome human. Nhưng không nên nhảy từ đó tới kết luận “mọi DNA không mã hóa (noncoding DNA) đều functional”. Một phần có regulatory role, một phần structural/repetitive, một phần có thể gần neutral.
 
-Genomics phải phân biệt **sequence tồn tại** với **sequence có selected biological function**.
+Genomics phải phân biệt **chuỗi (sequence / 시퀀스) tồn tại** với **chuỗi (sequence / 시퀀스) có selected biological hàm (function / 함수)**.
 
-## 2. Chromatin tạo layer organization đầu tiên
+## 2. Chromatin tạo tầng (layer / 계층) organization đầu tiên
 
 DNA eukaryote quấn quanh histone tạo nucleosome. Nucleosome tiếp tục organize thành higher-order chromatin.
 
@@ -29,271 +32,273 @@ Vì vậy chromatin không phải packaging thụ động. Nó là regulatory su
 
 **Euchromatin** thường accessible/transcriptionally active hơn; **heterochromatin** compact hơn và thường ít active.
 
-Nhưng trạng thái nhiễm sắc chất (chromatin state) phụ thuộc locus, loại tế bào (cell type) và time. Một region có thể đổi accessibility khi differentiation hoặc signaling.
+Nhưng trạng thái nhiễm sắc chất (chromatin state) phụ thuộc locus, loại tế bào (cell type) và thời gian (time / 시간). Một region có thể đổi khả năng tiếp cận (accessibility / 접근성) khi differentiation hoặc signaling.
 
-Hệ gen (genome) giống library mà mỗi loại tế bào mở một subset shelf khác nhau.
+Hệ gen (genome) giống thư viện (library / 라이브러리) mà mỗi loại tế bào mở một subset shelf khác nhau.
 
-## 4. Biến đổi histone (histone modification): “code” nhưng không phải dictionary đơn giản
+## 4. Biến đổi histone (histone modification): “mã (code / 코드)” nhưng không phải dictionary đơn giản
 
 Histone tail có thể acetylated, methylated, phosphorylated và nhiều modification khác.
 
-Acetyl hóa histone (histone acetylation) thường liên hệ chromatin accessible hơn vì giảm positive charge/thu hút reader protein, nhưng causal effect phụ thuộc context.
+Acetyl hóa histone (histone acetylation) thường liên hệ chromatin accessible hơn vì giảm positive charge/thu hút reader protein, nhưng nhân quả (causal / 인과적) tác động (effect / 효과) phụ thuộc ngữ cảnh (context / 맥락).
 
-Methyl hóa histone (histone methylation) đặc biệt không có nghĩa “methylation = repression”; vị trí residue quyết định association. H3K4me3 thường liên hệ active promoter, H3K27me3 thường repression trong context eukaryote.
+Methyl hóa histone (histone methylation) đặc biệt không có nghĩa “methylation = repression”; vị trí residue quyết định association. H3K4me3 thường liên hệ active promoter, H3K27me3 thường repression trong ngữ cảnh (context / 맥락) eukaryote.
 
-Không nên học epigenetics như bảng “mark này bật, mark kia tắt” mà phải hiểu mark nằm trong network writer–reader–eraser.
+Không nên học epigenetics như bảng “mark này bật, mark kia tắt” mà phải hiểu mark nằm trong mạng (network / 네트워크) writer–reader–eraser.
 
 ## 5. Methyl hóa DNA (DNA methylation)
 
-Ở mammals, Methyl hóa DNA thường xảy ra tại cytosine trong CpG context. Promoter CpG methylation có thể liên hệ transcriptional repression, nhưng genome-wide interpretation phức tạp hơn.
+Ở mammals, Methyl hóa DNA thường xảy ra tại cytosine trong CpG ngữ cảnh (context / 맥락). Promoter CpG methylation có thể liên hệ transcriptional repression, nhưng genome-wide interpretation phức tạp hơn.
 
-Methylation pattern có thể được copy tương đối qua phân chia tế bào (cell division), tạo một phần cellular memory.
+Methylation mẫu (pattern / 패턴) có thể được bản sao (copy / 복사) tương đối qua phân chia tế bào (cell division), tạo một phần cellular bộ nhớ (memory / 메모리).
 
-Nhưng methylation cũng dynamic trong phát triển (development), germline và bệnh (disease).
+Nhưng methylation cũng động (dynamic / 동적) trong phát triển (development), germline và bệnh (disease).
 
 ## 6. Epigenetics chính xác là gì?
 
-Thuật ngữ **epigenetics** thường bị dùng quá rộng. Một definition hữu ích là study of heritable/stable change in điều hòa gen (gene regulation) or trạng thái nhiễm sắc chất không yêu cầu change DNA sequence.
+Thuật ngữ **epigenetics** thường bị dùng quá rộng. Một definition hữu ích là study of heritable/stable thay đổi (change / 변경) in điều hòa gen (gene regulation) or trạng thái nhiễm sắc chất không yêu cầu thay đổi (change / 변경) DNA chuỗi (sequence / 시퀀스).
 
-Trong somatic cell, epigenetic memory giúp daughter cell giữ identity. Trong transgenerational inheritance, claim phải mạnh hơn: mark/effect phải vượt qua germline reprogramming và truyền qua generation.
+Trong somatic cell, epigenetic bộ nhớ (memory / 메모리) giúp daughter cell giữ định danh (identity / 식별자). Trong transgenerational inheritance, claim phải mạnh hơn: mark/tác động (effect / 효과) phải vượt qua germline reprogramming và truyền qua generation.
 
-Ở mammals, nhiều epigenetic mark bị reset mạnh trong gametogenesis/early embryo. Vì vậy câu “stress của bố mẹ chắc chắn truyền epigenetically cho cháu” cần evidence rất cẩn thận.
+Ở mammals, nhiều epigenetic mark bị reset mạnh trong gametogenesis/early embryo. Vì vậy câu “stress của bố mẹ chắc chắn truyền epigenetically cho cháu” cần bằng chứng (evidence / 증거) rất cẩn thận.
 
-## 7. X-chromosome inactivation: epigenetic regulation ở chromosome scale
+## 7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)
 
 Ở female mammals, một X chromosome phần lớn bị inactivate để balance dosage với male XY.
 
-Long RNA không mã hóa XIST và chromatin modification tham gia process. Inactivation xảy ra sớm trong development và được duy trì qua nhiều phân chia tế bào.
+Long RNA không mã hóa XIST và chromatin modification tham gia tiến trình (process / 프로세스). Inactivation xảy ra sớm trong development và được duy trì qua nhiều phân chia tế bào.
 
 Kết quả là female tissue có mosaic cell dùng X maternal hoặc paternal khác nhau.
 
-Đây là ví dụ epigenetic state ổn định tạo phenotype mosaic mà DNA sequence không đổi.
+Đây là ví dụ epigenetic trạng thái (state / 상태) ổn định tạo phenotype mosaic mà DNA chuỗi (sequence / 시퀀스) không đổi.
 
-## 8. In dấu hệ gen (genomic imprinting): parent-of-origin effect
+## 8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)
 
 Một số gen biểu hiện khác nhau tùy allele đến từ bố hay mẹ do imprint mark được thiết lập trong germline.
 
-Imprinting cho thấy hai allele cùng sequence không nhất thiết function equivalent nếu epigenetic history khác nhau.
+Imprinting cho thấy hai allele cùng chuỗi (sequence / 시퀀스) không nhất thiết hàm (function / 함수) equivalent nếu epigenetic lịch sử (history / 이력) khác nhau.
 
-Nhưng imprinting chỉ áp dụng subset gene; không phải rule chung của genome.
+Nhưng imprinting chỉ áp dụng subset gene; không phải quy tắc (rule / 규칙) chung của genome.
 
 ## 9. Enhancer và 3D genome
 
-Enhancer có thể nằm rất xa promoter theo linear DNA nhưng ở gần trong 3D nucleus do chromatin folding.
+Enhancer có thể nằm rất xa promoter theo tuyến tính (linear / 선형) DNA nhưng ở gần trong 3D nucleus do chromatin folding.
 
-Hệ gen được organize thành loop/domain làm regulatory element gặp target gene.
+Hệ gen được organize thành vòng lặp (loop / 루프)/lĩnh vực (domain / 도메인) làm regulatory element gặp mục tiêu (target / 대상) gene.
 
-Do đó distance “trên sequence” và distance “trong không gian nucleus” là hai khái niệm khác.
+Do đó distance “trên chuỗi (sequence / 시퀀스)” và distance “trong không gian nucleus” là hai khái niệm khác.
 
-Structural variant phá boundary hoặc đưa enhancer gần gene khác có thể gây misregulation.
+Structural variant phá ranh giới (boundary / 경계) hoặc đưa enhancer gần gene khác có thể gây misregulation.
 
 ## 10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome
 
-Một gene có thể tạo nhiều mRNA isoform bằng lựa chọn exon khác nhau. Splicing factor và tế bào (cell) state quyết định pattern.
+Một gene có thể tạo nhiều mRNA isoform bằng lựa chọn exon khác nhau. Splicing factor và tế bào (cell) trạng thái (state / 상태) quyết định mẫu (pattern / 패턴).
 
 Vì vậy số protein isoform có thể lớn hơn số gen mã hóa protein (protein-coding gene).
 
-Tuy nhiên không phải mọi transcript isoform đều stable/functional; omics data cần validation.
+Tuy nhiên không phải mọi transcript isoform đều stable/functional; omics dữ liệu (data / 데이터) cần kiểm tra hợp lệ (validation / 검증).
 
 ## 11. RNA regulation sau phiên mã
 
 mRNA stability, localization và translation efficiency được regulation bởi RNA-liên kết (binding) protein và miRNA.
 
-**microRNA (miRNA / 마이크로RNA)** có thể base-pair target mRNA và giảm translation hoặc thúc degradation.
+**microRNA (miRNA / 마이크로RNA)** có thể base-pair mục tiêu (target / 대상) mRNA và giảm translation hoặc thúc degradation.
 
 Điều hòa (regulation) sau phiên mã cho phép cell phản ứng nhanh mà không cần thay transcription ngay lập tức.
 
-## 12. Protein level cũng là một layer regulation
+## 12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation
 
-Mức độ phong phú của bản phiên mã (transcript abundance) không đồng nghĩa mức độ phong phú của protein (protein abundance). Translation rate, phân giải protein (protein degradation), modification và định vị (localization) đều ảnh hưởng function.
+Mức độ phong phú của bản phiên mã (transcript abundance) không đồng nghĩa mức độ phong phú của protein (protein abundance). Translation tỷ lệ (rate / 비율), phân giải protein (protein degradation), modification và định vị (localization) đều ảnh hưởng hàm (function / 함수).
 
-Ubiquitin–proteasome system đánh dấu nhiều protein để phân giải (degradation).
+Ubiquitin–proteasome hệ thống (system / 시스템) đánh dấu nhiều protein để phân giải (degradation).
 
-Vì vậy RNA-seq chỉ quan sát một layer. Muốn hiểu phenotype cần tích hợp proteomics/metabolomics/functional assay.
+Vì vậy RNA-seq chỉ quan sát một tầng (layer / 계층). Muốn hiểu phenotype cần tích hợp proteomics/metabolomics/functional assay.
 
 ## 13. “Omics” là gì?
 
-Các domain omics đo nhiều component cùng lúc:
+Các lĩnh vực (domain / 도메인) omics đo nhiều thành phần (component / 컴포넌트) cùng lúc:
 
-- hệ gen học (genomics): DNA sequence/biến dị (variation);
+- hệ gen học (genomics): DNA chuỗi (sequence / 시퀀스)/biến dị (variation);
 - transcriptomics: RNA;
 - epigenomics: chromatin/DNA mark;
 - proteomics: protein;
 - metabolomics: metabolite.
 
-Không nên nghĩ multi-omics đơn giản là “càng nhiều data càng tốt”. Mỗi layer có nhiễu (noise), hiệu ứng lô (batch effect) và phép đo (measurement) bias riêng; integration cần model và biological question rõ.
+Không nên nghĩ multi-omics đơn giản là “càng nhiều dữ liệu (data / 데이터) càng tốt”. Mỗi tầng (layer / 계층) có nhiễu (noise), hiệu ứng lô (batch effect) và phép đo (measurement) độ lệch (bias / 편향) riêng; tích hợp (integration / 통합) cần mô hình (model / 모델) và biological question rõ.
 
 ## 14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture
 
-Modern short-read sequencing tạo rất nhiều fragment sequence. Bioinformatics phải quality-điều khiển (control), align vào reference hoặc assemble, rồi count/call variant.
+Hiện đại (modern / 현대적) short-read sequencing tạo rất nhiều fragment chuỗi (sequence / 시퀀스). Bioinformatics phải quality-control, align vào tham chiếu (reference / 참조) hoặc assemble, rồi count/lời gọi (call / 호출) variant.
 
-Một read ngắn không tự cho biết nó đến từ gene nào nếu region repetitive. Mapping uncertainty là một limitation thực.
+Một read ngắn không tự cho biết nó đến từ gene nào nếu region repetitive. ánh xạ (mapping / 매핑) bất định (uncertainty / 불확실성) là một limitation thực.
 
-Long-read sequencing giúp resolve structural variant/repeat tốt hơn nhưng có trade-off về cost/error/platform.
+Long-read sequencing giúp resolve structural variant/repeat tốt hơn nhưng có sự đánh đổi (trade-off / 트레이드오프) về chi phí (cost / 비용)/lỗi (error / 오류)/nền tảng (platform / 플랫폼).
 
 Technology choice phụ thuộc question.
 
 ## 15. Hệ gen tham chiếu (reference genome) không phải “genome chuẩn của loài”
 
-Hệ gen tham chiếu là một coordinate framework được xây từ mẫu (sample)/assembly. Nó không đại diện mọi allele trong quần thể (population).
+Hệ gen tham chiếu là một coordinate khung phần mềm (framework / 프레임워크) được xây từ mẫu (sample / 표본)/assembly. Nó không đại diện mọi allele trong quần thể (population).
 
-Hệ gen toàn quần thể (pangenome) approach cố biểu diễn diversity tốt hơn linear reference duy nhất.
+Hệ gen toàn quần thể (pangenome) approach cố biểu diễn diversity tốt hơn tuyến tính (linear / 선형) tham chiếu (reference / 참조) duy nhất.
 
-Đây là ví dụ data representation ảnh hưởng suy luận sinh học (biological inference).
+Đây là ví dụ dữ liệu (data / 데이터) biểu diễn (representation / 표현) ảnh hưởng suy luận sinh học (biological inference).
 
-## 16. Gọi biến thể (variant calling): sequence khác reference chưa chắc gây bệnh
+## 16. Gọi biến thể (variant calling): chuỗi (sequence / 시퀀스) khác tham chiếu (reference / 참조) chưa chắc gây bệnh
 
-Genomic variant có thể common/rare, coding/noncoding, neutral/deleterious/beneficial tùy context.
+Genomic variant có thể dùng chung (common / 공통)/rare, coding/noncoding, neutral/deleterious/beneficial tùy ngữ cảnh (context / 맥락).
 
-Classification pathogenicity cần population tần số (frequency), functional evidence, segregation, computational prediction và dữ liệu lâm sàng (clinical data).
+Classification pathogenicity cần population tần số (frequency), functional bằng chứng (evidence / 증거), segregation, computational prediction và dữ liệu lâm sàng (clinical data).
 
 Không thể nhìn “có đột biến (mutation)” rồi kết luận disease. Mọi người đều mang rất nhiều variant.
 
 ## 17. GWAS: tìm association ở quy mô quần thể (population scale)
 
-**Nghiên cứu liên kết toàn hệ gen (genome-wide association study) (GWAS / 전장유전체 연관분석)** test association giữa variant và trait trên genome.
+**Nghiên cứu liên kết toàn hệ gen (genome-wide association study) (GWAS / 전장유전체 연관분석)** kiểm thử (test / 테스트) association giữa variant và trait trên genome.
 
-Vì test hàng triệu variant, multiple-testing correction rất nghiêm ngặt. Quần thể structure cũng có thể gây confounding.
+Vì kiểm thử (test / 테스트) hàng triệu variant, multiple-testing correction rất nghiêm ngặt. Quần thể cấu trúc (structure / 구조) cũng có thể gây confounding.
 
-GWAS signal thường chỉ ra region liên quan trait, không tự chứng minh variant nào causal hoặc mechanism gì.
+GWAS tín hiệu (signal / 신호) thường chỉ ra region liên quan trait, không tự chứng minh variant nào nhân quả (causal / 인과적) hoặc cơ chế (mechanism / 메커니즘) gì.
 
-Association phải được follow bằng fine mapping, functional experiment và biological reasoning.
+Association phải được follow bằng fine ánh xạ (mapping / 매핑), functional experiment và biological lập luận (reasoning / 추론).
 
-## 18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm inference khó hơn
+## 18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm suy luận (inference / 추론) khó hơn
 
-Nearby allele có thể correlated trong quần thể do shared ancestry/recombination history. Đây là **mất cân bằng liên kết, LD**.
+Nearby allele có thể correlated trong quần thể do dùng chung (shared / 공유) ancestry/recombination lịch sử (history / 이력). Đây là **mất cân bằng liên kết, LD**.
 
-Một SNP GWAS significant có thể chỉ là tag đi cùng causal variant.
+Một SNP GWAS significant có thể chỉ là tag đi cùng nhân quả (causal / 인과적) variant.
 
 Vì vậy statistical association và molecular causation là hai bước khác nhau.
 
 ## 19. Điểm đa gen (polygenic score)
 
-Nhiều complex trait chịu contribution từ rất nhiều variant effect nhỏ. **Điểm đa gen** cộng weighted allele effect từ GWAS.
+Nhiều complex trait chịu contribution từ rất nhiều variant tác động (effect / 효과) nhỏ. **Điểm đa gen** cộng weighted allele tác động (effect / 효과) từ GWAS.
 
-Score có thể có predictive value trong population tương tự training data nhưng transfer giữa ancestry/population có thể giảm vì LD, tần số alen (allele frequency) và environment khác.
+Score có thể có predictive giá trị (value / 값) trong population tương tự dữ liệu huấn luyện (training data / 학습 데이터) nhưng transfer giữa ancestry/population có thể giảm vì LD, tần số alen (allele frequency) và môi trường (environment / 환경) khác.
 
 Đây là limitation quan trọng khi đưa genomics vào medicine.
 
 ## 20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào
 
-Bulk RNA-seq đo average của hàng triệu cell. Nếu tissue gồm nhiều loại tế bào, change composition có thể bị nhầm là expression change trong từng cell.
+Bulk RNA-seq đo average của hàng triệu cell. Nếu tissue gồm nhiều loại tế bào, thay đổi (change / 변경) composition có thể bị nhầm là expression thay đổi (change / 변경) trong từng cell.
 
-Single-cell RNA-seq tách profile từng cell (với sampling/noise limitation), cho phép identify loại tế bào/state và trajectory.
+Single-cell RNA-seq tách profile từng cell (với sampling/noise limitation), cho phép identify loại tế bào/trạng thái (state / 상태) và trajectory.
 
-Nhưng “cluster” trong data không tự động bằng biological loại tế bào; annotation cần marker, context và validation.
+Nhưng “cluster” trong dữ liệu (data / 데이터) không tự động bằng biological loại tế bào; annotation cần marker, ngữ cảnh (context / 맥락) và kiểm tra hợp lệ (validation / 검증).
 
-## 21. Development như một bài toán regulatory state
+## 21. Development như một bài toán regulatory trạng thái (state / 상태)
 
-Fertilized egg tạo rất nhiều loại tế bào gần cùng genome. Difference đến từ mạng lưới điều hòa, trạng thái nhiễm sắc chất và signaling history.
+Fertilized egg tạo rất nhiều loại tế bào gần cùng genome. Difference đến từ mạng lưới điều hòa, trạng thái nhiễm sắc chất và signaling lịch sử (history / 이력).
 
-Development có thể hình dung như hệ thống (system) đi qua landscape state: signal activate yếu tố phiên mã (transcription factor), factor mở/đóng regulatory program, cell commitment dần ổn định.
+Development có thể hình dung như hệ thống (system / 시스템) đi qua landscape trạng thái (state / 상태): tín hiệu (signal / 신호) activate yếu tố phiên mã (transcription factor), factor mở/đóng regulatory program, cell commitment dần ổn định.
 
-Đây là bridge sang development chương (chapter).
+Đây là cầu nối (bridge / 브리지) sang development chương (chapter).
 
 ## 22. Mạng lưới điều hòa gen (gene regulatory network)
 
-Một yếu tố phiên mã có thể regulate nhiều gene; nhiều factor cùng control một gene; feedback tạo stable state.
+Một yếu tố phiên mã có thể regulate nhiều gene; nhiều factor cùng điều khiển (control / 제어) một gene; phản hồi (feedback / 피드백) tạo stable trạng thái (state / 상태).
 
-Network motif như phản hồi dương (positive feedback) có thể khóa cell identity. Phản hồi âm (negative feedback) giới hạn signal. Feedforward loop có thể lọc transient input.
+Mạng (network / 네트워크) motif như phản hồi dương (positive feedback) có thể khóa cell định danh (identity / 식별자). Phản hồi âm (negative feedback) giới hạn tín hiệu (signal / 신호). Feedforward vòng lặp (loop / 루프) có thể lọc transient đầu vào (input / 입력).
 
-Molecular network và tư duy hệ thống (systems thinking) gặp nhau trực tiếp ở đây.
+Molecular mạng (network / 네트워크) và tư duy hệ thống (systems thinking) gặp nhau trực tiếp ở đây.
 
-## 23. Epigenetic memory và cell identity
+## 23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)
 
-Khi cell divide, daughter cell cần không chỉ copy DNA mà còn khôi phục trạng thái nhiễm sắc chất và transcriptional program.
+Khi cell divide, daughter cell cần không chỉ bản sao (copy / 복사) DNA mà còn khôi phục trạng thái nhiễm sắc chất và transcriptional program.
 
-Một phần information được duy trì qua biến đổi histone, Methyl hóa DNA, phiên mã-factor network và spatial organization.
+Một phần thông tin (information / 정보) được duy trì qua biến đổi histone, Methyl hóa DNA, phiên mã-factor mạng (network / 네트워크) và spatial organization.
 
-Cell identity vì vậy là **state của system**, không nằm trong một gene đơn độc.
+Cell định danh (identity / 식별자) vì vậy là **trạng thái (state / 상태) của hệ thống (system / 시스템)**, không nằm trong một gene đơn độc.
 
-## 24. Environmental response và plasticity
+## 24. Environmental phản hồi (response / 응답) và plasticity
 
-Environment có thể thay signaling, hormone và biểu hiện gen (gene expression). Dinh dưỡng (nutrition), căng thẳng (stress), temperature hoặc toxin có thể tạo molecular response.
+Môi trường (environment / 환경) có thể thay signaling, hormone và biểu hiện gen (gene expression). Dinh dưỡng (nutrition), căng thẳng (stress), temperature hoặc toxin có thể tạo molecular phản hồi (response / 응답).
 
-Nhưng “environment thay gene” nên nói chính xác: thường environment đổi **expression/regulatory state**, không đổi DNA sequence trừ khi gây mutation.
+Nhưng “môi trường (environment / 환경) thay gene” nên nói chính xác: thường môi trường (environment / 환경) đổi **expression/regulatory trạng thái (state / 상태)**, không đổi DNA chuỗi (sequence / 시퀀스) trừ khi gây mutation.
 
 Phân biệt biến dị di truyền (genetic variation) với regulatory plasticity giúp tránh lẫn lộn.
 
-## 25. CRISPR screen: từ edit một gene sang test hàng nghìn gene
+## 25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene
 
 CRISPR có thể dùng để knockout/perturb hàng nghìn gene trong quần thể tế bào. Sequencing barcode/guide abundance giúp tìm gene ảnh hưởng survival hoặc phenotype.
 
-Đây là hệ gen học theo hướng causal: không chỉ quan sát association mà perturb system.
+Đây là hệ gen học theo hướng nhân quả (causal / 인과적): không chỉ quan sát association mà perturb hệ thống (system / 시스템).
 
 Kết hợp high-throughput perturbation với single-cell readout đang cho phép map mạng lưới điều hòa sâu hơn.
 
-## 26. Sinh học hệ thống (systems biology): từ list component sang model interaction
+## 26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)
 
-Khi data quá nhiều, mục tiêu không còn là catalog. **Sinh học hệ thống (시스템생물학)** xây model network và động lực học (dynamics).
+Khi dữ liệu (data / 데이터) quá nhiều, mục tiêu không còn là danh mục (catalog / 카탈로그). **Sinh học hệ thống (시스템생물학)** xây mô hình (model / 모델) mạng (network / 네트워크) và động lực học (dynamics).
 
-Ví dụ mạng lưới chuyển hóa (metabolic network) có node là metabolite/reaction, mạng lưới điều hòa gen có nút (node) gen/protein, edge biểu diễn interaction.
+Ví dụ mạng lưới chuyển hóa (metabolic network) có nút (node / 노드) là metabolite/reaction, mạng lưới điều hòa gen có nút (node / 노드) gen/protein, edge biểu diễn tương tác (interaction / 상호작용).
 
-Lý thuyết đồ thị (graph theory), differential equation và statistical inference trở thành công cụ sinh học.
+Lý thuyết đồ thị (graph theory), differential equation và statistical suy luận (inference / 추론) trở thành công cụ sinh học.
 
 Xem thêm [Biology × Mathematics × Computation × Scale](../90_connections/00_biology_math_computation_and_scale.md).
 
 ## 27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?
 
-Neuron và hepatocyte có gần cùng DNA sequence. Nhưng khả năng tiếp cận nhiễm sắc chất (chromatin accessibility) khác, yếu tố phiên mã khác, enhancer active khác, RNA/protein profile khác.
+Neuron và hepatocyte có gần cùng DNA chuỗi (sequence / 시퀀스). Nhưng khả năng tiếp cận nhiễm sắc chất (chromatin accessibility) khác, yếu tố phiên mã khác, enhancer active khác, RNA/protein profile khác.
 
 Liver cell expression enzyme chuyển hóa (metabolism)/detoxification; neuron expression kênh ion (ion channel), synaptic protein.
 
-Difference phenotype không cần genome khác. Nó cần regulatory state khác.
+Difference phenotype không cần genome khác. Nó cần regulatory trạng thái (state / 상태) khác.
 
 ## 28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant
 
-Nếu variant nằm enhancer và làm yếu tố phiên mã bind yếu hơn, gene target có thể expression thấp trong mô (tissue)/time cụ thể.
+Nếu variant nằm enhancer và làm yếu tố phiên mã bind yếu hơn, gene mục tiêu (target / 대상) có thể expression thấp trong mô (tissue)/thời gian (time / 시간) cụ thể.
 
-Protein sequence hoàn toàn bình thường nhưng amount/timing sai vẫn tạo kiểu hình (phenotype).
+Protein chuỗi (sequence / 시퀀스) hoàn toàn bình thường nhưng amount/timing sai vẫn tạo kiểu hình (phenotype).
 
 Genetics hiện đại vì vậy phải nhìn cả coding lẫn regulatory genome.
 
 ## 29. Các hiểu lầm phổ biến (common misconceptions)
 
-“Epigenetic = bất kỳ thứ gì không phải DNA sequence” quá rộng.
+“Epigenetic = bất kỳ thứ gì không phải DNA chuỗi (sequence / 시퀀스)” quá rộng.
 
 “Methylation luôn tắt gene” sai.
 
-“RNA level nói chính xác protein level” sai.
+“RNA mức (level / 수준) nói chính xác protein mức (level / 수준)” sai.
 
 “GWAS variant là nguyên nhân” chưa chắc.
 
 “Hệ gen tham chiếu là genome bình thường duy nhất” sai.
 
-“Single-cell data trực tiếp cho loại tế bào thật” sai; clustering là model cần interpretation.
+“Single-cell dữ liệu (data / 데이터) trực tiếp cho loại tế bào thật” sai; clustering là mô hình (model / 모델) cần interpretation.
 
 <!-- depth-audit-2026:genome-state-causality -->
-## Genome sequence và cell state là hai lớp thông tin tương tác
+## Genome chuỗi (sequence / 시퀀스) và cell trạng thái (state / 상태) là hai lớp thông tin tương tác
 
-Sequence cung cấp cis-regulatory element như promoter và enhancer, nhưng enhancer chỉ hoạt động khi chromatin state, transcription factor và topology ba chiều cho phép. Looping đưa enhancer ở xa tới promoter; architectural protein và compartment trong nucleus làm xác suất contact thay đổi. Vì vậy “gene nằm cạnh enhancer” chưa đủ để kết luận enhancer điều khiển gene đó.
+Chuỗi (sequence / 시퀀스) cung cấp cis-regulatory element như promoter và enhancer, nhưng enhancer chỉ hoạt động khi chromatin trạng thái (state / 상태), transcription factor và topology ba chiều cho phép. Looping đưa enhancer ở xa tới promoter; architectural protein và compartment trong nucleus làm xác suất contact thay đổi. Vì vậy “gene nằm cạnh enhancer” chưa đủ để kết luận enhancer điều khiển gene đó.
 
-Epigenetic memory nên được hiểu như **trạng thái điều hòa được duy trì qua thời gian** nhờ feedback giữa chromatin, transcription factor, DNA methylation và replication machinery. Nó bền hơn signal tức thời nhưng không độc lập với sequence. Một số mark là nguyên nhân, một số là hệ quả, nhiều mark vừa phản ánh vừa ổn định state.
+Epigenetic bộ nhớ (memory / 메모리) nên được hiểu như **trạng thái điều hòa được duy trì qua thời gian** nhờ phản hồi (feedback / 피드백) giữa chromatin, transcription factor, DNA methylation và replication machinery. Nó bền hơn tín hiệu (signal / 신호) tức thời nhưng không độc lập với chuỗi (sequence / 시퀀스). Một số mark là nguyên nhân, một số là hệ quả, nhiều mark vừa phản ánh vừa ổn định trạng thái (state / 상태).
 
-Omics chủ yếu đo correlation ở quy mô lớn. Một peak chromatin, methylation site hoặc expression signature liên hệ phenotype chưa tự chứng minh causal. Causal inference cần perturbation như CRISPRi/CRISPRa, reporter, allele-specific analysis hoặc experiment theo thời gian. Đây là nơi genomics gặp experimental design và bioinformatics.
+Omics chủ yếu đo correlation ở quy mô lớn. Một peak chromatin, methylation site hoặc expression signature liên hệ phenotype chưa tự chứng minh nhân quả (causal / 인과적). nhân quả (causal / 인과적) suy luận (inference / 추론) cần perturbation như CRISPRi/CRISPRa, reporter, allele-specific phân tích (analysis / 분석) hoặc experiment theo thời gian. Đây là nơi genomics gặp experimental thiết kế (design / 설계) và bioinformatics.
 
-Population genomics cũng đang chuyển từ một reference genome sang **hệ gen toàn quần thể (pangenome)** vì structural variation và sequence không có trong reference cũ có thể quan trọng. “Reference” là coordinate system hữu ích, không phải genome chuẩn tuyệt đối của loài.
+Population genomics cũng đang chuyển từ một tham chiếu (reference / 참조) genome sang **hệ gen toàn quần thể (pangenome)** vì structural variation và chuỗi (sequence / 시퀀스) không có trong tham chiếu (reference / 참조) cũ có thể quan trọng. “tham chiếu (reference / 참조)” là coordinate hệ thống (system / 시스템) hữu ích, không phải genome chuẩn tuyệt đối của loài.
 
 <!-- continuity-2026:cell-identity-regulation -->
 ## Cùng một genome nhưng cell khác nhau vì mạng điều hòa giữ trạng thái khác nhau
 
-Neuron, hepatocyte và tế bào cơ gần như mang cùng DNA sequence nhưng dùng những phần khác nhau của genome. **Trạng thái tế bào (cell state)** xuất hiện từ tổ hợp yếu tố phiên mã, accessibility của chromatin, enhancer–promoter contact, RNA regulation và feedback giữa các gene. Một transcription factor hiếm khi “bật một gene”; nó thường đổi xác suất hoạt động của nhiều locus trong một mạng.
+Neuron, hepatocyte và tế bào cơ gần như mang cùng DNA chuỗi (sequence / 시퀀스) nhưng dùng những phần khác nhau của genome. **Trạng thái tế bào (cell state)** xuất hiện từ tổ hợp yếu tố phiên mã, khả năng tiếp cận (accessibility / 접근성) của chromatin, enhancer–promoter contact, RNA regulation và phản hồi (feedback / 피드백) giữa các gene. Một transcription factor hiếm khi “bật một gene”; nó thường đổi xác suất hoạt động của nhiều locus trong một mạng.
 
-Điều quan trọng là regulation có memory nhưng không bất biến. Positive feedback giữa transcription factor và enhancer có thể duy trì identity qua nhiều lần phân chia; methylation/histone state góp phần ổn định accessibility. Tuy nhiên signal phát triển, stress hoặc reprogramming mạnh có thể chuyển cell sang attractor khác. Epigenetics vì vậy không phải lớp “cao hơn DNA”, mà là cơ chế trạng thái hoạt động trên genome và chịu giới hạn bởi sequence, enzyme và môi trường tế bào.
+Điều quan trọng là regulation có bộ nhớ (memory / 메모리) nhưng không bất biến. Positive phản hồi (feedback / 피드백) giữa transcription factor và enhancer có thể duy trì định danh (identity / 식별자) qua nhiều lần phân chia; methylation/histone trạng thái (state / 상태) góp phần ổn định khả năng tiếp cận (accessibility / 접근성). Tuy nhiên tín hiệu (signal / 신호) phát triển, stress hoặc reprogramming mạnh có thể chuyển cell sang attractor khác. Epigenetics vì vậy không phải lớp “cao hơn DNA”, mà là cơ chế trạng thái hoạt động trên genome và chịu giới hạn bởi chuỗi (sequence / 시퀀스), enzyme và môi trường tế bào.
 
-Failure có thể xảy ra khi enhancer hoạt động sai cell type, chromosome domain bị phá, dosage gene thay đổi hoặc epigenetic silencing không đúng. Nhiều disease-associated variant nằm ngoài coding region chính vì chúng thay regulation thay vì thay amino acid. Muốn chứng minh cơ chế cần perturb enhancer/gene trong đúng cell state, không chỉ dựa vào correlation trong dữ liệu omics.
+Thất bại (failure / 실패) có thể xảy ra khi enhancer hoạt động sai cell kiểu (type / 타입), chromosome lĩnh vực (domain / 도메인) bị phá, dosage gene thay đổi hoặc epigenetic silencing không đúng. Nhiều disease-associated variant nằm ngoài coding region chính vì chúng thay regulation thay vì thay amino acid. Muốn chứng minh cơ chế cần perturb enhancer/gene trong đúng cell trạng thái (state / 상태), không chỉ dựa vào correlation trong dữ liệu omics.
 
-## 30. Cầu nối (bridge): hệ gen variation trở thành evolution như thế nào?
+## 30. cầu nối (bridge / 브리지): hệ gen variation trở thành evolution như thế nào?
 
-Hệ gen học cho ta picture variation trên nhiều locus và regulatory state. Nhưng evolution hỏi một level khác: **tần số allele thay đổi qua generation bởi mutation, chọn lọc (selection), drift và dòng gen (gene flow) như thế nào?**
+Hệ gen học cho ta picture variation trên nhiều locus và regulatory trạng thái (state / 상태). Nhưng evolution hỏi một mức (level / 수준) khác: **tần số allele thay đổi qua generation bởi mutation, chọn lọc (selection), drift và dòng gen (gene flow) như thế nào?**
 
 Đó là nội dung của [Tiến hóa và Di truyền quần thể](../03_evolution_and_diversity/00_evolution_and_population_genetics.md).
 
-Phát sinh chủng loại (phylogeny) sau đó dùng sequence difference để reconstruct history; microbiology dùng chuyển gen ngang (horizontal gene transfer) và rapid evolution; bioinformatics quay lại dùng computational algorithm để xử lý genomic data.
+Phát sinh chủng loại (phylogeny) sau đó dùng chuỗi (sequence / 시퀀스) difference để reconstruct lịch sử (history / 이력); microbiology dùng chuyển gen ngang (horizontal gene transfer) và rapid evolution; bioinformatics quay lại dùng computational thuật toán (algorithm / 알고리즘) để xử lý genomic dữ liệu (data / 데이터).
 
-> **Mô hình tư duy cuối chapter:** genome là một dynamic information hệ thống được tổ chức trong chromatin, đọc qua mạng lưới điều hòa và biểu hiện thành nhiều molecular layer. Hệ gen học đo hệ thống ở quy mô lớn; thống kê (statistics) giúp tìm pattern, còn experiment mới giúp nối pattern với causation.
+> **Mô hình tư duy cuối chapter:** genome là một động (dynamic / 동적) thông tin (information / 정보) hệ thống được tổ chức trong chromatin, đọc qua mạng lưới điều hòa và biểu hiện thành nhiều molecular tầng (layer / 계층). Hệ gen học đo hệ thống ở quy mô lớn; thống kê (statistics) giúp tìm mẫu (pattern / 패턴), còn experiment mới giúp nối mẫu (pattern / 패턴) với causation.
 
 ---
 
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Di truyền, Biến dị và Đột biến](01_inheritance_variation_and_mutation.md) · [Mục lục Biology](../README.md) · [Sửa chữa DNA, tái tổ hợp và ổn định genome →](03_dna_repair_recombination_and_genome_stability.md)
+
+> **Bàn giao:** Sau **30. cầu nối (bridge / 브리지): hệ gen variation trở thành evolution như thế nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dna genes and gene expression](./00_dna_genes_and_gene_expression.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

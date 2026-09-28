@@ -10,7 +10,7 @@ Fan-In, Fan-Out
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **4. 응집도 (Cohesion - Độ gắn kết)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **6. N-S 차트 (Nassi-Schneiderman Chart)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,6 +20,8 @@ Fan-In, Fan-Out
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **5. Fan-In / Fan-Out (팬인 / 팬아웃)** và nối nó với **6. N-S 차트 (Nassi-Schneiderman Chart)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 5. Fan-In / Fan-Out (팬인 / 팬아웃)
@@ -27,10 +29,10 @@ Fan-In, Fan-Out
 
 *   **Fan-In (들어옴 / Đi vào):**
     *   **Korean:** 나를 호출하는 모듈 수. **높게(High)** 설계하는 것이 재사용성 측면에서 좋음. (단, 단일 장애점 주의)
-    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng module gọi đến module hiện tại. Fan-In CAO là tốt vì chứng tỏ module được tái sử dụng nhiều, nhưng cần cẩn thận vì nó là trung tâm (Single Point of Failure).
+    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng mô-đun (module / 모듈) gọi đến mô-đun (module / 모듈) hiện tại. Fan-In CAO là tốt vì chứng tỏ mô-đun (module / 모듈) được tái sử dụng nhiều, nhưng cần cẩn thận vì nó là trung tâm (Single Point of Failure).
 *   **Fan-Out (나감 / Đi ra):**
     *   **Korean:** 내가 호출하는 모듈 수. **낮게(Low)** 설계하여 단순화해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng module mà module hiện tại gọi. Fan-Out THẤP là tốt, tránh việc module phụ thuộc vào quá nhiều nơi khác.
+    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng mô-đun (module / 모듈) mà mô-đun (module / 모듈) hiện tại gọi. Fan-Out THẤP là tốt, tránh việc mô-đun (module / 모듈) phụ thuộc vào quá nhiều nơi khác.
 
 💡 **Mẹo ghi nhớ:** Fan-In = Gọi VÀO tôi (High is good) / Fan-Out = Tôi gọi RA (Low is good).
 

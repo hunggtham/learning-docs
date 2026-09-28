@@ -1,5 +1,8 @@
 # Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung
 
+> **Mạch đọc:** Đọc **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao tạo bề mặt tốn năng lượng tự do?** sang **Vì sao giọt có xu hướng hình cầu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Mặt phân cách (interface / 계면)** là vùng biên giữa hai pha. **Bề mặt (surface / 표면)** thường dùng khi một pha tiếp xúc với khí hoặc chân không. Nguyên tử và phân tử ở vùng biên có môi trường phối trí không đối xứng so với vật liệu khối, nên năng lượng tự do, mật độ electron và khả năng phản ứng có thể khác rõ rệt.
 
 Ăn mòn, xúc tác dị thể, bám dính, làm ướt, pin, cảm biến và chế tạo bán dẫn đều là những ví dụ mà hóa học vùng biên có thể quyết định hành vi của toàn hệ.
@@ -251,7 +254,7 @@ SEI quá dày làm tăng điện trở. SEI nứt rồi tái tạo liên tục t
 Độ bám dính có thể đến từ:
 
 - làm ướt tốt;
-- tương tác acid–base;
+- tương tác acid–cơ sở (base / 기반);
 - liên kết cộng hóa trị;
 - khóa cơ học trên bề mặt nhám;
 - khuếch tán và đan xen chuỗi polymer;
@@ -446,3 +449,5 @@ cấu trúc nguyên tử bề mặt
 Khi một hệ có hiện tượng xảy ra tại ranh giới — xúc tác, ăn mòn, pin, cảm biến, bám dính, làm ướt, tăng trưởng màng — đừng chỉ hỏi vật liệu khối là gì. Hãy hỏi **bề mặt hiện có cấu trúc nào, đang tiếp xúc với pha nào, chất gì đang hấp phụ, và trạng thái đó thay đổi theo thời gian ra sao**.
 
 Xem tiếp: [Chất bán dẫn](./03_semiconductors.md), [Vật liệu nano](./04_nanomaterials.md), [Động học điện hóa và trở kháng](../09_redox_and_electrochemistry/06_electrochemical_kinetics_and_impedance.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

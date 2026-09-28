@@ -1,28 +1,40 @@
-# Scope, closures, functions và control flow
+# Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)
 
-Functions giúp biến computation thành reusable units. Nhưng để hiểu function thật sự, cần biết names được resolved ở đâu, activation state sống bao lâu, function value mang theo environment gì, và control quay lại caller thế nào.
+> **Mạch đọc:** Đặt **phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lexical phạm vi (scope / 범위)** sang **hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Lexical scope
 
-Scope (스코프 / phạm vi) xác định region nơi binding name có thể được referenced. Lexical scope dựa source nesting. Inner scope có thể shadow outer name; shadowing không mutate outer binding, nó tạo binding khác cùng identifier.
+Functions giúp biến computation thành reusable units. Nhưng để hiểu hàm (function / 함수) thật sự, cần biết names được resolved ở đâu, activation trạng thái (state / 상태) sống bao lâu, hàm (function / 함수) giá trị (value / 값) mang theo môi trường (environment / 환경) gì, và điều khiển (control / 제어) quay lại caller thế nào.
 
-Name resolution thường xảy ra compile/static-analysis time theo scope chain, dù value nằm runtime.
+## Lexical phạm vi (scope / 범위)
 
-## Function call và activation record
+Phạm vi (scope / 범위) xác định region nơi binding name có thể được referenced. Lexical phạm vi (scope / 범위) dựa nguồn (source / 소스) nesting. Inner phạm vi (scope / 범위) có thể shadow outer name; shadowing không mutate outer binding, nó tạo binding khác cùng identifier.
 
-Mỗi call cần state riêng: arguments, locals, return point và bookkeeping. Native implementation thường dùng stack frame/registers theo ABI. Recursion hoạt động vì mỗi call có activation riêng.
+Name resolution thường xảy ra compile/static-analysis thời gian (time / 시간) theo phạm vi (scope / 범위) chuỗi (chain / 사슬), dù giá trị (value / 값) nằm thời gian chạy (runtime / 런타임).
 
-Tail call xảy ra khi result của current function chính là result của another call. Language/runtime có thể tail-call optimize để reuse frame, nhưng không phải mọi ecosystem guarantee.
+
+> **Chuyển mạch:** Từ **Lexical phạm vi (scope / 범위)**, ta sang **hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)
+
+Mỗi lời gọi (call / 호출) cần trạng thái (state / 상태) riêng: arguments, locals, return điểm (point / 지점) và bookkeeping. bản địa (native / 네이티브) hiện thực (implementation / 구현) thường dùng ngăn xếp (stack / 스택) frame/registers theo ABI. Recursion hoạt động vì mỗi lời gọi (call / 호출) có activation riêng.
+
+Tail lời gọi (call / 호출) xảy ra khi kết quả (result / 결과) của hiện tại (current / 현재) hàm (function / 함수) chính là kết quả (result / 결과) của another lời gọi (call / 호출). ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) có thể tail-call optimize để reuse frame, nhưng không phải mọi ecosystem guarantee.
+
+
+> **Chuyển mạch:** Từ **hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)**, ta sang **First-class functions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## First-class functions
 
-Language có first-class functions nếu functions có thể gán vào variables, truyền như arguments, return như values. Higher-order function nhận/trả function.
+Ngôn ngữ (language / 언어) có first-class functions nếu functions có thể gán vào variables, truyền như arguments, return như values. Higher-order hàm (function / 함수) nhận/trả hàm (function / 함수).
 
-`map`, `filter`, callbacks, event handlers và strategy injection đều dựa idea này.
+`map`, `filter`, callbacks, sự kiện (event / 이벤트) handlers và chiến lược (strategy / 전략) injection đều dựa idea này.
+
+
+> **Chuyển mạch:** Từ **First-class functions**, ta sang **Closure** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Closure
 
-Closure (클로저) là function cùng lexical environment cần thiết cho free variables. Ví dụ:
+Closure (클로저) là hàm (function / 함수) cùng lexical môi trường (environment / 환경) cần thiết cho free variables. Ví dụ:
 
 ```javascript
 function makeCounter() {
@@ -31,48 +43,71 @@ function makeCounter() {
 }
 ```
 
-Sau `makeCounter` return, `n` vẫn phải sống vì returned function captures binding. Runtime có thể hoist captured state lên heap-like environment thay vì ordinary stack frame.
+Sau `makeCounter` return, `n` vẫn phải sống vì returned hàm (function / 함수) captures binding. thời gian chạy (runtime / 런타임) có thể hoist captured trạng thái (state / 상태) lên heap-like môi trường (environment / 환경) thay vì ordinary ngăn xếp (stack / 스택) frame.
 
-Capture-by-value/reference semantics khác language và construct. Mutable captures có thể tạo shared hidden state.
+Capture-by-value/tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) khác ngôn ngữ (language / 언어) và construct. Mutable captures có thể tạo dùng chung (shared / 공유) hidden trạng thái (state / 상태).
 
-## Control flow
 
-Sequence, branch, loop, call/return, exception và coroutine suspension đều thay “next computation”. Compiler biểu diễn control flow bằng Control Flow Graph — CFG, nodes là basic blocks, edges là possible transfers.
+> **Chuyển mạch:** Từ **Closure**, ta sang **điều khiển (control / 제어) luồng (flow / 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Dataflow analyses như definite assignment, liveness và optimization chạy trên CFG.
+## Điều khiển (control / 제어) luồng (flow / 흐름)
 
-## Exception như non-local control transfer
+Chuỗi (sequence / 시퀀스), branch, vòng lặp (loop / 루프), lời gọi (call / 호출)/return, exception và coroutine suspension đều thay “next computation”. trình biên dịch (compiler / 컴파일러) biểu diễn điều khiển (control / 제어) luồng (flow / 흐름) bằng điều khiển (control / 제어) luồng (flow / 흐름) đồ thị (graph / 그래프) — CFG, nodes là basic blocks, edges là possible transfers.
 
-Throw exception bỏ qua normal return path và search handler theo stack/runtime rules. Nó tiện cho separating error propagation khỏi local happy path nhưng hidden edges làm reasoning resource cleanup khó nếu language không có finally/RAII.
+Dataflow analyses như definite assignment, liveness và tối ưu hóa (optimization / 최적화) chạy trên CFG.
 
-Exception cho expected high-frequency control flow có thể costly hoặc confusing tùy runtime; use depends semantic contract.
+
+> **Chuyển mạch:** Từ **điều khiển (control / 제어) luồng (flow / 흐름)**, ta sang **Exception như non-local điều khiển (control / 제어) transfer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Exception như non-local điều khiển (control / 제어) transfer
+
+Throw exception bỏ qua normal return đường dẫn (path / 경로) và tìm kiếm (search / 검색) handler theo ngăn xếp (stack / 스택)/thời gian chạy (runtime / 런타임) rules. Nó tiện cho separating lan truyền lỗi (error propagation / 오류 전파) khỏi cục bộ (local / 로컬) happy đường dẫn (path / 경로) nhưng hidden edges làm lập luận (reasoning / 추론) tài nguyên (resource / 자원) cleanup khó nếu ngôn ngữ (language / 언어) không có finally/RAII.
+
+Exception cho expected high-frequency điều khiển (control / 제어) luồng (flow / 흐름) có thể costly hoặc confusing tùy thời gian chạy (runtime / 런타임); use depends ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
+
+
+> **Chuyển mạch:** Từ **Exception như non-local điều khiển (control / 제어) transfer**, ta sang **Coroutine, generator và async** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Coroutine, generator và async
 
-Coroutine có thể suspend và resume, nên activation state phải persist qua suspension. Compiler có thể transform async function thành state machine storing locals + continuation state.
+Coroutine có thể suspend và resume, nên activation trạng thái (state / 상태) phải persist qua suspension. trình biên dịch (compiler / 컴파일러) có thể transform async hàm (function / 함수) thành máy trạng thái (state machine / 상태 머신) storing locals + continuation trạng thái (state / 상태).
 
-`await` không magic “tạo thread”; nó thường register continuation rồi trả control khi operation chưa complete. Runtime/event loop/scheduler quyết định execution model.
+`await` không magic “tạo luồng thực thi (thread / 스레드)”; nó thường register continuation rồi trả điều khiển (control / 제어) khi thao tác (operation / 연산) chưa complete. thời gian chạy (runtime / 런타임)/vòng lặp sự kiện (event loop / 이벤트 루프)/scheduler quyết định mô hình thực thi (execution model / 실행 모델).
 
-Generator `yield` tương tự suspend state giữa values.
+Generator `yield` tương tự suspend trạng thái (state / 상태) giữa values.
+
+
+> **Chuyển mạch:** Từ **Coroutine, generator và async**, ta sang **Continuations** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Continuations
 
-Continuation conceptualize “phần computation còn lại”. Callback là explicit continuation; promise/future chain compose continuations; async/await viết syntax tuần tự trên continuation/state-machine transformation.
+Continuation conceptualize “phần computation còn lại”. Callback là tường minh (explicit / 명시적) continuation; promise/future chuỗi (chain / 사슬) compose continuations; async/await viết cú pháp (syntax / 문법) tuần tự trên continuation/state-machine transformation.
 
-Mental model này giúp hiểu why async stack traces và exception propagation khác sync call stack.
+Mô hình tư duy (mental model / 사고 모델) này giúp hiểu why async ngăn xếp (stack / 스택) traces và exception propagation khác sync ngăn xếp lời gọi (call stack / 호출 스택).
 
-## Mental Model
 
-> Function call tạo **execution context**; lexical scope quyết định names; closure giữ environment qua lifetime; control-flow construct quyết định continuation nào chạy tiếp.
+> **Chuyển mạch:** Từ **Continuations**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Common Misconceptions
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“Closure chỉ là anonymous function.”** Anonymous function không nhất thiết capture; named function cũng có thể closure.
+> hàm (function / 함수) lời gọi (call / 호출) tạo **thực thi (execution / 실행) ngữ cảnh (context / 맥락)**; lexical phạm vi (scope / 범위) quyết định names; closure giữ môi trường (environment / 환경) qua thời gian tồn tại (lifetime / 수명); control-flow construct quyết định continuation nào chạy tiếp.
 
-**“async = multithread.”** Async là suspension/composition model; có thể chạy single-threaded event loop hoặc cùng thread pool.
 
-**“Scope và lifetime là một.”** Binding có lexical scope giới hạn nơi truy cập, nhưng captured object/value có thể sống lâu hơn scope source.
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“Closure chỉ là anonymous hàm (function / 함수).”** Anonymous hàm (function / 함수) không nhất thiết capture; named hàm (function / 함수) cũng có thể closure.
+
+**“async = multithread.”** Async là suspension/composition mô hình (model / 모델); có thể chạy single-threaded vòng lặp sự kiện (event loop / 이벤트 루프) hoặc cùng luồng thực thi (thread / 스레드) pool.
+
+**“phạm vi (scope / 범위) và thời gian tồn tại (lifetime / 수명) là một.”** Binding có lexical phạm vi (scope / 범위) giới hạn nơi truy cập, nhưng captured đối tượng (object / 객체)/giá trị (value / 값) có thể sống lâu hơn phạm vi (scope / 범위) nguồn (source / 소스).
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-Native calls nằm ở [ABI](../02_computer_architecture/04_machine_code_assembly_and_abi.md), async/concurrency ở [process/thread scheduling](../03_operating_systems/01_processes_threads_and_scheduling.md), compiler transformations ở [Compiler/VM/JIT](./03_compilers_interpreters_vm_and_jit.md).
+Bản địa (native / 네이티브) calls nằm ở [ABI](../02_computer_architecture/04_machine_code_assembly_and_abi.md), async/tính đồng thời (concurrency / 동시성) ở [process/thread scheduling](../03_operating_systems/01_processes_threads_and_scheduling.md), trình biên dịch (compiler / 컴파일러) transformations ở [Compiler/VM/JIT](./03_compilers_interpreters_vm_and_jit.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language semantics and execution models](./00_language_semantics_and_execution_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

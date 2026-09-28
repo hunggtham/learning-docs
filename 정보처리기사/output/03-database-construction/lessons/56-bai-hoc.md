@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 마지막에는 이 기준이 다른 과목의 문제와 어떻게 만나는지 점검한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,12 +20,14 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** và nối nó với phần ôn tập cuối môn; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
 
 ### CRUD 분석 (Phân tích CRUD)
-- Tạo ma trận (Matrix) giữa **Process (Tiến trình)** và **Table (Bảng)**.
+- Tạo ma trận (matrix / 행렬) giữa **tiến trình (process / 프로세스)** và **bảng (table / 테이블)**.
 - Đánh dấu **C**reate, **R**ead, **U**pdate, **D**elete để xem bảng nào bị thao tác nhiều/ít, phát hiện bảng bị bỏ sót (ít nhất mỗi bảng phải có 1 thao tác).
 
 ### MyBatis (프레임워크)

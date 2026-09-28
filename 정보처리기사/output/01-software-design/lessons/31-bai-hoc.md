@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **2. 객체지향 (OOP - Object Oriented Programming)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **1. 객체지향 설계 5대 원칙 (SOLID)** và nối nó với **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -33,10 +35,10 @@
         *   *VN:* Tách biệt lớp tạo báo cáo và lớp in báo cáo, không để chung một lớp.
 *   **OCP (Open-Closed Principle - 개방-폐쇄 원칙):**
     *   **Korean:** 기능 추가에는 열려(Open) 있어야 하고, 기존 코드 변경에는 닫혀(Closed) 있어야 함. 인터페이스로 캡슐화.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đóng - Mở. Mở rộng chức năng thì dễ dàng (Open), nhưng không được sửa đổi mã nguồn hiện tại (Closed). Thường dùng Interface để đóng gói.
+    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đóng - Mở. Mở rộng chức năng thì dễ dàng (Open), nhưng không được sửa đổi mã nguồn hiện tại (Closed). Thường dùng giao diện (interface / 인터페이스) để đóng gói.
     *   **Example:**
         *   *KR:* 결제 수단(카드, 페이 등)을 인터페이스로 구현하여 새로운 결제 수단 추가 시 기존 코드 수정 없이 확장.
-        *   *VN:* Dùng Interface cho phương thức thanh toán, khi thêm phương thức mới (ví dụ: ví điện tử) thì không cần sửa mã cũ.
+        *   *VN:* Dùng giao diện (interface / 인터페이스) cho phương thức thanh toán, khi thêm phương thức mới (ví dụ: ví điện tử) thì không cần sửa mã cũ.
 *   **LSP (Liskov Substitution Principle - 리스코프 치환 원칙):**
     *   **Korean:** 자식 클래스는 최소한 부모 클래스의 행위를 수행할 수 있어야 함. 부모의 의도를 훼손하지 않고 확장.
     *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Thay thế Liskov. Lớp con phải có thể thay thế lớp cha mà không làm hỏng tính đúng đắn của chương trình. Lớp con chỉ nên mở rộng, không làm sai lệch ý định của lớp cha.
@@ -45,16 +47,16 @@
         *   *VN:* Chim cánh cụt kế thừa từ lớp Chim, nhưng nếu gọi hàm bay() sẽ bị lỗi, vi phạm LSP. Cần thiết kế lại.
 *   **ISP (Interface Segregation Principle - 인터페이스 분리 원칙):**
     *   **Korean:** 사용하지 않는 인터페이스에 의존하지 않도록 분리.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Phân tách Interface. Không nên ép các lớp phụ thuộc vào những interface mà chúng không sử dụng. Hãy chia nhỏ interface khổng lồ thành các interface cụ thể.
+    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Phân tách giao diện (interface / 인터페이스). Không nên ép các lớp phụ thuộc vào những giao diện (interface / 인터페이스) mà chúng không sử dụng. Hãy chia nhỏ giao diện (interface / 인터페이스) khổng lồ thành các giao diện (interface / 인터페이스) cụ thể.
     *   **Example:**
         *   *KR:* 복합기 인터페이스를 프린터, 스캐너, 팩스 인터페이스로 분리.
-        *   *VN:* Tách interface của máy photocopy đa năng thành các interface riêng: In, Quét, Fax.
+        *   *VN:* Tách giao diện (interface / 인터페이스) của máy photocopy đa năng thành các giao diện (interface / 인터페이스) riêng: In, Quét, Fax.
 *   **DIP (Dependency Inversion Principle - 의존 역전 원칙):**
     *   **Korean:** 구체적인 클래스보다 추상화된 클래스(인터페이스)에 의존해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đảo ngược phụ thuộc. Các module cấp cao không nên phụ thuộc vào module cấp thấp, cả hai nên phụ thuộc vào abstractions (interface).
+    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đảo ngược phụ thuộc. Các mô-đun (module / 모듈) cấp cao không nên phụ thuộc vào mô-đun (module / 모듈) cấp thấp, cả hai nên phụ thuộc vào abstractions (interface).
     *   **Example:**
         *   *KR:* 자동차가 스노우타이어(구체) 대신 타이어(추상) 인터페이스에 의존.
-        *   *VN:* Lớp xe hơi phụ thuộc vào interface "Lốp xe" nói chung, thay vì phụ thuộc trực tiếp vào "Lốp đi tuyết".
+        *   *VN:* Lớp xe hơi phụ thuộc vào giao diện (interface / 인터페이스) "Lốp xe" nói chung, thay vì phụ thuộc trực tiếp vào "Lốp đi tuyết".
 
 💡 **Mẹo ghi nhớ (Mnemonics):** **SOLID** (S = Single, O = Open, L = Liskov, I = Interface, D = Dependency)
 

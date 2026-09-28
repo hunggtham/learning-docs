@@ -1,5 +1,8 @@
 # Tiền mặt, thị trường tiền tệ, sản phẩm cấu trúc và thị trường tư nhân
 
+> **Mạch đọc:** Đặt **Tiền mặt, thị trường tiền tệ, sản phẩm cấu trúc và thị trường tư nhân** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Phần I — Tiền mặt và thị trường tiền tệ** sang **1. Tiền mặt không phải “không đầu tư”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Khi nói về nhóm tài sản, người mới thường nghĩ tới cổ phiếu, trái phiếu, vàng hoặc crypto. Danh mục thực tế còn có tiền mặt, công cụ thị trường tiền tệ, repo, sản phẩm cấu trúc và tài sản tư nhân. Những sản phẩm này có thể trông “ổn định” hơn vì kỳ hạn ngắn hoặc giá ít được cập nhật, nhưng sự ổn định bề mặt không xóa rủi ro tín dụng, thanh khoản, đối tác hay quyền chọn ẩn.
 
 ## Phần I — Tiền mặt và thị trường tiền tệ
@@ -176,7 +179,7 @@ Sản phẩm worst-of dựa trên tài sản có kết quả kém nhất trong r
 
 Tương quan giữa các tài sản là yếu tố cốt lõi.
 
-## 26. Correlation Risk
+## 26. Correlation rủi ro (risk / 위험)
 
 Giá của cấu trúc nhiều tài sản phụ thuộc tương quan. Nếu tương quan thay đổi trong stress, xác suất các tài sản cùng giảm hoặc một tài sản trở thành “worst” thay đổi đáng kể.
 
@@ -188,15 +191,15 @@ Reverse convertible thường trả coupon cao nhưng khiến nhà đầu tư ch
 
 Điều quan trọng là nhận ra nhà đầu tư đang bán bảo hiểm giảm giá để nhận coupon.
 
-## 28. Range Accrual
+## 28. phạm vi (range / 범위) Accrual
 
-Coupon của range accrual chỉ tích lũy khi biến tham chiếu nằm trong một vùng. Lợi suất vì vậy phụ thuộc đường đi chứ không chỉ điểm cuối.
+Coupon của phạm vi (range / 범위) accrual chỉ tích lũy khi biến tham chiếu nằm trong một vùng. Lợi suất vì vậy phụ thuộc đường đi chứ không chỉ điểm cuối.
 
 Cần dùng mô phỏng kịch bản thay vì nhìn yield-to-maturity thông thường.
 
 ## 29. ETN
 
-Exchange-Traded Note (ETN) là khoản nợ không bảo đảm của tổ chức phát hành gắn với một chỉ số hoặc chiến lược.
+Exchange-Traded ghi chú (note / 노트) (ETN) là khoản nợ không bảo đảm của tổ chức phát hành gắn với một chỉ số hoặc chiến lược.
 
 Nhà đầu tư chịu cả rủi ro chỉ số và rủi ro tín dụng nhà phát hành. ETN không giống ETF sở hữu rổ tài sản.
 
@@ -248,7 +251,7 @@ Cần so lợi suất **sau mọi phí**, không chỉ gross IRR.
 
 Nhà đầu tư cam kết một số vốn nhưng quỹ gọi dần theo thời gian. Phần chưa gọi là nghĩa vụ trong tương lai.
 
-Phải dành thanh khoản cho capital call ngay cả khi phần tiền đó chưa được chuyển vào quỹ.
+Phải dành thanh khoản cho capital lời gọi (call / 호출) ngay cả khi phần tiền đó chưa được chuyển vào quỹ.
 
 ## 38. J-Curve và Vintage
 
@@ -274,7 +277,7 @@ TVPI cao chủ yếu nhờ RVPI phụ thuộc mạnh vào chất lượng địn
 
 ## 41. PME
 
-Public Market Equivalent (PME) so quỹ tư nhân với một benchmark công khai bằng cùng lịch đóng/gọi vốn.
+Công khai (public / 공개) thị trường (market / 시장) Equivalent (PME) so quỹ tư nhân với một benchmark công khai bằng cùng lịch đóng/gọi vốn.
 
 Nó giúp trả lời quỹ có tạo giá trị sau khi điều chỉnh thời điểm dòng tiền hay chỉ hưởng thị trường chung.
 
@@ -300,7 +303,7 @@ Lãi suất thả nổi giúp thu nhập tăng khi lãi tăng nhưng làm ngư�
 
 ## 45. Thứ tự ưu tiên
 
-First-lien senior debt đứng trước second-lien, mezzanine và vốn chủ sở hữu. Khả năng thu hồi khác nhau đáng kể.
+First-lien cấp cao (senior / 시니어) debt đứng trước second-lien, mezzanine và vốn chủ sở hữu. Khả năng thu hồi khác nhau đáng kể.
 
 Lợi suất phải được đọc cùng vị trí trong cấu trúc vốn.
 
@@ -324,11 +327,11 @@ Nó làm lợi suất kế toán tăng nhưng nợ người vay cũng tăng. PIK
 
 ## 49. Tỷ lệ bao phủ lãi vay
 
-Cần kiểm thử đồng thời EBITDA giảm và lãi suất tăng. Một borrower có coverage ổn trong base case có thể suy yếu rất nhanh ở stress case.
+Cần kiểm thử đồng thời EBITDA giảm và lãi suất tăng. Một borrower có coverage ổn trong cơ sở (base / 기반) trường hợp (case / 사례) có thể suy yếu rất nhanh ở stress trường hợp (case / 사례).
 
-## 50. Recovery và tài sản bảo đảm
+## 50. khôi phục (recovery / 복구) và tài sản bảo đảm
 
-Giá trị sổ sách của tài sản bảo đảm không phải mức thu hồi chắc chắn. Recovery phụ thuộc thanh khoản tài sản, quyền pháp lý, chi phí tái cấu trúc và thứ tự ưu tiên.
+Giá trị sổ sách của tài sản bảo đảm không phải mức thu hồi chắc chắn. khôi phục (recovery / 복구) phụ thuộc thanh khoản tài sản, quyền pháp lý, chi phí tái cấu trúc và thứ tự ưu tiên.
 
 ## 51. Đòn bẩy ở cấp quỹ
 
@@ -342,15 +345,15 @@ Quỹ mở cho phép rút thường xuyên nhưng sở hữu khoản vay kém th
 
 Cam kết thanh khoản của cấu trúc quỹ phải được đánh giá riêng khỏi chất lượng khoản vay.
 
-## Phần V — Private Real Estate và Infrastructure
+## Phần V — Private Real Estate và hạ tầng (infrastructure / 인프라)
 
 ## 53. Bất động sản tư nhân
 
-Lợi suất đến từ NOI, đòn bẩy, cap rate và phát triển dự án. NAV theo thẩm định thường điều chỉnh chậm hơn giao dịch công khai.
+Lợi suất đến từ NOI, đòn bẩy, cap tỷ lệ (rate / 비율) và phát triển dự án. NAV theo thẩm định thường điều chỉnh chậm hơn giao dịch công khai.
 
 Cần dùng LTV, DSCR, thời hạn nợ và chất lượng người thuê thay vì chỉ nhìn mức định giá.
 
-## 54. Infrastructure
+## 54. hạ tầng (infrastructure / 인프라)
 
 Cơ sở hạ tầng có thể tạo dòng tiền dài hạn từ tiện ích, đường, sân bay, đường ống, điện tái tạo và hạ tầng số.
 
@@ -360,7 +363,7 @@ Hợp đồng dài giúp ổn định doanh thu nhưng thêm rủi ro quy địn
 
 Một số hợp đồng có điều khoản tăng giá theo CPI, nhưng giới hạn tăng, độ trễ và quy định quyết định mức bảo vệ thực tế.
 
-Không nên coi infrastructure như hedge lạm phát hoàn hảo.
+Không nên coi hạ tầng (infrastructure / 인프라) như hedge lạm phát hoàn hảo.
 
 ## Phần VI — Thanh khoản và định giá
 
@@ -400,7 +403,7 @@ Tài sản công khai giảm
 
 Unfunded commitments phải được đưa vào kiểm thử thanh khoản.
 
-## 61. So sánh public và private
+## 61. So sánh công khai (public / 공개) và private
 
 Khi so tài sản tư nhân với thị trường công khai, cần điều chỉnh:
 
@@ -436,3 +439,5 @@ Kịch bản xấu nhất có thể gây gì?
 ## Kết luận
 
 Những sản phẩm trông ổn định thường chỉ chuyển rủi ro từ biến động giá sang **tín dụng, thanh khoản, đối tác, quyền chọn ẩn hoặc định giá chậm**. Luôn bắt đầu từ bản chất kinh tế và quyền lợi pháp lý, sau đó mới nhìn coupon, IRR hoặc NAV được quảng cáo.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

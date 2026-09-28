@@ -1,6 +1,9 @@
-# Data for AI — Reading Map
+# Dữ liệu (data / 데이터) for AI — Reading Map
 
-Folder này coi data như một **engineered observation system**, không phải CSV phụ trợ cho model. Reading path đi từ data-generating process tới collection, cleaning, labeling, quality, leakage, bias, synthetic data và governance.
+> **Mạch đọc:** Đọc **dữ liệu (data / 데이터) for AI — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này coi dữ liệu (data / 데이터) như một **engineered observation hệ thống (system / 시스템)**, không phải CSV phụ trợ cho mô hình (model / 모델). Reading đường dẫn (path / 경로) đi từ data-generating tiến trình (process / 프로세스) tới collection, cleaning, labeling, chất lượng (quality / 품질), leakage, độ lệch (bias / 편향), synthetic dữ liệu (data / 데이터) và quản trị (governance / 거버넌스).
 
 ```mermaid
 flowchart TD
@@ -26,7 +29,10 @@ flowchart TD
 - [07 — Synthetic Data](./07_synthetic_data.md)
 - [08 — Data Governance](./08_data_governance.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 ```text
 Dataset ≠ Reality
@@ -41,7 +47,10 @@ Available in Database ≠ Available at Prediction Time
 Pseudonymization ≠ Anonymization
 ```
 
-## Mental Model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Reality
@@ -54,7 +63,10 @@ Reality
 → feedback into future data
 ```
 
-Data quality therefore depends on both statistical properties and the software/social process that generates observations.
+Dữ liệu (data / 데이터) chất lượng (quality / 품질) therefore depends on both statistical properties and the software/xã hội (social / 사회적) tiến trình (process / 프로세스) that generates observations.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Connections
 
@@ -66,4 +78,6 @@ Nên đọc cùng:
 - [RAG Document Processing](../09_retrieval_and_rag/06_chunking_and_document_processing.md)
 - [Agent Memory](../10_agents_and_ai_systems/04_agent_memory.md)
 
-Layer tiếp theo `15_ai_engineering/` chuyển từ learning artifacts sang production systems: training/inference pipelines, serving, batching, quantization, compression, latency/cost và AI system design.
+Tầng (layer / 계층) tiếp theo `15_ai_engineering/` chuyển từ học tập (learning / 학습) artifacts sang môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들): huấn luyện (training / 학습)/suy luận (inference / 추론) pipelines, serving, batching, quantization, compression, độ trễ (latency / 지연 시간)/chi phí (cost / 비용) và AI hệ thống (system / 시스템) thiết kế (design / 설계).
+
+> **Bàn giao:** Sau **Connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 data as the foundation of ai](./00_data_as_the_foundation_of_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,15 @@
-# Capacity Planning, Server Sizing và Headroom trong Production
+# Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)
 
-Một server có thể “chạy được” nhưng vẫn được sizing sai. Nếu sizing quá nhỏ, latency và error rate tăng khi traffic burst. Nếu sizing quá lớn, chi phí cao và bottleneck thật có thể nằm ở database hoặc dependency khác.
+> **Mạch đọc:** Đọc **sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ hardware** sang **thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-**Capacity planning** là quá trình ước lượng và kiểm chứng lượng tài nguyên cần thiết để workload đạt mục tiêu về throughput, latency, reliability và cost.
 
-Đây không phải bài toán chọn “CPU bao nhiêu core, RAM bao nhiêu GB” một lần rồi kết thúc. Capacity là quan hệ giữa workload và toàn bộ chuỗi tài nguyên.
+Một máy chủ (server / 서버) có thể “chạy được” nhưng vẫn được sizing sai. Nếu sizing quá nhỏ, độ trễ (latency / 지연 시간) và lỗi (error / 오류) tỷ lệ (rate / 비율) tăng khi traffic burst. Nếu sizing quá lớn, chi phí cao và bottleneck thật có thể nằm ở cơ sở dữ liệu (database / 데이터베이스) hoặc phụ thuộc (dependency / 의존성) khác.
 
-## Bắt đầu từ workload, không bắt đầu từ hardware
+**sức chứa (capacity / 용량) planning** là quá trình ước lượng và kiểm chứng lượng tài nguyên cần thiết để tải công việc (workload / 워크로드) đạt mục tiêu về thông lượng (throughput / 처리량), độ trễ (latency / 지연 시간), độ tin cậy (reliability / 신뢰성) và chi phí (cost / 비용).
+
+Đây không phải bài toán chọn “CPU bao nhiêu cốt lõi (core / 핵심), RAM bao nhiêu GB” một lần rồi kết thúc. sức chứa (capacity / 용량) là quan hệ giữa tải công việc (workload / 워크로드) và toàn bộ chuỗi tài nguyên.
+
+## Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ hardware
 
 Nếu chỉ hỏi:
 
@@ -18,22 +21,22 @@ thì chưa đủ thông tin.
 
 Cần biết:
 
-- request rate;
-- request cost;
-- concurrency;
-- response size;
-- database calls/request;
-- memory working set;
-- traffic burst pattern;
-- latency SLO;
-- growth rate;
-- failure/redundancy requirement.
+- yêu cầu (request / 요청) tỷ lệ (rate / 비율);
+- yêu cầu (request / 요청) chi phí (cost / 비용);
+- tính đồng thời (concurrency / 동시성);
+- phản hồi (response / 응답) kích thước (size / 크기);
+- cơ sở dữ liệu (database / 데이터베이스) calls/yêu cầu (request / 요청);
+- bộ nhớ (memory / 메모리) working set;
+- traffic burst mẫu (pattern / 패턴);
+- độ trễ (latency / 지연 시간) SLO;
+- growth tỷ lệ (rate / 비율);
+- thất bại (failure / 실패)/redundancy yêu cầu (requirement / 요구사항).
 
 Hai applications cùng 100 requests/second có thể cần tài nguyên khác nhau hàng chục lần.
 
-## Throughput và latency
+## Thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)
 
-**Throughput** là lượng work hoàn thành trên đơn vị thời gian.
+**thông lượng (throughput / 처리량)** là lượng công việc (work / 작업) hoàn thành trên đơn vị thời gian.
 
 Ví dụ:
 
@@ -41,7 +44,7 @@ Ví dụ:
 1000 requests/second
 ```
 
-**Latency** là thời gian để một unit work hoàn thành.
+**độ trễ (latency / 지연 시간)** là thời gian để một đơn vị (unit / 단위) công việc (work / 작업) hoàn thành.
 
 Ví dụ:
 
@@ -50,9 +53,9 @@ p95 = 120 ms
 p99 = 350 ms
 ```
 
-Capacity planning production thường phải giữ cả hai trong mục tiêu.
+Sức chứa (capacity / 용량) planning môi trường vận hành (production / 운영 환경) thường phải giữ cả hai trong mục tiêu.
 
-Tăng concurrency có thể tăng throughput đến một điểm, sau đó queueing làm latency tăng mạnh.
+Tăng tính đồng thời (concurrency / 동시성) có thể tăng thông lượng (throughput / 처리량) đến một điểm, sau đó queueing làm độ trễ (latency / 지연 시간) tăng mạnh.
 
 ## Utilization không nên luôn ở 100%
 
@@ -60,27 +63,27 @@ Một batch job có thể tận dụng CPU gần 100% và vẫn ổn.
 
 Một web API cần phản ứng với burst thường cần **headroom**.
 
-Nếu normal traffic đã dùng 95% CPU, một burst nhỏ hoặc GC spike có thể đẩy system vào saturation.
+Nếu normal traffic đã dùng 95% CPU, một burst nhỏ hoặc GC spike có thể đẩy hệ thống (system / 시스템) vào saturation.
 
-Headroom là phần capacity chưa dùng trong trạng thái bình thường để hấp thụ biến động và failure.
+Headroom là phần sức chứa (capacity / 용량) chưa dùng trong trạng thái bình thường để hấp thụ biến động và thất bại (failure / 실패).
 
 Không có một tỷ lệ headroom universal cho mọi hệ thống.
 
-## Capacity khác với utilization snapshot
+## Sức chứa (capacity / 용량) khác với utilization snapshot
 
-Một server CPU 30% lúc 03:00 không chứng minh server dư 70% capacity.
+Một máy chủ (server / 서버) CPU 30% lúc 03:00 không chứng minh máy chủ (server / 서버) dư 70% sức chứa (capacity / 용량).
 
 Cần nhìn:
 
 - peak hour;
-- daily/weekly pattern;
+- daily/weekly mẫu (pattern / 패턴);
 - p95/p99 utilization;
 - burst duration;
 - seasonal traffic;
-- deployment/backup jobs;
-- node failure scenarios.
+- triển khai (deployment / 배포)/backup jobs;
+- nút (node / 노드) thất bại (failure / 실패) scenarios.
 
-Capacity planning dựa time series, không dựa một snapshot.
+Sức chứa (capacity / 용량) planning dựa thời gian (time / 시간) series, không dựa một snapshot.
 
 ## Little's Law
 
@@ -92,11 +95,11 @@ L = \lambda W
 
 trong đó:
 
-- `L`: số requests/work items trung bình đang ở trong system;
-- `λ`: throughput/arrival rate;
-- `W`: thời gian trung bình trong system.
+- `L`: số requests/công việc (work / 작업) items trung bình đang ở trong hệ thống (system / 시스템);
+- `λ`: thông lượng (throughput / 처리량)/arrival tỷ lệ (rate / 비율);
+- `W`: thời gian trung bình trong hệ thống (system / 시스템).
 
-Ví dụ nếu service xử lý 1000 request/s và average latency 100 ms:
+Ví dụ nếu dịch vụ (service / 서비스) xử lý 1000 yêu cầu (request / 요청)/s và average độ trễ (latency / 지연 시간) 100 ms:
 
 \[
 L = 1000 \times 0.1 = 100
@@ -104,13 +107,13 @@ L = 1000 \times 0.1 = 100
 
 nghĩa trung bình có khoảng 100 requests đang in-flight.
 
-Nếu latency tăng lên 1 giây mà throughput vẫn 1000/s, số in-flight work tăng lên khoảng 1000.
+Nếu độ trễ (latency / 지연 시간) tăng lên 1 giây mà thông lượng (throughput / 처리량) vẫn 1000/s, số in-flight công việc (work / 작업) tăng lên khoảng 1000.
 
-Điều này giải thích tại sao latency degradation kéo theo thread/socket/memory pressure.
+Điều này giải thích tại sao độ trễ (latency / 지연 시간) degradation kéo theo luồng thực thi (thread / 스레드)/socket/bộ nhớ (memory / 메모리) pressure.
 
-## Service time và queueing
+## Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing
 
-Latency có thể tách gần đúng thành:
+Độ trễ (latency / 지연 시간) có thể tách gần đúng thành:
 
 \[
 W = W_q + S
@@ -118,24 +121,24 @@ W = W_q + S
 
 trong đó:
 
-- `Wq`: thời gian chờ queue;
+- `Wq`: thời gian chờ hàng đợi (queue / 큐);
 - `S`: thời gian thực sự được phục vụ.
 
-Khi resource utilization gần saturation, queue wait có thể tăng nhanh dù service time không thay đổi nhiều.
+Khi tài nguyên (resource / 자원) utilization gần saturation, hàng đợi (queue / 큐) wait có thể tăng nhanh dù dịch vụ (service / 서비스) thời gian (time / 시간) không thay đổi nhiều.
 
-Đó là lý do tail latency thường xấu đi mạnh trước khi system hoàn toàn fail.
+Đó là lý do tail độ trễ (latency / 지연 시간) thường xấu đi mạnh trước khi hệ thống (system / 시스템) hoàn toàn thất bại (fail / 실패).
 
 ## CPU sizing
 
-CPU sizing cần biết CPU time/request.
+CPU sizing cần biết CPU thời gian (time / 시간)/yêu cầu (request / 요청).
 
-Giả sử benchmark cho thấy mỗi request cần trung bình:
+Giả sử benchmark cho thấy mỗi yêu cầu (request / 요청) cần trung bình:
 
 ```text
 2 ms CPU
 ```
 
-và target:
+và mục tiêu (target / 대상):
 
 ```text
 2000 requests/s
@@ -147,15 +150,15 @@ CPU demand gần đúng:
 2000 \times 0.002 = 4 CPU-seconds/second
 \]
 
-nghĩa workload cần khoảng 4 CPU cores ở 100% utilization lý tưởng.
+nghĩa tải công việc (workload / 워크로드) cần khoảng 4 CPU cores ở 100% utilization lý tưởng.
 
-Nhưng production cần thêm headroom, kernel overhead, GC, uneven traffic và tail behavior.
+Nhưng môi trường vận hành (production / 운영 환경) cần thêm headroom, kernel overhead, GC, uneven traffic và tail hành vi (behavior / 동작).
 
-Có thể target 6–8 vCPU tùy benchmark/architecture thay vì đúng 4.
+Có thể mục tiêu (target / 대상) 6–8 vCPU tùy benchmark/kiến trúc (architecture / 아키텍처) thay vì đúng 4.
 
-Đây chỉ là model khởi đầu. CPU architecture và cloud vCPU performance khác nhau.
+Đây chỉ là mô hình (model / 모델) khởi đầu. CPU kiến trúc (architecture / 아키텍처) và cloud vCPU hiệu năng (performance / 성능) khác nhau.
 
-## vCPU không phải unit performance tuyệt đối
+## vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối
 
 Một vCPU ở cloud instance A không chắc bằng vCPU ở instance B.
 
@@ -165,10 +168,10 @@ Khác biệt có thể đến từ:
 - clock frequency;
 - SMT topology;
 - noisy neighbor;
-- burst credit model;
+- burst credit mô hình (model / 모델);
 - virtualization overhead.
 
-Capacity phải benchmark trên instance family thật nếu performance quan trọng.
+Sức chứa (capacity / 용량) phải benchmark trên instance family thật nếu hiệu năng (performance / 성능) quan trọng.
 
 ## CPU saturation signals
 
@@ -183,18 +186,18 @@ pidstat -u 1
 Cần xem:
 
 - CPU utilization;
-- runnable queue;
-- steal time;
+- runnable hàng đợi (queue / 큐);
+- steal thời gian (time / 시간);
 - per-core imbalance;
 - cgroup throttling.
 
-CPU 80% không tự động nghĩa chỉ còn 20% capacity vì tail latency có thể bắt đầu tăng trước 100%.
+CPU 80% không tự động nghĩa chỉ còn 20% sức chứa (capacity / 용량) vì tail độ trễ (latency / 지연 시간) có thể bắt đầu tăng trước 100%.
 
-## Memory sizing
+## Bộ nhớ (memory / 메모리) sizing
 
-RAM không nên sizing chỉ bằng heap size.
+RAM không nên sizing chỉ bằng vùng nhớ động (heap / 힙) kích thước (size / 크기).
 
-Với Java service, tổng memory có thể gồm:
+Với Java dịch vụ (service / 서비스), tổng bộ nhớ (memory / 메모리) có thể gồm:
 
 ```text
 Java heap
@@ -208,13 +211,13 @@ Java heap
 + OS/kernel memory
 ```
 
-Nếu container limit 4 GiB và `-Xmx4g`, gần như không còn headroom cho native memory.
+Nếu bộ chứa (container / 컨테이너) limit 4 GiB và `-Xmx4g`, gần như không còn headroom cho bản địa (native / 네이티브) bộ nhớ (memory / 메모리).
 
 Đây là cấu hình dễ OOMKill.
 
-## Heap headroom
+## Vùng nhớ vùng nhớ động (heap / 힙) headroom
 
-Giả sử container memory limit:
+Giả sử bộ chứa (container / 컨테이너) giới hạn bộ nhớ (memory limit / 메모리 제한):
 
 ```text
 8 GiB
@@ -226,25 +229,25 @@ Không nhất thiết set:
 -Xmx8g
 ```
 
-Có thể cần để một phần cho native memory và page cache. Tỷ lệ phù hợp phụ thuộc JVM/workload.
+Có thể cần để một phần cho bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và page bộ nhớ đệm (cache / 캐시). Tỷ lệ phù hợp phụ thuộc JVM/tải công việc (workload / 워크로드).
 
-Theo dõi RSS, native memory tracking và cgroup memory thay vì chỉ heap metrics.
+Theo dõi RSS, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) tracking và cgroup bộ nhớ (memory / 메모리) thay vì chỉ vùng nhớ động (heap / 힙) metrics.
 
-## Page cache là capacity hữu ích
+## Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích
 
-Linux sử dụng RAM dư cho page cache.
+Linux sử dụng RAM dư cho page bộ nhớ đệm (cache / 캐시).
 
-Một service đọc nhiều files hoặc database local có thể hưởng lợi từ cache.
+Một dịch vụ (service / 서비스) đọc nhiều files hoặc cơ sở dữ liệu (database / 데이터베이스) cục bộ (local / 로컬) có thể hưởng lợi từ bộ nhớ đệm (cache / 캐시).
 
-Sizing RAM quá sát process RSS có thể làm cache bị reclaim liên tục, tăng disk I/O và latency.
+Sizing RAM quá sát tiến trình (process / 프로세스) RSS có thể làm bộ nhớ đệm (cache / 캐시) bị reclaim liên tục, tăng disk I/O và độ trễ (latency / 지연 시간).
 
 Vì vậy RAM headroom không nhất thiết là “lãng phí”.
 
-## Swap trong capacity planning
+## Swap trong sức chứa (capacity / 용량) planning
 
-Swap có thể giúp tránh immediate OOM trong một số workloads, nhưng heavy swap thường gây latency lớn.
+Swap có thể giúp tránh immediate OOM trong một số workloads, nhưng heavy swap thường gây độ trễ (latency / 지연 시간) lớn.
 
-Service latency-sensitive không nên dựa swap như normal capacity.
+Dịch vụ (service / 서비스) latency-sensitive không nên dựa swap như normal sức chứa (capacity / 용량).
 
 Quan sát:
 
@@ -252,28 +255,28 @@ Quan sát:
 vmstat 1
 ```
 
-Sustained swap in/out (`si/so`) là signal pressure.
+Sustained swap in/out (`si/so`) là tín hiệu (signal / 신호) pressure.
 
-## Storage capacity có nhiều dimensions
+## Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions
 
 Disk sizing không chỉ là GB.
 
 Các dimensions:
 
-- capacity (GB/TB);
+- sức chứa (capacity / 용량);
 - IOPS;
-- throughput MB/s;
-- latency;
-- queue depth;
+- thông lượng (throughput / 처리량) MB/s;
+- độ trễ (latency / 지연 시간);
+- hàng đợi (queue / 큐) độ sâu (depth / 깊이);
 - inode count;
 - durability;
 - burst credits ở cloud disks.
 
-Một 1 TB disk có thể không đủ performance nếu workload cần nhiều random IOPS.
+Một 1 TB disk có thể không đủ hiệu năng (performance / 성능) nếu tải công việc (workload / 워크로드) cần nhiều random IOPS.
 
 ## IOPS sizing
 
-Nếu một request gây trung bình 5 random storage operations và service cần 1000 requests/s:
+Nếu một yêu cầu (request / 요청) gây trung bình 5 random lưu trữ (storage / 저장소) operations và dịch vụ (service / 서비스) cần 1000 requests/s:
 
 ```text
 ~5000 IOPS
@@ -281,58 +284,58 @@ Nếu một request gây trung bình 5 random storage operations và service c�
 
 chưa tính background writes, logs, compaction, backups.
 
-Nếu provisioned disk chỉ 3000 IOPS, storage có thể thành bottleneck dù còn rất nhiều free space.
+Nếu provisioned disk chỉ 3000 IOPS, lưu trữ (storage / 저장소) có thể thành bottleneck dù còn rất nhiều free không gian (space / 공간).
 
 ## Sequential và random I/O
 
-Sequential workload thường tối ưu throughput MB/s.
+Sequential tải công việc (workload / 워크로드) thường tối ưu thông lượng (throughput / 처리량) MB/s.
 
-Random small-block workload thường bị giới hạn IOPS/latency.
+Random small-block tải công việc (workload / 워크로드) thường bị giới hạn IOPS/độ trễ (latency / 지연 시간).
 
-Capacity test phải giống workload pattern thật.
+Sức chứa (capacity / 용량) kiểm thử (test / 테스트) phải giống tải công việc (workload / 워크로드) mẫu (pattern / 패턴) thật.
 
-`dd` sequential benchmark không đại diện database random I/O đầy đủ.
+`dd` sequential benchmark không đại diện cơ sở dữ liệu (database / 데이터베이스) random I/O đầy đủ.
 
-## Network sizing
+## Mạng (network / 네트워크) sizing
 
-Network capacity cần xem:
+Mạng (network / 네트워크) sức chứa (capacity / 용량) cần xem:
 
 - requests/s;
-- request bytes;
-- response bytes;
-- protocol overhead;
+- yêu cầu (request / 요청) bytes;
+- phản hồi (response / 응답) bytes;
+- giao thức (protocol / 프로토콜) overhead;
 - replication traffic;
 - backup traffic;
 - TLS overhead;
 - peak burst.
 
-Ví dụ response trung bình 100 KB với 1000 requests/s:
+Ví dụ phản hồi (response / 응답) trung bình 100 KB với 1000 requests/s:
 
 ```text
 100 MB/s application payload
 ≈ 800 Mbps trước overhead
 ```
 
-Một interface 1 Gbps có thể đã gần saturation sau overhead và traffic khác.
+Một giao diện (interface / 인터페이스) 1 Gbps có thể đã gần saturation sau overhead và traffic khác.
 
-## Packet rate cũng quan trọng
+## Packet tỷ lệ (rate / 비율) cũng quan trọng
 
-Network không chỉ giới hạn bandwidth Mbps/Gbps.
+Mạng (network / 네트워크) không chỉ giới hạn bandwidth Mbps/Gbps.
 
 Rất nhiều small packets có thể giới hạn packets per second, interrupt/softirq CPU hoặc conntrack.
 
-Một API trả 1 KB ở 100k req/s có bandwidth không quá lớn nhưng packet rate và connection handling rất cao.
+Một API trả 1 KB ở 100k req/s có bandwidth không quá lớn nhưng packet tỷ lệ (rate / 비율) và liên kết (connection / 연결) handling rất cao.
 
-## Connection capacity
+## Liên kết (connection / 연결) sức chứa (capacity / 용량)
 
-Mỗi TCP connection dùng:
+Mỗi TCP liên kết (connection / 연결) dùng:
 
 - kernel socket structures;
 - send/receive buffers;
-- file descriptors;
-- application state.
+- tệp (file / 파일) descriptors;
+- ứng dụng (application / 애플리케이션) trạng thái (state / 상태).
 
-Một server có 100k idle connections có resource profile khác 100 active requests.
+Một máy chủ (server / 서버) có 100k idle connections có tài nguyên (resource / 자원) profile khác 100 active requests.
 
 Cần xem:
 
@@ -341,48 +344,48 @@ ss -s
 cat /proc/sys/fs/file-nr
 ```
 
-và process limits.
+và tiến trình (process / 프로세스) limits.
 
-## File descriptor capacity
+## Tệp (file / 파일) descriptor sức chứa (capacity / 용량)
 
-Nếu service cần nhiều sockets/files đồng thời, `nofile` limit phải đủ.
+Nếu dịch vụ (service / 서비스) cần nhiều sockets/files đồng thời, `nofile` limit phải đủ.
 
 ```bash
 cat /proc/<PID>/limits
 ```
 
-Nhưng tăng FD limit không giải quyết leak. Nếu descriptors tăng vô hạn, root cause là lifecycle bug.
+Nhưng tăng FD limit không giải quyết leak. Nếu descriptors tăng vô hạn, nguyên nhân gốc (root cause / 근본 원인) là vòng đời (lifecycle / 생명주기) bug.
 
-## Thread capacity
+## Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)
 
-Thread count ảnh hưởng:
+Luồng thực thi (thread / 스레드) count ảnh hưởng:
 
-- memory stack;
+- bộ nhớ (memory / 메모리) ngăn xếp (stack / 스택);
 - scheduling;
-- context switches;
-- lock contention.
+- ngữ cảnh (context / 맥락) switches;
+- tranh chấp khóa (lock contention / 잠금 경합).
 
-Một server “còn RAM” không nghĩa có thể tăng thread pool vô hạn.
+Một máy chủ (server / 서버) “còn RAM” không nghĩa có thể tăng luồng thực thi (thread / 스레드) pool vô hạn.
 
-Thread pool sizing phải dựa CPU/wait ratio và downstream capacity.
+Luồng thực thi (thread / 스레드) pool sizing phải dựa CPU/wait ratio và downstream sức chứa (capacity / 용량).
 
-## Database connection pool
+## Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool
 
-Backend capacity thường bị giới hạn bởi DB connections trước CPU.
+Backend sức chứa (capacity / 용량) thường bị giới hạn bởi DB connections trước CPU.
 
-Giả sử 10 application instances, mỗi instance pool 100:
+Giả sử 10 ứng dụng (application / 애플리케이션) instances, mỗi instance pool 100:
 
 ```text
 10 × 100 = 1000 DB connections
 ```
 
-Nếu database chỉ chịu tốt 300 active connections, scale app horizontal có thể làm DB tệ hơn.
+Nếu cơ sở dữ liệu (database / 데이터베이스) chỉ chịu tốt 300 active connections, quy mô (scale / 규모) app horizontal có thể làm DB tệ hơn.
 
-Capacity planning phải end-to-end.
+Sức chứa (capacity / 용량) planning phải end-to-end.
 
-## Dependency budget
+## Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)
 
-Mỗi dependency có capacity riêng:
+Mỗi phụ thuộc (dependency / 의존성) có sức chứa (capacity / 용량) riêng:
 
 ```text
 API instance
@@ -392,13 +395,13 @@ API instance
  → message broker
 ```
 
-Scale layer A không tự scale B.
+Quy mô (scale / 규모) tầng (layer / 계층) A không tự quy mô (scale / 규모) B.
 
-Đây là lý do load test phải quan sát toàn graph chứ không chỉ service đang test.
+Đây là lý do kiểm thử tải (load test / 부하 테스트) phải quan sát toàn đồ thị (graph / 그래프) chứ không chỉ dịch vụ (service / 서비스) đang kiểm thử (test / 테스트).
 
 ## Horizontal scaling
 
-Thêm instances tăng tổng capacity khi workload có thể phân phối.
+Thêm instances tăng tổng sức chứa (capacity / 용량) khi tải công việc (workload / 워크로드) có thể phân phối.
 
 Ví dụ:
 
@@ -410,24 +413,24 @@ Ví dụ:
 Có thể bị giới hạn bởi:
 
 - DB;
-- shared cache;
-- network;
-- load balancer;
-- lock/global state.
+- dùng chung (shared / 공유) bộ nhớ đệm (cache / 캐시);
+- mạng (network / 네트워크);
+- bộ cân bằng tải (load balancer / 로드 밸런서);
+- khóa (lock / 잠금)/toàn cục (global / 전역) trạng thái (state / 상태).
 
 Scale-out efficiency cần đo.
 
 ## Vertical scaling
 
-Thêm CPU/RAM cho một server đơn giản hơn về architecture, nhưng có giới hạn hardware và tăng blast radius khi node fail.
+Thêm CPU/RAM cho một máy chủ (server / 서버) đơn giản hơn về kiến trúc (architecture / 아키텍처), nhưng có giới hạn hardware và tăng blast radius khi nút (node / 노드) thất bại (fail / 실패).
 
-Một JVM heap quá lớn cũng làm GC behavior khác.
+Một JVM vùng nhớ động (heap / 힙) quá lớn cũng làm GC hành vi (behavior / 동작) khác.
 
-Vertical và horizontal scaling là trade-off, không phải “cloud luôn scale horizontal”.
+Vertical và horizontal scaling là sự đánh đổi (trade-off / 트레이드오프), không phải “cloud luôn quy mô (scale / 규모) horizontal”.
 
-## N+1 capacity
+## N+1 sức chứa (capacity / 용량)
 
-Nếu cluster có 4 nodes và cần chịu mất 1 node mà không vi phạm SLO, normal traffic không nên cần 100% tổng capacity 4 nodes.
+Nếu cluster có 4 nodes và cần chịu mất 1 nút (node / 노드) mà không vi phạm SLO, normal traffic không nên cần 100% tổng sức chứa (capacity / 용량) 4 nodes.
 
 N+1 planning:
 
@@ -437,15 +440,15 @@ capacity của 3 nodes >= peak required capacity
 
 Điều này tạo redundancy headroom.
 
-Nếu normal load mỗi node đã 90%, mất một node sẽ làm ba node còn lại quá tải.
+Nếu normal tải (load / 로드) mỗi nút (node / 노드) đã 90%, mất một nút (node / 노드) sẽ làm ba nút (node / 노드) còn lại quá tải.
 
-## Availability Zone failure
+## Availability Zone thất bại (failure / 실패)
 
-Multi-AZ architecture cần cân capacity theo failure domain.
+Multi-AZ kiến trúc (architecture / 아키텍처) cần cân sức chứa (capacity / 용량) theo miền lỗi (failure domain / 장애 도메인).
 
-Nếu có 3 AZ và requirement chịu mất 1 AZ, hai AZ còn lại phải đủ capacity.
+Nếu có 3 AZ và yêu cầu (requirement / 요구사항) chịu mất 1 AZ, hai AZ còn lại phải đủ sức chứa (capacity / 용량).
 
-Không chỉ có instance count; database/network dependency cũng cần redundancy tương ứng.
+Không chỉ có instance count; cơ sở dữ liệu (database / 데이터베이스)/mạng (network / 네트워크) phụ thuộc (dependency / 의존성) cũng cần redundancy tương ứng.
 
 ## Autoscaling
 
@@ -462,62 +465,62 @@ metric detects load
  → receives traffic
 ```
 
-Nếu traffic spike nhanh hơn startup time, autoscaling phản ứng quá chậm.
+Nếu traffic spike nhanh hơn startup thời gian (time / 시간), autoscaling phản ứng quá chậm.
 
-Cần baseline capacity/headroom trước khi autoscaling cứu được hệ thống.
+Cần baseline sức chứa (capacity / 용량)/headroom trước khi autoscaling cứu được hệ thống.
 
-## Scale metric
+## Quy mô (scale / 규모) chỉ số (metric / 지표)
 
-CPU là metric phổ biến nhưng không luôn đúng.
+CPU là chỉ số (metric / 지표) phổ biến nhưng không luôn đúng.
 
-Một service I/O-bound có CPU 20% nhưng thread pool/DB connections exhausted.
+Một dịch vụ (service / 서비스) I/O-bound có CPU 20% nhưng luồng thực thi (thread / 스레드) pool/DB connections exhausted.
 
 Alternative metrics:
 
-- request queue length;
-- concurrency;
-- latency;
-- custom work backlog;
-- messages in queue.
+- yêu cầu (request / 요청) hàng đợi (queue / 큐) length;
+- tính đồng thời (concurrency / 동시성);
+- độ trễ (latency / 지연 시간);
+- custom công việc (work / 작업) backlog;
+- messages in hàng đợi (queue / 큐).
 
-Scaling metric nên phản ánh bottleneck/resource demand thật.
+Scaling chỉ số (metric / 지표) nên phản ánh bottleneck/tài nguyên (resource / 자원) demand thật.
 
-## Load testing
+## Tải (load / 로드) testing
 
-Capacity plan chỉ là hypothesis cho tới khi được test.
+Sức chứa (capacity / 용량) plan chỉ là hypothesis cho tới khi được kiểm thử (test / 테스트).
 
-Load test nên mô phỏng:
+Kiểm thử tải (load test / 부하 테스트) nên mô phỏng:
 
-- realistic request mix;
-- realistic data sizes;
+- realistic yêu cầu (request / 요청) mix;
+- realistic dữ liệu (data / 데이터) sizes;
 - authentication;
-- think time nếu có;
-- dependency behavior;
+- think thời gian (time / 시간) nếu có;
+- phụ thuộc (dependency / 의존성) hành vi (behavior / 동작);
 - warm-up;
-- cache state;
+- bộ nhớ đệm (cache / 캐시) trạng thái (state / 상태);
 - ramp-up và burst.
 
-Một benchmark endpoint `/health` không đại diện business API.
+Một benchmark endpoint `/health` không đại diện nghiệp vụ (business / 비즈니스) API.
 
 ## Warm-up
 
-JVM cần thời gian JIT compile, cache warm-up, connection pools và filesystem cache.
+JVM cần thời gian JIT compile, bộ nhớ đệm (cache / 캐시) warm-up, liên kết (connection / 연결) pools và filesystem bộ nhớ đệm (cache / 캐시).
 
-Load test ngay từ cold start có thể đo startup behavior thay vì steady-state capacity.
+Kiểm thử tải (load test / 부하 테스트) ngay từ cold start có thể đo startup hành vi (behavior / 동작) thay vì steady-state sức chứa (capacity / 용량).
 
-Nhưng production có rolling deploy/cold start, nên cả hai scenarios đều cần test tùy requirement.
+Nhưng môi trường vận hành (production / 운영 환경) có rolling deploy/cold start, nên cả hai scenarios đều cần kiểm thử (test / 테스트) tùy yêu cầu (requirement / 요구사항).
 
 ## Coordinated omission
 
-Load-testing tools có thể báo latency quá đẹp nếu khi server chậm, tool cũng giảm request generation và bỏ qua requests lẽ ra đã đến.
+Load-testing tools có thể báo độ trễ (latency / 지연 시간) quá đẹp nếu khi máy chủ (server / 서버) chậm, công cụ (tool / 도구) cũng giảm yêu cầu (request / 요청) generation và bỏ qua requests lẽ ra đã đến.
 
 Hiện tượng này gọi là **coordinated omission**.
 
-Một test tốt phải hiểu traffic model và measurement semantics.
+Một kiểm thử (test / 테스트) tốt phải hiểu traffic mô hình (model / 모델) và đo lường (measurement / 측정) ngữ nghĩa (semantics / 의미론).
 
 ## Percentile thay vì average
 
-Average latency che tail.
+Average độ trễ (latency / 지연 시간) che tail.
 
 Ví dụ:
 
@@ -526,13 +529,13 @@ Ví dụ:
 1 request   = 5 s
 ```
 
-Average vẫn có thể trông không quá lớn, nhưng user bị request 5 giây rất rõ.
+Average vẫn có thể trông không quá lớn, nhưng người dùng (user / 사용자) bị yêu cầu (request / 요청) 5 giây rất rõ.
 
 Theo dõi p95/p99/p99.9 khi SLO cần.
 
-## SLO và error budget
+## SLO và lỗi (error / 오류) ngân sách (budget / 예산)
 
-Capacity không chỉ để “không crash”, mà để đạt Service Level Objective.
+Sức chứa (capacity / 용량) không chỉ để “không crash”, mà để đạt dịch vụ (service / 서비스) mức (level / 수준) mục tiêu (objective / 목표).
 
 Ví dụ:
 
@@ -541,11 +544,11 @@ Ví dụ:
 availability 99.95%
 ```
 
-Server có thể vẫn trả response nhưng p99 3s — theo SLO vẫn là capacity problem.
+Máy chủ (server / 서버) có thể vẫn trả phản hồi (response / 응답) nhưng p99 3s — theo SLO vẫn là sức chứa (capacity / 용량) bài toán (problem / 문제).
 
 ## Growth planning
 
-Nếu traffic tăng 10% mỗi tháng, server đủ hôm nay có thể thiếu sau vài tháng.
+Nếu traffic tăng 10% mỗi tháng, máy chủ (server / 서버) đủ hôm nay có thể thiếu sau vài tháng.
 
 Projection đơn giản:
 
@@ -553,11 +556,11 @@ Projection đơn giản:
 C_{future} = C_{now}(1+g)^n
 \]
 
-với `g` là growth rate theo kỳ.
+với `g` là growth tỷ lệ (rate / 비율) theo kỳ.
 
-Đây chỉ là model nếu growth tương đối ổn định. Product launch/event có thể tạo step change.
+Đây chỉ là mô hình (model / 모델) nếu growth tương đối ổn định. sản phẩm (product / 제품) launch/sự kiện (event / 이벤트) có thể tạo step thay đổi (change / 변경).
 
-## Capacity trend
+## Sức chứa (capacity / 용량) trend
 
 Theo dõi:
 
@@ -572,11 +575,11 @@ network bandwidth
 error rate
 ```
 
-theo tuần/tháng giúp phát hiện approaching limit trước incident.
+theo tuần/tháng giúp phát hiện approaching limit trước sự cố (incident / 인시던트).
 
-## Saturation metric
+## Saturation chỉ số (metric / 지표)
 
-USE method thường gợi ý xem mỗi resource theo:
+USE phương thức (method / 메서드) thường gợi ý xem mỗi tài nguyên (resource / 자원) theo:
 
 - Utilization;
 - Saturation;
@@ -598,19 +601,19 @@ saturation  → queue/await
 errors      → I/O errors
 ```
 
-Mental model này tốt hơn chỉ một metric utilization.
+Mô hình tư duy (mental model / 사고 모델) này tốt hơn chỉ một chỉ số (metric / 지표) utilization.
 
-## RED method ở service layer
+## RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)
 
-Với request-driven service, RED thường nhìn:
+Với request-driven dịch vụ (service / 서비스), RED thường nhìn:
 
-- Rate;
+- tỷ lệ (rate / 비율);
 - Errors;
 - Duration.
 
-Kết hợp RED ở service layer với USE ở resource layer giúp nối symptom business với bottleneck Linux.
+Kết hợp RED ở dịch vụ (service / 서비스) tầng (layer / 계층) với USE ở tài nguyên (resource / 자원) tầng (layer / 계층) giúp nối symptom nghiệp vụ (business / 비즈니스) với bottleneck Linux.
 
-## Capacity worksheet thực tế
+## Sức chứa (capacity / 용량) worksheet thực tế
 
 Một worksheet có thể gồm:
 
@@ -630,9 +633,9 @@ Growth 6 months:
 Target headroom:
 ```
 
-Sau đó kiểm chứng bằng load test và production metrics.
+Sau đó kiểm chứng bằng kiểm thử tải (load test / 부하 테스트) và môi trường vận hành (production / 운영 환경) metrics.
 
-## Case: Java API CPU 70%, p99 tăng
+## Trường hợp (case / 사례): Java API CPU 70%, p99 tăng
 
 Không nên kết luận ngay cần thêm CPU.
 
@@ -644,36 +647,36 @@ mpstat -P ALL 1
 pidstat -t -p <PID> 1
 ```
 
-Nếu runnable queue cao và CPUs đều busy, CPU contention mạnh.
+Nếu runnable hàng đợi (queue / 큐) cao và CPUs đều busy, CPU contention mạnh.
 
-Nếu CPU 70% nhưng thread dump cho thấy nhiều threads chờ DB, bottleneck có thể là connection pool/database.
+Nếu CPU 70% nhưng luồng thực thi (thread / 스레드) dump cho thấy nhiều threads chờ DB, bottleneck có thể là liên kết (connection / 연결) pool/cơ sở dữ liệu (database / 데이터베이스).
 
-Capacity planning cần đúng resource.
+Sức chứa (capacity / 용량) planning cần đúng tài nguyên (resource / 자원).
 
-## Case: RAM luôn 90%
+## Trường hợp (case / 사례): RAM luôn 90%
 
-Nếu 90% bao gồm page cache và `MemAvailable` còn tốt, chưa chắc memory pressure.
+Nếu 90% bao gồm page bộ nhớ đệm (cache / 캐시) và `MemAvailable` còn tốt, chưa chắc bộ nhớ (memory / 메모리) pressure.
 
-Nếu cgroup memory gần limit, swap/reclaim mạnh hoặc OOM events xuất hiện, capacity mới thực sự nguy hiểm.
+Nếu cgroup bộ nhớ (memory / 메모리) gần limit, swap/reclaim mạnh hoặc OOM events xuất hiện, sức chứa (capacity / 용량) mới thực sự nguy hiểm.
 
 Không dùng “RAM used %” đơn lẻ.
 
-## Case: Scale từ 2 lên 8 app instances nhưng throughput không tăng
+## Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng
 
-Potential shared bottleneck:
+Potential dùng chung (shared / 공유) bottleneck:
 
-- database CPU/locks;
+- cơ sở dữ liệu (database / 데이터베이스) CPU/locks;
 - DB max connections;
 - Redis single-thread hotspot;
-- downstream API rate limit;
-- load balancer limit;
-- storage IOPS.
+- downstream API tỷ lệ (rate / 비율) limit;
+- bộ cân bằng tải (load balancer / 로드 밸런서) limit;
+- lưu trữ (storage / 저장소) IOPS.
 
-Scale application chỉ tăng load xuống bottleneck chung.
+Quy mô (scale / 규모) ứng dụng (application / 애플리케이션) chỉ tăng tải (load / 로드) xuống bottleneck chung.
 
 ## Cost-performance
 
-Capacity tốt không đồng nghĩa resource tối đa.
+Sức chứa (capacity / 용량) tốt không đồng nghĩa tài nguyên (resource / 자원) tối đa.
 
 Mục tiêu có thể là:
 
@@ -687,13 +690,13 @@ hoặc:
 throughput per vCPU
 ```
 
-Profiling/tuning application có thể rẻ hơn tăng instance count.
+Profiling/tuning ứng dụng (application / 애플리케이션) có thể rẻ hơn tăng instance count.
 
-Nhưng optimization engineering cũng có cost. Cần balance.
+Nhưng tối ưu hóa (optimization / 최적화) kỹ thuật (engineering / 엔지니어링) cũng có chi phí (cost / 비용). Cần balance.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Capacity planning là bài toán dòng chảy:
+Sức chứa (capacity / 용량) planning là bài toán dòng chảy:
 
 ```text
 workload arrival
@@ -707,25 +710,25 @@ dependencies
 completed work
 ```
 
-Mỗi resource có capacity và saturation point.
+Mỗi tài nguyên (resource / 자원) có sức chứa (capacity / 용량) và saturation điểm (point / 지점).
 
-Khi một resource đạt giới hạn, queue/latency/error thường tăng trước khi toàn hệ thống “down”.
+Khi một tài nguyên (resource / 자원) đạt giới hạn, hàng đợi (queue / 큐)/độ trễ (latency / 지연 시간)/lỗi (error / 오류) thường tăng trước khi toàn hệ thống “down”.
 
 ## Những hiểu lầm phổ biến
 
-**“CPU trung bình 50% nghĩa server dư một nửa.”** Peak, tail latency và single-core bottleneck có thể khác.
+**“CPU trung bình 50% nghĩa máy chủ (server / 서버) dư một nửa.”** Peak, tail độ trễ (latency / 지연 시간) và single-core bottleneck có thể khác.
 
-**“RAM dùng cao là thiếu RAM.”** Page cache và reclaimable memory phải được tính.
+**“RAM dùng cao là thiếu RAM.”** Page bộ nhớ đệm (cache / 캐시) và reclaimable bộ nhớ (memory / 메모리) phải được tính.
 
-**“Scale app instances luôn tăng throughput tuyến tính.”** Shared dependencies có thể trở thành bottleneck.
+**“quy mô (scale / 규모) app instances luôn tăng thông lượng (throughput / 처리량) tuyến tính.”** dùng chung (shared / 공유) dependencies có thể trở thành bottleneck.
 
-**“Autoscaling loại bỏ nhu cầu capacity planning.”** Scaling có delay và vẫn phụ thuộc upstream limits.
+**“Autoscaling loại bỏ nhu cầu sức chứa (capacity / 용량) planning.”** Scaling có delay và vẫn phụ thuộc upstream limits.
 
-**“Disk đủ GB nghĩa storage đủ capacity.”** IOPS, throughput và latency cũng là capacity dimensions.
+**“Disk đủ GB nghĩa lưu trữ (storage / 저장소) đủ sức chứa (capacity / 용량).”** IOPS, thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간) cũng là sức chứa (capacity / 용량) dimensions.
 
-**“Load test một endpoint là đủ.”** Request mix và dependency behavior phải đại diện production.
+**“kiểm thử tải (load test / 부하 테스트) một endpoint là đủ.”** yêu cầu (request / 요청) mix và phụ thuộc (dependency / 의존성) hành vi (behavior / 동작) phải đại diện môi trường vận hành (production / 운영 환경).
 
-**“Server không crash nghĩa sizing đúng.”** SLO về latency/error có thể đã bị vi phạm từ lâu.
+**“máy chủ (server / 서버) không crash nghĩa sizing đúng.”** SLO về độ trễ (latency / 지연 시간)/lỗi (error / 오류) có thể đã bị vi phạm từ lâu.
 
 ## Xem thêm
 
@@ -735,3 +738,5 @@ Khi một resource đạt giới hạn, queue/latency/error thường tăng trư
 - [Reverse proxy và load balancing](../07_networking/reverse_proxy_load_balancing.md)
 - [Java backend incident playbook](./java_backend_incident_playbook.md)
 - [Production troubleshooting](./production_troubleshooting.md)
+
+> **Bàn giao:** Sau **Xem thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [java backend incident playbook](./java_backend_incident_playbook.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

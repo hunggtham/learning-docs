@@ -1,5 +1,8 @@
 # Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng
 
+> **Mạch đọc:** Đọc **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ thế năng đến lực hồi phục** sang **Dao động điều hòa đơn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Dao động xuất hiện trong cơ học, điện từ, quang học, vật liệu, sinh học và kỹ thuật vì rất nhiều hệ có một trạng thái cân bằng ổn định. Khi hệ bị lệch khỏi cân bằng, một cơ chế hồi phục kéo nó trở lại; quán tính khiến hệ vượt qua vị trí cân bằng, và quá trình lặp lại tạo dao động.
 
 Điểm sâu hơn là dao động điều hòa không chỉ là mô hình của lò xo. Nó là **xấp xỉ phổ quát gần một cân bằng ổn định**.
@@ -42,7 +45,7 @@ ta được
 F\approx-kx.
 ```
 
-Vì vậy định luật Hooke xuất hiện tự nhiên như gần đúng bậc thấp nhất của rất nhiều thế năng trơn quanh cực tiểu. Đây là lý do cùng phương trình dao động điều hòa xuất hiện ở lò xo, con lắc góc nhỏ, dao động phân tử, mạch LC và mode của trường.
+Vì vậy định luật Hooke xuất hiện tự nhiên như gần đúng bậc thấp nhất của rất nhiều thế năng trơn quanh cực tiểu. Đây là lý do cùng phương trình dao động điều hòa xuất hiện ở lò xo, con lắc góc nhỏ, dao động phân tử, mạch LC và chế độ (mode / 모드) của trường.
 
 ## Dao động điều hòa đơn
 
@@ -296,15 +299,15 @@ Pha là thông tin quan trọng trong mạch điện, hệ điều khiển, cơ 
 
 Cộng hưởng được khai thác trong nhạc cụ, bộ lọc điện, đồng hồ quartz, MRI, anten, khoang laser và nhiều cảm biến. Ngược lại, cộng hưởng không mong muốn có thể làm tăng rung trong cầu, tòa nhà, máy quay hoặc rotor.
 
-Bài toán kỹ thuật không phải “loại bỏ mọi cộng hưởng” mà là xác định mode nào tồn tại, chúng được kích thích bởi phổ lực nào, độ tắt dần bao nhiêu và biên độ có vượt giới hạn an toàn hay không.
+Bài toán kỹ thuật không phải “loại bỏ mọi cộng hưởng” mà là xác định chế độ (mode / 모드) nào tồn tại, chúng được kích thích bởi phổ lực nào, độ tắt dần bao nhiêu và biên độ có vượt giới hạn an toàn hay không.
 
-## Từ một dao động tử đến nhiều mode
+## Từ một dao động tử đến nhiều chế độ (mode / 모드)
 
-Một hệ nhiều bậc tự do không có chỉ một tần số riêng. Nó có nhiều mode chuẩn, mỗi mode có tần số riêng. Lực ngoài kích thích mạnh mode nào phụ thuộc không chỉ tần số mà còn **hình dạng lực có ghép với hình dạng mode hay không**.
+Một hệ nhiều bậc tự do không có chỉ một tần số riêng. Nó có nhiều chế độ (mode / 모드) chuẩn, mỗi chế độ (mode / 모드) có tần số riêng. Lực ngoài kích thích mạnh chế độ (mode / 모드) nào phụ thuộc không chỉ tần số mà còn **hình dạng lực có ghép với hình dạng chế độ (mode / 모드) hay không**.
 
 Đây là cầu nối từ dao động đơn tới rung động kết cấu, âm học, phonon và lý thuyết trường.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Một dao động cần ba thành phần: **xu hướng hồi phục, quán tính và điều kiện ban đầu**. Tắt dần thêm cơ chế mất năng lượng. Kích thích ngoài thêm nguồn năng lượng. Cộng hưởng xuất hiện khi nhịp cấp năng lượng phù hợp với nhịp tự nhiên của hệ và cơ chế ghép đủ mạnh.
 
@@ -322,10 +325,12 @@ Sai khi đi quá chế độ tới hạn. Hệ tắt dần mạnh có thể tr�
 
 ### “Cộng hưởng tạo năng lượng”
 
-Không. Năng lượng đến từ nguồn kích thích ngoài. Cộng hưởng chỉ làm truyền năng lượng hiệu quả hơn vào một mode của hệ.
+Không. Năng lượng đến từ nguồn kích thích ngoài. Cộng hưởng chỉ làm truyền năng lượng hiệu quả hơn vào một chế độ (mode / 모드) của hệ.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Công, năng lượng và thế năng](../01_mechanics/03_work_energy_power.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Dao động ghép và mode chuẩn](02_coupled_oscillators_normal_modes.md), [Sóng và Fourier](01_waves_fourier_sound.md), [Mạch RLC và cộng hưởng](../05_electromagnetism/02_ac_rlc_circuits.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 waves fourier sound](./01_waves_fourier_sound.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

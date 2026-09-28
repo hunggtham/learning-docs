@@ -1,34 +1,58 @@
 # Tái thiết hậu chiến và First Republic
 
+> **Mạch đọc:** Đặt **Tái thiết hậu chiến và First Republic** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một economy bị phá huỷ không reset về zero** sang **Land reform và rural cấu trúc (structure / 구조)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Một economy bị phá huỷ không reset về zero
 
-Sau 1953, South Korea đối diện destroyed infrastructure, housing shortage, refugees và limited capital. US aid rất quan trọng đối với consumption, reconstruction và state finance. Nhưng aid cũng tạo dependency và policy constraint; outcome phụ thuộc cách domestic institutions phân bổ resource.
+Sau 1953, South Korea đối diện destroyed hạ tầng (infrastructure / 인프라), housing shortage, refugees và limited capital. US aid rất quan trọng đối với consumption, reconstruction và trạng thái (state / 상태) finance. Nhưng aid cũng tạo phụ thuộc (dependency / 의존성) và chính sách (policy / 정책) ràng buộc (constraint / 제약조건); kết quả (outcome / 결과) phụ thuộc cách domestic institutions phân bổ tài nguyên (resource / 자원).
 
-## Land reform và rural structure
 
-Land reform cuối 1940s–đầu 1950s làm giảm landlordism lớn và mở rộng smallholder farming. Điều này thay đổi social structure trước industrialization. Khi later factories cần labor, rural households có asset base khác so với societies nơi landed elite giữ phần lớn đất.
+> **Chuyển mạch:** Từ **Một economy bị phá huỷ không reset về zero**, ta sang **Land reform và rural cấu trúc (structure / 구조)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## First Republic và political conflict
+## Land reform và rural cấu trúc (structure / 구조)
 
-Syngman Rhee (이승만 / Syngman Rhee) government xây anti-communist state trong Cold War và duy trì strong presidency. Electoral/political conflict tăng, culminating in protests after disputed March 1960 election. **April Revolution (4·19 혁명)** buộc Rhee từ chức.
+Land reform cuối 1940s–đầu 1950s làm giảm landlordism lớn và mở rộng smallholder farming. Điều này thay đổi xã hội (social / 사회적) cấu trúc (structure / 구조) trước industrialization. Khi later factories cần labor, rural households có asset cơ sở (base / 기반) khác so với societies nơi landed elite giữ phần lớn đất.
+
+
+> **Chuyển mạch:** Từ **Land reform và rural cấu trúc (structure / 구조)**, ta sang **First Republic và political xung đột (conflict / 충돌)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## First Republic và political xung đột (conflict / 충돌)
+
+Syngman Rhee (이승만 / Syngman Rhee) government xây anti-communist trạng thái (state / 상태) trong Cold War và duy trì strong presidency. Electoral/political xung đột (conflict / 충돌) tăng, culminating in protests after disputed March 1960 election. **April Revolution (4·19 혁명)** buộc Rhee từ chức.
+
+
+> **Chuyển mạch:** Từ **First Republic và political xung đột (conflict / 충돌)**, ta sang **Second Republic và 1961 coup** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Second Republic và 1961 coup
 
-Second Republic chuyển sang parliamentary system nhưng tồn tại ngắn. May 16, 1961 military coup do Park Chung-hee (박정희 / Park Chung-hee) và associates lãnh đạo kết thúc giai đoạn này. Đây là transition từ postwar political instability sang developmental authoritarianism.
+Second Republic chuyển sang parliamentary hệ thống (system / 시스템) nhưng tồn tại ngắn. May 16, 1961 military coup do Park Chung-hee (박정희 / Park Chung-hee) và associates lãnh đạo kết thúc giai đoạn này. Đây là chuyển tiếp (transition / 전이) từ postwar political instability sang developmental authoritarianism.
 
-## Mental Model
 
-> Reconstruction là allocation problem: vốn ít, nhu cầu rất lớn, institution quyết định thứ tự ưu tiên. Những lựa chọn ban đầu về land, education, aid và state bureaucracy tạo base cho growth model sau 1961.
+> **Chuyển mạch:** Từ **Second Republic và 1961 coup**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> Reconstruction là allocation bài toán (problem / 문제): vốn ít, nhu cầu rất lớn, institution quyết định thứ tự ưu tiên. Những lựa chọn ban đầu về land, education, aid và trạng thái (state / 상태) bureaucracy tạo cơ sở (base / 기반) cho growth mô hình (model / 모델) sau 1961.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Aid economy và inflation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Aid economy và inflation
 
 Foreign aid imported food, fertilizer, fuel and equipment, but converting aid into stable development required monetary/fiscal management. Shortage plus money creation can cause inflation; controlled exchange rates can create arbitrage opportunity. Reconstruction therefore involves macroeconomic institution, not just rebuilding bridges.
 
+
+> **Chuyển mạch:** Từ **Aid economy và inflation**, ta sang **Education expansion** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Education expansion
 
-Even under poverty, schooling expanded rapidly. Household willingness to invest in education built human capital before high-income jobs existed at scale. Later industrialization could recruit literate workers/technicians partly because education transition began early.
+Even under poverty, schooling expanded rapidly. Household willingness to invest in education built human capital before high-income jobs existed at quy mô (scale / 규모). Later industrialization could recruit literate workers/technicians partly because education chuyển tiếp (transition / 전이) began early.
+
+
+> **Chuyển mạch:** Từ **Education expansion**, ta sang **Urban refugees and informal economy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Urban refugees and informal economy
 
-Seoul and other cities absorbed war-displaced populations. Housing shortage produced informal settlements, street commerce and precarious work. “Miracle on the Han River” imagery can obscure this low-income urban foundation.
+Seoul and other cities absorbed war-displaced populations. Housing shortage produced informal settlements, street commerce and precarious công việc (work / 작업). “Miracle on the Han River” imagery can obscure this low-income urban foundation.
 
+> **Bàn giao:** Sau **Urban refugees and informal economy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

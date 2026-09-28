@@ -1,77 +1,102 @@
-# 90 — Case studies: reasoning end-to-end
+# 90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end
 
-Case study là nơi kiểm tra mental model bằng failure thật, không phải nơi liệt kê sản phẩm.
+> **Mạch đọc:** Đọc **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)** sang **trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Case 1 — CDC duplicate sau retry
+Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (mental model / 사고 모델) bằng thất bại (failure / 실패) thật, không phải nơi liệt kê sản phẩm.
 
-**Tình huống:** connector đọc transaction log, sink đã ghi event nhưng acknowledgement bị mất; connector đọc lại cùng event.
+## Trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)
 
-**Invariant:** mỗi immutable `event_id` đóng góp đúng một lần vào fact doanh thu.
+**Tình huống:** connector đọc giao dịch (transaction / 트랜잭션) log, sink đã ghi sự kiện (event / 이벤트) nhưng acknowledgement bị mất; connector đọc lại cùng sự kiện (event / 이벤트).
 
-**Thiết kế:** landing append-only giữ raw event; modeled layer `MERGE` theo event identity và kiểm tra payload conflict; serving aggregate chạy từ modeled state. Offset chỉ là source position, không phải business correctness.
+**bất biến (invariant / 불변식):** mỗi immutable `event_id` đóng góp đúng một lần vào fact doanh thu.
 
-**Evidence:** duplicate count, conflict count, source-to-sink reconciliation và replay test trên một khoảng offset.
+**Thiết kế:** landing append-only giữ raw sự kiện (event / 이벤트); modeled tầng (layer / 계층) `MERGE` theo sự kiện (event / 이벤트) định danh (identity / 식별자) và kiểm tra payload xung đột (conflict / 충돌); serving aggregate chạy từ modeled trạng thái (state / 상태). Offset chỉ là nguồn (source / 소스) position, không phải nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성).
 
-## Case 2 — Late event làm thay đổi window
+**bằng chứng (evidence / 증거):** duplicate count, xung đột (conflict / 충돌) count, source-to-sink reconciliation và replay kiểm thử (test / 테스트) trên một khoảng offset.
 
-**Tình huống:** thiết bị offline gửi event 09:05 lúc 11:00; dashboard 09:00–10:00 đã finalize theo watermark.
 
-**Invariant:** metric provisional/final phải được phân biệt; correction không tạo duplicate.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)**, ta sang **trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**Thiết kế:** lưu event time và ingestion time; late event đi vào correction path hoặc tạo version mới của aggregate; downstream biết policy finalization. State retention đủ dài để replay trong late-arrival bound.
+## Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)
 
-**Evidence:** watermark lag distribution, late-event rate, correction reconciliation và số metric đã publish lại.
+**Tình huống:** thiết bị offline gửi sự kiện (event / 이벤트) 09:05 lúc 11:00; dashboard 09:00–10:00 đã finalize theo watermark.
 
-## Case 3 — Backfill logic mới không được ghi đè dữ liệu hiện tại
+**bất biến (invariant / 불변식):** chỉ số (metric / 지표) provisional/final phải được phân biệt; correction không tạo duplicate.
+
+**Thiết kế:** lưu sự kiện (event / 이벤트) thời gian (time / 시간) và ingestion thời gian (time / 시간); late sự kiện (event / 이벤트) đi vào correction đường dẫn (path / 경로) hoặc tạo phiên bản (version / 버전) mới của aggregate; downstream biết chính sách (policy / 정책) finalization. trạng thái (state / 상태) retention đủ dài để replay trong late-arrival bound.
+
+**bằng chứng (evidence / 증거):** watermark lag phân phối (distribution / 분포), late-event tỷ lệ (rate / 비율), correction reconciliation và số chỉ số (metric / 지표) đã publish lại.
+
+
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)**, ta sang **trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại
 
 **Tình huống:** sửa timezone bug cho 12 tháng lịch sử trong khi partition hôm nay vẫn được streaming job ghi.
 
-**Invariant:** writer lịch sử và writer hiện tại không làm mất update của nhau; output chỉ public khi reconciliation đạt.
+**bất biến (invariant / 불변식):** writer lịch sử và writer hiện tại không làm mất cập nhật (update / 업데이트) của nhau; đầu ra (output / 출력) chỉ công khai (public / 공개) khi reconciliation đạt.
 
-**Thiết kế:** chạy backfill theo snapshot/version namespace, ghi target partitions riêng, so sánh row count/metric, rồi publish atomic pointer hoặc partition commit. Side effect ngoài data layer bị tắt hoặc deduplicate.
+**Thiết kế:** chạy backfill theo snapshot/phiên bản (version / 버전) không gian tên (namespace / 네임스페이스), ghi mục tiêu (target / 대상) partitions riêng, so sánh row count/chỉ số (metric / 지표), rồi publish atomic pointer hoặc partition lần ghi nhận (commit / 커밋). Side tác động (effect / 효과) ngoài dữ liệu (data / 데이터) tầng (layer / 계층) bị tắt hoặc deduplicate.
 
-**Evidence:** input/code version, target range, diff metrics, rollback marker và consumer cutover time.
+**bằng chứng (evidence / 증거):** đầu vào (input / 입력)/mã (code / 코드) phiên bản (version / 버전), mục tiêu (target / 대상) phạm vi (range / 범위), diff metrics, quay lui (rollback / 롤백) marker và bên tiêu thụ (consumer / 소비자) cutover thời gian (time / 시간).
 
-## Case 4 — Small files và compaction race
 
-**Tình huống:** micro-batch tạo hàng triệu file nhỏ; compaction chạy đồng thời với reader và writer.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại**, ta sang **trường hợp (case / 사례) 4 — Small files và compaction race** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**Invariant:** reader thấy một snapshot hợp lệ; file chưa commit không được đọc; file cũ chỉ xóa sau retention.
+## Trường hợp (case / 사례) 4 — Small files và compaction race
 
-**Thiết kế:** metadata commit xác định snapshot, compaction tạo files mới trước, publish pointer sau validation, garbage collection tách khỏi commit. Query/compaction có capacity budget riêng.
+**Tình huống:** micro-batch tạo hàng triệu tệp (file / 파일) nhỏ; compaction chạy đồng thời với reader và writer.
 
-**Evidence:** snapshot lineage, file count/size distribution, reader error rate, compaction write amplification và restore test.
+**bất biến (invariant / 불변식):** reader thấy một snapshot hợp lệ; tệp (file / 파일) chưa lần ghi nhận (commit / 커밋) không được đọc; tệp (file / 파일) cũ chỉ xóa sau retention.
 
-## Case 5 — Semantic metric fan-out
+**Thiết kế:** siêu dữ liệu (metadata / 메타데이터) lần ghi nhận (commit / 커밋) xác định snapshot, compaction tạo files mới trước, publish pointer sau kiểm tra hợp lệ (validation / 검증), garbage collection tách khỏi lần ghi nhận (commit / 커밋). truy vấn (query / 쿼리)/compaction có sức chứa (capacity / 용량) ngân sách (budget / 예산) riêng.
 
-**Tình huống:** dashboard doanh thu join order, item và payment attempt ở grain khác nhau.
+**bằng chứng (evidence / 증거):** snapshot lineage, tệp (file / 파일) count/kích thước (size / 크기) phân phối (distribution / 분포), reader lỗi (error / 오류) tỷ lệ (rate / 비율), compaction ghi (write / 쓰기) amplification và restore kiểm thử (test / 테스트).
 
-**Invariant:** metric amount được tính đúng grain và có definition version.
 
-**Thiết kế:** aggregate mỗi fact về grain metric trước khi join; metric contract nêu refund, currency, event time và null policy; semantic layer không cho phép join path mơ hồ.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 4 — Small files và compaction race**, ta sang **trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**Evidence:** reconciliation với ledger, cardinality check, golden queries và metric version diff.
+## Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out
 
-## Cách viết case study mới
+**Tình huống:** dashboard doanh thu phép nối (join / 조인) thứ tự (order / 순서), item và payment attempt ở grain khác nhau.
 
-Mỗi case phải có `context → invariant → failure boundary → design → evidence → trade-off`. Không biến case study thành tutorial API; mục tiêu là chứng minh reasoning có thể chuyển giữa các tool và platform.
+**bất biến (invariant / 불변식):** chỉ số (metric / 지표) amount được tính đúng grain và có definition phiên bản (version / 버전).
 
-## Ma trận đối chiếu case
+**Thiết kế:** aggregate mỗi fact về grain chỉ số (metric / 지표) trước khi phép nối (join / 조인); chỉ số (metric / 지표) đặc tả hợp đồng (contract / 계약) nêu refund, currency, sự kiện (event / 이벤트) thời gian (time / 시간) và null chính sách (policy / 정책); ngữ nghĩa (semantic / 의미적) tầng (layer / 계층) không cho phép phép nối (join / 조인) đường dẫn (path / 경로) mơ hồ.
 
-| Case | Primary time | State | Recovery unit | Evidence |
+**bằng chứng (evidence / 증거):** reconciliation với ledger, cardinality check, golden queries và chỉ số (metric / 지표) phiên bản (version / 버전) diff.
+
+
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out**, ta sang **Cách viết trường hợp (case / 사례) study mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cách viết trường hợp (case / 사례) study mới
+
+Mỗi trường hợp (case / 사례) phải có `context → invariant → failure boundary → design → evidence → trade-off`. Không biến trường hợp (case / 사례) study thành tutorial API; mục tiêu là chứng minh lập luận (reasoning / 추론) có thể chuyển giữa các công cụ (tool / 도구) và nền tảng (platform / 플랫폼).
+
+
+> **Chuyển mạch:** Từ **Cách viết trường hợp (case / 사례) study mới**, ta sang **Ma trận đối chiếu trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Ma trận đối chiếu trường hợp (case / 사례)
+
+| trường hợp (case / 사례) | Primary thời gian (time / 시간) | trạng thái (state / 상태) | khôi phục (recovery / 복구) đơn vị (unit / 단위) | bằng chứng (evidence / 증거) |
 |---|---|---|---|---|
-| CDC duplicate | source transaction time | dedup projection | offset range / snapshot | source-to-sink reconciliation |
-| late event | event time | window state | watermark range | late-rate + correction diff |
-| backfill race | partition effective time | output version | manifest range | metric/golden diff |
-| compaction race | snapshot commit time | metadata snapshot | snapshot id | file/snapshot validation |
-| semantic fan-out | metric time | aggregate state | model version | grain/cardinality check |
+| CDC duplicate | nguồn (source / 소스) giao dịch (transaction / 트랜잭션) thời gian (time / 시간) | dedup projection | offset phạm vi (range / 범위) / snapshot | source-to-sink reconciliation |
+| late sự kiện (event / 이벤트) | sự kiện (event / 이벤트) thời gian (time / 시간) | cửa sổ (window / 윈도우) trạng thái (state / 상태) | watermark phạm vi (range / 범위) | late-rate + correction diff |
+| backfill race | partition effective thời gian (time / 시간) | đầu ra (output / 출력) phiên bản (version / 버전) | manifest phạm vi (range / 범위) | chỉ số (metric / 지표)/golden diff |
+| compaction race | snapshot lần ghi nhận (commit / 커밋) thời gian (time / 시간) | siêu dữ liệu (metadata / 메타데이터) snapshot | snapshot id | tệp (file / 파일)/snapshot kiểm tra hợp lệ (validation / 검증) |
+| ngữ nghĩa (semantic / 의미적) fan-out | chỉ số (metric / 지표) thời gian (time / 시간) | aggregate trạng thái (state / 상태) | mô hình (model / 모델) phiên bản (version / 버전) | grain/cardinality check |
 
-## Câu hỏi senior cho mọi case
 
-1. Điều gì xảy ra nếu process chết ngay sau external side effect?
-2. Có thể replay cùng input nhưng khác code/schema version không?
-3. Consumer nhìn thấy provisional, partial hay stale output thế nào?
-4. Invariant nào được kiểm tra online và invariant nào chỉ kiểm tra offline?
-5. Chi phí recovery tăng theo input volume, state size hay dependency count?
+> **Chuyển mạch:** Từ **Ma trận đối chiếu trường hợp (case / 사례)**, ta sang **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Case study chỉ hoàn thành khi trả lời được cả correctness và operability. Một sơ đồ đẹp nhưng không có failure timeline, rollback evidence và owner không phải production design.
+## Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)
+
+1. Điều gì xảy ra nếu tiến trình (process / 프로세스) chết ngay sau bên ngoài (external / 외부) side tác động (effect / 효과)?
+2. Có thể replay cùng đầu vào (input / 입력) nhưng khác mã (code / 코드)/lược đồ (schema / 스키마) phiên bản (version / 버전) không?
+3. bên tiêu thụ (consumer / 소비자) nhìn thấy provisional, partial hay stale đầu ra (output / 출력) thế nào?
+4. bất biến (invariant / 불변식) nào được kiểm tra online và bất biến (invariant / 불변식) nào chỉ kiểm tra offline?
+5. Chi phí khôi phục (recovery / 복구) tăng theo đầu vào (input / 입력) volume, trạng thái (state / 상태) kích thước (size / 크기) hay phụ thuộc (dependency / 의존성) count?
+
+Trường hợp (case / 사례) study chỉ hoàn thành khi trả lời được cả tính đúng đắn (correctness / 정확성) và operability. Một sơ đồ đẹp nhưng không có thất bại (failure / 실패) timeline, quay lui (rollback / 롤백) bằng chứng (evidence / 증거) và đơn vị sở hữu (owner / 오너) không phải môi trường vận hành (production / 운영 환경) thiết kế (design / 설계).
+
+> **Bàn giao:** Sau **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.

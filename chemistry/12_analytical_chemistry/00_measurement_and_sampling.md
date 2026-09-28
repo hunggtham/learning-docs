@@ -1,5 +1,7 @@
 # Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy
 
+> **Mạch đọc:** Đọc **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đại lượng cần đo** sang **Quần thể và mẫu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Hóa phân tích (analytical chemistry / 분석화학)** không chỉ trả lời “trong mẫu có gì?” và “có bao nhiêu?”. Nhiệm vụ sâu hơn là xây dựng một chuỗi suy luận có thể kiểm tra được từ vật thể thật ngoài thế giới → mẫu đại diện → mẫu phòng thí nghiệm → tín hiệu thiết bị → mô hình hiệu chuẩn → kết quả cùng độ không đảm bảo.
 
 Một thiết bị cực kỳ chính xác không thể cứu một mẫu lấy sai. Một đường hiệu chuẩn đẹp không thể sửa việc chất phân tích đã bị mất trong bước phá mẫu. Hóa phân tích vì thế là **khoa học về chất lượng của bằng chứng đo lường**.
@@ -59,11 +61,14 @@ Thiết bị có thể đo lặp với RSD 0,5%, nhưng nếu vật liệu khôn
 
 Đất, quặng, thực phẩm, bột dược phẩm, dòng nước thải và nguyên liệu công nghiệp đều có thể biến thiên mạnh theo không gian hoặc thời gian.
 
+
+> **Chuyển mạch:** Từ **Đại lượng cần đo**, ta sang **Quần thể và mẫu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Quần thể và mẫu
 
 **Quần thể (population)** là toàn bộ hệ mà ta muốn suy luận.
 
-**Mẫu (sample)** là phần vật chất hữu hạn được lấy ra để đại diện cho quần thể đó.
+**mẫu (sample / 표본)** là phần vật chất hữu hạn được lấy ra để đại diện cho quần thể đó.
 
 Kết quả phân tích đúng trên mẫu nhưng mẫu không đại diện vẫn không trả lời đúng câu hỏi ban đầu.
 
@@ -84,15 +89,24 @@ Không có “một mẫu đại diện” độc lập với câu hỏi và c�
 
 # Mẫu ngẫu nhiên, phân tầng và mẫu tổ hợp
 
+
+> **Chuyển mạch:** Từ **Quần thể và mẫu**, ta sang **Lấy mẫu ngẫu nhiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lấy mẫu ngẫu nhiên
 
 Chọn đơn vị sao cho mỗi phần của quần thể có cơ hội được lấy hợp lý. Cách này giảm thiên lệch do người lấy mẫu chọn điểm thuận tiện.
+
+
+> **Chuyển mạch:** Từ **Lấy mẫu ngẫu nhiên**, ta sang **Lấy mẫu phân tầng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lấy mẫu phân tầng
 
 Nếu biết hệ có các vùng khác nhau — ví dụ độ sâu, khu sản xuất hoặc loại đất — có thể chia thành tầng rồi lấy trong từng tầng.
 
 Điều này thường hiệu quả hơn ngẫu nhiên hoàn toàn khi biến thiên giữa các tầng lớn.
+
+
+> **Chuyển mạch:** Từ **Lấy mẫu phân tầng**, ta sang **Mẫu tổ hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mẫu tổ hợp
 
@@ -190,7 +204,7 @@ Một tín hiệu nền ổn định có thể trừ được; nền biến thi�
 Nếu thêm lượng chất phân tích biết trước vào mẫu rồi đưa qua toàn quy trình:
 
 \[
-\%Recovery=
+\%khôi phục (recovery / 복구)=
 \frac{C_{spiked}-C_{original}}{C_{added}}\times100\%
 \]
 
@@ -292,7 +306,7 @@ LOD không phải “chữ số nhỏ nhất máy hiển thị”.
 
 Một phương pháp vì vậy có thể có vùng rất rộng nhưng chỉ một phần là tuyến tính.
 
-# Validation — chứng minh phương pháp phù hợp mục đích
+# Kiểm tra hợp lệ (validation / 검증) — chứng minh phương pháp phù hợp mục đích
 
 **Thẩm định phương pháp (method validation)** không hỏi “phương pháp có tốt không?” một cách chung chung. Nó hỏi “phương pháp có đủ tốt cho mục đích cụ thể này không?”.
 
@@ -408,3 +422,5 @@ QC chính là phép thử thực nghiệm cho giả định rằng quy trình v�
 Hãy xem một kết quả phân tích như **một chuỗi suy luận từ thế giới thật tới một con số**. Muốn con số đáng tin, từng mắt xích phải trả lời được câu hỏi: mẫu có đại diện không, chất phân tích có được bảo toàn không, tín hiệu có chọn lọc không, hiệu chuẩn có đúng vùng không, và độ không đảm bảo cuối cùng có phù hợp với quyết định cần đưa ra không.
 
 Xem tiếp: [Phân tích thể tích](./01_volumetric_analysis.md) và [Sai số, độ không đảm bảo và phân tích dữ liệu](../17_laboratory/05_error_uncertainty_and_data_analysis.md).
+
+> **Bàn giao:** Sau **“QC là thủ tục quản lý, không phải khoa học”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 volumetric analysis](./01_volumetric_analysis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

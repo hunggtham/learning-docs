@@ -1,5 +1,8 @@
 # Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron
 
+> **Mạch đọc:** Đọc **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phản ứng redox khó cân bằng hơn phản ứng thông thường?** sang **Electron trong bán phản ứng là công cụ ghi sổ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Cân bằng phản ứng oxy hóa–khử phải đồng thời thỏa **bảo toàn nguyên tử**, **bảo toàn điện tích** và **bảo toàn electron chuyển giao**. Phương pháp bán phản ứng (half-reaction method / 반쪽 반응법) biến một bài toán phức tạp thành hai bài toán ghi sổ electron rõ ràng rồi ghép chúng lại.
 
 Cân bằng redox không chỉ là kỹ thuật bài tập. Các hệ số thu được quyết định lượng chất trong chuẩn độ, điện phân, pin, ăn mòn, xử lý nước và chuyển hóa sinh học.
@@ -16,7 +19,7 @@ Xét phản ứng permanganate oxy hóa `Fe²⁺` trong môi trường acid. Ta 
 
 Nếu chỉ thử hệ số bằng mắt, rất dễ cân bằng đúng nguyên tử nhưng sai điện tích.
 
-Phương pháp bán phản ứng tách logic thành:
+Phương pháp bán phản ứng tách lô-gic (logic / 논리) thành:
 
 ```text
 bảo toàn nguyên tố
@@ -35,7 +38,7 @@ Fe^{2+}\rightarrow Fe^{3+}+e^-
 
 ta không nhất thiết khẳng định trong dung dịch tồn tại electron tự do lâu dài.
 
-Phương trình chỉ ghi rằng oxidation state của Fe tăng và hệ đã mất một electron tương đương.
+Phương trình chỉ ghi rằng oxidation trạng thái (state / 상태) của Fe tăng và hệ đã mất một electron tương đương.
 
 Trong pin, electron có thể đi qua dây dẫn. Trong phản ứng đồng thể, electron có thể chuyển trực tiếp hoặc qua nhiều bước trung gian.
 
@@ -63,7 +66,7 @@ Cu^{2+}+2e^-\rightarrow Cu
 
 Electron mất và nhận đã bằng nhau nên cộng hai bán phản ứng cho phương trình tổng.
 
-Trong phản ứng phức tạp hơn, việc xác định oxidation state trước giúp nhận ra tiểu phần nào bị oxy hóa và tiểu phần nào bị khử.
+Trong phản ứng phức tạp hơn, việc xác định oxidation trạng thái (state / 상태) trước giúp nhận ra tiểu phần nào bị oxy hóa và tiểu phần nào bị khử.
 
 ## Thuật toán trong môi trường acid
 
@@ -141,7 +144,7 @@ Nếu môi trường khác, sản phẩm và cách cân bằng có thể khác.
 
 Đó là lý do điều kiện phản ứng là một phần của phương trình hóa học thực tế.
 
-## Môi trường base
+## Môi trường cơ sở (base / 기반)
 
 Cách an toàn nhất:
 
@@ -152,7 +155,7 @@ Cách an toàn nhất:
 
 Cách này tránh học hai thuật toán hoàn toàn tách biệt.
 
-## Ví dụ base: permanganate tạo MnO₂
+## Ví dụ cơ sở (base / 기반): permanganate tạo MnO₂
 
 Xét bán phản ứng:
 
@@ -195,14 +198,14 @@ Kiểm tra điện tích hai vế đều bằng `−4`.
 Permanganate là ví dụ rõ:
 
 - trong acid mạnh thường có thể tạo `Mn²⁺`;
-- trong điều kiện trung tính hoặc base nhẹ có thể tạo `MnO2`;
-- trong base rất mạnh có thể xuất hiện manganate `MnO4²−` tùy hệ.
+- trong điều kiện trung tính hoặc cơ sở (base / 기반) nhẹ có thể tạo `MnO2`;
+- trong cơ sở (base / 기반) rất mạnh có thể xuất hiện manganate `MnO4²−` tùy hệ.
 
 Do đó không thể nói một oxidant “luôn nhận đúng cùng số electron” nếu sản phẩm cuối thay đổi.
 
 ## Phương pháp số oxy hóa
 
-Một cách khác là theo dõi thay đổi oxidation state.
+Một cách khác là theo dõi thay đổi oxidation trạng thái (state / 상태).
 
 Ví dụ carbon trong methane:
 
@@ -216,7 +219,7 @@ C thay đổi:
 -4\rightarrow +4
 \]
 
-nghĩa là tăng 8 đơn vị oxidation state cho mỗi carbon.
+nghĩa là tăng 8 đơn vị oxidation trạng thái (state / 상태) cho mỗi carbon.
 
 Oxygen trong `O2`:
 
@@ -234,14 +237,14 @@ Phương pháp số oxy hóa giúp chọn tỷ lệ electron nhanh, nhưng trong
 
 - dung dịch ion;
 - có H/O;
-- acid hoặc base;
+- acid hoặc cơ sở (base / 기반);
 - chuẩn độ redox;
 - electrochemistry.
 
 **Phương pháp số oxy hóa** nhanh khi:
 
 - phương trình phân tử tương đối đơn giản;
-- thay đổi oxidation state rõ;
+- thay đổi oxidation trạng thái (state / 상태) rõ;
 - ít ion và không cần nhiều bước H/O.
 
 Hai phương pháp dựa trên cùng nguyên lý bảo toàn electron.
@@ -264,7 +267,7 @@ Phản ứng vẫn cân bằng electron dù donor và acceptor ban đầu nằm 
 
 ## Comproportionation
 
-Chiều ngược là **comproportionation**, khi hai oxidation state khác nhau tạo trạng thái trung gian.
+Chiều ngược là **comproportionation**, khi hai oxidation trạng thái (state / 상태) khác nhau tạo trạng thái trung gian.
 
 Ví dụ tổng quát:
 
@@ -340,21 +343,21 @@ Nhưng cân bằng stoichiometric không tự cho biết quá trình nào xảy 
 
 ## Liên hệ với hữu cơ
 
-Trong hóa hữu cơ, oxidation state của carbon có thể thay đổi khi:
+Trong hóa hữu cơ, oxidation trạng thái (state / 상태) của carbon có thể thay đổi khi:
 
 ```text
 alcohol → carbonyl → carboxylic acid
 ```
 
-Dù cơ chế thường được mô tả bằng mũi tên electron cặp và nhóm chức, hạch toán oxidation state vẫn giúp nhận biết tổng thể một biến đổi là oxidation hay reduction.
+Dù cơ chế thường được mô tả bằng mũi tên electron cặp và nhóm chức, hạch toán oxidation trạng thái (state / 상태) vẫn giúp nhận biết tổng thể một biến đổi là oxidation hay reduction.
 
-Không nên dùng oxidation state thay cho cơ chế hữu cơ; hai lớp thông tin khác nhau.
+Không nên dùng oxidation trạng thái (state / 상태) thay cho cơ chế hữu cơ; hai lớp thông tin khác nhau.
 
 ## Cân bằng bằng đại số
 
 Mọi phản ứng có thể được xem là hệ phương trình bảo toàn nguyên tố và điện tích.
 
-Ta có thể tạo ma trận thành phần rồi tìm vector hệ số trong null space.
+Ta có thể tạo ma trận thành phần rồi tìm véc-tơ (vector / 벡터) hệ số trong null không gian (space / 공간).
 
 Với redox, bảo toàn điện tích đã ngầm chứa yêu cầu electron toàn hệ không tự sinh hay mất.
 
@@ -362,7 +365,7 @@ Cách đại số đặc biệt hữu ích trong phần mềm hoặc mạng ph�
 
 ## Giới hạn của số oxy hóa
 
-Oxidation state là đại lượng hạch toán rất hữu ích nhưng không phải điện tích nguyên tử thực.
+Oxidation trạng thái (state / 상태) là đại lượng hạch toán rất hữu ích nhưng không phải điện tích nguyên tử thực.
 
 Trong:
 
@@ -371,9 +374,9 @@ Trong:
 - hợp chất organometallic;
 - hệ mixed-valence;
 
-việc gán oxidation state có thể là mô hình hình thức hơn là mô tả mật độ electron thật.
+việc gán oxidation trạng thái (state / 상태) có thể là mô hình hình thức hơn là mô tả mật độ electron thật.
 
-Phương trình vẫn có thể được cân bằng bằng nguyên tố và điện tích, nhưng không nên suy quá mức từ oxidation state sang phân bố electron đo được.
+Phương trình vẫn có thể được cân bằng bằng nguyên tố và điện tích, nhưng không nên suy quá mức từ oxidation trạng thái (state / 상태) sang phân bố electron đo được.
 
 ## Bán phản ứng không phải cơ chế
 
@@ -412,7 +415,7 @@ Sai. Electron cân bằng điện tích sau khi nguyên tử đã được cân 
 
 Không. Đó là công cụ hạch toán chuyển electron.
 
-### “Oxidizing agent luôn nhận cùng số electron”
+### “Oxidizing tác nhân (agent / 에이전트) luôn nhận cùng số electron”
 
 Không nếu sản phẩm phụ thuộc pH hoặc điều kiện.
 
@@ -442,3 +445,5 @@ mỗi electron donor mất
 Sau khi phương trình đã đúng, cùng bộ hệ số electron đó tiếp tục đi vào stoichiometry, Nernst, `ΔG=-nFE`, điện phân và phân tích định lượng.
 
 Xem tiếp: [Pin Galvani](./02_galvanic_cells.md), [Điện thế pin và Nernst](./03_cell_potential_and_nernst_equation.md) và [Điện phân](./04_electrolysis.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -10,7 +10,7 @@ UML, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **5. UML 구성요소 상세 (UML Components Detail)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **4. 사용자 인터페이스 (Giao diện người dùng - UI)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,11 +20,13 @@ UML, 심화
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **7. UML 심화 (Advanced UML)** và nối nó với **4. 사용자 인터페이스 (Giao diện người dùng - UI)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 7. UML 심화 (Advanced UML)
 - Do OMG chuẩn hóa từ phương pháp của Rumbaugh, Booch, Jacobson.
 - **다이어그램 (Diagrams)**:
-  - 구조적 (Structural / Tĩnh): Class, Object, Component, Deployment, Composite, Package.
-  - 행위적 (Behavioral / Động): Use Case, Sequence, Communication, State, Activity, Timing.
+  - 구조적 (Structural / Tĩnh): lớp (class / 클래스), đối tượng (object / 객체), thành phần (component / 컴포넌트), triển khai (deployment / 배포), Composite, gói (package / 패키지).
+  - 행위적 (Behavioral / Động): Use trường hợp (case / 사례), chuỗi (sequence / 시퀀스), Communication, trạng thái (state / 상태), Activity, Timing.
 - **스테레오 타입 (Stereotype)**: Mở rộng UML bằng dấu `<< >>` (Guillemet). Ví dụ: `<<include>>`, `<<extend>>`.

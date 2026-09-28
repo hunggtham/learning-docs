@@ -1,6 +1,9 @@
 # Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định
 
-> File này không lặp lại định nghĩa về đa dạng hóa, tái cân bằng hay độ biến động. Mục tiêu là biến các khái niệm nền tảng thành một quy trình thiết kế danh mục có thể kiểm chứng. Người đọc phải đi từ **mục tiêu → nghĩa vụ → bảng cân đối → nguồn rủi ro → ngân sách rủi ro → kiểm thử → quy tắc hành động → đánh giá sau quyết định**.
+> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: thiết kế danh mục, kiểm thử căng thẳng và quy tắc quyết định** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ bài toán tài chính, không bắt đầu từ sản phẩm** sang **2. Xây bảng cân đối kinh tế của hộ gia đình**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này không lặp lại định nghĩa về đa dạng hóa, tái cân bằng hay độ biến động. Mục tiêu là biến các khái niệm nền tảng thành một quy trình thiết kế danh mục có thể kiểm chứng. Người đọc phải đi từ **mục tiêu → nghĩa vụ → bảng cân đối → nguồn rủi ro → ngân sách rủi ro → kiểm thử → quy tắc hành động → đánh giá sau quyết định**.
 
 ## 1. Bắt đầu từ bài toán tài chính, không bắt đầu từ sản phẩm
 
@@ -304,3 +307,5 @@ Tôi cần tiền cho việc gì?
 ```
 
 Một danh mục tốt không cần tối ưu hoàn hảo. Nó cần **đủ bền để người sở hữu có thể duy trì qua nhiều chế độ thị trường và nhiều giai đoạn cuộc sống**.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

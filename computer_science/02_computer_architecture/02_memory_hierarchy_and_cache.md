@@ -1,73 +1,111 @@
-# Memory hierarchy, cache và locality
+# Bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality
 
-CPU có thể thực hiện arithmetic trong vài cycles, nhưng DRAM access có thể tốn hàng chục tới hàng trăm cycles. Storage và network còn chậm hơn nhiều. Nếu mỗi operation phải chờ tầng chậm nhất, CPU sẽ phần lớn idle. Memory hierarchy giải quyết bằng nhiều tầng capacity/latency/cost khác nhau.
+> **Mạch đọc:** Đặt **bộ nhớ (memory / 메모리) hierarchy, bộ nhớ đệm (cache / 캐시) và locality** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Không có bộ nhớ (memory / 메모리) hoàn hảo** sang **bộ nhớ đệm (cache / 캐시) line**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Không có memory hoàn hảo
 
-Ta muốn memory vừa rất nhanh, rất lớn, rẻ, tiết kiệm điện và non-volatile. Physics/economics không cho tất cả cùng lúc. Vì vậy systems dùng registers → L1/L2/L3 cache → DRAM → SSD/HDD → remote storage.
+CPU có thể thực hiện arithmetic trong vài cycles, nhưng DRAM truy cập (access / 접근) có thể tốn hàng chục tới hàng trăm cycles. lưu trữ (storage / 저장소) và mạng (network / 네트워크) còn chậm hơn nhiều. Nếu mỗi thao tác (operation / 연산) phải chờ tầng chậm nhất, CPU sẽ phần lớn idle. bộ nhớ (memory / 메모리) hierarchy giải quyết bằng nhiều tầng sức chứa (capacity / 용량)/độ trễ (latency / 지연 시간)/chi phí (cost / 비용) khác nhau.
+
+## Không có bộ nhớ (memory / 메모리) hoàn hảo
+
+Ta muốn bộ nhớ (memory / 메모리) vừa rất nhanh, rất lớn, rẻ, tiết kiệm điện và non-volatile. Physics/economics không cho tất cả cùng lúc. Vì vậy các hệ thống (systems / 시스템들) dùng registers → L1/L2/L3 bộ nhớ đệm (cache / 캐시) → DRAM → SSD/HDD → remote lưu trữ (storage / 저장소).
 
 Mỗi tầng gần CPU thường nhỏ hơn nhưng nhanh hơn. Cơ chế hiệu quả vì workloads có temporal và spatial locality.
 
-## Cache line
 
-CPU cache thường chuyển dữ liệu theo **cache line**, ví dụ 64 bytes trên nhiều systems, không phải từng variable. Khi đọc một int 4 bytes, cả neighboring bytes có thể vào cache. Sequential array scan tận dụng line; random pointer chasing có thể dùng chỉ vài bytes mỗi line.
+> **Chuyển mạch:** Từ **Không có bộ nhớ (memory / 메모리) hoàn hảo**, ta sang **bộ nhớ đệm (cache / 캐시) line** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Bộ nhớ đệm (cache / 캐시) line
+
+CPU bộ nhớ đệm (cache / 캐시) thường chuyển dữ liệu theo **bộ nhớ đệm (cache / 캐시) line**, ví dụ 64 bytes trên nhiều các hệ thống (systems / 시스템들), không phải từng variable. Khi đọc một int 4 bytes, cả neighboring bytes có thể vào bộ nhớ đệm (cache / 캐시). Sequential array scan tận dụng line; random pointer chasing có thể dùng chỉ vài bytes mỗi line.
 
 Đây là lý do Big O giống nhau nhưng actual speed khác.
 
+
+> **Chuyển mạch:** Từ **bộ nhớ đệm (cache / 캐시) line**, ta sang **Tag, set và associativity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Tag, set và associativity
 
-Cache cần biết memory block nào đang nằm ở slot nào. Address được tách thành offset, set index và tag. Direct-mapped cache mỗi block có một place; set-associative cho vài candidate ways; fully associative cho bất kỳ slot nhưng hardware lookup đắt hơn.
+Bộ nhớ đệm (cache / 캐시) cần biết bộ nhớ (memory / 메모리) khối (block / 블록) nào đang nằm ở slot nào. Address được tách thành offset, set chỉ mục (index / 인덱스) và tag. Direct-mapped bộ nhớ đệm (cache / 캐시) mỗi khối (block / 블록) có một place; set-associative cho vài candidate ways; fully associative cho bất kỳ slot nhưng hardware lookup đắt hơn.
 
-Conflict misses xảy ra khi hot blocks map cùng set dù cache tổng còn space. Replacement policy xấp xỉ LRU hoặc variants quyết định victim.
+Xung đột (conflict / 충돌) misses xảy ra khi hot blocks map cùng set dù bộ nhớ đệm (cache / 캐시) tổng còn không gian (space / 공간). Replacement chính sách (policy / 정책) xấp xỉ LRU hoặc variants quyết định victim.
+
+
+> **Chuyển mạch:** Từ **Tag, set và associativity**, ta sang **Hit và miss** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Hit và miss
 
-Cache hit phục vụ ở tầng nhanh. Miss cần fetch từ lower level. Average Memory Access Time có mental model:
+Bộ nhớ đệm (cache / 캐시) hit phục vụ ở tầng nhanh. Miss cần fetch từ lower mức (level / 수준). Average bộ nhớ (memory / 메모리) truy cập (access / 접근) thời gian (time / 시간) có mô hình tư duy (mental model / 사고 모델):
 
 \[
-AMAT = hit\ time + miss\ rate \times miss\ penalty
+AMAT = hit\ thời gian (time / 시간) + miss\ tỷ lệ (rate / 비율) \times miss\ penalty
 \]
 
-Nested cache levels làm formula chi tiết hơn. Một miss rate nhỏ vẫn đáng kể nếu penalty lớn.
+Nested bộ nhớ đệm (cache / 캐시) levels làm formula chi tiết hơn. Một miss tỷ lệ (rate / 비율) nhỏ vẫn đáng kể nếu penalty lớn.
 
-## Write policies
 
-Write-through gửi write xuống lower level ngay, đơn giản consistency nhưng tăng traffic. Write-back chỉ cập nhật cache line và đánh dirty, flush khi evict, giảm bandwidth nhưng phức tạp hơn. Write-allocate/no-write-allocate quyết định miss khi store có kéo line vào cache không.
+> **Chuyển mạch:** Từ **Hit và miss**, ta sang **ghi (write / 쓰기) policies** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Cache coherence
+## Ghi (write / 쓰기) policies
 
-Multicore CPUs có private caches. Nếu core A ghi x còn core B giữ old x, system cần coherence protocol để quản lý copies. MESI-like protocols theo dõi states và invalidate/share lines.
+Write-through gửi ghi (write / 쓰기) xuống lower mức (level / 수준) ngay, đơn giản consistency nhưng tăng traffic. Write-back chỉ cập nhật bộ nhớ đệm (cache / 캐시) line và đánh dirty, flush khi evict, giảm bandwidth nhưng phức tạp hơn. Write-allocate/no-write-allocate quyết định miss khi store có kéo line vào bộ nhớ đệm (cache / 캐시) không.
 
-Coherence không tự giải quyết mọi concurrency semantics. Language/ISA memory model còn quyết định ordering và visibility; synchronization primitives tạo happens-before relationships.
+
+> **Chuyển mạch:** Từ **ghi (write / 쓰기) policies**, ta sang **bộ nhớ đệm (cache / 캐시) coherence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Bộ nhớ đệm (cache / 캐시) coherence
+
+Multicore CPUs có private caches. Nếu cốt lõi (core / 핵심) A ghi x còn cốt lõi (core / 핵심) B giữ old x, hệ thống (system / 시스템) cần coherence giao thức (protocol / 프로토콜) để quản lý copies. MESI-like protocols theo dõi states và invalidate/share lines.
+
+Coherence không tự giải quyết mọi tính đồng thời (concurrency / 동시성) ngữ nghĩa (semantics / 의미론). ngôn ngữ (language / 언어)/ISA bộ nhớ (memory / 메모리) mô hình (model / 모델) còn quyết định thứ tự (ordering / 순서) và visibility; synchronization primitives tạo happens-before relationships.
+
+
+> **Chuyển mạch:** Từ **bộ nhớ đệm (cache / 캐시) coherence**, ta sang **False sharing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## False sharing
 
-Hai threads cập nhật hai variables khác nhau nhưng cùng cache line có thể gây ping-pong invalidations. Logically không share data nhưng physically share cache line — false sharing. Padding/alignment hoặc partition data có thể giảm.
+Hai threads cập nhật hai variables khác nhau nhưng cùng bộ nhớ đệm (cache / 캐시) line có thể gây ping-pong invalidations. Logically không share dữ liệu (data / 데이터) nhưng physically share bộ nhớ đệm (cache / 캐시) line — false sharing. Padding/alignment hoặc partition dữ liệu (data / 데이터) có thể giảm.
 
-Đây là ví dụ abstraction leak từ variable-level program sang cache-line-level hardware.
+Đây là ví dụ lớp trừu tượng (abstraction / 추상화) leak từ variable-level program sang cache-line-level hardware.
 
-## TLB và address translation cache
 
-Virtual addresses phải translate qua page tables. Translation Lookaside Buffer (TLB) cache recent virtual→physical mappings. TLB miss cần page-table walk, nên large working sets hoặc random accesses có thêm cost ngoài data cache.
+> **Chuyển mạch:** Từ **False sharing**, ta sang **TLB và address translation bộ nhớ đệm (cache / 캐시)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## TLB và address translation bộ nhớ đệm (cache / 캐시)
+
+Virtual addresses phải translate qua page tables. Translation Lookaside Buffer (TLB) bộ nhớ đệm (cache / 캐시) recent virtual→vật lý (physical / 물리적) mappings. TLB miss cần page-table walk, nên large working sets hoặc random accesses có thêm chi phí (cost / 비용) ngoài dữ liệu (data / 데이터) bộ nhớ đệm (cache / 캐시).
 
 Huge pages giảm number of TLB entries cần nhưng tăng allocation/internal-fragmentation trade-offs.
 
+
+> **Chuyển mạch:** Từ **TLB và address translation bộ nhớ đệm (cache / 캐시)**, ta sang **Prefetching** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Prefetching
 
-Hardware/software prefetch đoán dữ liệu sắp dùng và kéo sớm. Sequential patterns dễ đoán; linked structures khó vì next address phụ thuộc load hiện tại. Prefetch sai lãng phí bandwidth/cache capacity.
+Hardware/software prefetch đoán dữ liệu sắp dùng và kéo sớm. Sequential patterns dễ đoán; linked structures khó vì next address phụ thuộc tải (load / 로드) hiện tại. Prefetch sai lãng phí bandwidth/bộ nhớ đệm (cache / 캐시) sức chứa (capacity / 용량).
 
-## Mental Model
 
-> Performance memory phụ thuộc **working set + access pattern**, không chỉ data size. Hãy hỏi dữ liệu có fit tầng nào, mỗi access dùng bao nhiêu của cache line, có reuse không, và cores có tranh cùng lines không.
+> **Chuyển mạch:** Từ **Prefetching**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Common Misconceptions
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“RAM là một tốc độ duy nhất.”** Cache/TLB/NUMA khiến memory access cost phụ thuộc location và history.
+> hiệu năng (performance / 성능) bộ nhớ (memory / 메모리) phụ thuộc **working set + truy cập (access / 접근) mẫu (pattern / 패턴)**, không chỉ dữ liệu (data / 데이터) kích thước (size / 크기). Hãy hỏi dữ liệu có fit tầng nào, mỗi truy cập (access / 접근) dùng bao nhiêu của bộ nhớ đệm (cache / 캐시) line, có reuse không, và cores có tranh cùng lines không.
 
-**“Cache chỉ là software cache như Redis.”** CPU cache là hardware-managed tầng memory; cùng principle locality nhưng mechanism khác.
 
-**“Coherence làm concurrent code thread-safe.”** Coherence giữ copies coherent theo protocol; race-free semantics cần synchronization/memory ordering.
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“RAM là một tốc độ duy nhất.”** bộ nhớ đệm (cache / 캐시)/TLB/NUMA khiến bộ nhớ (memory / 메모리) truy cập (access / 접근) chi phí (cost / 비용) phụ thuộc location và lịch sử (history / 이력).
+
+**“bộ nhớ đệm (cache / 캐시) chỉ là software bộ nhớ đệm (cache / 캐시) như Redis.”** CPU bộ nhớ đệm (cache / 캐시) là hardware-managed tầng bộ nhớ (memory / 메모리); cùng principle locality nhưng cơ chế (mechanism / 메커니즘) khác.
+
+**“Coherence làm concurrent mã (code / 코드) thread-safe.”** Coherence giữ copies coherent theo giao thức (protocol / 프로토콜); race-free ngữ nghĩa (semantics / 의미론) cần synchronization/bộ nhớ (memory / 메모리) thứ tự (ordering / 순서).
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-[Data layout/locality](../01_algorithms_data_structures/02_memory_models_and_data_layout.md) là software side; [virtual memory](../03_operating_systems/03_virtual_memory_and_address_spaces.md) thêm translation; [concurrency](../03_operating_systems/02_concurrency_synchronization_and_deadlock.md) giải thích memory ordering; [performance](../08_software_systems/02_performance_capacity_and_scalability.md) mở rộng tới whole-system bottlenecks.
+[Data layout/locality](../01_algorithms_data_structures/02_memory_models_and_data_layout.md) là software side; [virtual memory](../03_operating_systems/03_virtual_memory_and_address_spaces.md) thêm translation; [concurrency](../03_operating_systems/02_concurrency_synchronization_and_deadlock.md) giải thích bộ nhớ (memory / 메모리) thứ tự (ordering / 순서); [performance](../08_software_systems/02_performance_capacity_and_scalability.md) mở rộng tới whole-system bottlenecks.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 digital logic and circuits](./00_digital_logic_and_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

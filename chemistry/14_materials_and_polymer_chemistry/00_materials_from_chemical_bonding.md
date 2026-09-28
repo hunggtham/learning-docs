@@ -1,5 +1,8 @@
 # Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô
 
+> **Mạch đọc:** Đọc **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Liên kết kim loại** sang **Chất rắn ion**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa học vật liệu (materials chemistry / 재료화학)** nghiên cứu cách thành phần, cấu trúc điện tử, liên kết, cách sắp xếp nguyên tử, khuyết tật và lịch sử gia công phối hợp để tạo nên tính chất cơ học, điện, quang, từ và nhiệt. Khung suy luận trung tâm không phải “vật liệu X có tính chất Y”, mà là chuỗi nhân quả **thành phần → liên kết → cấu trúc → khuyết tật/vi cấu trúc → tính chất → hiệu năng**.
 
 Không thể hiểu vật liệu chỉ bằng công thức hóa học. Kim cương và graphite đều là carbon nhưng hành xử rất khác vì cách nối nguyên tử và cấu trúc điện tử khác nhau. Hai mẫu thép có cùng thành phần carbon trung bình vẫn có thể khác mạnh về độ cứng và độ dai vì lịch sử nhiệt tạo vi cấu trúc khác nhau.
@@ -20,7 +23,7 @@ cấu trúc điện tử
 
 Mỗi tầng chịu ràng buộc từ tầng thấp hơn nhưng có thể tạo hành vi tập thể mới mà không thể suy chỉ bằng một liên kết riêng lẻ.
 
-Ví dụ, liên kết C–C mạnh tạo nền cho độ cứng kim cương, nhưng độ bền gãy thực tế vẫn phụ thuộc khe nứt. Silicon có cấu trúc vùng thuận lợi cho bán dẫn, nhưng chức năng transistor còn phụ thuộc lượng **chất pha tạp (dopant)** rất nhỏ và chất lượng interface.
+Ví dụ, liên kết C–C mạnh tạo nền cho độ cứng kim cương, nhưng độ bền gãy thực tế vẫn phụ thuộc khe nứt. Silicon có cấu trúc vùng thuận lợi cho bán dẫn, nhưng chức năng transistor còn phụ thuộc lượng **chất pha tạp (dopant)** rất nhỏ và chất lượng giao diện (interface / 인터페이스).
 
 # Thế tương tác giữa nguyên tử — vì sao năng lượng liên kết chưa đủ
 
@@ -54,17 +57,26 @@ Electron dẫn còn giúp nhiều kim loại có độ dẫn điện và dẫn n
 
 Tuy nhiên độ bền thực tế phụ thuộc mạnh vào **lệch mạng (dislocation)**, kích thước hạt, kết tủa và lịch sử biến dạng. Vì vậy không thể giải thích độ bền kim loại chỉ bằng “liên kết kim loại mạnh”.
 
+
+> **Chuyển mạch:** Từ **Liên kết kim loại**, ta sang **Chất rắn ion** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Chất rắn ion
 
 Tương tác Coulomb mạnh có thể tạo nhiệt độ nóng chảy và độ cứng cao. Nhưng khi một mặt tinh thể trượt, các ion cùng dấu có thể bị đưa lại gần, làm năng lượng tăng mạnh và khe nứt dễ phát triển.
 
 Đây là một lý do nhiều gốm ion cứng nhưng giòn.
 
+
+> **Chuyển mạch:** Từ **Chất rắn ion**, ta sang **Mạng cộng hóa trị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mạng cộng hóa trị
 
 Liên kết mạnh và định hướng có thể tạo môđun cao, độ cứng lớn và nhiệt độ làm việc cao. Kim cương và SiC là ví dụ.
 
 Mặt trái là chuyển động lệch mạng thường khó, nên vật liệu ít khả năng biến dạng dẻo để làm tù đầu khe nứt.
+
+
+> **Chuyển mạch:** Từ **Mạng cộng hóa trị**, ta sang **Chất rắn phân tử và polymer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chất rắn phân tử và polymer
 
@@ -95,6 +107,9 @@ Tính chất khối vì vậy phụ thuộc mạnh vào:
 
 Thủy tinh là chất rắn vô định hình nằm ngoài trạng thái tinh thể cân bằng, không nên được mô tả đơn giản như “chất lỏng cực nhớt đang chảy ở nhiệt độ phòng”.
 
+
+> **Chuyển mạch:** Từ **Chất rắn phân tử và polymer**, ta sang **Đa hình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Đa hình
 
 Cùng thành phần có thể tạo nhiều **đa hình (polymorph)** với cách sắp xếp khác nhau.
@@ -107,6 +122,9 @@ Vì vậy “công thức hóa học giống nhau” chưa đồng nghĩa “cù
 
 Tinh thể hoàn hảo chỉ là mô hình tham chiếu. Vật liệu thật luôn chứa khuyết tật; nhiều công nghệ còn chủ động tạo chúng.
 
+
+> **Chuyển mạch:** Từ **Đa hình**, ta sang **Khuyết tật điểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Khuyết tật điểm
 
 Các loại điển hình:
@@ -118,11 +136,17 @@ Các loại điển hình:
 
 Khuyết tật điểm tạo đường cho khuếch tán, dẫn ion và pha tạp điện tử.
 
+
+> **Chuyển mạch:** Từ **Khuyết tật điểm**, ta sang **Lệch mạng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lệch mạng
 
 **Lệch mạng (dislocation)** là khuyết tật đường. Biến dạng dẻo của kim loại chủ yếu xảy ra nhờ lệch mạng di chuyển từng bước thay vì cả mặt tinh thể trượt đồng thời.
 
 Nhờ vậy ứng suất biến dạng thấp hơn rất nhiều so với tinh thể lý tưởng. Các cơ chế tăng bền thường hoạt động bằng cách làm lệch mạng khó di chuyển hơn.
+
+
+> **Chuyển mạch:** Từ **Lệch mạng**, ta sang **Biên hạt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Biên hạt
 
@@ -159,7 +183,7 @@ Nhiệt độ vì thế làm tốc độ khuếch tán thay đổi rất mạnh.
 J=-D\frac{dC}{dx}
 \]
 
-mô tả dòng vật chất theo gradient nồng độ trong trạng thái ổn định.
+mô tả dòng vật chất theo độ dốc (gradient / 기울기) nồng độ trong trạng thái ổn định.
 
 Định luật Fick thứ hai:
 
@@ -191,7 +215,7 @@ Martensite trong thép là ví dụ kinh điển: austenite chuyển pha nhanh t
 
 # Tạo mầm và phát triển
 
-Khi một pha mới xuất hiện, hệ thu lợi năng lượng tự do ở thể tích nhưng phải trả chi phí tạo interface.
+Khi một pha mới xuất hiện, hệ thu lợi năng lượng tự do ở thể tích nhưng phải trả chi phí tạo giao diện (interface / 인터페이스).
 
 Với mầm cầu:
 
@@ -205,6 +229,9 @@ Vì vậy một chuyển pha thuận lợi về nhiệt động chưa chắc x�
 
 # Tính chất cơ học từ cấu trúc
 
+
+> **Chuyển mạch:** Từ **Biên hạt**, ta sang **Đàn hồi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Đàn hồi
 
 Biến dạng đàn hồi tương ứng với dịch chuyển nhỏ quanh trạng thái cân bằng.
@@ -217,9 +244,15 @@ E=\frac{\sigma}{\varepsilon}
 
 với \(E\) là môđun Young.
 
+
+> **Chuyển mạch:** Từ **Đàn hồi**, ta sang **Chảy và biến dạng dẻo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Chảy và biến dạng dẻo
 
 Sau giới hạn chảy, biến dạng vĩnh viễn xảy ra. Với nhiều kim loại, cơ chế trung tâm là chuyển động lệch mạng.
+
+
+> **Chuyển mạch:** Từ **Chảy và biến dạng dẻo**, ta sang **Độ bền và độ dai** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Độ bền và độ dai
 
@@ -228,6 +261,9 @@ Sau giới hạn chảy, biến dạng vĩnh viễn xảy ra. Với nhiều kim 
 **Độ dai (toughness)** liên quan năng lượng vật liệu hấp thụ trước khi gãy, gần với diện tích dưới đường ứng suất–biến dạng.
 
 Một vật liệu rất cứng hoặc rất bền vẫn có thể có độ dai thấp.
+
+
+> **Chuyển mạch:** Từ **Độ bền và độ dai**, ta sang **Gãy nứt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Gãy nứt
 
@@ -276,7 +312,7 @@ Một chuỗi trung tâm của khoa học vật liệu là:
 gia công → cấu trúc → tính chất → hiệu năng
 ```
 
-Đúc quyết định tốc độ đông đặc và hạt. Tôi nhanh giữ pha siêu bền. Ủ giảm ứng suất hoặc làm hạt lớn. Gia công nguội tăng mật độ lệch mạng. Thiêu kết làm bột đặc lại nhờ khuếch tán. In bồi đắp tạo gradient nhiệt và độ rỗng đặc trưng.
+Đúc quyết định tốc độ đông đặc và hạt. Tôi nhanh giữ pha siêu bền. Ủ giảm ứng suất hoặc làm hạt lớn. Gia công nguội tăng mật độ lệch mạng. Thiêu kết làm bột đặc lại nhờ khuếch tán. In bồi đắp tạo độ dốc (gradient / 기울기) nhiệt và độ rỗng đặc trưng.
 
 Do đó tính chất luôn có **ký ức của quá trình chế tạo**.
 
@@ -284,7 +320,7 @@ Do đó tính chất luôn có **ký ức của quá trình chế tạo**.
 
 - XRD nhận diện pha và cấu trúc tinh thể;
 - SEM quan sát hình thái, thường kết hợp EDS để xem thành phần nguyên tố;
-- TEM quan sát cấu trúc nano, lệch mạng và interface;
+- TEM quan sát cấu trúc nano, lệch mạng và giao diện (interface / 인터페이스);
 - DSC đo dòng nhiệt liên quan nóng chảy, kết tinh hoặc chuyển thủy tinh;
 - phép thử cơ học nối vi cấu trúc với đáp ứng ứng suất–biến dạng.
 
@@ -321,3 +357,5 @@ Không. Hàng rào tạo mầm, khuếch tán và thời gian có thể giữ h�
 Khoa học vật liệu là **hóa học cộng với thang kích thước, khuyết tật và lịch sử**. Liên kết xác định khả năng cục bộ; nhiệt động lực học cho biết trạng thái nào được ưu tiên; động học và gia công quyết định cấu trúc nào thật sự hình thành; vi cấu trúc sau đó quyết định hiệu năng thực tế.
 
 Xem tiếp: [Kim loại, gốm và thủy tinh](./01_metals_ceramics_and_glasses.md).
+
+> **Bàn giao:** Sau **“Pha bền nhiệt động luôn xuất hiện”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 metals ceramics and glasses](./01_metals_ceramics_and_glasses.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

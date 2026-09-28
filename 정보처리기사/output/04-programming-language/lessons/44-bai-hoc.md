@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **네트워크 통신 (Network Communication)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,13 +20,15 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** và nối nó với **네트워크 통신 (Network Communication)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)
 - **프로세스(Process)**: **PCB(Process Control Block)를 가진** 실행 중인 프로그램.
 - **상태 전이**:
   - **Dispatch**: 준비(Ready) -> 실행(Run) (CPU 할당 받음).
-  - **Timeout**: 실행(Run) -> 준비(Ready) (시간 초과).
+  - **hết thời gian chờ (timeout / 타임아웃)**: 실행(Run) -> 준비(Ready) (시간 초과).
   - **Wake Up**: 대기(Wait) -> 준비(Ready) (입출력 완료).
 - **스레드(Thread)**: 프로세스 내의 독립적인 실행 흐름 (최소 작업 단위). 프로세스의 자원을 공유하여 병행성 증대 및 문맥 교환 오버헤드 감소.
 - **비선점 스케줄링 (Non-Preemptive)**:

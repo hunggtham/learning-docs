@@ -1,5 +1,8 @@
 # 2010s–2020s: công nghiệp tiên tiến, kinh tế nền tảng và bài toán tăng trưởng chậm (Advanced Industry & Structural Transition / 첨단산업·저성장 전환)
 
+> **Mạch đọc:** Đọc **2010s–2020s: công nghiệp tiên tiến, kinh tế nền tảng và bài toán tăng trưởng chậm (Advanced Industry & Structural Transition / 첨단산업·저성장 전환)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Sau 2008: chống chịu tốt hơn nhưng tăng trưởng xu hướng chậm lại** sang **Bán dẫn trở thành một biến kinh tế vĩ mô**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Từ thập niên 2010, Hàn Quốc bước vào giai đoạn phát triển khác về bản chất so với thời kỳ bắt kịp. Thu nhập và tiền lương đã cao hơn, hạ tầng hoàn thiện hơn và nhiều ngành sản xuất đã tiến gần **biên công nghệ (technology frontier / 기술 프런티어)**. Vì vậy câu hỏi trung tâm không còn là “làm sao xây nhà máy đầu tiên”, mà là **làm sao duy trì tăng năng suất khi tích lũy vốn, đô thị hóa và mở rộng lực lượng lao động không còn tạo tốc độ tăng trưởng như trước**.
 
 Giai đoạn 2010s–2020s cũng cho thấy Hàn Quốc không còn một động cơ tăng trưởng duy nhất. Bán dẫn, pin, ô tô, biohealth, quốc phòng, nền tảng số, K-content và dịch vụ số cùng tồn tại với một nền kinh tế nội địa chịu sức ép từ già hóa dân số, nợ hộ gia đình, nhà ở và năng suất dịch vụ thấp. Vì vậy nhiều xu hướng trái chiều có thể đúng cùng lúc.
@@ -194,7 +197,7 @@ Khi Hàn Quốc còn nghèo, mục tiêu ưu tiên tương đối rõ: tích lũ
 
 Điều này làm chính sách kinh tế hiện đại phức tạp hơn thời kỳ bắt kịp.
 
-## Connection — Từ lịch sử sang mô hình kinh tế hiện tại
+## Liên kết (connection / 연결) — Từ lịch sử sang mô hình kinh tế hiện tại
 
 Sau khi đọc toàn bộ chuỗi lịch sử, có thể thấy nền kinh tế Hàn Quốc hiện nay là nhiều lớp lịch sử chồng lên nhau:
 
@@ -213,4 +216,6 @@ Mỗi lớp không xóa lớp trước. Chaebol vẫn tồn tại, nhưng phải
 
 Chuyển sang [mô hình kinh tế Hàn Quốc hiện nay](../00_economic_model_and_history.md) để đọc hệ thống hiện tại như kết quả nén của lịch sử này.
 
-> **Mental Model cuối:** Hàn Quốc của 2020s không còn giải bài toán “làm sao bắt đầu công nghiệp hóa”. Bài toán là làm sao đổi mới ở gần biên công nghệ, nâng năng suất cho phần còn lại của nền kinh tế, quản lý dân số già và nợ hộ gia đình, đồng thời giữ vị trí trong một thế giới nơi công nghệ và địa chính trị ngày càng gắn với nhau.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** Hàn Quốc của 2020s không còn giải bài toán “làm sao bắt đầu công nghiệp hóa”. Bài toán là làm sao đổi mới ở gần biên công nghệ, nâng năng suất cho phần còn lại của nền kinh tế, quản lý dân số già và nợ hộ gia đình, đồng thời giữ vị trí trong một thế giới nơi công nghệ và địa chính trị ngày càng gắn với nhau.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) — Từ lịch sử sang mô hình kinh tế hiện tại**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

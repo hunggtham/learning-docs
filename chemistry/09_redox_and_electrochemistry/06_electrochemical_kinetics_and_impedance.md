@@ -1,8 +1,11 @@
 # Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế
 
+> **Mạch đọc:** Đọc **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Điện thế cân bằng không quyết định dòng điện** sang **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Nhiệt động lực học điện hóa cho biết phản ứng oxy hóa–khử có xu hướng thuận lợi tới đâu; **động học điện hóa (electrochemical kinetics / 전기화학 반응속도론)** cho biết cần đẩy điện thế ra khỏi cân bằng bao nhiêu để tạo tốc độ phản ứng mong muốn. **Phổ trở kháng điện hóa (electrochemical impedance spectroscopy, EIS / 전기화학 임피던스 분광법)** dùng đáp ứng theo tần số để tách các quá trình xảy ra ở những thang thời gian khác nhau.
 
-Chương này là cầu nối giữa [điện thế pin và phương trình Nernst](./03_cell_potential_and_nernst_equation.md), [điện phân](./04_electrolysis.md), [pin và ăn mòn](./05_batteries_corrosion_and_energy_storage.md) và [phương pháp điện phân tích](../12_analytical_chemistry/06_electroanalytical_methods.md). Nếu chưa quen với khuếch tán, có thể xem lại [chất khí](../03_matter_and_phases/00_gases.md) và [động học hóa học](../06_chemical_kinetics/00_reaction_rates.md) để nhớ cách gradient và tốc độ phản ứng được mô hình hóa.
+Chương này là cầu nối giữa [điện thế pin và phương trình Nernst](./03_cell_potential_and_nernst_equation.md), [điện phân](./04_electrolysis.md), [pin và ăn mòn](./05_batteries_corrosion_and_energy_storage.md) và [phương pháp điện phân tích](../12_analytical_chemistry/06_electroanalytical_methods.md). Nếu chưa quen với khuếch tán, có thể xem lại [chất khí](../03_matter_and_phases/00_gases.md) và [động học hóa học](../06_chemical_kinetics/00_reaction_rates.md) để nhớ cách độ dốc (gradient / 기울기) và tốc độ phản ứng được mô hình hóa.
 
 ## Điện thế cân bằng không quyết định dòng điện
 
@@ -364,7 +367,7 @@ và cuộn cảm lý tưởng:
 Z_L=j\omega L
 \]
 
-Trong hệ điện hóa, đáp ứng cảm có thể đến từ dây dẫn hoặc một số cơ chế hấp phụ/bề mặt, nên không nên tự động quy mọi loop cảm cho một cuộn cảm vật lý thực sự trong cell.
+Trong hệ điện hóa, đáp ứng cảm có thể đến từ dây dẫn hoặc một số cơ chế hấp phụ/bề mặt, nên không nên tự động quy mọi vòng lặp (loop / 루프) cảm cho một cuộn cảm vật lý thực sự trong cell.
 
 ## Vì sao quét tần số giúp tách cơ chế?
 
@@ -412,7 +415,7 @@ Nhiều mạch khác nhau có thể khớp cùng dữ liệu khá tốt. Vì v�
 **Biểu đồ Nyquist** thường vẽ:
 
 \[
--Z''\;\text{theo}\;Z'
+-Z''\;\văn bản (text / 텍스트){theo}\;Z'
 \]
 
 Trong mô hình đơn giản, bán nguyệt có thể liên hệ với nhánh \(R_{ct}\parallel C_{dl}\), còn đoạn gần 45° ở tần số thấp có thể gợi ý khuếch tán kiểu Warburg.
@@ -576,7 +579,7 @@ Tuy nhiên chưa thể kết luận A “tốt hơn toàn diện” nếu chưa 
 - chi phí;
 - điện áp toàn cell.
 
-Đây là ví dụ điển hình của **trade-off**: một chỉ số hoạt tính không thể đại diện toàn bộ hiệu năng hệ.
+Đây là ví dụ điển hình của **sự đánh đổi (trade-off / 트레이드오프)**: một chỉ số hoạt tính không thể đại diện toàn bộ hiệu năng hệ.
 
 ## Những hiểu lầm thường gặp
 
@@ -611,3 +614,5 @@ Hãy tách điện hóa thành ba câu hỏi:
 Nernst trả lời câu đầu. Butler–Volmer, Tafel và các mô hình vận chuyển trả lời câu hai. EIS dùng miền tần số để tách câu ba thành các quá trình có tốc độ đặc trưng khác nhau.
 
 Xem tiếp hoặc đối chiếu với [Điện thế pin và phương trình Nernst](./03_cell_potential_and_nernst_equation.md), [Điện phân](./04_electrolysis.md), [Pin, ăn mòn và lưu trữ năng lượng](./05_batteries_corrosion_and_energy_storage.md) và [Phương pháp điện phân tích](../12_analytical_chemistry/06_electroanalytical_methods.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,15 @@
-# 19 — Observability, Logging & Incident Response
+# 19 — khả năng quan sát (observability / 관측 가능성), Logging & sự cố (incident / 인시던트) phản hồi (response / 응답)
 
-## 1. Debugging và observability không giống nhau
+> **Mạch đọc:** Đặt **19 — khả năng quan sát (observability / 관측 가능성), Logging & sự cố (incident / 인시던트) phản hồi (response / 응답)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Debugging và khả năng quan sát (observability / 관측 가능성) không giống nhau** sang **2. WebSquare ứng dụng (application / 애플리케이션) có nhiều lớp bằng chứng (evidence / 증거)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Debugging (gỡ lỗi / 디버깅) là quá trình điều tra một vấn đề cụ thể. Observability (khả năng quan sát / 관측 가능성) là khả năng suy ra trạng thái bên trong của hệ thống từ evidence mà hệ thống tạo ra.
 
-Một developer có thể debug tốt trên máy local nhưng production vẫn khó support nếu không có correlation ID, build identity, timing và structured error.
+## 1. Debugging và khả năng quan sát (observability / 관측 가능성) không giống nhau
 
-Mental model:
+Debugging (gỡ lỗi / 디버깅) là quá trình điều tra một vấn đề cụ thể. khả năng quan sát (observability / 관측 가능성) là khả năng suy ra trạng thái bên trong của hệ thống từ bằng chứng (evidence / 증거) mà hệ thống tạo ra.
+
+Một nhà phát triển (developer / 개발자) có thể gỡ lỗi (debug / 디버그) tốt trên máy cục bộ (local / 로컬) nhưng môi trường vận hành (production / 운영 환경) vẫn khó hỗ trợ (support / 지원) nếu không có correlation ID, bản dựng (build / 빌드) định danh (identity / 식별자), timing và structured lỗi (error / 오류).
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 incident
@@ -22,9 +25,9 @@ root cause
 fix + regression guard
 ```
 
-Không bắt đầu bằng sửa code. Bắt đầu bằng evidence.
+Không bắt đầu bằng sửa mã (code / 코드). Bắt đầu bằng bằng chứng (evidence / 증거).
 
-## 2. WebSquare application có nhiều lớp evidence
+## 2. WebSquare ứng dụng (application / 애플리케이션) có nhiều lớp bằng chứng (evidence / 증거)
 
 Một screen lỗi có thể liên quan:
 
@@ -47,7 +50,7 @@ Nếu chỉ nhìn console JavaScript, bạn mới thấy một phần hệ thố
 
 ## 3. Correlation ID là xương sống của tracing
 
-Một user action như Save nên có identity xuyên layer:
+Một người dùng (user / 사용자) hành động (action / 동작) như Save nên có định danh (identity / 식별자) xuyên tầng (layer / 계층):
 
 ```text
 click Save
@@ -59,9 +62,9 @@ click Save
 → client completion log
 ```
 
-Không cần full distributed tracing platform mới áp dụng được nguyên tắc này. Một request ID nhất quán đã giảm đáng kể thời gian điều tra.
+Không cần full phân tán (distributed / 분산) tracing nền tảng (platform / 플랫폼) mới áp dụng được nguyên tắc này. Một yêu cầu (request / 요청) ID nhất quán đã giảm đáng kể thời gian điều tra.
 
-## 4. Log event, không log câu chuyện mơ hồ
+## 4. Log sự kiện (event / 이벤트), không log câu chuyện mơ hồ
 
 Log kiểu:
 
@@ -71,7 +74,7 @@ save error
 
 ít giá trị.
 
-Log tốt hơn có structure:
+Log tốt hơn có cấu trúc (structure / 구조):
 
 ```text
 event=USER_SAVE_FAILED
@@ -83,11 +86,11 @@ code=OPTIMISTIC_LOCK_CONFLICT
 elapsedMs=842
 ```
 
-Message cho người đọc, field cho search/aggregation.
+Message cho người đọc, trường dữ liệu (field / 필드) cho tìm kiếm (search / 검색)/aggregation.
 
 ## 5. Không log toàn bộ DataList theo thói quen
 
-DataList có thể chứa PII, account data hoặc hàng nghìn row. Dump toàn bộ object vừa chậm vừa nguy hiểm.
+DataList có thể chứa PII, account dữ liệu (data / 데이터) hoặc hàng nghìn row. Dump toàn bộ đối tượng (object / 객체) vừa chậm vừa nguy hiểm.
 
 Log summary:
 
@@ -103,9 +106,9 @@ Chỉ bật payload detail có kiểm soát trong môi trường phù hợp.
 
 ## 6. `$p.log()` và WebSquare log
 
-WebSquare cung cấp logging/debug facility; tài liệu performance/debug mô tả log do `$p.log()` tạo với timestamp, elapsed time giữa log và elapsed time từ log đầu tiên.
+WebSquare cung cấp logging/gỡ lỗi (debug / 디버그) facility; tài liệu hiệu năng (performance / 성능)/gỡ lỗi (debug / 디버그) mô tả log do `$p.log()` tạo với timestamp, elapsed thời gian (time / 시간) giữa log và elapsed thời gian (time / 시간) từ log đầu tiên.
 
-Điều này hữu ích để đọc startup/render sequence:
+Điều này hữu ích để đọc startup/kết xuất (render / 렌더링) chuỗi (sequence / 시퀀스):
 
 ```text
 STEP1 engine load
@@ -115,34 +118,34 @@ STEP4 object creation
 ...
 ```
 
-Đừng chỉ đọc message; elapsed time giữa step giúp xác định bottleneck nằm ở engine/resource/object creation hay business request.
+Đừng chỉ đọc message; elapsed thời gian (time / 시간) giữa step giúp xác định bottleneck nằm ở engine/tài nguyên (resource / 자원)/đối tượng (object / 객체) creation hay nghiệp vụ (business / 비즈니스) yêu cầu (request / 요청).
 
-## 7. Client debug configuration
+## 7. máy khách (client / 클라이언트) gỡ lỗi (debug / 디버그) cấu hình (configuration / 구성)
 
-Trong các build tương ứng, `client.config.xml` có các setting như `debug`, `console`, `errorConsole`, `remoteConsole`, `debugKey`, `debugMenu`.
+Trong các bản dựng (build / 빌드) tương ứng, `client.config.xml` có các setting như `debug`, `console`, `errorConsole`, `remoteConsole`, `debugKey`, `debugMenu`.
 
 `remoteConsole` có thể cho phép `WebSquare.logger.sendRemoteLog` ghi log về WAS theo cấu hình tương ứng.
 
-Nhưng debug setting là operational policy. Không bật mức verbose production vô hạn chỉ vì cần điều tra một bug.
+Nhưng gỡ lỗi (debug / 디버그) setting là operational chính sách (policy / 정책). Không bật mức verbose môi trường vận hành (production / 운영 환경) vô hạn chỉ vì cần điều tra một bug.
 
-## 8. Debug context menu là evidence tool
+## 8. gỡ lỗi (debug / 디버그) ngữ cảnh (context / 맥락) menu là bằng chứng (evidence / 증거) công cụ (tool / 도구)
 
-WebSquare hỗ trợ context debug menu trong các setup phù hợp, cho phép xem log và DataCollection hiện tại. Đây là cách tốt để kiểm tra model state mà không sửa source thêm `alert()`.
+WebSquare hỗ trợ ngữ cảnh (context / 맥락) gỡ lỗi (debug / 디버그) menu trong các setup phù hợp, cho phép xem log và DataCollection hiện tại. Đây là cách tốt để kiểm tra mô hình (model / 모델) trạng thái (state / 상태) mà không sửa nguồn (source / 소스) thêm `alert()`.
 
-Khi dùng production-like environment, đảm bảo debug menu không làm lộ dữ liệu cho user không phù hợp.
+Khi dùng production-like môi trường (environment / 환경), đảm bảo gỡ lỗi (debug / 디버그) menu không làm lộ dữ liệu cho người dùng (user / 사용자) không phù hợp.
 
 ## 9. Scope-aware debugging
 
-Trong WFrame/Scope app, nhìn thấy DOM element chưa đủ để biết object thuộc page nào.
+Trong WFrame/phạm vi (scope / 범위) app, nhìn thấy DOM element chưa đủ để biết đối tượng (object / 객체) thuộc page nào.
 
-Debug utility như:
+Gỡ lỗi (debug / 디버그) utility như:
 
 ```javascript
 $p.debug.getScope($0)
 $p.debug.getFrame($0)
 ```
 
-ở các build hỗ trợ giúp map DOM đang inspect về WebSquare scope/frame.
+ở các bản dựng (build / 빌드) hỗ trợ giúp map DOM đang inspect về WebSquare phạm vi (scope / 범위)/frame.
 
 Workflow:
 
@@ -153,11 +156,11 @@ Inspect broken element
 → trace Submission/event
 ```
 
-Điều này tốt hơn thử `$p.top()` cho tới khi tìm thấy object.
+Điều này tốt hơn thử `$p.top()` cho tới khi tìm thấy đối tượng (object / 객체).
 
 ## 10. Server-side WebSquare log
 
-`server.config.xml`/engine configuration có log target, level, file, retention và các option như line/thread tùy build. Tài liệu chính thức lưu ý line number/thread logging có resource cost và không nên bật tùy tiện ở production.
+`server.config.xml`/engine cấu hình (configuration / 구성) có log mục tiêu (target / 대상), mức (level / 수준), tệp (file / 파일), retention và các option như line/luồng thực thi (thread / 스레드) tùy bản dựng (build / 빌드). Tài liệu chính thức lưu ý line number/luồng thực thi (thread / 스레드) logging có tài nguyên (resource / 자원) chi phí (cost / 비용) và không nên bật tùy tiện ở môi trường vận hành (production / 운영 환경).
 
 Operational principle:
 
@@ -167,21 +170,21 @@ log level càng chi tiết
 → I/O + storage + CPU + noise tăng
 ```
 
-Chọn level theo mục tiêu và thời gian điều tra.
+Chọn mức (level / 수준) theo mục tiêu và thời gian điều tra.
 
-## 11. Engine type ảnh hưởng khả năng debug
+## 11. Engine kiểu (type / 타입) ảnh hưởng khả năng gỡ lỗi (debug / 디버그)
 
-WebSquare engine có các `engineType` với mức remapping/debug/log khác nhau ở các dòng engine tương ứng. Một số type loại bỏ debug info hoặc logger để giảm size.
+WebSquare engine có các `engineType` với mức remapping/gỡ lỗi (debug / 디버그)/log khác nhau ở các dòng engine tương ứng. Một số kiểu (type / 타입) loại bỏ gỡ lỗi (debug / 디버그) info hoặc logger để giảm kích thước (size / 크기).
 
-Vì vậy “production không có log giống dev” có thể là behavior của artifact/config, không phải logger code bị lỗi.
+Vì vậy “môi trường vận hành (production / 운영 환경) không có log giống dev” có thể là hành vi (behavior / 동작) của sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정), không phải logger mã (code / 코드) bị lỗi.
 
-Incident report phải ghi engine build/type.
+Sự cố (incident / 인시던트) report phải ghi engine bản dựng (build / 빌드)/kiểu (type / 타입).
 
-## 12. Build identity là telemetry
+## 12. bản dựng (build / 빌드) định danh (identity / 식별자) là telemetry
 
-Một production error chỉ hữu ích khi biết code nào đang chạy.
+Một môi trường vận hành (production / 운영 환경) lỗi (error / 오류) chỉ hữu ích khi biết mã (code / 코드) nào đang chạy.
 
-Record tối thiểu:
+Bản ghi (record / 레코드) tối thiểu:
 
 ```text
 application release
@@ -193,11 +196,11 @@ server config version
 native app version nếu hybrid
 ```
 
-Nếu browser đang cache artifact cũ, Git main mới nhất không phải evidence về code user đang chạy.
+Nếu trình duyệt (browser / 브라우저) đang bộ nhớ đệm (cache / 캐시) sản phẩm tạo ra (artifact / 산출물) cũ, Git main mới nhất không phải bằng chứng (evidence / 증거) về mã (code / 코드) người dùng (user / 사용자) đang chạy.
 
-## 13. Cache mismatch signature
+## 13. bộ nhớ đệm (cache / 캐시) mismatch signature
 
-Một failure sau deploy có pattern:
+Một thất bại (failure / 실패) sau deploy có mẫu (pattern / 패턴):
 
 ```text
 HTML/shell mới
@@ -208,11 +211,11 @@ HTML/shell mới
 
 Hoặc ngược lại.
 
-Khi lỗi chỉ xảy ra ở một số user sau deploy, kiểm tra cache/resource version trước khi suy business logic.
+Khi lỗi chỉ xảy ra ở một số người dùng (user / 사용자) sau deploy, kiểm tra bộ nhớ đệm (cache / 캐시)/tài nguyên (resource / 자원) phiên bản (version / 버전) trước khi suy lô-gic nghiệp vụ (business logic / 비즈니스 로직).
 
-## 14. Network waterfall là distributed timeline
+## 14. mạng (network / 네트워크) waterfall là phân tán (distributed / 분산) timeline
 
-Network tab cho biết:
+Mạng (network / 네트워크) tab cho biết:
 
 ```text
 request start
@@ -224,13 +227,13 @@ response download
 status/header/body
 ```
 
-Nếu click → request start đã mất 2 giây, vấn đề có thể nằm client JS/render. Nếu request start ngay nhưng TTFB 5 giây, focus backend/network.
+Nếu click → yêu cầu (request / 요청) start đã mất 2 giây, vấn đề có thể nằm máy khách (client / 클라이언트) JS/kết xuất (render / 렌더링). Nếu yêu cầu (request / 요청) start ngay nhưng TTFB 5 giây, focus backend/mạng (network / 네트워크).
 
 Đừng gọi mọi thứ là “WebSquare chậm”.
 
 ## 15. Submission telemetry
 
-Một wrapper Submission có thể emit lifecycle event:
+Một wrapper Submission có thể emit vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트):
 
 ```text
 SUBMISSION_STARTED
@@ -240,15 +243,15 @@ SUBMISSION_CANCELLED
 SUBMISSION_STALE_IGNORED
 ```
 
-Fields nên gồm submission ID, request ID, screen ID, elapsed time, result class và payload size summary khi có thể.
+Fields nên gồm submission ID, yêu cầu (request / 요청) ID, screen ID, elapsed thời gian (time / 시간), kết quả (result / 결과) lớp (class / 클래스) và payload kích thước (size / 크기) summary khi có thể.
 
 Không cần log payload raw.
 
-## 16. Transport success và business failure phải tách metric
+## 16. vận chuyển (transport / 전송) success và nghiệp vụ (business / 비즈니스) thất bại (failure / 실패) phải tách chỉ số (metric / 지표)
 
-Nếu HTTP 200 nhưng business response trả validation/lock conflict, transport dashboard sẽ nhìn “100% success” trong khi user thấy lỗi.
+Nếu HTTP 200 nhưng nghiệp vụ (business / 비즈니스) phản hồi (response / 응답) trả kiểm tra hợp lệ (validation / 검증)/khóa (lock / 잠금) xung đột (conflict / 충돌), vận chuyển (transport / 전송) dashboard sẽ nhìn “100% success” trong khi người dùng (user / 사용자) thấy lỗi.
 
-Tách metric:
+Tách chỉ số (metric / 지표):
 
 ```text
 transport_error_rate
@@ -256,9 +259,9 @@ protocol_mapping_error_rate
 business_rejection_rate
 ```
 
-Ba metric trả lời ba loại vấn đề khác nhau.
+Ba chỉ số (metric / 지표) trả lời ba loại vấn đề khác nhau.
 
-## 17. Grid performance evidence
+## 17. Grid bằng chứng hiệu năng (performance evidence / 성능 증거)
 
 Grid lag cần đo:
 
@@ -272,13 +275,13 @@ browser memory
 long task
 ```
 
-Nếu Grid chỉ 100 row nhưng formatter gọi heavy function hàng chục nghìn lần do redraw, row count không phải root cause.
+Nếu Grid chỉ 100 row nhưng formatter gọi heavy hàm (function / 함수) hàng chục nghìn lần do redraw, row count không phải nguyên nhân gốc (root cause / 근본 원인).
 
-Performance chapter và Grid internals đã giải thích mechanism; observability chapter yêu cầu biến mechanism thành measurable evidence.
+Hiệu năng (performance / 성능) chapter và Grid internals đã giải thích cơ chế (mechanism / 메커니즘); khả năng quan sát (observability / 관측 가능성) chapter yêu cầu biến cơ chế (mechanism / 메커니즘) thành measurable bằng chứng (evidence / 증거).
 
-## 18. User timing mark
+## 18. người dùng (user / 사용자) timing mark
 
-Với flow quan trọng có thể tạo timing mark ở application layer:
+Với luồng (flow / 흐름) quan trọng có thể tạo timing mark ở ứng dụng (application / 애플리케이션) tầng (layer / 계층):
 
 ```text
 SEARCH_CLICK
@@ -296,11 +299,11 @@ T_client  = GRID_READY - RESPONSE_RECEIVED
 T_total   = GRID_READY - SEARCH_CLICK
 ```
 
-Không cần framework APM phức tạp để có decomposition cơ bản.
+Không cần khung phần mềm (framework / 프레임워크) APM phức tạp để có decomposition cơ bản.
 
-## 19. Long task và UI freeze
+## 19. Long tác vụ (task / 작업) và UI freeze
 
-Browser main thread freeze có thể đến từ:
+Trình duyệt (browser / 브라우저) main luồng thực thi (thread / 스레드) freeze có thể đến từ:
 
 ```text
 large JSON parse
@@ -312,13 +315,13 @@ large DOM work
 custom JavaScript loop
 ```
 
-Nếu Network nhanh nhưng click không phản hồi, capture Performance profile thay vì tối ưu SQL.
+Nếu mạng (network / 네트워크) nhanh nhưng click không phản hồi, capture hiệu năng (performance / 성능) profile thay vì tối ưu SQL.
 
-## 20. Memory incident
+## 20. bộ nhớ (memory / 메모리) sự cố (incident / 인시던트)
 
 SPA/hybrid app chạy lâu có thể leak dần.
 
-Evidence nên so sánh:
+Bằng chứng (evidence / 증거) nên so sánh:
 
 ```text
 open screen 1 lần
@@ -327,11 +330,11 @@ open/close 20 lần
 heap/object/listener count có quay về baseline không?
 ```
 
-Nếu mỗi vòng tăng cố định, tìm retained reference: global cache, timer, document listener, stale WFrame scope, large DataList closure hoặc native callback registry.
+Nếu mỗi vòng tăng cố định, tìm retained tham chiếu (reference / 참조): toàn cục (global / 전역) bộ nhớ đệm (cache / 캐시), timer, document listener, stale WFrame phạm vi (scope / 범위), large DataList closure hoặc bản địa (native / 네이티브) callback registry.
 
-## 21. Error taxonomy
+## 21. lỗi (error / 오류) taxonomy
 
-Đừng dùng một error code `SYSTEM_ERROR` cho mọi thứ.
+Đừng dùng một lỗi (error / 오류) mã (code / 코드) `SYSTEM_ERROR` cho mọi thứ.
 
 Một taxonomy hữu ích:
 
@@ -353,13 +356,13 @@ NATIVE_BRIDGE
 CONFIG_ARTIFACT_MISMATCH
 ```
 
-Taxonomy giúp dashboard và runbook map symptom sang owner.
+Taxonomy giúp dashboard và runbook map symptom sang đơn vị sở hữu (owner / 오너).
 
-## 22. Incident severity không đồng nghĩa exception severity
+## 22. sự cố (incident / 인시던트) severity không đồng nghĩa exception severity
 
-Một console exception trên optional widget có thể low impact. Một silent stale-response bug hiển thị sai account data có thể high impact dù không throw exception.
+Một console exception trên optional widget có thể low impact. Một silent stale-response bug hiển thị sai account dữ liệu (data / 데이터) có thể high impact dù không throw exception.
 
-Severity dựa trên user/business impact:
+Severity dựa trên người dùng (user / 사용자)/nghiệp vụ (business / 비즈니스) impact:
 
 ```text
 scope
@@ -369,11 +372,11 @@ security
 recoverability
 ```
 
-Không dựa chỉ vào stack trace dài.
+Không dựa chỉ vào dấu vết ngăn xếp (stack trace / 스택 트레이스) dài.
 
-## 23. First response: bảo toàn evidence
+## 23. First phản hồi (response / 응답): bảo toàn bằng chứng (evidence / 증거)
 
-Khi production incident xảy ra, trước khi restart/clear cache mọi thứ hãy thu evidence đủ:
+Khi môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) xảy ra, trước khi restart/clear bộ nhớ đệm (cache / 캐시) mọi thứ hãy thu bằng chứng (evidence / 증거) đủ:
 
 ```text
 exact time/timezone
@@ -388,11 +391,11 @@ client/server logs
 screenshot/video nếu hữu ích
 ```
 
-Restart có thể làm symptom biến mất nhưng cũng xóa state giúp tìm root cause.
+Restart có thể làm symptom biến mất nhưng cũng xóa trạng thái (state / 상태) giúp tìm nguyên nhân gốc (root cause / 근본 원인).
 
-## 24. Reproduce theo invariant, không theo click sequence duy nhất
+## 24. Reproduce theo bất biến (invariant / 불변식), không theo click chuỗi (sequence / 시퀀스) duy nhất
 
-Nếu bug xảy ra “sau khi mở tab A rồi B rồi quay lại A”, hãy hỏi invariant nào bị phá:
+Nếu bug xảy ra “sau khi mở tab A rồi B rồi quay lại A”, hãy hỏi bất biến (invariant / 불변식) nào bị phá:
 
 ```text
 scope identity?
@@ -402,11 +405,11 @@ late Submission response?
 DataList shared nhầm?
 ```
 
-Sau đó tạo minimal reproduction tập trung invariant đó.
+Sau đó tạo minimal reproduction tập trung bất biến (invariant / 불변식) đó.
 
 ## 25. Differential diagnosis
 
-So sánh môi trường/điều kiện giúp giảm search space:
+So sánh môi trường/điều kiện giúp giảm tìm kiếm (search / 검색) không gian (space / 공간):
 
 ```text
 user A fail / user B pass
@@ -417,11 +420,11 @@ small data pass / large data fail
 app 5.4 pass / app 5.2 fail
 ```
 
-Mỗi contrast là evidence về layer có khả năng liên quan.
+Mỗi contrast là bằng chứng (evidence / 증거) về tầng (layer / 계층) có khả năng liên quan.
 
-## 26. Binary search configuration
+## 26. tìm kiếm nhị phân (binary search / 이진 탐색) cấu hình (configuration / 구성)
 
-Khi nghi config/build, đừng đổi 10 option cùng lúc. Thay một dimension hoặc bisect version.
+Khi nghi cấu hình (config / 설정)/bản dựng (build / 빌드), đừng đổi 10 option cùng lúc. Thay một dimension hoặc bisect phiên bản (version / 버전).
 
 ```text
 engine build N pass
@@ -430,9 +433,9 @@ engine build N+4 fail
 → thu hẹp release introducing behavior
 ```
 
-Đây là version bisection, áp dụng được cho engine, common JS và app build.
+Đây là phiên bản (version / 버전) bisection, áp dụng được cho engine, dùng chung (common / 공통) JS và app bản dựng (build / 빌드).
 
-## 27. Production hotfix phải có rollback path
+## 27. môi trường vận hành (production / 운영 환경) hotfix phải có quay lui (rollback / 롤백) đường dẫn (path / 경로)
 
 Một hotfix không nên chỉ hỏi “fix được chưa?” mà còn:
 
@@ -444,13 +447,13 @@ DB migration có reversible không?
 native app có thể rollback không?
 ```
 
-Web resource rollback nhanh hơn native store release, nên hybrid compatibility càng quan trọng.
+Web tài nguyên (resource / 자원) quay lui (rollback / 롤백) nhanh hơn bản địa (native / 네이티브) store bản phát hành (release / 릴리스), nên hybrid tính tương thích (compatibility / 호환성) càng quan trọng.
 
 ## 28. Runbook theo symptom
 
-Runbook tốt bắt đầu từ symptom user thấy.
+Runbook tốt bắt đầu từ symptom người dùng (user / 사용자) thấy.
 
-Ví dụ “Grid trống sau Search”:
+Ví dụ “Grid trống sau tìm kiếm (search / 검색)”:
 
 ```text
 1. event có chạy?
@@ -463,7 +466,7 @@ Ví dụ “Grid trống sau Search”:
 8. scope đúng instance?
 ```
 
-Runbook encode knowledge để on-call không cần nhớ mọi API.
+Runbook encode kiến thức (knowledge / 지식) để on-call không cần nhớ mọi API.
 
 ## 29. Runbook: Save quay mãi
 
@@ -478,7 +481,7 @@ stale request guard có drop callback không?
 loading reset ở finally-equivalent path không?
 ```
 
-Nếu Network không có request, đừng điều tra DB.
+Nếu mạng (network / 네트워크) không có yêu cầu (request / 요청), đừng điều tra DB.
 
 ## 30. Runbook: chỉ lỗi sau deploy
 
@@ -492,7 +495,7 @@ CDN node khác nhau?
 API contract deploy order?
 ```
 
-Deployment incident thường là artifact graph problem, không chỉ source code problem.
+Triển khai (deployment / 배포) sự cố (incident / 인시던트) thường là sản phẩm tạo ra (artifact / 산출물) đồ thị (graph / 그래프) bài toán (problem / 문제), không chỉ mã nguồn (source code / 소스 코드) bài toán (problem / 문제).
 
 ## 31. Runbook: hybrid callback không về
 
@@ -509,11 +512,11 @@ deep link/callback route đúng?
 web build ↔ native version compatible?
 ```
 
-Trace theo boundary thay vì restart app nhiều lần.
+Dấu vết (trace / 추적) theo ranh giới (boundary / 경계) thay vì restart app nhiều lần.
 
-## 32. Security incident logging
+## 32. bảo mật (security / 보안) sự cố (incident / 인시던트) logging
 
-Security log cần đủ để audit nhưng không tự tạo data leak.
+Bảo mật (security / 보안) log cần đủ để kiểm tra (audit / 감사) nhưng không tự tạo dữ liệu (data / 데이터) leak.
 
 Không log:
 
@@ -525,11 +528,11 @@ raw biometric/eKYC image
 private document body
 ```
 
-Có thể log masked identifier, hash/token fingerprint hoặc internal request ID tùy policy.
+Có thể log masked identifier, băm (hash / 해시)/đơn vị từ (token / 토큰) fingerprint hoặc nội bộ (internal / 내부) yêu cầu (request / 요청) ID tùy chính sách (policy / 정책).
 
-## 33. Metrics nên gắn với user journey
+## 33. Metrics nên gắn với người dùng (user / 사용자) journey
 
-Framework metric hữu ích, nhưng business journey metric còn quan trọng hơn:
+Khung phần mềm (framework / 프레임워크) chỉ số (metric / 지표) hữu ích, nhưng nghiệp vụ (business / 비즈니스) journey chỉ số (metric / 지표) còn quan trọng hơn:
 
 ```text
 search success latency
@@ -539,9 +542,9 @@ export job completion time
 eKYC completion/drop-off
 ```
 
-Nếu engine khỏe nhưng 30% user không hoàn thành Save, hệ thống vẫn có vấn đề.
+Nếu engine khỏe nhưng 30% người dùng (user / 사용자) không hoàn thành Save, hệ thống vẫn có vấn đề.
 
-## 34. SLO và error budget ở mức thực dụng
+## 34. SLO và lỗi (error / 오류) ngân sách (budget / 예산) ở mức thực dụng
 
 Không cần bắt đầu bằng hệ thống SRE lớn. Có thể định nghĩa:
 
@@ -551,36 +554,36 @@ Không cần bắt đầu bằng hệ thống SRE lớn. Có thể định nghĩ
 99% screen load < 3s
 ```
 
-Sau đó đo và xem regression theo release.
+Sau đó đo và xem regression theo bản phát hành (release / 릴리스).
 
-SLO buộc team định nghĩa “nhanh” và “ổn định” bằng số thay vì cảm giác.
+SLO buộc nhóm (team / 팀) định nghĩa “nhanh” và “ổn định” bằng số thay vì cảm giác.
 
 ## 35. Alert phải actionable
 
-Alert “error count > 10” có thể noisy. Alert tốt gắn với impact và context:
+Alert “lỗi (error / 오류) count > 10” có thể noisy. Alert tốt gắn với impact và ngữ cảnh (context / 맥락):
 
 ```text
 Save system failure rate > 2% trong 5 phút
 AND traffic > minimum threshold
 ```
 
-Alert nên dẫn tới dashboard/runbook có request IDs và release version.
+Alert nên dẫn tới dashboard/runbook có yêu cầu (request / 요청) IDs và bản phát hành (release / 릴리스) phiên bản (version / 버전).
 
-## 36. Root cause vs trigger
+## 36. nguyên nhân gốc (root cause / 근본 원인) vs trigger
 
-Ví dụ incident xảy ra sau khi user double-click Save.
+Ví dụ sự cố (incident / 인시던트) xảy ra sau khi người dùng (user / 사용자) double-click Save.
 
 Trigger là double-click.
 
-Root cause có thể là mutation endpoint không idempotent.
+Nguyên nhân gốc (root cause / 근본 원인) có thể là mutation endpoint không idempotent.
 
-Nếu fix chỉ disable button, automation/retry khác vẫn tạo duplicate. Root cause fix phải bảo vệ invariant ở authoritative layer.
+Nếu fix chỉ disable button, automation/thử lại (retry / 재시도) khác vẫn tạo duplicate. nguyên nhân gốc (root cause / 근본 원인) fix phải bảo vệ bất biến (invariant / 불변식) ở authoritative tầng (layer / 계층).
 
-## 37. Five-whys phải dừng ở actionable system cause
+## 37. Five-whys phải dừng ở actionable hệ thống (system / 시스템) cause
 
-Đừng kết thúc RCA bằng “developer quên check null”. Hỏi tại sao null có thể đi tới đây mà không contract/test/guard.
+Đừng kết thúc RCA bằng “nhà phát triển (developer / 개발자) quên check null”. Hỏi tại sao null có thể đi tới đây mà không đặc tả hợp đồng (contract / 계약)/kiểm thử (test / 테스트)/guard.
 
-RCA tốt dẫn tới control:
+RCA tốt dẫn tới điều khiển (control / 제어):
 
 ```text
 schema validation
@@ -593,9 +596,9 @@ release guard
 
 Không biến RCA thành blame document.
 
-## 38. Regression guard sau incident
+## 38. Regression guard sau sự cố (incident / 인시던트)
 
-Mỗi serious incident nên để lại ít nhất một guard phù hợp:
+Mỗi serious sự cố (incident / 인시던트) nên để lại ít nhất một guard phù hợp:
 
 ```text
 automated test
@@ -606,11 +609,11 @@ architecture constraint
 migration checklist
 ```
 
-Nếu hệ thống có thể tái phát y hệt mà không ai phát hiện sớm hơn, incident chưa thực sự được “học”.
+Nếu hệ thống có thể tái phát y hệt mà không ai phát hiện sớm hơn, sự cố (incident / 인시던트) chưa thực sự được “học”.
 
-## 39. Evidence bundle cho support
+## 39. bằng chứng (evidence / 증거) bundle cho hỗ trợ (support / 지원)
 
-Một support bundle có thể gồm:
+Một hỗ trợ (support / 지원) bundle có thể gồm:
 
 ```text
 release/build metadata
@@ -624,11 +627,11 @@ backend log slice
 performance trace nếu là latency
 ```
 
-Bundle chuẩn hóa giúp chuyển issue giữa frontend/backend/platform mà không mất context.
+Bundle chuẩn hóa giúp chuyển issue giữa frontend/backend/nền tảng (platform / 플랫폼) mà không mất ngữ cảnh (context / 맥락).
 
-## 40. Master incident mental model
+## 40. Master sự cố (incident / 인시던트) mô hình tư duy (mental model / 사고 모델)
 
-Khi nhận bug production, đi theo thứ tự:
+Khi nhận bug môi trường vận hành (production / 운영 환경), đi theo thứ tự:
 
 ```text
 1. Xác định impact và invariant bị phá.
@@ -643,14 +646,16 @@ Khi nhận bug production, đi theo thứ tự:
 10. Cập nhật runbook/telemetry nếu evidence ban đầu thiếu.
 ```
 
-Đây là production reasoning quan trọng hơn việc nhớ thêm một API.
+Đây là môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) quan trọng hơn việc nhớ thêm một API.
 
 ## 41. Kết nối
 
-Chapter này tổng hợp evidence từ [06 — Debugging, Performance & Security](06_debugging_performance_security.md), lifecycle từ [10 — Rendering & Lifetime](10_rendering_lazy_loading_lifetime.md), regression từ [11 — Testing](11_testing_testability_regression.md), artifact identity từ [12 — Build/Deployment](12_build_config_deployment.md), backend consistency từ [15](15_backend_contract_transaction_concurrency.md), file pipeline từ [17](17_file_excel_upload_download_pipeline.md) và hybrid boundary từ [18](18_hybrid_webview_native_bridge.md).
+Chapter này tổng hợp bằng chứng (evidence / 증거) từ [06 — Debugging, Performance & Security](06_debugging_performance_security.md), vòng đời (lifecycle / 생명주기) từ [10 — Rendering & Lifetime](10_rendering_lazy_loading_lifetime.md), regression từ [11 — Testing](11_testing_testability_regression.md), sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자) từ [12 — Build/Deployment](12_build_config_deployment.md), backend consistency từ [15](15_backend_contract_transaction_concurrency.md), tệp (file / 파일) chuỗi xử lý (pipeline / 파이프라인) từ [17](17_file_excel_upload_download_pipeline.md) và hybrid ranh giới (boundary / 경계) từ [18](18_hybrid_webview_native_bridge.md).
 
-Các mental model này được hợp nhất thành quy trình senior/master ở [16 — Master Production Playbook](16_master_production_playbook.md).
+Các mô hình tư duy (mental model / 사고 모델) này được hợp nhất thành quy trình cấp cao (senior / 시니어)/master ở [16 — Master Production Playbook](16_master_production_playbook.md).
 
 ## 42. Mastery checkpoint
 
-Bạn đã master observability khi một bug “thỉnh thoảng xảy ra ở production” không còn khiến bạn bắt đầu bằng thêm `alert()` hoặc đoán API. Bạn biết yêu cầu build identity, dựng timeline, phân loại failure domain, dùng correlation ID, đo latency theo stage, bảo toàn evidence và biến mỗi incident nghiêm trọng thành test/metric/runbook để lần sau phát hiện sớm hơn.
+Bạn đã master khả năng quan sát (observability / 관측 가능성) khi một bug “thỉnh thoảng xảy ra ở môi trường vận hành (production / 운영 환경)” không còn khiến bạn bắt đầu bằng thêm `alert()` hoặc đoán API. Bạn biết yêu cầu bản dựng (build / 빌드) định danh (identity / 식별자), dựng timeline, phân loại miền lỗi (failure domain / 장애 도메인), dùng correlation ID, đo độ trễ (latency / 지연 시간) theo stage, bảo toàn bằng chứng (evidence / 증거) và biến mỗi sự cố (incident / 인시던트) nghiêm trọng thành kiểm thử (test / 테스트)/chỉ số (metric / 지표)/runbook để lần sau phát hiện sớm hơn.
+
+> **Bàn giao:** Sau **42. Mastery checkpoint**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

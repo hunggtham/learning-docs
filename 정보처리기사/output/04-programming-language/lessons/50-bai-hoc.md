@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **252. 다중 if문 (Multiple if Statement)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,14 +20,16 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** và nối nó với **252. 다중 if문 (Multiple if Statement)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
-- **IPv4 헤더 필드**: Version, Header Length, TOS, Total Length, TTL (수명), Source/Destination Address 등.
+- **IPv4 헤더 필드**: phiên bản (version / 버전), Header Length, TOS, Total Length, TTL (수명), nguồn (source / 소스)/Destination Address 등.
 - **IPv4 클래스**:
-  - Class A: `0.~` (거대 망)
-  - Class B: `128.~` (중형 망)
-  - Class C: `192.~` (소형 망)
+  - lớp (class / 클래스) A: `0.~` (거대 망)
+  - lớp (class / 클래스) B: `128.~` (중형 망)
+  - lớp (class / 클래스) C: `192.~` (소형 망)
 - **IPv4 vs IPv6**:
   - 주소 길이: IPv4(32비트) -> **IPv6(128비트)** 확장.
   - IPv6 특징: 호스트 주소 자동 설정 지원, 기본 헤더 단순화, 플로 레이블링(QoS) 필드, 이동성 지원. 패킷 크기는 IPv6의 최대 패킷 크기와 경로 MTU 규칙을 따르며, IPsec 지원이 정의되어도 사용 여부는 별도 설정이다.

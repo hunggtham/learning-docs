@@ -1,5 +1,8 @@
 # Greedy nâng cao: Matroid, Primal–Dual và Xấp xỉ
-**Advanced Greedy Optimization / 고급 그리디 최적화**
+
+> **Mạch đọc:** Đọc **Greedy nâng cao: Matroid, Primal–Dual và Xấp xỉ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Greedy đúng không phải vì lựa chọn cục bộ trông tốt** sang **2. Hệ độc lập**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**Advanced Greedy tối ưu hóa (optimization / 최적화) / 고급 그리디 최적화**
 
 Các ví dụ greedy cơ bản như lập lịch khoảng, Kruskal hay Huffman cho thấy một lựa chọn cục bộ đôi khi có thể khóa vĩnh viễn mà vẫn giữ tối ưu toàn cục. Nhưng để hiểu greedy sâu hơn, cần trả lời câu hỏi cấu trúc:
 
@@ -70,7 +73,7 @@ Greedy:
 2. duyệt theo thứ tự;
 3. thêm phần tử nếu tập vẫn độc lập.
 
-Trong matroid, exchange property cho phép biến đổi một nghiệm tối ưu thành nghiệm chứa dần các lựa chọn greedy mà không giảm tổng trọng số.
+Trong matroid, exchange thuộc tính (property / 속성) cho phép biến đổi một nghiệm tối ưu thành nghiệm chứa dần các lựa chọn greedy mà không giảm tổng trọng số.
 
 Đây là một định lý rất mạnh: greedy không đúng “do may mắn” cho từng bài riêng; nó đúng cho **cả một lớp cấu trúc**.
 
@@ -80,7 +83,7 @@ Với đồ thị, tập cạnh không tạo chu trình là independent set. Đ�
 
 Kruskal sắp cạnh theo trọng số tăng dần và thêm cạnh nếu không tạo chu trình. Nếu đổi dấu trọng số hoặc nhìn theo maximum spanning forest, đây chính là greedy trên graphic matroid.
 
-DSU chỉ là công cụ kiểm tra independence nhanh; correctness đến từ cấu trúc matroid/cut property.
+DSU chỉ là công cụ kiểm tra independence nhanh; tính đúng đắn (correctness / 정확성) đến từ cấu trúc matroid/cut thuộc tính (property / 속성).
 
 Điều này giúp phân biệt:
 
@@ -108,7 +111,7 @@ Greedy theo trọng số giảm dần và chỉ thêm phần tử khi quota nhó
 
 Nhiều bài toán khó hơn có thể được diễn tả là phải thỏa đồng thời hai family độc lập. Khi đó greedy đơn giản không còn được bảo đảm.
 
-Ví dụ matching hai phía có thể liên hệ tới intersection của các partition-like constraints: một đỉnh trái và một đỉnh phải đều không được dùng quá một lần.
+Ví dụ matching hai phía có thể liên hệ tới intersection của các partition-like các ràng buộc (constraints / 제약조건들): một đỉnh trái và một đỉnh phải đều không được dùng quá một lần.
 
 Matroid intersection là bài toán mạnh hơn greedy đơn giản và cần thuật toán chuyên biệt.
 
@@ -122,7 +125,7 @@ Matroid giả định mọi subset của independent set vẫn độc lập. Nh�
 
 **Greedoid** là một cấu trúc tổng quát hơn cho một số bài toán dạng khả năng đạt tới hoặc xây dựng từng bước.
 
-Không cần đi sâu hình thức để sử dụng hằng ngày, nhưng khái niệm này nhắc rằng “exchange structure” có nhiều mức độ; matroid không phải khuôn duy nhất.
+Không cần đi sâu hình thức để sử dụng hằng ngày, nhưng khái niệm này nhắc rằng “exchange cấu trúc (structure / 구조)” có nhiều mức độ; matroid không phải khuôn duy nhất.
 
 ## 9. Primal–Dual: nhìn greedy qua cặp bài toán
 
@@ -160,7 +163,7 @@ Greedy không luôn tối ưu, nhưng có bảo đảm xấp xỉ logarithmic.
 Nếu mỗi tập có chi phí `c(S)`, một tiêu chí tự nhiên là:
 
 \[
-\frac{c(S)}{\text{số phần tử mới được phủ}}
+\frac{c(S)}{\văn bản (text / 텍스트){số phần tử mới được phủ}}
 \]
 
 chọn tập có chi phí trên mỗi coverage mới thấp nhất.
@@ -173,7 +176,7 @@ Trong weighted Vertex Cover, có thể tăng giá dual trên các cạnh cho t�
 
 Các cạnh “trả tiền” dần cho các đỉnh. Khi một đỉnh trở nên tight, nó được đưa vào nghiệm.
 
-Cách nhìn này rất khác greedy theo score thuần túy nhưng vẫn mang tinh thần local, monotonic và có certificate.
+Cách nhìn này rất khác greedy theo score thuần túy nhưng vẫn mang tinh thần cục bộ (local / 로컬), monotonic và có certificate.
 
 ## 13. Diminishing Returns và hàm submodular
 
@@ -212,7 +215,7 @@ có cấu trúc submodular hoặc gần submodular.
 
 Tính lại marginal gain của mọi phần tử sau mỗi bước có thể đắt.
 
-Vì submodularity làm marginal gain chỉ giảm, ta có thể giữ một max-heap theo upper bound cũ. Khi một ứng viên lên đầu, tính lại gain hiện tại; nếu nó vẫn lớn nhất, chọn nó, nếu không cập nhật rồi đưa lại heap.
+Vì submodularity làm marginal gain chỉ giảm, ta có thể giữ một max-heap theo upper bound cũ. Khi một ứng viên lên đầu, tính lại gain hiện tại; nếu nó vẫn lớn nhất, chọn nó, nếu không cập nhật rồi đưa lại vùng nhớ động (heap / 힙).
 
 Đây là **lazy greedy**.
 
@@ -220,9 +223,9 @@ Cấu trúc toán học (marginal gain chỉ giảm) cho phép giảm số lần
 
 ## 16. Greedy và Online Algorithms
 
-Trong bài online, quyết định phải đưa ra trước khi biết tương lai. Một greedy rule có thể hợp lý nhưng không còn được so trực tiếp với optimal offline theo cùng thông tin.
+Trong bài online, quyết định phải đưa ra trước khi biết tương lai. Một greedy quy tắc (rule / 규칙) có thể hợp lý nhưng không còn được so trực tiếp với optimal offline theo cùng thông tin.
 
-Ta dùng **competitive ratio** để so chi phí online với nghiệm tối ưu biết trước toàn bộ input.
+Ta dùng **competitive ratio** để so chi phí online với nghiệm tối ưu biết trước toàn bộ đầu vào (input / 입력).
 
 Ví dụ caching/paging dẫn tới các chính sách như LRU, FIFO và các kết quả cạnh tranh tùy mô hình.
 
@@ -240,13 +243,13 @@ Ta thuê mỗi ngày hoặc mua một lần. Không biết sẽ dùng bao lâu.
 
 Một chiến lược xác định: thuê cho tới khi tổng tiền thuê gần bằng giá mua, sau đó mua.
 
-Chiến lược này không luôn tối ưu cho từng input, nhưng có competitive ratio bị chặn.
+Chiến lược này không luôn tối ưu cho từng đầu vào (input / 입력), nhưng có competitive ratio bị chặn.
 
 Đây là ví dụ tốt để hiểu rằng khi tương lai bị ẩn, “tối ưu tuyệt đối” không còn là tiêu chuẩn phù hợp.
 
 ## 18. Greedy và Streaming
 
-Trong streaming, bộ nhớ hạn chế khiến ta không thể giữ toàn bộ ứng viên. Các thuật toán như Misra–Gries, Space-Saving hoặc một số sampling scheme duy trì tóm lược theo rule cục bộ.
+Trong streaming, bộ nhớ hạn chế khiến ta không thể giữ toàn bộ ứng viên. Các thuật toán như Misra–Gries, Space-Saving hoặc một số sampling scheme duy trì tóm lược theo quy tắc (rule / 규칙) cục bộ.
 
 Một lựa chọn cục bộ trong streaming thường phải được đánh giá theo:
 
@@ -257,19 +260,19 @@ mergeability
 one-pass constraint
 ```
 
-chứ không chỉ objective combinatorial cổ điển.
+chứ không chỉ mục tiêu (objective / 목표) combinatorial cổ điển.
 
-## 19. Exchange Graph
+## 19. Exchange đồ thị (graph / 그래프)
 
-Trong một số bài tối ưu, ta có thể xây **exchange graph** giữa phần tử đang chọn và chưa chọn. Một đường đi trong exchange graph mô tả chuỗi thay thế giữ feasibility.
+Trong một số bài tối ưu, ta có thể xây **exchange đồ thị (graph / 그래프)** giữa phần tử đang chọn và chưa chọn. Một đường đi trong exchange đồ thị (graph / 그래프) mô tả chuỗi thay thế giữ feasibility.
 
 Matroid intersection, matching và local-improvement algorithms có thể được hiểu theo cách này.
 
-Đây là cầu nối giữa greedy, augmenting path và tối ưu tổ hợp.
+Đây là cầu nối giữa greedy, augmenting đường dẫn (path / 경로) và tối ưu tổ hợp.
 
-## 20. Local Search khác Greedy ở đâu?
+## 20. cục bộ (local / 로컬) tìm kiếm (search / 검색) khác Greedy ở đâu?
 
-Greedy xây nghiệm một chiều và không quay lại. **Local Search** bắt đầu từ một nghiệm rồi thực hiện các phép thay đổi cục bộ để cải thiện.
+Greedy xây nghiệm một chiều và không quay lại. **cục bộ (local / 로컬) tìm kiếm (search / 검색)** bắt đầu từ một nghiệm rồi thực hiện các phép thay đổi cục bộ để cải thiện.
 
 Ví dụ:
 
@@ -279,13 +282,13 @@ Ví dụ:
 k-exchange
 ```
 
-Một nghiệm local optimum không nhất thiết global optimum. Nhưng với một số bài, local search có approximation guarantee.
+Một nghiệm cục bộ (local / 로컬) optimum không nhất thiết toàn cục (global / 전역) optimum. Nhưng với một số bài, cục bộ (local / 로컬) tìm kiếm (search / 검색) có approximation guarantee.
 
-Greedy và local search đều dùng quyết định cục bộ, nhưng không nên trộn lẫn hai paradigm.
+Greedy và cục bộ (local / 로컬) tìm kiếm (search / 검색) đều dùng quyết định cục bộ, nhưng không nên trộn lẫn hai paradigm.
 
-## 21. Greedy + Binary Search
+## 21. Greedy + tìm kiếm nhị phân (binary search / 이진 탐색)
 
-Có những bài tối ưu không greedy trực tiếp theo objective, nhưng bài **kiểm tra tính khả thi** ở một ngưỡng lại greedy được.
+Có những bài tối ưu không greedy trực tiếp theo mục tiêu (objective / 목표), nhưng bài **kiểm tra tính khả thi** ở một ngưỡng lại greedy được.
 
 Mẫu:
 
@@ -297,25 +300,25 @@ greedy check: có đạt được X không?
 
 Ví dụ chia mảng thành số đoạn giới hạn với maximum sum không vượt `X`, hoặc đặt đối tượng với khoảng cách tối thiểu `X` dưới một số ràng buộc.
 
-Greedy lúc này là oracle feasibility, còn binary search xử lý không gian objective.
+Greedy lúc này là oracle feasibility, còn tìm kiếm nhị phân (binary search / 이진 탐색) xử lý không gian mục tiêu (objective / 목표).
 
-## 22. Greedy + Heap
+## 22. Greedy + vùng nhớ động (heap / 힙)
 
-Một pattern mạnh:
+Một mẫu (pattern / 패턴) mạnh:
 
-1. sắp xếp sự kiện theo deadline/time;
-2. thêm ứng viên hiện tại vào heap;
-3. nếu constraint bị vi phạm, loại phần tử tệ nhất đang chọn.
+1. sắp xếp sự kiện theo deadline/thời gian (time / 시간);
+2. thêm ứng viên hiện tại vào vùng nhớ động (heap / 힙);
+3. nếu ràng buộc (constraint / 제약조건) bị vi phạm, loại phần tử tệ nhất đang chọn.
 
-Ví dụ chọn nhiều task nhất dưới deadline với duration khác nhau: sort theo deadline, thêm duration vào max-heap, nếu tổng thời gian vượt deadline thì bỏ task dài nhất.
+Ví dụ chọn nhiều tác vụ (task / 작업) nhất dưới deadline với duration khác nhau: sort theo deadline, thêm duration vào max-heap, nếu tổng thời gian vượt deadline thì bỏ tác vụ (task / 작업) dài nhất.
 
-Invariant là sau mỗi prefix deadline, ta giữ một tập task khả thi có số lượng tối đa, và trong số đó tổng duration nhỏ nhất theo exchange reasoning.
+Bất biến (invariant / 불변식) là sau mỗi prefix deadline, ta giữ một tập tác vụ (task / 작업) khả thi có số lượng tối đa, và trong số đó tổng duration nhỏ nhất theo exchange lập luận (reasoning / 추론).
 
 ## 23. Greedy + DSU
 
 Kruskal là ví dụ rõ nhất: greedy quyết định thứ tự cạnh; DSU chỉ bảo vệ feasibility “không tạo chu trình”.
 
-Một pattern rộng hơn là:
+Một mẫu (pattern / 패턴) rộng hơn là:
 
 ```text
 sort candidates theo score
@@ -323,7 +326,7 @@ greedy scan
 DSU/bitset/tree kiểm tra constraint nhanh
 ```
 
-Cấu trúc dữ liệu phụ trợ không tạo correctness; nó làm phép kiểm tra greedy nhanh hơn.
+Cấu trúc dữ liệu phụ trợ không tạo tính đúng đắn (correctness / 정확성); nó làm phép kiểm tra greedy nhanh hơn.
 
 ## 24. Những tín hiệu greedy có thể đúng
 
@@ -356,7 +359,7 @@ objective phụ thuộc toàn bộ lịch sử
 
 ## 26. Kiểm thử một ý tưởng Greedy
 
-Trước khi viết chứng minh dài, hãy dùng brute force trên input nhỏ để tìm phản ví dụ.
+Trước khi viết chứng minh dài, hãy dùng brute force trên đầu vào (input / 입력) nhỏ để tìm phản ví dụ.
 
 Quy trình:
 
@@ -367,17 +370,17 @@ chạy exhaustive search / DP oracle
 so sánh objective
 ```
 
-Nếu tìm phản ví dụ, rule sai. Nếu không tìm thấy, đó vẫn chưa phải chứng minh, nhưng giúp lọc heuristic yếu rất nhanh.
+Nếu tìm phản ví dụ, quy tắc (rule / 규칙) sai. Nếu không tìm thấy, đó vẫn chưa phải chứng minh, nhưng giúp lọc heuristic yếu rất nhanh.
 
-Property-based generation nên tập trung vào trường hợp hòa, giá trị cực đoan và input làm các lựa chọn cục bộ cạnh tranh sát nhau.
+Property-based generation nên tập trung vào trường hợp hòa, giá trị cực đoan và đầu vào (input / 입력) làm các lựa chọn cục bộ cạnh tranh sát nhau.
 
 ## 27. Chứng chỉ tối ưu
 
 Một lời giải greedy mạnh đôi khi tạo kèm certificate.
 
-MST có cut/cycle property. Primal–dual có dual solution. Scheduling có exchange/stays-ahead argument. Matching có augmenting-path characterization.
+MST có cut/cycle thuộc tính (property / 속성). Primal–dual có dual solution. Scheduling có exchange/stays-ahead argument. Matching có augmenting-path characterization.
 
-Trong production optimization, certificate hữu ích vì giúp audit: không chỉ có answer mà còn có lý do answer đạt một cận đã biết.
+Trong môi trường vận hành (production / 운영 환경) tối ưu hóa (optimization / 최적화), certificate hữu ích vì giúp kiểm tra (audit / 감사): không chỉ có answer mà còn có lý do answer đạt một cận đã biết.
 
 ## Mô hình tư duy
 
@@ -395,3 +398,5 @@ Bài là offline hay online?
 ```
 
 Xem thêm: [Greedy cơ bản](./04_greedy_algorithms.md), [MST](../03_graphs/03_minimum_spanning_trees.md), [Network Flow & Matching](../03_graphs/08_network_flow_and_matching.md), [Hard Problems & Approximation](./09_hard_problems_reductions_and_approximation.md), [Selection & Top-K](./06_selection_and_top_k.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

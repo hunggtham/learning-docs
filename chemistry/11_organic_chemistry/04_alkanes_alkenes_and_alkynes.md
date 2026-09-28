@@ -1,5 +1,8 @@
 # Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi
 
+> **Mạch đọc:** Đọc **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ankan — không “trơ”, mà thiếu vị trí phản ứng dễ tiếp cận** sang **Liên kết C–H không hoàn toàn tương đương**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Hydrocarbon là hệ đơn giản nhất để thấy một nguyên lý lớn của hóa học hữu cơ: chỉ cần thay đổi kiểu liên kết từ hệ chỉ có sigma sang hệ chứa pi, hình học, phân bố electron, độ acid và con đường phản ứng thay đổi mạnh. Vì vậy chương này không nên được học như danh sách phản ứng của ankan, anken và ankin; nó là bài học về cách **kiểu liên kết quyết định khả năng phản ứng**.
 
 Prerequisite quan trọng là [carbon và cấu trúc hữu cơ](./00_carbon_and_organic_structures.md), [cơ chế phản ứng hữu cơ](./03_organic_reaction_mechanisms.md), [động học hóa học](../06_chemical_kinetics/00_reaction_rates.md) và [năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md).
@@ -91,14 +94,14 @@ Brom hóa thường chọn lọc hơn chlor hóa đối với C–H bậc cao.
 
 Bước lấy H bởi \(Br\cdot\) thường thu năng lượng hơn, nên trạng thái chuyển tiếp mang nhiều đặc tính giống sản phẩm gốc tự do hơn. Theo **tiên đề Hammond (Hammond postulate)**, khác biệt độ bền giữa các gốc tiềm năng ảnh hưởng rõ hơn tới năng lượng hoạt hóa.
 
-Do đó có một trade-off điển hình:
+Do đó có một sự đánh đổi (trade-off / 트레이드오프) điển hình:
 
 ```text
 chlor hóa → nhanh hơn, kém chọn lọc hơn
 brom hóa  → chậm hơn, chọn lọc hơn
 ```
 
-Đây là cách reasoning tốt hơn việc học thuộc bảng tỉ lệ sản phẩm.
+Đây là cách lập luận (reasoning / 추론) tốt hơn việc học thuộc bảng tỉ lệ sản phẩm.
 
 ## Cấu dạng của ankan mạch hở
 
@@ -191,7 +194,7 @@ Các yếu tố ảnh hưởng độ bền anken gồm:
 
 Anken thế nhiều thường được ổn định bởi siêu liên hợp. Đồng phân `E` thường bền hơn `Z` khi giảm đẩy lập thể, nhưng không nên coi đây là quy tắc không ngoại lệ.
 
-## Cộng HX và logic Markovnikov
+## Cộng HX và lô-gic (logic / 논리) Markovnikov
 
 Một mô hình ion đơn giản:
 
@@ -242,7 +245,7 @@ Thường tạo alcohol anti-Markovnikov với cộng syn tổng thể.
 
 Sự chọn lọc xuất phát từ trạng thái chuyển tiếp bốn tâm và phân cực của liên kết B–H, không phải một quy tắc vị trí tùy ý.
 
-Ba phương pháp minh họa trade-off cơ chế:
+Ba phương pháp minh họa sự đánh đổi (trade-off / 트레이드오프) cơ chế:
 
 ```text
 cùng mục tiêu “thêm H và OH”
@@ -272,7 +275,7 @@ Peracid có thể chuyển anken thành epoxide qua quá trình chuyển oxygen 
 
 Epoxide sau đó có thể mở vòng:
 
-- trong môi trường base: tác nhân ái nhân thường tấn công carbon ít thế hơn;
+- trong môi trường cơ sở (base / 기반): tác nhân ái nhân thường tấn công carbon ít thế hơn;
 - trong môi trường acid: sau proton hóa, carbon thế nhiều hơn có thể mang đặc tính carbocation lớn hơn.
 
 Dihydroxyl hóa syn có thể dùng \(OsO_4\) hoặc hệ tương tự. Diol anti có thể thu qua epoxid hóa rồi mở vòng.
@@ -336,7 +339,7 @@ Carbon `sp` có hình học tuyến tính và thành phần s lớn hơn `sp²/s
 
 ## Độ acid của ankin đầu mạch
 
-Ankin đầu mạch có \(pK_a\) xấp xỉ 25, acid hơn anken và ankan nhưng vẫn cần base mạnh để khử proton đáng kể.
+Ankin đầu mạch có \(pK_a\) xấp xỉ 25, acid hơn anken và ankan nhưng vẫn cần cơ sở (base / 기반) mạnh để khử proton đáng kể.
 
 Ví dụ:
 
@@ -456,7 +459,7 @@ B gắn ưu tiên carbon ít thế hơn
 → thu alcohol anti-Markovnikov
 ```
 
-Ví dụ này cho thấy lựa chọn thuốc thử phải bắt đầu từ regioselectivity và mechanism, không từ việc nhớ “reagent nào thêm nước”.
+Ví dụ này cho thấy lựa chọn thuốc thử phải bắt đầu từ regioselectivity và cơ chế (mechanism / 메커니즘), không từ việc nhớ “reagent nào thêm nước”.
 
 ## Những hiểu lầm thường gặp
 
@@ -501,3 +504,5 @@ carbon sp
 Từ mô hình này, nhiều phản ứng có thể được suy luận thay vì ghi nhớ từng thuốc thử riêng lẻ.
 
 Xem tiếp: [Hóa học thơm](./05_aromatic_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,14 +1,17 @@
-# Lock manager, predicate locking và serializable isolation
+# Khóa (lock / 잠금) manager, predicate locking và serializable isolation
 
-MVCC giúp nhiều transaction đọc/ghi đồng thời, nhưng isolation mạnh vẫn cần cơ chế phát hiện hoặc ngăn các execution tương đương sai. Advanced database concurrency không chỉ là “row lock”. Ta cần hiểu **lock manager, lock compatibility, deadlock, predicate/range protection và serializability**.
+> **Mạch đọc:** Đặt **khóa (lock / 잠금) manager, predicate locking và serializable isolation** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **khóa (lock / 잠금) manager là một subsystem riêng** sang **dùng chung (shared / 공유) và exclusive chỉ là khởi đầu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Lock manager là một subsystem riêng
 
-Database duy trì metadata về resource nào đang bị lock, transaction nào sở hữu lock và transaction nào đang chờ.
+MVCC giúp nhiều giao dịch (transaction / 트랜잭션) đọc/ghi đồng thời, nhưng isolation mạnh vẫn cần cơ chế phát hiện hoặc ngăn các thực thi (execution / 실행) tương đương sai. Advanced cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성) không chỉ là “row khóa (lock / 잠금)”. Ta cần hiểu **khóa (lock / 잠금) manager, khóa (lock / 잠금) tính tương thích (compatibility / 호환성), deadlock, predicate/phạm vi (range / 범위) protection và serializability**.
 
-Resource có thể là row, key, page, table, index range hoặc logical predicate tùy engine.
+## Khóa (lock / 잠금) manager là một subsystem riêng
 
-Lock manager phải trả lời nhanh:
+Cơ sở dữ liệu (database / 데이터베이스) duy trì siêu dữ liệu (metadata / 메타데이터) về tài nguyên (resource / 자원) nào đang bị khóa (lock / 잠금), giao dịch (transaction / 트랜잭션) nào sở hữu khóa (lock / 잠금) và giao dịch (transaction / 트랜잭션) nào đang chờ.
+
+Tài nguyên (resource / 자원) có thể là row, key, page, bảng (table / 테이블), chỉ mục (index / 인덱스) phạm vi (range / 범위) hoặc logical predicate tùy engine.
+
+Khóa (lock / 잠금) manager phải trả lời nhanh:
 
 ```text
 request lock -> compatible?
@@ -16,96 +19,98 @@ request lock -> compatible?
              -> hoặc enqueue waiter
 ```
 
-Nó cũng phải release lock khi commit/rollback và xử lý deadlock.
+Nó cũng phải bản phát hành (release / 릴리스) khóa (lock / 잠금) khi lần ghi nhận (commit / 커밋)/quay lui (rollback / 롤백) và xử lý deadlock.
 
-## Shared và exclusive chỉ là khởi đầu
+## Dùng chung (shared / 공유) và exclusive chỉ là khởi đầu
 
-Shared lock cho nhiều readers cùng tồn tại. Exclusive lock xung đột với reader/writer khác.
+Dùng chung (shared / 공유) khóa (lock / 잠금) cho nhiều readers cùng tồn tại. Exclusive khóa (lock / 잠금) xung đột với reader/writer khác.
 
-Production DB còn có intent locks ở hierarchy table/page/row để tránh phải scan hàng triệu child locks khi muốn lock cấp cao hơn.
+Môi trường vận hành (production / 운영 환경) DB còn có intent locks ở hierarchy bảng (table / 테이블)/page/row để tránh phải scan hàng triệu child locks khi muốn khóa (lock / 잠금) cấp cao hơn.
 
-Ví dụ `IX` trên table nói rằng transaction có hoặc sẽ có exclusive lock ở một số descendants; nó giúp compatibility check cấp table có meaning.
+Ví dụ `IX` trên bảng (table / 테이블) nói rằng giao dịch (transaction / 트랜잭션) có hoặc sẽ có exclusive khóa (lock / 잠금) ở một số descendants; nó giúp tính tương thích (compatibility / 호환성) check cấp bảng (table / 테이블) có meaning.
 
 ## Two-phase locking
 
-**2PL** về conceptual có growing phase acquire locks và shrinking phase release locks. Strict 2PL thường giữ write locks tới commit/abort, giúp tránh dirty write/read và làm recovery reasoning dễ hơn.
+**2PL** về conceptual có growing phase acquire locks và shrinking phase bản phát hành (release / 릴리스) locks. Strict 2PL thường giữ ghi (write / 쓰기) locks tới lần ghi nhận (commit / 커밋)/abort, giúp tránh dirty ghi (write / 쓰기)/read và làm khôi phục (recovery / 복구) lập luận (reasoning / 추론) dễ hơn.
 
-Serializable schedule có thể đạt bằng locking thích hợp, nhưng concurrency giảm khi lock scope lớn hoặc transaction dài.
+Serializable schedule có thể đạt bằng locking thích hợp, nhưng tính đồng thời (concurrency / 동시성) giảm khi khóa (lock / 잠금) phạm vi (scope / 범위) lớn hoặc giao dịch (transaction / 트랜잭션) dài.
 
 ## Deadlock
 
-Transaction A giữ X và chờ Y; B giữ Y và chờ X. Nếu chỉ chờ, cả hai đứng mãi.
+Giao dịch (transaction / 트랜잭션) A giữ X và chờ Y; B giữ Y và chờ X. Nếu chỉ chờ, cả hai đứng mãi.
 
-DB có thể dùng **wait-for graph** và cycle detection, hoặc timeout/deadlock prevention schemes. Khi phát hiện cycle, engine chọn victim rollback.
+DB có thể dùng **wait-for đồ thị (graph / 그래프)** và cycle detection, hoặc hết thời gian chờ (timeout / 타임아웃)/deadlock prevention schemes. Khi phát hiện cycle, engine chọn victim quay lui (rollback / 롤백).
 
-Application phải coi deadlock error là expected concurrency outcome có thể retry, không phải “DB bị lỗi”.
+Ứng dụng (application / 애플리케이션) phải coi deadlock lỗi (error / 오류) là expected tính đồng thời (concurrency / 동시성) kết quả (outcome / 결과) có thể thử lại (retry / 재시도), không phải “DB bị lỗi”.
 
-## Row lock chưa đủ chống phantom
+## Row khóa (lock / 잠금) chưa đủ chống phantom
 
-Giả sử transaction đọc:
+Giả sử giao dịch (transaction / 트랜잭션) đọc:
 
 ```sql
 SELECT * FROM orders WHERE amount > 1000;
 ```
 
-Nó lock tất cả rows hiện có thỏa điều kiện. Transaction khác insert một row mới `amount=5000`. Khi query chạy lại, row “phantom” xuất hiện dù không row cũ nào bị sửa.
+Nó khóa (lock / 잠금) tất cả rows hiện có thỏa điều kiện. giao dịch (transaction / 트랜잭션) khác insert một row mới `amount=5000`. Khi truy vấn (query / 쿼리) chạy lại, row “phantom” xuất hiện dù không row cũ nào bị sửa.
 
-Để serializable theo locking, database cần bảo vệ **predicate/key range**, không chỉ rows đã materialize.
+Để serializable theo locking, cơ sở dữ liệu (database / 데이터베이스) cần bảo vệ **predicate/key phạm vi (range / 범위)**, không chỉ rows đã materialize.
 
-## Predicate lock và index-range lock
+## Predicate khóa (lock / 잠금) và index-range khóa (lock / 잠금)
 
-Predicate lock lý tưởng bảo vệ tập “mọi row thỏa `amount > 1000`”. Implement trực tiếp predicate tổng quát rất đắt.
+Predicate khóa (lock / 잠금) lý tưởng bảo vệ tập “mọi row thỏa `amount > 1000`”. Implement trực tiếp predicate tổng quát rất đắt.
 
-Nhiều engine dùng index-range/gap/next-key locking khi query có index phù hợp. Lock một interval trong B+Tree keyspace ngăn insert vào range có thể thay result.
+Nhiều engine dùng index-range/gap/next-key locking khi truy vấn (query / 쿼리) có chỉ mục (index / 인덱스) phù hợp. khóa (lock / 잠금) một interval trong B+cây (tree / 트리) keyspace ngăn insert vào phạm vi (range / 범위) có thể thay kết quả (result / 결과).
 
-Do đó index design có thể ảnh hưởng không chỉ performance mà cả granularity concurrency control.
+Do đó chỉ mục (index / 인덱스) thiết kế (design / 설계) có thể ảnh hưởng không chỉ hiệu năng (performance / 성능) mà cả granularity tính đồng thời (concurrency / 동시성) điều khiển (control / 제어).
 
-## MVCC + Serializable không có một implementation duy nhất
+## MVCC + Serializable không có một hiện thực (implementation / 구현) duy nhất
 
-Một số engine dùng locking serializable; một số dùng Serializable Snapshot Isolation (SSI) phát hiện dangerous dependency patterns trên snapshot execution; có hệ dùng optimistic validation.
+Một số engine dùng locking serializable; một số dùng Serializable Snapshot Isolation (SSI) phát hiện dangerous phụ thuộc (dependency / 의존성) patterns trên snapshot thực thi (execution / 실행); có hệ dùng optimistic kiểm tra hợp lệ (validation / 검증).
 
-“Isolation level = Serializable” là semantic goal. Mechanism bên dưới có thể rất khác và failure mode/retry behavior cũng khác.
+“Isolation mức (level / 수준) = Serializable” là ngữ nghĩa (semantic / 의미적) goal. cơ chế (mechanism / 메커니즘) bên dưới có thể rất khác và dạng thất bại (failure mode / 실패 모드)/thử lại (retry / 재시도) hành vi (behavior / 동작) cũng khác.
 
-## Write skew
+## Ghi (write / 쓰기) skew
 
-Hai doctors cùng kiểm tra “ít nhất một doctor đang on-call”. Mỗi transaction thấy hai người on-call và tắt chính mình. Hai writes ở rows khác nhau nên không write-write conflict, nhưng invariant cuối cùng bị phá.
+Hai doctors cùng kiểm tra “ít nhất một doctor đang on-call”. Mỗi giao dịch (transaction / 트랜잭션) thấy hai người on-call và tắt chính mình. Hai writes ở rows khác nhau nên không write-write xung đột (conflict / 충돌), nhưng bất biến (invariant / 불변식) cuối cùng bị phá.
 
-Snapshot isolation có thể cho phép write skew. Serializable cần nhận ra dependency logical giữa reads và writes hoặc dùng predicate protection.
+Snapshot isolation có thể cho phép ghi (write / 쓰기) skew. Serializable cần nhận ra phụ thuộc (dependency / 의존성) logical giữa reads và writes hoặc dùng predicate protection.
 
-Đây là lý do chỉ nhìn row write conflict không đủ reasoning business invariant.
+Đây là lý do chỉ nhìn row ghi (write / 쓰기) xung đột (conflict / 충돌) không đủ lập luận (reasoning / 추론) nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식).
 
-## Long transaction là concurrency hazard
+## Long giao dịch (transaction / 트랜잭션) là tính đồng thời (concurrency / 동시성) hazard
 
-Transaction giữ locks lâu hoặc giữ snapshot quá cũ làm contention/version retention tăng. Một API request mở transaction rồi gọi external service trong 5 giây có thể làm DB concurrency tệ mạnh.
+Giao dịch (transaction / 트랜잭션) giữ locks lâu hoặc giữ snapshot quá cũ làm contention/phiên bản (version / 버전) retention tăng. Một API yêu cầu (request / 요청) mở giao dịch (transaction / 트랜잭션) rồi gọi bên ngoài (external / 외부) dịch vụ (service / 서비스) trong 5 giây có thể làm DB tính đồng thời (concurrency / 동시성) tệ mạnh.
 
-Transaction boundary nên ôm đúng atomic state transition cần thiết, không phải toàn workflow business nếu không cần.
+Giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) nên ôm đúng atomic chuyển tiếp trạng thái (state transition / 상태 전이) cần thiết, không phải toàn workflow nghiệp vụ (business / 비즈니스) nếu không cần.
 
-## Lock escalation
+## Khóa (lock / 잠금) escalation
 
-Quá nhiều row locks tốn memory/management overhead. Engine có thể escalate thành page/table lock. Điều này giảm lock metadata nhưng tăng contention bất ngờ.
+Quá nhiều row locks tốn bộ nhớ (memory / 메모리)/management overhead. Engine có thể escalate thành page/bảng (table / 테이블) khóa (lock / 잠금). Điều này giảm khóa (lock / 잠금) siêu dữ liệu (metadata / 메타데이터) nhưng tăng contention bất ngờ.
 
-Một query update nhiều rows có thể vì vậy ảnh hưởng concurrent requests rộng hơn developer nghĩ.
+Một truy vấn (query / 쿼리) cập nhật (update / 업데이트) nhiều rows có thể vì vậy ảnh hưởng concurrent requests rộng hơn nhà phát triển (developer / 개발자) nghĩ.
 
-## Observability
+## Khả năng quan sát (observability / 관측 가능성)
 
-Khi hệ thống chậm, cần phân biệt CPU/I/O bottleneck với lock wait.
+Khi hệ thống chậm, cần phân biệt CPU/I/O bottleneck với khóa (lock / 잠금) wait.
 
-Thông tin hữu ích: blocking session, lock mode/resource, wait duration, transaction age, deadlock graph và SQL/plan gây lock footprint.
+Thông tin hữu ích: blocking session, khóa (lock / 잠금) chế độ (mode / 모드)/tài nguyên (resource / 자원), wait duration, giao dịch (transaction / 트랜잭션) age, deadlock đồ thị (graph / 그래프) và SQL/plan gây khóa (lock / 잠금) footprint.
 
-“Query chạy lâu” đôi khi thực tế là query chạy 10ms nhưng chờ lock 4s.
+“truy vấn (query / 쿼리) chạy lâu” đôi khi thực tế là truy vấn (query / 쿼리) chạy 10ms nhưng chờ khóa (lock / 잠금) 4s.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Serializable isolation bảo vệ **lịch sử logic của transactions**, không chỉ từng row. Lock manager quản lý quyền truy cập; predicate/range locking bảo vệ những rows chưa tồn tại; deadlock/retry là một phần tự nhiên của concurrency control.
+> Serializable isolation bảo vệ **lịch sử lô-gic (logic / 논리) của transactions**, không chỉ từng row. khóa (lock / 잠금) manager quản lý quyền truy cập; predicate/phạm vi (range / 범위) locking bảo vệ những rows chưa tồn tại; deadlock/thử lại (retry / 재시도) là một phần tự nhiên của tính đồng thời (concurrency / 동시성) điều khiển (control / 제어).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“MVCC nghĩa không cần lock.”** Writers, schema changes và serializable mechanisms vẫn có thể cần lock/latch.
+**“MVCC nghĩa không cần khóa (lock / 잠금).”** Writers, lược đồ (schema / 스키마) changes và serializable mechanisms vẫn có thể cần khóa (lock / 잠금)/latch.
 
-**“Row lock ngăn phantom.”** Không nếu new row có thể xuất hiện trong predicate range.
+**“Row khóa (lock / 잠금) ngăn phantom.”** Không nếu new row có thể xuất hiện trong predicate phạm vi (range / 범위).
 
-**“Deadlock là bug của DB.”** Nó là possible outcome của concurrent lock acquisition; design transaction order và retry strategy mới là phần application cần xử lý.
+**“Deadlock là bug của DB.”** Nó là possible kết quả (outcome / 결과) của concurrent khóa (lock / 잠금) acquisition; thiết kế (design / 설계) giao dịch (transaction / 트랜잭션) thứ tự (order / 순서) và thử lại (retry / 재시도) chiến lược (strategy / 전략) mới là phần ứng dụng (application / 애플리케이션) cần xử lý.
 
 ## Kết nối
 
-Tiếp theo đọc [B+Tree page layout và latch coupling](./02_bplus_tree_pages_splits_merges_and_latch_coupling.md). Với Oracle/SQL systems, nên kết hợp execution plan, index range và transaction scope để hiểu lock footprint thực tế.
+Tiếp theo đọc [B+Tree page layout và latch coupling](./02_bplus_tree_pages_splits_merges_and_latch_coupling.md). Với Oracle/SQL các hệ thống (systems / 시스템들), nên kết hợp thực thi (execution / 실행) plan, chỉ mục (index / 인덱스) phạm vi (range / 범위) và giao dịch (transaction / 트랜잭션) phạm vi (scope / 범위) để hiểu khóa (lock / 잠금) footprint thực tế.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mvcc visibility wal and recovery internals](./00_mvcc_visibility_wal_and_recovery_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

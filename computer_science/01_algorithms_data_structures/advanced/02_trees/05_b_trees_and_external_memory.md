@@ -1,7 +1,10 @@
-# B-Tree, B+Tree và cấu trúc dữ liệu cho bên ngoài bộ nhớ
-**B-Tree / B+Tree / B 트리와 외부 메모리 자료구조**
+# B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ
 
-B-Tree xuất hiện khi mô hình chi phí của BST trong RAM không còn phù hợp. Một cây tìm kiếm nhị phân giả định truy cập nút con con trỏ tương đối rẻ; nhưng khi nút nằm trên SSD, HDD, cơ sở dữ liệu page hoặc lưu trữ block, chi phí lớn thường không phải vài phép so sánh mà là **I/O / 입출력**.
+> **Mạch đọc:** Đọc **B-Tree, B+cây (tree / 트리) và cấu trúc dữ liệu cho bên ngoài bộ nhớ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cây nhị phân không lý tưởng cho disk/page lưu trữ?** sang **nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**B-Tree / B+cây (tree / 트리) / B 트리와 외부 메모리 자료구조**
+
+B-Tree xuất hiện khi mô hình chi phí của BST trong RAM không còn phù hợp. Một cây tìm kiếm nhị phân giả định truy cập nút con con trỏ tương đối rẻ; nhưng khi nút nằm trên SSD, HDD, cơ sở dữ liệu page hoặc lưu trữ khối (block / 블록), chi phí lớn thường không phải vài phép so sánh mà là **I/O / 입출력**.
 
 Vì vậy mục tiêu đổi từ “giảm số phép so sánh” sang:
 
@@ -15,7 +18,7 @@ các node nên khớp page/block size của storage system
 
 ## Vì sao cây nhị phân không lý tưởng cho disk/page lưu trữ?
 
-cây nhị phân có fan-out tối đa 2. Nếu có hàng triệu các khóa, chiều cao vẫn khoảng `log2(n)` dù balanced. Trong RAM, khoảng vài chục con trỏ dereference có thể chấp nhận được. Nhưng nếu mỗi tầng tương ứng một ngẫu nhiên page read, độ trễ (latency) trở nên rất đắt.
+cây nhị phân có fan-out tối đa 2. Nếu có hàng triệu các khóa, chiều cao vẫn khoảng `log2(n)` dù balanced. Trong RAM, khoảng vài chục con trỏ dereference có thể chấp nhận được. Nhưng nếu mỗi tầng tương ứng một ngẫu nhiên page read, độ trễ (latency / 지연 시간) trở nên rất đắt.
 
 B-tree tăng **hệ số phân nhánh (fan-out / 분기 계수)**. Một nút có thể chứa hàng chục, hàng trăm hoặc hàng nghìn khóa phân cách tùy kích thước trang và độ rộng khóa.
 
@@ -35,7 +38,7 @@ O(\log_B n)
 
 Sự khác biệt giữa `log2(n)` và `log200(n)` cực lớn khi mỗi tầng là một I/O.
 
-## nút như một page-sized search structure
+## nút như một page-sized tìm kiếm (search / 검색) cấu trúc (structure / 구조)
 
 Một B-tree nút thường chứa:
 
@@ -49,7 +52,7 @@ Các khóa trong nút được sắp xếp. Có thể dùng tìm kiếm tuyến 
 
 Do đó B-tree chủ động “làm nhiều việc trong một nút” để giảm chiều cao.
 
-## B-tree bất biến (invariant)
+## B-tree bất biến (invariant / 불변식)
 
 Có nhiều cách định nghĩa theo bậc (order) hoặc bậc tối thiểu (minimum degree), nhưng nguyên tắc cốt lõi giống nhau:
 
@@ -69,11 +72,11 @@ mỗi node có nhiều nhất 2t-1 keys
 internal node có #children = #keys + 1
 ```
 
-chính xác convention khác nhau giữa sách và cách triển khai. Khi đọc code, đừng học thuộc số trước; hãy xác định rõ “max các khóa”, “min các khóa”, “split threshold” mà cách triển khai dùng.
+chính xác convention khác nhau giữa sách và cách triển khai. Khi đọc mã (code / 코드), đừng học thuộc số trước; hãy xác định rõ “max các khóa”, “min các khóa”, “split threshold” mà cách triển khai dùng.
 
-## Search
+## Tìm kiếm (search / 검색)
 
-Search trong B-tree gồm hai lớp:
+Tìm kiếm (search / 검색) trong B-tree gồm hai lớp:
 
 ```text
 1. search key position trong node hiện tại
@@ -99,7 +102,7 @@ Số page accesses là `O(height)`, trong khi phép so sánh count trong page c�
 
 Chèn thường đi xuống nút lá giống như tìm kiếm. Vấn đề là nút lá có thể đã đầy.
 
-Một strategy phổ biến là **split full nút con trước khi descend**. Full nút được chia thành hai các nút và khóa phân cách trung vị được đẩy lên nút cha.
+Một chiến lược (strategy / 전략) phổ biến là **split full nút con trước khi descend**. Full nút được chia thành hai các nút và khóa phân cách trung vị được đẩy lên nút cha.
 
 Ví dụ conceptual:
 
@@ -146,11 +149,11 @@ Nếu nút gốc cuối cùng không còn khóa và chỉ có một nút con, n�
 
 Mô hình tư duy của delete là: **trước khi đi xuống, đảm bảo nút con có đủ “room” để mất một khóa mà không vi phạm lower occupancy bound**.
 
-## B+Tree khác B-tree ở đâu?
+## B+cây (tree / 트리) khác B-tree ở đâu?
 
-Trong **B+Tree / B+ 트리**, nội bộ các nút chủ yếu giữ separator các khóa để routing; actual records hoặc row các con trỏ nằm ở các nút lá. các nút lá thường được linked theo thứ tự đã sắp xếp.
+Trong **B+cây (tree / 트리) / B+ 트리**, nội bộ các nút chủ yếu giữ separator các khóa để routing; actual records hoặc row các con trỏ nằm ở các nút lá. các nút lá thường được linked theo thứ tự đã sắp xếp.
 
-Conceptual structure:
+Conceptual cấu trúc (structure / 구조):
 
 ```text
             [20 | 50]
@@ -164,9 +167,9 @@ Conceptual structure:
 
 nội bộ các nút nhỏ hơn vì không cần chứa full records, nên fan-out lớn hơn và chiều cao thấp hơn.
 
-quét theo khoảng rất tự nhiên: tìm nút lá đầu tiên qua cây search rồi quét nút lá links tuần tự.
+quét theo khoảng rất tự nhiên: tìm nút lá đầu tiên qua cây tìm kiếm (search / 검색) rồi quét nút lá links tuần tự.
 
-Đây là lý do B+Tree đặc biệt phù hợp cơ sở dữ liệu indexes.
+Đây là lý do B+cây (tree / 트리) đặc biệt phù hợp cơ sở dữ liệu indexes.
 
 ## tra cứu theo quan hệ bằng nhau và quét theo khoảng có chi phí khác nhau
 
@@ -202,11 +205,11 @@ seek cost + number of leaf pages scanned
 
 ## Chỉ mục cụm và chỉ mục phụ
 
-cơ sở dữ liệu engine cụ thể có ngữ nghĩa (semantics) khác nhau, nhưng một mental mô hình hữu ích là:
+cơ sở dữ liệu engine cụ thể có ngữ nghĩa (semantics / 의미론) khác nhau, nhưng một mental mô hình hữu ích là:
 
-**Clustered index / 클러스터형 인덱스** ảnh hưởng cách rows/data pages được tổ chức theo khóa chính hoặc tương đương.
+**Clustered chỉ mục (index / 인덱스) / 클러스터형 인덱스** ảnh hưởng cách rows/dữ liệu (data / 데이터) pages được tổ chức theo khóa chính hoặc tương đương.
 
-**Secondary index / 보조 인덱스** thường chứa secondary khóa cộng locator tới record/primary khóa.
+**Secondary chỉ mục (index / 인덱스) / 보조 인덱스** thường chứa secondary khóa cộng locator tới bản ghi (record / 레코드)/primary khóa.
 
 Một secondary tra cứu có thể cần:
 
@@ -216,11 +219,11 @@ secondary B+Tree lookup
 → thêm lookup tới clustered data
 ```
 
-Vì vậy một “index hit” không nhất thiết chỉ có một cây traversal.
+Vì vậy một “chỉ mục (index / 인덱스) hit” không nhất thiết chỉ có một cây traversal.
 
-## Composite index và thứ tự từ điển
+## Composite chỉ mục (index / 인덱스) và thứ tự từ điển
 
-Index trên `(a, b, c)` thường sắp theo thứ tự từ điển:
+Chỉ mục (index / 인덱스) trên `(a, b, c)` thường sắp theo thứ tự từ điển:
 
 ```text
 (a1,b1,c1) < (a2,b2,c2)
@@ -228,9 +231,9 @@ Index trên `(a, b, c)` thường sắp theo thứ tự từ điển:
 
 nếu `a1<a2`, hoặc `a1==a2` và `b1<b2`, v.v.
 
-Điều này giải thích **left-prefix hành vi** trong nhiều cơ sở dữ liệu indexes. truy vấn có điều kiện mạnh trên leading columns thường tận dụng contiguous range tốt hơn truy vấn chỉ filter column phía sau.
+Điều này giải thích **left-prefix hành vi** trong nhiều cơ sở dữ liệu indexes. truy vấn có điều kiện mạnh trên leading columns thường tận dụng contiguous phạm vi (range / 범위) tốt hơn truy vấn chỉ filter column phía sau.
 
-Ví dụ index `(country, city, created_at)` tự nhiên hỗ trợ:
+Ví dụ chỉ mục (index / 인덱스) `(country, city, created_at)` tự nhiên hỗ trợ:
 
 ```text
 country = 'KR'
@@ -240,11 +243,11 @@ country = 'KR' AND city = 'Seoul' AND created_at range
 
 Nhưng điều kiện `city = 'Seoul'` một mình không nhất thiết tạo thành một khoảng liên tiếp nhỏ trong thứ tự toàn cục của chỉ mục.
 
-## Covering index
+## Covering chỉ mục (index / 인덱스)
 
 Nếu truy vấn chỉ cần các cột đã có đầy đủ trong nút lá của chỉ mục, cơ sở dữ liệu có thể tránh đọc thêm toàn bộ hàng hoặc trang dữ liệu. Đây là ý tưởng của **chỉ mục bao phủ (covering index)**.
 
-sự đánh đổi (trade-off) là index rộng hơn:
+Sự đánh đổi (trade-off / 트레이드오프) là chỉ mục (index / 인덱스) rộng hơn:
 
 ```text
 fan-out giảm
@@ -253,19 +256,19 @@ write amplification tăng
 cache residency có thể xấu hơn
 ```
 
-Tối ưu index là balancing giữa read đường đi và write/lưu trữ chi phí.
+Tối ưu chỉ mục (index / 인덱스) là balancing giữa read đường đi và ghi (write / 쓰기)/lưu trữ chi phí.
 
-## Page split và write amplification
+## Page split và ghi (write / 쓰기) amplification
 
 Insert vào nút lá full có thể gây split. Split tạo page mới, di chuyển các mục, cập nhật nút cha và có thể cascade.
 
-Trong cơ sở dữ liệu thực, còn có logging, locking/latching, WAL và bộ đệm pool interactions. Vì vậy insert vào B+Tree không chỉ là vài con trỏ assignments như BST trong RAM.
+Trong cơ sở dữ liệu thực, còn có logging, locking/latching, WAL và bộ đệm pool interactions. Vì vậy insert vào B+cây (tree / 트리) không chỉ là vài con trỏ assignments như BST trong RAM.
 
 ngẫu nhiên inserts vào clustered khóa có thể gây split rải rác. Monotonic increasing khóa thường append vào rightmost các nút lá, giảm ngẫu nhiên split mẫu nhưng có thể tạo tranh chấp tài nguyên hotspot trong concurrent khối lượng công việc.
 
 ## Fill factor và occupancy
 
-Nếu pages luôn được đóng gói 100%, insert tương lai dễ split. Một số các hệ thống cho phép **fill factor / 채움 비율** để chủ động để trống space trong nút lá pages.
+Nếu pages luôn được đóng gói 100%, insert tương lai dễ split. Một số các hệ thống cho phép **fill factor / 채움 비율** để chủ động để trống không gian (space / 공간) trong nút lá pages.
 
 Đây là sự đánh đổi:
 
@@ -278,7 +281,7 @@ Không có một fill factor tối ưu cho mọi khối lượng công việc.
 
 ## bộ đệm pool và effective mô hình chi phí
 
-Không phải mọi page access đều ra disk. cơ sở dữ liệu bộ đệm pool/bộ nhớ đệm có thể giữ nút gốc và upper nội bộ các tầng gần như luôn trong RAM.
+Không phải mọi page truy cập (access / 접근) đều ra disk. cơ sở dữ liệu bộ đệm pool/bộ nhớ đệm có thể giữ nút gốc và upper nội bộ các tầng gần như luôn trong RAM.
 
 Do đó thực tế:
 
@@ -287,9 +290,9 @@ root/internal top levels rất hot
 leaf/data pages quyết định nhiều cache misses hơn
 ```
 
-B+Tree vẫn tốt vì shallow structure và page tính cục bộ (locality) giúp bộ nhớ đệm hierarchy hiệu quả.
+B+cây (tree / 트리) vẫn tốt vì shallow cấu trúc (structure / 구조) và page tính cục bộ (locality) giúp bộ nhớ đệm hierarchy hiệu quả.
 
-## Sequential quét vs index quét
+## Sequential quét vs chỉ mục (index / 인덱스) quét
 
 Nếu truy vấn cần phần lớn bảng, quét tuần tự có thể tốt hơn dùng chỉ mục rồi đọc ngẫu nhiên rất nhiều hàng.
 
@@ -303,25 +306,25 @@ vs
 sequential scan
 ```
 
-DSA chỉ cung cấp primitive; system-level decision còn phụ thuộc data phân phối và I/O mẫu.
+DSA chỉ cung cấp thành phần nguyên thủy (primitive / 기본 요소); system-level quyết định (decision / 결정) còn phụ thuộc dữ liệu (data / 데이터) phân phối và I/O mẫu.
 
-## chỉ mục băm vs B+Tree
+## chỉ mục băm vs B+cây (tree / 트리)
 
-Hash structure mạnh với tra cứu theo quan hệ bằng nhau:
+Băm (hash / 해시) cấu trúc (structure / 구조) mạnh với tra cứu theo quan hệ bằng nhau:
 
 ```text
 key = X
 ```
 
-Nhưng cấu trúc đó không giữ thứ tự toàn phần tự nhiên. Vì vậy truy vấn khoảng, duyệt theo thứ tự tiền tố, tìm phần tử liền trước/liền sau, `MIN/MAX` hoặc `ORDER BY` thường phù hợp hơn với B+Tree.
+Nhưng cấu trúc đó không giữ thứ tự toàn phần tự nhiên. Vì vậy truy vấn khoảng, duyệt theo thứ tự tiền tố, tìm phần tử liền trước/liền sau, `MIN/MAX` hoặc `ORDER BY` thường phù hợp hơn với B+cây (tree / 트리).
 
-B+Tree trả thêm `log_B n` navigation chi phí để đổi lấy ordered ngữ nghĩa.
+B+cây (tree / 트리) trả thêm `log_B n` điều hướng (navigation / 내비게이션) chi phí để đổi lấy ordered ngữ nghĩa.
 
-## External-memory complexity
+## External-memory độ phức tạp (complexity / 복잡도)
 
-Trong **bên ngoài mô hình bộ nhớ (memory model) / 외부 메모리 모델**, ta quan tâm số các lần truyền khối dữ liệu hơn số primitive các thao tác.
+Trong **bên ngoài mô hình bộ nhớ (memory model) / 외부 메모리 모델**, ta quan tâm số các lần truyền khối dữ liệu hơn số thành phần nguyên thủy (primitive / 기본 요소) các thao tác.
 
-Nếu block chứa `B` các khóa, một cây tìm kiếm có fan-out lớn có thể đạt số I/O gần logarithmic theo base `B`.
+Nếu khối (block / 블록) chứa `B` các khóa, một cây tìm kiếm có fan-out lớn có thể đạt số I/O gần logarithmic theo cơ sở (base / 기반) `B`.
 
 Sắp xếp, quét, phép nối và xử lý đồ thị cũng có các biến thể cho bộ nhớ ngoài nhằm tối ưu số lần truyền khối dữ liệu. Đây là cách mở rộng Big-O truyền thống sang mô hình gần phần cứng hơn.
 
@@ -329,7 +332,7 @@ Sắp xếp, quét, phép nối và xử lý đồ thị cũng có các biến t
 
 Write-heavy lưu trữ engines thường dùng **Log-Structured Merge cây (LSM Tree / 로그 구조 병합 트리)** hoặc hybrid designs.
 
-B+Tree thường cập nhật pages in-place/logically in-place, thích hợp reads/range và balanced mixed khối lượng công việc.
+B+cây (tree / 트리) thường cập nhật pages in-place/logically in-place, thích hợp reads/phạm vi (range / 범위) và balanced mixed khối lượng công việc.
 
 LSM gom các lần ghi thành các cấu trúc tuần tự rồi hợp nhất và nén theo từng tầng. Thiết kế này chấp nhận khuếch đại đọc và chi phí compaction để đạt thông lượng ghi (write throughput) cao.
 
@@ -340,23 +343,23 @@ B+Tree: giữ sorted structure online, update đúng vị trí
 LSM: buffer/append writes, rồi merge sorted runs về sau
 ```
 
-Không có structure “tốt hơn tuyệt đối”; khối lượng công việc quyết định.
+Không có cấu trúc (structure / 구조) “tốt hơn tuyệt đối”; khối lượng công việc quyết định.
 
 ## Cache-aware và cache-oblivious thinking
 
-B-tree là cache-aware ở mức ta thường thiết kế nút phù hợp page/block size cụ thể.
+B-tree là cache-aware ở mức ta thường thiết kế nút phù hợp page/khối (block / 블록) kích thước (size / 크기) cụ thể.
 
-**Cache-oblivious các thuật toán / 캐시 비인지 알고리즘** cố đạt tính cục bộ tốt qua bố trí/recursive decomposition mà không hard-code block size. Ví dụ van Emde Boas bố trí cho cây có thể cải thiện hierarchy tính cục bộ.
+**Cache-oblivious các thuật toán / 캐시 비인지 알고리즘** cố đạt tính cục bộ tốt qua bố trí/recursive decomposition mà không hard-code khối (block / 블록) kích thước (size / 크기). Ví dụ van Emde Boas bố trí cho cây có thể cải thiện hierarchy tính cục bộ.
 
-Ý tưởng tổng quát: cấu trúc dữ liệu hiệu năng có thể phụ thuộc cách byte được bố trí trên phân cấp bộ nhớ, không chỉ topology logic.
+Ý tưởng tổng quát: cấu trúc dữ liệu hiệu năng có thể phụ thuộc cách byte được bố trí trên phân cấp bộ nhớ, không chỉ topology lô-gic (logic / 논리).
 
-## Concurrency và ghép khóa chốt
+## Tính đồng thời (concurrency / 동시성) và ghép khóa chốt
 
-B+Tree dùng trong cơ sở dữ liệu có xử lý đồng thời phải bảo vệ nút hoặc trang trong quá trình duyệt và tách/gộp. Một nhóm kỹ thuật là ghép khóa chốt (latch coupling/crabbing): giữ chốt ở nút cha trong khi lấy chốt ở nút con, sau đó nhả nút cha khi đã an toàn.
+B+cây (tree / 트리) dùng trong cơ sở dữ liệu có xử lý đồng thời phải bảo vệ nút hoặc trang trong quá trình duyệt và tách/gộp. Một nhóm kỹ thuật là ghép khóa chốt (latch coupling/crabbing): giữ chốt ở nút cha trong khi lấy chốt ở nút con, sau đó nhả nút cha khi đã an toàn.
 
-Hiện đại engines có nhiều optimization phức tạp hơn, nhưng khóa insight là balancing thao tác như split không còn thuần cục bộ khi nhiều các luồng cùng modify cây.
+Hiện đại engines có nhiều tối ưu hóa (optimization / 최적화) phức tạp hơn, nhưng khóa insight là balancing thao tác như split không còn thuần cục bộ khi nhiều các luồng cùng modify cây.
 
-Concurrency thêm các câu hỏi:
+Tính đồng thời (concurrency / 동시성) thêm các câu hỏi:
 
 ```text
 reader thấy state nào trong lúc split?
@@ -364,11 +367,11 @@ separator update có atomic không?
 lock/latch order có gây deadlock không?
 ```
 
-logic cây bất biến và concurrency bất biến phải cùng đúng.
+Lô-gic (logic / 논리) cây bất biến và tính đồng thời (concurrency / 동시성) bất biến phải cùng đúng.
 
 ## Prefix compression và khóa compression
 
-nội bộ separator các khóa có thể dài. cơ sở dữ liệu/index các cách triển khai đôi khi compress prefixes hoặc store minimal distinguishing separators để tăng fan-out.
+nội bộ separator các khóa có thể dài. cơ sở dữ liệu/chỉ mục (index / 인덱스) các cách triển khai đôi khi compress prefixes hoặc store minimal distinguishing separators để tăng fan-out.
 
 Ví dụ nhiều URLs có tiền tố chung lớn; storing full strings trong mọi nội bộ mục lãng phí không gian trang.
 
@@ -378,17 +381,17 @@ Nén dữ liệu làm tăng công việc của CPU nhưng giảm kích thước 
 
 Nếu các khóa/records variable-length, “nút chứa tối đa K các khóa” không còn fixed đơn giản. Occupancy thường được đo bằng byte, ô directory hoặc free-space bố trí.
 
-Do đó textbook B-tree với fixed number các khóa chỉ là conceptual core; hệ thống thực tế pages còn có ô các mảng, phân mảnh và compaction.
+Do đó textbook B-tree với fixed number các khóa chỉ là conceptual cốt lõi (core / 핵심); hệ thống thực tế pages còn có ô các mảng, phân mảnh và compaction.
 
 ## Những hiểu lầm phổ biến
 
-“B-tree là cây nhị phân nâng cấp” là sai; chữ B không nghĩa binary và hệ số phân nhánh thường lớn hơn rất nhiều.
+“B-tree là cây nhị phân nâng cấp” là sai; chữ B không nghĩa nhị phân (binary / 이진) và hệ số phân nhánh thường lớn hơn rất nhiều.
 
-“B+Tree nút lá linked chỉ để tiện cách triển khai” là sai; nút lá chaining trực tiếp hỗ trợ efficient quét theo khoảng.
+“B+cây (tree / 트리) nút lá linked chỉ để tiện cách triển khai” là sai; nút lá chaining trực tiếp hỗ trợ efficient quét theo khoảng.
 
 “Chỉ mục luôn làm truy vấn nhanh hơn” là sai; truy vấn có độ chọn lọc thấp hoặc tải ghi lớn có thể khiến chi phí duy trì chỉ mục không đáng bỏ ra.
 
-“B-tree search O(log n) nên giống BST” bỏ qua mục tiêu thực sự: base của logarithm/fan-out và số I/O mới là phần quan trọng.
+“B-tree tìm kiếm (search / 검색) O(log n) nên giống BST” bỏ qua mục tiêu thực sự: cơ sở (base / 기반) của logarithm/fan-out và số I/O mới là phần quan trọng.
 
 “Page split chỉ tốn O(1)” đúng ở sự trừu tượng (abstraction) cục bộ nhưng hệ thống thực tế chi phí còn bao gồm logging, bộ nhớ đệm, locks và possible cascade.
 
@@ -410,9 +413,9 @@ Xóa là nơi dễ phát sinh lỗi nhất; kiểm thử vi sai ngẫu nhiên v�
 
 ## Mô hình tư duy
 
-> B-tree/B+Tree không tối ưu chủ yếu cho số các phép so sánh; chúng tối ưu cho **phân cấp bộ nhớ và I/O**. Một nút được làm rộng để một page read phân biệt nhiều ranges, khiến cây rất thấp. B+Tree còn tách routing khỏi records và nối các nút lá để quét theo khoảng trở thành truy cập tuần tự.
+> B-tree/B+cây (tree / 트리) không tối ưu chủ yếu cho số các phép so sánh; chúng tối ưu cho **phân cấp bộ nhớ và I/O**. Một nút được làm rộng để một page read phân biệt nhiều ranges, khiến cây rất thấp. B+cây (tree / 트리) còn tách routing khỏi records và nối các nút lá để quét theo khoảng trở thành truy cập tuần tự.
 
-Khi đánh giá một index/lưu trữ cây, hãy hỏi:
+Khi đánh giá một chỉ mục (index / 인덱스)/lưu trữ cây, hãy hỏi:
 
 ```text
 Node/page size là bao nhiêu?
@@ -426,6 +429,8 @@ Page split/merge và write amplification có đáng kể không?
 Concurrency cần latch/lock semantics nào?
 ```
 
-Từ đó B+Tree trở thành bridge tự nhiên giữa DSA, cơ sở dữ liệu internals, lưu trữ engines và các hệ thống hiệu năng.
+Từ đó B+cây (tree / 트리) trở thành cầu nối (bridge / 브리지) tự nhiên giữa DSA, cơ sở dữ liệu internals, lưu trữ engines và các hệ thống hiệu năng.
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Balanced Search Trees](./02_balanced_search_trees.md), [DSA trong Database & Systems](../90_connections/01_dsa_in_databases_networks_and_systems.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 tree foundations](./00_tree_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

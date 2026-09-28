@@ -1,10 +1,13 @@
 # Nền tảng Tính toán cho Trí tuệ Nhân tạo
 
-AI hiện đại tồn tại ở giao điểm giữa thuật toán và tính toán vật lý. Một mô hình có thể đúng về mặt toán học nhưng không thực tế nếu bộ nhớ không đủ, băng thông quá thấp hoặc giao tiếp giữa các thiết bị chiếm phần lớn thời gian. Vì vậy hiểu **tính toán AI (AI compute / AI 연산)** giúp nối Đại số tuyến tính, Deep Learning và Production Engineering với phần cứng thực tế.
+> **Mạch đọc:** Đặt **Nền tảng Tính toán cho Trí tuệ Nhân tạo** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Năng lực tính toán không chỉ là FLOPs** sang **Huấn luyện và Suy luận**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+AI hiện đại tồn tại ở giao điểm giữa thuật toán và tính toán vật lý. Một mô hình có thể đúng về mặt toán học nhưng không thực tế nếu bộ nhớ không đủ, băng thông quá thấp hoặc giao tiếp giữa các thiết bị chiếm phần lớn thời gian. Vì vậy hiểu **tính toán AI (AI compute / AI 연산)** giúp nối Đại số tuyến tính, Deep học tập (learning / 학습) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) với phần cứng thực tế.
 
 ## Năng lực tính toán không chỉ là FLOPs
 
-Một workload AI tiêu tốn:
+Một tải công việc (workload / 워크로드) AI tiêu tốn:
 
 ```text
 phép toán số học
@@ -16,7 +19,7 @@ I/O mạng
 năng lượng
 ```
 
-Hai mô hình có FLOPs gần nhau vẫn có runtime rất khác nếu pattern truy cập bộ nhớ hoặc cách song song hóa khác.
+Hai mô hình có FLOPs gần nhau vẫn có thời gian chạy (runtime / 런타임) rất khác nếu mẫu (pattern / 패턴) truy cập bộ nhớ hoặc cách song song hóa khác.
 
 ## Huấn luyện và Suy luận
 
@@ -30,9 +33,9 @@ trạng thái optimizer
 lưu activation
 ```
 
-Suy luận chủ yếu chạy forward pass, nhưng quá trình sinh nội dung của LLM còn cần KV cache và decode tự hồi quy.
+Suy luận chủ yếu chạy forward pass, nhưng quá trình sinh nội dung của LLM còn cần KV bộ nhớ đệm (cache / 캐시) và decode tự hồi quy.
 
-Huấn luyện thường tốn compute và bộ nhớ nhiều hơn trên mỗi token; serving lại nhạy hơn với độ trễ, concurrency và khả năng giữ dữ liệu trong bộ nhớ.
+Huấn luyện thường tốn compute và bộ nhớ nhiều hơn trên mỗi đơn vị từ (token / 토큰); serving lại nhạy hơn với độ trễ, tính đồng thời (concurrency / 동시성) và khả năng giữ dữ liệu trong bộ nhớ.
 
 ## Cường độ số học
 
@@ -44,7 +47,7 @@ Phép toán có ít tính toán nhưng phải di chuyển nhiều dữ liệu th
 
 FLOPs là số lượng phép toán dấu chấm động. FLOP/s là tốc độ phần cứng thực hiện các phép toán đó.
 
-Peak FLOP/s lý thuyết không đồng nghĩa throughput thực tế. Hiệu năng thật còn phụ thuộc mức sử dụng tài nguyên, precision, hình dạng kernel, bộ nhớ và giao tiếp.
+Peak FLOP/s lý thuyết không đồng nghĩa thông lượng (throughput / 처리량) thực tế. Hiệu năng thật còn phụ thuộc mức sử dụng tài nguyên, precision, hình dạng kernel, bộ nhớ và giao tiếp.
 
 ## Precision
 
@@ -59,7 +62,7 @@ FP8
 INT8 / INT4
 ```
 
-Precision thấp hơn giúp giảm bộ nhớ/băng thông và có thể tăng throughput của accelerator, nhưng độ ổn định số và chất lượng phải được kiểm soát.
+Precision thấp hơn giúp giảm bộ nhớ/băng thông và có thể tăng thông lượng (throughput / 처리량) của accelerator, nhưng độ ổn định số và chất lượng phải được kiểm soát.
 
 ## Dung lượng bộ nhớ cần thiết
 
@@ -75,19 +78,19 @@ buffer tạm
 
 Adam có trạng thái optimizer khiến bộ nhớ trên mỗi tham số cao hơn rất nhiều so với chỉ lưu trọng số.
 
-Suy luận LLM còn thêm KV cache, tăng theo độ dài context và concurrency.
+Suy luận LLM còn thêm KV bộ nhớ đệm (cache / 캐시), tăng theo độ dài ngữ cảnh (context / 맥락) và tính đồng thời (concurrency / 동시성).
 
 ## Đồ thị tính toán
 
-Việc thực thi neural network có thể được xem như một graph các phép toán tensor. Runtime hoặc framework cố gắng fuse, lên lịch và ánh xạ các phép toán này thành kernel phần cứng phù hợp.
+Việc thực thi neural mạng (network / 네트워크) có thể được xem như một đồ thị (graph / 그래프) các phép toán tensor. thời gian chạy (runtime / 런타임) hoặc khung phần mềm (framework / 프레임워크) cố gắng fuse, lên lịch và ánh xạ các phép toán này thành kernel phần cứng phù hợp.
 
-Tối ưu ở cấp graph đôi khi quan trọng ngang kiến trúc mô hình.
+Tối ưu ở cấp đồ thị (graph / 그래프) đôi khi quan trọng ngang kiến trúc mô hình.
 
 ## Kernel
 
-Kernel là implementation mức thấp của một phép toán trên accelerator. Một attention kernel được tối ưu có thể giảm lượng truy cập bộ nhớ dù kết quả toán học tương đương implementation ngây thơ.
+Kernel là hiện thực (implementation / 구현) mức thấp của một phép toán trên accelerator. Một attention kernel được tối ưu có thể giảm lượng truy cập bộ nhớ dù kết quả toán học tương đương hiện thực (implementation / 구현) ngây thơ.
 
-Điều này giải thích vì sao cùng kiến trúc Transformer nhưng tốc độ runtime có thể khác rất lớn.
+Điều này giải thích vì sao cùng kiến trúc Transformer nhưng tốc độ thời gian chạy (runtime / 런타임) có thể khác rất lớn.
 
 ## Phân cấp Bộ nhớ
 
@@ -106,9 +109,9 @@ Càng xa đơn vị tính toán thì độ trễ thường cao hơn và băng th
 
 ## Giao tiếp
 
-Một thiết bị đơn lẻ bị giới hạn bởi dung lượng. Huấn luyện hoặc suy luận phân tán cần truyền tensor hoặc gradient giữa nhiều thiết bị.
+Một thiết bị đơn lẻ bị giới hạn bởi dung lượng. Huấn luyện hoặc suy luận phân tán cần truyền tensor hoặc độ dốc (gradient / 기울기) giữa nhiều thiết bị.
 
-Nếu thời gian giao tiếp lớn hơn lượng compute tiết kiệm được nhờ chia tải, thêm GPU sẽ không còn scale tốt.
+Nếu thời gian giao tiếp lớn hơn lượng compute tiết kiệm được nhờ chia tải, thêm GPU sẽ không còn quy mô (scale / 규모) tốt.
 
 ## Hiệu quả mở rộng
 
@@ -136,7 +139,7 @@ Cần profile:
 - giao tiếp;
 - khoảng thời gian rỗi.
 
-## Kinh tế học của Token Huấn luyện
+## Kinh tế học của đơn vị từ (token / 토큰) Huấn luyện
 
 Chi phí pretraining quy mô lớn xấp xỉ phụ thuộc:
 
@@ -148,13 +151,13 @@ Nhưng hiệu quả dữ liệu, kiến trúc và optimizer quyết định cùn
 
 ## Kinh tế học của Suy luận
 
-Chi phí serving phụ thuộc độ dài prompt, độ dài output, batch/concurrency, KV cache và cách đặt mô hình trên phần cứng.
+Chi phí serving phụ thuộc độ dài prompt, độ dài đầu ra (output / 출력), batch/tính đồng thời (concurrency / 동시성), KV bộ nhớ đệm (cache / 캐시) và cách đặt mô hình trên phần cứng.
 
-Decode tự hồi quy khiến suy luận LLM khác image classifier: hệ thống phải chạy nhiều bước token nối tiếp nhau.
+Decode tự hồi quy khiến suy luận LLM khác ảnh (image / 이미지) classifier: hệ thống phải chạy nhiều bước đơn vị từ (token / 토큰) nối tiếp nhau.
 
 ## Kiến trúc có nhận thức về Compute
 
-Kiến trúc không độc lập với phần cứng. CNN tận dụng kernel convolution dày đặc. Transformer scale tốt trên accelerator cho ma trận và huấn luyện song song. Mixture-of-Experts giảm active compute trên mỗi token nhưng tăng độ phức tạp của routing và giao tiếp.
+Kiến trúc không độc lập với phần cứng. CNN tận dụng kernel convolution dày đặc. Transformer quy mô (scale / 규모) tốt trên accelerator cho ma trận và huấn luyện song song. Mixture-of-Experts giảm active compute trên mỗi đơn vị từ (token / 토큰) nhưng tăng độ phức tạp của routing và giao tiếp.
 
 ## Mô hình Roofline
 
@@ -180,10 +183,12 @@ Không. GPU mạnh ở khả năng xử lý song song quy mô lớn, không đơ
 
 Không. Bộ nhớ, giao tiếp và hiệu quả kernel có thể mới là nút thắt.
 
-### “Thêm GPU luôn scale tuyến tính”
+### “Thêm GPU luôn quy mô (scale / 규모) tuyến tính”
 
 Không. Overhead phân tán làm hiệu quả mở rộng giảm.
 
 ## Liên kết kiến thức
 
 Xem [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Numerical Computation](../01_mathematical_foundations/07_numerical_computation.md), [AI Engineering](../15_ai_engineering/README.md) và các chapter tiếp theo về accelerator, bộ nhớ, tính toán song song và hệ thống phân tán.
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cpu gpu tpu and accelerators](./01_cpu_gpu_tpu_and_accelerators.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

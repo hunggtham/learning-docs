@@ -1,12 +1,15 @@
-# TypeScript 04 — Senior Production Engineering
+# TypeScript 04 — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)
 
-> Prerequisite: [Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md). Mục tiêu của chapter này là nối static model với evidence production thay vì dừng ở type-level elegance.
+> **Mạch đọc:** Đọc **TypeScript 04 — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Trust ranh giới (boundary / 경계): mọi dữ liệu bên ngoài tiến trình (process / 프로세스) đều bắt đầu như unknown** sang **2. DTO và lĩnh vực (domain / 도메인) mô hình (model / 모델) không nên bị đồng nhất tự động**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Trust boundary: mọi dữ liệu bên ngoài process đều bắt đầu như `unknown`
 
-HTTP response, localStorage, URL params, postMessage, native bridge payload, database row qua untyped driver, queue event và JSON file đều có thể khác assumption. TypeScript chỉ biết declarations bạn cung cấp.
+> Prerequisite: [Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md). Mục tiêu của chapter này là nối static mô hình (model / 모델) với bằng chứng (evidence / 증거) môi trường vận hành (production / 운영 환경) thay vì dừng ở type-level elegance.
 
-Một boundary trung thực:
+## 1. Trust ranh giới (boundary / 경계): mọi dữ liệu bên ngoài tiến trình (process / 프로세스) đều bắt đầu như `unknown`
+
+HTTP phản hồi (response / 응답), localStorage, URL params, postMessage, bản địa (native / 네이티브) cầu nối (bridge / 브리지) payload, cơ sở dữ liệu (database / 데이터베이스) row qua untyped driver, hàng đợi (queue / 큐) sự kiện (event / 이벤트) và JSON tệp (file / 파일) đều có thể khác giả định (assumption / 가정). TypeScript chỉ biết declarations bạn cung cấp.
+
+Một ranh giới (boundary / 경계) trung thực:
 
 ```ts
 type User = {
@@ -33,11 +36,11 @@ function decodeUser(value: unknown): User {
 }
 ```
 
-Real project có thể dùng schema/validator library, nhưng mental model không đổi: **parse/validate external representation → create trusted domain value**. `as User` không thay parser.
+Real dự án (project / 프로젝트) có thể dùng lược đồ (schema / 스키마)/validator thư viện (library / 라이브러리), nhưng mô hình tư duy (mental model / 사고 모델) không đổi: **parse/validate bên ngoài (external / 외부) biểu diễn (representation / 표현) → create trusted lĩnh vực (domain / 도메인) giá trị (value / 값)**. `as User` không thay parser.
 
-## 2. DTO và domain model không nên bị đồng nhất tự động
+## 2. DTO và lĩnh vực (domain / 도메인) mô hình (model / 모델) không nên bị đồng nhất tự động
 
-API DTO thường phản ánh transport concerns: nullable fields, string dates, legacy names, partial data. Domain model nên phản ánh invariant application.
+API DTO thường phản ánh vận chuyển (transport / 전송) concerns: nullable fields, string dates, legacy names, partial dữ liệu (data / 데이터). lĩnh vực (domain / 도메인) mô hình (model / 모델) nên phản ánh bất biến (invariant / 불변식) ứng dụng (application / 애플리케이션).
 
 ```ts
 type UserDto = {
@@ -51,7 +54,7 @@ type User = {
 };
 ```
 
-Adapter boundary làm conversion + validation. Lợi ích là nếu backend đổi format, damage được cô lập; UI/business code không phải carry transport quirks khắp codebase.
+Adapter ranh giới (boundary / 경계) làm conversion + kiểm tra hợp lệ (validation / 검증). Lợi ích là nếu backend đổi format, damage được cô lập; UI/nghiệp vụ (business / 비즈니스) mã (code / 코드) không phải carry vận chuyển (transport / 전송) quirks khắp codebase.
 
 ## 3. Branded ID ngăn cross-domain mix-up nhưng không validate format
 
@@ -60,7 +63,7 @@ declare const userIdBrand: unique symbol;
 type UserId = string & { readonly [userIdBrand]: true };
 ```
 
-Pattern này giúp compiler phân biệt `UserId` và `OrderId`, nhưng runtime vẫn là string. Constructor/factory phải validate nếu ID có format invariant:
+Mẫu (pattern / 패턴) này giúp trình biên dịch (compiler / 컴파일러) phân biệt `UserId` và `OrderId`, nhưng thời gian chạy (runtime / 런타임) vẫn là string. Constructor/factory phải validate nếu ID có format bất biến (invariant / 불변식):
 
 ```ts
 function parseUserId(value: string): UserId {
@@ -72,11 +75,11 @@ function parseUserId(value: string): UserId {
 }
 ```
 
-Assertion ở đây được đặt sau runtime evidence, nên proof obligation rõ.
+Assertion ở đây được đặt sau thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거), nên proof obligation rõ.
 
-## 4. Illegal state khó represent hơn bằng discriminated union
+## 4. Illegal trạng thái (state / 상태) khó represent hơn bằng discriminated union
 
-Checkout state, websocket connection, async mutation hay permission state thường tốt hơn khi model bằng finite states thay vì nhiều optional booleans.
+Checkout trạng thái (state / 상태), websocket liên kết (connection / 연결), async mutation hay permission trạng thái (state / 상태) thường tốt hơn khi mô hình (model / 모델) bằng finite states thay vì nhiều optional booleans.
 
 ```ts
 type UploadState =
@@ -86,11 +89,11 @@ type UploadState =
   | { kind: "failed"; error: Error };
 ```
 
-Một reducer/switch exhaustive có thể giữ transition logic rõ. Khi business thêm `cancelled`, compiler chỉ ra nơi cần review thay vì để state mới silently rơi qua default branch.
+Một reducer/switch exhaustive có thể giữ chuyển tiếp (transition / 전이) lô-gic (logic / 논리) rõ. Khi nghiệp vụ (business / 비즈니스) thêm `cancelled`, trình biên dịch (compiler / 컴파일러) chỉ ra nơi cần rà soát (review / 검토) thay vì để trạng thái (state / 상태) mới silently rơi qua default branch.
 
-## 5. Error modeling: đừng biến mọi failure thành `Error | null | undefined`
+## 5. lỗi (error / 오류) modeling: đừng biến mọi thất bại (failure / 실패) thành `Error | null | undefined`
 
-Trong boundary quan trọng, error category có thể là domain data:
+Trong ranh giới (boundary / 경계) quan trọng, lỗi (error / 오류) category có thể là lĩnh vực (domain / 도메인) dữ liệu (data / 데이터):
 
 ```ts
 type LoginResult =
@@ -99,11 +102,11 @@ type LoginResult =
   | { ok: false; reason: "locked"; retryAfterMs: number };
 ```
 
-Nhưng không phải mọi exception cần union khổng lồ. Unexpected programmer/runtime faults vẫn có thể throw. Hãy phân biệt expected business outcome với exceptional failure; type model nên phản ánh recovery strategy.
+Nhưng không phải mọi exception cần union khổng lồ. Unexpected programmer/thời gian chạy (runtime / 런타임) faults vẫn có thể throw. Hãy phân biệt expected nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과) với exceptional thất bại (failure / 실패); kiểu (type / 타입) mô hình (model / 모델) nên phản ánh chiến lược khôi phục (recovery strategy / 복구 전략).
 
-## 6. React + TypeScript: type component contract, không type framework theo cảm giác
+## 6. React + TypeScript: kiểu (type / 타입) thành phần (component / 컴포넌트) đặc tả hợp đồng (contract / 계약), không kiểu (type / 타입) khung phần mềm (framework / 프레임워크) theo cảm giác
 
-React component props là public API nhỏ. Discriminated props loại invalid combinations tốt hơn optional soup:
+React thành phần (component / 컴포넌트) props là API công khai (public API / 공개 API) nhỏ. Discriminated props loại invalid combinations tốt hơn optional soup:
 
 ```ts
 type ButtonProps =
@@ -119,19 +122,19 @@ type ButtonProps =
     };
 ```
 
-State/reducer actions cũng hưởng lợi từ discriminated unions. Generic component chỉ nên generic khi relation thật cần giữ, ví dụ table `row` và accessor keys. Đừng biến mọi component thành `<TData, TValue, TMeta>` nếu component chỉ hiển thị vài fields cố định.
+Trạng thái (state / 상태)/reducer actions cũng hưởng lợi từ discriminated unions. Generic thành phần (component / 컴포넌트) chỉ nên generic khi quan hệ (relation / 관계) thật cần giữ, ví dụ bảng (table / 테이블) `row` và accessor keys. Đừng biến mọi thành phần (component / 컴포넌트) thành `<TData, TValue, TMeta>` nếu thành phần (component / 컴포넌트) chỉ hiển thị vài fields cố định.
 
-Các mental model render/state/effect thuộc [React canonical docs](../react/00_index.md); TypeScript không thay React runtime semantics.
+Các mô hình tư duy (mental model / 사고 모델) kết xuất (render / 렌더링)/trạng thái (state / 상태)/tác động (effect / 효과) thuộc [React canonical docs](../react/00_index.md); TypeScript không thay React ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론).
 
-## 7. Event và ref types: derive từ API thay vì nhớ bằng rote
+## 7. sự kiện (event / 이벤트) và ref types: derive từ API thay vì nhớ bằng rote
 
-Với framework/library types, ưu tiên derive/import canonical types từ library declarations. Nếu callback type quá phức tạp, hover/go-to-definition để xem contract thay vì tự viết gần giống. Copy type thủ công dễ drift theo version.
+Với khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) types, ưu tiên derive/import chuẩn gốc (canonical / 정본) types từ thư viện (library / 라이브러리) declarations. Nếu callback kiểu (type / 타입) quá phức tạp, hover/go-to-definition để xem đặc tả hợp đồng (contract / 계약) thay vì tự viết gần giống. bản sao (copy / 복사) kiểu (type / 타입) thủ công dễ drift theo phiên bản (version / 버전).
 
-Khi inference đủ tốt, không cần annotate từng event. Annotation nên được dùng ở exported helpers hoặc chỗ contextual typing mất thông tin.
+Khi suy luận (inference / 추론) đủ tốt, không cần annotate từng sự kiện (event / 이벤트). Annotation nên được dùng ở exported helpers hoặc chỗ contextual typing mất thông tin.
 
-## 8. Node/backend TypeScript: static types không thay validation/authorization
+## 8. nút (node / 노드)/backend TypeScript: static types không thay kiểm tra hợp lệ (validation / 검증)/authorization
 
-Controller nhận request body không nên cast thẳng thành domain command. Auth claims cũng là external/security boundary. TypeScript không chứng minh user có permission; nó chỉ có thể giúp model output của một authorization step đã chạy.
+Controller nhận yêu cầu (request / 요청) body không nên cast thẳng thành lĩnh vực (domain / 도메인) command. Auth claims cũng là bên ngoài (external / 외부)/ranh giới bảo mật (security boundary / 보안 경계). TypeScript không chứng minh người dùng (user / 사용자) có permission; nó chỉ có thể giúp mô hình (model / 모델) đầu ra (output / 출력) của một authorization step đã chạy.
 
 ```text
 request bytes
@@ -142,46 +145,46 @@ request bytes
 → domain operation
 ```
 
-Mỗi arrow là một boundary có failure mode riêng. Type alias `AdminUser` không tự biến JWT thành admin.
+Mỗi arrow là một ranh giới (boundary / 경계) có dạng thất bại (failure mode / 실패 모드) riêng. kiểu (type / 타입) alias `AdminUser` không tự biến JWT thành admin.
 
-## 9. Security: những gì TypeScript không bảo vệ
+## 9. bảo mật (security / 보안): những gì TypeScript không bảo vệ
 
-TypeScript không ngăn XSS, CSRF, SQL injection, prototype pollution, SSRF hay broken access control chỉ bằng static types. Nó có thể giúp tạo safer APIs—ví dụ tách `TrustedHtml` khỏi raw string hoặc parameterize query builder—nhưng runtime sanitization/escaping/authorization vẫn phải tồn tại.
+TypeScript không ngăn XSS, CSRF, SQL injection, prototype pollution, SSRF hay broken kiểm soát truy cập (access control / 접근 제어) chỉ bằng static types. Nó có thể giúp tạo safer APIs—ví dụ tách `TrustedHtml` khỏi raw string hoặc parameterize truy vấn (query / 쿼리) builder—nhưng thời gian chạy (runtime / 런타임) sanitization/escaping/authorization vẫn phải tồn tại.
 
-Assertion, `any`, `@ts-ignore` và declaration giả đặc biệt nguy hiểm ở security-sensitive boundary vì chúng làm checker im đúng nơi evidence yếu nhất.
+Assertion, `any`, `@ts-ignore` và declaration giả đặc biệt nguy hiểm ở security-sensitive ranh giới (boundary / 경계) vì chúng làm checker im đúng nơi bằng chứng (evidence / 증거) yếu nhất.
 
-## 10. `@ts-expect-error` tốt hơn `@ts-ignore` khi test known invalid code
+## 10. `@ts-expect-error` tốt hơn `@ts-ignore` khi kiểm thử (test / 테스트) known invalid mã (code / 코드)
 
-Nếu intentionally test compile-time rejection:
+Nếu intentionally kiểm thử (test / 테스트) compile-time rejection:
 
 ```ts
 // @ts-expect-error invalid id type must be rejected
 loadUser(123);
 ```
 
-`@ts-expect-error` sẽ báo nếu dòng đó không còn error, giúp test không silently obsolete. `@ts-ignore` chỉ suppress và dễ sống mãi. Comment phải nói invariant gì đang được test, không chỉ “fix TS”.
+`@ts-expect-error` sẽ báo nếu dòng đó không còn lỗi (error / 오류), giúp kiểm thử (test / 테스트) không silently obsolete. `@ts-ignore` chỉ suppress và dễ sống mãi. Comment phải nói bất biến (invariant / 불변식) gì đang được kiểm thử (test / 테스트), không chỉ “fix TS”.
 
-## 11. Compile-time contract tests cho library
+## 11. Compile-time đặc tả hợp đồng (contract / 계약) tests cho thư viện (library / 라이브러리)
 
-Library có thể cần test cả runtime behavior và type surface. Một API generic có thể runtime pass nhưng inference regression phá consumer. Test fixtures nên cover valid inference, expected invalid calls và declaration output.
+Thư viện (library / 라이브러리) có thể cần kiểm thử (test / 테스트) cả hành vi thời gian chạy (runtime behavior / 런타임 동작) và kiểu (type / 타입) surface. Một API generic có thể thời gian chạy (runtime / 런타임) pass nhưng suy luận (inference / 추론) regression phá bên tiêu thụ (consumer / 소비자). kiểm thử (test / 테스트) fixtures nên cover valid suy luận (inference / 추론), expected invalid calls và declaration đầu ra (output / 출력).
 
-Public type changes cần semantic-version reasoning tương tự runtime API. Một “refactor type only” có thể là breaking change nếu consumer source không compile.
+Công khai (public / 공개) kiểu (type / 타입) changes cần semantic-version lập luận (reasoning / 추론) tương tự thời gian chạy (runtime / 런타임) API. Một “refactor kiểu (type / 타입) only” có thể là breaking thay đổi (change / 변경) nếu bên tiêu thụ (consumer / 소비자) nguồn (source / 소스) không compile.
 
-## 12. Public API type nên nhỏ, stable và explainable
+## 12. API công khai (public API / 공개 API) kiểu (type / 타입) nên nhỏ, stable và explainable
 
-Exporting giant inferred internal type làm implementation leak ra public contract. Khi internal refactor đổi inferred shape, consumer bị break ngoài ý muốn.
+Exporting giant inferred nội bộ (internal / 내부) kiểu (type / 타입) làm hiện thực (implementation / 구현) leak ra công khai (public / 공개) đặc tả hợp đồng (contract / 계약). Khi nội bộ (internal / 내부) refactor đổi inferred shape, bên tiêu thụ (consumer / 소비자) bị break ngoài ý muốn.
 
-Nên đặt explicit public aliases/interfaces ở boundary và giữ helper conditional/mapped types private khi có thể. Public generic constraints phải phản ánh concept domain, không expose checker implementation details.
+Nên đặt tường minh (explicit / 명시적) công khai (public / 공개) aliases/interfaces ở ranh giới (boundary / 경계) và giữ helper conditional/mapped types private khi có thể. công khai (public / 공개) generic các ràng buộc (constraints / 제약조건들) phải phản ánh concept lĩnh vực (domain / 도메인), không expose checker hiện thực (implementation / 구현) details.
 
-## 13. Runtime schema và static type nên có một source of truth khi có thể
+## 13. thời gian chạy (runtime / 런타임) lược đồ (schema / 스키마) và static kiểu (type / 타입) nên có một nguồn chuẩn (source of truth / 정본) khi có thể
 
-Nếu maintain schema runtime và TypeScript type độc lập, chúng có thể drift. Tùy stack, có thể derive type từ schema hoặc schema từ model/codegen. Nhưng “single source” cũng có trade-off: generated output khó đọc, tool lock-in, runtime bundle size hoặc schema expressiveness khác type system.
+Nếu maintain lược đồ (schema / 스키마) thời gian chạy (runtime / 런타임) và TypeScript kiểu (type / 타입) độc lập, chúng có thể drift. Tùy ngăn xếp (stack / 스택), có thể derive kiểu (type / 타입) từ lược đồ (schema / 스키마) hoặc lược đồ (schema / 스키마) từ mô hình (model / 모델)/codegen. Nhưng “single nguồn (source / 소스)” cũng có sự đánh đổi (trade-off / 트레이드오프): generated đầu ra (output / 출력) khó đọc, công cụ (tool / 도구) lock-in, thời gian chạy (runtime / 런타임) bundle kích thước (size / 크기) hoặc lược đồ (schema / 스키마) expressiveness khác hệ kiểu (type system / 타입 시스템).
 
-Quyết định đúng dựa trên trust boundary và ownership. Quan trọng nhất là có automated evidence rằng runtime validator và static contract không lệch.
+Quyết định đúng dựa trên trust ranh giới (boundary / 경계) và quyền sở hữu (ownership / 소유권). Quan trọng nhất là có automated bằng chứng (evidence / 증거) rằng thời gian chạy (runtime / 런타임) validator và static đặc tả hợp đồng (contract / 계약) không lệch.
 
-## 14. API client: normalize error và data một lần
+## 14. API máy khách (client / 클라이언트): normalize lỗi (error / 오류) và dữ liệu (data / 데이터) một lần
 
-Thay vì mỗi component tự `fetch` rồi cast:
+Thay vì mỗi thành phần (component / 컴포넌트) tự `fetch` rồi cast:
 
 ```ts
 async function getUser(id: UserId): Promise<User> {
@@ -196,25 +199,25 @@ async function getUser(id: UserId): Promise<User> {
 }
 ```
 
-Boundary này tập trung HTTP status, JSON parse, validation và mapping. Downstream code làm việc với trusted `User` thay vì lặp defensive checks.
+Ranh giới (boundary / 경계) này tập trung HTTP status, JSON parse, kiểm tra hợp lệ (validation / 검증) và ánh xạ (mapping / 매핑). Downstream mã (code / 코드) làm việc với trusted `User` thay vì lặp defensive checks.
 
-## 15. Async type không loại race condition
+## 15. Async kiểu (type / 타입) không loại race điều kiện (condition / 조건)
 
-`Promise<User>` nói eventual value type, không nói request nào thắng nếu hai request chạy song song. TypeScript không ngăn stale response overwrite newer state. Runtime concurrency control vẫn cần AbortController, request identity, state machine hoặc framework-level data layer.
+`Promise<User>` nói eventual giá trị (value / 값) kiểu (type / 타입), không nói yêu cầu (request / 요청) nào thắng nếu hai yêu cầu (request / 요청) chạy song song. TypeScript không ngăn stale phản hồi (response / 응답) overwrite newer trạng thái (state / 상태). thời gian chạy (runtime / 런타임) tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) vẫn cần AbortController, yêu cầu (request / 요청) định danh (identity / 식별자), máy trạng thái (state machine / 상태 머신) hoặc framework-level dữ liệu (data / 데이터) tầng (layer / 계층).
 
-Đây là ví dụ điển hình của connection với JavaScript async runtime: static type đúng nhưng temporal behavior sai.
+Đây là ví dụ điển hình của liên kết (connection / 연결) với JavaScript async thời gian chạy (runtime / 런타임): static kiểu (type / 타입) đúng nhưng temporal hành vi (behavior / 동작) sai.
 
-## 16. Performance: type-check time là production developer experience
+## 16. hiệu năng (performance / 성능): type-check thời gian (time / 시간) là môi trường vận hành (production / 운영 환경) nhà phát triển (developer / 개발자) experience
 
-Large codebase phải theo dõi cold check, incremental check, editor latency và memory. TypeScript 7.0 giảm đáng kể compiler cost trong nhiều workload nhờ native architecture, nhưng pathological type definitions vẫn có thể đắt.
+Large codebase phải theo dõi cold check, incremental check, editor độ trễ (latency / 지연 시간) và bộ nhớ (memory / 메모리). TypeScript 7.0 giảm đáng kể trình biên dịch (compiler / 컴파일러) chi phí (cost / 비용) trong nhiều tải công việc (workload / 워크로드) nhờ bản địa (native / 네이티브) kiến trúc (architecture / 아키텍처), nhưng pathological kiểu (type / 타입) definitions vẫn có thể đắt.
 
-Khi một file tạo giant union/recursive conditional, không nên nói “compiler 7 nhanh rồi nên bỏ qua”. Fast compiler tăng budget, không xóa asymptotic/problem-shape cost.
+Khi một tệp (file / 파일) tạo giant union/recursive conditional, không nên nói “trình biên dịch (compiler / 컴파일러) 7 nhanh rồi nên bỏ qua”. Fast trình biên dịch (compiler / 컴파일러) tăng ngân sách (budget / 예산), không xóa asymptotic/problem-shape chi phí (cost / 비용).
 
-Evidence nên gồm `--extendedDiagnostics`, trace khi cần, diff before/after PR và editor reproduction. Tối ưu bằng cách giảm type instantiation, chia public surface, tránh huge generated unions, hoặc chuyển validation logic phù hợp về runtime.
+Bằng chứng (evidence / 증거) nên gồm `--extendedDiagnostics`, dấu vết (trace / 추적) khi cần, diff before/after PR và editor reproduction. Tối ưu bằng cách giảm kiểu (type / 타입) instantiation, chia công khai (public / 공개) surface, tránh huge generated unions, hoặc chuyển kiểm tra hợp lệ (validation / 검증) lô-gic (logic / 논리) phù hợp về thời gian chạy (runtime / 런타임).
 
-## 17. `any` debt phải được quản lý như migration debt
+## 17. `any` debt phải được quản lý như di chuyển (migration / 마이그레이션) debt
 
-`any` ở một leaf adapter có thể chấp nhận tạm thời; `any` ở shared library boundary có blast radius lớn. Khi migrate legacy code, track số `any` thôi chưa đủ. Phân loại:
+`any` ở một leaf adapter có thể chấp nhận tạm thời; `any` ở dùng chung (shared / 공유) thư viện (library / 라이브러리) ranh giới (boundary / 경계) có blast radius lớn. Khi migrate legacy mã (code / 코드), nhánh học (track / 트랙) số `any` thôi chưa đủ. Phân loại:
 
 ```text
 boundary any     → ưu tiên thay bằng unknown + validation
@@ -223,9 +226,9 @@ local migration  → có thể tạm chấp nhận với TODO/owner
 third-party gap  → isolate bằng adapter/declaration patch
 ```
 
-Mục tiêu là containment và evidence, không phải “zero any” bằng cast tinh vi hơn.
+Mục tiêu là containment và bằng chứng (evidence / 증거), không phải “zero any” bằng cast tinh vi hơn.
 
-## 18. Migration JavaScript → TypeScript theo risk, không theo folder alphabet
+## 18. di chuyển (migration / 마이그레이션) JavaScript → TypeScript theo rủi ro (risk / 위험), không theo folder alphabet
 
 Một chiến lược thực dụng:
 
@@ -239,17 +242,17 @@ Một chiến lược thực dụng:
 7. loại escape hatches còn lại
 ```
 
-Nếu bật toàn bộ strict flags trên codebase lớn rồi thêm hàng nghìn `as any`, bạn đạt config strict nhưng không đạt type safety.
+Nếu bật toàn bộ strict flags trên codebase lớn rồi thêm hàng nghìn `as any`, bạn đạt cấu hình (config / 설정) strict nhưng không đạt kiểu (type / 타입) an toàn (safety / 안전).
 
 ## 19. Legacy patterns phải biết đọc
 
-Bạn vẫn có thể gặp `namespace`, triple-slash references, ambient globals, old decorator mode, `enum`-heavy code, non-strict null handling, `moduleResolution` legacy modes và CommonJS interop workaround. Mục tiêu không phải rewrite ngay; trước tiên hiểu runtime/package assumptions, thêm tests, rồi migrate theo seam nhỏ.
+Bạn vẫn có thể gặp `namespace`, triple-slash references, ambient globals, old decorator chế độ (mode / 모드), `enum`-heavy mã (code / 코드), non-strict null handling, `moduleResolution` legacy modes và CommonJS interop workaround. Mục tiêu không phải rewrite ngay; trước tiên hiểu thời gian chạy (runtime / 런타임)/gói (package / 패키지) các giả định (assumptions / 가정들), thêm tests, rồi migrate theo seam nhỏ.
 
-`enum` là ví dụ cần reasoning. Nó có runtime representation khác type-only union. Literal union + `as const` object thường phù hợp config/domain constants hiện đại, nhưng existing enum có thể là public ABI hoặc dependency expectation. Đừng đổi chỉ vì style.
+`enum` là ví dụ cần lập luận (reasoning / 추론). Nó có thời gian chạy (runtime / 런타임) biểu diễn (representation / 표현) khác type-only union. Literal union + `as const` đối tượng (object / 객체) thường phù hợp cấu hình (config / 설정)/lĩnh vực (domain / 도메인) constants hiện đại, nhưng existing enum có thể là công khai (public / 공개) ABI hoặc phụ thuộc (dependency / 의존성) expectation. Đừng đổi chỉ vì style.
 
-## 20. Debugging production type/runtime mismatch
+## 20. Debugging môi trường vận hành (production / 운영 환경) kiểu (type / 타입)/thời gian chạy (runtime / 런타임) mismatch
 
-Khi production crash dù CI type-check pass, trace theo boundary:
+Khi môi trường vận hành (production / 운영 환경) crash dù CI type-check pass, dấu vết (trace / 추적) theo ranh giới (boundary / 경계):
 
 ```text
 1. runtime value thật là gì?
@@ -259,49 +262,49 @@ Khi production crash dù CI type-check pass, trace theo boundary:
 5. emitted/bundled artifact có khác source assumptions không?
 ```
 
-Ví dụ stack `Cannot read properties of undefined` trên `user.profile.name` thường không cần “type phức tạp hơn”; cần tìm nơi `user` được tạo từ external data mà không validate.
+Ví dụ ngăn xếp (stack / 스택) `Cannot read properties of undefined` trên `user.profile.name` thường không cần “kiểu (type / 타입) phức tạp hơn”; cần tìm nơi `user` được tạo từ bên ngoài (external / 외부) dữ liệu (data / 데이터) mà không validate.
 
-## 21. Observability: log boundary facts, không log type name
+## 21. khả năng quan sát (observability / 관측 가능성): log ranh giới (boundary / 경계) facts, không log kiểu (type / 타입) name
 
-Runtime không biết `User` interface. Khi debug, log safe metadata thực: schema/version, endpoint, status, discriminant, validation error path, request ID. Đừng log sensitive payload chỉ để chứng minh “type sai”. Security và observability phải phối hợp.
+Thời gian chạy (runtime / 런타임) không biết `User` giao diện (interface / 인터페이스). Khi gỡ lỗi (debug / 디버그), log safe siêu dữ liệu (metadata / 메타데이터) thực: lược đồ (schema / 스키마)/phiên bản (version / 버전), endpoint, status, discriminant, kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) đường dẫn (path / 경로), yêu cầu (request / 요청) ID. Đừng log sensitive payload chỉ để chứng minh “kiểu (type / 타입) sai”. bảo mật (security / 보안) và khả năng quan sát (observability / 관측 가능성) phải phối hợp.
 
-## 22. Package/library authoring với TypeScript 7
+## 22. gói (package / 패키지)/thư viện (library / 라이브러리) authoring với TypeScript 7
 
-TypeScript 7.0 tập trung mạnh vào native compiler/tooling và hiện tại không cung cấp programmatic API giống 6.x. Nếu library build chain hoặc plugin cần compiler API, có thể phải chạy 6.0 compatibility package side-by-side trong migration period. Đây là toolchain concern, không có nghĩa source library phải hạ type-system knowledge về 6.0.
+TypeScript 7.0 tập trung mạnh vào bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러)/tooling và hiện tại không cung cấp programmatic API giống 6.x. Nếu thư viện (library / 라이브러리) bản dựng (build / 빌드) chuỗi (chain / 사슬) hoặc plugin cần trình biên dịch (compiler / 컴파일러) API, có thể phải chạy 6.0 tính tương thích (compatibility / 호환성) gói (package / 패키지) side-by-side trong di chuyển (migration / 마이그레이션) period. Đây là toolchain concern, không có nghĩa nguồn (source / 소스) thư viện (library / 라이브러리) phải hạ type-system kiến thức (knowledge / 지식) về 6.0.
 
-Khi publish, kiểm tra declarations, ESM/CJS exports, runtime target, package conditions và consumer compile fixture. TypeScript version minimum nên được document khi public types dùng feature mới mà compiler cũ không parse/understand.
+Khi publish, kiểm tra declarations, ESM/CJS exports, thời gian chạy (runtime / 런타임) mục tiêu (target / 대상), gói (package / 패키지) conditions và bên tiêu thụ (consumer / 소비자) compile fixture. TypeScript phiên bản (version / 버전) minimum nên được document khi công khai (public / 공개) types dùng tính năng (feature / 기능) mới mà trình biên dịch (compiler / 컴파일러) cũ không parse/understand.
 
-## 23. Senior code review checklist dưới dạng reasoning
+## 23. cấp cao (senior / 시니어) rà soát mã (code review / 코드 리뷰) checklist dưới dạng lập luận (reasoning / 추론)
 
-Thay vì checklist máy móc, review TypeScript nên hỏi theo chuỗi: type này mô hình invariant thật hay chỉ mô tả data hiện tại; external value đã được validate chưa; generic giữ relation nào; assertion có evidence ở đâu; config/module behavior có khớp runtime không; public type có expose implementation detail không; và advanced type có đáng cost compiler/cognitive không?
+Thay vì checklist máy móc, rà soát (review / 검토) TypeScript nên hỏi theo chuỗi: kiểu (type / 타입) này mô hình bất biến (invariant / 불변식) thật hay chỉ mô tả dữ liệu (data / 데이터) hiện tại; bên ngoài (external / 외부) giá trị (value / 값) đã được validate chưa; generic giữ quan hệ (relation / 관계) nào; assertion có bằng chứng (evidence / 증거) ở đâu; cấu hình (config / 설정)/mô-đun (module / 모듈) hành vi (behavior / 동작) có khớp thời gian chạy (runtime / 런타임) không; công khai (public / 공개) kiểu (type / 타입) có expose hiện thực (implementation / 구현) detail không; và advanced kiểu (type / 타입) có đáng chi phí (cost / 비용) trình biên dịch (compiler / 컴파일러)/cognitive không?
 
-Một PR tốt có thể xóa type-level complexity nếu runtime model đã đơn giản hơn. “Nhiều type” không đồng nghĩa “type-safe hơn”.
+Một PR tốt có thể xóa type-level độ phức tạp (complexity / 복잡도) nếu thời gian chạy (runtime / 런타임) mô hình (model / 모델) đã đơn giản hơn. “Nhiều kiểu (type / 타입)” không đồng nghĩa “type-safe hơn”.
 
-## 24. Production case — API field đổi từ required sang nullable
+## 24. môi trường vận hành (production / 운영 환경) trường hợp (case / 사례) — API trường dữ liệu (field / 필드) đổi từ required sang nullable
 
-Giả sử backend đổi `middleName: string` thành `string | null`. Nếu generated/handwritten DTO được cập nhật đúng, compiler sẽ đẩy diagnostic tới mapper và consumer. Mapper có thể quyết định domain representation là `string | null`, `Option`-like union, hoặc normalize thành empty display text ở UI boundary.
+Giả sử backend đổi `middleName: string` thành `string | null`. Nếu generated/handwritten DTO được cập nhật đúng, trình biên dịch (compiler / 컴파일러) sẽ đẩy diagnostic tới mapper và bên tiêu thụ (consumer / 소비자). Mapper có thể quyết định lĩnh vực (domain / 도메인) biểu diễn (representation / 표현) là `string | null`, `Option`-like union, hoặc normalize thành empty display văn bản (text / 텍스트) ở UI ranh giới (boundary / 경계).
 
-Nếu team chỉ sửa bằng `as string`, build xanh nhưng runtime evidence bị bỏ. TypeScript có giá trị khi change propagation ép team ra quyết định tại đúng layer.
+Nếu nhóm (team / 팀) chỉ sửa bằng `as string`, bản dựng (build / 빌드) xanh nhưng thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) bị bỏ. TypeScript có giá trị khi thay đổi (change / 변경) propagation ép nhóm (team / 팀) ra quyết định tại đúng tầng (layer / 계층).
 
-## 25. Production case — module type pass, runtime import fail
+## 25. môi trường vận hành (production / 운영 환경) trường hợp (case / 사례) — mô-đun (module / 모듈) kiểu (type / 타입) pass, thời gian chạy (runtime / 런타임) import thất bại (fail / 실패)
 
-IDE resolve alias `@domain/user` nhờ `paths`, nhưng bundler/Node không có alias tương ứng. Static type graph pass, runtime fail. Debug đúng là inspect resolver configs/package exports, không chỉnh interface. Đây là lý do chapter tooling nằm trong TypeScript track: type correctness và module execution phải khớp.
+IDE resolve alias `@domain/user` nhờ `paths`, nhưng bundler/nút (node / 노드) không có alias tương ứng. Static kiểu (type / 타입) đồ thị (graph / 그래프) pass, thời gian chạy (runtime / 런타임) thất bại (fail / 실패). gỡ lỗi (debug / 디버그) đúng là inspect resolver configs/gói (package / 패키지) exports, không chỉnh giao diện (interface / 인터페이스). Đây là lý do chapter tooling nằm trong TypeScript nhánh học (track / 트랙): kiểu (type / 타입) tính đúng đắn (correctness / 정확성) và mô-đun (module / 모듈) thực thi (execution / 실행) phải khớp.
 
-## 26. Production case — type-level abstraction làm editor lag
+## 26. môi trường vận hành (production / 운영 환경) trường hợp (case / 사례) — type-level lớp trừu tượng (abstraction / 추상화) làm editor lag
 
-Một design-system utility tạo template literal union từ hàng trăm token × variants × breakpoints. Type auto-complete rất “thông minh” nhưng editor latency tăng. Senior response là đo checker trace, giảm combinatorial union, chuyển một phần validation sang runtime/schema hoặc giới hạn key space. Developer experience là một production constraint của type design.
+Một design-system utility tạo template literal union từ hàng trăm đơn vị từ (token / 토큰) × variants × breakpoints. kiểu (type / 타입) auto-complete rất “thông minh” nhưng editor độ trễ (latency / 지연 시간) tăng. cấp cao (senior / 시니어) phản hồi (response / 응답) là đo checker dấu vết (trace / 추적), giảm combinatorial union, chuyển một phần kiểm tra hợp lệ (validation / 검증) sang thời gian chạy (runtime / 런타임)/lược đồ (schema / 스키마) hoặc giới hạn key không gian (space / 공간). nhà phát triển (developer / 개발자) experience là một môi trường vận hành (production / 운영 환경) ràng buộc (constraint / 제약조건) của kiểu (type / 타입) thiết kế (design / 설계).
 
-## 27. Kết nối với JavaScript và React canonical docs
+## 27. Kết nối với JavaScript và React chuẩn gốc (canonical / 정본) docs
 
-TypeScript không thay scope/closure, prototype, event loop, Promise ordering hay browser security model; xem [JavaScript Intermediate](javascript_intermediate.md) và [JavaScript Senior](javascript_senior.md). TypeScript cũng không thay React render/commit/effect semantics; xem [React Index](../react/00_index.md).
+TypeScript không thay phạm vi (scope / 범위)/closure, prototype, vòng lặp sự kiện (event loop / 이벤트 루프), Promise thứ tự (ordering / 순서) hay trình duyệt (browser / 브라우저) bảo mật (security / 보안) mô hình (model / 모델); xem [JavaScript Intermediate](javascript_intermediate.md) và [JavaScript Senior](javascript_senior.md). TypeScript cũng không thay React kết xuất (render / 렌더링)/lần ghi nhận (commit / 커밋)/tác động (effect / 효과) ngữ nghĩa (semantics / 의미론); xem [React Index](../react/00_index.md).
 
-Nếu một bug xảy ra sau khi code đã compile, quay lại runtime layer trước khi thêm type annotation. Nếu bug là invalid state được compiler cho qua, quay lại model/invariant. Nếu IDE và runtime disagree về import, quay lại module/tooling layer. Đây là cách tách failure mode có hệ thống.
+Nếu một bug xảy ra sau khi mã (code / 코드) đã compile, quay lại thời gian chạy (runtime / 런타임) tầng (layer / 계층) trước khi thêm kiểu (type / 타입) annotation. Nếu bug là invalid trạng thái (state / 상태) được trình biên dịch (compiler / 컴파일러) cho qua, quay lại mô hình (model / 모델)/bất biến (invariant / 불변식). Nếu IDE và thời gian chạy (runtime / 런타임) disagree về import, quay lại mô-đun (module / 모듈)/tooling tầng (layer / 계층). Đây là cách tách dạng thất bại (failure mode / 실패 모드) có hệ thống.
 
-## 28. Validation là protocol transition, không chỉ là `schema.parse()`
+## 28. kiểm tra hợp lệ (validation / 검증) là giao thức (protocol / 프로토콜) chuyển tiếp (transition / 전이), không chỉ là `schema.parse()`
 
-Một boundary tốt không chỉ hỏi “shape có đúng không?” mà còn hỏi data đang ở **protocol version nào**, semantic invariant có đúng không, và sau parse value có được normalize về representation ổn định hay không.
+Một ranh giới (boundary / 경계) tốt không chỉ hỏi “shape có đúng không?” mà còn hỏi dữ liệu (data / 데이터) đang ở **giao thức (protocol / 프로토콜) phiên bản (version / 버전) nào**, ngữ nghĩa (semantic / 의미적) bất biến (invariant / 불변식) có đúng không, và sau parse giá trị (value / 값) có được normalize về biểu diễn (representation / 표현) ổn định hay không.
 
-Ví dụ timestamp string có thể đúng shape nhưng invalid date; amount có thể là number nhưng âm trong domain không cho phép; status có thể là string hợp schema cũ nhưng không còn được business chấp nhận.
+Ví dụ timestamp string có thể đúng shape nhưng invalid date; amount có thể là number nhưng âm trong lĩnh vực (domain / 도메인) không cho phép; status có thể là string hợp lược đồ (schema / 스키마) cũ nhưng không còn được nghiệp vụ (business / 비즈니스) chấp nhận.
 
 ```text
 bytes / unknown value
@@ -312,13 +315,13 @@ bytes / unknown value
 → domain value
 ```
 
-TypeScript thường bắt đầu có giá trị mạnh nhất từ domain value trở đi. Nếu team gọi schema validator nhưng schema quá permissive hoặc bỏ semantic step, static type phía sau vẫn có thể trở thành false confidence.
+TypeScript thường bắt đầu có giá trị mạnh nhất từ lĩnh vực (domain / 도메인) giá trị (value / 값) trở đi. Nếu nhóm (team / 팀) gọi lược đồ (schema / 스키마) validator nhưng lược đồ (schema / 스키마) quá permissive hoặc bỏ ngữ nghĩa (semantic / 의미적) step, static kiểu (type / 타입) phía sau vẫn có thể trở thành false confidence.
 
-## 29. Serialization boundary: TypeScript type không bảo đảm value truyền qua JSON được
+## 29. Serialization ranh giới (boundary / 경계): TypeScript kiểu (type / 타입) không bảo đảm giá trị (value / 값) truyền qua JSON được
 
-Một object TypeScript có thể chứa `Date`, `Map`, `Set`, `bigint`, function, class instance hoặc cyclic references. `JSON.stringify` không preserve toàn bộ semantics đó; `bigint` còn gây lỗi nếu không có strategy riêng.
+Một đối tượng (object / 객체) TypeScript có thể chứa `Date`, `Map`, `Set`, `bigint`, hàm (function / 함수), lớp (class / 클래스) instance hoặc cyclic references. `JSON.stringify` không preserve toàn bộ ngữ nghĩa (semantics / 의미론) đó; `bigint` còn gây lỗi nếu không có chiến lược (strategy / 전략) riêng.
 
-Vì vậy DTO qua HTTP/storage nên dùng representation serialization-safe có chủ đích:
+Vì vậy DTO qua HTTP/lưu trữ (storage / 저장소) nên dùng biểu diễn (representation / 표현) serialization-safe có chủ đích:
 
 ```ts
 type UserDto = {
@@ -332,13 +335,13 @@ type User = {
 };
 ```
 
-Nếu dùng cùng một `User` type cho domain object lẫn transport payload, bạn đang che mất một state transition thật. Mapper không phải boilerplate vô ích; nó là nơi ownership của representation được xác định.
+Nếu dùng cùng một `User` kiểu (type / 타입) cho lĩnh vực (domain / 도메인) đối tượng (object / 객체) lẫn vận chuyển (transport / 전송) payload, bạn đang che mất một chuyển tiếp trạng thái (state transition / 상태 전이) thật. Mapper không phải boilerplate vô ích; nó là nơi quyền sở hữu (ownership / 소유권) của biểu diễn (representation / 표현) được xác định.
 
-## 30. Schema evolution: backward/forward compatibility không nằm trong union type đơn lẻ
+## 30. lược đồ (schema / 스키마) evolution: backward/forward tính tương thích (compatibility / 호환성) không nằm trong union kiểu (type / 타입) đơn lẻ
 
-Event/queue payload thường sống lâu hơn một deploy. Producer v2 có thể gửi field mới khi consumer v1 vẫn chạy. Một type alias mới nhất không mô tả deployment topology này.
+Sự kiện (event / 이벤트)/hàng đợi (queue / 큐) payload thường sống lâu hơn một deploy. Producer v2 có thể gửi trường dữ liệu (field / 필드) mới khi bên tiêu thụ (consumer / 소비자) v1 vẫn chạy. Một kiểu (type / 타입) alias mới nhất không mô tả triển khai (deployment / 배포) topology này.
 
-Có thể model version rõ:
+Có thể mô hình (model / 모델) phiên bản (version / 버전) rõ:
 
 ```ts
 type UserCreatedV1 = {
@@ -355,13 +358,13 @@ type UserCreatedV2 = {
 type UserCreatedEvent = UserCreatedV1 | UserCreatedV2;
 ```
 
-Decoder xử lý version, normalize về domain command hiện tại. Khi xóa support V1, đó là compatibility decision có telemetry/migration evidence, không chỉ là “remove union member cho code sạch”.
+Decoder xử lý phiên bản (version / 버전), normalize về lĩnh vực (domain / 도메인) command hiện tại. Khi xóa hỗ trợ (support / 지원) V1, đó là tính tương thích (compatibility / 호환성) quyết định (decision / 결정) có telemetry/di chuyển (migration / 마이그레이션) bằng chứng (evidence / 증거), không chỉ là “remove union member cho mã (code / 코드) sạch”.
 
 ## 31. Generated types: generated không đồng nghĩa verified
 
-OpenAPI, GraphQL, Protobuf hoặc database codegen có thể tạo TypeScript rất chính xác **so với schema input**, nhưng schema input có thể stale so với deployed producer. Code generation chứng minh consistency giữa code và schema snapshot, không chứng minh production system đang chạy đúng snapshot đó.
+OpenAPI, GraphQL, Protobuf hoặc cơ sở dữ liệu (database / 데이터베이스) codegen có thể tạo TypeScript rất chính xác **so với lược đồ (schema / 스키마) đầu vào (input / 입력)**, nhưng lược đồ (schema / 스키마) đầu vào (input / 입력) có thể stale so với deployed producer. mã (code / 코드) generation chứng minh consistency giữa mã (code / 코드) và lược đồ (schema / 스키마) snapshot, không chứng minh môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) đang chạy đúng snapshot đó.
 
-Pipeline đáng tin hơn thường có:
+Chuỗi xử lý (pipeline / 파이프라인) đáng tin hơn thường có:
 
 ```text
 source schema có ownership/version
@@ -371,11 +374,11 @@ source schema có ownership/version
 → contract/integration test với producer hoặc fixture chuẩn
 ```
 
-Đừng edit generated file bằng tay để “fix TypeScript”; hãy sửa source schema/generator hoặc adapter layer. Nếu phải patch generated output tạm thời, patch phải có owner và test để không biến mất âm thầm ở lần regenerate sau.
+Đừng edit generated tệp (file / 파일) bằng tay để “fix TypeScript”; hãy sửa nguồn (source / 소스) lược đồ (schema / 스키마)/generator hoặc adapter tầng (layer / 계층). Nếu phải patch generated đầu ra (output / 출력) tạm thời, patch phải có đơn vị sở hữu (owner / 오너) và kiểm thử (test / 테스트) để không biến mất âm thầm ở lần regenerate sau.
 
-## 32. Domain utility type có thể vô tình phá invariant
+## 32. lĩnh vực (domain / 도메인) utility kiểu (type / 타입) có thể vô tình phá bất biến (invariant / 불변식)
 
-`Partial<User>` rất tiện, nhưng một business PATCH command không nhất thiết là “mọi property của User đều optional”. Có field không được đổi, field đổi theo nhóm, hoặc null/absent có semantics khác nhau.
+`Partial<User>` rất tiện, nhưng một nghiệp vụ (business / 비즈니스) PATCH command không nhất thiết là “mọi thuộc tính (property / 속성) của người dùng (user / 사용자) đều optional”. Có trường dữ liệu (field / 필드) không được đổi, trường dữ liệu (field / 필드) đổi theo nhóm, hoặc null/absent có ngữ nghĩa (semantics / 의미론) khác nhau.
 
 ```ts
 type UpdateUserCommand = {
@@ -384,19 +387,19 @@ type UpdateUserCommand = {
 };
 ```
 
-Explicit command thường tốt hơn:
+Tường minh (explicit / 명시적) command thường tốt hơn:
 
 ```ts
 type UpdateUserCommand = Partial<User>;
 ```
 
-nếu `User` còn chứa `id`, audit metadata hoặc derived fields.
+nếu `User` còn chứa `id`, kiểm tra (audit / 감사) siêu dữ liệu (metadata / 메타데이터) hoặc derived fields.
 
-Utility types nên transform technical shapes; domain command quan trọng nên encode operation semantics trực tiếp.
+Utility types nên transform technical shapes; lĩnh vực (domain / 도메인) command quan trọng nên encode thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론) trực tiếp.
 
-## 33. Capability typing cho security tốt hơn role string lan khắp codebase
+## 33. năng lực (capability / 역량) typing cho bảo mật (security / 보안) tốt hơn role string lan khắp codebase
 
-Một `role: "admin"` không tự bảo đảm action đã được authorize. Một pattern tốt hơn là authorization layer tạo capability/token object chỉ khi policy pass:
+Một `role: "admin"` không tự bảo đảm hành động (action / 동작) đã được authorize. Một mẫu (pattern / 패턴) tốt hơn là authorization tầng (layer / 계층) tạo năng lực (capability / 역량)/đơn vị từ (token / 토큰) đối tượng (object / 객체) chỉ khi chính sách (policy / 정책) pass:
 
 ```ts
 declare const deleteUserCapability: unique symbol;
@@ -407,31 +410,31 @@ type DeleteUserCapability = {
 };
 ```
 
-Domain operation nhận capability thay vì raw role. TypeScript giúp API khó gọi sai hơn, nhưng capability chỉ đáng tin nếu constructor/factory nằm sau runtime authorization và không export escape hatch assertion.
+Lĩnh vực (domain / 도메인) thao tác (operation / 연산) nhận năng lực (capability / 역량) thay vì raw role. TypeScript giúp API khó gọi sai hơn, nhưng năng lực (capability / 역량) chỉ đáng tin nếu constructor/factory nằm sau thời gian chạy (runtime / 런타임) authorization và không export escape hatch assertion.
 
-Đây là ví dụ TypeScript hỗ trợ security architecture, không thay thế security check.
+Đây là ví dụ TypeScript hỗ trợ bảo mật (security / 보안) kiến trúc (architecture / 아키텍처), không thay thế bảo mật (security / 보안) check.
 
-## 34. React Server/Client boundary: serializability và execution placement là runtime constraint
+## 34. React máy chủ (server / 서버)/máy khách (client / 클라이언트) ranh giới (boundary / 경계): serializability và thực thi (execution / 실행) placement là thời gian chạy (runtime / 런타임) ràng buộc (constraint / 제약조건)
 
-Trong React ecosystem hiện đại, server/client component boundary có rules về nơi code chạy và value nào được truyền qua protocol của framework. TypeScript prop type có thể đúng nhưng value vẫn không serializable hoặc object identity/runtime API không tồn tại phía bên kia.
+Trong React ecosystem hiện đại, máy chủ (server / 서버)/máy khách (client / 클라이언트) thành phần (component / 컴포넌트) ranh giới (boundary / 경계) có rules về nơi mã (code / 코드) chạy và giá trị (value / 값) nào được truyền qua giao thức (protocol / 프로토콜) của khung phần mềm (framework / 프레임워크). TypeScript prop kiểu (type / 타입) có thể đúng nhưng giá trị (value / 값) vẫn không serializable hoặc đối tượng (object / 객체) định danh (identity / 식별자)/thời gian chạy (runtime / 런타임) API không tồn tại phía bên kia.
 
-TypeScript nên model DTO/server action result rõ, nhưng canonical semantics của render, RSC, hydration và Actions vẫn thuộc [React docs](../react/00_index.md). Khi lỗi chỉ xuất hiện server build/hydration, đừng thêm assertion vào prop; kiểm tra execution boundary và framework serialization rules trước.
+TypeScript nên mô hình (model / 모델) DTO/máy chủ (server / 서버) hành động (action / 동작) kết quả (result / 결과) rõ, nhưng chuẩn gốc (canonical / 정본) ngữ nghĩa (semantics / 의미론) của kết xuất (render / 렌더링), RSC, hydration và Actions vẫn thuộc [React docs](../react/00_index.md). Khi lỗi chỉ xuất hiện máy chủ (server / 서버) bản dựng (build / 빌드)/hydration, đừng thêm assertion vào prop; kiểm tra thực thi (execution / 실행) ranh giới (boundary / 경계) và khung phần mềm (framework / 프레임워크) serialization rules trước.
 
-## 35. Monorepo: internal import path có thể phá package boundary dù type-check pass
+## 35. Monorepo: nội bộ (internal / 내부) import đường dẫn (path / 경로) có thể phá gói (package / 패키지) ranh giới (boundary / 경계) dù type-check pass
 
-Trong workspace, developer dễ import sâu:
+Trong workspace, nhà phát triển (developer / 개발자) dễ import sâu:
 
 ```ts
 import { internalHelper } from "../../packages/domain/src/internal";
 ```
 
-TypeScript resolve được nên mọi thứ xanh, nhưng architecture boundary đã bị bypass. Khi package đổi layout, build/publish tách riêng hoặc project references được siết, dependency vỡ.
+TypeScript resolve được nên mọi thứ xanh, nhưng kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계) đã bị bypass. Khi gói (package / 패키지) đổi bố cục (layout / 레이아웃), bản dựng (build / 빌드)/publish tách riêng hoặc dự án (project / 프로젝트) references được siết, phụ thuộc (dependency / 의존성) vỡ.
 
-Production practice là import qua public package surface và dùng `exports`/lint/dependency rules để enforce. TypeScript graph chỉ nói dependency **có thể resolve**, không nói dependency **được phép tồn tại theo architecture**.
+Môi trường vận hành (production / 운영 환경) practice là import qua công khai (public / 공개) gói (package / 패키지) surface và dùng `exports`/lint/phụ thuộc (dependency / 의존성) rules để enforce. TypeScript đồ thị (graph / 그래프) chỉ nói phụ thuộc (dependency / 의존성) **có thể resolve**, không nói phụ thuộc (dependency / 의존성) **được phép tồn tại theo kiến trúc (architecture / 아키텍처)**.
 
-## 36. Public type change cần compatibility matrix, không chỉ semantic version intuition
+## 36. công khai (public / 공개) kiểu (type / 타입) thay đổi (change / 변경) cần tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬), không chỉ ngữ nghĩa (semantic / 의미적) phiên bản (version / 버전) intuition
 
-Một type refactor có thể breaking theo nhiều chiều:
+Một kiểu (type / 타입) refactor có thể breaking theo nhiều chiều:
 
 ```text
 consumer compiler version
@@ -441,13 +444,13 @@ consumer compiler version
 × runtime target
 ```
 
-Ví dụ `.d.ts` dùng syntax mới có thể làm TypeScript cũ parse fail; conditional export có thể khiến `bundler` thấy type khác `nodenext`; thêm required generic parameter có thể phá inference dù JavaScript runtime API không đổi.
+Ví dụ `.d.ts` dùng cú pháp (syntax / 문법) mới có thể làm TypeScript cũ parse thất bại (fail / 실패); conditional export có thể khiến `bundler` thấy kiểu (type / 타입) khác `nodenext`; thêm required generic parameter có thể phá suy luận (inference / 추론) dù JavaScript thời gian chạy (runtime / 런타임) API không đổi.
 
-Library release quan trọng nên có consumer fixtures ở minimum supported TypeScript + current TypeScript và module modes được tuyên bố hỗ trợ.
+Thư viện (library / 라이브러리) bản phát hành (release / 릴리스) quan trọng nên có bên tiêu thụ (consumer / 소비자) fixtures ở minimum supported TypeScript + hiện tại (current / 현재) TypeScript và mô-đun (module / 모듈) modes được tuyên bố hỗ trợ.
 
-## 37. `satisfies` cho config tốt khi config vẫn cần runtime validation
+## 37. `satisfies` cho cấu hình (config / 설정) tốt khi cấu hình (config / 설정) vẫn cần thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증)
 
-`satisfies` rất hữu ích với in-repo config do developer viết vì nó giữ literal inference và bắt typo. Nhưng config đến từ environment variable, JSON deploy file hoặc remote feature flag vẫn là external input.
+`satisfies` rất hữu ích với in-repo cấu hình (config / 설정) do nhà phát triển (developer / 개발자) viết vì nó giữ literal suy luận (inference / 추론) và bắt typo. Nhưng cấu hình (config / 설정) đến từ môi trường (environment / 환경) variable, JSON deploy tệp (file / 파일) hoặc remote cờ tính năng (feature flag / 기능 플래그) vẫn là bên ngoài (external / 외부) đầu vào (input / 입력).
 
 ```ts
 const routes = {
@@ -455,11 +458,11 @@ const routes = {
 } satisfies RouteConfig;
 ```
 
-Đây là static proof cho source literal. Nếu cùng structure được load từ JSON, cần parser/validator riêng. Đừng copy type và tin data chỉ vì shape “giống config trong source”.
+Đây là static proof cho nguồn (source / 소스) literal. Nếu cùng cấu trúc (structure / 구조) được tải (load / 로드) từ JSON, cần parser/validator riêng. Đừng bản sao (copy / 복사) kiểu (type / 타입) và tin dữ liệu (data / 데이터) chỉ vì shape “giống cấu hình (config / 설정) trong nguồn (source / 소스)”.
 
-## 38. Environment variables: `process.env.X as string` là một production smell
+## 38. môi trường (environment / 환경) variables: `process.env.X as string` là một môi trường vận hành (production / 운영 환경) smell
 
-Environment variable có thể absent, malformed hoặc khác giữa local/CI/container. Cast từng chỗ phân tán proof giả khắp codebase.
+Môi trường (environment / 환경) variable có thể absent, malformed hoặc khác giữa cục bộ (local / 로컬)/CI/bộ chứa (container / 컨테이너). Cast từng chỗ phân tán proof giả khắp codebase.
 
 Tốt hơn là parse một lần ở startup:
 
@@ -476,11 +479,11 @@ function loadConfig(env: Record<string, string | undefined>): AppConfig {
 }
 ```
 
-Sau bootstrap, application nhận `AppConfig` trusted. Điều này biến lỗi config từ random runtime branch thành startup failure có log rõ.
+Sau bootstrap, ứng dụng (application / 애플리케이션) nhận `AppConfig` trusted. Điều này biến lỗi cấu hình (config / 설정) từ random thời gian chạy (runtime / 런타임) branch thành startup thất bại (failure / 실패) có log rõ.
 
-## 39. Async result type không model cancellation, deadline hay ownership
+## 39. Async kết quả (result / 결과) kiểu (type / 타입) không mô hình (model / 모델) cancellation, deadline hay quyền sở hữu (ownership / 소유권)
 
-`Promise<User>` không nói operation có thể bị cancel, timeout hay request nào owns result. Nếu API lifecycle quan trọng, contract runtime nên expose `AbortSignal`, deadline/context hoặc state machine phù hợp.
+`Promise<User>` không nói thao tác (operation / 연산) có thể bị cancel, hết thời gian chờ (timeout / 타임아웃) hay yêu cầu (request / 요청) nào owns kết quả (result / 결과). Nếu API vòng đời (lifecycle / 생명주기) quan trọng, đặc tả hợp đồng (contract / 계약) thời gian chạy (runtime / 런타임) nên expose `AbortSignal`, deadline/ngữ cảnh (context / 맥락) hoặc máy trạng thái (state machine / 상태 머신) phù hợp.
 
 ```ts
 function loadUser(id: UserId, signal: AbortSignal): Promise<User> {
@@ -488,17 +491,17 @@ function loadUser(id: UserId, signal: AbortSignal): Promise<User> {
 }
 ```
 
-Ngay cả signature này cũng không “chứng minh cancellation”; nó chỉ tạo capability để runtime implementation phối hợp. TypeScript giúp call site không quên channel, còn temporal correctness vẫn phải test bằng concurrency behavior.
+Ngay cả signature này cũng không “chứng minh cancellation”; nó chỉ tạo năng lực (capability / 역량) để thời gian chạy (runtime / 런타임) hiện thực (implementation / 구현) phối hợp. TypeScript giúp lời gọi (call / 호출) site không quên channel, còn temporal tính đúng đắn (correctness / 정확성) vẫn phải kiểm thử (test / 테스트) bằng tính đồng thời (concurrency / 동시성) hành vi (behavior / 동작).
 
-## 40. Observability cho validation/type boundary cần cardinality và privacy discipline
+## 40. khả năng quan sát (observability / 관측 가능성) cho kiểm tra hợp lệ (validation / 검증)/kiểu (type / 타입) ranh giới (boundary / 경계) cần cardinality và privacy discipline
 
-Validation error rất hữu ích nếu log `schemaVersion`, error code/path, producer, endpoint, request ID. Nhưng log toàn raw payload có thể rò PII/secret và tăng cardinality/cost.
+Kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) rất hữu ích nếu log `schemaVersion`, lỗi (error / 오류) mã (code / 코드)/đường dẫn (path / 경로), producer, endpoint, yêu cầu (request / 요청) ID. Nhưng log toàn raw payload có thể rò PII/secret và tăng cardinality/chi phí (cost / 비용).
 
-Một pattern production tốt là validator trả structured failure reason đã sanitize. Metrics aggregate theo reason/version; trace gắn correlation ID; sample payload chỉ khi policy cho phép. TypeScript có thể type structured diagnostic để logging API không nhận raw domain secret ngoài ý muốn.
+Một mẫu (pattern / 패턴) môi trường vận hành (production / 운영 환경) tốt là validator trả structured thất bại (failure / 실패) reason đã sanitize. Metrics aggregate theo reason/phiên bản (version / 버전); dấu vết (trace / 추적) gắn correlation ID; mẫu (sample / 표본) payload chỉ khi chính sách (policy / 정책) cho phép. TypeScript có thể kiểu (type / 타입) structured diagnostic để logging API không nhận raw lĩnh vực (domain / 도메인) secret ngoài ý muốn.
 
-## 41. TypeScript 7 adoption: CLI, editor và embedded tooling có thể không cùng version
+## 41. TypeScript 7 adoption: CLI, editor và embedded tooling có thể không cùng phiên bản (version / 버전)
 
-TypeScript 7.0 có native CLI/language server nhưng chưa có stable programmatic compiler API. Vì vậy framework/tooling nhúng TypeScript có thể vẫn cần TypeScript 6 trong một thời gian.
+TypeScript 7.0 có bản địa (native / 네이티브) CLI/ngôn ngữ (language / 언어) máy chủ (server / 서버) nhưng chưa có stable programmatic trình biên dịch (compiler / 컴파일러) API. Vì vậy khung phần mềm (framework / 프레임워크)/tooling nhúng TypeScript có thể vẫn cần TypeScript 6 trong một thời gian.
 
 Một repo có thể chạy:
 
@@ -508,11 +511,11 @@ TS7 language server cho file .ts/.tsx thông thường
 TS6 compatibility/API cho typescript-eslint hoặc embedded framework tooling
 ```
 
-Điều này không sai nếu được quản lý rõ. Failure mode là tưởng tất cả diagnostics đến từ cùng compiler rồi chase khác biệt behavior như bug source code. Upgrade plan phải ghi tool → compiler-version mapping và chỉ bỏ TS6 khi dependency ecosystem đã hỗ trợ API mới.
+Điều này không sai nếu được quản lý rõ. dạng thất bại (failure mode / 실패 모드) là tưởng tất cả diagnostics đến từ cùng trình biên dịch (compiler / 컴파일러) rồi chase khác biệt hành vi (behavior / 동작) như bug mã nguồn (source code / 소스 코드). Upgrade plan phải ghi công cụ (tool / 도구) → compiler-version ánh xạ (mapping / 매핑) và chỉ bỏ TS6 khi phụ thuộc (dependency / 의존성) ecosystem đã hỗ trợ API mới.
 
-## 42. Production debugging runbook: đi từ evidence runtime ngược về proof source
+## 42. môi trường vận hành (production / 운영 환경) debugging runbook: đi từ bằng chứng (evidence / 증거) thời gian chạy (runtime / 런타임) ngược về proof nguồn (source / 소스)
 
-Khi một lỗi “TypeScript lẽ ra phải bắt” xuất hiện, trace ngược:
+Khi một lỗi “TypeScript lẽ ra phải bắt” xuất hiện, dấu vết (trace / 추적) ngược:
 
 ```text
 runtime failure
@@ -523,10 +526,12 @@ runtime failure
 ↑ source type model
 ```
 
-Nếu proof source là `as`, `any`, ambient `.d.ts` hoặc generated declaration, ưu tiên audit nó trước khi làm type phức tạp hơn. Nếu proof hoàn toàn do checker suy ra nhưng runtime vẫn khác, kiểm tra artifact/version/module mismatch. Nếu model đúng mà temporal behavior sai, quay về JavaScript concurrency/runtime.
+Nếu proof nguồn (source / 소스) là `as`, `any`, ambient `.d.ts` hoặc generated declaration, ưu tiên kiểm tra (audit / 감사) nó trước khi làm kiểu (type / 타입) phức tạp hơn. Nếu proof hoàn toàn do checker suy ra nhưng thời gian chạy (runtime / 런타임) vẫn khác, kiểm tra sản phẩm tạo ra (artifact / 산출물)/phiên bản (version / 버전)/mô-đun (module / 모듈) mismatch. Nếu mô hình (model / 모델) đúng mà temporal hành vi (behavior / 동작) sai, quay về JavaScript tính đồng thời (concurrency / 동시성)/thời gian chạy (runtime / 런타임).
 
-Senior TypeScript là khả năng nối **proof tĩnh** với **evidence động** và biết chính xác chỗ hai thế giới tách nhau.
+Cấp cao (senior / 시니어) TypeScript là khả năng nối **proof tĩnh** với **bằng chứng (evidence / 증거) động** và biết chính xác chỗ hai thế giới tách nhau.
 
 ---
 
-Hoàn tất track: quay lại [TypeScript Index](typescript_00_index.md) để review coverage và glossary.
+Hoàn tất nhánh học (track / 트랙): quay lại [TypeScript Index](typescript_00_index.md) để rà soát (review / 검토) coverage và glossary.
+
+> **Bàn giao:** Sau **42. môi trường vận hành (production / 운영 환경) debugging runbook: đi từ bằng chứng (evidence / 증거) thời gian chạy (runtime / 런타임) ngược về proof nguồn (source / 소스)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

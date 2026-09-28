@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **12. 요구사항 (Requirements)** và nối nó với **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -33,7 +35,7 @@
     *   수작업: 동료검토(Peer Review), 워크스루(Walkthrough), 인스펙션(Inspection).
     *   **프로토타이핑 (Prototyping):** 견본 제작 (Làm bản mẫu dùng thử).
     *   **테스트 설계 (Test Design):** 테스트 케이스 생성 (Viết test case trước để xem có test được không).
-    *   **CASE 도구:** 자동화 도구로 일관성 분석 (Dùng phần mềm check logic).
+    *   **trường hợp (case / 사례) 도구:** 자동화 도구로 일관성 분석 (Dùng phần mềm check logic).
 
 ### 요구사항 품질 기준 7개 (7 Tiêu chí chất lượng)
 1.  **완전성 (Completeness):** 누락 없이 (Đầy đủ).

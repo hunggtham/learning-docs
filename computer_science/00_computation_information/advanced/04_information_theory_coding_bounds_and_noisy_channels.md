@@ -1,10 +1,13 @@
-# Information theory, coding bounds và noisy channels
+# Thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels
 
-Một communication system phải trả lời hai câu hỏi khác nhau nhưng liên quan chặt chẽ: **có thể biểu diễn nguồn dữ liệu ngắn tới mức nào mà vẫn khôi phục được**, và **có thể truyền dữ liệu đáng tin cậy qua một kênh có nhiễu với tốc độ tới đâu**.
+> **Mạch đọc:** Đặt **thông tin (information / 정보) lý thuyết (theory / 이론), coding bounds và noisy channels** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. thông tin (information / 정보) bắt đầu từ surprise** sang **2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-**Information theory (lý thuyết thông tin / 정보 이론)** của Shannon cung cấp ngôn ngữ toán học để reasoning về uncertainty, compression và communication limits mà không cần biết nội dung semantic của message là ảnh, text hay packet database.
 
-Mental model:
+Một communication hệ thống (system / 시스템) phải trả lời hai câu hỏi khác nhau nhưng liên quan chặt chẽ: **có thể biểu diễn nguồn dữ liệu ngắn tới mức nào mà vẫn khôi phục được**, và **có thể truyền dữ liệu đáng tin cậy qua một kênh có nhiễu với tốc độ tới đâu**.
+
+**thông tin (information / 정보) lý thuyết (theory / 이론)** của Shannon cung cấp ngôn ngữ toán học để lập luận (reasoning / 추론) về bất định (uncertainty / 불확실성), compression và communication limits mà không cần biết nội dung ngữ nghĩa (semantic / 의미적) của message là ảnh, văn bản (text / 텍스트) hay packet cơ sở dữ liệu (database / 데이터베이스).
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 source distribution
@@ -16,11 +19,11 @@ source distribution
 → recovered symbols
 ```
 
-Chapter này tập trung vào invariant và giới hạn: khi nào có thể nén, redundancy nào là cần thiết, error nào có thể sửa và tại sao “nhiều bandwidth hơn” không tự động đồng nghĩa “nhiều reliable information hơn”.
+Chapter này tập trung vào bất biến (invariant / 불변식) và giới hạn: khi nào có thể nén, redundancy nào là cần thiết, lỗi (error / 오류) nào có thể sửa và tại sao “nhiều bandwidth hơn” không tự động đồng nghĩa “nhiều reliable thông tin (information / 정보) hơn”.
 
-## 1. Information bắt đầu từ surprise
+## 1. thông tin (information / 정보) bắt đầu từ surprise
 
-Một event chắc chắn xảy ra không mang nhiều thông tin mới. Một event rất hiếm khi xảy ra mang nhiều surprise hơn khi ta quan sát nó.
+Một sự kiện (event / 이벤트) chắc chắn xảy ra không mang nhiều thông tin mới. Một sự kiện (event / 이벤트) rất hiếm khi xảy ra mang nhiều surprise hơn khi ta quan sát nó.
 
 Self-information thường được mô tả:
 
@@ -28,18 +31,18 @@ Self-information thường được mô tả:
 I(x) = -log2 P(x)
 ```
 
-Nếu `P(x)=1`, information là 0 bit. Nếu `P(x)=1/2`, event mang 1 bit surprise. Nếu `P(x)=1/1024`, event mang 10 bit.
+Nếu `P(x)=1`, thông tin (information / 정보) là 0 bit. Nếu `P(x)=1/2`, sự kiện (event / 이벤트) mang 1 bit surprise. Nếu `P(x)=1/1024`, sự kiện (event / 이벤트) mang 10 bit.
 
-Logarithm xuất hiện vì ta muốn information của hai independent events cộng được:
+Logarithm xuất hiện vì ta muốn thông tin (information / 정보) của hai independent events cộng được:
 
 ```text
 P(x,y) = P(x)P(y)
 ⇒ I(x,y) = I(x) + I(y)
 ```
 
-Đây là property phù hợp với cách description length cộng qua các lựa chọn độc lập.
+Đây là thuộc tính (property / 속성) phù hợp với cách description length cộng qua các lựa chọn độc lập.
 
-## 2. Entropy là uncertainty trung bình của distribution
+## 2. Entropy là bất định (uncertainty / 불확실성) trung bình của phân phối (distribution / 분포)
 
 Với random variable `X`, Shannon entropy:
 
@@ -47,7 +50,7 @@ Với random variable `X`, Shannon entropy:
 H(X) = - Σ p(x) log2 p(x)
 ```
 
-Entropy không phải “độ hỗn loạn” theo nghĩa mơ hồ. Nó là expected self-information nếu sample từ distribution.
+Entropy không phải “độ hỗn loạn” theo nghĩa mơ hồ. Nó là expected self-information nếu mẫu (sample / 표본) từ phân phối (distribution / 분포).
 
 Một fair coin có:
 
@@ -55,13 +58,13 @@ Một fair coin có:
 H(X) = 1 bit
 ```
 
-Một coin có xác suất head `0.999` có entropy thấp hơn nhiều vì outcome gần như dự đoán được.
+Một coin có xác suất head `0.999` có entropy thấp hơn nhiều vì kết quả (outcome / 결과) gần như dự đoán được.
 
-Nếu source phát symbol theo distribution lệch, ta có cơ hội dùng code ngắn cho symbol phổ biến và code dài cho symbol hiếm để giảm expected length.
+Nếu nguồn (source / 소스) phát symbol theo phân phối (distribution / 분포) lệch, ta có cơ hội dùng mã (code / 코드) ngắn cho symbol phổ biến và mã (code / 코드) dài cho symbol hiếm để giảm expected length.
 
-## 3. Joint, conditional entropy và mutual information
+## 3. Joint, conditional entropy và mutual thông tin (information / 정보)
 
-Hệ thống thực tế có nhiều variable liên quan. Nếu biết `Y` giúp dự đoán `X`, uncertainty còn lại của `X` giảm.
+Hệ thống thực tế có nhiều variable liên quan. Nếu biết `Y` giúp dự đoán `X`, bất định (uncertainty / 불확실성) còn lại của `X` giảm.
 
 **Conditional entropy**:
 
@@ -69,17 +72,17 @@ Hệ thống thực tế có nhiều variable liên quan. Nếu biết `Y` giúp
 H(X|Y)
 ```
 
-đo uncertainty còn lại về `X` sau khi biết `Y`.
+đo bất định (uncertainty / 불확실성) còn lại về `X` sau khi biết `Y`.
 
-**Mutual information**:
+**Mutual thông tin (information / 정보)**:
 
 ```text
 I(X;Y) = H(X) - H(X|Y)
 ```
 
-đo lượng information về `X` mà `Y` cung cấp.
+đo lượng thông tin (information / 정보) về `X` mà `Y` cung cấp.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 H(X)      = uncertainty ban đầu
@@ -87,13 +90,13 @@ H(X|Y)    = uncertainty còn lại sau khi biết Y
 I(X;Y)    = phần uncertainty đã được Y giải thích
 ```
 
-Mutual information quan trọng trong feature selection, communication và representation learning, nhưng không tự động chứng minh causal relation. Hai variable có thể chia sẻ information vì cùng phụ thuộc một nguyên nhân khác.
+Mutual thông tin (information / 정보) quan trọng trong tính năng (feature / 기능) selection, communication và biểu diễn (representation / 표현) học tập (learning / 학습), nhưng không tự động chứng minh nhân quả (causal / 인과적) quan hệ (relation / 관계). Hai variable có thể chia sẻ thông tin (information / 정보) vì cùng phụ thuộc một nguyên nhân khác.
 
-## 4. Source coding: entropy là lower-bound trung bình, không phải file size thần kỳ
+## 4. nguồn (source / 소스) coding: entropy là lower-bound trung bình, không phải tệp (file / 파일) kích thước (size / 크기) thần kỳ
 
-Source coding theorem nói theo trực giác rằng với source có distribution ổn định và block đủ dài, lossless code có expected bits/symbol tiến gần entropy, nhưng không thể trung bình thấp hơn entropy một cách tùy ý mà vẫn decode chính xác.
+Nguồn (source / 소스) coding theorem nói theo trực giác rằng với nguồn (source / 소스) có phân phối (distribution / 분포) ổn định và khối (block / 블록) đủ dài, lossless mã (code / 코드) có expected bits/symbol tiến gần entropy, nhưng không thể trung bình thấp hơn entropy một cách tùy ý mà vẫn decode chính xác.
 
-Điều này không có nghĩa mọi message cụ thể dài đúng `H(X)`. Entropy là expectation trên distribution.
+Điều này không có nghĩa mọi message cụ thể dài đúng `H(X)`. Entropy là expectation trên phân phối (distribution / 분포).
 
 Ví dụ alphabet:
 
@@ -104,7 +107,7 @@ C: 1/8
 D: 1/8
 ```
 
-Một prefix code hợp lý có thể dùng độ dài gần:
+Một prefix mã (code / 코드) hợp lý có thể dùng độ dài gần:
 
 ```text
 A → 1 bit
@@ -113,9 +116,9 @@ C → 3 bits
 D → 3 bits
 ```
 
-Symbol phổ biến nhận code ngắn hơn.
+Symbol phổ biến nhận mã (code / 코드) ngắn hơn.
 
-## 5. Prefix code và Kraft inequality
+## 5. Prefix mã (code / 코드) và Kraft inequality
 
 Nếu codeword phải decode nối tiếp mà không cần delimiter, một codeword không được là prefix của codeword khác.
 
@@ -128,23 +131,23 @@ C = 110
 D = 111
 ```
 
-Kraft inequality mô tả constraint giữa các code length `l_i` cho prefix code:
+Kraft inequality mô tả ràng buộc (constraint / 제약조건) giữa các mã (code / 코드) length `l_i` cho prefix mã (code / 코드):
 
 ```text
 Σ 2^(-l_i) ≤ 1
 ```
 
-Nó cho thấy code length không thể tùy ý ngắn cho mọi symbol. Cây nhị phân có “capacity” hữu hạn cho leaf codeword.
+Nó cho thấy mã (code / 코드) length không thể tùy ý ngắn cho mọi symbol. Cây nhị phân có “sức chứa (capacity / 용량)” hữu hạn cho leaf codeword.
 
-**Huffman coding** tìm prefix code tối ưu theo expected length trong class code symbol-by-symbol với probability đã biết. **Arithmetic/range coding** có thể biểu diễn cả sequence theo interval và tiến gần entropy hơn khi probability không khớp đẹp với integer bit lengths.
+**Huffman coding** tìm prefix mã (code / 코드) tối ưu theo expected length trong lớp (class / 클래스) mã (code / 코드) symbol-by-symbol với xác suất (probability / 확률) đã biết. **Arithmetic/phạm vi (range / 범위) coding** có thể biểu diễn cả chuỗi (sequence / 시퀀스) theo interval và tiến gần entropy hơn khi xác suất (probability / 확률) không khớp đẹp với integer bit lengths.
 
-## 6. Compression khai thác dependency chứ không chỉ frequency đơn symbol
+## 6. Compression khai thác phụ thuộc (dependency / 의존성) chứ không chỉ frequency đơn symbol
 
-Nếu source có correlation theo thời gian, entropy mỗi symbol riêng lẻ có thể cao nhưng conditional entropy thấp.
+Nếu nguồn (source / 소스) có correlation theo thời gian, entropy mỗi symbol riêng lẻ có thể cao nhưng conditional entropy thấp.
 
-Ví dụ text: ký tự tiếp theo phụ thuộc context. `q` trong tiếng Anh thường làm `u` dễ dự đoán hơn. Video frame kế tiếp tương quan mạnh với frame trước. Log line kế tiếp thường dùng lại template.
+Ví dụ văn bản (text / 텍스트): ký tự tiếp theo phụ thuộc ngữ cảnh (context / 맥락). `q` trong tiếng Anh thường làm `u` dễ dự đoán hơn. Video frame kế tiếp tương quan mạnh với frame trước. Log line kế tiếp thường dùng lại template.
 
-Một compressor tốt vì vậy model:
+Một compressor tốt vì vậy mô hình (model / 모델):
 
 ```text
 P(next_symbol | context)
@@ -152,11 +155,11 @@ P(next_symbol | context)
 
 thay vì chỉ `P(symbol)`.
 
-Đây là bridge tới language modeling: predictive model tốt giảm uncertainty của next token. Tuy nhiên cross-entropy/perplexity của model và semantic understanding không phải cùng một khái niệm.
+Đây là cầu nối (bridge / 브리지) tới ngôn ngữ (language / 언어) modeling: predictive mô hình (model / 모델) tốt giảm bất định (uncertainty / 불확실성) của next đơn vị từ (token / 토큰). Tuy nhiên cross-entropy/perplexity của mô hình (model / 모델) và ngữ nghĩa (semantic / 의미적) understanding không phải cùng một khái niệm.
 
 ## 7. Cross-entropy và coding regret
 
-Nếu true distribution là `P` nhưng ta encode bằng model `Q`, expected code length liên quan tới **cross-entropy**:
+Nếu true phân phối (distribution / 분포) là `P` nhưng ta encode bằng mô hình (model / 모델) `Q`, expected mã (code / 코드) length liên quan tới **cross-entropy**:
 
 ```text
 H(P,Q) = - E_P[log2 Q(x)]
@@ -168,7 +171,7 @@ Khoảng chênh so với entropy thật được mô tả bởi KL divergence:
 H(P,Q) = H(P) + D_KL(P || Q)
 ```
 
-Trực giác production rất hữu ích:
+Trực giác môi trường vận hành (production / 운영 환경) rất hữu ích:
 
 ```text
 true uncertainty
@@ -176,25 +179,25 @@ true uncertainty
 = expected coding cost under model
 ```
 
-Model probability tệ không chỉ là “dự đoán kém”; nếu dùng cho entropy coding, nó tạo thêm bit thật.
+Mô hình (model / 모델) xác suất (probability / 확률) tệ không chỉ là “dự đoán kém”; nếu dùng cho entropy coding, nó tạo thêm bit thật.
 
 ## 8. Noisy channel: transmission có thể làm bit thay đổi hoặc biến mất
 
-Trong communication, channel có thể flip bit, erase symbol, reorder packet hoặc tạo burst loss tùy layer.
+Trong communication, channel có thể flip bit, erase symbol, reorder packet hoặc tạo burst mất mát (loss / 손실) tùy tầng (layer / 계층).
 
-Information theory abstraction tách source khỏi channel. Ta hỏi: với channel transition probability cụ thể, tốc độ reliable information tối đa là bao nhiêu?
+Thông tin (information / 정보) lý thuyết (theory / 이론) lớp trừu tượng (abstraction / 추상화) tách nguồn (source / 소스) khỏi channel. Ta hỏi: với channel chuyển tiếp (transition / 전이) xác suất (probability / 확률) cụ thể, tốc độ reliable thông tin (information / 정보) tối đa là bao nhiêu?
 
-**Channel capacity** là supremum của mutual information giữa input và output trên input distribution phù hợp:
+**Channel sức chứa (capacity / 용량)** là supremum của mutual thông tin (information / 정보) giữa đầu vào (input / 입력) và đầu ra (output / 출력) trên đầu vào (input / 입력) phân phối (distribution / 분포) phù hợp:
 
 ```text
 C = max I(X;Y)
 ```
 
-Không cần thuộc công thức cho mọi channel; cần giữ mental model: capacity phụ thuộc cả signal choices lẫn noise behavior.
+Không cần thuộc công thức cho mọi channel; cần giữ mô hình tư duy (mental model / 사고 모델): sức chứa (capacity / 용량) phụ thuộc cả tín hiệu (signal / 신호) choices lẫn noise hành vi (behavior / 동작).
 
 ## 9. Noisy-channel coding theorem: reliable không có nghĩa zero-noise
 
-Một kết quả sâu của Shannon là nếu transmission rate nhỏ hơn channel capacity, tồn tại coding scheme cho phép error probability giảm rất thấp khi block length tăng đủ. Nếu rate vượt capacity, không thể làm reliable arbitrarily chỉ bằng coding thông minh.
+Một kết quả sâu của Shannon là nếu transmission tỷ lệ (rate / 비율) nhỏ hơn channel sức chứa (capacity / 용량), tồn tại coding scheme cho phép lỗi (error / 오류) xác suất (probability / 확률) giảm rất thấp khi khối (block / 블록) length tăng đủ. Nếu tỷ lệ (rate / 비율) vượt sức chứa (capacity / 용량), không thể làm reliable arbitrarily chỉ bằng coding thông minh.
 
 Điểm quan trọng:
 
@@ -205,40 +208,40 @@ noise tồn tại
 
 Ta thêm structured redundancy để decoder phân biệt codeword ngay cả khi một phần tín hiệu bị corruption.
 
-Nhưng redundancy dùng bandwidth/storage. Reliability luôn có cost.
+Nhưng redundancy dùng bandwidth/lưu trữ (storage / 저장소). độ tin cậy (reliability / 신뢰성) luôn có chi phí (cost / 비용).
 
-## 10. Error detection và error correction khác nhau
+## 10. lỗi (error / 오류) detection và lỗi (error / 오류) correction khác nhau
 
-Checksum/CRC thường mạnh ở **phát hiện** corruption nhưng không nhất thiết đủ để sửa. Error-correcting code thêm redundancy có structure để xác định codeword gần nhất.
+Checksum/CRC thường mạnh ở **phát hiện** corruption nhưng không nhất thiết đủ để sửa. Error-correcting mã (code / 코드) thêm redundancy có cấu trúc (structure / 구조) để xác định codeword gần nhất.
 
 Một khái niệm nền là **Hamming distance**: số vị trí khác nhau giữa hai codeword.
 
 Nếu minimum distance giữa codeword là `d`, trực giác:
 
-- phát hiện được tới `d-1` bit error trong model tương ứng;
-- sửa được khoảng `floor((d-1)/2)` bit error bằng nearest-codeword reasoning.
+- phát hiện được tới `d-1` bit lỗi (error / 오류) trong mô hình (model / 모델) tương ứng;
+- sửa được khoảng `floor((d-1)/2)` bit lỗi (error / 오류) bằng nearest-codeword lập luận (reasoning / 추론).
 
 Đây là geometric view: codeword phải đủ xa nhau để noise nhỏ không đẩy received word sang vùng của codeword khác.
 
 ## 11. Erasure dễ hơn unknown corruption
 
-Nếu receiver biết vị trí symbol bị mất, đó là **erasure**. Nếu receiver nhận một symbol sai mà không biết vị trí nào sai, đó là **error**.
+Nếu receiver biết vị trí symbol bị mất, đó là **erasure**. Nếu receiver nhận một symbol sai mà không biết vị trí nào sai, đó là **lỗi (error / 오류)**.
 
-Erasure thường dễ sửa hơn vì uncertainty nhỏ hơn. Storage/distributed systems tận dụng điều này: nếu biết shard/node nào mất, erasure coding có thể reconstruct từ các fragment còn lại với storage overhead thấp hơn full replication trong một số workload.
+Erasure thường dễ sửa hơn vì bất định (uncertainty / 불확실성) nhỏ hơn. lưu trữ (storage / 저장소)/phân tán (distributed / 분산) các hệ thống (systems / 시스템들) tận dụng điều này: nếu biết shard/nút (node / 노드) nào mất, erasure coding có thể reconstruct từ các fragment còn lại với lưu trữ (storage / 저장소) overhead thấp hơn full replication trong một số tải công việc (workload / 워크로드).
 
-Nhưng erasure coding thêm CPU, network fan-out, repair traffic và failure-domain reasoning. Không nên kết luận “erasure coding luôn rẻ hơn replication” chỉ từ raw storage ratio.
+Nhưng erasure coding thêm CPU, mạng (network / 네트워크) fan-out, repair traffic và failure-domain lập luận (reasoning / 추론). Không nên kết luận “erasure coding luôn rẻ hơn replication” chỉ từ raw lưu trữ (storage / 저장소) ratio.
 
-## 12. Burst error và interleaving
+## 12. Burst lỗi (error / 오류) và interleaving
 
-Nhiều physical channel không tạo independent random bit flip; lỗi đến theo burst. Nếu một block code chịu được vài error nhưng cả burst rơi vào cùng block, correction có thể thất bại.
+Nhiều vật lý (physical / 물리적) channel không tạo independent random bit flip; lỗi đến theo burst. Nếu một khối (block / 블록) mã (code / 코드) chịu được vài lỗi (error / 오류) nhưng cả burst rơi vào cùng khối (block / 블록), correction có thể thất bại.
 
-**Interleaving** phân tán các symbol liên tiếp của codeword qua thời gian/không gian để một burst physical trở thành các error thưa hơn ở nhiều codeword.
+**Interleaving** phân tán các symbol liên tiếp của codeword qua thời gian/không gian để một burst vật lý (physical / 물리적) trở thành các lỗi (error / 오류) thưa hơn ở nhiều codeword.
 
-Trade-off là latency và buffer tăng. Đây là ví dụ điển hình của việc thay đổi representation để biến failure pattern thành dạng code xử lý tốt hơn.
+Sự đánh đổi (trade-off / 트레이드오프) là độ trễ (latency / 지연 시간) và buffer tăng. Đây là ví dụ điển hình của việc thay đổi biểu diễn (representation / 표현) để biến thất bại (failure / 실패) mẫu (pattern / 패턴) thành dạng mã (code / 코드) xử lý tốt hơn.
 
-## 13. Capacity không đồng nghĩa throughput application
+## 13. sức chứa (capacity / 용량) không đồng nghĩa thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션)
 
-Physical/link capacity chỉ là một tầng. Application throughput còn bị giảm bởi framing, retransmission, congestion control, encryption, protocol headers, queueing và request semantics.
+Vật lý (physical / 물리적)/link sức chứa (capacity / 용량) chỉ là một tầng. ứng dụng (application / 애플리케이션) thông lượng (throughput / 처리량) còn bị giảm bởi framing, retransmission, congestion điều khiển (control / 제어), encryption, giao thức (protocol / 프로토콜) headers, queueing và yêu cầu (request / 요청) ngữ nghĩa (semantics / 의미론).
 
 ```text
 channel capacity
@@ -247,33 +250,33 @@ channel capacity
 → application useful throughput
 ```
 
-Nếu packet loss tăng, transport có thể giảm sending rate dù raw link bandwidth không đổi. Nếu data đã compressed mạnh, thêm compression CPU có thể làm throughput application xấu hơn.
+Nếu packet mất mát (loss / 손실) tăng, vận chuyển (transport / 전송) có thể giảm sending tỷ lệ (rate / 비율) dù raw link bandwidth không đổi. Nếu dữ liệu (data / 데이터) đã compressed mạnh, thêm compression CPU có thể làm thông lượng (throughput / 처리량) ứng dụng (application / 애플리케이션) xấu hơn.
 
-Do đó khi debugging cần xác định layer nào sở hữu “rate” đang nói tới.
+Do đó khi debugging cần xác định tầng (layer / 계층) nào sở hữu “tỷ lệ (rate / 비율)” đang nói tới.
 
-## 14. Entropy không đo semantic value
+## 14. Entropy không đo ngữ nghĩa (semantic / 의미적) giá trị (value / 값)
 
-Một encrypted backup có entropy quan sát rất cao nhưng semantic value có thể cực lớn. Một random file cũng có entropy cao nhưng không hữu ích. Một configuration file rất compressible nhưng có thể quyết định toàn bộ production behavior.
+Một encrypted backup có entropy quan sát rất cao nhưng ngữ nghĩa (semantic / 의미적) giá trị (value / 값) có thể cực lớn. Một random tệp (file / 파일) cũng có entropy cao nhưng không hữu ích. Một cấu hình (configuration / 구성) tệp (file / 파일) rất compressible nhưng có thể quyết định toàn bộ môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작).
 
-Information theory cố ý bỏ qua semantic meaning để có theorem tổng quát về coding và communication.
+Thông tin (information / 정보) lý thuyết (theory / 이론) cố ý bỏ qua ý nghĩa (semantic meaning / 의미적 뜻) để có theorem tổng quát về coding và communication.
 
 Đừng dùng “entropy cao” như synonym của “thông tin quan trọng”.
 
-## 15. Entropy rate và source có memory
+## 15. Entropy tỷ lệ (rate / 비율) và nguồn (source / 소스) có bộ nhớ (memory / 메모리)
 
-Với process có dependency dài, ta quan tâm uncertainty mới trung bình mỗi symbol khi biết quá khứ:
+Với tiến trình (process / 프로세스) có phụ thuộc (dependency / 의존성) dài, ta quan tâm bất định (uncertainty / 불확실성) mới trung bình mỗi symbol khi biết quá khứ:
 
 ```text
 H_rate ≈ lim H(X_n | X_1 ... X_{n-1})
 ```
 
-Nếu sequence rất predictable từ history, entropy rate thấp dù marginal distribution từng symbol có thể trông cân bằng.
+Nếu chuỗi (sequence / 시퀀스) rất predictable từ lịch sử (history / 이력), entropy tỷ lệ (rate / 비율) thấp dù marginal phân phối (distribution / 분포) từng symbol có thể trông cân bằng.
 
-Connection này giải thích tại sao dictionary/context compressor có thể nén sequence mà frequency histogram đơn giản không cho thấy lợi ích.
+Liên kết (connection / 연결) này giải thích tại sao dictionary/ngữ cảnh (context / 맥락) compressor có thể nén chuỗi (sequence / 시퀀스) mà frequency histogram đơn giản không cho thấy lợi ích.
 
-## 16. Production evidence cho storage/network coding
+## 16. bằng chứng vận hành (production evidence / 운영 증거) cho lưu trữ (storage / 저장소)/mạng (network / 네트워크) coding
 
-Khi một system dùng compression hoặc error-control coding, evidence nên phân biệt:
+Khi một hệ thống (system / 시스템) dùng compression hoặc error-control coding, bằng chứng (evidence / 증거) nên phân biệt:
 
 ```text
 logical bytes
@@ -287,11 +290,11 @@ repair traffic
 failure-domain correlation
 ```
 
-Nếu compression ratio tốt nhưng CPU saturation làm queue tăng, end-to-end system có thể tệ hơn. Nếu erasure coding tiết kiệm storage nhưng repair storm bão hòa network sau rack failure, cost model ban đầu thiếu failure behavior.
+Nếu compression ratio tốt nhưng CPU saturation làm hàng đợi (queue / 큐) tăng, end-to-end hệ thống (system / 시스템) có thể tệ hơn. Nếu erasure coding tiết kiệm lưu trữ (storage / 저장소) nhưng repair storm bão hòa mạng (network / 네트워크) sau rack thất bại (failure / 실패), chi phí (cost / 비용) mô hình (model / 모델) ban đầu thiếu hành vi khi thất bại (failure behavior / 실패 동작).
 
-## 17. Connection với database và distributed systems
+## 17. liên kết (connection / 연결) với cơ sở dữ liệu (database / 데이터베이스) và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
-Database columnar encoding dùng distribution/locality để giảm bytes và memory bandwidth. Bloom filter chấp nhận false positive để giảm I/O. Replicated log dùng checksum để phát hiện corruption. Distributed storage có thể dùng replication hoặc erasure coding để đổi storage overhead lấy recovery/network complexity.
+Cơ sở dữ liệu (database / 데이터베이스) columnar encoding dùng phân phối (distribution / 분포)/locality để giảm bytes và bộ nhớ (memory / 메모리) bandwidth. Bloom filter chấp nhận false positive để giảm I/O. Replicated log dùng checksum để phát hiện corruption. phân tán (distributed / 분산) lưu trữ (storage / 저장소) có thể dùng replication hoặc erasure coding để đổi lưu trữ (storage / 저장소) overhead lấy khôi phục (recovery / 복구)/mạng (network / 네트워크) độ phức tạp (complexity / 복잡도).
 
 Đọc thêm:
 
@@ -299,29 +302,29 @@ Database columnar encoding dùng distribution/locality để giảm bytes và me
 - [Multi-region replication và geo-distributed trade-offs](../../06_networks_distributed_systems/advanced/05_multi_region_replication_and_geo_distributed_tradeoffs.md)
 - [Durability path application → WAL → filesystem → device](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md)
 
-## 18. Connection với machine learning
+## 18. liên kết (connection / 연결) với machine học tập (learning / 학습)
 
-Cross-entropy loss có interpretation coding: model gán probability cao cho observed outcome sẽ cần ít surprise bits hơn. Perplexity thường là exponent của average negative log probability theo base phù hợp.
+Cross-entropy mất mát (loss / 손실) có interpretation coding: mô hình (model / 모델) gán xác suất (probability / 확률) cao cho observed kết quả (outcome / 결과) sẽ cần ít surprise bits hơn. Perplexity thường là exponent của average negative log xác suất (probability / 확률) theo cơ sở (base / 기반) phù hợp.
 
-Nhưng production model quality không chỉ là cross-entropy. Calibration, task utility, distribution shift, latency và safety vẫn là contract riêng.
+Nhưng môi trường vận hành (production / 운영 환경) mô hình (model / 모델) chất lượng (quality / 품질) không chỉ là cross-entropy. Calibration, tác vụ (task / 작업) utility, phân phối (distribution / 분포) shift, độ trễ (latency / 지연 시간) và an toàn (safety / 안전) vẫn là đặc tả hợp đồng (contract / 계약) riêng.
 
-Information-theoretic metric cho biết model probability phù hợp data tới đâu, không tự động cho biết decision downstream đúng hay có giá trị.
+Information-theoretic chỉ số (metric / 지표) cho biết mô hình (model / 모델) xác suất (probability / 확률) phù hợp dữ liệu (data / 데이터) tới đâu, không tự động cho biết quyết định (decision / 결정) downstream đúng hay có giá trị.
 
 ## 19. Những nhầm lẫn thường gặp
 
-**“Entropy là randomness của một file cụ thể.”** Shannon entropy cần distribution/random variable. Với object cụ thể, algorithmic complexity là viewpoint khác.
+**“Entropy là randomness của một tệp (file / 파일) cụ thể.”** Shannon entropy cần phân phối (distribution / 분포)/random variable. Với đối tượng (object / 객체) cụ thể, algorithmic độ phức tạp (complexity / 복잡도) là viewpoint khác.
 
-**“Nén tới entropy nghĩa là mọi file đều có size H.”** Không. Bound là expected/asymptotic theo source model.
+**“Nén tới entropy nghĩa là mọi tệp (file / 파일) đều có kích thước (size / 크기) H.”** Không. Bound là expected/asymptotic theo nguồn (source / 소스) mô hình (model / 모델).
 
-**“Checksum sửa được lỗi.”** Checksum chủ yếu detect; correction cần redundancy có structure phù hợp.
+**“Checksum sửa được lỗi.”** Checksum chủ yếu detect; correction cần redundancy có cấu trúc (structure / 구조) phù hợp.
 
-**“Bandwidth 1 Gbps nghĩa app gửi được 1 Gbps payload.”** Không. Phải trừ protocol overhead và behavior do loss/congestion/CPU.
+**“Bandwidth 1 Gbps nghĩa app gửi được 1 Gbps payload.”** Không. Phải trừ giao thức (protocol / 프로토콜) overhead và hành vi (behavior / 동작) do mất mát (loss / 손실)/congestion/CPU.
 
-**“Thêm redundancy luôn làm reliability tốt hơn.”** Chỉ nếu code/failure model phù hợp; correlated failures có thể phá assumption.
+**“Thêm redundancy luôn làm độ tin cậy (reliability / 신뢰성) tốt hơn.”** Chỉ nếu mã (code / 코드)/thất bại (failure / 실패) mô hình (model / 모델) phù hợp; correlated failures có thể phá giả định (assumption / 가정).
 
-**“Mutual information cao nghĩa X gây ra Y.”** Không. Dependency không đồng nghĩa causality.
+**“Mutual thông tin (information / 정보) cao nghĩa X gây ra Y.”** Không. phụ thuộc (dependency / 의존성) không đồng nghĩa causality.
 
-## 20. Checklist reasoning
+## 20. Checklist lập luận (reasoning / 추론)
 
 ```text
 Source distribution là gì và có ổn định không?
@@ -337,9 +340,9 @@ Evidence nào cho thấy bottleneck là information limit thay vì implementatio
 
 ## Kết luận
 
-Information theory cung cấp hai giới hạn nền tảng: **source uncertainty giới hạn mức lossless compression trung bình**, và **channel capacity giới hạn tốc độ reliable communication qua noise**. Coding không xóa giới hạn vật lý; nó tổ chức representation và redundancy để tiến gần giới hạn đó.
+Thông tin (information / 정보) lý thuyết (theory / 이론) cung cấp hai giới hạn nền tảng: **nguồn (source / 소스) bất định (uncertainty / 불확실성) giới hạn mức lossless compression trung bình**, và **channel sức chứa (capacity / 용량) giới hạn tốc độ reliable communication qua noise**. Coding không xóa giới hạn vật lý; nó tổ chức biểu diễn (representation / 표현) và redundancy để tiến gần giới hạn đó.
 
-Mental model cần giữ:
+Mô hình tư duy (mental model / 사고 모델) cần giữ:
 
 ```text
 probability
@@ -354,4 +357,6 @@ noise
 → reliable information rate
 ```
 
-Từ file compression, database encoding, network transport, storage repair tới cross-entropy trong machine learning, cùng một câu hỏi lặp lại: **uncertainty nằm ở đâu, representation nào đang khai thác structure, và redundancy nào đang được trả để giữ invariant?**
+Từ tệp (file / 파일) compression, cơ sở dữ liệu (database / 데이터베이스) encoding, mạng (network / 네트워크) vận chuyển (transport / 전송), lưu trữ (storage / 저장소) repair tới cross-entropy trong machine học tập (learning / 학습), cùng một câu hỏi lặp lại: **bất định (uncertainty / 불확실성) nằm ở đâu, biểu diễn (representation / 표현) nào đang khai thác cấu trúc (structure / 구조), và redundancy nào đang được trả để giữ bất biến (invariant / 불변식)?**
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 formal models reductions and computability](./00_formal_models_reductions_and_computability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Phòng thí nghiệm nâng cao: định giá tài sản, cấu trúc kỳ hạn và vai trò trong danh mục
 
-> Mục tiêu của file này là nối các nhóm tài sản thành một hệ thống so sánh thống nhất. Thay vì hỏi “cổ phiếu hay trái phiếu tốt hơn?”, người đọc sẽ học cách phân rã **nguồn lợi suất → rủi ro định giá → thanh khoản → cấu trúc kỳ hạn → biến số vĩ mô chi phối → vai trò trong danh mục**.
+> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: định giá tài sản, cấu trúc kỳ hạn và vai trò trong danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Mọi tài sản đều là một tập hợp dòng tiền và điều kiện** sang **2. Lợi suất kỳ vọng nên được phân rã**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Mục tiêu của tệp (file / 파일) này là nối các nhóm tài sản thành một hệ thống so sánh thống nhất. Thay vì hỏi “cổ phiếu hay trái phiếu tốt hơn?”, người đọc sẽ học cách phân rã **nguồn lợi suất → rủi ro định giá → thanh khoản → cấu trúc kỳ hạn → biến số vĩ mô chi phối → vai trò trong danh mục**.
 
 ## 1. Mọi tài sản đều là một tập hợp dòng tiền và điều kiện
 
@@ -169,7 +172,7 @@ Chi phí bảo trì
 Capex
 ```
 
-Đòn bẩy làm vốn chủ sở hữu nhạy hơn nhiều với thay đổi cap rate và NOI.
+Đòn bẩy làm vốn chủ sở hữu nhạy hơn nhiều với thay đổi cap tỷ lệ (rate / 비율) và NOI.
 
 ## 12. Vàng là tài sản không có dòng tiền
 
@@ -366,3 +369,5 @@ Dòng tiền / lợi ích kinh tế
 ```
 
 Khi dùng chung khung này, người đọc có thể so sánh những tài sản rất khác nhau mà không rơi vào bẫy “tài sản nào tăng nhiều nhất gần đây”.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

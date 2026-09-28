@@ -1,5 +1,8 @@
 # Sức căng bề mặt, thấm ướt và mao dẫn
 
+> **Mạch đọc:** Đọc **Sức căng bề mặt, thấm ướt và mao dẫn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao tạo bề mặt cần năng lượng?** sang **Vì sao giọt nhỏ gần hình cầu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Bề mặt của chất lỏng có hành vi khác phần vật chất nằm sâu bên trong vì môi trường quanh các phân tử ở mặt phân cách không đối xứng. Từ sự bất đối xứng vi mô đó xuất hiện các hiện tượng vĩ mô như giọt nước gần hình cầu, côn trùng đứng trên mặt nước, chất lỏng leo lên ống nhỏ, mực bám giấy và sự hình thành bọt.
 
 ## Vì sao tạo bề mặt cần năng lượng?
@@ -197,11 +200,11 @@ L^2\propto t.
 
 Chất hoạt động bề mặt (surfactant) tập trung ở mặt phân cách và có thể làm giảm `\gamma`. Xà phòng vì vậy giúp nước dễ lan trên bề mặt và ổn định bọt.
 
-Nếu nồng độ surfactant không đều, gradient của sức căng bề mặt có thể tạo dòng gọi là **hiệu ứng Marangoni (Marangoni effect)**. Chất lỏng có xu hướng bị kéo từ vùng có sức căng bề mặt thấp sang vùng có sức căng cao hơn.
+Nếu nồng độ surfactant không đều, độ dốc (gradient / 기울기) của sức căng bề mặt có thể tạo dòng gọi là **hiệu ứng Marangoni (Marangoni effect)**. Chất lỏng có xu hướng bị kéo từ vùng có sức căng bề mặt thấp sang vùng có sức căng cao hơn.
 
 Hiệu ứng này xuất hiện trong sấy màng mỏng, hàn, giọt bay hơi và “nước mắt rượu vang”.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Mặt phân cách không phải một lớp trang trí không có động lực học. Nó mang năng lượng, tạo lực và ghép hình học độ cong với áp suất. Ở thang nhỏ, nơi tỉ số diện tích/thể tích lớn, vật lý bề mặt có thể trở thành cơ chế chi phối toàn hệ.
 
@@ -219,8 +222,10 @@ Không. Dấu của `\cos\theta` quyết định chất lỏng dâng hay hạ so
 
 Chỉ khi sức căng bề mặt chi phối. Trọng lực, dòng chảy, điện trường hoặc tiếp xúc với bề mặt rắn có thể làm giọt biến dạng mạnh.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học chất lưu](00_fluids.md), [Công và năng lượng](../01_mechanics/03_work_energy_power.md).
 
 **Liên hệ tiếp:** [Hiện tượng vận chuyển](02_transport_diffusion_heat.md), [Dòng rối, lưu biến và vật chất mềm](03_turbulence_rheology_soft_matter.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 fluids](./00_fluids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

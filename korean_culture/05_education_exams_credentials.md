@@ -1,5 +1,8 @@
 # Giáo dục, kỳ thi và xã hội bằng cấp
 
+> **Mạch đọc:** Đặt **Giáo dục, kỳ thi và xã hội bằng cấp** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tại sao giáo dục mang trọng lượng xã hội lớn?** sang **학교 체계: trường học như một đường ống dài**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tại sao giáo dục mang trọng lượng xã hội lớn?
 
 Giáo dục Hàn Quốc thường được nhìn từ bên ngoài qua hình ảnh học sinh học muộn, `학원` và kỳ thi `수능`. Nếu chỉ gọi đây là “văn hoá học nhiều”, ta chưa giải thích được cơ chế. Cần hỏi: **tại sao gia đình sẵn sàng đầu tư nhiều thời gian và tiền cho giáo dục, và tại sao một kỳ thi có thể tập trung kỳ vọng lớn đến vậy?**
@@ -133,7 +136,7 @@ hiểu sai dạng câu hỏi
 
 thì phản hồi trở nên có thể hành động được.
 
-Tương tự trong lập trình: nhật ký lỗi tốt không chỉ lưu “test fail”, mà lưu nguyên nhân gốc và cách phòng ngừa.
+Tương tự trong lập trình: nhật ký lỗi tốt không chỉ lưu “kiểm thử (test / 테스트) thất bại (fail / 실패)”, mà lưu nguyên nhân gốc và cách phòng ngừa.
 
 ## 학벌: bằng cấp như tín hiệu và mạng quan hệ
 
@@ -230,7 +233,7 @@ Trong thị trường lao động thay đổi nhanh, giáo dục không còn k�
 
 Khi công nghệ làm kỹ năng mất giá nhanh hơn, người lao động phải cập nhật vốn con người nhiều lần. Điều này làm ranh giới giữa “học sinh” và “người đi làm” mờ hơn.
 
-Với lập trình viên, học framework mới sau giờ làm là ví dụ rất trực tiếp của học tập suốt đời, dù không liên quan kỳ thi truyền thống.
+Với lập trình viên, học khung phần mềm (framework / 프레임워크) mới sau giờ làm là ví dụ rất trực tiếp của học tập suốt đời, dù không liên quan kỳ thi truyền thống.
 
 ## 기술의 반감기: kỹ năng cũng có “chu kỳ mất giá”
 
@@ -398,3 +401,5 @@ bằng cấp hiếm
 “Có chứng chỉ nghĩa là đã có năng lực làm việc” nhầm tín hiệu với bằng chứng thực hành.
 
 “AI làm việc học trở nên không cần thiết” bỏ qua việc công cụ mạnh hơn làm yêu cầu kiểm chứng và chịu trách nhiệm cao hơn.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

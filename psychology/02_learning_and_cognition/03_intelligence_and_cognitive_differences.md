@@ -1,18 +1,21 @@
 # Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능
 
-**Trí tuệ (intelligence)** là construct dùng để mô tả những regularities trong performance qua nhiều cognitive tasks: reasoning, learning, processing speed, working memory, verbal/spatial knowledge và problem solving. Nó không phải một “chất” duy nhất nằm trong não, nhưng cũng không phải một khái niệm tùy ý: cognitive test scores cho thấy covariance structure khá ổn định và có predictive utility trong nhiều contexts.
+> **Mạch đọc:** Đọc **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Intelligence là latent construct** sang **2. Positive manifold**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> **Trạng thái bằng chứng tổng quát:** positive correlations giữa cognitive abilities và hierarchical psychometric structure là bằng chứng tương đối vững. `g`, CHC và các process-based alternatives là measurement/theoretical models; interpretation về biological mechanism, fairness và causes of group differences cần evidence riêng. Genetic influence on individual differences is substantial in many populations, but heritability does not imply immutability or explain group mean differences.
+
+**Trí tuệ (intelligence)** là construct dùng để mô tả những regularities trong hiệu năng (performance / 성능) qua nhiều cognitive tasks: lập luận (reasoning / 추론), học tập (learning / 학습), processing speed, working bộ nhớ (memory / 메모리), verbal/spatial kiến thức (knowledge / 지식) và bài toán (problem / 문제) solving. Nó không phải một “chất” duy nhất nằm trong não, nhưng cũng không phải một khái niệm tùy ý: cognitive kiểm thử (test / 테스트) scores cho thấy covariance cấu trúc (structure / 구조) khá ổn định và có predictive utility trong nhiều contexts.
+
+> **Trạng thái bằng chứng tổng quát:** positive correlations giữa cognitive abilities và hierarchical psychometric cấu trúc (structure / 구조) là bằng chứng tương đối vững. `g`, CHC và các process-based alternatives là đo lường (measurement / 측정)/theoretical các mô hình (models / 모델들); interpretation về biological cơ chế (mechanism / 메커니즘), fairness và causes of group differences cần bằng chứng (evidence / 증거) riêng. Genetic influence on individual differences is substantial in many populations, but heritability does not imply immutability or explain group mean differences.
 
 Xem [[../EVIDENCE_STATUS_GUIDE]] và [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
 ## 1. Intelligence là latent construct
 
-Không có thermometer đo intelligence trực tiếp. Researcher infer latent ability from pattern of task performance.
+Không có thermometer đo intelligence trực tiếp. Researcher infer latent ability from mẫu (pattern / 패턴) of tác vụ (task / 작업) hiệu năng (performance / 성능).
 
-Nếu performance on vocabulary, matrix reasoning, spatial tasks and working memory tends to correlate positively, statistical model can summarize shared variance.
+Nếu hiệu năng (performance / 성능) on vocabulary, ma trận (matrix / 행렬) lập luận (reasoning / 추론), spatial tasks and working bộ nhớ (memory / 메모리) tends to correlate positively, statistical mô hình (model / 모델) can summarize dùng chung (shared / 공유) variance.
 
-This shared structure is empirical; interpretation of what causes it is theoretical.
+This dùng chung (shared / 공유) cấu trúc (structure / 구조) is empirical; interpretation of what causes it is theoretical.
 
 ## 2. Positive manifold
 
@@ -24,15 +27,15 @@ It does not mean all abilities are identical. A person can show relative strengt
 
 ## 3. General factor g
 
-Spearman proposed **general intelligence factor (g)** to summarize shared variance among cognitive tests.
+Spearman proposed **general intelligence factor (g)** to summarize dùng chung (shared / 공유) variance among cognitive tests.
 
 > **Established psychometric finding:** a general factor can often account for substantial covariance.
 >
-> **Theory boundary:** `g` is not automatically one biological mechanism or one brain module. Different causal architectures can produce a statistical general factor.
+> **lý thuyết (theory / 이론) ranh giới (boundary / 경계):** `g` is not automatically one biological cơ chế (mechanism / 메커니즘) or one brain mô-đun (module / 모듈). Different nhân quả (causal / 인과적) architectures can produce a statistical general factor.
 
-## 4. Hierarchical models
+## 4. Hierarchical các mô hình (models / 모델들)
 
-Modern models often represent ability hierarchy:
+Hiện đại (modern / 현대적) các mô hình (models / 모델들) often represent ability hierarchy:
 
 ```text
 General factor
@@ -42,23 +45,23 @@ Broad abilities
 Narrow skills/tasks
 ```
 
-Cattell–Horn–Carroll (CHC) frameworks distinguish broad abilities such as fluid reasoning, crystallized knowledge, processing speed, visual processing and memory-related abilities.
+Cattell–Horn–Carroll (CHC) frameworks distinguish broad abilities such as fluid lập luận (reasoning / 추론), crystallized kiến thức (knowledge / 지식), processing speed, visual processing and memory-related abilities.
 
-These models are useful for assessment but factor boundaries vary by test battery and model assumptions.
+These các mô hình (models / 모델들) are useful for assessment but factor boundaries vary by kiểm thử (test / 테스트) battery and mô hình (model / 모델) các giả định (assumptions / 가정들).
 
 ## 5. Fluid and crystallized abilities
 
-**Năng lực linh hoạt (fluid reasoning / Gf)** concerns reasoning with novel problems.
+**Năng lực linh hoạt (fluid reasoning / Gf)** concerns lập luận (reasoning / 추론) with novel problems.
 
-**Năng lực kết tinh (crystallized knowledge / Gc)** reflects accumulated knowledge/language influenced strongly by education and culture.
+**Năng lực kết tinh (crystallized knowledge / Gc)** reflects accumulated kiến thức (knowledge / 지식)/ngôn ngữ (language / 언어) influenced strongly by education and culture.
 
 They correlate but show different developmental trajectories.
 
 ## 6. IQ score
 
-Modern IQ scores are standardized against a normative sample, often mean 100 and SD 15.
+Hiện đại (modern / 현대적) IQ scores are standardized against a normative mẫu (sample / 표본), often mean 100 and SD 15.
 
-Score 115 does not mean “15% more intelligent”. It places performance relative to reference distribution.
+Score 115 does not mean “15% more intelligent”. It places hiệu năng (performance / 성능) relative to tham chiếu (reference / 참조) phân phối (distribution / 분포).
 
 Observed score contains:
 
@@ -70,60 +73,60 @@ latent ability signal
 + motivation/health/sensory factors
 ```
 
-Therefore responsible interpretation includes confidence interval and context.
+Therefore responsible interpretation includes confidence interval and ngữ cảnh (context / 맥락).
 
 ## 7. Norms and renorming
 
-Test norms can become outdated as population performance changes. Flynn-effect history shows raw score distributions can shift across cohorts.
+Kiểm thử (test / 테스트) norms can become outdated as population hiệu năng (performance / 성능) changes. Flynn-effect lịch sử (history / 이력) shows raw score distributions can shift across cohorts.
 
-A score interpreted using obsolete norm can misstate current relative standing.
+A score interpreted using obsolete norm can misstate hiện tại (current / 현재) relative standing.
 
-## 8. Reliability
+## 8. độ tin cậy (reliability / 신뢰성)
 
-Intelligence tests often have high reliability when professionally standardized, but reliability is use-specific.
+Intelligence tests often have high độ tin cậy (reliability / 신뢰성) when professionally standardized, but độ tin cậy (reliability / 신뢰성) is use-specific.
 
-High reliability does not prove validity for every decision, such as school placement, job selection or diagnosis.
+High độ tin cậy (reliability / 신뢰성) does not prove validity for every quyết định (decision / 결정), such as school placement, job selection or diagnosis.
 
 ## 9. Validity
 
-Cognitive ability scores predict educational achievement and aspects of job performance at group/population level.
+Cognitive ability scores predict educational achievement and aspects of job hiệu năng (performance / 성능) at group/population mức (level / 수준).
 
 Predictive validity does not mean score determines destiny.
 
-Outcome also depends:
+Kết quả (outcome / 결과) also depends:
 
-- education quality;
+- education chất lượng (quality / 품질);
 - opportunity;
 - motivation/personality;
 - health;
-- socioeconomic context;
+- socioeconomic ngữ cảnh (context / 맥락);
 - discrimination;
-- domain knowledge;
-- team/environment.
+- lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식);
+- nhóm (team / 팀)/môi trường (environment / 환경).
 
 ## 10. Intelligence and expertise
 
-General cognitive ability can influence learning speed and novel problem solving; expertise adds domain-specific knowledge, schema and pattern recognition.
+General cognitive ability can influence học tập (learning / 학습) speed and novel bài toán (problem / 문제) solving; expertise adds domain-specific kiến thức (knowledge / 지식), lược đồ (schema / 스키마) and mẫu (pattern / 패턴) recognition.
 
-Senior developer may outperform a cognitively strong newcomer because codebase knowledge drastically changes problem representation.
+Cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) may outperform a cognitively strong newcomer because codebase kiến thức (knowledge / 지식) drastically changes bài toán (problem / 문제) biểu diễn (representation / 표현).
 
 Xem [[06_expertise_creativity_and_problem_solving]].
 
-## 11. Intelligence and working memory
+## 11. Intelligence and working bộ nhớ (memory / 메모리)
 
-Working-memory capacity correlates with reasoning, but the constructs are not identical.
+Working-memory sức chứa (capacity / 용량) correlates with lập luận (reasoning / 추론), but the constructs are not identical.
 
-Some theories treat executive attention/working memory as major contributor to g; others emphasize overlapping processes across tasks.
+Some theories treat executive attention/working bộ nhớ (memory / 메모리) as major contributor to g; others emphasize overlapping processes across tasks.
 
-> **Current theory / debated mechanism:** correlation is robust, causal architecture is not one settled explanation.
+> **hiện tại (current / 현재) lý thuyết (theory / 이론) / debated cơ chế (mechanism / 메커니즘):** correlation is robust, nhân quả (causal / 인과적) kiến trúc (architecture / 아키텍처) is not one settled explanation.
 
-## 12. Process Overlap Theory and alternative accounts
+## 12. tiến trình (process / 프로세스) Overlap lý thuyết (theory / 이론) and alternative accounts
 
-Some modern accounts argue positive manifold emerges because multiple domain-general processes overlap across tasks rather than one unitary latent cause.
+Some hiện đại (modern / 현대적) accounts argue positive manifold emerges because multiple domain-general processes overlap across tasks rather than one unitary latent cause.
 
 These frameworks can fit psychometric patterns while interpreting g differently.
 
-This illustrates a key library rule:
+This illustrates a key thư viện (library / 라이브러리) quy tắc (rule / 규칙):
 
 ```text
 Same covariance pattern
@@ -132,178 +135,178 @@ Same covariance pattern
 
 ## 13. Brain correlates
 
-Brain structure/function correlates with cognitive ability across distributed networks, including frontoparietal systems and global brain properties.
+Brain cấu trúc (structure / 구조)/hàm (function / 함수) correlates with cognitive ability across phân tán (distributed / 분산) networks, including frontoparietal các hệ thống (systems / 시스템들) and toàn cục (global / 전역) brain properties.
 
 > **Established:** there are replicable brain–cognition associations.
 >
-> **Limitation:** no single “intelligence center” exists, and correlation does not identify complete causal mechanism.
+> **Limitation:** no single “intelligence center” exists, and correlation does not identify complete nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘).
 
 ## 14. Genetics
 
 Twin/family/genomic studies show substantial genetic contribution to individual differences in cognitive ability in many studied populations.
 
-Modern reviews describe intelligence as highly polygenic.
+Hiện đại (modern / 현대적) reviews describe intelligence as highly polygenic.
 
 > **Established:** genetic differences contribute to individual variation.
 >
-> **Not established by this fact:** why two social groups differ in mean score.
+> **Not established by this fact:** why two xã hội (social / 사회적) groups differ in mean score.
 
-## 15. Heritability changes by age and context
+## 15. Heritability changes by age and ngữ cảnh (context / 맥락)
 
-Heritability estimates can vary across development and environments. Some studies show increasing heritability of general cognitive ability across development, partly through gene–environment correlation.
+Heritability estimates can vary across development and environments. Some studies show increasing heritability of general cognitive ability across development, partly through gene–môi trường (environment / 환경) correlation.
 
 This is population statistic, not fixed universal constant.
 
-## 16. Environment matters
+## 16. môi trường (environment / 환경) matters
 
-Cognitive development is affected by education, nutrition, prenatal conditions, toxins, chronic stress, disease, sensory access, sleep and cognitive opportunity.
+Cognitive development is affected by education, nutrition, prenatal conditions, toxins, chronic stress, disease, sensory truy cập (access / 접근), sleep and cognitive opportunity.
 
-A trait can be heritable while mean performance is environmentally modifiable.
+A trait can be heritable while mean hiệu năng (performance / 성능) is environmentally modifiable.
 
-## 17. Flynn effect
+## 17. Flynn tác động (effect / 효과)
 
 Many populations showed large generational increases in raw cognitive-test scores during parts of 20th century.
 
-This occurred too quickly to be explained by genetic evolution alone, demonstrating strong environmental/historical influence on measured performance.
+This occurred too quickly to be explained by genetic evolution alone, demonstrating strong environmental/historical influence on measured hiệu năng (performance / 성능).
 
-Pattern differs across countries/time and sometimes plateaus/reverses.
+Mẫu (pattern / 패턴) differs across countries/thời gian (time / 시간) and sometimes plateaus/reverses.
 
-## 18. Schooling effect
+## 18. Schooling tác động (effect / 효과)
 
-Education and cognitive ability influence each other. More schooling can improve some cognitive-test performance; prior ability influences educational attainment.
+Education and cognitive ability influence each other. More schooling can improve some cognitive-test hiệu năng (performance / 성능); prior ability influences educational attainment.
 
-Causal estimation is difficult because selection and socioeconomic factors matter.
+Nhân quả (causal / 인과적) estimation is difficult because selection and socioeconomic factors matter.
 
 ## 19. Socioeconomic conditions
 
-Poverty can influence cognition via nutrition, health, stress, pollution, school quality and resource access.
+Poverty can influence cognition via nutrition, health, stress, pollution, school chất lượng (quality / 품질) and tài nguyên (resource / 자원) truy cập (access / 접근).
 
-Socioeconomic status is not one mechanism; it bundles multiple exposures.
+Socioeconomic status is not one cơ chế (mechanism / 메커니즘); it bundles multiple exposures.
 
-Avoid interpreting score gap as intrinsic group property.
+Avoid interpreting score gap as intrinsic group thuộc tính (property / 속성).
 
-## 20. Group differences: causal caution
+## 20. Group differences: nhân quả (causal / 인과적) caution
 
 Observed mean differences between demographic groups can reflect combinations of:
 
-- environment;
+- môi trường (environment / 환경);
 - education;
 - health;
-- language;
-- test familiarity;
+- ngôn ngữ (language / 언어);
+- kiểm thử (test / 테스트) familiarity;
 - discrimination;
 - sampling;
-- measurement non-equivalence;
+- đo lường (measurement / 측정) non-equivalence;
 - genetic variation;
-- historical context.
+- historical ngữ cảnh (context / 맥락).
 
 Within-group heritability cannot determine which causes group difference.
 
-This is a causal inference problem, not a shortcut from twin studies.
+This is a nhân quả (causal / 인과적) suy luận (inference / 추론) bài toán (problem / 문제), not a shortcut from twin studies.
 
-## 21. Measurement invariance and fairness
+## 21. đo lường (measurement / 측정) invariance and fairness
 
-Before comparing group means, ask whether test functions similarly across groups.
+Before comparing group means, ask whether kiểm thử (test / 테스트) functions similarly across groups.
 
-**Measurement invariance** and **Differential Item Functioning (DIF)** test whether item–ability relations differ systematically.
+**đo lường (measurement / 측정) invariance** and **Differential Item Functioning (DIF)** kiểm thử (test / 테스트) whether item–ability relations differ systematically.
 
-Even when psychometric invariance is adequate, fairness in use also requires considering access, consequences and decision context.
+Even when psychometric invariance is adequate, fairness in use also requires considering truy cập (access / 접근), consequences and quyết định (decision / 결정) ngữ cảnh (context / 맥락).
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-## 22. Language and culture
+## 22. ngôn ngữ (language / 언어) and culture
 
-Verbal items can depend strongly on language exposure and schooling.
+Verbal items can depend strongly on ngôn ngữ (language / 언어) exposure and schooling.
 
-“Culture-fair” test cannot remove all cultural learning because reasoning itself develops in cultural/educational context.
+“Culture-fair” kiểm thử (test / 테스트) cannot remove all cultural học tập (learning / 학습) because lập luận (reasoning / 추론) itself develops in cultural/educational ngữ cảnh (context / 맥락).
 
-Better term is often reducing construct-irrelevant language/cultural demands, not claiming total culture-free assessment.
+Better term is often reducing construct-irrelevant ngôn ngữ (language / 언어)/cultural demands, not claiming total culture-free assessment.
 
 ## 23. Stereotype threat
 
-Social identity threat can influence performance under some conditions.
+Xã hội (social / 사회적) định danh (identity / 식별자) threat can influence hiệu năng (performance / 성능) under some conditions.
 
-> **Evidence status:** stereotype-threat effects have substantial research history but effect sizes and replicability vary by paradigm/population. It should not be used as one universal explanation for every group gap.
+> **bằng chứng (evidence / 증거) status:** stereotype-threat effects have substantial research lịch sử (history / 이력) but tác động (effect / 효과) sizes and replicability vary by paradigm/population. It should not be used as one universal explanation for every group gap.
 
-## 24. Test anxiety
+## 24. kiểm thử (test / 테스트) anxiety
 
-Anxiety can consume working-memory/attention resources and reduce performance. But low score should not automatically be dismissed as “just anxiety”; standardized assessment integrates behavior, history and repeated evidence.
+Anxiety can consume working-memory/attention resources and reduce hiệu năng (performance / 성능). But low score should not automatically be dismissed as “just anxiety”; standardized assessment integrates hành vi (behavior / 동작), lịch sử (history / 이력) and repeated bằng chứng (evidence / 증거).
 
 ## 25. Disability and accommodation
 
-Visual, hearing, motor or language barriers can contaminate cognitive measurement.
+Visual, hearing, motor or ngôn ngữ (language / 언어) barriers can contaminate cognitive đo lường (measurement / 측정).
 
-Accommodation aims to reduce construct-irrelevant difficulty without changing target construct.
+Accommodation aims to reduce construct-irrelevant difficulty without changing mục tiêu (target / 대상) construct.
 
 Fairness sometimes requires different procedures, not identical procedures.
 
 ## 26. Neurodiversity
 
-ADHD, autism, learning disorders and other neurodevelopmental profiles can create uneven cognitive patterns.
+ADHD, autism, học tập (learning / 학습) disorders and other neurodevelopmental profiles can create uneven cognitive patterns.
 
-A single global score may hide meaningful strengths/needs.
+A single toàn cục (global / 전역) score may hide meaningful strengths/needs.
 
 Assessment should interpret profile only when psychometrically justified and clinically relevant, not over-read every subtest difference.
 
 ## 27. Multiple intelligences
 
-Gardner's multiple-intelligences framework is culturally influential and useful as language for diverse strengths.
+Gardner's multiple-intelligences khung phần mềm (framework / 프레임워크) is culturally influential and useful as ngôn ngữ (language / 언어) for diverse strengths.
 
-> **Historical/educational influence vs psychometric evidence:** claim that verbal, musical, interpersonal, bodily etc. are independent intelligences with same psychometric status as g/broad cognitive abilities is not supported at comparable level.
+> **Historical/educational influence vs psychometric bằng chứng (evidence / 증거):** claim that verbal, musical, interpersonal, bodily etc. are independent intelligences with same psychometric status as g/broad cognitive abilities is not supported at comparable mức (level / 수준).
 
 ## 28. Emotional intelligence
 
-**Emotional intelligence (EI)** has multiple models:
+**Emotional intelligence (EI)** has multiple các mô hình (models / 모델들):
 
-- ability model;
+- ability mô hình (model / 모델);
 - trait EI;
-- mixed competency models.
+- mixed competency các mô hình (models / 모델들).
 
 They measure different things.
 
-Claim “EQ matters more than IQ” is meaningless without specifying instrument and outcome.
+Claim “EQ matters more than IQ” is meaningless without specifying instrument and kết quả (outcome / 결과).
 
 ## 29. Creativity
 
 Creativity is related to intelligence but not reducible to IQ.
 
-High creative achievement also needs domain knowledge, motivation, opportunity and divergent/evaluative processes.
+High creative achievement also needs lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식), motivation, opportunity and divergent/evaluative processes.
 
 A cognitive score cannot summarize artistic/scientific creativity completely.
 
 ## 30. Wisdom
 
-Wisdom includes judgment about uncertainty, values, social consequence and life experience. It is distinct from traditional cognitive-ability testing.
+Wisdom includes judgment about bất định (uncertainty / 불확실성), values, xã hội (social / 사회적) consequence and life experience. It is distinct from traditional cognitive-ability testing.
 
-High IQ does not guarantee wise decision or moral behavior.
+High IQ does not guarantee wise quyết định (decision / 결정) or moral hành vi (behavior / 동작).
 
-## 31. Brain training
+## 31. Brain huấn luyện (training / 학습)
 
-Training typically improves trained/near tasks more reliably than broad far transfer.
+Huấn luyện (training / 학습) typically improves trained/near tasks more reliably than broad far transfer.
 
-> **Evidence status:** strong claims that commercial games produce large general intelligence increases are not well supported.
+> **bằng chứng (evidence / 증거) status:** strong claims that commercial games produce large general intelligence increases are not well supported.
 
-Practice can still be useful when target skill itself matters.
+Practice can still be useful when mục tiêu (target / 대상) skill itself matters.
 
 ## 32. Cognitive enhancement
 
-Sleep, education, exercise and health can support cognitive functioning, but “raise IQ quickly” claims require strong evidence.
+Sleep, education, exercise and health can hỗ trợ (support / 지원) cognitive functioning, but “raise IQ quickly” claims require strong bằng chứng (evidence / 증거).
 
-Effects on test performance may reflect strategy/familiarity rather than general latent ability change.
+Effects on kiểm thử (test / 테스트) hiệu năng (performance / 성능) may reflect chiến lược (strategy / 전략)/familiarity rather than general latent ability thay đổi (change / 변경).
 
 ## 33. Intelligence across lifespan
 
-Cognitive abilities do not all change identically.
+Cognitive abilities do not all thay đổi (change / 변경) identically.
 
-Processing speed and some fluid abilities often decline earlier than crystallized knowledge; trajectories vary substantially between individuals.
+Processing speed and some fluid abilities often decline earlier than crystallized kiến thức (knowledge / 지식); trajectories vary substantially between individuals.
 
-Recent lifespan analyses suggest structure/strength of g can itself vary by age and ability level, challenging overly uniform models.
+Recent lifespan analyses suggest cấu trúc (structure / 구조)/strength of g can itself vary by age and ability mức (level / 수준), challenging overly uniform các mô hình (models / 모델들).
 
 Xem [[../03_human_development_and_person/11_aging_cognitive_health_and_late_life]].
 
 ## 34. Predictive use in workplace
 
-Cognitive ability can predict training/job performance on average, especially in complex roles.
+Cognitive ability can predict huấn luyện (training / 학습)/job hiệu năng (performance / 성능) on average, especially in complex roles.
 
 But hiring decisions also raise fairness, legal, validity and utility questions.
 
@@ -311,28 +314,28 @@ Use should be job-related, validated and combined appropriately with other predi
 
 ## 35. AI and cognitive assessment
 
-AI-based games, speech analysis or passive digital behavior are increasingly proposed to estimate cognition.
+AI-based games, speech phân tích (analysis / 분석) or passive digital hành vi (behavior / 동작) are increasingly proposed to estimate cognition.
 
-Novel interface does not solve psychometrics. The same requirements remain:
+Novel giao diện (interface / 인터페이스) does not solve psychometrics. The same requirements remain:
 
-- reliability;
+- độ tin cậy (reliability / 신뢰성);
 - validity;
 - fairness;
 - privacy;
-- out-of-sample validation;
+- out-of-sample kiểm tra hợp lệ (validation / 검증);
 - explanation of intended use.
 
-## 36. Common misconceptions
+## 36. dùng chung (common / 공통) misconceptions
 
 ### “IQ is intelligence itself”
 
-No. IQ is score from measurement model.
+No. IQ is score from đo lường (measurement / 측정) mô hình (model / 모델).
 
 ### “g is one brain organ”
 
 No. g is psychometric factor; biological explanation is separate question.
 
-### “High heritability means environment irrelevant”
+### “High heritability means môi trường (environment / 환경) irrelevant”
 
 False.
 
@@ -344,40 +347,40 @@ False.
 
 False. Prediction is probabilistic.
 
-### “Culture-free intelligence test exists”
+### “Culture-free intelligence kiểm thử (test / 테스트) exists”
 
-Strong claim unrealistic; culture/language effects can be reduced but not simply erased.
+Strong claim unrealistic; culture/ngôn ngữ (language / 언어) effects can be reduced but not simply erased.
 
-### “Brain training raises general intelligence broadly”
+### “Brain huấn luyện (training / 학습) raises general intelligence broadly”
 
-Far-transfer evidence is limited.
+Far-transfer bằng chứng (evidence / 증거) is limited.
 
 ## 37. Evidence-status map
 
-### Established evidence
+### Established bằng chứng (evidence / 증거)
 
 - positive manifold;
-- hierarchical covariance structure;
-- measurement error/norm dependence;
+- hierarchical covariance cấu trúc (structure / 구조);
+- sai số đo lường (measurement error / 측정 오차)/norm dependence;
 - substantial stability and predictive relations;
 - genetic and environmental contributions;
 - domain-specific expertise effects.
 
-### Current theories/models
+### Hiện tại (current / 현재) theories/các mô hình (models / 모델들)
 
 - g-as-causal factor interpretations;
 - CHC hierarchy;
 - process-overlap accounts;
-- neurocognitive network models.
+- neurocognitive mạng (network / 네트워크) các mô hình (models / 모델들).
 
 ### Hypotheses/debates
 
-- exact biological mechanism of g;
-- degree/context of differentiation across lifespan;
+- chính xác (exact / 정확한) biological cơ chế (mechanism / 메커니즘) of g;
+- degree/ngữ cảnh (context / 맥락) of differentiation across lifespan;
 - how much specific environmental interventions shift broad latent ability;
-- best fairness model for high-stakes assessment.
+- best fairness mô hình (model / 모델) for high-stakes assessment.
 
-## 38. Mental model
+## 38. mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Observed cognitive performance
@@ -390,7 +393,7 @@ Observed cognitive performance
  + measurement error
 ```
 
-Psychometric model summarizes patterns; causal explanation requires additional evidence.
+Psychometric mô hình (model / 모델) summarizes patterns; nhân quả (causal / 인과적) explanation requires additional bằng chứng (evidence / 증거).
 
 ## Kết nối kiến thức
 
@@ -398,6 +401,8 @@ Psychometric model summarizes patterns; causal explanation requires additional e
 
 ### Nguồn định hướng
 
-- Modern reviews of intelligence genetics emphasize polygenicity and gene/environment contributions rather than deterministic genes.
-- Fairness literature stresses that cognitive assessment must be interpreted with equity, measurement validity and consequences of use.
-- Recent meta-analytic lifespan work supports a general factor while showing that its structure/strength need not be uniform at every age/ability level.
+- hiện đại (modern / 현대적) reviews of intelligence genetics emphasize polygenicity and gene/môi trường (environment / 환경) contributions rather than deterministic genes.
+- Fairness literature stresses that cognitive assessment must be interpreted with equity, đo lường (measurement / 측정) validity and consequences of use.
+- Recent meta-analytic lifespan công việc (work / 작업) supports a general factor while showing that its cấu trúc (structure / 구조)/strength need not be uniform at every age/ability mức (level / 수준).
+
+> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 learning and conditioning](./00_learning_and_conditioning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

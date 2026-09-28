@@ -1,5 +1,8 @@
 # Lục địa, bồn đại dương và cấu trúc cấp hành tinh
 
+> **Mạch đọc:** Đặt **Lục địa, bồn đại dương và cấu trúc cấp hành tinh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao bề mặt Trái Đất có hai miền cao độ lớn?** sang **Continental crust khác continent**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao bề mặt Trái Đất có hai miền cao độ lớn?
 
 Nếu toàn bộ lớp vỏ có cùng mật độ và độ dày, phân bố độ cao có thể gần một dải liên tục đơn giản hơn. Nhưng Trái Đất có hai kiểu vỏ chính. **Vỏ lục địa (continental crust)** thường dày hơn, giàu vật liệu nhẹ hơn và có mật độ trung bình thấp hơn; **vỏ đại dương (oceanic crust)** mỏng hơn nhưng đặc hơn. Sự khác biệt đó, kết hợp với cân bằng đẳng tĩnh, tạo hai miền lớn: phần lục địa nằm tương đối cao và đáy đại dương nằm thấp hơn.
@@ -18,7 +21,7 @@ Tại **sống núi giữa đại dương (mid-ocean ridge)**, vật chất nón
 
 Tại **đới hút chìm (subduction zone)**, thạch quyển đại dương cũ có thể chìm xuống lớp phủ. Do liên tục được tạo mới và tái chế, đáy đại dương nhìn chung trẻ hơn nhiều phần của lục địa.
 
-Mental model cần giữ là: đại dương không phải một “hố chứa nước” tĩnh. Nó là bề mặt kiến tạo đang được sinh ra, vận chuyển và tái chế.
+Mô hình tư duy (mental model / 사고 모델) cần giữ là: đại dương không phải một “hố chứa nước” tĩnh. Nó là bề mặt kiến tạo đang được sinh ra, vận chuyển và tái chế.
 
 ## Chu kỳ Wilson: đại dương có thể mở và đóng
 
@@ -62,13 +65,13 @@ Trong thời kỳ băng hà, mực nước biển thấp hơn có thể làm l�
 
 Không thể nhìn trực tiếp toàn bộ đáy biển với cùng độ chi tiết. **Sonar đa tia (multibeam sonar)** cho đo sâu trực tiếp độ phân giải cao dọc tuyến khảo sát; đo cao vệ tinh (satellite altimetry) có thể suy các cấu trúc lớn qua biến thiên trường trọng lực trên mặt biển.
 
-Do đó bản đồ bathymetry toàn cầu thường kết hợp dữ liệu trực tiếp và suy đoán. Một bản đồ được tô kín không có nghĩa mọi ô đã được đo cùng chất lượng. Đây là bài học quan trọng về **data provenance** và **resolution** trong GIS.
+Do đó bản đồ bathymetry toàn cầu thường kết hợp dữ liệu trực tiếp và suy đoán. Một bản đồ được tô kín không có nghĩa mọi ô đã được đo cùng chất lượng. Đây là bài học quan trọng về **dữ liệu (data / 데이터) provenance** và **resolution** trong GIS.
 
 ## Từ cấu trúc hành tinh tới tài nguyên và settlement
 
 Chuỗi quan hệ cần nhìn là:
 
-**crust + tectonics → relief/basin → sediment/resource → coast/shelf → ports/fisheries/settlement → trade network**.
+**crust + tectonics → relief/basin → sediment/tài nguyên (resource / 자원) → coast/shelf → ports/fisheries/settlement → trade mạng (network / 네트워크)**.
 
 Ví dụ, một passive margin rộng có thể tạo thềm nông và bồn trầm tích lớn; một delta nằm trên đó có thể tập trung dân cư và cảng; khi đô thị hóa tăng, chính vùng thấp thuận lợi lại trở thành nơi phơi lộ cao trước lũ, sụt lún và sea-level rise.
 
@@ -83,3 +86,5 @@ Một hiểu lầm khác là coi tên các châu lục như phân loại tự nh
 > Bề mặt Địa cầu là kết quả của **hai kiểu vỏ + chu trình kiến tạo + đẳng tĩnh + nước lấp các miền thấp**. Hãy đọc lục địa và đại dương như những thành phần động của cùng một hệ kiến tạo, rồi mới suy sang tài nguyên, settlement và mạng giao thông.
 
 Xem tiếp: [Kiến tạo mảng](../01_physical_geography/00_plate_tectonics_geologic_time.md), [Độ cao toàn cầu](./03_global_relief_hypsometry.md), [Đại dương và bờ biển](../01_physical_geography/05_oceans_coasts.md), [Chokepoints](../04_global_systems/02_geopolitics_chokepoints_resources.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 earth shape size geodesy](./00_earth_shape_size_geodesy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

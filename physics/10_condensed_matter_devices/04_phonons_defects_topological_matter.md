@@ -1,10 +1,13 @@
 # Phonon, khuyết tật, kích thích tập thể và vật chất tô pô
 
+> **Mạch đọc:** Đọc **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tinh thể không phải một mạng nguyên tử đứng yên** sang **Nhánh acoustic và optical phonon**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tinh thể không phải một mạng nguyên tử đứng yên
 
 Trong mô hình dải năng lượng đơn giản, các ion thường được vẽ như những điểm mạng cố định. Nhưng ở nhiệt độ hữu hạn, nguyên tử dao động quanh vị trí cân bằng. Vì các nguyên tử liên kết với nhau, những dao động này không phải `N` dao động tử hoàn toàn độc lập.
 
-Nếu tuyến tính hóa lực quanh trạng thái cân bằng và chéo hóa hệ dao động ghép, ta thu được các mode chuẩn. Trong cơ học lượng tử, năng lượng của mỗi mode bị lượng tử hóa. Lượng tử của dao động mạng được gọi là **phonon (포논)**.
+Nếu tuyến tính hóa lực quanh trạng thái cân bằng và chéo hóa hệ dao động ghép, ta thu được các chế độ (mode / 모드) chuẩn. Trong cơ học lượng tử, năng lượng của mỗi chế độ (mode / 모드) bị lượng tử hóa. Lượng tử của dao động mạng được gọi là **phonon (포논)**.
 
 Phonon không phải một loại nguyên tử mới. Nó là quasiparticle: cách đóng gói một kích thích tập thể của rất nhiều nguyên tử thành một đối tượng hiệu dụng có năng lượng và động lượng tinh thể.
 
@@ -30,7 +33,7 @@ các nguyên tử lân cận dao động gần cùng pha và
 
 trong đó `v_s` là vận tốc âm trong tinh thể.
 
-Nếu ô cơ sở có nhiều nguyên tử, có thể xuất hiện nhánh quang học (optical), nơi các mạng con dao động tương đối với nhau. Một số mode quang học ghép mạnh với bức xạ hồng ngoại hoặc tán xạ Raman.
+Nếu ô cơ sở có nhiều nguyên tử, có thể xuất hiện nhánh quang học (optical), nơi các mạng con dao động tương đối với nhau. Một số chế độ (mode / 모드) quang học ghép mạnh với bức xạ hồng ngoại hoặc tán xạ Raman.
 
 ## Mô hình Debye và nhiệt dung mạng
 
@@ -50,7 +53,7 @@ C_V\propto T^3
 
 ở nhiệt độ thấp.
 
-Nguyên nhân là thống kê lượng tử làm các mode tần số cao khó được kích thích khi `k_BT` nhỏ hơn năng lượng lượng tử của chúng.
+Nguyên nhân là thống kê lượng tử làm các chế độ (mode / 모드) tần số cao khó được kích thích khi `k_BT` nhỏ hơn năng lượng lượng tử của chúng.
 
 Đây là một trong những thành công sớm cho thấy tính chất nhiệt của chất rắn phải được hiểu bằng các kích thích lượng tử tập thể.
 
@@ -80,11 +83,11 @@ Tinh thể hoàn hảo là mô hình lý tưởng. Vật liệu thực có thể
 - interstitial: nguyên tử nằm ở vị trí xen kẽ;
 - substitutional impurity: nguyên tử khác thay nguyên tử nền;
 - dislocation: khuyết tật đường;
-- grain boundary: biên giữa các hạt tinh thể có hướng khác nhau.
+- grain ranh giới (boundary / 경계): biên giữa các hạt tinh thể có hướng khác nhau.
 
 Khuyết tật không nhất thiết là “xấu”.
 
-Pha tạp bán dẫn cố ý đưa impurity vào để điều khiển mật độ hạt tải. Dislocation chi phối biến dạng dẻo của kim loại. Color center tạo trạng thái quang học. Grain boundary ảnh hưởng độ bền, khuếch tán và độ dẫn.
+Pha tạp bán dẫn cố ý đưa impurity vào để điều khiển mật độ hạt tải. Dislocation chi phối biến dạng dẻo của kim loại. Color center tạo trạng thái quang học. Grain ranh giới (boundary / 경계) ảnh hưởng độ bền, khuếch tán và độ dẫn.
 
 ## Dislocation và biến dạng dẻo
 
@@ -117,7 +120,7 @@ Electron dải, lỗ trống, phonon, magnon và exciton đều là ví dụ qua
 
 Trong sắt từ, dao động tập thể của spin tạo spin wave. Lượng tử của spin wave được gọi là magnon (마그논).
 
-Miền từ hình thành để giảm năng lượng từ tĩnh; domain wall là cấu trúc mở rộng phân cách các miền.
+Miền từ hình thành để giảm năng lượng từ tĩnh; lĩnh vực (domain / 도메인) wall là cấu trúc mở rộng phân cách các miền.
 
 Công nghệ bộ nhớ khai thác việc chuyển trạng thái từ, còn spintronics sử dụng spin bên cạnh điện tích như một bậc tự do mang thông tin.
 
@@ -137,13 +140,13 @@ với `\nu` là số nguyên trong chế độ lý tưởng.
 
 Độ bền của lượng tử hóa liên hệ với topology của các trạng thái lượng tử đã chiếm, chứ không chỉ với từng tham số vật liệu vi mô.
 
-## Bulk–boundary correspondence
+## Bulk–ranh giới (boundary / 경계) correspondence
 
 Nếu hai vùng bulk thuộc hai lớp tô pô khác nhau, biên giữa chúng không thể luôn được biến đổi trơn từ pha này sang pha kia mà vẫn giữ gap và symmetry bảo vệ.
 
 Do đó biên có thể bắt buộc chứa các trạng thái đặc biệt.
 
-Đây là **bulk–boundary correspondence**: bất biến tô pô của bulk dự đoán cấu trúc trạng thái ở biên.
+Đây là **bulk–ranh giới (boundary / 경계) correspondence**: bất biến tô pô của bulk dự đoán cấu trúc trạng thái ở biên.
 
 ## Chất cách điện tô pô
 
@@ -151,7 +154,7 @@ Topological insulator có bulk cách điện nhưng có trạng thái dẫn ở 
 
 Từ “được bảo vệ” không có nghĩa hoàn toàn không tán xạ. Nó nghĩa một số cơ chế mở gap hoặc backscattering bị cấm hoặc suy giảm nếu symmetry bảo vệ và cấu trúc gap vẫn còn.
 
-Nhiệt độ, tạp chất từ, tiếp xúc, tương tác và hình học mẫu vẫn có thể làm transport thực khác lý tưởng.
+Nhiệt độ, tạp chất từ, tiếp xúc, tương tác và hình học mẫu vẫn có thể làm vận chuyển (transport / 전송) thực khác lý tưởng.
 
 ## Vật liệu hai chiều và giảm số chiều
 
@@ -179,12 +182,12 @@ Lượng tử hóa từ thông và hiệu ứng Josephson phản ánh tính kế
 
 ## Tính toán vật liệu và kỹ thuật thiết bị
 
-Các phương pháp như Density Functional Theory (DFT), molecular dynamics, Monte Carlo và tight-binding giúp dự đoán hoặc giải thích vật liệu.
+Các phương pháp như Density Functional lý thuyết (theory / 이론) (DFT), molecular dynamics, Monte Carlo và tight-binding giúp dự đoán hoặc giải thích vật liệu.
 
-Nhưng từ band structure lý tưởng tới thiết bị thật còn phải xét:
+Nhưng từ band cấu trúc (structure / 구조) lý tưởng tới thiết bị thật còn phải xét:
 
 - khuyết tật;
-- interface;
+- giao diện (interface / 인터페이스);
 - contact;
 - phonon;
 - strain;
@@ -196,21 +199,21 @@ Nhưng từ band structure lý tưởng tới thiết bị thật còn phải x�
 
 Năng lượng liên kết hóa học quyết định cấu trúc tinh thể và độ cứng cục bộ; cấu trúc điện tử quyết định band, bonding và phản ứng bề mặt.
 
-Khuyết tật, pha tạp và grain boundary là nơi vật lý và hóa học gặp nhau: cùng một nguyên tử tạp có thể thay mật độ hạt tải, năng lượng hình thành khuyết tật và độ ổn định pha.
+Khuyết tật, pha tạp và grain ranh giới (boundary / 경계) là nơi vật lý và hóa học gặp nhau: cùng một nguyên tử tạp có thể thay mật độ hạt tải, năng lượng hình thành khuyết tật và độ ổn định pha.
 
 Trong kỹ thuật, mục tiêu hiếm khi là “tinh thể hoàn hảo nhất”. Mục tiêu là cấu trúc vi mô tạo đúng cơ tính, điện tính, nhiệt tính hoặc quang tính cần thiết.
 
 ## Miền áp dụng và giới hạn
 
-Phonon là quasiparticle tốt khi dao động mạng có thể được mô tả gần điều hòa và mode có thời gian sống đủ dài.
+Phonon là quasiparticle tốt khi dao động mạng có thể được mô tả gần điều hòa và chế độ (mode / 모드) có thời gian sống đủ dài.
 
 Ở nhiệt độ cao hoặc phi điều hòa mạnh, phonon–phonon scattering và biến đổi cấu trúc có thể làm bức tranh quasiparticle đơn giản kém chính xác.
 
 Khối lượng hiệu dụng cũng chỉ có ý nghĩa trong vùng `k` nơi dispersion có thể xấp xỉ phù hợp. Topological protection luôn phụ thuộc gap, symmetry và loại nhiễu loạn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Chất rắn không phải “một đống nguyên tử đứng đúng hàng”. Nó là hệ nhiều hạt có mode tập thể, khuyết tật, quasiparticle và cấu trúc toàn cục của hàm sóng.
+Chất rắn không phải “một đống nguyên tử đứng đúng hàng”. Nó là hệ nhiều hạt có chế độ (mode / 모드) tập thể, khuyết tật, quasiparticle và cấu trúc toàn cục của hàm sóng.
 
 Ở đúng thang đo, phonon hoặc electron dải có thể là đối tượng hữu ích hơn rất nhiều so với theo dõi từng hạt nhân và electron cơ bản.
 
@@ -227,7 +230,7 @@ microscopic atoms + electrons
 
 ### “Phonon là một hạt vật chất nhỏ nằm giữa các nguyên tử”
 
-Không. Phonon là lượng tử của mode dao động mạng và không tồn tại như hạt tự do ngoài vật liệu.
+Không. Phonon là lượng tử của chế độ (mode / 모드) dao động mạng và không tồn tại như hạt tự do ngoài vật liệu.
 
 ### “Khuyết tật luôn làm vật liệu kém đi”
 
@@ -235,14 +238,16 @@ Không. Nhiều công nghệ cần pha tạp hoặc khuyết tật có kiểm so
 
 ### “Topological protection nghĩa điện trở luôn bằng 0”
 
-Không. Bảo vệ chỉ áp dụng cho những mode và quá trình cụ thể dưới các giả định symmetry/gap nhất định.
+Không. Bảo vệ chỉ áp dụng cho những chế độ (mode / 모드) và quá trình cụ thể dưới các giả định symmetry/gap nhất định.
 
-### “Band structure lý tưởng đủ để dự đoán thiết bị thật”
+### “Band cấu trúc (structure / 구조) lý tưởng đủ để dự đoán thiết bị thật”
 
-Không. Interface, contact, disorder, phonon và vận chuyển không cân bằng có thể chi phối thiết bị.
+Không. giao diện (interface / 인터페이스), contact, disorder, phonon và vận chuyển không cân bằng có thể chi phối thiết bị.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tinh thể và dải năng lượng](00_crystals_bands.md), [Thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md), [Hiện tượng tới hạn](../04_thermal_statistical/05_critical_phenomena_renormalization.md).
 
 **Liên hệ tiếp:** [Bán dẫn và thiết bị](01_semiconductors_devices.md), [Vận chuyển và siêu dẫn](02_transport_magnetism_superconductivity.md), [BEC và siêu chảy](05_bec_superfluid_quantum_fluids.md), [Berry phase và Hall lượng tử](06_berry_phase_quantum_hall_topology.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

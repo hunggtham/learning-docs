@@ -1,9 +1,12 @@
 # Ngăn xếp
+
+> **Mạch đọc:** Đọc **Ngăn xếp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Ngăn xếp là một lớp trừu tượng (abstraction / 추상화), không phải một hiện thực (implementation / 구현) cụ thể** sang **2. Ngăn xếp trong C, Java và JavaScript**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Ngăn xếp (Stack / 스택)**
 
-Ngăn xếp mô hình hóa **vào sau, ra trước (LIFO — Last In, First Out / 후입선출)**: phần tử hoặc công việc được mở sau cùng phải được hoàn tất trước. Đây là một **kiểu dữ liệu trừu tượng (ADT — Abstract Data Type)** có giao diện rất nhỏ — `push`, `pop`, `peek`, `isEmpty` — nhưng xuất hiện ở khắp nơi: ngăn xếp lời gọi (call stack), DFS, bộ phân tích cú pháp (parser), hoàn tác/làm lại (undo/redo), tính biểu thức, quay lui (backtracking), cấu trúc đơn điệu và nhiều thuật toán cần lưu trạng thái để tiếp tục xử lý.
+Ngăn xếp mô hình hóa **vào sau, ra trước (LIFO — Last In, First Out / 후입선출)**: phần tử hoặc công việc được mở sau cùng phải được hoàn tất trước. Đây là một **kiểu dữ liệu trừu tượng (ADT — Abstract data Type)** có giao diện rất nhỏ — `push`, `pop`, `peek`, `isEmpty` — nhưng xuất hiện ở khắp nơi: ngăn xếp lời gọi (call stack / 호출 스택), DFS, bộ phân tích cú pháp (parser), hoàn tác/làm lại (undo/redo), tính biểu thức, quay lui (backtracking), cấu trúc đơn điệu và nhiều thuật toán cần lưu trạng thái để tiếp tục xử lý.
 
-## 1. Ngăn xếp là một abstraction, không phải một implementation cụ thể
+## 1. Ngăn xếp là một lớp trừu tượng (abstraction / 추상화), không phải một hiện thực (implementation / 구현) cụ thể
 
 Ngăn xếp mô tả **hành vi** chứ không bắt buộc một cách lưu trữ. Nó có thể được cài đặt bằng **mảng động (dynamic array)** hoặc **danh sách liên kết (linked list)**.
 
@@ -22,7 +25,7 @@ push -> chèn ở đầu
 pop  -> xóa ở đầu
 ```
 
-Cả hai có thể cho `push/pop` `O(1)` theo hợp đồng phù hợp. Mảng động thường có **tính cục bộ bộ nhớ (locality)** tốt và ít lần cấp phát hơn. Danh sách liên kết không cần một vùng nhớ liên tục nhưng phải trả thêm chi phí node, con trỏ và cấp phát.
+Cả hai có thể cho `push/pop` `O(1)` theo hợp đồng phù hợp. Mảng động thường có **tính cục bộ bộ nhớ (locality)** tốt và ít lần cấp phát hơn. Danh sách liên kết không cần một vùng nhớ liên tục nhưng phải trả thêm chi phí nút (node / 노드), con trỏ và cấp phát.
 
 ## 2. Ngăn xếp trong C, Java và JavaScript
 
@@ -67,7 +70,7 @@ các phần tử logic = a[0 .. size)
 phần tử đỉnh nếu tồn tại = a[size-1]
 ```
 
-Mọi thao tác phải giữ **bất biến (invariant)** này. `pop` không nhất thiết phải xóa các byte vật lý; về logic chỉ cần giảm `size`. Tuy nhiên, nếu cấu trúc giữ tham chiếu tới object trong ngôn ngữ có GC, xóa tham chiếu ở ô cũ đôi khi giúp object trở thành không còn truy cập được sớm hơn.
+Mọi thao tác phải giữ **bất biến (invariant / 불변식)** này. `pop` không nhất thiết phải xóa các byte vật lý; về lô-gic (logic / 논리) chỉ cần giảm `size`. Tuy nhiên, nếu cấu trúc giữ tham chiếu tới đối tượng (object / 객체) trong ngôn ngữ có GC, xóa tham chiếu ở ô cũ đôi khi giúp đối tượng (object / 객체) trở thành không còn truy cập được sớm hơn.
 
 ## 4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất
 
@@ -88,7 +91,7 @@ function validBrackets(s) {
 }
 ```
 
-**Mô hình tư duy (mental model):** ngăn xếp lưu các **nghĩa vụ đang mở (open obligations)**. Dấu đóng mới phải giải quyết nghĩa vụ được tạo gần nhất trước.
+**mô hình tư duy (mental model / 사고 모델):** ngăn xếp lưu các **nghĩa vụ đang mở (open obligations)**. Dấu đóng mới phải giải quyết nghĩa vụ được tạo gần nhất trước.
 
 ## 5. Ngăn xếp lời gọi và đệ quy
 
@@ -100,7 +103,7 @@ khung B
 khung C <- đỉnh
 ```
 
-C phải trả về trước B, B phải trả về trước A. Mỗi **khung lời gọi (stack frame)** lưu địa chỉ quay về, tham số, trạng thái cục bộ và metadata của runtime. Đệ quy (recursion) tự nhiên vì runtime đã cung cấp ngăn xếp. Nếu độ sâu phụ thuộc dữ liệu đầu vào và có thể rất lớn, dùng ngăn xếp tường minh (explicit stack) thường an toàn hơn.
+C phải trả về trước B, B phải trả về trước A. Mỗi **khung lời gọi (stack frame)** lưu địa chỉ quay về, tham số, trạng thái cục bộ và siêu dữ liệu (metadata / 메타데이터) của thời gian chạy (runtime / 런타임). Đệ quy (recursion) tự nhiên vì thời gian chạy (runtime / 런타임) đã cung cấp ngăn xếp. Nếu độ sâu phụ thuộc dữ liệu đầu vào và có thể rất lớn, dùng ngăn xếp tường minh (explicit stack) thường an toàn hơn.
 
 ## 6. Chuyển đệ quy thành ngăn xếp tường minh
 
@@ -129,7 +132,7 @@ while (!st.isEmpty()) {
 }
 ```
 
-Để mô phỏng **hậu thứ tự (postorder)** chính xác, một mục trong ngăn xếp thường phải giữ thêm giai đoạn hoặc chỉ số đang xử lý. Đệ quy không chỉ là “ngăn xếp chứa node”; mỗi khung còn giữ vị trí cần tiếp tục sau khi lời gọi con kết thúc.
+Để mô phỏng **hậu thứ tự (postorder)** chính xác, một mục trong ngăn xếp thường phải giữ thêm giai đoạn hoặc chỉ số đang xử lý. Đệ quy không chỉ là “ngăn xếp chứa nút (node / 노드)”; mỗi khung còn giữ vị trí cần tiếp tục sau khi lời gọi con kết thúc.
 
 ## 7. Trạng thái tiếp tục (continuation state)
 
@@ -183,9 +186,9 @@ Mỗi chỉ số được `push` đúng một lần và bị `pop` tối đa m�
 
 Ngăn xếp tăng dần giữ các cột mà biên phải cuối cùng chưa được xác định. Khi gặp một cột thấp hơn, các cột cao hơn ở đỉnh biết rằng vị trí hiện tại là phần tử thấp hơn đầu tiên bên phải. Phần tử còn lại sau khi `pop` giúp xác định biên phía trái. Ngăn xếp ở đây lưu **các ứng viên chưa biết biên cuối cùng**.
 
-## 15. Min Stack và trạng thái bổ sung
+## 15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung
 
-Muốn `getMin()` chạy `O(1)`, có thể lưu thêm ngăn xếp giá trị nhỏ nhất. Ta đổi thêm bộ nhớ để duy trì thông tin tổng hợp tăng dần (incremental aggregate), nhờ đó truy vấn rẻ hơn. Một biến thể khác lưu `(value, minSoFar)` ở mỗi mục; thao tác đơn giản hơn nhưng metadata bị lặp nhiều hơn.
+Muốn `getMin()` chạy `O(1)`, có thể lưu thêm ngăn xếp giá trị nhỏ nhất. Ta đổi thêm bộ nhớ để duy trì thông tin tổng hợp tăng dần (incremental aggregate), nhờ đó truy vấn rẻ hơn. Một biến thể khác lưu `(value, minSoFar)` ở mỗi mục; thao tác đơn giản hơn nhưng siêu dữ liệu (metadata / 메타데이터) bị lặp nhiều hơn.
 
 ## 16. Xây hàng đợi bằng hai ngăn xếp
 
@@ -193,23 +196,23 @@ Muốn `getMin()` chạy `O(1)`, có thể lưu thêm ngăn xếp giá trị nh�
 
 ## 17. Ngăn xếp bền vững
 
-Danh sách liên kết đơn bất biến (immutable singly linked list) tạo **tính bền vững phiên bản (persistence)** tự nhiên. `push` tạo node mới trỏ tới phiên bản cũ; `pop` trả về phần đuôi cũ. Các phiên bản chia sẻ cấu trúc (structural sharing) thay vì sao chép toàn bộ.
+Danh sách liên kết đơn bất biến (immutable singly linked list) tạo **tính bền vững phiên bản (persistence)** tự nhiên. `push` tạo nút (node / 노드) mới trỏ tới phiên bản cũ; `pop` trả về phần đuôi cũ. Các phiên bản chia sẻ cấu trúc (structural sharing) thay vì sao chép toàn bộ.
 
 ## 18. Tràn ngăn xếp và độ sâu đệ quy
 
-Độ sâu đệ quy tối đa phụ thuộc kích thước stack của runtime, kích thước mỗi khung, compiler/JIT, biến cục bộ và công cụ gỡ lỗi. Nếu dữ liệu có thể tạo độ sâu `O(n)`, phiên bản lặp thường đáng cân nhắc dù phiên bản đệ quy dễ đọc hơn.
+Độ sâu đệ quy tối đa phụ thuộc kích thước ngăn xếp (stack / 스택) của thời gian chạy (runtime / 런타임), kích thước mỗi khung, trình biên dịch (compiler / 컴파일러)/JIT, biến cục bộ và công cụ gỡ lỗi. Nếu dữ liệu có thể tạo độ sâu `O(n)`, phiên bản lặp thường đáng cân nhắc dù phiên bản đệ quy dễ đọc hơn.
 
 ## 19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số
 
-Một số ngôn ngữ hoặc compiler tối ưu **lời gọi đuôi (tail-call optimization)** trong những điều kiện nhất định. Java không đảm bảo loại bỏ lời gọi đuôi như một hợp đồng ngữ nghĩa. Vì vậy không nên kết luận rằng đệ quy đuôi luôn dùng bộ nhớ `O(1)` nếu runtime không đảm bảo.
+Một số ngôn ngữ hoặc trình biên dịch (compiler / 컴파일러) tối ưu **lời gọi đuôi (tail-call optimization)** trong những điều kiện nhất định. Java không đảm bảo loại bỏ lời gọi đuôi như một hợp đồng ngữ nghĩa. Vì vậy không nên kết luận rằng đệ quy đuôi luôn dùng bộ nhớ `O(1)` nếu thời gian chạy (runtime / 런타임) không đảm bảo.
 
-## 20. Bộ nhớ stack và vòng đời object cục bộ
+## 20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ
 
-Trong C, vòng đời object cấp phát trên stack kết thúc khi scope hoặc khung lời gọi kết thúc. Trả con trỏ tới biến cục bộ tạo con trỏ treo (dangling pointer). **Stack ADT** và **call stack của runtime** là hai khái niệm khác nhau dù cùng mang tính LIFO; một Stack ADT hoàn toàn có thể dùng heap.
+Trong C, vòng đời đối tượng (object / 객체) cấp phát trên ngăn xếp (stack / 스택) kết thúc khi phạm vi (scope / 범위) hoặc khung lời gọi kết thúc. Trả con trỏ tới biến cục bộ tạo con trỏ treo (dangling pointer). **ngăn xếp (stack / 스택) ADT** và **ngăn xếp lời gọi (call stack / 호출 스택) của thời gian chạy (runtime / 런타임)** là hai khái niệm khác nhau dù cùng mang tính LIFO; một ngăn xếp (stack / 스택) ADT hoàn toàn có thể dùng vùng nhớ động (heap / 힙).
 
-## 21. Treiber Stack không khóa
+## 21. Treiber ngăn xếp (stack / 스택) không khóa
 
-Treiber Stack là ngăn xếp đồng thời dùng thao tác nguyên tử **so sánh và hoán đổi (CAS — compare-and-swap)** trên `head`. Phần khó nằm ở thu hồi bộ nhớ và **vấn đề ABA (ABA problem)**. Hazard pointer, epoch hoặc con trỏ gắn phiên bản có thể cần thiết. Tính đúng trong môi trường đồng thời không thể suy trực tiếp từ bất biến LIFO tuần tự.
+Treiber ngăn xếp (stack / 스택) là ngăn xếp đồng thời dùng thao tác nguyên tử **so sánh và hoán đổi (CAS — compare-and-swap)** trên `head`. Phần khó nằm ở thu hồi bộ nhớ và **vấn đề ABA (ABA problem)**. Hazard pointer, epoch hoặc con trỏ gắn phiên bản có thể cần thiết. Tính đúng trong môi trường đồng thời không thể suy trực tiếp từ bất biến LIFO tuần tự.
 
 ## 22. Ngăn xếp giới hạn dung lượng
 
@@ -217,7 +220,7 @@ Nếu biết trước độ sâu tối đa, ngăn xếp có dung lượng cố �
 
 ## 23. Ngữ nghĩa lỗi và underflow
 
-`pop` trên ngăn xếp rỗng là **underflow**. API có thể ném ngoại lệ, trả `Optional/null`, trả `boolean` kèm tham số đầu ra hoặc dùng assertion nếu đây là lỗi lập trình nội bộ. Lựa chọn phụ thuộc tầng abstraction và hợp đồng API.
+`pop` trên ngăn xếp rỗng là **underflow**. API có thể ném ngoại lệ, trả `Optional/null`, trả `boolean` kèm tham số đầu ra hoặc dùng assertion nếu đây là lỗi lập trình nội bộ. Lựa chọn phụ thuộc tầng lớp trừu tượng (abstraction / 추상화) và hợp đồng API.
 
 ## 24. Kiểm thử ngăn xếp
 
@@ -238,3 +241,5 @@ Nếu có, ngăn xếp thường là mô hình tự nhiên.
 > Ngăn xếp là **bộ nhớ của những trạng thái tiếp tục hoặc nghĩa vụ chưa hoàn tất**, với quy tắc phần mới nhất được xử lý trước.
 
 Từ ghép dấu ngoặc, đệ quy, parser, ngăn xếp đơn điệu đến undo, cùng một nguyên lý LIFO xuất hiện dưới nhiều hình thức. Ngăn xếp không chỉ giữ dữ liệu; nó còn giữ **trạng thái cần thiết để tiếp tục quá trình tính toán (computation)**.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 arrays and dynamic arrays](./00_arrays_and_dynamic_arrays.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

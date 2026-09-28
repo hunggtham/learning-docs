@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **프로젝트 일정 관리 (Project Schedule Management)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** và nối nó với **프로젝트 일정 관리 (Project Schedule Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -36,14 +38,14 @@
   - 개발 비용 = 노력(인월) × 단위 비용
   - 개발 기간 = 노력(인월) / 투입 인원
   - 생산성 = LOC / 노력(인월)
-- **Tiếng Việt:** Ước tính dựa trên số dòng code. Tính toán Nỗ lực (Person-Month) = Số dòng code / Số dòng code 1 người viết trong 1 tháng.
+- **Tiếng Việt:** Ước tính dựa trên số dòng mã (code / 코드). Tính toán Nỗ lực (Person-Month) = Số dòng mã (code / 코드) / Số dòng mã (code / 코드) 1 người viết trong 1 tháng.
 
 #### 수학적 산정 기법 (Mathematical Models)
 - **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
 - **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
 - **Tiếng Việt:**
-  - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
+  - COCOMO: Dựa vào số dòng mã (code / 코드) (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
   - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
   - FP (Function Point): Dựa trên tính năng.
 
@@ -53,7 +55,7 @@
 - **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
 - **Tiếng Việt:**
   - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
-  - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
+  - đường găng (critical path / 임계 경로): Đường dài nhất trong sơ đồ mạng.
   - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.
 
 ### 3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)

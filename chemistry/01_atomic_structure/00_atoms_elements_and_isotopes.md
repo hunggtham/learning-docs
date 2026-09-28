@@ -1,5 +1,8 @@
 # Nguyên tử, nguyên tố và đồng vị
 
+> **Mạch đọc:** Đọc **Nguyên tử, nguyên tố và đồng vị** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ ý tưởng “nguyên tử” đến mô hình hiện đại** sang **Proton quyết định bản sắc nguyên tố**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Các ký hiệu hóa học như `H`, `C`, `O` chỉ thực sự có ý nghĩa khi ta hiểu điều gì quyết định bản sắc của một nguyên tố. Câu trả lời nằm ở cấu trúc của **nguyên tử (atom / 원자)**.
 
 Một nguyên tử không phải là một hạt đặc và không thể chia nhỏ. Nó gồm một **hạt nhân (nucleus)** rất nhỏ nhưng chứa gần như toàn bộ khối lượng của nguyên tử, còn **đám mây electron (electron cloud)** chiếm phần lớn thể tích. Hạt nhân chứa proton và neutron; electron được mô tả bằng các quy luật của cơ học lượng tử (**quantum mechanics**).
@@ -211,3 +214,5 @@ Không tuyệt đối. Cấu trúc electron rất giống nhau, nhưng khác bi�
 Chương này mới mô tả các thành phần của nguyên tử. Câu hỏi lớn tiếp theo là: bằng chứng nào buộc khoa học từ bỏ bức tranh cổ điển và chấp nhận việc năng lượng bị lượng tử hóa?
 
 Xem tiếp: [Bức xạ điện từ và lượng tử hóa](./01_electromagnetic_radiation_and_quantization.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 electromagnetic radiation and quantization](./01_electromagnetic_radiation_and_quantization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

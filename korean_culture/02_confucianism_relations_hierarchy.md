@@ -1,10 +1,13 @@
-# Nho giáo, quan hệ và logic thứ bậc trong xã hội Hàn Quốc
+# Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc
+
+> **Mạch đọc:** Đặt **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ “thứ bậc” tới câu hỏi sâu hơn** sang **유교 không chỉ là “kính người lớn tuổi”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 ## Từ “thứ bậc” tới câu hỏi sâu hơn
 
 Người học văn hoá Hàn thường sớm nghe rằng xã hội Hàn “coi trọng tuổi tác và thứ bậc”. Mệnh đề này quan sát được nhiều tình huống nhưng chưa giải thích được bản chất. Câu hỏi đúng là: **tại sao tuổi, vai trò và vị trí lại trở thành thông tin quan trọng để quyết định cách nói và cách hành xử?**
 
-Một hệ thống xã hội phải giải quyết bài toán phối hợp: ai chịu trách nhiệm, ai được quyền quyết định, ai chăm sóc ai, nghĩa vụ đi theo hướng nào và xung đột được xử lý ra sao. **Nho giáo (유교 / Confucianism)** đưa ra một mô hình mà đơn vị đạo đức cơ bản không phải cá nhân cô lập, mà là con người nằm trong quan hệ: cha–con, vua–bề tôi, vợ–chồng, người lớn–người nhỏ, bạn bè. Phiên bản lịch sử của các quan hệ này có bất bình đẳng giới và địa vị rất rõ; xã hội hiện đại đã thay đổi mạnh, nhưng logic “vai trò tạo ra nghĩa vụ khác nhau” vẫn để lại dấu vết.
+Một hệ thống xã hội phải giải quyết bài toán phối hợp: ai chịu trách nhiệm, ai được quyền quyết định, ai chăm sóc ai, nghĩa vụ đi theo hướng nào và xung đột được xử lý ra sao. **Nho giáo (유교 / Confucianism)** đưa ra một mô hình mà đơn vị đạo đức cơ bản không phải cá nhân cô lập, mà là con người nằm trong quan hệ: cha–con, vua–bề tôi, vợ–chồng, người lớn–người nhỏ, bạn bè. Phiên bản lịch sử của các quan hệ này có bất bình đẳng giới và địa vị rất rõ; xã hội hiện đại đã thay đổi mạnh, nhưng lô-gic (logic / 논리) “vai trò tạo ra nghĩa vụ khác nhau” vẫn để lại dấu vết.
 
 ## 유교 không chỉ là “kính người lớn tuổi”
 
@@ -36,13 +39,13 @@ Trong nhiều xã hội, biết tuổi của người vừa gặp không quá c�
 
 Nhưng cần phân biệt **tuổi sinh học**, **tính lớn tuổi (연장자성 / seniority)**, **chức vụ (직급)**, **thâm niên (근속연수)**, **nhóm gia nhập (기수·학번 / cohort)** và **vai trò (역할)**. Một quản lý trẻ có quyền tổ chức cao hơn nhân viên lớn tuổi; hai trục thứ bậc giao nhau. Đây là lý do quan hệ công sở Hàn có thể phức tạp: không có một biến duy nhất quyết định cách giao tiếp.
 
-Có thể biểu diễn trực giác bằng một vector trạng thái:
+Có thể biểu diễn trực giác bằng một véc-tơ (vector / 벡터) trạng thái:
 
 ```text
 quan hệ = [tuổi, chức vụ, thâm niên, nhóm gia nhập, mức thân thiết, bối cảnh, quyền quyết định công việc]
 ```
 
-Cách nói phù hợp là hàm của toàn bộ vector, không phải chỉ tuổi. Liên hệ với học máy khá trực quan: nếu dự đoán hành vi bằng một đặc trưng duy nhất, mô hình sẽ quá đơn giản so với hiện thực xã hội.
+Cách nói phù hợp là hàm của toàn bộ véc-tơ (vector / 벡터), không phải chỉ tuổi. Liên hệ với học máy khá trực quan: nếu dự đoán hành vi bằng một đặc trưng duy nhất, mô hình sẽ quá đơn giản so với hiện thực xã hội.
 
 ## 선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội
 
@@ -52,7 +55,7 @@ Trong đại học, `학번` là năm/mã nhập học và có thể hoạt đ�
 
 Trong môi trường tốt, 선배 có thể truyền **tri thức ngầm (tacit knowledge)** — kiến thức khó ghi hết thành tài liệu — và giúp 후배 tránh lỗi. Trong môi trường xấu, quan hệ này có thể biến thành áp lực phục tùng. Cùng một cấu trúc có thể tạo cố vấn hoặc lạm dụng tuỳ động lực và trách nhiệm giải trình.
 
-Điều này giống quá trình rà soát mã (code review) hoặc học nghề. Thâm niên hữu ích khi nó phản ánh kinh nghiệm tích luỹ; nó trở thành vấn đề khi thâm niên được dùng thay cho bằng chứng.
+Điều này giống quá trình rà soát mã (code review / 코드 리뷰) hoặc học nghề. Thâm niên hữu ích khi nó phản ánh kinh nghiệm tích luỹ; nó trở thành vấn đề khi thâm niên được dùng thay cho bằng chứng.
 
 ## Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)
 
@@ -249,7 +252,7 @@ Khi quan sát gia đình, trường học hoặc công sở, có thể hỏi:
 
 Một hệ thống có thứ bậc không tự động xấu. Vấn đề nằm ở việc quyền có đi cùng trách nhiệm, thông tin có đi tới người quyết định và người bị ảnh hưởng có kênh phản hồi hay không.
 
-## Mô hình tư duy (mental model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Đừng chỉ ghi nhớ “Hàn Quốc coi trọng thứ bậc”. Hãy ghi nhớ rằng nhiều môi trường Hàn Quốc truyền thống dùng **quan hệ** như cơ chế phân phối nghĩa vụ, sự công nhận và quyền. Tuổi, chức vụ, thâm niên, nhóm gia nhập và mức thân thiết là siêu dữ liệu giúp mọi người xác định giao thức. Xã hội hiện đại đang giữ lại một phần siêu dữ liệu này nhưng tranh luận mạnh hơn về việc nó có nên quyết định quyền lực hay không. Khi phân tích sâu hơn, phải tách quyền chính thức, chuyên môn, thông tin, tài nguyên và tính chính danh thay vì giả định tất cả cùng nằm ở một người.
 
@@ -268,3 +271,5 @@ Một hệ thống có thứ bậc không tự động xấu. Vấn đề nằm 
 “Bỏ chức danh là tổ chức đã phẳng” là sai nếu quyền quyết định, đánh giá và ngân sách vẫn tập trung như cũ.
 
 “Người làm lâu năm luôn biết đúng hơn” là sai trong môi trường nơi tri thức thay đổi nhanh; thâm niên là một tín hiệu, không phải bằng chứng cuối cùng về năng lực hiện tại.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (common misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,7 @@
 # Quy ước tên riêng Việt–Hàn–Anh
 
+> **Mạch đọc:** Đặt **Quy ước tên riêng Việt–Hàn–Anh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bảng tra nhanh** sang **mô hình tư duy (mental model / 사고 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 Tên người, địa điểm, triều đại, sự kiện, văn bản, công trình và thiết chế quan trọng được ghi lần đầu theo mẫu:
 
 > **Tên tiếng Việt (한국어 원문 / English name)**
@@ -8,7 +10,7 @@ Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**. Tên có cá
 
 Tên hiện đại mà Hán–Việt gây khó nhận diện giữ romanization, như **Seoul (서울 / Seoul)**, **Gwangju (광주 / Gwangju)** và **Park Chung-hee (박정희 / Park Chung-hee)**. Romanization ưu tiên Revised Romanization, trừ conventional English names đã phổ biến. Mục tiêu không phải Hán–Việt hoá mọi tên Hàn Quốc, mà giúp người đọc nhận ra ba cách gọi đang trỏ tới cùng một người, nơi chốn hoặc khái niệm.
 
-Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu không gây mơ hồ. Tên file vẫn giữ English/romanization để URL, Git và cross-link ổn định.
+Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu không gây mơ hồ. Tên tệp (file / 파일) vẫn giữ English/romanization để URL, Git và cross-link ổn định.
 
 ## Bảng tra nhanh
 
@@ -55,6 +57,11 @@ Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn 
 | Đấu tranh Dân chủ Tháng Sáu | 6월 민주항쟁 | June Democratic Struggle |
 | Làn sóng Hàn Quốc | 한류 | Hallyu / Korean Wave |
 
-## Mental Model
 
-Ba dạng tên là ba key trỏ tới cùng một node trong knowledge graph: tiếng Việt giúp hiểu và nhớ, Hangul giúp nhận diện trong môi trường Hàn Quốc, English giúp tra cứu tài liệu quốc tế.
+> **Chuyển mạch:** Từ **Bảng tra nhanh**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+Ba dạng tên là ba key trỏ tới cùng một nút (node / 노드) trong kiến thức (knowledge / 지식) đồ thị (graph / 그래프): tiếng Việt giúp hiểu và nhớ, Hangul giúp nhận diện trong môi trường Hàn Quốc, English giúp tra cứu tài liệu quốc tế.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

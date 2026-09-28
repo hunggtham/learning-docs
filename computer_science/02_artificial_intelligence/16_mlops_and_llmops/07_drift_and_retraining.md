@@ -1,8 +1,11 @@
 # Drift, Thay đổi Phân phối và Huấn luyện lại
 
-Một mô hình được huấn luyện trên phân phối lịch sử nhưng thế giới production luôn thay đổi. **Độ trôi (drift / 드리프트)** mô tả sự thay đổi của quá trình tạo dữ liệu hoặc mối quan hệ giữa đầu vào và mục tiêu theo thời gian. Drift quan trọng vì chất lượng mô hình phụ thuộc vào các giả định về phân phối.
+> **Mạch đọc:** Đặt **Drift, Thay đổi Phân phối và Huấn luyện lại** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **dữ liệu (data / 데이터) Drift** sang **Label Shift hoặc Prior Shift**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Data Drift
+
+Một mô hình được huấn luyện trên phân phối lịch sử nhưng thế giới môi trường vận hành (production / 운영 환경) luôn thay đổi. **Độ trôi (drift / 드리프트)** mô tả sự thay đổi của quá trình tạo dữ liệu hoặc mối quan hệ giữa đầu vào và mục tiêu theo thời gian. Drift quan trọng vì chất lượng mô hình phụ thuộc vào các giả định về phân phối.
+
+## Dữ liệu (data / 데이터) Drift
 
 Nếu:
 
@@ -14,7 +17,7 @@ thì phân phối đầu vào đã thay đổi.
 
 Ví dụ: tỷ lệ thiết bị, ngôn ngữ hoặc phân phối số tiền giao dịch của khách hàng thay đổi.
 
-Data drift không tự động nghĩa dự đoán đã sai. Mô hình có thể vẫn khái quát hóa tốt.
+Dữ liệu (data / 데이터) drift không tự động nghĩa dự đoán đã sai. Mô hình có thể vẫn khái quát hóa tốt.
 
 ## Label Shift hoặc Prior Shift
 
@@ -36,9 +39,9 @@ Mối quan hệ giữa đầu vào và mục tiêu thay đổi:
 P_{train}(Y|X)\neq P_{prod}(Y|X)
 \]
 
-Đây thường là dạng nguy hiểm nhất: pattern từng có tính dự đoán không còn đúng.
+Đây thường là dạng nguy hiểm nhất: mẫu (pattern / 패턴) từng có tính dự đoán không còn đúng.
 
-Ví dụ kẻ gian thay đổi hành vi sau khi biết rule hoặc model.
+Ví dụ kẻ gian thay đổi hành vi sau khi biết quy tắc (rule / 규칙) hoặc mô hình (model / 모델).
 
 ## Covariate Shift
 
@@ -56,8 +59,8 @@ Giám sát cần mốc tham chiếu phù hợp, ví dụ so sánh cùng thứ tr
 
 Có thể dùng:
 
-- Population Stability Index;
-- KS test;
+- Population Stability chỉ mục (index / 인덱스);
+- KS kiểm thử (test / 테스트);
 - Jensen–Shannon divergence;
 - histogram theo đặc trưng;
 - giám sát phân phối embedding;
@@ -67,11 +70,11 @@ Nhưng ý nghĩa thống kê không đồng nghĩa ý nghĩa kinh doanh, đặc 
 
 ## Prediction Drift
 
-Theo dõi phân phối của score hoặc output. Nếu xác suất dự đoán đột ngột thay đổi, nguyên nhân có thể là input shift, thay đổi model/config hoặc lỗi downstream.
+Theo dõi phân phối của score hoặc đầu ra (output / 출력). Nếu xác suất dự đoán đột ngột thay đổi, nguyên nhân có thể là đầu vào (input / 입력) shift, thay đổi mô hình (model / 모델)/cấu hình (config / 설정) hoặc lỗi downstream.
 
 Prediction drift là triệu chứng, không phải nguyên nhân gốc.
 
-## Performance Drift
+## Hiệu năng (performance / 성능) Drift
 
 Khi ground truth đến sau, có thể theo dõi trực tiếp:
 
@@ -82,13 +85,13 @@ hàm mất mát có tính tới chi phí
 kết quả kinh doanh
 ```
 
-Đây là bằng chứng mạnh hơn chỉ nhìn input drift.
+Đây là bằng chứng mạnh hơn chỉ nhìn đầu vào (input / 입력) drift.
 
 ## Nhãn đến trễ
 
-Kết quả gian lận có thể chỉ biết sau nhiều tuần hoặc tháng. Vì vậy hệ thống cần join dự đoán với nhãn đến trễ bằng prediction ID và timestamp bất biến.
+Kết quả gian lận có thể chỉ biết sau nhiều tuần hoặc tháng. Vì vậy hệ thống cần phép nối (join / 조인) dự đoán với nhãn đến trễ bằng prediction ID và timestamp bất biến.
 
-Nếu không lưu context và phiên bản tại thời điểm dự đoán, đánh giá hồi cứu sẽ rất khó.
+Nếu không lưu ngữ cảnh (context / 맥락) và phiên bản tại thời điểm dự đoán, đánh giá hồi cứu sẽ rất khó.
 
 ## Trigger cho Huấn luyện lại
 
@@ -98,13 +101,13 @@ Huấn luyện lại có thể được kích hoạt bởi:
 - đủ dữ liệu có nhãn mới;
 - suy giảm hiệu năng;
 - nguồn dữ liệu thay đổi lớn;
-- policy hoặc business rule thay đổi.
+- chính sách (policy / 정책) hoặc nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) thay đổi.
 
 Một ngưỡng drift đơn lẻ hiếm khi nên kích hoạt tự động việc thăng cấp mô hình mới.
 
 ## Cửa sổ Huấn luyện lại
 
-Nên huấn luyện trên toàn bộ lịch sử hay chỉ cửa sổ gần đây? Toàn bộ lịch sử ổn định hơn nhưng chứa pattern cũ; cửa sổ gần đây thích nghi nhanh hơn nhưng phương sai cao và dễ quên trường hợp hiếm.
+Nên huấn luyện trên toàn bộ lịch sử hay chỉ cửa sổ gần đây? Toàn bộ lịch sử ổn định hơn nhưng chứa mẫu (pattern / 패턴) cũ; cửa sổ gần đây thích nghi nhanh hơn nhưng phương sai cao và dễ quên trường hợp hiếm.
 
 Có thể dùng lịch sử có trọng số hoặc phát lại dữ liệu phân tầng (stratified replay).
 
@@ -132,7 +135,7 @@ phân phối truy vấn người dùng thay đổi
 hành vi API của tool thay đổi
 ```
 
-Không phải trường hợp nào cũng cần huấn luyện lại mô hình; nhiều khi rollback cấu hình hoặc index mới là phản ứng đúng.
+Không phải trường hợp nào cũng cần huấn luyện lại mô hình; nhiều khi quay lui (rollback / 롤백) cấu hình hoặc chỉ mục (index / 인덱스) mới là phản ứng đúng.
 
 ## Recalibration và Huấn luyện lại
 
@@ -140,13 +143,13 @@ Nếu khả năng xếp hạng hoặc phân biệt vẫn tốt nhưng xác suấ
 
 ## Champion–Challenger sau Huấn luyện lại
 
-Mô hình được huấn luyện lại trở thành challenger. Nên so với champion trên bộ đánh giá cố định, bộ đánh giá gần đây và production shadow trước khi thăng cấp.
+Mô hình được huấn luyện lại trở thành challenger. Nên so với champion trên bộ đánh giá cố định, bộ đánh giá gần đây và môi trường vận hành (production / 운영 환경) shadow trước khi thăng cấp.
 
 ## Ngừng sử dụng Mô hình
 
-Vòng đời không chỉ có huấn luyện lại. Một mô hình có thể được retire khi use case không còn, nguồn dữ liệu bị ngừng hoặc có giải pháp thay thế tốt hơn.
+Vòng đời không chỉ có huấn luyện lại. Một mô hình có thể được retire khi use trường hợp (case / 사례) không còn, nguồn dữ liệu bị ngừng hoặc có giải pháp thay thế tốt hơn.
 
-Artifact đã lưu trữ vẫn cần chính sách retention phù hợp với governance.
+Sản phẩm tạo ra (artifact / 산출물) đã lưu trữ vẫn cần chính sách retention phù hợp với quản trị (governance / 거버넌스).
 
 ## Mô hình tư duy
 
@@ -167,8 +170,10 @@ Không. Dữ liệu mới có thể nhiễu hoặc thiên lệch, và huấn luy
 
 ### “Drift chỉ là vấn đề của tabular ML”
 
-Không. LLM, RAG và Agent cũng drift qua người dùng, corpus, tool và phiên bản mô hình.
+Không. LLM, RAG và tác nhân (agent / 에이전트) cũng drift qua người dùng, corpus, công cụ (tool / 도구) và phiên bản mô hình.
 
 ## Liên kết kiến thức
 
 Xem [Monitoring](./06_monitoring_and_observability.md), [Continuous Training](./04_ci_cd_ct_for_ai.md), [Dataset Bias](../14_data_for_ai/06_dataset_bias.md) và [Evaluation](../18_evaluation_reliability_interpretability/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

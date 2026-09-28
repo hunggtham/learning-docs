@@ -1,5 +1,7 @@
 # Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất
 
+> **Mạch đọc:** Đọc **Mol và hằng số Avogadro — cầu nối giữa hạt vi mô và lượng vật chất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao Hóa học cần mol?** sang **Lượng chất là một đại lượng vật lý riêng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Mol (mole / 몰)** là đơn vị SI của **lượng chất (amount of substance / 물질량)**. Một mol chứa chính xác \(N_A=6.02214076\times10^{23}\) thực thể được chỉ định. **Hằng số Avogadro (Avogadro constant / 아보가드로 상수)** là hệ số chuyển đổi giữa số thực thể vi mô và lượng chất ở thang vĩ mô.
 
 Nếu chỉ nhớ “1 mol = \(6.022\times10^{23}\) hạt” thì rất dễ biến mol thành một con số phải học thuộc. Cách hiểu hữu ích hơn là: **mol là đơn vị đếm dành cho một thế giới có quá nhiều hạt để đếm từng hạt**, tương tự “một tá” nhưng được chọn ở quy mô nguyên tử–phân tử.
@@ -174,7 +176,7 @@ nên lượng nước lý thuyết là:
 3.0\;mol\;O_2\times\frac{2\;mol\;H_2O}{1\;mol\;O_2}=6.0\;mol\;H_2O
 \]
 
-Đây chính là logic của **hóa lượng (stoichiometry / 화학량론)**: chuyển mọi đại lượng về mol, dùng tỉ lệ phản ứng, rồi chuyển mol sản phẩm sang đại lượng cần tìm.
+Đây chính là lô-gic (logic / 논리) của **hóa lượng (stoichiometry / 화학량론)**: chuyển mọi đại lượng về mol, dùng tỉ lệ phản ứng, rồi chuyển mol sản phẩm sang đại lượng cần tìm.
 
 ## Mol và dung dịch
 
@@ -196,7 +198,7 @@ Ví dụ 25.00 mL dung dịch NaOH 0.1000 mol/L chứa:
 n=0.1000\times0.02500=2.500\times10^{-3}\;mol
 \]
 
-Logic này là nền tảng của chuẩn độ, cân bằng acid–base và hầu hết phép pha dung dịch định lượng.
+Lô-gic (logic / 논리) này là nền tảng của chuẩn độ, cân bằng acid–cơ sở (base / 기반) và hầu hết phép pha dung dịch định lượng.
 
 ## Mol và khí
 
@@ -353,3 +355,5 @@ hạt ↔ mol ↔ khối lượng
 Khi gặp một bài toán định lượng, câu hỏi tốt đầu tiên thường là: **đại lượng mình đang có có thể được chuyển sang mol bằng quan hệ vật lý nào?** Sau đó mới dùng tỉ lệ hóa học để đi tới đại lượng cần tìm.
 
 Xem tiếp: [Công thức hóa học](./01_chemical_formulas.md), sau đó [Hóa lượng](./03_stoichiometry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 chemical formulas](./01_chemical_formulas.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

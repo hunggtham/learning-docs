@@ -1,10 +1,13 @@
-# Python Part 1 — Beginner: Execution, object model, dữ liệu và hàm
+# Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm
+
+> **Mạch đọc:** Đặt **Python Part 1 — Beginner: thực thi (execution / 실행), mô hình đối tượng (object model / 객체 모델), dữ liệu và hàm** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)** sang **if name == "main"**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 
-Python dễ bắt đầu vì cú pháp ngắn, nhưng chính sự ngắn gọn đó làm nhiều người hình thành mental model sai: tưởng biến là một chiếc hộp chứa dữ liệu, tưởng `=` sao chép object, tưởng `is` và `==` gần giống nhau, hoặc tưởng truyền list vào function là “pass by reference”. Part này xây mental model trước, rồi mới đặt syntax lên trên mental model đó.
+Python dễ bắt đầu vì cú pháp ngắn, nhưng chính sự ngắn gọn đó làm nhiều người hình thành mô hình tư duy (mental model / 사고 모델) sai: tưởng biến là một chiếc hộp chứa dữ liệu, tưởng `=` sao chép đối tượng (object / 객체), tưởng `is` và `==` gần giống nhau, hoặc tưởng truyền danh sách (list / 목록) vào hàm (function / 함수) là “pass by tham chiếu (reference / 참조)”. Part này xây mô hình tư duy (mental model / 사고 모델) trước, rồi mới đặt cú pháp (syntax / 문법) lên trên mô hình tư duy (mental model / 사고 모델) đó.
 
-## 1. Từ source code đến execution
+## 1. Từ mã nguồn (source code / 소스 코드) đến thực thi (execution / 실행)
 
 `mã nguồn (source code / 소스 코드)`
 
@@ -12,7 +15,7 @@ Python dễ bắt đầu vì cú pháp ngắn, nhưng chính sự ngắn gọn �
 
 `đối tượng (object / 객체)`
 
-Khi chạy `python app.py`, Python không xử lý file như một danh sách câu lệnh hoàn toàn rời rạc. Source được tokenize, parse thành cấu trúc cú pháp, compile thành code object/bytecode phù hợp với implementation, sau đó runtime thực thi. Với CPython, bytecode chạy trên evaluation loop của CPython. Đây là lý do một lỗi syntax có thể xảy ra trước khi một dòng cụ thể được “chạy”, còn một lỗi như `ZeroDivisionError` chỉ xuất hiện khi control flow thực sự đi tới operation đó.
+Khi chạy `python app.py`, Python không xử lý tệp (file / 파일) như một danh sách câu lệnh hoàn toàn rời rạc. nguồn (source / 소스) được tokenize, parse thành cấu trúc cú pháp, compile thành mã (code / 코드) đối tượng (object / 객체)/bytecode phù hợp với hiện thực (implementation / 구현), sau đó thời gian chạy (runtime / 런타임) thực thi. Với CPython, bytecode chạy trên evaluation vòng lặp (loop / 루프) của CPython. Đây là lý do một lỗi cú pháp (syntax / 문법) có thể xảy ra trước khi một dòng cụ thể được “chạy”, còn một lỗi như `ZeroDivisionError` chỉ xuất hiện khi điều khiển (control / 제어) luồng (flow / 흐름) thực sự đi tới thao tác (operation / 연산) đó.
 
 ```python
 print("before")
@@ -21,13 +24,13 @@ if False:
 print("after")
 ```
 
-Đoạn trên parse hợp lệ. `1 / 0` không thực thi vì branch không được chọn nên không có `ZeroDivisionError`. Ngược lại, thiếu dấu `:` sau `if False` là lỗi syntax và module không thể được compile bình thường.
+Đoạn trên parse hợp lệ. `1 / 0` không thực thi vì branch không được chọn nên không có `ZeroDivisionError`. Ngược lại, thiếu dấu `:` sau `if False` là lỗi cú pháp (syntax / 문법) và mô-đun (module / 모듈) không thể được compile bình thường.
 
-Python module cũng là một unit thực thi. Khi một module được import lần đầu trong một process, top-level code của module thường được thực thi để tạo namespace của module. Điều này có hệ quả production rất lớn: không nên đặt network call, query database hoặc thao tác filesystem nặng ở top level nếu không thật sự muốn chúng chạy trong thời điểm import. Import không chỉ là “copy function vào file hiện tại”; nó là một cơ chế load, cache và bind module object.
+Python mô-đun (module / 모듈) cũng là một đơn vị (unit / 단위) thực thi. Khi một mô-đun (module / 모듈) được import lần đầu trong một tiến trình (process / 프로세스), top-level mã (code / 코드) của mô-đun (module / 모듈) thường được thực thi để tạo không gian tên (namespace / 네임스페이스) của mô-đun (module / 모듈). Điều này có hệ quả môi trường vận hành (production / 운영 환경) rất lớn: không nên đặt mạng (network / 네트워크) lời gọi (call / 호출), truy vấn (query / 쿼리) cơ sở dữ liệu (database / 데이터베이스) hoặc thao tác filesystem nặng ở top mức (level / 수준) nếu không thật sự muốn chúng chạy trong thời điểm import. Import không chỉ là “bản sao (copy / 복사) hàm (function / 함수) vào tệp (file / 파일) hiện tại”; nó là một cơ chế tải (load / 로드), bộ nhớ đệm (cache / 캐시) và bind mô-đun (module / 모듈) đối tượng (object / 객체).
 
 ### `if __name__ == "__main__"`
 
-Khi một file được chạy như entry point, namespace của nó có `__name__ == "__main__"`. Khi cùng file được import, `__name__` là tên module. Vì vậy pattern sau tách definition khỏi hành động chạy chương trình:
+Khi một tệp (file / 파일) được chạy như entry điểm (point / 지점), không gian tên (namespace / 네임스페이스) của nó có `__name__ == "__main__"`. Khi cùng tệp (file / 파일) được import, `__name__` là tên mô-đun (module / 모듈). Vì vậy mẫu (pattern / 패턴) sau tách definition khỏi hành động chạy chương trình:
 
 ```python
 def main() -> None:
@@ -37,9 +40,9 @@ if __name__ == "__main__":
     main()
 ```
 
-Điểm quan trọng không phải thuộc lòng câu `if`; nó là boundary giữa “module có thể tái sử dụng” và “entry point có side effect”.
+Điểm quan trọng không phải thuộc lòng câu `if`; nó là ranh giới (boundary / 경계) giữa “mô-đun (module / 모듈) có thể tái sử dụng” và “entry điểm (point / 지점) có side tác động (effect / 효과)”.
 
-## 2. Biến không phải hộp: name binding và reference semantics
+## 2. Biến không phải hộp: name binding và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)
 
 `ràng buộc tên (name binding / 이름 바인딩)`
 
@@ -47,7 +50,7 @@ if __name__ == "__main__":
 
 `định danh đối tượng (object identity / 객체 식별성)`
 
-Trong Python, statement `x = value` bind tên `x` tới một object. Cách nghĩ hữu ích nhất là name → object, không phải name chứa object.
+Trong Python, statement `x = value` bind tên `x` tới một đối tượng (object / 객체). Cách nghĩ hữu ích nhất là name → đối tượng (object / 객체), không phải name chứa đối tượng (object / 객체).
 
 ```python
 a = [10, 20]
@@ -56,9 +59,9 @@ b.append(30)
 print(a)  # [10, 20, 30]
 ```
 
-Không có list thứ hai được tạo tại `b = a`. Cả `a` và `b` đều bind tới cùng list object. `append()` mutate object đó, nên quan sát qua tên nào cũng thấy state mới.
+Không có danh sách (list / 목록) thứ hai được tạo tại `b = a`. Cả `a` và `b` đều bind tới cùng danh sách (list / 목록) đối tượng (object / 객체). `append()` mutate đối tượng (object / 객체) đó, nên quan sát qua tên nào cũng thấy trạng thái (state / 상태) mới.
 
-Cơ chế này giải thích cách Python truyền argument. Python không cần chọn giữa slogan “pass by value” và “pass by reference” theo nghĩa của C/C++. Function nhận một binding mới tới cùng object đã được evaluate ở caller; đôi khi cách mô tả này được gọi là call by sharing.
+Cơ chế này giải thích cách Python truyền argument. Python không cần chọn giữa slogan “pass by giá trị (value / 값)” và “pass by tham chiếu (reference / 참조)” theo nghĩa của C/C++. hàm (function / 함수) nhận một binding mới tới cùng đối tượng (object / 객체) đã được evaluate ở caller; đôi khi cách mô tả này được gọi là lời gọi (call / 호출) by sharing.
 
 ```python
 def change(xs: list[int]) -> None:
@@ -70,13 +73,13 @@ change(values)
 print(values)         # [1, 2, 3]
 ```
 
-`append()` thay state của list chung. Dòng `xs = [99]` không làm caller variable `values` trỏ sang list mới vì nó chỉ thay local binding.
+`append()` thay trạng thái (state / 상태) của danh sách (list / 목록) chung. Dòng `xs = [99]` không làm caller variable `values` trỏ sang danh sách (list / 목록) mới vì nó chỉ thay cục bộ (local / 로컬) binding.
 
-Senior reasoning ở đây là phân biệt ba thao tác: tạo object, bind/rebind name và mutate object. Rất nhiều bug Python là do trộn ba thao tác này thành một ý niệm mơ hồ là “thay biến”.
+Cấp cao (senior / 시니어) lập luận (reasoning / 추론) ở đây là phân biệt ba thao tác: tạo đối tượng (object / 객체), bind/rebind name và mutate đối tượng (object / 객체). Rất nhiều bug Python là do trộn ba thao tác này thành một ý niệm mơ hồ là “thay biến”.
 
-### Ownership: ai được quyền mutate object?
+### Quyền sở hữu (ownership / 소유권): ai được quyền mutate đối tượng (object / 객체)?
 
-Reference semantics chỉ mô tả cơ chế; API design phải nói rõ quyền sở hữu trạng thái (state ownership / 상태 소유권). Hai function sau có contract rất khác dù cùng nhận `list`:
+Tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) chỉ mô tả cơ chế; API thiết kế (design / 설계) phải nói rõ quyền sở hữu trạng thái (state ownership / 상태 소유권). Hai hàm (function / 함수) sau có đặc tả hợp đồng (contract / 계약) rất khác dù cùng nhận `list`:
 
 ```python
 def normalize_in_place(names: list[str]) -> None:
@@ -88,9 +91,9 @@ def normalized(names: list[str]) -> list[str]:
     return [name.strip().lower() for name in names]
 ```
 
-Function đầu mutate object của caller và tên function nói rõ điều đó. Function thứ hai tạo list kết quả mới. Không có lựa chọn nào luôn tốt hơn; điều quan trọng là caller có dự đoán được side effect hay không. Ở production, bug thường không đến từ việc Python “share reference”, mà từ việc ownership không được định nghĩa nên hai component cùng nghĩ mình có quyền sửa cùng một object graph.
+Hàm (function / 함수) đầu mutate đối tượng (object / 객체) của caller và tên hàm (function / 함수) nói rõ điều đó. hàm (function / 함수) thứ hai tạo danh sách (list / 목록) kết quả mới. Không có lựa chọn nào luôn tốt hơn; điều quan trọng là caller có dự đoán được side tác động (effect / 효과) hay không. Ở môi trường vận hành (production / 운영 환경), bug thường không đến từ việc Python “share tham chiếu (reference / 참조)”, mà từ việc quyền sở hữu (ownership / 소유권) không được định nghĩa nên hai thành phần (component / 컴포넌트) cùng nghĩ mình có quyền sửa cùng một đối tượng (object / 객체) đồ thị (graph / 그래프).
 
-## 3. Identity, equality và hashability
+## 3. định danh (identity / 식별자), equality và hashability
 
 `đồng nhất đối tượng (identity / 동일성)`
 
@@ -98,7 +101,7 @@ Function đầu mutate object của caller và tên function nói rõ điều đ
 
 `khả năng băm (hashability / 해시 가능성)`
 
-Mỗi object có identity, type và value. `is` kiểm tra hai expression có trả về cùng object hay không. `==` gọi logic equality của type để hỏi hai value có được coi là bằng nhau hay không.
+Mỗi đối tượng (object / 객체) có định danh (identity / 식별자), kiểu (type / 타입) và giá trị (value / 값). `is` kiểm tra hai expression có trả về cùng đối tượng (object / 객체) hay không. `==` gọi lô-gic (logic / 논리) equality của kiểu (type / 타입) để hỏi hai giá trị (value / 값) có được coi là bằng nhau hay không.
 
 ```python
 x = [1, 2]
@@ -110,14 +113,14 @@ print(x is y)  # False: hai list object
 print(x is z)  # True: cùng object
 ```
 
-Đừng dùng `is` để so sánh số hoặc chuỗi chỉ vì đôi lúc test thấy đúng. CPython có thể reuse/intern một số object, nhưng đó không phải contract để viết business logic. Trường hợp canonical của `is` là singleton như `None`:
+Đừng dùng `is` để so sánh số hoặc chuỗi chỉ vì đôi lúc kiểm thử (test / 테스트) thấy đúng. CPython có thể reuse/intern một số đối tượng (object / 객체), nhưng đó không phải đặc tả hợp đồng (contract / 계약) để viết lô-gic nghiệp vụ (business logic / 비즈니스 로직). Trường hợp chuẩn gốc (canonical / 정본) của `is` là singleton như `None`:
 
 ```python
 if result is None:
     ...
 ```
 
-Hashability liên quan nhưng không đồng nhất với immutability. Key của `dict` và member của `set` cần hash ổn định trong thời gian object nằm trong collection. Các immutable built-in như `str`, `bytes`, `int` thường hashable. `list`, `dict`, `set` mutable nên không hashable. `tuple` chỉ hashable nếu mọi phần tử cần hash cũng hashable.
+Hashability liên quan nhưng không đồng nhất với immutability. Key của `dict` và member của `set` cần băm (hash / 해시) ổn định trong thời gian đối tượng (object / 객체) nằm trong collection. Các immutable built-in như `str`, `bytes`, `int` thường hashable. `list`, `dict`, `set` mutable nên không hashable. `tuple` chỉ hashable nếu mọi phần tử cần băm (hash / 해시) cũng hashable.
 
 ## 4. Mutable và immutable: điều gì thực sự thay đổi?
 
@@ -125,7 +128,7 @@ Hashability liên quan nhưng không đồng nhất với immutability. Key củ
 
 `bất biến (immutable / 불변)`
 
-Mutable object cho phép state quan sát được thay đổi mà identity vẫn giữ nguyên. Immutable object không cho phép thay đổi value của chính object sau khi tạo; một operation “thay đổi” thường tạo object mới.
+Mutable đối tượng (object / 객체) cho phép trạng thái (state / 상태) quan sát được thay đổi mà định danh (identity / 식별자) vẫn giữ nguyên. Immutable đối tượng (object / 객체) không cho phép thay đổi giá trị (value / 값) của chính đối tượng (object / 객체) sau khi tạo; một thao tác (operation / 연산) “thay đổi” thường tạo đối tượng (object / 객체) mới.
 
 ```python
 name = "py"
@@ -135,7 +138,7 @@ print(name)            # python
 print(id(name) == old_id)  # không nên dựa vào kết quả; binding có thể trỏ object mới
 ```
 
-Với list:
+Với danh sách (list / 목록):
 
 ```python
 items = [1, 2]
@@ -144,30 +147,30 @@ items += [3]
 assert id(items) == before
 ```
 
-`list.__iadd__` mutate list, trong khi behavior của `+=` phụ thuộc type. Vì vậy không thể hiểu augmented assignment chỉ bằng ký hiệu bề mặt.
+`list.__iadd__` mutate danh sách (list / 목록), trong khi hành vi (behavior / 동작) của `+=` phụ thuộc kiểu (type / 타입). Vì vậy không thể hiểu augmented assignment chỉ bằng ký hiệu bề mặt.
 
-Một pitfall sâu hơn xảy ra khi immutable container chứa mutable object:
+Một pitfall sâu hơn xảy ra khi immutable bộ chứa (container / 컨테이너) chứa mutable đối tượng (object / 객체):
 
 ```python
 box = ([1, 2], "fixed")
 box[0].append(3)
 ```
 
-`tuple` vẫn không cho thay `box[0]` bằng object khác, nhưng list nằm bên trong vẫn mutable. “Tuple immutable” không có nghĩa toàn bộ object graph bên dưới bất biến.
+`tuple` vẫn không cho thay `box[0]` bằng đối tượng (object / 객체) khác, nhưng danh sách (list / 목록) nằm bên trong vẫn mutable. “Tuple immutable” không có nghĩa toàn bộ đối tượng (object / 객체) đồ thị (graph / 그래프) bên dưới bất biến.
 
-## 5. Numeric types và model của số
+## 5. Numeric types và mô hình (model / 모델) của số
 
-Python có `int`, `float`, `complex` trong built-in numeric tower phổ biến. `bool` là subclass của `int`, nhưng trong domain model nên coi boolean là giá trị logic thay vì số 0/1 trừ khi API yêu cầu.
+Python có `int`, `float`, `complex` trong built-in numeric tower phổ biến. `bool` là subclass của `int`, nhưng trong lĩnh vực (domain / 도메인) mô hình (model / 모델) nên coi boolean là giá trị lô-gic (logic / 논리) thay vì số 0/1 trừ khi API yêu cầu.
 
-`int` của Python có arbitrary precision ở mức language behavior thực tế của CPython: nó không overflow ở 32/64 bit như primitive integer cố định trong nhiều ngôn ngữ, đổi lại số càng lớn càng tốn memory và CPU.
+`int` của Python có arbitrary precision ở mức ngôn ngữ (language / 언어) hành vi (behavior / 동작) thực tế của CPython: nó không overflow ở 32/64 bit như thành phần nguyên thủy (primitive / 기본 요소) integer cố định trong nhiều ngôn ngữ, đổi lại số càng lớn càng tốn bộ nhớ (memory / 메모리) và CPU.
 
-`float` thường theo binary floating-point của platform. Vì `0.1` không biểu diễn chính xác bằng finite binary fraction, phép tính tiền không nên dựa vào equality trực tiếp của float.
+`float` thường theo nhị phân (binary / 이진) floating-point của nền tảng (platform / 플랫폼). Vì `0.1` không biểu diễn chính xác bằng finite nhị phân (binary / 이진) fraction, phép tính tiền không nên dựa vào equality trực tiếp của float.
 
 ```python
 0.1 + 0.2 == 0.3  # False
 ```
 
-Cho tiền tệ, dùng `decimal.Decimal` khi cần decimal arithmetic có kiểm soát. Cho scientific tolerance, cân nhắc `math.isclose()` theo error model của bài toán.
+Cho tiền tệ, dùng `decimal.Decimal` khi cần decimal arithmetic có kiểm soát. Cho scientific tolerance, cân nhắc `math.isclose()` theo lỗi (error / 오류) mô hình (model / 모델) của bài toán.
 
 Floor division `//` không đơn thuần là “bỏ phần thập phân”; nó floor về phía âm vô cùng:
 
@@ -175,15 +178,15 @@ Floor division `//` không đơn thuần là “bỏ phần thập phân”; nó
 -3 // 2  # -2
 ```
 
-Đây là edge case dễ sai khi port logic từ ngôn ngữ dùng truncation toward zero.
+Đây là trường hợp biên (edge case / 경계 사례) dễ sai khi cổng (port / 포트) lô-gic (logic / 논리) từ ngôn ngữ dùng truncation toward zero.
 
-## 6. String, bytes và boundary encoding
+## 6. String, bytes và ranh giới (boundary / 경계) encoding
 
 `văn bản Unicode (Unicode text / 유니코드 텍스트)`
 
 `dãy byte (byte sequence / 바이트 시퀀스)`
 
-`str` biểu diễn text Unicode ở mức abstraction của Python. `bytes` biểu diễn octet/binary data. Encoding biến `str` thành `bytes`; decoding biến `bytes` thành `str` dựa trên một encoding như UTF-8.
+`str` biểu diễn văn bản (text / 텍스트) Unicode ở mức lớp trừu tượng (abstraction / 추상화) của Python. `bytes` biểu diễn octet/nhị phân (binary / 이진) dữ liệu (data / 데이터). Encoding biến `str` thành `bytes`; decoding biến `bytes` thành `str` dựa trên một encoding như UTF-8.
 
 ```python
 text = "안녕하세요"
@@ -192,15 +195,15 @@ restored = payload.decode("utf-8")
 assert restored == text
 ```
 
-Bug production thường xuất hiện ở boundary: file, socket, database driver, HTTP body, subprocess. Trong core logic hãy cố giữ text ở dạng `str`; encode/decode tại boundary rõ ràng.
+Bug môi trường vận hành (production / 운영 환경) thường xuất hiện ở ranh giới (boundary / 경계): tệp (file / 파일), socket, cơ sở dữ liệu (database / 데이터베이스) driver, HTTP body, subprocess. Trong cốt lõi (core / 핵심) lô-gic (logic / 논리) hãy cố giữ văn bản (text / 텍스트) ở dạng `str`; encode/decode tại ranh giới (boundary / 경계) rõ ràng.
 
-Python string immutable. Các thao tác nối nhiều chuỗi trong loop có thể tạo nhiều object trung gian; khi ghép nhiều mảnh, `"".join(parts)` thể hiện intent và thường tốt hơn.
+Python string immutable. Các thao tác nối nhiều chuỗi trong vòng lặp (loop / 루프) có thể tạo nhiều đối tượng (object / 객체) trung gian; khi ghép nhiều mảnh, `"".join(parts)` thể hiện intent và thường tốt hơn.
 
 ### f-string và t-string
 
-F-string tạo `str` sau khi evaluate interpolation. Python 3.14 thêm template string literal `t"..."`, trả về `string.templatelib.Template` thay vì `str`, cho phép code xử lý phần literal và interpolation trước khi render. Đây là modern feature hữu ích cho API templating/security-aware processing, nhưng không cần dùng chỉ vì nó mới.
+F-string tạo `str` sau khi evaluate interpolation. Python 3.14 thêm template string literal `t"..."`, trả về `string.templatelib.Template` thay vì `str`, cho phép mã (code / 코드) xử lý phần literal và interpolation trước khi kết xuất (render / 렌더링). Đây là hiện đại (modern / 현대적) tính năng (feature / 기능) hữu ích cho API templating/security-aware processing, nhưng không cần dùng chỉ vì nó mới.
 
-## 7. Container types: list, tuple, dict, set
+## 7. bộ chứa (container / 컨테이너) types: danh sách (list / 목록), tuple, dict, set
 
 `danh sách (list / 리스트)`
 
@@ -208,9 +211,9 @@ F-string tạo `str` sau khi evaluate interpolation. Python 3.14 thêm template 
 
 `ánh xạ (mapping / 매핑)`
 
-Chọn container theo operation chính, không theo thói quen.
+Chọn bộ chứa (container / 컨테이너) theo thao tác (operation / 연산) chính, không theo thói quen.
 
-`list` là ordered mutable sequence, phù hợp khi cần giữ thứ tự và index. `tuple` là fixed-shape immutable sequence, thường dùng khi một group value có ý nghĩa cấu trúc ổn định. `dict` ánh xạ key → value và giữ insertion order trong modern Python. `set` biểu diễn tập phần tử unique, phù hợp membership/deduplication.
+`list` là ordered mutable chuỗi (sequence / 시퀀스), phù hợp khi cần giữ thứ tự và chỉ mục (index / 인덱스). `tuple` là fixed-shape immutable chuỗi (sequence / 시퀀스), thường dùng khi một group giá trị (value / 값) có ý nghĩa cấu trúc ổn định. `dict` ánh xạ key → giá trị (value / 값) và giữ insertion thứ tự (order / 순서) trong hiện đại (modern / 현대적) Python. `set` biểu diễn tập phần tử unique, phù hợp membership/deduplication.
 
 ```python
 seen: set[str] = set()
@@ -221,11 +224,11 @@ for user_id in user_ids:
     process(user_id)
 ```
 
-Senior note: complexity Big-O là starting point, không phải kết luận. `x in set` thường average O(1), nhưng memory overhead, hash cost và data size thực tế cũng quan trọng. Với 5 phần tử, một list có thể đủ đơn giản; với hàng triệu key, cấu trúc dữ liệu và locality trở thành quyết định production.
+Cấp cao (senior / 시니어) ghi chú (note / 노트): độ phức tạp (complexity / 복잡도) Big-O là starting điểm (point / 지점), không phải kết luận. `x in set` thường average O(1), nhưng bộ nhớ (memory / 메모리) overhead, băm (hash / 해시) chi phí (cost / 비용) và dữ liệu (data / 데이터) kích thước (size / 크기) thực tế cũng quan trọng. Với 5 phần tử, một danh sách (list / 목록) có thể đủ đơn giản; với hàng triệu key, cấu trúc dữ liệu và locality trở thành quyết định môi trường vận hành (production / 운영 환경).
 
 ### Slicing không đồng nghĩa “view miễn phí”
 
-Với `list`, slicing thông thường tạo một list ngoài mới nhưng các phần tử bên trong vẫn là cùng object references:
+Với `list`, slicing thông thường tạo một danh sách (list / 목록) ngoài mới nhưng các phần tử bên trong vẫn là cùng đối tượng (object / 객체) references:
 
 ```python
 rows = [[1], [2], [3]]
@@ -236,15 +239,15 @@ print(rows)    # [[1, 99], [2], [3]]
 print(window)  # [[1, 99], [2]]
 ```
 
-Vì vậy `rows[:]` là một dạng shallow copy của list, không phải deep copy. Nó cũng có chi phí theo số reference được copy; đừng coi slicing collection lớn là operation O(1). Một số API khác như `memoryview` thực sự cung cấp view lên binary buffer, nhưng đó là protocol khác. Khi performance hoặc ownership quan trọng, cần biết operation đang tạo copy hay view thay vì suy luận từ cú pháp `[:]`.
+Vì vậy `rows[:]` là một dạng shallow bản sao (copy / 복사) của danh sách (list / 목록), không phải deep bản sao (copy / 복사). Nó cũng có chi phí theo số tham chiếu (reference / 참조) được bản sao (copy / 복사); đừng coi slicing collection lớn là thao tác (operation / 연산) O(1). Một số API khác như `memoryview` thực sự cung cấp view lên nhị phân (binary / 이진) buffer, nhưng đó là giao thức (protocol / 프로토콜) khác. Khi hiệu năng (performance / 성능) hoặc quyền sở hữu (ownership / 소유권) quan trọng, cần biết thao tác (operation / 연산) đang tạo bản sao (copy / 복사) hay view thay vì suy luận từ cú pháp `[:]`.
 
-### Shallow copy và deep copy
+### Shallow bản sao (copy / 복사) và deep bản sao (copy / 복사)
 
 `bản sao nông (shallow copy / 얕은 복사)`
 
 `bản sao sâu (deep copy / 깊은 복사)`
 
-Shallow copy tạo container ngoài mới nhưng giữ references tới object con:
+Shallow bản sao (copy / 복사) tạo bộ chứa (container / 컨테이너) ngoài mới nhưng giữ references tới đối tượng (object / 객체) con:
 
 ```python
 original = [[1], [2]]
@@ -253,15 +256,15 @@ clone[0].append(99)
 print(original)  # [[1, 99], [2]]
 ```
 
-`copy.deepcopy()` cố sao chép recursively object graph, nhưng “deep” không đồng nghĩa “luôn đúng”. Object có shared identity, file handle, socket, lock hoặc custom `__deepcopy__` có semantics riêng. Trong domain model, thường tốt hơn thiết kế immutable value object hoặc explicit clone behavior thay vì dùng `deepcopy()` như phép chữa chung.
+`copy.deepcopy()` cố sao chép recursively đối tượng (object / 객체) đồ thị (graph / 그래프), nhưng “deep” không đồng nghĩa “luôn đúng”. đối tượng (object / 객체) có dùng chung (shared / 공유) định danh (identity / 식별자), tệp (file / 파일) handle, socket, khóa (lock / 잠금) hoặc custom `__deepcopy__` có ngữ nghĩa (semantics / 의미론) riêng. Trong lĩnh vực (domain / 도메인) mô hình (model / 모델), thường tốt hơn thiết kế immutable giá trị (value / 값) đối tượng (object / 객체) hoặc tường minh (explicit / 명시적) clone hành vi (behavior / 동작) thay vì dùng `deepcopy()` như phép chữa chung.
 
-## 8. Control flow là điều khiển evaluation
+## 8. điều khiển (control / 제어) luồng (flow / 흐름) là điều khiển evaluation
 
 `luồng điều khiển (control flow / 제어 흐름)`
 
 `if`, `for`, `while`, `match`, `break`, `continue`, `return`, exception đều quyết định expression/statement nào được evaluate.
 
-Python dùng truth-value testing. `None`, `False`, zero numeric, và empty container thường falsy. Nhưng đừng gộp “không có giá trị” và “giá trị rỗng hợp lệ” nếu domain phân biệt chúng:
+Python dùng truth-value testing. `None`, `False`, zero numeric, và empty bộ chứa (container / 컨테이너) thường falsy. Nhưng đừng gộp “không có giá trị” và “giá trị rỗng hợp lệ” nếu lĩnh vực (domain / 도메인) phân biệt chúng:
 
 ```python
 # Sai nếu 0 là giá hợp lệ
@@ -273,13 +276,13 @@ if price is None:
     ...
 ```
 
-`for` của Python hoạt động qua iterable protocol, không phải chỉ qua index. Phần iterator mechanism được đào sâu ở Part 2.
+`for` của Python hoạt động qua iterable giao thức (protocol / 프로토콜), không phải chỉ qua chỉ mục (index / 인덱스). Phần iterator cơ chế (mechanism / 메커니즘) được đào sâu ở Part 2.
 
-`match`/`case` từ Python 3.10 là structural pattern matching. Nó mạnh khi dữ liệu có shape rõ, nhưng không nên biến business logic đơn giản thành pattern tree khó đọc.
+`match`/`case` từ Python 3.10 là structural mẫu (pattern / 패턴) matching. Nó mạnh khi dữ liệu có shape rõ, nhưng không nên biến lô-gic nghiệp vụ (business logic / 비즈니스 로직) đơn giản thành mẫu (pattern / 패턴) cây (tree / 트리) khó đọc.
 
 ### Short-circuit: expression có thể không được evaluate
 
-`đánh giá đoản mạch (short-circuit evaluation / 단락 평가)` là cơ chế mà `and` hoặc `or` có thể dừng sớm khi kết quả logic đã xác định. Điều quan trọng là Python trả về operand được chọn, không ép kết quả thành `bool`.
+`đánh giá đoản mạch (short-circuit evaluation / 단락 평가)` là cơ chế mà `and` hoặc `or` có thể dừng sớm khi kết quả lô-gic (logic / 논리) đã xác định. Điều quan trọng là Python trả về operand được chọn, không ép kết quả thành `bool`.
 
 ```python
 name = user_input or "anonymous"
@@ -288,9 +291,9 @@ if user is not None and user.is_active:
     process(user)
 ```
 
-Trong điều kiện thứ hai, `user.is_active` không được evaluate khi `user is None`. Đây là cách guard access rất tự nhiên. Nhưng side effect nằm bên phải `and`/`or` có thể không chạy, nên không nên giấu operation quan trọng trong expression chỉ để code ngắn.
+Trong điều kiện thứ hai, `user.is_active` không được evaluate khi `user is None`. Đây là cách guard truy cập (access / 접근) rất tự nhiên. Nhưng side tác động (effect / 효과) nằm bên phải `and`/`or` có thể không chạy, nên không nên giấu thao tác (operation / 연산) quan trọng trong expression chỉ để mã (code / 코드) ngắn.
 
-Python nhìn chung evaluate expression từ trái sang phải theo semantics được định nghĩa. Với function call, các argument expression được evaluate trước khi function body bắt đầu. Vì vậy:
+Python nhìn chung evaluate expression từ trái sang phải theo ngữ nghĩa (semantics / 의미론) được định nghĩa. Với hàm (function / 함수) lời gọi (call / 호출), các argument expression được evaluate trước khi hàm (function / 함수) body bắt đầu. Vì vậy:
 
 ```python
 def log_value(value):
@@ -304,21 +307,21 @@ def build_value():
 log_value(build_value())
 ```
 
-sẽ in `build` trước `inside`. Phân biệt “evaluate argument” và “bind parameter” giúp reasoning đúng khi argument có I/O, mutation hoặc exception.
+sẽ in `build` trước `inside`. Phân biệt “evaluate argument” và “bind parameter” giúp lập luận (reasoning / 추론) đúng khi argument có I/O, mutation hoặc exception.
 
-## 9. Comprehension: transform có cấu trúc, không phải mọi loop
+## 9. Comprehension: transform có cấu trúc, không phải mọi vòng lặp (loop / 루프)
 
-List/set/dict comprehensions kết hợp iteration, filtering và expression transform:
+Danh sách (list / 목록)/set/dict comprehensions kết hợp iteration, filtering và expression transform:
 
 ```python
 active_names = [u.name for u in users if u.active]
 ```
 
-Nó Pythonic khi toàn bộ transformation đọc được như một câu. Nếu có nhiều side effect, nhiều nested condition hoặc cần logging/debug từng bước, loop thường rõ hơn. “Pythonic” không có nghĩa càng ngắn càng tốt; nó nghĩa code phù hợp với semantic conventions của Python và dễ hiểu đối với người bảo trì.
+Nó Pythonic khi toàn bộ transformation đọc được như một câu. Nếu có nhiều side tác động (effect / 효과), nhiều nested điều kiện (condition / 조건) hoặc cần logging/gỡ lỗi (debug / 디버그) từng bước, vòng lặp (loop / 루프) thường rõ hơn. “Pythonic” không có nghĩa càng ngắn càng tốt; nó nghĩa mã (code / 코드) phù hợp với ngữ nghĩa (semantic / 의미적) conventions của Python và dễ hiểu đối với người bảo trì.
 
-Scope của comprehension trong Python 3 là scope riêng cho iteration variable, khác Python 2 legacy behavior. Code cũ hoặc tài liệu cũ có thể mô tả leakage của loop variable từ list comprehension; không áp dụng mental model đó cho modern Python.
+Phạm vi (scope / 범위) của comprehension trong Python 3 là phạm vi (scope / 범위) riêng cho iteration variable, khác Python 2 legacy hành vi (behavior / 동작). mã (code / 코드) cũ hoặc tài liệu cũ có thể mô tả leakage của vòng lặp (loop / 루프) variable từ danh sách (list / 목록) comprehension; không áp dụng mô hình tư duy (mental model / 사고 모델) đó cho hiện đại (modern / 현대적) Python.
 
-## 10. Function là object và là boundary thiết kế
+## 10. hàm (function / 함수) là đối tượng (object / 객체) và là ranh giới (boundary / 경계) thiết kế
 
 `hàm (function / 함수)`
 
@@ -326,7 +329,7 @@ Scope của comprehension trong Python 3 là scope riêng cho iteration variable
 
 `tham số (parameter / 매개변수)`
 
-Function definition tạo function object và bind nó vào name. Vì function là object, nó có thể được truyền vào function khác, lưu trong collection, trả về từ function và đóng vai trò callback.
+Hàm (function / 함수) definition tạo hàm (function / 함수) đối tượng (object / 객체) và bind nó vào name. Vì hàm (function / 함수) là đối tượng (object / 객체), nó có thể được truyền vào hàm (function / 함수) khác, lưu trong collection, trả về từ hàm (function / 함수) và đóng vai trò callback.
 
 ```python
 def apply_twice(fn, value):
@@ -335,18 +338,18 @@ def apply_twice(fn, value):
 
 ### Argument binding
 
-Python hỗ trợ positional-only (`/`), positional-or-keyword, keyword-only (`*`), variadic positional `*args` và variadic keyword `**kwargs`.
+Python hỗ trợ positional-only (`/`), positional-or-keyword, keyword-only (`*`), variadic positional `*args` và variadic từ khóa (keyword / 키워드) `**kwargs`.
 
 ```python
 def connect(host, /, port=5432, *, timeout=5.0):
     ...
 ```
 
-Ở đây `host` buộc positional, còn `timeout` buộc keyword. Đây không chỉ là syntax; nó giúp API giữ compatibility. Positional-only cho phép đổi parameter name mà không phá caller dùng keyword, còn keyword-only làm call site tự-documenting cho các option khó nhớ.
+Ở đây `host` buộc positional, còn `timeout` buộc từ khóa (keyword / 키워드). Đây không chỉ là cú pháp (syntax / 문법); nó giúp API giữ tính tương thích (compatibility / 호환성). Positional-only cho phép đổi parameter name mà không phá caller dùng từ khóa (keyword / 키워드), còn keyword-only làm lời gọi (call / 호출) site tự-documenting cho các option khó nhớ.
 
-Một call có thể được reasoning theo bốn bước khái niệm: evaluate argument expressions ở caller; expand `*iterable`/`**mapping`; bind các resulting arguments vào parameter theo signature; sau đó mới chạy function body. Nếu thiếu argument, truyền duplicate keyword hoặc vi phạm positional-only/keyword-only contract, lỗi xảy ra ở binding boundary trước khi body chạy.
+Một lời gọi (call / 호출) có thể được lập luận (reasoning / 추론) theo bốn bước khái niệm: evaluate argument expressions ở caller; expand `*iterable`/`**mapping`; bind các resulting arguments vào parameter theo signature; sau đó mới chạy hàm (function / 함수) body. Nếu thiếu argument, truyền duplicate từ khóa (keyword / 키워드) hoặc vi phạm positional-only/keyword-only đặc tả hợp đồng (contract / 계약), lỗi xảy ra ở binding ranh giới (boundary / 경계) trước khi body chạy.
 
-Điều này giải thích vì sao side effect của argument vẫn có thể xảy ra dù call sau đó fail khi binding:
+Điều này giải thích vì sao side tác động (effect / 효과) của argument vẫn có thể xảy ra dù lời gọi (call / 호출) sau đó thất bại (fail / 실패) khi binding:
 
 ```python
 def build_port() -> int:
@@ -371,21 +374,21 @@ options = {"timeout": 2.0, "retries": 3}
 request(**options)
 ```
 
-Unpacking thao tác trên iterable/mapping protocol. Nó mạnh nhưng `**config` có thể che giấu nguồn parameter nếu config được xây qua nhiều layer; trong code production, validate configuration trước khi spread vào API.
+Unpacking thao tác trên iterable/ánh xạ (mapping / 매핑) giao thức (protocol / 프로토콜). Nó mạnh nhưng `**config` có thể che giấu nguồn parameter nếu cấu hình (config / 설정) được xây qua nhiều tầng (layer / 계층); trong mã (code / 코드) môi trường vận hành (production / 운영 환경), validate cấu hình (configuration / 구성) trước khi spread vào API.
 
-Extended unpacking cũng là một allocation/design decision:
+Extended unpacking cũng là một allocation/thiết kế (design / 설계) quyết định (decision / 결정):
 
 ```python
 first, *middle, last = records
 ```
 
-`middle` là list mới chứa các phần tử ở giữa. Với iterable rất lớn, đừng dùng unpacking chỉ vì cú pháp đẹp nếu bạn thật sự cần streaming.
+`middle` là danh sách (list / 목록) mới chứa các phần tử ở giữa. Với iterable rất lớn, đừng dùng unpacking chỉ vì cú pháp đẹp nếu bạn thật sự cần streaming.
 
-## 11. Scope và LEGB
+## 11. phạm vi (scope / 범위) và LEGB
 
 `phạm vi (scope / 스코프)`
 
-Tên được resolve theo các scope phù hợp. Mnemonic LEGB là Local → Enclosing → Global → Builtins, nhưng hãy hiểu đây là name resolution model chứ không phải bốn dictionary tùy ý giống hệt nhau.
+Tên được resolve theo các phạm vi (scope / 범위) phù hợp. Mnemonic LEGB là cục bộ (local / 로컬) → Enclosing → toàn cục (global / 전역) → Builtins, nhưng hãy hiểu đây là name resolution mô hình (model / 모델) chứ không phải bốn dictionary tùy ý giống hệt nhau.
 
 ```python
 rate = 10
@@ -397,15 +400,15 @@ def outer():
     return inner
 ```
 
-`inner` tìm `price` ở local, `discount` ở enclosing function và `rate` ở module global.
+`inner` tìm `price` ở cục bộ (local / 로컬), `discount` ở enclosing hàm (function / 함수) và `rate` ở mô-đun (module / 모듈) toàn cục (global / 전역).
 
-`global` cho phép assignment nhắm module-level binding; `nonlocal` nhắm binding trong enclosing function scope. Dùng chúng tiết kiệm vì mutable global state làm testing/concurrency/reasoning khó hơn.
+`global` cho phép assignment nhắm module-level binding; `nonlocal` nhắm binding trong enclosing hàm (function / 함수) phạm vi (scope / 범위). Dùng chúng tiết kiệm vì mutable toàn cục (global / 전역) trạng thái (state / 상태) làm testing/tính đồng thời (concurrency / 동시성)/lập luận (reasoning / 추론) khó hơn.
 
 ## 12. Closure và late binding
 
 `bao đóng (closure / 클로저)`
 
-Closure giữ liên hệ với variables từ enclosing scope. Điểm dễ sai: closure thường capture binding/cell, không snapshot value ở mỗi vòng loop.
+Closure giữ liên hệ với variables từ enclosing phạm vi (scope / 범위). Điểm dễ sai: closure thường capture binding/cell, không snapshot giá trị (value / 값) ở mỗi vòng vòng lặp (loop / 루프).
 
 ```python
 funcs = []
@@ -415,17 +418,17 @@ for i in range(3):
 print([f() for f in funcs])  # [2, 2, 2]
 ```
 
-Khi lambda chạy sau loop, cả ba lookup cùng thấy value cuối của `i`. Một cách explicit snapshot là default argument:
+Khi lambda chạy sau vòng lặp (loop / 루프), cả ba lookup cùng thấy giá trị (value / 값) cuối của `i`. Một cách tường minh (explicit / 명시적) snapshot là default argument:
 
 ```python
 funcs = [lambda i=i: i for i in range(3)]
 ```
 
-Không nên học đây như mẹo “thêm `i=i`”. Cơ chế là default expression được evaluate lúc function được tạo, trong khi free variable lookup của closure xảy ra khi function chạy.
+Không nên học đây như mẹo “thêm `i=i`”. Cơ chế là default expression được evaluate lúc hàm (function / 함수) được tạo, trong khi free variable lookup của closure xảy ra khi hàm (function / 함수) chạy.
 
 ## 13. Default mutable argument: lỗi từ thời điểm evaluation
 
-Default parameter được evaluate một lần khi `def` statement chạy, không phải mỗi lần function được gọi.
+Default parameter được evaluate một lần khi `def` statement chạy, không phải mỗi lần hàm (function / 함수) được gọi.
 
 ```python
 def add_item(item, bucket=[]):
@@ -433,7 +436,7 @@ def add_item(item, bucket=[]):
     return bucket
 ```
 
-Nhiều call không truyền `bucket` sẽ cùng dùng list object mặc định. Pattern an toàn khi cần collection mới mỗi call:
+Nhiều lời gọi (call / 호출) không truyền `bucket` sẽ cùng dùng danh sách (list / 목록) đối tượng (object / 객체) mặc định. mẫu (pattern / 패턴) an toàn khi cần collection mới mỗi lời gọi (call / 호출):
 
 ```python
 def add_item(item: str, bucket: list[str] | None = None) -> list[str]:
@@ -443,15 +446,15 @@ def add_item(item: str, bucket: list[str] | None = None) -> list[str]:
     return bucket
 ```
 
-Có trường hợp shared default state là cố ý, nhưng nếu vậy nên biểu diễn intent rõ bằng object/cache riêng thay vì dựa vào side effect khó thấy của default argument.
+Có trường hợp dùng chung (shared / 공유) default trạng thái (state / 상태) là cố ý, nhưng nếu vậy nên biểu diễn intent rõ bằng đối tượng (object / 객체)/bộ nhớ đệm (cache / 캐시) riêng thay vì dựa vào side tác động (effect / 효과) khó thấy của default argument.
 
-## 14. Exception cơ bản: lỗi là một control-flow path
+## 14. Exception cơ bản: lỗi là một control-flow đường dẫn (path / 경로)
 
 `ngoại lệ (exception / 예외)`
 
 `lan truyền ngoại lệ (exception propagation / 예외 전파)`
 
-Khi raise exception, normal flow dừng và runtime tìm handler phù hợp trên call stack. Nếu current frame không handle, exception propagate lên caller. Vì vậy `try/except` không chỉ “bắt lỗi”; nó quyết định boundary nào đủ context để xử lý.
+Khi raise exception, luồng bố cục thông thường (normal flow / 일반 흐름) dừng và thời gian chạy (runtime / 런타임) tìm handler phù hợp trên ngăn xếp lời gọi (call stack / 호출 스택). Nếu hiện tại (current / 현재) frame không handle, exception propagate lên caller. Vì vậy `try/except` không chỉ “bắt lỗi”; nó quyết định ranh giới (boundary / 경계) nào đủ ngữ cảnh (context / 맥락) để xử lý.
 
 ```python
 def parse_port(raw: str) -> int:
@@ -464,13 +467,13 @@ def parse_port(raw: str) -> int:
     return port
 ```
 
-`raise ... from exc` giữ causal chain. Anti-pattern là `except Exception: pass` vì nó xóa failure signal và làm hệ thống tiếp tục với state không chắc chắn.
+`raise ... from exc` giữ chuỗi nhân quả (causal chain / 인과 사슬). Anti-pattern là `except Exception: pass` vì nó xóa thất bại (failure / 실패) tín hiệu (signal / 신호) và làm hệ thống tiếp tục với trạng thái (state / 상태) không chắc chắn.
 
-`finally` chạy để cleanup dù normal path hay exception path. Tuy vậy resource management thường nên dùng context manager, được giải thích ở Part 2.
+`finally` chạy để cleanup dù normal đường dẫn (path / 경로) hay exception đường dẫn (path / 경로). Tuy vậy tài nguyên (resource / 자원) management thường nên dùng ngữ cảnh (context / 맥락) manager, được giải thích ở Part 2.
 
 ### Giữ `try` nhỏ để không bắt nhầm bug của chính mình
 
-Nếu `try` bao quá nhiều code, handler có thể vô tình bắt exception phát sinh từ operation khác với operation bạn định recover. `else` giúp tách success path khỏi vùng đang được catch:
+Nếu `try` bao quá nhiều mã (code / 코드), handler có thể vô tình bắt exception phát sinh từ thao tác (operation / 연산) khác với thao tác (operation / 연산) bạn định recover. `else` giúp tách success đường dẫn (path / 경로) khỏi vùng đang được catch:
 
 ```python
 try:
@@ -481,23 +484,23 @@ else:
     return validate_port(port)
 ```
 
-Ở đây `ValueError` từ `validate_port()` không bị handler dành cho parsing nuốt mất. Đây là một ví dụ cho nguyên tắc rộng hơn: exception boundary nên hẹp đủ để recovery semantics rõ ràng.
+Ở đây `ValueError` từ `validate_port()` không bị handler dành cho parsing nuốt mất. Đây là một ví dụ cho nguyên tắc rộng hơn: exception ranh giới (boundary / 경계) nên hẹp đủ để khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론) rõ ràng.
 
-## 15. Modules, packages và import mental model
+## 15. Modules, packages và import mô hình tư duy (mental model / 사고 모델)
 
 `mô-đun (module / 모듈)`
 
 `gói (package / 패키지)`
 
-Module thường là một Python source file hoặc module object load được. Package tổ chức module thành namespace/package hierarchy. `import x` về mặt khái niệm gồm tìm module theo import system, load/execute nếu cần, cache trong `sys.modules`, rồi bind name ở namespace hiện tại.
+Mô-đun (module / 모듈) thường là một Python nguồn (source / 소스) tệp (file / 파일) hoặc mô-đun (module / 모듈) đối tượng (object / 객체) tải (load / 로드) được. gói (package / 패키지) tổ chức mô-đun (module / 모듈) thành không gian tên (namespace / 네임스페이스)/gói (package / 패키지) hierarchy. `import x` về mặt khái niệm gồm tìm mô-đun (module / 모듈) theo import hệ thống (system / 시스템), tải (load / 로드)/execute nếu cần, bộ nhớ đệm (cache / 캐시) trong `sys.modules`, rồi bind name ở không gian tên (namespace / 네임스페이스) hiện tại.
 
-Vì module cache theo process, top-level code thường chỉ chạy lần đầu của normal import. `importlib.reload()` có semantics phức tạp và không phải cách chữa thông thường cho state management.
+Vì mô-đun (module / 모듈) bộ nhớ đệm (cache / 캐시) theo tiến trình (process / 프로세스), top-level mã (code / 코드) thường chỉ chạy lần đầu của normal import. `importlib.reload()` có ngữ nghĩa (semantics / 의미론) phức tạp và không phải cách chữa thông thường cho trạng thái (state / 상태) management.
 
 ### Circular import
 
-Nếu `a.py` import `b.py`, trong khi `b.py` import ngược `a.py` và truy cập name chưa được tạo, bạn đang quan sát module ở trạng thái partially initialized. Fix bền vững thường là sửa dependency direction: tách shared abstraction sang module thứ ba, chuyển orchestration lên layer cao hơn, hoặc trì hoãn import có chủ đích. Di chuyển import vào function chỉ để “hết lỗi” mà không sửa architecture dễ che cycle.
+Nếu `a.py` import `b.py`, trong khi `b.py` import ngược `a.py` và truy cập name chưa được tạo, bạn đang quan sát mô-đun (module / 모듈) ở trạng thái partially initialized. Fix bền vững thường là sửa phụ thuộc (dependency / 의존성) direction: tách dùng chung (shared / 공유) lớp trừu tượng (abstraction / 추상화) sang mô-đun (module / 모듈) thứ ba, chuyển orchestration lên tầng (layer / 계층) cao hơn, hoặc trì hoãn import có chủ đích. Di chuyển import vào hàm (function / 함수) chỉ để “hết lỗi” mà không sửa kiến trúc (architecture / 아키텍처) dễ che cycle.
 
-## 16. Một mini case study: config loader
+## 16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader
 
 ```python
 from pathlib import Path
@@ -511,23 +514,25 @@ def load_lines(path: Path, *, encoding: str = "utf-8") -> list[str]:
     return [line.strip() for line in text.splitlines() if line.strip()]
 ```
 
-Đoạn ngắn này dùng nhiều concept của Part 1. `path` là binding tới một `Path` object; `encoding` là keyword-only để call site rõ; `read_text()` là I/O boundary trả `str`; list comprehension phù hợp vì transformation đơn giản và không có side effect; failure `FileNotFoundError` được giữ nguyên vì caller có thể có context tốt hơn để quyết định retry, báo user hay fail process.
+Đoạn ngắn này dùng nhiều concept của Part 1. `path` là binding tới một `Path` đối tượng (object / 객체); `encoding` là keyword-only để lời gọi (call / 호출) site rõ; `read_text()` là I/O ranh giới (boundary / 경계) trả `str`; danh sách (list / 목록) comprehension phù hợp vì transformation đơn giản và không có side tác động (effect / 효과); thất bại (failure / 실패) `FileNotFoundError` được giữ nguyên vì caller có thể có ngữ cảnh (context / 맥락) tốt hơn để quyết định thử lại (retry / 재시도), báo người dùng (user / 사용자) hay thất bại (fail / 실패) tiến trình (process / 프로세스).
 
-Nếu function này nằm trong service, câu hỏi senior không phải “có thể viết một dòng không?” mà là: file lớn đến mức nào, có cần streaming không, input có tin cậy không, lỗi encoding xử lý ra sao, ai chịu trách nhiệm logging, và call path có block event loop hay không. Các câu hỏi đó dẫn sang Part 2/3.
+Nếu hàm (function / 함수) này nằm trong dịch vụ (service / 서비스), câu hỏi cấp cao (senior / 시니어) không phải “có thể viết một dòng không?” mà là: tệp (file / 파일) lớn đến mức nào, có cần streaming không, đầu vào (input / 입력) có tin cậy không, lỗi encoding xử lý ra sao, ai chịu trách nhiệm logging, và lời gọi (call / 호출) đường dẫn (path / 경로) có khối (block / 블록) vòng lặp sự kiện (event loop / 이벤트 루프) hay không. Các câu hỏi đó dẫn sang Part 2/3.
 
-## 17. Checklist mental model trước khi sang Part 2
+## 17. Checklist mô hình tư duy (mental model / 사고 모델) trước khi sang Part 2
 
-Hãy chắc rằng bạn có thể tự giải thích vì sao `b = a` không copy list; vì sao `is` không thay `==`; vì sao tuple có thể chứa list mutable; vì sao slice của list là shallow outer copy chứ không phải view; vì sao short-circuit có thể làm expression bên phải không chạy; vì sao argument expression chạy trước parameter binding; vì sao default list có thể sống qua nhiều function call; vì sao closure trong loop thấy value cuối; vì sao `try` quá rộng có thể bắt nhầm bug; vì sao import có thể chạy code; và vì sao `async` chưa thể kết luận gì về parallelism.
+Hãy chắc rằng bạn có thể tự giải thích vì sao `b = a` không bản sao (copy / 복사) danh sách (list / 목록); vì sao `is` không thay `==`; vì sao tuple có thể chứa danh sách (list / 목록) mutable; vì sao slice của danh sách (list / 목록) là shallow outer bản sao (copy / 복사) chứ không phải view; vì sao short-circuit có thể làm expression bên phải không chạy; vì sao argument expression chạy trước parameter binding; vì sao default danh sách (list / 목록) có thể sống qua nhiều hàm (function / 함수) lời gọi (call / 호출); vì sao closure trong vòng lặp (loop / 루프) thấy giá trị (value / 값) cuối; vì sao `try` quá rộng có thể bắt nhầm bug; vì sao import có thể chạy mã (code / 코드); và vì sao `async` chưa thể kết luận gì về parallelism.
 
-Phần cuối cùng mới chỉ là preview: `async` là syntax tạo coroutine/asynchronous control flow; parallel execution là vấn đề khác, sẽ được tách rõ ở Part 3.
+Phần cuối cùng mới chỉ là preview: `async` là cú pháp (syntax / 문법) tạo coroutine/asynchronous điều khiển (control / 제어) luồng (flow / 흐름); parallel thực thi (execution / 실행) là vấn đề khác, sẽ được tách rõ ở Part 3.
 
 ## Nguồn chính
 
-- Python Language Reference — Data Model: https://docs.python.org/3.14/reference/datamodel.html
-- Python Language Reference — Execution model: https://docs.python.org/3.14/reference/executionmodel.html
-- Python Language Reference — Expressions: https://docs.python.org/3.14/reference/expressions.html
-- Python Language Reference — Simple statements: https://docs.python.org/3.14/reference/simple_stmts.html
-- Python Language Reference — Import system: https://docs.python.org/3.14/reference/import.html
-- Built-in Types: https://docs.python.org/3.14/library/stdtypes.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/executionmodel.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Expressions: https://docs.python.org/3.14/tham chiếu (reference / 참조)/expressions.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Simple statements: https://docs.python.org/3.14/tham chiếu (reference / 참조)/simple_stmts.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — Import hệ thống (system / 시스템): https://docs.python.org/3.14/tham chiếu (reference / 참조)/import.html
+- Built-in Types: https://docs.python.org/3.14/thư viện (library / 라이브러리)/stdtypes.html
 - Exceptions: https://docs.python.org/3.14/tutorial/errors.html
 - Python 3.14 What's New: https://docs.python.org/3.14/whatsnew/3.14.html
+
+> **Bàn giao:** Sau **Nguồn chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

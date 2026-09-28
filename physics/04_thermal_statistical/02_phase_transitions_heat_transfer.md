@@ -1,5 +1,8 @@
 # Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn
 
+> **Mạch đọc:** Đọc **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Pha là gì?** sang **Vai trò của thế nhiệt động lực học**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Pha là gì?
 
 Pha (phase / 상) là một trạng thái vĩ mô có cấu trúc và tính chất đồng nhất theo những tham số trật tự (order parameters) thích hợp. Rắn, lỏng và khí là các ví dụ quen thuộc, nhưng từ tính sắt từ, siêu dẫn, siêu chảy và nhiều pha lượng tử cho thấy khái niệm “pha” rộng hơn nhiều so với ba trạng thái vật chất cổ điển.
@@ -247,7 +250,7 @@ Bức xạ không cần môi trường vật chất, vì vậy trong chân khôn
 
 ## Phổ vật đen và sự ra đời của lượng tử
 
-Mô hình cổ điển dẫn tới thảm họa tử ngoại khi áp dụng định lý phân bố đều năng lượng cho các mode điện từ trong hốc.
+Mô hình cổ điển dẫn tới thảm họa tử ngoại khi áp dụng định lý phân bố đều năng lượng cho các chế độ (mode / 모드) điện từ trong hốc.
 
 Planck giả sử trao đổi năng lượng theo lượng tử
 
@@ -285,7 +288,7 @@ nhiệt độ tăng
 
 Nếu khả năng tản nhiệt không đủ, hệ có thể chạy vào trạng thái mất ổn định nhiệt. Khái niệm này xuất hiện trong transistor, pin và nhiều hệ phản ứng hóa học.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển pha là sự thay đổi cấu trúc cân bằng của toàn hệ, còn truyền nhiệt là cách năng lượng di chuyển giữa các vùng. Nhiệt độ không phải thước đo duy nhất của năng lượng: trong chuyển pha, năng lượng có thể thay đổi cấu hình vi mô mà không làm nhiệt độ đổi đáng kể.
 
@@ -309,8 +312,10 @@ Màu nhìn thấy không đủ để kết luận toàn bộ tính chất bức 
 
 Không. Chuyển pha liên tục có thể không có nhiệt ẩn nhưng có thăng giáng và độ nhạy rất mạnh gần điểm tới hạn.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nhiệt động lực học](00_thermodynamics.md), [Entropy và cơ học thống kê](01_entropy_statistical_mechanics.md), [Vận chuyển và khuếch tán](../03_continuum/02_transport_diffusion_heat.md).
 
 **Liên hệ tiếp:** [Ensemble và hàm phân hoạch](03_ensembles_partition_functions.md), [Vật chất ngưng tụ và siêu dẫn](../10_condensed_matter_devices/02_transport_magnetism_superconductivity.md), [Quang học và vật đen](../06_optics/02_photons_lasers_coherence.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

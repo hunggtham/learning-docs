@@ -1,8 +1,11 @@
-# Workflow và Agent khác nhau như thế nào?
+# Workflow và tác nhân (agent / 에이전트) khác nhau như thế nào?
+
+> **Mạch đọc:** Đặt **Workflow và tác nhân (agent / 에이전트) khác nhau như thế nào?** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Determinism vs Flexibility** sang **Hybrid kiến trúc (architecture / 아키텍처)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Hai từ này thường bị dùng như synonym nhưng chúng đại diện hai cách phân bổ quyền quyết định khác nhau.
 
-**Workflow (워크플로 / quy trình)** có control flow chủ yếu được developer định nghĩa trước. **Agent** cho model quyết định nhiều hơn về next step dựa trên state/observation hiện tại.
+**Workflow (워크플로 / quy trình)** có điều khiển (control / 제어) luồng (flow / 흐름) chủ yếu được nhà phát triển (developer / 개발자) định nghĩa trước. **tác nhân (agent / 에이전트)** cho mô hình (model / 모델) quyết định nhiều hơn về next step dựa trên trạng thái (state / 상태)/observation hiện tại.
 
 ```text
 Workflow:
@@ -14,21 +17,21 @@ observe state → choose among allowed actions → observe result → repeat
 
 ## Determinism vs Flexibility
 
-Workflow mạnh khi process ổn định, auditability cao và branching logic biết trước.
+Workflow mạnh khi tiến trình (process / 프로세스) ổn định, auditability cao và branching lô-gic (logic / 논리) biết trước.
 
-Agent mạnh khi:
+Tác nhân (agent / 에이전트) mạnh khi:
 
-- input không có schema cố định;
-- task có nhiều đường giải;
-- cần interpret natural language;
-- environment không predictable;
-- action sequence khó encode hết bằng rules.
+- đầu vào (input / 입력) không có lược đồ (schema / 스키마) cố định;
+- tác vụ (task / 작업) có nhiều đường giải;
+- cần interpret natural ngôn ngữ (language / 언어);
+- môi trường (environment / 환경) không predictable;
+- hành động (action / 동작) chuỗi (sequence / 시퀀스) khó encode hết bằng rules.
 
-Không nên dùng agent chỉ vì “AI mới hơn”.
+Không nên dùng tác nhân (agent / 에이전트) chỉ vì “AI mới hơn”.
 
-## Hybrid Architecture
+## Hybrid kiến trúc (architecture / 아키텍처)
 
-Thiết kế production thường tốt nhất:
+Thiết kế môi trường vận hành (production / 운영 환경) thường tốt nhất:
 
 ```text
 Deterministic workflow shell
@@ -49,59 +52,59 @@ receive claim
 → payment execution [deterministic + approval]
 ```
 
-## Why Workflow is Easier to Test
+## Why Workflow is Easier to kiểm thử (test / 테스트)
 
-Vì transitions known trước, unit/integration tests có thể cover branches rõ hơn.
+Vì transitions known trước, đơn vị (unit / 단위)/tích hợp (integration / 통합) tests có thể cover branches rõ hơn.
 
-Agent behavior stochastic hơn; evaluation cần scenario suites và trajectory analysis.
+Tác nhân (agent / 에이전트) hành vi (behavior / 동작) stochastic hơn; evaluation cần scenario suites và trajectory phân tích (analysis / 분석).
 
-## Reliability Composition
+## Độ tin cậy (reliability / 신뢰성) Composition
 
-Workflow có fewer model decisions nên giảm compounded uncertainty. Nếu deterministic step có correctness gần 1 và chỉ 2 agentic decisions thay vì 10, end-to-end reliability thường tốt hơn.
+Workflow có fewer mô hình (model / 모델) decisions nên giảm compounded bất định (uncertainty / 불확실성). Nếu deterministic step có tính đúng đắn (correctness / 정확성) gần 1 và chỉ 2 agentic decisions thay vì 10, end-to-end độ tin cậy (reliability / 신뢰성) thường tốt hơn.
 
-## Cost
+## Chi phí (cost / 비용)
 
-Agent loop gọi model nhiều lần. Workflow có thể gọi model đúng nơi cần semantic intelligence.
+Tác nhân (agent / 에이전트) vòng lặp (loop / 루프) gọi mô hình (model / 모델) nhiều lần. Workflow có thể gọi mô hình (model / 모델) đúng nơi cần ngữ nghĩa (semantic / 의미적) intelligence.
 
-Optimization principle:
+Tối ưu hóa (optimization / 최적화) principle:
 
-> **Dùng deterministic code cho phần deterministic; dùng model cho phần uncertainty/semantics.**
+> **Dùng deterministic mã (code / 코드) cho phần deterministic; dùng mô hình (model / 모델) cho phần bất định (uncertainty / 불확실성)/ngữ nghĩa (semantics / 의미론).**
 
-## Explainability và Audit
+## Explainability và kiểm tra (audit / 감사)
 
-Workflow branch rõ giúp explain “vì sao action xảy ra”. Agent cần log state, tool calls, selected evidence và verification results để reconstruct trajectory.
+Workflow branch rõ giúp explain “vì sao hành động (action / 동작) xảy ra”. tác nhân (agent / 에이전트) cần log trạng thái (state / 상태), công cụ (tool / 도구) calls, selected bằng chứng (evidence / 증거) và xác minh (verification / 확인) results để reconstruct trajectory.
 
-## Failure Isolation
+## Thất bại (failure / 실패) Isolation
 
-Hybrid system có thể isolate AI failure:
+Hybrid hệ thống (system / 시스템) có thể isolate AI thất bại (failure / 실패):
 
 ```text
 model output invalid
 → fallback deterministic/manual route
 ```
 
-Nếu toàn bộ application là one giant agent loop, blast radius lớn hơn.
+Nếu toàn bộ ứng dụng (application / 애플리케이션) là one giant tác nhân (agent / 에이전트) vòng lặp (loop / 루프), blast radius lớn hơn.
 
 ## When to Prefer Workflow
 
-- compliance-heavy process;
-- exact financial calculation;
-- fixed approval chain;
-- repeated ETL/data pipeline;
+- compliance-heavy tiến trình (process / 프로세스);
+- chính xác (exact / 정확한) financial calculation;
+- fixed approval chuỗi (chain / 사슬);
+- repeated ETL/dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인);
 - known API orchestration;
-- state transitions defined by business rules.
+- trạng thái (state / 상태) transitions defined by nghiệp vụ (business / 비즈니스) rules.
 
-## When Agent Adds Value
+## When tác nhân (agent / 에이전트) Adds giá trị (value / 값)
 
 - open-ended research;
 - debugging unknown codebase;
-- heterogeneous tool discovery;
-- document-heavy case analysis;
+- heterogeneous công cụ (tool / 도구) discovery;
+- document-heavy trường hợp (case / 사례) phân tích (analysis / 분석);
 - planning under changing observations.
 
-## Agent-in-Workflow Pattern
+## Agent-in-Workflow mẫu (pattern / 패턴)
 
-Một node `AnalyzeCase` có thể internally chạy agent, nhưng outer workflow owns:
+Một nút (node / 노드) `AnalyzeCase` có thể internally chạy tác nhân (agent / 에이전트), nhưng outer workflow owns:
 
 ```text
 timeout
@@ -112,9 +115,9 @@ SLA
 next deterministic step
 ```
 
-## Workflow-in-Agent Pattern
+## Workflow-in-Agent mẫu (pattern / 패턴)
 
-Agent có thể invoke a known workflow as one high-level tool:
+Tác nhân (agent / 에이전트) có thể invoke a known workflow as one high-level công cụ (tool / 도구):
 
 ```text
 agent decides “run onboarding workflow”
@@ -122,21 +125,21 @@ agent decides “run onboarding workflow”
 → returns result
 ```
 
-Đây thường tốt hơn để agent gọi 12 low-level APIs riêng.
+Đây thường tốt hơn để tác nhân (agent / 에이전트) gọi 12 low-level APIs riêng.
 
-## State Ownership
+## Quyền sở hữu trạng thái (state ownership / 상태 소유권)
 
-Workflow engine nên own durable process state. Agent context chỉ nhận relevant view.
+Workflow engine nên own durable tiến trình (process / 프로세스) trạng thái (state / 상태). tác nhân (agent / 에이전트) ngữ cảnh (context / 맥락) chỉ nhận relevant view.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Workflow quyết định đường đi trước; Agent quyết định đường đi trong lúc chạy. Hybrid system chọn đúng mức autonomy cho từng đoạn.**
+> **Workflow quyết định đường đi trước; tác nhân (agent / 에이전트) quyết định đường đi trong lúc chạy. Hybrid hệ thống (system / 시스템) chọn đúng mức autonomy cho từng đoạn.**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Agent thay thế workflow engine”
+### “tác nhân (agent / 에이전트) thay thế workflow engine”
 
-Không. Scheduling, persistence, retry và transactional orchestration vẫn là systems problems.
+Không. Scheduling, persistence, thử lại (retry / 재시도) và transactional orchestration vẫn là các hệ thống (systems / 시스템들) problems.
 
 ### “Workflow không phải AI”
 
@@ -144,10 +147,12 @@ Workflow có thể chứa ML/LLM nodes. AI vs workflow là khác axis.
 
 ### “More agentic = more capable”
 
-More autonomy cũng nghĩa more variance, cost và risk.
+More autonomy cũng nghĩa more variance, chi phí (cost / 비용) và rủi ro (risk / 위험).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Phân biệt này là nền cho system design ở các chapter orchestration và reliability.
+Phân biệt này là nền cho hệ thống (system / 시스템) thiết kế (design / 설계) ở các chapter orchestration và độ tin cậy (reliability / 신뢰성).
 
 Xem tiếp: [Multi-Agent Systems](./07_multi_agent_systems.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

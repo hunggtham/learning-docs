@@ -8,7 +8,7 @@
 
 > **KR:** DML은 만들어진 테이블에 관리하고자 하는 자료를 입력, 수정, 삭제, 조회하는 명령어이다.
 
-DML là nhóm lệnh dùng để nhập, sửa, xóa và truy vấn dữ liệu trong bảng đã được tạo. Các lệnh cốt lõi là `INSERT` (nhập dữ liệu), `UPDATE` (cập nhật dữ liệu), `DELETE` (xóa dữ liệu) và `SELECT` (truy vấn dữ liệu); `MERGE` (hợp nhất dữ liệu) là lệnh bổ sung. Khác với DDL, kết quả của DML gắn với transaction (giao dịch), nên trong Oracle cần chủ động `COMMIT` (xác nhận lưu) hoặc `ROLLBACK` (hoàn tác) khi cần.
+DML là nhóm lệnh dùng để nhập, sửa, xóa và truy vấn dữ liệu trong bảng đã được tạo. Các lệnh cốt lõi là `INSERT` (nhập dữ liệu), `UPDATE` (cập nhật dữ liệu), `DELETE` (xóa dữ liệu) và `SELECT` (truy vấn dữ liệu); `MERGE` (hợp nhất dữ liệu) là lệnh bổ sung. Khác với DDL, kết quả của DML gắn với giao dịch (transaction / 트랜잭션), nên trong Oracle cần chủ động `COMMIT` (xác nhận lưu) hoặc `ROLLBACK` (hoàn tác) khi cần.
 
 ## 2. INSERT (Insert) (chèn dữ liệu)
 
@@ -26,13 +26,13 @@ INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 ```
 
-> **KR:** ORACLE은 한 번에 한 행만 입력 가능하고, SQL Server는 여러 행 동시 삽입이 가능하다.
+> **KR:** ORACLE은 한 번에 한 행만 입력 가능하고, SQL máy chủ (server / 서버)는 여러 행 동시 삽입이 가능하다.
 
-Trong cú pháp được PDF nhấn mạnh, Oracle chèn một hàng cho mỗi mệnh đề `VALUES`; SQL Server có thể viết nhiều nhóm giá trị trong một câu lệnh. Dù dùng hệ quản trị nào, mỗi giá trị phải phù hợp kiểu dữ liệu và kích thước của cột. Nếu bỏ qua một cột có `NOT NULL` (Not Null) (không cho phép rỗng) mà không có giá trị mặc định hợp lệ, câu lệnh lỗi. Trong Oracle, chuỗi rỗng `''` được xử lý như `NULL`; vì thế khi truy vấn cần kiểm tra bằng `IS NULL`, không phải `= ''`.
+Trong cú pháp được PDF nhấn mạnh, Oracle chèn một hàng cho mỗi mệnh đề `VALUES`; SQL máy chủ (server / 서버) có thể viết nhiều nhóm giá trị trong một câu lệnh. Dù dùng hệ quản trị nào, mỗi giá trị phải phù hợp kiểu dữ liệu và kích thước của cột. Nếu bỏ qua một cột có `NOT NULL` (Not Null) (không cho phép rỗng) mà không có giá trị mặc định hợp lệ, câu lệnh lỗi. Trong Oracle, chuỗi rỗng `''` được xử lý như `NULL`; vì thế khi truy vấn cần kiểm tra bằng `IS NULL`, không phải `= ''`.
 
-## 3. UPDATE (Update) (cập nhật dữ liệu)
+## 3. cập nhật (update / 업데이트) (Update) (cập nhật dữ liệu)
 
-> **KR:** UPDATE는 데이터를 수정하며 컬럼 단위로 수행하고 다중 컬럼 수정이 가능하다.
+> **KR:** cập nhật (update / 업데이트)는 데이터를 수정하며 컬럼 단위로 수행하고 다중 컬럼 수정이 가능하다.
 
 `UPDATE` thay đổi giá trị của một hay nhiều cột ở các hàng thỏa điều kiện. `SET` (Set) (gán giá trị mới) xác định cột và giá trị cần sửa; `WHERE` (Where) (điều kiện lọc hàng) xác định phạm vi bị ảnh hưởng. Nếu không có `WHERE`, toàn bộ hàng trong bảng bị cập nhật — đây là bẫy SQLD rất quan trọng.
 
@@ -67,7 +67,7 @@ WHERE condition;
 
 ## 5. MERGE (Merge) (hợp nhất/đồng bộ dữ liệu)
 
-> **KR:** MERGE는 참조 테이블의 데이터를 기준으로 다른 테이블을 수정하고, UPDATE와 DELETE, INSERT를 한 번의 작업으로 수행할 수 있다.
+> **KR:** MERGE는 참조 테이블의 데이터를 기준으로 다른 테이블을 수정하고, cập nhật (update / 업데이트)와 DELETE, INSERT를 한 번의 작업으로 수행할 수 있다.
 
 `MERGE` đồng bộ bảng đích với bảng nguồn theo điều kiện nối `ON`. Hàng đã khớp (`WHEN MATCHED`) được cập nhật hoặc có thể xóa theo điều kiện; hàng chưa khớp (`WHEN NOT MATCHED`) được chèn. Bản chất của nó là “nếu có thì sửa, nếu chưa có thì thêm”, nên phù hợp dữ liệu staging (bảng trung gian) hoặc đồng bộ dữ liệu thành viên.
 
@@ -91,7 +91,7 @@ SELECT [ALL | DISTINCT] column_name
 FROM table_name;
 ```
 
-`ALL` (All) (giữ mọi dòng) là mặc định; `DISTINCT` (Distinct) (loại dòng trùng theo toàn bộ danh sách chọn) chỉ giữ kết quả khác nhau. Phần JOIN, GROUP BY, subquery, Window Function và Hierarchical Query trong các bài trước đều là những cách mở rộng của câu `SELECT` này.
+`ALL` (All) (giữ mọi dòng) là mặc định; `DISTINCT` (Distinct) (loại dòng trùng theo toàn bộ danh sách chọn) chỉ giữ kết quả khác nhau. Phần phép nối (join / 조인), GROUP BY, subquery, hàm cửa sổ (window function / 윈도우 함수) và Hierarchical truy vấn (query / 쿼리) trong các bài trước đều là những cách mở rộng của câu `SELECT` này.
 
 ## 7. 산술 연산자 (Arithmetic operator) (toán tử số học)
 
@@ -103,7 +103,7 @@ Toán tử số học áp dụng cho `NUMBER` (Number) (kiểu số) và `DATE` 
 
 > **KR:** 합성 연산자는 컬럼과 문자 또는 다른 컬럼을 연결시켜 문자 표현식의 결과로 새 컬럼을 생성한다.
 
-Toán tử nối tạo một biểu thức văn bản mới từ cột và chuỗi, hoặc từ nhiều cột. Oracle dùng `||`, SQL Server thường dùng `+`, còn `CONCAT` là hàm nối chuỗi. Không nhầm `+` của SQL Server với phép cộng số: kiểu dữ liệu của biểu thức quyết định ý nghĩa.
+Toán tử nối tạo một biểu thức văn bản mới từ cột và chuỗi, hoặc từ nhiều cột. Oracle dùng `||`, SQL máy chủ (server / 서버) thường dùng `+`, còn `CONCAT` là hàm nối chuỗi. Không nhầm `+` của SQL máy chủ (server / 서버) với phép cộng số: kiểu dữ liệu của biểu thức quyết định ý nghĩa.
 
 ```sql
 -- Oracle

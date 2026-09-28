@@ -1,10 +1,13 @@
 # Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI
 
+> **Mạch đọc:** Đọc **Địa lý kết nối với IT, GIS, Kỹ thuật dữ liệu và AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Dữ liệu không gian phải được xem là kiểu dữ liệu cốt lõi** sang **Hệ quy chiếu tọa độ là một phần của hợp đồng dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Dữ liệu không gian phải được xem là kiểu dữ liệu cốt lõi
 
 Trong ứng dụng thông thường, vị trí hay bị lưu đơn giản thành hai cột vĩ độ và kinh độ rồi xử lý thủ công. Cách này đủ cho vài trường hợp đơn giản, nhưng nhanh chóng trở nên nguy hiểm khi hệ thống phải trả lời những câu hỏi như “điểm này có nằm trong khu vực kia không?”, “đối tượng nào gần nhất?”, “hai vùng có giao nhau không?” hoặc “đường nào có chi phí thấp nhất?”. Khi đó vị trí không còn là hai con số rời rạc mà trở thành một **kiểu dữ liệu có quy tắc hình học**.
 
-Các hệ như PostGIS, SQL Server Spatial hay Oracle Spatial cung cấp các kiểu **hình học/địa lý (`geometry`/`geography`)**, phép toán không gian và chỉ mục chuyên dụng. Điểm quan trọng là không gian phải đi vào thiết kế dữ liệu ngay từ đầu, giống như tiền tệ cần đơn vị và ngày–giờ cần múi giờ.
+Các hệ như PostGIS, SQL máy chủ (server / 서버) Spatial hay Oracle Spatial cung cấp các kiểu **hình học/địa lý (`geometry`/`geography`)**, phép toán không gian và chỉ mục chuyên dụng. Điểm quan trọng là không gian phải đi vào thiết kế dữ liệu ngay từ đầu, giống như tiền tệ cần đơn vị và ngày–giờ cần múi giờ.
 
 ## Hệ quy chiếu tọa độ là một phần của hợp đồng dữ liệu
 
@@ -12,7 +15,7 @@ Một tọa độ không thể được hiểu chỉ từ hai số `x, y`. Cần
 
 Một lỗi rất phổ biến là nhầm `latitude, longitude` với `x, y`. Trong nhiều thư viện hình học, `x` thường tương ứng kinh độ và `y` tương ứng vĩ độ. Nếu đảo thứ tự, một điểm ở Seoul có thể nhảy sang một vị trí hoàn toàn khác nhưng giá trị số vẫn “trông hợp lý”, khiến lỗi khó phát hiện bằng kiểm tra kiểu dữ liệu đơn thuần.
 
-EPSG:4326 thường dùng đơn vị độ. Nếu mã chương trình mặc định mọi tọa độ đều tính bằng mét, vùng đệm `1000` có thể bị hiểu thành 1000 độ. Vì vậy CRS nên được coi như **đơn vị đo** trong hợp đồng API, không phải siêu dữ liệu (metadata) phụ.
+EPSG:4326 thường dùng đơn vị độ. Nếu mã chương trình mặc định mọi tọa độ đều tính bằng mét, vùng đệm `1000` có thể bị hiểu thành 1000 độ. Vì vậy CRS nên được coi như **đơn vị đo** trong hợp đồng API, không phải siêu dữ liệu (metadata / 메타데이터) phụ.
 
 ## Khoảng cách phẳng và khoảng cách trắc địa không giống nhau
 
@@ -22,9 +25,9 @@ Trên phạm vi nhỏ, phép đo trên mặt phẳng thường đủ tốt. Như
 
 ## Tính hợp lệ hình học và quan hệ tô-pô
 
-Một đa giác có thể tự cắt, có lỗ bị đảo hướng hoặc có đường biên không khép kín. Hình học như vậy có thể hiển thị được nhưng gây lỗi khi tính diện tích, giao nhau hoặc chứa điểm. Vì thế pipeline dữ liệu không gian nên có bước kiểm tra **tính hợp lệ hình học (geometry validity)** trước khi phân tích.
+Một đa giác có thể tự cắt, có lỗ bị đảo hướng hoặc có đường biên không khép kín. Hình học như vậy có thể hiển thị được nhưng gây lỗi khi tính diện tích, giao nhau hoặc chứa điểm. Vì thế chuỗi xử lý (pipeline / 파이프라인) dữ liệu không gian nên có bước kiểm tra **tính hợp lệ hình học (geometry validity)** trước khi phân tích.
 
-Tô-pô (topology) trả lời các quan hệ kiểu “chạm”, “nằm trong”, “giao nhau” hay “kề nhau”. Hai đa giác có thể nhìn như tiếp xúc trên màn hình nhưng thực tế còn một khe nhỏ do sai số dữ liệu; ngược lại, hai đường có thể cắt nhau về hình học nhưng không được phép nối trong mạng đường vì khác cao độ. Đây là ví dụ cho thấy hình học hiển thị và logic nghiệp vụ không phải lúc nào cũng giống nhau.
+Tô-pô (topology) trả lời các quan hệ kiểu “chạm”, “nằm trong”, “giao nhau” hay “kề nhau”. Hai đa giác có thể nhìn như tiếp xúc trên màn hình nhưng thực tế còn một khe nhỏ do sai số dữ liệu; ngược lại, hai đường có thể cắt nhau về hình học nhưng không được phép nối trong mạng đường vì khác cao độ. Đây là ví dụ cho thấy hình học hiển thị và lô-gic (logic / 논리) nghiệp vụ không phải lúc nào cũng giống nhau.
 
 ## Chỉ mục không gian: giảm số phép toán đắt tiền
 
@@ -38,7 +41,7 @@ Các cấu trúc thường gặp gồm R-tree, GiST, quadtree, geohash, S2 và H
 
 **Dữ liệu vectơ (vector)** biểu diễn đối tượng rời rạc bằng điểm, đường và đa giác. **Dữ liệu lưới (raster)** chia không gian thành các ô có giá trị. Mạng đường, thửa đất và biên giới phù hợp với vectơ; ảnh vệ tinh, nhiệt độ và độ cao thường phù hợp với dữ liệu lưới.
 
-Khác biệt quan trọng nằm ở cách đặt câu hỏi. Với vectơ, ta thường hỏi về đối tượng và quan hệ. Với raster, ta thường hỏi giá trị của trường tại một ô hoặc mẫu phân bố trên bề mặt. Chuyển raster thành vector hay ngược lại luôn thêm giả định về độ phân giải và ranh giới, nên không phải phép biến đổi “miễn phí”.
+Khác biệt quan trọng nằm ở cách đặt câu hỏi. Với vectơ, ta thường hỏi về đối tượng và quan hệ. Với raster, ta thường hỏi giá trị của trường tại một ô hoặc mẫu phân bố trên bề mặt. Chuyển raster thành véc-tơ (vector / 벡터) hay ngược lại luôn thêm giả định về độ phân giải và ranh giới, nên không phải phép biến đổi “miễn phí”.
 
 ## Độ phân giải là một phần của ý nghĩa dữ liệu
 
@@ -50,15 +53,15 @@ Raster 10 m, 100 m và 1 km có thể mô tả cùng một biến nhưng không 
 
 Bản đồ web thường chia thế giới thành các **ô bản đồ (tile)** theo nhiều mức phóng đại. Ở mỗi mức, hệ thống chỉ gửi lượng chi tiết vừa đủ cho màn hình. Cách này giảm băng thông và cho phép bộ nhớ đệm theo `zoom/x/y`.
 
-**Ô lưới (raster tile)** đã được dựng thành ảnh, phù hợp khi giao diện không cần thay đổi cách biểu diễn dữ liệu. **Ô vectơ (vector tile)** giữ hình học và thuộc tính đã được đơn giản hóa, cho phép trình duyệt thay đổi kiểu hiển thị. Đổi lại phía client phải làm nhiều việc hơn.
+**Ô lưới (raster tile)** đã được dựng thành ảnh, phù hợp khi giao diện không cần thay đổi cách biểu diễn dữ liệu. **Ô vectơ (vector tile)** giữ hình học và thuộc tính đã được đơn giản hóa, cho phép trình duyệt thay đổi kiểu hiển thị. Đổi lại phía máy khách (client / 클라이언트) phải làm nhiều việc hơn.
 
 Mức chi tiết (LOD — Level of Detail) không chỉ là tối ưu hiệu năng. Nó là quyết định về thông tin nào được giữ ở mỗi quy mô. Một đường nhỏ có thể xuất hiện ở zoom cao nhưng biến mất ở zoom thấp; điều này phản ánh quá trình khái quát hóa bản đồ.
 
-## Spatial join: phép nối dữ liệu bằng quan hệ không gian
+## Spatial phép nối (join / 조인): phép nối dữ liệu bằng quan hệ không gian
 
 Trong cơ sở dữ liệu thông thường, ta nối bảng bằng khóa. Trong GIS, nhiều phép nối diễn ra bằng vị trí. Ví dụ: gán mỗi điểm cửa hàng vào quận chứa nó, gán mỗi tai nạn vào đoạn đường gần nhất hoặc tính dân số nằm trong vùng ngập.
 
-Đây gọi là **phép nối không gian (spatial join)**. Sai CRS, hình học lỗi hoặc quy tắc “gần nhất” không phù hợp có thể tạo kết quả sai dù câu SQL chạy thành công. Vì vậy spatial join luôn cần kiểm tra cả logic địa lý, không chỉ cú pháp.
+Đây gọi là **phép nối không gian (spatial join)**. Sai CRS, hình học lỗi hoặc quy tắc “gần nhất” không phù hợp có thể tạo kết quả sai dù câu SQL chạy thành công. Vì vậy spatial phép nối (join / 조인) luôn cần kiểm tra cả lô-gic (logic / 논리) địa lý, không chỉ cú pháp.
 
 ## Định tuyến: đồ thị + địa lý + quy tắc nghiệp vụ
 
@@ -90,9 +93,9 @@ Thiết kế dữ liệu tốt cần xác định đây là vị trí tức th�
 
 Ảnh vệ tinh có thể được biểu diễn dưới dạng tensor của dữ liệu lưới. CNN hoặc Transformer có thể phân loại lớp phủ đất, phát hiện đối tượng hoặc phân đoạn vùng ngập.
 
-Tuy nhiên các pixel gần nhau thường rất tương quan. Nếu chia ngẫu nhiên train/test, các điểm kiểm tra có thể nằm ngay cạnh dữ liệu huấn luyện, khiến điểm số quá đẹp. **Rò rỉ không gian (spatial leakage)** làm mô hình có vẻ tổng quát nhưng thất bại khi chuyển sang vùng mới.
+Tuy nhiên các điểm ảnh (pixel / 픽셀) gần nhau thường rất tương quan. Nếu chia ngẫu nhiên train/kiểm thử (test / 테스트), các điểm kiểm tra có thể nằm ngay cạnh dữ liệu huấn luyện, khiến điểm số quá đẹp. **Rò rỉ không gian (spatial leakage)** làm mô hình có vẻ tổng quát nhưng thất bại khi chuyển sang vùng mới.
 
-Vì vậy kiểm định chéo theo block không gian, theo lưu vực hoặc theo thành phố thường phù hợp hơn khi mục tiêu là dự báo ngoài vùng đã học.
+Vì vậy kiểm định chéo theo khối (block / 블록) không gian, theo lưu vực hoặc theo thành phố thường phù hợp hơn khi mục tiêu là dự báo ngoài vùng đã học.
 
 ## Đặc trưng không gian và nguy cơ học nhầm vị trí
 
@@ -108,15 +111,15 @@ Có thể giảm rủi ro bằng tổng hợp theo vùng, làm thô độ chính
 
 ## ETL không gian cần kiểm tra nhiều hơn ETL thông thường
 
-Một pipeline không gian thường gồm: thu nhận → chuẩn hóa CRS → kiểm tra hình học → làm sạch thuộc tính → nối không gian → tổng hợp → tạo tile hoặc API.
+Một chuỗi xử lý (pipeline / 파이프라인) không gian thường gồm: thu nhận → chuẩn hóa CRS → kiểm tra hình học → làm sạch thuộc tính → nối không gian → tổng hợp → tạo tile hoặc API.
 
-Các kiểm tra nên bao gồm: tọa độ có nằm trong phạm vi hợp lý không, hình học có hợp lệ không, đơn vị có nhất quán không, dữ liệu có bị đảo kinh–vĩ độ không và trường thời gian có dùng cùng múi giờ không. Đây là tương đương của validation schema trong kỹ thuật dữ liệu, nhưng có thêm lớp địa lý.
+Các kiểm tra nên bao gồm: tọa độ có nằm trong phạm vi hợp lý không, hình học có hợp lệ không, đơn vị có nhất quán không, dữ liệu có bị đảo kinh–vĩ độ không và trường thời gian có dùng cùng múi giờ không. Đây là tương đương của kiểm tra hợp lệ (validation / 검증) lược đồ (schema / 스키마) trong kỹ thuật dữ liệu, nhưng có thêm lớp địa lý.
 
 ## Quan sát hệ thống và kiểm thử GIS
 
-Nhiều lỗi không gian chỉ xuất hiện ở vùng biên hoặc dữ liệu bất thường. Vì vậy unit test nên có các trường hợp gần kinh tuyến 180°, gần cực, đa giác có lỗ, điểm nằm đúng biên và tuyến qua nhiều CRS.
+Nhiều lỗi không gian chỉ xuất hiện ở vùng biên hoặc dữ liệu bất thường. Vì vậy đơn vị (unit / 단위) kiểm thử (test / 테스트) nên có các trường hợp gần kinh tuyến 180°, gần cực, đa giác có lỗ, điểm nằm đúng biên và tuyến qua nhiều CRS.
 
-Trong production, nên theo dõi tỷ lệ geometry invalid, latency của spatial query, số lượng tile cache miss và phân bố sai số vị trí. Một hệ thống bản đồ “trông đúng” không đảm bảo backend đang tính đúng.
+Trong môi trường vận hành (production / 운영 환경), nên theo dõi tỷ lệ hình học (geometry / 기하학) invalid, độ trễ (latency / 지연 시간) của spatial truy vấn (query / 쿼리), số lượng tile trượt bộ nhớ đệm (cache miss / 캐시 미스) và phân bố sai số vị trí. Một hệ thống bản đồ “trông đúng” không đảm bảo backend đang tính đúng.
 
 ## Bản sao số
 
@@ -126,16 +129,18 @@ Thách thức lớn không phải chỉ dựng mô hình 3D mà là đồng bộ
 
 ## Những hiểu lầm phổ biến
 
-**“Có latitude/longitude là đã có GIS.”** Không đúng. GIS còn cần CRS, quan hệ không gian, độ chính xác, topology và scale.
+**“Có latitude/longitude là đã có GIS.”** Không đúng. GIS còn cần CRS, quan hệ không gian, độ chính xác, topology và quy mô (scale / 규모).
 
 **“Khoảng cách gần nhất luôn là đường thẳng.”** Không đúng với mạng đường, địa hình hoặc biên giới.
 
 **“Độ phân giải càng cao càng tốt.”** Không luôn đúng; độ phân giải cao tăng chi phí và có thể thêm nhiễu không liên quan.
 
-**“Model accuracy cao nghĩa là mô hình không gian tốt.”** Không đúng nếu train/test bị rò rỉ không gian.
+**“mô hình (model / 모델) accuracy cao nghĩa là mô hình không gian tốt.”** Không đúng nếu train/kiểm thử (test / 테스트) bị rò rỉ không gian.
 
 ## Mô hình tư duy
 
-> Phần mềm không gian là **kỹ thuật dữ liệu trong đó khoảng cách, topology, phép chiếu, quy mô và thời gian đều là logic nghiệp vụ**. Đừng coi chúng là lớp hiển thị đặt sau cùng; chúng phải xuất hiện từ schema, API, test đến monitoring.
+> Phần mềm không gian là **kỹ thuật dữ liệu trong đó khoảng cách, topology, phép chiếu, quy mô và thời gian đều là lô-gic (logic / 논리) nghiệp vụ**. Đừng coi chúng là lớp hiển thị đặt sau cùng; chúng phải xuất hiện từ lược đồ (schema / 스키마), API, kiểm thử (test / 테스트) đến monitoring.
 
 Xem thêm: [Nền tảng GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md), [Toán học và Thống kê](./00_geography_math_statistics.md), [Giao thông và toàn cầu hóa](../02_human_geography/08_transport_trade_globalization.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geography math statistics](./00_geography_math_statistics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

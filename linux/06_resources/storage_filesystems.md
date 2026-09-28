@@ -1,10 +1,13 @@
 # Lưu trữ, thiết bị khối và hệ thống tệp
 
+> **Mạch đọc:** Đọc **Lưu trữ, thiết bị khối và hệ thống tệp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thiết bị khối là lớp trừu tượng gì?** sang **Phân vùng và volume**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Khi `df -h` báo 100%, phản xạ phổ biến là tìm tệp lớn để xóa. Nhưng ngăn xếp lưu trữ (storage stack) của Linux có nhiều lớp: thiết bị khối vật lý hoặc ảo, phân vùng, ánh xạ volume, hệ thống tệp, vùng tên mount, tệp/`inode` và các tham chiếu đang mở. Hiểu từng lớp giúp phân biệt các tình huống như "hết dung lượng", "hết inode", "tệp đã xóa nhưng vẫn đang mở" hoặc "gắn sai filesystem".
 
 ## Thiết bị khối là lớp trừu tượng gì?
 
-Ổ đĩa, SSD hoặc ổ đĩa ảo được kernel trình bày dưới dạng **thiết bị khối (block device / 블록 장치)**. Ứng dụng thông thường không đọc trực tiếp thiết bị khối thô; hệ thống tệp tổ chức các block thành tệp và thư mục.
+Ổ đĩa, SSD hoặc ổ đĩa ảo được kernel trình bày dưới dạng **thiết bị khối (block device / 블록 장치)**. Ứng dụng thông thường không đọc trực tiếp thiết bị khối thô; hệ thống tệp tổ chức các khối (block / 블록) thành tệp và thư mục.
 
 ```bash
 lsblk
@@ -15,7 +18,7 @@ lsblk -f
 
 ## Phân vùng và volume
 
-Một ổ đĩa có thể được chia thành nhiều phân vùng. Hệ thống doanh nghiệp hoặc đám mây còn thường dùng LVM hay lớp ảo hóa lưu trữ để tách **volume logic (logical volume)** khỏi bố trí ổ đĩa vật lý.
+Một ổ đĩa có thể được chia thành nhiều phân vùng. Hệ thống doanh nghiệp hoặc đám mây còn thường dùng LVM hay lớp ảo hóa lưu trữ để tách **volume lô-gic (logic / 논리) (logical volume)** khỏi bố trí ổ đĩa vật lý.
 
 Mô hình LVM đơn giản:
 
@@ -27,7 +30,7 @@ Lớp trung gian này cho phép quản lý dung lượng linh hoạt hơn phân 
 
 ## Hệ thống tệp và mount
 
-Các hệ thống tệp như ext4 hoặc XFS quản lý phân bổ khối, metadata và vùng tên nội bộ. Để không gian người dùng truy cập, hệ thống tệp được **gắn (mount)** vào cây thư mục chung:
+Các hệ thống tệp như ext4 hoặc XFS quản lý phân bổ khối, siêu dữ liệu (metadata / 메타데이터) và vùng tên nội bộ. Để không gian người dùng truy cập, hệ thống tệp được **gắn (mount)** vào cây thư mục chung:
 
 ```bash
 findmnt
@@ -57,11 +60,11 @@ sudo du -xhd1 /var 2>/dev/null | sort -hr
 
 `-x` giữ việc duyệt trong cùng hệ thống tệp. Đây là chi tiết quan trọng nếu `/var` chứa một điểm gắn kết khác.
 
-Nếu `df` báo dùng rất nhiều nhưng `du` không tìm thấy lượng dữ liệu tương ứng, nên nghĩ tới tệp đã xóa nhưng vẫn mở, hoặc phần dung lượng dành cho metadata/hệ thống tệp, trước khi kết luận công cụ đo sai.
+Nếu `df` báo dùng rất nhiều nhưng `du` không tìm thấy lượng dữ liệu tương ứng, nên nghĩ tới tệp đã xóa nhưng vẫn mở, hoặc phần dung lượng dành cho siêu dữ liệu (metadata / 메타데이터)/hệ thống tệp, trước khi kết luận công cụ đo sai.
 
 ## Tệp đã xóa nhưng vẫn đang mở
 
-Một tiến trình có thể giữ `inode` sau khi tên đường dẫn đã bị `unlink`. Các block dữ liệu chưa thể được thu hồi cho tới khi tham chiếu đang mở cuối cùng được đóng.
+Một tiến trình có thể giữ `inode` sau khi tên đường dẫn đã bị `unlink`. Các khối (block / 블록) dữ liệu chưa thể được thu hồi cho tới khi tham chiếu đang mở cuối cùng được đóng.
 
 ```bash
 sudo lsof +L1
@@ -71,7 +74,7 @@ Nếu thấy một tiến trình vẫn giữ nhật ký đã xóa có kích thư
 
 ## Inode
 
-Hệ thống tệp cần các đối tượng metadata. Rất nhiều tệp nhỏ có thể làm cạn tài nguyên `inode` trước khi dùng hết số byte lưu trữ:
+Hệ thống tệp cần các đối tượng siêu dữ liệu (metadata / 메타데이터). Rất nhiều tệp nhỏ có thể làm cạn tài nguyên `inode` trước khi dùng hết số byte lưu trữ:
 
 ```bash
 df -i
@@ -81,14 +84,14 @@ Khi inode đạt 100%, thao tác tạo tệp có thể thất bại với `No sp
 
 ## Tệp thưa (sparse file)
 
-**Tệp thưa (sparse file)** có kích thước logic lớn nhưng không cấp phát block cho mọi vùng toàn số 0. Vì vậy `ls -lh` và `du -h` có thể báo kích thước khác nhau.
+**Tệp thưa (sparse file)** có kích thước lô-gic (logic / 논리) lớn nhưng không cấp phát khối (block / 블록) cho mọi vùng toàn số 0. Vì vậy `ls -lh` và `du -h` có thể báo kích thước khác nhau.
 
 ```bash
 ls -lh file
 du -h file
 ```
 
-`ls` thường hiển thị kích thước biểu kiến hoặc logic, còn `du` phản ánh các block thực tế được cấp phát theo quy tắc của công cụ và filesystem.
+`ls` thường hiển thị kích thước biểu kiến hoặc lô-gic (logic / 논리), còn `du` phản ánh các khối (block / 블록) thực tế được cấp phát theo quy tắc của công cụ và filesystem.
 
 Đây là phản ví dụ quan trọng cho giả định rằng "kích thước tệp luôn bằng dung lượng đĩa đã dùng".
 
@@ -110,7 +113,7 @@ Một tệp có bit thực thi nhưng nằm trên mount `noexec` vẫn có thể
 
 ## `/etc/fstab`
 
-Cấu hình mount lâu dài thường nằm trong `/etc/fstab`. Một mục sai có thể ảnh hưởng quá trình khởi động. Trước khi thay đổi production, cần sao lưu và hiểu ý nghĩa UUID, thiết bị và điểm gắn kết.
+Cấu hình mount lâu dài thường nằm trong `/etc/fstab`. Một mục sai có thể ảnh hưởng quá trình khởi động. Trước khi thay đổi môi trường vận hành (production / 운영 환경), cần sao lưu và hiểu ý nghĩa UUID, thiết bị và điểm gắn kết.
 
 ```bash
 cat /etc/fstab
@@ -138,7 +141,7 @@ Dung lượng và độ trễ là hai chiều hoàn toàn khác nhau. Thiết b�
 iostat -xz 1 10
 ```
 
-Các số liệu như `await`, hàng đợi và mức sử dụng cần được hiểu trong bối cảnh thiết bị và khối lượng công việc; không nên áp một ngưỡng duy nhất cho mọi loại lưu trữ. Với lưu trữ mạng hoặc cloud, giới hạn dịch vụ như IOPS và throughput càng quan trọng.
+Các số liệu như `await`, hàng đợi và mức sử dụng cần được hiểu trong bối cảnh thiết bị và khối lượng công việc; không nên áp một ngưỡng duy nhất cho mọi loại lưu trữ. Với lưu trữ mạng hoặc cloud, giới hạn dịch vụ như IOPS và thông lượng (throughput / 처리량) càng quan trọng.
 
 ## Mô hình tư duy về LVM
 
@@ -154,7 +157,7 @@ lvs
 findmnt
 ```
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Khi xử lý sự cố lưu trữ, hãy đi từ vùng tên xuống lớp vật lý:
 
@@ -177,12 +180,14 @@ Khi xử lý sự cố lưu trữ, hãy đi từ vùng tên xuống lớp vật 
 
 **"`No space left` luôn nghĩa là hết GB."** Có thể hệ thống đã hết inode.
 
-**"Kích thước từ `ls` bằng dung lượng thực tế đã cấp phát."** Sparse file là phản ví dụ rõ ràng.
+**"Kích thước từ `ls` bằng dung lượng thực tế đã cấp phát."** Sparse tệp (file / 파일) là phản ví dụ rõ ràng.
 
-**"Ổ còn trống nghĩa là lưu trữ khỏe."** Độ trễ, IOPS hoặc throughput vẫn có thể là nút thắt.
+**"Ổ còn trống nghĩa là lưu trữ khỏe."** Độ trễ, IOPS hoặc thông lượng (throughput / 처리량) vẫn có thể là nút thắt.
 
 **"Tăng virtual disk thì filesystem tự tăng."** Có thể còn các lớp phân vùng, LVM và filesystem phải mở rộng riêng.
 
 ## Kết nối kiến thức
 
-Lưu trữ gắn chặt với [Hệ thống tệp và inode](../01_filesystem/filesystem_paths_inodes_links.md), [Bộ nhớ](./memory_virtual_memory.md) thông qua page cache và [Xử lý sự cố production](../09_production/production_troubleshooting.md) khi áp lực lưu trữ làm dịch vụ thất bại theo cách gián tiếp.
+Lưu trữ gắn chặt với [Hệ thống tệp và inode](../01_filesystem/filesystem_paths_inodes_links.md), [Bộ nhớ](./memory_virtual_memory.md) thông qua page bộ nhớ đệm (cache / 캐시) và [Xử lý sự cố production](../09_production/production_troubleshooting.md) khi áp lực lưu trữ làm dịch vụ thất bại theo cách gián tiếp.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [block layer io scheduler](./block_layer_io_scheduler.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

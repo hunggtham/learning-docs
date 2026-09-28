@@ -1,5 +1,8 @@
 # Mô hình lượng tử của nguyên tử
 
+> **Mạch đọc:** Đọc **Mô hình lượng tử của nguyên tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao mô hình cổ điển không đủ** sang **Hàm sóng và phương trình Schrödinger**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Mô hình cơ học lượng tử (quantum mechanical model / 양자역학적 원자 모형)** không mô tả electron như một hạt nhỏ bay trên quỹ đạo xác định quanh hạt nhân. Thay vào đó, trạng thái của electron được mô tả bằng **hàm sóng (wavefunction)** \(\psi\), và từ hàm sóng ta tính được xác suất tìm thấy electron trong các vùng không gian khác nhau.
 
 Nếu mô hình Bohr trả lời bằng các quỹ đạo có bán kính xác định, cơ học lượng tử đặt một câu hỏi sâu hơn: với một trạng thái electron nhất định, phân bố xác suất trong không gian có hình dạng ra sao, năng lượng bị lượng tử hóa như thế nào, và những đại lượng nào có thể được biết đồng thời?
@@ -32,7 +35,7 @@ Phương trình có cấu trúc giống một bài toán trị riêng trong đ�
 A\mathbf v=\lambda\mathbf v
 \]
 
-Trong cơ học lượng tử, ma trận được thay bằng toán tử, vector được thay bằng hàm sóng, còn trị riêng trở thành giá trị vật lý có thể đo như năng lượng.
+Trong cơ học lượng tử, ma trận được thay bằng toán tử, véc-tơ (vector / 벡터) được thay bằng hàm sóng, còn trị riêng trở thành giá trị vật lý có thể đo như năng lượng.
 
 Đối với nguyên tử hydrogen, Hamiltonian gồm động năng của electron và thế năng Coulomb giữa electron với proton. Giải phương trình Schrödinger không tạo ra một quỹ đạo; nó tạo ra một họ trạng thái có năng lượng và hình dạng không gian khác nhau. Những nghiệm này dẫn trực tiếp tới khái niệm obitan.
 
@@ -124,7 +127,7 @@ Ví dụ, phân lớp p có ba obitan.
 Electron còn có **spin (스핀)**, một tính chất lượng tử nội tại không nên hình dung như quả cầu tự quay quanh trục. Khi đo một thành phần spin, electron có hai khả năng:
 
 \[
-m_s=+\frac12\quad\text{hoặc}\quad-\frac12
+m_s=+\frac12\quad\văn bản (text / 텍스트){hoặc}\quad-\frac12
 \]
 
 Spin là nền tảng để hiểu nguyên lý loại trừ Pauli, ghép đôi electron, từ tính và cấu hình electron.
@@ -154,19 +157,19 @@ Obitan d và f có cấu trúc không gian phức tạp hơn. Trong hóa học v
 **Nút (node / 마디)** là vùng mà hàm sóng bằng 0. Với obitan kiểu hydrogen:
 
 \[
-\text{tổng số nút}=n-1
+\văn bản (text / 텍스트){tổng số nút}=n-1
 \]
 
 Trong đó:
 
 \[
-\text{số nút góc}=l
+\văn bản (text / 텍스트){số nút góc}=l
 \]
 
 và:
 
 \[
-\text{số nút xuyên tâm}=n-l-1
+\văn bản (text / 텍스트){số nút xuyên tâm}=n-l-1
 \]
 
 Ví dụ, obitan `2p` có một nút góc và không có nút xuyên tâm. Obitan `3s` có hai nút xuyên tâm.
@@ -255,3 +258,5 @@ Không. Chúng xuất hiện từ cấu trúc nghiệm của phương trình lư
 Nguyên tử lượng tử không phải một hệ mặt trời thu nhỏ. Hãy hình dung nó như một **hệ các trạng thái sóng lượng tử bị ràng buộc bởi trường Coulomb của hạt nhân và bởi tương tác electron–electron**. Các trạng thái có hình dạng, năng lượng và tính đối xứng khác nhau; electron phân bố vào các trạng thái đó theo các nguyên lý lượng tử.
 
 Xem tiếp: [Cấu hình electron](./03_electron_configuration.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

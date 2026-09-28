@@ -1,12 +1,15 @@
-# Tối ưu có ràng buộc, Lagrange multipliers và KKT: geometry của feasible directions
+# Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions
 
-Unconstrained optimization hỏi:
+> **Mạch đọc:** Đọc **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Feasible set quan trọng ngang mục tiêu (objective / 목표)** sang **2. Equality ràng buộc (constraint / 제약조건) và tangent hình học (geometry / 기하학)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Unconstrained tối ưu hóa (optimization / 최적화) hỏi:
 
 ```math
 \min_x f(x).
 ```
 
-Nhưng phần lớn bài toán thực tế chỉ cho phép một subset của space:
+Nhưng phần lớn bài toán thực tế chỉ cho phép một subset của không gian (space / 공간):
 
 ```text
 budget ≤ limit
@@ -16,11 +19,11 @@ risk ≤ threshold
 latency ≤ SLA
 ```
 
-Constrained optimization vì vậy không hỏi “điểm thấp nhất của toàn landscape ở đâu?”, mà hỏi:
+Constrained tối ưu hóa (optimization / 최적화) vì vậy không hỏi “điểm thấp nhất của toàn landscape ở đâu?”, mà hỏi:
 
-> Trong **feasible set** được phép, point nào tốt nhất?
+> Trong **feasible set** được phép, điểm (point / 지점) nào tốt nhất?
 
-Mental flow:
+Mental luồng (flow / 흐름):
 
 ```text
 objective
@@ -32,9 +35,9 @@ objective
 → duality / sensitivity
 ```
 
-## 1. Feasible set quan trọng ngang objective
+## 1. Feasible set quan trọng ngang mục tiêu (objective / 목표)
 
-Problem:
+Bài toán (problem / 문제):
 
 ```math
 \min_x f(x)
@@ -56,11 +59,11 @@ Feasible set:
 \{x:g_i(x)\le0,\;h_j(x)=0\}.
 ```
 
-Optimization chỉ được di chuyển bên trong `\mathcal F`.
+Tối ưu hóa (optimization / 최적화) chỉ được di chuyển bên trong `\mathcal F`.
 
-Một point có gradient khác zero vẫn có thể là constrained optimum nếu mọi downhill direction đều vi phạm constraints.
+Một điểm (point / 지점) có độ dốc (gradient / 기울기) khác zero vẫn có thể là constrained optimum nếu mọi downhill direction đều vi phạm các ràng buộc (constraints / 제약조건들).
 
-## 2. Equality constraint và tangent geometry
+## 2. Equality ràng buộc (constraint / 제약조건) và tangent hình học (geometry / 기하학)
 
 Xét:
 
@@ -74,9 +77,9 @@ subject to:
 g(x)=c.
 ```
 
-Feasible movement local nằm trong tangent space của level set.
+Feasible movement cục bộ (local / 로컬) nằm trong tangent không gian (space / 공간) của mức (level / 수준) set.
 
-Gradient constraint:
+Độ dốc (gradient / 기울기) ràng buộc (constraint / 제약조건):
 
 ```math
 \nabla g
@@ -90,7 +93,7 @@ Tại regular constrained optimum, directional derivative của `f` theo mọi f
 \nabla f
 ```
 
-không có tangent component và phải nằm trong normal span:
+không có tangent thành phần (component / 컴포넌트) và phải nằm trong normal span:
 
 ```math
 \nabla f=\lambda\nabla g.
@@ -122,7 +125,7 @@ First-order candidate conditions:
 h(x)=0.
 ```
 
-Multiplier `\nu` là coefficient needed để combine constraint normal với objective gradient.
+Multiplier `\nu` là coefficient needed để combine ràng buộc (constraint / 제약조건) normal với mục tiêu (objective / 목표) độ dốc (gradient / 기울기).
 
 ## 4. Worked example: fixed perimeter rectangle
 
@@ -167,19 +170,19 @@ Thus:
 x=y.
 ```
 
-Constraint gives square.
+Ràng buộc (constraint / 제약조건) gives square.
 
-Theorem/method gives candidate; global maximum conclusion còn dựa geometry/concavity/feasible domain.
+Theorem/phương thức (method / 메서드) gives candidate; toàn cục (global / 전역) maximum conclusion còn dựa hình học (geometry / 기하학)/concavity/feasible lĩnh vực (domain / 도메인).
 
 ## 5. Multiplier như sensitivity / shadow price
 
-Suppose constraint:
+Suppose ràng buộc (constraint / 제약조건):
 
 ```math
 h(x)=b.
 ```
 
-Optimal value:
+Optimal giá trị (value / 값):
 
 ```math
 V(b).
@@ -191,13 +194,13 @@ Under suitable regularity/sign convention, multiplier relates to:
 \frac{dV}{db}.
 ```
 
-Interpretation: nếu resource bound được nới nhẹ, optimal objective thay đổi khoảng bao nhiêu?
+Interpretation: nếu tài nguyên (resource / 자원) bound được nới nhẹ, optimal mục tiêu (objective / 목표) thay đổi khoảng bao nhiêu?
 
 Operations research/economics gọi đây là shadow price.
 
-Units phải được kiểm tra: multiplier có unit “objective per constraint-unit”.
+Units phải được kiểm tra: multiplier có đơn vị (unit / 단위) “mục tiêu (objective / 목표) per constraint-unit”.
 
-## 6. Inequality constraint khác equality ở chỗ có thể inactive
+## 6. Inequality ràng buộc (constraint / 제약조건) khác equality ở chỗ có thể inactive
 
 Consider:
 
@@ -212,7 +215,7 @@ g(x)<0 → constraint inactive/slack
 g(x)=0 → constraint active
 ```
 
-Nếu inactive, nó không chặn local movement; multiplier tương ứng nên zero trong KKT structure.
+Nếu inactive, nó không chặn cục bộ (local / 로컬) movement; multiplier tương ứng nên zero trong KKT cấu trúc (structure / 구조).
 
 ## 7. Lagrangian với inequalities
 
@@ -240,7 +243,7 @@ Then inequality multipliers require:
 \lambda_i\ge0.
 ```
 
-Sign convention đổi nếu constraint được viết direction khác.
+Sign convention đổi nếu ràng buộc (constraint / 제약조건) được viết direction khác.
 
 ## 8. KKT conditions
 
@@ -279,7 +282,7 @@ h_j(x^*)=0.
 \lambda_i^*g_i(x^*)=0.
 ```
 
-## 9. Complementary slackness là active-set logic
+## 9. Complementary slackness là active-set lô-gic (logic / 논리)
 
 For each inequality:
 
@@ -288,7 +291,7 @@ constraint slack → multiplier = 0
 multiplier > 0 → constraint must be active
 ```
 
-This captures which walls actually support the optimum.
+This captures which walls actually hỗ trợ (support / 지원) the optimum.
 
 It is one of the most useful conceptual parts of KKT.
 
@@ -306,13 +309,13 @@ subject to:
 x\le1.
 ```
 
-Write:
+Ghi (write / 쓰기):
 
 ```math
 g(x)=x-1\le0.
 ```
 
-Unconstrained minimum `x=3` infeasible. Feasible optimum is boundary `x=1`.
+Unconstrained minimum `x=3` infeasible. Feasible optimum is ranh giới (boundary / 경계) `x=1`.
 
 Lagrangian:
 
@@ -332,19 +335,19 @@ so:
 \lambda=4>0.
 ```
 
-Positive multiplier reflects active constraint blocking descent toward `x=3`.
+Positive multiplier reflects active ràng buộc (constraint / 제약조건) blocking descent toward `x=3`.
 
-## 11. Constraint qualification: vì sao KKT không automatic?
+## 11. ràng buộc (constraint / 제약조건) qualification: vì sao KKT không automatic?
 
-KKT necessity requires regularity assumptions.
+KKT necessity requires regularity các giả định (assumptions / 가정들).
 
-If constraint gradients degenerate or feasible geometry pathological, multipliers may fail to exist even at optimum.
+If ràng buộc (constraint / 제약조건) gradients degenerate or feasible hình học (geometry / 기하학) pathological, multipliers may thất bại (fail / 실패) to exist even at optimum.
 
-Examples of constraint qualifications include LICQ and Slater's condition in convex settings.
+Examples of ràng buộc (constraint / 제약조건) qualifications include LICQ and Slater's điều kiện (condition / 조건) in convex settings.
 
 Lesson:
 
-> KKT is a theorem with assumptions, not a universal algebra recipe.
+> KKT is a theorem with các giả định (assumptions / 가정들), not a universal algebra recipe.
 
 ## 12. Convexity makes KKT much stronger
 
@@ -358,25 +361,25 @@ h_j affine
 
 then feasible set convex.
 
-Under suitable regularity, any KKT point is global optimum.
+Under suitable regularity, any KKT điểm (point / 지점) is toàn cục (global / 전역) optimum.
 
-For nonconvex problem, KKT point may be only local candidate or saddle-like constrained stationary point.
+For nonconvex bài toán (problem / 문제), KKT điểm (point / 지점) may be only cục bộ (local / 로컬) candidate or saddle-like constrained stationary điểm (point / 지점).
 
-## 13. Slater's condition intuition
+## 13. Slater's điều kiện (condition / 조건) intuition
 
-For convex inequality problem, existence of a strictly feasible point:
+For convex inequality bài toán (problem / 문제), existence of a strictly feasible điểm (point / 지점):
 
 ```math
 g_i(x)<0
 ```
 
-for all inequalities often provides strong duality via Slater's condition.
+for all inequalities often provides strong duality via Slater's điều kiện (condition / 조건).
 
-Strict interior feasibility prevents certain boundary pathologies.
+Strict interior feasibility prevents certain ranh giới (boundary / 경계) pathologies.
 
-## 14. Dual function
+## 14. Dual hàm (function / 함수)
 
-Lagrangian dual function:
+Lagrangian dual hàm (function / 함수):
 
 ```math
 q(\lambda,\nu)
@@ -384,9 +387,9 @@ q(\lambda,\nu)
 \inf_x\mathcal L(x,\lambda,\nu).
 ```
 
-For minimization, dual function gives lower bounds on primal optimum for dual-feasible multipliers.
+For minimization, dual hàm (function / 함수) gives lower bounds on primal optimum for dual-feasible multipliers.
 
-Thus dual problem searches best lower bound:
+Thus dual bài toán (problem / 문제) searches best lower bound:
 
 ```math
 \max_{\lambda\ge0,\nu}q(\lambda,\nu).
@@ -420,9 +423,9 @@ dual optimum = primal optimum
 
 Dual variables then gain strong sensitivity/economic interpretation.
 
-Duality gap zero becomes both theoretical guarantee and numerical stopping signal in algorithms.
+Duality gap zero becomes both theoretical guarantee and numerical stopping tín hiệu (signal / 신호) in algorithms.
 
-## 17. Equality constraint example via geometry
+## 17. Equality ràng buộc (constraint / 제약조건) example via hình học (geometry / 기하학)
 
 Minimize distance from origin:
 
@@ -436,13 +439,13 @@ subject to line:
 x+y=1.
 ```
 
-Constraint gradient:
+Ràng buộc (constraint / 제약조건) độ dốc (gradient / 기울기):
 
 ```math
 (1,1).
 ```
 
-Objective gradient:
+Mục tiêu (objective / 목표) độ dốc (gradient / 기울기):
 
 ```math
 (2x,2y).
@@ -454,7 +457,7 @@ At optimum they align:
 (2x,2y)=\lambda(1,1),
 ```
 
-so `x=y`; constraint gives:
+so `x=y`; ràng buộc (constraint / 제약조건) gives:
 
 ```math
 x=y=1/2.
@@ -462,7 +465,7 @@ x=y=1/2.
 
 This is orthogonal projection of origin onto the line.
 
-## 18. Projection as constrained optimization
+## 18. Projection as constrained tối ưu hóa (optimization / 최적화)
 
 Projection onto convex set `C`:
 
@@ -470,13 +473,13 @@ Projection onto convex set `C`:
 \min_{x\in C}\frac12\|x-v\|^2.
 ```
 
-For linear subspace, solution satisfies orthogonality.
+For tuyến tính (linear / 선형) subspace, solution satisfies orthogonality.
 
 For closed convex set, Euclidean projection is unique.
 
-This links constrained optimization directly with inner-product geometry.
+This links constrained tối ưu hóa (optimization / 최적화) directly with inner-product hình học (geometry / 기하학).
 
-## 19. Projected gradient descent
+## 19. Projected độ dốc (gradient / 기울기) descent
 
 For simple convex feasible set:
 
@@ -485,7 +488,7 @@ x_{k+1}
 =\Pi_C(x_k-\eta\nabla f(x_k)).
 ```
 
-Algorithm alternates:
+Thuật toán (algorithm / 알고리즘) alternates:
 
 ```text
 gradient step toward lower objective
@@ -494,21 +497,21 @@ gradient step toward lower objective
 
 Useful when projection is cheap.
 
-## 20. Penalty method
+## 20. Penalty phương thức (method / 메서드)
 
-Replace hard constraint with penalty:
+Replace hard ràng buộc (constraint / 제약조건) with penalty:
 
 ```math
 f(x)+\rho\,\phi(g(x)).
 ```
 
-Large violation increases objective.
+Large violation increases mục tiêu (objective / 목표).
 
-But finite penalty does not always exactly enforce hard constraint.
+But finite penalty does not always exactly enforce hard ràng buộc (constraint / 제약조건).
 
 Very large `\rho` can cause poor conditioning.
 
-## 21. Barrier method
+## 21. Barrier phương thức (method / 메서드)
 
 For inequality `g(x)<0`, logarithmic barrier:
 
@@ -516,15 +519,15 @@ For inequality `g(x)<0`, logarithmic barrier:
 -\mu\log(-g(x))
 ```
 
-blows up near boundary.
+blows up near ranh giới (boundary / 경계).
 
-Interior-point methods solve sequence of barrier problems as `\mu→0`.
+Interior-point methods solve chuỗi (sequence / 시퀀스) of barrier problems as `\mu→0`.
 
 This is fundamentally different from projected methods: stay interior instead of stepping outside then projecting.
 
-## 22. Probability simplex
+## 22. xác suất (probability / 확률) simplex
 
-Probability vector:
+Xác suất (probability / 확률) véc-tơ (vector / 벡터):
 
 ```math
 p_i\ge0,
@@ -544,9 +547,9 @@ p_i=\frac{e^{z_i}}{\sum_je^{z_j}}
 
 parameterizes strictly positive interior points automatically.
 
-Encoding constraints via parameterization can simplify optimization but may change geometry/conditioning.
+Encoding các ràng buộc (constraints / 제약조건들) via parameterization can simplify tối ưu hóa (optimization / 최적화) but may thay đổi (change / 변경) hình học (geometry / 기하학)/conditioning.
 
-## 23. Regularization vs constraints
+## 23. Regularization vs các ràng buộc (constraints / 제약조건들)
 
 Problems:
 
@@ -561,25 +564,25 @@ and
 \quad\text{s.t. }R(x)\le c
 ```
 
-can correspond under suitable convexity and parameter relation, but not universally one-to-one for every `\lambda,c`.
+can correspond under suitable convexity and parameter quan hệ (relation / 관계), but not universally one-to-one for every `\lambda,c`.
 
-Penalty and constraint are two views of trade-off, not always identical implementations.
+Penalty and ràng buộc (constraint / 제약조건) are two views of sự đánh đổi (trade-off / 트레이드오프), not always identical implementations.
 
-## 24. L1 geometry và sparsity
+## 24. L1 hình học (geometry / 기하학) và sparsity
 
-Constraint:
+Ràng buộc (constraint / 제약조건):
 
 ```math
 \|x\|_1\le c
 ```
 
-has diamond-like geometry with corners aligned to coordinate axes.
+has diamond-like hình học (geometry / 기하학) with corners aligned to coordinate axes.
 
-Quadratic loss contours touching these corners often produce zero coordinates.
+Quadratic mất mát (loss / 손실) contours touching these corners often produce zero coordinates.
 
 This geometric intuition helps explain why L1 regularization promotes sparsity.
 
-## 25. Portfolio optimization connection
+## 25. Portfolio tối ưu hóa (optimization / 최적화) liên kết (connection / 연결)
 
 Classical setup:
 
@@ -601,37 +604,37 @@ and possibly:
 w\ge0.
 ```
 
-This combines quadratic objective with equality/inequality constraints.
+This combines quadratic mục tiêu (objective / 목표) with equality/inequality các ràng buộc (constraints / 제약조건들).
 
-KKT/duality make the structure transparent.
+KKT/duality make the cấu trúc (structure / 구조) transparent.
 
-## 26. Resource allocation / shadow price
+## 26. tài nguyên (resource / 자원) allocation / shadow price
 
-Suppose objective is profit and constraint is CPU capacity.
+Suppose mục tiêu (objective / 목표) is profit and ràng buộc (constraint / 제약조건) is CPU sức chứa (capacity / 용량).
 
-Multiplier on capacity constraint estimates marginal improvement if capacity increases one unit.
+Multiplier on sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건) estimates marginal improvement if sức chứa (capacity / 용량) increases one đơn vị (unit / 단위).
 
-A high shadow price says resource is binding/valuable; zero multiplier says extra resource is not locally useful under current optimum/model.
+A high shadow price says tài nguyên (resource / 자원) is binding/valuable; zero multiplier says extra tài nguyên (resource / 자원) is not locally useful under hiện tại (current / 현재) optimum/mô hình (model / 모델).
 
 ## 27. Second-order conditions
 
 First-order KKT identifies stationary candidates.
 
-Second-order constrained analysis examines Hessian of Lagrangian restricted to feasible tangent directions.
+Second-order constrained phân tích (analysis / 분석) examines Hessian of Lagrangian restricted to feasible tangent directions.
 
-Positive curvature on feasible directions supports local minimum classification.
+Positive curvature on feasible directions supports cục bộ (local / 로컬) minimum classification.
 
 This is constrained analogue of Hessian tests.
 
 ## 28. Active-set methods
 
-Algorithms may guess which inequalities are active, solve equality-constrained subproblem, then update active set.
+Algorithms may guess which inequalities are active, solve equality-constrained subproblem, then cập nhật (update / 업데이트) active set.
 
-KKT complementary slackness provides theoretical logic behind active-set computation.
+KKT complementary slackness provides theoretical lô-gic (logic / 논리) behind active-set computation.
 
 ## 29. Nonconvex caution
 
-Neural/network/control problems often nonconvex.
+Neural/mạng (network / 네트워크)/điều khiển (control / 제어) problems often nonconvex.
 
 KKT conditions can still generate candidates, but:
 
@@ -639,15 +642,15 @@ KKT conditions can still generate candidates, but:
 KKT satisfied ≠ global optimum
 ```
 
-Global guarantees need additional structure.
+Toàn cục (global / 전역) guarantees need additional cấu trúc (structure / 구조).
 
 ## 30. Units and scaling matter
 
-If one constraint uses dollars ~`10^6` and another normalized probability ~`1`, poorly scaled problem can cause numerical difficulty.
+If one ràng buộc (constraint / 제약조건) uses dollars ~`10^6` and another normalized xác suất (probability / 확률) ~`1`, poorly scaled bài toán (problem / 문제) can cause numerical difficulty.
 
-Rescaling variables/constraints may improve conditioning without changing underlying feasible set meaning.
+Rescaling variables/các ràng buộc (constraints / 제약조건들) may improve conditioning without changing underlying feasible set meaning.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 ```text
 gradient geometry
@@ -658,12 +661,14 @@ gradient geometry
 → convex optimization algorithms
 ```
 
-Inner products explain projection. Linear algebra supplies null/tangent spaces. Finance uses covariance quadratic objectives. AI uses simplex constraints, regularization and projected/proximal methods.
+Inner products explain projection. tuyến tính (linear / 선형) algebra supplies null/tangent spaces. Finance uses covariance quadratic objectives. AI uses simplex các ràng buộc (constraints / 제약조건들), regularization and projected/proximal methods.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Constrained optimum is a point where all useful downhill directions are blocked by feasible geometry. Multipliers quantify which walls block movement and how valuable relaxing those walls would be.
+> Constrained optimum is a điểm (point / 지점) where all useful downhill directions are blocked by feasible hình học (geometry / 기하학). Multipliers quantify which walls khối (block / 블록) movement and how valuable relaxing those walls would be.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Lagrange/KKT do not automatically give global optima. KKT needs constraint qualifications. Multiplier sign depends on constraint convention. Penalty is not identical to hard constraint in every setup. Shadow-price interpretation requires correct model/units and regularity. Strong duality is not universal outside suitable convex settings.
+Lagrange/KKT do not automatically give toàn cục (global / 전역) optima. KKT needs ràng buộc (constraint / 제약조건) qualifications. Multiplier sign depends on ràng buộc (constraint / 제약조건) convention. Penalty is not identical to hard ràng buộc (constraint / 제약조건) in every setup. Shadow-price interpretation requires correct mô hình (model / 모델)/units and regularity. Strong duality is not universal outside suitable convex settings.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 optimization](./00_optimization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

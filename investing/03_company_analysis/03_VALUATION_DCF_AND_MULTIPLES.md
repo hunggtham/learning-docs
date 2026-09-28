@@ -1,5 +1,8 @@
 # Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản
 
+> **Mạch đọc:** Đặt **Định giá doanh nghiệp: DCF, bội số và phân tích kịch bản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Giá thị trường và giá trị nội tại** sang **2. Định giá là bài toán về kỳ vọng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Định giá (valuation) không phải là tìm ra một “giá đúng” duy nhất. Mục tiêu là chuyển các giả định về dòng tiền, tăng trưởng, rủi ro và phân bổ vốn thành một khoảng giá trị hợp lý, sau đó so khoảng đó với những kỳ vọng đang được phản ánh trong giá thị trường.
 
 ## 1. Giá thị trường và giá trị nội tại
@@ -73,7 +76,7 @@ Do đó không nên chỉ cộng lạm phát vào tăng trưởng doanh thu rồ
 
 ## 6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
-**Giá trị doanh nghiệp (Enterprise Value, EV)** phản ánh giá trị hoạt động kinh doanh dành cho các bên cung cấp vốn. **Giá trị vốn chủ sở hữu (Equity Value)** là phần thuộc cổ đông thường sau khi điều chỉnh các nghĩa vụ ưu tiên hơn.
+**Giá trị doanh nghiệp (Enterprise value, EV)** phản ánh giá trị hoạt động kinh doanh dành cho các bên cung cấp vốn. **Giá trị vốn chủ sở hữu (Equity value)** là phần thuộc cổ đông thường sau khi điều chỉnh các nghĩa vụ ưu tiên hơn.
 
 Một cầu nối đơn giản:
 
@@ -96,7 +99,7 @@ Không phải toàn bộ tiền mặt đều có thể dùng để trả cho c�
 
 Một số nghĩa vụ như thuê dài hạn, thâm hụt hưu trí hay tài trợ từ nhà cung cấp có thể mang tính chất giống nợ.
 
-Vì vậy cầu nối EV → Equity Value phải xét:
+Vì vậy cầu nối EV → Equity giá trị (value / 값) phải xét:
 
 ```text
 Tiền mặt vận hành
@@ -397,7 +400,7 @@ khả năng sử dụng lá chắn thuế
 
 WACC không nhất thiết cố định nếu đòn bẩy thay đổi lớn.
 
-Khi giá trị doanh nghiệp giảm mạnh, chi phí nợ và chi phí vốn chủ sở hữu có thể cùng tăng. Với doanh nghiệp đòn bẩy cao, phương pháp **giá trị hiện tại điều chỉnh (Adjusted Present Value, APV)** hoặc phân tích kịch bản có thể rõ hơn một WACC duy nhất.
+Khi giá trị doanh nghiệp giảm mạnh, chi phí nợ và chi phí vốn chủ sở hữu có thể cùng tăng. Với doanh nghiệp đòn bẩy cao, phương pháp **giá trị hiện tại điều chỉnh (Adjusted Present value, APV)** hoặc phân tích kịch bản có thể rõ hơn một WACC duy nhất.
 
 ## 32. Phân tích độ nhạy
 
@@ -432,7 +435,7 @@ Nó giúp tập trung thời gian nghiên cứu vào biến có tác động l�
 
 ## 34. Phân tích kịch bản
 
-Base/Bull/Bear phải khác nhau ở **cơ chế**, không chỉ cộng trừ 20% giá trị.
+Cơ sở (base / 기반)/Bull/Bear phải khác nhau ở **cơ chế**, không chỉ cộng trừ 20% giá trị.
 
 Ví dụ bán dẫn:
 
@@ -552,7 +555,7 @@ Cần so cùng:
 
 - biên gộp;
 - giữ chân khách hàng;
-- unit economics;
+- đơn vị (unit / 단위) economics;
 - nhu cầu tái đầu tư.
 
 ## 44. P/B
@@ -628,7 +631,7 @@ Không nên gán bội số của doanh nghiệp thuần túy cho từng mảng 
 
 ## 50. NAV
 
-Giá trị tài sản ròng (Net Asset Value, NAV) thường dùng với bất động sản, holding company hoặc công ty đầu tư.
+Giá trị tài sản ròng (Net Asset value, NAV) thường dùng với bất động sản, holding company hoặc công ty đầu tư.
 
 NAV cần điều chỉnh:
 
@@ -669,7 +672,7 @@ ROE bền vững cao hơn chi phí vốn tạo giá trị. Tăng trưởng có t
 
 ## 54. Bảo hiểm
 
-Có thể dùng P/B, ROE, embedded value hoặc appraisal value tùy loại hình.
+Có thể dùng P/B, ROE, embedded giá trị (value / 값) hoặc appraisal giá trị (value / 값) tùy loại hình.
 
 Cần chú ý:
 
@@ -685,7 +688,7 @@ REIT thường được đánh giá bằng:
 
 - FFO/AFFO;
 - NAV;
-- cap rate;
+- cap tỷ lệ (rate / 비율);
 - đáo hạn nợ;
 - tỷ lệ lấp đầy;
 - tăng trưởng giá thuê.
@@ -705,7 +708,7 @@ Cần nhìn:
 - SBC và pha loãng;
 - con đường tới FCF.
 
-Tăng trưởng cao nhưng unit economics yếu không tự động xứng đáng bội số cao.
+Tăng trưởng cao nhưng đơn vị (unit / 단위) economics yếu không tự động xứng đáng bội số cao.
 
 ## 57. Doanh nghiệp hàng hóa
 
@@ -732,7 +735,7 @@ Các biến quan trọng gồm:
 - nhu cầu vốn;
 - pha loãng;
 - runway tiền mặt;
-- đối thủ và pipeline.
+- đối thủ và chuỗi xử lý (pipeline / 파이프라인).
 
 ## 59. Giá trị trên mỗi cổ phiếu
 
@@ -809,3 +812,5 @@ Giá trị được tạo từ đâu?
 Kỳ vọng nào đang được phản ánh trong giá?
 Điều gì phải thay đổi để giá trị hoặc luận điểm đầu tư thay đổi?
 ```
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

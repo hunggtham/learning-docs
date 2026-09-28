@@ -1,18 +1,24 @@
-# Machine code, assembly, ABI và calling convention
+# Mã máy (machine code / 기계어), assembly, ABI và calling convention
 
-High-level function call như `sum(a,b)` cuối cùng phải trở thành instructions, register usage, stack layout và binary interfaces mà CPU/OS hiểu. Machine code là encoded bytes của ISA instructions; assembly là human-readable symbolic notation cho chúng. ABI định nghĩa conventions để independently compiled pieces phối hợp.
+> **Mạch đọc:** Đọc **mã máy (machine code / 기계어), assembly, ABI và calling convention** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mã máy (machine code / 기계어) và assembly** sang **Calling convention**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Machine code và assembly
 
-Instruction có opcode và operands encoded theo ISA. Assembly viết symbolic mnemonics như `mov`, `add`, `ldr`, `bl`. Assembler biến chúng thành machine code; disassembler làm chiều ngược gần đúng.
+High-level hàm (function / 함수) lời gọi (call / 호출) như `sum(a,b)` cuối cùng phải trở thành instructions, register usage, ngăn xếp (stack / 스택) bố cục (layout / 레이아웃) và nhị phân (binary / 이진) interfaces mà CPU/OS hiểu. mã máy (machine code / 기계어) là encoded bytes của ISA instructions; assembly là human-readable symbolic notation cho chúng. ABI định nghĩa conventions để independently compiled pieces phối hợp.
 
-Assembly không phải source “gần CPU tuyệt đối”: modern CPU có micro-ops và out-of-order internals. Nó là representation gần **architectural ISA**.
+## Mã máy (machine code / 기계어) và assembly
+
+Instruction có opcode và operands encoded theo ISA. Assembly viết symbolic mnemonics như `mov`, `add`, `ldr`, `bl`. Assembler biến chúng thành mã máy (machine code / 기계어); disassembler làm chiều ngược gần đúng.
+
+Assembly không phải nguồn (source / 소스) “gần CPU tuyệt đối”: hiện đại (modern / 현대적) CPU có micro-ops và out-of-order internals. Nó là biểu diễn (representation / 표현) gần **architectural ISA**.
+
+
+> **Chuyển mạch:** Từ **mã máy (machine code / 기계어) và assembly**, ta sang **Calling convention** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Calling convention
 
-Nếu compiler A và compiler B cùng target platform, chúng phải thống nhất function arguments ở registers/stack nào, return value ở đâu, registers nào caller/callee phải preserve, stack alignment ra sao.
+Nếu trình biên dịch (compiler / 컴파일러) A và trình biên dịch (compiler / 컴파일러) B cùng mục tiêu (target / 대상) nền tảng (platform / 플랫폼), chúng phải thống nhất hàm (function / 함수) arguments ở registers/ngăn xếp (stack / 스택) nào, return giá trị (value / 값) ở đâu, registers nào caller/callee phải preserve, ngăn xếp (stack / 스택) alignment ra sao.
 
-Calling convention (호출 규약) là phần của Application Binary Interface — ABI. Không có convention, function từ library không biết caller đặt argument ở đâu.
+Calling convention (호출 규약) là phần của ứng dụng (application / 애플리케이션) nhị phân (binary / 이진) giao diện (interface / 인터페이스) — ABI. Không có convention, hàm (function / 함수) từ thư viện (library / 라이브러리) không biết caller đặt argument ở đâu.
 
 Ví dụ conceptual:
 
@@ -29,46 +35,72 @@ callee:
   return
 ```
 
-Details khác giữa x86-64 System V, Windows x64, AArch64 ABI.
+Details khác giữa x86-64 hệ thống (system / 시스템) V, Windows x64, AArch64 ABI.
 
-## Stack frame
 
-Function may allocate stack frame cho locals/spilled registers/return metadata. Compiler optimization có thể omit frame pointer, inline function hoặc giữ local hoàn toàn trong registers. Vì vậy source-level call không map 1:1 với visible frames trong optimized binary.
+> **Chuyển mạch:** Từ **Calling convention**, ta sang **ngăn xếp (stack / 스택) frame** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Stack grows direction theo architecture/ABI convention; đừng đồng nhất “stack” abstraction với một address direction universal.
+## Ngăn xếp (stack / 스택) frame
+
+Hàm (function / 함수) may allocate ngăn xếp (stack / 스택) frame cho locals/spilled registers/return siêu dữ liệu (metadata / 메타데이터). trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화) có thể omit frame pointer, inline hàm (function / 함수) hoặc giữ cục bộ (local / 로컬) hoàn toàn trong registers. Vì vậy tầng mã nguồn (source-level / 소스 수준) lời gọi (call / 호출) không map 1:1 với visible frames trong optimized nhị phân (binary / 이진).
+
+Ngăn xếp (stack / 스택) grows direction theo kiến trúc (architecture / 아키텍처)/ABI convention; đừng đồng nhất “ngăn xếp (stack / 스택)” lớp trừu tượng (abstraction / 추상화) với một address direction universal.
+
+
+> **Chuyển mạch:** Từ **ngăn xếp (stack / 스택) frame**, ta sang **Linker và symbols** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Linker và symbols
 
-Compiler có thể tạo object files chứa machine code + symbol/relocation information. Linker resolve references giữa modules/libraries, assign addresses và tạo executable/shared library.
+Trình biên dịch (compiler / 컴파일러) có thể tạo đối tượng (object / 객체) files chứa mã máy (machine code / 기계어) + symbol/relocation thông tin (information / 정보). Linker resolve references giữa modules/libraries, assign addresses và tạo executable/dùng chung (shared / 공유) thư viện (library / 라이브러리).
 
-Static linking copy needed code vào executable. Dynamic linking defer một phần tới load/runtime và share libraries. Position-independent code và relocation giúp binaries load ở varying addresses, quan trọng cho ASLR.
+Static linking bản sao (copy / 복사) needed mã (code / 코드) vào executable. động (dynamic / 동적) linking defer một phần tới tải (load / 로드)/thời gian chạy (runtime / 런타임) và share libraries. Position-independent mã (code / 코드) và relocation giúp binaries tải (load / 로드) ở varying addresses, quan trọng cho ASLR.
+
+
+> **Chuyển mạch:** Từ **Linker và symbols**, ta sang **ABI vs API** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## ABI vs API
 
-API là source-level contract: function names/types/semantics. ABI là binary-level contract. Có thể API-compatible nhưng ABI-incompatible nếu object layout/calling convention đổi; ngược lại wrapper có thể giữ ABI dù implementation source thay đổi.
+API là tầng mã nguồn (source-level / 소스 수준) đặc tả hợp đồng (contract / 계약): hàm (function / 함수) names/types/ngữ nghĩa (semantics / 의미론). ABI là binary-level đặc tả hợp đồng (contract / 계약). Có thể API-compatible nhưng ABI-incompatible nếu đối tượng (object / 객체) bố cục (layout / 레이아웃)/calling convention đổi; ngược lại wrapper có thể giữ ABI dù hiện thực (implementation / 구현) nguồn (source / 소스) thay đổi.
 
-Java/JVM ecosystem thường tương tác qua bytecode/class format thay vì native ABI ở application layer, nhưng JNI/native libraries vẫn quay lại platform ABI.
+Java/JVM ecosystem thường tương tác qua bytecode/lớp (class / 클래스) format thay vì bản địa (native / 네이티브) ABI ở ứng dụng (application / 애플리케이션) tầng (layer / 계층), nhưng JNI/bản địa (native / 네이티브) libraries vẫn quay lại nền tảng (platform / 플랫폼) ABI.
+
+
+> **Chuyển mạch:** Từ **ABI vs API**, ta sang **Syscall convention** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Syscall convention
 
-System call cũng dùng ABI-like contract: syscall number, argument registers, instruction/trap mechanism và return/error convention. User library như libc có thể wrap raw syscall bằng friendlier API.
+Lời gọi hệ thống (system call / 시스템 호출) cũng dùng ABI-like đặc tả hợp đồng (contract / 계약): syscall number, argument registers, instruction/trap cơ chế (mechanism / 메커니즘) và return/lỗi (error / 오류) convention. người dùng (user / 사용자) thư viện (library / 라이브러리) như libc có thể wrap raw syscall bằng friendlier API.
 
-## Debug symbols
 
-Machine code không giữ đầy đủ names/types/source lines. Debug info như DWARF/PDB map addresses về source concepts. Strip symbols giảm binary metadata nhưng làm debugging/profiling khó hơn.
+> **Chuyển mạch:** Từ **Syscall convention**, ta sang **gỡ lỗi (debug / 디버그) symbols** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Mental Model
+## Gỡ lỗi (debug / 디버그) symbols
 
-> Compiler tạo code, assembler encode instructions, linker nối symbols, loader map binary, ABI bảo đảm các pieces đồng ý về **binary conversation**.
+Mã máy (machine code / 기계어) không giữ đầy đủ names/types/nguồn (source / 소스) lines. gỡ lỗi (debug / 디버그) info như DWARF/PDB map addresses về nguồn (source / 소스) concepts. Strip symbols giảm nhị phân (binary / 이진) siêu dữ liệu (metadata / 메타데이터) nhưng làm debugging/profiling khó hơn.
 
-## Common Misconceptions
 
-**“Assembly là machine code.”** Assembly là textual symbolic representation; assembler encode thành bytes.
+> **Chuyển mạch:** Từ **gỡ lỗi (debug / 디버그) symbols**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“API compatibility = binary compatibility.”** Không nhất thiết; ABI có thêm layout/calling/binary-format contracts.
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“Mỗi source function luôn có một stack frame.”** Optimization có thể inline, tail-call, scalar-replace hoặc omit frame.
+> trình biên dịch (compiler / 컴파일러) tạo mã (code / 코드), assembler encode instructions, linker nối symbols, loader map nhị phân (binary / 이진), ABI bảo đảm các pieces đồng ý về **nhị phân (binary / 이진) conversation**.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“Assembly là mã máy (machine code / 기계어).”** Assembly là textual symbolic biểu diễn (representation / 표현); assembler encode thành bytes.
+
+**“API tính tương thích (compatibility / 호환성) = nhị phân (binary / 이진) tính tương thích (compatibility / 호환성).”** Không nhất thiết; ABI có thêm bố cục (layout / 레이아웃)/calling/binary-format contracts.
+
+**“Mỗi nguồn (source / 소스) hàm (function / 함수) luôn có một ngăn xếp (stack / 스택) frame.”** tối ưu hóa (optimization / 최적화) có thể inline, tail-call, scalar-replace hoặc omit frame.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
 Chapter này nối [CPU/ISA](./01_cpu_isa_and_instruction_cycle.md) với [compiler/JIT](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md), [kernel/syscalls](../03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) và [build/link/package](../08_software_systems/01_version_control_build_link_and_packages.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 digital logic and circuits](./00_digital_logic_and_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

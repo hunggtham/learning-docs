@@ -1,5 +1,8 @@
 # Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch
 
+> **Mạch đọc:** Đặt **Thực thi lệnh, cấu trúc vi mô thị trường và danh mục giao dịch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tín hiệu, quy mô rủi ro và thực thi** sang **2. Giá quyết định và giá thực thi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Tín hiệu tốt chưa đủ. Một chiến lược chỉ tạo được lợi thế thật khi lệnh được thực thi với chi phí hợp lý, quy mô vị thế đúng, trạng thái tài khoản chính xác và rủi ro được quản lý ở cấp toàn danh mục. Chương này giải thích bằng tiếng Việt toàn bộ chuỗi từ sổ lệnh tới phân tích chi phí giao dịch; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
 # Phần I — Một hệ thống giao dịch có ba lớp
@@ -27,7 +30,7 @@ Vì vậy thực thi lệnh không phải hậu cần; nó là một phần củ
 Khoảng cách giữa hai mức có thể đến từ:
 
 - chênh lệch mua–bán (spread);
-- độ trễ (latency);
+- độ trễ (latency / 지연 시간);
 - tác động của chính lệnh lên giá (market impact);
 - thời gian chờ;
 - lệnh không khớp;
@@ -47,7 +50,7 @@ Giá bán tốt nhất = best ask
 Chênh lệch = best ask - best bid
 ```
 
-**Độ sâu (depth)** cho biết khối lượng có sẵn ở nhiều mức giá. Chênh lệch hẹp nhưng độ sâu rất mỏng vẫn có thể gây trượt giá lớn cho lệnh lớn.
+**độ sâu (depth / 깊이)** cho biết khối lượng có sẵn ở nhiều mức giá. Chênh lệch hẹp nhưng độ sâu rất mỏng vẫn có thể gây trượt giá lớn cho lệnh lớn.
 
 ## 4. Ưu tiên giá–thời gian
 
@@ -125,7 +128,7 @@ Một số quy ước phổ biến:
 - IOC;
 - FOK.
 
-**Thời hạn hiệu lực (time-in-force)** là một phần của logic thực thi, không chỉ là tùy chọn giao diện.
+**Thời hạn hiệu lực (time-in-force)** là một phần của lô-gic (logic / 논리) thực thi, không chỉ là tùy chọn giao diện.
 
 ## 13. Khớp một phần
 
@@ -613,3 +616,5 @@ Tín hiệu
 ```
 
 Lợi thế không nằm riêng ở tín hiệu. Nó nằm ở khả năng bảo toàn giá trị của tín hiệu sau chi phí, thanh khoản, thực thi và các giới hạn vận hành.
+
+> **Bàn giao:** Sau **71. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER TRADING FOREX RISK](./00_MASTER_TRADING_FOREX_RISK.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,10 +1,13 @@
-# Latency, Throughput và Cost trong hệ thống AI
+# Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI
 
-Production AI không chỉ hỏi “mô hình có chính xác không?” mà còn phải hỏi **mất bao lâu, phục vụ được bao nhiêu request và tốn bao nhiêu tiền**. Ba đại lượng `latency`, `throughput` và `cost` liên hệ chặt chẽ nhưng không cùng hướng tối ưu.
+> **Mạch đọc:** Đặt **độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용) trong hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **độ trễ (latency / 지연 시간)** sang **Tail độ trễ (latency / 지연 시간)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Latency
 
-Latency là thời gian từ request tới response. Với Generative AI cần tách:
+Môi trường vận hành (production / 운영 환경) AI không chỉ hỏi “mô hình có chính xác không?” mà còn phải hỏi **mất bao lâu, phục vụ được bao nhiêu yêu cầu (request / 요청) và tốn bao nhiêu tiền**. Ba đại lượng `latency`, `throughput` và `cost` liên hệ chặt chẽ nhưng không cùng hướng tối ưu.
+
+## Độ trễ (latency / 지연 시간)
+
+Độ trễ (latency / 지연 시간) là thời gian từ yêu cầu (request / 요청) tới phản hồi (response / 응답). Với Generative AI cần tách:
 
 ```text
 queue time
@@ -16,55 +19,55 @@ postprocessing / tool verification
 network overhead
 ```
 
-Total latency có thể cao dù riêng model inference rất nhanh.
+Total độ trễ (latency / 지연 시간) có thể cao dù riêng mô hình (model / 모델) suy luận (inference / 추론) rất nhanh.
 
-## Tail Latency
+## Tail độ trễ (latency / 지연 시간)
 
-Average latency không đủ. Production thường theo dõi `p50`, `p95`, `p99`.
+Average độ trễ (latency / 지연 시간) không đủ. môi trường vận hành (production / 운영 환경) thường theo dõi `p50`, `p95`, `p99`.
 
 Nếu p99 bằng 8 giây, một nhóm người dùng vẫn có trải nghiệm rất kém dù average chỉ 1 giây.
 
-Tail latency thường đến từ queueing, straggler, cold start, prompt dài, tool chậm hoặc noisy neighbor.
+Tail độ trễ (latency / 지연 시간) thường đến từ queueing, straggler, cold start, prompt dài, công cụ (tool / 도구) chậm hoặc noisy neighbor.
 
-## Throughput
+## Thông lượng (throughput / 처리량)
 
-Thông lượng (throughput) là lượng công việc hoàn thành trong một đơn vị thời gian:
+Thông lượng (throughput / 처리량) là lượng công việc hoàn thành trong một đơn vị thời gian:
 
 \[
-Throughput=\frac{Completed\ Work}{Time}
+thông lượng (throughput / 처리량)=\frac{Completed\ công việc (work / 작업)}{thời gian (time / 시간)}
 \]
 
 Với LLM có thể đo bằng requests/s hoặc tokens/s.
 
-Batching thường giúp tăng throughput nhưng có thể tăng queue latency.
+Batching thường giúp tăng thông lượng (throughput / 처리량) nhưng có thể tăng hàng đợi (queue / 큐) độ trễ (latency / 지연 시간).
 
-## Capacity và Utilization
+## Sức chứa (capacity / 용량) và Utilization
 
 Nếu utilization quá thấp, tài nguyên bị lãng phí. Nếu utilization quá cao, queueing tăng mạnh.
 
-Capacity planning cần chừa headroom cho burst và failure.
+Sức chứa (capacity / 용량) planning cần chừa headroom cho burst và thất bại (failure / 실패).
 
-Autoscaling cũng cần đúng signal. CPU utilization không phải lúc nào cũng phản ánh bottleneck ở GPU hoặc KV cache.
+Autoscaling cũng cần đúng tín hiệu (signal / 신호). CPU utilization không phải lúc nào cũng phản ánh bottleneck ở GPU hoặc KV bộ nhớ đệm (cache / 캐시).
 
-## Chi phí trên mỗi Request
+## Chi phí trên mỗi yêu cầu (request / 요청)
 
 Xấp xỉ:
 
 \[
-Cost/request\approx\frac{Infrastructure\ cost\ per\ time}{requests\ per\ time}
+chi phí (cost / 비용)/yêu cầu (request / 요청)\approx\frac{hạ tầng (infrastructure / 인프라)\ chi phí (cost / 비용)\ per\ thời gian (time / 시간)}{requests\ per\ thời gian (time / 시간)}
 \]
 
-Nhưng generative workload biến động mạnh theo token count, vì vậy cost/token hoặc cost/task đôi khi có ý nghĩa hơn cost/request.
+Nhưng generative tải công việc (workload / 워크로드) biến động mạnh theo đơn vị từ (token / 토큰) count, vì vậy chi phí (cost / 비용)/đơn vị từ (token / 토큰) hoặc chi phí (cost / 비용)/tác vụ (task / 작업) đôi khi có ý nghĩa hơn chi phí (cost / 비용)/yêu cầu (request / 요청).
 
-## Economics của Input và Output Token
+## Economics của đầu vào (input / 입력) và đầu ra (output / 출력) đơn vị từ (token / 토큰)
 
-Prompt dài làm prefill compute và KV memory tăng. Output dài làm số bước decode tăng.
+Prompt dài làm prefill compute và KV bộ nhớ (memory / 메모리) tăng. đầu ra (output / 출력) dài làm số bước decode tăng.
 
-Hai request đều được tính là “một chat message” nhưng cost có thể khác nhau hàng chục lần.
+Hai yêu cầu (request / 요청) đều được tính là “một chat message” nhưng chi phí (cost / 비용) có thể khác nhau hàng chục lần.
 
 ## Chi phí của Chất lượng
 
-Mô hình lớn hơn có thể tăng chất lượng nhưng đắt hơn. Production system thường dùng:
+Mô hình lớn hơn có thể tăng chất lượng nhưng đắt hơn. môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) thường dùng:
 
 ```text
 small/default model
@@ -72,11 +75,11 @@ small/default model
 → escalate sang expensive model khi cần
 ```
 
-Model routing biến trade-off giữa quality và cost thành một policy động.
+Mô hình (model / 모델) routing biến sự đánh đổi (trade-off / 트레이드오프) giữa chất lượng (quality / 품질) và chi phí (cost / 비용) thành một chính sách (policy / 정책) động.
 
-## Latency Budget
+## Độ trễ (latency / 지연 시간) ngân sách (budget / 예산)
 
-SLO end-to-end nên chia budget theo stage:
+SLO end-to-end nên chia ngân sách (budget / 예산) theo stage:
 
 ```text
 API gateway        50 ms
@@ -87,7 +90,7 @@ tool call         700 ms
 postprocess       100 ms
 ```
 
-Nếu không có budget cho từng stage, đội ngũ dễ tối ưu nhầm chỗ.
+Nếu không có ngân sách (budget / 예산) cho từng stage, đội ngũ dễ tối ưu nhầm chỗ.
 
 ## Little's Law và Queueing
 
@@ -95,9 +98,9 @@ Nếu không có budget cho từng stage, đội ngũ dễ tối ưu nhầm ch�
 L=\lambda W
 \]
 
-Khi arrival rate tiến gần service capacity, `W` tăng mạnh. Vì vậy “GPU luôn chạy 100%” có thể làm user latency tệ hơn đáng kể.
+Khi arrival tỷ lệ (rate / 비율) tiến gần dịch vụ (service / 서비스) sức chứa (capacity / 용량), `W` tăng mạnh. Vì vậy “GPU luôn chạy 100%” có thể làm người dùng (user / 사용자) độ trễ (latency / 지연 시간) tệ hơn đáng kể.
 
-## Trade-Off của Batching
+## Sự đánh đổi (trade-off / 트레이드오프) của Batching
 
 Batch lớn hơn thường có:
 
@@ -108,19 +111,19 @@ Batch lớn hơn thường có:
 - latency có thể tăng
 ```
 
-Online scheduler cần tìm operating point phù hợp với SLO.
+Online scheduler cần tìm operating điểm (point / 지점) phù hợp với SLO.
 
 ## Memory-Bound và Compute-Bound
 
-Một kernel có thể bị giới hạn bởi **compute** hoặc **memory bandwidth**.
+Một kernel có thể bị giới hạn bởi **compute** hoặc **bộ nhớ (memory / 메모리) bandwidth**.
 
-Quantization hữu ích nhất khi memory bandwidth là bottleneck. Nếu compute kernel chiếm ưu thế, compression có thể mang lợi ích khác.
+Quantization hữu ích nhất khi bộ nhớ (memory / 메모리) bandwidth là bottleneck. Nếu compute kernel chiếm ưu thế, compression có thể mang lợi ích khác.
 
 Tư duy kiểu roofline giúp tránh tối ưu mù.
 
 ## Chi phí của RAG
 
-RAG không chỉ tốn cost cho embedding search. Pipeline còn có:
+RAG không chỉ tốn chi phí (cost / 비용) cho embedding tìm kiếm (search / 검색). chuỗi xử lý (pipeline / 파이프라인) còn có:
 
 ```text
 query rewrite
@@ -130,33 +133,33 @@ context tokens
 LLM generation
 ```
 
-Retrieve nhiều chunk có thể tăng recall nhưng đồng thời làm context cost và latency tăng.
+Retrieve nhiều chunk có thể tăng recall nhưng đồng thời làm ngữ cảnh (context / 맥락) chi phí (cost / 비용) và độ trễ (latency / 지연 시간) tăng.
 
-## Chi phí của Agent
+## Chi phí của tác nhân (agent / 에이전트)
 
-Agent có số bước biến động. Một task tưởng như đơn giản có thể loop qua nhiều model/tool call.
+Tác nhân (agent / 에이전트) có số bước biến động. Một tác vụ (task / 작업) tưởng như đơn giản có thể vòng lặp (loop / 루프) qua nhiều mô hình (model / 모델)/công cụ (tool / 도구) lời gọi (call / 호출).
 
 Nên có:
 
-- step budget;
-- token budget;
-- tool cost budget;
-- timeout;
-- loop detection.
+- step ngân sách (budget / 예산);
+- đơn vị từ (token / 토큰) ngân sách (budget / 예산);
+- công cụ (tool / 도구) chi phí (cost / 비용) ngân sách (budget / 예산);
+- hết thời gian chờ (timeout / 타임아웃);
+- vòng lặp (loop / 루프) detection.
 
-Nếu không có budget, phân phối cost có thể có heavy tail rất lớn.
+Nếu không có ngân sách (budget / 예산), phân phối chi phí (cost / 비용) có thể có heavy tail rất lớn.
 
 ## Economics của Caching
 
-Cache hit tránh expensive compute nhưng cần storage và invalidation. Giá trị của cache phụ thuộc tần suất tái sử dụng và mức freshness mà hệ thống chấp nhận.
+Bộ nhớ đệm (cache / 캐시) hit tránh expensive compute nhưng cần lưu trữ (storage / 저장소) và vô hiệu hóa (invalidation / 무효화). Giá trị của bộ nhớ đệm (cache / 캐시) phụ thuộc tần suất tái sử dụng và mức freshness mà hệ thống chấp nhận.
 
-## Cost Offline và Online
+## Chi phí (cost / 비용) Offline và Online
 
-Batch processing thường tận dụng hardware tốt hơn. Nếu kết quả có thể tái sử dụng, precompute giúp chuyển chi phí ra khỏi hot path.
+Batch processing thường tận dụng hardware tốt hơn. Nếu kết quả có thể tái sử dụng, precompute giúp chuyển chi phí ra khỏi đường xử lý nóng (hot path / 핫 패스).
 
-## Cost Attribution
+## Chi phí (cost / 비용) Attribution
 
-Nền tảng multi-tenant nên quy chi phí theo tenant, feature, model và workflow. Nếu chỉ nhìn tổng GPU bill, rất khó biết feature nào thực sự tạo giá trị.
+Nền tảng multi-tenant nên quy chi phí theo tenant, tính năng (feature / 기능), mô hình (model / 모델) và workflow. Nếu chỉ nhìn tổng GPU bill, rất khó biết tính năng (feature / 기능) nào thực sự tạo giá trị.
 
 ## Thứ tự tối ưu hợp lý
 
@@ -173,7 +176,7 @@ Trước khi tune kernel thấp tầng:
 8. tối ưu kernel thấp tầng
 ```
 
-Optimization ở cấp architecture thường tạo gain lớn hơn micro-optimization.
+Tối ưu hóa (optimization / 최적화) ở cấp kiến trúc (architecture / 아키텍처) thường tạo gain lớn hơn micro-optimization.
 
 ## Mô hình tư duy
 
@@ -183,22 +186,24 @@ Throughput = lượng công việc hoàn thành trong một đơn vị thời gi
 Cost       = tài nguyên tiêu thụ cho một outcome hữu ích
 ```
 
-Mục tiêu cuối không phải tối thiểu từng metric riêng lẻ mà là đạt **chất lượng và độ tin cậy yêu cầu trong giới hạn ngân sách**.
+Mục tiêu cuối không phải tối thiểu từng chỉ số (metric / 지표) riêng lẻ mà là đạt **chất lượng và độ tin cậy yêu cầu trong giới hạn ngân sách**.
 
 ## Những nhầm lẫn thường gặp
 
-### “Tokens/second cao nghĩa là user experience tốt”
+### “Tokens/second cao nghĩa là người dùng (user / 사용자) experience tốt”
 
-Không. TTFT hoặc queue time vẫn có thể rất tệ.
+Không. TTFT hoặc hàng đợi (queue / 큐) thời gian (time / 시간) vẫn có thể rất tệ.
 
 ### “Mô hình nhỏ hơn luôn rẻ hơn”
 
-Không. Nếu chất lượng thấp làm retry hoặc escalation tăng, end-to-end cost có thể cao hơn.
+Không. Nếu chất lượng thấp làm thử lại (retry / 재시도) hoặc escalation tăng, end-to-end chi phí (cost / 비용) có thể cao hơn.
 
-### “Chỉ cần tối ưu model inference là đủ”
+### “Chỉ cần tối ưu mô hình (model / 모델) suy luận (inference / 추론) là đủ”
 
-Không. Retrieval, tool, parsing và network có thể mới là bottleneck chính.
+Không. Retrieval, công cụ (tool / 도구), parsing và mạng (network / 네트워크) có thể mới là bottleneck chính.
 
 ## Liên kết kiến thức
 
 Xem [Caching and Batching](./05_caching_and_batching.md), [Model Compression](./08_model_compression.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md) và [AI Compute](../17_ai_compute_and_infrastructure/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

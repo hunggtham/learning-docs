@@ -1,9 +1,12 @@
-# Skip List
-**스킵 리스트 / Skip List**
+# Skip danh sách (list / 목록)
 
-Skip List là cấu trúc set/map có thứ tự, cung cấp tìm kiếm/chèn/xóa với chi phí kỳ vọng `O(log n)` nhưng không dùng phép xoay như AVL hoặc Red-Black Tree. Thay vào đó, nó duy trì nhiều tầng danh sách liên kết với mật độ giảm dần và dùng tính ngẫu nhiên để tạo các “làn đường nhanh”.
+> **Mạch đọc:** Đọc **Skip danh sách (list / 목록)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ sorted danh sách liên kết tới express lanes** sang **nút cách biểu diễn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Skip List quan trọng không chỉ vì nó là một alternative cho balanced BST. Nó minh họa một tư tưởng lớn hơn:
+**스킵 리스트 / Skip danh sách (list / 목록)**
+
+Skip danh sách (list / 목록) là cấu trúc set/map có thứ tự, cung cấp tìm kiếm/chèn/xóa với chi phí kỳ vọng `O(log n)` nhưng không dùng phép xoay như AVL hoặc Red-Black cây (tree / 트리). Thay vào đó, nó duy trì nhiều tầng danh sách liên kết với mật độ giảm dần và dùng tính ngẫu nhiên để tạo các “làn đường nhanh”.
+
+Skip danh sách (list / 목록) quan trọng không chỉ vì nó là một alternative cho balanced BST. Nó minh họa một tư tưởng lớn hơn:
 
 > Ta có thể đạt tìm kiếm logarit bằng một **phân cấp nhiều độ phân giải** của cùng một dãy đã sắp xếp, trong đó tầng cao bỏ qua nhiều phần tử còn tầng thấp giữ đầy đủ thứ tự.
 
@@ -11,7 +14,7 @@ Skip List quan trọng không chỉ vì nó là một alternative cho balanced B
 
 Một danh sách liên kết đơn đã sắp xếp vẫn tìm kiếm `O(n)` vì chỉ có thể đi qua từng nút.
 
-Nếu tạo tầng 1 chứa khoảng một nửa các nút, tầng 2 khoảng một phần tư, tầng 3 khoảng một phần tám, search có thể nhảy xa ở các tầng cao rồi refine dần.
+Nếu tạo tầng 1 chứa khoảng một nửa các nút, tầng 2 khoảng một phần tư, tầng 3 khoảng một phần tám, tìm kiếm (search / 검색) có thể nhảy xa ở các tầng cao rồi refine dần.
 
 ```text
 L3: 1 ------------------------- 20
@@ -22,7 +25,7 @@ L0: 1 2 3 4 5  9 10  15 18 19 20
 
 Tìm kiếm bắt đầu ở tầng cao nhất. Nếu khóa của nút kế tiếp vẫn nhỏ hơn đích thì đi sang phải; nếu nút kế tiếp vượt đích hoặc là `null` thì đi xuống một tầng.
 
-mẫu này giống tìm kiếm nhị phân ở tinh thần “coarse-to-fine”, nhưng cách biểu diễn (representation) là linked hierarchy thay vì contiguous mảng.
+mẫu này giống tìm kiếm nhị phân ở tinh thần “coarse-to-fine”, nhưng cách biểu diễn (representation / 표현) là linked hierarchy thay vì contiguous mảng.
 
 ## nút cách biểu diễn
 
@@ -46,9 +49,9 @@ typedef struct SkipNode {
 } SkipNode;
 ```
 
-Trong hệ thống thực tế, cách triển khai có thể cấp phát nút + forward các con trỏ trong một block để giảm các lần cấp phát/indirection.
+Trong hệ thống thực tế, cách triển khai có thể cấp phát nút + forward các con trỏ trong một khối (block / 블록) để giảm các lần cấp phát/indirection.
 
-## Search bất biến (invariant)
+## Tìm kiếm (search / 검색) bất biến (invariant / 불변식)
 
 Tại mỗi tầng, ta duy trì rằng `cur.key < target` và `cur` là nút xa nhất đã biết ở tầng đó mà chưa vượt đích.
 
@@ -71,7 +74,7 @@ function find(head, maxLevel, key) {
 }
 ```
 
-tính đúng đắn cuối cùng đến từ tầng 0 chứa toàn bộ sorted sequence.
+tính đúng đắn cuối cùng đến từ tầng 0 chứa toàn bộ sorted chuỗi (sequence / 시퀀스).
 
 ## ngẫu nhiên chiều cao
 
@@ -98,13 +101,13 @@ n/2^k\approx1
 
 Đây là nguồn gốc kỳ vọng logarithmic chiều cao.
 
-## kỳ vọng search chi phí intuition
+## kỳ vọng tìm kiếm (search / 검색) chi phí intuition
 
 Ở tầng cao, các nút thưa nên ta nhảy khoảng lớn. Khi descend, ta chỉ cần đi một số kỳ vọng constant steps ngang trước khi lại gặp promoted nút phù hợp.
 
-Có khoảng `O(log n)` các tầng và kỳ vọng horizontal work mỗi tầng bounded, nên kỳ vọng search `O(log n)`.
+Có khoảng `O(log n)` các tầng và kỳ vọng horizontal công việc (work / 작업) mỗi tầng bounded, nên kỳ vọng tìm kiếm (search / 검색) `O(log n)`.
 
-Đây là kỳ vọng analysis; một ngẫu nhiên outcome cực xấu vẫn có thể xảy ra.
+Đây là kỳ vọng phân tích (analysis / 분석); một ngẫu nhiên kết quả (outcome / 결과) cực xấu vẫn có thể xảy ra.
 
 ## Insert và predecessor đường đi
 
@@ -137,7 +140,7 @@ for (int level = currentMax; level >= 0; level--) {
 }
 ```
 
-Nếu khóa tồn tại, map ngữ nghĩa (semantics) có thể cập nhật giá trị hoặc reject phần tử trùng tùy contract.
+Nếu khóa tồn tại, map ngữ nghĩa (semantics / 의미론) có thể cập nhật giá trị hoặc reject phần tử trùng tùy đặc tả hợp đồng (contract / 계약).
 
 ## Delete
 
@@ -150,7 +153,7 @@ nếu update[level].next[level] == target:
 
 Sau đó có thể giảm hiện tại maximum tầng nếu top các tầng trở thành rỗng.
 
-Thao tác xóa của **Skip List** mang tính cục bộ hơn các phép xoay cây; đây là một lý do cấu trúc này hấp dẫn trong một số thiết kế xử lý đồng thời.
+Thao tác xóa của **Skip danh sách (list / 목록)** mang tính cục bộ hơn các phép xoay cây; đây là một lý do cấu trúc này hấp dẫn trong một số thiết kế xử lý đồng thời.
 
 ## phần tử trùng chính sách
 
@@ -160,11 +163,11 @@ Tìm kiếm, chèn, xóa và duyệt theo khoảng phải dùng cùng ngữ ngh�
 
 ## hợp đồng bộ so sánh
 
-Skip list dựa trên thứ tự toàn phần giống BST. Comparator phải consistent và transitive.
+Skip danh sách (list / 목록) dựa trên thứ tự toàn phần giống BST. Comparator phải consistent và transitive.
 
 Nếu bộ so sánh xem hai khóa khác nhau về mặt nghiệp vụ là bằng nhau (`compare(a,b)==0`), cấu trúc sẽ coi chúng nằm ở cùng một vị trí thứ tự theo hợp đồng API.
 
-Floating-point NaN, case-insensitive strings, locale order hoặc composite các khóa cần ngữ nghĩa rõ ràng.
+Floating-point NaN, case-insensitive strings, locale thứ tự (order / 순서) hoặc composite các khóa cần ngữ nghĩa rõ ràng.
 
 ## cận dưới và quét theo khoảng
 
@@ -178,17 +181,17 @@ O(log n + k)
 
 với `k` các đầu ra.
 
-Đây là ordered-map capability tương tự balanced cây.
+Đây là ordered-map năng lực (capability / 역량) tương tự balanced cây.
 
 ## Predecessor và successor
 
 Successor dễ: nút tiếp theo ở tầng 0.
 
-Predecessor có thể lấy từ đường tìm kiếm (`update[0]`). Nếu API cần bidirectional iteration hiệu quả, nút có thể giữ backward con trỏ tầng 0 hoặc maintain doubly-linked base tầng, đổi thêm bộ nhớ/cập nhật chi phí.
+Predecessor có thể lấy từ đường tìm kiếm (`update[0]`). Nếu API cần bidirectional iteration hiệu quả, nút có thể giữ backward con trỏ tầng 0 hoặc maintain doubly-linked cơ sở (base / 기반) tầng, đổi thêm bộ nhớ/cập nhật chi phí.
 
-## Indexed Skip List
+## Indexed Skip danh sách (list / 목록)
 
-Skip List có thể được tăng cường bằng **độ dài nhảy (span/width)** trên mỗi con trỏ tiến: số nút ở tầng 0 mà con trỏ đó bỏ qua.
+Skip danh sách (list / 목록) có thể được tăng cường bằng **độ dài nhảy (span/width)** trên mỗi con trỏ tiến: số nút ở tầng 0 mà con trỏ đó bỏ qua.
 
 Sau đó, tìm kiếm theo hạng có thể trừ dần các độ dài nhảy (span), tương tự cây thống kê thứ tự sử dụng kích thước cây con.
 
@@ -203,7 +206,7 @@ Muốn tìm k-th item, đi right nếu span không vượt rank đích; nếu v�
 
 kỳ vọng `O(log n)` rank/select.
 
-Đây là connection trực tiếp với [Augmented Trees](./06_augmented_trees_and_order_statistics.md): cả hai lưu dữ liệu tóm lược để skip một region và biết region đóng góp bao nhiêu.
+Đây là liên kết (connection / 연결) trực tiếp với [Augmented Trees](./06_augmented_trees_and_order_statistics.md): cả hai lưu dữ liệu tóm lược để skip một region và biết region đóng góp bao nhiêu.
 
 ## Weighted spans
 
@@ -211,7 +214,7 @@ Span không nhất thiết chỉ đếm số nút. Nó có thể lưu trọng s�
 
 Mô hình tư duy là forward cạnh mang dữ liệu tóm lược của segment mà cạnh bỏ qua.
 
-## Skip List vs balanced BST
+## Skip danh sách (list / 목록) vs balanced BST
 
 Cả hai hỗ trợ từ điển có thứ tự các thao tác kỳ vọng/xác định logarithmic theo variant.
 
@@ -224,7 +227,7 @@ usually fewer forward pointers per node
 hard worst-case bounds
 ```
 
-Skip List:
+Skip danh sách (list / 목록):
 
 ```text
 randomized height
@@ -233,11 +236,11 @@ expected logarithmic bounds
 more pointer slots / probabilistic shape
 ```
 
-Không có universal winner. môi trường chạy (runtime) bộ nhớ bố trí, concurrency, cách triển khai complexity và độ trễ (latency) các bảo đảm quyết định.
+Không có universal winner. môi trường chạy (runtime) bộ nhớ bố trí, tính đồng thời (concurrency / 동시성), cách triển khai độ phức tạp (complexity / 복잡도) và độ trễ (latency / 지연 시간) các bảo đảm quyết định.
 
 ## kỳ vọng vs trường hợp xấu nhất bảo đảm
 
-Chi phí kỳ vọng `O(log n)` của Skip List không phải bảo đảm xác định cho trường hợp xấu nhất. Trong kết quả ngẫu nhiên cực đoan, nhiều nút có thể chỉ ở tầng 0 và quá trình tìm kiếm gần tuyến tính.
+Chi phí kỳ vọng `O(log n)` của Skip danh sách (list / 목록) không phải bảo đảm xác định cho trường hợp xấu nhất. Trong kết quả ngẫu nhiên cực đoan, nhiều nút có thể chỉ ở tầng 0 và quá trình tìm kiếm gần tuyến tính.
 
 mã dùng trong hệ thống thực tế thường set maximum tầng để bound siêu dữ liệu và use good ngẫu nhiên generation.
 
@@ -245,7 +248,7 @@ Nếu hard trường hợp xấu nhất độ trễ là yêu cầu, xác định
 
 ## xác suất parameter `p`
 
-`p` điều khiển sự đánh đổi (trade-off):
+`p` điều khiển sự đánh đổi (trade-off / 트레이드오프):
 
 - `p` lớn -> nhiều promoted các nút, nhiều bộ nhớ/các con trỏ, ít horizontal steps;
 - `p` nhỏ -> ít bộ nhớ, nhiều horizontal movement.
@@ -264,40 +267,40 @@ Với `p=1/2`, số con trỏ kỳ vọng trên mỗi nút là một hằng số
 
 ## ngẫu nhiên tầng generation bằng bits
 
-Nếu `p=1/2`, ngẫu nhiên chiều cao có thể lấy từ số consecutive coin successes hoặc bit các mẫu. Low-level code có thể dùng count-trailing/leading-zero style trên ngẫu nhiên bits.
+Nếu `p=1/2`, ngẫu nhiên chiều cao có thể lấy từ số consecutive coin successes hoặc bit các mẫu. Low-level mã (code / 코드) có thể dùng count-trailing/leading-zero style trên ngẫu nhiên bits.
 
-Nhưng random-number quality và bias phải phù hợp. Optimization bit trick không đáng nếu làm phân phối sai.
+Nhưng random-number chất lượng (quality / 품질) và độ lệch (bias / 편향) phải phù hợp. tối ưu hóa (optimization / 최적화) bit trick không đáng nếu làm phân phối sai.
 
 ## xác định skip structures
 
-Có các biến thể xác định sử dụng quy tắc nâng tầng thay cho tính ngẫu nhiên, nhưng độ phức tạp và đặc điểm bảo trì khác với Skip List trong mô hình kinh điển.
+Có các biến thể xác định sử dụng quy tắc nâng tầng thay cho tính ngẫu nhiên, nhưng độ phức tạp và đặc điểm bảo trì khác với Skip danh sách (list / 목록) trong mô hình kinh điển.
 
 Điểm học chính: multi-level linked lập chỉ mục không bắt buộc probabilistic về bản chất; randomness là một cách rẻ để đạt phân phối tốt kỳ vọng.
 
 ## Redis-like composition intuition
 
-Sorted-set các hệ thống thường cần both chính xác member tra cứu và ordered-by-score các thao tác. Một design natural là kết hợp:
+Sorted-set các hệ thống thường cần both chính xác member tra cứu và ordered-by-score các thao tác. Một thiết kế (design / 설계) natural là kết hợp:
 
 ```text
 hash map: member -> metadata/node
 ordered structure: score -> sequence
 ```
 
-Skip list historically xuất hiện trong hệ thống thực tế ordered-set các cách triển khai vì quét theo khoảng và cục bộ các cập nhật tốt.
+Skip danh sách (list / 목록) historically xuất hiện trong hệ thống thực tế ordered-set các cách triển khai vì quét theo khoảng và cục bộ các cập nhật tốt.
 
-Bài học quan trọng hơn specific product/version là **composition**: một structure không nhất thiết phục vụ mọi truy vấn class.
+Bài học quan trọng hơn specific sản phẩm (product / 제품)/phiên bản (version / 버전) là **composition**: một cấu trúc (structure / 구조) không nhất thiết phục vụ mọi truy vấn lớp (class / 클래스).
 
-## Skip list và LSM/memtable
+## Skip danh sách (list / 목록) và LSM/memtable
 
-Một số bộ máy lưu trữ dùng memtable có thứ tự kiểu Skip List: các lần ghi đi vào cấu trúc có thứ tự trong bộ nhớ, hỗ trợ quét khoảng đã sắp xếp, rồi được ghi xuống thành các tệp bất biến đã sắp xếp.
+Một số bộ máy lưu trữ dùng memtable có thứ tự kiểu Skip danh sách (list / 목록): các lần ghi đi vào cấu trúc có thứ tự trong bộ nhớ, hỗ trợ quét khoảng đã sắp xếp, rồi được ghi xuống thành các tệp bất biến đã sắp xếp.
 
-Skip list phù hợp khi cần chèn động cùng khả năng duyệt theo thứ tự. Các lựa chọn thay thế có thể là cây cân bằng, cây hỗ trợ xử lý đồng thời hoặc những cấu trúc có thứ tự khác.
+Skip danh sách (list / 목록) phù hợp khi cần chèn động cùng khả năng duyệt theo thứ tự. Các lựa chọn thay thế có thể là cây cân bằng, cây hỗ trợ xử lý đồng thời hoặc những cấu trúc có thứ tự khác.
 
-Đây là connection giữa DSA và cơ sở dữ liệu/storage-engine write đường đi.
+Đây là liên kết (connection / 연결) giữa DSA và cơ sở dữ liệu/storage-engine ghi (write / 쓰기) đường đi.
 
 ## bộ nhớ tính cục bộ (locality)
 
-Skip List kinh điển dùng nhiều con trỏ hơn bố trí mảng hoặc trang B-tree. Tìm kiếm phải nhảy giữa các đối tượng trên heap nên có thể gây nhiều lần trượt bộ nhớ đệm.
+Skip danh sách (list / 목록) kinh điển dùng nhiều con trỏ hơn bố trí mảng hoặc trang B-tree. Tìm kiếm phải nhảy giữa các đối tượng trên vùng nhớ động (heap / 힙) nên có thể gây nhiều lần trượt bộ nhớ đệm.
 
 Nếu cách triển khai allocates các nút/forward các mảng compactly hoặc uses arena, tính cục bộ cải thiện. Nhưng generally B-tree-like high-fanout structures tốt hơn bên ngoài bộ nhớ/bộ nhớ đệm page hành vi.
 
@@ -305,19 +308,19 @@ Big-O logarithmic không kể pointer-chasing chi phí.
 
 ## bộ nhớ overhead
 
-Mỗi nút có base các trường + variable forward các con trỏ. kỳ vọng con trỏ count constant nhưng overhead/nút có thể lớn so với gọn mảng đã sắp xếp.
+Mỗi nút có cơ sở (base / 기반) các trường + variable forward các con trỏ. kỳ vọng con trỏ count constant nhưng overhead/nút có thể lớn so với gọn mảng đã sắp xếp.
 
 Nếu dataset tĩnh/read-heavy, mảng đã sắp xếp + tìm kiếm nhị phân có thể memory-efficient và thân thiện với bộ nhớ đệm hơn rất nhiều.
 
-Skip List mạnh khi cần cập nhật động đồng thời duy trì thứ tự.
+Skip danh sách (list / 목록) mạnh khi cần cập nhật động đồng thời duy trì thứ tự.
 
-## Concurrency motivation
+## Tính đồng thời (concurrency / 동시성) motivation
 
-Các phép xoay trong cây cân bằng làm thay đổi cấu trúc liên kết cục bộ theo những mẫu tương đối phức tạp. Chèn/xóa trong skip list chủ yếu dùng CAS hoặc nối lại các con trỏ tiến ở từng tầng, vì vậy cấu trúc này thuận lợi cho một số thuật toán không khóa (lock-free) hoặc xử lý đồng thời.
+Các phép xoay trong cây cân bằng làm thay đổi cấu trúc liên kết cục bộ theo những mẫu tương đối phức tạp. Chèn/xóa trong skip danh sách (list / 목록) chủ yếu dùng CAS hoặc nối lại các con trỏ tiến ở từng tầng, vì vậy cấu trúc này thuận lợi cho một số thuật toán không khóa (lock-free) hoặc xử lý đồng thời.
 
 Tuy nhiên “thuận lợi hơn” không có nghĩa dễ.
 
-Concurrent Skip List phải xử lý:
+Concurrent Skip danh sách (list / 목록) phải xử lý:
 
 ```text
 node đang insert dở ở vài levels
@@ -327,9 +330,9 @@ ABA/memory reclamation
 ordering của atomic writes
 ```
 
-tính đúng đắn cần linearization point rõ.
+tính đúng đắn cần linearization điểm (point / 지점) rõ.
 
-## logic deletion và vật lý unlink
+## Lô-gic (logic / 논리) deletion và vật lý unlink
 
 Concurrent designs thường tách:
 
@@ -356,17 +359,17 @@ Java cung cấp `ConcurrentSkipListMap` và `ConcurrentSkipListSet` cho các tha
 
 sự đánh đổi bộ nhớ/constants và concurrent khối lượng công việc phải được profile.
 
-## Persistent Skip List?
+## Persistent Skip danh sách (list / 목록)?
 
-Sao chép theo đường đi trên cây tự nhiên hơn cho tính bền vững (persistence) vì đường nhánh rõ ràng. Skip List có nhiều con trỏ tiến cắt qua nhiều nút; vẫn có thể làm cấu trúc bền vững nhưng việc chia sẻ cấu trúc và cập nhật thường phức tạp hơn một số loại cây.
+Sao chép theo đường đi trên cây tự nhiên hơn cho tính bền vững (persistence) vì đường nhánh rõ ràng. Skip danh sách (list / 목록) có nhiều con trỏ tiến cắt qua nhiều nút; vẫn có thể làm cấu trúc bền vững nhưng việc chia sẻ cấu trúc và cập nhật thường phức tạp hơn một số loại cây.
 
 Nếu versioning là yêu cầu chính, persistent balanced/functional cây thường natural hơn.
 
-## Skip đồ thị và distributed variants
+## Skip đồ thị và phân tán (distributed / 분산) variants
 
-Ý tưởng liên kết ngẫu nhiên nhiều tầng có họ hàng với các cấu trúc phủ và tìm kiếm phân tán. Giao thức cụ thể khác Skip List trong bộ nhớ, nhưng trực giác về phân cấp và định tuyến xác suất có liên hệ.
+Ý tưởng liên kết ngẫu nhiên nhiều tầng có họ hàng với các cấu trúc phủ và tìm kiếm phân tán. Giao thức cụ thể khác Skip danh sách (list / 목록) trong bộ nhớ, nhưng trực giác về phân cấp và định tuyến xác suất có liên hệ.
 
-Điều này cho thấy design mẫu “sparse các liên kết nhảy nhanh” có thể scale beyond one xử lý.
+Điều này cho thấy thiết kế (design / 설계) mẫu “sparse các liên kết nhảy nhanh” có thể quy mô (scale / 규모) beyond one xử lý.
 
 ## dạng lỗi: off-by-one tầng conventions
 
@@ -385,7 +388,7 @@ hoặc một convention khác nhưng consistent.
 
 ## Dạng lỗi: độ dài mảng con trỏ tiến của nút
 
-Khi traversal ở tầng `L`, hiện tại nút phải có con trỏ ô `L`. Chuẩn design đảm bảo chỉ các nút hiện có at that tầng được traversal, giá trị canh gác (sentinel) has max các tầng.
+Khi traversal ở tầng `L`, hiện tại nút phải có con trỏ ô `L`. Chuẩn thiết kế (design / 설계) đảm bảo chỉ các nút hiện có at that tầng được traversal, giá trị canh gác (sentinel) has max các tầng.
 
 Mã trong ngôn ngữ động có thể che giấu một số lỗi cấu trúc; mã kiểu tĩnh hoặc mức thấp có thể gặp lỗi nghiêm trọng nếu truy cập vượt mảng con trỏ tiến đã được cấp phát.
 
@@ -393,7 +396,7 @@ Mã trong ngôn ngữ động có thể che giấu một số lỗi cấu trúc;
 
 ngẫu nhiên shape làm bug khó reproduce. Tests nên cho phép xác định seed hoặc inject bộ sinh tầng ngẫu nhiên.
 
-Sau đó failing sequence có thể replay chính xác structure.
+Sau đó failing chuỗi (sequence / 시퀀스) có thể replay chính xác cấu trúc (structure / 구조).
 
 Trong hệ thống thực tế, tính ngẫu nhiên khi chạy và tính ngẫu nhiên có thể tái lập trong kiểm thử là hai mối quan tâm khác nhau.
 
@@ -410,11 +413,11 @@ currentMaxLevel khớp top non-empty level
 size/count đúng
 ```
 
-Skip list có chỉ mục còn phải tính lại các span theo khoảng cách ở tầng cơ sở.
+Skip danh sách (list / 목록) có chỉ mục còn phải tính lại các span theo khoảng cách ở tầng cơ sở.
 
 ## Differential kiểm thử
 
-tham chiếu có thể là `TreeMap`, mảng đã sắp xếp/list hoặc multiset cách triển khai.
+tham chiếu có thể là `TreeMap`, mảng đã sắp xếp/danh sách (list / 목록) hoặc multiset cách triển khai.
 
 ngẫu nhiên chuỗi thao tác:
 
@@ -429,11 +432,11 @@ rank/select nếu augmented
 
 so các kết quả với tham chiếu after every batch.
 
-Randomization của structure không ảnh hưởng trừu tượng ngữ nghĩa, nên differential kiểm thử rất phù hợp.
+Randomization của cấu trúc (structure / 구조) không ảnh hưởng trừu tượng ngữ nghĩa, nên differential kiểm thử rất phù hợp.
 
 ## Benchmarking
 
-Benchmark Skip List vs cây phải tách khối lượng công việc:
+Benchmark Skip danh sách (list / 목록) vs cây phải tách khối lượng công việc:
 
 ```text
 random lookup
@@ -446,30 +449,32 @@ memory footprint
 
 A single phép đo hiệu năng vi mô “100k gets” không nói hết sự đánh đổi.
 
-Dataset size so với CPU bộ nhớ đệm cũng có thể đổi kết quả đáng kể.
+Dataset kích thước (size / 크기) so với CPU bộ nhớ đệm cũng có thể đổi kết quả đáng kể.
 
-## Khi nào nên cân nhắc Skip List
+## Khi nào nên cân nhắc Skip danh sách (list / 목록)
 
-Nên cân nhắc Skip List khi cần ánh xạ hoặc tập hợp có thứ tự và cập nhật động, cần duyệt theo khoảng, muốn tránh độ phức tạp của phép xoay cây, hoặc khi thiết kế đồng thời hưởng lợi từ việc nối lại con trỏ mang tính cục bộ.
+Nên cân nhắc Skip danh sách (list / 목록) khi cần ánh xạ hoặc tập hợp có thứ tự và cập nhật động, cần duyệt theo khoảng, muốn tránh độ phức tạp của phép xoay cây, hoặc khi thiết kế đồng thời hưởng lợi từ việc nối lại con trỏ mang tính cục bộ.
 
-Nếu tập dữ liệu tĩnh, mảng đã sắp xếp thường đơn giản và có tính cục bộ tốt. Nếu bài toán theo mô hình bộ nhớ ngoài hoặc theo trang, B+Tree mạnh hơn. Nếu chỉ cần tra cứu chính xác theo quan hệ bằng nhau, bảng băm thường phù hợp. Nếu bắt buộc có cận xác định cho trường hợp xấu nhất, cây cân bằng xác định rõ ràng hơn.
+Nếu tập dữ liệu tĩnh, mảng đã sắp xếp thường đơn giản và có tính cục bộ tốt. Nếu bài toán theo mô hình bộ nhớ ngoài hoặc theo trang, B+cây (tree / 트리) mạnh hơn. Nếu chỉ cần tra cứu chính xác theo quan hệ bằng nhau, bảng băm thường phù hợp. Nếu bắt buộc có cận xác định cho trường hợp xấu nhất, cây cân bằng xác định rõ ràng hơn.
 
 ## Những hiểu lầm phổ biến
 
-“Skip List là danh sách liên kết nên tìm kiếm tuyến tính” là sai vì cấu trúc phân tầng làm thay đổi đường tìm kiếm kỳ vọng.
+“Skip danh sách (list / 목록) là danh sách liên kết nên tìm kiếm tuyến tính” là sai vì cấu trúc phân tầng làm thay đổi đường tìm kiếm kỳ vọng.
 
 “kỳ vọng `O(log n)` nghĩa mỗi thao tác chắc chắn logarithmic” sai.
 
-“Concurrency dễ hơn cây nghĩa cách triển khai không khóa đơn giản” sai; reclamation và atomic protocol vẫn phức tạp.
+“tính đồng thời (concurrency / 동시성) dễ hơn cây nghĩa cách triển khai không khóa đơn giản” sai; reclamation và atomic giao thức (protocol / 프로토콜) vẫn phức tạp.
 
 “ngẫu nhiên promotion càng nhiều càng nhanh” sai vì bộ nhớ/bộ nhớ đệm overhead tăng và có phương án tối ưu sự đánh đổi.
 
-“Skip List chỉ là academic structure” sai; ordered concurrent/lập chỉ mục khối lượng công việc đã dùng variants trong real các hệ thống.
+“Skip danh sách (list / 목록) chỉ là academic cấu trúc (structure / 구조)” sai; ordered concurrent/lập chỉ mục khối lượng công việc đã dùng variants trong real các hệ thống.
 
 ## Mô hình tư duy
 
-> Skip List không cân bằng cây; nó điều chỉnh **mật độ các liên kết nhảy nhanh** bằng tính ngẫu nhiên. Tầng 0 giữ đầy đủ dữ liệu, các tầng cao là những chỉ mục thưa của cùng dãy đã sắp xếp. Tìm kiếm đi từ độ phân giải thô xuống độ phân giải mịn, còn chèn/xóa chỉ nối lại những liên kết mà nút tham gia.
+> Skip danh sách (list / 목록) không cân bằng cây; nó điều chỉnh **mật độ các liên kết nhảy nhanh** bằng tính ngẫu nhiên. Tầng 0 giữ đầy đủ dữ liệu, các tầng cao là những chỉ mục thưa của cùng dãy đã sắp xếp. Tìm kiếm đi từ độ phân giải thô xuống độ phân giải mịn, còn chèn/xóa chỉ nối lại những liên kết mà nút tham gia.
 
-Khi đánh giá Skip List, hãy hỏi: **kỳ vọng bảo đảm có đủ không, quét theo khoảng có quan trọng không, bộ nhớ/con trỏ tính cục bộ thế nào, concurrency có cần không, và comparator/phần tử trùng ngữ nghĩa có rõ không?**
+Khi đánh giá Skip danh sách (list / 목록), hãy hỏi: **kỳ vọng bảo đảm có đủ không, quét theo khoảng có quan trọng không, bộ nhớ/con trỏ tính cục bộ thế nào, tính đồng thời (concurrency / 동시성) có cần không, và comparator/phần tử trùng ngữ nghĩa có rõ không?**
 
 Xem tiếp: [Linked Lists](../01_linear_structures/01_linked_lists.md), [Balanced Search Trees](./02_balanced_search_trees.md), [Augmented Trees](./06_augmented_trees_and_order_statistics.md), [B-Tree & External Memory](./05_b_trees_and_external_memory.md) và [Amortized & Randomized Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 tree foundations](./00_tree_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

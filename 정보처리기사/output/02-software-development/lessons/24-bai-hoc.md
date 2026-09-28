@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** và nối nó với **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -32,18 +34,18 @@
 ### 형상 관리 방식 (Các phương pháp quản lý phiên bản)
 - **공유 폴더 방식 (Shared Folder):** Lưu vào chung một thư mục trên mạng nội bộ. (Ví dụ: RCS).
 - **클라이언트/서버 방식 (Client/Server):** Quản lý tập trung trên một máy chủ. (Ví dụ: CVS, SVN).
-- **분산 저장소 방식 (Distributed Repository):** Mỗi máy cá nhân đều chứa một bản copy của kho chứa, commit lên máy cá nhân trước rồi mới push lên server. Rất an toàn. (Ví dụ: **Git**).
+- **분산 저장소 방식 (Distributed Repository):** Mỗi máy cá nhân đều chứa một bản bản sao (copy / 복사) của kho chứa, lần ghi nhận (commit / 커밋) lên máy cá nhân trước rồi mới push lên máy chủ (server / 서버). Rất an toàn. (Ví dụ: **Git**).
 
 ### 형상 관리 도구 기능 (Chức năng công cụ)
-- **Check-In:** Đẩy code lên kho (Upload).
-- **Check-Out:** Lấy code mới nhất về (Download).
-- **Commit:** Xác nhận lưu sự thay đổi.
+- **Check-In:** Đẩy mã (code / 코드) lên kho (Upload).
+- **Check-Out:** Lấy mã (code / 코드) mới nhất về (Download).
+- **lần ghi nhận (commit / 커밋):** Xác nhận lưu sự thay đổi.
 
 ### IDE (Integrated Development Environment - Môi trường phát triển tích hợp)
 - 코딩, 컴파일, 디버깅, 배포 (Coding, Compile, Debug, Deployment) 기능을 하나로 통합. (Tích hợp tất cả công cụ lập trình vào một phần mềm).
 - Ví dụ: Eclipse (Java), Visual Studio (C#, C++), Xcode (iOS), Android Studio, IntelliJ IDEA.
 
-- **Vietnamese Explanation:** Quản lý hình thái (Configuration/Version) giống như việc lưu file "Bao_cao_lan1", "Bao_cao_lan2", "Bao_cao_FINAL". Git (Phân tán) là công cụ phổ biến nhất hiện nay. IDE là bộ công cụ tất cả-trong-một của lập trình viên (vừa gõ code, vừa dịch, vừa tìm lỗi).
+- **Vietnamese Explanation:** Quản lý hình thái (Configuration/Version) giống như việc lưu tệp (file / 파일) "Bao_cao_lan1", "Bao_cao_lan2", "Bao_cao_FINAL". Git (Phân tán) là công cụ phổ biến nhất hiện nay. IDE là bộ công cụ tất cả-trong-một của lập trình viên (vừa gõ code, vừa dịch, vừa tìm lỗi).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự 형상 quản lý: Nhận Kiểm Đánh Ghi (Nhận diện - Kiểm soát - Đánh giá - Ghi chép). Git = Phân tán (분산). IDE 4 bước: CoCoDeDe (Coding - Compile - Debugging - Deployment).
 
 ---

@@ -1,98 +1,101 @@
-# Platform Engineering: platform as product, golden path và abstraction
+# Kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): nền tảng (platform / 플랫폼) as sản phẩm (product / 제품), golden đường dẫn (path / 경로) và lớp trừu tượng (abstraction / 추상화)
 
-## 1. Vì sao platform xuất hiện sau DevOps
+> **Mạch đọc:** Đọc **kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): nền tảng (platform / 플랫폼) as sản phẩm (product / 제품), golden đường dẫn (path / 경로) và lớp trừu tượng (abstraction / 추상화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Vì sao nền tảng (platform / 플랫폼) xuất hiện sau DevOps** sang **2. nền tảng (platform / 플랫폼) là sản phẩm (product / 제품) có người dùng (user / 사용자)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-DevOps khuyến khích team sở hữu delivery và production outcome. Khi tổ chức có nhiều team, mỗi team tự giải cùng bài toán CI, container, observability, secrets và cloud thì cognitive load tăng. Platform Engineering tạo một product nội bộ để tái sử dụng capability mà không quay lại mô hình ticket queue cũ.
 
-Mục tiêu không phải lấy việc của developer, mà làm self-service an toàn.
+## 1. Vì sao nền tảng (platform / 플랫폼) xuất hiện sau DevOps
 
-## 2. Platform là product có user
+DevOps khuyến khích nhóm (team / 팀) sở hữu delivery và môi trường vận hành (production / 운영 환경) kết quả (outcome / 결과). Khi tổ chức có nhiều nhóm (team / 팀), mỗi nhóm (team / 팀) tự giải cùng bài toán CI, bộ chứa (container / 컨테이너), khả năng quan sát (observability / 관측 가능성), secrets và cloud thì cognitive tải (load / 로드) tăng. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) tạo một sản phẩm (product / 제품) nội bộ để tái sử dụng năng lực (capability / 역량) mà không quay lại mô hình ticket hàng đợi (queue / 큐) cũ.
 
-Một platform phải biết user persona: backend developer, data engineer, mobile backend team hay operator. Mỗi persona có job-to-be-done khác nhau.
+Mục tiêu không phải lấy việc của nhà phát triển (developer / 개발자), mà làm self-service an toàn.
 
-“Developer cần namespace Kubernetes” có thể chỉ là implementation-level request. Job thật có thể là “cần một HTTP service private có database, metrics và deploy pipeline”. Platform nên thiết kế interface theo capability gần job, không theo resource catalog nội bộ.
+## 2. nền tảng (platform / 플랫폼) là sản phẩm (product / 제품) có người dùng (user / 사용자)
 
-## 3. Golden path là đường tối ưu cho common case
+Một nền tảng (platform / 플랫폼) phải biết người dùng (user / 사용자) persona: backend nhà phát triển (developer / 개발자), dữ liệu (data / 데이터) engineer, mobile backend nhóm (team / 팀) hay operator. Mỗi persona có job-to-be-done khác nhau.
 
-Golden path bundle decision đã được tổ chức hiểu rõ. Ví dụ service chuẩn có repository template, build, artifact registry, deployment, identity, secret integration, SLO dashboard và ownership metadata.
+“nhà phát triển (developer / 개발자) cần không gian tên (namespace / 네임스페이스) Kubernetes” có thể chỉ là implementation-level yêu cầu (request / 요청). Job thật có thể là “cần một HTTP dịch vụ (service / 서비스) private có cơ sở dữ liệu (database / 데이터베이스), metrics và deploy chuỗi xử lý (pipeline / 파이프라인)”. nền tảng (platform / 플랫폼) nên thiết kế giao diện (interface / 인터페이스) theo năng lực (capability / 역량) gần job, không theo tài nguyên (resource / 자원) danh mục (catalog / 카탈로그) nội bộ.
 
-Golden path nên opinionated đủ để giảm decision fatigue. Nếu generator hỏi 80 câu cloud/Kubernetes, platform chưa giảm cognitive load.
+## 3. Golden đường dẫn (path / 경로) là đường tối ưu cho dùng chung (common / 공통) trường hợp (case / 사례)
 
-Nhưng golden path không nên khóa use case đặc biệt. Escape hatch cần có, kèm explicit ownership và risk.
+Golden đường dẫn (path / 경로) bundle quyết định (decision / 결정) đã được tổ chức hiểu rõ. Ví dụ dịch vụ (service / 서비스) chuẩn có repository template, bản dựng (build / 빌드), sản phẩm tạo ra (artifact / 산출물) registry, triển khai (deployment / 배포), định danh (identity / 식별자), secret tích hợp (integration / 통합), SLO dashboard và quyền sở hữu (ownership / 소유권) siêu dữ liệu (metadata / 메타데이터).
 
-## 4. Abstraction phải che complexity accidental, không che physics
+Golden đường dẫn (path / 경로) nên opinionated đủ để giảm quyết định (decision / 결정) fatigue. Nếu generator hỏi 80 câu cloud/Kubernetes, nền tảng (platform / 플랫폼) chưa giảm cognitive tải (load / 로드).
 
-Developer không cần biết CNI implementation để deploy service bình thường. Nhưng họ vẫn cần hiểu timeout, resource request, retry và data durability vì đó là property của system chứ không phải chi tiết platform.
+Nhưng golden đường dẫn (path / 경로) không nên khóa use trường hợp (case / 사례) đặc biệt. Escape hatch cần có, kèm tường minh (explicit / 명시적) quyền sở hữu (ownership / 소유권) và rủi ro (risk / 위험).
 
-Abstraction tốt ẩn implementation nhưng giữ concept quan trọng. “Database plan: small/medium/large” có thể che IOPS detail cho common case, nhưng phải expose backup class, HA, RPO/RTO và connection constraints nếu chúng ảnh hưởng application.
+## 4. lớp trừu tượng (abstraction / 추상화) phải che độ phức tạp (complexity / 복잡도) accidental, không che physics
 
-## 5. Interface của platform có nhiều dạng
+Nhà phát triển (developer / 개발자) không cần biết CNI hiện thực (implementation / 구현) để deploy dịch vụ (service / 서비스) bình thường. Nhưng họ vẫn cần hiểu hết thời gian chờ (timeout / 타임아웃), yêu cầu tài nguyên (resource request / 리소스 요청), thử lại (retry / 재시도) và dữ liệu (data / 데이터) durability vì đó là thuộc tính (property / 속성) của hệ thống (system / 시스템) chứ không phải chi tiết nền tảng (platform / 플랫폼).
 
-Internal Developer Portal (IDP portal) chỉ là một interface. Platform có thể expose CLI, API, Git repository schema, CRD, Terraform module và documentation. Portal đẹp không bù được backend capability yếu.
+Lớp trừu tượng (abstraction / 추상화) tốt ẩn hiện thực (implementation / 구현) nhưng giữ concept quan trọng. “cơ sở dữ liệu (database / 데이터베이스) plan: small/medium/large” có thể che IOPS detail cho dùng chung (common / 공통) trường hợp (case / 사례), nhưng phải expose backup lớp (class / 클래스), HA, RPO/RTO và liên kết (connection / 연결) các ràng buộc (constraints / 제약조건들) nếu chúng ảnh hưởng ứng dụng (application / 애플리케이션).
 
-Interface nên composable và automation-friendly. Nếu portal là con đường duy nhất và không có API/declarative source, bulk operation và GitOps integration khó.
+## 5. giao diện (interface / 인터페이스) của nền tảng (platform / 플랫폼) có nhiều dạng
 
-## 6. Service catalog là ownership graph
+Nội bộ (internal / 내부) nhà phát triển (developer / 개발자) Portal (IDP portal) chỉ là một giao diện (interface / 인터페이스). nền tảng (platform / 플랫폼) có thể expose CLI, API, Git repository lược đồ (schema / 스키마), CRD, Terraform mô-đun (module / 모듈) và documentation. Portal đẹp không bù được backend năng lực (capability / 역량) yếu.
 
-Catalog có giá trị khi nối service với owner, repository, runtime, dependencies, on-call, SLO và docs. Chỉ liệt kê hàng nghìn service name không giúp incident.
+Giao diện (interface / 인터페이스) nên composable và automation-friendly. Nếu portal là con đường duy nhất và không có API/declarative nguồn (source / 소스), bulk thao tác (operation / 연산) và GitOps tích hợp (integration / 통합) khó.
 
-Catalog nên được cập nhật từ source of truth tự động càng nhiều càng tốt. Metadata manual thường stale.
+## 6. dịch vụ (service / 서비스) danh mục (catalog / 카탈로그) là quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프)
 
-## 7. Platform capability nên có contract/version
+Danh mục (catalog / 카탈로그) có giá trị khi nối dịch vụ (service / 서비스) với đơn vị sở hữu (owner / 오너), repository, thời gian chạy (runtime / 런타임), dependencies, on-call, SLO và docs. Chỉ liệt kê hàng nghìn dịch vụ (service / 서비스) name không giúp sự cố (incident / 인시던트).
 
-Template và module thay đổi theo thời gian. Nếu platform update Terraform module/Kubernetes abstraction phá hàng trăm service, platform là dependency production nên cần semantic/version/evolution strategy.
+Danh mục (catalog / 카탈로그) nên được cập nhật từ nguồn chuẩn (source of truth / 정본) tự động càng nhiều càng tốt. siêu dữ liệu (metadata / 메타데이터) manual thường stale.
 
-Deprecation cần timeline, migration tooling và visibility ai đang dùng version cũ. Platform không thể nói “developer tự update” nếu abstraction vốn được tạo để giảm workload đó.
+## 7. nền tảng (platform / 플랫폼) năng lực (capability / 역량) nên có đặc tả hợp đồng (contract / 계약)/phiên bản (version / 버전)
+
+Template và mô-đun (module / 모듈) thay đổi theo thời gian. Nếu nền tảng (platform / 플랫폼) cập nhật (update / 업데이트) Terraform mô-đun (module / 모듈)/Kubernetes lớp trừu tượng (abstraction / 추상화) phá hàng trăm dịch vụ (service / 서비스), nền tảng (platform / 플랫폼) là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경) nên cần ngữ nghĩa (semantic / 의미적)/phiên bản (version / 버전)/evolution chiến lược (strategy / 전략).
+
+Deprecation cần timeline, di chuyển (migration / 마이그레이션) tooling và visibility ai đang dùng phiên bản (version / 버전) cũ. nền tảng (platform / 플랫폼) không thể nói “nhà phát triển (developer / 개발자) tự cập nhật (update / 업데이트)” nếu lớp trừu tượng (abstraction / 추상화) vốn được tạo để giảm tải công việc (workload / 워크로드) đó.
 
 ## 8. Paved road và escape hatch
 
-Use case phổ biến đi paved road với support/SLO tốt. Use case khác có thể tự quản nhưng phải đáp ứng minimum governance. Điều này tránh hai cực: central platform kiểm soát mọi thứ, hoặc platform bị bỏ qua vì không fit ai.
+Use trường hợp (case / 사례) phổ biến đi paved road với hỗ trợ (support / 지원)/SLO tốt. Use trường hợp (case / 사례) khác có thể tự quản nhưng phải đáp ứng minimum quản trị (governance / 거버넌스). Điều này tránh hai cực: central nền tảng (platform / 플랫폼) kiểm soát mọi thứ, hoặc nền tảng (platform / 플랫폼) bị bỏ qua vì không fit ai.
 
-Escape hatch nên explicit, không phải undocumented workaround.
+Escape hatch nên tường minh (explicit / 명시적), không phải undocumented workaround.
 
-## 9. Product discovery cho platform
+## 9. sản phẩm (product / 제품) discovery cho nền tảng (platform / 플랫폼)
 
-Platform backlog không nên chỉ đến từ tool team muốn thử. Quan sát developer journey: thời gian tạo service mới, bước phải mở ticket, loại incident lặp lại, pipeline wait, secret rotation pain, local-to-prod gap.
+Nền tảng (platform / 플랫폼) backlog không nên chỉ đến từ công cụ (tool / 도구) nhóm (team / 팀) muốn thử. Quan sát nhà phát triển (developer / 개발자) journey: thời gian tạo dịch vụ (service / 서비스) mới, bước phải mở ticket, loại sự cố (incident / 인시던트) lặp lại, chuỗi xử lý (pipeline / 파이프라인) wait, secret rotation pain, local-to-prod gap.
 
-Ưu tiên capability loại bỏ toil/cognitive load có tần suất và impact cao.
+Ưu tiên năng lực (capability / 역량) loại bỏ toil/cognitive tải (load / 로드) có tần suất và impact cao.
 
-## 10. Đo platform outcome
+## 10. Đo nền tảng (platform / 플랫폼) kết quả (outcome / 결과)
 
-Vanity metric như số cluster, số template hoặc số API endpoint không phản ánh value. Có thể đo time-to-first-deploy, lead time cho platform-supported path, tỷ lệ adoption tự nguyện, support ticket theo workflow, failure rate do configuration và developer satisfaction kết hợp reliability.
+Vanity chỉ số (metric / 지표) như số cluster, số template hoặc số API endpoint không phản ánh giá trị (value / 값). Có thể đo time-to-first-deploy, lead thời gian (time / 시간) cho platform-supported đường dẫn (path / 경로), tỷ lệ adoption tự nguyện, hỗ trợ (support / 지원) ticket theo workflow, thất bại (failure / 실패) tỷ lệ (rate / 비율) do cấu hình (configuration / 구성) và nhà phát triển (developer / 개발자) satisfaction kết hợp độ tin cậy (reliability / 신뢰성).
 
-Metric cần chống gaming. Adoption cao vì policy bắt buộc chưa chắc user experience tốt.
+Chỉ số (metric / 지표) cần chống gaming. Adoption cao vì chính sách (policy / 정책) bắt buộc chưa chắc người dùng (user / 사용자) experience tốt.
 
-## 11. Platform team không phải ticket team mới
+## 11. nền tảng (platform / 플랫폼) nhóm (team / 팀) không phải ticket nhóm (team / 팀) mới
 
-Nếu mọi self-service form cuối cùng tạo ticket để platform engineer thao tác bằng tay, chỉ thay giao diện. True self-service cần automated provisioning với policy và asynchronous status rõ.
+Nếu mọi self-service form cuối cùng tạo ticket để nền tảng (platform / 플랫폼) engineer thao tác bằng tay, chỉ thay giao diện. True self-service cần automated provisioning với chính sách (policy / 정책) và asynchronous status rõ.
 
-Human support vẫn cần cho exception, education và incident, nhưng common path không nên phụ thuộc queue.
+Human hỗ trợ (support / 지원) vẫn cần cho exception, education và sự cố (incident / 인시던트), nhưng dùng chung (common / 공통) đường dẫn (path / 경로) không nên phụ thuộc hàng đợi (queue / 큐).
 
-## 12. Team topology và ownership
+## 12. nhóm (team / 팀) topology và quyền sở hữu (ownership / 소유권)
 
-Platform team quản shared capability; enabling team có thể giúp product team học practice mới; complicated subsystem team sở hữu domain chuyên sâu. Boundary tổ chức nên giảm communication path bắt buộc.
+Nền tảng (platform / 플랫폼) nhóm (team / 팀) quản dùng chung (shared / 공유) năng lực (capability / 역량); enabling nhóm (team / 팀) có thể giúp sản phẩm (product / 제품) nhóm (team / 팀) học practice mới; complicated subsystem nhóm (team / 팀) sở hữu lĩnh vực (domain / 도메인) chuyên sâu. ranh giới (boundary / 경계) tổ chức nên giảm communication đường dẫn (path / 경로) bắt buộc.
 
-Conway's Law nhắc rằng system architecture phản ánh communication structure. Platform API là cách biến communication lặp lại thành contract kỹ thuật.
+Conway's Law nhắc rằng hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) phản ánh communication cấu trúc (structure / 구조). nền tảng (platform / 플랫폼) API là cách biến communication lặp lại thành đặc tả hợp đồng (contract / 계약) kỹ thuật.
 
-## 13. Senior note: platform là dependency có blast radius lớn
+## 13. cấp cao (senior / 시니어) ghi chú (note / 노트): nền tảng (platform / 플랫폼) là phụ thuộc (dependency / 의존성) có blast radius lớn
 
-Một bug trong shared pipeline template, base image hoặc ingress platform có thể ảnh hưởng toàn công ty. Vì vậy platform cần chính SLO, canary, compatibility test, incident response và staged rollout như bất kỳ product critical nào.
+Một bug trong dùng chung (shared / 공유) chuỗi xử lý (pipeline / 파이프라인) template, cơ sở (base / 기반) ảnh (image / 이미지) hoặc ingress nền tảng (platform / 플랫폼) có thể ảnh hưởng toàn công ty. Vì vậy nền tảng (platform / 플랫폼) cần chính SLO, canary, tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트), sự cố (incident / 인시던트) phản hồi (response / 응답) và staged rollout như bất kỳ sản phẩm (product / 제품) trọng yếu (critical / 중요) nào.
 
-Platform Engineering không phải “DevOps team đổi tên”. Nó là product discipline áp dụng cho shared engineering capabilities.
+Kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) không phải “DevOps nhóm (team / 팀) đổi tên”. Nó là sản phẩm (product / 제품) discipline áp dụng cho dùng chung (shared / 공유) kỹ thuật (engineering / 엔지니어링) capabilities.
 
-## 14. Platform có control plane và data plane riêng
+## 14. nền tảng (platform / 플랫폼) có điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인) riêng
 
-Một platform trưởng thành thường có thể nhìn thành hai lớp. **Control plane** nhận intent, validate policy, tạo workflow, lưu trạng thái và điều phối controller. **Data plane** là workload/resource thực sự phục vụ traffic hoặc chạy job.
+Một nền tảng (platform / 플랫폼) trưởng thành thường có thể nhìn thành hai lớp. **điều khiển (control / 제어) plane** nhận intent, validate chính sách (policy / 정책), tạo workflow, lưu trạng thái và điều phối controller. **mặt phẳng dữ liệu (data plane / 데이터 플레인)** là tải công việc (workload / 워크로드)/tài nguyên (resource / 자원) thực sự phục vụ traffic hoặc chạy job.
 
-Ví dụ developer yêu cầu “internal HTTP service”. Platform control plane có thể tạo repository metadata, identity, deployment object và observability config. Sau đó Kubernetes/cloud/runtime data plane mới chạy process và traffic.
+Ví dụ nhà phát triển (developer / 개발자) yêu cầu “nội bộ (internal / 내부) HTTP dịch vụ (service / 서비스)”. nền tảng (platform / 플랫폼) điều khiển (control / 제어) plane có thể tạo repository siêu dữ liệu (metadata / 메타데이터), định danh (identity / 식별자), triển khai (deployment / 배포) đối tượng (object / 객체) và khả năng quan sát (observability / 관측 가능성) cấu hình (config / 설정). Sau đó Kubernetes/cloud/thời gian chạy (runtime / 런타임) mặt phẳng dữ liệu (data plane / 데이터 플레인) mới chạy tiến trình (process / 프로세스) và traffic.
 
-Phân biệt này quan trọng khi incident. Portal/API platform down có thể làm không tạo service mới được nhưng workload hiện tại vẫn phục vụ user. Ngược lại platform UI xanh không chứng minh data plane application khỏe.
+Phân biệt này quan trọng khi sự cố (incident / 인시던트). Portal/API nền tảng (platform / 플랫폼) down có thể làm không tạo dịch vụ (service / 서비스) mới được nhưng tải công việc (workload / 워크로드) hiện tại vẫn phục vụ người dùng (user / 사용자). Ngược lại nền tảng (platform / 플랫폼) UI xanh không chứng minh mặt phẳng dữ liệu (data plane / 데이터 플레인) ứng dụng (application / 애플리케이션) khỏe.
 
-## 15. Self-service operation nên là asynchronous state machine
+## 15. Self-service thao tác (operation / 연산) nên là asynchronous máy trạng thái (state machine / 상태 머신)
 
-Provision database, cluster resource hoặc environment thường không hoàn thành trong một HTTP request ngắn. Platform API tốt không giả vờ mọi operation là synchronous. Nó nhận intent, tạo operation/resource identity rồi expose status/condition cho user theo dõi.
+Provision cơ sở dữ liệu (database / 데이터베이스), cluster tài nguyên (resource / 자원) hoặc môi trường (environment / 환경) thường không hoàn thành trong một HTTP yêu cầu (request / 요청) ngắn. nền tảng (platform / 플랫폼) API tốt không giả vờ mọi thao tác (operation / 연산) là synchronous. Nó nhận intent, tạo thao tác (operation / 연산)/tài nguyên (resource / 자원) định danh (identity / 식별자) rồi expose status/điều kiện (condition / 조건) cho người dùng (user / 사용자) theo dõi.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 request intent
@@ -102,61 +105,61 @@ request intent
 → ready | failed | degraded
 ```
 
-Điều này cho phép retry, timeout và partial failure có semantics rõ. Nếu user bấm nút lần hai vì trang web timeout mà backend không có idempotency key/resource identity, platform có thể tạo duplicate infrastructure.
+Điều này cho phép thử lại (retry / 재시도), hết thời gian chờ (timeout / 타임아웃) và partial thất bại (failure / 실패) có ngữ nghĩa (semantics / 의미론) rõ. Nếu người dùng (user / 사용자) bấm nút lần hai vì trang web hết thời gian chờ (timeout / 타임아웃) mà backend không có idempotency key/tài nguyên (resource / 자원) định danh (identity / 식별자), nền tảng (platform / 플랫폼) có thể tạo duplicate hạ tầng (infrastructure / 인프라).
 
-## 16. Platform contract phải nói cả happy path lẫn failure semantics
+## 16. nền tảng (platform / 플랫폼) đặc tả hợp đồng (contract / 계약) phải nói cả happy đường dẫn (path / 경로) lẫn thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
-API “CreateDatabase(plan=medium)” chưa đủ. Consumer còn cần biết create mất bao lâu, failure có retry được không, delete có giữ backup không, version upgrade có downtime không, credential rotate thế nào và SLO/support boundary là gì.
+API “CreateDatabase(plan=medium)” chưa đủ. bên tiêu thụ (consumer / 소비자) còn cần biết create mất bao lâu, thất bại (failure / 실패) có thử lại (retry / 재시도) được không, delete có giữ backup không, phiên bản (version / 버전) upgrade có downtime không, credential rotate thế nào và SLO/hỗ trợ (support / 지원) ranh giới (boundary / 경계) là gì.
 
-Abstraction mạnh không chỉ giảm số field; nó nén nhiều decision vào một contract ổn định. Nếu contract chỉ mô tả provisioning mà bỏ Day 2 operation, developer vẫn phải học implementation khi upgrade/incident.
+Lớp trừu tượng (abstraction / 추상화) mạnh không chỉ giảm số trường dữ liệu (field / 필드); nó nén nhiều quyết định (decision / 결정) vào một đặc tả hợp đồng (contract / 계약) ổn định. Nếu đặc tả hợp đồng (contract / 계약) chỉ mô tả provisioning mà bỏ Day 2 thao tác (operation / 연산), nhà phát triển (developer / 개발자) vẫn phải học hiện thực (implementation / 구현) khi upgrade/sự cố (incident / 인시던트).
 
-## 17. Version evolution cần compatibility window
+## 17. phiên bản (version / 버전) evolution cần tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)
 
-Platform interface thay đổi có thể ảnh hưởng hàng trăm team. Một breaking migration “mọi service đổi manifest trong tuần này” chuyển toil từ platform team sang toàn tổ chức.
+Nền tảng (platform / 플랫폼) giao diện (interface / 인터페이스) thay đổi có thể ảnh hưởng hàng trăm nhóm (team / 팀). Một breaking di chuyển (migration / 마이그레이션) “mọi dịch vụ (service / 서비스) đổi manifest trong tuần này” chuyển toil từ nền tảng (platform / 플랫폼) nhóm (team / 팀) sang toàn tổ chức.
 
-Evolution tốt thường cần coexistence window: version cũ tiếp tục được support trong thời gian xác định; version mới có migration tool/preview; platform biết consumer nào còn ở old version; deprecation có telemetry và deadline.
+Evolution tốt thường cần coexistence cửa sổ (window / 윈도우): phiên bản (version / 버전) cũ tiếp tục được hỗ trợ (support / 지원) trong thời gian xác định; phiên bản (version / 버전) mới có di chuyển (migration / 마이그레이션) công cụ (tool / 도구)/preview; nền tảng (platform / 플랫폼) biết bên tiêu thụ (consumer / 소비자) nào còn ở old phiên bản (version / 버전); deprecation có telemetry và deadline.
 
-Nếu có thể tự động migrate source/config an toàn, platform nên làm automation thay vì phát documentation dài yêu cầu từng team sửa tay.
+Nếu có thể tự động migrate nguồn (source / 소스)/cấu hình (config / 설정) an toàn, nền tảng (platform / 플랫폼) nên làm automation thay vì phát documentation dài yêu cầu từng nhóm (team / 팀) sửa tay.
 
-## 18. Golden path phải encode escape hatch cost
+## 18. Golden đường dẫn (path / 경로) phải encode escape hatch chi phí (cost / 비용)
 
-Escape hatch không chỉ là boolean “được phép custom”. Nó cần ownership model. Team rời paved road có thể mất một phần support/SLO, tự chịu upgrade của custom component hoặc phải đáp ứng policy bổ sung.
+Escape hatch không chỉ là boolean “được phép custom”. Nó cần quyền sở hữu (ownership / 소유권) mô hình (model / 모델). nhóm (team / 팀) rời paved road có thể mất một phần hỗ trợ (support / 지원)/SLO, tự chịu upgrade của custom thành phần (component / 컴포넌트) hoặc phải đáp ứng chính sách (policy / 정책) bổ sung.
 
-Nếu custom path miễn mọi cost nhưng vẫn được platform team support đầy đủ, golden path khó duy trì. Ngược lại nếu escape hatch bị phạt quá nặng, team sẽ giấu workaround. Contract minh bạch giúp lựa chọn trade-off có chủ đích.
+Nếu custom đường dẫn (path / 경로) miễn mọi chi phí (cost / 비용) nhưng vẫn được nền tảng (platform / 플랫폼) nhóm (team / 팀) hỗ trợ (support / 지원) đầy đủ, golden đường dẫn (path / 경로) khó duy trì. Ngược lại nếu escape hatch bị phạt quá nặng, nhóm (team / 팀) sẽ giấu workaround. đặc tả hợp đồng (contract / 계약) minh bạch giúp lựa chọn sự đánh đổi (trade-off / 트레이드오프) có chủ đích.
 
-## 19. Platform SLO nên theo developer journey
+## 19. nền tảng (platform / 플랫폼) SLO nên theo nhà phát triển (developer / 개발자) journey
 
-Một platform có nhiều internal component nhưng user quan tâm journey end-to-end: tạo service, merge change, deploy, provision environment, rotate secret, debug incident. SLI chỉ đo API uptime của portal có thể xanh trong khi provisioning queue treo hàng giờ.
+Một nền tảng (platform / 플랫폼) có nhiều nội bộ (internal / 내부) thành phần (component / 컴포넌트) nhưng người dùng (user / 사용자) quan tâm journey end-to-end: tạo dịch vụ (service / 서비스), merge thay đổi (change / 변경), deploy, provision môi trường (environment / 환경), rotate secret, gỡ lỗi (debug / 디버그) sự cố (incident / 인시던트). SLI chỉ đo API uptime của portal có thể xanh trong khi provisioning hàng đợi (queue / 큐) treo hàng giờ.
 
-Ví dụ SLI platform có thể đo tỷ lệ provisioning hoàn tất trong 15 phút, tỷ lệ deploy pipeline thành công không do platform fault, hoặc time-to-first-production trên paved road. Khi SLO cháy, platform team có evidence để ưu tiên reliability thay vì chỉ nhìn support ticket.
+Ví dụ SLI nền tảng (platform / 플랫폼) có thể đo tỷ lệ provisioning hoàn tất trong 15 phút, tỷ lệ deploy chuỗi xử lý (pipeline / 파이프라인) thành công không do nền tảng (platform / 플랫폼) fault, hoặc time-to-first-production trên paved road. Khi SLO cháy, nền tảng (platform / 플랫폼) nhóm (team / 팀) có bằng chứng (evidence / 증거) để ưu tiên độ tin cậy (reliability / 신뢰성) thay vì chỉ nhìn hỗ trợ (support / 지원) ticket.
 
-## 20. Product discovery phải phân biệt cognitive load thiết yếu và accidental
+## 20. sản phẩm (product / 제품) discovery phải phân biệt cognitive tải (load / 로드) thiết yếu và accidental
 
-Không phải mọi complexity đều nên giấu. Developer cần hiểu consistency, timeout, idempotency, resource demand và data ownership vì đó là physics của distributed application. Nhưng họ không nhất thiết phải biết account ID, subnet naming, ingress annotation hay secret-store wiring của tổ chức.
+Không phải mọi độ phức tạp (complexity / 복잡도) đều nên giấu. nhà phát triển (developer / 개발자) cần hiểu consistency, hết thời gian chờ (timeout / 타임아웃), idempotency, tài nguyên (resource / 자원) demand và dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) vì đó là physics của phân tán (distributed / 분산) ứng dụng (application / 애플리케이션). Nhưng họ không nhất thiết phải biết account ID, subnet naming, ingress annotation hay secret-store wiring của tổ chức.
 
-Platform tốt giảm **accidental complexity** nhưng giữ **essential complexity** đủ visible để user đưa quyết định đúng. Nếu abstraction biến mọi database thành một nút “Create” mà che RPO, connection limit và cost tier, cognitive load giảm ngắn hạn nhưng incident/risk tăng dài hạn.
+Nền tảng (platform / 플랫폼) tốt giảm **accidental độ phức tạp (complexity / 복잡도)** nhưng giữ **essential độ phức tạp (complexity / 복잡도)** đủ visible để người dùng (user / 사용자) đưa quyết định đúng. Nếu lớp trừu tượng (abstraction / 추상화) biến mọi cơ sở dữ liệu (database / 데이터베이스) thành một nút “Create” mà che RPO, liên kết (connection / 연결) limit và chi phí (cost / 비용) tier, cognitive tải (load / 로드) giảm ngắn hạn nhưng sự cố (incident / 인시던트)/rủi ro (risk / 위험) tăng dài hạn.
 
-## 21. Senior walkthrough: platform migration gây blast radius toàn công ty
+## 21. cấp cao (senior / 시니어) walkthrough: nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) gây blast radius toàn công ty
 
-Giả sử shared base image mới nâng runtime/CA bundle và platform cập nhật template để mọi build dùng ngay version mới. Nếu rollout đồng loạt, một compatibility bug có thể làm hàng trăm service fail cùng lúc.
+Giả sử dùng chung (shared / 공유) cơ sở (base / 기반) ảnh (image / 이미지) mới nâng thời gian chạy (runtime / 런타임)/CA bundle và nền tảng (platform / 플랫폼) cập nhật template để mọi bản dựng (build / 빌드) dùng ngay phiên bản (version / 버전) mới. Nếu rollout đồng loạt, một tính tương thích (compatibility / 호환성) bug có thể làm hàng trăm dịch vụ (service / 서비스) thất bại (fail / 실패) cùng lúc.
 
-Platform release nên được xử lý như production release: canary một nhóm consumer, compatibility test trên representative workload, đo failure signal, sau đó staged adoption. Có thể giữ old/new version song song và auto-open migration PR thay vì force-update instant.
+Nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) nên được xử lý như môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스): canary một nhóm bên tiêu thụ (consumer / 소비자), tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) trên representative tải công việc (workload / 워크로드), đo thất bại (failure / 실패) tín hiệu (signal / 신호), sau đó staged adoption. Có thể giữ old/new phiên bản (version / 버전) song song và auto-open di chuyển (migration / 마이그레이션) PR thay vì force-update instant.
 
-Điểm cốt lõi là platform có **fan-out blast radius** lớn. Mức discipline cần cao hơn, không thấp hơn, application team bình thường.
+Điểm cốt lõi là nền tảng (platform / 플랫폼) có **fan-out blast radius** lớn. Mức discipline cần cao hơn, không thấp hơn, ứng dụng (application / 애플리케이션) nhóm (team / 팀) bình thường.
 
-## 22. Declarative platform resource cần invariant rõ hơn trạng thái `Ready`
+## 22. Declarative nền tảng (platform / 플랫폼) tài nguyên (resource / 자원) cần bất biến (invariant / 불변식) rõ hơn trạng thái `Ready`
 
-Một resource self-service như `Database`, `Service` hoặc `Environment` thường là aggregate của nhiều object thật. `Ready=true` chỉ có ý nghĩa nếu platform định nghĩa invariant đứng sau nó: network reachable, identity bound, credential issued, backup policy active, monitoring registered và dependency required đã usable.
+Một tài nguyên (resource / 자원) self-service như `Database`, `Service` hoặc `Environment` thường là aggregate của nhiều đối tượng (object / 객체) thật. `Ready=true` chỉ có ý nghĩa nếu nền tảng (platform / 플랫폼) định nghĩa bất biến (invariant / 불변식) đứng sau nó: mạng (network / 네트워크) reachable, định danh (identity / 식별자) bound, credential issued, backup chính sách (policy / 정책) active, monitoring registered và phụ thuộc (dependency / 의존성) required đã usable.
 
-Nếu controller set Ready ngay sau khi cloud API trả “accepted” nhưng endpoint còn chưa routable, abstraction đang báo trạng thái quá sớm. Ngược lại nếu một capability optional như dashboard lỗi mà toàn resource bị `Failed`, contract có thể quá chặt.
+Nếu controller set Ready ngay sau khi cloud API trả “accepted” nhưng endpoint còn chưa routable, lớp trừu tượng (abstraction / 추상화) đang báo trạng thái quá sớm. Ngược lại nếu một năng lực (capability / 역량) optional như dashboard lỗi mà toàn tài nguyên (resource / 자원) bị `Failed`, đặc tả hợp đồng (contract / 계약) có thể quá chặt.
 
-Platform cần phân biệt condition theo capability và severity, ví dụ `Provisioned`, `Reachable`, `BackupConfigured`, `Degraded`. Status là API cho automation và operator, không phải text trang trí UI.
+Nền tảng (platform / 플랫폼) cần phân biệt điều kiện (condition / 조건) theo năng lực (capability / 역량) và severity, ví dụ `Provisioned`, `Reachable`, `BackupConfigured`, `Degraded`. Status là API cho automation và operator, không phải văn bản (text / 텍스트) trang trí UI.
 
 ## 23. Idempotency cần đi qua toàn workflow, không chỉ API front door
 
-Một `POST` có idempotency key chưa đủ nếu backend workflow tạo resource A thành công, timeout, rồi retry tạo resource B lần nữa. Mỗi side effect cần được bind vào stable resource identity và controller phải có cách discover/adopt state đã tồn tại.
+Một `POST` có idempotency key chưa đủ nếu backend workflow tạo tài nguyên (resource / 자원) A thành công, hết thời gian chờ (timeout / 타임아웃), rồi thử lại (retry / 재시도) tạo tài nguyên (resource / 자원) B lần nữa. Mỗi side tác động (effect / 효과) cần được bind vào stable tài nguyên (resource / 자원) định danh (identity / 식별자) và controller phải có cách discover/adopt trạng thái (state / 상태) đã tồn tại.
 
-Mental model tốt là:
+Mô hình tư duy (mental model / 사고 모델) tốt là:
 
 ```text
 stable intent identity
@@ -167,123 +170,123 @@ stable intent identity
 → retry safely
 ```
 
-Nếu external provider không hỗ trợ idempotent create, platform có thể cần naming deterministic, client token hoặc reconciliation/adoption logic. Partial failure là normal state của distributed workflow, không phải edge case hiếm.
+Nếu bên ngoài (external / 외부) provider không hỗ trợ idempotent create, nền tảng (platform / 플랫폼) có thể cần naming deterministic, máy khách (client / 클라이언트) đơn vị từ (token / 토큰) hoặc reconciliation/adoption lô-gic (logic / 논리). Partial thất bại (failure / 실패) là normal trạng thái (state / 상태) của phân tán (distributed / 분산) workflow, không phải trường hợp biên (edge case / 경계 사례) hiếm.
 
-## 24. Delete là state machine có data-retention semantics
+## 24. Delete là máy trạng thái (state machine / 상태 머신) có data-retention ngữ nghĩa (semantics / 의미론)
 
-Delete thường nguy hiểm hơn create vì có thể irreversible. Một platform contract cần trả lời: xóa logical resource có xóa data ngay không; backup giữ bao lâu; dependency nào chặn delete; finalizer/cleanup fail thì resource ở trạng thái gì; force-delete có bỏ lại orphan không.
+Delete thường nguy hiểm hơn create vì có thể irreversible. Một nền tảng (platform / 플랫폼) đặc tả hợp đồng (contract / 계약) cần trả lời: xóa logical tài nguyên (resource / 자원) có xóa dữ liệu (data / 데이터) ngay không; backup giữ bao lâu; phụ thuộc (dependency / 의존성) nào chặn delete; finalizer/cleanup thất bại (fail / 실패) thì tài nguyên (resource / 자원) ở trạng thái gì; force-delete có bỏ lại orphan không.
 
-Một pattern an toàn là tách `DeletionRequested` khỏi `Deleted`, thực hiện dependency check, snapshot/retention theo policy, revoke identity/traffic rồi mới destroy resource. Với data critical, platform có thể thêm grace period hoặc recovery window.
+Một mẫu (pattern / 패턴) an toàn là tách `DeletionRequested` khỏi `Deleted`, thực hiện phụ thuộc (dependency / 의존성) check, snapshot/retention theo chính sách (policy / 정책), revoke định danh (identity / 식별자)/traffic rồi mới destroy tài nguyên (resource / 자원). Với dữ liệu (data / 데이터) trọng yếu (critical / 중요), nền tảng (platform / 플랫폼) có thể thêm grace period hoặc khôi phục (recovery / 복구) cửa sổ (window / 윈도우).
 
-Nếu user phải biết implementation để đoán data còn hay mất sau nút Delete, abstraction đã thất bại ở failure semantics quan trọng nhất.
+Nếu người dùng (user / 사용자) phải biết hiện thực (implementation / 구현) để đoán dữ liệu (data / 데이터) còn hay mất sau nút Delete, lớp trừu tượng (abstraction / 추상화) đã thất bại ở thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) quan trọng nhất.
 
-## 25. Platform nên chia fault-containment cell thay vì một global control plane vô hạn
+## 25. nền tảng (platform / 플랫폼) nên chia fault-containment cell thay vì một toàn cục (global / 전역) điều khiển (control / 제어) plane vô hạn
 
-Shared platform tạo leverage nhưng cũng tạo blast radius. Một controller/global queue/global registry dependency có thể trở thành common-mode failure cho toàn tổ chức. Khi scale lớn, có thể cần chia cell theo region, business criticality, tenant group hoặc workload class.
+Dùng chung (shared / 공유) nền tảng (platform / 플랫폼) tạo leverage nhưng cũng tạo blast radius. Một controller/toàn cục (global / 전역) hàng đợi (queue / 큐)/toàn cục (global / 전역) registry phụ thuộc (dependency / 의존성) có thể trở thành common-mode thất bại (failure / 실패) cho toàn tổ chức. Khi quy mô (scale / 규모) lớn, có thể cần chia cell theo region, nghiệp vụ (business / 비즈니스) criticality, tenant group hoặc tải công việc (workload / 워크로드) lớp (class / 클래스).
 
-Cell không nhất thiết nghĩa mỗi team một platform riêng. Nó nghĩa failure trong một partition không được mặc định lan tới tất cả consumer. Control plane có thể federation chung về policy/catalog nhưng execution queue, cluster/account hoặc release ring được partition.
+Cell không nhất thiết nghĩa mỗi nhóm (team / 팀) một nền tảng (platform / 플랫폼) riêng. Nó nghĩa thất bại (failure / 실패) trong một partition không được mặc định lan tới tất cả bên tiêu thụ (consumer / 소비자). điều khiển (control / 제어) plane có thể federation chung về chính sách (policy / 정책)/danh mục (catalog / 카탈로그) nhưng thực thi (execution / 실행) hàng đợi (queue / 큐), cluster/account hoặc bản phát hành (release / 릴리스) ring được partition.
 
-Trade-off là duplication/cost tăng và global operation phức tạp hơn. Vì vậy cell boundary nên xuất phát từ SLO, failure domain và operational blast radius, không phải organizational chart đơn thuần.
+Sự đánh đổi (trade-off / 트레이드오프) là duplication/chi phí (cost / 비용) tăng và toàn cục (global / 전역) thao tác (operation / 연산) phức tạp hơn. Vì vậy cell ranh giới (boundary / 경계) nên xuất phát từ SLO, miền lỗi (failure domain / 장애 도메인) và operational blast radius, không phải organizational chart đơn thuần.
 
-## 26. Platform dependency graph cần được quản như API dependency
+## 26. nền tảng (platform / 플랫폼) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) cần được quản như API phụ thuộc (dependency / 의존성)
 
-Golden path thường kéo theo base image, runtime, CI action, policy bundle, ingress class, observability agent và cloud module. Nếu mỗi dependency tự upgrade độc lập, consumer có thể nhận breaking change gián tiếp mà platform version không đổi.
+Golden đường dẫn (path / 경로) thường kéo theo cơ sở (base / 기반) ảnh (image / 이미지), thời gian chạy (runtime / 런타임), CI hành động (action / 동작), chính sách (policy / 정책) bundle, ingress lớp (class / 클래스), khả năng quan sát (observability / 관측 가능성) tác nhân (agent / 에이전트) và cloud mô-đun (module / 모듈). Nếu mỗi phụ thuộc (dependency / 의존성) tự upgrade độc lập, bên tiêu thụ (consumer / 소비자) có thể nhận breaking thay đổi (change / 변경) gián tiếp mà nền tảng (platform / 플랫폼) phiên bản (version / 버전) không đổi.
 
-Platform release nên có một notion về tested compatibility set. Không nhất thiết lock mọi component mãi mãi, nhưng cần biết version nào đã được verify cùng nhau và rollout dependency nào có fan-out lớn.
+Nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) nên có một notion về tested tính tương thích (compatibility / 호환성) set. Không nhất thiết khóa (lock / 잠금) mọi thành phần (component / 컴포넌트) mãi mãi, nhưng cần biết phiên bản (version / 버전) nào đã được verify cùng nhau và rollout phụ thuộc (dependency / 의존성) nào có fan-out lớn.
 
-Khi một shared CA bundle hoặc agent mới gây lỗi, catalog/telemetry phải cho biết consumer nào đang ở release ring/version nào. Đây là application của artifact/version reasoning vào chính platform product.
+Khi một dùng chung (shared / 공유) CA bundle hoặc tác nhân (agent / 에이전트) mới gây lỗi, danh mục (catalog / 카탈로그)/telemetry phải cho biết bên tiêu thụ (consumer / 소비자) nào đang ở bản phát hành (release / 릴리스) ring/phiên bản (version / 버전) nào. Đây là ứng dụng (application / 애플리케이션) của sản phẩm tạo ra (artifact / 산출물)/phiên bản (version / 버전) lập luận (reasoning / 추론) vào chính nền tảng (platform / 플랫폼) sản phẩm (product / 제품).
 
-## 27. Abstraction leakage là signal để cải tiến contract, không phải luôn là lỗi user
+## 27. lớp trừu tượng (abstraction / 추상화) leakage là tín hiệu (signal / 신호) để cải tiến đặc tả hợp đồng (contract / 계약), không phải luôn là lỗi người dùng (user / 사용자)
 
-Mọi abstraction đều có lúc rò: database plan không đủ mô tả IOPS, ingress abstraction thiếu timeout mode, service tier không biểu diễn failover requirement. Khi nhiều team cùng cần escape hatch ở cùng điểm, đó là evidence contract thiếu dimension quan trọng.
+Mọi lớp trừu tượng (abstraction / 추상화) đều có lúc rò: cơ sở dữ liệu (database / 데이터베이스) plan không đủ mô tả IOPS, ingress lớp trừu tượng (abstraction / 추상화) thiếu hết thời gian chờ (timeout / 타임아웃) chế độ (mode / 모드), dịch vụ (service / 서비스) tier không biểu diễn failover yêu cầu (requirement / 요구사항). Khi nhiều nhóm (team / 팀) cùng cần escape hatch ở cùng điểm, đó là bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약) thiếu dimension quan trọng.
 
-Platform team nên phân loại escape hatch: one-off exceptional requirement hay repeated missing capability. Nếu repeated, hãy đưa concept thật sự cần thiết lên API ở mức domain — ví dụ `durabilityClass`, `trafficProfile`, `recoveryTier` — thay vì expose raw provider field hàng loạt.
+Nền tảng (platform / 플랫폼) nhóm (team / 팀) nên phân loại escape hatch: one-off exceptional yêu cầu (requirement / 요구사항) hay repeated missing năng lực (capability / 역량). Nếu repeated, hãy đưa concept thật sự cần thiết lên API ở mức lĩnh vực (domain / 도메인) — ví dụ `durabilityClass`, `trafficProfile`, `recoveryTier` — thay vì expose raw provider trường dữ liệu (field / 필드) hàng loạt.
 
-Mục tiêu của abstraction không phải che mọi chi tiết mãi mãi; nó là giữ **decision surface nhỏ nhưng đúng với physics và invariant mà consumer cần kiểm soát**.
+Mục tiêu của lớp trừu tượng (abstraction / 추상화) không phải che mọi chi tiết mãi mãi; nó là giữ **quyết định (decision / 결정) surface nhỏ nhưng đúng với physics và bất biến (invariant / 불변식) mà bên tiêu thụ (consumer / 소비자) cần kiểm soát**.
 
-## 28. Long-running operation cần cancellation semantics rõ ràng
+## 28. Long-running thao tác (operation / 연산) cần cancellation ngữ nghĩa (semantics / 의미론) rõ ràng
 
-Một operation provisioning kéo dài 20 phút có thể bị user cancel ở phút thứ 8, nhưng external API đã tạo network, database hoặc reservation. “Cancel request” không tự động đồng nghĩa mọi side effect biến mất.
+Một thao tác (operation / 연산) provisioning kéo dài 20 phút có thể bị người dùng (user / 사용자) cancel ở phút thứ 8, nhưng bên ngoài (external / 외부) API đã tạo mạng (network / 네트워크), cơ sở dữ liệu (database / 데이터베이스) hoặc reservation. “Cancel yêu cầu (request / 요청)” không tự động đồng nghĩa mọi side tác động (effect / 효과) biến mất.
 
-Platform API cần nói cancellation là best-effort hay guaranteed trước một checkpoint nào đó; operation đang ở phase nào; resource nào đã materialize; cleanup có tự động không; và khi cleanup fail thì trạng thái cuối là `Cancelled`, `CancelRequested` hay `Degraded`.
+Nền tảng (platform / 플랫폼) API cần nói cancellation là best-effort hay guaranteed trước một checkpoint nào đó; thao tác (operation / 연산) đang ở phase nào; tài nguyên (resource / 자원) nào đã materialize; cleanup có tự động không; và khi cleanup thất bại (fail / 실패) thì trạng thái cuối là `Cancelled`, `CancelRequested` hay `Degraded`.
 
-Nếu cancel chỉ dừng worker local nhưng external side effect vẫn tiếp tục, controller sau đó phải reconcile/adopt hoặc cleanup. Cancellation vì vậy là một state transition có ownership, không phải nút UI đơn giản.
+Nếu cancel chỉ dừng worker cục bộ (local / 로컬) nhưng bên ngoài (external / 외부) side tác động (effect / 효과) vẫn tiếp tục, controller sau đó phải reconcile/adopt hoặc cleanup. Cancellation vì vậy là một chuyển tiếp trạng thái (state transition / 상태 전이) có quyền sở hữu (ownership / 소유권), không phải nút UI đơn giản.
 
-## 29. Compensation khác rollback thật sự
+## 29. Compensation khác quay lui (rollback / 롤백) thật sự
 
-Trong workflow phân tán, nhiều action không có inverse hoàn hảo. Tạo database rồi xóa lại có thể để backup, audit record, cost hoặc external identifier; gửi notification không thể “unsend”; rotate credential có thể làm connection cũ chết.
+Trong workflow phân tán, nhiều hành động (action / 동작) không có inverse hoàn hảo. Tạo cơ sở dữ liệu (database / 데이터베이스) rồi xóa lại có thể để backup, kiểm tra (audit / 감사) bản ghi (record / 레코드), chi phí (cost / 비용) hoặc bên ngoài (external / 외부) identifier; gửi notification không thể “unsend”; rotate credential có thể làm liên kết (connection / 연결) cũ chết.
 
-Khi transaction atomic không tồn tại, platform thường dùng compensating action: tạo bước mới để đưa system về invariant chấp nhận được thay vì giả vờ quay ngược thời gian. Contract cần phân biệt rollback có thể đảo exact state với compensation chỉ phục hồi business invariant.
+Khi giao dịch (transaction / 트랜잭션) atomic không tồn tại, nền tảng (platform / 플랫폼) thường dùng compensating hành động (action / 동작): tạo bước mới để đưa hệ thống (system / 시스템) về bất biến (invariant / 불변식) chấp nhận được thay vì giả vờ quay ngược thời gian. đặc tả hợp đồng (contract / 계약) cần phân biệt quay lui (rollback / 롤백) có thể đảo chính xác (exact / 정확한) trạng thái (state / 상태) với compensation chỉ phục hồi nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식).
 
-Điều này quan trọng cho UX và runbook. Nếu platform nói “rollback succeeded”, operator phải biết đó là artifact revert, traffic revert hay workflow compensation sau partial side effect.
+Điều này quan trọng cho UX và runbook. Nếu nền tảng (platform / 플랫폼) nói “quay lui (rollback / 롤백) succeeded”, operator phải biết đó là sản phẩm tạo ra (artifact / 산출물) revert, traffic revert hay workflow compensation sau partial side tác động (effect / 효과).
 
-## 30. Orphan và adoption là lifecycle bình thường của controller mạnh
+## 30. Orphan và adoption là vòng đời (lifecycle / 생명주기) bình thường của controller mạnh
 
-External resource có thể tồn tại mà platform state mất record do crash/state corruption, hoặc resource được tạo thủ công rồi cần đưa vào ownership. Xóa ngay mọi object “không nhận ra” là nguy hiểm; bỏ mặc chúng lại tạo drift, cost và security debt.
+Bên ngoài (external / 외부) tài nguyên (resource / 자원) có thể tồn tại mà nền tảng (platform / 플랫폼) trạng thái (state / 상태) mất bản ghi (record / 레코드) do crash/trạng thái (state / 상태) corruption, hoặc tài nguyên (resource / 자원) được tạo thủ công rồi cần đưa vào quyền sở hữu (ownership / 소유권). Xóa ngay mọi đối tượng (object / 객체) “không nhận ra” là nguy hiểm; bỏ mặc chúng lại tạo drift, chi phí (cost / 비용) và bảo mật (security / 보안) debt.
 
-Platform nên có semantics discover/adopt/quarantine. Adoption cần verify identity, ownership, policy compatibility và state mapping trước khi controller bắt đầu mutate. Orphan cleanup cần grace period và evidence đủ mạnh rằng resource không còn owner hợp lệ.
+Nền tảng (platform / 플랫폼) nên có ngữ nghĩa (semantics / 의미론) discover/adopt/quarantine. Adoption cần verify định danh (identity / 식별자), quyền sở hữu (ownership / 소유권), chính sách (policy / 정책) tính tương thích (compatibility / 호환성) và trạng thái (state / 상태) ánh xạ (mapping / 매핑) trước khi controller bắt đầu mutate. Orphan cleanup cần grace period và bằng chứng (evidence / 증거) đủ mạnh rằng tài nguyên (resource / 자원) không còn đơn vị sở hữu (owner / 오너) hợp lệ.
 
-Mental model là **ownership cũng là state cần reconcile**. Resource tồn tại không nói ai có quyền sửa/xóa nó.
+Mô hình tư duy (mental model / 사고 모델) là **quyền sở hữu (ownership / 소유권) cũng là trạng thái (state / 상태) cần reconcile**. tài nguyên (resource / 자원) tồn tại không nói ai có quyền sửa/xóa nó.
 
-## 31. “Ai vận hành platform khi platform hỏng?” là bootstrap problem
+## 31. “Ai vận hành nền tảng (platform / 플랫폼) khi nền tảng (platform / 플랫폼) hỏng?” là bootstrap bài toán (problem / 문제)
 
-Platform có thể phụ thuộc vào chính Kubernetes cluster, GitOps, secret store, DNS, identity hoặc CI mà nó cung cấp cho user. Nếu control plane platform down và recovery tool cũng nằm hoàn toàn bên trong cùng failure domain, team có circular dependency.
+Nền tảng (platform / 플랫폼) có thể phụ thuộc vào chính Kubernetes cluster, GitOps, secret store, DNS, định danh (identity / 식별자) hoặc CI mà nó cung cấp cho người dùng (user / 사용자). Nếu điều khiển (control / 제어) plane nền tảng (platform / 플랫폼) down và khôi phục (recovery / 복구) công cụ (tool / 도구) cũng nằm hoàn toàn bên trong cùng miền lỗi (failure domain / 장애 도메인), nhóm (team / 팀) có circular phụ thuộc (dependency / 의존성).
 
-Recovery design phải có bootstrap path tối thiểu: source/config nào còn truy cập được, credential break-glass nào tồn tại độc lập, artifact/controller image lấy từ đâu, state backend restore thế nào và component nào phải lên trước. Có thể cần một management plane/cell nhỏ hơn hoặc documented manual recovery step được drill định kỳ.
+Khôi phục (recovery / 복구) thiết kế (design / 설계) phải có bootstrap đường dẫn (path / 경로) tối thiểu: nguồn (source / 소스)/cấu hình (config / 설정) nào còn truy cập được, credential break-glass nào tồn tại độc lập, sản phẩm tạo ra (artifact / 산출물)/controller ảnh (image / 이미지) lấy từ đâu, trạng thái (state / 상태) backend restore thế nào và thành phần (component / 컴포넌트) nào phải lên trước. Có thể cần một management plane/cell nhỏ hơn hoặc documented manual khôi phục (recovery / 복구) step được drill định kỳ.
 
-Platform SLO vì vậy không chỉ đo normal self-service. Nó phải có recovery contract cho chính control plane — một dạng “operator của operator”.
+Nền tảng (platform / 플랫폼) SLO vì vậy không chỉ đo normal self-service. Nó phải có khôi phục (recovery / 복구) đặc tả hợp đồng (contract / 계약) cho chính điều khiển (control / 제어) plane — một dạng “operator của operator”.
 
-## 32. Deprecation thành công phải đo migration state, không chỉ gửi thông báo
+## 32. Deprecation thành công phải đo di chuyển (migration / 마이그레이션) trạng thái (state / 상태), không chỉ gửi thông báo
 
-Một platform version cũ được tuyên bố deprecated nhưng không biết consumer nào còn dùng thì deadline chỉ là hy vọng. Migration program cần inventory theo exact version/capability, owner, blocker và risk nếu quá hạn.
+Một nền tảng (platform / 플랫폼) phiên bản (version / 버전) cũ được tuyên bố deprecated nhưng không biết bên tiêu thụ (consumer / 소비자) nào còn dùng thì deadline chỉ là hy vọng. di chuyển (migration / 마이그레이션) program cần inventory theo chính xác (exact / 정확한) phiên bản (version / 버전)/năng lực (capability / 역량), đơn vị sở hữu (owner / 오너), blocker và rủi ro (risk / 위험) nếu quá hạn.
 
-Telemetry nên phân biệt `supported`, `deprecated`, `migration-in-progress`, `exception`, `unsupported`. Auto-remediation có thể mở PR hoặc mutate source khi safe, nhưng breaking semantic change vẫn cần evidence từ consumer behavior.
+Telemetry nên phân biệt `supported`, `deprecated`, `migration-in-progress`, `exception`, `unsupported`. Auto-remediation có thể mở PR hoặc mutate nguồn (source / 소스) khi safe, nhưng breaking ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경) vẫn cần bằng chứng (evidence / 증거) từ bên tiêu thụ (consumer / 소비자) hành vi (behavior / 동작).
 
-Deprecation hoàn tất khi old path không còn production dependency và support burden được gỡ bỏ có kiểm soát, không phải khi announcement đã gửi ba lần.
+Deprecation hoàn tất khi old đường dẫn (path / 경로) không còn môi trường vận hành (production / 운영 환경) phụ thuộc (dependency / 의존성) và hỗ trợ (support / 지원) burden được gỡ bỏ có kiểm soát, không phải khi announcement đã gửi ba lần.
 
-## 33. Cell architecture cần global metadata nhưng tránh global execution dependency
+## 33. Cell kiến trúc (architecture / 아키텍처) cần toàn cục (global / 전역) siêu dữ liệu (metadata / 메타데이터) nhưng tránh toàn cục (global / 전역) thực thi (execution / 실행) phụ thuộc (dependency / 의존성)
 
-Khi platform chia nhiều cell để giảm blast radius, vẫn thường cần catalog, identity mapping, policy version hoặc routing metadata chung. Nếu mọi request runtime phải đồng bộ gọi một global control plane, cell isolation có thể bị phá bởi global outage.
+Khi nền tảng (platform / 플랫폼) chia nhiều cell để giảm blast radius, vẫn thường cần danh mục (catalog / 카탈로그), định danh (identity / 식별자) ánh xạ (mapping / 매핑), chính sách (policy / 정책) phiên bản (version / 버전) hoặc routing siêu dữ liệu (metadata / 메타데이터) chung. Nếu mọi yêu cầu (request / 요청) thời gian chạy (runtime / 런타임) phải đồng bộ gọi một toàn cục (global / 전역) điều khiển (control / 제어) plane, cell isolation có thể bị phá bởi toàn cục (global / 전역) outage.
 
-Một thiết kế tốt phân biệt metadata cần phân phối với execution decision cần local autonomy. Global state có thể replicate/cache/version; cell dùng revision đã biết để tiếp tục phục vụ trong một khoảng, rồi degrade có chủ đích nếu state quá cũ.
+Một thiết kế tốt phân biệt siêu dữ liệu (metadata / 메타데이터) cần phân phối với thực thi (execution / 실행) quyết định (decision / 결정) cần cục bộ (local / 로컬) autonomy. toàn cục (global / 전역) trạng thái (state / 상태) có thể replicate/bộ nhớ đệm (cache / 캐시)/phiên bản (version / 버전); cell dùng revision đã biết để tiếp tục phục vụ trong một khoảng, rồi degrade có chủ đích nếu trạng thái (state / 상태) quá cũ.
 
-Trade-off chuyển từ “một global control plane đơn giản” sang bài toán consistency và version skew. Nhưng mục tiêu là giữ failure domain thật sự bounded, không chỉ chia cluster trên sơ đồ.
+Sự đánh đổi (trade-off / 트레이드오프) chuyển từ “một toàn cục (global / 전역) điều khiển (control / 제어) plane đơn giản” sang bài toán consistency và phiên bản (version / 버전) skew. Nhưng mục tiêu là giữ miền lỗi (failure domain / 장애 도메인) thật sự bounded, không chỉ chia cluster trên sơ đồ.
 
-## 34. Supportability là một phần của platform contract
+## 34. Supportability là một phần của nền tảng (platform / 플랫폼) đặc tả hợp đồng (contract / 계약)
 
-Golden path không chỉ cần create nhanh mà còn phải giúp người dùng hiểu failure khi abstraction rò. Platform nên expose operation ID, current phase, owning controller, relevant revision, dependency status và đường drill-down đủ để support/operator giảm search space.
+Golden đường dẫn (path / 경로) không chỉ cần create nhanh mà còn phải giúp người dùng hiểu thất bại (failure / 실패) khi lớp trừu tượng (abstraction / 추상화) rò. nền tảng (platform / 플랫폼) nên expose thao tác (operation / 연산) ID, hiện tại (current / 현재) phase, owning controller, relevant revision, phụ thuộc (dependency / 의존성) status và đường drill-down đủ để hỗ trợ (support / 지원)/operator giảm tìm kiếm (search / 검색) không gian (space / 공간).
 
-Nếu portal chỉ báo `Provisioning failed` còn nguyên nhân nằm trong ba hệ thống nội bộ không có correlation ID, self-service đã chuyển ticket từ “hãy tạo giúp” thành “hãy debug giúp”. Cognitive load không biến mất mà chỉ đổi thời điểm.
+Nếu portal chỉ báo `Provisioning failed` còn nguyên nhân nằm trong ba hệ thống nội bộ không có correlation ID, self-service đã chuyển ticket từ “hãy tạo giúp” thành “hãy gỡ lỗi (debug / 디버그) giúp”. Cognitive tải (load / 로드) không biến mất mà chỉ đổi thời điểm.
 
-Một abstraction trưởng thành tối ưu cả **happy-path simplicity** lẫn **failure-path diagnosability**. Đường đi chuẩn thật sự tốt là đường dễ dùng khi bình thường và vẫn giữ causal chain khi bất thường.
+Một lớp trừu tượng (abstraction / 추상화) trưởng thành tối ưu cả **happy-path simplicity** lẫn **failure-path diagnosability**. Đường đi chuẩn thật sự tốt là đường dễ dùng khi bình thường và vẫn giữ chuỗi nhân quả (causal chain / 인과 사슬) khi bất thường.
 
-## 35. Control-plane state phải có durability contract riêng với resource bên ngoài
+## 35. Control-plane trạng thái (state / 상태) phải có durability đặc tả hợp đồng (contract / 계약) riêng với tài nguyên (resource / 자원) bên ngoài
 
-Platform thường lưu intent, ownership, operation progress và mapping tới cloud/Kubernetes resource. Nếu state store mất nhưng resource thật vẫn tồn tại, restore một backup cũ có thể khiến controller tin resource chưa được tạo rồi tạo duplicate, hoặc coi resource hợp lệ là orphan.
+Nền tảng (platform / 플랫폼) thường lưu intent, quyền sở hữu (ownership / 소유권), thao tác (operation / 연산) progress và ánh xạ (mapping / 매핑) tới cloud/Kubernetes tài nguyên (resource / 자원). Nếu trạng thái (state / 상태) store mất nhưng tài nguyên (resource / 자원) thật vẫn tồn tại, restore một backup cũ có thể khiến controller tin tài nguyên (resource / 자원) chưa được tạo rồi tạo duplicate, hoặc coi tài nguyên (resource / 자원) hợp lệ là orphan.
 
-Vì vậy backup control-plane state không đủ nếu không có reconciliation sau restore. Recovery cần biết checkpoint nào được restore, external side effect nào có thể đã xảy ra sau checkpoint, rồi discover/adopt/reconcile trước khi mở lại mutation bình thường. Đây là cùng failure semantics với database + external system, nhưng blast radius lớn hơn vì platform sở hữu nhiều tenant.
+Vì vậy backup control-plane trạng thái (state / 상태) không đủ nếu không có reconciliation sau restore. khôi phục (recovery / 복구) cần biết checkpoint nào được restore, bên ngoài (external / 외부) side tác động (effect / 효과) nào có thể đã xảy ra sau checkpoint, rồi discover/adopt/reconcile trước khi mở lại mutation bình thường. Đây là cùng thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) với cơ sở dữ liệu (database / 데이터베이스) + hệ thống bên ngoài (external system / 외부 시스템), nhưng blast radius lớn hơn vì nền tảng (platform / 플랫폼) sở hữu nhiều tenant.
 
-RPO của metadata platform và RPO của workload data có thể khác nhau, nhưng cả hai phải được explicit. “Có backup database platform” không tự chứng minh restore sẽ hội tụ đúng với world state.
+RPO của siêu dữ liệu (metadata / 메타데이터) nền tảng (platform / 플랫폼) và RPO của tải công việc (workload / 워크로드) dữ liệu (data / 데이터) có thể khác nhau, nhưng cả hai phải được tường minh (explicit / 명시적). “Có backup cơ sở dữ liệu (database / 데이터베이스) nền tảng (platform / 플랫폼)” không tự chứng minh restore sẽ hội tụ đúng với world trạng thái (state / 상태).
 
-## 36. Safe mode/read-only mode là degraded capability có chủ đích
+## 36. Safe chế độ (mode / 모드)/read-only chế độ (mode / 모드) là degraded năng lực (capability / 역량) có chủ đích
 
-Khi policy service, state backend hoặc một global dependency có vấn đề, lựa chọn không chỉ là “platform hoạt động đầy đủ” hoặc “tắt toàn bộ”. Một control plane có thể chuyển sang mode hạn chế: cho phép đọc status/catalog, giữ workload hiện tại, chặn create/delete nguy hiểm hoặc chỉ cho operation đã xác minh an toàn.
+Khi chính sách (policy / 정책) dịch vụ (service / 서비스), trạng thái (state / 상태) backend hoặc một toàn cục (global / 전역) phụ thuộc (dependency / 의존성) có vấn đề, lựa chọn không chỉ là “nền tảng (platform / 플랫폼) hoạt động đầy đủ” hoặc “tắt toàn bộ”. Một điều khiển (control / 제어) plane có thể chuyển sang chế độ (mode / 모드) hạn chế: cho phép đọc status/danh mục (catalog / 카탈로그), giữ tải công việc (workload / 워크로드) hiện tại, chặn create/delete nguy hiểm hoặc chỉ cho thao tác (operation / 연산) đã xác minh an toàn.
 
-Safe mode cần contract rõ về action nào được phép và stale state tối đa bao lâu. Nếu user không biết request bị từ chối vì safety mode hay vì policy business, họ sẽ retry/tạo workaround và tăng incident load.
+Safe chế độ (mode / 모드) cần đặc tả hợp đồng (contract / 계약) rõ về hành động (action / 동작) nào được phép và stale trạng thái (state / 상태) tối đa bao lâu. Nếu người dùng (user / 사용자) không biết yêu cầu (request / 요청) bị từ chối vì an toàn (safety / 안전) chế độ (mode / 모드) hay vì chính sách (policy / 정책) nghiệp vụ (business / 비즈니스), họ sẽ thử lại (retry / 재시도)/tạo workaround và tăng sự cố (incident / 인시던트) tải (load / 로드).
 
-Thiết kế degraded mode trước incident giúp tránh operator tự chế fail-open bằng cách disable hàng loạt guardrail. Đây là brownout ở platform control plane: giữ capability cốt lõi và giảm mutation surface để bảo vệ invariant.
+Thiết kế degraded chế độ (mode / 모드) trước sự cố (incident / 인시던트) giúp tránh operator tự chế fail-open bằng cách disable hàng loạt guardrail. Đây là brownout ở nền tảng (platform / 플랫폼) điều khiển (control / 제어) plane: giữ năng lực (capability / 역량) cốt lõi và giảm mutation surface để bảo vệ bất biến (invariant / 불변식).
 
-## 37. Control-plane admission phải bảo vệ reconciliation work quan trọng
+## 37. Control-plane admission phải bảo vệ reconciliation công việc (work / 작업) quan trọng
 
-Self-service API có thể nhận create hàng loạt đúng lúc controller đang xử lý recovery của resource hiện có. Nếu tất cả operation vào chung queue FIFO, burst provisioning mới có thể làm health reconciliation, secret rotation hoặc failover chậm tới mức vi phạm SLO.
+Self-service API có thể nhận create hàng loạt đúng lúc controller đang xử lý khôi phục (recovery / 복구) của tài nguyên (resource / 자원) hiện có. Nếu tất cả thao tác (operation / 연산) vào chung hàng đợi (queue / 큐) FIFO, burst provisioning mới có thể làm health reconciliation, secret rotation hoặc failover chậm tới mức vi phạm SLO.
 
-Platform cần phân loại work theo urgency/ownership: steady-state reconciliation, recovery, user provisioning, bulk migration, background cleanup. Priority không nên biến thành starvation; cần concurrency/reservation/fairness phù hợp. Một số work có thể bị shed hoặc pause khi control plane saturation, trong khi recovery work giữ reserved capacity.
+Nền tảng (platform / 플랫폼) cần phân loại công việc (work / 작업) theo urgency/quyền sở hữu (ownership / 소유권): steady-state reconciliation, khôi phục (recovery / 복구), người dùng (user / 사용자) provisioning, bulk di chuyển (migration / 마이그레이션), background cleanup. Priority không nên biến thành starvation; cần tính đồng thời (concurrency / 동시성)/reservation/fairness phù hợp. Một số công việc (work / 작업) có thể bị shed hoặc pause khi điều khiển (control / 제어) plane saturation, trong khi khôi phục (recovery / 복구) công việc (work / 작업) giữ reserved sức chứa (capacity / 용량).
 
-Đây là connection giữa platform product và SRE overload control: control plane cũng cần admission, queue discipline và recovery headroom như data plane.
+Đây là liên kết (connection / 연결) giữa nền tảng (platform / 플랫폼) sản phẩm (product / 제품) và SRE overload điều khiển (control / 제어): điều khiển (control / 제어) plane cũng cần admission, hàng đợi (queue / 큐) discipline và khôi phục (recovery / 복구) headroom như mặt phẳng dữ liệu (data plane / 데이터 플레인).
 
-## 38. Platform DR phải kiểm tra dependency ordering chứ không chỉ restore từng component
+## 38. nền tảng (platform / 플랫폼) DR phải kiểm tra phụ thuộc (dependency / 의존성) thứ tự (ordering / 순서) chứ không chỉ restore từng thành phần (component / 컴포넌트)
 
-Một runbook liệt kê “restore database, start controller, start portal” có thể sai nếu controller cần identity issuer, DNS, KMS, registry hoặc policy bundle chưa sẵn sàng. Recovery graph nên biểu diễn prerequisite và capability tối thiểu cần cho bước tiếp theo.
+Một runbook liệt kê “restore cơ sở dữ liệu (database / 데이터베이스), start controller, start portal” có thể sai nếu controller cần định danh (identity / 식별자) issuer, DNS, KMS, registry hoặc chính sách (policy / 정책) bundle chưa sẵn sàng. khôi phục (recovery / 복구) đồ thị (graph / 그래프) nên biểu diễn prerequisite và năng lực (capability / 역량) tối thiểu cần cho bước tiếp theo.
 
 ```text
 break-glass identity + artifact access
@@ -295,54 +298,56 @@ break-glass identity + artifact access
 → full self-service
 ```
 
-Game day phải chứng minh operator thực sự có thể đi từ failure domain bị mất tới trạng thái hội tụ, bao gồm credential độc lập, artifact khả dụng và external resource discovery. Nếu drill chỉ restart component trong environment đang khỏe, bootstrap path chưa được test.
+Game day phải chứng minh operator thực sự có thể đi từ miền lỗi (failure domain / 장애 도메인) bị mất tới trạng thái hội tụ, bao gồm credential độc lập, sản phẩm tạo ra (artifact / 산출물) khả dụng và bên ngoài (external / 외부) tài nguyên (resource / 자원) discovery. Nếu drill chỉ restart thành phần (component / 컴포넌트) trong môi trường (environment / 환경) đang khỏe, bootstrap đường dẫn (path / 경로) chưa được kiểm thử (test / 테스트).
 
-Platform recovery hoàn tất khi control plane và external world đồng thuận đủ về ownership/state để mutation trở lại an toàn, không phải khi portal HTTP 200.
+Nền tảng (platform / 플랫폼) khôi phục (recovery / 복구) hoàn tất khi điều khiển (control / 제어) plane và bên ngoài (external / 외부) world đồng thuận đủ về quyền sở hữu (ownership / 소유권)/trạng thái (state / 상태) để mutation trở lại an toàn, không phải khi portal HTTP 200.
 
-## 39. API compatibility phải xét cả stored state, client và controller version
+## 39. API tính tương thích (compatibility / 호환성) phải xét cả stored trạng thái (state / 상태), máy khách (client / 클라이언트) và controller phiên bản (version / 버전)
 
-Platform API declarative thường sống lâu hơn một lần deploy controller. Resource đã lưu từ version cũ có thể tiếp tục tồn tại khi API server/controller đã nâng version; CLI, portal, GitOps agent và automation của consumer cũng không nâng cùng lúc. Vì vậy compatibility không chỉ là “request mới có parse được không?” mà là **version skew trên toàn vòng đời resource**.
+Nền tảng (platform / 플랫폼) API declarative thường sống lâu hơn một lần deploy controller. tài nguyên (resource / 자원) đã lưu từ phiên bản (version / 버전) cũ có thể tiếp tục tồn tại khi API máy chủ (server / 서버)/controller đã nâng phiên bản (version / 버전); CLI, portal, GitOps tác nhân (agent / 에이전트) và automation của bên tiêu thụ (consumer / 소비자) cũng không nâng cùng lúc. Vì vậy tính tương thích (compatibility / 호환성) không chỉ là “yêu cầu (request / 요청) mới có parse được không?” mà là **phiên bản (version / 버전) skew trên toàn vòng đời tài nguyên (resource / 자원)**.
 
-Một field bị đổi nghĩa nhưng giữ cùng tên đặc biệt nguy hiểm: manifest cũ vẫn hợp lệ về schema nhưng controller mới diễn giải khác. Breaking semantic change nên được version hóa hoặc migration rõ, thay vì dựa vào validation syntax. Evidence cần biết resource được tạo/last-converted theo revision nào và controller nào đang reconcile nó.
+Một trường dữ liệu (field / 필드) bị đổi nghĩa nhưng giữ cùng tên đặc biệt nguy hiểm: manifest cũ vẫn hợp lệ về lược đồ (schema / 스키마) nhưng controller mới diễn giải khác. Breaking ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경) nên được phiên bản (version / 버전) hóa hoặc di chuyển (migration / 마이그레이션) rõ, thay vì dựa vào kiểm tra hợp lệ (validation / 검증) cú pháp (syntax / 문법). bằng chứng (evidence / 증거) cần biết tài nguyên (resource / 자원) được tạo/last-converted theo revision nào và controller nào đang reconcile nó.
 
-Platform contract tốt định nghĩa skew được support: client N-1 có nói chuyện với control plane N không, resource schema cũ được đọc bao lâu, controller rollback có hiểu state đã được controller mới ghi không. Đây là compatibility matrix của chính platform.
+Nền tảng (platform / 플랫폼) đặc tả hợp đồng (contract / 계약) tốt định nghĩa skew được hỗ trợ (support / 지원): máy khách (client / 클라이언트) N-1 có nói chuyện với điều khiển (control / 제어) plane N không, tài nguyên (resource / 자원) lược đồ (schema / 스키마) cũ được đọc bao lâu, controller quay lui (rollback / 롤백) có hiểu trạng thái (state / 상태) đã được controller mới ghi không. Đây là tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) của chính nền tảng (platform / 플랫폼).
 
-## 40. Defaulting là behavior và có thể trở thành breaking change âm thầm
+## 40. Defaulting là hành vi (behavior / 동작) và có thể trở thành breaking thay đổi (change / 변경) âm thầm
 
-Khi user bỏ trống một field, platform thường áp default. Nếu default thay từ `single-zone` sang `multi-zone`, `small` sang `medium` hoặc retention 7 ngày sang 30 ngày, manifest source không đổi nhưng effective infrastructure, cost và failure behavior đổi.
+Khi người dùng (user / 사용자) bỏ trống một trường dữ liệu (field / 필드), nền tảng (platform / 플랫폼) thường áp default. Nếu default thay từ `single-zone` sang `multi-zone`, `small` sang `medium` hoặc retention 7 ngày sang 30 ngày, manifest nguồn (source / 소스) không đổi nhưng effective hạ tầng (infrastructure / 인프라), chi phí (cost / 비용) và hành vi khi thất bại (failure behavior / 실패 동작) đổi.
 
-Vì vậy default phải được coi là versioned policy. Với resource đã tồn tại, cần quyết định default được materialize/freeze lúc create hay được recompute mỗi reconciliation. Hai lựa chọn có semantics rất khác: recompute giúp policy mới lan nhanh nhưng có thể mutate hàng nghìn resource chỉ vì controller upgrade.
+Vì vậy default phải được coi là versioned chính sách (policy / 정책). Với tài nguyên (resource / 자원) đã tồn tại, cần quyết định default được materialize/freeze lúc create hay được recompute mỗi reconciliation. Hai lựa chọn có ngữ nghĩa (semantics / 의미론) rất khác: recompute giúp chính sách (policy / 정책) mới lan nhanh nhưng có thể mutate hàng nghìn tài nguyên (resource / 자원) chỉ vì controller upgrade.
 
-Status/effective-state nên cho operator thấy default nào đã được resolve. “Không có field trong YAML” không đồng nghĩa “không có quyết định”. Default ẩn là một phần của API surface.
+Status/effective-state nên cho operator thấy default nào đã được resolve. “Không có trường dữ liệu (field / 필드) trong YAML” không đồng nghĩa “không có quyết định”. Default ẩn là một phần của API surface.
 
 ## 41. Conversion phải bảo toàn intent, không chỉ chuyển được JSON
 
-Khi schema có `v1alpha1 → v1beta1 → v1`, conversion có thể map field cũ sang representation mới. Nhưng nếu model mới biểu diễn concept khác, conversion cú pháp có thể làm mất intent. Ví dụ field `replicas: 3` trước đây ngầm nghĩa cùng zone, còn version mới tách `capacity` và `failureDomainSpread`.
+Khi lược đồ (schema / 스키마) có `v1alpha1 → v1beta1 → v1`, conversion có thể map trường dữ liệu (field / 필드) cũ sang biểu diễn (representation / 표현) mới. Nhưng nếu mô hình (model / 모델) mới biểu diễn concept khác, conversion cú pháp có thể làm mất intent. Ví dụ trường dữ liệu (field / 필드) `replicas: 3` trước đây ngầm nghĩa cùng zone, còn phiên bản (version / 버전) mới tách `capacity` và `failureDomainSpread`.
 
-Một conversion an toàn cần invariant về round-trip hoặc lossiness được explicit. Nếu `old → new → old` làm mất thông tin, rollback control plane có thể không an toàn. Một số migration cần materialize field mới hoặc yêu cầu user quyết định thay vì tự đoán.
+Một conversion an toàn cần bất biến (invariant / 불변식) về round-trip hoặc lossiness được tường minh (explicit / 명시적). Nếu `old → new → old` làm mất thông tin, quay lui (rollback / 롤백) điều khiển (control / 제어) plane có thể không an toàn. Một số di chuyển (migration / 마이그레이션) cần materialize trường dữ liệu (field / 필드) mới hoặc yêu cầu người dùng (user / 사용자) quyết định thay vì tự đoán.
 
-Conversion webhook/controller cũng là dependency runtime. Nếu API server cần conversion service để đọc object cũ mà service đó down trong control-plane incident, chính resource cần cho recovery có thể không đọc được. Upgrade design phải xét bootstrap path của conversion.
+Conversion webhook/controller cũng là phụ thuộc (dependency / 의존성) thời gian chạy (runtime / 런타임). Nếu API máy chủ (server / 서버) cần conversion dịch vụ (service / 서비스) để đọc đối tượng (object / 객체) cũ mà dịch vụ (service / 서비스) đó down trong control-plane sự cố (incident / 인시던트), chính tài nguyên (resource / 자원) cần cho khôi phục (recovery / 복구) có thể không đọc được. Upgrade thiết kế (design / 설계) phải xét bootstrap đường dẫn (path / 경로) của conversion.
 
-## 42. Capability negotiation tốt hơn assumption khi nhiều cell/version cùng tồn tại
+## 42. năng lực (capability / 역량) negotiation tốt hơn giả định (assumption / 가정) khi nhiều cell/phiên bản (version / 버전) cùng tồn tại
 
-Trong rollout platform nhiều cell/region, không nên giả định mọi nơi hỗ trợ capability mới cùng lúc. Consumer hoặc orchestrator có thể cần biết cell nào hỗ trợ storage class mới, policy revision nào hoặc operation semantic nào trước khi gửi intent.
+Trong rollout nền tảng (platform / 플랫폼) nhiều cell/region, không nên giả định mọi nơi hỗ trợ năng lực (capability / 역량) mới cùng lúc. bên tiêu thụ (consumer / 소비자) hoặc orchestrator có thể cần biết cell nào hỗ trợ lưu trữ (storage / 저장소) lớp (class / 클래스) mới, chính sách (policy / 정책) revision nào hoặc thao tác (operation / 연산) ngữ nghĩa (semantic / 의미적) nào trước khi gửi intent.
 
-Capability có thể được expose qua version/status/catalog thay vì để request fail ngẫu nhiên. Tuy nhiên negotiation không nên biến thành hàng trăm feature bit không có lifecycle. Capability cần semantic ổn định, owner và deprecation giống API field.
+Năng lực (capability / 역량) có thể được expose qua phiên bản (version / 버전)/status/danh mục (catalog / 카탈로그) thay vì để yêu cầu (request / 요청) thất bại (fail / 실패) ngẫu nhiên. Tuy nhiên negotiation không nên biến thành hàng trăm tính năng (feature / 기능) bit không có vòng đời (lifecycle / 생명주기). năng lực (capability / 역량) cần ngữ nghĩa (semantic / 의미적) ổn định, đơn vị sở hữu (owner / 오너) và deprecation giống API trường dữ liệu (field / 필드).
 
-Mental model là `intent requirement → advertised capability → admission → execution`. Nếu capability không đủ, reject sớm với reason rõ tốt hơn accept rồi fail sâu sau 20 phút provisioning.
+Mô hình tư duy (mental model / 사고 모델) là `intent requirement → advertised capability → admission → execution`. Nếu năng lực (capability / 역량) không đủ, reject sớm với reason rõ tốt hơn accept rồi thất bại (fail / 실패) sâu sau 20 phút provisioning.
 
-## 43. Controller upgrade phải giữ reconciliation monotonic theo invariant
+## 43. Controller upgrade phải giữ reconciliation monotonic theo bất biến (invariant / 불변식)
 
-Hai controller version có thể chạy chồng trong rolling upgrade hoặc old version có thể quay lại sau rollback. Nếu chúng sở hữu cùng field nhưng dùng logic khác, desired state có thể oscillate: version mới thêm config, version cũ xóa nó, rồi version mới thêm lại.
+Hai controller phiên bản (version / 버전) có thể chạy chồng trong rolling upgrade hoặc old phiên bản (version / 버전) có thể quay lại sau quay lui (rollback / 롤백). Nếu chúng sở hữu cùng trường dữ liệu (field / 필드) nhưng dùng lô-gic (logic / 논리) khác, desired trạng thái (state / 상태) có thể oscillate: phiên bản (version / 버전) mới thêm cấu hình (config / 설정), phiên bản (version / 버전) cũ xóa nó, rồi phiên bản (version / 버전) mới thêm lại.
 
-Upgrade strategy cần field ownership và compatibility rõ. Có thể cần leader/version gate, staged controller rollout, schema migration trước behavior activation hoặc chỉ cho một version mutate resource class nhất định. Quan trọng là mỗi reconciliation trong supported skew phải đưa system gần invariant hơn, không tạo tug-of-war.
+Upgrade chiến lược (strategy / 전략) cần trường dữ liệu (field / 필드) quyền sở hữu (ownership / 소유권) và tính tương thích (compatibility / 호환성) rõ. Có thể cần leader/phiên bản (version / 버전) gate, staged controller rollout, lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) trước hành vi (behavior / 동작) activation hoặc chỉ cho một phiên bản (version / 버전) mutate tài nguyên (resource / 자원) lớp (class / 클래스) nhất định. Quan trọng là mỗi reconciliation trong supported skew phải đưa hệ thống (system / 시스템) gần bất biến (invariant / 불변식) hơn, không tạo tug-of-war.
 
-Evidence cần dimension theo controller version, resource generation và mutation reason. Nếu external resource đổi qua lại mà source intent không đổi, hãy nghi reconciliation conflict/version skew trước khi đổ lỗi provider.
+Bằng chứng (evidence / 증거) cần dimension theo controller phiên bản (version / 버전), tài nguyên (resource / 자원) generation và mutation reason. Nếu bên ngoài (external / 외부) tài nguyên (resource / 자원) đổi qua lại mà nguồn (source / 소스) intent không đổi, hãy nghi reconciliation xung đột (conflict / 충돌)/phiên bản (version / 버전) skew trước khi đổ lỗi provider.
 
-## 44. Status schema cũng là API và cần evolution discipline
+## 44. Status lược đồ (schema / 스키마) cũng là API và cần evolution discipline
 
-Automation thường đọc `Ready`, condition reason, endpoint, operation phase hoặc observed generation từ status. Đổi tên reason, bỏ condition hoặc thay nghĩa `Ready` có thể phá pipeline dù spec vẫn tương thích.
+Automation thường đọc `Ready`, điều kiện (condition / 조건) reason, endpoint, thao tác (operation / 연산) phase hoặc observed generation từ status. Đổi tên reason, bỏ điều kiện (condition / 조건) hoặc thay nghĩa `Ready` có thể phá chuỗi xử lý (pipeline / 파이프라인) dù spec vẫn tương thích.
 
-Status nên tách machine-stable field khỏi human message. Consumer automation không nên parse chuỗi lỗi tự do. Condition cần ownership, observed revision/generation và transition semantics đủ rõ để biết signal mới hay stale.
+Status nên tách machine-stable trường dữ liệu (field / 필드) khỏi human message. bên tiêu thụ (consumer / 소비자) automation không nên parse chuỗi lỗi tự do. điều kiện (condition / 조건) cần quyền sở hữu (ownership / 소유권), observed revision/generation và chuyển tiếp (transition / 전이) ngữ nghĩa (semantics / 의미론) đủ rõ để biết tín hiệu (signal / 신호) mới hay stale.
 
-Platform API trưởng thành version cả **intent surface** lẫn **evidence surface**. Consumer cần gửi desired state ổn định, nhưng cũng cần đọc actual state đáng tin để quyết định tiếp theo; compatibility chỉ bảo vệ một phía là chưa đủ.
+Nền tảng (platform / 플랫폼) API trưởng thành phiên bản (version / 버전) cả **intent surface** lẫn **bằng chứng (evidence / 증거) surface**. bên tiêu thụ (consumer / 소비자) cần gửi desired trạng thái (state / 상태) ổn định, nhưng cũng cần đọc actual trạng thái (state / 상태) đáng tin để quyết định tiếp theo; tính tương thích (compatibility / 호환성) chỉ bảo vệ một phía là chưa đủ.
+
+> **Bàn giao:** Sau **44. Status lược đồ (schema / 스키마) cũng là API và cần evolution discipline**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 self service multitenancy cost and governance](./01_self_service_multitenancy_cost_and_governance.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

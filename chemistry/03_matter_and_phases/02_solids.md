@@ -1,5 +1,8 @@
 # Chất rắn — cấu trúc, khuyết tật và tính chất tập thể
 
+> **Mạch đọc:** Đọc **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thành phần chưa đủ để xác định tính chất** sang **Chất rắn tinh thể và vô định hình**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Chất rắn (solid / 고체)** là trạng thái vật chất có khả năng duy trì hình dạng trong khoảng thời gian quan sát vì các nguyên tử, ion hoặc phân tử bị ràng buộc trong một mạng tương tác đủ bền. Các hạt không đứng yên; chúng vẫn dao động nhiệt và lượng tử, nhưng không dễ dàng khuếch tán tự do như trong chất lỏng.
 
 Để hiểu chất rắn, cần nối ba tầng:
@@ -165,7 +168,7 @@ Ví dụ, thay một ion bằng ion có hóa trị khác có thể tạo thêm v
 
 Nếu tinh thể hoàn hảo tuyệt đối, ứng suất lý thuyết cần để trượt rất lớn. Sự tồn tại của lệch mạng giải thích vì sao kim loại thực biến dạng ở ứng suất thấp hơn nhiều.
 
-Các cơ chế hóa bền như solution strengthening, precipitation hardening hoặc work hardening hoạt động một phần bằng cách cản chuyển động lệch mạng.
+Các cơ chế hóa bền như solution strengthening, precipitation hardening hoặc công việc (work / 작업) hardening hoạt động một phần bằng cách cản chuyển động lệch mạng.
 
 ## Biên hạt
 
@@ -179,7 +182,7 @@ Tuy vậy hạt nhỏ cũng có thể làm tăng độ bền chảy theo quan h�
 \sigma_y=\sigma_0+k d^{-1/2}
 \]
 
-Đây là ví dụ cho trade-off: nhiều biên hạt có thể tăng độ bền nhưng đồng thời tăng diện tích giao diện và một số dạng bất ổn hóa học.
+Đây là ví dụ cho sự đánh đổi (trade-off / 트레이드오프): nhiều biên hạt có thể tăng độ bền nhưng đồng thời tăng diện tích giao diện và một số dạng bất ổn hóa học.
 
 ## Khuếch tán trong chất rắn
 
@@ -277,7 +280,7 @@ thế redox phù hợp
 + giao diện ổn định
 ```
 
-Tăng dung lượng bằng cách chèn nhiều ion hơn có thể làm biến dạng mạng mạnh hơn và giảm tuổi thọ. Đây là trade-off vật liệu điển hình.
+Tăng dung lượng bằng cách chèn nhiều ion hơn có thể làm biến dạng mạng mạnh hơn và giảm tuổi thọ. Đây là sự đánh đổi (trade-off / 트레이드오프) vật liệu điển hình.
 
 ## Các hiểu lầm thường gặp
 
@@ -315,3 +318,5 @@ Không. Nó vẫn có trật tự cục bộ, chỉ thiếu tuần hoàn dài h�
 Từ bốn câu hỏi này có thể nối Hóa học cơ bản với luyện kim, gốm, polymer, bán dẫn, pin và nanomaterial.
 
 Xem tiếp: [Chuyển pha và giản đồ pha](./03_phase_changes_and_phase_diagrams.md), [Hóa học trạng thái rắn và khuyết tật](../10_inorganic_chemistry/05_solid_state_and_defect_chemistry.md) và [Vật liệu từ liên kết hóa học](../14_materials_and_polymer_chemistry/00_materials_from_chemical_bonding.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 gases](./00_gases.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

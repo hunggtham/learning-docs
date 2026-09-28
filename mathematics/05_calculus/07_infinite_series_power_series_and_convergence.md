@@ -1,5 +1,8 @@
 # Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn
 
+> **Mạch đọc:** Đọc **Chuỗi vô hạn, power series và convergence: khi accumulation có một giới hạn hữu hạn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. chuỗi (sequence / 시퀀스) và series khác nhau ở đối tượng (object / 객체) đang hội tụ** sang **2. Geometric series là prototype của convergence**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một chuỗi vô hạn (infinite series / 무한급수) không phải “cộng xong vô hạn số”. Nó là một statement về **limit của các tổng hữu hạn**.
 
 Nếu
@@ -20,7 +23,7 @@ nghĩa là
 \lim_{N\to\infty}S_N=S.
 ```
 
-Do đó mọi reasoning về infinite series cuối cùng đều quay về ba câu hỏi:
+Do đó mọi lập luận (reasoning / 추론) về infinite series cuối cùng đều quay về ba câu hỏi:
 
 ```text
 partial sums có bị bounded không?
@@ -28,9 +31,9 @@ partial sums có settle về một limit không?
 tail còn lại sau N terms có nhỏ đến đâu?
 ```
 
-## 1. Sequence và series khác nhau ở object đang hội tụ
+## 1. chuỗi (sequence / 시퀀스) và series khác nhau ở đối tượng (object / 객체) đang hội tụ
 
-Sequence:
+Chuỗi (sequence / 시퀀스):
 
 ```math
 a_1,a_2,a_3,\ldots
@@ -42,13 +45,13 @@ Series:
 a_1+a_2+a_3+\cdots
 ```
 
-Series convergence thực chất là convergence của sequence partial sums:
+Series convergence thực chất là convergence của chuỗi (sequence / 시퀀스) partial sums:
 
 ```math
 S_1,S_2,S_3,\ldots
 ```
 
-Đây là reason condition
+Đây là reason điều kiện (condition / 조건)
 
 ```math
 a_n\to0
@@ -101,7 +104,7 @@ Nếu `|r|\ge1`, terms không decay phù hợp và series không converge theo o
 
 Geometric series là benchmark vì nhiều convergence tests hỏi: tail có behave giống geometric decay không?
 
-## 3. Infinite series là approximation + error budget
+## 3. Infinite series là approximation + lỗi (error / 오류) ngân sách (budget / 예산)
 
 Trong computation ta chỉ dùng finite `N`:
 
@@ -131,7 +134,7 @@ Với geometric series:
 \frac{|r|^{N+1}}{1-|r|}.
 ```
 
-Convergence vì vậy nối pure analysis với numerical error control.
+Convergence vì vậy nối pure phân tích (analysis / 분석) với numerical lỗi (error / 오류) điều khiển (control / 제어).
 
 ## 4. Vì sao a_n → 0 chưa đủ?
 
@@ -157,13 +160,13 @@ Grouping proof:
 + ...
 ```
 
-Mỗi block sau block đầu có sum ít nhất `1/2`.
+Mỗi khối (block / 블록) sau khối (block / 블록) đầu có sum ít nhất `1/2`.
 
 Vì partial sums tăng thêm ít nhất một amount cố định qua infinitely many blocks, chúng không bounded.
 
 Key lesson:
 
-> local smallness của term không quyết định global accumulation.
+> cục bộ (local / 로컬) smallness của term không quyết định toàn cục (global / 전역) accumulation.
 
 ## 5. p-series cho benchmark polynomial decay
 
@@ -187,7 +190,7 @@ Nếu `p<1`, decay còn chậm hơn harmonic.
 
 p-series là benchmark cho algebraic/polynomial tail, giống geometric series là benchmark cho exponential tail.
 
-## 6. Integral test nối discrete sum với continuous area
+## 6. Integral kiểm thử (test / 테스트) nối discrete sum với continuous area
 
 Nếu `f(x)` positive, continuous, decreasing và
 
@@ -195,7 +198,7 @@ Nếu `f(x)` positive, continuous, decreasing và
 a_n=f(n),
 ```
 
-thì behavior của
+thì hành vi (behavior / 동작) của
 
 ```math
 \sum_{n=1}^{\infty}a_n
@@ -217,13 +220,13 @@ f(x)=x^{-p},
 
 integral converges iff `p>1`, cho p-series criterion.
 
-Đây là một example quan trọng về knowledge connection:
+Đây là một example quan trọng về liên kết kiến thức (knowledge connection / 지식 연결):
 
 ```text
 discrete accumulation ↔ continuous accumulation
 ```
 
-## 7. Comparison test là asymptotic domination
+## 7. Comparison kiểm thử (test / 테스트) là asymptotic domination
 
 Nếu eventually
 
@@ -253,7 +256,7 @@ a_n\ge b_n\ge0
 
 và `\sum b_n` diverges, thì `\sum a_n` diverges.
 
-Comparison không cần exact sum. Nó chỉ cần relative tail size.
+Comparison không cần chính xác (exact / 정확한) sum. Nó chỉ cần relative tail kích thước (size / 크기).
 
 ## 8. Limit comparison tập trung vào asymptotic ratio
 
@@ -264,13 +267,13 @@ Nếu
 \qquad 0<c<\infty,
 ```
 
-với positive terms, thì hai series có cùng convergence behavior.
+với positive terms, thì hai series có cùng convergence hành vi (behavior / 동작).
 
 Reason: eventually chúng chỉ khác nhau bởi constant factors.
 
-Đây là series version của asymptotic equivalence.
+Đây là series phiên bản (version / 버전) của asymptotic equivalence.
 
-## 9. Ratio test nhìn geometric shrink rate
+## 9. Ratio kiểm thử (test / 테스트) nhìn geometric shrink tỷ lệ (rate / 비율)
 
 Cho
 
@@ -286,11 +289,11 @@ Nếu `L<1`, tail behaves roughly geometric → absolute convergence.
 
 Nếu `L>1`, terms không tiến về zero đúng cách → divergence.
 
-Nếu `L=1`, test inconclusive.
+Nếu `L=1`, kiểm thử (test / 테스트) inconclusive.
 
-Ratio test đặc biệt mạnh khi factorial/exponential terms xuất hiện.
+Ratio kiểm thử (test / 테스트) đặc biệt mạnh khi factorial/exponential terms xuất hiện.
 
-## 10. Root test nhìn exponential scale trực tiếp
+## 10. gốc (root / 루트) kiểm thử (test / 테스트) nhìn exponential quy mô (scale / 규모) trực tiếp
 
 Cho
 
@@ -303,9 +306,9 @@ Nếu `L<1`, absolute convergence.
 
 Nếu `L>1`, divergence.
 
-Root test hữu ích khi term có structure `(... )^n`.
+Gốc (root / 루트) kiểm thử (test / 테스트) hữu ích khi term có cấu trúc (structure / 구조) `(... )^n`.
 
-Ratio và root tests đều hỏi cùng một deep question:
+Ratio và gốc (root / 루트) tests đều hỏi cùng một deep question:
 
 > asymptotic multiplicative decay có factor dưới 1 không?
 
@@ -318,7 +321,7 @@ Series alternating:
 \qquad b_n\ge0.
 ```
 
-Nếu `b_n` decrease về 0, alternating series test cho convergence.
+Nếu `b_n` decrease về 0, alternating series kiểm thử (test / 테스트) cho convergence.
 
 Reason trực giác: partial sums overshoot/undershoot limit với oscillation ngày càng nhỏ.
 
@@ -328,7 +331,7 @@ Remainder bound:
 |R_N|\le b_{N+1}.
 ```
 
-Đây là một trong những error bounds rất practical.
+Đây là một trong những lỗi (error / 오류) bounds rất practical.
 
 ## 12. Absolute vs conditional convergence
 
@@ -350,7 +353,7 @@ Alternating harmonic:
 
 là example.
 
-Absolute convergence mạnh hơn vì rearrangement behavior ổn định hơn.
+Absolute convergence mạnh hơn vì rearrangement hành vi (behavior / 동작) ổn định hơn.
 
 ## 13. Rearrangement cho thấy infinite sums khác finite sums
 
@@ -358,7 +361,7 @@ Finite addition commutative/associative không gây vấn đề.
 
 Nhưng với conditionally convergent series, rearranging terms có thể đổi sum hoặc làm diverge (Riemann rearrangement phenomenon).
 
-Điều này không “phá” arithmetic; nó cho thấy limit process thêm assumptions vào phép cộng vô hạn.
+Điều này không “phá” arithmetic; nó cho thấy limit tiến trình (process / 프로세스) thêm các giả định (assumptions / 가정들) vào phép cộng vô hạn.
 
 ## 14. Cauchy criterion nhìn tail thay vì unknown limit
 
@@ -411,7 +414,7 @@ Cauchy–Hadamard formula:
 \limsup_{n\to\infty}|c_n|^{1/n}.
 ```
 
-Trong many textbook cases, ratio test cho:
+Trong many textbook cases, ratio kiểm thử (test / 테스트) cho:
 
 ```math
 R=
@@ -425,7 +428,7 @@ nếu limit phù hợp tồn tại.
 
 Radius encode competition giữa coefficient growth và power `(x-a)^n`.
 
-## 17. Endpoint behavior cần check riêng
+## 17. Endpoint hành vi (behavior / 동작) cần check riêng
 
 Ví dụ power series có `R=1`.
 
@@ -433,11 +436,11 @@ Tại `x=1`, series có thể converge.
 
 Tại `x=-1`, có thể diverge hoặc converge conditionally.
 
-Radius chỉ quyết định inside/outside; boundary thường cần test riêng.
+Radius chỉ quyết định inside/outside; ranh giới (boundary / 경계) thường cần kiểm thử (test / 테스트) riêng.
 
-Đây là common exam trap nhưng sâu hơn là boundary thường có qualitatively different cancellation.
+Đây là dùng chung (common / 공통) exam trap nhưng sâu hơn là ranh giới (boundary / 경계) thường có qualitatively different cancellation.
 
-## 18. Term-by-term differentiation/integration
+## 18. Term-by-term differentiation/tích hợp (integration / 통합)
 
 Inside radius of convergence, power series behave rất tốt.
 
@@ -465,11 +468,11 @@ C+
 \frac{c_n}{n+1}(x-a)^{n+1}.
 ```
 
-Radius remains the same, though endpoints may change behavior.
+Radius remains the same, though endpoints may thay đổi (change / 변경) hành vi (behavior / 동작).
 
 ## 19. Geometric series như generator
 
-Identity:
+Định danh (identity / 식별자):
 
 ```math
 \frac1{1-x}
@@ -494,7 +497,7 @@ Integrate:
 x+\frac{x^2}{2}+\frac{x^3}{3}+\cdots.
 ```
 
-Một simple series identity có thể generate cả family identities.
+Một simple series định danh (identity / 식별자) có thể generate cả family identities.
 
 ## 20. Series solution của differential equations
 
@@ -506,7 +509,7 @@ y(x)=\sum_{n=0}^{\infty}a_nx^n.
 
 Substitute vào ODE để derive recurrence cho coefficients `a_n`.
 
-Đây là bridge:
+Đây là cầu nối (bridge / 브리지):
 
 ```text
 differential equation
@@ -526,13 +529,13 @@ f(x)\approx\sum_{n=0}^{N}a_n.
 
 Practical accuracy phụ thuộc:
 
-- truncation error;
-- rounding error;
+- truncation lỗi (error / 오류);
+- rounding lỗi (error / 오류);
 - cancellation;
-- evaluation order;
-- distance tới convergence boundary.
+- evaluation thứ tự (order / 순서);
+- distance tới convergence ranh giới (boundary / 경계).
 
-Một mathematically convergent series có thể là numerically poor algorithm nếu convergence quá chậm.
+Một mathematically convergent series có thể là numerically poor thuật toán (algorithm / 알고리즘) nếu convergence quá chậm.
 
 ## 22. Slow convergence vs acceleration
 
@@ -540,13 +543,13 @@ Harmonic-like tails hoặc `r` gần 1 làm convergence rất chậm.
 
 Nếu geometric ratio `r=0.999`, cần rất nhiều terms.
 
-Production numerical methods thường dùng transformed approximations, rational approximants hoặc convergence acceleration thay vì raw summation.
+Môi trường vận hành (production / 운영 환경) numerical methods thường dùng transformed approximations, rational approximants hoặc convergence acceleration thay vì raw summation.
 
 Mathematical convergence không đồng nghĩa computational efficiency.
 
-## 23. Probability connection
+## 23. xác suất (probability / 확률) liên kết (connection / 연결)
 
-Expected value của discrete random variable là series:
+Expected giá trị (value / 값) của discrete random variable là series:
 
 ```math
 E[X]=\sum_x xP(X=x).
@@ -556,9 +559,9 @@ Interchanging sums/limits/expectations cần convergence conditions.
 
 Absolute convergence/integrability giúp justify manipulations mà finite sums cho phép tự do hơn.
 
-## 24. Finance connection: present value as geometric-like series
+## 24. Finance liên kết (connection / 연결): present giá trị (value / 값) as geometric-like series
 
-Perpetuity payment `C` với discount rate `r>0`:
+Perpetuity payment `C` với discount tỷ lệ (rate / 비율) `r>0`:
 
 ```math
 PV
@@ -579,11 +582,11 @@ Do đó
 PV=\frac Cr.
 ```
 
-Formula finance nổi tiếng chỉ là geometric-series convergence dưới assumptions constant payment/rate.
+Formula finance nổi tiếng chỉ là geometric-series convergence dưới các giả định (assumptions / 가정들) constant payment/tỷ lệ (rate / 비율).
 
-## 25. CS connection: geometric work bounds
+## 25. CS liên kết (connection / 연결): geometric công việc (work / 작업) bounds
 
-Dynamic array doubling costs:
+Động (dynamic / 동적) array doubling costs:
 
 ```text
 1 + 2 + 4 + ... + n
@@ -601,7 +604,7 @@ cũng bounded bởi `2n`.
 
 Geometric series là foundation của many amortized/divide-and-conquer arguments.
 
-## 26. Worked example: error target
+## 26. Worked example: lỗi (error / 오류) mục tiêu (target / 대상)
 
 Approximate
 
@@ -619,7 +622,7 @@ Tail:
 \frac{|r|^{N+1}}{1-|r|}.
 ```
 
-Muốn error < `\varepsilon`:
+Muốn lỗi (error / 오류) < `\varepsilon`:
 
 ```math
 \frac{|r|^{N+1}}{1-|r|}<\varepsilon.
@@ -627,9 +630,9 @@ Muốn error < `\varepsilon`:
 
 Taking logs cho minimum `N`.
 
-Series convergence biến thành engineering question: bao nhiêu terms đủ?
+Series convergence biến thành kỹ thuật (engineering / 엔지니어링) question: bao nhiêu terms đủ?
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 ```text
 sequence limits
@@ -645,10 +648,12 @@ sequence limits
 → algorithmic geometric bounds
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Infinite series là một **accumulation process controlled by a limit**. Convergence không hỏi từng term có nhỏ không; nó hỏi **remaining tail có thể làm arbitrarily small không**. Power series thêm một variable vào process này, biến convergence thành một property của region quanh center.
+> Infinite series là một **accumulation tiến trình (process / 프로세스) controlled by a limit**. Convergence không hỏi từng term có nhỏ không; nó hỏi **remaining tail có thể làm arbitrarily small không**. Power series thêm một variable vào tiến trình (process / 프로세스) này, biến convergence thành một thuộc tính (property / 속성) của region quanh center.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-`a_n\to0` không đủ cho series convergence. “Convergent” không nghĩa fast enough for computation. Absolute và conditional convergence không interchangeable. Power series không automatically valid cho mọi `x`. Endpoints phải được check riêng. Rearrangement của conditionally convergent series có thể đổi result. Một theorem cho convergence mà không có useful error bound đôi khi chưa đủ cho numerical use.
+`a_n\to0` không đủ cho series convergence. “Convergent” không nghĩa fast enough for computation. Absolute và conditional convergence không interchangeable. Power series không automatically valid cho mọi `x`. Endpoints phải được check riêng. Rearrangement của conditionally convergent series có thể đổi kết quả (result / 결과). Một theorem cho convergence mà không có useful lỗi (error / 오류) bound đôi khi chưa đủ cho numerical use.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

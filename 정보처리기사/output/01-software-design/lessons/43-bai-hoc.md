@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,6 +20,8 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** và nối nó với **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
@@ -28,7 +30,7 @@
 2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
 3.  **EAI (연계 솔루션):** 중계 서버/클라이언트 사용 (Dùng máy chủ trung gian Enterprise Application Integration).
 4.  **Socket:** 포트 할당하여 연결 (Mở port mạng Socket để truyền dữ liệu).
-5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
+5.  **Web dịch vụ (service / 서비스):** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
 
 ### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
 *   **통신 유형 (Loại Giao tiếp):**

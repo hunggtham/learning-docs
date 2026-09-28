@@ -1,5 +1,8 @@
 # Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc
 
+> **Mạch đọc:** Đặt **Bữa ăn, lên men và văn hoá ăn uống Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **밥: một từ vừa là cơm vừa là bữa ăn** sang **Bàn ăn như một giao diện xã hội**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## 밥: một từ vừa là cơm vừa là bữa ăn
 
 Trong tiếng Hàn, **밥 (cơm/bữa ăn / rice, meal)** có thể chỉ cơm nấu hoặc rộng hơn là bữa ăn. `밥 먹었어요?` đôi khi là câu hỏi thực, đôi khi là cách mở lời quan tâm tương tự “ăn gì chưa?”. Việc một thực phẩm chính trở thành từ đại diện cho toàn bữa cho thấy vai trò lịch sử của ngũ cốc trong kinh tế sinh tồn.
@@ -22,7 +25,7 @@ Trước khi ăn, `잘 먹겠습니다` thường mang nghĩa gần “tôi xin 
 
 Nếu một người khác trả toàn bộ bữa, `잘 먹었습니다` còn có thể làm chức năng cảm ơn sau cuộc mời. Khi ai đó nói `제가 살게요`, nghĩa là “để tôi trả”. `한턱내다` là đãi một chầu/bữa nhân dịp nào đó.
 
-## 반찬과 리필: món phụ và logic phục vụ
+## 반찬과 리필: món phụ và lô-gic (logic / 논리) phục vụ
 
 Nhiều nhà hàng Hàn phục vụ một số `반찬` kèm món chính. Một số loại có thể lấy thêm miễn phí, nhưng không nên mặc định mọi banchan hay mọi nhà hàng đều như vậy. Từ `리필` được dùng rất tự nhiên trong tiếng Hàn nhà hàng.
 
@@ -72,7 +75,7 @@ Khi siêu thị bán kimchi quanh năm, chức năng sinh tồn giảm. Nhưng c
 
 Vị umami đến một phần từ axit amin được giải phóng khi protein phân giải. Đây là liên hệ giữa hoá học và ẩm thực: lên men không chỉ bảo quản mà còn tạo phân tử mới làm hương vị sâu hơn.
 
-UNESCO ghi danh “Knowledge, beliefs and practices related to jang making in the Republic of Korea” năm 2024. Việc ghi danh nhấn mạnh hệ tri thức và thực hành xã hội chứ không chỉ sản phẩm cuối.
+UNESCO ghi danh “kiến thức (knowledge / 지식), beliefs and practices related to jang making in the Republic of Korea” năm 2024. Việc ghi danh nhấn mạnh hệ tri thức và thực hành xã hội chứ không chỉ sản phẩm cuối.
 
 ## 떡: ngũ cốc trở thành thực phẩm nghi lễ
 
@@ -90,7 +93,7 @@ Khái niệm **ẩm thực địa phương (향토음식 / local cuisine)** quan
 
 Ăn theo mùa vẫn tồn tại dù siêu thị làm nguồn cung quanh năm.
 
-Mùa hè có `냉면`, `콩국수`, và đặc biệt `복날` với món nóng như `삼계탕`. Logic “nóng ăn nóng” được diễn đạt qua `이열치열`: dùng nhiệt đối phó nhiệt, vừa là cách nói văn hoá vừa liên quan quan niệm bồi bổ.
+Mùa hè có `냉면`, `콩국수`, và đặc biệt `복날` với món nóng như `삼계탕`. lô-gic (logic / 논리) “nóng ăn nóng” được diễn đạt qua `이열치열`: dùng nhiệt đối phó nhiệt, vừa là cách nói văn hoá vừa liên quan quan niệm bồi bổ.
 
 Mùa đông có `붕어빵`, `호떡`, `군고구마`, canh và lẩu. Đông chí `동지` thường gắn với `팥죽` trong truyền thống.
 
@@ -100,7 +103,7 @@ Thực phẩm theo mùa là nơi lịch, thời tiết, nông nghiệp và ký �
 
 Thịt nướng Hàn biến bàn ăn thành hệ thống nấu. Bếp, hút khói, vỉ nướng và bố cục món phụ tạo trải nghiệm tương tác. Người ăn không chỉ tiêu thụ; họ tham gia sản xuất món ăn.
 
-Ai nướng thịt, cắt thịt, chia phần có thể biểu thị sự chăm sóc hoặc vai trò nhóm. Nhưng quy tắc không cố định. Trong nhóm bạn trẻ, ai gần vỉ có thể làm; trong bữa công việc, người junior từng có thể chủ động phục vụ senior hơn.
+Ai nướng thịt, cắt thịt, chia phần có thể biểu thị sự chăm sóc hoặc vai trò nhóm. Nhưng quy tắc không cố định. Trong nhóm bạn trẻ, ai gần vỉ có thể làm; trong bữa công việc, người junior từng có thể chủ động phục vụ cấp cao (senior / 시니어) hơn.
 
 `쌈` — cuốn thịt, rau, sốt trong lá — cho thấy bữa ăn có tính lắp ghép. Người ăn tự tạo từng miếng từ nhiều mô-đun: lá xà lách/tía tô + thịt + ssamjang + tỏi + món phụ.
 
@@ -248,7 +251,7 @@ lô nguyên liệu
 → điểm bán
 ```
 
-Nếu phát hiện vấn đề, hệ thống càng truy ngược tốt thì phạm vi thu hồi càng chính xác. Đây là cùng logic với theo dõi phiên bản phần mềm: biết chính xác phiên bản nào bị lỗi tốt hơn thu hồi toàn bộ hệ thống.
+Nếu phát hiện vấn đề, hệ thống càng truy ngược tốt thì phạm vi thu hồi càng chính xác. Đây là cùng lô-gic (logic / 논리) với theo dõi phiên bản phần mềm: biết chính xác phiên bản nào bị lỗi tốt hơn thu hồi toàn bộ hệ thống.
 
 ## Giá thực phẩm và tính mùa vụ: không phải mọi biến động đều là “nhà hàng tăng giá”
 
@@ -439,4 +442,6 @@ Người tiêu dùng đưa quyết định bằng cả hai. Một sản phẩm v
 
 - UNESCO Intangible Cultural Heritage: Kimjang (2013); tri thức và thực hành làm jang (2024).
 - Korea.net: tư liệu về `소반` và lịch sử phép tắc trên bàn ăn.
-- Với an toàn thực phẩm, ghi nhãn, xuất xứ và quy định hiện hành, ưu tiên Ministry of Food and Drug Safety (`식품의약품안전처`) và các nguồn chính thức thay vì học cứng từ ví dụ văn hoá.
+- Với an toàn thực phẩm, ghi nhãn, xuất xứ và quy định hiện hành, ưu tiên Ministry of Food and Drug an toàn (safety / 안전) (`식품의약품안전처`) và các nguồn chính thức thay vì học cứng từ ví dụ văn hoá.
+
+> **Bàn giao:** Sau **Nguồn tham khảo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

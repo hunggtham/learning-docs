@@ -1,9 +1,12 @@
 # các đường đi ngắn nhất
+
+> **Mạch đọc:** Đọc **các đường đi ngắn nhất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình tư duy** sang **đồ thị không trọng số: BFS là shortest-path thuật toán**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Đường đi ngắn nhất (Shortest Path / 최단 경로)**
 
 “đường đi ngắn nhất (shortest path)” không phải tên của một thuật toán duy nhất. Nó là một họ bài toán, và lựa chọn thuật toán phụ thuộc trực tiếp vào **mô hình trọng số (weight model / 가중치 모델)** của đồ thị.
 
-Cùng một đồ thị topology nhưng nếu các cạnh đều bằng nhau, chỉ có `0/1`, đều không âm, có số âm, hay đồ thị là DAG thì structure toán học khác nhau. Vì vậy trước khi nghĩ tới Dijkstra, câu hỏi đầu tiên phải là:
+Cùng một đồ thị topology nhưng nếu các cạnh đều bằng nhau, chỉ có `0/1`, đều không âm, có số âm, hay đồ thị là DAG thì cấu trúc (structure / 구조) toán học khác nhau. Vì vậy trước khi nghĩ tới Dijkstra, câu hỏi đầu tiên phải là:
 
 ```text
 Edge cost có dạng gì?
@@ -31,7 +34,7 @@ Nếu đúng:
 dist[v] \leftarrow dist[u] + w
 \]
 
-Đây là primitive xuyên suốt BFS, Dijkstra, Bellman-Ford và DAG đường đi ngắn nhất.
+Đây là thành phần nguyên thủy (primitive / 기본 요소) xuyên suốt BFS, Dijkstra, Bellman-Ford và DAG đường đi ngắn nhất.
 
 ## đồ thị không trọng số: BFS là shortest-path thuật toán
 
@@ -46,15 +49,15 @@ distance 2: neighbors của layer trước chưa thăm
 ...
 ```
 
-Khi một đỉnh lần đầu được khám phá, ta đã tìm được đường đi ít cạnh nhất tới nó, bởi vì queue đảm bảo mọi đường đi ngắn hơn đã được xử lý trước.
+Khi một đỉnh lần đầu được khám phá, ta đã tìm được đường đi ít cạnh nhất tới nó, bởi vì hàng đợi (queue / 큐) đảm bảo mọi đường đi ngắn hơn đã được xử lý trước.
 
-Complexity với danh sách kề:
+Độ phức tạp (complexity / 복잡도) với danh sách kề:
 
 \[
 O(V+E)
 \]
 
-Đây là một insight quan trọng: Dijkstra trên đồ thị không trọng số vẫn đúng nếu coi mọi cạnh trọng số = 1, nhưng heap là overhead không cần thiết.
+Đây là một insight quan trọng: Dijkstra trên đồ thị không trọng số vẫn đúng nếu coi mọi cạnh trọng số = 1, nhưng vùng nhớ động (heap / 힙) là overhead không cần thiết.
 
 ## 0–1 BFS: khi các trọng số chỉ là 0 hoặc 1
 
@@ -72,15 +75,15 @@ Relax cạnh trọng số 1:
 push_back(v)
 ```
 
-Intuition là nút có khoảng cách không tăng phải được xử lý trước các nút làm khoảng cách tăng 1. Deque duy trì đúng ordering cần thiết mà không cần general-purpose hàng đợi ưu tiên.
+Intuition là nút có khoảng cách không tăng phải được xử lý trước các nút làm khoảng cách tăng 1. Deque duy trì đúng thứ tự (ordering / 순서) cần thiết mà không cần general-purpose hàng đợi ưu tiên.
 
-Complexity:
+Độ phức tạp (complexity / 복잡도):
 
 \[
 O(V+E)
 \]
 
-Ví dụ thực tế: chuyển trạng thái miễn phí hoặc trả phí 1 đơn vị; đi qua portal chi phí 0 nhưng bước thường chi phí 1; minimize số lần đổi mode.
+Ví dụ thực tế: chuyển trạng thái miễn phí hoặc trả phí 1 đơn vị; đi qua portal chi phí 0 nhưng bước thường chi phí 1; minimize số lần đổi chế độ (mode / 모드).
 
 ## Dijkstra: non-negative các trọng số
 
@@ -88,13 +91,13 @@ Ví dụ thực tế: chuyển trạng thái miễn phí hoặc trả phí 1 đ�
 
 Ta giữ `dist[v]` là best khoảng cách hiện biết. hàng đợi ưu tiên chọn unsettled đỉnh có `dist` nhỏ nhất.
 
-### bất biến (invariant) cốt lõi
+### Bất biến (invariant / 불변식) cốt lõi
 
 Khi `u` là nút có tentative khoảng cách nhỏ nhất và mọi cạnh trọng số không âm, không thể có một đường đi đi qua một unsettled nút xa hơn rồi quay lại làm `u` rẻ hơn.
 
 Giả sử có đường đi tốt hơn tới `u` đi qua một unsettled đỉnh `x`. Vì cạnh các trọng số không âm, prefix tới `x` không thể lớn hơn toàn đường đi tới `u`. Nhưng `u` đang là tentative nhỏ nhất trong frontier. Điều này dẫn tới contradiction với giả định có đường đi tốt hơn chưa được phát hiện.
 
-Do đó khi pop một trạng thái (state) non-stale tốt nhất, khoảng cách đó có thể được xem là finalized.
+Do đó khi pop một trạng thái (state / 상태) non-stale tốt nhất, khoảng cách đó có thể được xem là finalized.
 
 ### Java với stale-entry mẫu
 
@@ -131,7 +134,7 @@ static long[] dijkstra(List<List<Edge>> g, int s) {
 }
 ```
 
-Với danh sách kề + đống nhị phân, complexity thường viết:
+Với danh sách kề + đống nhị phân, độ phức tạp (complexity / 복잡도) thường viết:
 
 \[
 O((V+E)\log V)
@@ -174,21 +177,21 @@ repeat V-1 lần:
     if !changed: break
 ```
 
-Complexity:
+Độ phức tạp (complexity / 복잡도):
 
 \[
 O(VE)
 \]
 
-Chậm hơn Dijkstra nhưng support mô hình rộng hơn.
+Chậm hơn Dijkstra nhưng hỗ trợ (support / 지원) mô hình rộng hơn.
 
-## Negative chu trình ngữ nghĩa (semantics)
+## Negative chu trình ngữ nghĩa (semantics / 의미론)
 
 Nếu round thứ `V` vẫn có relaxation trên đỉnh có thể tới từ nguồn, có một **negative chu trình (음수 사이클)** ảnh hưởng tới region đó.
 
 Điều này không đơn giản nghĩa là “không có đường đi ngắn nhất ở toàn đồ thị”. Nếu chu trình không có thể tới từ nguồn, nó không ảnh hưởng single-source truy vấn. Nếu chu trình có thể tới nhưng đích không có thể tới từ chu trình, đích vẫn có thể có finite đường đi ngắn nhất.
 
-Nếu đích có thể tới sau một negative chu trình, objective không có finite minimum: đi thêm vòng chu trình làm chi phí giảm vô hạn.
+Nếu đích có thể tới sau một negative chu trình, mục tiêu (objective / 목표) không có finite minimum: đi thêm vòng chu trình làm chi phí giảm vô hạn.
 
 Mô hình tư duy đúng là:
 
@@ -199,13 +202,13 @@ negative cycle reachable + can reach target
 
 ## SPFA: vì sao cần thận trọng
 
-đường đi ngắn nhất Faster thuật toán dùng queue để chỉ relax các đỉnh có thay đổi, thường nhanh trên một số data. Nhưng trường hợp xấu nhất vẫn có thể rất tệ, gần `O(VE)` và còn có đối kháng các đầu vào.
+đường đi ngắn nhất Faster thuật toán dùng hàng đợi (queue / 큐) để chỉ relax các đỉnh có thay đổi, thường nhanh trên một số dữ liệu (data / 데이터). Nhưng trường hợp xấu nhất vẫn có thể rất tệ, gần `O(VE)` và còn có đối kháng các đầu vào.
 
-Vì vậy không nên coi SPFA là “Bellman-Ford nhanh hơn” với bảo đảm tốt hơn. Dùng khi hiểu khối lượng công việc hoặc trong context mà empirical hành vi được chấp nhận.
+Vì vậy không nên coi SPFA là “Bellman-Ford nhanh hơn” với bảo đảm tốt hơn. Dùng khi hiểu khối lượng công việc hoặc trong ngữ cảnh (context / 맥락) mà empirical hành vi được chấp nhận.
 
 ## DAG đường đi ngắn nhất
 
-Nếu đồ thị là **Directed Acyclic đồ thị (DAG / 방향 비순환 그래프)**, ta có thứ tự tô-pô. Mỗi cạnh luôn đi từ nút trước sang nút sau trong order.
+Nếu đồ thị là **Directed Acyclic đồ thị (DAG / 방향 비순환 그래프)**, ta có thứ tự tô-pô. Mỗi cạnh luôn đi từ nút trước sang nút sau trong thứ tự (order / 순서).
 
 Do đó chỉ cần relax mỗi cạnh một lần theo thứ tự tô-pô:
 
@@ -213,9 +216,9 @@ Do đó chỉ cần relax mỗi cạnh một lần theo thứ tự tô-pô:
 O(V+E)
 \]
 
-Điểm đặc biệt: DAG đường đi ngắn nhất chấp nhận negative cạnh vì không có chu trình để quay lại phá ordering.
+Điểm đặc biệt: DAG đường đi ngắn nhất chấp nhận negative cạnh vì không có chu trình để quay lại phá thứ tự (ordering / 순서).
 
-Đây là ví dụ điển hình cho việc topology mạnh hơn trọng số giả định. Khi đồ thị acyclic, dependency order loại nhu cầu lặp lại relaxation.
+Đây là ví dụ điển hình cho việc topology mạnh hơn trọng số giả định. Khi đồ thị acyclic, phụ thuộc (dependency / 의존성) thứ tự (order / 순서) loại nhu cầu lặp lại relaxation.
 
 ## All-pairs các đường đi ngắn nhất và Floyd-Warshall
 
@@ -229,7 +232,7 @@ d_k(i,j)
 
 là shortest khoảng cách từ `i` tới `j` khi chỉ được dùng các intermediate các đỉnh trong `{0,...,k}`.
 
-Transition:
+Chuyển tiếp (transition / 전이):
 
 \[
 d_k(i,j)=\min(d_{k-1}(i,j), d_{k-1}(i,k)+d_{k-1}(k,j))
@@ -244,7 +247,7 @@ for (int k = 0; k < n; k++)
             d[i][j] = Math.min(d[i][j], d[i][k] + d[k][j]);
 ```
 
-Time:
+Thời gian (time / 시간):
 
 \[
 O(V^3)
@@ -280,7 +283,7 @@ Chỉ nhìn một diagonal âm mà tuyên bố mọi cặp không hợp lệ là
 
 ## Johnson's thuật toán: all-pairs trên đồ thị thưa
 
-Khi đồ thị sparse, `O(V^3)` có thể lãng phí. **Johnson's thuật toán** dùng Bellman-Ford để tìm potentials, reweight các cạnh thành non-negative mà bảo toàn shortest-path ordering, rồi chạy Dijkstra từ từng nguồn.
+Khi đồ thị sparse, `O(V^3)` có thể lãng phí. **Johnson's thuật toán** dùng Bellman-Ford để tìm potentials, reweight các cạnh thành non-negative mà bảo toàn shortest-path thứ tự (ordering / 순서), rồi chạy Dijkstra từ từng nguồn.
 
 Ý tưởng reweight:
 
@@ -290,11 +293,11 @@ w'(u,v)=w(u,v)+h(u)-h(v)
 
 Nếu `h` được chọn từ Bellman-Ford potentials, `w' >= 0`.
 
-đường đi chi phí bị shift theo endpoints nhưng relative choice giữa các đường đi cùng nguồn/đích không đổi. Đây là một example đẹp của việc biến problem sang domain mà thuật toán mạnh hơn áp dụng được.
+đường đi chi phí bị shift theo endpoints nhưng relative choice giữa các đường đi cùng nguồn/đích không đổi. Đây là một example đẹp của việc biến bài toán (problem / 문제) sang lĩnh vực (domain / 도메인) mà thuật toán mạnh hơn áp dụng được.
 
 ## đường đi reconstruction
 
-khoảng cách giá trị thường chưa đủ. Muốn actual route, khi relaxation thành công:
+khoảng cách giá trị thường chưa đủ. Muốn actual tuyến (route / 경로), khi relaxation thành công:
 
 ```text
 parent[v] = u
@@ -357,15 +360,15 @@ Nếu heuristic **admissible** (`h(v)` không overestimate true remaining chi ph
 
 Dijkstra chính là A* với `h(v)=0`.
 
-Trong routing/spatial search, heuristic tốt giúp bỏ rất nhiều vùng đồ thị không liên quan.
+Trong routing/spatial tìm kiếm (search / 검색), heuristic tốt giúp bỏ rất nhiều vùng đồ thị không liên quan.
 
-## Bidirectional search
+## Bidirectional tìm kiếm (search / 검색)
 
 Nếu nguồn và đích đã biết, có thể tìm kiếm từ hai phía và gặp nhau ở giữa. Với đồ thị không trọng số, BFS hai chiều có thể giảm mạnh kích thước biên tìm kiếm hiệu dụng từ khoảng `b^d` xuống gần `2b^{d/2}` trong mô hình phân nhánh lý tưởng.
 
 Weighted bidirectional Dijkstra phức tạp hơn vì stopping điều kiện phải đảm bảo cận dưới hai frontier đã đủ lớn; không thể chỉ dừng ở lần đầu hai searches chạm nhau một cách ngây thơ.
 
-## tràn số và infinity cách biểu diễn (representation)
+## tràn số và infinity cách biểu diễn (representation / 표현)
 
 Trong Java, nếu dùng:
 
@@ -385,7 +388,7 @@ có thể tràn số thành số âm. Thực tế thường dùng `Long.MAX_VALU
 if dist[u] != INF before addition
 ```
 
-Trong C, signed tràn số nguyên (integer overflow) có thể là undefined hành vi. Cần chọn type đủ rộng và kiểm ranh giới.
+Trong C, signed tràn số nguyên (integer overflow) có thể là undefined hành vi. Cần chọn kiểu (type / 타입) đủ rộng và kiểm ranh giới.
 
 JavaScript `Number` biểu diễn integer chính xác tới:
 
@@ -397,9 +400,9 @@ Nếu đường đi sum có thể vượt vùng này, cân nhắc `BigInt` hoặ
 
 ## Floating-point các trọng số
 
-Nếu các trọng số là `double`, equality test và stale check cần cẩn thận. Với floating-point, expression `curDist != dist[u]` có thể vẫn hoạt động nếu các giá trị được copy nguyên từ computed khoảng cách, nhưng các phép so sánh gần ranh giới có thể chịu rounding.
+Nếu các trọng số là `double`, equality kiểm thử (test / 테스트) và stale check cần cẩn thận. Với floating-point, expression `curDist != dist[u]` có thể vẫn hoạt động nếu các giá trị được bản sao (copy / 복사) nguyên từ computed khoảng cách, nhưng các phép so sánh gần ranh giới có thể chịu rounding.
 
-Nếu domain là tiền tệ hoặc fixed-scale chi phí, integer minor units thường an toàn hơn dấu phẩy động.
+Nếu lĩnh vực (domain / 도메인) là tiền tệ hoặc fixed-scale chi phí, integer minor units thường an toàn hơn dấu phẩy động.
 
 ## Sparse vs đồ thị dày
 
@@ -424,9 +427,9 @@ MST                -> tối ưu total infrastructure cost
 
 Đừng chọn thuật toán chỉ vì cả hai “trông như chọn cạnh nhỏ”.
 
-## Decision table
+## Quyết định (decision / 결정) bảng (table / 테이블)
 
-| trọng số / structure | thuật toán tự nhiên |
+| trọng số / cấu trúc (structure / 구조) | thuật toán tự nhiên |
 |---|---|
 | unweighted / equal trọng số | BFS |
 | các trọng số 0 hoặc 1 | 0–1 BFS |
@@ -451,11 +454,11 @@ Bảng này không thay chứng minh. Nó chỉ nhắc điều kiện mô hình.
 
 **“Dijkstra dừng khi đích được nhìn thấy lần đầu.”** Không. Dừng khi đích được extract/finalize đúng điều kiện.
 
-**“PriorityQueue phần tử trùng mục làm Dijkstra sai.”** Không nếu dùng stale-entry check. Nó là cách triển khai sự đánh đổi (trade-off) phổ biến.
+**“PriorityQueue phần tử trùng mục làm Dijkstra sai.”** Không nếu dùng stale-entry check. Nó là cách triển khai sự đánh đổi (trade-off / 트레이드오프) phổ biến.
 
 ## kiểm thử shortest-path cách triển khai
 
-Test nên bao gồm:
+Kiểm thử (test / 테스트) nên bao gồm:
 
 ```text
 single vertex
@@ -477,22 +480,24 @@ Một tính chất mạnh sau khi có final các khoảng cách là với mọi 
 dist[v] \le dist[u] + w
 \]
 
-Nếu nút cha đường đi được lưu, tổng trọng số trên nút cha chain phải bằng reported `dist[target]`.
+Nếu nút cha đường đi được lưu, tổng trọng số trên nút cha chuỗi (chain / 사슬) phải bằng reported `dist[target]`.
 
 Trên đồ thị nhỏ, có thể differential-test Dijkstra non-negative với Floyd-Warshall tham chiếu.
 
-## Connection với các hệ thống thực tế
+## Liên kết (connection / 연결) với các hệ thống thực tế
 
-Routing, điều hướng bản đồ, dependency chi phí, mạng độ trễ (latency) planning, tìm đường cho AI trò chơi, logistics, tối ưu luồng công việc và xây dựng dependency đều có shortest-path variants.
+Routing, điều hướng bản đồ, phụ thuộc (dependency / 의존성) chi phí, mạng độ trễ (latency / 지연 시간) planning, tìm đường cho AI trò chơi, logistics, tối ưu luồng công việc và xây dựng phụ thuộc (dependency / 의존성) đều có shortest-path variants.
 
-Nhưng hệ thống thực tế thường thêm các ràng buộc: time-dependent các trọng số, turn penalties, multiple resources, capacity, stochastic các chi phí hoặc động đồ thị. Khi đó classical đường đi ngắn nhất có thể trở thành trạng thái-space đường đi ngắn nhất: mỗi “đỉnh” thực sự là `(location, time, fuel, mode, ...)`.
+Nhưng hệ thống thực tế thường thêm các ràng buộc: time-dependent các trọng số, turn penalties, multiple resources, sức chứa (capacity / 용량), stochastic các chi phí hoặc động đồ thị. Khi đó classical đường đi ngắn nhất có thể trở thành trạng thái-space đường đi ngắn nhất: mỗi “đỉnh” thực sự là `(location, time, fuel, mode, ...)`.
 
-Đây là connection quan trọng với problem mô hình hóa: thuật toán có thể đúng nhưng trạng thái cách biểu diễn thiếu thông tin thì kết quả vẫn sai.
+Đây là liên kết (connection / 연결) quan trọng với bài toán (problem / 문제) mô hình hóa: thuật toán có thể đúng nhưng trạng thái cách biểu diễn thiếu thông tin thì kết quả vẫn sai.
 
 ## Mô hình tư duy mở rộng
 
-> đường đi ngắn nhất không bắt đầu từ tên thuật toán; nó bắt đầu từ việc xác định **chi phí algebra và ordering nào cho phép một ứng viên trở thành final**.
+> đường đi ngắn nhất không bắt đầu từ tên thuật toán; nó bắt đầu từ việc xác định **chi phí algebra và thứ tự (ordering / 순서) nào cho phép một ứng viên trở thành final**.
 
 BFS dựa vào thứ tự theo tầng. 0–1 BFS dùng deque để duy trì hai mức chi phí cục bộ. Dijkstra dựa vào trọng số không âm. Bellman–Ford dựa vào giới hạn số cạnh của đường đi đơn. Thuật toán trên DAG dùng thứ tự phụ thuộc. Floyd–Warshall dùng quy hoạch động theo tập đỉnh trung gian được phép.
 
-Nếu nhớ được điều kiện làm mỗi method đúng, bạn có thể chọn thuật toán từ bản chất bài toán thay vì từ mẫu memorization.
+Nếu nhớ được điều kiện làm mỗi phương thức (method / 메서드) đúng, bạn có thể chọn thuật toán từ bản chất bài toán thay vì từ mẫu memorization.
+
+> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

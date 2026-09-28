@@ -1,188 +1,190 @@
 # Môn 3 — 데이터베이스 구축: Deep Dive 2026
 
-> Môn 3 không nên học bằng cách thuộc lệnh SQL rời rạc. Cần hiểu toàn bộ chuỗi: **data model → key/dependency → normalization → physical storage/index → SQL → transaction/concurrency/recovery → migration**.
+> Môn 3 không nên học bằng cách thuộc lệnh SQL rời rạc. Cần hiểu toàn bộ chuỗi: **mô hình dữ liệu (data model / 데이터 모델) → key/phụ thuộc (dependency / 의존성) → normalization → vật lý (physical / 물리적) lưu trữ (storage / 저장소)/chỉ mục (index / 인덱스) → SQL → giao dịch (transaction / 트랜잭션)/tính đồng thời (concurrency / 동시성)/khôi phục (recovery / 복구) → di chuyển (migration / 마이그레이션)**.
+
+> **Mạch đọc:** Deep Dive này nối mô hình dữ liệu với thao tác SQL, giao dịch (transaction / 트랜잭션) và di chuyển (migration / 마이그레이션). Mỗi phần sau dùng bất biến (invariant / 불변식) của phần trước; hãy đọc theo chuỗi trên và quay lại drill tương ứng để chuyển từ nhận diện thuật ngữ sang tự suy luận.
 
 ## 1. 데이터베이스 기본 개념
 
-Database là tập dữ liệu có cấu trúc được quản lý để nhiều ứng dụng/user có thể truy cập nhất quán. DBMS cung cấp definition, storage, query, transaction, concurrency, recovery, security và integrity.
+Cơ sở dữ liệu (database / 데이터베이스) là tập dữ liệu có cấu trúc được quản lý để nhiều ứng dụng/người dùng (user / 사용자) có thể truy cập nhất quán. DBMS cung cấp definition, lưu trữ (storage / 저장소), truy vấn (query / 쿼리), giao dịch (transaction / 트랜잭션), tính đồng thời (concurrency / 동시성), khôi phục (recovery / 복구), bảo mật (security / 보안) và integrity.
 
-### 1.1 Three-Schema Architecture
+### 1.1 Three-Schema kiến trúc (architecture / 아키텍처)
 
-External Schema — 외부 스키마 — view của từng user/application. Conceptual Schema — 개념 스키마 — mô hình logic tổng thể của toàn database. Internal Schema — 내부 스키마 — cách data được lưu vật lý.
+Bên ngoài (external / 외부) lược đồ (schema / 스키마) — 외부 스키마 — view của từng người dùng (user / 사용자)/ứng dụng (application / 애플리케이션). Conceptual lược đồ (schema / 스키마) — 개념 스키마 — mô hình lô-gic (logic / 논리) tổng thể của toàn cơ sở dữ liệu (database / 데이터베이스). nội bộ (internal / 내부) lược đồ (schema / 스키마) — 내부 스키마 — cách dữ liệu (data / 데이터) được lưu vật lý.
 
-Data independence được chia thành logical data independence và physical data independence. Physical independence nghĩa thay đổi storage/index mà application logic không phải đổi. Logical independence khó hơn: thay đổi conceptual schema nhưng external view/application ít bị ảnh hưởng.
+Dữ liệu (data / 데이터) independence được chia thành logical dữ liệu (data / 데이터) independence và vật lý (physical / 물리적) dữ liệu (data / 데이터) independence. vật lý (physical / 물리적) independence nghĩa thay đổi lưu trữ (storage / 저장소)/chỉ mục (index / 인덱스) mà ứng dụng (application / 애플리케이션) lô-gic (logic / 논리) không phải đổi. Logical independence khó hơn: thay đổi conceptual lược đồ (schema / 스키마) nhưng bên ngoài (external / 외부) view/ứng dụng (application / 애플리케이션) ít bị ảnh hưởng.
 
-### 1.2 Data Model
+### 1.2 mô hình dữ liệu (data model / 데이터 모델)
 
-Data model gồm structure, operation và constraint. Các mô hình lịch sử như hierarchical, network, relational có cách biểu diễn relation khác nhau. Relational model biểu diễn data bằng relation/table và dựa mạnh vào relational algebra/set theory.
+Mô hình dữ liệu (data model / 데이터 모델) gồm cấu trúc (structure / 구조), thao tác (operation / 연산) và ràng buộc (constraint / 제약조건). Các mô hình lịch sử như hierarchical, mạng (network / 네트워크), relational có cách biểu diễn quan hệ (relation / 관계) khác nhau. Relational mô hình (model / 모델) biểu diễn dữ liệu (data / 데이터) bằng quan hệ (relation / 관계)/bảng (table / 테이블) và dựa mạnh vào relational algebra/set lý thuyết (theory / 이론).
 
-## 2. 논리 데이터베이스 설계 — Logical Database Design
+## 2. 논리 데이터베이스 설계 — Logical cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)
 
-### 2.1 Entity, Attribute, Relationship
+### 2.1 thực thể (entity / 엔터티), Attribute, Relationship
 
-Entity là đối tượng cần quản lý. Attribute là đặc tính. Relationship mô tả liên hệ giữa entity. Cardinality thường gặp: 1:1, 1:N, M:N. Participation có thể mandatory/optional tùy model.
+Thực thể (entity / 엔터티) là đối tượng cần quản lý. Attribute là đặc tính. Relationship mô tả liên hệ giữa thực thể (entity / 엔터티). Cardinality thường gặp: 1:1, 1:N, M:N. Participation có thể mandatory/optional tùy mô hình (model / 모델).
 
-M:N trong relational implementation thường cần associative/junction table để tách thành hai quan hệ 1:N.
+M:N trong relational hiện thực (implementation / 구현) thường cần associative/junction bảng (table / 테이블) để tách thành hai quan hệ 1:N.
 
 ### 2.2 Keys
 
-Super Key — 슈퍼키 — tập attribute xác định duy nhất tuple, có thể thừa. Candidate Key — 후보키 — super key tối thiểu. Primary Key — 기본키 — candidate key được chọn chính. Alternate Key — 대체키 — candidate key còn lại. Foreign Key — 외래키 — attribute tham chiếu key của relation khác. Composite Key — 복합키 — key gồm nhiều attribute.
+Super Key — 슈퍼키 — tập attribute xác định duy nhất tuple, có thể thừa. Candidate Key — 후보키 — super key tối thiểu. Primary Key — 기본키 — candidate key được chọn chính. Alternate Key — 대체키 — candidate key còn lại. Foreign Key — 외래키 — attribute tham chiếu key của quan hệ (relation / 관계) khác. Composite Key — 복합키 — key gồm nhiều attribute.
 
-Hai property cốt lõi của candidate key: uniqueness và minimality.
+Hai thuộc tính (property / 속성) cốt lõi của candidate key: uniqueness và minimality.
 
-### 2.3 Integrity Constraints
+### 2.3 Integrity các ràng buộc (constraints / 제약조건들)
 
-Entity Integrity: primary key không NULL. Referential Integrity: foreign key phải tham chiếu target hợp lệ hoặc NULL nếu schema cho phép. Domain Integrity: value nằm trong domain/type/range hợp lệ.
+Thực thể (entity / 엔터티) Integrity: primary key không NULL. Referential Integrity: foreign key phải tham chiếu mục tiêu (target / 대상) hợp lệ hoặc NULL nếu lược đồ (schema / 스키마) cho phép. lĩnh vực (domain / 도메인) Integrity: giá trị (value / 값) nằm trong lĩnh vực (domain / 도메인)/kiểu (type / 타입)/phạm vi (range / 범위) hợp lệ.
 
-Khi delete parent row, behavior có thể RESTRICT/NO ACTION, CASCADE, SET NULL hoặc SET DEFAULT tùy DBMS/schema.
+Khi delete parent row, hành vi (behavior / 동작) có thể RESTRICT/NO hành động (action / 동작), CASCADE, SET NULL hoặc SET DEFAULT tùy DBMS/lược đồ (schema / 스키마).
 
 ## 3. Relational Algebra
 
-Relational algebra là nền tảng thao tác relation. Các operation cơ bản:
+Relational algebra là nền tảng thao tác quan hệ (relation / 관계). Các thao tác (operation / 연산) cơ bản:
 
-Selection `σ` chọn row theo predicate. Projection `π` chọn column. Union hợp relation compatible. Difference lấy tuple ở A không có trong B. Cartesian Product ghép mọi tuple A với mọi tuple B. Join kết hợp tuple liên quan theo condition. Division thường dùng cho query dạng “đối tượng thỏa **tất cả** điều kiện trong một tập”.
+Selection `σ` chọn row theo predicate. Projection `π` chọn column. Union hợp quan hệ (relation / 관계) compatible. Difference lấy tuple ở A không có trong B. Cartesian sản phẩm (product / 제품) ghép mọi tuple A với mọi tuple B. phép nối (join / 조인) kết hợp tuple liên quan theo điều kiện (condition / 조건). Division thường dùng cho truy vấn (query / 쿼리) dạng “đối tượng thỏa **tất cả** điều kiện trong một tập”.
 
 Bẫy: Selection liên quan **row**, Projection liên quan **column**.
 
-## 4. Functional Dependency và Normalization
+## 4. Functional phụ thuộc (dependency / 의존성) và Normalization
 
-### 4.1 Functional Dependency
+### 4.1 Functional phụ thuộc (dependency / 의존성)
 
 `X → Y` nghĩa nếu hai tuple có cùng X thì phải có cùng Y. X functionally determines Y.
 
-Full Functional Dependency nghĩa Y phụ thuộc toàn bộ composite key, không phụ thuộc chỉ một phần. Partial Dependency là phụ thuộc vào một phần composite key. Transitive Dependency xảy ra khi key → A và A → B, khiến B phụ thuộc gián tiếp key qua non-key attribute.
+Full Functional phụ thuộc (dependency / 의존성) nghĩa Y phụ thuộc toàn bộ composite key, không phụ thuộc chỉ một phần. Partial phụ thuộc (dependency / 의존성) là phụ thuộc vào một phần composite key. Transitive phụ thuộc (dependency / 의존성) xảy ra khi key → A và A → B, khiến B phụ thuộc gián tiếp key qua non-key attribute.
 
 ### 4.2 Anomaly
 
-Unnormalized/redundant design có thể gây:
+Unnormalized/redundant thiết kế (design / 설계) có thể gây:
 
 - Insert Anomaly: không thể insert một fact nếu thiếu fact khác không liên quan.
-- Update Anomaly: cùng fact lặp nhiều row, update không đồng bộ.
+- cập nhật (update / 업데이트) Anomaly: cùng fact lặp nhiều row, cập nhật (update / 업데이트) không đồng bộ.
 - Delete Anomaly: xóa một row vô tình mất fact khác.
 
 Normalization giảm anomaly bằng decomposition có lý do.
 
 ### 4.3 1NF
 
-1NF yêu cầu attribute value mang tính atomic theo relational design đang xét; không có repeating group/list đa trị trong một cell theo cách thiết kế chuẩn.
+1NF yêu cầu attribute giá trị (value / 값) mang tính atomic theo relational thiết kế (design / 설계) đang xét; không có repeating group/danh sách (list / 목록) đa trị trong một cell theo cách thiết kế chuẩn.
 
 ### 4.4 2NF
 
-2NF = 1NF + không có partial dependency của non-prime attribute lên một phần candidate key.
+2NF = 1NF + không có partial phụ thuộc (dependency / 의존성) của non-prime attribute lên một phần candidate key.
 
-2NF đặc biệt đáng chú ý khi key là composite. Nếu primary/candidate key chỉ một attribute thì partial dependency theo key đó không xảy ra.
+2NF đặc biệt đáng chú ý khi key là composite. Nếu primary/candidate key chỉ một attribute thì partial phụ thuộc (dependency / 의존성) theo key đó không xảy ra.
 
 ### 4.5 3NF
 
-3NF loại transitive dependency không phù hợp giữa key và non-key attribute. Một formulation chính xác hơn với FD `X → A`: relation ở 3NF nếu X là superkey hoặc A là prime attribute, sau khi đã ở mức normalization phù hợp.
+3NF loại transitive phụ thuộc (dependency / 의존성) không phù hợp giữa key và non-key attribute. Một formulation chính xác hơn với FD `X → A`: quan hệ (relation / 관계) ở 3NF nếu X là superkey hoặc A là prime attribute, sau khi đã ở mức normalization phù hợp.
 
 ### 4.6 BCNF
 
 BCNF mạnh hơn 3NF: với mọi non-trivial FD `X → Y`, X phải là superkey.
 
-Một relation có thể đạt 3NF nhưng chưa BCNF khi determinant không phải superkey nhưng dependent là prime attribute.
+Một quan hệ (relation / 관계) có thể đạt 3NF nhưng chưa BCNF khi determinant không phải superkey nhưng dependent là prime attribute.
 
 ### 4.7 4NF và 5NF
 
-4NF xử lý non-trivial multivalued dependency khi determinant không phải superkey. 5NF xử lý join dependency phức tạp. Chúng ít xuất hiện hơn nhưng cần biết category để không nhầm với FD thông thường.
+4NF xử lý non-trivial multivalued phụ thuộc (dependency / 의존성) khi determinant không phải superkey. 5NF xử lý phép nối (join / 조인) phụ thuộc (dependency / 의존성) phức tạp. Chúng ít xuất hiện hơn nhưng cần biết category để không nhầm với FD thông thường.
 
-### 4.8 Lossless Join và Dependency Preservation
+### 4.8 Lossless phép nối (join / 조인) và phụ thuộc (dependency / 의존성) Preservation
 
-Decomposition tốt cần ưu tiên lossless join — join các relation con phải tái tạo đúng relation gốc, không sinh tuple giả. Dependency preservation nghĩa các dependency quan trọng có thể enforce mà không phải join relation phức tạp.
+Decomposition tốt cần ưu tiên lossless phép nối (join / 조인) — phép nối (join / 조인) các quan hệ (relation / 관계) con phải tái tạo đúng quan hệ (relation / 관계) gốc, không sinh tuple giả. phụ thuộc (dependency / 의존성) preservation nghĩa các phụ thuộc (dependency / 의존성) quan trọng có thể enforce mà không phải phép nối (join / 조인) quan hệ (relation / 관계) phức tạp.
 
-## 5. 물리 데이터베이스 설계 — Physical Database Design
+## 5. 물리 데이터베이스 설계 — vật lý (physical / 물리적) cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계)
 
-Logical design nói **data có ý nghĩa và quan hệ gì**; physical design nói **lưu và truy cập thế nào**.
+Logical thiết kế (design / 설계) nói **dữ liệu (data / 데이터) có ý nghĩa và quan hệ gì**; vật lý (physical / 물리적) thiết kế (design / 설계) nói **lưu và truy cập thế nào**.
 
-### 5.1 Index
+### 5.1 chỉ mục (index / 인덱스)
 
-Index tăng tốc lookup nhưng tốn storage và tăng cost khi insert/update/delete.
+Chỉ mục (index / 인덱스) tăng tốc lookup nhưng tốn lưu trữ (storage / 저장소) và tăng chi phí (cost / 비용) khi insert/cập nhật (update / 업데이트)/delete.
 
-B-Tree giữ key/data pointer theo cấu trúc balanced tree. B+Tree thường lưu record/data pointer ở leaf, internal node chủ yếu giữ search key; leaf thường linked giúp range scan hiệu quả.
+B-Tree giữ key/dữ liệu (data / 데이터) pointer theo cấu trúc balanced cây (tree / 트리). B+cây (tree / 트리) thường lưu bản ghi (record / 레코드)/dữ liệu (data / 데이터) pointer ở leaf, nội bộ (internal / 내부) nút (node / 노드) chủ yếu giữ tìm kiếm (search / 검색) key; leaf thường linked giúp phạm vi (range / 범위) scan hiệu quả.
 
-Hash index rất tốt cho equality lookup nhưng không tự nhiên cho range query vì hash phá ordering.
+Băm (hash / 해시) chỉ mục (index / 인덱스) rất tốt cho equality lookup nhưng không tự nhiên cho phạm vi (range / 범위) truy vấn (query / 쿼리) vì băm (hash / 해시) phá thứ tự (ordering / 순서).
 
 ### 5.2 Clustered vs Non-clustered
 
-Khái niệm cụ thể phụ thuộc DBMS, nhưng ý chung: clustered organization/index ảnh hưởng cách row được sắp/bố trí gần theo key; non-clustered index là structure riêng trỏ tới row. Một table thường không thể có nhiều physical clustering order độc lập.
+Khái niệm cụ thể phụ thuộc DBMS, nhưng ý chung: clustered organization/chỉ mục (index / 인덱스) ảnh hưởng cách row được sắp/bố trí gần theo key; non-clustered chỉ mục (index / 인덱스) là cấu trúc (structure / 구조) riêng trỏ tới row. Một bảng (table / 테이블) thường không thể có nhiều vật lý (physical / 물리적) clustering thứ tự (order / 순서) độc lập.
 
 ### 5.3 Partitioning
 
-Horizontal Partitioning chia row. Vertical Partitioning chia column. Range, Hash, List và Composite Partitioning là các chiến lược phổ biến.
+Horizontal Partitioning chia row. Vertical Partitioning chia column. phạm vi (range / 범위), băm (hash / 해시), danh sách (list / 목록) và Composite Partitioning là các chiến lược phổ biến.
 
-Partitioning có thể tăng manageability/performance nhưng không thay normalization; đây là physical/logical scaling decision khác loại.
+Partitioning có thể tăng manageability/hiệu năng (performance / 성능) nhưng không thay normalization; đây là vật lý (physical / 물리적)/logical scaling quyết định (decision / 결정) khác loại.
 
 ### 5.4 Denormalization
 
-Denormalization cố ý thêm redundancy để tối ưu read/performance sau khi hiểu rõ consistency cost. Nó không phải “thiết kế sai” nếu được kiểm soát, nhưng làm tăng burden đồng bộ dữ liệu.
+Denormalization cố ý thêm redundancy để tối ưu read/hiệu năng (performance / 성능) sau khi hiểu rõ consistency chi phí (cost / 비용). Nó không phải “thiết kế sai” nếu được kiểm soát, nhưng làm tăng burden đồng bộ dữ liệu.
 
 ## 6. SQL 기본 — DDL, DML, DCL, TCL
 
 ### 6.1 DDL
 
-CREATE, ALTER, DROP thường thuộc Data Definition Language. Constraint như PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, NOT NULL giúp enforce integrity.
+CREATE, ALTER, DROP thường thuộc dữ liệu (data / 데이터) Definition ngôn ngữ (language / 언어). ràng buộc (constraint / 제약조건) như PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, NOT NULL giúp enforce integrity.
 
 ### 6.2 DML
 
-SELECT, INSERT, UPDATE, DELETE thao tác data. Một số classification gọi SELECT riêng là DQL, nhưng trong nhiều giáo trình vẫn nhóm trong DML/query language; đọc đúng taxonomy của đề.
+SELECT, INSERT, cập nhật (update / 업데이트), DELETE thao tác dữ liệu (data / 데이터). Một số classification gọi SELECT riêng là DQL, nhưng trong nhiều giáo trình vẫn nhóm trong DML/truy vấn (query / 쿼리) ngôn ngữ (language / 언어); đọc đúng taxonomy của đề.
 
 ### 6.3 DCL/TCL
 
-GRANT, REVOKE liên quan privilege và thường xếp DCL. COMMIT, ROLLBACK, SAVEPOINT liên quan transaction control.
+GRANT, REVOKE liên quan privilege và thường xếp DCL. lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT liên quan giao dịch (transaction / 트랜잭션) điều khiển (control / 제어).
 
-## 7. SQL Query Reasoning
+## 7. SQL truy vấn (query / 쿼리) lập luận (reasoning / 추론)
 
 ### 7.1 WHERE vs HAVING
 
 WHERE lọc row trước grouping. HAVING lọc group sau GROUP BY/aggregation.
 
-Ví dụ: muốn department có AVG(salary) > 5000 thì condition aggregate đặt ở HAVING.
+Ví dụ: muốn department có AVG(salary) > 5000 thì điều kiện (condition / 조건) aggregate đặt ở HAVING.
 
-### 7.2 JOIN
+### 7.2 phép nối (join / 조인)
 
-INNER JOIN chỉ giữ match. LEFT OUTER JOIN giữ mọi row bên trái và NULL phía phải nếu không match. RIGHT OUTER JOIN tương tự phía phải. FULL OUTER JOIN giữ mọi row hai bên nếu DBMS hỗ trợ.
+INNER phép nối (join / 조인) chỉ giữ match. LEFT OUTER phép nối (join / 조인) giữ mọi row bên trái và NULL phía phải nếu không match. RIGHT OUTER phép nối (join / 조인) tương tự phía phải. FULL OUTER phép nối (join / 조인) giữ mọi row hai bên nếu DBMS hỗ trợ.
 
-CROSS JOIN tạo Cartesian product. SELF JOIN là table join với chính nó qua alias.
+CROSS phép nối (join / 조인) tạo Cartesian sản phẩm (product / 제품). SELF phép nối (join / 조인) là bảng (table / 테이블) phép nối (join / 조인) với chính nó qua alias.
 
 ### 7.3 NULL
 
 NULL không bằng 0 và không bằng empty string. So sánh với NULL dùng `IS NULL` / `IS NOT NULL`, không dùng `= NULL`.
 
-Trong SQL three-valued logic, expression với NULL có thể cho UNKNOWN; điều này ảnh hưởng WHERE filtering.
+Trong SQL three-valued lô-gic (logic / 논리), expression với NULL có thể cho UNKNOWN; điều này ảnh hưởng WHERE filtering.
 
 ### 7.4 Aggregate
 
-COUNT(*) đếm row. COUNT(column) bỏ NULL ở column đó. SUM/AVG thường bỏ NULL input. GROUP BY nhóm row theo key.
+COUNT(*) đếm row. COUNT(column) bỏ NULL ở column đó. SUM/AVG thường bỏ NULL đầu vào (input / 입력). GROUP BY nhóm row theo key.
 
 ### 7.5 Subquery
 
-Scalar subquery trả một value. Single-row/multi-row subquery cần operator phù hợp. `IN`, `EXISTS`, `ANY/SOME`, `ALL` có semantics khác nhau.
+Scalar subquery trả một giá trị (value / 값). Single-row/multi-row subquery cần operator phù hợp. `IN`, `EXISTS`, `ANY/SOME`, `ALL` có ngữ nghĩa (semantics / 의미론) khác nhau.
 
-EXISTS kiểm tra sự tồn tại row từ subquery, thường không quan tâm value cụ thể trong SELECT list.
+EXISTS kiểm tra sự tồn tại row từ subquery, thường không quan tâm giá trị (value / 값) cụ thể trong SELECT danh sách (list / 목록).
 
 ### 7.6 Set Operations
 
 UNION loại duplicate. UNION ALL giữ duplicate. INTERSECT lấy phần giao. EXCEPT/MINUS lấy difference tùy DBMS.
 
-## 8. View, Index, Procedure, Trigger
+## 8. View, chỉ mục (index / 인덱스), Procedure, Trigger
 
-View là virtual relation dựa query; có thể dùng abstraction/security nhưng updateability phụ thuộc definition/DBMS.
+View là virtual quan hệ (relation / 관계) dựa truy vấn (query / 쿼리); có thể dùng lớp trừu tượng (abstraction / 추상화)/bảo mật (security / 보안) nhưng updateability phụ thuộc definition/DBMS.
 
-Stored Procedure đóng gói procedural logic chạy trong DB server. Trigger tự động chạy khi event được định nghĩa xảy ra. Trigger tiện cho audit/integrity nhưng quá nhiều hidden behavior có thể khó maintain.
+Stored Procedure đóng gói procedural lô-gic (logic / 논리) chạy trong DB máy chủ (server / 서버). Trigger tự động chạy khi sự kiện (event / 이벤트) được định nghĩa xảy ra. Trigger tiện cho kiểm tra (audit / 감사)/integrity nhưng quá nhiều hidden hành vi (behavior / 동작) có thể khó maintain.
 
-Index là access structure, không phải copy logical table đầy đủ theo nghĩa view/materialization.
+Chỉ mục (index / 인덱스) là truy cập (access / 접근) cấu trúc (structure / 구조), không phải bản sao (copy / 복사) logical bảng (table / 테이블) đầy đủ theo nghĩa view/materialization.
 
-## 9. Transaction
+## 9. giao dịch (transaction / 트랜잭션)
 
 ### 9.1 ACID
 
-Atomicity: all-or-nothing. Consistency: transaction đưa DB từ state hợp lệ sang state hợp lệ theo constraint. Isolation: concurrent transaction không gây interference vượt mức isolation cho phép. Durability: committed data survive failure phù hợp guarantee của system.
+Atomicity: all-or-nothing. Consistency: giao dịch (transaction / 트랜잭션) đưa DB từ trạng thái (state / 상태) hợp lệ sang trạng thái (state / 상태) hợp lệ theo ràng buộc (constraint / 제약조건). Isolation: concurrent giao dịch (transaction / 트랜잭션) không gây interference vượt mức isolation cho phép. Durability: committed dữ liệu (data / 데이터) survive thất bại (failure / 실패) phù hợp guarantee của hệ thống (system / 시스템).
 
-### 9.2 Concurrency anomalies
+### 9.2 tính đồng thời (concurrency / 동시성) anomalies
 
-Dirty Read: đọc data chưa commit từ transaction khác. Non-repeatable Read: cùng row đọc hai lần thấy value khác do transaction khác commit update. Phantom Read: cùng predicate query hai lần thấy tập row thay đổi do insert/delete phù hợp predicate.
+Dirty Read: đọc dữ liệu (data / 데이터) chưa lần ghi nhận (commit / 커밋) từ giao dịch (transaction / 트랜잭션) khác. Non-repeatable Read: cùng row đọc hai lần thấy giá trị (value / 값) khác do giao dịch (transaction / 트랜잭션) khác lần ghi nhận (commit / 커밋) cập nhật (update / 업데이트). Phantom Read: cùng predicate truy vấn (query / 쿼리) hai lần thấy tập row thay đổi do insert/delete phù hợp predicate.
 
-Lost Update: hai transaction update cùng data và một update bị overwrite theo race pattern.
+Lost cập nhật (update / 업데이트): hai giao dịch (transaction / 트랜잭션) cập nhật (update / 업데이트) cùng dữ liệu (data / 데이터) và một cập nhật (update / 업데이트) bị overwrite theo race mẫu (pattern / 패턴).
 
 ### 9.3 Isolation Levels
 
@@ -190,81 +192,81 @@ Theo mô hình SQL kinh điển:
 
 - Read Uncommitted cho phép nhiều anomaly nhất.
 - Read Committed ngăn dirty read.
-- Repeatable Read ngăn dirty read và non-repeatable read; phantom behavior phụ thuộc implementation/standard interpretation.
-- Serializable mạnh nhất về semantics tuần tự.
+- Repeatable Read ngăn dirty read và non-repeatable read; phantom hành vi (behavior / 동작) phụ thuộc hiện thực (implementation / 구현)/tiêu chuẩn (standard / 표준) interpretation.
+- Serializable mạnh nhất về ngữ nghĩa (semantics / 의미론) tuần tự.
 
-Đừng biến bảng này thành tuyệt đối cho mọi DBMS; engine có MVCC/locking implementation khác nhau. Trong đề lý thuyết, bám semantics chuẩn.
+Đừng biến bảng này thành tuyệt đối cho mọi DBMS; engine có MVCC/locking hiện thực (implementation / 구현) khác nhau. Trong đề lý thuyết, bám ngữ nghĩa (semantics / 의미론) chuẩn.
 
 ## 10. Locking và Serializability
 
-Shared Lock cho read, Exclusive Lock cho write trong mô hình lock cơ bản. Nhiều shared lock có thể cùng tồn tại; exclusive lock xung đột với lock khác tùy matrix.
+Dùng chung (shared / 공유) khóa (lock / 잠금) cho read, Exclusive khóa (lock / 잠금) cho ghi (write / 쓰기) trong mô hình khóa (lock / 잠금) cơ bản. Nhiều dùng chung (shared / 공유) khóa (lock / 잠금) có thể cùng tồn tại; exclusive khóa (lock / 잠금) xung đột với khóa (lock / 잠금) khác tùy ma trận (matrix / 행렬).
 
-Two-Phase Locking — 2PL — có growing phase chỉ acquire lock và shrinking phase release lock, giúp conflict serializability trong mô hình kinh điển.
+Two-Phase Locking — 2PL — có growing phase chỉ acquire khóa (lock / 잠금) và shrinking phase bản phát hành (release / 릴리스) khóa (lock / 잠금), giúp xung đột (conflict / 충돌) serializability trong mô hình kinh điển.
 
-Strict 2PL thường giữ exclusive lock tới commit/abort để tránh cascading rollback và tăng recoverability.
+Strict 2PL thường giữ exclusive khóa (lock / 잠금) tới lần ghi nhận (commit / 커밋)/abort để tránh cascading quay lui (rollback / 롤백) và tăng recoverability.
 
 ### 10.1 Deadlock
 
-Deadlock có thể xảy ra khi transaction chờ vòng tròn resource/lock. Điều kiện Coffman quen thuộc: mutual exclusion, hold and wait, no preemption, circular wait.
+Deadlock có thể xảy ra khi giao dịch (transaction / 트랜잭션) chờ vòng tròn tài nguyên (resource / 자원)/khóa (lock / 잠금). Điều kiện Coffman quen thuộc: mutual exclusion, hold and wait, no preemption, circular wait.
 
-Giải pháp có thể prevention, avoidance, detection + recovery, timeout. Wait-for graph dùng để detect cycle trong lock wait relation.
+Giải pháp có thể prevention, avoidance, detection + khôi phục (recovery / 복구), hết thời gian chờ (timeout / 타임아웃). Wait-for đồ thị (graph / 그래프) dùng để detect cycle trong khóa (lock / 잠금) wait quan hệ (relation / 관계).
 
-## 11. Recovery
+## 11. khôi phục (recovery / 복구)
 
 ### 11.1 Log và WAL
 
-Write-Ahead Logging — WAL — yêu cầu log record cần thiết được ghi persistent trước khi data page tương ứng được ghi theo protocol. Log cho phép REDO/UNDO sau failure.
+Write-Ahead Logging — WAL — yêu cầu log bản ghi (record / 레코드) cần thiết được ghi persistent trước khi dữ liệu (data / 데이터) page tương ứng được ghi theo giao thức (protocol / 프로토콜). Log cho phép REDO/UNDO sau thất bại (failure / 실패).
 
 ### 11.2 Checkpoint
 
-Checkpoint giảm lượng log phải scan/reprocess khi recovery bằng cách ghi mốc trạng thái cần thiết. Nó không có nghĩa xóa mọi log trước checkpoint trong mọi system.
+Checkpoint giảm lượng log phải scan/reprocess khi khôi phục (recovery / 복구) bằng cách ghi mốc trạng thái cần thiết. Nó không có nghĩa xóa mọi log trước checkpoint trong mọi hệ thống (system / 시스템).
 
 ### 11.3 Undo / Redo
 
-UNDO đảo thay đổi của transaction chưa commit. REDO áp lại thay đổi committed chưa phản ánh đầy đủ trên disk. Cần hiểu relation với buffer policy như steal/no-steal và force/no-force ở mức khái niệm.
+UNDO đảo thay đổi của giao dịch (transaction / 트랜잭션) chưa lần ghi nhận (commit / 커밋). REDO áp lại thay đổi committed chưa phản ánh đầy đủ trên disk. Cần hiểu quan hệ (relation / 관계) với buffer chính sách (policy / 정책) như steal/no-steal và force/no-force ở mức khái niệm.
 
-## 12. 데이터 전환 — Data Migration / Conversion
+## 12. 데이터 전환 — dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) / Conversion
 
-Data conversion gồm analysis nguồn/đích, mapping, cleansing, transformation, extraction/load, validation và reconciliation.
+Dữ liệu (data / 데이터) conversion gồm phân tích (analysis / 분석) nguồn/đích, ánh xạ (mapping / 매핑), cleansing, transformation, extraction/tải (load / 로드), kiểm tra hợp lệ (validation / 검증) và reconciliation.
 
-Một migration thành công không chỉ là “copy đủ row”. Phải kiểm tra datatype, encoding, key relation, nullability, business rule, duplicate, referential integrity và aggregate/control total.
+Một di chuyển (migration / 마이그레이션) thành công không chỉ là “bản sao (copy / 복사) đủ row”. Phải kiểm tra datatype, encoding, key quan hệ (relation / 관계), nullability, nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙), duplicate, referential integrity và aggregate/điều khiển (control / 제어) total.
 
-ETL: Extract → Transform → Load. ELT: Extract → Load → Transform, phổ biến khi target platform có compute mạnh. Trong kỳ thi truyền thống ETL thường gặp hơn, nhưng hiểu cả hai giúp không nhầm.
+ETL: Extract → Transform → tải (load / 로드). ELT: Extract → tải (load / 로드) → Transform, phổ biến khi mục tiêu (target / 대상) nền tảng (platform / 플랫폼) có compute mạnh. Trong kỳ thi truyền thống ETL thường gặp hơn, nhưng hiểu cả hai giúp không nhầm.
 
 ## 13. Cặp dễ nhầm
 
 | Cặp | Điểm tách |
 |---|---|
-| External/Conceptual/Internal Schema | user view / global logical / physical storage |
+| bên ngoài (external / 외부)/Conceptual/nội bộ (internal / 내부) lược đồ (schema / 스키마) | người dùng (user / 사용자) view / toàn cục (global / 전역) logical / vật lý (physical / 물리적) lưu trữ (storage / 저장소) |
 | Super Key vs Candidate Key | unique có thể thừa / minimal unique |
 | Selection vs Projection | row / column |
-| Partial vs Transitive Dependency | một phần composite key / qua non-key intermediate |
+| Partial vs Transitive phụ thuộc (dependency / 의존성) | một phần composite key / qua non-key intermediate |
 | 3NF vs BCNF | cho phép một số FD với prime attribute / determinant phải superkey |
-| B+Tree vs Hash Index | range/order tốt / equality tốt |
+| B+cây (tree / 트리) vs băm (hash / 해시) chỉ mục (index / 인덱스) | phạm vi (range / 범위)/thứ tự (order / 순서) tốt / equality tốt |
 | WHERE vs HAVING | row trước grouping / group sau aggregation |
 | COUNT(*) vs COUNT(col) | mọi row / bỏ NULL col |
-| Dirty vs Non-repeatable vs Phantom | uncommitted value / changed row / changed row set |
-| Shared vs Exclusive Lock | read sharing / write exclusive |
-| UNDO vs REDO | rollback uncommitted / reapply committed |
-| Normalization vs Partitioning | logical redundancy / physical distribution |
+| Dirty vs Non-repeatable vs Phantom | uncommitted giá trị (value / 값) / changed row / changed row set |
+| dùng chung (shared / 공유) vs Exclusive khóa (lock / 잠금) | read sharing / ghi (write / 쓰기) exclusive |
+| UNDO vs REDO | quay lui (rollback / 롤백) uncommitted / reapply committed |
+| Normalization vs Partitioning | logical redundancy / vật lý (physical / 물리적) phân phối (distribution / 분포) |
 
 ## 14. Procedural drills
 
 ### Drill 1 — Key
 
-Relation `ENROLL(StudentId, CourseId, StudentName, CourseName, Grade)` có key `(StudentId, CourseId)`. Xác định partial dependency và đề xuất decomposition tới 2NF.
+Quan hệ (relation / 관계) `ENROLL(StudentId, CourseId, StudentName, CourseName, Grade)` có key `(StudentId, CourseId)`. Xác định partial phụ thuộc (dependency / 의존성) và đề xuất decomposition tới 2NF.
 
 ### Drill 2 — 3NF
 
-Nếu `EmployeeId → DeptId` và `DeptId → DeptName`, vì sao `DeptName` tạo transitive dependency trong relation Employee?
+Nếu `EmployeeId → DeptId` và `DeptId → DeptName`, vì sao `DeptName` tạo transitive phụ thuộc (dependency / 의존성) trong quan hệ (relation / 관계) Employee?
 
 ### Drill 3 — Relational Algebra
 
-Muốn lấy chỉ `name` của employee có salary > 5000, operation nào phải xảy ra về mặt logic: Selection và Projection theo thứ tự nào?
+Muốn lấy chỉ `name` của employee có salary > 5000, thao tác (operation / 연산) nào phải xảy ra về mặt lô-gic (logic / 논리): Selection và Projection theo thứ tự nào?
 
 ### Drill 4 — SQL
 
-Viết query tìm department có ít nhất 5 employee và average salary > 5000. Giải thích condition nào nằm WHERE và condition nào nằm HAVING nếu thêm `status='ACTIVE'`.
+Viết truy vấn (query / 쿼리) tìm department có ít nhất 5 employee và average salary > 5000. Giải thích điều kiện (condition / 조건) nào nằm WHERE và điều kiện (condition / 조건) nào nằm HAVING nếu thêm `status='ACTIVE'`.
 
 ### Drill 5 — NULL
 
@@ -272,41 +274,43 @@ Giải thích vì sao `WHERE bonus = NULL` không tìm được row như mong đ
 
 ### Drill 6 — Isolation
 
-T1 đọc balance=100. T2 update balance=120 và commit. T1 đọc lại cùng row thấy 120. Đây là anomaly nào?
+T1 đọc balance=100. T2 cập nhật (update / 업데이트) balance=120 và lần ghi nhận (commit / 커밋). T1 đọc lại cùng row thấy 120. Đây là anomaly nào?
 
 ### Drill 7 — Phantom
 
-T1 query `salary > 5000` thấy 10 row. T2 insert một employee salary 6000 và commit. T1 chạy lại thấy 11 row. Đây là gì?
+T1 truy vấn (query / 쿼리) `salary > 5000` thấy 10 row. T2 insert một employee salary 6000 và lần ghi nhận (commit / 커밋). T1 chạy lại thấy 11 row. Đây là gì?
 
 ### Drill 8 — Deadlock
 
-T1 giữ lock A chờ B; T2 giữ B chờ A. Vẽ wait-for graph và xác định cycle.
+T1 giữ khóa (lock / 잠금) A chờ B; T2 giữ B chờ A. Vẽ wait-for đồ thị (graph / 그래프) và xác định cycle.
 
-### Drill 9 — Index
+### Drill 9 — chỉ mục (index / 인덱스)
 
-Query chủ yếu là `WHERE created_at BETWEEN ...` và ORDER BY created_at. Tại sao B+Tree thường tự nhiên hơn hash index?
+Truy vấn (query / 쿼리) chủ yếu là `WHERE created_at BETWEEN ...` và thứ tự (order / 순서) BY created_at. Tại sao B+cây (tree / 트리) thường tự nhiên hơn băm (hash / 해시) chỉ mục (index / 인덱스)?
 
-### Drill 10 — Migration
+### Drill 10 — di chuyển (migration / 마이그레이션)
 
-Source có 100.000 row, target cũng 100.000 row nhưng 2% foreign key invalid. Vì sao row count match chưa đủ để xác nhận migration?
+Nguồn (source / 소스) có 100.000 row, mục tiêu (target / 대상) cũng 100.000 row nhưng 2% foreign key invalid. Vì sao row count match chưa đủ để xác nhận di chuyển (migration / 마이그레이션)?
 
 ## 15. 과락 방지 checklist — Môn 3
 
 Phải tự làm được:
 
-- phân biệt 3 schema và data independence;
+- phân biệt 3 lược đồ (schema / 스키마) và dữ liệu (data / 데이터) independence;
 - tìm candidate/primary/foreign/composite key;
-- giải Selection, Projection, Join, Division ở mức ý nghĩa;
-- nhận diện functional, partial, transitive dependency;
+- giải Selection, Projection, phép nối (join / 조인), Division ở mức ý nghĩa;
+- nhận diện functional, partial, transitive phụ thuộc (dependency / 의존성);
 - normalize scenario tới ít nhất 3NF/BCNF ở mức bài cơ bản;
-- phân biệt B/B+Tree, hash, partitioning, denormalization;
-- viết/đọc SELECT, JOIN, GROUP BY, HAVING, subquery, set operation;
-- giải NULL semantics và aggregate;
+- phân biệt B/B+cây (tree / 트리), băm (hash / 해시), partitioning, denormalization;
+- viết/đọc SELECT, phép nối (join / 조인), GROUP BY, HAVING, subquery, set thao tác (operation / 연산);
+- giải NULL ngữ nghĩa (semantics / 의미론) và aggregate;
 - phân loại DDL/DML/DCL/TCL;
-- phân biệt view/index/procedure/trigger;
+- phân biệt view/chỉ mục (index / 인덱스)/procedure/trigger;
 - giải ACID, anomaly và isolation;
-- phân biệt shared/exclusive lock, 2PL, deadlock;
+- phân biệt dùng chung (shared / 공유)/exclusive khóa (lock / 잠금), 2PL, deadlock;
 - hiểu WAL, checkpoint, UNDO/REDO;
-- mô tả flow data migration và validation.
+- mô tả luồng (flow / 흐름) dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) và kiểm tra hợp lệ (validation / 검증).
 
-Nếu normalization, SQL và transaction chỉ “nhìn quen” nhưng không tự suy luận được, Môn 3 vẫn còn rủi ro cao.
+Nếu normalization, SQL và giao dịch (transaction / 트랜잭션) chỉ “nhìn quen” nhưng không tự suy luận được, Môn 3 vẫn còn rủi ro cao.
+
+> **Bàn giao:** Sau khi hoàn tất checklist, nối sang Môn 4 khi cần dấu vết (trace / 추적) mã (code / 코드)/kiểu dữ liệu, hoặc quay về các lesson cơ sở dữ liệu (database / 데이터베이스) để sửa đúng gap; không xem checklist như điểm kết thúc tách khỏi chuỗi xử lý (pipeline / 파이프라인) dữ liệu (data / 데이터) → ứng dụng (application / 애플리케이션) → khôi phục (recovery / 복구).

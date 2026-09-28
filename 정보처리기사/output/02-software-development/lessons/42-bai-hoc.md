@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **16. 소프트웨어 테스트 단계 (Software Testing Phases)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,13 +20,15 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** và nối nó với **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)
 * **테스트 오라클 (Test Oracle)**: 테스트 결과가 참인지 판단하기 위해 사전에 정의된 참 값을 대입하여 비교. (참, 샘플링, 추정, 일관성 검사 오라클).
 * **테스트 드라이버 (Test Driver)**: (상향식 테스트에서) 하위 모듈을 호출하고 매개 변수를 전달하여 결과를 도출하는 도구. (가짜 메인 프로그램).
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Test Oracle: Cơ chế/Nguồn chân lý để xác định kết quả đúng hay sai.
-  * Test Driver: Chương trình giả lập gọi module con (dùng trong Bottom-up).
+  * kiểm thử (test / 테스트) Oracle: Cơ chế/Nguồn chân lý để xác định kết quả đúng hay sai.
+  * kiểm thử (test / 테스트) Driver: Chương trình giả lập gọi mô-đun (module / 모듈) con (dùng trong Bottom-up).
 * **Example**: 테스트 오라클은 정답지 역할을 합니다.
 * 💡 **Mẹo ghi nhớ**: Oracle = Nhà tiên tri/Chân lý. Driver = Người lái xe (Gọi cấp dưới).

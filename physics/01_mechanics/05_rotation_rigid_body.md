@@ -1,6 +1,9 @@
 # Chuyển động quay, mômen lực và mômen động lượng
 
-Chuyển động quay không phải một tập công thức tách biệt khỏi cơ học tịnh tiến. Nó là cùng logic Newton–năng lượng–bảo toàn nhưng hình học của vật mở rộng khiến phân bố khối lượng quanh trục trở nên quan trọng.
+> **Mạch đọc:** Đọc **Chuyển động quay, mômen lực và mômen động lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ tịnh tiến sang quay** sang **Radian là đơn vị tự nhiên của góc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Chuyển động quay không phải một tập công thức tách biệt khỏi cơ học tịnh tiến. Nó là cùng lô-gic (logic / 논리) Newton–năng lượng–bảo toàn nhưng hình học của vật mở rộng khiến phân bố khối lượng quanh trục trở nên quan trọng.
 
 ## Từ tịnh tiến sang quay
 
@@ -331,7 +334,7 @@ a=\frac23g\sin\theta.
 
 Gia tốc nhỏ hơn `g\sin\theta` của một vật trượt không ma sát vì một phần năng lượng đi vào quay.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển động quay là cơ học của **phân bố khối lượng và hình học quanh trục**. Mômen lực đo khả năng thay đổi mômen động lượng; mômen quán tính đo cách khối lượng được phân bố; còn bảo toàn mômen động lượng là hệ quả sâu hơn của đối xứng quay.
 
@@ -353,8 +356,10 @@ Không. Ma sát tĩnh trong lăn không trượt có thể không sinh công t�
 
 Chỉ đúng đơn giản khi quay quanh trục chính hoặc trong những hình học đủ đối xứng.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Động học](00_kinematics.md), [Các lực thường gặp](02_common_forces.md), [Công và năng lượng](03_work_energy_power.md).
 
 **Liên hệ tiếp:** [Cơ học giải tích](08_analytical_mechanics.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md), [Dao động ghép và mode chuẩn](../02_oscillations_waves/02_coupled_oscillators_normal_modes.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

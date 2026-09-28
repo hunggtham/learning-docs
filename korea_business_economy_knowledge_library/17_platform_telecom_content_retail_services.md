@@ -1,5 +1,8 @@
 # Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)
 
+> **Mạch đọc:** Đặt **Nền tảng, viễn thông, nội dung, bán lẻ và dịch vụ Hàn Quốc (Services / 서비스 산업·플랫폼·통신·콘텐츠·유통)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Nền tảng không chỉ là ứng dụng; nó là kiến trúc thị trường** sang **Hiệu ứng mạng lưới: thêm người dùng làm hệ thống tốt hơn thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Kinh tế Hàn Quốc không chỉ là bán dẫn, ô tô và đóng tàu. Phần lớn việc làm nằm trong khu vực dịch vụ, từ viễn thông, tài chính và phần mềm tới nhà hàng, bán lẻ, y tế, giáo dục và giải trí. Nếu sản xuất giải thích phần lớn sức mạnh xuất khẩu thì **kinh tế dịch vụ giải thích phần lớn việc làm hàng ngày, nhu cầu hộ gia đình và thách thức năng suất**.
 
 Doanh nghiệp dịch vụ có **hàm sản xuất (production function)** khác nhà máy. Tài sản quan trọng có thể là quan hệ khách hàng, thương hiệu, dữ liệu, đồ thị xã hội, thư viện IP, mạng lưới cửa hàng hoặc mật độ phân phối. Vì vậy các khái niệm như “quy mô” hay “chi phí cố định” phải được diễn giải theo từng mô hình kinh doanh.
@@ -8,7 +11,7 @@ Doanh nghiệp dịch vụ có **hàm sản xuất (production function)** khác
 
 ## Nền tảng không chỉ là ứng dụng; nó là kiến trúc thị trường
 
-**Nền tảng (platform / 플랫폼)** tạo hạ tầng để hai hoặc nhiều nhóm người dùng tương tác.
+**nền tảng (platform / 플랫폼)** tạo hạ tầng để hai hoặc nhiều nhóm người dùng tương tác.
 
 ```text
 Người mua ↔ Người bán
@@ -50,19 +53,19 @@ Doanh\ thu\ nền\ tảng
 GMV \times t + Quảng\ cáo + Thuê\ bao + Khác
 \]
 
-Nền tảng xử lý 100 nghìn tỷ KRW GMV với take rate 3% không có doanh thu 100 nghìn tỷ KRW.
+Nền tảng xử lý 100 nghìn tỷ KRW GMV với take tỷ lệ (rate / 비율) 3% không có doanh thu 100 nghìn tỷ KRW.
 
-GMV tăng mạnh nhưng take rate giảm vẫn có thể làm doanh thu tăng chậm hơn.
+GMV tăng mạnh nhưng take tỷ lệ (rate / 비율) giảm vẫn có thể làm doanh thu tăng chậm hơn.
 
-## Take rate: quyền định giá hay “thuế” lên hệ sinh thái?
+## Take tỷ lệ (rate / 비율): quyền định giá hay “thuế” lên hệ sinh thái?
 
 \[
-Take\ Rate = \frac{Doanh\ thu\ nền\ tảng}{Tổng\ giá\ trị\ giao\ dịch}
+Take\ tỷ lệ (rate / 비율) = \frac{Doanh\ thu\ nền\ tảng}{Tổng\ giá\ trị\ giao\ dịch}
 \]
 
-Tăng take rate giúp doanh thu ngắn hạn nhưng có thể khiến người bán rời đi hoặc chuyển chi phí sang người tiêu dùng.
+Tăng take tỷ lệ (rate / 비율) giúp doanh thu ngắn hạn nhưng có thể khiến người bán rời đi hoặc chuyển chi phí sang người tiêu dùng.
 
-Mức take rate bền vững phụ thuộc nền tảng tạo bao nhiêu giá trị cho merchant. Nếu nhà bán không thể tiếp cận cùng lượng cầu ở nơi khác, quyền thương lượng của nền tảng mạnh hơn. Nhưng kiếm tiền quá quyết liệt có thể khuyến khích multi-homing, bán trực tiếp hoặc khiến cơ quan quản lý can thiệp.
+Mức take tỷ lệ (rate / 비율) bền vững phụ thuộc nền tảng tạo bao nhiêu giá trị cho merchant. Nếu nhà bán không thể tiếp cận cùng lượng cầu ở nơi khác, quyền thương lượng của nền tảng mạnh hơn. Nhưng kiếm tiền quá quyết liệt có thể khuyến khích multi-homing, bán trực tiếp hoặc khiến cơ quan quản lý can thiệp.
 
 ## CAC, retention và LTV
 
@@ -270,9 +273,9 @@ Công nghệ là phần bổ trợ cho tổ chức, không phải chất thay th
 
 # Chỉ số phân tích theo mô hình
 
-## Platform
+## Nền tảng (platform / 플랫폼)
 
-Theo dõi MAU/tần suất giao dịch, GMV, take rate, CAC, retention/churn, biên đóng góp, mức tập trung nhà bán và khả năng multi-home.
+Theo dõi MAU/tần suất giao dịch, GMV, take tỷ lệ (rate / 비율), CAC, retention/churn, biên đóng góp, mức tập trung nhà bán và khả năng multi-home.
 
 ## Viễn thông
 
@@ -280,15 +283,15 @@ Theo dõi số thuê bao, ARPU, churn, CAPEX mạng, khấu hao, chi phí phổ 
 
 ## Nội dung / giải trí
 
-Theo dõi sở hữu IP, mức tập trung hit, tập trung nghệ sĩ/người sáng tạo, gia hạn hợp đồng, pipeline nội dung, điều khoản cấp phép và tỷ trọng doanh thu quốc tế.
+Theo dõi sở hữu IP, mức tập trung hit, tập trung nghệ sĩ/người sáng tạo, gia hạn hợp đồng, chuỗi xử lý (pipeline / 파이프라인) nội dung, điều khoản cấp phép và tỷ trọng doanh thu quốc tế.
 
 ## Bán lẻ / thương mại điện tử
 
 Theo dõi doanh thu cửa hàng tương đương, biên gộp, vòng quay tồn kho, markdown, điều khoản nhà cung cấp, mật độ đơn, chi phí fulfillment trên đơn và CAC/retention nếu kinh doanh số.
 
-# Stress test
+# Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
-Với nền tảng, thử take rate giảm, multi-homing của người bán tăng, CAC +30% hoặc quy định hạn chế bundling.
+Với nền tảng, thử take tỷ lệ (rate / 비율) giảm, multi-homing của người bán tăng, CAC +30% hoặc quy định hạn chế bundling.
 
 Với viễn thông, thử ARPU đi ngang trong khi CAPEX tăng, phí phổ tần tăng hoặc churn tăng.
 
@@ -296,7 +299,7 @@ Với nội dung, thử nghệ sĩ chính không gia hạn, tỷ lệ hit giảm
 
 Với bán lẻ, thử chi tiêu tiêu dùng -10%, vòng quay tồn kho chậm hoặc mật độ giao hàng xuống dưới điểm hòa vốn.
 
-# Mental Model — mô hình tư duy
+# Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Sản xuất tối ưu **vật liệu + công suất**. Dịch vụ và nền tảng tối ưu **quan hệ + sự chú ý + thông tin + mạng lưới + phân phối**. Cả hai cuối cùng vẫn phải tuân theo kinh tế đơn vị và kỷ luật phân bổ vốn.
 
@@ -318,7 +321,7 @@ Giá trị vòng đời khách hàng
 
 **“Tăng người dùng = tăng trưởng có lợi nhuận.”** Sai. CAC, retention và biên đóng góp mới quyết định.
 
-**“Platform nhẹ tài sản nên không có CAPEX.”** Không luôn đúng; logistics và trung tâm dữ liệu có thể làm mô hình thâm dụng tài sản.
+**“nền tảng (platform / 플랫폼) nhẹ tài sản nên không có CAPEX.”** Không luôn đúng; logistics và trung tâm dữ liệu có thể làm mô hình thâm dụng tài sản.
 
 **“K-content nổi tiếng = nhà sản xuất lời lớn.”** Sai. Hợp đồng và quyền IP quyết định khả năng giữ giá trị.
 
@@ -331,3 +334,5 @@ Giá trị vòng đời khách hàng
 # Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md), [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+
+> **Bàn giao:** Sau **Bán lẻ / thương mại điện tử**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

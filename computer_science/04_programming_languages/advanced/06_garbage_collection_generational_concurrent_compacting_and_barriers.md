@@ -1,12 +1,15 @@
-# Garbage collection: thế hệ, concurrent, compacting và write barrier
+# Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier
 
-**Bộ gom rác (garbage collector, GC / 가비지 컬렉터)** là cơ chế runtime tự động tìm những object không còn có thể được chương trình sử dụng và thu hồi vùng nhớ của chúng. Để hiểu GC sâu, trước hết phải tách ba khái niệm thường bị trộn lẫn: **cấp phát bộ nhớ (allocation)** là tạo vùng nhớ mới; **khả năng truy cập (reachability)** là object còn được đi tới từ các root hay không; **thu hồi (reclamation)** là trả vùng nhớ của object không còn reachable về cho allocator.
+> **Mạch đọc:** Đặt **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. gốc (root / 루트) và đối tượng (object / 객체) đồ thị (graph / 그래프)** sang **2. Mark–sweep: mô hình cơ bản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-GC không “biết object nào còn hữu ích về mặt nghiệp vụ”. Nó chỉ suy luận từ graph tham chiếu mà runtime nhìn thấy. Nếu một cache giữ reference tới object không còn cần thiết, GC vẫn coi object đó đang sống. Vì vậy memory leak vẫn có thể xảy ra trong ngôn ngữ có GC.
 
-## 1. Root và object graph
+**Bộ gom rác (garbage collector, GC / 가비지 컬렉터)** là cơ chế thời gian chạy (runtime / 런타임) tự động tìm những đối tượng (object / 객체) không còn có thể được chương trình sử dụng và thu hồi vùng nhớ của chúng. Để hiểu GC sâu, trước hết phải tách ba khái niệm thường bị trộn lẫn: **cấp phát bộ nhớ (allocation)** là tạo vùng nhớ mới; **khả năng truy cập (reachability)** là đối tượng (object / 객체) còn được đi tới từ các gốc (root / 루트) hay không; **thu hồi (reclamation)** là trả vùng nhớ của đối tượng (object / 객체) không còn reachable về cho allocator.
 
-Runtime bắt đầu từ các **điểm gốc (GC roots)** như stack frame đang hoạt động, biến tĩnh, register hoặc handle native. Từ các root, collector duyệt graph object.
+GC không “biết đối tượng (object / 객체) nào còn hữu ích về mặt nghiệp vụ”. Nó chỉ suy luận từ đồ thị (graph / 그래프) tham chiếu mà thời gian chạy (runtime / 런타임) nhìn thấy. Nếu một bộ nhớ đệm (cache / 캐시) giữ tham chiếu (reference / 참조) tới đối tượng (object / 객체) không còn cần thiết, GC vẫn coi đối tượng (object / 객체) đó đang sống. Vì vậy bộ nhớ (memory / 메모리) leak vẫn có thể xảy ra trong ngôn ngữ có GC.
+
+## 1. gốc (root / 루트) và đối tượng (object / 객체) đồ thị (graph / 그래프)
+
+Thời gian chạy (runtime / 런타임) bắt đầu từ các **điểm gốc (GC roots)** như ngăn xếp (stack / 스택) frame đang hoạt động, biến tĩnh, register hoặc handle bản địa (native / 네이티브). Từ các gốc (root / 루트), collector duyệt đồ thị (graph / 그래프) đối tượng (object / 객체).
 
 ```text
 GC roots
@@ -18,7 +21,7 @@ GC roots
 D --> E   // không còn đường đi từ root
 ```
 
-`D` và `E` có thể được thu hồi dù chúng vẫn trỏ lẫn nhau. Đây là khác biệt quan trọng so với reference counting thuần túy, vốn có thể gặp vấn đề cycle.
+`D` và `E` có thể được thu hồi dù chúng vẫn trỏ lẫn nhau. Đây là khác biệt quan trọng so với tham chiếu (reference / 참조) counting thuần túy, vốn có thể gặp vấn đề cycle.
 
 ## 2. Mark–sweep: mô hình cơ bản
 
@@ -29,71 +32,71 @@ mark  -> đánh dấu object reachable
 sweep -> quét heap và thu hồi object chưa được đánh dấu
 ```
 
-Mark–sweep dễ hiểu nhưng có thể để lại **phân mảnh (fragmentation)**: vùng trống nằm rải rác, khiến object lớn khó tìm chỗ liên tục và locality kém.
+Mark–sweep dễ hiểu nhưng có thể để lại **phân mảnh (fragmentation)**: vùng trống nằm rải rác, khiến đối tượng (object / 객체) lớn khó tìm chỗ liên tục và locality kém.
 
 ## 3. Compacting collector
 
-**Nén heap (compaction)** di chuyển object sống về gần nhau rồi cập nhật reference. Lợi ích là giảm fragmentation và cải thiện locality.
+**Nén vùng nhớ động (heap / 힙) (compaction)** di chuyển đối tượng (object / 객체) sống về gần nhau rồi cập nhật tham chiếu (reference / 참조). Lợi ích là giảm fragmentation và cải thiện locality.
 
-Nhưng di chuyển object tạo chi phí. Runtime phải biết mọi reference cần sửa; code native giữ raw pointer vào object managed cũng trở thành vấn đề. Đây là lý do FFI, pinning và object movement liên quan chặt với thiết kế GC.
+Nhưng di chuyển đối tượng (object / 객체) tạo chi phí. thời gian chạy (runtime / 런타임) phải biết mọi tham chiếu (reference / 참조) cần sửa; mã (code / 코드) bản địa (native / 네이티브) giữ raw pointer vào đối tượng (object / 객체) managed cũng trở thành vấn đề. Đây là lý do FFI, pinning và đối tượng (object / 객체) movement liên quan chặt với thiết kế GC.
 
 ## 4. Stop-the-world là gì?
 
-Trong một số giai đoạn GC, runtime phải dừng các thread ứng dụng tại **điểm an toàn (safepoint)**. Khoảng dừng này gọi là **stop-the-world pause**.
+Trong một số giai đoạn GC, thời gian chạy (runtime / 런타임) phải dừng các luồng thực thi (thread / 스레드) ứng dụng tại **điểm an toàn (safepoint)**. Khoảng dừng này gọi là **stop-the-world pause**.
 
-Pause không đồng nghĩa toàn bộ công việc GC đều diễn ra khi ứng dụng dừng. Collector hiện đại có thể làm nhiều pha concurrent, nhưng vẫn thường cần một số synchronization point để có snapshot nhất quán hoặc cập nhật metadata.
+Pause không đồng nghĩa toàn bộ công việc GC đều diễn ra khi ứng dụng dừng. Collector hiện đại có thể làm nhiều pha concurrent, nhưng vẫn thường cần một số synchronization điểm (point / 지점) để có snapshot nhất quán hoặc cập nhật siêu dữ liệu (metadata / 메타데이터).
 
 Đối với dịch vụ latency-sensitive, p99/p999 pause quan trọng hơn thời gian GC trung bình.
 
 ## 5. Generational hypothesis
 
-Nhiều workload tạo rất nhiều object sống ngắn. **Giả thuyết thế hệ (generational hypothesis)** nói rằng object trẻ có xác suất chết sớm cao hơn object đã sống qua nhiều chu kỳ.
+Nhiều tải công việc (workload / 워크로드) tạo rất nhiều đối tượng (object / 객체) sống ngắn. **Giả thuyết thế hệ (generational hypothesis)** nói rằng đối tượng (object / 객체) trẻ có xác suất chết sớm cao hơn đối tượng (object / 객체) đã sống qua nhiều chu kỳ.
 
-Heap vì vậy có thể chia thành thế hệ trẻ và già:
+Vùng nhớ vùng nhớ động (heap / 힙) vì vậy có thể chia thành thế hệ trẻ và già:
 
 ```text
 young generation -> thu gom thường xuyên
 old generation   -> thu gom ít hơn
 ```
 
-Minor GC chỉ quét phần trẻ nên rẻ hơn full-heap collection. Object sống lâu có thể được **thăng cấp (promotion)** sang old generation.
+Minor GC chỉ quét phần trẻ nên rẻ hơn full-heap collection. đối tượng (object / 객체) sống lâu có thể được **thăng cấp (promotion)** sang old generation.
 
 ## 6. Vì sao generational GC cần remembered set?
 
-Nếu chỉ quét young generation, collector vẫn phải biết old object nào đang trỏ sang young object. Quét toàn old generation mỗi minor GC sẽ phá lợi ích.
+Nếu chỉ quét young generation, collector vẫn phải biết old đối tượng (object / 객체) nào đang trỏ sang young đối tượng (object / 객체). Quét toàn old generation mỗi minor GC sẽ phá lợi ích.
 
-Runtime vì vậy duy trì **tập ghi nhớ (remembered set)** hoặc card table. Khi application ghi một reference từ old sang young, **write barrier** cập nhật metadata để GC biết vùng nào cần kiểm tra.
+Thời gian chạy (runtime / 런타임) vì vậy duy trì **tập ghi nhớ (remembered set)** hoặc card bảng (table / 테이블). Khi ứng dụng (application / 애플리케이션) ghi một tham chiếu (reference / 참조) từ old sang young, **ghi (write / 쓰기) barrier** cập nhật siêu dữ liệu (metadata / 메타데이터) để GC biết vùng nào cần kiểm tra.
 
-Đây là một ví dụ rất quan trọng: GC nhanh không chỉ đến từ thuật toán collector; compiler/runtime chèn thêm code vào đường ghi của application để duy trì invariant phục vụ collector.
+Đây là một ví dụ rất quan trọng: GC nhanh không chỉ đến từ thuật toán collector; trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) chèn thêm mã (code / 코드) vào đường ghi của ứng dụng (application / 애플리케이션) để duy trì bất biến (invariant / 불변식) phục vụ collector.
 
-## 7. Write barrier và read barrier
+## 7. ghi (write / 쓰기) barrier và read barrier
 
-**Rào ghi (write barrier)** là đoạn logic nhỏ chạy khi chương trình thay đổi reference. Nó có thể đánh dấu card bẩn, ghi nhớ edge hoặc hỗ trợ concurrent marking.
+**Rào ghi (write barrier)** là đoạn lô-gic (logic / 논리) nhỏ chạy khi chương trình thay đổi tham chiếu (reference / 참조). Nó có thể đánh dấu card bẩn, ghi nhớ edge hoặc hỗ trợ concurrent marking.
 
-**Rào đọc (read barrier)** chạy khi đọc reference và có thể giúp xử lý object đang được di chuyển hoặc trạng thái marking.
+**Rào đọc (read barrier)** chạy khi đọc tham chiếu (reference / 참조) và có thể giúp xử lý đối tượng (object / 객체) đang được di chuyển hoặc trạng thái marking.
 
-Barrier làm đường thực thi application đắt hơn một chút để GC giảm pause hoặc làm việc concurrent. Đây là trade-off giữa mutator cost và collector cost.
+Barrier làm đường thực thi ứng dụng (application / 애플리케이션) đắt hơn một chút để GC giảm pause hoặc làm việc concurrent. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa mutator chi phí (cost / 비용) và collector chi phí (cost / 비용).
 
 ## 8. Mutator là gì?
 
-Trong tài liệu GC, **mutator** là thread của chương trình đang tạo và thay đổi object graph. Collector và mutator cùng thao tác lên heap nhưng với mục tiêu khác nhau.
+Trong tài liệu GC, **mutator** là luồng thực thi (thread / 스레드) của chương trình đang tạo và thay đổi đối tượng (object / 객체) đồ thị (graph / 그래프). Collector và mutator cùng thao tác lên vùng nhớ động (heap / 힙) nhưng với mục tiêu khác nhau.
 
-Khi GC chạy concurrent, vấn đề cốt lõi là: collector đang cố suy luận graph trong khi mutator vẫn thay đổi graph đó. Nếu không có protocol, collector có thể bỏ sót object vừa trở nên reachable.
+Khi GC chạy concurrent, vấn đề cốt lõi là: collector đang cố suy luận đồ thị (graph / 그래프) trong khi mutator vẫn thay đổi đồ thị (graph / 그래프) đó. Nếu không có giao thức (protocol / 프로토콜), collector có thể bỏ sót đối tượng (object / 객체) vừa trở nên reachable.
 
-## 9. Concurrent marking và invariant
+## 9. Concurrent marking và bất biến (invariant / 불변식)
 
-Collector concurrent cần một invariant bảo đảm rằng thay đổi của mutator không làm mất object sống. Hai họ kỹ thuật thường được nhắc đến là snapshot-at-the-beginning và incremental update.
+Collector concurrent cần một bất biến (invariant / 불변식) bảo đảm rằng thay đổi của mutator không làm mất đối tượng (object / 객체) sống. Hai họ kỹ thuật thường được nhắc đến là snapshot-at-the-beginning và incremental cập nhật (update / 업데이트).
 
-Không cần học thuộc tên trước. Mental model quan trọng là collector cần đảm bảo một trong các điều sau:
+Không cần học thuộc tên trước. mô hình tư duy (mental model / 사고 모델) quan trọng là collector cần đảm bảo một trong các điều sau:
 
 ```text
 hoặc giữ lại ảnh logic của graph tại một thời điểm
 hoặc ghi lại các edge mới có thể làm thay đổi reachability
 ```
 
-Write barrier chính là công cụ để runtime duy trì invariant đó.
+Ghi (write / 쓰기) barrier chính là công cụ để thời gian chạy (runtime / 런타임) duy trì bất biến (invariant / 불변식) đó.
 
-## 10. Tri-color abstraction
+## 10. Tri-color lớp trừu tượng (abstraction / 추상화)
 
 Một cách lý giải concurrent marking là **mô hình ba màu (tri-color abstraction)**:
 
@@ -101,58 +104,58 @@ Một cách lý giải concurrent marking là **mô hình ba màu (tri-color abs
 - xám: reachable nhưng children chưa quét xong;
 - đen: reachable và children đã xử lý.
 
-Một invariant phổ biến là tránh để object đen trỏ tới object trắng mà collector không biết. Barrier giúp duy trì invariant khi mutator đổi reference.
+Một bất biến (invariant / 불변식) phổ biến là tránh để đối tượng (object / 객체) đen trỏ tới đối tượng (object / 객체) trắng mà collector không biết. Barrier giúp duy trì bất biến (invariant / 불변식) khi mutator đổi tham chiếu (reference / 참조).
 
-Mô hình màu là công cụ reasoning, không nhất thiết là cách heap thật lưu ba màu literal.
+Mô hình màu là công cụ lập luận (reasoning / 추론), không nhất thiết là cách vùng nhớ động (heap / 힙) thật lưu ba màu literal.
 
-## 11. Allocation fast path
+## 11. Allocation fast đường dẫn (path / 경로)
 
-Trong generational GC, allocation trẻ có thể rất nhanh. Runtime giữ một con trỏ tới vị trí trống tiếp theo trong vùng liên tục:
+Trong generational GC, allocation trẻ có thể rất nhanh. thời gian chạy (runtime / 런타임) giữ một con trỏ tới vị trí trống tiếp theo trong vùng liên tục:
 
 ```text
 result = top
 top += object_size
 ```
 
-Nếu mỗi thread có **vùng cấp phát cục bộ (thread-local allocation buffer, TLAB)**, nhiều allocation không cần lock toàn cục.
+Nếu mỗi luồng thực thi (thread / 스레드) có **vùng cấp phát cục bộ (thread-local allocation buffer, TLAB)**, nhiều allocation không cần khóa (lock / 잠금) toàn cục.
 
-Do đó “GC language allocation luôn chậm” là hiểu lầm. Allocation có thể rẻ; chi phí thật xuất hiện khi object sống lâu, heap pressure cao hoặc collection không theo kịp allocation rate.
+Do đó “GC ngôn ngữ (language / 언어) allocation luôn chậm” là hiểu lầm. Allocation có thể rẻ; chi phí thật xuất hiện khi đối tượng (object / 객체) sống lâu, vùng nhớ động (heap / 힙) pressure cao hoặc collection không theo kịp allocation tỷ lệ (rate / 비율).
 
-## 12. Allocation rate và live set
+## 12. Allocation tỷ lệ (rate / 비율) và live set
 
-Hai workload có cùng heap size nhưng behavior GC rất khác.
+Hai tải công việc (workload / 워크로드) có cùng vùng nhớ động (heap / 힙) kích thước (size / 크기) nhưng hành vi (behavior / 동작) GC rất khác.
 
-**Tốc độ cấp phát (allocation rate)** cho biết chương trình tạo bao nhiêu byte mỗi giây. **Tập object sống (live set)** là lượng memory thực sự còn reachable sau collection.
+**Tốc độ cấp phát (allocation rate)** cho biết chương trình tạo bao nhiêu byte mỗi giây. **Tập đối tượng (object / 객체) sống (live set)** là lượng bộ nhớ (memory / 메모리) thực sự còn reachable sau collection.
 
-Nếu allocation rate cao nhưng phần lớn object chết trẻ, generational GC có thể xử lý tốt. Nếu live set gần heap limit, collector phải quét và di chuyển nhiều object mỗi chu kỳ, thời gian GC tăng mạnh.
+Nếu allocation tỷ lệ (rate / 비율) cao nhưng phần lớn đối tượng (object / 객체) chết trẻ, generational GC có thể xử lý tốt. Nếu live set gần vùng nhớ động (heap / 힙) limit, collector phải quét và di chuyển nhiều đối tượng (object / 객체) mỗi chu kỳ, thời gian GC tăng mạnh.
 
-## 13. Promotion failure và old-generation pressure
+## 13. Promotion thất bại (failure / 실패) và old-generation pressure
 
-Nếu young collection muốn thăng cấp object nhưng old generation không đủ chỗ, runtime có thể phải trigger collection lớn hơn hoặc rơi vào allocation failure.
+Nếu young collection muốn thăng cấp đối tượng (object / 객체) nhưng old generation không đủ chỗ, thời gian chạy (runtime / 런타임) có thể phải trigger collection lớn hơn hoặc rơi vào allocation thất bại (failure / 실패).
 
 Hiện tượng này cho thấy young/old không độc lập. Tuning young generation quá lớn có thể tăng pause minor hoặc tạo burst promotion; quá nhỏ làm minor GC quá thường xuyên.
 
 ## 14. Fragmentation và pinning
 
-Object **bị ghim (pinned)** không được di chuyển, thường vì native code hoặc I/O đang giữ địa chỉ ổn định. Quá nhiều pinned object có thể làm compacting collector khó nén heap hiệu quả và tăng fragmentation.
+Đối tượng (object / 객체) **bị ghim (pinned)** không được di chuyển, thường vì bản địa (native / 네이티브) mã (code / 코드) hoặc I/O đang giữ địa chỉ ổn định. Quá nhiều pinned đối tượng (object / 객체) có thể làm compacting collector khó nén vùng nhớ động (heap / 힙) hiệu quả và tăng fragmentation.
 
-Đây là một connection quan trọng giữa runtime, FFI và OS I/O.
+Đây là một liên kết (connection / 연결) quan trọng giữa thời gian chạy (runtime / 런타임), FFI và OS I/O.
 
-## 15. Reference counting khác tracing GC thế nào?
+## 15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?
 
-Reference counting giảm counter khi reference biến mất và thu hồi object khi counter về 0. Ưu điểm là reclamation thường sớm và phân tán theo thời gian. Nhược điểm là update reference phải sửa counter và cycle cần cơ chế bổ sung.
+Tham chiếu (reference / 참조) counting giảm counter khi tham chiếu (reference / 참조) biến mất và thu hồi đối tượng (object / 객체) khi counter về 0. Ưu điểm là reclamation thường sớm và phân tán theo thời gian. Nhược điểm là cập nhật (update / 업데이트) tham chiếu (reference / 참조) phải sửa counter và cycle cần cơ chế bổ sung.
 
-Tracing GC không cần counter trên mọi edge nhưng tạo collection phase riêng. Swift ARC và Objective-C ARC là ví dụ reference-counting-oriented runtime; JVM/.NET phổ biến tracing GC.
+Tracing GC không cần counter trên mọi edge nhưng tạo collection phase riêng. Swift ARC và Objective-C ARC là ví dụ reference-counting-oriented thời gian chạy (runtime / 런타임); JVM/.NET phổ biến tracing GC.
 
-## 16. GC và concurrency application
+## 16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)
 
-GC pause có thể dừng nhiều thread cùng lúc. Concurrent collector giảm pause nhưng dùng CPU và memory bandwidth song song với application. Nếu host đã gần saturation, collector concurrent có thể cạnh tranh tài nguyên và làm throughput giảm.
+GC pause có thể dừng nhiều luồng thực thi (thread / 스레드) cùng lúc. Concurrent collector giảm pause nhưng dùng CPU và bộ nhớ (memory / 메모리) bandwidth song song với ứng dụng (application / 애플리케이션). Nếu host đã gần saturation, collector concurrent có thể cạnh tranh tài nguyên và làm thông lượng (throughput / 처리량) giảm.
 
-Vì vậy GC tuning không thể tách khỏi capacity planning. Heap lớn hơn có thể giảm collection frequency nhưng làm collection lớn đắt hơn và tăng working set.
+Vì vậy GC tuning không thể tách khỏi sức chứa (capacity / 용량) planning. vùng nhớ động (heap / 힙) lớn hơn có thể giảm collection frequency nhưng làm collection lớn đắt hơn và tăng working set.
 
-## 17. Memory leak trong managed runtime
+## 17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)
 
-Leak trong Java/JavaScript không nhất thiết là memory “không free được”; thường là object vẫn reachable ngoài ý muốn.
+Leak trong Java/JavaScript không nhất thiết là bộ nhớ (memory / 메모리) “không free được”; thường là đối tượng (object / 객체) vẫn reachable ngoài ý muốn.
 
 Ví dụ:
 
@@ -163,17 +166,17 @@ global map
  -> large object graph
 ```
 
-Nếu listener không được unregister, toàn graph vẫn sống. Heap dump và dominator tree giúp tìm object nào đang giữ phần lớn retained memory.
+Nếu listener không được unregister, toàn đồ thị (graph / 그래프) vẫn sống. vùng nhớ động (heap / 힙) dump và dominator cây (tree / 트리) giúp tìm đối tượng (object / 객체) nào đang giữ phần lớn retained bộ nhớ (memory / 메모리).
 
-## 18. Safepoint bias
+## 18. Safepoint độ lệch (bias / 편향)
 
-Một runtime có thể cần đưa thread tới safepoint trước một số thao tác. Nếu thread chạy native code lâu, vòng lặp không có poll phù hợp hoặc bị blocked theo cách đặc biệt, thời gian đi tới safepoint có thể góp vào pause.
+Một thời gian chạy (runtime / 런타임) có thể cần đưa luồng thực thi (thread / 스레드) tới safepoint trước một số thao tác. Nếu luồng thực thi (thread / 스레드) chạy bản địa (native / 네이티브) mã (code / 코드) lâu, vòng lặp không có poll phù hợp hoặc bị blocked theo cách đặc biệt, thời gian đi tới safepoint có thể góp vào pause.
 
-Do đó khi xem log GC, cần tách “thời gian collection” khỏi “thời gian chờ tất cả thread đạt trạng thái an toàn” nếu runtime cung cấp số liệu đó.
+Do đó khi xem log GC, cần tách “thời gian collection” khỏi “thời gian chờ tất cả luồng thực thi (thread / 스레드) đạt trạng thái an toàn” nếu thời gian chạy (runtime / 런타임) cung cấp số liệu đó.
 
 ## 19. GC log và các câu hỏi cần đặt
 
-Khi service có latency spike, nên hỏi:
+Khi dịch vụ (service / 서비스) có độ trễ (latency / 지연 시간) spike, nên hỏi:
 
 ```text
 allocation rate bao nhiêu?
@@ -185,28 +188,30 @@ GC dùng bao nhiêu CPU?
 heap growth có tương ứng traffic không?
 ```
 
-Nếu heap tăng vì cache hợp lệ, giải pháp khác với heap tăng vì reference leak.
+Nếu vùng nhớ động (heap / 힙) tăng vì bộ nhớ đệm (cache / 캐시) hợp lệ, giải pháp khác với vùng nhớ động (heap / 힙) tăng vì tham chiếu (reference / 참조) leak.
 
 ## 20. Không có collector tốt nhất tuyệt đối
 
-Một collector có pause cực thấp có thể dùng thêm CPU hoặc memory. Collector throughput-oriented có thể cho tổng công việc cao nhưng pause dài hơn. Embedded hoặc real-time system có requirement khác server backend.
+Một collector có pause cực thấp có thể dùng thêm CPU hoặc bộ nhớ (memory / 메모리). Collector throughput-oriented có thể cho tổng công việc cao nhưng pause dài hơn. Embedded hoặc real-time hệ thống (system / 시스템) có yêu cầu (requirement / 요구사항) khác máy chủ (server / 서버) backend.
 
-Chọn collector là chọn mục tiêu tối ưu: throughput, tail latency, footprint, predictability hay khả năng scale heap lớn.
+Chọn collector là chọn mục tiêu tối ưu: thông lượng (throughput / 처리량), tail độ trễ (latency / 지연 시간), footprint, predictability hay khả năng quy mô (scale / 규모) vùng nhớ động (heap / 힙) lớn.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Có GC thì không cần hiểu memory.”** Sai. Developer vẫn cần hiểu allocation, object lifetime, leak, heap pressure và cache.
+**“Có GC thì không cần hiểu bộ nhớ (memory / 메모리).”** Sai. nhà phát triển (developer / 개발자) vẫn cần hiểu allocation, đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명), leak, vùng nhớ động (heap / 힙) pressure và bộ nhớ đệm (cache / 캐시).
 
-**“Heap càng lớn càng tốt.”** Heap quá lớn tăng working set và có thể tăng chi phí collection/recovery.
+**“vùng nhớ động (heap / 힙) càng lớn càng tốt.”** vùng nhớ động (heap / 힙) quá lớn tăng working set và có thể tăng chi phí collection/khôi phục (recovery / 복구).
 
 **“GC pause là toàn bộ thời gian GC.”** Concurrent collector có thể làm nhiều việc ngoài pause; ngược lại safepoint coordination cũng có thể góp vào pause.
 
-**“Object không dùng nữa sẽ được thu hồi ngay.”** Chỉ khi nó không còn reachable và collector thực hiện reclamation phù hợp.
+**“đối tượng (object / 객체) không dùng nữa sẽ được thu hồi ngay.”** Chỉ khi nó không còn reachable và collector thực hiện reclamation phù hợp.
 
 ## Mô hình tư duy
 
-> GC là protocol giữa **mutator**, **compiler/runtime metadata** và **collector** để duy trì câu trả lời đúng cho câu hỏi “object nào còn reachable?” trong khi chương trình vẫn liên tục thay đổi heap.
+> GC là giao thức (protocol / 프로토콜) giữa **mutator**, **trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) siêu dữ liệu (metadata / 메타데이터)** và **collector** để duy trì câu trả lời đúng cho câu hỏi “đối tượng (object / 객체) nào còn reachable?” trong khi chương trình vẫn liên tục thay đổi vùng nhớ động (heap / 힙).
 
-Hiểu GC ở mức Senior/Master không phải nhớ tên collector. Cần theo được đường đi từ allocation → object graph → barrier → marking → relocation → pause → CPU/cache/memory pressure → latency của application.
+Hiểu GC ở mức cấp cao (senior / 시니어)/Master không phải nhớ tên collector. Cần theo được đường đi từ allocation → đối tượng (object / 객체) đồ thị (graph / 그래프) → barrier → marking → relocation → pause → CPU/bộ nhớ đệm (cache / 캐시)/bộ nhớ (memory / 메모리) pressure → độ trễ (latency / 지연 시간) của ứng dụng (application / 애플리케이션).
 
 Xem tiếp: [JIT và deoptimization](./05_jit_profiling_speculative_optimization_and_deoptimization.md), [Virtual Memory](../../03_operating_systems/advanced/03_virtual_memory_page_tables_tlb_shootdown_and_huge_pages.md) và [Memory hierarchy](../../02_computer_architecture/advanced/README.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 type systems effects and runtime contracts](./00_type_systems_effects_and_runtime_contracts.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

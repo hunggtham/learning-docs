@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **2. 요구사항 개발 (Phát triển Yêu cầu)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **10. 요구사항 심화 (Yêu cầu chuyên sâu)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** và nối nó với **10. 요구사항 심화 (Yêu cầu chuyên sâu)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -47,12 +49,12 @@
 - **스프린트 검토/회고 (Sprint Review/Retrospective):** 검토는 제품 시연, 회고는 프로세스 cải tiến. (Review = Demo sản phẩm; Retrospective = Rút kinh nghiệm quy trình).
 
 ### XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)
-- **짝 프로그래밍 (Pair Programming):** 2 người cùng code trên 1 máy tính.
-- **공동 코드 소유 (Collective Ownership):** Code là của chung, ai cũng có quyền sửa.
-- **테스트 주도 개발 (TDD - Test-Driven Development):** Viết Test case trước, viết Code sau.
-- **전체 팀 (Whole Team):** Khách hàng và team phát triển làm việc cùng nhau như 1 đội.
-- **계속적인 통합 (Continuous Integration):** Tích hợp code liên tục (CI) ngay khi xong 1 task.
-- **리팩토링 (Refactoring):** Cải thiện cấu trúc code mà không đổi chức năng bên ngoài.
+- **짝 프로그래밍 (Pair Programming):** 2 người cùng mã (code / 코드) trên 1 máy tính.
+- **공동 코드 소유 (Collective Ownership):** mã (code / 코드) là của chung, ai cũng có quyền sửa.
+- **테스트 주도 개발 (TDD - Test-Driven Development):** Viết trường hợp kiểm thử (test case / 테스트 케이스) trước, viết mã (code / 코드) sau.
+- **전체 팀 (Whole Team):** Khách hàng và nhóm (team / 팀) phát triển làm việc cùng nhau như 1 đội.
+- **계속적인 통합 (Continuous Integration):** Tích hợp mã (code / 코드) liên tục (CI) ngay khi xong 1 tác vụ (task / 작업).
+- **리팩토링 (Refactoring):** Cải thiện cấu trúc mã (code / 코드) mà không đổi chức năng bên ngoài.
 - **소규모 릴리즈 (Small Releases):** Cập nhật/Phát hành các phiên bản nhỏ liên tục.
 
 ### 현행 시스템 파악 (Phân tích hệ thống hiện tại)

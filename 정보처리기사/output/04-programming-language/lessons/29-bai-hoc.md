@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,6 +20,8 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **라이브러리 및 예외 처리 (Libraries & Exception Handling)** và nối nó với **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 라이브러리 및 예외 처리 (Libraries & Exception Handling)
@@ -28,8 +30,8 @@
 - **math.h**: 수학 함수 (`sqrt`, `pow`, `abs`).
 - **string.h**: 문자열 처리 (`strlen`, `strcpy`, `strcmp`).
 - **stdlib.h**: 자료형 변환, 메모리 할당, 난수 (`atoi`, `rand`, `malloc`, `free`).
-- **time.h**: 시간 처리 (`time`, `clock`).
-  - 💡 *Mẹo ghi nhớ*: io = Input/Output, lib = Library (chung chung như cấp phát bộ nhớ), str = String.
+- **thời gian (time / 시간).h**: 시간 처리 (`time`, `clock`).
+  - 💡 *Mẹo ghi nhớ*: io = đầu vào (input / 입력)/đầu ra (output / 출력), lib = thư viện (library / 라이브러리) (chung chung như cấp phát bộ nhớ), str = String.
 
 ### 281. 예외 처리 (Exception Handling / Xử lý ngoại lệ)
 - 프로그램의 정상적인 실행을 방해하는 조건을 예외라고 한다. (Điều kiện làm gián đoạn chương trình gọi là ngoại lệ).

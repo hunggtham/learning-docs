@@ -1,6 +1,9 @@
 # Sức khỏe tâm thần và tâm bệnh học — Mental Health & Psychopathology / 정신건강·정신병리학
 
-**Tâm bệnh học (psychopathology / 정신병리학)** nghiên cứu các pattern suy nghĩ, cảm xúc và hành vi liên quan distress, impairment hoặc nguy cơ đáng kể. Mục tiêu khoa học không phải chia con người thành “bình thường” và “bất thường” bằng một đường cứng, mà hiểu khi nào một pattern trở nên đủ dai dẳng, nghiêm trọng hoặc không phù hợp context đến mức cần đánh giá và hỗ trợ chuyên môn.
+> **Mạch đọc:** Đọc **Sức khỏe tâm thần và tâm bệnh học — Mental Health & Psychopathology / 정신건강·정신병리학** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mental health không chỉ là “không có disorder”** sang **Distress, impairment và rủi ro (risk / 위험)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+**Tâm bệnh học (psychopathology / 정신병리학)** nghiên cứu các mẫu (pattern / 패턴) suy nghĩ, cảm xúc và hành vi liên quan distress, impairment hoặc nguy cơ đáng kể. Mục tiêu khoa học không phải chia con người thành “bình thường” và “bất thường” bằng một đường cứng, mà hiểu khi nào một mẫu (pattern / 패턴) trở nên đủ dai dẳng, nghiêm trọng hoặc không phù hợp ngữ cảnh (context / 맥락) đến mức cần đánh giá và hỗ trợ chuyên môn.
 
 ## Mental health không chỉ là “không có disorder”
 
@@ -18,21 +21,21 @@ diagnosis khi tiêu chí + impairment + differential phù hợp
 
 Một symptom đơn lẻ hiếm khi đủ để tự chẩn đoán.
 
-## Distress, impairment và risk
+## Distress, impairment và rủi ro (risk / 위험)
 
 Ba câu hỏi thực dụng là:
 
-- pattern có gây **đau khổ (distress)** đáng kể không;
+- mẫu (pattern / 패턴) có gây **đau khổ (distress)** đáng kể không;
 - có làm giảm **chức năng (impairment)** trong học tập, công việc, relationship hoặc self-care không;
 - có tạo **nguy cơ (risk)** đáng kể cho bản thân hoặc người khác không.
 
-Một behavior khác norm văn hóa nhưng không gây distress hoặc impairment không tự động là disorder.
+Một hành vi (behavior / 동작) khác norm văn hóa nhưng không gây distress hoặc impairment không tự động là disorder.
 
-## Context rất quan trọng
+## Ngữ cảnh (context / 맥락) rất quan trọng
 
 Buồn sau mất người thân không tự động là depression. Lo trước phỏng vấn không tự động là anxiety disorder. Nghi ngờ trong môi trường thật sự nguy hiểm khác paranoia không phù hợp reality.
 
-Clinical reasoning luôn cần context, duration, severity và trajectory.
+Clinical lập luận (reasoning / 추론) luôn cần ngữ cảnh (context / 맥락), duration, severity và trajectory.
 
 ## Diagnosis là công cụ phân loại
 
@@ -41,7 +44,7 @@ Diagnosis giúp:
 - communication giữa clinician;
 - lựa chọn treatment;
 - research;
-- service access;
+- dịch vụ (service / 서비스) truy cập (access / 접근);
 - prognosis ở mức xác suất.
 
 Nhưng diagnosis không phải explanation hoàn chỉnh về một cá nhân.
@@ -55,15 +58,15 @@ Hai hệ thống thường gặp là:
 - **ICD-11** của World Health Organization;
 - **DSM-5-TR** của American Psychiatric Association.
 
-ICD-11 CDDR cung cấp clinical description và diagnostic requirement cho mental, behavioural và neurodevelopmental disorders. DSM-5-TR là hệ thống được dùng rộng trong psychiatry Mỹ và research quốc tế.
+ICD-11 CDDR cung cấp clinical description và diagnostic yêu cầu (requirement / 요구사항) cho mental, behavioural và neurodevelopmental disorders. DSM-5-TR là hệ thống được dùng rộng trong psychiatry Mỹ và research quốc tế.
 
-Các hệ thống có nhiều overlap nhưng không hoàn toàn giống nhau. Vì vậy label trên internet không nên được xem như diagnosis nếu không biết hệ thống, criteria và context.
+Các hệ thống có nhiều overlap nhưng không hoàn toàn giống nhau. Vì vậy label trên internet không nên được xem như diagnosis nếu không biết hệ thống, criteria và ngữ cảnh (context / 맥락).
 
 ## Categorical và dimensional thinking
 
 Category hữu ích cho communication: có/không diagnosis.
 
-Nhưng symptom thường nằm trên continuum. Anxiety, impulsivity, mood instability hay attention difficulty đều có distribution trong population.
+Nhưng symptom thường nằm trên continuum. Anxiety, impulsivity, mood instability hay attention difficulty đều có phân phối (distribution / 분포) trong population.
 
 Cách nhìn **dimensional** hỏi mức severity và profile; cách nhìn **categorical** hỏi threshold clinical. Cả hai có vai trò.
 
@@ -73,30 +76,30 @@ Một người có thể đáp ứng criteria nhiều disorder cùng lúc. **Com
 
 Nó có thể phản ánh:
 
-- shared risk factor;
+- dùng chung (shared / 공유) rủi ro (risk / 위험) factor;
 - symptom overlap;
-- causal cascade;
-- diagnostic boundary chưa hoàn hảo.
+- nhân quả (causal / 인과적) cascade;
+- diagnostic ranh giới (boundary / 경계) chưa hoàn hảo.
 
 Ví dụ anxiety kéo dài có thể làm sleep kém, sleep kém làm mood và concentration xấu hơn.
 
-## Transdiagnostic mechanism
+## Transdiagnostic cơ chế (mechanism / 메커니즘)
 
-Nhiều mechanism xuất hiện ở nhiều disorder:
+Nhiều cơ chế (mechanism / 메커니즘) xuất hiện ở nhiều disorder:
 
 - avoidance;
 - rumination;
-- intolerance of uncertainty;
+- intolerance of bất định (uncertainty / 불확실성);
 - emotion dysregulation;
 - sleep disturbance;
 - reward disruption;
-- social withdrawal.
+- xã hội (social / 사회적) withdrawal.
 
-Approach **xuyên chẩn đoán (transdiagnostic)** tập trung mechanism thay vì chỉ label.
+Approach **xuyên chẩn đoán (transdiagnostic)** tập trung cơ chế (mechanism / 메커니즘) thay vì chỉ label.
 
 ## Formulation
 
-**Công thức hóa trường hợp (case formulation)** cố giải thích tại sao problem xuất hiện và duy trì ở một người cụ thể.
+**Công thức hóa trường hợp (case formulation)** cố giải thích tại sao bài toán (problem / 문제) xuất hiện và duy trì ở một người cụ thể.
 
 Một khung phổ biến:
 
@@ -116,16 +119,16 @@ Formulation không thay diagnosis; nó bổ sung explanation cá nhân hóa.
 
 ## Predisposing factor
 
-Yếu tố thuận lợi có thể gồm genetic liability, temperament, developmental adversity, chronic illness hoặc social disadvantage.
+Yếu tố thuận lợi có thể gồm genetic liability, temperament, developmental adversity, chronic illness hoặc xã hội (social / 사회적) disadvantage.
 
-Predisposition tăng probability, không quyết định destiny.
+Predisposition tăng xác suất (probability / 확률), không quyết định destiny.
 
 ## Precipitating factor
 
-Một event có thể làm symptom bắt đầu hoặc tăng mạnh:
+Một sự kiện (event / 이벤트) có thể làm symptom bắt đầu hoặc tăng mạnh:
 
 - breakup;
-- job loss;
+- job mất mát (loss / 손실);
 - infection;
 - sleep disruption;
 - trauma;
@@ -135,22 +138,22 @@ Không phải disorder nào cũng có trigger rõ.
 
 ## Perpetuating factor
 
-Mechanism duy trì thường là target treatment:
+Cơ chế (mechanism / 메커니즘) duy trì thường là mục tiêu (target / 대상) treatment:
 
 - avoidance giảm anxiety ngắn hạn nhưng giữ fear;
 - irregular sleep giữ insomnia;
-- reassurance seeking giữ uncertainty;
-- social withdrawal giảm positive reinforcement.
+- reassurance seeking giữ bất định (uncertainty / 불확실성);
+- xã hội (social / 사회적) withdrawal giảm positive reinforcement.
 
 ## Protective factor
 
-Protective factor gồm support, stable housing, coping skill, treatment access, meaning, financial resource và healthy routine.
+Protective factor gồm hỗ trợ (support / 지원), stable housing, coping skill, treatment truy cập (access / 접근), meaning, financial tài nguyên (resource / 자원) và healthy routine.
 
-Clinical assessment không nên chỉ catalog risk; strength cũng ảnh hưởng prognosis.
+Clinical assessment không nên chỉ danh mục (catalog / 카탈로그) rủi ro (risk / 위험); strength cũng ảnh hưởng prognosis.
 
-## Biopsychosocial model
+## Biopsychosocial mô hình (model / 모델)
 
-Một mental health problem hiếm khi được giải thích đủ bằng một tầng.
+Một mental health bài toán (problem / 문제) hiếm khi được giải thích đủ bằng một tầng.
 
 ```text
 sinh học
@@ -160,21 +163,21 @@ sinh học
  + physical environment
 ```
 
-Ví dụ depression có thể liên quan genetic liability, reward learning, negative cognition, isolation, chronic pain và economic stress cùng lúc.
+Ví dụ depression có thể liên quan genetic liability, reward học tập (learning / 학습), negative cognition, isolation, chronic pain và economic stress cùng lúc.
 
-Biopsychosocial không có nghĩa mọi factor quan trọng ngang nhau; cần evidence để xác định mechanism chính.
+Biopsychosocial không có nghĩa mọi factor quan trọng ngang nhau; cần bằng chứng (evidence / 증거) để xác định cơ chế (mechanism / 메커니즘) chính.
 
 ## Diathesis–stress
 
-**Mô hình dễ tổn thương–stress (diathesis–stress)** mô tả risk như interaction giữa vulnerability và stressor.
+**Mô hình dễ tổn thương–stress (diathesis–stress)** mô tả rủi ro (risk / 위험) như tương tác (interaction / 상호작용) giữa vulnerability và stressor.
 
-Cùng event có thể tạo outcome khác vì baseline vulnerability khác.
+Cùng sự kiện (event / 이벤트) có thể tạo kết quả (outcome / 결과) khác vì baseline vulnerability khác.
 
-Ngược lại, cùng vulnerability có thể không biểu hiện nếu environment protective.
+Ngược lại, cùng vulnerability có thể không biểu hiện nếu môi trường (environment / 환경) protective.
 
 ## Developmental psychopathology
 
-Risk thay đổi theo development. Cùng behavior có meaning khác ở age khác.
+Rủi ro (risk / 위험) thay đổi theo development. Cùng hành vi (behavior / 동작) có meaning khác ở age khác.
 
 Tantrum ở toddler thường khác tantrum ở adult. Imaginary play ở child khác hallucination.
 
@@ -186,21 +189,21 @@ Culture ảnh hưởng cách distress được gọi tên, biểu hiện và hel
 
 Một người có thể mô tả depression chủ yếu bằng fatigue hoặc body pain thay vì sadness.
 
-Clinical assessment cần tránh coi Western symptom language là universal.
+Clinical assessment cần tránh coi Western symptom ngôn ngữ (language / 언어) là universal.
 
 ## Stigma
 
 Stigma làm người ta delay care, hide symptom hoặc internalize shame.
 
-Diagnosis có thể giúp một người hiểu experience nhưng cũng có thể trở thành identity rigid nếu bị dùng như toàn bộ self.
+Diagnosis có thể giúp một người hiểu experience nhưng cũng có thể trở thành định danh (identity / 식별자) rigid nếu bị dùng như toàn bộ self.
 
 Ngôn ngữ nên tách person khỏi label: `người đang trải nghiệm psychosis` thường ít reductionist hơn `người tâm thần`.
 
 ## Medical rule-out
 
-Một số medical condition hoặc medication có thể tạo psychiatric-like symptom.
+Một số medical điều kiện (condition / 조건) hoặc medication có thể tạo psychiatric-like symptom.
 
-Thyroid disorder, sleep apnea, neurological condition hoặc substance effect có thể ảnh hưởng mood, anxiety, cognition.
+Thyroid disorder, sleep apnea, neurological điều kiện (condition / 조건) hoặc substance tác động (effect / 효과) có thể ảnh hưởng mood, anxiety, cognition.
 
 Do đó assessment đôi khi cần medical evaluation, không chỉ questionnaire tâm lý.
 
@@ -212,46 +215,46 @@ Timing giữa use và symptom là part của differential diagnosis.
 
 ## Sleep
 
-Sleep disturbance vừa là symptom vừa là risk/perpetuating factor.
+Sleep disturbance vừa là symptom vừa là rủi ro (risk / 위험)/perpetuating factor.
 
-Treating sleep đôi khi cải thiện nhiều domain khác, nhưng không nên assume insomnia là nguyên nhân duy nhất.
+Treating sleep đôi khi cải thiện nhiều lĩnh vực (domain / 도메인) khác, nhưng không nên assume insomnia là nguyên nhân duy nhất.
 
 Xem [[./11_sleep_insomnia_and_circadian_disorders]].
 
-## Risk assessment
+## Rủi ro (risk / 위험) assessment
 
-Khi có suicidal thought, self-harm, severe intoxication, psychosis với nguy cơ hoặc inability care for self, priority chuyển sang safety và professional assessment.
+Khi có suicidal thought, self-harm, severe intoxication, psychosis với nguy cơ hoặc inability care for self, priority chuyển sang an toàn (safety / 안전) và professional assessment.
 
-Risk assessment không chỉ hỏi một câu `có ý định không?`; clinician xem history, current state, access to support, protective factor và change over time.
+Rủi ro (risk / 위험) assessment không chỉ hỏi một câu `có ý định không?`; clinician xem lịch sử (history / 이력), trạng thái hiện tại (current state / 현재 상태), truy cập (access / 접근) to hỗ trợ (support / 지원), protective factor và thay đổi (change / 변경) over thời gian (time / 시간).
 
 Tài liệu học không thay được assessment trực tiếp trong tình huống nguy cơ cao.
 
 ## Self-diagnosis
 
-Online information hữu ích để nhận ra pattern và biết khi nào nên seek help. Nhưng tự check criteria có nhiều giới hạn:
+Online thông tin (information / 정보) hữu ích để nhận ra mẫu (pattern / 패턴) và biết khi nào nên seek help. Nhưng tự check criteria có nhiều giới hạn:
 
-- confirmation bias;
+- confirmation độ lệch (bias / 편향);
 - symptom overlap;
 - bỏ medical cause;
 - không đánh giá impairment tốt;
-- không có collateral information;
+- không có collateral thông tin (information / 정보);
 - label có thể tăng anxiety.
 
-Use tốt nhất của knowledge là tạo câu hỏi tốt hơn cho clinician, không thay clinician.
+Use tốt nhất của kiến thức (knowledge / 지식) là tạo câu hỏi tốt hơn cho clinician, không thay clinician.
 
 ## Measurement-based care
 
-Clinical work có thể dùng standardized scale để theo dõi symptom qua thời gian.
+Clinical công việc (work / 작업) có thể dùng standardized quy mô (scale / 규모) để theo dõi symptom qua thời gian.
 
-Scale hữu ích cho trend nhưng không phải diagnosis tự động.
+Quy mô (scale / 규모) hữu ích cho trend nhưng không phải diagnosis tự động.
 
-Điểm giảm 5 units có meaning chỉ khi scale reliable và clinically interpretable.
+Điểm giảm 5 units có meaning chỉ khi quy mô (scale / 규모) reliable và clinically interpretable.
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-## Recovery
+## Khôi phục (recovery / 복구)
 
-Recovery không nhất thiết bằng zero symptom. Với chronic condition, recovery có thể nghĩa function tốt, relationship ổn, symptom manageable và life có meaning.
+Khôi phục (recovery / 복구) không nhất thiết bằng zero symptom. Với chronic điều kiện (condition / 조건), khôi phục (recovery / 복구) có thể nghĩa hàm (function / 함수) tốt, relationship ổn, symptom manageable và life có meaning.
 
 Cách nhìn recovery-oriented tránh coi person chỉ là collection of symptom.
 
@@ -260,26 +263,26 @@ Cách nhìn recovery-oriented tránh coi person chỉ là collection of symptom.
 Mental health prevention có nhiều tầng:
 
 - universal: cho toàn population;
-- selective: nhóm risk cao;
+- selective: nhóm rủi ro (risk / 위험) cao;
 - indicated: người đã có early symptom nhưng chưa full disorder.
 
-Prevention cần cân benefit, cost và risk overmedicalization.
+Prevention cần cân benefit, chi phí (cost / 비용) và rủi ro (risk / 위험) overmedicalization.
 
 ## Những hiểu lầm phổ biến
 
-**“Có symptom nghĩa là có disorder.”** Diagnosis cần pattern, duration, impairment và differential.
+**“Có symptom nghĩa là có disorder.”** Diagnosis cần mẫu (pattern / 패턴), duration, impairment và differential.
 
 **“Mental disorder chỉ là chemical imbalance.”** Cách giải thích đó quá đơn giản.
 
-**“Nếu scan bình thường thì symptom chỉ do tưởng tượng.”** Functional và psychological mechanism vẫn tạo symptom thật.
+**“Nếu scan bình thường thì symptom chỉ do tưởng tượng.”** Functional và psychological cơ chế (mechanism / 메커니즘) vẫn tạo symptom thật.
 
-**“Diagnosis giải thích toàn bộ con người.”** Diagnosis là một layer trong formulation.
+**“Diagnosis giải thích toàn bộ con người.”** Diagnosis là một tầng (layer / 계층) trong formulation.
 
-**“Strong person không bị mental illness.”** Risk không phải thước đo character.
+**“Strong person không bị mental illness.”** rủi ro (risk / 위험) không phải thước đo character.
 
 ## Mô hình tư duy
 
-> Clinical psychology tốt không hỏi chỉ “bạn có label gì?”, mà hỏi “pattern nào đang xảy ra, cơ chế nào duy trì nó, impairment ở đâu, risk thế nào và điều gì có thể thay đổi?”.
+> Clinical psychology tốt không hỏi chỉ “bạn có label gì?”, mà hỏi “mẫu (pattern / 패턴) nào đang xảy ra, cơ chế nào duy trì nó, impairment ở đâu, rủi ro (risk / 위험) thế nào và điều gì có thể thay đổi?”.
 
 ## Kết nối kiến thức
 
@@ -288,4 +291,6 @@ Xem [[01_assessment_and_diagnosis]], [[./12_developmental_psychopathology_risk_a
 ## Nguồn định hướng
 
 - World Health Organization, *Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders* (2024).
-- American Psychiatric Association, *DSM-5-TR* và các bản cập nhật criteria/text công bố đến 2025.
+- American Psychiatric Association, *DSM-5-TR* và các bản cập nhật criteria/văn bản (text / 텍스트) công bố đến 2025.
+
+> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 assessment and diagnosis](./01_assessment_and_diagnosis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

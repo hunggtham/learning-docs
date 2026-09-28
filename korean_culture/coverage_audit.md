@@ -1,6 +1,9 @@
 # Korean Culture — Kiểm toán chất lượng toàn bộ thư viện
 
-> Tài liệu này kiểm tra **chất lượng tổng thể** của `korean_culture/01–33`. Thư mục `kiip/` không thuộc phạm vi kiểm toán. Mục tiêu không phải làm từng file dài hơn, mà bảo đảm bộ sách **đủ rộng, đủ sâu, liền mạch, ít trùng lặp, nhất quán về ngôn ngữ, có nguồn phù hợp và dễ học lâu dài**.
+> **Mạch đọc:** Đặt **Korean Culture — Kiểm toán chất lượng toàn bộ thư viện** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kết luận tổng thể** sang **Đánh giá hiện tại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Tài liệu này kiểm tra **chất lượng tổng thể** của `korean_culture/01–33`. Thư mục `kiip/` không thuộc phạm vi kiểm toán. Mục tiêu không phải làm từng tệp (file / 파일) dài hơn, mà bảo đảm bộ sách **đủ rộng, đủ sâu, liền mạch, ít trùng lặp, nhất quán về ngôn ngữ, có nguồn phù hợp và dễ học lâu dài**.
 
 ## 1. Kết luận tổng thể
 
@@ -28,13 +31,16 @@ Các chapter nền tảng còn bổ sung **đo lường** và **phản thực t�
 |---|---|---|
 | Phạm vi kiến thức | Rất tốt | Không còn thiếu một mảng đời sống lớn cần tách thành chapter mới |
 | Độ sâu cơ chế | Rất tốt | Phần lớn chapter đã có nguyên nhân, cơ chế, đánh đổi, ngoại lệ và điểm thất bại |
-| Tính liền mạch | Tốt–rất tốt | Logic tốt; một số chapter dài có mật độ mục nhỏ cao |
+| Tính liền mạch | Tốt–rất tốt | lô-gic (logic / 논리) tốt; một số chapter dài có mật độ mục nhỏ cao |
 | Trùng lặp | Tốt | Phần lớn lặp lại có chủ đích; cần tiếp tục giữ ranh giới giữa các chapter giao nhau |
-| Ngôn ngữ Việt–Hàn–Anh | Rất tốt sau vòng audit | Các lỗi pha ngôn ngữ rõ đã được sửa; vẫn cần duy trì quy tắc Việt-first khi thêm nội dung mới |
+| Ngôn ngữ Việt–Hàn–Anh | Rất tốt sau vòng kiểm tra (audit / 감사) | Các lỗi pha ngôn ngữ rõ đã được sửa; vẫn cần duy trì quy tắc Việt-first khi thêm nội dung mới |
 | Thuật ngữ | Tốt–rất tốt | `17_glossary...` đã mạnh; cần đồng bộ sau mỗi vòng thêm khái niệm |
 | Nguồn và độ mới | Tốt | Dữ liệu nhạy theo thời gian thường có mốc; cách trình bày nguồn giữa chapter chưa hoàn toàn đồng đều |
 | Liên kết chéo | Rất tốt | `00`, `16`, `17` tạo được đồ thị kiến thức; ranh giới chapter đã khá rõ |
 | Khả năng học lâu dài | Rất tốt | Đủ sâu để đọc như sách; vòng tiếp theo nên tối ưu khả năng đọc thay vì tăng chiều dài |
+
+
+> **Chuyển mạch:** Từ **1. Kết luận tổng thể**, ta sang **2. Chuẩn chất lượng của một chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Chuẩn chất lượng của một chapter
 
@@ -56,6 +62,9 @@ Một chapter được xem là hoàn chỉnh khi người đọc trả lời đ�
 ```
 
 Một chapter đạt chất lượng cao khi người đọc có thể dùng mô hình đó để phân tích tình huống mới, thay vì chỉ nhắc lại ví dụ trong sách.
+
+
+> **Chuyển mạch:** Từ **2. Chuẩn chất lượng của một chapter**, ta sang **3. Đánh giá theo nhóm chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Đánh giá theo nhóm chapter
 
@@ -130,6 +139,9 @@ Ranh giới nên duy trì:
 
 `25` có khung phân tích trung tính về xã hội dân sự, truyền thông, tập hội, biểu tình và không gian công luận. Vì có yếu tố chính trị–pháp lý, đây là chapter cần kỷ luật nguồn cao nhất: dữ kiện hiện hành, quyền pháp lý, cơ quan, chính sách và sự kiện mới phải được kiểm tra trước khi cập nhật.
 
+
+> **Chuyển mạch:** Từ **3. Đánh giá theo nhóm chapter**, ta sang **4. Trùng lặp: lặp có ích và lặp cần tránh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. Trùng lặp: lặp có ích và lặp cần tránh
 
 Không phải mọi lặp lại đều xấu. Các khái niệm xuyên hệ thống như **bất cân xứng thông tin**, **khả năng chống chịu**, **tác động ngoại biên**, **điểm nghẽn** hay **vòng phản hồi** cần xuất hiện ở nhiều chapter để người đọc thấy khả năng chuyển giao.
@@ -156,6 +168,9 @@ Các vùng giao nhau cần kiểm soát nhất:
 | `19` ↔ `26` | văn hoá làm đẹp ↔ y khoa/sức khoẻ |
 | `15` ↔ `29` | cấu trúc dân số ↔ cơ chế chăm sóc cấp hộ |
 
+
+> **Chuyển mạch:** Từ **4. Trùng lặp: lặp có ích và lặp cần tránh**, ta sang **5. Chất lượng sư phạm và tải nhận thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 5. Chất lượng sư phạm và tải nhận thức
 
 Các ví dụ kỹ thuật giúp người đọc có nền IT chuyển mô hình nhanh sang lĩnh vực văn hoá. Đây là điểm mạnh, nhưng không nên để ẩn dụ kỹ thuật thay thế chính hiện tượng văn hoá.
@@ -180,7 +195,10 @@ Một vấn đề còn đáng theo dõi là **mật độ tiêu đề phụ**. `
 
 thay vì tiếp tục sinh tiêu đề.
 
-## 6. Các lỗi biên tập đã xử lý trong vòng quality audit này
+
+> **Chuyển mạch:** Từ **5. Chất lượng sư phạm và tải nhận thức**, ta sang **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này
 
 Các lỗi chắc chắn được phát hiện khi kiểm toán đã được sửa trực tiếp:
 
@@ -203,6 +221,9 @@ thương hiệu / tên thể loại / thuật ngữ đã cố định → có th
 ```
 
 Mục tiêu là **văn xuôi tiếng Việt tự nhiên**, không phải tỷ lệ 0% từ tiếng Anh.
+
+
+> **Chuyển mạch:** Từ **6. Các lỗi biên tập đã xử lý trong vòng chất lượng (quality / 품질) kiểm tra (audit / 감사) này**, ta sang **7. Chính sách nguồn nên được giữ thống nhất** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Chính sách nguồn nên được giữ thống nhất
 
@@ -235,6 +256,9 @@ sự kiện được xác nhận
 
 Khi một quy tắc thực tế có thể thay đổi, tài liệu nên hướng người đọc tới cơ quan có thẩm quyền thay vì đóng băng con số trong sách.
 
+
+> **Chuyển mạch:** Từ **7. Chính sách nguồn nên được giữ thống nhất**, ta sang **8. Chính sách độ mới của dữ liệu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 8. Chính sách độ mới của dữ liệu
 
 - số liệu dân số phải có **năm dữ liệu**;
@@ -247,6 +271,9 @@ Khi một quy tắc thực tế có thể thay đổi, tài liệu nên hướng
 - điều khoản hợp đồng và quyền sở hữu trí tuệ cụ thể phải kiểm tra theo luật/hợp đồng hiện hành;
 - số liệu khí hậu phải có địa điểm, giai đoạn quan sát và nguồn;
 - quy tắc rác, trường học, căn hộ, childcare và dịch vụ phải phân biệt cấp quốc gia, cấp địa phương, quy tắc tổ chức và chuẩn mực không chính thức.
+
+
+> **Chuyển mạch:** Từ **8. Chính sách độ mới của dữ liệu**, ta sang **9. Liên kết chéo cần giữ ổn định** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 9. Liên kết chéo cần giữ ổn định
 
@@ -272,9 +299,12 @@ Khi một quy tắc thực tế có thể thay đổi, tài liệu nên hướng
 31 Căn hộ ↔ 32 Khí hậu ↔ 15 Già hoá ↔ 26 Sức khoẻ
 ```
 
+
+> **Chuyển mạch:** Từ **9. Liên kết chéo cần giữ ổn định**, ta sang **10. Hướng phát triển tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 10. Hướng phát triển tiếp theo
 
-Sau quality audit, **không nên tiếp tục mở rộng theo chiều ngang chỉ để tăng số lượng nội dung**. Lợi ích lớn nhất của các vòng kế tiếp đến từ biên tập và bảo trì:
+Sau chất lượng (quality / 품질) kiểm tra (audit / 감사), **không nên tiếp tục mở rộng theo chiều ngang chỉ để tăng số lượng nội dung**. Lợi ích lớn nhất của các vòng kế tiếp đến từ biên tập và bảo trì:
 
 ```text
 1. kiểm tra link Markdown bị hỏng
@@ -287,6 +317,8 @@ Sau quality audit, **không nên tiếp tục mở rộng theo chiều ngang ch�
 8. chỉ thêm kiến thức mới khi audit tìm thấy khoảng trống thật
 ```
 
-Trạng thái mục tiêu của Master Knowledge Book không phải “file càng dài càng tốt”, mà là:
+Trạng thái mục tiêu của Master kiến thức (knowledge / 지식) Book không phải “tệp (file / 파일) càng dài càng tốt”, mà là:
 
 > **phạm vi đủ rộng + cơ chế đủ sâu + văn xuôi liền mạch + thuật ngữ nhất quán + nguồn có thể kiểm tra + ít trùng lặp + đường học rõ ràng.**
+
+> **Bàn giao:** Sau **10. Hướng phát triển tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

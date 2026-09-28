@@ -1,10 +1,16 @@
 # Từ trường, lực Lorentz, cảm ứng điện từ và độ tự cảm
 
+> **Mạch đọc:** Đọc **Từ trường, lực Lorentz, cảm ứng điện từ và độ tự cảm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao từ tính không tách rời khỏi điện?** sang **Lực Lorentz (Lorentz force)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao từ tính không tách rời khỏi điện?
 
 Điện và từ từng được nghiên cứu như hai nhóm hiện tượng riêng. Lý thuyết Maxwell cho thấy chúng là hai mặt của cùng một trường điện từ (electromagnetic field). Thuyết tương đối hẹp còn làm mối liên hệ này sâu hơn: những người quan sát chuyển động tương đối với nhau có thể phân tách cùng một trường điện từ thành các thành phần điện và từ khác nhau.
 
 Từ trường (Magnetic Field / 자기장) được ký hiệu `\vec B`, có đơn vị SI là tesla `T`.
+
+
+> **Chuyển mạch:** Từ **Vì sao từ tính không tách rời khỏi điện?**, ta sang **Lực Lorentz (Lorentz force)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lực Lorentz (Lorentz force)
 
@@ -34,6 +40,9 @@ Lực từ luôn vuông góc với vận tốc khi chỉ có từ trường, vì
 
 Do công suất cơ học thỏa `P=\vec F\cdot\vec v`, bản thân lực từ không sinh công lên một điện tích điểm. Nó có thể đổi hướng chuyển động nhưng không trực tiếp làm thay đổi độ lớn vận tốc trong trường hợp lý tưởng.
 
+
+> **Chuyển mạch:** Từ **Lực Lorentz (Lorentz force)**, ta sang **Hạt mang điện trong từ trường đều** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Hạt mang điện trong từ trường đều
 
 Nếu `\vec v\perp\vec B`, lực từ đóng vai trò lực hướng tâm:
@@ -50,6 +59,9 @@ r=\frac{mv}{|q|B}=\frac{p}{|q|B}.
 
 Quan hệ này cho thấy bán kính quỹ đạo phụ thuộc động lượng trên điện tích. Máy quang phổ khối (mass spectrometer) dùng độ cong quỹ đạo để suy ra tỉ số khối lượng trên điện tích. Trong các máy va chạm hạt, detector cũng có thể tái dựng động lượng của hạt từ độ cong của vết hạt trong từ trường.
 
+
+> **Chuyển mạch:** Từ **Hạt mang điện trong từ trường đều**, ta sang **Lực từ tác dụng lên dây dẫn có dòng điện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lực từ tác dụng lên dây dẫn có dòng điện
 
 Một đoạn dây dẫn có dòng điện chịu lực
@@ -61,6 +73,9 @@ Một đoạn dây dẫn có dòng điện chịu lực
 Ở cấp vi mô, lực này là tổng lực Lorentz tác dụng lên các hạt tải điện đang chuyển động trong dây.
 
 Động cơ điện (electric motor) khai thác lực và mômen lực tác dụng lên các dây dẫn có dòng điện để biến đổi năng lượng điện thành cơ năng.
+
+
+> **Chuyển mạch:** Từ **Lực từ tác dụng lên dây dẫn có dòng điện**, ta sang **Nguồn của từ trường** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nguồn của từ trường
 
@@ -78,6 +93,9 @@ Khi hệ có đối xứng thích hợp, định luật Ampère (Ampère's law) 
 
 Biểu thức trên áp dụng trực tiếp trong từ tĩnh học (magnetostatics). Với điện trường biến thiên theo thời gian, Maxwell bổ sung dòng điện dịch (displacement current), tạo thành định luật Ampère–Maxwell đầy đủ.
 
+
+> **Chuyển mạch:** Từ **Nguồn của từ trường**, ta sang **Vì sao các đường sức từ tạo thành vòng kín?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Vì sao các đường sức từ tạo thành vòng kín?
 
 Định luật Gauss cho từ trường (Gauss's law for magnetism) viết
@@ -93,6 +111,9 @@ hay ở dạng vi phân
 ```
 
 Trong điện từ học cổ điển và trong các quan sát hiện nay, chưa phát hiện đơn cực từ (magnetic monopole) cô lập. Vì vậy các đường sức từ không bắt đầu hay kết thúc tại một “điện tích từ” đơn lẻ mà tạo thành các vòng kín.
+
+
+> **Chuyển mạch:** Từ **Vì sao các đường sức từ tạo thành vòng kín?**, ta sang **Cảm ứng điện từ Faraday** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cảm ứng điện từ Faraday
 
@@ -128,6 +149,9 @@ Nhưng từ trường biến thiên theo thời gian tạo ra điện trường 
 
 Điện trường cảm ứng vì thế có tuần hoàn và nói chung không thể được mô tả toàn cục chỉ bằng một điện thế vô hướng đơn trị như trong bài toán điện tĩnh đơn giản.
 
+
+> **Chuyển mạch:** Từ **Cảm ứng điện từ Faraday**, ta sang **Độ tự cảm (inductance)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Độ tự cảm (inductance)
 
 Cuộn cảm (inductor / 인덕터) chống lại sự biến thiên dòng điện bằng suất điện động cảm ứng. Với một cuộn cảm lý tưởng:
@@ -149,6 +173,9 @@ Mật độ năng lượng từ trong chân không là
 ```math
 u_B=\frac{B^2}{2\mu_0}.
 ```
+
+
+> **Chuyển mạch:** Từ **Độ tự cảm (inductance)**, ta sang **Máy biến áp (transformer)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Máy biến áp (transformer)
 
@@ -172,11 +199,17 @@ P_{loss}=I^2R,
 
 việc giảm dòng điện làm giảm mạnh tổn hao nhiệt. Đây là lý do lưới điện sử dụng máy biến áp để nâng điện áp khi truyền tải xa rồi hạ điện áp trước khi phân phối cho người dùng.
 
-## Mô hình tư duy (Mental Model)
+
+> **Chuyển mạch:** Từ **Máy biến áp (transformer)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Từ trường không trực tiếp sinh công lên một điện tích điểm vì lực từ vuông góc với vận tốc, nhưng nó có thể đổi hướng chuyển động và truyền lực cho dây dẫn, nam châm hay cấu trúc vật chất khác. Cảm ứng điện từ bổ sung nửa còn lại của bức tranh: từ trường biến thiên tạo ra điện trường có tính tuần hoàn.
 
 Vì vậy điện và từ không phải hai chủ đề ghép lại một cách tình cờ. Chúng là hai thành phần liên kết của trường điện từ, và các phương trình Maxwell mô tả cách điện tích, dòng điện, điện trường và từ trường ràng buộc lẫn nhau.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Những ngộ nhận thường gặp (Common Misconceptions)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -192,8 +225,13 @@ Không chính xác. Hệ cảm ứng chống lại **sự biến thiên từ th�
 
 Không. Máy biến áp lý tưởng tăng điện áp bằng cách giảm dòng điện tương ứng để công suất đầu vào và đầu ra gần bằng nhau. Máy thực còn có thêm tổn hao.
 
-## Liên kết kiến thức (Knowledge Connection)
+
+> **Chuyển mạch:** Từ **Những ngộ nhận thường gặp (Common Misconceptions)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Điện tĩnh học](00_electrostatics.md).
 
 **Liên hệ tiếp:** [Các phương trình Maxwell và sóng điện từ](04_maxwell_em_waves.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

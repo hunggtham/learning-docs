@@ -1,5 +1,8 @@
 # Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý
 
+> **Mạch đọc:** Đọc **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cường độ riêng và thông lượng** sang **Vì sao cường độ riêng quan trọng?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Vật lý thiên văn khác nhiều nhánh Vật lý trong phòng thí nghiệm ở một điểm cơ bản: ta thường không thể trực tiếp điều khiển hệ đang nghiên cứu. Ta không thể thay đổi nhiệt độ của một ngôi sao rồi đo lại, cũng không thể đặt một thiên hà vào thiết bị thử nghiệm khác.
 
 Thay vào đó, ta nhận tín hiệu từ xa rồi giải bài toán ngược:
@@ -73,7 +76,7 @@ thường viết chính xác hơn là
 
 trong đó `\alpha_\nu` là hệ số hấp thụ và `j_\nu` là hệ số phát xạ.
 
-Định nghĩa **source function**
+Định nghĩa **nguồn (source / 소스) hàm (function / 함수)**
 
 ```math
 S_\nu=\frac{j_\nu}{\alpha_\nu}
@@ -141,7 +144,7 @@ Nếu `\tau\gg1`,
 I_\nu\rightarrow S_\nu.
 ```
 
-Ở môi trường cân bằng nhiệt cục bộ, source function tiến gần hàm Planck, nên vật quang học dày có phổ gần vật đen.
+Ở môi trường cân bằng nhiệt cục bộ, nguồn (source / 소스) hàm (function / 함수) tiến gần hàm Planck, nên vật quang học dày có phổ gần vật đen.
 
 ## Vật đen và định luật Planck
 
@@ -309,12 +312,12 @@ Tuy nhiên từ mặt đất, seeing khí quyển thường làm ảnh mờ hơn
 Detector chuyển photon thành electron hoặc tín hiệu điện tử. Một phép đo ảnh thường chịu nhiều nguồn nhiễu:
 
 - photon shot noise;
-- dark current;
+- dark hiện tại (current / 현재);
 - read noise;
 - background sky;
-- flat-field error;
+- flat-field lỗi (error / 오류);
 - cosmic rays;
-- calibration uncertainty.
+- calibration bất định (uncertainty / 불확실성).
 
 Nếu số photon nguồn là `N`, shot noise lý tưởng có độ lệch chuẩn gần
 
@@ -336,10 +339,10 @@ Tăng exposure giúp khi noise ngẫu nhiên chi phối. Nhưng nó không tự 
 
 - saturation;
 - cosmic-ray contamination;
-- systematic calibration error;
+- systematic calibration lỗi (error / 오류);
 - background modelling sai;
-- source variability;
-- tracking error.
+- nguồn (source / 소스) variability;
+- tracking lỗi (error / 오류).
 
 Giống mọi thí nghiệm, nhiều dữ liệu không tự động loại sai số hệ thống.
 
@@ -379,7 +382,7 @@ Redshift được định nghĩa
 \frac{\lambda_{obs}}{\lambda_{emit}}.
 ```
 
-Ở vận tốc nhỏ trong không gian phẳng, redshift có thể gần Doppler. Nhưng ở vũ trụ học, redshift lớn được hiểu đúng hơn từ sự giãn nở của metric không-thời gian.
+Ở vận tốc nhỏ trong không gian phẳng, redshift có thể gần Doppler. Nhưng ở vũ trụ học, redshift lớn được hiểu đúng hơn từ sự giãn nở của chỉ số (metric / 지표) không-thời gian.
 
 Do đó không nên luôn diễn giải `z` như “thiên hà bay xuyên không gian với vận tốc `cz`”. Xấp xỉ
 
@@ -395,13 +398,13 @@ Khi nguồn ở redshift lớn, cùng một filter quan sát tương ứng với
 
 Do đó so sánh luminosity giữa các nguồn ở redshift khác nhau cần hiệu chỉnh phổ và bandpass, thường gọi là **K-correction**.
 
-Đây là một ví dụ cho thấy dữ liệu detector không thể được diễn giải tách rời mô hình spectral energy distribution của nguồn.
+Đây là một ví dụ cho thấy dữ liệu detector không thể được diễn giải tách rời mô hình spectral năng lượng (energy / 에너지) phân phối (distribution / 분포) của nguồn.
 
-## Selection effect
+## Selection tác động (effect / 효과)
 
 Một survey giới hạn thông lượng sẽ dễ phát hiện vật sáng hơn ở khoảng cách lớn. Vì vậy mẫu quan sát không phải một mẫu ngẫu nhiên đơn giản của toàn bộ quần thể.
 
-Nếu không mô hình selection function, ta có thể suy ra sai phân bố luminosity, khối lượng hoặc tốc độ tiến hóa của quần thể.
+Nếu không mô hình selection hàm (function / 함수), ta có thể suy ra sai phân bố luminosity, khối lượng hoặc tốc độ tiến hóa của quần thể.
 
 Đây là vấn đề chung của khoa học dữ liệu: quá trình thu thập dữ liệu là một phần của mô hình xác suất.
 
@@ -432,7 +435,7 @@ P(\theta|D)
 P(D|\theta)P(\theta).
 ```
 
-Posterior không chỉ phụ thuộc dữ liệu mà còn phụ thuộc likelihood và prior. Vì vậy khi hai phân tích dùng prior hoặc noise model khác nhau, kết quả có thể khác dù dùng cùng dữ liệu.
+Posterior không chỉ phụ thuộc dữ liệu mà còn phụ thuộc likelihood và prior. Vì vậy khi hai phân tích dùng prior hoặc noise mô hình (model / 모델) khác nhau, kết quả có thể khác dù dùng cùng dữ liệu.
 
 ## Suy biến tham số
 
@@ -471,9 +474,9 @@ Ngoài photon, thiên văn học hiện đại còn dùng:
 
 Một sự kiện được quan sát bằng nhiều messenger có thể phá các suy biến mà từng kênh riêng không giải quyết được.
 
-Ví dụ sóng hấp dẫn cho trực tiếp thông tin động lực học compact binary, trong khi counterpart điện từ có thể cho môi trường, redshift hoặc nucleosynthesis.
+Ví dụ sóng hấp dẫn cho trực tiếp thông tin động lực học compact nhị phân (binary / 이진), trong khi counterpart điện từ có thể cho môi trường, redshift hoặc nucleosynthesis.
 
-## Worked reasoning: suy nhiệt độ và bán kính sao
+## Worked lập luận (reasoning / 추론): suy nhiệt độ và bán kính sao
 
 Giả sử phổ gần vật đen cho nhiệt độ hiệu dụng `T`, còn parallax cho khoảng cách `d` và photometry cho bolometric flux `F`.
 
@@ -513,21 +516,21 @@ Nếu extinction hoặc blackbody approximation sai, bán kính suy ra cũng b�
 
 ### “Ảnh thiên văn là hình chụp trực tiếp của vật thể như mắt người thấy”
 
-Không nhất thiết. Nhiều ảnh là tổ hợp nhiều filter, bước sóng ngoài vùng nhìn thấy hoặc dữ liệu đã qua calibration và mapping màu.
+Không nhất thiết. Nhiều ảnh là tổ hợp nhiều filter, bước sóng ngoài vùng nhìn thấy hoặc dữ liệu đã qua calibration và ánh xạ (mapping / 매핑) màu.
 
 ### “Vạch phổ cho trực tiếp thành phần hóa học”
 
-Không hoàn toàn. Cường độ vạch còn phụ thuộc nhiệt độ, ion hóa, mật độ, transfer và geometry.
+Không hoàn toàn. Cường độ vạch còn phụ thuộc nhiệt độ, ion hóa, mật độ, transfer và hình học (geometry / 기하학).
 
 ### “Đo lâu hơn luôn cho kết quả đúng hơn”
 
-Đo lâu hơn giảm một số noise thống kê nhưng không tự loại systematic error và model bias.
+Đo lâu hơn giảm một số noise thống kê nhưng không tự loại systematic lỗi (error / 오류) và mô hình (model / 모델) độ lệch (bias / 편향).
 
 ### “Redshift luôn bằng vận tốc chia cho `c`”
 
 Chỉ là xấp xỉ redshift nhỏ. Ở vũ trụ học, redshift gắn với sự giãn nở không-thời gian.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Thiên văn học quan sát là một bài toán suy luận nhiều tầng. Photon không mang theo nhãn “nhiệt độ = 6000 K” hay “khối lượng = 1 M☉”. Ta phải xây mô hình cho nguồn, truyền bức xạ, instrument và noise rồi mới suy tham số.
 
@@ -538,8 +541,10 @@ Vì vậy một kết quả thiên văn tốt nên luôn trả lời bốn câu 
 3. Nguồn noise và systematic nào chi phối?
 4. Tham số nào thực sự được dữ liệu ràng buộc và tham số nào còn suy biến?
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Photon, laser và coherence](../06_optics/02_photons_lasers_coherence.md), [Vật lý thực nghiệm](../12_experimental_computational/00_measurement_experiment.md), [Bài toán ngược](../12_experimental_computational/02_computational_physics.md).
 
 **Liên hệ tiếp:** [Vật lý sao và thiên thể đặc](00_stars_compact_objects.md), [Thiên hà và vũ trụ học](01_galaxies_cosmology.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 stars compact objects](./00_stars_compact_objects.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

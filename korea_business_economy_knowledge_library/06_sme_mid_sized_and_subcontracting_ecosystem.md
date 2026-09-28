@@ -1,5 +1,8 @@
 # SME, doanh nghiệp trung bình và hệ sinh thái thầu phụ (중소기업·중견기업·하도급 생태계)
 
+> **Mạch đọc:** Đặt **SME, doanh nghiệp trung bình và hệ sinh thái thầu phụ (중소기업·중견기업·하도급 생태계)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao quy mô doanh nghiệp tạo ra cấu trúc kinh tế khác nhau?** sang **Phân loại SME và doanh nghiệp trung bình không chỉ là tên gọi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nếu chaebol là phần dễ nhìn thấy nhất của kinh tế Hàn Quốc thì **doanh nghiệp vừa và nhỏ (SME / 중소기업)** mới là khu vực chiếm phần lớn số doanh nghiệp và việc làm. Theo thống kê cơ bản năm 2024 được công bố năm 2026, SME chiếm khoảng **99,9% số doanh nghiệp, 80,4% người lao động và 43,7% doanh thu doanh nghiệp**. Vì vậy khi nghiên cứu thị trường lao động, mạng lưới nhà cung cấp, kinh tế địa phương hoặc cơ hội nghề nghiệp tại Hàn Quốc, bỏ qua SME đồng nghĩa bỏ qua phần lớn nền kinh tế thực.
 
 SME không đơn giản là “phiên bản nhỏ hơn của chaebol”. Cấu trúc kinh tế của một công ty 50 người khác rất xa một tập đoàn có hàng chục công ty thành viên. Khác biệt nằm ở khả năng tiếp cận vốn, mức tập trung khách hàng, quyền thương lượng, chiều sâu quản lý, mức trưởng thành của quy trình, khả năng chịu rủi ro và khả năng phân bổ chi phí cố định trên quy mô lớn.
@@ -112,7 +115,7 @@ Năng lực quản lý và số hóa yếu
 Năng suất tiếp tục thấp
 ```
 
-Đây là **vòng phản hồi (feedback loop)** chứ không phải lỗi của riêng người lao động hay chủ doanh nghiệp.
+Đây là **vòng phản hồi (feedback loop / 피드백 루프)** chứ không phải lỗi của riêng người lao động hay chủ doanh nghiệp.
 
 Doanh nghiệp lớn có thể trả lương cao hơn, tuyển người tốt hơn, đầu tư đào tạo nhiều hơn và tiếp tục nâng năng suất. SME yếu có thể bị mắc kẹt ở trạng thái cân bằng thấp.
 
@@ -182,7 +185,7 @@ Một kỹ sư ở doanh nghiệp chuyên môn hóa có thể hiểu toàn bộ 
 
 Vì vậy khi đánh giá nơi làm việc, nên nhìn **chất lượng hệ thống công việc (quality of work system)** chứ không chỉ quy mô công ty.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Hệ sinh thái SME là hệ thống truyền **nhu cầu, công nghệ, vốn và việc làm** từ doanh nghiệp lớn và người tiêu dùng xuống toàn nền kinh tế. Vấn đề trung tâm không phải có nhiều hay ít SME, mà là bao nhiêu doanh nghiệp có thể đi từ **phụ thuộc → tích lũy năng lực → mở rộng → năng suất cao hơn**.
 
@@ -221,3 +224,5 @@ Mở rộng quy mô
 - KDI, nghiên cứu về phát triển SME tại Hàn Quốc.
 
 Đọc cùng [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) và các chapter ngành `14–16`.
+
+> **Bàn giao:** Sau **Nguồn và liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

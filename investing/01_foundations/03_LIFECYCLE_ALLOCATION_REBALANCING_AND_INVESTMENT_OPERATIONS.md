@@ -1,5 +1,8 @@
 # Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục
 
+> **Mạch đọc:** Đặt **Đầu tư theo vòng đời, tái cân bằng và vận hành danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Danh mục đầu tư chỉ là một phần của bảng cân đối cá nhân** sang **2. Vốn con người**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Xây danh mục không kết thúc ở việc chọn tỷ trọng cổ phiếu và trái phiếu. Một kế hoạch đầu tư phải sống cùng con người qua nhiều giai đoạn nghề nghiệp, thay đổi thu nhập, nợ, nhà ở, gia đình, thuế và nhu cầu thanh khoản. Chương này chuyển lý thuyết phân bổ tài sản thành hệ thống vận hành thực tế.
 
 ## 1. Danh mục đầu tư chỉ là một phần của bảng cân đối cá nhân
@@ -235,7 +238,7 @@ Thị trường cổ phiếu giảm cùng lúc
 
 Danh mục tốt phải sống cùng bảng cân đối cá nhân trong các trạng thái này.
 
-## 23. Investment Policy Statement
+## 23. Investment chính sách (policy / 정책) Statement
 
 Tuyên bố chính sách đầu tư (IPS) biến kế hoạch thành quy tắc có thể thực thi.
 
@@ -304,3 +307,5 @@ Vốn con người
 ```
 
 Danh mục tốt không phải danh mục có Sharpe cao nhất trên dữ liệu lịch sử, mà là danh mục giúp bạn đạt mục tiêu với xác suất đủ cao mà không buộc phải phá kế hoạch giữa đường.
+
+> **Bàn giao:** Sau **27. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

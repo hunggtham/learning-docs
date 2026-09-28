@@ -1,5 +1,8 @@
 # Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học
 
+> **Mạch đọc:** Đọc **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Độ acid của acid carboxylic bắt nguồn từ cộng hưởng** sang **Ảnh hưởng nhóm thế tới độ acid**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Acid carboxylic và các dẫn xuất cùng chia sẻ **mô-típ acyl (acyl motif)** \(R-C(=O)-Y\). Hóa học của chúng được tổ chức quanh một câu hỏi trung tâm: sau khi nucleophile tấn công carbonyl, **Y có thể rời đi không?** Nếu có, bước cộng thường được theo sau bởi bước loại và carbonyl được tái tạo — **thế acyl ái nhân (nucleophilic acyl substitution / 친핵성 아실 치환)**.
 
 ## Độ acid của acid carboxylic bắt nguồn từ cộng hưởng
@@ -14,7 +17,7 @@ thường có \(pK_a\) khoảng 4–5, thấp hơn nhiều so với alcohol thô
 
 Nguyên nhân chính là điện tích âm của carboxylate được phi định xứ trên hai nguyên tử oxygen. Hai liên kết C–O vì vậy gần tương đương.
 
-Ngược lại, base liên hợp alkoxide của alcohol tập trung điện tích âm mạnh hơn trên một oxygen nên kém bền hơn.
+Ngược lại, cơ sở (base / 기반) liên hợp alkoxide của alcohol tập trung điện tích âm mạnh hơn trên một oxygen nên kém bền hơn.
 
 ## Ảnh hưởng nhóm thế tới độ acid
 
@@ -47,7 +50,7 @@ Một thứ tự định tính hữu ích:
 acid chloride > anhydride > thioester ≳ ester > amide
 ```
 
-Chi tiết phụ thuộc môi trường, nhưng logic chung khá bền: khả năng phản ứng được quyết định bởi **tính ái điện của carbonyl + khả năng rời của Y + mức cho electron cộng hưởng từ Y**.
+Chi tiết phụ thuộc môi trường, nhưng lô-gic (logic / 논리) chung khá bền: khả năng phản ứng được quyết định bởi **tính ái điện của carbonyl + khả năng rời của Y + mức cho electron cộng hưởng từ Y**.
 
 ## Vì sao acid chloride phản ứng mạnh
 
@@ -69,7 +72,7 @@ Hệ quả:
 - hình học gần phẳng;
 - quay quanh C–N bị hạn chế;
 - carbonyl giảm tính ái điện;
-- nitrogen giảm tính base;
+- nitrogen giảm tính cơ sở (base / 기반);
 - nhóm rời có nguồn gốc amine kém ổn định khi rời.
 
 Độ bền của liên kết peptide cũng bắt nguồn từ cùng hóa học này.
@@ -92,7 +95,7 @@ Nu tấn công carbonyl carbon
 
 Khi nucleophile tấn công carbonyl carbon sp2, hình học chuyển sang tứ diện. Số phận chất trung gian phụ thuộc độ bền tương đối của các nhóm có thể rời và trạng thái proton hóa.
 
-Xúc tác acid/base thường hoạt động bằng cách làm nucleophile phản ứng mạnh hơn hoặc biến nhóm rời kém thành tiểu phân trung hòa dễ rời hơn.
+Xúc tác acid/cơ sở (base / 기반) thường hoạt động bằng cách làm nucleophile phản ứng mạnh hơn hoặc biến nhóm rời kém thành tiểu phân trung hòa dễ rời hơn.
 
 ## Chiều chuyển đổi giữa các dẫn xuất acyl
 
@@ -126,7 +129,7 @@ Vì ester hóa Fischer thuận nghịch, thủy phân ester trong acid nước �
 
 Chất xúc tác làm thay đổi tốc độ, không tự thay đổi hằng số cân bằng cơ bản của phản ứng.
 
-## Thủy phân base — xà phòng hóa
+## Thủy phân cơ sở (base / 기반) — xà phòng hóa
 
 Hydroxide tấn công ester, chất trung gian tứ diện sụp lại và acid tạo ra bị khử proton ngay:
 
@@ -134,13 +137,13 @@ Hydroxide tấn công ester, chất trung gian tứ diện sụp lại và acid 
 RCO_2R'+OH^-\rightarrow RCO_2^-+R'OH
 \]
 
-Sự hình thành carboxylate kéo phản ứng theo chiều thuận trong môi trường base.
+Sự hình thành carboxylate kéo phản ứng theo chiều thuận trong môi trường cơ sở (base / 기반).
 
 Trong xà phòng hóa thông thường, hydroxide bị tiêu thụ theo hóa lượng; nó không chỉ đóng vai trò xúc tác.
 
 ## Trao đổi ester
 
-**Trao đổi ester (transesterification)** thay nhóm alkoxy của ester bằng alcohol khác dưới xúc tác acid hoặc base.
+**Trao đổi ester (transesterification)** thay nhóm alkoxy của ester bằng alcohol khác dưới xúc tác acid hoặc cơ sở (base / 기반).
 
 Quá trình này quan trọng trong sản xuất biodiesel, hóa polymer và hệ cộng hóa trị động.
 
@@ -234,7 +237,7 @@ Enolate của ester tấn công ester khác, sau đó xảy ra thế acyl để 
 
 Khác aldol đơn giản, Claisen cần nhóm rời trên chất cho acyl.
 
-Khử proton cuối cùng của sản phẩm β-dicarbonyl có tính acid cao giúp kéo phản ứng đi tới, nên lượng base và xử lý sau phản ứng đều quan trọng.
+Khử proton cuối cùng của sản phẩm β-dicarbonyl có tính acid cao giúp kéo phản ứng đi tới, nên lượng cơ sở (base / 기반) và xử lý sau phản ứng đều quan trọng.
 
 ## Vòng hóa Dieckmann
 
@@ -252,7 +255,7 @@ Khả năng chống thủy phân và tính chất cơ phụ thuộc cộng hư�
 
 ## Lipid
 
-Triacylglycerol là ester của glycerol và acid béo. Thủy phân giải phóng acid béo/glycerol; thủy phân base tạo xà phòng.
+Triacylglycerol là ester của glycerol và acid béo. Thủy phân giải phóng acid béo/glycerol; thủy phân cơ sở (base / 기반) tạo xà phòng.
 
 Phospholipid kết hợp hóa học ester/ether, phosphate và tự lắp ghép lưỡng ưa.
 
@@ -260,7 +263,7 @@ Vì vậy hóa học acyl mở rộng trực tiếp từ tổng hợp phân tử
 
 ## Độ acid của hydrogen α
 
-Dẫn xuất acid carboxylic có thể tạo enolate ở carbon α nếu base đủ mạnh. Độ bền enolate thay đổi theo loại dẫn xuất và nhóm thế.
+Dẫn xuất acid carboxylic có thể tạo enolate ở carbon α nếu cơ sở (base / 기반) đủ mạnh. Độ bền enolate thay đổi theo loại dẫn xuất và nhóm thế.
 
 Hợp chất β-dicarbonyl acid hơn nhiều vì điện tích âm có thể phi định xứ trên hai hệ carbonyl.
 
@@ -276,16 +279,18 @@ Không. Thông thường phản ứng acid-base tạo muối trước; tách nư
 
 Không. Cấu trúc, ứng suất vòng, hiệu ứng điện tử và nhóm lân cận có thể làm tốc độ thủy phân khác nhau rất lớn.
 
-### “Xà phòng hóa chỉ là thủy phân acid nhưng dùng base”
+### “Xà phòng hóa chỉ là thủy phân acid nhưng dùng cơ sở (base / 기반)”
 
-Không. Cơ chế và nhiệt động khác nhau; sự tạo carboxylate làm con đường base gần như không thuận nghịch trước bước xử lý acid.
+Không. Cơ chế và nhiệt động khác nhau; sự tạo carboxylate làm con đường cơ sở (base / 기반) gần như không thuận nghịch trước bước xử lý acid.
 
 ### “Nitrogen amide giống nitrogen amine”
 
-Không. Cặp electron của amide bị phi định xứ mạnh, làm N kém base và kém ái nhân hơn nhiều.
+Không. Cặp electron của amide bị phi định xứ mạnh, làm N kém cơ sở (base / 기반) và kém ái nhân hơn nhiều.
 
 ## Mô hình tư duy
 
 Các dẫn xuất acid carboxylic tạo thành một **thứ bậc chuyển acyl (acyl-transfer hierarchy)**. Khi phân tích phản ứng, hãy hỏi: nucleophile nào tấn công, chất trung gian tứ diện sẽ sụp theo chiều nào, nhóm rời nào ổn định nhất, và phản ứng cần hoạt hóa hoặc quản lý cân bằng ra sao?
 
 Xem tiếp: [Đo lường và lấy mẫu](../12_analytical_chemistry/00_measurement_and_sampling.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

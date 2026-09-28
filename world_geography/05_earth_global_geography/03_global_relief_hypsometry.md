@@ -1,4 +1,6 @@
-# Độ cao toàn cầu, hypsometry và logic của địa hình hành tinh
+# Độ cao toàn cầu, hypsometry và lô-gic (logic / 논리) của địa hình hành tinh
+
+> **Mạch đọc:** Đặt **Độ cao toàn cầu, hypsometry và lô-gic (logic / 논리) của địa hình hành tinh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cực trị không quan trọng bằng phân bố** sang **Hypsometry là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## Cực trị không quan trọng bằng phân bố
 
@@ -6,7 +8,7 @@ Everest và Mariana giúp hình dung giới hạn cao–sâu, nhưng địa lý 
 
 Đường cong cho thấy hai miền lớn: phần lớn đáy đại dương quanh một miền sâu và phần lớn lục địa quanh miền cao hơn. Đây là dấu vết thống kê của khác biệt giữa vỏ đại dương và vỏ lục địa.
 
-Một mental model quan trọng: **extreme cho biết giới hạn; distribution cho biết cấu trúc của hệ**.
+Một mô hình tư duy (mental model / 사고 모델) quan trọng: **extreme cho biết giới hạn; phân phối (distribution / 분포) cho biết cấu trúc của hệ**.
 
 ## Hypsometry là gì?
 
@@ -24,11 +26,11 @@ Nước có xu hướng chảy từ potential cao về thấp, nhưng đường 
 
 Khi lên cao, áp suất khí quyển giảm. Trong tầng đối lưu, nhiệt độ thường giảm theo độ cao nhưng **suất giảm nhiệt (lapse rate)** thay đổi giữa không khí khô, không khí bão hòa và điều kiện khí quyển thực tế.
 
-Một mountain range vì thế tạo **phân đai cao (altitudinal zonation)**: chỉ trong vài kilomet theo phương đứng có thể chuyển qua các điều kiện nhiệt–ẩm tương tự việc di chuyển hàng nghìn kilomet theo vĩ độ.
+Một mountain phạm vi (range / 범위) vì thế tạo **phân đai cao (altitudinal zonation)**: chỉ trong vài kilomet theo phương đứng có thể chuyển qua các điều kiện nhiệt–ẩm tương tự việc di chuyển hàng nghìn kilomet theo vĩ độ.
 
-Điều này nối relief với biome, agriculture, settlement và risk.
+Điều này nối relief với biome, agriculture, settlement và rủi ro (risk / 위험).
 
-## Orographic effect: núi tổ chức lại khí hậu vùng
+## Orographic tác động (effect / 효과): núi tổ chức lại khí hậu vùng
 
 Khi gió ẩm bị buộc nâng qua núi, không khí giãn nở và nguội, làm tăng khả năng ngưng tụ ở sườn đón gió. Sau khi vượt đỉnh và hạ xuống, không khí có thể nóng lên và khô hơn, tạo **bóng mưa (rain shadow)**.
 
@@ -42,45 +44,45 @@ Khi xói mòn lấy vật liệu khỏi dãy núi, giảm tải có thể dẫn 
 
 Điều này phá vỡ trực giác đơn giản “núi chỉ có thể cao lên hoặc thấp xuống”. Relief là kết quả của nhiều quá trình cạnh tranh.
 
-## Base level và relief energy
+## Cơ sở (base / 기반) mức (level / 수준) và relief năng lượng (energy / 에너지)
 
-Sông xói mòn theo chênh lệch giữa địa hình và **mực cơ sở (base level)**, thường liên hệ với sea level hoặc hồ lớn. Khi tectonic uplift làm land surface cao lên hoặc sea level thay đổi, gradient river có thể đổi, kích hoạt incision hoặc deposition.
+Sông xói mòn theo chênh lệch giữa địa hình và **mực cơ sở (base level)**, thường liên hệ với sea mức (level / 수준) hoặc hồ lớn. Khi tectonic uplift làm land surface cao lên hoặc sea mức (level / 수준) thay đổi, độ dốc (gradient / 기울기) river có thể đổi, kích hoạt incision hoặc deposition.
 
-Khái niệm **relief energy** có thể hiểu như lượng chênh cao sẵn có cho gravity-driven process. Vùng relief mạnh thường có river gradient lớn, landslide potential cao và chi phí infrastructure khác với plain.
+Khái niệm **relief năng lượng (energy / 에너지)** có thể hiểu như lượng chênh cao sẵn có cho gravity-driven tiến trình (process / 프로세스). Vùng relief mạnh thường có river độ dốc (gradient / 기울기) lớn, landslide potential cao và chi phí hạ tầng (infrastructure / 인프라) khác với plain.
 
 ## Đồng bằng: ít relief nhưng không ít động lực
 
 Lowland và delta có relief nhỏ nhưng là nơi vật chất từ basin tích tụ. Chúng có thể cực kỳ năng động vì river avulsion, sedimentation, subsidence và flooding.
 
-Lợi thế gồm đất bằng, nước và transport; rủi ro gồm flood, waterlogging, salinity và relative sea-level rise. Đây là ví dụ điển hình của chuỗi:
+Lợi thế gồm đất bằng, nước và vận chuyển (transport / 전송); rủi ro gồm flood, waterlogging, salinity và relative sea-level rise. Đây là ví dụ điển hình của chuỗi:
 
-**low relief → accessibility + agriculture + urban concentration → high exposure to hydrologic/coastal hazards**.
+**low relief → khả năng tiếp cận (accessibility / 접근성) + agriculture + urban concentration → high exposure to hydrologic/coastal hazards**.
 
 ## Độ sâu đại dương và áp suất
 
-Trong nước biển, áp suất tăng xấp xỉ khoảng một atmosphere mỗi 10 mét. Ở abyssal depth, áp suất là ràng buộc lớn với sinh vật, cảm biến, tàu lặn và hạ tầng.
+Trong nước biển, áp suất tăng xấp xỉ khoảng một atmosphere mỗi 10 mét. Ở abyssal độ sâu (depth / 깊이), áp suất là ràng buộc lớn với sinh vật, cảm biến, tàu lặn và hạ tầng.
 
 Bathymetry còn điều khiển dòng sâu. Ridge, sill và basin có thể hướng hoặc chặn water mass, ảnh hưởng thông khí đại dương và vận chuyển nhiệt.
 
 ## DEM, DSM và sai số đo địa hình
 
-**DEM (Digital Elevation Model)** thường biểu diễn trường độ cao của terrain; **DSM (Digital Surface Model)** có thể chứa cả cây và công trình tùy nguồn dữ liệu. Trong ứng dụng đô thị, nhầm terrain với surface có thể làm sai viewshed, drainage hoặc flood model.
+**DEM (Digital Elevation model)** thường biểu diễn trường độ cao của terrain; **DSM (Digital Surface model)** có thể chứa cả cây và công trình tùy nguồn dữ liệu. Trong ứng dụng đô thị, nhầm terrain với surface có thể làm sai viewshed, drainage hoặc flood mô hình (model / 모델).
 
-Độ phân giải pixel cao không đảm bảo độ chính xác cao. Sai số thẳng đứng, datum, vegetation, interpolation và acquisition method đều quan trọng.
+Độ phân giải điểm ảnh (pixel / 픽셀) cao không đảm bảo độ chính xác cao. Sai số thẳng đứng, datum, vegetation, interpolation và acquisition phương thức (method / 메서드) đều quan trọng.
 
-Khi GIS tính slope, aspect hoặc watershed, sai số của DEM có thể được khuếch đại ở các phép đạo hàm không gian. Vì vậy cần xem metadata và kiểm định thực địa khi quyết định có tính kỹ thuật.
+Khi GIS tính slope, aspect hoặc watershed, sai số của DEM có thể được khuếch đại ở các phép đạo hàm không gian. Vì vậy cần xem siêu dữ liệu (metadata / 메타데이터) và kiểm định thực địa khi quyết định có tính kỹ thuật.
 
 ## Hypsometry và dân cư
 
 Dân cư toàn cầu tập trung không đồng đều theo độ cao. Nhiều megacity nằm ở coastal plain, river basin hoặc plateau có điều kiện khí hậu–giao thông thuận lợi.
 
-Nhưng không có định luật “thấp = đông dân”. Highland có thể hấp dẫn vì khí hậu mát, phòng thủ lịch sử, đất núi lửa hoặc basin nội sơn. Relief tạo constraint và opportunity; history, technology và institution quyết định kết quả cụ thể.
+Nhưng không có định luật “thấp = đông dân”. Highland có thể hấp dẫn vì khí hậu mát, phòng thủ lịch sử, đất núi lửa hoặc basin nội sơn. Relief tạo ràng buộc (constraint / 제약조건) và opportunity; lịch sử (history / 이력), technology và institution quyết định kết quả cụ thể.
 
 ## Hạ tầng và chi phí relief
 
-Rail, highway, pipeline và urban expansion phản ứng mạnh với slope. Tăng độ dốc làm earthwork, tunnel, bridge và energy cost tăng. Mountain pass vì thế trở thành **network bottleneck**; tunnel mới có thể thay đổi effective distance giữa hai vùng mà khoảng cách hình học không đổi.
+Rail, highway, chuỗi xử lý (pipeline / 파이프라인) và urban expansion phản ứng mạnh với slope. Tăng độ dốc làm earthwork, tunnel, cầu nối (bridge / 브리지) và năng lượng (energy / 에너지) chi phí (cost / 비용) tăng. Mountain pass vì thế trở thành **mạng (network / 네트워크) bottleneck**; tunnel mới có thể thay đổi effective distance giữa hai vùng mà khoảng cách hình học không đổi.
 
-Đây là nơi physical geography nối trực tiếp với transport geography.
+Đây là nơi vật lý (physical / 물리적) geography nối trực tiếp với vận chuyển (transport / 전송) geography.
 
 ## Những hiểu lầm phổ biến
 
@@ -90,6 +92,8 @@ Rail, highway, pipeline và urban expansion phản ứng mạnh với slope. Tă
 
 ## Mô hình tư duy
 
-> Relief là **trường thế năng + bề mặt điều khiển dòng + ràng buộc cho settlement và infrastructure**. Đọc elevation map bằng cách hỏi ba tầng: nó được tạo bởi tectonic/erosional process nào, nó điều khiển water/climate thế nào, và con người tận dụng hay phải trả chi phí gì cho cấu trúc đó?
+> Relief là **trường thế năng + bề mặt điều khiển dòng + ràng buộc cho settlement và hạ tầng (infrastructure / 인프라)**. Đọc elevation map bằng cách hỏi ba tầng: nó được tạo bởi tectonic/erosional tiến trình (process / 프로세스) nào, nó điều khiển water/climate thế nào, và con người tận dụng hay phải trả chi phí gì cho cấu trúc đó?
 
 Xem tiếp: [Lục địa và bồn đại dương](./02_continents_ocean_basins.md), [Địa mạo](../01_physical_geography/01_landforms_geomorphology.md), [Thủy văn](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Transport](../02_human_geography/08_transport_trade_globalization.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 earth shape size geodesy](./00_earth_shape_size_geodesy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

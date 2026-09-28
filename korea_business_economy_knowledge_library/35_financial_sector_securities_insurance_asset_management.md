@@ -1,5 +1,8 @@
 # Hệ thống tài chính ngoài ngân hàng tại Hàn Quốc (Securities, Insurance, Asset Management / 증권·보험·자산운용)
 
+> **Mạch đọc:** Đặt **Hệ thống tài chính ngoài ngân hàng tại Hàn Quốc (Securities, Insurance, Asset Management / 증권·보험·자산운용)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao nền kinh tế cần nhiều loại trung gian tài chính?** sang **2. Công ty chứng khoán là gì? (Securities Firm / 증권사)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nếu chỉ nhìn ngân hàng, ta sẽ bỏ sót một phần rất lớn cách vốn di chuyển trong nền kinh tế Hàn Quốc. Doanh nghiệp không chỉ vay ngân hàng. Họ còn phát hành trái phiếu, phát hành cổ phiếu, chứng khoán hóa tài sản, huy động vốn tư nhân, mua bảo hiểm, dùng công cụ phái sinh, nhận dịch vụ bảo lãnh phát hành từ công ty chứng khoán và được đánh giá rủi ro bởi tổ chức xếp hạng tín nhiệm.
 
 Ở phía còn lại, hộ gia đình và nhà đầu tư tổ chức đưa tiền vào quỹ, sản phẩm hưu trí, hợp đồng bảo hiểm và tài khoản chứng khoán. Vì vậy hệ thống tài chính thực tế là một mạng lưới gồm **ngân hàng, công ty chứng khoán, công ty bảo hiểm, công ty quản lý tài sản, quỹ hưu trí, tổ chức xếp hạng tín nhiệm, sở giao dịch, hệ thống thanh toán bù trừ và cơ quan quản lý**.
@@ -62,7 +65,7 @@ Nếu lãi suất tăng, giá trái phiếu lãi cố định giảm. Nếu bi�
 
 > Công ty chứng khoán có thể trông giống một doanh nghiệp “ít tài sản, nhiều phí” trên báo cáo kết quả kinh doanh, nhưng bảng cân đối vẫn có thể chứa lượng rủi ro rất lớn.
 
-## 6. Tài chính cấu trúc và Project Finance
+## 6. Tài chính cấu trúc và dự án (project / 프로젝트) Finance
 
 Công ty chứng khoán Hàn Quốc có thể tham gia **tài chính cấu trúc (structured finance / 구조화금융)**, chứng khoán hóa hoặc bất động sản PF.
 
@@ -123,7 +126,7 @@ Khi phân tích mảng ETF của công ty quản lý tài sản, cần xem:
 
 ## 10. Bảo hiểm: chuyển giao rủi ro trước, đầu tư sau
 
-**Bảo hiểm (insurance / 보험)** có logic khác ngân hàng và công ty chứng khoán. Khách hàng trả phí để chuyển một rủi ro được định nghĩa trong hợp đồng sang công ty bảo hiểm.
+**Bảo hiểm (insurance / 보험)** có lô-gic (logic / 논리) khác ngân hàng và công ty chứng khoán. Khách hàng trả phí để chuyển một rủi ro được định nghĩa trong hợp đồng sang công ty bảo hiểm.
 
 Hai nhóm lớn là **bảo hiểm nhân thọ (life insurance / 생명보험)** và **bảo hiểm phi nhân thọ (non-life insurance / 손해보험)**.
 
@@ -144,7 +147,7 @@ Bồi thường + chi phí + yêu cầu vốn
 Với bảo hiểm phi nhân thọ, một chỉ số trực quan là **tỷ lệ kết hợp (combined ratio)**:
 
 \[
-Combined\ Ratio = Loss\ Ratio + Expense\ Ratio
+Combined\ Ratio = mất mát (loss / 손실)\ Ratio + Expense\ Ratio
 \]
 
 Nếu dưới 100%, hoạt động bảo hiểm cốt lõi trước thu nhập đầu tư đang có lãi. Nếu trên 100%, doanh nghiệp cần thu nhập đầu tư hoặc điều chỉnh giá để bù.
@@ -236,7 +239,7 @@ Không dùng một mẫu phân tích sản xuất cho tất cả.
 
 Với ngân hàng, tập trung vào NIM, tăng trưởng cho vay, cơ cấu tiền gửi, chi phí tín dụng và tỷ lệ vốn.
 
-Với công ty chứng khoán, tập trung vào môi giới, pipeline ngân hàng đầu tư, rủi ro giao dịch, phơi nhiễm PF/tài chính cấu trúc, thanh khoản và đòn bẩy.
+Với công ty chứng khoán, tập trung vào môi giới, chuỗi xử lý (pipeline / 파이프라인) ngân hàng đầu tư, rủi ro giao dịch, phơi nhiễm PF/tài chính cấu trúc, thanh khoản và đòn bẩy.
 
 Với công ty bảo hiểm, tập trung vào biên thẩm định bảo hiểm, chất lượng dự phòng, ALM, lợi suất đầu tư và an toàn vốn.
 
@@ -291,3 +294,5 @@ Muốn phân tích một công ty tài chính, trước tiên xác định nó �
 - [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — PF.
 - [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) — liên hệ hộ gia đình và quỹ hưu trí.
 - [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md) — fintech, tài chính số và cloud.
+
+> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

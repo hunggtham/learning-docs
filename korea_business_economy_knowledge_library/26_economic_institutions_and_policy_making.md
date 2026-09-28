@@ -1,5 +1,8 @@
 # Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)
 
+> **Mạch đọc:** Đặt **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Nhà nước phát triển đã thay đổi chứ không biến mất** sang **Chính sách tác động doanh nghiệp bằng cách thay đổi NPV**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một nền kinh tế thị trường không hoạt động chỉ bằng “cung và cầu”. Doanh nghiệp luôn ra quyết định trong một hệ thống gồm luật, ngân sách, ngân hàng trung ương, giám sát tài chính, chính sách cạnh tranh, chính sách công nghiệp, thuế, mua sắm công và chính quyền địa phương. Tại Hàn Quốc, tầng thể chế này đặc biệt quan trọng vì lịch sử công nghiệp hóa gắn chặt với sự phối hợp giữa nhà nước, ngân hàng và doanh nghiệp.
 
 Muốn đọc chính sách đúng, trước hết phải bỏ cách nghĩ “chính phủ Hàn Quốc” là một chủ thể duy nhất. **Chính sách là kết quả của nhiều cơ quan có nhiệm vụ khác nhau**. Một bộ muốn thúc đẩy đầu tư, cơ quan giám sát muốn giảm rủi ro hệ thống, cơ quan cạnh tranh muốn hạn chế lạm dụng quyền lực thị trường, còn chính quyền địa phương muốn tạo việc làm và nguồn thu thuế. Các mục tiêu này có thể cùng hướng hoặc xung đột.
@@ -73,7 +76,7 @@ Song song, kỳ vọng lãi suất tác động tỷ giá và giá tài sản. N
 
 ## FSC, FSS và KRX: làm chính sách, giám sát và vận hành thị trường là ba lớp khác nhau
 
-**Financial Services Commission (FSC / 금융위원회)** thiết kế và điều phối nhiều chính sách tài chính. **Financial Supervisory Service (FSS / 금융감독원)** thực hiện giám sát, thanh tra và vận hành DART. **Korea Exchange (KRX / 한국거래소)** vận hành hạ tầng niêm yết–giao dịch và kênh công bố KIND.
+**Financial Services Commission (FSC / 금융위원회)** thiết kế và điều phối nhiều chính sách tài chính. **Financial Supervisory dịch vụ (service / 서비스)** thực hiện giám sát, thanh tra và vận hành DART. **Korea Exchange (KRX / 한국거래소)** vận hành hạ tầng niêm yết–giao dịch và kênh công bố KIND.
 
 Một cải cách thị trường vốn có thể cần chính sách từ FSC, giám sát từ FSS và quy tắc vận hành tại KRX. Vì vậy phải phân biệt **cơ quan làm quy tắc, cơ quan giám sát và cơ quan vận hành thị trường**.
 
@@ -196,7 +199,7 @@ Hãy xác định cơ quan ban hành, tình trạng pháp lý, đối tượng �
 
 Một tiêu đề “hỗ trợ 1 nghìn tỷ KRW” gần như vô nghĩa nếu không biết quy mô CAPEX của ngành là 5 nghìn tỷ hay 500 nghìn tỷ KRW.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thể chế là **hệ điều hành của nền kinh tế**. Chính sách thay đổi phần thưởng, chi phí và ràng buộc của doanh nghiệp; doanh nghiệp phản ứng; tổng hợp các phản ứng đó lại trở thành kết quả vĩ mô mới.
 
@@ -221,3 +224,5 @@ Thông báo chính sách không đồng nghĩa tiền đã được chi. Trợ c
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

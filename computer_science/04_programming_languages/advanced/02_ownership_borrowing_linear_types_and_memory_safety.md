@@ -1,33 +1,36 @@
-# Ownership, borrowing, linear/affine types và memory safety
+# Quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)
 
-Memory safety traditionally được bảo vệ theo nhiều hướng. Garbage-collected languages giữ object sống khi còn reachable và thu hồi tự động. Systems languages như C trao quyền allocation/free trực tiếp cho programmer nhưng dễ tạo use-after-free, double-free hoặc dangling pointer. Ownership mở ra một hướng khác: đưa **resource lifetime, aliasing và quyền sử dụng** vào semantics/type system để compiler loại bỏ một lớp trạng thái nguy hiểm trước runtime.
+> **Mạch đọc:** Đặt **quyền sở hữu (ownership / 소유권), borrowing, tuyến tính (linear / 선형)/affine types và bộ nhớ (memory / 메모리) an toàn (safety / 안전)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) là vấn đề ngữ nghĩa (semantic / 의미적)** sang **2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Điểm advanced không phải học Rust syntax. Cần hiểu invariant: **ai sở hữu resource, ai được phép dùng hoặc mutate nó, quyền đó chuyển giao lúc nào, và boundary nào làm compiler không còn tự chứng minh được invariant.**
 
-## 1. Resource lifetime là vấn đề semantic
+Bộ nhớ (memory / 메모리) an toàn (safety / 안전) traditionally được bảo vệ theo nhiều hướng. Garbage-collected languages giữ đối tượng (object / 객체) sống khi còn reachable và thu hồi tự động. các hệ thống (systems / 시스템들) languages như C trao quyền allocation/free trực tiếp cho programmer nhưng dễ tạo use-after-free, double-free hoặc dangling pointer. quyền sở hữu (ownership / 소유권) mở ra một hướng khác: đưa **tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명), aliasing và quyền sử dụng** vào ngữ nghĩa (semantics / 의미론)/hệ kiểu (type system / 타입 시스템) để trình biên dịch (compiler / 컴파일러) loại bỏ một lớp trạng thái nguy hiểm trước thời gian chạy (runtime / 런타임).
 
-Use-after-free xảy ra khi reference còn được dùng sau khi resource đã hết lifetime. Double-free xảy ra khi nhiều control paths cùng tin rằng chúng chịu trách nhiệm cleanup. Leak xảy ra khi không còn path nào thực hiện responsibility đó.
+Điểm advanced không phải học Rust cú pháp (syntax / 문법). Cần hiểu bất biến (invariant / 불변식): **ai sở hữu tài nguyên (resource / 자원), ai được phép dùng hoặc mutate nó, quyền đó chuyển giao lúc nào, và ranh giới (boundary / 경계) nào làm trình biên dịch (compiler / 컴파일러) không còn tự chứng minh được bất biến (invariant / 불변식).**
 
-Nếu ownership chỉ tồn tại trong comment hoặc convention, compiler không thể bảo đảm invariant. Ownership-aware semantics biến responsibility thành thứ có thể được kiểm tra bằng data-flow/type rules.
+## 1. tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) là vấn đề ngữ nghĩa (semantic / 의미적)
 
-Resource không chỉ là heap memory. File descriptor, socket, mutex guard, transaction handle, GPU buffer hay cryptographic capability đều có lifecycle.
+Use-after-free xảy ra khi tham chiếu (reference / 참조) còn được dùng sau khi tài nguyên (resource / 자원) đã hết thời gian tồn tại (lifetime / 수명). Double-free xảy ra khi nhiều điều khiển (control / 제어) paths cùng tin rằng chúng chịu trách nhiệm cleanup. Leak xảy ra khi không còn đường dẫn (path / 경로) nào thực hiện responsibility đó.
 
-## 2. Unique ownership làm responsibility rõ ràng
+Nếu quyền sở hữu (ownership / 소유권) chỉ tồn tại trong comment hoặc convention, trình biên dịch (compiler / 컴파일러) không thể bảo đảm bất biến (invariant / 불변식). Ownership-aware ngữ nghĩa (semantics / 의미론) biến responsibility thành thứ có thể được kiểm tra bằng data-flow/kiểu (type / 타입) rules.
 
-Mental model đơn giản là mỗi resource có một owner chịu trách nhiệm lifetime. Khi ownership được **move**, source cũ không còn quyền sử dụng resource như trước.
+Tài nguyên (resource / 자원) không chỉ là bộ nhớ vùng động (heap memory / 힙 메모리). tệp (file / 파일) descriptor, socket, mutex guard, giao dịch (transaction / 트랜잭션) handle, GPU buffer hay cryptographic năng lực (capability / 역량) đều có vòng đời (lifecycle / 생명주기).
+
+## 2. Unique quyền sở hữu (ownership / 소유권) làm responsibility rõ ràng
+
+Mô hình tư duy (mental model / 사고 모델) đơn giản là mỗi tài nguyên (resource / 자원) có một đơn vị sở hữu (owner / 오너) chịu trách nhiệm thời gian tồn tại (lifetime / 수명). Khi quyền sở hữu (ownership / 소유권) được **move**, nguồn (source / 소스) cũ không còn quyền sử dụng tài nguyên (resource / 자원) như trước.
 
 ```text
 owner A --move--> owner B
 A mất quyền         B chịu trách nhiệm
 ```
 
-Move semantics tránh implicit duplication của resource-sensitive values và giúp cleanup path rõ hơn.
+Move ngữ nghĩa (semantics / 의미론) tránh implicit duplication của resource-sensitive values và giúp cleanup đường dẫn (path / 경로) rõ hơn.
 
-Invariant cốt lõi là: **không tồn tại hai owner độc lập cùng tin rằng mình có quyền hủy cùng một unique resource.**
+Bất biến (invariant / 불변식) cốt lõi là: **không tồn tại hai đơn vị sở hữu (owner / 오너) độc lập cùng tin rằng mình có quyền hủy cùng một unique tài nguyên (resource / 자원).**
 
 ## 3. Borrowing tách quyền sử dụng khỏi quyền sở hữu
 
-Function thường chỉ cần dùng resource tạm thời, không cần trở thành owner. **Borrowing (대여/차용)** cho phép code giữ reference trong một lifetime có kiểm soát mà không nhận trách nhiệm destroy resource.
+Hàm (function / 함수) thường chỉ cần dùng tài nguyên (resource / 자원) tạm thời, không cần trở thành đơn vị sở hữu (owner / 오너). **Borrowing (대여/차용)** cho phép mã (code / 코드) giữ tham chiếu (reference / 참조) trong một thời gian tồn tại (lifetime / 수명) có kiểm soát mà không nhận trách nhiệm destroy tài nguyên (resource / 자원).
 
 Một discipline điển hình là:
 
@@ -37,27 +40,25 @@ nhiều shared/immutable borrows
 một mutable borrow độc quyền
 ```
 
-Mục tiêu là ngăn unrestricted mutable aliasing — nguồn gốc của nhiều data race, iterator invalidation và temporal bugs.
+Mục tiêu là ngăn unrestricted mutable aliasing — nguồn gốc của nhiều dữ liệu (data / 데이터) race, iterator vô hiệu hóa (invalidation / 무효화) và temporal bugs.
 
-## 4. Lifetime là quan hệ chứ không phải đồng hồ
+## 4. thời gian tồn tại (lifetime / 수명) là quan hệ chứ không phải đồng hồ
 
-Compiler không cần biết reference tồn tại “3 ms”. Nó cần chứng minh reference không sống lâu hơn referent.
+Trình biên dịch (compiler / 컴파일러) không cần biết tham chiếu (reference / 참조) tồn tại “3 ms”. Nó cần chứng minh tham chiếu (reference / 참조) không sống lâu hơn referent.
 
-Nếu function trả reference tới local stack value đã bị destroy, relation không thể thỏa. Nếu output reference được lấy từ input, compiler cần biết output lifetime bị ràng buộc bởi input nào.
+Nếu hàm (function / 함수) trả tham chiếu (reference / 참조) tới cục bộ (local / 로컬) ngăn xếp (stack / 스택) giá trị (value / 값) đã bị destroy, quan hệ (relation / 관계) không thể thỏa. Nếu đầu ra (output / 출력) tham chiếu (reference / 참조) được lấy từ đầu vào (input / 입력), trình biên dịch (compiler / 컴파일러) cần biết đầu ra (output / 출력) thời gian tồn tại (lifetime / 수명) bị ràng buộc bởi đầu vào (input / 입력) nào.
 
-Lifetime vì thế là property của scope/data-flow/ownership graph, không phải timestamp runtime.
+Thời gian tồn tại (lifetime / 수명) vì thế là thuộc tính (property / 속성) của phạm vi (scope / 범위)/data-flow/quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프), không phải timestamp thời gian chạy (runtime / 런타임).
 
-## 5. Linear và affine types theo dõi quyền sử dụng
+## 5. tuyến tính (linear / 선형) và affine types theo dõi quyền sử dụng
 
-**Linear type** yêu cầu một resource được sử dụng đúng một lần theo discipline lý thuyết. **Affine type** thường cho phép sử dụng tối đa một lần: có thể bỏ nhưng không arbitrary duplicate.
+**tuyến tính (linear / 선형) kiểu (type / 타입)** yêu cầu một tài nguyên (resource / 자원) được sử dụng đúng một lần theo discipline lý thuyết. **Affine kiểu (type / 타입)** thường cho phép sử dụng tối đa một lần: có thể bỏ nhưng không arbitrary duplicate.
 
-Hệ thống thực tế có thể không tuân một calculus thuần túy, nhưng mental model quan trọng là type system theo dõi **usage/capability**, không chỉ shape của data.
+Hệ thống thực tế có thể không tuân một calculus thuần túy, nhưng mô hình tư duy (mental model / 사고 모델) quan trọng là hệ kiểu (type system / 타입 시스템) theo dõi **usage/năng lực (capability / 역량)**, không chỉ shape của dữ liệu (data / 데이터).
 
-Một integer có thể copy tự do; một unique file handle, lock guard hay signing capability có thể cần semantics khác.
+Một integer có thể bản sao (copy / 복사) tự do; một unique tệp (file / 파일) handle, khóa (lock / 잠금) guard hay signing năng lực (capability / 역량) có thể cần ngữ nghĩa (semantics / 의미론) khác.
 
-## 6. Typestate: type có thể biểu diễn protocol state
-
-Ownership thinking mở rộng tự nhiên sang **typestate**. Một transaction object có thể chuyển trạng thái:
+## 6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang **typestate**. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:
 
 ```text
 OpenTransaction
@@ -65,53 +66,53 @@ OpenTransaction
    └─ rollback() → RolledBack
 ```
 
-Nếu API encode state transition vào type, operation như “commit lần hai” có thể trở thành trạng thái không biểu diễn được hoặc khó biểu diễn hơn.
+Nếu API encode chuyển tiếp trạng thái (state transition / 상태 전이) vào kiểu (type / 타입), thao tác (operation / 연산) như “lần ghi nhận (commit / 커밋) lần hai” có thể trở thành trạng thái không biểu diễn được hoặc khó biểu diễn hơn.
 
-Đây là cách type system giữ invariant của một protocol, không chỉ lifetime memory.
+Đây là cách hệ kiểu (type system / 타입 시스템) giữ bất biến (invariant / 불변식) của một giao thức (protocol / 프로토콜), không chỉ thời gian tồn tại (lifetime / 수명) bộ nhớ (memory / 메모리).
 
 ## 7. RAII và deterministic cleanup
 
-C++ và Rust dùng pattern **RAII — Resource Acquisition Is Initialization**: lifetime của resource gắn với lifetime owner object. Khi owner rời scope, destructor/drop chạy deterministic.
+C++ và Rust dùng mẫu (pattern / 패턴) **RAII — tài nguyên (resource / 자원) Acquisition Is Initialization**: thời gian tồn tại (lifetime / 수명) của tài nguyên (resource / 자원) gắn với thời gian tồn tại (lifetime / 수명) đơn vị sở hữu (owner / 오너) đối tượng (object / 객체). Khi đơn vị sở hữu (owner / 오너) rời phạm vi (scope / 범위), destructor/drop chạy deterministic.
 
-Lock guard là ví dụ rõ: acquire lock tạo guard; scope kết thúc thì guard release lock ngay cả khi return sớm hoặc exception/unwind xảy ra theo semantics tương ứng.
+Khóa (lock / 잠금) guard là ví dụ rõ: acquire khóa (lock / 잠금) tạo guard; phạm vi (scope / 범위) kết thúc thì guard bản phát hành (release / 릴리스) khóa (lock / 잠금) ngay cả khi return sớm hoặc exception/unwind xảy ra theo ngữ nghĩa (semantics / 의미론) tương ứng.
 
-Java dùng GC cho memory nhưng vẫn cần `try-with-resources` cho file/socket vì reachability lifetime không đồng nghĩa external-resource lifetime.
+Java dùng GC cho bộ nhớ (memory / 메모리) nhưng vẫn cần `try-with-resources` cho tệp (file / 파일)/socket vì reachability thời gian tồn tại (lifetime / 수명) không đồng nghĩa external-resource thời gian tồn tại (lifetime / 수명).
 
-## 8. Shared ownership có cost model riêng
+## 8. dùng chung (shared / 공유) quyền sở hữu (ownership / 소유권) có chi phí (cost / 비용) mô hình (model / 모델) riêng
 
-Khi nhiều owners thực sự cần share lifetime, reference counting là một strategy: clone handle tăng count, release giảm count, count về zero thì cleanup.
+Khi nhiều owners thực sự cần share thời gian tồn tại (lifetime / 수명), tham chiếu (reference / 참조) counting là một chiến lược (strategy / 전략): clone handle tăng count, bản phát hành (release / 릴리스) giảm count, count về zero thì cleanup.
 
-Nhưng cost không miễn phí. Atomic reference counting trong multi-threaded context tạo synchronization traffic. Cycle `A → B → A` có thể giữ count > 0 mãi nếu không có weak reference hoặc tracing mechanism.
+Nhưng chi phí (cost / 비용) không miễn phí. Atomic tham chiếu (reference / 참조) counting trong multi-threaded ngữ cảnh (context / 맥락) tạo synchronization traffic. Cycle `A → B → A` có thể giữ count > 0 mãi nếu không có weak tham chiếu (reference / 참조) hoặc tracing cơ chế (mechanism / 메커니즘).
 
-“Không dùng GC” không có nghĩa memory management không có runtime cost; cost được chuyển sang refcount, allocator, static constraints hoặc explicit architecture.
+“Không dùng GC” không có nghĩa bộ nhớ (memory / 메모리) management không có thời gian chạy (runtime / 런타임) chi phí (cost / 비용); chi phí (cost / 비용) được chuyển sang refcount, allocator, static các ràng buộc (constraints / 제약조건들) hoặc tường minh (explicit / 명시적) kiến trúc (architecture / 아키텍처).
 
-## 9. Interior mutability: shared reference không đồng nghĩa bits bất biến
+## 9. Interior mutability: dùng chung (shared / 공유) tham chiếu (reference / 참조) không đồng nghĩa bits bất biến
 
-Đôi khi outer API muốn shared reference nhưng state bên trong vẫn thay đổi qua primitive có kiểm soát như mutex, atomic cell hoặc runtime borrow check.
+Đôi khi outer API muốn dùng chung (shared / 공유) tham chiếu (reference / 참조) nhưng trạng thái (state / 상태) bên trong vẫn thay đổi qua thành phần nguyên thủy (primitive / 기본 요소) có kiểm soát như mutex, atomic cell hoặc thời gian chạy (runtime / 런타임) borrow check.
 
-Mental model đúng là: shared/immutable reference không cho phép **unrestricted mutation qua reference đó**. Mutation vẫn có thể xảy ra nếu abstraction bên trong giữ invariant bằng synchronization/runtime validation.
+Mô hình tư duy (mental model / 사고 모델) đúng là: dùng chung (shared / 공유)/immutable tham chiếu (reference / 참조) không cho phép **unrestricted mutation qua tham chiếu (reference / 참조) đó**. Mutation vẫn có thể xảy ra nếu lớp trừu tượng (abstraction / 추상화) bên trong giữ bất biến (invariant / 불변식) bằng synchronization/thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증).
 
-Điều này rất quan trọng khi reasoning concurrency: “API nhìn immutable” không có nghĩa object physically không đổi.
+Điều này rất quan trọng khi lập luận (reasoning / 추론) tính đồng thời (concurrency / 동시성): “API nhìn immutable” không có nghĩa đối tượng (object / 객체) physically không đổi.
 
-## 10. Ownership và concurrency safety
+## 10. quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성) an toàn (safety / 안전)
 
-Nếu type system chứng minh mutable access không bị alias đồng thời giữa threads trừ qua synchronization-safe abstraction, một lớp data race bị loại structurally.
+Nếu hệ kiểu (type system / 타입 시스템) chứng minh mutable truy cập (access / 접근) không bị alias đồng thời giữa threads trừ qua synchronization-safe lớp trừu tượng (abstraction / 추상화), một lớp dữ liệu (data / 데이터) race bị loại structurally.
 
-Tuy nhiên ownership không chứng minh toàn bộ concurrent program đúng. Deadlock, starvation, logical race, ordering giữa distributed messages và state-machine bug vẫn tồn tại.
+Tuy nhiên quyền sở hữu (ownership / 소유권) không chứng minh toàn bộ concurrent program đúng. Deadlock, starvation, logical race, thứ tự (ordering / 순서) giữa phân tán (distributed / 분산) messages và state-machine bug vẫn tồn tại.
 
-Static ownership chỉ sở hữu một số invariant: lifetime, aliasing và transfer discipline. Đừng mở rộng guarantee vượt quá boundary đó.
+Static quyền sở hữu (ownership / 소유권) chỉ sở hữu một số bất biến (invariant / 불변식): thời gian tồn tại (lifetime / 수명), aliasing và transfer discipline. Đừng mở rộng guarantee vượt quá ranh giới (boundary / 경계) đó.
 
-## 11. Performance pressure thay đổi trade-off
+## 11. hiệu năng (performance / 성능) pressure thay đổi sự đánh đổi (trade-off / 트레이드오프)
 
-Static ownership có thể loại runtime checks và giúp compiler reasoning aliasing tốt hơn, nhưng program structure đôi khi phải dùng arena, indirection, copying hoặc reference counting để biểu diễn graph phức tạp.
+Static quyền sở hữu (ownership / 소유권) có thể loại thời gian chạy (runtime / 런타임) checks và giúp trình biên dịch (compiler / 컴파일러) lập luận (reasoning / 추론) aliasing tốt hơn, nhưng program cấu trúc (structure / 구조) đôi khi phải dùng arena, indirection, copying hoặc tham chiếu (reference / 참조) counting để biểu diễn đồ thị (graph / 그래프) phức tạp.
 
-Shared atomic refcount có thể tạo cache-line contention. Deterministic destruction có thể đẩy cleanup cost vào latency-sensitive path. Arena giảm per-object allocation nhưng đổi lifetime granularity.
+Dùng chung (shared / 공유) atomic refcount có thể tạo cache-line contention. Deterministic destruction có thể đẩy cleanup chi phí (cost / 비용) vào latency-sensitive đường dẫn (path / 경로). Arena giảm per-object allocation nhưng đổi thời gian tồn tại (lifetime / 수명) granularity.
 
-Vì vậy “ownership = nhanh” không phải invariant. Performance phụ thuộc layout, allocation strategy, sharing pattern và runtime boundary.
+Vì vậy “quyền sở hữu (ownership / 소유권) = nhanh” không phải bất biến (invariant / 불변식). hiệu năng (performance / 성능) phụ thuộc bố cục (layout / 레이아웃), allocation chiến lược (strategy / 전략), sharing mẫu (pattern / 패턴) và thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계).
 
 ## 12. FFI là nơi static proof dừng lại
 
-Khi code ownership-safe gọi C API bằng raw pointer, compiler không tự biết:
+Khi mã (code / 코드) ownership-safe gọi C API bằng raw pointer, trình biên dịch (compiler / 컴파일러) không tự biết:
 
 ```text
 ai allocate?
@@ -122,13 +123,13 @@ callback chạy thread nào?
 resource có được share/mutate đồng thời không?
 ```
 
-`unsafe`/FFI boundary nghĩa programmer phải chứng minh invariant mà compiler không thể kiểm tra trực tiếp. Safe wrapper chỉ mạnh bằng contract của boundary không-safe phía dưới.
+`unsafe`/FFI ranh giới (boundary / 경계) nghĩa programmer phải chứng minh bất biến (invariant / 불변식) mà trình biên dịch (compiler / 컴파일러) không thể kiểm tra trực tiếp. Safe wrapper chỉ mạnh bằng đặc tả hợp đồng (contract / 계약) của ranh giới (boundary / 경계) không-safe phía dưới.
 
-Đây là leaky abstraction điển hình giữa language semantics và ABI/native runtime.
+Đây là leaky lớp trừu tượng (abstraction / 추상화) điển hình giữa ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) và ABI/bản địa (native / 네이티브) thời gian chạy (runtime / 런타임).
 
-## 13. Failure modes cần phân biệt
+## 13. thất bại (failure / 실패) modes cần phân biệt
 
-Ownership discipline nhắm vào một số class failure:
+Quyền sở hữu (ownership / 소유권) discipline nhắm vào một số lớp (class / 클래스) thất bại (failure / 실패):
 
 ```text
 use-after-free
@@ -151,18 +152,20 @@ resource exhaustion
 
 Một type-safe program không đồng nghĩa system-level correct.
 
-## 14. Production evidence
+## 14. bằng chứng vận hành (production evidence / 운영 증거)
 
-Static checker/compiler diagnostic là evidence chính cho proof ở compile time. Runtime sanitizer, heap profiler, leak detector, crash dump và FFI boundary tests giúp tìm violation ở vùng unsafe/native code.
+Static checker/trình biên dịch (compiler / 컴파일러) diagnostic là bằng chứng (evidence / 증거) chính cho proof ở compile thời gian (time / 시간). thời gian chạy (runtime / 런타임) sanitizer, vùng nhớ động (heap / 힙) profiler, leak detector, crash dump và FFI ranh giới (boundary / 경계) tests giúp tìm violation ở vùng unsafe/bản địa (native / 네이티브) mã (code / 코드).
 
-Với reference counting, contention/profile có thể chỉ ra atomic refcount hot path. Với deterministic cleanup, tracing/profiling có thể cho thấy destructor/drop đang nằm trên critical path.
+Với tham chiếu (reference / 참조) counting, contention/profile có thể chỉ ra atomic refcount đường xử lý nóng (hot path / 핫 패스). Với deterministic cleanup, tracing/profiling có thể cho thấy destructor/drop đang nằm trên đường găng (critical path / 임계 경로).
 
-Evidence nên gắn đúng hypothesis: lifetime bug, leak, allocator pressure hay contention không phải cùng một vấn đề.
+Bằng chứng (evidence / 증거) nên gắn đúng hypothesis: thời gian tồn tại (lifetime / 수명) bug, leak, allocator pressure hay contention không phải cùng một vấn đề.
 
 ## 15. Mô hình tư duy
 
-> Ownership biến câu hỏi “ai chịu trách nhiệm lifetime và ai được phép mutate/use?” thành một phần của program semantics. **Move chuyển responsibility; borrow cấp quyền tạm thời; lifetime chứng minh reference không vượt resource; linear/affine discipline giới hạn duplication; typestate có thể encode resource protocol.** Static proof kết thúc ở boundary như FFI/unsafe, nơi programmer phải tái lập invariant bằng contract rõ.
+> quyền sở hữu (ownership / 소유권) biến câu hỏi “ai chịu trách nhiệm thời gian tồn tại (lifetime / 수명) và ai được phép mutate/use?” thành một phần của program ngữ nghĩa (semantics / 의미론). **Move chuyển responsibility; borrow cấp quyền tạm thời; thời gian tồn tại (lifetime / 수명) chứng minh tham chiếu (reference / 참조) không vượt tài nguyên (resource / 자원); tuyến tính (linear / 선형)/affine discipline giới hạn duplication; typestate có thể encode tài nguyên (resource / 자원) giao thức (protocol / 프로토콜).** Static proof kết thúc ở ranh giới (boundary / 경계) như FFI/unsafe, nơi programmer phải tái lập bất biến (invariant / 불변식) bằng đặc tả hợp đồng (contract / 계약) rõ.
 
 ## Kết nối
 
 Đọc tiếp [Effect systems và capabilities](./03_effect_systems_capabilities_and_controlled_side_effects.md), [Coroutine/structured concurrency](./07_coroutines_continuations_async_runtimes_and_structured_concurrency.md), [OS resources/handles](../../03_operating_systems/advanced/00_kernel_execution_contexts_and_syscall_path.md) và [Security boundaries](../../07_security_reliability/advanced/00_security_boundaries_attack_chains_and_exploitability.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 type systems effects and runtime contracts](./00_type_systems_effects_and_runtime_contracts.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

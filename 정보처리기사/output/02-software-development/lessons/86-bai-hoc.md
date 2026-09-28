@@ -10,7 +10,7 @@ XML, 데이터, 무결성, 검사, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **53. EAI와 ESB 심화 (EAI vs ESB)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,6 +20,8 @@ XML, 데이터, 무결성, 검사, 도구
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)** và nối nó với **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
@@ -27,4 +29,4 @@ XML, 데이터, 무결성, 검사, 도구
 * **인터페이스 보안 - 네트워크 영역 (IPSec)**: 네트워크 계층에서 IP 패킷 단위의 데이터 변조 방지 (양방향 암호화 지원).
 * **데이터 무결성 검사 도구**: 시스템 파일 변경 유무 확인 (해시 함수 이용). 백도어 탐지.
   * **종류**: Tripwire, AIDE, Samhain, Claymore, Slipwire, Fcheck.
-* **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm Hash: Tripwire, AIDE.
+* **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm băm (hash / 해시): Tripwire, AIDE.

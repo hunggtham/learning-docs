@@ -1,5 +1,8 @@
 # Cú sốc toàn cầu và cơ chế truyền dẫn sang Hàn Quốc – Việt Nam
 
+> **Mạch đọc:** Đặt **Cú sốc toàn cầu và cơ chế truyền dẫn sang Hàn Quốc – Việt Nam** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Chuỗi truyền dẫn cốt lõi** sang **2. Mức bất ngờ quan trọng hơn tiêu đề**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Cùng một cú sốc toàn cầu có thể tạo kết quả rất khác ở Hàn Quốc và Việt Nam vì cấu trúc xuất khẩu, tiền tệ, tín dụng, ngành và dòng vốn khác nhau. Chương này dùng tiếng Việt để xây một khung phân tích từ **cú sốc → truyền dẫn → phản ứng chính sách → lợi nhuận → định giá → dòng vốn**, thay vì dùng khẩu quyết. Thuật ngữ tiếng Anh chỉ giữ trong ngoặc khi cần tra cứu.
 
 # Phần I — Khung chung
@@ -455,3 +458,5 @@ Cú sốc
 ```
 
 và luôn hỏi phần nào của chuỗi đã được phản ánh trong giá trước khi thay đổi mức phơi nhiễm.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

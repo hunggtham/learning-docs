@@ -1,5 +1,8 @@
 # Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo
 
+> **Mạch đọc:** Đặt **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **“Văn hoá Hàn Quốc” luôn chứa nhiều Hàn Quốc bên trong** sang **Mô hình tư duy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## “Văn hoá Hàn Quốc” luôn chứa nhiều Hàn Quốc bên trong
 
 Một quốc gia hiện đại cần chương trình giáo dục chung, ngôn ngữ chuẩn, truyền thông và biểu tượng để tạo bản sắc chung. Tuy nhiên thực tế văn hoá luôn có **khác biệt vùng miền (regional variation / 지역적 차이)**. Nếu chỉ học chuẩn Seoul, ta rất dễ nhầm văn hoá thủ đô với toàn bộ văn hoá quốc gia.
@@ -123,7 +126,7 @@ Busan là thành phố cảng lớn, từng là cửa ngõ thương mại, nơi 
 
 Giọng Busan thuộc nhóm phương ngữ Gyeongsang, nhưng bản sắc thành phố không thể rút gọn thành giọng nói.
 
-Logic của thành phố cảng tạo mô hình rộng hơn: logistics, dòng người, chợ hải sản, tiếp xúc quốc tế và khu dân cư trên sườn đồi cùng định hình hình ảnh đô thị.
+Lô-gic (logic / 논리) của thành phố cảng tạo mô hình rộng hơn: logistics, dòng người, chợ hải sản, tiếp xúc quốc tế và khu dân cư trên sườn đồi cùng định hình hình ảnh đô thị.
 
 ## 부산의 산복도로: địa hình đi vào hình thái đô thị
 
@@ -493,7 +496,9 @@ Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khá
 ## Nguồn tham khảo
 
 - UNESCO Intangible Cultural Heritage: Culture of Jeju Haenyeo; Arirang inscriptions; traditional wrestling heritage.
-- `국립국어원` / National Institute of Korean Language: thuật ngữ về ngôn ngữ chuẩn và phương ngữ.
+- `국립국어원` / National Institute of Korean ngôn ngữ (language / 언어): thuật ngữ về ngôn ngữ chuẩn và phương ngữ.
 - `국가데이터처` / Statistics Korea và dữ liệu chính quyền địa phương: dân số, hộ, di cư và thay đổi vùng; luôn ghi năm và định nghĩa mẫu số.
-- `국토교통부` / Ministry of Land, Infrastructure and Transport: hạ tầng giao thông và không gian đô thị khi cần dữ kiện hiện hành.
+- `국토교통부` / Ministry of Land, hạ tầng (infrastructure / 인프라) and vận chuyển (transport / 전송): hạ tầng giao thông và không gian đô thị khi cần dữ kiện hiện hành.
 - Các chương lịch sử trong [`../korean_history/`](../korean_history/README.md) cho niên đại và bối cảnh lịch sử cần độ chính xác cao hơn.
+
+> **Bàn giao:** Sau **Nguồn tham khảo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

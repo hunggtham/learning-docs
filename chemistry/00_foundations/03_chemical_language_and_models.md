@@ -1,5 +1,8 @@
 # Ngôn ngữ và mô hình hóa học
 
+> **Mạch đọc:** Đọc **Ngôn ngữ và mô hình hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ký hiệu hóa học: một biểu tượng mang bản sắc nguyên tố** sang **Công thức hóa học: mô tả thành phần và đôi khi cả cấu trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hóa học không thể chỉ dựa vào câu chữ thông thường. Khi số lượng **tiểu phần hóa học (species)** tăng lên, ta cần một ngôn ngữ đủ ngắn để biểu diễn thành phần, điện tích, lượng chất và sự biến đổi mà vẫn giữ được ý nghĩa. **Ký hiệu hóa học (chemical symbols)**, **công thức hóa học (chemical formulas)** và **phương trình hóa học (chemical equations)** tồn tại vì lý do đó.
 
 Tuy nhiên, ký hiệu chỉ hữu ích khi ta biết nó đang mã hóa điều gì. `H2O`, `2H2O`, `H2O(l)` và `H2O2` trông gần nhau nhưng mang thông tin hoàn toàn khác.
@@ -244,3 +247,5 @@ Không. Chỉ số dưới thuộc về bản sắc và thành phần của ti�
 Ngôn ngữ hóa học cho phép mô tả vật chất, nhưng câu hỏi tiếp theo là: `H`, `O`, `Na` thực sự đại diện cho những thực thể nào? Điều gì làm hydrogen khác oxygen?
 
 Xem tiếp: [Nguyên tử, nguyên tố và đồng vị](../01_atomic_structure/00_atoms_elements_and_isotopes.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is chemistry](./00_what_is_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

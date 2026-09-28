@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **배열과 포인터 심화 (Arrays & Pointers - Advanced)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,13 +20,15 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **배열 심화 (Arrays - Advanced)** và nối nó với **배열과 포인터 심화 (Arrays & Pointers - Advanced)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 배열 심화 (Arrays - Advanced)
 ### 258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)
 - 배열은 행 우선으로 데이터가 할당된다. (Mảng được cấp phát theo thứ tự ưu tiên hàng).
 - 첨자 없이 배열 이름을 사용하면 첫 번째 요소의 주소를 지정하는 것과 같다. (Tên mảng không có chỉ số chính là địa chỉ phần tử đầu tiên).
-  - *Example / Ví dụ*: Khởi tạo mảng bằng `for` loop: `for(i=0; i<5; i++) a[i] = i+10;`
+  - *Example / Ví dụ*: Khởi tạo mảng bằng `for` vòng lặp (loop / 루프): `for(i=0; i<5; i++) a[i] = i+10;`
   - 💡 *Mẹo ghi nhớ*: Mảng trong C/Java đếm từ 0.
 
 ### 259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)

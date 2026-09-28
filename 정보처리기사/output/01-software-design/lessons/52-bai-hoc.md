@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **10. 소프트웨어 설계 원리 (Software Design Principles)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **4. 응집도 (Cohesion - Độ gắn kết)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 결합도 (Coupling - Độ phụ thuộc)** và nối nó với **4. 응집도 (Cohesion - Độ gắn kết)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -38,19 +40,19 @@
     *   **Example:** Truyền đối tượng `User` nhưng chỉ dùng `User.name`.
 3.  **제어 결합도 (Control Coupling):**
     *   **Korean:** 제어 신호(Flag)를 전달하여 모듈 흐름 제어.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào logic của module khác.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào lô-gic (logic / 논리) của mô-đun (module / 모듈) khác.
     *   **Example:** Truyền `isExpress=true` để quyết định cách xử lý.
 4.  **외부 결합도 (External Coupling):**
     *   **Korean:** 외부 변수/데이터 참조.
-    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / file / thiết bị bên ngoài.
-    *   **Example:** Hai module dùng chung một file `config.txt`.
+    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / tệp (file / 파일) / thiết bị bên ngoài.
+    *   **Example:** Hai mô-đun (module / 모듈) dùng chung một tệp (file / 파일) `config.txt`.
 5.  **공통 결합도 (Common Coupling):**
     *   **Korean:** 공통 데이터 영역(전역 변수) 공유.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều module dùng chung biến toàn cục (global variables).
+    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều mô-đun (module / 모듈) dùng chung biến toàn cục (global variables).
     *   **Example:** Sử dụng `public static int totalCount` chung.
 6.  **내용 결합도 (Content Coupling) - XẤU NHẤT:**
     *   **Korean:** 내부 기능/자료 직접 참조. 스파게티 코드.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/logic nội bộ của module khác.
-    *   **Example:** `moduleB.internalValue = 10` từ module A.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/lô-gic (logic / 논리) nội bộ của mô-đun (module / 모듈) khác.
+    *   **Example:** `moduleB.internalValue = 10` từ mô-đun (module / 모듈) A.
 
 ---

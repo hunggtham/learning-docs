@@ -1,18 +1,21 @@
-# First-Order Logic cho Artificial Intelligence
+# First-Order lô-gic (logic / 논리) cho Artificial Intelligence
 
-Propositional Logic có thể biểu diễn `Rain`, `WetRoad`, nhưng không naturally nói “mọi người”, “một người nào đó”, “Alice là parent của Bob”, hay “mọi doctor là professional”. **First-Order Logic (FOL / 일차 논리 / logic vị từ bậc nhất)** mở rộng logic bằng objects, predicates, functions, variables và quantifiers.
+> **Mạch đọc:** Đặt **First-Order lô-gic (logic / 논리) cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tại sao Propositional lô-gic (logic / 논리) không đủ?** sang **Vocabulary của FOL**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-FOL quan trọng trong Knowledge Representation vì nó biểu diễn **internal relational structure** của statements thay vì coi mỗi sentence là atomic symbol. Nó là nền của logic programming, theorem proving, ontologies và formal specifications.
+
+Propositional lô-gic (logic / 논리) có thể biểu diễn `Rain`, `WetRoad`, nhưng không naturally nói “mọi người”, “một người nào đó”, “Alice là parent của Bob”, hay “mọi doctor là professional”. **First-Order lô-gic (logic / 논리)** mở rộng lô-gic (logic / 논리) bằng objects, predicates, functions, variables và quantifiers.
+
+FOL quan trọng trong kiến thức (knowledge / 지식) biểu diễn (representation / 표현) vì nó biểu diễn **nội bộ (internal / 내부) relational cấu trúc (structure / 구조)** của statements thay vì coi mỗi sentence là atomic symbol. Nó là nền của lô-gic (logic / 논리) programming, theorem proving, ontologies và formal specifications.
 
 Xem trước: [Propositional Logic](./01_propositional_logic.md).
 
-## Tại sao Propositional Logic không đủ?
+## Tại sao Propositional lô-gic (logic / 논리) không đủ?
 
-Suppose domain có 10,000 people và rule:
+Suppose lĩnh vực (domain / 도메인) có 10,000 people và quy tắc (rule / 규칙):
 
 > Every human is mortal.
 
-Propositional representation có thể cần viết 10,000 implications:
+Propositional biểu diễn (representation / 표현) có thể cần viết 10,000 implications:
 
 ```text
 Human_Alice → Mortal_Alice
@@ -26,11 +29,11 @@ FOL viết một statement:
 \forall x\; Human(x)\rightarrow Mortal(x)
 \]
 
-Structure `Human(x)` và variable `x` allow generalization over objects.
+Cấu trúc (structure / 구조) `Human(x)` và variable `x` allow generalization over objects.
 
 ## Vocabulary của FOL
 
-Một first-order language có:
+Một first-order ngôn ngữ (language / 언어) có:
 
 - **constants**: `Alice`, `Seoul`, `42`;
 - **variables**: `x`, `y`;
@@ -41,7 +44,7 @@ Một first-order language có:
 
 ## Terms và formulas
 
-A **term** refers to object:
+A **term** refers to đối tượng (object / 객체):
 
 ```text
 Alice
@@ -63,9 +66,9 @@ Complex formula combines atoms/quantifiers.
 \forall x\; Human(x)\rightarrow Mortal(x)
 \]
 
-means every object `x`: if human then mortal.
+means every đối tượng (object / 객체) `x`: if human then mortal.
 
-Important pattern uses implication, not conjunction:
+Important mẫu (pattern / 패턴) uses implication, not conjunction:
 
 Wrong intended universal:
 
@@ -73,7 +76,7 @@ Wrong intended universal:
 \forall x\; Human(x)\land Mortal(x)
 \]
 
-This asserts every object in domain is both human and mortal.
+This asserts every đối tượng (object / 객체) in lĩnh vực (domain / 도메인) is both human and mortal.
 
 ## Existential quantifier
 
@@ -81,11 +84,11 @@ This asserts every object in domain is both human and mortal.
 \exists x\; Human(x)\land LivesIn(x,Seoul)
 \]
 
-means at least one object both human and lives in Seoul.
+means at least one đối tượng (object / 객체) both human and lives in Seoul.
 
-For existential, conjunction is common to describe witness properties.
+For existential, conjunction is dùng chung (common / 공통) to describe witness properties.
 
-## Quantifier scope
+## Quantifier phạm vi (scope / 범위)
 
 Compare:
 
@@ -103,9 +106,9 @@ vs:
 
 There exists one person everyone loves.
 
-Order matters radically.
+Thứ tự (order / 순서) matters radically.
 
-This resembles variable scope in programming but semantics are logical quantification.
+This resembles variable phạm vi (scope / 범위) in programming but ngữ nghĩa (semantics / 의미론) are logical quantification.
 
 ## Free và bound variables
 
@@ -117,9 +120,9 @@ In:
 
 `x` bound, `y` free.
 
-A sentence/closed formula has no free variables and can receive truth value under interpretation.
+A sentence/closed formula has no free variables and can receive truth giá trị (value / 값) under interpretation.
 
-Open formula with free variable behaves more like query/property.
+Open formula with free variable behaves more like truy vấn (query / 쿼리)/thuộc tính (property / 속성).
 
 ## Predicate arity
 
@@ -129,7 +132,7 @@ Unary:
 Doctor(x)
 \]
 
-Binary:
+Nhị phân (binary / 이진):
 
 \[
 WorksAt(x,c)
@@ -141,23 +144,23 @@ Ternary:
 Transferred(x,amount,account)
 \]
 
-Predicate semantics depend argument positions. Typed schemas help avoid nonsensical combinations.
+Predicate ngữ nghĩa (semantics / 의미론) depend argument positions. Typed schemas help avoid nonsensical combinations.
 
 ## Functions vs relations
 
-Function maps inputs to one object:
+Hàm (function / 함수) maps inputs to one đối tượng (object / 객체):
 
 \[
 MotherOf(x)
 \]
 
-Relation can hold between objects:
+Quan hệ (relation / 관계) can hold between objects:
 
 \[
 Mother(m,x)
 \]
 
-Function implies uniqueness/existence assumptions. If domain knowledge doesn't guarantee one defined value, relation may be safer.
+Hàm (function / 함수) implies uniqueness/existence các giả định (assumptions / 가정들). If lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) doesn't guarantee one defined giá trị (value / 값), quan hệ (relation / 관계) may be safer.
 
 ## Equality
 
@@ -167,40 +170,40 @@ FOL with equality includes:
 x=y
 \]
 
-and properties of identity.
+and properties of định danh (identity / 식별자).
 
-Unique-name assumption (different names mean different entities) is not automatically part of standard FOL semantics; some knowledge systems add it.
+Unique-name giả định (assumption / 가정) (different names mean different entities) is not automatically part of tiêu chuẩn (standard / 표준) FOL ngữ nghĩa (semantics / 의미론); some kiến thức (knowledge / 지식) các hệ thống (systems / 시스템들) add it.
 
-Entity identity is major practical issue in knowledge graphs.
+Thực thể (entity / 엔터티) định danh (identity / 식별자) is major practical issue in kiến thức (knowledge / 지식) graphs.
 
 ## Interpretation
 
-FOL model includes:
+FOL mô hình (model / 모델) includes:
 
-- domain `D` of objects;
-- mapping constants → objects;
+- lĩnh vực (domain / 도메인) `D` of objects;
+- ánh xạ (mapping / 매핑) constants → objects;
 - predicates → relations over `D`;
 - functions → mappings over `D`.
 
 Formula truth depends interpretation.
 
-Syntax `CapitalOf(Seoul,Korea)` alone doesn't force intended meaning; semantics assigns relation extension.
+Cú pháp (syntax / 문법) `CapitalOf(Seoul,Korea)` alone doesn't force intended meaning; ngữ nghĩa (semantics / 의미론) assigns quan hệ (relation / 관계) extension.
 
 ## Translation examples
 
-“Every engineer uses some tool”:
+“Every engineer uses some công cụ (tool / 도구)”:
 
 \[
 \forall x\;(Engineer(x)\rightarrow \exists y\;(Tool(y)\land Uses(x,y)))
 \]
 
-“There is a tool every engineer uses”:
+“There is a công cụ (tool / 도구) every engineer uses”:
 
 \[
 \exists y\;(Tool(y)\land\forall x\;(Engineer(x)\rightarrow Uses(x,y)))
 \]
 
-Again quantifier order encodes very different claim.
+Again quantifier thứ tự (order / 순서) encodes very different claim.
 
 ## Negating quantifiers
 
@@ -218,7 +221,7 @@ De Morgan-like quantifier laws:
 
 “No one passed” = “everyone did not pass”.
 
-Natural-language scope ambiguity makes formalization nontrivial.
+Natural-language phạm vi (scope / 범위) ambiguity makes formalization nontrivial.
 
 ## Universal instantiation
 
@@ -250,7 +253,7 @@ introduce fresh symbol `k` representing some witness:
 Human(k)
 \]
 
-But cannot assume `k=Alice` without evidence. Freshness matters for soundness.
+But cannot assume `k=Alice` without bằng chứng (evidence / 증거). Freshness matters for soundness.
 
 ## Substitution
 
@@ -266,7 +269,7 @@ Applied:
 Parent(x,y)\theta=Parent(Alice,Bob)
 \]
 
-Substitution is mechanical core of unification and rule application.
+Substitution is mechanical cốt lõi (core / 핵심) of unification and quy tắc (rule / 규칙) ứng dụng (application / 애플리케이션).
 
 ## Unification
 
@@ -285,7 +288,7 @@ Most general unifier:
 \{x/Alice, y/Seoul\}
 \]
 
-Unification enables logic programming to match generic rules with specific facts.
+Unification enables lô-gic (logic / 논리) programming to match generic rules with specific facts.
 
 ## Occurs check
 
@@ -295,13 +298,13 @@ Trying unify:
 x = f(x)
 ```
 
-should fail in standard finite-term unification because would require infinite term.
+should thất bại (fail / 실패) in tiêu chuẩn (standard / 표준) finite-term unification because would require infinite term.
 
-Occurs check prevents cyclic substitution, though some Prolog implementations historically optimize/modify behavior.
+Occurs check prevents cyclic substitution, though some Prolog implementations historically optimize/modify hành vi (behavior / 동작).
 
 ## Generalized Modus Ponens
 
-Rule:
+Quy tắc (rule / 규칙):
 
 \[
 P_1\land\cdots\land P_n\rightarrow Q
@@ -325,11 +328,11 @@ Grandparent(Alice,Carol)
 
 ## Forward chaining in FOL
 
-Repeatedly match rule premises against facts using unification and add conclusions.
+Repeatedly match quy tắc (rule / 규칙) premises against facts using unification and add conclusions.
 
-Risk: if functions/new terms generate infinitely many facts, process may not terminate.
+Rủi ro (risk / 위험): if functions/new terms generate infinitely many facts, tiến trình (process / 프로세스) may not terminate.
 
-Datalog restricts language to achieve finite/tractable behavior in many settings.
+Datalog restricts ngôn ngữ (language / 언어) to achieve finite/tractable hành vi (behavior / 동작) in many settings.
 
 ## Backward chaining
 
@@ -339,7 +342,7 @@ Goal:
 Grandparent(Alice,Carol)?
 ```
 
-Match rule conclusion:
+Match quy tắc (rule / 규칙) conclusion:
 
 ```text
 Grandparent(x,z)
@@ -352,11 +355,11 @@ Parent(Alice,y)
 Parent(y,Carol)
 ```
 
-Search facts/rules for witness `y`.
+Tìm kiếm (search / 검색) facts/rules for witness `y`.
 
-This is basis of Prolog-style query resolution.
+This is basis of Prolog-style truy vấn (query / 쿼리) resolution.
 
-## Logic programming
+## Lô-gic (logic / 논리) programming
 
 Prolog program consists of facts/rules:
 
@@ -369,15 +372,15 @@ grandparent(X, Z) :-
     parent(Y, Z).
 ```
 
-Query:
+Truy vấn (query / 쿼리):
 
 ```prolog
 ?- grandparent(alice, carol).
 ```
 
-Procedural behavior depends rule/order/search strategy even though clauses declarative.
+Procedural hành vi (behavior / 동작) depends quy tắc (rule / 규칙)/thứ tự (order / 순서)/tìm kiếm (search / 검색) chiến lược (strategy / 전략) even though clauses declarative.
 
-Declarative semantics and operational semantics must both be understood.
+Declarative ngữ nghĩa (semantics / 의미론) and operational ngữ nghĩa (semantics / 의미론) must both be understood.
 
 ## FOL resolution
 
@@ -387,7 +390,7 @@ To use resolution, formulas convert toward clause form via steps such as:
 2. move negation inward;
 3. standardize variables;
 4. Skolemize existentials;
-5. drop universal quantifiers in clause context;
+5. drop universal quantifiers in clause ngữ cảnh (context / 맥락);
 6. convert to CNF;
 7. use unification-based resolution.
 
@@ -401,27 +404,27 @@ Example:
 \forall x\exists y\; Loves(x,y)
 \]
 
-Replace existential witness by Skolem function:
+Replace existential witness by Skolem hàm (function / 함수):
 
 \[
 \forall x\; Loves(x,f(x))
 \]
 
-Function `f(x)` represents some loved object depending on x.
+Hàm (function / 함수) `f(x)` represents some loved đối tượng (object / 객체) depending on x.
 
-If existential not under universal scope, fresh Skolem constant may suffice.
+If existential not under universal phạm vi (scope / 범위), fresh Skolem constant may suffice.
 
 ## Decidability
 
 Propositional SAT decidable: finite truth assignments.
 
-General First-Order Logic validity is semi-decidable/undecidable in broad sense: no algorithm terminates with correct yes/no for every arbitrary FOL formula validity case.
+General First-Order lô-gic (logic / 논리) validity is semi-decidable/undecidable in broad sense: no thuật toán (algorithm / 알고리즘) terminates with correct yes/no for every arbitrary FOL formula validity trường hợp (case / 사례).
 
 This is why practical KR often restricts expressiveness.
 
 ## Description Logics
 
-Description Logics are restricted logic families designed for concept/role reasoning with decidability/tractability properties.
+Description Logics are restricted lô-gic (logic / 논리) families designed for concept/role lập luận (reasoning / 추론) with decidability/tractability properties.
 
 Typical constructs:
 
@@ -434,11 +437,11 @@ Doctor ⊓ Researcher
 
 They underpin OWL ontology languages.
 
-KR engineering often prefers restricted formalism that supports needed inference reliably over maximal expressiveness.
+KR kỹ thuật (engineering / 엔지니어링) often prefers restricted formalism that supports needed suy luận (inference / 추론) reliably over maximal expressiveness.
 
 ## Datalog
 
-Datalog is logic-programming language without unrestricted function symbols, often finite relational facts/rules.
+Datalog is logic-programming ngôn ngữ (language / 언어) without unrestricted hàm (function / 함수) symbols, often finite relational facts/rules.
 
 Example:
 
@@ -446,58 +449,58 @@ Example:
 parent(x,y) ∧ parent(y,z) → grandparent(x,z)
 ```
 
-Datalog connects logic inference with recursive databases and rule engines.
+Datalog connects lô-gic (logic / 논리) suy luận (inference / 추론) with recursive databases and quy tắc (rule / 규칙) engines.
 
-SQL recursive CTE and graph query languages share some conceptual territory.
+SQL recursive CTE and đồ thị (graph / 그래프) truy vấn (query / 쿼리) languages share some conceptual territory.
 
 ## Rules and databases
 
-Database facts:
+Cơ sở dữ liệu (database / 데이터베이스) facts:
 
 ```text
 Employee(Alice)
 ManagerOf(Alice,Team1)
 ```
 
-Rule:
+Quy tắc (rule / 규칙):
 
 ```text
 ManagerOf(x,t) → CanApprove(x,t)
 ```
 
-Inference layer derives authorization-like facts.
+Suy luận (inference / 추론) tầng (layer / 계층) derives authorization-like facts.
 
-But security policies require careful formal semantics; naive rules may create privilege escalation.
+But bảo mật (security / 보안) policies require careful formal ngữ nghĩa (semantics / 의미론); naive rules may create privilege escalation.
 
 ## Temporal limitation
 
-Basic FOL has no built-in time. To model changing facts:
+Basic FOL has no built-in thời gian (time / 시간). To mô hình (model / 모델) changing facts:
 
 \[
 WorksAt(Alice,Company,2026)
 \]
 
-or introduce time argument:
+or introduce thời gian (time / 시간) argument:
 
 \[
 WorksAt(Alice,Company,t)
 \]
 
-Temporal Logic provides operators like “always”, “eventually”, “until” for temporal properties.
+Temporal lô-gic (logic / 논리) provides operators like “always”, “eventually”, “until” for temporal properties.
 
-Planning/state transition logic also explicitly models time/steps.
+Planning/chuyển tiếp trạng thái (state transition / 상태 전이) lô-gic (logic / 논리) also explicitly các mô hình (models / 모델들) thời gian (time / 시간)/steps.
 
-## Event calculus / situation calculus
+## Sự kiện (event / 이벤트) calculus / situation calculus
 
-Classical AI developed formalisms for actions/change.
+Classical AI developed formalisms for actions/thay đổi (change / 변경).
 
 **Situation Calculus** represents situations as histories and fluents varying by situation.
 
-**Event Calculus** represents events and intervals over which properties hold.
+**sự kiện (event / 이벤트) Calculus** represents events and intervals over which properties hold.
 
-They address **frame problem**: specifying what stays unchanged when action affects only few facts.
+They address **frame bài toán (problem / 문제)**: specifying what stays unchanged when hành động (action / 동작) affects only few facts.
 
-## Frame problem
+## Frame bài toán (problem / 문제)
 
 If robot moves cup from A to B, we want infer:
 
@@ -508,11 +511,11 @@ If robot moves cup from A to B, we want infer:
 
 Explicitly writing every non-change is impractical.
 
-Planning STRIPS uses add/delete lists to handle frame assumptions operationally.
+Planning STRIPS uses add/delete lists to handle frame các giả định (assumptions / 가정들) operationally.
 
-## Commonsense exception problem
+## Commonsense exception bài toán (problem / 문제)
 
-Rule:
+Quy tắc (rule / 규칙):
 
 \[
 Bird(x)\rightarrow Flies(x)
@@ -520,13 +523,13 @@ Bird(x)\rightarrow Flies(x)
 
 fails for penguins.
 
-Strict FOL rule means no exception unless modeled explicitly.
+Strict FOL quy tắc (rule / 규칙) means no exception unless modeled explicitly.
 
-Default logic/non-monotonic reasoning allows “birds normally fly unless exception known”.
+Default lô-gic (logic / 논리)/non-monotonic lập luận (reasoning / 추론) allows “birds normally fly unless exception known”.
 
-This demonstrates boundary between mathematical logic and commonsense reasoning.
+This demonstrates ranh giới (boundary / 경계) between mathematical lô-gic (logic / 논리) and commonsense lập luận (reasoning / 추론).
 
-## Knowledge incompleteness
+## Kiến thức (knowledge / 지식) incompleteness
 
 From absence of:
 
@@ -540,11 +543,11 @@ FOL does not derive:
 ¬Owns(Alice,Car)
 ```
 
-unless closed-world assumption/rule added.
+unless closed-world giả định (assumption / 가정)/quy tắc (rule / 규칙) added.
 
-This is critical when integrating databases with logic reasoners.
+This is trọng yếu (critical / 중요) when integrating databases with lô-gic (logic / 논리) reasoners.
 
-## FOL và Knowledge Graphs
+## FOL và kiến thức (knowledge / 지식) Graphs
 
 Triple:
 
@@ -552,19 +555,19 @@ Triple:
 (Alice, worksAt, CompanyX)
 ```
 
-maps naturally to binary predicate:
+maps naturally to nhị phân (binary / 이진) predicate:
 
 \[
 WorksAt(Alice,CompanyX)
 \]
 
-Ontology axioms add logical semantics.
+Ontology axioms add logical ngữ nghĩa (semantics / 의미론).
 
-Graph traversal alone is not full FOL reasoning; graph query semantics depend language/system.
+Đồ thị (graph / 그래프) traversal alone is not full FOL lập luận (reasoning / 추론); đồ thị (graph / 그래프) truy vấn (query / 쿼리) ngữ nghĩa (semantics / 의미론) depend ngôn ngữ (language / 언어)/hệ thống (system / 시스템).
 
-## FOL và Natural Language
+## FOL và Natural ngôn ngữ (language / 언어)
 
-Natural language contains quantifiers, negation, relations and scope, so FOL is useful semantic representation.
+Natural ngôn ngữ (language / 언어) contains quantifiers, negation, relations and phạm vi (scope / 범위), so FOL is useful ngữ nghĩa (semantic / 의미적) biểu diễn (representation / 표현).
 
 Sentence:
 
@@ -576,13 +579,13 @@ Can mean each student possibly different book:
 \forall x(Student(x)\rightarrow\exists y(Book(y)\land Read(x,y)))
 \]
 
-Natural language semantic parsing tries map text into logical/structured forms, but ambiguity/context make task hard.
+Natural ngôn ngữ (language / 언어) ngữ nghĩa (semantic / 의미적) parsing tries map văn bản (text / 텍스트) into logical/structured forms, but ambiguity/ngữ cảnh (context / 맥락) make tác vụ (task / 작업) hard.
 
-## LLM to logic
+## LLM to lô-gic (logic / 논리)
 
-LLM can translate natural-language requirements into logical constraints, then theorem prover/solver validates.
+LLM can translate natural-language requirements into logical các ràng buộc (constraints / 제약조건들), then theorem prover/solver validates.
 
-Architecture:
+Kiến trúc (architecture / 아키텍처):
 
 ```text
 Natural language
@@ -592,9 +595,9 @@ FOL / Datalog / SMT-like constraints
 verified answer / counterexample
 ```
 
-Risk lies in translation correctness. Formal solver only proves the formula it receives, not that formula faithfully represents user intent.
+Rủi ro (risk / 위험) lies in translation tính đúng đắn (correctness / 정확성). Formal solver only proves the formula it receives, not that formula faithfully represents người dùng (user / 사용자) intent.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Constant   = named object
@@ -607,11 +610,11 @@ Unification = find substitution matching structures
 Inference  = derive statements under formal rules
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “∀x P(x) means P is usually true”
 
-No. Universal quantifier means every object in domain under interpretation satisfies P.
+No. Universal quantifier means every đối tượng (object / 객체) in lĩnh vực (domain / 도메인) under interpretation satisfies P.
 
 ### “∃x means we know which x”
 
@@ -619,14 +622,16 @@ Not necessarily. It asserts at least one witness exists.
 
 ### “FOL can represent everything needed in AI”
 
-It is expressive but awkward for uncertainty, defaults, time and computational tractability. Other formalisms complement it.
+It is expressive but awkward for bất định (uncertainty / 불확실성), defaults, thời gian (time / 시간) and computational tractability. Other formalisms complement it.
 
 ### “Formal proof guarantees real-world conclusion”
 
-Proof guarantees conclusion follows from formal premises. If premises/modeling are wrong or incomplete, real-world claim may still fail.
+Proof guarantees conclusion follows from formal premises. If premises/modeling are wrong or incomplete, real-world claim may still thất bại (fail / 실패).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-First-Order Logic upgrades propositional reasoning from flat Boolean symbols to relational structures, creating bridge to ontologies, rule engines and Knowledge Graphs. Its limitations motivate [Probabilistic Reasoning](./04_probabilistic_reasoning.md) and non-monotonic/hybrid approaches.
+First-Order lô-gic (logic / 논리) upgrades propositional lập luận (reasoning / 추론) from flat Boolean symbols to relational structures, creating cầu nối (bridge / 브리지) to ontologies, quy tắc (rule / 규칙) engines and kiến thức (knowledge / 지식) Graphs. Its limitations motivate [Probabilistic Reasoning](./04_probabilistic_reasoning.md) and non-monotonic/hybrid approaches.
 
 Xem tiếp: [Inference and Reasoning](./03_inference_and_reasoning.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

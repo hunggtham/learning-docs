@@ -1,5 +1,8 @@
 # Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)
 
+> **Mạch đọc:** Đặt **Logistics, cảng biển và mạng phân phối Hàn Quốc (Logistics, Ports & Distribution / 물류·항만·유통망)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Logistics gồm dòng vật lý và dòng thông tin** sang **Địa lý Hàn Quốc: bán đảo nhưng thương mại phụ thuộc mạnh vào biển và hàng không**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một nền kinh tế định hướng xuất khẩu không thể tồn tại chỉ với nhà máy. Nguyên liệu phải đi vào Hàn Quốc, linh kiện phải di chuyển giữa các nhà máy, thành phẩm phải tới cảng hoặc sân bay và bưu kiện phải tới hộ gia đình. **Logistics (물류)** là mô liên kết giữa sản xuất và thị trường.
 
 Điểm quan trọng nhất là logistics không đơn giản tối ưu “chi phí vận chuyển thấp nhất”. Nó tối ưu **tổng chi phí đưa hàng tới nơi sử dụng + thời gian + độ tin cậy + vốn lưu động + mức dịch vụ**.
@@ -33,26 +36,26 @@ Do kết nối đường bộ xuyên bán đảo bị giới hạn, cảng biể
 
 Các nút logistics có chuyên môn khác nhau:
 
-- Busan: trung tâm container và trung chuyển;
+- Busan: trung tâm bộ chứa (container / 컨테이너) và trung chuyển;
 - Incheon: hàng hóa vùng thủ đô và kết nối biển–hàng không;
 - Ulsan, Gwangyang, Pohang: hàng công nghiệp và hàng rời;
 - Incheon Airport: hàng giá trị cao, nhạy với thời gian.
 
-Địa lý cảng phản ánh địa lý công nghiệp. Thép, hóa dầu, ô tô, container và bán dẫn cần các loại hạ tầng khác nhau.
+Địa lý cảng phản ánh địa lý công nghiệp. Thép, hóa dầu, ô tô, bộ chứa (container / 컨테이너) và bán dẫn cần các loại hạ tầng khác nhau.
 
-## Container hóa: giao diện tiêu chuẩn của thương mại vật lý
+## Bộ chứa (container / 컨테이너) hóa: giao diện tiêu chuẩn của thương mại vật lý
 
-Container tiêu chuẩn đã làm thay đổi thương mại toàn cầu bằng cách giảm thời gian bốc dỡ, thiệt hại hàng và ma sát giữa các phương thức vận tải.
+Bộ chứa (container / 컨테이너) tiêu chuẩn đã làm thay đổi thương mại toàn cầu bằng cách giảm thời gian bốc dỡ, thiệt hại hàng và ma sát giữa các phương thức vận tải.
 
-Có thể xem container như một **chuẩn giao diện (interface standard)** cho hàng hóa vật lý: tàu, xe tải, đường sắt và cần cẩu cùng thao tác trên một đơn vị tiêu chuẩn.
+Có thể xem bộ chứa (container / 컨테이너) như một **chuẩn giao diện (interface standard)** cho hàng hóa vật lý: tàu, xe tải, đường sắt và cần cẩu cùng thao tác trên một đơn vị tiêu chuẩn.
 
 Điều này giảm mạnh chi phí giao dịch và giúp chuỗi giá trị toàn cầu phức tạp trở nên khả thi.
 
 ## Kinh tế cảng: lưu lượng, mạng lưới và hạ tầng cố định
 
-Cảng và terminal có tài sản cố định lớn như cầu cảng, cần cẩu, bãi container, hệ thống CNTT và hạ tầng luồng tàu.
+Cảng và terminal có tài sản cố định lớn như cầu cảng, cần cẩu, bãi bộ chứa (container / 컨테이너), hệ thống CNTT và hạ tầng luồng tàu.
 
-Doanh thu thường gắn với lượng hàng thông qua và dịch vụ. Quy mô quan trọng vì chi phí cố định được phân bổ trên nhiều container hoặc lượng hàng hơn.
+Doanh thu thường gắn với lượng hàng thông qua và dịch vụ. Quy mô quan trọng vì chi phí cố định được phân bổ trên nhiều bộ chứa (container / 컨테이너) hoặc lượng hàng hơn.
 
 Nhưng quá tải lại tạo chi phí ngược: tàu chờ lâu, bãi đầy và xe tải quay vòng chậm.
 
@@ -60,7 +63,7 @@ Vì vậy hiệu quả cảng không phải sản lượng tối đa bằng mọ
 
 ## Busan và hiệu ứng mạng trung chuyển
 
-Cảng trung chuyển xử lý hàng không nhất thiết xuất phát hoặc kết thúc tại địa phương; container được chuyển giữa các tuyến tàu.
+Cảng trung chuyển xử lý hàng không nhất thiết xuất phát hoặc kết thúc tại địa phương; bộ chứa (container / 컨테이너) được chuyển giữa các tuyến tàu.
 
 ```text
 Nhiều tuyến tàu hơn
@@ -74,17 +77,17 @@ Nhiều tuyến tàu hơn
 
 Tự động hóa cảng, quan hệ lao động và kết nối hậu phương vì vậy đều quan trọng.
 
-## Nhà khai thác cảng và hãng tàu: cùng container nhưng kinh tế khác nhau
+## Nhà khai thác cảng và hãng tàu: cùng bộ chứa (container / 컨테이너) nhưng kinh tế khác nhau
 
 Terminal thu phí xử lý và phụ thuộc lưu lượng, tỷ lệ sử dụng tài sản.
 
-Hãng vận tải container sở hữu hoặc thuê tàu và chịu chu kỳ cước, nhiên liệu và cung tàu.
+Hãng vận tải bộ chứa (container / 컨테이너) sở hữu hoặc thuê tàu và chịu chu kỳ cước, nhiên liệu và cung tàu.
 
 Cùng một mức thương mại có thể tạo biến động lợi nhuận rất khác cho hai loại doanh nghiệp.
 
 Không nên gộp toàn bộ “shipping/logistics” thành một ngành duy nhất.
 
-# Vận tải container (Container Shipping / 해운)
+# Vận tải bộ chứa (container / 컨테이너)
 
 ## Cước vận tải được quyết định bởi nhu cầu so với nguồn cung tàu điều chỉnh chậm
 
@@ -142,7 +145,7 @@ Quy định môi trường có thể làm **chạy chậm (slow steaming)** tr�
 
 ## Vận tải biển là hạ tầng chiến lược
 
-Một hãng tàu quốc gia lớn có thể có giá trị chiến lược vì doanh nghiệp xuất khẩu cần tiếp cận công suất container khi chuỗi cung ứng gián đoạn.
+Một hãng tàu quốc gia lớn có thể có giá trị chiến lược vì doanh nghiệp xuất khẩu cần tiếp cận công suất bộ chứa (container / 컨테이너) khi chuỗi cung ứng gián đoạn.
 
 Đó là lý do vận tải biển đôi khi nhận sự quan tâm chính sách vượt quá tỷ trọng GDP trực tiếp.
 
@@ -280,7 +283,7 @@ Một lô hàng tới đúng giờ nhưng vượt phạm vi nhiệt độ có th
 
 Kinh tế chuỗi lạnh gồm:
 
-- container chuyên dụng;
+- bộ chứa (container / 컨테이너) chuyên dụng;
 - cảm biến;
 - chứng nhận;
 - giám sát;
@@ -352,11 +355,11 @@ Theo dõi không ngăn được gián đoạn nhưng làm giảm bất định v
 
 Có thể so sánh với phần mềm:
 
-> Chuỗi cung ứng thiếu khả năng quan sát giống một hệ thống phân tán không có observability: sự cố xảy ra nhưng đội vận hành không biết mắt xích nào hỏng đủ nhanh.
+> Chuỗi cung ứng thiếu khả năng quan sát giống một hệ thống phân tán không có khả năng quan sát (observability / 관측 가능성): sự cố xảy ra nhưng đội vận hành không biết mắt xích nào hỏng đủ nhanh.
 
 Khả năng quan sát có thể giảm nhu cầu giữ tồn kho an toàn do bất định và cải thiện giao tiếp với khách hàng.
 
-## Control tower và logistics theo sự kiện
+## Điều khiển (control / 제어) tower và logistics theo sự kiện
 
 Hệ thống logistics hiện đại kết hợp sự kiện vận chuyển, tồn kho, thời tiết/trạng thái cảng và đơn hàng để đổi tuyến hoặc ưu tiên lại.
 
@@ -399,7 +402,7 @@ Vì vậy không nên đưa chỉ số cước vào mô hình biên lợi nhuậ
 
 # Cách phân tích doanh nghiệp logistics
 
-## Hãng vận tải container
+## Hãng vận tải bộ chứa (container / 컨테이너)
 
 ```text
 Cước
@@ -490,3 +493,5 @@ Chu kỳ tiền mặt + trải nghiệm khách hàng
 # Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
+
+> **Bàn giao:** Sau **Logistics thương mại điện tử**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

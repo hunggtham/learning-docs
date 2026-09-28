@@ -1,5 +1,8 @@
 # Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm
 
+> **Mạch đọc:** Đọc **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ phương trình Maxwell tới các thế** sang **Vì sao các thế không duy nhất?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Trong điện tĩnh, điện trường có thể được mô tả hoàn toàn bằng điện thế vô hướng. Khi trường thay đổi theo thời gian, mô tả đó không còn đủ. Ta cần cả **điện thế vô hướng (scalar potential)** `\phi` và **thế vectơ (vector potential)** `\mathbf A`.
 
 Điểm quan trọng của chương này không phải học thêm hai ký hiệu. Nó là bước chuyển từ cách nhìn “trường là đại lượng duy nhất có ý nghĩa” sang một cấu trúc sâu hơn: nhiều bộ thế khác nhau có thể mô tả cùng một trường vật lý. Sự dư thừa có cấu trúc đó gọi là **tự do chuẩn (gauge freedom / 게이지 자유도)**.
@@ -34,7 +37,7 @@ thu được
 \right)=0.
 ```
 
-Một trường có curl bằng không có thể viết dưới dạng gradient của một vô hướng. Do đó
+Một trường có curl bằng không có thể viết dưới dạng độ dốc (gradient / 기울기) của một vô hướng. Do đó
 
 ```math
 \mathbf E=-\nabla\phi-\frac{\partial\mathbf A}{\partial t}.
@@ -78,7 +81,7 @@ với `\chi(\mathbf r,t)` là một hàm đủ trơn. Khi đó
 \mathbf B,
 ```
 
-vì curl của gradient bằng không.
+vì curl của độ dốc (gradient / 기울기) bằng không.
 
 Tương tự,
 
@@ -230,7 +233,7 @@ D_\mu=\partial_\mu+\frac{iq}{\hbar}A_\mu.
 
 Trường điện từ xuất hiện như trường chuẩn cần thiết để duy trì đối xứng cục bộ `U(1)`.
 
-Đây là nguyên mẫu cho cách Mô hình Chuẩn dùng các nhóm chuẩn phức tạp hơn như `SU(2)` và `SU(3)`. Tuy nhiên ở mức này, mục tiêu chỉ là thấy logic: **yêu cầu đối xứng cục bộ dẫn tới cấu trúc tương tác**.
+Đây là nguyên mẫu cho cách Mô hình Chuẩn dùng các nhóm chuẩn phức tạp hơn như `SU(2)` và `SU(3)`. Tuy nhiên ở mức này, mục tiêu chỉ là thấy lô-gic (logic / 논리): **yêu cầu đối xứng cục bộ dẫn tới cấu trúc tương tác**.
 
 ## Khi nào nên dùng `E,B`, khi nào nên dùng `\phi,A`?
 
@@ -252,12 +255,14 @@ Không. Hiệu ứng đo pha toàn cục phụ thuộc vòng tích phân hoặc 
 
 Không. Gauge khác nhau mô tả cùng cấu hình vật lý nếu liên hệ bởi biến đổi chuẩn hợp lệ.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Trường `\mathbf E` và `\mathbf B` mô tả cường độ điện từ cục bộ. Các thế `\phi` và `\mathbf A` tổ chức cấu trúc trường ở mức sâu hơn, đặc biệt khi có thời gian, lượng tử và topology. Tự do chuẩn nhắc rằng một lý thuyết có thể chứa dư thừa biểu diễn nhưng vẫn có nội dung vật lý hoàn toàn xác định.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Phương trình Maxwell và sóng điện từ](04_maxwell_em_waves.md), [Ngôn ngữ toán học](../00_foundations/03_mathematical_language.md), [Cơ học giải tích](../01_mechanics/08_analytical_mechanics.md).
 
 **Liên hệ tiếp:** [Nền tảng lượng tử](../08_quantum/00_quantum_foundations.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

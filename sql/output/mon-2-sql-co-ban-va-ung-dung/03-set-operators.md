@@ -10,6 +10,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
 
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Set Operators** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
@@ -18,7 +22,7 @@ Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **đ
 
 Bây giờ sang phần thứ hai trong ảnh.
 
-Set Operator kết hợp **kết quả của các SELECT**, không phải JOIN column theo chiều ngang.
+Set Operator kết hợp **kết quả của các SELECT**, không phải phép nối (join / 조인) column theo chiều ngang.
 
 Có 4 loại chính:
 
@@ -31,11 +35,11 @@ MINUS / EXCEPT
 
 ---
 
-## 30. JOIN và Set Operator khác nhau như thế nào?
+## 30. phép nối (join / 조인) và Set Operator khác nhau như thế nào?
 
 Đây là cách hiểu cực nhanh.
 
-JOIN:
+Phép nối (join / 조인):
 
 ```text
 Table A       Table B
@@ -275,7 +279,7 @@ FROM B;
 ---
 
 **각 위치의 데이터 타입은 서로 호환 가능해야 한다.**
-→ Data type của các column ở cùng vị trí phải tương thích.
+→ dữ liệu (data / 데이터) kiểu (type / 타입) của các column ở cùng vị trí phải tương thích.
 
 Tức là:
 
@@ -303,7 +307,7 @@ column 2 ↔ column 2
 Ảnh nhấn mạnh:
 
 **전체 집합의 컬럼명과 데이터 타입은 첫 번째 집합에 의해 결정된다.**
-→ Tên cột hiển thị của kết quả set operation chủ yếu dựa vào SELECT đầu tiên; kiểu dữ liệu phải tương thích giữa các nhánh.
+→ Tên cột hiển thị của kết quả set thao tác (operation / 연산) chủ yếu dựa vào SELECT đầu tiên; kiểu dữ liệu phải tương thích giữa các nhánh.
 
 Ví dụ:
 
@@ -319,7 +323,7 @@ SELECT deptno,
 FROM dept;
 ```
 
-Tên output:
+Tên đầu ra (output / 출력):
 
 ```text
 ID
@@ -335,12 +339,12 @@ DNAME
 
 ---
 
-## 37. ORDER BY với Set Operator
+## 37. thứ tự (order / 순서) BY với Set Operator
 
 Ảnh có câu rất quan trọng:
 
-**개별 SELECT 문에는 ORDER BY를 사용할 수 없고 전체 집합 결과의 마지막에 사용한다.**
-→ Trong dạng set query thông thường, `ORDER BY` được đặt ở **cuối toàn bộ phép tập hợp**, không đặt trực tiếp sau từng SELECT thành phần.
+**개별 SELECT 문에는 thứ tự (order / 순서) BY를 사용할 수 없고 전체 집합 결과의 마지막에 사용한다.**
+→ Trong dạng set truy vấn (query / 쿼리) thông thường, `ORDER BY` được đặt ở **cuối toàn bộ phép tập hợp**, không đặt trực tiếp sau từng SELECT thành phần.
 
 Sai dạng cơ bản:
 
@@ -411,7 +415,7 @@ FROM OLD_EMP
 GROUP BY DEPTNO;
 ```
 
-Vì `GROUP BY` là logic nội bộ của từng SELECT.
+Vì `GROUP BY` là lô-gic (logic / 논리) nội bộ của từng SELECT.
 
 Còn `ORDER BY` thường dùng để sắp xếp **kết quả cuối cùng**.
 
@@ -471,13 +475,13 @@ Correlated Subquery
 Vì:
 
 * `Scalar` mô tả **hình dạng/vị trí kết quả**.
-* `Correlated` mô tả **quan hệ phụ thuộc với main query**.
+* `Correlated` mô tả **quan hệ phụ thuộc với main truy vấn (query / 쿼리)**.
 
 Đây là chỗ rất nhiều người học nhầm.
 
 ---
 
-## 40. 📌 NOTE 시험 — phần phải nhớ trước khi thi
+## 40. 📌 ghi chú (note / 노트) 시험 — phần phải nhớ trước khi thi
 
 #### ⭐ Subquery
 
@@ -547,7 +551,7 @@ Subquery:
 WHERE E1.DEPTNO = E2.DEPTNO
 ```
 
-trong đó `E1` thuộc outer/main query →
+trong đó `E1` thuộc outer/main truy vấn (query / 쿼리) →
 
 ```text
 상관/연관 서브쿼리
@@ -562,7 +566,7 @@ FROM (
 )
 ```
 
-→ hãy tưởng tượng subquery **tạo ra một table tạm logic**.
+→ hãy tưởng tượng subquery **tạo ra một bảng (table / 테이블) tạm lô-gic (logic / 논리)**.
 
 #### ⭐ EXISTS
 
@@ -618,8 +622,10 @@ trong khi:
 Correlated / Uncorrelated
 ```
 
-là cách nhìn theo **mức độ phụ thuộc vào main query**.
+là cách nhìn theo **mức độ phụ thuộc vào main truy vấn (query / 쿼리)**.
 
 Hai khái niệm này có thể **chồng lên nhau**, không phải hai nhóm đối lập.
 
-Tiếp tục theo đúng format học SQLD trước đó: **bám sát nội dung trong ảnh → mỗi ý tiếng Hàn đi kèm giải thích tiếng Việt → giải thích keyword → sau đó mở rộng phần dễ nhầm và trọng tâm thi.**
+Tiếp tục theo đúng format học SQLD trước đó: **bám sát nội dung trong ảnh → mỗi ý tiếng Hàn đi kèm giải thích tiếng Việt → giải thích từ khóa (keyword / 키워드) → sau đó mở rộng phần dễ nhầm và trọng tâm thi.**
+
+> **Bàn giao:** Sau khi đọc, chốt đối tượng (object / 객체), điều kiện và thứ tự xử lý của bài này; nếu còn mơ hồ, quay lại ví dụ SQL rồi nối sang bài kế tiếp thay vì ghi nhớ câu lệnh như một mảnh rời.

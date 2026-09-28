@@ -1,5 +1,8 @@
 # Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web
 
+> **Mạch đọc:** Đọc **Bất ổn hấp dẫn và hình thành cấu trúc: từ dao động mật độ tới sao và cosmic web** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hấp dẫn có một đặc tính đặc biệt: overdensity có thể tự khuếch đại** sang **Phân tích Jeans: nhiễu loạn một môi trường gần đồng nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Hấp dẫn có một đặc tính đặc biệt: overdensity có thể tự khuếch đại
 
 Trong chất khí thông thường, áp suất có xu hướng san bằng chênh lệch mật độ. Hấp dẫn lại tạo phản hồi dương: vùng hơi đậm đặc hơn có lực hút mạnh hơn, kéo thêm vật chất vào và trở nên đậm đặc hơn nữa.
@@ -155,7 +158,7 @@ Vùng mật độ cao có thời gian rơi tự do ngắn hơn. Để hiểu ti�
 - thời gian truyền âm;
 - thời gian khuếch tán từ;
 - thời gian quay;
-- thời gian feedback từ sao.
+- thời gian phản hồi (feedback / 피드백) từ sao.
 
 ## Định lý virial và vì sao co lại có thể làm khí nóng hơn
 
@@ -197,13 +200,13 @@ Ngay cả một phần ion hóa nhỏ cũng có thể ghép khí với từ trư
 
 Trong khí ion hóa một phần, ambipolar diffusion cho phép hạt trung hòa trôi tương đối so với ion và đường sức từ.
 
-Vì vậy tiêu chuẩn Jeans chỉ là baseline. Lý thuyết hình thành sao thực cần thêm từ trường, turbulence, hóa học và radiation feedback.
+Vì vậy tiêu chuẩn Jeans chỉ là baseline. Lý thuyết hình thành sao thực cần thêm từ trường, turbulence, hóa học và radiation phản hồi (feedback / 피드백).
 
 ## Dòng rối vừa chống sụp đổ vừa tạo vùng sụp đổ
 
 Turbulence siêu âm có thể tăng velocity dispersion ở thang lớn, cung cấp hỗ trợ động học tạm thời.
 
-Nhưng shock do turbulence cũng nén khí thành filament và core đậm đặc. Mật độ tăng làm `M_J` giảm và `t_ff` ngắn hơn.
+Nhưng shock do turbulence cũng nén khí thành filament và cốt lõi (core / 핵심) đậm đặc. Mật độ tăng làm `M_J` giảm và `t_ff` ngắn hơn.
 
 Do đó hai câu:
 
@@ -239,7 +242,7 @@ Hạng
 
 là hiệu ứng “Hubble drag”: sự giãn nở làm tốc độ tăng trưởng nhiễu loạn chậm hơn so với môi trường tĩnh.
 
-Trong Vũ trụ Einstein–de Sitter lý tưởng, mode tăng gần
+Trong Vũ trụ Einstein–de Sitter lý tưởng, chế độ (mode / 모드) tăng gần
 
 ```math
 \delta\propto a(t).
@@ -253,7 +256,7 @@ Halo vật chất tối tạo giếng thế; khí baryon rơi vào, shock, làm 
 
 Trong mô hình phân cấp, các halo nhỏ hình thành trước rồi hợp nhất thành hệ lớn hơn.
 
-Cosmic web gồm sheet, filament, node và void xuất hiện từ sự sụp đổ hấp dẫn không đẳng hướng của trường nhiễu loạn ban đầu.
+Cosmic web gồm sheet, filament, nút (node / 노드) và void xuất hiện từ sự sụp đổ hấp dẫn không đẳng hướng của trường nhiễu loạn ban đầu.
 
 ## Phổ công suất
 
@@ -280,7 +283,7 @@ Trước recombination, baryon và photon tạo plasma ghép có sóng âm.
 
 Sau decoupling, sóng acoustic ngừng được duy trì và để lại một thang comoving đặc trưng trong phân bố vật chất.
 
-Baryon Acoustic Oscillation (BAO) đóng vai trò **standard ruler** trong cosmology.
+Baryon Acoustic Oscillation (BAO) đóng vai trò **tiêu chuẩn (standard / 표준) ruler** trong cosmology.
 
 Đây là cầu nối đẹp giữa:
 
@@ -301,10 +304,10 @@ Khi
 
 lý thuyết nhiễu loạn tuyến tính hoạt động tốt.
 
-Khi `\delta` tiến tới bậc 1, các mode bắt đầu ghép mạnh. Ta cần các phương pháp phi tuyến như:
+Khi `\delta` tiến tới bậc 1, các chế độ (mode / 모드) bắt đầu ghép mạnh. Ta cần các phương pháp phi tuyến như:
 
 - spherical collapse;
-- perturbation theory bậc cao;
+- perturbation lý thuyết (theory / 이론) bậc cao;
 - N-body simulation;
 - hydrodynamic cosmological simulation.
 
@@ -320,7 +323,7 @@ Tính lực hấp dẫn trực tiếp giữa mọi cặp có chi phí gần
 O(N^2).
 ```
 
-Các kỹ thuật như tree code, particle-mesh và hybrid method giảm chi phí đáng kể.
+Các kỹ thuật như cây (tree / 트리) mã (code / 코드), particle-mesh và hybrid phương thức (method / 메서드) giảm chi phí đáng kể.
 
 Mô phỏng phải cân bằng:
 
@@ -361,7 +364,7 @@ Làm lạnh và nén vì vậy có thể tạo runaway fragmentation rất hiệ
 
 Một môi trường tự hấp dẫn đồng nhất vô hạn có thế hấp dẫn nền không xác định tốt. Phân tích Jeans giáo khoa thực chất bỏ qua trường nền rồi chỉ xét nhiễu loạn.
 
-Trong cosmology, perturbation theory trên nền FLRW xử lý vấn đề nhất quán hơn.
+Trong cosmology, perturbation lý thuyết (theory / 이론) trên nền FLRW xử lý vấn đề nhất quán hơn.
 
 Đám mây thật còn có:
 
@@ -370,15 +373,15 @@ Trong cosmology, perturbation theory trên nền FLRW xử lý vấn đề nhấ
 - từ trường;
 - turbulence;
 - cooling chemistry;
-- feedback bức xạ và stellar wind.
+- phản hồi (feedback / 피드백) bức xạ và stellar wind.
 
 Vì vậy Jeans criterion là **diagnostic về thang**, không phải quy tắc yes/no tuyệt đối cho mọi đám mây.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Gravity tạo feedback dương cho overdensity. Áp suất, velocity dispersion, mômen động lượng, từ trường và cosmic expansion tạo các cơ chế chống hoặc làm chậm collapse.
+Gravity tạo phản hồi (feedback / 피드백) dương cho overdensity. Áp suất, velocity dispersion, mômen động lượng, từ trường và cosmic expansion tạo các cơ chế chống hoặc làm chậm collapse.
 
-Structure formation có thể được nhìn như cạnh tranh giữa các thang thời gian:
+Cấu trúc (structure / 구조) formation có thể được nhìn như cạnh tranh giữa các thang thời gian:
 
 ```text
 self-gravity
@@ -396,7 +399,7 @@ Không. Áp suất, quay, từ trường, turbulence và expansion có thể ổ
 
 ### “Vật chất tối chỉ được thêm để khớp đường cong quay thiên hà”
 
-Không. Giả thuyết dark matter được kiểm tra bởi lensing, CMB, cluster dynamics, large-scale structure và tốc độ tăng trưởng cấu trúc.
+Không. Giả thuyết dark matter được kiểm tra bởi lensing, CMB, cluster dynamics, large-scale cấu trúc (structure / 구조) và tốc độ tăng trưởng cấu trúc.
 
 ### “Hình thành cấu trúc là một vụ nổ tạo thiên hà”
 
@@ -406,8 +409,10 @@ Không. Nó là sự tăng trưởng hấp dẫn của nhiễu loạn ban đầu
 
 Không. Nó đến từ mô hình lý tưởng và chỉ là thang tham khảo khi nhiều cơ chế khác cùng tồn tại.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Hấp dẫn](../01_mechanics/06_gravitation_orbits.md), [Ensemble và thăng giáng](../04_thermal_statistical/03_ensembles_partition_functions.md), [Vũ trụ học](01_galaxies_cosmology.md).
 
 **Liên hệ tiếp:** [Sao và thiên thể đặc](00_stars_compact_objects.md), [Vũ trụ sơ khai](03_early_universe_dark_components.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Suy luận dữ liệu](../12_experimental_computational/03_data_inference_inverse_problems.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 stars compact objects](./00_stars_compact_objects.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,8 +1,11 @@
 # Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)
 
+> **Mạch đọc:** Đặt **Địa lý công nghiệp và các cụm kinh tế Hàn Quốc (Industrial Geography / 산업 클러스터와 지역경제)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kinh tế tập trung: vì sao doanh nghiệp thích ở gần nhau?** sang **Cụm công nghiệp cũng có chi phí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nền kinh tế không tồn tại trên một bảng tính không có địa lý. Nhà máy cần đất, điện, nước và cảng; công ty phần mềm cần nhân lực và mạng lưới khách hàng; biotech cần hệ sinh thái nghiên cứu và nhân sự pháp quy; logistics cần đường cao tốc, sân bay và mật độ kho bãi. Vì vậy **vị trí (location / 입지)** là một biến kinh tế thực sự: nó tác động đến chi phí, thời gian giao hàng, tuyển dụng, khả năng chống chịu, khả năng tiếp cận khách hàng và tốc độ học hỏi.
 
-> Mental Model — mô hình tư duy: địa lý công nghiệp là **đồ thị phụ thuộc vật lý của nền kinh tế**. Khoảng cách trên bản đồ biến thành chi phí logistics, thời gian phản ứng, quy mô thị trường lao động và giới hạn hạ tầng.
+> mô hình tư duy (mental model / 사고 모델) — mô hình tư duy: địa lý công nghiệp là **đồ thị phụ thuộc vật lý của nền kinh tế**. Khoảng cách trên bản đồ biến thành chi phí logistics, thời gian phản ứng, quy mô thị trường lao động và giới hạn hạ tầng.
 
 ## Kinh tế tập trung: vì sao doanh nghiệp thích ở gần nhau?
 
@@ -48,7 +51,7 @@ Tập trung kinh tế làm tăng giá nhà và chi phí đi lại. Với ngườ
 
 Vì vậy một số chức năng được tách theo không gian: trụ sở ở Seoul, R&D ở Pangyo/Yongin/Daejeon, sản xuất ở ngoại vi Gyeonggi–Chungcheong và logistics ở khu vực có đất rẻ nhưng giao thông tốt. Đây là **địa lý chức năng**, không phải một công ty chỉ gắn với một thành phố.
 
-## Pangyo: logic của cụm phần mềm và công nghệ
+## Pangyo: lô-gic (logic / 논리) của cụm phần mềm và công nghệ
 
 Cụm phần mềm cần kỹ sư, startup, vốn mạo hiểm, khách hàng doanh nghiệp, đại học và khả năng lan tỏa tri thức nhiều hơn là cảng biển hay thép. Vì vậy chỉ xây khu văn phòng mới không đủ để tái tạo Pangyo nếu không có nguồn nhân lực, khách hàng và mạng lưới đổi mới tương ứng.
 
@@ -197,7 +200,7 @@ Khi lập bản đồ nhà máy và cơ sở, cần xem mức tập trung sản 
 
 Bản đồ chỉ trở thành công cụ phân tích khi ta chuyển vị trí thành các biến chi phí, thời gian và rủi ro.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Một cụm công nghiệp là **hàm sản xuất tại địa phương** gồm doanh nghiệp + lao động + hạ tầng + tri thức + thể chế. Địa lý tạo lợi thế khi các thành phần này củng cố lẫn nhau; chính sự tập trung đó lại trở thành điểm yếu khi một cú sốc đánh trúng toàn mạng lưới.
 
@@ -208,3 +211,5 @@ Seoul không chỉ có dịch vụ và ngoài Seoul không chỉ có nhà máy. 
 ## Liên kết
 
 Đọc [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md) cho chuỗi giá trị toàn cầu, [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) cho nhân lực–nghiên cứu, [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) cho giới hạn điện và [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md) cho kinh tế mạng logistics.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

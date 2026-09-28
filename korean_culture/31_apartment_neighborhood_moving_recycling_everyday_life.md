@@ -1,5 +1,8 @@
 # Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật
 
+> **Mạch đọc:** Đặt **Căn hộ, khu dân cư, chuyển nhà và đời sống thường nhật** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Căn hộ không chỉ là chỗ ở** sang **이사: chuyển nhà như một lần di chuyển cả hệ thống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Căn hộ không chỉ là chỗ ở
 
 Trong xã hội Hàn Quốc hiện đại, **căn hộ (apartment / 아파트)** là một trong những hạ tầng quan trọng nhất của đời sống đô thị. Nó không chỉ quyết định người ta ngủ ở đâu mà còn ảnh hưởng khu trường học, thời gian đi lại, giao bưu kiện, đỗ xe, quan hệ hàng xóm, xử lý rác và cách trẻ em sử dụng không gian chung.
@@ -85,7 +88,7 @@ Nhưng tiện lợi này tạo vấn đề thứ cấp: lưu trữ hàng, nguy c
 
 **Tủ nhận hàng tự động (unmanned parcel locker / 무인택배함)** thay một tương tác trực tiếp bằng xác thực và lưu trữ tạm thời. Niềm tin chuyển từ người-với-người sang hệ thống-với-người dùng.
 
-Trong giao hàng truyền thống, người nhận cần có mặt. Với tủ nhận hàng, trao đổi không đồng bộ về thời gian trở thành bình thường. Đây là cùng logic với ATM, quầy tự thanh toán hoặc dịch vụ đám mây: phối hợp không nhất thiết xảy ra đồng thời.
+Trong giao hàng truyền thống, người nhận cần có mặt. Với tủ nhận hàng, trao đổi không đồng bộ về thời gian trở thành bình thường. Đây là cùng lô-gic (logic / 논리) với ATM, quầy tự thanh toán hoặc dịch vụ đám mây: phối hợp không nhất thiết xảy ra đồng thời.
 
 ## 분리수거: tái chế như giao thức của hộ gia đình
 
@@ -413,3 +416,5 @@ Nếu thiết kế nền tảng tốt, nhiều xung đột được ngăn bằng
 ## Đọc tiếp
 
 Đọc cùng [`08_home_space_hanok_clothing_aesthetics.md`](08_home_space_hanok_clothing_aesthetics.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

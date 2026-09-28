@@ -1,6 +1,9 @@
-# Deep Reinforcement Learning
+# Deep Reinforcement học tập (learning / 학습)
 
-**Deep Reinforcement Learning (Deep RL / 심층 강화학습)** kết hợp Reinforcement Learning với neural networks để xử lý state/action spaces quá lớn cho tabular methods. Neural network đóng vai trò function approximator cho value, Q-function, policy hoặc environment model.
+> **Mạch đọc:** Đặt **Deep Reinforcement học tập (learning / 학습)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao Deep RL khó hơn supervised deep học tập (learning / 학습)?** sang **DQN: Deep Q-Network**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+**Deep Reinforcement học tập (learning / 학습)** kết hợp Reinforcement học tập (learning / 학습) với neural networks để xử lý trạng thái (state / 상태)/hành động (action / 동작) spaces quá lớn cho tabular methods. Neural mạng (network / 네트워크) đóng vai trò hàm (function / 함수) approximator cho giá trị (value / 값), Q-function, chính sách (policy / 정책) hoặc môi trường (environment / 환경) mô hình (model / 모델).
 
 ```text
 pixels / sensors / embeddings
@@ -12,18 +15,18 @@ Q-value / policy / value / model
 RL objective
 ```
 
-## Vì sao Deep RL khó hơn supervised deep learning?
+## Vì sao Deep RL khó hơn supervised deep học tập (learning / 학습)?
 
-Supervised learning thường train trên dataset tương đối stationary. Trong RL:
+Supervised học tập (learning / 학습) thường train trên dataset tương đối stationary. Trong RL:
 
-- policy thay đổi → data distribution thay đổi;
-- targets có thể bootstrap từ network itself;
+- chính sách (policy / 정책) thay đổi → dữ liệu (data / 데이터) phân phối (distribution / 분포) thay đổi;
+- targets có thể bootstrap từ mạng (network / 네트워크) itself;
 - rewards delayed/sparse;
-- exploration determines future data;
+- exploration determines future dữ liệu (data / 데이터);
 - samples temporally correlated;
-- objective non-stationary.
+- mục tiêu (objective / 목표) non-stationary.
 
-Vì vậy neural network capacity không tự giải quyết RL; nó còn tạo stability problems mới.
+Vì vậy neural mạng (network / 네트워크) sức chứa (capacity / 용량) không tự giải quyết RL; nó còn tạo stability problems mới.
 
 ## DQN: Deep Q-Network
 
@@ -33,15 +36,15 @@ DQN approximates:
 Q(s,a;\theta)
 \]
 
-với neural network. Input có thể là image, output là Q-value cho each discrete action.
+với neural mạng (network / 네트워크). đầu vào (input / 입력) có thể là ảnh (image / 이미지), đầu ra (output / 출력) là Q-value cho each discrete hành động (action / 동작).
 
-Key engineering ideas:
+Key kỹ thuật (engineering / 엔지니어링) ideas:
 
 1. **experience replay**;
-2. **target network**;
-3. reward/gradient stabilization.
+2. **mục tiêu (target / 대상) mạng (network / 네트워크)**;
+3. reward/độ dốc (gradient / 기울기) stabilization.
 
-Loss:
+Mất mát (loss / 손실):
 
 \[
 L(\theta)=\mathbb E[(r+\gamma\max_{a'}Q(s',a';\theta^-)-Q(s,a;\theta))^2]
@@ -51,11 +54,11 @@ L(\theta)=\mathbb E[(r+\gamma\max_{a'}Q(s',a';\theta^-)-Q(s,a;\theta))^2]
 
 Sequential frames/states highly correlated. SGD assumes batches useful when samples not all nearly identical. Replay randomizes historical transitions and reuses expensive experience.
 
-Prioritized replay samples high-TD-error transitions more often, but needs importance correction to reduce sampling bias.
+Prioritized replay samples high-TD-error transitions more often, but needs importance correction to reduce sampling độ lệch (bias / 편향).
 
-## Target Networks
+## Mục tiêu (target / 대상) Networks
 
-Moving target problem:
+Moving mục tiêu (target / 대상) bài toán (problem / 문제):
 
 ```text
 network changes
@@ -63,11 +66,11 @@ network changes
 → network chases own changing prediction
 ```
 
-Frozen/slow target network reduces feedback instability.
+Frozen/slow mục tiêu (target / 대상) mạng (network / 네트워크) reduces phản hồi (feedback / 피드백) instability.
 
 ## Double DQN
 
-Reduce max overestimation by selecting action with online network, evaluating it with target network:
+Reduce max overestimation by selecting hành động (action / 동작) with online mạng (network / 네트워크), evaluating it with mục tiêu (target / 대상) mạng (network / 네트워크):
 
 \[
 a^*=\arg\max_a Q(s',a;\theta)
@@ -85,119 +88,119 @@ Decompose:
 Q(s,a)=V(s)+A(s,a)
 \]
 
-with normalization to make decomposition identifiable. Useful when many actions have similar effect from a state.
+with normalization to make decomposition identifiable. Useful when many actions have similar tác động (effect / 효과) from a trạng thái (state / 상태).
 
 ## Policy-Based Deep RL
 
-Policy network directly outputs action distribution. PPO, SAC and actor-critic methods scale naturally to continuous/high-dimensional action spaces.
+Chính sách (policy / 정책) mạng (network / 네트워크) directly outputs hành động (action / 동작) phân phối (distribution / 분포). PPO, SAC and actor-critic methods quy mô (scale / 규모) naturally to continuous/high-dimensional hành động (action / 동작) spaces.
 
-## Representation Learning in RL
+## Biểu diễn (representation / 표현) học tập (learning / 학습) in RL
 
-RL agent must learn not just control but useful state representations. Reward signal may be sparse, so representation learning can be data-inefficient.
+RL tác nhân (agent / 에이전트) must learn not just điều khiển (control / 제어) but useful trạng thái (state / 상태) representations. Reward tín hiệu (signal / 신호) may be sparse, so biểu diễn (representation / 표현) học tập (learning / 학습) can be data-inefficient.
 
 Auxiliary/self-supervised objectives can help learn dynamics/relevant features.
 
-## World Models
+## World các mô hình (models / 모델들)
 
-Model-based Deep RL learns environment dynamics:
+Model-based Deep RL learns môi trường (environment / 환경) dynamics:
 
 \[
 \hat s_{t+1}=f_\phi(s_t,a_t)
 \]
 
-or latent dynamics, then plans/improves policy using learned model.
+or latent dynamics, then plans/improves chính sách (policy / 정책) using learned mô hình (model / 모델).
 
-Benefits: potential sample efficiency.
+Benefits: potential mẫu (sample / 표본) efficiency.
 
-Risk: **model bias**. Planning can exploit model errors, especially far outside training distribution.
+Rủi ro (risk / 위험): **mô hình (model / 모델) độ lệch (bias / 편향)**. Planning can exploit mô hình (model / 모델) errors, especially far outside huấn luyện (training / 학습) phân phối (distribution / 분포).
 
 ## Imagination and Latent Planning
 
-Instead of simulating raw pixels, world-model agents can learn latent state `z_t` and predict latent transitions/rewards. Planning in latent space reduces cost if representation preserves control-relevant information.
+Instead of simulating raw pixels, world-model agents can learn latent trạng thái (state / 상태) `z_t` and predict latent transitions/rewards. Planning in latent không gian (space / 공간) reduces chi phí (cost / 비용) if biểu diễn (representation / 표현) preserves control-relevant thông tin (information / 정보).
 
 ## Exploration in High Dimensions
 
-Random action exploration is inefficient when rewards sparse. Methods include:
+Random hành động (action / 동작) exploration is inefficient when rewards sparse. Methods include:
 
 - intrinsic motivation;
-- curiosity/prediction error;
+- curiosity/prediction lỗi (error / 오류);
 - count/pseudo-count bonuses;
 - entropy maximization;
 - uncertainty-driven exploration.
 
-But intrinsic rewards can be gamed: agent may seek noisy unpredictable states forever.
+But intrinsic rewards can be gamed: tác nhân (agent / 에이전트) may seek noisy unpredictable states forever.
 
 ## Sparse Reward and Hindsight
 
-Hindsight Experience Replay relabels failed trajectories with goals they actually achieved, creating useful learning signal for goal-conditioned tasks.
+Hindsight Experience Replay relabels failed trajectories with goals they actually achieved, creating useful học tập (learning / 학습) tín hiệu (signal / 신호) for goal-conditioned tasks.
 
-## Distribution Shift
+## Phân phối (distribution / 분포) Shift
 
-Policy improvement moves agent into new state distributions where function approximator may be poorly trained. This feedback loop is central RL risk.
+Chính sách (policy / 정책) improvement moves tác nhân (agent / 에이전트) into new trạng thái (state / 상태) distributions where hàm (function / 함수) approximator may be poorly trained. This vòng phản hồi (feedback loop / 피드백 루프) is central RL rủi ro (risk / 위험).
 
 ## Sim-to-Real
 
-Robotics often train in simulation then deploy physical system. Simulation mismatch causes transfer gap.
+Robotics often train in simulation then deploy vật lý (physical / 물리적) hệ thống (system / 시스템). Simulation mismatch causes transfer gap.
 
 Techniques:
 
-- domain randomization;
-- system identification;
-- fine-tuning with real data;
-- safety constraints.
+- lĩnh vực (domain / 도메인) randomization;
+- hệ thống (system / 시스템) identification;
+- fine-tuning with real dữ liệu (data / 데이터);
+- an toàn (safety / 안전) các ràng buộc (constraints / 제약조건들).
 
 ## Offline Deep RL
 
-Learn from logged data only. Main challenge: policy may choose out-of-distribution actions whose Q-values are extrapolation errors.
+Learn from logged dữ liệu (data / 데이터) only. Main challenge: chính sách (policy / 정책) may choose out-of-distribution actions whose Q-values are extrapolation errors.
 
-Offline RL methods constrain policy near data support or learn conservative value estimates.
+Offline RL methods constrain chính sách (policy / 정책) near dữ liệu (data / 데이터) hỗ trợ (support / 지원) or learn conservative giá trị (value / 값) estimates.
 
 ## Safe RL
 
-Objective may include constraints:
+Mục tiêu (objective / 목표) may include các ràng buộc (constraints / 제약조건들):
 
 \[
-\max_\pi \mathbb E[G] \quad \text{s.t.}\quad \mathbb E[C_i]\le d_i
+\max_\pi \mathbb E[G] \quad \văn bản (text / 텍스트){s.t.}\quad \mathbb E[C_i]\le d_i
 \]
 
-where `C_i` are costs/risks. Real systems cannot freely explore catastrophic actions.
+where `C_i` are costs/risks. Real các hệ thống (systems / 시스템들) cannot freely explore catastrophic actions.
 
 ## Multi-Agent Deep RL
 
-Multiple learning agents make environment non-stationary from each agent's perspective. Centralized training/decentralized execution is common strategy.
+Multiple học tập (learning / 학습) agents make môi trường (environment / 환경) non-stationary from each tác nhân (agent / 에이전트)'s perspective. Centralized huấn luyện (training / 학습)/decentralized thực thi (execution / 실행) is dùng chung (common / 공통) chiến lược (strategy / 전략).
 
 ## Deep RL Evaluation
 
-Single seed result unreliable. Need multiple random seeds and confidence intervals because training variance high.
+Single seed kết quả (result / 결과) unreliable. Need multiple random seeds and confidence intervals because huấn luyện (training / 학습) variance high.
 
 Also report:
 
-- sample efficiency;
+- mẫu (sample / 표본) efficiency;
 - final return;
 - stability;
-- compute/environment steps;
-- safety violations;
+- compute/môi trường (environment / 환경) steps;
+- an toàn (safety / 안전) violations;
 - generalization to changed environments.
 
 ## Reward Hacking
 
-Strong optimizer finds loopholes. Example agent gets reward for touching checkpoints and learns loop around same reward trigger if environment allows. This demonstrates specification problem, not “malice”.
+Strong optimizer finds loopholes. Example tác nhân (agent / 에이전트) gets reward for touching checkpoints and learns vòng lặp (loop / 루프) around same reward trigger if môi trường (environment / 환경) allows. This demonstrates specification bài toán (problem / 문제), not “malice”.
 
 ## Deep RL and Games
 
-Games useful research environments because rules/rewards/simulation cheap, but success in games does not automatically transfer to open world where reward and state definitions are ambiguous.
+Games useful research environments because rules/rewards/simulation cheap, but success in games does not automatically transfer to open world where reward and trạng thái (state / 상태) definitions are ambiguous.
 
 ## RLHF / LLM Post-Training
 
 Deep RL techniques like PPO have been used for language-model alignment. Important differences:
 
-- policy action is token sequence;
-- pretrained policy already powerful;
-- reward model learned from preferences;
-- KL/reference constraints keep behavior near base/SFT model;
-- online environment often human/preference proxy, not physics simulator.
+- chính sách (policy / 정책) hành động (action / 동작) is đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스);
+- pretrained chính sách (policy / 정책) already powerful;
+- reward mô hình (model / 모델) learned from preferences;
+- KL/tham chiếu (reference / 참조) các ràng buộc (constraints / 제약조건들) keep hành vi (behavior / 동작) near cơ sở (base / 기반)/SFT mô hình (model / 모델);
+- online môi trường (environment / 환경) often human/preference proxy, not physics simulator.
 
-Modern preference optimization may avoid full RL loop in some pipelines, but RL concepts remain useful for understanding policy optimization.
+Hiện đại (modern / 현대적) preference tối ưu hóa (optimization / 최적화) may avoid full RL vòng lặp (loop / 루프) in some pipelines, but RL concepts remain useful for understanding chính sách (policy / 정책) tối ưu hóa (optimization / 최적화).
 
 ## The Deadly Triad Revisited
 
@@ -213,32 +216,34 @@ Hence stabilizers are not incidental hacks; they address structural instability.
 
 ## Compute and Reproducibility
 
-Deep RL experiments depend strongly on seeds, environment versions, wrappers, reward preprocessing and evaluation policy. Reproducibility requires versioning entire environment pipeline, not model code alone.
+Deep RL experiments depend strongly on seeds, môi trường (environment / 환경) versions, wrappers, reward preprocessing and evaluation chính sách (policy / 정책). Reproducibility requires versioning entire môi trường (environment / 환경) chuỗi xử lý (pipeline / 파이프라인), not mô hình (model / 모델) mã (code / 코드) alone.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Deep RL không chỉ là “neural network + reward”; nó là feedback system nơi model quyết định data nào nó sẽ thấy tiếp theo.**
+> **Deep RL không chỉ là “neural mạng (network / 네트워크) + reward”; nó là phản hồi (feedback / 피드백) hệ thống (system / 시스템) nơi mô hình (model / 모델) quyết định dữ liệu (data / 데이터) nào nó sẽ thấy tiếp theo.**
 
-Đây là khác biệt sâu với ordinary supervised learning.
+Đây là khác biệt sâu với ordinary supervised học tập (learning / 학습).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Deep RL là con đường chung để tạo intelligence”
 
-Nó mạnh cho sequential decision problems nhưng sample cost, reward specification và safety make it unsuitable for many tasks.
+Nó mạnh cho sequential quyết định (decision / 결정) problems nhưng mẫu (sample / 표본) chi phí (cost / 비용), reward specification và an toàn (safety / 안전) make it unsuitable for many tasks.
 
 ### “Simulation success nghĩa real-world success”
 
 Sim-to-real gap có thể lớn.
 
-### “Reward cao chứng minh behavior tốt”
+### “Reward cao chứng minh hành vi (behavior / 동작) tốt”
 
-Only if reward faithfully measures intended behavior and environment has no loopholes.
+Only if reward faithfully measures intended hành vi (behavior / 동작) and môi trường (environment / 환경) has no loopholes.
 
-### “Bigger neural network fixes RL instability”
+### “Bigger neural mạng (network / 네트워크) fixes RL instability”
 
-Optimization/data feedback instability vẫn tồn tại.
+Tối ưu hóa (optimization / 최적화)/dữ liệu (data / 데이터) phản hồi (feedback / 피드백) instability vẫn tồn tại.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Deep RL nối [Neural Networks](../05_neural_networks/README.md), MDP/Bellman theory, Optimization, Agents và Safety. Đây là điểm kết thúc RL foundation; các later safety/alignment chapters sẽ quay lại reward specification, policy constraints và evaluation.
+Deep RL nối [Neural Networks](../05_neural_networks/README.md), MDP/Bellman lý thuyết (theory / 이론), tối ưu hóa (optimization / 최적화), Agents và an toàn (safety / 안전). Đây là điểm kết thúc RL foundation; các later an toàn (safety / 안전)/alignment chapters sẽ quay lại reward specification, chính sách (policy / 정책) các ràng buộc (constraints / 제약조건들) và evaluation.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reinforcement learning foundations](./00_reinforcement_learning_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

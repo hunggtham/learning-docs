@@ -1,5 +1,8 @@
 # Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải
 
+> **Mạch đọc:** Đọc **Quang sóng: giao thoa, nhiễu xạ, phân cực và giới hạn phân giải** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ Maxwell đến sóng ánh sáng** sang **Nguyên lý chồng chập và giao thoa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Quang hình học mô tả ánh sáng bằng tia và hoạt động rất tốt khi kích thước đặc trưng của hệ lớn hơn nhiều bước sóng. Khi khẩu độ, khe, chi tiết ảnh hoặc độ chênh đường đi trở nên so sánh được với bước sóng, mô hình tia không còn đủ. Khi đó phải mô tả ánh sáng bằng trường sóng và theo dõi biên độ, pha cùng sự chồng chập.
 
 ## Từ Maxwell đến sóng ánh sáng
@@ -289,7 +292,7 @@ Các công thức Fraunhofer giả định trường xa hoặc cấu hình quang
 
 Ở mức photon rất thấp, detector ghi các sự kiện rời rạc, nhưng phân bố xác suất của nhiều sự kiện vẫn tái tạo cấu trúc giao thoa và nhiễu xạ. Vì vậy mô tả lượng tử không loại bỏ quang sóng cổ điển; nó giải thích vì sao trường cổ điển xuất hiện như giới hạn của rất nhiều lượng tử trường.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Quang sóng có thể được tổ chức quanh ba ý: **pha quyết định giao thoa, khẩu độ hữu hạn tạo nhiễu xạ, và hệ quang là một bộ lọc tần số không gian**. Khi nhìn ảnh mờ hay một mẫu vân, hãy hỏi trường đã tích lũy pha thế nào, phần nào của mặt sóng được truyền qua và tần số không gian nào còn tồn tại ở detector.
 
@@ -307,8 +310,10 @@ Không. Độ phân giải bị giới hạn bởi bước sóng, khẩu độ v
 
 Giao thoa là tính chất của biên độ. Trong thí nghiệm photon đơn, từng sự kiện là rời rạc nhưng phân bố nhiều sự kiện vẫn tạo vân giao thoa. Cơ học lượng tử giữ cấu trúc pha nhưng thay đổi cách diễn giải phép đo.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md), [Maxwell và sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md).
 
 **Liên hệ tiếp:** [Photon, coherence và laser](02_photons_lasers_coherence.md), [Quang học Fourier và thiết bị](04_fourier_imaging_instrumentation.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geometric optics](./00_geometric_optics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

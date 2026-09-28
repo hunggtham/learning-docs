@@ -1,12 +1,15 @@
 # Trình biên dịch, trình thông dịch, máy ảo và JIT
 
-Mã nguồn phải được biến đổi thành các thao tác mà máy tính có thể thực thi. Thiết kế trình biên dịch cho thấy một chuỗi lớp trừu tượng: văn bản → token → cây cú pháp → biểu diễn ngữ nghĩa → biểu diễn trung gian → mã đã tối ưu → thực thi trên máy hoặc môi trường chạy.
+> **Mạch đọc:** Đọc **Trình biên dịch, trình thông dịch, máy ảo và JIT** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phân tách đơn vị từ (token / 토큰) và phân tích cú pháp** sang **Phân tích ngữ nghĩa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Phân tách token và phân tích cú pháp
 
-**Bộ tách token (lexer/tokenizer)** nhóm các ký tự thành token như tên định danh, số và toán tử. **Bộ phân tích cú pháp (parser)** dùng ngữ pháp để xây cây phân tích hoặc **cây cú pháp trừu tượng (Abstract Syntax Tree — AST)**.
+Mã nguồn phải được biến đổi thành các thao tác mà máy tính có thể thực thi. Thiết kế trình biên dịch cho thấy một chuỗi lớp trừu tượng: văn bản → đơn vị từ (token / 토큰) → cây cú pháp → biểu diễn ngữ nghĩa → biểu diễn trung gian → mã đã tối ưu → thực thi trên máy hoặc môi trường chạy.
 
-Các kỹ thuật dựa trên ngôn ngữ chính quy phù hợp với nhiều mẫu token; ngữ pháp phi ngữ cảnh (context-free grammar) mô tả cấu trúc lồng nhau như ngoặc và block. Tuy nhiên ngôn ngữ thực tế còn phải xử lý độ ưu tiên toán tử, sự mơ hồ và các kiểm tra phụ thuộc ngữ cảnh.
+## Phân tách đơn vị từ (token / 토큰) và phân tích cú pháp
+
+**Bộ tách đơn vị từ (token / 토큰)** nhóm các ký tự thành đơn vị từ (token / 토큰) như tên định danh, số và toán tử. **Bộ phân tích cú pháp (parser)** dùng ngữ pháp để xây cây phân tích hoặc **cây cú pháp trừu tượng (Abstract syntax Tree — AST)**.
+
+Các kỹ thuật dựa trên ngôn ngữ chính quy phù hợp với nhiều mẫu đơn vị từ (token / 토큰); ngữ pháp phi ngữ cảnh (context-free grammar) mô tả cấu trúc lồng nhau như ngoặc và khối (block / 블록). Tuy nhiên ngôn ngữ thực tế còn phải xử lý độ ưu tiên toán tử, sự mơ hồ và các kiểm tra phụ thuộc ngữ cảnh.
 
 AST bỏ bớt dấu câu không cần thiết và giữ cấu trúc có ý nghĩa. Biểu thức `1 + 2 * 3` phải tạo cây thể hiện phép nhân có độ ưu tiên cao hơn phép cộng.
 
@@ -30,13 +33,13 @@ Trình biên dịch chỉ được tối ưu nếu vẫn giữ ngữ nghĩa mà 
 
 ## Biên dịch trước khi chạy
 
-**Biên dịch trước thời gian chạy (Ahead-of-Time — AOT)** tạo mã máy trước khi chương trình bắt đầu. Cách này giúp thời gian khởi động dễ dự đoán và không cần trình biên dịch trong runtime, nhưng khó tận dụng chính xác dữ liệu hành vi khi chạy nếu không có tối ưu dựa trên hồ sơ (profile-guided optimization).
+**Biên dịch trước thời gian chạy (Ahead-of-Time — AOT)** tạo mã máy trước khi chương trình bắt đầu. Cách này giúp thời gian khởi động dễ dự đoán và không cần trình biên dịch trong thời gian chạy (runtime / 런타임), nhưng khó tận dụng chính xác dữ liệu hành vi khi chạy nếu không có tối ưu dựa trên hồ sơ (profile-guided optimization).
 
-C, C++ và Rust thường dùng AOT. Một số hệ thống native image áp dụng ý tưởng tương tự cho ngôn ngữ có runtime quản lý, đổi lại phải xử lý cẩn thận reflection và tính năng động.
+C, C++ và Rust thường dùng AOT. Một số hệ thống bản địa (native / 네이티브) ảnh (image / 이미지) áp dụng ý tưởng tương tự cho ngôn ngữ có thời gian chạy (runtime / 런타임) quản lý, đổi lại phải xử lý cẩn thận reflection và tính năng động.
 
 ## Thông dịch
 
-Trình thông dịch (interpreter) có thể đi trực tiếp trên AST hoặc thực thi bytecode trong một vòng lặp điều phối. Cách này giảm chi phí biên dịch ban đầu và thuận lợi cho hành vi động, nhưng chi phí điều phối ở mỗi thao tác có thể lớn.
+Trình thông dịch (interpreter / 인터프리터) có thể đi trực tiếp trên AST hoặc thực thi bytecode trong một vòng lặp điều phối. Cách này giảm chi phí biên dịch ban đầu và thuận lợi cho hành vi động, nhưng chi phí điều phối ở mỗi thao tác có thể lớn.
 
 Máy ảo bytecode đưa chương trình về một tập lệnh gọn và có tính di động. Bytecode JVM, chẳng hạn, có thể chạy trên nhiều triển khai JVM ở các nền tảng khác nhau.
 
@@ -46,15 +49,15 @@ Máy ảo bytecode đưa chương trình về một tập lệnh gọn và có t
 
 Java HotSpot với biên dịch nhiều tầng và các engine JavaScript hiện đại đều dùng biến thể của ý tưởng này. Vì vậy khi đo hiệu năng cần chú ý giai đoạn làm nóng (warm-up): hành vi lúc mới chạy và trạng thái ổn định có thể khác nhau.
 
-## Thu gom rác và dịch vụ của runtime
+## Thu gom rác và dịch vụ của thời gian chạy (runtime / 런타임)
 
-Môi trường thực thi được quản lý thường cung cấp thu gom rác (GC), nạp lớp, ngoại lệ, đồng bộ, reflection và profiling. Hiệu năng vì thế không chỉ phụ thuộc mã do compiler sinh ra mà còn phụ thuộc hành vi của runtime.
+Môi trường thực thi được quản lý thường cung cấp thu gom rác (GC), nạp lớp, ngoại lệ, đồng bộ, reflection và profiling. Hiệu năng vì thế không chỉ phụ thuộc mã do trình biên dịch (compiler / 컴파일러) sinh ra mà còn phụ thuộc hành vi của thời gian chạy (runtime / 런타임).
 
-**Điểm an toàn (safepoint)** là vị trí runtime có thể dừng hoặc phối hợp các luồng cho GC và deoptimization. Tạm dừng toàn bộ chương trình (stop-the-world) không phải toàn bộ quá trình GC; bộ thu gom đồng thời thực hiện nhiều giai đoạn song song với ứng dụng nhưng vẫn cần những điểm phối hợp nhất định.
+**Điểm an toàn (safepoint)** là vị trí thời gian chạy (runtime / 런타임) có thể dừng hoặc phối hợp các luồng cho GC và deoptimization. Tạm dừng toàn bộ chương trình (stop-the-world) không phải toàn bộ quá trình GC; bộ thu gom đồng thời thực hiện nhiều giai đoạn song song với ứng dụng nhưng vẫn cần những điểm phối hợp nhất định.
 
 ## Trình liên kết và trình nạp
 
-Trình biên dịch mã máy thường tạo file đối tượng; **trình liên kết (linker)** phân giải ký hiệu và relocation. **Trình nạp (loader)** ánh xạ file thực thi và thư viện dùng chung vào tiến trình. Trình liên kết động có thể phân giải ký hiệu theo nhu cầu. Đây là phần tiếp nối của [assembly và ABI](../02_computer_architecture/04_machine_code_assembly_and_abi.md).
+Trình biên dịch mã máy thường tạo tệp (file / 파일) đối tượng; **trình liên kết (linker)** phân giải ký hiệu và relocation. **Trình nạp (loader)** ánh xạ tệp (file / 파일) thực thi và thư viện dùng chung vào tiến trình. Trình liên kết động có thể phân giải ký hiệu theo nhu cầu. Đây là phần tiếp nối của [assembly và ABI](../02_computer_architecture/04_machine_code_assembly_and_abi.md).
 
 ## Khả năng tái lập và bẫy khi đo hiệu năng
 
@@ -62,16 +65,18 @@ Trình biên dịch mã máy thường tạo file đối tượng; **trình liê
 
 ## Mô hình tư duy
 
-> Compiler và runtime tạo thành một **chuỗi biến đổi giữ nguyên ngữ nghĩa quan sát được**. Mỗi giai đoạn thay đổi cách biểu diễn để việc phân tích hoặc thực thi thuận lợi hơn, nhưng không được tùy ý thay đổi ý nghĩa chương trình.
+> trình biên dịch (compiler / 컴파일러) và thời gian chạy (runtime / 런타임) tạo thành một **chuỗi biến đổi giữ nguyên ngữ nghĩa quan sát được**. Mỗi giai đoạn thay đổi cách biểu diễn để việc phân tích hoặc thực thi thuận lợi hơn, nhưng không được tùy ý thay đổi ý nghĩa chương trình.
 
 ## Những hiểu nhầm thường gặp
 
-**“Trình thông dịch không biên dịch gì.”** Không luôn đúng. Nhiều interpreter chuyển mã nguồn thành bytecode hoặc IR trước khi thực thi.
+**“Trình thông dịch không biên dịch gì.”** Không luôn đúng. Nhiều trình thông dịch (interpreter / 인터프리터) chuyển mã nguồn thành bytecode hoặc IR trước khi thực thi.
 
 **“JIT luôn nhanh hơn AOT.”** Không đúng. Thời gian khởi động, chất lượng hồ sơ, bộ nhớ mã, thời lượng tải và AOT có PGO đều có thể thay đổi kết quả.
 
-**“Bộ tối ưu chỉ làm mã nhanh hơn mà không thay đổi gì khác.”** Nó giữ ngữ nghĩa quan sát được theo đặc tả, nhưng thời gian, bố trí mã và hình dạng mã máy có thể thay đổi; UB và data race còn làm các giả định phức tạp hơn.
+**“Bộ tối ưu chỉ làm mã nhanh hơn mà không thay đổi gì khác.”** Nó giữ ngữ nghĩa quan sát được theo đặc tả, nhưng thời gian, bố trí mã và hình dạng mã máy có thể thay đổi; UB và dữ liệu (data / 데이터) race còn làm các giả định phức tạp hơn.
 
 ## Kết nối
 
-Ngôn ngữ hình thức và giới hạn tính toán nằm ở [Computability](../00_computation_information/04_computability_and_limits.md), đích máy ở [CPU/ISA](../02_computer_architecture/01_cpu_isa_and_instruction_cycle.md), bộ nhớ runtime ở [kiểu và bộ nhớ](./01_types_values_references_and_memory.md), còn chuỗi build được nối tại [build, link và package](../08_software_systems/01_version_control_build_link_and_packages.md).
+Ngôn ngữ hình thức và giới hạn tính toán nằm ở [Computability](../00_computation_information/04_computability_and_limits.md), đích máy ở [CPU/ISA](../02_computer_architecture/01_cpu_isa_and_instruction_cycle.md), bộ nhớ thời gian chạy (runtime / 런타임) ở [kiểu và bộ nhớ](./01_types_values_references_and_memory.md), còn chuỗi bản dựng (build / 빌드) được nối tại [build, link và package](../08_software_systems/01_version_control_build_link_and_packages.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language semantics and execution models](./00_language_semantics_and_execution_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

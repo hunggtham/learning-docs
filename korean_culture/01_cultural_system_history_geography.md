@@ -1,5 +1,8 @@
 # Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc
 
+> **Mạch đọc:** Đặt **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Văn hoá không bắt đầu từ “phong tục”** sang **Văn hoá, thiết chế và hành vi: ba lớp không được trộn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Văn hoá không bắt đầu từ “phong tục”
 
 Khi nhìn một hành vi như cúi chào, dùng kính ngữ hay cả nhóm cùng ăn chung món, ta đang nhìn phần nổi của một hệ thống. Phần chìm là lịch sử nhà nước, gia đình, chiến tranh, kinh tế, khí hậu, công nghệ và cấu trúc dân cư. Vì vậy để hiểu văn hoá Hàn Quốc, điểm bắt đầu hợp lý không phải “10 điều người Hàn thường làm”, mà là câu hỏi: **những điều kiện nào khiến một số cách tổ chức xã hội trở nên hữu ích, hợp lý hoặc có uy tín qua nhiều thế hệ?**
@@ -24,7 +27,7 @@ công nghệ / giao diện
 hành vi quan sát được
 ```
 
-Không phải hiện tượng nào cũng đi qua đủ bảy lớp. Mục tiêu của mô hình là buộc ta tìm **cơ chế (mechanism)** trước khi nói “đó là tính cách người Hàn”.
+Không phải hiện tượng nào cũng đi qua đủ bảy lớp. Mục tiêu của mô hình là buộc ta tìm **cơ chế (mechanism / 메커니즘)** trước khi nói “đó là tính cách người Hàn”.
 
 ## Văn hoá, thiết chế và hành vi: ba lớp không được trộn
 
@@ -508,3 +511,5 @@ Nguyên tắc **tiết kiệm lời giải thích (parsimony)** là: dùng cơ c
 - [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md) — biến đổi dân số.
 - [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) — đồ thị kiến thức và mô hình nhân quả.
 - [`../korean_history/README.md`](../korean_history/README.md) — thư viện lịch sử khi cần niên đại và nguồn sâu hơn.
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

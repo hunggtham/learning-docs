@@ -1,237 +1,242 @@
-# Observability: từ telemetry đến suy luận có bằng chứng
+# Khả năng quan sát (observability / 관측 가능성): từ telemetry đến suy luận có bằng chứng
 
-## 1. Monitoring và observability không hoàn toàn giống nhau
+> **Mạch đọc:** Đọc **khả năng quan sát (observability / 관측 가능성): từ telemetry đến suy luận có bằng chứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Monitoring và khả năng quan sát (observability / 관측 가능성) không hoàn toàn giống nhau** sang **2. Telemetry là bằng chứng (evidence / 증거), không phải sự thật trọn vẹn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Monitoring thường trả lời các câu hỏi đã biết trước: CPU có cao không, error rate có vượt ngưỡng không. Khả năng quan sát (observability / 관측 가능성) rộng hơn: từ dữ liệu hệ thống phát ra, ta có thể đặt câu hỏi mới khi failure chưa từng biết trước.
 
-Observability không được đo bằng số dashboard. Một hệ thống có hàng nghìn metric nhưng thiếu correlation giữa request, deployment và dependency vẫn khó debug.
+## 1. Monitoring và khả năng quan sát (observability / 관측 가능성) không hoàn toàn giống nhau
 
-## 2. Telemetry là evidence, không phải sự thật trọn vẹn
+Monitoring thường trả lời các câu hỏi đã biết trước: CPU có cao không, lỗi (error / 오류) tỷ lệ (rate / 비율) có vượt ngưỡng không. khả năng quan sát (observability / 관측 가능성) rộng hơn: từ dữ liệu hệ thống phát ra, ta có thể đặt câu hỏi mới khi thất bại (failure / 실패) chưa từng biết trước.
 
-Metrics, logs, traces và events đều là phép quan sát có bias. Metric aggregate làm mất detail. Log có thể thiếu context. Trace có sampling. Event có thể bị drop. Vì vậy khi hai nguồn mâu thuẫn, không nên chọn nguồn “quen dùng”; phải hiểu semantics thu thập.
+Khả năng quan sát (observability / 관측 가능성) không được đo bằng số dashboard. Một hệ thống có hàng nghìn chỉ số (metric / 지표) nhưng thiếu correlation giữa yêu cầu (request / 요청), triển khai (deployment / 배포) và phụ thuộc (dependency / 의존성) vẫn khó gỡ lỗi (debug / 디버그).
 
-Một metric CPU 40% trung bình node không phủ định việc một container bị CPU throttling. Average latency 100 ms không phủ định p99 là 3 giây. Telemetry luôn cần dimensions và distribution phù hợp.
+## 2. Telemetry là bằng chứng (evidence / 증거), không phải sự thật trọn vẹn
+
+Metrics, logs, traces và events đều là phép quan sát có độ lệch (bias / 편향). chỉ số (metric / 지표) aggregate làm mất detail. Log có thể thiếu ngữ cảnh (context / 맥락). dấu vết (trace / 추적) có sampling. sự kiện (event / 이벤트) có thể bị drop. Vì vậy khi hai nguồn mâu thuẫn, không nên chọn nguồn “quen dùng”; phải hiểu ngữ nghĩa (semantics / 의미론) thu thập.
+
+Một chỉ số (metric / 지표) CPU 40% trung bình nút (node / 노드) không phủ định việc một bộ chứa (container / 컨테이너) bị CPU throttling. Average độ trễ (latency / 지연 시간) 100 ms không phủ định p99 là 3 giây. Telemetry luôn cần dimensions và phân phối (distribution / 분포) phù hợp.
 
 ## 3. Metrics dùng cho trend và alert
 
-Metric phù hợp để theo dõi quantity theo thời gian. Counter tăng đơn điệu cho event count; gauge biểu diễn value hiện tại; histogram/distribution giữ phân bố latency/size tốt hơn chỉ average.
+Chỉ số (metric / 지표) phù hợp để theo dõi quantity theo thời gian. Counter tăng đơn điệu cho sự kiện (event / 이벤트) count; gauge biểu diễn giá trị (value / 값) hiện tại; histogram/phân phối (distribution / 분포) giữ phân bố độ trễ (latency / 지연 시간)/kích thước (size / 크기) tốt hơn chỉ average.
 
-Cardinality là trade-off quan trọng. Label như `status_code`, `region`, `service` hữu ích. Label như `user_id` hoặc request UUID có cardinality cực cao và làm metric system tốn resource. Detail per-request phù hợp hơn với trace/log.
+Cardinality là sự đánh đổi (trade-off / 트레이드오프) quan trọng. Label như `status_code`, `region`, `service` hữu ích. Label như `user_id` hoặc yêu cầu (request / 요청) UUID có cardinality cực cao và làm chỉ số (metric / 지표) hệ thống (system / 시스템) tốn tài nguyên (resource / 자원). Detail per-request phù hợp hơn với dấu vết (trace / 추적)/log.
 
-## 4. Logs cần structure và context
+## 4. Logs cần cấu trúc (structure / 구조) và ngữ cảnh (context / 맥락)
 
-Structured log giúp machine query field thay vì parse text tự do. Một log entry hữu ích thường có timestamp chuẩn, service/version, severity, request/trace correlation và domain context phù hợp.
+Structured log giúp machine truy vấn (query / 쿼리) trường dữ liệu (field / 필드) thay vì parse văn bản (text / 텍스트) tự do. Một log entry hữu ích thường có timestamp chuẩn, dịch vụ (service / 서비스)/phiên bản (version / 버전), severity, yêu cầu (request / 요청)/dấu vết (trace / 추적) correlation và lĩnh vực (domain / 도메인) ngữ cảnh (context / 맥락) phù hợp.
 
-Không log secret/token/PII tùy tiện. Logging là data pipeline có security/privacy cost. “Log mọi thứ để debug” có thể tạo rủi ro lớn hơn incident ban đầu.
+Không log secret/đơn vị từ (token / 토큰)/PII tùy tiện. Logging là dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) có bảo mật (security / 보안)/privacy chi phí (cost / 비용). “Log mọi thứ để gỡ lỗi (debug / 디버그)” có thể tạo rủi ro lớn hơn sự cố (incident / 인시던트) ban đầu.
 
-## 5. Distributed trace nối causal path của request
+## 5. phân tán (distributed / 분산) dấu vết (trace / 추적) nối nhân quả (causal / 인과적) đường dẫn (path / 경로) của yêu cầu (request / 요청)
 
-Trace mô tả request đi qua nhiều span. Nó giúp thấy thời gian nằm ở service nào, downstream call nào và retry có xảy ra không. Trace context phải propagate qua boundary; nếu proxy/message queue làm mất context, graph bị đứt.
+Dấu vết (trace / 추적) mô tả yêu cầu (request / 요청) đi qua nhiều span. Nó giúp thấy thời gian nằm ở dịch vụ (service / 서비스) nào, downstream lời gọi (call / 호출) nào và thử lại (retry / 재시도) có xảy ra không. ngữ cảnh dấu vết (trace context / 추적 컨텍스트) phải propagate qua ranh giới (boundary / 경계); nếu proxy/message hàng đợi (queue / 큐) làm mất ngữ cảnh (context / 맥락), đồ thị (graph / 그래프) bị đứt.
 
-Trace không thay metric. Sampling có thể bỏ request hiếm; metric vẫn tốt để phát hiện xu hướng. Hai loại signal bổ sung nhau.
+Dấu vết (trace / 추적) không thay chỉ số (metric / 지표). Sampling có thể bỏ yêu cầu (request / 요청) hiếm; chỉ số (metric / 지표) vẫn tốt để phát hiện xu hướng. Hai loại tín hiệu (signal / 신호) bổ sung nhau.
 
-## 6. Events và change telemetry
+## 6. Events và thay đổi (change / 변경) telemetry
 
-Deployment, config update, node drain, autoscaler action và certificate rotation là event có giá trị cao. Overlay change event lên latency/error chart thường rút ngắn điều tra.
+Triển khai (deployment / 배포), cấu hình (config / 설정) cập nhật (update / 업데이트), nút (node / 노드) drain, autoscaler hành động (action / 동작) và certificate rotation là sự kiện (event / 이벤트) có giá trị cao. Overlay thay đổi (change / 변경) sự kiện (event / 이벤트) lên độ trễ (latency / 지연 시간)/lỗi (error / 오류) chart thường rút ngắn điều tra.
 
-Một platform nên làm change event tự động thay vì dựa vào người deploy nhớ ghi chú.
+Một nền tảng (platform / 플랫폼) nên làm thay đổi (change / 변경) sự kiện (event / 이벤트) tự động thay vì dựa vào người deploy nhớ ghi chú.
 
 ## 7. RED và USE như khung hỏi, không phải luật thuộc lòng
 
-Với request-serving service, Rate, Errors, Duration giúp bắt đầu từ user-facing behavior. Với resource, Utilization, Saturation, Errors giúp tìm bottleneck. Nhưng framework chỉ là câu hỏi mở đầu.
+Với request-serving dịch vụ (service / 서비스), tỷ lệ (rate / 비율), Errors, Duration giúp bắt đầu từ user-facing hành vi (behavior / 동작). Với tài nguyên (resource / 자원), Utilization, Saturation, Errors giúp tìm bottleneck. Nhưng khung phần mềm (framework / 프레임워크) chỉ là câu hỏi mở đầu.
 
-Ví dụ CPU utilization thấp nhưng run queue cao do quota/throttling cần evidence khác. Database latency cao có thể đến từ lock contention dù CPU/storage metric bình thường.
+Ví dụ CPU utilization thấp nhưng run hàng đợi (queue / 큐) cao do quota/throttling cần bằng chứng (evidence / 증거) khác. cơ sở dữ liệu (database / 데이터베이스) độ trễ (latency / 지연 시간) cao có thể đến từ tranh chấp khóa (lock contention / 잠금 경합) dù CPU/lưu trữ (storage / 저장소) chỉ số (metric / 지표) bình thường.
 
-## 8. Alert phải gắn với action
+## 8. Alert phải gắn với hành động (action / 동작)
 
-Alert tốt nói có user/reliability risk và người nhận có action hợp lý. Alert “CPU > 80% 5 phút” có thể không actionable nếu service vẫn khỏe và autoscaler đang làm việc.
+Alert tốt nói có người dùng (user / 사용자)/độ tin cậy (reliability / 신뢰성) rủi ro (risk / 위험) và người nhận có hành động (action / 동작) hợp lý. Alert “CPU > 80% 5 phút” có thể không actionable nếu dịch vụ (service / 서비스) vẫn khỏe và autoscaler đang làm việc.
 
-Alert nên ưu tiên symptom gần SLO/user impact, sau đó dùng lower-level telemetry để chẩn đoán. Cause-based alert vẫn hữu ích với condition chắc chắn cần action như disk sắp đầy hoặc certificate sắp hết hạn.
+Alert nên ưu tiên symptom gần SLO/người dùng (user / 사용자) impact, sau đó dùng lower-level telemetry để chẩn đoán. Cause-based alert vẫn hữu ích với điều kiện (condition / 조건) chắc chắn cần hành động (action / 동작) như disk sắp đầy hoặc certificate sắp hết hạn.
 
 ## 9. Dashboard là map, không phải investigation engine duy nhất
 
-Dashboard chuẩn giúp shared context: traffic, errors, latency, saturation, deployment marker. Nhưng incident mới có thể cần query ad-hoc. Platform observability nên cho phép đi từ overview → service → trace/log/resource bằng shared identifiers.
+Dashboard chuẩn giúp dùng chung (shared / 공유) ngữ cảnh (context / 맥락): traffic, errors, độ trễ (latency / 지연 시간), saturation, triển khai (deployment / 배포) marker. Nhưng sự cố (incident / 인시던트) mới có thể cần truy vấn (query / 쿼리) ad-hoc. nền tảng (platform / 플랫폼) khả năng quan sát (observability / 관측 가능성) nên cho phép đi từ overview → dịch vụ (service / 서비스) → dấu vết (trace / 추적)/log/tài nguyên (resource / 자원) bằng dùng chung (shared / 공유) identifiers.
 
 ## 10. Evidence-driven debugging
 
-Quy trình tốt bắt đầu bằng câu hỏi có thể bác bỏ. “Có phải rollout mới gây lỗi không?” kiểm tra deployment time và version dimension. “Có phải downstream DB chậm?” xem trace span, DB latency/pool saturation. “Có phải node pressure?” xem pod distribution, throttling, memory pressure.
+Quy trình tốt bắt đầu bằng câu hỏi có thể bác bỏ. “Có phải rollout mới gây lỗi không?” kiểm tra triển khai (deployment / 배포) thời gian (time / 시간) và phiên bản (version / 버전) dimension. “Có phải downstream DB chậm?” xem dấu vết (trace / 추적) span, DB độ trễ (latency / 지연 시간)/pool saturation. “Có phải nút (node / 노드) pressure?” xem pod phân phối (distribution / 분포), throttling, bộ nhớ (memory / 메모리) pressure.
 
-Mỗi bước nên giảm search space. Tránh nhảy sang restart/scale nếu chưa có bằng chứng, trừ khi recovery priority buộc phải hành động ngay.
+Mỗi bước nên giảm tìm kiếm (search / 검색) không gian (space / 공간). Tránh nhảy sang restart/quy mô (scale / 규모) nếu chưa có bằng chứng, trừ khi khôi phục (recovery / 복구) priority buộc phải hành động ngay.
 
-## 11. Instrumentation có cost
+## 11. Instrumentation có chi phí (cost / 비용)
 
-Telemetry tiêu CPU/network/storage và cost tài chính. High-cardinality logs/traces có thể đắt hơn application. Sampling và retention cần dựa trên mục tiêu điều tra/compliance.
+Telemetry tiêu CPU/mạng (network / 네트워크)/lưu trữ (storage / 저장소) và chi phí (cost / 비용) tài chính. High-cardinality logs/traces có thể đắt hơn ứng dụng (application / 애플리케이션). Sampling và retention cần dựa trên mục tiêu điều tra/compliance.
 
-Đừng tối ưu cost bằng cách xóa signal quan trọng nhất cho incident hiếm. Tốt hơn là phân tier retention, dynamic sampling và giữ exemplar/correlation.
+Đừng tối ưu chi phí (cost / 비용) bằng cách xóa tín hiệu (signal / 신호) quan trọng nhất cho sự cố (incident / 인시던트) hiếm. Tốt hơn là phân tier retention, động (dynamic / 동적) sampling và giữ exemplar/correlation.
 
-## 12. OpenTelemetry như semantic layer
+## 12. OpenTelemetry như ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)
 
-OpenTelemetry cung cấp chuẩn instrumentation/telemetry pipeline cho traces, metrics và logs trong nhiều hệ sinh thái. Giá trị lớn nằm ở portability và semantic convention, không phải “cài collector là có observability”. Application vẫn phải tạo span/metric có meaning đúng.
+OpenTelemetry cung cấp chuẩn instrumentation/telemetry chuỗi xử lý (pipeline / 파이프라인) cho traces, metrics và logs trong nhiều hệ sinh thái. Giá trị lớn nằm ở portability và ngữ nghĩa (semantic / 의미적) convention, không phải “cài collector là có khả năng quan sát (observability / 관측 가능성)”. ứng dụng (application / 애플리케이션) vẫn phải tạo span/chỉ số (metric / 지표) có meaning đúng.
 
-## 13. Senior note: observability là thiết kế interface cho failure
+## 13. cấp cao (senior / 시니어) ghi chú (note / 노트): khả năng quan sát (observability / 관측 가능성) là thiết kế giao diện (interface / 인터페이스) cho thất bại (failure / 실패)
 
-Khi thiết kế service, hãy hỏi trước: nếu request chậm, evidence nào phân biệt app CPU, DB, network và retry? Nếu deployment xấu, version có dimension trong metric không? Nếu queue backlog, có metric age/depth không? Nếu customer báo một request lỗi, có correlation identifier nào truy ra không?
+Khi thiết kế dịch vụ (service / 서비스), hãy hỏi trước: nếu yêu cầu (request / 요청) chậm, bằng chứng (evidence / 증거) nào phân biệt app CPU, DB, mạng (network / 네트워크) và thử lại (retry / 재시도)? Nếu triển khai (deployment / 배포) xấu, phiên bản (version / 버전) có dimension trong chỉ số (metric / 지표) không? Nếu hàng đợi (queue / 큐) backlog, có chỉ số (metric / 지표) age/độ sâu (depth / 깊이) không? Nếu customer báo một yêu cầu (request / 요청) lỗi, có correlation identifier nào truy ra không?
 
-Observability tốt được thiết kế cùng system, không phải gắn dashboard sau khi production đã khó hiểu.
+Khả năng quan sát (observability / 관측 가능성) tốt được thiết kế cùng hệ thống (system / 시스템), không phải gắn dashboard sau khi môi trường vận hành (production / 운영 환경) đã khó hiểu.
 
-## 14. Telemetry pipeline cũng là một distributed system có thể fail
+## 14. Telemetry chuỗi xử lý (pipeline / 파이프라인) cũng là một hệ thống phân tán (distributed system / 분산 시스템) có thể thất bại (fail / 실패)
 
-Application phát metric/log/trace nhưng signal thường còn đi qua agent, collector, queue, network và backend lưu trữ. Vì vậy “không thấy log” có ít nhất hai khả năng: event không xảy ra hoặc telemetry path làm mất event.
+Ứng dụng (application / 애플리케이션) phát chỉ số (metric / 지표)/log/dấu vết (trace / 추적) nhưng tín hiệu (signal / 신호) thường còn đi qua tác nhân (agent / 에이전트), collector, hàng đợi (queue / 큐), mạng (network / 네트워크) và backend lưu trữ. Vì vậy “không thấy log” có ít nhất hai khả năng: sự kiện (event / 이벤트) không xảy ra hoặc telemetry đường dẫn (path / 경로) làm mất sự kiện (event / 이벤트).
 
-Platform cần quan sát chính observability pipeline: queue/backpressure, dropped spans/logs, export error, backend ingestion latency và sampling policy. Nếu collector quá tải trong đúng lúc incident traffic spike, evidence quý giá nhất có thể bị mất.
+Nền tảng (platform / 플랫폼) cần quan sát chính khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인): hàng đợi (queue / 큐)/backpressure, dropped spans/logs, export lỗi (error / 오류), backend ingestion độ trễ (latency / 지연 시간) và sampling chính sách (policy / 정책). Nếu collector quá tải trong đúng lúc sự cố (incident / 인시던트) traffic spike, bằng chứng (evidence / 증거) quý giá nhất có thể bị mất.
 
-Đây là lý do telemetry pipeline cần capacity và failure semantics, không nên được coi là hệ thống phụ “không thể lỗi”.
+Đây là lý do telemetry chuỗi xử lý (pipeline / 파이프라인) cần sức chứa (capacity / 용량) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), không nên được coi là hệ thống phụ “không thể lỗi”.
 
 ## 15. Sampling phải biết câu hỏi cần trả lời
 
-Head sampling quyết định giữ trace từ đầu request, rẻ và đơn giản nhưng có thể bỏ rare error trước khi biết request sẽ lỗi. Tail sampling quyết định sau khi thấy nhiều span/kết quả, có thể ưu tiên error/slow trace nhưng cần buffering/state và tăng complexity.
+Head sampling quyết định giữ dấu vết (trace / 추적) từ đầu yêu cầu (request / 요청), rẻ và đơn giản nhưng có thể bỏ rare lỗi (error / 오류) trước khi biết yêu cầu (request / 요청) sẽ lỗi. Tail sampling quyết định sau khi thấy nhiều span/kết quả, có thể ưu tiên lỗi (error / 오류)/slow dấu vết (trace / 추적) nhưng cần buffering/trạng thái (state / 상태) và tăng độ phức tạp (complexity / 복잡도).
 
-Không có một tỷ lệ sampling tốt cho mọi service. High-volume healthy traffic có thể sample thấp; error/security/critical transaction có thể giữ nhiều hơn. Quan trọng là biết signal nào vẫn đầy đủ — thường metric aggregate — và signal nào chỉ đại diện sample.
+Không có một tỷ lệ sampling tốt cho mọi dịch vụ (service / 서비스). High-volume healthy traffic có thể mẫu (sample / 표본) thấp; lỗi (error / 오류)/bảo mật (security / 보안)/trọng yếu (critical / 중요) giao dịch (transaction / 트랜잭션) có thể giữ nhiều hơn. Quan trọng là biết tín hiệu (signal / 신호) nào vẫn đầy đủ — thường chỉ số (metric / 지표) aggregate — và tín hiệu (signal / 신호) nào chỉ đại diện mẫu (sample / 표본).
 
-Khi điều tra “không có trace của request lỗi”, trước hết kiểm tra sampling/propagation trước khi kết luận request chưa vào service.
+Khi điều tra “không có dấu vết (trace / 추적) của yêu cầu (request / 요청) lỗi”, trước hết kiểm tra sampling/propagation trước khi kết luận yêu cầu (request / 요청) chưa vào dịch vụ (service / 서비스).
 
-## 16. Percentile không cộng và không average đơn giản qua service
+## 16. Percentile không cộng và không average đơn giản qua dịch vụ (service / 서비스)
 
-Nếu service A p99 = 200 ms và B p99 = 300 ms, không thể kết luận end-to-end p99 = 500 ms. Hai percentile có thể đến từ các request khác nhau. Tương tự average của p99 giữa nhiều instance không tạo p99 toàn fleet.
+Nếu dịch vụ (service / 서비스) A p99 = 200 ms và B p99 = 300 ms, không thể kết luận end-to-end p99 = 500 ms. Hai percentile có thể đến từ các yêu cầu (request / 요청) khác nhau. Tương tự average của p99 giữa nhiều instance không tạo p99 toàn fleet.
 
-Histogram/distribution giữ count theo bucket cho phép aggregate đúng hơn trong nhiều hệ thống. Khi dashboard hiển thị percentile, operator cần biết percentile được tính từ raw events, histogram merge hay average của precomputed percentile.
+Histogram/phân phối (distribution / 분포) giữ count theo bucket cho phép aggregate đúng hơn trong nhiều hệ thống. Khi dashboard hiển thị percentile, operator cần biết percentile được tính từ raw events, histogram merge hay average của precomputed percentile.
 
-Đây là assumption quan trọng vì tail latency thường quyết định SLO.
+Đây là giả định (assumption / 가정) quan trọng vì tail độ trễ (latency / 지연 시간) thường quyết định SLO.
 
-## 17. Clock và timestamp có thể làm causal order khó đọc
+## 17. Clock và timestamp có thể làm nhân quả (causal / 인과적) thứ tự (order / 순서) khó đọc
 
-Distributed trace/log dựa vào timestamp từ nhiều host/process. Clock skew nhỏ có thể làm span trông như child bắt đầu trước parent hoặc log order lộn xộn. Protocol tracing thường có parent/child relation giúp reasoning tốt hơn chỉ sort timestamp.
+Phân tán (distributed / 분산) dấu vết (trace / 추적)/log dựa vào timestamp từ nhiều host/tiến trình (process / 프로세스). Clock skew nhỏ có thể làm span trông như child bắt đầu trước parent hoặc log thứ tự (order / 순서) lộn xộn. giao thức (protocol / 프로토콜) tracing thường có parent/child quan hệ (relation / 관계) giúp lập luận (reasoning / 추론) tốt hơn chỉ sort timestamp.
 
-Time synchronization vẫn quan trọng cho incident timeline, certificate và audit. Nhưng khi hai log lệch vài trăm mili giây, đừng suy luận causality chỉ từ timestamp tuyệt đối nếu có trace/event relation mạnh hơn.
+Thời gian (time / 시간) synchronization vẫn quan trọng cho sự cố (incident / 인시던트) timeline, certificate và kiểm tra (audit / 감사). Nhưng khi hai log lệch vài trăm mili giây, đừng suy luận causality chỉ từ timestamp tuyệt đối nếu có dấu vết (trace / 추적)/sự kiện (event / 이벤트) quan hệ (relation / 관계) mạnh hơn.
 
-## 18. Correlation ID không thay trace context
+## 18. Correlation ID không thay ngữ cảnh dấu vết (trace context / 추적 컨텍스트)
 
-Một request ID tự tạo giúp search log nhưng thường chỉ là opaque label. Trace context còn mang trace/span relationship và sampling state qua hop. Hai thứ có thể cùng tồn tại; platform nên chuẩn hóa propagation qua HTTP, messaging và background task.
+Một yêu cầu (request / 요청) ID tự tạo giúp tìm kiếm (search / 검색) log nhưng thường chỉ là opaque label. ngữ cảnh dấu vết (trace context / 추적 컨텍스트) còn mang dấu vết (trace / 추적)/span relationship và sampling trạng thái (state / 상태) qua hop. Hai thứ có thể cùng tồn tại; nền tảng (platform / 플랫폼) nên chuẩn hóa propagation qua HTTP, messaging và background tác vụ (task / 작업).
 
-Đặc biệt với asynchronous queue, request lifecycle không còn một call stack đồng bộ. Message ID, trace/link và business entity ID có vai trò khác nhau. Không nên nhét tất cả vào một `correlation_id` rồi kỳ vọng query nào cũng dễ.
+Đặc biệt với asynchronous hàng đợi (queue / 큐), vòng đời yêu cầu (request lifecycle / 요청 생명주기) không còn một ngăn xếp lời gọi (call stack / 호출 스택) đồng bộ. Message ID, dấu vết (trace / 추적)/link và nghiệp vụ (business / 비즈니스) thực thể (entity / 엔터티) ID có vai trò khác nhau. Không nên nhét tất cả vào một `correlation_id` rồi kỳ vọng truy vấn (query / 쿼리) nào cũng dễ.
 
 ## 19. Cardinality explosion thường đến từ dimension tưởng như vô hại
 
-Label `endpoint` có thể an toàn nếu chỉ vài route template như `/orders/{id}`. Nhưng nếu instrumentation dùng raw URL `/orders/12345`, mỗi ID tạo series mới. Tương tự error message nguyên văn, SQL text hoặc user ID.
+Label `endpoint` có thể an toàn nếu chỉ vài tuyến (route / 경로) template như `/orders/{id}`. Nhưng nếu instrumentation dùng raw URL `/orders/12345`, mỗi ID tạo series mới. Tương tự lỗi (error / 오류) message nguyên văn, SQL văn bản (text / 텍스트) hoặc người dùng (user / 사용자) ID.
 
-Cardinality cao làm memory/index/query cost tăng và có thể khiến backend drop data hoặc rate-limit đúng lúc incident. Instrumentation nên normalize dimension và để detail high-cardinality sang trace/log.
+Cardinality cao làm bộ nhớ (memory / 메모리)/chỉ mục (index / 인덱스)/truy vấn (query / 쿼리) chi phí (cost / 비용) tăng và có thể khiến backend drop dữ liệu (data / 데이터) hoặc rate-limit đúng lúc sự cố (incident / 인시던트). Instrumentation nên normalize dimension và để detail high-cardinality sang dấu vết (trace / 추적)/log.
 
-Platform observability cần lint/convention để ngăn lỗi này sớm thay vì chữa bill/backend outage sau đó.
+Nền tảng (platform / 플랫폼) khả năng quan sát (observability / 관측 가능성) cần lint/convention để ngăn lỗi này sớm thay vì chữa bill/backend outage sau đó.
 
-## 20. Exemplars nối aggregate metric với request cụ thể
+## 20. Exemplars nối aggregate chỉ số (metric / 지표) với yêu cầu (request / 요청) cụ thể
 
-Metric histogram cho thấy p99/slow bucket nhưng không nói request nào. Exemplar có thể gắn một sample trace ID vào bucket/point, cho phép drill-down từ aggregate anomaly sang trace cụ thể mà không biến metric label thành high-cardinality.
+Chỉ số (metric / 지표) histogram cho thấy p99/slow bucket nhưng không nói yêu cầu (request / 요청) nào. Exemplar có thể gắn một mẫu (sample / 표본) dấu vết (trace / 추적) ID vào bucket/điểm (point / 지점), cho phép drill-down từ aggregate anomaly sang dấu vết (trace / 추적) cụ thể mà không biến chỉ số (metric / 지표) label thành high-cardinality.
 
-Đây là pattern hữu ích cho developer experience: dashboard latency tăng → click exemplar → trace → downstream span → log tương ứng. Correlation tốt giảm thời gian chuyển tool và giữ causal context.
+Đây là mẫu (pattern / 패턴) hữu ích cho nhà phát triển (developer / 개발자) experience: dashboard độ trễ (latency / 지연 시간) tăng → click exemplar → dấu vết (trace / 추적) → downstream span → log tương ứng. Correlation tốt giảm thời gian chuyển công cụ (tool / 도구) và giữ nhân quả (causal / 인과적) ngữ cảnh (context / 맥락).
 
-## 21. Senior walkthrough: dashboard im lặng trong lúc user báo lỗi
+## 21. cấp cao (senior / 시니어) walkthrough: dashboard im lặng trong lúc người dùng (user / 사용자) báo lỗi
 
-Giả sử support nhận nhiều complaint nhưng error dashboard không tăng. Có ba nhóm hypothesis: SLI/metric không bao phủ failure business; telemetry pipeline/drop lỗi; hoặc complaint nằm ở subset dimension bị aggregate che.
+Giả sử hỗ trợ (support / 지원) nhận nhiều complaint nhưng lỗi (error / 오류) dashboard không tăng. Có ba nhóm hypothesis: SLI/chỉ số (metric / 지표) không bao phủ thất bại (failure / 실패) nghiệp vụ (business / 비즈니스); telemetry chuỗi xử lý (pipeline / 파이프라인)/drop lỗi; hoặc complaint nằm ở subset dimension bị aggregate che.
 
-Kiểm tra raw edge/access evidence, telemetry exporter/collector drop metric, version/region/tenant dimension và business outcome. Nếu HTTP 200 nhưng payload chứa business failure, transport error metric sẽ vẫn xanh.
+Kiểm tra raw edge/truy cập (access / 접근) bằng chứng (evidence / 증거), telemetry exporter/collector drop chỉ số (metric / 지표), phiên bản (version / 버전)/region/tenant dimension và nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과). Nếu HTTP 200 nhưng payload chứa nghiệp vụ (business / 비즈니스) thất bại (failure / 실패), vận chuyển (transport / 전송) lỗi (error / 오류) chỉ số (metric / 지표) sẽ vẫn xanh.
 
-Bài học là observability chỉ tốt bằng semantics đã instrument. “Dashboard xanh” không phải bằng chứng user experience xanh nếu sensor đo sai contract.
+Bài học là khả năng quan sát (observability / 관측 가능성) chỉ tốt bằng ngữ nghĩa (semantics / 의미론) đã instrument. “Dashboard xanh” không phải bằng chứng người dùng (user / 사용자) experience xanh nếu sensor đo sai đặc tả hợp đồng (contract / 계약).
 
-## 22. Missing data khác zero và khác healthy
+## 22. Missing dữ liệu (data / 데이터) khác zero và khác healthy
 
-Một dashboard trả `0 errors` có thể nghĩa thật sự không có lỗi, nhưng cũng có thể vì exporter chết, target không scrape được hoặc query vô tình loại bỏ series mất dữ liệu. Đây là khác biệt giữa **absence of bad events** và **absence of observations**.
+Một dashboard trả `0 errors` có thể nghĩa thật sự không có lỗi, nhưng cũng có thể vì exporter chết, mục tiêu (target / 대상) không scrape được hoặc truy vấn (query / 쿼리) vô tình loại bỏ series mất dữ liệu. Đây là khác biệt giữa **absence of bad events** và **absence of observations**.
 
-Monitoring design nên làm missing-data semantics explicit. Với metric critical, loss of signal có thể cần alert riêng. Một SLI pipeline không được mặc định coi missing sample là success nếu điều đó làm outage telemetry biến thành availability 100%.
+Monitoring thiết kế (design / 설계) nên làm missing-data ngữ nghĩa (semantics / 의미론) tường minh (explicit / 명시적). Với chỉ số (metric / 지표) trọng yếu (critical / 중요), mất mát (loss / 손실) of tín hiệu (signal / 신호) có thể cần alert riêng. Một SLI chuỗi xử lý (pipeline / 파이프라인) không được mặc định coi missing mẫu (sample / 표본) là success nếu điều đó làm outage telemetry biến thành availability 100%.
 
-Khi service biến mất khỏi dashboard đúng lúc incident, hãy hỏi target có còn emit không, collector có nhận không, backend có ingest không và query có còn match label mới không trước khi kết luận service idle.
+Khi dịch vụ (service / 서비스) biến mất khỏi dashboard đúng lúc sự cố (incident / 인시던트), hãy hỏi mục tiêu (target / 대상) có còn emit không, collector có nhận không, backend có ingest không và truy vấn (query / 쿼리) có còn match label mới không trước khi kết luận dịch vụ (service / 서비스) idle.
 
-## 23. Counter reset và process restart làm rate query dễ sai
+## 23. Counter reset và tiến trình (process / 프로세스) restart làm tỷ lệ (rate / 비율) truy vấn (query / 쿼리) dễ sai
 
-Counter thường tăng đơn điệu trong lifetime của process, nhưng process restart đưa counter về 0. Query tính rate cần hiểu reset semantics; lấy chênh lệch hai sample thủ công có thể tạo rate âm hoặc spike giả.
+Counter thường tăng đơn điệu trong thời gian tồn tại (lifetime / 수명) của tiến trình (process / 프로세스), nhưng tiến trình (process / 프로세스) restart đưa counter về 0. truy vấn (query / 쿼리) tính tỷ lệ (rate / 비율) cần hiểu reset ngữ nghĩa (semantics / 의미론); lấy chênh lệch hai mẫu (sample / 표본) thủ công có thể tạo tỷ lệ (rate / 비율) âm hoặc spike giả.
 
-Tương tự, một fleet scale-out tạo nhiều time series mới. Nếu dashboard cộng raw counter không chuẩn hóa theo thời gian hoặc instance lifetime, số nhìn có thể thay đổi chỉ vì topology thay đổi chứ business traffic không đổi.
+Tương tự, một fleet scale-out tạo nhiều thời gian (time / 시간) series mới. Nếu dashboard cộng raw counter không chuẩn hóa theo thời gian hoặc instance thời gian tồn tại (lifetime / 수명), số nhìn có thể thay đổi chỉ vì topology thay đổi chứ nghiệp vụ (business / 비즈니스) traffic không đổi.
 
-Operational lesson là biết metric type và lifecycle. Dashboard formula là code; nó cần review, test với restart/gap và version cùng semantic contract giống application logic quan trọng khác.
+Operational lesson là biết chỉ số (metric / 지표) kiểu (type / 타입) và vòng đời (lifecycle / 생명주기). Dashboard formula là mã (code / 코드); nó cần rà soát (review / 검토), kiểm thử (test / 테스트) với restart/gap và phiên bản (version / 버전) cùng ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) giống ứng dụng (application / 애플리케이션) lô-gic (logic / 논리) quan trọng khác.
 
-## 24. Log delivery thường không có exactly-once semantics
+## 24. Log delivery thường không có exactly-once ngữ nghĩa (semantics / 의미론)
 
-Agent/collector có thể buffer rồi retry khi backend tạm lỗi. Điều này tốt cho durability nhưng có thể tạo duplicate log. Network/retry/batching cũng có thể làm event tới backend khác thứ tự timestamp hoặc ingestion order.
+Tác nhân (agent / 에이전트)/collector có thể buffer rồi thử lại (retry / 재시도) khi backend tạm lỗi. Điều này tốt cho durability nhưng có thể tạo duplicate log. mạng (network / 네트워크)/thử lại (retry / 재시도)/batching cũng có thể làm sự kiện (event / 이벤트) tới backend khác thứ tự timestamp hoặc ingestion thứ tự (order / 순서).
 
-Vì vậy đếm business event bằng log line cần cẩn thận. Nếu một payment success log bị gửi lại hai lần, query `count()` không nhất thiết bằng số payment thật. Với audit/business invariant quan trọng, event cần stable identity/deduplication semantics hoặc source dữ liệu authoritative hơn.
+Vì vậy đếm nghiệp vụ (business / 비즈니스) sự kiện (event / 이벤트) bằng log line cần cẩn thận. Nếu một payment success log bị gửi lại hai lần, truy vấn (query / 쿼리) `count()` không nhất thiết bằng số payment thật. Với kiểm tra (audit / 감사)/nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) quan trọng, sự kiện (event / 이벤트) cần stable định danh (identity / 식별자)/deduplication ngữ nghĩa (semantics / 의미론) hoặc nguồn (source / 소스) dữ liệu authoritative hơn.
 
-Log là evidence tuyệt vời nhưng không nên vô thức biến thành transaction ledger nếu pipeline không có contract tương ứng.
+Log là bằng chứng (evidence / 증거) tuyệt vời nhưng không nên vô thức biến thành giao dịch (transaction / 트랜잭션) ledger nếu chuỗi xử lý (pipeline / 파이프라인) không có đặc tả hợp đồng (contract / 계약) tương ứng.
 
-## 25. Telemetry schema cũng tiến hóa như API
+## 25. Telemetry lược đồ (schema / 스키마) cũng tiến hóa như API
 
-Đổi tên metric, label, log field hoặc span attribute có thể làm dashboard/alert/query im lặng mà application vẫn chạy. Nếu rollout application và dashboard không coordinated, một phần fleet dùng schema cũ, phần khác schema mới, aggregate có thể double-count hoặc bỏ sót.
+Đổi tên chỉ số (metric / 지표), label, log trường dữ liệu (field / 필드) hoặc span attribute có thể làm dashboard/alert/truy vấn (query / 쿼리) im lặng mà ứng dụng (application / 애플리케이션) vẫn chạy. Nếu rollout ứng dụng (application / 애플리케이션) và dashboard không coordinated, một phần fleet dùng lược đồ (schema / 스키마) cũ, phần khác lược đồ (schema / 스키마) mới, aggregate có thể double-count hoặc bỏ sót.
 
-Shared semantic convention cần version/migration window. Có thể emit old+new field tạm thời, update query trước rồi mới remove old, hoặc dùng recording/translation layer tùy system.
+Dùng chung (shared / 공유) ngữ nghĩa (semantic / 의미적) convention cần phiên bản (version / 버전)/di chuyển (migration / 마이그레이션) cửa sổ (window / 윈도우). Có thể emit old+new trường dữ liệu (field / 필드) tạm thời, cập nhật (update / 업데이트) truy vấn (query / 쿼리) trước rồi mới remove old, hoặc dùng recording/translation tầng (layer / 계층) tùy hệ thống (system / 시스템).
 
-Đây là một compatibility problem: observability consumer cũng là consumer của telemetry API.
+Đây là một tính tương thích (compatibility / 호환성) bài toán (problem / 문제): khả năng quan sát (observability / 관측 가능성) bên tiêu thụ (consumer / 소비자) cũng là bên tiêu thụ (consumer / 소비자) của telemetry API.
 
-## 26. Observer effect: instrumentation có thể làm workload thay đổi
+## 26. Observer tác động (effect / 효과): instrumentation có thể làm tải công việc (workload / 워크로드) thay đổi
 
-Tracing mọi request với payload lớn, synchronous log flush hoặc stack-profile quá nặng có thể tăng CPU, I/O và latency. Trong incident, bật debug log toàn fleet đôi khi làm disk/network pressure nặng thêm và che root cause ban đầu.
+Tracing mọi yêu cầu (request / 요청) với payload lớn, synchronous log flush hoặc stack-profile quá nặng có thể tăng CPU, I/O và độ trễ (latency / 지연 시간). Trong sự cố (incident / 인시던트), bật gỡ lỗi (debug / 디버그) log toàn fleet đôi khi làm disk/mạng (network / 네트워크) pressure nặng thêm và che nguyên nhân gốc (root cause / 근본 원인) ban đầu.
 
-Instrumentation cần budget và activation scope. Debug mode nên có TTL, sampling hoặc targeted cohort khi có thể. Một diagnostic action tốt luôn hỏi thêm: evidence mới tạo ra có làm thay đổi system đủ lớn để invalidate observation không?
+Instrumentation cần ngân sách (budget / 예산) và activation phạm vi (scope / 범위). gỡ lỗi (debug / 디버그) chế độ (mode / 모드) nên có TTL, sampling hoặc targeted cohort khi có thể. Một diagnostic hành động (action / 동작) tốt luôn hỏi thêm: bằng chứng (evidence / 증거) mới tạo ra có làm thay đổi hệ thống (system / 시스템) đủ lớn để invalidate observation không?
 
-Điều này đặc biệt quan trọng với profiling, packet capture và verbose logging trên path latency-sensitive.
+Điều này đặc biệt quan trọng với profiling, packet capture và verbose logging trên đường dẫn (path / 경로) latency-sensitive.
 
-## 27. Sampling policy có thể bias chính failure muốn tìm
+## 27. Sampling chính sách (policy / 정책) có thể độ lệch (bias / 편향) chính thất bại (failure / 실패) muốn tìm
 
-Nếu sampling quyết định dựa trên latency threshold, error code hoặc tenant, dataset giữ lại không còn đại diện traffic tổng thể. Điều đó không xấu nếu mục tiêu là debugging rare failure, nhưng không được dùng sample đó để ước lượng tỷ lệ toàn bộ user mà không biết selection bias.
+Nếu sampling quyết định dựa trên độ trễ (latency / 지연 시간) threshold, lỗi (error / 오류) mã (code / 코드) hoặc tenant, dataset giữ lại không còn đại diện traffic tổng thể. Điều đó không xấu nếu mục tiêu là debugging rare thất bại (failure / 실패), nhưng không được dùng mẫu (sample / 표본) đó để ước lượng tỷ lệ toàn bộ người dùng (user / 사용자) mà không biết selection độ lệch (bias / 편향).
 
-Tail sampling còn phụ thuộc việc trace hoàn thành và collector có đủ buffer. Trong overload, slow trace có thể bị drop do memory pressure đúng lúc ta muốn giữ chúng nhất.
+Tail sampling còn phụ thuộc việc dấu vết (trace / 추적) hoàn thành và collector có đủ buffer. Trong overload, slow dấu vết (trace / 추적) có thể bị drop do bộ nhớ (memory / 메모리) pressure đúng lúc ta muốn giữ chúng nhất.
 
-Một observability platform trưởng thành tách use case: metric đầy đủ cho population-level rate/SLO, sampled traces cho causal detail, và policy rõ về bias của sample.
+Một khả năng quan sát (observability / 관측 가능성) nền tảng (platform / 플랫폼) trưởng thành tách use trường hợp (case / 사례): chỉ số (metric / 지표) đầy đủ cho population-level tỷ lệ (rate / 비율)/SLO, sampled traces cho nhân quả (causal / 인과적) detail, và chính sách (policy / 정책) rõ về độ lệch (bias / 편향) của mẫu (sample / 표본).
 
-## 28. Black-box và white-box telemetry trả lời hai phía khác nhau của contract
+## 28. Black-box và white-box telemetry trả lời hai phía khác nhau của đặc tả hợp đồng (contract / 계약)
 
-White-box metric nhìn từ bên trong service: queue, thread pool, GC, DB pool. Black-box probe nhìn như consumer: DNS resolve được không, TLS/HTTP có trả đúng không, synthetic transaction có hoàn thành không.
+White-box chỉ số (metric / 지표) nhìn từ bên trong dịch vụ (service / 서비스): hàng đợi (queue / 큐), luồng thực thi (thread / 스레드) pool, GC, DB pool. Black-box probe nhìn như bên tiêu thụ (consumer / 소비자): DNS resolve được không, TLS/HTTP có trả đúng không, synthetic giao dịch (transaction / 트랜잭션) có hoàn thành không.
 
-Một service có internal dashboard xanh nhưng edge route hỏng; ngược lại synthetic probe fail từ một region trong khi service process khỏe. Hai perspective không cạnh tranh mà giúp xác định boundary failure.
+Một dịch vụ (service / 서비스) có nội bộ (internal / 내부) dashboard xanh nhưng edge tuyến (route / 경로) hỏng; ngược lại synthetic probe thất bại (fail / 실패) từ một region trong khi dịch vụ (service / 서비스) tiến trình (process / 프로세스) khỏe. Hai perspective không cạnh tranh mà giúp xác định ranh giới (boundary / 경계) thất bại (failure / 실패).
 
-Với capability critical, một số external/synthetic check giúp phát hiện class failure mà self-reported telemetry không thể thấy — đặc biệt khi chính service hoặc telemetry agent đã chết.
+Với năng lực (capability / 역량) trọng yếu (critical / 중요), một số bên ngoài (external / 외부)/synthetic check giúp phát hiện lớp (class / 클래스) thất bại (failure / 실패) mà self-reported telemetry không thể thấy — đặc biệt khi chính dịch vụ (service / 서비스) hoặc telemetry tác nhân (agent / 에이전트) đã chết.
 
 ## 29. Stale telemetry có thể nguy hiểm hơn missing telemetry
 
-Missing signal thường dễ nhận ra. Stale signal khó hơn vì dashboard vẫn có giá trị cuối cùng và người xem tưởng nó mới. Cache, exporter stuck, delayed ingestion hoặc query window có thể giữ “CPU 40%, replicas 10” dù actual state đã đổi.
+Missing tín hiệu (signal / 신호) thường dễ nhận ra. Stale tín hiệu (signal / 신호) khó hơn vì dashboard vẫn có giá trị cuối cùng và người xem tưởng nó mới. bộ nhớ đệm (cache / 캐시), exporter stuck, delayed ingestion hoặc truy vấn (query / 쿼리) cửa sổ (window / 윈도우) có thể giữ “CPU 40%, replicas 10” dù actual trạng thái (state / 상태) đã đổi.
 
-Mọi critical signal nên có freshness context: sample timestamp, scrape age, ingestion lag hoặc heartbeat phù hợp. Khi incident, một evidence item không chỉ cần hỏi “giá trị là gì?” mà còn “được quan sát khi nào và từ state version nào?”.
+Mọi trọng yếu (critical / 중요) tín hiệu (signal / 신호) nên có freshness ngữ cảnh (context / 맥락): mẫu (sample / 표본) timestamp, scrape age, ingestion lag hoặc heartbeat phù hợp. Khi sự cố (incident / 인시던트), một bằng chứng (evidence / 증거) item không chỉ cần hỏi “giá trị là gì?” mà còn “được quan sát khi nào và từ trạng thái (state / 상태) phiên bản (version / 버전) nào?”.
 
-Senior reasoning coi freshness như một dimension của evidence. Dữ liệu chính xác nhưng quá cũ có thể dẫn tới action sai giống dữ liệu sai.
+Cấp cao (senior / 시니어) lập luận (reasoning / 추론) coi freshness như một dimension của bằng chứng (evidence / 증거). Dữ liệu chính xác nhưng quá cũ có thể dẫn tới hành động (action / 동작) sai giống dữ liệu sai.
 
-## 30. Telemetry cần priority khi chính observability pipeline quá tải
+## 30. Telemetry cần priority khi chính khả năng quan sát (observability / 관측 가능성) chuỗi xử lý (pipeline / 파이프라인) quá tải
 
-Khi ingestion vượt capacity, drop ngẫu nhiên mọi signal có thể làm mất đúng error/security event quan trọng trong khi giữ hàng triệu debug log ít giá trị. Vì vậy overload policy nên phản ánh giá trị evidence: SLO metric, audit/security event và critical error có thể cần durability/priority cao hơn verbose trace hoặc debug log.
+Khi ingestion vượt sức chứa (capacity / 용량), drop ngẫu nhiên mọi tín hiệu (signal / 신호) có thể làm mất đúng lỗi (error / 오류)/bảo mật (security / 보안) sự kiện (event / 이벤트) quan trọng trong khi giữ hàng triệu gỡ lỗi (debug / 디버그) log ít giá trị. Vì vậy overload chính sách (policy / 정책) nên phản ánh giá trị bằng chứng (evidence / 증거): SLO chỉ số (metric / 지표), kiểm tra (audit / 감사)/bảo mật (security / 보안) sự kiện (event / 이벤트) và trọng yếu (critical / 중요) lỗi (error / 오류) có thể cần durability/priority cao hơn verbose dấu vết (trace / 추적) hoặc gỡ lỗi (debug / 디버그) log.
 
-Priority không có nghĩa mọi critical signal được giữ vô hạn. Nếu buffer không bound, observability agent có thể làm application/node OOM. Cần explicit queue limit, spill/durable path khi phù hợp, drop counter và degradation policy. Điều quan trọng là khi mất dữ liệu, ta biết **loại nào bị mất, bao nhiêu và vì sao**.
+Priority không có nghĩa mọi trọng yếu (critical / 중요) tín hiệu (signal / 신호) được giữ vô hạn. Nếu buffer không bound, khả năng quan sát (observability / 관측 가능성) tác nhân (agent / 에이전트) có thể làm ứng dụng (application / 애플리케이션)/nút (node / 노드) OOM. Cần tường minh (explicit / 명시적) hàng đợi (queue / 큐) limit, spill/durable đường dẫn (path / 경로) khi phù hợp, drop counter và degradation chính sách (policy / 정책). Điều quan trọng là khi mất dữ liệu, ta biết **loại nào bị mất, bao nhiêu và vì sao**.
 
-Đây là admission control áp dụng cho telemetry: system bảo vệ capability chẩn đoán cốt lõi thay vì để overload biến toàn bộ evidence thành ngẫu nhiên.
+Đây là admission điều khiển (control / 제어) áp dụng cho telemetry: hệ thống (system / 시스템) bảo vệ năng lực (capability / 역량) chẩn đoán cốt lõi thay vì để overload biến toàn bộ bằng chứng (evidence / 증거) thành ngẫu nhiên.
 
-## 31. Observability backend cũng có noisy-neighbor và query blast radius
+## 31. khả năng quan sát (observability / 관측 가능성) backend cũng có noisy-neighbor và truy vấn (query / 쿼리) blast radius
 
-Một truy vấn regex rộng trên log nhiều tháng, dashboard fan-out hàng nghìn series hoặc tenant có cardinality bùng nổ có thể làm query/ingestion backend chậm cho người khác. Multi-tenancy của observability vì vậy cần quota không chỉ ở ingestion mà cả retained data, concurrent query, scan volume và cardinality.
+Một truy vấn regex rộng trên log nhiều tháng, dashboard fan-out hàng nghìn series hoặc tenant có cardinality bùng nổ có thể làm truy vấn (query / 쿼리)/ingestion backend chậm cho người khác. Multi-tenancy của khả năng quan sát (observability / 관측 가능성) vì vậy cần quota không chỉ ở ingestion mà cả retained dữ liệu (data / 데이터), concurrent truy vấn (query / 쿼리), scan volume và cardinality.
 
-Trong incident, operator cần query nhanh nhất đúng lúc toàn tổ chức cùng mở dashboard. Capacity model phải xét **incident concurrency**, không chỉ traffic ngày thường. Có thể cần precomputed/recording data cho SLO, query priority, per-tenant limit và isolation cho audit/critical telemetry.
+Trong sự cố (incident / 인시던트), operator cần truy vấn (query / 쿼리) nhanh nhất đúng lúc toàn tổ chức cùng mở dashboard. sức chứa (capacity / 용량) mô hình (model / 모델) phải xét **sự cố (incident / 인시던트) tính đồng thời (concurrency / 동시성)**, không chỉ traffic ngày thường. Có thể cần precomputed/recording dữ liệu (data / 데이터) cho SLO, truy vấn (query / 쿼리) priority, per-tenant limit và isolation cho kiểm tra (audit / 감사)/trọng yếu (critical / 중요) telemetry.
 
-Nếu observability backend là shared dependency toàn công ty, một query xấu không nên có blast radius tương đương outage monitoring toàn bộ fleet.
+Nếu khả năng quan sát (observability / 관측 가능성) backend là dùng chung (shared / 공유) phụ thuộc (dependency / 의존성) toàn công ty, một truy vấn (query / 쿼리) xấu không nên có blast radius tương đương outage monitoring toàn bộ fleet.
 
 ## 32. Retention nên đi từ câu hỏi điều tra và nghĩa vụ, không từ một con số chung
 
-Không phải mọi telemetry cần giữ 90 ngày ở cùng độ chi tiết. High-resolution metric hữu ích cho incident gần; aggregate dài hạn hữu ích cho capacity/trend. Full trace có thể chỉ cần giữ ngắn, trong khi security/audit evidence có retention dài hơn vì forensic/compliance.
+Không phải mọi telemetry cần giữ 90 ngày ở cùng độ chi tiết. High-resolution chỉ số (metric / 지표) hữu ích cho sự cố (incident / 인시던트) gần; aggregate dài hạn hữu ích cho sức chứa (capacity / 용량)/trend. Full dấu vết (trace / 추적) có thể chỉ cần giữ ngắn, trong khi bảo mật (security / 보안)/kiểm tra (audit / 감사) bằng chứng (evidence / 증거) có retention dài hơn vì forensic/compliance.
 
-Một retention design tốt hỏi: failure thường được phát hiện sau bao lâu; capacity cần seasonality dài bao nhiêu; audit yêu cầu gì; replay/debug cần raw detail hay aggregate. Sau đó mới chọn tier hot/warm/archive hoặc downsampling. Xóa detail quá sớm làm forensic bất khả thi; giữ mọi thứ mãi mãi tăng cost, privacy exposure và query surface.
+Một retention thiết kế (design / 설계) tốt hỏi: thất bại (failure / 실패) thường được phát hiện sau bao lâu; sức chứa (capacity / 용량) cần seasonality dài bao nhiêu; kiểm tra (audit / 감사) yêu cầu gì; replay/gỡ lỗi (debug / 디버그) cần raw detail hay aggregate. Sau đó mới chọn tier hot/warm/archive hoặc downsampling. Xóa detail quá sớm làm forensic bất khả thi; giữ mọi thứ mãi mãi tăng chi phí (cost / 비용), privacy exposure và truy vấn (query / 쿼리) surface.
 
-Retention vì vậy là product/security/reliability contract, không chỉ storage setting.
+Retention vì vậy là sản phẩm (product / 제품)/bảo mật (security / 보안)/độ tin cậy (reliability / 신뢰성) đặc tả hợp đồng (contract / 계약), không chỉ lưu trữ (storage / 저장소) setting.
 
-## 33. Telemetry cost cần attribution theo signal driver
+## 33. Telemetry chi phí (cost / 비용) cần attribution theo tín hiệu (signal / 신호) driver
 
-Bill observability thường tăng vì một số driver cụ thể: log volume, retained bytes, high-cardinality series, trace span count, egress hoặc query scan. Nếu chỉ phân bổ theo số service, team ít có feedback để sửa instrumentation gây cost.
+Bill khả năng quan sát (observability / 관측 가능성) thường tăng vì một số driver cụ thể: log volume, retained bytes, high-cardinality series, dấu vết (trace / 추적) span count, egress hoặc truy vấn (query / 쿼리) scan. Nếu chỉ phân bổ theo số dịch vụ (service / 서비스), nhóm (team / 팀) ít có phản hồi (feedback / 피드백) để sửa instrumentation gây chi phí (cost / 비용).
 
-Platform nên expose cost/usage theo service hoặc tenant ở mức đủ gần causal driver: `GB ingested`, `GB-day retained`, active series/cardinality, sampled span volume, expensive query class. Nhưng cost guardrail phải đi cùng reliability guardrail; cắt trace sampling xuống gần zero để đạt budget có thể phá diagnosability.
+Nền tảng (platform / 플랫폼) nên expose chi phí (cost / 비용)/usage theo dịch vụ (service / 서비스) hoặc tenant ở mức đủ gần nhân quả (causal / 인과적) driver: `GB ingested`, `GB-day retained`, active series/cardinality, sampled span volume, expensive truy vấn (query / 쿼리) lớp (class / 클래스). Nhưng chi phí (cost / 비용) guardrail phải đi cùng độ tin cậy (reliability / 신뢰성) guardrail; cắt dấu vết (trace / 추적) sampling xuống gần zero để đạt ngân sách (budget / 예산) có thể phá diagnosability.
 
-Mental model FinOps ở đây là `question/evidence value → signal design → ingestion/retention/query cost → feedback cho owner`. Mục tiêu không phải telemetry rẻ nhất mà là **chi phí thấp nhất vẫn giữ được quyết định production cần thiết**.
+Mô hình tư duy (mental model / 사고 모델) FinOps ở đây là `question/evidence value → signal design → ingestion/retention/query cost → feedback cho owner`. Mục tiêu không phải telemetry rẻ nhất mà là **chi phí thấp nhất vẫn giữ được quyết định môi trường vận hành (production / 운영 환경) cần thiết**.
 
-## 34. Senior walkthrough: incident làm observability chết trước application
+## 34. cấp cao (senior / 시니어) walkthrough: sự cố (incident / 인시던트) làm khả năng quan sát (observability / 관측 가능성) chết trước ứng dụng (application / 애플리케이션)
 
-Giả sử release lỗi tạo exception loop, mỗi request phát hàng trăm log line. Application vẫn còn phục vụ một phần traffic nhưng log ingestion tăng 50 lần, collector queue đầy, backend query timeout và on-call mất visibility. Tăng log backend vô hạn không phải fix bền vững vì chính failure path có amplification factor không bound.
+Giả sử bản phát hành (release / 릴리스) lỗi tạo exception vòng lặp (loop / 루프), mỗi yêu cầu (request / 요청) phát hàng trăm log line. ứng dụng (application / 애플리케이션) vẫn còn phục vụ một phần traffic nhưng log ingestion tăng 50 lần, collector hàng đợi (queue / 큐) đầy, backend truy vấn (query / 쿼리) hết thời gian chờ (timeout / 타임아웃) và on-call mất visibility. Tăng log backend vô hạn không phải fix bền vững vì chính thất bại (failure / 실패) đường dẫn (path / 경로) có amplification factor không bound.
 
-Causal chain là `application fault → telemetry amplification → collector/backend saturation → evidence loss → recovery chậm`. Mitigation có thể rate-limit/sampling log lặp, ưu tiên error summary/SLO signal, bảo vệ backend bằng tenant/query quota và giữ drop counter. Sau incident, instrumentation phải được sửa để một lỗi application không thể biến thành observability outage có blast radius lớn hơn lỗi gốc.
+Chuỗi nhân quả (causal chain / 인과 사슬) là `application fault → telemetry amplification → collector/backend saturation → evidence loss → recovery chậm`. Mitigation có thể rate-limit/sampling log lặp, ưu tiên lỗi (error / 오류) summary/SLO tín hiệu (signal / 신호), bảo vệ backend bằng tenant/truy vấn (query / 쿼리) quota và giữ drop counter. Sau sự cố (incident / 인시던트), instrumentation phải được sửa để một lỗi ứng dụng (application / 애플리케이션) không thể biến thành khả năng quan sát (observability / 관측 가능성) outage có blast radius lớn hơn lỗi gốc.
 
-Đây là ví dụ rõ rằng observability nằm trong production dependency graph và cần overload/failure design giống mọi shared platform khác.
+Đây là ví dụ rõ rằng khả năng quan sát (observability / 관측 가능성) nằm trong môi trường vận hành (production / 운영 환경) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) và cần overload/thất bại (failure / 실패) thiết kế (design / 설계) giống mọi dùng chung (shared / 공유) nền tảng (platform / 플랫폼) khác.
+
+> **Bàn giao:** Sau **34. cấp cao (senior / 시니어) walkthrough: sự cố (incident / 인시던트) làm khả năng quan sát (observability / 관측 가능성) chết trước ứng dụng (application / 애플리케이션)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 sli slo error budget and capacity](./01_sli_slo_error_budget_and_capacity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

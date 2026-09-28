@@ -1,5 +1,8 @@
 # Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích
 
+> **Mạch đọc:** Đọc **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao đồng vị là chất đánh dấu tốt** sang **Có chất mang và gần không có chất mang**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa phóng xạ (radiochemistry / 방사화학)** nghiên cứu hóa học của các vật liệu phóng xạ và cách các biến đổi hạt nhân tương tác với những quá trình hóa học thông thường. Các đồng vị của cùng một nguyên tố có cấu trúc electron gần như giống nhau, vì vậy đồng vị phóng xạ có thể đóng vai trò **chất đánh dấu (tracer)** cực nhạy trong khi tín hiệu phân rã hạt nhân cung cấp một kênh đo độc lập.
 
 ## Vì sao đồng vị là chất đánh dấu tốt
@@ -17,7 +20,7 @@ Một radionuclide có thể tồn tại cùng lượng lớn đồng vị bền
 **Hoạt độ riêng (specific activity)** được viết:
 
 \[
-A_s=\frac{\text{hoạt độ}}{\text{khối lượng}}
+A_s=\frac{\văn bản (text / 텍스트){hoạt độ}}{\văn bản (text / 텍스트){khối lượng}}
 \]
 
 Nếu lượng chất mang bền ít hơn, hoạt độ riêng thường cao hơn.
@@ -361,3 +364,5 @@ Không. Lĩnh vực này còn có vai trò trong y học, phân tích, địa ch
 Hóa phóng xạ xem một nguyên tử phóng xạ như **một tiểu phân hóa học bình thường mang theo một ngọn hải đăng hạt nhân đặc biệt**. Hóa học electron quyết định nguyên tử đi đâu và liên kết thế nào; phân rã hạt nhân quyết định cách ta phát hiện nó hoặc cách nó truyền năng lượng.
 
 Xem tiếp: [Hóa học khí quyển](../16_environmental_chemistry/00_atmospheric_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic nucleus](./00_atomic_nucleus.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

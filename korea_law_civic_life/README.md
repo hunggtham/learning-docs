@@ -1,6 +1,9 @@
 # Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc
 
-> **Korea Law, Civic & Everyday Life Knowledge Library**
+> **Mạch đọc:** Đọc **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phạm vi** sang **Bản đồ nội dung**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Korea Law, Civic & Everyday Life thư viện kiến thức (knowledge library / 지식 라이브러리)**
 >
 > Thư viện này dành cho người nước ngoài đang sống, học tập hoặc làm việc tại Hàn Quốc. Mục tiêu không phải biến người đọc thành luật sư, mà giúp hiểu **hệ thống vận hành thế nào**, nhận ra đúng cơ quan có thẩm quyền, đọc được văn bản hành chính cơ bản và biết cách **tự kiểm tra nguồn chính thức hiện hành** trước khi hành động.
 
@@ -11,6 +14,9 @@
 Thư viện đi từ cấu trúc nền tảng của nhà nước và pháp luật đến các vấn đề thường gặp trong đời sống: Hiến pháp (헌법), thứ bậc pháp luật, Quốc hội (국회), hành pháp (행정부), tư pháp (사법부), tòa án (법원), cảnh sát (경찰), công tố (검찰), luật hành chính, dân sự, hợp đồng, quyền người tiêu dùng, lao động, thuê nhà, thuế, bảo hiểm xã hội, y tế, ngân hàng, tín dụng, xuất nhập cảnh, thị thực, thường trú, nhập quốc tịch, chính quyền địa phương, khiếu nại và cách đọc giấy tờ hành chính.
 
 Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví dụ **hợp đồng lao động (근로계약서)**, **tiền đặt cọc thuê nhà (보증금)**, **thông báo hành chính (통지서)**, **xử lý hành chính (처분)**, **khiếu nại hành chính (행정심판)**.
+
+
+> **Chuyển mạch:** Từ **Phạm vi**, ta sang **Bản đồ nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ nội dung
 
@@ -30,16 +36,27 @@ Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví d
 14. [Glossary Việt–Hàn–Anh](GLOSSARY.md)
 15. [Nguồn chính thức](SOURCES.md)
 
+
+> **Chuyển mạch:** Từ **Bản đồ nội dung**, ta sang **Cách dùng thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cách dùng thư viện
 
 Đừng bắt đầu bằng câu hỏi “tôi phải làm gì?” mà hãy bắt đầu bằng bốn câu: **vấn đề thuộc lĩnh vực nào → cơ quan nào phụ trách → văn bản pháp lý hoặc hướng dẫn nào đang có hiệu lực → thủ tục cụ thể hiện hành là gì?**. Cách này tránh một lỗi rất phổ biến: đọc một blog cũ, một câu trả lời cộng đồng hoặc một video đúng ở thời điểm trước rồi áp dụng như quy định hiện tại.
 
 Khi một vấn đề có thể làm thay đổi quyền, nghĩa vụ, tiền bạc hoặc tình trạng cư trú của cá nhân, tài liệu này chỉ đóng vai trò **bản đồ**. Hãy kiểm tra văn bản đang có hiệu lực trên `국가법령정보센터`, hướng dẫn của cơ quan có thẩm quyền và, nếu cần, sử dụng tư vấn chuyên môn phù hợp.
 
+
+> **Chuyển mạch:** Từ **Cách dùng thư viện**, ta sang **Nguyên tắc trung lập civic/political** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Nguyên tắc trung lập civic/political
 
 Các phần về Quốc hội, Tổng thống, Chính phủ, tòa án, chính quyền địa phương và quyền công dân chỉ mô tả **cấu trúc, thẩm quyền, quy trình và nguồn pháp lý**. Thư viện không xếp hạng đảng phái, ứng viên, chính sách hay đưa ra lựa chọn chính trị.
 
-## Liên kết với các library khác
+
+> **Chuyển mạch:** Từ **Nguyên tắc trung lập civic/political**, ta sang **Liên kết với các thư viện (library / 라이브러리) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Liên kết với các thư viện (library / 라이브러리) khác
 
 Phần ôn KIIP nằm tại [`../korean_culture/kiip/`](../korean_culture/kiip/README.md), đặc biệt [`04_정치.md`](../korean_culture/kiip/04_정치.md) và [`06_법.md`](../korean_culture/kiip/06_법.md). KIIP phục vụ ôn thi; thư viện hiện tại đi sâu hơn vào **cách hệ thống hoạt động và cách tự tra cứu trong đời sống thực**.
+
+> **Bàn giao:** Sau **Liên kết với các thư viện (library / 라이브러리) khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

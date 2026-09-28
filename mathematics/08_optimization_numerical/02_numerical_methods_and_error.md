@@ -1,16 +1,19 @@
 # Toán số: approximation, conditioning và stability trên máy tính hữu hạn
 
-Toán số (Numerical Analysis / 수치해석) nghiên cứu cách biến một problem toán học thành computation đáng tin cậy trên máy tính thực. Điểm xuất phát là một sự thật dễ bỏ qua: computer không thao tác với số thực vô hạn chính xác, không thực hiện vô hạn bước, và thường chỉ thấy dữ liệu đã có measurement noise.
+> **Mạch đọc:** Đọc **Toán số: approximation, conditioning và stability trên máy tính hữu hạn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **chính xác (exact / 정확한) mathematics và computed number là hai tầng khác nhau** sang **lỗi (error / 오류): absolute và relative**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Vì vậy một công thức đúng về mặt toán học chưa bảo đảm kết quả tính được đáng tin. Numerical analysis tách ít nhất ba câu hỏi:
 
-1. **Problem có nhạy không?** — conditioning.
+Toán số (Numerical Analysis / 수치해석) nghiên cứu cách biến một bài toán (problem / 문제) toán học thành computation đáng tin cậy trên máy tính thực. Điểm xuất phát là một sự thật dễ bỏ qua: computer không thao tác với số thực vô hạn chính xác, không thực hiện vô hạn bước, và thường chỉ thấy dữ liệu đã có đo lường (measurement / 측정) noise.
+
+Vì vậy một công thức đúng về mặt toán học chưa bảo đảm kết quả tính được đáng tin. Numerical phân tích (analysis / 분석) tách ít nhất ba câu hỏi:
+
+1. **bài toán (problem / 문제) có nhạy không?** — conditioning.
 2. **Ta đang approximate ideal mathematics bằng scheme nào?** — discretization/truncation.
-3. **Algorithm trên finite precision có khuếch đại error không?** — stability.
+3. **thuật toán (algorithm / 알고리즘) trên finite precision có khuếch đại lỗi (error / 오류) không?** — stability.
 
-> Một numerical result chỉ đáng tin khi ta hiểu cả mathematical problem, approximation scheme và machine arithmetic.
+> Một numerical kết quả (result / 결과) chỉ đáng tin khi ta hiểu cả mathematical bài toán (problem / 문제), approximation scheme và machine arithmetic.
 
-## Exact mathematics và computed number là hai tầng khác nhau
+## Chính xác (exact / 정확한) mathematics và computed number là hai tầng khác nhau
 
 Giả sử ta muốn solve
 
@@ -18,7 +21,7 @@ Giả sử ta muốn solve
 Ax=b.
 ```
 
-Trong exact arithmetic, nếu `A` invertible thì solution unique:
+Trong chính xác (exact / 정확한) arithmetic, nếu `A` invertible thì solution unique:
 
 ```math
 x=A^{-1}b.
@@ -27,20 +30,20 @@ x=A^{-1}b.
 Nhưng trong thực tế có ba vấn đề riêng:
 
 - entries của `A,b` có thể đã là measurements có noise;
-- machine lưu numbers bằng floating point nên arithmetic bị rounding;
-- computing explicit inverse có thể không phải algorithm tốt để solve system.
+- machine lưu numbers bằng floating điểm (point / 지점) nên arithmetic bị rounding;
+- computing tường minh (explicit / 명시적) inverse có thể không phải thuật toán (algorithm / 알고리즘) tốt để solve hệ thống (system / 시스템).
 
 Do đó statement “equation có unique solution” không trả lời được “computed solution có accurate không?”.
 
-## Error: absolute và relative
+## Lỗi (error / 오류): absolute và relative
 
-Nếu true value là `x` và approximation là `\hat x`, absolute error là
+Nếu true giá trị (value / 값) là `x` và approximation là `\hat x`, absolute lỗi (error / 오류) là
 
 ```math
 |\hat x-x|.
 ```
 
-Relative error là
+Relative lỗi (error / 오류) là
 
 ```math
 \frac{|\hat x-x|}{|x|},
@@ -48,35 +51,35 @@ Relative error là
 
 khi `x≠0`.
 
-Absolute error phù hợp khi scale tự thân có ý nghĩa. Relative error quan trọng khi so accuracy giữa quantities khác magnitude.
+Absolute lỗi (error / 오류) phù hợp khi quy mô (scale / 규모) tự thân có ý nghĩa. Relative lỗi (error / 오류) quan trọng khi so accuracy giữa quantities khác magnitude.
 
-Ví dụ approximation `1000001` cho true value `1000000` có absolute error `1`, nhưng relative error chỉ
+Ví dụ approximation `1000001` cho true giá trị (value / 값) `1000000` có absolute lỗi (error / 오류) `1`, nhưng relative lỗi (error / 오류) chỉ
 
 ```math
 10^{-6}.
 ```
 
-Ngược lại approximation `0.0011` cho `0.0010` có absolute error rất nhỏ `0.0001`, nhưng relative error 10%.
+Ngược lại approximation `0.0011` cho `0.0010` có absolute lỗi (error / 오류) rất nhỏ `0.0001`, nhưng relative lỗi (error / 오류) 10%.
 
-## Measurement error, model error và numerical error không giống nhau
+## Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau
 
-Một engineering computation có thể sai do:
+Một kỹ thuật (engineering / 엔지니어링) computation có thể sai do:
 
-**Measurement error:** input data không exact.
+**sai số đo lường (measurement error / 측정 오차):** đầu vào (input / 입력) dữ liệu (data / 데이터) không chính xác (exact / 정확한).
 
-**Model error:** mathematical model bỏ qua physics/business behavior quan trọng.
+**mô hình (model / 모델) lỗi (error / 오류):** mathematical mô hình (model / 모델) bỏ qua physics/nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작) quan trọng.
 
-**Discretization error:** continuous/infinite object được replace bằng finite approximation.
+**Discretization lỗi (error / 오류):** continuous/infinite đối tượng (object / 객체) được replace bằng finite approximation.
 
-**Rounding error:** finite-precision arithmetic.
+**Rounding lỗi (error / 오류):** finite-precision arithmetic.
 
 **Algorithmic instability:** small computational perturbations bị amplify.
 
-Không nên gộp tất cả thành “máy tính sai số”. Nếu model assumption sai, tăng floating-point precision không cứu được result.
+Không nên gộp tất cả thành “máy tính sai số”. Nếu mô hình (model / 모델) giả định (assumption / 가정) sai, tăng floating-point precision không cứu được kết quả (result / 결과).
 
-## Floating point: tại sao `0.1+0.2` không exact?
+## Floating điểm (point / 지점): tại sao `0.1+0.2` không chính xác (exact / 정확한)?
 
-Binary floating point biểu diễn finite set numbers gần dạng
+Nhị phân (binary / 이진) floating điểm (point / 지점) biểu diễn finite set numbers gần dạng
 
 ```math
 (-1)^s\times m\times2^e,
@@ -84,7 +87,7 @@ Binary floating point biểu diễn finite set numbers gần dạng
 
 với finite significand `m` và exponent `e`.
 
-Giống như `1/3=0.3333...` không có finite decimal representation, `0.1` không có finite binary representation. Computer lưu nearby representable number.
+Giống như `1/3=0.3333...` không có finite decimal biểu diễn (representation / 표현), `0.1` không có finite nhị phân (binary / 이진) biểu diễn (representation / 표현). Computer lưu nearby representable number.
 
 Do đó
 
@@ -92,33 +95,33 @@ Do đó
 0.1 + 0.2
 ```
 
-có thể không equal exactly `0.3` theo bit pattern.
+có thể không equal exactly `0.3` theo bit mẫu (pattern / 패턴).
 
-Điểm đúng không phải “floating point tệ”, mà là **finite representation không thể represent mọi real number**.
+Điểm đúng không phải “floating điểm (point / 지점) tệ”, mà là **finite biểu diễn (representation / 표현) không thể represent mọi real number**.
 
 ## Machine epsilon và spacing
 
 Machine epsilon roughly mô tả khoảng cách relative giữa `1` và next representable number lớn hơn `1` cho một floating format.
 
-Floating point có approximately constant **relative** precision trong normal range, không constant absolute spacing. Numbers magnitude lớn có spacing lớn hơn.
+Floating điểm (point / 지점) có approximately constant **relative** precision trong normal phạm vi (range / 범위), không constant absolute spacing. Numbers magnitude lớn có spacing lớn hơn.
 
-Vì vậy adding tiny number vào huge number có thể không thay representation:
+Vì vậy adding tiny number vào huge number có thể không thay biểu diễn (representation / 표현):
 
 ```text
 large + tiny == large
 ```
 
-nếu `tiny` nhỏ hơn resolution tại scale đó.
+nếu `tiny` nhỏ hơn resolution tại quy mô (scale / 규모) đó.
 
 ## Associativity có thể mất
 
-Trong exact real arithmetic,
+Trong chính xác (exact / 정확한) real arithmetic,
 
 ```math
 (a+b)+c=a+(b+c).
 ```
 
-Trong floating point, intermediate rounding làm identity có thể fail numerically.
+Trong floating điểm (point / 지점), intermediate rounding làm định danh (identity / 식별자) có thể thất bại (fail / 실패) numerically.
 
 Ví dụ nếu `a` rất lớn, `b=-a`, `c` nhỏ:
 
@@ -134,11 +137,11 @@ a + (b + c)
 
 có thể round `b+c` về gần `b`, rồi cancel thành 0.
 
-Parallel reductions vì vậy có thể cho last-bit differences tùy order summation.
+Parallel reductions vì vậy có thể cho last-bit differences tùy thứ tự (order / 순서) summation.
 
 ## Catastrophic cancellation
 
-Nếu subtract hai gần-equal floating numbers, leading digits cancel và relative error có thể tăng mạnh.
+Nếu subtract hai gần-equal floating numbers, leading digits cancel và relative lỗi (error / 오류) có thể tăng mạnh.
 
 Ví dụ quadratic formula
 
@@ -146,23 +149,23 @@ Ví dụ quadratic formula
 x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 ```
 
-có thể unstable cho một root khi `b` và square root gần nhau, vì numerator subtract gần-equal quantities.
+có thể unstable cho một gốc (root / 루트) khi `b` và square gốc (root / 루트) gần nhau, vì numerator subtract gần-equal quantities.
 
 Algebraically equivalent reformulation có thể numerically tốt hơn.
 
 Đây là lesson quan trọng: **symbolically equivalent formulas không nhất thiết computationally equivalent**.
 
-## Conditioning: problem bản thân nhạy tới mức nào?
+## Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?
 
-Conditioning là property của problem, không phải của algorithm.
+Conditioning là thuộc tính (property / 속성) của bài toán (problem / 문제), không phải của thuật toán (algorithm / 알고리즘).
 
-Suppose function
+Suppose hàm (function / 함수)
 
 ```math
 y=f(x).
 ```
 
-Nếu small perturbation `δx` tạo large relative change trong `y`, problem ill-conditioned quanh đó.
+Nếu small perturbation `δx` tạo large relative thay đổi (change / 변경) trong `y`, bài toán (problem / 문제) ill-conditioned quanh đó.
 
 First-order sensitivity có thể nhìn qua derivative:
 
@@ -170,7 +173,7 @@ First-order sensitivity có thể nhìn qua derivative:
 \delta y\approx f'(x)\delta x.
 ```
 
-Relative condition number một biến thường liên quan
+Relative điều kiện (condition / 조건) number một biến thường liên quan
 
 ```math
 \kappa(x)=\left|\frac{x f'(x)}{f(x)}\right|,
@@ -178,47 +181,47 @@ Relative condition number một biến thường liên quan
 
 khi expression hợp lệ.
 
-Large `κ` nghĩa input relative error có thể bị amplify mạnh trong output.
+Large `κ` nghĩa đầu vào (input / 입력) relative lỗi (error / 오류) có thể bị amplify mạnh trong đầu ra (output / 출력).
 
-## Condition number của linear system
+## Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)
 
-Cho invertible matrix `A`, condition number theo chosen norm là
+Cho invertible ma trận (matrix / 행렬) `A`, điều kiện (condition / 조건) number theo chosen norm là
 
 ```math
 \kappa(A)=\|A\|\,\|A^{-1}\|.
 ```
 
-Nếu `κ(A)` lớn, system gần singular theo norm đó; small perturbations trong data có thể gây large changes trong solution.
+Nếu `κ(A)` lớn, hệ thống (system / 시스템) gần singular theo norm đó; small perturbations trong dữ liệu (data / 데이터) có thể gây large changes trong solution.
 
 Geometrically, transformation `A` squash một số directions rất mạnh. Inverting phải expand lại những directions đó, đồng thời amplify noise.
 
 Đây là reason near-collinear features làm least squares nhạy và multicollinearity gây unstable coefficients.
 
-## Stability: algorithm có thêm amplification không?
+## Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?
 
-Conditioning hỏi “problem khó nhạy đến đâu”. Stability hỏi “algorithm có làm tình hình tệ hơn bản chất problem không?”.
+Conditioning hỏi “bài toán (problem / 문제) khó nhạy đến đâu”. Stability hỏi “thuật toán (algorithm / 알고리즘) có làm tình hình tệ hơn bản chất bài toán (problem / 문제) không?”.
 
-Một algorithm backward stable trả computed answer đúng chính xác cho một nearby problem:
+Một thuật toán (algorithm / 알고리즘) backward stable trả computed answer đúng chính xác cho một nearby bài toán (problem / 문제):
 
 ```text
 computed solution = exact solution of slightly perturbed input.
 ```
 
-Nếu problem well-conditioned, nearby input tạo nearby output, nên backward stability thường dẫn tới forward accuracy tốt.
+Nếu bài toán (problem / 문제) well-conditioned, nearby đầu vào (input / 입력) tạo nearby đầu ra (output / 출력), nên backward stability thường dẫn tới forward accuracy tốt.
 
-Numerical linear algebra đánh giá algorithms theo lens này thay vì chỉ count arithmetic operations.
+Numerical tuyến tính (linear / 선형) algebra đánh giá algorithms theo lens này thay vì chỉ count arithmetic operations.
 
-## Forward error và backward error
+## Forward lỗi (error / 오류) và backward lỗi (error / 오류)
 
-Forward error đo distance từ computed result tới true result.
+Forward lỗi (error / 오류) đo distance từ computed kết quả (result / 결과) tới true kết quả (result / 결과).
 
-Backward error hỏi: input phải thay đổi ít nhất bao nhiêu để computed result trở thành exact answer?
+Backward lỗi (error / 오류) hỏi: đầu vào (input / 입력) phải thay đổi ít nhất bao nhiêu để computed kết quả (result / 결과) trở thành chính xác (exact / 정확한) answer?
 
-Một result có forward error lớn nhưng backward error nhỏ nếu problem ill-conditioned. Khi đó algorithm có thể hoạt động tốt, nhưng problem bản thân amplify uncertainty.
+Một kết quả (result / 결과) có forward lỗi (error / 오류) lớn nhưng backward lỗi (error / 오류) nhỏ nếu bài toán (problem / 문제) ill-conditioned. Khi đó thuật toán (algorithm / 알고리즘) có thể hoạt động tốt, nhưng bài toán (problem / 문제) bản thân amplify bất định (uncertainty / 불확실성).
 
-Distinction này giúp tránh blame algorithm cho sensitivity vốn nằm trong problem.
+Distinction này giúp tránh blame thuật toán (algorithm / 알고리즘) cho sensitivity vốn nằm trong bài toán (problem / 문제).
 
-## Truncation error: finite approximation của infinite process
+## Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)
 
 Derivative được định nghĩa bằng limit:
 
@@ -232,7 +235,7 @@ Computer phải chọn finite `h`, nên dùng approximation
 f'(x)\approx\frac{f(x+h)-f(x)}{h}.
 ```
 
-Taylor expansion cho thấy forward difference có truncation error order `O(h)` dưới smoothness assumptions.
+Taylor expansion cho thấy forward difference có truncation lỗi (error / 오류) thứ tự (order / 순서) `O(h)` dưới smoothness các giả định (assumptions / 가정들).
 
 Central difference
 
@@ -240,31 +243,31 @@ Central difference
 f'(x)\approx\frac{f(x+h)-f(x-h)}{2h}
 ```
 
-thường có truncation error `O(h^2)`.
+thường có truncation lỗi (error / 오류) `O(h^2)`.
 
-Higher order không có nghĩa luôn better: smaller `h` giảm truncation error nhưng có thể tăng rounding/cancellation error.
+Higher thứ tự (order / 순서) không có nghĩa luôn better: smaller `h` giảm truncation lỗi (error / 오류) nhưng có thể tăng rounding/cancellation lỗi (error / 오류).
 
 ## Tại sao “step càng nhỏ càng tốt” sai?
 
-Derivative finite difference minh họa trade-off.
+Derivative finite difference minh họa sự đánh đổi (trade-off / 트레이드오프).
 
-Nếu `h` lớn, approximation error do Taylor truncation lớn.
+Nếu `h` lớn, approximation lỗi (error / 오류) do Taylor truncation lớn.
 
 Nếu `h` cực nhỏ, `f(x+h)` và `f(x)` gần nhau; subtraction có cancellation, sau đó division by tiny `h` amplify rounding.
 
-Total error thường có U-shaped behavior theo `h`: giảm trước rồi tăng.
+Total lỗi (error / 오류) thường có U-shaped hành vi (behavior / 동작) theo `h`: giảm trước rồi tăng.
 
-Optimal step size cân bằng truncation và floating-point errors.
+Optimal step kích thước (size / 크기) cân bằng truncation và floating-point errors.
 
-## Root finding: bisection từ continuity
+## Gốc (root / 루트) finding: bisection từ continuity
 
-Suppose continuous function `f` thỏa
+Suppose continuous hàm (function / 함수) `f` thỏa
 
 ```math
 f(a)f(b)<0.
 ```
 
-Intermediate Value Theorem bảo đảm có ít nhất một root trong `(a,b)`.
+Intermediate giá trị (value / 값) Theorem bảo đảm có ít nhất một gốc (root / 루트) trong `(a,b)`.
 
 Bisection lấy midpoint
 
@@ -272,7 +275,7 @@ Bisection lấy midpoint
 m=\frac{a+b}{2}
 ```
 
-và giữ half interval còn sign change.
+và giữ half interval còn sign thay đổi (change / 변경).
 
 Sau `k` iterations, interval width là
 
@@ -288,7 +291,7 @@ k\ge\log_2\frac{b-a}{\varepsilon}.
 
 Bisection chậm hơn Newton nhưng robust vì giữ bracket và dựa trên theorem rõ ràng.
 
-## Newton method: local linear model
+## Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)
 
 Newton iteration là
 
@@ -308,33 +311,33 @@ Set approximation bằng zero và solve cho `x`:
 0\approx f(x_n)+f'(x_n)(x_{n+1}-x_n),
 ```
 
-suy ra Newton update.
+suy ra Newton cập nhật (update / 업데이트).
 
-Near a simple root và dưới smoothness/initialization conditions tốt, convergence có thể quadratic.
+Near a simple gốc (root / 루트) và dưới smoothness/initialization conditions tốt, convergence có thể quadratic.
 
-Nhưng Newton có failure modes: derivative gần zero, initial guess xấu, oscillation hoặc convergence tới root không mong muốn.
+Nhưng Newton có thất bại (failure / 실패) modes: derivative gần zero, initial guess xấu, oscillation hoặc convergence tới gốc (root / 루트) không mong muốn.
 
-## Hybrid root solvers
+## Hybrid gốc (root / 루트) solvers
 
-Production numerical libraries thường không chọn “bisection hoặc Newton” theo kiểu tuyệt đối. Hybrid methods combine robustness của bracketing với speed của interpolation/Newton-like steps.
+Môi trường vận hành (production / 운영 환경) numerical libraries thường không chọn “bisection hoặc Newton” theo kiểu tuyệt đối. Hybrid methods combine robustness của bracketing với speed của interpolation/Newton-like steps.
 
-Đây là recurring engineering pattern: use fast method khi conditions tốt, fallback sang safe method khi invariant bị đe dọa.
+Đây là recurring kỹ thuật (engineering / 엔지니어링) mẫu (pattern / 패턴): use fast phương thức (method / 메서드) khi conditions tốt, fallback sang safe phương thức (method / 메서드) khi bất biến (invariant / 불변식) bị đe dọa.
 
 ## Interpolation và approximation không giống nhau
 
-Interpolation tìm function đi qua data points exactly.
+Interpolation tìm hàm (function / 함수) đi qua dữ liệu (data / 데이터) points exactly.
 
 Approximation/regression cho phép residual để đạt stability/generalization tốt hơn.
 
 High-degree polynomial interpolation qua equally spaced points có thể oscillate mạnh gần endpoints — Runge phenomenon.
 
-Piecewise polynomial splines dùng local low-degree pieces, thường smooth và stable hơn global high-degree polynomial.
+Piecewise polynomial splines dùng cục bộ (local / 로컬) low-degree pieces, thường smooth và stable hơn toàn cục (global / 전역) high-degree polynomial.
 
-Điều này minh họa nguyên tắc: **degree cao hơn không tự động là model tốt hơn**.
+Điều này minh họa nguyên tắc: **degree cao hơn không tự động là mô hình (model / 모델) tốt hơn**.
 
 ## Polynomial basis và conditioning
 
-Ngay cả khi polynomial model hợp lý, basis choice ảnh hưởng numerical conditioning.
+Ngay cả khi polynomial mô hình (model / 모델) hợp lý, basis choice ảnh hưởng numerical conditioning.
 
 Monomial basis
 
@@ -342,13 +345,13 @@ Monomial basis
 1,x,x^2,\ldots,x^n
 ```
 
-trên wide interval có thể tạo Vandermonde matrix ill-conditioned.
+trên wide interval có thể tạo Vandermonde ma trận (matrix / 행렬) ill-conditioned.
 
 Orthogonal polynomial bases như Chebyshev polynomials thường tốt hơn cho approximation.
 
-Một lần nữa, mathematical space giống nhau nhưng representation/basis khác có numerical behavior rất khác.
+Một lần nữa, mathematical không gian (space / 공간) giống nhau nhưng biểu diễn (representation / 표현)/basis khác có numerical hành vi (behavior / 동작) rất khác.
 
-## Numerical integration
+## Numerical tích hợp (integration / 통합)
 
 Definite integral
 
@@ -358,15 +361,15 @@ Definite integral
 
 thường được approximate từ finite evaluations.
 
-Trapezoidal rule approximate graph bằng line segments. Simpson's rule dùng local quadratic approximation. Gaussian quadrature chọn nodes/weights thông minh để integrate polynomial degree cao với ít evaluations hơn.
+Trapezoidal quy tắc (rule / 규칙) approximate đồ thị (graph / 그래프) bằng line segments. Simpson's quy tắc (rule / 규칙) dùng cục bộ (local / 로컬) quadratic approximation. Gaussian quadrature chọn nodes/weights thông minh để integrate polynomial degree cao với ít evaluations hơn.
 
-Adaptive quadrature refine interval nơi function khó hơn thay vì dùng uniform tiny step mọi nơi.
+Adaptive quadrature refine interval nơi hàm (function / 함수) khó hơn thay vì dùng uniform tiny step mọi nơi.
 
-Method phù hợp phụ thuộc smoothness, singularities, oscillation và cost của evaluating `f`.
+Phương thức (method / 메서드) phù hợp phụ thuộc smoothness, singularities, oscillation và chi phí (cost / 비용) của evaluating `f`.
 
-## Monte Carlo integration
+## Monte Carlo tích hợp (integration / 통합)
 
-Trong high dimensions, deterministic grid-based integration chịu curse of dimensionality. Monte Carlo estimate expectation bằng random samples:
+Trong high dimensions, deterministic grid-based tích hợp (integration / 통합) chịu curse of dimensionality. Monte Carlo estimate expectation bằng random samples:
 
 ```math
 \int f(x)p(x)dx
@@ -374,15 +377,15 @@ Trong high dimensions, deterministic grid-based integration chịu curse of dime
 \approx\frac1N\sum_{i=1}^N f(X_i).
 ```
 
-Typical standard error decrease khoảng
+Typical tiêu chuẩn (standard / 표준) lỗi (error / 오류) decrease khoảng
 
 ```math
 O(N^{-1/2}).
 ```
 
-Convergence rate không nhanh theo `N`, nhưng không explode trực tiếp với dimension theo grid count, nên Monte Carlo rất quan trọng trong finance, Bayesian inference và physics simulations.
+Convergence tỷ lệ (rate / 비율) không nhanh theo `N`, nhưng không explode trực tiếp với dimension theo grid count, nên Monte Carlo rất quan trọng trong finance, Bayesian suy luận (inference / 추론) và physics simulations.
 
-## Solve linear systems: đừng mặc định invert matrix
+## Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)
 
 Mathematically,
 
@@ -390,35 +393,35 @@ Mathematically,
 x=A^{-1}b.
 ```
 
-Nhưng computationally, forming explicit inverse thường tốn hơn và có thể less stable so với factorization + solve.
+Nhưng computationally, forming tường minh (explicit / 명시적) inverse thường tốn hơn và có thể less stable so với factorization + solve.
 
-Dense system thường dùng LU decomposition. Symmetric positive definite system có thể dùng Cholesky. Least squares thường dùng QR; SVD robust hơn khi rank-deficient hoặc near-degenerate.
+Dense hệ thống (system / 시스템) thường dùng LU decomposition. Symmetric positive definite hệ thống (system / 시스템) có thể dùng Cholesky. Least squares thường dùng QR; SVD robust hơn khi rank-deficient hoặc near-degenerate.
 
-Algorithm choice nên exploit structure.
+Thuật toán (algorithm / 알고리즘) choice nên exploit cấu trúc (structure / 구조).
 
 ## Sparsity thay đổi computation
 
-Large matrices trong PDE, graphs và recommendation systems thường sparse: phần lớn entries bằng zero.
+Large matrices trong PDE, graphs và recommendation các hệ thống (systems / 시스템들) thường sparse: phần lớn entries bằng zero.
 
-Dense `n×n` storage cần `O(n^2)` numbers, nhưng sparse representation chỉ lưu nonzeros.
+Dense `n×n` lưu trữ (storage / 저장소) cần `O(n^2)` numbers, nhưng sparse biểu diễn (representation / 표현) chỉ lưu nonzeros.
 
-Sparse direct/iterative solvers có thể giảm memory và computation cực lớn, nhưng fill-in, ordering và conditioning trở thành issues quan trọng.
+Sparse direct/iterative solvers có thể giảm bộ nhớ (memory / 메모리) và computation cực lớn, nhưng fill-in, thứ tự (ordering / 순서) và conditioning trở thành issues quan trọng.
 
-“Matrix size” một mình không đủ dự đoán difficulty.
+“ma trận (matrix / 행렬) kích thước (size / 크기)” một mình không đủ dự đoán difficulty.
 
-## Iterative linear solvers
+## Iterative tuyến tính (linear / 선형) solvers
 
-Khi matrix quá lớn để factorize dense, iterative methods xây sequence approximations.
+Khi ma trận (matrix / 행렬) quá lớn để factorize dense, iterative methods xây chuỗi (sequence / 시퀀스) approximations.
 
-Conjugate Gradient hiệu quả cho symmetric positive definite systems. GMRES xử lý broader nonsymmetric cases.
+Conjugate độ dốc (gradient / 기울기) hiệu quả cho symmetric positive definite các hệ thống (systems / 시스템들). GMRES xử lý broader nonsymmetric cases.
 
-Convergence thường phụ thuộc spectrum/condition number. Preconditioning transform system thành equivalent problem có conditioning tốt hơn.
+Convergence thường phụ thuộc spectrum/điều kiện (condition / 조건) number. Preconditioning transform hệ thống (system / 시스템) thành equivalent bài toán (problem / 문제) có conditioning tốt hơn.
 
-Preconditioner tốt có thể quan trọng hơn micro-optimization code.
+Preconditioner tốt có thể quan trọng hơn micro-optimization mã (code / 코드).
 
 ## Numerical ODE và stability
 
-Euler method cho
+Euler phương thức (method / 메서드) cho
 
 ```math
 x'(t)=f(t,x)
@@ -430,13 +433,13 @@ là
 x_{n+1}=x_n+h f(t_n,x_n).
 ```
 
-Nó dùng tangent local để advance one step.
+Nó dùng tangent cục bộ (local / 로컬) để advance one step.
 
-Higher-order Runge–Kutta methods combine multiple slope evaluations để giảm truncation error.
+Higher-order Runge–Kutta methods combine multiple slope evaluations để giảm truncation lỗi (error / 오류).
 
-Nhưng differential equations có thể **stiff**: explicit method cần tiny step vì stability, không chỉ accuracy. Implicit methods có thể cho phép larger stable steps dù mỗi step phải solve equation.
+Nhưng differential equations có thể **stiff**: tường minh (explicit / 명시적) phương thức (method / 메서드) cần tiny step vì stability, không chỉ accuracy. Implicit methods có thể cho phép larger stable steps dù mỗi step phải solve equation.
 
-Numerical stability của time integration là concept riêng, không thể đánh giá chỉ bằng local truncation order.
+Numerical stability của thời gian (time / 시간) tích hợp (integration / 통합) là concept riêng, không thể đánh giá chỉ bằng cục bộ (local / 로컬) truncation thứ tự (order / 순서).
 
 ## Convergence, consistency và stability
 
@@ -446,96 +449,98 @@ Trong discretized differential equations, ba ideas thường liên kết:
 
 **Stability:** errors không grow uncontrolled dưới discretized dynamics.
 
-**Convergence:** numerical solution tiến tới exact solution khi refinement.
+**Convergence:** numerical solution tiến tới chính xác (exact / 정확한) solution khi refinement.
 
-Một scheme có local approximation đẹp nhưng unstable vẫn có thể diverge globally.
+Một scheme có cục bộ (local / 로컬) approximation đẹp nhưng unstable vẫn có thể diverge globally.
 
 ## Stopping criteria
 
-Iterative algorithm không nên dừng chỉ vì “đã chạy 1000 iterations”. Better criteria dựa trên residual, update size hoặc estimated error.
+Iterative thuật toán (algorithm / 알고리즘) không nên dừng chỉ vì “đã chạy 1000 iterations”. Better criteria dựa trên residual, cập nhật (update / 업데이트) kích thước (size / 크기) hoặc estimated lỗi (error / 오류).
 
-Cho linear system,
+Cho hệ tuyến tính (linear system / 선형 시스템),
 
 ```math
 r=b-A\hat x
 ```
 
-là residual. Small residual nói computed `\hat x` gần satisfy equation. Nhưng nếu problem ill-conditioned, small residual không guarantee small forward error.
+là residual. Small residual nói computed `\hat x` gần satisfy equation. Nhưng nếu bài toán (problem / 문제) ill-conditioned, small residual không guarantee small forward lỗi (error / 오류).
 
 Stopping criterion phải match quantity ta thật sự quan tâm.
 
 ## Scaling và nondimensionalization
 
-Nếu variables khác orders of magnitude rất lớn, numerical solver có thể khó optimize hoặc solve system.
+Nếu variables khác orders of magnitude rất lớn, numerical solver có thể khó optimize hoặc solve hệ thống (system / 시스템).
 
-Rescaling variables về comparable ranges giúp conditioning và optimization geometry.
+Rescaling variables về comparable ranges giúp conditioning và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학).
 
-Trong physical models, nondimensionalization còn reveal controlling ratios và reduce parameter count.
+Trong vật lý (physical / 물리적) các mô hình (models / 모델들), nondimensionalization còn reveal controlling ratios và reduce parameter count.
 
 Scaling không chỉ là cosmetic normalization; nó có thể thay numerical difficulty.
 
 ## Reproducibility trong parallel computing
 
-Floating-point sum phụ thuộc order. Parallel threads/GPUs có thể reduce values theo different trees, tạo last-bit differences.
+Floating-point sum phụ thuộc thứ tự (order / 순서). Parallel threads/GPUs có thể reduce values theo different trees, tạo last-bit differences.
 
-Deterministic bitwise reproducibility có thể cần fixed reduction order và cost performance.
+Deterministic bitwise reproducibility có thể cần fixed reduction thứ tự (order / 순서) và chi phí (cost / 비용) hiệu năng (performance / 성능).
 
 Trong ML/scientific computing, cần phân biệt:
 
-- bitwise identical result;
-- numerically close result;
-- statistically equivalent training outcome.
+- bitwise identical kết quả (result / 결과);
+- numerically close kết quả (result / 결과);
+- statistically equivalent huấn luyện (training / 학습) kết quả (outcome / 결과).
 
-Không phải mọi nondeterminism đều là bug, nhưng requirement phải được định nghĩa rõ.
+Không phải mọi nondeterminism đều là bug, nhưng yêu cầu (requirement / 요구사항) phải được định nghĩa rõ.
 
 ## Mixed precision
 
-Modern accelerators thường dùng FP16/BF16 cho speed và memory, trong khi giữ một số accumulations/parameters ở FP32.
+Hiện đại (modern / 현대적) accelerators thường dùng FP16/BF16 cho speed và bộ nhớ (memory / 메모리), trong khi giữ một số accumulations/parameters ở FP32.
 
-Mixed-precision training thành công nhờ hiểu dynamic range, scaling và error propagation — không phải vì lower precision “đủ đại khái”.
+Mixed-precision huấn luyện (training / 학습) thành công nhờ hiểu động (dynamic / 동적) phạm vi (range / 범위), scaling và lan truyền lỗi (error propagation / 오류 전파) — không phải vì lower precision “đủ đại khái”.
 
-Loss scaling giúp tránh gradient underflow trong low precision.
+Mất mát (loss / 손실) scaling giúp tránh độ dốc (gradient / 기울기) underflow trong low precision.
 
-Đây là numerical analysis xuất hiện trực tiếp trong deep learning engineering.
+Đây là numerical phân tích (analysis / 분석) xuất hiện trực tiếp trong deep học tập (learning / 학습) kỹ thuật (engineering / 엔지니어링).
 
 ## Interval arithmetic và rigorous bounds
 
-Standard floating point trả một approximation. Interval arithmetic represent value bằng interval guaranteed chứa true result under controlled rounding.
+Tiêu chuẩn (standard / 표준) floating điểm (point / 지점) trả một approximation. Interval arithmetic represent giá trị (value / 값) bằng interval guaranteed chứa true kết quả (result / 결과) under controlled rounding.
 
-Nó hữu ích khi cần verified computation, nhưng intervals có thể widen do dependency effects.
+Nó hữu ích khi cần verified computation, nhưng intervals có thể widen do phụ thuộc (dependency / 의존성) effects.
 
-Không phải mọi application cần rigorous bounds, nhưng concept này cho thấy numerical output có thể đi kèm certificate về uncertainty thay vì chỉ một number.
+Không phải mọi ứng dụng (application / 애플리케이션) cần rigorous bounds, nhưng concept này cho thấy numerical đầu ra (output / 출력) có thể đi kèm certificate về bất định (uncertainty / 불확실성) thay vì chỉ một number.
 
-## Knowledge Connection — numerical analysis và optimization
+## Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)
 
-Gradient descent dùng gradients được computed finite precision. Learning rate quá lớn gây dynamical instability; gradients rất nhỏ có underflow; ill-conditioned Hessian tạo narrow valleys và slow convergence.
+Độ dốc (gradient / 기울기) descent dùng gradients được computed finite precision. học tập (learning / 학습) tỷ lệ (rate / 비율) quá lớn gây dynamical instability; gradients rất nhỏ có underflow; ill-conditioned Hessian tạo narrow valleys và slow convergence.
 
-Preconditioning, normalization, adaptive optimizers và second-order methods đều có numerical-analysis flavor: reshape problem để algorithm thấy geometry dễ hơn.
+Preconditioning, normalization, adaptive optimizers và second-order methods đều có numerical-analysis flavor: reshape bài toán (problem / 문제) để thuật toán (algorithm / 알고리즘) thấy hình học (geometry / 기하학) dễ hơn.
 
-## Knowledge Connection — numerical analysis và data engineering
+## Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)
 
-Summing billions of values có rounding accumulation. Naive mean/variance formulas có thể cancellation. Stable online algorithms như Welford's method giảm error khi tính variance streaming.
+Summing billions of values có rounding accumulation. Naive mean/variance formulas có thể cancellation. Stable online algorithms như Welford's phương thức (method / 메서드) giảm lỗi (error / 오류) khi tính variance streaming.
 
-Financial systems thường tránh binary floating point cho exact decimal currency rules, dùng fixed-point/decimal representations phù hợp business semantics.
+Financial các hệ thống (systems / 시스템들) thường tránh nhị phân (binary / 이진) floating điểm (point / 지점) cho chính xác (exact / 정확한) decimal currency rules, dùng fixed-point/decimal representations phù hợp nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론).
 
-Representation choice vì thế là mathematical decision, không chỉ programming detail.
+Biểu diễn (representation / 표현) choice vì thế là mathematical quyết định (decision / 결정), không chỉ programming detail.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Numerical analysis là science của **độ tin cậy khi toán học đi qua máy tính hữu hạn**. Trước một number computed, hãy hỏi: input có noise gì, problem nhạy tới đâu, approximation bỏ qua gì, arithmetic round thế nào, algorithm có amplify error không, và output accuracy ta thật sự cần là gì. Một formula đúng chỉ là điểm bắt đầu.
+> Numerical phân tích (analysis / 분석) là science của **độ tin cậy khi toán học đi qua máy tính hữu hạn**. Trước một number computed, hãy hỏi: đầu vào (input / 입력) có noise gì, bài toán (problem / 문제) nhạy tới đâu, approximation bỏ qua gì, arithmetic round thế nào, thuật toán (algorithm / 알고리즘) có amplify lỗi (error / 오류) không, và đầu ra (output / 출력) accuracy ta thật sự cần là gì. Một formula đúng chỉ là điểm bắt đầu.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Dùng nhiều chữ số hơn thì answer tự động chính xác hơn.”** Precision cao giảm rounding nhưng không sửa model error, measurement noise hay ill-conditioning.
+**“Dùng nhiều chữ số hơn thì answer tự động chính xác hơn.”** Precision cao giảm rounding nhưng không sửa mô hình (model / 모델) lỗi (error / 오류), đo lường (measurement / 측정) noise hay ill-conditioning.
 
-**“Step size càng nhỏ càng tốt.”** Quá nhỏ có thể tăng cancellation/rounding và computation cost; stiff systems còn có stability constraints riêng.
+**“Step kích thước (size / 크기) càng nhỏ càng tốt.”** Quá nhỏ có thể tăng cancellation/rounding và computation chi phí (cost / 비용); stiff các hệ thống (systems / 시스템들) còn có stability các ràng buộc (constraints / 제약조건들) riêng.
 
-**“Hai formulas algebraically equivalent sẽ cho cùng computed result.”** Finite precision làm order và cancellation matter.
+**“Hai formulas algebraically equivalent sẽ cho cùng computed kết quả (result / 결과).”** Finite precision làm thứ tự (order / 순서) và cancellation matter.
 
-**“Condition number lớn nghĩa algorithm tệ.”** Conditioning là property của problem. Algorithm stability là question khác.
+**“điều kiện (condition / 조건) number lớn nghĩa thuật toán (algorithm / 알고리즘) tệ.”** Conditioning là thuộc tính (property / 속성) của bài toán (problem / 문제). thuật toán (algorithm / 알고리즘) stability là question khác.
 
-**“Residual nhỏ nghĩa solution error nhỏ.”** Chỉ chắc hơn khi problem well-conditioned hoặc có additional bounds.
+**“Residual nhỏ nghĩa solution lỗi (error / 오류) nhỏ.”** Chỉ chắc hơn khi bài toán (problem / 문제) well-conditioned hoặc có additional bounds.
 
-**“Muốn solve `Ax=b` thì cứ tính `A^{-1}`.”** Trong numerical linear algebra, factorization/structured solvers thường nhanh và stable hơn explicit inverse.
+**“Muốn solve `Ax=b` thì cứ tính `A^{-1}`.”** Trong numerical tuyến tính (linear / 선형) algebra, factorization/structured solvers thường nhanh và stable hơn tường minh (explicit / 명시적) inverse.
 
-**“Floating point bug vì `0.1+0.2≠0.3` exact.”** Đó là consequence bình thường của finite binary representation. Bug chỉ xuất hiện khi software giả định exact semantics mà representation không bảo đảm.
+**“Floating điểm (point / 지점) bug vì `0.1+0.2≠0.3` chính xác (exact / 정확한).”** Đó là consequence bình thường của finite nhị phân (binary / 이진) biểu diễn (representation / 표현). Bug chỉ xuất hiện khi software giả định chính xác (exact / 정확한) ngữ nghĩa (semantics / 의미론) mà biểu diễn (representation / 표현) không bảo đảm.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 optimization](./00_optimization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

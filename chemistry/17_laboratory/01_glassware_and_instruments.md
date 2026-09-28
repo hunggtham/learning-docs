@@ -1,5 +1,8 @@
 # Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn
 
+> **Mạch đọc:** Đọc **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phép đo bắt đầu từ “hợp đồng” của dụng cụ** sang **Cốc becher**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Thiết bị phòng thí nghiệm không thể thay thế tùy ý cho nhau. Mỗi dụng cụ được thiết kế cho một đại lượng, dải đo, độ phân giải, kiểu hiệu chuẩn, mức độ không đảm bảo và chế độ hỏng riêng. Chọn sai dụng cụ có thể làm thí nghiệm mất giá trị trước cả khi bắt đầu tính toán.
 
 ## Phép đo bắt đầu từ “hợp đồng” của dụng cụ
@@ -162,7 +165,7 @@ Nguồn lửa hở không phù hợp khi có hơi dung môi dễ cháy.
 
 Thanh khuấy quay trong từ trường tạo chuyển động trộn.
 
-Trộn tốt làm giảm gradient nồng độ và nhiệt độ, nhưng vortex mạnh hoặc cuốn khí có thể không mong muốn.
+Trộn tốt làm giảm độ dốc (gradient / 기울기) nồng độ và nhiệt độ, nhưng vortex mạnh hoặc cuốn khí có thể không mong muốn.
 
 Khi tăng quy mô, khuấy từ có thể không đủ vì thời gian trộn và hình học dòng thay đổi.
 
@@ -344,7 +347,7 @@ Rò khí, nhiễm bẩn inlet và hư hỏng cột làm thời gian lưu và hì
 
 **Hiệu chuẩn (calibration)** xây dựng quan hệ giữa tín hiệu thiết bị và giá trị tham chiếu.
 
-**Xác minh (verification)** kiểm tra thiết bị vẫn đáp ứng yêu cầu sau hiệu chuẩn.
+**xác minh (verification / 확인)** kiểm tra thiết bị vẫn đáp ứng yêu cầu sau hiệu chuẩn.
 
 Kiểm soát chất lượng thường dùng chuẩn kiểm tra độc lập giữa các lần hiệu chuẩn đầy đủ.
 
@@ -358,7 +361,7 @@ Kiểm soát chất lượng thường dùng chuẩn kiểm tra độc lập gi�
 
 Nhiều “vấn đề hóa học bí ẩn” thực ra đến từ tình trạng thiết bị: lọc tắc, seal bơm mòn, nguồn ion bẩn, điện cực cũ hoặc cột nhiễm bẩn.
 
-Lịch sử bảo trì vì vậy là một phần của metadata thí nghiệm.
+Lịch sử bảo trì vì vậy là một phần của siêu dữ liệu (metadata / 메타데이터) thí nghiệm.
 
 ## Những hiểu lầm thường gặp
 
@@ -383,3 +386,5 @@ Không. RCF còn phụ thuộc bán kính rotor.
 Mỗi dụng cụ phòng thí nghiệm là **một mô hình vật lý đã được hiệu chuẩn nằm giữa thực tại và con số bạn đọc được**. Cần biết nó cảm nhận đại lượng nào, được hiệu chuẩn thế nào, giả định nào chuyển tín hiệu thành kết quả và chế độ hỏng nào có thể làm phép chuyển đổi bị lệch.
 
 Xem tiếp: [Chuẩn bị dung dịch](./02_solution_preparation.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lab safety](./00_lab_safety.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

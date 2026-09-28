@@ -1,6 +1,9 @@
-# Case 05 — JPY 2022–2024: rate divergence, carry và intervention
+# Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention
 
-Case này không phải câu chuyện đơn giản rằng “Fed tăng lãi suất nên USD/JPY tăng” hoặc “Nhật Bản can thiệp nên JPY chắc chắn đảo chiều”. Điều cần học là cách **monetary-policy divergence, carry positioning, import-cost shock, official intervention và market expectations** tương tác trong một currency pair lớn nhưng vẫn có thể trải qua gap, repricing và crowded positioning.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Regime trước cú sốc** sang **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Trường hợp (case / 사례) này không phải câu chuyện đơn giản rằng “Fed tăng lãi suất nên USD/JPY tăng” hoặc “Nhật Bản can thiệp nên JPY chắc chắn đảo chiều”. Điều cần học là cách **monetary-policy divergence, carry positioning, import-cost shock, official intervention và thị trường (market / 시장) expectations** tương tác trong một currency pair lớn nhưng vẫn có thể trải qua gap, repricing và crowded positioning.
 
 ```text
 Policy divergence
@@ -15,13 +18,13 @@ Policy divergence
 ```
 
 `as_of_date: 2026-09-27`
-Các số liệu can thiệp trong case là historical facts lấy từ nguồn chính thức; các scenario và trade ledger là simulation.
+Các số liệu can thiệp trong trường hợp (case / 사례) là historical facts lấy từ nguồn chính thức; các scenario và trade ledger là simulation.
 
 ## 1. Regime trước cú sốc
 
 Năm 2022, thị trường theo dõi một chênh lệch chính sách nổi bật: Federal Reserve chuyển sang thắt chặt nhanh trong khi Bank of Japan vẫn duy trì stance nới lỏng và kiểm soát đường cong lợi suất. Trong biên bản tháng 9/2022, BOJ ghi nhận thị trường quy một phần đà giảm của JPY cho khác biệt hướng đi chính sách giữa Nhật Bản và các nền kinh tế khác.
 
-Điều này không tạo ra một công thức định giá duy nhất. Nó tạo ra một **state variable** mà market participants dùng để cập nhật:
+Điều này không tạo ra một công thức định giá duy nhất. Nó tạo ra một **trạng thái (state / 상태) variable** mà thị trường (market / 시장) participants dùng để cập nhật:
 
 ```text
 US front-end yields rise
@@ -41,9 +44,12 @@ US yield volatility
 official communication
 ```
 
-Không được coi carry là free return. Carry position có thể bị đảo chiều khi spot jump, rate path đổi, margin tăng hoặc liquidity co lại.
+Không được coi carry là free return. Carry position có thể bị đảo chiều khi spot jump, tỷ lệ (rate / 비율) đường dẫn (path / 경로) đổi, margin tăng hoặc liquidity co lại.
 
-## 2. Vì sao rate differential truyền vào spot nhưng không quyết định toàn bộ spot?
+
+> **Chuyển mạch:** Từ **1. Regime trước cú sốc**, ta sang **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?
 
 Trong simplified covered-interest-parity framing:
 
@@ -64,7 +70,10 @@ option barriers
 intervention probability
 ```
 
-Một vị thế long USD/JPY có thể kiếm carry trong vài tuần rồi lỗ lớn trong một phiên nếu JPY safe-haven demand, policy repricing hoặc intervention làm thay đổi spot nhanh hơn carry tích lũy.
+Một vị thế long USD/JPY có thể kiếm carry trong vài tuần rồi lỗ lớn trong một phiên nếu JPY safe-haven demand, chính sách (policy / 정책) repricing hoặc intervention làm thay đổi spot nhanh hơn carry tích lũy.
+
+
+> **Chuyển mạch:** Từ **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?**, ta sang **3. Import shock và distributional channel** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Import shock và distributional channel
 
@@ -84,11 +93,14 @@ Investor holding foreign assets
 → local-asset return plus JPY translation effect
 ```
 
-Vì vậy “JPY yếu tốt cho Nhật Bản” là một câu quá thô. Cần tách **foreign-currency revenue**, **foreign-currency cost**, hedge ratio, timing và pass-through vào giá trong nước.
+Vì vậy “JPY yếu tốt cho Nhật Bản” là một câu quá thô. Cần tách **foreign-currency revenue**, **foreign-currency chi phí (cost / 비용)**, hedge ratio, timing và pass-through vào giá trong nước.
 
-## 4. Intervention là policy tool khác với monetary-policy pivot
 
-Trong case này cần tách ba lớp:
+> **Chuyển mạch:** Từ **3. Import shock và distributional channel**, ta sang **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot
+
+Trong trường hợp (case / 사례) này cần tách ba lớp:
 
 ```text
 BOJ monetary policy
@@ -118,13 +130,16 @@ commodity/import shock
 private-sector hedging demand
 ```
 
-MOF cho biết thống kê can thiệp được công bố theo tổng số hàng tháng và chi tiết theo ngày ở chu kỳ quý. Do đó, một chart spot hoặc reserve change đơn lẻ không đủ để suy ra timing, size và mục tiêu của operation.
+MOF cho biết thống kê can thiệp được công bố theo tổng số hàng tháng và chi tiết theo ngày ở chu kỳ quý. Do đó, một chart spot hoặc reserve thay đổi (change / 변경) đơn lẻ không đủ để suy ra timing, kích thước (size / 크기) và mục tiêu của thao tác (operation / 연산).
 
-## 5. Mốc policy và intervention cần đọc
 
-### 2022 — divergence và communication risk
+> **Chuyển mạch:** Từ **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot**, ta sang **5. Mốc chính sách (policy / 정책) và intervention cần đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-BOJ tiếp tục nhấn mạnh mục tiêu ổn định giá và điều kiện trong nước, trong khi thị trường tập trung vào chênh lệch chính sách với Mỹ. Bộ Tài chính Nhật Bản xác nhận sau operation ngày 22/09/2022 rằng intervention được dùng trong bối cảnh biến động quá mức và tiếp tục theo dõi các chuyển động disorderly.
+## 5. Mốc chính sách (policy / 정책) và intervention cần đọc
+
+### 2022 — divergence và communication rủi ro (risk / 위험)
+
+BOJ tiếp tục nhấn mạnh mục tiêu ổn định giá và điều kiện trong nước, trong khi thị trường tập trung vào chênh lệch chính sách với Mỹ. Bộ Tài chính Nhật Bản xác nhận sau thao tác (operation / 연산) ngày 22/09/2022 rằng intervention được dùng trong bối cảnh biến động quá mức và tiếp tục theo dõi các chuyển động disorderly.
 
 Bài học không phải “intervention thắng hay thua” trong một ngày. Câu hỏi đúng là:
 
@@ -137,11 +152,14 @@ Private flow có hấp thụ operation sau đó không?
 
 ### 2024 — intervention lớn trong một regime khác
 
-Sang 2024, BOJ review lại giai đoạn JPY suy yếu mạnh từ 2022 và ghi nhận widening interest-rate differentials là một yếu tố thị trường chú ý. BOJ review cũng ghi nhận JPY chạm vùng khoảng `160 JPY/USD` trong năm 2024.
+Sang 2024, BOJ rà soát (review / 검토) lại giai đoạn JPY suy yếu mạnh từ 2022 và ghi nhận widening interest-rate differentials là một yếu tố thị trường chú ý. BOJ rà soát (review / 검토) cũng ghi nhận JPY chạm vùng khoảng `160 JPY/USD` trong năm 2024.
 
-MOF công bố các operation yen-buying trong quý II/2024 với tổng `¥9,788.5 billion` (29/04 và 01/05), và trong quý III/2024 với tổng `¥5,534.8 billion` (11–12/07). Các con số này là **reported intervention amounts**, không phải lợi nhuận/lỗ của nhà đầu tư và cũng không phải bằng chứng rằng mọi chuyển động spot sau đó do intervention gây ra.
+MOF công bố các thao tác (operation / 연산) yen-buying trong quý II/2024 với tổng `¥9,788.5 billion` (29/04 và 01/05), và trong quý III/2024 với tổng `¥5,534.8 billion` (11–12/07). Các con số này là **reported intervention amounts**, không phải lợi nhuận/lỗ của nhà đầu tư và cũng không phải bằng chứng rằng mọi chuyển động spot sau đó do intervention gây ra.
 
-## 6. Positioning và option market
+
+> **Chuyển mạch:** Từ **5. Mốc chính sách (policy / 정책) và intervention cần đọc**, ta sang **6. Positioning và option thị trường (market / 시장)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 6. Positioning và option thị trường (market / 시장)
 
 Khi một chiều carry trở nên phổ biến, rủi ro không chỉ nằm ở spot direction:
 
@@ -163,9 +181,12 @@ cross-currency basis movement
 margin call before thesis review
 ```
 
-Vì thế, “intervention risk” phải được ghi như một **state-dependent jump risk**, không phải một mức support cụ thể trên chart.
+Vì thế, “intervention rủi ro (risk / 위험)” phải được ghi như một **state-dependent jump rủi ro (risk / 위험)**, không phải một mức hỗ trợ (support / 지원) cụ thể trên chart.
 
-## 7. Causal map của case
+
+> **Chuyển mạch:** Từ **6. Positioning và option thị trường (market / 시장)**, ta sang **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)
 
 ```text
 Fed tightening + BoJ easing/YCC stance
@@ -178,7 +199,7 @@ Fed tightening + BoJ easing/YCC stance
 → if policy path or risk regime changes, carry unwind can dominate
 ```
 
-Map này có hai feedback loop:
+Map này có hai vòng phản hồi (feedback loop / 피드백 루프):
 
 ```text
 Loop A — trend/carry:
@@ -188,11 +209,14 @@ Loop B — intervention/unwind:
 intervention signal → volatility and margin rise → positions reduce → JPY strengthens
 ```
 
-Hai loop có thể chạy ngược chiều trong cùng một tuần. Không nên fit một causal story duy nhất sau khi chỉ nhìn chart.
+Hai vòng lặp (loop / 루프) có thể chạy ngược chiều trong cùng một tuần. Không nên fit một nhân quả (causal / 인과적) story duy nhất sau khi chỉ nhìn chart.
+
+
+> **Chuyển mạch:** Từ **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)**, ta sang **8. Balance-sheet cases** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Balance-sheet cases
 
-### Case A — Japanese importer
+### Trường hợp (case / 사례) A — Japanese importer
 
 Một importer phải thanh toán USD sau 90 ngày. Khi USD/JPY tăng:
 
@@ -202,9 +226,9 @@ forward hedge may protect budget rate
 option hedge preserves upside but pays premium
 ```
 
-Đánh giá hedge bằng **JPY cost variance + premium/carry + residual timing risk**, không bằng standalone derivative P/L.
+Đánh giá hedge bằng **JPY chi phí (cost / 비용) variance + premium/carry + residual timing rủi ro (risk / 위험)**, không bằng standalone derivative P/L.
 
-### Case B — Japanese exporter
+### Trường hợp (case / 사례) B — Japanese exporter
 
 Exporter nhận USD sau 90 ngày. JPY yếu có thể làm doanh thu quy đổi tăng, nhưng hedge forward có thể khóa tỷ giá và bỏ lỡ upside. Nếu forecast volume không chắc chắn:
 
@@ -216,7 +240,7 @@ natural hedge from USD costs
 
 phải được ghi rõ.
 
-### Case C — leveraged carry portfolio
+### Trường hợp (case / 사례) C — leveraged carry portfolio
 
 Portfolio long USD/JPY, short-vol hoặc dùng margin có thể có daily carry dương nhưng vẫn chịu:
 
@@ -229,9 +253,12 @@ option barrier trigger
 
 Net P/L phải tách spot, forward points, funding, slippage, margin và hedge adjustment.
 
-## 9. What this case does not prove
 
-Case này **không chứng minh**:
+> **Chuyển mạch:** Từ **8. Balance-sheet cases**, ta sang **9. What this trường hợp (case / 사례) does not prove** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 9. What this trường hợp (case / 사례) does not prove
+
+Trường hợp (case / 사례) này **không chứng minh**:
 
 ```text
 rate differential luôn dự báo đúng spot
@@ -241,11 +268,14 @@ carry strategy có expected profit trong mọi sample
 reported intervention amount bằng với private order-flow impact
 ```
 
-Điều case chứng minh là cơ chế phải được conditional hóa theo regime, funding, positioning và execution.
+Điều trường hợp (case / 사례) chứng minh là cơ chế phải được conditional hóa theo regime, funding, positioning và thực thi (execution / 실행).
+
+
+> **Chuyển mạch:** Từ **9. What this trường hợp (case / 사례) does not prove**, ta sang **10. Research exercise** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 10. Research exercise
 
-Tạo một event-study table cho từng ngày có communication hoặc operation:
+Tạo một event-study bảng (table / 테이블) cho từng ngày có communication hoặc thao tác (operation / 연산):
 
 ```text
 event timestamp
@@ -262,7 +292,7 @@ positioning proxy
 alternative explanations
 ```
 
-Sau đó phân loại event vào một trong bốn nhóm:
+Sau đó phân loại sự kiện (event / 이벤트) vào một trong bốn nhóm:
 
 ```text
 rate-path repricing
@@ -271,9 +301,12 @@ risk-off carry unwind
 commodity/import-flow shock
 ```
 
-Không được gán causal effect chỉ vì spot đổi hướng sau headline. Ghi rõ data nào là contemporaneous, data nào chỉ được công bố sau đó.
+Không được gán nhân quả (causal / 인과적) tác động (effect / 효과) chỉ vì spot đổi hướng sau headline. Ghi rõ dữ liệu (data / 데이터) nào là contemporaneous, dữ liệu (data / 데이터) nào chỉ được công bố sau đó.
 
-## 11. Risk checklist
+
+> **Chuyển mạch:** Từ **10. Research exercise**, ta sang **11. rủi ro (risk / 위험) checklist** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 11. rủi ro (risk / 위험) checklist
 
 ```text
 [ ] Tách BOJ monetary policy khỏi MOF FX intervention
@@ -287,6 +320,9 @@ Không được gán causal effect chỉ vì spot đổi hướng sau headline. 
 [ ] Không biến intervention thành automatic reversal signal
 [ ] Đánh giá hedge bằng combined exposure và residual risk
 ```
+
+
+> **Chuyển mạch:** Từ **11. rủi ro (risk / 위험) checklist**, ta sang **12. Sources** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 12. Sources
 
@@ -302,3 +338,5 @@ Không được gán causal effect chỉ vì spot đổi hướng sau headline. 
 - [90_connections/01 — Intervention, reserves, REER and currency valuation](../90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md)
 - [04 — Macro drivers, rates, carry and sessions](../04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 - [11 — Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
+
+> **Bàn giao:** Sau **12. Sources**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ERM 1992 STERLING CRISIS](./01_ERM_1992_STERLING_CRISIS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Các phương trình Maxwell, sóng điện từ và dòng năng lượng
 
+> **Mạch đọc:** Đọc **Các phương trình Maxwell, sóng điện từ và dòng năng lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bốn phương trình Maxwell** sang **Gauss cho điện trường**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Maxwell hợp nhất điện học, từ học và quang học thành một lý thuyết trường duy nhất. Bốn phương trình không chỉ mô tả “điện trường và từ trường tồn tại như thế nào”; chúng còn cho biết trường biến thiên tự tạo lẫn nhau ra sao, tại sao sóng điện từ lan truyền được trong chân không và vì sao ánh sáng là một nghiệm của điện từ học.
 
 ## Bốn phương trình Maxwell
@@ -420,9 +423,9 @@ Dòng điện xoay chiều trong anten làm điện tích gia tốc qua lại. T
 
 Ở vùng xa, điện trường và từ trường giảm gần như `1/r`, nên mật độ năng lượng giảm như `1/r^2`.
 
-Hình dạng và kích thước anten quyết định pattern bức xạ và mức ghép với các mode trường.
+Hình dạng và kích thước anten quyết định mẫu (pattern / 패턴) bức xạ và mức ghép với các chế độ (mode / 모드) trường.
 
-## Near field và far field
+## Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)
 
 Gần anten, trường có các thành phần phản ứng (reactive) lưu năng lượng tạm thời quanh nguồn và có phụ thuộc khoảng cách nhanh hơn `1/r`.
 
@@ -454,7 +457,7 @@ Các phương trình Maxwell dự đoán một tốc độ sóng `c` không ph�
 
 Sự bất biến của tốc độ ánh sáng là một trong những động lực lịch sử dẫn tới thuyết tương đối hẹp. Trong ngôn ngữ tương đối tính, `\mathbf E` và `\mathbf B` không phải hai thực thể hoàn toàn tách biệt; chúng là các thành phần khác nhau của cùng tensor điện từ.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Maxwell nối ba ý tưởng lớn:
 
@@ -486,8 +489,10 @@ Không. Gần nguồn có thành phần near-field lưu trữ năng lượng và
 
 Lực từ `q\mathbf v\times\mathbf B` vuông góc vận tốc tức thời nên không trực tiếp đổi động năng của một hạt điểm. Điện trường mới trực tiếp thực hiện công `q\mathbf E\cdot\mathbf v`.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Điện tĩnh học](00_electrostatics.md), [Từ trường và cảm ứng](03_magnetism_induction.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Quang học sóng](../06_optics/01_wave_optics.md), [Quang học Fourier](../06_optics/04_fourier_imaging_instrumentation.md), [Đường truyền và ống dẫn sóng](05_transmission_lines_waveguides.md), [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

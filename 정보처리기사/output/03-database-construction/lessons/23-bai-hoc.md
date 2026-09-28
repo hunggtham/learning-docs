@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **130-132. 트랜잭션 (Transaction)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **9. 인덱스와 트랜잭션 (Index và Giao dịch)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,10 +20,12 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** và nối nó với **9. 인덱스와 트랜잭션 (Index và Giao dịch)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)
 - **상태 (188):** 활동(Active) -> [부분 완료(Partially Committed) -> 완료(Committed)] 또는 [실패(Failed) -> 철회(Aborted/Rollback)].
 - **특성 (189):** 원자성(Atomicity - 전부 또는 전무), 일관성(Consistency), 독립성(Isolation - 병행 중 간섭 불가), 영속성(Durability).
 - **VI (Vietnamese) (Tiếng Việt):** Trạng thái và tính chất giao dịch.
-  - Trạng thái: Đang chạy -> Hoàn thành một phần -> Commit HOẶC Lỗi -> Rollback.
+  - Trạng thái: Đang chạy -> Hoàn thành một phần -> lần ghi nhận (commit / 커밋) HOẶC Lỗi -> quay lui (rollback / 롤백).

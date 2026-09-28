@@ -1,5 +1,8 @@
 # Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử
 
+> **Mạch đọc:** Đọc **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi bước sóng lượng tử trở nên so sánh với khoảng cách giữa các hạt** sang **Mật độ pha tới hạn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Khi bước sóng lượng tử trở nên so sánh với khoảng cách giữa các hạt
 
 Bước sóng de Broglie nhiệt có thang
@@ -40,14 +43,14 @@ Một condensate yếu tương tác có thể được mô tả bằng hàm són
 
 Biên độ xác định mật độ, còn pha `\phi` trở thành bậc tự do tập thể.
 
-Vận tốc siêu chảy liên hệ với gradient pha:
+Vận tốc siêu chảy liên hệ với độ dốc (gradient / 기울기) pha:
 
 ```math
 \mathbf v_s
 =\frac{\hbar}{m}\nabla\phi.
 ```
 
-Vì curl của gradient bằng 0, dòng siêu chảy lý tưởng là không xoáy cục bộ, ngoại trừ tại các singularity nơi mật độ giảm về 0 và vortex lượng tử có thể tồn tại.
+Vì curl của độ dốc (gradient / 기울기) bằng 0, dòng siêu chảy lý tưởng là không xoáy cục bộ, ngoại trừ tại các singularity nơi mật độ giảm về 0 và vortex lượng tử có thể tồn tại.
 
 ## Phương trình Gross–Pitaevskii
 
@@ -71,7 +74,7 @@ Hạng `g|\Psi|^2` mô tả tương tác mean-field giữa các hạt.
 - hydrodynamics;
 - vortex;
 - soliton;
-- mode tập thể.
+- chế độ (mode / 모드) tập thể.
 
 Phương trình này không phải lý thuyết chính xác cho mọi chất lưu lượng tử. Nó phù hợp nhất với condensate Bose loãng và tương tác yếu.
 
@@ -133,13 +136,13 @@ Khi chất siêu chảy quay, nó không tạo phân bố vorticity liên tục 
 
 Helium-4 trở thành siêu chảy dưới khoảng `2.17 K` ở áp suất hơi bão hòa.
 
-Nhiệt dung gần chuyển pha có dạng dị thường giống chữ lambda, nên nhiệt độ này thường gọi là lambda point.
+Nhiệt dung gần chuyển pha có dạng dị thường giống chữ lambda, nên nhiệt độ này thường gọi là lambda điểm (point / 지점).
 
 Nguyên tử helium-4 là boson, nhưng tương tác giữa chúng mạnh. Vì vậy khí Bose lý tưởng chỉ cung cấp trực giác ban đầu, không phải mô hình định lượng đầy đủ của helium lỏng.
 
 ## Mô hình hai chất lưu
 
-Dưới lambda transition, helium-4 thường được mô hình hóa hiện tượng luận bằng hai thành phần:
+Dưới lambda chuyển tiếp (transition / 전이), helium-4 thường được mô hình hóa hiện tượng luận bằng hai thành phần:
 
 - thành phần siêu chảy;
 - thành phần bình thường mang entropy.
@@ -234,7 +237,7 @@ Trong condensate tương tác yếu, excitation Bogoliubov có dispersion gần 
 
 Trong hệ 2D vô hạn với đối xứng liên tục, dao động nhiệt ngăn trật tự dài hạn thông thường ở nhiệt độ hữu hạn.
 
-Tuy nhiên, chuyển pha Berezinskii–Kosterlitz–Thouless (BKT) có thể tạo quasi-long-range order thông qua cơ chế liên kết và tách cặp vortex–antivortex.
+Tuy nhiên, chuyển pha Berezinskii–Kosterlitz–Thouless (BKT) có thể tạo quasi-long-range thứ tự (order / 순서) thông qua cơ chế liên kết và tách cặp vortex–antivortex.
 
 Đây là chuyển pha tô pô: cơ chế cốt lõi nằm ở defect và topology, không chỉ ở một tham số trật tự Landau thông thường.
 
@@ -259,11 +262,11 @@ và tách phương trình Gross–Pitaevskii thành phần biên độ và pha c
 
 Khí Bose lý tưởng giải thích điều kiện BEC nhưng không đủ để mô tả đầy đủ siêu chảy tương tác mạnh.
 
-Gross–Pitaevskii là mean-field theory; nó hoạt động tốt với khí Bose loãng, lạnh và tương tác yếu. Gần criticality, trong 1D/2D hoặc với tương tác mạnh, fluctuation lượng tử và nhiệt có thể làm mean-field thất bại.
+Gross–Pitaevskii là mean-field lý thuyết (theory / 이론); nó hoạt động tốt với khí Bose loãng, lạnh và tương tác yếu. Gần criticality, trong 1D/2D hoặc với tương tác mạnh, fluctuation lượng tử và nhiệt có thể làm mean-field thất bại.
 
 Tiêu chuẩn Landau không tự tính được mọi cơ chế vortex nucleation hoặc ảnh hưởng biên thực tế.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Chất lưu lượng tử xuất hiện khi các hạt không thể được xem như những đối tượng phân biệt độc lập và toàn hệ phát triển pha lượng tử tập thể ở thang vĩ mô.
 
@@ -286,7 +289,7 @@ quantum statistics
 
 ### “BEC nghĩa tất cả nguyên tử nằm cùng một điểm”
 
-Không. Chúng cùng chiếm một mode lượng tử; hàm sóng không gian của mode có thể trải rộng trên toàn bẫy.
+Không. Chúng cùng chiếm một chế độ (mode / 모드) lượng tử; hàm sóng không gian của chế độ (mode / 모드) có thể trải rộng trên toàn bẫy.
 
 ### “Siêu chảy nghĩa độ nhớt bằng đúng 0 cho mọi quá trình”
 
@@ -300,8 +303,10 @@ Sai. Tương tác thường rất quan trọng cho độ ổn định, âm thanh
 
 Sai. Fermion có thể bắt cặp để tạo bậc tự do composite và pha siêu chảy hoặc siêu dẫn.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md), [Hiện tượng tới hạn](../04_thermal_statistical/05_critical_phenomena_renormalization.md), [Phonon và vật chất tô pô](04_phonons_defects_topological_matter.md).
 
 **Liên hệ tiếp:** [Vận chuyển và siêu dẫn](02_transport_magnetism_superconductivity.md), [Berry phase và Hall lượng tử](06_berry_phase_quantum_hall_topology.md), [Phép đo lượng tử](../08_quantum/03_measurement_entanglement_decoherence.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

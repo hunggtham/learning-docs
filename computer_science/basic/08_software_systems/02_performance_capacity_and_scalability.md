@@ -1,78 +1,81 @@
 # Độ trễ, thông lượng, năng lực xử lý và khả năng mở rộng
 
-Kỹ thuật hiệu năng (performance engineering) không đơn giản là “làm mã chạy nhanh”. Một hệ thống là dòng công việc đi qua CPU, cache, memory, scheduler, runtime, network, database và storage; mỗi tầng có service time, queue và giới hạn riêng. Tối ưu đúng bắt đầu bằng một câu hỏi có thể kiểm chứng: **work đang chờ ở đâu, resource nào đang giới hạn progress, và invariant nào về latency/throughput phải được giữ khi load tăng?**
+> **Mạch đọc:** Đọc **Độ trễ, thông lượng, năng lực xử lý và khả năng mở rộng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량) là hai trục khác nhau** sang **2. dịch vụ (service / 서비스) thời gian (time / 시간) và waiting thời gian (time / 시간) phải được tách ra**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Performance tốt không phải maximum benchmark number. Với production system, mục tiêu thường là giữ latency distribution, throughput, cost và reliability trong một **safe operating envelope** dưới workload thực tế.
 
-## 1. Latency và throughput là hai trục khác nhau
+Kỹ thuật hiệu năng (performance engineering) không đơn giản là “làm mã chạy nhanh”. Một hệ thống là dòng công việc đi qua CPU, bộ nhớ đệm (cache / 캐시), bộ nhớ (memory / 메모리), scheduler, thời gian chạy (runtime / 런타임), mạng (network / 네트워크), cơ sở dữ liệu (database / 데이터베이스) và lưu trữ (storage / 저장소); mỗi tầng có dịch vụ (service / 서비스) thời gian (time / 시간), hàng đợi (queue / 큐) và giới hạn riêng. Tối ưu đúng bắt đầu bằng một câu hỏi có thể kiểm chứng: **công việc (work / 작업) đang chờ ở đâu, tài nguyên (resource / 자원) nào đang giới hạn progress, và bất biến (invariant / 불변식) nào về độ trễ (latency / 지연 시간)/thông lượng (throughput / 처리량) phải được giữ khi tải (load / 로드) tăng?**
 
-**Độ trễ (latency / 지연 시간)** là thời gian một operation hoàn thành. **Thông lượng (throughput / 처리량)** là số operation hoàn thành trên một đơn vị thời gian.
+Hiệu năng (performance / 성능) tốt không phải maximum benchmark number. Với môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템), mục tiêu thường là giữ độ trễ (latency / 지연 시간) phân phối (distribution / 분포), thông lượng (throughput / 처리량), chi phí (cost / 비용) và độ tin cậy (reliability / 신뢰성) trong một **safe operating envelope** dưới tải công việc (workload / 워크로드) thực tế.
 
-Hai metric liên quan nhưng không đồng nhất. Batching có thể tăng throughput vì amortize fixed cost nhưng làm request đầu batch phải chờ. Tăng concurrency có thể tăng throughput đến một điểm, rồi contention và queueing làm latency tăng mạnh mà throughput hầu như không tăng nữa.
+## 1. độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량) là hai trục khác nhau
 
-Một design cần nói rõ objective nào quan trọng hơn theo workload: interactive API ưu tiên tail latency; offline batch có thể chấp nhận latency lớn để đổi lấy throughput/cost tốt hơn.
+**độ trễ (latency / 지연 시간)** là thời gian một thao tác (operation / 연산) hoàn thành. **thông lượng (throughput / 처리량)** là số thao tác (operation / 연산) hoàn thành trên một đơn vị thời gian.
 
-## 2. Service time và waiting time phải được tách ra
+Hai chỉ số (metric / 지표) liên quan nhưng không đồng nhất. Batching có thể tăng thông lượng (throughput / 처리량) vì amortize fixed chi phí (cost / 비용) nhưng làm yêu cầu (request / 요청) đầu batch phải chờ. Tăng tính đồng thời (concurrency / 동시성) có thể tăng thông lượng (throughput / 처리량) đến một điểm, rồi contention và queueing làm độ trễ (latency / 지연 시간) tăng mạnh mà thông lượng (throughput / 처리량) hầu như không tăng nữa.
 
-End-to-end latency có thể được xem gần đúng như:
+Một thiết kế (design / 설계) cần nói rõ mục tiêu (objective / 목표) nào quan trọng hơn theo tải công việc (workload / 워크로드): interactive API ưu tiên tail độ trễ (latency / 지연 시간); offline batch có thể chấp nhận độ trễ (latency / 지연 시간) lớn để đổi lấy thông lượng (throughput / 처리량)/chi phí (cost / 비용) tốt hơn.
+
+## 2. dịch vụ (service / 서비스) thời gian (time / 시간) và waiting thời gian (time / 시간) phải được tách ra
+
+End-to-end độ trễ (latency / 지연 시간) có thể được xem gần đúng như:
 
 ```text
 latency = useful/service time + waiting/queueing time + coordination overhead
 ```
 
-Nếu database query execute 20 ms nhưng request chờ connection pool 300 ms, tối ưu query chỉ chạm một phần nhỏ latency. Nếu CPU handler chỉ dùng 5 ms nhưng thread chờ run queue 100 ms, application profiler chỉ đo on-CPU code sẽ bỏ mất bottleneck.
+Nếu truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) execute 20 ms nhưng yêu cầu (request / 요청) chờ liên kết (connection / 연결) pool 300 ms, tối ưu truy vấn (query / 쿼리) chỉ chạm một phần nhỏ độ trễ (latency / 지연 시간). Nếu CPU handler chỉ dùng 5 ms nhưng luồng thực thi (thread / 스레드) chờ run hàng đợi (queue / 큐) 100 ms, ứng dụng (application / 애플리케이션) profiler chỉ đo on-CPU mã (code / 코드) sẽ bỏ mất bottleneck.
 
-Advanced diagnosis luôn hỏi: **thời gian được dùng để làm việc hay để chờ quyền dùng resource?**
+Advanced diagnosis luôn hỏi: **thời gian được dùng để làm việc hay để chờ quyền dùng tài nguyên (resource / 자원)?**
 
-## 3. Utilization gần capacity làm queue nhạy với variance
+## 3. Utilization gần sức chứa (capacity / 용량) làm hàng đợi (queue / 큐) nhạy với variance
 
-Khi arrival rate `λ` tiến gần service rate `μ`, một burst nhỏ hoặc vài request chậm có thể tạo queue. Mô hình M/M/1 đơn giản với `ρ = λ/μ` chỉ là approximation, nhưng intuition quan trọng vẫn đúng: khi `ρ` tiến gần 1, waiting time tăng rất nhanh.
+Khi arrival tỷ lệ (rate / 비율) `λ` tiến gần dịch vụ (service / 서비스) tỷ lệ (rate / 비율) `μ`, một burst nhỏ hoặc vài yêu cầu (request / 요청) chậm có thể tạo hàng đợi (queue / 큐). Mô hình M/M/1 đơn giản với `ρ = λ/μ` chỉ là approximation, nhưng intuition quan trọng vẫn đúng: khi `ρ` tiến gần 1, waiting thời gian (time / 시간) tăng rất nhanh.
 
-Production workload thường tệ hơn model lý tưởng vì service time không exponential đẹp, arrivals bursty, dependencies correlated và resource có nhiều classes. Vì vậy target 100% utilization cho user-facing workload thường đồng nghĩa không còn headroom hấp thụ variance.
+Môi trường vận hành (production / 운영 환경) tải công việc (workload / 워크로드) thường tệ hơn mô hình (model / 모델) lý tưởng vì dịch vụ (service / 서비스) thời gian (time / 시간) không exponential đẹp, arrivals bursty, dependencies correlated và tài nguyên (resource / 자원) có nhiều classes. Vì vậy mục tiêu (target / 대상) 100% utilization cho user-facing tải công việc (workload / 워크로드) thường đồng nghĩa không còn headroom hấp thụ variance.
 
-## 4. Little's Law nối concurrency, latency và throughput
+## 4. Little's Law nối tính đồng thời (concurrency / 동시성), độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)
 
-Trong stable system:
+Trong stable hệ thống (system / 시스템):
 
 \[
 L = \lambda W
 \]
 
-`L` là average work in-flight, `λ` là throughput/arrival rate ổn định, `W` là average time trong system.
+`L` là average công việc (work / 작업) in-flight, `λ` là thông lượng (throughput / 처리량)/arrival tỷ lệ (rate / 비율) ổn định, `W` là average thời gian (time / 시간) trong hệ thống (system / 시스템).
 
-Nếu service hoàn thành 1.000 req/s và average latency 0,2 s, khoảng 200 requests tồn tại trong system trung bình.
+Nếu dịch vụ (service / 서비스) hoàn thành 1.000 req/s và average độ trễ (latency / 지연 시간) 0,2 s, khoảng 200 requests tồn tại trong hệ thống (system / 시스템) trung bình.
 
-Little's Law không dự đoán p99, nhưng rất mạnh để sanity-check. Nếu team nói service cần 10.000 req/s, mỗi request giữ DB connection trung bình 100 ms, thì workload đó đã hàm ý khoảng 1.000 concurrent connection-hold time nếu không thay architecture/parallelism. Một pool 50 connections không thể giữ cùng contract chỉ bằng “tuning”.
+Little's Law không dự đoán p99, nhưng rất mạnh để sanity-check. Nếu nhóm (team / 팀) nói dịch vụ (service / 서비스) cần 10.000 req/s, mỗi yêu cầu (request / 요청) giữ DB liên kết (connection / 연결) trung bình 100 ms, thì tải công việc (workload / 워크로드) đó đã hàm ý khoảng 1.000 concurrent connection-hold thời gian (time / 시간) nếu không thay kiến trúc (architecture / 아키텍처)/parallelism. Một pool 50 connections không thể giữ cùng đặc tả hợp đồng (contract / 계약) chỉ bằng “tuning”.
 
-## 5. Bottleneck là resource làm giới hạn throughput hoặc latency hiện tại
+## 5. Bottleneck là tài nguyên (resource / 자원) làm giới hạn thông lượng (throughput / 처리량) hoặc độ trễ (latency / 지연 시간) hiện tại
 
-Một system có nhiều resources, nhưng tại một operating point thường có một hoặc vài resources đang giới hạn progress: CPU execution, memory bandwidth, run queue, GC, lock, connection pool, DB I/O, WAL flush, network bandwidth hoặc downstream quota.
+Một hệ thống (system / 시스템) có nhiều resources, nhưng tại một operating điểm (point / 지점) thường có một hoặc vài resources đang giới hạn progress: CPU thực thi (execution / 실행), bộ nhớ (memory / 메모리) bandwidth, run hàng đợi (queue / 큐), GC, khóa (lock / 잠금), liên kết (connection / 연결) pool, DB I/O, WAL flush, mạng (network / 네트워크) bandwidth hoặc downstream quota.
 
 Tăng tốc phần không phải bottleneck chỉ cải thiện tổng thể rất ít. Đây là intuition của Amdahl: speedup toàn hệ thống bị giới hạn bởi phần thời gian không được cải thiện.
 
-Quan trọng hơn, bottleneck **di chuyển**. Sau khi giảm CPU cost, database có thể trở thành giới hạn mới; sau khi thêm replica, network hoặc storage trở thành giới hạn tiếp theo. Performance engineering là vòng lặp đo → giả thuyết → thay đổi → đo lại, không phải một lần tối ưu.
+Quan trọng hơn, bottleneck **di chuyển**. Sau khi giảm CPU chi phí (cost / 비용), cơ sở dữ liệu (database / 데이터베이스) có thể trở thành giới hạn mới; sau khi thêm replica, mạng (network / 네트워크) hoặc lưu trữ (storage / 저장소) trở thành giới hạn tiếp theo. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링) là vòng lặp đo → giả thuyết → thay đổi → đo lại, không phải một lần tối ưu.
 
 ## 6. CPU utilization không nói CPU đang làm gì
 
-CPU 100% có thể là useful compute, spin lock, GC, scheduler overhead hoặc retry loop. CPU 40% cũng không chứng minh service có headroom nếu bottleneck là single-thread event loop, DB pool, lock hay storage.
+CPU 100% có thể là useful compute, spin khóa (lock / 잠금), GC, scheduler overhead hoặc thử lại (retry / 재시도) vòng lặp (loop / 루프). CPU 40% cũng không chứng minh dịch vụ (service / 서비스) có headroom nếu bottleneck là single-thread vòng lặp sự kiện (event loop / 이벤트 루프), DB pool, khóa (lock / 잠금) hay lưu trữ (storage / 저장소).
 
-Ở tầng CPU, IPC, cache/TLB miss, branch miss, stalled cycles và memory bandwidth có thể giải thích vì sao cùng 100% CPU nhưng throughput khác nhau. Ở tầng OS, run queue/context switch/throttling cho biết runnable work có đang phải chờ hay không.
+Ở tầng CPU, IPC, bộ nhớ đệm (cache / 캐시)/TLB miss, branch miss, stalled cycles và bộ nhớ (memory / 메모리) bandwidth có thể giải thích vì sao cùng 100% CPU nhưng thông lượng (throughput / 처리량) khác nhau. Ở tầng OS, run hàng đợi (queue / 큐)/ngữ cảnh (context / 맥락) switch/throttling cho biết runnable công việc (work / 작업) có đang phải chờ hay không.
 
-Do đó utilization chỉ là symptom-level signal. Cần attribution xuống mechanism.
+Do đó utilization chỉ là symptom-level tín hiệu (signal / 신호). Cần attribution xuống cơ chế (mechanism / 메커니즘).
 
-## 7. Memory hierarchy làm Big-O chưa đủ để dự đoán performance
+## 7. bộ nhớ (memory / 메모리) hierarchy làm Big-O chưa đủ để dự đoán hiệu năng (performance / 성능)
 
-Hai thuật toán cùng `O(n)` có thể khác rất xa nếu một bên sequentially scan contiguous array còn bên kia pointer-chase qua random heap nodes.
+Hai thuật toán cùng `O(n)` có thể khác rất xa nếu một bên sequentially scan contiguous array còn bên kia pointer-chase qua random vùng nhớ động (heap / 힙) nodes.
 
-Cache line, TLB, prefetcher, NUMA và memory bandwidth quyết định cost của data movement. Khi working set không fit cache, arithmetic có thể rẻ hơn rất nhiều so với chờ memory.
+Bộ nhớ đệm (cache / 캐시) line, TLB, prefetcher, NUMA và bộ nhớ (memory / 메모리) bandwidth quyết định chi phí (cost / 비용) của dữ liệu (data / 데이터) movement. Khi working set không fit bộ nhớ đệm (cache / 캐시), arithmetic có thể rẻ hơn rất nhiều so với chờ bộ nhớ (memory / 메모리).
 
-Đây là lý do data layout, locality và allocation strategy là performance concepts ngang hàng với algorithmic complexity trong systems code.
+Đây là lý do dữ liệu (data / 데이터) bố cục (layout / 레이아웃), locality và allocation chiến lược (strategy / 전략) là hiệu năng (performance / 성능) concepts ngang hàng với algorithmic độ phức tạp (complexity / 복잡도) trong các hệ thống (systems / 시스템들) mã (code / 코드).
 
-Đọc [memory hierarchy](../02_computer_architecture/02_memory_hierarchy_and_cache.md) và advanced Architecture để nối tới hardware evidence.
+Đọc [memory hierarchy](../02_computer_architecture/02_memory_hierarchy_and_cache.md) và advanced kiến trúc (architecture / 아키텍처) để nối tới hardware bằng chứng (evidence / 증거).
 
-## 8. Concurrency tạo parallelism nhưng cũng tạo contention
+## 8. tính đồng thời (concurrency / 동시성) tạo parallelism nhưng cũng tạo contention
 
-Tăng workers/threads chỉ giúp khi workload có independent work và resource phía dưới còn capacity. Khi nhiều workers cùng tranh lock, cache line, DB row, connection pool hoặc memory bandwidth, concurrency tăng có thể làm **service time tự xấu đi**.
+Tăng workers/threads chỉ giúp khi tải công việc (workload / 워크로드) có independent công việc (work / 작업) và tài nguyên (resource / 자원) phía dưới còn sức chứa (capacity / 용량). Khi nhiều workers cùng tranh khóa (lock / 잠금), bộ nhớ đệm (cache / 캐시) line, DB row, liên kết (connection / 연결) pool hoặc bộ nhớ (memory / 메모리) bandwidth, tính đồng thời (concurrency / 동시성) tăng có thể làm **dịch vụ (service / 서비스) thời gian (time / 시간) tự xấu đi**.
 
 Một đường cong phổ biến:
 
@@ -83,41 +86,41 @@ concurrency cao   → queue + contention + cache/scheduler overhead tăng
                    → latency tăng mạnh, throughput phẳng hoặc giảm
 ```
 
-Vì vậy concurrency limit là một performance control, không chỉ reliability control.
+Vì vậy tính đồng thời (concurrency / 동시성) limit là một hiệu năng (performance / 성능) điều khiển (control / 제어), không chỉ độ tin cậy (reliability / 신뢰성) điều khiển (control / 제어).
 
-## 9. Tail latency quan trọng vì fan-out khuếch đại phần đuôi
+## 9. Tail độ trễ (latency / 지연 시간) quan trọng vì fan-out khuếch đại phần đuôi
 
-Average che slow outliers. Nếu một request cần kết quả từ nhiều dependencies/shards, end-to-end latency bị chi phối bởi slow branch cần thiết nhất.
+Average che slow outliers. Nếu một yêu cầu (request / 요청) cần kết quả từ nhiều dependencies/shards, end-to-end độ trễ (latency / 지연 시간) bị chi phối bởi slow branch cần thiết nhất.
 
-Fan-out càng lớn, xác suất gặp ít nhất một tail event càng cao. Vì vậy p95/p99 của downstream không thể cộng/trừ đơn giản để suy ra p99 của system.
+Fan-out càng lớn, xác suất gặp ít nhất một tail sự kiện (event / 이벤트) càng cao. Vì vậy p95/p99 của downstream không thể cộng/trừ đơn giản để suy ra p99 của hệ thống (system / 시스템).
 
-Performance test cần đo distribution, không chỉ mean. Với SLO, cần biết p50 cho normal path nhưng cũng phải quan sát p95/p99 và timeout rate dưới load.
+Hiệu năng (performance / 성능) kiểm thử (test / 테스트) cần đo phân phối (distribution / 분포), không chỉ mean. Với SLO, cần biết p50 cho normal đường dẫn (path / 경로) nhưng cũng phải quan sát p95/p99 và hết thời gian chờ (timeout / 타임아웃) tỷ lệ (rate / 비율) dưới tải (load / 로드).
 
-## 10. Batching amortize fixed cost nhưng đổi queueing behavior
+## 10. Batching amortize fixed chi phí (cost / 비용) nhưng đổi queueing hành vi (behavior / 동작)
 
-Batching chia sẻ cost như syscall, network round-trip, disk flush, transaction commit hoặc GPU kernel launch.
+Batching chia sẻ chi phí (cost / 비용) như syscall, mạng (network / 네트워크) round-trip, disk flush, giao dịch (transaction / 트랜잭션) lần ghi nhận (commit / 커밋) hoặc GPU kernel launch.
 
-Nhưng batch phải chờ hình thành; batch lớn giữ memory nhiều hơn, tăng head-of-line delay và tăng blast radius nếu failure xảy ra.
+Nhưng batch phải chờ hình thành; batch lớn giữ bộ nhớ (memory / 메모리) nhiều hơn, tăng head-of-line delay và tăng blast radius nếu thất bại (failure / 실패) xảy ra.
 
-Group commit trong database là ví dụ rõ: nhiều transaction dùng chung một WAL flush để tăng throughput, nhưng batching policy vẫn phải giữ durability invariant trước khi acknowledgement.
+Group lần ghi nhận (commit / 커밋) trong cơ sở dữ liệu (database / 데이터베이스) là ví dụ rõ: nhiều giao dịch (transaction / 트랜잭션) dùng chung một WAL flush để tăng thông lượng (throughput / 처리량), nhưng batching chính sách (policy / 정책) vẫn phải giữ durability bất biến (invariant / 불변식) trước khi acknowledgement.
 
-Optimization tốt đổi timing/cost, không âm thầm đổi correctness contract.
+Tối ưu hóa (optimization / 최적화) tốt đổi timing/chi phí (cost / 비용), không âm thầm đổi tính đúng đắn (correctness / 정확성) đặc tả hợp đồng (contract / 계약).
 
-## 11. Cache là trade-off giữa reuse và consistency
+## 11. bộ nhớ đệm (cache / 캐시) là sự đánh đổi (trade-off / 트레이드오프) giữa reuse và consistency
 
-Cache có lợi khi reuse probability cao và cache hit rẻ hơn source lookup đủ nhiều. Nhưng cache tạo thêm state cần eviction, invalidation và capacity management.
+Bộ nhớ đệm (cache / 캐시) có lợi khi reuse xác suất (probability / 확률) cao và bộ nhớ đệm (cache / 캐시) hit rẻ hơn nguồn (source / 소스) lookup đủ nhiều. Nhưng bộ nhớ đệm (cache / 캐시) tạo thêm trạng thái (state / 상태) cần eviction, vô hiệu hóa (invalidation / 무효화) và sức chứa (capacity / 용량) management.
 
-Metrics cần tách hit ratio với **miss cost**. Hit ratio 99% vẫn có thể tệ nếu 1% miss cực đắt và nằm trong tail-critical path.
+Metrics cần tách hit ratio với **miss chi phí (cost / 비용)**. Hit ratio 99% vẫn có thể tệ nếu 1% miss cực đắt và nằm trong tail-critical đường dẫn (path / 경로).
 
-Cache stampede, hot key và stale data là failure modes xuất hiện khi load tăng. Advanced cache reasoning nằm ở [caching consistency, invalidation, stampede và hot keys](../../08_software_systems/advanced/02_caching_consistency_invalidation_stampede_and_hot_keys.md).
+Bộ nhớ đệm (cache / 캐시) stampede, hot key và stale dữ liệu (data / 데이터) là thất bại (failure / 실패) modes xuất hiện khi tải (load / 로드) tăng. Advanced bộ nhớ đệm (cache / 캐시) lập luận (reasoning / 추론) nằm ở [caching consistency, invalidation, stampede và hot keys](../../08_software_systems/advanced/02_caching_consistency_invalidation_stampede_and_hot_keys.md).
 
-## 12. Connection pool là queue + admission-control boundary
+## 12. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + admission-control ranh giới (boundary / 경계)
 
-Connection pool tái sử dụng setup cost và giới hạn concurrency xuống downstream.
+Liên kết (connection / 연결) pool tái sử dụng setup chi phí (cost / 비용) và giới hạn tính đồng thời (concurrency / 동시성) xuống downstream.
 
-Pool quá nhỏ làm request chờ; pool quá lớn có thể làm database nhận quá nhiều simultaneous work, tăng lock/I/O/cache pressure. Tăng pool size thường chỉ **di chuyển queue** từ application sang database chứ không xóa queue.
+Pool quá nhỏ làm yêu cầu (request / 요청) chờ; pool quá lớn có thể làm cơ sở dữ liệu (database / 데이터베이스) nhận quá nhiều simultaneous công việc (work / 작업), tăng khóa (lock / 잠금)/I/O/bộ nhớ đệm (cache / 캐시) pressure. Tăng pool kích thước (size / 크기) thường chỉ **di chuyển hàng đợi (queue / 큐)** từ ứng dụng (application / 애플리케이션) sang cơ sở dữ liệu (database / 데이터베이스) chứ không xóa hàng đợi (queue / 큐).
 
-Khi debug, đo riêng:
+Khi gỡ lỗi (debug / 디버그), đo riêng:
 
 ```text
 acquire wait
@@ -127,53 +130,53 @@ transaction lifetime
 DB saturation/wait class
 ```
 
-Đừng chỉ nhìn query execution duration.
+Đừng chỉ nhìn truy vấn (query / 쿼리) thực thi (execution / 실행) duration.
 
-## 13. Vertical scaling và horizontal scaling giải các constraint khác nhau
+## 13. Vertical scaling và horizontal scaling giải các ràng buộc (constraint / 제약조건) khác nhau
 
-Vertical scaling tăng resource của một node và thường giữ architecture đơn giản hơn. Horizontal scaling thêm nodes nhưng chỉ giúp nếu work có thể partition và shared bottleneck không trở thành giới hạn.
+Vertical scaling tăng tài nguyên (resource / 자원) của một nút (node / 노드) và thường giữ kiến trúc (architecture / 아키텍처) đơn giản hơn. Horizontal scaling thêm nodes nhưng chỉ giúp nếu công việc (work / 작업) có thể partition và dùng chung (shared / 공유) bottleneck không trở thành giới hạn.
 
-Thêm application replicas không tăng DB write capacity nếu mọi replicas cùng tranh một database. Sharding có thể tăng capacity nhưng thêm routing, rebalancing, cross-shard transaction và hotspot risk.
+Thêm ứng dụng (application / 애플리케이션) replicas không tăng DB ghi (write / 쓰기) sức chứa (capacity / 용량) nếu mọi replicas cùng tranh một cơ sở dữ liệu (database / 데이터베이스). Sharding có thể tăng sức chứa (capacity / 용량) nhưng thêm routing, rebalancing, cross-shard giao dịch (transaction / 트랜잭션) và hotspot rủi ro (risk / 위험).
 
-“Scale out” là thay architecture của resource graph, không phải phép nhân capacity tự động.
+“quy mô (scale / 규모) out” là thay kiến trúc (architecture / 아키텍처) của tài nguyên (resource / 자원) đồ thị (graph / 그래프), không phải phép nhân sức chứa (capacity / 용량) tự động.
 
-## 14. Backpressure và admission control giữ system trước utilization knee
+## 14. Backpressure và admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trước utilization knee
 
-Khi demand vượt capacity, system cần một nơi nói “đủ rồi”. Bounded queues, concurrency semaphore, token/rate limits và load shedding tạo explicit control.
+Khi demand vượt sức chứa (capacity / 용량), hệ thống (system / 시스템) cần một nơi nói “đủ rồi”. Bounded queues, tính đồng thời (concurrency / 동시성) semaphore, đơn vị từ (token / 토큰)/tỷ lệ (rate / 비율) limits và tải (load / 로드) shedding tạo tường minh (explicit / 명시적) điều khiển (control / 제어).
 
-Unbounded queue biến overload thành latency debt. Request đã quá deadline nhưng vẫn chờ/được xử lý là wasted work.
+Unbounded hàng đợi (queue / 큐) biến overload thành độ trễ (latency / 지연 시간) debt. yêu cầu (request / 요청) đã quá deadline nhưng vẫn chờ/được xử lý là wasted công việc (work / 작업).
 
-Performance và reliability gặp nhau ở đây: bảo vệ latency của accepted work đôi khi cần reject một phần arrivals sớm.
+Hiệu năng (performance / 성능) và độ tin cậy (reliability / 신뢰성) gặp nhau ở đây: bảo vệ độ trễ (latency / 지연 시간) của accepted công việc (work / 작업) đôi khi cần reject một phần arrivals sớm.
 
 Đọc [capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).
 
-## 15. Retry có thể biến performance regression thành outage
+## 15. thử lại (retry / 재시도) có thể biến hiệu năng (performance / 성능) regression thành outage
 
-Một dependency chậm làm timeout; caller retry; attempts tăng arrival rate; queue dài hơn; service time xấu đi; timeout tiếp tục tăng.
+Một phụ thuộc (dependency / 의존성) chậm làm hết thời gian chờ (timeout / 타임아웃); caller thử lại (retry / 재시도); attempts tăng arrival tỷ lệ (rate / 비율); hàng đợi (queue / 큐) dài hơn; dịch vụ (service / 서비스) thời gian (time / 시간) xấu đi; hết thời gian chờ (timeout / 타임아웃) tiếp tục tăng.
 
 ```text
 slowdown → timeout → retry → overload → longer queue → more timeout
 ```
 
-Vì vậy retry rate là performance metric, không chỉ error-handling metric. Deadline propagation, cancellation, backoff+jitter và retry budget giúp giới hạn amplification nhưng không tạo capacity nếu bottleneck vẫn saturated.
+Vì vậy thử lại (retry / 재시도) tỷ lệ (rate / 비율) là hiệu năng (performance / 성능) chỉ số (metric / 지표), không chỉ error-handling chỉ số (metric / 지표). Deadline propagation, cancellation, backoff+jitter và thử lại (retry / 재시도) ngân sách (budget / 예산) giúp giới hạn amplification nhưng không tạo sức chứa (capacity / 용량) nếu bottleneck vẫn saturated.
 
-## 16. Warm state và transient state phải được tách
+## 16. Warm trạng thái (state / 상태) và transient trạng thái (state / 상태) phải được tách
 
-JIT compilation, cache warming, connection establishment, DNS/TLS setup, page faults và model/data loading làm cold behavior khác steady state.
+JIT compilation, bộ nhớ đệm (cache / 캐시) warming, liên kết (connection / 연결) establishment, DNS/TLS setup, page faults và mô hình (model / 모델)/dữ liệu (data / 데이터) loading làm cold hành vi (behavior / 동작) khác steady trạng thái (state / 상태).
 
-Benchmark chỉ đo warm steady-state có thể bỏ startup/cold failover; benchmark chỉ đo cold có thể đánh giá thấp steady-state throughput.
+Benchmark chỉ đo warm steady-state có thể bỏ startup/cold failover; benchmark chỉ đo cold có thể đánh giá thấp steady-state thông lượng (throughput / 처리량).
 
-Deployment, autoscaling và failover đều tạo transient state, nên capacity plan phải giữ headroom cho warm-up phase.
+Triển khai (deployment / 배포), autoscaling và failover đều tạo transient trạng thái (state / 상태), nên sức chứa (capacity / 용량) plan phải giữ headroom cho warm-up phase.
 
 ## 17. Coordinated omission và benchmark methodology
 
-Load generator cũng có thể nói dối. Nếu generator gửi request tiếp theo chỉ sau request trước hoàn thành, khi server chậm nó vô tình giảm arrival rate và bỏ sót queueing mà real clients vẫn tạo. Đây là một dạng **coordinated omission**.
+Tải (load / 로드) generator cũng có thể nói dối. Nếu generator gửi yêu cầu (request / 요청) tiếp theo chỉ sau yêu cầu (request / 요청) trước hoàn thành, khi máy chủ (server / 서버) chậm nó vô tình giảm arrival tỷ lệ (rate / 비율) và bỏ sót queueing mà real clients vẫn tạo. Đây là một dạng **coordinated omission**.
 
-Load test cần mô hình arrivals gần workload thật, giữ request timestamps/deadlines, report latency distribution và không âm thầm hạ pressure khi server chậm nếu production behavior không như vậy.
+Kiểm thử tải (load test / 부하 테스트) cần mô hình arrivals gần tải công việc (workload / 워크로드) thật, giữ yêu cầu (request / 요청) timestamps/deadlines, report độ trễ (latency / 지연 시간) phân phối (distribution / 분포) và không âm thầm hạ pressure khi máy chủ (server / 서버) chậm nếu môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작) không như vậy.
 
-Measurement error là một failure mode của performance engineering.
+Sai số đo lường (measurement error / 측정 오차) là một dạng thất bại (failure mode / 실패 모드) của hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링).
 
-## 18. Production evidence cần đi từ SLO xuống resource
+## 18. bằng chứng vận hành (production evidence / 운영 증거) cần đi từ SLO xuống tài nguyên (resource / 자원)
 
 Một workflow thực tế:
 
@@ -187,28 +190,30 @@ Một workflow thực tế:
 7. thay đổi một hypothesis rồi đo lại
 ```
 
-Evidence có thể gồm trace, queue wait, CPU profile, run queue, GC pause/allocation, cache/TLB/PMU counters, DB waits, I/O latency, retransmission và replica lag. Không cần luôn thu mọi metric; chọn metric theo hypothesis.
+Bằng chứng (evidence / 증거) có thể gồm dấu vết (trace / 추적), hàng đợi (queue / 큐) wait, CPU profile, run hàng đợi (queue / 큐), GC pause/allocation, bộ nhớ đệm (cache / 캐시)/TLB/PMU counters, DB waits, I/O độ trễ (latency / 지연 시간), retransmission và replica lag. Không cần luôn thu mọi chỉ số (metric / 지표); chọn chỉ số (metric / 지표) theo hypothesis.
 
-## 19. Performance optimization phải giữ invariant correctness/reliability
+## 19. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) phải giữ bất biến (invariant / 불변식) tính đúng đắn (correctness / 정확성)/độ tin cậy (reliability / 신뢰성)
 
-Một optimization không hợp lệ nếu đạt benchmark bằng cách làm yếu contract không được công bố: bỏ fsync, giảm isolation không được phép, bỏ auth, drop validation, dùng stale cache vượt requirement hoặc tăng retry vô hạn để che error.
+Một tối ưu hóa (optimization / 최적화) không hợp lệ nếu đạt benchmark bằng cách làm yếu đặc tả hợp đồng (contract / 계약) không được công bố: bỏ fsync, giảm isolation không được phép, bỏ auth, drop kiểm tra hợp lệ (validation / 검증), dùng stale bộ nhớ đệm (cache / 캐시) vượt yêu cầu (requirement / 요구사항) hoặc tăng thử lại (retry / 재시도) vô hạn để che lỗi (error / 오류).
 
-Khi đánh đổi có chủ đích, API/SLO phải nói rõ semantics mới. Performance là quality attribute nằm dưới correctness constraints, không phải lý do để phá chúng.
+Khi đánh đổi có chủ đích, API/SLO phải nói rõ ngữ nghĩa (semantics / 의미론) mới. hiệu năng (performance / 성능) là chất lượng (quality / 품질) attribute nằm dưới tính đúng đắn (correctness / 정확성) các ràng buộc (constraints / 제약조건들), không phải lý do để phá chúng.
 
 ## 20. Mô hình tư duy
 
-> Hiệu năng là **dòng công việc qua các service centers hữu hạn**. Data locality quyết định cost bên trong CPU/memory; scheduler/runtime quyết định khi work được chạy; pools/queues quyết định khi work được vào resource; network/database/storage quyết định downstream service time. Khi load tăng, waiting time và contention thường thay đổi behavior trước khi throughput đạt cực đại. Tối ưu đúng là tìm bottleneck bằng evidence và giữ system trong safe operating envelope.
+> Hiệu năng là **dòng công việc qua các dịch vụ (service / 서비스) centers hữu hạn**. dữ liệu (data / 데이터) locality quyết định chi phí (cost / 비용) bên trong CPU/bộ nhớ (memory / 메모리); scheduler/thời gian chạy (runtime / 런타임) quyết định khi công việc (work / 작업) được chạy; pools/queues quyết định khi công việc (work / 작업) được vào tài nguyên (resource / 자원); mạng (network / 네트워크)/cơ sở dữ liệu (database / 데이터베이스)/lưu trữ (storage / 저장소) quyết định downstream dịch vụ (service / 서비스) thời gian (time / 시간). Khi tải (load / 로드) tăng, waiting thời gian (time / 시간) và contention thường thay đổi hành vi (behavior / 동작) trước khi thông lượng (throughput / 처리량) đạt cực đại. Tối ưu đúng là tìm bottleneck bằng bằng chứng (evidence / 증거) và giữ hệ thống (system / 시스템) trong safe operating envelope.
 
 ## Những hiểu nhầm thường gặp
 
-**“CPU 100% nghĩa là tối ưu.”** Có thể CPU đang spin, GC hoặc scheduler overhead trong khi useful throughput kém.
+**“CPU 100% nghĩa là tối ưu.”** Có thể CPU đang spin, GC hoặc scheduler overhead trong khi useful thông lượng (throughput / 처리량) kém.
 
-**“Thêm threads luôn tăng throughput.”** Chỉ tới khi independent work và downstream capacity còn đủ; sau đó contention/queueing có thể làm tệ hơn.
+**“Thêm threads luôn tăng thông lượng (throughput / 처리량).”** Chỉ tới khi independent công việc (work / 작업) và downstream sức chứa (capacity / 용량) còn đủ; sau đó contention/queueing có thể làm tệ hơn.
 
-**“Average latency đủ để benchmark.”** Tail và workload mix mới quyết định nhiều production SLO.
+**“Average độ trễ (latency / 지연 시간) đủ để benchmark.”** Tail và tải công việc (workload / 워크로드) mix mới quyết định nhiều môi trường vận hành (production / 운영 환경) SLO.
 
-**“Scale horizontal giải mọi bottleneck.”** Shared state, database, network hoặc coordination có thể trở thành bottleneck mới.
+**“quy mô (scale / 규모) horizontal giải mọi bottleneck.”** trạng thái dùng chung (shared state / 공유 상태), cơ sở dữ liệu (database / 데이터베이스), mạng (network / 네트워크) hoặc coordination có thể trở thành bottleneck mới.
 
 ## Kết nối
 
 Đọc cùng [Architecture memory hierarchy](../02_computer_architecture/02_memory_hierarchy_and_cache.md), [OS scheduler advanced](../../03_operating_systems/advanced/01_scheduler_run_queues_fairness_and_latency.md), [Runtime GC](../../04_programming_languages/advanced/06_garbage_collection_generational_concurrent_compacting_and_barriers.md), [Queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md), [Capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md), [End-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) và [Debugging xuyên abstraction layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 abstraction modularity interfaces and apis](./00_abstraction_modularity_interfaces_and_apis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

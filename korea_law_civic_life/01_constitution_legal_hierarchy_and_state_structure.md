@@ -1,8 +1,10 @@
 # 01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước
 
+> **Mạch đọc:** Đặt **01. Hiến pháp, thứ bậc pháp luật và cấu trúc nhà nước** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Hiến pháp (헌법) là gì?** sang **2. Tam quyền và cơ chế phân công quyền lực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## 1. Hiến pháp (헌법) là gì?
 
-Hiến pháp Hàn Quốc, **대한민국헌법**, là văn bản pháp lý nền tảng đặt ra cấu trúc của nhà nước, nguyên tắc tổ chức quyền lực và các quyền, nghĩa vụ cơ bản của công dân. Khi học một lĩnh vực cụ thể như lao động, nhà ở hay xuất nhập cảnh, bạn thường làm việc với luật chuyên ngành. Nhưng Hiến pháp là lớp trên cùng giải thích vì sao các cơ quan tồn tại và giới hạn quyền lực của nhà nước được xây dựng theo logic nào.
+Hiến pháp Hàn Quốc, **대한민국헌법**, là văn bản pháp lý nền tảng đặt ra cấu trúc của nhà nước, nguyên tắc tổ chức quyền lực và các quyền, nghĩa vụ cơ bản của công dân. Khi học một lĩnh vực cụ thể như lao động, nhà ở hay xuất nhập cảnh, bạn thường làm việc với luật chuyên ngành. Nhưng Hiến pháp là lớp trên cùng giải thích vì sao các cơ quan tồn tại và giới hạn quyền lực của nhà nước được xây dựng theo lô-gic (logic / 논리) nào.
 
 Hiến pháp hiện hành có thể tra trực tiếp trên **Trung tâm thông tin pháp luật quốc gia (국가법령정보센터)**. Khi đọc, nên chú ý các nhóm lớn: nguyên tắc chung, quyền và nghĩa vụ của công dân, Quốc hội, hành pháp, tòa án, Tòa Hiến pháp, bầu cử, chính quyền địa phương, kinh tế và sửa đổi Hiến pháp.
 
@@ -15,6 +17,9 @@ công dân Hàn Quốc (대한민국 국민)
 ```
 
 Một số quyền trong pháp luật được viết riêng cho `국민`, trong khi nhiều quyền dân sự, lao động, tố tụng, con người và bảo vệ cơ bản cũng áp dụng hoặc được mở rộng cho người nước ngoài theo luật, điều ước và án lệ. Vì vậy khi gặp cụm `국민`, cần đọc đúng luật chuyên ngành thay vì tự suy ra rằng mọi quyền đều giống hoặc khác hoàn toàn.
+
+
+> **Chuyển mạch:** Từ **1. Hiến pháp (헌법) là gì?**, ta sang **2. Tam quyền và cơ chế phân công quyền lực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Tam quyền và cơ chế phân công quyền lực
 
@@ -30,9 +35,12 @@ Ngoài ba nhánh này còn có các cơ quan hiến định như Tòa Hiến ph�
 
 Mô hình này không có nghĩa mỗi nhánh hoạt động cô lập. Luật được Quốc hội thông qua, hành pháp thi hành, tòa án áp dụng và giải thích trong vụ việc cụ thể, còn Tòa Hiến pháp xử lý các vấn đề thuộc thẩm quyền hiến pháp. Các cơ chế kiểm soát và cân bằng tạo ra điểm giao giữa các nhánh.
 
+
+> **Chuyển mạch:** Từ **2. Tam quyền và cơ chế phân công quyền lực**, ta sang **3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản
 
-Một mental model hữu ích:
+Một mô hình tư duy (mental model / 사고 모델) hữu ích:
 
 ```text
 헌법
@@ -74,6 +82,9 @@ Các tên như `고시`, `훈령`, `예규`, `지침` xuất hiện rất nhiề
 
 Chính quyền địa phương có `조례` và `규칙`. Một chính sách hỗ trợ của Seoul có thể khác Busan hoặc một `구`, ngay cả khi luật quốc gia giống nhau.
 
+
+> **Chuyển mạch:** Từ **3. Thứ bậc pháp luật: đừng chỉ nhìn tên văn bản**, ta sang **4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?
 
 Giả sử luật viết:
@@ -93,6 +104,9 @@ Một workflow tốt trên `law.go.kr`:
 6. đọc 부칙 nếu đang ở giai đoạn chuyển tiếp
 ```
 
+
+> **Chuyển mạch:** Từ **4. Luật mẹ, 시행령 và 시행규칙 hoạt động cùng nhau thế nào?**, ta sang **5. Nguyên tắc pháp quyền trong đời sống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 5. Nguyên tắc pháp quyền trong đời sống
 
 Trong thực tế, “pháp quyền” không chỉ là khái niệm chính trị. Nó ảnh hưởng trực tiếp đến việc cơ quan hành chính phải có cơ sở pháp lý, quyết định phải theo thủ tục, người dân có thể khiếu nại hoặc khởi kiện theo cơ chế luật định, và tòa án kiểm tra tính hợp pháp của hành vi hành chính trong phạm vi thẩm quyền.
@@ -108,6 +122,9 @@ cơ sở pháp lý là gì?
 → cơ chế phản đối là 이의신청, 행정심판 hay 행정소송?
 ```
 
+
+> **Chuyển mạch:** Từ **5. Nguyên tắc pháp quyền trong đời sống**, ta sang **6. Cách tra cứu nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 6. Cách tra cứu nguồn chính thức
 
 Nguồn nên dùng đầu tiên:
@@ -118,6 +135,11 @@ Nguồn nên dùng đầu tiên:
 
 Tại thời điểm kiểm tra 2026-09-21, hệ thống pháp luật hiện hành do Bộ Pháp chế công bố vẫn phân loại Hiến pháp, luật, nghị định Tổng thống, 총리령, 부령 và các loại quy phạm khác; số lượng văn bản thay đổi liên tục nên không nên học thuộc số đếm.
 
+
+> **Chuyển mạch:** Từ **6. Cách tra cứu nguồn chính thức**, ta sang **7. Điều cần nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 7. Điều cần nhớ
 
 Hiểu thứ bậc pháp luật giúp tránh ba lỗi lớn: đọc `시행규칙` mà quên luật mẹ, đọc một hướng dẫn hành chính như thể nó là luật, hoặc dùng một bản luật đã hết hiệu lực. Với mọi vấn đề nhạy về quyền và nghĩa vụ, **tên luật + điều khoản + 시행일** là bộ ba phải ghi lại.
+
+> **Bàn giao:** Sau **7. Điều cần nhớ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

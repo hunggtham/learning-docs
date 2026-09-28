@@ -1,5 +1,8 @@
 # Vật chất và phép đo
 
+> **Mạch đọc:** Đọc **Vật chất và phép đo** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quan sát không giống giải thích** sang **Tính chất của vật chất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nếu Hóa học nghiên cứu vật chất, câu hỏi đầu tiên phải là: **vật chất là gì và ta biết gì về nó bằng cách nào?**
 
 **Vật chất (matter / 물질)** là bất cứ thứ gì có khối lượng và chiếm không gian. Định nghĩa này hữu ích ở cấp nhập môn vì nó phân biệt vật chất với các đại lượng như nhiệt độ hay ánh sáng. Trong Vật lý hiện đại, mối quan hệ giữa vật chất và năng lượng sâu hơn nhiều; tuy nhiên, trong phạm vi Hóa học thông thường, ta chủ yếu làm việc với nguyên tử, ion, phân tử, vật chất ngưng tụ và các hệ chứa chúng.
@@ -156,3 +159,5 @@ Trong nhiệt động lực học hiện đại, nhiệt là một **cách truy�
 Phép đo chỉ hữu ích khi ta biết mức độ tin cậy của nó. Chương tiếp theo phát triển độ đúng, độ chụm, độ không đảm bảo và chữ số có nghĩa.
 
 Xem tiếp: [Đơn vị, độ không đảm bảo và chữ số có nghĩa](./02_units_uncertainty_and_significant_figures.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is chemistry](./00_what_is_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

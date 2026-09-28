@@ -1,10 +1,12 @@
 # Hệ tọa độ, vị trí và thời gian
 
+> **Mạch đọc:** Đọc **Hệ tọa độ, vị trí và thời gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vị trí không chỉ là hai con số** sang **Vĩ độ và kinh độ là tọa độ góc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Vị trí không chỉ là hai con số
 
 Trong địa lý, câu hỏi “ở đâu?” nghe đơn giản nhưng thực tế chứa nhiều lớp. Một vị trí có thể được mô tả bằng tên địa danh, địa chỉ, khoảng cách tương đối, tọa độ góc hoặc tọa độ phẳng. Mỗi cách biểu diễn phù hợp với một mục đích khác nhau. Khi cần trao đổi dữ liệu toàn cầu, ta thường dùng **vĩ độ (latitude / 위도)** và **kinh độ (longitude / 경도)**; khi cần đo diện tích, khoảng cách hoặc thi công chính xác, ta thường chuyển sang một **hệ tọa độ chiếu (projected coordinate system)** phù hợp.
 
-Điểm quan trọng là tọa độ không phải thuộc tính tự nhiên tồn tại độc lập. Hai con số chỉ có nghĩa khi biết **hệ quy chiếu tọa độ (Coordinate Reference System, CRS)**, datum, đơn vị, thứ tự trục và trong các hệ động còn cần cả epoch thời gian.
+Điểm quan trọng là tọa độ không phải thuộc tính tự nhiên tồn tại độc lập. Hai con số chỉ có nghĩa khi biết **hệ quy chiếu tọa độ (Coordinate Reference system, CRS)**, datum, đơn vị, thứ tự trục và trong các hệ động còn cần cả epoch thời gian.
 
 ## Vĩ độ và kinh độ là tọa độ góc
 
@@ -12,13 +14,13 @@ Trong địa lý, câu hỏi “ở đâu?” nghe đơn giản nhưng thực t�
 
 Một độ vĩ độ có chiều dài khá gần nhau ở nhiều nơi vì các vĩ tuyến được đo dọc kinh tuyến. Một độ kinh độ thì ngắn dần khi tiến về hai cực vì các kinh tuyến hội tụ. Vì vậy không nên lấy chênh lệch vĩ độ–kinh độ rồi dùng trực tiếp như khoảng cách Euclid trên phạm vi lớn.
 
-Trong phần mềm, lỗi còn có thể xuất hiện từ thứ tự trục. Nhiều API quen dùng `longitude, latitude`, trong khi nhiều tài liệu viết `latitude, longitude`. Một hệ thống nên coi thứ tự trục như một **data contract**, không dựa vào trí nhớ của người lập trình.
+Trong phần mềm, lỗi còn có thể xuất hiện từ thứ tự trục. Nhiều API quen dùng `longitude, latitude`, trong khi nhiều tài liệu viết `latitude, longitude`. Một hệ thống nên coi thứ tự trục như một **dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)**, không dựa vào trí nhớ của người lập trình.
 
 ## Trái Đất thật, ellipsoid và datum
 
 Trái Đất không phải hình cầu hoàn hảo mà gần **khối cầu dẹt (oblate spheroid)**. Để tính toán, trắc địa dùng **ellipsoid tham chiếu (reference ellipsoid)**. Nhưng ellipsoid chỉ mô tả hình học; để gắn nó với Trái Đất thật cần **mốc trắc địa (geodetic datum)**.
 
-Một datum quy định kích thước–hình dạng ellipsoid, cách nó được định hướng và đặt trong không gian, cùng quy ước tọa độ. WGS 84 là một datum/hệ quy chiếu toàn cầu quen thuộc vì được dùng rộng rãi trong GNSS và web mapping.
+Một datum quy định kích thước–hình dạng ellipsoid, cách nó được định hướng và đặt trong không gian, cùng quy ước tọa độ. WGS 84 là một datum/hệ quy chiếu toàn cầu quen thuộc vì được dùng rộng rãi trong GNSS và web ánh xạ (mapping / 매핑).
 
 Hai lớp dữ liệu có cùng các con số nhưng khác datum có thể đại diện cho hai vị trí khác nhau. Ngược lại, cùng một điểm vật lý có thể có bộ tọa độ khác nhau nếu biểu diễn trong hai CRS khác nhau.
 
@@ -58,7 +60,7 @@ Quan hệ gần đúng:
 h = H + N
 \]
 
-với \(h\) là độ cao ellipsoid, \(H\) là độ cao trực chuẩn và \(N\) là độ cao geoid so với ellipsoid. Nếu một pipeline drone hoặc khảo sát dùng nhầm hai loại độ cao, sai số phương đứng có thể lớn dù tọa độ ngang đúng.
+với \(h\) là độ cao ellipsoid, \(H\) là độ cao trực chuẩn và \(N\) là độ cao geoid so với ellipsoid. Nếu một chuỗi xử lý (pipeline / 파이프라인) drone hoặc khảo sát dùng nhầm hai loại độ cao, sai số phương đứng có thể lớn dù tọa độ ngang đúng.
 
 ## Trái Đất quay và thời gian địa phương
 
@@ -70,7 +72,7 @@ Nhưng xã hội hiện đại không dùng giờ Mặt Trời cho từng kinh t
 
 **UTC (Coordinated Universal Time)** là chuẩn thời gian dùng làm mốc toàn cầu. Một **UTC offset** như `+09:00` chỉ mô tả chênh lệch tại một thời điểm; nó không chứa toàn bộ lịch sử và quy tắc của timezone.
 
-Một timezone như `Asia/Seoul` hoặc `Europe/London` là tập quy tắc có thể bao gồm thay đổi lịch sử, daylight saving time và quyết định chính trị. Vì vậy hệ thống phần mềm không nên lưu timezone chỉ bằng offset nếu cần lập lịch dài hạn.
+Một timezone như `Asia/Seoul` hoặc `Europe/London` là tập quy tắc có thể bao gồm thay đổi lịch sử, daylight saving thời gian (time / 시간) và quyết định chính trị. Vì vậy hệ thống phần mềm không nên lưu timezone chỉ bằng offset nếu cần lập lịch dài hạn.
 
 Ví dụ, `2026-09-21 09:00` chưa xác định một thời điểm duy nhất nếu thiếu timezone. `2026-09-21T09:00+09:00` xác định instant rõ hơn, nhưng nếu là lịch họp lặp lại nhiều năm, tên vùng timezone vẫn có giá trị vì quy tắc tương lai có thể đổi.
 
@@ -86,7 +88,7 @@ Khi vượt đường này, ngày trên lịch thay đổi một ngày. Không c
 
 Do đó các **hệ quy chiếu động (dynamic reference frame)** gắn tọa độ với một **epoch**. Một tọa độ độ chính xác cao nhưng không ghi thời điểm có thể thiếu thông tin quan trọng.
 
-Đây là một mental model hữu ích cho IT: một vị trí chính xác cao giống record có `value + schema + version`. `latitude/longitude` chỉ là value; CRS là schema; epoch là version theo thời gian.
+Đây là một mô hình tư duy (mental model / 사고 모델) hữu ích cho IT: một vị trí chính xác cao giống bản ghi (record / 레코드) có `value + schema + version`. `latitude/longitude` chỉ là giá trị (value / 값); CRS là lược đồ (schema / 스키마); epoch là phiên bản (version / 버전) theo thời gian.
 
 ## Múi giờ, bản đồ và các bẫy dữ liệu
 
@@ -107,3 +109,5 @@ Một lỗi ở bất kỳ lớp nào cũng có thể làm dữ liệu trông h�
 GPS không “dùng la bàn để tìm vị trí”; la bàn điện tử và GNSS là cảm biến khác nhau. WGS 84 không đồng nghĩa với mọi bản đồ web; bản đồ web thường lưu vị trí theo WGS 84 nhưng hiển thị qua Web Mercator. Kinh độ không ánh xạ một-một với timezone. Và cùng một cặp tọa độ không có ý nghĩa đầy đủ nếu không biết CRS.
 
 Xem tiếp: [Bản đồ, tỷ lệ và phép chiếu](./03_cartography_projections_scale.md), [GIS và viễn thám](./04_geospatial_data_gis_remote_sensing.md), [Trắc địa và hình dạng Trái Đất](../05_earth_global_geography/00_earth_shape_size_geodesy.md).
+
+> **Bàn giao:** Sau **Những hiểu lầm phổ biến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geographical thinking](./00_geographical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,59 +1,62 @@
-# Kotlin + Android Master Note — Master / Production Engineering Supplement
+# Kotlin + Android Master ghi chú (note / 노트) — Master / môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) Supplement
 
-> Mục tiêu: đưa người học từ mức Senior lên mức có thể reasoning về compiler, runtime, lifecycle, concurrency, API compatibility, production architecture, build/release và migration qua nhiều thế hệ Kotlin/Android. File này là canonical Master note; các `deep_dive/`, `production_casebook/` và `depth_labs/` chỉ mở rộng những boundary khó, không thay thế learning flow của file này.
+> **Mạch đọc:** Đặt **Kotlin + Android Master ghi chú (note / 노트) — Master / môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) Supplement** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục lục** sang **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Mục tiêu: đưa người học từ mức cấp cao (senior / 시니어) lên mức có thể lập luận (reasoning / 추론) về trình biên dịch (compiler / 컴파일러), thời gian chạy (runtime / 런타임), vòng đời (lifecycle / 생명주기), tính đồng thời (concurrency / 동시성), API tính tương thích (compatibility / 호환성), kiến trúc vận hành (production architecture / 운영 아키텍처), bản dựng (build / 빌드)/bản phát hành (release / 릴리스) và di chuyển (migration / 마이그레이션) qua nhiều thế hệ Kotlin/Android. tệp (file / 파일) này là chuẩn gốc (canonical / 정본) Master ghi chú (note / 노트); các `deep_dive/`, `production_casebook/` và `depth_labs/` chỉ mở rộng những ranh giới (boundary / 경계) khó, không thay thế mạch học (learning flow / 학습 흐름) của tệp (file / 파일) này.
 
 ## Mục lục
 
-1. Version model: Kotlin 1.x → 2.x và Android toolchain
-2. K2 compiler và language evolution
+1. phiên bản (version / 버전) mô hình (model / 모델): Kotlin 1.x → 2.x và Android toolchain
+2. K2 trình biên dịch (compiler / 컴파일러) và ngôn ngữ (language / 언어) evolution
 3. Kotlin/JVM bytecode awareness
-4. Value classes và allocation model
-5. Context parameters và feature maturity
-6. Advanced generics và type erasure
-7. Functional error modeling
-8. Concurrency architecture
-9. Locks, atomics và thread safety
-10. Flow architecture ở hệ thống lớn
-11. Compose architecture ở scale lớn
-12. Design system
-13. Adaptive UI, window size và foldables
-14. Accessibility và internationalization
-15. Startup architecture
+4. giá trị (value / 값) classes và allocation mô hình (model / 모델)
+5. ngữ cảnh (context / 맥락) parameters và tính năng (feature / 기능) maturity
+6. Advanced generics và kiểu (type / 타입) erasure
+7. Functional lỗi (error / 오류) modeling
+8. tính đồng thời (concurrency / 동시성) kiến trúc (architecture / 아키텍처)
+9. Locks, atomics và luồng thực thi (thread / 스레드) an toàn (safety / 안전)
+10. luồng (flow / 흐름) kiến trúc (architecture / 아키텍처) ở hệ thống lớn
+11. Compose kiến trúc (architecture / 아키텍처) ở quy mô (scale / 규모) lớn
+12. thiết kế (design / 설계) hệ thống (system / 시스템)
+13. Adaptive UI, cửa sổ (window / 윈도우) kích thước (size / 크기) và foldables
+14. khả năng tiếp cận (accessibility / 접근성) và internationalization
+15. Startup kiến trúc (architecture / 아키텍처)
 16. Baseline Profiles và Macrobenchmark
-17. Observability
-18. Resilience engineering
+17. khả năng quan sát (observability / 관측 가능성)
+18. Resilience kỹ thuật (engineering / 엔지니어링)
 19. Large-scale modularization
 20. Convention plugins và build-logic
-21. API/module compatibility
-22. Library publishing
+21. API/mô-đun (module / 모듈) tính tương thích (compatibility / 호환성)
+22. thư viện (library / 라이브러리) publishing
 23. Kotlin Multiplatform awareness
-24. Native/JNI interoperability awareness
-25. Android platform boundaries
-26. Privacy, security, compliance
-27. Release engineering
-28. Testing architecture cấp tổ chức
-29. Technical debt và migration strategy
+24. bản địa (native / 네이티브)/JNI interoperability awareness
+25. Android nền tảng (platform / 플랫폼) boundaries
+26. Privacy, bảo mật (security / 보안), compliance
+27. bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링)
+28. Testing kiến trúc (architecture / 아키텍처) cấp tổ chức
+29. Technical debt và di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
 30. Master-level architectural heuristics
-31. Kotlin/Android keyword & API index
-32. Version matrix và cách đọc project Android hiện đại
-33. Compiler plugin và generated code
-34. Source/binary/behavioral compatibility
-35. Architecture ở codebase lớn
-36. Performance engineering
-37. Reliability engineering
-38. Security engineering
-39. Release, rollout và rollback
-40. Modern vs legacy Android
+31. Kotlin/Android từ khóa (keyword / 키워드) & API chỉ mục (index / 인덱스)
+32. phiên bản (version / 버전) ma trận (matrix / 행렬) và cách đọc dự án (project / 프로젝트) Android hiện đại
+33. trình biên dịch (compiler / 컴파일러) plugin và generated mã (code / 코드)
+34. nguồn (source / 소스)/nhị phân (binary / 이진)/behavioral tính tương thích (compatibility / 호환성)
+35. kiến trúc (architecture / 아키텍처) ở codebase lớn
+36. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)
+37. độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링)
+38. bảo mật (security / 보안) kỹ thuật (engineering / 엔지니어링)
+39. bản phát hành (release / 릴리스), rollout và quay lui (rollback / 롤백)
+40. hiện đại (modern / 현대적) vs legacy Android
 41. Production-ready checklist
 
 ---
 
-# 1. Version model: Kotlin 1.x → Kotlin 2.x và Android toolchain
+# 1. phiên bản (version / 버전) mô hình (model / 모델): Kotlin 1.x → Kotlin 2.x và Android toolchain
 
-<!-- merge: preserve both canonical variants -->
-Kotlin/Android không có một “version của project”. Một project production là giao điểm của nhiều version axis. Nếu chỉ nhìn `kotlin = "2.4.20"` rồi kết luận project mới hay cũ, ta bỏ qua phần lớn compatibility contract thực tế.
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+Kotlin/Android không có một “phiên bản (version / 버전) của dự án (project / 프로젝트)”. Một dự án (project / 프로젝트) môi trường vận hành (production / 운영 환경) là giao điểm của nhiều phiên bản (version / 버전) axis. Nếu chỉ nhìn `kotlin = "2.4.20"` rồi kết luận dự án (project / 프로젝트) mới hay cũ, ta bỏ qua phần lớn tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약) thực tế.
 
-Bốn tầng version cần tách riêng trong đầu:
+Bốn tầng phiên bản (version / 버전) cần tách riêng trong đầu:
 
 ```text
 Tầng 1 — Language/compiler
@@ -87,11 +90,14 @@ NDK/native dependencies
 Google Play policy
 ```
 
-Các tầng này liên quan nhưng không đồng nhất. `Kotlin 2.4.20`, `AGP 9.4.1`, `compileSdk 37`, `targetSdk 36` và `Compose BOM 2026.09.00` hoàn toàn có thể cùng tồn tại vì chúng mô tả các contract khác nhau.
+Các tầng này liên quan nhưng không đồng nhất. `Kotlin 2.4.20`, `AGP 9.4.1`, `compileSdk 37`, `targetSdk 36` và `Compose BOM 2026.09.00` hoàn toàn có thể cùng tồn tại vì chúng mô tả các đặc tả hợp đồng (contract / 계약) khác nhau.
 
-## 1.1 Kotlin version không đồng nghĩa language version
 
-Compiler mới có thể hỗ trợ source language level cũ trong một khoảng thời gian. Vì vậy cần phân biệt:
+> **Chuyển mạch:** Từ **Mục lục**, ta sang **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)
+
+Trình biên dịch (compiler / 컴파일러) mới có thể hỗ trợ nguồn (source / 소스) ngôn ngữ (language / 언어) mức (level / 수준) cũ trong một khoảng thời gian. Vì vậy cần phân biệt:
 
 ```text
 Kotlin compiler version
@@ -104,9 +110,9 @@ apiVersion
 = mức Kotlin standard-library API source được phép gọi
 ```
 
-Đối với application, thường ba mức này đi khá gần nhau. Đối với library, chúng có thể được pin bảo thủ hơn để không vô tình nâng minimum consumer requirement.
+Đối với ứng dụng (application / 애플리케이션), thường ba mức này đi khá gần nhau. Đối với thư viện (library / 라이브러리), chúng có thể được pin bảo thủ hơn để không vô tình nâng minimum bên tiêu thụ (consumer / 소비자) yêu cầu (requirement / 요구사항).
 
-Ví dụ mental model:
+Ví dụ mô hình tư duy (mental model / 사고 모델):
 
 ```kotlin
 kotlin {
@@ -119,23 +125,23 @@ Kotlin có tính tương thích source khá tốt, vì vậy một project Kotli
 
 Canonical mental model cần tách ít nhất các trục sau:
 
-```text
-Kotlin release / Kotlin compiler
+```văn bản (text / 텍스트)
+Kotlin bản phát hành (release / 릴리스) / Kotlin trình biên dịch (compiler / 컴파일러)
 languageVersion
 apiVersion
-Kotlin Gradle Plugin hoặc Kotlin support của AGP
-compiler plugins: Compose / serialization / Parcelize / custom plugin
+Kotlin Gradle Plugin hoặc Kotlin hỗ trợ (support / 지원) của AGP
+trình biên dịch (compiler / 컴파일러) plugins: Compose / serialization / Parcelize / custom plugin
 KSP / kapt processors
-JDK chạy build
-Java source/target compatibility
+JDK chạy bản dựng (build / 빌드)
+Java nguồn (source / 소스)/mục tiêu (target / 대상) tính tương thích (compatibility / 호환성)
 Kotlin jvmTarget
 Gradle Wrapper
 Android Gradle Plugin
 minSdk
 compileSdk
 targetSdk
-Android OS thực tế trên device
-Jetpack/library versions
+Android OS thực tế trên thiết bị (device / 장치)
+Jetpack/thư viện (library / 라이브러리) versions
 ```
 
 Các con số này liên quan nhau nhưng **không phải một version duy nhất**. `jvmTarget = 17` không có nghĩa `minSdk = 17`; `compileSdk = 37` không bắt app chỉ chạy Android 17; Kotlin `2.4.20` cũng không có nghĩa AGP phải có cùng số version.
@@ -156,12 +162,12 @@ Từ Kotlin 1.3, coroutine trở thành nền tảng đủ ổn định để An
 
 Mental shift của era này là:
 
-```text
-callback ownership thủ công
-→ structured asynchronous work
+```văn bản (text / 텍스트)
+callback quyền sở hữu (ownership / 소유권) thủ công
+→ structured asynchronous công việc (work / 작업)
 
-compiler backend cũ
-→ IR-oriented compiler architecture
+Trình biên dịch (compiler / 컴파일러) backend cũ
+→ IR-oriented trình biên dịch (compiler / 컴파일러) kiến trúc (architecture / 아키텍처)
 ```
 
 ### Era 3 — Kotlin 1.5 → 1.8: JVM IR mặc định và dọn baseline cũ
@@ -196,13 +202,13 @@ android {
 
 Phần lớn syntax Kotlin nền tảng từ 1.x vẫn quen thuộc ở 2.x. Mốc lớn là Kotlin 2.0 khi K2 trở thành compiler frontend production mặc định. Do đó migration 1.x → 2.x thường không phải “rewrite Kotlin”, mà là kiểm tra những boundary phụ thuộc compiler:
 
-```text
-Kotlin source
-→ type inference / diagnostics
-→ compiler plugins
+```văn bản (text / 텍스트)
+Kotlin nguồn (source / 소스)
+→ kiểu (type / 타입) suy luận (inference / 추론) / diagnostics
+→ trình biên dịch (compiler / 컴파일러) plugins
 → KSP/kapt processors
-→ generated code
-→ Kotlin metadata
+→ generated mã (code / 코드)
+→ Kotlin siêu dữ liệu (metadata / 메타데이터)
 → JVM bytecode
 → D8/R8
 → APK/AAB
@@ -216,28 +222,28 @@ Project Compose cũ thường có Compose compiler version mapping riêng với 
 
 Điều này không có nghĩa Compose UI libraries dùng cùng version Kotlin. Phải tách:
 
-```text
-Kotlin / Compose compiler plugin
+```văn bản (text / 텍스트)
+Kotlin / Compose trình biên dịch (compiler / 컴파일러) plugin
 !=
-Compose UI runtime/foundation/material versions
+Compose UI thời gian chạy (runtime / 런타임)/foundation/material versions
 ```
 
 Compose BOM alignment chỉ quản lý nhóm Compose libraries; BOM không thay thế compatibility của Kotlin, AGP, JDK hay compileSdk.
 
 ## 1.4 Android version có bốn câu hỏi khác nhau
 
-```text
+```văn bản (text / 텍스트)
 minSdk
-= Android thấp nhất app hỗ trợ runtime
+= Android thấp nhất app hỗ trợ thời gian chạy (runtime / 런타임)
 
 compileSdk
 = Android API surface dùng để compile
 
 targetSdk
-= behavior contract mới mà app tuyên bố đã thích nghi
+= hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약) mới mà app tuyên bố đã thích nghi
 
-Device OS
-= platform thật đang chạy app
+Thiết bị (device / 장치) OS
+= nền tảng (platform / 플랫폼) thật đang chạy app
 ```
 
 Một app có thể compile với API 37, target 36 và vẫn chạy trên API 26 nếu dependencies và code path cho phép. `targetSdk` mới đặc biệt nguy hiểm nếu bị xem như “chỉ đổi một số”: nó có thể bật behavior change về permission, background execution, foreground service, storage, window/edge-to-edge, notification hoặc networking.
@@ -246,26 +252,26 @@ Một app có thể compile với API 37, target 36 và vẫn chạy trên API 2
 
 Một chuỗi upgrade có thể là:
 
-```text
+```văn bản (text / 텍스트)
 Compose/Jetpack mới
 → cần compileSdk mới
 → cần AGP mới
 → AGP cần Gradle/JDK mới
-→ Kotlin plugin/processor cần version tương thích
-→ release variant cần R8 rules mới
+→ Kotlin plugin/processor cần phiên bản (version / 버전) tương thích
+→ bản phát hành (release / 릴리스) variant cần R8 rules mới
 ```
 
 Vì vậy production upgrade nên theo thứ tự có kiểm soát:
 
-```text
-1. chụp baseline version fingerprint
-2. đọc release notes + compatibility guide
+```văn bản (text / 텍스트)
+1. chụp baseline phiên bản (version / 버전) fingerprint
+2. đọc bản phát hành (release / 릴리스) notes + tính tương thích (compatibility / 호환성) guide
 3. đổi một axis hoặc một nhóm tightly-coupled axis
-4. clean build tất cả variants
-5. chạy unit/integration/instrumented tests
-6. build release + minified artifact
-7. benchmark nếu compiler/runtime path đổi đáng kể
-8. rollout có telemetry và rollback plan
+4. clean bản dựng (build / 빌드) tất cả variants
+5. chạy đơn vị (unit / 단위)/tích hợp (integration / 통합)/instrumented tests
+6. bản dựng (build / 빌드) bản phát hành (release / 릴리스) + minified sản phẩm tạo ra (artifact / 산출물)
+7. benchmark nếu trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) đường dẫn (path / 경로) đổi đáng kể
+8. rollout có telemetry và quay lui (rollback / 롤백) plan
 ```
 
 Không nên cùng một PR nâng Kotlin, AGP, targetSdk, Compose, đổi architecture và migrate database nếu không có lý do bắt buộc.
@@ -276,19 +282,19 @@ Một project có Kotlin 2.x nhưng vẫn XML/Fragment/RxJava có thể là code
 
 Khi mở project lạ, hãy fingerprint:
 
-```text
+```văn bản (text / 텍스트)
 Gradle wrapper
 AGP
 Kotlin/KGP
 JDK
 languageVersion/apiVersion/jvmTarget
 KSP hay kapt
-Compose compiler setup
+Compose trình biên dịch (compiler / 컴파일러) setup
 minSdk/compileSdk/targetSdk
-UI stack: XML/View hay Compose
-state stack: LiveData/RxJava hay Flow/StateFlow
-background work: Service/Alarm/WorkManager
-storage: SharedPreferences/DataStore/Room
+UI ngăn xếp (stack / 스택): XML/View hay Compose
+trạng thái (state / 상태) ngăn xếp (stack / 스택): LiveData/RxJava hay luồng (flow / 흐름)/StateFlow
+background công việc (work / 작업): dịch vụ (service / 서비스)/Alarm/WorkManager
+lưu trữ (storage / 저장소): SharedPreferences/DataStore/Room
 ```
 
 Sau đó mới quyết định phần nào thật sự cần migrate.
@@ -299,32 +305,32 @@ K2 không phải “Kotlin 2 syntax”. Đây là compiler frontend thế hệ m
 
 Một migration sang K2 cần quan tâm ba lớp:
 
-```text
-Source semantics
-Compiler diagnostics/inference
+```văn bản (text / 텍스트)
+nguồn (source / 소스) ngữ nghĩa (semantics / 의미론)
+trình biên dịch (compiler / 컴파일러) diagnostics/suy luận (inference / 추론)
 Plugin/generated-code ecosystem
 ```
 
 Một số source từng compile nhờ corner-case inference ở K1 có thể bị diagnostics khác ở K2. Đây không nhất thiết là regression; đôi khi compiler mới siết behavior vốn ambiguous. Vì vậy khi migration cần phân biệt:
 
-```text
-source bug bị compiler mới phát hiện
+```văn bản (text / 텍스트)
+nguồn (source / 소스) bug bị trình biên dịch (compiler / 컴파일러) mới phát hiện
 vs
-compiler/plugin incompatibility
+trình biên dịch (compiler / 컴파일러)/plugin incompatibility
 vs
-behavioral regression của application
+behavioral regression của ứng dụng (application / 애플리케이션)
 ```
 
 ## 2.1 Feature maturity quan trọng hơn “feature xuất hiện ở version nào”
 
 Language feature thường đi qua:
 
-```text
+```văn bản (text / 텍스트)
 Experimental / Preview
 → Beta
 → Stable
 → Deprecated
-→ Error/Removal
+→ lỗi (error / 오류)/Removal
 ```
 
 Không nên thấy feature trong release blog rồi đưa ngay vào public API. Với library/public SDK, maturity level là compatibility contract. Experimental feature có thể đổi syntax, metadata hoặc generated representation ở release sau.
@@ -336,8 +342,8 @@ Không nên thấy feature trong release blog rồi đưa ngay vào public API. 
 Ví dụ context parameter:
 
 ```kotlin
-context(logger: Logger)
-fun save(user: User) {
+ngữ cảnh (context / 맥락)(logger: Logger)
+fun save(user: user) {
     logger.info("save ${user.id}")
 }
 ```
@@ -352,24 +358,24 @@ Modern Kotlin Gradle DSL ưu tiên `compilerOptions {}` thay `kotlinOptions {}` 
 
 Nguyên tắc Master-level:
 
-```text
-stable feature mặc định
-experimental feature phải có owner + lý do + exit strategy
-compiler flag phải được document
-public API không nên vô tình phụ thuộc unstable behavior
+```văn bản (text / 텍스트)
+stable tính năng (feature / 기능) mặc định
+experimental tính năng (feature / 기능) phải có đơn vị sở hữu (owner / 오너) + lý do + exit chiến lược (strategy / 전략)
+trình biên dịch (compiler / 컴파일러) flag phải được document
+API công khai (public API / 공개 API) không nên vô tình phụ thuộc unstable hành vi (behavior / 동작)
 ```
 <!-- merge: preserve both canonical variants -->
 và phải đối chiếu compatibility map giữa Kotlin và Compose compiler.
 
 Từ Kotlin 2.x, mental model hiện đại là:
 
-```text
-Kotlin version
-↕ cùng release train
-Compose compiler plugin version
+```văn bản (text / 텍스트)
+Kotlin phiên bản (version / 버전)
+↕ cùng bản phát hành (release / 릴리스) train
+Compose trình biên dịch (compiler / 컴파일러) plugin phiên bản (version / 버전)
 
 Compose UI libraries/BOM
-= release train khác
+= bản phát hành (release / 릴리스) train khác
 ```
 
 Không được nhầm Compose compiler với Compose UI BOM.
@@ -388,7 +394,7 @@ Android không evolve theo version Kotlin. Một project hiện đại có thể
 
 Ba Android SDK axis quan trọng:
 
-```text
+```văn bản (text / 텍스트)
 minSdk
 = OS thấp nhất app hỗ trợ
 
@@ -396,7 +402,7 @@ compileSdk
 = API surface dùng lúc compile
 
 targetSdk
-= behavior contract Android mà app tuyên bố đã thích nghi
+= hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약) Android mà app tuyên bố đã thích nghi
 ```
 
 Do đó migration `targetSdk` là **platform behavior migration**, còn migration Kotlin là **language/compiler/toolchain migration**. Hai việc có thể xảy ra cùng quý nhưng nên tách reasoning, commit và test matrix nếu codebase lớn.
@@ -409,18 +415,18 @@ Production team nên pin Gradle wrapper, toolchain và dependency version để 
 
 Khi đọc code, phân loại API theo bốn trạng thái sẽ hữu ích hơn gọi chung là “cũ”:
 
-```text
+```văn bản (text / 텍스트)
 Historical
-= cần biết để đọc project rất cũ; không dùng cho code mới
+= cần biết để đọc dự án (project / 프로젝트) rất cũ; không dùng cho mã (code / 코드) mới
 
 Deprecated
-= compiler/platform đã chỉ hướng rời bỏ; cần migration plan
+= trình biên dịch (compiler / 컴파일러)/nền tảng (platform / 플랫폼) đã chỉ hướng rời bỏ; cần di chuyển (migration / 마이그레이션) plan
 
 Supported legacy / coexistence
 = vẫn hợp lệ, đặc biệt trong codebase đang chuyển đổi
 
-Modern preferred
-= hướng được ưu tiên cho code mới trong baseline hiện tại
+Hiện đại (modern / 현대적) preferred
+= hướng được ưu tiên cho mã (code / 코드) mới trong baseline hiện tại
 ```
 
 Ví dụ XML, Fragment, RecyclerView, LiveData và RxJava có thể vẫn được support và phù hợp với codebase cụ thể. Ngược lại `AsyncTask` hoặc synthetic view access là ví dụ rõ hơn của API/workflow nên rời bỏ. Senior engineer không rewrite chỉ vì “có API mới”; phải chứng minh migration giảm risk, maintenance cost, build cost hoặc platform incompatibility.
@@ -429,28 +435,28 @@ Ví dụ XML, Fragment, RecyclerView, LiveData và RxJava có thể vẫn đư�
 
 Một upgrade Kotlin/Android nên đi qua các bước:
 
-```text
-1. Chụp baseline version graph
-2. Đọc compatibility + breaking/deprecation notes
+```văn bản (text / 텍스트)
+1. Chụp baseline phiên bản (version / 버전) đồ thị (graph / 그래프)
+2. Đọc tính tương thích (compatibility / 호환성) + breaking/deprecation notes
 3. Thay một axis chính mỗi lần nếu có thể
-4. Build mọi variant quan trọng, đặc biệt release/minified
-5. Verify generated code và compiler plugin
-6. Test migration/rollback/persisted data
-7. Benchmark nếu compiler/runtime/build path thay đổi
-8. Rollout có observability
+4. bản dựng (build / 빌드) mọi variant quan trọng, đặc biệt bản phát hành (release / 릴리스)/minified
+5. Verify generated mã (code / 코드) và trình biên dịch (compiler / 컴파일러) plugin
+6. kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션)/quay lui (rollback / 롤백)/persisted dữ liệu (data / 데이터)
+7. Benchmark nếu trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임)/bản dựng (build / 빌드) đường dẫn (path / 경로) thay đổi
+8. Rollout có khả năng quan sát (observability / 관측 가능성)
 ```
 
 Nếu build hỏng sau upgrade, hãy hỏi theo graph:
 
-```text
-source semantic thay đổi?
-compiler/K2 thay đổi?
+```văn bản (text / 텍스트)
+nguồn (source / 소스) ngữ nghĩa (semantic / 의미적) thay đổi?
+trình biên dịch (compiler / 컴파일러)/K2 thay đổi?
 plugin/processor không tương thích?
-JVM target lệch Java/Kotlin?
-AGP/Gradle/JDK không nằm trong supported matrix?
-R8 chỉ lỗi ở release?
-targetSdk làm behavior runtime đổi?
-transitive dependency kéo minimum requirement mới?
+JVM mục tiêu (target / 대상) lệch Java/Kotlin?
+AGP/Gradle/JDK không nằm trong supported ma trận (matrix / 행렬)?
+R8 chỉ lỗi ở bản phát hành (release / 릴리스)?
+targetSdk làm hành vi (behavior / 동작) thời gian chạy (runtime / 런타임) đổi?
+transitive phụ thuộc (dependency / 의존성) kéo minimum yêu cầu (requirement / 요구사항) mới?
 ```
 
 Đó là version engineering ở mức Master: tìm contract nào bị phá thay vì thử đổi số version ngẫu nhiên tới khi build xanh.
@@ -465,12 +471,12 @@ K1 đã vận hành Kotlin ecosystem nhiều năm nhưng architecture frontend c
 
 Mental model:
 
-```text
+```văn bản (text / 텍스트)
 K1
 = frontend lịch sử đã rất mature
 
 K2
-= frontend mới để Kotlin tiếp tục scale về language/tooling/platform
+= frontend mới để Kotlin tiếp tục quy mô (scale / 규모) về ngôn ngữ (language / 언어)/tooling/nền tảng (platform / 플랫폼)
 ```
 
 Không nên diễn giải thành “K1 sai, K2 đúng”. Migration compiler generation luôn có compatibility edge case.
@@ -481,14 +487,14 @@ Compiler mới có thể siết semantic mà compiler cũ từng chấp nhận h
 
 Do đó migration 1.9 → 2.x không được xác nhận chỉ bằng việc `assembleDebug` thành công. Cần chạy:
 
-```text
-all source sets
-unit tests
-lint/static analysis
+```văn bản (text / 텍스트)
+all nguồn (source / 소스) sets
+đơn vị (unit / 단위) tests
+lint/static phân tích (analysis / 분석)
 instrumented tests cần thiết
-release/minified build
-KSP/kapt generated code
-serialization/Parcelize/Compose compiler path
+bản phát hành (release / 릴리스)/minified bản dựng (build / 빌드)
+KSP/kapt generated mã (code / 코드)
+serialization/Parcelize/Compose trình biên dịch (compiler / 컴파일러) đường dẫn (path / 경로)
 ```
 
 ## 2.3 Compiler plugin là một phần của compatibility contract
@@ -518,15 +524,15 @@ kotlin {
 
 ## 2.5 `jvmTarget`, JDK và Android runtime cũng là ba lớp khác nhau
 
-```text
+```văn bản (text / 텍스트)
 JDK toolchain
-= compiler/runtime Java dùng trong build
+= trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) Java dùng trong bản dựng (build / 빌드)
 
 jvmTarget
-= bytecode JVM level Kotlin/Java muốn sinh
+= bytecode JVM mức (level / 수준) Kotlin/Java muốn sinh
 
-Android Runtime / minSdk
-= runtime platform thực tế trên device
+Android thời gian chạy (runtime / 런타임) / minSdk
+= thời gian chạy (runtime / 런타임) nền tảng (platform / 플랫폼) thực tế trên thiết bị (device / 장치)
 ```
 
 Android toolchain có desugaring/D8 nên relationship không giống chạy JVM server trực tiếp. Dù vậy Java compile target và Kotlin `jvmTarget` lệch nhau vẫn có thể tạo compatibility validation/error trong build. Hãy cấu hình toolchain có chủ đích, không để IDE máy này và CI máy khác tự chọn JDK khác nhau.
@@ -535,21 +541,21 @@ Android toolchain có desugaring/D8 nên relationship không giống chạy JVM 
 
 Một feature thường đi qua:
 
-```text
+```văn bản (text / 텍스트)
 Experimental / preview
 → Beta
 → Stable
-→ có thể deprecate sau nhiều release
+→ có thể deprecate sau nhiều bản phát hành (release / 릴리스)
 ```
 
 Project production nên hỏi:
 
-```text
-feature có nằm trong public API không?
-consumer minimum Kotlin version là gì?
+```văn bản (text / 텍스트)
+tính năng (feature / 기능) có nằm trong API công khai (public API / 공개 API) không?
+bên tiêu thụ (consumer / 소비자) minimum Kotlin phiên bản (version / 버전) là gì?
 opt-in có được isolate không?
-rollback sẽ thế nào nếu syntax/ABI chưa ổn định?
-team có thật sự mua được lợi ích gì?
+quay lui (rollback / 롤백) sẽ thế nào nếu cú pháp (syntax / 문법)/ABI chưa ổn định?
+nhóm (team / 팀) có thật sự mua được lợi ích gì?
 ```
 
 Context parameters hay explicit backing fields là ví dụ feature mới đáng biết, nhưng không phải lý do để mass-refactor code chỉ vì compiler mới hỗ trợ.
@@ -558,17 +564,17 @@ Context parameters hay explicit backing fields là ví dụ feature mới đáng
 
 Khi migration K1-era codebase sang K2, theo thứ tự:
 
-```text
+```văn bản (text / 텍스트)
 1. Inventory Kotlin/KGP + AGP/Gradle/JDK
-2. Inventory compiler plugins, KSP/kapt processors, freeCompilerArgs
-3. Đọc Kotlin compatibility/K2 migration notes cho version đích
-4. Upgrade toolchain trước, giữ behavior refactor tối thiểu
-5. Build clean + incremental để bắt cache/generated-code issue
-6. Build release/minified, không chỉ debug
-7. So sánh warnings/errors mới và sửa semantic issue có chủ đích
-8. Chạy regression test ở Java interop/reflection/serialization boundary
-9. Verify performance/build time nếu compiler change lớn
-10. Chỉ sau khi baseline ổn mới áp dụng syntax/style mới
+2. Inventory trình biên dịch (compiler / 컴파일러) plugins, KSP/kapt processors, freeCompilerArgs
+3. Đọc Kotlin tính tương thích (compatibility / 호환성)/K2 di chuyển (migration / 마이그레이션) notes cho phiên bản (version / 버전) đích
+4. Upgrade toolchain trước, giữ hành vi (behavior / 동작) refactor tối thiểu
+5. bản dựng (build / 빌드) clean + incremental để bắt bộ nhớ đệm (cache / 캐시)/generated-code issue
+6. bản dựng (build / 빌드) bản phát hành (release / 릴리스)/minified, không chỉ gỡ lỗi (debug / 디버그)
+7. So sánh warnings/errors mới và sửa ngữ nghĩa (semantic / 의미적) issue có chủ đích
+8. Chạy regression kiểm thử (test / 테스트) ở Java interop/reflection/serialization ranh giới (boundary / 경계)
+9. Verify hiệu năng (performance / 성능)/bản dựng (build / 빌드) thời gian (time / 시간) nếu trình biên dịch (compiler / 컴파일러) thay đổi (change / 변경) lớn
+10. Chỉ sau khi baseline ổn mới áp dụng cú pháp (syntax / 문법)/style mới
 ```
 
 Tách **toolchain migration** khỏi **style modernization** giúp rollback và root-cause analysis rõ hơn nhiều.
@@ -590,7 +596,7 @@ Public `inline`, default parameter, `const val`, value class và JVM name cần 
 
 ```kotlin
 @JvmInline
-value class UserId(val value: Long)
+giá trị (value / 값) lớp (class / 클래스) UserId(val value: Long)
 ```
 
 Nhưng “value class = zero allocation” là mental model sai. Boxing có thể xảy ra khi nullable, generic, interface, reflection hoặc Java boundary tham gia. Đối với public SDK, thay underlying representation hoặc signature còn là compatibility decision.
@@ -603,13 +609,13 @@ Master-level learning không yêu cầu thuộc mọi feature mới. Điều qua
 
 Trước khi dùng feature ngôn ngữ mới trong code production, hỏi:
 
-```text
-feature Stable chưa?
-minimum Kotlin version nào?
-consumer/library có bị nâng floor không?
+```văn bản (text / 텍스트)
+tính năng (feature / 기능) Stable chưa?
+minimum Kotlin phiên bản (version / 버전) nào?
+bên tiêu thụ (consumer / 소비자)/thư viện (library / 라이브러리) có bị nâng floor không?
 Java caller nhìn API ra sao?
-KSP/compiler plugin/tooling đã hiểu chưa?
-team có đọc/debug được không?
+KSP/trình biên dịch (compiler / 컴파일러) plugin/tooling đã hiểu chưa?
+nhóm (team / 팀) có đọc/gỡ lỗi (debug / 디버그) được không?
 ```
 
 # 6. Advanced generics và type erasure
@@ -623,10 +629,10 @@ Serialization, DI và reflection thường cần generated schema, type token ho
 Exception phù hợp exceptional failure và framework/Java integration. Domain error đôi khi rõ hơn bằng sealed type:
 
 ```kotlin
-sealed interface LoginError {
-    data object InvalidCredential : LoginError
-    data object NetworkUnavailable : LoginError
-    data class Unknown(val cause: Throwable) : LoginError
+sealed giao diện (interface / 인터페이스) LoginError {
+    dữ liệu (data / 데이터) đối tượng (object / 객체) InvalidCredential : LoginError
+    dữ liệu (data / 데이터) đối tượng (object / 객체) NetworkUnavailable : LoginError
+    dữ liệu (data / 데이터) lớp (class / 클래스) Unknown(val cause: Throwable) : LoginError
 }
 ```
 
@@ -636,16 +642,16 @@ Không biến mọi function thành `Result`/Either theo nghi thức. Boundary c
 
 Concurrency production không phải chọn `Dispatchers.IO` rồi kết thúc. Cần xác định:
 
-```text
-owner của scope
-lifetime của work
-structured parent/child relation
-parallelism budget
-shared-state policy
-cancellation semantics
-ordering requirement
+```văn bản (text / 텍스트)
+đơn vị sở hữu (owner / 오너) của phạm vi (scope / 범위)
+thời gian tồn tại (lifetime / 수명) của công việc (work / 작업)
+structured parent/child quan hệ (relation / 관계)
+parallelism ngân sách (budget / 예산)
+shared-state chính sách (policy / 정책)
+cancellation ngữ nghĩa (semantics / 의미론)
+thứ tự (ordering / 순서) yêu cầu (requirement / 요구사항)
 backpressure
-retry/replay semantics
+thử lại (retry / 재시도)/replay ngữ nghĩa (semantics / 의미론)
 ```
 
 Một repository tự tạo `CoroutineScope(SupervisorJob() + Dispatchers.IO)` có nghĩa repository đang sở hữu lifetime độc lập; phải có lý do và shutdown/test strategy. Nếu work chỉ thuộc request/screen, structured scope của caller thường đúng hơn.
@@ -655,9 +661,9 @@ Một repository tự tạo `CoroutineScope(SupervisorJob() + Dispatchers.IO)` c
 Coroutine có thể interleave ở suspension point. Đoạn read-modify-write vẫn race nếu nhiều coroutine cùng chạy:
 
 ```kotlin
-val old = state.value
-val next = old.copy(count = old.count + 1)
-state.value = next
+val old = trạng thái (state / 상태).giá trị (value / 값)
+val next = old.bản sao (copy / 복사)(count = old.count + 1)
+trạng thái (state / 상태).giá trị (value / 값) = next
 ```
 
 Nếu invariant yêu cầu atomicity, dùng API atomic phù hợp, `Mutex`, actor/state owner single-threaded hoặc database transaction. Chọn primitive theo invariant, không theo thói quen.
@@ -673,8 +679,8 @@ Nếu invariant yêu cầu atomicity, dùng API atomic phù hợp, `Mutex`, acto
 ```kotlin
 private val mutex = Mutex()
 
-suspend fun update() = mutex.withLock {
-    // critical section nhỏ, không chứa network call nếu không cần
+suspend fun cập nhật (update / 업데이트)() = mutex.withLock {
+    // trọng yếu (critical / 중요) section nhỏ, không chứa mạng (network / 네트워크) lời gọi (call / 호출) nếu không cần
 }
 ```
 
@@ -688,15 +694,15 @@ Flow phù hợp dữ liệu thay đổi theo thời gian; one-shot command vẫn
 
 Backpressure operator có nghĩa nghiệp vụ khác nhau:
 
-```text
+```văn bản (text / 텍스트)
 buffer
-= cho producer chạy trước consumer trong giới hạn buffer
+= cho producer chạy trước bên tiêu thụ (consumer / 소비자) trong giới hạn buffer
 
 conflate
-= bỏ intermediate state, giữ mới nhất
+= bỏ intermediate trạng thái (state / 상태), giữ mới nhất
 
 collectLatest
-= cancel xử lý cũ khi value mới tới
+= cancel xử lý cũ khi giá trị (value / 값) mới tới
 
 flatMapLatest
 = cancel sub-flow cũ khi key mới tới
@@ -712,10 +718,10 @@ flatMapLatest
 
 Compose tốt không chỉ là `@Composable`. Cần hiểu ba tầng:
 
-```text
-State model
-→ Composition / identity / effects
-→ Layout / draw / input / semantics
+```văn bản (text / 텍스트)
+trạng thái (state / 상태) mô hình (model / 모델)
+→ Composition / định danh (identity / 식별자) / effects
+→ bố cục (layout / 레이아웃) / draw / đầu vào (input / 입력) / ngữ nghĩa (semantics / 의미론)
 ```
 
 Route-level composable có thể nối ViewModel/navigation/lifecycle; content composable nhận immutable state + callbacks:
@@ -723,7 +729,7 @@ Route-level composable có thể nối ViewModel/navigation/lifecycle; content c
 ```kotlin
 @Composable
 fun HomeRoute(viewModel: HomeViewModel = hiltViewModel()) {
-    val state by viewModel.uiState.collectAsStateWithLifecycle()
+    val trạng thái (state / 상태) by viewModel.uiState.collectAsStateWithLifecycle()
     HomeScreen(state = state, onAction = viewModel::onAction)
 }
 ```
@@ -800,10 +806,10 @@ Convention plugin giúp gom cấu hình repeated ở multi-module project. Nhưn
 
 Public API phải nghĩ theo ba lớp:
 
-```text
-source compatibility
-binary compatibility
-behavioral compatibility
+```văn bản (text / 텍스트)
+nguồn (source / 소스) tính tương thích (compatibility / 호환성)
+nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)
+behavioral tính tương thích (compatibility / 호환성)
 ```
 
 Giữ signature chưa chắc giữ behavior. Thay caching/threading/cancellation semantics có thể phá caller dù compile vẫn xanh. Kotlin metadata, default args, public inline, JVM name và generic signature có thể ảnh hưởng binary consumer.
@@ -866,13 +872,13 @@ Baseline tài liệu này dùng Kotlin **2.4.20**, K2, Android Studio Quail 4 / 
 
 Khi version thay đổi, không chỉ hỏi “latest là gì?” mà hỏi:
 
-```text
-node nào đổi?
-contract nào đổi?
-consumer nào bị ảnh hưởng?
-artifact nào khác?
-runtime behavior nào được bật?
-rollback có còn tương thích dữ liệu không?
+```văn bản (text / 텍스트)
+nút (node / 노드) nào đổi?
+đặc tả hợp đồng (contract / 계약) nào đổi?
+bên tiêu thụ (consumer / 소비자) nào bị ảnh hưởng?
+sản phẩm tạo ra (artifact / 산출물) nào khác?
+hành vi thời gian chạy (runtime behavior / 런타임 동작) nào được bật?
+quay lui (rollback / 롤백) có còn tương thích dữ liệu không?
 ```
 
 # 33. Compiler plugin và generated code như một phần của kiến trúc
@@ -919,18 +925,18 @@ Rollback binary không đủ nếu DB schema, serialized data hoặc backend pro
 
 Không nên gắn `legacy = sai`, `modern = đúng`. Hãy phân loại:
 
-```text
+```văn bản (text / 텍스트)
 Deprecated / unsafe
-→ cần migration có kế hoạch
+→ cần di chuyển (migration / 마이그레이션) có kế hoạch
 
 Supported nhưng có replacement hiện đại
-→ migrate khi benefit > cost
+→ migrate khi benefit > chi phí (cost / 비용)
 
-Still-valid API cho use case cụ thể
-→ giữ nếu contract phù hợp
+Still-valid API cho use trường hợp (case / 사례) cụ thể
+→ giữ nếu đặc tả hợp đồng (contract / 계약) phù hợp
 
 Historical API
-→ học để đọc code cũ, không dùng cho code mới
+→ học để đọc mã (code / 코드) cũ, không dùng cho mã (code / 코드) mới
 ```
 
 Ví dụ phổ biến:
@@ -959,21 +965,23 @@ Migration tốt giữ behavior trước rồi thay implementation. Characterizat
 
 Một hệ thống Kotlin/Android mature phải trả lời được:
 
-```text
-Version/toolchain contract là gì?
-Source of truth ở đâu?
-Owner của state/coroutine/resource là ai?
-Điều gì sống qua recomposition/configuration/process death?
-Race/order/idempotency được kiểm soát thế nào?
-Flow/event semantics có bị mất hoặc replay sai không?
-Compose effect có đúng lifetime không?
-Network/database migration có rollback-compatible không?
-Security boundary nào nhận untrusted input?
-Metric/log nào chứng minh behavior production?
-Release artifact nào đang chạy trên device?
-R8/signing/variant có được test không?
-Feature lỗi thì rollback/disable bằng cách nào?
-Legacy path bao giờ được xóa?
+```văn bản (text / 텍스트)
+phiên bản (version / 버전)/toolchain đặc tả hợp đồng (contract / 계약) là gì?
+nguồn chuẩn (source of truth / 정본) ở đâu?
+đơn vị sở hữu (owner / 오너) của trạng thái (state / 상태)/coroutine/tài nguyên (resource / 자원) là ai?
+Điều gì sống qua recomposition/cấu hình (configuration / 구성)/tiến trình (process / 프로세스) death?
+Race/thứ tự (order / 순서)/idempotency được kiểm soát thế nào?
+luồng (flow / 흐름)/sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론) có bị mất hoặc replay sai không?
+Compose tác động (effect / 효과) có đúng thời gian tồn tại (lifetime / 수명) không?
+mạng (network / 네트워크)/cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) có rollback-compatible không?
+ranh giới bảo mật (security boundary / 보안 경계) nào nhận untrusted đầu vào (input / 입력)?
+chỉ số (metric / 지표)/log nào chứng minh hành vi (behavior / 동작) môi trường vận hành (production / 운영 환경)?
+bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) nào đang chạy trên thiết bị (device / 장치)?
+R8/signing/variant có được kiểm thử (test / 테스트) không?
+tính năng (feature / 기능) lỗi thì quay lui (rollback / 롤백)/disable bằng cách nào?
+Legacy đường dẫn (path / 경로) bao giờ được xóa?
 ```
 
-Mastery không phải nhớ toàn bộ Android SDK. Nó là khả năng hạ một vấn đề từ UI xuống state/lifecycle, từ coroutine xuống ordering/cancellation, từ Kotlin source xuống compiler/bytecode, từ Gradle xuống artifact, và từ bug production xuống invariant + evidence thay vì đoán.
+Mastery không phải nhớ toàn bộ Android SDK. Nó là khả năng hạ một vấn đề từ UI xuống trạng thái (state / 상태)/vòng đời (lifecycle / 생명주기), từ coroutine xuống thứ tự (ordering / 순서)/cancellation, từ Kotlin nguồn (source / 소스) xuống trình biên dịch (compiler / 컴파일러)/bytecode, từ Gradle xuống sản phẩm tạo ra (artifact / 산출물), và từ bug môi trường vận hành (production / 운영 환경) xuống bất biến (invariant / 불변식) + bằng chứng (evidence / 증거) thay vì đoán.
+
+> **Bàn giao:** Sau **1.1 Kotlin phiên bản (version / 버전) không đồng nghĩa ngôn ngữ (language / 언어) phiên bản (version / 버전)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

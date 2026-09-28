@@ -1,8 +1,11 @@
 # 05 — GridView, CRUD & Enterprise Screen Patterns
 
-## 1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía client
+> **Mạch đọc:** Đặt **05 — GridView, CRUD & Enterprise Screen Patterns** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)** sang **2. tìm kiếm (search / 검색) screen điển hình**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-GridView là một trong những component quan trọng nhất của WebSquare vì nhiều ứng dụng doanh nghiệp xoay quanh bảng tra cứu, chỉnh sửa hàng loạt và CRUD. Tuy nhiên mental model sai phổ biến nhất là coi GridView như “database trên màn hình”.
+
+## 1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)
+
+GridView là một trong những thành phần (component / 컴포넌트) quan trọng nhất của WebSquare vì nhiều ứng dụng doanh nghiệp xoay quanh bảng tra cứu, chỉnh sửa hàng loạt và CRUD. Tuy nhiên mô hình tư duy (mental model / 사고 모델) sai phổ biến nhất là coi GridView như “cơ sở dữ liệu (database / 데이터베이스) trên màn hình”.
 
 Nếu GridView bind với `dlUser`, hãy nghĩ:
 
@@ -11,13 +14,13 @@ DataList = model
 GridView = view + interaction layer
 ```
 
-DataList giữ row, column value và row status. GridView chịu trách nhiệm hiển thị, selection, edit UI, formatting, sort/filter/display behavior và các event liên quan interaction.
+DataList giữ row, column giá trị (value / 값) và row status. GridView chịu trách nhiệm hiển thị, selection, edit UI, formatting, sort/filter/display hành vi (behavior / 동작) và các sự kiện (event / 이벤트) liên quan tương tác (interaction / 상호작용).
 
-Khi cần gửi dữ liệu server, dirty check hoặc phân tích state, ưu tiên model. Khi cần thay cách trình bày, ưu tiên GridView.
+Khi cần gửi dữ liệu máy chủ (server / 서버), dirty check hoặc phân tích trạng thái (state / 상태), ưu tiên mô hình (model / 모델). Khi cần thay cách trình bày, ưu tiên GridView.
 
-## 2. Search screen điển hình
+## 2. tìm kiếm (search / 검색) screen điển hình
 
-Một màn hình tìm kiếm enterprise thường có flow:
+Một màn hình tìm kiếm enterprise thường có luồng (flow / 흐름):
 
 ```text
 Search condition Inputs
@@ -36,13 +39,13 @@ dlUser target
 GridView
 ```
 
-Flow này tốt vì mỗi layer có trách nhiệm rõ. Nếu GridView rỗng, bạn có thể inspect `dlUser`. Nếu `dlUser` rỗng, inspect Submission response. Nếu response rỗng, inspect server query.
+Luồng (flow / 흐름) này tốt vì mỗi tầng (layer / 계층) có trách nhiệm rõ. Nếu GridView rỗng, bạn có thể inspect `dlUser`. Nếu `dlUser` rỗng, inspect Submission phản hồi (response / 응답). Nếu phản hồi (response / 응답) rỗng, inspect máy chủ (server / 서버) truy vấn (query / 쿼리).
 
-## 3. Row identity quan trọng hơn row index
+## 3. Row định danh (identity / 식별자) quan trọng hơn row chỉ mục (index / 인덱스)
 
-Row index là vị trí hiện tại trong list, không phải identity business ổn định. Sort, filter, insert, delete hoặc paging có thể làm index thay đổi.
+Row chỉ mục (index / 인덱스) là vị trí hiện tại trong danh sách (list / 목록), không phải định danh (identity / 식별자) nghiệp vụ (business / 비즈니스) ổn định. Sort, filter, insert, delete hoặc paging có thể làm chỉ mục (index / 인덱스) thay đổi.
 
-Sai pattern:
+Sai mẫu (pattern / 패턴):
 
 ```javascript
 scwin.selectedRowIndex = 5;
@@ -50,9 +53,9 @@ scwin.selectedRowIndex = 5;
 var id = dlUser.getCellData(scwin.selectedRowIndex, "USER_ID");
 ```
 
-Nếu list đã sort hoặc filter, row 5 có thể là user khác.
+Nếu danh sách (list / 목록) đã sort hoặc filter, row 5 có thể là người dùng (user / 사용자) khác.
 
-Tốt hơn là giữ business key khi cần reference dài hơn một event:
+Tốt hơn là giữ nghiệp vụ (business / 비즈니스) key khi cần tham chiếu (reference / 참조) dài hơn một sự kiện (event / 이벤트):
 
 ```javascript
 var row = dlUser.getRowPosition();
@@ -63,7 +66,7 @@ Sau đó nếu cần, tìm lại row bằng key theo API phù hợp.
 
 ## 4. CRUD row status và ý nghĩa thật
 
-Grid edit làm DataList row chuyển state. Một lifecycle thường là:
+Grid edit làm DataList row chuyển trạng thái (state / 상태). Một vòng đời (lifecycle / 생명주기) thường là:
 
 ```text
 server result → R
@@ -85,11 +88,11 @@ for (var i = 0; i < count; i++) {
 }
 ```
 
-Đừng reset row status chỉ để UI “trông sạch” trước khi server commit. Bạn sẽ mất evidence về unsaved changes.
+Đừng reset row status chỉ để UI “trông sạch” trước khi máy chủ (server / 서버) lần ghi nhận (commit / 커밋). Bạn sẽ mất bằng chứng (evidence / 증거) về unsaved changes.
 
 ## 5. Insert row nên khởi tạo default có chủ đích
 
-Khi user thêm row mới, đừng để mỗi cell tự có default rời rạc nếu chúng đại diện một business object.
+Khi người dùng (user / 사용자) thêm row mới, đừng để mỗi cell tự có default rời rạc nếu chúng đại diện một nghiệp vụ (business / 비즈니스) đối tượng (object / 객체).
 
 ```javascript
 scwin.addUser = function () {
@@ -100,17 +103,17 @@ scwin.addUser = function () {
 };
 ```
 
-Tên API có thể khác theo generation/build, nhưng pattern là: **create row → initialize domain defaults → move focus/selection**.
+Tên API có thể khác theo generation/bản dựng (build / 빌드), nhưng mẫu (pattern / 패턴) là: **create row → initialize lĩnh vực (domain / 도메인) defaults → move focus/selection**.
 
-Nếu default đến server/config, tránh hard-code rải rác nhiều screen.
+Nếu default đến máy chủ (server / 서버)/cấu hình (config / 설정), tránh hard-code rải rác nhiều screen.
 
-## 6. Delete và remove khác business meaning
+## 6. Delete và remove khác nghiệp vụ (business / 비즈니스) meaning
 
-Khi xóa row đã tồn tại trên server, client thường cần giữ delete intent để save. Nếu chỉ remove row khỏi DataList mà không giữ status/delete payload, server không biết phải xóa gì.
+Khi xóa row đã tồn tại trên máy chủ (server / 서버), máy khách (client / 클라이언트) thường cần giữ delete intent để save. Nếu chỉ remove row khỏi DataList mà không giữ status/delete payload, máy chủ (server / 서버) không biết phải xóa gì.
 
-Ngược lại, row mới `C` chưa từng tồn tại server nếu user bỏ đi có thể chỉ cần remove client-side.
+Ngược lại, row mới `C` chưa từng tồn tại máy chủ (server / 서버) nếu người dùng (user / 사용자) bỏ đi có thể chỉ cần remove client-side.
 
-Vì vậy trước khi chọn API, xác định state transition:
+Vì vậy trước khi chọn API, xác định chuyển tiếp trạng thái (state transition / 상태 전이):
 
 ```text
 existing row → marked delete → server DELETE
@@ -119,26 +122,26 @@ new unsaved row → discard locally
 
 ## 7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ
 
-Property như `hideDeletedRow` cho phép UI không hiển thị row `D`. Đây là presentation choice, không phải model deletion.
+Thuộc tính (property / 속성) như `hideDeletedRow` cho phép UI không hiển thị row `D`. Đây là presentation choice, không phải mô hình (model / 모델) deletion.
 
-Hệ quả: count trên Grid và count trên DataList có thể khác semantics. Khi hiển thị “총 10건”, hãy quyết định đang đếm visible records, server records hay all client rows including deleted.
+Hệ quả: count trên Grid và count trên DataList có thể khác ngữ nghĩa (semantics / 의미론). Khi hiển thị “총 10건”, hãy quyết định đang đếm visible records, máy chủ (server / 서버) records hay all máy khách (client / 클라이언트) rows including deleted.
 
-## 8. Cell value và display value
+## 8. Cell giá trị (value / 값) và display giá trị (value / 값)
 
-Một cell có thể hiển thị label nhưng lưu code.
+Một cell có thể hiển thị label nhưng lưu mã (code / 코드).
 
 ```text
 model value: "01"
 display value: "서울"
 ```
 
-Hoặc date/number format tương tự Input. Khi build payload hoặc compare business data, dùng model value. Khi export “những gì user nhìn thấy”, display value có thể phù hợp hơn.
+Hoặc date/number format tương tự đầu vào (input / 입력). Khi bản dựng (build / 빌드) payload hoặc compare nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터), dùng mô hình (model / 모델) giá trị (value / 값). Khi export “những gì người dùng (user / 사용자) nhìn thấy”, display giá trị (value / 값) có thể phù hợp hơn.
 
-Đừng compare display string nếu business rule dựa code.
+Đừng compare display string nếu nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) dựa mã (code / 코드).
 
-## 9. Validation theo row state
+## 9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)
 
-Một Grid 5.000 row nhưng chỉ 3 row thay đổi. Validation hiệu quả nên tập trung changed rows.
+Một Grid 5.000 row nhưng chỉ 3 row thay đổi. kiểm tra hợp lệ (validation / 검증) hiệu quả nên tập trung changed rows.
 
 ```javascript
 scwin.validateChangedRows = function () {
@@ -158,11 +161,11 @@ scwin.validateChangedRows = function () {
 };
 ```
 
-Nếu rule liên quan uniqueness toàn dataset, vẫn có thể cần scan nhiều row. Optimize theo semantics, không theo công thức “chỉ changed rows”.
+Nếu quy tắc (rule / 규칙) liên quan uniqueness toàn dataset, vẫn có thể cần scan nhiều row. Optimize theo ngữ nghĩa (semantics / 의미론), không theo công thức “chỉ changed rows”.
 
-## 10. Cross-row invariant
+## 10. Cross-row bất biến (invariant / 불변식)
 
-Một số rule không thuộc riêng một cell:
+Một số quy tắc (rule / 규칙) không thuộc riêng một cell:
 
 ```text
 không trùng USER_ID
@@ -171,18 +174,18 @@ sum(weight) = 100
 fromDate <= toDate trong mọi row
 ```
 
-Những rule này nên có function tên rõ:
+Những quy tắc (rule / 규칙) này nên có hàm (function / 함수) tên rõ:
 
 ```javascript
 scwin.validatePrimaryRow = function () { ... };
 scwin.validateDuplicateUserId = function () { ... };
 ```
 
-Không nhét logic vào `onchange` của từng cell nếu rule cần toàn dataset, vì nó dễ bị bypass khi data load bằng API.
+Không nhét lô-gic (logic / 논리) vào `onchange` của từng cell nếu quy tắc (rule / 규칙) cần toàn dataset, vì nó dễ bị bypass khi dữ liệu (data / 데이터) tải (load / 로드) bằng API.
 
-## 11. Before-change event để chặn invalid transition
+## 11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)
 
-DataList có event trước cell change cho phép trả `false` để từ chối mutation trong một số build.
+DataList có sự kiện (event / 이벤트) trước cell thay đổi (change / 변경) cho phép trả `false` để từ chối mutation trong một số bản dựng (build / 빌드).
 
 Conceptual:
 
@@ -194,13 +197,13 @@ scwin.dlUser_onbeforecelldatachange = function (info) {
 };
 ```
 
-Đây phù hợp cho local invariant rẻ và rõ. Rule cần server data hoặc async check không nên block theo cách giả định synchronous.
+Đây phù hợp cho cục bộ (local / 로컬) bất biến (invariant / 불변식) rẻ và rõ. quy tắc (rule / 규칙) cần máy chủ (server / 서버) dữ liệu (data / 데이터) hoặc async check không nên khối (block / 블록) theo cách giả định synchronous.
 
-## 12. Selection state không nên bị nhầm với data state
+## 12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)
 
-Grid có current row, selected rows, checked rows hoặc focus cell. Đây là interaction state, không phải business state.
+Grid có hiện tại (current / 현재) row, selected rows, checked rows hoặc focus cell. Đây là tương tác (interaction / 상호작용) trạng thái (state / 상태), không phải nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
-Nếu user tick checkbox để chọn row gửi batch operation, hãy phân biệt:
+Nếu người dùng (user / 사용자) tick checkbox để chọn row gửi batch thao tác (operation / 연산), hãy phân biệt:
 
 ```text
 selection checkbox do UI quản lý
@@ -210,23 +213,23 @@ BUSINESS_SELECTED_YN field thực sự cần persist
 
 Không nên persist UI selection chỉ vì nó tiện.
 
-## 13. Search lại sau save hay update local?
+## 13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?
 
 Sau save thành công, lựa chọn thường là:
 
-**Re-query**: server trả canonical state bằng query mới.
+**Re-query**: máy chủ (server / 서버) trả chuẩn gốc (canonical / 정본) trạng thái (state / 상태) bằng truy vấn (query / 쿼리) mới.
 
-**Local update**: giữ DataList, update server-generated field rồi reset dirty state.
+**cục bộ (local / 로컬) cập nhật (update / 업데이트)**: giữ DataList, cập nhật (update / 업데이트) server-generated trường dữ liệu (field / 필드) rồi reset dirty trạng thái (state / 상태).
 
-Re-query phù hợp khi server có sequence, timestamp, calculated field, trigger hoặc normalization. Local update phù hợp khi latency quan trọng và server contract trả đầy đủ canonical result.
+Re-query phù hợp khi máy chủ (server / 서버) có chuỗi (sequence / 시퀀스), timestamp, calculated trường dữ liệu (field / 필드), trigger hoặc normalization. cục bộ (local / 로컬) cập nhật (update / 업데이트) phù hợp khi độ trễ (latency / 지연 시간) quan trọng và máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) trả đầy đủ chuẩn gốc (canonical / 정본) kết quả (result / 결과).
 
-Không có lựa chọn luôn đúng. Hãy cân correctness, latency và complexity.
+Không có lựa chọn luôn đúng. Hãy cân tính đúng đắn (correctness / 정확성), độ trễ (latency / 지연 시간) và độ phức tạp (complexity / 복잡도).
 
 ## 14. Optimistic locking
 
-Nếu hai user cùng sửa một row, row status phía client không giải quyết conflict. Server cần concurrency control, ví dụ version column hoặc last-updated timestamp.
+Nếu hai người dùng (user / 사용자) cùng sửa một row, row status phía máy khách (client / 클라이언트) không giải quyết xung đột (conflict / 충돌). máy chủ (server / 서버) cần tính đồng thời (concurrency / 동시성) điều khiển (control / 제어), ví dụ phiên bản (version / 버전) column hoặc last-updated timestamp.
 
-Client gửi:
+Máy khách (client / 클라이언트) gửi:
 
 ```text
 USER_ID = U1001
@@ -234,28 +237,28 @@ VERSION = 7
 new NAME = ...
 ```
 
-Server update với condition `VERSION = 7`. Nếu affected rows = 0, có thể đã bị người khác sửa.
+Máy chủ (server / 서버) cập nhật (update / 업데이트) với điều kiện (condition / 조건) `VERSION = 7`. Nếu affected rows = 0, có thể đã bị người khác sửa.
 
-WebSquare chỉ là nơi transport/display conflict; invariant concurrency thuộc server/database.
+WebSquare chỉ là nơi vận chuyển (transport / 전송)/display xung đột (conflict / 충돌); bất biến (invariant / 불변식) tính đồng thời (concurrency / 동시성) thuộc máy chủ (server / 서버)/cơ sở dữ liệu (database / 데이터베이스).
 
 ## 15. Paging: client-side và server-side khác nhau
 
-Nếu server trả 20 row mỗi page, Grid chỉ biết page hiện tại. Sort/filter client-side chỉ áp dụng dataset hiện có trừ khi framework/pattern trigger server query.
+Nếu máy chủ (server / 서버) trả 20 row mỗi page, Grid chỉ biết page hiện tại. Sort/filter client-side chỉ áp dụng dataset hiện có trừ khi khung phần mềm (framework / 프레임워크)/mẫu (pattern / 패턴) trigger máy chủ (server / 서버) truy vấn (query / 쿼리).
 
-Nếu business yêu cầu sort toàn bộ 1 triệu row, server phải tham gia.
+Nếu nghiệp vụ (business / 비즈니스) yêu cầu sort toàn bộ 1 triệu row, máy chủ (server / 서버) phải tham gia.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 client paging → full dataset ở browser, view chia page
 server paging → browser chỉ có một slice
 ```
 
-Đừng viết logic “đếm toàn bộ” dựa trên `getRowCount()` nếu server paging đang bật.
+Đừng viết lô-gic (logic / 논리) “đếm toàn bộ” dựa trên `getRowCount()` nếu máy chủ (server / 서버) paging đang bật.
 
-## 16. Large dataset và rendering budget
+## 16. Large dataset và rendering ngân sách (budget / 예산)
 
-GridView hỗ trợ nhiều tính năng cho dữ liệu lớn, nhưng không có component nào miễn phí. Cost có thể đến từ:
+GridView hỗ trợ nhiều tính năng cho dữ liệu lớn, nhưng không có thành phần (component / 컴포넌트) nào miễn phí. chi phí (cost / 비용) có thể đến từ:
 
 ```text
 JSON parse
@@ -279,11 +282,11 @@ main-thread long tasks
 memory before/after load
 ```
 
-Nếu 50 MB JSON được trả về, virtual scroll không làm network và parse cost biến mất.
+Nếu 50 MB JSON được trả về, virtual scroll không làm mạng (network / 네트워크) và parse chi phí (cost / 비용) biến mất.
 
 ## 17. N+1 Submission ở từng row là anti-pattern
 
-Một màn hình load 100 row rồi gọi thêm một Submission cho mỗi row tạo N+1 network problem.
+Một màn hình tải (load / 로드) 100 row rồi gọi thêm một Submission cho mỗi row tạo N+1 mạng (network / 네트워크) bài toán (problem / 문제).
 
 ```text
 1 query list
@@ -291,23 +294,23 @@ Một màn hình load 100 row rồi gọi thêm một Submission cho mỗi row t
 = 101 request
 ```
 
-Nếu server có thể join/batch, ưu tiên batch contract. Nếu detail thật sự lazy, chỉ load khi user mở row cần thiết.
+Nếu máy chủ (server / 서버) có thể phép nối (join / 조인)/batch, ưu tiên batch đặc tả hợp đồng (contract / 계약). Nếu detail thật sự lazy, chỉ tải (load / 로드) khi người dùng (user / 사용자) mở row cần thiết.
 
-## 18. Custom formatting không nên chứa heavy business logic
+## 18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)
 
-Cell formatter/render callback có thể chạy rất nhiều lần. Nếu nó parse JSON lớn, gọi synchronous utility nặng hoặc query DOM, scrolling sẽ lag.
+Cell formatter/kết xuất (render / 렌더링) callback có thể chạy rất nhiều lần. Nếu nó parse JSON lớn, gọi synchronous utility nặng hoặc truy vấn (query / 쿼리) DOM, scrolling sẽ lag.
 
-Formatter nên gần pure function:
+Formatter nên gần pure hàm (function / 함수):
 
 ```text
 input value → display representation
 ```
 
-Business computation nên chuẩn bị trước ở model/server nếu phức tạp.
+Nghiệp vụ (business / 비즈니스) computation nên chuẩn bị trước ở mô hình (model / 모델)/máy chủ (server / 서버) nếu phức tạp.
 
-## 19. Excel upload/download là data boundary nguy hiểm
+## 19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm
 
-WebSquare hỗ trợ Grid/Excel integration ở nhiều build. Đây là feature tiện nhưng upload Excel đưa một khối dữ liệu không đáng tin vào client/server.
+WebSquare hỗ trợ Grid/Excel tích hợp (integration / 통합) ở nhiều bản dựng (build / 빌드). Đây là tính năng (feature / 기능) tiện nhưng upload Excel đưa một khối dữ liệu không đáng tin vào máy khách (client / 클라이언트)/máy chủ (server / 서버).
 
 Phải nghĩ đến:
 
@@ -323,21 +326,21 @@ transaction size
 partial failure reporting
 ```
 
-Upload thành Grid không đồng nghĩa data hợp lệ để persist.
+Upload thành Grid không đồng nghĩa dữ liệu (data / 데이터) hợp lệ để persist.
 
-## 20. Batch save và partial failure
+## 20. Batch save và partial thất bại (failure / 실패)
 
-Giả sử 100 row được save. Server có hai strategy:
+Giả sử 100 row được save. máy chủ (server / 서버) có hai chiến lược (strategy / 전략):
 
-**all-or-nothing transaction**: một row lỗi thì rollback tất cả.
+**all-or-nothing giao dịch (transaction / 트랜잭션)**: một row lỗi thì quay lui (rollback / 롤백) tất cả.
 
-**partial success**: row hợp lệ commit, row lỗi trả error riêng.
+**partial success**: row hợp lệ lần ghi nhận (commit / 커밋), row lỗi trả lỗi (error / 오류) riêng.
 
-Client UX phải phù hợp. Với partial success, DataList cần biết row nào đã commit và row nào còn dirty/error. Đây là protocol design, không chỉ Grid event.
+Máy khách (client / 클라이언트) UX phải phù hợp. Với partial success, DataList cần biết row nào đã lần ghi nhận (commit / 커밋) và row nào còn dirty/lỗi (error / 오류). Đây là giao thức (protocol / 프로토콜) thiết kế (design / 설계), không chỉ Grid sự kiện (event / 이벤트).
 
-## 21. Error mapping về row/cell
+## 21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell
 
-Server validation tốt nên trả stable identifier, ví dụ business key và field name, thay vì chỉ row index.
+Máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검증) tốt nên trả stable identifier, ví dụ nghiệp vụ (business / 비즈니스) key và trường dữ liệu (field / 필드) name, thay vì chỉ row chỉ mục (index / 인덱스).
 
 ```json
 {
@@ -351,11 +354,11 @@ Server validation tốt nên trả stable identifier, ví dụ business key và 
 }
 ```
 
-Row index trên client có thể thay đổi do sort/filter. Business key giúp map error ổn định hơn.
+Row chỉ mục (index / 인덱스) trên máy khách (client / 클라이언트) có thể thay đổi do sort/filter. nghiệp vụ (business / 비즈니스) key giúp map lỗi (error / 오류) ổn định hơn.
 
-## 22. Query condition state
+## 22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)
 
-Một bug UX phổ biến: user search A, sửa điều kiện thành B nhưng chưa search, rồi export Grid. Export nên dùng data result A, nhưng title/filter label lại đọc current input B.
+Một bug UX phổ biến: người dùng (user / 사용자) tìm kiếm (search / 검색) A, sửa điều kiện thành B nhưng chưa tìm kiếm (search / 검색), rồi export Grid. Export nên dùng dữ liệu (data / 데이터) kết quả (result / 결과) A, nhưng title/filter label lại đọc hiện tại (current / 현재) đầu vào (input / 입력) B.
 
 Có thể tách:
 
@@ -365,11 +368,11 @@ last executed search condition
 current result dataset
 ```
 
-Nếu report/export cần biết query đã chạy, snapshot condition khi execute Submission.
+Nếu report/export cần biết truy vấn (query / 쿼리) đã chạy, snapshot điều kiện (condition / 조건) khi execute Submission.
 
-## 23. UI mode: QUERY / EDIT / SAVE
+## 23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE
 
-Màn hình CRUD phức tạp nên explicit mode.
+Màn hình CRUD phức tạp nên tường minh (explicit / 명시적) chế độ (mode / 모드).
 
 ```javascript
 scwin.setMode = function (mode) {
@@ -381,23 +384,23 @@ scwin.setMode = function (mode) {
 };
 ```
 
-Mode giúp thống nhất enable/readOnly state của nhiều component thay vì rải property mutation khắp handlers.
+Chế độ (mode / 모드) giúp thống nhất enable/readOnly trạng thái (state / 상태) của nhiều thành phần (component / 컴포넌트) thay vì rải thuộc tính (property / 속성) mutation khắp handlers.
 
 ## 24. Unsaved-change guard
 
-Trước khi chuyển tab/page hoặc đóng popup, nếu DataList còn dirty, application nên quyết định có prompt user không.
+Trước khi chuyển tab/page hoặc đóng popup, nếu DataList còn dirty, ứng dụng (application / 애플리케이션) nên quyết định có prompt người dùng (user / 사용자) không.
 
-Dirty check phải dựa model state, không dựa “user đã click Edit”. User có thể click Edit nhưng không thay gì, hoặc data có thể bị script thay dù user không click Edit.
+Dirty check phải dựa mô hình (model / 모델) trạng thái (state / 상태), không dựa “người dùng (user / 사용자) đã click Edit”. người dùng (user / 사용자) có thể click Edit nhưng không thay gì, hoặc dữ liệu (data / 데이터) có thể bị script thay dù người dùng (user / 사용자) không click Edit.
 
-## 25. Grid event storm
+## 25. Grid sự kiện (event / 이벤트) storm
 
-Một bulk update có thể trigger rất nhiều event. Nếu mỗi event tính lại summary toàn dataset, complexity có thể từ O(n) thành O(n²).
+Một bulk cập nhật (update / 업데이트) có thể trigger rất nhiều sự kiện (event / 이벤트). Nếu mỗi sự kiện (event / 이벤트) tính lại summary toàn dataset, độ phức tạp (complexity / 복잡도) có thể từ O(n) thành O(n²).
 
-Ví dụ 10.000 cell changes × scan 10.000 rows là 100 triệu operation.
+Ví dụ 10.000 cell changes × scan 10.000 rows là 100 triệu thao tác (operation / 연산).
 
-Khi bulk update, xem build có cơ chế suspend event/redraw hay không; nếu không, thiết kế function tổng hợp để chỉ recalculate một lần sau batch.
+Khi bulk cập nhật (update / 업데이트), xem bản dựng (build / 빌드) có cơ chế suspend sự kiện (event / 이벤트)/redraw hay không; nếu không, thiết kế hàm (function / 함수) tổng hợp để chỉ recalculate một lần sau batch.
 
-## 26. Readability của grid code
+## 26. Readability của grid mã (code / 코드)
 
 Thay vì magic string rải rác:
 
@@ -406,7 +409,7 @@ dlUser.getCellData(i, "USR_NM");
 dlUser.getCellData(i, "USR_STS_CD");
 ```
 
-Project có thể dùng constant mapping nếu convention cho phép:
+Dự án (project / 프로젝트) có thể dùng constant ánh xạ (mapping / 매핑) nếu convention cho phép:
 
 ```javascript
 var USER_COL = {
@@ -416,7 +419,7 @@ var USER_COL = {
 };
 ```
 
-Tuy nhiên đừng abstraction quá mức khiến dev phải nhảy 5 file mới biết column ID. Mục tiêu là giảm typo và giữ domain vocabulary rõ.
+Tuy nhiên đừng lớp trừu tượng (abstraction / 추상화) quá mức khiến dev phải nhảy 5 tệp (file / 파일) mới biết column ID. Mục tiêu là giảm typo và giữ lĩnh vực (domain / 도메인) vocabulary rõ.
 
 ## 27. Example: search-edit-save hoàn chỉnh
 
@@ -460,30 +463,32 @@ scwin.saveUsers = function () {
 };
 ```
 
-Tên API DataMap như `getJSON()` phải được đối chiếu build nếu dùng thực tế; ví dụ này nhấn mạnh orchestration structure hơn là reference API tuyệt đối.
+Tên API DataMap như `getJSON()` phải được đối chiếu bản dựng (build / 빌드) nếu dùng thực tế; ví dụ này nhấn mạnh orchestration cấu trúc (structure / 구조) hơn là tham chiếu (reference / 참조) API tuyệt đối.
 
-## 28. Senior code-review checklist
+## 28. cấp cao (senior / 시니어) code-review checklist
 
-Khi review Grid screen, hỏi:
+Khi rà soát (review / 검토) Grid screen, hỏi:
 
-“Code đang thao tác model hay DOM/Grid internals?”
+“mã (code / 코드) đang thao tác mô hình (model / 모델) hay DOM/Grid internals?”
 
-“Row index có bị giữ quá lâu thay vì business key?”
+“Row chỉ mục (index / 인덱스) có bị giữ quá lâu thay vì nghiệp vụ (business / 비즈니스) key?”
 
-“Delete semantics có đúng với server operation không?”
+“Delete ngữ nghĩa (semantics / 의미론) có đúng với máy chủ (server / 서버) thao tác (operation / 연산) không?”
 
-“Dirty check dựa row state thật hay flag thủ công?”
+“Dirty check dựa row trạng thái (state / 상태) thật hay flag thủ công?”
 
-“Validation có scan toàn bộ grid không cần thiết?”
+“kiểm tra hợp lệ (validation / 검증) có scan toàn bộ grid không cần thiết?”
 
 “Có N+1 Submission không?”
 
-“Server paging nhưng code lại giả định full dataset không?”
+“máy chủ (server / 서버) paging nhưng mã (code / 코드) lại giả định full dataset không?”
 
-“Batch save có protocol partial failure rõ không?”
+“Batch save có giao thức (protocol / 프로토콜) partial thất bại (failure / 실패) rõ không?”
 
-“Sau save client lấy canonical state từ đâu?”
+“Sau save máy khách (client / 클라이언트) lấy chuẩn gốc (canonical / 정본) trạng thái (state / 상태) từ đâu?”
 
 ## 29. Kết nối
 
-Một Grid screen đúng logic vẫn có thể chậm, leak memory hoặc tạo security issue. Tiếp theo: [06 — Debugging, Performance, Security & Production](06_debugging_performance_security.md).
+Một Grid screen đúng lô-gic (logic / 논리) vẫn có thể chậm, leak bộ nhớ (memory / 메모리) hoặc tạo bảo mật (security / 보안) issue. Tiếp theo: [06 — Debugging, Performance, Security & Production](06_debugging_performance_security.md).
+
+> **Bàn giao:** Sau **29. Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

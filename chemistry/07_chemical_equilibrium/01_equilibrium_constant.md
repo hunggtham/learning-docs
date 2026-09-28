@@ -1,5 +1,8 @@
 # Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học
 
+> **Mạch đọc:** Đọc **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ thế hóa học tới K** sang **Vì sao hoạt độ quan trọng hơn nồng độ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hằng số cân bằng (equilibrium constant, \(K\) / 평형 상수)** định lượng tỉ lệ hoạt độ của sản phẩm và chất phản ứng tại cân bằng cho một phương trình phản ứng được viết theo một dạng stoichiometric cụ thể và tại một nhiệt độ xác định.
 
 Điểm quan trọng là `K` không phải một “con số ma thuật của phản ứng”. Nó là kết quả của chênh lệch **thế hóa học chuẩn** giữa hai phía, và nó chỉ có ý nghĩa khi phương trình phản ứng, trạng thái chuẩn và nhiệt độ đã được xác định rõ.
@@ -464,11 +467,11 @@ Với:
 
 thay vào ta thu được biểu thức `Q=K`.
 
-Do đó hằng số cân bằng không phải quy tắc riêng biệt; nó là hệ quả trực tiếp của việc **Gibbs free energy đạt cực tiểu dưới các ràng buộc**.
+Do đó hằng số cân bằng không phải quy tắc riêng biệt; nó là hệ quả trực tiếp của việc **Gibbs free năng lượng (energy / 에너지) đạt cực tiểu dưới các ràng buộc**.
 
 ## Cân bằng hóa học và tối thiểu Gibbs
 
-Trong hệ nhiều phản ứng, thay vì viết từng `K`, một cách tương đương là tối thiểu hóa tổng Gibbs free energy với các ràng buộc bảo toàn nguyên tố.
+Trong hệ nhiều phản ứng, thay vì viết từng `K`, một cách tương đương là tối thiểu hóa tổng Gibbs free năng lượng (energy / 에너지) với các ràng buộc bảo toàn nguyên tố.
 
 Cách này đặc biệt hữu ích trong:
 
@@ -508,6 +511,8 @@ Không. Proton hóa, tạo phức hoặc phản ứng phụ có thể kéo cân 
 
 ## Mô hình tư duy
 
-`K` là **tọa độ nhiệt động của cân bằng trên địa hình Gibbs free energy**. Trong hệ đơn giản, nó cho tỉ lệ hoạt độ ở cân bằng. Trong hệ thật, nhiều `K` kết nối thành một mạng và cùng với bảo toàn vật chất + điện tích quyết định phân bố species. Vì vậy học `K` tốt nhất không phải là học từng công thức riêng, mà là học cách xây và giải một mạng cân bằng.
+`K` là **tọa độ nhiệt động của cân bằng trên địa hình Gibbs free năng lượng (energy / 에너지)**. Trong hệ đơn giản, nó cho tỉ lệ hoạt độ ở cân bằng. Trong hệ thật, nhiều `K` kết nối thành một mạng và cùng với bảo toàn vật chất + điện tích quyết định phân bố species. Vì vậy học `K` tốt nhất không phải là học từng công thức riêng, mà là học cách xây và giải một mạng cân bằng.
 
 Xem tiếp: [Thương số phản ứng](./02_reaction_quotient.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

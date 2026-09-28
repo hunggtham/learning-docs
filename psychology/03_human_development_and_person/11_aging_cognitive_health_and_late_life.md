@@ -1,5 +1,8 @@
 # Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강
 
+> **Mạch đọc:** Đọc **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tuổi theo lịch không nói hết toàn bộ câu chuyện** sang **Tốc độ xử lý — processing speed**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Lão hóa (aging / 노화) không phải một quá trình suy giảm đồng loạt. Các hệ sinh học, nhận thức và xã hội thay đổi theo những quỹ đạo khác nhau. Một số năng lực giảm dần, một số tương đối ổn định, còn những năng lực dựa nhiều vào kinh nghiệm và tri thức tích lũy có thể duy trì tốt trong thời gian dài.
 
 Vì vậy, câu hỏi hữu ích không phải là “tuổi cao làm con người kém đi bao nhiêu?”, mà là **hệ chức năng nào đang thay đổi, trong bối cảnh sức khỏe và môi trường nào, và khả năng thích nghi còn lại ra sao?**
@@ -49,9 +52,9 @@ Xem [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_e
 
 ## Chuyên môn có thể bù cho tốc độ
 
-Chuyên môn sâu tạo ra schema giúp nhận diện pattern nhanh mà không cần xử lý mọi chi tiết từ đầu. Một chuyên gia lớn tuổi có thể xử lý thông tin thô chậm hơn trước, nhưng lại biết rất nhanh **phần nào đáng chú ý**.
+Chuyên môn sâu tạo ra lược đồ (schema / 스키마) giúp nhận diện mẫu (pattern / 패턴) nhanh mà không cần xử lý mọi chi tiết từ đầu. Một chuyên gia lớn tuổi có thể xử lý thông tin thô chậm hơn trước, nhưng lại biết rất nhanh **phần nào đáng chú ý**.
 
-Vì vậy hiệu suất thực tế không thể suy ra chỉ từ một bài kiểm tra reaction time.
+Vì vậy hiệu suất thực tế không thể suy ra chỉ từ một bài kiểm tra reaction thời gian (time / 시간).
 
 ## Năng lực linh hoạt và năng lực kết tinh
 
@@ -59,11 +62,11 @@ Vì vậy hiệu suất thực tế không thể suy ra chỉ từ một bài ki
 
 **Năng lực kết tinh (crystallized ability)** liên quan đến tri thức và kỹ năng tích lũy.
 
-Fluid ability thường suy giảm sớm hơn, còn crystallized ability có thể ổn định lâu hơn. Tuy nhiên đây là abstraction; các nhiệm vụ đời thực thường dùng cả hai loại năng lực cùng lúc.
+Fluid ability thường suy giảm sớm hơn, còn crystallized ability có thể ổn định lâu hơn. Tuy nhiên đây là lớp trừu tượng (abstraction / 추상화); các nhiệm vụ đời thực thường dùng cả hai loại năng lực cùng lúc.
 
 ## Suy giảm giác quan có thể trông giống suy giảm nhận thức
 
-Thính lực hoặc thị lực kém làm input khó xử lý hơn, tăng tải nhận thức và có thể khiến kết quả bài test trông thấp hơn.
+Thính lực hoặc thị lực kém làm đầu vào (input / 입력) khó xử lý hơn, tăng tải nhận thức và có thể khiến kết quả bài kiểm thử (test / 테스트) trông thấp hơn.
 
 Một người không nghe rõ hướng dẫn có thể bị hiểu nhầm là “không nhớ được”. Vì vậy assessment tốt cần xem cả sensory status.
 
@@ -131,13 +134,13 @@ Việc rà soát medication cần được thực hiện cùng clinician; không
 
 Stereotype về tuổi có thể ảnh hưởng tuyển dụng, kỳ vọng và self-perception.
 
-Nếu cùng một lỗi nhỏ nhưng lỗi của người trẻ được xem là “bất cẩn” còn lỗi của người lớn tuổi bị gán thành “suy giảm trí nhớ”, đánh giá đã bị bias.
+Nếu cùng một lỗi nhỏ nhưng lỗi của người trẻ được xem là “bất cẩn” còn lỗi của người lớn tuổi bị gán thành “suy giảm trí nhớ”, đánh giá đã bị độ lệch (bias / 편향).
 
 Trong một số bối cảnh, stereotype threat cũng có thể ảnh hưởng kết quả bài kiểm tra nhận thức.
 
-## Socioemotional Selectivity Theory
+## Socioemotional Selectivity lý thuyết (theory / 이론)
 
-Lý thuyết này đề xuất rằng khi một người cảm nhận time horizon ngắn hơn, goal có thể chuyển từ exploration sang những relationship và hoạt động có ý nghĩa cảm xúc cao hơn.
+Lý thuyết này đề xuất rằng khi một người cảm nhận thời gian (time / 시간) horizon ngắn hơn, goal có thể chuyển từ exploration sang những relationship và hoạt động có ý nghĩa cảm xúc cao hơn.
 
 Điều này giúp giải thích vì sao mạng lưới xã hội có thể nhỏ hơn theo tuổi nhưng chất lượng relationship vẫn cao.
 
@@ -145,7 +148,7 @@ Không phải người già “mất hứng thú xã hội”; priority có th�
 
 ## Nghỉ hưu
 
-Retirement có thể là relief, loss hoặc cả hai. Công việc không chỉ cung cấp income mà còn cho structure, identity, social contact và meaning.
+Retirement có thể là relief, mất mát (loss / 손실) hoặc cả hai. Công việc không chỉ cung cấp income mà còn cho cấu trúc (structure / 구조), định danh (identity / 식별자), xã hội (social / 사회적) contact và meaning.
 
 Chuyển tiếp tốt cần thay thế một số chức năng đó, không chỉ chuẩn bị tài chính.
 
@@ -153,7 +156,7 @@ Xem [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]]
 
 ## Đau buồn và mất mát
 
-Tuổi già thường đi kèm nhiều mất mát: partner, friend, role hoặc physical ability.
+Tuổi già thường đi kèm nhiều mất mát: partner, friend, role hoặc vật lý (physical / 물리적) ability.
 
 Grief không nên bị bệnh lý hóa tự động. Tuy nhiên nếu impairment kéo dài và sâu, cần được đánh giá trong bối cảnh cụ thể.
 
@@ -167,27 +170,27 @@ Care tốt phải cân bằng **an toàn** và **quyền tự chủ**.
 
 ## Công nghệ và tuổi
 
-Kỹ năng số không cố định theo tuổi. Training, thiết kế giao diện và kinh nghiệm trước đó ảnh hưởng mạnh đến adoption.
+Kỹ năng số không cố định theo tuổi. huấn luyện (training / 학습), thiết kế giao diện và kinh nghiệm trước đó ảnh hưởng mạnh đến adoption.
 
-Thiết kế tốt cho người lớn tuổi thường cũng tốt cho nhiều người khác: chữ rõ, độ tương phản tốt, error recovery dễ và giảm gánh nặng trí nhớ.
+Thiết kế tốt cho người lớn tuổi thường cũng tốt cho nhiều người khác: chữ rõ, độ tương phản tốt, lỗi (error / 오류) khôi phục (recovery / 복구) dễ và giảm gánh nặng trí nhớ.
 
-## Brain training
+## Brain huấn luyện (training / 학습)
 
-Các trò chơi luyện não thương mại thường tạo **near transfer** tốt hơn **far transfer**. Luyện một task giúp giỏi task đó hơn không đồng nghĩa trí thông minh tổng quát tăng mạnh.
+Các trò chơi luyện não thương mại thường tạo **near transfer** tốt hơn **far transfer**. Luyện một tác vụ (task / 작업) giúp giỏi tác vụ (task / 작업) đó hơn không đồng nghĩa trí thông minh tổng quát tăng mạnh.
 
 Một lối sống đa thành phần thường hợp lý hơn claim rằng một app đơn lẻ có thể ngăn lão hóa nhận thức.
 
 ## Những hiểu lầm phổ biến
 
-**“Già là phải suy giảm trí tuệ.”** Một số function giảm, nhiều function khác ổn định hoặc dựa mạnh vào kinh nghiệm.
+**“Già là phải suy giảm trí tuệ.”** Một số hàm (function / 함수) giảm, nhiều hàm (function / 함수) khác ổn định hoặc dựa mạnh vào kinh nghiệm.
 
-**“Hay quên nghĩa là dementia.”** Stress, thiếu ngủ, chú ý kém và lão hóa bình thường đều có thể ảnh hưởng memory.
+**“Hay quên nghĩa là dementia.”** Stress, thiếu ngủ, chú ý kém và lão hóa bình thường đều có thể ảnh hưởng bộ nhớ (memory / 메모리).
 
-**“Brain game phòng dementia.”** Evidence về far transfer còn hạn chế.
+**“Brain game phòng dementia.”** bằng chứng (evidence / 증거) về far transfer còn hạn chế.
 
-**“Người già không học được công nghệ.”** Học vẫn có thể diễn ra; design và support rất quan trọng.
+**“Người già không học được công nghệ.”** Học vẫn có thể diễn ra; thiết kế (design / 설계) và hỗ trợ (support / 지원) rất quan trọng.
 
-## Mental model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 lão hóa sinh học
@@ -203,3 +206,5 @@ lão hóa sinh học
 ## Kết nối kiến thức
 
 Xem [[00_lifespan_development]], [[12_loneliness_social_connection_and_belonging]], [[../02_learning_and_cognition/01_memory]], [[../01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]], [[../04_mental_health/09_grief_loss_and_bereavement]] và [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

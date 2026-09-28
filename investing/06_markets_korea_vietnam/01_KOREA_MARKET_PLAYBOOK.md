@@ -1,5 +1,8 @@
 # Cẩm nang phân tích thị trường Hàn Quốc
 
+> **Mạch đọc:** Đặt **Cẩm nang phân tích thị trường Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. KRX, KOSPI và KOSDAQ** sang **2. KOSPI 200**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Hàn Quốc là thị trường cổ phiếu phát triển có mức kết nối rất cao với xuất khẩu, bán dẫn, USD và dòng vốn toàn cầu. Mục tiêu của tài liệu này là giúp người đọc phân tích **thị trường Hàn Quốc như một hệ thống**, không chỉ theo dõi KOSPI hay Samsung Electronics. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng tên chỉ số và viết tắt chuẩn.
 
 > **Dữ liệu động:** quy định bán khống, chu kỳ thanh toán, thuế, giờ giao dịch, thành phần chỉ số và quy tắc sản phẩm có thể thay đổi. Khi áp dụng thực tế phải kiểm tra KRX, FSC/FSS, BOK hoặc nguồn chính thức tương ứng.
@@ -279,7 +282,7 @@ Theo dõi:
 - lao động;
 - tỷ giá;
 - lịch giao hàng;
-- cơ cấu LNG, container, quốc phòng.
+- cơ cấu LNG, bộ chứa (container / 컨테이너), quốc phòng.
 
 Sổ đơn hàng lớn phải được đánh giá cùng biên lợi nhuận của hợp đồng đã ký.
 
@@ -514,3 +517,5 @@ Thương mại toàn cầu
 ```
 
 Không nên dùng một tiêu đề tin tức về Fed, Trung Quốc hay bán dẫn để kết luận toàn bộ thị trường. Luôn theo dõi cơ chế truyền dẫn tới từng ngành và từng bảng cân đối doanh nghiệp.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

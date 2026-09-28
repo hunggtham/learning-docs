@@ -1,9 +1,12 @@
 # Tính đúng đắn và bất biến của thuật toán
-**Algorithm Correctness & Invariants / 알고리즘 정확성과 불변식**
+
+> **Mạch đọc:** Đọc **Tính đúng đắn và bất biến của thuật toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Trước khi chứng minh phải có specification** sang **Điều kiện trước và điều kiện sau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**thuật toán (algorithm / 알고리즘) tính đúng đắn (correctness / 정확성) & Invariants / 알고리즘 정확성과 불변식**
 
 Một thuật toán nhanh nhưng sai không có giá trị. Kiểm thử chỉ chứng minh chương trình hoạt động đúng trên những trường hợp đã chạy; nó không tự chứng minh rằng thuật toán đúng với mọi đầu vào hợp lệ. Vì vậy, một năng lực trung tâm của DSA là **lập luận về tính đúng đắn (correctness reasoning)**: biết mình được phép giả định điều gì, điều gì phải luôn đúng trong quá trình chạy, vì sao thuật toán tiến về điểm dừng và vì sao trạng thái cuối bắt buộc thỏa yêu cầu.
 
-Chứng minh không nhất thiết phải là một văn bản toán học dài. Trong thực hành, chỉ cần xác định đúng specification, invariant và progress measure thường đã đủ biến một đoạn code khó tin thành một chuỗi lập luận có thể kiểm tra.
+Chứng minh không nhất thiết phải là một văn bản toán học dài. Trong thực hành, chỉ cần xác định đúng specification, bất biến (invariant / 불변식) và progress measure thường đã đủ biến một đoạn mã (code / 코드) khó tin thành một chuỗi lập luận có thể kiểm tra.
 
 ## Trước khi chứng minh phải có specification
 
@@ -20,7 +23,7 @@ tie-breaking nếu có
 hành vi với input không hợp lệ
 ```
 
-Ví dụ “binary search” có thể có nhiều specification khác nhau:
+Ví dụ “tìm kiếm nhị phân (binary search / 이진 탐색)” có thể có nhiều specification khác nhau:
 
 ```text
 trả một vị trí bất kỳ chứa target
@@ -29,7 +32,7 @@ trả lower_bound
 trả insertion point nếu không có target
 ```
 
-Tên thuật toán giống nhau nhưng điều kiện sau khác nhau, nên bất biến và code cũng khác nhau.
+Tên thuật toán giống nhau nhưng điều kiện sau khác nhau, nên bất biến và mã (code / 코드) cũng khác nhau.
 
 ## Điều kiện trước và điều kiện sau
 
@@ -42,7 +45,7 @@ sorted(output)
 multiset(output) = multiset(left) ∪ multiset(right)
 ```
 
-Nếu chỉ chứng minh thứ tự mà không chứng minh bảo toàn phần tử, một implementation làm mất hoặc nhân đôi dữ liệu vẫn có thể vượt qua nửa đầu specification.
+Nếu chỉ chứng minh thứ tự mà không chứng minh bảo toàn phần tử, một hiện thực (implementation / 구현) làm mất hoặc nhân đôi dữ liệu vẫn có thể vượt qua nửa đầu specification.
 
 ## Hoare triple: cách viết hợp đồng ngắn gọn
 
@@ -62,22 +65,22 @@ binarySearch(a, x)
 { trả vị trí hợp lệ của x hoặc xác nhận x không tồn tại }
 ```
 
-Ta không cần formal verification hoàn chỉnh để hưởng lợi từ cách nghĩ này. Nó buộc ta tách rõ “được giả định gì” và “phải bảo đảm gì”.
+Ta không cần formal xác minh (verification / 확인) hoàn chỉnh để hưởng lợi từ cách nghĩ này. Nó buộc ta tách rõ “được giả định gì” và “phải bảo đảm gì”.
 
-## Partial correctness và total correctness
+## Partial tính đúng đắn (correctness / 정확성) và total tính đúng đắn (correctness / 정확성)
 
 **Tính đúng đắn từng phần (partial correctness)** nói rằng: nếu thuật toán kết thúc thì kết quả đúng.
 
-**Tính đúng đắn toàn phần (total correctness)** thêm yêu cầu thuật toán thực sự kết thúc trên mọi input hợp lệ.
+**Tính đúng đắn toàn phần (total correctness)** thêm yêu cầu thuật toán thực sự kết thúc trên mọi đầu vào (input / 입력) hợp lệ.
 
-Một vòng lặp có thể giữ invariant hoàn hảo nhưng không thu nhỏ không gian tìm kiếm, dẫn tới chạy vô hạn. Vì vậy chứng minh loop thường cần hai phần:
+Một vòng lặp có thể giữ bất biến (invariant / 불변식) hoàn hảo nhưng không thu nhỏ không gian tìm kiếm, dẫn tới chạy vô hạn. Vì vậy chứng minh vòng lặp (loop / 루프) thường cần hai phần:
 
 ```text
 safety: invariant luôn đúng
 progress: một đại lượng tiến dần về điểm dừng
 ```
 
-Đại lượng dùng để chứng minh tiến triển thường gọi là **variant** hoặc **ranking function**.
+Đại lượng dùng để chứng minh tiến triển thường gọi là **variant** hoặc **ranking hàm (function / 함수)**.
 
 ## Bất biến vòng lặp
 
@@ -91,11 +94,11 @@ Maintenance: nếu invariant đúng trước vòng hiện tại, thân vòng gi�
 Termination: invariant + điều kiện dừng suy ra postcondition.
 ```
 
-### Ví dụ: binary search
+### Ví dụ: tìm kiếm nhị phân (binary search / 이진 탐색)
 
-Với đoạn ứng viên `[lo, hi]`, invariant có thể là:
+Với đoạn ứng viên `[lo, hi]`, bất biến (invariant / 불변식) có thể là:
 
-> Nếu target tồn tại thì mọi vị trí còn có khả năng chứa target đều nằm trong `[lo, hi]`.
+> Nếu mục tiêu (target / 대상) tồn tại thì mọi vị trí còn có khả năng chứa mục tiêu (target / 대상) đều nằm trong `[lo, hi]`.
 
 ```c
 int binary_search(const int *a, int n, int target) {
@@ -117,11 +120,11 @@ Nếu `a[mid] < target`, tính sorted cho phép loại toàn bộ `[lo, mid]`. K
 
 Progress measure là độ dài đoạn ứng viên. Mỗi vòng không trả kết quả đều làm đoạn ngắn hơn, nên thuật toán kết thúc.
 
-## Invariant phải đủ mạnh nhưng không quá khó duy trì
+## Bất biến (invariant / 불변식) phải đủ mạnh nhưng không quá khó duy trì
 
-Một câu kiểu “mảng đang được xử lý đúng” không giúp chứng minh điều gì. Invariant tốt phải đủ mạnh để suy ra postcondition, nhưng đủ đơn giản để chứng minh maintenance.
+Một câu kiểu “mảng đang được xử lý đúng” không giúp chứng minh điều gì. bất biến (invariant / 불변식) tốt phải đủ mạnh để suy ra postcondition, nhưng đủ đơn giản để chứng minh maintenance.
 
-Insertion Sort có invariant mạnh:
+Insertion Sort có bất biến (invariant / 불변식) mạnh:
 
 > Trước vòng `i`, đoạn `a[0..i)` đã sorted và chứa đúng đa tập phần tử ban đầu của đoạn đó.
 
@@ -138,15 +141,15 @@ Nếu thiếu conservation, ta chưa chứng minh thuật toán không làm mấ
 
 Nhiều thuật toán mutate dữ liệu, nên cần theo dõi cái gì phải được bảo toàn.
 
-Sorting bảo toàn đa tập phần tử. Heap giữ toàn bộ phần tử ngoài đúng phần tử vừa chèn/xóa. DSU bảo toàn partition của tập phần tử. Graph traversal phải bảo đảm mọi trạng thái được đánh dấu thực sự reachable từ nguồn theo quy tắc transition.
+Sorting bảo toàn đa tập phần tử. vùng nhớ động (heap / 힙) giữ toàn bộ phần tử ngoài đúng phần tử vừa chèn/xóa. DSU bảo toàn partition của tập phần tử. đồ thị (graph / 그래프) traversal phải bảo đảm mọi trạng thái được đánh dấu thực sự reachable từ nguồn theo quy tắc chuyển tiếp (transition / 전이).
 
-Một validator tốt hiếm khi chỉ kiểm tra một property.
+Một validator tốt hiếm khi chỉ kiểm tra một thuộc tính (property / 속성).
 
-## Representation invariant của cấu trúc dữ liệu
+## Biểu diễn (representation / 표현) bất biến (invariant / 불변식) của cấu trúc dữ liệu
 
 Cấu trúc dữ liệu thường có **bất biến biểu diễn (representation invariant)** mạnh hơn postcondition của từng thao tác.
 
-Ví dụ Binary Heap:
+Ví dụ nhị phân (binary / 이진) vùng nhớ động (heap / 힙):
 
 ```text
 shape là complete binary tree
@@ -154,9 +157,9 @@ size phù hợp vùng hợp lệ của mảng
 heap order đúng trên mọi cạnh cha-con
 ```
 
-Red-Black Tree có thêm các bất biến về màu và black-height. Hash Table phải giữ quan hệ giữa trạng thái slot, số phần tử và quy tắc probing. Doubly Linked List phải giữ `next/prev` đối xứng.
+Red-Black cây (tree / 트리) có thêm các bất biến về màu và black-height. bảng băm (hash table / 해시 테이블) phải giữ quan hệ giữa trạng thái slot, số phần tử và quy tắc probing. Doubly Linked danh sách (list / 목록) phải giữ `next/prev` đối xứng.
 
-Mỗi thao tác public có thể được xem như:
+Mỗi thao tác công khai (public / 공개) có thể được xem như:
 
 ```text
 representation invariant trước thao tác
@@ -166,11 +169,11 @@ thao tác
 representation invariant sau thao tác
 ```
 
-Nếu invariant được phục hồi trước khi API trả về, các thao tác sau có thể tiếp tục dựa trên nó.
+Nếu bất biến (invariant / 불변식) được phục hồi trước khi API trả về, các thao tác sau có thể tiếp tục dựa trên nó.
 
 ## Bất biến cục bộ và bất biến toàn cục
 
-Một số invariant có thể kiểm tra cục bộ. Heap order chỉ cần so mỗi cha với con. Nhưng BST không thể chỉ kiểm tra `left < parent < right` ở mỗi cạnh; một khóa sâu trong cây con trái vẫn phải nhỏ hơn toàn bộ cận trên từ tổ tiên.
+Một số bất biến (invariant / 불변식) có thể kiểm tra cục bộ. vùng nhớ động (heap / 힙) thứ tự (order / 순서) chỉ cần so mỗi cha với con. Nhưng BST không thể chỉ kiểm tra `left < parent < right` ở mỗi cạnh; một khóa sâu trong cây con trái vẫn phải nhỏ hơn toàn bộ cận trên từ tổ tiên.
 
 Do đó validator BST nên truyền khoảng hợp lệ xuống:
 
@@ -178,17 +181,17 @@ Do đó validator BST nên truyền khoảng hợp lệ xuống:
 node.key ∈ (lowerBound, upperBound)
 ```
 
-Đây là bài học tổng quát: **local consistency không luôn suy ra global correctness**.
+Đây là bài học tổng quát: **cục bộ (local / 로컬) consistency không luôn suy ra toàn cục (global / 전역) tính đúng đắn (correctness / 정확성)**.
 
-## Ghost state: thông tin dùng để chứng minh nhưng không cần lưu trong runtime
+## Ghost trạng thái (state / 상태): thông tin dùng để chứng minh nhưng không cần lưu trong thời gian chạy (runtime / 런타임)
 
-Khi reasoning, ta có thể dùng thông tin phụ không tồn tại trong implementation. Đây thường được gọi là **ghost state** trong formal methods.
+Khi lập luận (reasoning / 추론), ta có thể dùng thông tin phụ không tồn tại trong hiện thực (implementation / 구현). Đây thường được gọi là **ghost trạng thái (state / 상태)** trong formal methods.
 
-Ví dụ khi chứng minh sorting, ta có thể tưởng tượng một bản sao multiset của input ban đầu để chứng minh conservation, dù code thực tế không lưu bản sao đó.
+Ví dụ khi chứng minh sorting, ta có thể tưởng tượng một bản sao multiset của đầu vào (input / 입력) ban đầu để chứng minh conservation, dù mã (code / 코드) thực tế không lưu bản sao đó.
 
-Trong BFS, ta có thể reasoning bằng “khoảng cách thật ngắn nhất” `δ(s,v)` dù implementation chỉ lưu `dist[v]`.
+Trong BFS, ta có thể lập luận (reasoning / 추론) bằng “khoảng cách thật ngắn nhất” `δ(s,v)` dù hiện thực (implementation / 구현) chỉ lưu `dist[v]`.
 
-Ghost state giúp tách “thông tin cần để chứng minh” khỏi “thông tin cần để chạy hiệu quả”.
+Ghost trạng thái (state / 상태) giúp tách “thông tin cần để chứng minh” khỏi “thông tin cần để chạy hiệu quả”.
 
 ## Quy nạp và đệ quy
 
@@ -206,13 +209,13 @@ Với cây, **quy nạp cấu trúc (structural induction)** còn tự nhiên h�
 
 ## Quy nạp mạnh
 
-Dynamic Programming thường cần **quy nạp mạnh (strong induction)** vì trạng thái hiện tại có thể phụ thuộc nhiều trạng thái nhỏ hơn, không chỉ đúng một trạng thái `n-1`.
+Động (dynamic / 동적) Programming thường cần **quy nạp mạnh (strong induction)** vì trạng thái hiện tại có thể phụ thuộc nhiều trạng thái nhỏ hơn, không chỉ đúng một trạng thái `n-1`.
 
-Bottom-up DP về bản chất thực thi đúng thứ tự chứng minh: mọi prerequisite được tính trước khi transition hiện tại dùng tới chúng.
+Bottom-up DP về bản chất thực thi đúng thứ tự chứng minh: mọi prerequisite được tính trước khi chuyển tiếp (transition / 전이) hiện tại dùng tới chúng.
 
 ## Hợp đồng của hàm đệ quy
 
-Khi debug recursion, thay vì mô phỏng toàn bộ call tree, hãy viết contract cho một lời gọi.
+Khi gỡ lỗi (debug / 디버그) recursion, thay vì mô phỏng toàn bộ lời gọi (call / 호출) cây (tree / 트리), hãy viết đặc tả hợp đồng (contract / 계약) cho một lời gọi.
 
 Ví dụ:
 
@@ -221,11 +224,11 @@ solve(state) trả giá trị tối ưu đạt được từ state trở đi,
 và khi trả về thì global mutable state đã được phục hồi như trước lời gọi.
 ```
 
-Trong backtracking, phần “phục hồi state” là cực kỳ quan trọng. Nếu `choose -> recurse -> unchoose` không đối xứng, lời gọi anh em có thể nhìn thấy trạng thái rác.
+Trong backtracking, phần “phục hồi trạng thái (state / 상태)” là cực kỳ quan trọng. Nếu `choose -> recurse -> unchoose` không đối xứng, lời gọi anh em có thể nhìn thấy trạng thái rác.
 
 ## Chứng minh termination cho đệ quy
 
-Có base case chưa đủ. Đối số đệ quy phải tiến gần base case theo một well-founded order.
+Có cơ sở (base / 기반) trường hợp (case / 사례) chưa đủ. Đối số đệ quy phải tiến gần cơ sở (base / 기반) trường hợp (case / 사례) theo một well-founded thứ tự (order / 순서).
 
 Ví dụ:
 
@@ -236,7 +239,7 @@ chiều sâu còn lại giảm dần
 kích thước cây con nhỏ hơn cây cha
 ```
 
-Nếu recursion có thể quay lại trạng thái cũ mà không có visited/memoization hoặc progress metric, termination chưa được chứng minh.
+Nếu recursion có thể quay lại trạng thái cũ mà không có visited/memoization hoặc progress chỉ số (metric / 지표), termination chưa được chứng minh.
 
 ## Greedy và exchange argument
 
@@ -257,15 +260,15 @@ Trong interval scheduling, chọn interval kết thúc sớm nhất là an toàn
 
 “Có vẻ hợp lý” không phải chứng minh greedy.
 
-## Cut property và cycle property
+## Cut thuộc tính (property / 속성) và cycle thuộc tính (property / 속성)
 
-Minimum Spanning Tree có các mẫu chứng minh riêng nhưng rất tái sử dụng.
+Minimum Spanning cây (tree / 트리) có các mẫu chứng minh riêng nhưng rất tái sử dụng.
 
-**Cut property** nói rằng dưới điều kiện phù hợp, cạnh nhẹ nhất cắt qua một cut là cạnh an toàn để thêm vào một MST.
+**Cut thuộc tính (property / 속성)** nói rằng dưới điều kiện phù hợp, cạnh nhẹ nhất cắt qua một cut là cạnh an toàn để thêm vào một MST.
 
-**Cycle property** cho góc nhìn đối ngược: trong một cycle, một cạnh nặng nhất thích hợp có thể bị loại khỏi một MST nào đó.
+**Cycle thuộc tính (property / 속성)** cho góc nhìn đối ngược: trong một cycle, một cạnh nặng nhất thích hợp có thể bị loại khỏi một MST nào đó.
 
-Kruskal và Prim có implementation khác nhau nhưng đều dựa vào cấu trúc chứng minh này.
+Kruskal và Prim có hiện thực (implementation / 구현) khác nhau nhưng đều dựa vào cấu trúc chứng minh này.
 
 ## Proof by contradiction
 
@@ -277,13 +280,13 @@ Lập luận này đồng thời chỉ ra vì sao cạnh âm phá điều kiện
 
 ## Chứng minh bằng cực trị
 
-Một kỹ thuật khác là chọn “phản ví dụ nhỏ nhất”, “đỉnh đầu tiên vi phạm” hoặc “thời điểm đầu tiên invariant bị phá”.
+Một kỹ thuật khác là chọn “phản ví dụ nhỏ nhất”, “đỉnh đầu tiên vi phạm” hoặc “thời điểm đầu tiên bất biến (invariant / 불변식) bị phá”.
 
-Giả sử một property đúng ban đầu nhưng cuối cùng sai. Xét bước đầu tiên nó trở thành sai. Ngay trước bước đó property còn đúng, nên ta chỉ cần phân tích thao tác vừa thực hiện.
+Giả sử một thuộc tính (property / 속성) đúng ban đầu nhưng cuối cùng sai. Xét bước đầu tiên nó trở thành sai. Ngay trước bước đó thuộc tính (property / 속성) còn đúng, nên ta chỉ cần phân tích thao tác vừa thực hiện.
 
-Đây là cách rất mạnh để chứng minh invariant của cấu trúc động.
+Đây là cách rất mạnh để chứng minh bất biến (invariant / 불변식) của cấu trúc động.
 
-## Monotonicity và binary search on answer
+## Monotonicity và tìm kiếm nhị phân (binary search / 이진 탐색) on answer
 
 Nếu predicate `P(x)` có dạng:
 
@@ -291,25 +294,25 @@ Nếu predicate `P(x)` có dạng:
 false false false ... true true true
 ```
 
-ta có thể tìm điểm chuyển bằng binary search.
+ta có thể tìm điểm chuyển bằng tìm kiếm nhị phân (binary search / 이진 탐색).
 
-Nhưng trước khi viết code phải chứng minh **tính đơn điệu (monotonicity)**. Nếu `P(x)` có thể true rồi false trở lại, binary search on answer không có cơ sở đúng đắn.
+Nhưng trước khi viết mã (code / 코드) phải chứng minh **tính đơn điệu (monotonicity)**. Nếu `P(x)` có thể true rồi false trở lại, tìm kiếm nhị phân (binary search / 이진 탐색) on answer không có cơ sở đúng đắn.
 
-Một lỗi phổ biến là thấy “đáp án là một số” rồi áp binary search mà chưa chứng minh predicate có cấu trúc đơn điệu.
+Một lỗi phổ biến là thấy “đáp án là một số” rồi áp tìm kiếm nhị phân (binary search / 이진 탐색) mà chưa chứng minh predicate có cấu trúc đơn điệu.
 
-## BFS: invariant theo tầng
+## BFS: bất biến (invariant / 불변식) theo tầng
 
-BFS có một invariant quan trọng:
+BFS có một bất biến (invariant / 불변식) quan trọng:
 
 > Khi một đỉnh được lấy ra theo BFS chuẩn trên đồ thị không trọng số, `dist[v]` là độ dài đường đi ngắn nhất từ nguồn tới `v`.
 
-Lý do queue xử lý đỉnh theo lớp khoảng cách không giảm. Mọi cạnh thêm đúng 1 bước. Một đường ngắn hơn tới `v` nếu tồn tại phải đi qua một lớp nhỏ hơn và đã được khám phá trước.
+Lý do hàng đợi (queue / 큐) xử lý đỉnh theo lớp khoảng cách không giảm. Mọi cạnh thêm đúng 1 bước. Một đường ngắn hơn tới `v` nếu tồn tại phải đi qua một lớp nhỏ hơn và đã được khám phá trước.
 
-Điều này giải thích vì sao đánh dấu khi enqueue thường quan trọng: nó ngăn cùng một state được đưa vào queue nhiều lần và giữ rõ nghĩa “đã phát hiện khoảng cách ngắn nhất”.
+Điều này giải thích vì sao đánh dấu khi enqueue thường quan trọng: nó ngăn cùng một trạng thái (state / 상태) được đưa vào hàng đợi (queue / 큐) nhiều lần và giữ rõ nghĩa “đã phát hiện khoảng cách ngắn nhất”.
 
-## DFS: invariant của call stack
+## DFS: bất biến (invariant / 불변식) của ngăn xếp lời gọi (call stack / 호출 스택)
 
-Trong DFS đệ quy, call stack biểu diễn đường đi hiện tại trong cây DFS. Với đồ thị có hướng dùng ba màu:
+Trong DFS đệ quy, ngăn xếp lời gọi (call stack / 호출 스택) biểu diễn đường đi hiện tại trong cây DFS. Với đồ thị có hướng dùng ba màu:
 
 ```text
 WHITE = chưa thăm
@@ -319,23 +322,23 @@ BLACK = đã hoàn tất
 
 Một cạnh tới `GRAY` cho thấy có chu trình có hướng vì ta quay lại một tổ tiên đang hoạt động. Nếu chỉ dùng `visited` Boolean, thông tin “đang hoạt động” bị mất và không đủ cho chứng minh kiểu này.
 
-## DSU: invariant của đại diện
+## DSU: bất biến (invariant / 불변식) của đại diện
 
-Disjoint Set Union giữ một forest các parent pointer. Invariant ngữ nghĩa không phải “cây đẹp”, mà là:
+Disjoint Set Union giữ một forest các parent pointer. bất biến (invariant / 불변식) ngữ nghĩa không phải “cây đẹp”, mà là:
 
 ```text
 find(x) trả cùng representative khi và chỉ khi x thuộc cùng component theo các union đã áp dụng
 ```
 
-Path compression thay đổi hình dạng cây mạnh nhưng không đổi partition logic. Đây là ví dụ một optimization thay representation nhưng giữ semantics.
+Đường dẫn (path / 경로) compression thay đổi hình dạng cây mạnh nhưng không đổi partition lô-gic (logic / 논리). Đây là ví dụ một tối ưu hóa (optimization / 최적화) thay biểu diễn (representation / 표현) nhưng giữ ngữ nghĩa (semantics / 의미론).
 
-Nếu có `size[root]` hoặc `rank[root]`, metadata chỉ có ý nghĩa ở root và phải được cập nhật theo đúng union rule.
+Nếu có `size[root]` hoặc `rank[root]`, siêu dữ liệu (metadata / 메타데이터) chỉ có ý nghĩa ở gốc (root / 루트) và phải được cập nhật theo đúng union quy tắc (rule / 규칙).
 
-## Heap: repair local, preserve global
+## Vùng nhớ vùng nhớ động (heap / 힙): repair cục bộ (local / 로컬), preserve toàn cục (global / 전역)
 
-Khi chèn vào Binary Heap, shape invariant được giữ bằng cách thêm ở cuối mảng. Chỉ heap-order trên đường từ node mới tới root có thể bị phá.
+Khi chèn vào nhị phân (binary / 이진) vùng nhớ động (heap / 힙), shape bất biến (invariant / 불변식) được giữ bằng cách thêm ở cuối mảng. Chỉ heap-order trên đường từ nút (node / 노드) mới tới gốc (root / 루트) có thể bị phá.
 
-Sift-up sửa đúng vùng có khả năng sai. Các cạnh ngoài đường đó không thay đổi nên invariant vẫn đúng ở đó.
+Sift-up sửa đúng vùng có khả năng sai. Các cạnh ngoài đường đó không thay đổi nên bất biến (invariant / 불변식) vẫn đúng ở đó.
 
 Đây là mẫu chứng minh cực kỳ phổ biến:
 
@@ -345,23 +348,23 @@ một mutation chỉ có thể phá invariant trong một vùng nhỏ
 => phần còn lại không cần kiểm tra lại
 ```
 
-AVL/Red-Black rotation, Segment Tree update và nhiều cấu trúc tăng cường đều dựa trên tư duy này.
+AVL/Red-Black rotation, Segment cây (tree / 트리) cập nhật (update / 업데이트) và nhiều cấu trúc tăng cường đều dựa trên tư duy này.
 
-## Segment Tree: invariant theo đoạn
+## Segment cây (tree / 트리): bất biến (invariant / 불변식) theo đoạn
 
-Mỗi node Segment Tree đại diện một đoạn và lưu aggregate của chính đoạn đó.
+Mỗi nút (node / 노드) Segment cây (tree / 트리) đại diện một đoạn và lưu aggregate của chính đoạn đó.
 
-Invariant:
+Bất biến (invariant / 불변식):
 
 ```text
 tree[node] = combine(value của mọi phần tử trong interval(node))
 ```
 
-Khi cập nhật một điểm, chỉ các node trên đường từ leaf đó tới root có interval chứa điểm cập nhật. Do đó chỉ cần recompute đường này.
+Khi cập nhật một điểm, chỉ các nút (node / 노드) trên đường từ leaf đó tới gốc (root / 루트) có interval chứa điểm cập nhật. Do đó chỉ cần recompute đường này.
 
-Tính đúng đắn đến từ việc các node không chứa vị trí cập nhật giữ nguyên giá trị đúng, còn các node có chứa nó được tính lại từ hai child đã đúng.
+Tính đúng đắn đến từ việc các nút (node / 노드) không chứa vị trí cập nhật giữ nguyên giá trị đúng, còn các nút (node / 노드) có chứa nó được tính lại từ hai child đã đúng.
 
-## Shortest path relaxation
+## Shortest đường dẫn (path / 경로) relaxation
 
 Relaxation thường có dạng:
 
@@ -369,15 +372,15 @@ Relaxation thường có dạng:
 dist[v] \leftarrow \min(dist[v], dist[u] + w(u,v))
 \]
 
-Một invariant nền tảng là `dist[v]` luôn là chi phí của một đường đi thực sự đã biết tới `v` hoặc `∞`. Vì vậy nó là một **upper bound** trên shortest-path distance thật.
+Một bất biến (invariant / 불변식) nền tảng là `dist[v]` luôn là chi phí của một đường đi thực sự đã biết tới `v` hoặc `∞`. Vì vậy nó là một **upper bound** trên shortest-path distance thật.
 
-Các thuật toán shortest path khác nhau chủ yếu khác ở quy tắc chọn thứ tự relaxation và điều kiện cho phép ta kết luận bound đã trở thành chính xác.
+Các thuật toán shortest đường dẫn (path / 경로) khác nhau chủ yếu khác ở quy tắc chọn thứ tự relaxation và điều kiện cho phép ta kết luận bound đã trở thành chính xác.
 
-## Invariant giữa nhiều cấu trúc
+## Bất biến (invariant / 불변식) giữa nhiều cấu trúc
 
-LRU Cache dùng Hash Map + Doubly Linked List. Mỗi cấu trúc có thể tự hợp lệ nhưng hệ thống vẫn sai nếu map và list không nhất quán.
+LRU bộ nhớ đệm (cache / 캐시) dùng băm (hash / 해시) Map + Doubly Linked danh sách (list / 목록). Mỗi cấu trúc có thể tự hợp lệ nhưng hệ thống vẫn sai nếu map và danh sách (list / 목록) không nhất quán.
 
-Cần invariant liên cấu trúc:
+Cần bất biến (invariant / 불변식) liên cấu trúc:
 
 ```text
 map và list chứa cùng tập key
@@ -386,11 +389,11 @@ size nhất quán
 thứ tự list đúng recency semantics
 ```
 
-Trong code production, đây thường là nơi bug khó xuất hiện nhất vì validator riêng lẻ của từng container vẫn pass.
+Trong mã (code / 코드) môi trường vận hành (production / 운영 환경), đây thường là nơi bug khó xuất hiện nhất vì validator riêng lẻ của từng bộ chứa (container / 컨테이너) vẫn pass.
 
 ## Atomicity của thao tác phức hợp
 
-Một operation có thể gồm nhiều bước nội bộ. Nếu failure xảy ra giữa chừng, cấu trúc cần hoặc:
+Một thao tác (operation / 연산) có thể gồm nhiều bước nội bộ. Nếu thất bại (failure / 실패) xảy ra giữa chừng, cấu trúc cần hoặc:
 
 ```text
 rollback về trạng thái cũ
@@ -398,11 +401,11 @@ hoặc
 đạt một trạng thái mới vẫn hợp lệ theo contract
 ```
 
-Trong C, resize Hash Table nên hoàn thành allocation/rehash bảng mới trước khi thay pointer chính. Đây là reasoning gần với transaction: không để public state ở trạng thái nửa cũ nửa mới.
+Trong C, resize bảng băm (hash table / 해시 테이블) nên hoàn thành allocation/rehash bảng mới trước khi thay pointer chính. Đây là lập luận (reasoning / 추론) gần với giao dịch (transaction / 트랜잭션): không để công khai (public / 공개) trạng thái (state / 상태) ở trạng thái nửa cũ nửa mới.
 
-## Concurrency và linearizability
+## Tính đồng thời (concurrency / 동시성) và linearizability
 
-Trong môi trường nhiều luồng, invariant có thể bị phá giữa hai dòng code dù từng dòng riêng lẻ đúng.
+Trong môi trường nhiều luồng, bất biến (invariant / 불변식) có thể bị phá giữa hai dòng mã (code / 코드) dù từng dòng riêng lẻ đúng.
 
 Ví dụ:
 
@@ -411,15 +414,15 @@ if key absent:
     insert key
 ```
 
-Hai thread có thể cùng thấy “absent” rồi cùng insert.
+Hai luồng thực thi (thread / 스레드) có thể cùng thấy “absent” rồi cùng insert.
 
-Một mô hình correctness quan trọng là **tính tuyến tính hóa (linearizability / 선형화 가능성)**: mỗi operation concurrent phải có thể được xem như xảy ra tại một thời điểm nguyên tử nào đó giữa lúc gọi và lúc trả về.
+Một mô hình tính đúng đắn (correctness / 정확성) quan trọng là **tính tuyến tính hóa (linearizability / 선형화 가능성)**: mỗi thao tác (operation / 연산) concurrent phải có thể được xem như xảy ra tại một thời điểm nguyên tử nào đó giữa lúc gọi và lúc trả về.
 
-Lock-free structures còn cần memory ordering và memory reclamation reasoning. “Dùng atomic pointer” tự nó chưa chứng minh thuật toán đúng.
+Lock-free structures còn cần bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và bộ nhớ (memory / 메모리) reclamation lập luận (reasoning / 추론). “Dùng atomic pointer” tự nó chưa chứng minh thuật toán đúng.
 
-## Arithmetic correctness
+## Arithmetic tính đúng đắn (correctness / 정확성)
 
-Một proof toán học có thể giả sử số nguyên vô hạn, nhưng code chạy với kiểu hữu hạn.
+Một proof toán học có thể giả sử số nguyên vô hạn, nhưng mã (code / 코드) chạy với kiểu hữu hạn.
 
 Ví dụ:
 
@@ -427,21 +430,21 @@ Ví dụ:
 long candidate = dist[u] + weight;
 ```
 
-Nếu `dist[u]` là sentinel gần `Long.MAX_VALUE`, phép cộng có thể overflow. Trong C, signed overflow có thể dẫn tới undefined behavior. Trong JavaScript, `Number` mất tính chính xác số nguyên sau `2^53 - 1`.
+Nếu `dist[u]` là sentinel gần `Long.MAX_VALUE`, phép cộng có thể overflow. Trong C, signed overflow có thể dẫn tới undefined hành vi (behavior / 동작). Trong JavaScript, `Number` mất tính chính xác số nguyên sau `2^53 - 1`.
 
-Do đó proof của implementation phải bao gồm miền giá trị của kiểu số.
+Do đó proof của hiện thực (implementation / 구현) phải bao gồm miền giá trị của kiểu số.
 
-## Floating-point correctness
+## Floating-point tính đúng đắn (correctness / 정확성)
 
 Số thực máy có sai số làm tròn. So sánh equality, predicate đơn điệu hoặc comparator dựa trên epsilon tùy tiện có thể không còn bắc cầu.
 
-Nếu comparator vi phạm transitivity, sort hoặc balanced tree có thể có hành vi không đúng contract.
+Nếu comparator vi phạm transitivity, sort hoặc balanced cây (tree / 트리) có thể có hành vi không đúng đặc tả hợp đồng (contract / 계약).
 
-Với geometry và numerical algorithms, representation số là một phần của specification, không phải chi tiết implementation.
+Với hình học (geometry / 기하학) và numerical algorithms, biểu diễn (representation / 표현) số là một phần của specification, không phải chi tiết hiện thực (implementation / 구현).
 
 ## Validator cho cấu trúc dữ liệu
 
-Cấu trúc phức tạp nên có `validate()` trong test/debug.
+Cấu trúc phức tạp nên có `validate()` trong kiểm thử (test / 테스트)/gỡ lỗi (debug / 디버그).
 
 ```text
 BST        -> kiểm tra cận toàn cây, không chỉ cha-con
@@ -452,11 +455,11 @@ DSU        -> parent hợp lệ, metadata ở root
 LinkedList -> size và prev/next đối xứng
 ```
 
-Validator không thay proof nhưng giúp phát hiện implementation phá proof ở đâu.
+Validator không thay proof nhưng giúp phát hiện hiện thực (implementation / 구현) phá proof ở đâu.
 
 ## Differential testing
 
-Một implementation chậm nhưng rõ có thể làm **oracle** cho input nhỏ.
+Một hiện thực (implementation / 구현) chậm nhưng rõ có thể làm **oracle** cho đầu vào (input / 입력) nhỏ.
 
 ```text
 range query     -> so với quét tuyến tính
@@ -470,7 +473,7 @@ Differential testing rất hiệu quả vì nó kiểm tra hàng nghìn chuỗi 
 
 ## Property-based testing
 
-Thay vì chỉ kiểm tra output cụ thể, có thể kiểm tra property:
+Thay vì chỉ kiểm tra đầu ra (output / 출력) cụ thể, có thể kiểm tra thuộc tính (property / 속성):
 
 ```text
 sort(output) phải có thứ tự và cùng multiset input
@@ -480,11 +483,11 @@ heap poll liên tục phải cho dãy không giảm
 serialize rồi deserialize phải bảo toàn cấu trúc
 ```
 
-Đây là cách biến specification thành test tự động.
+Đây là cách biến specification thành kiểm thử (test / 테스트) tự động.
 
 ## Adversarial tests
 
-Random test không thay thế các case biên được thiết kế có chủ đích:
+Random kiểm thử (test / 테스트) không thay thế các trường hợp (case / 사례) biên được thiết kế có chủ đích:
 
 ```text
 rỗng
@@ -499,13 +502,13 @@ giá trị sát giới hạn kiểu số
 input gây nhiều hash collision
 ```
 
-Một proof tốt cho biết case nào nằm trong domain hợp lệ và case nào phải bị từ chối.
+Một proof tốt cho biết trường hợp (case / 사례) nào nằm trong lĩnh vực (domain / 도메인) hợp lệ và trường hợp (case / 사례) nào phải bị từ chối.
 
-## Proof sketch trong code review
+## Proof sketch trong rà soát mã (code review / 코드 리뷰)
 
 Với thuật toán khó, một proof sketch ngắn thường có giá trị hơn comment từng dòng.
 
-Ví dụ Monotonic Queue cho sliding-window maximum:
+Ví dụ Monotonic hàng đợi (queue / 큐) cho sliding-window maximum:
 
 ```text
 Invariant 1: deque chỉ chứa index còn nằm trong window.
@@ -534,26 +537,28 @@ Khi cần chứng minh thuật toán, có thể dùng khung:
 10. Numeric/runtime assumptions nào proof đang dựa vào?
 ```
 
-Với greedy, thêm exchange/cut argument. Với recursion, thêm induction. Với concurrent structure, thêm linearization point và memory-order reasoning.
+Với greedy, thêm exchange/cut argument. Với recursion, thêm induction. Với concurrent cấu trúc (structure / 구조), thêm linearization điểm (point / 지점) và memory-order lập luận (reasoning / 추론).
 
 ## Những hiểu lầm phổ biến
 
-“Pass sample tests là đã đúng” — sai; sample chỉ là bằng chứng hữu hạn.
+“Pass mẫu (sample / 표본) tests là đã đúng” — sai; mẫu (sample / 표본) chỉ là bằng chứng hữu hạn.
 
-“Invariant đúng ở cuối là đủ” — sai; phải đúng sau initialization và được duy trì qua mọi transition.
+“bất biến (invariant / 불변식) đúng ở cuối là đủ” — sai; phải đúng sau initialization và được duy trì qua mọi chuyển tiếp (transition / 전이).
 
-“Có base case thì recursion sẽ dừng” — sai nếu đối số không tiến gần base case.
+“Có cơ sở (base / 기반) trường hợp (case / 사례) thì recursion sẽ dừng” — sai nếu đối số không tiến gần cơ sở (base / 기반) trường hợp (case / 사례).
 
 “Greedy hợp lý theo trực giác” — không thay exchange argument hoặc structural proof.
 
-“Cấu trúc vẫn trả vài query đúng nên metadata chắc đúng” — sai; invariant có thể đã hỏng và chỉ chưa chạm case lộ lỗi.
+“Cấu trúc vẫn trả vài truy vấn (query / 쿼리) đúng nên siêu dữ liệu (metadata / 메타데이터) chắc đúng” — sai; bất biến (invariant / 불변식) có thể đã hỏng và chỉ chưa chạm trường hợp (case / 사례) lộ lỗi.
 
-“Đã chứng minh thuật toán nên code chắc đúng” — sai; overflow, aliasing, indexing và runtime semantics có thể làm implementation khác mô hình toán học.
+“Đã chứng minh thuật toán nên mã (code / 코드) chắc đúng” — sai; overflow, aliasing, indexing và ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) có thể làm hiện thực (implementation / 구현) khác mô hình toán học.
 
 ## Mô hình tư duy
 
-> Tính đúng đắn là một chuỗi lập luận: **specification** nói phải đạt gì; **precondition** nói được giả định gì; **invariant** nói điều gì luôn được bảo vệ; **progress argument** nói vì sao thuật toán sẽ dừng; trạng thái khi dừng cộng với invariant phải suy ra **postcondition**.
+> Tính đúng đắn là một chuỗi lập luận: **specification** nói phải đạt gì; **precondition** nói được giả định gì; **bất biến (invariant / 불변식)** nói điều gì luôn được bảo vệ; **progress argument** nói vì sao thuật toán sẽ dừng; trạng thái khi dừng cộng với bất biến (invariant / 불변식) phải suy ra **postcondition**.
 
-Khi gặp một thuật toán khó, đừng đọc code từng dòng trước. Hãy hỏi: **tập ứng viên hiện tại là gì, invariant nào đang được giữ, mỗi transition loại bỏ hay bảo toàn thông tin nào, phần nào có thể bị phá bởi mutation, và vì sao khi dừng không còn trường hợp nào chưa được xử lý?**
+Khi gặp một thuật toán khó, đừng đọc mã (code / 코드) từng dòng trước. Hãy hỏi: **tập ứng viên hiện tại là gì, bất biến (invariant / 불변식) nào đang được giữ, mỗi chuyển tiếp (transition / 전이) loại bỏ hay bảo toàn thông tin nào, phần nào có thể bị phá bởi mutation, và vì sao khi dừng không còn trường hợp nào chưa được xử lý?**
 
 Xem tiếp: [Problem Modeling](./00_dsa_as_problem_modeling.md), [Complexity Analysis](./02_complexity_analysis.md), [Mathematical Toolkit](./04_mathematical_toolkit_for_dsa.md), [Greedy Algorithms](../04_algorithmic_paradigms/04_greedy_algorithms.md), [Dynamic Programming](../04_algorithmic_paradigms/05_dynamic_programming.md) và [Problem Solving Workflow](../90_connections/02_problem_solving_workflow.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dsa as problem modeling](./00_dsa_as_problem_modeling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

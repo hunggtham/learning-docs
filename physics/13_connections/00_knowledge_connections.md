@@ -1,10 +1,13 @@
 # Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý
 
+> **Mạch đọc:** Đọc **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Trạng thái → tiến hóa → quan sát** sang **2. Đạo hàm: ngôn ngữ của tốc độ biến thiên**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Vật lý có rất nhiều lĩnh vực, nhưng các lĩnh vực đó không phải những hòn đảo tách rời. Cùng một số cấu trúc toán học và mô hình tư duy xuất hiện lặp lại trong cơ học, nhiệt, điện từ, lượng tử, vật chất ngưng tụ và vật lý thiên văn. Nhận ra các cấu trúc này giúp học kiến thức mới bằng cách nối nó với điều đã hiểu thay vì ghi nhớ thêm một tập công thức độc lập.
 
 ## 1. Trạng thái → tiến hóa → quan sát
 
-Một lý thuyết vật lý thường cần ba lớp. **Trạng thái (state)** cho biết hệ đang ở đâu trong không gian các khả năng. **Quy luật tiến hóa (evolution law)** cho biết trạng thái thay đổi theo thời gian như thế nào. **Quy tắc quan sát (observation rule)** cho biết từ trạng thái đó ta dự đoán được đại lượng đo nào.
+Một lý thuyết vật lý thường cần ba lớp. **trạng thái (state / 상태)** cho biết hệ đang ở đâu trong không gian các khả năng. **Quy luật tiến hóa (evolution law)** cho biết trạng thái thay đổi theo thời gian như thế nào. **Quy tắc quan sát (observation rule)** cho biết từ trạng thái đó ta dự đoán được đại lượng đo nào.
 
 Trong cơ học cổ điển của một chất điểm,
 
@@ -112,7 +115,7 @@ T(\vec r,t),\qquad
 
 Thay vì chỉ hỏi “vật A tác dụng lên vật B thế nào?”, cách nhìn theo trường hỏi “tại điểm này, môi trường vật lý có giá trị gì?”. Lý thuyết trường lượng tử (quantum field theory) đẩy ý tưởng này xa hơn: các hạt cơ bản được mô tả như những kích thích lượng tử của trường.
 
-## 7. Gradient: dòng và lực thường phản ứng với độ chênh không gian
+## 7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian
 
 Nhiều quan hệ vật lý có cùng cấu trúc:
 
@@ -132,9 +135,9 @@ Nhiều quan hệ vật lý có cùng cấu trúc:
 \vec J=-D\nabla n.
 ```
 
-Gradient (gradient) chỉ hướng tăng nhanh nhất của một trường vô hướng. Dấu âm trong các ví dụ trên cho biết lực hoặc dòng hướng về phía giá trị thấp hơn của thế, nhiệt độ hay nồng độ.
+Độ dốc (gradient / 기울기) (gradient) chỉ hướng tăng nhanh nhất của một trường vô hướng. Dấu âm trong các ví dụ trên cho biết lực hoặc dòng hướng về phía giá trị thấp hơn của thế, nhiệt độ hay nồng độ.
 
-Trong học máy, hạ gradient (gradient descent) cũng dùng cùng hình học để di chuyển trong không gian tham số theo hướng làm giảm hàm mất mát. Đây là sự tương đồng toán học, không có nghĩa gradient trong tối ưu hóa là một lực vật lý.
+Trong học máy, hạ độ dốc (gradient / 기울기) (gradient descent) cũng dùng cùng hình học để di chuyển trong không gian tham số theo hướng làm giảm hàm mất mát. Đây là sự tương đồng toán học, không có nghĩa độ dốc (gradient / 기울기) trong tối ưu hóa là một lực vật lý.
 
 ## 8. Thế năng, độ cong và cân bằng ổn định
 
@@ -164,9 +167,9 @@ f(x_0+\delta x)\approx f(x_0)+f'(x_0)\delta x.
 
 Xấp xỉ tuyến tính cho phép dùng nguyên lý chồng chập, đại số tuyến tính, trị riêng và biến đổi Fourier. Đây là lý do các dao động nhỏ, sóng, mạch điện tuyến tính và nhiều bài toán lượng tử chia sẻ nhiều công cụ toán học.
 
-Khi nhiễu loạn không còn nhỏ, các hạng phi tuyến có thể tạo điều hòa bậc cao, ghép mode, sốc, dòng rối hoặc hỗn loạn.
+Khi nhiễu loạn không còn nhỏ, các hạng phi tuyến có thể tạo điều hòa bậc cao, ghép chế độ (mode / 모드), sốc, dòng rối hoặc hỗn loạn.
 
-## 10. Trị riêng và mode tự nhiên
+## 10. Trị riêng và chế độ (mode / 모드) tự nhiên
 
 Bài toán trị riêng có dạng
 
@@ -174,7 +177,7 @@ Bài toán trị riêng có dạng
 A\vec v=\lambda\vec v.
 ```
 
-Vectơ riêng (eigenvector) giữ hướng dưới tác động của phép biến đổi tuyến tính, còn trị riêng (eigenvalue) cho hệ số tỉ lệ. Trong dao động, mode chuẩn (normal mode) có tần số riêng. Trong cơ học lượng tử,
+Vectơ riêng (eigenvector) giữ hướng dưới tác động của phép biến đổi tuyến tính, còn trị riêng (eigenvalue) cho hệ số tỉ lệ. Trong dao động, chế độ (mode / 모드) chuẩn (normal mode) có tần số riêng. Trong cơ học lượng tử,
 
 ```math
 \hat H|E_n\rangle=E_n|E_n\rangle,
@@ -417,12 +420,14 @@ Khi gặp một hiện tượng chưa quen, hãy lần lượt hỏi: hệ và r
 
 Đây không phải một danh sách công thức. Nó là cách tổ chức tư duy để chuyển từ hiện tượng sang mô hình và từ mô hình trở lại quan sát.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Vật lý tìm những cấu trúc ổn định trong một thế giới luôn thay đổi: trạng thái, đối xứng, định luật bảo toàn, trường, mode, xác suất và thang đo. Khi chọn đúng cách biểu diễn, một hiện tượng tưởng rất phức tạp thường lộ ra cấu trúc quen thuộc.
+> Vật lý tìm những cấu trúc ổn định trong một thế giới luôn thay đổi: trạng thái, đối xứng, định luật bảo toàn, trường, chế độ (mode / 모드), xác suất và thang đo. Khi chọn đúng cách biểu diễn, một hiện tượng tưởng rất phức tạp thường lộ ra cấu trúc quen thuộc.
 
 > Hiểu sâu không có nghĩa luôn dùng lý thuyết phức tạp nhất. Hiểu sâu là biết vì sao mô hình hiện tại đủ dùng, giả định nào làm nó hợp lệ và dấu hiệu nào cho biết cần chuyển sang mô hình khác.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [Thuật ngữ và điều hướng](01_glossary_navigation.md), [Cẩm nang giải bài](03_problem_solving_playbook.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 glossary navigation](./01_glossary_navigation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

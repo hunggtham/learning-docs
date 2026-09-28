@@ -1,12 +1,15 @@
 # Tâm lý học như một khoa học
 
-Tâm lý học nghiên cứu hành vi và quá trình tâm trí, nhưng phần lớn đối tượng quan tâm — trí nhớ, chú ý, động lực, cảm xúc, niềm tin, self-control — không thể quan sát trực tiếp như một vật thể. Vì vậy, câu hỏi trung tâm của psychology science không chỉ là “con người làm gì?”, mà là **làm sao suy luận đáng tin từ observation sang construct và mechanism**.
+> **Mạch đọc:** Đọc **Tâm lý học như một khoa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Từ dùng chung (common / 공통) sense sang scientific question** sang **2. Construct và observable indicator**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> **Trạng thái bằng chứng:** psychology là một empirical science sử dụng experiment, observation, measurement, statistics và cumulative evidence. Specific theories bên trong psychology có evidence status khác nhau; không nên đánh đồng “được nghiên cứu khoa học” với “đã chứng minh đúng”.
+
+Tâm lý học nghiên cứu hành vi và quá trình tâm trí, nhưng phần lớn đối tượng quan tâm — trí nhớ, chú ý, động lực, cảm xúc, niềm tin, self-control — không thể quan sát trực tiếp như một vật thể. Vì vậy, câu hỏi trung tâm của psychology science không chỉ là “con người làm gì?”, mà là **làm sao suy luận đáng tin từ observation sang construct và cơ chế (mechanism / 메커니즘)**.
+
+> **Trạng thái bằng chứng:** psychology là một empirical science sử dụng experiment, observation, đo lường (measurement / 측정), statistics và cumulative bằng chứng (evidence / 증거). Specific theories bên trong psychology có bằng chứng (evidence / 증거) status khác nhau; không nên đánh đồng “được nghiên cứu khoa học” với “đã chứng minh đúng”.
 
 Xem [[../EVIDENCE_STATUS_GUIDE]].
 
-## 1. Từ common sense sang scientific question
+## 1. Từ dùng chung (common / 공통) sense sang scientific question
 
 Một đồng nghiệp ít nói trong meeting có thể bị giải thích là introvert, không đồng ý, mệt, không hiểu ngôn ngữ, hoặc đang lo hierarchy. Nhiều story cùng plausible.
 
@@ -14,16 +17,16 @@ Science bắt đầu khi ta hỏi:
 
 - prediction nào khác nhau giữa stories?
 - variable nào đo được?
-- alternative explanation nào phải control?
-- evidence nào sẽ làm model yếu đi?
+- alternative explanation nào phải điều khiển (control / 제어)?
+- bằng chứng (evidence / 증거) nào sẽ làm mô hình (model / 모델) yếu đi?
 
-Common sense thường giải thích tốt **sau** khi outcome xảy ra. Science đòi prediction hoặc inference rule đủ rõ **trước** khi biết answer.
+Dùng chung (common / 공통) sense thường giải thích tốt **sau** khi kết quả (outcome / 결과) xảy ra. Science đòi prediction hoặc suy luận (inference / 추론) quy tắc (rule / 규칙) đủ rõ **trước** khi biết answer.
 
 ## 2. Construct và observable indicator
 
 **Cấu trúc tâm lý (construct)** là concept lý thuyết như anxiety, intelligence, trust hoặc motivation.
 
-Construct không phải direct object. Ta infer từ indicators:
+Construct không phải direct đối tượng (object / 객체). Ta infer từ indicators:
 
 ```text
 Reaction time
@@ -34,15 +37,15 @@ Observer rating
 Choice pattern
 ```
 
-Một indicator không phải chính construct. Đây là lý do [[03_measurement_statistics]] và [[05_psychometrics_and_test_interpretation]] nằm ở core của library.
+Một indicator không phải chính construct. Đây là lý do [[03_measurement_statistics]] và [[05_psychometrics_and_test_interpretation]] nằm ở cốt lõi (core / 핵심) của thư viện (library / 라이브러리).
 
 ## 3. Operationalization
 
 **Thao tác hóa (operationalization)** biến concept thành procedure measurable.
 
-Attention có thể đo bằng reaction time, eye movement, accuracy under distraction hoặc neural signal. Các operationalizations có thể capture different aspects.
+Attention có thể đo bằng reaction thời gian (time / 시간), eye movement, accuracy under distraction hoặc neural tín hiệu (signal / 신호). Các operationalizations có thể capture different aspects.
 
-Nếu conclusion chỉ xuất hiện với một operationalization, cần hỏi effect thuộc construct hay task artifact.
+Nếu conclusion chỉ xuất hiện với một operationalization, cần hỏi tác động (effect / 효과) thuộc construct hay tác vụ (task / 작업) sản phẩm tạo ra (artifact / 산출물).
 
 ## 4. Description, prediction, explanation và intervention
 
@@ -58,13 +61,13 @@ Khi X thay đổi, Y có tend thay đổi không?
 
 ### Explanation
 
-Mechanism nào tạo relation?
+Cơ chế (mechanism / 메커니즘) nào tạo quan hệ (relation / 관계)?
 
 ### Intervention
 
 Nếu ta chủ động thay X, Y có đổi không?
 
-Correlation có thể support prediction mà chưa support intervention. Đây là lỗi phổ biến khi chuyển observational finding thành self-help recommendation.
+Correlation có thể hỗ trợ (support / 지원) prediction mà chưa hỗ trợ (support / 지원) intervention. Đây là lỗi phổ biến khi chuyển observational finding thành self-help recommendation.
 
 ## 5. Correlation không phải causation
 
@@ -80,9 +83,9 @@ selection effect
 
 đều có thể plausible.
 
-Causal inference cần design và assumptions. Xem [[08_causal_inference_and_psychological_evidence]].
+Nhân quả (causal / 인과적) suy luận (inference / 추론) cần thiết kế (design / 설계) và các giả định (assumptions / 가정들). Xem [[08_causal_inference_and_psychological_evidence]].
 
-## 6. Multiple levels of analysis
+## 6. Multiple levels of phân tích (analysis / 분석)
 
 Một phenomenon có thể được giải thích đồng thời ở nhiều levels:
 
@@ -96,45 +99,45 @@ Cultural
 Organizational
 ```
 
-Interview anxiety có thể liên quan autonomic arousal, catastrophic prediction, prior learning, status threat và labor-market pressure.
+Interview anxiety có thể liên quan autonomic arousal, catastrophic prediction, prior học tập (learning / 학습), status threat và labor-market pressure.
 
-Tìm neural correlate không làm social explanation disappear; social context cũng không phủ nhận biology.
+Tìm neural correlate không làm xã hội (social / 사회적) explanation disappear; xã hội (social / 사회적) ngữ cảnh (context / 맥락) cũng không phủ nhận biology.
 
-## 7. Reductionism và explanatory level
+## 7. Reductionism và explanatory mức (level / 수준)
 
-Reductionism useful khi cần mechanism nhỏ hơn. Nhưng “amygdala activated” không giải thích toàn bộ fear. Neural event itself needs context, computation and behavior interpretation.
+Reductionism useful khi cần cơ chế (mechanism / 메커니즘) nhỏ hơn. Nhưng “amygdala activated” không giải thích toàn bộ fear. Neural sự kiện (event / 이벤트) itself needs ngữ cảnh (context / 맥락), computation and hành vi (behavior / 동작) interpretation.
 
 Ngược lại, vague explanation như “do society” cũng insufficient nếu không specify pathway.
 
-Strong psychology connects levels instead of declaring one level “realer” than others.
+Strong psychology connects levels instead of declaring one mức (level / 수준) “realer” than others.
 
-## 8. Experimental method
+## 8. Experimental phương thức (method / 메서드)
 
-Random assignment helps distribute confounders probabilistically between conditions. Manipulation supports causal inference stronger than simple observation.
+Random assignment helps distribute confounders probabilistically between conditions. Manipulation supports nhân quả (causal / 인과적) suy luận (inference / 추론) stronger than simple observation.
 
-But experiment can still fail because:
+But experiment can still thất bại (fail / 실패) because:
 
-- manipulation does not target intended construct;
+- manipulation does not mục tiêu (target / 대상) intended construct;
 - demand characteristics;
 - attrition;
 - low power;
-- poor measurement;
-- unrealistic task;
-- analysis flexibility.
+- poor đo lường (measurement / 측정);
+- unrealistic tác vụ (task / 작업);
+- phân tích (analysis / 분석) flexibility.
 
 Experiment is not automatic truth machine.
 
 ## 9. Observational research
 
-Many important questions cannot be randomized: poverty, trauma, migration, personality development, long-term disease.
+Many important questions cannot be randomized: poverty, trauma, di chuyển (migration / 마이그레이션), personality development, long-term disease.
 
-Observational research can be powerful with longitudinal designs, natural experiments, quasi-experiments, matching, instrumental variables or causal models — but assumptions must be explicit.
+Observational research can be powerful with longitudinal designs, natural experiments, quasi-experiments, matching, instrumental variables or nhân quả (causal / 인과적) các mô hình (models / 모델들) — but các giả định (assumptions / 가정들) must be tường minh (explicit / 명시적).
 
-## 10. Internal và external validity
+## 10. nội bộ (internal / 내부) và bên ngoài (external / 외부) validity
 
-**Internal validity** asks whether inference inside study is credible. **External validity** asks whether finding generalizes to other people, settings, tasks and times.
+**nội bộ (internal / 내부) validity** asks whether suy luận (inference / 추론) inside study is credible. **bên ngoài (external / 외부) validity** asks whether finding generalizes to other people, settings, tasks and times.
 
-Perfect lab control may reduce ecological realism; real-world study may increase confounding. Good science uses triangulation rather than treating one design as universal best.
+Perfect lab điều khiển (control / 제어) may reduce ecological realism; real-world study may increase confounding. Good science uses triangulation rather than treating one thiết kế (design / 설계) as universal best.
 
 ## 11. Triangulation
 
@@ -148,27 +151,27 @@ Experiment
 + qualitative/contextual evidence
 ```
 
-If all methods share same measurement bias, apparent convergence may still mislead.
+If all methods share same đo lường (measurement / 측정) độ lệch (bias / 편향), apparent convergence may still mislead.
 
 ## 12. Replication
 
-One study is evidence, not verdict.
+One study is bằng chứng (evidence / 증거), not verdict.
 
-Replication asks whether pattern reappears under similar or theoretically related conditions. Failure to replicate can reveal original false positive, overestimated effect, context dependency, measurement issue or insufficient precision.
+Replication asks whether mẫu (pattern / 패턴) reappears under similar or theoretically related conditions. thất bại (failure / 실패) to replicate can reveal original false positive, overestimated tác động (effect / 효과), ngữ cảnh (context / 맥락) phụ thuộc (dependency / 의존성), đo lường (measurement / 측정) issue or insufficient precision.
 
 Xem [[09_replication_meta_analysis_and_bayesian_reasoning]].
 
 ## 13. Open science
 
-Preregistration, registered reports, open materials, data/code sharing when ethical, and transparent analysis help reduce hidden researcher flexibility.
+Preregistration, registered reports, open materials, dữ liệu (data / 데이터)/mã (code / 코드) sharing when ethical, and transparent phân tích (analysis / 분석) help reduce hidden researcher flexibility.
 
-These practices do not guarantee good science. A bad study can be preregistered. Their value is making inference process more auditable.
+These practices do not guarantee good science. A bad study can be preregistered. Their giá trị (value / 값) is making suy luận (inference / 추론) tiến trình (process / 프로세스) more auditable.
 
 Xem [[06_open_science_and_evidence_evaluation]].
 
 ## 14. Statistical significance is not importance
 
-A tiny effect can have low p-value in huge sample. A meaningful effect can be uncertain in small sample.
+A tiny tác động (effect / 효과) can have low p-value in huge mẫu (sample / 표본). A meaningful tác động (effect / 효과) can be uncertain in small mẫu (sample / 표본).
 
 Read:
 
@@ -182,57 +185,57 @@ effect size
 
 not p-value alone.
 
-## 15. Null result is informative only under conditions
+## 15. Null kết quả (result / 결과) is informative only under conditions
 
-“Non-significant” does not automatically mean no effect. Study may be low power or measure poorly.
+“Non-significant” does not automatically mean no tác động (effect / 효과). Study may be low power or measure poorly.
 
-But repeatedly precise estimates near zero can meaningfully constrain theory.
+But repeatedly precise estimates near zero can meaningfully constrain lý thuyết (theory / 이론).
 
-Bayesian and equivalence approaches can formalize evidence about small/null effects under explicit assumptions.
+Bayesian and equivalence approaches can formalize bằng chứng (evidence / 증거) about small/null effects under tường minh (explicit / 명시적) các giả định (assumptions / 가정들).
 
-## 16. Theory vs hypothesis
+## 16. lý thuyết (theory / 이론) vs hypothesis
 
-A **giả thuyết (hypothesis)** is specific testable proposal. A **lý thuyết (theory)** organizes multiple findings and generates predictions.
+A **giả thuyết (hypothesis)** is specific testable proposal. A **lý thuyết (theory / 이론)** organizes multiple findings and generates predictions.
 
-Popular discourse sometimes calls speculation “theory”; science uses theory as structured explanatory model.
+Popular discourse sometimes calls speculation “lý thuyết (theory / 이론)”; science uses lý thuyết (theory / 이론) as structured explanatory mô hình (model / 모델).
 
 See five-level taxonomy in [[../EVIDENCE_STATUS_GUIDE]].
 
 ## 17. Falsifiability is useful but not sufficient
 
-A scientific claim should expose itself to possible failure. But falsifiability alone does not make theory good; vague auxiliary assumptions can rescue almost any model after failure.
+A scientific claim should expose itself to possible thất bại (failure / 실패). But falsifiability alone does not make lý thuyết (theory / 이론) good; vague auxiliary các giả định (assumptions / 가정들) can rescue almost any mô hình (model / 모델) after thất bại (failure / 실패).
 
-Useful theory also needs precision, explanatory scope, predictive success and parsimony relative to alternatives.
+Useful lý thuyết (theory / 이론) also needs precision, explanatory phạm vi (scope / 범위), predictive success and parsimony relative to alternatives.
 
-## 18. Measurement is theory-laden
+## 18. đo lường (measurement / 측정) is theory-laden
 
-If we define depression by a questionnaire, instrument choices shape what data can say. If item asks sleep difficulty, sleep changes can move depression score even if other symptoms stable.
+If we define depression by a questionnaire, instrument choices shape what dữ liệu (data / 데이터) can say. If item asks sleep difficulty, sleep changes can move depression score even if other symptoms stable.
 
-Measurement is not neutral pipeline after theory; it partly constructs empirical target.
+Đo lường (measurement / 측정) is not neutral chuỗi xử lý (pipeline / 파이프라인) after lý thuyết (theory / 이론); it partly constructs empirical mục tiêu (target / 대상).
 
 ## 19. Population matters
 
-Psychology historically relied heavily on Western, educated samples. A result in university students cannot automatically become “human nature”.
+Psychology historically relied heavily on Western, educated samples. A kết quả (result / 결과) in university students cannot automatically become “human nature”.
 
-Culture, language, socioeconomic context, age and migration can change both behavior and how questionnaire items function.
+Culture, ngôn ngữ (language / 언어), socioeconomic ngữ cảnh (context / 맥락), age and di chuyển (migration / 마이그레이션) can thay đổi (change / 변경) both hành vi (behavior / 동작) and how questionnaire items hàm (function / 함수).
 
 Xem [[../03_human_development_and_person/04_social_and_cultural_psychology]] và [[05_psychometrics_and_test_interpretation]].
 
-## 20. WEIRD problem
+## 20. WEIRD bài toán (problem / 문제)
 
 WEIRD = Western, Educated, Industrialized, Rich, Democratic.
 
-The point is not that Western samples are invalid; it is that **sampling frame limits inference**. Cross-cultural replication can test whether theory generalizes or needs boundary conditions.
+The điểm (point / 지점) is not that Western samples are invalid; it is that **sampling frame limits suy luận (inference / 추론)**. Cross-cultural replication can kiểm thử (test / 테스트) whether lý thuyết (theory / 이론) generalizes or needs ranh giới (boundary / 경계) conditions.
 
 ## 21. Individual difference vs group average
 
-An average effect does not tell every person's response.
+An average tác động (effect / 효과) does not tell every person's phản hồi (response / 응답).
 
-If intervention improves score by 0.3 SD on average, some improve more, some less, some worsen. Personalized prediction requires reliable moderators and out-of-sample validation, not post-hoc storytelling.
+If intervention improves score by 0.3 SD on average, some improve more, some less, some worsen. Personalized prediction requires reliable moderators and out-of-sample kiểm tra hợp lệ (validation / 검증), not post-hoc storytelling.
 
 ## 22. Science of individual people
 
-Group research is useful, but everyday application often asks “what works for this person?”. N-of-1 designs, EMA and repeated measures can help estimate within-person pattern.
+Group research is useful, but everyday ứng dụng (application / 애플리케이션) often asks “what works for this person?”. N-of-1 designs, EMA and repeated measures can help estimate within-person mẫu (pattern / 패턴).
 
 But self-tracking also suffers confounding, expectation and regression to mean.
 
@@ -242,33 +245,33 @@ Xem [[07_ecological_momentary_assessment_and_real_world_measurement]].
 
 Self-help often starts from recommendation:
 
-> wake at 5, think positive, use body language, build habit in 21 days.
+> wake at 5, think positive, use body ngôn ngữ (language / 언어), bản dựng (build / 빌드) habit in 21 days.
 
 Scientific psychology asks:
 
 - construct?
-- mechanism?
+- cơ chế (mechanism / 메커니즘)?
 - comparator?
-- effect size?
-- boundary condition?
-- harm/trade-off?
+- tác động (effect / 효과) kích thước (size / 크기)?
+- ranh giới (boundary / 경계) điều kiện (condition / 조건)?
+- harm/sự đánh đổi (trade-off / 트레이드오프)?
 - replication?
 
-A useful tip can work despite wrong theory; a statistically real average effect may be too small to matter individually.
+A useful tip can công việc (work / 작업) despite wrong lý thuyết (theory / 이론); a statistically real average tác động (effect / 효과) may be too small to matter individually.
 
-## 24. Evidence hierarchy is not a ladder that solves everything
+## 24. bằng chứng (evidence / 증거) hierarchy is not a ladder that solves everything
 
-RCTs, meta-analyses and systematic reviews are powerful, but quality varies. Meta-analysis of biased studies can give precise biased answer.
+RCTs, meta-analyses and systematic reviews are powerful, but chất lượng (quality / 품질) varies. Meta-analysis of biased studies can give precise biased answer.
 
-Mechanism question may need experiment; prevalence question may need representative survey; lived-experience question may need qualitative method.
+Cơ chế (mechanism / 메커니즘) question may need experiment; prevalence question may need representative survey; lived-experience question may need qualitative phương thức (method / 메서드).
 
-Best method depends question.
+Best phương thức (method / 메서드) depends question.
 
 ## 25. Historical theories
 
-Freud, Adler and Jung belong to history of Psychology and psychotherapy. They introduced influential questions about unconscious process, meaning, goal, identity and development.
+Freud, Adler and Jung belong to lịch sử (history / 이력) of Psychology and psychotherapy. They introduced influential questions about unconscious tiến trình (process / 프로세스), meaning, goal, định danh (identity / 식별자) and development.
 
-But historical influence is not scientific validation.
+But historical influence is not scientific kiểm tra hợp lệ (validation / 검증).
 
 ```text
 Historical theory
@@ -282,19 +285,19 @@ Xem [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
 ## 26. Psychology and neuroscience
 
-Psychological construct and neural implementation are different levels.
+Psychological construct and neural hiện thực (implementation / 구현) are different levels.
 
-A construct can be scientifically useful without one-to-one brain region. Conversely, brain activity only gains psychological meaning through task/model interpretation.
+A construct can be scientifically useful without one-to-one brain region. Conversely, brain activity only gains psychological meaning through tác vụ (task / 작업)/mô hình (model / 모델) interpretation.
 
 ## 27. Psychology and AI
 
-AI creates a useful analogy: a model can predict accurately without causal understanding; feature importance does not equal causal variable; benchmark performance can fail out-of-distribution.
+AI creates a useful analogy: a mô hình (model / 모델) can predict accurately without nhân quả (causal / 인과적) understanding; tính năng (feature / 기능) importance does not equal nhân quả (causal / 인과적) variable; benchmark hiệu năng (performance / 성능) can thất bại (fail / 실패) out-of-distribution.
 
-Psychology shares same problems: measurement, generalization, confounding and interpretability.
+Psychology shares same problems: đo lường (measurement / 측정), generalization, confounding and interpretability.
 
 Xem [[../90_connections/01_psychology_biology_statistics_and_ai]].
 
-## 28. Five evidence statuses
+## 28. Five bằng chứng (evidence / 증거) statuses
 
 Every claim should be readable as one of:
 
@@ -304,9 +307,9 @@ Every claim should be readable as one of:
 4. vấn đề còn tranh luận;
 5. lý thuyết lịch sử.
 
-This avoids language like “scientists proved” when evidence only supports a model under assumptions.
+This avoids ngôn ngữ (language / 언어) like “scientists proved” when bằng chứng (evidence / 증거) only supports a mô hình (model / 모델) under các giả định (assumptions / 가정들).
 
-## 29. Mental model
+## 29. mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Phenomenon
@@ -328,8 +331,10 @@ Theory update
 Careful application
 ```
 
-Every arrow can fail. Scientific maturity is not certainty; it is explicit error-correction.
+Every arrow can thất bại (fail / 실패). Scientific maturity is not certainty; it is tường minh (explicit / 명시적) error-correction.
 
 ## Kết nối kiến thức
 
 Đọc tiếp [[02_research_methods]], [[03_measurement_statistics]], [[05_psychometrics_and_test_interpretation]], [[06_open_science_and_evidence_evaluation]], [[08_causal_inference_and_psychological_evidence]], [[09_replication_meta_analysis_and_bayesian_reasoning]] và [[../CONCEPTUAL_DEPENDENCIES]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 history and major perspectives](./01_history_and_major_perspectives.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

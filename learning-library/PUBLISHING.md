@@ -2,6 +2,8 @@
 
 `library.config.json` is the only publication manifest. The Pages workflow copies only files under reviewed `allowedPrefixes` or explicit `allowedDocuments`; adding a file to the repository does not publish it.
 
+> **Mạch kiểm tra:** Quy trình đi theo `rights → manifest → audit → build → published reader`. Mỗi bước trả lời một câu hỏi khác nhau; pass ở bước trước không thay thế việc kiểm tra artifact và link ở bước sau.
+
 Before adding a Markdown or PDF file, confirm one of these in your own records:
 
 - you wrote it yourself;
@@ -38,3 +40,5 @@ For an approved folder that should appear under a different web location, an
 published navigation path; it does not move or duplicate the source files.
 
 Use `npm run audit:library` before `npm run build:library`. The site supports both `.md` and `.pdf`; Markdown under an approved prefix is discovered automatically, while PDFs remain explicit per-file entries after redistribution rights are confirmed. `raw` and `raw_md` are always skipped, and `output` is flattened only for display.
+
+> **Bàn giao:** Sau khi build, kiểm tra document count, search index và knowledge links; nếu nguồn nằm trong raw/imported thì quay lại canonical source hoặc generator thay vì đưa capture vào publication manifest.

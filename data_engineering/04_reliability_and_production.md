@@ -1,92 +1,95 @@
-# 04 — Reliability, data quality và production reasoning
+# 04 — độ tin cậy (reliability / 신뢰성), dữ liệu (data / 데이터) chất lượng (quality / 품질) và môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론)
 
-## 1. Pipeline success khác data success
+> **Mạch đọc:** Đặt **04 — độ tin cậy (reliability / 신뢰성), dữ liệu (data / 데이터) chất lượng (quality / 품질) và môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. chuỗi xử lý (pipeline / 파이프라인) success khác dữ liệu (data / 데이터) success** sang **2. dữ liệu (data / 데이터) chất lượng (quality / 품질) theo bất biến (invariant / 불변식)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một process exit code `0` chỉ chứng minh code không báo lỗi theo contract của process. Nó không chứng minh output đầy đủ, đúng business rule hoặc fresh.
 
-Ví dụ source trả về HTTP 200 nhưng chỉ có 20% records vì pagination bug. Pipeline có thể xanh từ đầu đến cuối. Vì vậy production Data Engineering cần quan sát cả system metrics lẫn data metrics.
+## 1. chuỗi xử lý (pipeline / 파이프라인) success khác dữ liệu (data / 데이터) success
 
-## 2. Data quality theo invariant
+Một tiến trình (process / 프로세스) exit mã (code / 코드) `0` chỉ chứng minh mã (code / 코드) không báo lỗi theo đặc tả hợp đồng (contract / 계약) của tiến trình (process / 프로세스). Nó không chứng minh đầu ra (output / 출력) đầy đủ, đúng nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) hoặc fresh.
 
-Rule quality tốt xuất phát từ invariant thay vì danh sách check chung chung. `NOT NULL` hữu ích nếu null thực sự bất hợp lệ. `row_count > 0` không đủ nếu bình thường dataset có mười triệu row nhưng hôm nay chỉ còn một nghìn.
+Ví dụ nguồn (source / 소스) trả về HTTP 200 nhưng chỉ có 20% records vì pagination bug. chuỗi xử lý (pipeline / 파이프라인) có thể xanh từ đầu đến cuối. Vì vậy môi trường vận hành (production / 운영 환경) kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) cần quan sát cả hệ thống (system / 시스템) metrics lẫn dữ liệu (data / 데이터) metrics.
 
-Các invariant có thể nằm ở nhiều tầng: schema invariant, uniqueness, referential integrity, accepted domain, volume distribution, reconciliation với source và business equation.
+## 2. dữ liệu (data / 데이터) chất lượng (quality / 품질) theo bất biến (invariant / 불변식)
 
-Ví dụ payment system có thể kiểm tra tổng captured amount theo source ledger và warehouse trong tolerance xác định. Reconciliation như vậy mạnh hơn chỉ kiểm tra column type.
+Quy tắc (rule / 규칙) chất lượng (quality / 품질) tốt xuất phát từ bất biến (invariant / 불변식) thay vì danh sách check chung chung. `NOT NULL` hữu ích nếu null thực sự bất hợp lệ. `row_count > 0` không đủ nếu bình thường dataset có mười triệu row nhưng hôm nay chỉ còn một nghìn.
 
-## 3. Freshness, completeness và correctness
+Các bất biến (invariant / 불변식) có thể nằm ở nhiều tầng: lược đồ (schema / 스키마) bất biến (invariant / 불변식), uniqueness, referential integrity, accepted lĩnh vực (domain / 도메인), volume phân phối (distribution / 분포), reconciliation với nguồn (source / 소스) và nghiệp vụ (business / 비즈니스) equation.
 
-Freshness hỏi dữ liệu mới đến mức nào. Completeness hỏi dữ liệu cần có đã đến đủ chưa. Correctness hỏi giá trị có đúng theo semantics không.
+Ví dụ payment hệ thống (system / 시스템) có thể kiểm tra tổng captured amount theo nguồn (source / 소스) ledger và warehouse trong tolerance xác định. Reconciliation như vậy mạnh hơn chỉ kiểm tra column kiểu (type / 타입).
 
-Ba khái niệm không thay thế nhau. Dataset có thể fresh vì vừa update nhưng thiếu 30% partition. Nó có thể complete nhưng dùng sai exchange rate. Dashboard có timestamp mới không chứng minh business data đáng tin.
+## 3. Freshness, completeness và tính đúng đắn (correctness / 정확성)
 
-## 4. Data contract
+Freshness hỏi dữ liệu mới đến mức nào. Completeness hỏi dữ liệu cần có đã đến đủ chưa. tính đúng đắn (correctness / 정확성) hỏi giá trị có đúng theo ngữ nghĩa (semantics / 의미론) không.
 
-Data contract làm expectation giữa producer và consumer trở nên explicit: schema, semantics, ownership, compatibility, quality và đôi khi SLO.
+Ba khái niệm không thay thế nhau. Dataset có thể fresh vì vừa cập nhật (update / 업데이트) nhưng thiếu 30% partition. Nó có thể complete nhưng dùng sai exchange tỷ lệ (rate / 비율). Dashboard có timestamp mới không chứng minh nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) đáng tin.
 
-Contract không nhất thiết là một framework. Giá trị của nó nằm ở việc breaking change không còn là surprise. Producer biết consumer phụ thuộc vào điều gì; consumer biết dataset được hứa những guarantee nào.
+## 4. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)
 
-Contract quá cứng cũng có trade-off: nó có thể làm evolution chậm. Vì vậy cần phân biệt field public/stable với implementation detail và có versioning/deprecation process.
+Dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) làm expectation giữa producer và bên tiêu thụ (consumer / 소비자) trở nên tường minh (explicit / 명시적): lược đồ (schema / 스키마), ngữ nghĩa (semantics / 의미론), quyền sở hữu (ownership / 소유권), tính tương thích (compatibility / 호환성), chất lượng (quality / 품질) và đôi khi SLO.
+
+Đặc tả hợp đồng (contract / 계약) không nhất thiết là một khung phần mềm (framework / 프레임워크). Giá trị của nó nằm ở việc breaking thay đổi (change / 변경) không còn là surprise. Producer biết bên tiêu thụ (consumer / 소비자) phụ thuộc vào điều gì; bên tiêu thụ (consumer / 소비자) biết dataset được hứa những guarantee nào.
+
+Đặc tả hợp đồng (contract / 계약) quá cứng cũng có sự đánh đổi (trade-off / 트레이드오프): nó có thể làm evolution chậm. Vì vậy cần phân biệt trường dữ liệu (field / 필드) công khai (public / 공개)/stable với hiện thực (implementation / 구현) detail và có versioning/deprecation tiến trình (process / 프로세스).
 
 ## 5. Lineage
 
-Lineage trả lời dataset này đến từ đâu và downstream nào phụ thuộc vào nó. Khi source column thay đổi, lineage giúp xác định blast radius.
+Lineage trả lời dataset này đến từ đâu và downstream nào phụ thuộc vào nó. Khi nguồn (source / 소스) column thay đổi, lineage giúp xác định blast radius.
 
-Lineage chỉ từ static SQL parsing có thể thiếu dynamic job, UDF hoặc external process. Runtime lineage chính xác hơn ở một số trường hợp nhưng tốn instrumentation. Production platform thường cần kết hợp metadata từ orchestration, catalog, query engine và deployment system.
+Lineage chỉ từ static SQL parsing có thể thiếu động (dynamic / 동적) job, UDF hoặc bên ngoài (external / 외부) tiến trình (process / 프로세스). thời gian chạy (runtime / 런타임) lineage chính xác hơn ở một số trường hợp nhưng tốn instrumentation. môi trường vận hành (production / 운영 환경) nền tảng (platform / 플랫폼) thường cần kết hợp siêu dữ liệu (metadata / 메타데이터) từ orchestration, danh mục (catalog / 카탈로그), truy vấn (query / 쿼리) engine và triển khai (deployment / 배포) hệ thống (system / 시스템).
 
-Lineage không tự tạo trust. Nó là evidence graph; quality và ownership vẫn phải được duy trì.
+Lineage không tự tạo trust. Nó là bằng chứng (evidence / 증거) đồ thị (graph / 그래프); chất lượng (quality / 품질) và quyền sở hữu (ownership / 소유권) vẫn phải được duy trì.
 
-## 6. Observability
+## 6. khả năng quan sát (observability / 관측 가능성)
 
-System observability theo dõi CPU, memory, latency, error rate, queue lag và resource saturation. Data observability bổ sung freshness, volume, schema drift, distribution và lineage-aware impact.
+Hệ thống (system / 시스템) khả năng quan sát (observability / 관측 가능성) theo dõi CPU, bộ nhớ (memory / 메모리), độ trễ (latency / 지연 시간), lỗi (error / 오류) tỷ lệ (rate / 비율), hàng đợi (queue / 큐) lag và tài nguyên (resource / 자원) saturation. dữ liệu (data / 데이터) khả năng quan sát (observability / 관측 가능성) bổ sung freshness, volume, lược đồ (schema / 스키마) drift, phân phối (distribution / 분포) và lineage-aware impact.
 
-Một alert tốt phải actionable. "row count changed" không đủ nếu không có baseline, severity, dataset owner và runbook. Alert quá nhạy gây fatigue; alert quá lỏng phát hiện incident sau consumer.
+Một alert tốt phải actionable. "row count changed" không đủ nếu không có baseline, severity, dataset đơn vị sở hữu (owner / 오너) và runbook. Alert quá nhạy gây fatigue; alert quá lỏng phát hiện sự cố (incident / 인시던트) sau bên tiêu thụ (consumer / 소비자).
 
-Senior note: monitoring nên bám vào user-visible/data-product SLO trước rồi drill down tới component metrics. Nếu chỉ monitor từng task, có thể tất cả task đều xanh trong khi data product đã vi phạm freshness SLO.
+Cấp cao (senior / 시니어) ghi chú (note / 노트): monitoring nên bám vào user-visible/data-product SLO trước rồi drill down tới thành phần (component / 컴포넌트) metrics. Nếu chỉ monitor từng tác vụ (task / 작업), có thể tất cả tác vụ (task / 작업) đều xanh trong khi dữ liệu (data / 데이터) sản phẩm (product / 제품) đã vi phạm freshness SLO.
 
-## 7. Retry và poison data
+## 7. thử lại (retry / 재시도) và poison dữ liệu (data / 데이터)
 
-Retry hữu ích cho transient failure như network timeout nhưng có thể làm tình hình tệ hơn với deterministic failure. Một malformed record retry 100 lần vẫn malformed và có thể block partition.
+Thử lại (retry / 재시도) hữu ích cho transient thất bại (failure / 실패) như mạng (network / 네트워크) hết thời gian chờ (timeout / 타임아웃) nhưng có thể làm tình hình tệ hơn với deterministic thất bại (failure / 실패). Một malformed bản ghi (record / 레코드) thử lại (retry / 재시도) 100 lần vẫn malformed và có thể khối (block / 블록) partition.
 
-Cần phân biệt transient, permanent và unknown failure. Dead-letter/quarantine path cho phép tách poison data khỏi main flow, nhưng không được biến thành nơi âm thầm bỏ dữ liệu. Quarantine phải có owner, metric, retention và replay procedure.
+Cần phân biệt transient, permanent và unknown thất bại (failure / 실패). Dead-letter/quarantine đường dẫn (path / 경로) cho phép tách poison dữ liệu (data / 데이터) khỏi main luồng (flow / 흐름), nhưng không được biến thành nơi âm thầm bỏ dữ liệu. Quarantine phải có đơn vị sở hữu (owner / 오너), chỉ số (metric / 지표), retention và replay procedure.
 
-Exponential backoff và jitter giúp tránh hàng nghìn worker retry đồng thời sau outage, gây thundering herd lên dependency vừa phục hồi.
+Exponential backoff và jitter giúp tránh hàng nghìn worker thử lại (retry / 재시도) đồng thời sau outage, gây thundering herd lên phụ thuộc (dependency / 의존성) vừa phục hồi.
 
-## 8. Recovery và disaster thinking
+## 8. khôi phục (recovery / 복구) và disaster thinking
 
-Backup chỉ có giá trị nếu restore được. Tương tự, event retention chỉ có giá trị nếu đủ để replay trong recovery window.
+Backup chỉ có giá trị nếu restore được. Tương tự, sự kiện (event / 이벤트) retention chỉ có giá trị nếu đủ để replay trong khôi phục (recovery / 복구) cửa sổ (window / 윈도우).
 
-Recovery design cần biết Recovery Point Objective (RPO) — chấp nhận mất tối đa bao nhiêu dữ liệu — và Recovery Time Objective (RTO) — chấp nhận mất bao lâu để phục hồi service/data product.
+Khôi phục (recovery / 복구) thiết kế (design / 설계) cần biết khôi phục (recovery / 복구) điểm (point / 지점) mục tiêu (objective / 목표) (RPO) — chấp nhận mất tối đa bao nhiêu dữ liệu — và khôi phục (recovery / 복구) thời gian (time / 시간) mục tiêu (objective / 목표) (RTO) — chấp nhận mất bao lâu để phục hồi dịch vụ (service / 서비스)/dữ liệu (data / 데이터) sản phẩm (product / 제품).
 
-Một pipeline có thể rebuild từ immutable raw log có recovery model khác pipeline chỉ giữ transformed latest state. Khả năng recompute là một tài sản kiến trúc, nhưng phải cân bằng với storage cost và retention/privacy policy.
+Một chuỗi xử lý (pipeline / 파이프라인) có thể rebuild từ immutable raw log có khôi phục (recovery / 복구) mô hình (model / 모델) khác chuỗi xử lý (pipeline / 파이프라인) chỉ giữ transformed latest trạng thái (state / 상태). Khả năng recompute là một tài sản kiến trúc, nhưng phải cân bằng với lưu trữ (storage / 저장소) chi phí (cost / 비용) và retention/privacy chính sách (policy / 정책).
 
-## 9. Security và governance
+## 9. bảo mật (security / 보안) và quản trị (governance / 거버넌스)
 
-Data platform thường tập trung dữ liệu từ nhiều source nên blast radius của quyền truy cập rất lớn. Principle of least privilege cần áp dụng cho service account, engineer và consumer.
+Dữ liệu (data / 데이터) nền tảng (platform / 플랫폼) thường tập trung dữ liệu từ nhiều nguồn (source / 소스) nên blast radius của quyền truy cập rất lớn. Principle of least privilege cần áp dụng cho dịch vụ (service / 서비스) account, engineer và bên tiêu thụ (consumer / 소비자).
 
-Encryption at rest/in transit là nền tảng nhưng không thay thế authorization. Sensitive field có thể cần masking/tokenization, row/column-level access và audit log. Development environment không nên mặc định copy production PII nguyên vẹn.
+Encryption at rest/in transit là nền tảng nhưng không thay thế authorization. Sensitive trường dữ liệu (field / 필드) có thể cần masking/tokenization, row/column-level truy cập (access / 접근) và nhật ký kiểm tra (audit log / 감사 로그). Development môi trường (environment / 환경) không nên mặc định bản sao (copy / 복사) môi trường vận hành (production / 운영 환경) PII nguyên vẹn.
 
-Retention cũng là security property. Giữ dữ liệu vô thời hạn làm tăng attack surface và có thể xung đột policy/pháp lý. Data lifecycle phải bao gồm deletion, không chỉ ingestion.
+Retention cũng là bảo mật (security / 보안) thuộc tính (property / 속성). Giữ dữ liệu vô thời hạn làm tăng attack surface và có thể xung đột chính sách (policy / 정책)/pháp lý. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기) phải bao gồm deletion, không chỉ ingestion.
 
-## 10. Performance và cost trong production
+## 10. hiệu năng (performance / 성능) và chi phí (cost / 비용) trong môi trường vận hành (production / 운영 환경)
 
-Khi pipeline chậm, đừng tối ưu theo cảm giác. Tách thời gian thành source read, serialization, network, compute, shuffle, sink write và orchestration wait. Xác định bottleneck trước.
+Khi chuỗi xử lý (pipeline / 파이프라인) chậm, đừng tối ưu theo cảm giác. Tách thời gian thành nguồn (source / 소스) read, serialization, mạng (network / 네트워크), compute, shuffle, sink ghi (write / 쓰기) và orchestration wait. Xác định bottleneck trước.
 
-Distributed job có thể chậm vì data skew: một key chiếm phần lớn records khiến một task xử lý lâu hơn tất cả task khác. Tăng số worker không nhất thiết giải quyết hotspot. Cần thay partition strategy, pre-aggregation, salting hoặc xử lý heavy hitter riêng tùy semantics.
+Phân tán (distributed / 분산) job có thể chậm vì dữ liệu (data / 데이터) skew: một key chiếm phần lớn records khiến một tác vụ (task / 작업) xử lý lâu hơn tất cả tác vụ (task / 작업) khác. Tăng số worker không nhất thiết giải quyết hotspot. Cần thay partition chiến lược (strategy / 전략), pre-aggregation, salting hoặc xử lý heavy hitter riêng tùy ngữ nghĩa (semantics / 의미론).
 
-Cost cũng phải nhìn theo unit kinh doanh như cost trên TB processed, cost trên pipeline run hoặc cost trên data product, thay vì chỉ tổng hóa đơn. Unit economics giúp thấy regression khi volume thay đổi.
+Chi phí (cost / 비용) cũng phải nhìn theo đơn vị (unit / 단위) kinh doanh như chi phí (cost / 비용) trên TB processed, chi phí (cost / 비용) trên chuỗi xử lý (pipeline / 파이프라인) run hoặc chi phí (cost / 비용) trên dữ liệu (data / 데이터) sản phẩm (product / 제품), thay vì chỉ tổng hóa đơn. đơn vị (unit / 단위) economics giúp thấy regression khi volume thay đổi.
 
-## 11. Production incident reasoning
+## 11. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) lập luận (reasoning / 추론)
 
-Khi metric sai, debugging nên đi ngược lineage: consumer thấy gì → serving table được publish khi nào → transformation dùng input snapshot nào → ingestion có gap/duplicate không → source có thay semantics không.
+Khi chỉ số (metric / 지표) sai, debugging nên đi ngược lineage: bên tiêu thụ (consumer / 소비자) thấy gì → serving bảng (table / 테이블) được publish khi nào → transformation dùng đầu vào (input / 입력) snapshot nào → ingestion có gap/duplicate không → nguồn (source / 소스) có thay ngữ nghĩa (semantics / 의미론) không.
 
-Giữ run metadata như code version, input partitions/snapshot, row counts, checkpoint, schema version và output commit giúp biến debugging từ suy đoán thành điều tra dựa trên evidence.
+Giữ run siêu dữ liệu (metadata / 메타데이터) như mã (code / 코드) phiên bản (version / 버전), đầu vào (input / 입력) partitions/snapshot, row counts, checkpoint, lược đồ (schema / 스키마) phiên bản (version / 버전) và đầu ra (output / 출력) lần ghi nhận (commit / 커밋) giúp biến debugging từ suy đoán thành điều tra dựa trên bằng chứng (evidence / 증거).
 
-Một hệ thống dữ liệu trưởng thành không phải hệ thống không bao giờ lỗi. Nó là hệ thống phát hiện lỗi sớm, giới hạn blast radius, giải thích được trạng thái, replay/recover có kiểm soát và học được từ incident để invariant được bảo vệ tốt hơn ở lần sau.
+Một hệ thống dữ liệu trưởng thành không phải hệ thống không bao giờ lỗi. Nó là hệ thống phát hiện lỗi sớm, giới hạn blast radius, giải thích được trạng thái, replay/recover có kiểm soát và học được từ sự cố (incident / 인시던트) để bất biến (invariant / 불변식) được bảo vệ tốt hơn ở lần sau.
 
-## 12. Reliability budget cho data product
+## 12. độ tin cậy (reliability / 신뢰성) ngân sách (budget / 예산) cho dữ liệu (data / 데이터) sản phẩm (product / 제품)
 
-Data product nên có SLO riêng thay vì chỉ dùng task success rate:
+Dữ liệu (data / 데이터) sản phẩm (product / 제품) nên có SLO riêng thay vì chỉ dùng tác vụ (task / 작업) success tỷ lệ (rate / 비율):
 
 ```text
 freshness SLO       = thời gian tối đa từ source event đến publish
@@ -95,22 +98,22 @@ correctness SLO     = tỷ lệ reconciliation/quality gate đạt
 availability SLO    = consumer có đọc được version hợp lệ không
 ```
 
-Một job chạy xanh 99.9% nhưng freshness trễ 4 giờ vẫn có thể vi phạm product SLO. Error budget nên được dùng để quyết định có ưu tiên feature mới, backfill hay reliability work.
+Một job chạy xanh 99.9% nhưng freshness trễ 4 giờ vẫn có thể vi phạm sản phẩm (product / 제품) SLO. lỗi (error / 오류) ngân sách (budget / 예산) nên được dùng để quyết định có ưu tiên tính năng (feature / 기능) mới, backfill hay độ tin cậy (reliability / 신뢰성) công việc (work / 작업).
 
-## 13. Quality gate theo tầng
+## 13. cổng chất lượng (quality gate / 품질 게이트) theo tầng
 
-Quality check nên đặt gần failure boundary:
+Chất lượng (quality / 품질) check nên đặt gần thất bại (failure / 실패) ranh giới (boundary / 경계):
 
-1. ingestion: schema, checksum, duplicate identity, source cursor;
-2. transformation: grain, uniqueness, referential integrity, accepted domain;
+1. ingestion: lược đồ (schema / 스키마), checksum, duplicate định danh (identity / 식별자), nguồn (source / 소스) cursor;
+2. transformation: grain, uniqueness, referential integrity, accepted lĩnh vực (domain / 도메인);
 3. publish: row count, freshness, reconciliation, snapshot completeness;
-4. serving: metric golden set, point-in-time correctness, consumer contract.
+4. serving: chỉ số (metric / 지표) golden set, point-in-time tính đúng đắn (correctness / 정확성), bên tiêu thụ (consumer / 소비자) đặc tả hợp đồng (contract / 계약).
 
-Check ở tầng cuối không thay thế check ở tầng trước. Nếu chỉ kiểm tra dashboard, rất khó biết mất dữ liệu xảy ra ở source, transport hay join.
+Check ở tầng cuối không thay thế check ở tầng trước. Nếu chỉ kiểm tra dashboard, rất khó biết mất dữ liệu xảy ra ở nguồn (source / 소스), vận chuyển (transport / 전송) hay phép nối (join / 조인).
 
-## 14. Incident timeline và evidence
+## 14. sự cố (incident / 인시던트) timeline và bằng chứng (evidence / 증거)
 
-Một incident report tốt không chỉ có “job failed”. Nó ghi lại source watermark, input partitions, code/schema version, checkpoint, output commit, quality results, consumer impact và các quyết định rollback/replay.
+Một sự cố (incident / 인시던트) report tốt không chỉ có “job failed”. Nó ghi lại nguồn (source / 소스) watermark, đầu vào (input / 입력) partitions, mã (code / 코드)/lược đồ (schema / 스키마) phiên bản (version / 버전), checkpoint, đầu ra (output / 출력) lần ghi nhận (commit / 커밋), chất lượng (quality / 품질) results, bên tiêu thụ (consumer / 소비자) impact và các quyết định quay lui (rollback / 롤백)/replay.
 
 Timeline cần phân biệt:
 
@@ -118,10 +121,12 @@ Timeline cần phân biệt:
 first bad input → first bad transform → bad publish → first consumer observation
 ```
 
-Phân biệt bốn mốc này giúp tránh sửa nhầm layer và đo được detection lag.
+Phân biệt bốn mốc này giúp tránh sửa nhầm tầng (layer / 계층) và đo được detection lag.
 
-## 15. Chaos và recovery test
+## 15. Chaos và khôi phục (recovery / 복구) kiểm thử (test / 테스트)
 
-Recovery claim phải được kiểm chứng bằng thử nghiệm: kill worker trước/sau sink commit, làm mất acknowledgement, inject late event, truncate source retention giả lập, chạy duplicate backfill và restore snapshot. Test cần kiểm tra cả output correctness lẫn absence of unwanted side effect.
+Khôi phục (recovery / 복구) claim phải được kiểm chứng bằng thử nghiệm: kill worker trước/sau sink lần ghi nhận (commit / 커밋), làm mất acknowledgement, inject late sự kiện (event / 이벤트), truncate nguồn (source / 소스) retention giả lập, chạy duplicate backfill và restore snapshot. kiểm thử (test / 테스트) cần kiểm tra cả đầu ra (output / 출력) tính đúng đắn (correctness / 정확성) lẫn absence of unwanted side tác động (effect / 효과).
 
-Một runbook chưa từng chạy trong điều kiện gần production chỉ là giả thuyết. Recovery time phải được đo, không suy ra từ sơ đồ architecture.
+Một runbook chưa từng chạy trong điều kiện gần môi trường vận hành (production / 운영 환경) chỉ là giả thuyết. khôi phục (recovery / 복구) thời gian (time / 시간) phải được đo, không suy ra từ sơ đồ kiến trúc (architecture / 아키텍처).
+
+> **Bàn giao:** Sau **15. Chaos và khôi phục (recovery / 복구) kiểm thử (test / 테스트)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 foundations](./01_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

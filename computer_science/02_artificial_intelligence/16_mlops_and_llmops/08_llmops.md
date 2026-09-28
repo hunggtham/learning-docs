@@ -1,16 +1,19 @@
 # LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn
 
-**LLMOps** mở rộng MLOps sang các hệ thống dựa trên mô hình ngôn ngữ lớn (Large Language Model — LLM). Điểm khác quan trọng là hành vi của ứng dụng thường không nằm trong một artifact mô hình duy nhất. Nó là kết quả của model, prompt, retrieval, tool, memory, policy, orchestration và evaluator cùng hoạt động.
+> **Mạch đọc:** Đặt **LLMOps: vận hành ứng dụng mô hình ngôn ngữ lớn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kiến thức tiên quyết** sang **hành vi (behavior / 동작) Bundle**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Vì vậy đơn vị cần version hóa trong LLMOps không phải chỉ là “model”, mà là **gói hành vi (behavior bundle)** của toàn application.
+
+**LLMOps** mở rộng MLOps sang các hệ thống dựa trên mô hình ngôn ngữ lớn (Large Language model — LLM). Điểm khác quan trọng là hành vi của ứng dụng thường không nằm trong một sản phẩm tạo ra (artifact / 산출물) mô hình duy nhất. Nó là kết quả của mô hình (model / 모델), prompt, retrieval, công cụ (tool / 도구), bộ nhớ (memory / 메모리), chính sách (policy / 정책), orchestration và evaluator cùng hoạt động.
+
+Vì vậy đơn vị cần phiên bản (version / 버전) hóa trong LLMOps không phải chỉ là “mô hình (model / 모델)”, mà là **gói hành vi (behavior bundle)** của toàn ứng dụng (application / 애플리케이션).
 
 ## Kiến thức tiên quyết
 
 Nên đọc trước [RAG](../09_retrieval_and_rag/README.md), [Agent Systems](../10_agents_and_ai_systems/README.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md), [Evaluation](../18_evaluation_reliability_interpretability/00_evaluation_foundations.md) và [Secure AI System Design](../19_ai_safety_security_alignment/08_secure_ai_system_design.md).
 
-## Behavior Bundle
+## Hành vi (behavior / 동작) Bundle
 
-Một version ứng dụng LLM nên xác định đầy đủ:
+Một phiên bản (version / 버전) ứng dụng LLM nên xác định đầy đủ:
 
 ```text
 base model / provider + version
@@ -28,11 +31,11 @@ security/safety policy
 evaluation suite
 ```
 
-Chỉ cần một thành phần đổi, hành vi đầu-cuối có thể đổi dù model weights giữ nguyên.
+Chỉ cần một thành phần đổi, hành vi đầu-cuối có thể đổi dù mô hình (model / 모델) weights giữ nguyên.
 
-## Lineage của một request
+## Lineage của một yêu cầu (request / 요청)
 
-Mỗi request production nên truy được về:
+Mỗi yêu cầu (request / 요청) môi trường vận hành (production / 운영 환경) nên truy được về:
 
 ```text
 request_id
@@ -50,7 +53,7 @@ Lineage này giúp trả lời “tại sao hôm nay cùng câu hỏi lại ra k
 
 ## Prompt Versioning
 
-Prompt nên được xem như code/config có lifecycle:
+Prompt nên được xem như mã (code / 코드)/cấu hình (config / 설정) có vòng đời (lifecycle / 생명주기):
 
 ```text
 draft
@@ -61,25 +64,25 @@ draft
 → rollback/archive
 ```
 
-Không nên sửa production prompt trực tiếp trong UI mà không có audit trail. Prompt diff phải đi cùng kết quả evaluation để biết thay đổi nào tạo regression.
+Không nên sửa môi trường vận hành (production / 운영 환경) prompt trực tiếp trong UI mà không có kiểm tra (audit / 감사) trail. Prompt diff phải đi cùng kết quả evaluation để biết thay đổi nào tạo regression.
 
 ## Provider Drift
 
-Hosted model có thể được provider cập nhật hoặc alias `latest` có thể thay đổi behavior.
+Hosted mô hình (model / 모델) có thể được provider cập nhật hoặc alias `latest` có thể thay đổi hành vi (behavior / 동작).
 
-Khi có thể, nên pin version. Nếu không thể pin, cần:
+Khi có thể, nên pin phiên bản (version / 버전). Nếu không thể pin, cần:
 
-- lưu provider/model metadata;
+- lưu provider/mô hình (model / 모델) siêu dữ liệu (metadata / 메타데이터);
 - giữ golden/regression set;
 - chạy canary định kỳ;
-- theo dõi tool/schema adherence;
-- có fallback hoặc rollback strategy.
+- theo dõi công cụ (tool / 도구)/lược đồ (schema / 스키마) adherence;
+- có fallback hoặc chiến lược quay lui (rollback strategy / 롤백 전략).
 
-Provider abstraction không loại bỏ drift; nó chỉ đổi nơi drift xuất hiện.
+Provider lớp trừu tượng (abstraction / 추상화) không loại bỏ drift; nó chỉ đổi nơi drift xuất hiện.
 
-## Release dựa trên Evaluation
+## Bản phát hành (release / 릴리스) dựa trên Evaluation
 
-Generative output không hoàn toàn deterministic nên exact-string unit test thường quá giòn. Release gate nên kết hợp:
+Generative đầu ra (output / 출력) không hoàn toàn deterministic nên exact-string đơn vị (unit / 단위) kiểm thử (test / 테스트) thường quá giòn. bản phát hành (release / 릴리스) gate nên kết hợp:
 
 ```text
 semantic correctness
@@ -92,15 +95,15 @@ latency
 cost
 ```
 
-Nên dùng deterministic validator cho property kiểm trực tiếp được, human/reference set cho quality cần judgment và model-based evaluator khi đã hiểu bias của evaluator.
+Nên dùng deterministic validator cho thuộc tính (property / 속성) kiểm trực tiếp được, human/tham chiếu (reference / 참조) set cho chất lượng (quality / 품질) cần judgment và model-based evaluator khi đã hiểu độ lệch (bias / 편향) của evaluator.
 
-## Golden Set, Hidden Set và Production Set
+## Golden Set, Hidden Set và môi trường vận hành (production / 운영 환경) Set
 
 **Golden set** phù hợp cho regression thường xuyên.
 
-**Hidden/holdout set** giảm nguy cơ overfit vào bộ test quen thuộc.
+**Hidden/holdout set** giảm nguy cơ overfit vào bộ kiểm thử (test / 테스트) quen thuộc.
 
-**Production-derived set** phản ánh workload mới xuất hiện.
+**Production-derived set** phản ánh tải công việc (workload / 워크로드) mới xuất hiện.
 
 Một hệ thống trưởng thành cần cả ba thay vì chỉ giữ một benchmark tĩnh.
 
@@ -119,7 +122,7 @@ Không cần chạy bộ đánh giá đắt nhất cho mọi thay đổi nhỏ.
 
 ## RAGOps
 
-RAG có lifecycle riêng:
+RAG có vòng đời (lifecycle / 생명주기) riêng:
 
 ```text
 source ingestion
@@ -133,9 +136,9 @@ source ingestion
 → context packing
 ```
 
-Mọi stage có thể tạo regression. Ví dụ model không đổi nhưng parser mới làm mất heading, khiến chunking và retrieval giảm chất lượng.
+Mọi stage có thể tạo regression. Ví dụ mô hình (model / 모델) không đổi nhưng parser mới làm mất heading, khiến chunking và retrieval giảm chất lượng.
 
-## Index Lineage và Freshness
+## Chỉ mục (index / 인덱스) Lineage và Freshness
 
 Cần biết:
 
@@ -147,27 +150,27 @@ ACL metadata version nào?
 index build hoàn tất khi nào?
 ```
 
-Index stale là failure production ngay cả khi model endpoint hoàn toàn khỏe.
+Chỉ mục (index / 인덱스) stale là thất bại (failure / 실패) môi trường vận hành (production / 운영 환경) ngay cả khi mô hình (model / 모델) endpoint hoàn toàn khỏe.
 
 ## Retrieval Regression
 
-Generation quality giảm có thể bắt nguồn từ retrieval.
+Generation chất lượng (quality / 품질) giảm có thể bắt nguồn từ retrieval.
 
 Nên đo riêng:
 
 - Recall@k;
 - MRR / nDCG;
 - tỷ lệ retrieval rỗng;
-- tỷ lệ relevant context;
-- citation support;
-- ACL-filter correctness;
-- index freshness.
+- tỷ lệ relevant ngữ cảnh (context / 맥락);
+- citation hỗ trợ (support / 지원);
+- ACL-filter tính đúng đắn (correctness / 정확성);
+- chỉ mục (index / 인덱스) freshness.
 
 Xem [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md).
 
 ## AgentOps
 
-Agent thêm trajectory động:
+Tác nhân (agent / 에이전트) thêm trajectory động:
 
 ```text
 planner decisions
@@ -179,11 +182,11 @@ side effects
 verification
 ```
 
-Version Agent phải bao gồm workflow graph, tool schema, state policy và budget, không chỉ prompt.
+Phiên bản (version / 버전) tác nhân (agent / 에이전트) phải bao gồm workflow đồ thị (graph / 그래프), công cụ (tool / 도구) lược đồ (schema / 스키마), trạng thái (state / 상태) chính sách (policy / 정책) và ngân sách (budget / 예산), không chỉ prompt.
 
-## Durable Trace cho Agent
+## Durable dấu vết (trace / 추적) cho tác nhân (agent / 에이전트)
 
-Trace nên đủ để reconstruct:
+Dấu vết (trace / 추적) nên đủ để reconstruct:
 
 ```text
 state trước step
@@ -195,11 +198,11 @@ verification
 cost / latency
 ```
 
-Raw chain-of-thought không phải requirement vận hành; structured event và decision metadata mới là phần cần cho debugging/audit.
+Raw chain-of-thought không phải yêu cầu (requirement / 요구사항) vận hành; structured sự kiện (event / 이벤트) và quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터) mới là phần cần cho debugging/kiểm tra (audit / 감사).
 
-## Tool Schema Evolution
+## Công cụ (tool / 도구) lược đồ (schema / 스키마) Evolution
 
-Nếu API/tool đổi field hoặc semantics, LLM có thể vẫn sinh argument theo contract cũ.
+Nếu API/công cụ (tool / 도구) đổi trường dữ liệu (field / 필드) hoặc ngữ nghĩa (semantics / 의미론), LLM có thể vẫn sinh argument theo đặc tả hợp đồng (contract / 계약) cũ.
 
 Cần:
 
@@ -211,27 +214,27 @@ fallback behavior
 deprecation policy
 ```
 
-Tool contract nên được quản lý giống normal API contract.
+Công cụ (tool / 도구) đặc tả hợp đồng (contract / 계약) nên được quản lý giống normal Đặc tả API (API contract / API 계약).
 
-## Memory Lifecycle
+## Bộ nhớ (memory / 메모리) vòng đời (lifecycle / 생명주기)
 
-Persistent memory là một data store và cần:
+Persistent bộ nhớ (memory / 메모리) là một dữ liệu (data / 데이터) store và cần:
 
-- write policy;
-- retrieval policy;
+- ghi (write / 쓰기) chính sách (policy / 정책);
+- retrieval chính sách (policy / 정책);
 - provenance;
 - TTL/retention;
-- correction/delete semantics;
-- tenant/user scope;
+- correction/delete ngữ nghĩa (semantics / 의미론);
+- tenant/người dùng (user / 사용자) phạm vi (scope / 범위);
 - privacy controls.
 
-Memory write từ model không nên được coi là truth mặc định. Xem [Agent Memory](../10_agents_and_ai_systems/04_agent_memory.md).
+Bộ nhớ (memory / 메모리) ghi (write / 쓰기) từ mô hình (model / 모델) không nên được coi là truth mặc định. Xem [Agent Memory](../10_agents_and_ai_systems/04_agent_memory.md).
 
-## Cache và Version Awareness
+## Bộ nhớ đệm (cache / 캐시) và phiên bản (version / 버전) Awareness
 
-Prompt cache, exact cache, semantic cache và retrieval cache đều có invalidation problem.
+Prompt bộ nhớ đệm (cache / 캐시), chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시), ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) và retrieval bộ nhớ đệm (cache / 캐시) đều có vô hiệu hóa (invalidation / 무효화) bài toán (problem / 문제).
 
-Cache key có thể cần chứa:
+Bộ nhớ đệm (cache / 캐시) key có thể cần chứa:
 
 ```text
 model version
@@ -241,17 +244,17 @@ policy version
 tenant/user scope
 ```
 
-Nếu không, release mới có thể tiếp tục trả output được tạo bởi behavior bundle cũ.
+Nếu không, bản phát hành (release / 릴리스) mới có thể tiếp tục trả đầu ra (output / 출력) được tạo bởi hành vi (behavior / 동작) bundle cũ.
 
-## Model Routing và Release
+## Mô hình (model / 모델) Routing và bản phát hành (release / 릴리스)
 
-Nếu app route request sang nhiều model, release không chỉ là “một model mới”. Cần version router policy và đánh giá distribution request theo từng route.
+Nếu app tuyến (route / 경로) yêu cầu (request / 요청) sang nhiều mô hình (model / 모델), bản phát hành (release / 릴리스) không chỉ là “một mô hình (model / 모델) mới”. Cần phiên bản (version / 버전) router chính sách (policy / 정책) và đánh giá phân phối (distribution / 분포) yêu cầu (request / 요청) theo từng tuyến (route / 경로).
 
-Một thay đổi nhỏ trong router có thể làm cost hoặc failure rate tăng mạnh dù từng model không đổi.
+Một thay đổi nhỏ trong router có thể làm chi phí (cost / 비용) hoặc thất bại (failure / 실패) tỷ lệ (rate / 비율) tăng mạnh dù từng mô hình (model / 모델) không đổi.
 
-## Token, Cost và Budget
+## Đơn vị từ (token / 토큰), chi phí (cost / 비용) và ngân sách (budget / 예산)
 
-Nên theo dõi theo request/task:
+Nên theo dõi theo yêu cầu (request / 요청)/tác vụ (task / 작업):
 
 ```text
 input tokens
@@ -265,11 +268,11 @@ human escalation
 cost / task
 ```
 
-Với Agent, `cost per successful task` có ý nghĩa hơn cost mỗi model call.
+Với tác nhân (agent / 에이전트), `cost per successful task` có ý nghĩa hơn chi phí (cost / 비용) mỗi mô hình (model / 모델) lời gọi (call / 호출).
 
-## Latency Decomposition
+## Độ trễ (latency / 지연 시간) Decomposition
 
-Không chỉ đo tổng latency. Trace nên tách:
+Không chỉ đo tổng độ trễ (latency / 지연 시간). dấu vết (trace / 추적) nên tách:
 
 ```text
 retrieval
@@ -281,25 +284,25 @@ verification
 queue time
 ```
 
-Nếu p99 tăng, decomposition giúp biết cần tối ưu model, index, tool hay capacity.
+Nếu p99 tăng, decomposition giúp biết cần tối ưu mô hình (model / 모델), chỉ mục (index / 인덱스), công cụ (tool / 도구) hay sức chứa (capacity / 용량).
 
-## Security trong LLMOps
+## Bảo mật (security / 보안) trong LLMOps
 
 LLMOps phải theo dõi và kiểm thử:
 
 - prompt injection;
 - malicious retrieved content;
-- tool abuse;
+- công cụ (tool / 도구) abuse;
 - cross-tenant retrieval;
 - secret leakage;
-- memory poisoning;
-- policy bypass.
+- bộ nhớ (memory / 메모리) poisoning;
+- chính sách (policy / 정책) bypass.
 
-Document được retrieve là dữ liệu không đáng tin mặc định. System prompt không phải security boundary. Xem [Prompt Injection](../19_ai_safety_security_alignment/03_prompt_injection_and_jailbreaks.md).
+Document được retrieve là dữ liệu không đáng tin mặc định. hệ thống (system / 시스템) prompt không phải ranh giới bảo mật (security boundary / 보안 경계). Xem [Prompt Injection](../19_ai_safety_security_alignment/03_prompt_injection_and_jailbreaks.md).
 
-## Security Regression Suite
+## Bảo mật (security / 보안) Regression Suite
 
-Mỗi security incident hoặc bypass quan trọng nên thành regression scenario:
+Mỗi bảo mật (security / 보안) sự cố (incident / 인시던트) hoặc bypass quan trọng nên thành regression scenario:
 
 ```text
 attack case
@@ -308,11 +311,11 @@ attack case
 → release gate
 ```
 
-Ví dụ invariant: “tool write không chạy nếu không có approval”, bất kể model output nói gì.
+Ví dụ bất biến (invariant / 불변식): “công cụ (tool / 도구) ghi (write / 쓰기) không chạy nếu không có approval”, bất kể mô hình (model / 모델) đầu ra (output / 출력) nói gì.
 
-## Monitoring và Observability
+## Monitoring và khả năng quan sát (observability / 관측 가능성)
 
-Một trace production có thể là:
+Một dấu vết (trace / 추적) môi trường vận hành (production / 운영 환경) có thể là:
 
 ```text
 request
@@ -325,29 +328,29 @@ request
 → output
 ```
 
-Mỗi span nên có latency, cost, error và version metadata.
+Mỗi span nên có độ trễ (latency / 지연 시간), chi phí (cost / 비용), lỗi (error / 오류) và phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터).
 
-Không nên log raw prompt/tool result nhạy cảm mặc định; cần redaction, sampling và retention policy.
+Không nên log raw prompt/công cụ (tool / 도구) kết quả (result / 결과) nhạy cảm mặc định; cần redaction, sampling và retention chính sách (policy / 정책).
 
-## Online Quality Signals
+## Online chất lượng (quality / 품질) Signals
 
 Ground truth thường đến trễ. Có thể dùng:
 
 - verified completion;
-- user correction;
+- người dùng (user / 사용자) correction;
 - human escalation;
-- citation verification;
-- tool failure;
-- business outcome;
+- citation xác minh (verification / 확인);
+- công cụ (tool / 도구) thất bại (failure / 실패);
+- nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과);
 - delayed labels.
 
-Proxy signal phải được hiểu là proxy, không phải ground truth tuyệt đối.
+Proxy tín hiệu (signal / 신호) phải được hiểu là proxy, không phải ground truth tuyệt đối.
 
 ## Evaluation Drift
 
-Workload thay đổi theo thời gian. Eval suite cũ có thể không còn đại diện.
+Tải công việc (workload / 워크로드) thay đổi theo thời gian. Eval suite cũ có thể không còn đại diện.
 
-Production failure cluster nên quay lại thành test mới:
+Môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) cluster nên quay lại thành kiểm thử (test / 테스트) mới:
 
 ```text
 production issue
@@ -358,9 +361,9 @@ production issue
 → prevent regression
 ```
 
-## Incident và Rollback
+## Sự cố (incident / 인시던트) và quay lui (rollback / 롤백)
 
-Rollback phải khôi phục **behavior bundle** tương thích:
+Quay lui (rollback / 롤백) phải khôi phục **hành vi (behavior / 동작) bundle** tương thích:
 
 ```text
 model
@@ -370,36 +373,36 @@ tool schema
 policy
 ```
 
-Chỉ rollback model có thể không đủ nếu incident đến từ index hoặc tool schema mới.
+Chỉ quay lui (rollback / 롤백) mô hình (model / 모델) có thể không đủ nếu sự cố (incident / 인시던트) đến từ chỉ mục (index / 인덱스) hoặc công cụ (tool / 도구) lược đồ (schema / 스키마) mới.
 
 Xem [Incident Response](./09_incident_response_and_lifecycle.md).
 
 ## Canary và Shadow
 
-Shadow cho candidate nhận production-like request nhưng không tác động user.
+Shadow cho candidate nhận production-like yêu cầu (request / 요청) nhưng không tác động người dùng (user / 사용자).
 
 Canary cho một phần traffic thật sử dụng candidate.
 
-Guardrail cần gồm quality, latency, cost và security signal; không chỉ HTTP error rate.
+Guardrail cần gồm chất lượng (quality / 품질), độ trễ (latency / 지연 시간), chi phí (cost / 비용) và bảo mật (security / 보안) tín hiệu (signal / 신호); không chỉ HTTP lỗi (error / 오류) tỷ lệ (rate / 비율).
 
-## Trade-off
+## Sự đánh đổi (trade-off / 트레이드오프)
 
-LLMOps sâu làm tăng số artifact, version và evaluation cần quản lý. Quá nhiều gate có thể làm release chậm; quá ít gate làm regression khó phát hiện.
+LLMOps sâu làm tăng số sản phẩm tạo ra (artifact / 산출물), phiên bản (version / 버전) và evaluation cần quản lý. Quá nhiều gate có thể làm bản phát hành (release / 릴리스) chậm; quá ít gate làm regression khó phát hiện.
 
-Mục tiêu là tăng mức kiểm soát theo risk và complexity của application, không xây platform nặng nề hơn nhu cầu.
+Mục tiêu là tăng mức kiểm soát theo rủi ro (risk / 위험) và độ phức tạp (complexity / 복잡도) của ứng dụng (application / 애플리케이션), không xây nền tảng (platform / 플랫폼) nặng nề hơn nhu cầu.
 
-## Failure Modes phổ biến
+## Thất bại (failure / 실패) Modes phổ biến
 
-- prompt thay đổi nhưng không version;
-- model provider update âm thầm;
-- index mới build từ corpus thiếu dữ liệu;
-- embedding đổi nhưng index chưa rebuild;
-- tool schema thay đổi không có compatibility test;
-- semantic cache trả result cũ;
+- prompt thay đổi nhưng không phiên bản (version / 버전);
+- mô hình (model / 모델) provider cập nhật (update / 업데이트) âm thầm;
+- chỉ mục (index / 인덱스) mới bản dựng (build / 빌드) từ corpus thiếu dữ liệu;
+- embedding đổi nhưng chỉ mục (index / 인덱스) chưa rebuild;
+- công cụ (tool / 도구) lược đồ (schema / 스키마) thay đổi không có tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트);
+- ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) trả kết quả (result / 결과) cũ;
 - eval set overfit;
-- trace thiếu version metadata;
-- Agent loop cost runaway;
-- rollback chỉ đổi model nhưng không đổi prompt/index.
+- dấu vết (trace / 추적) thiếu phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터);
+- tác nhân (agent / 에이전트) vòng lặp (loop / 루프) chi phí (cost / 비용) runaway;
+- quay lui (rollback / 롤백) chỉ đổi mô hình (model / 모델) nhưng không đổi prompt/chỉ mục (index / 인덱스).
 
 ## Mô hình triển khai LLMOps
 
@@ -416,32 +419,34 @@ Git / config registry
 → next release
 ```
 
-Đây là một feedback loop vận hành, không phải pipeline một chiều.
+Đây là một vòng phản hồi (feedback loop / 피드백 루프) vận hành, không phải chuỗi xử lý (pipeline / 파이프라인) một chiều.
 
 ## Mô hình tư duy
 
-> **LLMOps là quản lý vòng đời của toàn bộ graph tạo hành vi, không chỉ riêng mô hình ngôn ngữ.**
+> **LLMOps là quản lý vòng đời của toàn bộ đồ thị (graph / 그래프) tạo hành vi, không chỉ riêng mô hình ngôn ngữ.**
 
-Nếu không truy vết được model + prompt + retrieval + tool + policy đã tạo một output, hệ thống chưa thật sự reproducible ở cấp application.
+Nếu không truy vết được mô hình (model / 모델) + prompt + retrieval + công cụ (tool / 도구) + chính sách (policy / 정책) đã tạo một đầu ra (output / 출력), hệ thống chưa thật sự reproducible ở cấp ứng dụng (application / 애플리케이션).
 
 ## Những nhầm lẫn thường gặp
 
-### “Prompt tốt thì chỉ cần lưu text prompt”
+### “Prompt tốt thì chỉ cần lưu văn bản (text / 텍스트) prompt”
 
-Không. Behavior còn phụ thuộc model, context, retrieval, tool và decoding config.
+Không. hành vi (behavior / 동작) còn phụ thuộc mô hình (model / 모델), ngữ cảnh (context / 맥락), retrieval, công cụ (tool / 도구) và decoding cấu hình (config / 설정).
 
-### “RAG không train model nên không cần MLOps”
+### “RAG không train mô hình (model / 모델) nên không cần MLOps”
 
-Không. Index, data và config vẫn cần versioning, evaluation và monitoring.
+Không. chỉ mục (index / 인덱스), dữ liệu (data / 데이터) và cấu hình (config / 설정) vẫn cần versioning, evaluation và monitoring.
 
-### “Agent trace chỉ để debug”
+### “tác nhân (agent / 에이전트) dấu vết (trace / 추적) chỉ để gỡ lỗi (debug / 디버그)”
 
-Không. Trace còn cần cho evaluation, security audit, cost attribution và incident response.
+Không. dấu vết (trace / 추적) còn cần cho evaluation, bảo mật (security / 보안) kiểm tra (audit / 감사), chi phí (cost / 비용) attribution và sự cố (incident / 인시던트) phản hồi (response / 응답).
 
 ### “Dùng hosted API thì provider lo hết operations”
 
-Không. Provider chỉ vận hành model endpoint; application lifecycle vẫn thuộc trách nhiệm của bạn.
+Không. Provider chỉ vận hành mô hình (model / 모델) endpoint; ứng dụng (application / 애플리케이션) vòng đời (lifecycle / 생명주기) vẫn thuộc trách nhiệm của bạn.
 
 ## Liên kết kiến thức
 
 LLMOps nối [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md), [Evaluation Foundations](../18_evaluation_reliability_interpretability/00_evaluation_foundations.md), [Reliability](../18_evaluation_reliability_interpretability/07_reliability_engineering.md) và [Security](../19_ai_safety_security_alignment/08_secure_ai_system_design.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

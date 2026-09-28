@@ -1,5 +1,8 @@
 # Chọn cấu trúc dữ liệu phù hợp
-**Data Structure Selection / 자료구조 선택**
+
+> **Mạch đọc:** Đọc **Chọn cấu trúc dữ liệu phù hợp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Bắt đầu từ thao tác** sang **2. chính xác (exact / 정확한) Lookup hay Ordered truy vấn (query / 쿼리)?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**cấu trúc dữ liệu (data structure / 자료구조) Selection / 자료구조 선택**
 
 Chọn cấu trúc dữ liệu không phải là nhớ một bảng “bài này dùng cấu trúc nào”, mà là quá trình biến yêu cầu thành **khối lượng công việc (workload)** rồi chọn cách biểu diễn phù hợp nhất với khối lượng công việc đó.
 
@@ -13,7 +16,7 @@ bộ nhớ nằm trong ngân sách
 cách triển khai đủ đơn giản để vận hành và kiểm thử
 ```
 
-Không có cấu trúc “nhanh nhất” theo nghĩa tuyệt đối. Mảng, bảng băm, cây, heap hay trie chỉ tốt trong một mô hình truy cập cụ thể.
+Không có cấu trúc “nhanh nhất” theo nghĩa tuyệt đối. Mảng, bảng băm, cây, vùng nhớ động (heap / 힙) hay trie chỉ tốt trong một mô hình truy cập cụ thể.
 
 ## 1. Bắt đầu từ thao tác
 
@@ -39,9 +42,9 @@ Sau đó đánh dấu thao tác nào chiếm phần lớn lưu lượng và thao
 
 Một thao tác khởi tạo chạy một lần không cần được tối ưu giống thao tác chạy hàng triệu lần mỗi giây.
 
-## 2. Exact Lookup hay Ordered Query?
+## 2. chính xác (exact / 정확한) Lookup hay Ordered truy vấn (query / 쿼리)?
 
-Nếu chỉ cần equality lookup, Hash Table thường là ứng viên tự nhiên:
+Nếu chỉ cần equality lookup, bảng băm (hash table / 해시 테이블) thường là ứng viên tự nhiên:
 
 ```text
 get / put / contains -> expected O(1)
@@ -57,11 +60,11 @@ range scan
 ordered iteration
 ```
 
-thì thứ tự là một phần của bài toán. Balanced BST hoặc B+Tree thường hợp lý hơn.
+thì thứ tự là một phần của bài toán. Balanced BST hoặc B+cây (tree / 트리) thường hợp lý hơn.
 
 Nếu dữ liệu tĩnh, sorted array có thể còn tốt hơn cây vì tìm kiếm `O(log n)`, bộ nhớ gọn và locality tốt.
 
-## 3. Static hay Dynamic?
+## 3. Static hay động (dynamic / 동적)?
 
 Dữ liệu tĩnh cho phép tiền xử lý mạnh.
 
@@ -78,17 +81,17 @@ Một câu hỏi rất mạnh:
 
 > Ta có thể trả một khoản chi phí xây dựng trước để làm hàng nghìn truy vấn sau rẻ hơn không?
 
-Nếu câu trả lời là có, hãy nghĩ tới sorting, indexing, prefix structures hoặc preprocessing graph/string.
+Nếu câu trả lời là có, hãy nghĩ tới sorting, indexing, prefix structures hoặc preprocessing đồ thị (graph / 그래프)/string.
 
-## 4. Read/Write Ratio
+## 4. Read/ghi (write / 쓰기) Ratio
 
 Hai hệ thống chứa cùng dữ liệu nhưng tỷ lệ đọc/ghi khác nhau có thể cần cấu trúc khác.
 
-Một index làm đọc nhanh hơn nhưng mọi write phải duy trì index. Một cache làm đọc nhanh nhưng phải trả chi phí invalidation/freshness. Một LSM Tree tối ưu đường ghi tuần tự nhưng tăng read/compaction complexity.
+Một chỉ mục (index / 인덱스) làm đọc nhanh hơn nhưng mọi ghi (write / 쓰기) phải duy trì chỉ mục (index / 인덱스). Một bộ nhớ đệm (cache / 캐시) làm đọc nhanh nhưng phải trả chi phí vô hiệu hóa (invalidation / 무효화)/freshness. Một LSM cây (tree / 트리) tối ưu đường ghi tuần tự nhưng tăng read/compaction độ phức tạp (complexity / 복잡도).
 
-Data structure selection luôn là bài toán **đẩy chi phí từ thao tác này sang thao tác khác**.
+Cấu trúc dữ liệu (data structure / 자료구조) selection luôn là bài toán **đẩy chi phí từ thao tác này sang thao tác khác**.
 
-## 5. Dense hay Sparse Key Space?
+## 5. Dense hay Sparse Key không gian (space / 공간)?
 
 Nếu key là số nguyên dày đặc `0..n-1`, mảng thường tốt hơn HashMap:
 
@@ -98,21 +101,21 @@ visited[id]
 dist[id]
 ```
 
-Nếu key thưa, lớn hoặc là chuỗi/object, HashMap phù hợp hơn.
+Nếu key thưa, lớn hoặc là chuỗi/đối tượng (object / 객체), HashMap phù hợp hơn.
 
 Không nên dùng cấu trúc tổng quát khi miền khóa đã cho phép direct addressing rẻ hơn.
 
-## 6. Contiguous Memory hay Node-Based Structure?
+## 6. Contiguous bộ nhớ (memory / 메모리) hay Node-Based cấu trúc (structure / 구조)?
 
-Mảng có locality tốt, ít metadata và traversal nhanh. Cấu trúc node-based linh hoạt hơn cho relinking nhưng phải trả giá cho pointer/reference, allocation và cache miss.
+Mảng có locality tốt, ít siêu dữ liệu (metadata / 메타데이터) và traversal nhanh. Cấu trúc node-based linh hoạt hơn cho relinking nhưng phải trả giá cho pointer/tham chiếu (reference / 참조), allocation và trượt bộ nhớ đệm (cache miss / 캐시 미스).
 
-Ví dụ Linked List có thể xóa node `O(1)` khi đã có node, nhưng tìm vị trí vẫn `O(n)` và traversal thường chậm hơn mảng.
+Ví dụ Linked danh sách (list / 목록) có thể xóa nút (node / 노드) `O(1)` khi đã có nút (node / 노드), nhưng tìm vị trí vẫn `O(n)` và traversal thường chậm hơn mảng.
 
-Big-O không mô tả đầy đủ memory hierarchy.
+Big-O không mô tả đầy đủ bộ nhớ (memory / 메모리) hierarchy.
 
-## 7. Min/Max liên tục hay Full Order?
+## 7. Min/Max liên tục hay Full thứ tự (order / 순서)?
 
-Nếu chỉ cần phần tử nhỏ nhất/lớn nhất lặp lại, heap thường đủ:
+Nếu chỉ cần phần tử nhỏ nhất/lớn nhất lặp lại, vùng nhớ động (heap / 힙) thường đủ:
 
 ```text
 peek min O(1)
@@ -120,17 +123,17 @@ insert O(log n)
 extract min O(log n)
 ```
 
-Không cần trả chi phí duy trì full sorted order của TreeMap.
+Không cần trả chi phí duy trì full sorted thứ tự (order / 순서) của TreeMap.
 
-Nếu cần cả predecessor/range scan, heap không đủ.
+Nếu cần cả predecessor/phạm vi (range / 범위) scan, vùng nhớ động (heap / 힙) không đủ.
 
 Một nguyên tắc quan trọng:
 
-> Chỉ duy trì lượng thứ tự tối thiểu đủ để trả lời query.
+> Chỉ duy trì lượng thứ tự tối thiểu đủ để trả lời truy vấn (query / 쿼리).
 
 ## 8. Prefix hay Full-Key Equality?
 
-Nếu workload hỏi prefix:
+Nếu tải công việc (workload / 워크로드) hỏi prefix:
 
 ```text
 autocomplete
@@ -138,19 +141,19 @@ routing prefix
 string dictionary
 ```
 
-Trie/Radix Tree có thể trực tiếp mã hóa prefix structure.
+Trie/Radix cây (tree / 트리) có thể trực tiếp mã hóa prefix cấu trúc (structure / 구조).
 
-Nếu chỉ cần exact string lookup, HashMap có thể đơn giản hơn và gọn hơn.
+Nếu chỉ cần chính xác (exact / 정확한) string lookup, HashMap có thể đơn giản hơn và gọn hơn.
 
-Structure mạnh là structure lưu đúng loại thông tin mà query cần.
+Cấu trúc (structure / 구조) mạnh là cấu trúc (structure / 구조) lưu đúng loại thông tin mà truy vấn (query / 쿼리) cần.
 
-## 9. Range Query yêu cầu phép toán gì?
+## 9. phạm vi (range / 범위) truy vấn (query / 쿼리) yêu cầu phép toán gì?
 
-Không phải mọi range structure hỗ trợ mọi aggregate.
+Không phải mọi phạm vi (range / 범위) cấu trúc (structure / 구조) hỗ trợ mọi aggregate.
 
-Prefix sum dựa trên khả năng “trừ phần trước”. Fenwick Tree phù hợp các phép toán có cấu trúc đại số thích hợp. Segment Tree chỉ cần phép combine có tính kết hợp. Sparse Table đặc biệt mạnh với static idempotent operation như `min/max/gcd`.
+Prefix sum dựa trên khả năng “trừ phần trước”. Fenwick cây (tree / 트리) phù hợp các phép toán có cấu trúc đại số thích hợp. Segment cây (tree / 트리) chỉ cần phép combine có tính kết hợp. Sparse bảng (table / 테이블) đặc biệt mạnh với static idempotent thao tác (operation / 연산) như `min/max/gcd`.
 
-Vì vậy trước khi chọn structure hãy hỏi:
+Vì vậy trước khi chọn cấu trúc (structure / 구조) hãy hỏi:
 
 ```text
 operation có associative không?
@@ -163,7 +166,7 @@ query là prefix hay arbitrary interval?
 
 ## 10. Mutable hay Persistent?
 
-Nếu chỉ cần trạng thái hiện tại, mutable structure thường đơn giản và tiết kiệm allocation.
+Nếu chỉ cần trạng thái hiện tại, mutable cấu trúc (structure / 구조) thường đơn giản và tiết kiệm allocation.
 
 Nếu cần:
 
@@ -174,11 +177,11 @@ branching histories
 functional semantics
 ```
 
-persistent structure với structural sharing có thể phù hợp.
+persistent cấu trúc (structure / 구조) với structural sharing có thể phù hợp.
 
-Persistent không có nghĩa “lưu xuống disk”; nó có nghĩa phiên bản cũ vẫn dùng được sau update.
+Persistent không có nghĩa “lưu xuống disk”; nó có nghĩa phiên bản cũ vẫn dùng được sau cập nhật (update / 업데이트).
 
-## 11. Exact hay Approximate?
+## 11. chính xác (exact / 정확한) hay Approximate?
 
 Nếu dữ liệu quá lớn, có thể không cần lưu trạng thái chính xác cho mọi key.
 
@@ -189,13 +192,13 @@ frequency approximate      -> Count-Min Sketch
 similarity approximate     -> MinHash
 ```
 
-Nhưng approximation chỉ hợp lệ nếu nghiệp vụ chấp nhận error model.
+Nhưng approximation chỉ hợp lệ nếu nghiệp vụ chấp nhận lỗi (error / 오류) mô hình (model / 모델).
 
 Một Bloom Filter có false positive nhưng không false negative trong mô hình chuẩn có thể rất tốt làm bộ lọc I/O, nhưng không nên là nguồn sự thật cho authorization.
 
 ## 12. Online hay Offline?
 
-Nếu phải trả lời ngay khi dữ liệu đến, chỉ dùng thông tin quá khứ. Nếu có thể giữ toàn bộ input rồi reorder, nhiều thuật toán offline mạnh hơn.
+Nếu phải trả lời ngay khi dữ liệu đến, chỉ dùng thông tin quá khứ. Nếu có thể giữ toàn bộ đầu vào (input / 입력) rồi reorder, nhiều thuật toán offline mạnh hơn.
 
 Ví dụ:
 
@@ -206,9 +209,9 @@ Mo's algorithm
 batch processing
 ```
 
-Offline processing có thể đổi thứ tự event để giảm work. Online system không có quyền đó.
+Offline processing có thể đổi thứ tự sự kiện (event / 이벤트) để giảm công việc (work / 작업). Online hệ thống (system / 시스템) không có quyền đó.
 
-## 13. Ordered Array hay Balanced Tree?
+## 13. Ordered Array hay Balanced cây (tree / 트리)?
 
 Nếu dữ liệu ít thay đổi:
 
@@ -218,13 +221,13 @@ sorted array
 + sequential range scan
 ```
 
-có locality và memory footprint rất tốt.
+có locality và bộ nhớ (memory / 메모리) footprint rất tốt.
 
-Nếu insert/delete liên tục ở vị trí tùy ý, balanced tree tránh `O(n)` dịch phần tử.
+Nếu insert/delete liên tục ở vị trí tùy ý, balanced cây (tree / 트리) tránh `O(n)` dịch phần tử.
 
-Không nên chọn tree chỉ vì “search O(log n)” nếu workload thực tế gần tĩnh.
+Không nên chọn cây (tree / 트리) chỉ vì “tìm kiếm (search / 검색) O(log n)” nếu tải công việc (workload / 워크로드) thực tế gần tĩnh.
 
-## 14. Heap hay Sorted Structure cho Top-K?
+## 14. vùng nhớ động (heap / 힙) hay Sorted cấu trúc (structure / 구조) cho Top-K?
 
 Nếu cần Top-K một lần từ batch dữ liệu:
 
@@ -237,23 +240,23 @@ full sort
 
 đều có thể hợp lý tùy `k`, `n` và yêu cầu thứ tự đầu ra.
 
-Nếu dữ liệu đến liên tục, heap size `k` tự nhiên hơn.
+Nếu dữ liệu đến liên tục, vùng nhớ động (heap / 힙) kích thước (size / 크기) `k` tự nhiên hơn.
 
-Nếu cần truy vấn rank động cho nhiều `k`, order-statistic tree có thể phù hợp hơn.
+Nếu cần truy vấn rank động cho nhiều `k`, order-statistic cây (tree / 트리) có thể phù hợp hơn.
 
-## 15. Graph Representation
+## 15. đồ thị (graph / 그래프) biểu diễn (representation / 표현)
 
-Đồ thị thưa thường dùng adjacency list:
+Đồ thị thưa thường dùng adjacency danh sách (list / 목록):
 
 \[
 O(V+E)
 \]
 
-Đồ thị dày có thể dùng adjacency matrix nếu cần edge lookup cực nhanh và `V²` memory chấp nhận được.
+Đồ thị dày có thể dùng adjacency ma trận (matrix / 행렬) nếu cần edge lookup cực nhanh và `V²` bộ nhớ (memory / 메모리) chấp nhận được.
 
-Nếu graph tĩnh rất lớn, CSR giúp giảm overhead object và tăng locality.
+Nếu đồ thị (graph / 그래프) tĩnh rất lớn, CSR giúp giảm overhead đối tượng (object / 객체) và tăng locality.
 
-Representation graph quyết định cả memory lẫn complexity của traversal.
+Biểu diễn (representation / 표현) đồ thị (graph / 그래프) quyết định cả bộ nhớ (memory / 메모리) lẫn độ phức tạp (complexity / 복잡도) của traversal.
 
 ## 16. DSU chỉ tốt khi bài toán đúng mô hình merge-only
 
@@ -267,13 +270,13 @@ sameComponent(a,b)
 
 nhưng không hỗ trợ split/delete edge tổng quát.
 
-Nếu graph connectivity thay đổi bằng cả add và remove, cần offline reversal, rollback DSU hoặc dynamic connectivity structure phức tạp hơn.
+Nếu đồ thị (graph / 그래프) connectivity thay đổi bằng cả add và remove, cần offline reversal, quay lui (rollback / 롤백) DSU hoặc động (dynamic / 동적) connectivity cấu trúc (structure / 구조) phức tạp hơn.
 
-Structure nhanh thường nhanh vì nó **không hỗ trợ một số thao tác khó**.
+Cấu trúc (structure / 구조) nhanh thường nhanh vì nó **không hỗ trợ một số thao tác khó**.
 
-## 17. Bounded Memory hay Unbounded Growth?
+## 17. Bounded bộ nhớ (memory / 메모리) hay Unbounded Growth?
 
-Queue không giới hạn có thể che giấu overload cho tới khi hệ thống hết memory. Ring buffer bounded bắt hệ thống chọn policy khi đầy:
+Hàng đợi (queue / 큐) không giới hạn có thể che giấu overload cho tới khi hệ thống hết bộ nhớ (memory / 메모리). Ring buffer bounded bắt hệ thống chọn chính sách (policy / 정책) khi đầy:
 
 ```text
 block
@@ -283,19 +286,19 @@ spill
 backpressure
 ```
 
-Data structure capacity là một quyết định reliability, không chỉ implementation detail.
+Cấu trúc dữ liệu (data structure / 자료구조) sức chứa (capacity / 용량) là một quyết định độ tin cậy (reliability / 신뢰성), không chỉ hiện thực (implementation / 구현) detail.
 
 ## 18. Worst-Case hay Expected Guarantee?
 
-Hash Table, Skip List và randomized algorithms thường có expected bound tốt. Balanced Tree cho deterministic `O(log n)`.
+Bảng băm (hash table / 해시 테이블), Skip danh sách (list / 목록) và randomized algorithms thường có expected bound tốt. Balanced cây (tree / 트리) cho deterministic `O(log n)`.
 
-Nếu workload có thể đối nghịch hoặc tail latency quan trọng, deterministic bound có thể đáng giá hơn constant factor trung bình tốt.
+Nếu tải công việc (workload / 워크로드) có thể đối nghịch hoặc tail độ trễ (latency / 지연 시간) quan trọng, deterministic bound có thể đáng giá hơn constant factor trung bình tốt.
 
-Nếu throughput là mục tiêu chính, expected/amortized design đơn giản hơn có thể thắng.
+Nếu thông lượng (throughput / 처리량) là mục tiêu chính, expected/amortized thiết kế (design / 설계) đơn giản hơn có thể thắng.
 
-## 19. Amortized hay Per-Operation Latency?
+## 19. Amortized hay Per-Operation độ trễ (latency / 지연 시간)?
 
-Dynamic array append `O(1)` amortized nhưng một resize riêng có thể `O(n)`. Hash Table resize tương tự.
+Động (dynamic / 동적) array append `O(1)` amortized nhưng một resize riêng có thể `O(n)`. bảng băm (hash table / 해시 테이블) resize tương tự.
 
 Hệ thống real-time có thể cần:
 
@@ -308,17 +311,17 @@ bounded buffer
 
 Đừng xóa từ “amortized” khi mô tả SLA.
 
-## 20. External Memory
+## 20. bên ngoài (external / 외부) bộ nhớ (memory / 메모리)
 
 Khi dữ liệu vượt RAM, số page I/O quan trọng hơn số comparison.
 
-B+Tree có fan-out lớn để giảm chiều cao. External Merge Sort dùng sequential I/O. LSM Tree chuyển random write thành sequential append + background compaction.
+B+cây (tree / 트리) có fan-out lớn để giảm chiều cao. bên ngoài (external / 외부) Merge Sort dùng sequential I/O. LSM cây (tree / 트리) chuyển random ghi (write / 쓰기) thành sequential append + background compaction.
 
-Data structure phải khớp tầng lưu trữ thực tế.
+Cấu trúc dữ liệu (data structure / 자료구조) phải khớp tầng lưu trữ thực tế.
 
-## 21. Concurrency
+## 21. tính đồng thời (concurrency / 동시성)
 
-Một structure tốt single-thread chưa chắc tốt multi-thread.
+Một cấu trúc (structure / 구조) tốt single-thread chưa chắc tốt multi-thread.
 
 Cần hỏi:
 
@@ -330,15 +333,15 @@ cần linearizability không?
 iterator/snapshot semantics là gì?
 ```
 
-ConcurrentHashMap không chỉ là HashMap “nhanh hơn”; nó có contract đồng thời khác.
+ConcurrentHashMap không chỉ là HashMap “nhanh hơn”; nó có đặc tả hợp đồng (contract / 계약) đồng thời khác.
 
-Lock-free structure thêm vấn đề ABA, memory reclamation và ordering.
+Lock-free cấu trúc (structure / 구조) thêm vấn đề ABA, bộ nhớ (memory / 메모리) reclamation và thứ tự (ordering / 순서).
 
 ## 22. Composition
 
-Hệ thống thực tế thường ghép nhiều structure.
+Hệ thống thực tế thường ghép nhiều cấu trúc (structure / 구조).
 
-### LRU Cache
+### LRU bộ nhớ đệm (cache / 캐시)
 
 ```text
 HashMap       -> tìm node theo key
@@ -353,7 +356,7 @@ adjacency list
 + priority queue
 ```
 
-### Database Query Engine
+### Truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) Engine
 
 ```text
 B+Tree / Hash Index
@@ -370,35 +373,35 @@ Trie/Radix index
 + heap/top-k cache
 ```
 
-Điểm khó không chỉ là từng structure mà là **bất biến liên cấu trúc**.
+Điểm khó không chỉ là từng cấu trúc (structure / 구조) mà là **bất biến liên cấu trúc**.
 
 ## 23. Đừng nhân đôi nguồn sự thật nếu không cần
 
-Nếu cùng một dữ liệu được lưu trong map và list, cần bảo đảm hai representation luôn đồng bộ.
+Nếu cùng một dữ liệu được lưu trong map và danh sách (list / 목록), cần bảo đảm hai biểu diễn (representation / 표현) luôn đồng bộ.
 
-Mỗi secondary index, cache hoặc metadata tăng tốc query nhưng đồng thời tạo thêm invariant phải duy trì.
+Mỗi secondary chỉ mục (index / 인덱스), bộ nhớ đệm (cache / 캐시) hoặc siêu dữ liệu (metadata / 메타데이터) tăng tốc truy vấn (query / 쿼리) nhưng đồng thời tạo thêm bất biến (invariant / 불변식) phải duy trì.
 
-Một structure phụ chỉ đáng có nếu lợi ích query lớn hơn cost update, memory và complexity vận hành.
+Một cấu trúc (structure / 구조) phụ chỉ đáng có nếu lợi ích truy vấn (query / 쿼리) lớn hơn chi phí (cost / 비용) cập nhật (update / 업데이트), bộ nhớ (memory / 메모리) và độ phức tạp (complexity / 복잡도) vận hành.
 
-## 24. Một decision matrix thực dụng
+## 24. Một quyết định (decision / 결정) ma trận (matrix / 행렬) thực dụng
 
 | Câu hỏi | Nếu “có”, hãy nghĩ tới |
 |---|---|
 | key dày đặc dạng integer? | array / bitset |
-| equality lookup là chính? | hash table |
-| cần ordered/range query? | sorted array / balanced tree / B+Tree |
-| cần min/max liên tục? | heap |
-| cần prefix? | trie / radix tree |
-| dữ liệu tĩnh, nhiều range query? | prefix / sparse table |
-| có update + aggregate? | Fenwick / Segment Tree |
+| equality lookup là chính? | bảng băm (hash table / 해시 테이블) |
+| cần ordered/phạm vi (range / 범위) truy vấn (query / 쿼리)? | sorted array / balanced cây (tree / 트리) / B+cây (tree / 트리) |
+| cần min/max liên tục? | vùng nhớ động (heap / 힙) |
+| cần prefix? | trie / radix cây (tree / 트리) |
+| dữ liệu tĩnh, nhiều phạm vi (range / 범위) truy vấn (query / 쿼리)? | prefix / sparse bảng (table / 테이블) |
+| có cập nhật (update / 업데이트) + aggregate? | Fenwick / Segment cây (tree / 트리) |
 | chỉ merge connectivity? | DSU |
-| text cần substring index? | suffix structures / automata |
-| dữ liệu vượt RAM? | B+Tree / external sort / LSM concepts |
-| memory cực hạn, chấp nhận sai số? | probabilistic structures |
+| văn bản (text / 텍스트) cần substring chỉ mục (index / 인덱스)? | suffix structures / automata |
+| dữ liệu vượt RAM? | B+cây (tree / 트리) / bên ngoài (external / 외부) sort / LSM concepts |
+| bộ nhớ (memory / 메모리) cực hạn, chấp nhận sai số? | probabilistic structures |
 
-Bảng chỉ là điểm khởi đầu. Quyết định cuối phải dựa trên workload.
+Bảng chỉ là điểm khởi đầu. Quyết định cuối phải dựa trên tải công việc (workload / 워크로드).
 
-## 25. Từ yêu cầu tới cost model
+## 25. Từ yêu cầu tới chi phí (cost / 비용) mô hình (model / 모델)
 
 Một cách formal hơn là viết:
 
@@ -408,13 +411,13 @@ ExpectedCost = \sum_i p_i C_i
 
 với `p_i` là tỷ lệ thao tác và `C_i` là chi phí tương ứng.
 
-Sau đó cộng thêm memory cost, latency requirement và implementation complexity.
+Sau đó cộng thêm bộ nhớ (memory / 메모리) chi phí (cost / 비용), độ trễ (latency / 지연 시간) yêu cầu (requirement / 요구사항) và hiện thực (implementation / 구현) độ phức tạp (complexity / 복잡도).
 
 Không cần luôn tính ra con số chính xác; mục tiêu là tránh tối ưu một thao tác hiếm mà bỏ qua thao tác chi phối.
 
-## 26. Migration Signal
+## 26. di chuyển (migration / 마이그레이션) tín hiệu (signal / 신호)
 
-Structure đúng hôm nay có thể sai sau khi workload thay đổi.
+Cấu trúc (structure / 구조) đúng hôm nay có thể sai sau khi tải công việc (workload / 워크로드) thay đổi.
 
 Dấu hiệu cần xem lại:
 
@@ -428,13 +431,13 @@ memory vượt budget
 concurrency contention tăng
 ```
 
-Data structure selection là quyết định có thể cần tái đánh giá, không phải lựa chọn một lần mãi mãi.
+Cấu trúc dữ liệu (data structure / 자료구조) selection là quyết định có thể cần tái đánh giá, không phải lựa chọn một lần mãi mãi.
 
-## 27. Benchmark đúng workload
+## 27. Benchmark đúng tải công việc (workload / 워크로드)
 
-Không benchmark HashMap với random integer rồi suy ra performance cho key dài, expensive hash hoặc adversarial distribution.
+Không benchmark HashMap với random integer rồi suy ra hiệu năng (performance / 성능) cho key dài, expensive băm (hash / 해시) hoặc adversarial phân phối (distribution / 분포).
 
-Không benchmark TreeMap chỉ bằng lookup nếu production workload có range scan lớn.
+Không benchmark TreeMap chỉ bằng lookup nếu môi trường vận hành (production / 운영 환경) tải công việc (workload / 워크로드) có phạm vi (range / 범위) scan lớn.
 
 Benchmark phải phản ánh:
 
@@ -447,25 +450,25 @@ concurrency
 memory pressure
 ```
 
-## 28. Chọn structure đơn giản nhất đáp ứng yêu cầu
+## 28. Chọn cấu trúc (structure / 구조) đơn giản nhất đáp ứng yêu cầu
 
-Structure phức tạp hơn tạo nhiều code, nhiều edge case và nhiều invariant hơn.
+Cấu trúc (structure / 구조) phức tạp hơn tạo nhiều mã (code / 코드), nhiều trường hợp biên (edge case / 경계 사례) và nhiều bất biến (invariant / 불변식) hơn.
 
-Nếu array + sort một lần đủ, không cần custom balanced tree. Nếu `HashMap` chuẩn đủ, không cần tự viết Cuckoo Hashing. Nếu `O(n²)` với `n<=100` đã dư sức, không cần Segment Tree.
+Nếu array + sort một lần đủ, không cần custom balanced cây (tree / 트리). Nếu `HashMap` chuẩn đủ, không cần tự viết Cuckoo Hashing. Nếu `O(n²)` với `n<=100` đã dư sức, không cần Segment cây (tree / 트리).
 
-Độ phức tạp implementation cũng là một chi phí kỹ thuật.
+Độ phức tạp hiện thực (implementation / 구현) cũng là một chi phí kỹ thuật.
 
 ## 29. Những hiểu lầm phổ biến
 
-“Big-O nhỏ hơn luôn nhanh hơn” — sai do constant factor, locality, allocation và workload mix.
+“Big-O nhỏ hơn luôn nhanh hơn” — sai do constant factor, locality, allocation và tải công việc (workload / 워크로드) mix.
 
-“Linked List chèn O(1) nên tốt hơn ArrayList” — bỏ qua chi phí tìm node và cache behavior.
+“Linked danh sách (list / 목록) chèn O(1) nên tốt hơn ArrayList” — bỏ qua chi phí tìm nút (node / 노드) và bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작).
 
 “HashMap luôn tốt hơn TreeMap vì O(1)” — sai nếu cần thứ tự hoặc worst-case deterministic guarantee.
 
-“Segment Tree tốt hơn prefix sum vì mạnh hơn” — sai nếu dữ liệu tĩnh; sức mạnh dư thừa phải trả bằng memory/code/query cost.
+“Segment cây (tree / 트리) tốt hơn prefix sum vì mạnh hơn” — sai nếu dữ liệu tĩnh; sức mạnh dư thừa phải trả bằng bộ nhớ (memory / 메모리)/mã (code / 코드)/truy vấn (query / 쿼리) chi phí (cost / 비용).
 
-“Chỉ cần chọn một data structure cho cả hệ thống” — hệ thống thật thường là composition.
+“Chỉ cần chọn một cấu trúc dữ liệu (data structure / 자료구조) cho cả hệ thống” — hệ thống thật thường là composition.
 
 ## 30. Workflow chọn cấu trúc
 
@@ -484,8 +487,10 @@ Nếu array + sort một lần đủ, không cần custom balanced tree. Nếu `
 
 ## Mô hình tư duy
 
-> Chọn cấu trúc dữ liệu là chọn **thông tin nào đáng được lưu sẵn** và **chi phí nào đáng trả khi cập nhật** để những query quan trọng trở nên rẻ.
+> Chọn cấu trúc dữ liệu là chọn **thông tin nào đáng được lưu sẵn** và **chi phí nào đáng trả khi cập nhật** để những truy vấn (query / 쿼리) quan trọng trở nên rẻ.
 
-Khi phân vân giữa hai cấu trúc, đừng hỏi “cái nào nhanh hơn?”. Hãy hỏi: **workload của tôi là gì, invariant nào thật sự cần, guarantee nào bắt buộc, memory hierarchy ra sao, và liệu một structure đơn giản hơn đã đủ chưa?**
+Khi phân vân giữa hai cấu trúc, đừng hỏi “cái nào nhanh hơn?”. Hãy hỏi: **tải công việc (workload / 워크로드) của tôi là gì, bất biến (invariant / 불변식) nào thật sự cần, guarantee nào bắt buộc, bộ nhớ (memory / 메모리) hierarchy ra sao, và liệu một cấu trúc (structure / 구조) đơn giản hơn đã đủ chưa?**
 
 Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Problem-Solving Workflow](./02_problem_solving_workflow.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 dsa in databases networks and systems](./01_dsa_in_databases_networks_and_systems.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

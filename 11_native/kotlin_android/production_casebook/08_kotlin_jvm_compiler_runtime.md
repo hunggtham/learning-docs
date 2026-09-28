@@ -1,12 +1,15 @@
-# Case 08 — Kotlin/JVM, K2 Compiler, Generated Code và Runtime Internals
+# Trường hợp (case / 사례) 08 — Kotlin/JVM, K2 trình biên dịch (compiler / 컴파일러), Generated mã (code / 코드) và thời gian chạy (runtime / 런타임) Internals
 
-Kotlin giúp Android code ngắn và an toàn hơn Java, nhưng production bug khó thường nằm dưới abstraction: generic bị type erasure, value class bị boxing, `suspend` thành state machine, lambda capture giữ object lâu hơn dự kiến, reflection bị R8 strip metadata, annotation đặt sai use-site target, KSP/KAPT sinh code khác version, hoặc một library đổi public ABI dù source nhìn gần giống.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 08 — Kotlin/JVM, K2 trình biên dịch (compiler / 컴파일러), Generated mã (code / 코드) và thời gian chạy (runtime / 런타임) Internals** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kotlin trên Android không chạy “trực tiếp” như nguồn (source / 소스)** sang **2. K2 là trình biên dịch (compiler / 컴파일러) frontend, không phải “Kotlin 2 cú pháp (syntax / 문법)” đơn thuần**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Không cần đọc bytecode mỗi ngày. Mục tiêu chương này là biết **khi nào abstraction leak** và có mental model đủ để debug.
 
-## 1. Kotlin trên Android không chạy “trực tiếp” như source
+Kotlin giúp Android mã (code / 코드) ngắn và an toàn hơn Java, nhưng môi trường vận hành (production / 운영 환경) bug khó thường nằm dưới lớp trừu tượng (abstraction / 추상화): generic bị kiểu (type / 타입) erasure, giá trị (value / 값) lớp (class / 클래스) bị boxing, `suspend` thành máy trạng thái (state machine / 상태 머신), lambda capture giữ đối tượng (object / 객체) lâu hơn dự kiến, reflection bị R8 strip siêu dữ liệu (metadata / 메타데이터), annotation đặt sai use-site mục tiêu (target / 대상), KSP/KAPT sinh mã (code / 코드) khác phiên bản (version / 버전), hoặc một thư viện (library / 라이브러리) đổi công khai (public / 공개) ABI dù nguồn (source / 소스) nhìn gần giống.
 
-Flow khái quát:
+Không cần đọc bytecode mỗi ngày. Mục tiêu chương này là biết **khi nào lớp trừu tượng (abstraction / 추상화) leak** và có mô hình tư duy (mental model / 사고 모델) đủ để gỡ lỗi (debug / 디버그).
+
+## 1. Kotlin trên Android không chạy “trực tiếp” như nguồn (source / 소스)
+
+Luồng (flow / 흐름) khái quát:
 
 ```text
 Kotlin source
@@ -17,15 +20,15 @@ Kotlin source
 → Android Runtime (ART)
 ```
 
-Compose, serialization, Parcelize, DI/code generation hoặc KSP processor có thể thêm generated code/compiler transformation trong pipeline.
+Compose, serialization, Parcelize, DI/mã (code / 코드) generation hoặc KSP processor có thể thêm generated mã (code / 코드)/trình biên dịch (compiler / 컴파일러) transformation trong chuỗi xử lý (pipeline / 파이프라인).
 
-Vì vậy bug build/runtime đôi khi không thể hiểu chỉ từ `.kt` source.
+Vì vậy bug bản dựng (build / 빌드)/thời gian chạy (runtime / 런타임) đôi khi không thể hiểu chỉ từ `.kt` nguồn (source / 소스).
 
-## 2. K2 là compiler frontend, không phải “Kotlin 2 syntax” đơn thuần
+## 2. K2 là trình biên dịch (compiler / 컴파일러) frontend, không phải “Kotlin 2 cú pháp (syntax / 문법)” đơn thuần
 
-Kotlin 2.x chuyển compiler frontend sang K2. Điều developer cần quan tâm là ecosystem compatibility: Kotlin version, AGP, Compose compiler integration, serialization plugin, KSP, annotation processor và library metadata phải tương thích.
+Kotlin 2.x chuyển trình biên dịch (compiler / 컴파일러) frontend sang K2. Điều nhà phát triển (developer / 개발자) cần quan tâm là ecosystem tính tương thích (compatibility / 호환성): Kotlin phiên bản (version / 버전), AGP, Compose trình biên dịch (compiler / 컴파일러) tích hợp (integration / 통합), serialization plugin, KSP, annotation processor và thư viện (library / 라이브러리) siêu dữ liệu (metadata / 메타데이터) phải tương thích.
 
-Khi upgrade Kotlin, hãy coi đó là toolchain migration:
+Khi upgrade Kotlin, hãy coi đó là toolchain di chuyển (migration / 마이그레이션):
 
 ```text
 Kotlin
@@ -39,15 +42,15 @@ serialization/other compiler plugins
 
 Không chỉ đổi `kotlin("android") version ...` rồi assume mọi plugin tự tương thích.
 
-## 3. Kotlin metadata
+## 3. Kotlin siêu dữ liệu (metadata / 메타데이터)
 
-Kotlin class trên JVM mang metadata để tooling/compiler hiểu feature Kotlin mà Java bytecode thuần không biểu diễn đầy đủ. Reflection/library tooling có thể đọc metadata.
+Kotlin lớp (class / 클래스) trên JVM mang siêu dữ liệu (metadata / 메타데이터) để tooling/trình biên dịch (compiler / 컴파일러) hiểu tính năng (feature / 기능) Kotlin mà Java bytecode thuần không biểu diễn đầy đủ. Reflection/thư viện (library / 라이브러리) tooling có thể đọc siêu dữ liệu (metadata / 메타데이터).
 
-R8/proguard hoặc shading nếu xử lý sai metadata/annotation có thể làm reflection framework fail. Đây là lý do keep rule phải dựa vào cơ chế library thật chứ không copy một rule global.
+R8/proguard hoặc shading nếu xử lý sai siêu dữ liệu (metadata / 메타데이터)/annotation có thể làm reflection khung phần mềm (framework / 프레임워크) thất bại (fail / 실패). Đây là lý do keep quy tắc (rule / 규칙) phải dựa vào cơ chế thư viện (library / 라이브러리) thật chứ không bản sao (copy / 복사) một quy tắc (rule / 규칙) toàn cục (global / 전역).
 
-## 4. `suspend` không tạo thread
+## 4. `suspend` không tạo luồng thực thi (thread / 스레드)
 
-Một `suspend fun` được compiler biến thành dạng continuation/state machine. Nó có thể pause và resume mà không block thread, nếu implementation gọi API suspending/non-blocking đúng.
+Một `suspend fun` được trình biên dịch (compiler / 컴파일러) biến thành dạng continuation/máy trạng thái (state machine / 상태 머신). Nó có thể pause và resume mà không khối (block / 블록) luồng thực thi (thread / 스레드), nếu hiện thực (implementation / 구현) gọi API suspending/non-blocking đúng.
 
 Conceptual transformation:
 
@@ -59,7 +62,7 @@ suspend fun load(): Result {
 }
 ```
 
-Compiler cần lưu local state giữa suspension point, gần giống một state machine:
+Trình biên dịch (compiler / 컴파일러) cần lưu cục bộ (local / 로컬) trạng thái (state / 상태) giữa suspension điểm (point / 지점), gần giống một máy trạng thái (state machine / 상태 머신):
 
 ```text
 state 0 -> call apiA -> suspend
@@ -67,9 +70,9 @@ resume -> state 1 -> call apiB -> suspend
 resume -> state 2 -> combine -> return
 ```
 
-Điều này giải thích tại sao stack trace coroutine có hình dạng khác synchronous call và tại sao local variable cần survive suspension.
+Điều này giải thích tại sao dấu vết ngăn xếp (stack trace / 스택 트레이스) coroutine có hình dạng khác synchronous lời gọi (call / 호출) và tại sao cục bộ (local / 로컬) variable cần survive suspension.
 
-## 5. Suspend không làm blocking code thành non-blocking
+## 5. Suspend không làm blocking mã (code / 코드) thành non-blocking
 
 ```kotlin
 suspend fun bad() {
@@ -77,39 +80,39 @@ suspend fun bad() {
 }
 ```
 
-Function có keyword `suspend` nhưng vẫn block thread 5 giây. Blocking I/O/CPU work vẫn cần dispatcher/executor phù hợp.
+Hàm (function / 함수) có từ khóa (keyword / 키워드) `suspend` nhưng vẫn khối (block / 블록) luồng thực thi (thread / 스레드) 5 giây. Blocking I/O/CPU công việc (work / 작업) vẫn cần dispatcher/executor phù hợp.
 
-`suspend` mô tả khả năng suspension trong call chain, không tự quyết định thread.
+`suspend` mô tả khả năng suspension trong lời gọi (call / 호출) chuỗi (chain / 사슬), không tự quyết định luồng thực thi (thread / 스레드).
 
-## 6. Coroutine context và thread local
+## 6. Coroutine ngữ cảnh (context / 맥락) và luồng thực thi (thread / 스레드) cục bộ (local / 로컬)
 
-Coroutine có thể resume trên thread khác. Code dựa raw `ThreadLocal` có thể sai nếu không bridge bằng `asContextElement` hoặc mechanism phù hợp.
+Coroutine có thể resume trên luồng thực thi (thread / 스레드) khác. mã (code / 코드) dựa raw `ThreadLocal` có thể sai nếu không cầu nối (bridge / 브리지) bằng `asContextElement` hoặc cơ chế (mechanism / 메커니즘) phù hợp.
 
-Security/request tracing context nên được propagate có chủ ý. Đừng assume thread identity là coroutine identity.
+Bảo mật (security / 보안)/yêu cầu (request / 요청) tracing ngữ cảnh (context / 맥락) nên được propagate có chủ ý. Đừng assume luồng thực thi (thread / 스레드) định danh (identity / 식별자) là coroutine định danh (identity / 식별자).
 
 ## 7. `inline` thực sự làm gì?
 
-Higher-order function tạo lambda object/call overhead trong một số trường hợp. `inline` cho phép compiler inline function body/lambda ở call site, đồng thời mở khả năng `reified` type parameter và non-local return.
+Higher-order hàm (function / 함수) tạo lambda đối tượng (object / 객체)/lời gọi (call / 호출) overhead trong một số trường hợp. `inline` cho phép trình biên dịch (compiler / 컴파일러) inline hàm (function / 함수) body/lambda ở lời gọi (call / 호출) site, đồng thời mở khả năng `reified` kiểu (type / 타입) parameter và non-local return.
 
 ```kotlin
 inline fun <reified T> Json.decode(value: String): T = ...
 ```
 
-`reified` hoạt động vì call site biết concrete type khi inline. Generic function bình thường chịu type erasure trên JVM.
+`reified` hoạt động vì lời gọi (call / 호출) site biết concrete kiểu (type / 타입) khi inline. Generic hàm (function / 함수) bình thường chịu kiểu (type / 타입) erasure trên JVM.
 
-## 8. Không inline mọi function
+## 8. Không inline mọi hàm (function / 함수)
 
-Inline làm bytecode ở call site lớn hơn. Public inline function còn có compatibility implication vì implementation được copy vào consumer khi compile.
+Inline làm bytecode ở lời gọi (call / 호출) site lớn hơn. công khai (public / 공개) inline hàm (function / 함수) còn có tính tương thích (compatibility / 호환성) implication vì hiện thực (implementation / 구현) được bản sao (copy / 복사) vào bên tiêu thụ (consumer / 소비자) khi compile.
 
-Dùng inline chủ yếu cho HOF hot/idiomatic, reified requirement hoặc API design rõ; không thêm `inline` như performance decoration.
+Dùng inline chủ yếu cho HOF hot/idiomatic, reified yêu cầu (requirement / 요구사항) hoặc API thiết kế (design / 설계) rõ; không thêm `inline` như hiệu năng (performance / 성능) decoration.
 
 ## 9. `noinline` và `crossinline`
 
-Trong inline function, lambda parameter mặc định có thể inline.
+Trong inline hàm (function / 함수), lambda parameter mặc định có thể inline.
 
-`noinline` giữ lambda như object, cần khi lưu/truyền lambda như value.
+`noinline` giữ lambda như đối tượng (object / 객체), cần khi lưu/truyền lambda như giá trị (value / 값).
 
-`crossinline` ngăn non-local return khi lambda sẽ chạy ở context không cho phép return khỏi caller.
+`crossinline` ngăn non-local return khi lambda sẽ chạy ở ngữ cảnh (context / 맥락) không cho phép return khỏi caller.
 
 ```kotlin
 inline fun execute(crossinline block: () -> Unit) {
@@ -117,9 +120,9 @@ inline fun execute(crossinline block: () -> Unit) {
 }
 ```
 
-Nếu không hiểu non-local return, code inline callback có thể gây compile error khó hiểu.
+Nếu không hiểu non-local return, mã (code / 코드) inline callback có thể gây compile lỗi (error / 오류) khó hiểu.
 
-## 10. Generic type erasure
+## 10. Generic kiểu (type / 타입) erasure
 
 Trên JVM:
 
@@ -129,23 +132,23 @@ fun <T> isListOf(value: Any): Boolean {
 }
 ```
 
-Runtime thường chỉ biết `List`, không biết element `T`. `reified` giúp một số check tại inline call site nhưng nested generic vẫn có giới hạn.
+Thời gian chạy (runtime / 런타임) thường chỉ biết `List`, không biết element `T`. `reified` giúp một số check tại inline lời gọi (call / 호출) site nhưng nested generic vẫn có giới hạn.
 
-Serialization/reflection framework cần type token, generated serializer hoặc metadata để giữ type information.
+Serialization/reflection khung phần mềm (framework / 프레임워크) cần kiểu (type / 타입) đơn vị từ (token / 토큰), generated serializer hoặc siêu dữ liệu (metadata / 메타데이터) để giữ kiểu (type / 타입) thông tin (information / 정보).
 
-## 11. Variance ở source vs JVM wildcard
+## 11. Variance ở nguồn (source / 소스) vs JVM wildcard
 
-Kotlin `out T`/`in T` biểu diễn variance ở type system. Khi expose API cho Java, wildcard signature có thể khác mong muốn.
+Kotlin `out T`/`in T` biểu diễn variance ở hệ kiểu (type system / 타입 시스템). Khi expose API cho Java, wildcard signature có thể khác mong muốn.
 
 `@JvmSuppressWildcards` và `@JvmWildcard` đôi lúc cần để điều chỉnh Java-facing signature, nhưng đừng dùng nếu không inspect API thực tế.
 
-Library/public API nên test Java interoperability nếu consumer có Java.
+Thư viện (library / 라이브러리)/API công khai (public API / 공개 API) nên kiểm thử (test / 테스트) Java interoperability nếu bên tiêu thụ (consumer / 소비자) có Java.
 
-## 12. Platform type
+## 12. nền tảng (platform / 플랫폼) kiểu (type / 타입)
 
-Java API không annotate nullability có thể thành `String!` trong Kotlin. Compiler cho phép xử lý như nullable hoặc non-null, nên NPE vẫn có thể xảy ra.
+Java API không annotate nullability có thể thành `String!` trong Kotlin. trình biên dịch (compiler / 컴파일러) cho phép xử lý như nullable hoặc non-null, nên NPE vẫn có thể xảy ra.
 
-Boundary Java legacy nên annotate nullability hoặc normalize value ngay khi vào Kotlin layer.
+Ranh giới (boundary / 경계) Java legacy nên annotate nullability hoặc normalize giá trị (value / 값) ngay khi vào Kotlin tầng (layer / 계층).
 
 ```kotlin
 val name: String = requireNotNull(javaApi.name) {
@@ -153,27 +156,27 @@ val name: String = requireNotNull(javaApi.name) {
 }
 ```
 
-Crash ở boundary có message rõ hơn crash xa downstream.
+Crash ở ranh giới (boundary / 경계) có message rõ hơn crash xa downstream.
 
-## 13. `lateinit` runtime check
+## 13. `lateinit` thời gian chạy (runtime / 런타임) check
 
-`lateinit var` bỏ nullable syntax nhưng không bảo đảm property đã init. Read trước init ném `UninitializedPropertyAccessException`.
+`lateinit var` bỏ nullable cú pháp (syntax / 문법) nhưng không bảo đảm thuộc tính (property / 속성) đã init. Read trước init ném `UninitializedPropertyAccessException`.
 
-Dùng khi lifecycle/framework thực sự init sau construction; không dùng để né constructor injection.
+Dùng khi vòng đời (lifecycle / 생명주기)/khung phần mềm (framework / 프레임워크) thực sự init sau construction; không dùng để né constructor injection.
 
-Trong Fragment View Binding, `lateinit`/nullable backing field phải theo View lifecycle, không Activity/Fragment object lifetime.
+Trong Fragment View Binding, `lateinit`/nullable backing trường dữ liệu (field / 필드) phải theo View vòng đời (lifecycle / 생명주기), không Activity/Fragment đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명).
 
 ## 14. `lazy`
 
-`lazy` mặc định có synchronization semantics phù hợp multi-thread. Có các mode khác (`SYNCHRONIZED`, `PUBLICATION`, `NONE`) với trade-off.
+`lazy` mặc định có synchronization ngữ nghĩa (semantics / 의미론) phù hợp multi-thread. Có các chế độ (mode / 모드) khác (`SYNCHRONIZED`, `PUBLICATION`, `NONE`) với sự đánh đổi (trade-off / 트레이드오프).
 
-Android main-thread-only object có thể dùng mode phù hợp nếu chắc chắn access single-thread, nhưng optimization này hiếm khi là bottleneck. Ưu tiên correctness.
+Android main-thread-only đối tượng (object / 객체) có thể dùng chế độ (mode / 모드) phù hợp nếu chắc chắn truy cập (access / 접근) single-thread, nhưng tối ưu hóa (optimization / 최적화) này hiếm khi là bottleneck. Ưu tiên tính đúng đắn (correctness / 정확성).
 
-## 15. Data class generation
+## 15. dữ liệu (data / 데이터) lớp (class / 클래스) generation
 
-Compiler generate `equals`, `hashCode`, `toString`, `componentN`, `copy` cho primary constructor properties.
+Trình biên dịch (compiler / 컴파일러) generate `equals`, `hashCode`, `toString`, `componentN`, `copy` cho primary constructor properties.
 
-`copy()` là shallow copy:
+`copy()` là shallow bản sao (copy / 복사):
 
 ```kotlin
 data class State(val items: MutableList<String>)
@@ -184,17 +187,17 @@ b.items += "B"
 // a.items cũng thấy B vì cùng list reference
 ```
 
-Immutable state cần immutable nested value hoặc defensive copy.
+Immutable trạng thái (state / 상태) cần immutable nested giá trị (value / 값) hoặc defensive bản sao (copy / 복사).
 
 ## 16. `object` và singleton initialization
 
-Kotlin `object` tạo singleton semantics theo runtime/classloader. Nó tiện cho stateless utility, nhưng global mutable state trong object gây hidden dependency/test contamination.
+Kotlin `object` tạo singleton ngữ nghĩa (semantics / 의미론) theo thời gian chạy (runtime / 런타임)/classloader. Nó tiện cho stateless utility, nhưng toàn cục (global / 전역) mutable trạng thái (state / 상태) trong đối tượng (object / 객체) gây hidden phụ thuộc (dependency / 의존성)/kiểm thử (test / 테스트) contamination.
 
-Android process death reset singleton memory. Đừng dùng object làm persistence/session source of truth nếu state cần restore.
+Android tiến trình (process / 프로세스) death reset singleton bộ nhớ (memory / 메모리). Đừng dùng đối tượng (object / 객체) làm persistence/session nguồn chuẩn (source of truth / 정본) nếu trạng thái (state / 상태) cần restore.
 
-## 17. Companion object và Java API
+## 17. Companion đối tượng (object / 객체) và Java API
 
-Companion member không phải static JVM method theo đúng nghĩa mặc định. `@JvmStatic` có thể generate static bridge cho Java-friendly API.
+Companion member không phải static JVM phương thức (method / 메서드) theo đúng nghĩa mặc định. `@JvmStatic` có thể generate static cầu nối (bridge / 브리지) cho Java-friendly API.
 
 ```kotlin
 class Parser {
@@ -207,36 +210,36 @@ class Parser {
 
 Chỉ dùng khi Java interop/API yêu cầu.
 
-## 18. Top-level function
+## 18. Top-level hàm (function / 함수)
 
-Top-level Kotlin function compile thành static method trong generated file class trên JVM. `@file:JvmName` có thể control Java-visible class name.
+Top-level Kotlin hàm (function / 함수) compile thành static phương thức (method / 메서드) trong generated tệp (file / 파일) lớp (class / 클래스) trên JVM. `@file:JvmName` có thể điều khiển (control / 제어) Java-visible lớp (class / 클래스) name.
 
-Đây là lý do top-level pure utility hoàn toàn idiomatic; không cần tạo `Utils` object chỉ để chứa static-like function.
+Đây là lý do top-level pure utility hoàn toàn idiomatic; không cần tạo `Utils` đối tượng (object / 객체) chỉ để chứa static-like hàm (function / 함수).
 
-## 19. Extension function là static dispatch
+## 19. Extension hàm (function / 함수) là static dispatch
 
-Extension không thực sự thêm virtual method vào class.
+Extension không thực sự thêm virtual phương thức (method / 메서드) vào lớp (class / 클래스).
 
 ```kotlin
 fun Animal.sound() = "animal"
 fun Dog.sound() = "dog"
 ```
 
-Extension được resolve theo compile-time receiver type, không polymorphic virtual dispatch. Nếu behavior cần override, dùng member/interface.
+Extension được resolve theo compile-time receiver kiểu (type / 타입), không polymorphic virtual dispatch. Nếu hành vi (behavior / 동작) cần override, dùng member/giao diện (interface / 인터페이스).
 
-## 20. Sequence vs Collection
+## 20. chuỗi (sequence / 시퀀스) vs Collection
 
 ```kotlin
 items.map(...).filter(...).take(10)
 ```
 
-Collection chain có thể tạo intermediate collection. `asSequence()` xử lý lazy element-by-element và hữu ích khi chain dài/data lớn/early termination.
+Collection chuỗi (chain / 사슬) có thể tạo intermediate collection. `asSequence()` xử lý lazy element-by-element và hữu ích khi chuỗi (chain / 사슬) dài/dữ liệu (data / 데이터) lớn/early termination.
 
-Nhưng Sequence có iterator/lambda overhead và không luôn nhanh hơn cho list nhỏ. Benchmark hot path thay vì cargo-cult `asSequence()`.
+Nhưng chuỗi (sequence / 시퀀스) có iterator/lambda overhead và không luôn nhanh hơn cho danh sách (list / 목록) nhỏ. Benchmark đường xử lý nóng (hot path / 핫 패스) thay vì cargo-cult `asSequence()`.
 
-## 21. Boxing primitive
+## 21. Boxing thành phần nguyên thủy (primitive / 기본 요소)
 
-Kotlin `Int` thường map JVM primitive `int` khi có thể, nhưng generic/nullable có thể box thành `Integer`.
+Kotlin `Int` thường map JVM thành phần nguyên thủy (primitive / 기본 요소) `int` khi có thể, nhưng generic/nullable có thể box thành `Integer`.
 
 ```kotlin
 val a: Int = 1       // có thể primitive
@@ -244,18 +247,18 @@ val b: Int? = 1      // boxed
 val list: List<Int>  // elements boxed trên JVM
 ```
 
-Trong UI/business code bình thường không đáng lo. Trong loop cực nóng/large numeric data, allocation/boxing có thể hiện trên profiler.
+Trong UI/nghiệp vụ (business / 비즈니스) mã (code / 코드) bình thường không đáng lo. Trong vòng lặp (loop / 루프) cực nóng/large numeric dữ liệu (data / 데이터), allocation/boxing có thể hiện trên profiler.
 
-## 22. Value class và boxing
+## 22. giá trị (value / 값) lớp (class / 클래스) và boxing
 
 ```kotlin
 @JvmInline
 value class UserId(val value: String)
 ```
 
-Value class thường tránh allocation wrapper trong nhiều context, nhưng có thể box khi nullable, generic, interface/polymorphic boundary hoặc runtime cần object.
+Giá trị (value / 값) lớp (class / 클래스) thường tránh allocation wrapper trong nhiều ngữ cảnh (context / 맥락), nhưng có thể box khi nullable, generic, giao diện (interface / 인터페이스)/polymorphic ranh giới (boundary / 경계) hoặc thời gian chạy (runtime / 런타임) cần đối tượng (object / 객체).
 
-Đừng hứa “zero allocation”. Dùng value class trước hết cho type safety/domain modeling; performance là secondary và cần đo.
+Đừng hứa “zero allocation”. Dùng giá trị (value / 값) lớp (class / 클래스) trước hết cho kiểu (type / 타입) an toàn (safety / 안전)/lĩnh vực (domain / 도메인) modeling; hiệu năng (performance / 성능) là secondary và cần đo.
 
 ## 23. Lambda capture
 
@@ -265,19 +268,19 @@ fun screen(activity: Activity): () -> Unit = {
 }
 ```
 
-Lambda capture giữ reference `activity`. Nếu lambda được singleton/store lâu hơn Activity, leak.
+Lambda capture giữ tham chiếu (reference / 참조) `activity`. Nếu lambda được singleton/store lâu hơn Activity, leak.
 
-Coroutine/callback leak investigation nên inspect capture chain, không chỉ class field rõ ràng.
+Coroutine/callback leak investigation nên inspect capture chuỗi (chain / 사슬), không chỉ lớp (class / 클래스) trường dữ liệu (field / 필드) rõ ràng.
 
-## 24. Anonymous object và inner class
+## 24. Anonymous đối tượng (object / 객체) và inner lớp (class / 클래스)
 
-`inner class` giữ reference tới outer instance. Nested class không giữ implicit outer reference.
+`inner class` giữ tham chiếu (reference / 참조) tới outer instance. Nested lớp (class / 클래스) không giữ implicit outer tham chiếu (reference / 참조).
 
-Listener anonymous object có thể capture outer Activity/Fragment. Registration lifetime sai dễ leak.
+Listener anonymous đối tượng (object / 객체) có thể capture outer Activity/Fragment. Registration thời gian tồn tại (lifetime / 수명) sai dễ leak.
 
-## 25. Annotation use-site target
+## 25. Annotation use-site mục tiêu (target / 대상)
 
-Kotlin property có thể tương ứng field/getter/setter/constructor parameter. Annotation framework đôi khi cần target cụ thể:
+Kotlin thuộc tính (property / 속성) có thể tương ứng trường dữ liệu (field / 필드)/getter/setter/constructor parameter. Annotation khung phần mềm (framework / 프레임워크) đôi khi cần mục tiêu (target / 대상) cụ thể:
 
 ```kotlin
 @get:JsonIgnore
@@ -287,50 +290,50 @@ val internalValue: String
 lateinit var dependency: Dependency
 ```
 
-Nếu annotation “không có tác dụng”, inspect framework đọc field, getter hay parameter nào.
+Nếu annotation “không có tác dụng”, inspect khung phần mềm (framework / 프레임워크) đọc trường dữ liệu (field / 필드), getter hay parameter nào.
 
-## 26. Reflection vs generated code
+## 26. Reflection vs generated mã (code / 코드)
 
-Reflection linh hoạt nhưng có runtime cost và R8/metadata complexity. Generated code chuyển nhiều lỗi sang compile time và shrink-friendly hơn trong nhiều framework.
+Reflection linh hoạt nhưng có thời gian chạy (runtime / 런타임) chi phí (cost / 비용) và R8/siêu dữ liệu (metadata / 메타데이터) độ phức tạp (complexity / 복잡도). Generated mã (code / 코드) chuyển nhiều lỗi sang compile thời gian (time / 시간) và shrink-friendly hơn trong nhiều khung phần mềm (framework / 프레임워크).
 
-Room, modern DI/codegen, Kotlin serialization thường tận dụng generated/compiled knowledge thay vì reflection thuần.
+Room, hiện đại (modern / 현대적) DI/codegen, Kotlin serialization thường tận dụng generated/compiled kiến thức (knowledge / 지식) thay vì reflection thuần.
 
-Không vì thế reflection luôn xấu; chỉ cần biết runtime contract và keep requirement.
+Không vì thế reflection luôn xấu; chỉ cần biết thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약) và keep yêu cầu (requirement / 요구사항).
 
 ## 27. KAPT
 
-KAPT bridge Java annotation processing vào Kotlin bằng stub generation. Nó từng là nền tảng của nhiều library nhưng có build cost đáng kể.
+KAPT cầu nối (bridge / 브리지) Java annotation processing vào Kotlin bằng stub generation. Nó từng là nền tảng của nhiều thư viện (library / 라이브러리) nhưng có bản dựng (build / 빌드) chi phí (cost / 비용) đáng kể.
 
-Migration khỏi KAPT chỉ nên làm khi processor/library hỗ trợ alternative ổn định. Một project có thể coexist KAPT và KSP trong giai đoạn migration.
+Di chuyển (migration / 마이그레이션) khỏi KAPT chỉ nên làm khi processor/thư viện (library / 라이브러리) hỗ trợ alternative ổn định. Một dự án (project / 프로젝트) có thể coexist KAPT và KSP trong giai đoạn di chuyển (migration / 마이그레이션).
 
 ## 28. KSP
 
-KSP (Kotlin Symbol Processing) cung cấp symbol model gần Kotlin hơn và thường hiệu quả hơn KAPT cho processor hỗ trợ.
+KSP (Kotlin Symbol Processing) cung cấp symbol mô hình (model / 모델) gần Kotlin hơn và thường hiệu quả hơn KAPT cho processor hỗ trợ.
 
-KSP processor tạo source/resource trong build. Generated output phải là deterministic function của source/config nếu muốn cache/reproducible build tốt.
+KSP processor tạo nguồn (source / 소스)/tài nguyên (resource / 자원) trong bản dựng (build / 빌드). Generated đầu ra (output / 출력) phải là deterministic hàm (function / 함수) của nguồn (source / 소스)/cấu hình (config / 설정) nếu muốn bộ nhớ đệm (cache / 캐시)/reproducible bản dựng (build / 빌드) tốt.
 
-KSP version phải tương thích Kotlin compiler line phù hợp; upgrade Kotlin cần kiểm tra processor ecosystem.
+KSP phiên bản (version / 버전) phải tương thích Kotlin trình biên dịch (compiler / 컴파일러) line phù hợp; upgrade Kotlin cần kiểm tra processor ecosystem.
 
-## 29. Compiler plugin
+## 29. trình biên dịch (compiler / 컴파일러) plugin
 
-Serialization và Compose có compiler integration. Compiler plugin có quyền transform/augment compilation mạnh hơn annotation processor.
+Serialization và Compose có trình biên dịch (compiler / 컴파일러) tích hợp (integration / 통합). trình biên dịch (compiler / 컴파일러) plugin có quyền transform/augment compilation mạnh hơn annotation processor.
 
-Do đó plugin version mismatch có thể gây compile/runtime issue sâu. Toolchain matrix cần được review như một unit.
+Do đó plugin phiên bản (version / 버전) mismatch có thể gây compile/thời gian chạy (runtime / 런타임) issue sâu. Toolchain ma trận (matrix / 행렬) cần được rà soát (review / 검토) như một đơn vị (unit / 단위).
 
-## 30. Compose compiler/runtime mental model
+## 30. Compose trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) mô hình tư duy (mental model / 사고 모델)
 
-Composable function không phải ordinary function đơn giản. Compiler thêm machinery để runtime theo dõi composition group, parameter/state read và skipping/recomposition.
+Composable hàm (function / 함수) không phải ordinary hàm (function / 함수) đơn giản. trình biên dịch (compiler / 컴파일러) thêm machinery để thời gian chạy (runtime / 런타임) theo dõi composition group, parameter/trạng thái (state / 상태) read và skipping/recomposition.
 
 Bạn không cần đọc generated bytecode hằng ngày, nhưng khi optimize cần hiểu:
 
-- state read quyết định invalidation scope;
-- stable/immutable input giúp skipping trong context phù hợp;
-- key/identity ảnh hưởng state association;
-- composition, layout, draw là phase khác nhau.
+- trạng thái (state / 상태) read quyết định vô hiệu hóa (invalidation / 무효화) phạm vi (scope / 범위);
+- stable/immutable đầu vào (input / 입력) giúp skipping trong ngữ cảnh (context / 맥락) phù hợp;
+- key/định danh (identity / 식별자) ảnh hưởng trạng thái (state / 상태) association;
+- composition, bố cục (layout / 레이아웃), draw là phase khác nhau.
 
 ## 31. Stability không đồng nghĩa `val`
 
-Một class có toàn `val` nhưng chứa mutable list vẫn có mutation hidden.
+Một lớp (class / 클래스) có toàn `val` nhưng chứa mutable danh sách (list / 목록) vẫn có mutation hidden.
 
 ```kotlin
 data class UiModel(
@@ -338,30 +341,30 @@ data class UiModel(
 )
 ```
 
-Compose/state reasoning cần semantic immutability, không chỉ syntax `val`.
+Compose/trạng thái (state / 상태) lập luận (reasoning / 추론) cần ngữ nghĩa (semantic / 의미적) immutability, không chỉ cú pháp (syntax / 문법) `val`.
 
-## 32. `@Immutable`/`@Stable` không phải performance magic
+## 32. `@Immutable`/`@Stable` không phải hiệu năng (performance / 성능) magic
 
-Annotation stability là contract bạn hứa với Compose runtime/compiler. Annotate sai có thể khiến UI không update đúng hoặc làm reasoning sai.
+Annotation stability là đặc tả hợp đồng (contract / 계약) bạn hứa với Compose thời gian chạy (runtime / 런타임)/trình biên dịch (compiler / 컴파일러). Annotate sai có thể khiến UI không cập nhật (update / 업데이트) đúng hoặc làm lập luận (reasoning / 추론) sai.
 
-Chỉ annotate khi type thực sự thỏa contract; đừng dùng để silence performance warning mà không hiểu mutation semantics.
+Chỉ annotate khi kiểu (type / 타입) thực sự thỏa đặc tả hợp đồng (contract / 계약); đừng dùng để silence hiệu năng (performance / 성능) warning mà không hiểu mutation ngữ nghĩa (semantics / 의미론).
 
 ## 33. Bytecode inspection
 
 Android Studio/Kotlin tooling có thể decompile bytecode để hiểu:
 
-- property getter/setter;
-- default argument synthetic method;
-- suspend state machine;
-- inline result;
-- companion/static bridge;
+- thuộc tính (property / 속성) getter/setter;
+- default argument synthetic phương thức (method / 메서드);
+- suspend máy trạng thái (state machine / 상태 머신);
+- inline kết quả (result / 결과);
+- companion/static cầu nối (bridge / 브리지);
 - boxing.
 
-Khi interop/performance bug khó, inspect generated representation thường nhanh hơn đoán.
+Khi interop/hiệu năng (performance / 성능) bug khó, inspect generated biểu diễn (representation / 표현) thường nhanh hơn đoán.
 
 ## 34. Default argument và Java
 
-Kotlin default parameter thuận tiện nhưng Java caller không tự thấy overload tương đương. `@JvmOverloads` generate overload trong case phù hợp.
+Kotlin default parameter thuận tiện nhưng Java caller không tự thấy overload tương đương. `@JvmOverloads` generate overload trong trường hợp (case / 사례) phù hợp.
 
 ```kotlin
 class Client @JvmOverloads constructor(
@@ -383,54 +386,54 @@ fun read(): Data = ...
 
 ## 36. `Nothing`
 
-`Nothing` là type không có value, dùng cho function không return bình thường:
+`Nothing` là kiểu (type / 타입) không có giá trị (value / 값), dùng cho hàm (function / 함수) không return bình thường:
 
 ```kotlin
 fun fail(message: String): Nothing = error(message)
 ```
 
-Nó giúp type inference hiểu branch throw không cần produce value.
+Nó giúp kiểu (type / 타입) suy luận (inference / 추론) hiểu branch throw không cần produce giá trị (value / 값).
 
 ## 37. `Unit` vs Java `void`
 
-`Unit` là type có single value `Unit`; Java `void` là absence return. Interop/compiler có mapping riêng. Higher-order function `() -> Unit` là object/function type nhận result Unit, khác khái niệm một method void đơn thuần.
+`Unit` là kiểu (type / 타입) có single giá trị (value / 값) `Unit`; Java `void` là absence return. Interop/trình biên dịch (compiler / 컴파일러) có ánh xạ (mapping / 매핑) riêng. Higher-order hàm (function / 함수) `() -> Unit` là đối tượng (object / 객체)/hàm (function / 함수) kiểu (type / 타입) nhận kết quả (result / 결과) đơn vị (unit / 단위), khác khái niệm một phương thức (method / 메서드) void đơn thuần.
 
 ## 38. Equality và generated `equals`
 
-`==` gọi structural equality (`equals`), `===` kiểm tra reference identity.
+`==` gọi structural equality (`equals`), `===` kiểm tra tham chiếu (reference / 참조) định danh (identity / 식별자).
 
-Data class generated equals dùng primary constructor property equality. Với array, `Array.equals` semantics khác content equality kỳ vọng; dùng `contentEquals`/`contentDeepEquals` khi cần.
+Dữ liệu (data / 데이터) lớp (class / 클래스) generated equals dùng primary constructor thuộc tính (property / 속성) equality. Với array, `Array.equals` ngữ nghĩa (semantics / 의미론) khác content equality kỳ vọng; dùng `contentEquals`/`contentDeepEquals` khi cần.
 
-Domain type chứa array cần custom equality nếu content semantics quan trọng.
+Lĩnh vực (domain / 도메인) kiểu (type / 타입) chứa array cần custom equality nếu content ngữ nghĩa (semantics / 의미론) quan trọng.
 
-## 39. Hash-based collection invariant
+## 39. Hash-based collection bất biến (invariant / 불변식)
 
-Nếu object dùng key trong HashMap/HashSet, fields tham gia `equals/hashCode` không nên mutate theo cách làm hash thay đổi khi object đang trong set/map.
+Nếu đối tượng (object / 객체) dùng key trong HashMap/HashSet, fields tham gia `equals/hashCode` không nên mutate theo cách làm băm (hash / 해시) thay đổi khi đối tượng (object / 객체) đang trong set/map.
 
-Immutable data class key an toàn hơn mutable entity object.
+Immutable dữ liệu (data / 데이터) lớp (class / 클래스) key an toàn hơn mutable thực thể (entity / 엔터티) đối tượng (object / 객체).
 
-## 40. JVM memory model và thread safety
+## 40. JVM bộ nhớ (memory / 메모리) mô hình (model / 모델) và luồng thực thi (thread / 스레드) an toàn (safety / 안전)
 
-`val` chỉ ngăn reassignment reference, không tự làm object thread-safe. MutableList trong val vẫn mutable.
+`val` chỉ ngăn reassignment tham chiếu (reference / 참조), không tự làm đối tượng (object / 객체) thread-safe. MutableList trong val vẫn mutable.
 
-Shared mutable state giữa coroutine trên nhiều dispatcher cần confinement, Mutex, atomic primitive hoặc immutable state transition phù hợp.
+Dùng chung (shared / 공유) mutable trạng thái (state / 상태) giữa coroutine trên nhiều dispatcher cần confinement, Mutex, atomic thành phần nguyên thủy (primitive / 기본 요소) hoặc immutable chuyển tiếp trạng thái (state transition / 상태 전이) phù hợp.
 
-Coroutine không loại bỏ data race nếu code chạy concurrent thật.
+Coroutine không loại bỏ dữ liệu (data / 데이터) race nếu mã (code / 코드) chạy concurrent thật.
 
 ## 41. `volatile`, atomic và Mutex
 
-`@Volatile` giúp visibility của một field, không biến multi-step operation thành atomic.
+`@Volatile` giúp visibility của một trường dữ liệu (field / 필드), không biến multi-step thao tác (operation / 연산) thành atomic.
 
 ```kotlin
 @Volatile var count = 0
 count++ // read-modify-write, không atomic
 ```
 
-Dùng AtomicInteger/atomic primitive cho operation đơn giản; Mutex cho critical section suspending; single-thread confinement/state reducer khi phù hợp.
+Dùng AtomicInteger/atomic thành phần nguyên thủy (primitive / 기본 요소) cho thao tác (operation / 연산) đơn giản; Mutex cho trọng yếu (critical / 중요) section suspending; single-thread confinement/trạng thái (state / 상태) reducer khi phù hợp.
 
 ## 42. Exception và cancellation
 
-`CancellationException` là control signal của coroutine. Broad catch:
+`CancellationException` là điều khiển (control / 제어) tín hiệu (signal / 신호) của coroutine. Broad catch:
 
 ```kotlin
 try {
@@ -448,33 +451,33 @@ catch (e: CancellationException) {
 }
 ```
 
-Hoặc structure catch cụ thể hơn.
+Hoặc cấu trúc (structure / 구조) catch cụ thể hơn.
 
-## 43. Result và exception API design
+## 43. kết quả (result / 결과) và exception API thiết kế (design / 설계)
 
-Kotlin `Result<T>` hữu ích ở một số boundary nhưng không phải universal domain error model. Domain có nhiều error typed rõ ràng có thể dùng sealed result.
+Kotlin `Result<T>` hữu ích ở một số ranh giới (boundary / 경계) nhưng không phải universal lĩnh vực (domain / 도메인) lỗi (error / 오류) mô hình (model / 모델). lĩnh vực (domain / 도메인) có nhiều lỗi (error / 오류) typed rõ ràng có thể dùng sealed kết quả (result / 결과).
 
-Public Java-facing API với Kotlin Result cần cân nhắc interop. API design phải xét consumer.
+Công khai (public / 공개) Java-facing API với Kotlin kết quả (result / 결과) cần cân nhắc interop. API thiết kế (design / 설계) phải xét bên tiêu thụ (consumer / 소비자).
 
-## 44. Binary compatibility
+## 44. nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)
 
-Library/module API đổi source-compatible chưa chắc binary-compatible với consumer đã compile trước.
+Thư viện (library / 라이브러리)/mô-đun (module / 모듈) API đổi source-compatible chưa chắc binary-compatible với bên tiêu thụ (consumer / 소비자) đã compile trước.
 
-Thay method signature, remove class, đổi JVM name hoặc inline/public ABI có thể gây `NoSuchMethodError`/`NoClassDefFoundError` nếu artifact mix version.
+Thay phương thức (method / 메서드) signature, remove lớp (class / 클래스), đổi JVM name hoặc inline/công khai (public / 공개) ABI có thể gây `NoSuchMethodError`/`NoClassDefFoundError` nếu sản phẩm tạo ra (artifact / 산출물) mix phiên bản (version / 버전).
 
-Internal app monorepo thường rebuild cùng lúc nên risk thấp hơn published library/dynamic module ecosystem.
+Nội bộ (internal / 내부) app monorepo thường rebuild cùng lúc nên rủi ro (risk / 위험) thấp hơn published thư viện (library / 라이브러리)/động (dynamic / 동적) mô-đun (module / 모듈) ecosystem.
 
-## 45. Public inline API compatibility
+## 45. công khai (public / 공개) inline API tính tương thích (compatibility / 호환성)
 
-Consumer compile body inline vào bytecode của họ. Vì vậy behavior cũ có thể nằm trong consumer cho tới khi recompile, và internal symbol referenced bởi public inline cần visibility rules (`@PublishedApi` khi phù hợp).
+Bên tiêu thụ (consumer / 소비자) compile body inline vào bytecode của họ. Vì vậy hành vi (behavior / 동작) cũ có thể nằm trong bên tiêu thụ (consumer / 소비자) cho tới khi recompile, và nội bộ (internal / 내부) symbol referenced bởi công khai (public / 공개) inline cần visibility rules (`@PublishedApi` khi phù hợp).
 
-Library author cần hiểu điều này trước khi expose nhiều inline implementation detail.
+Thư viện (library / 라이브러리) author cần hiểu điều này trước khi expose nhiều inline hiện thực (implementation / 구현) detail.
 
 ## 46. R8 shrinking
 
-R8 phân tích reachability và có thể remove/rename/optimize code. Reflection/JNI/resource-by-name làm static analysis khó.
+R8 phân tích reachability và có thể remove/rename/optimize mã (code / 코드). Reflection/JNI/resource-by-name làm static phân tích (analysis / 분석) khó.
 
-Keep rule nên là minimum contract:
+Keep quy tắc (rule / 규칙) nên là minimum đặc tả hợp đồng (contract / 계약):
 
 ```text
 keep exactly reflected members
@@ -482,23 +485,23 @@ keep required annotation/metadata
 consumer rule đi cùng library
 ```
 
-Không disable shrink để tránh debug một issue.
+Không disable shrink để tránh gỡ lỗi (debug / 디버그) một issue.
 
-## 47. Mapping và crash
+## 47. ánh xạ (mapping / 매핑) và crash
 
-Obfuscated stack trace production cần mapping file đúng build. Mapping là artifact của release, không được overwrite/mất.
+Obfuscated dấu vết ngăn xếp (stack trace / 스택 트레이스) môi trường vận hành (production / 운영 환경) cần ánh xạ (mapping / 매핑) tệp (file / 파일) đúng bản dựng (build / 빌드). ánh xạ (mapping / 매핑) là sản phẩm tạo ra (artifact / 산출물) của bản phát hành (release / 릴리스), không được overwrite/mất.
 
-Build ID/versionCode phải liên kết mapping để symbolicate incident sau nhiều tháng.
+Bản dựng (build / 빌드) ID/versionCode phải liên kết ánh xạ (mapping / 매핑) để symbolicate sự cố (incident / 인시던트) sau nhiều tháng.
 
 ## 48. D8/desugaring
 
-Android device API cũ không có mọi Java language/library feature mới. Desugaring transform một số bytecode/API để hỗ trợ target thấp hơn.
+Android thiết bị (device / 장치) API cũ không có mọi Java ngôn ngữ (language / 언어)/thư viện (library / 라이브러리) tính năng (feature / 기능) mới. Desugaring transform một số bytecode/API để hỗ trợ mục tiêu (target / 대상) thấp hơn.
 
-Khi dùng Java time/API mới trên minSdk cũ, core library desugaring có thể liên quan. Đừng assume compileSdk cao nghĩa mọi runtime device có API đó native.
+Khi dùng Java thời gian (time / 시간)/API mới trên minSdk cũ, cốt lõi (core / 핵심) thư viện (library / 라이브러리) desugaring có thể liên quan. Đừng assume compileSdk cao nghĩa mọi thời gian chạy (runtime / 런타임) thiết bị (device / 장치) có API đó bản địa (native / 네이티브).
 
-## 49. API level check vẫn cần
+## 49. API mức (level / 수준) check vẫn cần
 
-Compile-time symbol availability khác runtime availability.
+Compile-time symbol availability khác thời gian chạy (runtime / 런타임) availability.
 
 ```kotlin
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.X) {
@@ -506,39 +509,39 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.X) {
 }
 ```
 
-AndroidX compatibility wrapper thường nên được ưu tiên khi nó abstract behavior chính xác.
+AndroidX tính tương thích (compatibility / 호환성) wrapper thường nên được ưu tiên khi nó abstract hành vi (behavior / 동작) chính xác.
 
-## 50. Method count và dependency cost
+## 50. phương thức (method / 메서드) count và phụ thuộc (dependency / 의존성) chi phí (cost / 비용)
 
-MultiDex ít còn là daily issue như thời cũ ở nhiều project hiện đại, nhưng dependency vẫn có cost: method/code size, startup initializer, transitive dependency, resource và security surface.
+MultiDex ít còn là daily issue như thời cũ ở nhiều dự án (project / 프로젝트) hiện đại, nhưng phụ thuộc (dependency / 의존성) vẫn có chi phí (cost / 비용): phương thức (method / 메서드)/mã (code / 코드) kích thước (size / 크기), startup initializer, transitive phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) và bảo mật (security / 보안) surface.
 
-Review dependency không chỉ theo “thêm một dòng Gradle”.
+Rà soát (review / 검토) phụ thuộc (dependency / 의존성) không chỉ theo “thêm một dòng Gradle”.
 
-## 51. Allocation profiler và heap
+## 51. Allocation profiler và vùng nhớ động (heap / 힙)
 
-Nếu profiler thấy allocation spike, trace source trước. Có thể là JSON parsing, bitmap, list transform, string format, lambda capture hoặc recomposition object creation.
+Nếu profiler thấy allocation spike, dấu vết (trace / 추적) nguồn (source / 소스) trước. Có thể là JSON parsing, bitmap, danh sách (list / 목록) transform, string format, lambda capture hoặc recomposition đối tượng (object / 객체) creation.
 
-Đừng rewrite idiomatic Kotlin sang imperative code chỉ dựa trên giả định “functional chậm”. Measure representative workload.
+Đừng rewrite idiomatic Kotlin sang imperative mã (code / 코드) chỉ dựa trên giả định “functional chậm”. Measure representative tải công việc (workload / 워크로드).
 
 ## 52. Benchmark JVM vs Android
 
-Microbenchmark trên desktop JVM không phản ánh ART/device hoàn toàn. AndroidX Benchmark chạy môi trường Android phù hợp hơn cho hot code cần đo.
+Microbenchmark trên desktop JVM không phản ánh ART/thiết bị (device / 장치) hoàn toàn. AndroidX Benchmark chạy môi trường Android phù hợp hơn cho hot mã (code / 코드) cần đo.
 
-Macrobenchmark dùng cho user journey; Microbenchmark cho function/component hot path.
+Macrobenchmark dùng cho người dùng (user / 사용자) journey; Microbenchmark cho hàm (function / 함수)/thành phần (component / 컴포넌트) đường xử lý nóng (hot path / 핫 패스).
 
-## 53. Build scan/profile
+## 53. bản dựng (build / 빌드) scan/profile
 
-Slow Gradle build cần profile configuration vs task execution, annotation processing/code generation, non-cacheable task, dependency resolution.
+Slow Gradle bản dựng (build / 빌드) cần profile cấu hình (configuration / 구성) vs tác vụ (task / 작업) thực thi (execution / 실행), annotation processing/mã (code / 코드) generation, non-cacheable tác vụ (task / 작업), phụ thuộc (dependency / 의존성) resolution.
 
-Không giải slow build chỉ bằng tăng heap. Root cause có thể là module graph, KAPT processor hoặc task luôn out-of-date.
+Không giải slow bản dựng (build / 빌드) chỉ bằng tăng vùng nhớ động (heap / 힙). nguyên nhân gốc (root cause / 근본 원인) có thể là mô-đun (module / 모듈) đồ thị (graph / 그래프), KAPT processor hoặc tác vụ (task / 작업) luôn out-of-date.
 
-## 54. Generated source ownership
+## 54. Generated nguồn (source / 소스) quyền sở hữu (ownership / 소유권)
 
-Không edit generated source bằng tay. Fix input/processor/template.
+Không edit generated nguồn (source / 소스) bằng tay. Fix đầu vào (input / 입력)/processor/template.
 
-Generated folder thường không commit trừ tool explicitly yêu cầu; CI phải tạo lại được. Nếu generated artifact cần review/API tracking, thiết kế workflow rõ.
+Generated folder thường không lần ghi nhận (commit / 커밋) trừ công cụ (tool / 도구) explicitly yêu cầu; CI phải tạo lại được. Nếu generated sản phẩm tạo ra (artifact / 산출물) cần rà soát (review / 검토)/API tracking, thiết kế workflow rõ.
 
-## 55. Senior debugging workflow
+## 55. cấp cao (senior / 시니어) debugging workflow
 
 Khi gặp bug “Kotlin magic”, dùng thứ tự:
 
@@ -552,12 +555,14 @@ reproduce minimal
 → thêm regression test ở boundary
 ```
 
-Đừng nhảy thẳng vào decompile nếu source-level bug đã đủ giải thích.
+Đừng nhảy thẳng vào decompile nếu tầng mã nguồn (source-level / 소스 수준) bug đã đủ giải thích.
 
 ## 56. Master takeaway
 
-Kotlin abstraction tốt cho productivity, nhưng senior/master cần biết abstraction được thực hiện thế nào ở những điểm ảnh hưởng correctness, performance và compatibility.
+Kotlin lớp trừu tượng (abstraction / 추상화) tốt cho productivity, nhưng cấp cao (senior / 시니어)/master cần biết lớp trừu tượng (abstraction / 추상화) được thực hiện thế nào ở những điểm ảnh hưởng tính đúng đắn (correctness / 정확성), hiệu năng (performance / 성능) và tính tương thích (compatibility / 호환성).
 
-Hãy nhớ các leak point chính: **type erasure, boxing, generated code, coroutine state machine, capture/lifetime, annotation target, Java interop, compiler/plugin compatibility, reflection/R8 và binary ABI**.
+Hãy nhớ các leak điểm (point / 지점) chính: **kiểu (type / 타입) erasure, boxing, generated mã (code / 코드), coroutine máy trạng thái (state machine / 상태 머신), capture/thời gian tồn tại (lifetime / 수명), annotation mục tiêu (target / 대상), Java interop, trình biên dịch (compiler / 컴파일러)/plugin tính tương thích (compatibility / 호환성), reflection/R8 và nhị phân (binary / 이진) ABI**.
 
-Bạn không cần tối ưu theo bytecode mỗi ngày. Bạn cần khả năng hạ xuống tầng bytecode/runtime khi evidence cho thấy vấn đề nằm ở đó, rồi quay lại thiết kế source-level đơn giản nhất có thể.
+Bạn không cần tối ưu theo bytecode mỗi ngày. Bạn cần khả năng hạ xuống tầng bytecode/thời gian chạy (runtime / 런타임) khi bằng chứng (evidence / 증거) cho thấy vấn đề nằm ở đó, rồi quay lại thiết kế tầng mã nguồn (source-level / 소스 수준) đơn giản nhất có thể.
+
+> **Bàn giao:** Sau **56. Master takeaway**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,379 +1,384 @@
 # 12 — AI, sustainability và bối cảnh dự án hiện đại
 
-## Vì sao PMP 2026 nhấn mạnh context mới
+> **Mạch đọc:** Đặt **12 — AI, sustainability và bối cảnh dự án hiện đại** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao PMP 2026 nhấn mạnh ngữ cảnh (context / 맥락) mới** sang **AI như năng lực (capability / 역량) và như rủi ro (risk / 위험) nguồn (source / 소스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Kỳ thi PMP cập nhật tháng 7/2026 đưa AI, sustainability và stakeholder engagement vào scenario rõ hơn, đồng thời tăng đáng kể trọng số Business Environment. Điều này phản ánh một thay đổi về mental model: project manager không chỉ điều phối plan nội bộ mà phải reasoning về technology, external impact và business outcome.
 
-Chapter này không biến PMP thành khóa AI hay ESG. Mục tiêu là biết các yếu tố mới thay đổi risk, governance, stakeholder và value model như thế nào.
+## Vì sao PMP 2026 nhấn mạnh ngữ cảnh (context / 맥락) mới
 
-PMI hiện cũng mở rộng guidance chính thức về AI và sustainability ở cấp project work. Điều cần học không phải tên thêm nhiều standard, mà là một principle chung: technology và externality phải được đưa vào cùng hệ thống decision, governance, evidence và accountability như cost, schedule hay quality.
+Kỳ thi PMP cập nhật tháng 7/2026 đưa AI, sustainability và stakeholder engagement vào scenario rõ hơn, đồng thời tăng đáng kể trọng số nghiệp vụ (business / 비즈니스) môi trường (environment / 환경). Điều này phản ánh một thay đổi về mô hình tư duy (mental model / 사고 모델): dự án (project / 프로젝트) manager không chỉ điều phối plan nội bộ mà phải lập luận (reasoning / 추론) về technology, bên ngoài (external / 외부) impact và nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과).
 
-## AI như capability và như risk source
+Chapter này không biến PMP thành khóa AI hay ESG. Mục tiêu là biết các yếu tố mới thay đổi rủi ro (risk / 위험), quản trị (governance / 거버넌스), stakeholder và giá trị (value / 값) mô hình (model / 모델) như thế nào.
 
-Trí tuệ nhân tạo (artificial intelligence / 인공지능) có thể được dùng bên trong project management để hỗ trợ summarization, forecasting, risk discovery, document analysis hoặc automation. Nhưng output của AI là evidence cần validation, không phải authority.
+PMI hiện cũng mở rộng guidance chính thức về AI và sustainability ở cấp dự án (project / 프로젝트) công việc (work / 작업). Điều cần học không phải tên thêm nhiều tiêu chuẩn (standard / 표준), mà là một principle chung: technology và externality phải được đưa vào cùng hệ thống quyết định (decision / 결정), quản trị (governance / 거버넌스), bằng chứng (evidence / 증거) và accountability như chi phí (cost / 비용), schedule hay chất lượng (quality / 품질).
 
-Nếu dùng model để tóm tắt meeting, project vẫn cần process xác nhận decision/action. Nếu model dự đoán delay, PM cần hiểu data quality, model limitation và action threshold. Automation tăng tốc cả correct process lẫn bad assumption.
+## AI như năng lực (capability / 역량) và như rủi ro (risk / 위험) nguồn (source / 소스)
 
-Khi AI là một phần deliverable, risk rộng hơn: data privacy, bias, hallucination, model drift, explainability, IP, security, human oversight và regulatory change. Success criteria phải đo behavior thực tế, không chỉ “model đã tích hợp”.
+Trí tuệ nhân tạo (artificial intelligence / 인공지능) có thể được dùng bên trong dự án (project / 프로젝트) management để hỗ trợ summarization, forecasting, rủi ro (risk / 위험) discovery, document phân tích (analysis / 분석) hoặc automation. Nhưng đầu ra (output / 출력) của AI là bằng chứng (evidence / 증거) cần kiểm tra hợp lệ (validation / 검증), không phải authority.
 
-## AI system là socio-technical system
+Nếu dùng mô hình (model / 모델) để tóm tắt meeting, dự án (project / 프로젝트) vẫn cần tiến trình (process / 프로세스) xác nhận quyết định (decision / 결정)/hành động (action / 동작). Nếu mô hình (model / 모델) dự đoán delay, PM cần hiểu dữ liệu (data / 데이터) chất lượng (quality / 품질), mô hình (model / 모델) limitation và hành động (action / 동작) threshold. Automation tăng tốc cả correct tiến trình (process / 프로세스) lẫn bad giả định (assumption / 가정).
 
-Model chỉ là một component. Outcome còn phụ thuộc user behavior, interface, policy, workflow, incentive, monitoring và fallback. Cùng một model có thể an toàn trong use case draft internal nhưng nguy hiểm trong automatic approval.
+Khi AI là một phần deliverable, rủi ro (risk / 위험) rộng hơn: dữ liệu (data / 데이터) privacy, độ lệch (bias / 편향), hallucination, mô hình (model / 모델) drift, explainability, IP, bảo mật (security / 보안), human oversight và regulatory thay đổi (change / 변경). Success criteria phải đo hành vi (behavior / 동작) thực tế, không chỉ “mô hình (model / 모델) đã tích hợp”.
 
-Vì vậy quality/risk không thể đánh giá chỉ bằng benchmark model. Project phải đánh giá end-to-end system: ai nhập gì, model nhìn thấy gì, output hiển thị thế nào, user hiểu ra sao, action nào được phép và error được phát hiện/correct ở đâu.
+## AI hệ thống (system / 시스템) là socio-technical hệ thống (system / 시스템)
 
-Human factor là part of architecture, không phải control thêm sau cùng.
+Mô hình (model / 모델) chỉ là một thành phần (component / 컴포넌트). kết quả (outcome / 결과) còn phụ thuộc người dùng (user / 사용자) hành vi (behavior / 동작), giao diện (interface / 인터페이스), chính sách (policy / 정책), workflow, incentive, monitoring và fallback. Cùng một mô hình (model / 모델) có thể an toàn trong use trường hợp (case / 사례) draft nội bộ (internal / 내부) nhưng nguy hiểm trong automatic approval.
 
-## Tách use case, model và operating system
+Vì vậy chất lượng (quality / 품질)/rủi ro (risk / 위험) không thể đánh giá chỉ bằng benchmark mô hình (model / 모델). dự án (project / 프로젝트) phải đánh giá end-to-end hệ thống (system / 시스템): ai nhập gì, mô hình (model / 모델) nhìn thấy gì, đầu ra (output / 출력) hiển thị thế nào, người dùng (user / 사용자) hiểu ra sao, hành động (action / 동작) nào được phép và lỗi (error / 오류) được phát hiện/correct ở đâu.
 
-Một lỗi phổ biến là nói “project AI” như thể AI tự là objective. Mental model tốt hơn là tách ba lớp. Use case xác định problem và expected outcome. Model hoặc AI capability chỉ là một component giải problem. Operating system xung quanh gồm data pipeline, human process, monitoring, policy, escalation và fallback.
+Human factor là part of kiến trúc (architecture / 아키텍처), không phải điều khiển (control / 제어) thêm sau cùng.
 
-Một model chính xác cao nhưng không có process xử lý low-confidence case vẫn có thể tạo outcome tệ. Vì vậy project manager phải quản lý toàn hệ thống delivery chứ không chỉ milestone “model ready”.
+## Tách use trường hợp (case / 사례), mô hình (model / 모델) và operating hệ thống (system / 시스템)
 
-## Intended use và performance envelope
+Một lỗi phổ biến là nói “dự án (project / 프로젝트) AI” như thể AI tự là mục tiêu (objective / 목표). mô hình tư duy (mental model / 사고 모델) tốt hơn là tách ba lớp. Use trường hợp (case / 사례) xác định bài toán (problem / 문제) và expected kết quả (outcome / 결과). mô hình (model / 모델) hoặc AI năng lực (capability / 역량) chỉ là một thành phần (component / 컴포넌트) giải bài toán (problem / 문제). Operating hệ thống (system / 시스템) xung quanh gồm dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인), human tiến trình (process / 프로세스), monitoring, chính sách (policy / 정책), escalation và fallback.
 
-AI governance cần nói rõ intended use: model được dùng cho task nào, population nào, data nào, environment nào và consequence nào. Performance evidence chỉ có meaning bên trong envelope đó.
+Một mô hình (model / 모델) chính xác cao nhưng không có tiến trình (process / 프로세스) xử lý low-confidence trường hợp (case / 사례) vẫn có thể tạo kết quả (outcome / 결과) tệ. Vì vậy dự án (project / 프로젝트) manager phải quản lý toàn hệ thống delivery chứ không chỉ milestone “mô hình (model / 모델) ready”.
 
-Một model evaluated trên English customer support không tự động được coi valid cho Korean legal advice. Một classifier chạy tốt ở volume 1.000 case/ngày chưa chứng minh latency/cost ở 1 triệu case.
+## Intended use và hiệu năng (performance / 성능) envelope
 
-Khi project mở rộng use case vượt envelope, đó là change cần re-evaluation—not simply “reuse model existing”.
+AI quản trị (governance / 거버넌스) cần nói rõ intended use: mô hình (model / 모델) được dùng cho tác vụ (task / 작업) nào, population nào, dữ liệu (data / 데이터) nào, môi trường (environment / 환경) nào và consequence nào. bằng chứng hiệu năng (performance evidence / 성능 증거) chỉ có meaning bên trong envelope đó.
 
-## Bốn boundary cần quản trị: data, model, use và action
+Một mô hình (model / 모델) evaluated trên English customer hỗ trợ (support / 지원) không tự động được coi valid cho Korean legal advice. Một classifier chạy tốt ở volume 1.000 trường hợp (case / 사례)/ngày chưa chứng minh độ trễ (latency / 지연 시간)/chi phí (cost / 비용) ở 1 triệu trường hợp (case / 사례).
 
-AI governance trở nên rõ hơn nếu tách bốn boundary.
+Khi dự án (project / 프로젝트) mở rộng use trường hợp (case / 사례) vượt envelope, đó là thay đổi (change / 변경) cần re-evaluation—not simply “reuse mô hình (model / 모델) existing”.
 
-Data boundary hỏi dữ liệu nào được phép dùng, nguồn/provenance là gì, retention và privacy ra sao. Model boundary hỏi model/version nào được approved, limitation và evaluation evidence nào tồn tại. Use boundary hỏi ai được phép dùng AI cho task nào. Action boundary hỏi output có thể chỉ gợi ý, tự động tạo draft hay được phép trigger action thật.
+## Bốn ranh giới (boundary / 경계) cần quản trị: dữ liệu (data / 데이터), mô hình (model / 모델), use và hành động (action / 동작)
 
-Một tổ chức có thể chấp nhận model viết meeting summary nhưng không cho cùng model tự gửi contract amendment. Cùng một technology nhưng action boundary khác làm risk profile khác hoàn toàn.
+AI quản trị (governance / 거버넌스) trở nên rõ hơn nếu tách bốn ranh giới (boundary / 경계).
 
-Project requirement và control nên gắn với boundary này thay vì một policy chung chung “AI phải được dùng có trách nhiệm”.
+Dữ liệu (data / 데이터) ranh giới (boundary / 경계) hỏi dữ liệu nào được phép dùng, nguồn/provenance là gì, retention và privacy ra sao. mô hình (model / 모델) ranh giới (boundary / 경계) hỏi mô hình (model / 모델)/phiên bản (version / 버전) nào được approved, limitation và evaluation bằng chứng (evidence / 증거) nào tồn tại. Use ranh giới (boundary / 경계) hỏi ai được phép dùng AI cho tác vụ (task / 작업) nào. hành động (action / 동작) ranh giới (boundary / 경계) hỏi đầu ra (output / 출력) có thể chỉ gợi ý, tự động tạo draft hay được phép trigger hành động (action / 동작) thật.
 
-## Automation level là một design variable
+Một tổ chức có thể chấp nhận mô hình (model / 모델) viết meeting summary nhưng không cho cùng mô hình (model / 모델) tự gửi đặc tả hợp đồng (contract / 계약) amendment. Cùng một technology nhưng hành động (action / 동작) ranh giới (boundary / 경계) khác làm rủi ro (risk / 위험) profile khác hoàn toàn.
 
-Automation không binary manual/automatic. System có thể suggest, draft, rank, pre-fill, require approval, auto-act dưới threshold hoặc auto-act hoàn toàn.
+Dự án (project / 프로젝트) yêu cầu (requirement / 요구사항) và điều khiển (control / 제어) nên gắn với ranh giới (boundary / 경계) này thay vì một chính sách (policy / 정책) chung chung “AI phải được dùng có trách nhiệm”.
 
-Mức automation càng cao, human reaction time càng ít và error propagation càng nhanh. Nhưng quá nhiều approval cũng làm control thành bottleneck hoặc rubber-stamp.
+## Automation mức (level / 수준) là một thiết kế (design / 설계) variable
 
-Project nên chọn automation level theo consequence, reversibility, confidence, volume và human capacity. Đây là tailoring giống governance ở các domain khác.
+Automation không nhị phân (binary / 이진) manual/automatic. hệ thống (system / 시스템) có thể suggest, draft, rank, pre-fill, require approval, auto-act dưới threshold hoặc auto-act hoàn toàn.
 
-## Risk tiering: control phải tỷ lệ với consequence
+Mức automation càng cao, human reaction thời gian (time / 시간) càng ít và lan truyền lỗi (error propagation / 오류 전파) càng nhanh. Nhưng quá nhiều approval cũng làm điều khiển (control / 제어) thành bottleneck hoặc rubber-stamp.
 
-Không phải mọi AI use case cần cùng mức governance. Internal brainstorming không dùng confidential data có consequence thấp hơn model từ chối insurance claim hoặc scoring customer credit.
+Dự án (project / 프로젝트) nên chọn automation mức (level / 수준) theo consequence, reversibility, confidence, volume và human sức chứa (capacity / 용량). Đây là tailoring giống quản trị (governance / 거버넌스) ở các lĩnh vực (domain / 도메인) khác.
 
-Một risk-tiering approach có thể xem xét decision consequence, data sensitivity, reversibility, automation level, affected population và ability to detect/correct error. Risk càng cao thì evidence, approval, monitoring, human oversight và auditability càng cần mạnh.
+## Rủi ro (risk / 위험) tiering: điều khiển (control / 제어) phải tỷ lệ với consequence
 
-Over-control mọi use case làm experimentation chậm và thúc đẩy shadow AI. Under-control high-impact use case lại tạo legal, ethical và reputational exposure. Tailoring ở đây là proportional governance.
+Không phải mọi AI use trường hợp (case / 사례) cần cùng mức quản trị (governance / 거버넌스). nội bộ (internal / 내부) brainstorming không dùng confidential dữ liệu (data / 데이터) có consequence thấp hơn mô hình (model / 모델) từ chối insurance claim hoặc scoring customer credit.
+
+Một risk-tiering approach có thể xem xét quyết định (decision / 결정) consequence, dữ liệu (data / 데이터) sensitivity, reversibility, automation mức (level / 수준), affected population và ability to detect/correct lỗi (error / 오류). rủi ro (risk / 위험) càng cao thì bằng chứng (evidence / 증거), approval, monitoring, human oversight và auditability càng cần mạnh.
+
+Over-control mọi use trường hợp (case / 사례) làm experimentation chậm và thúc đẩy shadow AI. Under-control high-impact use trường hợp (case / 사례) lại tạo legal, ethical và reputational exposure. Tailoring ở đây là proportional quản trị (governance / 거버넌스).
 
 ## Human-in-the-loop và accountability
 
-Một nguyên tắc governance hữu ích là decision consequence càng cao thì human review/authority càng rõ. AI có thể đề xuất vendor ranking nhưng procurement owner chịu accountability; AI có thể draft risk list nhưng team chịu trách nhiệm validate context.
+Một nguyên tắc quản trị (governance / 거버넌스) hữu ích là quyết định (decision / 결정) consequence càng cao thì human rà soát (review / 검토)/authority càng rõ. AI có thể đề xuất vendor ranking nhưng procurement đơn vị sở hữu (owner / 오너) chịu accountability; AI có thể draft rủi ro (risk / 위험) danh sách (list / 목록) nhưng nhóm (team / 팀) chịu trách nhiệm validate ngữ cảnh (context / 맥락).
 
-“AI đã đề xuất” không phải explanation đủ cho một decision có impact lớn.
+“AI đã đề xuất” không phải explanation đủ cho một quyết định (decision / 결정) có impact lớn.
 
-Human-in-the-loop cũng không nên chỉ tồn tại trên giấy. Nếu reviewer có 3 giây để duyệt 500 recommendation mỗi giờ, control đó có thể không thực sự effective. Cần thiết kế workload, threshold và escalation sao cho human review có khả năng thay outcome.
+Human-in-the-loop cũng không nên chỉ tồn tại trên giấy. Nếu reviewer có 3 giây để duyệt 500 recommendation mỗi giờ, điều khiển (control / 제어) đó có thể không thực sự effective. Cần thiết kế tải công việc (workload / 워크로드), threshold và escalation sao cho human rà soát (review / 검토) có khả năng thay kết quả (outcome / 결과).
 
-## Human oversight có failure mode riêng
+## Human oversight có dạng thất bại (failure mode / 실패 모드) riêng
 
-Human reviewer có thể over-trust automation, fatigue, skip review hoặc chỉ confirm recommendation mặc định. Đây là automation complacency.
+Human reviewer có thể over-trust automation, fatigue, skip rà soát (review / 검토) hoặc chỉ confirm recommendation mặc định. Đây là automation complacency.
 
-Một review control tốt cần meaningful choice, evidence context và enough time. Random sampled audit hoặc disagreement review có thể kiểm tra reviewer behavior thay vì giả định “có người trong loop = safe”.
+Một rà soát (review / 검토) điều khiển (control / 제어) tốt cần meaningful choice, bằng chứng (evidence / 증거) ngữ cảnh (context / 맥락) và enough thời gian (time / 시간). Random sampled kiểm tra (audit / 감사) hoặc disagreement rà soát (review / 검토) có thể kiểm tra reviewer hành vi (behavior / 동작) thay vì giả định “có người trong vòng lặp (loop / 루프) = safe”.
 
-Nếu human override rate gần zero trong system vốn có uncertainty material, đó có thể là dấu hiệu model hoàn hảo—hoặc control theater. Cần investigate.
+Nếu human override tỷ lệ (rate / 비율) gần zero trong hệ thống (system / 시스템) vốn có bất định (uncertainty / 불확실성) material, đó có thể là dấu hiệu mô hình (model / 모델) hoàn hảo—hoặc điều khiển (control / 제어) theater. Cần investigate.
 
-## Confidence, uncertainty và abstention
+## Confidence, bất định (uncertainty / 불확실성) và abstention
 
-AI system nên có cách biểu diễn uncertainty hoặc ít nhất boundary nơi output không đủ đáng tin để tự động action. Trong nhiều use case, khả năng “không biết” hoặc chuyển case sang human là control quan trọng hơn việc cố trả lời mọi request.
+AI hệ thống (system / 시스템) nên có cách biểu diễn bất định (uncertainty / 불확실성) hoặc ít nhất ranh giới (boundary / 경계) nơi đầu ra (output / 출력) không đủ đáng tin để tự động hành động (action / 동작). Trong nhiều use trường hợp (case / 사례), khả năng “không biết” hoặc chuyển trường hợp (case / 사례) sang human là điều khiển (control / 제어) quan trọng hơn việc cố trả lời mọi yêu cầu (request / 요청).
 
-Project requirement có thể bao gồm confidence threshold, fallback path và manual override. Đây là ví dụ quality requirement được hình thành từ risk analysis.
+Dự án (project / 프로젝트) yêu cầu (requirement / 요구사항) có thể bao gồm confidence threshold, fallback đường dẫn (path / 경로) và manual override. Đây là ví dụ chất lượng (quality / 품질) yêu cầu (requirement / 요구사항) được hình thành từ rủi ro (risk / 위험) phân tích (analysis / 분석).
 
-Abstention cũng cần capacity planning. Nếu 30% case bị route manual nhưng operations chỉ đủ xử lý 5%, fallback không thực sự viable.
+Abstention cũng cần sức chứa (capacity / 용량) planning. Nếu 30% trường hợp (case / 사례) bị tuyến (route / 경로) manual nhưng operations chỉ đủ xử lý 5%, fallback không thực sự viable.
 
-## Data quality là project dependency
+## Dữ liệu (data / 데이터) chất lượng (quality / 품질) là dự án (project / 프로젝트) phụ thuộc (dependency / 의존성)
 
-AI output phụ thuộc data. Nếu training/evaluation data không representative, label không consistent hoặc production data distribution thay đổi, model performance có thể khác hẳn pilot.
+AI đầu ra (output / 출력) phụ thuộc dữ liệu (data / 데이터). Nếu huấn luyện (training / 학습)/evaluation dữ liệu (data / 데이터) không representative, label không consistent hoặc môi trường vận hành (production / 운영 환경) dữ liệu (data / 데이터) phân phối (distribution / 분포) thay đổi, mô hình (model / 모델) hiệu năng (performance / 성능) có thể khác hẳn pilot.
 
-Project manager không cần trở thành data scientist nhưng phải nhìn data như dependency có owner, provenance, privacy rule, quality criterion và monitoring. “Model team chịu trách nhiệm” không đủ nếu business process cung cấp data sai.
+Dự án (project / 프로젝트) manager không cần trở thành dữ liệu (data / 데이터) scientist nhưng phải nhìn dữ liệu (data / 데이터) như phụ thuộc (dependency / 의존성) có đơn vị sở hữu (owner / 오너), provenance, privacy quy tắc (rule / 규칙), chất lượng (quality / 품질) criterion và monitoring. “mô hình (model / 모델) nhóm (team / 팀) chịu trách nhiệm” không đủ nếu nghiệp vụ (business / 비즈니스) tiến trình (process / 프로세스) cung cấp dữ liệu (data / 데이터) sai.
 
-## Data provenance, rights và lineage
+## Dữ liệu (data / 데이터) provenance, rights và lineage
 
-Data không chỉ cần “sạch”; cần biết đến từ đâu, quyền sử dụng là gì, biến đổi thế nào và version nào được dùng trong evaluation/training/retrieval.
+Dữ liệu (data / 데이터) không chỉ cần “sạch”; cần biết đến từ đâu, quyền sử dụng là gì, biến đổi thế nào và phiên bản (version / 버전) nào được dùng trong evaluation/huấn luyện (training / 학습)/retrieval.
 
-Nếu incident xảy ra mà team không biết model/retrieval đã dùng dataset nào, root-cause analysis yếu. Nếu license cho phép internal analysis nhưng không cho model training, technical feasibility không đồng nghĩa legal permission.
+Nếu sự cố (incident / 인시던트) xảy ra mà nhóm (team / 팀) không biết mô hình (model / 모델)/retrieval đã dùng dataset nào, root-cause phân tích (analysis / 분석) yếu. Nếu license cho phép nội bộ (internal / 내부) phân tích (analysis / 분석) nhưng không cho mô hình (model / 모델) huấn luyện (training / 학습), technical feasibility không đồng nghĩa legal permission.
 
-Data lineage vì vậy là governance/evidence requirement, không chỉ data-engineering concern.
+Dữ liệu (data / 데이터) lineage vì vậy là quản trị (governance / 거버넌스)/bằng chứng (evidence / 증거) yêu cầu (requirement / 요구사항), không chỉ data-engineering concern.
 
-## Evaluation phải gắn với harm và use case
+## Evaluation phải gắn với harm và use trường hợp (case / 사례)
 
-Một aggregate accuracy score hiếm khi đủ. Error type khác nhau có cost khác nhau. Trong eKYC, false accept có thể là security/compliance risk lớn hơn false reject; trong support chatbot, wrong refund policy có impact khác typo nhỏ.
+Một aggregate accuracy score hiếm khi đủ. lỗi (error / 오류) kiểu (type / 타입) khác nhau có chi phí (cost / 비용) khác nhau. Trong eKYC, false accept có thể là bảo mật (security / 보안)/compliance rủi ro (risk / 위험) lớn hơn false reject; trong hỗ trợ (support / 지원) chatbot, wrong refund chính sách (policy / 정책) có impact khác typo nhỏ.
 
-Evaluation nên segment theo user, scenario và severity. Threshold phải nối với business risk appetite chứ không chỉ benchmark kỹ thuật.
+Evaluation nên segment theo người dùng (user / 사용자), scenario và severity. Threshold phải nối với nghiệp vụ (business / 비즈니스) rủi ro (risk / 위험) appetite chứ không chỉ benchmark kỹ thuật.
 
-## Evaluation matrix: capability × harm × operating condition
+## Evaluation ma trận (matrix / 행렬): năng lực (capability / 역량) × harm × operating điều kiện (condition / 조건)
 
-Evaluation sâu hơn khi phân biệt model có khả năng làm gì, error gây harm nào và trong condition nào performance đổi. Peak load, long context, rare language, adversarial input hoặc stale retrieval có thể khác benchmark normal.
+Evaluation sâu hơn khi phân biệt mô hình (model / 모델) có khả năng làm gì, lỗi (error / 오류) gây harm nào và trong điều kiện (condition / 조건) nào hiệu năng (performance / 성능) đổi. Peak tải (load / 로드), long ngữ cảnh (context / 맥락), rare ngôn ngữ (language / 언어), adversarial đầu vào (input / 입력) hoặc stale retrieval có thể khác benchmark normal.
 
-Không cần test infinite scenario; cần prioritize theo exposure, severity và plausibility.
+Không cần kiểm thử (test / 테스트) infinite scenario; cần prioritize theo exposure, severity và plausibility.
 
-Edge case hiếm nhưng catastrophic có thể đáng test hơn common case low-impact.
+Trường hợp biên (edge case / 경계 사례) hiếm nhưng catastrophic có thể đáng kiểm thử (test / 테스트) hơn dùng chung (common / 공통) trường hợp (case / 사례) low-impact.
 
 ## Benchmark leakage và evaluation theater
 
-Một model có thể đạt score cao nếu evaluation set quá giống training data, test case bị biết trước hoặc metric không phản ánh production behavior. Khi team tối ưu liên tục trên một benchmark cố định, benchmark có thể dần trở thành target thay vì independent evidence.
+Một mô hình (model / 모델) có thể đạt score cao nếu evaluation set quá giống dữ liệu huấn luyện (training data / 학습 데이터), trường hợp kiểm thử (test case / 테스트 케이스) bị biết trước hoặc chỉ số (metric / 지표) không phản ánh môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작). Khi nhóm (team / 팀) tối ưu liên tục trên một benchmark cố định, benchmark có thể dần trở thành mục tiêu (target / 대상) thay vì independent bằng chứng (evidence / 증거).
 
-Evaluation tốt cần holdout hoặc fresh test set khi phù hợp, representative scenario, adversarial/edge case và human review cho harm khó nén thành một số. Với generative AI, citation correctness, refusal quality hoặc factual severity có thể quan trọng hơn average helpfulness score.
+Evaluation tốt cần holdout hoặc fresh kiểm thử (test / 테스트) set khi phù hợp, representative scenario, adversarial/trường hợp biên (edge case / 경계 사례) và human rà soát (review / 검토) cho harm khó nén thành một số. Với generative AI, citation tính đúng đắn (correctness / 정확성), refusal chất lượng (quality / 품질) hoặc factual severity có thể quan trọng hơn average helpfulness score.
 
-“95% accuracy” không có meaning nếu không biết denominator, distribution và 5% sai còn lại gây hậu quả gì.
+“95% accuracy” không có meaning nếu không biết denominator, phân phối (distribution / 분포) và 5% sai còn lại gây hậu quả gì.
 
-## Red-team, misuse và abuse case
+## Red-team, misuse và abuse trường hợp (case / 사례)
 
-AI system có thể fail không chỉ vì accidental error mà vì user cố tình exploit. Prompt injection, data exfiltration, policy bypass hoặc adversarial usage là examples ở technical level; ở project level cần mental model rộng hơn: ai có incentive misuse system và consequence là gì?
+AI hệ thống (system / 시스템) có thể thất bại (fail / 실패) không chỉ vì accidental lỗi (error / 오류) mà vì người dùng (user / 사용자) cố tình exploit. Prompt injection, dữ liệu (data / 데이터) exfiltration, chính sách (policy / 정책) bypass hoặc adversarial usage là examples ở technical mức (level / 수준); ở dự án (project / 프로젝트) mức (level / 수준) cần mô hình tư duy (mental model / 사고 모델) rộng hơn: ai có incentive misuse hệ thống (system / 시스템) và consequence là gì?
 
-Threat modeling nên gồm intended user, careless user và malicious user khi exposure đáng kể.
+Threat modeling nên gồm intended người dùng (user / 사용자), careless người dùng (user / 사용자) và malicious người dùng (user / 사용자) khi exposure đáng kể.
 
-Control có thể là permission boundary, input/output filtering, tool restriction, audit log, rate limit hoặc human escalation. PMP không cần implement kỹ thuật, nhưng phải ensure ownership/evidence tồn tại.
+Điều khiển (control / 제어) có thể là permission ranh giới (boundary / 경계), đầu vào (input / 입력)/đầu ra (output / 출력) filtering, công cụ (tool / 도구) restriction, nhật ký kiểm tra (audit log / 감사 로그), tỷ lệ (rate / 비율) limit hoặc human escalation. PMP không cần implement kỹ thuật, nhưng phải ensure quyền sở hữu (ownership / 소유권)/bằng chứng (evidence / 증거) tồn tại.
 
-## Model drift và post-launch governance
+## Mô hình (model / 모델) drift và post-launch quản trị (governance / 거버넌스)
 
-AI behavior có thể thay đổi khi data, user behavior, model version hoặc external environment đổi. Vì vậy go-live không kết thúc quality governance.
+AI hành vi (behavior / 동작) có thể thay đổi khi dữ liệu (data / 데이터), người dùng (user / 사용자) hành vi (behavior / 동작), mô hình (model / 모델) phiên bản (version / 버전) hoặc bên ngoài (external / 외부) môi trường (environment / 환경) đổi. Vì vậy go-live không kết thúc chất lượng (quality / 품질) quản trị (governance / 거버넌스).
 
-Cần có monitoring, incident classification, rollback/fallback, model/version traceability và owner cho re-evaluation. Nếu vendor silently update model, project/operation phải biết change control nào áp dụng.
+Cần có monitoring, sự cố (incident / 인시던트) classification, quay lui (rollback / 롤백)/fallback, mô hình (model / 모델)/phiên bản (version / 버전) traceability và đơn vị sở hữu (owner / 오너) cho re-evaluation. Nếu vendor silently cập nhật (update / 업데이트) mô hình (model / 모델), dự án (project / 프로젝트)/thao tác (operation / 연산) phải biết thay đổi (change / 변경) điều khiển (control / 제어) nào áp dụng.
 
 ## Drift không chỉ một loại
 
-Data drift là input distribution đổi. Concept drift là relationship giữa input và desired outcome đổi. Configuration drift là prompt/retrieval/threshold/tool thay. Vendor/model drift là provider update behavior.
+Dữ liệu (data / 데이터) drift là đầu vào (input / 입력) phân phối (distribution / 분포) đổi. Concept drift là relationship giữa đầu vào (input / 입력) và desired kết quả (outcome / 결과) đổi. cấu hình (configuration / 구성) drift là prompt/retrieval/threshold/công cụ (tool / 도구) thay. Vendor/mô hình (model / 모델) drift là provider cập nhật (update / 업데이트) hành vi (behavior / 동작).
 
-Các loại drift cần evidence khác nhau. Chỉ theo dõi latency/uptime không phát hiện semantic degradation.
+Các loại drift cần bằng chứng (evidence / 증거) khác nhau. Chỉ theo dõi độ trễ (latency / 지연 시간)/uptime không phát hiện ngữ nghĩa (semantic / 의미적) degradation.
 
-Project nên định nghĩa signal nào trigger re-evaluation, không chờ complaint tích lũy lớn.
+Dự án (project / 프로젝트) nên định nghĩa tín hiệu (signal / 신호) nào trigger re-evaluation, không chờ complaint tích lũy lớn.
 
-## Model/version change cũng là configuration management
+## Mô hình (model / 모델)/phiên bản (version / 버전) thay đổi (change / 변경) cũng là cấu hình (configuration / 구성) management
 
-AI system thường có nhiều moving parts: prompt, retrieval source, model version, threshold, safety rule, tool permission và data pipeline. Nếu chỉ version code nhưng không version những component này, root-cause analysis sau incident sẽ khó.
+AI hệ thống (system / 시스템) thường có nhiều moving parts: prompt, retrieval nguồn (source / 소스), mô hình (model / 모델) phiên bản (version / 버전), threshold, an toàn (safety / 안전) quy tắc (rule / 규칙), công cụ (tool / 도구) permission và dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인). Nếu chỉ phiên bản (version / 버전) mã (code / 코드) nhưng không phiên bản (version / 버전) những thành phần (component / 컴포넌트) này, root-cause phân tích (analysis / 분석) sau sự cố (incident / 인시던트) sẽ khó.
 
-Một production decision nên có enough traceability để biết request được xử lý bởi configuration nào. Điều này nối AI governance trực tiếp với [Artifacts, information flow và traceability](./14_artifacts_information_and_traceability.md).
+Một môi trường vận hành (production / 운영 환경) quyết định (decision / 결정) nên có enough traceability để biết yêu cầu (request / 요청) được xử lý bởi cấu hình (configuration / 구성) nào. Điều này nối AI quản trị (governance / 거버넌스) trực tiếp với [Artifacts, information flow và traceability](./14_artifacts_information_and_traceability.md).
 
-Change có thể cần regression evaluation trước rollout, canary/pilot, rollback criterion và approval theo risk tier. “Vendor model tốt hơn” không tự động có nghĩa safe để auto-upgrade.
+Thay đổi (change / 변경) có thể cần regression evaluation trước rollout, canary/pilot, quay lui (rollback / 롤백) criterion và approval theo rủi ro (risk / 위험) tier. “Vendor mô hình (model / 모델) tốt hơn” không tự động có nghĩa safe để auto-upgrade.
 
-## AI observability phải nhìn semantic outcome
+## AI khả năng quan sát (observability / 관측 가능성) phải nhìn ngữ nghĩa (semantic / 의미적) kết quả (outcome / 결과)
 
-Traditional monitoring xem uptime, latency, error code. AI cần thêm semantic signal: harmful response rate, override, abstention, groundedness, complaint, segment performance hoặc policy violation tùy use case.
+Traditional monitoring xem uptime, độ trễ (latency / 지연 시간), lỗi (error / 오류) mã (code / 코드). AI cần thêm ngữ nghĩa (semantic / 의미적) tín hiệu (signal / 신호): harmful phản hồi (response / 응답) tỷ lệ (rate / 비율), override, abstention, groundedness, complaint, segment hiệu năng (performance / 성능) hoặc chính sách (policy / 정책) violation tùy use trường hợp (case / 사례).
 
-Observability không cần monitor mọi câu trả lời thủ công. Có thể sample, automated check, human audit và incident feedback.
+Khả năng quan sát (observability / 관측 가능성) không cần monitor mọi câu trả lời thủ công. Có thể mẫu (sample / 표본), automated check, human kiểm tra (audit / 감사) và sự cố (incident / 인시던트) phản hồi (feedback / 피드백).
 
-Nếu system uptime 100% nhưng recommendation quality drift, technical dashboard xanh vẫn không phản ánh service health.
+Nếu hệ thống (system / 시스템) uptime 100% nhưng recommendation chất lượng (quality / 품질) drift, technical dashboard xanh vẫn không phản ánh dịch vụ (service / 서비스) health.
 
-## AI incident response
+## AI sự cố (incident / 인시던트) phản hồi (response / 응답)
 
-AI incident có thể khác software crash thông thường. System vẫn uptime nhưng tạo harmful output, data leakage, discriminatory pattern hoặc wrong recommendation. Incident classification vì vậy cần nhìn impact chứ không chỉ availability.
+AI sự cố (incident / 인시던트) có thể khác software crash thông thường. hệ thống (system / 시스템) vẫn uptime nhưng tạo harmful đầu ra (output / 출력), dữ liệu (data / 데이터) leakage, discriminatory mẫu (pattern / 패턴) hoặc wrong recommendation. sự cố (incident / 인시던트) classification vì vậy cần nhìn impact chứ không chỉ availability.
 
-Response có thể gồm contain use case, disable automation, switch fallback, preserve evidence, identify affected decisions/users, notify stakeholder/compliance và re-evaluate model/configuration. Với high-impact system, incident drill trước production có thể đáng giá như disaster-recovery drill.
+Phản hồi (response / 응답) có thể gồm contain use trường hợp (case / 사례), disable automation, switch fallback, preserve bằng chứng (evidence / 증거), identify affected decisions/users, notify stakeholder/compliance và re-evaluate mô hình (model / 모델)/cấu hình (configuration / 구성). Với high-impact hệ thống (system / 시스템), sự cố (incident / 인시던트) drill trước môi trường vận hành (production / 운영 환경) có thể đáng giá như disaster-recovery drill.
 
-## AI incident có thể cần decision remediation
+## AI sự cố (incident / 인시던트) có thể cần quyết định (decision / 결정) remediation
 
-Nếu model hỗ trợ quyết định đã ảnh hưởng customer, containment system chưa đủ; organization có thể cần identify affected decisions và review/remediate outcome.
+Nếu mô hình (model / 모델) hỗ trợ quyết định đã ảnh hưởng customer, containment hệ thống (system / 시스템) chưa đủ; organization có thể cần identify affected decisions và rà soát (review / 검토)/remediate kết quả (outcome / 결과).
 
-Traceability từ decision tới model/configuration/input trở thành critical. Nếu không biết ai bị ảnh hưởng, remediation scope không thể xác định đáng tin.
+Traceability từ quyết định (decision / 결정) tới mô hình (model / 모델)/cấu hình (configuration / 구성)/đầu vào (input / 입력) trở thành trọng yếu (critical / 중요). Nếu không biết ai bị ảnh hưởng, remediation phạm vi (scope / 범위) không thể xác định đáng tin.
 
-## AI supply-chain và vendor risk
+## AI supply-chain và vendor rủi ro (risk / 위험)
 
-Dùng third-party model tạo dependency về availability, pricing, data handling, intellectual property, security và roadmap. Vendor có thể đổi API, policy hoặc model quality.
+Dùng third-party mô hình (model / 모델) tạo phụ thuộc (dependency / 의존성) về availability, pricing, dữ liệu (data / 데이터) handling, intellectual thuộc tính (property / 속성), bảo mật (security / 보안) và roadmap. Vendor có thể đổi API, chính sách (policy / 정책) hoặc mô hình (model / 모델) chất lượng (quality / 품질).
 
-Contract và architecture cần xem xét exit strategy, data portability, version pinning nếu có, service level, breach notification và ownership của generated content. Đây là nơi procurement, risk và technical architecture nối nhau.
+Đặc tả hợp đồng (contract / 계약) và kiến trúc (architecture / 아키텍처) cần xem xét exit chiến lược (strategy / 전략), dữ liệu (data / 데이터) portability, phiên bản (version / 버전) pinning nếu có, dịch vụ (service / 서비스) mức (level / 수준), breach notification và quyền sở hữu (ownership / 소유권) của generated content. Đây là nơi procurement, rủi ro (risk / 위험) và technical kiến trúc (architecture / 아키텍처) nối nhau.
 
-## AI concentration risk
+## AI concentration rủi ro (risk / 위험)
 
-Nhiều use case nội bộ có thể phụ thuộc cùng model/provider. Mỗi project nhìn risk nhỏ nhưng organization có common-cause exposure nếu provider outage, price change hoặc policy restriction.
+Nhiều use trường hợp (case / 사례) nội bộ có thể phụ thuộc cùng mô hình (model / 모델)/provider. Mỗi dự án (project / 프로젝트) nhìn rủi ro (risk / 위험) nhỏ nhưng organization có common-cause exposure nếu provider outage, price thay đổi (change / 변경) hoặc chính sách (policy / 정책) restriction.
 
-Portfolio/architecture governance nên map concentration và fallback. “Có nhiều AI project” không nghĩa diversified nếu tất cả cùng dependency.
+Portfolio/kiến trúc (architecture / 아키텍처) quản trị (governance / 거버넌스) nên map concentration và fallback. “Có nhiều AI dự án (project / 프로젝트)” không nghĩa diversified nếu tất cả cùng phụ thuộc (dependency / 의존성).
 
-## Automation bias và over-trust
+## Automation độ lệch (bias / 편향) và over-trust
 
-Người dùng có xu hướng tin recommendation của system tự động dù output sai, đặc biệt khi interface tạo cảm giác chắc chắn. Đây là automation bias.
+Người dùng có xu hướng tin recommendation của hệ thống (system / 시스템) tự động dù đầu ra (output / 출력) sai, đặc biệt khi giao diện (interface / 인터페이스) tạo cảm giác chắc chắn. Đây là automation độ lệch (bias / 편향).
 
-Project không nên chỉ train user “hãy cẩn thận”. Control tốt hơn có thể gồm confidence display, citation/evidence, constrained action, sampled review và clear escalation path. Behavior design là một phần risk mitigation.
+Dự án (project / 프로젝트) không nên chỉ train người dùng (user / 사용자) “hãy cẩn thận”. điều khiển (control / 제어) tốt hơn có thể gồm confidence display, citation/bằng chứng (evidence / 증거), constrained hành động (action / 동작), sampled rà soát (review / 검토) và clear escalation đường dẫn (path / 경로). hành vi (behavior / 동작) thiết kế (design / 설계) là một phần rủi ro (risk / 위험) mitigation.
 
-## Hidden human labor và shifted cost
+## Hidden human labor và shifted chi phí (cost / 비용)
 
-AI automation thường vẫn cần labeling, prompt maintenance, exception review, quality audit và incident handling. Nếu business case chỉ tính model/API cost mà bỏ human fallback, expected saving bị overstate.
+AI automation thường vẫn cần labeling, prompt maintenance, exception rà soát (review / 검토), chất lượng (quality / 품질) kiểm tra (audit / 감사) và sự cố (incident / 인시던트) handling. Nếu nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) chỉ tính mô hình (model / 모델)/API chi phí (cost / 비용) mà bỏ human fallback, expected saving bị overstate.
 
-Automation có thể chuyển work từ frontline sang specialist. Total labor không giảm nhiều nhưng skill mix/capacity constraint thay đổi.
+Automation có thể chuyển công việc (work / 작업) từ frontline sang specialist. Total labor không giảm nhiều nhưng skill mix/sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건) thay đổi.
 
-Benefit model cần đo end-to-end process, không chỉ step được automate.
+Benefit mô hình (model / 모델) cần đo end-to-end tiến trình (process / 프로세스), không chỉ step được automate.
 
-## AI trong chính công việc project management
+## AI trong chính công việc dự án (project / 프로젝트) management
 
-Generative AI có thể hỗ trợ draft charter, summarize workshop, identify possible risk, transform meeting note hoặc search knowledge. Nhưng confidential data, hallucinated fact và loss of context là risk.
+Generative AI có thể hỗ trợ draft charter, summarize workshop, identify possible rủi ro (risk / 위험), transform meeting ghi chú (note / 노트) hoặc tìm kiếm (search / 검색) kiến thức (knowledge / 지식). Nhưng confidential dữ liệu (data / 데이터), hallucinated fact và mất mát (loss / 손실) of ngữ cảnh (context / 맥락) là rủi ro (risk / 위험).
 
-Một working agreement nên xác định loại dữ liệu nào được đưa vào tool, output nào cần human verification, ai chịu trách nhiệm final artifact và cách record source. Với decision quan trọng, AI nên tăng information processing chứ không thay decision accountability.
+Một working agreement nên xác định loại dữ liệu nào được đưa vào công cụ (tool / 도구), đầu ra (output / 출력) nào cần human xác minh (verification / 확인), ai chịu trách nhiệm final sản phẩm tạo ra (artifact / 산출물) và cách bản ghi (record / 레코드) nguồn (source / 소스). Với quyết định (decision / 결정) quan trọng, AI nên tăng thông tin (information / 정보) processing chứ không thay quyết định (decision / 결정) accountability.
 
 ## Shadow AI
 
-Khi official process quá chậm hoặc tool không đáp ứng need, employee có thể dùng public AI ngoài governance. Shadow AI tạo data leakage, inconsistent output và untraceable decision.
+Khi official tiến trình (process / 프로세스) quá chậm hoặc công cụ (tool / 도구) không đáp ứng need, employee có thể dùng công khai (public / 공개) AI ngoài quản trị (governance / 거버넌스). Shadow AI tạo dữ liệu (data / 데이터) leakage, inconsistent đầu ra (output / 출력) và untraceable quyết định (decision / 결정).
 
-Response không chỉ là cấm. Organization cần hiểu demand, cung cấp safe alternative, proportional guardrail và education. Over-control low-risk use case có thể tăng incentive đi vòng control.
+Phản hồi (response / 응답) không chỉ là cấm. Organization cần hiểu demand, cung cấp safe alternative, proportional guardrail và education. Over-control low-risk use trường hợp (case / 사례) có thể tăng incentive đi vòng điều khiển (control / 제어).
 
-Shadow usage là signal governance-design mismatch giống shadow process ở project governance.
+Shadow usage là tín hiệu (signal / 신호) governance-design mismatch giống shadow tiến trình (process / 프로세스) ở dự án (project / 프로젝트) quản trị (governance / 거버넌스).
 
-## Sustainability là lifecycle constraint và value dimension
+## Sustainability là vòng đời (lifecycle / 생명주기) ràng buộc (constraint / 제약조건) và giá trị (value / 값) dimension
 
-Bền vững (sustainability / 지속가능성) có thể gồm environmental, social và economic effects. Trong project, nó đi vào requirement, procurement, design trade-off, compliance, risk và benefit.
+Bền vững (sustainability / 지속가능성) có thể gồm environmental, xã hội (social / 사회적) và economic effects. Trong dự án (project / 프로젝트), nó đi vào yêu cầu (requirement / 요구사항), procurement, thiết kế (design / 설계) sự đánh đổi (trade-off / 트레이드오프), compliance, rủi ro (risk / 위험) và benefit.
 
-Ví dụ data center project có energy/water footprint; construction có material/waste/safety; software có compute cost và hardware lifecycle. Sustainability không nên bị thêm như checklist cuối dự án nếu design decision sớm đã khóa phần lớn impact.
+Ví dụ dữ liệu (data / 데이터) center dự án (project / 프로젝트) có năng lượng (energy / 에너지)/water footprint; construction có material/waste/an toàn (safety / 안전); software có compute chi phí (cost / 비용) và hardware vòng đời (lifecycle / 생명주기). Sustainability không nên bị thêm như checklist cuối dự án nếu thiết kế (design / 설계) quyết định (decision / 결정) sớm đã khóa phần lớn impact.
 
 ## Planet, People và Prosperity như ba lens thực hành
 
-P5 sustainability guidance hiện hành của PMI/GPM mở rộng environmental, social và economic impact. Một cách reasoning thực dụng là nhìn ba lens: Planet hỏi resource/emission/waste/ecosystem; People hỏi labor, safety, privacy, equity và community impact; Prosperity hỏi economic resilience, lifecycle cost và long-term value.
+P5 sustainability guidance hiện hành của PMI/GPM mở rộng environmental, xã hội (social / 사회적) và economic impact. Một cách lập luận (reasoning / 추론) thực dụng là nhìn ba lens: Planet hỏi tài nguyên (resource / 자원)/emission/waste/ecosystem; People hỏi labor, an toàn (safety / 안전), privacy, equity và community impact; Prosperity hỏi economic resilience, vòng đời (lifecycle / 생명주기) chi phí (cost / 비용) và long-term giá trị (value / 값).
 
-Ba lens không độc lập. Chọn cloud region tiết kiệm cost có thể tăng carbon intensity; automation tăng productivity có thể tạo reskilling burden; local sourcing có thể tăng unit price nhưng giảm supply-chain exposure và tạo community value.
+Ba lens không độc lập. Chọn cloud region tiết kiệm chi phí (cost / 비용) có thể tăng carbon intensity; automation tăng productivity có thể tạo reskilling burden; cục bộ (local / 로컬) sourcing có thể tăng đơn vị (unit / 단위) price nhưng giảm supply-chain exposure và tạo community giá trị (value / 값).
 
-Mục tiêu không phải tối đa hóa mọi lens cùng lúc mà làm trade-off visible và có governance.
+Mục tiêu không phải tối đa hóa mọi lens cùng lúc mà làm sự đánh đổi (trade-off / 트레이드오프) visible và có quản trị (governance / 거버넌스).
 
-## Sustainability không chỉ là environmental metric
+## Sustainability không chỉ là environmental chỉ số (metric / 지표)
 
-Environmental impact dễ thấy, nhưng social và economic sustainability cũng quan trọng. Automation có thể tăng productivity nhưng tạo reskilling need. Procurement giá thấp có thể dựa trên supplier labor practice rủi ro. Infrastructure rẻ lúc build có thể maintenance cost cao suốt lifecycle.
+Environmental impact dễ thấy, nhưng xã hội (social / 사회적) và economic sustainability cũng quan trọng. Automation có thể tăng productivity nhưng tạo reskilling need. Procurement giá thấp có thể dựa trên supplier labor practice rủi ro. hạ tầng (infrastructure / 인프라) rẻ lúc bản dựng (build / 빌드) có thể maintenance chi phí (cost / 비용) cao suốt vòng đời (lifecycle / 생명주기).
 
-Project manager nên mở boundary từ delivery cost sang lifecycle impact khi business case và governance yêu cầu.
+Dự án (project / 프로젝트) manager nên mở ranh giới (boundary / 경계) từ delivery chi phí (cost / 비용) sang vòng đời (lifecycle / 생명주기) impact khi nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) và quản trị (governance / 거버넌스) yêu cầu.
 
 ## Materiality: không đo mọi thứ như nhau
 
-Sustainability program dễ biến thành checklist rất rộng. Materiality hỏi impact nào đủ lớn hoặc relevant với stakeholder/policy để ảnh hưởng decision.
+Sustainability program dễ biến thành checklist rất rộng. Materiality hỏi impact nào đủ lớn hoặc relevant với stakeholder/chính sách (policy / 정책) để ảnh hưởng quyết định (decision / 결정).
 
-Một software project nhỏ có thể không cần lifecycle analysis chi tiết cho office paper nhưng cần chú ý privacy, cloud compute và hardware refresh nếu chúng material. Construction project có material/emission/safety profile khác.
+Một software dự án (project / 프로젝트) nhỏ có thể không cần vòng đời (lifecycle / 생명주기) phân tích (analysis / 분석) chi tiết cho office paper nhưng cần chú ý privacy, cloud compute và hardware refresh nếu chúng material. Construction dự án (project / 프로젝트) có material/emission/an toàn (safety / 안전) profile khác.
 
-Materiality giúp tập trung evidence vào impact có consequence, tránh reporting overhead không tạo decision.
+Materiality giúp tập trung bằng chứng (evidence / 증거) vào impact có consequence, tránh reporting overhead không tạo quyết định (decision / 결정).
 
-## Lifecycle thinking
+## Vòng đời (lifecycle / 생명주기) thinking
 
-Nhiều impact bị quyết định trước khi build. Material choice, architecture, cloud region, hardware, vendor hoặc process design có thể khóa energy, maintenance và disposal profile nhiều năm.
+Nhiều impact bị quyết định trước khi bản dựng (build / 빌드). Material choice, kiến trúc (architecture / 아키텍처), cloud region, hardware, vendor hoặc tiến trình (process / 프로세스) thiết kế (design / 설계) có thể khóa năng lượng (energy / 에너지), maintenance và disposal profile nhiều năm.
 
-Vì vậy sustainability assessment nên xuất hiện trong option analysis và design trade-off, không chỉ trong closure report.
+Vì vậy sustainability assessment nên xuất hiện trong option phân tích (analysis / 분석) và thiết kế (design / 설계) sự đánh đổi (trade-off / 트레이드오프), không chỉ trong closure report.
 
-## Boundary của lifecycle assessment quyết định conclusion
+## Ranh giới (boundary / 경계) của vòng đời (lifecycle / 생명주기) assessment quyết định conclusion
 
-Nếu chỉ đo project delivery phase, option A có thể nhìn tốt hơn. Nếu thêm operation/maintenance/end-of-life, option B có thể thắng.
+Nếu chỉ đo dự án (project / 프로젝트) delivery phase, option A có thể nhìn tốt hơn. Nếu thêm thao tác (operation / 연산)/maintenance/end-of-life, option B có thể thắng.
 
-Ví dụ cloud migration giảm on-premise hardware nhưng tăng continuous compute. Automation giảm headcount task nhưng tăng review/retraining. Measurement boundary phải được explicit để stakeholder hiểu claim đang nói về phần nào của lifecycle.
+Ví dụ cloud di chuyển (migration / 마이그레이션) giảm on-premise hardware nhưng tăng continuous compute. Automation giảm headcount tác vụ (task / 작업) nhưng tăng rà soát (review / 검토)/retraining. đo lường (measurement / 측정) ranh giới (boundary / 경계) phải được tường minh (explicit / 명시적) để stakeholder hiểu claim đang nói về phần nào của vòng đời (lifecycle / 생명주기).
 
-Không có boundary duy nhất đúng cho mọi decision; boundary phải đủ rộng để không hide material externality.
+Không có ranh giới (boundary / 경계) duy nhất đúng cho mọi quyết định (decision / 결정); ranh giới (boundary / 경계) phải đủ rộng để không hide material externality.
 
-## Baseline, target và measurable impact
+## Baseline, mục tiêu (target / 대상) và measurable impact
 
-“Sustainable hơn” là statement yếu nếu không có baseline. Cần xác định current state, target, measurement method và owner.
+“Sustainable hơn” là statement yếu nếu không có baseline. Cần xác định trạng thái hiện tại (current state / 현재 상태), mục tiêu (target / 대상), đo lường (measurement / 측정) phương thức (method / 메서드) và đơn vị sở hữu (owner / 오너).
 
-Ví dụ “giảm compute cost 20% per transaction so với baseline release” rõ hơn “tối ưu green IT”. Nhưng metric cũng cần guardrail để tránh chuyển cost sang nơi khác, như giảm compute nhưng tăng latency đến mức user phải retry nhiều hơn.
+Ví dụ “giảm compute chi phí (cost / 비용) 20% per giao dịch (transaction / 트랜잭션) so với baseline bản phát hành (release / 릴리스)” rõ hơn “tối ưu green IT”. Nhưng chỉ số (metric / 지표) cũng cần guardrail để tránh chuyển chi phí (cost / 비용) sang nơi khác, như giảm compute nhưng tăng độ trễ (latency / 지연 시간) đến mức người dùng (user / 사용자) phải thử lại (retry / 재시도) nhiều hơn.
 
 ## Impact threshold và escalation
 
-Không phải sustainability impact nào cũng cần steering committee. Một impact nhỏ có thể xử lý trong team; impact vượt policy, regulatory threshold hoặc stakeholder tolerance cần escalation.
+Không phải sustainability impact nào cũng cần steering committee. Một impact nhỏ có thể xử lý trong nhóm (team / 팀); impact vượt chính sách (policy / 정책), regulatory threshold hoặc stakeholder tolerance cần escalation.
 
-Tư duy threshold làm sustainability trở thành governance mechanism thay vì một score trang trí. Nếu supplier labor issue vượt tolerance, procurement decision có thể phải dừng dù schedule/cost đang favorable.
+Tư duy threshold làm sustainability trở thành quản trị (governance / 거버넌스) cơ chế (mechanism / 메커니즘) thay vì một score trang trí. Nếu supplier labor issue vượt tolerance, procurement quyết định (decision / 결정) có thể phải dừng dù schedule/chi phí (cost / 비용) đang favorable.
 
-Điều này giống risk/compliance: cần category, owner, threshold, response và evidence.
+Điều này giống rủi ro (risk / 위험)/compliance: cần category, đơn vị sở hữu (owner / 오너), threshold, phản hồi (response / 응답) và bằng chứng (evidence / 증거).
 
-## Systems thinking và externality
+## Các hệ thống (systems / 시스템들) thinking và externality
 
-Project có thể tối ưu local objective nhưng tạo cost nơi khác. Một automation giảm headcount cost nhưng tăng support burden hoặc unfair outcome; một faster shipping option tăng emission; một security control mạnh tăng user friction.
+Dự án (project / 프로젝트) có thể tối ưu cục bộ (local / 로컬) mục tiêu (objective / 목표) nhưng tạo chi phí (cost / 비용) nơi khác. Một automation giảm headcount chi phí (cost / 비용) nhưng tăng hỗ trợ (support / 지원) burden hoặc unfair kết quả (outcome / 결과); một faster shipping option tăng emission; một bảo mật (security / 보안) điều khiển (control / 제어) mạnh tăng người dùng (user / 사용자) friction.
 
-Systems thinking hỏi boundary của measurement có đủ rộng chưa. Externality không có nghĩa mọi impact phải tối ưu tuyệt đối, mà phải được nhìn thấy và trade-off có governance.
+Các hệ thống (systems / 시스템들) thinking hỏi ranh giới (boundary / 경계) của đo lường (measurement / 측정) có đủ rộng chưa. Externality không có nghĩa mọi impact phải tối ưu tuyệt đối, mà phải được nhìn thấy và sự đánh đổi (trade-off / 트레이드오프) có quản trị (governance / 거버넌스).
 
-Một useful question là “ai nhận benefit và ai chịu cost?”. Nếu hai nhóm khác nhau, stakeholder analysis cần phản ánh distributional effect chứ không chỉ total benefit.
+Một useful question là “ai nhận benefit và ai chịu chi phí (cost / 비용)?”. Nếu hai nhóm khác nhau, stakeholder phân tích (analysis / 분석) cần phản ánh distributional tác động (effect / 효과) chứ không chỉ total benefit.
 
 ## Burden shifting
 
-Một improvement có thể chuyển impact giữa phase, location hoặc stakeholder. Cloud làm local energy footprint giảm nhưng provider footprint tăng. Automation giảm user effort nhưng tăng reviewer burden. Vendor giá rẻ giảm capex nhưng tăng maintenance/support cost.
+Một improvement có thể chuyển impact giữa phase, location hoặc stakeholder. Cloud làm cục bộ (local / 로컬) năng lượng (energy / 에너지) footprint giảm nhưng provider footprint tăng. Automation giảm người dùng (user / 사용자) effort nhưng tăng reviewer burden. Vendor giá rẻ giảm capex nhưng tăng maintenance/hỗ trợ (support / 지원) chi phí (cost / 비용).
 
-Burden shifting là failure mode của narrow boundary. Project manager cần biết metric đang optimize có đẩy cost/harm ra ngoài scope đo hay không.
+Burden shifting là dạng thất bại (failure mode / 실패 모드) của narrow ranh giới (boundary / 경계). dự án (project / 프로젝트) manager cần biết chỉ số (metric / 지표) đang optimize có đẩy chi phí (cost / 비용)/harm ra ngoài phạm vi (scope / 범위) đo hay không.
 
-## Rebound effect và unintended consequence
+## Rebound tác động (effect / 효과) và unintended consequence
 
-Efficiency improvement đôi khi làm usage tăng đến mức tổng resource consumption không giảm. Đây là rebound effect. Ví dụ AI inference rẻ hơn có thể làm số request tăng mạnh.
+Efficiency improvement đôi khi làm usage tăng đến mức tổng tài nguyên (resource / 자원) consumption không giảm. Đây là rebound tác động (effect / 효과). Ví dụ AI suy luận (inference / 추론) rẻ hơn có thể làm số yêu cầu (request / 요청) tăng mạnh.
 
-Project evaluation nên đo system-level outcome thay vì chỉ unit efficiency khi scale có thể thay đổi behavior.
+Dự án (project / 프로젝트) evaluation nên đo system-level kết quả (outcome / 결과) thay vì chỉ đơn vị (unit / 단위) efficiency khi quy mô (scale / 규모) có thể thay đổi hành vi (behavior / 동작).
 
 ## AI và sustainability giao nhau trực tiếp
 
-AI project có resource footprint từ training/inference, storage, network và hardware lifecycle. Nhưng không nên kết luận máy móc rằng “AI dùng nhiều compute nên không sustainable”; AI cũng có thể giảm waste, route transport tốt hơn hoặc optimize energy system.
+AI dự án (project / 프로젝트) có tài nguyên (resource / 자원) footprint từ huấn luyện (training / 학습)/suy luận (inference / 추론), lưu trữ (storage / 저장소), mạng (network / 네트워크) và hardware vòng đời (lifecycle / 생명주기). Nhưng không nên kết luận máy móc rằng “AI dùng nhiều compute nên không sustainable”; AI cũng có thể giảm waste, tuyến (route / 경로) vận chuyển (transport / 전송) tốt hơn hoặc optimize năng lượng (energy / 에너지) hệ thống (system / 시스템).
 
-Decision cần nhìn net lifecycle effect. Một model nhỏ hơn giảm compute 40% nhưng accuracy giảm khiến manual rework tăng mạnh có thể không tốt hơn overall. Ngược lại, model lớn hơn chút nhưng giảm error ở high-impact case có thể tạo net value lớn hơn.
+Quyết định (decision / 결정) cần nhìn net vòng đời (lifecycle / 생명주기) tác động (effect / 효과). Một mô hình (model / 모델) nhỏ hơn giảm compute 40% nhưng accuracy giảm khiến manual rework tăng mạnh có thể không tốt hơn overall. Ngược lại, mô hình (model / 모델) lớn hơn chút nhưng giảm lỗi (error / 오류) ở high-impact trường hợp (case / 사례) có thể tạo net giá trị (value / 값) lớn hơn.
 
-Đây là ví dụ vì sao unit metric và system outcome phải được nối với nhau.
+Đây là ví dụ vì sao đơn vị (unit / 단위) chỉ số (metric / 지표) và hệ thống (system / 시스템) kết quả (outcome / 결과) phải được nối với nhau.
 
-## Value chain và supplier evidence
+## Giá trị (value / 값) chuỗi (chain / 사슬) và supplier bằng chứng (evidence / 증거)
 
-Sustainability impact không dừng ở boundary của project team. Supplier hardware, cloud provider, outsourced labor hoặc logistics có thể tạo phần lớn footprint/risk.
+Sustainability impact không dừng ở ranh giới (boundary / 경계) của dự án (project / 프로젝트) nhóm (team / 팀). Supplier hardware, cloud provider, outsourced labor hoặc logistics có thể tạo phần lớn footprint/rủi ro (risk / 위험).
 
-Procurement requirement có thể yêu cầu evidence phù hợp: energy/carbon reporting, labor/safety policy, data-center region, material provenance hoặc end-of-life plan tùy context. Không cần thu mọi dữ liệu có thể; chỉ thu evidence liên quan material impact và decision.
+Procurement yêu cầu (requirement / 요구사항) có thể yêu cầu bằng chứng (evidence / 증거) phù hợp: năng lượng (energy / 에너지)/carbon reporting, labor/an toàn (safety / 안전) chính sách (policy / 정책), data-center region, material provenance hoặc end-of-life plan tùy ngữ cảnh (context / 맥락). Không cần thu mọi dữ liệu có thể; chỉ thu bằng chứng (evidence / 증거) liên quan material impact và quyết định (decision / 결정).
 
-Nếu sustainability score của vendor chỉ là self-declaration không auditability, project nên coi đó là weak evidence chứ không phải fact.
+Nếu sustainability score của vendor chỉ là self-declaration không auditability, dự án (project / 프로젝트) nên coi đó là weak bằng chứng (evidence / 증거) chứ không phải fact.
 
-## Evidence quality và green claim
+## Bằng chứng (evidence / 증거) chất lượng (quality / 품질) và green claim
 
-Sustainability claim có strength khác nhau tùy source, method và boundary. Vendor brochure yếu hơn audited data; estimated proxy khác measured value; per-unit improvement khác total footprint.
+Sustainability claim có strength khác nhau tùy nguồn (source / 소스), phương thức (method / 메서드) và ranh giới (boundary / 경계). Vendor brochure yếu hơn audited dữ liệu (data / 데이터); estimated proxy khác measured giá trị (value / 값); per-unit improvement khác total footprint.
 
-Governance nên tránh false precision khi evidence weak. “Estimated reduction khoảng 15–25% under current volume” trung thực hơn con số 19.7% nếu input uncertainty lớn.
+Quản trị (governance / 거버넌스) nên tránh false precision khi bằng chứng (evidence / 증거) weak. “Estimated reduction khoảng 15–25% under hiện tại (current / 현재) volume” trung thực hơn con số 19.7% nếu đầu vào (input / 입력) bất định (uncertainty / 불확실성) lớn.
 
-## Data-driven decision và data quality
+## Data-driven quyết định (decision / 결정) và dữ liệu (data / 데이터) chất lượng (quality / 품질)
 
-PMP 2026 nhấn mạnh collect/analyze data cho decision. Nhưng data-driven không phải “có dashboard”. Cần hỏi data có representative không, definition ổn định không, lag bao lâu, incentive có làm metric bị game không và uncertainty còn lại là gì.
+PMP 2026 nhấn mạnh collect/analyze dữ liệu (data / 데이터) cho quyết định (decision / 결정). Nhưng data-driven không phải “có dashboard”. Cần hỏi dữ liệu (data / 데이터) có representative không, definition ổn định không, lag bao lâu, incentive có làm chỉ số (metric / 지표) bị game không và bất định (uncertainty / 불확실성) còn lại là gì.
 
-Một metric chính xác về wrong outcome vẫn dẫn decision sai. Ví dụ team tối ưu số story point nhưng customer churn tăng.
+Một chỉ số (metric / 지표) chính xác về wrong kết quả (outcome / 결과) vẫn dẫn quyết định (decision / 결정) sai. Ví dụ nhóm (team / 팀) tối ưu số story điểm (point / 지점) nhưng customer churn tăng.
 
-Data quality gồm completeness, accuracy, timeliness, consistency và relevance. Không metric nào “objective” nếu collection process bias hoặc definition thay đổi giữa kỳ.
+Dữ liệu (data / 데이터) chất lượng (quality / 품질) gồm completeness, accuracy, timeliness, consistency và relevance. Không chỉ số (metric / 지표) nào “mục tiêu (objective / 목표)” nếu collection tiến trình (process / 프로세스) độ lệch (bias / 편향) hoặc definition thay đổi giữa kỳ.
 
-## Technology change như external environment
+## Technology thay đổi (change / 변경) như bên ngoài (external / 외부) môi trường (environment / 환경)
 
-Technology có thể thay assumption của business case giữa project. Một dependency bị deprecated, regulation AI thay đổi hoặc competitor ra capability mới có thể làm scope/backlog/value thay đổi. Project cần scanning mechanism và change decision, không thể coi initial plan là immutable truth.
+Technology có thể thay giả định (assumption / 가정) của nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) giữa dự án (project / 프로젝트). Một phụ thuộc (dependency / 의존성) bị deprecated, regulation AI thay đổi hoặc competitor ra năng lực (capability / 역량) mới có thể làm phạm vi (scope / 범위)/backlog/giá trị (value / 값) thay đổi. dự án (project / 프로젝트) cần scanning cơ chế (mechanism / 메커니즘) và thay đổi (change / 변경) quyết định (decision / 결정), không thể coi initial plan là immutable truth.
 
-Emerging technology còn tạo skill risk. Team có thể estimate sai vì chưa có historical productivity data. Pilot và progressive commitment thường an toàn hơn full-scale commitment ngay từ đầu.
+Emerging technology còn tạo skill rủi ro (risk / 위험). nhóm (team / 팀) có thể estimate sai vì chưa có historical productivity dữ liệu (data / 데이터). Pilot và progressive commitment thường an toàn hơn full-scale commitment ngay từ đầu.
 
-## Obsolescence risk
+## Obsolescence rủi ro (risk / 위험)
 
-Technology project dài có thể giao solution đã outdated. Nhưng chạy theo every new release cũng tạo churn.
+Technology dự án (project / 프로젝트) dài có thể giao solution đã outdated. Nhưng chạy theo every new bản phát hành (release / 릴리스) cũng tạo churn.
 
-Project cần trigger cho re-evaluation: vendor end-of-life notice, major regulation, security issue, material cost shift hoặc capability leap. Không phải trend trên social media nào cũng cần architecture change.
+Dự án (project / 프로젝트) cần trigger cho re-evaluation: vendor end-of-life notice, major regulation, bảo mật (security / 보안) issue, material chi phí (cost / 비용) shift hoặc năng lực (capability / 역량) leap. Không phải trend trên xã hội (social / 사회적) media nào cũng cần kiến trúc (architecture / 아키텍처) thay đổi (change / 변경).
 
-Decision phải cân switching cost, maturity và option value.
+Quyết định (decision / 결정) phải cân switching chi phí (cost / 비용), maturity và option giá trị (value / 값).
 
 ## Responsible experimentation
 
-Experiment giúp giảm uncertainty nhưng experiment cũng cần boundary. Với low-risk internal prototype, guardrail có thể nhẹ. Với personal data hoặc customer-facing AI, experiment cần consent, privacy, safety và rollback rõ hơn.
+Experiment giúp giảm bất định (uncertainty / 불확실성) nhưng experiment cũng cần ranh giới (boundary / 경계). Với low-risk nội bộ (internal / 내부) prototype, guardrail có thể nhẹ. Với personal dữ liệu (data / 데이터) hoặc customer-facing AI, experiment cần consent, privacy, an toàn (safety / 안전) và quay lui (rollback / 롤백) rõ hơn.
 
 “Đang thử nghiệm” không loại bỏ accountability nếu experiment có thể gây harm thật.
 
-Experiment tốt có hypothesis, exposure limit, success/failure criterion và stop condition. Nếu pilot cứ kéo dài vì team không định nghĩa decision gate, experiment biến thành shadow production.
+Experiment tốt có hypothesis, exposure limit, success/thất bại (failure / 실패) criterion và stop điều kiện (condition / 조건). Nếu pilot cứ kéo dài vì nhóm (team / 팀) không định nghĩa quyết định (decision / 결정) gate, experiment biến thành shadow môi trường vận hành (production / 운영 환경).
 
 ## Pilot-to-production gap
 
-Pilot thường có clean data, expert support, limited volume và motivated user. Production có messy input, scale, turnover, abuse và operational constraint.
+Pilot thường có clean dữ liệu (data / 데이터), expert hỗ trợ (support / 지원), limited volume và motivated người dùng (user / 사용자). môi trường vận hành (production / 운영 환경) có messy đầu vào (input / 입력), quy mô (scale / 규모), turnover, abuse và operational ràng buộc (constraint / 제약조건).
 
-Go/no-go cần hỏi assumption nào thay đổi khi scale. Human fallback đủ ở 1.000 case nhưng không ở 1 triệu. Manual monitoring trong pilot có thể không scalable.
+Go/no-go cần hỏi giả định (assumption / 가정) nào thay đổi khi quy mô (scale / 규모). Human fallback đủ ở 1.000 trường hợp (case / 사례) nhưng không ở 1 triệu. Manual monitoring trong pilot có thể không scalable.
 
-Pilot success là evidence, không phải proof production-ready.
+Pilot success là bằng chứng (evidence / 증거), không phải proof production-ready.
 
 ## Ví dụ scenario
 
-Project dùng generative AI để hỗ trợ nhân viên tư vấn. Pilot cho thấy thời gian xử lý giảm 25% nhưng 2% câu trả lời có factual error nghiêm trọng. Response hợp lý không phải rollout vì productivity gain cũng không phải hủy ngay. Team cần classify harm, thiết kế human review, grounding/evaluation, usage boundary, monitoring, privacy/compliance và threshold trước khi scale. Đây là integration của value, quality, risk, governance và stakeholder impact.
+Dự án (project / 프로젝트) dùng generative AI để hỗ trợ nhân viên tư vấn. Pilot cho thấy thời gian xử lý giảm 25% nhưng 2% câu trả lời có factual lỗi (error / 오류) nghiêm trọng. phản hồi (response / 응답) hợp lý không phải rollout vì productivity gain cũng không phải hủy ngay. nhóm (team / 팀) cần classify harm, thiết kế human rà soát (review / 검토), grounding/evaluation, usage ranh giới (boundary / 경계), monitoring, privacy/compliance và threshold trước khi quy mô (scale / 규모). Đây là tích hợp (integration / 통합) của giá trị (value / 값), chất lượng (quality / 품질), rủi ro (risk / 위험), quản trị (governance / 거버넌스) và stakeholder impact.
 
-Giả sử error nghiêm trọng tập trung ở một nhóm policy hiếm nhưng high-impact. Team có thể giới hạn AI không xử lý nhóm đó, route sang expert và tiếp tục rollout phần low-risk. Đây là tailoring theo risk segmentation thay vì binary “AI tốt/xấu”.
+Giả sử lỗi (error / 오류) nghiêm trọng tập trung ở một nhóm chính sách (policy / 정책) hiếm nhưng high-impact. nhóm (team / 팀) có thể giới hạn AI không xử lý nhóm đó, tuyến (route / 경로) sang expert và tiếp tục rollout phần low-risk. Đây là tailoring theo rủi ro (risk / 위험) segmentation thay vì nhị phân (binary / 이진) “AI tốt/xấu”.
 
-Một case sustainability khác: migration cloud giảm server on-premise nhưng cloud bill và compute usage tăng mạnh. Nếu chỉ đo hardware local, project có vẻ green hơn; nếu nhìn full lifecycle/usage, kết luận có thể khác. Measurement boundary quyết định quality của decision.
+Một trường hợp (case / 사례) sustainability khác: di chuyển (migration / 마이그레이션) cloud giảm máy chủ (server / 서버) on-premise nhưng cloud bill và compute usage tăng mạnh. Nếu chỉ đo hardware cục bộ (local / 로컬), dự án (project / 프로젝트) có vẻ green hơn; nếu nhìn full vòng đời (lifecycle / 생명주기)/usage, kết luận có thể khác. đo lường (measurement / 측정) ranh giới (boundary / 경계) quyết định chất lượng (quality / 품질) của quyết định (decision / 결정).
 
-Một case governance khác: vendor thông báo model version mới sẽ auto-deploy tuần sau. Benchmark vendor tốt hơn, nhưng project đang ở regulated workflow. PM không nên coi đây là minor patch mặc định; cần xác định configuration/change authority, regression evidence, fallback và whether approval threshold bị kích hoạt.
+Một trường hợp (case / 사례) quản trị (governance / 거버넌스) khác: vendor thông báo mô hình (model / 모델) phiên bản (version / 버전) mới sẽ auto-deploy tuần sau. Benchmark vendor tốt hơn, nhưng dự án (project / 프로젝트) đang ở regulated workflow. PM không nên coi đây là minor patch mặc định; cần xác định cấu hình (configuration / 구성)/thay đổi (change / 변경) authority, regression bằng chứng (evidence / 증거), fallback và whether approval threshold bị kích hoạt.
 
-Một case shadow AI: analyst copy customer data vào public chatbot để tiết kiệm thời gian vì official tool quá chậm. Chỉ discipline analyst không đủ. Organization phải contain exposure, review data impact, hiểu workflow pressure và cung cấp safe alternative/guardrail để demand không tiếp tục đi vòng governance.
+Một trường hợp (case / 사례) shadow AI: analyst bản sao (copy / 복사) customer dữ liệu (data / 데이터) vào công khai (public / 공개) chatbot để tiết kiệm thời gian vì official công cụ (tool / 도구) quá chậm. Chỉ discipline analyst không đủ. Organization phải contain exposure, rà soát (review / 검토) dữ liệu (data / 데이터) impact, hiểu workflow pressure và cung cấp safe alternative/guardrail để demand không tiếp tục đi vòng quản trị (governance / 거버넌스).
 
-## Failure modes cần nhớ
+## Thất bại (failure / 실패) modes cần nhớ
 
-AI washing xảy ra khi project thêm AI dù use case không cần. Greenwashing xảy ra khi sustainability claim không có baseline/evidence. Dashboard bias xảy ra khi metric dễ đo thay metric quan trọng. Human-in-the-loop theater xảy ra khi reviewer không có capacity hoặc authority thật. Pilot trap xảy ra khi prototype tốt trong controlled data nhưng operating model production chưa sẵn sàng.
+AI washing xảy ra khi dự án (project / 프로젝트) thêm AI dù use trường hợp (case / 사례) không cần. Greenwashing xảy ra khi sustainability claim không có baseline/bằng chứng (evidence / 증거). Dashboard độ lệch (bias / 편향) xảy ra khi chỉ số (metric / 지표) dễ đo thay chỉ số (metric / 지표) quan trọng. Human-in-the-loop theater xảy ra khi reviewer không có sức chứa (capacity / 용량) hoặc authority thật. Pilot trap xảy ra khi prototype tốt trong controlled dữ liệu (data / 데이터) nhưng operating mô hình (model / 모델) môi trường vận hành (production / 운영 환경) chưa sẵn sàng.
 
-Benchmark theater xảy ra khi score đẹp nhưng test set không đại diện production. Auto-upgrade risk xảy ra khi model/vendor thay đổi nhưng organization không có configuration traceability. Sustainability theater xảy ra khi scorecard có nhiều mục nhưng không có threshold, owner hoặc decision consequence.
+Benchmark theater xảy ra khi score đẹp nhưng kiểm thử (test / 테스트) set không đại diện môi trường vận hành (production / 운영 환경). Auto-upgrade rủi ro (risk / 위험) xảy ra khi mô hình (model / 모델)/vendor thay đổi nhưng organization không có cấu hình (configuration / 구성) traceability. Sustainability theater xảy ra khi scorecard có nhiều mục nhưng không có threshold, đơn vị sở hữu (owner / 오너) hoặc quyết định (decision / 결정) consequence.
 
-Shadow AI, burden shifting, hidden human labor và pilot-to-production gap đều là cùng một class failure: system boundary bị định nghĩa quá hẹp so với nơi consequence thực sự xuất hiện.
+Shadow AI, burden shifting, hidden human labor và pilot-to-production gap đều là cùng một lớp (class / 클래스) thất bại (failure / 실패): hệ thống (system / 시스템) ranh giới (boundary / 경계) bị định nghĩa quá hẹp so với nơi consequence thực sự xuất hiện.
 
-Các failure mode này đều chung một root cause: artifact hoặc technology được dùng thay cho reasoning về system.
+Các dạng thất bại (failure mode / 실패 모드) này đều chung một nguyên nhân gốc (root cause / 근본 원인): sản phẩm tạo ra (artifact / 산출물) hoặc technology được dùng thay cho lập luận (reasoning / 추론) về hệ thống (system / 시스템).
 
-## Mental model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> AI và sustainability không phải các chapter rời khỏi project management; chúng mở rộng system boundary. AI đòi hỏi quản trị data–model–use–action, human behavior và semantic outcome; sustainability đòi hỏi lifecycle/materiality/externality. Cả hai đều phải được quản lý bằng evidence, proportional control, traceability và ownership giống các constraint quan trọng khác.
+> AI và sustainability không phải các chapter rời khỏi dự án (project / 프로젝트) management; chúng mở rộng hệ thống (system / 시스템) ranh giới (boundary / 경계). AI đòi hỏi quản trị dữ liệu (data / 데이터)–mô hình (model / 모델)–use–hành động (action / 동작), human hành vi (behavior / 동작) và ngữ nghĩa (semantic / 의미적) kết quả (outcome / 결과); sustainability đòi hỏi vòng đời (lifecycle / 생명주기)/materiality/externality. Cả hai đều phải được quản lý bằng bằng chứng (evidence / 증거), proportional điều khiển (control / 제어), traceability và quyền sở hữu (ownership / 소유권) giống các ràng buộc (constraint / 제약조건) quan trọng khác.
 
 Tiếp theo: [Scenario reasoning và chiến lược làm PMP](./13_pmp_scenario_reasoning_and_exam_strategy.md).
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 foundations value and project system](./00_foundations_value_and_project_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

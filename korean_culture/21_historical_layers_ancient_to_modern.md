@@ -1,10 +1,13 @@
 # Các lớp lịch sử: từ xã hội cổ đại đến Hàn Quốc hiện đại
 
+> **Mạch đọc:** Đặt **Các lớp lịch sử: từ xã hội cổ đại đến Hàn Quốc hiện đại** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Trước các vương quốc: từ cộng đồng địa phương đến nhà nước** sang **Ba vương quốc và việc cạnh tranh tạo ra năng lực nhà nước**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Bản mở rộng:** phần lịch sử đã được tách thành một thư viện kiến thức riêng tại [`../korean_history/00_index_and_dependency.md`](../korean_history/00_index_and_dependency.md). Chương hiện tại giữ vai trò cầu nối để giải thích **lịch sử → văn hoá**; nếu muốn học trình tự thời gian, kinh tế chính trị, chiến tranh, thời thuộc địa, chia cắt và dân chủ hoá theo chiều sâu, hãy dùng thư viện lịch sử riêng.
 
 Văn hoá Hàn Quốc hiện đại không thể giải thích bằng một thời kỳ duy nhất. Một hành vi hôm nay có thể đồng thời mang dấu vết của xã hội nông nghiệp, nhà nước Nho giáo Joseon, thuộc địa Nhật Bản, chiến tranh lạnh, công nghiệp hoá cực nhanh và nền kinh tế nền tảng số. Vì vậy lịch sử ở đây không phải danh sách triều đại để học thuộc. Nó là cách truy tìm **phụ thuộc đường đi (경로의존성 / path dependence)**: vì sao một lựa chọn hoặc cú sốc trong quá khứ tiếp tục tạo ràng buộc cho hiện tại.
 
-> Một **mô hình tư duy (mental model)** hữu ích là xem xã hội như một hệ thống phần mềm lâu đời. Giao diện đã thay đổi nhiều lần, nhưng một số giao thức, lược đồ dữ liệu và ràng buộc kế thừa vẫn còn ở tầng dưới.
+> Một **mô hình tư duy (mental model / 사고 모델)** hữu ích là xem xã hội như một hệ thống phần mềm lâu đời. Giao diện đã thay đổi nhiều lần, nhưng một số giao thức, lược đồ dữ liệu và ràng buộc kế thừa vẫn còn ở tầng dưới.
 
 ## Trước các vương quốc: từ cộng đồng địa phương đến nhà nước
 
@@ -136,7 +139,7 @@ Nhưng ký ức cũ có thể còn trong tên ga, tên chợ, nhà thờ, trư�
 
 Nếu mọi dấu vết vật lý biến mất, thế hệ sau phải phụ thuộc nhiều hơn vào kho lưu trữ và kể chuyện để biết nơi đó từng là gì.
 
-## Trường học, gia đình và truyền thông có thể kể cùng một quá khứ theo ba logic khác nhau
+## Trường học, gia đình và truyền thông có thể kể cùng một quá khứ theo ba lô-gic (logic / 논리) khác nhau
 
 **Lịch sử trong trường học** cần một cấu trúc đủ chung để hàng triệu học sinh cùng học. **Ký ức gia đình** lại rất cục bộ và cảm xúc. **Phim, truyền hình và webtoon** cần câu chuyện hấp dẫn, nhân vật rõ và nhịp kể.
 
@@ -180,7 +183,7 @@ Không bên nào nhất thiết “không hiểu đời”. Họ đang tối ưu
 
 ## Dân chủ hoá như ký ức công cộng, không chỉ một mục trong niên đại
 
-Các tư liệu của National Institute of Korean History và National Archives cho thấy phong trào dân chủ năm 1987, yêu cầu bầu cử tổng thống trực tiếp và quá trình sửa đổi hiến pháp là một phần quan trọng của lịch sử chính trị cuối thế kỷ XX. Trong văn hoá ký ức, điều đáng chú ý là các sự kiện như vậy tiếp tục tồn tại qua ngày kỷ niệm, kho lưu trữ, bảo tàng, phim tài liệu và giáo dục công dân.
+Các tư liệu của National Institute of Korean lịch sử (history / 이력) và National Archives cho thấy phong trào dân chủ năm 1987, yêu cầu bầu cử tổng thống trực tiếp và quá trình sửa đổi hiến pháp là một phần quan trọng của lịch sử chính trị cuối thế kỷ XX. Trong văn hoá ký ức, điều đáng chú ý là các sự kiện như vậy tiếp tục tồn tại qua ngày kỷ niệm, kho lưu trữ, bảo tàng, phim tài liệu và giáo dục công dân.
 
 Chương này không dùng ký ức đó để đánh giá đảng phái hay lựa chọn chính trị hiện tại. Mục tiêu là chỉ ra một cơ chế: **khi một sự kiện được thể chế hoá thành ngày tưởng niệm, tư liệu lưu trữ và chương trình giáo dục, nó có khả năng tiếp tục định hình từ vựng công cộng của các thế hệ sau**.
 
@@ -267,6 +270,8 @@ Tái phát triển có thể xoá vật thể nhưng không tự động xoá k�
 
 ## Nguồn tham khảo định hướng
 
-Khi mở rộng chương này, ưu tiên National Institute of Korean History (`국사편찬위원회`), Academy of Korean Studies (`한국학중앙연구원`), National Archives of Korea (`국가기록원`), National Museum of Korea và UNESCO cho di sản. Với vấn đề lịch sử còn tranh luận, cần đối chiếu nhiều nguồn học thuật thay vì dựa vào một câu chuyện quốc gia duy nhất.
+Khi mở rộng chương này, ưu tiên National Institute of Korean lịch sử (history / 이력) (`국사편찬위원회`), Academy of Korean Studies (`한국학중앙연구원`), National Archives of Korea (`국가기록원`), National Museum of Korea và UNESCO cho di sản. Với vấn đề lịch sử còn tranh luận, cần đối chiếu nhiều nguồn học thuật thay vì dựa vào một câu chuyện quốc gia duy nhất.
 
-Với lịch sử dân chủ hoá cuối thế kỷ XX, `우리역사넷` của National Institute of Korean History và hồ sơ của National Archives of Korea là các điểm bắt đầu tốt để kiểm tra niên đại, văn bản và tư liệu gốc trước khi diễn giải ý nghĩa văn hoá.
+Với lịch sử dân chủ hoá cuối thế kỷ XX, `우리역사넷` của National Institute of Korean lịch sử (history / 이력) và hồ sơ của National Archives of Korea là các điểm bắt đầu tốt để kiểm tra niên đại, văn bản và tư liệu gốc trước khi diễn giải ý nghĩa văn hoá.
+
+> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

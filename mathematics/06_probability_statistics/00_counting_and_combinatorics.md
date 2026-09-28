@@ -1,8 +1,11 @@
 # Đếm và tổ hợp: cấu trúc của không gian khả năng
 
-Tổ hợp (combinatorics / 조합론) nghiên cứu cách đếm số cấu hình có thể có mà không cần liệt kê từng trường hợp. Đây là nền của xác suất rời rạc, complexity, search space, hashing, coding và nhiều bài toán tối ưu.
+> **Mạch đọc:** Đọc **Đếm và tổ hợp: cấu trúc của không gian khả năng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. quy tắc (rule / 규칙) of sum và quy tắc (rule / 규칙) of sản phẩm (product / 제품)** sang **2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model quan trọng:
+
+Tổ hợp (combinatorics / 조합론) nghiên cứu cách đếm số cấu hình có thể có mà không cần liệt kê từng trường hợp. Đây là nền của xác suất rời rạc, độ phức tạp (complexity / 복잡도), tìm kiếm (search / 검색) không gian (space / 공간), hashing, coding và nhiều bài toán tối ưu.
+
+Mô hình tư duy (mental model / 사고 모델) quan trọng:
 
 ```text
 object space
@@ -12,23 +15,23 @@ object space
 → infer probability or computational cost
 ```
 
-Combinatorics không chỉ là nhớ `n!` hay `C(n,k)`. Nó là kỹ năng nhìn một configuration như kết quả của nhiều quyết định nhỏ hơn.
+Combinatorics không chỉ là nhớ `n!` hay `C(n,k)`. Nó là kỹ năng nhìn một cấu hình (configuration / 구성) như kết quả của nhiều quyết định nhỏ hơn.
 
-## 1. Rule of sum và rule of product
+## 1. quy tắc (rule / 규칙) of sum và quy tắc (rule / 규칙) of sản phẩm (product / 제품)
 
-Nếu một task có hai nhóm cases **rời nhau**, với `m` và `n` possibilities, total:
+Nếu một tác vụ (task / 작업) có hai nhóm cases **rời nhau**, với `m` và `n` possibilities, total:
 
 ```math
 m+n.
 ```
 
-Nếu một process có hai stages, stage 1 có `m` choices và với mỗi choice stage 2 có `n` choices, total:
+Nếu một tiến trình (process / 프로세스) có hai stages, stage 1 có `m` choices và với mỗi choice stage 2 có `n` choices, total:
 
 ```math
 mn.
 ```
 
-Product rule là nền của rất nhiều công thức đếm.
+Sản phẩm (product / 제품) quy tắc (rule / 규칙) là nền của rất nhiều công thức đếm.
 
 Ví dụ password gồm 8 lowercase letters:
 
@@ -38,9 +41,9 @@ Ví dụ password gồm 8 lowercase letters:
 
 possible strings, nếu repetition được phép.
 
-## 2. Khi nào product rule sai?
+## 2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?
 
-Product rule không yêu cầu probability independence, nhưng yêu cầu cấu trúc choice count ở mỗi stage được biết rõ.
+Sản phẩm (product / 제품) quy tắc (rule / 규칙) không yêu cầu xác suất (probability / 확률) independence, nhưng yêu cầu cấu trúc choice count ở mỗi stage được biết rõ.
 
 Nếu number of choices stage sau phụ thuộc vào stage trước, ta phải cộng theo branches:
 
@@ -56,7 +59,7 @@ Ví dụ chọn two distinct digits: digit đầu có 10 choices, digit sau ch�
 
 Không thể dùng `10^2` nếu repetition bị cấm.
 
-## 3. Permutation: order tạo configuration mới
+## 3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới
 
 Sắp `n` distinct objects:
 
@@ -72,13 +75,13 @@ P(n,k)=\frac{n!}{(n-k)!}.
 
 Key question luôn là:
 
-> Đổi thứ tự có tạo outcome khác không?
+> Đổi thứ tự có tạo kết quả (outcome / 결과) khác không?
 
 Nếu có, permutation-like counting phù hợp.
 
-## 4. Combination: quotient out order
+## 4. Combination: quotient out thứ tự (order / 순서)
 
-Nếu order không matter, mỗi subset size `k` bị permutation count lặp `k!` lần, nên:
+Nếu thứ tự (order / 순서) không matter, mỗi subset kích thước (size / 크기) `k` bị permutation count lặp `k!` lần, nên:
 
 ```math
 \binom nk=\frac{n!}{k!(n-k)!}.
@@ -103,7 +106,7 @@ number of binary strings length n có exactly k ones
 number of paths với k moves theo một direction
 ```
 
-Connections này rất quan trọng vì cùng một structure xuất hiện dưới nhiều representations.
+Connections này rất quan trọng vì cùng một cấu trúc (structure / 구조) xuất hiện dưới nhiều representations.
 
 ## 6. Binomial theorem từ counting choices
 
@@ -125,7 +128,7 @@ Muốn term chứa `b^k`, ta chọn `k` trong `n` factors lấy `b`:
 
 Coefficient không xuất hiện magic; nó đếm số ways tạo cùng monomial.
 
-## 7. Pascal identity
+## 7. Pascal định danh (identity / 식별자)
 
 ```math
 \binom nk
@@ -135,7 +138,7 @@ Coefficient không xuất hiện magic; nó đếm số ways tạo cùng monomia
 \binom{n-1}{k-1}.
 ```
 
-Proof idea: chọn `k` từ `n` objects. Fix một object đặc biệt.
+Proof idea: chọn `k` từ `n` objects. Fix một đối tượng (object / 객체) đặc biệt.
 
 Cases:
 
@@ -146,7 +149,7 @@ chọn object đó → C(n-1,k-1)
 
 Hai cases rời nhau và cover toàn bộ possibilities.
 
-Đây là classic combinatorial proof: chứng minh identity bằng cách đếm cùng một set theo hai cách.
+Đây là classic combinatorial proof: chứng minh định danh (identity / 식별자) bằng cách đếm cùng một set theo hai cách.
 
 ## 8. Stars and bars
 
@@ -170,11 +173,11 @@ Ví dụ:
 ***|*||**
 ```
 
-có thể encode distribution `(3,1,0,2)`.
+có thể encode phân phối (distribution / 분포) `(3,1,0,2)`.
 
-Assumption quan trọng: items identical, boxes distinguishable, values nonnegative.
+Giả định (assumption / 가정) quan trọng: items identical, boxes distinguishable, values nonnegative.
 
-Nếu constraints đổi, formula cũng đổi.
+Nếu các ràng buộc (constraints / 제약조건들) đổi, formula cũng đổi.
 
 ## 9. Inclusion–exclusion: sửa double counting
 
@@ -195,9 +198,9 @@ Ba sets:
 +|A\cap B\cap C|.
 ```
 
-Pattern alternating signs vì intersections bị đếm thừa nhiều lần.
+Mẫu (pattern / 패턴) alternating signs vì intersections bị đếm thừa nhiều lần.
 
-Inclusion–exclusion là một primitive rất quan trọng trong probability và discrete mathematics.
+Inclusion–exclusion là một thành phần nguyên thủy (primitive / 기본 요소) rất quan trọng trong xác suất (probability / 확률) và discrete mathematics.
 
 ## 10. Complement counting
 
@@ -221,7 +224,7 @@ P(\text{no collision})
 \frac{365-n+1}{365}.
 ```
 
-Complement strategy là pattern general: “at least one” thường dễ xử lý qua “none”.
+Complement chiến lược (strategy / 전략) là mẫu (pattern / 패턴) general: “at least one” thường dễ xử lý qua “none”.
 
 ## 11. Pigeonhole principle
 
@@ -235,7 +238,7 @@ Generalized form: `N` objects vào `k` boxes ⇒ có box chứa ít nhất
 
 objects.
 
-Trong hashing, collision là unavoidable nếu key space lớn hơn bucket space. Good hash chỉ phân bố collisions tốt hơn; không loại được định lý.
+Trong hashing, collision là unavoidable nếu key không gian (space / 공간) lớn hơn bucket không gian (space / 공간). Good băm (hash / 해시) chỉ phân bố collisions tốt hơn; không loại được định lý.
 
 ## 12. Bijection proof
 
@@ -249,9 +252,9 @@ Bijection không chỉ chứng minh count; nó giải thích **vì sao** hai qua
 
 Nhiều counting sequences thỏa recurrence.
 
-Ví dụ binary strings length `n` không chứa consecutive `1` có count liên hệ Fibonacci.
+Ví dụ nhị phân (binary / 이진) strings length `n` không chứa consecutive `1` có count liên hệ Fibonacci.
 
-Reasoning: split theo last bit.
+Lập luận (reasoning / 추론): split theo last bit.
 
 ```text
 ends in 0 → previous n-1 bits valid
@@ -268,19 +271,19 @@ Combinatorics và recurrence/DP gặp nhau ở đây.
 
 ## 14. Generating functions intuition
 
-Nếu sequence counts là `a_n`, generating function:
+Nếu chuỗi (sequence / 시퀀스) counts là `a_n`, generating hàm (function / 함수):
 
 ```math
 A(x)=\sum_{n\ge0}a_nx^n.
 ```
 
-Nó encode whole count sequence vào một algebraic object.
+Nó encode whole count chuỗi (sequence / 시퀀스) vào một algebraic đối tượng (object / 객체).
 
-Operations trên generating functions có thể transform recurrence thành algebra. Đây là advanced bridge giữa combinatorics, power series và algorithm analysis.
+Operations trên generating functions có thể transform recurrence thành algebra. Đây là advanced cầu nối (bridge / 브리지) giữa combinatorics, power series và thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석).
 
 ## 15. Asymptotic counting
 
-Exact count không phải lúc nào cần thiết. Với large `n`, growth class thường quan trọng hơn.
+Chính xác (exact / 정확한) count không phải lúc nào cần thiết. Với large `n`, growth lớp (class / 클래스) thường quan trọng hơn.
 
 Ví dụ:
 
@@ -302,11 +305,11 @@ Nó cho logarithm của factorial gần:
 \log n!\approx n\log n-n.
 ```
 
-Điều này xuất hiện trong entropy, counting states và complexity.
+Điều này xuất hiện trong entropy, counting states và độ phức tạp (complexity / 복잡도).
 
 ## 16. Search-space explosion
 
-`n` independent binary decisions tạo:
+`n` independent nhị phân (binary / 이진) decisions tạo:
 
 ```math
 2^n
@@ -314,7 +317,7 @@ Nó cho logarithm của factorial gần:
 
 subsets.
 
-Permutation search tạo:
+Permutation tìm kiếm (search / 검색) tạo:
 
 ```math
 n!
@@ -322,9 +325,9 @@ n!
 
 possibilities.
 
-Đây là lý do brute force nhanh chóng bất khả thi. Complexity thường bắt đầu từ combinatorial count của search space.
+Đây là lý do brute force nhanh chóng bất khả thi. độ phức tạp (complexity / 복잡도) thường bắt đầu từ combinatorial count của tìm kiếm (search / 검색) không gian (space / 공간).
 
-## 17. Counting và probability
+## 17. Counting và xác suất (probability / 확률)
 
 Khi outcomes equally likely:
 
@@ -332,15 +335,15 @@ Khi outcomes equally likely:
 P(A)=\frac{|A|}{|\Omega|}.
 ```
 
-Nhưng combinatorics chỉ cung cấp counts. Assumption equally likely phải đến từ probability model.
+Nhưng combinatorics chỉ cung cấp counts. giả định (assumption / 가정) equally likely phải đến từ xác suất (probability / 확률) mô hình (model / 모델).
 
-Sai lầm phổ biến là đếm đúng nhưng model xác suất sai.
+Sai lầm phổ biến là đếm đúng nhưng mô hình (model / 모델) xác suất sai.
 
-## 18. Hypergeometric vs binomial connection
+## 18. Hypergeometric vs binomial liên kết (connection / 연결)
 
 Sampling **without replacement** tạo dependence.
 
-Nếu population có `K` successes trong `N`, draw `n` without replacement, số successes `X` có hypergeometric probability:
+Nếu population có `K` successes trong `N`, draw `n` without replacement, số successes `X` có hypergeometric xác suất (probability / 확률):
 
 ```math
 P(X=k)
@@ -349,11 +352,11 @@ P(X=k)
 {\binom Nn}.
 ```
 
-Binomial phù hợp hơn khi trials independent với constant success probability.
+Binomial phù hợp hơn khi trials independent với constant success xác suất (probability / 확률).
 
-Combinatorial structure giúp thấy assumption difference ngay lập tức.
+Combinatorial cấu trúc (structure / 구조) giúp thấy giả định (assumption / 가정) difference ngay lập tức.
 
-## 19. Worked example: committee constraint
+## 19. Worked example: committee ràng buộc (constraint / 제약조건)
 
 Có 6 engineers và 4 designers. Chọn committee 4 người có ít nhất 1 designer.
 
@@ -379,14 +382,16 @@ Complement counting đơn giản hơn sum cases theo number designers.
 
 ## 20. AI, coding và combinatorics
 
-Feature subset selection có `2^d` subsets. Sequence models có vocabulary `V` và length `n` tạo raw string space size `V^n`. Error-correcting codes chọn codewords trong Hamming space với distance constraints.
+Tính năng (feature / 기능) subset selection có `2^d` subsets. chuỗi (sequence / 시퀀스) các mô hình (models / 모델들) có vocabulary `V` và length `n` tạo raw string không gian (space / 공간) kích thước (size / 크기) `V^n`. Error-correcting codes chọn codewords trong Hamming không gian (space / 공간) với distance các ràng buộc (constraints / 제약조건들).
 
-Trong AI, combinatorial explosion giải thích vì sao search cần heuristics, dynamic programming, branch-and-bound hoặc approximation.
+Trong AI, combinatorial explosion giải thích vì sao tìm kiếm (search / 검색) cần heuristics, động (dynamic / 동적) programming, branch-and-bound hoặc approximation.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Combinatorics là algebra của finite possibility spaces. Product rule tạo choices; symmetry loại overcount; inclusion–exclusion sửa overlap; bijection giải thích equal counts; asymptotics cho biết space lớn nhanh đến mức nào.
+> Combinatorics là algebra của finite possibility spaces. sản phẩm (product / 제품) quy tắc (rule / 규칙) tạo choices; symmetry loại overcount; inclusion–exclusion sửa overlap; bijection giải thích equal counts; asymptotics cho biết không gian (space / 공간) lớn nhanh đến mức nào.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Permutation và combination khác ở việc order có meaning hay không. Counting product rule không phải probability independence. `n!` và `2^n` đều “lớn” nhưng growth rất khác. Đếm favorable/total chỉ cho probability khi outcomes thực sự equiprobable theo model.
+Permutation và combination khác ở việc thứ tự (order / 순서) có meaning hay không. Counting sản phẩm (product / 제품) quy tắc (rule / 규칙) không phải xác suất (probability / 확률) independence. `n!` và `2^n` đều “lớn” nhưng growth rất khác. Đếm favorable/total chỉ cho xác suất (probability / 확률) khi outcomes thực sự equiprobable theo mô hình (model / 모델).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 probability foundations](./01_probability_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

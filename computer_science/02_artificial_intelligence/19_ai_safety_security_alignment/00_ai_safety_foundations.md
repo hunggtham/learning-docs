@@ -1,12 +1,15 @@
 # Nền tảng an toàn AI
 
+> **Mạch đọc:** Đặt **Nền tảng an toàn AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kiến thức cần có trước** sang **Phân biệt an toàn (safety / 안전), bảo mật (security / 보안), Alignment và quản trị (governance / 거버넌스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 **An toàn AI (AI Safety / AI 안전)** nghiên cứu và kỹ nghệ cách xây dựng hệ thống AI sao cho hành vi vẫn nằm trong phạm vi được chấp nhận, có thể giám sát, có thể giới hạn hậu quả và có thể phục hồi khi thất bại. An toàn không đồng nghĩa với bảo mật, căn chỉnh hay quản trị, dù các lĩnh vực này liên kết chặt chẽ.
 
 ## Kiến thức cần có trước
 
 Nên đọc [Agent Systems](../10_agents_and_ai_systems/README.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md), [Evaluation & Reliability](../18_evaluation_reliability_interpretability/README.md) và [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md).
 
-## Phân biệt Safety, Security, Alignment và Governance
+## Phân biệt an toàn (safety / 안전), bảo mật (security / 보안), Alignment và quản trị (governance / 거버넌스)
 
 ```text
 An toàn (safety)
@@ -45,17 +48,17 @@ failure mode: liều lượng bị hallucination
 → harm: dùng thuốc sai
 ```
 
-Điều này giải thích vì sao UI, verifier, permission và human review có thể giảm risk ngay cả khi model error chưa về 0.
+Điều này giải thích vì sao UI, verifier, permission và human rà soát (review / 검토) có thể giảm rủi ro (risk / 위험) ngay cả khi mô hình (model / 모델) lỗi (error / 오류) chưa về 0.
 
-## Risk và residual risk
+## Rủi ro (risk / 위험) và residual rủi ro (risk / 위험)
 
 Một trực giác đơn giản:
 
 \[
-Risk\approx P(Harm)\times Severity(Harm)
+rủi ro (risk / 위험)\approx P(Harm)\times Severity(Harm)
 \]
 
-Nhưng trong hệ thống mở, xác suất thường khó biết chính xác. Production risk assessment nên xem thêm:
+Nhưng trong hệ thống mở, xác suất thường khó biết chính xác. môi trường vận hành (production / 운영 환경) rủi ro (risk / 위험) assessment nên xem thêm:
 
 - mức phơi nhiễm;
 - khả năng phát hiện;
@@ -63,17 +66,17 @@ Nhưng trong hệ thống mở, xác suất thường khó biết chính xác. P
 - phạm vi ảnh hưởng;
 - thời gian tồn tại của lỗi;
 - khả năng attacker thích nghi;
-- độ tin cậy của evidence.
+- độ tin cậy của bằng chứng (evidence / 증거).
 
-Sau khi áp dụng control vẫn còn **rủi ro còn lại (residual risk)**. Quyết định deploy phải dựa trên residual risk, không phải giả định rằng control đã loại bỏ toàn bộ rủi ro.
+Sau khi áp dụng điều khiển (control / 제어) vẫn còn **rủi ro còn lại (residual risk)**. Quyết định deploy phải dựa trên residual rủi ro (risk / 위험), không phải giả định rằng điều khiển (control / 제어) đã loại bỏ toàn bộ rủi ro.
 
-## Hazard và failure mode
+## Hazard và dạng thất bại (failure mode / 실패 모드)
 
-**Mối nguy (hazard)** là điều kiện có thể dẫn đến harm. **Kiểu thất bại (failure mode)** là cách hệ thống không đáp ứng contract.
+**Mối nguy (hazard)** là điều kiện có thể dẫn đến harm. **Kiểu thất bại (failure mode)** là cách hệ thống không đáp ứng đặc tả hợp đồng (contract / 계약).
 
-Một failure mode có thể không nguy hiểm trong use case này nhưng nguy hiểm trong use case khác. Ví dụ output chậm 3 giây có thể chấp nhận ở công cụ tóm tắt, nhưng nguy hiểm trong hệ thống điều khiển thời gian thực.
+Một dạng thất bại (failure mode / 실패 모드) có thể không nguy hiểm trong use trường hợp (case / 사례) này nhưng nguy hiểm trong use trường hợp (case / 사례) khác. Ví dụ đầu ra (output / 출력) chậm 3 giây có thể chấp nhận ở công cụ tóm tắt, nhưng nguy hiểm trong hệ thống điều khiển thời gian thực.
 
-## Safety case
+## An toàn (safety / 안전) trường hợp (case / 사례)
 
 Thay vì tuyên bố “mô hình an toàn”, nên xây một **lập luận an toàn (safety case)**:
 
@@ -97,24 +100,24 @@ monitoring: audit log + alert vượt ngưỡng
 residual risk: bug ở payment service hoặc credential compromise
 ```
 
-Safety là thuộc tính của cả hệ thống dưới những điều kiện xác định, không phải nhãn tuyệt đối của một checkpoint.
+An toàn (safety / 안전) là thuộc tính của cả hệ thống dưới những điều kiện xác định, không phải nhãn tuyệt đối của một checkpoint.
 
-## Capability, autonomy và attack surface
+## Năng lực (capability / 역량), autonomy và attack surface
 
-Khi capability tăng, bề mặt hậu quả cũng tăng. Một chatbot chỉ trả văn bản khác hoàn toàn agent có quyền:
+Khi năng lực (capability / 역량) tăng, bề mặt hậu quả cũng tăng. Một chatbot chỉ trả văn bản khác hoàn toàn tác nhân (agent / 에이전트) có quyền:
 
-- đọc file;
-- gọi database;
+- đọc tệp (file / 파일);
+- gọi cơ sở dữ liệu (database / 데이터베이스);
 - gửi email;
-- sửa code;
+- sửa mã (code / 코드);
 - tạo giao dịch;
-- lưu memory dài hạn.
+- lưu bộ nhớ (memory / 메모리) dài hạn.
 
-Mức tự chủ (autonomy) là một lựa chọn kiến trúc. Không nên tăng autonomy chỉ vì model đủ khả năng; phải tăng đồng thời verifier, permission, state management, observability và recovery.
+Mức tự chủ (autonomy) là một lựa chọn kiến trúc. Không nên tăng autonomy chỉ vì mô hình (model / 모델) đủ khả năng; phải tăng đồng thời verifier, permission, trạng thái (state / 상태) management, khả năng quan sát (observability / 관측 가능성) và khôi phục (recovery / 복구).
 
 ## Tính đảo ngược
 
-Một nguyên tắc production mạnh là ưu tiên hành động có thể đảo ngược khi uncertainty cao.
+Một nguyên tắc môi trường vận hành (production / 운영 환경) mạnh là ưu tiên hành động có thể đảo ngược khi bất định (uncertainty / 불확실성) cao.
 
 ```text
 nháp email → có thể review
@@ -123,9 +126,9 @@ xóa file vĩnh viễn → khó đảo ngược
 thực thi payment → hậu quả cao
 ```
 
-Hành động càng khó đảo ngược, control trước execution càng cần mạnh.
+Hành động càng khó đảo ngược, điều khiển (control / 제어) trước thực thi (execution / 실행) càng cần mạnh.
 
-## Specification problem
+## Specification bài toán (problem / 문제)
 
 Ý định con người thường giàu hơn mục tiêu có thể đo. Nếu hệ thống tối ưu proxy, nó có thể tìm lỗ hổng giữa proxy và mục tiêu thật.
 
@@ -136,22 +139,22 @@ mục tiêu thật: người dùng nhận nội dung hữu ích
 proxy: watch time tối đa
 ```
 
-Tối ưu proxy có thể tăng watch time bằng nội dung gây nghiện. Xem sâu hơn ở [Căn chỉnh AI](./01_alignment_and_objective_specification.md) và [Reward Misspecification](./02_reward_misspecification_and_goal_misgeneralization.md).
+Tối ưu proxy có thể tăng watch thời gian (time / 시간) bằng nội dung gây nghiện. Xem sâu hơn ở [Căn chỉnh AI](./01_alignment_and_objective_specification.md) và [Reward Misspecification](./02_reward_misspecification_and_goal_misgeneralization.md).
 
-## Distribution shift
+## Phân phối (distribution / 분포) shift
 
-Control được xác minh trên distribution này có thể thất bại khi:
+Điều khiển (control / 제어) được xác minh trên phân phối (distribution / 분포) này có thể thất bại khi:
 
 - ngôn ngữ thay đổi;
-- user behavior thay đổi;
-- tool mới được thêm;
+- người dùng (user / 사용자) hành vi (behavior / 동작) thay đổi;
+- công cụ (tool / 도구) mới được thêm;
 - corpus RAG thay đổi;
-- provider model thay đổi;
+- provider mô hình (model / 모델) thay đổi;
 - attacker học cách thích nghi.
 
-Do đó safety không kết thúc ở pre-release benchmark. Nó cần monitoring và regression evaluation liên tục.
+Do đó an toàn (safety / 안전) không kết thúc ở pre-release benchmark. Nó cần monitoring và regression evaluation liên tục.
 
-## Defense in depth
+## Defense in độ sâu (depth / 깊이)
 
 Không nên dựa vào một lớp duy nhất:
 
@@ -167,7 +170,7 @@ hành vi mô hình
 + incident response
 ```
 
-Mỗi lớp giảm một loại failure khác nhau. Nếu một lớp bị bypass, các lớp sau vẫn phải giới hạn hậu quả.
+Mỗi lớp giảm một loại thất bại (failure / 실패) khác nhau. Nếu một lớp bị bypass, các lớp sau vẫn phải giới hạn hậu quả.
 
 ## Fail-safe và fail-closed
 
@@ -178,25 +181,25 @@ không xác minh được
 → không thực thi
 ```
 
-là lựa chọn hợp lý. Nhưng fail-closed làm giảm availability. Use case rủi ro thấp có thể chọn degraded fallback thay vì chặn toàn bộ.
+là lựa chọn hợp lý. Nhưng fail-closed làm giảm availability. Use trường hợp (case / 사례) rủi ro thấp có thể chọn degraded fallback thay vì chặn toàn bộ.
 
 Không có chính sách fail-open/fail-closed đúng cho mọi hệ thống; lựa chọn phải gắn với impact.
 
 ## Human factors
 
-Output trôi chảy có thể tạo **thiên lệch tự động hóa (automation bias)**: người dùng tin kết quả hơn mức evidence cho phép.
+Đầu ra (output / 출력) trôi chảy có thể tạo **thiên lệch tự động hóa (automation bias)**: người dùng tin kết quả hơn mức bằng chứng (evidence / 증거) cho phép.
 
-Safety engineering phải xem cả giao diện và quy trình:
+An toàn (safety / 안전) kỹ thuật (engineering / 엔지니어링) phải xem cả giao diện và quy trình:
 
 - nguồn có được hiển thị không;
-- uncertainty có được truyền đạt không;
-- approval có hiển thị action thật không;
-- người review có đủ context không;
+- bất định (uncertainty / 불확실성) có được truyền đạt không;
+- approval có hiển thị hành động (action / 동작) thật không;
+- người rà soát (review / 검토) có đủ ngữ cảnh (context / 맥락) không;
 - warning có bị bỏ qua vì xuất hiện quá nhiều không.
 
 ## Evaluation cho an toàn
 
-Bộ test nên gồm:
+Bộ kiểm thử (test / 테스트) nên gồm:
 
 ```text
 known harmful scenarios
@@ -209,11 +212,11 @@ recovery / fallback
 multilingual/domain slices
 ```
 
-Không có finite test suite nào chứng minh an toàn tuyệt đối. Mục tiêu là tăng coverage và evidence theo risk model.
+Không có finite bộ kiểm thử (test suite / 테스트 스위트) nào chứng minh an toàn tuyệt đối. Mục tiêu là tăng coverage và bằng chứng (evidence / 증거) theo rủi ro (risk / 위험) mô hình (model / 모델).
 
 ## Red teaming
 
-Red teaming chủ động tìm failure thay vì chờ production phát hiện. Kết quả red team có giá trị khi được chuyển thành:
+Red teaming chủ động tìm thất bại (failure / 실패) thay vì chờ môi trường vận hành (production / 운영 환경) phát hiện. Kết quả red nhóm (team / 팀) có giá trị khi được chuyển thành:
 
 ```text
 failure taxonomy
@@ -223,11 +226,11 @@ failure taxonomy
 → monitoring signal
 ```
 
-Chỉ lưu “prompt đã jailbreak được” mà không thay đổi control thì chưa hoàn thành vòng học.
+Chỉ lưu “prompt đã jailbreak được” mà không thay đổi điều khiển (control / 제어) thì chưa hoàn thành vòng học.
 
-## Mô hình triển khai production
+## Mô hình triển khai môi trường vận hành (production / 운영 환경)
 
-Một hệ thống rủi ro vừa/cao có thể theo flow:
+Một hệ thống rủi ro vừa/cao có thể theo luồng (flow / 흐름):
 
 ```text
 request
@@ -243,53 +246,55 @@ request
 → audit / monitoring
 ```
 
-Mỗi bước nên có owner, failure behavior và trace rõ ràng.
+Mỗi bước nên có đơn vị sở hữu (owner / 오너), hành vi khi thất bại (failure behavior / 실패 동작) và dấu vết (trace / 추적) rõ ràng.
 
-## Trade-off
+## Sự đánh đổi (trade-off / 트레이드오프)
 
-Safety control thường đánh đổi:
+An toàn (safety / 안전) điều khiển (control / 제어) thường đánh đổi:
 
-- latency;
-- cost;
+- độ trễ (latency / 지연 시간);
+- chi phí (cost / 비용);
 - autonomy;
 - tỷ lệ tự động hóa;
 - false positive refusal;
-- developer velocity.
+- nhà phát triển (developer / 개발자) velocity.
 
-Mục tiêu không phải tối đa mọi control, mà là chọn control tương ứng risk class và khả năng phục hồi.
+Mục tiêu không phải tối đa mọi điều khiển (control / 제어), mà là chọn điều khiển (control / 제어) tương ứng rủi ro (risk / 위험) lớp (class / 클래스) và khả năng phục hồi.
 
-## Failure mode thường gặp
+## Dạng thất bại (failure mode / 실패 모드) thường gặp
 
-**Safe model, unsafe application.** Tool permission quá rộng hoặc UI khiến user overtrust.
+**Safe mô hình (model / 모델), unsafe ứng dụng (application / 애플리케이션).** công cụ (tool / 도구) permission quá rộng hoặc UI khiến người dùng (user / 사용자) overtrust.
 
-**Benchmark safety overfitting.** Tốt trên test set nhưng yếu với ngôn ngữ hoặc attack mới.
+**Benchmark an toàn (safety / 안전) overfitting.** Tốt trên kiểm thử (test / 테스트) set nhưng yếu với ngôn ngữ hoặc attack mới.
 
-**Fallback không được test.** Chỉ tồn tại trong diagram.
+**Fallback không được kiểm thử (test / 테스트).** Chỉ tồn tại trong diagram.
 
-**Approval sau side effect.** Human review đến quá muộn.
+**Approval sau side tác động (effect / 효과).** Human rà soát (review / 검토) đến quá muộn.
 
-**Monitoring chỉ đo HTTP 200.** Không phát hiện silent quality/safety degradation.
+**Monitoring chỉ đo HTTP 200.** Không phát hiện silent chất lượng (quality / 품질)/an toàn (safety / 안전) degradation.
 
-**Không có kill switch.** Không thể vô hiệu hóa capability nhanh khi incident xảy ra.
+**Không có kill switch.** Không thể vô hiệu hóa năng lực (capability / 역량) nhanh khi sự cố (incident / 인시던트) xảy ra.
 
 ## Mô hình tư duy
 
-> **An toàn AI = nhận diện mối nguy → giới hạn capability → kiểm chứng hành vi → giới hạn hậu quả → quan sát production → phục hồi khi thất bại.**
+> **An toàn AI = nhận diện mối nguy → giới hạn năng lực (capability / 역량) → kiểm chứng hành vi → giới hạn hậu quả → quan sát môi trường vận hành (production / 운영 환경) → phục hồi khi thất bại.**
 
 ## Những nhầm lẫn thường gặp
 
 ### “Mô hình an toàn = ứng dụng an toàn”
 
-Không. Permission, retrieval, tool, UI và workflow có thể làm ứng dụng nguy hiểm dù model tương đối tốt.
+Không. Permission, retrieval, công cụ (tool / 도구), UI và workflow có thể làm ứng dụng nguy hiểm dù mô hình (model / 모델) tương đối tốt.
 
-### “Security và safety là một”
+### “bảo mật (security / 보안) và an toàn (safety / 안전) là một”
 
-Không. Security tập trung vào khai thác có chủ đích; safety bao gồm cả lỗi không có attacker.
+Không. bảo mật (security / 보안) tập trung vào khai thác có chủ đích; an toàn (safety / 안전) bao gồm cả lỗi không có attacker.
 
 ### “Một benchmark đủ chứng minh an toàn”
 
-Không. Safety phụ thuộc context, distribution, tool và deployment.
+Không. an toàn (safety / 안전) phụ thuộc ngữ cảnh (context / 맥락), phân phối (distribution / 분포), công cụ (tool / 도구) và triển khai (deployment / 배포).
 
 ## Liên kết kiến thức
 
 Xem [Căn chỉnh AI](./01_alignment_and_objective_specification.md), [Prompt Injection](./03_prompt_injection_and_jailbreaks.md), [Adversarial ML](./04_adversarial_machine_learning.md), [Reliability](../18_evaluation_reliability_interpretability/07_reliability_engineering.md), [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md) và [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 alignment and objective specification](./01_alignment_and_objective_specification.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

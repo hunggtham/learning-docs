@@ -1,5 +1,7 @@
 # Pin Galvani — biến năng lượng tự do hóa học thành công điện
 
+> **Mạch đọc:** Đọc **Pin Galvani — biến năng lượng tự do hóa học thành công điện** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Electron đi qua cầu muối”** sang **“Anode luôn âm”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Pin Galvani hay pin Volta (galvanic/voltaic cell / 갈바니 전지)** tách một phản ứng oxy hóa–khử tự phát thành hai vùng không gian khác nhau để electron buộc phải đi qua mạch ngoài. Nhờ vậy, một phần độ giảm năng lượng tự do Gibbs của phản ứng có thể được thu dưới dạng **công điện**, thay vì chủ yếu biến thành nhiệt tại cùng một vị trí phản ứng.
 
 Pin điện hóa vì thế không tạo ra năng lượng từ hư không. Nó chỉ **định tuyến dòng electron** của một phản ứng redox theo một con đường hữu ích.
@@ -74,7 +76,7 @@ Sự khác nhau này là quy ước lịch sử của điện học, không ph�
 
 Mỗi bán pin thường chứa chất điện ly để ion có thể di chuyển.
 
-Nếu electron rời anode mà không có chuyển động ion bù điện tích, phía anode sẽ tích điện dương còn phía cathode tích điện âm, tạo electric field chống lại electron flow và dòng nhanh chóng dừng.
+Nếu electron rời anode mà không có chuyển động ion bù điện tích, phía anode sẽ tích điện dương còn phía cathode tích điện âm, tạo electric trường dữ liệu (field / 필드) chống lại electron luồng (flow / 흐름) và dòng nhanh chóng dừng.
 
 Vì vậy một pin cần hai circuit đồng thời:
 
@@ -92,7 +94,7 @@ Chỉ có một trong hai circuit thì pin không thể duy trì dòng lâu.
 Trong pin Zn/Cu:
 
 - ở anode, \(Zn^{2+}\) được tạo → cần anion đi tới để duy trì gần trung hòa;
-- ở cathode, \(Cu^{2+}\) bị tiêu thụ → cation từ cầu muối có thể đi tới để bù thay đổi charge distribution.
+- ở cathode, \(Cu^{2+}\) bị tiêu thụ → cation từ cầu muối có thể đi tới để bù thay đổi charge phân phối (distribution / 분포).
 
 Cầu muối **không phải đường electron**.
 
@@ -143,9 +145,9 @@ Vì vậy electrochemistry xây thang bằng điện cực tham chiếu. **Đi�
 E^\circ=0.000\;V
 \]
 
-Các thế điện cực khác được đo tương đối so với reference này.
+Các thế điện cực khác được đo tương đối so với tham chiếu (reference / 참조) này.
 
-Trong thực hành dùng nhiều reference thuận tiện hơn như Ag/AgCl hoặc calomel.
+Trong thực hành dùng nhiều tham chiếu (reference / 참조) thuận tiện hơn như Ag/AgCl hoặc calomel.
 
 # Thế khử chuẩn
 
@@ -157,7 +159,7 @@ Ox+ne^-\rightarrow Red
 
 với **thế khử chuẩn (standard reduction potential)**.
 
-Thế càng dương nghĩa chiều khử thuận lợi hơn so với reference trong điều kiện chuẩn tương ứng.
+Thế càng dương nghĩa chiều khử thuận lợi hơn so với tham chiếu (reference / 참조) trong điều kiện chuẩn tương ứng.
 
 Để tính pin:
 
@@ -172,7 +174,7 @@ vì cathode là quá trình khử, còn anode thực tế chạy ngược chiề
 
 Giả sử phải nhân một bán phản ứng lên 2 để cân electron. Không được nhân \(E^\circ\) lên 2.
 
-Điện thế là đại lượng cường độ. Đại lượng dung lượng là Gibbs energy:
+Điện thế là đại lượng cường độ. Đại lượng dung lượng là Gibbs năng lượng (energy / 에너지):
 
 \[
 \Delta G^\circ=-nFE^\circ
@@ -188,7 +190,7 @@ E° giữ nguyên
 
 Đây là một lỗi phổ biến khi ghép bán phản ứng.
 
-# Từ điện thế tới Gibbs free energy
+# Từ điện thế tới Gibbs free năng lượng (energy / 에너지)
 
 Với phản ứng pin tổng:
 
@@ -210,7 +212,7 @@ thì:
 
 và chiều viết của pin Galvani thuận lợi về nhiệt động.
 
-Điện áp có thể hiểu là **free-energy change trên một đơn vị điện tích**.
+Điện áp có thể hiểu là **free-energy thay đổi (change / 변경) trên một đơn vị điện tích**.
 
 Một volt:
 
@@ -222,16 +224,16 @@ Do đó điện hóa biến một chênh lệch chemical potential thành một 
 
 # Open-circuit voltage
 
-Khi không nối tải và gần như không có dòng, pin có thể tiến gần trạng thái local electrochemical equilibrium ở hai interfaces.
+Khi không nối tải và gần như không có dòng, pin có thể tiến gần trạng thái cục bộ (local / 로컬) electrochemical equilibrium ở hai interfaces.
 
 Điện áp đo được là **điện áp hở mạch (open-circuit voltage, OCV)**.
 
-OCV phản ánh thermodynamic state tốt hơn loaded voltage, nhưng chỉ khi:
+OCV phản ánh thermodynamic trạng thái (state / 상태) tốt hơn loaded voltage, nhưng chỉ khi:
 
 - pin đã đủ thời gian thư giãn;
 - side reactions nhỏ;
 - không có large concentration gradients;
-- reference/contact effects được kiểm soát.
+- tham chiếu (reference / 참조)/contact effects được kiểm soát.
 
 Trong battery diagnostics, đo OCV ngay sau high-current pulse có thể chưa phản ánh equilibrium composition vì gradients vẫn còn.
 
@@ -245,7 +247,7 @@ E=E^\circ-rac{RT}{nF}\ln Q
 
 Khi pin discharge, reactants giảm và products tăng, Q thay đổi nên voltage thay đổi.
 
-Vì vậy pin không có một “điện áp hóa học cố định” hoàn toàn độc lập với state of charge.
+Vì vậy pin không có một “điện áp hóa học cố định” hoàn toàn độc lập với trạng thái (state / 상태) of charge.
 
 # Pin nồng độ
 
@@ -273,7 +275,7 @@ Cách nhìn này thống nhất Nernst, membrane potentials và battery thermody
 
 # Khi nối tải, pin rời khỏi equilibrium
 
-Nếu nối một điện trở ngoài, electron bắt đầu chạy. Lúc đó system không còn ở trạng thái reversible equilibrium.
+Nếu nối một điện trở ngoài, electron bắt đầu chạy. Lúc đó hệ thống (system / 시스템) không còn ở trạng thái reversible equilibrium.
 
 Điện áp đầu cực thực:
 
@@ -283,7 +285,7 @@ V_{terminal}
 -\eta_{anode}
 -\eta_{cathode}
 -I R_{ohmic}
--\text{tổn thất vận chuyển khối}
+-\văn bản (text / 텍스트){tổn thất vận chuyển khối}
 \]
 
 ở dạng khái niệm.
@@ -299,15 +301,15 @@ loaded voltage → thermodynamics − losses
 
 **Quá thế (overpotential, \(\eta\))** là phần điện áp bổ sung liên quan kinetics của electrode reaction.
 
-Ngay cả khi reaction thermodynamically favorable, electron transfer có thể cần electrode potential lệch khỏi equilibrium value để tạo current đáng kể.
+Ngay cả khi reaction thermodynamically favorable, electron transfer có thể cần electrode potential lệch khỏi equilibrium giá trị (value / 값) để tạo hiện tại (current / 현재) đáng kể.
 
-Butler–Volmer mô tả relation giữa current density và \(\eta\) trong model cơ bản.
+Butler–Volmer mô tả quan hệ (relation / 관계) giữa hiện tại (current / 현재) density và \(\eta\) trong mô hình (model / 모델) cơ bản.
 
 # Tổn thất ohmic
 
 Ion đi qua electrolyte và electron đi qua solid conductor đều gặp resistance.
 
-Voltage loss gần:
+Voltage mất mát (loss / 손실) gần:
 
 \[
 \Delta V_{ohmic}=IR
@@ -320,21 +322,21 @@ Resistance tăng khi:
 - contact kém;
 - temperature thấp.
 
-Tổn thất này biến một phần free energy thành heat.
+Tổn thất này biến một phần free năng lượng (energy / 에너지) thành heat.
 
 # Phân cực nồng độ
 
-Khi current cao, reactant gần electrode có thể bị tiêu thụ nhanh hơn tốc độ vận chuyển từ bulk.
+Khi hiện tại (current / 현재) cao, reactant gần electrode có thể bị tiêu thụ nhanh hơn tốc độ vận chuyển từ bulk.
 
-Surface concentration khác bulk concentration, nên local Nernst potential thay đổi và xuất hiện **phân cực nồng độ (concentration polarization)**.
+Surface concentration khác bulk concentration, nên cục bộ (local / 로컬) Nernst potential thay đổi và xuất hiện **phân cực nồng độ (concentration polarization)**.
 
-Nếu surface concentration tiến gần zero, current có thể chạm limiting value.
+Nếu surface concentration tiến gần zero, hiện tại (current / 현재) có thể chạm limiting giá trị (value / 값).
 
 Đây là cầu nối giữa electrochemistry và diffusion.
 
 # Công suất và năng lượng không giống nhau
 
-Energy capacity cho biết pin có thể cung cấp tổng năng lượng bao nhiêu.
+Năng lượng (energy / 에너지) sức chứa (capacity / 용량) cho biết pin có thể cung cấp tổng năng lượng bao nhiêu.
 
 Power:
 
@@ -344,9 +346,9 @@ P=IV
 
 cho biết tốc độ cung cấp năng lượng.
 
-Một battery có high capacity vẫn có thể không cấp high power nếu kinetics hoặc transport chậm.
+Một battery có high sức chứa (capacity / 용량) vẫn có thể không cấp high power nếu kinetics hoặc vận chuyển (transport / 전송) chậm.
 
-Đây là lý do electrode particle size, conductivity và electrolyte transport quan trọng bên cạnh thermodynamic voltage.
+Đây là lý do electrode particle kích thước (size / 크기), conductivity và electrolyte vận chuyển (transport / 전송) quan trọng bên cạnh thermodynamic voltage.
 
 # Dung lượng lý thuyết
 
@@ -367,9 +369,9 @@ C_{specific}
 
 với \(M\) là molar mass theo g/mol.
 
-Dung lượng vì vậy là bài toán stoichiometry electron, còn voltage là bài toán free energy per charge.
+Dung lượng vì vậy là bài toán stoichiometry electron, còn voltage là bài toán free năng lượng (energy / 에너지) per charge.
 
-# State of charge và electrode chemical potential
+# Trạng thái (state / 상태) of charge và electrode chemical potential
 
 Trong intercalation battery, composition của electrode thay đổi khi Li được chèn/rút.
 
@@ -377,7 +379,7 @@ Chemical potential của Li trong host thay đổi theo composition, nên electr
 
 Plateau voltage thường liên quan two-phase coexistence hoặc vùng chemical potential thay đổi chậm.
 
-Sloping voltage phản ánh solid-solution behavior hoặc nhiều contributions khác.
+Sloping voltage phản ánh solid-solution hành vi (behavior / 동작) hoặc nhiều contributions khác.
 
 Voltage curve vì thế chứa thông tin thermodynamics của material.
 
@@ -406,11 +408,11 @@ Battery có thể sinh hoặc hấp thụ **reversible entropic heat** ngoài Jo
 
 # Tự phóng điện
 
-Ngay cả khi không nối tải, side reactions có thể tiêu thụ charged species, làm state of charge giảm theo thời gian.
+Ngay cả khi không nối tải, side reactions có thể tiêu thụ charged species, làm trạng thái (state / 상태) of charge giảm theo thời gian.
 
 Đó là **tự phóng điện (self-discharge)**.
 
-Thermodynamic instability của charged state có thể tồn tại nhưng kinetics chậm; electrolyte/electrode interfaces được thiết kế để side reactions đủ chậm trong thời gian sử dụng.
+Thermodynamic instability của charged trạng thái (state / 상태) có thể tồn tại nhưng kinetics chậm; electrolyte/electrode interfaces được thiết kế để side reactions đủ chậm trong thời gian sử dụng.
 
 Pin vì thế là ví dụ điển hình của việc khai thác **metastability có kiểm soát**.
 
@@ -418,28 +420,28 @@ Pin vì thế là ví dụ điển hình của việc khai thác **metastability
 
 Khi hai metals khác nhau tiếp xúc qua electrolyte, metal hoạt động hơn có thể trở thành anode và ăn mòn nhanh.
 
-Ngay trên một metal duy nhất, differences về oxygen concentration, stress hoặc microstructure có thể tạo local galvanic cells.
+Ngay trên một metal duy nhất, differences về oxygen concentration, stress hoặc microstructure có thể tạo cục bộ (local / 로컬) galvanic cells.
 
-Pin và corrosion dùng cùng thermodynamics; khác nhau chủ yếu ở việc electron flow có được khai thác hữu ích hay gây phá hủy vật liệu.
+Pin và corrosion dùng cùng thermodynamics; khác nhau chủ yếu ở việc electron luồng (flow / 흐름) có được khai thác hữu ích hay gây phá hủy vật liệu.
 
 # Pin sinh học
 
 Màng tế bào duy trì gradients ion và điện thế.
 
-Proton motive force có electrochemical free energy:
+Proton motive force có electrochemical free năng lượng (energy / 에너지):
 
 \[
 \Delta\tilde\mu_{H^+}
 =RT\ln\frac{a_2}{a_1}+F\Delta\phi
 \]
 
-ATP synthase khai thác gradient đó tương tự một molecular energy converter.
+ATP synthase khai thác độ dốc (gradient / 기울기) đó tương tự một molecular năng lượng (energy / 에너지) converter.
 
 Điều này cho thấy electrochemical potential không chỉ dành cho pin kim loại; nó là nguyên lý nền của bioenergetics.
 
 # Fuel cell
 
-Fuel cell cũng là galvanic device, nhưng reactants được cung cấp liên tục từ bên ngoài thay vì lưu toàn bộ trong cell.
+Fuel cell cũng là galvanic thiết bị (device / 장치), nhưng reactants được cung cấp liên tục từ bên ngoài thay vì lưu toàn bộ trong cell.
 
 Ví dụ H₂/O₂ fuel cell:
 
@@ -447,9 +449,9 @@ Ví dụ H₂/O₂ fuel cell:
 2H_2+O_2\rightarrow2H_2O
 \]
 
-Thermodynamics giống combustion, nhưng electron được buộc qua external circuit để tạo work.
+Thermodynamics giống combustion, nhưng electron được buộc qua bên ngoài (external / 외부) circuit để tạo công việc (work / 작업).
 
-Fuel cell vì thế là cầu nối trực tiếp giữa chemical energy và electrical energy conversion.
+Fuel cell vì thế là cầu nối trực tiếp giữa chemical năng lượng (energy / 에너지) và electrical năng lượng (energy / 에너지) conversion.
 
 # Những hiểu lầm thường gặp
 
@@ -471,15 +473,15 @@ Không. Có kinetic, ohmic và mass-transfer losses.
 
 ### “Thêm nhiều active material làm voltage tăng”
 
-Không trực tiếp. Nó chủ yếu tăng capacity/energy amount; equilibrium voltage phụ thuộc chemical potentials.
+Không trực tiếp. Nó chủ yếu tăng sức chứa (capacity / 용량)/năng lượng (energy / 에너지) amount; equilibrium voltage phụ thuộc chemical potentials.
 
 ### “Pin hết điện nghĩa electron đã hết”
 
-Không. State of charge và available chemical free-energy difference đã giảm; electrons vẫn tồn tại trong vật chất.
+Không. trạng thái (state / 상태) of charge và available chemical free-energy difference đã giảm; electrons vẫn tồn tại trong vật chất.
 
 ## Mô hình tư duy
 
-Pin Galvani là một **bộ chuyển đổi chemical-potential difference thành electron flow có kiểm soát**:
+Pin Galvani là một **bộ chuyển đổi chemical-potential difference thành electron luồng (flow / 흐름) có kiểm soát**:
 
 ```text
 redox free-energy difference
@@ -489,6 +491,8 @@ redox free-energy difference
 → điện áp × điện lượng = công điện
 ```
 
-Khi có tải, kinetics và transport lấy đi một phần voltage khỏi thermodynamic maximum. Vì vậy hiểu pin cần đồng thời thermodynamics, kinetics, diffusion và materials chemistry.
+Khi có tải, kinetics và vận chuyển (transport / 전송) lấy đi một phần voltage khỏi thermodynamic maximum. Vì vậy hiểu pin cần đồng thời thermodynamics, kinetics, diffusion và materials chemistry.
 
 Xem tiếp: [Điện thế pin và phương trình Nernst](./03_cell_potential_and_nernst_equation.md), [Điện hóa động học và trở kháng](./06_electrochemical_kinetics_and_impedance.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

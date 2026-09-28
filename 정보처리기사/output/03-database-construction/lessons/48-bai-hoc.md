@@ -10,7 +10,7 @@ CRUD, 분석
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **186. 시스템 카탈로그 (System Catalog)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **194. 파티션 (Partition)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,8 +20,10 @@ CRUD, 분석
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **190. CRUD 분석** và nối nó với **194. 파티션 (Partition)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 190. CRUD 분석
-- Create, Read, Update, Delete 연산의 매트릭스 분석으로 데이터 양 유추.
+- Create, Read, cập nhật (update / 업데이트), Delete 연산의 매트릭스 분석으로 데이터 양 유추.
 - **VI (Vietnamese) (Tiếng Việt):** Phân tích ma trận CRUD (Tạo, Đọc, Sửa, Xóa).

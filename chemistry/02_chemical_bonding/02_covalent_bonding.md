@@ -1,5 +1,8 @@
 # Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân
 
+> **Mạch đọc:** Đọc **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phân tử hydrogen — ví dụ tối giản** sang **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Liên kết cộng hóa trị (covalent bond / 공유 결합)** là kiểu liên kết trong đó mật độ electron được chia sẻ hoặc phi định xứ giữa hai hay nhiều hạt nhân, và cách tổ chức electron này làm tổng năng lượng của hệ giảm xuống so với các mảnh tách rời.
 
 Cụm “hai nguyên tử dùng chung một cặp electron” là cách biểu diễn rất hữu ích trong lý thuyết Lewis, nhưng electron thật không ngồi giữa hai nguyên tử như hai người cùng giữ một vật. Liên kết là một **trạng thái lượng tử của mật độ electron** trong trường của nhiều hạt nhân.
@@ -121,7 +124,7 @@ và:
 
 Orbital liên kết có mật độ electron tăng giữa các hạt nhân.
 
-Orbital phản liên kết có node giữa hai hạt nhân và electron ở đó làm liên kết yếu đi.
+Orbital phản liên kết có nút (node / 노드) giữa hai hạt nhân và electron ở đó làm liên kết yếu đi.
 
 Điều này giúp giải thích sâu hơn vì sao không phải chỉ “có electron” là tạo liên kết; **electron nằm ở orbital nào** mới quyết định hiệu ứng liên kết.
 
@@ -133,7 +136,7 @@ Một định nghĩa hữu ích:
 BO=\frac{N_{bonding}-N_{antibonding}}{2}
 \]
 
-Nếu electron đi vào orbital phản liên kết, bond order giảm.
+Nếu electron đi vào orbital phản liên kết, bond thứ tự (order / 순서) giảm.
 
 Ví dụ này quan trọng khi giải thích:
 
@@ -200,13 +203,13 @@ Do đó không nên suy mọi phân bố electron chỉ từ một bảng độ 
 
 Trong mô hình đơn giản, `q` là độ lớn phân tách điện tích và `r` là khoảng cách.
 
-Mômen lưỡng cực phân tử là tổng vector của:
+Mômen lưỡng cực phân tử là tổng véc-tơ (vector / 벡터) của:
 
 - dipole liên kết;
 - ảnh hưởng lone pair;
 - hình học toàn phân tử.
 
-`CO2` có hai liên kết C=O phân cực nhưng phân tử không phân cực vì hai vector triệt tiêu trong cấu trúc tuyến tính.
+`CO2` có hai liên kết C=O phân cực nhưng phân tử không phân cực vì hai véc-tơ (vector / 벡터) triệt tiêu trong cấu trúc tuyến tính.
 
 Do đó:
 
@@ -223,7 +226,7 @@ Nguyên tử lớn, electron ngoài xa nucleus và đám mây electron mềm th�
 Polarizability ảnh hưởng:
 
 - lực London;
-- refractive index;
+- refractive chỉ mục (index / 인덱스);
 - tương tác ion–induced dipole;
 - mức cộng hóa trị trong chất ion;
 - tính chất quang học.
@@ -298,7 +301,7 @@ Cặp electron không liên kết trên nitrogen tạo liên kết với proton.
 
 Sau khi liên kết hình thành, không tồn tại “một loại liên kết vật lý riêng” chỉ vì nguồn gốc ban đầu của electron khác nhau.
 
-Điều này nối Lewis acid–base với coordination chemistry.
+Điều này nối Lewis acid–cơ sở (base / 기반) với coordination chemistry.
 
 ## Cộng hưởng và phi định xứ
 
@@ -321,7 +324,7 @@ Nó quan trọng trong:
 - carboxylate;
 - benzene;
 - amide;
-- allyl system;
+- allyl hệ thống (system / 시스템);
 - aromatic ion.
 
 ## Conjugation
@@ -354,7 +357,7 @@ Nó góp phần giải thích:
 - stability của alkene thay thế;
 - conformational preferences.
 
-Không nên mô tả mọi xu hướng này chỉ bằng “inductive effect”.
+Không nên mô tả mọi xu hướng này chỉ bằng “inductive tác động (effect / 효과)”.
 
 ## Liên kết đa tâm
 
@@ -389,7 +392,7 @@ Tính chất của mạng phụ thuộc:
 
 - connectivity;
 - dimensionality;
-- band structure;
+- band cấu trúc (structure / 구조);
 - defect;
 - topology.
 
@@ -416,7 +419,7 @@ thành phần hóa học không đủ
 
 Khi phân tử hấp thụ photon, electron có thể chuyển từ orbital liên kết sang orbital phản liên kết.
 
-Nếu bond order giảm đáng kể, liên kết có thể yếu đi hoặc đứt.
+Nếu bond thứ tự (order / 순서) giảm đáng kể, liên kết có thể yếu đi hoặc đứt.
 
 Đây là nền tảng của:
 
@@ -425,7 +428,7 @@ Nếu bond order giảm đáng kể, liên kết có thể yếu đi hoặc đ�
 - cis–trans photoisomerization;
 - photopolymerization.
 
-Vì vậy bonding không chỉ quyết định cấu trúc ground state mà còn quyết định phản ứng ở excited state.
+Vì vậy bonding không chỉ quyết định cấu trúc ground trạng thái (state / 상태) mà còn quyết định phản ứng ở excited trạng thái (state / 상태).
 
 ## Liên kết và spectroscopy
 
@@ -461,7 +464,7 @@ Không. Có multicenter bonding và các hệ phi định xứ rộng hơn.
 
 ### “Hybridization là hình ảnh lượng tử duy nhất đúng”
 
-Không. Hybridization là mô hình localized bonding hữu ích; MO theory có thể cho mô tả khác nhưng tương thích về dự đoán.
+Không. Hybridization là mô hình localized bonding hữu ích; MO lý thuyết (theory / 이론) có thể cho mô tả khác nhưng tương thích về dự đoán.
 
 ### “Phá liên kết giải phóng năng lượng”
 
@@ -469,6 +472,8 @@ Không. Phá bond cần năng lượng; quá trình tổng có thể tỏa nhi�
 
 ## Mô hình tư duy
 
-Liên kết cộng hóa trị là **cách hệ tổ chức mật độ electron để hạ năng lượng trong trường của nhiều hạt nhân**. Lewis giúp hạch toán electron; valence-bond theory giúp mô tả overlap và liên kết cục bộ; molecular-orbital theory mô tả delocalization và orbital phản liên kết. Không mô hình nào cần được xem là “hình ảnh duy nhất của thực tại”; mỗi mô hình trả lời một lớp câu hỏi khác nhau.
+Liên kết cộng hóa trị là **cách hệ tổ chức mật độ electron để hạ năng lượng trong trường của nhiều hạt nhân**. Lewis giúp hạch toán electron; valence-bond lý thuyết (theory / 이론) giúp mô tả overlap và liên kết cục bộ; molecular-orbital lý thuyết (theory / 이론) mô tả delocalization và orbital phản liên kết. Không mô hình nào cần được xem là “hình ảnh duy nhất của thực tại”; mỗi mô hình trả lời một lớp câu hỏi khác nhau.
 
 Xem tiếp: [Cấu trúc Lewis và cộng hưởng](./03_lewis_structures_and_resonance.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

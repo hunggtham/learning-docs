@@ -1,5 +1,8 @@
 # Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản
 
+> **Mạch đọc:** Đặt **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bối cảnh giả định** sang **2. Thanh khoản và khả năng thanh toán**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Tình huống này phân biệt ba khái niệm thường bị trộn lẫn: **tổn thất thị trường (market loss)**, **căng thẳng thanh khoản (liquidity stress)** và **mất khả năng thanh toán về vốn (solvency problem)**. Mục tiêu là theo dõi cách một cú sốc nhỏ ở tài sản thế chấp hoặc nguồn vốn có thể biến thành giảm đòn bẩy cưỡng bức, co hẹp tín dụng, suy giảm lợi nhuận và cuối cùng tác động tới nền kinh tế thực.
 
 ## 1. Bối cảnh giả định
@@ -215,7 +218,7 @@ Các tín hiệu cần chú ý gồm PIK tăng, gia hạn và sửa điều kho�
 
 ## 18. Giảm đòn bẩy cưỡng bức
 
-Quỹ hoặc nhà giao dịch dùng đòn bẩy có thể phải bán cả tài sản không liên quan để đáp ứng margin call. Vì vậy tài sản chất lượng tốt đôi khi cũng giảm mạnh ở giai đoạn đầu khủng hoảng.
+Quỹ hoặc nhà giao dịch dùng đòn bẩy có thể phải bán cả tài sản không liên quan để đáp ứng margin lời gọi (call / 호출). Vì vậy tài sản chất lượng tốt đôi khi cũng giảm mạnh ở giai đoạn đầu khủng hoảng.
 
 Tương quan tăng đột biến có thể phản ánh nhu cầu tiền mặt, không nhất thiết phản ánh thay đổi cơ bản của mọi tài sản.
 
@@ -274,7 +277,7 @@ Thay vì chỉ hỏi “danh mục mất bao nhiêu nếu cổ phiếu giảm 20
 
 > Điều gì phải xảy ra để tôi buộc phải bán tài sản tốt ở đáy?
 
-Các nguyên nhân có thể gồm mất thu nhập, margin call, trả nợ, gọi vốn từ quỹ tư nhân, lệch tiền tệ hoặc sự cố môi giới/lưu ký.
+Các nguyên nhân có thể gồm mất thu nhập, margin lời gọi (call / 호출), trả nợ, gọi vốn từ quỹ tư nhân, lệch tiền tệ hoặc sự cố môi giới/lưu ký.
 
 ## 24. Thiết kế phòng vệ
 
@@ -359,3 +362,5 @@ Thanh khoản danh mục
 ## Kết luận
 
 Khủng hoảng tín dụng không bắt đầu và kết thúc ở một “ngân hàng xấu”. Nó là vấn đề mạng lưới giữa đòn bẩy, tài sản thế chấp, nguồn vốn, niềm tin và chính sách. Nhà đầu tư cần nhìn bảng cân đối và thời điểm dòng tiền trước khi nhìn P/E tiêu đề. Trong khủng hoảng, **khả năng sống sót, thanh khoản và quyền lựa chọn** thường quan trọng hơn việc tối đa hóa lợi suất kỳ vọng.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INFLATION SHOCK FROM CPI TO PORTFOLIO](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

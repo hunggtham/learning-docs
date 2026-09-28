@@ -1,11 +1,14 @@
 # hợp nhất-tìm kiếm / hợp nhất tập rời nhau
+
+> **Mạch đọc:** Đọc **hợp nhất-tìm kiếm / hợp nhất tập rời nhau** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hai thao tác cốt lõi** sang **Mô hình tư duy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Tập hợp rời nhau (Disjoint Set Union / 서로소 집합)**
 
 hợp nhất-tìm kiếm, thường gọi là **hợp nhất tập rời nhau (DSU / 서로소 집합 자료구조)**, được thiết kế cho một câu hỏi rất hẹp nhưng xuất hiện rất nhiều:
 
 > Khi các phần tử liên tục được hợp nhất thành các nhóm, làm sao biết nhanh hai phần tử có đang thuộc cùng một nhóm hay không?
 
-DSU không cố lưu toàn bộ topology của đồ thị. Nó không biết đường đi giữa hai các đỉnh, không biết degree, không biết đường đi ngắn nhất (shortest path). Nó chỉ duy trì **thành phần identity**.
+DSU không cố lưu toàn bộ topology của đồ thị. Nó không biết đường đi giữa hai các đỉnh, không biết degree, không biết đường đi ngắn nhất (shortest path). Nó chỉ duy trì **thành phần định danh (identity / 식별자)**.
 
 ## Hai thao tác cốt lõi
 
@@ -27,7 +30,7 @@ thì `a` và `b` đã connected theo quan hệ merge hiện tại.
 
 Điểm mạnh của DSU đến từ việc nó từ chối lưu thông tin không cần thiết. Nếu bài toán chỉ hỏi connectivity dưới thao tác merge, đường đi chi tiết là overhead.
 
-## cách biểu diễn (representation) bằng nút cha forest
+## cách biểu diễn (representation / 표현) bằng nút cha forest
 
 Ban đầu mỗi phần tử là một set riêng:
 
@@ -65,7 +68,7 @@ Tất cả các nút trong cùng cây có cùng representative nút gốc.
 
 ## Cách đơn giản union có vấn đề gì?
 
-Nếu luôn gắn nút gốc mới vào nút gốc cũ một cách tùy ý, có thể tạo chain:
+Nếu luôn gắn nút gốc mới vào nút gốc cũ một cách tùy ý, có thể tạo chuỗi (chain / 사슬):
 
 ```text
 0 <- 1 <- 2 <- 3 <- 4 <- ...
@@ -73,12 +76,12 @@ Nếu luôn gắn nút gốc mới vào nút gốc cũ một cách tùy ý, có 
 
 Khi đó `find(n-1)` là `O(n)`.
 
-DSU hiệu quả nhờ hai optimization phối hợp:
+DSU hiệu quả nhờ hai tối ưu hóa (optimization / 최적화) phối hợp:
 
-1. **union by size/rank (크기/랭크 기준 합치기)**;
+1. **union by kích thước (size / 크기)/rank (크기/랭크 기준 합치기)**;
 2. **đường đi compression (경로 압축)**.
 
-## Union by size
+## Union by kích thước (size / 크기)
 
 Khi merge hai các thành phần, gắn nút gốc của cây nhỏ hơn dưới nút gốc của cây lớn hơn.
 
@@ -101,7 +104,7 @@ boolean union(int a, int b) {
 }
 ```
 
-### Tại sao size heuristic giúp chiều cao nhỏ?
+### Tại sao kích thước (size / 크기) heuristic giúp chiều cao nhỏ?
 
 Mỗi khi độ sâu của một nút tăng 1 do cây của nó bị gắn dưới cây khác, thành phần mới ít nhất gấp đôi thành phần cũ nếu luôn gắn smaller vào larger.
 
@@ -160,7 +163,7 @@ int dsu_find(DSU *d, int x) {
 }
 ```
 
-Pass đầu tìm nút gốc; pass sau compress đường đi. Iterative form tránh recursion độ sâu concern và làm sự thay đổi dữ liệu flow rõ ràng.
+Pass đầu tìm nút gốc; pass sau compress đường đi. Iterative form tránh recursion độ sâu concern và làm sự thay đổi dữ liệu luồng (flow / 흐름) rõ ràng.
 
 ## `O(alpha(n))` thực sự nghĩa là gì?
 
@@ -180,9 +183,9 @@ Nhưng nói “DSU là O(1)” về mặt lý thuyết là không chính xác. C
 
 ## phân tích khấu hao ở đây đến từ đâu?
 
-Một `find` riêng lẻ vẫn có thể đi qua nhiều các nút. Nhưng mỗi lần đi qua đường đi dài, compression làm structure phẳng hơn. Ta không thể liên tục trả chi phí lớn trên cùng các nút mà không thay đổi tương lai shape.
+Một `find` riêng lẻ vẫn có thể đi qua nhiều các nút. Nhưng mỗi lần đi qua đường đi dài, compression làm cấu trúc (structure / 구조) phẳng hơn. Ta không thể liên tục trả chi phí lớn trên cùng các nút mà không thay đổi tương lai shape.
 
-Đây là cùng family reasoning với mảng động resize: một thao tác đắt được “trả” bởi việc làm nhiều thao tác tương lai rẻ hơn.
+Đây là cùng family lập luận (reasoning / 추론) với mảng động resize: một thao tác đắt được “trả” bởi việc làm nhiều thao tác tương lai rẻ hơn.
 
 ## DSU trong Kruskal MST
 
@@ -212,11 +215,11 @@ for edge (u,v):
         union(u,v)
 ```
 
-Lưu ý đây là reasoning cho **undirected** connectivity. Directed phát hiện chu trình không thể dùng DSU theo cách này vì directed reachability không phải quan hệ tương đương đơn giản.
+Lưu ý đây là lập luận (reasoning / 추론) cho **undirected** connectivity. Directed phát hiện chu trình không thể dùng DSU theo cách này vì directed reachability không phải quan hệ tương đương đơn giản.
 
 ## Connected các thành phần dưới merge-only các cập nhật
 
-Nếu các đỉnh ban đầu tách rời và các cạnh chỉ được thêm, DSU là structure rất tự nhiên.
+Nếu các đỉnh ban đầu tách rời và các cạnh chỉ được thêm, DSU là cấu trúc (structure / 구조) rất tự nhiên.
 
 Maintain thêm:
 
@@ -284,11 +287,11 @@ Insight này cho thấy DSU không chỉ là endpoint thuật toán; nó còn c�
 
 ## DSU với parity / bipartite các ràng buộc
 
-Ta có thể lưu thêm relation từ nút tới nút cha. Ví dụ `parity[x]` biểu diễn màu của `x` XOR màu nút cha.
+Ta có thể lưu thêm quan hệ (relation / 관계) từ nút tới nút cha. Ví dụ `parity[x]` biểu diễn màu của `x` XOR màu nút cha.
 
 Khi `find(x)` compress đường đi, phải compose parity dọc đường đi.
 
-Structure này có thể support các ràng buộc kiểu:
+Cấu trúc (structure / 구조) này có thể hỗ trợ (support / 지원) các ràng buộc kiểu:
 
 ```text
 u và v phải khác màu
@@ -296,7 +299,7 @@ u và v phải khác màu
 
 và detect contradiction khi thêm các cạnh trong trực tuyến bipartiteness variants.
 
-Nguyên tắc tổng quát: DSU có thể duy trì **relative potential** giữa nút và representative nếu relation compose được.
+Nguyên tắc tổng quát: DSU có thể duy trì **relative potential** giữa nút và representative nếu quan hệ (relation / 관계) compose được.
 
 ## Weighted / Potential DSU
 
@@ -306,36 +309,36 @@ Một biến thể lưu:
 potential[x] = giá trị(x) - giá trị(nút cha(x))
 \]
 
-hoặc một group-like relation tương tự. Khi union hai các thành phần với ràng buộc giữa `a` và `b`, ta tính potential của nút gốc mới sao cho relation vẫn đúng.
+hoặc một group-like quan hệ (relation / 관계) tương tự. Khi union hai các thành phần với ràng buộc giữa `a` và `b`, ta tính potential của nút gốc mới sao cho quan hệ (relation / 관계) vẫn đúng.
 
-Ứng dụng gồm difference các ràng buộc đơn giản, coordinate relation và parity.
+Ứng dụng gồm difference các ràng buộc đơn giản, coordinate quan hệ (relation / 관계) và parity.
 
 Đây là bước nâng cao: đường đi compression không chỉ đổi nút cha; mọi siêu dữ liệu relative-to-parent phải được cập nhật tương ứng.
 
 ## Tại sao DSU chuẩn không hỗ trợ xóa/tách tốt?
 
-DSU được tối ưu cho **monotonic merge**. Sau đường đi compression, nhiều các nút có thể trỏ thẳng tới nút gốc; original cây structure gần như bị mất.
+DSU được tối ưu cho **monotonic merge**. Sau đường đi compression, nhiều các nút có thể trỏ thẳng tới nút gốc; original cây cấu trúc (structure / 구조) gần như bị mất.
 
 Nếu xóa một cạnh đã từng làm các thành phần merge, DSU không biết thành phần phải split thành những phần nào vì nó chưa bao giờ lưu đủ đồ thị topology.
 
-Đây không phải thiếu feature nhỏ; đó là consequence trực tiếp của thông tin compression.
+Đây không phải thiếu tính năng (feature / 기능) nhỏ; đó là consequence trực tiếp của thông tin compression.
 
-> DSU nhanh vì nó quên đường đi structure. Muốn support deletion, bạn cần giữ thêm thông tin hoặc đổi thuật toán.
+> DSU nhanh vì nó quên đường đi cấu trúc (structure / 구조). Muốn hỗ trợ (support / 지원) deletion, bạn cần giữ thêm thông tin hoặc đổi thuật toán.
 
-## Rollback DSU
+## Quay lui (rollback / 롤백) DSU
 
-Nếu cần undo unions trong ngoại tuyến thuật toán, standard đường đi compression gây khó vì một `find` có thể mutate nhiều các nút cha.
+Nếu cần undo unions trong ngoại tuyến thuật toán, tiêu chuẩn (standard / 표준) đường đi compression gây khó vì một `find` có thể mutate nhiều các nút cha.
 
-**Rollback DSU (롤백 DSU)** thường:
+**quay lui (rollback / 롤백) DSU (롤백 DSU)** thường:
 
 - dùng union-by-size;
 - không path-compress;
-- mỗi union ghi thay đổi vào stack;
-- rollback pop stack để restore nút cha/size.
+- mỗi union ghi thay đổi vào ngăn xếp (stack / 스택);
+- quay lui (rollback / 롤백) pop ngăn xếp (stack / 스택) để restore nút cha/kích thước (size / 크기).
 
 Union/find khi đó thường `O(log n)` trường hợp xấu nhất do union-by-size chiều cao bound, nhưng undo trở nên đơn giản.
 
-### Change stack idea
+### Thay đổi (change / 변경) ngăn xếp (stack / 스택) idea
 
 ```text
 union(ra, rb):
@@ -347,11 +350,11 @@ rollback():
     restore recorded values
 ```
 
-Optimization không tồn tại trong chân không: đường đi compression tốt cho forward các truy vấn nhưng xung đột với reversibility.
+Tối ưu hóa (optimization / 최적화) không tồn tại trong chân không: đường đi compression tốt cho forward các truy vấn nhưng xung đột với reversibility.
 
 ## động connectivity ngoại tuyến
 
-Nếu các cạnh có cả add và remove theo time, có thể xử lý ngoại tuyến bằng cây đoạn (Segment Tree) over time + rollback DSU.
+Nếu các cạnh có cả add và remove theo thời gian (time / 시간), có thể xử lý ngoại tuyến bằng cây đoạn (Segment Tree) over thời gian (time / 시간) + quay lui (rollback / 롤백) DSU.
 
 Mỗi cạnh tồn tại trên một interval thời gian `[l,r)`. Ta add cạnh vào các segment-tree các nút phủ interval đó. DFS cây đoạn:
 
@@ -363,13 +366,13 @@ exit node -> rollback
 
 Mỗi truy vấn sees đúng tập các cạnh active tại timestamp của nó.
 
-Đây là một example nâng cao của việc kết hợp các cấu trúc dữ liệu: cây đoạn quản time intervals, rollback DSU quản connectivity trạng thái (state).
+Đây là một example nâng cao của việc kết hợp các cấu trúc dữ liệu: cây đoạn quản thời gian (time / 시간) intervals, quay lui (rollback / 롤백) DSU quản connectivity trạng thái (state / 상태).
 
 ## Persistent / Partially Persistent DSU
 
-Một hướng khác là giữ lịch sử để truy vấn connectivity ở version cũ. Có nhiều designs: union cây với timestamps, persistent các mảng, or versioned nút cha relations. Không phải mọi variant support arbitrary branching các cập nhật; cần xác định persistence mô hình.
+Một hướng khác là giữ lịch sử để truy vấn connectivity ở phiên bản (version / 버전) cũ. Có nhiều designs: union cây với timestamps, persistent các mảng, or versioned nút cha relations. Không phải mọi variant hỗ trợ (support / 지원) arbitrary branching các cập nhật; cần xác định persistence mô hình.
 
-Điểm conceptual là DSU có thể được mở rộng theo trục **time**, nhưng standard cách triển khai chỉ đại diện trạng thái hiện tại.
+Điểm conceptual là DSU có thể được mở rộng theo trục **thời gian (time / 시간)**, nhưng tiêu chuẩn (standard / 표준) cách triển khai chỉ đại diện trạng thái hiện tại.
 
 ## gộp nhỏ vào lớn khác DSU thế nào?
 
@@ -484,21 +487,21 @@ class DSU {
 
 ## Những hiểu lầm phổ biến
 
-**“Representative là smallest phần tử.”** Không trừ khi bạn chủ động giữ quy tắc đó. nút gốc chỉ là cách triển khai identity.
+**“Representative là smallest phần tử.”** Không trừ khi bạn chủ động giữ quy tắc đó. nút gốc chỉ là cách triển khai định danh (identity / 식별자).
 
 **“DSU cho biết đường đi giữa hai các đỉnh.”** Không. Nó chỉ biết cùng thành phần hay không.
 
-**“DSU dùng được cho directed reachability.”** Không theo standard formulation; directed connectivity không phải quan hệ tương đương đơn giản.
+**“DSU dùng được cho directed reachability.”** Không theo tiêu chuẩn (standard / 표준) formulation; directed connectivity không phải quan hệ tương đương đơn giản.
 
-**“đường đi compression luôn nên bật.”** Không nếu cần rollback/undo hoặc một persistence design cụ thể.
+**“đường đi compression luôn nên bật.”** Không nếu cần quay lui (rollback / 롤백)/undo hoặc một persistence thiết kế (design / 설계) cụ thể.
 
-**“`size[x]` luôn là thành phần size.”** Thường chỉ đúng ở nút gốc. Hãy dùng `size[find(x)]`.
+**“`size[x]` luôn là thành phần kích thước (size / 크기).”** Thường chỉ đúng ở nút gốc. Hãy dùng `size[find(x)]`.
 
 **“Gần O(1) nghĩa là trường hợp xấu nhất O(1).”** Không. Bound chuẩn là amortized `O(alpha(n))` với hai optimizations.
 
 ## kiểm thử DSU
 
-Một test tốt nên tạo ngẫu nhiên union/truy vấn sequence và so sánh với tham chiếu đồ thị connectivity trên `n` nhỏ.
+Một kiểm thử (test / 테스트) tốt nên tạo ngẫu nhiên union/truy vấn chuỗi (sequence / 시퀀스) và so sánh với tham chiếu đồ thị connectivity trên `n` nhỏ.
 
 các bất biến nên kiểm:
 
@@ -512,9 +515,9 @@ connected là equivalence relation
 
 quan hệ tương đương nghĩa là reflexive, symmetric và transitive. Đây cũng là lý do DSU hợp với partition problems.
 
-## Connection với các lớp tương đương
+## Liên kết (connection / 연결) với các lớp tương đương
 
-Nếu relation “cùng nhóm” thực sự là quan hệ tương đương, DSU là cách biểu diễn tự nhiên:
+Nếu quan hệ (relation / 관계) “cùng nhóm” thực sự là quan hệ tương đương, DSU là cách biểu diễn tự nhiên:
 
 ```text
 x ~ x                     reflexive
@@ -526,8 +529,10 @@ Connected các thành phần của đồ thị vô hướng (undirected graph), 
 
 ## Mô hình tư duy mở rộng
 
-> DSU là một structure tối ưu cho **monotonic equivalence merging**. Nó đổi đường đi/topology detail lấy thành phần identity cực rẻ.
+> DSU là một cấu trúc (structure / 구조) tối ưu cho **monotonic equivalence merging**. Nó đổi đường đi/topology detail lấy thành phần định danh (identity / 식별자) cực rẻ.
 
-Khi gặp bài toán connectivity, hãy hỏi: các cạnh chỉ được thêm hay còn bị xóa? truy vấn cần đường đi hay chỉ yes/no cùng thành phần? Có threshold ngoại tuyến không? Có siêu dữ liệu per thành phần không? Có cần rollback không?
+Khi gặp bài toán connectivity, hãy hỏi: các cạnh chỉ được thêm hay còn bị xóa? truy vấn cần đường đi hay chỉ yes/no cùng thành phần? Có threshold ngoại tuyến không? Có siêu dữ liệu per thành phần không? Có cần quay lui (rollback / 롤백) không?
 
 Nếu câu trả lời là “chỉ merge và hỏi cùng nhóm”, DSU thường là sự trừu tượng (abstraction) đúng hơn BFS/DFS lặp lại.
+
+> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

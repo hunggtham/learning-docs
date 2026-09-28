@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **3. 트리 (Tree)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **30. 트리 구조 추가 용어 (Tree Terminology Additional)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,15 +20,17 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 이진 트리의 운행법 (Binary Tree Traversal)** và nối nó với **30. 트리 구조 추가 용어 (Tree Terminology Additional)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 4. 이진 트리의 운행법 (Binary Tree Traversal)
-* **Preorder (전위)**: Root → Left → Right
-* **Inorder (중위)**: Left → Root → Right
-* **Postorder (후위)**: Left → Right → Root
+* **Preorder (전위)**: gốc (root / 루트) → Left → Right
+* **Inorder (중위)**: Left → gốc (root / 루트) → Right
+* **Postorder (후위)**: Left → Right → gốc (root / 루트)
 * **VI (Vietnamese) (Tiếng Việt):**
   * Preorder: Gốc -> Trái -> Phải.
   * Inorder: Trái -> Gốc -> Phải.
   * Postorder: Trái -> Phải -> Gốc.
 * **Example**: 수식 `A + B`를 전위 표기하면 `+ A B`, 중위 표기하면 `A + B`, 후위 표기하면 `A B +`가 됩니다.
-* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của Root (Gốc) so với Trái/Phải.
+* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của gốc (root / 루트) so với Trái/Phải.

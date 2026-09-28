@@ -1,4 +1,7 @@
-# Lũy thừa, căn và logarithm: multiplicative structure và inverse scales
+# Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales
+
+> **Mạch đọc:** Đọc **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Từ repeated addition đến repeated multiplication** sang **2. Vì sao exponent laws tồn tại?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Lũy thừa (power / 거듭제곱), căn (root / 근) và logarithm (로그) không phải ba chủ đề tách rời. Chúng là ba cách đọc cùng một relationship:
 
@@ -8,7 +11,7 @@ b^x=y.
 
 Nếu biết `b` và `x`, ta tính `y`: đó là exponentiation. Nếu biết `x` và `y`, ta hỏi giá trị base-like phù hợp: đó dẫn tới roots. Nếu biết `b` và `y`, ta hỏi exponent cần thiết: đó là logarithm.
 
-Điểm sâu hơn là cả ba thuộc **multiplicative structure**. Chúng mô tả systems nơi scale thay đổi bằng factors, không phải fixed differences.
+Điểm sâu hơn là cả ba thuộc **multiplicative cấu trúc (structure / 구조)**. Chúng mô tả các hệ thống (systems / 시스템들) nơi quy mô (scale / 규모) thay đổi bằng factors, không phải fixed differences.
 
 ## 1. Từ repeated addition đến repeated multiplication
 
@@ -18,13 +21,13 @@ Multiplication có thể được xem như repeated addition trong integer setti
 5\cdot3=5+5+5.
 ```
 
-Exponentiation tiếp tục pattern bằng repeated multiplication:
+Exponentiation tiếp tục mẫu (pattern / 패턴) bằng repeated multiplication:
 
 ```math
 b^n=\underbrace{b\cdot b\cdots b}_{n\text{ factors}}.
 ```
 
-Nếu `b>1`, repeated multiplication tạo growth nhanh hơn linear growth vì mỗi step scale toàn bộ quantity hiện tại.
+Nếu `b>1`, repeated multiplication tạo growth nhanh hơn tuyến tính (linear / 선형) growth vì mỗi step quy mô (scale / 규모) toàn bộ quantity hiện tại.
 
 Ví dụ doubling:
 
@@ -38,7 +41,7 @@ sau `n` doublings:
 2^n.
 ```
 
-Đây là structure phía sau compound interest, population models, binary trees và many divide/multiply processes.
+Đây là cấu trúc (structure / 구조) phía sau compound interest, population các mô hình (models / 모델들), nhị phân (binary / 이진) trees và many divide/multiply processes.
 
 ## 2. Vì sao exponent laws tồn tại?
 
@@ -48,7 +51,7 @@ Với positive integers:
 b^m b^n
 ```
 
-chỉ là product có tổng cộng `m+n` factors `b`, nên
+chỉ là sản phẩm (product / 제품) có tổng cộng `m+n` factors `b`, nên
 
 ```math
 b^m b^n=b^{m+n}.
@@ -60,7 +63,7 @@ Tương tự,
 (b^m)^n=b^{mn}
 ```
 
-vì ta lặp một product có `m` factors tổng cộng `n` lần.
+vì ta lặp một sản phẩm (product / 제품) có `m` factors tổng cộng `n` lần.
 
 Các exponent laws không nên được học như bảng rules; chúng đến từ counting multiplicative factors.
 
@@ -86,7 +89,7 @@ nên ta cần
 b^0=1,\qquad b\ne0.
 ```
 
-Đây là consistency extension: definition của exponent được mở rộng để giữ algebraic structure.
+Đây là consistency extension: definition của exponent được mở rộng để giữ algebraic cấu trúc (structure / 구조).
 
 ## 4. Negative exponents là inverse scaling
 
@@ -132,7 +135,7 @@ Do exponent multiplication law, điều này gợi ý
 b^{1/n}=\sqrt[n]{b}
 ```
 
-trong domain phù hợp.
+trong lĩnh vực (domain / 도메인) phù hợp.
 
 Do đó
 
@@ -140,11 +143,11 @@ Do đó
 b^{m/n}=\sqrt[n]{b^m}.
 ```
 
-Với real numbers, domain cần cẩn thận: even root của negative real không tồn tại trong `\mathbb R`, nhưng tồn tại trong complex numbers.
+Với real numbers, lĩnh vực (domain / 도메인) cần cẩn thận: even gốc (root / 루트) của negative real không tồn tại trong `\mathbb R`, nhưng tồn tại trong complex numbers.
 
-Fractional exponents vì vậy nối number systems với exponent laws.
+Fractional exponents vì vậy nối number các hệ thống (systems / 시스템들) với exponent laws.
 
-## 6. Exponential function khác polynomial growth như thế nào?
+## 6. Exponential hàm (function / 함수) khác polynomial growth như thế nào?
 
 So sánh
 
@@ -158,9 +161,9 @@ và
 2^x.
 ```
 
-Trong polynomial, variable nằm ở base. Trong exponential, variable nằm ở exponent.
+Trong polynomial, variable nằm ở cơ sở (base / 기반). Trong exponential, variable nằm ở exponent.
 
-Khi `x` lớn, exponential với base `>1` cuối cùng vượt mọi fixed-degree polynomial. Đây là lý do exponential-time algorithms trở nên infeasible cực nhanh.
+Khi `x` lớn, exponential với cơ sở (base / 기반) `>1` cuối cùng vượt mọi fixed-degree polynomial. Đây là lý do exponential-time algorithms trở nên infeasible cực nhanh.
 
 Ví dụ:
 
@@ -188,7 +191,7 @@ b>0,\qquad b\ne1,\qquad y>0.
 
 Logarithm trả lời câu hỏi:
 
-> Cần bao nhiêu multiplicative steps ở base `b` để đi từ scale 1 tới scale `y`?
+> Cần bao nhiêu multiplicative steps ở cơ sở (base / 기반) `b` để đi từ quy mô (scale / 규모) 1 tới quy mô (scale / 규모) `y`?
 
 Ví dụ:
 
@@ -198,7 +201,7 @@ Ví dụ:
 
 vì ba doublings đưa 1 thành 8.
 
-## 8. Vì sao log biến product thành sum?
+## 8. Vì sao log biến sản phẩm (product / 제품) thành sum?
 
 Giả sử
 
@@ -212,7 +215,7 @@ Khi đó
 xy=b^{m+n}.
 ```
 
-Lấy log base `b`:
+Lấy log cơ sở (base / 기반) `b`:
 
 ```math
 \log_b(xy)=m+n
@@ -230,7 +233,7 @@ nên
 \log_b(xy)=\log_bx+\log_by.
 ```
 
-Log law xuất phát trực tiếp từ exponent law. Product trở thành sum vì logarithm đo exponent depth.
+Log law xuất phát trực tiếp từ exponent law. sản phẩm (product / 제품) trở thành sum vì logarithm đo exponent độ sâu (depth / 깊이).
 
 Tương tự:
 
@@ -238,7 +241,7 @@ Tương tự:
 \log_b(x^k)=k\log_bx.
 ```
 
-## 9. Change of base: vì sao base chỉ thay scale
+## 9. thay đổi (change / 변경) of cơ sở (base / 기반): vì sao cơ sở (base / 기반) chỉ thay quy mô (scale / 규모)
 
 Từ
 
@@ -258,7 +261,7 @@ nên
 \log_b y=\frac{\ln y}{\ln b}.
 ```
 
-Các log bases khác nhau chỉ khác nhau bởi constant scale factor. Đây là lý do trong Big-O,
+Các log bases khác nhau chỉ khác nhau bởi constant quy mô (scale / 규모) factor. Đây là lý do trong Big-O,
 
 ```math
 \log_2 n
@@ -270,9 +273,9 @@ và
 \ln n
 ```
 
-cùng asymptotic order.
+cùng asymptotic thứ tự (order / 순서).
 
-## 10. Base `e` xuất hiện từ continuous change
+## 10. cơ sở (base / 기반) `e` xuất hiện từ continuous thay đổi (change / 변경)
 
 Natural exponential
 
@@ -286,7 +289,7 @@ e^x
 \frac{d}{dx}e^x=e^x.
 ```
 
-Nếu quantity có instantaneous growth rate proportional với chính nó,
+Nếu quantity có instantaneous growth tỷ lệ (rate / 비율) proportional với chính nó,
 
 ```math
 \frac{dA}{dt}=kA,
@@ -298,7 +301,7 @@ solution có dạng
 A(t)=A_0e^{kt}.
 ```
 
-Do đó `e` không chỉ là một constant lạ. Nó là base tự nhiên khi multiplicative change xảy ra continuously.
+Do đó `e` không chỉ là một constant lạ. Nó là cơ sở (base / 기반) tự nhiên khi multiplicative thay đổi (change / 변경) xảy ra continuously.
 
 ## 11. Compound growth và solving time-to-target
 
@@ -308,7 +311,7 @@ Nếu growth mỗi period là `r`,
 A_n=A_0(1+r)^n.
 ```
 
-Muốn tìm `n` để đạt target `A`:
+Muốn tìm `n` để đạt mục tiêu (target / 대상) `A`:
 
 ```math
 A=A_0(1+r)^n.
@@ -326,7 +329,7 @@ Lấy log:
 n=\frac{\ln(A/A_0)}{\ln(1+r)}.
 ```
 
-Unknown nằm trong exponent nên logarithm là inverse operation tự nhiên.
+Unknown nằm trong exponent nên logarithm là inverse thao tác (operation / 연산) tự nhiên.
 
 ### Worked example
 
@@ -342,7 +345,7 @@ Suy ra
 n=\frac{\ln2}{\ln1.08}\approx9.0.
 ```
 
-Đây là nguồn gốc định lượng của Rule of 72 approximation.
+Đây là nguồn gốc định lượng của quy tắc (rule / 규칙) of 72 approximation.
 
 ## 12. Half-life và exponential decay
 
@@ -368,7 +371,7 @@ Cùng algebra áp dụng cho radioactive decay, pharmacokinetics, capacitor disc
 
 ## 13. `O(log n)` đến từ repeated shrinking
 
-Nếu mỗi step giảm problem size bởi factor `b>1`:
+Nếu mỗi step giảm bài toán (problem / 문제) kích thước (size / 크기) bởi factor `b>1`:
 
 ```math
 n,\frac nb,\frac n{b^2},\ldots
@@ -386,11 +389,11 @@ Suy ra
 k\approx\log_b n.
 ```
 
-Binary search là example điển hình. `O(log n)` không có nghĩa code phải gọi một `log()` function; logarithm xuất hiện từ **number of multiplicative reductions**.
+Tìm kiếm nhị phân (binary search / 이진 탐색) là example điển hình. `O(log n)` không có nghĩa mã (code / 코드) phải gọi một `log()` hàm (function / 함수); logarithm xuất hiện từ **number of multiplicative reductions**.
 
-## 14. Log scales trong measurement
+## 14. Log scales trong đo lường (measurement / 측정)
 
-Khi values trải nhiều orders of magnitude, linear scale có thể khó đọc. Logarithmic scales chuyển ratios thành differences.
+Khi values trải nhiều orders of magnitude, tuyến tính (linear / 선형) quy mô (scale / 규모) có thể khó đọc. Logarithmic scales chuyển ratios thành differences.
 
 ### Decibel
 
@@ -410,11 +413,11 @@ pH=-\log_{10}[H^+].
 
 Concentration tăng factor 10 làm pH giảm 1.
 
-Log scales rất hữu ích, nhưng interpretation phải giữ relation với original multiplicative scale.
+Log scales rất hữu ích, nhưng interpretation phải giữ quan hệ (relation / 관계) với original multiplicative quy mô (scale / 규모).
 
-## 15. Information theory: surprise là logarithmic
+## 15. thông tin (information / 정보) lý thuyết (theory / 이론): surprise là logarithmic
 
-Information content thường được viết
+Thông tin (information / 정보) content thường được viết
 
 ```math
 I(x)=-\log_2P(x).
@@ -426,45 +429,45 @@ Nếu hai independent events có probabilities multiply,
 P(A\cap B)=P(A)P(B),
 ```
 
-thì information adds:
+thì thông tin (information / 정보) adds:
 
 ```math
 I(A,B)=I(A)+I(B).
 ```
 
-Logarithm là function tự nhiên vì nó biến multiplicative probability structure thành additive information.
+Logarithm là hàm (function / 함수) tự nhiên vì nó biến multiplicative xác suất (probability / 확률) cấu trúc (structure / 구조) thành additive thông tin (information / 정보).
 
 ## 16. Numerical computing: tại sao dùng log-probability?
 
-Trong statistics/AI, likelihood của many independent observations thường là product:
+Trong statistics/AI, likelihood của many independent observations thường là sản phẩm (product / 제품):
 
 ```math
 L(\theta)=\prod_i p(x_i\mid\theta).
 ```
 
-Product của nhiều số nhỏ có thể underflow floating point. Lấy log:
+Sản phẩm (product / 제품) của nhiều số nhỏ có thể underflow floating điểm (point / 지점). Lấy log:
 
 ```math
 \log L(\theta)=\sum_i\log p(x_i\mid\theta).
 ```
 
-Ta vừa biến product thành sum, vừa cải thiện numerical behavior.
+Ta vừa biến sản phẩm (product / 제품) thành sum, vừa cải thiện numerical hành vi (behavior / 동작).
 
-Đây là example rõ của algebraic identity trở thành engineering technique.
+Đây là example rõ của algebraic định danh (identity / 식별자) trở thành kỹ thuật (engineering / 엔지니어링) technique.
 
-## 17. Common failure modes
+## 17. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
 ### `\log(a+b)` không phân phối qua addition
 
-Không có rule
+Không có quy tắc (rule / 규칙)
 
 ```math
 \log(a+b)=\log a+\log b.
 ```
 
-Log laws đến từ multiplication/exponent structure, không phải arbitrary algebraic simplification.
+Log laws đến từ multiplication/exponent cấu trúc (structure / 구조), không phải arbitrary algebraic simplification.
 
-### Root và exponent có domain subtleties
+### Gốc (root / 루트) và exponent có lĩnh vực (domain / 도메인) subtleties
 
 Ví dụ
 
@@ -472,15 +475,15 @@ Ví dụ
 \sqrt{x^2}=|x|,
 ```
 
-không phải luôn `x`. Square root convention trả nonnegative principal root trong real numbers.
+không phải luôn `x`. Square gốc (root / 루트) convention trả nonnegative principal gốc (root / 루트) trong real numbers.
 
-### Exponential model không thể dùng vô hạn
+### Exponential mô hình (model / 모델) không thể dùng vô hạn
 
-Một system có finite resources thường không thể grow exponential mãi. Logistic models hoặc saturation mechanisms có thể cần thiết.
+Một hệ thống (system / 시스템) có finite resources thường không thể grow exponential mãi. Logistic các mô hình (models / 모델들) hoặc saturation mechanisms có thể cần thiết.
 
 ## Applications và connections
 
-**Computer Science:** binary search, tree height, exponential state spaces, logarithmic data structures.
+**Khoa học máy tính (computer science / 컴퓨터 과학):** tìm kiếm nhị phân (binary search / 이진 탐색), cây (tree / 트리) height, exponential trạng thái (state / 상태) spaces, logarithmic dữ liệu (data / 데이터) structures.
 
 **Physics:** radioactive decay, oscillation envelopes, thermodynamics/statistical mechanics scales.
 
@@ -488,16 +491,18 @@ Một system có finite resources thường không thể grow exponential mãi. 
 
 **Finance:** compound returns, discounting, continuously compounded rates, time-to-target calculations.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Powers describe multiplicative accumulation. Roots undo a known power. Logarithms measure multiplicative depth. Whenever a system changes by ratios, factors, repeated halving/doubling or compounding, exponentials and logarithms are the natural language.
+> Powers describe multiplicative accumulation. Roots undo a known power. Logarithms measure multiplicative độ sâu (depth / 깊이). Whenever a hệ thống (system / 시스템) changes by ratios, factors, repeated halving/doubling or compounding, exponentials and logarithms are the natural ngôn ngữ (language / 언어).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 **Exponent rules là arbitrary formulas.** Không; chúng encode how multiplicative factors combine.
 
-**Negative exponent là negative value.** Không; nó means reciprocal scaling.
+**Negative exponent là negative giá trị (value / 값).** Không; nó means reciprocal scaling.
 
-**Logarithm chỉ dùng để solve equations.** Không; nó là coordinate system tự nhiên cho multiplicative processes và information.
+**Logarithm chỉ dùng để solve equations.** Không; nó là coordinate hệ thống (system / 시스템) tự nhiên cho multiplicative processes và thông tin (information / 정보).
 
-**`O(log n)` nghĩa “rất nhanh” trong mọi setting.** Không; nó mô tả asymptotic scaling trong một cost model. Constants, memory access và I/O vẫn matter.
+**`O(log n)` nghĩa “rất nhanh” trong mọi setting.** Không; nó mô tả asymptotic scaling trong một chi phí (cost / 비용) mô hình (model / 모델). Constants, bộ nhớ (memory / 메모리) truy cập (access / 접근) và I/O vẫn matter.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algebraic language](./00_algebraic_language.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

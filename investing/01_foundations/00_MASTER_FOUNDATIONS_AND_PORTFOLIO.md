@@ -1,6 +1,9 @@
 # Bản đồ nền tảng đầu tư và quản trị danh mục
 
-> File này là **bản đồ tổng quan**, không thay thế các chương chuyên sâu trong `01_foundations/`. Mục tiêu là giúp người đọc thấy toàn bộ hệ thống trước khi đi sâu. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc ở những điểm cần tra cứu.
+> **Mạch đọc:** Đặt **Bản đồ nền tảng đầu tư và quản trị danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đầu tư thực chất là phân bổ sức mua theo thời gian** sang **2. Lợi suất danh nghĩa và lợi suất thực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là **bản đồ tổng quan**, không thay thế các chương chuyên sâu trong `01_foundations/`. Mục tiêu là giúp người đọc thấy toàn bộ hệ thống trước khi đi sâu. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc ở những điểm cần tra cứu.
 
 ## 1. Đầu tư thực chất là phân bổ sức mua theo thời gian
 
@@ -120,11 +123,11 @@ Duration cũng là một trực giác hữu ích cho cổ phiếu: doanh nghiệ
 
 ## 11. REIT và bất động sản
 
-Bất động sản tạo lợi suất từ thu nhập thuê, tăng trưởng NOI, thay đổi cap rate và đòn bẩy.
+Bất động sản tạo lợi suất từ thu nhập thuê, tăng trưởng NOI, thay đổi cap tỷ lệ (rate / 비율) và đòn bẩy.
 
 REIT là cổ phiếu của một cấu trúc sở hữu bất động sản; nó vẫn chịu rủi ro thị trường, lãi suất, tái cấp vốn và thanh khoản.
 
-Cap rate không nên được đọc tách khỏi tăng trưởng NOI và chi phí vốn.
+Cap tỷ lệ (rate / 비율) không nên được đọc tách khỏi tăng trưởng NOI và chi phí vốn.
 
 ## 12. Vàng
 
@@ -184,7 +187,7 @@ Nếu không giải thích được quyền lợi pháp lý, nguồn cầu và c
 
 Lệnh thị trường ưu tiên khớp; lệnh giới hạn ưu tiên giá; stop là cơ chế kích hoạt chứ không phải bảo đảm giá thoát.
 
-Spread, slippage và market impact là các chi phí thực tế quan trọng, đặc biệt khi quy mô vị thế lớn so thanh khoản.
+Spread, slippage và thị trường (market / 시장) impact là các chi phí thực tế quan trọng, đặc biệt khi quy mô vị thế lớn so thanh khoản.
 
 ## 21. Bán khống
 
@@ -194,7 +197,7 @@ Tổn thất lý thuyết của bán khống không bị giới hạn khi giá t
 
 ## 22. Margin và đòn bẩy
 
-Đòn bẩy làm phóng đại cả lợi nhuận và thua lỗ. Margin call có thể buộc bán ở thời điểm xấu.
+Đòn bẩy làm phóng đại cả lợi nhuận và thua lỗ. Margin lời gọi (call / 호출) có thể buộc bán ở thời điểm xấu.
 
 Luận điểm đúng nhưng dùng đòn bẩy quá lớn vẫn có thể thất bại vì không sống được tới khi luận điểm xảy ra.
 
@@ -238,7 +241,7 @@ Không nên biến phong cách thành bản sắc cá nhân. Một phương phá
 
 ## 27. Nhân tố
 
-Các nhân tố như value, size, quality, momentum và low volatility có thể giải thích một phần chênh lệch lợi suất giữa các danh mục.
+Các nhân tố như giá trị (value / 값), kích thước (size / 크기), chất lượng (quality / 품질), momentum và low volatility có thể giải thích một phần chênh lệch lợi suất giữa các danh mục.
 
 Một ETF có nhãn “smart beta” chỉ hữu ích nếu phương pháp thật sự tạo exposure mong muốn sau turnover và chi phí.
 
@@ -258,7 +261,7 @@ Thời hạn đầu tư phải gắn với thời điểm cần tiền. Một t�
 
 Tiền mặt và T-bill có vai trò khác cổ phiếu nhỏ, private credit hoặc bất động sản. Danh mục cần đủ thanh khoản để đáp ứng chi tiêu, margin và sự cố mà không phải bán tháo.
 
-## 31. Custody và operational risk
+## 31. Custody và operational rủi ro (risk / 위험)
 
 Rủi ro đầu tư không kết thúc ở giá. Còn có môi giới, pháp nhân, lưu ký, thanh toán, quyền sở hữu thụ hưởng, lỗi vận hành và tài liệu thuế.
 
@@ -276,7 +279,7 @@ Mục tiêu tài chính cuối cùng là sức mua chứ không phải con số 
 
 ## 34. IPS
 
-Tuyên bố chính sách đầu tư (Investment Policy Statement, IPS) là bản mô tả mục tiêu, nghĩa vụ, thanh khoản, phạm vi phân bổ, giới hạn tập trung, quy tắc tái cân bằng và những công cụ được phép sử dụng.
+Tuyên bố chính sách đầu tư (Investment policy Statement, IPS) là bản mô tả mục tiêu, nghĩa vụ, thanh khoản, phạm vi phân bổ, giới hạn tập trung, quy tắc tái cân bằng và những công cụ được phép sử dụng.
 
 IPS giúp giảm thay đổi theo cảm xúc.
 
@@ -296,4 +299,6 @@ Mục tiêu
 → Cập nhật kế hoạch
 ```
 
-Nếu cần chiều sâu, không tiếp tục mở rộng file tổng quan này. Hãy chuyển sang các chapter chuyên sâu trong `01_foundations/` và `02_asset_classes/`.
+Nếu cần chiều sâu, không tiếp tục mở rộng tệp (file / 파일) tổng quan này. Hãy chuyển sang các chapter chuyên sâu trong `01_foundations/` và `02_asset_classes/`.
+
+> **Bàn giao:** Sau **35. Hệ thống cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MONEY FINANCIAL SYSTEM AND MARKET MECHANICS](./01_MONEY_FINANCIAL_SYSTEM_AND_MARKET_MECHANICS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

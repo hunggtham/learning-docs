@@ -1,5 +1,8 @@
 # Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo
 
+> **Mạch đọc:** Đặt **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kỹ năng vận hành và kỹ năng phân bổ vốn** sang **2. Chiến lược có rõ ràng không?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một doanh nghiệp có mô hình kinh doanh tốt vẫn có thể trở thành khoản đầu tư kém nếu ban lãnh đạo phân bổ vốn sai, cơ chế quản trị yếu hoặc lợi ích của người điều hành không đồng nhất với cổ đông thiểu số. Chương này tập trung vào câu hỏi: **ai đang quyết định sử dụng vốn, họ có động cơ gì và giá trị tạo ra ở cấp doanh nghiệp có thực sự chuyển thành giá trị trên mỗi cổ phần hay không?**
 
 Chất lượng ban lãnh đạo nên được đánh giá bằng bằng chứng kéo dài nhiều năm, không bằng khả năng thuyết trình hay một vài quý đạt guidance.
@@ -156,7 +159,7 @@ R&D thường được ghi chi phí ngay nhưng một phần tạo giá trị nh
 
 Cần đánh giá hiệu quả R&D qua:
 
-- pipeline;
+- chuỗi xử lý (pipeline / 파이프라인);
 - sản phẩm mới;
 - doanh thu từ sản phẩm mới;
 - gross profit tạo ra;
@@ -166,7 +169,7 @@ Cần đánh giá hiệu quả R&D qua:
 
 Chi phí lấy khách hàng mới có thể tạo giá trị nhiều năm khi retention tốt.
 
-Với subscription business nên tách khái niệm:
+Với subscription nghiệp vụ (business / 비즈니스) nên tách khái niệm:
 
 ```text
 marketing duy trì
@@ -203,7 +206,7 @@ Cần kiểm tra:
 - FCF coverage;
 - debt maturity;
 - cyclicality;
-- policy;
+- chính sách (policy / 정책);
 - covenant.
 
 ## 19. Cổ tức ổn định và cổ tức biến đổi
@@ -226,7 +229,7 @@ không có lựa chọn sử dụng vốn tốt hơn
 
 Mua cổ phiếu quá đắt có thể phá giá trị dù EPS tăng.
 
-## 21. EPS accretion không bằng value creation
+## 21. EPS accretion không bằng giá trị (value / 값) creation
 
 Giảm số cổ phiếu làm EPS tăng theo cơ học.
 
@@ -374,7 +377,7 @@ Nhưng premium càng lớn thì synergy cần đạt càng cao.
 
 ## 38. Synergy
 
-Cost synergy thường dễ kiểm soát hơn revenue synergy.
+Chi phí (cost / 비용) synergy thường dễ kiểm soát hơn revenue synergy.
 
 Revenue synergy phụ thuộc:
 
@@ -395,7 +398,7 @@ M&A có thể cần:
 - chuyển dữ liệu;
 - tích hợp văn hóa.
 
-Không nên nhìn synergy mà bỏ integration cost.
+Không nên nhìn synergy mà bỏ tích hợp (integration / 통합) chi phí (cost / 비용).
 
 ## 40. Goodwill
 
@@ -443,7 +446,7 @@ Chiến lược mua lại liên tục có thể tốt khi doanh nghiệp có:
 
 Nhưng nó cũng có thể tạo nợ, goodwill và adjusted metrics ngày càng phức tạp.
 
-## 45. Roll-up risk
+## 45. Roll-up rủi ro (risk / 위험)
 
 Roll-up dùng nhiều thương vụ nhỏ để tăng quy mô.
 
@@ -451,8 +454,8 @@ Rủi ro gồm:
 
 - trả giá quá cao;
 - leverage;
-- integration;
-- accounting complexity;
+- tích hợp (integration / 통합);
+- accounting độ phức tạp (complexity / 복잡도);
 - thiếu mục tiêu mới để mua.
 
 Theo dõi organic growth và FCF trên mỗi cổ phần.
@@ -498,13 +501,13 @@ Không chỉ nhìn nhãn “independent”. Cần xem:
 
 ## 49. Các ủy ban
 
-Audit, compensation và nomination committee có vai trò khác nhau.
+Kiểm tra (audit / 감사), compensation và nomination committee có vai trò khác nhau.
 
-Audit committee đặc biệt quan trọng với:
+Kiểm tra (audit / 감사) committee đặc biệt quan trọng với:
 
 - chất lượng báo cáo tài chính;
-- internal control;
-- related-party transaction.
+- nội bộ (internal / 내부) điều khiển (control / 제어);
+- related-party giao dịch (transaction / 트랜잭션).
 
 ## 50. Chair và CEO
 
@@ -527,7 +530,7 @@ Cần kiểm tra lịch sử:
 
 Cấu trúc phức tạp có thể cho phép kiểm soát doanh nghiệp với lượng vốn kinh tế tương đối nhỏ.
 
-Cần vẽ sơ đồ ownership để biết ai thực sự kiểm soát dòng tiền và quyền biểu quyết.
+Cần vẽ sơ đồ quyền sở hữu (ownership / 소유권) để biết ai thực sự kiểm soát dòng tiền và quyền biểu quyết.
 
 ## 53. Dual-class shares
 
@@ -548,7 +551,7 @@ thường đáng tin hơn các tuyên bố quản trị trên website.
 
 # Phần IX — Giao dịch bên liên quan
 
-## 55. Related-party transaction
+## 55. Related-party giao dịch (transaction / 트랜잭션)
 
 Giao dịch với công ty liên quan không tự động xấu nhưng phải có:
 
@@ -574,7 +577,7 @@ Dù chưa phải chi tiền ngay, đây vẫn là rủi ro kinh tế có thể t
 
 ## 58. Thiết kế compensation
 
-Metric thưởng sẽ định hướng hành vi.
+Chỉ số (metric / 지표) thưởng sẽ định hướng hành vi.
 
 ```text
 Revenue target
@@ -590,7 +593,7 @@ ROIC / FCF / per-share metric
 → thường gắn hơn với value creation
 ```
 
-Không metric nào miễn nhiễm với gaming.
+Không chỉ số (metric / 지표) nào miễn nhiễm với gaming.
 
 ## 59. Incentive ngắn hạn và dài hạn
 
@@ -600,7 +603,7 @@ Nhưng long-term plan vẫn phải xem dilution và điều kiện grant.
 
 ## 60. Relative TSR
 
-Relative Total Shareholder Return so với peer group có thể giảm việc thưởng đơn thuần cho market beta.
+Relative Total Shareholder Return so với peer group có thể giảm việc thưởng đơn thuần cho thị trường (market / 시장) beta.
 
 Tuy nhiên peer group có thể được chọn theo hướng dễ đạt mục tiêu.
 
@@ -610,7 +613,7 @@ Clawback cho phép thu hồi một phần compensation trong một số trườn
 
 Hiệu lực thực tế phụ thuộc điều khoản và luật áp dụng.
 
-## 62. Insider ownership
+## 62. Insider quyền sở hữu (ownership / 소유권)
 
 Sở hữu thực của management có thể giúp đồng bộ lợi ích.
 
@@ -643,11 +646,11 @@ So các investor presentation qua nhiều năm thường rất hữu ích.
 
 ## 66. Adjusted metrics
 
-Adjusted metric hữu ích khi loại khoản thật sự không lặp lại.
+Adjusted chỉ số (metric / 지표) hữu ích khi loại khoản thật sự không lặp lại.
 
 Nếu năm nào cũng loại một danh sách “one-off” giống nhau, normalized earnings có thể đang bị thổi phồng.
 
-## 67. Earnings call
+## 67. Earnings lời gọi (call / 호출)
 
 Transcript hữu ích để so:
 
@@ -672,7 +675,7 @@ Không phải bằng chứng sai phạm nhưng cần tìm nguyên nhân, đặc 
 
 ## 70. CFO thay liên tục
 
-CFO turnover lặp lại có thể liên quan tới chiến lược, internal control hoặc văn hóa quản lý. Cần xem bối cảnh cụ thể.
+CFO turnover lặp lại có thể liên quan tới chiến lược, nội bộ (internal / 내부) điều khiển (control / 제어) hoặc văn hóa quản lý. Cần xem bối cảnh cụ thể.
 
 ## 71. Filing trễ và restatement
 
@@ -682,12 +685,12 @@ Cần đánh giá:
 
 - mức độ trọng yếu;
 - nguyên nhân;
-- internal control;
+- nội bộ (internal / 내부) điều khiển (control / 제어);
 - có lặp lại không.
 
 ## 72. Cấu trúc bên liên quan phức tạp
 
-Affiliate network, SPV và giao dịch vòng tròn làm tăng gánh nặng phân tích và rủi ro quản trị.
+Affiliate mạng (network / 네트워크), SPV và giao dịch vòng tròn làm tăng gánh nặng phân tích và rủi ro quản trị.
 
 ## 73. Pha loãng kéo dài
 
@@ -695,7 +698,7 @@ Nếu công ty tuyên bố FCF mạnh nhưng liên tục phát hành cổ phiế
 
 ## 74. Chuỗi chi phí “một lần” sau M&A
 
-Nếu doanh nghiệp liên tục mua lại và năm nào cũng có integration cost “một lần”, nên xem các chi phí đó như một phần của mô hình kinh doanh.
+Nếu doanh nghiệp liên tục mua lại và năm nào cũng có tích hợp (integration / 통합) chi phí (cost / 비용) “một lần”, nên xem các chi phí đó như một phần của mô hình kinh doanh.
 
 ## 75. Trả tiền cho cổ đông bằng nợ
 
@@ -736,7 +739,7 @@ so với
 giá mua + nợ nhận + integration cost
 ```
 
-sau đó so với cost of capital.
+sau đó so với chi phí (cost / 비용) of capital.
 
 ## 79. Buyback yield ròng
 
@@ -810,7 +813,7 @@ Có thể đánh giá theo các câu hỏi:
 10. Value tạo ở business có đến được minority shareholder không?
 ```
 
-## 86. Mẫu review hàng năm
+## 86. Mẫu rà soát (review / 검토) hàng năm
 
 Mỗi năm có thể ghi:
 
@@ -857,3 +860,5 @@ Business tạo lợi nhuận kinh tế
 ```
 
 Vì vậy, khi đánh giá management, hãy tập trung vào **lịch sử quyết định và kết quả trên mỗi cổ phần**, không phải lời nói hoặc hình ảnh lãnh đạo.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

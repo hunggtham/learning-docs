@@ -1,5 +1,7 @@
 # Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)
 
+> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng lesson theo chủ đề để đào sâu từng mắt xích. Mỗi lesson phải được nối lại với tiêu chí phân biệt và câu hỏi của lesson kế tiếp, không học như danh sách thuật ngữ rời.
+
 ## Bài học
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)

@@ -10,14 +10,18 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
 
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **TOP-N và Pagination** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
-## 1. TOP-N Query là gì?
+## 1. TOP-N truy vấn (query / 쿼리) là gì?
 
 **KR:** TOP-N 쿼리는 전체 결과에서 상위 N개의 행을 추출하는 쿼리이다.
-**VI:** TOP-N Query dùng để lấy **N dòng đứng đầu** từ toàn bộ tập kết quả.
+**VI:** TOP-N truy vấn (query / 쿼리) dùng để lấy **N dòng đứng đầu** từ toàn bộ tập kết quả.
 
 Ví dụ:
 
@@ -108,13 +112,13 @@ Ví dụ cùng một row `KING` có thể hôm nay nhận:
 ROWNUM = 5
 ```
 
-nhưng query khác lại nhận:
+nhưng truy vấn (query / 쿼리) khác lại nhận:
 
 ```text
 ROWNUM = 1
 ```
 
-vì `ROWNUM` phụ thuộc vào **thứ tự row được query xử lý**.
+vì `ROWNUM` phụ thuộc vào **thứ tự row được truy vấn (query / 쿼리) xử lý**.
 
 Nó khác với:
 
@@ -126,7 +130,7 @@ PK
 
 vốn là giá trị dữ liệu thật.
 
-## 5. Bẫy lớn nhất: ROWNUM + ORDER BY ⭐⭐⭐
+## 5. Bẫy lớn nhất: ROWNUM + thứ tự (order / 순서) BY ⭐⭐⭐
 
 Giả sử bạn muốn:
 
@@ -143,7 +147,7 @@ ORDER BY SAL DESC;
 
 Nhìn có vẻ đúng.
 
-Nhưng logic thực tế là:
+Nhưng lô-gic (logic / 논리) thực tế là:
 
 ```text
 1. lấy 3 row trước
@@ -167,7 +171,7 @@ mà là:
 
 ## 6. Vì sao?
 
-Theo logic liên quan đến query này:
+Theo lô-gic (logic / 논리) liên quan đến truy vấn (query / 쿼리) này:
 
 ```text
 FROM
@@ -187,11 +191,11 @@ Cho nên:
 WHERE ROWNUM <= 3
 ```
 
-đã giới hạn row **trước khi final ORDER BY thực hiện**.
+đã giới hạn row **trước khi final thứ tự (order / 순서) BY thực hiện**.
 
 Ảnh nhấn mạnh:
 
-**KR:** WHERE 절이 ORDER BY 절보다 먼저 수행된다.
+**KR:** WHERE 절이 thứ tự (order / 순서) BY 절보다 먼저 수행된다.
 **VI:** `WHERE` được xử lý trước `ORDER BY`.
 
 ---
@@ -254,7 +258,7 @@ Subquery nằm trong `FROM` gọi là:
 Inline View
 ```
 
-Ở đây Inline View đóng vai trò như một bảng tạm logic:
+Ở đây Inline View đóng vai trò như một bảng tạm lô-gic (logic / 논리):
 
 ```sql
 SELECT ENAME, SAL
@@ -262,7 +266,7 @@ FROM EMP
 ORDER BY SAL DESC
 ```
 
-Sau khi dữ liệu đã được sắp xếp, outer query mới lấy:
+Sau khi dữ liệu đã được sắp xếp, outer truy vấn (query / 쿼리) mới lấy:
 
 ```sql
 ROWNUM <= 3
@@ -426,9 +430,9 @@ FROM (
 WHERE RN >= 4;
 ```
 
-Đây là pattern cổ điển Oracle paging.
+Đây là mẫu (pattern / 패턴) cổ điển Oracle paging.
 
-Logic:
+Lô-gic (logic / 논리):
 
 ```text
 Bước 1:
@@ -467,15 +471,15 @@ Trong:
 SELECT ROWNUM AS RN, A.*
 ```
 
-`RN` trở thành output column của inline view.
+`RN` trở thành đầu ra (output / 출력) column của inline view.
 
-Outer query nhìn nó như một giá trị dữ liệu bình thường:
+Outer truy vấn (query / 쿼리) nhìn nó như một giá trị dữ liệu bình thường:
 
 ```sql
 WHERE RN BETWEEN 4 AND 6
 ```
 
-Lúc này không còn đang filter trực tiếp pseudocolumn `ROWNUM` trong cùng level nữa.
+Lúc này không còn đang filter trực tiếp pseudocolumn `ROWNUM` trong cùng mức (level / 수준) nữa.
 
 Đây là điểm bản chất.
 
@@ -492,19 +496,19 @@ ROWNUM
 ```
 
 * không cần `OVER`
-* được gán trong quá trình query
-* phụ thuộc query execution
+* được gán trong quá trình truy vấn (query / 쿼리)
+* phụ thuộc truy vấn (query / 쿼리) thực thi (execution / 실행)
 * thường dùng legacy TOP-N/paging
 
 ### ROW_NUMBER()
 
-Window Function:
+Hàm cửa sổ (window function / 윈도우 함수):
 
 ```sql
 ROW_NUMBER() OVER(ORDER BY SAL DESC)
 ```
 
-* là analytic/window function
+* là analytic/hàm cửa sổ (window function / 윈도우 함수)
 * có `ORDER BY` rõ ràng
 * tạo số thứ tự theo ranking criteria
 
@@ -578,7 +582,7 @@ WHERE RN BETWEEN 4 AND 6;
 
 Điểm hay hơn `ROWNUM`:
 
-`RN` ở đây là ranking logic theo `SAL`, không phải vị trí row tùy thời điểm.
+`RN` ở đây là ranking lô-gic (logic / 논리) theo `SAL`, không phải vị trí row tùy thời điểm.
 
 ---
 
@@ -782,7 +786,7 @@ OFFSET 3 ROWS
 FETCH FIRST 3 ROWS ONLY;
 ```
 
-Logic:
+Lô-gic (logic / 논리):
 
 ```text
 ORDER BY SAL DESC
@@ -861,7 +865,7 @@ Về ý nghĩa, `ROW/ROWS` chỉ khác số ít/số nhiều về cách viết.
 
 ## 26. Pagination bằng OFFSET/FETCH
 
-Ví dụ page size = 10.
+Ví dụ page kích thước (size / 크기) = 10.
 
 ### Page 1
 
@@ -896,7 +900,7 @@ Công thức:
 OFFSET = (page - 1) × page_size
 ```
 
-Ví dụ page 4, size 20:
+Ví dụ page 4, kích thước (size / 크기) 20:
 
 ```text
 OFFSET
@@ -910,7 +914,7 @@ sau đó:
 FETCH NEXT 20 ROWS ONLY
 ```
 
-## 27. FETCH vẫn nên có ORDER BY
+## 27. FETCH vẫn nên có thứ tự (order / 순서) BY
 
 Nếu bạn viết:
 
@@ -920,13 +924,13 @@ FROM EMP
 FETCH FIRST 5 ROWS ONLY;
 ```
 
-DB có thể trả 5 row đầu theo cách execution hiện tại.
+DB có thể trả 5 row đầu theo cách thực thi (execution / 실행) hiện tại.
 
 Nhưng nếu yêu cầu:
 
 > top 5 lương cao nhất
 
-thì bắt buộc logic:
+thì bắt buộc lô-gic (logic / 논리):
 
 ```sql
 ORDER BY SAL DESC
@@ -935,9 +939,9 @@ FETCH FIRST 5 ROWS ONLY
 
 Không `ORDER BY` thì khái niệm "top" không có tiêu chí xác định.
 
-## 28. SQL Server TOP N
+## 28. SQL máy chủ (server / 서버) TOP N
 
-Trong SQL Server:
+Trong SQL máy chủ (server / 서버):
 
 ```sql
 SELECT TOP 2
@@ -960,7 +964,7 @@ SCOTT  3000
 
 ## 29. TOP đặt ở đâu?
 
-SQL Server syntax:
+SQL máy chủ (server / 서버) cú pháp (syntax / 문법):
 
 ```sql
 SELECT TOP N column1, column2
@@ -1045,7 +1049,7 @@ FORD   3000
 
 Tức:
 
-> **WITH TIES giữ thêm các row đồng hạng với boundary row.**
+> **WITH TIES giữ thêm các row đồng hạng với ranh giới (boundary / 경계) row.**
 
 ---
 
@@ -1099,9 +1103,9 @@ tùy tie tại vị trí thứ N.
 | Phương pháp    | DB/đặc điểm                     |                Tie |            Paging |
 | -------------- | ------------------------------- | -----------------: | ----------------: |
 | `ROWNUM`       | Oracle legacy                   |     không tự xử lý | có nhưng phức tạp |
-| `RANK()`       | Window Function                 |      giữ cùng rank |            có thể |
+| `RANK()`       | hàm cửa sổ (window function / 윈도우 함수)                 |      giữ cùng rank |            có thể |
 | `FETCH/OFFSET` | Oracle 12c+, SQL chuẩn hiện đại |  mặc định theo row |          rất tiện |
-| `TOP N`        | SQL Server                      | `WITH TIES` hỗ trợ |       chủ yếu top |
+| `TOP N`        | SQL máy chủ (server / 서버)                      | `WITH TIES` hỗ trợ |       chủ yếu top |
 
 ---
 
@@ -1193,7 +1197,7 @@ Vì vậy trước khi chọn hàm, phải hỏi:
 
 > muốn **N row** hay **N mức giá trị/rank**?
 
-## 35. Bẫy tie khi ORDER BY không deterministic
+## 35. Bẫy tie khi thứ tự (order / 순서) BY không deterministic
 
 Giả sử:
 
@@ -1228,7 +1232,7 @@ nếu bằng nhau → EMPNO
 
 ---
 
-## 36. Vì sao pagination cần ORDER BY ổn định?
+## 36. Vì sao pagination cần thứ tự (order / 순서) BY ổn định?
 
 Giả sử page 1:
 
@@ -1257,7 +1261,7 @@ Vì vậy thực tế nên:
 ORDER BY SAL DESC, EMPNO
 ```
 
-để tạo total ordering.
+để tạo total thứ tự (ordering / 순서).
 
 ## 37. Cách đọc đề SQLD nhanh
 
@@ -1374,7 +1378,7 @@ Dễ đọc hơn rất nhiều.
 
 ---
 
-### SQL Server
+### SQL máy chủ (server / 서버)
 
 ```sql
 SELECT TOP 3
@@ -1386,7 +1390,7 @@ ORDER BY SAL DESC;
 
 ---
 
-### Window Function
+### Hàm cửa sổ (window function / 윈도우 함수)
 
 ```sql
 SELECT ENAME, SAL
@@ -1399,9 +1403,9 @@ FROM (
 WHERE RN <= 3;
 ```
 
-Cả 4 đều nhằm mục đích lấy 3 row theo thứ tự, nhưng mechanism khác nhau.
+Cả 4 đều nhằm mục đích lấy 3 row theo thứ tự, nhưng cơ chế (mechanism / 메커니즘) khác nhau.
 
-## 🔥 SQLD NOTE — 반드시 암기
+## 🔥 SQLD ghi chú (note / 노트) — 반드시 암기
 
 ### ① TOP-N
 
@@ -1475,7 +1479,7 @@ nên không lên được 2.
 
 ### ⑥ Paging với ROWNUM
 
-Phải dùng nested query:
+Phải dùng nested truy vấn (query / 쿼리):
 
 ```text
 ORDER BY
@@ -1532,7 +1536,7 @@ FETCH NEXT 3 ROWS ONLY
 
 ---
 
-### ⑩ SQL Server TOP
+### ⑩ SQL máy chủ (server / 서버) TOP
 
 ```sql
 SELECT TOP 2 ...
@@ -1588,4 +1592,6 @@ Và câu quan trọng nhất của cả chương:
 > Khi gặp bài TOP-N, trước tiên phải xác định: **muốn N row hay muốn N thứ hạng**.
 
 Hai yêu cầu này nhìn giống nhau nhưng khi có **동점/tie**, kết quả có thể hoàn toàn khác.
-Tiếp tục **제6절 계층형 질의와 셀프 조인 — Hierarchical Query & Self Join**. Phần ảnh này tập trung gần như toàn bộ vào **Hierarchical Query của Oracle**, đặc biệt là `START WITH`, `CONNECT BY PRIOR`, `LEVEL`, `NOCYCLE`, `CONNECT_BY_ROOT`, `SYS_CONNECT_BY_PATH`, `CONNECT_BY_ISLEAF`, `CONNECT_BY_ISCYCLE`.
+Tiếp tục **제6절 계층형 질의와 셀프 조인 — Hierarchical truy vấn (query / 쿼리) & Self phép nối (join / 조인)**. Phần ảnh này tập trung gần như toàn bộ vào **Hierarchical truy vấn (query / 쿼리) của Oracle**, đặc biệt là `START WITH`, `CONNECT BY PRIOR`, `LEVEL`, `NOCYCLE`, `CONNECT_BY_ROOT`, `SYS_CONNECT_BY_PATH`, `CONNECT_BY_ISLEAF`, `CONNECT_BY_ISCYCLE`.
+
+> **Bàn giao:** Sau khi đọc, chốt đối tượng (object / 객체), điều kiện và thứ tự xử lý của bài này; nếu còn mơ hồ, quay lại ví dụ SQL rồi nối sang bài kế tiếp thay vì ghi nhớ câu lệnh như một mảnh rời.

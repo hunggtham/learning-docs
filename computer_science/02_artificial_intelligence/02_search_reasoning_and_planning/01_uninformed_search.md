@@ -1,14 +1,17 @@
-# Uninformed Search: BFS, DFS, UCS và các chiến lược nền tảng
+# Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng
 
-**Uninformed Search (무정보 탐색 / tìm kiếm không dùng heuristic)** giải bài toán chỉ bằng problem definition: initial state, actions, transition, goal và path cost. Algorithm không có domain-specific estimate cho biết state nào “gần goal hơn”.
+> **Mạch đọc:** Đặt **Uninformed tìm kiếm (search / 검색): BFS, DFS, UCS và các chiến lược nền tảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Một lớp trừu tượng (abstraction / 추상화) chung** sang **Breadth-First tìm kiếm (search / 검색)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Điều này không làm uninformed search trở nên lỗi thời. Nó là baseline giúp ta hiểu rõ trade-off giữa completeness, optimality, time và memory. Heuristic search như A* chỉ thực sự dễ hiểu khi ta thấy điều gì xảy ra nếu không có heuristic.
+
+**Uninformed tìm kiếm (search / 검색)** giải bài toán chỉ bằng bài toán (problem / 문제) definition: initial trạng thái (state / 상태), actions, chuyển tiếp (transition / 전이), goal và đường dẫn (path / 경로) chi phí (cost / 비용). thuật toán (algorithm / 알고리즘) không có domain-specific estimate cho biết trạng thái (state / 상태) nào “gần goal hơn”.
+
+Điều này không làm uninformed tìm kiếm (search / 검색) trở nên lỗi thời. Nó là baseline giúp ta hiểu rõ sự đánh đổi (trade-off / 트레이드오프) giữa completeness, optimality, thời gian (time / 시간) và bộ nhớ (memory / 메모리). Heuristic tìm kiếm (search / 검색) như A* chỉ thực sự dễ hiểu khi ta thấy điều gì xảy ra nếu không có heuristic.
 
 Xem trước: [State Space and Search](./00_state_space_and_search.md).
 
-## Một abstraction chung
+## Một lớp trừu tượng (abstraction / 추상화) chung
 
-Mọi strategy đều có frontier, nhưng khác cách lấy node:
+Mọi chiến lược (strategy / 전략) đều có frontier, nhưng khác cách lấy nút (node / 노드):
 
 ```text
 BFS → queue FIFO
@@ -19,13 +22,13 @@ Iterative deepening → repeated depth-limited DFS
 Bidirectional → two searches meeting
 ```
 
-Các properties phụ thuộc assumptions về branching, goal depth và edge cost.
+Các properties phụ thuộc các giả định (assumptions / 가정들) về branching, goal độ sâu (depth / 깊이) và edge chi phí (cost / 비용).
 
-## Breadth-First Search
+## Breadth-First tìm kiếm (search / 검색)
 
-Breadth-First Search (BFS / 너비 우선 탐색) expand nodes theo depth tăng dần.
+Breadth-First tìm kiếm (search / 검색) expand nodes theo độ sâu (depth / 깊이) tăng dần.
 
-Nếu frontier là FIFO queue:
+Nếu frontier là FIFO hàng đợi (queue / 큐):
 
 ```pseudo
 queue ← [start]
@@ -41,27 +44,27 @@ while queue not empty:
             queue.push_back(s)
 ```
 
-BFS first explores all states depth 0, rồi depth 1, depth 2...
+BFS first explores all states độ sâu (depth / 깊이) 0, rồi độ sâu (depth / 깊이) 1, độ sâu (depth / 깊이) 2...
 
 ### Khi nào BFS optimal?
 
-Nếu mọi step có cùng cost, shortest depth cũng là lowest path cost. Khi đó BFS optimal.
+Nếu mọi step có cùng chi phí (cost / 비용), shortest độ sâu (depth / 깊이) cũng là lowest đường dẫn (path / 경로) chi phí (cost / 비용). Khi đó BFS optimal.
 
-Nếu edge costs khác nhau, shallowest path có thể đắt hơn path sâu hơn. Lúc đó BFS không guarantee cost-optimal.
+Nếu edge costs khác nhau, shallowest đường dẫn (path / 경로) có thể đắt hơn đường dẫn (path / 경로) sâu hơn. Lúc đó BFS không guarantee cost-optimal.
 
-### Complexity
+### Độ phức tạp (complexity / 복잡도)
 
-Với branching factor `b` và shallowest goal depth `d`, worst-case time/memory thường exponential:
+Với branching factor `b` và shallowest goal độ sâu (depth / 깊이) `d`, worst-case thời gian (time / 시간)/bộ nhớ (memory / 메모리) thường exponential:
 
 \[
 O(b^d)
 \]
 
-Memory là weakness lớn: BFS phải giữ frontier của whole level.
+Bộ nhớ (memory / 메모리) là weakness lớn: BFS phải giữ frontier của whole mức (level / 수준).
 
 ### Ví dụ
 
-Graph:
+Đồ thị (graph / 그래프):
 
 ```text
 S → A → G
@@ -69,13 +72,13 @@ S → A → G
   → B → C → G
 ```
 
-Nếu edge cost equal, BFS tìm `S-A-G` trước vì depth nhỏ hơn.
+Nếu edge chi phí (cost / 비용) equal, BFS tìm `S-A-G` trước vì độ sâu (depth / 깊이) nhỏ hơn.
 
-## Depth-First Search
+## Depth-First tìm kiếm (search / 검색)
 
-Depth-First Search (DFS / 깊이 우선 탐색) đi sâu một branch trước khi backtrack.
+Depth-First tìm kiếm (search / 검색) đi sâu một branch trước khi backtrack.
 
-Stack/recursion:
+Ngăn xếp (stack / 스택)/recursion:
 
 ```pseudo
 stack ← [start]
@@ -93,33 +96,33 @@ while stack not empty:
 
 ### Strength
 
-DFS memory thấp hơn BFS. Nếu maximum depth `m`, rough space complexity:
+DFS bộ nhớ (memory / 메모리) thấp hơn BFS. Nếu maximum độ sâu (depth / 깊이) `m`, rough không gian (space / 공간) độ phức tạp (complexity / 복잡도):
 
 \[
 O(bm)
 \]
 
-với standard tree-storage reasoning, thay vì exponential frontier theo shallow goal depth.
+với tiêu chuẩn (standard / 표준) tree-storage lập luận (reasoning / 추론), thay vì exponential frontier theo shallow goal độ sâu (depth / 깊이).
 
 ### Weakness
 
-DFS có thể lao sâu vào branch rất dài hoặc infinite nếu không cycle/depth control.
+DFS có thể lao sâu vào branch rất dài hoặc infinite nếu không cycle/độ sâu (depth / 깊이) điều khiển (control / 제어).
 
-Nó không optimal. Goal tìm đầu tiên phụ thuộc successor ordering.
+Nó không optimal. Goal tìm đầu tiên phụ thuộc successor thứ tự (ordering / 순서).
 
 ### Khi DFS useful?
 
-- memory constrained;
+- bộ nhớ (memory / 메모리) constrained;
 - solution expected deep;
 - chỉ cần any solution;
 - exhaustive traversal/backtracking;
-- topological/cycle-related graph algorithms trong CS broader context.
+- topological/cycle-related đồ thị (graph / 그래프) algorithms trong CS broader ngữ cảnh (context / 맥락).
 
-## Depth-Limited Search
+## Depth-Limited tìm kiếm (search / 검색)
 
-Depth-Limited Search (DLS) là DFS với depth limit `ℓ`.
+Depth-Limited tìm kiếm (search / 검색) (DLS) là DFS với độ sâu (depth / 깊이) limit `ℓ`.
 
-Nếu reached depth `ℓ`, node không expand nữa.
+Nếu reached độ sâu (depth / 깊이) `ℓ`, nút (node / 노드) không expand nữa.
 
 Nó tránh infinite descent nhưng có thể miss solution deeper than limit.
 
@@ -135,45 +138,45 @@ Distinction này quan trọng cho Iterative Deepening.
 
 ## Iterative Deepening DFS
 
-Iterative Deepening Depth-First Search (IDDFS) chạy DLS với limits:
+Iterative Deepening Depth-First tìm kiếm (search / 검색) (IDDFS) chạy DLS với limits:
 
 ```text
 0, 1, 2, 3, ...
 ```
 
-Nó nghe có vẻ wasteful vì expand upper nodes nhiều lần. Nhưng trong exponential tree, phần lớn nodes nằm ở deepest level, nên repeated upper-level work relatively small.
+Nó nghe có vẻ wasteful vì expand upper nodes nhiều lần. Nhưng trong exponential cây (tree / 트리), phần lớn nodes nằm ở deepest mức (level / 수준), nên repeated upper-level công việc (work / 작업) relatively small.
 
-Với unit costs, IDDFS kết hợp:
+Với đơn vị (unit / 단위) costs, IDDFS kết hợp:
 
 - completeness của BFS;
-- optimal shallowest-depth behavior của BFS;
-- memory profile gần DFS.
+- optimal shallowest-depth hành vi (behavior / 동작) của BFS;
+- bộ nhớ (memory / 메모리) profile gần DFS.
 
-Time vẫn khoảng:
+Thời gian (time / 시간) vẫn khoảng:
 
 \[
 O(b^d)
 \]
 
-space khoảng:
+Không gian (space / 공간) khoảng:
 
 \[
 O(bd)
 \]
 
-under common formulation.
+under dùng chung (common / 공통) formulation.
 
-## Uniform-Cost Search
+## Uniform-Cost tìm kiếm (search / 검색)
 
-Uniform-Cost Search (UCS / 균일 비용 탐색) expand node có lowest path cost:
+Uniform-Cost tìm kiếm (search / 검색) expand nút (node / 노드) có lowest đường dẫn (path / 경로) chi phí (cost / 비용):
 
 \[
 g(n)
 \]
 
-Nó là Dijkstra-like search từ start tới goal trong AI terminology.
+Nó là Dijkstra-like tìm kiếm (search / 검색) từ start tới goal trong AI terminology.
 
-Priority queue:
+Priority hàng đợi (queue / 큐):
 
 ```pseudo
 frontier ← PQ((0,start))
@@ -192,21 +195,21 @@ while frontier:
             push(new_g,s)
 ```
 
-### Vì sao goal test thường khi pop, không phải khi generate?
+### Vì sao goal kiểm thử (test / 테스트) thường khi pop, không phải khi generate?
 
-Một goal có thể được generated qua expensive path trước, rồi sau đó có cheaper path chưa explored.
+Một goal có thể được generated qua expensive đường dẫn (path / 경로) trước, rồi sau đó có cheaper đường dẫn (path / 경로) chưa explored.
 
-Khi UCS pops goal as lowest-cost frontier node under nonnegative costs, ta mới có optimality guarantee.
+Khi UCS pops goal as lowest-cost frontier nút (node / 노드) under nonnegative costs, ta mới có optimality guarantee.
 
-## BFS là special case của UCS
+## BFS là special trường hợp (case / 사례) của UCS
 
-Nếu every edge cost = 1:
+Nếu every edge chi phí (cost / 비용) = 1:
 
 \[
-g(n)=depth(n)
+g(n)=độ sâu (depth / 깊이)(n)
 \]
 
-UCS ordering theo path cost tương đương BFS ordering theo depth.
+UCS thứ tự (ordering / 순서) theo đường dẫn (path / 경로) chi phí (cost / 비용) tương đương BFS thứ tự (ordering / 순서) theo độ sâu (depth / 깊이).
 
 Đây là useful unification:
 
@@ -214,19 +217,19 @@ UCS ordering theo path cost tương đương BFS ordering theo depth.
 BFS = UCS khi step cost uniform
 ```
 
-## Negative edge cost
+## Negative edge chi phí (cost / 비용)
 
-UCS/Dijkstra assumptions require nonnegative edge cost for standard optimality logic.
+UCS/Dijkstra các giả định (assumptions / 가정들) require nonnegative edge chi phí (cost / 비용) for tiêu chuẩn (standard / 표준) optimality lô-gic (logic / 논리).
 
-Nếu negative edges tồn tại, một node tưởng cheapest hiện tại có thể later được cải thiện qua negative-cost path.
+Nếu negative edges tồn tại, một nút (node / 노드) tưởng cheapest hiện tại có thể later được cải thiện qua negative-cost đường dẫn (path / 경로).
 
-Các algorithms như Bellman–Ford handle negative edges trong graph shortest path, và negative cycles làm shortest path undefined (`-∞`).
+Các algorithms như Bellman–Ford handle negative edges trong đồ thị (graph / 그래프) shortest đường dẫn (path / 경로), và negative cycles làm shortest đường dẫn (path / 경로) undefined (`-∞`).
 
-Trong AI cost design, negative rewards/costs cần careful formulation.
+Trong AI chi phí (cost / 비용) thiết kế (design / 설계), negative rewards/costs cần careful formulation.
 
 ## Cycle checking
 
-Trong tree search:
+Trong cây (tree / 트리) tìm kiếm (search / 검색):
 
 ```text
 A → B → C → A → ...
@@ -234,31 +237,31 @@ A → B → C → A → ...
 
 có thể tạo infinite expansion.
 
-Path-based cycle checking ngăn state lặp trên current path.
+Path-based cycle checking ngăn trạng thái (state / 상태) lặp trên hiện tại (current / 현재) đường dẫn (path / 경로).
 
-Global explored set mạnh hơn, nhưng với weighted search cần có best-cost logic: “đã thấy state” không đủ nếu later path rẻ hơn.
+Toàn cục (global / 전역) explored set mạnh hơn, nhưng với weighted tìm kiếm (search / 검색) cần có best-cost lô-gic (logic / 논리): “đã thấy trạng thái (state / 상태)” không đủ nếu later đường dẫn (path / 경로) rẻ hơn.
 
 ## Frontier duplicates
 
-Có hai implementation styles:
+Có hai hiện thực (implementation / 구현) styles:
 
-1. decrease-key/update entry trong priority queue;
+1. decrease-key/cập nhật (update / 업데이트) entry trong priority hàng đợi (queue / 큐);
 2. push new better entry và khi pop bỏ stale entry.
 
-Style 2 thường đơn giản hơn với standard heap libraries.
+Style 2 thường đơn giản hơn với tiêu chuẩn (standard / 표준) vùng nhớ động (heap / 힙) libraries.
 
 ```python
 if popped_cost != best[state]:
     continue
 ```
 
-Mental model: `best` map là source of truth, heap có thể chứa stale candidates.
+Mô hình tư duy (mental model / 사고 모델): `best` map là nguồn chuẩn (source of truth / 정본), vùng nhớ động (heap / 힙) có thể chứa stale candidates.
 
-## Bidirectional Search
+## Bidirectional tìm kiếm (search / 검색)
 
-Nếu start `S` và exact goal `G` đều known, search forward từ `S` và backward từ `G`.
+Nếu start `S` và chính xác (exact / 정확한) goal `G` đều known, tìm kiếm (search / 검색) forward từ `S` và backward từ `G`.
 
-Idealized node counts:
+Idealized nút (node / 노드) counts:
 
 \[
 O(b^{d/2}) + O(b^{d/2})
@@ -274,36 +277,36 @@ cho one-direction BFS.
 
 ### Conditions thực tế
 
-Bidirectional search cần:
+Bidirectional tìm kiếm (search / 검색) cần:
 
 - generate predecessors hoặc reverse edges;
-- efficient intersection test;
+- efficient intersection kiểm thử (test / 테스트);
 - careful stopping criterion với weighted costs;
 - manageable frontier from both sides.
 
-Nếu goal là predicate rộng (“bất kỳ schedule hợp lệ”), backward search có thể không straightforward.
+Nếu goal là predicate rộng (“bất kỳ schedule hợp lệ”), backward tìm kiếm (search / 검색) có thể không straightforward.
 
-## Search order và tie-breaking
+## Tìm kiếm (search / 검색) thứ tự (order / 순서) và tie-breaking
 
-Ngay cả cùng BFS/UCS, thứ tự generate successors ảnh hưởng path returned khi multiple optimal solutions tồn tại.
+Ngay cả cùng BFS/UCS, thứ tự generate successors ảnh hưởng đường dẫn (path / 경로) returned khi multiple optimal solutions tồn tại.
 
 A* tie-breaking cũng ảnh hưởng nodes expanded.
 
-Reproducibility cần deterministic successor ordering khi output path matters.
+Reproducibility cần deterministic successor thứ tự (ordering / 순서) khi đầu ra (output / 출력) đường dẫn (path / 경로) matters.
 
-## Tree complexity và graph complexity
+## Cây (tree / 트리) độ phức tạp (complexity / 복잡도) và đồ thị (graph / 그래프) độ phức tạp (complexity / 복잡도)
 
-Textbook often expresses complexity bằng `b,d,m`, nhưng finite graph có `|V|,|E|`.
+Textbook often expresses độ phức tạp (complexity / 복잡도) bằng `b,d,m`, nhưng finite đồ thị (graph / 그래프) có `|V|,|E|`.
 
-BFS graph traversal:
+BFS đồ thị (graph / 그래프) traversal:
 
 \[
 O(|V|+|E|)
 \]
 
-nếu mỗi node/edge processed once.
+nếu mỗi nút (node / 노드)/edge processed once.
 
-Priority-queue shortest path có complexity liên quan `|E| log |V|` tùy heap implementation.
+Priority-queue shortest đường dẫn (path / 경로) có độ phức tạp (complexity / 복잡도) liên quan `|E| log |V|` tùy vùng nhớ động (heap / 힙) hiện thực (implementation / 구현).
 
 Hai notation trả lời two views:
 
@@ -322,42 +325,42 @@ S --1--> A --100--> G
   --10--> B --10--> C --10--> G
 ```
 
-BFS thấy `S-A-G` depth 2 và trả path cost 101.
+BFS thấy `S-A-G` độ sâu (depth / 깊이) 2 và trả đường dẫn (path / 경로) chi phí (cost / 비용) 101.
 
-UCS explores theo accumulated cost và tìm `S-B-C-G` cost 30.
+UCS explores theo accumulated chi phí (cost / 비용) và tìm `S-B-C-G` chi phí (cost / 비용) 30.
 
 Đây là lý do “ít bước hơn” không đồng nghĩa “rẻ hơn”.
 
-## Memory as algorithmic resource
+## Bộ nhớ (memory / 메모리) as algorithmic tài nguyên (resource / 자원)
 
-BFS thường fail vì RAM trước CPU.
+BFS thường thất bại (fail / 실패) vì RAM trước CPU.
 
-Suppose frontier 10 million nodes, mỗi node metadata 100 bytes:
+Suppose frontier 10 million nodes, mỗi nút (node / 노드) siêu dữ liệu (metadata / 메타데이터) 100 bytes:
 
 ```text
 ≈ 1 GB
 ```
 
-thực tế object overhead có thể lớn hơn nhiều.
+thực tế đối tượng (object / 객체) overhead có thể lớn hơn nhiều.
 
-Compact state encoding, parent reconstruction strategy, external-memory search hoặc iterative deepening có thể quan trọng hơn micro-optimizing expansion.
+Compact trạng thái (state / 상태) encoding, parent reconstruction chiến lược (strategy / 전략), external-memory tìm kiếm (search / 검색) hoặc iterative deepening có thể quan trọng hơn micro-optimizing expansion.
 
-## Iterative deepening và modern reasoning systems
+## Iterative deepening và hiện đại (modern / 현대적) lập luận (reasoning / 추론) các hệ thống (systems / 시스템들)
 
-Idea allocate progressively larger depth budget có analog trong modern systems:
+Idea allocate progressively larger độ sâu (depth / 깊이) ngân sách (budget / 예산) có analog trong hiện đại (modern / 현대적) các hệ thống (systems / 시스템들):
 
 ```text
 try shallow/simple reasoning
 if insufficient → allow deeper search
 ```
 
-Không nên gọi mọi “reasoning depth setting” là literal IDDFS, nhưng resource-bounded iterative expansion là recurring design pattern.
+Không nên gọi mọi “lập luận (reasoning / 추론) độ sâu (depth / 깊이) setting” là literal IDDFS, nhưng resource-bounded iterative expansion là recurring mẫu thiết kế (design pattern / 디자인 패턴).
 
-## Beam Search: informed bởi score nhưng incomplete
+## Beam tìm kiếm (search / 검색): informed bởi score nhưng incomplete
 
-Beam Search thường được học gần sequence decoding hơn uninformed search, nhưng useful contrast.
+Beam tìm kiếm (search / 검색) thường được học gần chuỗi (sequence / 시퀀스) decoding hơn uninformed tìm kiếm (search / 검색), nhưng useful contrast.
 
-At each depth chỉ giữ top `k` candidates theo score.
+At each độ sâu (depth / 깊이) chỉ giữ top `k` candidates theo score.
 
 ```text
 all possibilities exponential
@@ -365,46 +368,46 @@ all possibilities exponential
 keep beam width k
 ```
 
-Beam search tiết kiệm memory/time nhưng không complete và không guarantee global optimum.
+Beam tìm kiếm (search / 검색) tiết kiệm bộ nhớ (memory / 메모리)/thời gian (time / 시간) nhưng không complete và không guarantee toàn cục (global / 전역) optimum.
 
-Machine translation và sequence generation historically use beam search extensively.
+Machine translation và chuỗi (sequence / 시퀀스) generation historically use beam tìm kiếm (search / 검색) extensively.
 
-## Search under resource limits
+## Tìm kiếm (search / 검색) under tài nguyên (resource / 자원) limits
 
-Real systems có:
+Real các hệ thống (systems / 시스템들) có:
 
-- time budget;
-- memory budget;
-- API/tool cost;
-- token budget.
+- thời gian (time / 시간) ngân sách (budget / 예산);
+- bộ nhớ (memory / 메모리) ngân sách (budget / 예산);
+- API/công cụ (tool / 도구) chi phí (cost / 비용);
+- đơn vị từ (token / 토큰) ngân sách (budget / 예산).
 
-Một theoretically optimal search may be unusable.
+Một theoretically optimal tìm kiếm (search / 검색) may be unusable.
 
-Resource-bounded algorithms trade solution quality for computation.
+Resource-bounded algorithms trade solution chất lượng (quality / 품질) for computation.
 
-This idea later appears in anytime algorithms, beam search, Monte Carlo Tree Search and LLM agent planning.
+This idea later appears in anytime algorithms, beam tìm kiếm (search / 검색), Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색) and LLM tác nhân (agent / 에이전트) planning.
 
 ## Anytime algorithms
 
-Anytime algorithm có thể return current best solution nếu interrupted, và quality cải thiện khi có thêm time.
+Anytime thuật toán (algorithm / 알고리즘) có thể return hiện tại (current / 현재) best solution nếu interrupted, và chất lượng (quality / 품질) cải thiện khi có thêm thời gian (time / 시간).
 
-This is valuable when exact compute budget uncertain.
+This is valuable when chính xác (exact / 정확한) compute ngân sách (budget / 예산) uncertain.
 
 Weighted A* và iterative improvement methods can have anytime variants.
 
-## Choosing an uninformed strategy
+## Choosing an uninformed chiến lược (strategy / 전략)
 
-| Situation | Strategy intuition |
+| Situation | chiến lược (strategy / 전략) intuition |
 |---|---|
-| Unit cost, shallow solution | BFS |
-| Memory tight, any solution | DFS / DLS |
-| Unknown goal depth, unit cost | IDDFS |
+| đơn vị (unit / 단위) chi phí (cost / 비용), shallow solution | BFS |
+| bộ nhớ (memory / 메모리) tight, any solution | DFS / DLS |
+| Unknown goal độ sâu (depth / 깊이), đơn vị (unit / 단위) chi phí (cost / 비용) | IDDFS |
 | Different nonnegative costs | UCS |
-| Exact start + goal, reversible graph | Bidirectional search |
+| chính xác (exact / 정확한) start + goal, reversible đồ thị (graph / 그래프) | Bidirectional tìm kiếm (search / 검색) |
 
-Table này là starting heuristic, không substitute analysis of actual graph size, cycles, constraints và memory representation.
+Bảng (table / 테이블) này là starting heuristic, không substitute phân tích (analysis / 분석) of actual đồ thị (graph / 그래프) kích thước (size / 크기), cycles, các ràng buộc (constraints / 제약조건들) và bộ nhớ (memory / 메모리) biểu diễn (representation / 표현).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 BFS   = optimize depth
@@ -415,26 +418,28 @@ UCS   = optimize accumulated path cost
 Bidirectional = reduce effective depth by meeting in middle
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “BFS luôn tìm shortest path”
+### “BFS luôn tìm shortest đường dẫn (path / 경로)”
 
 Chỉ shortest number of edges; cost-optimal khi step costs equal/uniform.
 
 ### “DFS nhanh hơn BFS”
 
-Không universal. Nó có different exploration order và lower memory, nhưng có thể search huge wrong branch.
+Không universal. Nó có different exploration thứ tự (order / 순서) và lower bộ nhớ (memory / 메모리), nhưng có thể tìm kiếm (search / 검색) huge wrong branch.
 
-### “Visited set chỉ là optimization”
+### “Visited set chỉ là tối ưu hóa (optimization / 최적화)”
 
-Trong cyclic graphs, duplicate detection có thể quyết định termination và correctness.
+Trong cyclic graphs, duplicate detection có thể quyết định termination và tính đúng đắn (correctness / 정확성).
 
 ### “UCS goal thấy lần đầu là đủ”
 
-Goal cần được settled/popped theo lowest path cost logic; generated first chưa guarantee optimal.
+Goal cần được settled/popped theo lowest đường dẫn (path / 경로) chi phí (cost / 비용) lô-gic (logic / 논리); generated first chưa guarantee optimal.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Uninformed Search cung cấp baseline để thấy heuristic mang lại gì. [Heuristic Search](./02_heuristic_search.md) sẽ thêm estimate `h(n)` để focus expansion, còn Planning sẽ add richer action preconditions/effects.
+Uninformed tìm kiếm (search / 검색) cung cấp baseline để thấy heuristic mang lại gì. [Heuristic Search](./02_heuristic_search.md) sẽ thêm estimate `h(n)` để focus expansion, còn Planning sẽ add richer hành động (action / 동작) preconditions/effects.
 
-Khi chọn search algorithm, hãy bắt đầu bằng graph properties: branching factor, depth, edge costs, cycles, memory budget và whether goal/reverse transitions known.
+Khi chọn tìm kiếm (search / 검색) thuật toán (algorithm / 알고리즘), hãy bắt đầu bằng đồ thị (graph / 그래프) properties: branching factor, độ sâu (depth / 깊이), edge costs, cycles, bộ nhớ (memory / 메모리) ngân sách (budget / 예산) và whether goal/reverse transitions known.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

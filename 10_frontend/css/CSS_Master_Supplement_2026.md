@@ -1,58 +1,61 @@
 # CSS Master Supplement 2026
+
+> **Mạch đọc:** Đọc **CSS Master Supplement 2026** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Những phần chuyên sâu sau CSSBeginnertoSenior2026.md** sang **Quy ước thuật ngữ Việt–Anh**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Những phần chuyên sâu sau `CSS_Beginner_to_Senior_2026.md`
 
-> **Mục tiêu:** file này **không lặp lại** handbook canonical Beginner → Senior.  
-> Nó bổ sung những phần cần thiết để chuyển từ **“senior CSS thực chiến”** sang **“master CSS / hiểu browser-level behavior”**.
+> **Mục tiêu:** tệp (file / 파일) này **không lặp lại** handbook chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어).
+> Nó bổ sung những phần cần thiết để chuyển từ **“cấp cao (senior / 시니어) CSS thực chiến”** sang **“master CSS / hiểu browser-level hành vi (behavior / 동작)”**.
 >
-> Hãy đọc file này **sau** `CSS_Beginner_to_Senior_2026.md`.
+> Hãy đọc tệp (file / 파일) này **sau** `CSS_Beginner_to_Senior_2026.md`.
 >
 > Ký hiệu:
-> - **[MUST]**: senior/master phải hiểu.
-> - **[DEEP]**: browser internals / edge cases.
-> - **[MODERN]**: CSS hiện đại.
-> - **[2026]**: feature đặc biệt đáng chú ý trong web platform 2026.
-> - **⚠**: mức hỗ trợ trình duyệt (browser support) / khả năng tiếp cận (accessibility) / interoperability cần kiểm tra.
+> - **[MUST]**: cấp cao (senior / 시니어)/master phải hiểu.
+> - **[DEEP]**: trình duyệt (browser / 브라우저) internals / edge cases.
+> - **[hiện đại (modern / 현대적)]**: CSS hiện đại.
+> - **[2026]**: tính năng (feature / 기능) đặc biệt đáng chú ý trong nền tảng Web (web platform / 웹 플랫폼) 2026.
+> - **⚠**: mức hỗ trợ trình duyệt (browser support / 브라우저 지원) / khả năng tiếp cận (accessibility / 접근성) / interoperability cần kiểm tra.
 >
-> mô hình tư duy (mental model):
+> mô hình tư duy (mental model / 사고 모델):
 >
-> ```text
-> Canonical Beginner → Senior
-> ├─ biết CSS language
-> ├─ layout
+> ```văn bản (text / 텍스트)
+> chuẩn gốc (canonical / 정본) Beginner → Cấp cao (senior / 시니어)
+> ├─ biết CSS ngôn ngữ (language / 언어)
+> ├─ bố cục (layout / 레이아웃)
 > ├─ các mẫu thành phần (component patterns)
-> └─ kiến trúc (architecture)
+> └─ kiến trúc (architecture / 아키텍처)
 >
 > Supplement
-> ├─ browser formatting model
-> ├─ thuộc tính (property) giá trị (value) lifecycle
+> ├─ trình duyệt (browser / 브라우저) mô hình định dạng (formatting model / 포매팅 모델)
+> ├─ thuộc tính (property / 속성) giá trị (value / 값) vòng đời (lifecycle / 생명주기)
 > ├─ sizing algorithms
 > ├─ lớp trên cùng (top layer) / advanced UI
 > ├─ CSS APIs
 > ├─ Shadow DOM (cây DOM đóng gói) / SVG
 > ├─ advanced typography / scroll / print
-> ├─ testing / compatibility
-> └─ modern 2026 features
+> ├─ testing / tính tương thích (compatibility / 호환성)
+> └─ hiện đại (modern / 현대적) 2026 features
 > ```
 
 ---
 
 ## Quy ước thuật ngữ Việt–Anh
 
-Trong tài liệu này, thuật ngữ chuyên môn được ưu tiên diễn đạt bằng tiếng Việt tự nhiên và giữ thuật ngữ gốc bên cạnh để dễ đối chiếu. Ví dụ: **cơ chế phân tầng (cascade)**, **độ đặc hiệu (specificity)**, **kế thừa (inheritance)**, **mô hình hộp (box model)**, **luồng bố cục thông thường (normal flow)**, **ngữ cảnh định dạng (formatting context)**, **khối chứa tham chiếu (containing block)**, **định cỡ nội tại (intrinsic sizing)** và **ngữ cảnh xếp chồng (stacking context)**. Tên property, value, selector, at-rule và API khi xuất hiện dưới dạng mã vẫn được giữ nguyên để không làm sai cú pháp.
+Trong tài liệu này, thuật ngữ chuyên môn được ưu tiên diễn đạt bằng tiếng Việt tự nhiên và giữ thuật ngữ gốc bên cạnh để dễ đối chiếu. Ví dụ: **cơ chế phân tầng (cascade)**, **độ đặc hiệu (specificity)**, **kế thừa (inheritance)**, **mô hình hộp (box model / 박스 모델)**, **luồng bố cục thông thường (normal flow / 일반 흐름)**, **ngữ cảnh định dạng (formatting context / 서식 컨텍스트)**, **khối chứa tham chiếu (containing block / 컨테이닝 블록)**, **định cỡ nội tại (intrinsic sizing / 내재 크기 결정)** và **ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)**. Tên thuộc tính (property / 속성), giá trị (value / 값), selector, at-rule và API khi xuất hiện dưới dạng mã vẫn được giữ nguyên để không làm sai cú pháp.
 
 
-# 0. Canonical Beginner → Senior đã đủ đến đâu?
+# 0. chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어) đã đủ đến đâu?
 
-# 0A. Master trace: từ bộ chọn (selector) matching đến rendering
+# 0A. Master dấu vết (trace / 추적): từ bộ chọn (selector) matching đến rendering
 
-Ở mức master, CSS là một pipeline có dependency chứ không phải một bộ thuộc tính (property). Browser xây DOM/CSSOM, match bộ chọn (selector), áp cơ chế phân tầng (cascade) để tìm specified các giá trị (values), default/inherit những phần còn thiếu, tính computed/used các giá trị (values), tạo formatting tree và boxes, chạy thuật toán bố cục (layout algorithm), sau đó paint và composite. Một bug ở mỗi tầng có biểu hiện khác nhau: khai báo (declaration) bị crossed-out là cơ chế phân tầng (cascade) problem; computed giá trị (value) đúng nhưng geometry sai thường là sizing/layout problem; geometry đúng nhưng element bị che liên quan stacking/lớp trên cùng (top layer)/clip; frame chậm cần đo style/layout/paint/composite.
+Ở mức master, CSS là một chuỗi xử lý (pipeline / 파이프라인) có phụ thuộc (dependency / 의존성) chứ không phải một bộ thuộc tính (property / 속성). trình duyệt (browser / 브라우저) xây DOM/CSSOM, match bộ chọn (selector), áp cơ chế phân tầng (cascade) để tìm specified các giá trị (values), default/inherit những phần còn thiếu, tính computed/used các giá trị (values), tạo formatting cây (tree / 트리) và boxes, chạy thuật toán bố cục (layout algorithm), sau đó paint và composite. Một bug ở mỗi tầng có biểu hiện khác nhau: khai báo (declaration) bị crossed-out là cơ chế phân tầng (cascade) bài toán (problem / 문제); computed giá trị (value / 값) đúng nhưng hình học (geometry / 기하학) sai thường là sizing/bố cục (layout / 레이아웃) bài toán (problem / 문제); hình học (geometry / 기하학) đúng nhưng element bị che liên quan stacking/lớp trên cùng (top layer)/clip; frame chậm cần đo style/bố cục (layout / 레이아웃)/paint/composite.
 
-hiệu năng (performance) cũng nên được hiểu theo invalidation phạm vi (scope). Thay class ở ancestor có thể làm tính lại style (style recalculation) cho descendants liên quan; font metrics có thể thay kích thước nội tại (intrinsic size) và kéo layout; geometry changes có thể reflow; shadow/filter lớn có thể tăng chi phí vẽ (paint cost). `transform`/`opacity` thường phù hợp cho animation vì có thể tránh layout trong nhiều trường hợp, nhưng layer promotion không miễn phí. `contain` và `content-visibility` có thể giảm work khi subtree thật sự độc lập, đồng thời chúng cũng thay đổi layout/containment ngữ nghĩa (semantics) nên không nên dùng như một “hiệu năng (performance) class” mặc định.
+Hiệu năng (performance / 성능) cũng nên được hiểu theo vô hiệu hóa (invalidation / 무효화) phạm vi (scope / 범위). Thay lớp (class / 클래스) ở ancestor có thể làm tính lại style (style recalculation) cho descendants liên quan; font metrics có thể thay kích thước nội tại (intrinsic size) và kéo bố cục (layout / 레이아웃); hình học (geometry / 기하학) changes có thể reflow; shadow/filter lớn có thể tăng chi phí vẽ (paint cost). `transform`/`opacity` thường phù hợp cho animation vì có thể tránh bố cục (layout / 레이아웃) trong nhiều trường hợp, nhưng tầng (layer / 계층) promotion không miễn phí. `contain` và `content-visibility` có thể giảm công việc (work / 작업) khi subtree thật sự độc lập, đồng thời chúng cũng thay đổi bố cục (layout / 레이아웃)/containment ngữ nghĩa (semantics / 의미론) nên không nên dùng như một “hiệu năng (performance / 성능) lớp (class / 클래스)” mặc định.
 
-Khi review CSS production, hãy trả lời được bốn câu: khai báo (declaration) nào thắng, box/ngữ cảnh định dạng (formatting context) nào được tạo, thuật toán bố cục (layout algorithm) nào quyết định geometry, và thay đổi này invalidate phần nào của chuỗi xử lý kết xuất (rendering pipeline). Khi bốn câu đó rõ, phần lớn CSS edge case trở thành behavior có thể dự đoán.
+Khi rà soát (review / 검토) CSS môi trường vận hành (production / 운영 환경), hãy trả lời được bốn câu: khai báo (declaration) nào thắng, box/ngữ cảnh định dạng (formatting context / 서식 컨텍스트) nào được tạo, thuật toán bố cục (layout algorithm) nào quyết định hình học (geometry / 기하학), và thay đổi này invalidate phần nào của chuỗi xử lý kết xuất (rendering pipeline). Khi bốn câu đó rõ, phần lớn CSS trường hợp biên (edge case / 경계 사례) trở thành hành vi (behavior / 동작) có thể dự đoán.
 
 
-## Canonical Beginner → Senior đã cover rất tốt
+## Chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어) đã cover rất tốt
 
 ```text
 selectors
@@ -86,11 +89,11 @@ design patterns
 ```
 
 Đó là đủ để:
-- làm production UI,
-- đọc CSS framework,
-- gỡ lỗi (debug) phần lớn layout bugs,
-- thiết kế component system,
-- review CSS ở mức senior.
+- làm môi trường vận hành (production / 운영 환경) UI,
+- đọc CSS khung phần mềm (framework / 프레임워크),
+- gỡ lỗi (debug / 디버그) phần lớn bố cục (layout / 레이아웃) bugs,
+- thiết kế thành phần (component / 컴포넌트) hệ thống (system / 시스템),
+- rà soát (review / 검토) CSS ở mức cấp cao (senior / 시니어).
 
 ## Nhưng “master CSS” còn cần
 
@@ -129,21 +132,21 @@ design patterns
 
 ---
 
-# 0B. Priority order của Master Supplement
+# 0B. Priority thứ tự (order / 순서) của Master Supplement
 
-Supplement này tiếp tục đúng trục của canonical note nhưng chỉ mở sâu những chỗ quyết định khả năng gỡ lỗi (debug) production. Ưu tiên đầu tiên vẫn là cơ chế phân tầng (cascade): origin, importance, layer, độ đặc hiệu (specificity), độ gần phạm vi (scope proximity) và thứ tự nguồn (source order) phải được đọc như một decision system. Sau đó mới tới thuộc tính (property) giá trị (value) lifecycle, formatting tree, định cỡ nội tại (intrinsic sizing) và các thuật toán bố cục (layout algorithms). Flex/Grid nâng cao chỉ có ý nghĩa khi bạn đã xác định đúng khối chứa tham chiếu (containing block), available size và mức tối thiểu tự động (automatic minimum) constraints.
+Supplement này tiếp tục đúng trục của chuẩn gốc (canonical / 정본) ghi chú (note / 노트) nhưng chỉ mở sâu những chỗ quyết định khả năng gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운영 환경). Ưu tiên đầu tiên vẫn là cơ chế phân tầng (cascade): origin, importance, tầng (layer / 계층), độ đặc hiệu (specificity), độ gần phạm vi (scope proximity) và thứ tự nguồn (source order) phải được đọc như một quyết định (decision / 결정) hệ thống (system / 시스템). Sau đó mới tới thuộc tính (property / 속성) giá trị (value / 값) vòng đời (lifecycle / 생명주기), formatting cây (tree / 트리), định cỡ nội tại (intrinsic sizing / 내재 크기 결정) và các thuật toán bố cục (layout algorithms). Flex/Grid nâng cao chỉ có ý nghĩa khi bạn đã xác định đúng khối chứa tham chiếu (containing block / 컨테이닝 블록), available kích thước (size / 크기) và mức tối thiểu tự động (automatic minimum) các ràng buộc (constraints / 제약조건들).
 
-Responsive ở mức master là vấn đề ownership: vùng nhìn (viewport) condition thuộc page/environment; container condition thuộc reusable component; user preferences thuộc khả năng tiếp cận (accessibility)/environment. Modern CSS được chọn theo khả năng thay thế complexity cũ chứ không theo độ mới. hiệu năng (performance) được đánh giá bằng style/layout/paint/composite invalidation và khả năng tiếp cận (accessibility) được coi là một constraint của layout/trạng thái (state), không phải audit sau cùng.
+Responsive ở mức master là vấn đề quyền sở hữu (ownership / 소유권): vùng nhìn (viewport) điều kiện (condition / 조건) thuộc page/môi trường (environment / 환경); bộ chứa (container / 컨테이너) điều kiện (condition / 조건) thuộc reusable thành phần (component / 컴포넌트); người dùng (user / 사용자) preferences thuộc khả năng tiếp cận (accessibility / 접근성)/môi trường (environment / 환경). hiện đại (modern / 현대적) CSS được chọn theo khả năng thay thế độ phức tạp (complexity / 복잡도) cũ chứ không theo độ mới. hiệu năng (performance / 성능) được đánh giá bằng style/bố cục (layout / 레이아웃)/paint/composite vô hiệu hóa (invalidation / 무효화) và khả năng tiếp cận (accessibility / 접근성) được coi là một ràng buộc (constraint / 제약조건) của bố cục (layout / 레이아웃)/trạng thái (state / 상태), không phải kiểm tra (audit / 감사) sau cùng.
 
-Khi đọc bất kỳ chapter nào trong supplement, hãy luôn trả lời bốn câu: browser đang quyết định giá trị (value) ở stage nào, box nào/ngữ cảnh định dạng (formatting context) nào đang chịu trách nhiệm, API hiện đại có giảm complexity hay chỉ đổi syntax, và behavior này có ảnh hưởng tới keyboard/zoom/chi phí kết xuất (rendering cost) không.
+Khi đọc bất kỳ chapter nào trong supplement, hãy luôn trả lời bốn câu: trình duyệt (browser / 브라우저) đang quyết định giá trị (value / 값) ở stage nào, box nào/ngữ cảnh định dạng (formatting context / 서식 컨텍스트) nào đang chịu trách nhiệm, API hiện đại có giảm độ phức tạp (complexity / 복잡도) hay chỉ đổi cú pháp (syntax / 문법), và hành vi (behavior / 동작) này có ảnh hưởng tới keyboard/zoom/chi phí kết xuất (rendering cost) không.
 
 ---
 
-# 1. thuộc tính (property) giá trị (value) Lifecycle [MUST][DEEP]
+# 1. thuộc tính (property / 속성) giá trị (value / 값) vòng đời (lifecycle / 생명주기) [MUST][DEEP]
 
-Một khai báo (declaration) không đi thẳng từ source code đến pixels.
+Một khai báo (declaration) không đi thẳng từ mã nguồn (source code / 소스 코드) đến pixels.
 
-mô hình tư duy (mental model):
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Declared Value
@@ -154,7 +157,7 @@ Declared Value
 → Actual Value
 ```
 
-## 1.1 Declared giá trị (value)
+## 1.1 Declared giá trị (value / 값)
 
 Tất cả các khai báo (declarations) có thể áp dụng:
 
@@ -170,7 +173,7 @@ Tất cả các khai báo (declarations) có thể áp dụng:
 
 Cả hai là declared các giá trị (values).
 
-## 1.2 Cascaded giá trị (value)
+## 1.2 Cascaded giá trị (value / 값)
 
 cơ chế phân tầng (cascade) chọn khai báo (declaration) thắng.
 
@@ -180,18 +183,18 @@ cơ chế phân tầng (cascade) chọn khai báo (declaration) thắng.
 }
 ```
 
-có thể trở thành cascaded giá trị (value).
+có thể trở thành cascaded giá trị (value / 값).
 
-## 1.3 Specified giá trị (value)
+## 1.3 Specified giá trị (value / 값)
 
 Nếu không có khai báo (declaration):
-- inherit nếu thuộc tính (property) inherited,
+- inherit nếu thuộc tính (property / 속성) inherited,
 - initial nếu không inherited,
-- hoặc các defaulting rule khác.
+- hoặc các defaulting quy tắc (rule / 규칙) khác.
 
-## 1.4 Computed giá trị (value)
+## 1.4 Computed giá trị (value / 값)
 
-Browser resolve những gì có thể resolve trước layout.
+Trình duyệt (browser / 브라우저) resolve những gì có thể resolve trước bố cục (layout / 레이아웃).
 
 Ví dụ:
 
@@ -213,11 +216,11 @@ Nhưng:
 width: 50%;
 ```
 
-có thể chưa resolve thành px cho đến khi layout context rõ.
+có thể chưa resolve thành px cho đến khi bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락) rõ.
 
-## 1.5 Used giá trị (value)
+## 1.5 Used giá trị (value / 값)
 
-Browser thực sự dùng trong layout.
+Trình duyệt (browser / 브라우저) thực sự dùng trong bố cục (layout / 레이아웃).
 
 Ví dụ:
 
@@ -225,24 +228,24 @@ Ví dụ:
 width: 50%;
 ```
 
-container 800px:
+Bộ chứa (container / 컨테이너) 800px:
 
 ```text
 used width = 400px
 ```
 
-## 1.6 Actual giá trị (value)
+## 1.6 Actual giá trị (value / 값)
 
 Giá trị cuối sau:
 - rounding,
-- device pixel constraints,
-- rendering implementation.
+- thiết bị (device / 장치) điểm ảnh (pixel / 픽셀) các ràng buộc (constraints / 제약조건들),
+- rendering hiện thực (implementation / 구현).
 
 ---
 
-# 2. Invalid at Computed-Value Time [DEEP]
+# 2. Invalid at Computed-Value thời gian (time / 시간) [DEEP]
 
-Custom thuộc tính (property) có thể khiến khai báo (declaration) **parse hợp lệ nhưng computed invalid**.
+Custom thuộc tính (property / 속성) có thể khiến khai báo (declaration) **parse hợp lệ nhưng computed invalid**.
 
 Ví dụ:
 
@@ -264,9 +267,9 @@ width: red
 
 không hợp lệ.
 
-Browser không nhất thiết phương án dự phòng (fallback) về khai báo (declaration) trước theo cách beginner thường nghĩ.
+Trình duyệt (browser / 브라우저) không nhất thiết phương án dự phòng (fallback) về khai báo (declaration) trước theo cách beginner thường nghĩ.
 
-## Senior lesson
+## Cấp cao (senior / 시니어) lesson
 
 phương án dự phòng (fallback) phải nằm trong `var()` khi cần:
 
@@ -276,17 +279,17 @@ phương án dự phòng (fallback) phải nằm trong `var()` khi cần:
 }
 ```
 
-Nhưng phương án dự phòng (fallback) chỉ dùng nếu custom thuộc tính (property):
+Nhưng phương án dự phòng (fallback) chỉ dùng nếu custom thuộc tính (property / 속성):
 - không tồn tại,
-- hoặc invalid theo custom thuộc tính (property) ngữ nghĩa (semantics) phù hợp.
+- hoặc invalid theo custom thuộc tính (property / 속성) ngữ nghĩa (semantics / 의미론) phù hợp.
 
-`@property` giúp type custom thuộc tính (property) từ sớm.
+`@property` giúp kiểu (type / 타입) custom thuộc tính (property / 속성) từ sớm.
 
 ---
 
-# 3. cơ chế phân tầng (cascade) Origins — Full mô hình tư duy (mental model) [MUST]
+# 3. cơ chế phân tầng (cascade) Origins — Full mô hình tư duy (mental model / 사고 모델) [MUST]
 
-Canonical note đã giải thích cơ chế phân tầng (cascade); ở mức master cần hiểu **origin precedence**.
+Chuẩn gốc (canonical / 정본) ghi chú (note / 노트) đã giải thích cơ chế phân tầng (cascade); ở mức master cần hiểu **origin precedence**.
 
 Nguồn CSS:
 
@@ -314,13 +317,13 @@ transitions
 
 Điểm rất dễ quên:
 
-> Transition các giá trị (values) có precedence cực cao trong cơ chế phân tầng (cascade) khi transition đang chạy.
+> chuyển tiếp (transition / 전이) các giá trị (values) có precedence cực cao trong cơ chế phân tầng (cascade) khi chuyển tiếp (transition / 전이) đang chạy.
 
 ---
 
 # 4. các lớp phân tầng (cascade layers) và `!important` đảo thứ tự [DEEP]
 
-Normal layer order:
+Normal tầng (layer / 계층) thứ tự (order / 순서):
 
 ```css
 @layer reset, base, components, utilities;
@@ -336,13 +339,13 @@ reset
 < unlayered
 ```
 
-Nhưng với `!important`, thứ tự layer **đảo lại**.
+Nhưng với `!important`, thứ tự tầng (layer / 계층) **đảo lại**.
 
 Điều này tồn tại để:
 - bảo vệ foundational important rules,
-- tránh layer mới dễ override important defaults.
+- tránh tầng (layer / 계층) mới dễ override important defaults.
 
-## Senior pattern
+## Cấp cao (senior / 시니어) mẫu (pattern / 패턴)
 
 Nếu buộc phải maintain third-party important CSS:
 
@@ -352,18 +355,18 @@ Nếu buộc phải maintain third-party important CSS:
 }
 ```
 
-Đừng rải `!important` vào mọi layer.
+Đừng rải `!important` vào mọi tầng (layer / 계층).
 
 ---
 
-# 5. độ gần phạm vi (scope proximity) [MODERN][DEEP]
+# 5. độ gần phạm vi (scope proximity) [hiện đại (modern / 현대적)][DEEP]
 
 Trong `@scope`, nếu:
 - origin bằng nhau,
-- layer bằng nhau,
+- tầng (layer / 계층) bằng nhau,
 - độ đặc hiệu (specificity) bằng nhau,
 
-browser có thể xét **độ gần phạm vi (scope proximity)** trước thứ tự nguồn (source order).
+Trình duyệt (browser / 브라우저) có thể xét **độ gần phạm vi (scope proximity)** trước thứ tự nguồn (source order).
 
 Concept:
 
@@ -381,19 +384,19 @@ Concept:
 }
 ```
 
-Nếu `.title` gần `.inner` phạm vi (scope) root hơn, scoped rule gần hơn có thể thắng.
+Nếu `.title` gần `.inner` phạm vi (scope / 범위) gốc (root / 루트) hơn, scoped quy tắc (rule / 규칙) gần hơn có thể thắng.
 
 ## Important
 
 `@scope` **không tự tăng độ đặc hiệu (specificity)**.
 
-Nhưng explicit `:scope` thì có độ đặc hiệu (specificity) như lớp giả (pseudo-class).
+Nhưng tường minh (explicit / 명시적) `:scope` thì có độ đặc hiệu (specificity) như lớp giả (pseudo-class).
 
 ---
 
-# 6. Direct Target vs kế thừa (inheritance) [DEEP]
+# 6. Direct mục tiêu (target / 대상) vs kế thừa (inheritance) [DEEP]
 
-Rule trực tiếp target element luôn thắng inherited giá trị (value).
+Quy tắc (rule / 규칙) trực tiếp mục tiêu (target / 대상) element luôn thắng inherited giá trị (value / 값).
 
 ```css
 #parent {
@@ -413,15 +416,15 @@ Không quan trọng:
 #parent specificity rất cao
 ```
 
-vì inherited giá trị (value) không cạnh tranh độ đặc hiệu (specificity) trực tiếp với rule target `h1`.
+vì inherited giá trị (value / 값) không cạnh tranh độ đặc hiệu (specificity) trực tiếp với quy tắc (rule / 규칙) mục tiêu (target / 대상) `h1`.
 
 ---
 
-# 7. Formatting Tree vs DOM Tree [MUST][DEEP]
+# 7. Formatting cây (tree / 트리) vs DOM cây (tree / 트리) [MUST][DEEP]
 
-CSS layout không hoàn toàn chạy trên DOM tree.
+CSS bố cục (layout / 레이아웃) không hoàn toàn chạy trên DOM cây (tree / 트리).
 
-Browser tạo **box tree / formatting structure**.
+Trình duyệt (browser / 브라우저) tạo **box cây (tree / 트리) / formatting cấu trúc (structure / 구조)**.
 
 Một element có thể:
 - tạo một box,
@@ -435,7 +438,7 @@ Ví dụ:
 display: contents;
 ```
 
-element box có thể biến mất nhưng children vẫn layout.
+element box có thể biến mất nhưng children vẫn bố cục (layout / 레이아웃).
 
 các phần tử giả (pseudo-elements):
 
@@ -444,26 +447,26 @@ các phần tử giả (pseudo-elements):
 ::after
 ```
 
-tạo generated boxes dù không có DOM node tương ứng như element bình thường.
+tạo generated boxes dù không có DOM nút (node / 노드) tương ứng như element bình thường.
 
 ---
 
 # 8. Anonymous Boxes [DEEP]
 
-Browser có thể tạo box không có corresponding HTML element.
+Trình duyệt (browser / 브라우저) có thể tạo box không có corresponding HTML element.
 
-Ví dụ mixed block/inline content có thể tạo anonymous block boxes.
+Ví dụ mixed khối (block / 블록)/inline content có thể tạo anonymous khối (block / 블록) boxes.
 
 Bạn hiếm khi style trực tiếp anonymous box, nhưng nó giải thích:
-- layout behavior khó hiểu,
+- bố cục (layout / 레이아웃) hành vi (behavior / 동작) khó hiểu,
 - các hộp dòng (line boxes),
-- table anonymous wrappers.
+- bảng (table / 테이블) anonymous wrappers.
 
 ## Master lesson
 
-DOM tree ≠ layout tree.
+DOM cây (tree / 트리) ≠ bố cục (layout / 레이아웃) cây (tree / 트리).
 
-Khi CSS behavior lạ, đừng assume mỗi HTML element = đúng 1 rectangle.
+Khi CSS hành vi (behavior / 동작) lạ, đừng assume mỗi HTML element = đúng 1 rectangle.
 
 ---
 
@@ -480,10 +483,10 @@ Table Formatting Context
 Ruby Formatting Context
 ```
 
-ngữ cảnh định dạng (formatting context) định nghĩa:
-- children layout như thế nào,
-- margin interaction,
-- float behavior,
+Ngữ cảnh định dạng (formatting context / 서식 컨텍스트) định nghĩa:
+- children bố cục (layout / 레이아웃) như thế nào,
+- margin tương tác (interaction / 상호작용),
+- float hành vi (behavior / 동작),
 - alignment,
 - đường cơ sở (baseline).
 
@@ -491,7 +494,7 @@ ngữ cảnh định dạng (formatting context) định nghĩa:
 
 # 10. ngữ cảnh định dạng khối (block formatting context) (BFC) [MUST]
 
-BFC là một vùng layout block tương đối độc lập.
+BFC là một vùng bố cục (layout / 레이아웃) khối (block / 블록) tương đối độc lập.
 
 Một số cách tạo BFC:
 
@@ -506,7 +509,7 @@ display: flex; /* flex container creates its own context */
 display: grid;
 ```
 
-Không phải mọi cách tạo BFC đều có ngữ nghĩa (semantics) giống nhau.
+Không phải mọi cách tạo BFC đều có ngữ nghĩa (semantics / 의미론) giống nhau.
 
 ## BFC giải quyết
 
@@ -518,13 +521,13 @@ Không phải mọi cách tạo BFC đều có ngữ nghĩa (semantics) giống 
 }
 ```
 
-### Tránh text wrap quanh float ngoài ý muốn
+### Tránh văn bản (text / 텍스트) wrap quanh float ngoài ý muốn
 
-BFC mới không wrap quanh external float theo cách normal block có thể làm.
+BFC mới không wrap quanh bên ngoài (external / 외부) float theo cách normal khối (block / 블록) có thể làm.
 
-### Margin interaction
+### Margin tương tác (interaction / 상호작용)
 
-BFC ảnh hưởng gộp lề (margin collapsing) behavior.
+BFC ảnh hưởng gộp lề (margin collapsing) hành vi (behavior / 동작).
 
 ## Idiom
 
@@ -546,9 +549,9 @@ vì `overflow:hidden` có thêm clipping tác dụng phụ (side effect).
 
 # 11. ngữ cảnh định dạng nội dòng (inline formatting context) & các hộp dòng (line boxes) [MUST][DEEP]
 
-Text inline không layout như Flexbox.
+Văn bản (text / 텍스트) inline không bố cục (layout / 레이아웃) như Flexbox.
 
-Browser tạo **các hộp dòng (line boxes)**.
+Trình duyệt (browser / 브라우저) tạo **các hộp dòng (line boxes)**.
 
 Trong một paragraph:
 
@@ -558,7 +561,7 @@ Trong một paragraph:
 </p>
 ```
 
-Browser:
+Trình duyệt (browser / 브라우저):
 - split inline content,
 - tạo các hộp dòng (line boxes),
 - align inline-level boxes theo đường cơ sở (baseline).
@@ -577,13 +580,13 @@ text-align
 
 ---
 
-# 12. `vertical-align` — thuộc tính (property) thường bị hiểu sai [MUST]
+# 12. `vertical-align` — thuộc tính (property / 속성) thường bị hiểu sai [MUST]
 
-`vertical-align` **không phải general-purpose vertical centering thuộc tính (property)**.
+`vertical-align` **không phải general-purpose vertical centering thuộc tính (property / 속성)**.
 
 Nó chủ yếu áp dụng cho:
 - inline-level boxes,
-- table cells.
+- bảng (table / 테이블) cells.
 
 các giá trị (values):
 
@@ -608,7 +611,7 @@ super
 }
 ```
 
-có thể dùng để optical align icon với text.
+có thể dùng để optical align icon với văn bản (text / 텍스트).
 
 ## Không nên
 
@@ -618,9 +621,9 @@ div {
 }
 ```
 
-mong block element tự center trong parent.
+mong khối (block / 블록) element tự center trong parent.
 
-Dùng Flex/Grid cho layout center.
+Dùng Flex/Grid cho bố cục (layout / 레이아웃) center.
 
 ---
 
@@ -642,19 +645,19 @@ Nhưng đường cơ sở (baseline) được lấy từ content/font/box rules.
 
 có thể trông không thẳng dù geometric center giống nhau.
 
-## Senior note
+## Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 Typography alignment ≠ geometric center.
 
-UI có text thường cần **đường cơ sở (baseline) alignment** hơn center alignment.
+UI có văn bản (text / 텍스트) thường cần **đường cơ sở (baseline) alignment** hơn center alignment.
 
 ---
 
 # 14. các phần tử thay thế (replaced elements) [MUST]
 
-phần tử thay thế (replaced element) là element mà nội dung render bên trong được thay bởi external resource/content.
+phần tử thay thế (replaced element) là element mà nội dung kết xuất (render / 렌더링) bên trong được thay bởi bên ngoài (external / 외부) tài nguyên (resource / 자원)/content.
 
-Common:
+Dùng chung (common / 공통):
 
 ```text
 <img>
@@ -663,7 +666,7 @@ Common:
 <embed>
 ```
 
-Một số cases khác tùy element/type.
+Một số cases khác tùy element/kiểu (type / 타입).
 
 ## Điểm đặc biệt
 
@@ -672,7 +675,7 @@ các phần tử thay thế (replaced elements) có thể có:
 - intrinsic height,
 - intrinsic aspect ratio.
 
-Ví dụ image file:
+Ví dụ ảnh (image / 이미지) tệp (file / 파일):
 
 ```text
 1200 × 800
@@ -694,7 +697,7 @@ intrinsic ratio:
 <img src="photo.jpg" alt="">
 ```
 
-nếu không CSS sizing, browser có thể dùng kích thước nội tại (intrinsic dimensions).
+nếu không CSS sizing, trình duyệt (browser / 브라우저) có thể dùng kích thước nội tại (intrinsic dimensions).
 
 Nếu HTML có:
 
@@ -707,9 +710,9 @@ Nếu HTML có:
 >
 ```
 
-browser có thể reserve aspect ratio sớm, giảm CLS.
+Trình duyệt (browser / 브라우저) có thể reserve aspect ratio sớm, giảm CLS.
 
-## Pattern
+## Mẫu (pattern / 패턴)
 
 ```css
 img {
@@ -740,9 +743,9 @@ vs
 content object size
 ```
 
-`object-fit` thay đổi cách **resource bên trong box** fit.
+`object-fit` thay đổi cách **tài nguyên (resource / 자원) bên trong box** fit.
 
-Nó không thay layout size của element như `width`/`height`.
+Nó không thay bố cục (layout / 레이아웃) kích thước (size / 크기) của element như `width`/`height`.
 
 ## `object-position`
 
@@ -759,13 +762,13 @@ Useful giữ khuôn mặt ở vùng crop mong muốn.
 
 # 17. Definite vs kích thước chưa xác định (indefinite size) [MUST][DEEP]
 
-Một size có thể là **definite** hoặc không.
+Một kích thước (size / 크기) có thể là **definite** hoặc không.
 
 Điều này ảnh hưởng:
 - percentage resolution,
 - Grid/Flex sizing,
 - percentage height,
-- định cỡ nội tại (intrinsic sizing).
+- định cỡ nội tại (intrinsic sizing / 내재 크기 결정).
 
 Ví dụ:
 
@@ -779,11 +782,11 @@ Ví dụ:
 }
 ```
 
-`50%` có thể không resolve như user mong đợi vì parent block-size không definite.
+`50%` có thể không resolve như người dùng (user / 사용자) mong đợi vì parent block-size không definite.
 
-## Senior gỡ lỗi (debugging) question
+## Cấp cao (senior / 시니어) gỡ lỗi (debugging) question
 
-> khối chứa tham chiếu (containing block) có kích thước xác định (definite size) trên axis này không?
+> khối chứa tham chiếu (containing block / 컨테이닝 블록) có kích thước xác định (definite size) trên axis này không?
 
 ---
 
@@ -791,7 +794,7 @@ Ví dụ:
 
 ## Intrinsic
 
-Size dựa trên content:
+Kích thước (size / 크기) dựa trên content:
 
 ```text
 min-content
@@ -801,14 +804,14 @@ fit-content
 
 ## Extrinsic
 
-Size bị external constraint quyết định:
+Kích thước (size / 크기) bị bên ngoài (external / 외부) ràng buộc (constraint / 제약조건) quyết định:
 
 ```css
 width: 20rem;
 width: 50%;
 ```
 
-Senior cần hiểu hai loại đang cạnh tranh.
+Cấp cao (senior / 시니어) cần hiểu hai loại đang cạnh tranh.
 
 ---
 
@@ -818,7 +821,7 @@ Senior cần hiểu hai loại đang cạnh tranh.
 
 > kích thước nhỏ nhất content có thể co theo wrapping opportunities tự nhiên.
 
-Text:
+Văn bản (text / 텍스트):
 
 ```text
 CSS is awesome
@@ -840,12 +843,12 @@ min-content contribution có thể khác.
 
 `max-content` gần với:
 
-> size nếu content không wrap vì không gian khả dụng (available space).
+> kích thước (size / 크기) nếu content không wrap vì không gian khả dụng (available space).
 
 Có thể gây overflow mạnh với:
 - long labels,
 - tables,
-- code,
+- mã (code / 코드),
 - URLs.
 
 ---
@@ -854,7 +857,7 @@ Có thể gây overflow mạnh với:
 
 Conceptually nó clamp giữa intrinsic extremes và không gian khả dụng (available space).
 
-mô hình tư duy (mental model) gần:
+Mô hình tư duy (mental model / 사고 모델) gần:
 
 ```text
 min(
@@ -863,7 +866,7 @@ min(
 )
 ```
 
-Đây không phải replacement chính xác cho mọi spec formula, nhưng là model học tốt.
+Đây không phải replacement chính xác cho mọi spec formula, nhưng là mô hình (model / 모델) học tốt.
 
 ---
 
@@ -874,9 +877,9 @@ Một số boxes như:
 - absolute positioned elements với auto width,
 - inline-block,
 
-có thể dùng behavior gần **shrink-to-fit**.
+có thể dùng hành vi (behavior / 동작) gần **shrink-to-fit**.
 
-mô hình tư duy (mental model):
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 không rộng hơn available space
@@ -890,17 +893,17 @@ không vượt quá max-content nếu không cần
 display: inline-block;
 ```
 
-không chiếm full width như block.
+không chiếm full width như khối (block / 블록).
 
 ---
 
 # 23. kích thước tối thiểu tự động (automatic minimum size) in Flex/Grid [MUST]
 
-Canonical note đã có `min-width:0`.
+Chuẩn gốc (canonical / 정본) ghi chú (note / 노트) đã có `min-width:0`.
 
 Master cần hiểu **vì sao**.
 
-Flex/phần tử Grid (grid item) có kích thước tối thiểu tự động (automatic minimum size) behavior để tránh content bị ép quá mức.
+Flex/phần tử Grid (grid item) có kích thước tối thiểu tự động (automatic minimum size) hành vi (behavior / 동작) để tránh content bị ép quá mức.
 
 Do đó:
 
@@ -920,7 +923,7 @@ Fix:
 }
 ```
 
-nói với sizing algorithm:
+nói với sizing thuật toán (algorithm / 알고리즘):
 
 > item được phép co xuống dưới content-based mức tối thiểu tự động (automatic minimum).
 
@@ -928,22 +931,22 @@ nói với sizing algorithm:
 
 # 24. Percentage Resolution Edge Cases [DEEP]
 
-`%` không có một rule universal.
+`%` không có một quy tắc (rule / 규칙) universal.
 
-Nó phụ thuộc thuộc tính (property).
+Nó phụ thuộc thuộc tính (property / 속성).
 
 Ví dụ:
-- width `%` thường relative khối chứa tham chiếu (containing block) inline size.
-- percentage transforms relative transform reference box.
+- width `%` thường relative khối chứa tham chiếu (containing block / 컨테이닝 블록) inline kích thước (size / 크기).
+- percentage transforms relative transform tham chiếu (reference / 참조) box.
 - percentage border-radius relative box dimension.
 - percentage translate relative element itself.
-- percentage background-position có algorithm riêng.
+- percentage background-position có thuật toán (algorithm / 알고리즘) riêng.
 
-## Senior rule
+## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
-Không học `%` như unit.
+Không học `%` như đơn vị (unit / 단위).
 
-Học `%` **theo từng thuộc tính (property) family**.
+Học `%` **theo từng thuộc tính (property / 속성) family**.
 
 ---
 
@@ -954,7 +957,7 @@ Vertical margins có thể collapse:
 - parent + first/last child trong conditions phù hợp,
 - empty blocks.
 
-Negative margins cũng tham gia collapsing algorithm.
+Negative margins cũng tham gia collapsing thuật toán (algorithm / 알고리즘).
 
 ## Không collapse giữa flex/các phần tử Grid (grid items)
 
@@ -964,11 +967,11 @@ Negative margins cũng tham gia collapsing algorithm.
 }
 ```
 
-child margins không collapse như normal block flow.
+child margins không collapse như normal khối (block / 블록) luồng (flow / 흐름).
 
-## Pattern
+## Mẫu (pattern / 패턴)
 
-Cho spacing system:
+Cho spacing hệ thống (system / 시스템):
 
 ```css
 .stack {
@@ -984,11 +987,11 @@ Cho spacing system:
 
 # 26. Float — đúng bản chất [DEEP]
 
-Float không chỉ là legacy layout.
+Float không chỉ là legacy bố cục (layout / 레이아웃).
 
-Use case thực sự:
+Use trường hợp (case / 사례) thực sự:
 
-> cho text inline wrap xung quanh object.
+> cho văn bản (text / 텍스트) inline wrap xung quanh đối tượng (object / 객체).
 
 ```css
 .article img {
@@ -1036,7 +1039,7 @@ widows
 
 Có thể giúp card không bị chia giữa cột/page.
 
-Không phải browser luôn đảm bảo 100% nếu constraint không thể thỏa.
+Không phải trình duyệt (browser / 브라우저) luôn đảm bảo 100% nếu ràng buộc (constraint / 제약조건) không thể thỏa.
 
 ---
 
@@ -1060,7 +1063,7 @@ Useful:
 
 ---
 
-# 29. Advanced các bộ chọn (selectors) — `:nth-child(... of S)` [MODERN]
+# 29. Advanced các bộ chọn (selectors) — `:nth-child(... of S)` [hiện đại (modern / 현대적)]
 
 Có thể filter subset trước khi đếm.
 
@@ -1093,7 +1096,7 @@ Match directionality:
 }
 ```
 
-Tốt hơn tự gắn `.rtl` trong nhiều case.
+Tốt hơn tự gắn `.rtl` trong nhiều trường hợp (case / 사례).
 
 ---
 
@@ -1109,13 +1112,13 @@ Tốt hơn tự gắn `.rtl` trong nhiều case.
 }
 ```
 
-Styling theo document language ngữ nghĩa (semantics).
+Styling theo document ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론).
 
 ---
 
 # 32. Link các lớp giả (pseudo-classes) sâu hơn
 
-Common:
+Dùng chung (common / 공통):
 
 ```text
 :any-link
@@ -1123,7 +1126,7 @@ Common:
 :visited
 ```
 
-`:any-link` match link có href bất kể visited trạng thái (state).
+`:any-link` match link có href bất kể visited trạng thái (state / 상태).
 
 ```css
 :any-link {
@@ -1131,17 +1134,17 @@ Common:
 }
 ```
 
-## Privacy note
+## Privacy ghi chú (note / 노트)
 
-`:visited` bị browser hạn chế style/query vì history privacy.
+`:visited` bị trình duyệt (browser / 브라우저) hạn chế style/truy vấn (query / 쿼리) vì lịch sử (history / 이력) privacy.
 
-Đừng dựa vào computed visited styles cho application logic.
+Đừng dựa vào computed visited styles cho ứng dụng (application / 애플리케이션) lô-gic (logic / 논리).
 
 ---
 
-# 33. Form trạng thái (state) các lớp giả (pseudo-classes) mở rộng [ADV]
+# 33. Form trạng thái (state / 상태) các lớp giả (pseudo-classes) mở rộng [ADV]
 
-Ngoài canonical Beginner → Senior:
+Ngoài chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어):
 
 ```text
 :user-valid
@@ -1159,9 +1162,9 @@ Ngoài canonical Beginner → Senior:
 Khác `:invalid`:
 
 - `:invalid` có thể match ngay.
-- `:user-invalid` phản ánh invalidity sau user interaction theo browser behavior.
+- `:user-invalid` phản ánh invalidity sau người dùng (user / 사용자) tương tác (interaction / 상호작용) theo trình duyệt (browser / 브라우저) hành vi (behavior / 동작).
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```css
 input:user-invalid {
@@ -1169,11 +1172,11 @@ input:user-invalid {
 }
 ```
 
-UX thường tốt hơn đỏ form ngay khi page load.
+UX thường tốt hơn đỏ form ngay khi page tải (load / 로드).
 
 ---
 
-# 34. Element Display trạng thái (state) các lớp giả (pseudo-classes) [2026]
+# 34. Element Display trạng thái (state / 상태) các lớp giả (pseudo-classes) [2026]
 
 Quan trọng:
 
@@ -1187,7 +1190,7 @@ Quan trọng:
 
 ## `:open`
 
-Match element có open/closed trạng thái (state) và hiện đang open.
+Match element có open/closed trạng thái (state / 상태) và hiện đang open.
 
 Ví dụ:
 
@@ -1197,7 +1200,7 @@ details:open > summary {
 }
 ```
 
-Hoặc modern native controls/open UI khi applicable.
+Hoặc hiện đại (modern / 현대적) bản địa (native / 네이티브) controls/open UI khi applicable.
 
 ## `:popover-open`
 
@@ -1217,7 +1220,7 @@ dialog:modal {
 
 ---
 
-# 35. Media trạng thái (state) các lớp giả (pseudo-classes) [2026]
+# 35. Media trạng thái (state / 상태) các lớp giả (pseudo-classes) [2026]
 
 Interop 2026 chú ý tới media các lớp giả (pseudo-classes):
 
@@ -1239,15 +1242,15 @@ video:playing {
 }
 ```
 
-Use case:
+Use trường hợp (case / 사례):
 - custom media UI,
-- declarative visual trạng thái (state).
+- declarative visual trạng thái (state / 상태).
 
-⚠ Kiểm tra browser target vì đây là vùng interoperability đang tiếp tục cải thiện.
+⚠ Kiểm tra trình duyệt (browser / 브라우저) mục tiêu (target / 대상) vì đây là vùng interoperability đang tiếp tục cải thiện.
 
 ---
 
-# 36. Highlight các phần tử giả (pseudo-elements) [MODERN]
+# 36. Highlight các phần tử giả (pseudo-elements) [hiện đại (modern / 현대적)]
 
 Ngoài `::selection`:
 
@@ -1266,13 +1269,13 @@ Ví dụ:
 }
 ```
 
-Support/allowed các thuộc tính (properties) có giới hạn tùy highlight type.
+Hỗ trợ (support / 지원)/allowed các thuộc tính (properties) có giới hạn tùy highlight kiểu (type / 타입).
 
 ---
 
-# 37. CSS API tô sáng tùy chỉnh (Custom Highlight API) [MODERN]
+# 37. CSS API tô sáng tùy chỉnh (Custom Highlight API) [hiện đại (modern / 현대적)]
 
-Cho phép style arbitrary text ranges **không cần wrap thêm span**.
+Cho phép style arbitrary văn bản (text / 텍스트) ranges **không cần wrap thêm span**.
 
 JS:
 
@@ -1296,13 +1299,13 @@ CSS:
 
 Use cases:
 - editor,
-- search results,
-- syntax tooling,
+- tìm kiếm (search / 검색) results,
+- cú pháp (syntax / 문법) tooling,
 - collaboration annotations.
 
-## mẫu thiết kế (design pattern) — Presentation Range
+## Mẫu thiết kế (design pattern / 디자인 패턴) — Presentation phạm vi (range / 범위)
 
-Không mutate DOM chỉ để highlight text.
+Không mutate DOM chỉ để highlight văn bản (text / 텍스트).
 
 ```text
 Range model
@@ -1310,13 +1313,13 @@ Range model
 → CSS presentation
 ```
 
-⚠ Highlight không tự tạo mang tính ngữ nghĩa (semantic) meaning cho khả năng tiếp cận (accessibility).
+⚠ Highlight không tự tạo mang tính ý nghĩa (semantic meaning / 의미적 뜻) cho khả năng tiếp cận (accessibility / 접근성).
 
 ---
 
-# 38. lớp trên cùng (top layer) [MUST][MODERN]
+# 38. lớp trên cùng (top layer) [MUST][hiện đại (modern / 현대적)]
 
-Browser có một rendering concept gọi là **lớp trên cùng (top layer)**.
+Trình duyệt (browser / 브라우저) có một rendering concept gọi là **lớp trên cùng (top layer)**.
 
 Elements như:
 - modal dialog,
@@ -1341,7 +1344,7 @@ lớp trên cùng (top layer) không phải:
 z-index: 999999;
 ```
 
-Nó là riêng một browser-managed layer ngoài document các ngữ cảnh xếp chồng (stacking contexts) thông thường.
+Nó là riêng một browser-managed tầng (layer / 계층) ngoài document các ngữ cảnh xếp chồng (stacking contexts) thông thường.
 
 ---
 
@@ -1358,14 +1361,14 @@ dialog::backdrop {
 }
 ```
 
-trạng thái (state):
+Trạng thái (state / 상태):
 
 ```css
 dialog:modal {}
 dialog:open {}
 ```
 
-## Dialog sizing pattern
+## Dialog sizing mẫu (pattern / 패턴)
 
 ```css
 dialog {
@@ -1377,7 +1380,7 @@ dialog {
 
 ---
 
-# 40. Popover Styling [MUST][MODERN]
+# 40. Popover Styling [MUST][hiện đại (modern / 현대적)]
 
 Popover:
 
@@ -1397,16 +1400,16 @@ CSS:
 }
 ```
 
-Popover được browser xử lý:
+Popover được trình duyệt (browser / 브라우저) xử lý:
 - lớp trên cùng (top layer),
-- dismiss behavior tùy mode,
+- dismiss hành vi (behavior / 동작) tùy chế độ (mode / 모드),
 - stacking.
 
 2026 còn có hướng mở rộng như `popover="hint"` cho tooltip-like hierarchy.
 
 ---
 
-# 41. Entry / chuyển tiếp khi rời đi (exit transition) cho lớp trên cùng (top layer) [MODERN]
+# 41. Entry / chuyển tiếp khi rời đi (exit transition) cho lớp trên cùng (top layer) [hiện đại (modern / 현대적)]
 
 Vấn đề:
 
@@ -1415,9 +1418,9 @@ display:none
 → element xuất hiện
 ```
 
-trước đây khó transition clean.
+trước đây khó chuyển tiếp (transition / 전이) clean.
 
-Modern toolset:
+Hiện đại (modern / 현대적) toolset:
 
 ```text
 @starting-style
@@ -1444,17 +1447,17 @@ dialog {
 }
 ```
 
-Exit/entry exact syntax cần test theo target browsers.
+Exit/entry chính xác (exact / 정확한) cú pháp (syntax / 문법) cần kiểm thử (test / 테스트) theo mục tiêu (target / 대상) browsers.
 
-## Senior lesson
+## Cấp cao (senior / 시니어) lesson
 
-Đừng fake dialog transition bằng JS timeout nếu platform đã support lifecycle declaratively.
+Đừng fake dialog chuyển tiếp (transition / 전이) bằng JS hết thời gian chờ (timeout / 타임아웃) nếu nền tảng (platform / 플랫폼) đã hỗ trợ (support / 지원) vòng đời (lifecycle / 생명주기) declaratively.
 
 ---
 
-# 42. Customizable `<select>` [2026][MODERN]
+# 42. Customizable `<select>` [2026][hiện đại (modern / 현대적)]
 
-Modern CSS cho phép opt-in vào customizable select trong mức hỗ trợ trình duyệt (browser support) phù hợp.
+Hiện đại (modern / 현대적) CSS cho phép opt-in vào customizable select trong mức hỗ trợ trình duyệt (browser support / 브라우저 지원) phù hợp.
 
 ```css
 select,
@@ -1493,15 +1496,15 @@ option:checked {
 }
 ```
 
-## Pattern — Native-first customization
+## Mẫu (pattern / 패턴) — Native-first customization
 
 Trước:
 - recreate select bằng div + JS + ARIA.
 
-Modern strategy:
-1. dùng native `<select>`,
-2. customize khi support,
-3. phương án dự phòng (fallback) native style khi không support.
+Hiện đại (modern / 현대적) chiến lược (strategy / 전략):
+1. dùng bản địa (native / 네이티브) `<select>`,
+2. customize khi hỗ trợ (support / 지원),
+3. phương án dự phòng (fallback) bản địa (native / 네이티브) style khi không hỗ trợ (support / 지원).
 
 ---
 
@@ -1516,7 +1519,7 @@ Modern strategy:
 }
 ```
 
-mẫu thiết kế (design pattern):
+Mẫu thiết kế (design pattern / 디자인 패턴):
 
 ```text
 Native semantics
@@ -1527,9 +1530,9 @@ Rất đáng ưu tiên hơn custom widget nếu requirements cho phép.
 
 ---
 
-# 44. `field-sizing` [MODERN]
+# 44. `field-sizing` [hiện đại (modern / 현대적)]
 
-Cho form control size theo content trong support phù hợp.
+Cho form điều khiển (control / 제어) kích thước (size / 크기) theo content trong hỗ trợ (support / 지원) phù hợp.
 
 Concept:
 
@@ -1541,9 +1544,9 @@ textarea {
 
 Use cases:
 - auto-growing textarea,
-- content-sized input.
+- content-sized đầu vào (input / 입력).
 
-⚠ Cần constraints:
+⚠ Cần các ràng buộc (constraints / 제약조건들):
 
 ```css
 textarea {
@@ -1555,7 +1558,7 @@ textarea {
 
 ---
 
-# 45. vùng chứa cuộn (scroll container) mô hình tư duy (mental model) [MUST]
+# 45. vùng chứa cuộn (scroll container) mô hình tư duy (mental model / 사고 모델) [MUST]
 
 Element có overflow có thể trở thành vùng chứa cuộn (scroll container).
 
@@ -1566,7 +1569,7 @@ Element có overflow có thể trở thành vùng chứa cuộn (scroll containe
 - overscroll,
 - scroll padding.
 
-gỡ lỗi (debug):
+Gỡ lỗi (debug / 디버그):
 
 ```text
 Element nào thực sự scroll?
@@ -1584,7 +1587,7 @@ overflow: hidden;
 ```
 
 - clip content,
-- có vùng chứa cuộn (scroll container) ngữ nghĩa (semantics) trong nhiều contexts,
+- có vùng chứa cuộn (scroll container) ngữ nghĩa (semantics / 의미론) trong nhiều contexts,
 - programmatic scrolling có thể liên quan.
 
 ## `clip`
@@ -1602,11 +1605,11 @@ Nếu mục tiêu chỉ là clipping:
 overflow: clip;
 ```
 
-có thể mang tính ngữ nghĩa (semantic) hơn.
+có thể mang tính ngữ nghĩa (semantic / 의미적) hơn.
 
 ---
 
-# 47. Overscroll Behavior [ADV]
+# 47. Overscroll hành vi (behavior / 동작) [ADV]
 
 các thuộc tính (properties):
 
@@ -1626,7 +1629,7 @@ contain
 none
 ```
 
-## Pattern — Modal scroll containment
+## Mẫu (pattern / 패턴) — Modal scroll containment
 
 ```css
 .modal-body {
@@ -1635,11 +1638,11 @@ none
 }
 ```
 
-Ngăn scroll chain ra page trong nhiều cases.
+Ngăn scroll chuỗi (chain / 사슬) ra page trong nhiều cases.
 
 ---
 
-# 48. Scrollbar Gutter [MODERN]
+# 48. Scrollbar Gutter [hiện đại (modern / 현대적)]
 
 ```css
 html {
@@ -1648,10 +1651,10 @@ html {
 ```
 
 Mục tiêu:
-- reserve scrollbar space,
+- reserve scrollbar không gian (space / 공간),
 - giảm dịch chuyển bố cục (layout shift) khi scrollbar xuất hiện.
 
-giá trị (value) hữu ích:
+Giá trị (value / 값) hữu ích:
 
 ```text
 auto
@@ -1659,13 +1662,13 @@ stable
 stable both-edges
 ```
 
-⚠ Overlay scrollbar platforms có behavior khác classic scrollbar platforms.
+⚠ Overlay scrollbar platforms có hành vi (behavior / 동작) khác classic scrollbar platforms.
 
 ---
 
 # 49. Scrollbar Styling
 
-Standard các thuộc tính (properties):
+Tiêu chuẩn (standard / 표준) các thuộc tính (properties):
 
 ```css
 * {
@@ -1680,9 +1683,9 @@ Browser-specific legacy các phần tử giả (pseudo-elements) như:
 ::-webkit-scrollbar
 ```
 
-vẫn thấy trong code cũ nhưng không phải portable standard API.
+vẫn thấy trong mã (code / 코드) cũ nhưng không phải portable tiêu chuẩn (standard / 표준) API.
 
-## Senior rule
+## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
 Scrollbar styling là enhancement, không được làm scrollbar khó nhìn/khó dùng.
 
@@ -1690,9 +1693,9 @@ Scrollbar styling là enhancement, không được làm scrollbar khó nhìn/kh�
 
 # 50. neo vị trí cuộn (scroll anchoring) [ADV]
 
-Browser có thể giữ vùng nhìn (viewport) ổn định khi content phía trên thay đổi.
+Trình duyệt (browser / 브라우저) có thể giữ vùng nhìn (viewport) ổn định khi content phía trên thay đổi.
 
-thuộc tính (property):
+Thuộc tính (property / 속성):
 
 ```css
 overflow-anchor
@@ -1708,7 +1711,7 @@ Ví dụ opt-out:
 
 Chỉ dùng khi neo vị trí cuộn (scroll anchoring) tự động gây UX sai.
 
-Đừng disable global.
+Đừng disable toàn cục (global / 전역).
 
 ---
 
@@ -1716,7 +1719,7 @@ Chỉ dùng khi neo vị trí cuộn (scroll anchoring) tự động gây UX sai
 
 ## `scroll-margin`
 
-Set trên target:
+Set trên mục tiêu (target / 대상):
 
 ```css
 section {
@@ -1750,9 +1753,9 @@ Nói:
 }
 ```
 
-Cho browser biết gestures nào được phép.
+Cho trình duyệt (browser / 브라우저) biết gestures nào được phép.
 
-các giá trị (values) common:
+các giá trị (values) dùng chung (common / 공통):
 
 ```text
 auto
@@ -1765,19 +1768,19 @@ manipulation
 
 Cực quan trọng với custom drag/gesture components.
 
-⚠ `touch-action:none` có thể phá native zoom/scroll khả năng tiếp cận (accessibility).
+⚠ `touch-action:none` có thể phá bản địa (native / 네이티브) zoom/scroll khả năng tiếp cận (accessibility / 접근성).
 
 ---
 
-# 53. Environment các biến (variables) `env()` [MUST][MODERN]
+# 53. môi trường (environment / 환경) các biến (variables) `env()` [MUST][hiện đại (modern / 현대적)]
 
-Khác CSS custom thuộc tính (property):
+Khác CSS custom thuộc tính (property / 속성):
 
 ```css
 var(--token)
 ```
 
-`env()` lấy environment biến (variable) từ browser/device.
+`env()` lấy môi trường (environment / 환경) biến (variable) từ trình duyệt (browser / 브라우저)/thiết bị (device / 장치).
 
 Example:
 
@@ -1799,7 +1802,7 @@ safe-area-inset-bottom
 safe-area-inset-left
 ```
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```css
 .bottom-bar {
@@ -1814,7 +1817,7 @@ Pattern:
 
 # 55. Foldable / Multi-segment Viewports [ADV]
 
-Environment các biến (variables) có thể expose:
+Môi trường (environment / 환경) các biến (variables) có thể expose:
 
 ```text
 viewport-segment-width
@@ -1825,15 +1828,15 @@ viewport-segment-bottom
 viewport-segment-left
 ```
 
-Use case:
-- foldable device,
-- dual-screen layout.
+Use trường hợp (case / 사례):
+- foldable thiết bị (device / 장치),
+- dual-screen bố cục (layout / 레이아웃).
 
-Không cần ưu tiên học sớm, nhưng master CSS phải biết platform có concept này.
+Không cần ưu tiên học sớm, nhưng master CSS phải biết nền tảng (platform / 플랫폼) có concept này.
 
 ---
 
-# 56. Advanced Typography — Font Feature Control [ADV]
+# 56. Advanced Typography — Font tính năng (feature / 기능) điều khiển (control / 제어) [ADV]
 
 ## `font-variant-*`
 
@@ -1876,11 +1879,11 @@ font-feature-settings: "liga" 1, "tnum" 1;
 
 Chỉ dùng khi high-level `font-variant-*` không đủ.
 
-## Senior rule
+## Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
-Ưu tiên mang tính ngữ nghĩa (semantic)/high-level thuộc tính (property).
+Ưu tiên mang tính ngữ nghĩa (semantic / 의미적)/high-level thuộc tính (property / 속성).
 
-Low-level feature tags:
+Low-level tính năng (feature / 기능) tags:
 - khó đọc,
 - font-dependent,
 - dễ làm portability kém.
@@ -1908,7 +1911,7 @@ Low-level custom axes:
 }
 ```
 
-High-level các thuộc tính (properties) nên được ưu tiên nếu axis standard.
+High-level các thuộc tính (properties) nên được ưu tiên nếu axis tiêu chuẩn (standard / 표준).
 
 ---
 
@@ -1920,7 +1923,7 @@ body {
 }
 ```
 
-biến (variable) fonts có optical size axis có thể tự tối ưu glyph theo rendered font size.
+biến (variable) fonts có optical kích thước (size / 크기) axis có thể tự tối ưu glyph theo rendered font kích thước (size / 크기).
 
 ---
 
@@ -1928,7 +1931,7 @@ biến (variable) fonts có optical size axis có thể tự tối ưu glyph the
 
 Giúp phương án dự phòng (fallback) font giữ perceived x-height tương đối gần.
 
-Useful giảm visual jump khi custom font load.
+Useful giảm visual jump khi custom font tải (load / 로드).
 
 Concept:
 
@@ -1965,7 +1968,7 @@ ruby-position
 }
 ```
 
-Cần test content thực tế; không áp blindly cho mọi site.
+Cần kiểm thử (test / 테스트) content thực tế; không áp blindly cho mọi site.
 
 ---
 
@@ -1988,11 +1991,11 @@ Có:
 
 # 63. Ruby Annotation [ADV]
 
-Ruby markup dùng cho pronunciation/annotation trong East Asian text.
+Ruby markup dùng cho pronunciation/annotation trong East Asian văn bản (text / 텍스트).
 
 CSS:
 - `ruby-position`
-- ruby display model.
+- ruby display mô hình (model / 모델).
 
 Không phải daily CSS, nhưng quan trọng cho international publishing.
 
@@ -2000,7 +2003,7 @@ Không phải daily CSS, nhưng quan trọng cho international publishing.
 
 # 64. Wide-Gamut Color [ADV]
 
-Modern displays có thể render ngoài sRGB.
+Hiện đại (modern / 현대적) displays có thể kết xuất (render / 렌더링) ngoài sRGB.
 
 Example:
 
@@ -2040,9 +2043,9 @@ Use only when extra gamut thực sự mang giá trị.
 
 ---
 
-# 66. Color nội suy (interpolation) Space [DEEP]
+# 66. Color nội suy (interpolation) không gian (space / 공간) [DEEP]
 
-Gradient/color mixing có thể trông khác tùy nội suy (interpolation) color space.
+Độ dốc (gradient / 기울기)/color mixing có thể trông khác tùy nội suy (interpolation) color không gian (space / 공간).
 
 Example:
 
@@ -2055,7 +2058,7 @@ background:
   );
 ```
 
-Modern hệ thống thiết kế (design system) nên hiểu:
+Hiện đại (modern / 현대적) hệ thống thiết kế (design system) nên hiểu:
 - sRGB nội suy (interpolation),
 - perceptual spaces như Oklab/Oklch.
 
@@ -2063,7 +2066,7 @@ Modern hệ thống thiết kế (design system) nên hiểu:
 
 # 67. `contrast-color()` [2026]
 
-Interop 2026 tập trung hàm (function) này.
+Interop 2026 tập trung hàm (function / 함수) này.
 
 Concept:
 
@@ -2077,9 +2080,9 @@ Concept:
 Mục tiêu:
 - chọn contrasting color cho background/foreground.
 
-⚠ Đây là feature hiện đại; tương thích trình duyệt (browser compatibility) phải được check trước production.
+⚠ Đây là tính năng (feature / 기능) hiện đại; tương thích trình duyệt (browser compatibility) phải được check trước môi trường vận hành (production / 운영 환경).
 
-## Pattern
+## Mẫu (pattern / 패턴)
 
 phương án dự phòng (fallback):
 
@@ -2107,7 +2110,7 @@ Classic:
 }
 ```
 
-Modern typed `attr()` cho phép đọc attribute như typed CSS giá trị (value).
+Hiện đại (modern / 현대적) typed `attr()` cho phép đọc attribute như typed CSS giá trị (value / 값).
 
 Concept:
 
@@ -2117,9 +2120,9 @@ Concept:
 }
 ```
 
-Hoặc unit/type syntax theo mức hỗ trợ trình duyệt (browser support).
+Hoặc đơn vị (unit / 단위)/kiểu (type / 타입) cú pháp (syntax / 문법) theo mức hỗ trợ trình duyệt (browser support / 브라우저 지원).
 
-## Use case
+## Use trường hợp (case / 사례)
 
 ```text
 HTML data
@@ -2143,7 +2146,7 @@ max
 clamp
 ```
 
-CSS specs/platform hiện đại có thêm nhiều math các hàm (functions) tùy support:
+CSS specs/nền tảng (platform / 플랫폼) hiện đại có thêm nhiều math các hàm (functions) tùy hỗ trợ (support / 지원):
 
 ```text
 round()
@@ -2165,19 +2168,19 @@ log()
 exp()
 ```
 
-Không cần thuộc mọi hàm (function).
+Không cần thuộc mọi hàm (function / 함수).
 
 Master lesson:
 
-> CSS ngày càng trở thành constraint/math language, không chỉ thuộc tính (property) danh sách (list).
+> CSS ngày càng trở thành ràng buộc (constraint / 제약조건)/math ngôn ngữ (language / 언어), không chỉ thuộc tính (property / 속성) danh sách (list / 목록).
 
-Check compatibility trước khi dùng non-core math các hàm (functions).
+Check tính tương thích (compatibility / 호환성) trước khi dùng non-core math các hàm (functions).
 
 ---
 
-# 70. `interpolate-size` [MODERN]
+# 70. `interpolate-size` [hiện đại (modern / 현대적)]
 
-Cho phép nội suy (interpolation) tới/from kích thước nội tại (intrinsic size) keywords trong support phù hợp.
+Cho phép nội suy (interpolation) tới/from kích thước nội tại (intrinsic size) keywords trong hỗ trợ (support / 지원) phù hợp.
 
 Concept:
 
@@ -2187,7 +2190,7 @@ Concept:
 }
 ```
 
-Sau đó transitions có thể animate size tới:
+Sau đó transitions có thể animate kích thước (size / 크기) tới:
 
 ```text
 auto
@@ -2196,7 +2199,7 @@ max-content
 fit-content
 ```
 
-tùy support/spec.
+tùy hỗ trợ (support / 지원)/spec.
 
 ---
 
@@ -2210,9 +2213,9 @@ Concept:
 height: calc-size(auto, size + 2rem);
 ```
 
-Nó giải quyết case `calc()` thường không làm được với `auto`.
+Nó giải quyết trường hợp (case / 사례) `calc()` thường không làm được với `auto`.
 
-⚠ Limited availability: không dùng critical production UI nếu targets chưa support.
+⚠ Limited availability: không dùng trọng yếu (critical / 중요) môi trường vận hành (production / 운영 환경) UI nếu targets chưa hỗ trợ (support / 지원).
 
 ---
 
@@ -2247,9 +2250,9 @@ Example:
 
 ---
 
-# 73. `shape()` hàm (function) [2026]
+# 73. `shape()` hàm (function / 함수) [2026]
 
-Modern CSS `shape()` cho basic shapes/path-like commands bằng CSS syntax.
+Hiện đại (modern / 현대적) CSS `shape()` cho basic shapes/path-like commands bằng CSS cú pháp (syntax / 문법).
 
 Example concept:
 
@@ -2268,9 +2271,9 @@ Example concept:
 Có thể dùng với:
 - `clip-path`,
 - `offset-path`,
-- shape-related các thuộc tính (properties) trong support tương ứng.
+- shape-related các thuộc tính (properties) trong hỗ trợ (support / 지원) tương ứng.
 
-Ưu điểm so với SVG `path()` syntax:
+Ưu điểm so với SVG `path()` cú pháp (syntax / 문법):
 - CSS units,
 - percentages,
 - CSS math.
@@ -2279,7 +2282,7 @@ Có thể dùng với:
 
 # 74. Animation Composition [ADV]
 
-Khi nhiều animations ảnh hưởng cùng thuộc tính (property):
+Khi nhiều animations ảnh hưởng cùng thuộc tính (property / 속성):
 
 ```css
 animation-composition:
@@ -2296,15 +2299,15 @@ accumulate
 
 ## `replace`
 
-Effect mới thay underlying giá trị (value).
+Tác động (effect / 효과) mới thay underlying giá trị (value / 값).
 
 ## `add`
 
-Build trên underlying giá trị (value).
+Bản dựng (build / 빌드) trên underlying giá trị (value / 값).
 
 ## `accumulate`
 
-Combine theo animation type.
+Combine theo animation kiểu (type / 타입).
 
 Example:
 
@@ -2316,7 +2319,7 @@ Example:
 }
 ```
 
-Useful cho composable animation systems.
+Useful cho composable animation các hệ thống (systems / 시스템들).
 
 ---
 
@@ -2329,14 +2332,14 @@ animation:
   pulse 2s linear infinite;
 ```
 
-Mỗi animation-* thuộc tính (property) là comma-separated danh sách (list).
+Mỗi animation-* thuộc tính (property / 속성) là comma-separated danh sách (list / 목록).
 
-Nếu danh sách (list) lengths khác nhau, các giá trị (values) có thể cycle theo spec rules.
+Nếu danh sách (list / 목록) lengths khác nhau, các giá trị (values) có thể cycle theo spec rules.
 
-Senior bug source:
+Cấp cao (senior / 시니어) bug nguồn (source / 소스):
 - animation-name có 3 các giá trị (values),
 - duration có 2 các giá trị (values),
-- browser các map khóa–giá trị (maps)/cycles unexpectedly với dev.
+- trình duyệt (browser / 브라우저) các map khóa–giá trị (maps)/cycles unexpectedly với dev.
 
 ---
 
@@ -2366,7 +2369,7 @@ Useful:
 - sprite animation,
 - frame-by-frame UI.
 
-Variations include jump behavior.
+Variations include jump hành vi (behavior / 동작).
 
 Không dùng `steps()` nếu bạn thực sự cần smooth nội suy (interpolation).
 
@@ -2398,11 +2401,11 @@ Similarly view timelines:
 - `view-timeline-axis`
 - `view-timeline-inset`
 
-Check exact support/current syntax.
+Check chính xác (exact / 정확한) hỗ trợ (support / 지원)/hiện tại (current / 현재) cú pháp (syntax / 문법).
 
 ---
 
-# 79. `animation-range` [MODERN]
+# 79. `animation-range` [hiện đại (modern / 현대적)]
 
 Cho scroll/view timeline biết animation active trong đoạn nào.
 
@@ -2415,35 +2418,35 @@ Cho scroll/view timeline biết animation active trong đoạn nào.
 }
 ```
 
-Senior use:
+Cấp cao (senior / 시니어) use:
 - reveal animation,
 - parallax,
 - reading progress.
 
-khả năng tiếp cận (accessibility):
+Khả năng tiếp cận (accessibility / 접근성):
 - respect giảm chuyển động (reduced motion).
 
 ---
 
 # 80. Cross-document chuyển cảnh giao diện (view transitions) [2026]
 
-chuyển cảnh giao diện (view transitions) không chỉ SPA trạng thái (state).
+chuyển cảnh giao diện (view transitions) không chỉ SPA trạng thái (state / 상태).
 
-Modern platform hướng tới cross-document transitions giữa pages cùng origin/eligible navigation.
+Hiện đại (modern / 현대적) nền tảng (platform / 플랫폼) hướng tới cross-document transitions giữa pages cùng origin/eligible điều hướng (navigation / 내비게이션).
 
 CSS concepts:
 - `view-transition-name`
-- transition các phần tử giả (pseudo-elements)
+- chuyển tiếp (transition / 전이) các phần tử giả (pseudo-elements)
 - `@view-transition`
-- transition types/trạng thái (state) các bộ chọn (selectors) theo support.
+- chuyển tiếp (transition / 전이) types/trạng thái (state / 상태) các bộ chọn (selectors) theo hỗ trợ (support / 지원).
 
 ⚠ 2026 vẫn là focus interoperability.
 
 ---
 
-# 81. chuyển cảnh giao diện (view transition) phần tử giả (pseudo-element) Tree [DEEP]
+# 81. chuyển cảnh giao diện (view transition) phần tử giả (pseudo-element) cây (tree / 트리) [DEEP]
 
-Conceptual tree:
+Conceptual cây (tree / 트리):
 
 ```text
 ::view-transition
@@ -2453,15 +2456,15 @@ Conceptual tree:
       └─ ::view-transition-new(name)
 ```
 
-Hiểu tree này giúp:
+Hiểu cây (tree / 트리) này giúp:
 - animate old/new snapshots khác nhau,
-- control shared element transition.
+- điều khiển (control / 제어) dùng chung (shared / 공유) element chuyển tiếp (transition / 전이).
 
 ---
 
-# 82. định vị theo điểm neo (anchor positioning) — Deeper Model [ADV]
+# 82. định vị theo điểm neo (anchor positioning) — Deeper mô hình (model / 모델) [ADV]
 
-Canonical note giới thiệu định vị theo điểm neo (anchor positioning).
+Chuẩn gốc (canonical / 정본) ghi chú (note / 노트) giới thiệu định vị theo điểm neo (anchor positioning).
 
 Master cần biết ecosystem:
 
@@ -2477,20 +2480,20 @@ position-try-order
 ```
 
 Concept:
-- reference anchor,
+- tham chiếu (reference / 참조) anchor,
 - preferred placement,
 - phương án dự phòng (fallback) placement khi collision.
 
-Use case:
+Use trường hợp (case / 사례):
 - tooltip,
 - dropdown,
-- context menu.
+- ngữ cảnh (context / 맥락) menu.
 
 ---
 
-# 83. Position phương án dự phòng (fallback) Pattern [MODERN]
+# 83. Position phương án dự phòng (fallback) mẫu (pattern / 패턴) [hiện đại (modern / 현대적)]
 
-Mental pattern:
+Mental mẫu (pattern / 패턴):
 
 ```text
 prefer bottom
@@ -2502,21 +2505,21 @@ prefer bottom
 
 ---
 
-# 84. Container Style Queries — Deeper [2026]
+# 84. bộ chứa (container / 컨테이너) Style Queries — Deeper [2026]
 
-Size query:
+Kích thước (size / 크기) truy vấn (query / 쿼리):
 
 ```css
 @container (width > 30rem) {}
 ```
 
-Style query:
+Style truy vấn (query / 쿼리):
 
 ```css
 @container style(--density: compact) {}
 ```
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```css
 .panel {
@@ -2530,15 +2533,15 @@ Pattern:
 }
 ```
 
-## mẫu thiết kế (design pattern) — Style context
+## Mẫu thiết kế (design pattern / 디자인 패턴) — Style ngữ cảnh (context / 맥락)
 
-Component behavior có thể phụ thuộc mang tính ngữ nghĩa (semantic) style trạng thái (state) của ancestor, không chỉ width.
+Thành phần (component / 컴포넌트) hành vi (behavior / 동작) có thể phụ thuộc mang tính ngữ nghĩa (semantic / 의미적) style trạng thái (state / 상태) của ancestor, không chỉ width.
 
 ---
 
 # 85. `@supports selector()` [ADV]
 
-Canonical note có `@supports`; ở mức master cần hiểu hàm (function) query.
+Chuẩn gốc (canonical / 정본) ghi chú (note / 노트) có `@supports`; ở mức master cần hiểu hàm (function / 함수) truy vấn (query / 쿼리).
 
 ```css
 @supports selector(:has(*)) {
@@ -2548,7 +2551,7 @@ Canonical note có `@supports`; ở mức master cần hiểu hàm (function) qu
 }
 ```
 
-Dùng để detect bộ chọn (selector) syntax.
+Dùng để detect bộ chọn (selector) cú pháp (syntax / 문법).
 
 ---
 
@@ -2567,17 +2570,17 @@ Useful khi:
 - advanced font tech,
 - biến (variable) font scenarios.
 
-Không cần daily CSS nhưng có giá trị cho design/publishing products.
+Không cần daily CSS nhưng có giá trị cho thiết kế (design / 설계)/publishing products.
 
 ---
 
-# 87. CSSOM [MUST for frontend senior]
+# 87. CSSOM [MUST for frontend cấp cao (senior / 시니어)]
 
-CSS không chỉ là stylesheet text.
+CSS không chỉ là biểu định kiểu (stylesheet / 스타일시트) văn bản (text / 텍스트).
 
-JavaScript có **CSS Object Model**.
+JavaScript có **CSS mô hình đối tượng (object model / 객체 모델)**.
 
-Common APIs:
+Dùng chung (common / 공통) APIs:
 
 ```text
 document.styleSheets
@@ -2602,15 +2605,15 @@ console.log(styles.width);
 console.log(styles.color);
 ```
 
-Nó expose resolved computed style representation.
+Nó expose resolved computed style biểu diễn (representation / 표현).
 
 ## Pitfall
 
-Đừng dùng liên tục trong tight loop sau DOM writes.
+Đừng dùng liên tục trong tight vòng lặp (loop / 루프) sau DOM writes.
 
-Có thể force style/layout synchronization tùy thuộc tính (property)/context.
+Có thể force style/bố cục (layout / 레이아웃) synchronization tùy thuộc tính (property / 속성)/ngữ cảnh (context / 맥락).
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```text
 batch reads
@@ -2633,11 +2636,11 @@ bộ chọn (selector):
 CSS.supports("selector(:has(*))");
 ```
 
-Useful khi JS behavior cũng phụ thuộc platform capability.
+Useful khi JS hành vi (behavior / 동작) cũng phụ thuộc nền tảng (platform / 플랫폼) năng lực (capability / 역량).
 
 ---
 
-# 90. Stylesheet Manipulation
+# 90. biểu định kiểu (stylesheet / 스타일시트) Manipulation
 
 ```js
 const sheet =
@@ -2655,12 +2658,12 @@ Có:
 - `deleteRule()`
 
 Use carefully:
-- cross-origin stylesheet access restrictions,
+- cross-origin biểu định kiểu (stylesheet / 스타일시트) truy cập (access / 접근) restrictions,
 - maintainability.
 
 ---
 
-# 91. các stylesheet có thể khởi tạo (constructable stylesheets) [ADV]
+# 91. các biểu định kiểu (stylesheet / 스타일시트) có thể khởi tạo (constructable stylesheets) [ADV]
 
 Concept:
 
@@ -2679,9 +2682,9 @@ shadowRoot.adoptedStyleSheets = [sheet];
 
 Useful:
 - Web Components,
-- share one stylesheet object giữa nhiều shadow roots.
+- share one biểu định kiểu (stylesheet / 스타일시트) đối tượng (object / 객체) giữa nhiều shadow roots.
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```text
 Create once
@@ -2735,11 +2738,11 @@ console.log(width.unit);
 
 Useful cho:
 - editor tools,
-- animation systems,
-- layout tooling,
+- animation các hệ thống (systems / 시스템들),
+- bố cục (layout / 레이아웃) tooling,
 - browser-heavy UI frameworks.
 
-Không phải requirement cho mọi frontend app.
+Không phải yêu cầu (requirement / 요구사항) cho mọi frontend app.
 
 ---
 
@@ -2747,7 +2750,7 @@ Không phải requirement cho mọi frontend app.
 
 Shadow DOM (cây DOM đóng gói) tạo ranh giới style (style boundary).
 
-Inside component:
+Inside thành phần (component / 컴포넌트):
 
 ```css
 :host {
@@ -2755,7 +2758,7 @@ Inside component:
 }
 ```
 
-Host trạng thái (state):
+Host trạng thái (state / 상태):
 
 ```css
 :host([disabled]) {
@@ -2767,7 +2770,7 @@ Host trạng thái (state):
 
 # 95. `::slotted()` [ADV]
 
-Style distributed light-DOM children qua `<slot>`.
+Style phân tán (distributed / 분산) light-DOM children qua `<slot>`.
 
 ```css
 ::slotted(img) {
@@ -2777,7 +2780,7 @@ Style distributed light-DOM children qua `<slot>`.
 
 ## Limitation
 
-`::slotted()` target slotted element, không arbitrary deep descendants.
+`::slotted()` mục tiêu (target / 대상) slotted element, không arbitrary deep descendants.
 
 Đừng expect:
 
@@ -2791,13 +2794,13 @@ hoạt động như normal descendant bộ chọn (selector).
 
 # 96. `::part()` [MUST]
 
-Component expose internal part:
+Thành phần (component / 컴포넌트) expose nội bộ (internal / 내부) part:
 
 ```html
 <button part="control">
 ```
 
-Consumer:
+Bên tiêu thụ (consumer / 소비자):
 
 ```css
 my-button::part(control) {
@@ -2805,23 +2808,23 @@ my-button::part(control) {
 }
 ```
 
-## mẫu thiết kế (design pattern) — Explicit Styling Surface
+## Mẫu thiết kế (design pattern / 디자인 패턴) — tường minh (explicit / 명시적) Styling Surface
 
-Web Component không expose toàn internal DOM.
+Web thành phần (component / 컴포넌트) không expose toàn nội bộ (internal / 내부) DOM.
 
 Nó expose:
 - CSS custom các thuộc tính (properties),
 - `::part()` hooks.
 
-Đây là component CSS API.
+Đây là thành phần (component / 컴포넌트) CSS API.
 
 ---
 
-# 97. Custom các thuộc tính (properties) qua Shadow Boundary
+# 97. Custom các thuộc tính (properties) qua Shadow ranh giới (boundary / 경계)
 
-CSS custom các thuộc tính (properties) inherit qua shadow boundary theo normal kế thừa (inheritance) model phù hợp.
+CSS custom các thuộc tính (properties) inherit qua shadow ranh giới (boundary / 경계) theo normal kế thừa (inheritance) mô hình (model / 모델) phù hợp.
 
-Host consumer:
+Host bên tiêu thụ (consumer / 소비자):
 
 ```css
 my-button {
@@ -2837,7 +2840,7 @@ button {
 }
 ```
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```text
 Custom property = theming API
@@ -2866,7 +2869,7 @@ SVG các thuộc tính (properties):
 
 ---
 
-# 99. SVG `currentColor` Pattern
+# 99. SVG `currentColor` mẫu (pattern / 패턴)
 
 ```svg
 <svg class="icon" ...>
@@ -2881,7 +2884,7 @@ SVG các thuộc tính (properties):
 }
 ```
 
-Icon follow text color/theme automatically.
+Icon follow văn bản (text / 텍스트) color/theme automatically.
 
 ---
 
@@ -2889,30 +2892,30 @@ Icon follow text color/theme automatically.
 
 ## Inline SVG
 
-CSS có thể target nội bộ SVG.
+CSS có thể mục tiêu (target / 대상) nội bộ SVG.
 
 ## SVG qua `<img>`
 
-Document CSS không style internal SVG DOM như inline tree.
+Document CSS không style nội bộ (internal / 내부) SVG DOM như inline cây (tree / 트리).
 
-Đây là replaced-resource boundary.
+Đây là replaced-resource ranh giới (boundary / 경계).
 
-## Senior choice
+## Cấp cao (senior / 시니어) choice
 
 Inline SVG khi:
-- dynamic fill/stroke,
+- động (dynamic / 동적) fill/stroke,
 - animation,
 - accessible interactive graphic.
 
-Image SVG khi:
+Ảnh (image / 이미지) SVG khi:
 - static asset,
-- cache/resource simplicity.
+- bộ nhớ đệm (cache / 캐시)/tài nguyên (resource / 자원) simplicity.
 
 ---
 
-# 101. SVG `viewBox` và CSS Size
+# 101. SVG `viewBox` và CSS kích thước (size / 크기)
 
-SVG internal coordinate system:
+SVG nội bộ (internal / 내부) coordinate hệ thống (system / 시스템):
 
 ```html
 <svg viewBox="0 0 24 24">
@@ -2927,7 +2930,7 @@ CSS:
 }
 ```
 
-Pattern icon:
+Mẫu (pattern / 패턴) icon:
 
 ```css
 .icon {
@@ -2939,7 +2942,7 @@ Pattern icon:
 
 ---
 
-# 102. Mask-based Icon Pattern [ADV]
+# 102. Mask-based Icon mẫu (pattern / 패턴) [ADV]
 
 ```css
 .icon {
@@ -2954,7 +2957,7 @@ Pattern icon:
 ```
 
 Useful:
-- monochrome icon system,
+- monochrome icon hệ thống (system / 시스템),
 - color via `currentColor`.
 
 ---
@@ -2986,14 +2989,14 @@ Mask khác clip:
 ## `clip-path`
 
 Good:
-- hard geometric boundary.
+- hard geometric ranh giới (boundary / 경계).
 
 ## `mask`
 
 Good:
 - feathered transparency,
-- gradient reveal,
-- alpha image shapes.
+- độ dốc (gradient / 기울기) reveal,
+- alpha ảnh (image / 이미지) shapes.
 
 ---
 
@@ -3010,7 +3013,7 @@ CSS không chỉ screen.
 }
 ```
 
-## Common print adjustments
+## Dùng chung (common / 공통) print adjustments
 
 ```css
 @media print {
@@ -3025,7 +3028,7 @@ CSS không chỉ screen.
 }
 ```
 
-Đừng append URL cho internal navigation/buttons blindly.
+Đừng append URL cho nội bộ (internal / 내부) điều hướng (navigation / 내비게이션)/buttons blindly.
 
 ---
 
@@ -3040,9 +3043,9 @@ Concept:
 }
 ```
 
-Paged media control khác nhau theo browser/print engine.
+Paged media điều khiển (control / 제어) khác nhau theo trình duyệt (browser / 브라우저)/print engine.
 
-Use case:
+Use trường hợp (case / 사례):
 - reports,
 - invoices,
 - printable documents.
@@ -3057,9 +3060,9 @@ Use case:
 }
 ```
 
-Nói browser cố gắng giữ colors.
+Nói trình duyệt (browser / 브라우저) cố gắng giữ colors.
 
-⚠ User/browser vẫn có quyền print preferences; không assume tuyệt đối.
+⚠ người dùng (user / 사용자)/trình duyệt (browser / 브라우저) vẫn có quyền print preferences; không assume tuyệt đối.
 
 ---
 
@@ -3141,7 +3144,7 @@ Can generate:
 
 # 111. `@counter-style` [ADV]
 
-Custom marker system:
+Custom marker hệ thống (system / 시스템):
 
 ```css
 @counter-style thumbs {
@@ -3159,11 +3162,11 @@ ul {
 }
 ```
 
-Niche nhưng useful cho publishing/design systems.
+Niche nhưng useful cho publishing/thiết kế (design / 설계) các hệ thống (systems / 시스템들).
 
 ---
 
-# 112. Tables — Deep Layout [ADV]
+# 112. Tables — Deep bố cục (layout / 레이아웃) [ADV]
 
 `table-layout`:
 
@@ -3179,15 +3182,15 @@ Column width influenced bởi content.
 
 ## `fixed`
 
-Column sizing dựa nhiều hơn vào explicit table/column widths và first-row info; layout predictable hơn.
+Column sizing dựa nhiều hơn vào tường minh (explicit / 명시적) bảng (table / 테이블)/column widths và first-row info; bố cục (layout / 레이아웃) predictable hơn.
 
 Useful:
-- large data table,
+- large dữ liệu (data / 데이터) bảng (table / 테이블),
 - fixed dashboard columns.
 
 ---
 
-# 113. Border Collapsing Model [DEEP]
+# 113. Border Collapsing mô hình (model / 모델) [DEEP]
 
 ```css
 table {
@@ -3195,7 +3198,7 @@ table {
 }
 ```
 
-Adjacent cell borders compete theo border conflict resolution rules.
+Adjacent cell borders compete theo border giải quyết xung đột (conflict resolution / 충돌 해결) rules.
 
 Đây là lý do:
 - border của th/td có lúc không giống simple box stacking.
@@ -3213,7 +3216,7 @@ border-spacing: .5rem;
 
 Grid có đường cơ sở (baseline) alignment và advanced định cỡ dải lưới (track sizing) rất sâu.
 
-Master không cần memorize toàn spec algorithm, nhưng phải biết:
+Master không cần memorize toàn spec thuật toán (algorithm / 알고리즘), nhưng phải biết:
 
 ```text
 track sizing
@@ -3231,7 +3234,7 @@ Khi grid width bất ngờ:
 
 ---
 
-# 115. Subpixel Layout / Pixel Rounding [DEEP]
+# 115. Subpixel bố cục (layout / 레이아웃) / điểm ảnh (pixel / 픽셀) Rounding [DEEP]
 
 CSS pixels có thể thành fractional các giá trị (values):
 
@@ -3239,7 +3242,7 @@ CSS pixels có thể thành fractional các giá trị (values):
 33.333333px
 ```
 
-Browser cuối cùng map khóa–giá trị (map) tới device pixels.
+Trình duyệt (browser / 브라우저) cuối cùng map khóa–giá trị (map) tới thiết bị (device / 장치) pixels.
 
 3-column grid:
 
@@ -3248,9 +3251,9 @@ grid-template-columns:
   repeat(3, 1fr);
 ```
 
-container width không chia hết → track render có thể rounding.
+Bộ chứa (container / 컨테이너) width không chia hết → nhánh học (track / 트랙) kết xuất (render / 렌더링) có thể rounding.
 
-## Senior lesson
+## Cấp cao (senior / 시니어) lesson
 
 Đừng assume:
 
@@ -3262,7 +3265,7 @@ Tránh JS comparison strict với rounded dimensions nếu không cần.
 
 ---
 
-# 116. Device Pixel Ratio mô hình tư duy (mental model)
+# 116. thiết bị (device / 장치) điểm ảnh (pixel / 픽셀) Ratio mô hình tư duy (mental model / 사고 모델)
 
 ```text
 CSS pixel
@@ -3286,7 +3289,7 @@ High-DPI:
 
 # 117. CSS `zoom` [2026]
 
-`zoom` scale element và ảnh hưởng layout khác `transform: scale()`.
+`zoom` quy mô (scale / 규모) element và ảnh hưởng bố cục (layout / 레이아웃) khác `transform: scale()`.
 
 Concept:
 
@@ -3299,21 +3302,21 @@ Concept:
 ## `zoom` vs transform
 
 `transform: scale()`:
-- transforms painted result,
-- normal layout space thường không co tương ứng.
+- transforms painted kết quả (result / 결과),
+- normal bố cục (layout / 레이아웃) không gian (space / 공간) thường không co tương ứng.
 
 `zoom`:
-- ảnh hưởng layout sizing.
+- ảnh hưởng bố cục (layout / 레이아웃) sizing.
 
-Interop 2026 tiếp tục cải thiện đa trình duyệt (cross-browser) behavior.
+Interop 2026 tiếp tục cải thiện đa trình duyệt (cross-browser) hành vi (behavior / 동작).
 
-⚠ Chỉ dùng khi hiểu khả năng tiếp cận (accessibility)/layout consequences.
+⚠ Chỉ dùng khi hiểu khả năng tiếp cận (accessibility / 접근성)/bố cục (layout / 레이아웃) consequences.
 
 ---
 
 # 118. `forced-color-adjust` [ADV]
 
-High-contrast / màu cưỡng bức (forced colors) mode:
+High-contrast / màu cưỡng bức (forced colors) chế độ (mode / 모드):
 
 ```css
 .logo {
@@ -3321,20 +3324,20 @@ High-contrast / màu cưỡng bức (forced colors) mode:
 }
 ```
 
-`none` nói browser không override colors.
+`none` nói trình duyệt (browser / 브라우저) không override colors.
 
 ⚠ Dùng rất ít.
 
 Chỉ opt-out khi automatic màu cưỡng bức (forced colors) thực sự phá meaning, ví dụ:
-- brand image,
+- brand ảnh (image / 이미지),
 - color-coded graphic có alternate accessible cue.
 
 ---
 
-# 119. màu cưỡng bức (forced colors) mẫu thiết kế (design pattern)
+# 119. màu cưỡng bức (forced colors) mẫu thiết kế (design pattern / 디자인 패턴)
 
 Default:
-- để browser adapt.
+- để trình duyệt (browser / 브라우저) adapt.
 
 Sau đó targeted fixes:
 
@@ -3346,7 +3349,7 @@ Sau đó targeted fixes:
 }
 ```
 
-System colors:
+Hệ thống (system / 시스템) colors:
 - `Canvas`
 - `CanvasText`
 - `ButtonFace`
@@ -3356,11 +3359,11 @@ System colors:
 
 ---
 
-# 120. tương thích trình duyệt (browser compatibility) Strategy [MUST]
+# 120. tương thích trình duyệt (browser compatibility) chiến lược (strategy / 전략) [MUST]
 
 Master CSS không hỏi:
 
-> "Feature này support không?"
+> "tính năng (feature / 기능) này hỗ trợ (support / 지원) không?"
 
 mà hỏi:
 
@@ -3375,9 +3378,9 @@ Interop risk?
 
 ---
 
-# 121. cải tiến lũy tiến (progressive enhancement) Matrix
+# 121. cải tiến lũy tiến (progressive enhancement) ma trận (matrix / 행렬)
 
-Ví dụ glass effect:
+Ví dụ glass tác động (effect / 효과):
 
 ```css
 .card {
@@ -3392,7 +3395,7 @@ Ví dụ glass effect:
 }
 ```
 
-Nếu feature fail:
+Nếu tính năng (feature / 기능) thất bại (fail / 실패):
 - UI vẫn usable.
 
 Đó là cải tiến lũy tiến (progressive enhancement) đúng.
@@ -3417,13 +3420,13 @@ advanced app
 → ensure acceptable fallback
 ```
 
-CSS modern thường rất phù hợp cải tiến lũy tiến (progressive enhancement) vì unsupported khai báo (declaration)/rule có thể bị ignore.
+CSS hiện đại (modern / 현대적) thường rất phù hợp cải tiến lũy tiến (progressive enhancement) vì unsupported khai báo (declaration)/quy tắc (rule / 규칙) có thể bị ignore.
 
 ---
 
-# 123. mức hỗ trợ trình duyệt (browser support) Tiers
+# 123. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) Tiers
 
-Có thể định nghĩa trong project:
+Có thể định nghĩa trong dự án (project / 프로젝트):
 
 ```text
 Tier A
@@ -3436,7 +3439,7 @@ Tier C
 unsupported but readable fallback
 ```
 
-Sau đó feature policy rõ:
+Sau đó tính năng (feature / 기능) chính sách (policy / 정책) rõ:
 
 ```text
 Anchor positioning:
@@ -3451,14 +3454,14 @@ optional
 
 ---
 
-# 124. đường cơ sở (baseline) Strategy [2026]
+# 124. đường cơ sở (baseline) chiến lược (strategy / 전략) [2026]
 
-Khi research modern CSS:
+Khi research hiện đại (modern / 현대적) CSS:
 - xem MDN đường cơ sở (baseline) status,
-- xem Web Platform Status,
-- xem project browser matrix.
+- xem Nền tảng Web (web platform / 웹 플랫폼) Status,
+- xem dự án (project / 프로젝트) trình duyệt (browser / 브라우저) ma trận (matrix / 행렬).
 
-Không sử dụng feature chỉ vì:
+Không sử dụng tính năng (feature / 기능) chỉ vì:
 ```text
 Chrome của dev chạy được
 ```
@@ -3467,14 +3470,14 @@ Chrome của dev chạy được
 
 # 125. CSS Testing Pyramid [MUST]
 
-## Level 1 — Static checks
+## Mức (level / 수준) 1 — Static checks
 
 - stylelint,
-- syntax,
+- cú pháp (syntax / 문법),
 - naming,
 - banned patterns.
 
-## Level 2 — Component tests
+## Mức (level / 수준) 2 — thành phần (component / 컴포넌트) tests
 
 Check các trạng thái (states):
 - default,
@@ -3482,21 +3485,21 @@ Check các trạng thái (states):
 - focus,
 - disabled,
 - loading,
-- long text,
+- long văn bản (text / 텍스트),
 - RTL.
 
-## Level 3 — hồi quy giao diện (visual regression)
+## Mức (level / 수준) 3 — hồi quy giao diện (visual regression)
 
 Screenshot compare.
 
-## Level 4 — đa trình duyệt (cross-browser) / device
+## Mức (level / 수준) 4 — đa trình duyệt (cross-browser) / thiết bị (device / 장치)
 
 - Chromium,
 - Firefox,
 - Safari,
 - mobile.
 
-## Level 5 — khả năng tiếp cận (accessibility)
+## Mức (level / 수준) 5 — khả năng tiếp cận (accessibility / 접근성)
 
 - keyboard,
 - zoom,
@@ -3513,7 +3516,7 @@ hồi quy giao diện (visual regression) catches:
 - 2px shifts,
 - wrapping,
 - missing border,
-- color token regression,
+- color đơn vị từ (token / 토큰) regression,
 - responsive break.
 
 Typical tools/ecosystems:
@@ -3521,7 +3524,7 @@ Typical tools/ecosystems:
 - Storybook visual workflows,
 - hosted diff services.
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```text
 component states
@@ -3531,9 +3534,9 @@ component states
 
 ---
 
-# 127. CSS Test Fixture Design
+# 127. CSS kiểm thử (test / 테스트) Fixture thiết kế (design / 설계)
 
-Một component test page nên có:
+Một thành phần (component / 컴포넌트) kiểm thử (test / 테스트) page nên có:
 
 ```text
 short text
@@ -3550,13 +3553,13 @@ RTL
 200% zoom-like constraints
 ```
 
-Senior không chỉ test happy path.
+Cấp cao (senior / 시니어) không chỉ kiểm thử (test / 테스트) happy đường dẫn (path / 경로).
 
 ---
 
-# 128. Stylelint Strategy [MUST]
+# 128. Stylelint chiến lược (strategy / 전략) [MUST]
 
-Useful rule categories:
+Useful quy tắc (rule / 규칙) categories:
 
 ```text
 invalid syntax
@@ -3572,11 +3575,11 @@ browser compatibility plugin if needed
 
 Đừng bật 100 rules chỉ để CI đỏ.
 
-Rules phải enforce kiến trúc (architecture).
+Rules phải enforce kiến trúc (architecture / 아키텍처).
 
 ---
 
-# 129. độ đặc hiệu (specificity) Budget [ADV]
+# 129. độ đặc hiệu (specificity) ngân sách (budget / 예산) [ADV]
 
 Có thể enforce guideline:
 
@@ -3589,7 +3592,7 @@ No !important except designated layer
 
 Không cần exactly như trên.
 
-Quan trọng là **team contract measurable**.
+Quan trọng là **nhóm (team / 팀) đặc tả hợp đồng (contract / 계약) measurable**.
 
 ---
 
@@ -3597,44 +3600,44 @@ Quan trọng là **team contract measurable**.
 
 Sources:
 - old components,
-- dynamic class generation,
+- động (dynamic / 동적) lớp (class / 클래스) generation,
 - abandoned experiments,
 - third-party styles.
 
 Strategies:
 - component-scoped CSS,
 - CSS Modules,
-- build analysis,
+- bản dựng (build / 빌드) phân tích (analysis / 분석),
 - coverage,
-- tiện ích (utility) tree shaking,
-- delete styles with code.
+- tiện ích (utility) cây (tree / 트리) shaking,
+- delete styles with mã (code / 코드).
 
-⚠ Automatic unused CSS tools có thể miss dynamic thời gian chạy (runtime) các bộ chọn (selectors).
+⚠ Automatic unused CSS tools có thể miss động (dynamic / 동적) thời gian chạy (runtime / 런타임) các bộ chọn (selectors).
 
 ---
 
 # 131. CSS Coverage in DevTools [ADV]
 
-Browser DevTools Coverage có thể cho thấy stylesheet bytes unused trong scenario đang chạy.
+Trình duyệt (browser / 브라우저) DevTools Coverage có thể cho thấy biểu định kiểu (stylesheet / 스타일시트) bytes unused trong scenario đang chạy.
 
 Không đồng nghĩa:
 ```text
 unused = safe delete
 ```
 
-Vì trạng thái (state)/page khác có thể dùng.
+Vì trạng thái (state / 상태)/page khác có thể dùng.
 
-Use as investigation signal.
+Use as investigation tín hiệu (signal / 신호).
 
 ---
 
-# 132. Critical CSS [ADV]
+# 132. trọng yếu (critical / 중요) CSS [ADV]
 
-Above-the-fold CSS có thể inline/extract để giảm render blocking.
+Above-the-fold CSS có thể inline/extract để giảm kết xuất (render / 렌더링) blocking.
 
-Nhưng modern apps cần balance:
+Nhưng hiện đại (modern / 현대적) apps cần balance:
 - caching,
-- complexity,
+- độ phức tạp (complexity / 복잡도),
 - hydration,
 - duplicate CSS.
 
@@ -3642,13 +3645,13 @@ Không automatically inline toàn CSS.
 
 ---
 
-# 133. tính lại style (style recalculation) Cost [DEEP]
+# 133. tính lại style (style recalculation) chi phí (cost / 비용) [DEEP]
 
-Browser có thể cần recompute styles khi:
-- class changes,
+Trình duyệt (browser / 브라우저) có thể cần recompute styles khi:
+- lớp (class / 클래스) changes,
 - DOM changes,
-- trạng thái (state) changes,
-- inherited custom thuộc tính (property) changes.
+- trạng thái (state / 상태) changes,
+- inherited custom thuộc tính (property / 속성) changes.
 
 High-level concern:
 - huge DOM,
@@ -3661,7 +3664,7 @@ High-level concern:
 
 # 134. dao động bố cục do đọc/ghi xen kẽ (layout thrashing) [MUST]
 
-Pattern xấu JS:
+Mẫu (pattern / 패턴) xấu JS:
 
 ```js
 element.style.width = "100px";
@@ -3671,7 +3674,7 @@ element.style.width = "200px";
 const width2 = element.offsetWidth;
 ```
 
-Read-after-write có thể force synchronous layout.
+Read-after-write có thể force synchronous bố cục (layout / 레이아웃).
 
 Better:
 
@@ -3681,13 +3684,13 @@ batch reads
 → batch writes
 ```
 
-CSS hiệu năng (performance) không thể tách rời JS layout behavior.
+CSS hiệu năng (performance / 성능) không thể tách rời JS bố cục (layout / 레이아웃) hành vi (behavior / 동작).
 
 ---
 
-# 135. Containment Strategy [ADV]
+# 135. Containment chiến lược (strategy / 전략) [ADV]
 
-`contain` là hiệu năng (performance) + kiến trúc (architecture) tool.
+`contain` là hiệu năng (performance / 성능) + kiến trúc (architecture / 아키텍처) công cụ (tool / 도구).
 
 Possible:
 - `layout`
@@ -3696,11 +3699,11 @@ Possible:
 - `inline-size`
 - `style`
 
-Dùng khi component:
+Dùng khi thành phần (component / 컴포넌트):
 - tương đối independent,
-- có known sizing strategy.
+- có known sizing chiến lược (strategy / 전략).
 
-⚠ `size` containment có thể làm định cỡ nội tại (intrinsic sizing) biến mất.
+⚠ `size` containment có thể làm định cỡ nội tại (intrinsic sizing / 내재 크기 결정) biến mất.
 
 ---
 
@@ -3718,9 +3721,9 @@ Good:
 - large off-screen sections.
 
 Bad:
-- tiny danh sách (list) items,
-- content requiring immediate measurement,
-- cases khiến focus/search UX bất ngờ nếu implementation/browser constraints.
+- tiny danh sách (list / 목록) items,
+- content requiring immediate đo lường (measurement / 측정),
+- cases khiến focus/tìm kiếm (search / 검색) UX bất ngờ nếu hiện thực (implementation / 구현)/trình duyệt (browser / 브라우저) các ràng buộc (constraints / 제약조건들).
 
 Profile before/after.
 
@@ -3736,13 +3739,13 @@ Expensive visual effects có thể gồm:
 - complex masks,
 - frequently animating filters.
 
-Không có universal rule.
+Không có universal quy tắc (rule / 규칙).
 
-DevTools hiệu năng (performance)/Paint flashing mới là source of truth.
+DevTools hiệu năng (performance / 성능)/Paint flashing mới là nguồn chuẩn (source of truth / 정본).
 
 ---
 
-# 138. Layer Promotion Myth
+# 138. tầng (layer / 계층) Promotion Myth
 
 Không phải cứ:
 
@@ -3753,9 +3756,9 @@ transform: translateZ(0);
 là "tối ưu".
 
 Unnecessary compositing:
-- tốn GPU memory,
+- tốn GPU bộ nhớ (memory / 메모리),
 - tạo layers dư,
-- có thể blur text/produce artifacts.
+- có thể blur văn bản (text / 텍스트)/produce artifacts.
 
 `will-change` cũng tương tự:
 - hint,
@@ -3763,9 +3766,9 @@ Unnecessary compositing:
 
 ---
 
-# 139. Component CSS Contract [MASTER]
+# 139. thành phần (component / 컴포넌트) CSS đặc tả hợp đồng (contract / 계약) [MASTER]
 
-Một reusable component nên xác định:
+Một reusable thành phần (component / 컴포넌트) nên xác định:
 
 ```text
 DOM contract
@@ -3793,13 +3796,13 @@ aria-pressed
 --button-radius
 ```
 
-Internal implementation không nên bị consumer phụ thuộc.
+Nội bộ (internal / 내부) hiện thực (implementation / 구현) không nên bị bên tiêu thụ (consumer / 소비자) phụ thuộc.
 
 ---
 
-# 140. Public vs Private CSS API
+# 140. công khai (public / 공개) vs Private CSS API
 
-## Public
+## Công khai (public / 공개)
 
 ```text
 documented class
@@ -3818,12 +3821,12 @@ anonymous child order
 temporary utility
 ```
 
-Senior review:
-> Consumer có đang override private implementation không?
+Cấp cao (senior / 시니어) rà soát (review / 검토):
+> bên tiêu thụ (consumer / 소비자) có đang override private hiện thực (implementation / 구현) không?
 
 ---
 
-# 141. Override Hooks Pattern
+# 141. Override Hooks mẫu (pattern / 패턴)
 
 Bad:
 
@@ -3835,7 +3838,7 @@ Bad:
 }
 ```
 
-Better nếu component controlled:
+Better nếu thành phần (component / 컴포넌트) controlled:
 
 ```css
 .widget {
@@ -3843,7 +3846,7 @@ Better nếu component controlled:
 }
 ```
 
-Hoặc Web Component:
+Hoặc Web thành phần (component / 컴포넌트):
 
 ```css
 widget-x::part(title) {}
@@ -3851,20 +3854,20 @@ widget-x::part(title) {}
 
 ---
 
-# 142. CSS kiến trúc (architecture) for Micro-frontends [ADV]
+# 142. CSS kiến trúc (architecture / 아키텍처) for Micro-frontends [ADV]
 
-Problem:
+Bài toán (problem / 문제):
 - nhiều teams,
 - nhiều frameworks,
-- global CSS collision.
+- toàn cục (global / 전역) CSS collision.
 
 Strategies:
 - các lớp phân tầng (cascade layers),
-- không gian tên (namespace)/root phạm vi (scope),
+- không gian tên (namespace / 네임스페이스)/gốc (root / 루트) phạm vi (scope / 범위),
 - CSS Modules,
 - Shadow DOM (cây DOM đóng gói),
-- token contract,
-- no global resets inside child app.
+- đơn vị từ (token / 토큰) đặc tả hợp đồng (contract / 계약),
+- no toàn cục (global / 전역) resets inside child app.
 
 Example:
 
@@ -3874,19 +3877,19 @@ Example:
 }
 ```
 
-Hoặc root không gian tên (namespace):
+Hoặc gốc (root / 루트) không gian tên (namespace / 네임스페이스):
 
 ```css
 .payments-app .button {}
 ```
 
-depending platform/support.
+depending nền tảng (platform / 플랫폼)/hỗ trợ (support / 지원).
 
 ---
 
-# 143. Third-party CSS Containment Pattern
+# 143. Third-party CSS Containment mẫu (pattern / 패턴)
 
-Import vendor vào low-priority layer:
+Import vendor vào low-priority tầng (layer / 계층):
 
 ```css
 @layer vendor, app;
@@ -3907,7 +3910,7 @@ Giảm độ đặc hiệu (specificity) fighting.
 
 ---
 
-# 144. Legacy CSS chuyển đổi (migration) Pattern
+# 144. Legacy CSS chuyển đổi (migration) mẫu (pattern / 패턴)
 
 Khi codebase có:
 
@@ -3932,23 +3935,23 @@ chuyển đổi (migration):
 
 ---
 
-# 145. CSS Refactor Safety
+# 145. CSS Refactor an toàn (safety / 안전)
 
 Trước refactor:
 - screenshot các trạng thái (states),
 - capture major routes,
-- record computed styles for sensitive components.
+- bản ghi (record / 레코드) computed styles for sensitive components.
 
 Sau refactor:
 - visual diff,
-- keyboard test,
-- responsive test.
+- keyboard kiểm thử (test / 테스트),
+- responsive kiểm thử (test / 테스트).
 
-CSS refactor không có trình biên dịch (compiler) bảo vệ ngữ nghĩa (semantics).
+CSS refactor không có trình biên dịch (compiler / 컴파일러) bảo vệ ngữ nghĩa (semantics / 의미론).
 
 ---
 
-# 146. Modern Native UI Strategy [MASTER]
+# 146. hiện đại (modern / 현대적) bản địa (native / 네이티브) UI chiến lược (strategy / 전략) [MASTER]
 
 Trước đây frontend thường recreate:
 - dialog,
@@ -3956,7 +3959,7 @@ Trước đây frontend thường recreate:
 - tooltip,
 - select.
 
-2026 platform có:
+2026 nền tảng (platform / 플랫폼) có:
 - `<dialog>`,
 - Popover API,
 - định vị theo điểm neo (anchor positioning),
@@ -3965,7 +3968,7 @@ Trước đây frontend thường recreate:
 - lớp trên cùng (top layer),
 - `@starting-style`.
 
-Senior decision:
+Cấp cao (senior / 시니어) quyết định (decision / 결정):
 
 ```text
 Use platform primitive
@@ -3975,9 +3978,9 @@ Use platform primitive
 
 ---
 
-# 147. Modern CSS vs JavaScript Boundary
+# 147. hiện đại (modern / 현대적) CSS vs JavaScript ranh giới (boundary / 경계)
 
-Use CSS khi problem là:
+Use CSS khi bài toán (problem / 문제) là:
 
 ```text
 layout
@@ -3988,7 +3991,7 @@ animation
 style condition
 ```
 
-Use JS khi problem là:
+Use JS khi bài toán (problem / 문제) là:
 
 ```text
 business state
@@ -3999,7 +4002,7 @@ focus management logic
 application workflow
 ```
 
-Modern CSS đang kéo boundary xa hơn với:
+Hiện đại (modern / 현대적) CSS đang kéo ranh giới (boundary / 경계) xa hơn với:
 - `:has()`
 - các truy vấn vùng chứa (container queries)
 - định vị theo điểm neo (anchor positioning)
@@ -4008,7 +4011,7 @@ Modern CSS đang kéo boundary xa hơn với:
 
 ---
 
-# 148. Common “Master-Level” gỡ lỗi (debug) Questions
+# 148. dùng chung (common / 공통) “Master-Level” gỡ lỗi (debug / 디버그) Questions
 
 Khi bug khó, hỏi:
 
@@ -4041,34 +4044,34 @@ Khi bug khó, hỏi:
 
 ## Lab 1 — cơ chế phân tầng (cascade) origins
 
-Tạo cùng thuộc tính (property) từ:
+Tạo cùng thuộc tính (property / 속성) từ:
 - inline,
-- stylesheet,
+- biểu định kiểu (stylesheet / 스타일시트),
 - animation,
-- transition,
+- chuyển tiếp (transition / 전이),
 - `!important`.
 
 Quan sát DevTools winner.
 
-## Lab 2 — Layer inversion
+## Lab 2 — tầng (layer / 계층) inversion
 
-Test normal + important across 3 layers.
+Kiểm thử (test / 테스트) normal + important across 3 layers.
 
 ## Lab 3 — độ gần phạm vi (scope proximity)
 
 Tạo nested scopes và equal độ đặc hiệu (specificity).
 
-## Lab 4 — Computed giá trị (value)
+## Lab 4 — Computed giá trị (value / 값)
 
 So sánh:
-- source khai báo (declaration),
+- nguồn (source / 소스) khai báo (declaration),
 - computed style,
-- used pixel size.
+- used điểm ảnh (pixel / 픽셀) kích thước (size / 크기).
 
-## Lab 5 — Replaced image
+## Lab 5 — Replaced ảnh (image / 이미지)
 
-Test:
-- intrinsic image,
+Kiểm thử (test / 테스트):
+- intrinsic ảnh (image / 이미지),
 - width only,
 - height only,
 - aspect-ratio,
@@ -4080,7 +4083,7 @@ Long unbreakable content:
 - trước `min-width:0`,
 - sau `min-width:0`.
 
-## Lab 7 — Grid intrinsic track
+## Lab 7 — Grid intrinsic nhánh học (track / 트랙)
 
 Compare:
 ```css
@@ -4095,15 +4098,15 @@ minmax(0,1fr)
 
 ## Lab 8 — Inline đường cơ sở (baseline)
 
-Align icon + text:
+Align icon + văn bản (text / 텍스트):
 - center,
 - đường cơ sở (baseline),
 - vertical-align.
 
 ## Lab 9 — BFC
 
-Float image + text:
-- normal block,
+Float ảnh (image / 이미지) + văn bản (text / 텍스트):
+- normal khối (block / 블록),
 - `flow-root`.
 
 ## Lab 10 — Fragmentation
@@ -4116,21 +4119,21 @@ Float image + text:
 
 Compare:
 - div modal z-index,
-- native dialog.
+- bản địa (native / 네이티브) dialog.
 
 ## Lab 12 — Popover
 
-Build menu dùng Popover API + `:popover-open`.
+Bản dựng (build / 빌드) menu dùng Popover API + `:popover-open`.
 
 ## Lab 13 — chuyển tiếp khi xuất hiện (entry transition)
 
 Use:
 - `@starting-style`,
-- discrete transition.
+- discrete chuyển tiếp (transition / 전이).
 
 ## Lab 14 — Custom select
 
-Progressively enhance native select với `base-select`.
+Progressively enhance bản địa (native / 네이티브) select với `base-select`.
 
 ## Lab 15 — truyền chuỗi cuộn (scroll chaining)
 
@@ -4138,11 +4141,11 @@ Nested scroller + `overscroll-behavior`.
 
 ## Lab 16 — vùng an toàn (safe area)
 
-Build fixed mobile bottom nav dùng `env()`.
+Bản dựng (build / 빌드) fixed mobile bottom nav dùng `env()`.
 
 ## Lab 17 — biến (variable) font
 
-Animate/change standard font axis.
+Animate/thay đổi (change / 변경) tiêu chuẩn (standard / 표준) font axis.
 
 ## Lab 18 — Display P3 color
 
@@ -4150,7 +4153,7 @@ Create phương án dự phòng (fallback) + wide-gamut enhancement.
 
 ## Lab 19 — Custom Highlight
 
-Search match without adding `<mark>` nodes.
+Tìm kiếm (search / 검색) match without adding `<mark>` nodes.
 
 ## Lab 20 — đường chuyển động (motion path)
 
@@ -4163,13 +4166,13 @@ Use `animation-composition:add`.
 ## Lab 22 — Shadow DOM (cây DOM đóng gói)
 
 Expose:
-- custom thuộc tính (property),
+- custom thuộc tính (property / 속성),
 - `::part`,
 - slotted content.
 
 ## Lab 23 — CSSOM
 
-Read computed các giá trị (values) + construct stylesheet.
+Read computed các giá trị (values) + construct biểu định kiểu (stylesheet / 스타일시트).
 
 ## Lab 24 — Print
 
@@ -4180,10 +4183,10 @@ Create printable report:
 
 ## Lab 25 — hồi quy giao diện (visual regression)
 
-Capture component matrix:
+Capture thành phần (component / 컴포넌트) ma trận (matrix / 행렬):
 - light/dark,
 - 320/768/1440,
-- long text,
+- long văn bản (text / 텍스트),
 - focus,
 - RTL.
 
@@ -4193,12 +4196,12 @@ Capture component matrix:
 
 Bạn nên trả lời được không nhìn tài liệu:
 
-1. Declared, cascaded, specified, computed, used, actual giá trị (value) khác gì?
-2. Khi nào custom thuộc tính (property) gây invalid at computed-value time?
+1. Declared, cascaded, specified, computed, used, actual giá trị (value / 값) khác gì?
+2. Khi nào custom thuộc tính (property / 속성) gây invalid at computed-value thời gian (time / 시간)?
 3. Origin precedence khác độ đặc hiệu (specificity) như thế nào?
-4. Tại sao `!important` đảo lớp phân tầng (cascade layer) order?
+4. Tại sao `!important` đảo lớp phân tầng (cascade layer) thứ tự (order / 순서)?
 5. `@scope` proximity được xét khi nào?
-6. DOM tree và box tree khác nhau ở đâu?
+6. DOM cây (tree / 트리) và box cây (tree / 트리) khác nhau ở đâu?
 7. Anonymous box là gì?
 8. BFC là gì? `flow-root` giải quyết gì?
 9. ngữ cảnh định dạng nội dòng (inline formatting context) hoạt động theo hộp dòng (line box) thế nào?
@@ -4207,106 +4210,106 @@ Bạn nên trả lời được không nhìn tài liệu:
 12. kích thước nội tại (intrinsic dimension)/ratio khác CSS aspect-ratio thế nào?
 13. kích thước xác định (definite size) ảnh hưởng percentage height thế nào?
 14. `min-content`, `max-content`, `fit-content` khác nhau thế nào?
-15. Shrink-to-fit xuất hiện trong những layout nào?
+15. Shrink-to-fit xuất hiện trong những bố cục (layout / 레이아웃) nào?
 16. Vì sao `min-width:0` fix flex overflow?
-17. Vì sao `%` không thể học như một unit universal?
-18. Float ngày nay còn use case gì?
+17. Vì sao `%` không thể học như một đơn vị (unit / 단위) universal?
+18. Float ngày nay còn use trường hợp (case / 사례) gì?
 19. Fragmentation là gì?
 20. `:nth-child(2n of .x)` khác `.x:nth-child(2n)`?
 21. `:user-invalid` hơn `:invalid` ở UX nào?
 22. `:open`, `:popover-open`, `:modal` khác nhau?
 23. lớp trên cùng (top layer) khác z-index thế nào?
-24. `@starting-style` giải quyết problem nào?
+24. `@starting-style` giải quyết bài toán (problem / 문제) nào?
 25. `appearance:base-select` là gì?
 26. vùng chứa cuộn (scroll container) ảnh hưởng sticky thế nào?
 27. `overflow:hidden` và `overflow:clip` khác nhau gì?
 28. `overscroll-behavior` dùng khi nào?
-29. `scrollbar-gutter` giải quyết problem gì?
+29. `scrollbar-gutter` giải quyết bài toán (problem / 문제) gì?
 30. `env(safe-area-inset-bottom)` dùng làm gì?
 31. `font-variant-numeric:tabular-nums` hữu ích khi nào?
 32. Wide gamut P3 khác sRGB?
 33. `contrast-color()` giải quyết gì?
-34. Typed `attr()` mở ra use case nào?
+34. Typed `attr()` mở ra use trường hợp (case / 사례) nào?
 35. `interpolate-size` và `calc-size()` là gì?
-36. đường chuyển động (motion path) gồm thuộc tính (property) nào?
+36. đường chuyển động (motion path) gồm thuộc tính (property / 속성) nào?
 37. `animation-composition` các giá trị (values) là gì?
-38. chuyển cảnh giao diện (view transition) phần tử giả (pseudo-element) tree hoạt động conceptually thế nào?
+38. chuyển cảnh giao diện (view transition) phần tử giả (pseudo-element) cây (tree / 트리) hoạt động conceptually thế nào?
 39. định vị theo điểm neo (anchor positioning) phương án dự phòng (fallback) giải quyết collision ra sao?
-40. Container style query khác size query?
+40. bộ chứa (container / 컨테이너) style truy vấn (query / 쿼리) khác kích thước (size / 크기) truy vấn (query / 쿼리)?
 41. `@supports selector()` dùng khi nào?
 42. CSSOM là gì?
 43. Typed OM (mô hình đối tượng CSS có kiểu) khác `element.style` string API?
-44. stylesheet có thể khởi tạo (constructable stylesheet) là gì?
+44. biểu định kiểu (stylesheet / 스타일시트) có thể khởi tạo (constructable stylesheet) là gì?
 45. `:host`, `::slotted`, `::part` khác nhau?
-46. CSS custom thuộc tính (property) qua Shadow DOM (cây DOM đóng gói) dùng như API thế nào?
+46. CSS custom thuộc tính (property / 속성) qua Shadow DOM (cây DOM đóng gói) dùng như API thế nào?
 47. Inline SVG khác SVG `<img>` khi styling?
 48. `mask` khác `clip-path`?
 49. `@page` dùng khi nào?
 50. `break-inside` ảnh hưởng print/multicol ra sao?
-51. CSS counter dùng cho case gì?
+51. CSS counter dùng cho trường hợp (case / 사례) gì?
 52. `zoom` khác `transform:scale()`?
 53. màu cưỡng bức (forced colors) nên xử lý thế nào?
 54. cải tiến lũy tiến (progressive enhancement) khác suy giảm có kiểm soát (graceful degradation)?
-55. hồi quy giao diện (visual regression) test CSS ra sao?
-56. độ đặc hiệu (specificity) budget là gì?
-57. Dead CSS detect sao mà không xoá nhầm dynamic classes?
+55. hồi quy giao diện (visual regression) kiểm thử (test / 테스트) CSS ra sao?
+56. độ đặc hiệu (specificity) ngân sách (budget / 예산) là gì?
+57. Dead CSS detect sao mà không xoá nhầm động (dynamic / 동적) classes?
 58. dao động bố cục do đọc/ghi xen kẽ (layout thrashing) liên quan CSS ra sao?
 59. `contain:size` có tác dụng phụ (side effect) gì?
-60. Public CSS API của component nên gồm gì?
+60. công khai (public / 공개) CSS API của thành phần (component / 컴포넌트) nên gồm gì?
 
-Nếu trả lời chắc khoảng **50+/60 câu** và làm được 20+/25 labs mà không copy solution, nền CSS của bạn đã ở mức rất cao.
+Nếu trả lời chắc khoảng **50+/60 câu** và làm được 20+/25 labs mà không bản sao (copy / 복사) solution, nền CSS của bạn đã ở mức rất cao.
 
 ---
 
 # 151. Mastery Rubric
 
-## Level 1 — Syntax User
+## Mức (level / 수준) 1 — cú pháp (syntax / 문법) người dùng (user / 사용자)
 
 Biết:
-- thuộc tính (property),
+- thuộc tính (property / 속성),
 - bộ chọn (selector),
 - Flex/Grid.
 
-## Level 2 — UI Developer
+## Mức (level / 수준) 2 — UI nhà phát triển (developer / 개발자)
 
 Biết:
 - responsive,
-- component,
+- thành phần (component / 컴포넌트),
 - forms,
 - animation.
 
-## Level 3 — Senior CSS
+## Mức (level / 수준) 3 — cấp cao (senior / 시니어) CSS
 
 Biết:
 - cơ chế phân tầng (cascade),
-- định cỡ nội tại (intrinsic sizing),
+- định cỡ nội tại (intrinsic sizing / 내재 크기 결정),
 - stacking,
-- kiến trúc (architecture),
-- khả năng tiếp cận (accessibility),
-- hiệu năng (performance).
+- kiến trúc (architecture / 아키텍처),
+- khả năng tiếp cận (accessibility / 접근성),
+- hiệu năng (performance / 성능).
 
-## Level 4 — CSS Specialist
+## Mức (level / 수준) 4 — CSS Specialist
 
 Biết:
-- formatting model,
+- mô hình định dạng (formatting model / 포매팅 모델),
 - các hộp dòng (line boxes),
 - các phần tử thay thế (replaced elements),
 - lớp trên cùng (top layer),
 - advanced sizing,
-- browser APIs,
+- trình duyệt (browser / 브라우저) APIs,
 - Shadow DOM (cây DOM đóng gói).
 
-## Level 5 — CSS Master
+## Mức (level / 수준) 5 — CSS Master
 
 Có thể:
 - đọc specification khi docs không đủ,
-- explain browser layout behavior,
-- design CSS kiến trúc (architecture) cho multi-team system,
-- gỡ lỗi (debug) đa trình duyệt (cross-browser) edge case,
-- chọn cải tiến lũy tiến (progressive enhancement) strategy,
-- build component CSS APIs,
+- explain trình duyệt (browser / 브라우저) bố cục (layout / 레이아웃) hành vi (behavior / 동작),
+- thiết kế (design / 설계) CSS kiến trúc (architecture / 아키텍처) cho multi-team hệ thống (system / 시스템),
+- gỡ lỗi (debug / 디버그) đa trình duyệt (cross-browser) trường hợp biên (edge case / 경계 사례),
+- chọn cải tiến lũy tiến (progressive enhancement) chiến lược (strategy / 전략),
+- bản dựng (build / 빌드) thành phần (component / 컴포넌트) CSS APIs,
 - profile rendering,
-- review platform changes mà không chạy theo trend.
+- rà soát (review / 검토) nền tảng (platform / 플랫폼) changes mà không chạy theo trend.
 
 ---
 
@@ -4326,13 +4329,13 @@ Cần biết:
 - concept tồn tại,
 - khi nào cần lookup,
 - tài liệu chuẩn ở đâu,
-- cách đọc syntax/formal definition.
+- cách đọc cú pháp (syntax / 문법)/formal definition.
 
 ---
 
-# 153. Cách đọc MDN thuộc tính (property) page như senior
+# 153. Cách đọc MDN thuộc tính (property / 속성) page như cấp cao (senior / 시니어)
 
-Khi lookup thuộc tính (property), đừng chỉ đọc example.
+Khi lookup thuộc tính (property / 속성), đừng chỉ đọc example.
 
 Check:
 
@@ -4351,10 +4354,10 @@ Specifications
 
 Ví dụ `offset-path`:
 - applies to transformable elements,
-- creates ngữ cảnh xếp chồng (stacking context),
-- animation type theo computed type.
+- creates ngữ cảnh xếp chồng (stacking context / 쌓임 맥락),
+- animation kiểu (type / 타입) theo computed kiểu (type / 타입).
 
-Các metadata này giải thích nhiều edge cases.
+Các siêu dữ liệu (metadata / 메타데이터) này giải thích nhiều edge cases.
 
 ---
 
@@ -4388,13 +4391,13 @@ Khi tài liệu mâu thuẫn:
 6. StackOverflow/blog posts
 ```
 
-Không copy old CSS hacks từ article 2015 nếu không hiểu vì sao.
+Không bản sao (copy / 복사) old CSS hacks từ article 2015 nếu không hiểu vì sao.
 
 ---
 
-# 156. 2026 Modern CSS Watchlist
+# 156. 2026 hiện đại (modern / 현대적) CSS Watchlist
 
-Các feature đáng theo dõi trong 2026:
+Các tính năng (feature / 기능) đáng theo dõi trong 2026:
 
 ```text
 Anchor positioning interoperability
@@ -4415,9 +4418,9 @@ Customizable select
 Intrinsic-size interpolation
 ```
 
-Không đồng nghĩa tất cả đều nên dùng ngay production.
+Không đồng nghĩa tất cả đều nên dùng ngay môi trường vận hành (production / 운영 환경).
 
-Rule:
+Quy tắc (rule / 규칙):
 
 ```text
 Baseline / project support
@@ -4427,11 +4430,11 @@ Baseline / project support
 
 ---
 
-# 157. CSS + SCSS Boundary
+# 157. CSS + SCSS ranh giới (boundary / 경계)
 
-Sau supplement này, SCSS không giúp bạn hiểu browser thêm.
+Sau supplement này, SCSS không giúp bạn hiểu trình duyệt (browser / 브라우저) thêm.
 
-SCSS giải quyết **authoring/build-time abstraction**:
+SCSS giải quyết **authoring/build-time lớp trừu tượng (abstraction / 추상화)**:
 
 ```text
 modules
@@ -4443,7 +4446,7 @@ generation
 compile-time variables
 ```
 
-CSS giải quyết **thời gian chạy (runtime) styling model**:
+CSS giải quyết **thời gian chạy (runtime / 런타임) styling mô hình (model / 모델)**:
 
 ```text
 cascade
@@ -4455,7 +4458,7 @@ media/container queries
 animation
 ```
 
-Senior phải phân biệt:
+Cấp cao (senior / 시니어) phải phân biệt:
 
 ```text
 SCSS abstraction problem
@@ -4467,7 +4470,7 @@ Không dùng khối trộn tái sử dụng (mixin) để che việc chưa hiể
 
 ---
 
-# 158. Final CSS Knowledge map khóa–giá trị (map)
+# 158. Final CSS kiến thức (knowledge / 지식) map khóa–giá trị (map)
 
 ```text
 CSS MASTER
@@ -4557,7 +4560,7 @@ Sau khi học:
 1. `CSS_Beginner_to_Senior_2026.md`
 2. `CSS_Master_Supplement_2026.md`
 
-thì phần kiến thức lý thuyết đã **gần đầy đủ cho CSS từ beginner → senior → specialist/master**.
+thì phần kiến thức lý thuyết đã **gần đầy đủ cho CSS từ beginner → cấp cao (senior / 시니어) → specialist/master**.
 
 Nhưng “master” không thể chỉ đạt bằng đọc.
 
@@ -4593,58 +4596,58 @@ Canonical Beginner → Senior + Supplement + 20–30 advanced labs + project th�
 
 ## MDN
 
-- CSS Reference  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+- CSS tham chiếu (reference / 참조)
+  https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Web/CSS/tham chiếu (reference / 참조)
 
-- CSS Guides  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides
+- CSS Guides
+  https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Web/CSS/Guides
 
-- CSS cơ chế phân tầng (cascade)  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade
+- CSS cơ chế phân tầng (cascade)
+  https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Web/CSS/Guides/Cascade
 
-- CSS API tô sáng tùy chỉnh (Custom Highlight API)  
-  https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API
+- CSS API tô sáng tùy chỉnh (Custom Highlight API)
+  https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API
 
-- CSS Typed OM (mô hình đối tượng CSS có kiểu)  
-  https://developer.mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API
+- CSS Typed OM (mô hình đối tượng CSS có kiểu)
+  https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Web/API/CSS_Typed_OM_API
 
-- Customizable Select  
-  https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select
+- Customizable Select
+  https://nhà phát triển (developer / 개발자).mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select
 
 ## web.dev
 
-- Learn CSS  
+- Learn CSS
   https://web.dev/learn/css/
 
-- Interop 2026  
+- Interop 2026
   https://web.dev/blog/interop-2026/
 
-## Specifications / Compatibility
+## Specifications / tính tương thích (compatibility / 호환성)
 
-- W3C CSS  
+- W3C CSS
   https://www.w3.org/Style/CSS/
 
-- Web Platform Tests  
+- Nền tảng Web (web platform / 웹 플랫폼) Tests
   https://wpt.fyi/
 
-- Web Platform Status  
+- Nền tảng Web (web platform / 웹 플랫폼) Status
   https://webstatus.dev/
 
-- Can I Use  
+- Can I Use
   https://caniuse.com/
 
 ---
 
 # Kết luận ngắn
 
-Nếu chỉ đọc canonical Beginner → Senior:
+Nếu chỉ đọc chuẩn gốc (canonical / 정본) Beginner → cấp cao (senior / 시니어):
 
 ```text
 Beginner → Senior: YES
 Master CSS: chưa hoàn toàn
 ```
 
-Nếu học thêm file supplement này:
+Nếu học thêm tệp (file / 파일) supplement này:
 
 ```text
 Language
@@ -4657,9 +4660,9 @@ Language
 + Compatibility
 ```
 
-thì **knowledge coverage đã đủ rộng để gọi là roadmap master CSS**.
+thì **kiến thức (knowledge / 지식) coverage đã đủ rộng để gọi là roadmap master CSS**.
 
-Phần còn lại không phải thêm thuộc tính (property) nữa.
+Phần còn lại không phải thêm thuộc tính (property / 속성) nữa.
 
 Phần còn lại là:
 
@@ -4670,3 +4673,5 @@ cross-browser behavior
 large-codebase experience
 spec reading
 ```
+
+> **Bàn giao:** Sau **Specifications / tính tương thích (compatibility / 호환성)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CSS Beginner to Senior 2026](./CSS_Beginner_to_Senior_2026.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

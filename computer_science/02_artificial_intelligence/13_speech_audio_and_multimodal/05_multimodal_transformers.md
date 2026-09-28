@@ -1,8 +1,11 @@
 # Multimodal Transformers
 
-Transformer architecture phù hợp multimodal AI vì attention cho phép tokens từ nhiều sources tương tác trong cùng computation graph. Tuy nhiên “multimodal Transformer” không phải một architecture duy nhất; có nhiều patterns tùy cách encode và fuse modalities.
+> **Mạch đọc:** Đặt **Multimodal Transformers** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **mẫu (pattern / 패턴) 1: Separate Encoders + Late Fusion** sang **mẫu (pattern / 패턴) 2: Cross-Attention**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Pattern 1: Separate Encoders + Late Fusion
+
+Transformer kiến trúc (architecture / 아키텍처) phù hợp multimodal AI vì attention cho phép tokens từ nhiều sources tương tác trong cùng computation đồ thị (graph / 그래프). Tuy nhiên “multimodal Transformer” không phải một kiến trúc (architecture / 아키텍처) duy nhất; có nhiều patterns tùy cách encode và fuse modalities.
+
+## Mẫu (pattern / 패턴) 1: Separate Encoders + Late Fusion
 
 ```text
 image → vision encoder → embedding
@@ -10,73 +13,73 @@ text → text encoder → embedding
 → similarity / classifier
 ```
 
-CLIP-like dual encoder rất efficient cho retrieval vì image/text embeddings có thể precompute independently.
+CLIP-like dual encoder rất efficient cho retrieval vì ảnh (image / 이미지)/văn bản (text / 텍스트) embeddings có thể precompute independently.
 
-Nhược điểm: interaction coarse, thường global embedding-level.
+Nhược điểm: tương tác (interaction / 상호작용) coarse, thường toàn cục (global / 전역) embedding-level.
 
-## Pattern 2: Cross-Attention
+## Mẫu (pattern / 패턴) 2: Cross-Attention
 
-Text queries visual keys/values:
+Văn bản (text / 텍스트) queries visual keys/values:
 
 \[
 Attention(Q_{text},K_{vision},V_{vision})
 \]
 
-Visual encoder giữ modality-specific representation; cross-attention cho conditional reasoning.
+Visual encoder giữ modality-specific biểu diễn (representation / 표현); cross-attention cho conditional lập luận (reasoning / 추론).
 
-Có thể stack repeated cross-attention blocks.
+Có thể ngăn xếp (stack / 스택) repeated cross-attention blocks.
 
-## Pattern 3: Unified Sequence
+## Mẫu (pattern / 패턴) 3: Unified chuỗi (sequence / 시퀀스)
 
-Project all modalities thành same hidden dimension rồi concatenate:
+Dự án (project / 프로젝트) all modalities thành same hidden dimension rồi concatenate:
 
 ```text
 [visual tokens][audio tokens][text tokens]
 ```
 
-Một Transformer xử lý chung. Simpler conceptual architecture, nhưng sequence length lớn.
+Một Transformer xử lý chung. Simpler conceptual kiến trúc (architecture / 아키텍처), nhưng chuỗi (sequence / 시퀀스) length lớn.
 
 ## Token-Type / Modality Encoding
 
-Model cần biết token đến từ image/audio/text. Có thể add modality embeddings hoặc rely on positional/layout conventions.
+Mô hình (model / 모델) cần biết đơn vị từ (token / 토큰) đến từ ảnh (image / 이미지)/audio/văn bản (text / 텍스트). Có thể add modality embeddings hoặc rely on positional/bố cục (layout / 레이아웃) conventions.
 
-## Positional Structure
+## Positional cấu trúc (structure / 구조)
 
-Text 1D; image 2D; video 3D (time × height × width); audio time-frequency.
+Văn bản (text / 텍스트) 1D; ảnh (image / 이미지) 2D; video 3D (time × height × width); audio time-frequency.
 
-Flattening thành 1D tokens cần encode original geometry/time. Relative position biases hoặc factorized positional embeddings preserve structure.
+Flattening thành 1D tokens cần encode original hình học (geometry / 기하학)/thời gian (time / 시간). Relative position biases hoặc factorized positional embeddings preserve cấu trúc (structure / 구조).
 
-## Cross-Modal Attention Matrix
+## Cross-Modal Attention ma trận (matrix / 행렬)
 
-Nếu text length `T`, visual tokens `V`, full unified self-attention cost gần:
+Nếu văn bản (text / 텍스트) length `T`, visual tokens `V`, full unified self-attention chi phí (cost / 비용) gần:
 
 \[
 O((T+V)^2)
 \]
 
-High-resolution vision/video làm `V` dominate. Resampling/compression critical.
+High-resolution vision/video làm `V` dominate. Resampling/compression trọng yếu (critical / 중요).
 
 ## Perceiver / Resampler
 
-Introduce fixed set latent queries `L` attend huge modality sequence:
+Introduce fixed set latent queries `L` attend huge modality chuỗi (sequence / 시퀀스):
 
 \[
 L\ll V
 \]
 
-Cost of cross-attention ~`O(LV)` then downstream operates on `L` latents.
+Chi phí (cost / 비용) of cross-attention ~`O(LV)` then downstream operates on `L` latents.
 
-This is information bottleneck; choosing number latent queries trades detail vs compute.
+This is thông tin (information / 정보) bottleneck; choosing number latent queries trades detail vs compute.
 
-## Q-Former Pattern
+## Q-Former mẫu (pattern / 패턴)
 
-Learnable query tokens attend frozen visual encoder outputs and produce compact visual representation for language model.
+Learnable truy vấn (query / 쿼리) tokens attend frozen visual encoder outputs and produce compact visual biểu diễn (representation / 표현) for ngôn ngữ (language / 언어) mô hình (model / 모델).
 
 Useful when connecting frozen pretrained components.
 
 ## Modality Adapters
 
-Instead full joint pretraining, use small adapters/projectors to bridge encoders to shared backbone. Parameter-efficient but alignment capacity limited.
+Instead full joint pretraining, use small adapters/projectors to cầu nối (bridge / 브리지) encoders to dùng chung (shared / 공유) backbone. Parameter-efficient but alignment sức chứa (capacity / 용량) limited.
 
 ## Joint Pretraining Objectives
 
@@ -92,46 +95,46 @@ grounding
 instruction following
 ```
 
-Multi-objective training balances semantics and detailed grounding.
+Multi-objective huấn luyện (training / 학습) balances ngữ nghĩa (semantics / 의미론) and detailed grounding.
 
-## Causal Masking Across Modalities
+## Nhân quả (causal / 인과적) Masking Across Modalities
 
-For generative model, attention mask decides which tokens can see which.
+For generative mô hình (model / 모델), attention mask decides which tokens can see which.
 
-Image tokens may be fully visible context; text decoder causal. In unified autoregressive models, modality ordering/masking controls generation direction.
+Ảnh (image / 이미지) tokens may be fully visible ngữ cảnh (context / 맥락); văn bản (text / 텍스트) decoder nhân quả (causal / 인과적). In unified autoregressive các mô hình (models / 모델들), modality thứ tự (ordering / 순서)/masking controls generation direction.
 
 ## Generating Images/Audio as Tokens
 
-If image/audio converted to discrete codec tokens, Transformer can model them autoregressively along with text.
+If ảnh (image / 이미지)/audio converted to discrete codec tokens, Transformer can mô hình (model / 모델) them autoregressively along with văn bản (text / 텍스트).
 
 Challenges:
 
-- much higher token rate;
-- error accumulation;
-- modality-specific perceptual loss;
+- much higher đơn vị từ (token / 토큰) tỷ lệ (rate / 비율);
+- lỗi (error / 오류) accumulation;
+- modality-specific perceptual mất mát (loss / 손실);
 - long sequences.
 
-Diffusion/flow models often more efficient for high-dimensional continuous generation.
+Diffusion/luồng (flow / 흐름) các mô hình (models / 모델들) often more efficient for high-dimensional continuous generation.
 
 ## Mixture of Experts
 
-Multimodal MoE can route tokens to specialized experts while sharing backbone. Routing may be modality-aware or learned dynamically.
+Multimodal MoE can tuyến (route / 경로) tokens to specialized experts while sharing backbone. Routing may be modality-aware or learned dynamically.
 
-This increases capacity without dense compute proportional to all parameters.
+This increases sức chứa (capacity / 용량) without dense compute proportional to all parameters.
 
 ## Modality Dropout
 
-During training randomly remove modalities so model remains robust if input incomplete. Otherwise system may overdepend on easiest modality.
+During huấn luyện (training / 학습) randomly remove modalities so mô hình (model / 모델) remains robust if đầu vào (input / 입력) incomplete. Otherwise hệ thống (system / 시스템) may overdepend on easiest modality.
 
-## Cross-Modal Shortcut Learning
+## Cross-Modal Shortcut học tập (learning / 학습)
 
-If captions leak label directly, model may ignore image. If visual cue strongly predicts answer, it may ignore text instruction. Training/evaluation should include counterfactual cases requiring both modalities.
+If captions leak label directly, mô hình (model / 모델) may ignore ảnh (image / 이미지). If visual cue strongly predicts answer, it may ignore văn bản (text / 텍스트) instruction. huấn luyện (training / 학습)/evaluation should include counterfactual cases requiring both modalities.
 
 ## Synchronization
 
 Audio-video transformer needs aligned timestamps. Relative timing can indicate lip movements, events, speaker turns.
 
-If streams unsynchronized, model may learn spurious associations.
+If streams unsynchronized, mô hình (model / 모델) may learn spurious associations.
 
 ## Long Video
 
@@ -147,24 +150,24 @@ Techniques:
 - temporal pooling;
 - hierarchical summaries;
 - event-based retrieval;
-- memory modules;
+- bộ nhớ (memory / 메모리) modules;
 - streaming attention.
 
-## Streaming Multimodal Models
+## Streaming Multimodal các mô hình (models / 모델들)
 
-Real-time assistant receives partial audio/video over time. Need incremental state/KV cache and policy for when to respond vs wait for more evidence.
+Real-time assistant receives partial audio/video over thời gian (time / 시간). Need incremental trạng thái (state / 상태)/KV bộ nhớ đệm (cache / 캐시) and chính sách (policy / 정책) for when to respond vs wait for more bằng chứng (evidence / 증거).
 
-This resembles partially observable agent system.
+This resembles partially observable hệ tác nhân (agent system / 에이전트 시스템).
 
 ## Multimodal Generation
 
-One system can accept text/image/audio and output multiple modalities. Architecture may use shared semantic backbone + modality-specific decoders.
+One hệ thống (system / 시스템) can accept văn bản (text / 텍스트)/ảnh (image / 이미지)/audio and đầu ra (output / 출력) multiple modalities. kiến trúc (architecture / 아키텍처) may use dùng chung (shared / 공유) ngữ nghĩa (semantic / 의미적) backbone + modality-specific decoders.
 
-Shared representation should preserve intent while decoder handles waveform/pixel generation details.
+Dùng chung (shared / 공유) biểu diễn (representation / 표현) should preserve intent while decoder handles waveform/điểm ảnh (pixel / 픽셀) generation details.
 
 ## Evaluation
 
-Test modality-specific and cross-modal capabilities separately:
+Kiểm thử (test / 테스트) modality-specific and cross-modal capabilities separately:
 
 ```text
 vision only
@@ -176,28 +179,30 @@ missing modality
 adversarial visual text
 ```
 
-A model scoring high on mixed benchmark may rely primarily one modality.
+A mô hình (model / 모델) scoring high on mixed benchmark may rely primarily one modality.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Multimodal Transformer is an information-routing system: encoders create tokens, attention decides what information crosses modality boundaries, and compression/masking determines what can be preserved.**
+> **Multimodal Transformer is an information-routing hệ thống (system / 시스템): encoders create tokens, attention decides what thông tin (information / 정보) crosses modality boundaries, and compression/masking determines what can be preserved.**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Unified model means unified understanding automatically”
+### “Unified mô hình (model / 모델) means unified understanding automatically”
 
-Shared parameters/tokens do not guarantee fine-grained cross-modal grounding.
+Dùng chung (shared / 공유) parameters/tokens do not guarantee fine-grained cross-modal grounding.
 
-### “More visual/audio tokens always improve quality”
+### “More visual/audio tokens always improve chất lượng (quality / 품질)”
 
-Compute/noise increase and model may not effectively use them.
+Compute/noise increase and mô hình (model / 모델) may not effectively use them.
 
-### “Cross-attention explains exactly what model used”
+### “Cross-attention explains exactly what mô hình (model / 모델) used”
 
-Attention weights are interaction signals, not complete causal explanations.
+Attention weights are tương tác (interaction / 상호작용) signals, not complete nhân quả (causal / 인과적) explanations.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Multimodal Transformers extend [Transformer](../06_deep_learning_architectures/05_transformer.md) across heterogeneous token spaces and form backbone for multimodal agents.
+Multimodal Transformers extend [Transformer](../06_deep_learning_architectures/05_transformer.md) across heterogeneous đơn vị từ (token / 토큰) spaces and form backbone for multimodal agents.
 
 Xem tiếp: [Multimodal Agents](./06_multimodal_agents.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 audio and speech representation](./00_audio_and_speech_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

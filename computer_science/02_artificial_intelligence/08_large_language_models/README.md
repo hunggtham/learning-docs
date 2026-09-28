@@ -1,8 +1,11 @@
-# Large Language Models Knowledge Layer
+# Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)
 
-Folder này xây Large Language Models từ dependency đã có ở NLP, Deep Learning và Transformer. Mục tiêu không phải học cách gọi API, mà hiểu **LLM được tạo ra như thế nào, behavior sau post-training đến từ đâu, vì sao prompting/RAG/Agent hoạt động và giới hạn nào vẫn tồn tại**.
+> **Mạch đọc:** Đọc **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **phụ thuộc (dependency / 의존성) Map** sang **Chapters**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Dependency Map
+
+Folder này xây Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) từ phụ thuộc (dependency / 의존성) đã có ở NLP, Deep học tập (learning / 학습) và Transformer. Mục tiêu không phải học cách gọi API, mà hiểu **LLM được tạo ra như thế nào, hành vi (behavior / 동작) sau post-training đến từ đâu, vì sao prompting/RAG/tác nhân (agent / 에이전트) hoạt động và giới hạn nào vẫn tồn tại**.
+
+## Phụ thuộc (dependency / 의존성) Map
 
 ```mermaid
 flowchart TD
@@ -25,6 +28,9 @@ flowchart TD
     EVAL --> LIM[Limitations]
 ```
 
+
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) Map**, ta sang **Chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Chapters
 
 ```text
@@ -46,11 +52,17 @@ flowchart TD
 15_llm_limitations.md
 ```
 
-## Reading Logic
 
-Bốn chapter đầu giải thích input representation và computation core. `04–09` giải thích model lifecycle từ base model tới assistant-aligned model. `10–12` chuyển sang inference-time adaptation và reasoning. `13–15` tập trung reliability: hallucination, evaluation và structural limitations.
+> **Chuyển mạch:** Từ **Chapters**, ta sang **Reading lô-gic (logic / 논리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Mental Model
+## Reading lô-gic (logic / 논리)
+
+Bốn chapter đầu giải thích đầu vào (input / 입력) biểu diễn (representation / 표현) và computation cốt lõi (core / 핵심). `04–09` giải thích mô hình (model / 모델) vòng đời (lifecycle / 생명주기) từ cơ sở (base / 기반) mô hình (model / 모델) tới assistant-aligned mô hình (model / 모델). `10–12` chuyển sang inference-time adaptation và lập luận (reasoning / 추론). `13–15` tập trung độ tin cậy (reliability / 신뢰성): hallucination, evaluation và structural limitations.
+
+
+> **Chuyển mạch:** Từ **Reading lô-gic (logic / 논리)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Raw text
@@ -63,11 +75,14 @@ Raw text
 → probabilistic generation
 ```
 
-LLM application thực tế còn thêm retrieval, tools, memory, validation và monitoring. Vì vậy folder này kết thúc ngay trước `09_retrieval_and_rag/` và `10_agents_and_ai_systems/`.
+LLM ứng dụng (application / 애플리케이션) thực tế còn thêm retrieval, tools, bộ nhớ (memory / 메모리), kiểm tra hợp lệ (validation / 검증) và monitoring. Vì vậy folder này kết thúc ngay trước `09_retrieval_and_rag/` và `10_agents_and_ai_systems/`.
 
-## Core Distinctions
 
-Một số distinction phải giữ xuyên suốt library:
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **cốt lõi (core / 핵심) Distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) Distinctions
+
+Một số distinction phải giữ xuyên suốt thư viện (library / 라이브러리):
 
 ```text
 pretraining knowledge       ≠ current external truth
@@ -81,6 +96,11 @@ low temperature              ≠ factuality
 LLM                          ≠ complete AI system
 ```
 
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) Distinctions**, ta sang **Next** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Next
 
-Tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/README.md), nơi parameterized model được kết nối với external evidence và searchable knowledge.
+Tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/README.md), nơi parameterized mô hình (model / 모델) được kết nối với bên ngoài (external / 외부) bằng chứng (evidence / 증거) và searchable kiến thức (knowledge / 지식).
+
+> **Bàn giao:** Sau **Next**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

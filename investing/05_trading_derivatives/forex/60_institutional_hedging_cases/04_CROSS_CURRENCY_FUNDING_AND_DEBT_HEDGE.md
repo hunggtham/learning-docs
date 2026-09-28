@@ -1,8 +1,11 @@
-# Case 04 — Cross-Currency Funding: Debt, FX Swap và Basis Risk
+# Trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis rủi ro (risk / 위험)
 
-Một company hoặc financial institution có thể huy động vốn ở currency A nhưng thực sự cần economic funding ở currency B. Khi đó FX derivatives không chỉ hedge price risk; chúng **biến đổi currency của liabilities và funding cash flows**.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 04 — Cross-Currency Funding: Debt, FX Swap và Basis rủi ro (risk / 위험)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. nghiệp vụ (business / 비즈니스) bài toán (problem / 문제)** sang **2. Direct USD borrowing**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model:
+
+Một company hoặc financial institution có thể huy động vốn ở currency A nhưng thực sự cần economic funding ở currency B. Khi đó FX derivatives không chỉ hedge price rủi ro (risk / 위험); chúng **biến đổi currency của liabilities và funding cash flows**.
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Debt raised in Currency A
@@ -10,9 +13,9 @@ Debt raised in Currency A
 → Synthetic Funding in Currency B
 ```
 
-Điểm quan trọng là so **all-in synthetic funding cost** với direct funding, đồng thời tính collateral, rollover, basis, counterparty và liquidity risk.
+Điểm quan trọng là so **all-in synthetic funding chi phí (cost / 비용)** với direct funding, đồng thời tính collateral, rollover, basis, counterparty và liquidity rủi ro (risk / 위험).
 
-## 1. Business problem
+## 1. nghiệp vụ (business / 비즈니스) bài toán (problem / 문제)
 
 Giả sử Korean company cần equivalent:
 
@@ -43,9 +46,9 @@ USD interest = SOFR + credit spread
 
 Company has direct USD liability.
 
-If business cash flows are in USD, this may naturally match funding need.
+If nghiệp vụ (business / 비즈니스) cash flows are in USD, this may naturally match funding need.
 
-## 3. KRW borrowing route
+## 3. KRW borrowing tuyến (route / 경로)
 
 Company issues KRW debt:
 
@@ -54,7 +57,7 @@ KRW principal equivalent to USD 100m
 KRW coupon/floating cost
 ```
 
-But project needs USD cash.
+But dự án (project / 프로젝트) needs USD cash.
 
 At inception, company can swap KRW into USD.
 
@@ -77,9 +80,9 @@ Company pays USD leg
 Company receives KRW leg
 ```
 
-so KRW debt service is economically offset while company bears synthetic USD funding.
+so KRW debt dịch vụ (service / 서비스) is economically offset while company bears synthetic USD funding.
 
-Exact convention depends on contract.
+Chính xác (exact / 정확한) convention depends on đặc tả hợp đồng (contract / 계약).
 
 ## 5. Why not just spot-convert KRW into USD?
 
@@ -94,7 +97,7 @@ Future principal repayment creates FX mismatch.
 
 Cross-currency hedge transforms future cash flows too.
 
-## 6. Synthetic funding cost
+## 6. Synthetic funding chi phí (cost / 비용)
 
 All-in synthetic USD funding roughly reflects:
 
@@ -110,7 +113,7 @@ Not simply KRW coupon translated at spot.
 
 In frictionless world, FX forward/swaps align currency funding returns.
 
-If synthetic USD were persistently much cheaper than direct USD with no constraints:
+If synthetic USD were persistently much cheaper than direct USD with no các ràng buộc (constraints / 제약조건들):
 
 ```text
 arbitrage demand should compress gap
@@ -136,7 +139,7 @@ Basis is economics, not automatically arbitrage profit.
 
 ## 9. Funding currency vs reporting currency
 
-Company may report in KRW but project cash flow in USD.
+Company may report in KRW but dự án (project / 프로젝트) cash luồng (flow / 흐름) in USD.
 
 Best liability currency depends on economic matching, not reporting currency alone.
 
@@ -151,18 +154,18 @@ What happens under stress?
 
 ## 10. Natural hedge through revenue
 
-If project generates stable USD revenue:
+If dự án (project / 프로젝트) generates stable USD revenue:
 
 ```text
 USD debt
 → paid from USD revenue
 ```
 
-can reduce transaction FX risk.
+can reduce giao dịch (transaction / 트랜잭션) FX rủi ro (risk / 위험).
 
 But if revenue is only partially USD or cyclical, mismatch remains.
 
-## 11. Example capital structure
+## 11. Example capital cấu trúc (structure / 구조)
 
 Suppose:
 
@@ -181,9 +184,9 @@ If USD/KRW rises sharply, mark-to-market of swap can move significantly.
 
 But company also has debt/assets whose economic values move.
 
-Evaluate combined funding package.
+Evaluate combined funding gói (package / 패키지).
 
-## 13. Mark-to-market vs cash-flow objective
+## 13. Mark-to-market vs cash-flow mục tiêu (objective / 목표)
 
 Treasury may intend to hold swap to maturity.
 
@@ -212,7 +215,7 @@ market move
 
 Even if final maturity cash flows remain economically matched.
 
-## 15. Wrong-way liquidity risk
+## 15. Wrong-way liquidity rủi ro (risk / 위험)
 
 Stress can produce:
 
@@ -224,11 +227,11 @@ business cash flow weakens
 
 Treasury must stress combined liquidity, not each item separately.
 
-## 16. Counterparty credit risk
+## 16. Counterparty credit rủi ro (risk / 위험)
 
 OTC cross-currency swap exposes company to bank/dealer counterparty.
 
-Risk management includes:
+Rủi ro (risk / 위험) management includes:
 
 ```text
 legal agreement
@@ -240,7 +243,7 @@ replacement cost
 
 A 3-year hedge has longer counterparty horizon than 1-month forward.
 
-## 17. Replacement risk
+## 17. Replacement rủi ro (risk / 위험)
 
 If counterparty defaults when swap is valuable to company:
 
@@ -248,7 +251,7 @@ If counterparty defaults when swap is valuable to company:
 company must replace hedge at current market rate
 ```
 
-Replacement cost can be material.
+Replacement chi phí (cost / 비용) can be material.
 
 ## 18. Maturity mismatch
 
@@ -261,15 +264,15 @@ hedge expires
 2 years debt remain
 ```
 
-Company faces roll/refinancing risk for hedge.
+Company faces roll/refinancing rủi ro (risk / 위험) for hedge.
 
-## 19. Rollover basis risk
+## 19. Rollover basis rủi ro (risk / 위험)
 
 Future swap basis may be very different.
 
-A strategy that looks cheap today because 3-year basis is favorable may become expensive when rolled.
+A chiến lược (strategy / 전략) that looks cheap today because 3-year basis is favorable may become expensive when rolled.
 
-## 20. Debt refinancing risk
+## 20. Debt refinancing rủi ro (risk / 위험)
 
 Even with 5-year hedge matching 5-year debt, company may refinance debt early or repay early.
 
@@ -281,7 +284,7 @@ orphan derivative exposure
 
 must be closed/restructured.
 
-## 21. Call/put features in debt
+## 21. lời gọi (call / 호출)/put features in debt
 
 Callable debt or prepayment optionality creates uncertain liability horizon.
 
@@ -307,7 +310,7 @@ and
 interest-rate risk
 ```
 
-Do not discuss currency leg while ignoring rate reset structure.
+Do not discuss currency leg while ignoring tỷ lệ (rate / 비율) reset cấu trúc (structure / 구조).
 
 ## 23. Interest-rate swap combination
 
@@ -318,9 +321,9 @@ Cross-currency swap
 + interest-rate swap
 ```
 
-or one structure that transforms both currency and rate basis.
+or one cấu trúc (structure / 구조) that transforms both currency and tỷ lệ (rate / 비율) basis.
 
-Risk system should consolidate sensitivities.
+Rủi ro (risk / 위험) hệ thống (system / 시스템) should consolidate sensitivities.
 
 ## 24. DV01 and FX delta
 
@@ -332,7 +335,7 @@ interest-rate DV01 by currency
 basis sensitivity
 ```
 
-A “currency hedge” can still have substantial rates/basis risk.
+A “currency hedge” can still have substantial rates/basis rủi ro (risk / 위험).
 
 ## 25. Basis sensitivity
 
@@ -342,7 +345,7 @@ This is why funding hedge cannot be monitored by spot chart alone.
 
 ## 26. NDF/funding limitation
 
-NDF hedges exchange-rate settlement but does not necessarily provide physical currency funding.
+NDF hedges exchange-rate settlement but does not necessarily provide vật lý (physical / 물리적) currency funding.
 
 If company needs actual USD cash:
 
@@ -351,7 +354,7 @@ NDF P/L
 ≠ USD funding itself
 ```
 
-This distinction is critical in restricted/onshore-offshore markets.
+This distinction is trọng yếu (critical / 중요) in restricted/onshore-offshore markets.
 
 ## 27. FX swap for short-term funding
 
@@ -377,7 +380,7 @@ can be vulnerable to rollover freeze.
 
 ## 29. 2020 lesson
 
-Global USD funding stress showed that:
+Toàn cục (global / 전역) USD funding stress showed that:
 
 ```text
 USD availability
@@ -385,19 +388,19 @@ and
 cross-currency funding cost
 ```
 
-can change rapidly under system stress.
+can thay đổi (change / 변경) rapidly under hệ thống (system / 시스템) stress.
 
 A normal-times synthetic funding advantage may disappear when needed most.
 
 ## 30. Reserve/corporate distinction
 
-Central-bank swap lines can improve system USD liquidity, but private company access is indirect through domestic financial system and program rules.
+Central-bank swap lines can improve hệ thống (system / 시스템) USD liquidity, but private company truy cập (access / 접근) is indirect through domestic financial hệ thống (system / 시스템) and program rules.
 
 Do not assume central-bank facility guarantees company funding.
 
 ## 31. All-in funding comparison
 
-Create matrix:
+Create ma trận (matrix / 행렬):
 
 ```text
 Direct USD debt
@@ -419,7 +422,7 @@ counterparty risk
 market-access risk
 ```
 
-## 32. Cheap funding can be compensation for hidden risk
+## 32. Cheap funding can be compensation for hidden rủi ro (risk / 위험)
 
 If rolling short-dated swaps looks cheaper than 5-year fixed CCS:
 
@@ -428,7 +431,7 @@ lower current cost
 may reflect taking future rollover/basis risk
 ```
 
-Do not compare expected cost without risk horizon.
+Do not compare expected chi phí (cost / 비용) without rủi ro (risk / 위험) horizon.
 
 ## 33. Term funding premium
 
@@ -436,7 +439,7 @@ Longer hedge tenor often embeds liquidity/credit/basis conditions for longer hor
 
 Paying more can buy certainty.
 
-Treasury choice is risk allocation, not only price optimization.
+Treasury choice is rủi ro (risk / 위험) allocation, not only price tối ưu hóa (optimization / 최적화).
 
 ## 34. Liquidity stress scenario
 
@@ -460,25 +463,25 @@ principal/roll needs
 
 ## 35. Revenue shock scenario
 
-USD project revenue falls 40% while USD debt service unchanged.
+USD dự án (project / 프로젝트) revenue falls 40% while USD debt dịch vụ (service / 서비스) unchanged.
 
 Natural hedge deteriorates.
 
-Currency-matched debt does not remove business-volume risk.
+Currency-matched debt does not remove business-volume rủi ro (risk / 위험).
 
 ## 36. Early termination scenario
 
-Project is sold after 18 months.
+Dự án (project / 프로젝트) is sold after 18 months.
 
 Debt prepaid, but 3-year cross-currency swap remains.
 
-Need compute termination value and liquidity impact.
+Need compute termination giá trị (value / 값) and liquidity impact.
 
-## 37. Counterparty failure scenario
+## 37. Counterparty thất bại (failure / 실패) scenario
 
 Bank counterparty defaults when hedge is positive MTM to company.
 
-Company must replace at stressed market terms.
+Company must replace at stressed thị trường (market / 시장) terms.
 
 Stress:
 
@@ -488,7 +491,7 @@ basis
 legal closeout delay
 ```
 
-## 38. Multi-counterparty strategy
+## 38. Multi-counterparty chiến lược (strategy / 전략)
 
 Splitting hedge among banks can reduce concentration but increases:
 
@@ -498,7 +501,7 @@ operational complexity
 netting fragmentation
 ```
 
-Diversification has cost.
+Diversification has chi phí (cost / 비용).
 
 ## 39. Collateral currency
 
@@ -506,15 +509,15 @@ Collateral posted in different currency can itself create FX/funding need.
 
 CSA terms are part of economics.
 
-## 40. Hedge accounting boundary
+## 40. Hedge accounting ranh giới (boundary / 경계)
 
 Accounting designation can affect P&L presentation, but economic hedge should first be understood as cash-flow/balance-sheet transformation.
 
-Professional implementation requires current accounting and legal review separately.
+Professional hiện thực (implementation / 구현) requires hiện tại (current / 현재) accounting and legal rà soát (review / 검토) separately.
 
-## 41. Regulatory/access boundary
+## 41. Regulatory/truy cập (access / 접근) ranh giới (boundary / 경계)
 
-Cross-border derivatives access depends on:
+Cross-border derivatives truy cập (access / 접근) depends on:
 
 ```text
 entity type
@@ -524,7 +527,7 @@ reporting
 collateral/legal framework
 ```
 
-Korea/Vietnam-specific rules should be verified from current official sources before real use.
+Korea/Vietnam-specific rules should be verified from hiện tại (current / 현재) official sources before real use.
 
 ## 42. Funding attribution
 
@@ -540,20 +543,20 @@ Roll cost
 Early termination cost
 ```
 
-Without decomposition, “synthetic USD cost” is opaque.
+Without decomposition, “synthetic USD chi phí (cost / 비용)” is opaque.
 
-## 43. Performance vs risk objective
+## 43. hiệu năng (performance / 성능) vs rủi ro (risk / 위험) mục tiêu (objective / 목표)
 
 A funding hedge can look expensive ex post if currency moved favorably.
 
-But objective may be:
+But mục tiêu (objective / 목표) may be:
 
 ```text
 ensure debt-service capacity
 and remove FX mismatch
 ```
 
-Evaluate against risk objective, not hindsight spot rate.
+Evaluate against rủi ro (risk / 위험) mục tiêu (objective / 목표), not hindsight spot tỷ lệ (rate / 비율).
 
 ## 44. Balance-sheet exposure map
 
@@ -586,7 +589,7 @@ Bucket:
 
 for debt, derivatives and expected cash flows.
 
-Funding risk often hides in maturity mismatch rather than net currency exposure.
+Funding rủi ro (risk / 위험) often hides in maturity mismatch rather than net currency exposure.
 
 ## 46. Sensitivity dashboard
 
@@ -628,7 +631,7 @@ Compare all-in synthetic funding cost together with
 basis, collateral, rollover, counterparty and maturity risk.
 ```
 
-## 48. Case outputs
+## 48. trường hợp (case / 사례) outputs
 
 Create:
 
@@ -642,20 +645,22 @@ counterparty_limit_report.md
 funding_cost_attribution.md
 ```
 
-## 49. Review questions
+## 49. rà soát (review / 검토) questions
 
 Explain:
 
 1. Why debt currency should be compared with cash-flow currency.
 2. Why spot conversion alone does not hedge future liability cash flows.
-3. Why cross-currency basis enters synthetic funding cost.
+3. Why cross-currency basis enters synthetic funding chi phí (cost / 비용).
 4. Why economically hedged swap can still create collateral liquidity stress.
-5. Why short FX-swap funding against long assets creates rollover risk.
-6. Why NDF hedge is not physical funding.
-7. Why all-in funding cost must include hidden risk, not coupon only.
+5. Why short FX-swap funding against long assets creates rollover rủi ro (risk / 위험).
+6. Why NDF hedge is not vật lý (physical / 물리적) funding.
+7. Why all-in funding chi phí (cost / 비용) must include hidden rủi ro (risk / 위험), not coupon only.
 
-## Internal links
+## Nội bộ (internal / 내부) links
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [2020 global USD funding stress](../80_case_studies/04_GLOBAL_USD_FUNDING_STRESS_2020.md)
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
+
+> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 KOREAN EXPORTER USD RECEIVABLE HEDGE](./01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

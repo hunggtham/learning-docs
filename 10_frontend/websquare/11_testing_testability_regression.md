@@ -1,16 +1,19 @@
-# 11 — Testing, Testability & Regression Engineering
+# 11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)
 
-WebSquare application thường được kiểm thử bằng cách mở màn hình, nhập dữ liệu rồi quan sát kết quả. Cách đó cần thiết nhưng không đủ cho một hệ thống enterprise lớn. Khi số page, WFrame, Submission, UDC và Grid tăng lên, kiểm thử thủ công không còn trả lời được câu hỏi quan trọng nhất: **thay đổi này đã phá contract nào, ở layer nào, và bằng chứng nào cho thấy behavior vẫn đúng?**
+> **Mạch đọc:** Đặt **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. kiểm thử (test / 테스트) không phải là “click được”** sang **2. Testing portfolio theo ranh giới (boundary / 경계)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này không cố ép WebSquare vào một testing framework cụ thể. Mental model quan trọng hơn tool: tách business reasoning khỏi framework side effect, xác định observable contract, kiểm soát async/lifecycle và xây regression suite theo risk. Playwright, Selenium hay một runner nội bộ chỉ là phương tiện thực thi những contract đó.
+
+WebSquare ứng dụng (application / 애플리케이션) thường được kiểm thử bằng cách mở màn hình, nhập dữ liệu rồi quan sát kết quả. Cách đó cần thiết nhưng không đủ cho một hệ thống enterprise lớn. Khi số page, WFrame, Submission, UDC và Grid tăng lên, kiểm thử thủ công không còn trả lời được câu hỏi quan trọng nhất: **thay đổi này đã phá đặc tả hợp đồng (contract / 계약) nào, ở tầng (layer / 계층) nào, và bằng chứng nào cho thấy hành vi (behavior / 동작) vẫn đúng?**
+
+Chapter này không cố ép WebSquare vào một testing khung phần mềm (framework / 프레임워크) cụ thể. mô hình tư duy (mental model / 사고 모델) quan trọng hơn công cụ (tool / 도구): tách nghiệp vụ (business / 비즈니스) lập luận (reasoning / 추론) khỏi khung phần mềm (framework / 프레임워크) side tác động (effect / 효과), xác định observable đặc tả hợp đồng (contract / 계약), kiểm soát async/vòng đời (lifecycle / 생명주기) và xây regression suite theo rủi ro (risk / 위험). Playwright, Selenium hay một runner nội bộ chỉ là phương tiện thực thi những đặc tả hợp đồng (contract / 계약) đó.
 
 > Prerequisite: [03 — DataCollection & Submission](03_data_collection_submission.md), [04 — Scope, WFrame, Popup & SPA](04_scope_wframe_popup_spa.md), [08 — Reusable Architecture](08_reusable_architecture_udc_common_modules.md) và [10 — Rendering, Lazy Loading & Resource Lifetime](10_rendering_lazy_loading_lifetime.md).
 
-## 1. Test không phải là “click được”
+## 1. kiểm thử (test / 테스트) không phải là “click được”
 
-Một màn hình có thể click được nhưng vẫn sai business state. Search button có thể gửi request nhưng gửi condition cũ. Save có thể hiện success message nhưng server đã reject một phần dữ liệu. Popup có thể mở được nhưng giữ listener sau khi đóng. Grid có thể hiển thị đúng 20 row đầu nhưng selected row identity bị sai sau sort.
+Một màn hình có thể click được nhưng vẫn sai nghiệp vụ (business / 비즈니스) trạng thái (state / 상태). tìm kiếm (search / 검색) button có thể gửi yêu cầu (request / 요청) nhưng gửi điều kiện (condition / 조건) cũ. Save có thể hiện success message nhưng máy chủ (server / 서버) đã reject một phần dữ liệu. Popup có thể mở được nhưng giữ listener sau khi đóng. Grid có thể hiển thị đúng 20 row đầu nhưng selected row định danh (identity / 식별자) bị sai sau sort.
 
-Vì vậy một test tốt phải phát biểu **invariant có thể quan sát**. Ví dụ:
+Vì vậy một kiểm thử (test / 테스트) tốt phải phát biểu **bất biến (invariant / 불변식) có thể quan sát**. Ví dụ:
 
 ```text
 Khi user sửa NAME của row có USER_ID=U100
@@ -20,23 +23,23 @@ Khi user sửa NAME của row có USER_ID=U100
 → success response làm model trở về trạng thái sau-save theo contract
 ```
 
-Test không nên chỉ phát biểu “click Save rồi thấy popup thành công”. UI message là một observation, không phải toàn bộ correctness.
+Kiểm thử (test / 테스트) không nên chỉ phát biểu “click Save rồi thấy popup thành công”. UI message là một observation, không phải toàn bộ tính đúng đắn (correctness / 정확성).
 
-## 2. Testing portfolio theo boundary
+## 2. Testing portfolio theo ranh giới (boundary / 경계)
 
-Không có một loại test nào phù hợp cho mọi failure mode. WebSquare screen nên được kiểm thử ở nhiều boundary khác nhau.
+Không có một loại kiểm thử (test / 테스트) nào phù hợp cho mọi dạng thất bại (failure mode / 실패 모드). WebSquare screen nên được kiểm thử ở nhiều ranh giới (boundary / 경계) khác nhau.
 
-**Logic test** kiểm tra function gần thuần như normalize input, build request object, validate cross-field rule, map server error và quyết định enable/disable action. Đây là test rẻ, nhanh và dễ chạy nhiều case.
+**lô-gic (logic / 논리) kiểm thử (test / 테스트)** kiểm tra hàm (function / 함수) gần thuần như normalize đầu vào (input / 입력), bản dựng (build / 빌드) yêu cầu (request / 요청) đối tượng (object / 객체), validate cross-field quy tắc (rule / 규칙), map máy chủ (server / 서버) lỗi (error / 오류) và quyết định enable/disable hành động (action / 동작). Đây là kiểm thử (test / 테스트) rẻ, nhanh và dễ chạy nhiều trường hợp (case / 사례).
 
-**Page orchestration test** kiểm tra `scwin` function điều phối DataCollection, Submission và state transition. Mục tiêu không phải giả lập toàn bộ browser mà là chứng minh page logic gọi đúng dependency và xử lý đúng result.
+**Page orchestration kiểm thử (test / 테스트)** kiểm tra `scwin` hàm (function / 함수) điều phối DataCollection, Submission và chuyển tiếp trạng thái (state transition / 상태 전이). Mục tiêu không phải giả lập toàn bộ trình duyệt (browser / 브라우저) mà là chứng minh page lô-gic (logic / 논리) gọi đúng phụ thuộc (dependency / 의존성) và xử lý đúng kết quả (result / 결과).
 
-**Component/UDC contract test** kiểm tra public property, method và event. Consumer không cần biết internal Input/Grid/DataMap của UDC.
+**thành phần (component / 컴포넌트)/UDC đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트)** kiểm tra công khai (public / 공개) thuộc tính (property / 속성), phương thức (method / 메서드) và sự kiện (event / 이벤트). bên tiêu thụ (consumer / 소비자) không cần biết nội bộ (internal / 내부) đầu vào (input / 입력)/Grid/DataMap của UDC.
 
-**Integration test** chạy page với WebSquare Engine thật hoặc environment gần thật để kiểm tra Scope, binding, lifecycle, WFrame, Submission mapping và rendering integration.
+**kiểm thử tích hợp (integration test / 통합 테스트)** chạy page với WebSquare Engine thật hoặc môi trường (environment / 환경) gần thật để kiểm tra phạm vi (scope / 범위), binding, vòng đời (lifecycle / 생명주기), WFrame, Submission ánh xạ (mapping / 매핑) và rendering tích hợp (integration / 통합).
 
-**End-to-end test** đi qua browser, HTTP và backend để chứng minh critical user journey. Nó có giá trị cao nhưng chậm và dễ flaky hơn, nên không dùng để thay tất cả test tầng dưới.
+**End-to-end kiểm thử (test / 테스트)** đi qua trình duyệt (browser / 브라우저), HTTP và backend để chứng minh trọng yếu (critical / 중요) người dùng (user / 사용자) journey. Nó có giá trị cao nhưng chậm và dễ flaky hơn, nên không dùng để thay tất cả kiểm thử (test / 테스트) tầng dưới.
 
-Mental model là:
+Mô hình tư duy (mental model / 사고 모델) là:
 
 ```text
 pure logic
@@ -45,13 +48,13 @@ pure logic
 → browser + server journey
 ```
 
-Càng xuống dưới càng gần production nhưng chi phí setup, runtime và diagnosis càng lớn.
+Càng xuống dưới càng gần môi trường vận hành (production / 운영 환경) nhưng chi phí setup, thời gian chạy (runtime / 런타임) và diagnosis càng lớn.
 
-## 3. Testability bắt đầu từ architecture
+## 3. Testability bắt đầu từ kiến trúc (architecture / 아키텍처)
 
-Nếu một handler 300 dòng vừa đọc component, validate, build payload, gọi Submission, format message, mở popup và sửa global state, test sẽ khó vì behavior không có seam rõ.
+Nếu một handler 300 dòng vừa đọc thành phần (component / 컴포넌트), validate, bản dựng (build / 빌드) payload, gọi Submission, format message, mở popup và sửa toàn cục (global / 전역) trạng thái (state / 상태), kiểm thử (test / 테스트) sẽ khó vì hành vi (behavior / 동작) không có seam rõ.
 
-Một cấu trúc dễ test hơn:
+Một cấu trúc dễ kiểm thử (test / 테스트) hơn:
 
 ```javascript
 scwin.normalizeSearchCondition = function (raw) {
@@ -84,29 +87,29 @@ scwin.search = function () {
 };
 ```
 
-`normalizeSearchCondition()` và `validateSearchCondition()` có thể được kiểm tra mà không cần Grid hay network. `search()` giữ vai trò orchestration. Đây không phải “viết code để test”; đây là tách responsibility để reasoning tốt hơn, và testability là hệ quả.
+`normalizeSearchCondition()` và `validateSearchCondition()` có thể được kiểm tra mà không cần Grid hay mạng (network / 네트워크). `search()` giữ vai trò orchestration. Đây không phải “viết mã (code / 코드) để kiểm thử (test / 테스트)”; đây là tách responsibility để lập luận (reasoning / 추론) tốt hơn, và testability là hệ quả.
 
 ## 4. Không mock WebSquare ở mọi nơi
 
-Mock quá ít làm test chậm và khó cô lập. Mock quá nhiều làm test chứng minh behavior của mock chứ không chứng minh WebSquare integration.
+Mock quá ít làm kiểm thử (test / 테스트) chậm và khó cô lập. Mock quá nhiều làm kiểm thử (test / 테스트) chứng minh hành vi (behavior / 동작) của mock chứ không chứng minh WebSquare tích hợp (integration / 통합).
 
-Quy tắc hữu ích là mock **boundary mà test không nhằm kiểm tra**.
+Quy tắc hữu ích là mock **ranh giới (boundary / 경계) mà kiểm thử (test / 테스트) không nhằm kiểm tra**.
 
-Nếu đang test validator, không cần engine thật.
+Nếu đang kiểm thử (test / 테스트) validator, không cần engine thật.
 
-Nếu đang test Submission target mapping, phải có integration đủ thật để mapping chạy.
+Nếu đang kiểm thử (test / 테스트) Submission mục tiêu (target / 대상) ánh xạ (mapping / 매핑), phải có tích hợp (integration / 통합) đủ thật để ánh xạ (mapping / 매핑) chạy.
 
-Nếu đang test WFrame lifecycle, fake `$p` quá nhiều sẽ che đúng bug cần tìm.
+Nếu đang kiểm thử (test / 테스트) WFrame vòng đời (lifecycle / 생명주기), fake `$p` quá nhiều sẽ che đúng bug cần tìm.
 
-Nếu đang test business response mapping, backend thật có thể được thay bằng deterministic test endpoint hoặc network stub, nhưng response shape phải giống contract production.
+Nếu đang kiểm thử (test / 테스트) nghiệp vụ (business / 비즈니스) phản hồi (response / 응답) ánh xạ (mapping / 매핑), backend thật có thể được thay bằng deterministic kiểm thử (test / 테스트) endpoint hoặc mạng (network / 네트워크) stub, nhưng phản hồi (response / 응답) shape phải giống đặc tả hợp đồng (contract / 계약) môi trường vận hành (production / 운영 환경).
 
-Senior note: mock phải bảo toàn semantics quan trọng của boundary. Một fake Submission gọi callback synchronously có thể làm test xanh trong khi production callback asynchronous và có race condition.
+Cấp cao (senior / 시니어) ghi chú (note / 노트): mock phải bảo toàn ngữ nghĩa (semantics / 의미론) quan trọng của ranh giới (boundary / 경계). Một fake Submission gọi callback synchronously có thể làm kiểm thử (test / 테스트) xanh trong khi môi trường vận hành (production / 운영 환경) callback asynchronous và có race điều kiện (condition / 조건).
 
 ## 5. Fixture cho DataMap và DataList
 
-DataCollection là nơi rất phù hợp để tạo fixture có chủ đích. Đừng dùng một dump production khổng lồ cho mọi test. Fixture nên nhỏ nhưng chứa case có ý nghĩa.
+DataCollection là nơi rất phù hợp để tạo fixture có chủ đích. Đừng dùng một dump môi trường vận hành (production / 운영 환경) khổng lồ cho mọi kiểm thử (test / 테스트). Fixture nên nhỏ nhưng chứa trường hợp (case / 사례) có ý nghĩa.
 
-Ví dụ một DataList test có thể cần:
+Ví dụ một DataList kiểm thử (test / 테스트) có thể cần:
 
 ```text
 U100 — row bình thường
@@ -115,15 +118,15 @@ U102 — row sẽ bị update
 U103 — row sẽ bị delete
 ```
 
-Sau operation, assert theo **business key** thay vì row index. Sort/filter có thể đổi index nhưng không đổi identity.
+Sau thao tác (operation / 연산), assert theo **nghiệp vụ (business / 비즈니스) key** thay vì row chỉ mục (index / 인덱스). Sort/filter có thể đổi chỉ mục (index / 인덱스) nhưng không đổi định danh (identity / 식별자).
 
-Nếu test CRUD, cần quan sát cả value lẫn row status. Chỉ assert `NAME === "Kim"` có thể bỏ sót việc row vẫn ở status không phù hợp để Save serialize.
+Nếu kiểm thử (test / 테스트) CRUD, cần quan sát cả giá trị (value / 값) lẫn row status. Chỉ assert `NAME === "Kim"` có thể bỏ sót việc row vẫn ở status không phù hợp để Save serialize.
 
-## 6. Row status là một state machine cần test transition
+## 6. Row status là một máy trạng thái (state machine / 상태 머신) cần kiểm thử (test / 테스트) chuyển tiếp (transition / 전이)
 
-CRUD test nên xem row status như state machine, không như ký tự bí mật.
+CRUD kiểm thử (test / 테스트) nên xem row status như máy trạng thái (state machine / 상태 머신), không như ký tự bí mật.
 
-Ví dụ các transition cần kiểm chứng tùy contract/build:
+Ví dụ các chuyển tiếp (transition / 전이) cần kiểm chứng tùy đặc tả hợp đồng (contract / 계약)/bản dựng (build / 빌드):
 
 ```text
 loaded row
@@ -142,11 +145,11 @@ save success
 → refreshed/committed state theo application policy
 ```
 
-Không hard-code assumption về ký tự status nếu project wrapper đã abstract nó. Test business transition mà application dựa vào, rồi kiểm tra exact API/status theo engine build.
+Không hard-code giả định (assumption / 가정) về ký tự status nếu dự án (project / 프로젝트) wrapper đã abstract nó. kiểm thử (test / 테스트) nghiệp vụ (business / 비즈니스) chuyển tiếp (transition / 전이) mà ứng dụng (application / 애플리케이션) dựa vào, rồi kiểm tra chính xác (exact / 정확한) API/status theo engine bản dựng (build / 빌드).
 
-## 7. Submission test phải kiểm tra bốn lớp
+## 7. Submission kiểm thử (test / 테스트) phải kiểm tra bốn lớp
 
-Một Submission regression thường có bốn lớp correctness:
+Một Submission regression thường có bốn lớp tính đúng đắn (correctness / 정확성):
 
 ```text
 request trigger
@@ -155,11 +158,11 @@ request trigger
 → target/state update
 ```
 
-Test chỉ thấy HTTP 200 mới chứng minh transport. Một test đầy đủ hơn cần xác nhận condition đúng được serialize, error response không đi vào success flow, target DataCollection nhận đúng shape và stale response không overwrite intent mới.
+Kiểm thử (test / 테스트) chỉ thấy HTTP 200 mới chứng minh vận chuyển (transport / 전송). Một kiểm thử (test / 테스트) đầy đủ hơn cần xác nhận điều kiện (condition / 조건) đúng được serialize, lỗi (error / 오류) phản hồi (response / 응답) không đi vào success luồng (flow / 흐름), mục tiêu (target / 대상) DataCollection nhận đúng shape và stale phản hồi (response / 응답) không overwrite intent mới.
 
-Nếu save mutation có duplicate protection, test double-click hoặc repeated trigger phải chứng minh chỉ một logical operation được commit hoặc server idempotency xử lý đúng.
+Nếu save mutation có duplicate protection, kiểm thử (test / 테스트) double-click hoặc repeated trigger phải chứng minh chỉ một logical thao tác (operation / 연산) được lần ghi nhận (commit / 커밋) hoặc máy chủ (server / 서버) idempotency xử lý đúng.
 
-## 8. Async test không dùng sleep làm synchronization chính
+## 8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính
 
 Đây là anti-pattern phổ biến:
 
@@ -169,9 +172,9 @@ await sleep(1000);
 expect(gridRowCount()).toBe(10);
 ```
 
-Test này giả định network/render hoàn tất trong một giây. Máy CI chậm hơn sẽ flaky; máy nhanh hơn thì lãng phí thời gian.
+Kiểm thử (test / 테스트) này giả định mạng (network / 네트워크)/kết xuất (render / 렌더링) hoàn tất trong một giây. Máy CI chậm hơn sẽ flaky; máy nhanh hơn thì lãng phí thời gian.
 
-Hãy chờ một observable condition:
+Hãy chờ một observable điều kiện (condition / 조건):
 
 ```text
 request cụ thể hoàn thành
@@ -181,11 +184,11 @@ loading indicator biến mất sau đúng operation
 business result xuất hiện
 ```
 
-`waitForTimeout` chỉ nên dùng khi chính timing là thứ đang test, không phải cách che thiếu lifecycle contract.
+`waitForTimeout` chỉ nên dùng khi chính timing là thứ đang kiểm thử (test / 테스트), không phải cách che thiếu vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약).
 
-## 9. Test latest-intent và race condition
+## 9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)
 
-Search-as-you-type hoặc user đổi condition nhanh tạo scenario:
+Search-as-you-type hoặc người dùng (user / 사용자) đổi điều kiện (condition / 조건) nhanh tạo scenario:
 
 ```text
 request A gửi trước
@@ -194,9 +197,9 @@ response B về trước
 response A về sau
 ```
 
-Expected behavior thường là UI giữ result của intent B. Regression test nên cố tình đảo response order. Nếu chỉ test network trả theo thứ tự gửi, race bug sẽ không bao giờ xuất hiện trong CI nhưng vẫn xảy ra production.
+Expected hành vi (behavior / 동작) thường là UI giữ kết quả (result / 결과) của intent B. Regression kiểm thử (test / 테스트) nên cố tình đảo phản hồi (response / 응답) thứ tự (order / 순서). Nếu chỉ kiểm thử (test / 테스트) mạng (network / 네트워크) trả theo thứ tự gửi, race bug sẽ không bao giờ xuất hiện trong CI nhưng vẫn xảy ra môi trường vận hành (production / 운영 환경).
 
-Tương tự, test navigation race:
+Tương tự, kiểm thử (test / 테스트) điều hướng (navigation / 내비게이션) race:
 
 ```text
 page A gửi request
@@ -205,11 +208,11 @@ page B mở
 response A về
 ```
 
-Response cũ không được mutate state của page đã disposed hoặc page mới không liên quan.
+Phản hồi (response / 응답) cũ không được mutate trạng thái (state / 상태) của page đã disposed hoặc page mới không liên quan.
 
-## 10. WFrame và Scope test cần kiểm tra topology
+## 10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology
 
-Một page chạy standalone có thể pass nhưng fail khi nằm trong WFrame tầng hai. Vì vậy critical reusable page nên có ít nhất một test trong topology thật.
+Một page chạy standalone có thể pass nhưng thất bại (fail / 실패) khi nằm trong WFrame tầng hai. Vì vậy trọng yếu (critical / 중요) reusable page nên có ít nhất một kiểm thử (test / 테스트) trong topology thật.
 
 Cần kiểm chứng:
 
@@ -222,13 +225,13 @@ close/reopen tạo instance sạch
 setSrc/navigation không gọi child trước readiness phù hợp
 ```
 
-Nếu code chỉ pass khi page là direct child của main frame, test nested topology sẽ lộ hidden dependency vào `parent().parent()`.
+Nếu mã (code / 코드) chỉ pass khi page là direct child của main frame, kiểm thử (test / 테스트) nested topology sẽ lộ hidden phụ thuộc (dependency / 의존성) vào `parent().parent()`.
 
-## 11. UDC test theo public contract
+## 11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)
 
-UDC tốt có thể test như một black box tương đối.
+UDC tốt có thể kiểm thử (test / 테스트) như một black box tương đối.
 
-Ví dụ `EmployeePicker` có contract:
+Ví dụ `EmployeePicker` có đặc tả hợp đồng (contract / 계약):
 
 ```text
 property: departmentId
@@ -237,27 +240,27 @@ method: getValue()
 event: onChange(employee)
 ```
 
-Test không nên query internal `inputEmployeeName` trừ khi đang test implementation riêng. Consumer regression phải chứng minh property được áp dụng, method giữ invariant và event trả payload đúng schema.
+Kiểm thử (test / 테스트) không nên truy vấn (query / 쿼리) nội bộ (internal / 내부) `inputEmployeeName` trừ khi đang kiểm thử (test / 테스트) hiện thực (implementation / 구현) riêng. bên tiêu thụ (consumer / 소비자) regression phải chứng minh thuộc tính (property / 속성) được áp dụng, phương thức (method / 메서드) giữ bất biến (invariant / 불변식) và sự kiện (event / 이벤트) trả payload đúng lược đồ (schema / 스키마).
 
-Khi refactor internal layout từ Input + Button sang AutoComplete, contract test vẫn giữ nguyên. Đây là lợi ích trực tiếp của abstraction boundary.
+Khi refactor nội bộ (internal / 내부) bố cục (layout / 레이아웃) từ đầu vào (input / 입력) + Button sang AutoComplete, đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) vẫn giữ nguyên. Đây là lợi ích trực tiếp của lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
 
 ## 12. End-to-end selector phải bền với rendering internals
 
-WebSquare có thể biến đổi physical DOM ID theo Scope/rendering. Test E2E phụ thuộc selector dài kiểu:
+WebSquare có thể biến đổi vật lý (physical / 물리적) DOM ID theo phạm vi (scope / 범위)/rendering. kiểm thử (test / 테스트) E2E phụ thuộc selector dài kiểu:
 
 ```text
 #mf_wframe1_udc1_input1_input
 ```
 
-sẽ dễ vỡ khi layout thay đổi dù behavior không đổi.
+sẽ dễ vỡ khi bố cục (layout / 레이아웃) thay đổi dù hành vi (behavior / 동작) không đổi.
 
-Ưu tiên selector dựa trên contract ổn định: logical test hook được project quy ước, accessible name/label, role, hoặc wrapper test API. Không dựa vào private engine DOM structure nếu không bắt buộc.
+Ưu tiên selector dựa trên đặc tả hợp đồng (contract / 계약) ổn định: logical kiểm thử (test / 테스트) hook được dự án (project / 프로젝트) quy ước, accessible name/label, role, hoặc wrapper kiểm thử (test / 테스트) API. Không dựa vào private engine DOM cấu trúc (structure / 구조) nếu không bắt buộc.
 
-Nếu cần thêm `data-*` hook cho automation, hook phải semantic và ổn định, ví dụ `data-testid="employee-search-submit"`, không phải `div-17-child-2`.
+Nếu cần thêm `data-*` hook cho automation, hook phải ngữ nghĩa (semantic / 의미적) và ổn định, ví dụ `data-testid="employee-search-submit"`, không phải `div-17-child-2`.
 
-## 13. Accessibility test là functional test
+## 13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)
 
-Keyboard navigation, focus return sau popup, label association và error announcement không phải cosmetic detail.
+Keyboard điều hướng (navigation / 내비게이션), focus return sau popup, label association và lỗi (error / 오류) announcement không phải cosmetic detail.
 
 Một regression scenario nên thử:
 
@@ -270,13 +273,13 @@ focus quay về trigger hợp lý
 validation error có thể được nhận biết không chỉ bằng màu
 ```
 
-Automation có thể hỗ trợ một phần, nhưng keyboard-only exploratory test và screen-reader verification vẫn cần cho flow quan trọng.
+Automation có thể hỗ trợ một phần, nhưng keyboard-only exploratory kiểm thử (test / 테스트) và screen-reader xác minh (verification / 확인) vẫn cần cho luồng (flow / 흐름) quan trọng.
 
-## 14. Internationalization test cần thay đổi dữ liệu, không chỉ locale flag
+## 14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag
 
 Một screen “đã hỗ trợ English” chưa được chứng minh chỉ vì locale switch hoạt động.
 
-Test nên dùng text dài, missing key, ký tự đa byte, date/number format và label có độ dài khác nhau. Korean, Vietnamese và English tạo pressure layout khác nhau.
+Kiểm thử (test / 테스트) nên dùng văn bản (text / 텍스트) dài, missing key, ký tự đa byte, date/number format và label có độ dài khác nhau. Korean, Vietnamese và English tạo pressure bố cục (layout / 레이아웃) khác nhau.
 
 Fixture i18n nên có ít nhất:
 
@@ -288,23 +291,23 @@ special character
 number/date locale case
 ```
 
-Mục tiêu là tìm assumption “text luôn ngắn như Korean hiện tại”.
+Mục tiêu là tìm giả định (assumption / 가정) “văn bản (text / 텍스트) luôn ngắn như Korean hiện tại”.
 
-## 15. Validation test theo boundary
+## 15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)
 
-Client validation có ba nhóm test khác nhau.
+Máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검증) có ba nhóm kiểm thử (test / 테스트) khác nhau.
 
-Input interaction test chứng minh component cho phép/chặn character theo UX rule.
+Đầu vào (input / 입력) tương tác (interaction / 상호작용) kiểm thử (test / 테스트) chứng minh thành phần (component / 컴포넌트) cho phép/chặn character theo UX quy tắc (rule / 규칙).
 
-Semantic validation test chứng minh business condition như `startDate <= endDate`.
+Ngữ nghĩa (semantic / 의미적) kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) chứng minh nghiệp vụ (business / 비즈니스) điều kiện (condition / 조건) như `startDate <= endDate`.
 
-Server validation integration test chứng minh payload không hợp lệ vẫn bị reject dù client guard bị bypass.
+Máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검증) kiểm thử tích hợp (integration test / 통합 테스트) chứng minh payload không hợp lệ vẫn bị reject dù máy khách (client / 클라이언트) guard bị bypass.
 
-Nếu chỉ test client, bạn chưa test trust boundary. Nếu chỉ test server, UX regression có thể vẫn xảy ra.
+Nếu chỉ kiểm thử (test / 테스트) máy khách (client / 클라이언트), bạn chưa kiểm thử (test / 테스트) trust ranh giới (boundary / 경계). Nếu chỉ kiểm thử (test / 테스트) máy chủ (server / 서버), UX regression có thể vẫn xảy ra.
 
-## 16. Security negative test
+## 16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)
 
-Critical screen nên có negative test cho assumption bảo mật thường gặp:
+Trọng yếu (critical / 중요) screen nên có negative kiểm thử (test / 테스트) cho giả định (assumption / 가정) bảo mật thường gặp:
 
 ```text
 hidden field bị sửa bằng request manipulation
@@ -315,11 +318,11 @@ file upload sai loại/kích thước
 Excel/CSV cell có formula-like prefix
 ```
 
-Kết quả đúng phải đến từ server policy và safe rendering, không từ việc button bị ẩn.
+Kết quả đúng phải đến từ máy chủ (server / 서버) chính sách (policy / 정책) và safe rendering, không từ việc button bị ẩn.
 
-## 17. Performance regression test cần budget
+## 17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)
 
-Không cần biến mọi test thành benchmark. Chọn flow có risk cao như initial shell, search Grid lớn, open popup, switch tab và repeated navigation.
+Không cần biến mọi kiểm thử (test / 테스트) thành benchmark. Chọn luồng (flow / 흐름) có rủi ro (risk / 위험) cao như initial shell, tìm kiếm (search / 검색) Grid lớn, open popup, switch tab và repeated điều hướng (navigation / 내비게이션).
 
 Đo cùng một scenario với dataset kiểm soát:
 
@@ -331,9 +334,9 @@ heap sau N vòng open/close
 request count sau N vòng navigation
 ```
 
-Regression test có giá trị khi environment đủ ổn định và threshold có ý nghĩa. Một threshold 500 ms trên CI noisy có thể tạo false alarm; trend hoặc relative comparison đôi khi phù hợp hơn absolute number.
+Regression kiểm thử (test / 테스트) có giá trị khi môi trường (environment / 환경) đủ ổn định và threshold có ý nghĩa. Một threshold 500 ms trên CI noisy có thể tạo false alarm; trend hoặc relative comparison đôi khi phù hợp hơn absolute number.
 
-## 18. Memory regression cần repeated lifecycle
+## 18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)
 
 Leak hiếm khi lộ sau một lần mở page.
 
@@ -350,11 +353,11 @@ force/await GC nếu test environment cho phép
 so heap/listener/request behavior
 ```
 
-Không chỉ nhìn heap tổng. Tìm retained Scope/component/listener hoặc duplicate network effect. Chapter [10](10_rendering_lazy_loading_lifetime.md) giải thích lifetime model phía sau test này.
+Không chỉ nhìn vùng nhớ động (heap / 힙) tổng. Tìm retained phạm vi (scope / 범위)/thành phần (component / 컴포넌트)/listener hoặc duplicate mạng (network / 네트워크) tác động (effect / 효과). Chapter [10](10_rendering_lazy_loading_lifetime.md) giải thích thời gian tồn tại (lifetime / 수명) mô hình (model / 모델) phía sau kiểm thử (test / 테스트) này.
 
-## 19. Test data phải có ownership
+## 19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)
 
-E2E test dùng chung một account và một record mutable rất dễ flaky. Test A đổi record, Test B giả định record cũ.
+E2E kiểm thử (test / 테스트) dùng chung một account và một bản ghi (record / 레코드) mutable rất dễ flaky. kiểm thử (test / 테스트) A đổi bản ghi (record / 레코드), kiểm thử (test / 테스트) B giả định bản ghi (record / 레코드) cũ.
 
 Có ba chiến lược thường dùng:
 
@@ -364,13 +367,13 @@ per-test generated data
 reset/cleanup transaction theo suite
 ```
 
-Chọn theo backend architecture. Điều quan trọng là test biết ai tạo dữ liệu, ai được sửa và ai cleanup.
+Chọn theo backend kiến trúc (architecture / 아키텍처). Điều quan trọng là kiểm thử (test / 테스트) biết ai tạo dữ liệu, ai được sửa và ai cleanup.
 
-Đừng để CI phụ thuộc “database UAT hiện đang có USER_ID=TEST01”. Đó không phải fixture; đó là environmental accident.
+Đừng để CI phụ thuộc “cơ sở dữ liệu (database / 데이터베이스) UAT hiện đang có USER_ID=TEST01”. Đó không phải fixture; đó là environmental accident.
 
-## 20. Environment parity và deterministic config
+## 20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)
 
-Một test pass local nhưng fail UAT có thể do engine build, config, context root, locale, browser hoặc cache khác nhau.
+Một kiểm thử (test / 테스트) pass cục bộ (local / 로컬) nhưng thất bại (fail / 실패) UAT có thể do engine bản dựng (build / 빌드), cấu hình (config / 설정), ngữ cảnh (context / 맥락) gốc (root / 루트), locale, trình duyệt (browser / 브라우저) hoặc bộ nhớ đệm (cache / 캐시) khác nhau.
 
 Regression report nên ghi ít nhất:
 
@@ -383,11 +386,11 @@ backend environment
 test data version hoặc seed
 ```
 
-Đây là provenance của evidence. Không có provenance, screenshot “pass” khó tái hiện.
+Đây là provenance của bằng chứng (evidence / 증거). Không có provenance, screenshot “pass” khó tái hiện.
 
-## 21. Contract test cho response schema
+## 21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)
 
-Frontend thường fail không phải vì UI code đổi mà vì backend response shape đổi.
+Frontend thường thất bại (fail / 실패) không phải vì UI mã (code / 코드) đổi mà vì backend phản hồi (response / 응답) shape đổi.
 
 Nếu page kỳ vọng:
 
@@ -399,13 +402,13 @@ Nếu page kỳ vọng:
 }
 ```
 
-thì contract test cần bắt các thay đổi như `userId` thành `user_id`, `users` thành `data`, hoặc nullability thay đổi.
+thì đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cần bắt các thay đổi như `userId` thành `user_id`, `users` thành `data`, hoặc nullability thay đổi.
 
-TypeScript có thể giúp model contract nếu project dùng TypeScript, nhưng runtime response vẫn cần validation/contract evidence. Với JavaScript WebSquare, schema fixture và integration test càng quan trọng.
+TypeScript có thể giúp mô hình (model / 모델) đặc tả hợp đồng (contract / 계약) nếu dự án (project / 프로젝트) dùng TypeScript, nhưng thời gian chạy (runtime / 런타임) phản hồi (response / 응답) vẫn cần kiểm tra hợp lệ (validation / 검증)/đặc tả hợp đồng (contract / 계약) bằng chứng (evidence / 증거). Với JavaScript WebSquare, lược đồ (schema / 스키마) fixture và kiểm thử tích hợp (integration test / 통합 테스트) càng quan trọng.
 
-## 22. Error path phải được test như first-class behavior
+## 22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)
 
-Happy path thường được test nhiều nhất, trong khi production incident nằm ở timeout, 401/403, 500, malformed payload và partial business failure.
+Happy đường dẫn (path / 경로) thường được kiểm thử (test / 테스트) nhiều nhất, trong khi môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) nằm ở hết thời gian chờ (timeout / 타임아웃), 401/403, 500, malformed payload và partial nghiệp vụ (business / 비즈니스) thất bại (failure / 실패).
 
 Một screen quan trọng nên fault-inject:
 
@@ -419,13 +422,13 @@ response out of order
 session expiration
 ```
 
-Sau mỗi lỗi, assert cả UI state: loading indicator có tắt không, button có được enable lại không, DataList cũ có bị xóa sai không, user có thể retry không.
+Sau mỗi lỗi, assert cả UI trạng thái (state / 상태): loading indicator có tắt không, button có được enable lại không, DataList cũ có bị xóa sai không, người dùng (user / 사용자) có thể thử lại (retry / 재시도) không.
 
-## 23. Test debug menu và runtime evidence trong exploratory testing
+## 23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing
 
-WebSquare5 SP5 có debug context menu cho log, DataCollection, event và Submission ở các configuration tương ứng. Khi exploratory test phát hiện lỗi, dùng các view này cùng Browser DevTools để capture state trước khi refresh.
+WebSquare5 SP5 có gỡ lỗi (debug / 디버그) ngữ cảnh (context / 맥락) menu cho log, DataCollection, sự kiện (event / 이벤트) và Submission ở các cấu hình (configuration / 구성) tương ứng. Khi exploratory kiểm thử (test / 테스트) phát hiện lỗi, dùng các view này cùng trình duyệt (browser / 브라우저) DevTools để capture trạng thái (state / 상태) trước khi refresh.
 
-Một bug report tốt không chỉ có “Search không chạy”. Nó có thể ghi:
+Một bug report tốt không chỉ có “tìm kiếm (search / 검색) không chạy”. Nó có thể ghi:
 
 ```text
 handler đã fire
@@ -436,11 +439,11 @@ engine build = ...
 console exception = ...
 ```
 
-Như vậy developer bắt đầu từ boundary đã khoanh vùng thay vì tái hiện mù.
+Như vậy nhà phát triển (developer / 개발자) bắt đầu từ ranh giới (boundary / 경계) đã khoanh vùng thay vì tái hiện mù.
 
-## 24. CI pipeline: fail càng sớm càng rẻ
+## 24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ
 
-Một pipeline hợp lý thường đi từ kiểm tra rẻ đến đắt:
+Một chuỗi xử lý (pipeline / 파이프라인) hợp lý thường đi từ kiểm tra rẻ đến đắt:
 
 ```text
 syntax/static checks
@@ -452,11 +455,11 @@ syntax/static checks
 → performance/security suites theo lịch hoặc release gate
 ```
 
-W-Pack có stand-alone module phục vụ CI/server-side batch conversion trong SP5, vì vậy build artifact không nhất thiết phụ thuộc thao tác thủ công trong Studio. Chapter [12](12_build_config_deployment.md) đi sâu source-to-artifact pipeline.
+W-Pack có stand-alone mô-đun (module / 모듈) phục vụ CI/server-side batch conversion trong SP5, vì vậy hiện vật bản dựng (build artifact / 빌드 산출물) không nhất thiết phụ thuộc thao tác thủ công trong Studio. Chapter [12](12_build_config_deployment.md) đi sâu source-to-artifact chuỗi xử lý (pipeline / 파이프라인).
 
-## 25. Smoke test sau deploy
+## 25. Smoke kiểm thử (test / 테스트) sau deploy
 
-Deploy thành công không đồng nghĩa application usable. Smoke test nên đi qua một số contract có khả năng phát hiện config/artifact lỗi nhanh:
+Deploy thành công không đồng nghĩa ứng dụng (application / 애플리케이션) usable. Smoke kiểm thử (test / 테스트) nên đi qua một số đặc tả hợp đồng (contract / 계약) có khả năng phát hiện cấu hình (config / 설정)/sản phẩm tạo ra (artifact / 산출물) lỗi nhanh:
 
 ```text
 shell load
@@ -468,11 +471,11 @@ một popup open/close
 một static/common resource từ _wpack_
 ```
 
-Nếu release có migration lớn, thêm flow đặc thù như UDC, Excel hoặc multilingual resource.
+Nếu bản phát hành (release / 릴리스) có di chuyển (migration / 마이그레이션) lớn, thêm luồng (flow / 흐름) đặc thù như UDC, Excel hoặc multilingual tài nguyên (resource / 자원).
 
-## 26. Regression suite theo risk, không theo số màn hình
+## 26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình
 
-Không cần một E2E test đầy đủ cho mọi page nếu nhiều page chỉ lặp cùng pattern. Ưu tiên theo:
+Không cần một E2E kiểm thử (test / 테스트) đầy đủ cho mọi page nếu nhiều page chỉ lặp cùng mẫu (pattern / 패턴). Ưu tiên theo:
 
 ```text
 business criticality
@@ -483,13 +486,13 @@ shared component blast radius
 security/data sensitivity
 ```
 
-Một UDC dùng ở 80 screen có thể đáng được test sâu hơn một page độc lập ít dùng.
+Một UDC dùng ở 80 screen có thể đáng được kiểm thử (test / 테스트) sâu hơn một page độc lập ít dùng.
 
-## 27. Flaky test là defect của test system
+## 27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)
 
-Một test fail ngẫu nhiên làm team mất niềm tin. Đừng chỉ retry đến xanh.
+Một kiểm thử (test / 테스트) thất bại (fail / 실패) ngẫu nhiên làm nhóm (team / 팀) mất niềm tin. Đừng chỉ thử lại (retry / 재시도) đến xanh.
 
-Root cause thường là:
+Nguyên nhân gốc (root cause / 근본 원인) thường là:
 
 ```text
 sleep-based synchronization
@@ -501,49 +504,49 @@ test order dependency
 cleanup thiếu
 ```
 
-Retry có thể dùng để thu thập evidence tạm thời, nhưng không được biến nondeterminism thành “pass”.
+Thử lại (retry / 재시도) có thể dùng để thu thập bằng chứng (evidence / 증거) tạm thời, nhưng không được biến nondeterminism thành “pass”.
 
-## 28. Anti-pattern: assert implementation detail
+## 28. Anti-pattern: assert hiện thực (implementation / 구현) detail
 
-Ví dụ test rằng `scwin.tempFlag === 2` trong khi business contract chỉ cần Save button disabled. Refactor nội bộ sẽ làm test vỡ dù behavior đúng.
+Ví dụ kiểm thử (test / 테스트) rằng `scwin.tempFlag === 2` trong khi nghiệp vụ (business / 비즈니스) đặc tả hợp đồng (contract / 계약) chỉ cần Save button disabled. Refactor nội bộ sẽ làm kiểm thử (test / 테스트) vỡ dù hành vi (behavior / 동작) đúng.
 
-Test nên bám vào public contract hoặc invariant. Implementation-level test chỉ hợp lý khi implementation đó chính là thứ cần bảo vệ, ví dụ row-status transition hoặc serialization adapter.
+Kiểm thử (test / 테스트) nên bám vào công khai (public / 공개) đặc tả hợp đồng (contract / 계약) hoặc bất biến (invariant / 불변식). Implementation-level kiểm thử (test / 테스트) chỉ hợp lý khi hiện thực (implementation / 구현) đó chính là thứ cần bảo vệ, ví dụ row-status chuyển tiếp (transition / 전이) hoặc serialization adapter.
 
 ## 29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc
 
-Một script login → search → edit → popup → export → logout dài hàng trăm bước có diagnosis kém. Step 87 fail không biết root cause nằm ở state từ step nào.
+Một script login → tìm kiếm (search / 검색) → edit → popup → export → logout dài hàng trăm bước có diagnosis kém. Step 87 thất bại (fail / 실패) không biết nguyên nhân gốc (root cause / 근본 원인) nằm ở trạng thái (state / 상태) từ step nào.
 
-Tách journey theo bounded capability, nhưng giữ một số end-to-end critical path ngắn để chứng minh integration xuyên hệ thống.
+Tách journey theo bounded năng lực (capability / 역량), nhưng giữ một số end-to-end đường găng (critical path / 임계 경로) ngắn để chứng minh tích hợp (integration / 통합) xuyên hệ thống.
 
-## 30. Practical test matrix cho màn hình CRUD
+## 30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD
 
-Một màn hình query/edit/save nên có regression matrix tối thiểu theo reasoning sau.
+Một màn hình truy vấn (query / 쿼리)/edit/save nên có regression ma trận (matrix / 행렬) tối thiểu theo lập luận (reasoning / 추론) sau.
 
-**Search** phải chứng minh condition mapping, empty result, large result, server error và stale-response ordering.
+**tìm kiếm (search / 검색)** phải chứng minh điều kiện (condition / 조건) ánh xạ (mapping / 매핑), empty kết quả (result / 결과), large kết quả (result / 결과), máy chủ (server / 서버) lỗi (error / 오류) và stale-response thứ tự (ordering / 순서).
 
-**Edit** phải chứng minh canonical DataList thay đổi, row identity ổn định sau sort/filter và validation không duplicate giữa handler.
+**Edit** phải chứng minh chuẩn gốc (canonical / 정본) DataList thay đổi, row định danh (identity / 식별자) ổn định sau sort/filter và kiểm tra hợp lệ (validation / 검증) không duplicate giữa handler.
 
-**Save** phải chứng minh changed rows được gửi đúng, double-click không tạo duplicate logical transaction, business error giữ UI recoverable và success state được refresh/commit đúng policy.
+**Save** phải chứng minh changed rows được gửi đúng, double-click không tạo duplicate logical giao dịch (transaction / 트랜잭션), nghiệp vụ (business / 비즈니스) lỗi (error / 오류) giữ UI recoverable và success trạng thái (state / 상태) được refresh/lần ghi nhận (commit / 커밋) đúng chính sách (policy / 정책).
 
-**Popup** phải chứng minh parameter/result contract, focus return và repeated open/close không leak.
+**Popup** phải chứng minh parameter/kết quả (result / 결과) đặc tả hợp đồng (contract / 계약), focus return và repeated open/close không leak.
 
-**Lifecycle** phải chứng minh close/navigate khi request pending không gây stale mutation.
+**vòng đời (lifecycle / 생명주기)** phải chứng minh close/navigate khi yêu cầu (request / 요청) pending không gây stale mutation.
 
-Đây là matrix theo failure mode, không phải checklist API.
+Đây là ma trận (matrix / 행렬) theo dạng thất bại (failure mode / 실패 모드), không phải checklist API.
 
-## 31. Senior note: testability là chỉ báo coupling
+## 31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling
 
-Nếu muốn test một rule nhỏ nhưng phải boot toàn bộ app shell, mở ba WFrame và kết nối server thật, rule đó đang nằm quá sâu trong framework coupling.
+Nếu muốn kiểm thử (test / 테스트) một quy tắc (rule / 규칙) nhỏ nhưng phải boot toàn bộ app shell, mở ba WFrame và kết nối máy chủ (server / 서버) thật, quy tắc (rule / 규칙) đó đang nằm quá sâu trong khung phần mềm (framework / 프레임워크) coupling.
 
-Nếu muốn test một UDC nhưng phải biết năm internal component ID, public contract của UDC chưa đủ rõ.
+Nếu muốn kiểm thử (test / 테스트) một UDC nhưng phải biết năm nội bộ (internal / 내부) thành phần (component / 컴포넌트) ID, công khai (public / 공개) đặc tả hợp đồng (contract / 계약) của UDC chưa đủ rõ.
 
-Nếu muốn test page B nhưng phải tạo global state từ page A, hai page đang có hidden coupling.
+Nếu muốn kiểm thử (test / 테스트) page B nhưng phải tạo toàn cục (global / 전역) trạng thái (state / 상태) từ page A, hai page đang có hidden coupling.
 
-Testing vì vậy không chỉ bắt bug. Nó cho feedback về architecture.
+Testing vì vậy không chỉ bắt bug. Nó cho phản hồi (feedback / 피드백) về kiến trúc (architecture / 아키텍처).
 
-## 32. Mental model cuối chapter
+## 32. mô hình tư duy (mental model / 사고 모델) cuối chapter
 
-Một regression strategy tốt có thể tóm tắt:
+Một regression chiến lược (strategy / 전략) tốt có thể tóm tắt:
 
 ```text
 business invariant
@@ -555,8 +558,10 @@ business invariant
 → evidence khi fail
 ```
 
-Khi test fail, câu hỏi đầu tiên không phải “retry có pass không?”. Hãy hỏi contract nào vừa bị phá, evidence nằm ở layer nào và test có đang quan sát đúng source of truth không.
+Khi kiểm thử (test / 테스트) thất bại (fail / 실패), câu hỏi đầu tiên không phải “thử lại (retry / 재시도) có pass không?”. Hãy hỏi đặc tả hợp đồng (contract / 계약) nào vừa bị phá, bằng chứng (evidence / 증거) nằm ở tầng (layer / 계층) nào và kiểm thử (test / 테스트) có đang quan sát đúng nguồn chuẩn (source of truth / 정본) không.
 
 ## Nguồn đối chiếu
 
-WebSquare5 SP5 Development Guide mô tả debug context menu, DataCollection/Submission inspection, W-Pack và lifecycle behavior. Stand-alone W-Pack được tài liệu chính thức mô tả như cơ chế có thể tích hợp CI/server batch build. Testing framework cụ thể không phải canonical WebSquare API; hãy chọn theo browser/toolchain của project và giữ test dựa trên public WebSquare/application contract thay vì private engine DOM.
+WebSquare5 SP5 Development Guide mô tả gỡ lỗi (debug / 디버그) ngữ cảnh (context / 맥락) menu, DataCollection/Submission inspection, W-Pack và vòng đời (lifecycle / 생명주기) hành vi (behavior / 동작). Stand-alone W-Pack được tài liệu chính thức mô tả như cơ chế có thể tích hợp CI/máy chủ (server / 서버) batch bản dựng (build / 빌드). Testing khung phần mềm (framework / 프레임워크) cụ thể không phải chuẩn gốc (canonical / 정본) WebSquare API; hãy chọn theo trình duyệt (browser / 브라우저)/toolchain của dự án (project / 프로젝트) và giữ kiểm thử (test / 테스트) dựa trên công khai (public / 공개) WebSquare/đặc tả ứng dụng (application contract / 애플리케이션 계약) thay vì private engine DOM.
+
+> **Bàn giao:** Sau **Nguồn đối chiếu**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

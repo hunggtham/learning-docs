@@ -1,6 +1,9 @@
 # Phòng thí nghiệm nâng cao: xây luận điểm thị trường Hàn Quốc – Việt Nam và kiểm thử kịch bản
 
-> File này nối các playbook quốc gia, cú sốc toàn cầu, research workflow, đầu tư xuyên biên giới và sector deep-dive thành một quy trình thực chiến. Mục tiêu là đi từ **global regime → country transmission → sector → company → valuation → liquidity → position → review**.
+> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: xây luận điểm thị trường Hàn Quốc – Việt Nam và kiểm thử kịch bản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Không bắt đầu từ headline** sang **2. Xác định biến thống trị của thị trường**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này nối các playbook quốc gia, cú sốc toàn cầu, research workflow, đầu tư xuyên biên giới và sector deep-dive thành một quy trình thực chiến. Mục tiêu là đi từ **toàn cục (global / 전역) regime → country transmission → sector → company → valuation → liquidity → position → rà soát (review / 검토)**.
 
 ## 1. Không bắt đầu từ headline
 
@@ -50,7 +53,7 @@ Không nên gán trọng số bằng nhau cho mọi biến.
 
 Ví dụ một quý KOSPI giao dịch theo HBM/AI earnings, quý khác có thể bị chi phối bởi real yield và KRW.
 
-VN-Index có thể chuyển từ câu chuyện tín dụng sang property legal progress hoặc retail liquidity.
+VN-Index có thể chuyển từ câu chuyện tín dụng sang thuộc tính (property / 속성) legal progress hoặc retail liquidity.
 
 Do đó research notebook cần ghi:
 
@@ -88,7 +91,7 @@ Fiscal position
 Banking system health
 ```
 
-Một quốc gia có external balance khỏe phản ứng với USD shock khác quốc gia phụ thuộc vốn ngoại ngắn hạn.
+Một quốc gia có bên ngoài (external / 외부) balance khỏe phản ứng với USD shock khác quốc gia phụ thuộc vốn ngoại ngắn hạn.
 
 ## 6. Hàn Quốc: xuất khẩu là kênh trung tâm
 
@@ -105,7 +108,7 @@ Global demand
 → index leadership
 ```
 
-Nhưng export value phải tách giá và sản lượng.
+Nhưng export giá trị (value / 값) phải tách giá và sản lượng.
 
 ## 7. Semiconductor export: giá khác lượng
 
@@ -162,7 +165,7 @@ Nếu tăng trưởng yếu nhưng KRW chịu áp lực lớn, room cắt lãi c
 
 ## 11. Korea PF là kênh nội địa riêng
 
-Project finance bất động sản có thể ảnh hưởng:
+Dự án (project / 프로젝트) finance bất động sản có thể ảnh hưởng:
 
 ```text
 Developer
@@ -204,9 +207,9 @@ Speculative assets?
 
 Cùng mức tăng tín dụng nhưng tác động năng suất và rủi ro tương lai rất khác.
 
-## 14. Property legal cycle ở Việt Nam
+## 14. thuộc tính (property / 속성) legal cycle ở Việt Nam
 
-Không đánh giá property bằng land bank danh nghĩa.
+Không đánh giá thuộc tính (property / 속성) bằng land bank danh nghĩa.
 
 Chuỗi đúng hơn:
 
@@ -239,9 +242,9 @@ Bond maturities
 + construction commitments
 ```
 
-Một developer có NAV lớn vẫn có thể gặp vấn đề nếu tiền tới sau nợ đáo hạn.
+Một nhà phát triển (developer / 개발자) có NAV lớn vẫn có thể gặp vấn đề nếu tiền tới sau nợ đáo hạn.
 
-## 16. Bank–property feedback loop
+## 16. Bank–thuộc tính (property / 속성) vòng phản hồi (feedback loop / 피드백 루프)
 
 ```text
 Property sales ↓
@@ -254,7 +257,7 @@ Property sales ↓
 
 Đây là vòng phản hồi cần theo dõi, không phải hai ngành độc lập.
 
-## 17. Domestic liquidity và market liquidity không giống nhau
+## 17. Domestic liquidity và thị trường (market / 시장) liquidity không giống nhau
 
 Lãi suất tiền gửi giảm có thể hỗ trợ dòng tiền vào cổ phiếu, nhưng cần kiểm tra:
 
@@ -268,7 +271,7 @@ Broker funding
 
 Một rally dựa chủ yếu vào margin có cấu trúc rủi ro khác rally dựa earnings revisions.
 
-## 18. Retail flow là biến quan trọng ở Việt Nam
+## 18. Retail luồng (flow / 흐름) là biến quan trọng ở Việt Nam
 
 Dòng tiền cá nhân có thể làm định giá mở rộng nhanh trước earnings.
 
@@ -282,7 +285,7 @@ Fundamental earnings recovery
 
 Hai nguồn lợi suất có độ bền khác nhau.
 
-## 19. Foreign flow phải đọc cùng FX
+## 19. Foreign luồng (flow / 흐름) phải đọc cùng FX
 
 Nhà đầu tư nước ngoài quan tâm lợi suất theo đồng tiền gốc.
 
@@ -294,7 +297,7 @@ Home Return
 
 Thị trường nội địa tăng nhưng nội tệ yếu mạnh có thể làm lợi suất ngoại tệ kém hấp dẫn.
 
-## 20. Market breadth xác nhận chất lượng xu hướng
+## 20. thị trường (market / 시장) breadth xác nhận chất lượng xu hướng
 
 Theo dõi:
 
@@ -306,7 +309,7 @@ New highs / lows
 Turnover concentration
 ```
 
-Index tăng nhờ vài large caps khác xu hướng rộng toàn thị trường.
+Chỉ mục (index / 인덱스) tăng nhờ vài large caps khác xu hướng rộng toàn thị trường.
 
 ## 21. Leadership rotation cung cấp thông tin chu kỳ
 
@@ -324,7 +327,7 @@ Banks → brokers → property → industrials / consumer
 
 Không có thứ tự cố định, nhưng rotation giúp đọc kỳ vọng của thị trường về chu kỳ tiếp theo.
 
-## 22. Sector map phải có driver tree
+## 22. Sector map phải có driver cây (tree / 트리)
 
 Ví dụ ngân hàng:
 
@@ -349,11 +352,11 @@ Demand
 → revisions
 ```
 
-Chỉ khi có driver tree mới biết dữ liệu nào cần theo dõi.
+Chỉ khi có driver cây (tree / 트리) mới biết dữ liệu nào cần theo dõi.
 
 ## 23. Định giá phải dùng đúng ngành
 
-Không dùng một metric cho mọi sector.
+Không dùng một chỉ số (metric / 지표) cho mọi sector.
 
 ```text
 Bank: P/B + normalized ROE
@@ -363,7 +366,7 @@ REIT: NAV / FFO / cap rate
 SaaS: growth + margin + FCF
 ```
 
-Sai metric có thể tạo cảm giác “rẻ” giả.
+Sai chỉ số (metric / 지표) có thể tạo cảm giác “rẻ” giả.
 
 ## 24. Earnings revision và valuation phải đi cùng nhau
 
@@ -394,7 +397,7 @@ Price limits
 
 Một cổ phiếu Việt Nam thanh khoản thấp có thể yêu cầu vị thế nhỏ hơn nhiều dù thesis hấp dẫn.
 
-## 26. Price-limit risk ở Việt Nam
+## 26. Price-limit rủi ro (risk / 위험) ở Việt Nam
 
 Biên độ giá có thể làm stop-loss không thực thi như thị trường liên tục.
 
@@ -406,9 +409,9 @@ Giá sàn
 → không thoát được
 ```
 
-Do đó risk sizing phải tính multi-session exit, không chỉ stop distance.
+Do đó rủi ro (risk / 위험) sizing phải tính multi-session exit, không chỉ stop distance.
 
-## 27. Event study theo cùng một template
+## 27. sự kiện (event / 이벤트) study theo cùng một template
 
 Với CPI/FOMC/BOK/SBV/earnings, ghi:
 
@@ -420,9 +423,9 @@ Sector nào phản ứng mạnh?
 Sau 1 ngày / 1 tuần / 1 tháng?
 ```
 
-Qua thời gian, có thể thấy biến nào thật sự dẫn market.
+Qua thời gian, có thể thấy biến nào thật sự dẫn thị trường (market / 시장).
 
-## 28. Scenario matrix Korea
+## 28. Scenario ma trận (matrix / 행렬) Korea
 
 Ví dụ:
 
@@ -436,7 +439,7 @@ Mỗi ô có winners/losers khác nhau.
 
 Cách này tốt hơn một thesis một chiều.
 
-## 29. Scenario matrix Vietnam
+## 29. Scenario ma trận (matrix / 행렬) Vietnam
 
 Có thể dùng:
 
@@ -446,13 +449,13 @@ Property tốt      A               B
 Property xấu      C               D
 ```
 
-Banks, brokers và property phản ứng khác nhau ở từng ô.
+Banks, brokers và thuộc tính (property / 속성) phản ứng khác nhau ở từng ô.
 
-## 30. Bull/base/bear phải thay driver
+## 30. Bull/cơ sở (base / 기반)/bear phải thay driver
 
 Không chỉ đổi P/E.
 
-Ví dụ property:
+Ví dụ thuộc tính (property / 속성):
 
 ```text
 Bull: pháp lý nhanh hơn + presales tốt + refinancing dễ
@@ -464,7 +467,7 @@ Sau đó mới tính NAV/earnings.
 
 ## 31. Country thesis cần điều kiện vô hiệu hóa
 
-Ví dụ thesis “Vietnam domestic liquidity recovery” có thể bị vô hiệu nếu:
+Ví dụ thesis “Vietnam domestic liquidity khôi phục (recovery / 복구)” có thể bị vô hiệu nếu:
 
 ```text
 Deposit rates tăng mạnh
@@ -473,13 +476,13 @@ Margin liquidity co lại
 Credit growth không truyền sang real activity
 ```
 
-Điều kiện phải gắn với cơ chế, không chỉ index giảm.
+Điều kiện phải gắn với cơ chế, không chỉ chỉ mục (index / 인덱스) giảm.
 
-## 32. Phân biệt market call và company call
+## 32. Phân biệt thị trường (market / 시장) lời gọi (call / 호출) và company lời gọi (call / 호출)
 
 Có thể đúng về thị trường nhưng chọn sai công ty, hoặc ngược lại.
 
-Review phải tách:
+Rà soát (review / 검토) phải tách:
 
 ```text
 Country view
@@ -492,7 +495,7 @@ Execution
 
 Nếu chỉ nhìn P/L tổng sẽ không biết kỹ năng nào cần cải thiện.
 
-## 33. Cross-border implementation
+## 33. Cross-border hiện thực (implementation / 구현)
 
 Một thesis tốt vẫn có thể cho kết quả xấu nếu:
 
@@ -540,7 +543,7 @@ Valuation
 
 Không dùng dữ liệu chậm để trade phản ứng trong ngày.
 
-## 35. One-page market thesis
+## 35. One-page thị trường (market / 시장) thesis
 
 Một trang nên đủ:
 
@@ -576,16 +579,16 @@ Viết:
 
 ## 37. Bài tập Vietnam
 
-Chọn một tháng có thay đổi tín dụng hoặc property policy.
+Chọn một tháng có thay đổi tín dụng hoặc thuộc tính (property / 속성) chính sách (policy / 정책).
 
 Theo:
 
 1. deposit rates;
 2. USD/VND;
 3. credit growth;
-4. property transactions;
+4. thuộc tính (property / 속성) transactions;
 5. bond/refinancing news;
-6. bank/broker/property breadth;
+6. bank/broker/thuộc tính (property / 속성) breadth;
 7. turnover/margin;
 8. earnings revisions.
 
@@ -618,3 +621,5 @@ Global shock / regime
 ```
 
 Nếu bỏ qua một mắt xích, rất dễ đúng câu chuyện lớn nhưng sai tài sản, sai thời điểm hoặc sai quy mô.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

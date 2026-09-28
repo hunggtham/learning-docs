@@ -1,8 +1,11 @@
 # Gia đình, họ tộc, giới và vòng đời
 
+> **Mạch đọc:** Đặt **Gia đình, họ tộc, giới và vòng đời** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Gia đình như một thiết chế chứ không chỉ là quan hệ tình cảm** sang **가족, 가구, 세대: ba từ gần nhau nhưng không giống nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Gia đình như một thiết chế chứ không chỉ là quan hệ tình cảm
 
-Trong xã hội hiện đại, “gia đình” thường được hình dung trước hết là nơi của tình cảm riêng tư. Nhưng về mặt lịch sử, **gia đình (가족 / family)** còn là một thiết chế phân phối tài sản, lao động, chăm sóc, giáo dục, danh dự và nghĩa vụ nghi lễ. Muốn hiểu gia đình Hàn Quốc, cần nhìn đồng thời hai lớp: logic gia tộc–Nho giáo của quá khứ và hộ gia đình nhỏ, đô thị, cá nhân hoá của hiện tại.
+Trong xã hội hiện đại, “gia đình” thường được hình dung trước hết là nơi của tình cảm riêng tư. Nhưng về mặt lịch sử, **gia đình (가족 / family)** còn là một thiết chế phân phối tài sản, lao động, chăm sóc, giáo dục, danh dự và nghĩa vụ nghi lễ. Muốn hiểu gia đình Hàn Quốc, cần nhìn đồng thời hai lớp: lô-gic (logic / 논리) gia tộc–Nho giáo của quá khứ và hộ gia đình nhỏ, đô thị, cá nhân hoá của hiện tại.
 
 Trong Joseon, mô hình phụ hệ ngày càng mạnh, đặc biệt trong tầng lớp yangban. **Gia tộc phụ hệ (부계 혈연 / patrilineal kinship)** coi dòng họ theo nam giới là trục kế thừa tên họ, gia phả và nghi lễ tổ tiên. Tuy nhiên không nên chiếu mô hình cuối Joseon ngược lên toàn bộ lịch sử. Ở những giai đoạn trước, quan hệ với gia đình bên mẹ và quyền thừa kế của nữ giới từng có vị trí đáng kể hơn.
 
@@ -204,7 +207,7 @@ Có thể nhìn gia đình như hệ thống **chia sẻ rủi ro phi chính th�
 
 Nếu nhiều thành viên cùng chịu cú sốc — chi phí nhà ở cao, chăm người già, chăm trẻ — mạng gia đình có thể không hấp thụ nổi. Khi đó nhu cầu chuyển sang phúc lợi nhà nước, bảo hiểm và dịch vụ thị trường.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Gia đình Hàn Quốc nên được hiểu như một hệ thống đang chuyển từ **thiết chế dựa vào họ tộc (kinship-based institution)** sang **hộ được thương lượng + mạng gia đình phân tán**. Nhiều biểu tượng và nghi lễ cũ vẫn tồn tại, nhưng ai làm, ai trả tiền, ai chăm sóc, ai sống với ai và ai có quyền quyết định đang được thương lượng lại.
 
@@ -219,3 +222,5 @@ Nếu nhiều thành viên cùng chịu cú sốc — chi phí nhà ở cao, ch�
 `1인 가구` không đồng nghĩa cô lập khỏi gia đình; địa chỉ hộ và mạng gia đình là hai lớp khác nhau.
 
 “Hiếu thảo đồng nghĩa con cái phải tự chăm cha mẹ tại nhà” là cách diễn giải quá hẹp; chăm người cao tuổi hiện đại được phân phối giữa gia đình, y tế, phúc lợi và dịch vụ thị trường.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

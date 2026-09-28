@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,17 +20,19 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)** và nối nó với **핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)
 
 - **테스트 케이스 (Test Case):** Một bộ gồm: Dữ liệu đầu vào, Điều kiện chạy, Kết quả mong đợi.
-- **테스트 시나리오 (Test Scenario):** Kịch bản gồm nhiều Test Case nối tiếp nhau.
-- **테스트 오라클 (Test Oracle):** Tiêu chuẩn/Cơ chế để tự động đánh giá kết quả test là Đúng hay Sai (True/False).
+- **테스트 시나리오 (Test Scenario):** Kịch bản gồm nhiều trường hợp kiểm thử (test case / 테스트 케이스) nối tiếp nhau.
+- **테스트 오라클 (Test Oracle):** Tiêu chuẩn/Cơ chế để tự động đánh giá kết quả kiểm thử (test / 테스트) là Đúng hay Sai (True/False).
   - **참 (True):** Kiểm tra 100% mọi trường hợp (Dùng cho máy bay, y tế).
-  - **샘플링 (Sampling):** Lấy mẫu ngẫu nhiên vài test case.
-  - **추정 (Heuristic):** Lấy mẫu vài cái chắc chắn, còn lại thì dùng logic ước lượng (Heuristic).
-  - **일관성 검사 (Consistent):** Kiểm tra xem code cũ và mới có cho kết quả giống nhau không khi bị thay đổi (Hồi quy).
+  - **샘플링 (Sampling):** Lấy mẫu ngẫu nhiên vài trường hợp kiểm thử (test case / 테스트 케이스).
+  - **추정 (Heuristic):** Lấy mẫu vài cái chắc chắn, còn lại thì dùng lô-gic (logic / 논리) ước lượng (Heuristic).
+  - **일관성 검사 (Consistent):** Kiểm tra xem mã (code / 코드) cũ và mới có cho kết quả giống nhau không khi bị thay đổi (Hồi quy).
 
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Oracle (Nhà tiên tri) = Cái để phán xét đúng/sai. True = 100%. Heuristic = Đoán.
 

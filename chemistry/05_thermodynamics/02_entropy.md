@@ -1,5 +1,7 @@
 # Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô
 
+> **Mạch đọc:** Đọc **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao định luật thứ nhất chưa đủ?** sang **Trạng thái vĩ mô và vi trạng thái**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Entropy (\(S\) / 엔트로피)** là hàm trạng thái nhiệt động mô tả mức độ năng lượng và vật chất có thể được phân bố giữa các cấu hình vi mô tương thích với trạng thái vĩ mô. Cách gọi entropy là “độ hỗn loạn” chỉ là phép so sánh rất thô và thường gây hiểu sai.
 
 Một cách nhìn sâu hơn là: entropy đo **độ rộng của không gian trạng thái vi mô có thể tiếp cận** dưới những ràng buộc vĩ mô nhất định. Khi một hệ có nhiều cách hơn để phân bố năng lượng và hạt mà vẫn tạo cùng trạng thái vĩ mô, entropy của trạng thái đó lớn hơn.
@@ -107,7 +109,7 @@ Với biến đổi đẳng nhiệt thuận nghịch hữu hạn:
 Trong quá trình thật, có thể viết khái niệm:
 
 \[
-\Delta S_{system}=\int\frac{\delta q}{T_{boundary}}+S_{gen}
+\Delta S_{hệ thống (system / 시스템)}=\int\frac{\delta q}{T_{ranh giới (boundary / 경계)}}+S_{gen}
 \]
 
 với:
@@ -230,7 +232,7 @@ Công thức này cho thấy nhiệt dung liên hệ trực tiếp với số m�
 Ở chuyển pha thuận nghịch tại nhiệt độ cân bằng:
 
 \[
-\Delta S_{transition}=\frac{\Delta H_{transition}}{T_{transition}}
+\Delta S_{chuyển tiếp (transition / 전이)}=\frac{\Delta H_{chuyển tiếp (transition / 전이)}}{T_{chuyển tiếp (transition / 전이)}}
 \]
 
 Ví dụ entropy nóng chảy:
@@ -406,3 +408,5 @@ Không. Entropy có vai trò trong chất rắn, chất lỏng, dung dịch, ph�
 Entropy đo **độ rộng của không gian các khả năng vi mô** dưới những ràng buộc xác định. Khi hệ tiến hóa tự nhiên, nó có xu hướng đi tới các trạng thái có số cách phân bố năng lượng và vật chất lớn hơn, trừ khi các ràng buộc năng lượng tạo ra sự đánh đổi khác. Ở cấp nhiệt động, entropy cung cấp mũi tên cho chiều tự nhiên; ở cấp thống kê, nó xuất hiện từ cách các xác suất phân bố trên không gian trạng thái.
 
 Xem tiếp: [Năng lượng tự do Gibbs](./03_gibbs_free_energy.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 energy heat and work](./00_energy_heat_and_work.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

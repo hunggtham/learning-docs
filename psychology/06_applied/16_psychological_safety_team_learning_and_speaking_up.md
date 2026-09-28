@@ -1,20 +1,23 @@
-# An toàn tâm lý, học tập nhóm và lên tiếng — Psychological Safety, Team Learning & Speaking Up / 심리적 안전감
+# An toàn tâm lý, học tập nhóm và lên tiếng — Psychological an toàn (safety / 안전), nhóm (team / 팀) học tập (learning / 학습) & Speaking Up / 심리적 안전감
+
+> **Mạch đọc:** Đọc **An toàn tâm lý, học tập nhóm và lên tiếng — Psychological an toàn (safety / 안전), nhóm (team / 팀) học tập (learning / 학습) & Speaking Up / 심리적 안전감** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **an toàn (safety / 안전) khác comfort** sang **Speaking up**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 **An toàn tâm lý (psychological safety)** là niềm tin rằng một người có thể đặt câu hỏi, thừa nhận lỗi, nêu nghi ngờ hoặc đưa ra ý kiến khác biệt mà không bị trừng phạt xã hội quá mức.
 
-Nó không đồng nghĩa “mọi người luôn dễ chịu với nhau”. Một team có psychological safety cao vẫn có debate mạnh, code review khó tính và accountability cao.
+Nó không đồng nghĩa “mọi người luôn dễ chịu với nhau”. Một nhóm (team / 팀) có psychological an toàn (safety / 안전) cao vẫn có debate mạnh, rà soát mã (code review / 코드 리뷰) khó tính và accountability cao.
 
-## Safety khác comfort
+## An toàn (safety / 안전) khác comfort
 
-Comfort là cảm giác dễ chịu. Safety là khả năng chấp nhận interpersonal risk.
+Comfort là cảm giác dễ chịu. an toàn (safety / 안전) là khả năng chấp nhận interpersonal rủi ro (risk / 위험).
 
-Một meeting có thể rất “êm” vì không ai dám phản đối. Bề ngoài ít conflict nhưng psychological safety thấp.
+Một meeting có thể rất “êm” vì không ai dám phản đối. Bề ngoài ít xung đột (conflict / 충돌) nhưng psychological an toàn (safety / 안전) thấp.
 
-Ngược lại, team có safety tốt có thể tranh luận nhiều vì disagreement được xem là input cho learning.
+Ngược lại, nhóm (team / 팀) có an toàn (safety / 안전) tốt có thể tranh luận nhiều vì disagreement được xem là đầu vào (input / 입력) cho học tập (learning / 학습).
 
 ## Speaking up
 
-**Speaking up** gồm báo lỗi, nêu risk, challenge assumption hoặc đề xuất improvement.
+**Speaking up** gồm báo lỗi, nêu rủi ro (risk / 위험), challenge giả định (assumption / 가정) hoặc đề xuất improvement.
 
 Chi phí tâm lý thường là:
 
@@ -24,21 +27,21 @@ Chi phí tâm lý thường là:
 - sợ ảnh hưởng promotion;
 - sợ làm mất mặt người khác.
 
-Nếu cost dự đoán cao, silence có thể trở thành rational strategy cho cá nhân dù có hại cho hệ thống.
+Nếu chi phí (cost / 비용) dự đoán cao, silence có thể trở thành rational chiến lược (strategy / 전략) cho cá nhân dù có hại cho hệ thống.
 
 ## Hierarchy
 
-Hierarchy không tự động phá psychological safety, nhưng làm interpersonal risk bất đối xứng.
+Hierarchy không tự động phá psychological an toàn (safety / 안전), nhưng làm interpersonal rủi ro (risk / 위험) bất đối xứng.
 
-Khi manager nói “có vấn đề gì cứ nói”, lời mời này có thể không đủ nếu history cho thấy người từng nói bị ignored hoặc punished.
+Khi manager nói “có vấn đề gì cứ nói”, lời mời này có thể không đủ nếu lịch sử (history / 이력) cho thấy người từng nói bị ignored hoặc punished.
 
-Behavior của leader sau khi nhận bad news quan trọng hơn slogan.
+Hành vi (behavior / 동작) của leader sau khi nhận bad news quan trọng hơn slogan.
 
-## Error reporting
+## Lỗi (error / 오류) reporting
 
-Trong system phức tạp, error không thể về 0. Nếu người ta giấu near miss vì fear, organization mất cơ hội học trước khi incident lớn xảy ra.
+Trong hệ thống (system / 시스템) phức tạp, lỗi (error / 오류) không thể về 0. Nếu người ta giấu near miss vì fear, organization mất cơ hội học trước khi sự cố (incident / 인시던트) lớn xảy ra.
 
-Một loop tốt:
+Một vòng lặp (loop / 루프) tốt:
 
 ```text
 error / near miss
@@ -48,7 +51,7 @@ error / near miss
 → feedback lại team
 ```
 
-Một loop xấu:
+Một vòng lặp (loop / 루프) xấu:
 
 ```text
 error
@@ -60,20 +63,20 @@ error
 
 ## Blameless không nghĩa không accountability
 
-**Blameless postmortem** không có nghĩa “không ai chịu trách nhiệm”. Nó có nghĩa phân tích system condition trước khi moralize cá nhân.
+**Blameless postmortem** không có nghĩa “không ai chịu trách nhiệm”. Nó có nghĩa phân tích hệ thống (system / 시스템) điều kiện (condition / 조건) trước khi moralize cá nhân.
 
 Accountability tốt hỏi:
 
-- decision lúc đó dựa trên information nào;
+- quyết định (decision / 결정) lúc đó dựa trên thông tin (information / 정보) nào;
 - safeguard nào thiếu;
-- incentive nào đẩy behavior;
-- process nào cho phép error propagate.
+- incentive nào đẩy hành vi (behavior / 동작);
+- tiến trình (process / 프로세스) nào cho phép lỗi (error / 오류) propagate.
 
-Nếu negligence có thật, organization vẫn xử lý. Nhưng blame-first thường làm learning kém.
+Nếu negligence có thật, organization vẫn xử lý. Nhưng blame-first thường làm học tập (learning / 학습) kém.
 
-## Team learning
+## Nhóm (team / 팀) học tập (learning / 학습)
 
-Team learning cần cycle:
+Nhóm (team / 팀) học tập (learning / 학습) cần cycle:
 
 ```text
 act
@@ -84,16 +87,16 @@ act
 → act again
 ```
 
-Psychological safety chủ yếu hỗ trợ phần “speak up” và “reflect”. Nó không thay thế competence hay clear goal.
+Psychological an toàn (safety / 안전) chủ yếu hỗ trợ phần “speak up” và “reflect”. Nó không thay thế competence hay clear goal.
 
 ## Dissent
 
-Dissent có giá trị khi challenge assumption. Nhưng dissent hiệu quả cần task relevance và evidence, không phải oppositional behavior vô hạn.
+Dissent có giá trị khi challenge giả định (assumption / 가정). Nhưng dissent hiệu quả cần tác vụ (task / 작업) relevance và bằng chứng (evidence / 증거), không phải oppositional hành vi (behavior / 동작) vô hạn.
 
 Leader có thể giảm conformity bằng cách hỏi trước:
 
 - “Điều gì có thể khiến plan này thất bại?”
-- “Ai có evidence ngược?”
+- “Ai có bằng chứng (evidence / 증거) ngược?”
 - “Nếu đây là quyết định sai, nguyên nhân có thể là gì?”
 
 Đây là cách biến disagreement thành role hợp lệ.
@@ -104,89 +107,91 @@ Groupthink không chỉ là “mọi người giống nhau”. Nó liên quan pr
 
 Silence dễ bị diễn giải nhầm thành agreement.
 
-Một rule hữu ích:
+Một quy tắc (rule / 규칙) hữu ích:
 
 > Không có phản đối không có nghĩa có đồng thuận.
 
-## Software engineering
+## Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
-Trong engineering team, psychological safety ảnh hưởng:
+Trong kỹ thuật (engineering / 엔지니어링) nhóm (team / 팀), psychological an toàn (safety / 안전) ảnh hưởng:
 
-- code review;
-- production incident;
-- security disclosure;
-- architecture debate;
+- rà soát mã (code review / 코드 리뷰);
+- môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트);
+- bảo mật (security / 보안) disclosure;
+- kiến trúc (architecture / 아키텍처) debate;
 - estimation;
-- junior developer learning.
+- junior nhà phát triển (developer / 개발자) học tập (learning / 학습).
 
-Nếu junior thấy hỏi câu cơ bản sẽ bị ridicule, họ có thể im lặng và build trên assumption sai.
+Nếu junior thấy hỏi câu cơ bản sẽ bị ridicule, họ có thể im lặng và bản dựng (build / 빌드) trên giả định (assumption / 가정) sai.
 
 ## Cross-cultural communication
 
-Trong culture có power distance cao, challenge senior có thể mang cost lớn hơn. Vì vậy practice như anonymous pre-mortem, round-robin input hoặc written review trước meeting có thể giúp giảm hierarchy pressure.
+Trong culture có power distance cao, challenge cấp cao (senior / 시니어) có thể mang chi phí (cost / 비용) lớn hơn. Vì vậy practice như anonymous pre-mortem, round-robin đầu vào (input / 입력) hoặc written rà soát (review / 검토) trước meeting có thể giúp giảm hierarchy pressure.
 
-Không nên gán stereotype cứng cho quốc gia; team norm và individual history vẫn quan trọng.
+Không nên gán stereotype cứng cho quốc gia; nhóm (team / 팀) norm và individual lịch sử (history / 이력) vẫn quan trọng.
 
-## Remote work
+## Remote công việc (work / 작업)
 
-Remote team thiếu cue phi ngôn ngữ và spontaneous repair. Một message ngắn có thể bị interpret harsher hơn intended.
+Remote nhóm (team / 팀) thiếu cue phi ngôn ngữ và spontaneous repair. Một message ngắn có thể bị interpret harsher hơn intended.
 
-Explicit norm hữu ích:
+Tường minh (explicit / 명시적) norm hữu ích:
 
-- response time expectation;
-- escalation path;
+- phản hồi (response / 응답) thời gian (time / 시간) expectation;
+- escalation đường dẫn (path / 경로);
 - code-review tone;
-- when to move chat → call;
-- how to signal uncertainty.
+- when to move chat → lời gọi (call / 호출);
+- how to tín hiệu (signal / 신호) bất định (uncertainty / 불확실성).
 
-## Psychological safety và performance
+## Psychological an toàn (safety / 안전) và hiệu năng (performance / 성능)
 
-Safety không đảm bảo performance. Team còn cần competence, coordination, resource và goal clarity.
+An toàn (safety / 안전) không đảm bảo hiệu năng (performance / 성능). nhóm (team / 팀) còn cần competence, coordination, tài nguyên (resource / 자원) và goal clarity.
 
-Một team “an toàn” nhưng không có skill vẫn fail. Một team skill cao nhưng fear culture có thể performance tốt ngắn hạn rồi tích lũy hidden risk.
+Một nhóm (team / 팀) “an toàn” nhưng không có skill vẫn thất bại (fail / 실패). Một nhóm (team / 팀) skill cao nhưng fear culture có thể hiệu năng (performance / 성능) tốt ngắn hạn rồi tích lũy hidden rủi ro (risk / 위험).
 
 ## Burnout và voice
 
-Burnout và silence có thể tạo vòng lặp hai chiều: người kiệt sức ít energy để speak up; culture nơi không thể speak up làm demand và unfairness kéo dài.
+Burnout và silence có thể tạo vòng lặp hai chiều: người kiệt sức ít năng lượng (energy / 에너지) để speak up; culture nơi không thể speak up làm demand và unfairness kéo dài.
 
 Xem [[14_work_stress_burnout_and_recovery]].
 
-## Leader behavior
+## Leader hành vi (behavior / 동작)
 
-Leader xây safety bằng micro-behavior:
+Leader xây an toàn (safety / 안전) bằng micro-behavior:
 
 - thừa nhận mình có thể sai;
 - cảm ơn bad news;
 - hỏi follow-up thay vì phản công;
-- phân biệt error với intent;
-- công khai update sau feedback.
+- phân biệt lỗi (error / 오류) với intent;
+- công khai cập nhật (update / 업데이트) sau phản hồi (feedback / 피드백).
 
 Một lần retaliation có thể phá trust nhanh hơn nhiều lần nói “hãy chia sẻ”.
 
-## Measuring safety
+## Measuring an toàn (safety / 안전)
 
-Survey score hữu ích nhưng không đủ. Cần xem behavior:
+Survey score hữu ích nhưng không đủ. Cần xem hành vi (behavior / 동작):
 
 - ai nói trong meeting;
 - ai bị interrupt;
-- incident có được report không;
-- dissent có thay đổi decision không;
-- junior có hỏi sớm hay chỉ nói sau khi fail.
+- sự cố (incident / 인시던트) có được report không;
+- dissent có thay đổi quyết định (decision / 결정) không;
+- junior có hỏi sớm hay chỉ nói sau khi thất bại (fail / 실패).
 
-## Common misconceptions
+## Dùng chung (common / 공통) misconceptions
 
-**“Psychological safety = không được criticism.”** Sai. Criticism task-focused vẫn cần thiết.
+**“Psychological an toàn (safety / 안전) = không được criticism.”** Sai. Criticism task-focused vẫn cần thiết.
 
-**“Team vui vẻ thì safety cao.”** Harmony có thể che fear.
+**“nhóm (team / 팀) vui vẻ thì an toàn (safety / 안전) cao.”** Harmony có thể che fear.
 
-**“Leader chỉ cần nói ‘cứ nói thật’.”** History và consequence mới quyết định trust.
+**“Leader chỉ cần nói ‘cứ nói thật’.”** lịch sử (history / 이력) và consequence mới quyết định trust.
 
 **“Blameless = không accountability.”** Hai concept khác nhau.
 
-## Mental model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Psychological safety là **chi phí dự đoán của việc nói thật**. Khi cost thấp đủ, thông tin xấu có cơ hội đi lên trước khi hệ thống thất bại.
+> Psychological an toàn (safety / 안전) là **chi phí dự đoán của việc nói thật**. Khi chi phí (cost / 비용) thấp đủ, thông tin xấu có cơ hội đi lên trước khi hệ thống thất bại.
 
 ## Kết nối kiến thức
 
 Xem [[00_work_organization_and_leadership]], [[14_work_stress_burnout_and_recovery]], [[03_interpersonal_communication_and_conflict]], [[../03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]], [[../03_human_development_and_person/15_power_status_hierarchy_and_inequality]] và [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 work organization and leadership](./00_work_organization_and_leadership.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

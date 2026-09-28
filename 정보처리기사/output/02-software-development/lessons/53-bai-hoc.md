@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **49. 테스트 하네스 구성 요소 (Test Harness Components)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,21 +20,23 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)** và nối nó với **핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)
 
 ### 테스트의 기본 원리 (Các nguyên lý cơ bản)
-- **완벽한 테스팅은 불가능:** Không bao giờ test ra 100% không còn lỗi.
-- **결함 집중 (Defect Clustering):** Lỗi thường tập trung ở 20% các module cốt lõi (Quy tắc Pareto 80/20).
-- **살충제 패러독스 (Pesticide Paradox):** Nghịch lý thuốc trừ sâu. Dùng mãi một bài test thì không tìm ra lỗi mới. Cần liên tục thay đổi bộ test.
-- **정황 의존성 (Context Dependency):** Tùy bối cảnh (web, app, game) mà cách test phải khác nhau.
+- **완벽한 테스팅은 불가능:** Không bao giờ kiểm thử (test / 테스트) ra 100% không còn lỗi.
+- **결함 집중 (Defect Clustering):** Lỗi thường tập trung ở 20% các mô-đun (module / 모듈) cốt lõi (Quy tắc Pareto 80/20).
+- **살충제 패러독스 (Pesticide Paradox):** Nghịch lý thuốc trừ sâu. Dùng mãi một bài kiểm thử (test / 테스트) thì không tìm ra lỗi mới. Cần liên tục thay đổi bộ kiểm thử (test / 테스트).
+- **정황 의존성 (Context Dependency):** Tùy bối cảnh (web, app, game) mà cách kiểm thử (test / 테스트) phải khác nhau.
 - **오류-부재의 궤변 (Absence of Errors Fallacy):** App không có lỗi nhưng không đúng ý khách hàng thì vẫn là rác.
 
 ### 정적 테스트 vs 동적 테스트 (Static vs Dynamic Test)
-- **정적 테스트 (Static):** Không chạy code. Đọc và review code/tài liệu. (Walkthrough, Inspection, Review). Phát hiện lỗi sớm, tiết kiệm tiền.
+- **정적 테스트 (Static):** Không chạy mã (code / 코드). Đọc và rà soát (review / 검토) mã (code / 코드)/tài liệu. (Walkthrough, Inspection, Review). Phát hiện lỗi sớm, tiết kiệm tiền.
 - **동적 테스트 (Dynamic):** Phải chạy chương trình. Gồm Black Box và White Box testing.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Thuốc trừ sâu (Pesticide) = Cần thay mới bộ Test. Đám mây lỗi (Clustering) = 20% code gây ra 80% lỗi.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Thuốc trừ sâu (Pesticide) = Cần thay mới bộ kiểm thử (test / 테스트). Đám mây lỗi (Clustering) = 20% mã (code / 코드) gây ra 80% lỗi.
 
 ---

@@ -1,8 +1,11 @@
 # Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc
 
-Lý thuyết số (number theory / 정수론) nghiên cứu integers, divisibility và các structures sinh ra từ arithmetic rời rạc. Đây là một lĩnh vực cho thấy rất rõ cách một concept “thuần toán” có thể trở thành nền của algorithms, hashing, cyclic systems, error checking và cryptographic mathematics.
+> **Mạch đọc:** Đọc **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Divisibility là structural quan hệ (relation / 관계)** sang **2. Division thuật toán (algorithm / 알고리즘)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu của chapter này không phải nhớ các theorem riêng lẻ, mà hiểu một learning flow:
+
+Lý thuyết số (number theory / 정수론) nghiên cứu integers, divisibility và các structures sinh ra từ arithmetic rời rạc. Đây là một lĩnh vực cho thấy rất rõ cách một concept “thuần toán” có thể trở thành nền của algorithms, hashing, cyclic các hệ thống (systems / 시스템들), lỗi (error / 오류) checking và cryptographic mathematics.
+
+Mục tiêu của chapter này không phải nhớ các theorem riêng lẻ, mà hiểu một mạch học (learning flow / 학습 흐름):
 
 ```text
 integer structure
@@ -15,7 +18,7 @@ integer structure
 → efficient computation
 ```
 
-## 1. Divisibility là structural relation
+## 1. Divisibility là structural quan hệ (relation / 관계)
 
 Với integers `a,b`, ta viết
 
@@ -57,9 +60,9 @@ nên
 a\mid(rb+sc).
 ```
 
-Đây là source của rất nhiều arguments về gcd và congruence.
+Đây là nguồn (source / 소스) của rất nhiều arguments về gcd và congruence.
 
-## 2. Division algorithm
+## 2. Division thuật toán (algorithm / 알고리즘)
 
 Với integer `a` và positive integer `n`, tồn tại duy nhất integers `q,r` sao cho
 
@@ -72,11 +75,11 @@ a=qn+r,
 
 Đây là theorem formal hóa intuition “chia lấy phần nguyên và phần dư”.
 
-Nó là nền của Euclidean algorithm và modular arithmetic.
+Nó là nền của Euclidean thuật toán (algorithm / 알고리즘) và modular arithmetic.
 
-## 3. GCD là greatest common structure
+## 3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)
 
-Greatest common divisor:
+Greatest dùng chung (common / 공통) divisor:
 
 ```math
 \gcd(a,b)
@@ -90,9 +93,9 @@ Ví dụ:
 \gcd(84,30)=6.
 ```
 
-Nhưng definition “largest shared factor” chưa cho algorithm hiệu quả. Euclid tìm structure sâu hơn.
+Nhưng definition “largest dùng chung (shared / 공유) factor” chưa cho thuật toán (algorithm / 알고리즘) hiệu quả. Euclid tìm cấu trúc (structure / 구조) sâu hơn.
 
-## 4. Euclidean algorithm: vì sao thay `(a,b)` bằng `(b,r)` được?
+## 4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay `(a,b)` bằng `(b,r)` được?
 
 Viết
 
@@ -112,7 +115,7 @@ Do đó:
 \gcd(a,b)=\gcd(b,r).
 ```
 
-Lặp process làm second argument giảm:
+Lặp tiến trình (process / 프로세스) làm second argument giảm:
 
 ```text
 252 = 105·2 + 42
@@ -126,9 +129,9 @@ nên
 \gcd(252,105)=21.
 ```
 
-Điểm quan trọng là mỗi step không “đoán” gcd; nó thay problem bằng equivalent smaller problem.
+Điểm quan trọng là mỗi step không “đoán” gcd; nó thay bài toán (problem / 문제) bằng equivalent smaller bài toán (problem / 문제).
 
-## 5. Termination và algorithmic reasoning
+## 5. Termination và algorithmic lập luận (reasoning / 추론)
 
 Remainder luôn thỏa
 
@@ -136,11 +139,11 @@ Remainder luôn thỏa
 0\le r<b.
 ```
 
-nên sequence remainders là decreasing nonnegative integers. Nó không thể giảm vô hạn, nên algorithm terminate.
+nên chuỗi (sequence / 시퀀스) remainders là decreasing nonnegative integers. Nó không thể giảm vô hạn, nên thuật toán (algorithm / 알고리즘) terminate.
 
-Đây là ví dụ number theory nối trực tiếp với proof of termination trong algorithms.
+Đây là ví dụ number lý thuyết (theory / 이론) nối trực tiếp với proof of termination trong algorithms.
 
-## 6. Bézout identity
+## 6. Bézout định danh (identity / 식별자)
 
 Có integers `x,y` sao cho
 
@@ -148,7 +151,7 @@ Có integers `x,y` sao cho
 ax+by=\gcd(a,b).
 ```
 
-Extended Euclidean algorithm không chỉ tìm gcd; nó tìm luôn coefficients `x,y`.
+Extended Euclidean thuật toán (algorithm / 알고리즘) không chỉ tìm gcd; nó tìm luôn coefficients `x,y`.
 
 Ví dụ với `30,18`:
 
@@ -162,7 +165,7 @@ Ta có thể tìm:
 6=2(18)-1(30).
 ```
 
-Bézout identity là bridge trực tiếp tới modular inverse.
+Bézout định danh (identity / 식별자) là cầu nối (bridge / 브리지) trực tiếp tới modular inverse.
 
 ## 7. Prime numbers là atoms của multiplication
 
@@ -170,13 +173,13 @@ Prime (số nguyên tố / 소수) là integer >1 chỉ có positive divisors `1
 
 Composite numbers có factorization thành smaller integers.
 
-Fundamental Theorem of Arithmetic nói mọi integer `n>1` có prime factorization duy nhất up to order:
+Fundamental Theorem of Arithmetic nói mọi integer `n>1` có prime factorization duy nhất up to thứ tự (order / 순서):
 
 ```math
 n=p_1^{a_1}\cdots p_k^{a_k}.
 ```
 
-Prime factorization đóng vai trò như “coordinate system” cho multiplicative structure của positive integers.
+Prime factorization đóng vai trò như “coordinate hệ thống (system / 시스템)” cho multiplicative cấu trúc (structure / 구조) của positive integers.
 
 ## 8. GCD/LCM từ prime exponents
 
@@ -222,7 +225,7 @@ N=p_1p_2\cdots p_k+1.
 
 Không `p_i` nào chia `N` vì remainder là 1. Nhưng `N>1` phải có prime divisor. Contradiction.
 
-Điểm đáng học không chỉ theorem mà là proof strategy: build object cố tình nằm ngoài assumed complete list.
+Điểm đáng học không chỉ theorem mà là proof chiến lược (strategy / 전략): bản dựng (build / 빌드) đối tượng (object / 객체) cố tình nằm ngoài assumed complete danh sách (list / 목록).
 
 ## 10. Congruence modulo n
 
@@ -246,7 +249,7 @@ Ví dụ:
 17\equiv5\pmod{12}.
 ```
 
-Congruence là một equivalence relation trên integers.
+Congruence là một equivalence quan hệ (relation / 관계) trên integers.
 
 Nó partition `\mathbb Z` thành remainder classes:
 
@@ -272,7 +275,7 @@ và
 -1\equiv4\pmod5.
 ```
 
-Trong mathematics, class của `-1` và `4` là cùng class modulo 5.
+Trong mathematics, lớp (class / 클래스) của `-1` và `4` là cùng lớp (class / 클래스) modulo 5.
 
 ## 12. Addition và multiplication descend xuống residue classes
 
@@ -324,11 +327,11 @@ Theo Bézout, solution tồn tại iff
 \gcd(a,n)=1.
 ```
 
-Vì vậy coprimality là condition chính xác cho invertibility modulo `n`.
+Vì vậy coprimality là điều kiện (condition / 조건) chính xác cho invertibility modulo `n`.
 
 ## 14. Worked Example: inverse của 7 modulo 26
 
-Euclidean algorithm:
+Euclidean thuật toán (algorithm / 알고리즘):
 
 ```text
 26 = 7·3 + 5
@@ -382,7 +385,7 @@ Ví dụ modulo 6, `2` không invertible vì
 \gcd(2,6)=2\ne1.
 ```
 
-Không thể “chia hai vế cho 2” modulo 6 như trên real numbers mà không kiểm tra structure.
+Không thể “chia hai vế cho 2” modulo 6 như trên real numbers mà không kiểm tra cấu trúc (structure / 구조).
 
 ## 16. Fermat's little theorem
 
@@ -400,9 +403,9 @@ a^{p-1}\equiv1\pmod p.
 
 Một proof idea xem multiplication by `a` permute nonzero residue classes modulo `p` vì `a` invertible.
 
-Product của classes `1,...,p-1` sau permutation vẫn same modulo `p`, dẫn tới theorem.
+Sản phẩm (product / 제품) của classes `1,...,p-1` sau permutation vẫn same modulo `p`, dẫn tới theorem.
 
-Điểm sâu là theorem đến từ symmetry/permutation structure của invertible residues.
+Điểm sâu là theorem đến từ symmetry/permutation cấu trúc (structure / 구조) của invertible residues.
 
 ## 17. Euler's theorem
 
@@ -420,7 +423,7 @@ a^{\varphi(n)}\equiv1\pmod n,
 
 trong đó `\varphi(n)` là Euler totient: số residue classes modulo `n` coprime với `n`.
 
-Fermat là special case khi `n=p` prime, vì
+Fermat là special trường hợp (case / 사례) khi `n=p` prime, vì
 
 ```math
 \varphi(p)=p-1.
@@ -436,7 +439,7 @@ a^k\bmod n
 
 không cần compute giant integer `a^k` trước.
 
-Repeated squaring dùng binary decomposition của exponent.
+Repeated squaring dùng nhị phân (binary / 이진) decomposition của exponent.
 
 Ví dụ `k=13=8+4+1`:
 
@@ -449,9 +452,9 @@ a^1
 
 combine needed powers, reducing modulo `n` mỗi step.
 
-Complexity theo number of exponent bits, roughly `O(log k)` multiplications.
+Độ phức tạp (complexity / 복잡도) theo number of exponent bits, roughly `O(log k)` multiplications.
 
-Đây là connection trực tiếp number theory ↔ algorithm complexity.
+Đây là liên kết (connection / 연결) trực tiếp number lý thuyết (theory / 이론) ↔ thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도).
 
 ## 19. Chinese Remainder Theorem intuition
 
@@ -464,13 +467,13 @@ x\bmod m,
 
 xác định unique residue modulo `mn`.
 
-Conceptually, một large cyclic state có thể decomposed thành independent smaller cyclic coordinates khi moduli coprime.
+Conceptually, một large cyclic trạng thái (state / 상태) có thể decomposed thành independent smaller cyclic coordinates khi moduli coprime.
 
-CRT là một “change of coordinates” cho modular arithmetic.
+CRT là một “thay đổi (change / 변경) of coordinates” cho modular arithmetic.
 
-## 20. Cyclic systems trong software
+## 20. Cyclic các hệ thống (systems / 시스템들) trong software
 
-Modulo xuất hiện tự nhiên khi state wraps around:
+Modulo xuất hiện tự nhiên khi trạng thái (state / 상태) wraps around:
 
 ```text
 clock hours
@@ -481,33 +484,33 @@ sequence counters
 sharding buckets
 ```
 
-Nhưng wraparound integer trong hardware không luôn equivalent với intended mathematical modulo, đặc biệt khi signed overflow semantics khác language.
+Nhưng wraparound integer trong hardware không luôn equivalent với intended mathematical modulo, đặc biệt khi signed overflow ngữ nghĩa (semantics / 의미론) khác ngôn ngữ (language / 언어).
 
-## 21. Hash table connection
+## 21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)
 
-Hash table thường dùng mapping:
+Bảng băm (hash table / 해시 테이블) thường dùng ánh xạ (mapping / 매핑):
 
 ```math
 bucket=h(key)\bmod m.
 ```
 
-Modulo chỉ compress range. Nó không tự tạo good distribution.
+Modulo chỉ compress phạm vi (range / 범위). Nó không tự tạo good phân phối (distribution / 분포).
 
-Nếu upstream hash có patterns align với `m`, collisions có thể cao.
+Nếu upstream băm (hash / 해시) có patterns align với `m`, collisions có thể cao.
 
-Do đó number-theoretic structure của table size đôi khi matter, nhưng modern hash-table design còn phụ thuộc load factor, mixing function và collision strategy.
+Do đó number-theoretic cấu trúc (structure / 구조) của bảng (table / 테이블) kích thước (size / 크기) đôi khi matter, nhưng hiện đại (modern / 현대적) hash-table thiết kế (design / 설계) còn phụ thuộc tải (load / 로드) factor, mixing hàm (function / 함수) và collision chiến lược (strategy / 전략).
 
-## 22. Error detection và check digits
+## 22. lỗi (error / 오류) detection và check digits
 
-Checksum/check-digit systems thường dùng modular constraints.
+Checksum/check-digit các hệ thống (systems / 시스템들) thường dùng modular các ràng buộc (constraints / 제약조건들).
 
 Ví dụ simple digit sum modulo 10 có thể detect một số errors nhưng không phải tất cả transpositions.
 
-Design tốt cần analyze error model và algebraic code structure.
+Thiết kế (design / 설계) tốt cần analyze lỗi (error / 오류) mô hình (model / 모델) và algebraic mã (code / 코드) cấu trúc (structure / 구조).
 
-Number theory cung cấp invariant; reliability phụ thuộc invariant detect được loại perturbation nào.
+Number lý thuyết (theory / 이론) cung cấp bất biến (invariant / 불변식); độ tin cậy (reliability / 신뢰성) phụ thuộc bất biến (invariant / 불변식) detect được loại perturbation nào.
 
-## 23. Finite fields: khi residue arithmetic trở thành field
+## 23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)
 
 Modulo prime `p`, nonzero residue classes đều invertible. Vì vậy
 
@@ -515,7 +518,7 @@ Modulo prime `p`, nonzero residue classes đều invertible. Vì vậy
 \mathbb F_p
 ```
 
-là field.
+là trường dữ liệu (field / 필드).
 
 Modulo composite `n`, zero divisors có thể xuất hiện. Ví dụ modulo 6:
 
@@ -525,19 +528,19 @@ Modulo composite `n`, zero divisors có thể xuất hiện. Ví dụ modulo 6:
 
 mặc dù neither factor congruent 0.
 
-Do đó `\mathbb Z/6\mathbb Z` không phải field.
+Do đó `\mathbb Z/6\mathbb Z` không phải trường dữ liệu (field / 필드).
 
-Đây là bridge sang algebraic structures.
+Đây là cầu nối (bridge / 브리지) sang algebraic structures.
 
-## 24. Connection với cryptographic mathematics
+## 24. liên kết (connection / 연결) với cryptographic mathematics
 
 Modular exponentiation, finite groups và finite fields xuất hiện trong nhiều cryptographic constructions.
 
-Nhưng một theorem number theory đúng không tự đảm bảo system secure. Practical design còn phụ thuộc protocol, parameter size, randomness, implementation, side-channel resistance và threat model.
+Nhưng một theorem number lý thuyết (theory / 이론) đúng không tự đảm bảo hệ thống (system / 시스템) secure. Practical thiết kế (design / 설계) còn phụ thuộc giao thức (protocol / 프로토콜), parameter kích thước (size / 크기), randomness, hiện thực (implementation / 구현), side-channel resistance và threat mô hình (model / 모델).
 
-Ở đây mục tiêu chỉ là hiểu mathematical substrate, không đồng nhất “có prime/modulo” với security.
+Ở đây mục tiêu chỉ là hiểu mathematical substrate, không đồng nhất “có prime/modulo” với bảo mật (security / 보안).
 
-## 25. Connection với Fourier và cyclic structure
+## 25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)
 
 Discrete Fourier Transform làm việc với periodic/cyclic indexing. Roots of unity là solutions của
 
@@ -547,7 +550,7 @@ z^n=1
 
 trong complex numbers.
 
-Finite cyclic structures và modular indexing vì vậy xuất hiện song song trong signal processing và number-theoretic transforms.
+Finite cyclic structures và modular indexing vì vậy xuất hiện song song trong tín hiệu (signal / 신호) processing và number-theoretic transforms.
 
 ## 26. Worked Example: weekday arithmetic
 
@@ -559,9 +562,9 @@ Nếu Monday encode `0`, Tuesday `1`, ..., Sunday `6`, thì 100 days after Monda
 
 nên day là Wednesday.
 
-Ta không cần enumerate 100 steps; modulo giữ lại đúng information relevant cho periodic state.
+Ta không cần enumerate 100 steps; modulo giữ lại đúng thông tin (information / 정보) relevant cho periodic trạng thái (state / 상태).
 
-## 27. Proof strategy: work modulo small base để tìm impossibility
+## 27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility
 
 Suppose muốn chứng minh square integer không thể congruent 2 modulo 4.
 
@@ -581,15 +584,15 @@ n^2=4k^2+4k+1\equiv1\pmod4.
 
 Vậy square chỉ remainder 0 hoặc 1 modulo 4, không thể 2.
 
-Đây là proof technique rất mạnh: quotient infinite integer problem xuống finite residue classes.
+Đây là proof technique rất mạnh: quotient infinite integer bài toán (problem / 문제) xuống finite residue classes.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Number theory nghiên cứu structure của integers dưới divisibility và multiplication. Modular arithmetic quotient infinite integers thành finite equivalence classes nhưng giữ đủ arithmetic structure để tính toán. GCD, inverse, prime factorization và congruence không phải tricks riêng lẻ; chúng là các mặt của cùng cấu trúc divisibility.
+> Number lý thuyết (theory / 이론) nghiên cứu cấu trúc (structure / 구조) của integers dưới divisibility và multiplication. Modular arithmetic quotient infinite integers thành finite equivalence classes nhưng giữ đủ arithmetic cấu trúc (structure / 구조) để tính toán. GCD, inverse, prime factorization và congruence không phải tricks riêng lẻ; chúng là các mặt của cùng cấu trúc divisibility.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Modulo chỉ là remainder operator `%`.”** Không; mathematical modulo là equivalence relation/class structure.
+**“Modulo chỉ là remainder operator `%`.”** Không; mathematical modulo là equivalence quan hệ (relation / 관계)/lớp (class / 클래스) cấu trúc (structure / 구조).
 
 **“Có thể chia modulo như ordinary arithmetic.”** Chỉ khi divisor invertible.
 
@@ -597,4 +600,6 @@ Vậy square chỉ remainder 0 hoặc 1 modulo 4, không thể 2.
 
 **“Fermat theorem áp cho mọi `a,p`.”** Cần conditions.
 
-**“Modulo tự tạo hash distribution tốt.”** Không; upstream hashing và table design vẫn quyết định.
+**“Modulo tự tạo băm (hash / 해시) phân phối (distribution / 분포) tốt.”** Không; upstream hashing và bảng (table / 테이블) thiết kế (design / 설계) vẫn quyết định.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph theory](./00_graph_theory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

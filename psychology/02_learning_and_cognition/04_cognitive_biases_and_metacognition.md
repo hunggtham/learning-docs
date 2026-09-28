@@ -1,20 +1,23 @@
 # Thiên kiến nhận thức và siêu nhận thức
 
-**Thiên kiến nhận thức (cognitive bias)** không có nghĩa con người luôn phi lý. Nó mô tả một pattern sai lệch có hệ thống so với một benchmark như logic, probability, unbiased estimation hoặc long-term goal. Một heuristic có thể tạo bias trong laboratory task nhưng vẫn adaptive trong môi trường khác nếu nó giảm search cost hoặc phản ứng nhanh trước threat.
+> **Mạch đọc:** Đọc **Thiên kiến nhận thức và siêu nhận thức** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Heuristic: lối tắt có sự đánh đổi (trade-off / 트레이드오프)** sang **2. Confirmation độ lệch (bias / 편향)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-**Siêu nhận thức (metacognition)** là khả năng theo dõi và điều chỉnh chính quá trình nhận thức của mình: mình biết gì, không biết gì, confidence bao nhiêu, strategy nào đang hiệu quả và khi nào cần đổi strategy.
 
-> **Trạng thái bằng chứng:** con người có systematic biases và confidence có thể lệch khỏi objective performance là bằng chứng tương đối vững. Các computational/neural models giải thích confidence và metacognition là current theories; mechanism cụ thể vẫn đang active research.
+**Thiên kiến nhận thức (cognitive bias)** không có nghĩa con người luôn phi lý. Nó mô tả một mẫu (pattern / 패턴) sai lệch có hệ thống so với một benchmark như lô-gic (logic / 논리), xác suất (probability / 확률), unbiased estimation hoặc long-term goal. Một heuristic có thể tạo độ lệch (bias / 편향) trong laboratory tác vụ (task / 작업) nhưng vẫn adaptive trong môi trường khác nếu nó giảm tìm kiếm (search / 검색) chi phí (cost / 비용) hoặc phản ứng nhanh trước threat.
+
+**Siêu nhận thức (metacognition)** là khả năng theo dõi và điều chỉnh chính quá trình nhận thức của mình: mình biết gì, không biết gì, confidence bao nhiêu, chiến lược (strategy / 전략) nào đang hiệu quả và khi nào cần đổi chiến lược (strategy / 전략).
+
+> **Trạng thái bằng chứng:** con người có systematic biases và confidence có thể lệch khỏi mục tiêu (objective / 목표) hiệu năng (performance / 성능) là bằng chứng tương đối vững. Các computational/neural các mô hình (models / 모델들) giải thích confidence và metacognition là hiện tại (current / 현재) theories; cơ chế (mechanism / 메커니즘) cụ thể vẫn đang active research.
 
 Xem [[../EVIDENCE_STATUS_GUIDE]].
 
-## 1. Heuristic: lối tắt có trade-off
+## 1. Heuristic: lối tắt có sự đánh đổi (trade-off / 트레이드오프)
 
-**Heuristic** là strategy đơn giản hóa decision khi time, information hoặc computational resource bị giới hạn. Heuristic không tự động “xấu”.
+**Heuristic** là chiến lược (strategy / 전략) đơn giản hóa quyết định (decision / 결정) khi thời gian (time / 시간), thông tin (information / 정보) hoặc computational tài nguyên (resource / 자원) bị giới hạn. Heuristic không tự động “xấu”.
 
 Ví dụ, dùng familiarity để đoán “thứ này có lẽ đúng” thường hiệu quả trong môi trường nơi repeated exposure correlate với validity, nhưng trở nên nguy hiểm khi misinformation được lặp lại có chủ đích.
 
-Cách học bias hữu ích hơn memorizing hundreds of names là hỏi:
+Cách học độ lệch (bias / 편향) hữu ích hơn memorizing hundreds of names là hỏi:
 
 ```text
 Resource limit nào tồn tại?
@@ -23,77 +26,77 @@ Environment nào làm heuristic useful?
 Khi nào cue-target relation bị phá?
 ```
 
-## 2. Confirmation bias
+## 2. Confirmation độ lệch (bias / 편향)
 
-**Thiên kiến xác nhận (confirmation bias)** mô tả tendency tìm, ưu tiên hoặc diễn giải evidence theo belief hiện có.
+**Thiên kiến xác nhận (confirmation bias)** mô tả tendency tìm, ưu tiên hoặc diễn giải bằng chứng (evidence / 증거) theo belief hiện có.
 
-Một developer tin database là bottleneck có thể chỉ đọc slow-query log và bỏ qua network trace. Mechanism không chỉ là “muốn mình đúng”; current hypothesis làm supporting cues dễ được retrieve hơn và testing strategy có thể asymmetric.
+Một nhà phát triển (developer / 개발자) tin cơ sở dữ liệu (database / 데이터베이스) là bottleneck có thể chỉ đọc slow-query log và bỏ qua mạng (network / 네트워크) dấu vết (trace / 추적). cơ chế (mechanism / 메커니즘) không chỉ là “muốn mình đúng”; hiện tại (current / 현재) hypothesis làm supporting cues dễ được retrieve hơn và testing chiến lược (strategy / 전략) có thể asymmetric.
 
 Antidote tốt là **tư duy phản chứng (falsification mindset)**: hỏi observation nào nếu xuất hiện sẽ làm hypothesis yếu đi.
 
-## 3. Hindsight bias
+## 3. Hindsight độ lệch (bias / 편향)
 
-**Thiên kiến nhìn lại (hindsight bias)** làm outcome sau khi xảy ra trông predictable hơn mức nó thực sự từng có.
+**Thiên kiến nhìn lại (hindsight bias)** làm kết quả (outcome / 결과) sau khi xảy ra trông predictable hơn mức nó thực sự từng có.
 
-Trong incident postmortem, biết service đã crash khiến signal trước crash trông “obvious”, dẫn đến unfair blame. Decision log ghi prediction và uncertainty trước outcome giúp chống hindsight reconstruction.
+Trong sự cố (incident / 인시던트) postmortem, biết dịch vụ (service / 서비스) đã crash khiến tín hiệu (signal / 신호) trước crash trông “obvious”, dẫn đến unfair blame. quyết định (decision / 결정) log ghi prediction và bất định (uncertainty / 불확실성) trước kết quả (outcome / 결과) giúp chống hindsight reconstruction.
 
 ## 4. Availability heuristic
 
-**Heuristic sẵn có (availability heuristic)** dùng ease of retrieval như cue cho probability hoặc frequency.
+**Heuristic sẵn có (availability heuristic)** dùng ease of retrieval như cue cho xác suất (probability / 확률) hoặc frequency.
 
-Một dramatic plane accident dễ nhớ hơn ordinary car crash, khiến subjective risk lệch. Trong work, một production incident mới xảy ra có thể làm team overestimate probability của same failure và neglect less salient risks.
+Một dramatic plane accident dễ nhớ hơn ordinary car crash, khiến subjective rủi ro (risk / 위험) lệch. Trong công việc (work / 작업), một môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) mới xảy ra có thể làm nhóm (team / 팀) overestimate xác suất (probability / 확률) của same thất bại (failure / 실패) và neglect less salient risks.
 
 ## 5. Representativeness và base-rate neglect
 
-**Representativeness** dùng similarity với prototype để judge probability. Nếu description “rất logic, ít nói, thích debugging” giống stereotype developer, người ta có thể ignore base rate của occupations trong population.
+**Representativeness** dùng similarity với prototype để judge xác suất (probability / 확률). Nếu description “rất lô-gic (logic / 논리), ít nói, thích debugging” giống stereotype nhà phát triển (developer / 개발자), người ta có thể ignore cơ sở (base / 기반) tỷ lệ (rate / 비율) của occupations trong population.
 
-**Bỏ qua tần suất nền (base-rate neglect)** là fail to incorporate prior probability. Bayesian reasoning giúp formalize tại sao evidence strength phải được đọc cùng prior prevalence.
+**Bỏ qua tần suất nền (base-rate neglect)** là thất bại (fail / 실패) to incorporate prior xác suất (probability / 확률). Bayesian lập luận (reasoning / 추론) giúp formalize tại sao bằng chứng (evidence / 증거) strength phải được đọc cùng prior prevalence.
 
 Xem [[../00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 
 ## 6. Anchoring
 
-**Hiệu ứng neo (anchoring)** xảy ra khi initial number/value ảnh hưởng estimate sau đó, kể cả khi anchor arbitrary hoặc weakly relevant.
+**Hiệu ứng neo (anchoring)** xảy ra khi initial number/giá trị (value / 값) ảnh hưởng estimate sau đó, kể cả khi anchor arbitrary hoặc weakly relevant.
 
-Salary negotiation, property price và effort estimation đều có thể bị anchor. Debias không đơn giản là “biết anchor tồn tại”; cần independent estimate, reference class hoặc range trước khi exposure nếu possible.
+Salary negotiation, thuộc tính (property / 속성) price và effort estimation đều có thể bị anchor. Debias không đơn giản là “biết anchor tồn tại”; cần independent estimate, tham chiếu (reference / 참조) lớp (class / 클래스) hoặc phạm vi (range / 범위) trước khi exposure nếu possible.
 
-## 7. Framing effect
+## 7. Framing tác động (effect / 효과)
 
-Cùng outcome có thể tạo preference khác khi frame bằng gain hay loss. Framing không chứng minh con người “không rational” theo mọi definition; nó cho thấy representation của choice influence value construction.
+Cùng kết quả (outcome / 결과) có thể tạo preference khác khi frame bằng gain hay mất mát (loss / 손실). Framing không chứng minh con người “không rational” theo mọi definition; nó cho thấy biểu diễn (representation / 표현) của choice influence giá trị (value / 값) construction.
 
-Application phải thận trọng vì framing effect magnitude phụ thuộc domain, wording, stakes và population.
+Ứng dụng (application / 애플리케이션) phải thận trọng vì framing tác động (effect / 효과) magnitude phụ thuộc lĩnh vực (domain / 도메인), wording, stakes và population.
 
-## 8. Loss aversion và prospect theory
+## 8. mất mát (loss / 손실) aversion và prospect lý thuyết (theory / 이론)
 
-**Prospect theory** mô tả decision relative to reference point, diminishing sensitivity và loss aversion trong nhiều risky-choice settings.
+**Prospect lý thuyết (theory / 이론)** mô tả quyết định (decision / 결정) relative to tham chiếu (reference / 참조) điểm (point / 지점), diminishing sensitivity và mất mát (loss / 손실) aversion trong nhiều risky-choice settings.
 
-> **Trạng thái bằng chứng:** reference-dependent choice và nonlinear probability weighting có substantial empirical support; exact parameters và universality across domains/individuals là model-dependent, không phải fixed psychological constants.
+> **Trạng thái bằng chứng:** reference-dependent choice và nonlinear xác suất (probability / 확률) weighting có substantial empirical hỗ trợ (support / 지원); chính xác (exact / 정확한) parameters và universality across domains/individuals là model-dependent, không phải fixed psychological constants.
 
 Xem [[08_decision_under_risk_uncertainty_and_ambiguity]].
 
-## 9. Sunk cost
+## 9. Sunk chi phí (cost / 비용)
 
-**Hiệu ứng chi phí chìm (sunk-cost effect)** là tendency tiếp tục vì đã đầu tư trước đó dù future expected value không support tiếp tục.
+**Hiệu ứng chi phí chìm (sunk-cost effect)** là tendency tiếp tục vì đã đầu tư trước đó dù future expected giá trị (value / 값) không hỗ trợ (support / 지원) tiếp tục.
 
-Không phải mọi persistence sau investment là bias; past investment có thể chứa information về hidden benefit hoặc switching cost. Chỉ gọi sunk-cost bias khi past irrecoverable cost influence decision beyond relevant future consequences.
+Không phải mọi persistence sau investment là độ lệch (bias / 편향); past investment có thể chứa thông tin (information / 정보) về hidden benefit hoặc switching chi phí (cost / 비용). Chỉ gọi sunk-cost độ lệch (bias / 편향) khi past irrecoverable chi phí (cost / 비용) influence quyết định (decision / 결정) beyond relevant future consequences.
 
 ## 10. Overconfidence có nhiều dạng
 
 “Overconfidence” không phải một phenomenon duy nhất.
 
-- **Overestimation**: nghĩ performance mình cao hơn thực tế.
+- **Overestimation**: nghĩ hiệu năng (performance / 성능) mình cao hơn thực tế.
 - **Overplacement**: nghĩ mình tốt hơn others quá mức.
 - **Overprecision**: confidence interval quá hẹp.
 
-Tách các dạng này quan trọng vì mechanism và intervention khác nhau.
+Tách các dạng này quan trọng vì cơ chế (mechanism / 메커니즘) và intervention khác nhau.
 
 ## 11. Metacognitive monitoring
 
-**Metacognitive monitoring** đánh giá state hiện tại: “tôi có nhớ không?”, “confidence bao nhiêu?”, “tôi có hiểu explanation này không?”.
+**Metacognitive monitoring** đánh giá trạng thái (state / 상태) hiện tại: “tôi có nhớ không?”, “confidence bao nhiêu?”, “tôi có hiểu explanation này không?”.
 
 Research hiện đại thường đo **metacognitive sensitivity**: confidence có phân biệt correct vs incorrect trials tốt đến đâu. Một người có overall confidence thấp nhưng sensitivity tốt vẫn có insight; ngược lại, confidence cao không đồng nghĩa monitoring tốt.
 
-> **Current theory:** confidence được xem như inference từ evidence về task, uncertainty và self-model. Các computational models khác nhau tranh luận signal nào được dùng và ở stage nào.
+> **hiện tại (current / 현재) lý thuyết (theory / 이론):** confidence được xem như suy luận (inference / 추론) từ bằng chứng (evidence / 증거) về tác vụ (task / 작업), bất định (uncertainty / 불확실성) và self-model. Các computational các mô hình (models / 모델들) khác nhau tranh luận tín hiệu (signal / 신호) nào được dùng và ở stage nào.
 
 ## 12. Calibration
 
@@ -101,13 +104,13 @@ Research hiện đại thường đo **metacognitive sensitivity**: confidence c
 
 Nếu người học nói “90% chắc” cho 100 answers nhưng chỉ 60 đúng, confidence bị miscalibrated. Calibration useful trong medicine, investing, software estimates và eyewitness judgments.
 
-Calibration cần repeated feedback; một single decision không đủ để estimate stable metacognitive ability.
+Calibration cần repeated phản hồi (feedback / 피드백); một single quyết định (decision / 결정) không đủ để estimate stable metacognitive ability.
 
-## 13. Metacognitive control
+## 13. Metacognitive điều khiển (control / 제어)
 
-Monitoring chỉ có ích nếu dẫn tới **metacognitive control**: allocate study time, request help, verify source, switch strategy hoặc stop searching.
+Monitoring chỉ có ích nếu dẫn tới **metacognitive điều khiển (control / 제어)**: allocate study thời gian (time / 시간), yêu cầu (request / 요청) help, verify nguồn (source / 소스), switch chiến lược (strategy / 전략) hoặc stop searching.
 
-A common failure:
+A dùng chung (common / 공통) thất bại (failure / 실패):
 
 ```text
 Familiarity ↑
@@ -116,95 +119,95 @@ Familiarity ↑
 → Error persists
 ```
 
-Trong AI use, fluent output có thể tăng subjective confidence mà không tăng factual accuracy. Vì vậy workflow nên separate generation from verification.
+Trong AI use, fluent đầu ra (output / 출력) có thể tăng subjective confidence mà không tăng factual accuracy. Vì vậy workflow nên separate generation from xác minh (verification / 확인).
 
-## 14. Fluency và illusion of knowledge
+## 14. Fluency và illusion of kiến thức (knowledge / 지식)
 
-Information dễ đọc, repeated hoặc well-formatted thường feels more familiar. Processing fluency có thể influence truth judgment, liking và confidence.
+Thông tin (information / 정보) dễ đọc, repeated hoặc well-formatted thường feels more familiar. Processing fluency có thể influence truth judgment, liking và confidence.
 
-Fluency không luôn misleading; familiar information đôi khi thật sự reliable. Problem xảy ra khi environment manipulate fluency independently of truth.
+Fluency không luôn misleading; familiar thông tin (information / 정보) đôi khi thật sự reliable. bài toán (problem / 문제) xảy ra khi môi trường (environment / 환경) manipulate fluency independently of truth.
 
 Xem [[../06_applied/17_misinformation_belief_revision_and_inoculation]].
 
 ## 15. Dunning–Kruger: cần hiểu cẩn thận
 
-Popular version nói “người kém luôn nghĩ mình giỏi”. Evidence thực tế phức tạp hơn. Poor performers often misestimate, nhưng statistical artifacts, regression to mean, measurement reliability và reference information influence observed pattern.
+Popular phiên bản (version / 버전) nói “người kém luôn nghĩ mình giỏi”. bằng chứng (evidence / 증거) thực tế phức tạp hơn. Poor performers often misestimate, nhưng statistical artifacts, regression to mean, đo lường (measurement / 측정) độ tin cậy (reliability / 신뢰성) và tham chiếu (reference / 참조) thông tin (information / 정보) influence observed mẫu (pattern / 패턴).
 
-> **Trạng thái bằng chứng:** performance–self-assessment mismatch là real research topic; internet slogan “càng ngu càng tự tin” là overstatement và không nên dùng như diagnosis người khác.
+> **Trạng thái bằng chứng:** hiệu năng (performance / 성능)–self-assessment mismatch là real research topic; internet slogan “càng ngu càng tự tin” là overstatement và không nên dùng như diagnosis người khác.
 
-## 16. Bias blind spot
+## 16. độ lệch (bias / 편향) blind spot
 
-Con người dễ nhận bias ở others hơn ở mình. Awareness of bias names không tự tạo immunity; expert debiasing cần procedure, external check và feedback.
+Con người dễ nhận độ lệch (bias / 편향) ở others hơn ở mình. Awareness of độ lệch (bias / 편향) names không tự tạo immunity; expert debiasing cần procedure, bên ngoài (external / 외부) check và phản hồi (feedback / 피드백).
 
-Checklist hữu ích vì nó externalize control thay vì trông chờ introspection hoàn hảo.
+Checklist hữu ích vì nó externalize điều khiển (control / 제어) thay vì trông chờ introspection hoàn hảo.
 
 ## 17. Debiasing theo cơ chế
 
-Không có một “debiasing trick” sửa mọi bias. Strategy nên target source:
+Không có một “debiasing trick” sửa mọi độ lệch (bias / 편향). chiến lược (strategy / 전략) nên mục tiêu (target / 대상) nguồn (source / 소스):
 
-- confirmation bias → seek disconfirming evidence;
-- anchoring → independent estimate/reference class;
-- overconfidence → calibration feedback;
-- availability → base-rate data;
-- sunk cost → write future-only decision rule;
-- misinformation → source check + correction + alternative explanation.
+- confirmation độ lệch (bias / 편향) → seek disconfirming bằng chứng (evidence / 증거);
+- anchoring → independent estimate/tham chiếu (reference / 참조) lớp (class / 클래스);
+- overconfidence → calibration phản hồi (feedback / 피드백);
+- availability → base-rate dữ liệu (data / 데이터);
+- sunk chi phí (cost / 비용) → ghi (write / 쓰기) future-only quyết định (decision / 결정) quy tắc (rule / 규칙);
+- misinformation → nguồn (source / 소스) check + correction + alternative explanation.
 
-## 18. Decision hygiene
+## 18. quyết định (decision / 결정) hygiene
 
-**Decision hygiene** giảm noise và bias bằng process design:
+**quyết định (decision / 결정) hygiene** giảm noise và độ lệch (bias / 편향) bằng tiến trình (process / 프로세스) thiết kế (design / 설계):
 
 1. define criterion trước;
 2. collect independent estimates trước discussion;
-3. separate evidence from interpretation;
-4. log uncertainty;
-5. review outcome later;
-6. distinguish process quality from outcome luck.
+3. separate bằng chứng (evidence / 증거) from interpretation;
+4. log bất định (uncertainty / 불확실성);
+5. rà soát (review / 검토) kết quả (outcome / 결과) later;
+6. distinguish tiến trình (process / 프로세스) chất lượng (quality / 품질) from kết quả (outcome / 결과) luck.
 
-Một good decision có thể cho bad outcome vì uncertainty; một bad decision có thể lucky.
+Một good quyết định (decision / 결정) có thể cho bad kết quả (outcome / 결과) vì bất định (uncertainty / 불확실성); một bad quyết định (decision / 결정) có thể lucky.
 
-## 19. Metacognition và learning
+## 19. Metacognition và học tập (learning / 학습)
 
 Learners thường overvalue rereading vì fluency cao và undervalue retrieval vì retrieval feels difficult.
 
-**Desirable difficulty** không nghĩa “càng khó càng tốt”; difficulty chỉ valuable nếu nó activate mechanism relevant cho later performance.
+**Desirable difficulty** không nghĩa “càng khó càng tốt”; difficulty chỉ valuable nếu nó activate cơ chế (mechanism / 메커니즘) relevant cho later hiệu năng (performance / 성능).
 
-Calibration tốt cần delayed test, retrieval without notes và transfer task, không chỉ feeling immediately after study.
+Calibration tốt cần delayed kiểm thử (test / 테스트), retrieval without notes và transfer tác vụ (task / 작업), không chỉ feeling immediately after study.
 
 Xem [[09_learning_transfer_forgetting_and_durable_knowledge]].
 
 ## 20. Metacognition xã hội
 
-Confidence không chỉ ảnh hưởng self. Trong group, confident speaker có thể được weighted more even when accuracy không cao. Shared confidence can coordinate team nhưng cũng amplify error.
+Confidence không chỉ ảnh hưởng self. Trong group, confident speaker có thể được weighted more even when accuracy không cao. dùng chung (shared / 공유) confidence can coordinate nhóm (team / 팀) nhưng cũng amplify lỗi (error / 오류).
 
-Good team process nên hỏi both `who is confident?` và `whose confidence is calibrated in this domain?`.
+Good nhóm (team / 팀) tiến trình (process / 프로세스) nên hỏi both `who is confident?` và `whose confidence is calibrated in this domain?`.
 
 Xem [[../03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]].
 
 ## 21. Neuroscience của metacognition
 
-Neuroimaging và lesion studies tìm networks liên quan monitoring/confidence, thường gồm prefrontal và parietal regions tùy task.
+Neuroimaging và lesion studies tìm networks liên quan monitoring/confidence, thường gồm prefrontal và parietal regions tùy tác vụ (task / 작업).
 
-> **Trạng thái bằng chứng:** neural correlates có evidence, nhưng mapping “một region = metacognition” là oversimplification. Computation likely distributed và task-dependent.
+> **Trạng thái bằng chứng:** neural correlates có bằng chứng (evidence / 증거), nhưng ánh xạ (mapping / 매핑) “một region = metacognition” là oversimplification. Computation likely phân tán (distributed / 분산) và task-dependent.
 
-## 22. Common misconceptions
+## 22. dùng chung (common / 공통) misconceptions
 
-### “Biết tên bias giúp hết bias”
+### “Biết tên độ lệch (bias / 편향) giúp hết độ lệch (bias / 편향)”
 
-Không. Knowledge without procedure/feedback có limited effect.
+Không. kiến thức (knowledge / 지식) without procedure/phản hồi (feedback / 피드백) có limited tác động (effect / 효과).
 
-### “Bias nghĩa là irrational”
+### “độ lệch (bias / 편향) nghĩa là irrational”
 
-Không nhất thiết. Heuristic có thể ecologically rational trong environment phù hợp.
+Không nhất thiết. Heuristic có thể ecologically rational trong môi trường (environment / 환경) phù hợp.
 
 ### “Confidence cao nghĩa accuracy cao”
 
-Không universally. Relationship phụ thuộc calibration, domain và procedure.
+Không universally. Relationship phụ thuộc calibration, lĩnh vực (domain / 도메인) và procedure.
 
-### “Expert không bị bias”
+### “Expert không bị độ lệch (bias / 편향)”
 
-Expertise giảm một số errors nhưng tạo domain-specific blind spots và overgeneralization risk.
+Expertise giảm một số errors nhưng tạo domain-specific blind spots và overgeneralization rủi ro (risk / 위험).
 
-## 23. Mental model
+## 23. mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Evidence
@@ -218,8 +221,10 @@ Metacognitive control
 Verify / persist / stop / seek help
 ```
 
-Bias thường xuất hiện khi cue thuận tiện thay target thật; metacognition tốt là biết cue nào đáng trust và khi nào cần external correction.
+Độ lệch (bias / 편향) thường xuất hiện khi cue thuận tiện thay mục tiêu (target / 대상) thật; metacognition tốt là biết cue nào đáng trust và khi nào cần bên ngoài (external / 외부) correction.
 
 ## Kết nối kiến thức
 
 Đọc cùng [[02_thinking_language_and_decision]], [[08_decision_under_risk_uncertainty_and_ambiguity]], [[01_memory]], [[../06_applied/17_misinformation_belief_revision_and_inoculation]], [[../06_applied/18_financial_psychology_and_personal_decision_making]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 learning and conditioning](./00_learning_and_conditioning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

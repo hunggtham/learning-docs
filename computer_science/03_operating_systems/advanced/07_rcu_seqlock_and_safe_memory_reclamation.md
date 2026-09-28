@@ -1,12 +1,15 @@
-# RCU, seqlock và safe memory reclamation
+# RCU, seqlock và safe bộ nhớ (memory / 메모리) reclamation
 
-Đọc trước [Kernel execution contexts, synchronization và syscall path](./00_kernel_execution_contexts_and_syscall_path.md) để có mental model về process context, interrupt context, blocking, spinlock và object lifetime. Chapter này đi sâu vào một lớp bài toán riêng: **làm thế nào cho rất nhiều reader truy cập shared state với chi phí thấp mà writer vẫn có thể thay đổi hoặc thu hồi object an toàn**.
+> **Mạch đọc:** Đặt **RCU, seqlock và safe bộ nhớ (memory / 메모리) reclamation** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Mutual exclusion và thời gian tồn tại (lifetime / 수명) an toàn (safety / 안전) là hai bài toán khác nhau** sang **2. RCU là publication + grace period + deferred reclamation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Nếu chỉ nghĩ synchronization là “khóa trước khi đọc/ghi”, ta sẽ bỏ lỡ vấn đề khó hơn: một pointer có thể đã được reader lấy ra đúng lúc writer xóa object khỏi structure. Xóa khỏi index không đồng nghĩa object có thể được `free` ngay. Vì vậy invariant trung tâm của chapter là:
 
-> Một object chỉ được reclaim khi không còn execution context hợp lệ nào có thể dereference phiên bản cũ của nó.
+Đọc trước [Kernel execution contexts, synchronization và syscall path](./00_kernel_execution_contexts_and_syscall_path.md) để có mô hình tư duy (mental model / 사고 모델) về tiến trình (process / 프로세스) ngữ cảnh (context / 맥락), interrupt ngữ cảnh (context / 맥락), blocking, spinlock và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명). Chapter này đi sâu vào một lớp bài toán riêng: **làm thế nào cho rất nhiều reader truy cập trạng thái dùng chung (shared state / 공유 상태) với chi phí thấp mà writer vẫn có thể thay đổi hoặc thu hồi đối tượng (object / 객체) an toàn**.
 
-Mental model xuyên suốt:
+Nếu chỉ nghĩ synchronization là “khóa trước khi đọc/ghi”, ta sẽ bỏ lỡ vấn đề khó hơn: một pointer có thể đã được reader lấy ra đúng lúc writer xóa đối tượng (object / 객체) khỏi cấu trúc (structure / 구조). Xóa khỏi chỉ mục (index / 인덱스) không đồng nghĩa đối tượng (object / 객체) có thể được `free` ngay. Vì vậy bất biến (invariant / 불변식) trung tâm của chapter là:
+
+> Một đối tượng (object / 객체) chỉ được reclaim khi không còn thực thi (execution / 실행) ngữ cảnh (context / 맥락) hợp lệ nào có thể dereference phiên bản cũ của nó.
+
+Mô hình tư duy (mental model / 사고 모델) xuyên suốt:
 
 ```text
 publish
@@ -17,11 +20,11 @@ publish
 → physical memory can be reused
 ```
 
-## 1. Mutual exclusion và lifetime safety là hai bài toán khác nhau
+## 1. Mutual exclusion và thời gian tồn tại (lifetime / 수명) an toàn (safety / 안전) là hai bài toán khác nhau
 
-Mutex hoặc spinlock có thể bảo đảm hai writer không sửa cùng state đồng thời. Nhưng lock không tự động giải lifetime nếu reference sống lâu hơn critical section hoặc reader path cố ý không giữ writer lock.
+Mutex hoặc spinlock có thể bảo đảm hai writer không sửa cùng trạng thái (state / 상태) đồng thời. Nhưng khóa (lock / 잠금) không tự động giải thời gian tồn tại (lifetime / 수명) nếu tham chiếu (reference / 참조) sống lâu hơn trọng yếu (critical / 중요) section hoặc reader đường dẫn (path / 경로) cố ý không giữ writer khóa (lock / 잠금).
 
-Ví dụ một lookup trả về pointer `p`. Sau khi lookup hoàn tất, writer xóa `p` khỏi tree và `free(p)`. Nếu reader vẫn dùng `p`, correctness đã hỏng dù thao tác remove được bảo vệ bằng lock hoàn hảo.
+Ví dụ một lookup trả về pointer `p`. Sau khi lookup hoàn tất, writer xóa `p` khỏi cây (tree / 트리) và `free(p)`. Nếu reader vẫn dùng `p`, tính đúng đắn (correctness / 정확성) đã hỏng dù thao tác remove được bảo vệ bằng khóa (lock / 잠금) hoàn hảo.
 
 Do đó cần phân biệt:
 
@@ -31,13 +34,13 @@ state synchronization
 object lifetime management
 ```
 
-Nhiều kernel structure, runtime table, routing table và read-mostly registry tối ưu reader bằng cách tách hai vấn đề này.
+Nhiều kernel cấu trúc (structure / 구조), thời gian chạy (runtime / 런타임) bảng (table / 테이블), routing bảng (table / 테이블) và read-mostly registry tối ưu reader bằng cách tách hai vấn đề này.
 
 ## 2. RCU là publication + grace period + deferred reclamation
 
-Read-Copy-Update (RCU) là family technique trong đó reader thường không serialize với nhau. Writer chuẩn bị state mới, publish nó, rồi hoãn reclaim state cũ.
+Read-Copy-Update (RCU) là family technique trong đó reader thường không serialize với nhau. Writer chuẩn bị trạng thái (state / 상태) mới, publish nó, rồi hoãn reclaim trạng thái (state / 상태) cũ.
 
-Một update điển hình có dạng:
+Một cập nhật (update / 업데이트) điển hình có dạng:
 
 ```text
 old = current
@@ -48,21 +51,21 @@ wait_until_preexisting_readers_are_gone()
 reclaim(old)
 ```
 
-Từ “copy” không bắt buộc toàn bộ structure phải được clone. Nhiều implementation chỉ allocate node mới, relink một số pointer rồi retire node cũ. Bản chất là **reader có thể tiếp tục nhìn một version hợp lệ trong lúc writer tạo version kế tiếp**.
+Từ “bản sao (copy / 복사)” không bắt buộc toàn bộ cấu trúc (structure / 구조) phải được clone. Nhiều hiện thực (implementation / 구현) chỉ allocate nút (node / 노드) mới, relink một số pointer rồi retire nút (node / 노드) cũ. Bản chất là **reader có thể tiếp tục nhìn một phiên bản (version / 버전) hợp lệ trong lúc writer tạo phiên bản (version / 버전) kế tiếp**.
 
-## 3. Grace period là điều kiện logic, không phải timeout
+## 3. Grace period là điều kiện lô-gic (logic / 논리), không phải hết thời gian chờ (timeout / 타임아웃)
 
-Grace period không có nghĩa “đợi 10 ms cho chắc”. Nó chứng minh rằng mọi reader có khả năng giữ reference từ trước publication đã đi qua một trạng thái mà protocol coi là quiescent.
+Grace period không có nghĩa “đợi 10 ms cho chắc”. Nó chứng minh rằng mọi reader có khả năng giữ tham chiếu (reference / 참조) từ trước publication đã đi qua một trạng thái mà giao thức (protocol / 프로토콜) coi là quiescent.
 
-Tùy implementation, quiescent state có thể liên quan đến context switch, rời read-side critical section, user/kernel transition hoặc một epoch progression. Điều quan trọng là proof về lifetime, không phải số milliseconds.
+Tùy hiện thực (implementation / 구현), quiescent trạng thái (state / 상태) có thể liên quan đến ngữ cảnh (context / 맥락) switch, rời read-side trọng yếu (critical / 중요) section, người dùng (user / 사용자)/kernel chuyển tiếp (transition / 전이) hoặc một epoch progression. Điều quan trọng là proof về thời gian tồn tại (lifetime / 수명), không phải số milliseconds.
 
-Nếu một CPU hoặc task giữ read-side section quá lâu, writer có thể publish state mới thành công nhưng memory cũ chưa được thu hồi. Khi đó latency reader vẫn tốt nhưng reclamation backlog tăng. Pressure chuyển từ lock contention sang memory retention.
+Nếu một CPU hoặc tác vụ (task / 작업) giữ read-side section quá lâu, writer có thể publish trạng thái (state / 상태) mới thành công nhưng bộ nhớ (memory / 메모리) cũ chưa được thu hồi. Khi đó độ trễ (latency / 지연 시간) reader vẫn tốt nhưng reclamation backlog tăng. Pressure chuyển từ tranh chấp khóa (lock contention / 잠금 경합) sang bộ nhớ (memory / 메모리) retention.
 
-## 4. Publication đúng còn phụ thuộc memory ordering
+## 4. Publication đúng còn phụ thuộc bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)
 
-Writer không được publish pointer tới object mới trước khi fields của object được khởi tạo theo visibility contract. Nếu compiler hoặc CPU reordering làm reader thấy pointer mới nhưng state bên trong chưa visible đúng, RCU vẫn sai.
+Writer không được publish pointer tới đối tượng (object / 객체) mới trước khi fields của đối tượng (object / 객체) được khởi tạo theo visibility đặc tả hợp đồng (contract / 계약). Nếu trình biên dịch (compiler / 컴파일러) hoặc CPU reordering làm reader thấy pointer mới nhưng trạng thái (state / 상태) bên trong chưa visible đúng, RCU vẫn sai.
 
-Correctness path là:
+Tính đúng đắn (correctness / 정확성) đường dẫn (path / 경로) là:
 
 ```text
 initialize object
@@ -72,11 +75,11 @@ initialize object
 → object state becomes valid to observe
 ```
 
-Vì vậy RCU không “đứng trên” memory model. Nó dựa vào language/compiler primitive và ISA ordering. Đọc thêm [memory consistency, cache coherence và ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md) và [correctness path xuyên tầng](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md).
+Vì vậy RCU không “đứng trên” bộ nhớ (memory / 메모리) mô hình (model / 모델). Nó dựa vào ngôn ngữ (language / 언어)/trình biên dịch (compiler / 컴파일러) thành phần nguyên thủy (primitive / 기본 요소) và ISA thứ tự (ordering / 순서). Đọc thêm [memory consistency, cache coherence và ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md) và [correctness path xuyên tầng](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md).
 
-## 5. Writer không được nhầm logical removal với physical reclamation
+## 5. Writer không được nhầm logical removal với vật lý (physical / 물리적) reclamation
 
-Khi writer unlink node khỏi list/tree/hash table, node đã biến mất khỏi **future lookup** nhưng vẫn có thể được **past reader** giữ reference.
+Khi writer unlink nút (node / 노드) khỏi danh sách (list / 목록)/cây (tree / 트리)/bảng băm (hash table / 해시 테이블), nút (node / 노드) đã biến mất khỏi **future lookup** nhưng vẫn có thể được **past reader** giữ tham chiếu (reference / 참조).
 
 Ta có ba thời điểm khác nhau:
 
@@ -86,13 +89,13 @@ T2: object no longer reachable by new readers
 T3: object safe to reclaim
 ```
 
-`T2` và `T3` không giống nhau. Phần lớn bug use-after-free trong lock-free/read-mostly design xuất hiện khi implementation coi hai mốc này là một.
+`T2` và `T3` không giống nhau. Phần lớn bug use-after-free trong lock-free/read-mostly thiết kế (design / 설계) xuất hiện khi hiện thực (implementation / 구현) coi hai mốc này là một.
 
 ## 6. RCU callback biến reclaim thành asynchronous debt
 
-Thay vì writer chờ đồng bộ grace period, hệ thống có thể enqueue callback để reclaim sau. Điều này giảm latency của update foreground nhưng tạo một queue hậu cảnh.
+Thay vì writer chờ đồng bộ grace period, hệ thống có thể enqueue callback để reclaim sau. Điều này giảm độ trễ (latency / 지연 시간) của cập nhật (update / 업데이트) foreground nhưng tạo một hàng đợi (queue / 큐) hậu cảnh.
 
-Khi update rate tăng hoặc readers giữ critical section lâu, callback queue có thể phình ra:
+Khi cập nhật (update / 업데이트) tỷ lệ (rate / 비율) tăng hoặc readers giữ trọng yếu (critical / 중요) section lâu, callback hàng đợi (queue / 큐) có thể phình ra:
 
 ```text
 update rate ↑
@@ -102,13 +105,13 @@ update rate ↑
 → memory pressure / cache pressure ↑
 ```
 
-Đây là phase change quan trọng. Một design rất tốt ở read-heavy steady state có thể trở nên nguy hiểm trong update storm.
+Đây là phase thay đổi (change / 변경) quan trọng. Một thiết kế (design / 설계) rất tốt ở read-heavy steady trạng thái (state / 상태) có thể trở nên nguy hiểm trong cập nhật (update / 업데이트) storm.
 
 ## 7. Seqlock tối ưu một loại snapshot khác
 
-Sequence lock (seqlock) phù hợp khi state nhỏ, writer cập nhật tương đối nhanh và reader có thể retry.
+Chuỗi (sequence / 시퀀스) khóa (lock / 잠금) (seqlock) phù hợp khi trạng thái (state / 상태) nhỏ, writer cập nhật tương đối nhanh và reader có thể thử lại (retry / 재시도).
 
-Writer tăng sequence counter sang trạng thái “đang ghi”, cập nhật fields rồi publish sequence mới. Reader làm:
+Writer tăng chuỗi (sequence / 시퀀스) counter sang trạng thái “đang ghi”, cập nhật fields rồi publish chuỗi (sequence / 시퀀스) mới. Reader làm:
 
 ```text
 v1 = sequence
@@ -118,27 +121,27 @@ accept only if v1 == v2 and version means no writer overlap
 otherwise retry
 ```
 
-Invariant của seqlock không phải lifetime của object cũ mà là:
+Bất biến (invariant / 불변식) của seqlock không phải thời gian tồn tại (lifetime / 수명) của đối tượng (object / 객체) cũ mà là:
 
-> Reader chỉ chấp nhận snapshot nếu không có writer làm thay đổi state trong khoảng đọc.
+> Reader chỉ chấp nhận snapshot nếu không có writer làm thay đổi trạng thái (state / 상태) trong khoảng đọc.
 
-Seqlock tránh reader lock nhưng không bảo đảm reader hoàn tất nhanh khi writer liên tục. Write-heavy pressure có thể biến optimistic read thành retry storm.
+Seqlock tránh reader khóa (lock / 잠금) nhưng không bảo đảm reader hoàn tất nhanh khi writer liên tục. Write-heavy pressure có thể biến optimistic read thành thử lại (retry / 재시도) storm.
 
-## 8. Seqlock không phù hợp với pointer có lifetime phức tạp
+## 8. Seqlock không phù hợp với pointer có thời gian tồn tại (lifetime / 수명) phức tạp
 
-Nếu snapshot chứa pointer tới object mà writer có thể free, việc sequence validation sau cùng có thể quá muộn: reader có thể đã dereference memory invalid trong lúc copy.
+Nếu snapshot chứa pointer tới đối tượng (object / 객체) mà writer có thể free, việc chuỗi (sequence / 시퀀스) kiểm tra hợp lệ (validation / 검증) sau cùng có thể quá muộn: reader có thể đã dereference bộ nhớ (memory / 메모리) invalid trong lúc bản sao (copy / 복사).
 
-Vì vậy seqlock thường an toàn nhất với data có thể copy trực tiếp và lifetime ổn định trong protocol. Khi state chứa object graph phức tạp, cần kết hợp lifetime mechanism khác.
+Vì vậy seqlock thường an toàn nhất với dữ liệu (data / 데이터) có thể bản sao (copy / 복사) trực tiếp và thời gian tồn tại (lifetime / 수명) ổn định trong giao thức (protocol / 프로토콜). Khi trạng thái (state / 상태) chứa đối tượng (object / 객체) đồ thị (graph / 그래프) phức tạp, cần kết hợp thời gian tồn tại (lifetime / 수명) cơ chế (mechanism / 메커니즘) khác.
 
-Điều này cho thấy “lock-free reader” không phải một category đồng nhất. Cần hỏi chính xác invariant nào đang được bảo vệ.
+Điều này cho thấy “lock-free reader” không phải một category đồng nhất. Cần hỏi chính xác bất biến (invariant / 불변식) nào đang được bảo vệ.
 
-## 9. Epoch-based reclamation và hazard pointer giải cùng family problem bằng proof khác
+## 9. Epoch-based reclamation và hazard pointer giải cùng family bài toán (problem / 문제) bằng proof khác
 
-RCU không phải kỹ thuật duy nhất. **Epoch-based reclamation** cho reader tham gia epoch; object retired ở epoch cũ chỉ được reclaim sau khi tất cả participant có thể giữ reference cũ đã tiến qua epoch an toàn.
+RCU không phải kỹ thuật duy nhất. **Epoch-based reclamation** cho reader tham gia epoch; đối tượng (object / 객체) retired ở epoch cũ chỉ được reclaim sau khi tất cả participant có thể giữ tham chiếu (reference / 참조) cũ đã tiến qua epoch an toàn.
 
-**Hazard pointer** đi theo hướng khác: reader công bố pointer mà nó đang dùng; reclaimer không được free object còn xuất hiện trong hazard set.
+**Hazard pointer** đi theo hướng khác: reader công bố pointer mà nó đang dùng; reclaimer không được free đối tượng (object / 객체) còn xuất hiện trong hazard set.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 RCU / epoch:
@@ -148,27 +151,27 @@ hazard pointer:
 prove this object is not currently protected by any reader
 ```
 
-Mỗi cách có chi phí metadata, scanning, memory ordering và stall behavior khác nhau. Không có lựa chọn universal.
+Mỗi cách có chi phí siêu dữ liệu (metadata / 메타데이터), scanning, bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và stall hành vi (behavior / 동작) khác nhau. Không có lựa chọn universal.
 
-## 10. ABA cho thấy CAS success chưa chắc state “vẫn như cũ”
+## 10. ABA cho thấy CAS success chưa chắc trạng thái (state / 상태) “vẫn như cũ”
 
-Trong lock-free algorithm, thread có thể đọc pointer/value `A`, bị pause, trong lúc thread khác đổi `A → B → A`. Khi thread đầu dùng compare-and-swap, giá trị bề ngoài vẫn là `A` nên CAS có thể thành công dù object identity/lifetime đã thay đổi.
+Trong lock-free thuật toán (algorithm / 알고리즘), luồng thực thi (thread / 스레드) có thể đọc pointer/giá trị (value / 값) `A`, bị pause, trong lúc luồng thực thi (thread / 스레드) khác đổi `A → B → A`. Khi luồng thực thi (thread / 스레드) đầu dùng compare-and-swap, giá trị bề ngoài vẫn là `A` nên CAS có thể thành công dù đối tượng (object / 객체) định danh (identity / 식별자)/thời gian tồn tại (lifetime / 수명) đã thay đổi.
 
-Đó là ABA problem. Tag/version counter, hazard pointer, epoch reclamation hoặc object identity discipline có thể cần thiết tùy structure.
+Đó là ABA bài toán (problem / 문제). Tag/phiên bản (version / 버전) counter, hazard pointer, epoch reclamation hoặc đối tượng (object / 객체) định danh (identity / 식별자) discipline có thể cần thiết tùy cấu trúc (structure / 구조).
 
-Điểm cần nhớ: atomicity của một instruction không chứng minh semantic continuity của object.
+Điểm cần nhớ: atomicity của một instruction không chứng minh ngữ nghĩa (semantic / 의미적) continuity của đối tượng (object / 객체).
 
 ## 11. Preemption và scheduler có thể trở thành một phần của reclamation proof
 
-Nếu grace-period detection dựa vào quiescent states, một task bị preempt hoặc CPU không report progress có thể trì hoãn reclamation. Do đó scheduler behavior và RCU progress không hoàn toàn độc lập.
+Nếu grace-period detection dựa vào quiescent states, một tác vụ (task / 작업) bị preempt hoặc CPU không report progress có thể trì hoãn reclamation. Do đó scheduler hành vi (behavior / 동작) và RCU progress không hoàn toàn độc lập.
 
-Trong production, symptom có thể là memory tăng dù allocation rate business không tăng tương ứng. Nguyên nhân thực sự có thể là reader stall hoặc callback backlog, không phải “memory leak” theo nghĩa object bị mất reference vĩnh viễn.
+Trong môi trường vận hành (production / 운영 환경), symptom có thể là bộ nhớ (memory / 메모리) tăng dù allocation tỷ lệ (rate / 비율) nghiệp vụ (business / 비즈니스) không tăng tương ứng. Nguyên nhân thực sự có thể là reader stall hoặc callback backlog, không phải “bộ nhớ (memory / 메모리) leak” theo nghĩa đối tượng (object / 객체) bị mất tham chiếu (reference / 참조) vĩnh viễn.
 
-## 12. NUMA và cache coherence vẫn quyết định cost
+## 12. NUMA và bộ nhớ đệm (cache / 캐시) coherence vẫn quyết định chi phí (cost / 비용)
 
-Reader path nhẹ không có nghĩa miễn phí. Shared sequence counters, global epoch state hoặc callback metadata vẫn có cache-line traffic. Với nhiều sockets/NUMA nodes, location của shared metadata và frequency cập nhật có thể trở thành bottleneck.
+Reader đường dẫn (path / 경로) nhẹ không có nghĩa miễn phí. dùng chung (shared / 공유) chuỗi (sequence / 시퀀스) counters, toàn cục (global / 전역) epoch trạng thái (state / 상태) hoặc callback siêu dữ liệu (metadata / 메타데이터) vẫn có cache-line traffic. Với nhiều sockets/NUMA nodes, location của dùng chung (shared / 공유) siêu dữ liệu (metadata / 메타데이터) và frequency cập nhật có thể trở thành bottleneck.
 
-Một design scale tốt thường cố gắng:
+Một thiết kế (design / 설계) quy mô (scale / 규모) tốt thường cố gắng:
 
 ```text
 reader-local fast path
@@ -176,19 +179,19 @@ reader-local fast path
 + amortized reclamation work
 ```
 
-Nếu mọi read đều update một global cache line, ta đã vô tình tái tạo contention ở dạng khác.
+Nếu mọi read đều cập nhật (update / 업데이트) một toàn cục (global / 전역) bộ nhớ đệm (cache / 캐시) line, ta đã vô tình tái tạo contention ở dạng khác.
 
-## 13. Failure modes đặc trưng
+## 13. thất bại (failure / 실패) modes đặc trưng
 
-Use-after-free xuất hiện khi reclaim quá sớm. Memory retention xuất hiện khi grace period không hoàn tất hoặc reader quên exit protocol. Retry starvation xuất hiện với seqlock khi writer quá thường xuyên. ABA xuất hiện khi identity bị tái sử dụng mà version/protection không đủ. Publication bug xuất hiện khi memory ordering không đúng.
+Use-after-free xuất hiện khi reclaim quá sớm. bộ nhớ (memory / 메모리) retention xuất hiện khi grace period không hoàn tất hoặc reader quên exit giao thức (protocol / 프로토콜). thử lại (retry / 재시도) starvation xuất hiện với seqlock khi writer quá thường xuyên. ABA xuất hiện khi định danh (identity / 식별자) bị tái sử dụng mà phiên bản (version / 버전)/protection không đủ. Publication bug xuất hiện khi bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) không đúng.
 
-Đây là lý do cần mô tả failure theo invariant thay vì chỉ nhớ API.
+Đây là lý do cần mô tả thất bại (failure / 실패) theo bất biến (invariant / 불변식) thay vì chỉ nhớ API.
 
-## 14. Production evidence cần phân biệt contention với reclamation debt
+## 14. bằng chứng vận hành (production evidence / 운영 증거) cần phân biệt contention với reclamation debt
 
-Khi throughput giảm hoặc memory tăng, các tín hiệu hữu ích gồm reader critical-section duration, grace-period latency, số callback/retires pending, memory chưa reclaim, writer update rate, seqlock retry count, CPU spinning, cache-to-cache transfer, scheduler stall và NUMA locality.
+Khi thông lượng (throughput / 처리량) giảm hoặc bộ nhớ (memory / 메모리) tăng, các tín hiệu hữu ích gồm reader critical-section duration, grace-period độ trễ (latency / 지연 시간), số callback/retires pending, bộ nhớ (memory / 메모리) chưa reclaim, writer cập nhật (update / 업데이트) tỷ lệ (rate / 비율), seqlock thử lại (retry / 재시도) count, CPU spinning, cache-to-cache transfer, scheduler stall và NUMA locality.
 
-Một causal chain thường có dạng:
+Một chuỗi nhân quả (causal chain / 인과 사슬) thường có dạng:
 
 ```text
 reader stall
@@ -199,24 +202,26 @@ reader stall
 → latency application tăng
 ```
 
-Nếu chỉ nhìn heap/RSS cuối chain, dễ chẩn đoán sai thành allocator leak.
+Nếu chỉ nhìn vùng nhớ động (heap / 힙)/RSS cuối chuỗi (chain / 사슬), dễ chẩn đoán sai thành allocator leak.
 
-## 15. Worked example: read-mostly routing table
+## 15. Worked example: read-mostly routing bảng (table / 테이블)
 
-Giả sử dataplane lookup routing entry cho mỗi packet, trong khi control plane update route ít hơn nhiều. Nếu reader phải lấy global mutex cho mỗi lookup, throughput chịu lock/cache-line pressure.
+Giả sử dataplane lookup routing entry cho mỗi packet, trong khi điều khiển (control / 제어) plane cập nhật (update / 업데이트) tuyến (route / 경로) ít hơn nhiều. Nếu reader phải lấy toàn cục (global / 전역) mutex cho mỗi lookup, thông lượng (throughput / 처리량) chịu khóa (lock / 잠금)/cache-line pressure.
 
-Một versioned publication design cho phép writer tạo entry mới và atomically thay pointer. Packet đang dùng old entry vẫn hoàn tất; entry cũ chỉ reclaim sau khi read-side users cũ đã rời critical section.
+Một versioned publication thiết kế (design / 설계) cho phép writer tạo entry mới và atomically thay pointer. Packet đang dùng old entry vẫn hoàn tất; entry cũ chỉ reclaim sau khi read-side users cũ đã rời trọng yếu (critical / 중요) section.
 
-Khi route churn tăng đột biến, lợi ích reader vẫn còn nhưng retired-entry backlog có thể tăng. Đây là lúc production evidence phải đo cả update rate và grace/reclaim progress.
+Khi tuyến (route / 경로) churn tăng đột biến, lợi ích reader vẫn còn nhưng retired-entry backlog có thể tăng. Đây là lúc bằng chứng vận hành (production evidence / 운영 증거) phải đo cả cập nhật (update / 업데이트) tỷ lệ (rate / 비율) và grace/reclaim progress.
 
 ## 16. Khi nào không nên dùng RCU hoặc seqlock?
 
-Nếu workload write-heavy, invariant cần atomic update trên object graph lớn, reader không thể retry, hoặc team không đủ tooling để chứng minh lifetime/order correctness, mutex/RW-lock đơn giản có thể tốt hơn.
+Nếu tải công việc (workload / 워크로드) write-heavy, bất biến (invariant / 불변식) cần atomic cập nhật (update / 업데이트) trên đối tượng (object / 객체) đồ thị (graph / 그래프) lớn, reader không thể thử lại (retry / 재시도), hoặc nhóm (team / 팀) không đủ tooling để chứng minh thời gian tồn tại (lifetime / 수명)/thứ tự (order / 순서) tính đúng đắn (correctness / 정확성), mutex/RW-lock đơn giản có thể tốt hơn.
 
-Senior engineering không phải chọn primitive “nhanh nhất”; là chọn proof dễ duy trì nhất trong workload và failure model thực tế.
+Cấp cao (senior / 시니어) kỹ thuật (engineering / 엔지니어링) không phải chọn thành phần nguyên thủy (primitive / 기본 요소) “nhanh nhất”; là chọn proof dễ duy trì nhất trong tải công việc (workload / 워크로드) và thất bại (failure / 실패) mô hình (model / 모델) thực tế.
 
 ## 17. Kết nối sang các chapter khác
 
 RCU/seqlock nối trực tiếp với [kernel execution context](./00_kernel_execution_contexts_and_syscall_path.md), [scheduler](./01_scheduler_run_queues_fairness_and_latency.md), [memory ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md), [ownership và memory safety](../../04_programming_languages/advanced/02_ownership_borrowing_linear_types_and_memory_safety.md) và [whole-system debugging](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
 
-Điểm cuối cùng cần giữ là: **reader speed chỉ an toàn khi publication, ordering và reclamation cùng tạo thành một proof hoàn chỉnh về object lifetime.**
+Điểm cuối cùng cần giữ là: **reader speed chỉ an toàn khi publication, thứ tự (ordering / 순서) và reclamation cùng tạo thành một proof hoàn chỉnh về đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명).**
+
+> **Bàn giao:** Sau **17. Kết nối sang các chapter khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel execution contexts and syscall path](./00_kernel_execution_contexts_and_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược
 
+> **Mạch đọc:** Đặt **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ý tưởng chưa phải chiến lược** sang **2. Bắt đầu bằng giả thuyết**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một chiến lược đẹp trong kiểm thử quá khứ chưa đủ. Câu hỏi quan trọng hơn là: lợi thế có thật không, có tồn tại ngoài mẫu không, có còn dương sau chi phí không và nhiều chiến lược trong cùng danh mục có thật sự đa dạng hay chỉ lặp lại cùng một nhân tố? Nội dung giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn.
 
 # Phần I — Từ ý tưởng tới chiến lược có thể kiểm chứng
@@ -436,7 +439,7 @@ Can thiệp thủ công
 
 ## 54. Chất lượng quyết định và kết quả
 
-Một quyết định đúng quy trình vẫn có thể lỗ do bất định. Một quyết định tệ vẫn có thể lời do may mắn. Review phải tách hai thứ.
+Một quyết định đúng quy trình vẫn có thể lỗ do bất định. Một quyết định tệ vẫn có thể lời do may mắn. rà soát (review / 검토) phải tách hai thứ.
 
 # Phần XVIII — Đánh giá định kỳ
 
@@ -517,3 +520,5 @@ Lợi thế có đóng góp đa dạng hóa thật cho danh mục không?
 ```
 
 Chỉ khi cả ba câu trả lời đều đủ thuyết phục, chiến lược mới đáng được tăng vốn.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER TRADING FOREX RISK](./00_MASTER_TRADING_FOREX_RISK.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

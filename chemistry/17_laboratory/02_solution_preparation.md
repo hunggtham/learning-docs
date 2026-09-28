@@ -1,5 +1,8 @@
 # Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất
 
+> **Mạch đọc:** Đọc **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ thông số cần đạt** sang **Pha dung dịch mol từ chất rắn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chuẩn bị dung dịch không chỉ là “cân, hòa tan, thêm tới vạch”. Đây là một chuỗi gồm **hóa lượng + độ tinh khiết + chuyển định lượng + hiệu chuẩn thể tích + trộn + độ không đảm bảo**. Nếu một mắt xích sai, nồng độ cuối có thể bị lệch dù phép tính số học hoàn toàn đúng.
 
 ## Bắt đầu từ thông số cần đạt
@@ -167,15 +170,15 @@ Nguyên tắc chung là thêm acid từ từ vào nước, có khuấy và kiể
 
 Sau khi pha, cần để dung dịch trở về gần nhiệt độ hiệu chuẩn trước khi chỉnh thể tích cuối. Nếu chỉnh vạch khi dung dịch còn nóng, thể tích đang giãn nở và nồng độ sau khi nguội sẽ bị lệch.
 
-## Base mạnh và hấp thụ CO2
+## Cơ sở (base / 기반) mạnh và hấp thụ CO2
 
-Dung dịch base mạnh như NaOH hấp thụ `CO2` khí quyển:
+Dung dịch cơ sở (base / 기반) mạnh như NaOH hấp thụ `CO2` khí quyển:
 
 \[
 2OH^-+CO_2\rightarrow CO_3^{2-}+H_2O
 \]
 
-Điều đó làm nồng độ base hiệu dụng thay đổi.
+Điều đó làm nồng độ cơ sở (base / 기반) hiệu dụng thay đổi.
 
 Với chuẩn độ chính xác, dung dịch cần được chuẩn bị, lưu trữ phù hợp và chuẩn hóa định kỳ.
 
@@ -304,7 +307,7 @@ Phương pháp có thể bù biến thiên bơm mẫu hoặc ion hóa nếu nộ
 
 Sau khi chỉnh tới vạch, bình định mức phải được đảo/trộn đủ để dung dịch đồng nhất.
 
-Một gradient nồng độ vẫn có thể tồn tại nếu dung dịch stock đậm đặc nằm ở đáy.
+Một độ dốc (gradient / 기울기) nồng độ vẫn có thể tồn tại nếu dung dịch stock đậm đặc nằm ở đáy.
 
 “Đã tới vạch” không đồng nghĩa “đã đồng nhất”.
 
@@ -354,7 +357,7 @@ Hạn sử dụng nên dựa trên dữ liệu ổn định hoặc xác minh, kh
 
 Cần ghi lô thuốc thử, khối lượng thật đã cân, thông tin dụng cụ nếu quan trọng, phép tính, pH cuối và mọi sai lệch khỏi quy trình.
 
-Khả năng tái lập phụ thuộc metadata không kém kỹ thuật tay.
+Khả năng tái lập phụ thuộc siêu dữ liệu (metadata / 메타데이터) không kém kỹ thuật tay.
 
 ## Những hiểu lầm thường gặp
 
@@ -379,3 +382,5 @@ Chỉ gần đúng dưới các giả định về khối lượng riêng và qu
 Chuẩn bị dung dịch là **một đường ống cân bằng vật chất kết thúc ở trạng thái thể tích đã hiệu chuẩn**. Con số trên nhãn chỉ đáng tin khi danh tính, độ tinh khiết, chuyển định lượng, thể tích, trộn, độ bền và độ không đảm bảo đều được kiểm soát.
 
 Xem tiếp: [Phân tách và tinh sạch](./03_separation_and_purification.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lab safety](./00_lab_safety.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

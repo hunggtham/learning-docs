@@ -1,5 +1,8 @@
 # Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học
 
+> **Mạch đọc:** Đọc **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ensemble là gì?** sang **Ensemble vi chính tắc: hệ cô lập**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nhiệt động lực học mô tả hệ bằng các đại lượng vĩ mô như nhiệt độ, áp suất, thể tích và entropy. Cơ học thống kê đặt câu hỏi sâu hơn: **những đại lượng vĩ mô đó xuất hiện như thế nào từ một số lượng khổng lồ trạng thái vi mô?**
 
 Với một hệ chứa cỡ `10^{23}` hạt, theo dõi chính xác vị trí và động lượng của từng hạt gần như không khả thi và cũng không cần thiết. Ta thay câu hỏi “trạng thái vi mô chính xác là gì?” bằng “phân bố xác suất nào trên các trạng thái vi mô phù hợp với những ràng buộc vĩ mô mà ta biết?”.
@@ -333,7 +336,7 @@ Do đó thăng giáng tương đối giảm gần
 
 Đây là một lý do các đại lượng vĩ mô của hệ có `10^{23}` hạt rất ổn định dù chuyển động vi mô liên tục hỗn loạn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Cơ học thống kê không cố dự đoán quỹ đạo của từng hạt. Nó tổ chức không gian các trạng thái vi mô bằng xác suất, rồi dùng ràng buộc vĩ mô để xác định phân bố phù hợp.
 
@@ -353,8 +356,10 @@ Câu này chỉ đúng trong một số hệ đơn giản. Định nghĩa tổng
 
 Nó còn sinh ra năng lượng tự do, năng lượng trung bình, entropy, nhiệt dung và nhiều đại lượng đáp ứng thông qua đạo hàm của `\ln Z`.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Entropy và cơ học thống kê](01_entropy_statistical_mechanics.md), [Nhiệt động lực học](00_thermodynamics.md).
 
 **Liên hệ tiếp:** [Hạt đồng nhất và thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md), [Vận chuyển trong chất rắn](../10_condensed_matter_devices/02_transport_magnetism_superconductivity.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

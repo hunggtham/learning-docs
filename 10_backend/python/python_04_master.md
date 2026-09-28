@@ -1,29 +1,32 @@
-# Python Part 4 — Master: Runtime internals, performance, architecture và modern/legacy evolution
+# Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution
+
+> **Mạch đọc:** Đặt **Python Part 4 — Master: thời gian chạy (runtime / 런타임) internals, hiệu năng (performance / 성능), kiến trúc (architecture / 아키텍처) và hiện đại (modern / 현대적)/legacy evolution** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. ngôn ngữ (language / 언어) Python khác hiện thực (implementation / 구현) CPython** sang **2. Compile đơn vị (unit / 단위), mã (code / 코드) đối tượng (object / 객체) và bytecode**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 > Baseline: Python 3.14.7. Kiểm chứng: 2026-09-22.
 
-Master ở đây không có nghĩa ghi nhớ mọi API. Mục tiêu là có mental model đủ sâu để đọc behavior lạ, điều tra production issue, review design và phân biệt đâu là language guarantee, đâu là CPython implementation detail, đâu là artifact của version cũ. Ở level này, một câu hỏi tốt thường không còn là “API nào làm việc này?”, mà là “invariant nào đang được giữ, runtime duy trì invariant đó bằng cơ chế nào, và cơ chế ấy thất bại ở boundary nào?”.
+Master ở đây không có nghĩa ghi nhớ mọi API. Mục tiêu là có mô hình tư duy (mental model / 사고 모델) đủ sâu để đọc hành vi (behavior / 동작) lạ, điều tra môi trường vận hành (production / 운영 환경) issue, rà soát (review / 검토) thiết kế (design / 설계) và phân biệt đâu là ngôn ngữ (language / 언어) guarantee, đâu là CPython hiện thực (implementation / 구현) detail, đâu là sản phẩm tạo ra (artifact / 산출물) của phiên bản (version / 버전) cũ. Ở mức (level / 수준) này, một câu hỏi tốt thường không còn là “API nào làm việc này?”, mà là “bất biến (invariant / 불변식) nào đang được giữ, thời gian chạy (runtime / 런타임) duy trì bất biến (invariant / 불변식) đó bằng cơ chế nào, và cơ chế ấy thất bại ở ranh giới (boundary / 경계) nào?”.
 
-## 1. Language Python khác implementation CPython
+## 1. ngôn ngữ (language / 언어) Python khác hiện thực (implementation / 구현) CPython
 
 `đặc tả ngôn ngữ (language specification / 언어 명세)`
 
 `hiện thực (implementation / 구현)`
 
-Python Language Reference mô tả semantics của ngôn ngữ. CPython là implementation chuẩn phổ biến, nhưng không phải mọi chi tiết CPython đều là guarantee của Python nói chung. Ví dụ, reference counting và chuyện object thường được thu hồi sớm khi refcount về zero là đặc trưng CPython quan trọng; application portable không nên dùng nó thay resource management explicit.
+Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) mô tả ngữ nghĩa (semantics / 의미론) của ngôn ngữ. CPython là hiện thực (implementation / 구현) chuẩn phổ biến, nhưng không phải mọi chi tiết CPython đều là guarantee của Python nói chung. Ví dụ, tham chiếu (reference / 참조) counting và chuyện đối tượng (object / 객체) thường được thu hồi sớm khi refcount về zero là đặc trưng CPython quan trọng; ứng dụng (application / 애플리케이션) portable không nên dùng nó thay tài nguyên (resource / 자원) management tường minh (explicit / 명시적).
 
-Khi đọc một behavior, hãy tách bốn tầng:
+Khi đọc một hành vi (behavior / 동작), hãy tách bốn tầng:
 
-1. Language reference có guarantee không?
-2. Standard-library API có contract không?
-3. Nếu không, đây có phải CPython implementation detail?
-4. Version, platform và build nào đang chạy?
+1. ngôn ngữ (language / 언어) tham chiếu (reference / 참조) có guarantee không?
+2. Standard-library API có đặc tả hợp đồng (contract / 계약) không?
+3. Nếu không, đây có phải CPython hiện thực (implementation / 구현) detail?
+4. phiên bản (version / 버전), nền tảng (platform / 플랫폼) và bản dựng (build / 빌드) nào đang chạy?
 
-Cách phân lớp này ngăn việc biến observation trên laptop thành “quy tắc Python”. Nó cũng giúp đọc performance claim chính xác hơn. Ví dụ “dictionary lookup O(1) average” là abstraction thuật toán; exact memory layout, hash implementation và cache behavior lại thuộc implementation/version.
+Cách phân lớp này ngăn việc biến observation trên laptop thành “quy tắc Python”. Nó cũng giúp đọc hiệu năng (performance / 성능) claim chính xác hơn. Ví dụ “dictionary lookup O(1) average” là lớp trừu tượng (abstraction / 추상화) thuật toán; chính xác (exact / 정확한) bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃), băm (hash / 해시) hiện thực (implementation / 구현) và bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) lại thuộc hiện thực (implementation / 구현)/phiên bản (version / 버전).
 
-## 2. Compile unit, code object và bytecode
+## 2. Compile đơn vị (unit / 단위), mã (code / 코드) đối tượng (object / 객체) và bytecode
 
-Source module/function được compile thành code object chứa bytecode/instruction metadata, constants, names và information phục vụ runtime. Có thể inspect bằng `dis`:
+Nguồn (source / 소스) mô-đun (module / 모듈)/hàm (function / 함수) được compile thành mã (code / 코드) đối tượng (object / 객체) chứa bytecode/instruction siêu dữ liệu (metadata / 메타데이터), constants, names và thông tin (information / 정보) phục vụ thời gian chạy (runtime / 런타임). Có thể inspect bằng `dis`:
 
 ```python
 import dis
@@ -36,31 +39,31 @@ def add(a, b):
 dis.dis(add)
 ```
 
-Bytecode là implementation surface có thể đổi giữa minor releases; đừng build business logic phụ thuộc exact opcode. Nó hữu ích để hiểu cost model, compiler optimization hoặc debug tooling.
+Bytecode là hiện thực (implementation / 구현) surface có thể đổi giữa minor releases; đừng bản dựng (build / 빌드) lô-gic nghiệp vụ (business logic / 비즈니스 로직) phụ thuộc chính xác (exact / 정확한) opcode. Nó hữu ích để hiểu chi phí (cost / 비용) mô hình (model / 모델), trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화) hoặc gỡ lỗi (debug / 디버그) tooling.
 
-Modern CPython có specializing adaptive interpreter: runtime có thể specialize execution dựa trên observed types/operations. Điều đó có hai hệ quả. Thứ nhất, “một biểu thức Python luôn tốn N bytecodes” không còn là cost model hữu ích. Thứ hai, microbenchmark quá ngắn có thể đo cả warmup/specialization thay vì steady-state behavior.
+Hiện đại (modern / 현대적) CPython có specializing adaptive trình thông dịch (interpreter / 인터프리터): thời gian chạy (runtime / 런타임) có thể specialize thực thi (execution / 실행) dựa trên observed types/operations. Điều đó có hai hệ quả. Thứ nhất, “một biểu thức Python luôn tốn N bytecodes” không còn là chi phí (cost / 비용) mô hình (model / 모델) hữu ích. Thứ hai, microbenchmark quá ngắn có thể đo cả warmup/specialization thay vì steady-state hành vi (behavior / 동작).
 
-Python 3.14 còn có optional tail-call interpreter build configuration trong CPython. Tên này không đồng nghĩa Python function tail-call optimization; nó là interpreter implementation detail.
+Python 3.14 còn có optional tail-call trình thông dịch (interpreter / 인터프리터) bản dựng (build / 빌드) cấu hình (configuration / 구성) trong CPython. Tên này không đồng nghĩa Python hàm (function / 함수) tail-call tối ưu hóa (optimization / 최적화); nó là trình thông dịch (interpreter / 인터프리터) hiện thực (implementation / 구현) detail.
 
-## 3. Frame, call stack và traceback
+## 3. Frame, ngăn xếp lời gọi (call stack / 호출 스택) và traceback
 
-Mỗi active Python call liên quan execution frame chứa local/global references, instruction state và runtime stack state. Traceback nối frames tại failure path.
+Mỗi active Python lời gọi (call / 호출) liên quan thực thi (execution / 실행) frame chứa cục bộ (local / 로컬)/toàn cục (global / 전역) references, instruction trạng thái (state / 상태) và thời gian chạy (runtime / 런타임) ngăn xếp (stack / 스택) trạng thái (state / 상태). Traceback nối frames tại thất bại (failure / 실패) đường dẫn (path / 경로).
 
-Frame introspection (`inspect`, `sys._getframe`) rất mạnh cho debugger/framework nhưng tạo coupling với runtime và có thể giữ object graph sống lâu hơn nếu references tới frame/traceback được giữ. Một exception object giữ traceback có thể gián tiếp giữ locals, request object, large buffer hoặc secret lâu hơn dự kiến. Vì vậy diagnostic tooling phải có ownership rõ và release references khi chúng hết giá trị.
+Frame introspection (`inspect`, `sys._getframe`) rất mạnh cho debugger/khung phần mềm (framework / 프레임워크) nhưng tạo coupling với thời gian chạy (runtime / 런타임) và có thể giữ đối tượng (object / 객체) đồ thị (graph / 그래프) sống lâu hơn nếu references tới frame/traceback được giữ. Một exception đối tượng (object / 객체) giữ traceback có thể gián tiếp giữ locals, yêu cầu (request / 요청) đối tượng (object / 객체), large buffer hoặc secret lâu hơn dự kiến. Vì vậy diagnostic tooling phải có quyền sở hữu (ownership / 소유권) rõ và bản phát hành (release / 릴리스) references khi chúng hết giá trị.
 
-Exception chaining giữ causality qua `__cause__`/`__context__`. Khi wrap exception, `raise NewError(...) from exc` giúp operator nhìn thấy cả domain context lẫn root cause. Nếu cố tình che implementation detail bằng `raise ... from None`, hãy chắc rằng observability layer khác vẫn giữ evidence cần thiết; hiding chain để message “đẹp” có thể làm incident khó điều tra.
+Exception chaining giữ causality qua `__cause__`/`__context__`. Khi wrap exception, `raise NewError(...) from exc` giúp operator nhìn thấy cả lĩnh vực (domain / 도메인) ngữ cảnh (context / 맥락) lẫn nguyên nhân gốc (root cause / 근본 원인). Nếu cố tình che hiện thực (implementation / 구현) detail bằng `raise ... from None`, hãy chắc rằng khả năng quan sát (observability / 관측 가능성) tầng (layer / 계층) khác vẫn giữ bằng chứng (evidence / 증거) cần thiết; hiding chuỗi (chain / 사슬) để message “đẹp” có thể làm sự cố (incident / 인시던트) khó điều tra.
 
-## 4. Namespace, descriptor và attribute lookup
+## 4. không gian tên (namespace / 네임스페이스), descriptor và attribute lookup
 
-Attribute access `obj.x` không chỉ là lookup trong `obj.__dict__`. Data model có descriptor protocol, class MRO và `__getattribute__`/`__getattr__` hooks.
+Attribute truy cập (access / 접근) `obj.x` không chỉ là lookup trong `obj.__dict__`. mô hình dữ liệu (data model / 데이터 모델) có descriptor giao thức (protocol / 프로토콜), lớp (class / 클래스) MRO và `__getattribute__`/`__getattr__` hooks.
 
 `bộ mô tả (descriptor / 디스크립터)`
 
-Descriptor là object định nghĩa `__get__`, `__set__` hoặc `__delete__`. Function trên class là descriptor, nhờ đó `instance.method` trở thành bound method. `property`, `classmethod`, `staticmethod`, cached attributes, ORM field và framework attribute đều dựa trên cùng nền tảng này.
+Descriptor là đối tượng (object / 객체) định nghĩa `__get__`, `__set__` hoặc `__delete__`. hàm (function / 함수) trên lớp (class / 클래스) là descriptor, nhờ đó `instance.method` trở thành bound phương thức (method / 메서드). `property`, `classmethod`, `staticmethod`, cached attributes, ORM trường dữ liệu (field / 필드) và khung phần mềm (framework / 프레임워크) attribute đều dựa trên cùng nền tảng này.
 
 ### Lookup precedence: tại sao cùng tên nhưng kết quả khác nhau?
 
-Với instance lookup thông thường, mental model hữu ích là:
+Với instance lookup thông thường, mô hình tư duy (mental model / 사고 모델) hữu ích là:
 
 ```text
 1. data descriptor trên class/MRO
@@ -72,7 +75,7 @@ Với instance lookup thông thường, mental model hữu ích là:
 
 `data descriptor` là descriptor có `__set__` hoặc `__delete__`; nó ưu tiên hơn instance dictionary. Descriptor chỉ có `__get__` là `non-data descriptor`, nên instance attribute cùng tên có thể shadow nó.
 
-`property` thường là data descriptor, vì vậy assignment trực tiếp vào `obj.__dict__["name"]` không nhất thiết override property access. Ngược lại, function là non-data descriptor; truy cập function qua instance kích hoạt `__get__` để tạo bound method.
+`property` thường là dữ liệu (data / 데이터) descriptor, vì vậy assignment trực tiếp vào `obj.__dict__["name"]` không nhất thiết override thuộc tính (property / 속성) truy cập (access / 접근). Ngược lại, hàm (function / 함수) là non-data descriptor; truy cập hàm (function / 함수) qua instance kích hoạt `__get__` để tạo bound phương thức (method / 메서드).
 
 ```python
 class Account:
@@ -87,21 +90,21 @@ assert method.__self__ is account
 assert method.__func__ is Account.deposit
 ```
 
-`account.deposit(10)` về mental model gần với `Account.deposit(account, 10)`, nhưng binding được descriptor machinery thực hiện, không phải parser chèn `self` bằng mẹo đặc biệt.
+`account.deposit(10)` về mô hình tư duy (mental model / 사고 모델) gần với `Account.deposit(account, 10)`, nhưng binding được descriptor machinery thực hiện, không phải parser chèn `self` bằng mẹo đặc biệt.
 
-### Descriptor có thể biến cache thành vấn đề correctness
+### Descriptor có thể biến bộ nhớ đệm (cache / 캐시) thành vấn đề tính đúng đắn (correctness / 정확성)
 
-Một pattern phổ biến là non-data descriptor hoặc `cached_property` tính value lần đầu rồi lưu vào instance dictionary để lần sau lookup đi thẳng tới cached value. Cơ chế này nhanh vì precedence cho phép instance value shadow non-data descriptor, nhưng ngay lập tức tạo một invariant mới: cached value còn đúng đến khi nào?
+Một mẫu (pattern / 패턴) phổ biến là non-data descriptor hoặc `cached_property` tính giá trị (value / 값) lần đầu rồi lưu vào instance dictionary để lần sau lookup đi thẳng tới cached giá trị (value / 값). Cơ chế này nhanh vì precedence cho phép instance giá trị (value / 값) shadow non-data descriptor, nhưng ngay lập tức tạo một bất biến (invariant / 불변식) mới: cached giá trị (value / 값) còn đúng đến khi nào?
 
-Nếu cached value phụ thuộc `self.config`, `self.locale` hoặc mutable child state, invalidation phải đi cùng mutation path. Nếu không, bug không nằm ở descriptor protocol mà ở contract freshness. Một cached attribute không phải “optimization thuần túy”; nó tạo retained state và consistency obligation giống cache ở Part 3.
+Nếu cached giá trị (value / 값) phụ thuộc `self.config`, `self.locale` hoặc mutable child trạng thái (state / 상태), vô hiệu hóa (invalidation / 무효화) phải đi cùng mutation đường dẫn (path / 경로). Nếu không, bug không nằm ở descriptor giao thức (protocol / 프로토콜) mà ở đặc tả hợp đồng (contract / 계약) freshness. Một cached attribute không phải “tối ưu hóa (optimization / 최적화) thuần túy”; nó tạo retained trạng thái (state / 상태) và consistency obligation giống bộ nhớ đệm (cache / 캐시) ở Part 3.
 
-Khi debug một attribute “không cập nhật”, hãy hỏi ba câu: descriptor có data hay non-data? value hiện nằm ở class hay instance dictionary? dependency nào thay đổi nhưng cache không bị invalidate?
+Khi gỡ lỗi (debug / 디버그) một attribute “không cập nhật”, hãy hỏi ba câu: descriptor có dữ liệu (data / 데이터) hay non-data? giá trị (value / 값) hiện nằm ở lớp (class / 클래스) hay instance dictionary? phụ thuộc (dependency / 의존성) nào thay đổi nhưng bộ nhớ đệm (cache / 캐시) không bị invalidate?
 
 ### `__getattribute__` và `__getattr__` không giống nhau
 
-`__getattribute__` tham gia mọi normal attribute access. Nếu override nó và bên trong lại viết `self.name` một cách không kiểm soát, code rất dễ recursion vô hạn. Khi cần delegate behavior mặc định, thường gọi `object.__getattribute__(self, name)` hoặc `super().__getattribute__(name)` theo thiết kế class.
+`__getattribute__` tham gia mọi normal attribute truy cập (access / 접근). Nếu override nó và bên trong lại viết `self.name` một cách không kiểm soát, mã (code / 코드) rất dễ recursion vô hạn. Khi cần delegate hành vi (behavior / 동작) mặc định, thường gọi `object.__getattribute__(self, name)` hoặc `super().__getattribute__(name)` theo thiết kế lớp (class / 클래스).
 
-`__getattr__` chỉ là fallback khi normal lookup kết thúc bằng `AttributeError`. Nó phù hợp cho lazy/dynamic attributes hơn là intercept toàn bộ access.
+`__getattr__` chỉ là fallback khi normal lookup kết thúc bằng `AttributeError`. Nó phù hợp cho lazy/động (dynamic / 동적) attributes hơn là intercept toàn bộ truy cập (access / 접근).
 
 ```python
 class Config:
@@ -115,13 +118,13 @@ class Config:
             raise AttributeError(name) from exc
 ```
 
-Một pitfall framework/proxy là catch `AttributeError` quá rộng bên trong property/descriptor rồi vô tình làm runtime tưởng attribute không tồn tại và chạy `__getattr__`. Vì vậy khi debug “fallback chạy dù property có thật”, hãy nhìn exception origin, không chỉ tên field.
+Một pitfall khung phần mềm (framework / 프레임워크)/proxy là catch `AttributeError` quá rộng bên trong thuộc tính (property / 속성)/descriptor rồi vô tình làm thời gian chạy (runtime / 런타임) tưởng attribute không tồn tại và chạy `__getattr__`. Vì vậy khi gỡ lỗi (debug / 디버그) “fallback chạy dù thuộc tính (property / 속성) có thật”, hãy nhìn exception origin, không chỉ tên trường dữ liệu (field / 필드).
 
-Một pitfall khác là proxy `__getattribute__` forward mọi thứ sang target, kể cả internal attributes của proxy. Proxy tốt phải định nghĩa boundary rõ giữa state của proxy và state được forward; nếu không `__class__`, debug metadata, pickling hoặc introspection có thể cho behavior bất ngờ.
+Một pitfall khác là proxy `__getattribute__` forward mọi thứ sang mục tiêu (target / 대상), kể cả nội bộ (internal / 내부) attributes của proxy. Proxy tốt phải định nghĩa ranh giới (boundary / 경계) rõ giữa trạng thái (state / 상태) của proxy và trạng thái (state / 상태) được forward; nếu không `__class__`, gỡ lỗi (debug / 디버그) siêu dữ liệu (metadata / 메타데이터), pickling hoặc introspection có thể cho hành vi (behavior / 동작) bất ngờ.
 
 ### `__set_name__` và descriptor biết tên của mình
 
-Khi class được tạo, descriptor có `__set_name__()` có thể nhận owner class và attribute name. Đây là mechanism mà validator/ORM-style field có thể tự biết nó được gắn vào field nào mà không lặp string thủ công.
+Khi lớp (class / 클래스) được tạo, descriptor có `__set_name__()` có thể nhận đơn vị sở hữu (owner / 오너) lớp (class / 클래스) và attribute name. Đây là cơ chế (mechanism / 메커니즘) mà validator/ORM-style trường dữ liệu (field / 필드) có thể tự biết nó được gắn vào trường dữ liệu (field / 필드) nào mà không lặp string thủ công.
 
 ```python
 class Positive:
@@ -139,28 +142,28 @@ class Positive:
         setattr(obj, self.storage_name, value)
 ```
 
-Nếu descriptor được gắn vào class sau khi class đã tạo, `__set_name__()` không tự được gọi. Đây là edge case quan trọng với dynamic framework/metaprogramming: assignment `A.x = descriptor` không hoàn toàn tương đương khai báo `x = descriptor` trong class body.
+Nếu descriptor được gắn vào lớp (class / 클래스) sau khi lớp (class / 클래스) đã tạo, `__set_name__()` không tự được gọi. Đây là trường hợp biên (edge case / 경계 사례) quan trọng với động (dynamic / 동적) khung phần mềm (framework / 프레임워크)/metaprogramming: assignment `A.x = descriptor` không hoàn toàn tương đương khai báo `x = descriptor` trong lớp (class / 클래스) body.
 
-Descriptor mạnh vì nó đưa policy vào lookup protocol, nhưng cái giá là control flow bớt hiển nhiên. Nếu logic chỉ dùng ở một field đơn giản, `property` thường dễ đọc hơn. Descriptor đáng dùng khi cùng mechanism cần tái sử dụng cho nhiều attributes/classes.
+Descriptor mạnh vì nó đưa chính sách (policy / 정책) vào lookup giao thức (protocol / 프로토콜), nhưng cái giá là điều khiển (control / 제어) luồng (flow / 흐름) bớt hiển nhiên. Nếu lô-gic (logic / 논리) chỉ dùng ở một trường dữ liệu (field / 필드) đơn giản, `property` thường dễ đọc hơn. Descriptor đáng dùng khi cùng cơ chế (mechanism / 메커니즘) cần tái sử dụng cho nhiều attributes/classes.
 
 ### `__slots__`
 
-`__slots__` có thể thay cách instance lưu attributes và giảm memory khi có rất nhiều objects. Nhưng optimization này đi kèm constraints về dynamic attributes, inheritance, weak references và tooling. Hãy đo memory/profile trước. Với 100 objects, complexity có thể không đáng; với hàng triệu nodes, nó có thể đáng kể.
+`__slots__` có thể thay cách instance lưu attributes và giảm bộ nhớ (memory / 메모리) khi có rất nhiều objects. Nhưng tối ưu hóa (optimization / 최적화) này đi kèm các ràng buộc (constraints / 제약조건들) về động (dynamic / 동적) attributes, inheritance, weak references và tooling. Hãy đo bộ nhớ (memory / 메모리)/profile trước. Với 100 objects, độ phức tạp (complexity / 복잡도) có thể không đáng; với hàng triệu nodes, nó có thể đáng kể.
 
-`__slots__` cũng không tự làm object immutable hoặc thread-safe. Nó thay storage model, không thay ownership semantics.
+`__slots__` cũng không tự làm đối tượng (object / 객체) immutable hoặc thread-safe. Nó thay lưu trữ (storage / 저장소) mô hình (model / 모델), không thay quyền sở hữu (ownership / 소유권) ngữ nghĩa (semantics / 의미론).
 
-## 5. Function object, closure cell và decorator stack
+## 5. hàm (function / 함수) đối tượng (object / 객체), closure cell và decorator ngăn xếp (stack / 스택)
 
-Function object chứa code object, globals reference, defaults, closure cells và metadata khác. Điều này giải thích nhiều hiện tượng đã thấy:
+Hàm (function / 함수) đối tượng (object / 객체) chứa mã (code / 코드) đối tượng (object / 객체), globals tham chiếu (reference / 참조), defaults, closure cells và siêu dữ liệu (metadata / 메타데이터) khác. Điều này giải thích nhiều hiện tượng đã thấy:
 
-- default argument sống cùng function object;
-- closure giữ cell/binding từ enclosing scope;
-- decorator thay function binding bằng object/callable khác;
-- monkey patch thay name/attribute lookup target chứ không “sửa bytecode đã gọi trước đó”.
+- default argument sống cùng hàm (function / 함수) đối tượng (object / 객체);
+- closure giữ cell/binding từ enclosing phạm vi (scope / 범위);
+- decorator thay hàm (function / 함수) binding bằng đối tượng (object / 객체)/callable khác;
+- monkey patch thay name/attribute lookup mục tiêu (target / 대상) chứ không “sửa bytecode đã gọi trước đó”.
 
-`functools.wraps` chủ yếu copy/update metadata và `__wrapped__`, hỗ trợ introspection. Nó không làm wrapper biến mất khỏi call stack/cost.
+`functools.wraps` chủ yếu bản sao (copy / 복사)/cập nhật (update / 업데이트) siêu dữ liệu (metadata / 메타데이터) và `__wrapped__`, hỗ trợ introspection. Nó không làm wrapper biến mất khỏi ngăn xếp lời gọi (call stack / 호출 스택)/chi phí (cost / 비용).
 
-Decorator stack cũng tạo ordering semantics. Với:
+Decorator ngăn xếp (stack / 스택) cũng tạo thứ tự (ordering / 순서) ngữ nghĩa (semantics / 의미론). Với:
 
 ```python
 @outer
@@ -169,35 +172,35 @@ def work():
     ...
 ```
 
-mental model là `work = outer(inner(work))`. Nếu `inner` tạo transaction còn `outer` retry, semantics khác hẳn khi thứ tự đảo lại. Cross-cutting concern có side effect phải được review theo ordering, không chỉ theo từng decorator riêng lẻ.
+Mô hình tư duy (mental model / 사고 모델) là `work = outer(inner(work))`. Nếu `inner` tạo giao dịch (transaction / 트랜잭션) còn `outer` thử lại (retry / 재시도), ngữ nghĩa (semantics / 의미론) khác hẳn khi thứ tự đảo lại. Cross-cutting concern có side tác động (effect / 효과) phải được rà soát (review / 검토) theo thứ tự (ordering / 순서), không chỉ theo từng decorator riêng lẻ.
 
-## 6. Import system sâu hơn
+## 6. Import hệ thống (system / 시스템) sâu hơn
 
-Import được xây quanh finders, loaders, module specs và `sys.modules`. Một normal import đầu tiên tạo/đăng ký module object rồi execute code. Việc đưa module vào `sys.modules` sớm giúp xử lý recursive import nhưng cũng khiến circular import có thể thấy partially initialized module.
+Import được xây quanh finders, loaders, mô-đun (module / 모듈) specs và `sys.modules`. Một normal import đầu tiên tạo/đăng ký mô-đun (module / 모듈) đối tượng (object / 객체) rồi execute mã (code / 코드). Việc đưa mô-đun (module / 모듈) vào `sys.modules` sớm giúp xử lý recursive import nhưng cũng khiến circular import có thể thấy partially initialized mô-đun (module / 모듈).
 
 ### Import side effects
 
-Plugin registration và framework startup đôi khi cố ý dựa vào import side effect. Nhưng pattern này làm dependency ẩn, order-sensitive và khó test. Khi có thể, dùng explicit registration/bootstrap.
+Plugin registration và khung phần mềm (framework / 프레임워크) startup đôi khi cố ý dựa vào import side tác động (effect / 효과). Nhưng mẫu (pattern / 패턴) này làm phụ thuộc (dependency / 의존성) ẩn, order-sensitive và khó kiểm thử (test / 테스트). Khi có thể, dùng tường minh (explicit / 명시적) registration/bootstrap.
 
-### `__init__.py`, namespace package và public API
+### `__init__.py`, không gian tên (namespace / 네임스페이스) gói (package / 패키지) và API công khai (public API / 공개 API)
 
-Package có thể expose API từ `__init__.py`, nhưng re-export quá nhiều tạo dependency/circular-import khó thấy. Namespace packages cho phép package phân tán qua nhiều locations theo import rules; chỉ dùng khi distribution architecture cần, không vì muốn bỏ file.
+Gói (package / 패키지) có thể expose API từ `__init__.py`, nhưng re-export quá nhiều tạo phụ thuộc (dependency / 의존성)/circular-import khó thấy. không gian tên (namespace / 네임스페이스) packages cho phép gói (package / 패키지) phân tán qua nhiều locations theo import rules; chỉ dùng khi phân phối (distribution / 분포) kiến trúc (architecture / 아키텍처) cần, không vì muốn bỏ tệp (file / 파일).
 
-### Import cost
+### Import chi phí (cost / 비용)
 
-Cold start của CLI/serverless có thể bị chi phối bởi import graph. Profile startup thay vì đoán; lazy import có thể giảm startup nhưng chuyển failure sang runtime và tăng complexity.
+Cold start của CLI/serverless có thể bị chi phối bởi import đồ thị (graph / 그래프). Profile startup thay vì đoán; lazy import có thể giảm startup nhưng chuyển thất bại (failure / 실패) sang thời gian chạy (runtime / 런타임) và tăng độ phức tạp (complexity / 복잡도).
 
-### Reload không phải state reset
+### Reload không phải trạng thái (state / 상태) reset
 
-`importlib.reload()` re-execute module code trong module object hiện có, nhưng references đã được copy/bind ở nơi khác không tự được “rewire” thành definitions mới. Instance cũ cũng vẫn thuộc class object cũ. Vì vậy reload phù hợp cho tooling/development scenario có contract rõ; nó không phải generic production strategy để “refresh config/code” trong process sống lâu.
+`importlib.reload()` re-execute mô-đun (module / 모듈) mã (code / 코드) trong mô-đun (module / 모듈) đối tượng (object / 객체) hiện có, nhưng references đã được bản sao (copy / 복사)/bind ở nơi khác không tự được “rewire” thành definitions mới. Instance cũ cũng vẫn thuộc lớp (class / 클래스) đối tượng (object / 객체) cũ. Vì vậy reload phù hợp cho tooling/development scenario có đặc tả hợp đồng (contract / 계약) rõ; nó không phải generic môi trường vận hành (production / 운영 환경) chiến lược (strategy / 전략) để “refresh cấu hình (config / 설정)/mã (code / 코드)” trong tiến trình (process / 프로세스) sống lâu.
 
-## 7. Object lifecycle, construction, reference counting và cyclic GC
+## 7. đối tượng (object / 객체) vòng đời (lifecycle / 생명주기), construction, tham chiếu (reference / 참조) counting và cyclic GC
 
-Trong CPython GIL-enabled build truyền thống, refcount là cơ chế lifecycle chính và cyclic GC thu cycles. Free-threaded CPython phải thay đổi nhiều synchronization/refcount implementation details để threads hoạt động an toàn hơn; application không nên dựa vào internal refcount representation.
+Trong CPython GIL-enabled bản dựng (build / 빌드) truyền thống, refcount là cơ chế vòng đời (lifecycle / 생명주기) chính và cyclic GC thu cycles. Free-threaded CPython phải thay đổi nhiều synchronization/refcount hiện thực (implementation / 구현) details để threads hoạt động an toàn hơn; ứng dụng (application / 애플리케이션) không nên dựa vào nội bộ (internal / 내부) refcount biểu diễn (representation / 표현).
 
-### `__new__` tạo object, `__init__` khởi tạo object đã tạo
+### `__new__` tạo đối tượng (object / 객체), `__init__` khởi tạo đối tượng (object / 객체) đã tạo
 
-Gọi `MyClass(...)` không đồng nghĩa trực tiếp với gọi `__init__`. Ở mức mental model, metaclass `type.__call__` điều phối object creation: gọi `__new__` để tạo/return object, sau đó nếu object trả về là instance phù hợp thì gọi `__init__` để initialize state.
+Gọi `MyClass(...)` không đồng nghĩa trực tiếp với gọi `__init__`. Ở mức mô hình tư duy (mental model / 사고 모델), metaclass `type.__call__` điều phối đối tượng (object / 객체) creation: gọi `__new__` để tạo/return đối tượng (object / 객체), sau đó nếu đối tượng (object / 객체) trả về là instance phù hợp thì gọi `__init__` để initialize trạng thái (state / 상태).
 
 ```python
 class User:
@@ -209,21 +212,21 @@ class User:
         self.name = name
 ```
 
-`__init__` phải return `None`; nó không chọn object nào được trả về. `__new__` đặc biệt hữu ích khi subclass immutable built-ins như `str`, `int`, `tuple`, vì value phải được tạo trước khi `__init__` có cơ hội chạy.
+`__init__` phải return `None`; nó không chọn đối tượng (object / 객체) nào được trả về. `__new__` đặc biệt hữu ích khi subclass immutable built-ins như `str`, `int`, `tuple`, vì giá trị (value / 값) phải được tạo trước khi `__init__` có cơ hội chạy.
 
-Nếu `__new__` trả object không phải instance của class đang construct, `__init__` tương ứng không chạy. Đây là edge case metaprogramming/factory mạnh nhưng dễ làm lifecycle khó đọc; application code thường không cần dùng.
+Nếu `__new__` trả đối tượng (object / 객체) không phải instance của lớp (class / 클래스) đang construct, `__init__` tương ứng không chạy. Đây là trường hợp biên (edge case / 경계 사례) metaprogramming/factory mạnh nhưng dễ làm vòng đời (lifecycle / 생명주기) khó đọc; ứng dụng (application / 애플리케이션) mã (code / 코드) thường không cần dùng.
 
-### Finalization không phải resource ownership
+### Finalization không phải tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권)
 
-`__del__` làm finalization khó reason hơn khi cycles/interpreter shutdown/resource order liên quan. Dùng context manager hoặc explicit `close()` ownership cho external resources. “Object sẽ được GC” không phải contract về thời điểm file/socket/transaction được release.
+`__del__` làm finalization khó reason hơn khi cycles/trình thông dịch (interpreter / 인터프리터) shutdown/tài nguyên (resource / 자원) thứ tự (order / 순서) liên quan. Dùng ngữ cảnh (context / 맥락) manager hoặc tường minh (explicit / 명시적) `close()` quyền sở hữu (ownership / 소유권) cho bên ngoài (external / 외부) resources. “đối tượng (object / 객체) sẽ được GC” không phải đặc tả hợp đồng (contract / 계약) về thời điểm tệp (file / 파일)/socket/giao dịch (transaction / 트랜잭션) được bản phát hành (release / 릴리스).
 
-Weak references phù hợp cho cache/observer nơi reference phụ không nên giữ object sống. Nhưng weakref callback cũng là lifecycle complexity; không dùng chỉ để “giảm memory”.
+Weak references phù hợp cho bộ nhớ đệm (cache / 캐시)/observer nơi tham chiếu (reference / 참조) phụ không nên giữ đối tượng (object / 객체) sống. Nhưng weakref callback cũng là vòng đời (lifecycle / 생명주기) độ phức tạp (complexity / 복잡도); không dùng chỉ để “giảm bộ nhớ (memory / 메모리)”.
 
-### Class creation: class body cũng là code được thực thi
+### Lớp (class / 클래스) creation: lớp (class / 클래스) body cũng là mã (code / 코드) được thực thi
 
-`class C: ...` thực thi class body để tạo namespace rồi tạo class object thông qua metaclass. Default metaclass phổ biến là `type`.
+`class C: ...` thực thi lớp (class / 클래스) body để tạo không gian tên (namespace / 네임스페이스) rồi tạo lớp (class / 클래스) đối tượng (object / 객체) thông qua metaclass. Default metaclass phổ biến là `type`.
 
-Quá trình class creation có thể reason theo thứ tự sau:
+Quá trình lớp (class / 클래스) creation có thể reason theo thứ tự sau:
 
 ```text
 resolve MRO entries
@@ -238,27 +241,27 @@ resolve MRO entries
 → bind kết quả cuối vào class name
 ```
 
-`__prepare__` quan trọng với framework/metaclass cần custom namespace behavior trước khi class body chạy. Nhưng namespace được đưa vào `type.__new__` cuối cùng được copy vào mapping riêng của class; giữ reference tới custom namespace rồi giả định mutate nó sẽ mutate class là mental model sai.
+`__prepare__` quan trọng với khung phần mềm (framework / 프레임워크)/metaclass cần custom không gian tên (namespace / 네임스페이스) hành vi (behavior / 동작) trước khi lớp (class / 클래스) body chạy. Nhưng không gian tên (namespace / 네임스페이스) được đưa vào `type.__new__` cuối cùng được bản sao (copy / 복사) vào ánh xạ (mapping / 매핑) riêng của lớp (class / 클래스); giữ tham chiếu (reference / 참조) tới custom không gian tên (namespace / 네임스페이스) rồi giả định mutate nó sẽ mutate lớp (class / 클래스) là mô hình tư duy (mental model / 사고 모델) sai.
 
-Class body chạy tại definition/import time. Vì vậy query database, đọc environment mutable hoặc register global state trong class body đều là import-time side effect như module top level.
+Lớp (class / 클래스) body chạy tại definition/import thời gian (time / 시간). Vì vậy truy vấn (query / 쿼리) cơ sở dữ liệu (database / 데이터베이스), đọc môi trường (environment / 환경) mutable hoặc register toàn cục (global / 전역) trạng thái (state / 상태) trong lớp (class / 클래스) body đều là import-time side tác động (effect / 효과) như mô-đun (module / 모듈) top mức (level / 수준).
 
 ### `__class__` cell và zero-argument `super()`
 
-Compiler tạo implicit `__class__` closure cell khi method cần `__class__` hoặc zero-argument `super()`. Custom metaclass thao tác namespace quá mức mà không propagate `__classcell__` đúng tới `type.__new__` có thể phá behavior này. Đây chủ yếu là concern của framework/metaclass author, nhưng nó cho thấy class creation không chỉ là `dict` + `type()` đơn giản.
+Trình biên dịch (compiler / 컴파일러) tạo implicit `__class__` closure cell khi phương thức (method / 메서드) cần `__class__` hoặc zero-argument `super()`. Custom metaclass thao tác không gian tên (namespace / 네임스페이스) quá mức mà không propagate `__classcell__` đúng tới `type.__new__` có thể phá hành vi (behavior / 동작) này. Đây chủ yếu là concern của khung phần mềm (framework / 프레임워크)/metaclass author, nhưng nó cho thấy lớp (class / 클래스) creation không chỉ là `dict` + `type()` đơn giản.
 
-### `__init_subclass__`, class decorator hay metaclass?
+### `__init_subclass__`, lớp (class / 클래스) decorator hay metaclass?
 
-Nếu mục tiêu chỉ là validate/register subclass, `__init_subclass__` thường đơn giản hơn custom metaclass. Nếu muốn transform một class sau khi nó được tạo, class decorator thường explicit hơn. Metaclass hợp khi cần kiểm soát chính quá trình class creation hoặc tạo family class có protocol ở cấp type.
+Nếu mục tiêu chỉ là validate/register subclass, `__init_subclass__` thường đơn giản hơn custom metaclass. Nếu muốn transform một lớp (class / 클래스) sau khi nó được tạo, lớp (class / 클래스) decorator thường tường minh (explicit / 명시적) hơn. Metaclass hợp khi cần kiểm soát chính quá trình lớp (class / 클래스) creation hoặc tạo family lớp (class / 클래스) có giao thức (protocol / 프로토콜) ở cấp kiểu (type / 타입).
 
-Khi viết `__init_subclass__` trong hierarchy hợp tác, consume keyword mà class mình hiểu và forward phần còn lại bằng `super().__init_subclass__(**kwargs)`. Nuốt hết keyword hoặc không forward có thể phá mixin khác trong hierarchy.
+Khi viết `__init_subclass__` trong hierarchy hợp tác, consume từ khóa (keyword / 키워드) mà lớp (class / 클래스) mình hiểu và forward phần còn lại bằng `super().__init_subclass__(**kwargs)`. Nuốt hết từ khóa (keyword / 키워드) hoặc không forward có thể phá mixin khác trong hierarchy.
 
-Senior rule không phải “tránh metaclass”, mà là chọn hook nhỏ nhất đáp ứng invariant. Metaclass conflict trong multiple inheritance là failure mode thật: các base classes có incompatible metaclasses có thể khiến class mới không xác định được metaclass hợp lệ và fail ngay lúc definition.
+Cấp cao (senior / 시니어) quy tắc (rule / 규칙) không phải “tránh metaclass”, mà là chọn hook nhỏ nhất đáp ứng bất biến (invariant / 불변식). Metaclass xung đột (conflict / 충돌) trong multiple inheritance là dạng thất bại (failure mode / 실패 모드) thật: các cơ sở (base / 기반) classes có incompatible metaclasses có thể khiến lớp (class / 클래스) mới không xác định được metaclass hợp lệ và thất bại (fail / 실패) ngay lúc definition.
 
-## 8. Immutability, aliasing và API design
+## 8. Immutability, aliasing và API thiết kế (design / 설계)
 
-Reference semantics làm aliasing trở thành design concern. API nhận mutable object có ba chiến lược chính: mutate theo contract, copy defensively, hoặc treat as read-only convention/type. Mỗi chiến lược có cost.
+Tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) làm aliasing trở thành thiết kế (design / 설계) concern. API nhận mutable đối tượng (object / 객체) có ba chiến lược chính: mutate theo đặc tả hợp đồng (contract / 계약), bản sao (copy / 복사) defensively, hoặc treat as read-only convention/kiểu (type / 타입). Mỗi chiến lược có chi phí (cost / 비용).
 
-Copy toàn bộ input ở mọi boundary có thể phá performance và identity semantics. Không copy có thể leak mutation. Thiết kế tốt nói rõ ownership.
+Bản sao (copy / 복사) toàn bộ đầu vào (input / 입력) ở mọi ranh giới (boundary / 경계) có thể phá hiệu năng (performance / 성능) và định danh (identity / 식별자) ngữ nghĩa (semantics / 의미론). Không bản sao (copy / 복사) có thể leak mutation. Thiết kế tốt nói rõ quyền sở hữu (ownership / 소유권).
 
 ```python
 class Report:
@@ -266,142 +269,142 @@ class Report:
         self._tags = tuple(tags)
 ```
 
-Ở đây copy+convert thể hiện invariant “tags của report không đổi qua alias caller”. Đây là reasoning, không phải rule rằng mọi list phải đổi thành tuple.
+Ở đây bản sao (copy / 복사)+convert thể hiện bất biến (invariant / 불변식) “tags của report không đổi qua alias caller”. Đây là lập luận (reasoning / 추론), không phải quy tắc (rule / 규칙) rằng mọi danh sách (list / 목록) phải đổi thành tuple.
 
-Một immutable outer object vẫn có thể tham chiếu mutable child. Vì vậy khi domain cần snapshot thật, hãy reason trên object graph chứ không chỉ `frozen=True` hoặc tuple ở root.
+Một immutable outer đối tượng (object / 객체) vẫn có thể tham chiếu mutable child. Vì vậy khi lĩnh vực (domain / 도메인) cần snapshot thật, hãy reason trên đối tượng (object / 객체) đồ thị (graph / 그래프) chứ không chỉ `frozen=True` hoặc tuple ở gốc (root / 루트).
 
-## 9. Equality, ordering và domain semantics
+## 9. Equality, thứ tự (ordering / 순서) và lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)
 
-`@dataclass(order=True)` có thể sinh ordering lexicographic theo field order, nhưng domain có thật sự có total ordering không? User, connection hoặc transaction không tự nhiên có “nhỏ hơn” chỉ vì fields có thể so sánh.
+`@dataclass(order=True)` có thể sinh thứ tự (ordering / 순서) lexicographic theo trường dữ liệu (field / 필드) thứ tự (order / 순서), nhưng lĩnh vực (domain / 도메인) có thật sự có total thứ tự (ordering / 순서) không? người dùng (user / 사용자), liên kết (connection / 연결) hoặc giao dịch (transaction / 트랜잭션) không tự nhiên có “nhỏ hơn” chỉ vì fields có thể so sánh.
 
-Implement protocol chỉ khi semantics tồn tại. Convenience-generated dunder methods có thể tạo API sai mà test đơn giản không phát hiện.
+Implement giao thức (protocol / 프로토콜) chỉ khi ngữ nghĩa (semantics / 의미론) tồn tại. Convenience-generated dunder methods có thể tạo API sai mà kiểm thử (test / 테스트) đơn giản không phát hiện.
 
-Hash/equality contract cũng phải ổn định qua lifetime object nếu object dùng làm dict key/set member. Mutate field tham gia equality/hash sau khi insert là cách phá data structure invariant dù code không raise ngay.
+Băm (hash / 해시)/equality đặc tả hợp đồng (contract / 계약) cũng phải ổn định qua thời gian tồn tại (lifetime / 수명) đối tượng (object / 객체) nếu đối tượng (object / 객체) dùng làm dict key/set member. Mutate trường dữ liệu (field / 필드) tham gia equality/băm (hash / 해시) sau khi insert là cách phá cấu trúc dữ liệu (data structure / 자료구조) bất biến (invariant / 불변식) dù mã (code / 코드) không raise ngay.
 
-## 10. Type system nâng cao: variance, ParamSpec, TypeVarTuple và protocols
+## 10. hệ kiểu (type system / 타입 시스템) nâng cao: variance, ParamSpec, TypeVarTuple và protocols
 
-Typing là một language/tooling layer phát triển nhanh. Modern Python type-parameter syntax giúp generic code đọc tự nhiên hơn, nhưng design vẫn cần hiểu abstraction.
+Typing là một ngôn ngữ (language / 언어)/tooling tầng (layer / 계층) phát triển nhanh. hiện đại (modern / 현대적) Python type-parameter cú pháp (syntax / 문법) giúp generic mã (code / 코드) đọc tự nhiên hơn, nhưng thiết kế (design / 설계) vẫn cần hiểu lớp trừu tượng (abstraction / 추상화).
 
-`Protocol` diễn tả required behavior mà không ép inheritance. `ParamSpec` hữu ích khi decorator/higher-order function cần giữ callable parameter types. `TypeVarTuple` mô hình variadic generics cho shape-like APIs. `Self`, `TypeIs` và `TypeGuard` từ Part 2 giúp type checker nối method return/narrowing với runtime evidence.
+`Protocol` diễn tả required hành vi (behavior / 동작) mà không ép inheritance. `ParamSpec` hữu ích khi decorator/higher-order hàm (function / 함수) cần giữ callable parameter types. `TypeVarTuple` mô hình variadic generics cho shape-like APIs. `Self`, `TypeIs` và `TypeGuard` từ Part 2 giúp kiểu (type / 타입) checker nối phương thức (method / 메서드) return/narrowing với thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거).
 
-Advanced typing chỉ có giá trị khi làm contract dễ hiểu hơn. Nếu signature generic dài hơn domain model mà nó mô tả, abstraction có thể đang sai tầng.
+Advanced typing chỉ có giá trị khi làm đặc tả hợp đồng (contract / 계약) dễ hiểu hơn. Nếu signature generic dài hơn lĩnh vực (domain / 도메인) mô hình (model / 모델) mà nó mô tả, lớp trừu tượng (abstraction / 추상화) có thể đang sai tầng.
 
-### Runtime annotations ở Python 3.14
+### Thời gian chạy (runtime / 런타임) annotations ở Python 3.14
 
-Python 3.14 chuyển annotation semantics sang deferred evaluation model (PEP 649/749). Framework/tool code introspect annotation cần dùng API chính thức hiện hành và xử lý forward references/security đúng cách. Việc evaluate annotation có thể chạy code trong một số introspection pathways; untrusted annotation source không phải dữ liệu vô hại.
+Python 3.14 chuyển annotation ngữ nghĩa (semantics / 의미론) sang deferred evaluation mô hình (model / 모델). khung phần mềm (framework / 프레임워크)/công cụ (tool / 도구) mã (code / 코드) introspect annotation cần dùng API chính thức hiện hành và xử lý forward references/bảo mật (security / 보안) đúng cách. Việc evaluate annotation có thể chạy mã (code / 코드) trong một số introspection pathways; untrusted annotation nguồn (source / 소스) không phải dữ liệu vô hại.
 
-Legacy code dùng `from __future__ import annotations` theo PEP 563 era có behavior/intent khác historical default; khi migrate library, test introspection consumers chứ đừng chỉ chạy type checker.
+Legacy mã (code / 코드) dùng `from __future__ import annotations` theo PEP 563 era có hành vi (behavior / 동작)/intent khác historical default; khi migrate thư viện (library / 라이브러리), kiểm thử (test / 테스트) introspection consumers chứ đừng chỉ chạy kiểu (type / 타입) checker.
 
-## 11. Memory layout và allocation: tối ưu bằng evidence
+## 11. bộ nhớ (memory / 메모리) bố cục (layout / 레이아웃) và allocation: tối ưu bằng bằng chứng (evidence / 증거)
 
-Một Python integer/string/object có overhead lớn hơn raw C primitive vì mang metadata/headers/references. Container thường giữ references tới objects chứ không inline toàn bộ object value như typed packed array.
+Một Python integer/string/đối tượng (object / 객체) có overhead lớn hơn raw C thành phần nguyên thủy (primitive / 기본 요소) vì mang siêu dữ liệu (metadata / 메타데이터)/headers/references. bộ chứa (container / 컨테이너) thường giữ references tới objects chứ không inline toàn bộ đối tượng (object / 객체) giá trị (value / 값) như typed packed array.
 
-Do đó workload numeric/binary lớn thường dùng specialized packed representation, buffer protocol hoặc native libraries thay vì hàng triệu Python objects nếu domain cho phép. `memoryview` ở Part 2 là ví dụ application-facing của cùng principle: representation quyết định copy cost, memory bandwidth và cache locality.
+Do đó tải công việc (workload / 워크로드) numeric/nhị phân (binary / 이진) lớn thường dùng specialized packed biểu diễn (representation / 표현), buffer giao thức (protocol / 프로토콜) hoặc bản địa (native / 네이티브) libraries thay vì hàng triệu Python objects nếu lĩnh vực (domain / 도메인) cho phép. `memoryview` ở Part 2 là ví dụ application-facing của cùng principle: biểu diễn (representation / 표현) quyết định bản sao (copy / 복사) chi phí (cost / 비용), bộ nhớ (memory / 메모리) bandwidth và bộ nhớ đệm (cache / 캐시) locality.
 
-`sys.getsizeof()` chỉ đo shallow size của object, không toàn object graph. Dùng nó như metric cục bộ, không cộng naïve rồi kết luận process RSS.
+`sys.getsizeof()` chỉ đo shallow kích thước (size / 크기) của đối tượng (object / 객체), không toàn đối tượng (object / 객체) đồ thị (graph / 그래프). Dùng nó như chỉ số (metric / 지표) cục bộ, không cộng naïve rồi kết luận tiến trình (process / 프로세스) RSS.
 
-RSS còn chịu ảnh hưởng allocator, native libraries, mmap, fragmentation và object đã free ở Python level nhưng allocator chưa trả page về OS. Khi debug memory, tách “Python object retention” khỏi “process RSS behavior”.
+RSS còn chịu ảnh hưởng allocator, bản địa (native / 네이티브) libraries, mmap, fragmentation và đối tượng (object / 객체) đã free ở Python mức (level / 수준) nhưng allocator chưa trả page về OS. Khi gỡ lỗi (debug / 디버그) bộ nhớ (memory / 메모리), tách “Python đối tượng (object / 객체) retention” khỏi “tiến trình (process / 프로세스) RSS hành vi (behavior / 동작)”.
 
-## 12. Performance: specialization, cache và deoptimization
+## 12. hiệu năng (performance / 성능): specialization, bộ nhớ đệm (cache / 캐시) và deoptimization
 
-CPython optimizer có thể specialize common operations khi runtime assumptions ổn định. Dynamic behavior bất thường có thể làm specialization kém hiệu quả/deopt. Tuy vậy application engineer thường không nên “code cho opcode optimizer” trước algorithm và I/O.
+CPython optimizer có thể specialize dùng chung (common / 공통) operations khi thời gian chạy (runtime / 런타임) các giả định (assumptions / 가정들) ổn định. động (dynamic / 동적) hành vi (behavior / 동작) bất thường có thể làm specialization kém hiệu quả/deopt. Tuy vậy ứng dụng (application / 애플리케이션) engineer thường không nên “mã (code / 코드) cho opcode optimizer” trước thuật toán (algorithm / 알고리즘) và I/O.
 
 Microbenchmark cần:
 
-- cùng Python build/version;
+- cùng Python bản dựng (build / 빌드)/phiên bản (version / 버전);
 - đủ repetitions và isolation;
-- tránh đo setup nếu không phải target;
+- tránh đo setup nếu không phải mục tiêu (target / 대상);
 - hiểu warmup/specialization;
-- nhìn distribution, không chỉ một số;
-- xác nhận macro impact trên workload thật.
+- nhìn phân phối (distribution / 분포), không chỉ một số;
+- xác nhận macro impact trên tải công việc (workload / 워크로드) thật.
 
-`timeit` tốt cho microbenchmark; production profiler tốt hơn cho end-to-end hotspot.
+`timeit` tốt cho microbenchmark; môi trường vận hành (production / 운영 환경) profiler tốt hơn cho end-to-end hotspot.
 
-Performance optimization phải giữ correctness invariant. Cache, batching, vectorization và concurrency đều có thể đổi failure timing, stale-data window hoặc ownership; benchmark nhanh hơn nhưng semantics sai không phải optimization.
+Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) phải giữ tính đúng đắn (correctness / 정확성) bất biến (invariant / 불변식). bộ nhớ đệm (cache / 캐시), batching, vectorization và tính đồng thời (concurrency / 동시성) đều có thể đổi thất bại (failure / 실패) timing, stale-data cửa sổ (window / 윈도우) hoặc quyền sở hữu (ownership / 소유권); benchmark nhanh hơn nhưng ngữ nghĩa (semantics / 의미론) sai không phải tối ưu hóa (optimization / 최적화).
 
-## 13. GIL, free-threading và migration mental model
+## 13. GIL, free-threading và di chuyển (migration / 마이그레이션) mô hình tư duy (mental model / 사고 모델)
 
-Python 3.14 là mốc quan trọng: free-threaded CPython officially supported nhưng optional. Vì vậy documentation hiện đại cần chứa hai model.
+Python 3.14 là mốc quan trọng: free-threaded CPython officially supported nhưng optional. Vì vậy documentation hiện đại cần chứa hai mô hình (model / 모델).
 
 ### Default GIL-enabled CPython
 
-Một thread giữ GIL khi execute Python objects/bytecode. I/O và native code có thể release GIL. Thread vẫn cần locks cho logical shared-state correctness.
+Một luồng thực thi (thread / 스레드) giữ GIL khi execute Python objects/bytecode. I/O và bản địa (native / 네이티브) mã (code / 코드) có thể bản phát hành (release / 릴리스) GIL. luồng thực thi (thread / 스레드) vẫn cần locks cho logical shared-state tính đúng đắn (correctness / 정확성).
 
 ### Free-threaded CPython
 
-GIL có thể disabled; multiple threads có thể thực sự execute Python code song song. Built-ins/runtime có thread-safety guarantees cụ thể, nhưng atomicity của một số operation không nên được nâng thành application invariant nếu docs không guarantee.
+GIL có thể disabled; multiple threads có thể thực sự execute Python mã (code / 코드) song song. Built-ins/thời gian chạy (runtime / 런타임) có thread-safety guarantees cụ thể, nhưng atomicity của một số thao tác (operation / 연산) không nên được nâng thành ứng dụng (application / 애플리케이션) bất biến (invariant / 불변식) nếu docs không guarantee.
 
-Một điểm subtle: free-threaded không có nghĩa “không còn synchronization trong runtime”. Thread vẫn cần attached thread state để dùng Python C API, và runtime đôi lúc có thể phải dừng các thread ngắn hạn cho operation như garbage collection. Vì vậy performance model là “không có một global lock giữ mọi Python execution”, không phải “mọi thread luôn chạy tự do không bao giờ dừng nhau”.
+Một điểm subtle: free-threaded không có nghĩa “không còn synchronization trong thời gian chạy (runtime / 런타임)”. luồng thực thi (thread / 스레드) vẫn cần attached luồng thực thi (thread / 스레드) trạng thái (state / 상태) để dùng Python C API, và thời gian chạy (runtime / 런타임) đôi lúc có thể phải dừng các luồng thực thi (thread / 스레드) ngắn hạn cho thao tác (operation / 연산) như garbage collection. Vì vậy hiệu năng (performance / 성능) mô hình (model / 모델) là “không có một toàn cục (global / 전역) khóa (lock / 잠금) giữ mọi Python thực thi (execution / 실행)”, không phải “mọi luồng thực thi (thread / 스레드) luôn chạy tự do không bao giờ dừng nhau”.
 
 ### Extension có thể làm GIL quay lại
 
-C extension muốn chạy an toàn khi GIL disabled phải khai báo support. Với multi-phase module initialization, CPython có `Py_mod_gil` slot; module có thể khai báo `Py_MOD_GIL_NOT_USED`. Nếu extension không khai báo support thích hợp, import trên free-threaded build có thể khiến GIL được enable lại cho runtime process theo documented behavior.
+C extension muốn chạy an toàn khi GIL disabled phải khai báo hỗ trợ (support / 지원). Với multi-phase mô-đun (module / 모듈) initialization, CPython có `Py_mod_gil` slot; mô-đun (module / 모듈) có thể khai báo `Py_MOD_GIL_NOT_USED`. Nếu extension không khai báo hỗ trợ (support / 지원) thích hợp, import trên free-threaded bản dựng (build / 빌드) có thể khiến GIL được enable lại cho thời gian chạy (runtime / 런타임) tiến trình (process / 프로세스) theo documented hành vi (behavior / 동작).
 
-Điều này tạo production trap: bạn benchmark pure Python free-threaded thấy parallel tốt, rồi import một dependency native và throughput thay đổi. Vì vậy feature detection phải nằm ở runtime/dependency evidence, không chỉ ở executable name.
+Điều này tạo môi trường vận hành (production / 운영 환경) trap: bạn benchmark pure Python free-threaded thấy parallel tốt, rồi import một phụ thuộc (dependency / 의존성) bản địa (native / 네이티브) và thông lượng (throughput / 처리량) thay đổi. Vì vậy tính năng (feature / 기능) detection phải nằm ở thời gian chạy (runtime / 런타임)/phụ thuộc (dependency / 의존성) bằng chứng (evidence / 증거), không chỉ ở executable name.
 
-### Migration strategy
+### Di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
 
-Không phải đổi flag rồi chạy benchmark. Audit shared mutable state, dependency/C-extension compatibility, thread-local assumptions, caches, signal/process-wide APIs và test race conditions. Race trước đây bị GIL làm khó xuất hiện có thể thành bug thật.
+Không phải đổi flag rồi chạy benchmark. kiểm tra (audit / 감사) dùng chung (shared / 공유) mutable trạng thái (state / 상태), phụ thuộc (dependency / 의존성)/C-extension tính tương thích (compatibility / 호환성), thread-local các giả định (assumptions / 가정들), caches, tín hiệu (signal / 신호)/process-wide APIs và kiểm thử (test / 테스트) race conditions. Race trước đây bị GIL làm khó xuất hiện có thể thành bug thật.
 
-Senior/Master note: viết synchronization dựa trên invariant, không dựa trên “hiện tại operation này có vẻ atomic”.
+Cấp cao (senior / 시니어)/Master ghi chú (note / 노트): viết synchronization dựa trên bất biến (invariant / 불변식), không dựa trên “hiện tại thao tác (operation / 연산) này có vẻ atomic”.
 
-## 14. Thread safety và process-wide state
+## 14. luồng thực thi (thread / 스레드) an toàn (safety / 안전) và process-wide trạng thái (state / 상태)
 
-Ngay cả free-threaded build, không phải mọi process-wide operation có thể chạy concurrent an toàn. Environment variables, signal handlers, current working directory và một số global native state cần xem contract cụ thể.
+Ngay cả free-threaded bản dựng (build / 빌드), không phải mọi process-wide thao tác (operation / 연산) có thể chạy concurrent an toàn. môi trường (environment / 환경) variables, tín hiệu (signal / 신호) handlers, hiện tại (current / 현재) working directory và một số toàn cục (global / 전역) bản địa (native / 네이티브) trạng thái (state / 상태) cần xem đặc tả hợp đồng (contract / 계약) cụ thể.
 
-Một design tốt giảm shared process-wide mutation: config immutable sau startup, dependency explicit, request/job state scoped, side effects qua owned adapters.
+Một thiết kế (design / 설계) tốt giảm dùng chung (shared / 공유) process-wide mutation: cấu hình (config / 설정) immutable sau startup, phụ thuộc (dependency / 의존성) tường minh (explicit / 명시적), yêu cầu (request / 요청)/job trạng thái (state / 상태) scoped, side effects qua owned adapters.
 
-### Thread-safe primitive không nâng cả workflow thành thread-safe
+### Thread-safe thành phần nguyên thủy (primitive / 기본 요소) không nâng cả workflow thành thread-safe
 
-Một container method có internal synchronization hoặc atomicity guarantee chỉ bảo vệ invariant của container ở operation đó. Workflow “check rồi act” vẫn có race:
+Một bộ chứa (container / 컨테이너) phương thức (method / 메서드) có nội bộ (internal / 내부) synchronization hoặc atomicity guarantee chỉ bảo vệ bất biến (invariant / 불변식) của bộ chứa (container / 컨테이너) ở thao tác (operation / 연산) đó. Workflow “check rồi act” vẫn có race:
 
 ```python
 if key not in cache:
     cache[key] = build_value()
 ```
 
-Ngay cả khi từng dict operation an toàn ở runtime hiện tại, hai thread vẫn có thể cùng chạy `build_value()`. Application invariant cần lock/single-flight/idempotency tùy semantics.
+Ngay cả khi từng dict thao tác (operation / 연산) an toàn ở thời gian chạy (runtime / 런타임) hiện tại, hai luồng thực thi (thread / 스레드) vẫn có thể cùng chạy `build_value()`. ứng dụng (application / 애플리케이션) bất biến (invariant / 불변식) cần khóa (lock / 잠금)/single-flight/idempotency tùy ngữ nghĩa (semantics / 의미론).
 
-### Signal là process/main-thread boundary
+### Tín hiệu (signal / 신호) là tiến trình (process / 프로세스)/main-thread ranh giới (boundary / 경계)
 
-Python signal handler chạy theo model riêng và việc cài handler bị giới hạn vào main thread của main interpreter. Vì vậy signal không phải generic “interrupt bất kỳ worker thread nào”. Shutdown design nên coi signal là event ở process orchestration layer, sau đó chuyển nó thành state/cancellation mà worker model hiểu.
+Python tín hiệu (signal / 신호) handler chạy theo mô hình (model / 모델) riêng và việc cài handler bị giới hạn vào main luồng thực thi (thread / 스레드) của main trình thông dịch (interpreter / 인터프리터). Vì vậy tín hiệu (signal / 신호) không phải generic “interrupt bất kỳ worker luồng thực thi (thread / 스레드) nào”. Shutdown thiết kế (design / 설계) nên coi tín hiệu (signal / 신호) là sự kiện (event / 이벤트) ở tiến trình (process / 프로세스) orchestration tầng (layer / 계층), sau đó chuyển nó thành trạng thái (state / 상태)/cancellation mà worker mô hình (model / 모델) hiểu.
 
 ## 15. `asyncio` internals: readiness, scheduling và backpressure
 
-Event loop không “chạy tất cả coroutine cùng lúc”. Nó schedule runnable callbacks/tasks và chờ I/O readiness/timers. Coroutine chỉ yield control ở await points mà awaitable thực sự suspend.
+Vòng lặp sự kiện (event loop / 이벤트 루프) không “chạy tất cả coroutine cùng lúc”. Nó schedule runnable callbacks/tasks và chờ I/O readiness/timers. Coroutine chỉ yield điều khiển (control / 제어) ở await points mà awaitable thực sự suspend.
 
-### Fairness: primitive guarantee khác scheduler fairness
+### Fairness: thành phần nguyên thủy (primitive / 기본 요소) guarantee khác scheduler fairness
 
-Không giả định event loop chia CPU công bằng giữa mọi task. Một coroutine CPU loop không await sẽ monopolize loop. Thậm chí code có `await` nhưng awaitable hoàn tất tức thì liên tục có thể chạy rất lâu trước khi task khác có cơ hội hữu ích.
+Không giả định vòng lặp sự kiện (event loop / 이벤트 루프) chia CPU công bằng giữa mọi tác vụ (task / 작업). Một coroutine CPU vòng lặp (loop / 루프) không await sẽ monopolize vòng lặp (loop / 루프). Thậm chí mã (code / 코드) có `await` nhưng awaitable hoàn tất tức thì liên tục có thể chạy rất lâu trước khi tác vụ (task / 작업) khác có cơ hội hữu ích.
 
-Tuy vậy một số primitive có guarantee cụ thể hơn. `asyncio.Lock.acquire()` được documented là fair theo thứ tự coroutine bắt đầu chờ lock. Guarantee này chỉ nói queue waiter của **lock đó**, không nói toàn event loop là fair, không nói semaphore có cùng ordering contract, và không bảo đảm latency công bằng nếu task giữ lock quá lâu.
+Tuy vậy một số thành phần nguyên thủy (primitive / 기본 요소) có guarantee cụ thể hơn. `asyncio.Lock.acquire()` được documented là fair theo thứ tự coroutine bắt đầu chờ khóa (lock / 잠금). Guarantee này chỉ nói hàng đợi (queue / 큐) waiter của **khóa (lock / 잠금) đó**, không nói toàn vòng lặp sự kiện (event loop / 이벤트 루프) là fair, không nói semaphore có cùng thứ tự (ordering / 순서) đặc tả hợp đồng (contract / 계약), và không bảo đảm độ trễ (latency / 지연 시간) công bằng nếu tác vụ (task / 작업) giữ khóa (lock / 잠금) quá lâu.
 
-Đây là pattern reasoning quan trọng: đọc guarantee ở scope nhỏ nhất rồi không suy rộng nó thành guarantee hệ thống.
+Đây là mẫu (pattern / 패턴) lập luận (reasoning / 추론) quan trọng: đọc guarantee ở phạm vi (scope / 범위) nhỏ nhất rồi không suy rộng nó thành guarantee hệ thống.
 
-### Bounded concurrency khác backpressure
+### Bounded tính đồng thời (concurrency / 동시성) khác backpressure
 
-Semaphore giới hạn số work cùng chạy. Queue bounded giới hạn số work chờ. Hai concern khác nhau.
+Semaphore giới hạn số công việc (work / 작업) cùng chạy. hàng đợi (queue / 큐) bounded giới hạn số công việc (work / 작업) chờ. Hai concern khác nhau.
 
-Nếu chỉ đặt `Semaphore(20)` nhưng producer vẫn tạo hàng triệu task đang chờ semaphore, memory vẫn có thể tăng lớn. Bounded architecture thường giới hạn cả **in-flight execution** lẫn **queued work**.
+Nếu chỉ đặt `Semaphore(20)` nhưng producer vẫn tạo hàng triệu tác vụ (task / 작업) đang chờ semaphore, bộ nhớ (memory / 메모리) vẫn có thể tăng lớn. Bounded kiến trúc (architecture / 아키텍처) thường giới hạn cả **in-flight thực thi (execution / 실행)** lẫn **queued công việc (work / 작업)**.
 
-### Backpressure bằng bounded queue
+### Backpressure bằng bounded hàng đợi (queue / 큐)
 
-Nếu producer nhanh hơn consumer và queue không bound, memory sẽ tăng. `asyncio.Queue(maxsize=N)` khiến `put()` suspend khi queue đầy:
+Nếu producer nhanh hơn bên tiêu thụ (consumer / 소비자) và hàng đợi (queue / 큐) không bound, bộ nhớ (memory / 메모리) sẽ tăng. `asyncio.Queue(maxsize=N)` khiến `put()` suspend khi hàng đợi (queue / 큐) đầy:
 
 ```python
 queue = asyncio.Queue(maxsize=100)
 await queue.put(item)
 ```
 
-Backpressure không chỉ là “đỡ memory”. Nó truyền capacity signal upstream. Nếu upstream không thể chậm lại, architecture phải chọn drop, spill-to-disk, reject hoặc external durable queue thay vì giả vờ buffer vô hạn.
+Backpressure không chỉ là “đỡ bộ nhớ (memory / 메모리)”. Nó truyền sức chứa (capacity / 용량) tín hiệu (signal / 신호) upstream. Nếu upstream không thể chậm lại, kiến trúc (architecture / 아키텍처) phải chọn drop, spill-to-disk, reject hoặc bên ngoài (external / 외부) durable hàng đợi (queue / 큐) thay vì giả vờ buffer vô hạn.
 
-### Queue lifecycle và `shutdown()`
+### Hàng đợi (queue / 큐) vòng đời (lifecycle / 생명주기) và `shutdown()`
 
-Modern `asyncio.Queue` có `shutdown()`. Với graceful shutdown, queue có thể ngừng nhận item mới nhưng cho consumer drain work đã nhận; khi drain xong, `join()` vẫn giữ invariant “mọi work item đã được `task_done()`”.
+Hiện đại (modern / 현대적) `asyncio.Queue` có `shutdown()`. Với graceful shutdown, hàng đợi (queue / 큐) có thể ngừng nhận item mới nhưng cho bên tiêu thụ (consumer / 소비자) drain công việc (work / 작업) đã nhận; khi drain xong, `join()` vẫn giữ bất biến (invariant / 불변식) “mọi công việc (work / 작업) item đã được `task_done()`”.
 
-Immediate shutdown lại cố ý phá invariant thông thường của `join()`: queue có thể được drain/unblock dù work chưa thực sự xử lý. Vì vậy `shutdown(immediate=True)` là emergency control-flow decision, không phải shortcut tương đương graceful drain.
+Immediate shutdown lại cố ý phá bất biến (invariant / 불변식) thông thường của `join()`: hàng đợi (queue / 큐) có thể được drain/unblock dù công việc (work / 작업) chưa thực sự xử lý. Vì vậy `shutdown(immediate=True)` là emergency control-flow quyết định (decision / 결정), không phải shortcut tương đương graceful drain.
 
-Mental model shutdown queue:
+Mô hình tư duy (mental model / 사고 모델) shutdown hàng đợi (queue / 큐):
 
 ```text
 stop accepting
@@ -411,41 +414,41 @@ stop accepting
 → close downstream resources
 ```
 
-### Cancellation safety: safe interruption point
+### Cancellation an toàn (safety / 안전): safe interruption điểm (point / 지점)
 
-Nếu task bị cancel giữa hai side effects, state có thể partial. Transaction/context manager/idempotency giúp define safe interruption points. Shielding cancellation (`asyncio.shield`) chỉ dùng khi operation thực sự phải hoàn tất; lạm dụng làm shutdown không bounded.
+Nếu tác vụ (task / 작업) bị cancel giữa hai side effects, trạng thái (state / 상태) có thể partial. giao dịch (transaction / 트랜잭션)/ngữ cảnh (context / 맥락) manager/idempotency giúp define safe interruption points. Shielding cancellation (`asyncio.shield`) chỉ dùng khi thao tác (operation / 연산) thực sự phải hoàn tất; lạm dụng làm shutdown không bounded.
 
-Một critical section async có ba loại boundary khác nhau: “không muốn task khác vào” (lock), “không muốn operation bị cancel giữa invariant transition” (cancellation design), và “không muốn remote side effect bị duplicate” (idempotency/transaction). Một `asyncio.Lock` không giải quyết hai loại sau.
+Một trọng yếu (critical / 중요) section async có ba loại ranh giới (boundary / 경계) khác nhau: “không muốn tác vụ (task / 작업) khác vào” (lock), “không muốn thao tác (operation / 연산) bị cancel giữa bất biến (invariant / 불변식) chuyển tiếp (transition / 전이)” (cancellation design), và “không muốn remote side tác động (effect / 효과) bị duplicate” (idempotency/transaction). Một `asyncio.Lock` không giải quyết hai loại sau.
 
-Cancellation cũng có scope. Cancel coroutine đang await `to_thread()` không cưỡng chế stop function sync đã chạy trong worker thread. Cancel request không mặc nhiên rollback side effect đã gửi tới remote service. Vì vậy cancellation policy phải nối với idempotency, transaction và ownership của execution resource.
+Cancellation cũng có phạm vi (scope / 범위). Cancel coroutine đang await `to_thread()` không cưỡng chế stop hàm (function / 함수) sync đã chạy trong worker luồng thực thi (thread / 스레드). Cancel yêu cầu (request / 요청) không mặc nhiên quay lui (rollback / 롤백) side tác động (effect / 효과) đã gửi tới remote dịch vụ (service / 서비스). Vì vậy cancellation chính sách (policy / 정책) phải nối với idempotency, giao dịch (transaction / 트랜잭션) và quyền sở hữu (ownership / 소유권) của thực thi (execution / 실행) tài nguyên (resource / 자원).
 
-## 16. Structured concurrency và task ownership
+## 16. Structured tính đồng thời (concurrency / 동시성) và tác vụ (task / 작업) quyền sở hữu (ownership / 소유권)
 
-`TaskGroup` giúp lexical scope sở hữu tasks. Khi child fail, sibling cancellation và aggregated error handling có semantics rõ hơn loose tasks.
+`TaskGroup` giúp lexical phạm vi (scope / 범위) sở hữu tasks. Khi child thất bại (fail / 실패), sibling cancellation và aggregated lỗi (error / 오류) handling có ngữ nghĩa (semantics / 의미론) rõ hơn loose tasks.
 
-Fire-and-forget task cần registry, exception observation và shutdown handling. Nếu không, lỗi có thể chỉ hiện “Task exception was never retrieved”, hoặc task mất owner theo lifecycle.
+Fire-and-forget tác vụ (task / 작업) cần registry, exception observation và shutdown handling. Nếu không, lỗi có thể chỉ hiện “tác vụ (task / 작업) exception was never retrieved”, hoặc tác vụ (task / 작업) mất đơn vị sở hữu (owner / 오너) theo vòng đời (lifecycle / 생명주기).
 
-Production rule: mọi concurrent unit phải có owner, deadline và failure policy.
+Môi trường vận hành (production / 운영 환경) quy tắc (rule / 규칙): mọi concurrent đơn vị (unit / 단위) phải có đơn vị sở hữu (owner / 오너), deadline và thất bại (failure / 실패) chính sách (policy / 정책).
 
-### Cancellation propagation không thay business rollback
+### Cancellation propagation không thay nghiệp vụ (business / 비즈니스) quay lui (rollback / 롤백)
 
-Structured concurrency tổ chức lifetime của tasks; nó không tự biết rollback database, hoàn tiền payment hay xóa file partial. Khi sibling fail, cancellation chỉ là signal control flow. Domain rollback cần transaction/compensation riêng.
+Structured tính đồng thời (concurrency / 동시성) tổ chức thời gian tồn tại (lifetime / 수명) của tasks; nó không tự biết quay lui (rollback / 롤백) cơ sở dữ liệu (database / 데이터베이스), hoàn tiền payment hay xóa tệp (file / 파일) partial. Khi sibling thất bại (fail / 실패), cancellation chỉ là tín hiệu (signal / 신호) điều khiển (control / 제어) luồng (flow / 흐름). lĩnh vực (domain / 도메인) quay lui (rollback / 롤백) cần giao dịch (transaction / 트랜잭션)/compensation riêng.
 
-Đây là lý do failure tree và side-effect tree không luôn giống nhau. Một task có thể đã commit external side effect trước khi sibling fail.
+Đây là lý do thất bại (failure / 실패) cây (tree / 트리) và side-effect cây (tree / 트리) không luôn giống nhau. Một tác vụ (task / 작업) có thể đã lần ghi nhận (commit / 커밋) bên ngoài (external / 외부) side tác động (effect / 효과) trước khi sibling thất bại (fail / 실패).
 
-## 17. Multiprocessing, multiple interpreters và external resources
+## 17. Multiprocessing, multiple interpreters và bên ngoài (external / 외부) resources
 
-Fork copy process state theo OS copy-on-write semantics, nhưng threads, locks, DB/network connections và runtime state có thể không safe khi fork từ multithreaded process. Modern Python/platform defaults thay đổi để giảm unsafe assumptions.
+Fork bản sao (copy / 복사) tiến trình (process / 프로세스) trạng thái (state / 상태) theo OS sao chép khi ghi (copy-on-write / 쓰기 시 복사) ngữ nghĩa (semantics / 의미론), nhưng threads, locks, DB/mạng (network / 네트워크) connections và thời gian chạy (runtime / 런타임) trạng thái (state / 상태) có thể không safe khi fork từ multithreaded tiến trình (process / 프로세스). hiện đại (modern / 현대적) Python/nền tảng (platform / 플랫폼) defaults thay đổi để giảm unsafe các giả định (assumptions / 가정들).
 
-Không mở DB connection pool rồi giả định forked workers có thể share connection object đúng. Tạo per-process resource sau worker startup theo library contract.
+Không mở DB liên kết (connection / 연결) pool rồi giả định forked workers có thể share liên kết (connection / 연결) đối tượng (object / 객체) đúng. Tạo per-process tài nguyên (resource / 자원) sau worker startup theo thư viện (library / 라이브러리) đặc tả hợp đồng (contract / 계약).
 
-IPC serialization means object identity không đi qua process boundary như shared in-process reference. Đây là lý do process architecture thường tự nhiên hơn với messages/value data.
+IPC serialization means đối tượng (object / 객체) định danh (identity / 식별자) không đi qua tiến trình (process / 프로세스) ranh giới (boundary / 경계) như dùng chung (shared / 공유) in-process tham chiếu (reference / 참조). Đây là lý do tiến trình (process / 프로세스) kiến trúc (architecture / 아키텍처) thường tự nhiên hơn với messages/giá trị (value / 값) dữ liệu (data / 데이터).
 
 ### Multiple interpreters trong Python 3.14
 
-Python 3.14 thêm public high-level API `concurrent.interpreters` và `InterpreterPoolExecutor`. Interpreter là execution context Python với state riêng như import state và builtins. Nhiều interpreters có thể tồn tại trong cùng process, nhưng **interpreter tự nó không tạo concurrency**; concurrency xuất hiện khi execution được đặt trên nhiều threads/interpreters thích hợp.
+Python 3.14 thêm công khai (public / 공개) high-level API `concurrent.interpreters` và `InterpreterPoolExecutor`. trình thông dịch (interpreter / 인터프리터) là thực thi (execution / 실행) ngữ cảnh (context / 맥락) Python với trạng thái (state / 상태) riêng như import trạng thái (state / 상태) và builtins. Nhiều interpreters có thể tồn tại trong cùng tiến trình (process / 프로세스), nhưng **trình thông dịch (interpreter / 인터프리터) tự nó không tạo tính đồng thời (concurrency / 동시성)**; tính đồng thời (concurrency / 동시성) xuất hiện khi thực thi (execution / 실행) được đặt trên nhiều threads/interpreters thích hợp.
 
-`InterpreterPoolExecutor` dùng worker threads nhưng mỗi worker chạy trong interpreter riêng. Mỗi interpreter có GIL riêng trong model này, nên worker có thể đạt multi-core parallelism mà không dùng process riêng. Đổi lại isolation mạnh hơn thread thường: mutable Python objects nhìn chung không được chia sẻ tự do giữa interpreters; data cần copy/serialize hoặc đi qua communication primitive phù hợp.
+`InterpreterPoolExecutor` dùng worker threads nhưng mỗi worker chạy trong trình thông dịch (interpreter / 인터프리터) riêng. Mỗi trình thông dịch (interpreter / 인터프리터) có GIL riêng trong mô hình (model / 모델) này, nên worker có thể đạt multi-core parallelism mà không dùng tiến trình (process / 프로세스) riêng. Đổi lại isolation mạnh hơn luồng thực thi (thread / 스레드) thường: mutable Python objects nhìn chung không được chia sẻ tự do giữa interpreters; dữ liệu (data / 데이터) cần bản sao (copy / 복사)/serialize hoặc đi qua communication thành phần nguyên thủy (primitive / 기본 요소) phù hợp.
 
 ```text
 ThreadPoolExecutor
@@ -458,89 +461,89 @@ ProcessPoolExecutor
 multiple processes + OS address-space isolation + IPC/serialization
 ```
 
-Không nên gọi subinterpreter là “process nhẹ” vì failure/resource isolation vẫn khác process. Một segfault native extension vẫn có thể làm chết toàn process. Cũng không nên gọi nó là “thread bình thường” vì import/module/global state được isolate theo interpreter.
+Không nên gọi subinterpreter là “tiến trình (process / 프로세스) nhẹ” vì thất bại (failure / 실패)/tài nguyên (resource / 자원) isolation vẫn khác tiến trình (process / 프로세스). Một segfault bản địa (native / 네이티브) extension vẫn có thể làm chết toàn tiến trình (process / 프로세스). Cũng không nên gọi nó là “luồng thực thi (thread / 스레드) bình thường” vì import/mô-đun (module / 모듈)/toàn cục (global / 전역) trạng thái (state / 상태) được isolate theo trình thông dịch (interpreter / 인터프리터).
 
-### Extension compatibility có hai trục khác nhau
+### Extension tính tương thích (compatibility / 호환성) có hai trục khác nhau
 
-Native extension cần phân biệt “có chạy trong subinterpreter không?” và “có chạy khi GIL disabled không?”. CPython C API có module slots khác nhau cho hai capability này.
+Bản địa (native / 네이티브) extension cần phân biệt “có chạy trong subinterpreter không?” và “có chạy khi GIL disabled không?”. CPython C API có mô-đun (module / 모듈) slots khác nhau cho hai năng lực (capability / 역량) này.
 
-`Py_mod_multiple_interpreters` cho phép extension khai báo mức support với multiple interpreters. Một module có thể không support subinterpreter, support khi interpreters share GIL, hoặc support per-interpreter GIL. `Py_mod_gil` lại khai báo extension có cần GIL không.
+`Py_mod_multiple_interpreters` cho phép extension khai báo mức hỗ trợ (support / 지원) với multiple interpreters. Một mô-đun (module / 모듈) có thể không hỗ trợ (support / 지원) subinterpreter, hỗ trợ (support / 지원) khi interpreters share GIL, hoặc hỗ trợ (support / 지원) per-interpreter GIL. `Py_mod_gil` lại khai báo extension có cần GIL không.
 
-Hai trục này độc lập về mặt reasoning. Một extension có thể thread-safe dưới GIL nhưng vẫn dùng process-global state khiến subinterpreter isolation sai. Hoặc support subinterpreter nhưng chưa an toàn free-threaded. Vì vậy “import được” trong một execution model không chứng minh model khác an toàn.
+Hai trục này độc lập về mặt lập luận (reasoning / 추론). Một extension có thể thread-safe dưới GIL nhưng vẫn dùng process-global trạng thái (state / 상태) khiến subinterpreter isolation sai. Hoặc hỗ trợ (support / 지원) subinterpreter nhưng chưa an toàn free-threaded. Vì vậy “import được” trong một mô hình thực thi (execution model / 실행 모델) không chứng minh mô hình (model / 모델) khác an toàn.
 
-### Process-global native state là hidden shared state
+### Process-global bản địa (native / 네이티브) trạng thái (state / 상태) là hidden trạng thái dùng chung (shared state / 공유 상태)
 
-Python module globals có thể isolate theo interpreter nhưng native static/global variable của extension có thể vẫn sống ở process scope. Extension hiện đại thường cần per-module/per-interpreter state thay vì giả định singleton process-global state nếu muốn support interpreter isolation tốt.
+Python mô-đun (module / 모듈) globals có thể isolate theo trình thông dịch (interpreter / 인터프리터) nhưng bản địa (native / 네이티브) static/toàn cục (global / 전역) variable của extension có thể vẫn sống ở tiến trình (process / 프로세스) phạm vi (scope / 범위). Extension hiện đại thường cần per-module/per-interpreter trạng thái (state / 상태) thay vì giả định singleton process-global trạng thái (state / 상태) nếu muốn hỗ trợ (support / 지원) trình thông dịch (interpreter / 인터프리터) isolation tốt.
 
-Use case hợp lý cho interpreter pool là CPU-heavy Python tasks có dữ liệu message/value tương đối độc lập và muốn multi-core trong cùng process, nhưng trade-off phải được đo so với process pool và free-threaded threads.
+Use trường hợp (case / 사례) hợp lý cho trình thông dịch (interpreter / 인터프리터) pool là CPU-heavy Python tasks có dữ liệu message/giá trị (value / 값) tương đối độc lập và muốn multi-core trong cùng tiến trình (process / 프로세스), nhưng sự đánh đổi (trade-off / 트레이드오프) phải được đo so với tiến trình (process / 프로세스) pool và free-threaded threads.
 
-## 18. Native extensions và Python performance ceiling
+## 18. bản địa (native / 네이티브) extensions và Python hiệu năng (performance / 성능) ceiling
 
-C/C++/Rust extension hoặc native libraries có thể thực hiện heavy work ngoài Python interpreter. Một số release GIL; một số không. Vì vậy statement “thread không giúp CPU-bound Python” phải thêm điều kiện “pure Python on GIL-enabled CPython”. Native workloads có performance profile khác.
+C/C++/Rust extension hoặc bản địa (native / 네이티브) libraries có thể thực hiện heavy công việc (work / 작업) ngoài Python trình thông dịch (interpreter / 인터프리터). Một số bản phát hành (release / 릴리스) GIL; một số không. Vì vậy statement “luồng thực thi (thread / 스레드) không giúp CPU-bound Python” phải thêm điều kiện “pure Python on GIL-enabled CPython”. bản địa (native / 네이티브) workloads có hiệu năng (performance / 성능) profile khác.
 
-ABI/API compatibility cũng là deployment concern. Wheel tags, platform architecture và Python version quyết định binary distribution nào install được. Pure Python package đơn giản hơn native package về portability.
+ABI/API tính tương thích (compatibility / 호환성) cũng là triển khai (deployment / 배포) concern. Wheel tags, nền tảng (platform / 플랫폼) kiến trúc (architecture / 아키텍처) và Python phiên bản (version / 버전) quyết định nhị phân (binary / 이진) phân phối (distribution / 분포) nào install được. Pure Python gói (package / 패키지) đơn giản hơn bản địa (native / 네이티브) gói (package / 패키지) về portability.
 
-### Thread state vẫn quan trọng khi GIL disabled
+### Luồng thực thi (thread / 스레드) trạng thái (state / 상태) vẫn quan trọng khi GIL disabled
 
-Free-threaded build không xóa khái niệm Python thread state. Native thread dùng Python C API vẫn cần attached thread state. Code C cũ đồng nhất “có thread state” với “đang giữ GIL” có thể cần audit lại mental model.
+Free-threaded bản dựng (build / 빌드) không xóa khái niệm Python luồng thực thi (thread / 스레드) trạng thái (state / 상태). bản địa (native / 네이티브) luồng thực thi (thread / 스레드) dùng Python C API vẫn cần attached luồng thực thi (thread / 스레드) trạng thái (state / 상태). mã (code / 코드) C cũ đồng nhất “có luồng thực thi (thread / 스레드) trạng thái (state / 상태)” với “đang giữ GIL” có thể cần kiểm tra (audit / 감사) lại mô hình tư duy (mental model / 사고 모델).
 
-Long-running native computation không cần Python objects có thể detach thread state để cho runtime/threads khác hoạt động. Trên free-threaded build, detach vẫn có ý nghĩa vì runtime đôi lúc cần coordination như GC stop-the-world ngắn hạn.
+Long-running bản địa (native / 네이티브) computation không cần Python objects có thể detach luồng thực thi (thread / 스레드) trạng thái (state / 상태) để cho thời gian chạy (runtime / 런타임)/threads khác hoạt động. Trên free-threaded bản dựng (build / 빌드), detach vẫn có ý nghĩa vì thời gian chạy (runtime / 런타임) đôi lúc cần coordination như GC stop-the-world ngắn hạn.
 
-### Stable ABI không đồng nghĩa behavior compatibility tuyệt đối
+### Stable ABI không đồng nghĩa hành vi (behavior / 동작) tính tương thích (compatibility / 호환성) tuyệt đối
 
-ABI compatibility giúp binary load across supported versions theo contract, nhưng behavior còn phụ thuộc platform library, runtime build mode, extension assumptions và feature support. Deployment test vẫn phải chạy artifact thật trên target environment.
+ABI tính tương thích (compatibility / 호환성) giúp nhị phân (binary / 이진) tải (load / 로드) across supported versions theo đặc tả hợp đồng (contract / 계약), nhưng hành vi (behavior / 동작) còn phụ thuộc nền tảng (platform / 플랫폼) thư viện (library / 라이브러리), thời gian chạy (runtime / 런타임) bản dựng (build / 빌드) chế độ (mode / 모드), extension các giả định (assumptions / 가정들) và tính năng (feature / 기능) hỗ trợ (support / 지원). triển khai (deployment / 배포) kiểm thử (test / 테스트) vẫn phải chạy sản phẩm tạo ra (artifact / 산출물) thật trên mục tiêu (target / 대상) môi trường (environment / 환경).
 
-## 19. Security sâu hơn: deserialization, introspection và dynamic execution
+## 19. bảo mật (security / 보안) sâu hơn: deserialization, introspection và động (dynamic / 동적) thực thi (execution / 실행)
 
-Dynamic features làm Python mạnh nhưng tăng attack surface.
+Động (dynamic / 동적) features làm Python mạnh nhưng tăng attack surface.
 
-`eval`, `exec`, dynamic import, pickle, template rendering, regex, archive extraction, YAML loader của third-party tools, plugin discovery và subprocess đều là boundary cần threat model.
+`eval`, `exec`, động (dynamic / 동적) import, pickle, template rendering, regex, archive extraction, YAML loader của third-party tools, plugin discovery và subprocess đều là ranh giới (boundary / 경계) cần threat mô hình (model / 모델).
 
-Không có “sanitize string” chung cho mọi context. SQL, shell, HTML, regex, path và URL đều có grammar khác; solution là parameterization/structured API đúng context.
+Không có “sanitize string” chung cho mọi ngữ cảnh (context / 맥락). SQL, shell, HTML, regex, đường dẫn (path / 경로) và URL đều có grammar khác; solution là parameterization/structured API đúng ngữ cảnh (context / 맥락).
 
-### Introspection cũng có side effect surface
+### Introspection cũng có side tác động (effect / 효과) surface
 
-`getattr`, descriptor access, annotation evaluation hoặc plugin import có thể execute code. Security-sensitive tooling không nên giả định “chỉ đang đọc metadata”. Nếu object đến từ untrusted/plugin boundary, inspect operation nào kích hoạt user code cần được hiểu rõ.
+`getattr`, descriptor truy cập (access / 접근), annotation evaluation hoặc plugin import có thể execute mã (code / 코드). Security-sensitive tooling không nên giả định “chỉ đang đọc siêu dữ liệu (metadata / 메타데이터)”. Nếu đối tượng (object / 객체) đến từ untrusted/plugin ranh giới (boundary / 경계), inspect thao tác (operation / 연산) nào kích hoạt người dùng (user / 사용자) mã (code / 코드) cần được hiểu rõ.
 
-### Supply chain
+### Supply chuỗi (chain / 사슬)
 
-Build system trong `pyproject.toml` có code/dependency thực thi trong build environment. Install package không nên được xem là đọc data thụ động. CI cần isolate build, pin trusted sources và review dependency updates phù hợp risk.
+Hệ thống dựng (build system / 빌드 시스템) trong `pyproject.toml` có mã (code / 코드)/phụ thuộc (dependency / 의존성) thực thi trong bản dựng (build / 빌드) môi trường (environment / 환경). Install gói (package / 패키지) không nên được xem là đọc dữ liệu (data / 데이터) thụ động. CI cần isolate bản dựng (build / 빌드), pin trusted sources và rà soát (review / 검토) phụ thuộc (dependency / 의존성) updates phù hợp rủi ro (risk / 위험).
 
-## 20. Observability: log, metric và trace trả lời câu hỏi khác nhau
+## 20. khả năng quan sát (observability / 관측 가능성): log, chỉ số (metric / 지표) và dấu vết (trace / 추적) trả lời câu hỏi khác nhau
 
-Log ghi event/context chi tiết. Metric tổng hợp numeric time series. Trace theo request/job qua components. Python code nên expose semantic context chứ không chỉ stack trace.
+Log ghi sự kiện (event / 이벤트)/ngữ cảnh (context / 맥락) chi tiết. chỉ số (metric / 지표) tổng hợp numeric thời gian (time / 시간) series. dấu vết (trace / 추적) theo yêu cầu (request / 요청)/job qua components. Python mã (code / 코드) nên expose ngữ nghĩa (semantic / 의미적) ngữ cảnh (context / 맥락) chứ không chỉ dấu vết ngăn xếp (stack trace / 스택 트레이스).
 
-Instrument tại boundary: request start/end, external call latency, queue depth, retry count, failure class. Đừng log mỗi loop iteration trong hot path rồi tạo bottleneck/log bill.
+Instrument tại ranh giới (boundary / 경계): yêu cầu (request / 요청) start/end, bên ngoài (external / 외부) lời gọi (call / 호출) độ trễ (latency / 지연 시간), hàng đợi (queue / 큐) độ sâu (depth / 깊이), thử lại (retry / 재시도) count, thất bại (failure / 실패) lớp (class / 클래스). Đừng log mỗi vòng lặp (loop / 루프) iteration trong đường xử lý nóng (hot path / 핫 패스) rồi tạo bottleneck/log bill.
 
-Correlation ID/context propagation trong async/thread code cần strategy rõ; `contextvars` giữ context-local state qua async task boundaries tốt hơn thread-local trong nhiều async use cases. `asyncio.to_thread()` mang current context sang worker thread, nhưng qua process/interpreter/service boundary thì context phải thành explicit metadata.
+Correlation ID/ngữ cảnh (context / 맥락) propagation trong async/luồng thực thi (thread / 스레드) mã (code / 코드) cần chiến lược (strategy / 전략) rõ; `contextvars` giữ context-local trạng thái (state / 상태) qua async tác vụ (task / 작업) boundaries tốt hơn thread-local trong nhiều async use cases. `asyncio.to_thread()` mang hiện tại (current / 현재) ngữ cảnh (context / 맥락) sang worker luồng thực thi (thread / 스레드), nhưng qua tiến trình (process / 프로세스)/trình thông dịch (interpreter / 인터프리터)/dịch vụ (service / 서비스) ranh giới (boundary / 경계) thì ngữ cảnh (context / 맥락) phải thành tường minh (explicit / 명시적) siêu dữ liệu (metadata / 메타데이터).
 
-### Cardinality là performance/cost invariant của metrics
+### Cardinality là hiệu năng (performance / 성능)/chi phí (cost / 비용) bất biến (invariant / 불변식) của metrics
 
-Label metric bằng `user_id`, request URL raw hoặc exception message arbitrary có thể tạo cardinality khổng lồ. Metric system khi đó tốn memory/cost và query chậm. Metric label nên có bounded domain; high-cardinality detail thuộc log/trace phù hợp hơn.
+Label chỉ số (metric / 지표) bằng `user_id`, yêu cầu (request / 요청) URL raw hoặc exception message arbitrary có thể tạo cardinality khổng lồ. chỉ số (metric / 지표) hệ thống (system / 시스템) khi đó tốn bộ nhớ (memory / 메모리)/chi phí (cost / 비용) và truy vấn (query / 쿼리) chậm. chỉ số (metric / 지표) label nên có bounded lĩnh vực (domain / 도메인); high-cardinality detail thuộc log/dấu vết (trace / 추적) phù hợp hơn.
 
-### Sampling làm evidence không đầy đủ
+### Sampling làm bằng chứng (evidence / 증거) không đầy đủ
 
-Trace có thể sampled. Log có thể rate-limit. Metric aggregate mất per-request detail. Vì vậy incident reasoning phải biết loại evidence nào có thể thiếu dữ liệu do policy, không kết luận “không thấy trace = request không xảy ra”.
+Dấu vết (trace / 추적) có thể sampled. Log có thể rate-limit. chỉ số (metric / 지표) aggregate mất per-request detail. Vì vậy sự cố (incident / 인시던트) lập luận (reasoning / 추론) phải biết loại bằng chứng (evidence / 증거) nào có thể thiếu dữ liệu do chính sách (policy / 정책), không kết luận “không thấy dấu vết (trace / 추적) = yêu cầu (request / 요청) không xảy ra”.
 
-### Observability không được đổi business behavior
+### Khả năng quan sát (observability / 관측 가능성) không được đổi nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작)
 
-Logging formatter, exporter hoặc tracing hook không nên raise làm fail request thông thường nếu contract không yêu cầu. Instrumentation nằm trên critical path phải có failure policy rõ: drop/buffer/retry/bounded queue, tránh biến outage telemetry thành outage application.
+Logging formatter, exporter hoặc tracing hook không nên raise làm thất bại (fail / 실패) yêu cầu (request / 요청) thông thường nếu đặc tả hợp đồng (contract / 계약) không yêu cầu. Instrumentation nằm trên đường găng (critical path / 임계 경로) phải có thất bại (failure / 실패) chính sách (policy / 정책) rõ: drop/buffer/thử lại (retry / 재시도)/bounded hàng đợi (queue / 큐), tránh biến outage telemetry thành outage ứng dụng (application / 애플리케이션).
 
-## 21. Deployment: artifact, process, signals và graceful shutdown
+## 21. triển khai (deployment / 배포): sản phẩm tạo ra (artifact / 산출물), tiến trình (process / 프로세스), signals và graceful shutdown
 
-Một deployable artifact cần biết Python version/build, dependency resolution/lock, OS/native dependencies, entry point, configuration contract, migration/startup/shutdown behavior, health/readiness semantics và resource limits.
+Một deployable sản phẩm tạo ra (artifact / 산출물) cần biết Python phiên bản (version / 버전)/bản dựng (build / 빌드), phụ thuộc (dependency / 의존성) resolution/khóa (lock / 잠금), OS/bản địa (native / 네이티브) dependencies, entry điểm (point / 지점), cấu hình (configuration / 구성) đặc tả hợp đồng (contract / 계약), di chuyển (migration / 마이그레이션)/startup/shutdown hành vi (behavior / 동작), health/readiness ngữ nghĩa (semantics / 의미론) và tài nguyên (resource / 자원) limits.
 
-Container image là một cách đóng gói artifact, nhưng reproducibility vẫn phụ thuộc base image tag/digest và build inputs.
+Ảnh bộ chứa (container image / 컨테이너 이미지) là một cách đóng gói sản phẩm tạo ra (artifact / 산출물), nhưng reproducibility vẫn phụ thuộc cơ sở (base / 기반) ảnh (image / 이미지) tag/digest và bản dựng (build / 빌드) inputs.
 
 ### Startup: readiness khác liveness
 
-Process “đang sống” không nghĩa đã sẵn sàng nhận request. Startup có thể cần load config, initialize pool, warm cache bắt buộc hoặc validate migration compatibility. Readiness chỉ nên bật khi invariant phục vụ request đã đạt.
+Tiến trình (process / 프로세스) “đang sống” không nghĩa đã sẵn sàng nhận yêu cầu (request / 요청). Startup có thể cần tải (load / 로드) cấu hình (config / 설정), initialize pool, warm bộ nhớ đệm (cache / 캐시) bắt buộc hoặc validate di chuyển (migration / 마이그레이션) tính tương thích (compatibility / 호환성). Readiness chỉ nên bật khi bất biến (invariant / 불변식) phục vụ yêu cầu (request / 요청) đã đạt.
 
-Ngược lại, liveness trả lời process còn khả năng tiến triển hay không. Dùng cùng một check cho cả hai dễ tạo restart loop hoặc route traffic quá sớm.
+Ngược lại, liveness trả lời tiến trình (process / 프로세스) còn khả năng tiến triển hay không. Dùng cùng một check cho cả hai dễ tạo restart vòng lặp (loop / 루프) hoặc tuyến (route / 경로) traffic quá sớm.
 
-### Graceful shutdown là protocol nhiều bước
+### Graceful shutdown là giao thức (protocol / 프로토콜) nhiều bước
 
-Một shutdown production điển hình:
+Một shutdown môi trường vận hành (production / 운영 환경) điển hình:
 
 ```text
 nhận signal/stop event
@@ -553,93 +556,93 @@ nhận signal/stop event
 → exit
 ```
 
-Signal handler không nên làm toàn bộ cleanup phức tạp trực tiếp. Nó nên chuyển process sang shutdown state mà main orchestration/task hiểu.
+Tín hiệu (signal / 신호) handler không nên làm toàn bộ cleanup phức tạp trực tiếp. Nó nên chuyển tiến trình (process / 프로세스) sang shutdown trạng thái (state / 상태) mà main orchestration/tác vụ (task / 작업) hiểu.
 
-Python signal handler có main-thread/main-interpreter semantics; điều này càng củng cố việc signal là orchestration boundary, không phải worker-control primitive.
+Python tín hiệu (signal / 신호) handler có main-thread/main-interpreter ngữ nghĩa (semantics / 의미론); điều này càng củng cố việc tín hiệu (signal / 신호) là orchestration ranh giới (boundary / 경계), không phải worker-control thành phần nguyên thủy (primitive / 기본 요소).
 
 ### `asyncio.Runner` và Ctrl-C
 
-`asyncio.Runner` xử lý `SIGINT` theo cách phù hợp async hơn việc để `KeyboardInterrupt` cắt arbitrary internals: nó cancel main task để stack có cơ hội unwind qua `try/finally`, rồi mới surface `KeyboardInterrupt`. Nhưng tight CPU loop không reach suspension point thì cancellation không thể tiến triển bình thường.
+`asyncio.Runner` xử lý `SIGINT` theo cách phù hợp async hơn việc để `KeyboardInterrupt` cắt arbitrary internals: nó cancel main tác vụ (task / 작업) để ngăn xếp (stack / 스택) có cơ hội unwind qua `try/finally`, rồi mới surface `KeyboardInterrupt`. Nhưng tight CPU vòng lặp (loop / 루프) không reach suspension điểm (point / 지점) thì cancellation không thể tiến triển bình thường.
 
-Điều này nối trực tiếp scheduler fairness với shutdown correctness: event loop bị monopolize không chỉ tăng latency mà còn làm process khó dừng graceful.
+Điều này nối trực tiếp scheduler fairness với shutdown tính đúng đắn (correctness / 정확성): vòng lặp sự kiện (event loop / 이벤트 루프) bị monopolize không chỉ tăng độ trễ (latency / 지연 시간) mà còn làm tiến trình (process / 프로세스) khó dừng graceful.
 
-### Queue drain trong shutdown
+### Hàng đợi (queue / 큐) drain trong shutdown
 
-Nếu dùng `asyncio.Queue`, graceful path nên ngừng producer trước, rồi drain queue và đảm bảo `task_done()`/`join()` invariant. Immediate queue shutdown chỉ dùng khi policy chấp nhận abandon work.
+Nếu dùng `asyncio.Queue`, graceful đường dẫn (path / 경로) nên ngừng producer trước, rồi drain hàng đợi (queue / 큐) và đảm bảo `task_done()`/`join()` bất biến (invariant / 불변식). Immediate hàng đợi (queue / 큐) shutdown chỉ dùng khi chính sách (policy / 정책) chấp nhận abandon công việc (work / 작업).
 
-Nếu work đã được giao sang thread/process/external service, queue empty không đồng nghĩa side effect ngoài process đã xong. Shutdown phải theo ownership thật của execution resource.
+Nếu công việc (work / 작업) đã được giao sang luồng thực thi (thread / 스레드)/tiến trình (process / 프로세스)/bên ngoài (external / 외부) dịch vụ (service / 서비스), hàng đợi (queue / 큐) empty không đồng nghĩa side tác động (effect / 효과) ngoài tiến trình (process / 프로세스) đã xong. Shutdown phải theo quyền sở hữu (ownership / 소유권) thật của thực thi (execution / 실행) tài nguyên (resource / 자원).
 
-### Executor và background resource
+### Executor và background tài nguyên (resource / 자원)
 
-Default executor/thread pool có lifecycle riêng. Background task không có owner rõ sẽ làm shutdown treo hoặc bị bỏ dở. Mọi background unit nên biết ai chờ nó, ai cancel nó, và deadline nào áp dụng.
+Default executor/luồng thực thi (thread / 스레드) pool có vòng đời (lifecycle / 생명주기) riêng. Background tác vụ (task / 작업) không có đơn vị sở hữu (owner / 오너) rõ sẽ làm shutdown treo hoặc bị bỏ dở. Mọi background đơn vị (unit / 단위) nên biết ai chờ nó, ai cancel nó, và deadline nào áp dụng.
 
-### Bytecode cache `.pyc`
+### Bytecode bộ nhớ đệm (cache / 캐시) `.pyc`
 
-CPython có thể cache compiled bytecode trong `__pycache__`; đây là performance artifact, không phải source of truth. Không commit/treat `.pyc` như deploy logic trừ workflow đặc biệt. Invalid cache không nên thay source semantics.
+CPython có thể bộ nhớ đệm (cache / 캐시) compiled bytecode trong `__pycache__`; đây là hiệu năng (performance / 성능) sản phẩm tạo ra (artifact / 산출물), không phải nguồn chuẩn (source of truth / 정본). Không lần ghi nhận (commit / 커밋)/treat `.pyc` như deploy lô-gic (logic / 논리) trừ workflow đặc biệt. Invalid bộ nhớ đệm (cache / 캐시) không nên thay nguồn (source / 소스) ngữ nghĩa (semantics / 의미론).
 
-## 22. Version evolution: đọc code cũ bằng context
+## 22. phiên bản (version / 버전) evolution: đọc mã (code / 코드) cũ bằng ngữ cảnh (context / 맥락)
 
 ### Python 2 → Python 3
 
-Legacy rất cũ có `print` statement, bytes/text model khác, integer division differences và old-style idioms. Đừng thêm compatibility hack Python 2 vào code mới.
+Legacy rất cũ có `print` statement, bytes/văn bản (text / 텍스트) mô hình (model / 모델) khác, integer division differences và old-style idioms. Đừng thêm tính tương thích (compatibility / 호환성) hack Python 2 vào mã (code / 코드) mới.
 
 ### Python 3.8–3.11
 
-Rất nhiều production code vẫn target line này. Bạn sẽ gặp `typing.List[str]`, `Optional[T]`, `TypeVar`/`Generic`, manual event-loop patterns và packaging config cũ. Đọc được không có nghĩa tiếp tục viết mới y hệt nếu support matrix đã nâng.
+Rất nhiều môi trường vận hành (production / 운영 환경) mã (code / 코드) vẫn mục tiêu (target / 대상) line này. Bạn sẽ gặp `typing.List[str]`, `Optional[T]`, `TypeVar`/`Generic`, manual event-loop patterns và packaging cấu hình (config / 설정) cũ. Đọc được không có nghĩa tiếp tục viết mới y hệt nếu hỗ trợ (support / 지원) ma trận (matrix / 행렬) đã nâng.
 
 ### Python 3.10+
 
-`X | None` union syntax và structural pattern matching xuất hiện. Không dùng `match` chỉ để thay `if/elif` đơn giản.
+`X | None` union cú pháp (syntax / 문법) và structural mẫu (pattern / 패턴) matching xuất hiện. Không dùng `match` chỉ để thay `if/elif` đơn giản.
 
 ### Python 3.11
 
-Exception groups/`except*`, `TaskGroup` và nhiều performance improvements làm concurrent error handling hiện đại hơn.
+Exception groups/`except*`, `TaskGroup` và nhiều hiệu năng (performance / 성능) improvements làm concurrent lỗi (error / 오류) handling hiện đại hơn.
 
 ### Python 3.12
 
-Type parameter syntax (`class Box[T]`, `def f[T]`) và typing evolution giúp generic code gọn hơn. Multiple-interpreter C API contracts cũng tiếp tục rõ hơn.
+Kiểu (type / 타입) parameter cú pháp (syntax / 문법) (`class Box[T]`, `def f[T]`) và typing evolution giúp generic mã (code / 코드) gọn hơn. Multiple-interpreter C API contracts cũng tiếp tục rõ hơn.
 
 ### Python 3.13
 
-Free-threaded build bắt đầu experimental. Queue APIs ở cả sync/async ecosystems có explicit shutdown semantics mới, giúp termination trở thành protocol rõ thay vì chỉ dùng sentinel ad hoc.
+Free-threaded bản dựng (build / 빌드) bắt đầu experimental. hàng đợi (queue / 큐) APIs ở cả sync/async ecosystems có tường minh (explicit / 명시적) shutdown ngữ nghĩa (semantics / 의미론) mới, giúp termination trở thành giao thức (protocol / 프로토콜) rõ thay vì chỉ dùng sentinel ad hoc.
 
 ### Python 3.14
 
-Free-threaded build officially supported nhưng vẫn optional; t-string (`t"..."`) được thêm; annotation semantics thay đổi theo deferred evaluation; asyncio policy system deprecated hướng tới removal 3.16; `concurrent.interpreters` và `InterpreterPoolExecutor` đưa multiple interpreters thành public application-facing concurrency option. Đây là những version distinctions có thể ảnh hưởng trực tiếp modern code.
+Free-threaded bản dựng (build / 빌드) officially supported nhưng vẫn optional; t-string (`t"..."`) được thêm; annotation ngữ nghĩa (semantics / 의미론) thay đổi theo deferred evaluation; asyncio chính sách (policy / 정책) hệ thống (system / 시스템) deprecated hướng tới removal 3.16; `concurrent.interpreters` và `InterpreterPoolExecutor` đưa multiple interpreters thành công khai (public / 공개) application-facing tính đồng thời (concurrency / 동시성) option. Đây là những phiên bản (version / 버전) distinctions có thể ảnh hưởng trực tiếp hiện đại (modern / 현대적) mã (code / 코드).
 
-Không biến chapter thành changelog: timeline tồn tại để giải thích vì sao codebase cũ và code mới có pattern khác nhau.
+Không biến chapter thành changelog: timeline tồn tại để giải thích vì sao codebase cũ và mã (code / 코드) mới có mẫu (pattern / 패턴) khác nhau.
 
-## 23. Architecture: functional core, imperative shell
+## 23. kiến trúc (architecture / 아키텍처): functional cốt lõi (core / 핵심), imperative shell
 
-Một pattern hữu ích cho automation/service là giữ domain transformation càng pure/deterministic càng tốt và đẩy filesystem/network/subprocess/time/random ra adapter/orchestration boundary.
+Một mẫu (pattern / 패턴) hữu ích cho automation/dịch vụ (service / 서비스) là giữ lĩnh vực (domain / 도메인) transformation càng pure/deterministic càng tốt và đẩy filesystem/mạng (network / 네트워크)/subprocess/thời gian (time / 시간)/random ra adapter/orchestration ranh giới (boundary / 경계).
 
-Ví dụ, function `split_parts(text) -> dict` trong [automation/pipeline.py](../../automation/pipeline.py) dễ test vì input/output rõ. Git/HTTP operations có side effect nên isolate sau method boundary. Đây là reasoning pattern chứ không yêu cầu codebase phải “functional programming”.
+Ví dụ, hàm (function / 함수) `split_parts(text) -> dict` trong [automation/pipeline.py](../../automation/pipeline.py) dễ kiểm thử (test / 테스트) vì đầu vào (input / 입력)/đầu ra (output / 출력) rõ. Git/HTTP operations có side tác động (effect / 효과) nên isolate sau phương thức (method / 메서드) ranh giới (boundary / 경계). Đây là lập luận (reasoning / 추론) mẫu (pattern / 패턴) chứ không yêu cầu codebase phải “functional programming”.
 
-Lợi ích: test nhanh, retry/transaction boundary rõ, failure injection dễ, và concurrency ít shared mutable state.
+Lợi ích: kiểm thử (test / 테스트) nhanh, thử lại (retry / 재시도)/giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) rõ, thất bại (failure / 실패) injection dễ, và tính đồng thời (concurrency / 동시성) ít dùng chung (shared / 공유) mutable trạng thái (state / 상태).
 
-Pure core không có nghĩa không được cache. Nó có nghĩa cache/clock/random/I/O được đặt ở boundary có ownership explicit, để core semantics không phụ thuộc hidden process state.
+Pure cốt lõi (core / 핵심) không có nghĩa không được bộ nhớ đệm (cache / 캐시). Nó có nghĩa bộ nhớ đệm (cache / 캐시)/clock/random/I/O được đặt ở ranh giới (boundary / 경계) có quyền sở hữu (ownership / 소유권) tường minh (explicit / 명시적), để cốt lõi (core / 핵심) ngữ nghĩa (semantics / 의미론) không phụ thuộc hidden tiến trình (process / 프로세스) trạng thái (state / 상태).
 
-## 24. Architecture: sync hay async API?
+## 24. kiến trúc (architecture / 아키텍처): sync hay async API?
 
-Đừng chọn async chỉ vì framework hỗ trợ. Nếu entire dependency graph là sync và traffic thấp, sync service có thể đơn giản hơn. Nếu cần hàng nghìn concurrent sockets và ecosystem async-native, async có lợi.
+Đừng chọn async chỉ vì khung phần mềm (framework / 프레임워크) hỗ trợ. Nếu entire phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) là sync và traffic thấp, sync dịch vụ (service / 서비스) có thể đơn giản hơn. Nếu cần hàng nghìn concurrent sockets và ecosystem async-native, async có lợi.
 
-Một API library nên cân nhắc không ép consumer vào event loop nếu operation bản chất CPU/local và sync. Ngược lại, wrap network async API bằng sync thread hack có thể gây nested loop/deadlock/latency complexity.
+Một API thư viện (library / 라이브러리) nên cân nhắc không ép bên tiêu thụ (consumer / 소비자) vào vòng lặp sự kiện (event loop / 이벤트 루프) nếu thao tác (operation / 연산) bản chất CPU/cục bộ (local / 로컬) và sync. Ngược lại, wrap mạng (network / 네트워크) async API bằng sync luồng thực thi (thread / 스레드) hack có thể gây nested vòng lặp (loop / 루프)/deadlock/độ trễ (latency / 지연 시간) độ phức tạp (complexity / 복잡도).
 
-Boundary tốt là một model nhất quán hoặc cung cấp sync/async adapters có ownership rõ.
+Ranh giới (boundary / 경계) tốt là một mô hình (model / 모델) nhất quán hoặc cung cấp sync/async adapters có quyền sở hữu (ownership / 소유권) rõ.
 
-Nếu cung cấp cả sync và async API, tránh copy-paste hai implementation business logic độc lập. Tách shared pure logic và hai orchestration adapters để bug fix không divergence.
+Nếu cung cấp cả sync và async API, tránh copy-paste hai hiện thực (implementation / 구현) lô-gic nghiệp vụ (business logic / 비즈니스 로직) độc lập. Tách dùng chung (shared / 공유) pure lô-gic (logic / 논리) và hai orchestration adapters để bug fix không divergence.
 
-## 25. Architecture: exception taxonomy
+## 25. kiến trúc (architecture / 아키텍처): exception taxonomy
 
-Define exception theo recovery semantics. Ví dụ invalid user input thì caller sửa request; transient external failure có thể retry; configuration error nên fail startup; invariant violation/programming error không nên silently recover.
+Define exception theo khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론). Ví dụ invalid người dùng (user / 사용자) đầu vào (input / 입력) thì caller sửa yêu cầu (request / 요청); transient bên ngoài (external / 외부) thất bại (failure / 실패) có thể thử lại (retry / 재시도); cấu hình (configuration / 구성) lỗi (error / 오류) nên thất bại (fail / 실패) startup; bất biến (invariant / 불변식) violation/programming lỗi (error / 오류) không nên silently recover.
 
 Đừng tạo 50 exception subclasses chỉ vì có 50 functions. Taxonomy phải giúp caller quyết định.
 
-Exception type cũng là API compatibility. Library đổi từ `ValueError` sang custom error có thể phá consumer đang catch exact type. Khi refactor taxonomy, xem nó như public contract nếu exception vượt module boundary.
+Exception kiểu (type / 타입) cũng là API tính tương thích (compatibility / 호환성). thư viện (library / 라이브러리) đổi từ `ValueError` sang custom lỗi (error / 오류) có thể phá bên tiêu thụ (consumer / 소비자) đang catch chính xác (exact / 정확한) kiểu (type / 타입). Khi refactor taxonomy, xem nó như công khai (public / 공개) đặc tả hợp đồng (contract / 계약) nếu exception vượt ranh giới mô-đun (module boundary / 모듈 경계).
 
-## 26. Architecture: configuration và feature evolution
+## 26. kiến trúc (architecture / 아키텍처): cấu hình (configuration / 구성) và tính năng (feature / 기능) evolution
 
-Config nên parse một lần thành typed/validated object ở startup. Passing `os.getenv()` rải khắp code làm dependency ẩn và test khó.
+Cấu hình (config / 설정) nên parse một lần thành typed/validated đối tượng (object / 객체) ở startup. Passing `os.getenv()` rải khắp mã (code / 코드) làm phụ thuộc (dependency / 의존성) ẩn và kiểm thử (test / 테스트) khó.
 
 ```python
 from dataclasses import dataclass
@@ -651,72 +654,74 @@ class Settings:
     dry_run: bool
 ```
 
-Adapter env → Settings nằm ở composition root. Business code nhận `Settings` hoặc specific values. Đây là application architecture áp dụng object model/immutability từ Part 1–2.
+Adapter env → Settings nằm ở composition gốc (root / 루트). nghiệp vụ (business / 비즈니스) mã (code / 코드) nhận `Settings` hoặc specific values. Đây là ứng dụng (application / 애플리케이션) kiến trúc (architecture / 아키텍처) áp dụng mô hình đối tượng (object model / 객체 모델)/immutability từ Part 1–2.
 
-Feature flag cũng là configuration có lifecycle. Nếu flag thay đổi runtime, code phải biết consistency scope: mỗi request snapshot một value hay mỗi branch đọc live store? Hai behavior khác nhau và có thể tạo request chạy nửa theo old flag, nửa theo new flag nếu không định nghĩa snapshot boundary.
+Cờ tính năng (feature flag / 기능 플래그) cũng là cấu hình (configuration / 구성) có vòng đời (lifecycle / 생명주기). Nếu flag thay đổi thời gian chạy (runtime / 런타임), mã (code / 코드) phải biết consistency phạm vi (scope / 범위): mỗi yêu cầu (request / 요청) snapshot một giá trị (value / 값) hay mỗi branch đọc live store? Hai hành vi (behavior / 동작) khác nhau và có thể tạo yêu cầu (request / 요청) chạy nửa theo old flag, nửa theo new flag nếu không định nghĩa snapshot ranh giới (boundary / 경계).
 
-## 27. Production failure matrix
+## 27. môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) ma trận (matrix / 행렬)
 
-| Hiện tượng | Mechanism cần kiểm tra | Sai lầm thường gặp |
+| Hiện tượng | cơ chế (mechanism / 메커니즘) cần kiểm tra | Sai lầm thường gặp |
 |---|---|---|
-| Memory tăng mãi | retained references, unbounded cache/queue/tasks | gọi `gc.collect()` rồi coi là fix |
-| Async service “đơ” | blocking sync call / CPU loop / await không suspend | tăng số coroutine |
-| Queue memory tăng | producer nhanh hơn consumer, queue/task creation không bounded | chỉ thêm semaphore quanh worker |
-| Shutdown treo | task/thread/executor không owner, CPU loop không yield, resource close không deadline | gửi thêm signal rồi hy vọng |
-| `queue.join()` trả nhưng work chưa xong | immediate queue shutdown hoặc `task_done()` sai invariant | coi join như “mọi side effect đã commit” |
-| Request cancel nhưng side effect vẫn chạy | sync work đã offload sang thread/process/external service | tưởng cancel coroutine là kill execution resource |
-| Duplicate job | retry + non-idempotent side effect / multi-worker | chỉ thêm local lock |
-| Import fail ngẫu nhiên | circular import / side effect/order | move import vào function ở mọi nơi |
+| bộ nhớ (memory / 메모리) tăng mãi | retained references, unbounded bộ nhớ đệm (cache / 캐시)/hàng đợi (queue / 큐)/tasks | gọi `gc.collect()` rồi coi là fix |
+| Async dịch vụ (service / 서비스) “đơ” | blocking sync lời gọi (call / 호출) / CPU vòng lặp (loop / 루프) / await không suspend | tăng số coroutine |
+| hàng đợi (queue / 큐) bộ nhớ (memory / 메모리) tăng | producer nhanh hơn bên tiêu thụ (consumer / 소비자), hàng đợi (queue / 큐)/tác vụ (task / 작업) creation không bounded | chỉ thêm semaphore quanh worker |
+| Shutdown treo | tác vụ (task / 작업)/luồng thực thi (thread / 스레드)/executor không đơn vị sở hữu (owner / 오너), CPU vòng lặp (loop / 루프) không yield, tài nguyên (resource / 자원) close không deadline | gửi thêm tín hiệu (signal / 신호) rồi hy vọng |
+| `queue.join()` trả nhưng công việc (work / 작업) chưa xong | immediate hàng đợi (queue / 큐) shutdown hoặc `task_done()` sai bất biến (invariant / 불변식) | coi phép nối (join / 조인) như “mọi side tác động (effect / 효과) đã lần ghi nhận (commit / 커밋)” |
+| yêu cầu (request / 요청) cancel nhưng side tác động (effect / 효과) vẫn chạy | sync công việc (work / 작업) đã offload sang luồng thực thi (thread / 스레드)/tiến trình (process / 프로세스)/bên ngoài (external / 외부) dịch vụ (service / 서비스) | tưởng cancel coroutine là kill thực thi (execution / 실행) tài nguyên (resource / 자원) |
+| Duplicate job | thử lại (retry / 재시도) + non-idempotent side tác động (effect / 효과) / multi-worker | chỉ thêm cục bộ (local / 로컬) khóa (lock / 잠금) |
+| Import thất bại (fail / 실패) ngẫu nhiên | circular import / side tác động (effect / 효과)/thứ tự (order / 순서) | move import vào hàm (function / 함수) ở mọi nơi |
 | Attribute “biến mất” hoặc fallback lạ | descriptor precedence / `AttributeError` phát sinh bên trong lookup | chỉ nhìn `__dict__` |
-| Cached attribute stale | descriptor/cache invalidation không nối mutation path | clear cache thủ công ở caller rải rác |
-| Thread race | shared mutable invariant | tin rằng GIL bảo vệ business operation |
-| Free-threaded không parallel như dự kiến | native extension re-enable GIL / contention / workload không phù hợp | kết luận build “bị lỗi” từ benchmark đơn |
-| Deadlock | lock ordering/cyclic wait | thêm nhiều lock hơn |
-| Process pool chậm | serialization/startup/data transfer | tăng worker vô hạn |
-| Interpreter pool import fail | extension không support interpreter isolation | coi subinterpreter như thread thường |
-| Interpreter pool chạy nhưng state sai | native process-global state leak giữa interpreters | chỉ kiểm Python module globals |
-| Tests flaky | clock/random/network/shared fixture/order | retry test thay vì loại nondeterminism |
-| CPU 100% | hot loop, regex/pathological input, retry storm | đổi `list` thành tuple không profile |
-| Startup chậm | import graph, network call at import, dependency load | lazy import tùy tiện |
-| Secret leak | repr/log/config dump/trace | chỉ xóa secret khỏi source code |
-| Metrics backend quá tải | high-cardinality labels | thêm nhiều label để “dễ debug” |
+| Cached attribute stale | descriptor/bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화) không nối mutation đường dẫn (path / 경로) | clear bộ nhớ đệm (cache / 캐시) thủ công ở caller rải rác |
+| luồng thực thi (thread / 스레드) race | dùng chung (shared / 공유) mutable bất biến (invariant / 불변식) | tin rằng GIL bảo vệ nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) |
+| Free-threaded không parallel như dự kiến | bản địa (native / 네이티브) extension re-enable GIL / contention / tải công việc (workload / 워크로드) không phù hợp | kết luận bản dựng (build / 빌드) “bị lỗi” từ benchmark đơn |
+| Deadlock | khóa (lock / 잠금) thứ tự (ordering / 순서)/cyclic wait | thêm nhiều khóa (lock / 잠금) hơn |
+| tiến trình (process / 프로세스) pool chậm | serialization/startup/dữ liệu (data / 데이터) transfer | tăng worker vô hạn |
+| trình thông dịch (interpreter / 인터프리터) pool import thất bại (fail / 실패) | extension không hỗ trợ (support / 지원) trình thông dịch (interpreter / 인터프리터) isolation | coi subinterpreter như luồng thực thi (thread / 스레드) thường |
+| trình thông dịch (interpreter / 인터프리터) pool chạy nhưng trạng thái (state / 상태) sai | bản địa (native / 네이티브) process-global trạng thái (state / 상태) leak giữa interpreters | chỉ kiểm Python mô-đun (module / 모듈) globals |
+| Tests flaky | clock/random/mạng (network / 네트워크)/dùng chung (shared / 공유) fixture/thứ tự (order / 순서) | thử lại (retry / 재시도) kiểm thử (test / 테스트) thay vì loại nondeterminism |
+| CPU 100% | hot vòng lặp (loop / 루프), regex/pathological đầu vào (input / 입력), thử lại (retry / 재시도) storm | đổi `list` thành tuple không profile |
+| Startup chậm | import đồ thị (graph / 그래프), mạng (network / 네트워크) lời gọi (call / 호출) at import, phụ thuộc (dependency / 의존성) tải (load / 로드) | lazy import tùy tiện |
+| Secret leak | repr/log/cấu hình (config / 설정) dump/dấu vết (trace / 추적) | chỉ xóa secret khỏi mã nguồn (source code / 소스 코드) |
+| Metrics backend quá tải | high-cardinality labels | thêm nhiều label để “dễ gỡ lỗi (debug / 디버그)” |
 
-## 28. Senior/Master review checklist cho một Python service
+## 28. cấp cao (senior / 시니어)/Master rà soát (review / 검토) checklist cho một Python dịch vụ (service / 서비스)
 
-Khi review, đi theo causal chain thay vì style checklist thuần túy.
+Khi rà soát (review / 검토), đi theo chuỗi nhân quả (causal chain / 인과 사슬) thay vì style checklist thuần túy.
 
-Code đang giữ state ở đâu và ai sở hữu nó? Có alias mutable không? Cache nào có freshness/invalidation contract? Attribute access có descriptor/proxy behavior ẩn không? Object/class được construct bằng hook nào? Class creation có import-time side effect không? Failure propagate tới boundary nào? Resource cleanup có lexical ownership không? External calls có timeout/deadline/idempotency không? Concurrency model có đúng workload không? Primitive nào có guarantee thật, guarantee đó ở scope nào? Shared state được synchronize theo invariant nào? Process/interpreter/replica scaling có làm local state hoặc lock vô nghĩa không? Native dependency có support free-threaded/subinterpreter không? Test đang kiểm contract hay implementation detail? Packaging/deploy có reproducible không? Shutdown có stop-accept → drain/cancel → close theo deadline không? Observability có đủ evidence nhưng vẫn bounded cardinality/cost không?
+Mã (code / 코드) đang giữ trạng thái (state / 상태) ở đâu và ai sở hữu nó? Có alias mutable không? bộ nhớ đệm (cache / 캐시) nào có freshness/vô hiệu hóa (invalidation / 무효화) đặc tả hợp đồng (contract / 계약)? Attribute truy cập (access / 접근) có descriptor/proxy hành vi (behavior / 동작) ẩn không? đối tượng (object / 객체)/lớp (class / 클래스) được construct bằng hook nào? lớp (class / 클래스) creation có import-time side tác động (effect / 효과) không? thất bại (failure / 실패) propagate tới ranh giới (boundary / 경계) nào? tài nguyên (resource / 자원) cleanup có lexical quyền sở hữu (ownership / 소유권) không? bên ngoài (external / 외부) calls có hết thời gian chờ (timeout / 타임아웃)/deadline/idempotency không? tính đồng thời (concurrency / 동시성) mô hình (model / 모델) có đúng tải công việc (workload / 워크로드) không? thành phần nguyên thủy (primitive / 기본 요소) nào có guarantee thật, guarantee đó ở phạm vi (scope / 범위) nào? trạng thái dùng chung (shared state / 공유 상태) được synchronize theo bất biến (invariant / 불변식) nào? tiến trình (process / 프로세스)/trình thông dịch (interpreter / 인터프리터)/replica scaling có làm cục bộ (local / 로컬) trạng thái (state / 상태) hoặc khóa (lock / 잠금) vô nghĩa không? bản địa (native / 네이티브) phụ thuộc (dependency / 의존성) có hỗ trợ (support / 지원) free-threaded/subinterpreter không? kiểm thử (test / 테스트) đang kiểm đặc tả hợp đồng (contract / 계약) hay hiện thực (implementation / 구현) detail? Packaging/deploy có reproducible không? Shutdown có stop-accept → drain/cancel → close theo deadline không? khả năng quan sát (observability / 관측 가능성) có đủ bằng chứng (evidence / 증거) nhưng vẫn bounded cardinality/chi phí (cost / 비용) không?
 
-Nếu trả lời được các câu đó, syntax/API lookup còn lại thường là vấn đề nhỏ.
+Nếu trả lời được các câu đó, cú pháp (syntax / 문법)/API lookup còn lại thường là vấn đề nhỏ.
 
-## 29. Bridge ra ngoài Python core
+## 29. cầu nối (bridge / 브리지) ra ngoài Python cốt lõi (core / 핵심)
 
-- FastAPI example hiện có: [automation/app.py](../../automation/app.py). Core Python giải thích coroutine, event loop, lock và `to_thread`; routing/dependency injection/ASGI thuộc FastAPI/backend domain khi canonical library tương ứng được xây.
+- FastAPI example hiện có: [automation/app.py](../../automation/app.py). cốt lõi (core / 핵심) Python giải thích coroutine, vòng lặp sự kiện (event loop / 이벤트 루프), khóa (lock / 잠금) và `to_thread`; routing/phụ thuộc (dependency / 의존성) injection/ASGI thuộc FastAPI/backend lĩnh vực (domain / 도메인) khi chuẩn gốc (canonical / 정본) thư viện (library / 라이브러리) tương ứng được xây.
 - Automation worker: [automation/pipeline.py](../../automation/pipeline.py) và [automation/README.md](../../automation/README.md).
-- Process, thread, scheduling, networking và algorithms sâu hơn: [Computer Science Knowledge Library](../../computer_science/README.md).
-- AI/Data Engineering framework-specific behavior không được duplicate vào Python core. Khi các canonical domain đó tồn tại, Python README nên link trực tiếp tới chapter tương ứng.
+- tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), scheduling, networking và algorithms sâu hơn: [Computer Science Knowledge Library](../../computer_science/README.md).
+- AI/kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) framework-specific hành vi (behavior / 동작) không được duplicate vào Python cốt lõi (core / 핵심). Khi các chuẩn gốc (canonical / 정본) lĩnh vực (domain / 도메인) đó tồn tại, Python README nên link trực tiếp tới chapter tương ứng.
 
 ## Nguồn chính
 
-- Python Language Reference: https://docs.python.org/3.14/reference/
-- Data Model: https://docs.python.org/3.14/reference/datamodel.html
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/tham chiếu (reference / 참조)/
+- mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
 - Descriptor Guide: https://docs.python.org/3.14/howto/descriptor.html
-- Execution Model: https://docs.python.org/3.14/reference/executionmodel.html
-- Import System: https://docs.python.org/3.14/reference/import.html
-- `dis`: https://docs.python.org/3.14/library/dis.html
-- `inspect`: https://docs.python.org/3.14/library/inspect.html
-- `gc`: https://docs.python.org/3.14/library/gc.html
-- `weakref`: https://docs.python.org/3.14/library/weakref.html
-- `contextvars`: https://docs.python.org/3.14/library/contextvars.html
-- `asyncio` synchronization primitives: https://docs.python.org/3.14/library/asyncio-sync.html
-- `asyncio` queues: https://docs.python.org/3.14/library/asyncio-queue.html
-- `asyncio` runners: https://docs.python.org/3.14/library/asyncio-runner.html
-- `concurrent.interpreters`: https://docs.python.org/3.14/library/concurrent.interpreters.html
-- `concurrent.futures`: https://docs.python.org/3.14/library/concurrent.futures.html
-- C API module slots: https://docs.python.org/3.14/c-api/module.html
+- mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/executionmodel.html
+- Import hệ thống (system / 시스템): https://docs.python.org/3.14/tham chiếu (reference / 참조)/import.html
+- `dis`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/dis.html
+- `inspect`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/inspect.html
+- `gc`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/gc.html
+- `weakref`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/weakref.html
+- `contextvars`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/contextvars.html
+- `asyncio` synchronization primitives: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio-sync.html
+- `asyncio` queues: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio-queue.html
+- `asyncio` runners: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio-runner.html
+- `concurrent.interpreters`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/concurrent.interpreters.html
+- `concurrent.futures`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/concurrent.futures.html
+- C API mô-đun (module / 모듈) slots: https://docs.python.org/3.14/c-api/mô-đun (module / 모듈).html
 - Free-threaded C extensions: https://docs.python.org/3.14/howto/free-threading-extensions.html
-- Thread state/GIL: https://docs.python.org/3.14/c-api/threads.html
-- `signal`: https://docs.python.org/3.14/library/signal.html
-- `asyncio`: https://docs.python.org/3.14/library/asyncio.html
+- luồng thực thi (thread / 스레드) trạng thái (state / 상태)/GIL: https://docs.python.org/3.14/c-api/threads.html
+- `signal`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/tín hiệu (signal / 신호).html
+- `asyncio`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio.html
 - Python 3.14 What's New: https://docs.python.org/3.14/whatsnew/3.14.html
-- Packaging User Guide: https://packaging.python.org/
+- Packaging người dùng (user / 사용자) Guide: https://packaging.python.org/
+
+> **Bàn giao:** Sau **Nguồn chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

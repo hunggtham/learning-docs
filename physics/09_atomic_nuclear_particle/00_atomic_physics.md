@@ -1,5 +1,8 @@
 # Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học
 
+> **Mạch đọc:** Đọc **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nguyên tử không phải “hệ Mặt Trời tí hon”** sang **Nguyên tử hydro**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Nguyên tử không phải “hệ Mặt Trời tí hon”
 
 Mô hình hành tinh của nguyên tử có giá trị lịch sử nhưng không phải mô tả đúng theo cơ học lượng tử. Electron không chạy trên một quỹ đạo cổ điển xác định quanh hạt nhân. Trạng thái electron được mô tả bằng hàm sóng hoặc vectơ trạng thái trong không gian Hilbert.
@@ -280,7 +283,7 @@ Nếu vạch đồng thời rộng hơn dự kiến từ thiết bị, độ r�
 
 Một vạch phổ vì thế không chỉ “cho biết nguyên tố nào”; nó có thể mang đồng thời thông tin về thành phần, vận tốc, nhiệt độ, mật độ và trường từ.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Cấu trúc nguyên tử là bài toán trị riêng của một Hamiltonian có đối xứng. Phổ là cách quan sát **chênh lệch giữa các trị riêng**, còn cường độ chuyển mức cho biết cách toán tử tương tác nối các trạng thái đó.
 
@@ -303,16 +306,18 @@ Không. Orbital là trạng thái lượng tử không gian.
 
 Không. Phần tử ma trận và quy tắc chọn quyết định xác suất chuyển mức.
 
-### “Forbidden transition nghĩa tuyệt đối không thể xảy ra”
+### “Forbidden chuyển tiếp (transition / 전이) nghĩa tuyệt đối không thể xảy ra”
 
 Không. Nó thường chỉ bị cấm đối với cơ chế bậc thấp đang xét.
 
 ### “Độ rộng vạch chỉ do thiết bị kém”
 
-Không. Nó còn chứa thông tin về lifetime, nhiệt độ, va chạm và động lực học môi trường.
+Không. Nó còn chứa thông tin về thời gian tồn tại (lifetime / 수명), nhiệt độ, va chạm và động lực học môi trường.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](../08_quantum/00_quantum_foundations.md), [Mômen động lượng và spin](../08_quantum/02_angular_momentum_spin.md), [Động lực học lượng tử và tán xạ](../08_quantum/06_time_dependent_scattering.md).
 
 **Liên hệ tiếp:** [Photon và laser](../06_optics/02_photons_lasers_coherence.md), [Vật lý phân tử](04_molecular_physics.md), [Thiên văn quan sát](../11_astrophysics_cosmology/02_observational_astrophysics_radiative_transfer.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 nuclear physics](./01_nuclear_physics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

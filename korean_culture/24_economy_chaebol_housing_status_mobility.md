@@ -1,5 +1,8 @@
 # Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội
 
+> **Mạch đọc:** Đặt **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kinh tế là một phần của văn hoá đời sống** sang **재벌: tập đoàn kinh doanh chứ không chỉ “công ty rất lớn”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Kinh tế là một phần của văn hoá đời sống
 
 Một phần lớn văn hoá Hàn Quốc hiện đại chỉ hiểu được khi đặt cạnh cấu trúc kinh tế. `대기업`, `중소기업`, `재벌`, căn hộ, jeonse, hệ thống đăng ký mua nhà, chi tiêu giáo dục, cạnh tranh việc làm và thừa kế không phải các chủ đề rời nhau. Chúng nối qua câu hỏi cơ bản: **nguồn lực, cơ hội và rủi ro được phân phối như thế nào, và cá nhân phản ứng ra sao trước sự phân phối đó?**
@@ -118,7 +121,7 @@ Do đó quyết định quy hoạch đô thị có thể tạo hiệu ứng tài
 
 `전세` dùng khoản đặt cọc lớn thay cho tiền thuê hàng tháng theo mô hình truyền thống. Người thuê giao một khoản tiền lớn và kỳ vọng nhận lại khi hết hợp đồng theo pháp luật và điều khoản hợp đồng.
 
-Logic kinh tế:
+Lô-gic (logic / 논리) kinh tế:
 
 ```text
 đặt cọc lớn
@@ -464,4 +467,6 @@ Khung này hữu ích để hiểu đám cưới đơn giản, nghi lễ ngày l
 
 ## Nguồn tham khảo định hướng
 
-Với nhà ở và thị trường thuê: Ministry of Land, Infrastructure and Transport, Korea Real Estate Board, Statistics Korea và Bank of Korea. Với chaebol/tập đoàn kinh doanh: Korea Fair Trade Commission và nguồn công bố/quản trị doanh nghiệp đáng tin cậy. Với chính sách như `청약`, thuế, vay và bảo vệ người thuê, luôn dùng quy định hiện hành thay vì học cứng từ chương phân tích văn hoá.
+Với nhà ở và thị trường thuê: Ministry of Land, hạ tầng (infrastructure / 인프라) and vận chuyển (transport / 전송), Korea Real Estate Board, Statistics Korea và Bank of Korea. Với chaebol/tập đoàn kinh doanh: Korea Fair Trade Commission và nguồn công bố/quản trị doanh nghiệp đáng tin cậy. Với chính sách như `청약`, thuế, vay và bảo vệ người thuê, luôn dùng quy định hiện hành thay vì học cứng từ chương phân tích văn hoá.
+
+> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

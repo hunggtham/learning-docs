@@ -1,5 +1,8 @@
 # Đối xứng, bảo toàn, xấp xỉ và thang đo
 
+> **Mạch đọc:** Đọc **Đối xứng, bảo toàn, xấp xỉ và thang đo** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đối xứng là gì?** sang **Định lý Noether: từ đối xứng đến bảo toàn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Các chủ đề trong chương này trả lời một câu hỏi chung: **trong một hệ phức tạp, điều gì thực sự quan trọng và điều gì có thể bỏ qua?** Đối xứng giúp tìm cấu trúc không đổi, định luật bảo toàn giới hạn những gì hệ có thể làm, số vô thứ nguyên xác định chế độ vật lý, còn tư duy theo thang đo giúp chọn lý thuyết thích hợp.
 
 ## Đối xứng là gì?
@@ -7,6 +10,9 @@ Các chủ đề trong chương này trả lời một câu hỏi chung: **trong
 Đối xứng (symmetry / 대칭성) nghĩa là ta thực hiện một phép biến đổi lên cách mô tả hệ nhưng các định luật chi phối vẫn giữ nguyên dạng. Ví dụ, nếu cùng một thí nghiệm cơ học được thực hiện hôm nay hay ngày mai trong cùng điều kiện mà định luật không đổi, ta nói lý thuyết có đối xứng tịnh tiến theo thời gian.
 
 Đối xứng không chỉ là hình dạng đẹp như hình tròn hay hình cầu. Trong Vật lý, nó là một phát biểu về **tính bất biến (invariance)** của quy luật dưới một phép biến đổi.
+
+
+> **Chuyển mạch:** Từ **Đối xứng là gì?**, ta sang **Định lý Noether: từ đối xứng đến bảo toàn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Định lý Noether: từ đối xứng đến bảo toàn
 
@@ -24,13 +30,19 @@ Có thể tóm tắt cấu trúc này như sau:
 
 Trong vật lý hạt, các đối xứng chuẩn (gauge symmetries) còn đóng vai trò tổ chức cấu trúc của các trường và tương tác. Tuy nhiên khái niệm đối xứng chuẩn tinh tế hơn đối xứng hình học thông thường và nên được học cùng lý thuyết trường lượng tử.
 
+
+> **Chuyển mạch:** Từ **Định lý Noether: từ đối xứng đến bảo toàn**, ta sang **Bảo toàn phụ thuộc vào cách chọn hệ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Bảo toàn phụ thuộc vào cách chọn hệ
 
 Một đại lượng chỉ được bảo toàn khi các điều kiện thích hợp được thỏa mãn. Động lượng của một vật riêng lẻ có thể thay đổi do ngoại lực, trong khi tổng động lượng của hệ lớn hơn gồm các vật tương tác có thể được bảo toàn.
 
 Vì vậy trước khi dùng một định luật bảo toàn, cần hỏi: ranh giới hệ nằm ở đâu, có dòng đại lượng nào đi qua biên không, và có nguồn hoặc tác động bên ngoài nào không.
 
-Đây là lý do tư duy về **hệ (system)** và **ranh giới (boundary)** quan trọng hơn việc ghi nhớ một câu như “động lượng luôn bảo toàn”.
+Đây là lý do tư duy về **hệ (system)** và **ranh giới (boundary / 경계)** quan trọng hơn việc ghi nhớ một câu như “động lượng luôn bảo toàn”.
+
+
+> **Chuyển mạch:** Từ **Bảo toàn phụ thuộc vào cách chọn hệ**, ta sang **Xấp xỉ là một phần của Vật lý** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Xấp xỉ là một phần của Vật lý
 
@@ -64,6 +76,9 @@ Khí lý tưởng cũng là một xấp xỉ. Nó hoạt động tốt khi mật
 
 Khả năng dùng xấp xỉ đúng chỗ là dấu hiệu của hiểu biết sâu. Câu hỏi quan trọng không phải “xấp xỉ có sai không?”—mọi xấp xỉ đều bỏ bớt thứ gì đó—mà là “sai số nhỏ đến đâu và khi nào phần bị bỏ qua trở nên quan trọng?”.
 
+
+> **Chuyển mạch:** Từ **Xấp xỉ là một phần của Vật lý**, ta sang **Tham số nhỏ và bậc của sai số** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Tham số nhỏ và bậc của sai số
 
 Một xấp xỉ tốt thường có một tham số vô thứ nguyên nhỏ `\epsilon`. Nếu
@@ -75,6 +90,9 @@ f(\epsilon)=f_0+f_1\epsilon+f_2\epsilon^2+\cdots,
 thì bỏ các hạng từ `\epsilon^2` trở lên có thể hợp lý khi `|\epsilon|\ll1` và các hệ số không tăng bất thường.
 
 Cách viết này giúp định lượng mức tin cậy. Ta không chỉ nói “vận tốc nhỏ” mà nói `v/c\ll1`; không chỉ nói “góc nhỏ” mà nói `|\theta|\ll1` rad. Việc biến một nhận xét định tính thành một tỉ số vô thứ nguyên là một kỹ năng cốt lõi của mô hình hóa.
+
+
+> **Chuyển mạch:** Từ **Tham số nhỏ và bậc của sai số**, ta sang **Thang đo và lý thuyết hiệu dụng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thang đo và lý thuyết hiệu dụng
 
@@ -104,11 +122,17 @@ Mỗi tầng dùng các bậc tự do hiệu dụng (effective degrees of freedo
 
 Đây là một ví dụ của lý thuyết hiệu dụng (effective theory): mô tả chỉ giữ những biến và tương tác quan trọng ở thang đang xét. Một mô hình có thể rất chính xác trong miền của nó dù không mô tả chi tiết cơ bản nhất của tự nhiên.
 
+
+> **Chuyển mạch:** Từ **Thang đo và lý thuyết hiệu dụng**, ta sang **Liên hệ với trừu tượng hóa trong kỹ nghệ phần mềm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Liên hệ với trừu tượng hóa trong kỹ nghệ phần mềm
 
 Cách tổ chức theo tầng có nét tương đồng với trừu tượng hóa (abstraction) trong phần mềm. Một API không cần phơi bày cách transistor chuyển mạch, nhưng giới hạn phần cứng vẫn xuất hiện ở tầng cao dưới dạng độ trễ, băng thông, nhiệt và năng lượng.
 
 Sự tương đồng này hữu ích để hình dung, nhưng không nên hiểu rằng một tầng vật lý chỉ là một API theo nghĩa đen. Trong Vật lý, việc chuyển giữa các thang còn liên quan tới thống kê, hiện tượng nổi lên và các tham số hiệu dụng được xác định từ lý thuyết hoặc thực nghiệm.
+
+
+> **Chuyển mạch:** Từ **Liên hệ với trừu tượng hóa trong kỹ nghệ phần mềm**, ta sang **Các số vô thứ nguyên xác định chế độ vật lý** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Các số vô thứ nguyên xác định chế độ vật lý
 
@@ -136,6 +160,9 @@ cho biết hiệu ứng tương đối tính có khả năng quan trọng đến
 
 Một con cá nhỏ và một tàu lớn có thể có hình dạng tương tự nhưng dòng chảy quanh chúng rất khác nếu số Reynolds khác nhau. Vì vậy trong thí nghiệm mô hình, chỉ thu nhỏ hình học là chưa đủ; cần duy trì các số vô thứ nguyên quan trọng để đạt tương tự động lực học (dynamic similarity).
 
+
+> **Chuyển mạch:** Từ **Các số vô thứ nguyên xác định chế độ vật lý**, ta sang **Phân tích thứ nguyên và định lý Buckingham Pi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Phân tích thứ nguyên và định lý Buckingham Pi
 
 Nếu một hiện tượng phụ thuộc nhiều đại lượng có đơn vị, ta thường có thể tổ hợp chúng thành một số ít nhóm vô thứ nguyên. Định lý Buckingham Pi cung cấp nền tảng toán học cho việc này.
@@ -148,6 +175,9 @@ T\propto\sqrt{\frac{L}{g}}.
 
 Phân tích thứ nguyên không xác định được hệ số `2\pi`, nhưng nó loại bỏ rất nhiều dạng công thức không thể đúng trước khi ta giải phương trình đầy đủ.
 
+
+> **Chuyển mạch:** Từ **Phân tích thứ nguyên và định lý Buckingham Pi**, ta sang **Khi nào phải đổi mô hình?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Khi nào phải đổi mô hình?
 
 Một mô hình không “hỏng” chỉ vì có một lý thuyết tổng quát hơn tồn tại. Ta cần đổi mô hình khi tham số kiểm soát rời khỏi miền mà xấp xỉ hiện tại đáng tin cậy.
@@ -156,14 +186,22 @@ Khi `v/c` không còn nhỏ, cơ học Newton cần được thay bằng tương
 
 Do đó câu hỏi “lý thuyết nào đúng?” thường nên được thay bằng câu hỏi chính xác hơn: **ở thang và chế độ này, lý thuyết nào giữ đúng các bậc tự do và hiệu ứng cần thiết với độ chính xác mong muốn?**
 
-## Mô hình tư duy (Mental Model)
+
+> **Chuyển mạch:** Từ **Khi nào phải đổi mô hình?**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Đối xứng cho biết điều gì không thay đổi khi ta biến đổi cách mô tả. Bảo toàn cho biết đại lượng nào bị ràng buộc trong quá trình tiến hóa. Xấp xỉ cho phép loại bỏ hiệu ứng nhỏ một cách có kiểm soát. Các số vô thứ nguyên cho biết cơ chế nào đang chi phối. Thang đo quyết định những bậc tự do nào cần xuất hiện trong mô hình.
 
 Khi kết hợp năm ý tưởng này, ta có một nguyên tắc mạnh: **không dùng mô hình phức tạp nhất có thể; dùng mô hình đơn giản nhất vẫn giữ đúng cấu trúc quan trọng của bài toán và biết rõ sai số của nó.**
 
-## Liên kết kiến thức (Knowledge Connection)
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tư duy Vật lý](00_physical_thinking.md), [Ngôn ngữ Toán học](03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Cơ học Lagrange và Hamilton](../01_mechanics/08_analytical_mechanics.md), [Các cấu trúc lặp lại trong Vật lý](../13_connections/00_knowledge_connections.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 physical thinking](./00_physical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,8 @@
-# Phòng thực hành phân tích doanh nghiệp Hàn Quốc (Company Case Labs)
+# Phòng thực hành phân tích doanh nghiệp Hàn Quốc (Company case Labs)
 
-Thư mục này là lớp **thực hành (application)** của bộ tài liệu về doanh nghiệp và kinh tế Hàn Quốc. Các chương trước xây dựng mô hình tư duy (mental model) về lịch sử, kinh tế vĩ mô (macro), ngành, kế toán (accounting), quản trị doanh nghiệp (corporate governance) và thị trường vốn (capital market). Các bài thực hành ở đây buộc người đọc dùng những mô hình đó trên một doanh nghiệp hoặc một cấu trúc kinh doanh cụ thể.
+> **Mạch đọc:** Đọc **Phòng thực hành phân tích doanh nghiệp Hàn Quốc (Company case Labs)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cách sử dụng các bài thực hành** sang **Bản đồ các bài thực hành**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Thư mục này là lớp **thực hành (application)** của bộ tài liệu về doanh nghiệp và kinh tế Hàn Quốc. Các chương trước xây dựng mô hình tư duy (mental model / 사고 모델) về lịch sử, kinh tế vĩ mô (macro), ngành, kế toán (accounting), quản trị doanh nghiệp (corporate governance) và thị trường vốn (capital market). Các bài thực hành ở đây buộc người đọc dùng những mô hình đó trên một doanh nghiệp hoặc một cấu trúc kinh doanh cụ thể.
 
 Mục tiêu không phải đưa ra khuyến nghị mua/bán hay giá mục tiêu (target price). Mỗi bài được thiết kế như một phòng thí nghiệm: bắt đầu từ pháp nhân (legal entity) và hàm sản xuất (production function), dựng cây động lực (driver tree), xác định nơi lợi nhuận kinh tế (economic profit) được tạo ra, nối các động lực với báo cáo tài chính (financial statements), rồi kiểm tra sức chịu đựng (stress test) của bảng cân đối kế toán, cơ cấu quản trị, nguồn vốn và các giả định định giá.
 
@@ -25,7 +27,10 @@ Xác định đúng pháp nhân
 → Xác định điều kiện làm giả thuyết đầu tư không còn đúng
 ```
 
-Các file sử dụng ba loại dữ liệu. **Sự thật cấu trúc (structural fact)** là đặc điểm tương đối bền, chẳng hạn ngành bộ nhớ bán dẫn có cường độ chi phí cố định (fixed-cost intensity) cao. **Số liệu tại thời điểm (snapshot fact)** là dữ liệu có ngày cụ thể như doanh thu của một năm tài chính. **Giả định mô phỏng (stylized assumption)** là con số được đặt ra để phục vụ bài tập và phải luôn được nhận diện rõ là giả định.
+Các tệp (file / 파일) sử dụng ba loại dữ liệu. **Sự thật cấu trúc (structural fact)** là đặc điểm tương đối bền, chẳng hạn ngành bộ nhớ bán dẫn có cường độ chi phí cố định (fixed-cost intensity) cao. **Số liệu tại thời điểm (snapshot fact)** là dữ liệu có ngày cụ thể như doanh thu của một năm tài chính. **Giả định mô phỏng (stylized assumption)** là con số được đặt ra để phục vụ bài tập và phải luôn được nhận diện rõ là giả định.
+
+
+> **Chuyển mạch:** Từ **Cách sử dụng các bài thực hành**, ta sang **Bản đồ các bài thực hành** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ các bài thực hành
 
@@ -42,6 +47,9 @@ Các file sử dụng ba loại dữ liệu. **Sự thật cấu trúc (structur
 | [Hanwha Aerospace](./08_hanwha_aerospace_defense_backlog_case.md) | Hợp đồng quốc phòng dài hạn | chuyển đơn hàng tồn đọng thành doanh thu, mua sắm quốc phòng, vốn lưu động |
 | [Coupang](./09_coupang_commerce_logistics_case.md) | Thương mại + mạng lưới hoàn tất đơn hàng | mật độ mạng lưới, thành viên, tồn kho, lợi nhuận đóng góp |
 | [Xây dựng và PF](./10_korean_construction_pf_case.md) | Phát triển dự án + tài trợ dự án | khoản vay cầu nối → 본PF, bán trước, bảo lãnh, tái cấp vốn |
+
+
+> **Chuyển mạch:** Từ **Bản đồ các bài thực hành**, ta sang **Vì sao cần nhiều mô hình doanh nghiệp khác nhau?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Vì sao cần nhiều mô hình doanh nghiệp khác nhau?
 
@@ -72,6 +80,9 @@ Xây dựng/PF
 
 Điều cần học không phải thuộc lòng công thức. Hãy nhận ra **hàm sản xuất (production function)** của doanh nghiệp rồi chọn đúng cách đọc kế toán và định giá.
 
+
+> **Chuyển mạch:** Từ **Vì sao cần nhiều mô hình doanh nghiệp khác nhau?**, ta sang **Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu
 
 ```text
@@ -84,6 +95,9 @@ Samsung Electronics
 
 Lộ trình này cho thấy sản xuất Hàn Quốc không phải một khu vực đồng nhất. Bộ nhớ có chu kỳ hàng hóa–công nghệ; ô tô chịu tác động của cơ cấu sản phẩm và tài chính nội bộ; pin phụ thuộc quá trình tăng công suất; quốc phòng phụ thuộc mua sắm công và đơn hàng tồn đọng.
 
+
+> **Chuyển mạch:** Từ **Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu**, ta sang **Lộ trình 2 — Kinh tế số và dịch vụ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lộ trình 2 — Kinh tế số và dịch vụ
 
 ```text
@@ -94,6 +108,9 @@ NAVER
 
 NAVER giúp hiểu cách một nền tảng số chuyển quy mô người dùng thành doanh thu, đồng thời vẫn phải đầu tư CAPEX cho AI và đám mây. Coupang cho thấy một công ty số có thể đồng thời là một mạng lưới logistics vật lý rất lớn. LG CNS cho thấy doanh nghiệp CNTT cho khách hàng doanh nghiệp lại phụ thuộc mạnh vào tỷ lệ sử dụng nhân lực, hợp đồng dự án và dịch vụ quản lý có tính lặp lại.
 
+
+> **Chuyển mạch:** Từ **Lộ trình 2 — Kinh tế số và dịch vụ**, ta sang **Lộ trình 3 — Hệ thống tài chính và đòn bẩy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lộ trình 3 — Hệ thống tài chính và đòn bẩy
 
 ```text
@@ -103,6 +120,9 @@ Shinhan Financial Group
 ```
 
 Bài về ngân hàng cho thấy tín dụng được tạo ra và định giá như thế nào. Bài PF cho thấy tín dụng đi vào dự án và có thể quay trở lại hệ thống tài chính thông qua tái cấp vốn hoặc bảo lãnh. Bài SME cho thấy vốn lưu động và vốn vay ngân hàng tác động trực tiếp đến một doanh nghiệp sản xuất như thế nào.
+
+
+> **Chuyển mạch:** Từ **Lộ trình 3 — Hệ thống tài chính và đòn bẩy**, ta sang **Lộ trình 4 — Hiểu doanh nghiệp nơi mình làm việc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lộ trình 4 — Hiểu doanh nghiệp nơi mình làm việc
 
@@ -120,9 +140,15 @@ LG CNS
 
 Đừng chỉ hỏi doanh nghiệp “lớn hay nhỏ”. Hãy hỏi pháp nhân đó nằm ở đâu trong chuỗi giá trị (value chain), ai là khách hàng, ai quyết định ngân sách, doanh thu mang tính lặp lại hay theo dự án, doanh nghiệp có quyền định giá (pricing power) hay không và năng lực nghề nghiệp được tích lũy ở tầng nào.
 
+
+> **Chuyển mạch:** Từ **Lộ trình 4 — Hiểu doanh nghiệp nơi mình làm việc**, ta sang **Quan hệ với các chương khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Quan hệ với các chương khác
 
 Trước khi làm bài thực hành nên đọc [cách phân tích một công ty Hàn Quốc](../20_how_to_analyze_a_korean_company.md) và [workbook phân tích doanh nghiệp](../39_practical_company_analysis_workbook_and_case_patterns.md). Khi cần đọc kế toán, quay lại [DART/KIND và báo cáo tài chính](../09_disclosure_accounting_dart_kind.md) cùng [chất lượng lợi nhuận và dấu hiệu cảnh báo](../38_forensic_accounting_red_flags_and_earnings_quality.md). Khi cần hiểu nguồn vốn, nợ và rủi ro giảm giá trị, dùng [ngân hàng và tài trợ doanh nghiệp](../11_banks_finance_and_corporate_funding.md) cùng [xếp hạng tín dụng, trái phiếu và tái cơ cấu](../36_credit_ratings_bonds_default_and_restructuring.md).
+
+
+> **Chuyển mạch:** Từ **Quan hệ với các chương khác**, ta sang **Khung chung để tự tạo bài thực hành mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Khung chung để tự tạo bài thực hành mới
 
@@ -145,7 +171,10 @@ Khi gặp một doanh nghiệp chưa có trong thư mục, không nên sao chép
 
 Nếu trả lời được các câu này, ta đã có bộ khung của một mô hình phân tích doanh nghiệp.
 
-## Mental Model — Mô hình tư duy
+
+> **Chuyển mạch:** Từ **Khung chung để tự tạo bài thực hành mới**, ta sang **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Học phân tích doanh nghiệp không phải học thuộc danh sách công ty. Ta đang học một **từ vựng về các cơ chế tạo giá trị (production functions)**. Khi nhận ra doanh nghiệp thuộc loại “cỗ máy kinh tế” nào, ta biết nên nhìn động lực, kế toán, rủi ro và dòng tiền ở đâu.
 
@@ -160,3 +189,5 @@ Nếu A xảy ra
 Nếu bằng chứng E không xuất hiện trong khoảng thời gian T
 → giả thuyết ban đầu phải được sửa hoặc loại bỏ.
 ```
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

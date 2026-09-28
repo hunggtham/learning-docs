@@ -1,16 +1,19 @@
 # Hàm số: từ quan hệ đến quy tắc biến đổi
 
-Hàm số (Function / 함수) là một trong những ý tưởng trung tâm của toán học vì nó cho phép ta mô tả **một quy tắc ổn định nối input với output**. Khi nói “nhiệt độ phụ thuộc vào thời gian”, “giá tiền phụ thuộc vào số lượng”, “tọa độ mới phụ thuộc vào tọa độ cũ sau một phép quay”, hoặc “model nhận feature vector và trả về prediction”, ta đang nhìn thế giới dưới dạng một mapping.
+> **Mạch đọc:** Đọc **Hàm số: từ quan hệ đến quy tắc biến đổi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ quan hệ (relation / 관계) đến hàm (function / 함수)** sang **lĩnh vực (domain / 도메인) không phải ghi chú phụ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Điểm quan trọng là function không bắt đầu từ công thức. Nó bắt đầu từ câu hỏi: **nếu biết trạng thái đầu vào, ta có xác định được trạng thái đầu ra hay không?** Công thức, bảng dữ liệu, graph, lookup table, chương trình máy tính hay neural network chỉ là các cách biểu diễn khác nhau của cùng ý tưởng mapping đó.
 
-> Hàm số là một contract: input thuộc không gian nào, output thuộc không gian nào, và mỗi input hợp lệ được map tới output nào.
+Hàm số (Function / 함수) là một trong những ý tưởng trung tâm của toán học vì nó cho phép ta mô tả **một quy tắc ổn định nối đầu vào (input / 입력) với đầu ra (output / 출력)**. Khi nói “nhiệt độ phụ thuộc vào thời gian”, “giá tiền phụ thuộc vào số lượng”, “tọa độ mới phụ thuộc vào tọa độ cũ sau một phép quay”, hoặc “mô hình (model / 모델) nhận tính năng (feature / 기능) véc-tơ (vector / 벡터) và trả về prediction”, ta đang nhìn thế giới dưới dạng một ánh xạ (mapping / 매핑).
 
-## Từ relation đến function
+Điểm quan trọng là hàm (function / 함수) không bắt đầu từ công thức. Nó bắt đầu từ câu hỏi: **nếu biết trạng thái đầu vào, ta có xác định được trạng thái đầu ra hay không?** Công thức, bảng dữ liệu, đồ thị (graph / 그래프), lookup bảng (table / 테이블), chương trình máy tính hay neural mạng (network / 네트워크) chỉ là các cách biểu diễn khác nhau của cùng ý tưởng ánh xạ (mapping / 매핑) đó.
 
-Một quan hệ (Relation / 관계) chỉ nói rằng một số objects có liên hệ với nhau. Nếu `A` là tập người và `B` là tập thành phố, quan hệ “đã từng sống ở” có thể nối một người với nhiều thành phố. Nó chưa phải function từ người sang thành phố vì cùng một input có thể có nhiều outputs.
+> Hàm số là một đặc tả hợp đồng (contract / 계약): đầu vào (input / 입력) thuộc không gian nào, đầu ra (output / 출력) thuộc không gian nào, và mỗi đầu vào (input / 입력) hợp lệ được map tới đầu ra (output / 출력) nào.
 
-Một function `f:A→B` thêm constraint mạnh hơn: **mỗi phần tử của `A` phải được gán đúng một phần tử trong `B`**.
+## Từ quan hệ (relation / 관계) đến hàm (function / 함수)
+
+Một quan hệ (Relation / 관계) chỉ nói rằng một số objects có liên hệ với nhau. Nếu `A` là tập người và `B` là tập thành phố, quan hệ “đã từng sống ở” có thể nối một người với nhiều thành phố. Nó chưa phải hàm (function / 함수) từ người sang thành phố vì cùng một đầu vào (input / 입력) có thể có nhiều outputs.
+
+Một hàm (function / 함수) `f:A→B` thêm ràng buộc (constraint / 제약조건) mạnh hơn: **mỗi phần tử của `A` phải được gán đúng một phần tử trong `B`**.
 
 ```math
 f:A\to B
@@ -22,17 +25,17 @@ f:A\to B
 y=f(x)
 ```
 
-nói rằng `f` map input `x` thành output `y`.
+nói rằng `f` map đầu vào (input / 입력) `x` thành đầu ra (output / 출력) `y`.
 
-Điều kiện “đúng một output” không cấm nhiều inputs cùng đi tới một output. Ví dụ
+Điều kiện “đúng một đầu ra (output / 출력)” không cấm nhiều inputs cùng đi tới một đầu ra (output / 출력). Ví dụ
 
 ```math
 f(x)=x^2
 ```
 
-cho `f(2)=4` và `f(-2)=4`; điều này hoàn toàn hợp lệ. Function chỉ cấm một input duy nhất đồng thời được gán hai outputs khác nhau trong cùng definition.
+cho `f(2)=4` và `f(-2)=4`; điều này hoàn toàn hợp lệ. hàm (function / 함수) chỉ cấm một đầu vào (input / 입력) duy nhất đồng thời được gán hai outputs khác nhau trong cùng definition.
 
-### Domain không phải ghi chú phụ
+### Lĩnh vực (domain / 도메인) không phải ghi chú phụ
 
 Xét biểu thức
 
@@ -40,19 +43,19 @@ Xét biểu thức
 f(x)=\frac{1}{x}.
 ```
 
-Nếu chỉ nhìn formula, ta có thể tưởng domain là mọi số thực. Nhưng tại `x=0`, division không được định nghĩa. Vì vậy một definition chính xác phải nói
+Nếu chỉ nhìn formula, ta có thể tưởng lĩnh vực (domain / 도메인) là mọi số thực. Nhưng tại `x=0`, division không được định nghĩa. Vì vậy một definition chính xác phải nói
 
 ```math
 f:\mathbb R\setminus\{0\}\to\mathbb R.
 ```
 
-Domain là một phần của function, không phải metadata trang trí. Cùng formula nhưng khác domain có thể tạo ra những function có properties khác nhau.
+Lĩnh vực (domain / 도메인) là một phần của hàm (function / 함수), không phải siêu dữ liệu (metadata / 메타데이터) trang trí. Cùng formula nhưng khác lĩnh vực (domain / 도메인) có thể tạo ra những hàm (function / 함수) có properties khác nhau.
 
-Ví dụ `f(x)=x^2` trên toàn `R` không injective. Nếu restrict domain thành `[0,∞)`, nó trở thành injective và có inverse `√x` trên range tương ứng. Việc “chọn domain” vì thế có thể thay đổi cả structure của problem.
+Ví dụ `f(x)=x^2` trên toàn `R` không injective. Nếu restrict lĩnh vực (domain / 도메인) thành `[0,∞)`, nó trở thành injective và có inverse `√x` trên phạm vi (range / 범위) tương ứng. Việc “chọn lĩnh vực (domain / 도메인)” vì thế có thể thay đổi cả cấu trúc (structure / 구조) của bài toán (problem / 문제).
 
-## Codomain và range: vì sao phải phân biệt?
+## Codomain và phạm vi (range / 범위): vì sao phải phân biệt?
 
-Range hay image (Image / 치역) là tập outputs thực sự đạt được. Codomain là tập mà ta tuyên bố output thuộc vào.
+Phạm vi (range / 범위) hay ảnh (image / 이미지) là tập outputs thực sự đạt được. Codomain là tập mà ta tuyên bố đầu ra (output / 출력) thuộc vào.
 
 Với
 
@@ -60,7 +63,7 @@ Với
 f:\mathbb R\to\mathbb R,\qquad f(x)=x^2,
 ```
 
-codomain là `R`, nhưng range là `[0,∞)`.
+codomain là `R`, nhưng phạm vi (range / 범위) là `[0,∞)`.
 
 Nếu thay definition bằng
 
@@ -68,64 +71,64 @@ Nếu thay definition bằng
 f:\mathbb R\to[0,\infty),\qquad f(x)=x^2,
 ```
 
-formula không đổi nhưng property “surjective hay không” đã đổi. Trong definition thứ nhất, function không surjective lên `R` vì không có input nào cho output âm. Trong definition thứ hai, nó surjective lên `[0,∞)`.
+formula không đổi nhưng thuộc tính (property / 속성) “surjective hay không” đã đổi. Trong definition thứ nhất, hàm (function / 함수) không surjective lên `R` vì không có đầu vào (input / 입력) nào cho đầu ra (output / 출력) âm. Trong definition thứ hai, nó surjective lên `[0,∞)`.
 
-Đây là lý do toán học hiện đại coi function là **mapping kèm domain và codomain**, không chỉ là expression.
+Đây là lý do toán học hiện đại coi hàm (function / 함수) là **ánh xạ (mapping / 매핑) kèm lĩnh vực (domain / 도메인) và codomain**, không chỉ là expression.
 
-## Function không nhất thiết là công thức đóng
+## Hàm (function / 함수) không nhất thiết là công thức đóng
 
-Khi học phổ thông, function thường xuất hiện dưới dạng `y=2x+3`, `y=x²` hay `y=sin x`, nên dễ hình thành misconception rằng function phải có closed-form formula.
+Khi học phổ thông, hàm (function / 함수) thường xuất hiện dưới dạng `y=2x+3`, `y=x²` hay `y=sin x`, nên dễ hình thành misconception rằng hàm (function / 함수) phải có closed-form formula.
 
-Thực tế, một function có thể được định nghĩa bằng table:
+Thực tế, một hàm (function / 함수) có thể được định nghĩa bằng bảng (table / 테이블):
 
 | user_id | risk_score |
 |---|---:|
 | A | 0.13 |
 | B | 0.82 |
 
-Nó cũng có thể được định nghĩa bằng algorithm, simulation hoặc program. Một sorting function nhận một list và trả list đã sắp xếp; một compiler pass nhận AST và trả AST mới; một neural network nhận vector input và trả logits. Nếu mapping deterministic và contract được xác định rõ, tất cả đều có thể được nhìn như functions.
+Nó cũng có thể được định nghĩa bằng thuật toán (algorithm / 알고리즘), simulation hoặc program. Một sorting hàm (function / 함수) nhận một danh sách (list / 목록) và trả danh sách (list / 목록) đã sắp xếp; một trình biên dịch (compiler / 컴파일러) pass nhận AST và trả AST mới; một neural mạng (network / 네트워크) nhận véc-tơ (vector / 벡터) đầu vào (input / 입력) và trả logits. Nếu ánh xạ (mapping / 매핑) deterministic và đặc tả hợp đồng (contract / 계약) được xác định rõ, tất cả đều có thể được nhìn như functions.
 
-Điều này rất quan trọng vì nó tách **mathematical object** khỏi **representation**. Function là mapping; formula chỉ là một cách biểu diễn mapping.
+Điều này rất quan trọng vì nó tách **mathematical đối tượng (object / 객체)** khỏi **biểu diễn (representation / 표현)**. hàm (function / 함수) là ánh xạ (mapping / 매핑); formula chỉ là một cách biểu diễn ánh xạ (mapping / 매핑).
 
-## Graph của function là tập các input-output pairs
+## Đồ thị (graph / 그래프) của hàm (function / 함수) là tập các input-output pairs
 
-Với function một biến thực `f:R→R`, graph là tập
+Với hàm (function / 함수) một biến thực `f:R→R`, đồ thị (graph / 그래프) là tập
 
 ```math
 \{(x,f(x))\mid x\in\operatorname{domain}(f)\}.
 ```
 
-Graph không phải là function; nó là một representation hình học của function.
+Đồ thị (graph / 그래프) không phải là hàm (function / 함수); nó là một biểu diễn (representation / 표현) hình học của hàm (function / 함수).
 
-Vertical line test xuất phát trực tiếp từ definition. Nếu một vertical line `x=c` cắt curve ở hai points khác nhau, cùng input `c` đang tương ứng hai values của `y`. Relation đó không thể là graph của một single-valued function `y=f(x)`.
+Vertical line kiểm thử (test / 테스트) xuất phát trực tiếp từ definition. Nếu một vertical line `x=c` cắt curve ở hai points khác nhau, cùng đầu vào (input / 입력) `c` đang tương ứng hai values của `y`. quan hệ (relation / 관계) đó không thể là đồ thị (graph / 그래프) của một single-valued hàm (function / 함수) `y=f(x)`.
 
-Nhưng relation đó vẫn có thể rất hữu ích. Circle
+Nhưng quan hệ (relation / 관계) đó vẫn có thể rất hữu ích. Circle
 
 ```math
 x^2+y^2=1
 ```
 
-không phải global function `y=f(x)` vì với nhiều `x` có hai values `y=±√(1-x²)`. Ta có thể chia nó thành hai functions, hoặc dùng parametric representation. Đây là ví dụ cho thấy “không phải function theo representation hiện tại” không có nghĩa object vô dụng; có thể representation chưa phù hợp.
+không phải toàn cục (global / 전역) hàm (function / 함수) `y=f(x)` vì với nhiều `x` có hai values `y=±√(1-x²)`. Ta có thể chia nó thành hai functions, hoặc dùng parametric biểu diễn (representation / 표현). Đây là ví dụ cho thấy “không phải hàm (function / 함수) theo biểu diễn (representation / 표현) hiện tại” không có nghĩa đối tượng (object / 객체) vô dụng; có thể biểu diễn (representation / 표현) chưa phù hợp.
 
 ## Injective, surjective và bijective
 
-Ba properties này mô tả cách mapping sử dụng input và codomain.
+Ba properties này mô tả cách ánh xạ (mapping / 매핑) sử dụng đầu vào (input / 입력) và codomain.
 
-Một function là đơn ánh (Injective / 일대일 함수) nếu
+Một hàm (function / 함수) là đơn ánh (Injective / 일대일 함수) nếu
 
 ```math
 f(x_1)=f(x_2)\Rightarrow x_1=x_2.
 ```
 
-Nói trực giác: hai inputs khác nhau không bị collapse thành cùng output. Information về input không bị mất theo kiểu đó.
+Nói trực giác: hai inputs khác nhau không bị collapse thành cùng đầu ra (output / 출력). thông tin (information / 정보) về đầu vào (input / 입력) không bị mất theo kiểu đó.
 
-Một function là toàn ánh (Surjective / 전사 함수) nếu mọi element trong codomain đều được hit bởi ít nhất một input.
+Một hàm (function / 함수) là toàn ánh (Surjective / 전사 함수) nếu mọi element trong codomain đều được hit bởi ít nhất một đầu vào (input / 입력).
 
-Một function là song ánh (Bijective / 전단사 함수) nếu vừa injective vừa surjective. Khi đó mỗi output trong codomain tương ứng đúng một input và mapping có thể đảo ngược hoàn toàn.
+Một hàm (function / 함수) là song ánh (Bijective / 전단사 함수) nếu vừa injective vừa surjective. Khi đó mỗi đầu ra (output / 출력) trong codomain tương ứng đúng một đầu vào (input / 입력) và ánh xạ (mapping / 매핑) có thể đảo ngược hoàn toàn.
 
-### Invertibility là câu hỏi về information preservation
+### Invertibility là câu hỏi về thông tin (information / 정보) preservation
 
-Nếu `f` bijective, tồn tại inverse function
+Nếu `f` bijective, tồn tại inverse hàm (function / 함수)
 
 ```math
 f^{-1}:B\to A
@@ -143,7 +146,7 @@ và
 f(f^{-1}(y))=y.
 ```
 
-Đây không chỉ là một trick đại số. Inverse tồn tại khi output giữ đủ information để recover input duy nhất.
+Đây không chỉ là một trick đại số. Inverse tồn tại khi đầu ra (output / 출력) giữ đủ thông tin (information / 정보) để recover đầu vào (input / 입력) duy nhất.
 
 Xét
 
@@ -151,9 +154,9 @@ Xét
 f(x)=x^2.
 ```
 
-Nếu domain là toàn `R`, output `4` không cho biết input là `2` hay `-2`; information về sign đã mất. Vì vậy inverse global không tồn tại. Restrict domain sang `x≥0` loại ambiguity đó và inverse trở thành `√x`.
+Nếu lĩnh vực (domain / 도메인) là toàn `R`, đầu ra (output / 출력) `4` không cho biết đầu vào (input / 입력) là `2` hay `-2`; thông tin (information / 정보) về sign đã mất. Vì vậy inverse toàn cục (global / 전역) không tồn tại. Restrict lĩnh vực (domain / 도메인) sang `x≥0` loại ambiguity đó và inverse trở thành `√x`.
 
-Trong computing, hashing thường cố ý không invertible: nhiều possible inputs map vào không gian output nhỏ hơn. Compression lossless phải preserve đủ information để decode; lossy compression chấp nhận mất một phần information để giảm representation size.
+Trong computing, hashing thường cố ý không invertible: nhiều possible inputs map vào không gian đầu ra (output / 출력) nhỏ hơn. Compression lossless phải preserve đủ thông tin (information / 정보) để decode; lossy compression chấp nhận mất một phần thông tin (information / 정보) để giảm biểu diễn (representation / 표현) kích thước (size / 크기).
 
 ## Composition: xây hệ phức tạp từ transformations đơn giản
 
@@ -169,13 +172,13 @@ và
 f:B\to C.
 ```
 
-Nếu output của `g` là input hợp lệ của `f`, ta có composition
+Nếu đầu ra (output / 출력) của `g` là đầu vào (input / 입력) hợp lệ của `f`, ta có composition
 
 ```math
 (f\circ g)(x)=f(g(x)).
 ```
 
-Composition (Composition / 합성함수) là cách toán học mô tả pipeline. Một complex transformation có thể được hiểu như chuỗi các transformations nhỏ.
+Composition (Composition / 합성함수) là cách toán học mô tả chuỗi xử lý (pipeline / 파이프라인). Một complex transformation có thể được hiểu như chuỗi các transformations nhỏ.
 
 Ví dụ, giả sử temperature Celsius được chuyển sang Fahrenheit rồi thành label:
 
@@ -183,15 +186,15 @@ Ví dụ, giả sử temperature Celsius được chuyển sang Fahrenheit rồi
 Celsius → Fahrenheit → category
 ```
 
-Nếu `g` convert Celsius thành Fahrenheit và `f` convert Fahrenheit thành category, whole process là `f∘g`.
+Nếu `g` convert Celsius thành Fahrenheit và `f` convert Fahrenheit thành category, whole tiến trình (process / 프로세스) là `f∘g`.
 
-Trong software, parse → validate → normalize → persist là pipeline của functions. Trong neural network,
+Trong software, parse → validate → normalize → persist là chuỗi xử lý (pipeline / 파이프라인) của functions. Trong neural mạng (network / 네트워크),
 
 ```math
 f(x)=f_L(f_{L-1}(\cdots f_2(f_1(x))\cdots))
 ```
 
-là composition của layers. Chain rule trong calculus tồn tại chính vì ta cần biết sensitivity của một composition.
+là composition của layers. chuỗi (chain / 사슬) quy tắc (rule / 규칙) trong calculus tồn tại chính vì ta cần biết sensitivity của một composition.
 
 ### Composition thường không giao hoán
 
@@ -201,19 +204,19 @@ Thông thường
 f\circ g\ne g\circ f.
 ```
 
-Rotate rồi translate một object thường khác translate rồi rotate. Normalize data rồi apply threshold có thể khác threshold rồi normalize. Order là một phần của process.
+Rotate rồi translate một đối tượng (object / 객체) thường khác translate rồi rotate. Normalize dữ liệu (data / 데이터) rồi apply threshold có thể khác threshold rồi normalize. thứ tự (order / 순서) là một phần của tiến trình (process / 프로세스).
 
-## Function như transformation của structure
+## Hàm (function / 함수) như transformation của cấu trúc (structure / 구조)
 
-Một cách nhìn mạnh hơn “machine input-output” là coi function như một transformation giữa spaces.
+Một cách nhìn mạnh hơn “machine input-output” là coi hàm (function / 함수) như một transformation giữa spaces.
 
 ```math
 f:A\to B
 ```
 
-nói rằng ta đang chuyển description từ space `A` sang space `B`. Với linear algebra, matrix đại diện linear function giữa vector spaces. Với probability, random variable là function từ sample space sang numbers. Với optimization, objective function map decision vector thành scalar cost. Với database query, query map database state thành result relation.
+nói rằng ta đang chuyển description từ không gian (space / 공간) `A` sang không gian (space / 공간) `B`. Với tuyến tính (linear / 선형) algebra, ma trận (matrix / 행렬) đại diện tuyến tính (linear / 선형) hàm (function / 함수) giữa véc-tơ (vector / 벡터) spaces. Với xác suất (probability / 확률), random variable là hàm (function / 함수) từ mẫu (sample / 표본) không gian (space / 공간) sang numbers. Với tối ưu hóa (optimization / 최적화), mục tiêu (objective / 목표) hàm (function / 함수) map quyết định (decision / 결정) véc-tơ (vector / 벡터) thành scalar chi phí (cost / 비용). Với truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리), truy vấn (query / 쿼리) map cơ sở dữ liệu (database / 데이터베이스) trạng thái (state / 상태) thành kết quả (result / 결과) quan hệ (relation / 관계).
 
-Cùng một concept function vì thế nối nhiều mảng toán khác nhau.
+Cùng một concept hàm (function / 함수) vì thế nối nhiều mảng toán khác nhau.
 
 ## Parameters và family of functions
 
@@ -223,21 +226,21 @@ Xét
 f(x)=ax+b.
 ```
 
-`x` là variable input. `a` và `b` là parameters (Parameters / 매개변수) chọn một function cụ thể trong family affine functions.
+`x` là variable đầu vào (input / 입력). `a` và `b` là parameters (Parameters / 매개변수) chọn một hàm (function / 함수) cụ thể trong family affine functions.
 
-Nếu `a=2,b=3`, ta có một member cụ thể `f(x)=2x+3`. Nếu đổi parameters, mapping thay đổi.
+Nếu `a=2,b=3`, ta có một member cụ thể `f(x)=2x+3`. Nếu đổi parameters, ánh xạ (mapping / 매핑) thay đổi.
 
-Machine learning có thể được nhìn như bài toán: chọn parameters `θ` để function
+Machine học tập (learning / 학습) có thể được nhìn như bài toán: chọn parameters `θ` để hàm (function / 함수)
 
 ```math
 f_\theta(x)
 ```
 
-phù hợp data và objective. Training không “tạo phép thuật”; nó search trong một family functions được architecture cho phép.
+phù hợp dữ liệu (data / 데이터) và mục tiêu (objective / 목표). huấn luyện (training / 학습) không “tạo phép thuật”; nó tìm kiếm (search / 검색) trong một family functions được kiến trúc (architecture / 아키텍처) cho phép.
 
-## Piecewise functions và business rules
+## Piecewise functions và nghiệp vụ (business / 비즈니스) rules
 
-Không phải system nào cũng dùng cùng rule trên toàn domain. Piecewise function cho phép rule phụ thuộc region.
+Không phải hệ thống (system / 시스템) nào cũng dùng cùng quy tắc (rule / 규칙) trên toàn lĩnh vực (domain / 도메인). Piecewise hàm (function / 함수) cho phép quy tắc (rule / 규칙) phụ thuộc region.
 
 ```math
 f(x)=
@@ -247,15 +250,15 @@ x,&x\ge0.
 \end{cases}
 ```
 
-định nghĩa absolute value `|x|`.
+định nghĩa absolute giá trị (value / 값) `|x|`.
 
-Tax brackets, shipping fees, tiered pricing, ReLU activation, rate limits và SLA penalties đều thường có piecewise structure.
+Tax brackets, shipping fees, tiered pricing, ReLU activation, tỷ lệ (rate / 비율) limits và SLA penalties đều thường có piecewise cấu trúc (structure / 구조).
 
-Điểm cần chú ý là piecewise function vẫn chỉ là **một function**, nếu tại mỗi input đúng một branch xác định output. Boundary conditions cần được viết cẩn thận để tránh gap hoặc overlap gây ambiguity.
+Điểm cần chú ý là piecewise hàm (function / 함수) vẫn chỉ là **một hàm (function / 함수)**, nếu tại mỗi đầu vào (input / 입력) đúng một branch xác định đầu ra (output / 출력). ranh giới (boundary / 경계) conditions cần được viết cẩn thận để tránh gap hoặc overlap gây ambiguity.
 
 ## Monotonicity và inverse
 
-Nếu function strictly increasing trên một interval,
+Nếu hàm (function / 함수) strictly increasing trên một interval,
 
 ```math
 x_1<x_2\Rightarrow f(x_1)<f(x_2),
@@ -263,9 +266,9 @@ x_1<x_2\Rightarrow f(x_1)<f(x_2),
 
 thì nó injective trên interval đó. Tương tự với strictly decreasing.
 
-Monotonicity (Monotonicity / 단조성) vì thế là một cách geometric để thấy invertibility cục bộ hoặc trên restricted domain. Đây là lý do logarithm có thể là inverse của exponential: exponential strictly increasing trên `R` khi base `>1`.
+Monotonicity (Monotonicity / 단조성) vì thế là một cách geometric để thấy invertibility cục bộ hoặc trên restricted lĩnh vực (domain / 도메인). Đây là lý do logarithm có thể là inverse của exponential: exponential strictly increasing trên `R` khi cơ sở (base / 기반) `>1`.
 
-## Transformations của graph và tác động lên input/output
+## Transformations của đồ thị (graph / 그래프) và tác động lên đầu vào (input / 입력)/đầu ra (output / 출력)
 
 Nếu `y=f(x)`, một số transformations cơ bản là:
 
@@ -273,31 +276,31 @@ Nếu `y=f(x)`, một số transformations cơ bản là:
 g(x)=f(x)+c
 ```
 
-shift output lên `c`.
+shift đầu ra (output / 출력) lên `c`.
 
 ```math
 g(x)=f(x-c)
 ```
 
-shift graph sang phải `c`, vì muốn `g(x)` dùng cùng old input `u`, ta cần `x-c=u`, tức `x=u+c`.
+shift đồ thị (graph / 그래프) sang phải `c`, vì muốn `g(x)` dùng cùng old đầu vào (input / 입력) `u`, ta cần `x-c=u`, tức `x=u+c`.
 
 ```math
 g(x)=af(x)
 ```
 
-scale output theo `a`.
+Quy mô (scale / 규모) đầu ra (output / 출력) theo `a`.
 
 ```math
 g(x)=f(ax)
 ```
 
-scale input axis theo factor nghịch đảo. Đây là chỗ dễ nhầm vì transformation xảy ra **bên trong input**.
+Quy mô (scale / 규모) đầu vào (input / 입력) axis theo factor nghịch đảo. Đây là chỗ dễ nhầm vì transformation xảy ra **bên trong đầu vào (input / 입력)**.
 
-Cách nhớ tốt hơn không phải thuộc rule “inside ngược, outside thuận”, mà hỏi: “để function cũ nhận cùng input như trước, input mới phải thay đổi thế nào?”
+Cách nhớ tốt hơn không phải thuộc quy tắc (rule / 규칙) “inside ngược, outside thuận”, mà hỏi: “để hàm (function / 함수) cũ nhận cùng đầu vào (input / 입력) như trước, đầu vào (input / 입력) mới phải thay đổi thế nào?”
 
-## Function equality
+## Hàm (function / 함수) equality
 
-Hai functions bằng nhau khi chúng có cùng domain phù hợp và cho cùng output với mọi input trong domain đó. Hai formulas trông khác nhau vẫn có thể represent cùng function trên một domain.
+Hai functions bằng nhau khi chúng có cùng lĩnh vực (domain / 도메인) phù hợp và cho cùng đầu ra (output / 출력) với mọi đầu vào (input / 입력) trong lĩnh vực (domain / 도메인) đó. Hai formulas trông khác nhau vẫn có thể represent cùng hàm (function / 함수) trên một lĩnh vực (domain / 도메인).
 
 Ví dụ
 
@@ -305,13 +308,13 @@ Ví dụ
 \frac{x^2-1}{x-1}=x+1
 ```
 
-đúng khi `x≠1`. Nhưng nếu function bên trái có domain `R\{1}` còn `x+1` được định nghĩa trên toàn `R`, thì chúng không hoàn toàn là cùng function nếu domain được coi là một phần của object.
+đúng khi `x≠1`. Nhưng nếu hàm (function / 함수) bên trái có lĩnh vực (domain / 도메인) `R\{1}` còn `x+1` được định nghĩa trên toàn `R`, thì chúng không hoàn toàn là cùng hàm (function / 함수) nếu lĩnh vực (domain / 도메인) được coi là một phần của đối tượng (object / 객체).
 
 Đây là distinction quan trọng khi simplification tạo ra removable discontinuity.
 
-## Knowledge Connection — function, type và API contract
+## Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수), kiểu (type / 타입) và Đặc tả API (API contract / API 계약)
 
-Trong programming, một function signature như
+Trong programming, một hàm (function / 함수) signature như
 
 ```text
 User → RiskScore
@@ -323,31 +326,31 @@ rất giống notation
 f:A\to B.
 ```
 
-Type system nói input/output spaces hợp lệ; implementation nói mapping cụ thể. Nếu function partial vì một số inputs gây error, ta có thể model output space rộng hơn, chẳng hạn
+Hệ kiểu (type system / 타입 시스템) nói đầu vào (input / 입력)/đầu ra (output / 출력) spaces hợp lệ; hiện thực (implementation / 구현) nói ánh xạ (mapping / 매핑) cụ thể. Nếu hàm (function / 함수) partial vì một số inputs gây lỗi (error / 오류), ta có thể mô hình (model / 모델) đầu ra (output / 출력) không gian (space / 공간) rộng hơn, chẳng hạn
 
 ```text
 UserInput → Result<User, ValidationError>
 ```
 
-thay vì giả vờ mọi input đều hợp lệ.
+thay vì giả vờ mọi đầu vào (input / 입력) đều hợp lệ.
 
-Cách nhìn này giúp thấy domain/codomain không phải khái niệm hàn lâm xa code; chúng là mathematical version của contract design.
+Cách nhìn này giúp thấy lĩnh vực (domain / 도메인)/codomain không phải khái niệm hàn lâm xa mã (code / 코드); chúng là mathematical phiên bản (version / 버전) của đặc tả hợp đồng (contract / 계약) thiết kế (design / 설계).
 
-## Knowledge Connection — function trong probability
+## Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수) trong xác suất (probability / 확률)
 
-Một biến ngẫu nhiên (Random Variable / 확률변수) thực chất là function
+Một biến ngẫu nhiên (Random Variable / 확률변수) thực chất là hàm (function / 함수)
 
 ```math
 X:\Omega\to\mathbb R,
 ```
 
-map mỗi elementary outcome trong sample space `Ω` thành một number. “Random” nằm ở outcome được chọn theo probability model; mapping `X` itself là deterministic.
+map mỗi elementary kết quả (outcome / 결과) trong mẫu (sample / 표본) không gian (space / 공간) `Ω` thành một number. “Random” nằm ở kết quả (outcome / 결과) được chọn theo xác suất (probability / 확률) mô hình (model / 모델); ánh xạ (mapping / 매핑) `X` itself là deterministic.
 
-Đây là một connection quan trọng: khi hiểu function tốt, probability bớt giống một collection công thức riêng biệt.
+Đây là một liên kết (connection / 연결) quan trọng: khi hiểu hàm (function / 함수) tốt, xác suất (probability / 확률) bớt giống một collection công thức riêng biệt.
 
-## Khi function model không đủ
+## Khi hàm (function / 함수) mô hình (model / 모델) không đủ
 
-Function giả định cùng input trong model xác định một output. Nhưng nhiều systems thực tế có noise, hidden state hoặc randomness. Khi cùng observable input có thể dẫn tới nhiều outcomes, ta có thể cần probability distribution
+Hàm (function / 함수) giả định cùng đầu vào (input / 입력) trong mô hình (model / 모델) xác định một đầu ra (output / 출력). Nhưng nhiều các hệ thống (systems / 시스템들) thực tế có noise, hidden trạng thái (state / 상태) hoặc randomness. Khi cùng observable đầu vào (input / 입력) có thể dẫn tới nhiều outcomes, ta có thể cần xác suất (probability / 확률) phân phối (distribution / 분포)
 
 ```math
 P(Y\mid X=x)
@@ -355,22 +358,24 @@ P(Y\mid X=x)
 
 thay vì deterministic `y=f(x)`.
 
-Trong dynamic systems, output còn phụ thuộc internal state chứ không chỉ current external input. Khi đó model state-space phù hợp hơn một stateless function đơn giản.
+Trong động (dynamic / 동적) các hệ thống (systems / 시스템들), đầu ra (output / 출력) còn phụ thuộc trạng thái nội bộ (internal state / 내부 상태) chứ không chỉ hiện tại (current / 현재) bên ngoài (external / 외부) đầu vào (input / 입력). Khi đó mô hình (model / 모델) state-space phù hợp hơn một stateless hàm (function / 함수) đơn giản.
 
-Điều này không làm function mất giá trị; nó chỉ nhắc rằng model phải chứa đủ variables để deterministic mapping trở nên hợp lý, hoặc phải chuyển sang probabilistic model.
+Điều này không làm hàm (function / 함수) mất giá trị; nó chỉ nhắc rằng mô hình (model / 모델) phải chứa đủ variables để deterministic ánh xạ (mapping / 매핑) trở nên hợp lý, hoặc phải chuyển sang probabilistic mô hình (model / 모델).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Function là một transformation có contract. Domain nói những trạng thái đầu vào nào hợp lệ; rule nói chúng được biến đổi ra sao; codomain nói ta đang mô tả output trong space nào. Composition xây hệ lớn từ transformations nhỏ, còn invertibility hỏi transformation có giữ đủ information để quay ngược lại hay không.
+> hàm (function / 함수) là một transformation có đặc tả hợp đồng (contract / 계약). lĩnh vực (domain / 도메인) nói những trạng thái đầu vào nào hợp lệ; quy tắc (rule / 규칙) nói chúng được biến đổi ra sao; codomain nói ta đang mô tả đầu ra (output / 출력) trong không gian (space / 공간) nào. Composition xây hệ lớn từ transformations nhỏ, còn invertibility hỏi transformation có giữ đủ thông tin (information / 정보) để quay ngược lại hay không.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Function nghĩa là mỗi output chỉ có một input.”** Sai chiều. Requirement là mỗi input có đúng một output. Nhiều inputs có thể cùng map tới một output; chỉ khi function injective thì output mới xác định input duy nhất.
+**“hàm (function / 함수) nghĩa là mỗi đầu ra (output / 출력) chỉ có một đầu vào (input / 입력).”** Sai chiều. yêu cầu (requirement / 요구사항) là mỗi đầu vào (input / 입력) có đúng một đầu ra (output / 출력). Nhiều inputs có thể cùng map tới một đầu ra (output / 출력); chỉ khi hàm (function / 함수) injective thì đầu ra (output / 출력) mới xác định đầu vào (input / 입력) duy nhất.
 
-**“Function phải có công thức.”** Formula chỉ là representation. Table, program, lookup mapping, simulation hay learned model đều có thể represent a function.
+**“hàm (function / 함수) phải có công thức.”** Formula chỉ là biểu diễn (representation / 표현). bảng (table / 테이블), program, lookup ánh xạ (mapping / 매핑), simulation hay learned mô hình (model / 모델) đều có thể represent a hàm (function / 함수).
 
-**“`f^{-1}` là `1/f`.”** Inverse function undo mapping; reciprocal chỉ lấy nghịch đảo value. Hai operations khác nhau hoàn toàn.
+**“`f^{-1}` là `1/f`.”** Inverse hàm (function / 함수) undo ánh xạ (mapping / 매핑); reciprocal chỉ lấy nghịch đảo giá trị (value / 값). Hai operations khác nhau hoàn toàn.
 
-**“Domain chỉ cần nhìn từ formula.”** Context cũng quyết định domain. `√x` về algebra có domain `x≥0` trên real numbers, nhưng một physical model có thể còn restriction chặt hơn, chẳng hạn length phải nằm trong một khoảng đo thực tế.
+**“lĩnh vực (domain / 도메인) chỉ cần nhìn từ formula.”** ngữ cảnh (context / 맥락) cũng quyết định lĩnh vực (domain / 도메인). `√x` về algebra có lĩnh vực (domain / 도메인) `x≥0` trên real numbers, nhưng một mô hình vật lý (physical model / 물리 모델) có thể còn restriction chặt hơn, chẳng hạn length phải nằm trong một khoảng đo thực tế.
 
-**“Hai expressions bằng nhau thì hai functions luôn giống nhau.”** Domain/codomain là một phần của function. Simplification có thể che mất excluded points hoặc thay đổi structural properties.
+**“Hai expressions bằng nhau thì hai functions luôn giống nhau.”** lĩnh vực (domain / 도메인)/codomain là một phần của hàm (function / 함수). Simplification có thể che mất excluded points hoặc thay đổi structural properties.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 linear and quadratic models](./01_linear_and_quadratic_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

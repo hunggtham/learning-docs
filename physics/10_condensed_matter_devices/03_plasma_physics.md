@@ -1,5 +1,8 @@
 # Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ
 
+> **Mạch đọc:** Đọc **Vật lý plasma: gần trung hòa, che chắn Debye, sóng tập thể và giam giữ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi nào một khí ion hóa được xem là plasma?** sang **Tính gần trung hòa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Plasma không chỉ là “khí rất nóng”. Điều làm plasma khác một khí ion hóa loãng thông thường là các hạt mang điện không còn tương tác chủ yếu theo từng cặp độc lập; chúng cùng tạo trường điện từ, và chính các trường đó lại điều khiển chuyển động của cả quần thể hạt. Tính tập thể (collective behavior / 집단 거동) là điểm cốt lõi.
 
 ## Khi nào một khí ion hóa được xem là plasma?
@@ -225,7 +228,7 @@ Plasma nhiệt hạch thường ở chế độ ghép yếu `\Gamma\ll1`, trong 
 
 Tokamak dùng từ trường toroidal kết hợp poloidal để tạo đường sức xoắn quanh torus. Mục tiêu là giữ hạt nóng tránh tiếp xúc trực tiếp với thành thiết bị đủ lâu để phản ứng nhiệt hạch xảy ra đáng kể.
 
-Nhưng plasma có nhiều bất ổn định MHD và vi mô. Vì vậy “tạo từ trường mạnh” chưa đủ; phải tối ưu hình học, profile dòng, pressure gradient và turbulence.
+Nhưng plasma có nhiều bất ổn định MHD và vi mô. Vì vậy “tạo từ trường mạnh” chưa đủ; phải tối ưu hình học, profile dòng, pressure độ dốc (gradient / 기울기) và turbulence.
 
 ## Tiêu chuẩn Lawson
 
@@ -235,7 +238,7 @@ Một cách đánh giá điều kiện nhiệt hạch là tích mật độ và 
 n\tau_E
 ```
 
-hoặc dạng triple product
+hoặc dạng triple sản phẩm (product / 제품)
 
 ```math
 nT\tau_E.
@@ -265,13 +268,13 @@ Giải phương trình chất lưu và Maxwell ở thang lớn. Phù hợp khi p
 
 Theo dõi nhiều hạt đại diện trên lưới trường điện từ. Phương pháp này giữ được nhiều hiệu ứng động học hơn nhưng đắt tính toán.
 
-### Hybrid model
+### Hybrid mô hình (model / 모델)
 
 Có thể mô tả ion như hạt còn electron như chất lưu, hoặc ghép nhiều thang theo nhu cầu bài toán.
 
 Việc chọn mô hình phải dựa vào thang Debye, bán kính Larmor, tần số plasma, tần số cyclotron, quãng đường tự do trung bình và thang không gian–thời gian cần nghiên cứu.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Plasma là hệ nhiều thang. Ở thang rất nhỏ cần động học hạt; ở thang trung gian cần phân bố vận tốc; ở thang lớn có thể dùng chất lưu và MHD. Không có một mô hình duy nhất tối ưu cho mọi plasma.
 
@@ -289,14 +292,16 @@ Không. Điện trường nhỏ cục bộ có thể cực kỳ quan trọng tro
 
 ### “Tokamak chỉ cần nam châm thật mạnh”
 
-Không. Giam giữ phụ thuộc topology từ trường, drift, turbulence, pressure gradient và nhiều bất ổn định.
+Không. Giam giữ phụ thuộc topology từ trường, drift, turbulence, pressure độ dốc (gradient / 기울기) và nhiều bất ổn định.
 
 ### “MHD luôn đủ cho plasma”
 
 Không. Khi hiệu ứng động học trong không gian vận tốc quan trọng, cần mô hình Vlasov hoặc PIC.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Maxwell và sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md), [Lý thuyết động học và Boltzmann](../04_thermal_statistical/06_kinetic_theory_boltzmann_equation.md).
 
 **Liên hệ tiếp:** [Vật lý sao](../11_astrophysics_cosmology/00_stars_compact_objects.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Chuyển pha và truyền nhiệt](../04_thermal_statistical/02_phase_transitions_heat_transfer.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế
 
+> **Mạch đọc:** Đặt **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đa tài sản không đồng nghĩa mua nhiều sản phẩm** sang **2. Khung tăng trưởng–lạm phát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này nối các nhóm tài sản riêng lẻ thành một danh mục thực tế. Nội dung giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc ở lần xuất hiện cần thiết. Mục tiêu là hiểu vì sao cùng một tài sản có thể hữu ích trong chế độ này nhưng gây hại trong chế độ khác, vì sao tiền tệ có thể quyết định phần lớn kết quả của nhà đầu tư quốc tế và vì sao phòng vệ là công cụ quản trị rủi ro chứ không phải cách xóa biến động miễn phí.
 
 ## 1. Đa tài sản không đồng nghĩa mua nhiều sản phẩm
@@ -107,7 +110,7 @@ Không phòng vệ cũng không luôn “rủi ro hơn”, vì tiền tệ nư�
 
 ## 11. Điểm kỳ hạn và cơ sở hoán đổi
 
-**Điểm kỳ hạn (forward points)** phản ánh chênh lệch lãi suất theo logic không chênh lệch giá. **Cơ sở hoán đổi tiền tệ (cross-currency basis)** có thể lệch khỏi quan hệ lý thuyết do nhu cầu nguồn vốn và giới hạn bảng cân đối của trung gian.
+**Điểm kỳ hạn (forward points)** phản ánh chênh lệch lãi suất theo lô-gic (logic / 논리) không chênh lệch giá. **Cơ sở hoán đổi tiền tệ (cross-currency basis)** có thể lệch khỏi quan hệ lý thuyết do nhu cầu nguồn vốn và giới hạn bảng cân đối của trung gian.
 
 Do đó chi phí phòng vệ không phải một khoản phí cố định.
 
@@ -214,7 +217,7 @@ Vai trò của vàng nên được đánh giá qua nhiều chế độ, không p
 
 REIT có thể hưởng lợi từ tăng tiền thuê nhưng chịu rủi ro tỷ lệ vốn hóa và tái cấp vốn. Lạm phát cao không tự động có lợi nếu lãi suất tăng nhanh hơn thu nhập hoạt động ròng.
 
-Data center, logistics, văn phòng, nhà ở và bán lẻ có cấu trúc nhu cầu khác nhau nên không nên gom tất cả bất động sản thành một nhóm đồng nhất.
+Dữ liệu (data / 데이터) center, logistics, văn phòng, nhà ở và bán lẻ có cấu trúc nhu cầu khác nhau nên không nên gom tất cả bất động sản thành một nhóm đồng nhất.
 
 ## 24. Danh mục 60/40
 
@@ -232,7 +235,7 @@ Bài học không phải “60/40 đã chết”, mà là tương quan phụ thu
 
 ## 26. Đóng góp rủi ro biên
 
-**Đóng góp rủi ro biên (Marginal Contribution to Risk, MCTR)** hỏi nếu tăng rất nhỏ một vị thế thì rủi ro danh mục tăng bao nhiêu.
+**Đóng góp rủi ro biên (Marginal Contribution to risk, MCTR)** hỏi nếu tăng rất nhỏ một vị thế thì rủi ro danh mục tăng bao nhiêu.
 
 Từ đó có thể tính đóng góp rủi ro của từng tài sản hoặc từng nhân tố thay vì chỉ nhìn tỷ trọng vốn.
 
@@ -408,3 +411,5 @@ Danh mục đa tài sản tốt không phải danh mục sở hữu nhiều sả
 Câu hỏi cuối cùng không phải “tài sản nào sẽ tăng mạnh nhất?”, mà là:
 
 > **Nếu tương lai khác dự báo, cấu trúc danh mục hiện tại có còn đáp ứng mục tiêu hay không?**
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

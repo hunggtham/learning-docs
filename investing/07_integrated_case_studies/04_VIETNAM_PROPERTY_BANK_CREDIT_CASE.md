@@ -1,5 +1,8 @@
 # Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam
 
+> **Mạch đọc:** Đặt **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao bất động sản và ngân hàng liên kết chặt** sang **2. Bắt đầu từ tình trạng pháp lý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Tình huống này dùng chuỗi bất động sản–ngân hàng–công ty chứng khoán–thanh khoản để nối tiến độ pháp lý, bán trước, trái phiếu doanh nghiệp, chất lượng tài sản ngân hàng, thanh khoản trong nước, chu kỳ margin, dư địa chính sách của SBV và định giá cổ phiếu. Mục tiêu không phải kết luận một ngành luôn tốt hoặc xấu, mà học cách phân biệt **khả năng thanh toán, thanh khoản, nút thắt pháp lý và phục hồi chu kỳ**.
 
 ## 1. Vì sao bất động sản và ngân hàng liên kết chặt
@@ -299,7 +302,7 @@ Nếu khả năng sống sót chưa rõ, P/E hay NAV mục tiêu chỉ là bư�
 
 ## 22. NAV cho doanh nghiệp bất động sản
 
-Giá trị tài sản ròng (Net Asset Value, NAV) hữu ích nhưng cần chiết khấu cho:
+Giá trị tài sản ròng (Net Asset value, NAV) hữu ích nhưng cần chiết khấu cho:
 
 ```text
 Rủi ro pháp lý
@@ -551,3 +554,5 @@ Pháp lý
 ## Kết luận
 
 Chu kỳ bất động sản–ngân hàng Việt Nam không thể phân tích chỉ bằng `P/B ngân hàng thấp` hoặc `quỹ đất chủ đầu tư lớn`. Câu hỏi cốt lõi là **thời điểm dòng tiền và cách rủi ro truyền qua bảng cân đối**. Pháp lý quyết định tài sản có thể tạo tiền hay không; tái cấp vốn quyết định doanh nghiệp có sống đủ lâu không; dự phòng ngân hàng quyết định sức khỏe chu kỳ tín dụng; thanh khoản quyết định đường đi của giá; quản trị quyết định giá trị có thực sự tới cổ đông thiểu số hay không. Chỉ khi nối các lớp này lại, nhà đầu tư mới phân biệt được phục hồi bền vững với một đợt tăng tạm thời do thanh khoản.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INFLATION SHOCK FROM CPI TO PORTFOLIO](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

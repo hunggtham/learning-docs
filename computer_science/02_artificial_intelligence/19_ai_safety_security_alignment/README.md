@@ -1,8 +1,11 @@
 # An toàn, Bảo mật và Căn chỉnh AI
 
-Layer này nối ba bài toán thường bị trộn lẫn: **an toàn (safety)**, **bảo mật (security)** và **căn chỉnh (alignment)**. An toàn hỏi hệ thống có thể gây hậu quả nguy hiểm bằng cách nào; bảo mật hỏi attacker có thể khai thác hệ thống bằng cách nào; căn chỉnh hỏi mục tiêu và hành vi có phù hợp ý định, ràng buộc và quyền hạn mong muốn hay không.
+> **Mạch đọc:** Đọc **An toàn, Bảo mật và Căn chỉnh AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kiến thức cần có trước** sang **Thứ tự đọc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Đây là điểm cuối của tuyến production ưu tiên trong AI Knowledge Library:
+
+Tầng (layer / 계층) này nối ba bài toán thường bị trộn lẫn: **an toàn (safety / 안전)**, **bảo mật (security / 보안)** và **căn chỉnh (alignment)**. An toàn hỏi hệ thống có thể gây hậu quả nguy hiểm bằng cách nào; bảo mật hỏi attacker có thể khai thác hệ thống bằng cách nào; căn chỉnh hỏi mục tiêu và hành vi có phù hợp ý định, ràng buộc và quyền hạn mong muốn hay không.
+
+Đây là điểm cuối của tuyến môi trường vận hành (production / 운영 환경) ưu tiên trong AI thư viện kiến thức (knowledge library / 지식 라이브러리):
 
 ```text
 Transformer
@@ -21,7 +24,7 @@ Transformer
 
 ## Kiến thức cần có trước
 
-Trước layer này nên nắm:
+Trước tầng (layer / 계층) này nên nắm:
 
 - [LLM](../08_large_language_models/README.md);
 - [RAG](../09_retrieval_and_rag/README.md);
@@ -30,7 +33,10 @@ Trước layer này nên nắm:
 - [MLOps / LLMOps](../16_mlops_and_llmops/README.md);
 - [Evaluation / Reliability](../18_evaluation_reliability_interpretability/README.md).
 
-Không nên đọc Security như một chủ đề tách khỏi architecture production, vì nhiều rủi ro chỉ xuất hiện khi model được nối với retrieval, memory, tool và quyền thực thi.
+Không nên đọc bảo mật (security / 보안) như một chủ đề tách khỏi kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경), vì nhiều rủi ro chỉ xuất hiện khi mô hình (model / 모델) được nối với retrieval, bộ nhớ (memory / 메모리), công cụ (tool / 도구) và quyền thực thi.
+
+
+> **Chuyển mạch:** Từ **Kiến thức cần có trước**, ta sang **Thứ tự đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thứ tự đọc
 
@@ -46,6 +52,9 @@ Không nên đọc Security như một chủ đề tách khỏi architecture pro
 08_secure_ai_system_design.md
 09_alignment_techniques_and_oversight.md
 ```
+
+
+> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ phụ thuộc
 
@@ -66,9 +75,12 @@ flowchart TD
     SEC --> O
 ```
 
+
+> **Chuyển mạch:** Từ **Bản đồ phụ thuộc**, ta sang **Checklist cho mỗi chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Checklist cho mỗi chapter
 
-Mỗi chapter trong layer này phải trả lời đủ tám câu hỏi:
+Mỗi chapter trong tầng (layer / 계층) này phải trả lời đủ tám câu hỏi:
 
 ```text
 1. prerequisite là gì?
@@ -81,7 +93,10 @@ Mỗi chapter trong layer này phải trả lời đủ tám câu hỏi:
 8. internal links nối sang chapter nào?
 ```
 
-Nếu chỉ mô tả tên attack hoặc tên kỹ thuật mà không nối tới architecture và recovery thì chưa đủ cho production-level understanding.
+Nếu chỉ mô tả tên attack hoặc tên kỹ thuật mà không nối tới kiến trúc (architecture / 아키텍처) và khôi phục (recovery / 복구) thì chưa đủ cho production-level understanding.
+
+
+> **Chuyển mạch:** Từ **Checklist cho mỗi chapter**, ta sang **Mô hình tư duy xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy xuyên suốt
 
@@ -95,6 +110,9 @@ xác định hazard / attacker / objective gap
 → giám sát production
 → thu hồi / rollback / phục hồi
 ```
+
+
+> **Chuyển mạch:** Từ **Mô hình tư duy xuyên suốt**, ta sang **Những phân biệt phải giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những phân biệt phải giữ
 
@@ -114,9 +132,12 @@ Human approval                  ≠ Bảo đảm tự động
 Model alignment                 ≠ Access control
 ```
 
+
+> **Chuyển mạch:** Từ **Những phân biệt phải giữ**, ta sang **Cơ chế kiểm soát theo lớp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cơ chế kiểm soát theo lớp
 
-Một production AI system an toàn hơn thường kết hợp:
+Một môi trường vận hành (production / 운영 환경) AI hệ thống (system / 시스템) an toàn hơn thường kết hợp:
 
 ```text
 model behavior
@@ -131,9 +152,12 @@ model behavior
 + incident response
 ```
 
-Không có một control đơn lẻ nào đủ bao phủ toàn bộ failure surface.
+Không có một điều khiển (control / 제어) đơn lẻ nào đủ bao phủ toàn bộ thất bại (failure / 실패) surface.
 
-## Từ mô hình đe dọa tới control
+
+> **Chuyển mạch:** Từ **Cơ chế kiểm soát theo lớp**, ta sang **Từ mô hình đe dọa tới điều khiển (control / 제어)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Từ mô hình đe dọa tới điều khiển (control / 제어)
 
 Trước khi chọn defense, cần xác định:
 
@@ -146,11 +170,14 @@ side effect nào không thể đảo ngược?
 failure nào phải fail closed?
 ```
 
-Từ đó mới chọn rate limit, sandbox, ACL, verifier, approval hoặc isolation phù hợp.
+Từ đó mới chọn tỷ lệ (rate / 비율) limit, sandbox, ACL, verifier, approval hoặc isolation phù hợp.
 
-## Production release gate
 
-Một thay đổi liên quan Security/Alignment nên được kiểm qua nhiều lớp:
+> **Chuyển mạch:** Từ **Từ mô hình đe dọa tới điều khiển (control / 제어)**, ta sang **môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate
+
+Một thay đổi liên quan bảo mật (security / 보안)/Alignment nên được kiểm qua nhiều lớp:
 
 ```text
 unit / schema test
@@ -163,11 +190,14 @@ unit / schema test
 → monitoring + rollback plan
 ```
 
-Một điểm benchmark tăng không đủ để promote nếu attack surface hoặc authority boundary bị mở rộng.
+Một điểm benchmark tăng không đủ để promote nếu attack surface hoặc authority ranh giới (boundary / 경계) bị mở rộng.
 
-## Internal links chính
 
-Security layer nối trực tiếp với:
+> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate**, ta sang **nội bộ (internal / 내부) links chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Nội bộ (internal / 내부) links chính
+
+Bảo mật (security / 보안) tầng (layer / 계층) nối trực tiếp với:
 
 - [Tool Calling](../10_agents_and_ai_systems/01_tools_and_function_calling.md);
 - [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md);
@@ -177,4 +207,6 @@ Security layer nối trực tiếp với:
 - [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md);
 - [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md).
 
-Đây là điểm kết thúc của tuyến production hiện đã hoàn thiện. `20_ethics_governance_and_society/` và `90_connections/` là phần mở rộng dự kiến của roadmap tổng nhưng chưa được đưa vào branch hiện tại, vì vậy README này không tạo liên kết tới các đường dẫn chưa tồn tại.
+Đây là điểm kết thúc của tuyến môi trường vận hành (production / 운영 환경) hiện đã hoàn thiện. `20_ethics_governance_and_society/` và `90_connections/` là phần mở rộng dự kiến của roadmap tổng nhưng chưa được đưa vào branch hiện tại, vì vậy README này không tạo liên kết tới các đường dẫn chưa tồn tại.
+
+> **Bàn giao:** Sau **nội bộ (internal / 내부) links chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai safety foundations](./00_ai_safety_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

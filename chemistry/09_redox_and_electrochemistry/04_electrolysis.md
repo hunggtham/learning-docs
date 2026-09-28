@@ -1,5 +1,8 @@
 # Điện phân — dùng công điện để thúc đẩy biến đổi hóa học
 
+> **Mạch đọc:** Đọc **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Pin Galvani và bình điện phân** sang **Dấu điện cực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Điện phân (electrolysis / 전기분해)** sử dụng công điện từ nguồn bên ngoài để thúc đẩy phản ứng oxy hóa–khử theo chiều không tự phát trong điều kiện đang xét. Nếu pin Galvani chuyển năng lượng tự do hóa học thành công điện, thì bình điện phân làm chiều ngược lại: dùng điện năng để thay đổi thành phần hóa học.
 
 Điện phân là nền cho mạ điện, tinh luyện và điều chế kim loại, sản xuất chlorine–kiềm, tạo hydrogen, điện khử `CO2`, sạc pin và nhiều công nghệ chuyển đổi năng lượng. Muốn hiểu một hệ điện phân thực, cần nối đồng thời nhiệt động lực học, động học điện cực, vận chuyển khối, vật liệu và an toàn.
@@ -213,7 +216,7 @@ V_{cell}
 +\eta_{anode}
 +\eta_{cathode}
 +IR
-+\eta_{transport}
++\eta_{vận chuyển (transport / 전송)}
 \]
 
 Các phần bổ sung gồm:
@@ -358,7 +361,7 @@ Trong môi trường acid, phương trình tổng có thể viết:
 2H^++2e^-\rightarrow H_2
 \]
 
-Trong môi trường base, nước thường là nguồn proton trực tiếp.
+Trong môi trường cơ sở (base / 기반), nước thường là nguồn proton trực tiếp.
 
 Cơ chế có thể gồm các trung gian hydrogen hấp phụ và các bước Volmer, Tafel hoặc Heyrovsky tùy vật liệu xúc tác và môi trường.
 
@@ -617,7 +620,7 @@ Thiết kế phải đồng thời kiểm soát:
 - áp suất;
 - chế độ khẩn cấp.
 
-## Trade-off quan trọng trong thiết kế điện phân
+## Sự đánh đổi (trade-off / 트레이드오프) quan trọng trong thiết kế điện phân
 
 Một cải tiến ở một chỉ tiêu có thể làm chỉ tiêu khác xấu đi.
 
@@ -699,3 +702,5 @@ nhiệt động lực học
 ```
 
 Xem tiếp: [Pin, ăn mòn và lưu trữ năng lượng](./05_batteries_corrosion_and_energy_storage.md) và [Động học điện hóa và phổ trở kháng](./06_electrochemical_kinetics_and_impedance.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

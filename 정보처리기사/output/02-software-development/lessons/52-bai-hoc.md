@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **48. 테스트 자동화 도구 (Test Automation Tools)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **49. 테스트 하네스 구성 요소 (Test Harness Components)** và nối nó với **핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -29,4 +31,4 @@
 * **케이스(Case)**: 입력 값, 실행 조건, 기대 결과 명세.
 * **스크립트(Script)**: 테스트 실행 절차 명세(자동화).
 * **목 오브젝트(Mock Object)**: 조건부 입력에 따라 상황에 맞는 행위를 수행하는 가짜 객체.
-* **VI (Vietnamese) (Tiếng Việt):** Thành phần của Test Harness: Driver (gọi cấp dưới), Stub (giả cấp dưới), Suites (tập hợp TC), Case (kịch bản), Script (mã chạy tự động), Mock Object (đối tượng giả).
+* **VI (Vietnamese) (Tiếng Việt):** Thành phần của kiểm thử (test / 테스트) Harness: Driver (gọi cấp dưới), Stub (giả cấp dưới), Suites (tập hợp TC), trường hợp (case / 사례) (kịch bản), Script (mã chạy tự động), Mock đối tượng (object / 객체).

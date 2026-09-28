@@ -1,10 +1,13 @@
-# Python Knowledge Library
+# Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리)
 
-Python Knowledge Library là bộ tài liệu canonical cho kiến thức Python trong repository này. Mục tiêu không phải ghi nhớ cú pháp mà là hiểu mô hình thực thi, mô hình object, data model, hệ thống import, type system, concurrency và cách Python vận hành trong môi trường production.
+> **Mạch đọc:** Đọc **Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mạch học (learning flow / 학습 흐름) và phụ thuộc (dependency / 의존성)** sang **ranh giới (boundary / 경계) với các lĩnh vực (domain / 도메인) khác**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Baseline hiện tại là Python 3.14.7, bản stable phát hành ngày 2026-08-05. Ngày kiểm chứng: 2026-09-22. Những phần nói riêng về CPython luôn được phân biệt với semantics của ngôn ngữ Python, vì CPython là implementation phổ biến nhất chứ không phải toàn bộ định nghĩa của Python.
 
-## Learning flow và dependency
+Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리) là bộ tài liệu chuẩn gốc (canonical / 정본) cho kiến thức Python trong repository này. Mục tiêu không phải ghi nhớ cú pháp mà là hiểu mô hình thực thi, mô hình đối tượng (object / 객체), mô hình dữ liệu (data model / 데이터 모델), hệ thống import, hệ kiểu (type system / 타입 시스템), tính đồng thời (concurrency / 동시성) và cách Python vận hành trong môi trường vận hành (production / 운영 환경).
+
+Baseline hiện tại là Python 3.14.7, bản stable phát hành ngày 2026-08-05. Ngày kiểm chứng: 2026-09-22. Những phần nói riêng về CPython luôn được phân biệt với ngữ nghĩa (semantics / 의미론) của ngôn ngữ Python, vì CPython là hiện thực (implementation / 구현) phổ biến nhất chứ không phải toàn bộ định nghĩa của Python.
+
+## Mạch học (learning flow / 학습 흐름) và phụ thuộc (dependency / 의존성)
 
 ```text
 Part 1 — execution / name binding / object / data / function
@@ -27,61 +30,78 @@ Engineering Case Studies — symptom → invariant → mechanism → evidence �
 6. [Glossary Việt–Anh–Hàn](GLOSSARY.md)
 7. [Coverage & final audit](COVERAGE_AUDIT.md)
 
-Bốn part là bốn canonical chapter lớn. Cấu trúc giữ convention Beginner → Intermediate → Senior → Master đã dùng ở Java/JavaScript, nhưng nội dung bên trong đi theo dependency tự nhiên của Python thay vì chia chapter chỉ để tăng số lượng. Pythonic idiom, anti-pattern, internals và senior note được đặt cạnh concept mà chúng tác động, không tách thành file rời gây duplicate.
+Bốn part là bốn chuẩn gốc (canonical / 정본) chapter lớn. Cấu trúc giữ convention Beginner → Intermediate → cấp cao (senior / 시니어) → Master đã dùng ở Java/JavaScript, nhưng nội dung bên trong đi theo phụ thuộc (dependency / 의존성) tự nhiên của Python thay vì chia chapter chỉ để tăng số lượng. Pythonic idiom, anti-pattern, internals và cấp cao (senior / 시니어) ghi chú (note / 노트) được đặt cạnh concept mà chúng tác động, không tách thành tệp (file / 파일) rời gây duplicate.
 
-`ENGINEERING_CASE_STUDIES.md` không phải Part 5. Nó là lớp tích hợp sau bốn part: cùng một tình huống production được nhìn qua object semantics, import, packaging, concurrency, security và observability để luyện causal reasoning. Các case không định nghĩa lại concept đã có; chúng chỉ nối các concept thành đường suy luận từ hiện tượng quan sát được tới invariant, mechanism và evidence.
+`ENGINEERING_CASE_STUDIES.md` không phải Part 5. Nó là lớp tích hợp sau bốn part: cùng một tình huống môi trường vận hành (production / 운영 환경) được nhìn qua đối tượng (object / 객체) ngữ nghĩa (semantics / 의미론), import, packaging, tính đồng thời (concurrency / 동시성), bảo mật (security / 보안) và khả năng quan sát (observability / 관측 가능성) để luyện lập luận nhân quả (causal reasoning / 인과적 추론). Các trường hợp (case / 사례) không định nghĩa lại concept đã có; chúng chỉ nối các concept thành đường suy luận từ hiện tượng quan sát được tới bất biến (invariant / 불변식), cơ chế (mechanism / 메커니즘) và bằng chứng (evidence / 증거).
 
-Part 1 là prerequisite trực tiếp của Part 2. Part 3 có thể được đọc sớm nếu mục tiêu là project/deployment, nhưng các phần testing, import, concurrency và memory đều giả định mental model object/reference từ Part 1–2. Part 4 là lớp đào sâu; nó không thay thế ba phần trước mà giải thích vì sao các behavior đã học xuất hiện ở runtime và production.
+Part 1 là prerequisite trực tiếp của Part 2. Part 3 có thể được đọc sớm nếu mục tiêu là dự án (project / 프로젝트)/triển khai (deployment / 배포), nhưng các phần testing, import, tính đồng thời (concurrency / 동시성) và bộ nhớ (memory / 메모리) đều giả định mô hình tư duy (mental model / 사고 모델) đối tượng (object / 객체)/tham chiếu (reference / 참조) từ Part 1–2. Part 4 là lớp đào sâu; nó không thay thế ba phần trước mà giải thích vì sao các hành vi (behavior / 동작) đã học xuất hiện ở thời gian chạy (runtime / 런타임) và môi trường vận hành (production / 운영 환경).
 
-## Boundary với các domain khác
 
-Python core ở đây giải thích ngôn ngữ, CPython khi cần thiết, standard library và production practice gắn trực tiếp với Python. FastAPI, AI framework và Data Engineering framework không được kéo sâu vào library chỉ vì chúng dùng file `.py`.
+> **Chuyển mạch:** Từ **mạch học (learning flow / 학습 흐름) và phụ thuộc (dependency / 의존성)**, ta sang **ranh giới (boundary / 경계) với các lĩnh vực (domain / 도메인) khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Repository hiện có worker Python thực tế tại [automation/app.py](../../automation/app.py), [automation/pipeline.py](../../automation/pipeline.py) và [automation/test_pipeline.py](../../automation/test_pipeline.py). Các file này được dùng như case study để nối `asyncio`, `dataclass`, `pathlib`, `subprocess`, HTTP I/O, environment configuration, testing và orchestration với code thật. Phần triển khai/deploy của worker nằm tại [automation/README.md](../../automation/README.md).
+## Ranh giới (boundary / 경계) với các lĩnh vực (domain / 도메인) khác
 
-Các concept nền rộng hơn như process/thread, scheduling, memory hierarchy, networking, data structures và software engineering thuộc [Computer Science Knowledge Library](../../computer_science/README.md). Python chapter giải thích đủ để đọc liền mạch rồi bridge sang canonical domain đó khi cần chiều sâu xuyên tầng.
+Python cốt lõi (core / 핵심) ở đây giải thích ngôn ngữ, CPython khi cần thiết, thư viện chuẩn (standard library / 표준 라이브러리) và môi trường vận hành (production / 운영 환경) practice gắn trực tiếp với Python. FastAPI, AI khung phần mềm (framework / 프레임워크) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) khung phần mềm (framework / 프레임워크) không được kéo sâu vào thư viện (library / 라이브러리) chỉ vì chúng dùng tệp (file / 파일) `.py`.
 
-Multiple interpreters, free-threaded CPython và process/thread execution được giải thích ở Python boundary vì chúng thay đổi behavior của Python runtime. Những nguyên lý rộng hơn về isolation, scheduling, shared state và IPC vẫn thuộc Computer Science; tài liệu Python chỉ giữ phần cần để hiểu quyết định engineering trong Python.
+Repository hiện có worker Python thực tế tại [automation/app.py](../../automation/app.py), [automation/pipeline.py](../../automation/pipeline.py) và [automation/test_pipeline.py](../../automation/test_pipeline.py). Các tệp (file / 파일) này được dùng như trường hợp (case / 사례) study để nối `asyncio`, `dataclass`, `pathlib`, `subprocess`, HTTP I/O, môi trường (environment / 환경) cấu hình (configuration / 구성), testing và orchestration với mã (code / 코드) thật. Phần triển khai/deploy của worker nằm tại [automation/README.md](../../automation/README.md).
+
+Các concept nền rộng hơn như tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드), scheduling, bộ nhớ (memory / 메모리) hierarchy, networking, dữ liệu (data / 데이터) structures và kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) thuộc [Computer Science Knowledge Library](../../computer_science/README.md). Python chapter giải thích đủ để đọc liền mạch rồi cầu nối (bridge / 브리지) sang chuẩn gốc (canonical / 정본) lĩnh vực (domain / 도메인) đó khi cần chiều sâu xuyên tầng.
+
+Multiple interpreters, free-threaded CPython và tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) thực thi (execution / 실행) được giải thích ở Python ranh giới (boundary / 경계) vì chúng thay đổi hành vi (behavior / 동작) của Python thời gian chạy (runtime / 런타임). Những nguyên lý rộng hơn về isolation, scheduling, trạng thái dùng chung (shared state / 공유 상태) và IPC vẫn thuộc Khoa học máy tính (computer science / 컴퓨터 과학); tài liệu Python chỉ giữ phần cần để hiểu quyết định kỹ thuật (engineering / 엔지니어링) trong Python.
+
+
+> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) với các lĩnh vực (domain / 도메인) khác**, ta sang **Quy ước thuật ngữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quy ước thuật ngữ
 
-Giải thích chính dùng tiếng Việt tự nhiên. Thuật ngữ quan trọng được chuẩn hóa trong [Glossary](GLOSSARY.md) theo dạng `tiếng Việt (English term / 한국어 용어)`. Korean chỉ dùng khi mapping thật sự hữu ích. Tên API, module, class, method, command, identifier, standard, product và code như `asyncio`, `Path`, `__iter__`, `pyproject.toml` giữ nguyên bản gốc.
+Giải thích chính dùng tiếng Việt tự nhiên. Mỗi lần thuật ngữ quan trọng xuất hiện, dùng dạng `tiếng Việt (English term / 한국어 용어)` theo ánh xạ trong [Glossary](GLOSSARY.md). Tên API, mô-đun (module / 모듈), lớp (class / 클래스), phương thức (method / 메서드), command, identifier, tiêu chuẩn (standard / 표준), sản phẩm (product / 제품) và mã (code / 코드) như `asyncio`, `Path`, `__iter__`, `pyproject.toml` giữ nguyên bản gốc.
 
-Khi đọc chapter, ưu tiên hiểu quan hệ giữa khái niệm và mechanism. Glossary dùng để nhận diện thuật ngữ, không thay thế phần giải thích trong chapter.
+Khi đọc chapter, ưu tiên hiểu quan hệ giữa khái niệm và cơ chế (mechanism / 메커니즘). Glossary dùng để nhận diện thuật ngữ, không thay thế phần giải thích trong chapter.
 
-## Modern Python và legacy
 
-Baseline của library là Python 3.14. Codebase thực tế vẫn có thể target Python 3.8–3.13 hoặc mang pattern cũ hơn; tài liệu chỉ nhắc legacy khi nó giúp giải thích code đang tồn tại hoặc migration concern. Ví dụ, syntax generic `class Box[T]` là modern syntax từ Python 3.12, trong khi `TypeVar` + `Generic` vẫn cần biết để đọc library hỗ trợ version cũ.
+> **Chuyển mạch:** Từ **Quy ước thuật ngữ**, ta sang **hiện đại (modern / 현대적) Python và legacy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Python 3.14 đưa free-threaded CPython thành cấu hình được hỗ trợ chính thức nhưng vẫn không phải build mặc định duy nhất. Vì vậy library luôn tách hai mental model: CPython mặc định có GIL và free-threaded CPython không GIL. Không suy ra rằng mọi Python 3.14 chạy thread Python bytecode song song, cũng không dùng GIL như một lý do để bỏ qua synchronization của shared mutable state.
+## Hiện đại (modern / 현대적) Python và legacy
 
-Python 3.14 cũng đưa `concurrent.interpreters` và `InterpreterPoolExecutor` vào public standard-library surface. Multiple interpreters tạo isolation của interpreter state trong cùng process và có thể kết hợp với threads để đạt multi-core, nhưng không phải process isolation và không cho phép chia sẻ mutable Python objects tùy ý. Đây là một execution model riêng cần phân biệt với thread pool, process pool và free-threaded threads.
+Baseline của thư viện (library / 라이브러리) là Python 3.14. Codebase thực tế vẫn có thể mục tiêu (target / 대상) Python 3.8–3.13 hoặc mang mẫu (pattern / 패턴) cũ hơn; tài liệu chỉ nhắc legacy khi nó giúp giải thích mã (code / 코드) đang tồn tại hoặc di chuyển (migration / 마이그레이션) concern. Ví dụ, cú pháp (syntax / 문법) generic `class Box[T]` là hiện đại (modern / 현대적) cú pháp (syntax / 문법) từ Python 3.12, trong khi `TypeVar` + `Generic` vẫn cần biết để đọc thư viện (library / 라이브러리) hỗ trợ phiên bản (version / 버전) cũ.
 
-Trên POSIX hỗ trợ phù hợp, Python 3.14 dùng `forkserver` làm multiprocessing start method mặc định thay cho `fork`. Code phụ thuộc `fork` phải chọn explicit context thay vì coi historical default là language guarantee. Packaging cũng cần tách project metadata, dependency groups, resolved deployment environment và binary wheel/ABI compatibility thành các lớp khác nhau.
+Python 3.14 đưa free-threaded CPython thành cấu hình được hỗ trợ chính thức nhưng vẫn không phải bản dựng (build / 빌드) mặc định duy nhất. Vì vậy thư viện (library / 라이브러리) luôn tách hai mô hình tư duy (mental model / 사고 모델): CPython mặc định có GIL và free-threaded CPython không GIL. Không suy ra rằng mọi Python 3.14 chạy luồng thực thi (thread / 스레드) Python bytecode song song, cũng không dùng GIL như một lý do để bỏ qua synchronization của dùng chung (shared / 공유) mutable trạng thái (state / 상태).
 
-## Cách dùng library
+Python 3.14 cũng đưa `concurrent.interpreters` và `InterpreterPoolExecutor` vào công khai (public / 공개) standard-library surface. Multiple interpreters tạo isolation của trình thông dịch (interpreter / 인터프리터) trạng thái (state / 상태) trong cùng tiến trình (process / 프로세스) và có thể kết hợp với threads để đạt multi-core, nhưng không phải tiến trình (process / 프로세스) isolation và không cho phép chia sẻ mutable Python objects tùy ý. Đây là một mô hình thực thi (execution model / 실행 모델) riêng cần phân biệt với luồng thực thi (thread / 스레드) pool, tiến trình (process / 프로세스) pool và free-threaded threads.
 
-Nếu mới học Python, đọc Part 1 → 2 và tự chạy các ví dụ nhỏ. Khi bắt đầu project thật, chuyển sang Part 3 để hiểu environment, dependency, testing, concurrency và production boundary. Part 4 phù hợp khi cần điều tra performance, memory, import behavior, descriptor/attribute lookup, `__new__`/class creation, free-threading, multiple interpreters, async internals hoặc review architecture.
+Trên POSIX hỗ trợ phù hợp, Python 3.14 dùng `forkserver` làm multiprocessing start phương thức (method / 메서드) mặc định thay cho `fork`. mã (code / 코드) phụ thuộc `fork` phải chọn tường minh (explicit / 명시적) ngữ cảnh (context / 맥락) thay vì coi historical default là ngôn ngữ (language / 언어) guarantee. Packaging cũng cần tách dự án (project / 프로젝트) siêu dữ liệu (metadata / 메타데이터), phụ thuộc (dependency / 의존성) groups, resolved triển khai (deployment / 배포) môi trường (environment / 환경) và nhị phân (binary / 이진) wheel/ABI tính tương thích (compatibility / 호환성) thành các lớp khác nhau.
 
-Sau mỗi cụm lớn, đọc case tương ứng trong `ENGINEERING_CASE_STUDIES.md`. Ví dụ sau object/copy hãy đọc Case 1; sau import đọc Case 2; sau packaging đọc Case 3; sau concurrency/async đọc Case 4–7; sau testing/security/observability đọc Case 8–10. Mục tiêu là kiểm tra xem bạn có thể suy luận từ symptom tới mechanism hay chỉ đang nhớ tên API.
 
-Nếu đã viết Python nhưng mental model chưa chắc, không cần đọc lại mọi syntax. Hãy bắt đầu từ Part 1 §2–4 về name/object/identity/mutability, Part 2 về data model/iterator/context manager, rồi Part 3 về concurrency. Khi gặp framework magic như ORM field/property/proxy, đọc Part 4 §4; khi gặp lifecycle/class factory/metaclass, đọc Part 4 §7; khi chọn CPU execution model, đọc Part 3 §17 và Part 4 §13/17.
+> **Chuyển mạch:** Từ **hiện đại (modern / 현대적) Python và legacy**, ta sang **Cách dùng thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Nguồn canonical
+## Cách dùng thư viện (library / 라이브러리)
 
-- Python documentation by version: https://www.python.org/doc/versions/
-- Python Language Reference: https://docs.python.org/3.14/reference/
-- Python Standard Library: https://docs.python.org/3.14/library/
-- Python Data Model: https://docs.python.org/3.14/reference/datamodel.html
+Nếu mới học Python, đọc Part 1 → 2 và tự chạy các ví dụ nhỏ. Khi bắt đầu dự án (project / 프로젝트) thật, chuyển sang Part 3 để hiểu môi trường (environment / 환경), phụ thuộc (dependency / 의존성), testing, tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경) ranh giới (boundary / 경계). Part 4 phù hợp khi cần điều tra hiệu năng (performance / 성능), bộ nhớ (memory / 메모리), import hành vi (behavior / 동작), descriptor/attribute lookup, `__new__`/lớp (class / 클래스) creation, free-threading, multiple interpreters, async internals hoặc rà soát (review / 검토) kiến trúc (architecture / 아키텍처).
+
+Sau mỗi cụm lớn, đọc trường hợp (case / 사례) tương ứng trong `ENGINEERING_CASE_STUDIES.md`. Ví dụ sau đối tượng (object / 객체)/bản sao (copy / 복사) hãy đọc trường hợp (case / 사례) 1; sau import đọc trường hợp (case / 사례) 2; sau packaging đọc trường hợp (case / 사례) 3; sau tính đồng thời (concurrency / 동시성)/async đọc trường hợp (case / 사례) 4–7; sau testing/bảo mật (security / 보안)/khả năng quan sát (observability / 관측 가능성) đọc trường hợp (case / 사례) 8–10. Mục tiêu là kiểm tra xem bạn có thể suy luận từ symptom tới cơ chế (mechanism / 메커니즘) hay chỉ đang nhớ tên API.
+
+Nếu đã viết Python nhưng mô hình tư duy (mental model / 사고 모델) chưa chắc, không cần đọc lại mọi cú pháp (syntax / 문법). Hãy bắt đầu từ Part 1 §2–4 về name/đối tượng (object / 객체)/định danh (identity / 식별자)/mutability, Part 2 về mô hình dữ liệu (data model / 데이터 모델)/iterator/ngữ cảnh (context / 맥락) manager, rồi Part 3 về tính đồng thời (concurrency / 동시성). Khi gặp phép màu của khung phần mềm (framework magic / 프레임워크 마법) như ORM trường dữ liệu (field / 필드)/thuộc tính (property / 속성)/proxy, đọc Part 4 §4; khi gặp vòng đời (lifecycle / 생명주기)/lớp (class / 클래스) factory/metaclass, đọc Part 4 §7; khi chọn CPU mô hình thực thi (execution model / 실행 모델), đọc Part 3 §17 và Part 4 §13/17.
+
+
+> **Chuyển mạch:** Từ **Cách dùng thư viện (library / 라이브러리)**, ta sang **Nguồn chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Nguồn chuẩn gốc (canonical / 정본)
+
+- Python documentation by phiên bản (version / 버전): https://www.python.org/doc/versions/
+- Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/tham chiếu (reference / 참조)/
+- Python thư viện chuẩn (standard library / 표준 라이브러리): https://docs.python.org/3.14/thư viện (library / 라이브러리)/
+- Python mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
 - Python Descriptor Guide: https://docs.python.org/3.14/howto/descriptor.html
-- Python Import System: https://docs.python.org/3.14/reference/import.html
-- Python `typing`: https://docs.python.org/3.14/library/typing.html
-- `asyncio`: https://docs.python.org/3.14/library/asyncio.html
-- `multiprocessing`: https://docs.python.org/3.14/library/multiprocessing.html
-- `concurrent.interpreters`: https://docs.python.org/3.14/library/concurrent.interpreters.html
-- `concurrent.futures`: https://docs.python.org/3.14/library/concurrent.futures.html
+- Python Import hệ thống (system / 시스템): https://docs.python.org/3.14/tham chiếu (reference / 참조)/import.html
+- Python `typing`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/typing.html
+- `asyncio`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/asyncio.html
+- `multiprocessing`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/multiprocessing.html
+- `concurrent.interpreters`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/concurrent.interpreters.html
+- `concurrent.futures`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/concurrent.futures.html
 - Thread-safety guarantees: https://docs.python.org/3.14/builtins/threadsafety.html
 - Python 3.14 What's New: https://docs.python.org/3.14/whatsnew/3.14.html
-- Python Packaging User Guide: https://packaging.python.org/
+- Python Packaging người dùng (user / 사용자) Guide: https://packaging.python.org/
 - `pyproject.toml` specification: https://packaging.python.org/en/latest/specifications/pyproject-toml/
-- Dependency Groups specification: https://packaging.python.org/en/latest/specifications/dependency-groups/
+- phụ thuộc (dependency / 의존성) Groups specification: https://packaging.python.org/en/latest/specifications/dependency-groups/
+
+> **Bàn giao:** Sau **Nguồn chuẩn gốc (canonical / 정본)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,15 @@
-# Scaling Laws trong Large Language Models
+# Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
-Khi Large Language Model lớn hơn, câu hỏi không chỉ là “thêm parameters có tốt hơn không?” mà là **nên phân bổ compute giữa model size, data và training duration như thế nào**. **Scaling laws (스케일링 법칙)** nghiên cứu relationship thực nghiệm giữa model performance và những resource đó.
+> **Mạch đọc:** Đặt **Scaling Laws trong Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba trục quy mô (scale / 규모) chính** sang **Parameters không phải sức chứa (capacity / 용량) hữu ích duy nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một pattern thường thấy là loss giảm theo power law khi tăng scale trong một khoảng rộng. Điều này không có nghĩa performance mọi benchmark tăng giống nhau, nhưng nó cho phép dự đoán trend và planning training runs tốt hơn.
 
-## Ba trục scale chính
+Khi Large ngôn ngữ (language / 언어) mô hình (model / 모델) lớn hơn, câu hỏi không chỉ là “thêm parameters có tốt hơn không?” mà là **nên phân bổ compute giữa mô hình (model / 모델) kích thước (size / 크기), dữ liệu (data / 데이터) và huấn luyện (training / 학습) duration như thế nào**. **Scaling laws (스케일링 법칙)** nghiên cứu relationship thực nghiệm giữa mô hình (model / 모델) hiệu năng (performance / 성능) và những tài nguyên (resource / 자원) đó.
 
-Pretraining cost có thể nhìn gần đúng qua ba quantities:
+Một mẫu (pattern / 패턴) thường thấy là mất mát (loss / 손실) giảm theo power law khi tăng quy mô (scale / 규모) trong một khoảng rộng. Điều này không có nghĩa hiệu năng (performance / 성능) mọi benchmark tăng giống nhau, nhưng nó cho phép dự đoán trend và planning huấn luyện (training / 학습) runs tốt hơn.
+
+## Ba trục quy mô (scale / 규모) chính
+
+Pretraining chi phí (cost / 비용) có thể nhìn gần đúng qua ba quantities:
 
 ```text
 N = số parameters
@@ -14,108 +17,110 @@ D = số training tokens
 C = compute budget
 ```
 
-Nếu model rất lớn nhưng data quá ít, model bị **under-trained**. Nếu data rất nhiều nhưng model quá nhỏ, capacity có thể là bottleneck. Compute-optimal training tìm balance tốt hơn giữa `N` và `D` dưới budget cố định.
+Nếu mô hình (model / 모델) rất lớn nhưng dữ liệu (data / 데이터) quá ít, mô hình (model / 모델) bị **under-trained**. Nếu dữ liệu (data / 데이터) rất nhiều nhưng mô hình (model / 모델) quá nhỏ, sức chứa (capacity / 용량) có thể là bottleneck. Compute-optimal huấn luyện (training / 학습) tìm balance tốt hơn giữa `N` và `D` dưới ngân sách (budget / 예산) cố định.
 
-## Parameters không phải capacity hữu ích duy nhất
+## Parameters không phải sức chứa (capacity / 용량) hữu ích duy nhất
 
-Tăng parameters mở rộng function class và representation capacity, nhưng capability còn phụ thuộc architecture, data quality, optimizer, context length và training recipe. Hai models cùng parameter count có thể khác đáng kể.
+Tăng parameters mở rộng hàm (function / 함수) lớp (class / 클래스) và biểu diễn (representation / 표현) sức chứa (capacity / 용량), nhưng năng lực (capability / 역량) còn phụ thuộc kiến trúc (architecture / 아키텍처), dữ liệu (data / 데이터) chất lượng (quality / 품질), optimizer, ngữ cảnh (context / 맥락) length và huấn luyện (training / 학습) recipe. Hai các mô hình (models / 모델들) cùng parameter count có thể khác đáng kể.
 
-**Active parameters** cũng khác total parameters trong architectures như Mixture-of-Experts (MoE), nơi mỗi token chỉ đi qua một subset experts. Vì vậy “model 100B” không luôn có inference cost tương đương model dense 100B.
+**Active parameters** cũng khác total parameters trong architectures như Mixture-of-Experts (MoE), nơi mỗi đơn vị từ (token / 토큰) chỉ đi qua một subset experts. Vì vậy “mô hình (model / 모델) 100B” không luôn có suy luận (inference / 추론) chi phí (cost / 비용) tương đương mô hình (model / 모델) dense 100B.
 
 ## Compute-optimal intuition
 
-Giả sử có budget compute cố định. Nếu dùng tất cả budget để tăng `N` nhưng giữ `D` thấp, mỗi parameter nhìn thấy quá ít evidence. Ngược lại, train model nhỏ trên quá nhiều data có thể waste data because capacity giới hạn.
+Giả sử có ngân sách (budget / 예산) compute cố định. Nếu dùng tất cả ngân sách (budget / 예산) để tăng `N` nhưng giữ `D` thấp, mỗi parameter nhìn thấy quá ít bằng chứng (evidence / 증거). Ngược lại, train mô hình (model / 모델) nhỏ trên quá nhiều dữ liệu (data / 데이터) có thể waste dữ liệu (data / 데이터) because sức chứa (capacity / 용량) giới hạn.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
-> Scale hiệu quả là **model đủ lớn để hấp thụ structure trong data, và data đủ nhiều để train model lớn đó đúng mức**.
+> quy mô (scale / 규모) hiệu quả là **mô hình (model / 모델) đủ lớn để hấp thụ cấu trúc (structure / 구조) trong dữ liệu (data / 데이터), và dữ liệu (data / 데이터) đủ nhiều để train mô hình (model / 모델) lớn đó đúng mức**.
 
-## Training tokens và epochs
+## Huấn luyện (training / 학습) tokens và epochs
 
-Trong web-scale pretraining, corpus có thể được traversed một hoặc vài lần tùy recipe. Repeating data quá nhiều tăng memorization và diminishing returns. Nhưng curated high-quality data đôi khi được intentionally upsampled.
+Trong web-scale pretraining, corpus có thể được traversed một hoặc vài lần tùy recipe. Repeating dữ liệu (data / 데이터) quá nhiều tăng memorization và diminishing returns. Nhưng curated high-quality dữ liệu (data / 데이터) đôi khi được intentionally upsampled.
 
-Do đó raw token count không bằng unique information content.
+Do đó raw đơn vị từ (token / 토큰) count không bằng unique thông tin (information / 정보) content.
 
-## Loss scaling vs capability scaling
+## Mất mát (loss / 손실) scaling vs năng lực (capability / 역량) scaling
 
-Pretraining loss có thể giảm smooth, trong khi benchmark capability nhìn discontinuous. Ví dụ benchmark pass/fail có threshold; model từ 49% lên 51% có thể trông như capability “xuất hiện”.
+Pretraining mất mát (loss / 손실) có thể giảm smooth, trong khi benchmark năng lực (capability / 역량) nhìn discontinuous. Ví dụ benchmark pass/thất bại (fail / 실패) có threshold; mô hình (model / 모델) từ 49% lên 51% có thể trông như năng lực (capability / 역량) “xuất hiện”.
 
-Một số task thực sự có nonlinear behavior do composition of learned skills, nhưng không nên gọi mọi jump là emergence mà không kiểm tra metric granularity.
+Một số tác vụ (task / 작업) thực sự có nonlinear hành vi (behavior / 동작) do composition of learned skills, nhưng không nên gọi mọi jump là emergence mà không kiểm tra chỉ số (metric / 지표) granularity.
 
-## Context length là một scale dimension khác
+## Ngữ cảnh (context / 맥락) length là một quy mô (scale / 규모) dimension khác
 
-Longer context cho phép model condition trên nhiều tokens hơn nhưng attention và KV cache cost tăng. Training model ở context 4k không tự động bảo đảm model dùng hiệu quả 128k chỉ bằng thay config.
+Longer ngữ cảnh (context / 맥락) cho phép mô hình (model / 모델) điều kiện (condition / 조건) trên nhiều tokens hơn nhưng attention và KV bộ nhớ đệm (cache / 캐시) chi phí (cost / 비용) tăng. huấn luyện (training / 학습) mô hình (model / 모델) ở ngữ cảnh (context / 맥락) 4k không tự động bảo đảm mô hình (model / 모델) dùng hiệu quả 128k chỉ bằng thay cấu hình (config / 설정).
 
-Long-context capability còn phụ thuộc positional method, training distribution, attention implementation và evaluation.
+Long-context năng lực (capability / 역량) còn phụ thuộc positional phương thức (method / 메서드), huấn luyện (training / 학습) phân phối (distribution / 분포), attention hiện thực (implementation / 구현) và evaluation.
 
 ## Inference-time compute
 
-Scale không chỉ nằm ở pretraining. Model có thể dùng thêm compute lúc inference qua:
+Quy mô (scale / 규모) không chỉ nằm ở pretraining. mô hình (model / 모델) có thể dùng thêm compute lúc suy luận (inference / 추론) qua:
 
 - sampling nhiều candidates;
-- search/verification;
-- longer reasoning trajectories;
-- tool calls;
+- tìm kiếm (search / 검색)/xác minh (verification / 확인);
+- longer lập luận (reasoning / 추론) trajectories;
+- công cụ (tool / 도구) calls;
 - retrieval;
 - self-consistency hoặc reranking.
 
-Điều này tạo trade-off mới: cùng một base model, tăng inference-time compute có thể cải thiện accuracy nhưng tăng latency/cost.
+Điều này tạo sự đánh đổi (trade-off / 트레이드오프) mới: cùng một cơ sở (base / 기반) mô hình (model / 모델), tăng inference-time compute có thể cải thiện accuracy nhưng tăng độ trễ (latency / 지연 시간)/chi phí (cost / 비용).
 
-## Distillation và small models
+## Distillation và small các mô hình (models / 모델들)
 
-Scale lớn có thể dùng để tạo teacher, sau đó distill capability vào smaller model. Small models vẫn quan trọng khi latency, privacy, edge deployment hoặc cost là constraint.
+Quy mô (scale / 규모) lớn có thể dùng để tạo teacher, sau đó distill năng lực (capability / 역량) vào smaller mô hình (model / 모델). Small các mô hình (models / 모델들) vẫn quan trọng khi độ trễ (latency / 지연 시간), privacy, edge triển khai (deployment / 배포) hoặc chi phí (cost / 비용) là ràng buộc (constraint / 제약조건).
 
-Scaling laws không hàm ý mọi application nên dùng model lớn nhất.
+Scaling laws không hàm ý mọi ứng dụng (application / 애플리케이션) nên dùng mô hình (model / 모델) lớn nhất.
 
-## Economics của scale
+## Economics của quy mô (scale / 규모)
 
-Training frontier model cần hardware, energy, networking và engineering rất lớn. Nhưng production cost thường dominated bởi inference nếu user volume cao.
+Huấn luyện (training / 학습) frontier mô hình (model / 모델) cần hardware, năng lượng (energy / 에너지), networking và kỹ thuật (engineering / 엔지니어링) rất lớn. Nhưng môi trường vận hành (production / 운영 환경) chi phí (cost / 비용) thường dominated bởi suy luận (inference / 추론) nếu người dùng (user / 사용자) volume cao.
 
-Một architecture tối ưu training cost chưa chắc tối ưu serving. KV cache, batchability, sequence length và decoding speed trở thành economic variables.
+Một kiến trúc (architecture / 아키텍처) tối ưu huấn luyện (training / 학습) chi phí (cost / 비용) chưa chắc tối ưu serving. KV bộ nhớ đệm (cache / 캐시), batchability, chuỗi (sequence / 시퀀스) length và decoding speed trở thành economic variables.
 
 ## Diminishing returns
 
-Power-law improvement nghĩa improvement tiếp theo thường đắt hơn. Nếu giảm loss từ 2.0 xuống 1.8 cần X compute, giảm từ 1.8 xuống 1.6 có thể cần nhiều hơn đáng kể.
+Power-law improvement nghĩa improvement tiếp theo thường đắt hơn. Nếu giảm mất mát (loss / 손실) từ 2.0 xuống 1.8 cần X compute, giảm từ 1.8 xuống 1.6 có thể cần nhiều hơn đáng kể.
 
-Vì vậy system engineering thường thắng raw scaling khi problem là freshness, grounding, tool access hoặc policy. RAG có thể hiệu quả hơn train model lớn hơn chỉ để nhớ private documents.
+Vì vậy hệ thống (system / 시스템) kỹ thuật (engineering / 엔지니어링) thường thắng raw scaling khi bài toán (problem / 문제) là freshness, grounding, công cụ (tool / 도구) truy cập (access / 접근) hoặc chính sách (policy / 정책). RAG có thể hiệu quả hơn train mô hình (model / 모델) lớn hơn chỉ để nhớ private documents.
 
-## Scaling và data quality
+## Scaling và dữ liệu (data / 데이터) chất lượng (quality / 품질)
 
-Khi model nhỏ, capacity có thể che bớt bad data vì model không memorize everything. Model lớn có khả năng hấp thụ cả useful patterns lẫn noise, duplicated misinformation và undesirable styles.
+Khi mô hình (model / 모델) nhỏ, sức chứa (capacity / 용량) có thể che bớt bad dữ liệu (data / 데이터) vì mô hình (model / 모델) không memorize everything. mô hình (model / 모델) lớn có khả năng hấp thụ cả useful patterns lẫn noise, duplicated misinformation và undesirable styles.
 
-Do đó scale làm data governance quan trọng hơn, không ít hơn.
+Do đó quy mô (scale / 규모) làm dữ liệu (data / 데이터) quản trị (governance / 거버넌스) quan trọng hơn, không ít hơn.
 
 ## Scaling và alignment
 
-Base capability tăng không tự động kéo instruction following, truthfulness hay safety tăng đồng đều. Alignment/post-training phải scale theo capability và attack surface.
+Cơ sở (base / 기반) năng lực (capability / 역량) tăng không tự động kéo instruction following, truthfulness hay an toàn (safety / 안전) tăng đồng đều. Alignment/post-training phải quy mô (scale / 규모) theo năng lực (capability / 역량) và attack surface.
 
-Một model mạnh hơn có thể vừa hữu ích hơn vừa có failure modes phức tạp hơn.
+Một mô hình (model / 모델) mạnh hơn có thể vừa hữu ích hơn vừa có thất bại (failure / 실패) modes phức tạp hơn.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Scale ≠ chỉ parameters
 Scale = model capacity + data + compute + context + inference strategy
 ```
 
-Câu hỏi đúng không phải “bao nhiêu B parameters?”, mà là **resource nào hiện là bottleneck của task/system này?**
+Câu hỏi đúng không phải “bao nhiêu B parameters?”, mà là **tài nguyên (resource / 자원) nào hiện là bottleneck của tác vụ (task / 작업)/hệ thống (system / 시스템) này?**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Model lớn hơn luôn tốt hơn cho production”
+### “mô hình (model / 모델) lớn hơn luôn tốt hơn cho môi trường vận hành (production / 운영 환경)”
 
-Không nếu cost, latency, privacy hoặc task simplicity dominate.
+Không nếu chi phí (cost / 비용), độ trễ (latency / 지연 시간), privacy hoặc tác vụ (task / 작업) simplicity dominate.
 
-### “Loss giảm nghĩa mọi capability đều tăng”
+### “mất mát (loss / 손실) giảm nghĩa mọi năng lực (capability / 역량) đều tăng”
 
-Loss là aggregate language modeling signal; downstream capability có thể tăng với rate khác nhau.
+Mất mát (loss / 손실) là aggregate ngôn ngữ (language / 언어) modeling tín hiệu (signal / 신호); downstream năng lực (capability / 역량) có thể tăng với tỷ lệ (rate / 비율) khác nhau.
 
-### “Context window lớn = model nhớ và reasoning tốt trên toàn context”
+### “ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) lớn = mô hình (model / 모델) nhớ và lập luận (reasoning / 추론) tốt trên toàn ngữ cảnh (context / 맥락)”
 
-Window capacity và effective context use là hai vấn đề khác nhau.
+Cửa sổ (window / 윈도우) sức chứa (capacity / 용량) và effective ngữ cảnh (context / 맥락) use là hai vấn đề khác nhau.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Scaling nối trực tiếp với [AI Compute](../17_ai_compute_and_infrastructure/00_compute_foundations.md), [Optimization](../01_mathematical_foundations/06_optimization.md) và [Pretraining](./04_pretraining.md).
 
 Xem tiếp: [Instruction Tuning](./06_instruction_tuning.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)
 
+> **Mạch đọc:** Đặt **Workbook thực hành phân tích doanh nghiệp — từ báo cáo đến giả thuyết, kịch bản và quyết định (실전 기업분석 워크북)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kết quả cuối cùng của một bài phân tích nên là gì?** sang **2. Tạo hồ sơ nhận dạng một trang**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Các chương trước giải thích lịch sử, kinh tế vĩ mô, ngành, kế toán, quản trị và nguồn vốn. Chương này biến các kiến thức đó thành một **bài thực hành tổng hợp (workbook)**. Mục tiêu là khi gặp một công ty Hàn Quốc mới, người đọc có thể mở DART/KIND/IR, tự dựng mô hình kinh tế, phát hiện những câu hỏi còn thiếu và viết một ghi chú nghiên cứu có thể kiểm chứng.
 
 Đây không phải danh sách để đánh dấu cho xong. Nó là một trình tự giúp chuyển dữ liệu rời rạc thành **mô hình nhân quả (causal model)**.
@@ -81,7 +84,7 @@ Nhu cầu cuối cùng
 → dòng tiền tự do
 ```
 
-Cần hỏi cơ cấu nhu cầu AI/server/mobile/PC thay đổi thế nào; đối thủ thêm bao nhiêu công suất; yield thay đổi ra sao; chuyển đổi công nghệ ảnh hưởng chi phí mỗi bit thế nào; giá hợp đồng và giá giao ngay có bền không; và doanh nghiệp đang đầu tư ngược chu kỳ hay chạy theo đỉnh nhu cầu.
+Cần hỏi cơ cấu nhu cầu AI/máy chủ (server / 서버)/mobile/PC thay đổi thế nào; đối thủ thêm bao nhiêu công suất; yield thay đổi ra sao; chuyển đổi công nghệ ảnh hưởng chi phí mỗi bit thế nào; giá hợp đồng và giá giao ngay có bền không; và doanh nghiệp đang đầu tư ngược chu kỳ hay chạy theo đỉnh nhu cầu.
 
 Một kịch bản cơ sở có thể giả định lượng bit xuất bán tăng 15%, ASP tăng 5% và chi phí mỗi bit giảm 10%. Kịch bản xấu có thể là lượng bit chỉ tăng 5%, ASP giảm 20% và chi phí mỗi bit chỉ giảm 5%.
 
@@ -302,8 +305,8 @@ Mỗi ghi chú nên phân biệt:
 
 - **F — Sự thật (Fact):** báo cáo đã kiểm toán hoặc hồ sơ pháp lý.
 - **M — Tuyên bố của quản lý (Management Claim):** IR hoặc cuộc gọi kết quả kinh doanh.
-- **I — Suy luận (Inference):** lập luận của người phân tích.
-- **E — Bằng chứng bên ngoài (External Evidence):** dữ liệu ngành, chính phủ hoặc bên thứ ba.
+- **I — suy luận (inference / 추론):** lập luận của người phân tích.
+- **E — Bằng chứng bên ngoài (External evidence):** dữ liệu ngành, chính phủ hoặc bên thứ ba.
 
 Ví dụ:
 
@@ -358,8 +361,10 @@ Nếu bằng chứng E không xuất hiện trong khoảng thời gian T
 → giả thuyết phải được sửa hoặc bỏ.
 ```
 
-## Mental Model — Mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Workbook này không dạy cách điền đủ mọi ô. Nó dạy cách biến một doanh nghiệp thành một **cỗ máy kinh tế có thể quan sát được**: nhu cầu đi vào đâu, doanh thu hình thành thế nào, chi phí và vốn bị tiêu ở đâu, lợi nhuận có chuyển thành tiền hay không, ai kiểm soát quyết định và điều gì có thể làm cỗ máy đó hỏng.
 
 Khi đã dựng được mô hình đó, các chỉ số như P/E, ROE, FCF hay NIM không còn là những con số rời rạc; chúng trở thành kết quả của một cơ chế mà người đọc có thể giải thích và kiểm chứng.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

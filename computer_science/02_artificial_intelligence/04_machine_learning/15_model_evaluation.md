@@ -1,26 +1,29 @@
-# Model Evaluation: đo đúng thứ mà hệ thống thực sự cần
+# Mô hình (model / 모델) Evaluation: đo đúng thứ mà hệ thống thực sự cần
 
-Model Evaluation (모델 평가 / đánh giá mô hình) không phải bước cuối để “in một con số accuracy”. Nó là quá trình thiết kế evidence để trả lời: model có hoạt động đủ tốt trên population, subgroup, operating condition và business objective mà system sẽ gặp hay không?
+> **Mạch đọc:** Đặt **mô hình (model / 모델) Evaluation: đo đúng thứ mà hệ thống thực sự cần** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bắt đầu từ triển khai (deployment / 배포) question** sang **Confusion ma trận (matrix / 행렬)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một metric đơn lẻ hiếm khi trả lời đủ. Evaluation tốt cần nối **dataset design → metric → threshold → uncertainty → error analysis → deployment constraints**.
 
-## Bắt đầu từ deployment question
+Mô hình (model / 모델) Evaluation (모델 평가 / đánh giá mô hình) không phải bước cuối để “in một con số accuracy”. Nó là quá trình thiết kế bằng chứng (evidence / 증거) để trả lời: mô hình (model / 모델) có hoạt động đủ tốt trên population, subgroup, operating điều kiện (condition / 조건) và nghiệp vụ (business / 비즈니스) mục tiêu (objective / 목표) mà hệ thống (system / 시스템) sẽ gặp hay không?
 
-Trước khi chọn metric, cần biết model sẽ được dùng thế nào.
+Một chỉ số (metric / 지표) đơn lẻ hiếm khi trả lời đủ. Evaluation tốt cần nối **dataset thiết kế (design / 설계) → chỉ số (metric / 지표) → threshold → bất định (uncertainty / 불확실성) → lỗi (error / 오류) phân tích (analysis / 분석) → triển khai (deployment / 배포) các ràng buộc (constraints / 제약조건들)**.
 
-Fraud model: có bao nhiêu cases review mỗi ngày? False negative mất bao nhiêu tiền? False positive gây friction gì?
+## Bắt đầu từ triển khai (deployment / 배포) question
 
-Medical screening: ưu tiên sensitivity hay specificity? Ai chịu hậu quả của missed case?
+Trước khi chọn chỉ số (metric / 지표), cần biết mô hình (model / 모델) sẽ được dùng thế nào.
 
-Search/recommender: ranking quality ở top positions quan trọng hơn global classification accuracy.
+Fraud mô hình (model / 모델): có bao nhiêu cases rà soát (review / 검토) mỗi ngày? False negative mất bao nhiêu tiền? False positive gây friction gì?
 
-LLM: correctness, factuality, instruction following, latency, safety và cost có thể cần evaluation riêng.
+Medical screening: ưu tiên sensitivity hay specificity? Ai chịu hậu quả của missed trường hợp (case / 사례)?
 
-Metric phải follow use case, không ngược lại.
+Tìm kiếm (search / 검색)/recommender: ranking chất lượng (quality / 품질) ở top positions quan trọng hơn toàn cục (global / 전역) classification accuracy.
 
-## Confusion Matrix
+LLM: tính đúng đắn (correctness / 정확성), factuality, instruction following, độ trễ (latency / 지연 시간), an toàn (safety / 안전) và chi phí (cost / 비용) có thể cần evaluation riêng.
 
-Binary classification:
+Chỉ số (metric / 지표) phải follow use trường hợp (case / 사례), không ngược lại.
+
+## Confusion ma trận (matrix / 행렬)
+
+Nhị phân (binary / 이진) classification:
 
 | | Actual Positive | Actual Negative |
 |---|---:|---:|
@@ -45,9 +48,9 @@ Specificity=\frac{TN}{TN+FP}
 F1=2\frac{Precision\cdot Recall}{Precision+Recall}
 \]
 
-Không metric nào “tốt nhất” universal. Chúng encode priorities khác nhau.
+Không chỉ số (metric / 지표) nào “tốt nhất” universal. Chúng encode priorities khác nhau.
 
-## Accuracy và base rate
+## Accuracy và cơ sở (base / 기반) tỷ lệ (rate / 비율)
 
 Accuracy:
 
@@ -57,15 +60,15 @@ Accuracy:
 
 có thể misleading với imbalance. Nếu disease prevalence 1%, classifier luôn negative đạt 99% accuracy nhưng recall = 0.
 
-Luôn so model với meaningful baseline.
+Luôn so mô hình (model / 모델) với meaningful baseline.
 
-## Precision–Recall trade-off
+## Precision–Recall sự đánh đổi (trade-off / 트레이드오프)
 
 Lower threshold thường tăng recall nhưng giảm precision. Higher threshold thường ngược lại.
 
-Threshold selection là **decision policy**, không phải intrinsic model property.
+Threshold selection là **quyết định (decision / 결정) chính sách (policy / 정책)**, không phải intrinsic mô hình (model / 모델) thuộc tính (property / 속성).
 
-Nếu business review capacity `K`, có thể evaluate Precision@K hoặc expected value top-K thay vì threshold cố định.
+Nếu nghiệp vụ (business / 비즈니스) rà soát (review / 검토) sức chứa (capacity / 용량) `K`, có thể evaluate Precision@K hoặc expected giá trị (value / 값) top-K thay vì threshold cố định.
 
 ## ROC Curve
 
@@ -83,21 +86,21 @@ FPR=\frac{FP}{FP+TN}
 
 qua mọi thresholds.
 
-ROC-AUC có interpretation: probability một random positive được rank cao hơn random negative.
+ROC-AUC có interpretation: xác suất (probability / 확률) một random positive được rank cao hơn random negative.
 
-AUC đo ranking, không đảm bảo calibrated probabilities hay performance ở threshold operational cụ thể.
+AUC đo ranking, không đảm bảo calibrated probabilities hay hiệu năng (performance / 성능) ở threshold operational cụ thể.
 
 ## Precision-Recall Curve
 
-PR curve đặc biệt hữu ích khi positive rare. Precision trực tiếp chịu ảnh hưởng base rate, nên phản ánh alert burden tốt hơn ROC trong nhiều anomaly/fraud tasks.
+PR curve đặc biệt hữu ích khi positive rare. Precision trực tiếp chịu ảnh hưởng cơ sở (base / 기반) tỷ lệ (rate / 비율), nên phản ánh alert burden tốt hơn ROC trong nhiều anomaly/fraud tasks.
 
-PR-AUC giữa datasets có prevalence khác nhau cần interpret cẩn thận vì baseline precision thay theo positive rate.
+PR-AUC giữa datasets có prevalence khác nhau cần interpret cẩn thận vì baseline precision thay theo positive tỷ lệ (rate / 비율).
 
-## Log Loss và Brier Score
+## Log mất mát (loss / 손실) và Brier Score
 
-Nếu probability quality quan trọng, classification accuracy không đủ.
+Nếu xác suất (probability / 확률) chất lượng (quality / 품질) quan trọng, classification accuracy không đủ.
 
-Log loss:
+Log mất mát (loss / 손실):
 
 \[
 -rac1n\sum_i[y_i\log p_i+(1-y_i)\log(1-p_i)]
@@ -111,17 +114,17 @@ Brier score:
 \frac1n\sum_i(p_i-y_i)^2
 \]
 
-đo squared probability error.
+đo squared xác suất (probability / 확률) lỗi (error / 오류).
 
 ## Calibration
 
-Model calibrated nếu among predictions near `p=0.7`, khoảng 70% positive về lâu dài trên relevant population.
+Mô hình (model / 모델) calibrated nếu among predictions near `p=0.7`, khoảng 70% positive về lâu dài trên relevant population.
 
-Calibration curve/reliability diagram so predicted probability bins với empirical frequency.
+Calibration curve/độ tin cậy (reliability / 신뢰성) diagram so predicted xác suất (probability / 확률) bins với empirical frequency.
 
-Calibration có thể degrade under distribution shift dù discrimination/ranking vẫn tốt.
+Calibration có thể degrade under phân phối (distribution / 분포) shift dù discrimination/ranking vẫn tốt.
 
-Techniques như Platt scaling, isotonic regression hoặc temperature scaling cần fit trên held-out calibration data.
+Techniques như Platt scaling, isotonic regression hoặc temperature scaling cần fit trên held-out calibration dữ liệu (data / 데이터).
 
 ## Regression Metrics
 
@@ -139,13 +142,13 @@ RMSE=\sqrt{\frac1n\sum_i(y_i-\hat y_i)^2}
 
 RMSE nhạy large errors hơn MAE.
 
-MAPE có issue khi target gần zero và asymmetric interpretation.
+MAPE có issue khi mục tiêu (target / 대상) gần zero và asymmetric interpretation.
 
-Metric nên gắn với error cost. Nếu error 100 KRW và 1,000,000 KRW không cùng consequence, generic MAE có thể không phù hợp.
+Chỉ số (metric / 지표) nên gắn với lỗi (error / 오류) chi phí (cost / 비용). Nếu lỗi (error / 오류) 100 KRW và 1,000,000 KRW không cùng consequence, generic MAE có thể không phù hợp.
 
 ## Ranking Metrics
 
-Search/recommendation thường quan tâm top results.
+Tìm kiếm (search / 검색)/recommendation thường quan tâm top results.
 
 **Precision@K**, **Recall@K** đo relevant items trong top K.
 
@@ -157,101 +160,101 @@ DCG@K=\sum_{i=1}^{K}\frac{rel_i}{\log_2(i+1)}
 
 NDCG normalize theo ideal ranking.
 
-Mean Reciprocal Rank phù hợp khi vị trí relevant result đầu tiên quan trọng:
+Mean Reciprocal Rank phù hợp khi vị trí relevant kết quả (result / 결과) đầu tiên quan trọng:
 
 \[
 MRR=\frac1N\sum_q\frac1{rank_q}
 \]
 
-Các metric này sẽ quay lại trong Retrieval/RAG.
+Các chỉ số (metric / 지표) này sẽ quay lại trong Retrieval/RAG.
 
 ## Confidence Intervals
 
-Một point estimate như accuracy 0.91 không nói uncertainty.
+Một điểm (point / 지점) estimate như accuracy 0.91 không nói bất định (uncertainty / 불확실성).
 
-Bootstrap có thể resample evaluation examples để estimate confidence interval cho metric phức tạp.
+Bootstrap có thể resample evaluation examples để estimate confidence interval cho chỉ số (metric / 지표) phức tạp.
 
-Với correlated/grouped data, bootstrap unit phải respect dependency, ví dụ resample users chứ không random rows nếu rows cùng user correlated.
+Với correlated/grouped dữ liệu (data / 데이터), bootstrap đơn vị (unit / 단위) phải respect phụ thuộc (dependency / 의존성), ví dụ resample users chứ không random rows nếu rows cùng người dùng (user / 사용자) correlated.
 
 ## Statistical Significance vs Practical Significance
 
-Model B AUC 0.901 vs A 0.899 có thể statistically significant trên millions samples nhưng business gain cực nhỏ.
+Mô hình (model / 모델) B AUC 0.901 vs A 0.899 có thể statistically significant trên millions samples nhưng nghiệp vụ (business / 비즈니스) gain cực nhỏ.
 
-Ngược lại improvement nhỏ global có thể rất quan trọng ở high-value subgroup.
+Ngược lại improvement nhỏ toàn cục (global / 전역) có thể rất quan trọng ở high-value subgroup.
 
-Luôn hỏi effect size và operational impact.
+Luôn hỏi tác động (effect / 효과) kích thước (size / 크기) và operational impact.
 
-## Error Analysis
+## Lỗi (error / 오류) phân tích (analysis / 분석)
 
-Aggregate metric che giấu failure modes. Cần slice theo:
+Aggregate chỉ số (metric / 지표) che giấu thất bại (failure / 실패) modes. Cần slice theo:
 
 - geography;
-- device;
-- language;
+- thiết bị (device / 장치);
+- ngôn ngữ (language / 언어);
 - customer segment;
-- time period;
-- target difficulty;
-- data quality state.
+- thời gian (time / 시간) period;
+- mục tiêu (target / 대상) difficulty;
+- dữ liệu (data / 데이터) chất lượng (quality / 품질) trạng thái (state / 상태).
 
 Sau đó inspect representative false positives/negatives.
 
-Error taxonomy thường dẫn đến improvement rõ hơn blind hyperparameter tuning.
+Lỗi (error / 오류) taxonomy thường dẫn đến improvement rõ hơn blind hyperparameter tuning.
 
 ## Subgroup Evaluation và Fairness
 
-Nếu system ảnh hưởng groups khác nhau, report metric theo subgroup. Aggregate score tốt có thể che severe disparity.
+Nếu hệ thống (system / 시스템) ảnh hưởng groups khác nhau, report chỉ số (metric / 지표) theo subgroup. Aggregate score tốt có thể che severe disparity.
 
-Nhưng subgroup analysis cần sample-size uncertainty; group quá nhỏ có metric noisy.
+Nhưng subgroup phân tích (analysis / 분석) cần sample-size bất định (uncertainty / 불확실성); group quá nhỏ có chỉ số (metric / 지표) noisy.
 
-Fairness không thể thu gọn thành một metric duy nhất vì definitions như equalized odds, demographic parity và calibration có thể xung đột dưới differing base rates.
+Fairness không thể thu gọn thành một chỉ số (metric / 지표) duy nhất vì definitions như equalized odds, demographic parity và calibration có thể xung đột dưới differing cơ sở (base / 기반) rates.
 
 ## Offline vs Online Evaluation
 
-Offline test đo historical/replayed performance. Production behavior có feedback loop và user interaction.
+Offline kiểm thử (test / 테스트) đo historical/replayed hiệu năng (performance / 성능). môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작) có vòng phản hồi (feedback loop / 피드백 루프) và người dùng (user / 사용자) tương tác (interaction / 상호작용).
 
-A/B test hoặc online experiment đo causal impact của deployed change, nhưng cần guardrails và proper experimental design.
+A/B kiểm thử (test / 테스트) hoặc online experiment đo nhân quả (causal / 인과적) impact của deployed thay đổi (change / 변경), nhưng cần guardrails và proper experimental thiết kế (design / 설계).
 
-Recommendation model offline NDCG cao hơn chưa chắc increase long-term retention; user behavior adapts.
+Recommendation mô hình (model / 모델) offline NDCG cao hơn chưa chắc increase long-term retention; người dùng (user / 사용자) hành vi (behavior / 동작) adapts.
 
-## Data Leakage trong Evaluation
+## Dữ liệu (data / 데이터) Leakage trong Evaluation
 
 Leakage có thể đến từ:
 
 - preprocessing fit trên full dataset;
-- same entity xuất hiện train/test;
+- same thực thể (entity / 엔터티) xuất hiện train/kiểm thử (test / 테스트);
 - future info trong features;
 - target-derived features;
 - benchmark contamination.
 
-Một metric tuyệt đẹp trên leaked test set không có value.
+Một chỉ số (metric / 지표) tuyệt đẹp trên leaked kiểm thử (test / 테스트) set không có giá trị (value / 값).
 
-## Evaluation under Distribution Shift
+## Evaluation under phân phối (distribution / 분포) Shift
 
-Ngoài IID test set, nên có stress sets:
+Ngoài IID kiểm thử (test / 테스트) set, nên có stress sets:
 
-- later time period;
-- new region/domain;
+- later thời gian (time / 시간) period;
+- new region/lĩnh vực (domain / 도메인);
 - rare edge cases;
 - corrupted/noisy inputs;
 - adversarial or worst-case slices.
 
-Robustness là behavior qua conditions, không chỉ average metric.
+Robustness là hành vi (behavior / 동작) qua conditions, không chỉ average chỉ số (metric / 지표).
 
 ## Cost-Sensitive Evaluation
 
-Expected cost:
+Expected chi phí (cost / 비용):
 
 \[
 EC=FP\cdot C_{FP}+FN\cdot C_{FN}+...
 \]
 
-có thể gần business objective hơn F1.
+có thể gần nghiệp vụ (business / 비즈니스) mục tiêu (objective / 목표) hơn F1.
 
-Nếu benefit/cost varies per case, decision có thể dùng expected value per sample thay fixed threshold.
+Nếu benefit/chi phí (cost / 비용) varies per trường hợp (case / 사례), quyết định (decision / 결정) có thể dùng expected giá trị (value / 값) per mẫu (sample / 표본) thay fixed threshold.
 
 ## Reproducibility
 
-Evaluation cần version:
+Evaluation cần phiên bản (version / 버전):
 
 ```text
 model version
@@ -263,15 +266,15 @@ random seed
 threshold/config
 ```
 
-Nếu không, score không audit được.
+Nếu không, score không kiểm tra (audit / 감사) được.
 
 ## LLM Evaluation Preview
 
-LLM làm evaluation khó hơn vì output open-ended và multiple answers có thể acceptable. Exact match thường quá strict; LLM-as-a-judge có bias; human evaluation đắt; benchmark contamination possible.
+LLM làm evaluation khó hơn vì đầu ra (output / 출력) open-ended và multiple answers có thể acceptable. chính xác (exact / 정확한) match thường quá strict; LLM-as-a-judge có độ lệch (bias / 편향); human evaluation đắt; benchmark contamination possible.
 
-Sau này `08_large_language_models/14_llm_evaluation.md` sẽ mở rộng, nhưng principles vẫn giống: task definition, representative data, independent evaluation, uncertainty và failure analysis.
+Sau này `08_large_language_models/14_llm_evaluation.md` sẽ mở rộng, nhưng principles vẫn giống: tác vụ (task / 작업) definition, representative dữ liệu (data / 데이터), independent evaluation, bất định (uncertainty / 불확실성) và thất bại (failure / 실패) phân tích (analysis / 분석).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Deployment goal
@@ -287,24 +290,26 @@ Error analysis
 Decision to ship / revise / monitor
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “AUC cao nghĩa classifier production tốt”
+### “AUC cao nghĩa classifier môi trường vận hành (production / 운영 환경) tốt”
 
-AUC không nói calibration, operating threshold, latency, subgroup performance hay business cost.
+AUC không nói calibration, operating threshold, độ trễ (latency / 지연 시간), subgroup hiệu năng (performance / 성능) hay nghiệp vụ (business / 비즈니스) chi phí (cost / 비용).
 
-### “Test set chỉ cần đủ lớn”
+### “kiểm thử (test / 테스트) set chỉ cần đủ lớn”
 
-Representativeness và independence quan trọng không kém size.
+Representativeness và independence quan trọng không kém kích thước (size / 크기).
 
 ### “F1 cân bằng precision/recall nên luôn fair”
 
-F1 bỏ qua TN và implicitly weight precision/recall theo harmonic mean, không encode mọi business cost.
+F1 bỏ qua TN và implicitly weight precision/recall theo harmonic mean, không encode mọi nghiệp vụ (business / 비즈니스) chi phí (cost / 비용).
 
-### “Một benchmark đủ để so models”
+### “Một benchmark đủ để so các mô hình (models / 모델들)”
 
-Benchmark chỉ đo một sampled task distribution và dễ bị contamination/optimization pressure.
+Benchmark chỉ đo một sampled tác vụ (task / 작업) phân phối (distribution / 분포) và dễ bị contamination/tối ưu hóa (optimization / 최적화) pressure.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Evaluation tổng hợp [Statistics](../01_mathematical_foundations/03_statistics_for_ai.md), [Training/Validation/Testing](./03_training_validation_and_testing.md), [Loss and Risk](./04_loss_objective_and_risk.md), [Bias–Variance](./14_bias_variance_and_generalization.md) và mở đường tới production monitoring, RAG/LLM evaluation, AI Safety.
+Evaluation tổng hợp [Statistics](../01_mathematical_foundations/03_statistics_for_ai.md), [Training/Validation/Testing](./03_training_validation_and_testing.md), [Loss and Risk](./04_loss_objective_and_risk.md), [Bias–Variance](./14_bias_variance_and_generalization.md) và mở đường tới môi trường vận hành (production / 운영 환경) monitoring, RAG/LLM evaluation, AI an toàn (safety / 안전).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

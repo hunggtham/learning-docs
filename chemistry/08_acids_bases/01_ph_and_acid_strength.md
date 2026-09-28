@@ -1,5 +1,8 @@
 # pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton
 
+> **Mạch đọc:** Đọc **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Định nghĩa pH** sang **pOH và tích số ion của nước**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **pH** là thang logarithm liên hệ với **hoạt độ ion hydrogen (hydrogen-ion activity)**. Độ mạnh acid mô tả xu hướng nhiệt động của một chất trong việc cho proton; nó không đồng nghĩa với nồng độ, độ ăn mòn hay mức nguy hiểm.
 
 ## Định nghĩa pH
@@ -88,13 +91,13 @@ Một quan hệ gần đúng hữu ích là:
 K\approx10^{pK_a(HB)-pK_a(HA)}
 \]
 
-Cân bằng có xu hướng nghiêng về phía chứa acid yếu hơn và base yếu hơn.
+Cân bằng có xu hướng nghiêng về phía chứa acid yếu hơn và cơ sở (base / 기반) yếu hơn.
 
 Đây là công cụ rất mạnh trong hóa học hữu cơ và hóa sinh vì cho phép dự đoán chiều chuyển proton chỉ bằng cách so sánh `pKa`.
 
 ## Những yếu tố cấu trúc kiểm soát độ acid
 
-Độ acid phụ thuộc độ bền của base liên hợp. Bất cứ yếu tố nào làm điện tích âm của base liên hợp ổn định hơn thường làm acid mạnh hơn.
+Độ acid phụ thuộc độ bền của cơ sở (base / 기반) liên hợp. Bất cứ yếu tố nào làm điện tích âm của cơ sở (base / 기반) liên hợp ổn định hơn thường làm acid mạnh hơn.
 
 ### Độ âm điện
 
@@ -112,11 +115,11 @@ về độ mạnh acid, đồng thời độ bền liên kết H–X cũng giả
 
 ### Cộng hưởng
 
-Carboxylic acid mạnh hơn alcohol vì base liên hợp carboxylate phân bố điện tích âm trên hai oxygen.
+Carboxylic acid mạnh hơn alcohol vì cơ sở (base / 기반) liên hợp carboxylate phân bố điện tích âm trên hai oxygen.
 
 ### Hiệu ứng cảm ứng
 
-Nhóm hút electron ổn định base liên hợp qua liên kết σ và làm acid mạnh hơn. Hiệu ứng giảm khi khoảng cách tăng.
+Nhóm hút electron ổn định cơ sở (base / 기반) liên hợp qua liên kết σ và làm acid mạnh hơn. Hiệu ứng giảm khi khoảng cách tăng.
 
 ### Kiểu obitan và đặc tính s
 
@@ -192,7 +195,7 @@ Do đó pH và các hằng số biểu kiến dựa trên nồng độ có thể
 
 Khoảng 0–14 là quy ước tiện lợi cho dung dịch nước không quá đậm đặc ở gần nhiệt độ phòng, không phải giới hạn tuyệt đối.
 
-Dung dịch acid mạnh đậm đặc có thể có pH nhỏ hơn 0; base đậm đặc có thể có pH lớn hơn 14.
+Dung dịch acid mạnh đậm đặc có thể có pH nhỏ hơn 0; cơ sở (base / 기반) đậm đặc có thể có pH lớn hơn 14.
 
 Trong các hệ này, hoạt độ và tính không lý tưởng trở nên quan trọng nên không thể chỉ dùng `-log c` một cách máy móc.
 
@@ -258,7 +261,7 @@ Với amino acid đơn giản không có nhóm bên ion hóa:
 pI\approx\frac{pK_{a1}+pK_{a2}}{2}
 \]
 
-Không nên áp dụng công thức này mù quáng cho amino acid có nhóm bên acid hoặc base.
+Không nên áp dụng công thức này mù quáng cho amino acid có nhóm bên acid hoặc cơ sở (base / 기반).
 
 ## Các hiểu lầm thường gặp
 
@@ -283,3 +286,5 @@ Không. Đây chỉ là khoảng quen thuộc trong các dung dịch nước th�
 pH là **tọa độ logarithm của môi trường proton**, còn `pKa` mô tả xu hướng cân bằng riêng của một nhóm có thể nhận hoặc cho proton. So sánh `pH` với `pKa` cho biết dạng proton hóa nào chiếm ưu thế.
 
 Xem tiếp: [Acid và base yếu](./02_weak_acids_and_bases.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 acid base models](./00_acid_base_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

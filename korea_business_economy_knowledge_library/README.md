@@ -1,8 +1,11 @@
 # Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc
 
+> **Mạch đọc:** Đọc **Thư viện kiến thức về doanh nghiệp, tập đoàn và kinh tế Hàn Quốc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy tắc ngôn ngữ của thư viện** sang **Giai đoạn A — Lịch sử tạo ra hệ thống kinh tế hiện tại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Thư viện này là một **hệ thống kiến thức (knowledge system)** để hiểu nền kinh tế và doanh nghiệp Hàn Quốc từ lịch sử hình thành đến cách một doanh nghiệp thực tế tạo doanh thu, lợi nhuận, dòng tiền và rủi ro. Đây không phải tài liệu học thuộc, danh sách các chaebol hay tập hợp sự kiện rời rạc.
 
-Mô hình tư duy (mental model) trung tâm là:
+Mô hình tư duy (mental model / 사고 모델) trung tâm là:
 
 ```text
 Lịch sử
@@ -182,7 +185,7 @@ Xác định pháp nhân
 | [LG Energy Solution](./40_company_case_labs/07_lg_energy_solution_battery_case.md) | GWh, công suất, yield, nguyên liệu, CAPEX |
 | [Hanwha Aerospace](./40_company_case_labs/08_hanwha_aerospace_defense_backlog_case.md) | đơn hàng tồn đọng, mua sắm quốc phòng, vốn lưu động |
 | [Coupang](./40_company_case_labs/09_coupang_commerce_logistics_case.md) | mật độ logistics, thành viên, tồn kho, lợi nhuận đóng góp |
-| [Xây dựng và PF](./40_company_case_labs/10_korean_construction_pf_case.md) | bridge loan → 본PF, bán trước, bảo lãnh, tái cấp vốn |
+| [Xây dựng và PF](./40_company_case_labs/10_korean_construction_pf_case.md) | cầu nối (bridge / 브리지) loan → 본PF, bán trước, bảo lãnh, tái cấp vốn |
 
 Các bài này không đưa ra kết luận mua/bán. Mục tiêu là biến câu chuyện về doanh nghiệp thành mô hình nhân quả có thể kiểm chứng.
 
@@ -255,6 +258,8 @@ Thư viện phân biệt ba lớp thông tin:
 
 Khi số liệu mới thay đổi, ưu tiên cập nhật số liệu mà không phá vỡ mô hình tư duy nền tảng.
 
-## Mental Model — Mô hình tư duy cuối cùng
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng
 
 > Nền kinh tế Hàn Quốc không phải tập hợp những cái tên như Samsung, Hyundai hay SK. Nó là một mạng lưới gồm lịch sử, thể chế, hộ gia đình, ngân hàng, tập đoàn, SME, người lao động, công nghệ, năng lượng, chuỗi cung ứng và thị trường toàn cầu. Hiểu một doanh nghiệp Hàn Quốc nghĩa là xác định được doanh nghiệp đó đang đứng ở đâu trong mạng lưới này, nó kiểm soát nguồn lực nào, tiền đi qua nó như thế nào và điều gì có thể làm cơ chế đó thay đổi.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

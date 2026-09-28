@@ -1,5 +1,8 @@
 # Hệ quy chiếu phi quán tính: gia tốc, Coriolis, ly tâm và vật lý trên Trái Đất
 
+> **Mạch đọc:** Đọc **Hệ quy chiếu phi quán tính: gia tốc, Coriolis, ly tâm và vật lý trên Trái Đất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cần một chương riêng về hệ quy chiếu phi quán tính?** sang **Hệ quy chiếu tịnh tiến có gia tốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao cần một chương riêng về hệ quy chiếu phi quán tính?
 
 Định luật Newton có dạng đơn giản nhất trong **hệ quy chiếu quán tính (inertial frame / 관성계)**. Tuy nhiên, nhiều hệ mà ta trực tiếp sống và đo đạc lại không quán tính: ô tô tăng tốc, thang máy, bàn quay hay chính Trái Đất đang tự quay.
@@ -210,7 +213,7 @@ Gia tốc trọng trường hiệu dụng nhỏ hơn gần xích đạo không c
 
 ## Cân bằng địa chuyển
 
-Trong khí quyển và đại dương quy mô lớn, gia tốc cục bộ có thể nhỏ hơn nhiều so với lực do gradient áp suất và Coriolis. Khi đó có thể xuất hiện cân bằng gần đúng
+Trong khí quyển và đại dương quy mô lớn, gia tốc cục bộ có thể nhỏ hơn nhiều so với lực do độ dốc (gradient / 기울기) áp suất và Coriolis. Khi đó có thể xuất hiện cân bằng gần đúng
 
 ```math
 -\frac{1}{\rho}\nabla_h p
@@ -246,7 +249,7 @@ Tham số nhỏ tự nhiên của bài toán là
 
 Nếu tham số này rất nhỏ, Coriolis chỉ là hiệu chỉnh bậc thấp. Đây là cách tiếp cận đúng hơn việc học thuộc một công thức độ lệch riêng lẻ.
 
-## Navigation, IMU và kỹ thuật cảm biến
+## Điều hướng (navigation / 내비게이션), IMU và kỹ thuật cảm biến
 
 Đơn vị đo quán tính (Inertial Measurement Unit, IMU) dùng accelerometer và gyroscope để suy ra chuyển động.
 
@@ -276,7 +279,7 @@ Các công thức trên thuộc cơ học cổ điển và giả sử phép cộ
 
 Trên Trái Đất, nhiều mô hình coi `\boldsymbol\Omega_E` và `g` không đổi trong một vùng nhỏ. Với bài toán quy mô hành tinh hoặc trắc địa chính xác, phải dùng mô hình trường hấp dẫn, hình dạng Trái Đất và tọa độ địa lý chi tiết hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Lực quán tính là **hệ quả của việc mô tả chuyển động trong một hệ tọa độ tự gia tốc hoặc tự quay**. Trong hệ quay, ngay cả vectơ cơ sở cũng thay đổi theo thời gian; chính phép đạo hàm của cơ sở động sinh ra các hạng Coriolis, ly tâm và Euler.
 
@@ -308,8 +311,10 @@ Không. Không trọng lượng biểu kiến thường nghĩa phản lực đ�
 
 Không. Ở quy mô nhỏ, điều kiện ban đầu, hình học và ma sát thường chi phối mạnh hơn nhiều.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Định luật Newton](01_newton_laws_dynamics.md), [Chuyển động quay](05_rotation_rigid_body.md).
 
 **Liên hệ tiếp:** [Hấp dẫn và quỹ đạo](06_gravitation_orbits.md), [Cơ học chất lưu](../03_continuum/00_fluids.md), [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md), [Tín hiệu và cảm biến](../12_experimental_computational/01_signals_sampling_noise.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

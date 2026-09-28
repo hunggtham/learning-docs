@@ -1,6 +1,9 @@
 # MLOps & LLMOps
 
-Folder này giải thích cách quản lý **toàn bộ vòng đời của learned behavior**: experiment, data/model lineage, registry, CI/CD/CT, feature consistency, monitoring, drift, versioning của ứng dụng LLM và incident response.
+> **Mạch đọc:** Đọc **MLOps & LLMOps** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Bản đồ phụ thuộc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này giải thích cách quản lý **toàn bộ vòng đời của learned hành vi (behavior / 동작)**: experiment, dữ liệu (data / 데이터)/mô hình (model / 모델) lineage, registry, CI/CD/CT, tính năng (feature / 기능) consistency, monitoring, drift, versioning của ứng dụng LLM và sự cố (incident / 인시던트) phản hồi (response / 응답).
 
 ## Thứ tự đọc
 
@@ -16,6 +19,9 @@ Folder này giải thích cách quản lý **toàn bộ vòng đời của learn
 08_llmops.md
 09_incident_response_and_lifecycle.md
 ```
+
+
+> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ phụ thuộc
 
@@ -35,6 +41,9 @@ flowchart TD
     L --> I
 ```
 
+
+> **Chuyển mạch:** Từ **Bản đồ phụ thuộc**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 ```text
@@ -47,6 +56,9 @@ Xây evidence
 → phát hiện drift và incident
 → retrain / rollback / retire có chủ đích
 ```
+
+
+> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những phân biệt cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những phân biệt cần giữ
 
@@ -62,6 +74,11 @@ Prompt version                    ≠ toàn bộ LLM app version
 HTTP 200                          ≠ AI task success
 ```
 
+
+> **Chuyển mạch:** Từ **Những phân biệt cần giữ**, ta sang **Liên kết kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Liên kết kiến thức
 
-Layer này phụ thuộc [Data for AI](../14_data_for_ai/README.md) và [AI Engineering](../15_ai_engineering/README.md). Sau đây nên đọc [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/README.md), [Evaluation & Reliability](../18_evaluation_reliability_interpretability/README.md) và [Safety & Security](../19_ai_safety_security_alignment/README.md).
+Tầng (layer / 계층) này phụ thuộc [Data for AI](../14_data_for_ai/README.md) và [AI Engineering](../15_ai_engineering/README.md). Sau đây nên đọc [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/README.md), [Evaluation & Reliability](../18_evaluation_reliability_interpretability/README.md) và [Safety & Security](../19_ai_safety_security_alignment/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

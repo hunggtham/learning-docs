@@ -1,5 +1,8 @@
 # Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)
 
+> **Mạch đọc:** Đọc **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tái cơ cấu tiếp tục ngay cả khi GDP đã phục hồi** sang **Quản trị và thị trường vốn thay đổi hành vi doanh nghiệp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Sau khủng hoảng 1997, Hàn Quốc bước vào thập niên 2000 với khu vực doanh nghiệp khác trước: đòn bẩy nhìn chung được kiểm soát hơn, công bố thông tin và quản trị tốt hơn, thị trường vốn có vai trò lớn hơn và nguy cơ doanh nghiệp thất bại trở nên đáng tin hơn. Nhưng thay đổi quan trọng nhất không chỉ là “Hàn Quốc phục hồi”. **Mô hình tăng trưởng bắt đầu chuyển từ mở rộng bằng vốn và sản xuất chi phí thấp sang thương hiệu toàn cầu, công nghệ, mạng số và sản xuất đa quốc gia.**
 
 Thập niên này là cây cầu giữa Hàn Quốc của công nghiệp hóa chaebol và Hàn Quốc của bán dẫn, nền tảng số, K-content và chuỗi cung ứng toàn cầu ngày nay.
@@ -136,10 +139,12 @@ Tài sản quan trọng của nền tảng có thể là phần mềm, dữ li�
 
 Tuy nhiên khi nền tảng lớn lên, nó lại đối mặt những câu hỏi quen thuộc: quyền lực thị trường, quản trị, đầu tư, cạnh tranh và quan hệ với SME.
 
-## Connection — Nền kinh tế 2010s–2020s được hình thành như thế nào?
+## Liên kết (connection / 연결) — Nền kinh tế 2010s–2020s được hình thành như thế nào?
 
 Đến cuối thập niên 2000, Hàn Quốc đã có doanh nghiệp sản xuất toàn cầu, hạ tầng số mạnh, thị trường vốn trưởng thành hơn và khả năng R&D cao hơn. Nhưng các vấn đề mới cũng rõ hơn: dân số già, năng suất dịch vụ thấp, phụ thuộc thương mại, cạnh tranh Trung Quốc và nhu cầu tìm động cơ tăng trưởng mới.
 
 Chương tiếp theo, [2010s–2020s: nền tảng, công nghiệp tiên tiến và tăng trưởng chậm](./07_2010s_2020s_platforms_advanced_industry_and_slow_growth.md), giải thích cách AI, HBM, pin, nền tảng số, an ninh kinh tế và nhân khẩu học thay đổi bài toán của Hàn Quốc.
 
-> **Mental Model cuối:** thập niên 2000 là lúc Hàn Quốc kết hợp kỷ luật tài chính hậu 1997 với năng lực công nghiệp đã tích lũy, rồi thêm một lớp mới gồm băng rộng, phần mềm, thương hiệu toàn cầu và sản xuất đa quốc gia. Nền kinh tế không còn chỉ “xuất khẩu hàng làm ở Hàn Quốc”; doanh nghiệp Hàn Quốc bắt đầu điều phối giá trị trên mạng lưới toàn cầu.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** thập niên 2000 là lúc Hàn Quốc kết hợp kỷ luật tài chính hậu 1997 với năng lực công nghiệp đã tích lũy, rồi thêm một lớp mới gồm băng rộng, phần mềm, thương hiệu toàn cầu và sản xuất đa quốc gia. Nền kinh tế không còn chỉ “xuất khẩu hàng làm ở Hàn Quốc”; doanh nghiệp Hàn Quốc bắt đầu điều phối giá trị trên mạng lưới toàn cầu.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) — Nền kinh tế 2010s–2020s được hình thành như thế nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

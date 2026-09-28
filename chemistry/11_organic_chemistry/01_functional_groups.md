@@ -1,19 +1,22 @@
 # Nhóm chức — các mô-đun điện tử của hóa học hữu cơ
 
-> **Nhóm chức (functional group / 작용기)** là một kiểu sắp xếp nguyên tử và liên kết lặp lại tạo ra một khuôn mẫu điện tử đủ nhất quán để dự đoán nhiều họ phản ứng. Nhờ nhóm chức, hóa học hữu cơ không trở thành việc ghi nhớ hàng triệu phân tử riêng lẻ: ta có thể suy luận từ phân bố electron, độ acid–base, tính ái nhân, tính ái điện, khả năng rời nhóm và ổn định cộng hưởng.
+> **Mạch đọc:** Đọc **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nhóm chức không chỉ là nhãn phân loại** sang **Bốn câu hỏi khi gặp một nhóm chức mới**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Nhóm chức (functional group / 작용기)** là một kiểu sắp xếp nguyên tử và liên kết lặp lại tạo ra một khuôn mẫu điện tử đủ nhất quán để dự đoán nhiều họ phản ứng. Nhờ nhóm chức, hóa học hữu cơ không trở thành việc ghi nhớ hàng triệu phân tử riêng lẻ: ta có thể suy luận từ phân bố electron, độ acid–cơ sở (base / 기반), tính ái nhân, tính ái điện, khả năng rời nhóm và ổn định cộng hưởng.
 
 Chương này giả định người đọc đã có nền về [liên kết cộng hóa trị](../02_chemical_bonding/02_covalent_bonding.md), [Lewis và cộng hưởng](../02_chemical_bonding/03_lewis_structures_and_resonance.md), [acid–base](../08_acids_bases/00_acid_base_models.md) và [cơ chế phản ứng hữu cơ](./03_organic_reaction_mechanisms.md). Nếu chưa nhớ rõ các khái niệm này, vẫn có thể đọc tiếp nhưng nên quay lại khi gặp thuật ngữ như ái nhân, ái điện hoặc nhóm rời.
 
 ## Nhóm chức không chỉ là nhãn phân loại
 
-Thay một nguyên tử H trong ethane bằng nhóm `–OH` tạo ethanol. Khung carbon gần như không đổi, nhưng nhiệt độ sôi, độ tan, khả năng tạo liên kết hydrogen, tính acid–base và phản ứng oxy hóa thay đổi rõ rệt.
+Thay một nguyên tử H trong ethane bằng nhóm `–OH` tạo ethanol. Khung carbon gần như không đổi, nhưng nhiệt độ sôi, độ tan, khả năng tạo liên kết hydrogen, tính acid–cơ sở (base / 기반) và phản ứng oxy hóa thay đổi rõ rệt.
 
 Nguyên nhân nằm ở phân bố electron cục bộ. Một nhóm chức có thể thay đổi:
 
 - mật độ electron;
 - mômen lưỡng cực;
 - khả năng cho/nhận liên kết hydrogen;
-- độ acid và độ base;
+- độ acid và độ cơ sở (base / 기반);
 - vị trí ái nhân hoặc ái điện;
 - khả năng rời nhóm;
 - phổ IR/NMR/MS;
@@ -88,7 +91,7 @@ RC\equiv CH \rightarrow RC\equiv C^- + H^+
 
 ion acetylide có thể đóng vai trò tác nhân ái nhân carbon để tạo liên kết C–C.
 
-## Vòng thơm — phi định xứ thay đổi logic phản ứng
+## Vòng thơm — phi định xứ thay đổi lô-gic (logic / 논리) phản ứng
 
 Trong hệ **thơm (aromatic)**, electron pi được phi định xứ trên một vòng liên hợp thỏa điều kiện thích hợp.
 
@@ -132,7 +135,7 @@ Khả năng nhóm rời không chỉ phụ thuộc độ phân cực liên kết
 R-OH
 \]
 
-Oxygen có hai cặp electron tự do nên có thể đóng vai trò base Lewis hoặc tác nhân ái nhân. Đồng thời liên kết O–H cho phép alcohol hành xử như acid yếu.
+Oxygen có hai cặp electron tự do nên có thể đóng vai trò cơ sở (base / 기반) Lewis hoặc tác nhân ái nhân. Đồng thời liên kết O–H cho phép alcohol hành xử như acid yếu.
 
 Alcohol có thể:
 
@@ -159,7 +162,7 @@ Do đó phenol acid hơn phần lớn alcohol no đơn giản.
 
 Mặt khác, cặp electron trên oxygen có thể cho vào hệ pi của vòng, làm thay đổi mật độ electron và định hướng phản ứng thế thơm.
 
-Một nhóm chức vì vậy có thể đồng thời ảnh hưởng acid–base và reactivity của phần khung lân cận.
+Một nhóm chức vì vậy có thể đồng thời ảnh hưởng acid–cơ sở (base / 기반) và reactivity của phần khung lân cận.
 
 ## Ether và epoxide
 
@@ -169,22 +172,22 @@ Một nhóm chức vì vậy có thể đồng thời ảnh hưởng acid–base
 R-O-R'
 \]
 
-thường kém phản ứng hơn alcohol nhưng oxygen vẫn là base Lewis và có khả năng solvat hóa cation.
+thường kém phản ứng hơn alcohol nhưng oxygen vẫn là cơ sở (base / 기반) Lewis và có khả năng solvat hóa cation.
 
 Nhiều ether được dùng làm dung môi vì kết hợp độ phân cực vừa phải với tính trơ tương đối.
 
 **Epoxide (epoxide)** là ether vòng ba cạnh. Góc liên kết bị ép khỏi hình học thuận lợi, tạo ứng suất vòng cao. Vì vậy epoxide dễ bị mở vòng bởi tác nhân ái nhân.
 
-Tính chọn lọc vị trí khi mở epoxide phụ thuộc điều kiện acid hoặc base vì trạng thái chuyển tiếp khác nhau.
+Tính chọn lọc vị trí khi mở epoxide phụ thuộc điều kiện acid hoặc cơ sở (base / 기반) vì trạng thái chuyển tiếp khác nhau.
 
-## Amin — cặp electron trên nitrogen tạo tính base và ái nhân
+## Amin — cặp electron trên nitrogen tạo tính cơ sở (base / 기반) và ái nhân
 
 **Amin (amine)** có cặp electron tự do trên nitrogen, nên thường là:
 
-- base Brønsted/Lewis;
+- cơ sở (base / 기반) Brønsted/Lewis;
 - tác nhân ái nhân.
 
-Độ base của amin phụ thuộc:
+Độ cơ sở (base / 기반) của amin phụ thuộc:
 
 - hiệu ứng cảm ứng;
 - cộng hưởng;
@@ -193,9 +196,9 @@ Tính chọn lọc vị trí khi mở epoxide phụ thuộc điều kiện acid 
 - dung môi và solvat hóa;
 - trạng thái proton hóa.
 
-Amin no thường base mạnh hơn aniline vì cặp electron của aniline bị phi định xứ vào vòng thơm.
+Amin no thường cơ sở (base / 기반) mạnh hơn aniline vì cặp electron của aniline bị phi định xứ vào vòng thơm.
 
-Nitrogen trong amide còn kém base hơn nữa vì cặp electron tham gia cộng hưởng với carbonyl.
+Nitrogen trong amide còn kém cơ sở (base / 기반) hơn nữa vì cặp electron tham gia cộng hưởng với carbonyl.
 
 ## Ammonium bậc bốn
 
@@ -268,7 +271,7 @@ Aldehyde thường phản ứng mạnh hơn ketone vì:
 RCO_2H
 \]
 
-acid hơn alcohol nhiều vì base liên hợp carboxylate phân tán điện tích âm trên hai oxygen nhờ cộng hưởng.
+acid hơn alcohol nhiều vì cơ sở (base / 기반) liên hợp carboxylate phân tán điện tích âm trên hai oxygen nhờ cộng hưởng.
 
 Nhóm hút electron ổn định carboxylate và tăng độ acid; hiệu ứng cảm ứng giảm dần theo khoảng cách.
 
@@ -322,7 +325,7 @@ Hệ quả:
 
 - liên kết C–N có một phần đặc tính liên kết đôi;
 - nhóm amide gần phẳng;
-- nitrogen kém base hơn amin;
+- nitrogen kém cơ sở (base / 기반) hơn amin;
 - carbonyl kém ái điện hơn aldehyde/ketone;
 - phản ứng thủy phân cần điều kiện mạnh hoặc xúc tác enzyme.
 
@@ -377,13 +380,13 @@ Cδ−–Mgδ+
 Cδ−–Liδ+
 ```
 
-Carbon mang tính carbanion tương đối và hành xử như base/ái nhân mạnh.
+Carbon mang tính carbanion tương đối và hành xử như cơ sở (base / 기반)/ái nhân mạnh.
 
 Chúng rất hữu ích để tạo liên kết C–C, đặc biệt với carbonyl.
 
 Nhược điểm là phản ứng nhanh với nước, alcohol và nhiều nguồn proton, nên điều kiện khan thường cần thiết.
 
-## Nhóm chức và acid–base
+## Nhóm chức và acid–cơ sở (base / 기반)
 
 Nhóm chức quyết định vị trí proton hóa và khử proton.
 
@@ -466,7 +469,7 @@ amine    → carbamate
 
 Một hệ bảo vệ tốt cần **tính trực giao (orthogonality)**: điều kiện bảo vệ hoặc giải bảo vệ không phá các nhóm chức còn lại.
 
-Tuy nhiên nhóm bảo vệ có trade-off rõ:
+Tuy nhiên nhóm bảo vệ có sự đánh đổi (trade-off / 트레이드오프) rõ:
 
 - thêm bước phản ứng;
 - giảm hiệu suất tổng;
@@ -540,7 +543,7 @@ Không. Carbonyl trong aldehyde và carbonyl trong amide khác nhau đáng kể 
 
 ### “Phân cực càng lớn thì phản ứng càng nhanh”
 
-Không. Tốc độ còn phụ thuộc orbital, nhóm rời, solvat hóa, steric effect và hàng rào hoạt hóa.
+Không. Tốc độ còn phụ thuộc orbital, nhóm rời, solvat hóa, steric tác động (effect / 효과) và hàng rào hoạt hóa.
 
 ### “Nhóm rời tốt là nhóm có liên kết C–X yếu nhất”
 
@@ -568,3 +571,5 @@ hình học có tạo strain hay che chắn không?
 Từ các câu hỏi này, phần lớn hóa học nhóm chức có thể được suy luận thay vì ghi nhớ riêng lẻ.
 
 Xem tiếp: [Đồng phân và hóa lập thể](./02_isomerism_and_stereochemistry.md), sau đó [Cơ chế phản ứng hữu cơ](./03_organic_reaction_mechanisms.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

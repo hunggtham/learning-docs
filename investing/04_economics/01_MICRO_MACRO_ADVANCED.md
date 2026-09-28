@@ -1,5 +1,8 @@
 # Kinh tế vi mô và vĩ mô nâng cao
 
+> **Mạch đọc:** Đặt **Kinh tế vi mô và vĩ mô nâng cao** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Khan hiếm và chi phí cơ hội** sang **2. Tư duy cận biên**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Mục tiêu của chương này là xây nền kinh tế học từ bản chất thay vì học thuộc các quan hệ kiểu “lãi suất tăng thì cổ phiếu giảm”. Phần vi mô giải thích hành vi của người tiêu dùng, doanh nghiệp và thị trường; phần vĩ mô nối các quyết định đó thành tăng trưởng, lạm phát, việc làm, chính sách và giá tài sản.
 
 # Phần I — Nền tảng tư duy kinh tế
@@ -96,7 +99,7 @@ Nếu tăng giá 10% nhưng volume chỉ giảm 1%, doanh nghiệp có vị th�
 
 Người tiêu dùng phân bổ ngân sách để tối đa hóa mức thỏa dụng (utility) trong giới hạn thu nhập.
 
-Khái niệm quan trọng là trade-off: chi nhiều cho một nhóm hàng nghĩa là còn ít tiền cho nhóm khác.
+Khái niệm quan trọng là sự đánh đổi (trade-off / 트레이드오프): chi nhiều cho một nhóm hàng nghĩa là còn ít tiền cho nhóm khác.
 
 ## 10. Hiệu ứng thu nhập và thay thế
 
@@ -113,13 +116,13 @@ Hai hiệu ứng này giúp giải thích vì sao cùng một đợt lạm phát
 
 Doanh nghiệp biến lao động, vốn và công nghệ thành sản lượng.
 
-Năng suất tăng khi có thể tạo nhiều output hơn từ cùng lượng input.
+Năng suất tăng khi có thể tạo nhiều đầu ra (output / 출력) hơn từ cùng lượng đầu vào (input / 입력).
 
 ## 12. Chi phí cố định và biến đổi
 
-**Chi phí cố định (fixed cost)** không thay đổi nhiều trong ngắn hạn theo sản lượng. **Chi phí biến đổi (variable cost)** thay đổi theo output.
+**Chi phí cố định (fixed cost)** không thay đổi nhiều trong ngắn hạn theo sản lượng. **Chi phí biến đổi (variable cost)** thay đổi theo đầu ra (output / 출력).
 
-Ngành có fixed cost cao thường có **đòn bẩy hoạt động (operating leverage)** lớn.
+Ngành có fixed chi phí (cost / 비용) cao thường có **đòn bẩy hoạt động (operating leverage)** lớn.
 
 ```text
 Doanh thu ↑ nhẹ
@@ -136,18 +139,18 @@ Trong cạnh tranh mạnh, giá dài hạn thường có xu hướng bị kéo g
 
 ## 14. Kinh tế theo quy mô
 
-**Economies of scale** xuất hiện khi chi phí bình quân giảm khi quy mô tăng.
+**Economies of quy mô (scale / 규모)** xuất hiện khi chi phí bình quân giảm khi quy mô tăng.
 
 Nguồn có thể đến từ:
 
-- phân bổ fixed cost;
+- phân bổ fixed chi phí (cost / 비용);
 - mua nguyên liệu tốt hơn;
 - dữ liệu;
 - mạng lưới;
 - logistics;
 - thương hiệu.
 
-Nhưng quy mô quá lớn cũng có thể tạo **diseconomies of scale** do quan liêu và phối hợp kém.
+Nhưng quy mô quá lớn cũng có thể tạo **diseconomies of quy mô (scale / 규모)** do quan liêu và phối hợp kém.
 
 # Phần V — Cấu trúc thị trường
 
@@ -159,7 +162,7 @@ Mô hình cạnh tranh hoàn hảo giả định nhiều người mua bán, sả
 
 ## 16. Độc quyền
 
-Doanh nghiệp độc quyền có khả năng hạn chế output và đặt giá cao hơn thị trường cạnh tranh, nhưng vẫn bị giới hạn bởi cầu, công nghệ, regulation và sản phẩm thay thế.
+Doanh nghiệp độc quyền có khả năng hạn chế đầu ra (output / 출력) và đặt giá cao hơn thị trường cạnh tranh, nhưng vẫn bị giới hạn bởi cầu, công nghệ, regulation và sản phẩm thay thế.
 
 ## 17. Oligopoly
 
@@ -171,13 +174,13 @@ Trong thị trường ít đối thủ, quyết định của một công ty ph�
 
 **Cân bằng Nash (Nash equilibrium)** là trạng thái mỗi bên không muốn đơn phương thay chiến lược khi chiến lược của bên khác giữ nguyên.
 
-Khái niệm này giúp hiểu cạnh tranh giá, capex, capacity và bidding.
+Khái niệm này giúp hiểu cạnh tranh giá, capex, sức chứa (capacity / 용량) và bidding.
 
 ## 19. Price discrimination
 
 Doanh nghiệp có thể bán cùng sản phẩm với giá khác nhau cho nhóm khách hàng khác nhau khi:
 
-- có market power;
+- có thị trường (market / 시장) power;
 - nhận diện được willingness to pay;
 - hạn chế resale.
 
@@ -191,7 +194,7 @@ Ngoại tác (externality) xuất hiện khi hành động của một bên tạ
 
 Ô nhiễm là ví dụ ngoại tác âm. R&D có thể tạo ngoại tác dương vì kiến thức lan sang doanh nghiệp khác.
 
-## 21. Public goods
+## 21. công khai (public / 공개) goods
 
 Hàng hóa công (public goods) có tính không loại trừ và không cạnh tranh trong tiêu dùng ở mức cao.
 
@@ -201,7 +204,7 @@ Quốc phòng hoặc một số loại kiến thức cơ bản là ví dụ gầ
 
 Thuế có thể làm giảm lượng giao dịch so với cân bằng không thuế.
 
-Phần phúc lợi mất đi mà không chuyển thành doanh thu thuế gọi là **deadweight loss**.
+Phần phúc lợi mất đi mà không chuyển thành doanh thu thuế gọi là **deadweight mất mát (loss / 손실)**.
 
 Mức tổn thất phụ thuộc độ co giãn của cung và cầu.
 
@@ -221,11 +224,11 @@ Ví dụ ngân hàng không biết chính xác chất lượng người vay bằ
 
 **Rủi ro đạo đức (moral hazard)** xảy ra sau giao dịch khi một bên thay đổi hành vi vì không chịu toàn bộ hậu quả.
 
-## 26. Principal–agent problem
+## 26. Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제)
 
 **Vấn đề người ủy quyền – người đại diện (principal–agent problem)** xuất hiện khi người quản lý không hoàn toàn có cùng lợi ích với chủ sở hữu.
 
-Đây là nền tảng kinh tế của corporate governance.
+Đây là nền tảng kinh tế của corporate quản trị (governance / 거버넌스).
 
 # Phần VIII — Kinh tế hành vi
 
@@ -233,13 +236,13 @@ Ví dụ ngân hàng không biết chính xác chất lượng người vay bằ
 
 Kinh tế hành vi nghiên cứu các sai lệch có hệ thống như:
 
-- loss aversion;
+- mất mát (loss / 손실) aversion;
 - anchoring;
 - overconfidence;
-- present bias;
-- herd behavior.
+- present độ lệch (bias / 편향);
+- herd hành vi (behavior / 동작).
 
-Các bias này ảnh hưởng tiêu dùng, tiết kiệm và đầu tư.
+Các độ lệch (bias / 편향) này ảnh hưởng tiêu dùng, tiết kiệm và đầu tư.
 
 # Phần IX — Từ vi mô tới vĩ mô
 
@@ -254,7 +257,7 @@ Household Consumption
 + Net Exports
 ```
 
-Nhưng tổng thể không phải lúc nào cũng bằng việc cộng cơ học từng cá nhân vì có feedback giữa các chủ thể.
+Nhưng tổng thể không phải lúc nào cũng bằng việc cộng cơ học từng cá nhân vì có phản hồi (feedback / 피드백) giữa các chủ thể.
 
 ## 29. GDP
 
@@ -289,11 +292,11 @@ Growth ↓ + Inflation ↑
 
 Đây là một trong những bản đồ hữu ích nhất khi đọc vĩ mô.
 
-## 32. Output gap
+## 32. đầu ra (output / 출력) gap
 
 **Khoảng sản lượng (output gap)** là chênh lệch giữa sản lượng thực và mức tiềm năng.
 
-Output trên tiềm năng có thể tạo áp lực giá và lương. Output dưới tiềm năng thường đi cùng tài nguyên nhàn rỗi hơn.
+Đầu ra (output / 출력) trên tiềm năng có thể tạo áp lực giá và lương. đầu ra (output / 출력) dưới tiềm năng thường đi cùng tài nguyên nhàn rỗi hơn.
 
 Mức tiềm năng không quan sát trực tiếp nên luôn là ước tính.
 
@@ -317,7 +320,7 @@ Nhưng độ dài và thứ tự không cố định.
 
 Tỷ lệ thất nghiệp không phản ánh toàn bộ thị trường lao động. Cần xem thêm:
 
-- participation rate;
+- participation tỷ lệ (rate / 비율);
 - employment-population ratio;
 - hours worked;
 - job openings;
@@ -356,7 +359,7 @@ Lạm phát có thể đến từ:
 - tỷ giá;
 - kỳ vọng.
 
-Cùng CPI 4% nhưng cấu trúc khác nhau sẽ tạo reaction function khác.
+Cùng CPI 4% nhưng cấu trúc khác nhau sẽ tạo reaction hàm (function / 함수) khác.
 
 ## 38. Kỳ vọng lạm phát
 
@@ -380,7 +383,7 @@ Policy Rate
 
 Mỗi mắt xích có độ trễ và cường độ khác nhau.
 
-## 40. Reaction function
+## 40. Reaction hàm (function / 함수)
 
 Hàm phản ứng của ngân hàng trung ương cân nhắc:
 
@@ -390,15 +393,15 @@ Hàm phản ứng của ngân hàng trung ương cân nhắc:
 - expectations;
 - financial stability.
 
-Thị trường thường phản ứng với thay đổi dự kiến trong reaction function chứ không chỉ mức lãi suất hiện tại.
+Thị trường thường phản ứng với thay đổi dự kiến trong reaction hàm (function / 함수) chứ không chỉ mức lãi suất hiện tại.
 
-## 41. Taylor rule
+## 41. Taylor quy tắc (rule / 규칙)
 
-Taylor rule là một khung đơn giản liên hệ policy rate với lạm phát và output gap.
+Taylor quy tắc (rule / 규칙) là một khung đơn giản liên hệ chính sách (policy / 정책) tỷ lệ (rate / 비율) với lạm phát và đầu ra (output / 출력) gap.
 
 Nó hữu ích như benchmark, không phải công thức buộc ngân hàng trung ương phải làm theo.
 
-## 42. Neutral rate và r-star
+## 42. Neutral tỷ lệ (rate / 비율) và r-star
 
 **Lãi suất trung tính (neutral rate, r-star)** là mức lãi suất thực phù hợp với nền kinh tế ở gần toàn dụng và lạm phát ổn định.
 
@@ -408,7 +411,7 @@ R-star không quan sát trực tiếp và có thể thay đổi theo:
 - demographics;
 - tiết kiệm;
 - đầu tư;
-- fiscal policy.
+- fiscal chính sách (policy / 정책).
 
 # Phần XIII — Chính sách tài khóa
 
@@ -424,7 +427,7 @@ Hiệu quả phụ thuộc:
 
 ## 44. Fiscal multiplier
 
-**Hệ số nhân tài khóa (fiscal multiplier)** đo output thay đổi bao nhiêu so với một thay đổi chi tiêu hoặc thuế.
+**Hệ số nhân tài khóa (fiscal multiplier)** đo đầu ra (output / 출력) thay đổi bao nhiêu so với một thay đổi chi tiêu hoặc thuế.
 
 Multiplier không cố định. Nó có thể cao hơn trong suy thoái sâu và thấp hơn khi nền kinh tế đã quá nóng.
 
@@ -448,7 +451,7 @@ Nguồn bền vững gồm:
 - công nghệ;
 - năng suất nhân tố tổng hợp (TFP).
 
-## 47. Solow framework
+## 47. Solow khung phần mềm (framework / 프레임워크)
 
 Mô hình Solow giúp tách tăng trưởng từ tích lũy vốn, lao động và tiến bộ công nghệ.
 
@@ -456,7 +459,7 @@ Khi vốn trên mỗi lao động đã cao, thêm vốn thường có lợi su�
 
 ## 48. TFP
 
-TFP phản ánh phần sản lượng không giải thích đơn thuần bằng tăng input.
+TFP phản ánh phần sản lượng không giải thích đơn thuần bằng tăng đầu vào (input / 입력).
 
 Nó liên quan tới:
 
@@ -492,7 +495,7 @@ Asset Price ↓
 
 # Phần XVI — Kinh tế mở
 
-## 51. Current account
+## 51. hiện tại (current / 현재) account
 
 Tài khoản vãng lai phản ánh thương mại hàng hóa, dịch vụ, thu nhập và chuyển giao.
 
@@ -507,9 +510,9 @@ Nó chịu ảnh hưởng của:
 - chênh lệch lãi suất;
 - inflation;
 - growth;
-- capital flow;
-- risk sentiment;
-- policy intervention.
+- capital luồng (flow / 흐름);
+- rủi ro (risk / 위험) sentiment;
+- chính sách (policy / 정책) intervention.
 
 ## 53. Impossible trinity
 
@@ -531,7 +534,7 @@ Có thể từ:
 - managed float;
 - free float.
 
-Mỗi chế độ tạo trade-off khác nhau về dự trữ ngoại hối, policy autonomy và capital-flow risk.
+Mỗi chế độ tạo sự đánh đổi (trade-off / 트레이드오프) khác nhau về dự trữ ngoại hối, chính sách (policy / 정책) autonomy và capital-flow rủi ro (risk / 위험).
 
 # Phần XVII — Cách dùng kinh tế học trong đầu tư
 
@@ -556,7 +559,7 @@ Reaction function thay đổi không?
 Điều gì đã được price?
 ```
 
-## 56. Phân biệt level, change và surprise
+## 56. Phân biệt mức (level / 수준), thay đổi (change / 변경) và surprise
 
 Một biến có thể ở mức cao nhưng đang giảm nhanh.
 
@@ -568,16 +571,16 @@ Mức hiện tại
 + Bất ngờ so với kỳ vọng
 ```
 
-## 57. Phân biệt stock và flow
+## 57. Phân biệt stock và luồng (flow / 흐름)
 
-Stock là lượng tích lũy tại một thời điểm; flow là thay đổi trong một giai đoạn.
+Stock là lượng tích lũy tại một thời điểm; luồng (flow / 흐름) là thay đổi trong một giai đoạn.
 
 Ví dụ:
 
 - nợ là stock;
-- deficit là flow;
+- deficit là luồng (flow / 흐름);
 - inventory là stock;
-- inventory build là flow.
+- inventory bản dựng (build / 빌드) là luồng (flow / 흐름).
 
 Nhầm hai loại này dễ dẫn tới phân tích sai.
 
@@ -619,7 +622,7 @@ Earnings Revisions
 
 Kinh tế học hữu ích nhất khi giúp bạn hiểu **cơ chế** chứ không phải tạo khẩu quyết.
 
-Vi mô giải thích vì sao hộ gia đình và doanh nghiệp phản ứng với giá, chi phí và incentive. Vĩ mô nối hàng triệu quyết định đó thành tăng trưởng, lạm phát, tín dụng và policy.
+Vi mô giải thích vì sao hộ gia đình và doanh nghiệp phản ứng với giá, chi phí và incentive. Vĩ mô nối hàng triệu quyết định đó thành tăng trưởng, lạm phát, tín dụng và chính sách (policy / 정책).
 
 Đối với đầu tư, mục tiêu cuối cùng là có thể đi từ:
 
@@ -634,3 +637,5 @@ Shock
 ```
 
 mà không cần dựa vào một câu quan hệ đơn giản hóa.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

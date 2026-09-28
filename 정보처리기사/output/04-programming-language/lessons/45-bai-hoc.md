@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **네트워크 통신 (Network Communication)** và nối nó với **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -36,14 +38,14 @@
 - **210. 네트워크 계층 (Network)**: 경로 설정, 패킷 라우팅. (Định tuyến, chuyển mạch gói).
 - **211. 전송 계층 (Transport)**: 종단 간 투명한 데이터 전송. (Truyền tải End-to-End, TCP/UDP).
 - **212. 세션 계층 (Session)**: 대화 제어, 동기화 (Quản lý phiên, đồng bộ hóa hội thoại).
-  - 💡 *Mẹo ghi nhớ*: Data Link = Frame/MAC. Network = IP/Routing. Transport = TCP/UDP/Port. Session = Dialog/Token.
+  - 💡 *Mẹo ghi nhớ*: dữ liệu (data / 데이터) Link = Frame/MAC. mạng (network / 네트워크) = IP/Routing. vận chuyển (transport / 전송) = TCP/UDP/cổng (port / 포트). Session = Dialog/đơn vị từ (token / 토큰).
 
 ### 213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)
 - **리피터 (Repeater)**: 신호 재생 (Khuếch đại tín hiệu).
 - **브리지 (Bridge)**: LAN 연결 (Kết nối mạng LAN cùng loại).
 - **라우터 (Router)**: 최적 경로 선택 (Chọn đường đi tối ưu).
 - **스위치 (Switch)**: 여러 랜선 연결 (Chuyển mạch mạng LAN).
-- **브라우터 (Brouter)**: Bridge + Router.
+- **브라우터 (Brouter)**: cầu nối (bridge / 브리지) + Router.
 
 ### TCP/IP 프로토콜 (TCP/IP Protocols)
 - **214. MQTT**: IoT에서 사용하는 발행-구독 메시징 (Giao thức Publish/Subscribe cho IoT).

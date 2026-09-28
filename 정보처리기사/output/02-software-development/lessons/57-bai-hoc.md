@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,13 +20,15 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 044: 테스트 자동화 도구 (Test Automation Tools)** và nối nó với **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 핵심 044: 테스트 자동화 도구 (Test Automation Tools)
 
-- **정적 분석 도구 (Static Analysis):** Phân tích không cần chạy code.
+- **정적 분석 도구 (Static Analysis):** Phân tích không cần chạy mã (code / 코드).
 - **성능 테스트 도구 (Performance Test):** Tạo ra người dùng ảo (Virtual Users) để ép tải, đo đạc băng thông, thời gian phản hồi (Load/Stress testing).
-- **테스트 드라이버 (Test Driver):** Dùng trong Bottom-up. Gọi module con, truyền tham số.
-- **테스트 스텁 (Test Stub):** Dùng trong Top-down. Module giả mạo, làm hình nộm trả về kết quả ảo cho module trên.
+- **테스트 드라이버 (Test Driver):** Dùng trong Bottom-up. Gọi mô-đun (module / 모듈) con, truyền tham số.
+- **테스트 스텁 (Test Stub):** Dùng trong Top-down. mô-đun (module / 모듈) giả mạo, làm hình nộm trả về kết quả ảo cho mô-đun (module / 모듈) trên.
 
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Driver (Tài xế) = Kẻ điều khiển từ trên. Stub (Gốc cây/Khúc gỗ) = Đứng ở dưới chịu đòn giả.

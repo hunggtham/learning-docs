@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** và nối nó với **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -33,7 +35,7 @@
 - **텐서플로 (TensorFlow):** 구글의 기계학습/데이터 흐름 프로그래밍용 오픈소스 라이브러리.
 - **앤 스크린 (N-Screen):** 여러(N개) 단말기에서 동일한 콘텐츠를 자유롭게 이용.
 - **Tiếng Việt:**
-  - Docker: Nền tảng container hóa mã nguồn mở.
+  - Docker: Nền tảng bộ chứa (container / 컨테이너) hóa mã nguồn mở.
   - Mashup: Kết hợp các API/dịch vụ web để tạo dịch vụ mới.
   - Digital Twin: Bản sao kỹ thuật số của thế giới thực.
   - N-Screen: Xem một nội dung trên nhiều thiết bị.
@@ -46,7 +48,7 @@
 - **Tiếng Việt:**
   - Hadoop: Nền tảng điện toán phân tán (dùng Sqoop kết nối RDB).
   - MapReduce: Mô hình lập trình xử lý phân tán.
-  - Data Mining: Khai phá dữ liệu.
+  - dữ liệu (data / 데이터) Mining: Khai phá dữ liệu.
   - OLAP: Xử lý phân tích đa chiều trực tuyến.
 
 ### 6.3 시스템 아키텍처 및 프로그래밍 요소

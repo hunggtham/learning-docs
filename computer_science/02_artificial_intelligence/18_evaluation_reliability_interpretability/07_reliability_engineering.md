@@ -1,16 +1,19 @@
-# Reliability Engineering cho hệ thống AI
+# Độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) cho hệ thống AI
 
-**Kỹ thuật độ tin cậy (reliability engineering / 신뢰성 공학)** là quá trình thiết kế hệ thống để nó cung cấp hành vi đúng hợp đồng trong thời gian dài, chịu được lỗi, suy giảm có kiểm soát và phục hồi được. Với AI, độ tin cậy không chỉ là service còn chạy; nó còn bao gồm chất lượng quyết định, tính nhất quán của state, mức an toàn của side effect và khả năng phát hiện lỗi âm thầm.
+> **Mạch đọc:** Đặt **độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) cho hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kiến thức tiên quyết** sang **độ tin cậy (reliability / 신뢰성) khác Accuracy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một mô hình có accuracy cao vẫn có thể tạo hệ thống không đáng tin nếu retrieval lỗi, state stale, tool retry trùng lặp hoặc fallback thay đổi semantics mà không ai biết.
+
+**Kỹ thuật độ tin cậy (reliability engineering / 신뢰성 공학)** là quá trình thiết kế hệ thống để nó cung cấp hành vi đúng hợp đồng trong thời gian dài, chịu được lỗi, suy giảm có kiểm soát và phục hồi được. Với AI, độ tin cậy không chỉ là dịch vụ (service / 서비스) còn chạy; nó còn bao gồm chất lượng quyết định, tính nhất quán của trạng thái (state / 상태), mức an toàn của side tác động (effect / 효과) và khả năng phát hiện lỗi âm thầm.
+
+Một mô hình có accuracy cao vẫn có thể tạo hệ thống không đáng tin nếu retrieval lỗi, trạng thái (state / 상태) stale, công cụ (tool / 도구) thử lại (retry / 재시도) trùng lặp hoặc fallback thay đổi ngữ nghĩa (semantics / 의미론) mà không ai biết.
 
 ## Kiến thức tiên quyết
 
 Nên đọc trước [AI System Design](../15_ai_engineering/10_ai_system_design.md), [Monitoring và Observability](../16_mlops_and_llmops/06_monitoring_and_observability.md), [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md) và [Nền tảng Evaluation](./00_evaluation_foundations.md).
 
-## Reliability khác Accuracy
+## Độ tin cậy (reliability / 신뢰성) khác Accuracy
 
-Accuracy là một metric thống kê trên một tập dữ liệu. Reliability bao phủ toàn bộ chuỗi:
+Accuracy là một chỉ số (metric / 지표) thống kê trên một tập dữ liệu. độ tin cậy (reliability / 신뢰성) bao phủ toàn bộ chuỗi:
 
 ```text
 availability
@@ -33,15 +36,15 @@ Một intuition đơn giản cho chuỗi `n` bước quan trọng độc lập, 
 P(success)\approx\prod_{i=1}^{n}p_i
 \]
 
-Nếu 20 bước đều có reliability 0.99, xác suất tất cả cùng thành công chỉ khoảng:
+Nếu 20 bước đều có độ tin cậy (reliability / 신뢰성) 0.99, xác suất tất cả cùng thành công chỉ khoảng:
 
 \[
 0.99^{20}\approx0.818
 \]
 
-Thực tế lỗi không độc lập hoàn toàn, nhưng công thức cho thấy vì sao Agent dài hạn cần checkpoint, verification và recovery thay vì chỉ “model tốt hơn”.
+Thực tế lỗi không độc lập hoàn toàn, nhưng công thức cho thấy vì sao tác nhân (agent / 에이전트) dài hạn cần checkpoint, xác minh (verification / 확인) và khôi phục (recovery / 복구) thay vì chỉ “mô hình (model / 모델) tốt hơn”.
 
-## Phân loại failure mode
+## Phân loại dạng thất bại (failure mode / 실패 모드)
 
 Nên phân lỗi theo nhiều trục:
 
@@ -53,11 +56,11 @@ local / cascading
 model / data / infra / tool / policy / state
 ```
 
-Mỗi loại cần phản ứng khác nhau. `TIMEOUT` có thể retry; `PERMISSION_DENIED` thường phải dừng; mutation sai có thể cần compensating action.
+Mỗi loại cần phản ứng khác nhau. `TIMEOUT` có thể thử lại (retry / 재시도); `PERMISSION_DENIED` thường phải dừng; mutation sai có thể cần compensating hành động (action / 동작).
 
-## Dependency và failure budget
+## Phụ thuộc (dependency / 의존성) và thất bại (failure / 실패) ngân sách (budget / 예산)
 
-Một request thường phụ thuộc nhiều thành phần:
+Một yêu cầu (request / 요청) thường phụ thuộc nhiều thành phần:
 
 ```text
 API
@@ -68,13 +71,13 @@ API
 → verifier
 ```
 
-SLO đầu-cuối không thể tốt hơn dependency yếu nhất nếu không có redundancy hoặc fallback. Vì vậy cần phân bổ **ngân sách lỗi (failure budget)** và **ngân sách độ trễ (latency budget)** cho từng thành phần.
+SLO đầu-cuối không thể tốt hơn phụ thuộc (dependency / 의존성) yếu nhất nếu không có redundancy hoặc fallback. Vì vậy cần phân bổ **ngân sách lỗi (failure budget)** và **ngân sách độ trễ (latency budget)** cho từng thành phần.
 
-Ví dụ request có deadline 2 giây nhưng retrieval timeout 2 giây thì model và verifier không còn thời gian chạy. Deadline phải được truyền xuống dependency thay vì mỗi service tự đặt timeout tùy ý.
+Ví dụ yêu cầu (request / 요청) có deadline 2 giây nhưng retrieval hết thời gian chờ (timeout / 타임아웃) 2 giây thì mô hình (model / 모델) và verifier không còn thời gian chạy. Deadline phải được truyền xuống phụ thuộc (dependency / 의존성) thay vì mỗi dịch vụ (service / 서비스) tự đặt hết thời gian chờ (timeout / 타임아웃) tùy ý.
 
-## Queueing và tail latency
+## Queueing và tail độ trễ (latency / 지연 시간)
 
-Khi utilization tiến gần 100%, queue thường tăng nhanh và p95/p99 latency có thể bùng nổ dù throughput trung bình nhìn vẫn ổn.
+Khi utilization tiến gần 100%, hàng đợi (queue / 큐) thường tăng nhanh và p95/p99 độ trễ (latency / 지연 시간) có thể bùng nổ dù thông lượng (throughput / 처리량) trung bình nhìn vẫn ổn.
 
 Trực giác quan trọng:
 
@@ -86,11 +89,11 @@ capacity gần bão hòa
 → cascading failure
 ```
 
-Do đó production AI không nên tối ưu GPU utilization tới mức không còn headroom cho burst, retry hoặc failover.
+Do đó môi trường vận hành (production / 운영 환경) AI không nên tối ưu GPU utilization tới mức không còn headroom cho burst, thử lại (retry / 재시도) hoặc failover.
 
 ## Graceful degradation
 
-Khi đường chính không khả dụng, hệ thống có thể giảm capability theo thứ tự có chủ đích:
+Khi đường chính không khả dụng, hệ thống có thể giảm năng lực (capability / 역량) theo thứ tự có chủ đích:
 
 ```text
 mô hình chính
@@ -101,9 +104,9 @@ mô hình chính
 → thông báo không thể xử lý
 ```
 
-Fallback phải bảo toàn mức an toàn. Với quyết định rủi ro cao, explicit failure thường tốt hơn fallback âm thầm sang model yếu hơn.
+Fallback phải bảo toàn mức an toàn. Với quyết định rủi ro cao, tường minh (explicit / 명시적) thất bại (failure / 실패) thường tốt hơn fallback âm thầm sang mô hình (model / 모델) yếu hơn.
 
-## Fallback phải có semantics rõ
+## Fallback phải có ngữ nghĩa (semantics / 의미론) rõ
 
 Một anti-pattern là:
 
@@ -112,9 +115,9 @@ primary model lỗi
 → gọi model bất kỳ còn sống
 ```
 
-Nếu model dự phòng có schema, safety behavior hoặc capability khác, hệ thống có thể “available” nhưng không còn đúng contract.
+Nếu mô hình (model / 모델) dự phòng có lược đồ (schema / 스키마), an toàn (safety / 안전) hành vi (behavior / 동작) hoặc năng lực (capability / 역량) khác, hệ thống có thể “available” nhưng không còn đúng đặc tả hợp đồng (contract / 계약).
 
-Fallback nên được version hóa, evaluation riêng và có metric `fallback_rate` để tránh tình trạng degraded mode kéo dài mà không ai nhận ra.
+Fallback nên được phiên bản (version / 버전) hóa, evaluation riêng và có chỉ số (metric / 지표) `fallback_rate` để tránh tình trạng degraded chế độ (mode / 모드) kéo dài mà không ai nhận ra.
 
 ## Redundancy và tính độc lập của lỗi
 
@@ -125,14 +128,14 @@ Các dạng redundancy:
 - nhiều replica;
 - nhiều availability zone;
 - nhiều provider;
-- index/state store replicated;
-- read-only degraded path.
+- chỉ mục (index / 인덱스)/trạng thái (state / 상태) store replicated;
+- read-only degraded đường dẫn (path / 경로).
 
-Giá trị của redundancy phụ thuộc mức độc lập của failure domain.
+Giá trị của redundancy phụ thuộc mức độc lập của miền lỗi (failure domain / 장애 도메인).
 
 ## Circuit breaker
 
-Nếu downstream liên tục lỗi, **cầu dao (circuit breaker)** tạm ngừng gửi request để tránh retry cascade.
+Nếu downstream liên tục lỗi, **cầu dao (circuit breaker)** tạm ngừng gửi yêu cầu (request / 요청) để tránh thử lại (retry / 재시도) cascade.
 
 ```text
 CLOSED    → hoạt động bình thường
@@ -140,11 +143,11 @@ OPEN      → fail fast
 HALF-OPEN → gửi probe kiểm tra recovery
 ```
 
-Circuit breaker đặc biệt hữu ích với model API, tool API hoặc retrieval service có failure burst.
+Circuit breaker đặc biệt hữu ích với mô hình (model / 모델) API, công cụ (tool / 도구) API hoặc retrieval dịch vụ (service / 서비스) có thất bại (failure / 실패) burst.
 
-## Retry có ngân sách
+## Thử lại (retry / 재시도) có ngân sách
 
-Retry chỉ phù hợp lỗi tạm thời và phải bị giới hạn bởi:
+Thử lại (retry / 재시도) chỉ phù hợp lỗi tạm thời và phải bị giới hạn bởi:
 
 ```text
 max attempts
@@ -155,19 +158,19 @@ retry budget
 idempotency
 ```
 
-Không nên cho từng layer tự retry ba lần độc lập; ba layer lồng nhau có thể nhân số request lên rất nhanh.
+Không nên cho từng tầng (layer / 계층) tự thử lại (retry / 재시도) ba lần độc lập; ba tầng (layer / 계층) lồng nhau có thể nhân số yêu cầu (request / 요청) lên rất nhanh.
 
-## Idempotency cho side effect
+## Idempotency cho side tác động (effect / 효과)
 
-Tool ghi dữ liệu như payment, email, order hoặc deploy phải chống thực thi trùng.
+Công cụ (tool / 도구) ghi dữ liệu như payment, email, thứ tự (order / 순서) hoặc deploy phải chống thực thi trùng.
 
-Một **idempotency key** gắn với logical action giúp request lặp lại trả cùng kết quả thay vì tạo side effect mới.
+Một **idempotency key** gắn với logical hành động (action / 동작) giúp yêu cầu (request / 요청) lặp lại trả cùng kết quả thay vì tạo side tác động (effect / 효과) mới.
 
-Đây là yêu cầu runtime, không thể thay bằng prompt “đừng làm hai lần”.
+Đây là yêu cầu thời gian chạy (runtime / 런타임), không thể thay bằng prompt “đừng làm hai lần”.
 
-## Verification trước và sau action
+## Xác minh (verification / 확인) trước và sau hành động (action / 동작)
 
-Pattern đáng tin:
+Mẫu (pattern / 패턴) đáng tin:
 
 ```text
 model đề xuất
@@ -177,21 +180,21 @@ model đề xuất
 → verifier kiểm acceptance criterion
 ```
 
-Các verifier có thể là parser, type checker, unit test, SQL validator, citation checker, policy engine hoặc phép tính xác định.
+Các verifier có thể là parser, kiểu (type / 타입) checker, đơn vị (unit / 단위) kiểm thử (test / 테스트), SQL validator, citation checker, chính sách (policy / 정책) engine hoặc phép tính xác định.
 
-Đối với Agent, “model nói done” không phải bằng chứng task đã hoàn thành.
+Đối với tác nhân (agent / 에이전트), “mô hình (model / 모델) nói done” không phải bằng chứng tác vụ (task / 작업) đã hoàn thành.
 
-## Fail closed và fail open
+## Thất bại (fail / 실패) closed và thất bại (fail / 실패) open
 
-**Fail closed**: khi không chắc chắn thì không cho action tiếp tục. Phù hợp với security, payment, destructive write hoặc high-risk operation.
+**thất bại (fail / 실패) closed**: khi không chắc chắn thì không cho hành động (action / 동작) tiếp tục. Phù hợp với bảo mật (security / 보안), payment, destructive ghi (write / 쓰기) hoặc high-risk thao tác (operation / 연산).
 
-**Fail open**: khi dependency lỗi vẫn tiếp tục với degraded behavior. Phù hợp hơn với feature ít rủi ro, ví dụ recommendation phụ.
+**thất bại (fail / 실패) open**: khi phụ thuộc (dependency / 의존성) lỗi vẫn tiếp tục với degraded hành vi (behavior / 동작). Phù hợp hơn với tính năng (feature / 기능) ít rủi ro, ví dụ recommendation phụ.
 
 Lựa chọn phải dựa trên impact của lỗi, không dựa trên mục tiêu availability chung chung.
 
-## Durable state, checkpoint và resume
+## Durable trạng thái (state / 상태), checkpoint và resume
 
-Workflow dài cần lưu state có cấu trúc:
+Workflow dài cần lưu trạng thái (state / 상태) có cấu trúc:
 
 ```text
 completed steps
@@ -202,11 +205,11 @@ artifacts
 verification result
 ```
 
-Sau crash, runtime tải checkpoint rồi xác định bước tiếp theo an toàn. Không nên replay mù toàn bộ transcript vì các side effect cũ có thể chạy lại.
+Sau crash, thời gian chạy (runtime / 런타임) tải checkpoint rồi xác định bước tiếp theo an toàn. Không nên replay mù toàn bộ transcript vì các side tác động (effect / 효과) cũ có thể chạy lại.
 
 ## Compensation
 
-Không phải distributed workflow nào cũng rollback nguyên tử. Một số task cần **hành động bù trừ (compensating action)**:
+Không phải phân tán (distributed / 분산) workflow nào cũng quay lui (rollback / 롤백) nguyên tử. Một số tác vụ (task / 작업) cần **hành động bù trừ (compensating action)**:
 
 ```text
 reserve inventory → cancel reservation
@@ -214,11 +217,11 @@ charge payment    → refund
 create resource   → revoke / delete nếu policy cho phép
 ```
 
-Agent không nên tự phát minh compensation; workflow phải định nghĩa tập hành động hợp lệ và điều kiện dùng chúng.
+Tác nhân (agent / 에이전트) không nên tự phát minh compensation; workflow phải định nghĩa tập hành động hợp lệ và điều kiện dùng chúng.
 
 ## Bulkhead và cô lập phạm vi ảnh hưởng
 
-**Bulkhead** tách resource pool để một tenant hoặc workload không làm cạn toàn hệ thống.
+**Bulkhead** tách tài nguyên (resource / 자원) pool để một tenant hoặc tải công việc (workload / 워크로드) không làm cạn toàn hệ thống.
 
 Ví dụ:
 
@@ -231,13 +234,13 @@ per-tenant concurrency limit
 
 Cô lập giúp giảm **phạm vi ảnh hưởng (blast radius)** khi có lỗi.
 
-## Load shedding và admission control
+## Tải (load / 로드) shedding và admission điều khiển (control / 제어)
 
-Khi overload, từ chối hoặc trì hoãn request ít quan trọng thường tốt hơn để tất cả request timeout.
+Khi overload, từ chối hoặc trì hoãn yêu cầu (request / 요청) ít quan trọng thường tốt hơn để tất cả yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃).
 
-Admission control có thể dựa trên priority, SLA, token budget, queue depth hoặc capacity còn lại.
+Admission điều khiển (control / 제어) có thể dựa trên priority, SLA, đơn vị từ (token / 토큰) ngân sách (budget / 예산), hàng đợi (queue / 큐) độ sâu (depth / 깊이) hoặc sức chứa (capacity / 용량) còn lại.
 
-## SLO và error budget
+## SLO và lỗi (error / 오류) ngân sách (budget / 예산)
 
 SLO cho AI có thể bao gồm:
 
@@ -250,11 +253,11 @@ retrieval freshness
 cost per successful task
 ```
 
-**Error budget** định lượng mức sai lệch còn chấp nhận được. Khi budget bị dùng hết, team nên ưu tiên reliability thay vì tiếp tục rollout feature mới.
+**lỗi (error / 오류) ngân sách (budget / 예산)** định lượng mức sai lệch còn chấp nhận được. Khi ngân sách (budget / 예산) bị dùng hết, nhóm (team / 팀) nên ưu tiên độ tin cậy (reliability / 신뢰성) thay vì tiếp tục rollout tính năng (feature / 기능) mới.
 
-## Reliability cho RAG
+## Độ tin cậy (reliability / 신뢰성) cho RAG
 
-RAG có nhiều failure point:
+RAG có nhiều thất bại (failure / 실패) điểm (point / 지점):
 
 ```text
 parser lỗi
@@ -266,61 +269,61 @@ context bị cắt
 citation không support claim
 ```
 
-Một production pattern tốt là đo riêng retrieval health, index freshness và grounded answer quality. Xem [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md).
+Một môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴) tốt là đo riêng retrieval health, chỉ mục (index / 인덱스) freshness và grounded answer chất lượng (quality / 품질). Xem [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md).
 
-## Reliability cho LLM
+## Độ tin cậy (reliability / 신뢰성) cho LLM
 
-Các control thường dùng:
+Các điều khiển (control / 제어) thường dùng:
 
 - structured generation;
 - grounding bằng retrieval;
-- output validator;
-- version pinning;
-- timeout và fallback;
-- context budget;
+- đầu ra (output / 출력) validator;
+- phiên bản (version / 버전) pinning;
+- hết thời gian chờ (timeout / 타임아웃) và fallback;
+- ngữ cảnh (context / 맥락) ngân sách (budget / 예산);
 - regression evaluation.
 
-Không có control nào tự biến model thành nguồn sự thật. Reliability phải gắn với task-specific evidence.
+Không có điều khiển (control / 제어) nào tự biến mô hình (model / 모델) thành nguồn sự thật. độ tin cậy (reliability / 신뢰성) phải gắn với task-specific bằng chứng (evidence / 증거).
 
-## Reliability cho Agent
+## Độ tin cậy (reliability / 신뢰성) cho tác nhân (agent / 에이전트)
 
-Agent cần thêm:
+Tác nhân (agent / 에이전트) cần thêm:
 
-- step budget;
-- durable state;
-- permission scope;
-- tool validation;
+- step ngân sách (budget / 예산);
+- durable trạng thái (state / 상태);
+- permission phạm vi (scope / 범위);
+- công cụ (tool / 도구) kiểm tra hợp lệ (validation / 검증);
 - idempotency;
-- verification;
-- approval boundary;
-- loop detection;
-- recovery path.
+- xác minh (verification / 확인);
+- approval ranh giới (boundary / 경계);
+- vòng lặp (loop / 루프) detection;
+- khôi phục (recovery / 복구) đường dẫn (path / 경로).
 
-Mỗi bước tự trị bổ sung là một điểm failure mới. Vì vậy nên dùng deterministic workflow cho những phần đã biết rõ và dành autonomy cho bước thật sự mơ hồ.
+Mỗi bước tự trị bổ sung là một điểm thất bại (failure / 실패) mới. Vì vậy nên dùng deterministic workflow cho những phần đã biết rõ và dành autonomy cho bước thật sự mơ hồ.
 
-## Chaos engineering và game day
+## Chaos kỹ thuật (engineering / 엔지니어링) và game day
 
 Có thể chủ động tiêm lỗi:
 
-- model endpoint mất kết nối;
+- mô hình (model / 모델) endpoint mất kết nối;
 - retrieval chậm;
-- index stale;
-- tool trả 500;
+- chỉ mục (index / 인덱스) stale;
+- công cụ (tool / 도구) trả 500;
 - worker crash;
-- database conflict;
+- cơ sở dữ liệu (database / 데이터베이스) xung đột (conflict / 충돌);
 - quota cạn.
 
-Mục tiêu không phải làm hệ thống hỏng, mà xác nhận fallback, alert và recovery thực sự hoạt động trước incident thật.
+Mục tiêu không phải làm hệ thống hỏng, mà xác nhận fallback, alert và khôi phục (recovery / 복구) thực sự hoạt động trước sự cố (incident / 인시던트) thật.
 
 ## RTO và RPO
 
-**Recovery Time Objective (RTO)** là thời gian chấp nhận được để phục hồi.
+**khôi phục (recovery / 복구) thời gian (time / 시간) mục tiêu (objective / 목표) (RTO)** là thời gian chấp nhận được để phục hồi.
 
-**Recovery Point Objective (RPO)** là lượng state/data có thể mất.
+**khôi phục (recovery / 복구) điểm (point / 지점) mục tiêu (objective / 목표) (RPO)** là lượng trạng thái (state / 상태)/dữ liệu (data / 데이터) có thể mất.
 
-Agent có state hoặc workflow dài cần quan tâm cả hai giống hệ thống database truyền thống.
+Tác nhân (agent / 에이전트) có trạng thái (state / 상태) hoặc workflow dài cần quan tâm cả hai giống hệ thống cơ sở dữ liệu (database / 데이터베이스) truyền thống.
 
-## Mô hình triển khai production
+## Mô hình triển khai môi trường vận hành (production / 운영 환경)
 
 Một kiến trúc đáng tin thường có dạng:
 
@@ -339,54 +342,56 @@ song song:
 metrics + trace + audit log + alert
 ```
 
-Model nằm bên trong control structure; nó không tự sở hữu permission, retry, transaction hay stop policy.
+Mô hình (model / 모델) nằm bên trong điều khiển (control / 제어) cấu trúc (structure / 구조); nó không tự sở hữu permission, thử lại (retry / 재시도), giao dịch (transaction / 트랜잭션) hay stop chính sách (policy / 정책).
 
-## Trade-off
+## Sự đánh đổi (trade-off / 트레이드오프)
 
-Reliability không miễn phí. Redundancy tăng chi phí; verifier tăng latency; human approval giảm throughput; timeout ngắn có thể tăng false failure; fallback làm kiến trúc phức tạp hơn.
+Độ tin cậy (reliability / 신뢰성) không miễn phí. Redundancy tăng chi phí; verifier tăng độ trễ (latency / 지연 시간); human approval giảm thông lượng (throughput / 처리량); hết thời gian chờ (timeout / 타임아웃) ngắn có thể tăng false thất bại (failure / 실패); fallback làm kiến trúc phức tạp hơn.
 
-Mục tiêu là dùng control mạnh nhất ở nơi `P(failure) × Impact(failure)` lớn nhất, không phải thêm mọi control vào mọi request.
+Mục tiêu là dùng điều khiển (control / 제어) mạnh nhất ở nơi `P(failure) × Impact(failure)` lớn nhất, không phải thêm mọi điều khiển (control / 제어) vào mọi yêu cầu (request / 요청).
 
-## Failure mode của chính cơ chế reliability
+## Dạng thất bại (failure mode / 실패 모드) của chính cơ chế độ tin cậy (reliability / 신뢰성)
 
-Các control cũng có thể gây lỗi:
+Các điều khiển (control / 제어) cũng có thể gây lỗi:
 
-- retry storm;
+- thử lại (retry / 재시도) storm;
 - fallback lỗi thời;
 - circuit breaker mở quá lâu;
 - verifier false positive;
-- approval queue bị nghẽn;
+- approval hàng đợi (queue / 큐) bị nghẽn;
 - checkpoint không nhất quán;
-- monitoring không thấy silent quality regression.
+- monitoring không thấy silent chất lượng (quality / 품질) regression.
 
-Vì vậy reliability mechanism cũng phải được test và quan sát.
+Vì vậy độ tin cậy (reliability / 신뢰성) cơ chế (mechanism / 메커니즘) cũng phải được kiểm thử (test / 테스트) và quan sát.
 
 ## Mô hình tư duy
 
 > **AI đáng tin cậy = năng lực đủ tốt được đặt bên trong một hệ thống có thể giới hạn, phát hiện và phục hồi lỗi.**
 
-Không cần giả định model hoàn hảo nếu architecture có thể ngăn lỗi lan rộng và xác minh các hành động quan trọng.
+Không cần giả định mô hình (model / 모델) hoàn hảo nếu kiến trúc (architecture / 아키텍처) có thể ngăn lỗi lan rộng và xác minh các hành động quan trọng.
 
 ## Những nhầm lẫn thường gặp
 
 ### “Reliable AI = hallucination thấp”
 
-Hallucination chỉ là một failure mode ở cấp model.
+Hallucination chỉ là một dạng thất bại (failure mode / 실패 모드) ở cấp mô hình (model / 모델).
 
-### “Retry càng nhiều càng ổn định”
+### “thử lại (retry / 재시도) càng nhiều càng ổn định”
 
-Không. Retry không giới hạn có thể nhân tải và side effect.
+Không. thử lại (retry / 재시도) không giới hạn có thể nhân tải và side tác động (effect / 효과).
 
 ### “Fallback luôn tốt hơn trả lỗi”
 
-Không. Fallback chất lượng thấp cho high-risk action có thể nguy hiểm hơn explicit failure.
+Không. Fallback chất lượng thấp cho high-risk hành động (action / 동작) có thể nguy hiểm hơn tường minh (explicit / 명시적) thất bại (failure / 실패).
 
 ### “Multi-provider tự động giải quyết outage”
 
-Không nếu các provider dùng chung dependency, credential hoặc lỗi logic ở application layer.
+Không nếu các provider dùng chung phụ thuộc (dependency / 의존성), credential hoặc lỗi lô-gic (logic / 논리) ở ứng dụng (application / 애플리케이션) tầng (layer / 계층).
 
 ## Liên kết kiến thức
 
-Reliability nối [AI Engineering](../15_ai_engineering/README.md), [LLMOps](../16_mlops_and_llmops/08_llmops.md), [Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md) và [Safety/Security](../19_ai_safety_security_alignment/README.md).
+Độ tin cậy (reliability / 신뢰성) nối [AI Engineering](../15_ai_engineering/README.md), [LLMOps](../16_mlops_and_llmops/08_llmops.md), [Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md) và [Safety/Security](../19_ai_safety_security_alignment/README.md).
 
-Chapter này là cầu trực tiếp từ evaluation sang security: reliability xử lý lỗi ngẫu nhiên và vận hành; security bổ sung mô hình đối thủ chủ động khai thác hệ thống.
+Chapter này là cầu trực tiếp từ evaluation sang bảo mật (security / 보안): độ tin cậy (reliability / 신뢰성) xử lý lỗi ngẫu nhiên và vận hành; bảo mật (security / 보안) bổ sung mô hình đối thủ chủ động khai thác hệ thống.
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

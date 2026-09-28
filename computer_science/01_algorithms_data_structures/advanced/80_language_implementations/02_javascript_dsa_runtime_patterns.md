@@ -1,5 +1,8 @@
 # Các mẫu DSA và môi trường chạy JavaScript
-**JavaScript DSA & Runtime Patterns / JavaScript 자료구조와 런타임 패턴**
+
+> **Mạch đọc:** Đọc **Các mẫu DSA và môi trường chạy JavaScript** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Number và độ chính xác số nguyên** sang **BigInt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**JavaScript DSA & thời gian chạy (runtime / 런타임) Patterns / JavaScript 자료구조와 런타임 패턴**
 
 JavaScript cho phép triển khai thuật toán và cấu trúc dữ liệu rất nhanh, nhưng cùng một thuật toán có thể có những điểm cần lưu ý khác C hoặc Java. Nguyên nhân đến từ kiểu `Number`, mảng động, định danh đối tượng, bộ thu gom rác, chuỗi UTF-16 và hành vi của môi trường JIT.
 
@@ -61,7 +64,7 @@ const dist = Array(n).fill(Infinity);
 
 `BigInt` không có giá trị `Infinity`. Nếu khoảng cách dùng `BigInt`, cần chọn cách biểu diễn rõ ràng như `null`, `undefined`, một cờ `reachable` riêng hoặc một cận trên `BigInt` đã biết chắc là đủ lớn.
 
-Lựa chọn giá trị canh gác là một phần của **cách biểu diễn (representation)**, không chỉ là chi tiết cú pháp.
+Lựa chọn giá trị canh gác là một phần của **cách biểu diễn (representation / 표현)**, không chỉ là chi tiết cú pháp.
 
 ## Mảng JavaScript không phải mảng C
 
@@ -149,7 +152,7 @@ size
 capacity
 ```
 
-Khi đầy, có thể tăng dung lượng tương tự mảng động rồi sao chép theo thứ tự logic.
+Khi đầy, có thể tăng dung lượng tương tự mảng động rồi sao chép theo thứ tự lô-gic (logic / 논리).
 
 ## `Object` và `Map`
 
@@ -194,7 +197,7 @@ m.set({x: 1}, 'value');
 console.log(m.get({x: 1})); // undefined
 ```
 
-Hai object literal có cùng trường và giá trị vẫn là hai đối tượng khác nhau. `Map` không tự so sánh sâu theo nội dung.
+Hai đối tượng (object / 객체) literal có cùng trường và giá trị vẫn là hai đối tượng khác nhau. `Map` không tự so sánh sâu theo nội dung.
 
 Với trạng thái `(x, y, mask)`, có thể:
 
@@ -205,7 +208,7 @@ dùng Map lồng nhau
 chuẩn hóa thành một đối tượng dùng chung
 ```
 
-Không nên tạo một object mới rồi kỳ vọng nó bằng một object cũ chỉ vì các trường giống nhau.
+Không nên tạo một đối tượng (object / 객체) mới rồi kỳ vọng nó bằng một đối tượng (object / 객체) cũ chỉ vì các trường giống nhau.
 
 ## Mã hóa trạng thái chuẩn
 
@@ -324,7 +327,7 @@ ECMAScript hiện đại quy định `Array.prototype.sort()` là ổn định (
 
 ## Hàng đợi ưu tiên
 
-Thư viện chuẩn JavaScript không cung cấp một `PriorityQueue` tổng quát giống Java. Mã DSA thường tự cài đặt heap nhị phân:
+Thư viện chuẩn JavaScript không cung cấp một `PriorityQueue` tổng quát giống Java. Mã DSA thường tự cài đặt vùng nhớ động (heap / 힙) nhị phân:
 
 ```js
 class MinHeap {
@@ -341,7 +344,7 @@ class MinHeap {
 
 Hàm so sánh phải nhất quán và có tính bắc cầu.
 
-## Cấp phát đối tượng trong heap
+## Cấp phát đối tượng trong vùng nhớ động (heap / 힙)
 
 Dijkstra viết theo kiểu:
 
@@ -349,13 +352,13 @@ Dijkstra viết theo kiểu:
 heap.push({ node: v, dist: nd });
 ```
 
-rất dễ đọc nhưng có thể tạo nhiều đối tượng tạm thời. Nếu đo đạc cho thấy cấp phát hoặc GC là nút thắt, có thể cân nhắc mảng song song, tuple nhỏ, trạng thái mã hóa hoặc heap theo kiểu **struct-of-arrays**.
+rất dễ đọc nhưng có thể tạo nhiều đối tượng tạm thời. Nếu đo đạc cho thấy cấp phát hoặc GC là nút thắt, có thể cân nhắc mảng song song, tuple nhỏ, trạng thái mã hóa hoặc vùng nhớ động (heap / 힙) theo kiểu **struct-of-arrays**.
 
 Không nên làm mã nguồn phức tạp trước khi có số liệu đo cho thấy điều đó cần thiết.
 
-## Dijkstra với phần tử cũ trong heap
+## Dijkstra với phần tử cũ trong vùng nhớ động (heap / 힙)
 
-Heap tự cài đặt thường không có `decrease-key`. Một mẫu đơn giản là chèn khoảng cách mới:
+Vùng nhớ vùng nhớ động (heap / 힙) tự cài đặt thường không có `decrease-key`. Một mẫu đơn giản là chèn khoảng cách mới:
 
 ```js
 heap.push([newDist, v]);
@@ -371,7 +374,7 @@ Mẫu này đơn giản, dễ kiểm chứng và thường đủ tốt.
 
 ## Độ sâu đệ quy
 
-DFS hoặc quay lui (backtracking) đệ quy có thể vượt ngăn xếp lời gọi. Giới hạn cụ thể không phải một hằng số di động giữa các trình duyệt, phiên bản Node.js hoặc engine.
+DFS hoặc quay lui (backtracking) đệ quy có thể vượt ngăn xếp lời gọi. Giới hạn cụ thể không phải một hằng số di động giữa các trình duyệt, phiên bản nút (node / 노드).js hoặc engine.
 
 Với cây hoặc đồ thị có thể rất sâu, nên chuyển sang ngăn xếp tường minh:
 
@@ -389,13 +392,13 @@ Không nên dựa vào tối ưu lời gọi đuôi như một bảo đảm an t
 
 Chuyển một DFS sâu sang `Promise` hoặc `async` làm thay đổi cách lập lịch và tạo thêm chi phí cấp phát. Đây không phải giải pháp tổng quát thay cho việc dùng ngăn xếp tường minh.
 
-Tương tự, `await Promise.resolve()` chỉ chuyển việc tiếp tục sang hàng đợi microtask; nếu lặp không hợp lý, nó vẫn có thể làm các giai đoạn khác của event loop bị đói.
+Tương tự, `await Promise.resolve()` chỉ chuyển việc tiếp tục sang hàng đợi microtask; nếu lặp không hợp lý, nó vẫn có thể làm các giai đoạn khác của vòng lặp sự kiện (event loop / 이벤트 루프) bị đói.
 
 **Lập lịch bất đồng bộ không sửa được lựa chọn thuật toán sai.**
 
-## Event loop và thuật toán chạy lâu
+## Vòng lặp sự kiện (event loop / 이벤트 루프) và thuật toán chạy lâu
 
-Trong trình duyệt và trong nhiều ngữ cảnh Node.js, mã JavaScript của người dùng chạy trên luồng gắn với event loop. Một vòng lặp `O(n²)` dài có thể làm giao diện hoặc xử lý sự kiện bị chặn.
+Trong trình duyệt và trong nhiều ngữ cảnh nút (node / 노드).js, mã JavaScript của người dùng chạy trên luồng gắn với vòng lặp sự kiện (event loop / 이벤트 루프). Một vòng lặp `O(n²)` dài có thể làm giao diện hoặc xử lý sự kiện bị chặn.
 
 Khi công việc CPU lớn, có thể cân nhắc:
 
@@ -416,7 +419,7 @@ GC thu hồi đối tượng không còn đạt tới được, nhưng `Map`, `S
 const cache = new Map();
 ```
 
-Nếu bộ nhớ đệm trên không có chính sách giới hạn hoặc loại bỏ, nó có thể trở thành rò rỉ bộ nhớ ở cấp logic.
+Nếu bộ nhớ đệm trên không có chính sách giới hạn hoặc loại bỏ, nó có thể trở thành rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리).
 
 GC tự động không có nghĩa là vòng đời bộ nhớ không cần được thiết kế.
 
@@ -440,13 +443,13 @@ Với bản ghi cố định, nên khởi tạo các trường từ đầu:
 const node = { key, left: null, right: null, size: 1 };
 ```
 
-Chi tiết về hidden class là đặc thù engine; không nên viết mã phụ thuộc vào các ngưỡng nội bộ không được đặc tả.
+Chi tiết về hidden lớp (class / 클래스) là đặc thù engine; không nên viết mã phụ thuộc vào các ngưỡng nội bộ không được đặc tả.
 
-## `class` và object literal
+## `class` và đối tượng (object / 객체) literal
 
-`class Node` và object literal cuối cùng đều tạo đối tượng JavaScript. `class` giúp thống nhất cách xây dựng và API, nhưng không tự tạo bố trí bộ nhớ gọn giống `struct` của C.
+`class Node` và đối tượng (object / 객체) literal cuối cùng đều tạo đối tượng JavaScript. `class` giúp thống nhất cách xây dựng và API, nhưng không tự tạo bố trí bộ nhớ gọn giống `struct` của C.
 
-Khi có hàng triệu nút, quyết định dùng mảng, `TypedArray` hay đối tượng thường quan trọng hơn việc chọn cú pháp `class` hay object literal.
+Khi có hàng triệu nút, quyết định dùng mảng, `TypedArray` hay đối tượng thường quan trọng hơn việc chọn cú pháp `class` hay đối tượng (object / 객체) literal.
 
 ## Đồ thị CSR trong JavaScript
 
@@ -465,7 +468,7 @@ prefix sum để tạo offsets
 điền danh sách cạnh
 ```
 
-Cách này giảm chi phí của nhiều object/mảng con và đưa cách biểu diễn JavaScript gần hơn với bố trí dữ liệu kiểu hệ thống.
+Cách này giảm chi phí của nhiều đối tượng (object / 객체)/mảng con và đưa cách biểu diễn JavaScript gần hơn với bố trí dữ liệu kiểu hệ thống.
 
 Với đồ thị vừa phải, danh sách kề vẫn là mặc định dễ đọc:
 
@@ -486,7 +489,7 @@ s[i]
 s.charCodeAt(i)
 ```
 
-chủ yếu làm việc trên **đơn vị mã UTF-16 (UTF-16 code unit)**. Một ký tự Unicode ngoài BMP có thể chiếm hai code unit:
+chủ yếu làm việc trên **đơn vị mã UTF-16 (UTF-16 code unit)**. Một ký tự Unicode ngoài BMP có thể chiếm hai mã (code / 코드) đơn vị (unit / 단위):
 
 ```js
 '😀'.length === 2
@@ -508,7 +511,7 @@ for (const ch of s) {
 }
 ```
 
-xử lý cặp thay thế tốt hơn truy cập từng code unit, nhưng một ký tự mà người dùng nhìn thấy vẫn có thể gồm nhiều code point. Khi cần phân đoạn theo ký tự hiển thị, có thể dùng `Intl.Segmenter`.
+xử lý cặp thay thế tốt hơn truy cập từng mã (code / 코드) đơn vị (unit / 단위), nhưng một ký tự mà người dùng nhìn thấy vẫn có thể gồm nhiều mã (code / 코드) điểm (point / 지점). Khi cần phân đoạn theo ký tự hiển thị, có thể dùng `Intl.Segmenter`.
 
 ## Chuỗi là bất biến
 
@@ -520,7 +523,7 @@ Nếu đây là đường chạy nóng, cần đo trên tải công việc thự
 
 `Map` giữ **thứ tự chèn**, nhưng đó không phải thứ tự khóa đã sắp xếp. Nếu thuật toán cần ánh xạ có thứ tự giống `TreeMap`, JavaScript chuẩn không cung cấp sẵn một cây cân bằng tổng quát; có thể cần tự cài đặt hoặc dùng thư viện.
 
-Quy tắc duyệt thuộc tính của `Object` có các nhóm thứ tự được đặc tả, trong đó khóa dạng số nguyên có quy tắc riêng. Không nên dùng object thông thường như một ánh xạ có thứ tự tổng quát chỉ vì một ví dụ nhỏ cho ra thứ tự mong muốn.
+Quy tắc duyệt thuộc tính của `Object` có các nhóm thứ tự được đặc tả, trong đó khóa dạng số nguyên có quy tắc riêng. Không nên dùng đối tượng (object / 객체) thông thường như một ánh xạ có thứ tự tổng quát chỉ vì một ví dụ nhỏ cho ra thứ tự mong muốn.
 
 Về ngữ nghĩa, `Map` thường rõ ràng hơn khi mục tiêu thực sự là một ánh xạ.
 
@@ -591,9 +594,9 @@ không chỉ so sánh lần chạy lạnh đầu tiên
 
 Có thể dùng `performance.now()` hoặc `process.hrtime.bigint()`, nhưng phương pháp đo quan trọng hơn độ phân giải của đồng hồ.
 
-Một benchmark chỉ dùng mảng toàn số có thể không phản ánh hệ thống thực tế nơi dữ liệu trộn số, object và chuỗi. Dữ liệu đo phải gần với tải công việc thật.
+Một benchmark chỉ dùng mảng toàn số có thể không phản ánh hệ thống thực tế nơi dữ liệu trộn số, đối tượng (object / 객체) và chuỗi. Dữ liệu đo phải gần với tải công việc thật.
 
-## Trình duyệt và Node.js
+## Trình duyệt và nút (node / 노드).js
 
 Ngữ nghĩa ECMAScript cơ bản có thể giống nhau, nhưng phiên bản engine, giới hạn bộ nhớ, cấu hình GC và môi trường thực thi có thể khác. Không nên đưa ra một con số hiệu năng phổ quát cho “JavaScript” mà không nêu rõ môi trường chạy.
 
@@ -619,7 +622,7 @@ Khi dùng WASM, thường nên gom đủ công việc thành lô trước khi ch
 
 JavaScript là ngôn ngữ động, vì vậy kiểm thử dựa trên tính chất và đối chiếu với cách làm đơn giản đặc biệt hữu ích.
 
-Heap:
+Vùng nhớ vùng nhớ động (heap / 힙):
 
 ```text
 đưa nhiều giá trị vào heap
@@ -650,13 +653,13 @@ mọi i < ans  : a[i] < target
 mọi i >= ans : a[i] >= target
 ```
 
-Với DSU, phân hoạch liên thông phải tương đương với các thành phần liên thông của đồ thị tham chiếu. Với Segment Tree, có thể sinh ngẫu nhiên cập nhật và truy vấn rồi đối chiếu với mảng xử lý trực tiếp.
+Với DSU, phân hoạch liên thông phải tương đương với các thành phần liên thông của đồ thị tham chiếu. Với Segment cây (tree / 트리), có thể sinh ngẫu nhiên cập nhật và truy vấn rồi đối chiếu với mảng xử lý trực tiếp.
 
 Kiểm thử kiểu này thường bắt được lỗi ở ranh giới biểu diễn tốt hơn một vài ví dụ viết tay.
 
 ## Phân tích bộ nhớ
 
-Heap snapshot trong Chrome DevTools hoặc công cụ của Node.js có thể cho thấy `Map` còn giữ tham chiếu, cấu trúc nút dùng quá nhiều object hoặc listener/closure giữ dữ liệu ngoài dự kiến.
+Vùng nhớ vùng nhớ động (heap / 힙) snapshot trong Chrome DevTools hoặc công cụ của nút (node / 노드).js có thể cho thấy `Map` còn giữ tham chiếu, cấu trúc nút dùng quá nhiều đối tượng (object / 객체) hoặc listener/closure giữ dữ liệu ngoài dự kiến.
 
 CPU profile giúp tìm vòng lặp nóng, hàm so sánh tốn kém, thao tác băm hoặc mã hóa chuỗi chiếm nhiều thời gian. Tối ưu nên dựa trên bằng chứng đo được.
 
@@ -676,7 +679,7 @@ Xử lý Unicode?               -> xác định code unit / code point / graphem
 
 ## Mô hình tư duy
 
-> DSA trong JavaScript mạnh nhất khi ta giữ rõ **bất biến thuật toán**, nhưng không giả định môi trường chạy giống C hoặc Java. `Array`, `Map`, `Number`, `BigInt`, `TypedArray` và object đều có ranh giới ngữ nghĩa riêng. Tính đúng đắn trước hết đòi hỏi chọn đúng ngữ nghĩa số, so sánh và chuỗi; hiệu năng sau đó phụ thuộc cách biểu diễn dữ liệu, lượng cấp phát và hành vi của môi trường chạy thực tế.
+> DSA trong JavaScript mạnh nhất khi ta giữ rõ **bất biến thuật toán**, nhưng không giả định môi trường chạy giống C hoặc Java. `Array`, `Map`, `Number`, `BigInt`, `TypedArray` và đối tượng (object / 객체) đều có ranh giới ngữ nghĩa riêng. Tính đúng đắn trước hết đòi hỏi chọn đúng ngữ nghĩa số, so sánh và chuỗi; hiệu năng sau đó phụ thuộc cách biểu diễn dữ liệu, lượng cấp phát và hành vi của môi trường chạy thực tế.
 
 Khi cách triển khai bắt đầu lớn, hãy tự hỏi:
 
@@ -693,3 +696,5 @@ Kiểu TypedArray có đủ miền giá trị không?
 ```
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 c dsa implementation patterns](./00_c_dsa_implementation_patterns.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

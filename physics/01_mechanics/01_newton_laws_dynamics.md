@@ -1,5 +1,8 @@
 # Định luật Newton, quán tính và động lực học
 
+> **Mạch đọc:** Đọc **Định luật Newton, quán tính và động lực học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ “chuyển động như thế nào?” sang “vì sao chuyển động thay đổi?”** sang **Định luật I Newton và ý nghĩa của hệ quy chiếu quán tính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Từ “chuyển động như thế nào?” sang “vì sao chuyển động thay đổi?”
 
 Động học (kinematics) mô tả vị trí, vận tốc và gia tốc mà chưa cần hỏi nguyên nhân. Động lực học (dynamics / 동역학) đi thêm một bước: **tương tác nào làm động lượng của hệ thay đổi?**
@@ -214,7 +217,7 @@ Newton II cho từng vật
 
 Ví dụ với dây không khối lượng và ròng rọc lý tưởng, lực căng có thể được coi bằng nhau ở hai nhánh. Nếu ròng rọc có mômen quán tính đáng kể, lực căng hai phía nói chung khác nhau vì cần mômen lực để làm ròng rọc quay.
 
-Assumption vì vậy quyết định phương trình nào được phép dùng.
+Giả định (assumption / 가정) vì vậy quyết định phương trình nào được phép dùng.
 
 ## Trường lực
 
@@ -330,7 +333,7 @@ Khi `v/c` không còn nhỏ, cần thuyết tương đối hẹp. Ở thang nguy
 
 Newton không “sai hoàn toàn”; nó là lý thuyết hiệu dụng cực kỳ chính xác trong miền thích hợp.
 
-## Liên hệ với Kỹ thuật và Computer Science
+## Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)
 
 Trong robotics và game physics, động lực học thường được viết dưới dạng
 
@@ -338,16 +341,16 @@ Trong robotics và game physics, động lực học thường được viết d
 M(q)\ddot q+C(q,\dot q)\dot q+g(q)=\tau.
 ```
 
-Đây là phiên bản nhiều bậc tự do của cùng logic Newton/Lagrange.
+Đây là phiên bản nhiều bậc tự do của cùng lô-gic (logic / 논리) Newton/Lagrange.
 
-Trong simulation, sai dấu lực, frame hoặc constraint có thể gây instability hoặc motion phi vật lý. Vì vậy unit test vật lý có thể kiểm tra:
+Trong simulation, sai dấu lực, frame hoặc ràng buộc (constraint / 제약조건) có thể gây instability hoặc motion phi vật lý. Vì vậy đơn vị (unit / 단위) kiểm thử (test / 테스트) vật lý có thể kiểm tra:
 
 - bảo toàn động lượng khi không có ngoại lực;
 - giới hạn không ma sát;
 - đối xứng trái–phải;
 - đơn vị và bậc độ lớn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Newton II không nói “lực tạo ra vận tốc”. Nó nói **hợp lực bên ngoài là tốc độ thay đổi động lượng**.
 
@@ -369,7 +372,7 @@ chọn system
 
 Không. Nếu hợp lực bằng 0, vận tốc giữ nguyên.
 
-### “Action–reaction triệt tiêu nhau nên không vật nào gia tốc”
+### “hành động (action / 동작)–reaction triệt tiêu nhau nên không vật nào gia tốc”
 
 Sai. Hai lực tác dụng lên hai vật khác nhau.
 
@@ -385,8 +388,10 @@ Không. “Hướng tâm” chỉ mô tả hợp lực cần có thành phần h
 
 Không. Phải xét flux động lượng qua biên hệ.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Động học](00_kinematics.md), [Đơn vị và độ bất định](../00_foundations/01_measurement_units_uncertainty.md).
 
 **Liên hệ tiếp:** [Các lực thường gặp](02_common_forces.md), [Công và năng lượng](03_work_energy_power.md), [Động lượng](04_momentum_collisions.md), [Hệ quy chiếu phi quán tính](11_non_inertial_frames_rotating_systems.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

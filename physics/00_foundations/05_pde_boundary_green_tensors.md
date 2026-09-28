@@ -1,5 +1,8 @@
 # Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor
 
+> **Mạch đọc:** Đọc **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phương trình vi phân thường chưa đủ?** sang **Phương trình không đủ để chọn nghiệm vật lý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao phương trình vi phân thường chưa đủ?
 
 Một quỹ đạo chất điểm `x(t)` chỉ phụ thuộc vào thời gian nên thường dẫn tới phương trình vi phân thường (ordinary differential equation, ODE / 상미분방정식). Nhưng rất nhiều đại lượng vật lý là **trường (field)** phụ thuộc đồng thời vào vị trí và thời gian, chẳng hạn nhiệt độ `T(x,y,z,t)`, điện thế `\phi(x,y,z)` hoặc độ lệch sóng `u(x,t)`.
@@ -70,7 +73,7 @@ Trong điện tĩnh, vật dẫn được giữ ở điện thế cố định g
 
 Điểm quan trọng là: **điều kiện biên không phải chi tiết phụ của bài toán**. Cùng một PDE nhưng điều kiện biên khác có thể mô tả các hệ vật lý hoàn toàn khác nhau.
 
-## Tách biến và phổ mode tự nhiên
+## Tách biến và phổ chế độ (mode / 모드) tự nhiên
 
 Khi hình học và điều kiện biên đủ đơn giản, ta có thể thử nghiệm dạng tích
 
@@ -80,7 +83,7 @@ u(x,t)=X(x)T(t).
 
 Thay vào phương trình sóng hoặc phương trình nhiệt thường tách bài toán thành các ODE với một hằng số phân tách.
 
-Điều kiện biên chỉ cho phép một số giá trị riêng và hàm riêng nhất định. Vì vậy mode chuẩn, sóng dừng và phổ rời rạc có thể xuất hiện ngay trong vật lý cổ điển.
+Điều kiện biên chỉ cho phép một số giá trị riêng và hàm riêng nhất định. Vì vậy chế độ (mode / 모드) chuẩn, sóng dừng và phổ rời rạc có thể xuất hiện ngay trong vật lý cổ điển.
 
 Ví dụ, một sợi dây dài `L` cố định ở hai đầu có
 
@@ -118,7 +121,7 @@ Với phương trình nhiệt,
 \frac{\partial T}{\partial t}=D\nabla^2T,
 ```
 
-sau biến đổi Fourier theo không gian ta thu được, cho mỗi mode `k`,
+sau biến đổi Fourier theo không gian ta thu được, cho mỗi chế độ (mode / 모드) `k`,
 
 ```math
 \frac{\partial\tilde T}{\partial t}
@@ -131,7 +134,7 @@ Nghiệm là
 \tilde T(k,t)=\tilde T(k,0)e^{-Dk^2t}.
 ```
 
-Mode có `k` lớn tương ứng với cấu trúc không gian nhỏ và sắc. Hệ số suy giảm chứa `k^2`, nên các cấu trúc nhỏ bị làm phẳng nhanh hơn cấu trúc lớn. Đây là lý do toán học khiến khuếch tán có xu hướng làm trường trở nên trơn hơn.
+Chế độ (mode / 모드) có `k` lớn tương ứng với cấu trúc không gian nhỏ và sắc. Hệ số suy giảm chứa `k^2`, nên các cấu trúc nhỏ bị làm phẳng nhanh hơn cấu trúc lớn. Đây là lý do toán học khiến khuếch tán có xu hướng làm trường trở nên trơn hơn.
 
 Biến đổi Fourier vì vậy không chỉ là kỹ thuật xử lý tín hiệu. Nó chọn một cơ sở trong đó các toán tử vi phân bất biến tịnh tiến trở nên đặc biệt đơn giản.
 
@@ -195,7 +198,7 @@ Một vô hướng không đổi khi ta quay hệ tọa độ. Thành phần c�
 T'_{ij}=R_{ik}R_{j\ell}T_{k\ell}.
 ```
 
-Tensor ứng suất, tensor quán tính, tensor điện môi và metric không-thời gian đều là các ví dụ quan trọng.
+Tensor ứng suất, tensor quán tính, tensor điện môi và chỉ số (metric / 지표) không-thời gian đều là các ví dụ quan trọng.
 
 Điểm cốt lõi là tensor là một đối tượng hình học có quy luật biến đổi xác định sao cho quan hệ vật lý không phụ thuộc việc ta chọn trục tọa độ nào. Một ma trận chỉ là bảng thành phần của tensor sau khi đã chọn cơ sở.
 
@@ -296,7 +299,7 @@ Các toán tử vi phân mang thứ nguyên. Nếu `x` có đơn vị mét thì 
 
 Khi chọn phương pháp giải, cũng cần kiểm tra giả định. Tách biến đòi hỏi hình học và điều kiện biên tương thích. Biến đổi Fourier thuận lợi nhất khi hệ có tính bất biến tịnh tiến hoặc miền đủ đơn giản. Hàm Green yêu cầu toán tử tuyến tính nếu muốn dùng nguyên lý chồng chập trực tiếp. FEM không tự động đảm bảo nghiệm đúng nếu lưới quá thô hoặc điều kiện biên sai.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 ODE mô tả sự tiến hóa của một số hữu hạn bậc tự do; PDE mô tả trường có số bậc tự do liên tục theo không gian. Điều kiện đầu và điều kiện biên chọn nghiệm vật lý; Fourier và hàm riêng chọn cơ sở làm toán tử đơn giản; hàm Green xây đáp ứng tổng quát từ nguồn điểm; tensor giữ định luật độc lập với cách chọn trục tọa độ.
 
@@ -329,8 +332,10 @@ Chuỗi Fourier thích hợp với nhiều bài toán tuần hoàn hoặc miền
 
 Không. Kết quả còn phụ thuộc mô hình vật lý, điều kiện biên, loại phần tử, độ mịn lưới, độ ổn định số và kiểm tra hội tụ.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Ngôn ngữ Toán học](03_mathematical_language.md), [Đối xứng, bảo toàn và thang đo](04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Tensor ứng suất và cơ học liên tục](../03_continuum/04_continuum_mechanics_stress_tensor.md), [Bài toán biên điện tĩnh](../05_electromagnetism/10_boundary_value_image_multipoles.md), [Maxwell](../05_electromagnetism/04_maxwell_em_waves.md), [Các hệ lượng tử](../08_quantum/01_quantum_systems.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 physical thinking](./00_physical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

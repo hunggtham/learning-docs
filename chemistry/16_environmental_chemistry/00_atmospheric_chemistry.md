@@ -1,5 +1,7 @@
 # Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ
 
+> **Mạch đọc:** Đọc **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc khí quyển quyết định môi trường phản ứng** sang **Quang phân — ánh sáng là một tác nhân hóa học**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > Khí quyển có thể được xem như **một lò phản ứng hóa học được ánh sáng Mặt Trời dẫn động và đồng thời bị vận chuyển bởi chất lưu**. Nitrogen và oxygen chiếm phần lớn không khí, nhưng các chất vết ở mức ppm–ppt vẫn có thể chi phối ozone, khói quang hóa, aerosol và cân bằng bức xạ vì ảnh hưởng hóa học phụ thuộc độ phản ứng, thời gian sống và khả năng hấp thụ bức xạ chứ không chỉ phụ thuộc nồng độ.
 
 Hóa học khí quyển ghép nhiều nền tảng đã học trước:
@@ -23,7 +25,7 @@ Sự khác biệt nhiệt này ảnh hưởng trộn thẳng đứng, thời gia
 Một phân tử có thể hấp thụ photon rồi bị phá vỡ hoặc tái sắp xếp:
 
 \[
-A+h\nu\rightarrow\text{sản phẩm}
+A+h\nu\rightarrow\văn bản (text / 텍스트){sản phẩm}
 \]
 
 Tốc độ **quang phân (photolysis)** phụ thuộc phổ ánh sáng, tiết diện hấp thụ, hiệu suất lượng tử, độ cao, mây và góc chiếu sáng.
@@ -50,7 +52,7 @@ Gốc hydroxyl `OH·` thường được gọi là “chất tẩy rửa của k
 
 Nồng độ `OH·` rất thấp nhưng nó có thể được tái sinh qua nhiều bước lan truyền chuỗi. Vì vậy mức độ quan trọng của một chất không thể suy chỉ từ nồng độ tức thời.
 
-Đây là cùng logic với chất xúc tác: một tiểu phân có thể có nồng độ nhỏ nhưng thông lượng qua nó rất lớn.
+Đây là cùng lô-gic (logic / 논리) với chất xúc tác: một tiểu phân có thể có nồng độ nhỏ nhưng thông lượng qua nó rất lớn.
 
 ## Một nguồn OH quan trọng
 
@@ -287,7 +289,7 @@ Methane có nồng độ thấp hơn `CO2` nhưng có dải hấp thụ mạnh v
 Một mô hình đơn giản:
 
 \[
-\tau\approx\frac{\text{lượng tồn trữ}}{\text{tốc độ mất}}
+\tau\approx\frac{\văn bản (text / 텍스트){lượng tồn trữ}}{\văn bản (text / 텍스트){tốc độ mất}}
 \]
 
 Nếu nguồn là `E` và mất mát bậc nhất có hằng số `k`:
@@ -312,7 +314,7 @@ Xem lại [cân bằng động và steady state](../07_chemical_equilibrium/00_d
 
 Các acid hòa vào mây/mưa hoặc lắng đọng trực tiếp dưới dạng khí/hạt, góp phần acid hóa đất, nước và ăn mòn vật liệu.
 
-`NH3`, bụi khoáng và độ kiềm có thể trung hòa một phần acid. Vì vậy pH mưa không chỉ phụ thuộc lượng acid tạo ra mà còn phụ thuộc khả năng đệm/base của hệ.
+`NH3`, bụi khoáng và độ kiềm có thể trung hòa một phần acid. Vì vậy pH mưa không chỉ phụ thuộc lượng acid tạo ra mà còn phụ thuộc khả năng đệm/cơ sở (base / 기반) của hệ.
 
 ## Aerosol và khí hậu
 
@@ -338,7 +340,7 @@ vận chuyển nhanh hơn phản ứng
 → chất có thể đi xa trước khi biến đổi
 ```
 
-Đây là bridge giữa kinetics và fluid transport.
+Đây là cầu nối (bridge / 브리지) giữa kinetics và fluid vận chuyển (transport / 전송).
 
 ## Hóa học không khí trong nhà
 
@@ -400,7 +402,7 @@ Không. Cơ chế liên quan hấp thụ/phát xạ phụ thuộc bước sóng 
 
 Không. `NOx–VOC`, phân bố khí–hạt và phản hồi hóa học có thể phi tuyến mạnh.
 
-### “Steady state nghĩa là cân bằng”
+### “Steady trạng thái (state / 상태) nghĩa là cân bằng”
 
 Không. Trạng thái ổn định vẫn có nguồn và mất mát liên tục; cân bằng nhiệt động không có dòng ròng.
 
@@ -420,3 +422,5 @@ Hãy xem khí quyển như **mạng phản ứng quang hóa đang chuyển độ
 Ánh sáng quyết định kênh quang hóa; gốc tự do truyền chuỗi; bề mặt tạo kênh đa pha; vận chuyển cạnh tranh với thời gian sống; phổ học quyết định tương tác với bức xạ.
 
 Xem tiếp: [Hóa học nước](./01_water_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 water chemistry](./01_water_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

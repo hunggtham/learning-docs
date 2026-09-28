@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **3. 결합도 (Coupling - Độ phụ thuộc)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **5. Fan-In / Fan-Out (팬인 / 팬아웃)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 응집도 (Cohesion - Độ gắn kết)** và nối nó với **5. Fan-In / Fan-Out (팬인 / 팬아웃)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -30,7 +32,7 @@
 
 1.  **기능적 응집도 (Functional):**
     *   **Korean:** 단일 문제와 연관되어 수행. (Tốt nhất)
-    *   **VI (Vietnamese) (Tiếng Việt):** Mọi thành phần trong module cùng giải quyết MỘT bài toán duy nhất.
+    *   **VI (Vietnamese) (Tiếng Việt):** Mọi thành phần trong mô-đun (module / 모듈) cùng giải quyết MỘT bài toán duy nhất.
 2.  **순차적 응집도 (Sequential):**
     *   **Korean:** 출력 데이터가 다음 활동의 입력 데이터로 사용됨.
     *   **VI (Vietnamese) (Tiếng Việt):** Đầu ra của bước này là đầu vào của bước kia (trong cùng module).
@@ -45,7 +47,7 @@
     *   **VI (Vietnamese) (Tiếng Việt):** Gom các tác vụ xảy ra cùng một thời điểm (VD: khối khởi tạo hệ thống Init).
 6.  **논리적 응집도 (Logical):**
     *   **Korean:** 유사한 성격/형태로 분류되는 요소들을 모음.
-    *   **VI (Vietnamese) (Tiếng Việt):** Gom các hàm có tính chất logic giống nhau (VD: Hàm in các loại báo cáo, mặc dù báo cáo khác nhau).
+    *   **VI (Vietnamese) (Tiếng Việt):** Gom các hàm có tính chất lô-gic (logic / 논리) giống nhau (VD: Hàm in các loại báo cáo, mặc dù báo cáo khác nhau).
 7.  **우연적 응집도 (Coincidental) - XẤU NHẤT:**
     *   **Korean:** 아무 관련 없이 구성됨.
     *   **VI (Vietnamese) (Tiếng Việt):** Các phần tử gom lại ngẫu nhiên, không liên quan gì nhau.

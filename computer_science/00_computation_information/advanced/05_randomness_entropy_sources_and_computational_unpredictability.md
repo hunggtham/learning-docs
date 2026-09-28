@@ -1,10 +1,13 @@
 # Randomness, entropy sources và computational unpredictability
 
-Hệ thống cần randomness cho session token, cryptographic key, nonce, randomized algorithm, sampling, load balancing, simulation và testing. Nhưng từ “random” thường che giấu nhiều contract khác nhau.
+> **Mạch đọc:** Đặt **Randomness, entropy sources và computational unpredictability** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Deterministic computation không tự tạo entropy** sang **2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một sequence có thể vượt qua statistical tests nhưng vẫn hoàn toàn predictable nếu attacker biết seed. Một hardware source có physical noise nhưng biased. Một CSPRNG có output rất tốt nhưng nếu state bị clone qua VM snapshot, hai máy có thể sinh cùng stream. Một UUID có vẻ ngẫu nhiên nhưng không nhất thiết có security entropy đủ cho secret.
 
-Mental model:
+Hệ thống cần randomness cho session đơn vị từ (token / 토큰), cryptographic key, nonce, randomized thuật toán (algorithm / 알고리즘), sampling, tải (load / 로드) balancing, simulation và testing. Nhưng từ “random” thường che giấu nhiều đặc tả hợp đồng (contract / 계약) khác nhau.
+
+Một chuỗi (sequence / 시퀀스) có thể vượt qua statistical tests nhưng vẫn hoàn toàn predictable nếu attacker biết seed. Một hardware nguồn (source / 소스) có vật lý (physical / 물리적) noise nhưng biased. Một CSPRNG có đầu ra (output / 출력) rất tốt nhưng nếu trạng thái (state / 상태) bị clone qua VM snapshot, hai máy có thể sinh cùng stream. Một UUID có vẻ ngẫu nhiên nhưng không nhất thiết có bảo mật (security / 보안) entropy đủ cho secret.
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 physical / environmental uncertainty
@@ -16,11 +19,11 @@ physical / environmental uncertainty
 → protocol-specific use
 ```
 
-Chapter này phân biệt **entropy source**, **PRNG**, **CSPRNG**, **statistical randomness** và **computational unpredictability**, rồi nối chúng với failure modes production.
+Chapter này phân biệt **entropy nguồn (source / 소스)**, **PRNG**, **CSPRNG**, **statistical randomness** và **computational unpredictability**, rồi nối chúng với thất bại (failure / 실패) modes môi trường vận hành (production / 운영 환경).
 
 ## 1. Deterministic computation không tự tạo entropy
 
-Nếu program hoàn toàn deterministic và input/state ban đầu đã biết, output cũng đã được xác định.
+Nếu program hoàn toàn deterministic và đầu vào (input / 입력)/trạng thái (state / 상태) ban đầu đã biết, đầu ra (output / 출력) cũng đã được xác định.
 
 ```text
 state_0 + deterministic algorithm
@@ -30,7 +33,7 @@ state_0 + deterministic algorithm
 → output_2
 ```
 
-Ta có thể kéo dài 256 bit seed thành hàng terabyte pseudorandom output, nhưng không tạo thêm 1 TB uncertainty độc lập. Entropy của toàn stream bị giới hạn bởi uncertainty thực của seed/state theo threat model.
+Ta có thể kéo dài 256 bit seed thành hàng terabyte pseudorandom đầu ra (output / 출력), nhưng không tạo thêm 1 TB bất định (uncertainty / 불확실성) độc lập. Entropy của toàn stream bị giới hạn bởi bất định (uncertainty / 불확실성) thực của seed/trạng thái (state / 상태) theo threat mô hình (model / 모델).
 
 Đây là distinction nền tảng:
 
@@ -39,13 +42,13 @@ expansion of bits
 ≠ creation of entropy
 ```
 
-PRNG mở rộng một seed ngắn thành stream dài có statistical properties tốt. Entropy source mới là nơi uncertainty đi vào system.
+PRNG mở rộng một seed ngắn thành stream dài có statistical properties tốt. Entropy nguồn (source / 소스) mới là nơi bất định (uncertainty / 불확실성) đi vào hệ thống (system / 시스템).
 
-## 2. Entropy source là nguồn uncertainty, không phải API tên random
+## 2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random
 
-Entropy có thể đến từ physical noise, timing jitter, device events hoặc hardware mechanism tùy platform. Nhưng raw source thường không lý tưởng: có bias, correlation, health failure và dependency vào environment.
+Entropy có thể đến từ vật lý (physical / 물리적) noise, timing jitter, thiết bị (device / 장치) events hoặc hardware cơ chế (mechanism / 메커니즘) tùy nền tảng (platform / 플랫폼). Nhưng raw nguồn (source / 소스) thường không lý tưởng: có độ lệch (bias / 편향), correlation, health thất bại (failure / 실패) và phụ thuộc (dependency / 의존성) vào môi trường (environment / 환경).
 
-Một entropy subsystem phải reasoning ít nhất:
+Một entropy subsystem phải lập luận (reasoning / 추론) ít nhất:
 
 ```text
 source behavior
@@ -55,27 +58,27 @@ source behavior
 → seed readiness
 ```
 
-Không nên chỉ hỏi “đã gọi `/dev/random` hay API SecureRandom chưa?”. Cần hiểu runtime/OS đó seed generator như thế nào và lifecycle state ra sao.
+Không nên chỉ hỏi “đã gọi `/dev/random` hay API SecureRandom chưa?”. Cần hiểu thời gian chạy (runtime / 런타임)/OS đó seed generator như thế nào và vòng đời (lifecycle / 생명주기) trạng thái (state / 상태) ra sao.
 
 ## 3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau
 
-Shannon entropy đo uncertainty trung bình. Security thường quan tâm attacker đoán outcome tốt nhất tới đâu.
+Shannon entropy đo bất định (uncertainty / 불확실성) trung bình. bảo mật (security / 보안) thường quan tâm attacker đoán kết quả (outcome / 결과) tốt nhất tới đâu.
 
-**Min-entropy** dùng probability lớn nhất:
+**Min-entropy** dùng xác suất (probability / 확률) lớn nhất:
 
 ```text
 H_min(X) = -log2(max_x P(X=x))
 ```
 
-Nếu một source có nhiều outcome nhưng một outcome xảy ra 50%, attacker đã có guess rất mạnh dù average uncertainty nhìn có vẻ không quá thấp.
+Nếu một nguồn (source / 소스) có nhiều kết quả (outcome / 결과) nhưng một kết quả (outcome / 결과) xảy ra 50%, attacker đã có guess rất mạnh dù average bất định (uncertainty / 불확실성) nhìn có vẻ không quá thấp.
 
-Vì vậy security entropy estimation thường conservative hơn việc nhìn histogram “khá đều”.
+Vì vậy bảo mật (security / 보안) entropy estimation thường conservative hơn việc nhìn histogram “khá đều”.
 
 ## 4. Conditioning và extractor
 
-Raw physical source có thể biased/correlated. Một **conditioner/extractor** cố biến input có đủ entropy thành output gần uniform hơn.
+Raw vật lý (physical / 물리적) nguồn (source / 소스) có thể biased/correlated. Một **conditioner/extractor** cố biến đầu vào (input / 입력) có đủ entropy thành đầu ra (output / 출력) gần uniform hơn.
 
-Nhưng extractor không tạo entropy từ không khí. Nếu input thực tế có gần zero uncertainty, hash nó không biến output thành secret.
+Nhưng extractor không tạo entropy từ không khí. Nếu đầu vào (input / 입력) thực tế có gần zero bất định (uncertainty / 불확실성), băm (hash / 해시) nó không biến đầu ra (output / 출력) thành secret.
 
 ```text
 predictable input
@@ -83,17 +86,17 @@ predictable input
 → deterministic digest
 ```
 
-Digest có thể trông uniform nhưng attacker biết input vẫn tính được digest.
+Digest có thể trông uniform nhưng attacker biết đầu vào (input / 입력) vẫn tính được digest.
 
 Đây là lỗi tư duy phổ biến: **appearance of randomness** không đồng nghĩa **unpredictability**.
 
 ## 5. PRNG và CSPRNG
 
-PRNG thông thường tối ưu speed/statistical quality cho simulation hoặc randomized algorithm. Nếu attacker quan sát đủ output, state có thể bị suy ra tùy algorithm.
+PRNG thông thường tối ưu speed/statistical chất lượng (quality / 품질) cho simulation hoặc randomized thuật toán (algorithm / 알고리즘). Nếu attacker quan sát đủ đầu ra (output / 출력), trạng thái (state / 상태) có thể bị suy ra tùy thuật toán (algorithm / 알고리즘).
 
-**Cryptographically Secure PRNG (CSPRNG)** cần contract mạnh hơn: với attacker computationally bounded, output tiếp theo phải khó dự đoán từ output đã thấy nếu state/seed chưa bị compromise.
+**Cryptographically Secure PRNG (CSPRNG)** cần đặc tả hợp đồng (contract / 계약) mạnh hơn: với attacker computationally bounded, đầu ra (output / 출력) tiếp theo phải khó dự đoán từ đầu ra (output / 출력) đã thấy nếu trạng thái (state / 상태)/seed chưa bị compromise.
 
-CSPRNG thường dùng cryptographic primitive để update state và generate bytes. Ta reasoning bằng state transition, không bằng tên API:
+CSPRNG thường dùng cryptographic thành phần nguyên thủy (primitive / 기본 요소) để cập nhật (update / 업데이트) trạng thái (state / 상태) và generate bytes. Ta lập luận (reasoning / 추론) bằng chuyển tiếp trạng thái (state transition / 상태 전이), không bằng tên API:
 
 ```text
 secret state S_i
@@ -101,28 +104,28 @@ secret state S_i
 → evolve state to S_(i+1)
 ```
 
-Security phụ thuộc seed quality, state secrecy, update design và lifecycle.
+Bảo mật (security / 보안) phụ thuộc seed chất lượng (quality / 품질), trạng thái (state / 상태) secrecy, cập nhật (update / 업데이트) thiết kế (design / 설계) và vòng đời (lifecycle / 생명주기).
 
-## 6. Forward security và backtracking resistance
+## 6. Forward bảo mật (security / 보안) và backtracking resistance
 
-Nếu attacker compromise generator state tại thời điểm `t`, hai câu hỏi xuất hiện:
+Nếu attacker compromise generator trạng thái (state / 상태) tại thời điểm `t`, hai câu hỏi xuất hiện:
 
 ```text
 Có reconstruct được output cũ không?
 Có dự đoán được output tương lai không?
 ```
 
-Một design tốt có thể cố cung cấp **backtracking resistance**: state hiện tại không đủ để recover output quá khứ đã xóa khỏi state.
+Một thiết kế (design / 설계) tốt có thể cố cung cấp **backtracking resistance**: trạng thái (state / 상태) hiện tại không đủ để recover đầu ra (output / 출력) quá khứ đã xóa khỏi trạng thái (state / 상태).
 
-Nếu generator sau đó nhận entropy mới và reseed, nó có thể lấy lại unpredictability cho tương lai. Đây thường được gọi theo các khái niệm như prediction resistance/recovery tùy construction.
+Nếu generator sau đó nhận entropy mới và reseed, nó có thể lấy lại unpredictability cho tương lai. Đây thường được gọi theo các khái niệm như prediction resistance/khôi phục (recovery / 복구) tùy construction.
 
-Không có generator nào cứu được protocol nếu attacker đọc trực tiếp random bytes ngay khi application sử dụng chúng.
+Không có generator nào cứu được giao thức (protocol / 프로토콜) nếu attacker đọc trực tiếp random bytes ngay khi ứng dụng (application / 애플리케이션) sử dụng chúng.
 
-## 7. Seed lifecycle quan trọng hơn độ dài output
+## 7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)
 
-Một generator có output 4096-bit không mạnh nếu seed chỉ có 20 bit uncertainty. Attacker có thể brute-force seed space rồi regenerate toàn stream.
+Một generator có đầu ra (output / 출력) 4096-bit không mạnh nếu seed chỉ có 20 bit bất định (uncertainty / 불확실성). Attacker có thể brute-force seed không gian (space / 공간) rồi regenerate toàn stream.
 
-Security reasoning phải đi ngược:
+Bảo mật (security / 보안) lập luận (reasoning / 추론) phải đi ngược:
 
 ```text
 secret/token
@@ -132,21 +135,21 @@ secret/token
 ← entropy sources
 ```
 
-Đây là **entropy provenance**. Khi incident xảy ra, cần biết secret được sinh ở đâu, khi nào, trên machine state nào và generator đã seed/reseed chưa.
+Đây là **entropy provenance**. Khi sự cố (incident / 인시던트) xảy ra, cần biết secret được sinh ở đâu, khi nào, trên machine trạng thái (state / 상태) nào và generator đã seed/reseed chưa.
 
-## 8. Boot-time entropy và early-start failure
+## 8. Boot-time entropy và early-start thất bại (failure / 실패)
 
-Ngay sau boot, VM/container/embedded device có thể chưa thu đủ environmental entropy. Nếu service tạo host key, TLS key hoặc session secret quá sớm bằng generator chưa ready đúng contract, nhiều instance có thể tạo output yếu hoặc correlated.
+Ngay sau boot, VM/bộ chứa (container / 컨테이너)/embedded thiết bị (device / 장치) có thể chưa thu đủ environmental entropy. Nếu dịch vụ (service / 서비스) tạo host key, TLS key hoặc session secret quá sớm bằng generator chưa ready đúng đặc tả hợp đồng (contract / 계약), nhiều instance có thể tạo đầu ra (output / 출력) yếu hoặc correlated.
 
-Modern OS cố giải quyết seed readiness trong kernel RNG, nhưng application vẫn cần hiểu platform guarantee thay vì tự xây entropy pool bằng timestamp/PID.
+Hiện đại (modern / 현대적) OS cố giải quyết seed readiness trong kernel RNG, nhưng ứng dụng (application / 애플리케이션) vẫn cần hiểu nền tảng (platform / 플랫폼) guarantee thay vì tự xây entropy pool bằng timestamp/PID.
 
-Timestamp, process ID, MAC address hoặc username có thể khác nhau nhưng thường dễ đoán; uniqueness không đồng nghĩa entropy.
+Timestamp, tiến trình (process / 프로세스) ID, MAC address hoặc username có thể khác nhau nhưng thường dễ đoán; uniqueness không đồng nghĩa entropy.
 
-## 9. VM snapshot, fork và cloned state
+## 9. VM snapshot, fork và cloned trạng thái (state / 상태)
 
-Đây là failure production quan trọng.
+Đây là thất bại (failure / 실패) môi trường vận hành (production / 운영 환경) quan trọng.
 
-Giả sử VM đã có CSPRNG state `S`, sau đó snapshot được clone thành hai machine:
+Giả sử VM đã có CSPRNG trạng thái (state / 상태) `S`, sau đó snapshot được clone thành hai machine:
 
 ```text
 VM A: S → O1 → O2 → ...
@@ -155,23 +158,23 @@ VM B: S → O1 → O2 → ...
 
 Nếu không có reseed hoặc fork/snapshot detection, hai machine có thể sinh stream giống nhau.
 
-Tương tự, process fork có thể copy userspace PRNG state. Runtime/library tốt cần reseed hoặc split stream đúng cách.
+Tương tự, tiến trình (process / 프로세스) fork có thể bản sao (copy / 복사) userspace PRNG trạng thái (state / 상태). thời gian chạy (runtime / 런타임)/thư viện (library / 라이브러리) tốt cần reseed hoặc split stream đúng cách.
 
-Failure này không được phát hiện bằng statistical test trên từng stream riêng; mỗi stream vẫn trông random. Vấn đề nằm ở **correlation giữa replicas**.
+Thất bại (failure / 실패) này không được phát hiện bằng statistical kiểm thử (test / 테스트) trên từng stream riêng; mỗi stream vẫn trông random. Vấn đề nằm ở **correlation giữa replicas**.
 
-## 10. Nonce, salt, IV và secret token có contract khác nhau
+## 10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau
 
-Không phải mọi random-looking value cần cùng property.
+Không phải mọi random-looking giá trị (value / 값) cần cùng thuộc tính (property / 속성).
 
 **Salt** trong password hashing chủ yếu cần uniqueness để phá precomputation/rainbow-table reuse; salt thường không cần secret.
 
-**Nonce** nghĩa “number used once”. Nhiều cryptographic mode cần uniqueness dưới cùng key; random nonce chỉ là một cách đạt uniqueness với collision probability đủ thấp.
+**Nonce** nghĩa “number used once”. Nhiều cryptographic chế độ (mode / 모드) cần uniqueness dưới cùng key; random nonce chỉ là một cách đạt uniqueness với collision xác suất (probability / 확률) đủ thấp.
 
-**IV** có requirement tùy cipher/mode: có mode cần unpredictable, có mode cần unique. Không được copy rule giữa các construction.
+**IV** có yêu cầu (requirement / 요구사항) tùy cipher/chế độ (mode / 모드): có chế độ (mode / 모드) cần unpredictable, có chế độ (mode / 모드) cần unique. Không được bản sao (copy / 복사) quy tắc (rule / 규칙) giữa các construction.
 
-**Session/token/key** thường cần unpredictability mạnh vì attacker đoán đúng là compromise authority.
+**Session/đơn vị từ (token / 토큰)/key** thường cần unpredictability mạnh vì attacker đoán đúng là compromise authority.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 value name
@@ -182,31 +185,31 @@ value name
 
 ## 11. Birthday bound và collision
 
-Nếu chọn ngẫu nhiên từ space có `N` giá trị, collision trở nên đáng kể sau khoảng `sqrt(N)` samples, không phải sau `N` samples.
+Nếu chọn ngẫu nhiên từ không gian (space / 공간) có `N` giá trị, collision trở nên đáng kể sau khoảng `sqrt(N)` samples, không phải sau `N` samples.
 
-Với `b` random bits, collision probability tăng theo birthday effect quanh `2^(b/2)` samples.
+Với `b` random bits, collision xác suất (probability / 확률) tăng theo birthday tác động (effect / 효과) quanh `2^(b/2)` samples.
 
-Điều này quan trọng cho random identifier ở fleet scale. “128-bit ID rất lớn” thường đúng trong thực tế, nhưng reasoning phải dựa trên sample volume và acceptable collision risk, không chỉ cảm giác.
+Điều này quan trọng cho random identifier ở fleet quy mô (scale / 규모). “128-bit ID rất lớn” thường đúng trong thực tế, nhưng lập luận (reasoning / 추론) phải dựa trên mẫu (sample / 표본) volume và acceptable collision rủi ro (risk / 위험), không chỉ cảm giác.
 
-Nếu collision tuyệt đối không được phép theo business invariant, random ID một mình vẫn là probabilistic guarantee; có thể cần uniqueness constraint hoặc coordinated namespace.
+Nếu collision tuyệt đối không được phép theo nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식), random ID một mình vẫn là probabilistic guarantee; có thể cần uniqueness ràng buộc (constraint / 제약조건) hoặc coordinated không gian tên (namespace / 네임스페이스).
 
-## 12. Modulo bias
+## 12. Modulo độ lệch (bias / 편향)
 
-Một lỗi implementation phổ biến là lấy random integer rồi `% n` để chọn uniform trong `[0,n)` khi source range không chia hết cho `n`.
+Một lỗi hiện thực (implementation / 구현) phổ biến là lấy random integer rồi `% n` để chọn uniform trong `[0,n)` khi nguồn (source / 소스) phạm vi (range / 범위) không chia hết cho `n`.
 
-Một số outcome sẽ có nhiều preimage hơn outcome khác, tạo bias.
+Một số kết quả (outcome / 결과) sẽ có nhiều preimage hơn kết quả (outcome / 결과) khác, tạo độ lệch (bias / 편향).
 
-**Rejection sampling** giải quyết bằng cách bỏ vùng dư để mỗi outcome có số preimage bằng nhau.
+**Rejection sampling** giải quyết bằng cách bỏ vùng dư để mỗi kết quả (outcome / 결과) có số preimage bằng nhau.
 
-Đây là ví dụ nhỏ nhưng quan trọng: high-quality random bytes có thể bị application transform làm mất distribution contract.
+Đây là ví dụ nhỏ nhưng quan trọng: high-quality random bytes có thể bị ứng dụng (application / 애플리케이션) transform làm mất phân phối (distribution / 분포) đặc tả hợp đồng (contract / 계약).
 
-## 13. Sampling và load balancing không phải lúc nào cần crypto randomness
+## 13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness
 
-Randomized algorithm hoặc load balancer thường chỉ cần distribution tốt, speed cao và independence đủ cho workload; CSPRNG có thể không cần thiết.
+Randomized thuật toán (algorithm / 알고리즘) hoặc bộ cân bằng tải (load balancer / 로드 밸런서) thường chỉ cần phân phối (distribution / 분포) tốt, speed cao và independence đủ cho tải công việc (workload / 워크로드); CSPRNG có thể không cần thiết.
 
-Ngược lại, security token cần attacker-resistance chứ không chỉ uniform histogram.
+Ngược lại, bảo mật (security / 보안) đơn vị từ (token / 토큰) cần attacker-resistance chứ không chỉ uniform histogram.
 
-Chọn generator theo invariant:
+Chọn generator theo bất biến (invariant / 불변식):
 
 ```text
 simulation → reproducibility + statistical quality
@@ -215,11 +218,11 @@ security token → unpredictability + state safety
 lottery/fairness → auditability + manipulation resistance
 ```
 
-Dùng CSPRNG cho mọi thứ có thể đơn giản hóa API nhưng không thay thế việc xác định threat model.
+Dùng CSPRNG cho mọi thứ có thể đơn giản hóa API nhưng không thay thế việc xác định threat mô hình (model / 모델).
 
-## 14. Deterministic randomness trong testing là feature
+## 14. Deterministic randomness trong testing là tính năng (feature / 기능)
 
-Test thường muốn random input nhưng vẫn reproduce failure. Cách tốt là ghi seed:
+Kiểm thử (test / 테스트) thường muốn random đầu vào (input / 입력) nhưng vẫn reproduce thất bại (failure / 실패). Cách tốt là ghi seed:
 
 ```text
 seed
@@ -228,28 +231,28 @@ seed
 → failure
 ```
 
-Khi fail, log seed hoặc shrink case để chạy lại chính xác.
+Khi thất bại (fail / 실패), log seed hoặc shrink trường hợp (case / 사례) để chạy lại chính xác.
 
-Property-based testing vì vậy thường cố ý dùng pseudorandom deterministic stream. “Không random thật” ở đây là lợi ích, không phải security bug, vì invariant của testing là reproducibility.
+Property-based testing vì vậy thường cố ý dùng pseudorandom deterministic stream. “Không random thật” ở đây là lợi ích, không phải bảo mật (security / 보안) bug, vì bất biến (invariant / 불변식) của testing là reproducibility.
 
-## 15. Statistical tests không chứng minh cryptographic security
+## 15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)
 
-Frequency, runs, autocorrelation và test suite khác có thể phát hiện generator tệ. Nhưng pass các test đó không chứng minh attacker không predict được state.
+Frequency, runs, autocorrelation và bộ kiểm thử (test suite / 테스트 스위트) khác có thể phát hiện generator tệ. Nhưng pass các kiểm thử (test / 테스트) đó không chứng minh attacker không predict được trạng thái (state / 상태).
 
-Một linear generator có thể tạo output có histogram đẹp nhưng bị reconstruct state từ vài output.
+Một tuyến tính (linear / 선형) generator có thể tạo đầu ra (output / 출력) có histogram đẹp nhưng bị reconstruct trạng thái (state / 상태) từ vài đầu ra (output / 출력).
 
-Security cần reduction/cryptanalysis/design review phù hợp, không chỉ statistical appearance.
+Bảo mật (security / 보안) cần reduction/cryptanalysis/thiết kế (design / 설계) rà soát (review / 검토) phù hợp, không chỉ statistical appearance.
 
 ```text
 passes randomness tests
 ≠ cryptographically unpredictable
 ```
 
-## 16. Randomness trong distributed system
+## 16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)
 
-Distributed system dùng randomness cho election timeout, retry jitter, sampling hoặc randomized load spreading.
+Hệ thống phân tán (distributed system / 분산 시스템) dùng randomness cho election hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) jitter, sampling hoặc randomized tải (load / 로드) spreading.
 
-Nếu nhiều node seed giống nhau, chúng có thể đồng bộ behavior thay vì decorrelate:
+Nếu nhiều nút (node / 노드) seed giống nhau, chúng có thể đồng bộ hành vi (behavior / 동작) thay vì decorrelate:
 
 ```text
 same seed / same timer pattern
@@ -259,40 +262,40 @@ same seed / same timer pattern
 
 Jitter chỉ có tác dụng nếu randomization thực sự tạo đủ diversity giữa actors.
 
-Với protocol fairness hoặc public randomness, threat model khó hơn: participant có thể cố bias output bằng cách chọn khi nào reveal contribution. Các construction như commit-reveal hoặc verifiable random function tồn tại để hạn chế manipulation, nhưng mỗi construction có liveness/trust assumption riêng.
+Với giao thức (protocol / 프로토콜) fairness hoặc công khai (public / 공개) randomness, threat mô hình (model / 모델) khó hơn: participant có thể cố độ lệch (bias / 편향) đầu ra (output / 출력) bằng cách chọn khi nào reveal contribution. Các construction như commit-reveal hoặc verifiable random hàm (function / 함수) tồn tại để hạn chế manipulation, nhưng mỗi construction có liveness/trust giả định (assumption / 가정) riêng.
 
 ## 17. Randomness và cryptographic key generation
 
-Key generation cần entropy phù hợp key space và algorithm. Không được sinh key bằng password, timestamp hoặc UUID không có security contract tương đương rồi chỉ pad/hash thành đúng length.
+Key generation cần entropy phù hợp key không gian (space / 공간) và thuật toán (algorithm / 알고리즘). Không được sinh key bằng password, timestamp hoặc UUID không có bảo mật (security / 보안) đặc tả hợp đồng (contract / 계약) tương đương rồi chỉ pad/băm (hash / 해시) thành đúng length.
 
-Hashing một 32-bit random seed thành 256-bit key vẫn chỉ có khoảng 32 bit search space nếu attacker biết generation process.
+Hashing một 32-bit random seed thành 256-bit key vẫn chỉ có khoảng 32 bit tìm kiếm (search / 검색) không gian (space / 공간) nếu attacker biết generation tiến trình (process / 프로세스).
 
 ```text
 key length
 ≠ entropy of key
 ```
 
-Đây là distinction quan trọng khi audit secret-generation code.
+Đây là distinction quan trọng khi kiểm tra (audit / 감사) secret-generation mã (code / 코드).
 
-## 18. Observability mà không làm lộ secret
+## 18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret
 
-Không log random token/key để “debug entropy”. Evidence nên tập trung vào provenance và health metadata:
+Không log random đơn vị từ (token / 토큰)/key để “gỡ lỗi (debug / 디버그) entropy”. bằng chứng (evidence / 증거) nên tập trung vào provenance và health siêu dữ liệu (metadata / 메타데이터):
 
-- generator/provider/version;
-- seed readiness/reseed events nếu platform expose an toàn;
-- fork/snapshot lifecycle;
-- duplicate/collision rate của non-secret identifiers;
-- entropy-source health signal;
-- instance/image lineage;
-- boot time và key-generation time.
+- generator/provider/phiên bản (version / 버전);
+- seed readiness/reseed events nếu nền tảng (platform / 플랫폼) expose an toàn;
+- fork/snapshot vòng đời (lifecycle / 생명주기);
+- duplicate/collision tỷ lệ (rate / 비율) của non-secret identifiers;
+- entropy-source health tín hiệu (signal / 신호);
+- instance/ảnh (image / 이미지) lineage;
+- boot thời gian (time / 시간) và key-generation thời gian (time / 시간).
 
-Secret bytes phải được redacted. Observability không được phá chính security invariant đang kiểm tra.
+Secret bytes phải được redacted. khả năng quan sát (observability / 관측 가능성) không được phá chính bảo mật (security / 보안) bất biến (invariant / 불변식) đang kiểm tra.
 
-## 19. Failure investigation path
+## 19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)
 
-Giả sử production phát hiện session token duplicate giữa hai hosts.
+Giả sử môi trường vận hành (production / 운영 환경) phát hiện session đơn vị từ (token / 토큰) duplicate giữa hai hosts.
 
-Reasoning path:
+Lập luận (reasoning / 추론) đường dẫn (path / 경로):
 
 ```text
 duplicate token
@@ -304,15 +307,15 @@ duplicate token
 → image/bootstrap behavior
 ```
 
-Hypothesis có thể gồm application truncation, modulo/encoding bug, shared deterministic seed, cloned VM state hoặc token space quá nhỏ.
+Hypothesis có thể gồm ứng dụng (application / 애플리케이션) truncation, modulo/encoding bug, dùng chung (shared / 공유) deterministic seed, cloned VM trạng thái (state / 상태) hoặc đơn vị từ (token / 토큰) không gian (space / 공간) quá nhỏ.
 
-Evidence phải phân biệt collision xác suất bình thường với deterministic duplication.
+Bằng chứng (evidence / 증거) phải phân biệt collision xác suất bình thường với deterministic duplication.
 
-## 20. Connection với Kolmogorov complexity
+## 20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)
 
 Một CSPRNG stream dài có thể computationally indistinguishable from random nhưng algorithmic description ngắn: generator + seed.
 
-Đây không phải mâu thuẫn. Hai theory hỏi hai câu khác nhau:
+Đây không phải mâu thuẫn. Hai lý thuyết (theory / 이론) hỏi hai câu khác nhau:
 
 ```text
 Kolmogorov:
@@ -324,27 +327,27 @@ Attacker giới hạn tài nguyên có phân biệt/dự đoán được không?
 
 Đọc [Kolmogorov complexity, compression và incompressibility](./03_kolmogorov_complexity_compression_and_incompressibility.md).
 
-## 21. Connection với information theory
+## 21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)
 
-Entropy source cung cấp uncertainty. CSPRNG bảo tồn/mở rộng uncertainty dưới computational assumption cho use case, nhưng deterministic expansion không tăng information-theoretic entropy thật.
+Entropy nguồn (source / 소스) cung cấp bất định (uncertainty / 불확실성). CSPRNG bảo tồn/mở rộng bất định (uncertainty / 불확실성) dưới computational giả định (assumption / 가정) cho use trường hợp (case / 사례), nhưng deterministic expansion không tăng information-theoretic entropy thật.
 
 Đọc [Information theory, coding bounds và noisy channels](./04_information_theory_coding_bounds_and_noisy_channels.md).
 
 ## 22. Những nhầm lẫn thường gặp
 
-**“Hash timestamp là random.”** Không nếu timestamp có entropy thấp/dễ đoán.
+**“băm (hash / 해시) timestamp là random.”** Không nếu timestamp có entropy thấp/dễ đoán.
 
-**“UUID luôn đủ để làm secret.”** Không; phải biết version/generation contract và threat model.
+**“UUID luôn đủ để làm secret.”** Không; phải biết phiên bản (version / 버전)/generation đặc tả hợp đồng (contract / 계약) và threat mô hình (model / 모델).
 
-**“256-bit output nghĩa 256 bit entropy.”** Không nếu seed/state chỉ có ít uncertainty.
+**“256-bit đầu ra (output / 출력) nghĩa 256 bit entropy.”** Không nếu seed/trạng thái (state / 상태) chỉ có ít bất định (uncertainty / 불확실성).
 
 **“PRNG pass statistical tests nên secure.”** Không.
 
-**“Nonce phải luôn secret.”** Không; property chính phụ thuộc protocol, thường là uniqueness.
+**“Nonce phải luôn secret.”** Không; thuộc tính (property / 속성) chính phụ thuộc giao thức (protocol / 프로토콜), thường là uniqueness.
 
-**“Entropy source và CSPRNG là một thứ.”** Không. Một bên đưa uncertainty vào; một bên quản lý/mở rộng state để sinh output hiệu quả.
+**“Entropy nguồn (source / 소스) và CSPRNG là một thứ.”** Không. Một bên đưa bất định (uncertainty / 불확실성) vào; một bên quản lý/mở rộng trạng thái (state / 상태) để sinh đầu ra (output / 출력) hiệu quả.
 
-## 23. Checklist reasoning
+## 23. Checklist lập luận (reasoning / 추론)
 
 ```text
 Random value này bảo vệ invariant gì?
@@ -360,7 +363,7 @@ Evidence nào kiểm tra provenance mà không log secret?
 
 ## Kết luận
 
-Randomness trong computer system là một **state-and-provenance problem**, không phải một API call.
+Randomness trong computer hệ thống (system / 시스템) là một **state-and-provenance bài toán (problem / 문제)**, không phải một API lời gọi (call / 호출).
 
 ```text
 uncertainty source
@@ -372,4 +375,6 @@ uncertainty source
 → protocol invariant
 ```
 
-Nếu không biết uncertainty đến từ đâu, state được clone/compromise thế nào và consumer thực sự cần property gì, từ “random” gần như không đủ thông tin kỹ thuật. Phân biệt entropy, statistical quality và computational unpredictability là nền tảng để reasoning đúng về cryptography, distributed jitter, simulation và randomized algorithms.
+Nếu không biết bất định (uncertainty / 불확실성) đến từ đâu, trạng thái (state / 상태) được clone/compromise thế nào và bên tiêu thụ (consumer / 소비자) thực sự cần thuộc tính (property / 속성) gì, từ “random” gần như không đủ thông tin kỹ thuật. Phân biệt entropy, statistical chất lượng (quality / 품질) và computational unpredictability là nền tảng để lập luận (reasoning / 추론) đúng về cryptography, phân tán (distributed / 분산) jitter, simulation và randomized algorithms.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 formal models reductions and computability](./00_formal_models_reductions_and_computability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

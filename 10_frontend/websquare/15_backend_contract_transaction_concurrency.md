@@ -1,12 +1,15 @@
-# 15 — Backend Contract, Transaction & Concurrency Integration
+# 15 — Backend đặc tả hợp đồng (contract / 계약), giao dịch (transaction / 트랜잭션) & tính đồng thời (concurrency / 동시성) tích hợp (integration / 통합)
 
-WebSquare là frontend platform, nhưng phần khó nhất của màn hình enterprise thường nằm ở **ranh giới client–server**. DataList có row status, Submission có reference/target và Grid có validation, nhưng database transaction, authorization, locking và business invariant thật sự vẫn thuộc backend.
+> **Mạch đọc:** Đặt **15 — Backend đặc tả hợp đồng (contract / 계약), giao dịch (transaction / 트랜잭션) & tính đồng thời (concurrency / 동시성) tích hợp (integration / 통합)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Submission là vận chuyển (transport / 전송) đặc tả hợp đồng (contract / 계약), không phải giao dịch (transaction / 트랜잭션)** sang **2. CRUD row status cần ánh xạ (mapping / 매핑) đặc tả hợp đồng (contract / 계약) rõ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này không dạy lại Java/Spring hay database. Nó tập trung vào câu hỏi WebSquare developer phải reasoning được: **client gửi contract gì, server trả contract gì, row state được dịch thành command thế nào, retry có an toàn không, conflict được biểu diễn ra sao, và UI làm gì khi kết quả transaction không đơn giản là success/fail**.
 
-## 1. Submission là transport contract, không phải transaction
+WebSquare là frontend nền tảng (platform / 플랫폼), nhưng phần khó nhất của màn hình enterprise thường nằm ở **ranh giới máy khách (client / 클라이언트)–máy chủ (server / 서버)**. DataList có row status, Submission có tham chiếu (reference / 참조)/mục tiêu (target / 대상) và Grid có kiểm tra hợp lệ (validation / 검증), nhưng cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션), authorization, locking và nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) thật sự vẫn thuộc backend.
 
-Mental model:
+Chapter này không dạy lại Java/Spring hay cơ sở dữ liệu (database / 데이터베이스). Nó tập trung vào câu hỏi WebSquare nhà phát triển (developer / 개발자) phải lập luận (reasoning / 추론) được: **máy khách (client / 클라이언트) gửi đặc tả hợp đồng (contract / 계약) gì, máy chủ (server / 서버) trả đặc tả hợp đồng (contract / 계약) gì, row trạng thái (state / 상태) được dịch thành command thế nào, thử lại (retry / 재시도) có an toàn không, xung đột (conflict / 충돌) được biểu diễn ra sao, và UI làm gì khi kết quả giao dịch (transaction / 트랜잭션) không đơn giản là success/thất bại (fail / 실패)**.
+
+## 1. Submission là vận chuyển (transport / 전송) đặc tả hợp đồng (contract / 계약), không phải giao dịch (transaction / 트랜잭션)
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 WebSquare page
@@ -20,13 +23,13 @@ WebSquare page
 → UI state
 ```
 
-`executeSubmission()` không mở database transaction trong browser. Một Workflow chạy ba Submission liên tiếp cũng không tự làm ba HTTP call thành một ACID transaction.
+`executeSubmission()` không mở cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) trong trình duyệt (browser / 브라우저). Một Workflow chạy ba Submission liên tiếp cũng không tự làm ba HTTP lời gọi (call / 호출) thành một ACID giao dịch (transaction / 트랜잭션).
 
-Nếu ba operation phải commit hoặc rollback cùng nhau, backend cần một transaction boundary hoặc một business command phù hợp.
+Nếu ba thao tác (operation / 연산) phải lần ghi nhận (commit / 커밋) hoặc quay lui (rollback / 롤백) cùng nhau, backend cần một giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) hoặc một nghiệp vụ (business / 비즈니스) command phù hợp.
 
-## 2. CRUD row status cần mapping contract rõ
+## 2. CRUD row status cần ánh xạ (mapping / 매핑) đặc tả hợp đồng (contract / 계약) rõ
 
-Client có thể giữ row `C/U/D`. Server phải biết semantics này bằng một contract được thống nhất.
+Máy khách (client / 클라이언트) có thể giữ row `C/U/D`. máy chủ (server / 서버) phải biết ngữ nghĩa (semantics / 의미론) này bằng một đặc tả hợp đồng (contract / 계약) được thống nhất.
 
 Có hai style phổ biến:
 
@@ -35,7 +38,7 @@ style A: payload chứa row status + row data
 style B: payload tách created/updated/deleted collections
 ```
 
-Không có style luôn tốt hơn. Điều quan trọng là server không “đoán” operation từ field rỗng hoặc vị trí row.
+Không có style luôn tốt hơn. Điều quan trọng là máy chủ (server / 서버) không “đoán” thao tác (operation / 연산) từ trường dữ liệu (field / 필드) rỗng hoặc vị trí row.
 
 Ví dụ conceptual:
 
@@ -47,11 +50,11 @@ Ví dụ conceptual:
 }
 ```
 
-Contract tách operation rõ và dễ validate.
+Đặc tả hợp đồng (contract / 계약) tách thao tác (operation / 연산) rõ và dễ validate.
 
-## 3. Client row status không phải authorization proof
+## 3. máy khách (client / 클라이언트) row status không phải authorization proof
 
-User có thể sửa payload trong DevTools:
+Người dùng (user / 사용자) có thể sửa payload trong DevTools:
 
 ```text
 U → D
@@ -59,13 +62,13 @@ ROLE=USER → ROLE=ADMIN
 PRICE=100 → PRICE=0
 ```
 
-Server phải quyết định caller có quyền create/update/delete field/entity đó không. Row status chỉ là **client intent**, không phải evidence rằng operation hợp lệ.
+Máy chủ (server / 서버) phải quyết định caller có quyền create/cập nhật (update / 업데이트)/delete trường dữ liệu (field / 필드)/thực thể (entity / 엔터티) đó không. Row status chỉ là **máy khách (client / 클라이언트) intent**, không phải bằng chứng (evidence / 증거) rằng thao tác (operation / 연산) hợp lệ.
 
 ## 4. Writable-field whitelist quan trọng hơn hidden/readOnly
 
-Một screen có thể nhận object gồm 30 field nhưng user chỉ được sửa 4 field. Nếu client gửi lại toàn object, server không nên mass-assign tất cả field.
+Một screen có thể nhận đối tượng (object / 객체) gồm 30 trường dữ liệu (field / 필드) nhưng người dùng (user / 사용자) chỉ được sửa 4 trường dữ liệu (field / 필드). Nếu máy khách (client / 클라이언트) gửi lại toàn đối tượng (object / 객체), máy chủ (server / 서버) không nên mass-assign tất cả trường dữ liệu (field / 필드).
 
-Contract nên phân biệt:
+Đặc tả hợp đồng (contract / 계약) nên phân biệt:
 
 ```text
 identity fields
@@ -75,9 +78,9 @@ calculated fields
 audit fields
 ```
 
-Ví dụ `createdBy`, `approvedAt`, `role`, `version` có thể là server-owned tùy domain. UI hidden/readOnly chỉ giúp UX.
+Ví dụ `createdBy`, `approvedAt`, `role`, `version` có thể là server-owned tùy lĩnh vực (domain / 도메인). UI hidden/readOnly chỉ giúp UX.
 
-## 5. Canonical value phải được thống nhất ở API boundary
+## 5. chuẩn gốc (canonical / 정본) giá trị (value / 값) phải được thống nhất ở API ranh giới (boundary / 경계)
 
 UI có thể hiển thị:
 
@@ -87,7 +90,7 @@ UI có thể hiển thị:
 서울
 ```
 
-Payload nên dùng representation ổn định:
+Payload nên dùng biểu diễn (representation / 표현) ổn định:
 
 ```text
 1234567
@@ -95,13 +98,13 @@ Payload nên dùng representation ổn định:
 SEOUL hoặc code tương ứng
 ```
 
-Đừng để backend parse string display phụ thuộc locale nếu model đã có canonical value.
+Đừng để backend parse string display phụ thuộc locale nếu mô hình (model / 모델) đã có chuẩn gốc (canonical / 정본) giá trị (value / 값).
 
-WebSquare binding/formatter nên giữ presentation và domain value tách nhau.
+WebSquare binding/formatter nên giữ presentation và lĩnh vực (domain / 도메인) giá trị (value / 값) tách nhau.
 
-## 6. Empty, null, absent là ba semantic khác nhau
+## 6. Empty, null, absent là ba ngữ nghĩa (semantic / 의미적) khác nhau
 
-Update API cần đặc biệt rõ:
+Cập nhật (update / 업데이트) API cần đặc biệt rõ:
 
 ```text
 field absent → không thay đổi?
@@ -109,17 +112,17 @@ field: null → xóa giá trị?
 field: "" → chuỗi rỗng hợp lệ hay normalize null?
 ```
 
-Nếu client serializer tự chuyển đổi theo DataList/DataMap config, test contract phải kiểm tra payload thực tế trong Network. Không chỉ nhìn JavaScript object trước submit.
+Nếu máy khách (client / 클라이언트) serializer tự chuyển đổi theo DataList/DataMap cấu hình (config / 설정), kiểm thử (test / 테스트) đặc tả hợp đồng (contract / 계약) phải kiểm tra payload thực tế trong mạng (network / 네트워크). Không chỉ nhìn JavaScript đối tượng (object / 객체) trước submit.
 
-## 7. Business error nên có machine-readable code
+## 7. nghiệp vụ (business / 비즈니스) lỗi (error / 오류) nên có machine-readable mã (code / 코드)
 
-Response chỉ trả message Korean như:
+Phản hồi (response / 응답) chỉ trả message Korean như:
 
 ```text
 "이미 처리된 데이터입니다."
 ```
 
-khó cho client mapping behavior và i18n.
+khó cho máy khách (client / 클라이언트) ánh xạ (mapping / 매핑) hành vi (behavior / 동작) và i18n.
 
 Tốt hơn:
 
@@ -132,13 +135,13 @@ Tốt hơn:
 }
 ```
 
-Client dùng `code` để quyết định behavior; `message` dùng hiển thị/log tùy policy. Nếu frontend đa ngôn ngữ, có thể map code sang locale key thay vì phụ thuộc raw server sentence.
+Máy khách (client / 클라이언트) dùng `code` để quyết định hành vi (behavior / 동작); `message` dùng hiển thị/log tùy chính sách (policy / 정책). Nếu frontend đa ngôn ngữ, có thể map mã (code / 코드) sang locale key thay vì phụ thuộc raw máy chủ (server / 서버) sentence.
 
-## 8. Transport success, application success và transaction success
+## 8. vận chuyển (transport / 전송) success, ứng dụng (application / 애플리케이션) success và giao dịch (transaction / 트랜잭션) success
 
-Một response HTTP 200 có thể chứa business failure. Một HTTP 500 có thể xảy ra sau khi transaction đã commit nhưng response serialization/network bị lỗi ở boundary khác.
+Một phản hồi (response / 응답) HTTP 200 có thể chứa nghiệp vụ (business / 비즈니스) thất bại (failure / 실패). Một HTTP 500 có thể xảy ra sau khi giao dịch (transaction / 트랜잭션) đã lần ghi nhận (commit / 커밋) nhưng phản hồi (response / 응답) serialization/mạng (network / 네트워크) bị lỗi ở ranh giới (boundary / 경계) khác.
 
-Do đó client cần phân biệt:
+Do đó máy khách (client / 클라이언트) cần phân biệt:
 
 ```text
 request reached server?
@@ -148,9 +151,9 @@ transaction committed?
 response reached client?
 ```
 
-Trong timeout/network loss, client đôi lúc **không biết** transaction đã commit hay chưa. Đây là lý do mutation retry cần idempotency.
+Trong hết thời gian chờ (timeout / 타임아웃)/mạng (network / 네트워크) mất mát (loss / 손실), máy khách (client / 클라이언트) đôi lúc **không biết** giao dịch (transaction / 트랜잭션) đã lần ghi nhận (commit / 커밋) hay chưa. Đây là lý do mutation thử lại (retry / 재시도) cần idempotency.
 
-## 9. Idempotency cho Save quan trọng khi network không chắc chắn
+## 9. Idempotency cho Save quan trọng khi mạng (network / 네트워크) không chắc chắn
 
 Scenario:
 
@@ -162,15 +165,15 @@ client timeout
 user bấm Save lại
 ```
 
-Nếu server tạo transaction mới mỗi lần, duplicate có thể xảy ra.
+Nếu máy chủ (server / 서버) tạo giao dịch (transaction / 트랜잭션) mới mỗi lần, duplicate có thể xảy ra.
 
-Một idempotency/business request key giúp server nhận ra retry của cùng logical command. Cách implement thuộc backend/domain, nhưng WebSquare client cần biết khi nào tạo/giữ key.
+Một idempotency/nghiệp vụ (business / 비즈니스) yêu cầu (request / 요청) key giúp máy chủ (server / 서버) nhận ra thử lại (retry / 재시도) của cùng logical command. Cách implement thuộc backend/lĩnh vực (domain / 도메인), nhưng WebSquare máy khách (client / 클라이언트) cần biết khi nào tạo/giữ key.
 
-Rule: retry query thường dễ hơn retry mutation. Không auto-retry Save chỉ vì `submiterror` chạy.
+Quy tắc (rule / 규칙): thử lại (retry / 재시도) truy vấn (query / 쿼리) thường dễ hơn thử lại (retry / 재시도) mutation. Không auto-retry Save chỉ vì `submiterror` chạy.
 
-## 10. Optimistic locking là contract giữa UI và database
+## 10. Optimistic locking là đặc tả hợp đồng (contract / 계약) giữa UI và cơ sở dữ liệu (database / 데이터베이스)
 
-Client đọc entity version 7. Khi save:
+Máy khách (client / 클라이언트) đọc thực thể (entity / 엔터티) phiên bản (version / 버전) 7. Khi save:
 
 ```json
 {
@@ -180,9 +183,9 @@ Client đọc entity version 7. Khi save:
 }
 ```
 
-Server update với expectation version 7. Nếu version hiện đã là 8, server trả conflict.
+Máy chủ (server / 서버) cập nhật (update / 업데이트) với expectation phiên bản (version / 버전) 7. Nếu phiên bản (version / 버전) hiện đã là 8, máy chủ (server / 서버) trả xung đột (conflict / 충돌).
 
-Client không nên silently overwrite. UX có thể:
+Máy khách (client / 클라이언트) không nên silently overwrite. UX có thể:
 
 ```text
 reload canonical server state
@@ -191,11 +194,11 @@ show diff nếu domain cần
 cho user re-apply change
 ```
 
-Row status `U` chỉ nói client đã sửa; nó không nói server row vẫn như lúc client đọc.
+Row status `U` chỉ nói máy khách (client / 클라이언트) đã sửa; nó không nói máy chủ (server / 서버) row vẫn như lúc máy khách (client / 클라이언트) đọc.
 
-## 11. Conflict khác validation failure
+## 11. xung đột (conflict / 충돌) khác kiểm tra hợp lệ (validation / 검증) thất bại (failure / 실패)
 
-Validation failure nghĩa input vi phạm rule. Conflict nghĩa input có thể hợp lệ nhưng state nền đã thay đổi.
+Kiểm tra hợp lệ (validation / 검증) thất bại (failure / 실패) nghĩa đầu vào (input / 입력) vi phạm quy tắc (rule / 규칙). xung đột (conflict / 충돌) nghĩa đầu vào (input / 입력) có thể hợp lệ nhưng trạng thái (state / 상태) nền đã thay đổi.
 
 ```text
 INVALID_EMAIL → sửa email
@@ -204,13 +207,13 @@ ALREADY_APPROVED → operation state đã chuyển
 PERMISSION_DENIED → authorization
 ```
 
-Nếu mọi lỗi đều hiện “저장 실패”, user không biết hành động tiếp theo.
+Nếu mọi lỗi đều hiện “저장 실패”, người dùng (user / 사용자) không biết hành động tiếp theo.
 
-Error taxonomy là một phần của API contract.
+Lỗi (error / 오류) taxonomy là một phần của Đặc tả API (API contract / API 계약).
 
-## 12. All-or-nothing batch transaction
+## 12. All-or-nothing batch giao dịch (transaction / 트랜잭션)
 
-Với 100 row save, backend có thể chọn một transaction:
+Với 100 row save, backend có thể chọn một giao dịch (transaction / 트랜잭션):
 
 ```text
 validate all
@@ -218,15 +221,15 @@ validate all
 → commit all
 ```
 
-Một row fail thì rollback tất cả. Client giữ toàn bộ changed rows dirty và highlight lỗi gây rollback.
+Một row thất bại (fail / 실패) thì quay lui (rollback / 롤백) tất cả. máy khách (client / 클라이언트) giữ toàn bộ changed rows dirty và highlight lỗi gây quay lui (rollback / 롤백).
 
-Ưu điểm là invariant toàn batch dễ giữ. Nhược điểm là một row lỗi chặn 99 row đúng.
+Ưu điểm là bất biến (invariant / 불변식) toàn batch dễ giữ. Nhược điểm là một row lỗi chặn 99 row đúng.
 
-UI phải nói rõ “không row nào được lưu” thay vì đánh dấu success từng row trước khi transaction result cuối cùng có.
+UI phải nói rõ “không row nào được lưu” thay vì đánh dấu success từng row trước khi giao dịch (transaction / 트랜잭션) kết quả (result / 결과) cuối cùng có.
 
-## 13. Partial success cần protocol mạnh hơn
+## 13. Partial success cần giao thức (protocol / 프로토콜) mạnh hơn
 
-Nếu backend cho phép row độc lập commit, response phải nói row nào thành công/thất bại bằng stable key.
+Nếu backend cho phép row độc lập lần ghi nhận (commit / 커밋), phản hồi (response / 응답) phải nói row nào thành công/thất bại bằng stable key.
 
 ```json
 {
@@ -237,39 +240,39 @@ Nếu backend cho phép row độc lập commit, response phải nói row nào t
 }
 ```
 
-Client chỉ reset dirty state cho row A; row B giữ edit/error. Nếu client reset toàn DataList sau HTTP 200, user mất unsaved correction.
+Máy khách (client / 클라이언트) chỉ reset dirty trạng thái (state / 상태) cho row A; row B giữ edit/lỗi (error / 오류). Nếu máy khách (client / 클라이언트) reset toàn DataList sau HTTP 200, người dùng (user / 사용자) mất unsaved correction.
 
-Partial success là distributed state reconciliation problem, không chỉ là “loop alert”.
+Partial success là phân tán (distributed / 분산) trạng thái (state / 상태) reconciliation bài toán (problem / 문제), không chỉ là “vòng lặp (loop / 루프) alert”.
 
-## 14. Created row cần client correlation key
+## 14. Created row cần máy khách (client / 클라이언트) correlation key
 
-Row mới chưa có server ID. Nếu batch create 10 row và server sinh sequence, response cần map ID về đúng client row.
+Row mới chưa có máy chủ (server / 서버) ID. Nếu batch create 10 row và máy chủ (server / 서버) sinh chuỗi (sequence / 시퀀스), phản hồi (response / 응답) cần map ID về đúng máy khách (client / 클라이언트) row.
 
-Có thể dùng temporary client key:
+Có thể dùng temporary máy khách (client / 클라이언트) key:
 
 ```json
 {"clientKey":"tmp-7","name":"Kim"}
 ```
 
-Response:
+Phản hồi (response / 응답):
 
 ```json
 {"clientKey":"tmp-7","id":"USR-10442","status":"SUCCESS"}
 ```
 
-Không map bằng array index nếu server có thể reorder result hoặc partial failure.
+Không map bằng array chỉ mục (index / 인덱스) nếu máy chủ (server / 서버) có thể reorder kết quả (result / 결과) hoặc partial thất bại (failure / 실패).
 
-## 15. Delete cần version và ownership như update
+## 15. Delete cần phiên bản (version / 버전) và quyền sở hữu (ownership / 소유권) như cập nhật (update / 업데이트)
 
-Delete không chỉ là `DELETE WHERE ID=?`. Nếu record đã đổi hoặc không còn thuộc quyền user, server phải enforce rule.
+Delete không chỉ là `DELETE WHERE ID=?`. Nếu bản ghi (record / 레코드) đã đổi hoặc không còn thuộc quyền người dùng (user / 사용자), máy chủ (server / 서버) phải enforce quy tắc (rule / 규칙).
 
-Client gửi identity/version cần thiết; server xác thực permission/invariant. Nếu delete conflict, UI không nên đơn giản remove row local rồi coi như xong.
+Máy khách (client / 클라이언트) gửi định danh (identity / 식별자)/phiên bản (version / 버전) cần thiết; máy chủ (server / 서버) xác thực permission/bất biến (invariant / 불변식). Nếu delete xung đột (conflict / 충돌), UI không nên đơn giản remove row cục bộ (local / 로컬) rồi coi như xong.
 
-## 16. Search contract phải snapshot điều kiện đã execute
+## 16. tìm kiếm (search / 검색) đặc tả hợp đồng (contract / 계약) phải snapshot điều kiện đã execute
 
-User có thể sửa `dmSearch` sau khi request bắt đầu. Response A tương ứng condition A, trong khi UI input đã là B.
+Người dùng (user / 사용자) có thể sửa `dmSearch` sau khi yêu cầu (request / 요청) bắt đầu. phản hồi (response / 응답) A tương ứng điều kiện (condition / 조건) A, trong khi UI đầu vào (input / 입력) đã là B.
 
-Nên giữ request identity và snapshot:
+Nên giữ yêu cầu (request / 요청) định danh (identity / 식별자) và snapshot:
 
 ```javascript
 scwin.lastExecutedSearch = {
@@ -278,11 +281,11 @@ scwin.lastExecutedSearch = {
 };
 ```
 
-Khi export/report hoặc debug, biết dataset hiện tại sinh từ query nào. Điều này cũng hỗ trợ stale-response guard.
+Khi export/report hoặc gỡ lỗi (debug / 디버그), biết dataset hiện tại sinh từ truy vấn (query / 쿼리) nào. Điều này cũng hỗ trợ stale-response guard.
 
-## 17. Latest-intent guard cần server/client cooperation khi có side effect
+## 17. Latest-intent guard cần máy chủ (server / 서버)/máy khách (client / 클라이언트) cooperation khi có side tác động (effect / 효과)
 
-Search response cũ có thể bỏ qua ở client. Save response cũ thì phức tạp hơn vì server side effect có thể đã xảy ra.
+Tìm kiếm (search / 검색) phản hồi (response / 응답) cũ có thể bỏ qua ở máy khách (client / 클라이언트). Save phản hồi (response / 응답) cũ thì phức tạp hơn vì máy chủ (server / 서버) side tác động (effect / 효과) có thể đã xảy ra.
 
 Do đó:
 
@@ -291,21 +294,21 @@ read request → cancellation/latest-response policy thường đủ
 mutation → cần duplicate guard/idempotency/concurrency contract
 ```
 
-Đừng áp cùng một “ignore stale response” pattern cho mọi operation.
+Đừng áp cùng một “ignore stale phản hồi (response / 응답)” mẫu (pattern / 패턴) cho mọi thao tác (operation / 연산).
 
-## 18. Workflow phù hợp orchestration đọc hơn transaction mutation phức tạp
+## 18. Workflow phù hợp orchestration đọc hơn giao dịch (transaction / 트랜잭션) mutation phức tạp
 
-WebSquare Workflow có thể mô tả thứ tự nhiều Submission và official guide khuyến nghị dùng cho flow query/select phù hợp. Nhưng nếu Save A rồi Save B phải atomic, hai Submission nối bằng Workflow vẫn không tạo server transaction chung.
+WebSquare Workflow có thể mô tả thứ tự nhiều Submission và official guide khuyến nghị dùng cho luồng (flow / 흐름) truy vấn (query / 쿼리)/select phù hợp. Nhưng nếu Save A rồi Save B phải atomic, hai Submission nối bằng Workflow vẫn không tạo máy chủ (server / 서버) giao dịch (transaction / 트랜잭션) chung.
 
-Tốt hơn có thể là một backend command duy nhất nếu invariant yêu cầu atomicity.
+Tốt hơn có thể là một backend command duy nhất nếu bất biến (invariant / 불변식) yêu cầu atomicity.
 
-First principle: **transaction boundary phải nằm nơi có quyền kiểm soát resource cần commit**.
+First principle: **giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải nằm nơi có quyền kiểm soát tài nguyên (resource / 자원) cần lần ghi nhận (commit / 커밋)**.
 
-## 19. File/Excel import cần staging mindset
+## 19. tệp (file / 파일)/Excel import cần staging mindset
 
-Excel 10.000 row không nên đi thẳng từ upload thành commit nếu domain phức tạp.
+Excel 10.000 row không nên đi thẳng từ upload thành lần ghi nhận (commit / 커밋) nếu lĩnh vực (domain / 도메인) phức tạp.
 
-Một pipeline an toàn hơn:
+Một chuỗi xử lý (pipeline / 파이프라인) an toàn hơn:
 
 ```text
 parse
@@ -317,11 +320,11 @@ parse
 → commit command
 ```
 
-Với dataset lớn, server-side staging/import job có thể phù hợp hơn giữ mọi row trong browser. WebSquare Grid là UI cho process, không nhất thiết là nơi xử lý toàn bộ import.
+Với dataset lớn, server-side staging/import job có thể phù hợp hơn giữ mọi row trong trình duyệt (browser / 브라우저). WebSquare Grid là UI cho tiến trình (process / 프로세스), không nhất thiết là nơi xử lý toàn bộ import.
 
-## 20. Long-running operation cần job semantics
+## 20. Long-running thao tác (operation / 연산) cần job ngữ nghĩa (semantics / 의미론)
 
-Một report/export/import mất 2 phút không nên giả định HTTP request giữ UI blocking là tốt nhất.
+Một report/export/import mất 2 phút không nên giả định HTTP yêu cầu (request / 요청) giữ UI blocking là tốt nhất.
 
 Backend có thể dùng async job:
 
@@ -333,7 +336,7 @@ POST create job
 → download/result
 ```
 
-Client cần state machine:
+Máy khách (client / 클라이언트) cần máy trạng thái (state machine / 상태 머신):
 
 ```text
 IDLE → SUBMITTED → RUNNING → SUCCEEDED/FAILED/CANCELLED
@@ -341,11 +344,11 @@ IDLE → SUBMITTED → RUNNING → SUCCEEDED/FAILED/CANCELLED
 
 Đừng dùng một boolean `isLoading` cho workflow nhiều trạng thái.
 
-## 21. Session expiration là protocol event, không chỉ generic error
+## 21. Session expiration là giao thức (protocol / 프로토콜) sự kiện (event / 이벤트), không chỉ generic lỗi (error / 오류)
 
-Nếu session hết hạn, nhiều Submission có thể đồng thời nhận 401/403 hoặc response convention riêng. Common layer cần policy tránh 10 popup “session expired”.
+Nếu session hết hạn, nhiều Submission có thể đồng thời nhận 401/403 hoặc phản hồi (response / 응답) convention riêng. dùng chung (common / 공통) tầng (layer / 계층) cần chính sách (policy / 정책) tránh 10 popup “session expired”.
 
-Application shell có thể coordinate:
+Ứng dụng (application / 애플리케이션) shell có thể coordinate:
 
 ```text
 first auth-expired signal
@@ -354,11 +357,11 @@ first auth-expired signal
 → pending operation policy
 ```
 
-Nhưng backend status semantics phải rõ. Không map mọi 403 thành session expired vì 403 cũng có thể là permission denial.
+Nhưng backend status ngữ nghĩa (semantics / 의미론) phải rõ. Không map mọi 403 thành session expired vì 403 cũng có thể là permission denial.
 
-## 22. Correlation ID nối frontend incident với backend trace
+## 22. Correlation ID nối frontend sự cố (incident / 인시던트) với backend dấu vết (trace / 추적)
 
-Client log:
+Máy khách (client / 클라이언트) log:
 
 ```text
 screen=ORDER_DETAIL
@@ -367,15 +370,15 @@ requestId=abc-123
 orderId=ORD-1001
 ```
 
-Server/gateway log cùng correlation/trace ID giúp tìm transaction. Không log full payload nếu chứa PII.
+Máy chủ (server / 서버)/gateway log cùng correlation/dấu vết (trace / 추적) ID giúp tìm giao dịch (transaction / 트랜잭션). Không log full payload nếu chứa PII.
 
-Production support tốt cần đủ context để trả lời: request nào, screen instance nào, business entity nào, build nào.
+Môi trường vận hành (production / 운영 환경) hỗ trợ (support / 지원) tốt cần đủ ngữ cảnh (context / 맥락) để trả lời: yêu cầu (request / 요청) nào, screen instance nào, nghiệp vụ (business / 비즈니스) thực thể (entity / 엔터티) nào, bản dựng (build / 빌드) nào.
 
-## 23. Contract versioning và backward compatibility
+## 23. đặc tả hợp đồng (contract / 계약) versioning và backward tính tương thích (compatibility / 호환성)
 
-Frontend artifact và backend release có thể deploy lệch thời điểm. Nếu API contract thay breaking ngay, rolling deployment/cache cũ có thể lỗi.
+Frontend sản phẩm tạo ra (artifact / 산출물) và backend bản phát hành (release / 릴리스) có thể deploy lệch thời điểm. Nếu Đặc tả API (API contract / API 계약) thay breaking ngay, rolling triển khai (deployment / 배포)/bộ nhớ đệm (cache / 캐시) cũ có thể lỗi.
 
-Cần policy:
+Cần chính sách (policy / 정책):
 
 ```text
 additive field change
@@ -384,17 +387,17 @@ versioned endpoint/schema nếu cần
 compatibility window
 ```
 
-WebSquare W-Pack cache làm khả năng client cũ sống lâu hơn đáng kể. Backend nên tính đến stale client trong deployment strategy.
+WebSquare W-Pack bộ nhớ đệm (cache / 캐시) làm khả năng máy khách (client / 클라이언트) cũ sống lâu hơn đáng kể. Backend nên tính đến stale máy khách (client / 클라이언트) trong triển khai (deployment / 배포) chiến lược (strategy / 전략).
 
-## 24. Client-generated business rule dễ drift
+## 24. Client-generated nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) dễ drift
 
-Nếu cùng rule được copy ở 20 screen và backend, sớm muộn sẽ lệch.
+Nếu cùng quy tắc (rule / 규칙) được bản sao (copy / 복사) ở 20 screen và backend, sớm muộn sẽ lệch.
 
-Client có thể duplicate một subset để UX nhanh, nhưng server vẫn là owner invariant. Khi rule thay đổi, cần centralize metadata/common function hoặc trả constraint từ server nếu phù hợp.
+Máy khách (client / 클라이언트) có thể duplicate một subset để UX nhanh, nhưng máy chủ (server / 서버) vẫn là đơn vị sở hữu (owner / 오너) bất biến (invariant / 불변식). Khi quy tắc (rule / 규칙) thay đổi, cần centralize siêu dữ liệu (metadata / 메타데이터)/dùng chung (common / 공통) hàm (function / 함수) hoặc trả ràng buộc (constraint / 제약조건) từ máy chủ (server / 서버) nếu phù hợp.
 
-Không nên đưa toàn business engine xuống browser chỉ để tránh request.
+Không nên đưa toàn nghiệp vụ (business / 비즈니스) engine xuống trình duyệt (browser / 브라우저) chỉ để tránh yêu cầu (request / 요청).
 
-## 25. Contract test quan trọng hơn screenshot test cho integration
+## 25. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) quan trọng hơn screenshot kiểm thử (test / 테스트) cho tích hợp (integration / 통합)
 
 Một regression suite nên chứng minh:
 
@@ -409,25 +412,25 @@ timeout không auto-duplicate mutation
 401/403 đi đúng auth/permission path
 ```
 
-Screenshot không chứng minh các invariant này.
+Screenshot không chứng minh các bất biến (invariant / 불변식) này.
 
-## 26. Case study: batch approval có conflict
+## 26. trường hợp (case / 사례) study: batch approval có xung đột (conflict / 충돌)
 
-User search 200 request, chọn 20 row và bấm Approve. Client snapshot `REQUEST_ID + VERSION`. Server nhận batch command.
+Người dùng (user / 사용자) tìm kiếm (search / 검색) 200 yêu cầu (request / 요청), chọn 20 row và bấm Approve. máy khách (client / 클라이언트) snapshot `REQUEST_ID + VERSION`. máy chủ (server / 서버) nhận batch command.
 
-Trong lúc user thao tác, 2 row đã được người khác approve. Server có thể chọn all-or-nothing hoặc partial policy. Nếu all-or-nothing, response trả conflict list và không commit row nào. Client giữ 20 row unchanged/dirty theo workflow và yêu cầu refresh. Nếu partial, 18 row success được normalize/reset; 2 row conflict giữ error state và hiển thị canonical server status.
+Trong lúc người dùng (user / 사용자) thao tác, 2 row đã được người khác approve. máy chủ (server / 서버) có thể chọn all-or-nothing hoặc partial chính sách (policy / 정책). Nếu all-or-nothing, phản hồi (response / 응답) trả xung đột (conflict / 충돌) danh sách (list / 목록) và không lần ghi nhận (commit / 커밋) row nào. máy khách (client / 클라이언트) giữ 20 row unchanged/dirty theo workflow và yêu cầu refresh. Nếu partial, 18 row success được normalize/reset; 2 row xung đột (conflict / 충돌) giữ lỗi (error / 오류) trạng thái (state / 상태) và hiển thị chuẩn gốc (canonical / 정본) máy chủ (server / 서버) status.
 
-Điểm quyết định không nằm ở Grid API. Nó nằm ở transaction contract. Grid chỉ phản ánh result.
+Điểm quyết định không nằm ở Grid API. Nó nằm ở giao dịch (transaction / 트랜잭션) đặc tả hợp đồng (contract / 계약). Grid chỉ phản ánh kết quả (result / 결과).
 
-## 27. Boundary với canonical backend docs
+## 27. ranh giới (boundary / 경계) với chuẩn gốc (canonical / 정본) backend docs
 
-Chi tiết Spring transaction propagation, controller/service architecture, database isolation level, SQL locking, authentication framework và API design tổng quát thuộc canonical `10_backend/` và Computer Science/Database docs của repository.
+Chi tiết Spring giao dịch (transaction / 트랜잭션) propagation, controller/dịch vụ (service / 서비스) kiến trúc (architecture / 아키텍처), cơ sở dữ liệu (database / 데이터베이스) isolation mức (level / 수준), SQL locking, authentication khung phần mềm (framework / 프레임워크) và API thiết kế (design / 설계) tổng quát thuộc chuẩn gốc (canonical / 정본) `10_backend/` và Khoa học máy tính (computer science / 컴퓨터 과학)/cơ sở dữ liệu (database / 데이터베이스) docs của repository.
 
-WebSquare chapter này chỉ giữ phần giao nhau cần cho frontend reasoning. Khi cần hiểu vì sao optimistic locking hoạt động ở SQL/JPA/MyBatis hoặc transaction rollback xảy ra thế nào, hãy đọc backend canonical thay vì duplicate ở đây.
+WebSquare chapter này chỉ giữ phần giao nhau cần cho frontend lập luận (reasoning / 추론). Khi cần hiểu vì sao optimistic locking hoạt động ở SQL/JPA/MyBatis hoặc giao dịch (transaction / 트랜잭션) quay lui (rollback / 롤백) xảy ra thế nào, hãy đọc backend chuẩn gốc (canonical / 정본) thay vì duplicate ở đây.
 
-## 28. Master checklist cho client–server contract
+## 28. Master checklist cho máy khách (client / 클라이언트)–máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약)
 
-Trước khi productionize một Save flow, phải trả lời được:
+Trước khi productionize một Save luồng (flow / 흐름), phải trả lời được:
 
 ```text
 Operation identity là gì?
@@ -444,8 +447,10 @@ Timeout thì user biết trạng thái chắc chắn hay không chắc chắn?
 Server authorization kiểm tra gì dù UI đã hidden/readOnly?
 ```
 
-Nếu một câu chưa có answer, đó là contract gap chứ không phải “việc frontend/backend tự xử lý”.
+Nếu một câu chưa có answer, đó là đặc tả hợp đồng (contract / 계약) gap chứ không phải “việc frontend/backend tự xử lý”.
 
 ## 29. Kết nối
 
-Ba chapter 13–15 đi từ identity của row → identity của screen instance → identity của transaction/request. Chapter cuối tổng hợp các lớp này thành cách reasoning cấp Master: [16 — Master Production Playbook & End-to-End Case Studies](16_master_production_playbook.md).
+Ba chapter 13–15 đi từ định danh (identity / 식별자) của row → định danh (identity / 식별자) của screen instance → định danh (identity / 식별자) của giao dịch (transaction / 트랜잭션)/yêu cầu (request / 요청). Chapter cuối tổng hợp các lớp này thành cách lập luận (reasoning / 추론) cấp Master: [16 — Master Production Playbook & End-to-End Case Studies](16_master_production_playbook.md).
+
+> **Bàn giao:** Sau **29. Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

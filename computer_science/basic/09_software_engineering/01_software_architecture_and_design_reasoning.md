@@ -1,12 +1,15 @@
 # Kiến trúc phần mềm và tư duy thiết kế
 
+> **Mạch đọc:** Đọc **Kiến trúc phần mềm và tư duy thiết kế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kiến trúc là tập hợp các quyết định có hệ quả lớn** sang **Thuộc tính chất lượng định hình kiến trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Kiến trúc không phải một sơ đồ hộp đẹp mắt. Nó là tập hợp những quyết định khó thay đổi về ranh giới, quyền sở hữu dữ liệu, giao tiếp, triển khai và các thuộc tính chất lượng. Thiết kế tốt bắt đầu từ các lực tác động và ràng buộc thật sự, không bắt đầu từ tên của một mẫu thiết kế.
 
 ## Kiến trúc là tập hợp các quyết định có hệ quả lớn
 
-Quyết định “dùng PostgreSQL” thường có phạm vi ảnh hưởng khác hẳn việc đặt tên một trường là `createdAt`. **Quyết định kiến trúc (architecture decision)** thường tác động tới nhiều module hoặc nhóm và có chi phí di chuyển cao nếu đổi sau này.
+Quyết định “dùng PostgreSQL” thường có phạm vi ảnh hưởng khác hẳn việc đặt tên một trường là `createdAt`. **Quyết định kiến trúc (architecture decision)** thường tác động tới nhiều mô-đun (module / 모듈) hoặc nhóm và có chi phí di chuyển cao nếu đổi sau này.
 
-Vì vậy **bản ghi quyết định kiến trúc (Architecture Decision Record — ADR)** nên ghi bối cảnh, các phương án, quyết định cuối cùng và hệ quả. Mục tiêu không phải tăng thủ tục mà là giữ lại lý do để người bảo trì tương lai hiểu vì sao hệ thống có hình dạng hiện tại.
+Vì vậy **bản ghi quyết định kiến trúc (architecture decision record — ADR)** nên ghi bối cảnh, các phương án, quyết định cuối cùng và hệ quả. Mục tiêu không phải tăng thủ tục mà là giữ lại lý do để người bảo trì tương lai hiểu vì sao hệ thống có hình dạng hiện tại.
 
 ## Thuộc tính chất lượng định hình kiến trúc
 
@@ -22,7 +25,7 @@ Coupling có nhiều dạng: lúc biên dịch, lúc chạy, qua lược đồ d
 
 ## Che giấu thông tin
 
-Một module nên che quyết định dễ thay đổi phía sau giao diện ổn định. Ví dụ module lưu trữ có thể cung cấp `saveOrder()` thay vì buộc mọi nơi gọi phụ thuộc trực tiếp vào cấu trúc bảng nếu cấu trúc đó có khả năng thay đổi.
+Một mô-đun (module / 모듈) nên che quyết định dễ thay đổi phía sau giao diện ổn định. Ví dụ mô-đun (module / 모듈) lưu trữ có thể cung cấp `saveOrder()` thay vì buộc mọi nơi gọi phụ thuộc trực tiếp vào cấu trúc bảng nếu cấu trúc đó có khả năng thay đổi.
 
 **Che giấu thông tin (information hiding)** giúp thu hẹp phạm vi ảnh hưởng của thay đổi.
 
@@ -30,19 +33,19 @@ Một module nên che quyết định dễ thay đổi phía sau giao diện ổ
 
 Kiến trúc phân lớp tạo hướng phụ thuộc, chẳng hạn giao diện → ứng dụng → miền nghiệp vụ → hạ tầng tùy phong cách thiết kế. Phân lớp giúp tách trách nhiệm nhưng quá nhiều lớp có thể tạo mã trung chuyển không mang giá trị.
 
-Lớp là công cụ kiểm soát phụ thuộc, không phải quy tắc bắt mọi yêu cầu đi qua một số lượng class cố định.
+Lớp là công cụ kiểm soát phụ thuộc, không phải quy tắc bắt mọi yêu cầu đi qua một số lượng lớp (class / 클래스) cố định.
 
 ## Trực giác của kiến trúc lục giác
 
-Trong **kiến trúc lục giác (hexagonal architecture / ports and adapters)**, logic miền phụ thuộc vào các cổng trừu tượng; cơ sở dữ liệu, giao diện hoặc message broker bên ngoài đóng vai trò adapter. Mục tiêu là quy tắc nghiệp vụ không bị gắn cứng vào framework hoặc hạ tầng cụ thể.
+Trong **kiến trúc lục giác (hexagonal architecture / ports and adapters)**, lô-gic (logic / 논리) miền phụ thuộc vào các cổng trừu tượng; cơ sở dữ liệu, giao diện hoặc message broker bên ngoài đóng vai trò adapter. Mục tiêu là quy tắc nghiệp vụ không bị gắn cứng vào khung phần mềm (framework / 프레임워크) hoặc hạ tầng cụ thể.
 
-Tuy nhiên nếu miền rất đơn giản, tạo interface ở mọi nơi có thể trở thành thiết kế quá mức. Chỉ nên dựng ranh giới khi nó thực sự bảo vệ phần có khả năng thay đổi hoặc cần cô lập.
+Tuy nhiên nếu miền rất đơn giản, tạo giao diện (interface / 인터페이스) ở mọi nơi có thể trở thành thiết kế quá mức. Chỉ nên dựng ranh giới khi nó thực sự bảo vệ phần có khả năng thay đổi hoặc cần cô lập.
 
 ## Mẫu kiến trúc luôn phụ thuộc bối cảnh
 
 Monolith, microservices, event-driven, CQRS, layered hay pipes-and-filters không tạo thành một “thang trưởng thành”. Mỗi mẫu giải quyết một nhóm lực tác động và đồng thời tạo ra nghĩa vụ mới.
 
-CQRS tách mô hình đọc và ghi khi nhu cầu hai phía khác nhau rõ rệt, nhưng làm đồng bộ và tiến hóa dữ liệu phức tạp hơn. Event sourcing hỗ trợ kiểm toán và phát lại lịch sử nhưng làm thay đổi schema và gỡ lỗi khó hơn.
+CQRS tách mô hình đọc và ghi khi nhu cầu hai phía khác nhau rõ rệt, nhưng làm đồng bộ và tiến hóa dữ liệu phức tạp hơn. sự kiện (event / 이벤트) sourcing hỗ trợ kiểm toán và phát lại lịch sử nhưng làm thay đổi lược đồ (schema / 스키마) và gỡ lỗi khó hơn.
 
 ## Quyền sở hữu dữ liệu
 
@@ -52,9 +55,9 @@ Quyền sở hữu không có nghĩa dữ liệu không được chia sẻ. Nó 
 
 ## Đảo ngược phụ thuộc
 
-Chính sách cấp cao không nên phụ thuộc trực tiếp vào cách triển khai cấp thấp khi cần tách sự biến động hoặc giảm coupling. **Đảo ngược phụ thuộc (dependency inversion)** dùng interface hoặc abstraction để hướng phụ thuộc trong mã nguồn phục vụ tính ổn định.
+Chính sách cấp cao không nên phụ thuộc trực tiếp vào cách triển khai cấp thấp khi cần tách sự biến động hoặc giảm coupling. **Đảo ngược phụ thuộc (dependency inversion)** dùng giao diện (interface / 인터페이스) hoặc lớp trừu tượng (abstraction / 추상화) để hướng phụ thuộc trong mã nguồn phục vụ tính ổn định.
 
-Tuy nhiên một interface chỉ có đúng một triển khai và không bảo vệ phần dễ thay đổi không tự động tạo ra giá trị.
+Tuy nhiên một giao diện (interface / 인터페이스) chỉ có đúng một triển khai và không bảo vệ phần dễ thay đổi không tự động tạo ra giá trị.
 
 ## Hàm kiểm tra sức khỏe kiến trúc
 
@@ -64,11 +67,11 @@ Kiến trúc vì vậy không chỉ là thiết kế ban đầu; nó cần đư�
 
 ## Những hiểu nhầm thường gặp
 
-**“Kiến trúc là chọn framework.”** Không đúng. Framework là một quyết định triển khai; kiến trúc rộng hơn, tập trung vào ranh giới và đánh đổi chất lượng.
+**“Kiến trúc là chọn khung phần mềm (framework / 프레임워크).”** Không đúng. khung phần mềm (framework / 프레임워크) là một quyết định triển khai; kiến trúc rộng hơn, tập trung vào ranh giới và đánh đổi chất lượng.
 
 **“Mẫu nổi tiếng nghĩa là best practice cho mọi nơi.”** Không đúng. Một mẫu chỉ phù hợp khi các lực tác động tương ứng thật sự tồn tại.
 
-**“Clean Architecture càng nhiều lớp càng sạch.”** Không đúng. Tầng trung gian không có mục đích làm hệ thống khó hiểu hơn.
+**“Clean kiến trúc (architecture / 아키텍처) càng nhiều lớp càng sạch.”** Không đúng. Tầng trung gian không có mục đích làm hệ thống khó hiểu hơn.
 
 ## Mô hình tư duy
 
@@ -77,3 +80,5 @@ Kiến trúc vì vậy không chỉ là thiết kế ban đầu; nó cần đư�
 ## Kết nối
 
 Đọc cùng [phân rã hệ thống và ranh giới dịch vụ](../08_software_systems/07_system_decomposition_services_and_boundaries.md), [yêu cầu và đặc tả](./00_requirements_specification_and_engineering_process.md) và [bảo trì cùng nợ kỹ thuật](./04_maintenance_evolution_and_technical_debt.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 requirements specification and engineering process](./00_requirements_specification_and_engineering_process.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

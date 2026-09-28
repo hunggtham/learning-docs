@@ -1,21 +1,24 @@
-# Linux Kernel Scheduler: CPU Time, Run Queue và Scheduling Classes
+# Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes
 
-Khi một server có nhiều tiến trình (process) và luồng (thread) hơn số CPU có thể thực thi đồng thời, kernel phải quyết định **ai được chạy trước, chạy trong bao lâu và trên CPU nào**. Cơ chế đó là **bộ lập lịch (scheduler)**.
+> **Mạch đọc:** Đọc **Linux Kernel Scheduler: CPU thời gian (time / 시간), Run hàng đợi (queue / 큐) và Scheduling Classes** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **CPU cốt lõi (core / 핵심) không chạy vô hạn threads cùng lúc** sang **Runnable khác running**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Khi một máy chủ (server / 서버) có nhiều tiến trình (process / 프로세스) và luồng (thread) hơn số CPU có thể thực thi đồng thời, kernel phải quyết định **ai được chạy trước, chạy trong bao lâu và trên CPU nào**. Cơ chế đó là **bộ lập lịch (scheduler)**.
 
 Hiểu scheduler giúp giải thích những hiện tượng như:
 
-- CPU 100% nhưng throughput không tăng;
-- load average cao dù một số CPU vẫn idle;
-- một process có nhiều thread nhưng chỉ dùng một core;
-- container bị CPU throttling dù host còn CPU;
-- latency tăng mạnh khi runnable queue dài;
-- nice value thay đổi nhưng application vẫn không đạt behavior kỳ vọng.
+- CPU 100% nhưng thông lượng (throughput / 처리량) không tăng;
+- tải (load / 로드) average cao dù một số CPU vẫn idle;
+- một tiến trình (process / 프로세스) có nhiều luồng thực thi (thread / 스레드) nhưng chỉ dùng một cốt lõi (core / 핵심);
+- bộ chứa (container / 컨테이너) bị CPU throttling dù host còn CPU;
+- độ trễ (latency / 지연 시간) tăng mạnh khi runnable hàng đợi (queue / 큐) dài;
+- nice giá trị (value / 값) thay đổi nhưng ứng dụng (application / 애플리케이션) vẫn không đạt hành vi (behavior / 동작) kỳ vọng.
 
-## CPU core không chạy vô hạn threads cùng lúc
+## CPU cốt lõi (core / 핵심) không chạy vô hạn threads cùng lúc
 
-Một logical CPU tại một thời điểm chỉ thực thi một execution context thông thường. Nếu có 100 runnable threads trên 8 logical CPUs, scheduler phải chia CPU time giữa chúng.
+Một logical CPU tại một thời điểm chỉ thực thi một thực thi (execution / 실행) ngữ cảnh (context / 맥락) thông thường. Nếu có 100 runnable threads trên 8 logical CPUs, scheduler phải chia CPU thời gian (time / 시간) giữa chúng.
 
-Mental model đơn giản:
+Mô hình tư duy (mental model / 사고 모델) đơn giản:
 
 ```text
 runnable tasks
@@ -27,19 +30,19 @@ scheduler selects tasks
 logical CPUs execute
 ```
 
-Các task không runnable vì đang chờ network, disk, lock hoặc timer không cạnh tranh CPU theo cùng cách.
+Các tác vụ (task / 작업) không runnable vì đang chờ mạng (network / 네트워크), disk, khóa (lock / 잠금) hoặc timer không cạnh tranh CPU theo cùng cách.
 
 ## Runnable khác running
 
-Một task có thể ở nhiều trạng thái.
+Một tác vụ (task / 작업) có thể ở nhiều trạng thái.
 
 **Running** nghĩa đang thực thi trên CPU.
 
 **Runnable** nghĩa sẵn sàng chạy nhưng đang chờ CPU.
 
-Nếu runnable tasks tăng nhanh hơn CPU capacity, queue chờ CPU dài hơn và latency tăng.
+Nếu runnable tasks tăng nhanh hơn CPU sức chứa (capacity / 용량), hàng đợi (queue / 큐) chờ CPU dài hơn và độ trễ (latency / 지연 시간) tăng.
 
-`vmstat` cung cấp field `r`:
+`vmstat` cung cấp trường dữ liệu (field / 필드) `r`:
 
 ```bash
 vmstat 1
@@ -51,7 +54,7 @@ Nếu host có 4 CPUs và `r` liên tục 30–40 cùng `%us/%sy` cao, CPU conte
 
 ## Scheduler không chỉ có một thuật toán
 
-Linux có nhiều **scheduling classes** phục vụ workload khác nhau.
+Linux có nhiều **scheduling classes** phục vụ tải công việc (workload / 워크로드) khác nhau.
 
 Các nhóm concept thường gặp:
 
@@ -61,19 +64,19 @@ Các nhóm concept thường gặp:
 - deadline scheduling;
 - idle policies.
 
-Application server thông thường chạy trong fair scheduling class. Real-time scheduling cần đặc quyền và hiểu sâu vì có thể starve các tasks khác.
+Ứng dụng (application / 애플리케이션) máy chủ (server / 서버) thông thường chạy trong fair scheduling lớp (class / 클래스). Real-time scheduling cần đặc quyền và hiểu sâu vì có thể starve các tasks khác.
 
-Không nên dùng real-time priority để “làm app nhanh hơn” nếu chưa hiểu system impact.
+Không nên dùng real-time priority để “làm app nhanh hơn” nếu chưa hiểu hệ thống (system / 시스템) impact.
 
 ## CFS và fair scheduling
 
-Trong nhiều năm, Linux normal scheduling được gắn với **CFS — Completely Fair Scheduler**. Kernel versions mới tiếp tục phát triển scheduler implementation, nhưng mental model công bằng theo CPU time vẫn hữu ích.
+Trong nhiều năm, Linux normal scheduling được gắn với **CFS — Completely Fair Scheduler**. Kernel versions mới tiếp tục phát triển scheduler hiện thực (implementation / 구현), nhưng mô hình tư duy (mental model / 사고 모델) công bằng theo CPU thời gian (time / 시간) vẫn hữu ích.
 
-Mục tiêu không phải chia mỗi thread đúng một lát thời gian bằng nhau trong mọi trường hợp, mà cân bằng execution dựa scheduling weight, runnable tasks và nhiều heuristics khác.
+Mục tiêu không phải chia mỗi luồng thực thi (thread / 스레드) đúng một lát thời gian bằng nhau trong mọi trường hợp, mà cân bằng thực thi (execution / 실행) dựa scheduling weight, runnable tasks và nhiều heuristics khác.
 
-Nice value ảnh hưởng weight của normal scheduling.
+Nice giá trị (value / 값) ảnh hưởng weight của normal scheduling.
 
-## Nice value
+## Nice giá trị (value / 값)
 
 Kiểm tra:
 
@@ -81,7 +84,7 @@ Kiểm tra:
 ps -o pid,ni,pri,cmd -p <PID>
 ```
 
-Chạy process với nice value cao hơn:
+Chạy tiến trình (process / 프로세스) với nice giá trị (value / 값) cao hơn:
 
 ```bash
 nice -n 10 long-job
@@ -89,7 +92,7 @@ nice -n 10 long-job
 
 Nice cao hơn thường nghĩa priority tương đối thấp hơn trong normal scheduler.
 
-Thay đổi process đang chạy:
+Thay đổi tiến trình (process / 프로세스) đang chạy:
 
 ```bash
 renice 10 -p <PID>
@@ -97,50 +100,50 @@ renice 10 -p <PID>
 
 Nice không phải hard CPU percentage.
 
-Nếu chỉ có một runnable process trên CPU, dù nice thấp ưu tiên hơn hay cao ít ưu tiên hơn, nó vẫn có thể dùng gần toàn bộ CPU vì không có ai cạnh tranh.
+Nếu chỉ có một runnable tiến trình (process / 프로세스) trên CPU, dù nice thấp ưu tiên hơn hay cao ít ưu tiên hơn, nó vẫn có thể dùng gần toàn bộ CPU vì không có ai cạnh tranh.
 
-Đây là lý do nice value không tương đương cgroup CPU limit.
+Đây là lý do nice giá trị (value / 값) không tương đương cgroup Giới hạn CPU (CPU limit / CPU 제한).
 
 ## Priority là quan hệ tương đối
 
 Giả sử hai CPU-bound processes cùng cạnh tranh một CPU.
 
-Process A có scheduling weight cao hơn B. Scheduler cố cho A tỷ lệ CPU lớn hơn theo policy.
+Tiến trình (process / 프로세스) A có scheduling weight cao hơn B. Scheduler cố cho A tỷ lệ CPU lớn hơn theo chính sách (policy / 정책).
 
 Nhưng nếu B là I/O-bound và ngủ phần lớn thời gian, A vẫn dùng phần CPU còn lại.
 
-Vì vậy priority có ý nghĩa trong **contention context**, không phải quota tuyệt đối.
+Vì vậy priority có ý nghĩa trong **contention ngữ cảnh (context / 맥락)**, không phải quota tuyệt đối.
 
-## Time slice
+## Thời gian (time / 시간) slice
 
-Scheduler cho task chạy một khoảng thời gian rồi có thể preempt để task khác chạy.
+Scheduler cho tác vụ (task / 작업) chạy một khoảng thời gian rồi có thể preempt để tác vụ (task / 작업) khác chạy.
 
-Time slice không nên được hiểu như một con số cố định universal cho mọi Linux kernel/workload.
+Thời gian (time / 시간) slice không nên được hiểu như một con số cố định universal cho mọi Linux kernel/tải công việc (workload / 워크로드).
 
-Scheduler quyết định dựa trên policy và runnable set.
+Scheduler quyết định dựa trên chính sách (policy / 정책) và runnable set.
 
-Điểm quan trọng là nhiều runnable tasks dẫn tới frequent context switching và mỗi task nhận CPU theo lượt.
+Điểm quan trọng là nhiều runnable tasks dẫn tới frequent ngữ cảnh (context / 맥락) switching và mỗi tác vụ (task / 작업) nhận CPU theo lượt.
 
 ## Preemption
 
-**Preemption** nghĩa kernel có thể dừng một task đang chạy để task khác được chọn.
+**Preemption** nghĩa kernel có thể dừng một tác vụ (task / 작업) đang chạy để tác vụ (task / 작업) khác được chọn.
 
-Task có priority phù hợp hoặc scheduler fairness có thể khiến switch xảy ra.
+Tác vụ (task / 작업) có priority phù hợp hoặc scheduler fairness có thể khiến switch xảy ra.
 
-Linux kernel còn có preemption models khác nhau ảnh hưởng latency đặc biệt trong desktop, server và real-time kernels.
+Linux kernel còn có preemption các mô hình (models / 모델들) khác nhau ảnh hưởng độ trễ (latency / 지연 시간) đặc biệt trong desktop, máy chủ (server / 서버) và real-time kernels.
 
-Production backend thường không cần chỉnh kernel preemption model trừ khi có requirement rất đặc thù.
+Môi trường vận hành (production / 운영 환경) backend thường không cần chỉnh kernel preemption mô hình (model / 모델) trừ khi có yêu cầu (requirement / 요구사항) rất đặc thù.
 
-## Context switch
+## Ngữ cảnh (context / 맥락) switch
 
-Khi CPU chuyển từ task A sang task B, system phải lưu/khôi phục execution context.
+Khi CPU chuyển từ tác vụ (task / 작업) A sang tác vụ (task / 작업) B, hệ thống (system / 시스템) phải lưu/khôi phục thực thi (execution / 실행) ngữ cảnh (context / 맥락).
 
-Context switching có cost:
+Ngữ cảnh (context / 맥락) switching có chi phí (cost / 비용):
 
 - registers;
 - scheduler bookkeeping;
-- CPU cache locality;
-- TLB/cache effects.
+- CPU bộ nhớ đệm (cache / 캐시) locality;
+- TLB/bộ nhớ đệm (cache / 캐시) effects.
 
 Quan sát:
 
@@ -148,7 +151,7 @@ Quan sát:
 vmstat 1
 ```
 
-field `cs` cho context switches theo interval.
+Trường dữ liệu (field / 필드) `cs` cho ngữ cảnh (context / 맥락) switches theo interval.
 
 `pidstat`:
 
@@ -156,13 +159,13 @@ field `cs` cho context switches theo interval.
 pidstat -w 1
 ```
 
-có thể cho voluntary/nonvoluntary context switches theo process.
+có thể cho voluntary/nonvoluntary ngữ cảnh (context / 맥락) switches theo tiến trình (process / 프로세스).
 
-Không có universal threshold “context switch bao nhiêu là xấu”. Cần baseline và workload context.
+Không có universal threshold “ngữ cảnh (context / 맥락) switch bao nhiêu là xấu”. Cần baseline và tải công việc (workload / 워크로드) ngữ cảnh (context / 맥락).
 
-## Voluntary và involuntary context switch
+## Voluntary và involuntary ngữ cảnh (context / 맥락) switch
 
-**Voluntary context switch** thường xảy ra khi task tự block/chờ resource.
+**Voluntary ngữ cảnh (context / 맥락) switch** thường xảy ra khi tác vụ (task / 작업) tự khối (block / 블록)/chờ tài nguyên (resource / 자원).
 
 Ví dụ:
 
@@ -170,17 +173,17 @@ Ví dụ:
 thread → read socket → chưa có data → sleep
 ```
 
-**Involuntary context switch** có thể xảy ra khi scheduler preempt task đang chạy để task khác chạy.
+**Involuntary ngữ cảnh (context / 맥락) switch** có thể xảy ra khi scheduler preempt tác vụ (task / 작업) đang chạy để tác vụ (task / 작업) khác chạy.
 
 Nếu involuntary switches tăng mạnh cùng CPU saturation, runnable contention có thể là một hypothesis.
 
-Nếu voluntary switches cao, application có thể chờ I/O/locks nhiều.
+Nếu voluntary switches cao, ứng dụng (application / 애플리케이션) có thể chờ I/O/locks nhiều.
 
 ## CPU affinity
 
-Kernel thường có thể di chuyển tasks giữa CPUs để cân bằng load.
+Kernel thường có thể di chuyển tasks giữa CPUs để cân bằng tải (load / 로드).
 
-CPU affinity giới hạn task vào CPU set:
+CPU affinity giới hạn tác vụ (task / 작업) vào CPU set:
 
 ```bash
 taskset -pc <PID>
@@ -192,29 +195,29 @@ Set affinity:
 taskset -cp 0-3 <PID>
 ```
 
-Affinity có thể tăng cache locality trong một số specialized workloads, nhưng pinning sai có thể làm một vài cores overloaded trong khi cores khác idle.
+Affinity có thể tăng bộ nhớ đệm (cache / 캐시) locality trong một số specialized workloads, nhưng pinning sai có thể làm một vài cores overloaded trong khi cores khác idle.
 
-Không nên pin JVM threads/whole process chỉ dựa cảm giác.
+Không nên pin JVM threads/whole tiến trình (process / 프로세스) chỉ dựa cảm giác.
 
-## Load balancing giữa CPU cores
+## Tải (load / 로드) balancing giữa CPU cores
 
 Scheduler cố phân phối runnable tasks giữa CPUs.
 
 Nhưng topology phần cứng không hoàn toàn đồng nhất:
 
-- hyperthreads cùng physical core chia sẻ execution resources;
-- NUMA nodes có memory locality khác nhau;
+- hyperthreads cùng vật lý (physical / 물리적) cốt lõi (core / 핵심) chia sẻ thực thi (execution / 실행) resources;
+- NUMA nodes có bộ nhớ (memory / 메모리) locality khác nhau;
 - CPU caches có hierarchy riêng.
 
-Vì vậy “8 CPUs” không luôn nghĩa 8 units có performance độc lập hoàn toàn.
+Vì vậy “8 CPUs” không luôn nghĩa 8 units có hiệu năng (performance / 성능) độc lập hoàn toàn.
 
 ## Hyper-Threading / SMT
 
-**SMT — Simultaneous Multithreading** cho phép một physical core expose nhiều logical CPUs.
+**SMT — Simultaneous Multithreading** cho phép một vật lý (physical / 물리적) cốt lõi (core / 핵심) expose nhiều logical CPUs.
 
-Hai sibling logical CPUs chia sẻ một phần resources của core.
+Hai sibling logical CPUs chia sẻ một phần resources của cốt lõi (core / 핵심).
 
-Do đó 8 logical CPUs trên 4 physical cores không luôn cho throughput gấp đôi 4 cores.
+Do đó 8 logical CPUs trên 4 vật lý (physical / 물리적) cores không luôn cho thông lượng (throughput / 처리량) gấp đôi 4 cores.
 
 Xem topology:
 
@@ -228,13 +231,13 @@ hoặc:
 lscpu
 ```
 
-Fields về Core, Socket, Thread giúp hiểu topology.
+Fields về cốt lõi (core / 핵심), Socket, luồng thực thi (thread / 스레드) giúp hiểu topology.
 
 ## NUMA và scheduling
 
-Trên multi-socket servers, memory access tới local NUMA node thường nhanh hơn remote node.
+Trên multi-socket servers, bộ nhớ (memory / 메모리) truy cập (access / 접근) tới cục bộ (local / 로컬) NUMA nút (node / 노드) thường nhanh hơn remote nút (node / 노드).
 
-Scheduler và memory allocator cố quan tâm locality, nhưng task migration có thể làm working set xa memory.
+Scheduler và bộ nhớ (memory / 메모리) allocator cố quan tâm locality, nhưng tác vụ (task / 작업) di chuyển (migration / 마이그레이션) có thể làm working set xa bộ nhớ (memory / 메모리).
 
 Xem:
 
@@ -242,9 +245,9 @@ Xem:
 numactl --hardware
 ```
 
-nếu tool được cài.
+nếu công cụ (tool / 도구) được cài.
 
-NUMA tuning là advanced topic và cần đo đạc. Bind CPU/memory sai có thể làm latency tệ hơn.
+NUMA tuning là advanced topic và cần đo đạc. Bind CPU/bộ nhớ (memory / 메모리) sai có thể làm độ trễ (latency / 지연 시간) tệ hơn.
 
 ## Real-time scheduling
 
@@ -252,23 +255,23 @@ Linux có scheduling policies như `SCHED_FIFO` và `SCHED_RR`.
 
 Real-time tasks có thể preempt normal tasks mạnh hơn.
 
-Xem scheduling policy:
+Xem scheduling chính sách (policy / 정책):
 
 ```bash
 chrt -p <PID>
 ```
 
-Chạy real-time task cần quyền phù hợp.
+Chạy real-time tác vụ (task / 작업) cần quyền phù hợp.
 
-Sai cấu hình real-time có thể làm system khó responsive vì high-priority task không chịu nhường CPU.
+Sai cấu hình real-time có thể làm hệ thống (system / 시스템) khó responsive vì high-priority tác vụ (task / 작업) không chịu nhường CPU.
 
-Backend web thông thường không nên chuyển sang real-time scheduling để “giảm latency” nếu chưa có hard real-time requirement.
+Backend web thông thường không nên chuyển sang real-time scheduling để “giảm độ trễ (latency / 지연 시간)” nếu chưa có hard real-time yêu cầu (requirement / 요구사항).
 
 ## Scheduler và interrupt
 
-CPU không chỉ chạy user threads. Kernel còn xử lý interrupts, softirqs và network/storage work.
+CPU không chỉ chạy người dùng (user / 사용자) threads. Kernel còn xử lý interrupts, softirqs và mạng (network / 네트워크)/lưu trữ (storage / 저장소) công việc (work / 작업).
 
-High network packet rate có thể làm `%system` tăng dù application business code không tăng nhiều.
+High mạng (network / 네트워크) packet tỷ lệ (rate / 비율) có thể làm `%system` tăng dù ứng dụng (application / 애플리케이션) nghiệp vụ (business / 비즈니스) mã (code / 코드) không tăng nhiều.
 
 Check:
 
@@ -276,7 +279,7 @@ Check:
 cat /proc/interrupts
 ```
 
-Tool như:
+Công cụ (tool / 도구) như:
 
 ```bash
 mpstat -P ALL 1
@@ -296,11 +299,11 @@ Hệ thống thường có `irqbalance` để phân phối interrupts.
 systemctl status irqbalance
 ```
 
-Manual IRQ pinning chỉ nên dùng khi có benchmark/low-latency requirement rõ ràng.
+Manual IRQ pinning chỉ nên dùng khi có benchmark/low-latency yêu cầu (requirement / 요구사항) rõ ràng.
 
-## Softirq và network load
+## Softirq và mạng (network / 네트워크) tải (load / 로드)
 
-Linux network stack xử lý nhiều công việc qua softirq.
+Linux mạng (network / 네트워크) ngăn xếp (stack / 스택) xử lý nhiều công việc qua softirq.
 
 Xem:
 
@@ -308,44 +311,44 @@ Xem:
 cat /proc/softirqs
 ```
 
-Nếu `NET_RX` tăng mạnh trên một CPU, network processing có thể là nguồn system CPU.
+Nếu `NET_RX` tăng mạnh trên một CPU, mạng (network / 네트워크) processing có thể là nguồn hệ thống (system / 시스템) CPU.
 
-Đây là lý do CPU bottleneck không luôn nằm trong application thread dump.
+Đây là lý do CPU bottleneck không luôn nằm trong ứng dụng (application / 애플리케이션) luồng thực thi (thread / 스레드) dump.
 
-## Run queue và latency
+## Run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간)
 
-Giả sử một request cần 5 ms CPU time.
+Giả sử một yêu cầu (request / 요청) cần 5 ms CPU thời gian (time / 시간).
 
-Khi CPU gần idle, request có thể chạy gần như ngay.
+Khi CPU gần idle, yêu cầu (request / 요청) có thể chạy gần như ngay.
 
-Khi hàng chục runnable tasks cạnh tranh, request phải chờ nhiều scheduling rounds.
+Khi hàng chục runnable tasks cạnh tranh, yêu cầu (request / 요청) phải chờ nhiều scheduling rounds.
 
-Business code vẫn chỉ cần 5 ms CPU, nhưng wall-clock latency có thể lớn hơn nhiều.
+Nghiệp vụ (business / 비즈니스) mã (code / 코드) vẫn chỉ cần 5 ms CPU, nhưng wall-clock độ trễ (latency / 지연 시간) có thể lớn hơn nhiều.
 
-Đây là lý do CPU saturation thường làm tail latency tăng trước khi throughput collapse hoàn toàn.
+Đây là lý do CPU saturation thường làm tail độ trễ (latency / 지연 시간) tăng trước khi thông lượng (throughput / 처리량) collapse hoàn toàn.
 
-## Tail latency
+## Tail độ trễ (latency / 지연 시간)
 
-Average latency có thể nhìn ổn trong khi p99 tăng mạnh.
+Average độ trễ (latency / 지연 시간) có thể nhìn ổn trong khi p99 tăng mạnh.
 
-Khi scheduler queue dài, một số requests gặp nhiều wait time hơn requests khác.
+Khi scheduler hàng đợi (queue / 큐) dài, một số requests gặp nhiều wait thời gian (time / 시간) hơn requests khác.
 
-Production service cần theo dõi:
+Môi trường vận hành (production / 운영 환경) dịch vụ (service / 서비스) cần theo dõi:
 
 - p50;
 - p95;
 - p99;
 - max;
 - CPU saturation;
-- runnable queue.
+- runnable hàng đợi (queue / 큐).
 
-Không nên chỉ dùng average CPU/latency.
+Không nên chỉ dùng average CPU/độ trễ (latency / 지연 시간).
 
-## CPU steal time trong VM
+## CPU steal thời gian (time / 시간) trong VM
 
 Trong virtual machine, hypervisor có thể không cho VM chạy dù guest có runnable tasks.
 
-Metric `steal` (`%st`) phản ánh một phần thời gian CPU bị hypervisor dành cho VM khác.
+Chỉ số (metric / 지표) `steal` (`%st`) phản ánh một phần thời gian CPU bị hypervisor dành cho VM khác.
 
 Xem bằng:
 
@@ -361,42 +364,42 @@ Nếu `%st` cao, guest tuning có thể không giải quyết host-level content
 
 ## CPU quota trong cgroup
 
-Container CPU limit thường dùng cgroup quota/weight.
+Bộ chứa (container / 컨테이너) Giới hạn CPU (CPU limit / CPU 제한) thường dùng cgroup quota/weight.
 
-Một container có thể thấy host có nhiều CPUs nhưng chỉ được quota tương đương 1 CPU.
+Một bộ chứa (container / 컨테이너) có thể thấy host có nhiều CPUs nhưng chỉ được quota tương đương 1 CPU.
 
-Nếu application dùng hết quota, kernel throttles group.
+Nếu ứng dụng (application / 애플리케이션) dùng hết quota, kernel throttles group.
 
-Cgroup v2 có file như:
+Cgroup v2 có tệp (file / 파일) như:
 
 ```text
 cpu.max
 cpu.stat
 ```
 
-Tùy path/runtime.
+Tùy đường dẫn (path / 경로)/thời gian chạy (runtime / 런타임).
 
-CPU throttling có thể gây latency spikes dù host CPU tổng thể chưa 100%.
+CPU throttling có thể gây độ trễ (latency / 지연 시간) spikes dù host CPU tổng thể chưa 100%.
 
-## CPU request và limit trong Kubernetes
+## CPU yêu cầu (request / 요청) và limit trong Kubernetes
 
-Kubernetes CPU request ảnh hưởng scheduling; CPU limit thường map tới cgroup quota tùy runtime/configuration.
+Kubernetes CPU yêu cầu (request / 요청) ảnh hưởng scheduling; Giới hạn CPU (CPU limit / CPU 제한) thường map tới cgroup quota tùy thời gian chạy (runtime / 런타임)/cấu hình (configuration / 구성).
 
-Một pod Java có limit thấp có thể bị throttled trong burst dù node còn idle capacity theo cách nhìn tổng.
+Một pod Java có limit thấp có thể bị throttled trong burst dù nút (node / 노드) còn idle sức chứa (capacity / 용량) theo cách nhìn tổng.
 
-Đây là lý do cần xem cả node CPU và pod cgroup metrics.
+Đây là lý do cần xem cả nút (node / 노드) CPU và pod cgroup metrics.
 
-## Java thread pool và scheduler
+## Java luồng thực thi (thread / 스레드) pool và scheduler
 
-Java application có thể có 200 worker threads trên 4 CPUs.
+Java ứng dụng (application / 애플리케이션) có thể có 200 worker threads trên 4 CPUs.
 
-Nếu workload CPU-bound, 200 threads không làm 4 CPUs thành 200 CPUs. Chúng chỉ tạo nhiều runnable tasks hơn, tăng switching/queueing.
+Nếu tải công việc (workload / 워크로드) CPU-bound, 200 threads không làm 4 CPUs thành 200 CPUs. Chúng chỉ tạo nhiều runnable tasks hơn, tăng switching/queueing.
 
-Nếu workload I/O-bound, nhiều threads có thể hữu ích vì một số threads ngủ chờ I/O.
+Nếu tải công việc (workload / 워크로드) I/O-bound, nhiều threads có thể hữu ích vì một số threads ngủ chờ I/O.
 
-Optimal thread count phụ thuộc ratio CPU/wait và architecture.
+Optimal luồng thực thi (thread / 스레드) count phụ thuộc ratio CPU/wait và kiến trúc (architecture / 아키텍처).
 
-## Công thức gần đúng cho thread pool I/O-bound
+## Công thức gần đúng cho luồng thực thi (thread / 스레드) pool I/O-bound
 
 Một heuristic thường được nhắc:
 
@@ -411,17 +414,17 @@ trong đó:
 - `W`: thời gian chờ;
 - `S`: thời gian dùng CPU (service time).
 
-Đây chỉ là model gần đúng, không phải công thức cấu hình production tuyệt đối.
+Đây chỉ là mô hình (model / 모델) gần đúng, không phải công thức cấu hình môi trường vận hành (production / 운영 환경) tuyệt đối.
 
-Nếu `W/S` lớn, nhiều threads có thể giúp giữ CPU bận trong khi thread khác chờ.
+Nếu `W/S` lớn, nhiều threads có thể giúp giữ CPU bận trong khi luồng thực thi (thread / 스레드) khác chờ.
 
-Nhưng database connection pool, memory/thread stack và downstream limits cũng là constraints.
+Nhưng cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool, bộ nhớ (memory / 메모리)/luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và downstream limits cũng là các ràng buộc (constraints / 제약조건들).
 
-## Thread stack và memory
+## Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리)
 
-Mỗi Java thread có stack memory. Tạo quá nhiều threads không chỉ ảnh hưởng scheduler mà còn memory.
+Mỗi Java luồng thực thi (thread / 스레드) có ngăn xếp (stack / 스택) bộ nhớ (memory / 메모리). Tạo quá nhiều threads không chỉ ảnh hưởng scheduler mà còn bộ nhớ (memory / 메모리).
 
-Do đó tuning thread pool phải nhìn:
+Do đó tuning luồng thực thi (thread / 스레드) pool phải nhìn:
 
 ```text
 CPU
@@ -433,48 +436,48 @@ CPU
 
 Không tối ưu một dimension riêng lẻ.
 
-## CPU-bound workload
+## CPU-bound tải công việc (workload / 워크로드)
 
-Ví dụ image compression/encryption/calculation.
+Ví dụ ảnh (image / 이미지) compression/encryption/calculation.
 
-Nếu 8 CPU cores và 100 compute threads, runnable queue có thể rất dài.
+Nếu 8 CPU cores và 100 compute threads, runnable hàng đợi (queue / 큐) có thể rất dài.
 
-Throughput thường tốt hơn với concurrency gần CPU capacity cộng một ít overhead thay vì hàng trăm threads.
+Thông lượng (throughput / 처리량) thường tốt hơn với tính đồng thời (concurrency / 동시성) gần CPU sức chứa (capacity / 용량) cộng một ít overhead thay vì hàng trăm threads.
 
-ForkJoinPool/work-stealing runtimes cố giải quyết một phần scheduling ở application layer, nhưng kernel vẫn là scheduler cuối cùng cho OS threads.
+ForkJoinPool/work-stealing runtimes cố giải quyết một phần scheduling ở ứng dụng (application / 애플리케이션) tầng (layer / 계층), nhưng kernel vẫn là scheduler cuối cùng cho OS threads.
 
-## I/O-bound workload
+## I/O-bound tải công việc (workload / 워크로드)
 
 Web backend thường dành nhiều thời gian chờ:
 
-- DB query;
-- network API;
+- DB truy vấn (query / 쿼리);
+- mạng (network / 네트워크) API;
 - disk;
 - locks.
 
-Threads sleeping không dùng CPU, vì vậy thread count có thể lớn hơn CPU count.
+Threads sleeping không dùng CPU, vì vậy luồng thực thi (thread / 스레드) count có thể lớn hơn CPU count.
 
-Nhưng nếu downstream chậm, tất cả threads có thể bị occupied và queue incoming requests tăng.
+Nhưng nếu downstream chậm, tất cả threads có thể bị occupied và hàng đợi (queue / 큐) incoming requests tăng.
 
-Lúc đó tăng threads có thể chỉ tạo thêm load xuống downstream.
+Lúc đó tăng threads có thể chỉ tạo thêm tải (load / 로드) xuống downstream.
 
-## Scheduler và lock contention
+## Scheduler và tranh chấp khóa (lock contention / 잠금 경합)
 
-Hai threads tranh cùng mutex có thể bị block/wake liên tục.
+Hai threads tranh cùng mutex có thể bị khối (block / 블록)/wake liên tục.
 
-CPU không nhất thiết 100%, nhưng throughput thấp vì serialization.
+CPU không nhất thiết 100%, nhưng thông lượng (throughput / 처리량) thấp vì serialization.
 
-Tool Java thread dump có thể thấy many threads `BLOCKED` hoặc waiting locks.
+Công cụ (tool / 도구) Java luồng thực thi (thread / 스레드) dump có thể thấy many threads `BLOCKED` hoặc waiting locks.
 
 Linux `perf lock`/futex tracing có thể dùng trong advanced diagnosis.
 
-Lock contention là reminder rằng “thread runnable” và “work parallelizable” không giống nhau.
+Tranh chấp khóa (lock contention / 잠금 경합) là reminder rằng “luồng thực thi (thread / 스레드) runnable” và “công việc (work / 작업) parallelizable” không giống nhau.
 
 ## Futex
 
 Linux **futex (fast userspace mutex)** hỗ trợ nhiều synchronization primitives.
 
-Uncontended lock có thể xử lý phần lớn ở user space; contention cần kernel wait/wake.
+Uncontended khóa (lock / 잠금) có thể xử lý phần lớn ở người dùng (user / 사용자) không gian (space / 공간); contention cần kernel wait/wake.
 
 `strace` có thể thấy:
 
@@ -482,11 +485,11 @@ Uncontended lock có thể xử lý phần lớn ở user space; contention cầ
 futex(...)
 ```
 
-rất nhiều khi application có lock/condition waits.
+rất nhiều khi ứng dụng (application / 애플리케이션) có khóa (lock / 잠금)/điều kiện (condition / 조건) waits.
 
 Không nên kết luận futex là lỗi chỉ vì xuất hiện nhiều; JVM synchronization naturally dùng futex.
 
-## Debug CPU saturation
+## Gỡ lỗi (debug / 디버그) CPU saturation
 
 Bước đầu:
 
@@ -500,16 +503,16 @@ vmstat 1
 Xác định:
 
 - all CPUs busy hay một CPU?
-- user/system/steal?
-- runnable queue?
+- người dùng (user / 사용자)/hệ thống (system / 시스템)/steal?
+- runnable hàng đợi (queue / 큐)?
 
-Process level:
+Tiến trình (process / 프로세스) mức (level / 수준):
 
 ```bash
 pidstat -u 1
 ```
 
-Thread level:
+Luồng thực thi (thread / 스레드) mức (level / 수준):
 
 ```bash
 pidstat -t -p <PID> 1
@@ -521,35 +524,35 @@ Java:
 jcmd <PID> Thread.print
 ```
 
-Native profiling:
+Bản địa (native / 네이티브) profiling:
 
 ```bash
 perf top
 ```
 
-Nếu `%system` cao, cần xem syscalls/network/I/O chứ không chỉ Java stack.
+Nếu `%system` cao, cần xem syscalls/mạng (network / 네트워크)/I/O chứ không chỉ Java ngăn xếp (stack / 스택).
 
 ## One-core bottleneck
 
-Application có thể có process CPU ~100% trên 16-core host. Trên Linux tools, 100% thường tương ứng một logical CPU, tùy tool convention.
+Ứng dụng (application / 애플리케이션) có thể có tiến trình (process / 프로세스) CPU ~100% trên 16-core host. Trên Linux tools, 100% thường tương ứng một logical CPU, tùy công cụ (tool / 도구) convention.
 
-Nếu application single-threaded hot path, tổng host CPU chỉ ~6% nhưng request latency vẫn bottleneck.
+Nếu ứng dụng (application / 애플리케이션) single-threaded đường xử lý nóng (hot path / 핫 패스), tổng host CPU chỉ ~6% nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) vẫn bottleneck.
 
 Xem per-thread/per-CPU thay vì chỉ host aggregate.
 
 ## CPU frequency scaling
 
-Modern CPU thay đổi frequency theo power/thermal conditions.
+Hiện đại (modern / 현대적) CPU thay đổi frequency theo power/thermal conditions.
 
-`lscpu`/sysfs/cpupower có thể expose frequency policy.
+`lscpu`/sysfs/cpupower có thể expose frequency chính sách (policy / 정책).
 
-Thermal throttling hoặc power policy có thể làm performance khác giữa hai servers cùng core count.
+Thermal throttling hoặc power chính sách (policy / 정책) có thể làm hiệu năng (performance / 성능) khác giữa hai servers cùng cốt lõi (core / 핵심) count.
 
-Capacity planning không nên chỉ đếm vCPU.
+Sức chứa (capacity / 용량) planning không nên chỉ đếm vCPU.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-CPU performance nên được nhìn như hệ thống queue:
+CPU hiệu năng (performance / 성능) nên được nhìn như hệ thống hàng đợi (queue / 큐):
 
 ```text
 incoming runnable work
@@ -561,23 +564,23 @@ logical CPUs
 completed CPU service
 ```
 
-Nếu arrival CPU work vượt CPU service capacity, queue tăng và latency tăng.
+Nếu arrival CPU công việc (work / 작업) vượt CPU dịch vụ (service / 서비스) sức chứa (capacity / 용량), hàng đợi (queue / 큐) tăng và độ trễ (latency / 지연 시간) tăng.
 
-Scheduler quyết định **chia CPU như thế nào**, nhưng không thể tạo thêm compute capacity.
+Scheduler quyết định **chia CPU như thế nào**, nhưng không thể tạo thêm compute sức chứa (capacity / 용량).
 
 ## Những hiểu lầm phổ biến
 
 **“Nice 10 nghĩa chỉ dùng 10% CPU.”** Nice là relative priority/weight, không phải quota.
 
-**“Nhiều threads hơn luôn nhanh hơn.”** Với CPU-bound work, quá nhiều threads tăng queue/context-switch cost.
+**“Nhiều threads hơn luôn nhanh hơn.”** Với CPU-bound công việc (work / 작업), quá nhiều threads tăng hàng đợi (queue / 큐)/context-switch chi phí (cost / 비용).
 
-**“CPU tổng 50% nghĩa không thể có CPU bottleneck.”** Một single-thread hot path có thể saturate một core.
+**“CPU tổng 50% nghĩa không thể có CPU bottleneck.”** Một single-thread đường xử lý nóng (hot path / 핫 패스) có thể saturate một cốt lõi (core / 핵심).
 
-**“Host còn CPU thì container không bị CPU limit.”** Cgroup quota có thể throttle riêng container.
+**“Host còn CPU thì bộ chứa (container / 컨테이너) không bị Giới hạn CPU (CPU limit / CPU 제한).”** Cgroup quota có thể throttle riêng bộ chứa (container / 컨테이너).
 
-**“Load average cao luôn nghĩa CPU 100%.”** Linux load còn tính một số uninterruptible tasks.
+**“tải (load / 로드) average cao luôn nghĩa CPU 100%.”** Linux tải (load / 로드) còn tính một số uninterruptible tasks.
 
-**“Context switch cao chắc chắn là lỗi.”** Cần baseline và workload semantics.
+**“ngữ cảnh (context / 맥락) switch cao chắc chắn là lỗi.”** Cần baseline và tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론).
 
 ## Xem thêm
 
@@ -587,3 +590,5 @@ Scheduler quyết định **chia CPU như thế nào**, nhưng không thể tạ
 - [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md)
 - [Java backend incident playbook](../09_production/java_backend_incident_playbook.md)
 - [Capacity planning](../09_production/capacity_planning_server_sizing.md)
+
+> **Bàn giao:** Sau **Xem thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [block layer io scheduler](./block_layer_io_scheduler.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

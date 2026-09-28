@@ -1,30 +1,33 @@
 # JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong
 
-> **Mục tiêu của phần này**: chuyển từ mức “biết dùng JavaScript” sang mức “hiểu vì sao JavaScript hoạt động như vậy”. Bạn sẽ học execution context, lexical environment, closure, `this`, prototype, class internals, modules, Promise/event loop, iterator/generator, functional composition, state modeling, error architecture, API layer, testing và các programming/design patterns quan trọng.
+> **Mạch đọc:** Đọc **JavaScript Intermediate — Hiểu ngôn ngữ từ bên trong** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **thực thi (execution / 실행) ngữ cảnh (context / 맥락) không đồng nghĩa lexical phạm vi (scope / 범위)** sang **Creation/initialization trước evaluation: nền tảng của hoisting**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Mục tiêu của phần này**: chuyển từ mức “biết dùng JavaScript” sang mức “hiểu vì sao JavaScript hoạt động như vậy”. Bạn sẽ học thực thi (execution / 실행) ngữ cảnh (context / 맥락), lexical môi trường (environment / 환경), closure, `this`, prototype, lớp (class / 클래스) internals, modules, Promise/vòng lặp sự kiện (event loop / 이벤트 루프), iterator/generator, functional composition, trạng thái (state / 상태) modeling, lỗi (error / 오류) kiến trúc (architecture / 아키텍처), API tầng (layer / 계층), testing và các programming/thiết kế (design / 설계) patterns quan trọng.
 >
-> Phần này giả định bạn đã hoàn thành Beginner và có thể viết function, object, array, DOM, fetch và async/await cơ bản.
+> Phần này giả định bạn đã hoàn thành Beginner và có thể viết hàm (function / 함수), đối tượng (object / 객체), array, DOM, fetch và async/await cơ bản.
 
 ---
 
 <!-- VERSION-GUIDE-BEGIN -->
-# Version mindset ở level Intermediate: hiểu TC39 proposal process
+# Phiên bản (version / 버전) mindset ở mức (level / 수준) Intermediate: hiểu TC39 proposal tiến trình (process / 프로세스)
 
-Ở Beginner, version giúp bạn nhận ra syntax thuộc thế hệ nào. Sang Intermediate, bạn cần hiểu thêm **feature đi vào JavaScript bằng cách nào**. TC39 phát triển các đề xuất mới theo nhiều stage. Stage 1 nghĩa ý tưởng đã bước vào quy trình nhưng còn có thể đổi lớn. Stage 2 cho thấy problem/solution direction đã rõ hơn. Stage 3 là candidate khá chín và thường là lúc engine vendors triển khai để lấy feedback. Stage 4 là finished proposal: feature đã hoàn tất các yêu cầu chuẩn hóa và sẽ được đưa vào yearly snapshot tiếp theo phù hợp.
+Ở Beginner, phiên bản (version / 버전) giúp bạn nhận ra cú pháp (syntax / 문법) thuộc thế hệ nào. Sang Intermediate, bạn cần hiểu thêm **tính năng (feature / 기능) đi vào JavaScript bằng cách nào**. TC39 phát triển các đề xuất mới theo nhiều stage. Stage 1 nghĩa ý tưởng đã bước vào quy trình nhưng còn có thể đổi lớn. Stage 2 cho thấy bài toán (problem / 문제)/solution direction đã rõ hơn. Stage 3 là candidate khá chín và thường là lúc engine vendors triển khai để lấy phản hồi (feedback / 피드백). Stage 4 là finished proposal: tính năng (feature / 기능) đã hoàn tất các yêu cầu chuẩn hóa và sẽ được đưa vào yearly snapshot tiếp theo phù hợp.
 
-Điều này giải thích vì sao “browser đã support” và “yearly ECMAScript edition đã publish” không luôn cùng thời điểm. Một browser có thể ship Stage-3/Stage-4 feature trước yearly snapshot. Ngược lại, một feature đã Stage 4 vẫn có thể không chạy trên WebView cũ. Vì vậy quy trình production phải gồm hai câu hỏi tách biệt: **feature có final/stable chưa?** và **runtime target của tôi có support chưa?**.
+Điều này giải thích vì sao “trình duyệt (browser / 브라우저) đã hỗ trợ (support / 지원)” và “yearly ECMAScript edition đã publish” không luôn cùng thời điểm. Một trình duyệt (browser / 브라우저) có thể ship Stage-3/Stage-4 tính năng (feature / 기능) trước yearly snapshot. Ngược lại, một tính năng (feature / 기능) đã Stage 4 vẫn có thể không chạy trên WebView cũ. Vì vậy quy trình môi trường vận hành (production / 운영 환경) phải gồm hai câu hỏi tách biệt: **tính năng (feature / 기능) có final/stable chưa?** và **thời gian chạy (runtime / 런타임) mục tiêu (target / 대상) của tôi có hỗ trợ (support / 지원) chưa?**.
 
-`ESNext` cũng phải được hiểu là nhãn động. Nó không có nghĩa ES2027 hay một version cụ thể. Khi đọc một bài cũ nói “ESNext”, hãy tra tên proposal/feature hiện tại. Syntax proposal có thể đã đổi hoặc proposal có thể đã bị bỏ.
+`ESNext` cũng phải được hiểu là nhãn động. Nó không có nghĩa ES2027 hay một phiên bản (version / 버전) cụ thể. Khi đọc một bài cũ nói “ESNext”, hãy tra tên proposal/tính năng (feature / 기능) hiện tại. cú pháp (syntax / 문법) proposal có thể đã đổi hoặc proposal có thể đã bị bỏ.
 
-Ở Intermediate, bạn cũng sẽ gặp nhiều thứ phối hợp JavaScript với browser nhưng không thuộc ECMAScript yearly releases. `AbortController`, DOM event loop integration, rendering lifecycle và `requestAnimationFrame` là Web APIs/host behavior. Promise jobs, async functions, iterators, modules và class syntax mới là ECMA-262 concerns. Việc phân biệt hai nhóm này giúp bạn không gán nhầm “ES version” cho một platform API.
+Ở Intermediate, bạn cũng sẽ gặp nhiều thứ phối hợp JavaScript với trình duyệt (browser / 브라우저) nhưng không thuộc ECMAScript yearly releases. `AbortController`, DOM vòng lặp sự kiện (event loop / 이벤트 루프) tích hợp (integration / 통합), rendering vòng đời (lifecycle / 생명주기) và `requestAnimationFrame` là Web APIs/host hành vi (behavior / 동작). Promise jobs, async functions, iterators, modules và lớp (class / 클래스) cú pháp (syntax / 문법) mới là ECMA-262 concerns. Việc phân biệt hai nhóm này giúp bạn không gán nhầm “ES phiên bản (version / 버전)” cho một nền tảng (platform / 플랫폼) API.
 
-Tính đến lần cập nhật này, ECMAScript 2026 là yearly snapshot chính thức mới nhất. Những cơ chế nền như closure, `this`, prototype, descriptors và Promise resolution không trở nên lỗi thời chỉ vì yearly snapshot tăng; version notes chủ yếu quan trọng ở nơi syntax/API mới làm thay đổi compatibility hoặc style code.
+Tính đến lần cập nhật này, ECMAScript 2026 là yearly snapshot chính thức mới nhất. Những cơ chế nền như closure, `this`, prototype, descriptors và Promise resolution không trở nên lỗi thời chỉ vì yearly snapshot tăng; phiên bản (version / 버전) notes chủ yếu quan trọng ở nơi cú pháp (syntax / 문법)/API mới làm thay đổi tính tương thích (compatibility / 호환성) hoặc style mã (code / 코드).
 <!-- VERSION-GUIDE-END -->
 
 ---
 
-# Chương 1 — Execution Context và Call Stack
+# Chương 1 — thực thi (execution / 실행) ngữ cảnh (context / 맥락) và ngăn xếp lời gọi (call stack / 호출 스택)
 
-Khi JavaScript gọi một function, engine không chỉ “nhảy vào đoạn code”. Nó tạo một **execution context**, có thể hiểu như môi trường chứa các binding local, parameters, thông tin scope, `this` binding và reference tới outer lexical environment.
+Khi JavaScript gọi một hàm (function / 함수), engine không chỉ “nhảy vào đoạn mã (code / 코드)”. Nó tạo một **thực thi (execution / 실행) ngữ cảnh (context / 맥락)**, có thể hiểu như môi trường chứa các binding cục bộ (local / 로컬), parameters, thông tin phạm vi (scope / 범위), `this` binding và tham chiếu (reference / 참조) tới outer lexical môi trường (environment / 환경).
 
 ```js
 const globalValue = 10;
@@ -37,9 +40,9 @@ function add(a, b) {
 add(1, 2);
 ```
 
-Khi file được chạy, có Global Execution Context. Khi `add(1, 2)` được gọi, một Function Execution Context mới được tạo với `a = 1`, `b = 2`, `result`, và outer environment trỏ về global lexical environment.
+Khi tệp (file / 파일) được chạy, có toàn cục (global / 전역) thực thi (execution / 실행) ngữ cảnh (context / 맥락). Khi `add(1, 2)` được gọi, một hàm (function / 함수) thực thi (execution / 실행) ngữ cảnh (context / 맥락) mới được tạo với `a = 1`, `b = 2`, `result`, và outer môi trường (environment / 환경) trỏ về toàn cục (global / 전역) lexical môi trường (environment / 환경).
 
-Execution contexts được quản lý bởi **call stack**. Ví dụ:
+Thực thi (execution / 실행) contexts được quản lý bởi **ngăn xếp lời gọi (call stack / 호출 스택)**. Ví dụ:
 
 ```js
 function c() {
@@ -57,7 +60,7 @@ function a() {
 a();
 ```
 
-Call stack conceptually:
+Ngăn xếp lời gọi (call stack / 호출 스택) conceptually:
 
 ```text
 a
@@ -67,7 +70,7 @@ b
 c
 ```
 
-Khi `c` xong, context của `c` pop khỏi stack, execution quay lại `b`, rồi `a`.
+Khi `c` xong, ngữ cảnh (context / 맥락) của `c` pop khỏi ngăn xếp (stack / 스택), thực thi (execution / 실행) quay lại `b`, rồi `a`.
 
 Nếu recursion không dừng:
 
@@ -79,11 +82,11 @@ function loop() {
 loop();
 ```
 
-stack tăng liên tục tới `Maximum call stack size exceeded`.
+Ngăn xếp (stack / 스택) tăng liên tục tới `Maximum call stack size exceeded`.
 
-## Execution context không đồng nghĩa lexical scope
+## Thực thi (execution / 실행) ngữ cảnh (context / 맥락) không đồng nghĩa lexical phạm vi (scope / 범위)
 
-Hai khái niệm này liên quan nhưng không nên trộn thành một. **Lexical scope** mô tả code ở vị trí nào có thể nhìn thấy binding nào và được quyết định chủ yếu bởi cấu trúc source. **Execution context** là trạng thái của một lần thực thi cụ thể. Một function chỉ có một lexical relationship trong source nhưng có thể được gọi hàng nghìn lần, và mỗi lần gọi tạo execution context riêng.
+Hai khái niệm này liên quan nhưng không nên trộn thành một. **Lexical phạm vi (scope / 범위)** mô tả mã (code / 코드) ở vị trí nào có thể nhìn thấy binding nào và được quyết định chủ yếu bởi cấu trúc nguồn (source / 소스). **thực thi (execution / 실행) ngữ cảnh (context / 맥락)** là trạng thái của một lần thực thi cụ thể. Một hàm (function / 함수) chỉ có một lexical relationship trong nguồn (source / 소스) nhưng có thể được gọi hàng nghìn lần, và mỗi lần gọi tạo thực thi (execution / 실행) ngữ cảnh (context / 맥락) riêng.
 
 ```js
 function calculate(price, quantity) {
@@ -95,7 +98,7 @@ calculate(100, 2);
 calculate(300, 4);
 ```
 
-Hai lần gọi cùng dùng một function body và cùng lexical environment ngoài, nhưng `price`, `quantity`, `total` của hai lần gọi không phải cùng một execution state. Đây là lý do recursion hoạt động: cùng một function có thể xuất hiện nhiều lần trên call stack với parameters/local bindings khác nhau.
+Hai lần gọi cùng dùng một hàm (function / 함수) body và cùng lexical môi trường (environment / 환경) ngoài, nhưng `price`, `quantity`, `total` của hai lần gọi không phải cùng một thực thi (execution / 실행) trạng thái (state / 상태). Đây là lý do recursion hoạt động: cùng một hàm (function / 함수) có thể xuất hiện nhiều lần trên ngăn xếp lời gọi (call stack / 호출 스택) với parameters/cục bộ (local / 로컬) bindings khác nhau.
 
 ```js
 function factorial(n) {
@@ -107,7 +110,7 @@ function factorial(n) {
 }
 ```
 
-Với `factorial(3)`, stack có thể hình dung:
+Với `factorial(3)`, ngăn xếp (stack / 스택) có thể hình dung:
 
 ```text
 factorial(3)
@@ -117,13 +120,13 @@ factorial(2)
 factorial(1)
 ```
 
-Mỗi frame giữ `n` riêng. Khi `factorial(1)` return, frame đó biến mất khỏi stack; kết quả được dùng để tiếp tục frame `factorial(2)`.
+Mỗi frame giữ `n` riêng. Khi `factorial(1)` return, frame đó biến mất khỏi ngăn xếp (stack / 스택); kết quả được dùng để tiếp tục frame `factorial(2)`.
 
 ## Creation/initialization trước evaluation: nền tảng của hoisting
 
-Một mental model rất quan trọng là engine phải chuẩn bị environment và bindings trước khi thực thi lần lượt các statements. Vì thế “hoisting” không nên được hiểu là engine thật sự cắt một dòng code rồi di chuyển nó lên đầu file. Đúng hơn, declaration được xử lý trong quá trình khởi tạo environment, nhưng **mỗi loại declaration được khởi tạo khác nhau**.
+Một mô hình tư duy (mental model / 사고 모델) rất quan trọng là engine phải chuẩn bị môi trường (environment / 환경) và bindings trước khi thực thi lần lượt các statements. Vì thế “hoisting” không nên được hiểu là engine thật sự cắt một dòng mã (code / 코드) rồi di chuyển nó lên đầu tệp (file / 파일). Đúng hơn, declaration được xử lý trong quá trình khởi tạo môi trường (environment / 환경), nhưng **mỗi loại declaration được khởi tạo khác nhau**.
 
-Function declaration có function value sẵn sớm:
+Hàm (function / 함수) declaration có hàm (function / 함수) giá trị (value / 값) sẵn sớm:
 
 ```js
 run();
@@ -147,11 +150,11 @@ console.log(value); // ReferenceError
 const value = 10;
 ```
 
-Vì vậy câu “`let` không hoist” là cách nói đơn giản nhưng không chính xác về mental model. Binding tồn tại trong lexical environment, nhưng chưa thể access trước initialization.
+Vì vậy câu “`let` không hoist” là cách nói đơn giản nhưng không chính xác về mô hình tư duy (mental model / 사고 모델). Binding tồn tại trong lexical môi trường (environment / 환경), nhưng chưa thể truy cập (access / 접근) trước initialization.
 
-## Call stack chỉ chứa synchronous execution hiện tại
+## Ngăn xếp lời gọi (call stack / 호출 스택) chỉ chứa synchronous thực thi (execution / 실행) hiện tại
 
-Khi một browser API như timer nhận callback, callback không nằm trên call stack trong suốt thời gian chờ.
+Khi một trình duyệt (browser / 브라우저) API như timer nhận callback, callback không nằm trên ngăn xếp lời gọi (call stack / 호출 스택) trong suốt thời gian chờ.
 
 ```js
 function run() {
@@ -163,11 +166,11 @@ function run() {
 run();
 ```
 
-Sau khi `setTimeout()` đăng ký timer và `run()` return, frame `run` đã rời stack. Khi timer đủ điều kiện và event loop chọn task tương ứng, **một lần gọi callback mới** mới được đẩy lên stack. Đây là điểm nối giữa call stack và event loop mà Chương 23 sẽ đào sâu.
+Sau khi `setTimeout()` đăng ký timer và `run()` return, frame `run` đã rời ngăn xếp (stack / 스택). Khi timer đủ điều kiện và vòng lặp sự kiện (event loop / 이벤트 루프) chọn tác vụ (task / 작업) tương ứng, **một lần gọi callback mới** mới được đẩy lên ngăn xếp (stack / 스택). Đây là điểm nối giữa ngăn xếp lời gọi (call stack / 호출 스택) và vòng lặp sự kiện (event loop / 이벤트 루프) mà Chương 23 sẽ đào sâu.
 
-### Cách trace execution thực tế
+### Cách dấu vết (trace / 추적) thực thi (execution / 실행) thực tế
 
-Khi code phức tạp, hãy trace theo ba câu hỏi thay vì đọc bằng cảm giác:
+Khi mã (code / 코드) phức tạp, hãy dấu vết (trace / 추적) theo ba câu hỏi thay vì đọc bằng cảm giác:
 
 ```text
 1. Context/function nào đang chạy trên stack?
@@ -177,15 +180,15 @@ Khi code phức tạp, hãy trace theo ba câu hỏi thay vì đọc bằng cả
 
 Ba câu hỏi này giải quyết phần lớn nhầm lẫn về closure, `this`, Promise và timer.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Stack trace trong error chính là dấu vết của call stack. Khi debug async code, stack có thể phức tạp hơn vì continuation được schedule qua Promise/event loop. Hiểu call stack là nền tảng cho mọi phần runtime sau này.
+Dấu vết ngăn xếp (stack trace / 스택 트레이스) trong lỗi (error / 오류) chính là dấu vết của ngăn xếp lời gọi (call stack / 호출 스택). Khi gỡ lỗi (debug / 디버그) async mã (code / 코드), ngăn xếp (stack / 스택) có thể phức tạp hơn vì continuation được schedule qua Promise/vòng lặp sự kiện (event loop / 이벤트 루프). Hiểu ngăn xếp lời gọi (call stack / 호출 스택) là nền tảng cho mọi phần thời gian chạy (runtime / 런타임) sau này.
 
 ---
 
-# Chương 2 — Lexical Environment và Scope Chain
+# Chương 2 — Lexical môi trường (environment / 환경) và phạm vi (scope / 범위) chuỗi (chain / 사슬)
 
-JavaScript dùng **lexical scoping**. “Lexical” nghĩa là relationship giữa scopes chủ yếu được quyết định bởi vị trí code được viết, không phải nơi function được gọi.
+JavaScript dùng **lexical scoping**. “Lexical” nghĩa là relationship giữa scopes chủ yếu được quyết định bởi vị trí mã (code / 코드) được viết, không phải nơi hàm (function / 함수) được gọi.
 
 ```js
 const value = "global";
@@ -210,9 +213,9 @@ function run() {
 run();
 ```
 
-Output là `outer`, không phải `run`. `inner` được định nghĩa trong scope của `outer`, nên khi tìm `value`, engine đi theo scope chain lexical: current scope → outer scope → global.
+Đầu ra (output / 출력) là `outer`, không phải `run`. `inner` được định nghĩa trong phạm vi (scope / 범위) của `outer`, nên khi tìm `value`, engine đi theo phạm vi (scope / 범위) chuỗi (chain / 사슬) lexical: hiện tại (current / 현재) phạm vi (scope / 범위) → outer phạm vi (scope / 범위) → toàn cục (global / 전역).
 
-Scope chain có thể hình dung:
+Phạm vi (scope / 범위) chuỗi (chain / 사슬) có thể hình dung:
 
 ```text
 inner scope
@@ -222,7 +225,7 @@ outer scope
 global scope
 ```
 
-Nếu cùng tên variable ở inner scope, nó **shadow** outer variable:
+Nếu cùng tên variable ở inner phạm vi (scope / 범위), nó **shadow** outer variable:
 
 ```js
 const value = 1;
@@ -233,11 +236,11 @@ function run() {
 }
 ```
 
-Shadowing không sai, nhưng quá nhiều biến cùng tên trong nested scopes làm cognitive load cao.
+Shadowing không sai, nhưng quá nhiều biến cùng tên trong nested scopes làm cognitive tải (load / 로드) cao.
 
-## Environment là nơi binding sống, không phải chỉ là một object thường
+## Môi trường (environment / 환경) là nơi binding sống, không phải chỉ là một đối tượng (object / 객체) thường
 
-Khi học scope, nhiều người hình dung mỗi scope là một JavaScript object như `{ name: value }`. Mental model đó chỉ đúng rất sơ bộ. Specification dùng **Environment Records** để mô tả bindings. Điều này quan trọng vì binding có behavior riêng: TDZ, immutable `const`, function parameter bindings, module imports là live bindings, và global `var`/global lexical declarations không hoàn toàn giống nhau.
+Khi học phạm vi (scope / 범위), nhiều người hình dung mỗi phạm vi (scope / 범위) là một JavaScript đối tượng (object / 객체) như `{ name: value }`. mô hình tư duy (mental model / 사고 모델) đó chỉ đúng rất sơ bộ. Specification dùng **môi trường (environment / 환경) Records** để mô tả bindings. Điều này quan trọng vì binding có hành vi (behavior / 동작) riêng: TDZ, immutable `const`, hàm (function / 함수) parameter bindings, mô-đun (module / 모듈) imports là live bindings, và toàn cục (global / 전역) `var`/toàn cục (global / 전역) lexical declarations không hoàn toàn giống nhau.
 
 Bạn không thể làm:
 
@@ -245,7 +248,7 @@ Bạn không thể làm:
 console.log(currentLexicalEnvironment);
 ```
 
-vì lexical environment là khái niệm runtime/spec, không phải ordinary object được expose trực tiếp.
+vì lexical môi trường (environment / 환경) là khái niệm thời gian chạy (runtime / 런타임)/spec, không phải ordinary đối tượng (object / 객체) được expose trực tiếp.
 
 ## Identifier resolution là một quá trình tìm từ trong ra ngoài
 
@@ -275,9 +278,9 @@ taxRate
 → outer global/module environment
 ```
 
-Nếu identifier không tìm thấy trong toàn chain, đọc nó gây `ReferenceError`.
+Nếu identifier không tìm thấy trong toàn chuỗi (chain / 사슬), đọc nó gây `ReferenceError`.
 
-Đây khác với đọc property không tồn tại:
+Đây khác với đọc thuộc tính (property / 속성) không tồn tại:
 
 ```js
 const user = {};
@@ -286,11 +289,11 @@ console.log(user.name); // undefined
 console.log(name);      // ReferenceError nếu không có binding name
 ```
 
-Một bên là **property lookup trên object**, một bên là **identifier resolution qua lexical environments**. Phân biệt này rất quan trọng khi debug.
+Một bên là **thuộc tính (property / 속성) lookup trên đối tượng (object / 객체)**, một bên là **identifier resolution qua lexical environments**. Phân biệt này rất quan trọng khi gỡ lỗi (debug / 디버그).
 
-## Block scope và per-iteration binding
+## Khối (block / 블록) phạm vi (scope / 범위) và per-iteration binding
 
-`let`/`const` có block scope:
+`let`/`const` có khối (block / 블록) phạm vi (scope / 범위):
 
 ```js
 if (true) {
@@ -300,7 +303,7 @@ if (true) {
 // token không tồn tại ở đây
 ```
 
-Trong `for (let ...)`, JavaScript còn tạo semantics phù hợp để mỗi iteration có binding riêng cho closure:
+Trong `for (let ...)`, JavaScript còn tạo ngữ nghĩa (semantics / 의미론) phù hợp để mỗi iteration có binding riêng cho closure:
 
 ```js
 const callbacks = [];
@@ -326,7 +329,7 @@ for (var i = 0; i < 3; i += 1) {
 console.log(callbacks[0]()); // 3
 ```
 
-Trước ES2015, legacy code thường dùng IIFE để tạo binding riêng từng iteration:
+Trước ES2015, legacy mã (code / 코드) thường dùng IIFE để tạo binding riêng từng iteration:
 
 ```js
 for (var i = 0; i < 3; i += 1) {
@@ -338,22 +341,22 @@ for (var i = 0; i < 3; i += 1) {
 }
 ```
 
-Đây là ví dụ điển hình cho **modern syntax xuất hiện để diễn đạt intent mà legacy JavaScript phải mô phỏng bằng pattern**.
+Đây là ví dụ điển hình cho **hiện đại (modern / 현대적) cú pháp (syntax / 문법) xuất hiện để diễn đạt intent mà legacy JavaScript phải mô phỏng bằng mẫu (pattern / 패턴)**.
 
-## Global scope không đơn giản là `window`
+## Toàn cục (global / 전역) phạm vi (scope / 범위) không đơn giản là `window`
 
-Trong browser classic script, một số global declarations có relationship với global object, nhưng lexical declarations như `let`/`const` không đơn giản trở thành properties của `window`.
+Trong trình duyệt (browser / 브라우저) classic script, một số toàn cục (global / 전역) declarations có relationship với toàn cục (global / 전역) đối tượng (object / 객체), nhưng lexical declarations như `let`/`const` không đơn giản trở thành properties của `window`.
 
 ```js
 var legacyGlobal = 1;
 let lexicalGlobal = 2;
 ```
 
-Tùy context classic script/module, semantics khác nhau; đặc biệt ES modules có module scope riêng. Vì vậy code hiện đại không nên dựa vào việc “khai báo top-level rồi chắc chắn có `window.xxx`”. Nếu cần global integration, expose explicit API.
+Tùy ngữ cảnh (context / 맥락) classic script/mô-đun (module / 모듈), ngữ nghĩa (semantics / 의미론) khác nhau; đặc biệt ES modules có mô-đun (module / 모듈) phạm vi (scope / 범위) riêng. Vì vậy mã (code / 코드) hiện đại không nên dựa vào việc “khai báo top-level rồi chắc chắn có `window.xxx`”. Nếu cần toàn cục (global / 전역) tích hợp (integration / 통합), expose tường minh (explicit / 명시적) API.
 
-### Programming pattern — lexical encapsulation
+### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — lexical encapsulation
 
-Helper chỉ dùng bên trong một use case có thể được giữ trong scope đó thay vì export/global:
+Helper chỉ dùng bên trong một use trường hợp (case / 사례) có thể được giữ trong phạm vi (scope / 범위) đó thay vì export/toàn cục (global / 전역):
 
 ```js
 function buildReport(rows) {
@@ -365,15 +368,15 @@ function buildReport(rows) {
 }
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Lexical scope làm source structure trở thành một phần của dependency structure. `this` là một điểm khác biệt lớn: normal function `this` thường phụ thuộc call-site chứ không đi theo lexical scope; arrow function thì lexical `this`.
+Lexical phạm vi (scope / 범위) làm nguồn (source / 소스) cấu trúc (structure / 구조) trở thành một phần của phụ thuộc (dependency / 의존성) cấu trúc (structure / 구조). `this` là một điểm khác biệt lớn: normal hàm (function / 함수) `this` thường phụ thuộc call-site chứ không đi theo lexical phạm vi (scope / 범위); arrow hàm (function / 함수) thì lexical `this`.
 
 ---
 
-# Chương 3 — Closure: function nhớ environment nơi nó được tạo
+# Chương 3 — Closure: hàm (function / 함수) nhớ môi trường (environment / 환경) nơi nó được tạo
 
-Closure là một trong những concept cốt lõi nhất của JavaScript. Một function có thể tiếp tục access variables trong lexical environment nơi nó được tạo, kể cả khi outer function đã return.
+Closure là một trong những concept cốt lõi nhất của JavaScript. Một hàm (function / 함수) có thể tiếp tục truy cập (access / 접근) variables trong lexical môi trường (environment / 환경) nơi nó được tạo, kể cả khi outer hàm (function / 함수) đã return.
 
 ```js
 function createCounter() {
@@ -392,11 +395,11 @@ counter(); // 2
 counter(); // 3
 ```
 
-`createCounter()` đã kết thúc, nhưng returned function vẫn giữ access tới binding `count`. Đây là closure.
+`createCounter()` đã kết thúc, nhưng returned hàm (function / 함수) vẫn giữ truy cập (access / 접근) tới binding `count`. Đây là closure.
 
-Closure không đơn giản là “function nằm trong function”. Điểm cốt lõi là function giữ lexical access tới variables mà nó cần.
+Closure không đơn giản là “hàm (function / 함수) nằm trong hàm (function / 함수)”. Điểm cốt lõi là hàm (function / 함수) giữ lexical truy cập (access / 접근) tới variables mà nó cần.
 
-Closure cho phép private state:
+Closure cho phép private trạng thái (state / 상태):
 
 ```js
 function createUserStore() {
@@ -416,9 +419,9 @@ function createUserStore() {
 
 `user` không exposed trực tiếp ra ngoài.
 
-## Closure giữ binding, không phải snapshot value
+## Closure giữ binding, không phải snapshot giá trị (value / 값)
 
-Đây là một distinction rất quan trọng. Closure thường không “copy value tại thời điểm function được tạo”; nó giữ khả năng truy cập **binding**.
+Đây là một distinction rất quan trọng. Closure thường không “bản sao (copy / 복사) giá trị (value / 값) tại thời điểm hàm (function / 함수) được tạo”; nó giữ khả năng truy cập **binding**.
 
 ```js
 let status = "idle";
@@ -432,11 +435,11 @@ status = "loading";
 console.log(readStatus()); // "loading"
 ```
 
-Nếu closure chỉ snapshot `"idle"`, output đã là `"idle"`. Nhưng nó đọc binding hiện tại.
+Nếu closure chỉ snapshot `"idle"`, đầu ra (output / 출력) đã là `"idle"`. Nhưng nó đọc binding hiện tại.
 
-Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy state mới nếu binding bị mutate; nhưng một hệ thống render tạo **binding mới cho mỗi render/call** có thể khiến callback giữ binding cũ, tạo stale closure.
+Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy trạng thái (state / 상태) mới nếu binding bị mutate; nhưng một hệ thống kết xuất (render / 렌더링) tạo **binding mới cho mỗi kết xuất (render / 렌더링)/lời gọi (call / 호출)** có thể khiến callback giữ binding cũ, tạo stale closure.
 
-## Mỗi factory call có một private environment khác nhau
+## Mỗi factory lời gọi (call / 호출) có một private môi trường (environment / 환경) khác nhau
 
 ```js
 function createCounter() {
@@ -453,11 +456,11 @@ console.log(a()); // 2
 console.log(b()); // 1
 ```
 
-`a` và `b` không share `count`, vì chúng được tạo từ hai lần gọi khác nhau, mỗi lần có environment riêng. Đây là nền tảng của factory/module patterns dựa closure.
+`a` và `b` không share `count`, vì chúng được tạo từ hai lần gọi khác nhau, mỗi lần có môi trường (environment / 환경) riêng. Đây là nền tảng của factory/mô-đun (module / 모듈) patterns dựa closure.
 
-## Closure và lifecycle/memory
+## Closure và vòng đời (lifecycle / 생명주기)/bộ nhớ (memory / 메모리)
 
-Nếu closure reachable, những bindings/object mà closure thật sự cần cũng có thể tiếp tục reachable.
+Nếu closure reachable, những bindings/đối tượng (object / 객체) mà closure thật sự cần cũng có thể tiếp tục reachable.
 
 ```js
 function createHandler(bigData) {
@@ -467,9 +470,9 @@ function createHandler(bigData) {
 }
 ```
 
-Nếu handler được gắn vào một global listener và không bao giờ remove, `bigData` có thể sống lâu hơn business lifecycle dự kiến.
+Nếu handler được gắn vào một toàn cục (global / 전역) listener và không bao giờ remove, `bigData` có thể sống lâu hơn nghiệp vụ (business / 비즈니스) vòng đời (lifecycle / 생명주기) dự kiến.
 
-Nhưng câu “closure gây memory leak” là sai. Closure chỉ giữ data khi còn đường reachability. Vấn đề thực tế thường là **resource owner không cleanup callback/subscription**.
+Nhưng câu “closure gây bộ nhớ (memory / 메모리) leak” là sai. Closure chỉ giữ dữ liệu (data / 데이터) khi còn đường reachability. Vấn đề thực tế thường là **tài nguyên (resource / 자원) đơn vị sở hữu (owner / 오너) không cleanup callback/subscription**.
 
 Ví dụ:
 
@@ -487,9 +490,9 @@ function mount(bigData) {
 }
 ```
 
-Ở đây closure có lifetime explicit qua cleanup function.
+Ở đây closure có thời gian tồn tại (lifetime / 수명) tường minh (explicit / 명시적) qua cleanup hàm (function / 함수).
 
-## Stale closure: timing + lifecycle, không phải closure “hỏng”
+## Stale closure: timing + vòng đời (lifecycle / 생명주기), không phải closure “hỏng”
 
 Hãy xem một factory tạo callback:
 
@@ -504,11 +507,11 @@ const logOld = createLogger("old");
 const logNew = createLogger("new");
 ```
 
-`logOld` đúng khi in `"old"`; nó giữ environment của lần gọi cũ. Framework render systems có thể tạo tình huống tương tự: callback cũ sống sau khi UI đã có state mới. Cách giải quyết không phải “tránh closure”, mà là thiết kế dependency/lifecycle đúng.
+`logOld` đúng khi in `"old"`; nó giữ môi trường (environment / 환경) của lần gọi cũ. khung phần mềm (framework / 프레임워크) kết xuất (render / 렌더링) các hệ thống (systems / 시스템들) có thể tạo tình huống tương tự: callback cũ sống sau khi UI đã có trạng thái (state / 상태) mới. Cách giải quyết không phải “tránh closure”, mà là thiết kế phụ thuộc (dependency / 의존성)/vòng đời (lifecycle / 생명주기) đúng.
 
-### Closure và memory
+### Closure và bộ nhớ (memory / 메모리)
 
-Nếu closure giữ reference tới object lớn, object đó tiếp tục reachable:
+Nếu closure giữ tham chiếu (reference / 참조) tới đối tượng (object / 객체) lớn, đối tượng (object / 객체) đó tiếp tục reachable:
 
 ```js
 function createHandler(bigData) {
@@ -518,9 +521,9 @@ function createHandler(bigData) {
 }
 ```
 
-Closure không “gây leak” tự động. Vấn đề xảy ra khi lifecycle của closure dài hơn lifecycle mà bạn tưởng, làm data/resource tiếp tục sống.
+Closure không “gây leak” tự động. Vấn đề xảy ra khi vòng đời (lifecycle / 생명주기) của closure dài hơn vòng đời (lifecycle / 생명주기) mà bạn tưởng, làm dữ liệu (data / 데이터)/tài nguyên (resource / 자원) tiếp tục sống.
 
-### Closure và loop
+### Closure và vòng lặp (loop / 루프)
 
 Với `let`, mỗi iteration có binding phù hợp:
 
@@ -538,19 +541,19 @@ handlers[2](); // 2
 
 Legacy `var` có thể khiến tất cả callbacks nhìn cùng binding và cuối cùng cùng trả 3.
 
-### Design pattern connections
+### Mẫu thiết kế (design pattern / 디자인 패턴) connections
 
-Closure là nền tảng cho Module Pattern, Factory với private state, memoization, decorators, currying, hooks và middleware wrappers.
+Closure là nền tảng cho mô-đun (module / 모듈) mẫu (pattern / 패턴), Factory với private trạng thái (state / 상태), memoization, decorators, currying, hooks và middleware wrappers.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Stale closure là lỗi rất phổ biến trong React-like systems: closure giữ value của một render/lifecycle trước đó. Type system không tự cứu bạn khỏi timing semantics này.
+Stale closure là lỗi rất phổ biến trong React-like các hệ thống (systems / 시스템들): closure giữ giá trị (value / 값) của một kết xuất (render / 렌더링)/vòng đời (lifecycle / 생명주기) trước đó. hệ kiểu (type system / 타입 시스템) không tự cứu bạn khỏi timing ngữ nghĩa (semantics / 의미론) này.
 
 ---
 
-# Chương 4 — Function là first-class value và Higher-Order Function
+# Chương 4 — hàm (function / 함수) là first-class giá trị (value / 값) và Higher-Order hàm (function / 함수)
 
-Function có thể được truyền, return, lưu trong object/array. Điều này làm JavaScript cực kỳ linh hoạt.
+Hàm (function / 함수) có thể được truyền, return, lưu trong đối tượng (object / 객체)/array. Điều này làm JavaScript cực kỳ linh hoạt.
 
 ```js
 function withLogging(fn) {
@@ -569,9 +572,9 @@ const loggedAdd = withLogging(add);
 loggedAdd(1, 2);
 ```
 
-`withLogging` là Higher-Order Function vì nó nhận function và trả function.
+`withLogging` là Higher-Order hàm (function / 함수) vì nó nhận hàm (function / 함수) và trả hàm (function / 함수).
 
-### Programming pattern — decorator-like wrapper
+### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — decorator-like wrapper
 
 ```js
 function withTiming(fn) {
@@ -589,19 +592,19 @@ function withTiming(fn) {
 }
 ```
 
-Pattern này xuất hiện trong logging, retry, auth wrapper, metrics và middleware.
+Mẫu (pattern / 패턴) này xuất hiện trong logging, thử lại (retry / 재시도), auth wrapper, metrics và middleware.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-JavaScript không cần class cho mọi design pattern. Strategy, Command, Decorator, Observer và Middleware rất tự nhiên với first-class functions. Nhưng wrapper nesting quá sâu có thể làm stack trace khó đọc; đặt tên abstraction rõ và đừng wrap chỉ để “đúng pattern”.
+JavaScript không cần lớp (class / 클래스) cho mọi mẫu thiết kế (design pattern / 디자인 패턴). chiến lược (strategy / 전략), Command, Decorator, Observer và Middleware rất tự nhiên với first-class functions. Nhưng wrapper nesting quá sâu có thể làm dấu vết ngăn xếp (stack trace / 스택 트레이스) khó đọc; đặt tên lớp trừu tượng (abstraction / 추상화) rõ và đừng wrap chỉ để “đúng mẫu (pattern / 패턴)”.
 
 ---
 
-# Chương 5 — `this`: hiểu theo call-site, không theo nơi function được viết
+# Chương 5 — `this`: hiểu theo call-site, không theo nơi hàm (function / 함수) được viết
 
-`this` là một trong những chủ đề gây nhiều bug nhất. Với normal function, `this` chủ yếu được xác định bởi **cách function được gọi**.
+`this` là một trong những chủ đề gây nhiều bug nhất. Với normal hàm (function / 함수), `this` chủ yếu được xác định bởi **cách hàm (function / 함수) được gọi**.
 
-Method call:
+Phương thức (method / 메서드) lời gọi (call / 호출):
 
 ```js
 const user = {
@@ -617,7 +620,7 @@ user.greet();
 
 Call-site là `user.greet()`, nên `this` là `user`.
 
-Detached method:
+Detached phương thức (method / 메서드):
 
 ```js
 const greet = user.greet;
@@ -625,11 +628,11 @@ const greet = user.greet;
 greet();
 ```
 
-Function không còn được gọi qua `user`, nên `this` không còn tự là `user`.
+Hàm (function / 함수) không còn được gọi qua `user`, nên `this` không còn tự là `user`.
 
-Trong strict mode, plain function call thường có `this === undefined`.
+Trong strict chế độ (mode / 모드), plain hàm (function / 함수) lời gọi (call / 호출) thường có `this === undefined`.
 
-Constructor call:
+Constructor lời gọi (call / 호출):
 
 ```js
 function User(name) {
@@ -639,11 +642,11 @@ function User(name) {
 const user = new User("Kim");
 ```
 
-`new` tạo object mới và bind `this` vào object đó trong quá trình constructor chạy.
+`new` tạo đối tượng (object / 객체) mới và bind `this` vào đối tượng (object / 객체) đó trong quá trình constructor chạy.
 
-## Bốn binding rules thực dụng cho normal function
+## Bốn binding rules thực dụng cho normal hàm (function / 함수)
 
-Khi nhìn một normal function, hãy xác định `this` bằng call expression chứ không nhìn nơi function được khai báo. Một mental model thực dụng là:
+Khi nhìn một normal hàm (function / 함수), hãy xác định `this` bằng lời gọi (call / 호출) expression chứ không nhìn nơi hàm (function / 함수) được khai báo. Một mô hình tư duy (mental model / 사고 모델) thực dụng là:
 
 ```text
 1. new binding
@@ -661,7 +664,7 @@ Khi nhìn một normal function, hãy xác định `this` bằng call expression
    fn()
 ```
 
-Arrow function là exception lớn vì không tạo own dynamic `this`; nó dùng lexical `this` của surrounding context.
+Arrow hàm (function / 함수) là exception lớn vì không tạo own động (dynamic / 동적) `this`; nó dùng lexical `this` của surrounding ngữ cảnh (context / 맥락).
 
 ### Implicit receiver là expression ngay trước dấu `.`/`[]`
 
@@ -687,22 +690,22 @@ Tương tự:
 account["owner"].show();
 ```
 
-receiver vẫn là owner object.
+receiver vẫn là đơn vị sở hữu (owner / 오너) đối tượng (object / 객체).
 
-### Detached method làm mất receiver
+### Detached phương thức (method / 메서드) làm mất receiver
 
 ```js
 const show = account.owner.show;
 show();
 ```
 
-Điều bị mất không phải “method thuộc class”, mà là **reference/call form chứa receiver**. Vì vậy callback API rất hay làm lộ bug này:
+Điều bị mất không phải “phương thức (method / 메서드) thuộc lớp (class / 클래스)”, mà là **tham chiếu (reference / 참조)/lời gọi (call / 호출) form chứa receiver**. Vì vậy callback API rất hay làm lộ bug này:
 
 ```js
 button.addEventListener("click", account.owner.show);
 ```
 
-Browser gọi callback theo event-listener semantics, không phải bằng `account.owner.show()`. Nếu method thật sự cần instance receiver, hãy wrap hoặc bind có chủ đích và giữ reference cleanup.
+Trình duyệt (browser / 브라우저) gọi callback theo event-listener ngữ nghĩa (semantics / 의미론), không phải bằng `account.owner.show()`. Nếu phương thức (method / 메서드) thật sự cần instance receiver, hãy wrap hoặc bind có chủ đích và giữ tham chiếu (reference / 참조) cleanup.
 
 ```js
 const handleClick = account.owner.show.bind(account.owner);
@@ -724,9 +727,9 @@ const user = {
 };
 ```
 
-`name` được resolve qua lexical scope. `this.name` bắt đầu từ runtime receiver rồi property lookup. Nếu trộn hai mental models, `this` sẽ luôn cảm giác “bí ẩn”.
+`name` được resolve qua lexical phạm vi (scope / 범위). `this.name` bắt đầu từ thời gian chạy (runtime / 런타임) receiver rồi thuộc tính (property / 속성) lookup. Nếu trộn hai mô hình tư duy (mental models / 사고 모델들), `this` sẽ luôn cảm giác “bí ẩn”.
 
-### Class không thay đổi quy tắc cốt lõi của detached method
+### Lớp (class / 클래스) không thay đổi quy tắc cốt lõi của detached phương thức (method / 메서드)
 
 ```js
 class User {
@@ -743,17 +746,17 @@ const user = new User("Kim");
 const greet = user.greet;
 ```
 
-`greet()` vẫn mất receiver. Class syntax không tự auto-bind methods như một số framework/language khác.
+`greet()` vẫn mất receiver. lớp (class / 클래스) cú pháp (syntax / 문법) không tự auto-bind methods như một số khung phần mềm (framework / 프레임워크)/ngôn ngữ (language / 언어) khác.
 
-### Senior rule
+### Cấp cao (senior / 시니어) quy tắc (rule / 규칙)
 
-Đừng hỏi “function này thuộc object nào?”. Hãy nhìn call expression. `obj.method()` khác `const fn = obj.method; fn()`.
+Đừng hỏi “hàm (function / 함수) này thuộc đối tượng (object / 객체) nào?”. Hãy nhìn lời gọi (call / 호출) expression. `obj.method()` khác `const fn = obj.method; fn()`.
 
 ---
 
 # Chương 6 — `call`, `apply`, `bind`
 
-`call` gọi function ngay với explicit `this`:
+`call` gọi hàm (function / 함수) ngay với tường minh (explicit / 명시적) `this`:
 
 ```js
 function greet(message) {
@@ -779,7 +782,7 @@ greet.apply(
 );
 ```
 
-`bind` tạo function mới, chưa chạy ngay:
+`bind` tạo hàm (function / 함수) mới, chưa chạy ngay:
 
 ```js
 const boundGreet = greet.bind(user);
@@ -787,7 +790,7 @@ const boundGreet = greet.bind(user);
 boundGreet("Hello");
 ```
 
-Một detail quan trọng: `bind()` tạo function identity mới. Vì vậy:
+Một detail quan trọng: `bind()` tạo hàm (function / 함수) định danh (identity / 식별자) mới. Vì vậy:
 
 ```js
 element.addEventListener(
@@ -796,7 +799,7 @@ element.addEventListener(
 );
 ```
 
-sau này bạn không thể remove listener bằng một `handler.bind(obj)` khác, vì đó là function mới. Hãy giữ reference:
+sau này bạn không thể remove listener bằng một `handler.bind(obj)` khác, vì đó là hàm (function / 함수) mới. Hãy giữ tham chiếu (reference / 참조):
 
 ```js
 const boundHandler = handler.bind(obj);
@@ -807,7 +810,7 @@ element.addEventListener(
 );
 ```
 
-### Partial application
+### Partial ứng dụng (application / 애플리케이션)
 
 ```js
 function multiply(a, b) {
@@ -824,9 +827,9 @@ double(5); // 10
 
 ---
 
-# Chương 7 — Arrow function semantics
+# Chương 7 — Arrow hàm (function / 함수) ngữ nghĩa (semantics / 의미론)
 
-Arrow function không chỉ là function syntax ngắn. Nó **không có own `this`**; nó lấy `this` lexical từ surrounding context.
+Arrow hàm (function / 함수) không chỉ là hàm (function / 함수) cú pháp (syntax / 문법) ngắn. Nó **không có own `this`**; nó lấy `this` lexical từ surrounding ngữ cảnh (context / 맥락).
 
 ```js
 const user = {
@@ -840,9 +843,9 @@ const user = {
 };
 ```
 
-Arrow callback dùng `this` của `delayedGreeting` method call.
+Arrow callback dùng `this` của `delayedGreeting` phương thức (method / 메서드) lời gọi (call / 호출).
 
-Nếu dùng arrow làm object method khi cần dynamic `this`:
+Nếu dùng arrow làm đối tượng (object / 객체) phương thức (method / 메서드) khi cần động (dynamic / 동적) `this`:
 
 ```js
 const user = {
@@ -858,7 +861,7 @@ const user = {
 
 Arrow cũng không có own `arguments` và không dùng với `new`.
 
-### Language idiom
+### Lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)
 
 Arrow rất tốt cho callback transformations:
 
@@ -868,7 +871,7 @@ users.map(
 );
 ```
 
-Method shorthand tốt khi cần instance/object `this`:
+Phương thức (method / 메서드) shorthand tốt khi cần instance/đối tượng (object / 객체) `this`:
 
 ```js
 const user = {
@@ -880,7 +883,7 @@ const user = {
 
 ---
 
-# Chương 8 — Object property lookup và own/inherited property
+# Chương 8 — đối tượng (object / 객체) thuộc tính (property / 속성) lookup và own/inherited thuộc tính (property / 속성)
 
 Khi bạn đọc:
 
@@ -888,9 +891,9 @@ Khi bạn đọc:
 user.name
 ```
 
-engine tìm own property `name`. Nếu không có, nó có thể đi lên prototype chain.
+engine tìm own thuộc tính (property / 속성) `name`. Nếu không có, nó có thể đi lên prototype chuỗi (chain / 사슬).
 
-Own property check:
+Own thuộc tính (property / 속성) check:
 
 ```js
 Object.hasOwn(
@@ -907,13 +910,13 @@ Object.hasOwn(
 
 thường true vì `toString` nằm trên `Object.prototype`.
 
-Đây là lý do `for...in` có thể thấy inherited enumerable properties, và tại sao arbitrary object dictionaries có security concerns như prototype pollution.
+Đây là lý do `for...in` có thể thấy inherited enumerable properties, và tại sao arbitrary đối tượng (object / 객체) dictionaries có bảo mật (security / 보안) concerns như prototype pollution.
 
 ---
 
-# Chương 9 — Prototype và prototype chain
+# Chương 9 — Prototype và prototype chuỗi (chain / 사슬)
 
-JavaScript là prototype-based language. Mỗi ordinary object có internal prototype link tới object khác hoặc `null`.
+JavaScript là prototype-based ngôn ngữ (language / 언어). Mỗi ordinary đối tượng (object / 객체) có nội bộ (internal / 내부) prototype link tới đối tượng (object / 객체) khác hoặc `null`.
 
 ```js
 const user = {
@@ -934,9 +937,9 @@ Object.getPrototypeOf(items)
   === Array.prototype;
 ```
 
-Các methods như `map`, `filter`, `push` được tìm thông qua prototype chain.
+Các methods như `map`, `filter`, `push` được tìm thông qua prototype chuỗi (chain / 사슬).
 
-Constructor function:
+Constructor hàm (function / 함수):
 
 ```js
 function User(name) {
@@ -950,7 +953,7 @@ User.prototype.greet = function () {
 const user = new User("Kim");
 ```
 
-Chain:
+Chuỗi (chain / 사슬):
 
 ```text
 user
@@ -962,7 +965,7 @@ Object.prototype
 null
 ```
 
-## Property lookup là chain traversal, không phải copy method vào từng instance
+## Thuộc tính (property / 속성) lookup là chuỗi (chain / 사슬) traversal, không phải bản sao (copy / 복사) phương thức (method / 메서드) vào từng instance
 
 Với:
 
@@ -971,7 +974,7 @@ const user = new User("Kim");
 user.greet();
 ```
 
-`user` thường không có own property `greet`. Engine tìm:
+`user` thường không có own thuộc tính (property / 속성) `greet`. Engine tìm:
 
 ```text
 user
@@ -980,9 +983,9 @@ User.prototype
 ↓ found greet
 ```
 
-Sau đó function được gọi với receiver `user`, nên bên trong method `this` vẫn là `user`, **không phải `User.prototype`**. Đây là chỗ `this` và prototype chain giao nhau: prototype quyết định **tìm function ở đâu**; call-site quyết định **receiver là ai**.
+Sau đó hàm (function / 함수) được gọi với receiver `user`, nên bên trong phương thức (method / 메서드) `this` vẫn là `user`, **không phải `User.prototype`**. Đây là chỗ `this` và prototype chuỗi (chain / 사슬) giao nhau: prototype quyết định **tìm hàm (function / 함수) ở đâu**; call-site quyết định **receiver là ai**.
 
-## Shadowing inherited property
+## Shadowing inherited thuộc tính (property / 속성)
 
 ```js
 const proto = {
@@ -999,14 +1002,14 @@ console.log(account.role); // "admin"
 console.log(proto.role);   // "user"
 ```
 
-Assignment thường tạo own property trên receiver thay vì sửa inherited data property ở prototype. Khi debug “tại sao object A đổi mà prototype không đổi”, hãy kiểm tra:
+Assignment thường tạo own thuộc tính (property / 속성) trên receiver thay vì sửa inherited dữ liệu (data / 데이터) thuộc tính (property / 속성) ở prototype. Khi gỡ lỗi (debug / 디버그) “tại sao đối tượng (object / 객체) A đổi mà prototype không đổi”, hãy kiểm tra:
 
 ```js
 Object.hasOwn(account, "role");
 Object.getPrototypeOf(account);
 ```
 
-Accessor descriptors có thể làm assignment semantics phức tạp hơn, vì inherited setter có thể được gọi. Chương Property Descriptors giải thích cơ chế đó.
+Accessor descriptors có thể làm assignment ngữ nghĩa (semantics / 의미론) phức tạp hơn, vì inherited setter có thể được gọi. Chương thuộc tính (property / 속성) Descriptors giải thích cơ chế đó.
 
 ## `instanceof` kiểm tra prototype relationship
 
@@ -1014,11 +1017,11 @@ Accessor descriptors có thể làm assignment semantics phức tạp hơn, vì 
 user instanceof User;
 ```
 
-Ở mental-model level, `instanceof` kiểm tra liệu object được tham chiếu bởi `User.prototype` có xuất hiện trên prototype chain của `user` hay không. Nó không kiểm tra “shape object có giống User không”.
+Ở mental-model mức (level / 수준), `instanceof` kiểm tra liệu đối tượng (object / 객체) được tham chiếu bởi `User.prototype` có xuất hiện trên prototype chuỗi (chain / 사슬) của `user` hay không. Nó không kiểm tra “shape đối tượng (object / 객체) có giống người dùng (user / 사용자) không”.
 
-Vì thế prototype mutation có thể thay đổi result, và cross-realm objects có thể làm `instanceof Array`/`instanceof Error` không hoạt động như bạn kỳ vọng. Với arrays, `Array.isArray()` thường robust hơn cross-realm.
+Vì thế prototype mutation có thể thay đổi kết quả (result / 결과), và cross-realm objects có thể làm `instanceof Array`/`instanceof Error` không hoạt động như bạn kỳ vọng. Với arrays, `Array.isArray()` thường robust hơn cross-realm.
 
-## Prototype mutation là global-ish behavior change cho descendants
+## Prototype mutation là global-ish hành vi (behavior / 동작) thay đổi (change / 변경) cho descendants
 
 ```js
 User.prototype.greet = function () {
@@ -1026,7 +1029,7 @@ User.prototype.greet = function () {
 };
 ```
 
-Các instances đang dùng prototype đó có thể thấy method mới ngay vì lookup xảy ra qua chain. Đây là sức mạnh của prototype model nhưng cũng là lý do patch built-in prototypes trong application code nguy hiểm:
+Các instances đang dùng prototype đó có thể thấy phương thức (method / 메서드) mới ngay vì lookup xảy ra qua chuỗi (chain / 사슬). Đây là sức mạnh của prototype mô hình (model / 모델) nhưng cũng là lý do patch built-in prototypes trong ứng dụng (application / 애플리케이션) mã (code / 코드) nguy hiểm:
 
 ```js
 Array.prototype.last = function () {
@@ -1034,9 +1037,9 @@ Array.prototype.last = function () {
 };
 ```
 
-Bạn đã thay behavior của mọi array trong realm và có nguy cơ conflict với library/standard tương lai.
+Bạn đã thay hành vi (behavior / 동작) của mọi array trong realm và có nguy cơ xung đột (conflict / 충돌) với thư viện (library / 라이브러리)/tiêu chuẩn (standard / 표준) tương lai.
 
-## Class syntax không xóa prototype model
+## Lớp (class / 클래스) cú pháp (syntax / 문법) không xóa prototype mô hình (model / 모델)
 
 ```js
 class User {
@@ -1046,17 +1049,17 @@ class User {
 }
 ```
 
-Method `greet` vẫn nằm trên `User.prototype`. `class` chủ yếu cung cấp syntax/semantics rõ hơn cho constructor, inheritance, methods, private fields..., nhưng lookup model vẫn là prototype-based.
+Phương thức (method / 메서드) `greet` vẫn nằm trên `User.prototype`. `class` chủ yếu cung cấp cú pháp (syntax / 문법)/ngữ nghĩa (semantics / 의미론) rõ hơn cho constructor, inheritance, methods, private fields..., nhưng lookup mô hình (model / 모델) vẫn là prototype-based.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Prototype knowledge giúp debug method lookup, `instanceof`, inheritance và security. Không mutate built-in prototype trong application code như `Array.prototype.myMethod = ...` vì có thể gây conflict và hidden global effects.
+Prototype kiến thức (knowledge / 지식) giúp gỡ lỗi (debug / 디버그) phương thức (method / 메서드) lookup, `instanceof`, inheritance và bảo mật (security / 보안). Không mutate built-in prototype trong ứng dụng (application / 애플리케이션) mã (code / 코드) như `Array.prototype.myMethod = ...` vì có thể gây xung đột (conflict / 충돌) và hidden toàn cục (global / 전역) effects.
 
 ---
 
-# Chương 10 — `new` và constructor function
+# Chương 10 — `new` và constructor hàm (function / 함수)
 
-`new User("Kim")` conceptually làm bốn việc: tạo object mới, link prototype của object tới `User.prototype`, gọi `User` với `this` là object mới, rồi return object đó trừ một số edge cases khi constructor return object explicit.
+`new User("Kim")` conceptually làm bốn việc: tạo đối tượng (object / 객체) mới, link prototype của đối tượng (object / 객체) tới `User.prototype`, gọi `User` với `this` là đối tượng (object / 객체) mới, rồi return đối tượng (object / 객체) đó trừ một số edge cases khi constructor return đối tượng (object / 객체) tường minh (explicit / 명시적).
 
 Đây là lý do methods nên nằm trên prototype thay vì tạo lại mỗi instance trong legacy constructor style.
 
@@ -1070,13 +1073,13 @@ User.prototype.greet = function () {
 };
 ```
 
-Modern code thường dùng class syntax cho readability, nhưng class vẫn dựa trên prototype machinery bên dưới.
+Hiện đại (modern / 현대적) mã (code / 코드) thường dùng lớp (class / 클래스) cú pháp (syntax / 문법) cho readability, nhưng lớp (class / 클래스) vẫn dựa trên prototype machinery bên dưới.
 
 ---
 
 # Chương 11 — `class`, instance fields, static và private fields
 
-> **Version note:** Class declarations/expressions và `extends` được chuẩn hóa ở ES2015. Public/private instance fields, private methods/accessors, static fields và static blocks được chuẩn hóa ở ES2022. Vì vậy một runtime “support class” chưa chắc support toàn bộ modern class syntax.
+> **phiên bản (version / 버전) ghi chú (note / 노트):** lớp (class / 클래스) declarations/expressions và `extends` được chuẩn hóa ở ES2015. công khai (public / 공개)/private instance fields, private methods/accessors, static fields và static blocks được chuẩn hóa ở ES2022. Vì vậy một thời gian chạy (runtime / 런타임) “hỗ trợ (support / 지원) lớp (class / 클래스)” chưa chắc hỗ trợ (support / 지원) toàn bộ hiện đại (modern / 현대적) lớp (class / 클래스) cú pháp (syntax / 문법).
 
 ```js
 class User {
@@ -1090,13 +1093,13 @@ class User {
 }
 ```
 
-Method vẫn nằm trên `User.prototype`:
+Phương thức (method / 메서드) vẫn nằm trên `User.prototype`:
 
 ```js
 user.greet === User.prototype.greet;
 ```
 
-Instance field:
+Instance trường dữ liệu (field / 필드):
 
 ```js
 class User {
@@ -1104,7 +1107,7 @@ class User {
 }
 ```
 
-Static method thuộc class, không thuộc instance:
+Static phương thức (method / 메서드) thuộc lớp (class / 클래스), không thuộc instance:
 
 ```js
 class User {
@@ -1114,7 +1117,7 @@ class User {
 }
 ```
 
-Private field runtime-level:
+Private trường dữ liệu (field / 필드) runtime-level:
 
 ```js
 class Counter {
@@ -1130,9 +1133,9 @@ class Counter {
 }
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Đừng dùng class chỉ vì quen Java. Class phù hợp khi abstraction có identity, state, lifecycle hoặc polymorphic behavior rõ. Stateless utility thường đơn giản hơn bằng function/module.
+Đừng dùng lớp (class / 클래스) chỉ vì quen Java. lớp (class / 클래스) phù hợp khi lớp trừu tượng (abstraction / 추상화) có định danh (identity / 식별자), trạng thái (state / 상태), vòng đời (lifecycle / 생명주기) hoặc polymorphic hành vi (behavior / 동작) rõ. Stateless utility thường đơn giản hơn bằng hàm (function / 함수)/mô-đun (module / 모듈).
 
 ---
 
@@ -1157,7 +1160,7 @@ class Admin extends User {
 }
 ```
 
-Inheritance hữu ích khi subtype relationship thật sự là “is-a”. Nhưng deep inheritance hierarchy làm behavior bị phân tán qua nhiều parent classes.
+Inheritance hữu ích khi subtype relationship thật sự là “is-a”. Nhưng deep inheritance hierarchy làm hành vi (behavior / 동작) bị phân tán qua nhiều parent classes.
 
 Composition thường rõ hơn:
 
@@ -1170,19 +1173,19 @@ function calculatePrice(
 }
 ```
 
-Thay vì tạo `VipUser extends DiscountUser extends UserBase...` chỉ để thay discount behavior.
+Thay vì tạo `VipUser extends DiscountUser extends UserBase...` chỉ để thay discount hành vi (behavior / 동작).
 
-### Design pattern connection
+### Mẫu thiết kế (design pattern / 디자인 패턴) liên kết (connection / 연결)
 
-Composition đi tự nhiên với Strategy, Adapter, Decorator và Dependency Injection.
+Composition đi tự nhiên với chiến lược (strategy / 전략), Adapter, Decorator và phụ thuộc (dependency / 의존성) Injection.
 
 ---
 
-# Chương 13 — Property descriptors
+# Chương 13 — thuộc tính (property / 속성) descriptors
 
-> **Version note — ES5 nền tảng:** `Object.defineProperty()` và descriptor model là một phần quan trọng của ES5. ES2017 bổ sung `Object.getOwnPropertyDescriptors()`. Cơ chế này rất cũ nhưng vẫn nằm dưới nhiều framework/library abstractions hiện đại.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES5 nền tảng:** `Object.defineProperty()` và descriptor mô hình (model / 모델) là một phần quan trọng của ES5. ES2017 bổ sung `Object.getOwnPropertyDescriptors()`. Cơ chế này rất cũ nhưng vẫn nằm dưới nhiều khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) abstractions hiện đại.
 
-Property không chỉ có key/value. Data property còn có metadata: `writable`, `enumerable`, `configurable`.
+Thuộc tính (property / 속성) không chỉ có key/giá trị (value / 값). dữ liệu (data / 데이터) thuộc tính (property / 속성) còn có siêu dữ liệu (metadata / 메타데이터): `writable`, `enumerable`, `configurable`.
 
 ```js
 const user = {};
@@ -1208,7 +1211,7 @@ Object.getOwnPropertyDescriptor(
 );
 ```
 
-Descriptors quan trọng khi đọc framework/library internals và hiểu freeze/seal. Application code thường không cần dùng `defineProperty` thường xuyên.
+Descriptors quan trọng khi đọc khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) internals và hiểu freeze/seal. ứng dụng (application / 애플리케이션) mã (code / 코드) thường không cần dùng `defineProperty` thường xuyên.
 
 ---
 
@@ -1227,7 +1230,7 @@ const user = {
 };
 ```
 
-Caller đọc như property:
+Caller đọc như thuộc tính (property / 속성):
 
 ```js
 user.fullName;
@@ -1245,15 +1248,15 @@ const account = {
 };
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Getter syntax nhìn như property read, nên getter expensive, network call hoặc side effect nặng là surprising API design. Nếu operation có cost/side effect đáng kể, method rõ hơn.
+Getter cú pháp (syntax / 문법) nhìn như thuộc tính (property / 속성) read, nên getter expensive, mạng (network / 네트워크) lời gọi (call / 호출) hoặc side tác động (effect / 효과) nặng là surprising API thiết kế (design / 설계). Nếu thao tác (operation / 연산) có chi phí (cost / 비용)/side tác động (effect / 효과) đáng kể, phương thức (method / 메서드) rõ hơn.
 
 ---
 
 # Chương 15 — `Object.create`, `Object.assign`, freeze/seal
 
-> **Version note:** `Object.create()`, `freeze()`, `seal()` và descriptor-oriented controls thuộc thế hệ ES5. `Object.assign()` thuộc ES2015. Object spread `{...obj}` được chuẩn hóa sau ở ES2018 và không nên được coi là hoàn toàn đồng nghĩa với `Object.assign()` trong mọi edge case.
+> **phiên bản (version / 버전) ghi chú (note / 노트):** `Object.create()`, `freeze()`, `seal()` và descriptor-oriented controls thuộc thế hệ ES5. `Object.assign()` thuộc ES2015. đối tượng (object / 객체) spread `{...obj}` được chuẩn hóa sau ở ES2018 và không nên được coi là hoàn toàn đồng nghĩa với `Object.assign()` trong mọi trường hợp biên (edge case / 경계 사례).
 
 Prototype trực tiếp:
 
@@ -1273,11 +1276,11 @@ Null-prototype dictionary:
 const dict = Object.create(null);
 ```
 
-Object không có `Object.prototype`, useful cho một số dictionary/security cases, nhưng `Map` thường ergonomic hơn.
+Đối tượng (object / 객체) không có `Object.prototype`, useful cho một số dictionary/bảo mật (security / 보안) cases, nhưng `Map` thường ergonomic hơn.
 
-`Object.assign(target, source)` mutate target. Spread thường rõ hơn cho shallow copy.
+`Object.assign(target, source)` mutate mục tiêu (target / 대상). Spread thường rõ hơn cho shallow bản sao (copy / 복사).
 
-`Object.preventExtensions` ngăn add property mới. `Object.seal` thêm non-configurable. `Object.freeze` thêm non-writable data properties. Nhưng freeze là shallow.
+`Object.preventExtensions` ngăn add thuộc tính (property / 속성) mới. `Object.seal` thêm non-configurable. `Object.freeze` thêm non-writable dữ liệu (data / 데이터) properties. Nhưng freeze là shallow.
 
 ```js
 const config = Object.freeze({
@@ -1292,11 +1295,11 @@ config.nested.enabled = false;
 
 ---
 
-# Chương 16 — Symbol và protocol hooks
+# Chương 16 — Symbol và giao thức (protocol / 프로토콜) hooks
 
-> **Version note — ES2015/ES6:** `Symbol` và well-known symbols như `Symbol.iterator` được đưa vào ES2015. Chúng mở đường cho standardized language protocols thay vì chỉ dựa vào naming convention.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2015/ES6:** `Symbol` và well-known symbols như `Symbol.iterator` được đưa vào ES2015. Chúng mở đường cho standardized ngôn ngữ (language / 언어) protocols thay vì chỉ dựa vào naming convention.
 
-`Symbol()` tạo unique primitive.
+`Symbol()` tạo unique thành phần nguyên thủy (primitive / 기본 요소).
 
 ```js
 const id = Symbol("id");
@@ -1313,21 +1316,21 @@ Symbol("id") === Symbol("id");
 // false
 ```
 
-Well-known symbols như `Symbol.iterator` là hooks vào language protocols. Bạn sẽ dùng nó khi học iterable.
+Well-known symbols như `Symbol.iterator` là hooks vào ngôn ngữ (language / 언어) protocols. Bạn sẽ dùng nó khi học iterable.
 
-`Symbol.toPrimitive` cho phép object customize conversion.
+`Symbol.toPrimitive` cho phép đối tượng (object / 객체) customize conversion.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Symbol không phải privacy mechanism. Symbol properties vẫn inspect được bằng `Object.getOwnPropertySymbols`.
+Symbol không phải privacy cơ chế (mechanism / 메커니즘). Symbol properties vẫn inspect được bằng `Object.getOwnPropertySymbols`.
 
 ---
 
 # Chương 17 — Map/Set ở mức Intermediate
 
-> **Version note:** Map/Set xuất hiện ở ES2015. ES2025 bổ sung các Set operations chuẩn như `union`, `intersection`, `difference`, `symmetricDifference`, `isSubsetOf`, `isSupersetOf`, `isDisjointFrom`. Hãy kiểm tra target runtime trước khi refactor legacy helper sang API mới.
+> **phiên bản (version / 버전) ghi chú (note / 노트):** Map/Set xuất hiện ở ES2015. ES2025 bổ sung các Set operations chuẩn như `union`, `intersection`, `difference`, `symmetricDifference`, `isSubsetOf`, `isSupersetOf`, `isDisjointFrom`. Hãy kiểm tra mục tiêu (target / 대상) thời gian chạy (runtime / 런타임) trước khi refactor legacy helper sang API mới.
 
-Map đặc biệt hữu ích để tạo index cho repeated lookup.
+Map đặc biệt hữu ích để tạo chỉ mục (index / 인덱스) cho repeated lookup.
 
 ```js
 const userById = new Map(
@@ -1346,7 +1349,7 @@ Sau đó:
 userById.get(id);
 ```
 
-Nếu trước đó bạn gọi `.find()` hàng nghìn lần trên array lớn, index Map có thể giảm complexity từ repeated linear search xuống gần constant-time lookup average, đổi lại dùng thêm memory và cần giữ index đồng bộ.
+Nếu trước đó bạn gọi `.find()` hàng nghìn lần trên array lớn, chỉ mục (index / 인덱스) Map có thể giảm độ phức tạp (complexity / 복잡도) từ repeated tuyến tính (linear / 선형) tìm kiếm (search / 검색) xuống gần constant-time lookup average, đổi lại dùng thêm bộ nhớ (memory / 메모리) và cần giữ chỉ mục (index / 인덱스) đồng bộ.
 
 Set useful cho membership và uniqueness.
 
@@ -1359,17 +1362,17 @@ const permissions = new Set([
 permissions.has("READ");
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Chọn data structure theo access pattern. Đừng dùng Map vì “senior hơn object”.
+Chọn cấu trúc dữ liệu (data structure / 자료구조) theo truy cập (access / 접근) mẫu (pattern / 패턴). Đừng dùng Map vì “cấp cao (senior / 시니어) hơn đối tượng (object / 객체)”.
 
 ---
 
 # Chương 18 — WeakMap và WeakSet
 
-> **Version note — ES2015:** WeakMap/WeakSet thuộc ES2015. `WeakRef` và `FinalizationRegistry` là nhóm khác, đến ở ES2021 và có semantics GC tinh tế hơn nên được để ở level Senior.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2015:** WeakMap/WeakSet thuộc ES2015. `WeakRef` và `FinalizationRegistry` là nhóm khác, đến ở ES2021 và có ngữ nghĩa (semantics / 의미론) GC tinh tế hơn nên được để ở mức (level / 수준) cấp cao (senior / 시니어).
 
-WeakMap keys là object/non-registered symbol trong modern semantics và không giữ object key sống chỉ vì entry tồn tại.
+WeakMap keys là đối tượng (object / 객체)/non-registered symbol trong hiện đại (modern / 현대적) ngữ nghĩa (semantics / 의미론) và không giữ đối tượng (object / 객체) key sống chỉ vì entry tồn tại.
 
 ```js
 const metadata = new WeakMap();
@@ -1386,9 +1389,9 @@ metadata.set(
 
 WeakMap không iterable vì GC timing không deterministic.
 
-Use cases: metadata tied to object lifetime, object-keyed memoization, private state legacy patterns.
+Use cases: siêu dữ liệu (metadata / 메타데이터) tied to đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명), object-keyed memoization, private trạng thái (state / 상태) legacy patterns.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 Weak không có nghĩa “GC sẽ xóa ngay”. Đừng dùng WeakMap nếu bạn cần enumeration hoặc deterministic cleanup.
 
@@ -1396,7 +1399,7 @@ Weak không có nghĩa “GC sẽ xóa ngay”. Đừng dùng WeakMap nếu bạ
 
 # Chương 19 — ES Modules sâu hơn
 
-> **Version note:** Static modules thuộc ES2015; dynamic `import()` và `import.meta` thuộc ES2020; import attributes/JSON modules thuộc ES2025. Module records của ECMAScript và cách browser/Node/bundler resolve module là hai lớp khác nhau.
+> **phiên bản (version / 버전) ghi chú (note / 노트):** Static modules thuộc ES2015; động (dynamic / 동적) `import()` và `import.meta` thuộc ES2020; import attributes/JSON modules thuộc ES2025. mô-đun (module / 모듈) records của ECMAScript và cách trình duyệt (browser / 브라우저)/nút (node / 노드)/bundler resolve mô-đun (module / 모듈) là hai lớp khác nhau.
 
 Named exports:
 
@@ -1416,21 +1419,21 @@ import {
 } from "./user.js";
 ```
 
-Module scope riêng, strict mode semantics và static dependency graph giúp bundler/tooling phân tích tốt.
+Mô-đun (module / 모듈) phạm vi (scope / 범위) riêng, strict chế độ (mode / 모드) ngữ nghĩa (semantics / 의미론) và static phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) giúp bundler/tooling phân tích tốt.
 
-Imports là **live bindings**. Nếu module export variable và thay đổi variable, importer đọc binding cập nhật.
+Imports là **live bindings**. Nếu mô-đun (module / 모듈) export variable và thay đổi variable, importer đọc binding cập nhật.
 
-Circular dependencies được language hỗ trợ nhưng initialization order có thể gây bugs. Nếu A import B và B import A, hãy xem đó là architecture smell trước khi tìm workaround.
+Circular dependencies được ngôn ngữ (language / 언어) hỗ trợ nhưng initialization thứ tự (order / 순서) có thể gây bugs. Nếu A import B và B import A, hãy xem đó là kiến trúc (architecture / 아키텍처) smell trước khi tìm workaround.
 
-### Programming pattern — Public Module API
+### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — công khai (public / 공개) mô-đun (module / 모듈) API
 
-Feature có thể expose qua `index.js` một API nhỏ, còn internal files không nên bị consumers deep-import tùy tiện.
+Tính năng (feature / 기능) có thể expose qua `index.js` một API nhỏ, còn nội bộ (internal / 내부) files không nên bị consumers deep-import tùy tiện.
 
 ---
 
-# Chương 20 — Dynamic import và lazy loading concept
+# Chương 20 — động (dynamic / 동적) import và lazy loading concept
 
-> **Version note — ES2020:** Dynamic `import()` là feature ES2020. Code splitting là behavior mà bundler có thể xây trên syntax này, không phải một guarantee của ECMAScript standard.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2020:** động (dynamic / 동적) `import()` là tính năng (feature / 기능) ES2020. mã (code / 코드) splitting là hành vi (behavior / 동작) mà bundler có thể xây trên cú pháp (syntax / 문법) này, không phải một guarantee của ECMAScript tiêu chuẩn (standard / 표준).
 
 ```js
 const module = await import(
@@ -1438,19 +1441,19 @@ const module = await import(
 );
 ```
 
-Dynamic import trả Promise và cho phép load code theo nhu cầu. Bundlers có thể dùng nó làm code-splitting boundary.
+Động (dynamic / 동적) import trả Promise và cho phép tải (load / 로드) mã (code / 코드) theo nhu cầu. Bundlers có thể dùng nó làm code-splitting ranh giới (boundary / 경계).
 
-Use case: editor lớn, chart library, route ít dùng, modal feature nặng.
+Use trường hợp (case / 사례): editor lớn, chart thư viện (library / 라이브러리), tuyến (route / 경로) ít dùng, modal tính năng (feature / 기능) nặng.
 
-Trade-off: initial bundle nhỏ hơn nhưng first-use latency có thể tăng. Senior cần đo UX thay vì lazy load mọi thứ.
+Sự đánh đổi (trade-off / 트레이드오프): initial bundle nhỏ hơn nhưng first-use độ trễ (latency / 지연 시간) có thể tăng. cấp cao (senior / 시니어) cần đo UX thay vì lazy tải (load / 로드) mọi thứ.
 
 ---
 
-# Chương 21 — Promise semantics sâu hơn
+# Chương 21 — Promise ngữ nghĩa (semantics / 의미론) sâu hơn
 
-> **Version note:** Native Promise thuộc ES2015; `Promise.prototype.finally()` thuộc ES2018. Core resolution/chaining semantics trong chương này quan trọng và bền vững hơn việc nhớ năm của từng helper.
+> **phiên bản (version / 버전) ghi chú (note / 노트):** bản địa (native / 네이티브) Promise thuộc ES2015; `Promise.prototype.finally()` thuộc ES2018. cốt lõi (core / 핵심) resolution/chaining ngữ nghĩa (semantics / 의미론) trong chương này quan trọng và bền vững hơn việc nhớ năm của từng helper.
 
-Promise có ba states: pending, fulfilled, rejected. Khi settle, state không thay đổi lại.
+Promise có ba states: pending, fulfilled, rejected. Khi settle, trạng thái (state / 상태) không thay đổi lại.
 
 ```js
 Promise.resolve(10)
@@ -1458,7 +1461,7 @@ Promise.resolve(10)
   .then(console.log);
 ```
 
-`.then()` luôn trả Promise mới. Nếu callback return plain value, Promise mới fulfill với value đó. Nếu return Promise, chain adopts Promise đó. Nếu throw, Promise mới reject.
+`.then()` luôn trả Promise mới. Nếu callback return plain giá trị (value / 값), Promise mới fulfill với giá trị (value / 값) đó. Nếu return Promise, chuỗi (chain / 사슬) adopts Promise đó. Nếu throw, Promise mới reject.
 
 ```js
 loadUser()
@@ -1493,7 +1496,7 @@ pending
   └─→ rejected(reason)
 ```
 
-Một khi settled, Promise không chuyển state lần nữa. Nếu executor gọi nhiều lần:
+Một khi settled, Promise không chuyển trạng thái (state / 상태) lần nữa. Nếu executor gọi nhiều lần:
 
 ```js
 new Promise((resolve, reject) => {
@@ -1503,7 +1506,7 @@ new Promise((resolve, reject) => {
 });
 ```
 
-settlement đầu tiên quyết định state.
+settlement đầu tiên quyết định trạng thái (state / 상태).
 
 ## Resolution khác fulfillment
 
@@ -1517,9 +1520,9 @@ const inner = new Promise((resolve) => {
 const outer = Promise.resolve(inner);
 ```
 
-`outer` được **resolved to** `inner`, nghĩa là nó adopt eventual state của `inner`. Nó chưa necessarily fulfilled ngay tại thời điểm relationship được thiết lập.
+`outer` được **resolved to** `inner`, nghĩa là nó adopt eventual trạng thái (state / 상태) của `inner`. Nó chưa necessarily fulfilled ngay tại thời điểm relationship được thiết lập.
 
-Mental model hữu ích:
+Mô hình tư duy (mental model / 사고 모델) hữu ích:
 
 ```text
 return plain value
@@ -1541,7 +1544,7 @@ const p2 = p1.then((value) => value * 2);
 
 `p1` và `p2` là hai Promise khác nhau. Đây là nền tảng của chaining. Mỗi `.then()` tạo một continuation và một Promise cho kết quả continuation đó.
 
-## Promise handlers luôn asynchronous so với current synchronous stack
+## Promise handlers luôn asynchronous so với hiện tại (current / 현재) synchronous ngăn xếp (stack / 스택)
 
 ```js
 console.log("A");
@@ -1553,7 +1556,7 @@ Promise.resolve().then(() => {
 console.log("C");
 ```
 
-Output:
+Đầu ra (output / 출력):
 
 ```text
 A
@@ -1565,7 +1568,7 @@ Ngay cả Promise đã fulfilled sẵn, handler `.then()` vẫn không chạy in
 
 ## Thenable assimilation
 
-Promise resolution không chỉ nhận native Promise. Object có callable `then` cũng có thể được assimilate:
+Promise resolution không chỉ nhận bản địa (native / 네이티브) Promise. đối tượng (object / 객체) có callable `then` cũng có thể được assimilate:
 
 ```js
 const thenable = {
@@ -1578,11 +1581,11 @@ const value = await Promise.resolve(thenable);
 console.log(value); // 123
 ```
 
-Điều này cho interoperability với Promise-like implementations, nhưng cũng có nghĩa “đọc/resolve một thenable” có thể invoke user-defined behavior. Ở application code bình thường bạn không cần tự implement thenable; chỉ cần hiểu tại sao Promise có thể adopt non-native Promise-like values.
+Điều này cho interoperability với Promise-like implementations, nhưng cũng có nghĩa “đọc/resolve một thenable” có thể invoke user-defined hành vi (behavior / 동작). Ở ứng dụng (application / 애플리케이션) mã (code / 코드) bình thường bạn không cần tự implement thenable; chỉ cần hiểu tại sao Promise có thể adopt non-native Promise-like values.
 
-## `.catch()` và `.finally()` cũng tiếp tục chain
+## `.catch()` và `.finally()` cũng tiếp tục chuỗi (chain / 사슬)
 
-`.catch(onRejected)` về cơ bản là một form của `.then(undefined, onRejected)` và trả Promise mới. Nếu catch return value, chain có thể recover:
+`.catch(onRejected)` về cơ bản là một form của `.then(undefined, onRejected)` và trả Promise mới. Nếu catch return giá trị (value / 값), chuỗi (chain / 사슬) có thể recover:
 
 ```js
 const value = await Promise.reject(
@@ -1594,19 +1597,19 @@ const value = await Promise.reject(
 
 `value` là `"fallback"`.
 
-`finally()` chủ yếu dùng cleanup không phụ thuộc success/failure. Nếu finally callback không throw/return rejected Promise, original outcome đi tiếp.
+`finally()` chủ yếu dùng cleanup không phụ thuộc success/thất bại (failure / 실패). Nếu finally callback không throw/return rejected Promise, original kết quả (outcome / 결과) đi tiếp.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Promise chain nên phản ánh ownership của async flow. Catch quá sớm rồi biến mọi error thành `null` thường phá error semantics; catch ở nơi bạn thật sự có thể recover, translate hoặc add context.
+Promise chuỗi (chain / 사슬) nên phản ánh quyền sở hữu (ownership / 소유권) của async luồng (flow / 흐름). Catch quá sớm rồi biến mọi lỗi (error / 오류) thành `null` thường phá lỗi (error / 오류) ngữ nghĩa (semantics / 의미론); catch ở nơi bạn thật sự có thể recover, translate hoặc add ngữ cảnh (context / 맥락).
 
 ---
 
-# Chương 22 — `async` / `await` semantics
+# Chương 22 — `async` / `await` ngữ nghĩa (semantics / 의미론)
 
-> **Version note — ES2017:** Async functions/`await` thuộc ES2017. Top-level `await` trong modules thuộc ES2022; một runtime support `await` bên trong async function chưa chắc support top-level await nếu quá cũ.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2017:** Async functions/`await` thuộc ES2017. Top-level `await` trong modules thuộc ES2022; một thời gian chạy (runtime / 런타임) hỗ trợ (support / 지원) `await` bên trong async hàm (function / 함수) chưa chắc hỗ trợ (support / 지원) top-level await nếu quá cũ.
 
-`async function` luôn trả Promise. `throw` trong async function trở thành rejected Promise.
+`async function` luôn trả Promise. `throw` trong async hàm (function / 함수) trở thành rejected Promise.
 
 ```js
 async function run() {
@@ -1614,9 +1617,9 @@ async function run() {
 }
 ```
 
-`await expression` đợi Promise-like completion và suspend continuation của async function; nó không block browser main thread theo kiểu sleep.
+`await expression` đợi Promise-like completion và suspend continuation của async hàm (function / 함수); nó không khối (block / 블록) trình duyệt (browser / 브라우저) main luồng thực thi (thread / 스레드) theo kiểu sleep.
 
-Sequential dependency:
+Sequential phụ thuộc (dependency / 의존성):
 
 ```js
 const user = await loadUser();
@@ -1632,7 +1635,7 @@ const [profile, settings] = await Promise.all([
 ]);
 ```
 
-## `await` tạm dừng function, không tạm dừng thread
+## `await` tạm dừng hàm (function / 함수), không tạm dừng luồng thực thi (thread / 스레드)
 
 ```js
 async function load() {
@@ -1642,7 +1645,7 @@ async function load() {
 }
 ```
 
-Khi `loadUser()` chưa hoàn thành, phần continuation sau `await` được suspend. JavaScript main thread có thể xử lý event/task khác. Khi awaited value settle thành công, continuation được schedule để chạy lại qua Promise-job/microtask semantics.
+Khi `loadUser()` chưa hoàn thành, phần continuation sau `await` được suspend. JavaScript main luồng thực thi (thread / 스레드) có thể xử lý sự kiện (event / 이벤트)/tác vụ (task / 작업) khác. Khi awaited giá trị (value / 값) settle thành công, continuation được schedule để chạy lại qua Promise-job/microtask ngữ nghĩa (semantics / 의미론).
 
 Vì vậy `await` không tương đương:
 
@@ -1658,7 +1661,7 @@ return control to runtime
 resume function later with result
 ```
 
-## Async function luôn wrap return value thành Promise outcome
+## Async hàm (function / 함수) luôn wrap return giá trị (value / 값) thành Promise kết quả (outcome / 결과)
 
 ```js
 async function getNumber() {
@@ -1680,7 +1683,7 @@ async function getUser() {
 }
 ```
 
-async function adopt eventual result, không tạo “Promise bên trong Promise” theo cách caller phải await hai lần.
+async hàm (function / 함수) adopt eventual kết quả (result / 결과), không tạo “Promise bên trong Promise” theo cách caller phải await hai lần.
 
 Nếu throw:
 
@@ -1704,7 +1707,7 @@ async function run() {
 }
 ```
 
-Nếu `startAsyncWork()` trả Promise reject sau đó mà bạn không `await`/return nó, rejection tách khỏi synchronous `try` flow.
+Nếu `startAsyncWork()` trả Promise reject sau đó mà bạn không `await`/return nó, rejection tách khỏi synchronous `try` luồng (flow / 흐름).
 
 ```js
 async function run() {
@@ -1716,18 +1719,18 @@ async function run() {
 }
 ```
 
-Đây là nguồn phổ biến của unhandled rejections trong code tưởng rằng đã có try/catch.
+Đây là nguồn phổ biến của unhandled rejections trong mã (code / 코드) tưởng rằng đã có try/catch.
 
-## Start concurrent work trước, await sau
+## Start concurrent công việc (work / 작업) trước, await sau
 
-Hai operation independent nhưng viết:
+Hai thao tác (operation / 연산) independent nhưng viết:
 
 ```js
 const profile = await loadProfile();
 const settings = await loadSettings();
 ```
 
-thì request thứ hai chỉ bắt đầu sau request đầu xong. Nếu independent, có thể start cả hai trước:
+thì yêu cầu (request / 요청) thứ hai chỉ bắt đầu sau yêu cầu (request / 요청) đầu xong. Nếu independent, có thể start cả hai trước:
 
 ```js
 const profilePromise = loadProfile();
@@ -1746,7 +1749,7 @@ const [profile, settings] = await Promise.all([
 ]);
 ```
 
-Senior concern ở đây là **dependency graph**, không phải “await chậm”. Sequential là đúng khi operation B cần result A; concurrent là đúng khi chúng độc lập và concurrency level hợp lý.
+Cấp cao (senior / 시니어) concern ở đây là **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, không phải “await chậm”. Sequential là đúng khi thao tác (operation / 연산) B cần kết quả (result / 결과) A; concurrent là đúng khi chúng độc lập và tính đồng thời (concurrency / 동시성) mức (level / 수준) hợp lý.
 
 ### Async `forEach` trap
 
@@ -1772,13 +1775,13 @@ await Promise.all(
 );
 ```
 
-Nhưng với collection rất lớn, `Promise.all(items.map(...))` có thể tạo unbounded concurrency. Senior sẽ dùng pool/semaphore/mapLimit khi cần bound resource pressure.
+Nhưng với collection rất lớn, `Promise.all(items.map(...))` có thể tạo unbounded tính đồng thời (concurrency / 동시성). cấp cao (senior / 시니어) sẽ dùng pool/semaphore/mapLimit khi cần bound tài nguyên (resource / 자원) pressure.
 
 ---
 
-# Chương 23 — Event Loop: synchronous stack, tasks và microtasks
+# Chương 23 — vòng lặp sự kiện (event loop / 이벤트 루프): synchronous ngăn xếp (stack / 스택), tasks và microtasks
 
-Browser JavaScript thường chạy UI JS trên main thread. Event loop phối hợp call stack, tasks, microtasks và rendering opportunities.
+Trình duyệt (browser / 브라우저) JavaScript thường chạy UI JS trên main luồng thực thi (thread / 스레드). vòng lặp sự kiện (event loop / 이벤트 루프) phối hợp ngăn xếp lời gọi (call stack / 호출 스택), tasks, microtasks và rendering opportunities.
 
 ```js
 console.log("A");
@@ -1794,7 +1797,7 @@ setTimeout(() => {
 console.log("D");
 ```
 
-Typical output:
+Typical đầu ra (output / 출력):
 
 ```text
 A
@@ -1803,7 +1806,7 @@ B
 C
 ```
 
-Current synchronous stack chạy trước. Promise continuation được schedule như microtask. Timer callback là task và thường chạy sau microtasks của current turn.
+Hiện tại (current / 현재) synchronous ngăn xếp (stack / 스택) chạy trước. Promise continuation được schedule như microtask. Timer callback là tác vụ (task / 작업) và thường chạy sau microtasks của hiện tại (current / 현재) turn.
 
 `queueMicrotask`:
 
@@ -1813,9 +1816,9 @@ queueMicrotask(() => {
 });
 ```
 
-## Browser event loop không phải một “queue duy nhất”
+## Trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) không phải một “hàng đợi (queue / 큐) duy nhất”
 
-Mental model beginner thường nói “callback queue”. Đủ để bắt đầu, nhưng ở Intermediate nên nâng lên:
+Mô hình tư duy (mental model / 사고 모델) beginner thường nói “callback hàng đợi (queue / 큐)”. Đủ để bắt đầu, nhưng ở Intermediate nên nâng lên:
 
 ```text
 run one task
@@ -1829,11 +1832,11 @@ possibly update rendering
 select next task
 ```
 
-“Task” có thể đến từ timer, user interaction, networking/other host sources tùy browser specification. Không nên dựa vào một thứ tự tổng quát giữa mọi task source ngoài guarantees cụ thể.
+“tác vụ (task / 작업)” có thể đến từ timer, người dùng (user / 사용자) tương tác (interaction / 상호작용), networking/other host sources tùy trình duyệt (browser / 브라우저) specification. Không nên dựa vào một thứ tự tổng quát giữa mọi tác vụ (task / 작업) nguồn (source / 소스) ngoài guarantees cụ thể.
 
-## Microtask checkpoint drain đến khi queue rỗng
+## Microtask checkpoint drain đến khi hàng đợi (queue / 큐) rỗng
 
-Nếu một microtask enqueue microtask khác, runtime tiếp tục xử lý trước khi quay về task/render opportunity.
+Nếu một microtask enqueue microtask khác, thời gian chạy (runtime / 런타임) tiếp tục xử lý trước khi quay về tác vụ (task / 작업)/kết xuất (render / 렌더링) opportunity.
 
 ```js
 queueMicrotask(() => {
@@ -1845,7 +1848,7 @@ queueMicrotask(() => {
 });
 ```
 
-Điều này giải thích **microtask starvation**: code liên tục enqueue microtasks có thể trì hoãn timers, input và rendering.
+Điều này giải thích **microtask starvation**: mã (code / 코드) liên tục enqueue microtasks có thể trì hoãn timers, đầu vào (input / 입력) và rendering.
 
 ```js
 function loop() {
@@ -1855,7 +1858,7 @@ function loop() {
 loop();
 ```
 
-Đây là code pathological; browser không có cơ hội bình thường để tiến tới task/rendering tiếp theo.
+Đây là mã (code / 코드) pathological; trình duyệt (browser / 브라우저) không có cơ hội bình thường để tiến tới tác vụ (task / 작업)/rendering tiếp theo.
 
 ## Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling
 
@@ -1877,11 +1880,11 @@ queueMicrotask(() => {
 console.log("B");
 ```
 
-Các microtasks được enqueue theo order runtime tạo chúng, nên mental trace quan trọng là **thời điểm enqueue**, không phải syntax trông “Promise quan trọng hơn queueMicrotask”.
+Các microtasks được enqueue theo thứ tự (order / 순서) thời gian chạy (runtime / 런타임) tạo chúng, nên mental dấu vết (trace / 추적) quan trọng là **thời điểm enqueue**, không phải cú pháp (syntax / 문법) trông “Promise quan trọng hơn queueMicrotask”.
 
-## Rendering không xảy ra sau mọi dòng code
+## Rendering không xảy ra sau mọi dòng mã (code / 코드)
 
-Browser thường có rendering opportunities giữa event-loop turns/checkpoints khi phù hợp. Nếu một task synchronous dài 200ms, browser không thể paint UI giữa các dòng JavaScript đó dù bạn vừa thay DOM ở đầu task.
+Trình duyệt (browser / 브라우저) thường có rendering opportunities giữa event-loop turns/checkpoints khi phù hợp. Nếu một tác vụ (task / 작업) synchronous dài 200ms, trình duyệt (browser / 브라우저) không thể paint UI giữa các dòng JavaScript đó dù bạn vừa thay DOM ở đầu tác vụ (task / 작업).
 
 ```js
 button.textContent = "Working...";
@@ -1889,13 +1892,13 @@ button.textContent = "Working...";
 heavySynchronousWork();
 ```
 
-Nếu `heavySynchronousWork()` block lâu, user có thể chưa nhìn thấy text mới cho đến khi task kết thúc và browser có cơ hội render.
+Nếu `heavySynchronousWork()` khối (block / 블록) lâu, người dùng (user / 사용자) có thể chưa nhìn thấy văn bản (text / 텍스트) mới cho đến khi tác vụ (task / 작업) kết thúc và trình duyệt (browser / 브라우저) có cơ hội kết xuất (render / 렌더링).
 
-Đây là lý do long task ảnh hưởng responsiveness.
+Đây là lý do long tác vụ (task / 작업) ảnh hưởng responsiveness.
 
 ## `requestAnimationFrame()` không phải microtask hay timer replacement chung
 
-`requestAnimationFrame()` là Web API để schedule callback phù hợp với rendering cycle. Nó hữu ích cho animation/DOM visual update coordination, không phải mechanism để chạy mọi business async work.
+`requestAnimationFrame()` là Web API để schedule callback phù hợp với rendering cycle. Nó hữu ích cho animation/DOM visual cập nhật (update / 업데이트) coordination, không phải cơ chế (mechanism / 메커니즘) để chạy mọi nghiệp vụ (business / 비즈니스) async công việc (work / 작업).
 
 ```js
 requestAnimationFrame(() => {
@@ -1903,9 +1906,9 @@ requestAnimationFrame(() => {
 });
 ```
 
-Trong background tab, rendering/rAF có thể throttled hoặc pause tùy browser. Vì vậy đừng dùng rAF làm business clock.
+Trong background tab, rendering/rAF có thể throttled hoặc pause tùy trình duyệt (browser / 브라우저). Vì vậy đừng dùng rAF làm nghiệp vụ (business / 비즈니스) clock.
 
-## Trace một ví dụ đầy đủ
+## Dấu vết (trace / 추적) một ví dụ đầy đủ
 
 ```js
 console.log("script start");
@@ -1929,7 +1932,7 @@ queueMicrotask(() => {
 console.log("script end");
 ```
 
-Trace:
+Dấu vết (trace / 추적):
 
 ```text
 current task:
@@ -1949,7 +1952,7 @@ later task:
   timer
 ```
 
-Output:
+Đầu ra (output / 출력):
 
 ```text
 script start
@@ -1960,21 +1963,21 @@ promise 2
 timer
 ```
 
-Cách trace này đáng tin cậy hơn học thuộc một vài câu “Promise trước setTimeout”.
+Cách dấu vết (trace / 추적) này đáng tin cậy hơn học thuộc một vài câu “Promise trước setTimeout”.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Microtasks có priority cao đến mức một chain microtasks dài có thể trì hoãn rendering/tasks. Không dùng scheduling tricks nếu không hiểu reason.
+Microtasks có priority cao đến mức một chuỗi (chain / 사슬) microtasks dài có thể trì hoãn rendering/tasks. Không dùng scheduling tricks nếu không hiểu reason.
 
 ---
 
 # Chương 24 — Timer không phải clock chính xác
 
-`setTimeout(fn, 1000)` nghĩa gần như “đừng chạy callback trước khoảng delay này, sau đó schedule khi event loop có cơ hội”, không phải guarantee 1000ms chính xác.
+`setTimeout(fn, 1000)` nghĩa gần như “đừng chạy callback trước khoảng delay này, sau đó schedule khi vòng lặp sự kiện (event loop / 이벤트 루프) có cơ hội”, không phải guarantee 1000ms chính xác.
 
-Main thread bị block 3 giây thì timer 1 giây cũng chạy muộn.
+Main luồng thực thi (thread / 스레드) bị khối (block / 블록) 3 giây thì timer 1 giây cũng chạy muộn.
 
-`setInterval` có thể không phù hợp cho async polling nếu operation kéo dài. Recursive `setTimeout` giúp schedule lần sau sau khi lần hiện tại hoàn thành:
+`setInterval` có thể không phù hợp cho async polling nếu thao tác (operation / 연산) kéo dài. Recursive `setTimeout` giúp schedule lần sau sau khi lần hiện tại hoàn thành:
 
 ```js
 async function poll() {
@@ -1993,7 +1996,7 @@ poll();
 
 # Chương 25 — Promise combinators
 
-> **Version note:** `all()`/`race()` đi với Promise ES2015; `allSettled()` là ES2020; `any()` + `AggregateError` là ES2021; `withResolvers()` là ES2024; `try()` là ES2025. Chọn combinator theo failure semantics chứ không theo độ mới.
+> **phiên bản (version / 버전) ghi chú (note / 노트):** `all()`/`race()` đi với Promise ES2015; `allSettled()` là ES2020; `any()` + `AggregateError` là ES2021; `withResolvers()` là ES2024; `try()` là ES2025. Chọn combinator theo thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) chứ không theo độ mới.
 
 `Promise.all` đợi tất cả và reject khi một promise reject.
 
@@ -2004,23 +2007,23 @@ const [user, orders] = await Promise.all([
 ]);
 ```
 
-`Promise.allSettled` đợi tất cả, useful cho batch nơi partial failure hợp lệ.
+`Promise.allSettled` đợi tất cả, useful cho batch nơi partial thất bại (failure / 실패) hợp lệ.
 
 `Promise.race` settle theo promise đầu tiên settle. Nhưng losing promises **không tự cancel**.
 
 `Promise.any` fulfill theo promise đầu tiên fulfill; nếu tất cả reject thì `AggregateError`.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Chọn combinator theo business semantics. `all` nghĩa “tất cả cần thành công”. `allSettled` nghĩa “tôi quan tâm result từng task kể cả failure”.
+Chọn combinator theo nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론). `all` nghĩa “tất cả cần thành công”. `allSettled` nghĩa “tôi quan tâm kết quả (result / 결과) từng tác vụ (task / 작업) kể cả thất bại (failure / 실패)”.
 
 ---
 
 # Chương 26 — AbortController và cancellation
 
-> **Platform version note:** `AbortController`/`AbortSignal` là Web APIs, không phải ECMAScript yearly feature. `AbortSignal.timeout()` và `AbortSignal.any()` cũng có browser-compatibility timeline riêng. Vì vậy hãy kiểm tra target WebView/browser thay vì hỏi chúng thuộc ES version nào.
+> **nền tảng (platform / 플랫폼) phiên bản (version / 버전) ghi chú (note / 노트):** `AbortController`/`AbortSignal` là Web APIs, không phải ECMAScript yearly tính năng (feature / 기능). `AbortSignal.timeout()` và `AbortSignal.any()` cũng có browser-compatibility timeline riêng. Vì vậy hãy kiểm tra mục tiêu (target / 대상) WebView/trình duyệt (browser / 브라우저) thay vì hỏi chúng thuộc ES phiên bản (version / 버전) nào.
 
-Promise tự thân không có universal cancellation. Browser APIs như fetch nhận `AbortSignal`.
+Promise tự thân không có universal cancellation. trình duyệt (browser / 브라우저) APIs như fetch nhận `AbortSignal`.
 
 ```js
 const controller = new AbortController();
@@ -2032,7 +2035,7 @@ fetch("/api/users", {
 controller.abort();
 ```
 
-Service API nên nhận signal từ caller:
+Dịch vụ (service / 서비스) API nên nhận tín hiệu (signal / 신호) từ caller:
 
 ```js
 async function loadUser(
@@ -2048,17 +2051,17 @@ async function loadUser(
 }
 ```
 
-### Programming pattern — caller owns lifetime
+### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — caller owns thời gian tồn tại (lifetime / 수명)
 
-Page/component tạo controller và abort khi navigation/unmount/new request làm operation cũ obsolete.
+Page/thành phần (component / 컴포넌트) tạo controller và abort khi điều hướng (navigation / 내비게이션)/unmount/new yêu cầu (request / 요청) làm thao tác (operation / 연산) cũ obsolete.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Cancellation và “ignore stale result” là hai strategies khác nhau. Có operations không cancel được, khi đó request versioning vẫn cần.
+Cancellation và “ignore stale kết quả (result / 결과)” là hai strategies khác nhau. Có operations không cancel được, khi đó yêu cầu (request / 요청) versioning vẫn cần.
 
 ---
 
-# Chương 27 — Race condition và stale results
+# Chương 27 — Race điều kiện (condition / 조건) và stale results
 
 Autocomplete example:
 
@@ -2069,11 +2072,11 @@ B trả về trước
 A trả về sau
 ```
 
-Nếu render result cuối cùng nhận được, UI có thể quay về kết quả cũ của A.
+Nếu kết xuất (render / 렌더링) kết quả (result / 결과) cuối cùng nhận được, UI có thể quay về kết quả cũ của A.
 
-Strategy 1: abort old request.
+Chiến lược (strategy / 전략) 1: abort old yêu cầu (request / 요청).
 
-Strategy 2: request version:
+Chiến lược (strategy / 전략) 2: yêu cầu (request / 요청) phiên bản (version / 버전):
 
 ```js
 let requestId = 0;
@@ -2090,15 +2093,15 @@ async function search(keyword) {
 }
 ```
 
-Race condition là vấn đề timing, không phải syntax.
+Race điều kiện (condition / 조건) là vấn đề timing, không phải cú pháp (syntax / 문법).
 
 ---
 
-# Chương 28 — Iterator protocol
+# Chương 28 — Iterator giao thức (protocol / 프로토콜)
 
-> **Version note — ES2015 và ES2025:** Iterator protocol, `Symbol.iterator`, `for...of` và generators thuộc ES2015. ES2025 bổ sung global `Iterator` cùng helpers như `map`, `filter`, `take`, `drop`, `flatMap`, `reduce` và `toArray` cho lazy pipelines.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2015 và ES2025:** Iterator giao thức (protocol / 프로토콜), `Symbol.iterator`, `for...of` và generators thuộc ES2015. ES2025 bổ sung toàn cục (global / 전역) `Iterator` cùng helpers như `map`, `filter`, `take`, `drop`, `flatMap`, `reduce` và `toArray` cho lazy pipelines.
 
-Iterable object có `Symbol.iterator` trả iterator. Iterator có `next()` trả `{ value, done }`.
+Iterable đối tượng (object / 객체) có `Symbol.iterator` trả iterator. Iterator có `next()` trả `{ value, done }`.
 
 ```js
 const iterator = [10, 20][Symbol.iterator]();
@@ -2107,9 +2110,9 @@ iterator.next();
 // { value: 10, done: false }
 ```
 
-`for...of` sử dụng iterable protocol.
+`for...of` sử dụng iterable giao thức (protocol / 프로토콜).
 
-Array, String, Map, Set đều iterable. Plain object không iterable mặc định.
+Array, String, Map, Set đều iterable. Plain đối tượng (object / 객체) không iterable mặc định.
 
 Custom iterable:
 
@@ -2140,17 +2143,17 @@ const range = {
 };
 ```
 
-### Design pattern
+### Mẫu thiết kế (design pattern / 디자인 패턴)
 
-Đây chính là Iterator Pattern ở language level.
+Đây chính là Iterator mẫu (pattern / 패턴) ở ngôn ngữ (language / 언어) mức (level / 수준).
 
 ---
 
 # Chương 29 — Generator và lazy evaluation
 
-> **Version note — ES2015/ES6:** Generator `function*`/`yield` thuộc ES2015. Async generators là bước phát triển tiếp theo và thuộc ES2018.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2015/ES6:** Generator `function*`/`yield` thuộc ES2015. Async generators là bước phát triển tiếp theo và thuộc ES2018.
 
-Generator function:
+Generator hàm (function / 함수):
 
 ```js
 function* range(start, end) {
@@ -2170,9 +2173,9 @@ for (const value of range(1, 3)) {
 }
 ```
 
-Generator tạo values lazily, khi consumer yêu cầu.
+Generator tạo values lazily, khi bên tiêu thụ (consumer / 소비자) yêu cầu.
 
-Infinite sequence:
+Infinite chuỗi (sequence / 시퀀스):
 
 ```js
 function* ids() {
@@ -2185,9 +2188,9 @@ function* ids() {
 }
 ```
 
-Không tạo infinite array trong memory.
+Không tạo infinite array trong bộ nhớ (memory / 메모리).
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 Generator rất hữu ích cho lazy pipelines nhưng array methods đơn giản hơn cho ordinary small collections. Đừng dùng generator chỉ để thể hiện advanced skill.
 
@@ -2195,7 +2198,7 @@ Generator rất hữu ích cho lazy pipelines nhưng array methods đơn giản 
 
 # Chương 30 — Async iterator và `for await...of`
 
-> **Version note — ES2018:** Async iteration, async iterator protocol, async generators và `for await...of` được chuẩn hóa ở ES2018. Legacy runtimes trước đó thường dùng event/callback/Promise loops cho các flow tương tự.
+> **phiên bản (version / 버전) ghi chú (note / 노트) — ES2018:** Async iteration, async iterator giao thức (protocol / 프로토콜), async generators và `for await...of` được chuẩn hóa ở ES2018. Legacy runtimes trước đó thường dùng sự kiện (event / 이벤트)/callback/Promise loops cho các luồng (flow / 흐름) tương tự.
 
 Async generator:
 
@@ -2216,7 +2219,7 @@ async function* pages() {
 }
 ```
 
-Consumer:
+Bên tiêu thụ (consumer / 소비자):
 
 ```js
 for await (const items of pages()) {
@@ -2224,13 +2227,13 @@ for await (const items of pages()) {
 }
 ```
 
-Concept này useful cho pagination, streams và progressive data. Senior sẽ học backpressure sâu hơn.
+Concept này useful cho pagination, streams và progressive dữ liệu (data / 데이터). cấp cao (senior / 시니어) sẽ học backpressure sâu hơn.
 
 ---
 
 # Chương 31 — Functional programming thực dụng
 
-Bạn không cần biến JavaScript thành pure-functional language. Các ý hữu ích nhất là pure function, immutability, composition, declarative transformations và side-effect boundaries.
+Bạn không cần biến JavaScript thành pure-functional ngôn ngữ (language / 언어). Các ý hữu ích nhất là pure hàm (function / 함수), immutability, composition, declarative transformations và side-effect boundaries.
 
 ```js
 function calculateTax(
@@ -2241,11 +2244,11 @@ function calculateTax(
 }
 ```
 
-Pure function dễ test vì output chỉ phụ thuộc input.
+Pure hàm (function / 함수) dễ kiểm thử (test / 테스트) vì đầu ra (output / 출력) chỉ phụ thuộc đầu vào (input / 입력).
 
-Side effects như network/storage/DOM vẫn cần, nhưng nên explicit ở boundary.
+Side effects như mạng (network / 네트워크)/lưu trữ (storage / 저장소)/DOM vẫn cần, nhưng nên tường minh (explicit / 명시적) ở ranh giới (boundary / 경계).
 
-### Programming pattern — Functional Core / Imperative Shell
+### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — Functional cốt lõi (core / 핵심) / Imperative Shell
 
 ```text
 read input
@@ -2263,7 +2266,7 @@ render
 
 # Chương 32 — Immutability và structural sharing
 
-Immutable update:
+Immutable cập nhật (update / 업데이트):
 
 ```js
 const nextUser = {
@@ -2284,19 +2287,19 @@ const nextState = {
 };
 ```
 
-Chỉ branches thay đổi có object mới; branches khác giữ reference cũ. Đây là **structural sharing**.
+Chỉ branches thay đổi có đối tượng (object / 객체) mới; branches khác giữ tham chiếu (reference / 참조) cũ. Đây là **structural sharing**.
 
-Nó hữu ích cho reference equality và change detection trong UI state systems.
+Nó hữu ích cho tham chiếu (reference / 참조) equality và thay đổi (change / 변경) detection trong UI trạng thái (state / 상태) các hệ thống (systems / 시스템들).
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Immutability không miễn phí. Copy object graph cực lớn có cost. Local mutation trong isolated algorithm vẫn có thể hợp lý. Mục tiêu là kiểm soát shared state, không phải cấm assignment.
+Immutability không miễn phí. bản sao (copy / 복사) đối tượng (object / 객체) đồ thị (graph / 그래프) cực lớn có chi phí (cost / 비용). cục bộ (local / 로컬) mutation trong isolated thuật toán (algorithm / 알고리즘) vẫn có thể hợp lý. Mục tiêu là kiểm soát trạng thái dùng chung (shared state / 공유 상태), không phải cấm assignment.
 
 ---
 
-# Chương 33 — Function composition, pipe và partial application
+# Chương 33 — hàm (function / 함수) composition, pipe và partial ứng dụng (application / 애플리케이션)
 
-Composition nối output của function này vào input function khác.
+Composition nối đầu ra (output / 출력) của hàm (function / 함수) này vào đầu vào (input / 입력) hàm (function / 함수) khác.
 
 ```js
 const trim = (value) => value.trim();
@@ -2324,7 +2327,7 @@ const normalize = pipe(
 );
 ```
 
-Partial application preconfigures arguments:
+Partial ứng dụng (application / 애플리케이션) preconfigures arguments:
 
 ```js
 function request(baseUrl, path) {
@@ -2337,15 +2340,15 @@ const apiRequest = request.bind(
 );
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Composition tốt khi contracts nhỏ/rõ. Pipeline quá abstract có thể khó debug hơn vài statements bình thường.
+Composition tốt khi contracts nhỏ/rõ. chuỗi xử lý (pipeline / 파이프라인) quá abstract có thể khó gỡ lỗi (debug / 디버그) hơn vài statements bình thường.
 
 ---
 
 # Chương 34 — Memoization và caching computation
 
-Memoization cache output theo input.
+Memoization bộ nhớ đệm (cache / 캐시) đầu ra (output / 출력) theo đầu vào (input / 입력).
 
 ```js
 function memoize(fn) {
@@ -2367,15 +2370,15 @@ Phù hợp khi computation expensive, deterministic và same inputs lặp lại.
 
 ### Risks
 
-Cache có thể tăng memory vô hạn nếu key space không bounded. Object keys dựa identity, nên hai `{ id: 1 }` khác nhau là keys khác. Đừng memoize cheap function chỉ vì có thể.
+Bộ nhớ đệm (cache / 캐시) có thể tăng bộ nhớ (memory / 메모리) vô hạn nếu key không gian (space / 공간) không bounded. đối tượng (object / 객체) keys dựa định danh (identity / 식별자), nên hai `{ id: 1 }` khác nhau là keys khác. Đừng memoize cheap hàm (function / 함수) chỉ vì có thể.
 
 ---
 
-# Chương 35 — Event bubbling, capturing và delegation
+# Chương 35 — sự kiện (event / 이벤트) bubbling, capturing và delegation
 
-DOM event thường travel qua capture phase, target phase và bubble phase. `addEventListener` mặc định nghe bubble phase.
+DOM sự kiện (event / 이벤트) thường travel qua capture phase, mục tiêu (target / 대상) phase và bubble phase. `addEventListener` mặc định nghe bubble phase.
 
-Event delegation tận dụng bubbling để gắn một listener ở parent thay vì từng child.
+Sự kiện (event / 이벤트) delegation tận dụng bubbling để gắn một listener ở parent thay vì từng child.
 
 ```js
 list.addEventListener(
@@ -2396,15 +2399,15 @@ list.addEventListener(
 );
 ```
 
-Benefits: ít listeners hơn, dynamic children vẫn được handle.
+Benefits: ít listeners hơn, động (dynamic / 동적) children vẫn được handle.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
 `event.target` có thể là nested child. `closest()` cần guard để không match element ngoài intended subtree trong complex DOM.
 
 ---
 
-# Chương 36 — DOM lifecycle: init và cleanup
+# Chương 36 — DOM vòng đời (lifecycle / 생명주기): init và cleanup
 
 ```js
 function init() {
@@ -2422,15 +2425,15 @@ function destroy() {
 }
 ```
 
-Lifecycle pattern phải áp dụng cho listener, timer, observer, subscription, worker và network cancellation.
+Vòng đời (lifecycle / 생명주기) mẫu (pattern / 패턴) phải áp dụng cho listener, timer, observer, subscription, worker và mạng (network / 네트워크) cancellation.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Memory leak frontend thường là **ownership/lifecycle bug**, không phải “GC kém”. Ai tạo resource thì architecture phải biết ai cleanup và khi nào.
+Bộ nhớ (memory / 메모리) leak frontend thường là **quyền sở hữu (ownership / 소유권)/vòng đời (lifecycle / 생명주기) bug**, không phải “GC kém”. Ai tạo tài nguyên (resource / 자원) thì kiến trúc (architecture / 아키텍처) phải biết ai cleanup và khi nào.
 
 ---
 
-# Chương 37 — Browser rendering pipeline ở mức Intermediate
+# Chương 37 — trình duyệt (browser / 브라우저) rendering chuỗi xử lý (pipeline / 파이프라인) ở mức Intermediate
 
 High-level:
 
@@ -2446,7 +2449,7 @@ paint
 composite
 ```
 
-DOM read như `offsetWidth` có thể cần layout data. DOM write như thay `style.width` có thể invalidate layout. Interleave read/write nhiều lần có thể gây layout thrashing.
+DOM read như `offsetWidth` có thể cần bố cục (layout / 레이아웃) dữ liệu (data / 데이터). DOM ghi (write / 쓰기) như thay `style.width` có thể invalidate bố cục (layout / 레이아웃). Interleave read/ghi (write / 쓰기) nhiều lần có thể gây bố cục (layout / 레이아웃) thrashing.
 
 Batch reads rồi writes:
 
@@ -2463,15 +2466,15 @@ requestAnimationFrame(() => {
 });
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Không assume mọi DOM write đều expensive ngang nhau. Performance phải profile trên workload thật.
+Không assume mọi DOM ghi (write / 쓰기) đều expensive ngang nhau. hiệu năng (performance / 성능) phải profile trên tải công việc (workload / 워크로드) thật.
 
 ---
 
-# Chương 38 — API client abstraction
+# Chương 38 — API máy khách (client / 클라이언트) lớp trừu tượng (abstraction / 추상화)
 
-Raw fetch rải khắp project gây duplicate headers, auth, error handling, JSON parsing.
+Raw fetch rải khắp dự án (project / 프로젝트) gây duplicate headers, auth, lỗi (error / 오류) handling, JSON parsing.
 
 Một wrapper transport-level:
 
@@ -2506,7 +2509,7 @@ async function requestJson(
 }
 ```
 
-Feature-specific service:
+Feature-specific dịch vụ (service / 서비스):
 
 ```js
 const userApi = {
@@ -2518,15 +2521,15 @@ const userApi = {
 };
 ```
 
-### Design pattern connection
+### Mẫu thiết kế (design pattern / 디자인 패턴) liên kết (connection / 연결)
 
-HTTP wrapper có thể đóng vai Adapter/Facade/Gateway. Generic transport client không nên chứa business rules của User/Order.
+HTTP wrapper có thể đóng vai Adapter/Facade/Gateway. Generic vận chuyển (transport / 전송) máy khách (client / 클라이언트) không nên chứa nghiệp vụ (business / 비즈니스) rules của người dùng (user / 사용자)/thứ tự (order / 순서).
 
 ---
 
-# Chương 39 — Error architecture và custom error taxonomy
+# Chương 39 — lỗi (error / 오류) kiến trúc (architecture / 아키텍처) và custom lỗi (error / 오류) taxonomy
 
-Không phải mọi error nên được catch ngay nơi phát sinh. Infrastructure layer có thể tạo stable error structure; UI layer chuyển error thành user message.
+Không phải mọi lỗi (error / 오류) nên được catch ngay nơi phát sinh. hạ tầng (infrastructure / 인프라) tầng (layer / 계층) có thể tạo stable lỗi (error / 오류) cấu trúc (structure / 구조); UI tầng (layer / 계층) chuyển lỗi (error / 오류) thành người dùng (user / 사용자) message.
 
 ```js
 class HttpError extends Error {
@@ -2539,7 +2542,7 @@ class HttpError extends Error {
 }
 ```
 
-Service:
+Dịch vụ (service / 서비스):
 
 ```js
 async function loadUser(id) {
@@ -2554,17 +2557,17 @@ async function loadUser(id) {
 }
 ```
 
-`cause` giữ causal chain.
+`cause` giữ chuỗi nhân quả (causal chain / 인과 사슬).
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Error type/code là API contract. Đừng parse message string để quyết định logic. User-facing message và diagnostic details nên tách.
+Lỗi (error / 오류) kiểu (type / 타입)/mã (code / 코드) là Đặc tả API (API contract / API 계약). Đừng parse message string để quyết định lô-gic (logic / 논리). User-facing message và diagnostic details nên tách.
 
 ---
 
-# Chương 40 — Retry và timeout fundamentals
+# Chương 40 — thử lại (retry / 재시도) và hết thời gian chờ (timeout / 타임아웃) fundamentals
 
-Timeout với AbortController:
+Hết thời gian chờ (timeout / 타임아웃) với AbortController:
 
 ```js
 async function fetchWithTimeout(
@@ -2588,9 +2591,9 @@ async function fetchWithTimeout(
 }
 ```
 
-Retry chỉ phù hợp cho transient failures. Validation 400 hoặc permission 403 không tự hết vì retry.
+Thử lại (retry / 재시도) chỉ phù hợp cho transient failures. kiểm tra hợp lệ (validation / 검증) 400 hoặc permission 403 không tự hết vì thử lại (retry / 재시도).
 
-Naive retry:
+Naive thử lại (retry / 재시도):
 
 ```js
 async function retry(operation, attempts = 3) {
@@ -2612,11 +2615,11 @@ async function retry(operation, attempts = 3) {
 }
 ```
 
-Senior sẽ học exponential backoff, jitter, idempotency và retry storm.
+Cấp cao (senior / 시니어) sẽ học exponential backoff, jitter, idempotency và thử lại (retry / 재시도) storm.
 
 ---
 
-# Chương 41 — DTO Mapping và Anti-Corruption Boundary
+# Chương 41 — DTO ánh xạ (mapping / 매핑) và Anti-Corruption ranh giới (boundary / 경계)
 
 Backend legacy có thể trả:
 
@@ -2628,7 +2631,7 @@ Backend legacy có thể trả:
 }
 ```
 
-Frontend domain muốn:
+Frontend lĩnh vực (domain / 도메인) muốn:
 
 ```js
 {
@@ -2650,15 +2653,15 @@ function mapUserDto(dto) {
 }
 ```
 
-Đây là Adapter/Mapper/Anti-Corruption Layer. Nó rất hữu ích cho Java/Spring legacy backend, WebSquare DataMap/DataList và vendor/native APIs.
+Đây là Adapter/Mapper/Anti-Corruption tầng (layer / 계층). Nó rất hữu ích cho Java/Spring legacy backend, WebSquare DataMap/DataList và vendor/bản địa (native / 네이티브) APIs.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Không cần mapper nếu external và internal shapes thật sự giống và không có semantic benefit. Layer chỉ có giá trị khi nó bảo vệ boundary hoặc chuyển meaning.
+Không cần mapper nếu bên ngoài (external / 외부) và nội bộ (internal / 내부) shapes thật sự giống và không có ngữ nghĩa (semantic / 의미적) benefit. tầng (layer / 계층) chỉ có giá trị khi nó bảo vệ ranh giới (boundary / 경계) hoặc chuyển meaning.
 
 ---
 
-# Chương 42 — State modeling và Boolean Explosion
+# Chương 42 — trạng thái (state / 상태) modeling và Boolean Explosion
 
 Bad:
 
@@ -2668,7 +2671,7 @@ let isSuccess = false;
 let hasError = false;
 ```
 
-Bạn có thể tạo state vô lý: cả ba true.
+Bạn có thể tạo trạng thái (state / 상태) vô lý: cả ba true.
 
 Tốt hơn:
 
@@ -2689,7 +2692,7 @@ loading → error
 error → loading
 ```
 
-### Programming pattern — explicit state machine lite
+### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — tường minh (explicit / 명시적) máy trạng thái (state machine / 상태 머신) lite
 
 ```js
 const STATUS = {
@@ -2700,15 +2703,15 @@ const STATUS = {
 };
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Nhiều “React/WebSquare state bug” thật ra là modeling bug, không phải framework bug.
+Nhiều “React/WebSquare trạng thái (state / 상태) bug” thật ra là modeling bug, không phải khung phần mềm (framework / 프레임워크) bug.
 
 ---
 
-# Chương 43 — Reducer Pattern
+# Chương 43 — Reducer mẫu (pattern / 패턴)
 
-Reducer là pure-ish state transition function:
+Reducer là pure-ish chuyển tiếp trạng thái (state transition / 상태 전이) hàm (function / 함수):
 
 ```js
 function reducer(state, action) {
@@ -2732,7 +2735,7 @@ function reducer(state, action) {
 }
 ```
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 previous state
@@ -2742,17 +2745,17 @@ action
 next state
 ```
 
-Reducer không nên tự fetch/network. Side effect orchestration nên ở layer khác.
+Reducer không nên tự fetch/mạng (network / 네트워크). Side tác động (effect / 효과) orchestration nên ở tầng (layer / 계층) khác.
 
-### Design connections
+### Thiết kế (design / 설계) connections
 
-Reducer liên quan State Pattern, Command-like actions và event-driven state transitions.
+Reducer liên quan trạng thái (state / 상태) mẫu (pattern / 패턴), Command-like actions và event-driven trạng thái (state / 상태) transitions.
 
 ---
 
 # Chương 44 — Observer và Pub/Sub
 
-Observer: subject giữ list observers/subscribers và notify họ.
+Observer: subject giữ danh sách (list / 목록) observers/subscribers và notify họ.
 
 ```js
 function createStore() {
@@ -2776,15 +2779,15 @@ function createStore() {
 }
 ```
 
-Pub/Sub thường có broker/event bus ở giữa, publisher không biết subscribers trực tiếp.
+Pub/Sub thường có broker/sự kiện (event / 이벤트) bus ở giữa, publisher không biết subscribers trực tiếp.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Event bus giảm coupling trực tiếp nhưng tạo hidden dependency. Event names trở thành implicit API và debug flow khó hơn. Direct function call tốt hơn khi dependency explicit không phải vấn đề.
+Sự kiện (event / 이벤트) bus giảm coupling trực tiếp nhưng tạo hidden phụ thuộc (dependency / 의존성). sự kiện (event / 이벤트) names trở thành implicit API và gỡ lỗi (debug / 디버그) luồng (flow / 흐름) khó hơn. Direct hàm (function / 함수) lời gọi (call / 호출) tốt hơn khi phụ thuộc (dependency / 의존성) tường minh (explicit / 명시적) không phải vấn đề.
 
 ---
 
-# Chương 45 — Strategy Pattern bằng function
+# Chương 45 — chiến lược (strategy / 전략) mẫu (pattern / 패턴) bằng hàm (function / 함수)
 
 ```js
 const discountStrategies = {
@@ -2809,11 +2812,11 @@ const strategy =
   discountStrategies.normal;
 ```
 
-Strategy phù hợp khi behaviors thật sự interchangeable. Hai branches nhỏ bằng `if` chưa cần pattern.
+Chiến lược (strategy / 전략) phù hợp khi behaviors thật sự interchangeable. Hai branches nhỏ bằng `if` chưa cần mẫu (pattern / 패턴).
 
 ---
 
-# Chương 46 — Factory Pattern
+# Chương 46 — Factory mẫu (pattern / 패턴)
 
 Factory centralizes construction rules:
 
@@ -2841,11 +2844,11 @@ function createUser({
 }
 ```
 
-Factory có thể return plain object, function hoặc class instance. Không cần Factory chỉ để wrap `{ name }` nếu không có construction logic.
+Factory có thể return plain đối tượng (object / 객체), hàm (function / 함수) hoặc lớp (class / 클래스) instance. Không cần Factory chỉ để wrap `{ name }` nếu không có construction lô-gic (logic / 논리).
 
 ---
 
-# Chương 47 — Adapter Pattern
+# Chương 47 — Adapter mẫu (pattern / 패턴)
 
 Legacy callback API:
 
@@ -2878,11 +2881,11 @@ function loadUser(id) {
 }
 ```
 
-Adapter cực kỳ phổ biến trong enterprise integration, WebSquare submission/native plugin/vendor SDK.
+Adapter cực kỳ phổ biến trong enterprise tích hợp (integration / 통합), WebSquare submission/bản địa (native / 네이티브) plugin/vendor SDK.
 
 ---
 
-# Chương 48 — Facade Pattern
+# Chương 48 — Facade mẫu (pattern / 패턴)
 
 Facade đưa API đơn giản cho subsystem phức tạp:
 
@@ -2901,13 +2904,13 @@ const checkoutFacade = {
 };
 ```
 
-Facade giảm knowledge caller cần biết. Nhưng nếu facade chứa toàn hệ thống, nó biến thành God Service.
+Facade giảm kiến thức (knowledge / 지식) caller cần biết. Nhưng nếu facade chứa toàn hệ thống, nó biến thành God dịch vụ (service / 서비스).
 
 ---
 
-# Chương 49 — Command Pattern
+# Chương 49 — Command mẫu (pattern / 패턴)
 
-Function registry:
+Hàm (function / 함수) registry:
 
 ```js
 const commands = {
@@ -2917,7 +2920,7 @@ const commands = {
 };
 ```
 
-Command object:
+Command đối tượng (object / 객체):
 
 ```js
 const command = {
@@ -2929,13 +2932,13 @@ const command = {
 };
 ```
 
-Command-as-data hữu ích cho queue, logging, undo/redo, reducers và distributed/event systems.
+Command-as-data hữu ích cho hàng đợi (queue / 큐), logging, undo/redo, reducers và phân tán (distributed / 분산)/sự kiện (event / 이벤트) các hệ thống (systems / 시스템들).
 
 ---
 
-# Chương 50 — Middleware Pattern
+# Chương 50 — Middleware mẫu (pattern / 패턴)
 
-Middleware wrap next operation:
+Middleware wrap next thao tác (operation / 연산):
 
 ```js
 function withLogging(next) {
@@ -2973,17 +2976,17 @@ const request = withLogging(
 );
 ```
 
-Middleware kết hợp ideas của Decorator và Chain of Responsibility.
+Middleware kết hợp ideas của Decorator và chuỗi (chain / 사슬) of Responsibility.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Order matters. Retry/auth/logging wrappers không thể reorder tùy tiện. Middleware contract và mutation policy phải rõ.
+Thứ tự (order / 순서) matters. thử lại (retry / 재시도)/auth/logging wrappers không thể reorder tùy tiện. Middleware đặc tả hợp đồng (contract / 계약) và mutation chính sách (policy / 정책) phải rõ.
 
 ---
 
-# Chương 51 — Dependency Injection không cần framework
+# Chương 51 — phụ thuộc (dependency / 의존성) Injection không cần khung phần mềm (framework / 프레임워크)
 
-Hard-coded dependency:
+Hard-coded phụ thuộc (dependency / 의존성):
 
 ```js
 async function loadUser() {
@@ -3007,7 +3010,7 @@ function createUserService({
 }
 ```
 
-Test fake:
+Kiểm thử (test / 테스트) fake:
 
 ```js
 const fakeHttpClient = {
@@ -3020,15 +3023,15 @@ const fakeHttpClient = {
 };
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-DI không đồng nghĩa Spring container. Function parameter hoặc factory dependency object thường đủ cho frontend.
+DI không đồng nghĩa Spring bộ chứa (container / 컨테이너). hàm (function / 함수) parameter hoặc factory phụ thuộc (dependency / 의존성) đối tượng (object / 객체) thường đủ cho frontend.
 
 ---
 
 # Chương 52 — Testing fundamentals
 
-Pure function:
+Pure hàm (function / 함수):
 
 ```js
 function addTax(price, rate) {
@@ -3036,7 +3039,7 @@ function addTax(price, rate) {
 }
 ```
 
-Test:
+Kiểm thử (test / 테스트):
 
 ```js
 expect(
@@ -3052,19 +3055,19 @@ Act execute
 Assert verify
 ```
 
-Ưu tiên test business rules, boundary cases, error paths, state transitions và mappings.
+Ưu tiên kiểm thử (test / 테스트) nghiệp vụ (business / 비즈니스) rules, ranh giới (boundary / 경계) cases, lỗi (error / 오류) paths, trạng thái (state / 상태) transitions và mappings.
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Coverage % không bằng confidence. Code khó test thường cho thấy coupling hoặc hidden side effects.
+Coverage % không bằng confidence. mã (code / 코드) khó kiểm thử (test / 테스트) thường cho thấy coupling hoặc hidden side effects.
 
 ---
 
 # Chương 53 — Mock, Stub, Spy và Fake
 
-Stub trả canned value. Spy theo dõi call. Mock thường là test double có expectations. Fake là implementation đơn giản nhưng functional.
+Stub trả canned giá trị (value / 값). Spy theo dõi lời gọi (call / 호출). Mock thường là kiểm thử (test / 테스트) double có expectations. Fake là hiện thực (implementation / 구현) đơn giản nhưng functional.
 
-Frontend code thường benefit từ simple fakes hơn heavy mocking.
+Frontend mã (code / 코드) thường benefit từ simple fakes hơn heavy mocking.
 
 ```js
 const fakeApi = {
@@ -3077,15 +3080,15 @@ const fakeApi = {
 };
 ```
 
-### Senior note
+### Cấp cao (senior / 시니어) ghi chú (note / 노트)
 
-Mock boundaries, đừng mock mọi helper nội bộ. Nếu test biết implementation call order quá chi tiết, refactor implementation có thể làm test fail dù behavior không đổi.
+Mock boundaries, đừng mock mọi helper nội bộ. Nếu kiểm thử (test / 테스트) biết hiện thực (implementation / 구현) lời gọi (call / 호출) thứ tự (order / 순서) quá chi tiết, refactor hiện thực (implementation / 구현) có thể làm kiểm thử (test / 테스트) thất bại (fail / 실패) dù hành vi (behavior / 동작) không đổi.
 
 ---
 
 # Chương 54 — Async testing principles
 
-Không nên test bằng arbitrary sleep:
+Không nên kiểm thử (test / 테스트) bằng arbitrary sleep:
 
 ```js
 await new Promise(
@@ -3094,17 +3097,17 @@ await new Promise(
 );
 ```
 
-Prefer chờ actual promise/event/state hoặc dùng fake timers.
+Prefer chờ actual promise/sự kiện (event / 이벤트)/trạng thái (state / 상태) hoặc dùng fake timers.
 
-Test cancellation cần verify operation abort/cleanup đúng. Race condition tests cần control ordering.
+Kiểm thử (test / 테스트) cancellation cần verify thao tác (operation / 연산) abort/cleanup đúng. Race điều kiện (condition / 조건) tests cần điều khiển (control / 제어) thứ tự (ordering / 순서).
 
 ---
 
-# Chương 55 — Debugging runtime ở mức Intermediate
+# Chương 55 — Debugging thời gian chạy (runtime / 런타임) ở mức Intermediate
 
-DevTools Sources cho breakpoint, conditional breakpoint, call stack, scope, closure, watch expressions. Network tab cho request/response/timing. Performance cho long tasks/rendering. Memory cho heap/retainer paths.
+DevTools Sources cho breakpoint, conditional breakpoint, ngăn xếp lời gọi (call stack / 호출 스택), phạm vi (scope / 범위), closure, watch expressions. mạng (network / 네트워크) tab cho yêu cầu (request / 요청)/phản hồi (response / 응답)/timing. hiệu năng (performance / 성능) cho long tasks/rendering. bộ nhớ (memory / 메모리) cho vùng nhớ động (heap / 힙)/retainer paths.
 
-Một quy trình debug tốt:
+Một quy trình gỡ lỗi (debug / 디버그) tốt:
 
 ```text
 reproduce
@@ -3120,21 +3123,21 @@ change one thing
 verify
 ```
 
-Không đổi năm chỗ code cùng lúc rồi đoán chỗ nào fix.
+Không đổi năm chỗ mã (code / 코드) cùng lúc rồi đoán chỗ nào fix.
 
 ---
 
 # Chương 56 — Intermediate Anti-patterns
 
-Promise nesting thay vì chaining/await; missing return trong `.then`; async `forEach`; unbounded `Promise.all`; event bus cho mọi giao tiếp; deep inheritance; class cho stateless utilities; catch rồi return null mọi nơi; optional chaining để che required data; bound callback inline mà không cleanup; service object biết DOM, network, state và analytics cùng lúc; over-abstraction nhiều layer cho CRUD đơn giản; under-abstraction event handler hàng trăm dòng.
+Promise nesting thay vì chaining/await; missing return trong `.then`; async `forEach`; unbounded `Promise.all`; sự kiện (event / 이벤트) bus cho mọi giao tiếp; deep inheritance; lớp (class / 클래스) cho stateless utilities; catch rồi return null mọi nơi; optional chaining để che required dữ liệu (data / 데이터); bound callback inline mà không cleanup; dịch vụ (service / 서비스) đối tượng (object / 객체) biết DOM, mạng (network / 네트워크), trạng thái (state / 상태) và analytics cùng lúc; over-abstraction nhiều tầng (layer / 계층) cho CRUD đơn giản; under-abstraction sự kiện (event / 이벤트) handler hàng trăm dòng.
 
-Mục tiêu của Intermediate là bắt đầu thấy **shape của complexity**, không chỉ syntax.
+Mục tiêu của Intermediate là bắt đầu thấy **shape của độ phức tạp (complexity / 복잡도)**, không chỉ cú pháp (syntax / 문법).
 
 ---
 
-# Chương 57 — Mini Project: Search Page có cancellation và state
+# Chương 57 — Mini dự án (project / 프로젝트): tìm kiếm (search / 검색) Page có cancellation và trạng thái (state / 상태)
 
-State:
+Trạng thái (state / 상태):
 
 ```js
 const state = {
@@ -3145,7 +3148,7 @@ const state = {
 };
 ```
 
-Search service giữ controller hiện tại:
+Tìm kiếm (search / 검색) dịch vụ (service / 서비스) giữ controller hiện tại:
 
 ```js
 function createUserSearchService({
@@ -3173,11 +3176,11 @@ function createUserSearchService({
 }
 ```
 
-Project này kết hợp closure, cancellation, service, state modeling, error handling và lifecycle.
+Dự án (project / 프로젝트) này kết hợp closure, cancellation, dịch vụ (service / 서비스), trạng thái (state / 상태) modeling, lỗi (error / 오류) handling và vòng đời (lifecycle / 생명주기).
 
 ---
 
-# Chương 58 — Mini Project: Event-driven Store
+# Chương 58 — Mini dự án (project / 프로젝트): Event-driven Store
 
 ```js
 function createStore(
@@ -3223,18 +3226,20 @@ function createStore(
 }
 ```
 
-Bạn đang kết hợp closure, private state, reducer, Observer, immutable state và cleanup. Mental model này rất gần nhiều state-management libraries.
+Bạn đang kết hợp closure, private trạng thái (state / 상태), reducer, Observer, immutable trạng thái (state / 상태) và cleanup. mô hình tư duy (mental model / 사고 모델) này rất gần nhiều state-management libraries.
 
 ---
 
 # Chương 59 — Intermediate Exit Criteria
 
-Trước khi lên Senior, bạn phải giải thích được closure sống thế nào, `this` được bind bởi call-site ra sao, arrow khác normal function ở điểm nào, property lookup đi qua prototype chain thế nào, class liên quan prototype ra sao, Promise chain adopt returned Promise như thế nào, event loop xếp synchronous/microtask/task ra sao, sequential và concurrent khác nhau thế nào, vì sao Promise.race không cancel loser, AbortController nên thuộc lifecycle nào, state machine tốt hơn nhiều booleans ở đâu, và Dependency Injection không cần framework thế nào.
+Trước khi lên cấp cao (senior / 시니어), bạn phải giải thích được closure sống thế nào, `this` được bind bởi call-site ra sao, arrow khác normal hàm (function / 함수) ở điểm nào, thuộc tính (property / 속성) lookup đi qua prototype chuỗi (chain / 사슬) thế nào, lớp (class / 클래스) liên quan prototype ra sao, Promise chuỗi (chain / 사슬) adopt returned Promise như thế nào, vòng lặp sự kiện (event loop / 이벤트 루프) xếp synchronous/microtask/tác vụ (task / 작업) ra sao, sequential và concurrent khác nhau thế nào, vì sao Promise.race không cancel loser, AbortController nên thuộc vòng đời (lifecycle / 생명주기) nào, máy trạng thái (state machine / 상태 머신) tốt hơn nhiều booleans ở đâu, và phụ thuộc (dependency / 의존성) Injection không cần khung phần mềm (framework / 프레임워크) thế nào.
 
-Bạn cũng phải có thể refactor một feature trộn DOM + network + business logic thành view/controller/service/pure logic ở mức vừa đủ mà không over-engineer.
+Bạn cũng phải có thể refactor một tính năng (feature / 기능) trộn DOM + mạng (network / 네트워크) + lô-gic nghiệp vụ (business logic / 비즈니스 로직) thành view/controller/dịch vụ (service / 서비스)/pure lô-gic (logic / 논리) ở mức vừa đủ mà không over-engineer.
 
 ---
 
-# Chương 60 — Hướng sang Senior
+# Chương 60 — Hướng sang cấp cao (senior / 시니어)
 
-Senior JavaScript sẽ không tập trung thêm syntax. Nó tập trung runtime/engine, memory/GC, resource ownership, bounded concurrency, Workers/Streams/backpressure, performance profiling, security, XSS/CSP/Trusted Types, prototype pollution, architecture boundaries, resilience, caching, observability và production testing. Đây là bước chuyển từ “developer hiểu language” sang “developer chịu trách nhiệm hệ thống chạy ổn trong production”.
+Cấp cao (senior / 시니어) JavaScript sẽ không tập trung thêm cú pháp (syntax / 문법). Nó tập trung thời gian chạy (runtime / 런타임)/engine, bộ nhớ (memory / 메모리)/GC, tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권), bounded tính đồng thời (concurrency / 동시성), Workers/Streams/backpressure, hiệu năng (performance / 성능) profiling, bảo mật (security / 보안), XSS/CSP/Trusted Types, prototype pollution, kiến trúc (architecture / 아키텍처) boundaries, resilience, caching, khả năng quan sát (observability / 관측 가능성) và môi trường vận hành (production / 운영 환경) testing. Đây là bước chuyển từ “nhà phát triển (developer / 개발자) hiểu ngôn ngữ (language / 언어)” sang “nhà phát triển (developer / 개발자) chịu trách nhiệm hệ thống chạy ổn trong môi trường vận hành (production / 운영 환경)”.
+
+> **Bàn giao:** Sau **cấp cao (senior / 시니어) ghi chú (note / 노트)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,77 +1,106 @@
 # Randomized, approximation và online algorithms
 
-Không phải mọi problem đều cho ta toàn bộ input trước, đủ time để tìm optimum, hoặc có deterministic strategy vừa đơn giản vừa nhanh. Ba families quan trọng xuất hiện từ chính các constraints đó: randomized algorithms dùng randomness như một computational resource; approximation algorithms chấp nhận nghiệm gần tối ưu khi exact optimization quá đắt; online algorithms phải quyết định khi tương lai chưa được biết.
+> **Mạch đọc:** Đặt **Randomized, approximation và online algorithms** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Randomness không phải sự cẩu thả** sang **Las Vegas và Monte Carlo**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Không phải mọi bài toán (problem / 문제) đều cho ta toàn bộ đầu vào (input / 입력) trước, đủ thời gian (time / 시간) để tìm optimum, hoặc có deterministic chiến lược (strategy / 전략) vừa đơn giản vừa nhanh. Ba families quan trọng xuất hiện từ chính các các ràng buộc (constraints / 제약조건들) đó: randomized algorithms dùng randomness như một computational tài nguyên (resource / 자원); approximation algorithms chấp nhận nghiệm gần tối ưu khi chính xác (exact / 정확한) tối ưu hóa (optimization / 최적화) quá đắt; online algorithms phải quyết định khi tương lai chưa được biết.
 
 ## Randomness không phải sự cẩu thả
 
-Randomized algorithm (무작위 알고리즘) đưa random choices vào computation nhưng vẫn được phân tích bằng probability. Randomness có thể giúp phá adversarial structure, đơn giản hóa code hoặc cải thiện expected complexity.
+Randomized thuật toán (algorithm / 알고리즘) đưa random choices vào computation nhưng vẫn được phân tích bằng xác suất (probability / 확률). Randomness có thể giúp phá adversarial cấu trúc (structure / 구조), đơn giản hóa mã (code / 코드) hoặc cải thiện expected độ phức tạp (complexity / 복잡도).
 
-Randomized quicksort chọn pivot ngẫu nhiên. Với mọi input cố định, expected running time là `O(n log n)` nếu randomness đủ tốt. Worst-case `O(n²)` vẫn tồn tại, nhưng xác suất rơi vào chuỗi pivot cực xấu giảm mạnh.
+Randomized quicksort chọn pivot ngẫu nhiên. Với mọi đầu vào (input / 입력) cố định, expected running thời gian (time / 시간) là `O(n log n)` nếu randomness đủ tốt. Worst-case `O(n²)` vẫn tồn tại, nhưng xác suất rơi vào chuỗi pivot cực xấu giảm mạnh.
 
-Điều cần phân biệt là **worst-case over random choices** với **expected cost over random choices**. Đây là hai statements toán học khác nhau.
+Điều cần phân biệt là **worst-case over random choices** với **expected chi phí (cost / 비용) over random choices**. Đây là hai statements toán học khác nhau.
 
 ### Las Vegas và Monte Carlo
 
-Las Vegas algorithms luôn trả kết quả đúng nhưng runtime là random variable. Randomized quicksort là ví dụ điển hình.
+Las Vegas algorithms luôn trả kết quả đúng nhưng thời gian chạy (runtime / 런타임) là random variable. Randomized quicksort là ví dụ điển hình.
 
-Monte Carlo algorithms giới hạn runtime rõ hơn nhưng có probability trả kết quả sai. Bloom filter là một cấu trúc probabilistic: membership query có thể false positive nhưng không false negative nếu dùng đúng model.
+Monte Carlo algorithms giới hạn thời gian chạy (runtime / 런타임) rõ hơn nhưng có xác suất (probability / 확률) trả kết quả sai. Bloom filter là một cấu trúc probabilistic: membership truy vấn (query / 쿼리) có thể false positive nhưng không false negative nếu dùng đúng mô hình (model / 모델).
 
-Trong systems, probabilistic data structures như Bloom filter, HyperLogLog và Count-Min Sketch được dùng vì memory chính xác tuyệt đối có thể quá đắt.
+Trong các hệ thống (systems / 시스템들), probabilistic dữ liệu (data / 데이터) structures như Bloom filter, HyperLogLog và Count-Min Sketch được dùng vì bộ nhớ (memory / 메모리) chính xác tuyệt đối có thể quá đắt.
 
-## Approximation: khi exact optimum quá đắt
 
-Một optimization problem có thể có search space tăng exponential. Nếu problem là NP-hard, exact solution cho input lớn thường không thực tế trừ khi structure đặc biệt hoặc instance nhỏ.
+> **Chuyển mạch:** Từ **Randomness không phải sự cẩu thả**, ta sang **Approximation: khi chính xác (exact / 정확한) optimum quá đắt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Approximation algorithm (근사 알고리즘) cung cấp guarantee định lượng. Ví dụ một 2-approximation cho minimization đảm bảo cost của solution không vượt quá 2 lần optimum.
+## Approximation: khi chính xác (exact / 정확한) optimum quá đắt
 
-Guarantee quan trọng hơn câu “thường chạy tốt”. Nó biến chất lượng solution thành property có thể reasoning.
+Một tối ưu hóa (optimization / 최적화) bài toán (problem / 문제) có thể có tìm kiếm (search / 검색) không gian (space / 공간) tăng exponential. Nếu bài toán (problem / 문제) là NP-hard, chính xác (exact / 정확한) solution cho đầu vào (input / 입력) lớn thường không thực tế trừ khi cấu trúc (structure / 구조) đặc biệt hoặc instance nhỏ.
 
-### Heuristic khác approximation algorithm
+Approximation thuật toán (algorithm / 알고리즘) cung cấp guarantee định lượng. Ví dụ một 2-approximation cho minimization đảm bảo chi phí (cost / 비용) của solution không vượt quá 2 lần optimum.
 
-Heuristic là strategy thực dụng nhưng có thể không có worst-case quality guarantee. Genetic algorithm, simulated annealing hoặc greedy tùy problem có thể rất hữu ích, nhưng không vì thế trở thành approximation algorithm theo nghĩa lý thuyết.
+Guarantee quan trọng hơn câu “thường chạy tốt”. Nó biến chất lượng solution thành thuộc tính (property / 속성) có thể lập luận (reasoning / 추론).
 
-Trong engineering, heuristic hoàn toàn hợp lệ nếu đo được behavior trên workload. Điều cần tránh là gọi empirical success thành mathematical guarantee.
+### Heuristic khác approximation thuật toán (algorithm / 알고리즘)
+
+Heuristic là chiến lược (strategy / 전략) thực dụng nhưng có thể không có worst-case chất lượng (quality / 품질) guarantee. Genetic thuật toán (algorithm / 알고리즘), simulated annealing hoặc greedy tùy bài toán (problem / 문제) có thể rất hữu ích, nhưng không vì thế trở thành approximation thuật toán (algorithm / 알고리즘) theo nghĩa lý thuyết.
+
+Trong kỹ thuật (engineering / 엔지니어링), heuristic hoàn toàn hợp lệ nếu đo được hành vi (behavior / 동작) trên tải công việc (workload / 워크로드). Điều cần tránh là gọi empirical success thành mathematical guarantee.
+
+
+> **Chuyển mạch:** Từ **Approximation: khi chính xác (exact / 정확한) optimum quá đắt**, ta sang **Online algorithms: quyết định trước khi thấy tương lai** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Online algorithms: quyết định trước khi thấy tương lai
 
-Online algorithm (온라인 알고리즘) nhận input theo thời gian và phải quyết định mà không biết phần còn lại. Cache replacement là ví dụ trực quan: khi cache đầy, ta phải evict một item trước khi biết request tương lai.
+Online thuật toán (algorithm / 알고리즘) nhận đầu vào (input / 입력) theo thời gian và phải quyết định mà không biết phần còn lại. bộ nhớ đệm (cache / 캐시) replacement là ví dụ trực quan: khi bộ nhớ đệm (cache / 캐시) đầy, ta phải evict một item trước khi biết yêu cầu (request / 요청) tương lai.
 
-Nếu biết tương lai hoàn toàn, Belady's optimal algorithm sẽ evict item có lần sử dụng tiếp theo xa nhất. Nhưng system thật không có oracle, nên dùng LRU, LFU, CLOCK hoặc policy thích nghi.
+Nếu biết tương lai hoàn toàn, Belady's optimal thuật toán (algorithm / 알고리즘) sẽ evict item có lần sử dụng tiếp theo xa nhất. Nhưng hệ thống (system / 시스템) thật không có oracle, nên dùng LRU, LFU, CLOCK hoặc chính sách (policy / 정책) thích nghi.
 
-Competitive analysis so online algorithm với optimal offline algorithm biết toàn bộ tương lai. Một competitive ratio mô tả mức tệ nhất tương đối đó.
+Competitive phân tích (analysis / 분석) so online thuật toán (algorithm / 알고리즘) với optimal offline thuật toán (algorithm / 알고리즘) biết toàn bộ tương lai. Một competitive ratio mô tả mức tệ nhất tương đối đó.
 
-## Streaming: input quá lớn để giữ toàn bộ
 
-Streaming algorithms xử lý sequence trong một hoặc vài passes với memory nhỏ. Câu hỏi chuyển từ “lưu dữ liệu gì?” sang “summary state tối thiểu nào vẫn trả lời được query gần đúng?”
+> **Chuyển mạch:** Từ **Online algorithms: quyết định trước khi thấy tương lai**, ta sang **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Ví dụ HyperLogLog ước lượng số distinct elements bằng statistical properties của hash outputs thay vì giữ set mọi element. Count-Min Sketch ước lượng frequencies bằng nhiều hash tables nhỏ.
+## Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ
 
-Đây là điểm nối trực tiếp giữa algorithms, probability, systems telemetry và large-scale data processing.
+Streaming algorithms xử lý chuỗi (sequence / 시퀀스) trong một hoặc vài passes với bộ nhớ (memory / 메모리) nhỏ. Câu hỏi chuyển từ “lưu dữ liệu gì?” sang “summary trạng thái (state / 상태) tối thiểu nào vẫn trả lời được truy vấn (query / 쿼리) gần đúng?”
 
-## Randomization trong distributed systems
+Ví dụ HyperLogLog ước lượng số distinct elements bằng statistical properties của băm (hash / 해시) outputs thay vì giữ set mọi element. Count-Min Sketch ước lượng frequencies bằng nhiều băm (hash / 해시) tables nhỏ.
 
-Randomized backoff giảm probability nhiều clients retry đồng thời. Leader election có thể dùng random timeout để tránh symmetry. Load balancing kiểu “power of two choices” chọn ngẫu nhiên hai servers rồi gửi vào server nhẹ hơn, cho kết quả bất ngờ tốt với overhead nhỏ.
+Đây là điểm nối trực tiếp giữa algorithms, xác suất (probability / 확률), các hệ thống (systems / 시스템들) telemetry và large-scale dữ liệu (data / 데이터) processing.
+
+
+> **Chuyển mạch:** Từ **Streaming: đầu vào (input / 입력) quá lớn để giữ toàn bộ**, ta sang **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
+
+Randomized backoff giảm xác suất (probability / 확률) nhiều clients thử lại (retry / 재시도) đồng thời. Leader election có thể dùng random hết thời gian chờ (timeout / 타임아웃) để tránh symmetry. tải (load / 로드) balancing kiểu “power of two choices” chọn ngẫu nhiên hai servers rồi gửi vào máy chủ (server / 서버) nhẹ hơn, cho kết quả bất ngờ tốt với overhead nhỏ.
 
 Randomness ở đây không nhằm làm hệ thống khó đoán mà để giảm synchronization pathologies và adversarial alignment.
 
-## Adversarial inputs và security boundary
 
-Hash table trung bình `O(1)` có thể bị degrade nếu attacker điều khiển keys gây nhiều collisions. Một defense là randomized hash seed để attacker khó predict bucket placement.
+> **Chuyển mạch:** Từ **Randomization trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**, ta sang **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Nhưng pseudo-randomness cho performance khác cryptographic randomness. Security cần entropy và unpredictability mạnh hơn; không nên dùng PRNG thường cho keys/tokens.
+## Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)
 
-## Common Misconceptions
+Bảng băm (hash table / 해시 테이블) trung bình `O(1)` có thể bị degrade nếu attacker điều khiển keys gây nhiều collisions. Một defense là randomized băm (hash / 해시) seed để attacker khó predict bucket placement.
 
-**“Randomized nghĩa là kết quả không đáng tin.”** Las Vegas algorithms luôn đúng; Monte Carlo có error probability được định lượng.
+Nhưng pseudo-randomness cho hiệu năng (performance / 성능) khác cryptographic randomness. bảo mật (security / 보안) cần entropy và unpredictability mạnh hơn; không nên dùng PRNG thường cho keys/tokens.
 
-**“Approximation chỉ là làm ẩu.”** Approximation algorithm có quality guarantee. Heuristic không nhất thiết có.
 
-**“Online algorithm kém vì thiếu dữ liệu.”** Thiếu tương lai là constraint bản chất của nhiều systems. Online analysis giúp biết giới hạn có thể đạt.
+> **Chuyển mạch:** Từ **Adversarial inputs và ranh giới bảo mật (security boundary / 보안 경계)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Mental Model
+## Dùng chung (common / 공통) Misconceptions
 
-> Khi exact deterministic computation không phù hợp constraints, hỏi ba câu: randomness có phá structure xấu không, approximate answer có đủ không, và quyết định có buộc phải xảy ra trước khi biết tương lai không?
+**“Randomized nghĩa là kết quả không đáng tin.”** Las Vegas algorithms luôn đúng; Monte Carlo có lỗi (error / 오류) xác suất (probability / 확률) được định lượng.
+
+**“Approximation chỉ là làm ẩu.”** Approximation thuật toán (algorithm / 알고리즘) có chất lượng (quality / 품질) guarantee. Heuristic không nhất thiết có.
+
+**“Online thuật toán (algorithm / 알고리즘) kém vì thiếu dữ liệu.”** Thiếu tương lai là ràng buộc (constraint / 제약조건) bản chất của nhiều các hệ thống (systems / 시스템들). Online phân tích (analysis / 분석) giúp biết giới hạn có thể đạt.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> Khi chính xác (exact / 정확한) deterministic computation không phù hợp các ràng buộc (constraints / 제약조건들), hỏi ba câu: randomness có phá cấu trúc (structure / 구조) xấu không, approximate answer có đủ không, và quyết định có buộc phải xảy ra trước khi biết tương lai không?
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-Nền probability xem tại [Probability Foundations](../../mathematics/06_probability_statistics/01_probability_foundations.md). Complexity và NP-hardness được mở rộng tại [Complexity, reductions và NP](./11_complexity_reductions_and_np.md). Các applications hệ thống xuất hiện trong [cache/scalability](../08_software_systems/02_performance_capacity_and_scalability.md) và [reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md).
+Nền xác suất (probability / 확률) xem tại [Probability Foundations](../../mathematics/06_probability_statistics/01_probability_foundations.md). độ phức tạp (complexity / 복잡도) và NP-hardness được mở rộng tại [Complexity, reductions và NP](./11_complexity_reductions_and_np.md). Các applications hệ thống xuất hiện trong [cache/scalability](../08_software_systems/02_performance_capacity_and_scalability.md) và [reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,7 @@
 # Thương mại, xuất khẩu và chuỗi giá trị toàn cầu của Hàn Quốc (Trade & Global Value Chains / 무역과 글로벌 가치사슬)
 
+> **Mạch đọc:** Đặt **Thương mại, xuất khẩu và chuỗi giá trị toàn cầu của Hàn Quốc (Trade & Global Value Chains / 무역과 글로벌 가치사슬)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao thương mại quan trọng với Hàn Quốc?** sang **Lợi thế so sánh: chi phí cơ hội chứ không phải “ai giỏi hơn tuyệt đối”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 Hàn Quốc là nền kinh tế hội nhập thương mại sâu, nên không thể hiểu doanh nghiệp bằng cách nghĩ đơn giản “sản xuất ở Hàn Quốc rồi bán ra nước ngoài”. Doanh nghiệp hiện đại hoạt động trong **chuỗi giá trị toàn cầu (Global Value Chain, GVC / 글로벌 가치사슬)**, nơi thiết kế, nguyên liệu, linh kiện, sản xuất, phần mềm, logistics, phân phối và hậu mãi có thể nằm ở nhiều quốc gia.
 
 Câu hỏi đúng không chỉ là “xuất khẩu bao nhiêu?” mà là: **doanh nghiệp đứng ở mắt xích nào, có quyền thương lượng gì, dùng đầu vào từ đâu, bán cho ai, bằng đồng tiền nào và giữ lại bao nhiêu giá trị gia tăng**.
@@ -97,11 +99,11 @@ Với ô tô và pin, quy tắc hàm lượng nội địa có thể ảnh hư�
 
 ## Thương mại dịch vụ và tài sản vô hình
 
-Xuất khẩu Hàn Quốc không chỉ là container hàng hóa. Trò chơi, nội dung, phần mềm, bản quyền, dịch vụ kỹ thuật và tài chính cũng tạo doanh thu xuyên biên giới.
+Xuất khẩu Hàn Quốc không chỉ là bộ chứa (container / 컨테이너) hàng hóa. Trò chơi, nội dung, phần mềm, bản quyền, dịch vụ kỹ thuật và tài chính cũng tạo doanh thu xuyên biên giới.
 
 Tài sản vô hình có cơ chế kinh tế khác hàng vật chất. Chi phí tạo sản phẩm ban đầu có thể cao nhưng chi phí phân phối thêm một bản sao số thấp. Tuy nhiên doanh nghiệp phải đầu tư vào IP, thương hiệu, dữ liệu và phân phối nền tảng.
 
-K-content là ví dụ rõ: giá trị xuất khẩu không chỉ nằm trong file video hay bài hát mà trong quyền sở hữu IP, hợp đồng phân phối, thương hiệu nghệ sĩ và khả năng khai thác cộng đồng người hâm mộ.
+K-content là ví dụ rõ: giá trị xuất khẩu không chỉ nằm trong tệp (file / 파일) video hay bài hát mà trong quyền sở hữu IP, hợp đồng phân phối, thương hiệu nghệ sĩ và khả năng khai thác cộng đồng người hâm mộ.
 
 ## Trung Quốc: bốn lớp phơi nhiễm
 
@@ -161,7 +163,7 @@ Một công ty có đơn hàng lớn vẫn có thể thiếu tiền mặt nếu 
 
 ## Logistics và nút thắt chuỗi cung ứng
 
-Cảng, tàu, container, kho và hải quan là một phần của cơ chế thương mại. Khi một nút thắt xảy ra, thời gian giao hàng kéo dài và doanh nghiệp phải giữ tồn kho an toàn cao hơn.
+Cảng, tàu, bộ chứa (container / 컨테이너), kho và hải quan là một phần của cơ chế thương mại. Khi một nút thắt xảy ra, thời gian giao hàng kéo dài và doanh nghiệp phải giữ tồn kho an toàn cao hơn.
 
 Sau COVID-19, nhiều doanh nghiệp chuyển từ mô hình tồn kho cực thấp sang cân bằng giữa hiệu quả và khả năng chống chịu.
 
@@ -191,7 +193,7 @@ Phân tích đúng cần tách:
 
 Đây là lý do bản đồ pháp nhân và chuỗi giá trị phải đi cùng nhau.
 
-## Mental Model — Mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Thương mại không chỉ là hàng hóa đi qua biên giới. Nó là mạng lưới nơi ngoại tệ, quyền thương lượng, công nghệ, logistics, tài chính và chính sách cùng quyết định ai giữ được giá trị.
 
@@ -209,3 +211,5 @@ Khách hàng cuối ở đâu?
 ```
 
 Nếu trả lời được chuỗi này, ta không còn nhìn xuất khẩu như một con số tổng mà như một hệ thống kinh tế có thể phân tích.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

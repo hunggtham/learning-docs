@@ -1,10 +1,13 @@
-# Fault tolerance, observability và reliability
+# Fault tolerance, khả năng quan sát (observability / 관측 가능성) và độ tin cậy (reliability / 신뢰성)
 
-Một hệ thống đáng tin cậy (reliable system / 신뢰성 높은 시스템) không phải là hệ thống không bao giờ hỏng. Component, network, disk, process, dependency và con người đều có thể fail. Reliability engineering bắt đầu từ giả định đó rồi thiết kế để **failure được phát hiện, giới hạn phạm vi ảnh hưởng, phục hồi có thể dự đoán và vẫn giữ service trong mục tiêu đã định lượng**.
+> **Mạch đọc:** Đọc **Fault tolerance, khả năng quan sát (observability / 관측 가능성) và độ tin cậy (reliability / 신뢰성)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Fault, lỗi (error / 오류) và thất bại (failure / 실패)** sang **2. độ tin cậy (reliability / 신뢰성) bất biến (invariant / 불변식) phải nói bằng ngôn ngữ của người dùng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Điểm cốt lõi là reliability không phải một collection pattern như retry, circuit breaker hay multi-zone. Nó là reasoning về **failure model + invariant + resource capacity + recovery evidence**.
 
-## 1. Fault, error và failure
+Một hệ thống đáng tin cậy (reliable system / 신뢰성 높은 시스템) không phải là hệ thống không bao giờ hỏng. thành phần (component / 컴포넌트), mạng (network / 네트워크), disk, tiến trình (process / 프로세스), phụ thuộc (dependency / 의존성) và con người đều có thể thất bại (fail / 실패). độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) bắt đầu từ giả định đó rồi thiết kế để **thất bại (failure / 실패) được phát hiện, giới hạn phạm vi ảnh hưởng, phục hồi có thể dự đoán và vẫn giữ dịch vụ (service / 서비스) trong mục tiêu đã định lượng**.
+
+Điểm cốt lõi là độ tin cậy (reliability / 신뢰성) không phải một collection mẫu (pattern / 패턴) như thử lại (retry / 재시도), circuit breaker hay multi-zone. Nó là lập luận (reasoning / 추론) về **thất bại (failure / 실패) mô hình (model / 모델) + bất biến (invariant / 불변식) + tài nguyên (resource / 자원) sức chứa (capacity / 용량) + khôi phục (recovery / 복구) bằng chứng (evidence / 증거)**.
+
+## 1. Fault, lỗi (error / 오류) và thất bại (failure / 실패)
 
 Trong dependability, ba từ thường được tách như sau:
 
@@ -19,15 +22,15 @@ failure
 → service bên ngoài lệch contract
 ```
 
-Ví dụ một bit flip là fault. Nếu memory state bị corrupt thì đó là error. Nếu checksum phát hiện corruption và request bị retry từ replica khỏe, user có thể chưa thấy failure.
+Ví dụ một bit flip là fault. Nếu bộ nhớ (memory / 메모리) trạng thái (state / 상태) bị corrupt thì đó là lỗi (error / 오류). Nếu checksum phát hiện corruption và yêu cầu (request / 요청) bị thử lại (retry / 재시도) từ replica khỏe, người dùng (user / 사용자) có thể chưa thấy thất bại (failure / 실패).
 
-Phân biệt này quan trọng vì reliability engineering cố chặn propagation trước khi internal error trở thành user-visible failure.
+Phân biệt này quan trọng vì độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링) cố chặn propagation trước khi nội bộ (internal / 내부) lỗi (error / 오류) trở thành user-visible thất bại (failure / 실패).
 
-## 2. Reliability invariant phải nói bằng ngôn ngữ của người dùng
+## 2. độ tin cậy (reliability / 신뢰성) bất biến (invariant / 불변식) phải nói bằng ngôn ngữ của người dùng
 
-Component health không phải mục tiêu cuối. Một service có thể có tất cả processes `UP` nhưng user vẫn timeout vì queue dài hoặc dependency chậm.
+Thành phần (component / 컴포넌트) health không phải mục tiêu cuối. Một dịch vụ (service / 서비스) có thể có tất cả processes `UP` nhưng người dùng (user / 사용자) vẫn hết thời gian chờ (timeout / 타임아웃) vì hàng đợi (queue / 큐) dài hoặc phụ thuộc (dependency / 의존성) chậm.
 
-Invariant reliability nên được diễn đạt bằng kết quả quan sát được, ví dụ:
+Bất biến (invariant / 불변식) độ tin cậy (reliability / 신뢰성) nên được diễn đạt bằng kết quả quan sát được, ví dụ:
 
 ```text
 99.9% request hợp lệ hoàn tất dưới 300 ms trong 30 ngày
@@ -37,13 +40,13 @@ payment đã trả success không được mất sau failover thuộc failure mo
 một tenant quá tải không được làm tenant khác mất toàn bộ capacity
 ```
 
-Từ invariant đó mới chọn SLI, timeout, replication, bulkhead hay fallback phù hợp.
+Từ bất biến (invariant / 불변식) đó mới chọn SLI, hết thời gian chờ (timeout / 타임아웃), replication, bulkhead hay fallback phù hợp.
 
-## 3. Redundancy chỉ hữu ích khi failure đủ độc lập
+## 3. Redundancy chỉ hữu ích khi thất bại (failure / 실패) đủ độc lập
 
-Replication, extra instances, RAID/erasure coding và multi-zone deployment tạo redundancy. Nhưng hai replicas cùng rack, cùng power source, cùng database hoặc cùng broken deployment artifact vẫn có thể fail cùng lúc.
+Replication, extra instances, RAID/erasure coding và multi-zone triển khai (deployment / 배포) tạo redundancy. Nhưng hai replicas cùng rack, cùng power nguồn (source / 소스), cùng cơ sở dữ liệu (database / 데이터베이스) hoặc cùng broken triển khai (deployment / 배포) sản phẩm tạo ra (artifact / 산출물) vẫn có thể thất bại (fail / 실패) cùng lúc.
 
-Đây là **correlated failure**. Vì vậy phải hỏi:
+Đây là **correlated thất bại (failure / 실패)**. Vì vậy phải hỏi:
 
 ```text
 replicas có cùng failure domain không?
@@ -52,13 +55,13 @@ config/deploy bug có lan tới mọi replica không?
 corruption có được replicate không?
 ```
 
-“Có ba bản sao” không đồng nghĩa ba failure domains độc lập.
+“Có ba bản sao” không đồng nghĩa ba thất bại (failure / 실패) domains độc lập.
 
-## 4. Retry là load multiplier
+## 4. thử lại (retry / 재시도) là tải (load / 로드) multiplier
 
-Retry có thể biến transient failure thành success, nhưng mỗi retry là một request mới. Nếu dependency chậm vì overload, retry làm arrival rate tăng đúng lúc service rate đang giảm.
+Thử lại (retry / 재시도) có thể biến transient thất bại (failure / 실패) thành success, nhưng mỗi thử lại (retry / 재시도) là một yêu cầu (request / 요청) mới. Nếu phụ thuộc (dependency / 의존성) chậm vì overload, thử lại (retry / 재시도) làm arrival tỷ lệ (rate / 비율) tăng đúng lúc dịch vụ (service / 서비스) tỷ lệ (rate / 비율) đang giảm.
 
-Do đó retry cần:
+Do đó thử lại (retry / 재시도) cần:
 
 ```text
 bounded attempts
@@ -68,45 +71,45 @@ retry budget
 idempotency khi có side effect
 ```
 
-Timeout + retry mà operation không idempotent có thể duplicate payment/order. Retry policy vì vậy vừa là reliability design vừa là capacity design.
+Hết thời gian chờ (timeout / 타임아웃) + thử lại (retry / 재시도) mà thao tác (operation / 연산) không idempotent có thể duplicate payment/thứ tự (order / 순서). thử lại (retry / 재시도) chính sách (policy / 정책) vì vậy vừa là độ tin cậy (reliability / 신뢰성) thiết kế (design / 설계) vừa là sức chứa (capacity / 용량) thiết kế (design / 설계).
 
-## 5. Timeout là budget, không phải magic number
+## 5. hết thời gian chờ (timeout / 타임아웃) là ngân sách (budget / 예산), không phải magic number
 
-Không có timeout, caller có thể giữ thread/connection vô hạn. Timeout quá ngắn tạo false failure và retry storm; quá dài giữ resource lâu và làm recovery chậm.
+Không có hết thời gian chờ (timeout / 타임아웃), caller có thể giữ luồng thực thi (thread / 스레드)/liên kết (connection / 연결) vô hạn. hết thời gian chờ (timeout / 타임아웃) quá ngắn tạo false thất bại (failure / 실패) và thử lại (retry / 재시도) storm; quá dài giữ tài nguyên (resource / 자원) lâu và làm khôi phục (recovery / 복구) chậm.
 
-Timeout nên xuất phát từ end-to-end latency budget. Nếu request còn 80 ms nhưng downstream call được timeout 2 giây, system đã mất deadline invariant.
+Hết thời gian chờ (timeout / 타임아웃) nên xuất phát từ end-to-end độ trễ (latency / 지연 시간) ngân sách (budget / 예산). Nếu yêu cầu (request / 요청) còn 80 ms nhưng downstream lời gọi (call / 호출) được hết thời gian chờ (timeout / 타임아웃) 2 giây, hệ thống (system / 시스템) đã mất deadline bất biến (invariant / 불변식).
 
-**Deadline propagation** truyền remaining budget xuống các hop thay vì mỗi layer tự reset một timeout đầy đủ.
+**Deadline propagation** truyền remaining ngân sách (budget / 예산) xuống các hop thay vì mỗi tầng (layer / 계층) tự reset một hết thời gian chờ (timeout / 타임아웃) đầy đủ.
 
-## 6. Circuit breaker không tạo capacity
+## 6. Circuit breaker không tạo sức chứa (capacity / 용량)
 
-Circuit breaker tạm dừng gửi traffic tới dependency đang fail để giảm wasted work và cho dependency cơ hội hồi phục. Half-open probing kiểm tra recovery dần dần.
+Circuit breaker tạm dừng gửi traffic tới phụ thuộc (dependency / 의존성) đang thất bại (fail / 실패) để giảm wasted công việc (work / 작업) và cho phụ thuộc (dependency / 의존성) cơ hội hồi phục. Half-open probing kiểm tra khôi phục (recovery / 복구) dần dần.
 
-Nhưng circuit breaker không tự tăng capacity. Nếu failure do overload toàn hệ thống, vẫn cần bounded queue, admission control, backpressure hoặc load shedding.
+Nhưng circuit breaker không tự tăng sức chứa (capacity / 용량). Nếu thất bại (failure / 실패) do overload toàn hệ thống, vẫn cần bounded hàng đợi (queue / 큐), admission điều khiển (control / 제어), backpressure hoặc tải (load / 로드) shedding.
 
 Một breaker reopen đồng loạt trên nhiều instances còn có thể tạo spike mới nếu không có jitter/ramp-up.
 
-## 7. Bulkhead là isolation boundary
+## 7. Bulkhead là isolation ranh giới (boundary / 경계)
 
-Bulkhead tách resource pools hoặc quotas để một workload không ăn hết resource của workload khác.
+Bulkhead tách tài nguyên (resource / 자원) pools hoặc quotas để một tải công việc (workload / 워크로드) không ăn hết tài nguyên (resource / 자원) của tải công việc (workload / 워크로드) khác.
 
-Ví dụ background export dùng pool khác request user-facing. Trade-off là có thể lãng phí một phần capacity khi pool A rảnh nhưng pool B đầy.
+Ví dụ background export dùng pool khác yêu cầu (request / 요청) user-facing. sự đánh đổi (trade-off / 트레이드오프) là có thể lãng phí một phần sức chứa (capacity / 용량) khi pool A rảnh nhưng pool B đầy.
 
-Isolation chỉ có ý nghĩa nếu nó được đặt ở resource thật sự bottleneck. Hai logical queues khác nhau nhưng cùng tranh một exhausted DB pool vẫn không phải isolation đầy đủ.
+Isolation chỉ có ý nghĩa nếu nó được đặt ở tài nguyên (resource / 자원) thật sự bottleneck. Hai logical queues khác nhau nhưng cùng tranh một exhausted DB pool vẫn không phải isolation đầy đủ.
 
-## 8. Load shedding và graceful degradation
+## 8. tải (load / 로드) shedding và graceful degradation
 
-Khi system gần overload, cố nhận 100% requests có thể dẫn tới 100% timeout. Reject sớm một phần traffic đôi khi giữ phần còn lại khỏe hơn.
+Khi hệ thống (system / 시스템) gần overload, cố nhận 100% requests có thể dẫn tới 100% hết thời gian chờ (timeout / 타임아웃). Reject sớm một phần traffic đôi khi giữ phần còn lại khỏe hơn.
 
-Graceful degradation có thể gồm stale cache, read-only mode, bỏ optional enrichment hoặc giảm chất lượng output. Nhưng degradation không được bỏ correctness/security invariant chỉ để giữ success rate.
+Graceful degradation có thể gồm stale bộ nhớ đệm (cache / 캐시), read-only chế độ (mode / 모드), bỏ optional enrichment hoặc giảm chất lượng đầu ra (output / 출력). Nhưng degradation không được bỏ tính đúng đắn (correctness / 정확성)/bảo mật (security / 보안) bất biến (invariant / 불변식) chỉ để giữ success tỷ lệ (rate / 비율).
 
-Ví dụ phục vụ stale recommendation có thể chấp nhận được; phục vụ stale authorization policy có thể không chấp nhận được.
+Ví dụ phục vụ stale recommendation có thể chấp nhận được; phục vụ stale authorization chính sách (policy / 정책) có thể không chấp nhận được.
 
-## 9. Observability là khả năng suy ra internal state từ evidence
+## 9. khả năng quan sát (observability / 관측 가능성) là khả năng suy ra trạng thái nội bộ (internal state / 내부 상태) từ bằng chứng (evidence / 증거)
 
-Logs, metrics và traces là công cụ. **Observability (옵저버빌리티 / khả năng quan sát)** là khả năng dùng output/telemetry để suy ra điều gì đang xảy ra bên trong.
+Logs, metrics và traces là công cụ. **khả năng quan sát (observability / 관측 가능성)** là khả năng dùng đầu ra (output / 출력)/telemetry để suy ra điều gì đang xảy ra bên trong.
 
-Các nhóm signal thường hữu ích:
+Các nhóm tín hiệu (signal / 신호) thường hữu ích:
 
 ```text
 latency
@@ -115,23 +118,23 @@ errors
 saturation / queue
 ```
 
-RED phù hợp service-oriented view: Rate, Errors, Duration. USE phù hợp resource view: Utilization, Saturation, Errors.
+RED phù hợp service-oriented view: tỷ lệ (rate / 비율), Errors, Duration. USE phù hợp tài nguyên (resource / 자원) view: Utilization, Saturation, Errors.
 
-Điểm quan trọng là correlation: request chậm phải nối được với queue/pool/resource/dependency nào thay vì chỉ nhìn từng dashboard rời rạc.
+Điểm quan trọng là correlation: yêu cầu (request / 요청) chậm phải nối được với hàng đợi (queue / 큐)/pool/tài nguyên (resource / 자원)/phụ thuộc (dependency / 의존성) nào thay vì chỉ nhìn từng dashboard rời rạc.
 
 ## 10. SLI, SLO và SLA
 
-**SLI (Service Level Indicator)** là chỉ số đo, ví dụ tỷ lệ request hợp lệ hoàn tất dưới 300 ms.
+**SLI (service Level Indicator)** là chỉ số đo, ví dụ tỷ lệ yêu cầu (request / 요청) hợp lệ hoàn tất dưới 300 ms.
 
-**SLO (Service Level Objective)** là mục tiêu nội bộ, ví dụ 99.9% trong rolling 30-day window.
+**SLO (service Level Objective)** là mục tiêu nội bộ, ví dụ 99.9% trong rolling 30-day cửa sổ (window / 윈도우).
 
-**SLA (Service Level Agreement)** là cam kết business/external có consequence, không phải synonym của SLO.
+**SLA (service Level Agreement)** là cam kết nghiệp vụ (business / 비즈니스)/bên ngoài (external / 외부) có consequence, không phải synonym của SLO.
 
-SLO nên đo thứ user thực sự quan tâm, không chỉ component uptime.
+SLO nên đo thứ người dùng (user / 사용자) thực sự quan tâm, không chỉ thành phần (component / 컴포넌트) uptime.
 
-## 11. Error budget biến reliability thành một trade-off định lượng
+## 11. lỗi (error / 오류) ngân sách (budget / 예산) biến độ tin cậy (reliability / 신뢰성) thành một sự đánh đổi (trade-off / 트레이드오프) định lượng
 
-Nếu SLO là 99.9%, phần unreliability được phép trong window là **error budget**.
+Nếu SLO là 99.9%, phần unreliability được phép trong cửa sổ (window / 윈도우) là **lỗi (error / 오류) ngân sách (budget / 예산)**.
 
 Ví dụ đơn giản:
 
@@ -140,17 +143,17 @@ Ví dụ đơn giản:
 0.1% budget ≈ 43.2 phút tương đương full outage
 ```
 
-Thực tế budget có thể được tiêu bởi partial errors/latency chứ không chỉ full outage.
+Thực tế ngân sách (budget / 예산) có thể được tiêu bởi partial errors/độ trễ (latency / 지연 시간) chứ không chỉ full outage.
 
-Error budget giúp trả lời câu hỏi: hiện tại team còn đủ margin để tăng deployment risk hay cần ưu tiên reliability work?
+Lỗi (error / 오류) ngân sách (budget / 예산) giúp trả lời câu hỏi: hiện tại nhóm (team / 팀) còn đủ margin để tăng triển khai (deployment / 배포) rủi ro (risk / 위험) hay cần ưu tiên độ tin cậy (reliability / 신뢰성) công việc (work / 작업)?
 
-## 12. Burn rate cho biết budget đang bị tiêu nhanh đến mức nào
+## 12. Burn tỷ lệ (rate / 비율) cho biết ngân sách (budget / 예산) đang bị tiêu nhanh đến mức nào
 
-Nếu service chỉ mới đi qua 10% của window nhưng đã tiêu 50% error budget, tốc độ tiêu budget đang quá cao.
+Nếu dịch vụ (service / 서비스) chỉ mới đi qua 10% của cửa sổ (window / 윈도우) nhưng đã tiêu 50% lỗi (error / 오류) ngân sách (budget / 예산), tốc độ tiêu ngân sách (budget / 예산) đang quá cao.
 
-**Burn rate** so sánh tốc độ lỗi hiện tại với tốc độ lỗi cho phép để vừa hết budget đúng cuối window.
+**Burn tỷ lệ (rate / 비율)** so sánh tốc độ lỗi hiện tại với tốc độ lỗi cho phép để vừa hết ngân sách (budget / 예산) đúng cuối cửa sổ (window / 윈도우).
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 burn rate = 1
@@ -160,9 +163,9 @@ burn rate > 1
 → nếu kéo dài sẽ hết budget sớm
 ```
 
-Alert theo burn rate thường tốt hơn alert chỉ theo error rate tức thời vì nó nối symptom với SLO impact.
+Alert theo burn tỷ lệ (rate / 비율) thường tốt hơn alert chỉ theo lỗi (error / 오류) tỷ lệ (rate / 비율) tức thời vì nó nối symptom với SLO impact.
 
-## 13. Availability math và dependency graph
+## 13. Availability math và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
 Nếu hai independent components bắt buộc đều available và mỗi cái có availability 99.9%, combined availability gần:
 
@@ -170,21 +173,21 @@ Nếu hai independent components bắt buộc đều available và mỗi cái c�
 0.999 × 0.999 = 0.998001 ≈ 99.8001%
 ```
 
-Series dependencies làm availability tổng giảm. Parallel redundancy có thể tăng availability nếu failover thật sự hoạt động và failure đủ độc lập.
+Series dependencies làm availability tổng giảm. Parallel redundancy có thể tăng availability nếu failover thật sự hoạt động và thất bại (failure / 실패) đủ độc lập.
 
-Vì vậy reliability architecture phải nhìn **dependency graph**, không nhìn từng component score riêng.
+Vì vậy độ tin cậy (reliability / 신뢰성) kiến trúc (architecture / 아키텍처) phải nhìn **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, không nhìn từng thành phần (component / 컴포넌트) score riêng.
 
-## 14. Correlated failure quan trọng hơn công thức độc lập
+## 14. Correlated thất bại (failure / 실패) quan trọng hơn công thức độc lập
 
-Availability multiplication chỉ đúng dưới assumptions phù hợp. Shared DNS, shared KMS, same deployment, same region hoặc same operator mistake làm failures correlated.
+Availability multiplication chỉ đúng dưới các giả định (assumptions / 가정들) phù hợp. dùng chung (shared / 공유) DNS, dùng chung (shared / 공유) KMS, same triển khai (deployment / 배포), same region hoặc same operator mistake làm failures correlated.
 
-Một dependency “99.99%” nhưng nằm trên critical path của mọi request có thể quyết định toàn service. Một control plane hiếm dùng nhưng khi fail lại chặn certificate renewal cho toàn fleet cũng là reliability dependency.
+Một phụ thuộc (dependency / 의존성) “99.99%” nhưng nằm trên đường găng (critical path / 임계 경로) của mọi yêu cầu (request / 요청) có thể quyết định toàn dịch vụ (service / 서비스). Một điều khiển (control / 제어) plane hiếm dùng nhưng khi thất bại (fail / 실패) lại chặn certificate renewal cho toàn fleet cũng là độ tin cậy (reliability / 신뢰성) phụ thuộc (dependency / 의존성).
 
 ## 15. Fault containment và blast radius
 
-Reliability tốt không chỉ phục hồi nhanh mà còn ngăn failure lan rộng.
+Độ tin cậy (reliability / 신뢰성) tốt không chỉ phục hồi nhanh mà còn ngăn thất bại (failure / 실패) lan rộng.
 
-Các boundary thường dùng:
+Các ranh giới (boundary / 경계) thường dùng:
 
 ```text
 zone / region
@@ -196,17 +199,17 @@ tenant quota
 service ownership boundary
 ```
 
-Blast radius cần được thiết kế trước incident. Nếu mọi workload dùng cùng pool/credential/control plane, một lỗi nhỏ có thể trở thành systemic failure.
+Blast radius cần được thiết kế trước sự cố (incident / 인시던트). Nếu mọi tải công việc (workload / 워크로드) dùng cùng pool/credential/điều khiển (control / 제어) plane, một lỗi nhỏ có thể trở thành systemic thất bại (failure / 실패).
 
-## 16. Recovery phải có state model rõ
+## 16. khôi phục (recovery / 복구) phải có trạng thái (state / 상태) mô hình (model / 모델) rõ
 
-Sau failover/restart, câu hỏi không chỉ là “service đã lên chưa?”. Cần biết state nào authoritative, request nào đang in-flight, side effect nào đã xảy ra và retry có tạo duplicate không.
+Sau failover/restart, câu hỏi không chỉ là “dịch vụ (service / 서비스) đã lên chưa?”. Cần biết trạng thái (state / 상태) nào authoritative, yêu cầu (request / 요청) nào đang in-flight, side tác động (effect / 효과) nào đã xảy ra và thử lại (retry / 재시도) có tạo duplicate không.
 
-Reliability của stateful system vì thế nối trực tiếp với idempotency, transaction durability, replication và consistency.
+Độ tin cậy (reliability / 신뢰성) của stateful hệ thống (system / 시스템) vì thế nối trực tiếp với idempotency, giao dịch (transaction / 트랜잭션) durability, replication và consistency.
 
 ## 17. Chaos/fault injection là kiểm thử hypothesis
 
-Fault injection không phải “randomly phá production”. Một experiment tốt có:
+Fault injection không phải “randomly phá môi trường vận hành (production / 운영 환경)”. Một experiment tốt có:
 
 ```text
 hypothesis rõ
@@ -216,13 +219,13 @@ observability đủ
 recovery expectation
 ```
 
-Ví dụ: “mất một replica không làm p99 vượt X và không mất committed write”. Ta inject failure rồi kiểm tra invariant bằng evidence.
+Ví dụ: “mất một replica không làm p99 vượt X và không mất committed ghi (write / 쓰기)”. Ta inject thất bại (failure / 실패) rồi kiểm tra bất biến (invariant / 불변식) bằng bằng chứng (evidence / 증거).
 
-Chaos không có hypothesis hoặc telemetry chỉ là tạo incident có chủ đích mà không học được gì.
+Chaos không có hypothesis hoặc telemetry chỉ là tạo sự cố (incident / 인시던트) có chủ đích mà không học được gì.
 
-## 18. Production evidence
+## 18. bằng chứng vận hành (production evidence / 운영 증거)
 
-Reliability diagnosis nên nối nhiều tầng:
+Độ tin cậy (reliability / 신뢰성) diagnosis nên nối nhiều tầng:
 
 ```text
 SLI/SLO và burn rate
@@ -236,11 +239,11 @@ dependency health
 recovery timeline
 ```
 
-Một component “healthy” nhưng queue debt tăng vẫn có thể đang tiến tới failure. Một outage đã hồi phục nhưng replica chưa catch up cũng chưa chắc reliability state đã bình thường.
+Một thành phần (component / 컴포넌트) “healthy” nhưng hàng đợi (queue / 큐) debt tăng vẫn có thể đang tiến tới thất bại (failure / 실패). Một outage đã hồi phục nhưng replica chưa catch up cũng chưa chắc độ tin cậy (reliability / 신뢰성) trạng thái (state / 상태) đã bình thường.
 
-## 19. Failure modes cần phân biệt
+## 19. thất bại (failure / 실패) modes cần phân biệt
 
-Các failure khác nhau cần mitigation khác nhau:
+Các thất bại (failure / 실패) khác nhau cần mitigation khác nhau:
 
 ```text
 transient network failure
@@ -259,12 +262,14 @@ state corruption
 → validation, backup/PITR, recovery
 ```
 
-Dùng một pattern cho mọi failure thường làm hệ thống khó đoán hơn.
+Dùng một mẫu (pattern / 패턴) cho mọi thất bại (failure / 실패) thường làm hệ thống khó đoán hơn.
 
 ## 20. Mô hình tư duy
 
-> Reliability = **định nghĩa user-visible objective, giả định failure sẽ xảy ra, giới hạn blast radius, giữ resource trong vùng an toàn, phát hiện deviation bằng evidence và phục hồi state theo contract có thể kiểm chứng.** Retry, redundancy hay circuit breaker chỉ là mechanisms phục vụ invariant đó.
+> độ tin cậy (reliability / 신뢰성) = **định nghĩa user-visible mục tiêu (objective / 목표), giả định thất bại (failure / 실패) sẽ xảy ra, giới hạn blast radius, giữ tài nguyên (resource / 자원) trong vùng an toàn, phát hiện deviation bằng bằng chứng (evidence / 증거) và phục hồi trạng thái (state / 상태) theo đặc tả hợp đồng (contract / 계약) có thể kiểm chứng.** thử lại (retry / 재시도), redundancy hay circuit breaker chỉ là mechanisms phục vụ bất biến (invariant / 불변식) đó.
 
 ## Kết nối
 
 Đọc [Distributed partial failure](../06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md), [Idempotency](../08_software_systems/04_time_serialization_and_idempotency.md), [Performance/capacity](../08_software_systems/02_performance_capacity_and_scalability.md), [Advanced capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md), [Request path và retry overload](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) và [Debugging/containment xuyên tầng](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 threat models and security principles](./00_threat_models_and_security_principles.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

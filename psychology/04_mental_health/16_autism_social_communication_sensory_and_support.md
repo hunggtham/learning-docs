@@ -1,5 +1,8 @@
 # Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ
 
+> **Mạch đọc:** Đọc **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. “Phổ” không phải một đường thẳng** sang **2. Góc nhìn phát triển**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Autism là một **rối loạn phát triển thần kinh (neurodevelopmental condition)** đặc trưng bởi khác biệt kéo dài trong giao tiếp/tương tác xã hội cùng các mẫu hành vi, sở thích hoặc hoạt động hạn hẹp–lặp lại, nhu cầu tính dự đoán và khác biệt xử lý cảm giác ở mức độ khác nhau.
 
 > **Trạng thái bằng chứng:** autism có nền tảng phát triển thần kinh và đóng góp di truyền mạnh. Không có một xét nghiệm sinh học đơn lẻ dùng để chẩn đoán thường quy ở cấp cá nhân. Chẩn đoán dựa trên lịch sử phát triển, chức năng hiện tại và đánh giá toàn diện.
@@ -26,7 +29,7 @@ Tuy nhiên khó khăn xã hội không nên bị diễn giải mặc định là
 
 Xem [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]].
 
-## 4. Double Empathy Problem
+## 4. Double Empathy bài toán (problem / 문제)
 
 **Vấn đề đồng cảm hai chiều (Double Empathy Problem)** đề xuất rằng hiểu lầm giữa người autistic và non-autistic có thể xuất hiện theo cả hai hướng vì phong cách giao tiếp và kỳ vọng khác nhau.
 
@@ -52,7 +55,7 @@ Không nên mặc định mọi hành vi lặp lại là thứ phải loại b�
 
 **Che giấu/bù trừ (masking/camouflaging)** mô tả việc cố che hoặc bù các đặc điểm autistic để đáp ứng kỳ vọng xã hội, ví dụ học script, ép giao tiếp mắt hoặc liên tục giám sát ngôn ngữ cơ thể.
 
-Biểu hiện bên ngoài có thể trông “ổn” trong khi chi phí bên trong rất cao. Nếu đánh giá chỉ dựa vào performance quan sát được, có thể bỏ sót mệt mỏi, lo âu hoặc nhu cầu hồi phục sau tương tác.
+Biểu hiện bên ngoài có thể trông “ổn” trong khi chi phí bên trong rất cao. Nếu đánh giá chỉ dựa vào hiệu năng (performance / 성능) quan sát được, có thể bỏ sót mệt mỏi, lo âu hoặc nhu cầu hồi phục sau tương tác.
 
 > **Giới hạn bằng chứng:** camouflaging đang được nghiên cứu nhiều hơn, nhưng cách đo, khả năng khái quát theo giới/văn hóa và quan hệ nhân quả với sức khỏe tâm thần vẫn cần thận trọng.
 
@@ -113,7 +116,7 @@ Gia đình có thể rất quan trọng nhưng quyền tự chủ của người
 
 **Lý thuyết hiện đại:** xử lý dự đoán, học tập xã hội, Double Empathy và mô hình điều chỉnh cảm giác.
 
-**Còn tranh luận:** mức giải thích của từng mô hình và cách đo tốt nhất cho masking, social mismatch và heterogeneity.
+**Còn tranh luận:** mức giải thích của từng mô hình và cách đo tốt nhất cho masking, xã hội (social / 사회적) mismatch và heterogeneity.
 
 **Không được nói:** autism do parenting, người autistic “không có empathy”, hoặc một điểm số online đủ để tự xác nhận chẩn đoán.
 
@@ -144,3 +147,5 @@ chức năng + nhu cầu hỗ trợ
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[05_neurodevelopmental_adhd_autism]], [[15_adhd_attention_executive_function_and_development]], [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]], [[../03_human_development_and_person/04_social_and_cultural_psychology]], [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/03_interpersonal_communication_and_conflict]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

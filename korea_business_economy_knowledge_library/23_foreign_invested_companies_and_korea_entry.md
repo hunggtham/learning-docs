@@ -1,10 +1,13 @@
 # Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)
 
+> **Mạch đọc:** Đặt **Doanh nghiệp nước ngoài và FDI tại Hàn Quốc (Foreign-Invested Companies / 외국인투자기업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Công ty có vốn đầu tư nước ngoài khác chi nhánh nước ngoài** sang **Trách nhiệm hữu hạn và khoanh vùng rủi ro**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Kinh tế Hàn Quốc không chỉ gồm doanh nghiệp Hàn Quốc đi ra thế giới. Các tập đoàn đa quốc gia cũng vào Hàn Quốc để bán hàng, đặt trung tâm R&D, sản xuất, logistics, tài chính, phần mềm hoặc hợp tác chiến lược. Tuy nhiên, cụm “công ty nước ngoài tại Hàn Quốc” có thể chỉ nhiều cấu trúc rất khác nhau như **công ty con (subsidiary / 현지법인)**, **chi nhánh (branch / 지점)**, **văn phòng liên lạc (liaison office / 연락사무소)**, **liên doanh (joint venture / 합작회사)**, mua lại doanh nghiệp hoặc đầu tư mới từ đầu.
 
 Cấu trúc pháp lý ảnh hưởng trực tiếp đến trách nhiệm pháp lý, thuế, tuyển dụng, định giá chuyển nhượng, quản trị và tốc độ ra quyết định. Vì vậy trước khi đánh giá một công ty nước ngoài tại Hàn Quốc, cần xác định chính xác **pháp nhân nào đang tồn tại và quyền quyết định nằm ở đâu**.
 
-> Mental Model — mô hình tư duy: gia nhập thị trường nước ngoài là bài toán **pháp nhân + dòng vốn + quyền quyết định + nội địa hóa + mức độ phù hợp với hệ sinh thái địa phương**.
+> mô hình tư duy (mental model / 사고 모델) — mô hình tư duy: gia nhập thị trường nước ngoài là bài toán **pháp nhân + dòng vốn + quyền quyết định + nội địa hóa + mức độ phù hợp với hệ sinh thái địa phương**.
 
 ## Công ty có vốn đầu tư nước ngoài khác chi nhánh nước ngoài
 
@@ -193,7 +196,7 @@ Hãy xác định pháp nhân chính xác, cấu trúc sở hữu, chức năng 
 
 Nếu mục tiêu là phân tích nghề nghiệp, bổ sung thêm cấu trúc lương, ngôn ngữ báo cáo, đường thăng tiến và mức độ chuyển đổi kỹ năng sang thị trường lao động bên ngoài.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Công ty nước ngoài tại Hàn Quốc là **giao diện giữa kiến trúc doanh nghiệp toàn cầu và môi trường thị trường–thể chế Hàn Quốc**. Hiệu quả phụ thuộc vào việc pháp nhân, quyền quyết định, nội địa hóa và hệ sinh thái địa phương có phù hợp với nhau hay không.
 
@@ -203,4 +206,6 @@ Công ty có vốn nước ngoài thành lập tại Hàn Quốc không đơn gi
 
 ## Liên kết
 
-Đọc [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md) để hiểu hình thức pháp nhân, [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md) để hiểu chuỗi giá trị xuyên biên giới, [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md) cho thuế–quy định và [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) cho logic địa điểm.
+Đọc [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md) để hiểu hình thức pháp nhân, [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md) để hiểu chuỗi giá trị xuyên biên giới, [`22_tax_regulation_and_competition.md`](./22_tax_regulation_and_competition.md) cho thuế–quy định và [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) cho lô-gic (logic / 논리) địa điểm.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

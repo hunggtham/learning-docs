@@ -1,5 +1,8 @@
 # Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục
 
+> **Mạch đọc:** Đặt **Tình huống 01 — Từ cú sốc CPI tới quyết định danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bối cảnh giả định** sang **2. Tách cấu phần lạm phát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Đây là một tình huống tích hợp nhiều lĩnh vực. Mục tiêu không phải học khẩu quyết `CPI tăng → cổ phiếu giảm`, mà hiểu một mức CPI gây bất ngờ so với kỳ vọng (CPI surprise) truyền qua lãi suất, tỷ giá, tín dụng, lợi nhuận doanh nghiệp, định giá, danh mục và thực thi lệnh như thế nào. Toàn bộ ví dụ đều là giả định để giữ tính dùng lại lâu dài.
 
 ## 1. Bối cảnh giả định
@@ -134,7 +137,7 @@ Lãi suất cao hơn có thể hỗ trợ biên lãi ròng (NIM) lúc đầu, nh
 
 ### REIT và bất động sản
 
-Tỷ lệ chiết khấu và cap rate cao hơn gây áp lực định giá; chi phí tái cấp vốn cũng tăng. Nếu tiền thuê và NOI tăng tốt, một phần tác động có thể được bù lại.
+Tỷ lệ chiết khấu và cap tỷ lệ (rate / 비율) cao hơn gây áp lực định giá; chi phí tái cấp vốn cũng tăng. Nếu tiền thuê và NOI tăng tốt, một phần tác động có thể được bù lại.
 
 ### Bán dẫn và cổ phiếu tăng trưởng
 
@@ -344,3 +347,5 @@ Giá đi ngược vài phiên không tự động làm luận điểm sai; cơ c
 ## Kết luận
 
 Một con số CPI không phải tín hiệu giao dịch tự động. Nó là một **cú sốc thông tin** làm thị trường cập nhật phân phối xác suất của tăng trưởng, lạm phát và chính sách. Nhà đầu tư cần theo dõi từng kênh truyền dẫn, kiểm tra điều gì đã nằm trong giá, nối nó tới dòng tiền doanh nghiệp và chỉ sau đó mới quyết định mức phơi nhiễm, công cụ phòng vệ và quy mô vị thế.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 CREDIT LIQUIDITY CRISIS TRANSMISSION](./02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

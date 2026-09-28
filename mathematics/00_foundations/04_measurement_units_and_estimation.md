@@ -1,8 +1,11 @@
 # Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa
 
-Khi toán học chạm vào thế giới thật, một con số hiếm khi đủ. `5` có thể là 5 mét, 5 giây, 5%, 5 requests/s hoặc 5 triệu KRW. Những con số này nhìn giống nhau về mặt ký hiệu nhưng thuộc các loại quantity khác nhau, có cách cộng/trừ khác nhau, độ chính xác khác nhau và mức uncertainty khác nhau.
+> **Mạch đọc:** Đọc **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Quantity và đơn vị (unit / 단위): đơn vị (unit / 단위) giống như kiểu (type / 타입) thông tin (information / 정보)** sang **2. Dimension khác đơn vị (unit / 단위)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Vì vậy một measurement nên được nghĩ theo ba lớp:
+
+Khi toán học chạm vào thế giới thật, một con số hiếm khi đủ. `5` có thể là 5 mét, 5 giây, 5%, 5 requests/s hoặc 5 triệu KRW. Những con số này nhìn giống nhau về mặt ký hiệu nhưng thuộc các loại quantity khác nhau, có cách cộng/trừ khác nhau, độ chính xác khác nhau và mức bất định (uncertainty / 불확실성) khác nhau.
+
+Vì vậy một đo lường (measurement / 측정) nên được nghĩ theo ba lớp:
 
 ```text
 quantity = numerical value × unit
@@ -10,9 +13,9 @@ measurement = quantity + uncertainty
 model input = measurement + assumptions
 ```
 
-Đây là bridge từ arithmetic sang science, engineering, statistics và numerical computing.
+Đây là cầu nối (bridge / 브리지) từ arithmetic sang science, kỹ thuật (engineering / 엔지니어링), statistics và numerical computing.
 
-## 1. Quantity và unit: unit giống như type information
+## 1. Quantity và đơn vị (unit / 단위): đơn vị (unit / 단위) giống như kiểu (type / 타입) thông tin (information / 정보)
 
 Một đại lượng đo được (measured quantity / 측정량) thường có dạng
 
@@ -20,7 +23,7 @@ Một đại lượng đo được (measured quantity / 측정량) thường có
 Q=q\,[u]
 ```
 
-trong đó `q` là numerical value và `[u]` là unit.
+trong đó `q` là numerical giá trị (value / 값) và `[u]` là đơn vị (unit / 단위).
 
 Ví dụ:
 
@@ -30,23 +33,23 @@ Ví dụ:
 
 không chỉ là number `3.2`; nó là một length.
 
-Đổi unit:
+Đổi đơn vị (unit / 단위):
 
 ```math
 3.2\,km\times\frac{1000\,m}{1\,km}=3200\,m.
 ```
 
-Conversion factor về physical meaning bằng 1, nên quantity không đổi, chỉ representation đổi.
+Conversion factor về vật lý (physical / 물리적) meaning bằng 1, nên quantity không đổi, chỉ biểu diễn (representation / 표현) đổi.
 
-Mental model hữu ích trong programming là **unit ≈ type**. `5 m + 3 m` hợp lý, còn `5 m + 3 s` không hợp lý vì hai quantities khác loại. Những thư viện units-of-measure trong software cố encode chính rule này vào type system.
+Mô hình tư duy (mental model / 사고 모델) hữu ích trong programming là **đơn vị (unit / 단위) ≈ kiểu (type / 타입)**. `5 m + 3 m` hợp lý, còn `5 m + 3 s` không hợp lý vì hai quantities khác loại. Những thư viện units-of-measure trong software cố encode chính quy tắc (rule / 규칙) này vào hệ kiểu (type system / 타입 시스템).
 
-## 2. Dimension khác unit
+## 2. Dimension khác đơn vị (unit / 단위)
 
 **Thứ nguyên (dimension / 차원)** nói quantity thuộc loại cơ bản nào; **đơn vị (unit / 단위)** nói ta đo loại đó bằng thang nào.
 
 Ví dụ meter và kilometer là hai units của cùng dimension length `[L]`.
 
-Một số base dimensions thường dùng:
+Một số cơ sở (base / 기반) dimensions thường dùng:
 
 ```text
 length   [L]
@@ -76,9 +79,9 @@ Force:
 [F]=MLT^{-2}.
 ```
 
-## 3. Dimensional consistency là type checker, không phải proof
+## 3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof
 
-Một physical equation phải có dimensions compatible ở hai vế.
+Một vật lý (physical / 물리적) equation phải có dimensions compatible ở hai vế.
 
 Ví dụ:
 
@@ -98,9 +101,9 @@ Còn
 d=v+t
 ```
 
-không hợp lệ vì velocity và time không thể cộng trực tiếp.
+không hợp lệ vì velocity và thời gian (time / 시간) không thể cộng trực tiếp.
 
-Tuy nhiên dimensional consistency chỉ là **necessary condition**, không phải sufficient condition. Cả
+Tuy nhiên dimensional consistency chỉ là **necessary điều kiện (condition / 조건)**, không phải sufficient điều kiện (condition / 조건). Cả
 
 ```math
 d=vt
@@ -112,11 +115,11 @@ và
 d=2vt
 ```
 
-đều đúng dimension, nhưng coefficient 2 cần reasoning/evidence khác.
+đều đúng dimension, nhưng coefficient 2 cần lập luận (reasoning / 추론)/bằng chứng (evidence / 증거) khác.
 
-Đây là một pattern quan trọng trong toán ứng dụng:
+Đây là một mẫu (pattern / 패턴) quan trọng trong toán ứng dụng:
 
-> Một constraint có thể loại bỏ nhiều answer sai mà chưa đủ để xác định answer đúng.
+> Một ràng buộc (constraint / 제약조건) có thể loại bỏ nhiều answer sai mà chưa đủ để xác định answer đúng.
 
 ## 4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?
 
@@ -136,19 +139,19 @@ Ví dụ:
 \text{relative error}=\frac{|x-\hat x|}{|x|}.
 ```
 
-Dimensionless groups thường cho phép so sánh systems khác scale. Đây là trực giác phía sau dimensional similarity trong physics/engineering và nhiều normalized metrics trong data science.
+Dimensionless groups thường cho phép so sánh các hệ thống (systems / 시스템들) khác quy mô (scale / 규모). Đây là trực giác phía sau dimensional similarity trong physics/kỹ thuật (engineering / 엔지니어링) và nhiều normalized metrics trong dữ liệu (data / 데이터) science.
 
-Ta không cần formal Buckingham π theorem ở đây, nhưng nên nhớ idea: nếu model thực sự chỉ phụ thuộc vào một số independent dimensions, có thể tồn tại representation compact hơn bằng dimensionless combinations.
+Ta không cần formal Buckingham π theorem ở đây, nhưng nên nhớ idea: nếu mô hình (model / 모델) thực sự chỉ phụ thuộc vào một số independent dimensions, có thể tồn tại biểu diễn (representation / 표현) compact hơn bằng dimensionless combinations.
 
-## 5. Precision, accuracy và uncertainty không giống nhau
+## 5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau
 
-**Precision** nói measurements lặp lại có gần nhau không hoặc representation có bao nhiêu resolution.
+**Precision** nói measurements lặp lại có gần nhau không hoặc biểu diễn (representation / 표현) có bao nhiêu resolution.
 
-**Accuracy** nói estimate có gần true value không.
+**Accuracy** nói estimate có gần true giá trị (value / 값) không.
 
-Một sensor có thể rất precise nhưng biased: luôn cho `10.00`, `10.01`, `9.99` trong khi true value là `11.2`.
+Một sensor có thể rất precise nhưng biased: luôn cho `10.00`, `10.01`, `9.99` trong khi true giá trị (value / 값) là `11.2`.
 
-Ngược lại, measurements có thể noisy nhưng average lại gần true value.
+Ngược lại, measurements có thể noisy nhưng average lại gần true giá trị (value / 값).
 
 Điều này quan trọng trong ML/Statistics:
 
@@ -159,7 +162,7 @@ precision ≠ accuracy
 
 ## 6. Significant figures và false precision
 
-Chữ số có nghĩa (significant figures / 유효숫자) biểu thị mức resolution/precision hợp lý của measurement.
+Chữ số có nghĩa (significant figures / 유효숫자) biểu thị mức resolution/precision hợp lý của đo lường (measurement / 측정).
 
 Nếu length được đo là
 
@@ -167,7 +170,7 @@ Nếu length được đo là
 12.3 cm
 ```
 
-calculator không thể biến nó thành knowledge chính xác ở mức
+calculator không thể biến nó thành kiến thức (knowledge / 지식) chính xác ở mức
 
 ```text
 12.300000000 cm
@@ -181,7 +184,7 @@ Giả sử area của square side `12.3 cm`:
 A=12.3^2=151.29\,cm^2.
 ```
 
-Con số `151.29` là computational output, nhưng reporting có thể chỉ nên giữ precision tương thích với measurement ban đầu.
+Con số `151.29` là computational đầu ra (output / 출력), nhưng reporting có thể chỉ nên giữ precision tương thích với đo lường (measurement / 측정) ban đầu.
 
 Đây là distinction:
 
@@ -190,34 +193,34 @@ computational precision
 ≠ information precision
 ```
 
-## 7. Absolute error và relative error trả lời hai câu hỏi khác nhau
+## 7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau
 
-Cho true value `x` và approximation `\hat x`.
+Cho true giá trị (value / 값) `x` và approximation `\hat x`.
 
-Absolute error:
+Absolute lỗi (error / 오류):
 
 ```math
 E_{abs}=|x-\hat x|.
 ```
 
-Relative error:
+Relative lỗi (error / 오류):
 
 ```math
 E_{rel}=\frac{|x-\hat x|}{|x|},\qquad x\ne0.
 ```
 
-Absolute error trả lời “sai bao nhiêu unit?”. Relative error trả lời “sai lớn đến đâu so với scale của quantity?”.
+Absolute lỗi (error / 오류) trả lời “sai bao nhiêu đơn vị (unit / 단위)?”. Relative lỗi (error / 오류) trả lời “sai lớn đến đâu so với quy mô (scale / 규모) của quantity?”.
 
-Ví dụ error `1 cm`:
+Ví dụ lỗi (error / 오류) `1 cm`:
 
-- object 2 cm → 50% error;
-- bridge 2 km → gần như negligible.
+- đối tượng (object / 객체) 2 cm → 50% lỗi (error / 오류);
+- cầu nối (bridge / 브리지) 2 km → gần như negligible.
 
-Khi `x` gần 0, relative error có thể explode và trở nên không ổn định; lúc đó absolute tolerance hoặc problem-specific scale có thể phù hợp hơn.
+Khi `x` gần 0, relative lỗi (error / 오류) có thể explode và trở nên không ổn định; lúc đó absolute tolerance hoặc problem-specific quy mô (scale / 규모) có thể phù hợp hơn.
 
-## 8. Percentage, percentage point và denominator reasoning
+## 8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)
 
-Nếu rate tăng từ 3% lên 4%:
+Nếu tỷ lệ (rate / 비율) tăng từ 3% lên 4%:
 
 ```text
 increase = 1 percentage point
@@ -233,19 +236,19 @@ Hai câu không mâu thuẫn; denominator khác nhau.
 
 Percentage luôn ngầm hỏi:
 
-> Phần trăm của base nào?
+> Phần trăm của cơ sở (base / 기반) nào?
 
-Đây là lý do percentage change thường asymmetric. Tăng từ 80 lên 100 là 25%, nhưng giảm từ 100 về 80 là 20%.
+Đây là lý do percentage thay đổi (change / 변경) thường asymmetric. Tăng từ 80 lên 100 là 25%, nhưng giảm từ 100 về 80 là 20%.
 
-## 9. Propagation of uncertainty: output không thể chính xác hơn inputs một cách kỳ diệu
+## 9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu
 
-Nếu output
+Nếu đầu ra (output / 출력)
 
 ```math
 y=f(x_1,\ldots,x_n),
 ```
 
-small input perturbations có first-order approximation:
+small đầu vào (input / 입력) perturbations có first-order approximation:
 
 ```math
 \Delta y\approx
@@ -264,7 +267,7 @@ Nếu errors ngẫu nhiên, độc lập và small, variance propagation thườ
 \operatorname{Var}(x_i).
 ```
 
-Đây là connection trực tiếp từ measurement sang multivariable calculus và statistics.
+Đây là liên kết (connection / 연결) trực tiếp từ đo lường (measurement / 측정) sang multivariable calculus và statistics.
 
 ### Worked example: area của rectangle
 
@@ -286,9 +289,9 @@ Chia cho `A=LW`:
 \frac{dL}{L}+\frac{dW}{W}.
 ```
 
-Vì vậy relative uncertainty của product gần bằng tổng relative sensitivities ở first order.
+Vì vậy relative bất định (uncertainty / 불확실성) của sản phẩm (product / 제품) gần bằng tổng relative sensitivities ở first thứ tự (order / 순서).
 
-## 10. Order of magnitude là reasoning về scale
+## 10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)
 
 Scientific notation:
 
@@ -296,17 +299,17 @@ Scientific notation:
 3.2\times10^6
 ```
 
-làm scale rõ hơn `3,200,000`.
+làm quy mô (scale / 규모) rõ hơn `3,200,000`.
 
-Order of magnitude không hỏi exact value mà hỏi size regime.
+Thứ tự (order / 순서) of magnitude không hỏi chính xác (exact / 정확한) giá trị (value / 값) mà hỏi kích thước (size / 크기) regime.
 
-Nếu system A cần `10^3` operations và B cần `10^9`, khác biệt sáu orders of magnitude. Micro-optimization 20% không thể bù chênh lệch factor một triệu.
+Nếu hệ thống (system / 시스템) A cần `10^3` operations và B cần `10^9`, khác biệt sáu orders of magnitude. Micro-optimization 20% không thể bù chênh lệch factor một triệu.
 
-Đây là lý do order-of-magnitude reasoning cực kỳ hữu ích trong system design và algorithm analysis.
+Đây là lý do order-of-magnitude lập luận (reasoning / 추론) cực kỳ hữu ích trong hệ thống (system / 시스템) thiết kế (design / 설계) và thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석).
 
 ## 11. Fermi estimation: decomposition quan trọng hơn decimal precision
 
-Một Fermi estimate phân rã unknown lớn thành product/sum của quantities dễ estimate.
+Một Fermi estimate phân rã unknown lớn thành sản phẩm (product / 제품)/sum của quantities dễ estimate.
 
 Ví dụ rough traffic:
 
@@ -338,25 +341,25 @@ Câu trả lời quan trọng đầu tiên không phải `69.444...`, mà là:
 order of magnitude ≈ 10^2 requests/s average
 ```
 
-Peak factor, retries và burstiness là assumptions tiếp theo.
+Peak factor, retries và burstiness là các giả định (assumptions / 가정들) tiếp theo.
 
 ## 12. Sanity check bằng upper/lower bounds
 
 Ước lượng tốt nên có bounds thô.
 
-Nếu business có tối đa 1 triệu users, mỗi user không thể tạo hơn 1000 requests/ngày theo product constraints, thì upper bound rough là:
+Nếu nghiệp vụ (business / 비즈니스) có tối đa 1 triệu users, mỗi người dùng (user / 사용자) không thể tạo hơn 1000 requests/ngày theo sản phẩm (product / 제품) các ràng buộc (constraints / 제약조건들), thì upper bound rough là:
 
 ```math
 10^6\times10^3=10^9\ requests/day.
 ```
 
-Nếu một dashboard báo `10^13 requests/day`, trước khi debug code phức tạp ta nên hỏi liệu con số đã vi phạm sanity bound hay unit conversion không.
+Nếu một dashboard báo `10^13 requests/day`, trước khi gỡ lỗi (debug / 디버그) mã (code / 코드) phức tạp ta nên hỏi liệu con số đã vi phạm sanity bound hay đơn vị (unit / 단위) conversion không.
 
-Bounding là một trong những kỹ thuật reasoning rẻ nhưng mạnh nhất.
+Bounding là một trong những kỹ thuật lập luận (reasoning / 추론) rẻ nhưng mạnh nhất.
 
-## 13. Linear scale vs logarithmic scale
+## 13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)
 
-Linear scale bảo toàn differences; log scale bảo toàn ratios.
+Tuyến tính (linear / 선형) quy mô (scale / 규모) bảo toàn differences; log quy mô (scale / 규모) bảo toàn ratios.
 
 Trên log10 axis:
 
@@ -366,9 +369,9 @@ Trên log10 axis:
 
 cách đều vì mỗi step nhân 10.
 
-Log scale hữu ích khi data trải nhiều orders of magnitude: latency tail, wealth distribution, frequency spectrum, pH, decibel, learning curves.
+Log quy mô (scale / 규모) hữu ích khi dữ liệu (data / 데이터) trải nhiều orders of magnitude: độ trễ (latency / 지연 시간) tail, wealth phân phối (distribution / 분포), frequency spectrum, pH, decibel, học tập (learning / 학습) curves.
 
-Nhưng log transform thay meaning: difference trên log scale tương ứng ratio trên original scale.
+Nhưng log transform thay meaning: difference trên log quy mô (scale / 규모) tương ứng ratio trên original quy mô (scale / 규모).
 
 ## 14. Units trong Finance, CS và AI
 
@@ -391,20 +394,20 @@ storage → bytes
 
 Trong AI:
 
-loss thường dimensionless hoặc phụ thuộc target scaling; gradient có units output-loss per parameter-unit. Feature scaling thay numerical geometry và do đó ảnh hưởng optimization.
+Mất mát (loss / 손실) thường dimensionless hoặc phụ thuộc mục tiêu (target / 대상) scaling; độ dốc (gradient / 기울기) có units output-loss per parameter-unit. tính năng (feature / 기능) scaling thay numerical hình học (geometry / 기하학) và do đó ảnh hưởng tối ưu hóa (optimization / 최적화).
 
-Unit reasoning không chỉ dành cho physics.
+Đơn vị (unit / 단위) lập luận (reasoning / 추론) không chỉ dành cho physics.
 
-## 15. Worked example: phát hiện unit bug
+## 15. Worked example: phát hiện đơn vị (unit / 단위) bug
 
-Giả sử travel time được tính bằng:
+Giả sử travel thời gian (time / 시간) được tính bằng:
 
 ```text
 distance = 120 km
 speed = 60 m/s
 ```
 
-Nếu code làm trực tiếp:
+Nếu mã (code / 코드) làm trực tiếp:
 
 ```math
 t=120/60=2
@@ -424,11 +427,11 @@ nên
 t=\frac{120000\,m}{60\,m/s}=2000\,s\approx33.3\,min.
 ```
 
-Unit algebra tự chỉ ra phép conversion cần thiết.
+Đơn vị (unit / 단위) algebra tự chỉ ra phép conversion cần thiết.
 
-## 16. Assumptions checklist khi đọc một con số
+## 16. các giả định (assumptions / 가정들) checklist khi đọc một con số
 
-Trước một metric hoặc estimate, hỏi:
+Trước một chỉ số (metric / 지표) hoặc estimate, hỏi:
 
 ```text
 Quantity nào đang được đo?
@@ -443,9 +446,9 @@ Có sanity bound nào không?
 
 Đây là mathematical hygiene, không phải paperwork.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Measurement nối trực tiếp với:
+Đo lường (measurement / 측정) nối trực tiếp với:
 
 ```text
 units → dimensional analysis
@@ -457,12 +460,14 @@ Fermi estimate → modeling/system design
 precision → numerical analysis/floating point
 ```
 
-Trong engineering và data science, nhiều lỗi lớn không đến từ calculus khó mà từ unit mismatch, denominator sai, false precision hoặc assumption scale sai.
+Trong kỹ thuật (engineering / 엔지니어링) và dữ liệu (data / 데이터) science, nhiều lỗi lớn không đến từ calculus khó mà từ đơn vị (unit / 단위) mismatch, denominator sai, false precision hoặc giả định (assumption / 가정) quy mô (scale / 규모) sai.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Một measurement không phải “một number lấy từ thế giới”. Nó là quantity được biểu diễn trong một unit, với finite precision và uncertainty. Good quantitative reasoning luôn giữ bốn lớp cùng lúc: **value, unit, uncertainty, scale**.
+> Một đo lường (measurement / 측정) không phải “một number lấy từ thế giới”. Nó là quantity được biểu diễn trong một đơn vị (unit / 단위), với finite precision và bất định (uncertainty / 불확실성). Good quantitative lập luận (reasoning / 추론) luôn giữ bốn lớp cùng lúc: **giá trị (value / 값), đơn vị (unit / 단위), bất định (uncertainty / 불확실성), quy mô (scale / 규모)**.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Nhiều decimal places không đồng nghĩa accurate. Dimensionally correct không đồng nghĩa physically correct. Relative error không ổn khi reference gần zero. Log scale không “bóp méo dữ liệu” một cách tùy tiện; nó đổi câu hỏi từ additive difference sang multiplicative ratio. Một estimate thô có assumptions rõ thường hữu ích hơn một con số rất chính xác nhưng không biết denominator, unit hoặc uncertainty.
+Nhiều decimal places không đồng nghĩa accurate. Dimensionally correct không đồng nghĩa physically correct. Relative lỗi (error / 오류) không ổn khi tham chiếu (reference / 참조) gần zero. Log quy mô (scale / 규모) không “bóp méo dữ liệu” một cách tùy tiện; nó đổi câu hỏi từ additive difference sang multiplicative ratio. Một estimate thô có các giả định (assumptions / 가정들) rõ thường hữu ích hơn một con số rất chính xác nhưng không biết denominator, đơn vị (unit / 단위) hoặc bất định (uncertainty / 불확실성).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematical thinking](./00_mathematical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

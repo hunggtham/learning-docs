@@ -1,12 +1,15 @@
-# 14 — Application Shell, Navigation & Multi-Screen State
+# 14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)
 
-WebSquare enterprise application thường không phải tập hợp các XML page độc lập. Phía trên các screen nghiệp vụ còn có **application shell**: menu, header, tab/window container, permission context, global message/loading layer, navigation history và cơ chế mở/đóng/reuse screen.
+> **Mạch đọc:** Đặt **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Shell là thời gian chạy (runtime / 런타임) host, không phải “page cha biết mọi thứ”** sang **2. Screen definition khác screen instance**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter 04 đã giải thích Scope/WFrame ở mức page composition. Chapter này đi lên một tầng architecture: **khi hàng chục hoặc hàng trăm screen cùng sống trong một shell, ai sở hữu navigation state, page instance được định danh thế nào, khi nào reuse tab, khi nào tạo instance mới, và state nào được phép global?**
 
-## 1. Shell là runtime host, không phải “page cha biết mọi thứ”
+WebSquare enterprise ứng dụng (application / 애플리케이션) thường không phải tập hợp các XML page độc lập. Phía trên các screen nghiệp vụ còn có **ứng dụng (application / 애플리케이션) shell**: menu, header, tab/cửa sổ (window / 윈도우) bộ chứa (container / 컨테이너), permission ngữ cảnh (context / 맥락), toàn cục (global / 전역) message/loading tầng (layer / 계층), điều hướng (navigation / 내비게이션) lịch sử (history / 이력) và cơ chế mở/đóng/reuse screen.
 
-Mental model tốt:
+Chapter 04 đã giải thích phạm vi (scope / 범위)/WFrame ở mức page composition. Chapter này đi lên một tầng kiến trúc (architecture / 아키텍처): **khi hàng chục hoặc hàng trăm screen cùng sống trong một shell, ai sở hữu điều hướng (navigation / 내비게이션) trạng thái (state / 상태), page instance được định danh thế nào, khi nào reuse tab, khi nào tạo instance mới, và trạng thái (state / 상태) nào được phép toàn cục (global / 전역)?**
+
+## 1. Shell là thời gian chạy (runtime / 런타임) host, không phải “page cha biết mọi thứ”
+
+Mô hình tư duy (mental model / 사고 모델) tốt:
 
 ```text
 Application Shell
@@ -20,13 +23,13 @@ Application Shell
    └─ order-list scope
 ```
 
-Shell cung cấp capability chung. Screen nghiệp vụ giữ business state của chính nó. Nếu shell biết ID của mọi Grid/Input trong mọi screen, architecture đã đảo ngược dependency.
+Shell cung cấp năng lực (capability / 역량) chung. Screen nghiệp vụ giữ nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) của chính nó. Nếu shell biết ID của mọi Grid/đầu vào (input / 입력) trong mọi screen, kiến trúc (architecture / 아키텍처) đã đảo ngược phụ thuộc (dependency / 의존성).
 
-Shell nên biết **screen contract**, không biết **screen internals**.
+Shell nên biết **screen đặc tả hợp đồng (contract / 계약)**, không biết **screen internals**.
 
 ## 2. Screen definition khác screen instance
 
-`/ui/order/list.xml` là screen definition/source. Khi mở nó hai lần với hai parameter khác nhau, có thể có hai instance.
+`/ui/order/list.xml` là screen definition/nguồn (source / 소스). Khi mở nó hai lần với hai parameter khác nhau, có thể có hai instance.
 
 ```text
 screen definition: order/list.xml
@@ -35,15 +38,15 @@ instance A: order/list.xml?customer=C001
 instance B: order/list.xml?customer=C999
 ```
 
-Trong WFrame/Scope architecture, mỗi instance có thể có `scwin`, DataCollection, current row, pending Submission và unsaved state riêng.
+Trong WFrame/phạm vi (scope / 범위) kiến trúc (architecture / 아키텍처), mỗi instance có thể có `scwin`, DataCollection, hiện tại (current / 현재) row, pending Submission và unsaved trạng thái (state / 상태) riêng.
 
-Nếu navigation registry chỉ key theo source path, instance B có thể vô tình activate A. Vì vậy cần quyết định identity policy của screen.
+Nếu điều hướng (navigation / 내비게이션) registry chỉ key theo nguồn (source / 소스) đường dẫn (path / 경로), instance B có thể vô tình activate A. Vì vậy cần quyết định định danh (identity / 식별자) chính sách (policy / 정책) của screen.
 
-## 3. Navigation identity là product rule
+## 3. điều hướng (navigation / 내비게이션) định danh (identity / 식별자) là sản phẩm (product / 제품) quy tắc (rule / 규칙)
 
-Một menu “Employee Management” có thể chỉ cho phép một tab duy nhất. Một màn hình “Order Detail” có thể cho phép nhiều order mở song song.
+Một menu “Employee Management” có thể chỉ cho phép một tab duy nhất. Một màn hình “thứ tự (order / 순서) Detail” có thể cho phép nhiều thứ tự (order / 순서) mở song song.
 
-Do đó tab/window key nên phản ánh intent:
+Do đó tab/cửa sổ (window / 윈도우) key nên phản ánh intent:
 
 ```text
 single-instance screen
@@ -54,15 +57,15 @@ key = ORDER_DETAIL:ORD-1001
 key = ORDER_DETAIL:ORD-1002
 ```
 
-Không có một key strategy đúng cho mọi screen. Nhưng strategy phải explicit để tránh duplicate tab hoặc reuse nhầm state.
+Không có một key chiến lược (strategy / 전략) đúng cho mọi screen. Nhưng chiến lược (strategy / 전략) phải tường minh (explicit / 명시적) để tránh duplicate tab hoặc reuse nhầm trạng thái (state / 상태).
 
-## 4. `openAction`/reuse policy phải khớp identity policy
+## 4. `openAction`/reuse chính sách (policy / 정책) phải khớp định danh (identity / 식별자) chính sách (policy / 정책)
 
-TabControl/WindowContainer có option để quyết định behavior khi target đã tồn tại tùy API/build. Đừng chọn “exist/reuse” chỉ vì muốn tránh mở nhiều tab.
+TabControl/WindowContainer có option để quyết định hành vi (behavior / 동작) khi mục tiêu (target / 대상) đã tồn tại tùy API/bản dựng (build / 빌드). Đừng chọn “exist/reuse” chỉ vì muốn tránh mở nhiều tab.
 
-Reuse chỉ đúng nếu existing instance đại diện cùng logical task. Nếu user mở detail của entity khác mà app chỉ focus tab cũ không reload parameter, UI sẽ hiển thị entity sai.
+Reuse chỉ đúng nếu existing instance đại diện cùng logical tác vụ (task / 작업). Nếu người dùng (user / 사용자) mở detail của thực thể (entity / 엔터티) khác mà app chỉ focus tab cũ không reload parameter, UI sẽ hiển thị thực thể (entity / 엔터티) sai.
 
-Reasoning trước khi mở:
+Lập luận (reasoning / 추론) trước khi mở:
 
 ```text
 logical key đã tồn tại?
@@ -70,11 +73,11 @@ logical key đã tồn tại?
 → không: create instance mới
 ```
 
-## 5. TabControl và WindowContainer là host có lifecycle
+## 5. TabControl và WindowContainer là host có vòng đời (lifecycle / 생명주기)
 
-SP5 hỗ trợ `wframe` frame mode cho TabControl/WindowContainer để screen có Scope riêng. WindowContainer còn phục vụ MDI-style window hierarchy. Đây không chỉ là layout choice; nó quyết định isolation, `getWindow()` semantics và cleanup boundary.
+SP5 hỗ trợ `wframe` frame chế độ (mode / 모드) cho TabControl/WindowContainer để screen có phạm vi (scope / 범위) riêng. WindowContainer còn phục vụ MDI-style cửa sổ (window / 윈도우) hierarchy. Đây không chỉ là bố cục (layout / 레이아웃) choice; nó quyết định isolation, `getWindow()` ngữ nghĩa (semantics / 의미론) và cleanup ranh giới (boundary / 경계).
 
-Khi tạo tab/window bằng `src`, screen cần thời gian load. Shell không được giả định `addTab()`/`createWindow()` return là business screen đã data-ready.
+Khi tạo tab/cửa sổ (window / 윈도우) bằng `src`, screen cần thời gian tải (load / 로드). Shell không được giả định `addTab()`/`createWindow()` return là nghiệp vụ (business / 비즈니스) screen đã data-ready.
 
 ```text
 container created
@@ -86,11 +89,11 @@ container created
 → business data ready
 ```
 
-Nếu shell cần gọi screen sau load, hãy dùng ready contract phù hợp thay vì timer.
+Nếu shell cần gọi screen sau tải (load / 로드), hãy dùng ready đặc tả hợp đồng (contract / 계약) phù hợp thay vì timer.
 
-## 6. `dataObject` là navigation input contract
+## 6. `dataObject` là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)
 
-Khi shell mở screen, parameter nên là plain data:
+Khi shell mở screen, parameter nên là plain dữ liệu (data / 데이터):
 
 ```javascript
 var dataObject = {
@@ -103,15 +106,15 @@ var dataObject = {
 };
 ```
 
-Screen đọc bằng `$p.getParameter()` theo contract của build.
+Screen đọc bằng `$p.getParameter()` theo đặc tả hợp đồng (contract / 계약) của bản dựng (build / 빌드).
 
-Parameter nên mô tả **ý định mở screen**, không truyền component instance hoặc mutable object của parent. Điều này cho phép cùng screen được host bởi TabControl, WindowContainer hoặc popup mà không biết topology cụ thể.
+Parameter nên mô tả **ý định mở screen**, không truyền thành phần (component / 컴포넌트) instance hoặc mutable đối tượng (object / 객체) của parent. Điều này cho phép cùng screen được host bởi TabControl, WindowContainer hoặc popup mà không biết topology cụ thể.
 
-## 7. Navigation command tốt hơn direct container manipulation rải rác
+## 7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác
 
-Nếu mọi screen tự gọi `mainTab.addTab(...)` với option khác nhau, navigation policy bị phân tán.
+Nếu mọi screen tự gọi `mainTab.addTab(...)` với option khác nhau, điều hướng (navigation / 내비게이션) chính sách (policy / 정책) bị phân tán.
 
-Một common navigation service có thể expose capability:
+Một dùng chung (common / 공통) điều hướng (navigation / 내비게이션) dịch vụ (service / 서비스) có thể expose năng lực (capability / 역량):
 
 ```javascript
 appNav.openScreen({
@@ -121,13 +124,13 @@ appNav.openScreen({
 });
 ```
 
-Bên trong service mới quyết định container, tab ID, title, duplicate policy và telemetry.
+Bên trong dịch vụ (service / 서비스) mới quyết định bộ chứa (container / 컨테이너), tab ID, title, duplicate chính sách (policy / 정책) và telemetry.
 
-Điểm quan trọng là common service không được biết `grdOrder` hoặc `dmSearch` của screen. Nó quản navigation, không quản business UI.
+Điểm quan trọng là dùng chung (common / 공통) dịch vụ (service / 서비스) không được biết `grdOrder` hoặc `dmSearch` của screen. Nó quản điều hướng (navigation / 내비게이션), không quản nghiệp vụ (business / 비즈니스) UI.
 
-## 8. Global state phải nhỏ và có owner rõ
+## 8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ
 
-Một số state hợp lý ở shell/session level:
+Một số trạng thái (state / 상태) hợp lý ở shell/session mức (level / 수준):
 
 ```text
 current authenticated user identity
@@ -138,7 +141,7 @@ navigation registry
 correlation/session metadata không nhạy cảm
 ```
 
-State không nên global tùy tiện:
+Trạng thái (state / 상태) không nên toàn cục (global / 전역) tùy tiện:
 
 ```text
 current selected customer của một tab
@@ -148,26 +151,26 @@ popup temporary form
 pending Save flag của một page
 ```
 
-Global mutable state làm nhiều instance ghi đè nhau và kéo lifetime object dài hơn cần thiết.
+Toàn cục (global / 전역) mutable trạng thái (state / 상태) làm nhiều instance ghi đè nhau và kéo thời gian tồn tại (lifetime / 수명) đối tượng (object / 객체) dài hơn cần thiết.
 
 ## 9. Permission menu khác authorization
 
-Shell thường ẩn menu user không có quyền. Đây là UX/navigation filtering, không phải security boundary.
+Shell thường ẩn menu người dùng (user / 사용자) không có quyền. Đây là UX/điều hướng (navigation / 내비게이션) filtering, không phải ranh giới bảo mật (security boundary / 보안 경계).
 
 ```text
 menu permission → user có thấy/mở screen dễ dàng không
 server authorization → request có được phép thực thi không
 ```
 
-User có thể gọi endpoint trực tiếp hoặc sửa client state. Server vẫn phải enforce permission.
+Người dùng (user / 사용자) có thể gọi endpoint trực tiếp hoặc sửa máy khách (client / 클라이언트) trạng thái (state / 상태). máy chủ (server / 서버) vẫn phải enforce permission.
 
-Menu cache cũng cần invalidation policy nếu quyền có thể thay đổi trong session.
+Menu bộ nhớ đệm (cache / 캐시) cũng cần vô hiệu hóa (invalidation / 무효화) chính sách (policy / 정책) nếu quyền có thể thay đổi trong session.
 
-## 10. Unsaved-change guard thuộc navigation protocol
+## 10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)
 
-Nếu user đóng tab đang có dirty DataList, screen biết “tôi có unsaved change”, còn shell biết “user đang yêu cầu close/navigation”. Hai bên cần contract.
+Nếu người dùng (user / 사용자) đóng tab đang có dirty DataList, screen biết “tôi có unsaved thay đổi (change / 변경)”, còn shell biết “người dùng (user / 사용자) đang yêu cầu close/điều hướng (navigation / 내비게이션)”. Hai bên cần đặc tả hợp đồng (contract / 계약).
 
-Pattern tốt:
+Mẫu (pattern / 패턴) tốt:
 
 ```text
 shell asks screen: canClose?
@@ -176,9 +179,9 @@ screen checks dirty state
 → no/confirm required: prompt/decision
 ```
 
-Pattern xấu là shell tự inspect mọi `dl*` object của child. Điều đó couple shell vào implementation screen.
+Mẫu (pattern / 패턴) xấu là shell tự inspect mọi `dl*` đối tượng (object / 객체) của child. Điều đó couple shell vào hiện thực (implementation / 구현) screen.
 
-Screen có thể expose public function:
+Screen có thể expose công khai (public / 공개) hàm (function / 함수):
 
 ```javascript
 scwin.canClose = function () {
@@ -186,11 +189,11 @@ scwin.canClose = function () {
 };
 ```
 
-Exact invocation qua scope/container phụ thuộc topology, nhưng ownership rõ: screen đánh giá business state, shell điều phối navigation.
+Chính xác (exact / 정확한) invocation qua phạm vi (scope / 범위)/bộ chứa (container / 컨테이너) phụ thuộc topology, nhưng quyền sở hữu (ownership / 소유권) rõ: screen đánh giá nghiệp vụ (business / 비즈니스) trạng thái (state / 상태), shell điều phối điều hướng (navigation / 내비게이션).
 
-## 11. Close không đồng nghĩa object đã garbage-collected
+## 11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected
 
-Khi tab/window đóng, UI biến mất nhưng memory chỉ được giải phóng khi không còn reference reachable.
+Khi tab/cửa sổ (window / 윈도우) đóng, UI biến mất nhưng bộ nhớ (memory / 메모리) chỉ được giải phóng khi không còn tham chiếu (reference / 참조) reachable.
 
 Nếu shell giữ registry:
 
@@ -198,15 +201,15 @@ Nếu shell giữ registry:
 scwin.openScreens[screenKey] = childScope;
 ```
 
-mà không remove entry khi close, child scope có thể bị giữ sống. Registry nên giữ metadata/identity tối thiểu hoặc cleanup reference đúng lifecycle.
+mà không remove entry khi close, child phạm vi (scope / 범위) có thể bị giữ sống. Registry nên giữ siêu dữ liệu (metadata / 메타데이터)/định danh (identity / 식별자) tối thiểu hoặc cleanup tham chiếu (reference / 참조) đúng vòng đời (lifecycle / 생명주기).
 
-Đây là connection trực tiếp với chapter 10 về resource lifetime.
+Đây là liên kết (connection / 연결) trực tiếp với chapter 10 về tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명).
 
-## 12. Reuse tab và refresh state phải có contract
+## 12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)
 
-Giả sử tab Order List đã mở. User từ menu khác yêu cầu mở lại với filter mới.
+Giả sử tab thứ tự (order / 순서) danh sách (list / 목록) đã mở. người dùng (user / 사용자) từ menu khác yêu cầu mở lại với filter mới.
 
-Có ba policy khác nhau:
+Có ba chính sách (policy / 정책) khác nhau:
 
 ```text
 activate only
@@ -214,7 +217,7 @@ activate + refresh with new params
 close old + create new instance
 ```
 
-Không nên ngầm chọn một. Nếu refresh, screen cần public capability như `applyNavigation(params)` thay vì shell set trực tiếp `dmSearch` và click button hộ.
+Không nên ngầm chọn một. Nếu refresh, screen cần công khai (public / 공개) năng lực (capability / 역량) như `applyNavigation(params)` thay vì shell set trực tiếp `dmSearch` và click button hộ.
 
 ```javascript
 scwin.applyNavigation = function (params) {
@@ -223,9 +226,9 @@ scwin.applyNavigation = function (params) {
 };
 ```
 
-## 13. Back/forward history cần định nghĩa semantic
+## 13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)
 
-SPA shell giữ engine sống nên browser history không tự động hiểu mọi tab switch là navigation meaningful. Legacy IFrame còn có history riêng.
+SPA shell giữ engine sống nên trình duyệt (browser / 브라우저) lịch sử (history / 이력) không tự động hiểu mọi tab switch là điều hướng (navigation / 내비게이션) meaningful. Legacy IFrame còn có lịch sử (history / 이력) riêng.
 
 Trước khi thêm back button, xác định:
 
@@ -236,9 +239,9 @@ popup có history không?
 filter/search có history không?
 ```
 
-Không cố map mọi UI state vào URL/history. Chỉ state cần deep-link/recovery/share mới nên có navigation representation ổn định.
+Không cố map mọi UI trạng thái (state / 상태) vào URL/lịch sử (history / 이력). Chỉ trạng thái (state / 상태) cần deep-link/khôi phục (recovery / 복구)/share mới nên có điều hướng (navigation / 내비게이션) biểu diễn (representation / 표현) ổn định.
 
-## 14. Deep link cần tách route identity và runtime instance
+## 14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance
 
 Một deep link có thể biểu diễn:
 
@@ -247,26 +250,26 @@ screen = ORDER_DETAIL
 orderId = ORD-1001
 ```
 
-Khi app boot, shell resolve permission, load screen definition, tạo instance rồi truyền parameter. URL không nên chứa physical WFrame ID sinh ngẫu nhiên hay Grid row index.
+Khi app boot, shell resolve permission, tải (load / 로드) screen definition, tạo instance rồi truyền parameter. URL không nên chứa vật lý (physical / 물리적) WFrame ID sinh ngẫu nhiên hay Grid row chỉ mục (index / 인덱스).
 
-Stable route dùng business/navigation identity; runtime ID chỉ là implementation detail.
+Stable tuyến (route / 경로) dùng nghiệp vụ (business / 비즈니스)/điều hướng (navigation / 내비게이션) định danh (identity / 식별자); thời gian chạy (runtime / 런타임) ID chỉ là hiện thực (implementation / 구현) detail.
 
-## 15. Menu metadata không nên trở thành god configuration
+## 15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)
 
-Enterprise app thường có menu table chứa screen URL, title, permission, icon, open mode. Metadata hữu ích nhưng nếu nhét mọi behavior business vào menu config, debugging trở nên khó.
+Enterprise app thường có menu bảng (table / 테이블) chứa screen URL, title, permission, icon, open chế độ (mode / 모드). siêu dữ liệu (metadata / 메타데이터) hữu ích nhưng nếu nhét mọi hành vi (behavior / 동작) nghiệp vụ (business / 비즈니스) vào menu cấu hình (config / 설정), debugging trở nên khó.
 
-Menu metadata nên trả lời navigation concern. Screen behavior vẫn thuộc screen/domain code.
+Menu siêu dữ liệu (metadata / 메타데이터) nên trả lời điều hướng (navigation / 내비게이션) concern. Screen hành vi (behavior / 동작) vẫn thuộc screen/lĩnh vực (domain / 도메인) mã (code / 코드).
 
 ```text
 menu config: screenId, src, title, single/multi-instance
 screen code: validation, DataCollection, Submission, CRUD
 ```
 
-## 16. Loading indicator cần đúng boundary
+## 16. Loading indicator cần đúng ranh giới (boundary / 경계)
 
-Một global spinner cho mọi request có thể tạo UX khó hiểu: background refresh ở tab A làm block tab B. Ngược lại, spinner chỉ trong Grid có thể không đủ cho operation khóa toàn screen.
+Một toàn cục (global / 전역) spinner cho mọi yêu cầu (request / 요청) có thể tạo UX khó hiểu: background refresh ở tab A làm khối (block / 블록) tab B. Ngược lại, spinner chỉ trong Grid có thể không đủ cho thao tác (operation / 연산) khóa toàn screen.
 
-Chọn loading scope theo operation ownership:
+Chọn loading phạm vi (scope / 범위) theo thao tác (operation / 연산) quyền sở hữu (ownership / 소유권):
 
 ```text
 component-level
@@ -274,11 +277,11 @@ screen/WFrame-level
 application-level
 ```
 
-TabControl/WindowContainer có mechanism hiển thị process message trong frame ở các configuration tương ứng. Hãy dùng boundary phù hợp thay vì một global boolean duy nhất.
+TabControl/WindowContainer có cơ chế (mechanism / 메커니즘) hiển thị tiến trình (process / 프로세스) message trong frame ở các cấu hình (configuration / 구성) tương ứng. Hãy dùng ranh giới (boundary / 경계) phù hợp thay vì một toàn cục (global / 전역) boolean duy nhất.
 
-## 17. Concurrent tabs làm race condition rõ hơn
+## 17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn
 
-Hai tab cùng gọi endpoint không nhất thiết có vấn đề. Vấn đề xảy ra khi chúng chia sẻ mutable client state hoặc server operation không hỗ trợ concurrency.
+Hai tab cùng gọi endpoint không nhất thiết có vấn đề. Vấn đề xảy ra khi chúng chia sẻ mutable máy khách (client / 클라이언트) trạng thái (state / 상태) hoặc máy chủ (server / 서버) thao tác (operation / 연산) không hỗ trợ tính đồng thời (concurrency / 동시성).
 
 Ví dụ:
 
@@ -287,20 +290,20 @@ Tab A edit customer C001
 Tab B cũng edit C001
 ```
 
-Client Scope isolation giữ hai form riêng, nhưng server vẫn cần optimistic locking/version. WFrame isolation không giải quyết database concurrency.
+Máy khách (client / 클라이언트) phạm vi (scope / 범위) isolation giữ hai form riêng, nhưng máy chủ (server / 서버) vẫn cần optimistic locking/phiên bản (version / 버전). WFrame isolation không giải quyết cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성).
 
-## 18. Cross-screen communication nên qua intent/event, không qua internals
+## 18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals
 
-Case: Detail popup save xong, List tab cần refresh.
+Trường hợp (case / 사례): Detail popup save xong, danh sách (list / 목록) tab cần refresh.
 
-Contract tốt:
+Đặc tả hợp đồng (contract / 계약) tốt:
 
 ```text
 Detail emits/returns { type: "ORDER_CHANGED", orderId }
 List decides whether/how to refresh
 ```
 
-Contract xấu:
+Đặc tả hợp đồng (contract / 계약) xấu:
 
 ```text
 Detail finds top tab
@@ -309,17 +312,17 @@ Detail finds top tab
 → mutates row 7
 ```
 
-Contract tốt giữ ownership và cho List quyết định re-query hay local patch.
+Đặc tả hợp đồng (contract / 계약) tốt giữ quyền sở hữu (ownership / 소유권) và cho danh sách (list / 목록) quyết định re-query hay cục bộ (local / 로컬) patch.
 
-## 19. Broadcast event cũng có trade-off
+## 19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)
 
-Event bus/global publish-subscribe giảm direct reference nhưng có thể tạo hidden dependency nếu dùng quá mức.
+Sự kiện (event / 이벤트) bus/toàn cục (global / 전역) publish-subscribe giảm direct tham chiếu (reference / 참조) nhưng có thể tạo hidden phụ thuộc (dependency / 의존성) nếu dùng quá mức.
 
-Nếu `ORDER_CHANGED` có 12 subscriber, một Save có thể trigger nhiều request ngoài dự kiến. Event contract cần naming, payload schema, ownership và unsubscribe lifecycle.
+Nếu `ORDER_CHANGED` có 12 subscriber, một Save có thể trigger nhiều yêu cầu (request / 요청) ngoài dự kiến. sự kiện (event / 이벤트) đặc tả hợp đồng (contract / 계약) cần naming, payload lược đồ (schema / 스키마), quyền sở hữu (ownership / 소유권) và unsubscribe vòng đời (lifecycle / 생명주기).
 
-Đừng thay `parent().parent()` coupling bằng “magic global event” coupling khó trace hơn.
+Đừng thay `parent().parent()` coupling bằng “magic toàn cục (global / 전역) sự kiện (event / 이벤트)” coupling khó dấu vết (trace / 추적) hơn.
 
-## 20. Screen registry nên lưu metadata hơn object graph
+## 20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)
 
 Registry hữu ích:
 
@@ -332,24 +335,24 @@ title
 openedAt
 ```
 
-Cẩn thận khi lưu direct scope/component reference dài hạn. Nếu container recreate WFrame bằng `setSrc()`, cached reference có thể stale và giữ old object sống.
+Cẩn thận khi lưu direct phạm vi (scope / 범위)/thành phần (component / 컴포넌트) tham chiếu (reference / 참조) dài hạn. Nếu bộ chứa (container / 컨테이너) recreate WFrame bằng `setSrc()`, cached tham chiếu (reference / 참조) có thể stale và giữ old đối tượng (object / 객체) sống.
 
-Resolve scope gần thời điểm sử dụng qua container/public API khi topology dynamic.
+Resolve phạm vi (scope / 범위) gần thời điểm sử dụng qua bộ chứa (container / 컨테이너)/API công khai (public API / 공개 API) khi topology động (dynamic / 동적).
 
 ## 21. Adaptive frame và responsive responsibility
 
-SP5 có `adaptiveFrame` trong TabControl/WindowContainer scenario để adaptive layout có thể dựa kích thước frame thay vì browser. Điều này quan trọng khi một screen sống trong window nhỏ hơn viewport.
+SP5 có `adaptiveFrame` trong TabControl/WindowContainer scenario để adaptive bố cục (layout / 레이아웃) có thể dựa kích thước frame thay vì trình duyệt (browser / 브라우저). Điều này quan trọng khi một screen sống trong cửa sổ (window / 윈도우) nhỏ hơn viewport.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 browser viewport size
 ≠ tab/window content size
 ```
 
-Responsive logic cần biết boundary nào quyết định layout. Đừng hard-code `window.innerWidth` nếu screen thực tế phải thích ứng theo container.
+Responsive lô-gic (logic / 논리) cần biết ranh giới (boundary / 경계) nào quyết định bố cục (layout / 레이아웃). Đừng hard-code `window.innerWidth` nếu screen thực tế phải thích ứng theo bộ chứa (container / 컨테이너).
 
-## 22. Application shell cũng cần observability
+## 22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)
 
 Metrics/log hữu ích:
 
@@ -364,9 +367,9 @@ unsaved-close cancellation
 per-screen memory/request growth
 ```
 
-Khi user nói “mở càng nhiều tab càng chậm”, cần evidence shell-level chứ không chỉ profile một screen riêng lẻ.
+Khi người dùng (user / 사용자) nói “mở càng nhiều tab càng chậm”, cần bằng chứng (evidence / 증거) shell-level chứ không chỉ profile một screen riêng lẻ.
 
-## 23. Shell failure-mode matrix
+## 23. Shell failure-mode ma trận (matrix / 행렬)
 
 ```text
 Mở menu nhưng tab cũ hiện data khác
@@ -388,21 +391,21 @@ Mở 30 tab memory tăng không giảm
 → registry/listener/timer/reference leak
 ```
 
-Mỗi triệu chứng nên được debug bằng topology + lifetime evidence trước khi sửa ngẫu nhiên.
+Mỗi triệu chứng nên được gỡ lỗi (debug / 디버그) bằng topology + thời gian tồn tại (lifetime / 수명) bằng chứng (evidence / 증거) trước khi sửa ngẫu nhiên.
 
-## 24. Case study: menu → multi-tab detail → save → refresh
+## 24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh
 
-Giả sử app có Order List và cho mở nhiều Order Detail.
+Giả sử app có thứ tự (order / 순서) danh sách (list / 목록) và cho mở nhiều thứ tự (order / 순서) Detail.
 
-Shell nhận command `openScreen(ORDER_DETAIL, ORD-1001)`. Navigation key là `ORDER_DETAIL:ORD-1001`. Nếu chưa tồn tại, shell tạo WFrame tab và truyền `{orderId}`. Nếu đã tồn tại, shell activate tab đó.
+Shell nhận command `openScreen(ORDER_DETAIL, ORD-1001)`. điều hướng (navigation / 내비게이션) key là `ORDER_DETAIL:ORD-1001`. Nếu chưa tồn tại, shell tạo WFrame tab và truyền `{orderId}`. Nếu đã tồn tại, shell activate tab đó.
 
-Detail page giữ DataMap/DataList và Submission trong Scope riêng. Save gửi version để server kiểm tra concurrency. Khi thành công, detail trả/publish một domain event nhỏ `{type:"ORDER_CHANGED", orderId:"ORD-1001"}`. List page nếu đang mở có thể đánh dấu stale hoặc re-query theo policy. Shell không chạm Grid của List.
+Detail page giữ DataMap/DataList và Submission trong phạm vi (scope / 범위) riêng. Save gửi phiên bản (version / 버전) để máy chủ (server / 서버) kiểm tra tính đồng thời (concurrency / 동시성). Khi thành công, detail trả/publish một lĩnh vực (domain / 도메인) sự kiện (event / 이벤트) nhỏ `{type:"ORDER_CHANGED", orderId:"ORD-1001"}`. danh sách (list / 목록) page nếu đang mở có thể đánh dấu stale hoặc re-query theo chính sách (policy / 정책). Shell không chạm Grid của danh sách (list / 목록).
 
-Khi user đóng Detail còn dirty, shell gọi public `canClose()` của instance. Nếu được đóng, registry xóa metadata/reference và page cleanup timer/listener. Đây là một flow hoàn chỉnh trong đó navigation, business state, server concurrency và lifetime có owner khác nhau nhưng contract nối chúng rõ.
+Khi người dùng (user / 사용자) đóng Detail còn dirty, shell gọi công khai (public / 공개) `canClose()` của instance. Nếu được đóng, registry xóa siêu dữ liệu (metadata / 메타데이터)/tham chiếu (reference / 참조) và page cleanup timer/listener. Đây là một luồng (flow / 흐름) hoàn chỉnh trong đó điều hướng (navigation / 내비게이션), nghiệp vụ (business / 비즈니스) trạng thái (state / 상태), máy chủ (server / 서버) tính đồng thời (concurrency / 동시성) và thời gian tồn tại (lifetime / 수명) có đơn vị sở hữu (owner / 오너) khác nhau nhưng đặc tả hợp đồng (contract / 계약) nối chúng rõ.
 
-## 25. Master rule cho multi-screen WebSquare
+## 25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare
 
-Hãy giữ bốn identity riêng:
+Hãy giữ bốn định danh (identity / 식별자) riêng:
 
 ```text
 screen definition identity
@@ -411,10 +414,12 @@ business entity identity
 runtime frame/scope identity
 ```
 
-Nhiều bug enterprise xuất hiện vì bốn identity này bị trộn thành một string hoặc một row index.
+Nhiều bug enterprise xuất hiện vì bốn định danh (identity / 식별자) này bị trộn thành một string hoặc một row chỉ mục (index / 인덱스).
 
-Khi architecture rõ, shell có thể thay TabControl bằng WindowContainer hoặc đổi navigation policy mà business screen ít bị ảnh hưởng.
+Khi kiến trúc (architecture / 아키텍처) rõ, shell có thể thay TabControl bằng WindowContainer hoặc đổi điều hướng (navigation / 내비게이션) chính sách (policy / 정책) mà nghiệp vụ (business / 비즈니스) screen ít bị ảnh hưởng.
 
 ## 26. Kết nối
 
-Application shell điều phối screen, nhưng mọi mutation cuối cùng vẫn đi qua server contract và transaction boundary. Tiếp theo đọc [15 — Backend Contract, Transaction & Concurrency Integration](15_backend_contract_transaction_concurrency.md).
+Ứng dụng (application / 애플리케이션) shell điều phối screen, nhưng mọi mutation cuối cùng vẫn đi qua máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) và giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계). Tiếp theo đọc [15 — Backend Contract, Transaction & Concurrency Integration](15_backend_contract_transaction_concurrency.md).
+
+> **Bàn giao:** Sau **26. Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”
 
-Giải tích (Calculus / 미적분) bắt đầu khi những câu hỏi đơn giản về change và accumulation va vào một vấn đề logic: nhiều quantities ta muốn biết chỉ xuất hiện khi một interval trở nên **cực nhỏ** hoặc khi một process được lặp **cực nhiều lần**.
+> **Mạch đọc:** Đọc **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao “gần” cần definition chính xác?** sang **Một ví dụ quan trọng: hàm (function / 함수) không cần được định nghĩa tại điểm (point / 지점)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Giải tích (Calculus / 미적분) bắt đầu khi những câu hỏi đơn giản về thay đổi (change / 변경) và accumulation va vào một vấn đề lô-gic (logic / 논리): nhiều quantities ta muốn biết chỉ xuất hiện khi một interval trở nên **cực nhỏ** hoặc khi một tiến trình (process / 프로세스) được lặp **cực nhiều lần**.
 
 Vận tốc trung bình trên interval `Δt` là
 
@@ -12,11 +15,11 @@ Nhưng vận tốc **tức thời** tại đúng một thời điểm thì sao? 
 
 Giới hạn (Limit / 극한) giải quyết đúng khoảng trống đó. Nó cho phép ta nói: “ta không cần đặt interval bằng 0; ta nghiên cứu điều xảy ra khi interval có thể được làm nhỏ tùy ý.”
 
-> Limit không phải phép thế `x=a`. Nó là ngôn ngữ để mô tả behavior khi `x` tiến gần `a` với mức chính xác tùy ý.
+> Limit không phải phép thế `x=a`. Nó là ngôn ngữ để mô tả hành vi (behavior / 동작) khi `x` tiến gần `a` với mức chính xác tùy ý.
 
 ## Tại sao “gần” cần definition chính xác?
 
-Trong everyday language, “gần” là mơ hồ. `0.001` có gần 0 không? Với engineering tolerance 1 mm thì có thể gần; với quantum-scale measurement thì không.
+Trong everyday ngôn ngữ (language / 언어), “gần” là mơ hồ. `0.001` có gần 0 không? Với kỹ thuật (engineering / 엔지니어링) tolerance 1 mm thì có thể gần; với quantum-scale đo lường (measurement / 측정) thì không.
 
 Mathematics cần statement không phụ thuộc cảm giác. Khi viết
 
@@ -24,13 +27,13 @@ Mathematics cần statement không phụ thuộc cảm giác. Khi viết
 \lim_{x\to a}f(x)=L,
 ```
 
-ý nghĩa không phải “`f(x)` trông gần `L` trên graph”, mà là:
+ý nghĩa không phải “`f(x)` trông gần `L` trên đồ thị (graph / 그래프)”, mà là:
 
-> ta có thể yêu cầu output gần `L` đến mức tùy ý, và luôn tìm được một vùng quanh `a` đủ nhỏ để mọi input trong vùng đó tạo output nằm trong tolerance mong muốn.
+> ta có thể yêu cầu đầu ra (output / 출력) gần `L` đến mức tùy ý, và luôn tìm được một vùng quanh `a` đủ nhỏ để mọi đầu vào (input / 입력) trong vùng đó tạo đầu ra (output / 출력) nằm trong tolerance mong muốn.
 
-Đây là một contract giữa **input tolerance** và **output tolerance**.
+Đây là một đặc tả hợp đồng (contract / 계약) giữa **đầu vào (input / 입력) tolerance** và **đầu ra (output / 출력) tolerance**.
 
-## Một ví dụ quan trọng: function không cần được định nghĩa tại point
+## Một ví dụ quan trọng: hàm (function / 함수) không cần được định nghĩa tại điểm (point / 지점)
 
 Xét
 
@@ -58,7 +61,7 @@ Khi `x` tiến gần `1`, `x+1` tiến gần `2`. Vì vậy
 \lim_{x\to1}f(x)=2.
 ```
 
-Điểm này rất quan trọng: **limit mô tả neighborhood behavior, không nhất thiết function value tại point**.
+Điểm này rất quan trọng: **limit mô tả neighborhood hành vi (behavior / 동작), không nhất thiết hàm (function / 함수) giá trị (value / 값) tại điểm (point / 지점)**.
 
 Ta thậm chí có thể define lại
 
@@ -66,9 +69,9 @@ Ta thậm chí có thể define lại
 f(1)=100
 ```
 
-mà limit vẫn là `2`, vì một isolated point không thay behavior của nearby values.
+mà limit vẫn là `2`, vì một isolated điểm (point / 지점) không thay hành vi (behavior / 동작) của nearby values.
 
-## Epsilon–delta: biến “gần” thành contract định lượng
+## Epsilon–delta: biến “gần” thành đặc tả hợp đồng (contract / 계약) định lượng
 
 Definition formal của
 
@@ -90,9 +93,9 @@ thì
 |f(x)-L|<\varepsilon.
 ```
 
-`ε` đo tolerance ở output. `δ` là tolerance ở input đủ để guarantee output tolerance đó.
+`ε` đo tolerance ở đầu ra (output / 출력). `δ` là tolerance ở đầu vào (input / 입력) đủ để guarantee đầu ra (output / 출력) tolerance đó.
 
-Điều kiện `0<|x-a|` loại point `x=a`, vì limit chỉ hỏi behavior quanh point. Nếu function value tại `a` cần tham gia, đó là câu hỏi về continuity.
+Điều kiện `0<|x-a|` loại điểm (point / 지점) `x=a`, vì limit chỉ hỏi hành vi (behavior / 동작) quanh điểm (point / 지점). Nếu hàm (function / 함수) giá trị (value / 값) tại `a` cần tham gia, đó là câu hỏi về continuity.
 
 ### Đọc definition như một game
 
@@ -156,7 +159,7 @@ suy ra
 |(2x+1)-7|=2|x-3|<2\delta=\varepsilon.
 ```
 
-Proof này cho thấy epsilon–delta không phải nghi thức formal vô nghĩa. Nó explicit hóa sensitivity giữa input và output.
+Proof này cho thấy epsilon–delta không phải nghi thức formal vô nghĩa. Nó tường minh (explicit / 명시적) hóa sensitivity giữa đầu vào (input / 입력) và đầu ra (output / 출력).
 
 ## Limit laws: tại sao ta không phải chứng minh từ đầu mọi lần?
 
@@ -188,9 +191,9 @@ và nếu `M≠0`,
 \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}.
 ```
 
-Các laws này follow từ epsilon–delta structure. Một khi đã được prove, chúng trở thành reusable building blocks.
+Các laws này follow từ epsilon–delta cấu trúc (structure / 구조). Một khi đã được prove, chúng trở thành reusable building blocks.
 
-Đây là pattern chung của mathematics: formal foundation được xây kỹ để later reasoning có thể dùng theorem thay vì re-prove mọi detail.
+Đây là mẫu (pattern / 패턴) chung của mathematics: formal foundation được xây kỹ để later lập luận (reasoning / 추론) có thể dùng theorem thay vì re-prove mọi detail.
 
 ## Khi direct substitution đúng?
 
@@ -200,7 +203,7 @@ Nếu `f` continuous tại `a`, thì
 \lim_{x\to a}f(x)=f(a).
 ```
 
-Vì vậy với polynomials, many elementary functions và compositions trong domain hợp lệ, direct substitution thường hoạt động.
+Vì vậy với polynomials, many elementary functions và compositions trong lĩnh vực (domain / 도메인) hợp lệ, direct substitution thường hoạt động.
 
 Ví dụ
 
@@ -210,7 +213,7 @@ Ví dụ
 
 Nhưng direct substitution không phải definition của limit. Nó là shortcut justified bởi continuity.
 
-Khi substitution cho `0/0`, ta không thể conclude limit là `0/0`; đó là **indeterminate form**, signal rằng cần analyze structure sâu hơn.
+Khi substitution cho `0/0`, ta không thể conclude limit là `0/0`; đó là **indeterminate form**, tín hiệu (signal / 신호) rằng cần analyze cấu trúc (structure / 구조) sâu hơn.
 
 ## Indeterminate form không phải answer
 
@@ -226,7 +229,7 @@ Substitution cho
 \frac00.
 ```
 
-Nhưng `0/0` không phải value. Nó nói numerator và denominator đều vanish nên relative rates matter.
+Nhưng `0/0` không phải giá trị (value / 값). Nó nói numerator và denominator đều vanish nên relative rates matter.
 
 Factorization cho limit `2`.
 
@@ -238,7 +241,7 @@ Một expression khác,
 
 cũng cho `0/0` khi substitute `1`, nhưng limit là `0`.
 
-Do đó same indeterminate form có thể dẫn tới different limits. Form cho biết “cần thêm analysis”, không quyết định result.
+Do đó same indeterminate form có thể dẫn tới different limits. Form cho biết “cần thêm phân tích (analysis / 분석)”, không quyết định kết quả (result / 결과).
 
 ## One-sided limits: approach direction có thể matter
 
@@ -260,7 +263,7 @@ chỉ xét `x>a`.
 
 Two-sided limit tồn tại khi hai one-sided limits tồn tại và bằng nhau.
 
-Xét step function
+Xét step hàm (function / 함수)
 
 ```math
 f(x)=
@@ -290,9 +293,9 @@ Vì hai sides khác nhau,
 
 không tồn tại.
 
-Piecewise pricing, tax threshold, activation functions và control logic đều có thể tạo kiểu behavior này.
+Piecewise pricing, tax threshold, activation functions và điều khiển (control / 제어) lô-gic (logic / 논리) đều có thể tạo kiểu hành vi (behavior / 동작) này.
 
-## Infinite limits: unbounded behavior, không phải “giá trị infinity”
+## Infinite limits: unbounded hành vi (behavior / 동작), không phải “giá trị infinity”
 
 Khi viết
 
@@ -300,7 +303,7 @@ Khi viết
 \lim_{x\to0^+}\frac1x=+\infty,
 ```
 
-`∞` không phải real number mà function chạm tới. Statement nói:
+`∞` không phải real number mà hàm (function / 함수) chạm tới. Statement nói:
 
 > với bất kỳ bound `M` lớn đến đâu, ta có thể chọn `x>0` đủ gần 0 để `1/x>M`.
 
@@ -310,11 +313,11 @@ Tương tự,
 \lim_{x\to0^-}\frac1x=-\infty.
 ```
 
-Vì behavior hai sides khác sign, không có single two-sided infinite behavior.
+Vì hành vi (behavior / 동작) hai sides khác sign, không có single two-sided infinite hành vi (behavior / 동작).
 
-Vertical asymptote thường liên quan kiểu unbounded local behavior này.
+Vertical asymptote thường liên quan kiểu unbounded cục bộ (local / 로컬) hành vi (behavior / 동작) này.
 
-## Limits at infinity: long-run behavior
+## Limits at infinity: long-run hành vi (behavior / 동작)
 
 Ký hiệu
 
@@ -366,11 +369,11 @@ Logarithm grow chậm hơn powers:
 
 với `a>0`.
 
-Hierarchy này rất quan trọng trong algorithm complexity và asymptotic analysis.
+Hierarchy này rất quan trọng trong thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도) và asymptotic phân tích (analysis / 분석).
 
-## Continuity: khi function value khớp với local behavior
+## Continuity: khi hàm (function / 함수) giá trị (value / 값) khớp với cục bộ (local / 로컬) hành vi (behavior / 동작)
 
-Function `f` continuous tại `a` nếu
+Hàm (function / 함수) `f` continuous tại `a` nếu
 
 ```math
 \lim_{x\to a}f(x)=f(a).
@@ -380,9 +383,9 @@ Viết đầy đủ, điều này ngầm yêu cầu:
 
 - `f(a)` được định nghĩa;
 - limit tồn tại;
-- limit bằng function value.
+- limit bằng hàm (function / 함수) giá trị (value / 값).
 
-Trực giác “vẽ graph không nhấc bút” hữu ích trong `R→R`, nhưng không đủ general. Definition sâu hơn là **small input perturbation tạo arbitrarily small output perturbation** local quanh point.
+Trực giác “vẽ đồ thị (graph / 그래프) không nhấc bút” hữu ích trong `R→R`, nhưng không đủ general. Definition sâu hơn là **small đầu vào (input / 입력) perturbation tạo arbitrarily small đầu ra (output / 출력) perturbation** cục bộ (local / 로컬) quanh điểm (point / 지점).
 
 Epsilon–delta form của continuity là:
 
@@ -390,21 +393,21 @@ Epsilon–delta form của continuity là:
 |x-a|<\delta\Rightarrow |f(x)-f(a)|<\varepsilon.
 ```
 
-Khác limit definition ở chỗ `x=a` không cần bị exclude và target output là chính `f(a)`.
+Khác limit definition ở chỗ `x=a` không cần bị exclude và mục tiêu (target / 대상) đầu ra (output / 출력) là chính `f(a)`.
 
 ## Continuity trên interval
 
-Một function continuous trên interval nếu continuous tại mọi interior point và appropriate one-sided continuity tại endpoints.
+Một hàm (function / 함수) continuous trên interval nếu continuous tại mọi interior điểm (point / 지점) và appropriate one-sided continuity tại endpoints.
 
 Continuous functions có nhiều stability properties. Hai theorem đặc biệt quan trọng trên closed bounded interval `[a,b]` là:
 
-**Extreme Value Theorem:** continuous function đạt minimum và maximum.
+**Extreme giá trị (value / 값) Theorem:** continuous hàm (function / 함수) đạt minimum và maximum.
 
-**Intermediate Value Theorem:** function nhận mọi value giữa `f(a)` và `f(b)`.
+**Intermediate giá trị (value / 값) Theorem:** hàm (function / 함수) nhận mọi giá trị (value / 값) giữa `f(a)` và `f(b)`.
 
-Continuity vì thế không chỉ là “graph mượt”. Nó guarantee existence của values/extrema dưới conditions cụ thể.
+Continuity vì thế không chỉ là “đồ thị (graph / 그래프) mượt”. Nó guarantee existence của values/extrema dưới conditions cụ thể.
 
-## Intermediate Value Theorem và root existence
+## Intermediate giá trị (value / 값) Theorem và gốc (root / 루트) existence
 
 Nếu `f` continuous trên `[a,b]` và
 
@@ -412,7 +415,7 @@ Nếu `f` continuous trên `[a,b]` và
 f(a)f(b)<0,
 ```
 
-thì `0` nằm giữa `f(a)` và `f(b)`. Intermediate Value Theorem bảo đảm tồn tại ít nhất một `c∈(a,b)` sao cho
+thì `0` nằm giữa `f(a)` và `f(b)`. Intermediate giá trị (value / 값) Theorem bảo đảm tồn tại ít nhất một `c∈(a,b)` sao cho
 
 ```math
 f(c)=0.
@@ -420,7 +423,7 @@ f(c)=0.
 
 Đây là theoretical foundation của bisection.
 
-Lưu ý theorem chỉ guarantee **existence**, không uniqueness. Function có thể cross zero nhiều lần trong interval.
+Lưu ý theorem chỉ guarantee **existence**, không uniqueness. hàm (function / 함수) có thể cross zero nhiều lần trong interval.
 
 ## Types of discontinuity
 
@@ -432,7 +435,7 @@ Ví dụ
 f(x)=\frac{x^2-1}{x-1}
 ```
 
-at `x=1` có finite limit `2` nhưng function undefined. Ta có thể “repair” continuity bằng cách define
+at `x=1` có finite limit `2` nhưng hàm (function / 함수) undefined. Ta có thể “repair” continuity bằng cách define
 
 ```math
 f(1)=2.
@@ -444,23 +447,23 @@ Left và right limits finite nhưng khác nhau. Step functions thường có jum
 
 ### Infinite discontinuity
 
-Function unbounded quanh point, như `1/x` tại 0.
+Hàm (function / 함수) unbounded quanh điểm (point / 지점), như `1/x` tại 0.
 
-### Oscillatory failure
+### Oscillatory thất bại (failure / 실패)
 
-Function
+Hàm (function / 함수)
 
 ```math
 f(x)=\sin\frac1x
 ```
 
-khi `x→0` oscillate ngày càng nhanh giữa `-1` và `1`, nên không approach một value duy nhất.
+khi `x→0` oscillate ngày càng nhanh giữa `-1` và `1`, nên không approach một giá trị (value / 값) duy nhất.
 
-Ví dụ này quan trọng vì limit có thể fail mà không jump và không blow up.
+Ví dụ này quan trọng vì limit có thể thất bại (fail / 실패) mà không jump và không blow up.
 
 ## Continuous không có nghĩa differentiable
 
-Absolute value
+Absolute giá trị (value / 값)
 
 ```math
 f(x)=|x|
@@ -470,11 +473,11 @@ continuous tại `0`, nhưng derivative không tồn tại ở đó vì left slo
 
 Differentiability stronger hơn continuity.
 
-Nếu function differentiable tại `a`, nó continuous tại `a`. Converse sai.
+Nếu hàm (function / 함수) differentiable tại `a`, nó continuous tại `a`. Converse sai.
 
-Geometrically, derivative cần local linear approximation; continuity chỉ yêu cầu no output jump under arbitrarily small input perturbation.
+Geometrically, derivative cần cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation; continuity chỉ yêu cầu no đầu ra (output / 출력) jump under arbitrarily small đầu vào (input / 입력) perturbation.
 
-## Differentiability như local linearity
+## Differentiability như cục bộ (local / 로컬) linearity
 
 Limit mở đường cho derivative:
 
@@ -482,15 +485,15 @@ Limit mở đường cho derivative:
 f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h}.
 ```
 
-Expression bên trong là average slope trên interval size `h`. Limit hỏi liệu slopes có stabilize về một value khi interval shrink không.
+Expression bên trong là average slope trên interval kích thước (size / 크기) `h`. Limit hỏi liệu slopes có stabilize về một giá trị (value / 값) khi interval shrink không.
 
 Vì vậy derivative không phải “đặt `h=0`”. Ta không bao giờ divide by zero. Ta analyze ratio cho nonzero `h` rồi lấy limit.
 
 Đây là conceptual reason limits nằm trước derivatives trong calculus.
 
-## Sequence viewpoint của limits
+## Chuỗi (sequence / 시퀀스) viewpoint của limits
 
-Một cách hiểu khác: nếu mọi sequence `x_n` với
+Một cách hiểu khác: nếu mọi chuỗi (sequence / 시퀀스) `x_n` với
 
 ```math
 x_n\to a,
@@ -502,9 +505,9 @@ và `x_n≠a` cuối cùng, đều cho
 f(x_n)\to L,
 ```
 
-thì function limit là `L` trong standard real setting.
+thì hàm (function / 함수) limit là `L` trong tiêu chuẩn (standard / 표준) real setting.
 
-Viewpoint này rất hữu ích để prove nonexistence. Nếu ta tìm hai sequences cùng tiến tới `a` nhưng function values tiến tới two different limits, global limit không tồn tại.
+Viewpoint này rất hữu ích để prove nonexistence. Nếu ta tìm hai sequences cùng tiến tới `a` nhưng hàm (function / 함수) values tiến tới two different limits, toàn cục (global / 전역) limit không tồn tại.
 
 Ví dụ với
 
@@ -512,7 +515,7 @@ Ví dụ với
 f(x)=\sin\frac1x,
 ```
 
-ta chọn sequences làm `1/x` rơi vào peaks `π/2+2πn` và troughs `3π/2+2πn`; function values lần lượt tiến theo subsequences `1` và `-1`. Vì vậy không có single limit tại 0.
+ta chọn sequences làm `1/x` rơi vào peaks `π/2+2πn` và troughs `3π/2+2πn`; hàm (function / 함수) values lần lượt tiến theo subsequences `1` và `-1`. Vì vậy không có single limit tại 0.
 
 ## Limits và infinite series
 
@@ -534,27 +537,27 @@ rồi hỏi limit
 \lim_{N\to\infty}S_N.
 ```
 
-Infinite sum tồn tại khi sequence partial sums converge.
+Infinite sum tồn tại khi chuỗi (sequence / 시퀀스) partial sums converge.
 
-Limit vì thế là mechanism biến “infinite process” thành finite mathematical object thông qua convergence.
+Limit vì thế là cơ chế (mechanism / 메커니즘) biến “infinite tiến trình (process / 프로세스)” thành finite mathematical đối tượng (object / 객체) thông qua convergence.
 
 ## Uniform continuity: cùng một `δ` cho cả region
 
-Ordinary continuity cho phép `δ` phụ thuộc cả `ε` và point `a`.
+Ordinary continuity cho phép `δ` phụ thuộc cả `ε` và điểm (point / 지점) `a`.
 
-Uniform continuity yêu cầu với mỗi `ε`, một single `δ` hoạt động cho mọi pair points trong domain:
+Uniform continuity yêu cầu với mỗi `ε`, một single `δ` hoạt động cho mọi pair points trong lĩnh vực (domain / 도메인):
 
 ```math
 |x-y|<\delta\Rightarrow |f(x)-f(y)|<\varepsilon.
 ```
 
-Continuous function trên closed bounded interval `[a,b]` luôn uniformly continuous.
+Continuous hàm (function / 함수) trên closed bounded interval `[a,b]` luôn uniformly continuous.
 
-Distinction này quan trọng trong analysis vì nó kiểm soát sensitivity globally hơn local pointwise continuity.
+Distinction này quan trọng trong phân tích (analysis / 분석) vì nó kiểm soát sensitivity globally hơn cục bộ (local / 로컬) pointwise continuity.
 
 ## Continuity trong nhiều dimensions
 
-Với function
+Với hàm (function / 함수)
 
 ```math
 f:\mathbb R^n\to\mathbb R^m,
@@ -568,9 +571,9 @@ continuity generalize bằng distance/norm:
 \|f(x)-f(a)\|<\varepsilon.
 ```
 
-Ta thấy essence không phụ thuộc one-dimensional graph. Continuity là preservation của nearness.
+Ta thấy essence không phụ thuộc one-dimensional đồ thị (graph / 그래프). Continuity là preservation của nearness.
 
-Topology sau này abstract hóa idea này hơn nữa, thậm chí bỏ explicit metric trong nhiều contexts.
+Topology sau này abstract hóa idea này hơn nữa, thậm chí bỏ tường minh (explicit / 명시적) chỉ số (metric / 지표) trong nhiều contexts.
 
 ## Limit và numerical computing là hai tầng khác nhau
 
@@ -588,15 +591,15 @@ Finite-difference derivative
 \frac{f(x+h)-f(x)}{h}
 ```
 
-có truncation error khi `h` lớn nhưng cancellation/rounding error khi `h` quá nhỏ.
+có truncation lỗi (error / 오류) khi `h` lớn nhưng cancellation/rounding lỗi (error / 오류) khi `h` quá nhỏ.
 
-Limit là ideal mathematical object; numerical algorithm phải chọn finite step trong finite precision.
+Limit là ideal mathematical đối tượng (object / 객체); numerical thuật toán (algorithm / 알고리즘) phải chọn finite step trong finite precision.
 
-Nhầm hai tầng này dẫn đến misconception kiểu “đặt `h=10^{-100}` sẽ gần derivative hơn”. Trên floating point, `x+h` thậm chí có thể round thành đúng `x`.
+Nhầm hai tầng này dẫn đến misconception kiểu “đặt `h=10^{-100}` sẽ gần derivative hơn”. Trên floating điểm (point / 지점), `x+h` thậm chí có thể round thành đúng `x`.
 
-## Limits trong asymptotic complexity
+## Limits trong asymptotic độ phức tạp (complexity / 복잡도)
 
-Big-O notation cũng nói về long-run growth behavior.
+Big-O notation cũng nói về long-run growth hành vi (behavior / 동작).
 
 Statement
 
@@ -618,44 +621,46 @@ Limit ratio thường giúp compare growth:
 \lim_{n\to\infty}\frac{T(n)}{g(n)}.
 ```
 
-Nếu ratio tiến tới positive finite constant, hai functions có cùng asymptotic order theo strong intuitive sense.
+Nếu ratio tiến tới positive finite constant, hai functions có cùng asymptotic thứ tự (order / 순서) theo strong intuitive sense.
 
-Vì vậy limit không chỉ là calculus technique; nó là language của asymptotics trong algorithms.
+Vì vậy limit không chỉ là calculus technique; nó là ngôn ngữ (language / 언어) của asymptotics trong algorithms.
 
-## Knowledge Connection — continuity và robust systems
+## Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và robust các hệ thống (systems / 시스템들)
 
-Trong engineering, continuity là primitive form của robustness: small change input không tạo arbitrary large jump output.
+Trong kỹ thuật (engineering / 엔지니어링), continuity là thành phần nguyên thủy (primitive / 기본 요소) form của robustness: small thay đổi (change / 변경) đầu vào (input / 입력) không tạo arbitrary large jump đầu ra (output / 출력).
 
-Nhưng continuity không guarantee practical robustness đủ mạnh. Function có thể continuous nhưng derivative cực lớn, nghĩa tiny input noise vẫn tạo large output change.
+Nhưng continuity không guarantee practical robustness đủ mạnh. hàm (function / 함수) có thể continuous nhưng derivative cực lớn, nghĩa tiny đầu vào (input / 입력) noise vẫn tạo large đầu ra (output / 출력) thay đổi (change / 변경).
 
-Để quantify sensitivity ta cần derivatives, Lipschitz constants hoặc condition numbers.
+Để quantify sensitivity ta cần derivatives, Lipschitz constants hoặc điều kiện (condition / 조건) numbers.
 
 Continuity trả lời “có catastrophic jump do infinitesimal perturbation không?”; conditioning trả lời “amplification mạnh đến mức nào?”.
 
-## Knowledge Connection — continuity và optimization
+## Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và tối ưu hóa (optimization / 최적화)
 
-Continuous objective trên compact feasible set đạt global min/max theo Extreme Value Theorem. Đây là existence guarantee trước khi bàn algorithm nào tìm optimum.
+Continuous mục tiêu (objective / 목표) trên compact feasible set đạt toàn cục (global / 전역) min/max theo Extreme giá trị (value / 값) Theorem. Đây là existence guarantee trước khi bàn thuật toán (algorithm / 알고리즘) nào tìm optimum.
 
-Differentiability cho gradient-based methods thêm local geometry, nhưng existence của optimum và computability của optimum là different questions.
+Differentiability cho gradient-based methods thêm cục bộ (local / 로컬) hình học (geometry / 기하학), nhưng existence của optimum và computability của optimum là different questions.
 
-Mathematical optimization tốt cần phân biệt rõ các tầng guarantee này.
+Mathematical tối ưu hóa (optimization / 최적화) tốt cần phân biệt rõ các tầng guarantee này.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Limit là một **tolerance contract**: nếu ta yêu cầu output gần target đến bất kỳ mức nào, liệu có thể ép input đủ gần point để guarantee điều đó không? Continuity nói function value tại point đồng ý với local limit. Derivative dùng limit để biến shrinking interval thành instantaneous rate; integral và infinite series dùng limit để biến increasingly fine/long finite approximations thành mathematical object. Limit là cây cầu giữa finite reasoning và idealized infinitesimal/infinite behavior.
+> Limit là một **tolerance đặc tả hợp đồng (contract / 계약)**: nếu ta yêu cầu đầu ra (output / 출력) gần mục tiêu (target / 대상) đến bất kỳ mức nào, liệu có thể ép đầu vào (input / 입력) đủ gần điểm (point / 지점) để guarantee điều đó không? Continuity nói hàm (function / 함수) giá trị (value / 값) tại điểm (point / 지점) đồng ý với cục bộ (local / 로컬) limit. Derivative dùng limit để biến shrinking interval thành instantaneous tỷ lệ (rate / 비율); integral và infinite series dùng limit để biến increasingly fine/long finite approximations thành mathematical đối tượng (object / 객체). Limit là cây cầu giữa finite lập luận (reasoning / 추론) và idealized infinitesimal/infinite hành vi (behavior / 동작).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 **“`x→a` nghĩa cuối cùng `x=a`.”** Không. Limit nghiên cứu arbitrarily close values; `x=a` có thể bị exclude.
 
-**“Limit luôn bằng function value.”** Chỉ khi function continuous tại point. Hole hoặc intentionally redefined point có thể khác limit.
+**“Limit luôn bằng hàm (function / 함수) giá trị (value / 값).”** Chỉ khi hàm (function / 함수) continuous tại điểm (point / 지점). Hole hoặc intentionally redefined điểm (point / 지점) có thể khác limit.
 
 **“`0/0` là limit bằng 0.”** `0/0` là indeterminate form, không phải answer. Different expressions cho same form có thể có different limits.
 
-**“`∞` là một số real rất lớn.”** Trong standard real calculus, infinity biểu diễn unbounded behavior hoặc extended concept, không phải ordinary real number để algebra tùy ý.
+**“`∞` là một số real rất lớn.”** Trong tiêu chuẩn (standard / 표준) real calculus, infinity biểu diễn unbounded hành vi (behavior / 동작) hoặc extended concept, không phải ordinary real number để algebra tùy ý.
 
-**“Continuous nghĩa smooth.”** Continuous function có thể có corner, nowhere-differentiable behavior hoặc rất irregular shape. Differentiability/smoothness là stronger properties.
+**“Continuous nghĩa smooth.”** Continuous hàm (function / 함수) có thể có corner, nowhere-differentiable hành vi (behavior / 동작) hoặc rất irregular shape. Differentiability/smoothness là stronger properties.
 
 **“Muốn numerical derivative tốt chỉ cần lấy `h` càng nhỏ.”** Mathematical limit và floating-point approximation khác nhau. Quá nhỏ có thể làm rounding/cancellation dominate.
 
-**“Graph nhìn có vẻ tiến tới value là đủ chứng minh limit.”** Graph tạo intuition nhưng finite-resolution picture không phải proof; oscillation hoặc narrow behavior có thể bị hình vẽ che mất.
+**“đồ thị (graph / 그래프) nhìn có vẻ tiến tới giá trị (value / 값) là đủ chứng minh limit.”** đồ thị (graph / 그래프) tạo intuition nhưng finite-resolution picture không phải proof; oscillation hoặc narrow hành vi (behavior / 동작) có thể bị hình vẽ che mất.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 derivatives](./01_derivatives.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

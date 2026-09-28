@@ -1,5 +1,8 @@
 # Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy
 
+> **Mạch đọc:** Đọc **Kim loại, gốm và thủy tinh — liên kết, khuyết tật và cơ chế phá hủy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kim loại — electron phi định xứ và khả năng biến dạng dẻo** sang **Lệch mạng — vì sao kim loại thật yếu hơn tinh thể lý tưởng nhưng lại hữu ích hơn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Kim loại, gốm và thủy tinh không khác nhau đơn giản theo kiểu “kim loại dẻo, gốm giòn, thủy tinh trong suốt”. Hành vi của chúng hình thành qua một chuỗi nhiều tầng: **cấu trúc điện tử → kiểu liên kết → cấu trúc tinh thể hoặc vô định hình → khuyết tật → vi cấu trúc → lịch sử gia công → tính chất**. Cùng một thành phần hóa học có thể cho tính chất rất khác nếu pha, kích thước hạt, mật độ khuyết tật hoặc trạng thái ứng suất thay đổi.
 
 ## Kim loại — electron phi định xứ và khả năng biến dạng dẻo
@@ -227,7 +230,7 @@ Một quy tắc hỗn hợp đơn giản cho môđun dọc sợi là:
 E_c\approx V_fE_f+V_mE_m
 \]
 
-nhưng vật liệu thật còn phụ thuộc định hướng sợi, tỉ lệ chiều dài/đường kính, độ rỗng, phân bố khuyết tật và khả năng truyền tải qua interface.
+nhưng vật liệu thật còn phụ thuộc định hướng sợi, tỉ lệ chiều dài/đường kính, độ rỗng, phân bố khuyết tật và khả năng truyền tải qua giao diện (interface / 인터페이스).
 
 # Ăn mòn, creep và độ bền lâu dài
 
@@ -266,3 +269,5 @@ Mặt phân cách, định hướng, hình học và khuyết tật có thể qu
 Kim loại, gốm và thủy tinh là ba cách khác nhau để tổ chức liên kết và khuyết tật. **Kim loại hấp thụ biến dạng nhờ chuyển động lệch mạng; gốm chống biến dạng rất tốt nhưng nhạy với khe nứt; thủy tinh đánh đổi trật tự tinh thể để có cấu trúc vô định hình dễ điều chỉnh bằng thành phần và lịch sử nhiệt.** Muốn hiểu vật liệu thật phải luôn thêm vi cấu trúc và lịch sử gia công vào sau công thức hóa học.
 
 Xem tiếp: [Polymer](./02_polymers.md).
+
+> **Bàn giao:** Sau **“Tính chất composite chỉ là trung bình của các thành phần”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

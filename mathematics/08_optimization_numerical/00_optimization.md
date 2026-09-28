@@ -1,12 +1,15 @@
-# Tối ưu hóa: objective, feasible set và geometry của trade-off
+# Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)
 
-Tối ưu hóa (optimization / 최적화) không bắt đầu bằng gradient descent hay Lagrange multiplier. Nó bắt đầu bằng một modeling question:
+> **Mạch đọc:** Đọc **Tối ưu hóa: mục tiêu (objective / 목표), feasible set và hình học (geometry / 기하학) của sự đánh đổi (trade-off / 트레이드오프)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc tối thiểu của một tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)** sang **Worked modeling example — portfolio allocation đơn giản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> Ta được phép thay đổi điều gì, đang cố làm tốt điều gì, và constraints nào định nghĩa một solution hợp lệ?
 
-Một optimizer cực mạnh vẫn có thể cho kết quả vô dụng nếu objective đo sai goal hoặc feasible set bỏ sót constraint quan trọng. Vì vậy optimization là sự kết hợp của **modeling + mathematical structure + computation**.
+Tối ưu hóa (optimization / 최적화) không bắt đầu bằng độ dốc (gradient / 기울기) descent hay Lagrange multiplier. Nó bắt đầu bằng một modeling question:
 
-## Cấu trúc tối thiểu của một optimization problem
+> Ta được phép thay đổi điều gì, đang cố làm tốt điều gì, và các ràng buộc (constraints / 제약조건들) nào định nghĩa một solution hợp lệ?
+
+Một optimizer cực mạnh vẫn có thể cho kết quả vô dụng nếu mục tiêu (objective / 목표) đo sai goal hoặc feasible set bỏ sót ràng buộc (constraint / 제약조건) quan trọng. Vì vậy tối ưu hóa (optimization / 최적화) là sự kết hợp của **modeling + mathematical cấu trúc (structure / 구조) + computation**.
+
+## Cấu trúc tối thiểu của một tối ưu hóa (optimization / 최적화) bài toán (problem / 문제)
 
 General form:
 
@@ -24,9 +27,9 @@ g_i(x)\le0,
 h_j(x)=0.
 ```
 
-`x` là decision variable. `f` là objective. Constraints xác định feasible set.
+`x` là quyết định (decision / 결정) variable. `f` là mục tiêu (objective / 목표). các ràng buộc (constraints / 제약조건들) xác định feasible set.
 
-Một point có objective rất tốt nhưng violate constraint không phải solution.
+Một điểm (point / 지점) có mục tiêu (objective / 목표) rất tốt nhưng violate ràng buộc (constraint / 제약조건) không phải solution.
 
 ## Worked modeling example — portfolio allocation đơn giản
 
@@ -48,7 +51,7 @@ Expected return:
 \mu^Tw.
 ```
 
-Variance risk:
+Variance rủi ro (risk / 위험):
 
 ```math
 w^T\Sigma w.
@@ -61,15 +64,15 @@ Một mean-variance formulation có thể là
 \frac12w^T\Sigma w-\lambda\mu^Tw
 ```
 
-subject to budget/position constraints.
+subject to ngân sách (budget / 예산)/position các ràng buộc (constraints / 제약조건들).
 
-Parameter `\lambda` encodes trade-off preference. Mathematics không tự quyết định investor nên chấp nhận risk bao nhiêu; objective embeds that choice.
+Parameter `\lambda` encodes sự đánh đổi (trade-off / 트레이드오프) preference. Mathematics không tự quyết định investor nên chấp nhận rủi ro (risk / 위험) bao nhiêu; mục tiêu (objective / 목표) embeds that choice.
 
-## Local optimum và global optimum
+## Cục bộ (local / 로컬) optimum và toàn cục (global / 전역) optimum
 
-`x^*` là local minimum nếu nó tốt hơn points đủ gần.
+`x^*` là cục bộ (local / 로컬) minimum nếu nó tốt hơn points đủ gần.
 
-Nó là global minimum nếu
+Nó là toàn cục (global / 전역) minimum nếu
 
 ```math
 f(x^*)\le f(x)
@@ -77,11 +80,11 @@ f(x^*)\le f(x)
 
 cho mọi feasible `x`.
 
-Nonconvex problems có thể có nhiều local minima và saddle points. First-order methods often reason locally; global guarantees cần extra structure.
+Nonconvex problems có thể có nhiều cục bộ (local / 로컬) minima và saddle points. First-order methods often reason locally; toàn cục (global / 전역) guarantees cần extra cấu trúc (structure / 구조).
 
-## Convexity: structure biến local thành global
+## Convexity: cấu trúc (structure / 구조) biến cục bộ (local / 로컬) thành toàn cục (global / 전역)
 
-Function `f` convex nếu
+Hàm (function / 함수) `f` convex nếu
 
 ```math
 f(tx+(1-t)y)
@@ -98,13 +101,13 @@ f(tx+(1-t)y)
  t f(x)+(1-t)f(y).
 ```
 
-Geometrically, chord giữa hai graph points nằm above graph.
+Geometrically, chord giữa hai đồ thị (graph / 그래프) points nằm above đồ thị (graph / 그래프).
 
-Nếu feasible set convex và objective convex, every local minimum is global. Đây là lý do convexity cực kỳ valuable: local conditions trở thành global certificates.
+Nếu feasible set convex và mục tiêu (objective / 목표) convex, every cục bộ (local / 로컬) minimum is toàn cục (global / 전역). Đây là lý do convexity cực kỳ valuable: cục bộ (local / 로컬) conditions trở thành toàn cục (global / 전역) certificates.
 
 Strict convexity còn giúp uniqueness under suitable conditions.
 
-## First-order convexity condition
+## First-order convexity điều kiện (condition / 조건)
 
 Nếu `f` differentiable và convex:
 
@@ -114,7 +117,7 @@ f(y)
 f(x)+\nabla f(x)^T(y-x).
 ```
 
-Tangent hyperplane nằm dưới graph everywhere.
+Tangent hyperplane nằm dưới đồ thị (graph / 그래프) everywhere.
 
 Nếu
 
@@ -128,9 +131,9 @@ then
 f(y)\ge f(x^*)
 ```
 
-cho mọi `y`; stationary point là global minimum.
+cho mọi `y`; stationary điểm (point / 지점) là toàn cục (global / 전역) minimum.
 
-Đây là proof idea behind “gradient zero is enough” trong convex unconstrained optimization.
+Đây là proof idea behind “độ dốc (gradient / 기울기) zero is enough” trong convex unconstrained tối ưu hóa (optimization / 최적화).
 
 ## Second-order viewpoint
 
@@ -140,13 +143,13 @@ Nếu twice differentiable, convexity liên hệ Hessian:
 H_f(x)\succeq0
 ```
 
-trên convex domain.
+trên convex lĩnh vực (domain / 도메인).
 
 Positive-semidefinite Hessian nghĩa curvature không downward theo bất kỳ direction nào.
 
-Conditioning của Hessian quyết định optimization geometry. Nếu eigenvalues chênh lớn, level sets elongated và vanilla gradient descent có thể zig-zag/chậm.
+Conditioning của Hessian quyết định tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학). Nếu eigenvalues chênh lớn, mức (level / 수준) sets elongated và vanilla độ dốc (gradient / 기울기) descent có thể zig-zag/chậm.
 
-## Gradient descent được derive từ local linear model
+## Độ dốc (gradient / 기울기) descent được derive từ cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)
 
 Taylor first-order:
 
@@ -156,21 +159,21 @@ f(x+\Delta)
 f(x)+\nabla f(x)^T\Delta.
 ```
 
-Muốn giảm `f` với fixed small step norm, chọn direction opposite gradient:
+Muốn giảm `f` với fixed small step norm, chọn direction opposite độ dốc (gradient / 기울기):
 
 ```math
 \Delta=-\eta\nabla f(x).
 ```
 
-Update:
+Cập nhật (update / 업데이트):
 
 ```math
 x_{k+1}=x_k-\eta\nabla f(x_k).
 ```
 
-Learning rate `\eta` không phải cosmetic hyperparameter. Quá lớn có thể overshoot/diverge; quá nhỏ convergence rất chậm.
+Học tập (learning / 학습) tỷ lệ (rate / 비율) `\eta` không phải cosmetic hyperparameter. Quá lớn có thể overshoot/diverge; quá nhỏ convergence rất chậm.
 
-## Worked quadratic example — learning rate và curvature
+## Worked quadratic example — học tập (learning / 학습) tỷ lệ (rate / 비율) và curvature
 
 Cho
 
@@ -179,13 +182,13 @@ f(x)=\frac12ax^2,
 \qquad a>0.
 ```
 
-Gradient:
+Độ dốc (gradient / 기울기):
 
 ```math
 f'(x)=ax.
 ```
 
-Gradient descent:
+Độ dốc (gradient / 기울기) descent:
 
 ```math
 x_{k+1}
@@ -204,13 +207,13 @@ suy ra
 0<\eta<\frac2a.
 ```
 
-Curvature `a` giới hạn stable step size. Trong many dimensions, largest Hessian eigenvalue đóng role tương tự.
+Curvature `a` giới hạn stable step kích thước (size / 크기). Trong many dimensions, largest Hessian eigenvalue đóng role tương tự.
 
-## Constraints thay đổi geometry của allowable movement
+## Các ràng buộc (constraints / 제약조건들) thay đổi hình học (geometry / 기하학) của allowable movement
 
 Unconstrained optimum có thể move mọi direction. Constrained optimum chỉ được move trong feasible directions.
 
-Với equality constraint
+Với equality ràng buộc (constraint / 제약조건)
 
 ```math
 g(x)=0,
@@ -222,7 +225,7 @@ feasible tangent directions `d` thỏa locally
 \nabla g(x)^Td=0.
 ```
 
-Nếu objective gradient có component tangent, ta còn có thể improve. Tại smooth constrained optimum, gradient objective phải nằm trong span constraint normals.
+Nếu mục tiêu (objective / 목표) độ dốc (gradient / 기울기) có thành phần (component / 컴포넌트) tangent, ta còn có thể improve. Tại smooth constrained optimum, độ dốc (gradient / 기울기) mục tiêu (objective / 목표) phải nằm trong span ràng buộc (constraint / 제약조건) normals.
 
 Đó là intuition của Lagrange multipliers.
 
@@ -242,11 +245,11 @@ At regular constrained optimum:
 \lambda\nabla g(x^*).
 ```
 
-Multiplier `\lambda` còn có shadow-price interpretation: under suitable conditions, nó đo sensitivity của optimal objective với small relaxation/tightening constraint.
+Multiplier `\lambda` còn có shadow-price interpretation: under suitable conditions, nó đo sensitivity của optimal mục tiêu (objective / 목표) với small relaxation/tightening ràng buộc (constraint / 제약조건).
 
 Finance, economics và operations research dùng interpretation này để price scarce resources.
 
-## Inequality constraints và KKT
+## Inequality các ràng buộc (constraints / 제약조건들) và KKT
 
 For
 
@@ -265,35 +268,35 @@ KKT conditions include:
 \lambda_i g_i(x)=0.
 ```
 
-Complementary slackness means inactive constraint (`g_i<0`) has zero multiplier; positive multiplier can appear only when constraint binds.
+Complementary slackness means inactive ràng buộc (constraint / 제약조건) (`g_i<0`) has zero multiplier; positive multiplier can appear only when ràng buộc (constraint / 제약조건) binds.
 
-KKT can be necessary under constraint qualifications; in convex problems with suitable conditions it often becomes sufficient.
+KKT can be necessary under ràng buộc (constraint / 제약조건) qualifications; in convex problems with suitable conditions it often becomes sufficient.
 
-## Duality: optimization nhìn từ prices/certificates
+## Duality: tối ưu hóa (optimization / 최적화) nhìn từ prices/certificates
 
-Primal problem chooses decisions. Dual problem often assigns multipliers/prices to constraints.
+Primal bài toán (problem / 문제) chooses decisions. Dual bài toán (problem / 문제) often assigns multipliers/prices to các ràng buộc (constraints / 제약조건들).
 
-Weak duality gives bound: dual objective cannot beat primal optimum in wrong direction. Strong duality under suitable convex conditions means bounds meet exactly.
+Weak duality gives bound: dual mục tiêu (objective / 목표) cannot beat primal optimum in wrong direction. Strong duality under suitable convex conditions means bounds meet exactly.
 
-Dual variables help sensitivity analysis and prove optimality, not only compute answers.
+Dual variables help sensitivity phân tích (analysis / 분석) and prove optimality, not only compute answers.
 
-## Linear programming: extreme-point geometry
+## Tuyến tính (linear / 선형) programming: extreme-point hình học (geometry / 기하학)
 
-Linear program:
+Tuyến tính (linear / 선형) program:
 
 ```math
 \min c^Tx
 ```
 
-subject to linear constraints.
+subject to tuyến tính (linear / 선형) các ràng buộc (constraints / 제약조건들).
 
-Feasible region là polyhedron. Linear objective contours là parallel hyperplanes. If finite optimum exists, an optimum can be found at an extreme point/face.
+Feasible region là polyhedron. tuyến tính (linear / 선형) mục tiêu (objective / 목표) contours là parallel hyperplanes. If finite optimum exists, an optimum can be found at an extreme điểm (point / 지점)/face.
 
-Simplex exploits this geometry by moving across vertices; interior-point methods travel through interior using different computational strategy.
+Simplex exploits this hình học (geometry / 기하학) by moving across vertices; interior-point methods travel through interior using different computational chiến lược (strategy / 전략).
 
-## Discrete optimization: calculus không còn đủ
+## Discrete tối ưu hóa (optimization / 최적화): calculus không còn đủ
 
-Nếu variables integer/binary, feasible set is disconnected.
+Nếu variables integer/nhị phân (binary / 이진), feasible set is disconnected.
 
 Examples:
 
@@ -303,13 +306,13 @@ Examples:
 - assignment;
 - facility location.
 
-Derivative may describe continuous relaxation but cannot directly choose discrete combinatorial state.
+Derivative may describe continuous relaxation but cannot directly choose discrete combinatorial trạng thái (state / 상태).
 
-Methods include dynamic programming, branch-and-bound, cutting planes, relaxations, heuristics và approximation algorithms.
+Methods include động (dynamic / 동적) programming, branch-and-bound, cutting planes, relaxations, heuristics và approximation algorithms.
 
-## Dynamic programming và Bellman principle
+## Động (dynamic / 동적) programming và Bellman principle
 
-Sequential optimization has state `s`, action `a`, transition and future value.
+Sequential tối ưu hóa (optimization / 최적화) has trạng thái (state / 상태) `s`, hành động (action / 동작) `a`, chuyển tiếp (transition / 전이) and future giá trị (value / 값).
 
 Bellman idea:
 
@@ -322,86 +325,88 @@ V(s)
 
 in deterministic simplified form.
 
-Optimal solution has optimal substructure: once first decision chosen, remaining policy must itself be optimal for resulting state.
+Optimal solution has optimal substructure: once first quyết định (decision / 결정) chosen, remaining chính sách (policy / 정책) must itself be optimal for resulting trạng thái (state / 상태).
 
-This connects optimization with control, reinforcement learning and shortest-path algorithms.
+This connects tối ưu hóa (optimization / 최적화) with điều khiển (control / 제어), reinforcement học tập (learning / 학습) and shortest-path algorithms.
 
-## Multi-objective optimization và Pareto frontier
+## Multi-objective tối ưu hóa (optimization / 최적화) và Pareto frontier
 
-Real systems rarely optimize only one metric. Cost, latency, reliability, fairness, return and risk may conflict.
+Real các hệ thống (systems / 시스템들) rarely optimize only one chỉ số (metric / 지표). chi phí (cost / 비용), độ trễ (latency / 지연 시간), độ tin cậy (reliability / 신뢰성), fairness, return and rủi ro (risk / 위험) may xung đột (conflict / 충돌).
 
-A solution is Pareto optimal if no objective can improve without worsening at least one other.
+A solution is Pareto optimal if no mục tiêu (objective / 목표) can improve without worsening at least one other.
 
-Weighted-sum objective
+Weighted-sum mục tiêu (objective / 목표)
 
 ```math
 \min_x
 \sum_kw_kf_k(x)
 ```
 
-encodes preferences but can hide trade-off structure. Choosing weights is a policy/business decision, not purely mathematical deduction.
+encodes preferences but can hide sự đánh đổi (trade-off / 트레이드오프) cấu trúc (structure / 구조). Choosing weights is a chính sách (policy / 정책)/nghiệp vụ (business / 비즈니스) quyết định (decision / 결정), not purely mathematical deduction.
 
-## Robust optimization: optimize when parameters are uncertain
+## Robust tối ưu hóa (optimization / 최적화): optimize when parameters are uncertain
 
-If model parameters uncertain, optimizing nominal estimate can produce fragile solution.
+If mô hình (model / 모델) parameters uncertain, optimizing nominal estimate can produce fragile solution.
 
-Robust optimization asks for performance across an uncertainty set. Stochastic optimization optimizes expected/risk-sensitive objective over distributions.
+Robust tối ưu hóa (optimization / 최적화) asks for hiệu năng (performance / 성능) across an bất định (uncertainty / 불확실성) set. Stochastic tối ưu hóa (optimization / 최적화) optimizes expected/risk-sensitive mục tiêu (objective / 목표) over distributions.
 
-This is important in portfolio allocation, supply chains, control and ML distribution shift.
+This is important in portfolio allocation, supply chains, điều khiển (control / 제어) and ML phân phối (distribution / 분포) shift.
 
-## AI connection — training is optimization under model assumptions
+## AI liên kết (connection / 연결) — huấn luyện (training / 학습) is tối ưu hóa (optimization / 최적화) under mô hình (model / 모델) các giả định (assumptions / 가정들)
 
-Neural-network training minimizes empirical loss:
+Neural-network huấn luyện (training / 학습) minimizes empirical mất mát (loss / 손실):
 
 ```math
 \min_\theta
 \frac1n\sum_{i=1}^n\ell(f_\theta(x_i),y_i).
 ```
 
-But low training loss does not guarantee generalization. Optimization objective is proxy for desired real-world performance.
+But low huấn luyện (training / 학습) mất mát (loss / 손실) does not guarantee generalization. tối ưu hóa (optimization / 최적화) mục tiêu (objective / 목표) is proxy for desired real-world hiệu năng (performance / 성능).
 
-Regularization, validation and data distribution assumptions sit outside pure optimization geometry.
+Regularization, kiểm tra hợp lệ (validation / 검증) and dữ liệu (data / 데이터) phân phối (distribution / 분포) các giả định (assumptions / 가정들) sit outside pure tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학).
 
-SGD uses noisy gradient estimates to trade computation per step against variance.
+SGD uses noisy độ dốc (gradient / 기울기) estimates to trade computation per step against variance.
 
-## Physics connection — energy minimization
+## Physics liên kết (connection / 연결) — năng lượng (energy / 에너지) minimization
 
-Stable equilibria often minimize potential energy. Variational principles formulate physical laws as optimization over functions/paths.
+Stable equilibria often minimize potential năng lượng (energy / 에너지). Variational principles formulate vật lý (physical / 물리적) laws as tối ưu hóa (optimization / 최적화) over functions/paths.
 
-This connects calculus of variations, PDEs, mechanics and optimal control.
+This connects calculus of variations, PDEs, mechanics and optimal điều khiển (control / 제어).
 
-## Finance connection — return, risk, constraints
+## Finance liên kết (connection / 연결) — return, rủi ro (risk / 위험), các ràng buộc (constraints / 제약조건들)
 
-Portfolio optimization makes trade-offs explicit but is highly sensitive to estimates of expected returns/covariance. Optimizer can amplify estimation noise by exploiting uncertain directions.
+Portfolio tối ưu hóa (optimization / 최적화) makes trade-offs tường minh (explicit / 명시적) but is highly sensitive to estimates of expected returns/covariance. Optimizer can amplify estimation noise by exploiting uncertain directions.
 
-Thus robust constraints, shrinkage and regularization are not afterthoughts; they respond to model uncertainty.
+Thus robust các ràng buộc (constraints / 제약조건들), shrinkage and regularization are not afterthoughts; they respond to mô hình (model / 모델) bất định (uncertainty / 불확실성).
 
-## “Optimizer’s curse” và objective misspecification
+## “Optimizer’s curse” và mục tiêu (objective / 목표) misspecification
 
-If objective imperfectly represents desired outcome, stronger optimizer may exploit loopholes more aggressively.
+If mục tiêu (objective / 목표) imperfectly represents desired kết quả (outcome / 결과), stronger optimizer may exploit loopholes more aggressively.
 
-Examples include recommendation systems maximizing engagement proxies, schedules minimizing mean latency while hurting tail latency, or portfolios chasing unstable estimated alpha.
+Examples include recommendation các hệ thống (systems / 시스템들) maximizing engagement proxies, schedules minimizing mean độ trễ (latency / 지연 시간) while hurting tail độ trễ (latency / 지연 시간), or portfolios chasing unstable estimated alpha.
 
-Optimization does exactly what objective/constraints say, not what author vaguely intended.
+Tối ưu hóa (optimization / 최적화) does exactly what mục tiêu (objective / 목표)/các ràng buộc (constraints / 제약조건들) say, not what author vaguely intended.
 
-## Assumptions và failure modes
+## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
-Gradient methods assume differentiability or usable generalized gradients. Convex guarantees require convexity. KKT requires constraint qualifications for necessity and stronger structure for sufficiency.
+Độ dốc (gradient / 기울기) methods assume differentiability or usable generalized gradients. Convex guarantees require convexity. KKT requires ràng buộc (constraint / 제약조건) qualifications for necessity and stronger cấu trúc (structure / 구조) for sufficiency.
 
-Numerical scaling matters: badly scaled variables/constraints harm solver performance. Model parameters may be uncertain. Discrete problems can be computationally hard despite simple-looking objectives.
+Numerical scaling matters: badly scaled variables/các ràng buộc (constraints / 제약조건들) harm solver hiệu năng (performance / 성능). mô hình (model / 모델) parameters may be uncertain. Discrete problems can be computationally hard despite simple-looking objectives.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Optimization is geometry of choice under constraints. The objective defines what “better” means; feasible set defines where movement is allowed; derivatives describe local improvement; convexity tells when local information is globally trustworthy; dual variables price constraints; dynamic programming extends the same idea through time. The optimizer is only as meaningful as the model it is asked to optimize.
+> tối ưu hóa (optimization / 최적화) is hình học (geometry / 기하학) of choice under các ràng buộc (constraints / 제약조건들). The mục tiêu (objective / 목표) defines what “better” means; feasible set defines where movement is allowed; derivatives describe cục bộ (local / 로컬) improvement; convexity tells when cục bộ (local / 로컬) thông tin (information / 정보) is globally trustworthy; dual variables price các ràng buộc (constraints / 제약조건들); động (dynamic / 동적) programming extends the same idea through thời gian (time / 시간). The optimizer is only as meaningful as the mô hình (model / 모델) it is asked to optimize.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Optimization means take derivative and set zero.”** That handles only a narrow smooth unconstrained class.
+**“tối ưu hóa (optimization / 최적화) means take derivative and set zero.”** That handles only a narrow smooth unconstrained lớp (class / 클래스).
 
-**“Local minimum is good enough because optimizer found it.”** Depends on nonconvex landscape and problem goals.
+**“cục bộ (local / 로컬) minimum is good enough because optimizer found it.”** Depends on nonconvex landscape and bài toán (problem / 문제) goals.
 
-**“Convex means function looks like a bowl in 2D only.”** Convexity is a high-dimensional inequality/geometry property.
+**“Convex means hàm (function / 함수) looks like a bowl in 2D only.”** Convexity is a high-dimensional inequality/hình học (geometry / 기하학) thuộc tính (property / 속성).
 
-**“KKT conditions always prove global optimum.”** Not without conditions such as convexity and constraint qualifications.
+**“KKT conditions always prove toàn cục (global / 전역) optimum.”** Not without conditions such as convexity and ràng buộc (constraint / 제약조건) qualifications.
 
-**“Best objective value means best real-world decision.”** Only if objective and constraints correctly encode real goal and uncertainty.
+**“Best mục tiêu (objective / 목표) giá trị (value / 값) means best real-world quyết định (decision / 결정).”** Only if mục tiêu (objective / 목표) and các ràng buộc (constraints / 제약조건들) correctly encode real goal and bất định (uncertainty / 불확실성).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 gradient descent and convexity](./01_gradient_descent_and_convexity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
-# Knowledge Connection — Fourier, Signals và Frequency: đổi representation để làm lộ structure
+# Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)
 
-Một signal theo time domain trả lời:
+> **Mạch đọc:** Đọc **liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Sine và cosine là modes của rotation** sang **2. Orthogonality biến functions thành coordinates**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Một tín hiệu (signal / 신호) theo thời gian (time / 시간) lĩnh vực (domain / 도메인) trả lời:
 
 ```text
 value ở thời điểm t là gì?
@@ -12,9 +15,9 @@ Fourier viewpoint hỏi câu khác:
 signal này được tạo từ những oscillatory components nào?
 ```
 
-Đó không phải hai signals khác nhau. Đó là hai coordinate systems cho cùng một object.
+Đó không phải hai signals khác nhau. Đó là hai coordinate các hệ thống (systems / 시스템들) cho cùng một đối tượng (object / 객체).
 
-Mental flow:
+Mental luồng (flow / 흐름):
 
 ```text
 periodic motion
@@ -46,7 +49,7 @@ T=2π/ω  period
 
 Sine/cosine xuất hiện tự nhiên vì uniform rotation projected lên coordinate axis tạo sinusoidal motion.
 
-Chúng cũng là solutions/eigenmodes của nhiều linear differential equations.
+Chúng cũng là solutions/eigenmodes của nhiều tuyến tính (linear / 선형) differential equations.
 
 ## 2. Orthogonality biến functions thành coordinates
 
@@ -58,7 +61,7 @@ Trên suitable interval:
 
 khi `n≠m`, và tương tự cho cosine modes.
 
-Đây là function-space version của orthogonal vectors.
+Đây là function-space phiên bản (version / 버전) của orthogonal vectors.
 
 Nếu vectors có basis:
 
@@ -74,7 +77,7 @@ thì periodic functions có thể dùng basis:
 
 Fourier coefficient là projection.
 
-## 3. Fourier series là linear algebra trong function space
+## 3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)
 
 Với period `2π`:
 
@@ -94,7 +97,7 @@ a_n=\frac1\pi\int_{-\pi}^{\pi}f(t)\cos(nt)dt
 b_n=\frac1\pi\int_{-\pi}^{\pi}f(t)\sin(nt)dt.
 ```
 
-Đây cùng geometry với:
+Đây cùng hình học (geometry / 기하학) với:
 
 ```math
 c_i=\langle x,e_i\rangle
@@ -124,7 +127,7 @@ Fourier series complex form:
 f(t)=\sum_{k=-\infty}^{\infty}c_ke^{ik\omega_0t}.
 ```
 
-Complex numbers không thêm “imaginary physics”; chúng là representation tiện cho amplitude + phase.
+Complex numbers không thêm “imaginary physics”; chúng là biểu diễn (representation / 표현) tiện cho amplitude + phase.
 
 ## 5. Fourier transform mở periodic basis thành continuum frequencies
 
@@ -146,9 +149,9 @@ Interpretation:
 F(ω) = complex coefficient của frequency ω
 ```
 
-Magnitude spectrum nói strength; phase spectrum nói alignment/time structure.
+Magnitude spectrum nói strength; phase spectrum nói alignment/thời gian (time / 시간) cấu trúc (structure / 구조).
 
-## 6. Parseval: energy được bảo toàn qua representation
+## 6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)
 
 Under suitable convention:
 
@@ -160,11 +163,11 @@ Under suitable convention:
 
 Đây là Parseval/Plancherel idea.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
-> đổi basis không tạo hoặc xóa L2 energy; nó chỉ redistribute coordinates.
+> đổi basis không tạo hoặc xóa L2 năng lượng (energy / 에너지); nó chỉ redistribute coordinates.
 
-Đây là direct connection với orthonormal linear algebra.
+Đây là direct liên kết (connection / 연결) với orthonormal tuyến tính (linear / 선형) algebra.
 
 ## 7. Differentiation trở thành multiplication
 
@@ -186,9 +189,9 @@ Second derivative:
 f''(t)\leftrightarrow -\omega^2F(\omega).
 ```
 
-Differential operators trở thành algebraic multipliers trong frequency domain.
+Differential operators trở thành algebraic multipliers trong frequency lĩnh vực (domain / 도메인).
 
-Đây là lý do Fourier cực mạnh cho linear PDE/ODE.
+Đây là lý do Fourier cực mạnh cho tuyến tính (linear / 선형) PDE/ODE.
 
 ## 8. Convolution theorem
 
@@ -204,7 +207,7 @@ Fourier transform:
 \mathcal F\{f*g\}=F(\omega)G(\omega).
 ```
 
-Một operation “trộn” phức tạp trong time domain trở thành pointwise multiplication trong frequency domain.
+Một thao tác (operation / 연산) “trộn” phức tạp trong thời gian (time / 시간) lĩnh vực (domain / 도메인) trở thành pointwise multiplication trong frequency lĩnh vực (domain / 도메인).
 
 Đây là theme lớn của transforms:
 
@@ -212,23 +215,23 @@ Một operation “trộn” phức tạp trong time domain trở thành pointwi
 chọn representation nơi operator trở nên đơn giản
 ```
 
-## 9. Linear time-invariant systems
+## 9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)
 
-Một LTI system có impulse response `h(t)`.
+Một LTI hệ thống (system / 시스템) có impulse phản hồi (response / 응답) `h(t)`.
 
-Output:
+Đầu ra (output / 출력):
 
 ```math
 y=x*h.
 ```
 
-Frequency domain:
+Frequency lĩnh vực (domain / 도메인):
 
 ```math
 Y(\omega)=X(\omega)H(\omega).
 ```
 
-`H(ω)` là frequency response.
+`H(ω)` là frequency phản hồi (response / 응답).
 
 Low-pass filter có `|H(ω)|` lớn ở low frequencies và nhỏ ở high frequencies.
 
@@ -236,9 +239,9 @@ Filtering trở thành shaping spectrum.
 
 ## 10. Frequency không tự nói “khi nào”
 
-Pure Fourier transform có global support.
+Pure Fourier transform có toàn cục (global / 전역) hỗ trợ (support / 지원).
 
-Nếu signal frequency content thay đổi theo time, ordinary spectrum không nói component xuất hiện lúc nào.
+Nếu tín hiệu (signal / 신호) frequency content thay đổi theo thời gian (time / 시간), ordinary spectrum không nói thành phần (component / 컴포넌트) xuất hiện lúc nào.
 
 Need time-frequency methods:
 
@@ -247,24 +250,24 @@ Short-Time Fourier Transform
 wavelets
 ```
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 window ngắn → tốt về time, kém frequency resolution
 window dài → tốt frequency, kém time localization
 ```
 
-## 11. Time-frequency uncertainty
+## 11. Time-frequency bất định (uncertainty / 불확실성)
 
-Signal localized rất hẹp trong time cần broad frequency content.
+Tín hiệu (signal / 신호) localized rất hẹp trong thời gian (time / 시간) cần broad frequency content.
 
-Pure sinusoid có exact frequency nhưng tồn tại infinitely long.
+Pure sinusoid có chính xác (exact / 정확한) frequency nhưng tồn tại infinitely long.
 
-Đây là structural trade-off của Fourier representation, không chỉ limitation của instrument.
+Đây là structural sự đánh đổi (trade-off / 트레이드오프) của Fourier biểu diễn (representation / 표현), không chỉ limitation của instrument.
 
-## 12. Sampling biến continuous signal thành discrete sequence
+## 12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)
 
-Sample:
+Mẫu (sample / 표본):
 
 ```math
 x[n]=x(nT_s).
@@ -292,11 +295,11 @@ cho same samples với frequency shifted by integer multiples of `f_s`.
 
 Vì vậy high frequency có thể masquerade thành low frequency.
 
-Aliasing là information loss from sampling.
+Aliasing là thông tin (information / 정보) mất mát (loss / 손실) from sampling.
 
-## 14. Nyquist theorem cần assumptions
+## 14. Nyquist theorem cần các giả định (assumptions / 가정들)
 
-Với ideal band-limited signal max frequency `f_max`, perfect reconstruction theoretically possible nếu:
+Với ideal band-limited tín hiệu (signal / 신호) max frequency `f_max`, perfect reconstruction theoretically possible nếu:
 
 ```math
 f_s>2f_{max}.
@@ -304,11 +307,11 @@ f_s>2f_{max}.
 
 Nhưng real signals không perfectly band-limited và filters không ideal.
 
-Practical systems use margin + anti-alias filtering.
+Practical các hệ thống (systems / 시스템들) use margin + anti-alias filtering.
 
-“Sample at twice frequency” không phải universal magic rule.
+“mẫu (sample / 표본) at twice frequency” không phải universal magic quy tắc (rule / 규칙).
 
-## 15. DFT: Fourier coordinates cho finite discrete vector
+## 15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)
 
 Với `N` samples:
 
@@ -316,15 +319,15 @@ Với `N` samples:
 X_k=\sum_{n=0}^{N-1}x_ne^{-i2\pi kn/N}.
 ```
 
-DFT là linear transformation:
+DFT là tuyến tính (linear / 선형) transformation:
 
 ```math
 X=Fx.
 ```
 
-Fourier matrix entries là complex roots of unity.
+Fourier ma trận (matrix / 행렬) entries là complex roots of unity.
 
-DFT vì vậy cũng là matrix multiplication conceptually.
+DFT vì vậy cũng là phép nhân ma trận (matrix multiplication / 행렬 곱셈) conceptually.
 
 ## 16. FFT không phải transform khác
 
@@ -350,13 +353,13 @@ same mathematics
 
 ## 17. Spectral leakage
 
-Finite observation window effectively multiplies infinite signal by window function.
+Finite observation cửa sổ (window / 윈도우) effectively multiplies infinite tín hiệu (signal / 신호) by hàm cửa sổ (window function / 윈도우 함수).
 
 Time-domain multiplication corresponds to frequency-domain convolution.
 
-If sinusoid does not align DFT bins, energy spreads across bins — spectral leakage.
+If sinusoid does not align DFT bins, năng lượng (energy / 에너지) spreads across bins — spectral leakage.
 
-Window functions reduce some leakage patterns but trade main-lobe width vs side-lobe suppression.
+Cửa sổ (window / 윈도우) functions reduce some leakage patterns but trade main-lobe width vs side-lobe suppression.
 
 ## 18. Frequency resolution
 
@@ -368,31 +371,31 @@ Observation duration `T` affects spacing of frequency bins roughly:
 
 Longer observation distinguishes closer frequencies.
 
-Higher sample rate increases captured frequency range but does not by itself give arbitrarily fine frequency resolution for fixed duration.
+Higher mẫu (sample / 표본) tỷ lệ (rate / 비율) increases captured frequency phạm vi (range / 범위) but does not by itself give arbitrarily fine frequency resolution for fixed duration.
 
-Range và resolution là different concepts.
+Phạm vi (range / 범위) và resolution là different concepts.
 
 ## 19. Filtering và causality
 
-Ideal brick-wall frequency filter has impulse response extending indefinitely in time.
+Ideal brick-wall frequency filter has impulse phản hồi (response / 응답) extending indefinitely in thời gian (time / 시간).
 
-Real-time causal implementations need approximations/delay.
+Real-time nhân quả (causal / 인과적) implementations need approximations/delay.
 
-Perfect frequency selectivity and perfect time localization cannot both be achieved freely.
+Perfect frequency selectivity and perfect thời gian (time / 시간) localization cannot both be achieved freely.
 
-Engineering filters live inside these trade-offs.
+Kỹ thuật (engineering / 엔지니어링) filters live inside these trade-offs.
 
 ## 20. Gibbs phenomenon
 
 Fourier series approximating discontinuity overshoots near jump.
 
-Increasing number modes narrows oscillation region but maximum overshoot does not simply vanish pointwise at boundary in naive sense.
+Increasing number modes narrows oscillation region but maximum overshoot does not simply vanish pointwise at ranh giới (boundary / 경계) in naive sense.
 
-This is representation behavior near nonsmooth structure.
+This is biểu diễn (representation / 표현) hành vi (behavior / 동작) near nonsmooth cấu trúc (structure / 구조).
 
 ## 21. Compression
 
-If signal energy concentrated in few transform coefficients, sparse-ish frequency representation enables compression.
+If tín hiệu (signal / 신호) năng lượng (energy / 에너지) concentrated in few transform coefficients, sparse-ish frequency biểu diễn (representation / 표현) enables compression.
 
 Transform coding idea:
 
@@ -404,9 +407,9 @@ signal
 → inverse transform
 ```
 
-JPEG uses DCT-like block transforms; audio codecs combine transform ideas with perceptual models.
+JPEG uses DCT-like khối (block / 블록) transforms; audio codecs combine transform ideas with perceptual các mô hình (models / 모델들).
 
-Compression quality depends on what information humans/tasks care about, not only coefficient magnitude.
+Compression chất lượng (quality / 품질) depends on what thông tin (information / 정보) humans/tasks care about, not only coefficient magnitude.
 
 ## 22. Fourier trong PDE
 
@@ -416,7 +419,7 @@ Heat equation:
 u_t=\alpha u_{xx}.
 ```
 
-Fourier transform in space turns:
+Fourier transform in không gian (space / 공간) turns:
 
 ```math
 u_{xx}
@@ -428,7 +431,7 @@ into:
 -\omega^2\hat u.
 ```
 
-Each frequency mode evolves independently roughly:
+Each frequency chế độ (mode / 모드) evolves independently roughly:
 
 ```math
 \hat u_t=-\alpha\omega^2\hat u.
@@ -436,7 +439,7 @@ Each frequency mode evolves independently roughly:
 
 Higher frequencies decay faster, explaining diffusion as smoothing.
 
-Transform reveals qualitative behavior almost immediately.
+Transform reveals qualitative hành vi (behavior / 동작) almost immediately.
 
 ## 23. Fourier trong convolutional networks
 
@@ -444,15 +447,15 @@ Convolution filters have frequency responses.
 
 Early vision filters can behave like edge/high-frequency detectors or smoothing/low-pass operations.
 
-But modern CNN behavior is nonlinear and data-dependent, so frequency-domain intuition is one lens, not complete explanation.
+But hiện đại (modern / 현대적) CNN hành vi (behavior / 동작) is nonlinear and data-dependent, so frequency-domain intuition is one lens, not complete explanation.
 
 ## 24. Fourier features trong AI
 
-Mapping inputs through sinusoidal features can help represent periodic/high-frequency variation.
+Ánh xạ (mapping / 매핑) inputs through sinusoidal features can help represent periodic/high-frequency variation.
 
 Positional encodings use sinusoidal components in some architectures.
 
-Connection:
+Liên kết (connection / 연결):
 
 ```text
 coordinates
@@ -460,7 +463,7 @@ coordinates
 → richer representation of position
 ```
 
-Again, transform-style basis design affects learnability.
+Again, transform-style basis thiết kế (design / 설계) affects learnability.
 
 ## 25. Fourier vs Laplace vs Z-transform
 
@@ -474,7 +477,7 @@ Z-transform → discrete-time sequences/systems
 
 They overlap but answer different questions and have different convergence domains.
 
-## 26. Common failure modes
+## 26. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
 ### Reading spectrum without phase
 
@@ -482,21 +485,21 @@ Magnitude alone may not reconstruct waveform.
 
 ### Assuming frequency means cause
 
-Spectral peak shows component/periodicity, not causal explanation.
+Spectral peak shows thành phần (component / 컴포넌트)/periodicity, not nhân quả (causal / 인과적) explanation.
 
 ### Ignoring windowing
 
-Finite record changes observed spectrum.
+Finite bản ghi (record / 레코드) changes observed spectrum.
 
 ### Misusing Nyquist
 
-Band-limit assumption matters.
+Band-limit giả định (assumption / 가정) matters.
 
 ### Thinking FFT changes mathematics
 
 FFT only computes DFT efficiently.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 ```text
 Trigonometry → sine/cosine
@@ -511,6 +514,8 @@ PDE → mode decomposition
 AI → convolution / Fourier features
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Fourier analysis is a change of coordinates. Time/space domain shows where behavior happens; frequency domain shows which oscillatory modes compose it. The power comes from choosing coordinates where convolution, differentiation and many linear systems become simpler — but localization, sampling and finite windows introduce real trade-offs.
+> Fourier phân tích (analysis / 분석) is a thay đổi (change / 변경) of coordinates. thời gian (time / 시간)/không gian (space / 공간) lĩnh vực (domain / 도메인) shows where hành vi (behavior / 동작) happens; frequency lĩnh vực (domain / 도메인) shows which oscillatory modes compose it. The power comes from choosing coordinates where convolution, differentiation and many tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) become simpler — but localization, sampling and finite windows introduce real trade-offs.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

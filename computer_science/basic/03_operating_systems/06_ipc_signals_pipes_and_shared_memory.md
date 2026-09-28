@@ -1,79 +1,114 @@
-# IPC: signals, pipes, sockets và shared memory
+# IPC: signals, pipes, sockets và dùng chung (shared / 공유) bộ nhớ (memory / 메모리)
 
-Processes được isolation để một process không tùy tiện đọc/ghi memory của process khác. Nhưng software hữu ích lại cần cooperation. Inter-process communication (IPC / 프로세스 간 통신) là tập mechanisms cho phép isolated processes trao đổi data hoặc synchronization signals mà vẫn giữ control boundary của OS.
+> **Mạch đọc:** Đọc **IPC: signals, pipes, sockets và dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Isolation tạo ra nhu cầu IPC** sang **Signals: notification với payload nhỏ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Processes được isolation để một tiến trình (process / 프로세스) không tùy tiện đọc/ghi bộ nhớ (memory / 메모리) của tiến trình (process / 프로세스) khác. Nhưng software hữu ích lại cần cooperation. Inter-process communication (IPC / 프로세스 간 통신) là tập mechanisms cho phép isolated processes trao đổi dữ liệu (data / 데이터) hoặc synchronization signals mà vẫn giữ điều khiển (control / 제어) ranh giới (boundary / 경계) của OS.
 
 ## Isolation tạo ra nhu cầu IPC
 
-Nếu mọi process dùng chung một address space, communication rất dễ nhưng một pointer bug có thể phá toàn hệ thống. OS chọn isolation làm default rồi cung cấp explicit channels cho communication.
+Nếu mọi tiến trình (process / 프로세스) dùng chung một address không gian (space / 공간), communication rất dễ nhưng một pointer bug có thể phá toàn hệ thống. OS chọn isolation làm default rồi cung cấp tường minh (explicit / 명시적) channels cho communication.
 
-Đây là một recurring principle trong CS: **boundary tăng safety nhưng tạo communication cost**.
+Đây là một recurring principle trong CS: **ranh giới (boundary / 경계) tăng an toàn (safety / 안전) nhưng tạo communication chi phí (cost / 비용)**.
+
+
+> **Chuyển mạch:** Từ **Isolation tạo ra nhu cầu IPC**, ta sang **Signals: notification với payload nhỏ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Signals: notification với payload nhỏ
 
-Unix signal là asynchronous notification gửi tới process/thread. `SIGTERM` yêu cầu termination có thể handle; `SIGKILL` không thể catch/ignore; `SIGCHLD` báo child state change.
+Unix tín hiệu (signal / 신호) là asynchronous notification gửi tới tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드). `SIGTERM` yêu cầu termination có thể handle; `SIGKILL` không thể catch/ignore; `SIGCHLD` báo child trạng thái (state / 상태) thay đổi (change / 변경).
 
-Signal handler chạy trong context đặc biệt nên chỉ một subset operations là async-signal-safe. Gọi arbitrary library code trong handler có thể deadlock hoặc corrupt state.
+Tín hiệu (signal / 신호) handler chạy trong ngữ cảnh (context / 맥락) đặc biệt nên chỉ một subset operations là async-signal-safe. Gọi arbitrary thư viện (library / 라이브러리) mã (code / 코드) trong handler có thể deadlock hoặc corrupt trạng thái (state / 상태).
 
-Signal phù hợp event notification, không phải bulk data transfer.
+Tín hiệu (signal / 신호) phù hợp sự kiện (event / 이벤트) notification, không phải bulk dữ liệu (data / 데이터) transfer.
+
+
+> **Chuyển mạch:** Từ **Signals: notification với payload nhỏ**, ta sang **Pipes: byte stream qua kernel** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Pipes: byte stream qua kernel
 
-Anonymous pipe cung cấp unidirectional byte stream, thường giữa parent-child processes. Shell pipeline:
+Anonymous pipe cung cấp unidirectional byte stream, thường giữa parent-child processes. Shell chuỗi xử lý (pipeline / 파이프라인):
 
 ```bash
 producer | consumer
 ```
 
-kết nối stdout của process trước với stdin process sau qua pipe.
+kết nối stdout của tiến trình (process / 프로세스) trước với stdin tiến trình (process / 프로세스) sau qua pipe.
 
-Pipe có kernel buffer hữu hạn. Nếu writer nhanh hơn reader và buffer đầy, writer block hoặc nhận backpressure behavior tùy mode. Đây là một ví dụ rất rõ về queueing và flow control trong cùng máy.
+Pipe có kernel buffer hữu hạn. Nếu writer nhanh hơn reader và buffer đầy, writer khối (block / 블록) hoặc nhận backpressure hành vi (behavior / 동작) tùy chế độ (mode / 모드). Đây là một ví dụ rất rõ về queueing và luồng (flow / 흐름) điều khiển (control / 제어) trong cùng máy.
 
-Named pipe/FIFO cho unrelated processes giao tiếp qua filesystem namespace.
+Named pipe/FIFO cho unrelated processes giao tiếp qua filesystem không gian tên (namespace / 네임스페이스).
 
-## Unix domain sockets
 
-Unix domain socket có API gần network socket nhưng communication local host. Nó hỗ trợ bidirectional streams/datagrams và có thể truyền credentials hoặc file descriptors trên Unix-like systems.
+> **Chuyển mạch:** Từ **Pipes: byte stream qua kernel**, ta sang **Unix lĩnh vực (domain / 도메인) sockets** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-So với TCP loopback, Unix socket bỏ bớt networking overhead và có semantics local-specific hữu ích.
+## Unix lĩnh vực (domain / 도메인) sockets
 
-## Shared memory: copy ít hơn, synchronization khó hơn
+Unix lĩnh vực (domain / 도메인) socket có API gần mạng (network / 네트워크) socket nhưng communication cục bộ (local / 로컬) host. Nó hỗ trợ bidirectional streams/datagrams và có thể truyền credentials hoặc tệp (file / 파일) descriptors trên Unix-like các hệ thống (systems / 시스템들).
 
-Shared memory map cùng physical pages vào address spaces của nhiều processes. Data transfer không cần copy qua kernel mỗi message sau khi mapping thiết lập.
+So với TCP loopback, Unix socket bỏ bớt networking overhead và có ngữ nghĩa (semantics / 의미론) local-specific hữu ích.
 
-Nhưng shared bytes không tự tạo protocol. Processes phải thống nhất layout, ownership, synchronization và lifetime. Mutex/semaphore/atomics hoặc lock-free structures có thể cần thiết.
 
-Vì vậy shared memory đổi **copy/serialization cost** lấy **coordination complexity**.
+> **Chuyển mạch:** Từ **Unix lĩnh vực (domain / 도메인) sockets**, ta sang **dùng chung (shared / 공유) bộ nhớ (memory / 메모리): bản sao (copy / 복사) ít hơn, synchronization khó hơn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Message queues và mailbox model
+## Dùng chung (shared / 공유) bộ nhớ (memory / 메모리): bản sao (copy / 복사) ít hơn, synchronization khó hơn
 
-OS hoặc runtime có thể cung cấp message queues. Sender gửi discrete messages; receiver đọc theo boundaries rõ hơn byte stream.
+Dùng chung (shared / 공유) bộ nhớ (memory / 메모리) map cùng vật lý (physical / 물리적) pages vào address spaces của nhiều processes. dữ liệu (data / 데이터) transfer không cần bản sao (copy / 복사) qua kernel mỗi message sau khi ánh xạ (mapping / 매핑) thiết lập.
 
-Message passing giảm shared mutable state và có thể mở đường chuyển từ local process communication sang distributed communication. Nhưng queue semantics—ordering, capacity, delivery—phải được xác định rõ.
+Nhưng dùng chung (shared / 공유) bytes không tự tạo giao thức (protocol / 프로토콜). Processes phải thống nhất bố cục (layout / 레이아웃), quyền sở hữu (ownership / 소유권), synchronization và thời gian tồn tại (lifetime / 수명). Mutex/semaphore/atomics hoặc lock-free structures có thể cần thiết.
 
-## Memory-mapped files như bridge giữa IPC và storage
+Vì vậy dùng chung (shared / 공유) bộ nhớ (memory / 메모리) đổi **bản sao (copy / 복사)/serialization chi phí (cost / 비용)** lấy **coordination độ phức tạp (complexity / 복잡도)**.
 
-Nhiều processes có thể `mmap` cùng file và chia sẻ pages backed bởi filesystem. Điều này hữu ích cho databases, shared indexes hoặc large datasets.
 
-Tuy nhiên persistence semantics, cache coherence và synchronization vẫn cần reasoning riêng. “Cùng nhìn thấy bytes” không tự động nghĩa application state transactionally consistent.
+> **Chuyển mạch:** Từ **dùng chung (shared / 공유) bộ nhớ (memory / 메모리): bản sao (copy / 복사) ít hơn, synchronization khó hơn**, ta sang **Message queues và mailbox mô hình (model / 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Copy cost, context switch và zero-copy
+## Message queues và mailbox mô hình (model / 모델)
 
-Traditional I/O path có thể copy data nhiều lần giữa user/kernel buffers. Mechanisms như `sendfile`, `splice`, shared buffers hoặc DMA giảm copies/context transitions trong một số path.
+OS hoặc thời gian chạy (runtime / 런타임) có thể cung cấp message queues. Sender gửi discrete messages; receiver đọc theo boundaries rõ hơn byte stream.
 
-Zero-copy thường nghĩa “giảm một hoặc nhiều CPU copies”, không phải data không bao giờ di chuyển trong hardware.
+Message passing giảm dùng chung (shared / 공유) mutable trạng thái (state / 상태) và có thể mở đường chuyển từ cục bộ (local / 로컬) tiến trình (process / 프로세스) communication sang phân tán (distributed / 분산) communication. Nhưng hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론)—thứ tự (ordering / 순서), sức chứa (capacity / 용량), delivery—phải được xác định rõ.
 
-## Common Misconceptions
 
-**“Shared memory luôn nhanh nhất nên luôn tốt nhất.”** Raw transfer có thể nhanh, nhưng synchronization bugs và cache contention có thể làm system khó đúng và khó maintain.
+> **Chuyển mạch:** Từ **Message queues và mailbox mô hình (model / 모델)**, ta sang **Memory-mapped files như cầu nối (bridge / 브리지) giữa IPC và lưu trữ (storage / 저장소)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“Pipe là message queue.”** Pipe là byte stream; application phải tự framing nếu cần message boundaries.
+## Memory-mapped files như cầu nối (bridge / 브리지) giữa IPC và lưu trữ (storage / 저장소)
 
-**“Signal giống exception.”** Signal là asynchronous process-level event với restrictions rất khác synchronous language exception.
+Nhiều processes có thể `mmap` cùng tệp (file / 파일) và chia sẻ pages backed bởi filesystem. Điều này hữu ích cho databases, dùng chung (shared / 공유) indexes hoặc large datasets.
 
-## Mental Model
+Tuy nhiên persistence ngữ nghĩa (semantics / 의미론), bộ nhớ đệm (cache / 캐시) coherence và synchronization vẫn cần lập luận (reasoning / 추론) riêng. “Cùng nhìn thấy bytes” không tự động nghĩa ứng dụng (application / 애플리케이션) trạng thái (state / 상태) transactionally consistent.
 
-> IPC là thiết kế một explicit channel xuyên isolation boundary. Mỗi mechanism chọn khác nhau giữa copy cost, framing, synchronization, safety và portability.
+
+> **Chuyển mạch:** Từ **Memory-mapped files như cầu nối (bridge / 브리지) giữa IPC và lưu trữ (storage / 저장소)**, ta sang **bản sao (copy / 복사) chi phí (cost / 비용), ngữ cảnh (context / 맥락) switch và zero-copy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Bản sao (copy / 복사) chi phí (cost / 비용), ngữ cảnh (context / 맥락) switch và zero-copy
+
+Traditional I/O đường dẫn (path / 경로) có thể bản sao (copy / 복사) dữ liệu (data / 데이터) nhiều lần giữa người dùng (user / 사용자)/kernel buffers. Mechanisms như `sendfile`, `splice`, dùng chung (shared / 공유) buffers hoặc DMA giảm copies/ngữ cảnh (context / 맥락) transitions trong một số đường dẫn (path / 경로).
+
+Zero-copy thường nghĩa “giảm một hoặc nhiều CPU copies”, không phải dữ liệu (data / 데이터) không bao giờ di chuyển trong hardware.
+
+
+> **Chuyển mạch:** Từ **bản sao (copy / 복사) chi phí (cost / 비용), ngữ cảnh (context / 맥락) switch và zero-copy**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“dùng chung (shared / 공유) bộ nhớ (memory / 메모리) luôn nhanh nhất nên luôn tốt nhất.”** Raw transfer có thể nhanh, nhưng synchronization bugs và bộ nhớ đệm (cache / 캐시) contention có thể làm hệ thống (system / 시스템) khó đúng và khó maintain.
+
+**“Pipe là message hàng đợi (queue / 큐).”** Pipe là byte stream; ứng dụng (application / 애플리케이션) phải tự framing nếu cần message boundaries.
+
+**“tín hiệu (signal / 신호) giống exception.”** tín hiệu (signal / 신호) là asynchronous process-level sự kiện (event / 이벤트) với restrictions rất khác synchronous ngôn ngữ (language / 언어) exception.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> IPC là thiết kế một tường minh (explicit / 명시적) channel xuyên isolation ranh giới (boundary / 경계). Mỗi cơ chế (mechanism / 메커니즘) chọn khác nhau giữa bản sao (copy / 복사) chi phí (cost / 비용), framing, synchronization, an toàn (safety / 안전) và portability.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc cùng [process/thread](./01_processes_threads_and_scheduling.md), [concurrency](./02_concurrency_synchronization_and_deadlock.md), [socket/networking](../06_networks_distributed_systems/06_sockets_ipv6_nat_firewalls_and_vpn.md) và [state/queues/backpressure](../08_software_systems/03_state_queues_backpressure_and_boundaries.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel syscalls and os abstractions](./00_kernel_syscalls_and_os_abstractions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

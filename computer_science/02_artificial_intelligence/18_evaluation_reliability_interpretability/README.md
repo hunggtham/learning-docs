@@ -1,8 +1,11 @@
-# Evaluation, Reliability & Interpretability
+# Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability
 
-Folder này trả lời câu hỏi: **làm sao biết một AI system thực sự tốt, ổn định, có thể giải thích và đáng tin trong use case cụ thể?** Nội dung đi từ evaluation design tới calibration, robustness, interpretability, behavioral testing, red teaming và reliability engineering.
+> **Mạch đọc:** Đọc **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Reading thứ tự (order / 순서)** sang **phụ thuộc (dependency / 의존성) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Reading order
+
+Folder này trả lời câu hỏi: **làm sao biết một AI hệ thống (system / 시스템) thực sự tốt, ổn định, có thể giải thích và đáng tin trong use trường hợp (case / 사례) cụ thể?** Nội dung đi từ evaluation thiết kế (design / 설계) tới calibration, robustness, interpretability, behavioral testing, red teaming và độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
+
+## Reading thứ tự (order / 순서)
 
 ```text
 00_evaluation_foundations.md
@@ -15,7 +18,10 @@ Folder này trả lời câu hỏi: **làm sao biết một AI system thực s�
 07_reliability_engineering.md
 ```
 
-## Dependency map
+
+> **Chuyển mạch:** Từ **Reading thứ tự (order / 순서)**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Phụ thuộc (dependency / 의존성) map
 
 ```mermaid
 flowchart TD
@@ -32,7 +38,10 @@ flowchart TD
     RT --> REL
 ```
 
-## Mental model
+
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Define contract
@@ -43,6 +52,9 @@ Define contract
 → adversarially search failures
 → engineer bounded failure and recovery
 ```
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Distinctions cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Distinctions cần giữ
 
@@ -59,6 +71,11 @@ HTTP Availability    ≠ Task Reliability
 Fallback             ≠ Always Safer
 ```
 
+
+> **Chuyển mạch:** Từ **Distinctions cần giữ**, ta sang **Cross-links** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cross-links
 
-Layer này phụ thuộc [Machine Learning Evaluation](../04_machine_learning/15_model_evaluation.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [Monitoring](../16_mlops_and_llmops/06_monitoring_and_observability.md) và [Compute Infrastructure](../17_ai_compute_and_infrastructure/README.md). Tiếp theo là [AI Safety, Security & Alignment](../19_ai_safety_security_alignment/README.md).
+Tầng (layer / 계층) này phụ thuộc [Machine Learning Evaluation](../04_machine_learning/15_model_evaluation.md), [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [Monitoring](../16_mlops_and_llmops/06_monitoring_and_observability.md) và [Compute Infrastructure](../17_ai_compute_and_infrastructure/README.md). Tiếp theo là [AI Safety, Security & Alignment](../19_ai_safety_security_alignment/README.md).
+
+> **Bàn giao:** Sau **Cross-links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

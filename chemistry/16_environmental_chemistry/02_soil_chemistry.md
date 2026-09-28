@@ -1,6 +1,9 @@
 # Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử
 
-> Đất là một môi trường phản ứng không đồng nhất gồm khoáng vật, chất hữu cơ, nước, khí và sinh vật. Hóa học đất bị chi phối bởi **điện tích bề mặt, trao đổi ion, acid–base, hòa tan/kết tủa, oxy hóa–khử và biến đổi sinh học**. Vì tổng diện tích bề mặt rất lớn, đất hoạt động gần như một lò phản ứng mặt phân cách khổng lồ.
+> **Mạch đọc:** Đọc **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đất không chỉ là “đất + chất dinh dưỡng”** sang **Khoáng sét và cấu trúc lớp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Đất là một môi trường phản ứng không đồng nhất gồm khoáng vật, chất hữu cơ, nước, khí và sinh vật. Hóa học đất bị chi phối bởi **điện tích bề mặt, trao đổi ion, acid–cơ sở (base / 기반), hòa tan/kết tủa, oxy hóa–khử và biến đổi sinh học**. Vì tổng diện tích bề mặt rất lớn, đất hoạt động gần như một lò phản ứng mặt phân cách khổng lồ.
 
 Chương này tiếp nối trực tiếp [hóa học nước](./01_water_chemistry.md) và dựa thêm vào [hóa học bề mặt](../14_materials_and_polymer_chemistry/05_surface_and_interface_chemistry.md), [cân bằng độ tan](../08_acids_bases/05_solubility_equilibria.md), [acid–base](../08_acids_bases/00_acid_base_models.md), [điện hóa/Nernst](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md) và [hóa học phối trí](../10_inorganic_chemistry/03_coordination_chemistry.md).
 
@@ -44,7 +47,7 @@ Do đó dấu và mật độ điện tích bề mặt phụ thuộc pH.
 
 Oxide Fe/Al có thể mang điện tích dương trong môi trường acid và hấp phụ anion như phosphate mạnh hơn.
 
-Đây là cùng logic proton hóa bề mặt đã gặp trong [hóa học bề mặt](../14_materials_and_polymer_chemistry/05_surface_and_interface_chemistry.md).
+Đây là cùng lô-gic (logic / 논리) proton hóa bề mặt đã gặp trong [hóa học bề mặt](../14_materials_and_polymer_chemistry/05_surface_and_interface_chemistry.md).
 
 ## Khả năng trao đổi cation
 
@@ -68,9 +71,9 @@ Mức giữ phụ thuộc:
 
 Do đó cùng một nồng độ trong dung dịch đất vẫn có thể cho mức hấp phụ rất khác nhau trên hai loại sét.
 
-## Độ bão hòa base
+## Độ bão hòa cơ sở (base / 기반)
 
-Tỉ lệ CEC được chiếm bởi `Ca2+`, `Mg2+`, `K+`, `Na+` thường được gọi là **độ bão hòa base (base saturation)**.
+Tỉ lệ CEC được chiếm bởi `Ca2+`, `Mg2+`, `K+`, `Na+` thường được gọi là **độ bão hòa cơ sở (base / 기반) (base saturation)**.
 
 Chỉ số này có ích khi đánh giá bón vôi và độ phì, nhưng không thể thay thế thông tin về pH, cấu trúc đất, nước, sinh học và cân bằng dinh dưỡng.
 
@@ -222,7 +225,7 @@ Ngập nước vì vậy không chỉ “thêm nước”; nó có thể tái c�
 
 ## Ruộng lúa và vùng đất ngập nước
 
-Ruộng lúa có thể tạo gradient redox rất sắc giữa vùng rễ có oxygen và đất khối bị khử.
+Ruộng lúa có thể tạo độ dốc (gradient / 기울기) redox rất sắc giữa vùng rễ có oxygen và đất khối bị khử.
 
 Methane được tạo trong vùng khử mạnh, còn oxy hóa methane xảy ra gần vùng có oxygen.
 
@@ -419,3 +422,5 @@ mọi thành phần ghép lại
 Khi đánh giá đất, đừng chỉ hỏi tổng nồng độ. Hãy hỏi **chất nằm ở pha nào, gắn vào bề mặt nào, pH/redox ra sao và điều kiện có thể thay đổi thế nào theo thời gian**.
 
 Xem tiếp: [Chất ô nhiễm và hóa học độc chất](./03_pollutants_and_toxic_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atmospheric chemistry](./00_atmospheric_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

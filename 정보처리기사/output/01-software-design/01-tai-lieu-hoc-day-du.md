@@ -18,9 +18,15 @@
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
+> **Mạch nối:** Mỗi mục trong guide phải được đọc như một bước của cùng một chuỗi suy luận. Hãy dùng phần cuối của mục trước để đặt câu hỏi cho mục sau, rồi quay lại checklist để kiểm tra khái niệm vừa được mở rộng; không coi mỗi heading là một ghi chú tách rời.
+
 ---
 
 ## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
+
+---
+
+> **Mạch chuyển:** Từ **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, chuyển sang **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -36,7 +42,11 @@
 - **프로토타입 모형 (Prototype Model)**:
   - Làm bản nháp (시제품) trước khi phát triển thật. Phù hợp khi yêu cầu chưa rõ ràng.
 - **V-모형 (V-Model)**:
-  - Mỗi bước phát triển tương ứng với một bước Test (Ánh xạ Dev-Test). Yêu cầu chất lượng cực cao (Y tế, Hàng không).
+  - Mỗi bước phát triển tương ứng với một bước kiểm thử (test / 테스트) (Ánh xạ Dev-Test). Yêu cầu chất lượng cực cao (Y tế, Hàng không).
+
+---
+
+> **Mạch chuyển:** Từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**, chuyển sang **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -46,7 +56,7 @@
 - 현대적인 프로그래밍 기술을 계속적으로 적용해야 한다. (Phải liên tục áp dụng các kỹ thuật lập trình hiện đại.)
 - 개발된 소프트웨어의 품질이 유지되도록 지속적으로 검증해야 한다. (Phải liên tục xác minh để duy trì chất lượng phần mềm đã phát triển.)
 - 소프트웨어 개발 관련 사항 및 결과에 대한 명확한 기록을 유지해야 한다. (Phải lưu giữ hồ sơ rõ ràng về các vấn đề và kết quả liên quan đến phát triển phần mềm.)
-- **Ví dụ (Example):** Áp dụng CI/CD (Continuous Integration/Continuous Deployment) để liên tục kiểm thử (검증) phần mềm mỗi khi có code mới.
+- **Ví dụ (Example):** Áp dụng CI/CD (Continuous Integration/Continuous Deployment) để liên tục kiểm thử (검증) phần mềm mỗi khi có mã (code / 코드) mới.
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **HKK** (Hiện - Kiểm - Ký): **Hãy Kiểm Kê** (Kỹ thuật hiện đại - Kiểm chứng - Ghi chép).
 
 ### 002. 폭포수 모형 (Waterfall Model / Mô hình thác nước)
@@ -85,8 +95,12 @@
 - 용기 (Courage - Dũng cảm)
 - 존중 (Respect - Tôn trọng)
 - 피드백 (Feedback - Phản hồi)
-- **Ví dụ (Example):** Developer có 'dũng cảm' (용기) để xóa những đoạn code cũ không cần thiết và viết lại cho 'đơn giản' (단순성).
+- **Ví dụ (Example):** nhà phát triển (developer / 개발자) có 'dũng cảm' (용기) để xóa những đoạn mã (code / 코드) cũ không cần thiết và viết lại cho 'đơn giản' (단순성).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **YĐDTP** (Ý - Đơn - Dũng - Tôn - Phản): **Ý Định Dũng Tướng Phàm**.
+
+---
+
+> **Mạch chuyển:** Từ **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**, chuyển sang **2. 요구사항 개발 (Phát triển Yêu cầu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -103,7 +117,7 @@
 
 ### 008. 요구사항 개발 프로세스 (Quy trình phát triển yêu cầu)
 - 도출 (Elicitation - Khám phá/Rút ra) → 분석 (Analysis - Phân tích) → 명세 (Specification - Đặc tả) → 확인 (Validation - Xác nhận)
-- **Ví dụ (Example):** Phỏng vấn user (도출), lọc ra các yêu cầu hợp lý (분석), viết tài liệu SRS (명세), nhờ user ký duyệt (확인).
+- **Ví dụ (Example):** Phỏng vấn người dùng (user / 사용자), lọc ra các yêu cầu hợp lý (분석), viết tài liệu SRS (명세), nhờ người dùng (user / 사용자) ký duyệt (확인).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **ĐPMX** (Đồ - Phân - Minh - Xác): **Đi Phượt Một Xe**.
 
 ### 009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)
@@ -111,7 +125,7 @@
 - 소프트웨어 개발의 실제적인 첫 단계이다. (Là bước thực tế đầu tiên của phát triển phần mềm.)
 - 사용자 요구의 타당성을 조사하고 비용과 일정에 대한 제약을 설정한다. (Khảo sát tính hợp lý của yêu cầu người dùng và thiết lập các ràng buộc về chi phí, lịch trình.)
 - 사용자의 요구를 정확하게 추출하여 목표를 정하고, 해결 방식을 결정한다. (Trích xuất chính xác yêu cầu của người dùng để đặt mục tiêu và quyết định cách giải quyết.)
-- **Ví dụ (Example):** Khách hàng muốn "App chạy nhanh". Phân tích viên sẽ dịch thành "Thời gian phản hồi < 2s" và xem xét chi phí server có đủ đáp ứng không (비용/일정 제약).
+- **Ví dụ (Example):** Khách hàng muốn "App chạy nhanh". Phân tích viên sẽ dịch thành "Thời gian phản hồi < 2s" và xem xét chi phí máy chủ (server / 서버) có đủ đáp ứng không (비용/일정 제약).
 
 ### 010. 자료 흐름도 (DFD - Data Flow Diagram) 의 구성 요소
 - 프로세스 (Process - Quy trình): Hình tròn / Hình bầu dục. (Ví dụ: 물품 확인 - Kiểm tra hàng hóa)
@@ -128,13 +142,17 @@
 - `{ }`: 반복 (Lặp lại - iteration)
 - `* *`: 설명 (Giải thích/Chú thích - comment)
 - **Ví dụ (Example):** `Customer_Name = First_Name + (Middle_Name) + Last_Name`. Middle_Name nằm trong `( )` nghĩa là có thể không có (생략).
-- 💡 **Mẹo ghi nhớ (Mnemonic):** `{ }` giống như vòng lặp trong code, nên là lặp lại (반복). `* *` giống comment `/* */` trong code.
+- 💡 **Mẹo ghi nhớ (Mnemonic):** `{ }` giống như vòng lặp trong mã (code / 코드), nên là lặp lại (반복). `* *` giống comment `/* */` trong mã (code / 코드).
 
 ### 012. HIPO (Hierarchy plus Input-Process-Output)
 - 하향식 소프트웨어 개발을 위한 문서화 도구이다. (Là công cụ tài liệu hóa cho phát triển phần mềm theo hướng từ trên xuống - Top-down.)
 - 기호, 도표 등을 사용하므로 보기 쉽고 이해하기도 쉽다. (Sử dụng ký hiệu, biểu đồ nên dễ nhìn và dễ hiểu.)
 - 기능과 자료의 의존 관계를 동시에 표현할 수 있다. (Có thể biểu diễn đồng thời mối quan hệ phụ thuộc giữa chức năng và dữ liệu.)
 - **Ví dụ (Example):** Vẽ một sơ đồ cây bắt đầu từ Hệ thống chính (Quản lý trường học) rẽ nhánh xuống các chức năng con (Quản lý điểm, Quản lý sinh viên).
+
+---
+
+> **Mạch chuyển:** Từ **2. 요구사항 개발 (Phát triển Yêu cầu)**, chuyển sang **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -163,12 +181,12 @@
 - **스프린트 검토/회고 (Sprint Review/Retrospective):** 검토는 제품 시연, 회고는 프로세스 cải tiến. (Review = Demo sản phẩm; Retrospective = Rút kinh nghiệm quy trình).
 
 ### XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)
-- **짝 프로그래밍 (Pair Programming):** 2 người cùng code trên 1 máy tính.
-- **공동 코드 소유 (Collective Ownership):** Code là của chung, ai cũng có quyền sửa.
-- **테스트 주도 개발 (TDD - Test-Driven Development):** Viết Test case trước, viết Code sau.
-- **전체 팀 (Whole Team):** Khách hàng và team phát triển làm việc cùng nhau như 1 đội.
-- **계속적인 통합 (Continuous Integration):** Tích hợp code liên tục (CI) ngay khi xong 1 task.
-- **리팩토링 (Refactoring):** Cải thiện cấu trúc code mà không đổi chức năng bên ngoài.
+- **짝 프로그래밍 (Pair Programming):** 2 người cùng mã (code / 코드) trên 1 máy tính.
+- **공동 코드 소유 (Collective Ownership):** mã (code / 코드) là của chung, ai cũng có quyền sửa.
+- **테스트 주도 개발 (TDD - Test-Driven Development):** Viết trường hợp kiểm thử (test case / 테스트 케이스) trước, viết mã (code / 코드) sau.
+- **전체 팀 (Whole Team):** Khách hàng và nhóm (team / 팀) phát triển làm việc cùng nhau như 1 đội.
+- **계속적인 통합 (Continuous Integration):** Tích hợp mã (code / 코드) liên tục (CI) ngay khi xong 1 tác vụ (task / 작업).
+- **리팩토링 (Refactoring):** Cải thiện cấu trúc mã (code / 코드) mà không đổi chức năng bên ngoài.
 - **소규모 릴리즈 (Small Releases):** Cập nhật/Phát hành các phiên bản nhỏ liên tục.
 
 ### 현행 시스템 파악 (Phân tích hệ thống hiện tại)
@@ -187,26 +205,34 @@
 
 ---
 
+> **Mạch chuyển:** Từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**, chuyển sang **10. 요구사항 심화 (Yêu cầu chuyên sâu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 10. 요구사항 심화 (Yêu cầu chuyên sâu)
 
 ### 요구사항의 유형 (Các loại yêu cầu)
 - **기능 요구사항 (Functional Requirements):** 시스템이 무엇을 하는지, 어떤 기능을 하는지에 대한 사항. (Hệ thống làm gì, chức năng nào. Ví dụ: Phải có nút Lưu, phải tính toán được thuế).
 - **비기능 요구사항 (Non-functional Requirements):** 성능 (Hiệu năng), 인터페이스 (Giao diện), 데이터 (Dữ liệu), 테스트 (Kiểm thử), 보안 (Bảo mật), 품질 (Chất lượng), 제약사항 (Ràng buộc), 프로젝트 관리/지원 (Quản lý dự án/Hỗ trợ). (Là các yêu cầu không trực tiếp là chức năng nhưng quyết định chất lượng hệ thống).
-- **Ví dụ (Example):** Chức năng giỏ hàng là "기능" (Chức năng). Nhưng giỏ hàng phải load trong 0.5 giây là "성능" (Hiệu năng - Phi chức năng).
+- **Ví dụ (Example):** Chức năng giỏ hàng là "기능" (Chức năng). Nhưng giỏ hàng phải tải (load / 로드) trong 0.5 giây là "성능" (Hiệu năng - Phi chức năng).
 
 ### 요구사항 도출 (Requirement Elicitation / Thu thập yêu cầu)
 - 기법 (Kỹ thuật): 청취와 인터뷰 (Lắng nghe & Phỏng vấn), 설문 (Khảo sát), 브레인스토밍 (Brainstorming), 워크샵 (Workshop), 프로토타이핑 (Prototyping), 유스케이스 (Use Case).
 
 ### 요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)
 - **정형 명세 기법 (Formal Specification):** 수학적 기호, 정형화된 표기법 사용 (Dùng ký hiệu toán học). 정확하고 간결, 일관성 있음, 하지만 표기법이 어려워 사용자가 이해하기 어려움. (Chính xác, nhất quán nhưng khó hiểu với user). 종류: VDM, Z, Petri-net, CSP.
-- **비정형 명세 기법 (Informal Specification):** 일반 명사, 동사 등의 자연어를 기반으로 서술 또는 다이어그램 작성. (Dùng ngôn ngữ tự nhiên/biểu đồ). 의사소통이 용이하지만 작성자에 따라 해석이 달라질 수 있음. (Dễ giao tiếp nhưng dễ gây hiểu nhầm). 종류: FSM, Decision Table, ER모델링, State Chart.
+- **비정형 명세 기법 (Informal Specification):** 일반 명사, 동사 등의 자연어를 기반으로 서술 또는 다이어그램 작성. (Dùng ngôn ngữ tự nhiên/biểu đồ). 의사소통이 용이하지만 작성자에 따라 해석이 달라질 수 있음. (Dễ giao tiếp nhưng dễ gây hiểu nhầm). 종류: FSM, quyết định (decision / 결정) bảng (table / 테이블), ER모델링, trạng thái (state / 상태) Chart.
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **CTPT** (Chính-Toán-Phi-Tự) -> **Chăm Toán Phải Tốt** -> 정형 = 수학적 (Chính thức = Toán học), 비정형 = 자연어 (Phi chính thức = Tự nhiên).
 
-### 요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)
+### 요구사항 분석을 위한 trường hợp (case / 사례) 도구 (Công cụ CASE tự động hóa phân tích)
 - **SADT:** SoftTech사 개발, 구조적 분석 및 설계 도구. (Công cụ phân tích cấu trúc của SoftTech).
 - **SREM (RSL/REVS):** TRW사 개발, 실시간 처리 소프트웨어 요구사항 기술. (Công cụ cho hệ thống thời gian thực, dùng RSL và REVS).
 - **PSL/PSA:** 미시간 대학 개발. (Phát triển bởi ĐH Michigan).
 - **TAGS:** 개발 주기 전 과정에 이용할 수 있는 통합 자동화 도구. (Công cụ tích hợp toàn bộ vòng đời).
+
+---
+
+> **Mạch chuyển:** Từ **10. 요구사항 심화 (Yêu cầu chuyên sâu)**, chuyển sang **2. 요구사항 정의 (Requirements Definition)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -217,8 +243,12 @@
   1. 도출 (Elicitation) -> 2. 분석 (Analysis) -> 3. 명세 (Specification) -> 4. 확인/검증 (Validation).
 - 💡 **Mẹo ghi nhớ**: Đ/P/M/X (Elicitation, Analysis, Spec, Validation) -> **Đi Phượt Một Xe**
 - **명세 기법 (Specification Techniques)**:
-  - 정형 (Formal): Ký hiệu toán học (Toán học, VDM, Z-schema). Rõ ràng nhưng khó hiểu với user.
+  - 정형 (Formal): Ký hiệu toán học (Toán học, VDM, Z-schema). Rõ ràng nhưng khó hiểu với người dùng (user / 사용자).
   - 비정형 (Informal): Ngôn ngữ tự nhiên (Natural language, FSM, ERD). Dễ hiểu nhưng có thể mơ hồ.
+
+---
+
+> **Mạch chuyển:** Từ **2. 요구사항 정의 (Requirements Definition)**, chuyển sang **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -232,8 +262,12 @@
   - `[ | ]`: Lựa chọn (or)
   - `{ }`: Lặp lại (Iteration)
   - `**`: Ghi chú (Comment)
-- **CASE 도구 (CASE Tools)**: SADT, SREM, PSL/PSA.
+- **trường hợp (case / 사례) 도구 (CASE Tools)**: SADT, SREM, PSL/PSA.
 - **HIPO (Hierarchical Input Process Output)**: Phân tích Top-down (가시적 도표, 총체적 도표, 세부적 도표).
+
+---
+
+> **Mạch chuyển:** Từ **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**, chuyển sang **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -243,6 +277,10 @@
   - **브레인스토밍 (Brainstorming)**: Công não ý tưởng (Không chỉ trích).
   - **델파이 기법 (Delphi)**: Hỏi ý kiến chuyên gia ẩn danh.
   - **프로토타이핑 (Prototyping)**: Làm mẫu thử.
+
+---
+
+> **Mạch chuyển:** Từ **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)**, chuyển sang **12. 요구사항 (Requirements)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -257,7 +295,7 @@
     *   수작업: 동료검토(Peer Review), 워크스루(Walkthrough), 인스펙션(Inspection).
     *   **프로토타이핑 (Prototyping):** 견본 제작 (Làm bản mẫu dùng thử).
     *   **테스트 설계 (Test Design):** 테스트 케이스 생성 (Viết test case trước để xem có test được không).
-    *   **CASE 도구:** 자동화 도구로 일관성 분석 (Dùng phần mềm check logic).
+    *   **trường hợp (case / 사례) 도구:** 자동화 도구로 일관성 분석 (Dùng phần mềm check logic).
 
 ### 요구사항 품질 기준 7개 (7 Tiêu chí chất lượng)
 1.  **완전성 (Completeness):** 누락 없이 (Đầy đủ).
@@ -269,6 +307,10 @@
 7.  **변경 용이성 (Easily Changeable):** 수정 용이 (Dễ thay đổi).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **12. 요구사항 (Requirements)**, chuyển sang **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -301,6 +343,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, chuyển sang **1. 현행 시스템 분석 (Current System Analysis)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 1. 현행 시스템 분석 (Current System Analysis)
 - **플랫폼 성능 (Platform Performance)**:
   - 가용성 (Availability), 경과 시간 (Turnaround Time), 응답 시간 (Response Time), 사용률 (Utilization).
@@ -309,10 +355,18 @@
 
 ---
 
+> **Mạch chuyển:** Từ **1. 현행 시스템 분석 (Current System Analysis)**, chuyển sang **3. 현행 시스템 파악 (Understanding Current System)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 3. 현행 시스템 파악 (Understanding Current System)
 - **1단계**: 시스템 구성 (기간 업무/지원 업무), 기능 (계층형), 인터페이스 (Giao thức, loại liên kết).
 - **2단계**: 아키텍처 구성 (Kiến trúc), 소프트웨어 구성 (Bản quyền - 라이선스).
 - **3단계**: 하드웨어 구성 (Dự phòng - 이중화/Redundancy), 네트워크 구성 (Vị trí vật lý, mạng).
+
+---
+
+> **Mạch chuyển:** Từ **3. 현행 시스템 파악 (Understanding Current System)**, chuyển sang **3. 모델링 및 UML (Mô hình hóa và UML)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -338,7 +392,7 @@
 - 배치 다이어그램 (Deployment Diagram)
 - 복합체 구조 다이어그램 (Composite Structure Diagram)
 - 패키지 다이어그램 (Package Diagram)
-- **Ví dụ (Example):** Class Diagram thể hiện cấu trúc tĩnh của hệ thống, giống như sơ đồ tổ chức của một công ty.
+- **Ví dụ (Example):** lớp (class / 클래스) Diagram thể hiện cấu trúc tĩnh của hệ thống, giống như sơ đồ tổ chức của một công ty.
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **LĐCBPG** (Lớp - Đối - Com - Bố - Phức - Gói): **Làm Được Có Bữa Phải Giỏi**. Các biểu đồ này thể hiện cấu trúc "Tĩnh" (정적).
 
 ### 016. 행위(Behavioral) 다이어그램의 종류 (Các loại biểu đồ hành vi - Động)
@@ -349,13 +403,13 @@
 - 활동 다이어그램 (Activity Diagram)
 - 상호작용 개요 다이어그램 (Interaction Overview Diagram)
 - 타이밍 다이어그램 (Timing Diagram)
-- **Ví dụ (Example):** Sequence Diagram thể hiện trình tự thời gian gửi tin nhắn (메시지) giữa các đối tượng (hành vi động).
+- **Ví dụ (Example):** chuỗi (sequence / 시퀀스) Diagram thể hiện trình tự thời gian gửi tin nhắn (메시지) giữa các đối tượng (hành vi động).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **UTCTHTT** (Use - Trình - Com - Trạng - Hoạt - Tương - Time): **Uống Trà Chiều Thấy Hay Thật Tuyệt**. Các biểu đồ này thể hiện đặc tính "Động" (동적).
 
 ### 017. 스테레오 타입 (Stereotype)
 - UML에서 표현하는 기본 기능 외에 추가적인 기능을 표현하기 위해 사용한다. (Dùng để biểu diễn các chức năng bổ sung ngoài chức năng cơ bản trong UML.)
 - 길러멧(Guilemet)이라고 부르는 겹화살괄호(`<< >>`) 사이에 표현할 형태를 기술한다. (Viết hình thái muốn biểu diễn giữa cặp dấu ngoặc nhọn kép `<< >>` gọi là Guilemet.)
-- **Ví dụ (Example):** `<<include>>` hoặc `<<extend>>` trong Use Case Diagram.
+- **Ví dụ (Example):** `<<include>>` hoặc `<<extend>>` trong Use trường hợp (case / 사례) Diagram.
 
 ### 018. 유스케이스 다이어그램 - 액터(Actor) (Biểu đồ Use Case - Tác nhân)
 - 시스템과 상호작용을 하는 모든 외부 요소로, 사람이나 외부 시스템을 의미한다. (Là tất cả các yếu tố bên ngoài tương tác với hệ thống, có nghĩa là con người hoặc hệ thống bên ngoài.)
@@ -368,7 +422,11 @@
 - 생명선 (Lifeline - Đường đời)
 - 실행 상자 (Active Box - Hộp thực thi)
 - 메시지 (Message - Thông điệp)
-- **Ví dụ (Example):** Khi user (Actor) ấn nút mua hàng, một mũi tên (Message) sẽ được gửi đến Giỏ hàng (Object). Đường nét đứt sổ dọc xuống từ Giỏ hàng là 생명선 (Lifeline).
+- **Ví dụ (Example):** Khi người dùng (user / 사용자) (Actor) ấn nút mua hàng, một mũi tên (Message) sẽ được gửi đến Giỏ hàng (Object). Đường nét đứt sổ dọc xuống từ Giỏ hàng là 생명선 (Lifeline).
+
+---
+
+> **Mạch chuyển:** Từ **3. 모델링 및 UML (Mô hình hóa và UML)**, chuyển sang **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -412,36 +470,52 @@
 
 ---
 
+> **Mạch chuyển:** Từ **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**, chuyển sang **4. UML (Unified Modeling Language)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 4. UML (Unified Modeling Language)
 - **개념**: Ngôn ngữ mô hình hóa hướng đối tượng chuẩn.
 - **구성요소**: 사물 (Things), 관계 (Relationships), 다이어그램 (Diagrams).
 - **관계 (Relationships)**:
   - 연관 (Association), 의존 (Dependency), 집합 (Aggregation), 포함 (Composition), 일반화 (Generalization - Kế thừa), 실체화 (Realization - Interface).
 - **다이어그램 (Diagrams)**:
-  - **구조적/정적 (Structural/Static)**: Class, Object, Component, Deployment, Composite Structure, Package.
-  - **행위적/동적 (Behavioral/Dynamic)**: Use Case, Sequence, Communication, State, Activity, Timing.
+  - **구조적/정적 (Structural/Static)**: lớp (class / 클래스), đối tượng (object / 객체), thành phần (component / 컴포넌트), triển khai (deployment / 배포), Composite cấu trúc (structure / 구조), gói (package / 패키지).
+  - **행위적/동적 (Behavioral/Dynamic)**: Use trường hợp (case / 사례), chuỗi (sequence / 시퀀스), Communication, trạng thái (state / 상태), Activity, Timing.
 - 💡 **Mẹo ghi nhớ**:
   - 정적 다이어그램: 클/객/컴/배/복/패 (Class, Object, Component, Deployment, Composite, Package)
   - 동적 다이어그램: 유/순/커/상/활/타 (Use case, Sequence, Comm, State, Activity, Timing)
 
 ---
 
+> **Mạch chuyển:** Từ **4. UML (Unified Modeling Language)**, chuyển sang **5. UML 구성요소 상세 (UML Components Detail)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 5. UML 구성요소 상세 (UML Components Detail)
-- **클래스 다이어그램 (Class Diagram)**: Class Name, Attribute, Operation.
+- **클래스 다이어그램 (Class Diagram)**: lớp (class / 클래스) Name, Attribute, thao tác (operation / 연산).
   - 접근 제어자 (Access Modifier): `+` (Public), `-` (Private), `#` (Protected), `~` (Package).
-- **유스케이스 다이어그램 (Use Case Diagram)**: System, Use Case, Actor.
+- **유스케이스 다이어그램 (Use Case Diagram)**: hệ thống (system / 시스템), Use trường hợp (case / 사례), Actor.
   - Quan hệ: `<<include>>` (Bắt buộc), `<<extend>>` (Tùy chọn), Generalization (Kế thừa).
-- **순차 다이어그램 (Sequence Diagram)**: Object, Lifeline, Activation, Message, Self-Message.
+- **순차 다이어그램 (Sequence Diagram)**: đối tượng (object / 객체), Lifeline, Activation, Message, Self-Message.
   - Thể hiện sự tương tác theo thời gian.
+
+---
+
+> **Mạch chuyển:** Từ **5. UML 구성요소 상세 (UML Components Detail)**, chuyển sang **7. UML 심화 (Advanced UML)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 7. UML 심화 (Advanced UML)
 - Do OMG chuẩn hóa từ phương pháp của Rumbaugh, Booch, Jacobson.
 - **다이어그램 (Diagrams)**:
-  - 구조적 (Structural / Tĩnh): Class, Object, Component, Deployment, Composite, Package.
-  - 행위적 (Behavioral / Động): Use Case, Sequence, Communication, State, Activity, Timing.
+  - 구조적 (Structural / Tĩnh): lớp (class / 클래스), đối tượng (object / 객체), thành phần (component / 컴포넌트), triển khai (deployment / 배포), Composite, gói (package / 패키지).
+  - 행위적 (Behavioral / Động): Use trường hợp (case / 사례), chuỗi (sequence / 시퀀스), Communication, trạng thái (state / 상태), Activity, Timing.
 - **스테레오 타입 (Stereotype)**: Mở rộng UML bằng dấu `<< >>` (Guillemet). Ví dụ: `<<include>>`, `<<extend>>`.
+
+---
+
+> **Mạch chuyển:** Từ **7. UML 심화 (Advanced UML)**, chuyển sang **4. 사용자 인터페이스 (Giao diện người dùng - UI)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -468,7 +542,11 @@
 ### 023. 목업 (Mockup)
 - 와이어프레임보다 좀 더 실제 화면과 유사하게 만든 정적인 형태의 모형이다. (Là mô hình dạng tĩnh, được làm giống với màn hình thực tế hơn so với Wireframe.)
 - 시각적으로만 구성 요소를 배치하는 것으로 실제로 구현되지는 않는다. (Chỉ bố trí các thành phần về mặt thị giác chứ thực tế không hoạt động/code chưa chạy.)
-- **Ví dụ (Example):** Dùng Figma vẽ ra một màn hình app đẹp long lanh, nhưng bấm vào các nút không có phản hồi logic gì, đó là Mockup.
+- **Ví dụ (Example):** Dùng Figma vẽ ra một màn hình app đẹp long lanh, nhưng bấm vào các nút không có phản hồi lô-gic (logic / 논리) gì, đó là Mockup.
+
+---
+
+> **Mạch chuyển:** Từ **4. 사용자 인터페이스 (Giao diện người dùng - UI)**, chuyển sang **1. 사용자 인터페이스 (User Interface - UI)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -489,6 +567,10 @@
   - **프로토타입 (Prototype)**: Mô hình động, có thể tương tác.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **1. 사용자 인터페이스 (User Interface - UI)**, chuyển sang **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -535,6 +617,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**, chuyển sang **5. 요구공학 (Requirements Engineering)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 5. 요구공학 (Requirements Engineering)
 - **도출 (Elicitation)**: Lặp đi lặp lại trong suốt vòng đời (SDLC).
 - **분석 (Analysis)**: Giải quyết xung đột (중재), dùng DFD, DD.
@@ -547,6 +633,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **5. 요구공학 (Requirements Engineering)**, chuyển sang **8. UI 및 UX, HCI (UI, UX, HCI)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 8. UI 및 UX, HCI (UI, UX, HCI)
 - **UI 유형**: CLI (Văn bản), GUI (Đồ họa), NUI (Tự nhiên - Giọng nói/Hành động), OUI (Hữu cơ - Gắn với đồ vật vật lý).
 - **UI 설계 도구**: Wireframe (Khung xương), Mockup (Mô hình tĩnh giống thật), Storyboard (Kịch bản chi tiết), Prototype (Mô hình động tương tác).
@@ -556,6 +646,10 @@
   - **정황성 (Contextuality)**: Phụ thuộc vào hoàn cảnh (thời gian, địa điểm).
   - **총체성 (Holistic)**: Trải nghiệm tổng thể.
 - **감성공학 (Affective Engineering)**: Khoa học kết hợp cảm xúc con người vào thiết kế (Dựa trên -> Thực hiện -> Ứng dụng).
+
+---
+
+> **Mạch chuyển:** Từ **8. UI 및 UX, HCI (UI, UX, HCI)**, chuyển sang **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -576,7 +670,7 @@
 - 프로그램의 효율적인 관리가 가능하다. (Có thể quản lý chương trình một cách hiệu quả.)
 - 오류의 파급 효과를 최소화할 수 있다. (Có thể giảm thiểu tác động lan truyền của lỗi.)
 - 모듈의 크기를 너무 작게 나누면 개수가 많아져 모듈간의 통합 비용이 많이 들고, 너무 크게 나누면 개수가 적어 통합 비용은 적게 들지만 모듈 하나의 개발 비용이 많이 든다. (Nếu chia module quá nhỏ, số lượng nhiều, chi phí tích hợp sẽ cao. Nếu chia quá lớn, chi phí tích hợp ít nhưng chi phí phát triển 1 module lại cao.)
-- **Ví dụ (Example):** Thay vì viết toàn bộ chức năng vào 1 file code, ta chia ra `login.py`, `payment.py`. Lỗi ở payment không làm sập login (giảm thiểu 파급 효과).
+- **Ví dụ (Example):** Thay vì viết toàn bộ chức năng vào 1 tệp (file / 파일) mã (code / 코드), ta chia ra `login.py`, `payment.py`. Lỗi ở payment không làm sập login (giảm thiểu 파급 효과).
 
 ### 027. 추상화의 유형 (Các loại trừu tượng hóa)
 - 과정 추상화 (Trừu tượng hóa quá trình)
@@ -623,7 +717,7 @@
 - **통신적 (Communication) 응집도:** Các hoạt động cùng sử dụng chung một dữ liệu đầu vào/ra.
 - **절차적 (Procedural) 응집도:** 모듈 안의 구성 요소들이 그 기능을 순차적으로 수행할 경우. (Thực hiện tuần tự theo quy trình nhưng có thể không cùng dữ liệu).
 - **시간적 (Temporal) 응집도:** 특정 시간에 처리되는 몇 개의 기능을 모아 하나의 모듈로 작성. (Nhóm các chức năng cần thực hiện cùng một thời điểm, ví dụ: Module khởi tạo hệ thống).
-- **논리적 (Logical) 응집도:** Các chức năng có cùng logic được nhóm lại.
+- **논리적 (Logical) 응집도:** Các chức năng có cùng lô-gic (logic / 논리) được nhóm lại.
 - **우연적 (Coincidental) 응집도 (Yếu nhất - Xấu nhất):** 각 구성 요소들이 서로 관련 없는 요소로만 구성된 경우. (Nhóm các thành phần chẳng liên quan gì với nhau).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **KTTTTLN** (Kỳ - Thuận - Thông - Tiết - Thời - Luận - Ngẫu): **Không Thể Tin Thằng Trẻ Làm Ngốc**. (Từ Tốt nhất -> Xấu nhất).
 
@@ -631,6 +725,10 @@
 - 팬인 (Fan-In): 어떤 모듈을 제어(호출)하는 모듈의 수. (Số lượng các module gọi/điều khiển module đó -> Mũi tên TRỎ VÀO nó).
 - 팬아웃 (Fan-Out): 어떤 모듈에 의해 제어(호출)되는 모듈의 수. (Số lượng các module mà module đó gọi/điều khiển -> Mũi tên TRỎ RA từ nó).
 - **Nguyên tắc thiết kế tốt:** Fan-In phải CAO (được dùng lại nhiều), Fan-Out phải THẤP (ít phụ thuộc vào nhiều thằng khác).
+
+---
+
+> **Mạch chuyển:** Từ **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)**, chuyển sang **13. 소프트웨어 품질 및 아키텍처 패턴 (Chất lượng SW & Mẫu Kiến trúc)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -661,6 +759,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **13. 소프트웨어 품질 및 아키텍처 패턴 (Chất lượng SW & Mẫu Kiến trúc)**, chuyển sang **1. 소프트웨어 아키텍처 (Software Architecture)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 1. 소프트웨어 아키텍처 (Software Architecture)
 - **상위 설계 (High-level)**: 아키텍처 (Architecture), 자료구조 (Data Structure), 인터페이스 (Interface).
 - **하위 설계 (Low-level)**: 모듈 (Module), 프로시저 (Procedure).
@@ -668,9 +770,13 @@
   - **레이어 패턴 (Layers)**: Chia thành các tầng (OSI 7 layer).
   - **클라이언트-서버 패턴 (Client-Server)**: Máy khách - Máy chủ.
   - **파이프-필터 패턴 (Pipe-Filter)**: Dữ liệu qua các bộ lọc liên tiếp (Ví dụ: Unix shell).
-  - **MVC 패턴**: Model (Dữ liệu), View (Giao diện), Controller (Điều khiển).
+  - **MVC 패턴**: mô hình (model / 모델) (Dữ liệu), View (Giao diện), Controller (Điều khiển).
   - **브로커 패턴 (Broker)**: Có môi giới ở giữa.
   - **마스터-슬레이브 (Master-Slave)**: Một chủ, nhiều tớ (Hệ thống thời gian thực).
+
+---
+
+> **Mạch chuyển:** Từ **1. 소프트웨어 아키텍처 (Software Architecture)**, chuyển sang **6. 객체지향 (Hướng Đối Tượng - OOP)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -720,6 +826,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **6. 객체지향 (Hướng Đối Tượng - OOP)**, chuyển sang **14. 객체지향 심화 (OOP chuyên sâu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 14. 객체지향 심화 (OOP chuyên sâu)
 
 ### 다형성 (Polymorphism) 추가 설명
@@ -729,12 +839,16 @@
 
 ---
 
+> **Mạch chuyển:** Từ **14. 객체지향 심화 (OOP chuyên sâu)**, chuyển sang **15. 객체지향 및 모듈화 방법론 (Phương pháp luận OOP & Mô-đun hóa)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 15. 객체지향 및 모듈화 방법론 (Phương pháp luận OOP & Mô-đun hóa)
 
 ### 객체지향 분석 방법론 종류 (Các phương pháp phân tích OOP)
 - **Rumbaugh (럼바우):** 객체(Object), 동적(Dynamic), 기능(Functional) 모델로 나누어 분석. (Chia làm 3 mô hình).
 - **Booch (부치):** 미시적(Micro) 개발과 거시적(Macro) 개발 프로세스 모두 사용. (Dùng cả quy trình vĩ mô và vi mô).
-- **Jacobson (제이콥슨):** Use Case(유스케이스)를 강조. (Nhấn mạnh vào Use Case).
+- **Jacobson (제이콥슨):** Use trường hợp (case / 사례)를 강조. (Nhấn mạnh vào Use Case).
 - **Coad와 Yourdon:** E-R 다이어그램 사용. (Dùng sơ đồ ER).
 - **Wirfs-Brock:** 분석과 설계 간 구분이 없고 연속적으로 수행. (Không phân biệt rõ phân tích và thiết kế, làm liên tục).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** R-O, B-M, J-U, C-E, W-L -> **Ra Ôm Bạn Mới, Giữ Út, Cho Em Vui Lây** (Rumbaugh-Object, Booch-Micro, Jacobson-Use case, Coad-ER, Wirfs-Liên tục).
@@ -762,6 +876,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **15. 객체지향 및 모듈화 방법론 (Phương pháp luận OOP & Mô-đun hóa)**, chuyển sang **2. 객체지향 (OOP - Object Oriented Programming)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 객체지향 (OOP - Object Oriented Programming)
 - **구성요소**: 클래스 (Class), 객체 (Object), 메서드 (Method), 메시지 (Message), 인스턴스 (Instance), 속성 (Property).
 - **객체지향 기법 (OOP Techniques)**:
@@ -772,11 +890,15 @@
   - **S (SRP)**: Đơn trách nhiệm (Một lớp một việc).
   - **O (OCP)**: Đóng-Mở (Mở rộng thì dễ, sửa đổi thì cấm).
   - **L (LSP)**: Thay thế Liskov (Lớp con thay thế được lớp cha).
-  - **I (ISP)**: Phân tách Interface (Interface nhỏ gọn).
+  - **I (ISP)**: Phân tách giao diện (interface / 인터페이스) (Interface nhỏ gọn).
   - **D (DIP)**: Đảo ngược phụ thuộc (Phụ thuộc vào Interface, không phụ thuộc vào triển khai chi tiết).
 - **분석 방법론 (OOA Methods)**:
   - **람바우 (Rumbaugh - OMT)**: 객체 모형 (Object) -> 동적 모형 (Dynamic) -> 기능 모형 (Functional - DFD).
   - 💡 **Mẹo ghi nhớ**: K/Đ/C -> **Không Đợi Chờ**
+
+---
+
+> **Mạch chuyển:** Từ **2. 객체지향 (OOP - Object Oriented Programming)**, chuyển sang **1. 객체지향 설계 5대 원칙 (SOLID)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -791,10 +913,10 @@
         *   *VN:* Tách biệt lớp tạo báo cáo và lớp in báo cáo, không để chung một lớp.
 *   **OCP (Open-Closed Principle - 개방-폐쇄 원칙):**
     *   **Korean:** 기능 추가에는 열려(Open) 있어야 하고, 기존 코드 변경에는 닫혀(Closed) 있어야 함. 인터페이스로 캡슐화.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đóng - Mở. Mở rộng chức năng thì dễ dàng (Open), nhưng không được sửa đổi mã nguồn hiện tại (Closed). Thường dùng Interface để đóng gói.
+    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đóng - Mở. Mở rộng chức năng thì dễ dàng (Open), nhưng không được sửa đổi mã nguồn hiện tại (Closed). Thường dùng giao diện (interface / 인터페이스) để đóng gói.
     *   **Example:**
         *   *KR:* 결제 수단(카드, 페이 등)을 인터페이스로 구현하여 새로운 결제 수단 추가 시 기존 코드 수정 없이 확장.
-        *   *VN:* Dùng Interface cho phương thức thanh toán, khi thêm phương thức mới (ví dụ: ví điện tử) thì không cần sửa mã cũ.
+        *   *VN:* Dùng giao diện (interface / 인터페이스) cho phương thức thanh toán, khi thêm phương thức mới (ví dụ: ví điện tử) thì không cần sửa mã cũ.
 *   **LSP (Liskov Substitution Principle - 리스코프 치환 원칙):**
     *   **Korean:** 자식 클래스는 최소한 부모 클래스의 행위를 수행할 수 있어야 함. 부모의 의도를 훼손하지 않고 확장.
     *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Thay thế Liskov. Lớp con phải có thể thay thế lớp cha mà không làm hỏng tính đúng đắn của chương trình. Lớp con chỉ nên mở rộng, không làm sai lệch ý định của lớp cha.
@@ -803,20 +925,24 @@
         *   *VN:* Chim cánh cụt kế thừa từ lớp Chim, nhưng nếu gọi hàm bay() sẽ bị lỗi, vi phạm LSP. Cần thiết kế lại.
 *   **ISP (Interface Segregation Principle - 인터페이스 분리 원칙):**
     *   **Korean:** 사용하지 않는 인터페이스에 의존하지 않도록 분리.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Phân tách Interface. Không nên ép các lớp phụ thuộc vào những interface mà chúng không sử dụng. Hãy chia nhỏ interface khổng lồ thành các interface cụ thể.
+    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Phân tách giao diện (interface / 인터페이스). Không nên ép các lớp phụ thuộc vào những giao diện (interface / 인터페이스) mà chúng không sử dụng. Hãy chia nhỏ giao diện (interface / 인터페이스) khổng lồ thành các giao diện (interface / 인터페이스) cụ thể.
     *   **Example:**
         *   *KR:* 복합기 인터페이스를 프린터, 스캐너, 팩스 인터페이스로 분리.
-        *   *VN:* Tách interface của máy photocopy đa năng thành các interface riêng: In, Quét, Fax.
+        *   *VN:* Tách giao diện (interface / 인터페이스) của máy photocopy đa năng thành các giao diện (interface / 인터페이스) riêng: In, Quét, Fax.
 *   **DIP (Dependency Inversion Principle - 의존 역전 원칙):**
     *   **Korean:** 구체적인 클래스보다 추상화된 클래스(인터페이스)에 의존해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đảo ngược phụ thuộc. Các module cấp cao không nên phụ thuộc vào module cấp thấp, cả hai nên phụ thuộc vào abstractions (interface).
+    *   **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc Đảo ngược phụ thuộc. Các mô-đun (module / 모듈) cấp cao không nên phụ thuộc vào mô-đun (module / 모듈) cấp thấp, cả hai nên phụ thuộc vào abstractions (interface).
     *   **Example:**
         *   *KR:* 자동차가 스노우타이어(구체) 대신 타이어(추상) 인터페이스에 의존.
-        *   *VN:* Lớp xe hơi phụ thuộc vào interface "Lốp xe" nói chung, thay vì phụ thuộc trực tiếp vào "Lốp đi tuyết".
+        *   *VN:* Lớp xe hơi phụ thuộc vào giao diện (interface / 인터페이스) "Lốp xe" nói chung, thay vì phụ thuộc trực tiếp vào "Lốp đi tuyết".
 
 💡 **Mẹo ghi nhớ (Mnemonics):** **SOLID** (S = Single, O = Open, L = Liskov, I = Interface, D = Dependency)
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **1. 객체지향 설계 5대 원칙 (SOLID)**, chuyển sang **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -848,6 +974,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**, chuyển sang **3. 모듈 (Module)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 3. 모듈 (Module)
 - **결합도 (Coupling - Độ kết dính giữa các module)**: Càng thấp càng tốt.
   - 자료 (Data - Tốt nhất) < 스탬프 (Stamp) < 제어 (Control) < 외부 (External) < 공통 (Common) < 내용 (Content - Tệ nhất).
@@ -861,17 +991,25 @@
 
 ---
 
+> **Mạch chuyển:** Từ **3. 모듈 (Module)**, chuyển sang **2. 모듈 (Module) & 독립성 (Independence)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 모듈 (Module) & 독립성 (Independence)
 **개념 (Khái niệm):** 시스템의 기능을 분리한 단위. 단독 컴파일과 재사용 가능 (Module là các đơn vị chức năng được phân tách của hệ thống, có thể biên dịch độc lập và tái sử dụng).
 
 *   **기능적 독립성 (Functional Independence - Tính độc lập chức năng):**
     *   **Korean:** 각 모듈이 하나의 기능만을 수행하고 상호작용을 최소화하는 것. 결합도(Coupling)는 약하게(Weak), 응집도(Cohesion)는 강하게(Strong) 해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Mỗi module chỉ thực hiện một chức năng và hạn chế tương tác với bên ngoài. Cần Độ phụ thuộc (Coupling) thấp và Độ gắn kết (Cohesion) cao. Kích thước module nên nhỏ gọn.
+    *   **VI (Vietnamese) (Tiếng Việt):** Mỗi mô-đun (module / 모듈) chỉ thực hiện một chức năng và hạn chế tương tác với bên ngoài. Cần Độ phụ thuộc (Coupling) thấp và Độ gắn kết (Cohesion) cao. Kích thước mô-đun (module / 모듈) nên nhỏ gọn.
     *   **Example:**
         *   *KR:* 독립된 로그인 모듈은 다른 모듈 변경 시 영향을 받지 않음.
-        *   *VN:* Module đăng nhập đứng độc lập, khi sửa giỏ hàng thì module đăng nhập không bị ảnh hưởng.
+        *   *VN:* mô-đun (module / 모듈) đăng nhập đứng độc lập, khi sửa giỏ hàng thì mô-đun (module / 모듈) đăng nhập không bị ảnh hưởng.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **2. 모듈 (Module) & 독립성 (Independence)**, chuyển sang **7. 공통 모듈 (Common Module)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -890,12 +1028,20 @@
 
 ---
 
+> **Mạch chuyển:** Từ **7. 공통 모듈 (Common Module)**, chuyển sang **9. 효과적인 모듈 설계 방안 (Effective Module Design)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
 *   **Korean:** 결합도↓, 응집도↑. 모듈의 영향 영역(Scope of Effect)이 제어 영역(Scope of Control) 안에 있어야 함. 단일 입구/단일 출구(Single Entry, Single Exit). 복잡도와 중복성 감소.
-*   **VI (Vietnamese) (Tiếng Việt):** Coupling thấp, Cohesion cao. **Phạm vi ảnh hưởng (Scope of Effect) phải nằm TRONG Phạm vi kiểm soát (Scope of Control)** của module. Chỉ có 1 đầu vào và 1 đầu ra. Giảm độ phức tạp và dư thừa.
+*   **VI (Vietnamese) (Tiếng Việt):** Coupling thấp, Cohesion cao. **Phạm vi ảnh hưởng (Scope of Effect) phải nằm TRONG Phạm vi kiểm soát (Scope of Control)** của mô-đun (module / 모듈). Chỉ có 1 đầu vào và 1 đầu ra. Giảm độ phức tạp và dư thừa.
 *   **Example:** Một hàm sắp xếp chỉ nên thay đổi mảng truyền vào nó (trong vùng kiểm soát), không nên vô tình thay đổi giao diện UI (vùng ảnh hưởng ngoài kiểm soát).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **9. 효과적인 모듈 설계 방안 (Effective Module Design)**, chuyển sang **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -907,6 +1053,10 @@
   4. **효율성 (Efficiency - Hiệu quả)**: Thời gian phản hồi, Tiết kiệm tài nguyên.
   5. **유지 보수성 (Maintainability - Khả năng bảo trì)**: Dễ phân tích, Dễ thay đổi, Ổn định.
   6. **이식성 (Portability - Khả năng thay thế/di chuyển)**: Cài đặt dễ, Tương thích, Thay thế.
+
+---
+
+> **Mạch chuyển:** Từ **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, chuyển sang **8. 디자인 패턴 (Design Patterns)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -952,6 +1102,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **8. 디자인 패턴 (Design Patterns)**, chuyển sang **16. 디자인 패턴 심화 (Design Patterns chuyên sâu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 16. 디자인 패턴 심화 (Design Patterns chuyên sâu)
 
 ### 디자인 패턴 사용의 장·단점 (Ưu/Nhược điểm của Design Pattern)
@@ -963,12 +1117,12 @@
 - **생성 패턴 (5개):**
   - **Abstract Factory:** 인터페이스를 통해 구체적인 클래스에 의존하지 않고 객체 생성. (Tạo đối tượng qua Interface mà không phụ thuộc Class cụ thể).
   - **Builder:** 생성 과정과 표현 방법을 분리. (Tách rời quá trình tạo và cách biểu diễn).
-  - **Factory Method:** 상위 클래스는 인터페이스만 정의, 실제 생성은 서브 클래스가. (Lớp cha định nghĩa Interface, lớp con thực sự tạo).
+  - **Factory phương thức (method / 메서드):** 상위 클래스는 인터페이스만 정의, 실제 생성은 서브 클래스가. (Lớp cha định nghĩa Interface, lớp con thực sự tạo).
   - **Prototype:** 비용이 큰 경우 복제하여 생성. (Clone khi chi phí tạo mới quá lớn).
   - **Singleton:** 인스턴스가 하나뿐임을 보장. (Đảm bảo chỉ có 1 instance).
 - **구조 패턴 (7개):**
   - **Adapter:** 호환성이 없는 클래스들의 인터페이스 변환. (Chuyển đổi interface không tương thích).
-  - **Bridge:** 기능(추상층)과 구현(구현부)을 분리. (Tách rời chức năng và phần thực thi).
+  - **cầu nối (bridge / 브리지):** 기능(추상층)과 구현(구현부)을 분리. (Tách rời chức năng và phần thực thi).
   - **Composite:** 트리 구조로 구성. (Cấu trúc cây).
   - **Decorator:** 능동적으로 기능들을 확장(덧붙임). (Chủ động mở rộng/thêm tính năng).
   - **Facade:** 통합 인터페이스 제공(Wrapper 객체). (Cung cấp interface tổng hợp).
@@ -977,12 +1131,20 @@
 
 ---
 
-## 4. 디자인 패턴 (Design Patterns - GoF)
-- **생성 패턴 (Creational - 5)**: Abstract Factory, Builder, Factory Method, Prototype, Singleton. (Tạo đối tượng)
-- **구조 패턴 (Structural - 7)**: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. (Cấu trúc, ghép nối)
-- **행위 패턴 (Behavioral - 11)**: Strategy, Mediator, Command, Observer, State, Iterator, Visitor, Chain of Responsibility, Interpreter, Memento, Template Method. (Hành vi, tương tác)
+> **Mạch chuyển:** Từ **16. 디자인 패턴 심화 (Design Patterns chuyên sâu)**, chuyển sang **4. 디자인 패턴 (Design Patterns - GoF)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
+
+## 4. 디자인 패턴 (Design Patterns - GoF)
+- **생성 패턴 (Creational - 5)**: Abstract Factory, Builder, Factory phương thức (method / 메서드), Prototype, Singleton. (Tạo đối tượng)
+- **구조 패턴 (Structural - 7)**: Adapter, cầu nối (bridge / 브리지), Composite, Decorator, Facade, Flyweight, Proxy. (Cấu trúc, ghép nối)
+- **행위 패턴 (Behavioral - 11)**: chiến lược (strategy / 전략), Mediator, Command, Observer, trạng thái (state / 상태), Iterator, Visitor, chuỗi (chain / 사슬) of Responsibility, trình thông dịch (interpreter / 인터프리터), Memento, Template phương thức (method / 메서드). (Hành vi, tương tác)
+
+---
+
+---
+
+> **Mạch chuyển:** Từ **4. 디자인 패턴 (Design Patterns - GoF)**, chuyển sang **11. 디자인 패턴 (Design Pattern)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1030,21 +1192,29 @@
 
 ---
 
+> **Mạch chuyển:** Từ **11. 디자인 패턴 (Design Pattern)**, chuyển sang **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
 - **정형 기술 검토 (FTR - Formal Technical Review)**:
   - **동료검토 (Peer Review)**: Tác giả tự giải thích tài liệu, đồng nghiệp tìm lỗi.
-  - **워크 스루 (Walk Through)**: Gửi tài liệu trước, họp review ngắn để tìm lỗi nhanh.
+  - **워크 스루 (Walk Through)**: Gửi tài liệu trước, họp rà soát (review / 검토) ngắn để tìm lỗi nhanh.
   - **인스펙션 (Inspection)**: Chuyên gia khác (không phải tác giả) kiểm tra chặt chẽ để tìm lỗi.
   - 💡 **Mẹo ghi nhớ**: 동료(Tự thuyết trình) / 워크스루(Họp ngắn) / 인스펙션(Chuyên gia chém).
 - **연계 기술 (Connection Tech)**:
   - DB Link, API, Socket (Cấp phát cổng), JDBC.
 - **미들웨어 (Middleware)**: Phần mềm trung gian kết nối các hệ thống khác biệt.
-  - **TP Monitor**: Giám sát Transaction (Giao dịch).
+  - **TP Monitor**: Giám sát giao dịch (transaction / 트랜잭션).
   - **MOM (Message-Oriented)**: Bất đồng bộ (비동기), dùng hàng đợi tin nhắn (메시지 큐).
   - **ORB (Object Request Broker)**: Hướng đối tượng, chuẩn CORBA.
   - **WAS (Web Application Server)**: Xử lý nội dung web động (동적인 콘텐츠).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**, chuyển sang **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1054,7 +1224,7 @@
 2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
 3.  **EAI (연계 솔루션):** 중계 서버/클라이언트 사용 (Dùng máy chủ trung gian Enterprise Application Integration).
 4.  **Socket:** 포트 할당하여 연결 (Mở port mạng Socket để truyền dữ liệu).
-5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
+5.  **Web dịch vụ (service / 서비스):** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
 
 ### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
 *   **통신 유형 (Loại Giao tiếp):**
@@ -1074,20 +1244,24 @@
 
 ---
 
+> **Mạch chuyển:** Từ **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**, chuyển sang **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)
 
 ### 요구사항 검증 방법 추가 (Các phương pháp kiểm chứng yêu cầu bổ sung)
 - **요구사항 검토 (Requirements Review):** 동료검토, 워크스루, 인스펙션. (Review thủ công bởi người).
 - **프로토타이핑 (Prototyping):** 견본품을 만들어 최종 결과물을 예측. (Làm bản nháp/prototype để dự đoán kết quả).
 - **테스트 설계 (Test Design):** 요구사항이 현실적으로 테스트 가능한지 검토 (Test Case 생성). (Tạo Test Case để xem yêu cầu có khả thi không).
-- **CASE 도구 활용 (CASE Tools):** 일관성 분석(Consistency Analysis)을 통해 요구사항 변경사항 추적 및 분석. (Dùng tool để phân tích tính nhất quán).
+- **trường hợp (case / 사례) 도구 활용 (CASE Tools):** 일관성 분석(Consistency Analysis)을 통해 요구사항 변경사항 추적 및 분석. (Dùng tool để phân tích tính nhất quán).
 
 ### 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
 - **DB Link:** DB에서 제공하는 DB Link 객체를 이용. (Dùng trực tiếp link kết nối của DB).
 - **API / Open API:** 송신 시스템의 DB에서 데이터를 읽어와 제공하는 프로그램. (Giao diện lập trình ứng dụng mở).
 - **연계 솔루션:** EAI 서버와 송·수신 시스템에 설치되는 클라이언트(Client)를 이용. (Giải pháp dùng EAI Server).
 - **Socket:** 통신을 위한 소켓을 생성하여 포트를 할당하고 클라이언트와 연결. (Tạo socket và cấp phát port để giao tiếp mạng).
-- **Web Service:** WSDL, UDDI, SOAP 프로토콜을 이용. (Dịch vụ web dùng chuẩn SOAP/WSDL).
+- **Web dịch vụ (service / 서비스):** WSDL, UDDI, SOAP 프로토콜을 이용. (Dịch vụ web dùng chuẩn SOAP/WSDL).
 
 ### 연계 매커니즘 구성요소 (Thành phần cơ chế liên kết)
 - **송신 시스템 (Sender System):** 데이터를 전송 형식에 맞게 변환하여 송신. (Hệ thống gửi, chuyển đổi dữ liệu ra định dạng chuẩn).
@@ -1112,6 +1286,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**, chuyển sang **14. 미들웨어 (Middleware)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 14. 미들웨어 (Middleware)
 **개념 (Khái niệm):** 운영체제와 응용 프로그램 사이의 중재자 (Phần mềm trung gian đứng giữa OS và Ứng dụng).
 💡 **Mẹo ghi nhớ 미들웨어:** DB, RPC, MOM, TP-Monitor, ORB, WAS
@@ -1122,9 +1300,13 @@
 4.  **TP-Monitor (Transaction Processing):** 항공/철도 예약, 빠른 응답/트랜잭션 감시 (tuxedo, tmax). (Giám sát giao dịch, đảm bảo tốc độ phản hồi nhanh cho đặt vé).
 5.  **ORB (Object Request Broker):** 객체 지향, CORBA 표준 (Orbix). (Môi giới yêu cầu đối tượng, chuẩn CORBA).
 6.  **WAS (Web Application Server):** 동적 콘텐츠, 웹 환경 핵심(Java/EJB) (WebLogic, WebSphere). (Xử lý nội dung web động, tác vụ doanh nghiệp quan trọng).
-    *   *Example:* Apache là Web Server (tĩnh), còn WebLogic/Tomcat là WAS (động).
+    *   *Example:* Apache là Web máy chủ (server / 서버) (tĩnh), còn WebLogic/Tomcat là WAS (động).
 
 *   **솔루션 식별 & 명세서 작성:** 아키텍처 구성 정보, 구매 내역 확인 -> 제약사항 확인 (Xác định Middleware dựa trên kiến trúc và hóa đơn mua sắm -> Kiểm tra các hạn chế / constraints).
+
+---
+
+> **Mạch chuyển:** Từ **14. 미들웨어 (Middleware)**, chuyển sang **6. 애자일 방법론 (Agile Methodology)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1138,16 +1320,24 @@
 
 ---
 
+> **Mạch chuyển:** Từ **6. 애자일 방법론 (Agile Methodology)**, chuyển sang **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
 - **스크럼 (Scrum)**: Quản lý dự án Agile theo nhóm.
   - **용어**: 제품 백로그 (Product Backlog - Yêu cầu tổng), 스프린트 (Sprint - Chu kỳ 2-4 tuần), 속도 (Velocity), 번 다운 차트 (Burn Down Chart - Biểu đồ tiến độ), PO (Product Owner), SM (Scrum Master).
-  - **프로세스**: Backlog -> Sprint Planning -> Sprint Execution (Daily Scrum) -> Sprint Review (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
+  - **프로세스**: Backlog -> Sprint Planning -> Sprint thực thi (execution / 실행) (Daily Scrum) -> Sprint rà soát (review / 검토) (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
 - **XP (eXtreme Programming)**: Tối ưu hóa phát triển phần mềm cùng khách hàng.
   - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback).
   - 💡 **Mẹo ghi nhớ**: Y/Đ/D/T/P -> **Ý Định Dũng Tướng Phàm**
-  - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
+  - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour công việc (work / 작업).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**, chuyển sang **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1155,11 +1345,15 @@
 - **스크럼 프로세스 (Scrum Process)**:
   - **일일 스크럼 (Daily Scrum)**: Họp đứng 15 phút. Cập nhật tiến độ lên Burn-down Chart (Biểu đồ tiêu hao).
   - **스프린트 검토 (Sprint Review)**: Demo sản phẩm cho khách hàng xem có đúng ý không.
-  - **스프린트 회고 (Sprint Retrospective)**: Nội bộ team họp để rút kinh nghiệm, cải tiến quy trình.
+  - **스프린트 회고 (Sprint Retrospective)**: Nội bộ nhóm (team / 팀) họp để rút kinh nghiệm, cải tiến quy trình.
 - **XP 기법 상세 (XP Details)**:
-  - **사용자 스토리 (User Story)**: Kịch bản do khách hàng viết (đơn vị chức năng), có thể chứa Test Case.
+  - **사용자 스토리 (User Story)**: Kịch bản do khách hàng viết (đơn vị chức năng), có thể chứa trường hợp kiểm thử (test case / 테스트 케이스).
   - **릴리즈 계획 (Release Planning)**: Kế hoạch phát hành từng phần sản phẩm (v1.0, v1.1).
-  - **스파이크 (Spike)**: Chương trình nhỏ, code thử nghiệm nhanh để kiểm tra tính khả thi của công nghệ nhằm giảm rủi ro (기술적 위험 감소). Code này có thể bị vứt đi sau khi test.
+  - **스파이크 (Spike)**: Chương trình nhỏ, mã (code / 코드) thử nghiệm nhanh để kiểm tra tính khả thi của công nghệ nhằm giảm rủi ro (기술적 위험 감소). mã (code / 코드) này có thể bị vứt đi sau khi kiểm thử (test / 테스트).
+
+---
+
+> **Mạch chuyển:** Từ **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**, chuyển sang **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1172,9 +1366,13 @@
 
 ---
 
+> **Mạch chuyển:** Từ **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, chuyển sang **6. 구조적 분석 도구 (Structured Analysis Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 6. 구조적 분석 도구 (Structured Analysis Tools)
 - Phân tích Top-down (하향식), dùng biểu đồ (도형).
-- **DFD (Biểu đồ luồng dữ liệu)**: Process (Tròn), Flow (Mũi tên), Data Store (Vạch ngang), Terminator (Vuông).
+- **DFD (Biểu đồ luồng dữ liệu)**: tiến trình (process / 프로세스) (Tròn), luồng (flow / 흐름) (Mũi tên), dữ liệu (data / 데이터) Store (Vạch ngang), Terminator (Vuông).
 - **DD (Từ điển dữ liệu)**:
   - `=`: Định nghĩa
   - `+`: Nối
@@ -1186,10 +1384,14 @@
 
 ---
 
+> **Mạch chuyển:** Từ **6. 구조적 분석 도구 (Structured Analysis Tools)**, chuyển sang **10. 소프트웨어 설계 원리 (Software Design Principles)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 10. 소프트웨어 설계 원리 (Software Design Principles)
 - **모듈화 (Modularity)**:
-  - Module quá nhỏ -> Chi phí tích hợp (Integration Cost) tăng.
-  - Module quá lớn -> Chi phí phát triển từng module (Development Cost) tăng.
+  - mô-đun (module / 모듈) quá nhỏ -> Chi phí tích hợp (Integration Cost) tăng.
+  - mô-đun (module / 모듈) quá lớn -> Chi phí phát triển từng mô-đun (module / 모듈) (Development Cost) tăng.
 - **추상화 (Abstraction)**: 3 loại (과정 - Quá trình, 데이터 - Dữ liệu, 제어 - Điều khiển).
 - **단계적 분해 (Stepwise Refinement)**: Đi từ trên xuống (Top-down).
 - **정보 은닉 (Information Hiding)**: Giấu thông tin để giảm phụ thuộc.
@@ -1198,6 +1400,10 @@
   - **이벤트 중심 (Event-driven)**: Dựa trên sự kiện (VD: Chuông báo cháy).
   - **변환형 (Transformational)**: Biến đổi dữ liệu (VD: Trình biên dịch - Compiler).
   - **객체 영속형 (Object Persistence)**: Lưu trữ lâu dài (VD: Database Server).
+
+---
+
+> **Mạch chuyển:** Từ **10. 소프트웨어 설계 원리 (Software Design Principles)**, chuyển sang **3. 결합도 (Coupling - Độ phụ thuộc)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1217,22 +1423,26 @@
     *   **Example:** Truyền đối tượng `User` nhưng chỉ dùng `User.name`.
 3.  **제어 결합도 (Control Coupling):**
     *   **Korean:** 제어 신호(Flag)를 전달하여 모듈 흐름 제어.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào logic của module khác.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào lô-gic (logic / 논리) của mô-đun (module / 모듈) khác.
     *   **Example:** Truyền `isExpress=true` để quyết định cách xử lý.
 4.  **외부 결합도 (External Coupling):**
     *   **Korean:** 외부 변수/데이터 참조.
-    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / file / thiết bị bên ngoài.
-    *   **Example:** Hai module dùng chung một file `config.txt`.
+    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / tệp (file / 파일) / thiết bị bên ngoài.
+    *   **Example:** Hai mô-đun (module / 모듈) dùng chung một tệp (file / 파일) `config.txt`.
 5.  **공통 결합도 (Common Coupling):**
     *   **Korean:** 공통 데이터 영역(전역 변수) 공유.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều module dùng chung biến toàn cục (global variables).
+    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều mô-đun (module / 모듈) dùng chung biến toàn cục (global variables).
     *   **Example:** Sử dụng `public static int totalCount` chung.
 6.  **내용 결합도 (Content Coupling) - XẤU NHẤT:**
     *   **Korean:** 내부 기능/자료 직접 참조. 스파게티 코드.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/logic nội bộ của module khác.
-    *   **Example:** `moduleB.internalValue = 10` từ module A.
+    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/lô-gic (logic / 논리) nội bộ của mô-đun (module / 모듈) khác.
+    *   **Example:** `moduleB.internalValue = 10` từ mô-đun (module / 모듈) A.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **3. 결합도 (Coupling - Độ phụ thuộc)**, chuyển sang **4. 응집도 (Cohesion - Độ gắn kết)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1244,7 +1454,7 @@
 
 1.  **기능적 응집도 (Functional):**
     *   **Korean:** 단일 문제와 연관되어 수행. (Tốt nhất)
-    *   **VI (Vietnamese) (Tiếng Việt):** Mọi thành phần trong module cùng giải quyết MỘT bài toán duy nhất.
+    *   **VI (Vietnamese) (Tiếng Việt):** Mọi thành phần trong mô-đun (module / 모듈) cùng giải quyết MỘT bài toán duy nhất.
 2.  **순차적 응집도 (Sequential):**
     *   **Korean:** 출력 데이터가 다음 활동의 입력 데이터로 사용됨.
     *   **VI (Vietnamese) (Tiếng Việt):** Đầu ra của bước này là đầu vào của bước kia (trong cùng module).
@@ -1259,7 +1469,7 @@
     *   **VI (Vietnamese) (Tiếng Việt):** Gom các tác vụ xảy ra cùng một thời điểm (VD: khối khởi tạo hệ thống Init).
 6.  **논리적 응집도 (Logical):**
     *   **Korean:** 유사한 성격/형태로 분류되는 요소들을 모음.
-    *   **VI (Vietnamese) (Tiếng Việt):** Gom các hàm có tính chất logic giống nhau (VD: Hàm in các loại báo cáo, mặc dù báo cáo khác nhau).
+    *   **VI (Vietnamese) (Tiếng Việt):** Gom các hàm có tính chất lô-gic (logic / 논리) giống nhau (VD: Hàm in các loại báo cáo, mặc dù báo cáo khác nhau).
 7.  **우연적 응집도 (Coincidental) - XẤU NHẤT:**
     *   **Korean:** 아무 관련 없이 구성됨.
     *   **VI (Vietnamese) (Tiếng Việt):** Các phần tử gom lại ngẫu nhiên, không liên quan gì nhau.
@@ -1268,15 +1478,19 @@
 
 ---
 
+> **Mạch chuyển:** Từ **4. 응집도 (Cohesion - Độ gắn kết)**, chuyển sang **5. Fan-In / Fan-Out (팬인 / 팬아웃)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 5. Fan-In / Fan-Out (팬인 / 팬아웃)
 **개념 (Khái niệm):** 모듈 간의 호출 관계를 나타내는 지표 (Chỉ số thể hiện mức độ gọi lẫn nhau giữa các module).
 
 *   **Fan-In (들어옴 / Đi vào):**
     *   **Korean:** 나를 호출하는 모듈 수. **높게(High)** 설계하는 것이 재사용성 측면에서 좋음. (단, 단일 장애점 주의)
-    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng module gọi đến module hiện tại. Fan-In CAO là tốt vì chứng tỏ module được tái sử dụng nhiều, nhưng cần cẩn thận vì nó là trung tâm (Single Point of Failure).
+    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng mô-đun (module / 모듈) gọi đến mô-đun (module / 모듈) hiện tại. Fan-In CAO là tốt vì chứng tỏ mô-đun (module / 모듈) được tái sử dụng nhiều, nhưng cần cẩn thận vì nó là trung tâm (Single Point of Failure).
 *   **Fan-Out (나감 / Đi ra):**
     *   **Korean:** 내가 호출하는 모듈 수. **낮게(Low)** 설계하여 단순화해야 함.
-    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng module mà module hiện tại gọi. Fan-Out THẤP là tốt, tránh việc module phụ thuộc vào quá nhiều nơi khác.
+    *   **VI (Vietnamese) (Tiếng Việt):** Số lượng mô-đun (module / 모듈) mà mô-đun (module / 모듈) hiện tại gọi. Fan-Out THẤP là tốt, tránh việc mô-đun (module / 모듈) phụ thuộc vào quá nhiều nơi khác.
 
 💡 **Mẹo ghi nhớ:** Fan-In = Gọi VÀO tôi (High is good) / Fan-Out = Tôi gọi RA (Low is good).
 
@@ -1284,13 +1498,21 @@
 
 ---
 
+> **Mạch chuyển:** Từ **5. Fan-In / Fan-Out (팬인 / 팬아웃)**, chuyển sang **6. N-S 차트 (Nassi-Schneiderman Chart)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 6. N-S 차트 (Nassi-Schneiderman Chart)
 **개념 (Khái niệm):** 논리 기술 중점의 박스 다이어그램 (Biểu đồ dạng hộp tập trung mô tả logic).
 
 *   **Korean:** GOTO나 화살표를 사용하지 않음. 단일 입구/단일 출구. Box Diagram, Chapin Chart라고도 부름. 순차, 선택, 반복 논리 구조 시각화.
-*   **VI (Vietnamese) (Tiếng Việt):** Đặc điểm quan trọng nhất: **KHÔNG DÙNG GOTO và KHÔNG CÓ MŨI TÊN**. Có một lối vào và một lối ra duy nhất. Còn gọi là Box Diagram hoặc Chapin Chart. Gồm 3 cấu trúc: Tuần tự, Lựa chọn (If-else), Lặp (Loop). Dễ chuyển sang code nhưng khó vẽ.
+*   **VI (Vietnamese) (Tiếng Việt):** Đặc điểm quan trọng nhất: **KHÔNG DÙNG GOTO và KHÔNG CÓ MŨI TÊN**. Có một lối vào và một lối ra duy nhất. Còn gọi là Box Diagram hoặc Chapin Chart. Gồm 3 cấu trúc: Tuần tự, Lựa chọn (If-else), Lặp (Loop). Dễ chuyển sang mã (code / 코드) nhưng khó vẽ.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **6. N-S 차트 (Nassi-Schneiderman Chart)**, chuyển sang **8. 재사용 (Reuse)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1305,6 +1527,10 @@
     *   **애플리케이션 (Application):** 시스템 전체 (Mức ứng dụng hoàn chỉnh).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **8. 재사용 (Reuse)**, chuyển sang **10. 코드 (Code) 개요 & 종류** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 

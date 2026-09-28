@@ -10,7 +10,7 @@ Deep, Dive, Java, 비교, 연산과, Python, 제어, 흐름
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **264 - 274. 파이썬 문법 (Python Syntax & Basics)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **라이브러리 및 예외 처리 (Libraries & Exception Handling)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@ Deep, Dive, Java, 비교, 연산과, Python, 제어, 흐름
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** và nối nó với **라이브러리 및 예외 처리 (Libraries & Exception Handling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -36,11 +38,11 @@ System.out.println(x == y);        // false: 서로 다른 객체 참조
 System.out.println(x.equals(y));   // true: 내용 비교
 ```
 
-- 숫자형 피연산자는 binary numeric promotion 후 비교한다.
+- 숫자형 피연산자는 nhị phân (binary / 이진) numeric promotion 후 비교한다.
 - 참조형 `==`는 같은 객체를 가리키는지 비교하고, 문자열 내용 비교에는 `equals`를 사용한다.
 - `a == b == c`는 “세 값이 모두 같은가”가 아니라 왼쪽부터 계산되므로 별도 비교식이 필요하다.
 
-### 2. Python `for`와 `while`의 trace 포인트
+### 2. Python `for`와 `while`의 dấu vết (trace / 추적) 포인트
 
 ```python
 items = [1, 2, 3]

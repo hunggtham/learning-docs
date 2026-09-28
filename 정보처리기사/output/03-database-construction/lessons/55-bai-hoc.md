@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** và nối nó với **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -36,7 +38,7 @@ Quản lý trạng thái lỗi trong quá trình chuyển đổi:
 - **Open (Mở):** Phát hiện lỗi, chưa phân tích.
 - **Assigned (Đã giao):** Giao cho lập trình viên sửa.
 - **Fixed (Đã sửa):** Đã sửa xong.
-- **Closed (Đóng):** Đã test lại và xác nhận bình thường.
+- **Closed (Đóng):** Đã kiểm thử (test / 테스트) lại và xác nhận bình thường.
 - **Deferred (Trì hoãn):** Quyết định chưa sửa lúc này (hoặc không phải lỗi).
 
 ---

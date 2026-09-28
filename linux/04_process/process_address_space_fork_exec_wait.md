@@ -1,50 +1,53 @@
-# Process, address space, fork, exec và wait trong Linux
+# Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux
 
-Chương [Tiến trình, luồng, tín hiệu và tác vụ](./processes_threads_signals_jobs.md) cung cấp mô hình tổng quan về process. Chương này đi sâu hơn vào cách Linux thực sự biểu diễn một process/thread, address space của nó gồm những vùng nào, `fork()` tạo process con ra sao, `execve()` thay chương trình thế nào, vì sao zombie tồn tại và cách `wait()` hoàn tất vòng đời process.
+> **Mạch đọc:** Đọc **tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **tiến trình (process / 프로세스) không phải chỉ là PID** sang **tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Đây là nền tảng để hiểu shell, systemd, container, JVM, signal, memory leak, file descriptor inheritance và nhiều hiện tượng production khác.
 
-## Process không phải chỉ là PID
+Chương [Tiến trình, luồng, tín hiệu và tác vụ](./processes_threads_signals_jobs.md) cung cấp mô hình tổng quan về tiến trình (process / 프로세스). Chương này đi sâu hơn vào cách Linux thực sự biểu diễn một tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드), address không gian (space / 공간) của nó gồm những vùng nào, `fork()` tạo tiến trình (process / 프로세스) con ra sao, `execve()` thay chương trình thế nào, vì sao zombie tồn tại và cách `wait()` hoàn tất vòng đời tiến trình (process / 프로세스).
 
-PID là một mã định danh trong một PID namespace. Bên trong kernel, execution context cần nhiều trạng thái hơn rất nhiều:
+Đây là nền tảng để hiểu shell, systemd, bộ chứa (container / 컨테이너), JVM, tín hiệu (signal / 신호), bộ nhớ (memory / 메모리) leak, tệp (file / 파일) descriptor inheritance và nhiều hiện tượng môi trường vận hành (production / 운영 환경) khác.
 
-- scheduling state;
-- CPU register state khi bị deschedule;
-- memory mappings;
+## Tiến trình (process / 프로세스) không phải chỉ là PID
+
+PID là một mã định danh trong một PID không gian tên (namespace / 네임스페이스). Bên trong kernel, thực thi (execution / 실행) ngữ cảnh (context / 맥락) cần nhiều trạng thái hơn rất nhiều:
+
+- scheduling trạng thái (state / 상태);
+- CPU register trạng thái (state / 상태) khi bị deschedule;
+- bộ nhớ (memory / 메모리) mappings;
 - credentials;
-- file descriptor table;
-- signal state;
-- namespace membership;
+- tệp (file / 파일) descriptor bảng (table / 테이블);
+- tín hiệu (signal / 신호) trạng thái (state / 상태);
+- không gian tên (namespace / 네임스페이스) membership;
 - cgroup membership;
 - parent/child relationship;
-- accounting information.
+- accounting thông tin (information / 정보).
 
-Trong Linux source, một khái niệm trung tâm là `task_struct`, đại diện cho task mà scheduler có thể quản lý. Người học không cần thuộc field của cấu trúc này, nhưng mental model quan trọng là:
+Trong Linux nguồn (source / 소스), một khái niệm trung tâm là `task_struct`, đại diện cho tác vụ (task / 작업) mà scheduler có thể quản lý. Người học không cần thuộc trường dữ liệu (field / 필드) của cấu trúc này, nhưng mô hình tư duy (mental model / 사고 모델) quan trọng là:
 
-> Một task là một object kernel nối nhiều subsystem lại với nhau.
+> Một tác vụ (task / 작업) là một đối tượng (object / 객체) kernel nối nhiều subsystem lại với nhau.
 
-## Process và thread trong Linux
+## Tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux
 
-Linux có cách nhìn thống nhất hơn nhiều hệ điều hành giáo khoa: thread cũng là một task có thể được scheduler chạy. Nhiều thread trong cùng process chia sẻ một số resource, đặc biệt address space và file descriptor table, tùy cách được tạo bằng `clone()`/`clone3()`.
+Linux có cách nhìn thống nhất hơn nhiều hệ điều hành giáo khoa: luồng thực thi (thread / 스레드) cũng là một tác vụ (task / 작업) có thể được scheduler chạy. Nhiều luồng thực thi (thread / 스레드) trong cùng tiến trình (process / 프로세스) chia sẻ một số tài nguyên (resource / 자원), đặc biệt address không gian (space / 공간) và tệp (file / 파일) descriptor bảng (table / 테이블), tùy cách được tạo bằng `clone()`/`clone3()`.
 
-Vì vậy ranh giới process/thread có thể hiểu bằng câu hỏi:
+Vì vậy ranh giới tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) có thể hiểu bằng câu hỏi:
 
 ```text
 những tài nguyên nào được chia sẻ?
 ```
 
-Hai task có thể:
+Hai tác vụ (task / 작업) có thể:
 
-- chia sẻ memory nhưng có stack/register riêng;
-- chia sẻ file descriptor table;
-- chia sẻ signal handlers;
-- cùng thuộc một thread group.
+- chia sẻ bộ nhớ (memory / 메모리) nhưng có ngăn xếp (stack / 스택)/register riêng;
+- chia sẻ tệp (file / 파일) descriptor bảng (table / 테이블);
+- chia sẻ tín hiệu (signal / 신호) handlers;
+- cùng thuộc một luồng thực thi (thread / 스레드) group.
 
-Một JVM process với 200 Java thread tương ứng nhiều scheduling entities ở Linux, không phải một đối tượng CPU duy nhất.
+Một JVM tiến trình (process / 프로세스) với 200 Java luồng thực thi (thread / 스레드) tương ứng nhiều scheduling entities ở Linux, không phải một đối tượng CPU duy nhất.
 
-## PID, TID và thread group
+## PID, TID và luồng thực thi (thread / 스레드) group
 
-Trong thực tế Linux, mỗi thread có một task ID riêng. Main thread thường có ID trùng process ID theo cách user-space nhìn thấy. Các thread cùng process thuộc một **thread group**.
+Trong thực tế Linux, mỗi luồng thực thi (thread / 스레드) có một tác vụ (task / 작업) ID riêng. Main luồng thực thi (thread / 스레드) thường có ID trùng tiến trình (process / 프로세스) ID theo cách user-space nhìn thấy. Các luồng thực thi (thread / 스레드) cùng tiến trình (process / 프로세스) thuộc một **luồng thực thi (thread / 스레드) group**.
 
 Quan sát:
 
@@ -58,22 +61,22 @@ hoặc:
 ls /proc/<PID>/task
 ```
 
-Mỗi entry dưới `/proc/<PID>/task/` đại diện một thread/task.
+Mỗi entry dưới `/proc/<PID>/task/` đại diện một luồng thực thi (thread / 스레드)/tác vụ (task / 작업).
 
-Điều này rất hữu ích khi mapping Java thread dump với Linux thread CPU usage.
+Điều này rất hữu ích khi ánh xạ (mapping / 매핑) Java luồng thực thi (thread / 스레드) dump với Linux luồng thực thi (thread / 스레드) CPU usage.
 
-## Address space của process
+## Address không gian (space / 공간) của tiến trình (process / 프로세스)
 
-Một process nhìn thấy một không gian địa chỉ ảo riêng.
+Một tiến trình (process / 프로세스) nhìn thấy một không gian địa chỉ ảo riêng.
 
-Có thể quan sát mapping:
+Có thể quan sát ánh xạ (mapping / 매핑):
 
 ```bash
 cat /proc/<PID>/maps
 pmap -x <PID>
 ```
 
-Một process điển hình có các vùng:
+Một tiến trình (process / 프로세스) điển hình có các vùng:
 
 ```text
 text / executable code
@@ -86,59 +89,59 @@ thread stacks
 vdso/vvar
 ```
 
-Không nên coi address space là một mảng RAM vật lý liên tục. Đây là một tập các **VMA (Virtual Memory Area)** có permission và backing khác nhau.
+Không nên coi address không gian (space / 공간) là một mảng RAM vật lý liên tục. Đây là một tập các **VMA (Virtual memory Area)** có permission và backing khác nhau.
 
 Xem sâu hơn tại [Virtual memory, page fault và reclaim](../06_resources/virtual_memory_page_fault_reclaim_allocator.md).
 
-## Code, data, heap và stack
+## Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)
 
-Mô hình giáo khoa thường chia process thành code/data/heap/stack. Đây vẫn hữu ích nhưng thực tế Linux phức tạp hơn do `mmap()`.
+Mô hình giáo khoa thường chia tiến trình (process / 프로세스) thành mã (code / 코드)/dữ liệu (data / 데이터)/vùng nhớ động (heap / 힙)/ngăn xếp (stack / 스택). Đây vẫn hữu ích nhưng thực tế Linux phức tạp hơn do `mmap()`.
 
-Heap truyền thống có thể tăng qua `brk()`, nhưng allocator hiện đại có thể dùng cả `mmap()` cho allocation lớn.
+Vùng nhớ vùng nhớ động (heap / 힙) truyền thống có thể tăng qua `brk()`, nhưng allocator hiện đại có thể dùng cả `mmap()` cho allocation lớn.
 
-Thread stack cũng là mapping trong address space.
+Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) cũng là ánh xạ (mapping / 매핑) trong address không gian (space / 공간).
 
-Shared libraries được map vào address space thông qua dynamic linker.
+Dùng chung (shared / 공유) libraries được map vào address không gian (space / 공간) thông qua động (dynamic / 동적) linker.
 
-Do đó nhìn RSS hoặc VSZ mà không hiểu mapping dễ dẫn tới kết luận sai.
+Do đó nhìn RSS hoặc VSZ mà không hiểu ánh xạ (mapping / 매핑) dễ dẫn tới kết luận sai.
 
 ## `/proc/<PID>/maps` giải thích gì?
 
-Ví dụ một dòng mapping:
+Ví dụ một dòng ánh xạ (mapping / 매핑):
 
 ```text
 7f1234000000-7f1234200000 r-xp ... /usr/lib/libc.so.6
 ```
 
-Các trường cho biết range địa chỉ, permission và backing file.
+Các trường cho biết phạm vi (range / 범위) địa chỉ, permission và backing tệp (file / 파일).
 
 Permission thường có:
 
 - `r`: read;
-- `w`: write;
+- `w`: ghi (write / 쓰기);
 - `x`: execute;
-- `p`: private mapping;
-- `s`: shared mapping.
+- `p`: private ánh xạ (mapping / 매핑);
+- `s`: dùng chung (shared / 공유) ánh xạ (mapping / 매핑).
 
-Mapping `r-x` thường chứa code thực thi. Mapping `rw-` chứa dữ liệu có thể ghi.
+Ánh xạ (mapping / 매핑) `r-x` thường chứa mã (code / 코드) thực thi. ánh xạ (mapping / 매핑) `rw-` chứa dữ liệu có thể ghi.
 
 Đây là nền tảng để hiểu W^X, ASLR và exploit mitigation.
 
 ## ASLR
 
-**Address Space Layout Randomization (ASLR)** làm vị trí nhiều mapping thay đổi giữa các lần chạy để giảm khả năng exploit dự đoán địa chỉ.
+**Address không gian (space / 공간) bố cục (layout / 레이아웃) Randomization (ASLR)** làm vị trí nhiều ánh xạ (mapping / 매핑) thay đổi giữa các lần chạy để giảm khả năng exploit dự đoán địa chỉ.
 
 ```bash
 cat /proc/sys/kernel/randomize_va_space
 ```
 
-ASLR không sửa bug memory safety, nhưng làm một số exploit khó hơn.
+ASLR không sửa bug bộ nhớ (memory / 메모리) an toàn (safety / 안전), nhưng làm một số exploit khó hơn.
 
-PIE binary và shared library có thể phối hợp với ASLR.
+PIE nhị phân (binary / 이진) và dùng chung (shared / 공유) thư viện (library / 라이브러리) có thể phối hợp với ASLR.
 
 Xem thêm [ELF và dynamic linking](../08_operations/elf_dynamic_linking.md).
 
-## Tạo process: `fork()` không copy toàn bộ RAM ngay
+## Tạo tiến trình (process / 프로세스): `fork()` không bản sao (copy / 복사) toàn bộ RAM ngay
 
 Mô hình Unix cổ điển:
 
@@ -148,11 +151,11 @@ parent
 parent + child
 ```
 
-Một hiểu lầm thường gặp là kernel copy toàn bộ memory của parent ngay lập tức. Linux dùng **Copy-on-Write (COW)**.
+Một hiểu lầm thường gặp là kernel bản sao (copy / 복사) toàn bộ bộ nhớ (memory / 메모리) của parent ngay lập tức. Linux dùng **sao chép khi ghi (copy-on-write / 쓰기 시 복사) (COW)**.
 
-Sau `fork()`, parent và child có thể tạm thời chia sẻ cùng physical pages dưới permission phù hợp. Khi một bên ghi vào page, page fault xảy ra và kernel tạo bản sao riêng cho bên ghi.
+Sau `fork()`, parent và child có thể tạm thời chia sẻ cùng vật lý (physical / 물리적) pages dưới permission phù hợp. Khi một bên ghi vào page, page fault xảy ra và kernel tạo bản sao riêng cho bên ghi.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 trước fork:
@@ -168,47 +171,47 @@ parent -> page A
 child  -> copy page B
 ```
 
-Nhờ đó `fork()` thường rẻ hơn rất nhiều so với copy toàn bộ memory ngay lập tức.
+Nhờ đó `fork()` thường rẻ hơn rất nhiều so với bản sao (copy / 복사) toàn bộ bộ nhớ (memory / 메모리) ngay lập tức.
 
 ## COW không có nghĩa fork luôn rẻ
 
-Dù data pages chưa copy, kernel vẫn phải tạo hoặc quản lý metadata như page tables và task state. Process rất lớn có thể khiến fork có chi phí đáng kể.
+Dù dữ liệu (data / 데이터) pages chưa bản sao (copy / 복사), kernel vẫn phải tạo hoặc quản lý siêu dữ liệu (metadata / 메타데이터) như page tables và tác vụ (task / 작업) trạng thái (state / 상태). tiến trình (process / 프로세스) rất lớn có thể khiến fork có chi phí đáng kể.
 
-Nếu child sau đó ghi nhiều memory, COW faults và copy pages tạo thêm chi phí.
+Nếu child sau đó ghi nhiều bộ nhớ (memory / 메모리), COW faults và bản sao (copy / 복사) pages tạo thêm chi phí.
 
-Đây là lý do runtime/database lớn có thể quan tâm sâu tới behavior của fork.
+Đây là lý do thời gian chạy (runtime / 런타임)/cơ sở dữ liệu (database / 데이터베이스) lớn có thể quan tâm sâu tới hành vi (behavior / 동작) của fork.
 
-## `fork()` và multi-threaded process
+## `fork()` và multi-threaded tiến trình (process / 프로세스)
 
-Trong process nhiều thread, `fork()` tạo child chỉ với thread gọi fork theo POSIX semantics điển hình. Các lock trong process có thể đang ở trạng thái phức tạp vì thread khác biến mất trong child.
+Trong tiến trình (process / 프로세스) nhiều luồng thực thi (thread / 스레드), `fork()` tạo child chỉ với luồng thực thi (thread / 스레드) gọi fork theo POSIX ngữ nghĩa (semantics / 의미론) điển hình. Các khóa (lock / 잠금) trong tiến trình (process / 프로세스) có thể đang ở trạng thái phức tạp vì luồng thực thi (thread / 스레드) khác biến mất trong child.
 
-Vì vậy child của multi-threaded process thường cần nhanh chóng `exec()` thay vì tiếp tục chạy logic tùy ý.
+Vì vậy child của multi-threaded tiến trình (process / 프로세스) thường cần nhanh chóng `exec()` thay vì tiếp tục chạy lô-gic (logic / 논리) tùy ý.
 
-Đây là một trong những lý do spawn process trong runtime phức tạp cần implementation cẩn thận.
+Đây là một trong những lý do spawn tiến trình (process / 프로세스) trong thời gian chạy (runtime / 런타임) phức tạp cần hiện thực (implementation / 구현) cẩn thận.
 
-## `clone()` và Linux thread
+## `clone()` và Linux luồng thực thi (thread / 스레드)
 
-Linux sử dụng `clone()`/`clone3()` cho phép caller chọn resource nào được chia sẻ.
+Linux sử dụng `clone()`/`clone3()` cho phép caller chọn tài nguyên (resource / 자원) nào được chia sẻ.
 
 Các flag có thể quyết định việc chia sẻ:
 
-- virtual memory;
-- filesystem state;
-- file descriptor table;
-- signal handlers;
-- namespace.
+- virtual bộ nhớ (memory / 메모리);
+- filesystem trạng thái (state / 상태);
+- tệp (file / 파일) descriptor bảng (table / 테이블);
+- tín hiệu (signal / 신호) handlers;
+- không gian tên (namespace / 네임스페이스).
 
-Thread có thể được xem như các task tạo bằng clone với tập chia sẻ phù hợp.
+Luồng thực thi (thread / 스레드) có thể được xem như các tác vụ (task / 작업) tạo bằng clone với tập chia sẻ phù hợp.
 
-Container runtime cũng tận dụng clone/unshare/setns để xây namespace isolation.
+Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) cũng tận dụng clone/unshare/setns để xây không gian tên (namespace / 네임스페이스) isolation.
 
 ## `execve()` không tạo PID mới
 
 Đây là một điểm nền tảng rất quan trọng.
 
-`execve()` **thay program image của process hiện tại**. PID không nhất thiết đổi.
+`execve()` **thay program ảnh (image / 이미지) của tiến trình (process / 프로세스) hiện tại**. PID không nhất thiết đổi.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 process PID 123
@@ -218,9 +221,9 @@ process PID 123
 bây giờ chạy Java image
 ```
 
-Address space cũ được thay bằng mappings của executable/library mới; stack mới được dựng với arguments/environment.
+Address không gian (space / 공간) cũ được thay bằng mappings của executable/thư viện (library / 라이브러리) mới; ngăn xếp (stack / 스택) mới được dựng với arguments/môi trường (environment / 환경).
 
-Vì vậy `exec` không có nghĩa “tạo process con”.
+Vì vậy `exec` không có nghĩa “tạo tiến trình (process / 프로세스) con”.
 
 ## Shell chạy command ngoài thế nào?
 
@@ -237,19 +240,19 @@ grep process
 
 Parent shell có thể `wait()` child ở foreground hoặc tiếp tục nếu job chạy background.
 
-Pipeline:
+Chuỗi xử lý (pipeline / 파이프라인):
 
 ```bash
 cat file | grep ERROR | sort
 ```
 
-đòi hỏi shell tạo pipe, tạo nhiều process, nối file descriptor đúng đầu rồi `exec()` từng command.
+đòi hỏi shell tạo pipe, tạo nhiều tiến trình (process / 프로세스), nối tệp (file / 파일) descriptor đúng đầu rồi `exec()` từng command.
 
-Do đó shell syntax cuối cùng dựa trên process lifecycle + file descriptor inheritance.
+Do đó shell cú pháp (syntax / 문법) cuối cùng dựa trên tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) + tệp (file / 파일) descriptor inheritance.
 
-## File descriptor inheritance
+## Tệp (file / 파일) descriptor inheritance
 
-Sau `fork()`, child thường kế thừa file descriptor table semantics từ parent.
+Sau `fork()`, child thường kế thừa tệp (file / 파일) descriptor bảng (table / 테이블) ngữ nghĩa (semantics / 의미론) từ parent.
 
 Điều này cho phép shell chuẩn bị redirection trước `exec()`:
 
@@ -266,26 +269,26 @@ Program mới không cần biết shell đã setup redirection ra sao. Nó chỉ
 
 ## `FD_CLOEXEC`
 
-Không phải file descriptor nào cũng nên sống qua `exec()`.
+Không phải tệp (file / 파일) descriptor nào cũng nên sống qua `exec()`.
 
 Flag **close-on-exec** yêu cầu kernel đóng descriptor khi exec thành công.
 
-Nếu ứng dụng quên đặt close-on-exec đúng chỗ, child process có thể vô tình giữ socket/file descriptor mà nó không cần.
+Nếu ứng dụng quên đặt close-on-exec đúng chỗ, child tiến trình (process / 프로세스) có thể vô tình giữ socket/tệp (file / 파일) descriptor mà nó không cần.
 
 Hậu quả có thể gồm:
 
-- file không được giải phóng;
+- tệp (file / 파일) không được giải phóng;
 - pipe không nhận EOF;
 - socket vẫn bị giữ;
-- security boundary bị rò resource.
+- ranh giới bảo mật (security boundary / 보안 경계) bị rò tài nguyên (resource / 자원).
 
-Vì vậy descriptor lifetime là một phần của process lifecycle.
+Vì vậy descriptor thời gian tồn tại (lifetime / 수명) là một phần của tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기).
 
-## Environment được đưa vào exec
+## Môi trường (environment / 환경) được đưa vào exec
 
-`execve()` nhận argument vector và environment vector.
+`execve()` nhận argument véc-tơ (vector / 벡터) và môi trường (environment / 환경) véc-tơ (vector / 벡터).
 
-Environment không phải database toàn cục. Nó là dữ liệu được truyền vào process image.
+Môi trường (environment / 환경) không phải cơ sở dữ liệu (database / 데이터베이스) toàn cục. Nó là dữ liệu được truyền vào tiến trình (process / 프로세스) ảnh (image / 이미지).
 
 Khi shell:
 
@@ -294,49 +297,49 @@ export APP_ENV=prod
 java -jar app.jar
 ```
 
-child/exec image nhận environment tương ứng.
+child/exec ảnh (image / 이미지) nhận môi trường (environment / 환경) tương ứng.
 
-Process đã chạy không tự thấy các thay đổi environment của parent sau đó.
+Tiến trình (process / 프로세스) đã chạy không tự thấy các thay đổi môi trường (environment / 환경) của parent sau đó.
 
-## Current working directory
+## Hiện tại (current / 현재) working directory
 
-Process giữ current working directory như một reference tới filesystem object.
+Tiến trình (process / 프로세스) giữ hiện tại (current / 현재) working directory như một tham chiếu (reference / 참조) tới filesystem đối tượng (object / 객체).
 
-Do đó file relative path được resolve dựa trên cwd của process.
+Do đó tệp (file / 파일) relative đường dẫn (path / 경로) được resolve dựa trên cwd của tiến trình (process / 프로세스).
 
 ```bash
 readlink /proc/<PID>/cwd
 ```
 
-Một process có thể giữ cwd trong filesystem đang cố unmount, khiến `umount` báo busy.
+Một tiến trình (process / 프로세스) có thể giữ cwd trong filesystem đang cố unmount, khiến `umount` báo busy.
 
-Đây là ví dụ process state nối trực tiếp với VFS lifetime.
+Đây là ví dụ tiến trình (process / 프로세스) trạng thái (state / 상태) nối trực tiếp với VFS thời gian tồn tại (lifetime / 수명).
 
-## Root directory của process
+## Gốc (root / 루트) directory của tiến trình (process / 프로세스)
 
-Process có khái niệm root directory dùng khi resolve absolute path. `chroot()` có thể thay góc nhìn này, nhưng không phải isolation mạnh tương đương container.
+Tiến trình (process / 프로세스) có khái niệm gốc (root / 루트) directory dùng khi resolve absolute đường dẫn (path / 경로). `chroot()` có thể thay góc nhìn này, nhưng không phải isolation mạnh tương đương bộ chứa (container / 컨테이너).
 
-Mount namespace và pivot_root giúp container runtime xây filesystem view riêng sâu hơn.
+Mount không gian tên (namespace / 네임스페이스) và pivot_root giúp bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) xây filesystem view riêng sâu hơn.
 
 ## Credentials qua fork/exec
 
-Child thường kế thừa credentials từ parent, nhưng exec có thể tương tác với setuid/setgid, capabilities và security policy.
+Child thường kế thừa credentials từ parent, nhưng exec có thể tương tác với setuid/setgid, capabilities và bảo mật (security / 보안) chính sách (policy / 정책).
 
-Kernel phải tính effective credentials cẩn thận khi executable có metadata đặc quyền.
+Kernel phải tính effective credentials cẩn thận khi executable có siêu dữ liệu (metadata / 메타데이터) đặc quyền.
 
 Xem [Credentials, capabilities, ACL và MAC](../03_identity/credentials_capabilities_acl_mac.md).
 
-## Signal disposition qua exec
+## Tín hiệu (signal / 신호) disposition qua exec
 
-Một số signal disposition thay đổi qua exec theo POSIX semantics. Pending state và mask có quy tắc riêng.
+Một số tín hiệu (signal / 신호) disposition thay đổi qua exec theo POSIX ngữ nghĩa (semantics / 의미론). Pending trạng thái (state / 상태) và mask có quy tắc riêng.
 
-Điểm cần nhớ: exec thay program image nhưng process object không phải “reset mọi thứ về 0”. Một số thuộc tính được giữ, một số được thay.
+Điểm cần nhớ: exec thay program ảnh (image / 이미지) nhưng tiến trình (process / 프로세스) đối tượng (object / 객체) không phải “reset mọi thứ về 0”. Một số thuộc tính được giữ, một số được thay.
 
-Đây là lý do semantics của exec là một hợp đồng rất cụ thể.
+Đây là lý do ngữ nghĩa (semantics / 의미론) của exec là một hợp đồng rất cụ thể.
 
 ## Parent-child relationship
 
-Process con có parent. Parent có thể cần biết child kết thúc ra sao.
+Tiến trình (process / 프로세스) con có parent. Parent có thể cần biết child kết thúc ra sao.
 
 Khi child exit, kernel giữ một phần exit status để parent thu nhận bằng `wait()`/`waitpid()`.
 
@@ -344,7 +347,7 @@ Khoảng thời gian child đã chết nhưng status chưa được parent thu n
 
 ## Zombie chính xác là gì?
 
-Zombie không còn chạy code và hầu hết resource đã được giải phóng. Kernel vẫn giữ entry tối thiểu gồm PID và exit status để parent có thể wait.
+Zombie không còn chạy mã (code / 코드) và hầu hết tài nguyên (resource / 자원) đã được giải phóng. Kernel vẫn giữ entry tối thiểu gồm PID và exit status để parent có thể wait.
 
 Quan sát:
 
@@ -352,7 +355,7 @@ Quan sát:
 ps -eo pid,ppid,stat,cmd | awk '$3 ~ /Z/'
 ```
 
-Zombie ít thường không tiêu thụ nhiều tài nguyên, nhưng tích tụ lớn có thể làm cạn PID/task table và là dấu hiệu parent không reap child đúng.
+Zombie ít thường không tiêu thụ nhiều tài nguyên, nhưng tích tụ lớn có thể làm cạn PID/tác vụ (task / 작업) bảng (table / 테이블) và là dấu hiệu parent không reap child đúng.
 
 ## `wait()` làm gì?
 
@@ -362,7 +365,7 @@ Parent gọi `wait()` hoặc `waitpid()` để:
 - xác nhận child kết thúc;
 - cho kernel giải phóng zombie entry.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 child exit
@@ -384,21 +387,21 @@ record được giải phóng
 
 Hai khái niệm hoàn toàn khác nhau.
 
-Khi parent biến mất, orphan được reparent theo semantics namespace/init/subreaper.
+Khi parent biến mất, orphan được reparent theo ngữ nghĩa (semantics / 의미론) không gian tên (namespace / 네임스페이스)/init/subreaper.
 
 ## PID 1 và subreaper
 
-PID 1 có vai trò đặc biệt trong process tree. Trong container, process làm PID 1 cần xử lý signal/reaping đúng.
+PID 1 có vai trò đặc biệt trong tiến trình (process / 프로세스) cây (tree / 트리). Trong bộ chứa (container / 컨테이너), tiến trình (process / 프로세스) làm PID 1 cần xử lý tín hiệu (signal / 신호)/reaping đúng.
 
-Systemd và các init system quản lý child lifecycle rất chặt.
+Systemd và các init hệ thống (system / 시스템) quản lý child vòng đời (lifecycle / 생명주기) rất chặt.
 
-Linux còn có khái niệm **child subreaper**, cho phép process nhận orphan descendant trong một số mô hình supervision.
+Linux còn có khái niệm **child subreaper**, cho phép tiến trình (process / 프로세스) nhận orphan descendant trong một số mô hình supervision.
 
-Đây là cơ sở cho process supervisor/container init.
+Đây là cơ sở cho tiến trình (process / 프로세스) supervisor/bộ chứa (container / 컨테이너) init.
 
 ## Exit status
 
-Process kết thúc với exit code hoặc do signal.
+Tiến trình (process / 프로세스) kết thúc với exit mã (code / 코드) hoặc do tín hiệu (signal / 신호).
 
 Shell dùng `$?` để xem status của command trước:
 
@@ -409,31 +412,31 @@ echo $?
 
 Convention thường dùng 0 là thành công và khác 0 là lỗi, nhưng nghĩa cụ thể phụ thuộc chương trình.
 
-Nếu process chết do signal, shell/runtime có thể mã hóa status theo convention riêng để báo lại.
+Nếu tiến trình (process / 프로세스) chết do tín hiệu (signal / 신호), shell/thời gian chạy (runtime / 런타임) có thể mã hóa status theo convention riêng để báo lại.
 
-## Process group và session
+## Tiến trình (process / 프로세스) group và session
 
-Job control cần thêm abstraction ngoài PID.
+Job điều khiển (control / 제어) cần thêm lớp trừu tượng (abstraction / 추상화) ngoài PID.
 
-**Process group** gom nhiều process, ví dụ pipeline.
+**tiến trình (process / 프로세스) group** gom nhiều tiến trình (process / 프로세스), ví dụ chuỗi xử lý (pipeline / 파이프라인).
 
-**Session** gom process group và liên hệ controlling terminal.
+**Session** gom tiến trình (process / 프로세스) group và liên hệ controlling terminal.
 
-Khi nhấn `Ctrl+C`, terminal driver thường gửi `SIGINT` tới foreground process group, không phải chỉ một PID ngẫu nhiên.
+Khi nhấn `Ctrl+C`, terminal driver thường gửi `SIGINT` tới foreground tiến trình (process / 프로세스) group, không phải chỉ một PID ngẫu nhiên.
 
-Đây là lý do pipeline foreground có thể bị dừng cùng nhau.
+Đây là lý do chuỗi xử lý (pipeline / 파이프라인) foreground có thể bị dừng cùng nhau.
 
 ## Controlling terminal
 
-Interactive shell có controlling terminal. Foreground process group có quyền đọc input terminal.
+Interactive shell có controlling terminal. Foreground tiến trình (process / 프로세스) group có quyền đọc đầu vào (input / 입력) terminal.
 
-Background process cố đọc terminal có thể bị signal như `SIGTTIN`.
+Background tiến trình (process / 프로세스) cố đọc terminal có thể bị tín hiệu (signal / 신호) như `SIGTTIN`.
 
-Job control vì vậy là collaboration giữa shell, process groups, session và terminal driver trong kernel.
+Job điều khiển (control / 제어) vì vậy là collaboration giữa shell, tiến trình (process / 프로세스) groups, session và terminal driver trong kernel.
 
 ## Daemonization cổ điển
 
-Trước systemd, daemon thường dùng pattern:
+Trước systemd, daemon thường dùng mẫu (pattern / 패턴):
 
 ```text
 fork
@@ -445,13 +448,13 @@ change cwd
 
 Mục tiêu là tách khỏi controlling terminal và session cũ.
 
-Với systemd, double-fork thường không cần cho service `Type=simple`; systemd muốn theo dõi foreground main process trực tiếp.
+Với systemd, double-fork thường không cần cho dịch vụ (service / 서비스) `Type=simple`; systemd muốn theo dõi foreground main tiến trình (process / 프로세스) trực tiếp.
 
 Hiểu lịch sử này giúp giải thích vì sao một số daemon cũ có option `--foreground`.
 
-## Process state `R`, `S`, `D`, `T`, `Z`
+## Tiến trình (process / 프로세스) trạng thái (state / 상태) `R`, `S`, `D`, `T`, `Z`
 
-Các trạng thái `ps` là biểu diễn rút gọn của scheduling/task state.
+Các trạng thái `ps` là biểu diễn rút gọn của scheduling/tác vụ (task / 작업) trạng thái (state / 상태).
 
 - `R`: running hoặc runnable;
 - `S`: interruptible sleep;
@@ -459,37 +462,37 @@ Các trạng thái `ps` là biểu diễn rút gọn của scheduling/task state
 - `T`: stopped/traced;
 - `Z`: zombie.
 
-`D` thường liên quan task đang chờ I/O/kernel condition mà signal thông thường chưa làm nó rời wait ngay.
+`D` thường liên quan tác vụ (task / 작업) đang chờ I/O/kernel điều kiện (condition / 조건) mà tín hiệu (signal / 신호) thông thường chưa làm nó rời wait ngay.
 
-Nhiều task `D` có thể làm load average cao dù CPU idle đáng kể.
+Nhiều tác vụ (task / 작업) `D` có thể làm tải (load / 로드) average cao dù CPU idle đáng kể.
 
-## Sleeping không phải “process không làm gì” theo nghĩa vô ích
+## Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích
 
-Sleep là cách kernel biểu diễn task đang chờ event. Đây là trạng thái hiệu quả: task không chiếm CPU trong thời gian chờ.
+Sleep là cách kernel biểu diễn tác vụ (task / 작업) đang chờ sự kiện (event / 이벤트). Đây là trạng thái hiệu quả: tác vụ (task / 작업) không chiếm CPU trong thời gian chờ.
 
-Application server blocking I/O có thể có hàng trăm thread sleeping. Vấn đề chỉ xuất hiện khi thread count, stack memory hoặc wakeup contention vượt giới hạn hợp lý.
+Ứng dụng (application / 애플리케이션) máy chủ (server / 서버) blocking I/O có thể có hàng trăm luồng thực thi (thread / 스레드) sleeping. Vấn đề chỉ xuất hiện khi luồng thực thi (thread / 스레드) count, ngăn xếp (stack / 스택) bộ nhớ (memory / 메모리) hoặc wakeup contention vượt giới hạn hợp lý.
 
-## Thread stack và memory cost
+## Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)
 
-Mỗi thread cần stack mapping và kernel task state.
+Mỗi luồng thực thi (thread / 스레드) cần ngăn xếp (stack / 스택) ánh xạ (mapping / 매핑) và kernel tác vụ (task / 작업) trạng thái (state / 상태).
 
-Trong JVM, `-Xss` ảnh hưởng Java thread stack size. Hàng nghìn thread có thể tiêu tốn nhiều virtual memory và resident memory dù heap chưa đầy.
+Trong JVM, `-Xss` ảnh hưởng Java luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) kích thước (size / 크기). Hàng nghìn luồng thực thi (thread / 스레드) có thể tiêu tốn nhiều virtual bộ nhớ (memory / 메모리) và resident bộ nhớ (memory / 메모리) dù vùng nhớ động (heap / 힙) chưa đầy.
 
-Vì vậy capacity planning thread count phải nối với memory model.
+Vì vậy sức chứa (capacity / 용량) planning luồng thực thi (thread / 스레드) count phải nối với bộ nhớ (memory / 메모리) mô hình (model / 모델).
 
-## Context switch lưu gì?
+## Ngữ cảnh (context / 맥락) switch lưu gì?
 
-Khi scheduler chuyển từ task A sang B, kernel phải bảo toàn CPU execution state đủ để A tiếp tục sau đó.
+Khi scheduler chuyển từ tác vụ (task / 작업) A sang B, kernel phải bảo toàn CPU thực thi (execution / 실행) trạng thái (state / 상태) đủ để A tiếp tục sau đó.
 
-Chi phí không chỉ là lưu register. Cache/TLB locality cũng có thể bị ảnh hưởng.
+Chi phí không chỉ là lưu register. bộ nhớ đệm (cache / 캐시)/TLB locality cũng có thể bị ảnh hưởng.
 
-Nếu hàng nghìn runnable thread cạnh tranh ít CPU, latency tăng dù mọi thread “đang hoạt động”.
+Nếu hàng nghìn runnable luồng thực thi (thread / 스레드) cạnh tranh ít CPU, độ trễ (latency / 지연 시간) tăng dù mọi luồng thực thi (thread / 스레드) “đang hoạt động”.
 
 Xem [Kernel scheduler deep dive](../06_resources/kernel_scheduler_deep_dive.md).
 
-## `exec()` và deployment
+## `exec()` và triển khai (deployment / 배포)
 
-Khi systemd start service:
+Khi systemd start dịch vụ (service / 서비스):
 
 ```text
 systemd
@@ -499,23 +502,23 @@ systemd
 application process
 ```
 
-Do đó unit configuration cuối cùng biến thành process attributes trước khi exec.
+Do đó đơn vị (unit / 단위) cấu hình (configuration / 구성) cuối cùng biến thành tiến trình (process / 프로세스) attributes trước khi exec.
 
-Environment, WorkingDirectory, User, limits và file descriptors đều có thể ảnh hưởng application trước khi dòng Java đầu tiên chạy.
+Môi trường (environment / 환경), WorkingDirectory, người dùng (user / 사용자), limits và tệp (file / 파일) descriptors đều có thể ảnh hưởng ứng dụng (application / 애플리케이션) trước khi dòng Java đầu tiên chạy.
 
-## Process namespace
+## Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)
 
-PID namespace làm cùng một task có thể có PID khác nhau tùy viewpoint.
+PID không gian tên (namespace / 네임스페이스) làm cùng một tác vụ (task / 작업) có thể có PID khác nhau tùy viewpoint.
 
-Host có thể thấy PID 32100, còn container thấy PID 1.
+Host có thể thấy PID 32100, còn bộ chứa (container / 컨테이너) thấy PID 1.
 
-Vì vậy PID là tên trong namespace, không phải identity tuyệt đối toàn hệ thống.
+Vì vậy PID là tên trong không gian tên (namespace / 네임스페이스), không phải định danh (identity / 식별자) tuyệt đối toàn hệ thống.
 
 Xem [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md).
 
-## `/proc/<PID>` là cửa sổ process model
+## `/proc/<PID>` là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)
 
-Một số file hữu ích:
+Một số tệp (file / 파일) hữu ích:
 
 ```text
 /proc/<PID>/status
@@ -531,23 +534,23 @@ Một số file hữu ích:
 /proc/<PID>/exe
 ```
 
-Thay vì coi `/proc` là danh sách lệnh phải nhớ, hãy map từng entry vào resource mà process đang giữ.
+Thay vì coi `/proc` là danh sách lệnh phải nhớ, hãy map từng entry vào tài nguyên (resource / 자원) mà tiến trình (process / 프로세스) đang giữ.
 
-## Process lifetime và resource lifetime không luôn giống nhau
+## Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau
 
-Một file có thể bị unlink nhưng vẫn tồn tại vì process còn giữ file descriptor.
+Một tệp (file / 파일) có thể bị unlink nhưng vẫn tồn tại vì tiến trình (process / 프로세스) còn giữ tệp (file / 파일) descriptor.
 
-Một shared memory object có thể được process khác giữ.
+Một dùng chung (shared / 공유) bộ nhớ (memory / 메모리) đối tượng (object / 객체) có thể được tiến trình (process / 프로세스) khác giữ.
 
-Một socket connection có peer state bên ngoài host.
+Một socket liên kết (connection / 연결) có peer trạng thái (state / 상태) bên ngoài host.
 
-Vì vậy “process đã chết” không luôn đồng nghĩa mọi hệ quả bên ngoài lập tức biến mất.
+Vì vậy “tiến trình (process / 프로세스) đã chết” không luôn đồng nghĩa mọi hệ quả bên ngoài lập tức biến mất.
 
-Conversely, kernel sẽ tự release nhiều resource gắn ownership trực tiếp với process khi process exit.
+Conversely, kernel sẽ tự bản phát hành (release / 릴리스) nhiều tài nguyên (resource / 자원) gắn quyền sở hữu (ownership / 소유권) trực tiếp với tiến trình (process / 프로세스) khi tiến trình (process / 프로세스) exit.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-Hãy xem process như một **container logic của execution state và references**:
+Hãy xem tiến trình (process / 프로세스) như một **bộ chứa (container / 컨테이너) lô-gic (logic / 논리) của thực thi (execution / 실행) trạng thái (state / 상태) và references**:
 
 ```text
 process/task
@@ -562,23 +565,23 @@ process/task
 └── parent/child lifecycle
 ```
 
-`fork()` tạo execution context mới với nhiều state kế thừa/chia sẻ theo semantics. `exec()` thay program image. `exit()` kết thúc execution. `wait()` hoàn tất quan hệ lifecycle với parent.
+`fork()` tạo thực thi (execution / 실행) ngữ cảnh (context / 맥락) mới với nhiều trạng thái (state / 상태) kế thừa/chia sẻ theo ngữ nghĩa (semantics / 의미론). `exec()` thay program ảnh (image / 이미지). `exit()` kết thúc thực thi (execution / 실행). `wait()` hoàn tất quan hệ vòng đời (lifecycle / 생명주기) với parent.
 
 ## Những hiểu lầm phổ biến
 
-**“fork copy toàn bộ RAM ngay.”** COW giúp parent/child chia sẻ pages cho tới khi ghi.
+**“fork bản sao (copy / 복사) toàn bộ RAM ngay.”** COW giúp parent/child chia sẻ pages cho tới khi ghi.
 
-**“exec tạo process mới.”** Exec thay program image của process hiện tại.
+**“exec tạo tiến trình (process / 프로세스) mới.”** Exec thay program ảnh (image / 이미지) của tiến trình (process / 프로세스) hiện tại.
 
-**“Zombie vẫn chạy và ăn CPU.”** Zombie đã kết thúc; nó chỉ còn exit record chờ parent reap.
+**“Zombie vẫn chạy và ăn CPU.”** Zombie đã kết thúc; nó chỉ còn exit bản ghi (record / 레코드) chờ parent reap.
 
 **“Orphan và zombie là một.”** Orphan còn sống nhưng mất parent; zombie đã chết nhưng chưa được wait.
 
-**“PID là identity ổn định.”** PID có thể tái sử dụng và thay đổi theo PID namespace.
+**“PID là định danh (identity / 식별자) ổn định.”** PID có thể tái sử dụng và thay đổi theo PID không gian tên (namespace / 네임스페이스).
 
-**“Một Java process là một scheduling entity.”** Mỗi native thread là task scheduler có thể quản lý riêng.
+**“Một Java tiến trình (process / 프로세스) là một scheduling thực thể (entity / 엔터티).”** Mỗi bản địa (native / 네이티브) luồng thực thi (thread / 스레드) là tác vụ (task / 작업) scheduler có thể quản lý riêng.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Nên nối chương này với:
 
@@ -589,3 +592,5 @@ Nên nối chương này với:
 - [Scheduler](../06_resources/kernel_scheduler_deep_dive.md);
 - [Systemd service lifecycle](../05_system/systemd_units_dependencies_resources.md);
 - [Container isolation](../09_production/namespaces_cgroups_seccomp.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [interprocess communication](./interprocess_communication.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

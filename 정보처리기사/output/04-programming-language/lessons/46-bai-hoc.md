@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **네트워크 통신 (Network Communication)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,14 +20,16 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)** và nối nó với **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)
 ### 서브네팅 및 IP 클래스 (Subnetting & IP Classes)
-- **A Class**: 0~127. 대형 통신망 (Mạng rất lớn).
-- **B Class**: 128~191. 중대형 통신망 (Mạng trung-lớn).
-- **C Class**: 192~223. 소규모 통신망 (Mạng nhỏ).
-- **D Class**: 224~239. 멀티캐스트 (Multicast).
+- **A lớp (class / 클래스)**: 0~127. 대형 통신망 (Mạng rất lớn).
+- **B lớp (class / 클래스)**: 128~191. 중대형 통신망 (Mạng trung-lớn).
+- **C lớp (class / 클래스)**: 192~223. 소규모 통신망 (Mạng nhỏ).
+- **D lớp (class / 클래스)**: 224~239. 멀티캐스트 (Multicast).
 - **서브네팅 (Subnetting)**: 서브넷 마스크를 이용해 네트워크 주소를 분할. (Dùng Subnet Mask để chia nhỏ mạng).
 
 ### 계층별 주요 프로토콜 (Major Protocols by Layer / Giao thức theo tầng)

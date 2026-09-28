@@ -1,19 +1,22 @@
-# Package lifecycle sâu hơn: repository, update, dependency và software supply chain
+# Gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)
 
-Chương [Gói phần mềm, phần mềm và thư viện dùng chung](./packages_software_libraries.md) giải thích vai trò cơ bản của package manager. Chương này đi sâu vào cách repository, metadata, dependency solver, signing, pinning, transaction history và rollback liên kết với độ ổn định và bảo mật của production.
+> **Mạch đọc:** Đọc **gói (package / 패키지) vòng đời (lifecycle / 생명주기) sâu hơn: repository, cập nhật (update / 업데이트), phụ thuộc (dependency / 의존성) và software supply chuỗi (chain / 사슬)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **trình quản lý gói (package manager / 패키지 관리자) quản lý nhiều hơn tệp (file / 파일)** sang **gói (package / 패키지) cơ sở dữ liệu (database / 데이터베이스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Package manager quản lý nhiều hơn file
 
-Một package thường mang theo:
+Chương [Gói phần mềm, phần mềm và thư viện dùng chung](./packages_software_libraries.md) giải thích vai trò cơ bản của trình quản lý gói (package manager / 패키지 관리자). Chương này đi sâu vào cách repository, siêu dữ liệu (metadata / 메타데이터), phụ thuộc (dependency / 의존성) solver, signing, pinning, giao dịch (transaction / 트랜잭션) lịch sử (history / 이력) và quay lui (rollback / 롤백) liên kết với độ ổn định và bảo mật của môi trường vận hành (production / 운영 환경).
 
-- metadata;
-- version;
-- dependency declarations;
-- ownership của file;
+## Trình quản lý gói (package manager / 패키지 관리자) quản lý nhiều hơn tệp (file / 파일)
+
+Một gói (package / 패키지) thường mang theo:
+
+- siêu dữ liệu (metadata / 메타데이터);
+- phiên bản (version / 버전);
+- phụ thuộc (dependency / 의존성) declarations;
+- quyền sở hữu (ownership / 소유권) của tệp (file / 파일);
 - scripts chạy trước/sau install/remove;
-- checksum/signature metadata;
-- configuration semantics;
-- lifecycle state trong package database.
+- checksum/signature siêu dữ liệu (metadata / 메타데이터);
+- cấu hình (configuration / 구성) ngữ nghĩa (semantics / 의미론);
+- vòng đời (lifecycle / 생명주기) trạng thái (state / 상태) trong gói (package / 패키지) cơ sở dữ liệu (database / 데이터베이스).
 
 Do đó:
 
@@ -21,11 +24,11 @@ Do đó:
 apt install nginx
 ```
 
-không chỉ là tải binary rồi copy vào `/usr/bin`.
+không chỉ là tải nhị phân (binary / 이진) rồi bản sao (copy / 복사) vào `/usr/bin`.
 
-## Package database
+## Gói (package / 패키지) cơ sở dữ liệu (database / 데이터베이스)
 
-Trên Debian-family, `dpkg` giữ database local về packages đã cài.
+Trên Debian-family, `dpkg` giữ cơ sở dữ liệu (database / 데이터베이스) cục bộ (local / 로컬) về packages đã cài.
 
 Một số command:
 
@@ -35,9 +38,9 @@ dpkg -L nginx
 dpkg -S /usr/sbin/nginx
 ```
 
-`dpkg -L` trả lời package sở hữu những file nào.
+`dpkg -L` trả lời gói (package / 패키지) sở hữu những tệp (file / 파일) nào.
 
-`dpkg -S` trả lời file cụ thể thuộc package nào.
+`dpkg -S` trả lời tệp (file / 파일) cụ thể thuộc gói (package / 패키지) nào.
 
 Trên RPM-family:
 
@@ -47,9 +50,9 @@ rpm -ql nginx
 rpm -qf /usr/sbin/nginx
 ```
 
-Knowledge này rất hữu ích khi một file hệ thống bị sửa thủ công và cần biết package nào sẽ ghi đè nó khi upgrade.
+Kiến thức (knowledge / 지식) này rất hữu ích khi một tệp (file / 파일) hệ thống bị sửa thủ công và cần biết gói (package / 패키지) nào sẽ ghi đè nó khi upgrade.
 
-## Package manager tầng cao và tầng thấp
+## Trình quản lý gói (package manager / 패키지 관리자) tầng cao và tầng thấp
 
 Trên Debian-family:
 
@@ -59,35 +62,35 @@ APT
 dpkg
 ```
 
-APT quản lý repository và dependency resolution; `dpkg` thao tác package `.deb` và database local ở tầng thấp hơn.
+APT quản lý repository và phụ thuộc (dependency / 의존성) resolution; `dpkg` thao tác gói (package / 패키지) `.deb` và cơ sở dữ liệu (database / 데이터베이스) cục bộ (local / 로컬) ở tầng thấp hơn.
 
 Tương tự, DNF nằm trên RPM ecosystem.
 
-Khi install `.deb` trực tiếp bằng `dpkg -i`, dependency có thể chưa được giải quyết như khi dùng APT.
+Khi install `.deb` trực tiếp bằng `dpkg -i`, phụ thuộc (dependency / 의존성) có thể chưa được giải quyết như khi dùng APT.
 
 ## Repository là gì?
 
-Repository chứa packages cùng metadata để package manager biết:
+Repository chứa packages cùng siêu dữ liệu (metadata / 메타데이터) để trình quản lý gói (package manager / 패키지 관리자) biết:
 
-- package nào tồn tại;
-- version nào available;
-- dependency gì;
-- architecture nào;
+- gói (package / 패키지) nào tồn tại;
+- phiên bản (version / 버전) nào available;
+- phụ thuộc (dependency / 의존성) gì;
+- kiến trúc (architecture / 아키텍처) nào;
 - checksum/signature gì.
 
 Repository có thể là:
 
 - official distro repository;
 - vendor repository;
-- internal enterprise mirror;
+- nội bộ (internal / 내부) enterprise mirror;
 - snapshot repository;
 - testing/staging repository.
 
 ## `apt update` thực sự làm gì?
 
-`apt update` tải metadata repository về local cache.
+`apt update` tải siêu dữ liệu (metadata / 메타데이터) repository về cục bộ (local / 로컬) bộ nhớ đệm (cache / 캐시).
 
-Sau bước này package manager biết candidate versions mới, nhưng chưa install chúng.
+Sau bước này trình quản lý gói (package manager / 패키지 관리자) biết candidate versions mới, nhưng chưa install chúng.
 
 Do đó:
 
@@ -102,9 +105,9 @@ khác với:
 sudo apt upgrade
 ```
 
-## Candidate version
+## Candidate phiên bản (version / 버전)
 
-Package manager chọn **candidate version** dựa trên repository priorities, architecture, pinning và dependency constraints.
+Trình quản lý gói (package manager / 패키지 관리자) chọn **candidate phiên bản (version / 버전)** dựa trên repository priorities, kiến trúc (architecture / 아키텍처), pinning và phụ thuộc (dependency / 의존성) các ràng buộc (constraints / 제약조건들).
 
 ```bash
 apt-cache policy nginx
@@ -118,53 +121,53 @@ Candidate: ...
 Version table: ...
 ```
 
-Nếu `apt install nginx` cài version bất ngờ, hãy kiểm tra candidate và repository priority trước.
+Nếu `apt install nginx` cài phiên bản (version / 버전) bất ngờ, hãy kiểm tra candidate và repository priority trước.
 
 ## Pinning
 
-APT pinning cho phép ưu tiên hoặc giữ version theo repository/version pattern.
+APT pinning cho phép ưu tiên hoặc giữ phiên bản (version / 버전) theo repository/phiên bản (version / 버전) mẫu (pattern / 패턴).
 
-Đây là công cụ mạnh nhưng có thể tạo dependency state khó hiểu nếu dùng thiếu kiểm soát.
+Đây là công cụ mạnh nhưng có thể tạo phụ thuộc (dependency / 의존성) trạng thái (state / 상태) khó hiểu nếu dùng thiếu kiểm soát.
 
-Production pinning nên đi kèm documentation về lý do và thời điểm bỏ pin.
+Môi trường vận hành (production / 운영 환경) pinning nên đi kèm documentation về lý do và thời điểm bỏ pin.
 
-## Hold package
+## Hold gói (package / 패키지)
 
-Debian-family có thể hold package:
+Debian-family có thể hold gói (package / 패키지):
 
 ```bash
 sudo apt-mark hold package-name
 apt-mark showhold
 ```
 
-Hold giúp tránh auto-upgrade package nhạy cảm, nhưng cũng có thể làm security patch bị bỏ lỡ.
+Hold giúp tránh auto-upgrade gói (package / 패키지) nhạy cảm, nhưng cũng có thể làm bảo mật (security / 보안) patch bị bỏ lỡ.
 
-Hold là trade-off, không phải trạng thái nên để vĩnh viễn mà không review.
+Hold là sự đánh đổi (trade-off / 트레이드오프), không phải trạng thái nên để vĩnh viễn mà không rà soát (review / 검토).
 
 ## DNF versionlock
 
-RHEL-family có plugin/versionlock mechanism tùy distribution/version.
+RHEL-family có plugin/versionlock cơ chế (mechanism / 메커니즘) tùy phân phối (distribution / 분포)/phiên bản (version / 버전).
 
-Mục tiêu tương tự: giữ package ở một version hoặc pattern xác định.
+Mục tiêu tương tự: giữ gói (package / 패키지) ở một phiên bản (version / 버전) hoặc mẫu (pattern / 패턴) xác định.
 
-## Dependency solver
+## Phụ thuộc (dependency / 의존성) solver
 
-Một package có thể yêu cầu:
+Một gói (package / 패키지) có thể yêu cầu:
 
 ```text
 libA >= 2.0
 libB < 5
 ```
 
-Package manager phải tìm tập versions thỏa constraints.
+Trình quản lý gói (package manager / 패키지 관리자) phải tìm tập versions thỏa các ràng buộc (constraints / 제약조건들).
 
-Conflict có thể xảy ra khi hai packages yêu cầu ranges không tương thích.
+Xung đột (conflict / 충돌) có thể xảy ra khi hai packages yêu cầu ranges không tương thích.
 
-Đây là dependency graph problem giống Maven/Gradle/npm, nhưng phạm vi là operating-system state.
+Đây là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) bài toán (problem / 문제) giống Maven/Gradle/npm, nhưng phạm vi là operating-system trạng thái (state / 상태).
 
-## Dependency trực tiếp và gián tiếp
+## Phụ thuộc (dependency / 의존성) trực tiếp và gián tiếp
 
-Bạn có thể cài package A, A kéo B, B kéo C.
+Bạn có thể cài gói (package / 패키지) A, A kéo B, B kéo C.
 
 Sau khi remove A, B/C có thể trở thành packages không còn cần thiết.
 
@@ -174,23 +177,23 @@ APT có:
 sudo apt autoremove
 ```
 
-Nhưng cần review kỹ trên production vì package được đánh dấu auto/manual không phải lúc nào cũng phản ánh business dependency bạn mong muốn.
+Nhưng cần rà soát (review / 검토) kỹ trên môi trường vận hành (production / 운영 환경) vì gói (package / 패키지) được đánh dấu auto/manual không phải lúc nào cũng phản ánh nghiệp vụ (business / 비즈니스) phụ thuộc (dependency / 의존성) bạn mong muốn.
 
 ## Recommended và suggested packages
 
-Debian metadata có thể phân biệt dependency bắt buộc với recommended/suggested packages.
+Debian siêu dữ liệu (metadata / 메타데이터) có thể phân biệt phụ thuộc (dependency / 의존성) bắt buộc với recommended/suggested packages.
 
-`--no-install-recommends` thường được dùng trong container image để giảm kích thước:
+`--no-install-recommends` thường được dùng trong ảnh bộ chứa (container image / 컨테이너 이미지) để giảm kích thước:
 
 ```bash
 apt-get install --no-install-recommends package
 ```
 
-Nhưng image nhỏ hơn có thể thiếu utility mà debugging cần. Đây là trade-off giữa minimal surface và operability.
+Nhưng ảnh (image / 이미지) nhỏ hơn có thể thiếu utility mà debugging cần. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa minimal surface và operability.
 
-## Package scripts
+## Gói (package / 패키지) scripts
 
-Package có thể chạy maintainer scripts như:
+Gói (package / 패키지) có thể chạy maintainer scripts như:
 
 ```text
 preinst
@@ -201,25 +204,25 @@ postrm
 
 Các script này có thể:
 
-- tạo user;
+- tạo người dùng (user / 사용자);
 - reload daemon;
-- migrate config;
-- update cache;
-- restart service.
+- migrate cấu hình (config / 설정);
+- cập nhật (update / 업데이트) bộ nhớ đệm (cache / 캐시);
+- restart dịch vụ (service / 서비스).
 
-Vì vậy package install có thể tạo side effect lớn hơn việc copy file.
+Vì vậy gói (package / 패키지) install có thể tạo side tác động (effect / 효과) lớn hơn việc bản sao (copy / 복사) tệp (file / 파일).
 
-Trên production, cần biết upgrade package có tự restart service không.
+Trên môi trường vận hành (production / 운영 환경), cần biết upgrade gói (package / 패키지) có tự restart dịch vụ (service / 서비스) không.
 
-## Configuration files
+## Cấu hình (configuration / 구성) files
 
-Package manager thường có semantics riêng cho config files dưới `/etc`.
+Trình quản lý gói (package manager / 패키지 관리자) thường có ngữ nghĩa (semantics / 의미론) riêng cho cấu hình (config / 설정) files dưới `/etc`.
 
-Khi package upgrade và file config đã bị admin sửa, tool có thể hỏi giữ bản local hay dùng bản maintainer.
+Khi gói (package / 패키지) upgrade và tệp (file / 파일) cấu hình (config / 설정) đã bị admin sửa, công cụ (tool / 도구) có thể hỏi giữ bản cục bộ (local / 로컬) hay dùng bản maintainer.
 
-Trong unattended automation, conflict này cần policy rõ; nếu không deployment có thể treo hoặc áp config không mong muốn.
+Trong unattended automation, xung đột (conflict / 충돌) này cần chính sách (policy / 정책) rõ; nếu không triển khai (deployment / 배포) có thể treo hoặc áp cấu hình (config / 설정) không mong muốn.
 
-## Conffile ownership
+## Conffile quyền sở hữu (ownership / 소유권)
 
 Trên Debian:
 
@@ -227,11 +230,11 @@ Trên Debian:
 dpkg-query -W -f='${Conffiles}\n' package-name
 ```
 
-có thể giúp xem config files do package quản lý.
+có thể giúp xem cấu hình (config / 설정) files do gói (package / 패키지) quản lý.
 
-Không nên coi toàn bộ `/etc` là “do package manager sở hữu”; nhiều app/internal configs được quản lý bằng configuration management riêng.
+Không nên coi toàn bộ `/etc` là “do trình quản lý gói (package manager / 패키지 관리자) sở hữu”; nhiều app/nội bộ (internal / 내부) configs được quản lý bằng cấu hình (configuration / 구성) management riêng.
 
-## Verify package files
+## Verify gói (package / 패키지) files
 
 RPM hỗ trợ verify:
 
@@ -239,17 +242,17 @@ RPM hỗ trợ verify:
 rpm -V package-name
 ```
 
-Output cho biết một số thuộc tính file khác với package metadata.
+Đầu ra (output / 출력) cho biết một số thuộc tính tệp (file / 파일) khác với gói (package / 패키지) siêu dữ liệu (metadata / 메타데이터).
 
-Điều này hữu ích khi nghi binary/config bị sửa thủ công.
+Điều này hữu ích khi nghi nhị phân (binary / 이진)/cấu hình (config / 설정) bị sửa thủ công.
 
-Debian có thể dùng checksum metadata hoặc các tool bổ sung tùy package.
+Debian có thể dùng checksum siêu dữ liệu (metadata / 메타데이터) hoặc các công cụ (tool / 도구) bổ sung tùy gói (package / 패키지).
 
 ## Repository signing
 
-Package manager không nên tin package chỉ vì tải qua HTTP/HTTPS. Repository signing giúp xác minh metadata/package provenance bằng cryptographic trust chain.
+Trình quản lý gói (package manager / 패키지 관리자) không nên tin gói (package / 패키지) chỉ vì tải qua HTTP/HTTPS. Repository signing giúp xác minh siêu dữ liệu (metadata / 메타데이터)/gói (package / 패키지) provenance bằng cryptographic trust chuỗi (chain / 사슬).
 
-Trên modern Debian/Ubuntu, repository keys thường được cấu hình scoped bằng `signed-by=` thay vì bỏ mọi key vào global trusted keyring.
+Trên hiện đại (modern / 현대적) Debian/Ubuntu, repository keys thường được cấu hình scoped bằng `signed-by=` thay vì bỏ mọi key vào toàn cục (global / 전역) trusted keyring.
 
 Ví dụ conceptual:
 
@@ -263,36 +266,36 @@ package content
 
 ## Vì sao `curl | sudo bash` là rủi ro?
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```bash
 curl https://vendor.example/install.sh | sudo bash
 ```
 
-cho remote content quyền root ngay lập tức.
+cho remote content quyền gốc (root / 루트) ngay lập tức.
 
 Nếu endpoint, CDN, DNS, vendor account hoặc script bị compromise, host cũng bị ảnh hưởng.
 
 Cách an toàn hơn:
 
 1. download;
-2. verify source/signature/checksum;
+2. verify nguồn (source / 소스)/signature/checksum;
 3. inspect script;
 4. execute với privilege tối thiểu cần thiết.
 
 ## Checksum khác signature
 
-Checksum như SHA-256 giúp phát hiện content thay đổi, nhưng nếu attacker có thể thay cả file và checksum trên cùng website thì checksum không chứng minh provenance.
+Checksum như SHA-256 giúp phát hiện content thay đổi, nhưng nếu attacker có thể thay cả tệp (file / 파일) và checksum trên cùng website thì checksum không chứng minh provenance.
 
-Digital signature dùng private/public key trust model mạnh hơn khi key distribution an toàn.
+Digital signature dùng private/công khai (public / 공개) key trust mô hình (model / 모델) mạnh hơn khi key phân phối (distribution / 분포) an toàn.
 
-## Internal mirror
+## Nội bộ (internal / 내부) mirror
 
 Enterprise thường dùng repository mirror nội bộ để:
 
 - kiểm soát versions;
 - giảm bandwidth;
-- giữ package khi upstream xóa;
+- giữ gói (package / 패키지) khi upstream xóa;
 - quét vulnerability;
 - triển khai theo wave;
 - hỗ trợ môi trường không ra Internet trực tiếp.
@@ -301,11 +304,11 @@ Nhưng mirror phải được cập nhật và bảo vệ; mirror cũ có thể 
 
 ## Snapshot repository
 
-Nếu muốn reproducible host build, repository “latest” không đủ.
+Nếu muốn reproducible host bản dựng (build / 빌드), repository “latest” không đủ.
 
 Snapshot repository giữ trạng thái repository ở một thời điểm.
 
-Ví dụ mental model:
+Ví dụ mô hình tư duy (mental model / 사고 모델):
 
 ```text
 prod build ngày 2026-09-20
@@ -313,23 +316,23 @@ prod build ngày 2026-09-20
 → package versions cố định
 ```
 
-Điều này giúp rebuild server giống nhau hơn.
+Điều này giúp rebuild máy chủ (server / 서버) giống nhau hơn.
 
-## Rollback package có đơn giản không?
+## Quay lui (rollback / 롤백) gói (package / 패키지) có đơn giản không?
 
-Downgrade binary có thể không rollback:
+Downgrade nhị phân (binary / 이진) có thể không quay lui (rollback / 롤백):
 
-- database schema;
-- data format;
-- config migration;
-- systemd unit behavior;
-- cache/index migration.
+- cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마);
+- dữ liệu (data / 데이터) format;
+- cấu hình (config / 설정) di chuyển (migration / 마이그레이션);
+- systemd đơn vị (unit / 단위) hành vi (behavior / 동작);
+- bộ nhớ đệm (cache / 캐시)/chỉ mục (index / 인덱스) di chuyển (migration / 마이그레이션).
 
-Package rollback chỉ là một phần của application rollback.
+Gói (package / 패키지) quay lui (rollback / 롤백) chỉ là một phần của ứng dụng (application / 애플리케이션) quay lui (rollback / 롤백).
 
-## Kernel package và reboot
+## Kernel gói (package / 패키지) và reboot
 
-Cài kernel package mới không có nghĩa kernel đang chạy đã đổi.
+Cài kernel gói (package / 패키지) mới không có nghĩa kernel đang chạy đã đổi.
 
 Kiểm tra:
 
@@ -341,15 +344,15 @@ và packages installed.
 
 Có thể có nhiều kernel versions trên disk; bootloader chọn kernel khi reboot.
 
-Security patch kernel thường cần reboot hoặc live patch mechanism nếu được hỗ trợ.
+Bảo mật (security / 보안) patch kernel thường cần reboot hoặc live patch cơ chế (mechanism / 메커니즘) nếu được hỗ trợ.
 
-## Shared library upgrade và process đang chạy
+## Dùng chung (shared / 공유) thư viện (library / 라이브러리) upgrade và tiến trình (process / 프로세스) đang chạy
 
-Nếu library trên disk được nâng cấp, process đang chạy thường vẫn dùng mapping/library đã load trước đó.
+Nếu thư viện (library / 라이브러리) trên disk được nâng cấp, tiến trình (process / 프로세스) đang chạy thường vẫn dùng ánh xạ (mapping / 매핑)/thư viện (library / 라이브러리) đã tải (load / 로드) trước đó.
 
-Do đó package upgrade không chắc đã đưa security fix vào process cho tới khi process restart.
+Do đó gói (package / 패키지) upgrade không chắc đã đưa bảo mật (security / 보안) fix vào tiến trình (process / 프로세스) cho tới khi tiến trình (process / 프로세스) restart.
 
-Có tool trên một số distro giúp phát hiện processes dùng deleted/old libraries.
+Có công cụ (tool / 도구) trên một số distro giúp phát hiện processes dùng deleted/old libraries.
 
 Ví dụ generic:
 
@@ -359,53 +362,53 @@ sudo lsof +L1
 
 có thể thấy mapped deleted files trong một số trường hợp.
 
-## Restart sau package update
+## Restart sau gói (package / 패키지) cập nhật (update / 업데이트)
 
-Cần biết component nào phải restart sau upgrade.
+Cần biết thành phần (component / 컴포넌트) nào phải restart sau upgrade.
 
 Có thể là:
 
-- application service;
+- ứng dụng (application / 애플리케이션) dịch vụ (service / 서비스);
 - SSH daemon;
-- database;
-- host reboot nếu kernel/glibc/core library thay đổi sâu.
+- cơ sở dữ liệu (database / 데이터베이스);
+- host reboot nếu kernel/glibc/cốt lõi (core / 핵심) thư viện (library / 라이브러리) thay đổi sâu.
 
-Không restart mọi thứ một cách mù quáng; cần change plan và availability strategy.
+Không restart mọi thứ một cách mù quáng; cần thay đổi (change / 변경) plan và availability chiến lược (strategy / 전략).
 
-## glibc và core libraries
+## glibc và cốt lõi (core / 핵심) libraries
 
-Nâng core library có phạm vi ảnh hưởng lớn vì nhiều processes phụ thuộc.
+Nâng cốt lõi (core / 핵심) thư viện (library / 라이브러리) có phạm vi ảnh hưởng lớn vì nhiều processes phụ thuộc.
 
-Running processes đã map old library có thể tiếp tục chạy, nhưng process mới sẽ load version mới.
+Running processes đã map old thư viện (library / 라이브러리) có thể tiếp tục chạy, nhưng tiến trình (process / 프로세스) mới sẽ tải (load / 로드) phiên bản (version / 버전) mới.
 
-Trong một khoảng thời gian host có thể tồn tại mixed runtime state.
+Trong một khoảng thời gian host có thể tồn tại mixed thời gian chạy (runtime / 런타임) trạng thái (state / 상태).
 
-Đây là lý do reboot maintenance window đôi khi giúp đưa host về trạng thái đồng nhất sau large patch set.
+Đây là lý do reboot maintenance cửa sổ (window / 윈도우) đôi khi giúp đưa host về trạng thái đồng nhất sau large patch set.
 
 ## CVE không tự động nghĩa host có thể bị khai thác
 
-Vulnerability scanner có thể báo package version gắn với CVE, nhưng distro đôi khi backport security fix mà vẫn giữ upstream version number gần cũ.
+Vulnerability scanner có thể báo gói (package / 패키지) phiên bản (version / 버전) gắn với CVE, nhưng distro đôi khi backport bảo mật (security / 보안) fix mà vẫn giữ upstream phiên bản (version / 버전) number gần cũ.
 
-Cần xem distro security advisory, package release suffix và patch status.
+Cần xem distro bảo mật (security / 보안) advisory, gói (package / 패키지) bản phát hành (release / 릴리스) suffix và patch status.
 
-Không chỉ so semantic version với upstream rồi kết luận vulnerable.
+Không chỉ so ngữ nghĩa (semantic / 의미적) phiên bản (version / 버전) với upstream rồi kết luận vulnerable.
 
-## Security advisory
+## Bảo mật (security / 보안) advisory
 
-Các distro thường có advisory database riêng.
+Các distro thường có advisory cơ sở dữ liệu (database / 데이터베이스) riêng.
 
-Production patching nên dựa trên:
+Môi trường vận hành (production / 운영 환경) patching nên dựa trên:
 
 - severity;
 - exploitability;
 - exposure;
 - asset criticality;
 - vendor/distro fix availability;
-- regression risk.
+- regression rủi ro (risk / 위험).
 
 ## Unattended upgrade
 
-Auto-update có thể tốt cho security nhưng có risk availability nếu package restart service hoặc có incompatible change.
+Auto-update có thể tốt cho bảo mật (security / 보안) nhưng có rủi ro (risk / 위험) availability nếu gói (package / 패키지) restart dịch vụ (service / 서비스) hoặc có incompatible thay đổi (change / 변경).
 
 Một số environments chọn:
 
@@ -418,9 +421,9 @@ auto security updates
 
 Thay vì bật auto-upgrade đồng loạt trên toàn fleet.
 
-## Immutable image model
+## Immutable ảnh (image / 이미지) mô hình (model / 모델)
 
-Thay vì patch host in-place, cloud/container environments có thể rebuild image:
+Thay vì patch host in-place, cloud/bộ chứa (container / 컨테이너) environments có thể rebuild ảnh (image / 이미지):
 
 ```text
 base image mới
@@ -433,17 +436,17 @@ base image mới
 Ưu điểm:
 
 - reproducibility;
-- rollback dễ hơn;
-- giảm configuration drift.
+- quay lui (rollback / 롤백) dễ hơn;
+- giảm cấu hình (configuration / 구성) drift.
 
 Nhược điểm:
 
-- cần image pipeline;
-- patch khẩn cấp vẫn cần tốc độ build/deploy tốt.
+- cần ảnh (image / 이미지) chuỗi xử lý (pipeline / 파이프라인);
+- patch khẩn cấp vẫn cần tốc độ bản dựng (build / 빌드)/deploy tốt.
 
 ## SBOM
 
-**Software Bill of Materials (SBOM)** liệt kê components/dependencies trong artifact hoặc image.
+**Software Bill of Materials (SBOM)** liệt kê components/dependencies trong sản phẩm tạo ra (artifact / 산출물) hoặc ảnh (image / 이미지).
 
 SBOM hỗ trợ trả lời:
 
@@ -451,11 +454,11 @@ SBOM hỗ trợ trả lời:
 “CVE này ảnh hưởng những host/image/application nào?”
 ```
 
-Nó không tự động bảo đảm an toàn, nhưng tăng khả năng inventory và response.
+Nó không tự động bảo đảm an toàn, nhưng tăng khả năng inventory và phản hồi (response / 응답).
 
-## Package và container image
+## Gói (package / 패키지) và ảnh bộ chứa (container image / 컨테이너 이미지)
 
-Container image dùng package manager lúc build nhưng runtime container thường không nên update packages thủ công.
+Ảnh bộ chứa (container image / 컨테이너 이미지) dùng trình quản lý gói (package manager / 패키지 관리자) lúc bản dựng (build / 빌드) nhưng thời gian chạy (runtime / 런타임) bộ chứa (container / 컨테이너) thường không nên cập nhật (update / 업데이트) packages thủ công.
 
 Nếu chạy:
 
@@ -463,9 +466,9 @@ Nếu chạy:
 apt upgrade
 ```
 
-bên trong running container rồi container bị recreate, thay đổi có thể mất.
+bên trong running bộ chứa (container / 컨테이너) rồi bộ chứa (container / 컨테이너) bị recreate, thay đổi có thể mất.
 
-Pattern tốt hơn:
+Mẫu (pattern / 패턴) tốt hơn:
 
 ```text
 Dockerfile update
@@ -474,17 +477,17 @@ Dockerfile update
 → deploy image mới
 ```
 
-## Multi-stage build
+## Multi-stage bản dựng (build / 빌드)
 
-Container image có thể dùng build stage chứa compiler và runtime stage chỉ chứa artifacts cần thiết.
+Ảnh bộ chứa (container image / 컨테이너 이미지) có thể dùng bản dựng (build / 빌드) stage chứa trình biên dịch (compiler / 컴파일러) và thời gian chạy (runtime / 런타임) stage chỉ chứa artifacts cần thiết.
 
-Điều này giảm attack surface và image size.
+Điều này giảm attack surface và ảnh (image / 이미지) kích thước (size / 크기).
 
-Nhưng debugging production image tối giản có thể khó hơn; cần observability/tooling strategy khác.
+Nhưng debugging môi trường vận hành (production / 운영 환경) ảnh (image / 이미지) tối giản có thể khó hơn; cần khả năng quan sát (observability / 관측 가능성)/tooling chiến lược (strategy / 전략) khác.
 
-## Package cache và disk usage
+## Gói (package / 패키지) bộ nhớ đệm (cache / 캐시) và disk usage
 
-APT/DNF cache có thể chiếm disk.
+APT/DNF bộ nhớ đệm (cache / 캐시) có thể chiếm disk.
 
 Ví dụ:
 
@@ -492,9 +495,9 @@ Ví dụ:
 du -sh /var/cache/apt 2>/dev/null
 ```
 
-Cleanup cần dùng package-manager-aware commands thay vì xóa random database files.
+Cleanup cần dùng package-manager-aware commands thay vì xóa random cơ sở dữ liệu (database / 데이터베이스) files.
 
-## Transaction history
+## Giao dịch (transaction / 트랜잭션) lịch sử (history / 이력)
 
 DNF:
 
@@ -509,9 +512,9 @@ APT:
 less /var/log/apt/history.log
 ```
 
-Dòng thời gian package changes rất hữu ích khi incident bắt đầu sau maintenance window.
+Dòng thời gian gói (package / 패키지) changes rất hữu ích khi sự cố (incident / 인시던트) bắt đầu sau maintenance cửa sổ (window / 윈도우).
 
-## Kiểm tra trước upgrade production
+## Kiểm tra trước upgrade môi trường vận hành (production / 운영 환경)
 
 Một workflow tốt:
 
@@ -529,9 +532,9 @@ inventory current versions
 
 Không chỉ chạy `apt upgrade -y` rồi coi như hoàn tất.
 
-## Một case: service fail sau patch
+## Một trường hợp (case / 사례): dịch vụ (service / 서비스) thất bại (fail / 실패) sau patch
 
-Giả sử sau OS patch, Java app fail với native library error.
+Giả sử sau OS patch, Java app thất bại (fail / 실패) với bản địa (native / 네이티브) thư viện (library / 라이브러리) lỗi (error / 오류).
 
 Điều tra:
 
@@ -543,13 +546,13 @@ rpm -qa --last | head
 cat /var/log/apt/history.log
 ```
 
-Có thể package update đổi ABI hoặc library path.
+Có thể gói (package / 패키지) cập nhật (update / 업데이트) đổi ABI hoặc thư viện (library / 라이브러리) đường dẫn (path / 경로).
 
-Rollback cần xem dependency và config/data compatibility, không chỉ downgrade một package riêng lẻ.
+Quay lui (rollback / 롤백) cần xem phụ thuộc (dependency / 의존성) và cấu hình (config / 설정)/dữ liệu (data / 데이터) tính tương thích (compatibility / 호환성), không chỉ downgrade một gói (package / 패키지) riêng lẻ.
 
-## Một case: host A lỗi, host B khỏe
+## Một trường hợp (case / 사례): host A lỗi, host B khỏe
 
-So sánh package versions:
+So sánh gói (package / 패키지) versions:
 
 ```bash
 # Debian-like
@@ -561,23 +564,23 @@ rpm -qa | sort > /tmp/packages.txt
 
 Sau đó diff giữa hosts.
 
-Nếu app artifact/config giống nhau nhưng package set khác, OS drift trở thành hypothesis mạnh.
+Nếu app sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정) giống nhau nhưng gói (package / 패키지) set khác, OS drift trở thành hypothesis mạnh.
 
-## Configuration drift
+## Cấu hình (configuration / 구성) drift
 
-In-place server tồn tại lâu có thể tích lũy:
+In-place máy chủ (server / 서버) tồn tại lâu có thể tích lũy:
 
-- package versions khác nhau;
+- gói (package / 패키지) versions khác nhau;
 - manual edits;
 - old repositories;
 - disabled services;
 - stale symlinks.
 
-Infrastructure-as-code hoặc immutable image giảm drift bằng cách tái tạo thay vì sửa host mãi mãi.
+Infrastructure-as-code hoặc immutable ảnh (image / 이미지) giảm drift bằng cách tái tạo thay vì sửa host mãi mãi.
 
 ## Mô hình tư duy
 
-Package lifecycle có thể nhìn thành:
+Gói (package / 패키지) vòng đời (lifecycle / 생명주기) có thể nhìn thành:
 
 ```text
 trusted repository
@@ -595,22 +598,24 @@ running processes
 verification / restart / reboot
 ```
 
-Một update chỉ hoàn tất khi runtime state đã thực sự dùng code mới và application health được xác minh.
+Một cập nhật (update / 업데이트) chỉ hoàn tất khi thời gian chạy (runtime / 런타임) trạng thái (state / 상태) đã thực sự dùng mã (code / 코드) mới và ứng dụng (application / 애플리케이션) health được xác minh.
 
 ## Những hiểu lầm phổ biến
 
-**“Cài package mới nghĩa process đang chạy đã dùng version mới.”** Không; process có thể vẫn giữ binary/library mapping cũ.
+**“Cài gói (package / 패키지) mới nghĩa tiến trình (process / 프로세스) đang chạy đã dùng phiên bản (version / 버전) mới.”** Không; tiến trình (process / 프로세스) có thể vẫn giữ nhị phân (binary / 이진)/thư viện (library / 라이브러리) ánh xạ (mapping / 매핑) cũ.
 
-**“HTTPS đủ để tin package.”** Repository signing và provenance vẫn quan trọng.
+**“HTTPS đủ để tin gói (package / 패키지).”** Repository signing và provenance vẫn quan trọng.
 
-**“Checksum chứng minh file đến từ vendor.”** Checksum chỉ mạnh nếu nguồn checksum cũng được trust độc lập.
+**“Checksum chứng minh tệp (file / 파일) đến từ vendor.”** Checksum chỉ mạnh nếu nguồn checksum cũng được trust độc lập.
 
-**“Downgrade package luôn rollback được.”** Data/config/schema migration có thể không tương thích ngược.
+**“Downgrade gói (package / 패키지) luôn quay lui (rollback / 롤백) được.”** dữ liệu (data / 데이터)/cấu hình (config / 설정)/lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) có thể không tương thích ngược.
 
-**“Version upstream thấp hơn nghĩa chắc chắn còn CVE.”** Distro có thể backport patch.
+**“phiên bản (version / 버전) upstream thấp hơn nghĩa chắc chắn còn CVE.”** Distro có thể backport patch.
 
-**“Auto-update luôn tốt hơn manual.”** Cần cân bằng security speed và availability/change control.
+**“Auto-update luôn tốt hơn manual.”** Cần cân bằng bảo mật (security / 보안) speed và availability/thay đổi (change / 변경) điều khiển (control / 제어).
 
 ## Kết nối kiến thức
 
-Đọc [ELF và dynamic linking](./elf_dynamic_linking.md) để hiểu tác động của shared library upgrade, [Deployment và rollback](./deployment_release_rollback.md) để hiểu release lifecycle, và [Security hardening](./security_hardening.md) để đặt patching vào threat model tổng thể.
+Đọc [ELF và dynamic linking](./elf_dynamic_linking.md) để hiểu tác động của dùng chung (shared / 공유) thư viện (library / 라이브러리) upgrade, [Deployment và rollback](./deployment_release_rollback.md) để hiểu bản phát hành (release / 릴리스) vòng đời (lifecycle / 생명주기), và [Security hardening](./security_hardening.md) để đặt patching vào threat mô hình (model / 모델) tổng thể.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [backup restore disaster recovery](./backup_restore_disaster_recovery.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,46 +1,79 @@
 # Bắc Triều Tiên: một lịch sử song song sau 1945
 
+> **Mạch đọc:** Đặt **Bắc Triều Tiên: một lịch sử song song sau 1945** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao cần học song song?** sang **trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Vì sao cần học song song?
 
-Korean history sau 1945 không thể chỉ đọc từ Seoul. Democratic People's Republic of Korea hình thành năm 1948 trên nền Soviet occupation zone, land reform, nationalization và political consolidation dưới Korean Workers' Party.
+Korean lịch sử (history / 이력) sau 1945 không thể chỉ đọc từ Seoul. Democratic People's Republic of Korea hình thành năm 1948 trên nền Soviet occupation zone, land reform, nationalization và political consolidation dưới Korean Workers' Party.
 
-## State building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)
 
-North Korea xây centralized party-state và planned economy. Korean War phá huỷ phần lớn infrastructure; postwar reconstruction ban đầu đạt industrial growth đáng kể trong một số giai đoạn, với support từ socialist bloc.
+> **Chuyển mạch:** Từ **Vì sao cần học song song?**, ta sang **trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)
+
+North Korea xây centralized party-state và planned economy. Korean War phá huỷ phần lớn hạ tầng (infrastructure / 인프라); postwar reconstruction ban đầu đạt industrial growth đáng kể trong một số giai đoạn, với hỗ trợ (support / 지원) từ socialist bloc.
+
+
+> **Chuyển mạch:** Từ **trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)**, ta sang **Juche và political consolidation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Juche và political consolidation
 
-**Juche (주체)** dần trở thành ideological framework nhấn mạnh political autonomy/self-reliance nhưng trên thực tế North Korea vẫn phụ thuộc vào external trade và aid ở nhiều giai đoạn. Personality cult và hereditary leadership structure làm political system ngày càng khác các socialist states khác.
+**Juche (주체)** dần trở thành ideological khung phần mềm (framework / 프레임워크) nhấn mạnh political autonomy/self-reliance nhưng trên thực tế North Korea vẫn phụ thuộc vào bên ngoài (external / 외부) trade và aid ở nhiều giai đoạn. Personality cult và hereditary leadership cấu trúc (structure / 구조) làm political hệ thống (system / 시스템) ngày càng khác các socialist states khác.
+
+
+> **Chuyển mạch:** Từ **Juche và political consolidation**, ta sang **Economic divergence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Economic divergence
 
-Từ 1960s onward, South Korea tăng nhanh; North Korean growth chậm lại. Collapse of Soviet bloc làm trade/support shock lớn. 1990s famine, thường gọi “Arduous March” (고난의 행군), gây severe human suffering và thúc đẩy informal marketization từ dưới lên.
+Từ 1960s onward, South Korea tăng nhanh; North Korean growth chậm lại. Collapse of Soviet bloc làm trade/hỗ trợ (support / 지원) shock lớn. 1990s famine, thường gọi “Arduous March” (고난의 행군), gây severe human suffering và thúc đẩy informal marketization từ dưới lên.
 
-## Markets trong planned system
 
-Jangmadang (장마당) trở thành livelihood institution quan trọng. Đây là historical paradox: formal ideology giữ planned economy nhưng household survival tạo market practice. De facto institution có thể xuất hiện khi formal system không cung cấp đủ goods.
+> **Chuyển mạch:** Từ **Economic divergence**, ta sang **Markets trong planned hệ thống (system / 시스템)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Security state và nuclear program
+## Markets trong planned hệ thống (system / 시스템)
 
-Military and nuclear capability trở thành central survival strategy của regime trong post-Cold War environment. Vì developments hiện tại thay đổi nhanh, file này tập trung historical trajectory hơn là đánh giá tình hình đương thời.
+Jangmadang (장마당) trở thành livelihood institution quan trọng. Đây là historical paradox: formal ideology giữ planned economy nhưng household survival tạo thị trường (market / 시장) practice. De facto institution có thể xuất hiện khi formal hệ thống (system / 시스템) không cung cấp đủ goods.
 
-## Mental Model
 
-> Sau 1945, cùng một pre-division historical inheritance đi vào hai institutional experiments rất khác. Comparative history giúp thấy culture alone không quyết định outcome; institutions, alliances và incentives có thể đưa shared past tới paths khác nhau.
+> **Chuyển mạch:** Từ **Markets trong planned hệ thống (system / 시스템)**, ta sang **bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Postwar industrial strategy
+## Bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program
 
-North Korea initially prioritized heavy industry and collective agriculture. With inherited northern industrial base and socialist aid, some indicators compared favorably with South during early postwar decades. Divergence later shows starting industrial stock alone does not determine long-run outcome.
+Military and nuclear năng lực (capability / 역량) trở thành central survival chiến lược (strategy / 전략) của regime trong post-Cold War môi trường (environment / 환경). Vì developments hiện tại thay đổi nhanh, tệp (file / 파일) này tập trung historical trajectory hơn là đánh giá tình hình đương thời.
 
-## Planning information problem
 
-Central planning must decide output/inputs across many goods. Without price signals or honest local reporting, center can face information bottleneck. This is not proof all planning fails identically, but it explains why shortage, quality and allocation problems can emerge when data/incentives misalign.
+> **Chuyển mạch:** Từ **bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Songbun and social classification
+## Mô hình tư duy (mental model / 사고 모델)
 
-North Korean social classification is often discussed under songbun (성분). Exact operation changes and outside information is incomplete, but family/political background historically affected opportunity. This illustrates how state can turn political trust into administratively relevant metadata.
+> Sau 1945, cùng một pre-division historical inheritance đi vào hai institutional experiments rất khác. Comparative lịch sử (history / 이력) giúp thấy culture alone không quyết định kết quả (outcome / 결과); institutions, alliances và incentives có thể đưa dùng chung (shared / 공유) past tới paths khác nhau.
 
-## Famine and market adaptation
 
-When state distribution failed during 1990s crisis, households relied more on market exchange. Bottom-up marketization can persist because once people build supply network and price knowledge, suppressing it imposes high welfare and enforcement cost.
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Postwar industrial chiến lược (strategy / 전략)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
+## Postwar industrial chiến lược (strategy / 전략)
+
+North Korea initially prioritized heavy industry and collective agriculture. With inherited northern industrial cơ sở (base / 기반) and socialist aid, some indicators compared favorably with South during early postwar decades. Divergence later shows starting industrial stock alone does not determine long-run kết quả (outcome / 결과).
+
+
+> **Chuyển mạch:** Từ **Postwar industrial chiến lược (strategy / 전략)**, ta sang **Planning thông tin (information / 정보) bài toán (problem / 문제)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Planning thông tin (information / 정보) bài toán (problem / 문제)
+
+Central planning must decide đầu ra (output / 출력)/inputs across many goods. Without price signals or honest cục bộ (local / 로컬) reporting, center can face thông tin (information / 정보) bottleneck. This is not proof all planning fails identically, but it explains why shortage, chất lượng (quality / 품질) and allocation problems can emerge when dữ liệu (data / 데이터)/incentives misalign.
+
+
+> **Chuyển mạch:** Từ **Planning thông tin (information / 정보) bài toán (problem / 문제)**, ta sang **Songbun and xã hội (social / 사회적) classification** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Songbun and xã hội (social / 사회적) classification
+
+North Korean xã hội (social / 사회적) classification is often discussed under songbun (성분). chính xác (exact / 정확한) thao tác (operation / 연산) changes and outside thông tin (information / 정보) is incomplete, but family/political background historically affected opportunity. This illustrates how trạng thái (state / 상태) can turn political trust into administratively relevant siêu dữ liệu (metadata / 메타데이터).
+
+
+> **Chuyển mạch:** Từ **Songbun and xã hội (social / 사회적) classification**, ta sang **Famine and thị trường (market / 시장) adaptation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Famine and thị trường (market / 시장) adaptation
+
+When trạng thái (state / 상태) phân phối (distribution / 분포) failed during 1990s crisis, households relied more on thị trường (market / 시장) exchange. Bottom-up marketization can persist because once people bản dựng (build / 빌드) supply mạng (network / 네트워크) and price kiến thức (knowledge / 지식), suppressing it imposes high welfare and enforcement chi phí (cost / 비용).
+
+> **Bàn giao:** Sau **Famine and thị trường (market / 시장) adaptation**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

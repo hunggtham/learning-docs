@@ -1,8 +1,11 @@
-# 11 — Portfolio FX risk, correlation và factor exposure
+# 11 — Portfolio FX rủi ro (risk / 위험), correlation và factor exposure
 
-Một danh sách nhiều trade không tự động là một danh mục đa dạng hóa. Trong Forex, cùng một currency hoặc cùng một macro factor có thể xuất hiện lặp lại dưới nhiều ticker khác nhau. Vì vậy risk phải được tổng hợp ở cấp **currency, factor, strategy và liquidity**, không chỉ theo từng ticket.
+> **Mạch đọc:** Đặt **11 — Portfolio FX rủi ro (risk / 위험), correlation và factor exposure** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ticket view dễ che giấu exposure** sang **2. Currency decomposition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model:
+
+Một danh sách nhiều trade không tự động là một danh mục đa dạng hóa. Trong Forex, cùng một currency hoặc cùng một macro factor có thể xuất hiện lặp lại dưới nhiều ticker khác nhau. Vì vậy rủi ro (risk / 위험) phải được tổng hợp ở cấp **currency, factor, chiến lược (strategy / 전략) và liquidity**, không chỉ theo từng ticket.
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Positions
@@ -35,7 +38,7 @@ Nếu USD tăng mạnh, cả ba có thể lỗ cùng lúc.
 
 ## 2. Currency decomposition
 
-Mỗi pair có thể biểu diễn bằng vector exposure.
+Mỗi pair có thể biểu diễn bằng véc-tơ (vector / 벡터) exposure.
 
 Ví dụ long EUR/USD:
 
@@ -51,7 +54,7 @@ Long USD/JPY:
 -JPY
 ```
 
-Portfolio nên aggregate net exposure theo từng currency sau khi quy đổi về common risk units.
+Portfolio nên aggregate net exposure theo từng currency sau khi quy đổi về dùng chung (common / 공통) rủi ro (risk / 위험) units.
 
 ## 3. Notional aggregation chưa đủ
 
@@ -64,9 +67,9 @@ Ví dụ:
 100k USD/TRY
 ```
 
-không thể coi là same risk.
+không thể coi là same rủi ro (risk / 위험).
 
-Risk-normalized exposure cần volatility, liquidity và tail behavior.
+Risk-normalized exposure cần volatility, liquidity và tail hành vi (behavior / 동작).
 
 ## 4. Gross và net exposure
 
@@ -75,9 +78,9 @@ Gross Exposure = Σ |notional_i|
 Net Exposure = directional aggregate after offsets
 ```
 
-Net nhỏ không có nghĩa gross risk nhỏ.
+Net nhỏ không có nghĩa gross rủi ro (risk / 위험) nhỏ.
 
-Một long EUR/USD và short EUR/JPY có thể net EUR một phần nhưng tạo USD/JPY cross exposure và execution risk ở hai legs.
+Một long EUR/USD và short EUR/JPY có thể net EUR một phần nhưng tạo USD/JPY cross exposure và thực thi (execution / 실행) rủi ro (risk / 위험) ở hai legs.
 
 ## 5. Correlation là time-varying
 
@@ -92,21 +95,21 @@ liquidity can deteriorate together
 
 Do đó full-sample correlation thường đánh giá thấp crisis dependence.
 
-## 6. Covariance matrix
+## 6. Covariance ma trận (matrix / 행렬)
 
-Với return vector `r` và weights `w`:
+Với return véc-tơ (vector / 벡터) `r` và weights `w`:
 
 ```text
 Portfolio Variance = w' Σ w
 ```
 
-`Σ` là covariance matrix.
+`Σ` là covariance ma trận (matrix / 행렬).
 
-Công thức hữu ích nhưng kết quả phụ thuộc estimate window, data frequency và regime.
+Công thức hữu ích nhưng kết quả phụ thuộc estimate cửa sổ (window / 윈도우), dữ liệu (data / 데이터) frequency và regime.
 
-## 7. Estimation error
+## 7. Estimation lỗi (error / 오류)
 
-Covariance matrix từ sample ngắn có thể unstable, đặc biệt với nhiều instruments.
+Covariance ma trận (matrix / 행렬) từ mẫu (sample / 표본) ngắn có thể unstable, đặc biệt với nhiều instruments.
 
 Một optimizer có thể tạo extreme weights từ small estimation errors.
 
@@ -114,19 +117,19 @@ Practical controls:
 
 - shrinkage;
 - weight caps;
-- simpler factor model;
+- simpler factor mô hình (model / 모델);
 - stress scenarios.
 
-## 8. Factor model
+## 8. Factor mô hình (model / 모델)
 
 FX returns có thể liên quan đến factors như:
 
 - broad USD;
 - carry;
-- global risk sentiment;
+- toàn cục (global / 전역) rủi ro (risk / 위험) sentiment;
 - commodity exposure;
-- rate differential;
-- regional Asia risk;
+- tỷ lệ (rate / 비율) differential;
+- regional Asia rủi ro (risk / 위험);
 - volatility/liquidity.
 
 Thay vì chỉ pair correlation, có thể estimate sensitivity tới factors.
@@ -137,7 +140,7 @@ Nhiều portfolios vô tình trở thành USD bet.
 
 Nếu long EUR/USD, GBP/USD, AUD/USD và short USD/CHF, portfolio có broad anti-USD exposure.
 
-Performance attribution phải tách broad USD move khỏi skill của từng signal.
+Hiệu năng (performance / 성능) attribution phải tách broad USD move khỏi skill của từng tín hiệu (signal / 신호).
 
 ## 10. Carry factor
 
@@ -149,23 +152,23 @@ Correlation bình thường thấp nhưng tail losses có thể cluster.
 
 Currencies của commodity exporters có thể đồng biến với commodity/China/global-growth factors.
 
-Nhưng relationship không cố định và khác theo economy structure.
+Nhưng relationship không cố định và khác theo economy cấu trúc (structure / 구조).
 
-## 12. Rate factor
+## 12. tỷ lệ (rate / 비율) factor
 
-Positions nhạy với front-end yield differential có thể cùng react khi global central-bank expectations shift.
+Positions nhạy với front-end yield differential có thể cùng react khi toàn cục (global / 전역) central-bank expectations shift.
 
 Một portfolio nhiều pairs không diversified nếu tất cả đều là cùng một “rates divergence” trade.
 
-## 13. Strategy correlation
+## 13. chiến lược (strategy / 전략) correlation
 
 Cần nhìn cả correlation giữa **strategies**:
 
 - carry;
 - trend;
 - mean reversion;
-- event;
-- value.
+- sự kiện (event / 이벤트);
+- giá trị (value / 값).
 
 Hai strategies trên khác pairs vẫn có thể cùng factor exposure.
 
@@ -177,20 +180,20 @@ Có thể estimate:
 - tail dependence;
 - conditional correlation during high-vol periods.
 
-Risk management quan tâm nhất lúc nhiều positions cùng lỗ.
+Rủi ro (risk / 위험) management quan tâm nhất lúc nhiều positions cùng lỗ.
 
 ## 15. Portfolio heat
 
-Một practical metric:
+Một practical chỉ số (metric / 지표):
 
 ```text
 Portfolio Heat
 ≈ sum of planned losses to stops
 ```
 
-Nhưng nếu stops correlated/slippage correlated, actual tail loss có thể lớn hơn sum planned loss.
+Nhưng nếu stops correlated/slippage correlated, actual tail mất mát (loss / 손실) có thể lớn hơn sum planned mất mát (loss / 손실).
 
-Do đó portfolio heat chỉ là first layer.
+Do đó portfolio heat chỉ là first tầng (layer / 계층).
 
 ## 16. Scenario stress
 
@@ -207,17 +210,17 @@ KRW liquidity stress
 
 Sau đó map positions vào P/L.
 
-Scenario không cần có probability chính xác để hữu ích.
+Scenario không cần có xác suất (probability / 확률) chính xác để hữu ích.
 
 ## 17. Historical stress
 
 Replay conceptual periods:
 
-- global financial stress;
+- toàn cục (global / 전역) financial stress;
 - pandemic shock;
 - abrupt central-bank repricing;
 - peg break;
-- geopolitical energy shock.
+- geopolitical năng lượng (energy / 에너지) shock.
 
 Nhưng historical scenario không bao phủ mọi future shock.
 
@@ -225,62 +228,62 @@ Nhưng historical scenario không bao phủ mọi future shock.
 
 VaR trả lời gần:
 
-> Với model và confidence level, threshold loss là bao nhiêu?
+> Với mô hình (model / 모델) và confidence mức (level / 수준), threshold mất mát (loss / 손실) là bao nhiêu?
 
-Không phải maximum loss.
+Không phải maximum mất mát (loss / 손실).
 
-FX tails/gaps/liquidity breaks làm VaR dễ underestimate extreme risk nếu model quá Gaussian.
+FX tails/gaps/liquidity breaks làm VaR dễ underestimate extreme rủi ro (risk / 위험) nếu mô hình (model / 모델) quá Gaussian.
 
 ## 19. Expected Shortfall
 
-Expected Shortfall nhìn average loss beyond VaR threshold.
+Expected Shortfall nhìn average mất mát (loss / 손실) beyond VaR threshold.
 
-Nó tập trung tail tốt hơn VaR nhưng vẫn model/data dependent.
+Nó tập trung tail tốt hơn VaR nhưng vẫn mô hình (model / 모델)/dữ liệu (data / 데이터) dependent.
 
-## 20. Drawdown constraint
+## 20. Drawdown ràng buộc (constraint / 제약조건)
 
 Portfolio có thể đặt:
 
-- soft drawdown review;
+- soft drawdown rà soát (review / 검토);
 - hard exposure reduction;
 - kill switch.
 
-Threshold phải được thiết kế trước, không tùy cảm xúc sau loss.
+Threshold phải được thiết kế trước, không tùy cảm xúc sau mất mát (loss / 손실).
 
 ## 21. Volatility targeting
 
-Một portfolio có thể scale exposure để giữ target volatility:
+Một portfolio có thể quy mô (scale / 규모) exposure để giữ mục tiêu (target / 대상) volatility:
 
 ```text
 Scale ≈ Target Vol / Estimated Vol
 ```
 
-Nhưng volatility estimate giảm chậm/tăng chậm có lag. Shock có thể xảy ra trước khi model giảm size.
+Nhưng volatility estimate giảm chậm/tăng chậm có lag. Shock có thể xảy ra trước khi mô hình (model / 모델) giảm kích thước (size / 크기).
 
 ## 22. Leverage cap
 
-Ngoài volatility target, cần cap:
+Ngoài volatility mục tiêu (target / 대상), cần cap:
 
 - gross leverage;
 - currency concentration;
-- strategy concentration;
+- chiến lược (strategy / 전략) concentration;
 - illiquid exposure.
 
 Không dựa duy nhất vào covariance optimizer.
 
-## 23. Risk contribution
+## 23. rủi ro (risk / 위험) contribution
 
-Marginal risk contribution hỏi:
+Marginal rủi ro (risk / 위험) contribution hỏi:
 
-> Position này thêm bao nhiêu vào portfolio volatility/risk?
+> Position này thêm bao nhiêu vào portfolio volatility/rủi ro (risk / 위험)?
 
 Một small notional position có thể đóng góp lớn nếu volatility/correlation cao.
 
-## 24. Risk parity
+## 24. rủi ro (risk / 위험) parity
 
-Risk parity phân bổ để các components đóng góp risk tương tự.
+Rủi ro (risk / 위험) parity phân bổ để các components đóng góp rủi ro (risk / 위험) tương tự.
 
-Đây là allocation rule, không đảm bảo return tốt hơn.
+Đây là allocation quy tắc (rule / 규칙), không đảm bảo return tốt hơn.
 
 ## 25. Concentration by currency
 
@@ -304,15 +307,15 @@ Ví dụ nhiều trades đều dựa trên “Fed dovish”. Dù tickers khác, 
 
 Journal nên tag thesis/factor.
 
-## 27. Event concentration
+## 27. sự kiện (event / 이벤트) concentration
 
-Nếu portfolio có nhiều USD pairs trước FOMC, event exposure tập trung.
+Nếu portfolio có nhiều USD pairs trước FOMC, sự kiện (event / 이벤트) exposure tập trung.
 
-Risk budget nên xét scheduled event cluster.
+Rủi ro (risk / 위험) ngân sách (budget / 예산) nên xét scheduled sự kiện (event / 이벤트) cluster.
 
 ## 28. Liquidity concentration
 
-Nhiều positions có thể liquid trong normal market nhưng cùng illiquid trong stress.
+Nhiều positions có thể liquid trong normal thị trường (market / 시장) nhưng cùng illiquid trong stress.
 
 Need stress:
 
@@ -325,18 +328,18 @@ margin increase
 
 ## 29. Cross-margin và broker dependence
 
-Một broker outage hoặc stop-out rule có thể ảnh hưởng toàn portfolio cùng lúc.
+Một broker outage hoặc stop-out quy tắc (rule / 규칙) có thể ảnh hưởng toàn portfolio cùng lúc.
 
-Operational diversification khác market diversification.
+Operational diversification khác thị trường (market / 시장) diversification.
 
 ## 30. Multiple brokers không tự động safer
 
-Có thể giảm single-platform dependency nhưng tăng:
+Có thể giảm single-platform phụ thuộc (dependency / 의존성) nhưng tăng:
 
-- reconciliation complexity;
+- reconciliation độ phức tạp (complexity / 복잡도);
 - fragmented margin;
 - transfer delay;
-- inconsistent execution.
+- inconsistent thực thi (execution / 실행).
 
 Phải có reason rõ.
 
@@ -348,9 +351,9 @@ Nếu hedge underlying foreign asset exposure:
 Hedge Ratio = FX hedge notional / underlying currency exposure
 ```
 
-100% hedge không luôn optimal nếu underlying exposure thay đổi hoặc hedge cost cao.
+100% hedge không luôn optimal nếu underlying exposure thay đổi hoặc hedge chi phí (cost / 비용) cao.
 
-## 32. Basis risk
+## 32. Basis rủi ro (risk / 위험)
 
 Hedge instrument có thể không perfectly match:
 
@@ -359,18 +362,18 @@ Hedge instrument có thể không perfectly match:
 - settlement;
 - underlying exposure timing.
 
-Residual difference là basis risk.
+Residual difference là basis rủi ro (risk / 위험).
 
-## 33. Dynamic hedging
+## 33. động (dynamic / 동적) hedging
 
 Hedge ratio có thể adjust theo:
 
-- asset value;
-- risk tolerance;
-- hedge cost;
+- asset giá trị (value / 값);
+- rủi ro (risk / 위험) tolerance;
+- hedge chi phí (cost / 비용);
 - volatility.
 
-Nhưng frequent rehedging tạo turnover/cost.
+Nhưng frequent rehedging tạo turnover/chi phí (cost / 비용).
 
 ## 34. Currency overlay
 
@@ -378,11 +381,11 @@ Institutional portfolio có thể tách asset allocation khỏi currency overlay
 
 Ví dụ giữ foreign equities nhưng hedge một phần FX exposure bằng forwards.
 
-Điều này cho thấy FX position có thể là risk-management layer, không phải standalone speculative trade.
+Điều này cho thấy FX position có thể là risk-management tầng (layer / 계층), không phải standalone speculative trade.
 
 ## 35. Portfolio of strategies
 
-Một robust system có thể combine strategies có different return drivers.
+Một robust hệ thống (system / 시스템) có thể combine strategies có different return drivers.
 
 Need assess:
 
@@ -401,16 +404,16 @@ Không chỉ individual Sharpe.
 Allocation có thể dựa trên:
 
 - equal capital;
-- equal risk;
-- expected return/risk;
-- drawdown budget;
+- equal rủi ro (risk / 위험);
+- expected return/rủi ro (risk / 위험);
+- drawdown ngân sách (budget / 예산);
 - Bayesian/uncertainty-aware estimates.
 
 More complex không luôn better vì expected return estimates rất noisy.
 
 ## 37. Rebalancing
 
-Rebalance quá thường → cost cao.
+Rebalance quá thường → chi phí (cost / 비용) cao.
 
 Quá ít → exposure drift.
 
@@ -420,13 +423,13 @@ Need define:
 - threshold-based;
 - event-triggered.
 
-## 38. Stress correlation matrix
+## 38. Stress correlation ma trận (matrix / 행렬)
 
 Có thể xây covariance riêng cho high-vol observations để so normal vs stress.
 
-Nếu diversification biến mất trong stress, normal matrix không đủ.
+Nếu diversification biến mất trong stress, normal ma trận (matrix / 행렬) không đủ.
 
-## 39. Risk dashboard
+## 39. rủi ro (risk / 위험) dashboard
 
 Một dashboard tối thiểu:
 
@@ -457,9 +460,9 @@ What is portfolio heat after entry?
 What event/liquidity risk is added?
 ```
 
-## 41. Risk budget không phải profit target
+## 41. rủi ro (risk / 위험) ngân sách (budget / 예산) không phải profit mục tiêu (target / 대상)
 
-Risk budget giới hạn acceptable loss/exposure. Không nên ép strategy tạo target return bằng tăng leverage.
+Rủi ro (risk / 위험) ngân sách (budget / 예산) giới hạn acceptable mất mát (loss / 손실)/exposure. Không nên ép chiến lược (strategy / 전략) tạo mục tiêu (target / 대상) return bằng tăng leverage.
 
 ## 42. Checklist
 
@@ -470,19 +473,21 @@ Bạn cần tự giải thích được:
 3. Currency decomposition.
 4. Correlation regime dependence.
 5. Portfolio heat limitations.
-6. Why VaR is not max loss.
+6. Why VaR is not max mất mát (loss / 손실).
 7. Volatility targeting lag.
-8. Basis risk trong hedge.
-9. Strategy correlation vs pair correlation.
+8. Basis rủi ro (risk / 위험) trong hedge.
+9. chiến lược (strategy / 전략) correlation vs pair correlation.
 10. Operational concentration.
 
 ## Đọc tiếp
 
 → [12 — Trading journal, review and performance attribution](./12_TRADING_JOURNAL_REVIEW_AND_PERFORMANCE_ATTRIBUTION.md)
 
-## Internal links
+## Nội bộ (internal / 내부) links
 
 - [03 — Leverage, margin and position sizing](./03_LEVERAGE_MARGIN_POSITION_SIZING.md)
 - [09 — FX strategy families](./09_CARRY_MOMENTUM_VALUE_AND_MACRO_FX_STRATEGIES.md)
 - [10 — Backtesting and point-in-time data](./10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 - [Execution, Microstructure and Trading Portfolio](../03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md)
+
+> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MARKET STRUCTURE AND INSTRUMENTS](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

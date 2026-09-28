@@ -1,24 +1,27 @@
 # Bản đồ, tỷ lệ, phép chiếu và suy luận không gian
 
+> **Mạch đọc:** Đọc **Bản đồ, tỷ lệ, phép chiếu và suy luận không gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bản đồ không phải bản sao thu nhỏ của thế giới** sang **Ba nghĩa khác nhau của “quy mô (scale / 규모)”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Bản đồ không phải bản sao thu nhỏ của thế giới
 
 **Bản đồ học (cartography / 지도학)** là quá trình thiết kế một mô hình không gian. Bất kỳ bản đồ nào cũng phải chọn phạm vi, tỷ lệ, phép chiếu, ký hiệu, cách phân lớp dữ liệu và thứ tự ưu tiên thị giác. Vì vậy bản đồ không thể chứa toàn bộ thế giới; nó luôn là một phép **khái quát hóa (generalization)** phục vụ câu hỏi cụ thể.
 
 Điểm này rất quan trọng cho năng lực đọc bản đồ. Một bản đồ có thể chính xác về kỹ thuật nhưng vẫn gây hiểu sai nếu người đọc không biết dữ liệu gì bị bỏ qua, biến nào được chuẩn hóa, ranh giới nào được sử dụng hoặc phép chiếu đang bảo toàn tính chất nào.
 
-## Ba nghĩa khác nhau của “scale”
+## Ba nghĩa khác nhau của “quy mô (scale / 규모)”
 
-Trong Địa lý, **quy mô (scale)** có ít nhất ba lớp dễ bị trộn lẫn.
+Trong Địa lý, **quy mô (scale / 규모)** có ít nhất ba lớp dễ bị trộn lẫn.
 
 **Tỷ lệ bản đồ (map scale)** như 1:50.000 mô tả quan hệ giữa khoảng cách trên bản đồ và ngoài thực địa. **Quy mô không gian của hiện tượng (spatial scale)** nói về phạm vi mà quá trình hoạt động, ví dụ từ phố, đô thị, lưu vực đến toàn cầu. **Quy mô phân tích (scale of analysis)** là cấp mà ta gom dữ liệu, ví dụ hộ gia đình, quận, tỉnh hay quốc gia.
 
-Một kết luận có thể thay đổi khi đổi quy mô phân tích. Trung bình của tỉnh có thể che cụm nghèo trong vài quận; xu hướng toàn cầu có thể khác xu hướng địa phương. Do đó scale không chỉ là chuyện phóng to–thu nhỏ hình ảnh mà là một phần của logic suy luận.
+Một kết luận có thể thay đổi khi đổi quy mô phân tích. Trung bình của tỉnh có thể che cụm nghèo trong vài quận; xu hướng toàn cầu có thể khác xu hướng địa phương. Do đó quy mô (scale / 규모) không chỉ là chuyện phóng to–thu nhỏ hình ảnh mà là một phần của lô-gic (logic / 논리) suy luận.
 
 ## Extent, resolution và grain
 
-Ngoài scale, cần phân biệt **phạm vi (extent)** và **độ phân giải (resolution/grain)**. Một raster 30 m phủ cả quốc gia có extent rất lớn nhưng grain tương đối mịn; một raster 1 km phủ một thành phố có extent nhỏ hơn nhưng grain thô hơn.
+Ngoài quy mô (scale / 규모), cần phân biệt **phạm vi (extent)** và **độ phân giải (resolution/grain)**. Một raster 30 m phủ cả quốc gia có extent rất lớn nhưng grain tương đối mịn; một raster 1 km phủ một thành phố có extent nhỏ hơn nhưng grain thô hơn.
 
-Khi độ phân giải quá thô, các đối tượng nhỏ bị trộn trong cùng pixel hoặc vùng thống kê. Khi quá mịn so với chất lượng dữ liệu, bản đồ có thể tạo ảo giác chính xác. Độ chi tiết hiển thị nên phù hợp với độ chính xác của phép đo và câu hỏi nghiên cứu.
+Khi độ phân giải quá thô, các đối tượng nhỏ bị trộn trong cùng điểm ảnh (pixel / 픽셀) hoặc vùng thống kê. Khi quá mịn so với chất lượng dữ liệu, bản đồ có thể tạo ảo giác chính xác. Độ chi tiết hiển thị nên phù hợp với độ chính xác của phép đo và câu hỏi nghiên cứu.
 
 ## Vì sao phép chiếu là bắt buộc?
 
@@ -42,7 +45,7 @@ Web Mercator phổ biến trong bản đồ web chủ yếu vì tính tiện l�
 
 Một cách trực quan để hiểu biến dạng phép chiếu là **Tissot indicatrix**. Ta tưởng tượng các vòng tròn nhỏ giống nhau trên địa cầu; sau phép chiếu chúng có thể trở thành ellipse khác kích thước và hướng. Hình dạng ellipse cho biết biến dạng góc, diện tích và phương hướng cục bộ.
 
-Mental model này hữu ích hơn việc học thuộc danh sách tên projection vì nó giúp hỏi: “bản đồ này đang bóp méo thứ gì và ở đâu?”.
+Mô hình tư duy (mental model / 사고 모델) này hữu ích hơn việc học thuộc danh sách tên projection vì nó giúp hỏi: “bản đồ này đang bóp méo thứ gì và ở đâu?”.
 
 ## UTM và bài toán địa phương
 
@@ -54,7 +57,7 @@ Trong khảo sát, kỹ thuật hoặc tính diện tích, chọn CRS địa ph�
 
 Khi thu nhỏ bản đồ, không thể giữ mọi con đường, sông nhỏ và tòa nhà. Cartography cần **generalization**: chọn lọc, đơn giản hóa, gộp, dịch chuyển ký hiệu hoặc thay đổi cách biểu diễn.
 
-Một thành phố có thể là polygon ở zoom lớn, point ở zoom nhỏ. Một con sông nhiều khúc uốn được đơn giản hóa. Đây không phải “làm sai dữ liệu”; nó là chuyển đổi biểu diễn để giữ cấu trúc quan trọng ở mỗi tỷ lệ.
+Một thành phố có thể là polygon ở zoom lớn, điểm (point / 지점) ở zoom nhỏ. Một con sông nhiều khúc uốn được đơn giản hóa. Đây không phải “làm sai dữ liệu”; nó là chuyển đổi biểu diễn để giữ cấu trúc quan trọng ở mỗi tỷ lệ.
 
 Nhưng generalization cần nhất quán. Nếu đơn giản hóa quá mạnh, topology có thể bị phá hoặc biên giới có thể trông thay đổi.
 
@@ -62,7 +65,7 @@ Nhưng generalization cần nhất quán. Nếu đơn giản hóa quá mạnh, t
 
 **Bản đồ tô vùng (choropleth map)** phù hợp với biến đã chuẩn hóa theo diện tích, dân số hoặc mẫu số liên quan, chẳng hạn tỷ lệ thất nghiệp hoặc mật độ dân số. Dùng số lượng tuyệt đối dễ khiến vùng lớn hoặc đông dân chi phối thị giác.
 
-Ví dụ bản đồ số ca bệnh tuyệt đối thường phản ánh một phần bản đồ dân số. Nếu câu hỏi là “rủi ro đối với mỗi người”, cần tỷ lệ phù hợp hơn. Tuy nhiên tỷ lệ ở vùng dân số rất nhỏ có thể dao động mạnh, nên cần nhìn cả mẫu số và uncertainty.
+Ví dụ bản đồ số ca bệnh tuyệt đối thường phản ánh một phần bản đồ dân số. Nếu câu hỏi là “rủi ro đối với mỗi người”, cần tỷ lệ phù hợp hơn. Tuy nhiên tỷ lệ ở vùng dân số rất nhỏ có thể dao động mạnh, nên cần nhìn cả mẫu số và bất định (uncertainty / 불확실성).
 
 ## Phân lớp dữ liệu thay đổi câu chuyện
 
@@ -80,40 +83,42 @@ Cùng dữ liệu hộ gia đình, tương quan có thể khác khi gộp theo p
 
 Liên quan là **ngụy biện sinh thái (ecological fallacy)**: suy đặc điểm cá nhân từ trung bình vùng. “Quận thu nhập cao” không có nghĩa mọi cư dân đều giàu.
 
-## Bản đồ point, proportional symbol, dasymetric và density
+## Bản đồ điểm (point / 지점), proportional symbol, dasymetric và density
 
-Không phải mọi biến nên tô polygon. Điểm phù hợp với sự kiện hoặc cơ sở; **proportional symbol** phù hợp với tổng lượng tại địa điểm; **dot density** giúp trực quan phân bố tương đối; **dasymetric mapping** dùng thông tin bổ sung để phân bố giá trị trong vùng hợp lý hơn.
+Không phải mọi biến nên tô polygon. Điểm phù hợp với sự kiện hoặc cơ sở; **proportional symbol** phù hợp với tổng lượng tại địa điểm; **dot density** giúp trực quan phân bố tương đối; **dasymetric ánh xạ (mapping / 매핑)** dùng thông tin bổ sung để phân bố giá trị trong vùng hợp lý hơn.
 
 Chọn kiểu bản đồ là chọn mô hình dữ liệu. Nếu hiện tượng liên tục như nhiệt độ, ép nó vào biên giới hành chính có thể làm mất cấu trúc. Nếu hiện tượng thuộc từng đơn vị pháp lý như mức thuế địa phương, polygon lại có ý nghĩa trực tiếp.
 
-## Uncertainty cũng cần được cartography hóa
+## Bất định (uncertainty / 불확실성) cũng cần được cartography hóa
 
-Bản đồ thường hiển thị estimate nhưng giấu uncertainty. Điều đó dễ tạo cảm giác ranh giới và giá trị chính xác tuyệt đối.
+Bản đồ thường hiển thị estimate nhưng giấu bất định (uncertainty / 불확실성). Điều đó dễ tạo cảm giác ranh giới và giá trị chính xác tuyệt đối.
 
-Có thể thể hiện uncertainty bằng transparency, hatching, confidence interval, ensemble spread hoặc tách một bản đồ phụ. Trong disaster map, vùng dự báo xác suất khác bản đồ quan sát đã xác nhận; người đọc cần biết hai lớp này không cùng mức chắc chắn.
+Có thể thể hiện bất định (uncertainty / 불확실성) bằng transparency, hatching, confidence interval, ensemble spread hoặc tách một bản đồ phụ. Trong disaster map, vùng dự báo xác suất khác bản đồ quan sát đã xác nhận; người đọc cần biết hai lớp này không cùng mức chắc chắn.
 
 ## Bản đồ và quyền lực lựa chọn
 
-Tên địa danh, đường biên, projection, center point và biến được chọn đều có thể mang ý nghĩa xã hội–chính trị. Điều này không có nghĩa mọi bản đồ đều là tuyên truyền. Nó có nghĩa người đọc cần biết **provenance**: ai tạo, từ dữ liệu nào, thời điểm nào, với quy ước gì.
+Tên địa danh, đường biên, projection, center điểm (point / 지점) và biến được chọn đều có thể mang ý nghĩa xã hội–chính trị. Điều này không có nghĩa mọi bản đồ đều là tuyên truyền. Nó có nghĩa người đọc cần biết **provenance**: ai tạo, từ dữ liệu nào, thời điểm nào, với quy ước gì.
 
-Trong các vùng có tranh chấp, một đường ranh giới có thể đại diện cho claim, line of control, administrative boundary hoặc dataset convention. Cartography tốt phải phân biệt các lớp đó thay vì trộn chúng.
+Trong các vùng có tranh chấp, một đường ranh giới có thể đại diện cho claim, line of điều khiển (control / 제어), administrative ranh giới (boundary / 경계) hoặc dataset convention. Cartography tốt phải phân biệt các lớp đó thay vì trộn chúng.
 
-## Web maps, tiles và vector tiles
+## Web maps, tiles và véc-tơ (vector / 벡터) tiles
 
-Bản đồ web thường dùng **tile pyramid**: thế giới được chia thành các ô theo nhiều mức zoom. Raster tile là ảnh; **vector tile** chứa geometry và attribute đã được cắt/đơn giản hóa để client render.
+Bản đồ web thường dùng **tile pyramid**: thế giới được chia thành các ô theo nhiều mức zoom. Raster tile là ảnh; **véc-tơ (vector / 벡터) tile** chứa hình học (geometry / 기하학) và attribute đã được cắt/đơn giản hóa để máy khách (client / 클라이언트) kết xuất (render / 렌더링).
 
-Hệ tile làm bản đồ tải nhanh nhưng cũng tạo giới hạn. Dữ liệu phải được generalize theo zoom; label cần collision handling; cache có thể khiến dữ liệu cũ tồn tại; feature tại biên tile cần xử lý để không bị đứt.
+Hệ tile làm bản đồ tải nhanh nhưng cũng tạo giới hạn. Dữ liệu phải được generalize theo zoom; label cần collision handling; bộ nhớ đệm (cache / 캐시) có thể khiến dữ liệu cũ tồn tại; tính năng (feature / 기능) tại biên tile cần xử lý để không bị đứt.
 
-## Cartography như một pipeline
+## Cartography như một chuỗi xử lý (pipeline / 파이프라인)
 
 Một bản đồ có thể được hiểu như chuỗi:
 
-**measurement → cleaning → CRS transformation → aggregation/model → classification → symbolization → rendering → interpretation**.
+**đo lường (measurement / 측정) → cleaning → CRS transformation → aggregation/mô hình (model / 모델) → classification → symbolization → rendering → interpretation**.
 
-Lỗi ở đầu pipeline không được sửa bằng thiết kế đẹp ở cuối. Ngược lại, dữ liệu chính xác vẫn có thể truyền tải sai nếu classification hoặc visual hierarchy không phù hợp.
+Lỗi ở đầu chuỗi xử lý (pipeline / 파이프라인) không được sửa bằng thiết kế đẹp ở cuối. Ngược lại, dữ liệu chính xác vẫn có thể truyền tải sai nếu classification hoặc visual hierarchy không phù hợp.
 
 ## Mô hình tư duy
 
-Bản đồ là một **mô hình nén không gian**. Mỗi bản đồ nên được đọc bằng năm câu hỏi: nó phục vụ câu hỏi gì, dùng dữ liệu nào, ở scale/extent nào, phép chiếu và aggregation nào, và uncertainty/provenance được thể hiện ra sao?
+Bản đồ là một **mô hình nén không gian**. Mỗi bản đồ nên được đọc bằng năm câu hỏi: nó phục vụ câu hỏi gì, dùng dữ liệu nào, ở quy mô (scale / 규모)/extent nào, phép chiếu và aggregation nào, và bất định (uncertainty / 불확실성)/provenance được thể hiện ra sao?
 
 Xem tiếp: [GIS và viễn thám](./04_geospatial_data_gis_remote_sensing.md), [Tọa độ và thời gian](./02_coordinates_time_maps.md), [Địa lý + Toán và Thống kê](../90_connections/00_geography_math_statistics.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geographical thinking](./00_geographical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,8 +1,11 @@
 # Generative Adversarial Networks: học phân phối qua một trò chơi đối kháng
 
-Generative Adversarial Network (GAN / 생성적 적대 신경망) học generative model bằng cách đặt **generator** và **discriminator** vào một game đối kháng. Generator tạo fake samples; discriminator cố phân biệt real/fake. Generator cải thiện để discriminator khó nhận ra hơn.
+> **Mạch đọc:** Đặt **Generative Adversarial Networks: học phân phối qua một trò chơi đối kháng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hai networks** sang **Discriminator optimum intuition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-GAN quan trọng vì nó cho thấy generative learning không nhất thiết cần explicit likelihood. Distribution có thể được học thông qua một learned critic/discriminator signal.
+
+Generative Adversarial mạng (network / 네트워크) học generative mô hình (model / 모델) bằng cách đặt **generator** và **discriminator** vào một game đối kháng. Generator tạo fake samples; discriminator cố phân biệt real/fake. Generator cải thiện để discriminator khó nhận ra hơn.
+
+GAN quan trọng vì nó cho thấy generative học tập (learning / 학습) không nhất thiết cần tường minh (explicit / 명시적) likelihood. phân phối (distribution / 분포) có thể được học thông qua một learned critic/discriminator tín hiệu (signal / 신호).
 
 ## Hai networks
 
@@ -18,30 +21,30 @@ Discriminator:
 D_\phi(x)\in(0,1)
 \]
 
-ước lượng input real hay generated.
+ước lượng đầu vào (input / 입력) real hay generated.
 
-Original minimax objective:
+Original minimax mục tiêu (objective / 목표):
 
 \[
 \min_G\max_D
-\mathbb E_{x\sim p_{data}}[\log D(x)]
+\mathbb E_{x\sim p_{dữ liệu (data / 데이터)}}[\log D(x)]
 +
 \mathbb E_{z\sim p(z)}[\log(1-D(G(z)))]
 \]
 
 ## Discriminator optimum intuition
 
-Với fixed generator distribution `p_g`, optimal discriminator:
+Với fixed generator phân phối (distribution / 분포) `p_g`, optimal discriminator:
 
 \[
-D^*(x)=\frac{p_{data}(x)}{p_{data}(x)+p_g(x)}
+D^*(x)=\frac{p_{dữ liệu (data / 데이터)}(x)}{p_{dữ liệu (data / 데이터)}(x)+p_g(x)}
 \]
 
-Substituting into objective links GAN training to Jensen–Shannon divergence under idealized conditions.
+Substituting into mục tiêu (objective / 목표) links GAN huấn luyện (training / 학습) to Jensen–Shannon divergence under idealized conditions.
 
 Generator thus tries make `p_g` indistinguishable from `p_data`.
 
-## Non-Saturating Generator Loss
+## Non-Saturating Generator mất mát (loss / 손실)
 
 Original generator minimizing:
 
@@ -49,9 +52,9 @@ Original generator minimizing:
 \log(1-D(G(z)))
 \]
 
-can have weak gradient when discriminator confidently rejects fakes early.
+can have weak độ dốc (gradient / 기울기) when discriminator confidently rejects fakes early.
 
-Common alternative maximize:
+Dùng chung (common / 공통) alternative maximize:
 
 \[
 \log D(G(z))
@@ -59,27 +62,27 @@ Common alternative maximize:
 
 or minimize negative log. Same equilibrium intuition, stronger early gradients.
 
-## Why adversarial loss can create sharp images
+## Why adversarial mất mát (loss / 손실) can create sharp images
 
-Pixel MSE encourages averaging when multiple plausible outputs exist, often blurry.
+Điểm ảnh (pixel / 픽셀) MSE encourages averaging when multiple plausible outputs exist, often blurry.
 
-Discriminator learns high-dimensional criterion for “looks like real data”, providing perceptual distribution-level signal beyond per-pixel error.
+Discriminator learns high-dimensional criterion for “looks like real dữ liệu (data / 데이터)”, providing perceptual distribution-level tín hiệu (signal / 신호) beyond per-pixel lỗi (error / 오류).
 
-This can yield sharp samples, but training becomes game between moving objectives.
+This can yield sharp samples, but huấn luyện (training / 학습) becomes game between moving objectives.
 
-## Mode Collapse
+## Chế độ (mode / 모드) Collapse
 
 Generator may map many latent inputs to same/small set of outputs that fool discriminator.
 
 Then samples look plausible but lack diversity.
 
-This is **mode collapse**.
+This is **chế độ (mode / 모드) collapse**.
 
-Detection requires diversity metrics/inspection, not only individual sample quality.
+Detection requires diversity metrics/inspection, not only individual mẫu (sample / 표본) chất lượng (quality / 품질).
 
-## Training Instability
+## Huấn luyện (training / 학습) Instability
 
-GAN optimization is not simple minimization of fixed loss; both players change.
+GAN tối ưu hóa (optimization / 최적화) is not simple minimization of fixed mất mát (loss / 손실); both players thay đổi (change / 변경).
 
 Possible dynamics:
 
@@ -88,11 +91,11 @@ Possible dynamics:
 - generator exploits temporary discriminator blind spots;
 - divergence.
 
-Balance architecture, learning rates, update ratios and regularization matter.
+Balance kiến trúc (architecture / 아키텍처), học tập (learning / 학습) rates, cập nhật (update / 업데이트) ratios and regularization matter.
 
 ## Wasserstein GAN
 
-WGAN replaces discriminator probability interpretation with critic and uses Wasserstein-1 / Earth Mover intuition:
+WGAN replaces discriminator xác suất (probability / 확률) interpretation with critic and uses Wasserstein-1 / Earth Mover intuition:
 
 \[
 W(p_r,p_g)=\sup_{\|f\|_L\le1}
@@ -100,17 +103,17 @@ W(p_r,p_g)=\sup_{\|f\|_L\le1}
 \mathbb E_{p_g}[f(x)]
 \]
 
-Need Lipschitz constraint. Original WGAN used weight clipping; WGAN-GP uses gradient penalty:
+Need Lipschitz ràng buộc (constraint / 제약조건). Original WGAN used weight clipping; WGAN-GP uses độ dốc (gradient / 기울기) penalty:
 
 \[
 \lambda(\|\nabla_{\hat x}D(\hat x)\|_2-1)^2
 \]
 
-providing more stable training in many regimes.
+providing more stable huấn luyện (training / 학습) in many regimes.
 
 ## Conditional GAN
 
-Condition generator/discriminator on label/context `y`:
+Điều kiện (condition / 조건) generator/discriminator on label/ngữ cảnh (context / 맥락) `y`:
 
 \[
 G(z,y),\qquad D(x,y)
@@ -118,7 +121,7 @@ G(z,y),\qquad D(x,y)
 
 allows class-controlled generation.
 
-Image-to-image GANs condition on source image, enabling translation like edges→photo, segmentation→image.
+Image-to-image GANs điều kiện (condition / 조건) on nguồn (source / 소스) ảnh (image / 이미지), enabling translation like edges→photo, segmentation→ảnh (image / 이미지).
 
 ## CycleGAN
 
@@ -132,17 +135,17 @@ F(G(x))\approx x
 G(F(y))\approx y
 \]
 
-This imposes structural constraint but does not guarantee semantic correctness; mapping can exploit hidden shortcuts.
+This imposes structural ràng buộc (constraint / 제약조건) but does not guarantee ngữ nghĩa (semantic / 의미적) tính đúng đắn (correctness / 정확성); ánh xạ (mapping / 매핑) can exploit hidden shortcuts.
 
 ## StyleGAN
 
-StyleGAN-family redesigned generator with style modulation, mapping network and multi-scale controls, achieving high-quality controllable face/image synthesis.
+StyleGAN-family redesigned generator with style modulation, ánh xạ (mapping / 매핑) mạng (network / 네트워크) and multi-scale controls, achieving high-quality controllable face/ảnh (image / 이미지) synthesis.
 
-Its significance is architectural: latent control injected across layers rather than only input noise.
+Its significance is architectural: latent điều khiển (control / 제어) injected across layers rather than only đầu vào (input / 입력) noise.
 
 ## GAN Evaluation
 
-**FID (Fréchet Inception Distance)** compares means/covariances of Inception feature distributions:
+**FID (Fréchet Inception Distance)** compares means/covariances of Inception tính năng (feature / 기능) distributions:
 
 \[
 FID=\|\mu_r-\mu_g\|^2+
@@ -151,41 +154,41 @@ Tr(\Sigma_r+\Sigma_g-2(\Sigma_r\Sigma_g)^{1/2})
 
 Lower generally better.
 
-But FID depends feature extractor/sample size and can be gamed/limited. It mixes fidelity/diversity imperfectly.
+But FID depends tính năng (feature / 기능) extractor/cỡ mẫu (sample size / 표본 크기) and can be gamed/limited. It mixes fidelity/diversity imperfectly.
 
-Precision/Recall for generative models can separate sample quality vs coverage.
+Precision/Recall for generative các mô hình (models / 모델들) can separate mẫu (sample / 표본) chất lượng (quality / 품질) vs coverage.
 
 Human evaluation may still matter.
 
-## GAN vs Explicit Likelihood
+## GAN vs tường minh (explicit / 명시적) Likelihood
 
-GAN defines implicit generative distribution via sampling `z→G(z)`. Usually no tractable `p_G(x)` density.
+GAN defines implicit generative phân phối (distribution / 분포) via sampling `z→G(z)`. Usually no tractable `p_G(x)` density.
 
-VAE/diffusion have more explicit probabilistic training formulations.
+VAE/diffusion have more tường minh (explicit / 명시적) probabilistic huấn luyện (training / 학습) formulations.
 
-GAN excels direct fast generation: one forward pass after training, unlike iterative diffusion.
+GAN excels direct fast generation: one forward pass after huấn luyện (training / 학습), unlike iterative diffusion.
 
-## Adversarial Training as Learned Loss
+## Adversarial huấn luyện (training / 학습) as Learned mất mát (loss / 손실)
 
-A deep insight: discriminator acts as learned loss function that adapts to generator weaknesses.
+A deep insight: discriminator acts as learned hàm mất mát (loss function / 손실 함수) that adapts to generator weaknesses.
 
-Instead of hand-designing pixel similarity, model learns criterion distinguishing real distribution.
+Instead of hand-designing điểm ảnh (pixel / 픽셀) similarity, mô hình (model / 모델) learns criterion distinguishing real phân phối (distribution / 분포).
 
-But adaptive loss makes optimization nonstationary.
+But adaptive mất mát (loss / 손실) makes tối ưu hóa (optimization / 최적화) nonstationary.
 
 ## GAN and Adversarial Examples are different concepts
 
-“Adversarial” in GAN refers generator-discriminator game. **Adversarial examples** are intentionally perturbed inputs causing model failure. Related game-theoretic flavor but distinct topics.
+“Adversarial” in GAN refers generator-discriminator game. **Adversarial examples** are intentionally perturbed inputs causing mô hình (model / 모델) thất bại (failure / 실패). Related game-theoretic flavor but distinct topics.
 
 ## Why Diffusion displaced GANs in many image-generation settings
 
-Diffusion training tends to be more stable, covers modes better and scales well with conditioning, while GANs historically require delicate balancing.
+Diffusion huấn luyện (training / 학습) tends to be more stable, covers modes better and scales well with conditioning, while GANs historically require delicate balancing.
 
 GANs still useful where one-pass low-latency generation matters and in specialized domains.
 
-Technology shifts do not make GAN conceptual knowledge obsolete: adversarial objectives remain important in domain adaptation, representation learning and safety/security.
+Technology shifts do not make GAN conceptual kiến thức (knowledge / 지식) obsolete: adversarial objectives remain important in lĩnh vực (domain / 도메인) adaptation, biểu diễn (representation / 표현) học tập (learning / 학습) and an toàn (safety / 안전)/bảo mật (security / 보안).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Generator: propose synthetic reality
@@ -193,28 +196,30 @@ Discriminator/Critic: learn what distinguishes proposal from data
 Feedback: forces generator toward data distribution
 ```
 
-The loss itself becomes learned through competition.
+The mất mát (loss / 손실) itself becomes learned through competition.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “GAN generator copies training images”
+### “GAN generator copies huấn luyện (training / 학습) images”
 
-It learns mapping from latent noise to samples; memorization can occur but is not mechanism definition.
+It learns ánh xạ (mapping / 매핑) from latent noise to samples; memorization can occur but is not cơ chế (mechanism / 메커니즘) definition.
 
-### “If generated images look sharp, model distribution is good”
+### “If generated images look sharp, mô hình (model / 모델) phân phối (distribution / 분포) is good”
 
-Mode collapse can produce sharp but low-diversity samples.
+Chế độ (mode / 모드) collapse can produce sharp but low-diversity samples.
 
 ### “Discriminator accuracy should approach 100%”
 
-At ideal equilibrium discriminator cannot distinguish and outputs ~0.5; training dynamics more complex.
+At ideal equilibrium discriminator cannot distinguish and outputs ~0.5; huấn luyện (training / 학습) dynamics more complex.
 
-### “WGAN simply changes loss name”
+### “WGAN simply changes mất mát (loss / 손실) name”
 
-It changes divergence/distance framework and critic constraints, altering gradient behavior fundamentally.
+It changes divergence/distance khung phần mềm (framework / 프레임워크) and critic các ràng buộc (constraints / 제약조건들), altering độ dốc (gradient / 기울기) hành vi (behavior / 동작) fundamentally.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 GAN connects [Game/Adversarial Search intuition](../02_search_reasoning_and_planning/03_adversarial_search_and_games.md), [Optimization](../01_mathematical_foundations/06_optimization.md), [Probability/Distribution Learning](../01_mathematical_foundations/02_probability_for_ai.md) and [Representation Learning](../05_neural_networks/08_representation_learning.md).
 
 Xem tiếp: [Diffusion Models](./09_diffusion_models.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

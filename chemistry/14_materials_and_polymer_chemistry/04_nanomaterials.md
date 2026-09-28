@@ -1,5 +1,8 @@
 # Vật liệu nano — khi kích thước trở thành một biến hóa học
 
+> **Mạch đọc:** Đọc **Vật liệu nano — khi kích thước trở thành một biến hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tỉ lệ diện tích bề mặt trên thể tích** sang **Năng lượng bề mặt và xu hướng kết tụ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Vật liệu nano (nanomaterial / 나노소재)** là hệ có ít nhất một kích thước nằm trong vùng mà hiệu ứng bề mặt, độ cong, giam giữ lượng tử hoặc chiều dài vận chuyển trở nên cùng bậc với kích thước vật thể. Ở thang này, thay đổi kích thước có thể làm đổi màu, hoạt tính xúc tác, tính từ, độ hòa tan hoặc hành vi điện tử dù thành phần nguyên tố không đổi.
 
 “Nano” vì vậy không chỉ có nghĩa **rất nhỏ**. Nó có nghĩa một số cơ chế vốn ít quan trọng trong vật liệu khối bắt đầu trở thành yếu tố chi phối.
@@ -71,7 +74,7 @@ Hạng bề mặt dương vì tạo mặt phân cách mới tốn năng lượng
 
 Ở kích thước rất nhỏ, chi phí bề mặt chi phối và mầm có xu hướng tan. Khi vượt bán kính tới hạn, lợi ích thể tích thắng dần và hạt có xu hướng phát triển.
 
-Đây là cùng logic đã xuất hiện trong kết tinh và chuyển pha.
+Đây là cùng lô-gic (logic / 논리) đã xuất hiện trong kết tinh và chuyển pha.
 
 ## Chín Ostwald — hạt nhỏ nuôi hạt lớn
 
@@ -346,7 +349,7 @@ Trong pin, cấu trúc nano rút ngắn đường khuếch tán ion. Trong **pin
 
 Nhưng diện tích lớn đồng thời làm phản ứng phụ và lão hóa tăng.
 
-Đây là một trade-off xuyên suốt nano:
+Đây là một sự đánh đổi (trade-off / 트레이드오프) xuyên suốt nano:
 
 ```text
 kích thước nhỏ
@@ -411,3 +414,5 @@ Khi kích thước giảm, diện tích bề mặt, độ cong, giam giữ lư�
 Vì vậy thiết kế nano không chỉ hỏi “làm từ chất gì?” mà phải hỏi thêm **lớn bao nhiêu, hình dạng gì, bề mặt phủ gì, ở môi trường nào và cấu trúc có ổn định theo thời gian hay không**.
 
 Xem tiếp: [Hóa học bề mặt và mặt phân cách](./05_surface_and_interface_chemistry.md), [Chất bán dẫn](./03_semiconductors.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

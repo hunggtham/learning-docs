@@ -1,6 +1,9 @@
-# Agent Orchestration
+# Tác nhân (agent / 에이전트) Orchestration
 
-**Orchestration (오케스트레이션 / điều phối)** là layer quản lý execution của agent/workflow: scheduling, state, queues, retries, budgets, concurrency, approvals, tracing và recovery. Model reasoning không thay thế orchestration.
+> **Mạch đọc:** Đặt **tác nhân (agent / 에이전트) Orchestration** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Orchestrator owns vòng đời (lifecycle / 생명주기)** sang **Queue-Based thực thi (execution / 실행)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+**Orchestration (오케스트레이션 / điều phối)** là tầng (layer / 계층) quản lý thực thi (execution / 실행) của tác nhân (agent / 에이전트)/workflow: scheduling, trạng thái (state / 상태), queues, retries, budgets, tính đồng thời (concurrency / 동시성), approvals, tracing và khôi phục (recovery / 복구). mô hình (model / 모델) lập luận (reasoning / 추론) không thay thế orchestration.
 
 ```text
 User / Event
@@ -15,9 +18,9 @@ Orchestrator
 └─ observability
 ```
 
-## Orchestrator owns lifecycle
+## Orchestrator owns vòng đời (lifecycle / 생명주기)
 
-Một task production có lifecycle:
+Một tác vụ (task / 작업) môi trường vận hành (production / 운영 환경) có vòng đời (lifecycle / 생명주기):
 
 ```text
 CREATED
@@ -27,11 +30,11 @@ CREATED
 → COMPLETED / FAILED / CANCELLED
 ```
 
-Persist lifecycle giúp restart/resume.
+Persist vòng đời (lifecycle / 생명주기) giúp restart/resume.
 
-## Queue-Based Execution
+## Queue-Based thực thi (execution / 실행)
 
-Long-running task nên tách request/response HTTP khỏi execution worker.
+Long-running tác vụ (task / 작업) nên tách yêu cầu (request / 요청)/phản hồi (response / 응답) HTTP khỏi thực thi (execution / 실행) worker.
 
 ```text
 API creates task
@@ -43,27 +46,27 @@ API creates task
 
 Điều này hỗ trợ retries, backpressure và horizontal scaling.
 
-## Concurrency Control
+## Tính đồng thời (concurrency / 동시성) điều khiển (control / 제어)
 
 Need limits theo:
 
 - tenant;
-- user;
-- tool/provider;
-- model capacity;
-- external API rate limits.
+- người dùng (user / 사용자);
+- công cụ (tool / 도구)/provider;
+- mô hình (model / 모델) sức chứa (capacity / 용량);
+- bên ngoài (external / 외부) API tỷ lệ (rate / 비율) limits.
 
-Unlimited parallel agents dễ tạo cost explosion hoặc hammer downstream systems.
+Unlimited parallel agents dễ tạo chi phí (cost / 비용) explosion hoặc hammer downstream các hệ thống (systems / 시스템들).
 
 ## Scheduling
 
-Subtasks có dependency DAG. Scheduler chỉ run nodes có prerequisites satisfied.
+Subtasks có phụ thuộc (dependency / 의존성) DAG. Scheduler chỉ run nodes có prerequisites satisfied.
 
-Priority có thể dựa trên SLA, deadline, critical path hoặc user tier.
+Priority có thể dựa trên SLA, deadline, đường găng (critical path / 임계 경로) hoặc người dùng (user / 사용자) tier.
 
 ## Backpressure
 
-Nếu tool/provider chậm, queue length tăng. System cần backpressure thay vì tiếp tục spawn workers.
+Nếu công cụ (tool / 도구)/provider chậm, hàng đợi (queue / 큐) length tăng. hệ thống (system / 시스템) cần backpressure thay vì tiếp tục spawn workers.
 
 Signals:
 
@@ -74,15 +77,15 @@ worker utilization
 provider error rate
 ```
 
-## Retry Ownership
+## Thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)
 
-Retry policy nên nằm orchestration layer, không chỉ trong prompt.
+Thử lại (retry / 재시도) chính sách (policy / 정책) nên nằm orchestration tầng (layer / 계층), không chỉ trong prompt.
 
-Model có thể propose semantic retry, nhưng transport/transient retries là runtime concern.
+Mô hình (model / 모델) có thể propose ngữ nghĩa (semantic / 의미적) thử lại (retry / 재시도), nhưng vận chuyển (transport / 전송)/transient retries là thời gian chạy (runtime / 런타임) concern.
 
-## Approval as First-Class State
+## Approval as First-Class trạng thái (state / 상태)
 
-Human approval nên persisted event/state:
+Human approval nên persisted sự kiện (event / 이벤트)/trạng thái (state / 상태):
 
 ```text
 WAITING_APPROVAL
@@ -92,15 +95,15 @@ expires_at
 approved_by
 ```
 
-Sau restart vẫn biết task đang chờ gì.
+Sau restart vẫn biết tác vụ (task / 작업) đang chờ gì.
 
 ## Cancellation
 
-User cần cancel long task. Runtime phải propagate cancellation tới queued/running tool operations khi có thể.
+Người dùng (user / 사용자) cần cancel long tác vụ (task / 작업). thời gian chạy (runtime / 런타임) phải propagate cancellation tới queued/running công cụ (tool / 도구) operations khi có thể.
 
-## Model Routing
+## Mô hình (model / 모델) Routing
 
-Không phải step nào cũng cần strongest model.
+Không phải step nào cũng cần strongest mô hình (model / 모델).
 
 Routing có thể chọn:
 
@@ -111,11 +114,11 @@ embedding model → retrieval
 specialized model → vision/code
 ```
 
-Routing là cost-quality optimization problem.
+Routing là cost-quality tối ưu hóa (optimization / 최적화) bài toán (problem / 문제).
 
-## Tool Routing
+## Công cụ (tool / 도구) Routing
 
-Multiple providers cho same capability có thể route theo:
+Multiple providers cho same năng lực (capability / 역량) có thể tuyến (route / 경로) theo:
 
 ```text
 availability
@@ -126,11 +129,11 @@ compliance
 quality
 ```
 
-Fallback phải preserve semantics; hai APIs cùng tên capability có thể khác contract.
+Fallback phải preserve ngữ nghĩa (semantics / 의미론); hai APIs cùng tên năng lực (capability / 역량) có thể khác đặc tả hợp đồng (contract / 계약).
 
-## Artifact Store
+## Sản phẩm tạo ra (artifact / 산출물) Store
 
-Large outputs nên persist artifact, không pass qua every prompt.
+Large outputs nên persist sản phẩm tạo ra (artifact / 산출물), không pass qua every prompt.
 
 ```text
 artifact id
@@ -140,9 +143,9 @@ producer step
 version
 ```
 
-Context chỉ carry references/excerpts.
+Ngữ cảnh (context / 맥락) chỉ carry references/excerpts.
 
-## Event Bus
+## Sự kiện (event / 이벤트) Bus
 
 Events decouple components:
 
@@ -153,17 +156,17 @@ TaskTimedOut
 ArtifactCreated
 ```
 
-Consumers có thể update UI, metrics, audit hoặc trigger next step.
+Consumers có thể cập nhật (update / 업데이트) UI, metrics, kiểm tra (audit / 감사) hoặc trigger next step.
 
 ## Exactly-Once là khó
 
-Distributed systems thường không guarantee exactly-once execution đơn giản. Practical design dùng at-least-once delivery + idempotent handlers.
+Phân tán (distributed / 분산) các hệ thống (systems / 시스템들) thường không guarantee exactly-once thực thi (execution / 실행) đơn giản. Practical thiết kế (design / 설계) dùng at-least-once delivery + idempotent handlers.
 
-Agent tools vì vậy cần idempotency.
+Tác nhân (agent / 에이전트) tools vì vậy cần idempotency.
 
 ## Checkpoint và Resume
 
-Persist state sau meaningful transition. Khi worker crash:
+Persist trạng thái (state / 상태) sau meaningful chuyển tiếp (transition / 전이). Khi worker crash:
 
 ```text
 load checkpoint
@@ -173,9 +176,9 @@ resume from next safe step
 
 Không blindly replay whole trajectory.
 
-## Observability
+## Khả năng quan sát (observability / 관측 가능성)
 
-Trace hierarchy:
+Dấu vết (trace / 추적) hierarchy:
 
 ```text
 Task trace
@@ -188,19 +191,19 @@ Task trace
 
 Metrics:
 
-- task success;
-- latency distribution;
-- tokens/cost;
-- tool error rate;
-- retry count;
+- tác vụ (task / 작업) success;
+- độ trễ (latency / 지연 시간) phân phối (distribution / 분포);
+- tokens/chi phí (cost / 비용);
+- công cụ (tool / 도구) lỗi (error / 오류) tỷ lệ (rate / 비율);
+- thử lại (retry / 재시도) count;
 - step count;
-- human escalation rate.
+- human escalation tỷ lệ (rate / 비율).
 
-## Orchestration vs Framework
+## Orchestration vs khung phần mềm (framework / 프레임워크)
 
-Framework có thể provide abstractions, nhưng concepts bền vững là state machine, queue, event log, retry, permission và tracing. Library này ưu tiên concepts thay vì phụ thuộc một agent framework cụ thể.
+Khung phần mềm (framework / 프레임워크) có thể provide abstractions, nhưng concepts bền vững là máy trạng thái (state machine / 상태 머신), hàng đợi (queue / 큐), sự kiện (event / 이벤트) log, thử lại (retry / 재시도), permission và tracing. thư viện (library / 라이브러리) này ưu tiên concepts thay vì phụ thuộc một tác nhân (agent / 에이전트) khung phần mềm (framework / 프레임워크) cụ thể.
 
-## Example: Enterprise document agent
+## Example: Enterprise document tác nhân (agent / 에이전트)
 
 ```text
 upload event
@@ -213,28 +216,30 @@ upload event
 → notify user
 ```
 
-Đây là distributed workflow có agentic node, không phải single Python loop.
+Đây là phân tán (distributed / 분산) workflow có agentic nút (node / 노드), không phải single Python vòng lặp (loop / 루프).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Agent reasoning quyết định “nên làm gì”; orchestration đảm bảo “việc đó được chạy, theo dõi, retry, giới hạn và phục hồi như thế nào”.**
+> **tác nhân (agent / 에이전트) lập luận (reasoning / 추론) quyết định “nên làm gì”; orchestration đảm bảo “việc đó được chạy, theo dõi, thử lại (retry / 재시도), giới hạn và phục hồi như thế nào”.**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Agent framework đã lo production orchestration”
+### “tác nhân (agent / 에이전트) khung phần mềm (framework / 프레임워크) đã lo môi trường vận hành (production / 운영 환경) orchestration”
 
-Nhiều framework chủ yếu lo prompt/tool graph; durability, multi-tenant security và ops vẫn cần architecture riêng.
+Nhiều khung phần mềm (framework / 프레임워크) chủ yếu lo prompt/công cụ (tool / 도구) đồ thị (graph / 그래프); durability, multi-tenant bảo mật (security / 보안) và ops vẫn cần kiến trúc (architecture / 아키텍처) riêng.
 
-### “Serverless function loop là đủ”
+### “Serverless hàm (function / 함수) vòng lặp (loop / 루프) là đủ”
 
-Task dài có timeout, retries và external side effects cần durable state/workflow semantics.
+Tác vụ (task / 작업) dài có hết thời gian chờ (timeout / 타임아웃), retries và bên ngoài (external / 외부) side effects cần durable trạng thái (state / 상태)/workflow ngữ nghĩa (semantics / 의미론).
 
-### “Queue chỉ để scale”
+### “hàng đợi (queue / 큐) chỉ để quy mô (scale / 규모)”
 
-Queue còn là isolation, buffering và retry boundary.
+Hàng đợi (queue / 큐) còn là isolation, buffering và thử lại (retry / 재시도) ranh giới (boundary / 경계).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Orchestration nối agents với distributed systems, backend architecture, queues, event sourcing và observability.
+Orchestration nối agents với phân tán (distributed / 분산) các hệ thống (systems / 시스템들), backend kiến trúc (architecture / 아키텍처), queues, sự kiện (event / 이벤트) sourcing và khả năng quan sát (observability / 관측 가능성).
 
 Xem tiếp: [Agent Evaluation](./09_agent_evaluation.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

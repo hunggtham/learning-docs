@@ -1,5 +1,8 @@
 # Shell, Bash, pipe và chuyển hướng
 
+> **Mạch đọc:** Đọc **Shell, Bash, pipe và chuyển hướng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Shell và terminal khác nhau** sang **Từ văn bản tới lệnh thực thi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Shell không phải Linux kernel và cũng không chỉ là nơi nhập câu lệnh. **Trình vỏ lệnh (shell)** là một bộ thông dịch ngôn ngữ lệnh: nó đọc văn bản, phân tích cú pháp, mở rộng biến và mẫu tên tệp, thiết lập bộ mô tả tệp, khởi chạy chương trình, quản lý tác vụ và trả về mã thoát (exit status). Hiểu shell theo chuỗi xử lý này giúp tránh nhiều lỗi mà việc học thuộc câu lệnh không thể giải quyết.
 
 ## Shell và terminal khác nhau
@@ -106,13 +109,13 @@ curl -fsS http://localhost:8080/health || echo "health check failed"
 
 Lệnh phía sau `||` chỉ chạy nếu `curl` thất bại. Đây là **luồng điều khiển (control flow)** chứ không chỉ là cách viết ngắn.
 
-## Pipe và trạng thái của pipeline
+## Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)
 
 ```bash
 producer | filter | consumer
 ```
 
-Shell nối các bộ mô tả tệp giữa nhiều tiến trình. Trong Bash mặc định, mã thoát của một pipeline thường là mã của câu lệnh cuối, vì vậy lỗi ở câu lệnh trước có thể bị che khuất.
+Shell nối các bộ mô tả tệp giữa nhiều tiến trình. Trong Bash mặc định, mã thoát của một chuỗi xử lý (pipeline / 파이프라인) thường là mã của câu lệnh cuối, vì vậy lỗi ở câu lệnh trước có thể bị che khuất.
 
 Trong script nghiêm túc thường gặp:
 
@@ -120,7 +123,7 @@ Trong script nghiêm túc thường gặp:
 set -o pipefail
 ```
 
-Khi bật `pipefail`, pipeline có thể phản ánh lỗi của một thành phần trước thay vì chỉ dựa vào câu lệnh cuối. Cấu hình `set -euo pipefail` rất phổ biến nhưng cần hiểu rõ trước khi sao chép máy móc, vì `set -e` có nhiều trường hợp biên (edge case) và có thể làm script kết thúc ở nơi người viết không dự kiến.
+Khi bật `pipefail`, chuỗi xử lý (pipeline / 파이프라인) có thể phản ánh lỗi của một thành phần trước thay vì chỉ dựa vào câu lệnh cuối. Cấu hình `set -euo pipefail` rất phổ biến nhưng cần hiểu rõ trước khi sao chép máy móc, vì `set -e` có nhiều trường hợp biên (edge case / 경계 사례) và có thể làm script kết thúc ở nơi người viết không dự kiến.
 
 ## Chuyển hướng
 
@@ -207,7 +210,7 @@ check_app() {
 }
 ```
 
-Khi logic lớn, cần cấu trúc dữ liệu phức tạp, kiểm thử nghiêm túc hoặc xử lý đồng thời, một ngôn ngữ như Python hoặc Go thường phù hợp hơn. Shell mạnh nhất khi dùng để **điều phối (orchestration)** các công cụ hệ thống nhỏ.
+Khi lô-gic (logic / 논리) lớn, cần cấu trúc dữ liệu phức tạp, kiểm thử nghiêm túc hoặc xử lý đồng thời, một ngôn ngữ như Python hoặc Go thường phù hợp hơn. Shell mạnh nhất khi dùng để **điều phối (orchestration)** các công cụ hệ thống nhỏ.
 
 ## `xargs` và xây dựng danh sách đối số
 
@@ -228,11 +231,11 @@ sleep 300 &
 jobs -l
 ```
 
-Đây là tiện ích dành cho phiên tương tác, không phải cơ chế giám sát tiến trình production. Dịch vụ chạy lâu dài nên được systemd hoặc một trình giám sát container quản lý để có chính sách khởi động lại, nhật ký và vòng đời rõ ràng.
+Đây là tiện ích dành cho phiên tương tác, không phải cơ chế giám sát tiến trình môi trường vận hành (production / 운영 환경). Dịch vụ chạy lâu dài nên được systemd hoặc một trình giám sát bộ chứa (container / 컨테이너) quản lý để có chính sách khởi động lại, nhật ký và vòng đời rõ ràng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Có thể xem shell như một **bộ biên dịch điều phối nhỏ**. Nó biến văn bản thành danh sách đối số, môi trường, cách nối file descriptor và các lần khởi chạy tiến trình. Khi câu lệnh cho kết quả bất ngờ, trước hết hãy hỏi shell đã biến văn bản ban đầu thành gì, rồi mới hỏi chương trình đích đã làm gì.
+Có thể xem shell như một **bộ biên dịch điều phối nhỏ**. Nó biến văn bản thành danh sách đối số, môi trường, cách nối tệp (file / 파일) descriptor và các lần khởi chạy tiến trình. Khi câu lệnh cho kết quả bất ngờ, trước hết hãy hỏi shell đã biến văn bản ban đầu thành gì, rồi mới hỏi chương trình đích đã làm gì.
 
 Một kỹ thuật gỡ lỗi script:
 
@@ -250,10 +253,12 @@ bash -x script.sh
 
 **"Biến shell tự động có trong mọi tiến trình."** Chỉ biến môi trường đã được export mới được truyền cho tiến trình con.
 
-**"`cmd1 | cmd2` nghĩa là cmd1 chạy xong rồi cmd2 mới bắt đầu."** Các tiến trình trong pipeline thường có thể chạy đồng thời và truyền dữ liệu theo luồng.
+**"`cmd1 | cmd2` nghĩa là cmd1 chạy xong rồi cmd2 mới bắt đầu."** Các tiến trình trong chuỗi xử lý (pipeline / 파이프라인) thường có thể chạy đồng thời và truyền dữ liệu theo luồng.
 
 **"`nohup` là trình quản lý dịch vụ."** Nó chỉ giải quyết một phần vấn đề liên quan phiên làm việc và `SIGHUP`; nó không cung cấp đầy đủ cơ chế giám sát vòng đời dịch vụ.
 
 ## Kết nối sang chương tiếp theo
 
 Shell mạnh vì các công cụ Linux có giao diện văn bản và luồng dữ liệu dễ kết hợp. [Xử lý văn bản](./text_processing.md) giải thích cách `grep`, `find`, `sed`, `awk`, `sort` và `uniq` phối hợp để biến dữ liệu thô trên máy chủ thành bằng chứng có thể phân tích.
+
+> **Bàn giao:** Sau **Kết nối sang chương tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [bash scripting reliability](./bash_scripting_reliability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

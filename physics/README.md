@@ -1,10 +1,13 @@
 # Thư viện Kiến thức Vật lý
 
-Bộ tài liệu này là một **Knowledge Library về Vật lý**, viết chủ yếu bằng tiếng Việt và tổ chức theo **sự phụ thuộc khái niệm (concept dependency)**. Mục tiêu không phải học thuộc công thức theo cấp độ Beginner → Advanced, mà đi theo chuỗi:
+> **Mạch đọc:** Đọc **Thư viện Kiến thức Vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quan hệ phụ thuộc tổng quát** sang **Điểm nối sang Electrical kỹ thuật (engineering / 엔지니어링)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Bộ tài liệu này là một **thư viện kiến thức (knowledge library / 지식 라이브러리) về Vật lý**, viết chủ yếu bằng tiếng Việt và tổ chức theo **sự phụ thuộc khái niệm (concept dependency)**. Mục tiêu không phải học thuộc công thức theo cấp độ Beginner → Advanced, mà đi theo chuỗi:
 
 > hiện tượng → đại lượng đo được → mô hình → quan hệ toán học → suy dẫn → giả định → miền áp dụng → giới hạn → liên kết kiến thức.
 
-Thư viện hiện có **88 file Markdown**, bao phủ nền tảng Vật lý đại cương và core undergraduate, kèm các cầu nối có chọn lọc sang advanced undergraduate/graduate topics. Đây không phải một encyclopedia cho mọi specialization.
+Thư viện hiện có **88 tệp (file / 파일) Markdown**, bao phủ nền tảng Vật lý đại cương và cốt lõi (core / 핵심) undergraduate, kèm các cầu nối có chọn lọc sang advanced undergraduate/graduate topics. Đây không phải một encyclopedia cho mọi specialization.
 
 ## Quan hệ phụ thuộc tổng quát
 
@@ -37,11 +40,11 @@ graph TD
     A --> EXP[Experiment / Signals / Computation / Inference]
 ```
 
-Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và đi theo dependency graph. Nếu học một chủ đề cụ thể, có thể vào thẳng chapter và dùng phần **Knowledge Connection** để quay lại prerequisite hoặc đi tiếp.
+Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và đi theo phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프). Nếu học một chủ đề cụ thể, có thể vào thẳng chapter và dùng phần **liên kết kiến thức (knowledge connection / 지식 연결)** để quay lại prerequisite hoặc đi tiếp.
 
-## Điểm nối sang Electrical Engineering
+## Điểm nối sang Electrical kỹ thuật (engineering / 엔지니어링)
 
-Physics dừng ở việc mô tả các định luật và giới hạn tự nhiên. Khi câu hỏi chuyển sang **chọn topology, thiết kế mạch, quản lý timing/power, đóng vòng điều khiển hoặc biến peripheral thành software contract**, hãy đi tiếp sang [Electrical Engineering Knowledge Library](../electrical_engineering/README.md). Route bridge là:
+Physics dừng ở việc mô tả các định luật và giới hạn tự nhiên. Khi câu hỏi chuyển sang **chọn topology, thiết kế mạch, quản lý timing/power, đóng vòng điều khiển hoặc biến peripheral thành software đặc tả hợp đồng (contract / 계약)**, hãy đi tiếp sang [Electrical Engineering Knowledge Library](../electrical_engineering/README.md). tuyến (route / 경로) cầu nối (bridge / 브리지) là:
 
 ```text
 Maxwell / circuits / semiconductor / signal-noise
@@ -81,7 +84,7 @@ Maxwell / circuits / semiconductor / signal-noise
 - [Sóng, wave equation, Fourier và âm thanh](02_oscillations_waves/01_waves_fourier_sound.md)
 - [Coupled oscillators và normal modes](02_oscillations_waves/02_coupled_oscillators_normal_modes.md)
 
-## 03 — Môi trường liên tục và transport
+## 03 — Môi trường liên tục và vận chuyển (transport / 전송)
 - [Cơ học chất lưu](03_continuum/00_fluids.md)
 - [Sức căng bề mặt, wetting và mao dẫn](03_continuum/01_surface_tension_capillarity.md)
 - [Khuếch tán, dẫn nhiệt và transport](03_continuum/02_transport_diffusion_heat.md)
@@ -156,13 +159,13 @@ Maxwell / circuits / semiconductor / signal-noise
 - [Vũ trụ sơ khai, dark matter và dark energy](11_astrophysics_cosmology/03_early_universe_dark_components.md)
 - [Gravitational instability và structure formation](11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md)
 
-## 12 — Thực nghiệm, tín hiệu, tính toán và inference
+## 12 — Thực nghiệm, tín hiệu, tính toán và suy luận (inference / 추론)
 - [Vật lý thực nghiệm, calibration và uncertainty](12_experimental_computational/00_measurement_experiment.md)
 - [Signal, noise, sampling, PSD và ADC](12_experimental_computational/01_signals_sampling_noise.md)
 - [Vật lý tính toán và numerical methods](12_experimental_computational/02_computational_physics.md)
 - [Data inference, model fitting và inverse problems](12_experimental_computational/03_data_inference_inverse_problems.md)
 
-## 13 — Knowledge graph, navigation và quality audit
+## 13 — kiến thức (knowledge / 지식) đồ thị (graph / 그래프), điều hướng (navigation / 내비게이션) và chất lượng (quality / 품질) kiểm tra (audit / 감사)
 - [Knowledge Connections](13_connections/00_knowledge_connections.md)
 - [Glossary Việt – English – 한국어 và navigation](13_connections/01_glossary_navigation.md)
 - [Coverage Audit](13_connections/02_coverage_audit.md)
@@ -173,6 +176,8 @@ Maxwell / circuits / semiconductor / signal-noise
 
 Thuật ngữ quan trọng ưu tiên dạng `Tên tiếng Việt (English term / 한국어 용어)` tại lần xuất hiện có ý nghĩa đầu tiên. English/Korean được dùng để tra textbook, paper, documentation và tài liệu kỹ thuật, không thay phần giải thích tiếng Việt.
 
-Một chapter core nên làm rõ: câu hỏi vật lý, định nghĩa đại lượng, mô hình và giả định, derivation/reasoning, đơn vị và limiting cases, worked reasoning, miền hiệu lực, failure modes, common misconceptions và knowledge connections.
+Một chapter cốt lõi (core / 핵심) nên làm rõ: câu hỏi vật lý, định nghĩa đại lượng, mô hình và giả định, derivation/lập luận (reasoning / 추론), đơn vị và limiting cases, worked lập luận (reasoning / 추론), miền hiệu lực, thất bại (failure / 실패) modes, dùng chung (common / 공통) misconceptions và kiến thức (knowledge / 지식) connections.
 
-Xem [Coverage Audit](13_connections/02_coverage_audit.md) để theo dõi độ sâu và intentional scope của library.
+Xem [Coverage Audit](13_connections/02_coverage_audit.md) để theo dõi độ sâu và intentional phạm vi (scope / 범위) của thư viện (library / 라이브러리).
+
+> **Bàn giao:** Sau **Quy ước biên soạn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.

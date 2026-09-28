@@ -1,8 +1,10 @@
-# Case 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking feedback loop
+# Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)
 
-Asian Financial Crisis không nên được học như câu chuyện “currency bị đầu cơ nên sụp”. Điểm quan trọng là cách **exchange-rate regime, short-term foreign funding, weak financial intermediation và currency mismatch** kết hợp thành một feedback loop rất mạnh.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trước khủng hoảng: thành công kinh tế che giấu fragility** sang **2. Currency mismatch**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Case này tập trung vào Thailand, Indonesia và Korea vì ba nước đều phải tìm hỗ trợ IMF, nhưng mục tiêu là học mechanism chứ không đồng nhất ba nền kinh tế.
+Asian Financial Crisis không nên được học như câu chuyện “currency bị đầu cơ nên sụp”. Điểm quan trọng là cách **exchange-rate regime, short-term foreign funding, weak financial intermediation và currency mismatch** kết hợp thành một vòng phản hồi (feedback loop / 피드백 루프) rất mạnh.
+
+Trường hợp (case / 사례) này tập trung vào Thailand, Indonesia và Korea vì ba nước đều phải tìm hỗ trợ IMF, nhưng mục tiêu là học cơ chế (mechanism / 메커니즘) chứ không đồng nhất ba nền kinh tế.
 
 ## 1. Trước khủng hoảng: thành công kinh tế che giấu fragility
 
@@ -16,9 +18,9 @@ Large capital inflows
 Relatively stable exchange rates
 ```
 
-Ổn định tỷ giá tạo một incentive nguy hiểm nếu participant bắt đầu coi FX risk là nhỏ hoặc gần như không tồn tại.
+Ổn định tỷ giá tạo một incentive nguy hiểm nếu participant bắt đầu coi FX rủi ro (risk / 위험) là nhỏ hoặc gần như không tồn tại.
 
-Nếu doanh nghiệp/ngân hàng có thể vay USD hoặc JPY với cost thấp hơn domestic funding nhưng revenue bằng local currency:
+Nếu doanh nghiệp/ngân hàng có thể vay USD hoặc JPY với chi phí (cost / 비용) thấp hơn domestic funding nhưng revenue bằng cục bộ (local / 로컬) currency:
 
 ```text
 Borrow foreign currency
@@ -37,14 +39,14 @@ Assets / revenue = KRW or THB
 Debt = USD
 ```
 
-Nếu local currency mất 30% so với USD:
+Nếu cục bộ (local / 로컬) currency mất 30% so với USD:
 
 ```text
 USD debt measured in local currency
 rises sharply
 ```
 
-Ngay cả khi underlying project không thay đổi, leverage theo local currency có thể tăng mạnh.
+Ngay cả khi underlying dự án (project / 프로젝트) không thay đổi, leverage theo cục bộ (local / 로컬) currency có thể tăng mạnh.
 
 FX depreciation vì vậy không chỉ là price move; nó có thể làm banking/corporate balance sheet xấu đi ngay lập tức.
 
@@ -68,18 +70,18 @@ but assets cannot be liquidated without loss
 
 Currency mismatch + maturity mismatch là combination rất nguy hiểm.
 
-## 4. Stable exchange rate can suppress perceived risk
+## 4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)
 
-Khi exchange rate được giữ tương đối ổn định trong thời gian dài, firms có thể under-hedge.
+Khi exchange tỷ lệ (rate / 비율) được giữ tương đối ổn định trong thời gian dài, firms có thể under-hedge.
 
-Mental model sai:
+Mô hình tư duy (mental model / 사고 모델) sai:
 
 ```text
 "Currency has been stable for years
 → FX risk is small"
 ```
 
-Mental model đúng:
+Mô hình tư duy (mental model / 사고 모델) đúng:
 
 ```text
 Observed low volatility
@@ -87,15 +89,15 @@ may be the result of policy intervention
 not absence of underlying imbalance
 ```
 
-Policy-suppressed volatility có thể làm private leverage tăng vì participants underestimate tail risk.
+Policy-suppressed volatility có thể làm private leverage tăng vì participants underestimate tail rủi ro (risk / 위험).
 
-## 5. Thailand as initial focal point
+## 5. Thailand as initial focal điểm (point / 지점)
 
 Trong Thailand, finance-company weakness, property-sector exposure và capital outflow pressure tăng trước khi baht được float ngày 2/7/1997.
 
 Sau float, baht depreciated mạnh.
 
-Điều quan trọng không phải nhớ exact percentage. Hãy hiểu regime transition:
+Điều quan trọng không phải nhớ chính xác (exact / 정확한) percentage. Hãy hiểu regime chuyển tiếp (transition / 전이):
 
 ```text
 Before:
@@ -122,7 +124,7 @@ Credit ratings worsen
 Funding becomes more expensive
 ```
 
-Contagion vì vậy có cả information channel lẫn balance-sheet/liquidity channel.
+Contagion vì vậy có cả thông tin (information / 정보) channel lẫn balance-sheet/liquidity channel.
 
 ## 7. Sudden stop
 
@@ -154,11 +156,11 @@ Bank funding obligations
 Forward commitments
 ```
 
-Một country có reserves lớn nominally nhưng short-term external liabilities còn lớn hơn có thể vẫn dễ bị funding run.
+Một country có reserves lớn nominally nhưng short-term bên ngoài (external / 외부) liabilities còn lớn hơn có thể vẫn dễ bị funding run.
 
-## 9. Korea-specific mechanism
+## 9. Korea-specific cơ chế (mechanism / 메커니즘)
 
-Korea trước khủng hoảng có corporate leverage cao, financial-sector weaknesses và significant short-term external borrowing.
+Korea trước khủng hoảng có corporate leverage cao, financial-sector weaknesses và significant short-term bên ngoài (external / 외부) borrowing.
 
 Khi foreign banks giảm willingness to roll Korean bank claims:
 
@@ -171,13 +173,13 @@ Korean banks need USD repayment liquidity
 → foreign lenders become even more cautious
 ```
 
-Đây là classic adverse feedback loop.
+Đây là classic adverse vòng phản hồi (feedback loop / 피드백 루프).
 
 ## 10. Why export strength did not immediately solve funding stress
 
 Một country có strong exporters vẫn có thể gặp crisis nếu funding maturity quá ngắn.
 
-Export earnings arrive over time.
+Export earnings arrive over thời gian (time / 시간).
 
 Short-term foreign debt may mature today.
 
@@ -186,13 +188,13 @@ Long-run external earning capacity
 ≠ immediate dollar liquidity
 ```
 
-Liquidity crisis có thể xảy ra ngay cả khi economy có productive export base.
+Liquidity crisis có thể xảy ra ngay cả khi economy có productive export cơ sở (base / 기반).
 
-## 11. Banking system as FX transmission mechanism
+## 11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)
 
-Banks often sit between global funding and domestic borrowers.
+Banks often sit between toàn cục (global / 전역) funding and domestic borrowers.
 
-Nếu banks borrow USD abroad and lend local currency domestically:
+Nếu banks borrow USD abroad and lend cục bộ (local / 로컬) currency domestically:
 
 ```text
 Foreign funding shock
@@ -203,7 +205,7 @@ Foreign funding shock
 
 FX crisis và banking crisis vì vậy có thể reinforce nhau.
 
-## 12. Interest-rate defense trade-off
+## 12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)
 
 Authorities có thể tăng rates để hỗ trợ currency và capital retention.
 
@@ -216,7 +218,7 @@ increase NPL risk
 slow domestic demand
 ```
 
-Policy không có free option.
+Chính sách (policy / 정책) không có free option.
 
 ## 13. Why depreciation can become contractionary
 
@@ -233,7 +235,7 @@ Currency depreciation
 → domestic demand falls
 ```
 
-Balance-sheet effect có thể dominate competitiveness benefit trong short/medium term.
+Balance-sheet tác động (effect / 효과) có thể dominate competitiveness benefit trong short/medium term.
 
 ## 14. Corporate leverage matters
 
@@ -248,11 +250,11 @@ FX depreciation
 + tighter credit
 ```
 
-có thể làm debt-service capacity collapse.
+có thể làm debt-service sức chứa (capacity / 용량) collapse.
 
 ## 15. From currency pressure to real economy
 
-Transmission chain:
+Transmission chuỗi (chain / 사슬):
 
 ```text
 Capital outflow / rollover failure
@@ -264,15 +266,15 @@ Capital outflow / rollover failure
 → recession
 ```
 
-Đây là lý do FX risk management không thể tách khỏi balance-sheet analysis.
+Đây là lý do FX rủi ro (risk / 위험) management không thể tách khỏi balance-sheet phân tích (analysis / 분석).
 
 ## 16. IMF programs
 
-Indonesia, Korea và Thailand sought IMF support.
+Indonesia, Korea và Thailand sought IMF hỗ trợ (support / 지원).
 
-Các program có mục tiêu khôi phục confidence, stabilize financial systems và xử lý macro/structural weaknesses.
+Các program có mục tiêu khôi phục confidence, stabilize financial các hệ thống (systems / 시스템들) và xử lý macro/structural weaknesses.
 
-Debate về design/timing của policy responses rất lớn và không nên giản lược thành một consensus tuyệt đối.
+Debate về thiết kế (design / 설계)/timing của chính sách (policy / 정책) responses rất lớn và không nên giản lược thành một consensus tuyệt đối.
 
 Điểm học ở đây:
 
@@ -289,7 +291,7 @@ interact with each other
 
 Crisis management phải xử lý banking confidence.
 
-Nếu public tin banks insolvent:
+Nếu công khai (public / 공개) tin banks insolvent:
 
 ```text
 deposit withdrawals
@@ -297,11 +299,11 @@ deposit withdrawals
 → more insolvency pressure
 ```
 
-Authorities có thể dùng guarantees, liquidity support, closures hoặc recapitalization.
+Authorities có thể dùng guarantees, liquidity hỗ trợ (support / 지원), closures hoặc recapitalization.
 
-Nhưng mỗi tool có moral hazard và fiscal cost.
+Nhưng mỗi công cụ (tool / 도구) có moral hazard và fiscal chi phí (cost / 비용).
 
-## 18. Rating and collateral feedback
+## 18. Rating and collateral phản hồi (feedback / 피드백)
 
 Nếu credit rating falls:
 
@@ -312,7 +314,7 @@ collateral requirements may tighten
 rollover access worsens
 ```
 
-Market-price decline và financing constraint có thể reinforce nhau.
+Market-price decline và financing ràng buộc (constraint / 제약조건) có thể reinforce nhau.
 
 ## 19. Why the crisis spread differently by country
 
@@ -335,7 +337,7 @@ Không nên gọi toàn bộ region là một trade đồng nhất.
 
 ## 20. Korea and corporate restructuring
 
-Korean crisis response không chỉ là FX stabilization. Nó kéo theo financial/corporate restructuring vì root fragility nằm trong leverage và financial intermediation.
+Korean crisis phản hồi (response / 응답) không chỉ là FX stabilization. Nó kéo theo financial/corporate restructuring vì gốc (root / 루트) fragility nằm trong leverage và financial intermediation.
 
 Đây là lesson quan trọng:
 
@@ -344,9 +346,9 @@ If FX stress reveals balance-sheet insolvency,
 restoring the exchange rate alone is insufficient.
 ```
 
-## 21. Currency crisis as nonlinear system
+## 21. Currency crisis as nonlinear hệ thống (system / 시스템)
 
-Trước threshold, system có thể trông ổn định:
+Trước threshold, hệ thống (system / 시스템) có thể trông ổn định:
 
 ```text
 Capital inflow continues
@@ -365,13 +367,13 @@ rollover worsens
 credit contracts
 ```
 
-Đây là regime shift, không phải linear extension của normal volatility.
+Đây là regime shift, không phải tuyến tính (linear / 선형) extension của normal volatility.
 
 ## 22. Historical volatility can be misleading
 
 Nếu currency được managed/pegged, pre-crisis volatility thấp.
 
-Risk model dùng historical standard deviation có thể kết luận position rất an toàn ngay trước devaluation.
+Rủi ro (risk / 위험) mô hình (model / 모델) dùng historical tiêu chuẩn (standard / 표준) deviation có thể kết luận position rất an toàn ngay trước devaluation.
 
 Lesson:
 
@@ -382,9 +384,9 @@ can coexist with high latent jump risk.
 
 ## 23. Carry trade lesson
 
-Stable FX + high local interest rate có thể tạo attractive carry.
+Stable FX + high cục bộ (local / 로컬) interest tỷ lệ (rate / 비율) có thể tạo attractive carry.
 
-Nhưng return distribution có thể giống:
+Nhưng return phân phối (distribution / 분포) có thể giống:
 
 ```text
 many small gains
@@ -406,7 +408,7 @@ Hedge tenor
 Refinancing schedule
 ```
 
-Natural hedge có thể giảm risk nhưng hiếm khi perfect.
+Natural hedge có thể giảm rủi ro (risk / 위험) nhưng hiếm khi perfect.
 
 ## 25. Liquidity vs solvency distinction
 
@@ -421,17 +423,17 @@ Solvency problem:
 asset value < liabilities
 ```
 
-FX depreciation có thể biến liquidity problem thành solvency problem nếu foreign debt reprices sharply.
+FX depreciation có thể biến liquidity bài toán (problem / 문제) thành solvency bài toán (problem / 문제) nếu foreign debt reprices sharply.
 
 ## 26. Dollar funding matters even outside the US
 
-Global banks/firms borrow USD because trade, commodity invoicing and finance use dollar heavily.
+Toàn cục (global / 전역) banks/firms borrow USD because trade, commodity invoicing and finance use dollar heavily.
 
 Do đó USD shortage có thể xuất hiện ở economies không có domestic US banking exposure lớn.
 
-Case 2020 ở later chapter mở rộng chính mechanism này.
+Trường hợp (case / 사례) 2020 ở later chapter mở rộng chính cơ chế (mechanism / 메커니즘) này.
 
-## 27. What data would a researcher monitor?
+## 27. What dữ liệu (data / 데이터) would a researcher monitor?
 
 ```text
 Short-term external debt / reserves
@@ -447,7 +449,7 @@ Domestic credit growth
 Property/asset-price leverage
 ```
 
-Data quality/time availability là một phần của analysis.
+Dữ liệu (data / 데이터) chất lượng (quality / 품질)/thời gian (time / 시간) availability là một phần của phân tích (analysis / 분석).
 
 ## 28. Korea-specific dashboard idea
 
@@ -463,7 +465,7 @@ US-Korea front-end rate differential
 Bank funding spreads
 ```
 
-Không metric nào một mình dự báo crisis.
+Không chỉ số (metric / 지표) nào một mình dự báo crisis.
 
 ## 29. What not to learn
 
@@ -481,7 +483,7 @@ Sai lesson:
 "High reserves prevent all crises."
 ```
 
-Liabilities, confidence và policy credibility matters.
+Liabilities, confidence và chính sách (policy / 정책) credibility matters.
 
 Sai lesson:
 
@@ -489,9 +491,9 @@ Sai lesson:
 "Depreciation always helps exporters enough to stabilize economy."
 ```
 
-Balance-sheet effect có thể dominate.
+Balance-sheet tác động (effect / 효과) có thể dominate.
 
-## 30. Mechanism map
+## 30. cơ chế (mechanism / 메커니즘) map
 
 ```text
 Stable exchange rate
@@ -513,7 +515,7 @@ Trigger / confidence loss
 
 ## 31. Stress-test template derived from the crisis
 
-Với một country/company có foreign-currency debt, test:
+Với một country/company có foreign-currency debt, kiểm thử (test / 테스트):
 
 ```text
 Local currency -10%
@@ -548,7 +550,7 @@ Hedged debt = 40%
 Average debt maturity = 9 months
 ```
 
-Stress USD/KRW +30% và rollover rate chỉ 50%.
+Stress USD/KRW +30% và rollover tỷ lệ (rate / 비율) chỉ 50%.
 
 Tính lại debt burden và liquidity need.
 
@@ -560,4 +562,6 @@ Mục tiêu là chuyển FX move thành balance-sheet impact.
 - IMF Finance & Development, *The Asian Crisis: Causes and Remedies*.
 - IMF chronology and country program material for Thailand, Indonesia and Korea.
 
-Case này trình bày mechanism tổng quát; các nước trong Asian crisis có khác biệt lớn và không nên bị gom thành một nguyên nhân duy nhất.
+Trường hợp (case / 사례) này trình bày cơ chế (mechanism / 메커니즘) tổng quát; các nước trong Asian crisis có khác biệt lớn và không nên bị gom thành một nguyên nhân duy nhất.
+
+> **Bàn giao:** Sau **Nguồn nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ERM 1992 STERLING CRISIS](./01_ERM_1992_STERLING_CRISIS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

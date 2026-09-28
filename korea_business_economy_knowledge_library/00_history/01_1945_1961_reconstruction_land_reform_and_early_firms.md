@@ -1,5 +1,8 @@
 # 1945–1961: giải phóng, chiến tranh, cải cách ruộng đất và nền kinh tế hậu chiến (Reconstruction & Early Firms / 해방·전쟁·전후 복구)
 
+> **Mạch đọc:** Đọc **1945–1961: giải phóng, chiến tranh, cải cách ruộng đất và nền kinh tế hậu chiến (Reconstruction & Early Firms / 해방·전쟁·전후 복구)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cú sốc sau giải phóng: tài sản còn nhưng quyền sở hữu thay đổi** sang **Cải cách ruộng đất: thay đổi phân phối tài sản và động lực ở nông thôn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Giai đoạn 1945–1961 thường bị xem như một đoạn chuyển tiếp trước khi Hàn Quốc tăng trưởng nhanh trong thập niên 1960. Cách nhìn đó bỏ qua một điều quan trọng: đây là lúc Hàn Quốc phải xây lại gần như toàn bộ **hệ điều hành thể chế của nền kinh tế (institutional operating system)**—quyền sở hữu, tiền tệ, đất đai, ngân hàng, thương mại, thuế, sản xuất, logistics và thị trường lao động—trong điều kiện chia cắt và chiến tranh.
 
 Nếu thập niên 1960 là lúc động cơ xuất khẩu được khởi động, thì giai đoạn 1945–1961 là lúc các bộ phận nền tảng của động cơ, đường nhiên liệu và hệ truyền động được lắp lại.
@@ -12,6 +15,9 @@ Sau 1945, nhiều tài sản từng thuộc cá nhân hoặc doanh nghiệp Nh�
 
 Một nhà máy không thể tạo sản lượng chỉ vì tòa nhà còn tồn tại. Doanh nghiệp cần quyền kiểm soát pháp lý, vốn lưu động, nguyên liệu nhập khẩu, người quản lý, điện và khách hàng. Nền kinh tế sau giải phóng vì thế phải tái thiết **khả năng phối hợp thể chế**, không chỉ sửa chữa tài sản vật chất.
 
+
+> **Chuyển mạch:** Từ **Cú sốc sau giải phóng: tài sản còn nhưng quyền sở hữu thay đổi**, ta sang **Cải cách ruộng đất: thay đổi phân phối tài sản và động lực ở nông thôn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cải cách ruộng đất: thay đổi phân phối tài sản và động lực ở nông thôn
 
 **Cải cách ruộng đất (land reform / 농지개혁)** cuối thập niên 1940 và đầu 1950 làm suy yếu mạnh cấu trúc địa chủ–tá điền cũ. Không nên hiểu cơ chế này đơn giản là “chia đất rồi nông dân giàu lên”. Tác động sâu hơn nằm ở việc thay đổi quyền tài sản và tương quan quyền lực kinh tế.
@@ -19,6 +25,9 @@ Một nhà máy không thể tạo sản lượng chỉ vì tòa nhà còn tồn
 Khi người trực tiếp canh tác sở hữu phần đất lớn hơn, họ có động lực giữ lại kết quả lao động và đầu tư vào đất nhiều hơn. Đồng thời, mức tập trung quyền lực của tầng lớp địa chủ giảm. Điều này tạo một cấu trúc xã hội khác với nhiều nền kinh tế đang phát triển nơi tầng lớp sở hữu đất tiếp tục kiểm soát vốn nông thôn và chính trị trong thời gian dài.
 
 Cải cách ruộng đất không trực tiếp tạo ra chaebol. Nhưng nó góp phần tạo môi trường xã hội mà công nghiệp hóa sau này diễn ra trong đó. Di cư lên thành phố và mở rộng giáo dục cũng diễn ra trên nền cấu trúc mới này.
+
+
+> **Chuyển mạch:** Từ **Cải cách ruộng đất: thay đổi phân phối tài sản và động lực ở nông thôn**, ta sang **Chiến tranh Triều Tiên: phá hủy cả tài sản lẫn mạng lưới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chiến tranh Triều Tiên: phá hủy cả tài sản lẫn mạng lưới
 
@@ -28,7 +37,10 @@ Chiến tranh 1950–1953 phá hủy nhà ở, đường, cầu, nhà máy và m
 
 Nhưng chiến tranh còn phá hủy các mối quan hệ. Nhà cung cấp mất khách hàng, người lao động mất nơi làm việc, doanh nghiệp mất hồ sơ và ngân hàng mất thông tin về người vay. Đây là loại thiệt hại khó nhìn hơn bom đạn phá nhà máy nhưng ảnh hưởng mạnh tới năng suất.
 
-> **Mental Model:** chiến tranh làm mất cả máy móc lẫn trí nhớ tổ chức.
+> **mô hình tư duy (mental model / 사고 모델):** chiến tranh làm mất cả máy móc lẫn trí nhớ tổ chức.
+
+
+> **Chuyển mạch:** Từ **Chiến tranh Triều Tiên: phá hủy cả tài sản lẫn mạng lưới**, ta sang **Nhu cầu tái thiết tạo ra một thị trường mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nhu cầu tái thiết tạo ra một thị trường mới
 
@@ -37,6 +49,9 @@ Sau chiến tranh, nhu cầu xi măng, xây dựng, vận tải, thực phẩm, 
 Hyundai Construction là ví dụ quan trọng. Năng lực quản lý lao động, vật liệu, thời hạn và dự án quy mô lớn được tích lũy trong xây dựng trước khi Hyundai mở rộng sâu sang ô tô và đóng tàu.
 
 Điều này cho thấy một quy luật xuyên suốt lịch sử các tập đoàn Hàn Quốc: **năng lực tổ chức có thể xuất hiện trước khi doanh nghiệp sở hữu công nghệ của ngành mới**. Tập đoàn có thể mang năng lực thực thi dự án sang một ngành khác rồi học công nghệ dần.
+
+
+> **Chuyển mạch:** Từ **Nhu cầu tái thiết tạo ra một thị trường mới**, ta sang **Kinh tế viện trợ và hạn chế ngoại tệ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kinh tế viện trợ và hạn chế ngoại tệ
 
@@ -52,9 +67,12 @@ Khả\ năng\ nhập\ khẩu \approx Thu\ ngoại\ tệ\ từ\ xuất\ khẩu + 
 
 Khi xuất khẩu còn nhỏ, viện trợ trở thành nguồn tài trợ nhập khẩu quan trọng. Nhưng phụ thuộc viện trợ không thể là mô hình tăng trưởng dài hạn. Điều này giải thích vì sao việc tạo ngoại tệ thông qua xuất khẩu trở thành mục tiêu trung tâm trong thập niên sau.
 
+
+> **Chuyển mạch:** Từ **Kinh tế viện trợ và hạn chế ngoại tệ**, ta sang **Nhập khẩu thay thế: hợp lý trong ngắn hạn nhưng có giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Nhập khẩu thay thế: hợp lý trong ngắn hạn nhưng có giới hạn
 
-Trong nền kinh tế thiếu hàng tiêu dùng và thiếu ngoại tệ, sản xuất trong nước để thay hàng nhập khẩu có logic rõ ràng. Dệt may, thực phẩm chế biến và nhiều ngành nhẹ có thể phát triển từ nhu cầu nội địa.
+Trong nền kinh tế thiếu hàng tiêu dùng và thiếu ngoại tệ, sản xuất trong nước để thay hàng nhập khẩu có lô-gic (logic / 논리) rõ ràng. Dệt may, thực phẩm chế biến và nhiều ngành nhẹ có thể phát triển từ nhu cầu nội địa.
 
 Nhưng **thay thế nhập khẩu (import substitution / 수입대체)** gặp một giới hạn: để sản xuất trong nước, doanh nghiệp vẫn thường phải nhập máy móc, nhiên liệu hoặc nguyên liệu. Nếu xuất khẩu không tăng, nền kinh tế vẫn thiếu ngoại tệ.
 
@@ -70,6 +88,9 @@ Muốn sản xuất nhiều hơn
 
 Chiến lược hướng xuất khẩu sau này là một cách phá vòng lặp này.
 
+
+> **Chuyển mạch:** Từ **Nhập khẩu thay thế: hợp lý trong ngắn hạn nhưng có giới hạn**, ta sang **Lạm phát, tiền tệ và lý do ổn định vĩ mô quan trọng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Lạm phát, tiền tệ và lý do ổn định vĩ mô quan trọng
 
 Chiến tranh và thiếu hụt hàng hóa gây áp lực lớn lên giá cả. Khi cung hàng thấp nhưng tiền và nhu cầu tăng, lạm phát có thể làm tín hiệu giá trở nên khó đọc và làm giảm giá trị thực của tiết kiệm.
@@ -77,6 +98,9 @@ Chiến tranh và thiếu hụt hàng hóa gây áp lực lớn lên giá cả. 
 Một nền kinh tế muốn tích lũy vốn cần hộ gia đình sẵn sàng tiết kiệm, ngân hàng có khả năng trung gian vốn và doanh nghiệp có thể lập kế hoạch chi phí. Nếu giá cả biến động quá mạnh, hợp đồng dài hạn và quyết định đầu tư trở nên khó khăn hơn.
 
 Vì vậy ổn định tiền tệ không phải vấn đề tách khỏi công nghiệp hóa. Nó là điều kiện để tài chính và đầu tư dài hạn hoạt động.
+
+
+> **Chuyển mạch:** Từ **Lạm phát, tiền tệ và lý do ổn định vĩ mô quan trọng**, ta sang **Ngân hàng và phân bổ tín dụng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ngân hàng và phân bổ tín dụng
 
@@ -86,11 +110,17 @@ Thị trường vốn Hàn Quốc thời kỳ này còn nông. Doanh nghiệp kh
 
 Đây là nền để hiểu cơ chế **tín dụng định hướng (directed credit / 정책금융·지시금융)** mạnh hơn trong thập niên 1960–1970.
 
+
+> **Chuyển mạch:** Từ **Ngân hàng và phân bổ tín dụng**, ta sang **Sự hình thành của các doanh nghiệp thời kỳ đầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Sự hình thành của các doanh nghiệp thời kỳ đầu
 
 Nhiều doanh nghiệp sau này trở thành tập đoàn lớn bắt đầu hoặc mở rộng mạnh trong giai đoạn trước và sau chiến tranh. Samsung có nguồn gốc thương mại từ năm 1938 rồi mở rộng sang sản xuất. Lucky Chemical—tiền thân của LG—được thành lập năm 1947. Hyundai phát triển năng lực xây dựng trong thời kỳ tái thiết. SK có nguồn gốc từ ngành dệt với Sunkyong Textiles trong thập niên 1950.
 
 Điểm chung không phải tất cả đều có công nghệ tiên tiến ngay từ đầu. Họ tích lũy các năng lực như mua hàng, quản lý dòng tiền, thực thi dự án, tổ chức lao động, xây quan hệ với ngân hàng và chính phủ, sau đó dùng các năng lực đó để bước sang ngành mới.
+
+
+> **Chuyển mạch:** Từ **Sự hình thành của các doanh nghiệp thời kỳ đầu**, ta sang **Doanh nghiệp lớn lên nhờ cả thị trường lẫn thể chế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Doanh nghiệp lớn lên nhờ cả thị trường lẫn thể chế
 
@@ -98,7 +128,7 @@ Không nên kể lịch sử theo hai cực “chính phủ tạo ra chaebol” 
 
 Doanh nghiệp phải bán được hàng, quản lý chi phí và tồn tại. Nhưng khả năng tiếp cận ngoại tệ, giấy phép nhập khẩu, tín dụng và hợp đồng công cũng có thể ảnh hưởng lớn đến tốc độ tích lũy vốn.
 
-Mental model phù hợp hơn là:
+Mô hình tư duy (mental model / 사고 모델) phù hợp hơn là:
 
 ```text
 Năng lực doanh nghiệp
@@ -110,11 +140,17 @@ Năng lực doanh nghiệp
 
 Nếu một yếu tố gần bằng không, tăng trưởng bị hạn chế mạnh.
 
+
+> **Chuyển mạch:** Từ **Doanh nghiệp lớn lên nhờ cả thị trường lẫn thể chế**, ta sang **Giáo dục và vốn nhân lực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Giáo dục và vốn nhân lực
 
 Hàn Quốc hậu chiến nghèo về vốn vật chất nhưng có động lực mạnh mở rộng giáo dục. **Vốn nhân lực (human capital / 인적자본)** không tạo ra nhà máy ngay lập tức, nhưng làm tăng khả năng tiếp thu công nghệ, quản lý quy trình và di chuyển lao động từ nông nghiệp sang công nghiệp.
 
 Khi nền kinh tế chuyển từ hàng tiêu dùng đơn giản sang máy móc, hóa chất, ô tô và điện tử, giá trị của kỹ năng kỹ thuật tăng nhanh. Vì vậy giáo dục trong thập niên 1950 không nên xem là câu chuyện xã hội tách khỏi công nghiệp hóa sau này.
+
+
+> **Chuyển mạch:** Từ **Giáo dục và vốn nhân lực**, ta sang **Vì sao 1961 là một điểm chuyển quan trọng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Vì sao 1961 là một điểm chuyển quan trọng
 
@@ -124,4 +160,6 @@ Vấn đề trung tâm lúc này là làm sao chuyển từ nền kinh tế số
 
 Chương tiếp theo, [thập niên 1960: công nghiệp hóa hướng xuất khẩu](./02_1960s_export_industrialization_and_business_formation.md), giải thích cách xuất khẩu, tỷ giá, tín dụng, kế hoạch phát triển và kỷ luật từ thị trường quốc tế được kết nối thành một hệ thống tăng trưởng mới.
 
-> **Mental Model cuối:** 1945–1961 không phải khoảng trống trước “phép màu Hàn Quốc”. Đây là giai đoạn tái xây quyền sở hữu, nhà nước, ngân hàng, vốn nhân lực và năng lực doanh nghiệp trong điều kiện chiến tranh và thiếu ngoại tệ. Những thành phần đó trở thành nền vật chất và thể chế cho chiến lược xuất khẩu sau này.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** 1945–1961 không phải khoảng trống trước “phép màu Hàn Quốc”. Đây là giai đoạn tái xây quyền sở hữu, nhà nước, ngân hàng, vốn nhân lực và năng lực doanh nghiệp trong điều kiện chiến tranh và thiếu ngoại tệ. Những thành phần đó trở thành nền vật chất và thể chế cho chiến lược xuất khẩu sau này.
+
+> **Bàn giao:** Sau **Vì sao 1961 là một điểm chuyển quan trọng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

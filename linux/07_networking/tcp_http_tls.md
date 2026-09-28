@@ -1,10 +1,13 @@
 # TCP, HTTP và TLS dưới góc nhìn Linux
 
-Một backend developer thường nhìn request ở tầng framework: controller nhận HTTP request, service gọi database, rồi response được trả về. Nhưng trước khi request tới Spring Boot, nhiều lớp đã phải hoạt động đúng: DNS, route, TCP handshake, socket, TLS handshake và HTTP protocol. Khi production gặp timeout hoặc `connection reset`, việc hiểu các lớp này giúp phân biệt lỗi ở đâu thay vì gộp tất cả thành “network issue”.
+> **Mạch đọc:** Đọc **TCP, HTTP và TLS dưới góc nhìn Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ hostname tới HTTP yêu cầu (request / 요청)** sang **TCP là connection-oriented vận chuyển (transport / 전송)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Từ hostname tới HTTP request
 
-Giả sử client gọi:
+Một backend nhà phát triển (developer / 개발자) thường nhìn yêu cầu (request / 요청) ở tầng khung phần mềm (framework / 프레임워크): controller nhận HTTP yêu cầu (request / 요청), dịch vụ (service / 서비스) gọi cơ sở dữ liệu (database / 데이터베이스), rồi phản hồi (response / 응답) được trả về. Nhưng trước khi yêu cầu (request / 요청) tới Spring Boot, nhiều lớp đã phải hoạt động đúng: DNS, tuyến (route / 경로), TCP handshake, socket, TLS handshake và HTTP giao thức (protocol / 프로토콜). Khi môi trường vận hành (production / 운영 환경) gặp hết thời gian chờ (timeout / 타임아웃) hoặc `connection reset`, việc hiểu các lớp này giúp phân biệt lỗi ở đâu thay vì gộp tất cả thành “mạng (network / 네트워크) issue”.
+
+## Từ hostname tới HTTP yêu cầu (request / 요청)
+
+Giả sử máy khách (client / 클라이언트) gọi:
 
 ```text
 https://api.example.com/orders
@@ -23,13 +26,13 @@ hostname
 → application handler
 ```
 
-Mỗi bước có failure mode riêng. DNS lỗi khác TCP timeout; TCP thành công nhưng TLS fail khác HTTP 500.
+Mỗi bước có dạng thất bại (failure mode / 실패 모드) riêng. DNS lỗi khác TCP hết thời gian chờ (timeout / 타임아웃); TCP thành công nhưng TLS thất bại (fail / 실패) khác HTTP 500.
 
-## TCP là connection-oriented transport
+## TCP là connection-oriented vận chuyển (transport / 전송)
 
-TCP cung cấp một byte stream có thứ tự giữa hai endpoint. Endpoint thường được mô tả bằng IP + port.
+TCP cung cấp một byte stream có thứ tự giữa hai endpoint. Endpoint thường được mô tả bằng IP + cổng (port / 포트).
 
-Trước khi truyền application data, TCP thiết lập connection bằng three-way handshake:
+Trước khi truyền ứng dụng (application / 애플리케이션) dữ liệu (data / 데이터), TCP thiết lập liên kết (connection / 연결) bằng three-way handshake:
 
 ```text
 Client                      Server
@@ -38,7 +41,7 @@ Client                      Server
   | ------- ACK ----------> |
 ```
 
-Nếu client ở `SYN-SENT` lâu, nó đã gửi yêu cầu kết nối nhưng chưa hoàn tất handshake.
+Nếu máy khách (client / 클라이언트) ở `SYN-SENT` lâu, nó đã gửi yêu cầu kết nối nhưng chưa hoàn tất handshake.
 
 ```bash
 ss -antp
@@ -48,7 +51,7 @@ có thể quan sát TCP states.
 
 ## TCP không biết HTTP
 
-TCP chỉ cung cấp ordered byte stream. Nó không biết request path `/orders`, status code `500` hay JSON.
+TCP chỉ cung cấp ordered byte stream. Nó không biết đường đi của yêu cầu (request path / 요청 경로) `/orders`, status mã (code / 코드) `500` hay JSON.
 
 HTTP nằm phía trên TCP. Vì vậy:
 
@@ -56,27 +59,27 @@ HTTP nằm phía trên TCP. Vì vậy:
 nc -vz api.example.com 443
 ```
 
-thành công chỉ chứng minh TCP connection có thể thiết lập tới endpoint đó. Nó chưa chứng minh TLS hoặc HTTP hoạt động.
+thành công chỉ chứng minh TCP liên kết (connection / 연결) có thể thiết lập tới endpoint đó. Nó chưa chứng minh TLS hoặc HTTP hoạt động.
 
-## Connection refused
+## Liên kết (connection / 연결) refused
 
-Nếu client nhận `Connection refused`, thường có phản hồi từ network stack cho biết endpoint không chấp nhận connection. Trường hợp phổ biến là không có listener trên IP/port đó hoặc firewall chủ động reject.
+Nếu máy khách (client / 클라이언트) nhận `Connection refused`, thường có phản hồi từ mạng (network / 네트워크) ngăn xếp (stack / 스택) cho biết endpoint không chấp nhận liên kết (connection / 연결). Trường hợp phổ biến là không có listener trên IP/cổng (port / 포트) đó hoặc firewall chủ động reject.
 
-Server side kiểm tra:
+Máy chủ (server / 서버) side kiểm tra:
 
 ```bash
 sudo ss -lntp | grep ':8080'
 ```
 
-Nếu Java process tồn tại nhưng không có `LISTEN`, cần điều tra startup/bind/application layer trước.
+Nếu Java tiến trình (process / 프로세스) tồn tại nhưng không có `LISTEN`, cần điều tra startup/bind/ứng dụng (application / 애플리케이션) tầng (layer / 계층) trước.
 
-## Timeout
+## Hết thời gian chờ (timeout / 타임아웃)
 
-Timeout có thể xuất hiện ở nhiều tầng.
+Hết thời gian chờ (timeout / 타임아웃) có thể xuất hiện ở nhiều tầng.
 
-TCP connect timeout có thể do packet bị drop, route sai, firewall hoặc host không phản hồi. HTTP read timeout xảy ra sau khi connection đã được thiết lập nhưng application/upstream không trả dữ liệu đúng hạn.
+TCP connect hết thời gian chờ (timeout / 타임아웃) có thể do packet bị drop, tuyến (route / 경로) sai, firewall hoặc host không phản hồi. HTTP read hết thời gian chờ (timeout / 타임아웃) xảy ra sau khi liên kết (connection / 연결) đã được thiết lập nhưng ứng dụng (application / 애플리케이션)/upstream không trả dữ liệu đúng hạn.
 
-Vì vậy câu “request timeout” chưa đủ. Cần biết timeout ở giai đoạn nào.
+Vì vậy câu “yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃)” chưa đủ. Cần biết hết thời gian chờ (timeout / 타임아웃) ở giai đoạn nào.
 
 `curl -v` giúp nhìn progression:
 
@@ -84,13 +87,13 @@ Vì vậy câu “request timeout” chưa đủ. Cần biết timeout ở giai 
 curl -v https://api.example.com/health
 ```
 
-Nếu output dừng trước `Connected to`, lỗi khác với trường hợp TLS hoàn tất rồi chờ HTTP response.
+Nếu đầu ra (output / 출력) dừng trước `Connected to`, lỗi khác với trường hợp TLS hoàn tất rồi chờ HTTP phản hồi (response / 응답).
 
 ## TCP reset
 
-`Connection reset by peer` thường nghĩa connection đã tồn tại nhưng phía bên kia hoặc thiết bị trung gian gửi RST để đóng đột ngột.
+`Connection reset by peer` thường nghĩa liên kết (connection / 연결) đã tồn tại nhưng phía bên kia hoặc thiết bị trung gian gửi RST để đóng đột ngột.
 
-Nguyên nhân có thể là application crash, proxy timeout, firewall behavior hoặc process đóng socket theo trạng thái bất thường.
+Nguyên nhân có thể là ứng dụng (application / 애플리케이션) crash, proxy hết thời gian chờ (timeout / 타임아웃), firewall hành vi (behavior / 동작) hoặc tiến trình (process / 프로세스) đóng socket theo trạng thái bất thường.
 
 Packet capture có thể chứng minh ai gửi RST:
 
@@ -98,35 +101,35 @@ Packet capture có thể chứng minh ai gửi RST:
 sudo tcpdump -ni any host 10.0.0.20 and port 8080
 ```
 
-Không nên kết luận “server reset” chỉ từ thông báo ở client khi chưa xem path.
+Không nên kết luận “máy chủ (server / 서버) reset” chỉ từ thông báo ở máy khách (client / 클라이언트) khi chưa xem đường dẫn (path / 경로).
 
 ## TIME-WAIT
 
-Sau khi connection đóng, một endpoint có thể giữ `TIME-WAIT` để xử lý segment cũ và tránh nhầm connection mới.
+Sau khi liên kết (connection / 연결) đóng, một endpoint có thể giữ `TIME-WAIT` để xử lý segment cũ và tránh nhầm liên kết (connection / 연결) mới.
 
-Nhiều `TIME-WAIT` không tự động là memory leak.
+Nhiều `TIME-WAIT` không tự động là bộ nhớ (memory / 메모리) leak.
 
 ```bash
 ss -ant state time-wait | wc -l
 ```
 
-Nếu số lượng rất lớn và gây port pressure, cần xem connection reuse, client behavior, load pattern và ephemeral port range trước khi chỉnh kernel parameter.
+Nếu số lượng rất lớn và gây cổng (port / 포트) pressure, cần xem liên kết (connection / 연결) reuse, máy khách (client / 클라이언트) hành vi (behavior / 동작), tải (load / 로드) mẫu (pattern / 패턴) và ephemeral cổng (port / 포트) phạm vi (range / 범위) trước khi chỉnh kernel parameter.
 
 ## CLOSE-WAIT
 
-`CLOSE-WAIT` nghĩa peer đã gửi FIN nhưng local process chưa đóng socket của mình.
+`CLOSE-WAIT` nghĩa peer đã gửi FIN nhưng cục bộ (local / 로컬) tiến trình (process / 프로세스) chưa đóng socket của mình.
 
-Nhiều `CLOSE-WAIT` tồn tại lâu có thể gợi ý application không release connection đúng cách.
+Nhiều `CLOSE-WAIT` tồn tại lâu có thể gợi ý ứng dụng (application / 애플리케이션) không bản phát hành (release / 릴리스) liên kết (connection / 연결) đúng cách.
 
 ```bash
 ss -antp state close-wait
 ```
 
-Trong Java, cần liên hệ tới lifecycle của HTTP client, JDBC/socket hoặc stream resource.
+Trong Java, cần liên hệ tới vòng đời (lifecycle / 생명주기) của HTTP máy khách (client / 클라이언트), JDBC/socket hoặc stream tài nguyên (resource / 자원).
 
 ## Ephemeral ports
 
-Client khi mở outbound connection thường dùng một local ephemeral port.
+Máy khách (client / 클라이언트) khi mở outbound liên kết (connection / 연결) thường dùng một cục bộ (local / 로컬) ephemeral cổng (port / 포트).
 
 Ví dụ:
 
@@ -134,25 +137,25 @@ Ví dụ:
 10.0.0.5:49152 → 10.0.0.20:443
 ```
 
-Nếu application tạo lượng connection rất lớn mà không reuse, ephemeral ports có thể trở thành tài nguyên giới hạn.
+Nếu ứng dụng (application / 애플리케이션) tạo lượng liên kết (connection / 연결) rất lớn mà không reuse, ephemeral ports có thể trở thành tài nguyên giới hạn.
 
-Kiểm tra range:
+Kiểm tra phạm vi (range / 범위):
 
 ```bash
 cat /proc/sys/net/ipv4/ip_local_port_range
 ```
 
-Không chỉnh range như giải pháp đầu tiên; connection pooling/keep-alive thường là câu hỏi kiến trúc quan trọng hơn.
+Không chỉnh phạm vi (range / 범위) như giải pháp đầu tiên; liên kết (connection / 연결) pooling/keep-alive thường là câu hỏi kiến trúc quan trọng hơn.
 
 ## Listen backlog
 
-Server socket có queue liên quan connection đang chờ được accept. Nếu application không accept đủ nhanh, backlog pressure có thể xuất hiện.
+Máy chủ (server / 서버) socket có hàng đợi (queue / 큐) liên quan liên kết (connection / 연결) đang chờ được accept. Nếu ứng dụng (application / 애플리케이션) không accept đủ nhanh, backlog pressure có thể xuất hiện.
 
-Điều này liên hệ trực tiếp tới thread pool/event loop và CPU saturation. Network symptom có thể bắt nguồn từ application capacity.
+Điều này liên hệ trực tiếp tới luồng thực thi (thread / 스레드) pool/vòng lặp sự kiện (event loop / 이벤트 루프) và CPU saturation. mạng (network / 네트워크) symptom có thể bắt nguồn từ ứng dụng (application / 애플리케이션) sức chứa (capacity / 용량).
 
-## HTTP request/response
+## HTTP yêu cầu (request / 요청)/phản hồi (response / 응답)
 
-HTTP/1.1 request đơn giản:
+HTTP/1.1 yêu cầu (request / 요청) đơn giản:
 
 ```http
 GET /health HTTP/1.1
@@ -160,7 +163,7 @@ Host: api.example.com
 Connection: keep-alive
 ```
 
-Response:
+Phản hồi (response / 응답):
 
 ```http
 HTTP/1.1 200 OK
@@ -170,15 +173,15 @@ Content-Length: 15
 {"status":"UP"}
 ```
 
-Framework che phần lớn chi tiết này, nhưng khi debug proxy/header/body length/connection reuse, hiểu wire-level semantics rất hữu ích.
+Khung phần mềm (framework / 프레임워크) che phần lớn chi tiết này, nhưng khi gỡ lỗi (debug / 디버그) proxy/header/body length/liên kết (connection / 연결) reuse, hiểu wire-level ngữ nghĩa (semantics / 의미론) rất hữu ích.
 
-## Status code không giống transport failure
+## Status mã (code / 코드) không giống vận chuyển (transport / 전송) thất bại (failure / 실패)
 
-HTTP `500` nghĩa TCP/TLS/HTTP đã đi đủ xa để server gửi HTTP response có status 500.
+HTTP `500` nghĩa TCP/TLS/HTTP đã đi đủ xa để máy chủ (server / 서버) gửi HTTP phản hồi (response / 응답) có status 500.
 
-Ngược lại `Connection refused` xảy ra trước khi HTTP request được trao đổi.
+Ngược lại `Connection refused` xảy ra trước khi HTTP yêu cầu (request / 요청) được trao đổi.
 
-Điều này giúp xác định layer:
+Điều này giúp xác định tầng (layer / 계층):
 
 ```text
 HTTP 500 → application/proxy xử lý request rồi trả error
@@ -188,19 +191,19 @@ DNS error → còn chưa có IP endpoint
 
 ## HTTP keep-alive
 
-Tạo TCP/TLS connection có chi phí. HTTP keep-alive cho phép reuse connection cho nhiều requests.
+Tạo TCP/TLS liên kết (connection / 연결) có chi phí. HTTP keep-alive cho phép reuse liên kết (connection / 연결) cho nhiều requests.
 
-Connection pool trong Java HTTP client hoặc database driver tồn tại vì cùng nguyên lý: reuse expensive connections và giới hạn concurrency.
+Liên kết (connection / 연결) pool trong Java HTTP máy khách (client / 클라이언트) hoặc cơ sở dữ liệu (database / 데이터베이스) driver tồn tại vì cùng nguyên lý: reuse expensive connections và giới hạn tính đồng thời (concurrency / 동시성).
 
-Nhưng pool quá nhỏ tạo queue; pool quá lớn có thể overload downstream. Linux socket state là một nguồn bằng chứng để quan sát pool behavior.
+Nhưng pool quá nhỏ tạo hàng đợi (queue / 큐); pool quá lớn có thể overload downstream. Linux socket trạng thái (state / 상태) là một nguồn bằng chứng để quan sát pool hành vi (behavior / 동작).
 
 ## HTTP/2
 
-HTTP/2 có thể multiplex nhiều streams trên một TCP connection, giảm nhu cầu nhiều parallel TCP connections so với HTTP/1.1.
+HTTP/2 có thể multiplex nhiều streams trên một TCP liên kết (connection / 연결), giảm nhu cầu nhiều parallel TCP connections so với HTTP/1.1.
 
-Tuy nhiên vì nhiều streams chia một TCP connection, packet loss và connection-level issue có thể ảnh hưởng nhiều requests cùng lúc.
+Tuy nhiên vì nhiều streams chia một TCP liên kết (connection / 연결), packet mất mát (loss / 손실) và connection-level issue có thể ảnh hưởng nhiều requests cùng lúc.
 
-`curl` có thể hiển thị protocol negotiated trong verbose output tùy build:
+`curl` có thể hiển thị giao thức (protocol / 프로토콜) negotiated trong verbose đầu ra (output / 출력) tùy bản dựng (build / 빌드):
 
 ```bash
 curl -v --http2 https://api.example.com/
@@ -216,15 +219,15 @@ TCP connection
 → encrypted HTTP
 ```
 
-TLS cung cấp encryption, integrity và server authentication thông qua certificate validation.
+TLS cung cấp encryption, integrity và máy chủ (server / 서버) authentication thông qua certificate kiểm tra hợp lệ (validation / 검증).
 
-Nếu TCP 443 connect được nhưng TLS handshake fail, firewall TCP cơ bản ít khả năng là nguyên nhân chính.
+Nếu TCP 443 connect được nhưng TLS handshake thất bại (fail / 실패), firewall TCP cơ bản ít khả năng là nguyên nhân chính.
 
-## Certificate chain
+## Certificate chuỗi (chain / 사슬)
 
-Server certificate thường được ký bởi intermediate CA, sau đó chain tới trusted root CA.
+Máy chủ (server / 서버) certificate thường được ký bởi intermediate CA, sau đó chuỗi (chain / 사슬) tới trusted gốc (root / 루트) CA.
 
-Client cần xây dựng trust chain hợp lệ và kiểm tra hostname, thời gian hiệu lực và các policy khác.
+Máy khách (client / 클라이언트) cần xây dựng trust chuỗi (chain / 사슬) hợp lệ và kiểm tra hostname, thời gian hiệu lực và các chính sách (policy / 정책) khác.
 
 Kiểm tra bằng OpenSSL:
 
@@ -236,21 +239,21 @@ openssl s_client -connect api.example.com:443 -servername api.example.com
 
 ## SNI
 
-Server Name Indication (SNI) cho phép client gửi hostname trong TLS handshake để server chọn certificate phù hợp.
+Máy chủ (server / 서버) Name Indication (SNI) cho phép máy khách (client / 클라이언트) gửi hostname trong TLS handshake để máy chủ (server / 서버) chọn certificate phù hợp.
 
-Nếu test chỉ bằng IP mà không gửi SNI, có thể nhận certificate mặc định khác với certificate production request nhận được.
+Nếu kiểm thử (test / 테스트) chỉ bằng IP mà không gửi SNI, có thể nhận certificate mặc định khác với certificate môi trường vận hành (production / 운영 환경) yêu cầu (request / 요청) nhận được.
 
-Vì vậy khi debug HTTPS virtual host, hostname rất quan trọng.
+Vì vậy khi gỡ lỗi (debug / 디버그) HTTPS virtual host, hostname rất quan trọng.
 
 ## ALPN
 
-Application-Layer Protocol Negotiation cho phép TLS handshake thống nhất protocol phía trên như HTTP/2 hoặc HTTP/1.1.
+Application-Layer giao thức (protocol / 프로토콜) Negotiation cho phép TLS handshake thống nhất giao thức (protocol / 프로토콜) phía trên như HTTP/2 hoặc HTTP/1.1.
 
-Đây là ví dụ networking stack không chỉ là các layer độc lập hoàn toàn; layer trên có thể được negotiated trong handshake layer dưới.
+Đây là ví dụ networking ngăn xếp (stack / 스택) không chỉ là các tầng (layer / 계층) độc lập hoàn toàn; tầng (layer / 계층) trên có thể được negotiated trong handshake tầng (layer / 계층) dưới.
 
 ## TLS lỗi do clock
 
-Certificate có `Not Before` và `Not After`. Nếu system clock sai, certificate hợp lệ có thể bị báo expired hoặc not yet valid.
+Certificate có `Not Before` và `Not After`. Nếu hệ thống (system / 시스템) clock sai, certificate hợp lệ có thể bị báo expired hoặc not yet valid.
 
 ```bash
 date -u
@@ -261,15 +264,15 @@ Do đó TLS troubleshooting phải liên kết với [Time, Clock, Timezone và 
 
 ## Proxy và reverse proxy
 
-Production thường có:
+Môi trường vận hành (production / 운영 환경) thường có:
 
 ```text
 Client → Load Balancer / Nginx → Java application
 ```
 
-Có thể có hai TCP connections riêng: client tới proxy và proxy tới backend.
+Có thể có hai TCP connections riêng: máy khách (client / 클라이언트) tới proxy và proxy tới backend.
 
-Client nhận 502/504 không tự động nghĩa Java trả status đó. Proxy có thể tự tạo response vì upstream connect/read timeout.
+Máy khách (client / 클라이언트) nhận 502/504 không tự động nghĩa Java trả status đó. Proxy có thể tự tạo phản hồi (response / 응답) vì upstream connect/read hết thời gian chờ (timeout / 타임아웃).
 
 Cần xem proxy log và backend log cùng timeline.
 
@@ -277,11 +280,11 @@ Cần xem proxy log và backend log cùng timeline.
 
 Ý nghĩa cụ thể phụ thuộc proxy, nhưng thường:
 
-**502 Bad Gateway** gợi ý proxy không nhận được upstream response hợp lệ.
+**502 Bad Gateway** gợi ý proxy không nhận được upstream phản hồi (response / 응답) hợp lệ.
 
-**504 Gateway Timeout** gợi ý proxy chờ upstream quá thời gian cấu hình.
+**504 Gateway hết thời gian chờ (timeout / 타임아웃)** gợi ý proxy chờ upstream quá thời gian cấu hình.
 
-Đây là signal để kiểm tra connection từ proxy tới backend, không chỉ từ laptop tới public endpoint.
+Đây là tín hiệu (signal / 신호) để kiểm tra liên kết (connection / 연결) từ proxy tới backend, không chỉ từ laptop tới công khai (public / 공개) endpoint.
 
 ## Local-first rồi đi ra ngoài
 
@@ -291,16 +294,16 @@ Nếu app listen 8080:
 curl -v http://127.0.0.1:8080/health
 ```
 
-Nếu local fail, lỗi nằm trước external load balancer trong dependency chain.
+Nếu cục bộ (local / 로컬) thất bại (fail / 실패), lỗi nằm trước bên ngoài (external / 외부) bộ cân bằng tải (load balancer / 로드 밸런서) trong phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬).
 
-Nếu local success nhưng request qua domain fail:
+Nếu cục bộ (local / 로컬) success nhưng yêu cầu (request / 요청) qua lĩnh vực (domain / 도메인) thất bại (fail / 실패):
 
 ```bash
 dig +short api.example.com
 curl -v https://api.example.com/health
 ```
 
-thì scope chuyển sang DNS, TLS, proxy, firewall hoặc route.
+thì phạm vi (scope / 범위) chuyển sang DNS, TLS, proxy, firewall hoặc tuyến (route / 경로).
 
 ## Packet capture như bằng chứng cuối cùng
 
@@ -316,11 +319,11 @@ Nếu cần phân tích sâu:
 sudo tcpdump -ni any port 8080 -w /tmp/app.pcap
 ```
 
-Sau đó mở bằng Wireshark ở môi trường phù hợp. Capture có thể chứa dữ liệu nhạy cảm; phải xử lý như incident artifact.
+Sau đó mở bằng Wireshark ở môi trường phù hợp. Capture có thể chứa dữ liệu nhạy cảm; phải xử lý như sự cố (incident / 인시던트) sản phẩm tạo ra (artifact / 산출물).
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Khi request lỗi, hãy đặt nó vào chuỗi:
+Khi yêu cầu (request / 요청) lỗi, hãy đặt nó vào chuỗi:
 
 ```text
 DNS
@@ -334,20 +337,22 @@ DNS
 → downstream dependency
 ```
 
-Không cần kiểm tra từng bước nếu đã có evidence mạnh, nhưng phải biết bước nào đã được chứng minh và bước nào chỉ đang giả định.
+Không cần kiểm tra từng bước nếu đã có bằng chứng (evidence / 증거) mạnh, nhưng phải biết bước nào đã được chứng minh và bước nào chỉ đang giả định.
 
 ## Những hiểu lầm phổ biến
 
-**“Port 443 mở nghĩa HTTPS khỏe.”** TCP listener không chứng minh TLS/certificate/HTTP đúng.
+**“cổng (port / 포트) 443 mở nghĩa HTTPS khỏe.”** TCP listener không chứng minh TLS/certificate/HTTP đúng.
 
-**“HTTP 500 là network error.”** HTTP response đã được tạo, nghĩa request đã đi qua nhiều layer network thành công.
+**“HTTP 500 là mạng (network / 네트워크) lỗi (error / 오류).”** HTTP phản hồi (response / 응답) đã được tạo, nghĩa yêu cầu (request / 요청) đã đi qua nhiều tầng (layer / 계층) mạng (network / 네트워크) thành công.
 
-**“TIME-WAIT nhiều chắc chắn là bug.”** Đây là TCP state bình thường; cần context về rate và resource pressure.
+**“TIME-WAIT nhiều chắc chắn là bug.”** Đây là TCP trạng thái (state / 상태) bình thường; cần ngữ cảnh (context / 맥락) về tỷ lệ (rate / 비율) và tài nguyên (resource / 자원) pressure.
 
-**“curl localhost thành công nghĩa user bên ngoài phải truy cập được.”** External path còn DNS, bind address, firewall, proxy và load balancer.
+**“curl localhost thành công nghĩa người dùng (user / 사용자) bên ngoài phải truy cập được.”** bên ngoài (external / 외부) đường dẫn (path / 경로) còn DNS, bind address, firewall, proxy và bộ cân bằng tải (load balancer / 로드 밸런서).
 
-**“Certificate đúng trên browser nghĩa mọi client đều đúng.”** Trust store, SNI, protocol version và clock có thể khác giữa client.
+**“Certificate đúng trên trình duyệt (browser / 브라우저) nghĩa mọi máy khách (client / 클라이언트) đều đúng.”** Trust store, SNI, giao thức (protocol / 프로토콜) phiên bản (version / 버전) và clock có thể khác giữa máy khách (client / 클라이언트).
 
 ## Kết nối kiến thức
 
 Chương này mở rộng [Networking, DNS, Sockets và Ports](./networking_dns_sockets_ports.md), liên hệ [File Descriptors](../01_filesystem/files_streams_descriptors.md), [Time/NTP](../05_system/time_clock_ntp.md), [Java Backend Incident Playbook](../09_production/java_backend_incident_playbook.md) và [Production Troubleshooting](../09_production/production_troubleshooting.md).
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [dns resolution internals](./dns_resolution_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

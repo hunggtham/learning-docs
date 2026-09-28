@@ -1,4 +1,7 @@
 # Thuật toán khoảng và đường quét
+
+> **Mạch đọc:** Đọc **Thuật toán khoảng và đường quét** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Ngữ nghĩa khoảng phải được chốt trước thuật toán** sang **2. Chuẩn hóa dữ liệu trước khi suy luận**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Intervals & Sweep Line / 구간 알고리즘과 스위프 라인**
 
 Khoảng xuất hiện ở rất nhiều miền: lịch họp, thời gian hiệu lực của dữ liệu, vùng nhớ, cửa sổ log, đoạn giá, genomic region, đoạn thẳng trên trục số và hình chữ nhật trong hình học tính toán. Điểm chung là một đối tượng không còn là một điểm mà chiếm một **miền liên tục có thứ tự**.
@@ -77,9 +80,9 @@ các khoảng giao nhau cần hợp nhất
 các khoảng hoàn toàn nằm sau
 ```
 
-Một lần chèn là `O(n)` với mảng phẳng. Nếu cập nhật diễn ra thường xuyên, lựa chọn cấu trúc phải thay đổi: cây cân bằng, interval tree hoặc cấu trúc chuyên biệt có thể phù hợp hơn.
+Một lần chèn là `O(n)` với mảng phẳng. Nếu cập nhật diễn ra thường xuyên, lựa chọn cấu trúc phải thay đổi: cây cân bằng, interval cây (tree / 트리) hoặc cấu trúc chuyên biệt có thể phù hợp hơn.
 
-Điểm quan trọng là cùng một bài toán logic nhưng **mô hình cập nhật khác nhau** dẫn đến cấu trúc khác nhau.
+Điểm quan trọng là cùng một bài toán lô-gic (logic / 논리) nhưng **mô hình cập nhật khác nhau** dẫn đến cấu trúc khác nhau.
 
 ## 5. Lập lịch khoảng và exchange argument
 
@@ -111,7 +114,7 @@ dp[i] = \max(dp[i-1],\ value_i + dp[p(i)])
 
 Tìm `p(i)` bằng tìm kiếm nhị phân giúp tổng thời gian `O(n log n)`.
 
-Hai bài nhìn rất giống nhau nhưng objective khác nhau làm thay đổi toàn bộ chiến lược từ greedy sang DP. Đây là một cảnh báo quan trọng: **đừng nhận diện thuật toán chỉ từ hình dạng dữ liệu; phải nhìn objective và exchange property.**
+Hai bài nhìn rất giống nhau nhưng mục tiêu (objective / 목표) khác nhau làm thay đổi toàn bộ chiến lược từ greedy sang DP. Đây là một cảnh báo quan trọng: **đừng nhận diện thuật toán chỉ từ hình dạng dữ liệu; phải nhìn mục tiêu (objective / 목표) và exchange thuộc tính (property / 속성).**
 
 ## 7. Meeting Rooms và số lượng chồng lấn cực đại
 
@@ -126,13 +129,13 @@ Quét theo thời gian và duy trì số khoảng đang hoạt động. Giá tr�
 
 Với `[start,end)`, tại cùng timestamp cần xử lý `end` trước `start`. Nếu miền dùng khoảng đóng, quy tắc có thể đổi.
 
-Tie-breaking không phải chi tiết code; nó là hiện thân trực tiếp của ngữ nghĩa miền dữ liệu.
+Tie-breaking không phải chi tiết mã (code / 코드); nó là hiện thân trực tiếp của ngữ nghĩa miền dữ liệu.
 
 ## 8. Hai mảng endpoint đã sắp xếp
 
 Ta có thể tách toàn bộ `start[]` và `end[]`, sắp xếp riêng rồi dùng hai con trỏ. Nếu `start[i] < end[j]`, cần thêm tài nguyên; ngược lại một tài nguyên được giải phóng.
 
-Đây vẫn là sweep line, chỉ khác cách biểu diễn sự kiện. Khi trạng thái chỉ cần một bộ đếm, không nhất thiết phải tạo object sự kiện đầy đủ.
+Đây vẫn là sweep line, chỉ khác cách biểu diễn sự kiện. Khi trạng thái chỉ cần một bộ đếm, không nhất thiết phải tạo đối tượng (object / 객체) sự kiện đầy đủ.
 
 ## 9. Mảng hiệu như sweep line rời rạc
 
@@ -162,7 +165,7 @@ Compression giữ **thứ tự**, nhưng không tự giữ **khoảng cách**.
 
 Khoảng cách giữa rank 0 và 1 không bằng khoảng cách giữa rank 1 và 2. Nếu bài cần chiều dài, diện tích hoặc tích phân, phải giữ tọa độ gốc để tính độ dài thực.
 
-Đây là lỗi rất phổ biến khi kết hợp coordinate compression với Segment Tree.
+Đây là lỗi rất phổ biến khi kết hợp coordinate compression với Segment cây (tree / 트리).
 
 ## 11. Active Set là phần quyết định cấu trúc dữ liệu
 
@@ -179,7 +182,7 @@ cần order statistics       -> augmented tree
 
 Vì vậy sweep line là một khung thuật toán, không phải một cấu trúc cụ thể.
 
-## 12. Invariant của active set
+## 12. bất biến (invariant / 불변식) của active set
 
 Một sweep line đúng phải xác định chính xác:
 
@@ -189,7 +192,7 @@ Ví dụ với hình chữ nhật quét theo `x`, active set có thể chứa c�
 
 Nếu ta không định nghĩa mốc “trước hay sau sự kiện” và quy tắc tie, rất dễ thêm/xóa sai đối tượng tại cùng tọa độ.
 
-Đây là lý do event ordering cần được xem như một bất biến, không phải comparator ngẫu nhiên.
+Đây là lý do sự kiện (event / 이벤트) thứ tự (ordering / 순서) cần được xem như một bất biến, không phải comparator ngẫu nhiên.
 
 ## 13. Giao của hai danh sách khoảng đã sắp xếp
 
@@ -225,14 +228,14 @@ Nếu tổng độ dài y được phủ hiện tại là `L`:
 area += L\cdot(x_{next}-x_{current})
 \]
 
-Khó khăn còn lại là duy trì tổng độ dài hợp của các y-interval dưới add/remove. Segment Tree trên tọa độ y đã nén có thể lưu:
+Khó khăn còn lại là duy trì tổng độ dài hợp của các y-interval dưới add/remove. Segment cây (tree / 트리) trên tọa độ y đã nén có thể lưu:
 
 ```text
 coverCount
 coveredLength
 ```
 
-Nếu `coverCount > 0`, toàn node interval được phủ; nếu bằng 0, `coveredLength` bằng tổng của hai con.
+Nếu `coverCount > 0`, toàn nút (node / 노드) interval được phủ; nếu bằng 0, `coveredLength` bằng tổng của hai con.
 
 Đây là một ví dụ mạnh về composition:
 
@@ -242,9 +245,9 @@ sweep line theo x
 + Segment Tree duy trì union length
 ```
 
-## 16. Event batching tại cùng tọa độ
+## 16. sự kiện (event / 이벤트) batching tại cùng tọa độ
 
-Trong bài diện tích hoặc hình học, nhiều sự kiện có thể xảy ra cùng `x`. Một pattern an toàn là:
+Trong bài diện tích hoặc hình học, nhiều sự kiện có thể xảy ra cùng `x`. Một mẫu (pattern / 패턴) an toàn là:
 
 1. tính đóng góp từ `prevX` tới `x` bằng trạng thái active trước khi thay đổi;
 2. xử lý toàn bộ sự kiện tại `x` theo quy ước;
@@ -264,11 +267,11 @@ active set có thứ tự theo y tại x hiện tại
 sự kiện bắt đầu/kết thúc/giao điểm
 ```
 
-Điểm khó là comparator của active set phụ thuộc vị trí sweep line hiện tại. Đây không phải trường hợp bình thường của một BST comparator bất biến theo thời gian; implementation hình học tính toán cần xử lý rất cẩn thận các degeneracy và precision issues.
+Điểm khó là comparator của active set phụ thuộc vị trí sweep line hiện tại. Đây không phải trường hợp bình thường của một BST comparator bất biến theo thời gian; hiện thực (implementation / 구현) hình học tính toán cần xử lý rất cẩn thận các degeneracy và precision issues.
 
 ## 18. Geometric Predicates và dấu phẩy động
 
-Orientation test trong hình học thường dựa trên tích có hướng:
+Orientation kiểm thử (test / 테스트) trong hình học thường dựa trên tích có hướng:
 
 \[
 orient(a,b,c) = (b-a)\times(c-a)
@@ -276,13 +279,13 @@ orient(a,b,c) = (b-a)\times(c-a)
 
 Dấu của giá trị cho biết ba điểm quay trái, quay phải hay thẳng hàng.
 
-Nếu dùng floating point, sai số làm tròn có thể làm predicate gần 0 đổi dấu, phá thứ tự active set hoặc bỏ sót giao điểm. Với tọa độ nguyên trong miền vừa phải, có thể dùng số nguyên rộng hơn; với hình học chính xác cần kỹ thuật robust predicates.
+Nếu dùng floating điểm (point / 지점), sai số làm tròn có thể làm predicate gần 0 đổi dấu, phá thứ tự active set hoặc bỏ sót giao điểm. Với tọa độ nguyên trong miền vừa phải, có thể dùng số nguyên rộng hơn; với hình học chính xác cần kỹ thuật robust predicates.
 
 Tính đúng đắn hình học thường phụ thuộc **predicate chính xác**, không chỉ cấu trúc dữ liệu.
 
-## 19. Interval Tree và Sweep Line giải các workload khác nhau
+## 19. Interval cây (tree / 트리) và Sweep Line giải các tải công việc (workload / 워크로드) khác nhau
 
-Sweep line phù hợp khi có một tập sự kiện lớn và có thể xử lý offline theo một trục. Interval Tree phù hợp khi dữ liệu được giữ lâu và cần nhiều truy vấn overlap động.
+Sweep line phù hợp khi có một tập sự kiện lớn và có thể xử lý offline theo một trục. Interval cây (tree / 트리) phù hợp khi dữ liệu được giữ lâu và cần nhiều truy vấn overlap động.
 
 ```text
 một lần xử lý offline        -> sorting + sweep thường rất mạnh
@@ -291,9 +294,9 @@ nhiều truy vấn động lâu dài  -> interval tree / augmented BST
 
 Không nên dùng cấu trúc động phức tạp nếu có thể sort một lần rồi quét tuyến tính.
 
-## 20. Temporal Data trong hệ thống thực tế
+## 20. Temporal dữ liệu (data / 데이터) trong hệ thống thực tế
 
-Khoảng thời gian trong database thường có các vấn đề mà bài DSA đơn giản bỏ qua:
+Khoảng thời gian trong cơ sở dữ liệu (database / 데이터베이스) thường có các vấn đề mà bài DSA đơn giản bỏ qua:
 
 ```text
 timezone
@@ -306,23 +309,23 @@ inclusive/exclusive boundaries
 
 Một hệ thống booking có thể dùng `[start,end)` để cho phép tài nguyên được dùng ngay khi booking trước kết thúc. Một hệ thống lịch sử giá có thể có khoảng mở tới vô cực.
 
-Mô hình khoảng phải được thiết kế cùng business semantics.
+Mô hình khoảng phải được thiết kế cùng nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론).
 
 ## 21. Sweep Line trong log và telemetry
 
-Nếu cần tính số request đồng thời từ log `(start,end)`, có thể dùng event sweep. Nếu luồng sự kiện đến theo thời gian thật và không thể reorder toàn bộ, bài toán chuyển sang online processing với watermark, out-of-order event và cửa sổ thời gian.
+Nếu cần tính số yêu cầu (request / 요청) đồng thời từ log `(start,end)`, có thể dùng sự kiện (event / 이벤트) sweep. Nếu luồng sự kiện đến theo thời gian thật và không thể reorder toàn bộ, bài toán chuyển sang online processing với watermark, out-of-order sự kiện (event / 이벤트) và cửa sổ thời gian.
 
 Sự khác biệt offline/online có thể biến một thuật toán sorting đơn giản thành một hệ thống stream phức tạp.
 
 ## 22. External-memory Sweep
 
-Nếu số sự kiện quá lớn để vừa RAM, sorting ngoài bộ nhớ có thể tạo các run rồi merge. Sau khi sự kiện được phát ra theo thứ tự, sweep state có thể vẫn nhỏ hơn tổng dữ liệu.
+Nếu số sự kiện quá lớn để vừa RAM, sorting ngoài bộ nhớ có thể tạo các run rồi merge. Sau khi sự kiện được phát ra theo thứ tự, sweep trạng thái (state / 상태) có thể vẫn nhỏ hơn tổng dữ liệu.
 
 Điều này minh họa một nguyên lý hệ thống: nhiều thuật toán sweep chỉ cần **thứ tự luồng**, không cần toàn bộ dữ liệu đã sắp xếp nằm trong RAM cùng lúc.
 
 ## 23. Parallel Sweep không tự nhiên như quét tuần tự
 
-Trạng thái active tại vị trí `x` phụ thuộc tất cả sự kiện trước `x`, vì vậy sweep có dependency tuần tự. Một số bài có thể chia miền thành block, tính summary rồi ghép, nhưng phải thiết kế dữ liệu biên giữa các block.
+Trạng thái active tại vị trí `x` phụ thuộc tất cả sự kiện trước `x`, vì vậy sweep có phụ thuộc (dependency / 의존성) tuần tự. Một số bài có thể chia miền thành khối (block / 블록), tính summary rồi ghép, nhưng phải thiết kế dữ liệu biên giữa các khối (block / 블록).
 
 Không nên giả định rằng sorting đã song song thì toàn bộ sweep cũng song song tốt.
 
@@ -340,7 +343,7 @@ Nếu thiếu phần thứ ba, thuật toán rất dễ xóa trạng thái quá 
 
 ## 25. Kiểm thử
 
-Các case nên có:
+Các trường hợp (case / 사례) nên có:
 
 ```text
 không có khoảng
@@ -359,13 +362,13 @@ Với union length/area, có thể differential-test trên miền tọa độ nh
 
 ## 26. Những hiểu lầm phổ biến
 
-“Sort theo start rồi mọi bài interval đều giải giống nhau” — sai. Interval scheduling thường cần sort theo end; weighted scheduling cần DP; sweep geometry có event ordering riêng.
+“Sort theo start rồi mọi bài interval đều giải giống nhau” — sai. Interval scheduling thường cần sort theo end; weighted scheduling cần DP; sweep hình học (geometry / 기하학) có sự kiện (event / 이벤트) thứ tự (ordering / 순서) riêng.
 
-“Coordinate compression biến khoảng cách thành chỉ số” — sai. Nó chỉ giữ thứ tự, không giữ metric.
+“Coordinate compression biến khoảng cách thành chỉ số” — sai. Nó chỉ giữ thứ tự, không giữ chỉ số (metric / 지표).
 
-“Active set luôn là heap” — sai. Cấu trúc phụ thuộc truy vấn cần thực hiện trên các đối tượng đang hoạt động.
+“Active set luôn là vùng nhớ động (heap / 힙)” — sai. Cấu trúc phụ thuộc truy vấn cần thực hiện trên các đối tượng đang hoạt động.
 
-“Các event cùng tọa độ xử lý thứ tự nào cũng được” — sai khi ngữ nghĩa endpoint phụ thuộc tie-breaking.
+“Các sự kiện (event / 이벤트) cùng tọa độ xử lý thứ tự nào cũng được” — sai khi ngữ nghĩa endpoint phụ thuộc tie-breaking.
 
 “`O(n log n)` luôn là chi phí cuối” — sai nếu thuật toán phải xuất `k=Θ(n²)` giao điểm.
 
@@ -373,6 +376,8 @@ Với union length/area, có thể differential-test trên miền tọa độ nh
 
 > Thuật toán khoảng và đường quét tận dụng một trục có thứ tự để biến một bài toán tương tác toàn cục thành chuỗi thay đổi cục bộ. Sorting quyết định thứ tự tri thức; active set lưu đúng phần trạng thái còn có thể ảnh hưởng tương lai.
 
-Khi gặp bài khoảng, hãy hỏi: **endpoint là đóng hay nửa mở, objective là hợp/giao/chọn tối đa/đếm overlap hay tối ưu trọng số, dữ liệu tĩnh hay động, có thể xử lý offline không, active set cần trả lời loại truy vấn nào, và số lượng kết quả có thể lớn tới đâu?**
+Khi gặp bài khoảng, hãy hỏi: **endpoint là đóng hay nửa mở, mục tiêu (objective / 목표) là hợp/giao/chọn tối đa/đếm overlap hay tối ưu trọng số, dữ liệu tĩnh hay động, có thể xử lý offline không, active set cần trả lời loại truy vấn nào, và số lượng kết quả có thể lớn tới đâu?**
 
 Xem thêm: [Sorting](./01_sorting.md), [Greedy](./04_greedy_algorithms.md), [Dynamic Programming](./05_dynamic_programming.md), [Range Queries](../05_specialized/01_range_queries_fenwick_segment_tree.md), [Augmented Trees](../02_trees/06_augmented_trees_and_order_statistics.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,30 +1,39 @@
-# Knowledge Connection — Abstraction layers và leaky abstractions
+# Liên kết kiến thức (knowledge connection / 지식 연결) — lớp trừu tượng (abstraction / 추상화) layers và leaky abstractions
 
-Computer systems are possible because no one thinks about all layers simultaneously. Browser developer sees DOM/HTTP; backend sees objects/transactions; database sees pages/logs; kernel sees processes/pages/sockets; CPU sees instructions/cache lines. Each layer offers an abstraction contract.
+> **Mạch đọc:** Đọc **liên kết kiến thức (knowledge connection / 지식 연결) — lớp trừu tượng (abstraction / 추상화) layers và leaky abstractions** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Why lớp trừu tượng (abstraction / 추상화) is essential** sang **Leaky lớp trừu tượng (abstraction / 추상화)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Why abstraction is essential
 
-Without abstraction, to append text to file developer would need control SSD voltage cells. Filesystem turns blocks into files; runtime turns memory into objects; TCP turns packets into byte stream; SQL turns pages/indexes into relations/query results.
+Computer các hệ thống (systems / 시스템들) are possible because no one thinks about all layers simultaneously. trình duyệt (browser / 브라우저) nhà phát triển (developer / 개발자) sees DOM/HTTP; backend sees objects/transactions; cơ sở dữ liệu (database / 데이터베이스) sees pages/logs; kernel sees processes/pages/sockets; CPU sees instructions/bộ nhớ đệm (cache / 캐시) lines. Each tầng (layer / 계층) offers an lớp trừu tượng (abstraction / 추상화) đặc tả hợp đồng (contract / 계약).
 
-Abstraction creates **local reasoning**: solve problem using model without reproducing lower-layer mechanics.
+## Why lớp trừu tượng (abstraction / 추상화) is essential
 
-## Leaky abstraction
+Without lớp trừu tượng (abstraction / 추상화), to append văn bản (text / 텍스트) to tệp (file / 파일) nhà phát triển (developer / 개발자) would need điều khiển (control / 제어) SSD voltage cells. Filesystem turns blocks into files; thời gian chạy (runtime / 런타임) turns bộ nhớ (memory / 메모리) into objects; TCP turns packets into byte stream; SQL turns pages/indexes into relations/truy vấn (query / 쿼리) results.
 
-Joel Spolsky popularized “Law of Leaky Abstractions”: non-trivial abstractions leak to some degree. Meaning: hidden details can become observable when performance, failure or edge cases matter.
+Lớp trừu tượng (abstraction / 추상화) creates **cục bộ (local / 로컬) lập luận (reasoning / 추론)**: solve bài toán (problem / 문제) using mô hình (model / 모델) without reproducing lower-layer mechanics.
+
+
+> **Chuyển mạch:** Từ **Why lớp trừu tượng (abstraction / 추상화) is essential**, ta sang **Leaky lớp trừu tượng (abstraction / 추상화)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Leaky lớp trừu tượng (abstraction / 추상화)
+
+Joel Spolsky popularized “Law of Leaky Abstractions”: non-trivial abstractions leak to some degree. Meaning: hidden details can become observable when hiệu năng (performance / 성능), thất bại (failure / 실패) or edge cases matter.
 
 Examples:
 
-- SQL/ORM leaks index/cardinality because query latency depends physical plan.
-- TCP byte stream leaks network loss/RTT through latency/timeouts.
-- GC leaks allocation/lifetime via pauses/heap pressure.
-- Virtual memory leaks page/TLB locality via performance.
-- Cloud object storage mounted as filesystem leaks different rename/consistency semantics.
+- SQL/ORM leaks chỉ mục (index / 인덱스)/cardinality because truy vấn (query / 쿼리) độ trễ (latency / 지연 시간) depends vật lý (physical / 물리적) plan.
+- TCP byte stream leaks mạng (network / 네트워크) mất mát (loss / 손실)/RTT through độ trễ (latency / 지연 시간)/timeouts.
+- GC leaks allocation/thời gian tồn tại (lifetime / 수명) via pauses/vùng nhớ động (heap / 힙) pressure.
+- Virtual bộ nhớ (memory / 메모리) leaks page/TLB locality via hiệu năng (performance / 성능).
+- Cloud đối tượng (object / 객체) lưu trữ (storage / 저장소) mounted as filesystem leaks different rename/consistency ngữ nghĩa (semantics / 의미론).
 
-Leak does not make abstraction useless. It defines when engineer must descend a layer.
+Leak does not make lớp trừu tượng (abstraction / 추상화) useless. It defines when engineer must descend a tầng (layer / 계층).
 
-## Layer contract and observability
 
-Each layer transforms guarantees:
+> **Chuyển mạch:** Từ **Leaky lớp trừu tượng (abstraction / 추상화)**, ta sang **tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) and khả năng quan sát (observability / 관측 가능성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) and khả năng quan sát (observability / 관측 가능성)
+
+Each tầng (layer / 계층) transforms guarantees:
 
 ```text
 Application semantics
@@ -40,7 +49,7 @@ Microarchitecture
 Hardware physics
 ```
 
-Across network:
+Across mạng (network / 네트워크):
 
 ```text
 Application protocol
@@ -56,49 +65,67 @@ Link
 Physical medium
 ```
 
-A bug can be reasoned at highest layer where evidence explains behavior. Descend only when contract no longer explains observation.
+A bug can be reasoned at highest tầng (layer / 계층) where bằng chứng (evidence / 증거) explains hành vi (behavior / 동작). Descend only when đặc tả hợp đồng (contract / 계약) no longer explains observation.
 
-## Boundary mismatch examples
+
+> **Chuyển mạch:** Từ **tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) and khả năng quan sát (observability / 관측 가능성)**, ta sang **ranh giới (boundary / 경계) mismatch examples** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Ranh giới (boundary / 경계) mismatch examples
 
 ### ORM N+1
 
-Application thinks `order.customer` property access is local; ORM lazily issues query per order. Object abstraction hides remote/database cost. Fix requires understanding boundary cost and batching/join.
+Ứng dụng (application / 애플리케이션) thinks `order.customer` thuộc tính (property / 속성) truy cập (access / 접근) is cục bộ (local / 로컬); ORM lazily issues truy vấn (query / 쿼리) per thứ tự (order / 순서). đối tượng (object / 객체) lớp trừu tượng (abstraction / 추상화) hides remote/cơ sở dữ liệu (database / 데이터베이스) chi phí (cost / 비용). Fix requires understanding ranh giới (boundary / 경계) chi phí (cost / 비용) and batching/phép nối (join / 조인).
 
 ### Thread-per-request
 
-Programmer thinks blocked thread cheap; OS thread has stack/scheduler overhead. At 100k idle connections, runtime model leaks. Async/virtual threads change representation.
+Programmer thinks blocked luồng thực thi (thread / 스레드) cheap; OS luồng thực thi (thread / 스레드) has ngăn xếp (stack / 스택)/scheduler overhead. At 100k idle connections, thời gian chạy (runtime / 런타임) mô hình (model / 모델) leaks. Async/virtual threads thay đổi (change / 변경) biểu diễn (representation / 표현).
 
-### File write durability
+### Tệp (file / 파일) ghi (write / 쓰기) durability
 
-App thinks `write()` “saved”; OS buffers; device cache not stable. Durability requirement leaks through file abstraction, requiring fsync/WAL.
+App thinks `write()` “saved”; OS buffers; thiết bị (device / 장치) bộ nhớ đệm (cache / 캐시) not stable. Durability yêu cầu (requirement / 요구사항) leaks through tệp (file / 파일) lớp trừu tượng (abstraction / 추상화), requiring fsync/WAL.
 
 ### `HashMap` O(1)
 
-Algorithm layer says expected constant; microarchitecture sees cache misses/object allocations; adversarial collisions see O(n). Performance/security leak assumptions.
+Thuật toán (algorithm / 알고리즘) tầng (layer / 계층) says expected constant; microarchitecture sees bộ nhớ đệm (cache / 캐시) misses/đối tượng (object / 객체) allocations; adversarial collisions see O(n). hiệu năng (performance / 성능)/bảo mật (security / 보안) leak các giả định (assumptions / 가정들).
 
-## Choosing abstraction level for debugging
 
-Start with symptom and observable contract:
+> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) mismatch examples**, ta sang **Choosing lớp trừu tượng (abstraction / 추상화) mức (level / 수준) for debugging** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-- Wrong business state → application/transaction invariants.
-- Query slow → plan/index/cardinality then storage/cache.
-- CPU hot → profile source/JIT then cache/branch if needed.
-- Request timeout → traces/queues/downstream/network.
-- Memory growth → allocation/retention/GC then OS RSS/page cache.
+## Choosing lớp trừu tượng (abstraction / 추상화) mức (level / 수준) for debugging
 
-Avoid descending to assembly for every problem; avoid refusing to descend when high-level model fails.
+Start with symptom and observable đặc tả hợp đồng (contract / 계약):
+
+- Wrong nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) → ứng dụng (application / 애플리케이션)/giao dịch (transaction / 트랜잭션) invariants.
+- truy vấn (query / 쿼리) slow → plan/chỉ mục (index / 인덱스)/cardinality then lưu trữ (storage / 저장소)/bộ nhớ đệm (cache / 캐시).
+- CPU hot → profile nguồn (source / 소스)/JIT then bộ nhớ đệm (cache / 캐시)/branch if needed.
+- yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) → traces/queues/downstream/mạng (network / 네트워크).
+- bộ nhớ (memory / 메모리) growth → allocation/retention/GC then OS RSS/page bộ nhớ đệm (cache / 캐시).
+
+Avoid descending to assembly for every bài toán (problem / 문제); avoid refusing to descend when high-level mô hình (model / 모델) fails.
+
+
+> **Chuyển mạch:** Từ **Choosing lớp trừu tượng (abstraction / 추상화) mức (level / 수준) for debugging**, ta sang **Encapsulation and escape hatches** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Encapsulation and escape hatches
 
-Good abstraction offers safe common path plus measured escape hatch: SQL hints/raw SQL, memory-mapped I/O, native interop, custom allocator, transport configuration. Escape hatch should be explicit because caller now inherits lower-level constraints.
+Good lớp trừu tượng (abstraction / 추상화) offers safe dùng chung (common / 공통) đường dẫn (path / 경로) plus measured escape hatch: SQL hints/raw SQL, memory-mapped I/O, bản địa (native / 네이티브) interop, custom allocator, vận chuyển (transport / 전송) cấu hình (configuration / 구성). Escape hatch should be tường minh (explicit / 명시적) because caller now inherits lower-level các ràng buộc (constraints / 제약조건들).
 
-## Layer inversion hazards
 
-If business layer depends on storage-page details, coupling makes change hard. Conversely infrastructure code cannot ignore domain semantics like idempotency/transaction boundaries. Architecture should point dependencies toward stable policy while adapters know mechanisms.
+> **Chuyển mạch:** Từ **Encapsulation and escape hatches**, ta sang **tầng (layer / 계층) inversion hazards** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Mental Model
+## Tầng (layer / 계층) inversion hazards
 
-> Abstraction is a **lossy compression of lower-layer reality**: it preserves properties most users need and hides the rest. When hidden variables become relevant, descend deliberately, learn the leaked mechanism, then return to the highest useful model.
+If nghiệp vụ (business / 비즈니스) tầng (layer / 계층) depends on storage-page details, coupling makes thay đổi (change / 변경) hard. Conversely hạ tầng (infrastructure / 인프라) mã (code / 코드) cannot ignore lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론) like idempotency/giao dịch (transaction / 트랜잭션) boundaries. kiến trúc (architecture / 아키텍처) should điểm (point / 지점) dependencies toward stable chính sách (policy / 정책) while adapters know mechanisms.
+
+
+> **Chuyển mạch:** Từ **tầng (layer / 계층) inversion hazards**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> lớp trừu tượng (abstraction / 추상화) is a **lossy compression of lower-layer reality**: it preserves properties most users need and hides the rest. When hidden variables become relevant, descend deliberately, learn the leaked cơ chế (mechanism / 메커니즘), then return to the highest useful mô hình (model / 모델).
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Cross-references** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cross-references
 
@@ -107,3 +134,5 @@ If business layer depends on storage-page details, coupling makes change hard. C
 - [Source code → CPU](./00_source_code_to_cpu.md)
 - [Browser → database](./01_browser_to_database_request.md)
 - [Cross-cutting trade-offs](./03_cross_cutting_tradeoffs.md)
+
+> **Bàn giao:** Sau **Cross-references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 source code to cpu](./00_source_code_to_cpu.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

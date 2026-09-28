@@ -1,8 +1,11 @@
 # Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận
 
+> **Mạch đọc:** Đọc **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Một lý thuyết phải đối chiếu được với quan sát** sang **Chuỗi đo lường**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Một lý thuyết phải đối chiếu được với quan sát
 
-Vật lý là khoa học thực nghiệm. Một mô hình (model) có thể đẹp về toán học, có đối xứng rõ ràng và nhất quán nội tại, nhưng giá trị khoa học của nó phụ thuộc vào việc tạo ra dự đoán có thể so sánh với quan sát. Vật lý thực nghiệm (experimental physics / 실험물리학) vì vậy không chỉ là thu thập thật nhiều số liệu; nó là quá trình thiết kế phép đo sao cho một đại lượng vật lý được biến thành tín hiệu quan sát được, đồng thời hiểu rõ thiết bị, nhiễu, sai lệch và độ bất định đi kèm.
+Vật lý là khoa học thực nghiệm. Một mô hình (model / 모델) có thể đẹp về toán học, có đối xứng rõ ràng và nhất quán nội tại, nhưng giá trị khoa học của nó phụ thuộc vào việc tạo ra dự đoán có thể so sánh với quan sát. Vật lý thực nghiệm (experimental physics / 실험물리학) vì vậy không chỉ là thu thập thật nhiều số liệu; nó là quá trình thiết kế phép đo sao cho một đại lượng vật lý được biến thành tín hiệu quan sát được, đồng thời hiểu rõ thiết bị, nhiễu, sai lệch và độ bất định đi kèm.
 
 Vật lý tính toán (computational physics / 계산물리학) bổ sung cho quá trình này bằng các phương pháp số (numerical methods). Ta dùng chúng khi phương trình quá phức tạp để giải chính xác bằng giải tích, hoặc khi cần suy ra tham số của mô hình từ dữ liệu thực nghiệm.
 
@@ -121,7 +124,7 @@ D\sim N\times f_s\times \text{bytes/sample}\times t.
 
 Mục tiêu không phải có con số chính xác ngay từ đầu mà là biết thang giá trị hợp lý. Một ước lượng tốt có thể phát hiện kết quả sai `10^3` hay `10^6` lần trước khi các phép tính chi tiết che mất trực giác.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Thí nghiệm không trả về “sự thật trực tiếp”. Nó trả về tín hiệu đã đi qua thiết bị, hiệu chuẩn, nhiễu và quy trình xử lý. Suy luận khoa học phải tách được đáp ứng của thiết bị, độ bất định và giả định của mô hình trước khi biến tín hiệu thành một kết luận vật lý.
 
@@ -139,8 +142,10 @@ Không. Ngoài lỗi lập trình còn có sai số mô hình, sai số rời r�
 
 Học máy (machine learning) có thể xấp xỉ quan hệ rất phức tạp, nhưng khả năng ngoại suy, bảo toàn đại lượng, giải thích nhân quả và phạm vi dữ liệu huấn luyện vẫn là các giới hạn quan trọng. Các phương pháp kết hợp vật lý và dữ liệu thường hữu ích khi hai nguồn thông tin bổ sung cho nhau.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Đại lượng, đơn vị và độ bất định](../00_foundations/01_measurement_units_uncertainty.md).
 
 **Liên hệ tiếp:** [Tín hiệu, nhiễu và lấy mẫu](01_signals_sampling_noise.md), [Vật lý tính toán](02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 signals sampling noise](./01_signals_sampling_noise.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Cầu nối từ doanh nghiệp tới kinh tế vĩ mô
 
-> File này là bản đồ để nối phân tích doanh nghiệp với kinh tế vĩ mô. Nó không thay thế các chương chuyên sâu trong `04_economics/`; mục tiêu là giúp người đọc biết **một thay đổi vĩ mô truyền tới doanh thu, biên lợi nhuận, bảng cân đối và định giá doanh nghiệp qua những kênh nào**.
+> **Mạch đọc:** Đặt **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Điểm xuất phát vẫn là doanh nghiệp** sang **2. Hai kênh lớn: earnings và valuation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là bản đồ để nối phân tích doanh nghiệp với kinh tế vĩ mô. Nó không thay thế các chương chuyên sâu trong `04_economics/`; mục tiêu là giúp người đọc biết **một thay đổi vĩ mô truyền tới doanh thu, biên lợi nhuận, bảng cân đối và định giá doanh nghiệp qua những kênh nào**.
 
 ## 1. Điểm xuất phát vẫn là doanh nghiệp
 
@@ -109,7 +112,7 @@ Rủi ro vỡ nợ
 + Nhu cầu kỹ thuật
 ```
 
-Spread tăng làm tái cấp vốn đắt hơn và có thể là tín hiệu điều kiện tài chính đang thắt chặt ngay cả khi policy rate chưa đổi.
+Spread tăng làm tái cấp vốn đắt hơn và có thể là tín hiệu điều kiện tài chính đang thắt chặt ngay cả khi chính sách (policy / 정책) tỷ lệ (rate / 비율) chưa đổi.
 
 ## 8. FX và doanh nghiệp
 
@@ -187,8 +190,8 @@ Thanh khoản (liquidity) có nhiều lớp:
 
 - dự trữ ngân hàng;
 - tiền gửi;
-- funding market;
-- market depth;
+- funding thị trường (market / 시장);
+- thị trường (market / 시장) độ sâu (depth / 깊이);
 - collateral availability;
 - dealer balance sheet.
 
@@ -222,9 +225,9 @@ Collateral Value
 Credit Availability
 ```
 
-Ngay cả khi policy rate giảm, tín dụng vẫn có thể co nếu ngân hàng đang bảo vệ vốn.
+Ngay cả khi chính sách (policy / 정책) tỷ lệ (rate / 비율) giảm, tín dụng vẫn có thể co nếu ngân hàng đang bảo vệ vốn.
 
-## 16. Fiscal policy
+## 16. Fiscal chính sách (policy / 정책)
 
 Chính sách tài khóa ảnh hưởng:
 
@@ -288,7 +291,7 @@ Mỹ ảnh hưởng thế giới qua:
 - capital flows;
 - công nghệ.
 
-Một doanh nghiệp xuất khẩu sang Mỹ có thể chịu đồng thời demand effect và FX effect theo hai hướng khác nhau.
+Một doanh nghiệp xuất khẩu sang Mỹ có thể chịu đồng thời demand tác động (effect / 효과) và FX tác động (effect / 효과) theo hai hướng khác nhau.
 
 ## 21. Bán dẫn và AI capex
 
@@ -303,11 +306,11 @@ Hyperscaler Capex
 → Korea Exports
 ```
 
-Nhưng cần tách demand thật, inventory build và supply response.
+Nhưng cần tách demand thật, inventory bản dựng (build / 빌드) và supply phản hồi (response / 응답).
 
 ## 22. Kỳ vọng quan trọng hơn headline
 
-Market reaction thường phụ thuộc:
+Thị trường (market / 시장) reaction thường phụ thuộc:
 
 ```text
 Actual
@@ -349,7 +352,7 @@ Giá cổ phiếu thường đi trước reported earnings vì thị trường p
 
 Cần phân biệt:
 
-**Chu kỳ (cyclical):** tồn kho, policy, credit, demand ngắn hạn.
+**Chu kỳ (cyclical):** tồn kho, chính sách (policy / 정책), credit, demand ngắn hạn.
 
 **Cấu trúc (structural):** nhân khẩu học, năng suất, công nghệ, mô hình thương mại, lợi thế ngành.
 
@@ -370,7 +373,7 @@ Nhưng đây chỉ là bản đồ, không phải công thức dự báo giá t�
 
 ## 27. Từ macro tới mô hình doanh nghiệp
 
-Mỗi biến vĩ mô phải đi vào model qua một dòng cụ thể.
+Mỗi biến vĩ mô phải đi vào mô hình (model / 모델) qua một dòng cụ thể.
 
 Ví dụ:
 
@@ -382,7 +385,7 @@ USD/KRW ↑
 → discount rate có thể ↑
 ```
 
-Nếu không thể chỉ ra dòng nào thay đổi trong model, “macro thesis” còn quá mơ hồ.
+Nếu không thể chỉ ra dòng nào thay đổi trong mô hình (model / 모델), “macro thesis” còn quá mơ hồ.
 
 ## 28. Khung phân tích một cú sốc
 
@@ -401,7 +404,7 @@ Khi có một headline mới, dùng chuỗi:
 10. Điều gì đã được price trước?
 ```
 
-## 29. Các file chuyên sâu tiếp theo
+## 29. Các tệp (file / 파일) chuyên sâu tiếp theo
 
 Để học chi tiết hơn:
 
@@ -426,3 +429,5 @@ Macro Shock
 ```
 
 Nếu một nhận định vĩ mô không thể nối tới dòng tiền, bảng cân đối hoặc tỷ lệ chiết khấu của tài sản đang phân tích, nó chưa đủ cụ thể để dùng trong quyết định đầu tư.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 MICRO MACRO ADVANCED](./01_MICRO_MACRO_ADVANCED.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

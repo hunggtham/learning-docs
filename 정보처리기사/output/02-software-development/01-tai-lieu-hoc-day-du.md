@@ -18,6 +18,8 @@
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
+> **Mạch nối:** Mỗi mục trong guide phải được đọc như một bước của cùng một chuỗi suy luận. Hãy dùng phần cuối của mục trước để đặt câu hỏi cho mục sau, rồi quay lại checklist để kiểm tra khái niệm vừa được mở rộng; không coi mỗi heading là một ghi chú tách rời.
+
 ---
 
 ## 1. 자료 구조의 분류 (Classification of Data Structures)
@@ -31,7 +33,11 @@
   * Cấu trúc phi tuyến: Cây, Đồ thị.
   * Số cạnh tối đa: Đồ thị vô hướng là n(n-1)/2, có hướng là n(n-1).
 * **Example**: 노드가 4개인 무방향 그래프의 최대 간선 수는 4(4-1)/2 = 6개입니다. (Với đồ thị vô hướng có 4 đỉnh, số cạnh tối đa là 6).
-* 💡 **Mẹo ghi nhớ**: Tuyến tính (Linear) là một đường thẳng (Mảng, Stack, Queue). Phi tuyến là rẽ nhánh (Cây, Đồ thị).
+* 💡 **Mẹo ghi nhớ**: tuyến tính (linear / 선형) là một đường thẳng (Mảng, Stack, Queue). Phi tuyến là rẽ nhánh (Cây, Đồ thị).
+
+---
+
+> **Mạch chuyển:** Từ **1. 자료 구조의 분류 (Classification of Data Structures)**, chuyển sang **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -49,10 +55,14 @@
 - **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
 
 ### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
-- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
-- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
+- **입·출력 구현:** Nhận đầu vào (input / 입력), trả đầu ra (output / 출력). Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open nguồn (source / 소스) API để kết nối mạng.
+- **알고리즘 구현:** Viết mã (code / 코드) xử lý lô-gic (logic / 논리) bên trong (Process) sau khi đã có I/O.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)**, chuyển sang **2. 스택 (Stack) 및 응용 (Applications)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -62,10 +72,14 @@
 * **응용 분야 (Applications)**: 인터럽트 처리 (Interrupt handling), 수식 계산 및 표기법 (Expression evaluation), 서브루틴 호출 및 복귀 주소 저장 (Subroutine calls).
 * **삽입/삭제 (Push/Pop)**: `PUSH`는 자료 입력, `POP`은 자료 출력.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Stack là cấu trúc dữ liệu LIFO, thêm/xóa dữ liệu ở một đầu.
+  * ngăn xếp (stack / 스택) là cấu trúc dữ liệu LIFO, thêm/xóa dữ liệu ở một đầu.
   * Ứng dụng: Xử lý ngắt, tính toán biểu thức, lưu địa chỉ khi gọi hàm.
 * **Example**: 브라우저의 '뒤로 가기' 버튼은 스택 구조를 사용합니다. (Nút "Back" trên trình duyệt sử dụng cấu trúc stack).
 * 💡 **Mẹo ghi nhớ**: LIFO - Vào sau ra trước, giống như xếp đĩa, lấy đĩa trên cùng ra trước.
+
+---
+
+> **Mạch chuyển:** Từ **2. 스택 (Stack) 및 응용 (Applications)**, chuyển sang **29. 큐 (Queue)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -75,7 +89,11 @@
 * 시작과 끝을 표시하는 두 개의 포인터(Front, Rear)가 있음.
 * **VI (Vietnamese) (Tiếng Việt):** Hàng đợi FIFO (Vào trước ra trước). Dùng 2 con trỏ chỉ vị trí đầu và cuối.
 * **Example**: 프린터의 인쇄 대기열이나 매표소 줄서기와 같습니다.
-* 💡 **Mẹo ghi nhớ**: Queue = Xếp hàng.
+* 💡 **Mẹo ghi nhớ**: hàng đợi (queue / 큐) = Xếp hàng.
+
+---
+
+> **Mạch chuyển:** Từ **29. 큐 (Queue)**, chuyển sang **3. 트리 (Tree)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -92,16 +110,24 @@
 
 ---
 
+> **Mạch chuyển:** Từ **3. 트리 (Tree)**, chuyển sang **4. 이진 트리의 운행법 (Binary Tree Traversal)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 4. 이진 트리의 운행법 (Binary Tree Traversal)
-* **Preorder (전위)**: Root → Left → Right
-* **Inorder (중위)**: Left → Root → Right
-* **Postorder (후위)**: Left → Right → Root
+* **Preorder (전위)**: gốc (root / 루트) → Left → Right
+* **Inorder (중위)**: Left → gốc (root / 루트) → Right
+* **Postorder (후위)**: Left → Right → gốc (root / 루트)
 * **VI (Vietnamese) (Tiếng Việt):**
   * Preorder: Gốc -> Trái -> Phải.
   * Inorder: Trái -> Gốc -> Phải.
   * Postorder: Trái -> Phải -> Gốc.
 * **Example**: 수식 `A + B`를 전위 표기하면 `+ A B`, 중위 표기하면 `A + B`, 후위 표기하면 `A B +`가 됩니다.
-* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của Root (Gốc) so với Trái/Phải.
+* 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của gốc (root / 루트) so với Trái/Phải.
+
+---
+
+> **Mạch chuyển:** Từ **4. 이진 트리의 운행법 (Binary Tree Traversal)**, chuyển sang **30. 트리 구조 추가 용어 (Tree Terminology Additional)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -111,10 +137,14 @@
 * **형제 노드 (Sibling / Brother Node)**: 동일한 부모를 갖는 노드들.
 * **트리의 디그리 (Degree of a Tree)**: 전체 노드들의 디그리(자식 수) 중에서 가장 큰 값.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Son Node: Nút con.
-  * Parent Node: Nút cha.
+  * Son nút (node / 노드): Nút con.
+  * Parent nút (node / 노드): Nút cha.
   * Sibling: Nút anh em (cùng cha).
-  * Degree of Tree: Bậc lớn nhất trong tất cả các nút của cây.
+  * Degree of cây (tree / 트리): Bậc lớn nhất trong tất cả các nút của cây.
+
+---
+
+> **Mạch chuyển:** Từ **30. 트리 구조 추가 용어 (Tree Terminology Additional)**, chuyển sang **025: 트리 (Tree / Cây)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -124,20 +154,24 @@
 |---|---|---|
 | 루트 노드 (Root Node) | Nút gốc, không có cha. Chỉ có 1 gốc. | A |
 | 단말 노드 (Leaf/Terminal Node) | Nút lá, ở cuối cùng, không có con. | D, E, H, I, G |
-| 레벨 (Level) | Độ sâu từ gốc tới nút. | E có Level là 3. |
-| 깊이 (Depth) | Độ sâu lớn nhất của cây (Max Level - 1 hoặc tùy cách tính). | Depth = 3. |
+| 레벨 (Level) | Độ sâu từ gốc tới nút. | E có mức (level / 수준) là 3. |
+| 깊이 (Depth) | Độ sâu lớn nhất của cây (Max Level - 1 hoặc tùy cách tính). | độ sâu (depth / 깊이) = 3. |
 | 차수 (Degree of Node) | Bậc của một nút: Số lượng con của nút đó. | B có 3 con => Degree = 3. |
 | 트리의 차수 (Degree of Tree) | Bậc của cây: Bậc lớn nhất trong tất cả các nút. | Cả cây có nút max là 3 => Degree của cây = 3. |
 
 ### 트리 순회 (Tree Traversal - Duyệt cây)
-- **전위 순회 (Preorder):** Root -> Left -> Right.
-- **중위 순회 (Inorder):** Left -> Root -> Right.
-- **후위 순회 (Postorder):** Left -> Right -> Root.
+- **전위 순회 (Preorder):** gốc (root / 루트) -> Left -> Right.
+- **중위 순회 (Inorder):** Left -> gốc (root / 루트) -> Right.
+- **후위 순회 (Postorder):** Left -> Right -> gốc (root / 루트).
 
-- **Vietnamese Explanation:** Cách tính Bậc của cây rất hay thi: Tìm cái nút nào đẻ nhiều con nhất, số con đó chính là Bậc của toàn bộ cây. Khi duyệt cây, chữ "Pre/In/Post" (Trước/Giữa/Sau) dùng để chỉ vị trí của Root. Root đứng trước là Pre, ở giữa là In, ở cuối là Post.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 단말 (Đoạn mạt = Cuối) = Leaf (Lá). Degree = Bậc = Số con. Pre/In/Post = Vị trí của Gốc (Root).
+- **Vietnamese Explanation:** Cách tính Bậc của cây rất hay thi: Tìm cái nút nào đẻ nhiều con nhất, số con đó chính là Bậc của toàn bộ cây. Khi duyệt cây, chữ "Pre/In/Post" (Trước/Giữa/Sau) dùng để chỉ vị trí của gốc (root / 루트). gốc (root / 루트) đứng trước là Pre, ở giữa là In, ở cuối là Post.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** 단말 (Đoạn mạt = Cuối) = Leaf (Lá). Degree = Bậc = Số con. Pre/In/Post = Vị trí của gốc (root / 루트).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **025: 트리 (Tree / Cây)**, chuyển sang **026: 그래프 (Graph / Đồ thị)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -150,9 +184,13 @@
 - **DFS (Depth-First Search - Tìm kiếm theo chiều sâu):** Đi sâu nhất có thể, hết đường mới lui lại (Dùng Stack).
 - **BFS (Breadth-First Search - Tìm kiếm theo chiều rộng):** Loang ra xung quanh, tầng nào xong mới xuống tầng sau (Dùng Queue).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** DFS = Sâu = Stack (D/S). BFS = Rộng = Queue (B/Q). Vô hướng chia 2 vì AB và BA là một.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** DFS = Sâu = ngăn xếp (stack / 스택). BFS = Rộng = hàng đợi (queue / 큐). Vô hướng chia 2 vì AB và BA là một.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **026: 그래프 (Graph / Đồ thị)**, chuyển sang **5. 수식의 표기법 변환 (Expression Notation Conversion)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -163,6 +201,10 @@
 * **VI (Vietnamese) (Tiếng Việt):** Chuyển đổi biểu thức Infix sang Prefix (đưa toán tử ra trước) và Postfix (đưa toán tử ra sau).
 * **Example**: Infix `A/B` -> Postfix `A B /` -> Prefix `/ A B`.
 * 💡 **Mẹo ghi nhớ**: Prefix (Pre = trước), Postfix (Post = sau).
+
+---
+
+> **Mạch chuyển:** Từ **5. 수식의 표기법 변환 (Expression Notation Conversion)**, chuyển sang **6. 정렬 알고리즘 (Sorting Algorithms)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -179,6 +221,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **6. 정렬 알고리즘 (Sorting Algorithms)**, chuyển sang **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
 * **퀵 정렬 (Quick Sort)**: 키를 기준으로 작은 값은 왼쪽, 큰 값은 오른쪽 서브파일로 분해시키는 방식. 분할(Divide)과 정복(Conquer)을 통해 자료를 정렬.
   * 평균 시간 복잡도: O(n log n), 최악: O(n^2).
@@ -187,9 +233,13 @@
 * **VI (Vietnamese) (Tiếng Việt):** Các thuật toán sắp xếp bổ sung:
   * Quick Sort: Chia để trị (Divide & Conquer), dùng chốt (pivot).
   * Merge Sort: Trộn 2 mảng đã sắp xếp.
-  * Heap Sort: Dùng cây nhị phân hoàn chỉnh.
+  * vùng nhớ động (heap / 힙) Sort: Dùng cây nhị phân hoàn chỉnh.
 * **Example**: 퀵 정렬은 반장(기준)을 뽑아서 키 작은 사람은 왼쪽, 큰 사람은 오른쪽으로 세우는 방식입니다.
-* 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/Heap = Luôn ổn định O(n log n).
+* 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/vùng nhớ động (heap / 힙) = Luôn ổn định O(n log n).
+
+---
+
+> **Mạch chuyển:** Từ **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, chuyển sang **028: 정렬 (Sorting / Thuật toán sắp xếp)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -202,12 +252,16 @@
 | 선택 정렬 (Selection Sort) | Tìm phần tử nhỏ nhất rồi đổi chỗ nó về vị trí đầu tiên chưa sắp xếp. | O(n²) | O(n²) |
 | 퀵 정렬 (Quick Sort) | Chọn Pivot (Chốt), chia làm 2 nửa: Trái nhỏ hơn, Phải to hơn. Lặp lại (Divide & Conquer). | O(n log n) | **O(n²)** |
 | 합병 정렬 (Merge Sort) | Chia đôi mảng cho đến khi còn 1 phần tử, sau đó gộp (Merge) lại theo thứ tự. | O(n log n) | O(n log n) |
-| 힙 정렬 (Heap Sort) | Dùng cây Complete Binary Tree (Heap) để tìm min/max rồi đưa ra ngoài, cấu trúc lại Heap. | O(n log n) | O(n log n) |
+| 힙 정렬 (Heap Sort) | Dùng cây Complete nhị phân (binary / 이진) cây (tree / 트리) (Heap) để tìm min/max rồi đưa ra ngoài, cấu trúc lại vùng nhớ động (heap / 힙). | O(n log n) | O(n log n) |
 
-- **Vietnamese Explanation:** Bubble, Selection, Insertion là 3 thuật toán cơ bản, chạy chậm O(n²). Quick, Merge, Heap là thuật toán xịn, chạy nhanh O(n log n). Nhưng Quick Sort xui xẻo (Worst case) vẫn có thể dính O(n²).
+- **Vietnamese Explanation:** Bubble, Selection, Insertion là 3 thuật toán cơ bản, chạy chậm O(n²). Quick, Merge, vùng nhớ động (heap / 힙) là thuật toán xịn, chạy nhanh O(n log n). Nhưng Quick Sort xui xẻo (Worst case) vẫn có thể dính O(n²).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Quick Sort (Nhanh) nhưng Worst là N². Bọt (Bubble), Chọn (Selection), Chèn (Insertion) đều là N².
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **028: 정렬 (Sorting / Thuật toán sắp xếp)**, chuyển sang **7. 이분 검색 (Binary Search)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -217,7 +271,11 @@
 * 탐색 효율이 좋고 시간이 적게 소요됨. 중간 레코드 번호(M) = (F+L)/2.
 * **VI (Vietnamese) (Tiếng Việt):** Tìm kiếm nhị phân. Dữ liệu phải được sắp xếp trước. Mỗi lần chia đôi không gian tìm kiếm.
 * **Example**: 사전에서 단어를 찾을 때 책을 반으로 계속 쪼개며 찾는 방식입니다.
-* 💡 **Mẹo ghi nhớ**: Binary = chia đôi (phải sắp xếp trước!).
+* 💡 **Mẹo ghi nhớ**: nhị phân (binary / 이진) = chia đôi (phải sắp xếp trước!).
+
+---
+
+> **Mạch chuyển:** Từ **7. 이분 검색 (Binary Search)**, chuyển sang **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -231,7 +289,7 @@
 - Dùng hàm băm (Hash Function) tính ra trực tiếp địa chỉ bộ nhớ để lưu hoặc tìm kiếm dữ liệu. Nhanh nhất (O(1)).
 
 - **Vietnamese Explanation:** Tìm tuần tự là lật từng trang sách. Tìm nhị phân là mở giữa cuốn từ điển, xem vần nào rồi gập nửa bỏ đi, tìm tiếp ở nửa kia. Băm (Hashing) là nhìn Mục lục rồi lật thẳng trang đó.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Binary Search = Phải Sắp Xếp (Sắp xếp), Chia đôi (절반). Hashing = O(1) Siêu Tốc.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** tìm kiếm nhị phân (binary search / 이진 탐색) = Phải Sắp Xếp (Sắp xếp), Chia đôi (절반). Hashing = O(1) Siêu Tốc.
 
 ### 해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)
 
@@ -250,14 +308,22 @@
 
 ---
 
+> **Mạch chuyển:** Từ **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, chuyển sang **8. 주요 해싱 함수 (Hashing Functions)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 8. 주요 해싱 함수 (Hashing Functions)
 * **제산법 (Division)**: 키 값을 소수(Prime)로 나눈 나머지를 주소로 사용.
 * **제곱법 (Mid-Square)**: 키 값을 제곱한 후 중간 부분의 값을 주소로 사용.
 * **폴딩법 (Folding)**: 키 값을 여러 부분으로 나눈 후 더하거나 XOR한 값을 주소로 사용.
 * **숫자 분석법 (Digit Analysis)**: 숫자의 분포를 분석해 고른 자리를 주소로 사용.
-* **VI (Vietnamese) (Tiếng Việt):** Các hàm băm (Hashing) giúp ánh xạ khóa (key) thành địa chỉ. Division (chia lấy dư), Mid-Square (bình phương lấy giữa), Folding (gấp/cộng các phần), Digit Analysis (phân tích chữ số).
+* **VI (Vietnamese) (Tiếng Việt):** Các hàm băm (Hashing) giúp ánh xạ khóa (key) thành địa chỉ. Division (chia lấy dư), Mid-Square (bình phương lấy giữa), Folding (gấp/cộng các phần), Digit phân tích (analysis / 분석).
 * **Example**: 제산법으로 키 10을 해시 테이블 크기 7(소수)로 나누면 나머지 3이 주소가 됩니다.
 * 💡 **Mẹo ghi nhớ**: Division = Chia lấy dư, Square = Bình phương, Fold = Gấp lại.
+
+---
+
+> **Mạch chuyển:** Từ **8. 주요 해싱 함수 (Hashing Functions)**, chuyển sang **32. 추가 해싱 함수 (Additional Hashing Functions)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -269,18 +335,26 @@
 
 ---
 
+> **Mạch chuyển:** Từ **32. 추가 해싱 함수 (Additional Hashing Functions)**, chuyển sang **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)
 * **단위 모듈 (Unit Module)**: 한 가지 동작을 수행하는 기능 모듈 (독립적인 컴파일 가능).
 * **IPC (프로세스 간 통신)**: 복수의 프로세스 간 통신을 구현하는 방법.
 * **IPC 대표 메소드**:
-  * **Shared Memory**: 다수 프로세스가 공유 가능한 메모리 구성.
+  * **dùng chung (shared / 공유) bộ nhớ (memory / 메모리)**: 다수 프로세스가 공유 가능한 메모리 구성.
   * **Socket**: 네트워크 소켓을 이용한 통신.
   * **Semaphores**: 공유 자원에 대한 접근 제어.
   * **Pipes & Named Pipes**: 선입선출(FIFO) 형태의 공유 메모리 사용.
   * **Message Queueing**: 메시지 전달 방식.
 * **VI (Vietnamese) (Tiếng Việt):** Giao tiếp giữa các tiến trình (IPC). Các phương thức: Bộ nhớ chia sẻ, Socket (mạng), Cờ hiệu (Semaphore), Ống dẫn (Pipes), Hàng đợi tin nhắn.
-* **Example**: 두 개의 프로그램이 채팅을 주고받을 때 Socket이나 Message Queue를 사용합니다.
+* **Example**: 두 개의 프로그램이 채팅을 주고받을 때 Socket이나 Message hàng đợi (queue / 큐)를 사용합니다.
 * 💡 **Mẹo ghi nhớ**: S-S-S-P-M (Shared memory, Socket, Semaphore, Pipe, Message Queue).
+
+---
+
+> **Mạch chuyển:** Từ **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**, chuyển sang **핵심 031: 모듈 구현 (Module Implementation)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -291,10 +365,14 @@
 - **모듈 (Module):** 독립적인 기능을 갖는 단위. 모듈이 모이면 프로그램이 됨. (Một đơn vị độc lập thực hiện một chức năng cụ thể.)
 - **컴포넌트 (Component):** 독립적으로 존재할 수 있는 부분, 재사용되는 단위, 인터페이스를 통해서만 접근. (Thành phần có thể tái sử dụng, giao tiếp qua Interface.)
 
-- **Vietnamese Explanation:** Module là một khối code (như một hàm hoặc một class). Component là một khối lớn hơn, đóng gói sẵn và có thể lắp ráp vào nhiều phần mềm khác nhau (như một nút bấm UI, một bộ lịch).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Kế hoạch -> Code -> Dịch (Compile) -> Thử (Test). Module = Ghép lại thành chương trình. Component = Tái sử dụng qua Interface.
+- **Vietnamese Explanation:** mô-đun (module / 모듈) là một khối mã (code / 코드) (như một hàm hoặc một class). thành phần (component / 컴포넌트) là một khối lớn hơn, đóng gói sẵn và có thể lắp ráp vào nhiều phần mềm khác nhau (như một nút bấm UI, một bộ lịch).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự: Kế hoạch -> mã (code / 코드) -> Dịch (Compile) -> Thử (Test). mô-đun (module / 모듈) = Ghép lại thành chương trình. thành phần (component / 컴포넌트) = Tái sử dụng qua giao diện (interface / 인터페이스).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 031: 모듈 구현 (Module Implementation)**, chuyển sang **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -303,22 +381,26 @@
 ### IPC (Inter-Process Communication - Giao tiếp giữa các tiến trình)
 - 모듈 간 또는 복수의 프로세스 간 통신을 위한 인터페이스. (Cách các chương trình đang chạy nói chuyện với nhau).
 - **Các phương pháp IPC:**
-  - **Shared Memory (Bộ nhớ chia sẻ):** Nhanh nhất. Các process dùng chung 1 vùng RAM.
+  - **dùng chung (shared / 공유) bộ nhớ (memory / 메모리):** Nhanh nhất. Các tiến trình (process / 프로세스) dùng chung 1 vùng RAM.
   - **Socket (Ổ cắm):** Giao tiếp qua mạng.
   - **Semaphores (Cờ hiệu):** Đồng bộ hóa, khóa (Locking) tài nguyên dùng chung.
-  - **Pipes (Ống dẫn):** Dùng RAM theo kiểu FIFO, tại 1 thời điểm chỉ 1 process được dùng.
+  - **Pipes (Ống dẫn):** Dùng RAM theo kiểu FIFO, tại 1 thời điểm chỉ 1 tiến trình (process / 프로세스) được dùng.
   - **Message Queueing (Hàng đợi tin nhắn):** Truyền tin bất đồng bộ.
 
 ### 알고리즘 구현 모듈 (Các loại Module khi lập trình)
 - **디바이스 드라이버 모듈 (Device Driver):** Điều khiển phần cứng ngoại vi (vd: Máy in).
 - **네트워크 모듈 (Network):** Truyền thông dữ liệu mạng.
-- **파일 모듈 (File):** Truy xuất cấu trúc file trên đĩa cứng.
+- **파일 모듈 (File):** Truy xuất cấu trúc tệp (file / 파일) trên đĩa cứng.
 - **메모리 모듈 (Memory):** Quản lý RAM, cấp phát bộ nhớ ảo, hoặc làm IPC.
 - **프로세스 모듈 (Process):** Tạo và quản lý các tiến trình khác.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** IPC là gửi thư cho nhau. Shared Memory = Bảng tin chung (Nhanh nhất). Semaphore = Cái khóa cửa nhà vệ sinh (Ai đang dùng thì khóa lại).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** IPC là gửi thư cho nhau. dùng chung (shared / 공유) bộ nhớ (memory / 메모리) = Bảng tin chung (Nhanh nhất). Semaphore = Cái khóa cửa nhà vệ sinh (Ai đang dùng thì khóa lại).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**, chuyển sang **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -332,9 +414,13 @@
 - 입력 값, 실행 조건, 기대 결과의 명세서. (Tài liệu ghi rõ: Nhập gì, Điều kiện gì, Kết quả mong đợi là gì).
 - 테스트 케이스를 미리 작성(사전에 정의)해야 인력과 시간 낭비를 방지. (Phải viết Test Case **trước** khi code hoặc test, để tránh test lung tung tốn thời gian).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Test Case = Input + Condition + Expected Output. Bắt buộc viết trước khi test.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** trường hợp kiểm thử (test case / 테스트 케이스) = đầu vào (input / 입력) + điều kiện (condition / 조건) + Expected đầu ra (output / 출력). Bắt buộc viết trước khi kiểm thử (test / 테스트).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)**, chuyển sang **13. 형상 관리 (SCM - Software Configuration Management)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -344,13 +430,17 @@
 * **주요 기능 (Key Functions)**:
   * **Check-Out**: 저장소에서 파일을 받아옴.
   * **Check-In**: 수정을 완료한 후 저장소에 새로운 버전으로 갱신.
-  * **Commit**: 갱신 시 충돌을 알리고 수정한 후 완료함.
+  * **lần ghi nhận (commit / 커밋)**: 갱신 시 충돌을 알리고 수정한 후 완료함.
 * **VI (Vietnamese) (Tiếng Việt):** Quản lý cấu hình phần mềm (quản lý thay đổi/version).
-  * Check-out: Lấy file về.
-  * Check-in: Lưu file lên.
-  * Commit: Lưu thay đổi (xử lý xung đột nếu có).
-* **Example**: Git에서 코드를 가져오는 것이 Checkout, 수정 후 서버에 올리는 것이 Commit/Check-in입니다.
+  * Check-out: Lấy tệp (file / 파일) về.
+  * Check-in: Lưu tệp (file / 파일) lên.
+  * lần ghi nhận (commit / 커밋): Lưu thay đổi (xử lý xung đột nếu có).
+* **Example**: Git에서 코드를 가져오는 것이 Checkout, 수정 후 서버에 올리는 것이 lần ghi nhận (commit / 커밋)/Check-in입니다.
 * 💡 **Mẹo ghi nhớ**: In = vào kho, Out = ra khỏi kho.
+
+---
+
+> **Mạch chuyển:** Từ **13. 형상 관리 (SCM - Software Configuration Management)**, chuyển sang **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -363,12 +453,16 @@
      * **SVN (Subversion)**: `trunk`에서 주로 개발, `branches`에서 추가 작업 후 병합(merge). 커밋 시 리비전(Revision) 1씩 증가.
   3. **분산 저장소 방식 (Distributed)**: 로컬 저장소와 원격 저장소에 함께 저장. (Git 등).
      * **Git**: 로컬에서 버전 관리가 가능해 빠르고 네트워크 문제 시에도 작업 가능. 스냅샷(Snapshot)으로 파일 변화를 저장.
-* **주요 기능**: Repository, Import, Check-Out(가져오기), Check-In/Commit(반영), Update(동기화).
+* **주요 기능**: Repository, Import, Check-Out(가져오기), Check-In/lần ghi nhận (commit / 커밋), cập nhật (update / 업데이트).
 * **VI (Vietnamese) (Tiếng Việt):** Quản lý cấu hình (SCM) và các cách quản lý phiên bản.
-  * Shared Folder: Lưu ở thư mục chung.
-  * C/S: Lưu ở server trung tâm (SVN).
-  * Distributed: Lưu phân tán cả local và server (Git). Git dùng Snapshot để lưu thay đổi.
+  * dùng chung (shared / 공유) Folder: Lưu ở thư mục chung.
+  * C/S: Lưu ở máy chủ (server / 서버) trung tâm (SVN).
+  * phân tán (distributed / 분산): Lưu phân tán cả cục bộ (local / 로컬) và máy chủ (server / 서버) (Git). Git dùng Snapshot để lưu thay đổi.
 * **Example**: 회사에서 SVN을 쓰면 중앙 서버가 죽었을 때 작업을 올릴 수 없지만, Git을 쓰면 내 PC(Local)에 저장해뒀다가 서버가 복구되면 올릴 수 있습니다.
+
+---
+
+> **Mạch chuyển:** Từ **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**, chuyển sang **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -382,21 +476,25 @@
 ### 형상 관리 방식 (Các phương pháp quản lý phiên bản)
 - **공유 폴더 방식 (Shared Folder):** Lưu vào chung một thư mục trên mạng nội bộ. (Ví dụ: RCS).
 - **클라이언트/서버 방식 (Client/Server):** Quản lý tập trung trên một máy chủ. (Ví dụ: CVS, SVN).
-- **분산 저장소 방식 (Distributed Repository):** Mỗi máy cá nhân đều chứa một bản copy của kho chứa, commit lên máy cá nhân trước rồi mới push lên server. Rất an toàn. (Ví dụ: **Git**).
+- **분산 저장소 방식 (Distributed Repository):** Mỗi máy cá nhân đều chứa một bản bản sao (copy / 복사) của kho chứa, lần ghi nhận (commit / 커밋) lên máy cá nhân trước rồi mới push lên máy chủ (server / 서버). Rất an toàn. (Ví dụ: **Git**).
 
 ### 형상 관리 도구 기능 (Chức năng công cụ)
-- **Check-In:** Đẩy code lên kho (Upload).
-- **Check-Out:** Lấy code mới nhất về (Download).
-- **Commit:** Xác nhận lưu sự thay đổi.
+- **Check-In:** Đẩy mã (code / 코드) lên kho (Upload).
+- **Check-Out:** Lấy mã (code / 코드) mới nhất về (Download).
+- **lần ghi nhận (commit / 커밋):** Xác nhận lưu sự thay đổi.
 
 ### IDE (Integrated Development Environment - Môi trường phát triển tích hợp)
 - 코딩, 컴파일, 디버깅, 배포 (Coding, Compile, Debug, Deployment) 기능을 하나로 통합. (Tích hợp tất cả công cụ lập trình vào một phần mềm).
 - Ví dụ: Eclipse (Java), Visual Studio (C#, C++), Xcode (iOS), Android Studio, IntelliJ IDEA.
 
-- **Vietnamese Explanation:** Quản lý hình thái (Configuration/Version) giống như việc lưu file "Bao_cao_lan1", "Bao_cao_lan2", "Bao_cao_FINAL". Git (Phân tán) là công cụ phổ biến nhất hiện nay. IDE là bộ công cụ tất cả-trong-một của lập trình viên (vừa gõ code, vừa dịch, vừa tìm lỗi).
+- **Vietnamese Explanation:** Quản lý hình thái (Configuration/Version) giống như việc lưu tệp (file / 파일) "Bao_cao_lan1", "Bao_cao_lan2", "Bao_cao_FINAL". Git (Phân tán) là công cụ phổ biến nhất hiện nay. IDE là bộ công cụ tất cả-trong-một của lập trình viên (vừa gõ code, vừa dịch, vừa tìm lỗi).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Trình tự 형상 quản lý: Nhận Kiểm Đánh Ghi (Nhận diện - Kiểm soát - Đánh giá - Ghi chép). Git = Phân tán (분산). IDE 4 bước: CoCoDeDe (Coding - Compile - Debugging - Deployment).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**, chuyển sang **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -407,18 +505,22 @@
 
 ### 형상 관리 5대 기능 (5 Chức năng của SCM)
 1. **형상 식별 (Identification):** Đặt tên, đánh số phiên bản, phân nhánh (Tree) để dễ quản lý.
-2. **버전 제어 (Version Control):** Lưu lại các version cũ/mới.
-3. **형상 통제 (Configuration Control):** Yêu cầu đổi code phải được xem xét kỹ trước khi nhập vào bản chính (Baseline).
-4. **형상 감사 (Audit):** Kiểm tra lại xem code đã chuẩn chưa.
+2. **버전 제어 (Version Control):** Lưu lại các phiên bản (version / 버전) cũ/mới.
+3. **형상 통제 (Configuration Control):** Yêu cầu đổi mã (code / 코드) phải được xem xét kỹ trước khi nhập vào bản chính (Baseline).
+4. **형상 감사 (Audit):** Kiểm tra lại xem mã (code / 코드) đã chuẩn chưa.
 5. **형상 기록 (Status Reporting):** Ghi chép lịch sử báo cáo.
 
 ### 버전 관리 용어 (Thuật ngữ Version Control)
-- **저장소 (Repository):** Kho lưu trữ code.
-- **체크아웃 (Check-out):** Lấy code từ Kho về máy mình để sửa.
-- **체크인 (Check-in) / 커밋 (Commit):** Lưu code mình vừa sửa vào máy mình (Local) hoặc đưa lên Kho.
-- **동기화 (Update):** Lấy code mới nhất của người khác trên Kho về máy mình để đồng bộ.
+- **저장소 (Repository):** Kho lưu trữ mã (code / 코드).
+- **체크아웃 (Check-out):** Lấy mã (code / 코드) từ Kho về máy mình để sửa.
+- **체크인 (Check-in) / 커밋 (Commit):** Lưu mã (code / 코드) mình vừa sửa vào máy mình (Local) hoặc đưa lên Kho.
+- **동기화 (Update):** Lấy mã (code / 코드) mới nhất của người khác trên Kho về máy mình để đồng bộ.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**, chuyển sang **116 & 117: 형상 관리 도구 (SVN vs Git)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -428,16 +530,20 @@
 - 클라이언트/서버 구조 (Cấu trúc Client/Server tập trung).
 - **Trunk:** Thư mục chính (Main).
 - **Branches:** Th nhánh để làm tính năng riêng.
-- **Revision:** Mỗi lần Commit thành công, số Revision tăng lên 1.
+- **Revision:** Mỗi lần lần ghi nhận (commit / 커밋) thành công, số Revision tăng lên 1.
 
 ### Git (깃)
 - 분산 저장소 방식 (Lưu trữ phân tán). Phát minh bởi Linus Torvalds.
-- **Snapshot (스냅샷):** Lưu lại toàn bộ trạng thái file tại một thời điểm rất nhanh chóng.
-- **로컬 저장소 (Local Repo) vs 원격 저장소 (Remote Repo):** Internet đứt vẫn làm việc bình thường ở Local.
+- **Snapshot (스냅샷):** Lưu lại toàn bộ trạng thái tệp (file / 파일) tại một thời điểm rất nhanh chóng.
+- **로컬 저장소 (Local Repo) vs 원격 저장소 (Remote Repo):** Internet đứt vẫn làm việc bình thường ở cục bộ (local / 로컬).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** SVN = Trunk (Thân cây), Revision tăng dần. Git = Snapshot, Phân tán (Phân tán (Distributed)).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** SVN = Trunk (Thân cây), Revision tăng dần. Git = Snapshot, phân tán (distributed / 분산).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **116 & 117: 형상 관리 도구 (SVN vs Git)**, chuyển sang **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -445,18 +551,26 @@
 * **패키징 (Packaging)**: 모듈별 실행 파일들을 묶어 배포용 설치 파일을 만드는 것. 사용자 중심으로 진행하며 보안(암호화, DRM 연동) 고려.
 * **설치 매뉴얼 (Installation Manual)**: 사용자를 기준으로 작성. 기본 사항, 소프트웨어 개요, 설치 파일, 프로그램 삭제 등 포함.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Packaging: Đóng gói các file thực thi thành file cài đặt (hướng đến người dùng cuối).
+  * Packaging: Đóng gói các tệp (file / 파일) thực thi thành tệp (file / 파일) cài đặt (hướng đến người dùng cuối).
   * Manual: Tài liệu hướng dẫn cài đặt viết cho người dùng, bao gồm cách cài và gỡ.
 * **Example**: `.exe` 설치 파일을 만들고, "다음, 다음, 완료"를 설명하는 설명서를 작성하는 과정입니다.
+
+---
+
+> **Mạch chuyển:** Từ **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, chuyển sang **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)
 * 사용자의 시스템 최소 환경(OS, CPU, 메모리) 정의.
 * UI(시각적 자료) 매뉴얼과 일치.
-* 하드웨어와 함께 관리되도록 Managed Service 형태로 제공 고려.
+* 하드웨어와 함께 관리되도록 Managed dịch vụ (service / 서비스) 형태로 제공 고려.
 * 제품 종류에 적합한 암호화 알고리즘 및 DRM 연동 고려.
 * **VI (Vietnamese) (Tiếng Việt):** Các lưu ý khi đóng gói phần mềm: Yêu cầu hệ thống tối thiểu, Giao diện (UI) khớp với hướng dẫn, Quản lý dịch vụ, Mã hóa/DRM.
+
+---
+
+> **Mạch chuyển:** Từ **37. 소프트웨어 패키징 고려사항 추가 (Packaging Considerations)**, chuyển sang **39. DRM 패키징 과정 상세 (DRM Packaging Process)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -465,6 +579,10 @@
 * 용량이 작으면 실시간 패키징, 크면 미리 패키징 후 배포.
 * 암호화된 저작권자 전자서명 포함, 라이선스는 클리어링 하우스에 등록.
 * **VI (Vietnamese) (Tiếng Việt):** Quy trình đóng gói DRM. Nội dung nhỏ thì đóng gói realtime, lớn thì đóng gói trước. Giấy phép lưu tại Clearing House.
+
+---
+
+> **Mạch chuyển:** Từ **39. DRM 패키징 과정 상세 (DRM Packaging Process)**, chuyển sang **핵심 035 & 036: 소프트웨어 패키징 및 DRM (Software Packaging & DRM)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -480,13 +598,17 @@
   - **Contents Provider (Người cung cấp):** Tác giả, người tạo nội dung.
   - **Contents Distributor (Người phân phối):** Nơi bán/phân phối (App Store, Melon...).
   - **Clearing House (Trung tâm thanh toán / Quản lý):** Quản lý Key (khóa), cấp phép License và tính tiền.
-  - **Packager (Bộ đóng gói):** Đóng gói nội dung + Meta data + Mã hóa.
+  - **Packager (Bộ đóng gói):** Đóng gói nội dung + Meta dữ liệu (data / 데이터) + Mã hóa.
   - **DRM Controller (Bộ điều khiển):** Kiểm soát quyền sử dụng trên máy người dùng.
 
 - **Vietnamese Explanation:** DRM là công nghệ chống vi phạm bản quyền (ví dụ: nhạc tải trên Spotify không thể copy ra máy MP3 thường nghe được). Clearing House là trọng tài ở giữa giữ chìa khóa và thu tiền.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** DRM = Chống copy lậu. **Clearing House** = Trạm kiểm soát và cấp phép (Rất hay thi). Firewall (Tường lửa) KHÔNG phải là công nghệ của DRM.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** DRM = Chống bản sao (copy / 복사) lậu. **Clearing House** = Trạm kiểm soát và cấp phép (Rất hay thi). Firewall (Tường lửa) KHÔNG phải là công nghệ của DRM.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 035 & 036: 소프트웨어 패키징 및 DRM (Software Packaging & DRM)**, chuyển sang **099: 소프트웨어 패키징 (Software Packaging)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -494,8 +616,12 @@
 
 - 실행 파일들을 묶어 배포용 설치 파일을 만드는 과정. (Gom tất cả file thực thi, file hình, file cấu hình thành 1 file cài đặt (Setup.exe) để tung ra thị trường).
 - **Nguyên tắc:**
-  - **사용자 중심 (Hướng tới người dùng):** Người dùng cài đặt dễ dàng, không cần biết code.
+  - **사용자 중심 (Hướng tới người dùng):** Người dùng cài đặt dễ dàng, không cần biết mã (code / 코드).
   - Cần phải 모듈화 (Module hóa) để dễ bảo trì, và tích hợp 보안 (Bảo mật / DRM).
+
+---
+
+> **Mạch chuyển:** Từ **099: 소프트웨어 패키징 (Software Packaging)**, chuyển sang **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -521,14 +647,22 @@
 
 ---
 
+> **Mạch chuyển:** Từ **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)**, chuyển sang **10. 빌드 자동화 도구 (Build Automation Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 10. 빌드 자동화 도구 (Build Automation Tools)
 * **Ant**: 아파치 소프트웨어 재단에서 개발.
 * **Maven**: Ant의 대안.
 * **Jenkins**: JAVA 기반의 오픈 소스 빌드 자동화 도구.
 * **Gradle**: Groovy 기반의 오픈 소스 빌드 자동화 도구.
-* **VI (Vietnamese) (Tiếng Việt):** Các công cụ tự động hóa quá trình build phần mềm (biên dịch, đóng gói).
+* **VI (Vietnamese) (Tiếng Việt):** Các công cụ tự động hóa quá trình bản dựng (build / 빌드) phần mềm (biên dịch, đóng gói).
 * **Example**: 개발자가 코드를 수정하면 Jenkins가 자동으로 빌드와 테스트를 실행합니다.
 * 💡 **Mẹo ghi nhớ**: AMJG (Ant, Maven, Jenkins, Gradle).
+
+---
+
+> **Mạch chuyển:** Từ **10. 빌드 자동화 도구 (Build Automation Tools)**, chuyển sang **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -536,7 +670,11 @@
 * **IDE**: 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리.
   * **기능**: 코딩(Coding), 컴파일(Compile), 디버깅(Debugging), 배포(Deployment).
 * **빌드 도구**: 소스 코드를 실행 가능한 제품 소프트웨어로 변환(Ant, Maven, Gradle).
-* **VI (Vietnamese) (Tiếng Việt):** Môi trường phát triển tích hợp (IDE - như Eclipse, VS Code). Chức năng: Code, Dịch, Gỡ lỗi, Triển khai.
+* **VI (Vietnamese) (Tiếng Việt):** Môi trường phát triển tích hợp (IDE - như Eclipse, VS Code). Chức năng: mã (code / 코드), Dịch, Gỡ lỗi, Triển khai.
+
+---
+
+> **Mạch chuyển:** Từ **36. IDE (통합 개발 환경) 및 빌드 도구 (IDE & Build Tools)**, chuyển sang **41. 빌드 자동화 도구 심화: Jenkins vs Gradle** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -548,6 +686,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **41. 빌드 자동화 도구 심화: Jenkins vs Gradle**, chuyển sang **핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)
 
 ### 제품 소프트웨어 매뉴얼 (Tài liệu hướng dẫn)
@@ -556,27 +698,35 @@
 - Cả hai đều phải viết theo góc nhìn của **사용자 (Người dùng)**.
 
 ### 빌드 및 모니터링 도구 (Công cụ Build & Monitoring)
-- **빌드 자동화 도구 (Build Automation):** Biến source code thành file chạy một cách tự động. Ví dụ: Ant, Maven, Gradle, **Jenkins**.
+- **빌드 자동화 도구 (Build Automation):** Biến mã nguồn (source code / 소스 코드) thành tệp (file / 파일) chạy một cách tự động. Ví dụ: Ant, Maven, Gradle, **Jenkins**.
 - **버전 관리 도구 (Version Control):** Git, SVN.
-- **정적 분석 도구 (Static Analysis):** Phân tích code tìm lỗi mà **KHÔNG CHẠY** chương trình. Ví dụ: PMD, Cppcheck, SonarQube.
+- **정적 분석 도구 (Static Analysis):** Phân tích mã (code / 코드) tìm lỗi mà **KHÔNG CHẠY** chương trình. Ví dụ: PMD, Cppcheck, SonarQube.
 - **동적 분석 도구 (Dynamic Analysis):** Vừa **CHẠY** chương trình vừa tìm lỗi (tràn bộ nhớ, v.v.). Ví dụ: Avalanche, Valgrind.
 
-- **Vietnamese Explanation:** "Tĩnh" (Static) nghĩa là code nằm im trên giấy, dùng tool soi từng dòng xem có viết sai cú pháp hay không. "Động" (Dynamic) là bấm nút chạy phần mềm rồi xem nó có bị sập hay tốn RAM không.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Tĩnh (Static) = PMD, SonarQube (Soi code). Động (Dynamic) = Valgrind (Chạy thử). Build = Jenkins (Ông quản gia tự động).
+- **Vietnamese Explanation:** "Tĩnh" (Static) nghĩa là mã (code / 코드) nằm im trên giấy, dùng công cụ (tool / 도구) soi từng dòng xem có viết sai cú pháp hay không. "Động" (Dynamic) là bấm nút chạy phần mềm rồi xem nó có bị sập hay tốn RAM không.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Tĩnh (Static) = PMD, SonarQube (Soi code). động (dynamic / 동적) = Valgrind (Chạy thử). bản dựng (build / 빌드) = Jenkins (Ông quản gia tự động).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)**, chuyển sang **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)
 
 - 소스 코드를 실행 파일로 만드는 과정과 배포를 자동화. (Tự động hóa việc dịch code, test và đóng gói phát hành - CI/CD).
-- **Jenkins:** Viết bằng Java, chạy trên web (Web GUI). Điểm mạnh là test phân tán trên nhiều máy.
-- **Gradle:** Viết bằng Groovy (Ngôn ngữ kịch bản), dùng **DSL**. Điểm mạnh là có **빌드 캐시 (Build Cache)** giúp build lại cực nhanh, thường dùng làm chuẩn cho Android.
+- **Jenkins:** Viết bằng Java, chạy trên web (Web GUI). Điểm mạnh là kiểm thử (test / 테스트) phân tán trên nhiều máy.
+- **Gradle:** Viết bằng Groovy (Ngôn ngữ kịch bản), dùng **DSL**. Điểm mạnh là có **빌드 캐시 (Build Cache)** giúp bản dựng (build / 빌드) lại cực nhanh, thường dùng làm chuẩn cho Android.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Jenkins = Java, Web GUI, Phân tán. Gradle = Groovy, DSL, Cache, Android.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Jenkins = Java, Web GUI, Phân tán. Gradle = Groovy, DSL, bộ nhớ đệm (cache / 캐시), Android.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**, chuyển sang **11. DRM (디지털 저작권 관리, Digital Rights Management)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -589,24 +739,28 @@
 
 ---
 
+> **Mạch chuyển:** Từ **11. DRM (디지털 저작권 관리, Digital Rights Management)**, chuyển sang **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)
 
 ### 저작권 (Copyright)
-- 창작자가 가지는 **배타적 독점적 권리**. (Quyền độc quyền của tác giả). Phần mềm rất dễ bị copy (`Ctrl+C / Ctrl+V`) nên phải có DRM để bảo vệ.
+- 창작자가 가지는 **배타적 독점적 권리**. (Quyền độc quyền của tác giả). Phần mềm rất dễ bị bản sao (copy / 복사) (`Ctrl+C / Ctrl+V`) nên phải có DRM để bảo vệ.
 
 ### DRM의 핵심 구성 요소 (Thành phần chính của DRM)
 - **패키저 (Packager):** 콘텐츠 암호화. (Người/Máy đóng gói và khóa file lại).
-  - *실시간 패키징:* File nhỏ (Nhạc, ảnh) -> Khách bấm mua mới đóng gói.
-  - *사전 패키징:* File to (Phim) -> Đóng gói sẵn trước khi bán.
+  - *실시간 패키징:* tệp (file / 파일) nhỏ (Nhạc, ảnh) -> Khách bấm mua mới đóng gói.
+  - *사전 패키징:* tệp (file / 파일) to (Phim) -> Đóng gói sẵn trước khi bán.
 - **클리어링 하우스 (Clearing House):** 권한, 라이선스, 결제 관리. (Trạm thu phí: Xác thực bạn đã trả tiền chưa, cấp License cho bạn mở file. Quản lý cả tính tiền theo dung lượng/thời gian - 종량제).
 - **콘텐츠 분배자 (Distributor):** Nơi bán/phân phối (App Store).
-- **DRM 컨트롤러 (Controller):** Phần mềm trên máy khách hàng kiểm soát việc mở file.
-- **보안 컨테이너 (Security Container):** Hộp an toàn chứa file gốc để vận chuyển.
+- **DRM 컨트롤러 (Controller):** Phần mềm trên máy khách hàng kiểm soát việc mở tệp (file / 파일).
+- **보안 컨테이너 (Security Container):** Hộp an toàn chứa tệp (file / 파일) gốc để vận chuyển.
 
 ### DRM 기술 요소 (Kỹ thuật dùng trong DRM)
-- **암호화 (Encryption):** Mã hóa file.
+- **암호화 (Encryption):** Mã hóa tệp (file / 파일).
 - **키 관리 (Key Management):** Quản lý khóa để mở mã hóa.
-- **식별 기술 (Identification):** Gắn mã định danh (DOI, URI) để biết file nào là file nào.
+- **식별 기술 (Identification):** Gắn mã định danh (DOI, URI) để biết tệp (file / 파일) nào là tệp (file / 파일) nào.
 - **저작권 표현 (Right Expression):** Ghi rõ quyền lợi (Vd: XrML - Chỉ cho xem, cấm in).
 - **크랙 방지 (Tamper Resistance):** Chống bẻ khóa, chống hack.
 - **인증 (Authentication):** Xác minh danh tính người mua.
@@ -617,16 +771,24 @@
 
 ---
 
+> **Mạch chuyển:** Từ **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**, chuyển sang **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)
 * **화이트박스 테스트**: 원시 코드를 오픈시킨 상태에서 논리적 경로(제어 구조)를 테스트.
   * **종류**: 기초 경로 검사 (Base Path), 제어 구조 검사 (조건, 루프, 데이터 흐름).
 * **블랙박스 테스트**: 기능이 제대로 작동하는지 외부에서 테스트 (내부 구조 안 봄).
   * **종류**: 동치 분할 (Equivalence Partitioning), 경계값 분석 (Boundary Value), 원인-효과 그래프 (Cause-Effect), 오류 예측 (Error Guessing), 비교 검사 (Comparison).
 * **VI (Vietnamese) (Tiếng Việt):**
-  * White-box: Nhìn thấy code bên trong (kiểm tra đường dẫn, vòng lặp).
-  * Black-box: Không nhìn thấy code, chỉ kiểm tra đầu vào/đầu ra (kiểm tra tính năng).
+  * White-box: Nhìn thấy mã (code / 코드) bên trong (kiểm tra đường dẫn, vòng lặp).
+  * Black-box: Không nhìn thấy mã (code / 코드), chỉ kiểm tra đầu vào/đầu ra (kiểm tra tính năng).
 * **Example**: 화이트박스는 코드의 `if-else` 모든 경로를 실행해보는 것이고, 블랙박스는 로그인 창에 ID/PW를 넣어보는 것입니다.
 * 💡 **Mẹo ghi nhớ**: White = Nhìn xuyên thấu (Code). Black = Hộp đen không thấy ruột (Chức năng).
+
+---
+
+> **Mạch chuyển:** Từ **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)**, chuyển sang **16. 소프트웨어 테스트 단계 (Software Testing Phases)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -639,11 +801,15 @@
   * **알파 테스트**: 개발자 앞에서 사용자가 수행.
   * **베타 테스트 (Field Testing)**: 최종 사용자가 실제 환경에서 여러 사용자 앞에서 수행.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Unit Test: Kiểm thử từng module nhỏ (tìm lỗi thuật toán, lặp vô hạn).
-  * Integration Test: Kiểm thử tích hợp. Top-down (từ trên xuống), Bottom-up (từ dưới lên).
-  * Acceptance Test: Kiểm thử chấp nhận. Alpha (cùng dev), Beta (không có dev, real-world).
+  * đơn vị (unit / 단위) kiểm thử (test / 테스트): Kiểm thử từng mô-đun (module / 모듈) nhỏ (tìm lỗi thuật toán, lặp vô hạn).
+  * kiểm thử tích hợp (integration test / 통합 테스트): Kiểm thử tích hợp. Top-down (từ trên xuống), Bottom-up (từ dưới lên).
+  * Acceptance kiểm thử (test / 테스트): Kiểm thử chấp nhận. Alpha (cùng dev), Beta (không có dev, real-world).
 * **Example**: 게임 개발 후 회사 내부에서 해보는 것이 알파 테스트, 유저들에게 먼저 공개하는 것이 오픈 베타 테스트입니다.
-* 💡 **Mẹo ghi nhớ**: Alpha = có người tạo ra (Dev) giám sát. Beta = thả ra tự nhiên cho User.
+* 💡 **Mẹo ghi nhớ**: Alpha = có người tạo ra (Dev) giám sát. Beta = thả ra tự nhiên cho người dùng (user / 사용자).
+
+---
+
+> **Mạch chuyển:** Từ **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, chuyển sang **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -651,10 +817,14 @@
 * **테스트 오라클 (Test Oracle)**: 테스트 결과가 참인지 판단하기 위해 사전에 정의된 참 값을 대입하여 비교. (참, 샘플링, 추정, 일관성 검사 오라클).
 * **테스트 드라이버 (Test Driver)**: (상향식 테스트에서) 하위 모듈을 호출하고 매개 변수를 전달하여 결과를 도출하는 도구. (가짜 메인 프로그램).
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Test Oracle: Cơ chế/Nguồn chân lý để xác định kết quả đúng hay sai.
-  * Test Driver: Chương trình giả lập gọi module con (dùng trong Bottom-up).
+  * kiểm thử (test / 테스트) Oracle: Cơ chế/Nguồn chân lý để xác định kết quả đúng hay sai.
+  * kiểm thử (test / 테스트) Driver: Chương trình giả lập gọi mô-đun (module / 모듈) con (dùng trong Bottom-up).
 * **Example**: 테스트 오라클은 정답지 역할을 합니다.
 * 💡 **Mẹo ghi nhớ**: Oracle = Nhà tiên tri/Chân lý. Driver = Người lái xe (Gọi cấp dưới).
+
+---
+
+> **Mạch chuyển:** Từ **17. 테스트 오라클 및 테스트 도구 (Test Oracle & Tools)**, chuyển sang **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -662,9 +832,13 @@
 * **테스트 스텁 (Test Stub)**: 상향식에서 드라이버를 쓰듯, 하향식 통합 테스트에서는 '스텁(Stub)'이라는 가짜 하위 모듈을 사용.
 * 의존성 배제 및 중복성 최소화.
 * 일시적으로 필요한 조건만을 가지고 있는 시험용 모듈.
-* **VI (Vietnamese) (Tiếng Việt):** Test Stub là module giả lập cấp dưới, dùng trong kiểm thử tích hợp từ trên xuống (Top-down).
+* **VI (Vietnamese) (Tiếng Việt):** kiểm thử (test / 테스트) Stub là mô-đun (module / 모듈) giả lập cấp dưới, dùng trong kiểm thử tích hợp từ trên xuống (Top-down).
 * **Example**: 로그인 기능을 먼저 테스트하기 위해, DB 연결 모듈 대신 무조건 "성공"을 반환하는 스텁을 만듭니다.
 * 💡 **Mẹo ghi nhớ**: Top-down dùng Stub (T-S), Bottom-up dùng Driver (B-D).
+
+---
+
+> **Mạch chuyển:** Từ **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**, chuyển sang **35. 테스트 케이스 (Test Case)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -674,6 +848,10 @@
   * 식별자, 테스트 항목, 입력 명세(Input), 출력 명세(Output/예상 결과), 환경 설정, 특수 절차 요구, 의존성 기술.
 * **VI (Vietnamese) (Tiếng Việt):** Kịch bản kiểm thử (Test Case). Bao gồm: ID, Môi trường, Đầu vào, Đầu ra mong đợi.
 * **Example**: 로그인 기능을 위해 "ID: admin, PW: 1234를 넣었을 때 관리자 페이지로 넘어가는가?"를 문서화한 것입니다.
+
+---
+
+> **Mạch chuyển:** Từ **35. 테스트 케이스 (Test Case)**, chuyển sang **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -687,8 +865,12 @@
 * **VI (Vietnamese) (Tiếng Việt):** Nguyên lý kiểm thử:
   * Pesticide Paradox (Nghịch lý thuốc trừ sâu): Dùng mãi 1 kịch bản thì không bắt được lỗi mới.
   * Absence of Errors Fallacy: Không có lỗi không có nghĩa là phần mềm tốt nếu sai yêu cầu của khách hàng.
-  * Validation: Đúng yêu cầu người dùng (Build the right product). Verification: Làm đúng kỹ thuật/tài liệu (Build the product right).
+  * kiểm tra hợp lệ (validation / 검증): Đúng yêu cầu người dùng (Build the right product). xác minh (verification / 확인): Làm đúng kỹ thuật/tài liệu (Build the product right).
 * **Example**: 로그인 버튼을 예쁘게 만들었지만(결함 없음), 고객이 원한 건 지문 인식 로그인이라면 이는 '오류-부재의 궤변'입니다.
+
+---
+
+> **Mạch chuyển:** Từ **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**, chuyển sang **43. 테스트 분류 방식 (Test Classification)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -715,13 +897,21 @@
 
 ---
 
+> **Mạch chuyển:** Từ **43. 테스트 분류 방식 (Test Classification)**, chuyển sang **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)
 * **문장(구문) 검증 기준 (Statement Coverage)**: 소스 코드의 **모든 구문**이 한 번 이상 수행되도록 설계.
 * **결정/분기 검증 기준 (Decision/Branch Coverage)**: 모든 조건문에 대해 조건이 **True인 경우와 False인 경우**가 한 번 이상 수행되도록 설계.
 * **조건 검증 기준 (Condition Coverage)**: 조건문에 포함된 **개별 조건식**의 결과가 T/F 한 번 이상 수행되도록 설계.
 * **분기/조건 기준 (Branch/Condition Coverage)**: 위 두 가지를 모두 만족하는 설계.
 * **VI (Vietnamese) (Tiếng Việt):** Các tiêu chí độ phủ (Coverage) trong kiểm thử hộp trắng: Bao phủ cú pháp (Statement), Bao phủ nhánh/quyết định (Branch - lệnh IF chạy cả T/F), Bao phủ điều kiện (Condition - từng điều kiện nhỏ chạy cả T/F), Bao phủ nhánh/điều kiện.
-* 💡 **Mẹo ghi nhớ**: Statement = Dòng code. Branch = Ngã rẽ (IF). Condition = Điều kiện nhỏ trong IF.
+* 💡 **Mẹo ghi nhớ**: Statement = Dòng mã (code / 코드). Branch = Ngã rẽ (IF). điều kiện (condition / 조건) = Điều kiện nhỏ trong IF.
+
+---
+
+> **Mạch chuyển:** Từ **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**, chuyển sang **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -733,8 +923,12 @@
    * **상향식 (Bottom-up)**: 드라이버(Driver)와 클러스터(Cluster) 사용.
 3. **시스템 테스트 (System Test)** - *분석(Specification)* 단계와 짝. 실제 환경과 유사하게 구성, 기능적/비기능적 요구사항 점검.
 4. **인수 테스트 (Acceptance Test)** - *요구사항(Requirements)* 단계와 짝. 사용자가 직접 테스트. (알파/베타 테스트).
-* **VI (Vietnamese) (Tiếng Việt):** Mô hình chữ V (V-Model). Code <-> Unit, Design <-> Integration, Analysis <-> System, Requirements <-> Acceptance.
+* **VI (Vietnamese) (Tiếng Việt):** Mô hình chữ V (V-Model). mã (code / 코드) <-> đơn vị (unit / 단위), thiết kế (design / 설계) <-> tích hợp (integration / 통합), phân tích (analysis / 분석) <-> hệ thống (system / 시스템), Requirements <-> Acceptance.
 * **Example**: 코드 짠 사람이 직접 해보는 건 단위 테스트, 고객이 요구사항대로 됐는지 최종 확인하는 건 인수 테스트입니다.
+
+---
+
+> **Mạch chuyển:** Từ **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**, chuyển sang **46. 애플리케이션 테스트 프로세스 (Test Process)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -745,12 +939,20 @@
 
 ---
 
+> **Mạch chuyển:** Từ **46. 애플리케이션 테스트 프로세스 (Test Process)**, chuyển sang **47. 테스트 오라클의 종류 (Types of Test Oracles)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 47. 테스트 오라클의 종류 (Types of Test Oracles)
 * **참(True) 오라클**: 모든 입력값에 대해 결과를 제공 (모든 오류 검출).
 * **샘플링(Sampling) 오라클**: 특정한 몇몇 입력값에 대해서만 결과 제공.
 * **추정(Heuristic) 오라클**: 샘플링 + 나머지 값들은 추정(직관)으로 처리.
 * **일관성 검사(Consistent) 오라클**: 변경 전후의 결과값이 동일한지 확인.
-* **VI (Vietnamese) (Tiếng Việt):** Các loại Test Oracle: Chân lý (True - biết hết kết quả), Lấy mẫu (Sampling - biết vài cái), Ước lượng (Heuristic - kết hợp lấy mẫu và đoán), Nhất quán (Consistent - trước sau như một).
+* **VI (Vietnamese) (Tiếng Việt):** Các loại kiểm thử (test / 테스트) Oracle: Chân lý (True - biết hết kết quả), Lấy mẫu (Sampling - biết vài cái), Ước lượng (Heuristic - kết hợp lấy mẫu và đoán), Nhất quán (Consistent - trước sau như một).
+
+---
+
+> **Mạch chuyển:** Từ **47. 테스트 오라클의 종류 (Types of Test Oracles)**, chuyển sang **48. 테스트 자동화 도구 (Test Automation Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -761,7 +963,11 @@
 * **성능 테스트 도구**: 가상의 사용자를 만들어 부하를 줌.
 * **테스트 통제 도구**: 테스트 계획, 형상 관리, 결함 관리.
 * **테스트 하네스 도구**: 테스트 환경 시뮬레이션.
-* **VI (Vietnamese) (Tiếng Việt):** Các công cụ tự động hóa kiểm thử: Phân tích tĩnh, Tạo TC, Chạy TC, Đo hiệu năng, Quản lý, Test Harness (Môi trường giả lập).
+* **VI (Vietnamese) (Tiếng Việt):** Các công cụ tự động hóa kiểm thử: Phân tích tĩnh, Tạo TC, Chạy TC, Đo hiệu năng, Quản lý, kiểm thử (test / 테스트) Harness (Môi trường giả lập).
+
+---
+
+> **Mạch chuyển:** Từ **48. 테스트 자동화 도구 (Test Automation Tools)**, chuyển sang **49. 테스트 하네스 구성 요소 (Test Harness Components)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -772,38 +978,46 @@
 * **케이스(Case)**: 입력 값, 실행 조건, 기대 결과 명세.
 * **스크립트(Script)**: 테스트 실행 절차 명세(자동화).
 * **목 오브젝트(Mock Object)**: 조건부 입력에 따라 상황에 맞는 행위를 수행하는 가짜 객체.
-* **VI (Vietnamese) (Tiếng Việt):** Thành phần của Test Harness: Driver (gọi cấp dưới), Stub (giả cấp dưới), Suites (tập hợp TC), Case (kịch bản), Script (mã chạy tự động), Mock Object (đối tượng giả).
+* **VI (Vietnamese) (Tiếng Việt):** Thành phần của kiểm thử (test / 테스트) Harness: Driver (gọi cấp dưới), Stub (giả cấp dưới), Suites (tập hợp TC), trường hợp (case / 사례) (kịch bản), Script (mã chạy tự động), Mock đối tượng (object / 객체).
+
+---
+
+> **Mạch chuyển:** Từ **49. 테스트 하네스 구성 요소 (Test Harness Components)**, chuyển sang **핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)
 
 ### 테스트의 기본 원리 (Các nguyên lý cơ bản)
-- **완벽한 테스팅은 불가능:** Không bao giờ test ra 100% không còn lỗi.
-- **결함 집중 (Defect Clustering):** Lỗi thường tập trung ở 20% các module cốt lõi (Quy tắc Pareto 80/20).
-- **살충제 패러독스 (Pesticide Paradox):** Nghịch lý thuốc trừ sâu. Dùng mãi một bài test thì không tìm ra lỗi mới. Cần liên tục thay đổi bộ test.
-- **정황 의존성 (Context Dependency):** Tùy bối cảnh (web, app, game) mà cách test phải khác nhau.
+- **완벽한 테스팅은 불가능:** Không bao giờ kiểm thử (test / 테스트) ra 100% không còn lỗi.
+- **결함 집중 (Defect Clustering):** Lỗi thường tập trung ở 20% các mô-đun (module / 모듈) cốt lõi (Quy tắc Pareto 80/20).
+- **살충제 패러독스 (Pesticide Paradox):** Nghịch lý thuốc trừ sâu. Dùng mãi một bài kiểm thử (test / 테스트) thì không tìm ra lỗi mới. Cần liên tục thay đổi bộ kiểm thử (test / 테스트).
+- **정황 의존성 (Context Dependency):** Tùy bối cảnh (web, app, game) mà cách kiểm thử (test / 테스트) phải khác nhau.
 - **오류-부재의 궤변 (Absence of Errors Fallacy):** App không có lỗi nhưng không đúng ý khách hàng thì vẫn là rác.
 
 ### 정적 테스트 vs 동적 테스트 (Static vs Dynamic Test)
-- **정적 테스트 (Static):** Không chạy code. Đọc và review code/tài liệu. (Walkthrough, Inspection, Review). Phát hiện lỗi sớm, tiết kiệm tiền.
+- **정적 테스트 (Static):** Không chạy mã (code / 코드). Đọc và rà soát (review / 검토) mã (code / 코드)/tài liệu. (Walkthrough, Inspection, Review). Phát hiện lỗi sớm, tiết kiệm tiền.
 - **동적 테스트 (Dynamic):** Phải chạy chương trình. Gồm Black Box và White Box testing.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Thuốc trừ sâu (Pesticide) = Cần thay mới bộ Test. Đám mây lỗi (Clustering) = 20% code gây ra 80% lỗi.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Thuốc trừ sâu (Pesticide) = Cần thay mới bộ kiểm thử (test / 테스트). Đám mây lỗi (Clustering) = 20% mã (code / 코드) gây ra 80% lỗi.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)**, chuyển sang **핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)
 
 - **테스트 케이스 (Test Case):** Một bộ gồm: Dữ liệu đầu vào, Điều kiện chạy, Kết quả mong đợi.
-- **테스트 시나리오 (Test Scenario):** Kịch bản gồm nhiều Test Case nối tiếp nhau.
-- **테스트 오라클 (Test Oracle):** Tiêu chuẩn/Cơ chế để tự động đánh giá kết quả test là Đúng hay Sai (True/False).
+- **테스트 시나리오 (Test Scenario):** Kịch bản gồm nhiều trường hợp kiểm thử (test case / 테스트 케이스) nối tiếp nhau.
+- **테스트 오라클 (Test Oracle):** Tiêu chuẩn/Cơ chế để tự động đánh giá kết quả kiểm thử (test / 테스트) là Đúng hay Sai (True/False).
   - **참 (True):** Kiểm tra 100% mọi trường hợp (Dùng cho máy bay, y tế).
-  - **샘플링 (Sampling):** Lấy mẫu ngẫu nhiên vài test case.
-  - **추정 (Heuristic):** Lấy mẫu vài cái chắc chắn, còn lại thì dùng logic ước lượng (Heuristic).
-  - **일관성 검사 (Consistent):** Kiểm tra xem code cũ và mới có cho kết quả giống nhau không khi bị thay đổi (Hồi quy).
+  - **샘플링 (Sampling):** Lấy mẫu ngẫu nhiên vài trường hợp kiểm thử (test case / 테스트 케이스).
+  - **추정 (Heuristic):** Lấy mẫu vài cái chắc chắn, còn lại thì dùng lô-gic (logic / 논리) ước lượng (Heuristic).
+  - **일관성 검사 (Consistent):** Kiểm tra xem mã (code / 코드) cũ và mới có cho kết quả giống nhau không khi bị thay đổi (Hồi quy).
 
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Oracle (Nhà tiên tri) = Cái để phán xét đúng/sai. True = 100%. Heuristic = Đoán.
 
@@ -811,12 +1025,16 @@
 
 ---
 
+> **Mạch chuyển:** Từ **핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)**, chuyển sang **핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)
 
-Cả hai đều là **Dynamic Test** (Phải chạy code).
+Cả hai đều là **động (dynamic / 동적) kiểm thử (test / 테스트)** (Phải chạy code).
 
 ### 블랙박스 테스트 (Black-box / Hộp đen / Dựa trên Chức năng)
-- Không quan tâm bên trong code viết gì, chỉ quan tâm Đầu vào -> Đầu ra. (Dựa trên 명세 - Đặc tả).
+- Không quan tâm bên trong mã (code / 코드) viết gì, chỉ quan tâm Đầu vào -> Đầu ra. (Dựa trên 명세 - Đặc tả).
 - **Kỹ thuật (Các loại):**
   - **동등 분할 (Equivalence Partitioning):** Chia vùng tương đương (Vd: Nhập từ 1-100, thì test số 50 là đủ diện cho vùng đúng).
   - **경곗값 분석 (Boundary Value):** Phân tích giá trị biên (Lỗi hay xảy ra ở ranh giới, vd test số 0, 1, 100, 101).
@@ -824,49 +1042,61 @@ Cả hai đều là **Dynamic Test** (Phải chạy code).
   - **오류 예측 (Error Guessing):** Dựa vào kinh nghiệm của tester để đoán lỗi.
 
 ### 화이트박스 테스트 (White-box / Hộp trắng / Dựa trên Cấu trúc Code)
-- Soi thấu bên trong code. Đảm bảo mọi dòng lệnh (Statement), mọi nhánh (Branch/Decision) đều được chạy ít nhất 1 lần.
+- Soi thấu bên trong mã (code / 코드). Đảm bảo mọi dòng lệnh (Statement), mọi nhánh (Branch/Decision) đều được chạy ít nhất 1 lần.
 - **Kỹ thuật (Các loại):**
-  - **기본 경로 검사 (Base Path):** Đi qua tất cả các con đường code.
+  - **기본 경로 검사 (Base Path):** Đi qua tất cả các con đường mã (code / 코드).
   - **구문 커버리지 (Statement Coverage):** Bao phủ dòng lệnh (Dễ nhất).
   - **결정 커버리지 (Decision/Branch):** Bao phủ nhánh (If True / If False).
   - **조건 커버리지 (Condition):** Bao phủ mọi điều kiện con trong If.
-  - **루프 검사 (Loop Testing):** Test các vòng lặp for, while.
+  - **루프 검사 (Loop Testing):** kiểm thử (test / 테스트) các vòng lặp for, while.
 
 - **Vietnamese Explanation:** Black-box giống như lái xe ô tô: đạp ga là chạy, không cần biết động cơ nổ ra sao. White-box giống như thợ máy: tháo tung động cơ ra kiểm tra từng con ốc, từng pít-tông.
 - 💡 **Mẹo ghi nhớ (Mnemonics):**
   - Black-box (Chức năng): Vùng (Partition), Biên (Boundary), Nhờ kinh nghiệm (Guessing).
-  - White-box (Cấu trúc code): Dòng lệnh (Statement), Nhánh (Branch), Điều kiện (Condition), Vòng lặp (Loop).
+  - White-box (Cấu trúc code): Dòng lệnh (Statement), Nhánh (Branch), điều kiện (condition / 조건), vòng lặp (loop / 루프).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)**, chuyển sang **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)
 
-Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration) → 시스템 (System) → 인수 (Acceptance)**.
+Thứ tự kiểm thử (test / 테스트) từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration) → 시스템 (System) → 인수 (Acceptance)**.
 
 | 단계 (Giai đoạn) | 설명 (Giải thích) | 방식 / 기법 (Cách thức) |
 |---|---|---|
-| **단위 (Unit Test)** | Test từng Module, hàm độc lập. | White-box, Black-box, Test cấu trúc dữ liệu. |
-| **통합 (Integration)** | Nối các module lại và test sự giao tiếp giữa chúng. | - **빅뱅 (Big Bang):** Gom tất cả test 1 lần (dễ bị rối).<br>- **상향식 (Bottom-Up):** Dưới lên. Cần **Driver** (Trình điều khiển giả).<br>- **하향식 (Top-Down):** Trên xuống. Cần **Stub** (Mô đun con giả mạo). |
-| **시스템 (System)** | Test toàn bộ hệ thống xem có đúng yêu cầu (Chức năng + Hiệu năng). | Yêu cầu chức năng và phi chức năng. |
-| **인수 (Acceptance)** | Khách hàng/Người dùng cuối tự test để nghiệm thu. | - **알파 (Alpha):** Khách hàng test tại cty lập trình viên, có dev đứng ngó.<br>- **베타 (Beta):** Tung ra cho nhiều người dùng tự test ở nhà (Field Test), tự do. |
+| **단위 (Unit Test)** | kiểm thử (test / 테스트) từng mô-đun (module / 모듈), hàm độc lập. | White-box, Black-box, kiểm thử (test / 테스트) cấu trúc dữ liệu. |
+| **통합 (Integration)** | Nối các mô-đun (module / 모듈) lại và kiểm thử (test / 테스트) sự giao tiếp giữa chúng. | - **빅뱅 (Big Bang):** Gom tất cả kiểm thử (test / 테스트) 1 lần (dễ bị rối).<br>- **상향식 (Bottom-Up):** Dưới lên. Cần **Driver** (Trình điều khiển giả).<br>- **하향식 (Top-Down):** Trên xuống. Cần **Stub** (Mô đun con giả mạo). |
+| **시스템 (System)** | kiểm thử (test / 테스트) toàn bộ hệ thống xem có đúng yêu cầu (Chức năng + Hiệu năng). | Yêu cầu chức năng và phi chức năng. |
+| **인수 (Acceptance)** | Khách hàng/Người dùng cuối tự kiểm thử (test / 테스트) để nghiệm thu. | - **알파 (Alpha):** Khách hàng kiểm thử (test / 테스트) tại cty lập trình viên, có dev đứng ngó.<br>- **베타 (Beta):** Tung ra cho nhiều người dùng tự kiểm thử (test / 테스트) ở nhà (Field Test), tự do. |
 
-- **Vietnamese Explanation:** Tích hợp (Integration) rất hay ra thi. Nếu ráp từ dưới lên (Bottom-up) thì module con xong rồi, nhưng thiếu thằng gọi nó => Cần viết cục **Driver** giả để gọi. Nếu ráp từ trên xuống (Top-down), module chính có rồi nhưng chưa viết xong module con => Cần viết cục **Stub** (Cục gạch giả) để thế chỗ. Alpha test là test "nội bộ" có kiểm soát, Beta test là "open beta" như game.
+- **Vietnamese Explanation:** tích hợp (integration / 통합) rất hay ra thi. Nếu ráp từ dưới lên (Bottom-up) thì mô-đun (module / 모듈) con xong rồi, nhưng thiếu thằng gọi nó => Cần viết cục **Driver** giả để gọi. Nếu ráp từ trên xuống (Top-down), mô-đun (module / 모듈) chính có rồi nhưng chưa viết xong mô-đun (module / 모듈) con => Cần viết cục **Stub** (Cục gạch giả) để thế chỗ. Alpha kiểm thử (test / 테스트) là kiểm thử (test / 테스트) "nội bộ" có kiểm soát, Beta kiểm thử (test / 테스트) là "open beta" như game.
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Từ trên xuống (Top-Down) = Stub (Top-Stub / T-S). 상향식 (Bottom-Up) = Driver (Bottom-Driver / B-D). Alpha = Ở cty Dev. Beta = Ở nhà.
 
 ---
 
 ---
 
+> **Mạch chuyển:** Từ **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)**, chuyển sang **핵심 044: 테스트 자동화 도구 (Test Automation Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 핵심 044: 테스트 자동화 도구 (Test Automation Tools)
 
-- **정적 분석 도구 (Static Analysis):** Phân tích không cần chạy code.
+- **정적 분석 도구 (Static Analysis):** Phân tích không cần chạy mã (code / 코드).
 - **성능 테스트 도구 (Performance Test):** Tạo ra người dùng ảo (Virtual Users) để ép tải, đo đạc băng thông, thời gian phản hồi (Load/Stress testing).
-- **테스트 드라이버 (Test Driver):** Dùng trong Bottom-up. Gọi module con, truyền tham số.
-- **테스트 스텁 (Test Stub):** Dùng trong Top-down. Module giả mạo, làm hình nộm trả về kết quả ảo cho module trên.
+- **테스트 드라이버 (Test Driver):** Dùng trong Bottom-up. Gọi mô-đun (module / 모듈) con, truyền tham số.
+- **테스트 스텁 (Test Stub):** Dùng trong Top-down. mô-đun (module / 모듈) giả mạo, làm hình nộm trả về kết quả ảo cho mô-đun (module / 모듈) trên.
 
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Driver (Tài xế) = Kẻ điều khiển từ trên. Stub (Gốc cây/Khúc gỗ) = Đứng ở dưới chịu đòn giả.
+
+---
+
+> **Mạch chuyển:** Từ **핵심 044: 테스트 자동화 도구 (Test Automation Tools)**, chuyển sang **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -875,25 +1105,33 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 **Quy trình 5 bước (5 단계):**
 1. **계획 및 제어 (Planning & Control):** Lập kế hoạch, mục tiêu, chi phí.
 2. **분석 및 설계 (Analysis & Design):** Viết Kịch bản (Test Scenario) và Ca kiểm thử (**Test Case**).
-3. **구현 및 실현 (Implementation & Execution):** Viết Thủ tục test (**Test Procedure** - Trình tự chạy các case) và Thực thi test.
+3. **구현 및 실현 (Implementation & Execution):** Viết Thủ tục kiểm thử (test / 테스트) (**Test Procedure** - Trình tự chạy các case) và Thực thi kiểm thử (test / 테스트).
 4. **평가 (Evaluation):** Đánh giá kết quả xem đạt chưa.
 5. **완료 (Completion):** Lưu trữ hồ sơ, bàn giao.
 
-- **Vietnamese Explanation:** Test Case là danh sách các món ăn cần nấu (Ví dụ: Trứng rán). Test Procedure là công thức nấu (Bước 1 bật bếp, bước 2 đập trứng). Phải có món (Case) rồi mới ghi công thức (Procedure) được.
+- **Vietnamese Explanation:** trường hợp kiểm thử (test case / 테스트 케이스) là danh sách các món ăn cần nấu (Ví dụ: Trứng rán). kiểm thử (test / 테스트) Procedure là công thức nấu (Bước 1 bật bếp, bước 2 đập trứng). Phải có món (Case) rồi mới ghi công thức (Procedure) được.
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Kế hoạch -> Phân tích (Ra Test Case) -> Thực hiện (Ra Test Procedure) -> Đánh giá -> Hoàn thành. (Kế Phân Thực Đánh Hoàn (Kế hoạch - Phân tích - Thực hiện - Đánh giá - Hoàn thành)).
 
 ---
 
 ---
 
-## 105: 시각에 따른 테스트 (Verification vs Validation)
-
-- **검증 (Verification - Xác minh):** 개발자 시각 (Góc nhìn Dev). "Làm đúng thiết kế/mã code không?". (Are we building the product right?).
-- **확인 (Validation - Thẩm định):** 사용자 시각 (Góc nhìn User). "Phần mềm này có đúng cái khách hàng cần không?". (Are we building the right product?).
-
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 검증 (Verification) = Code chuẩn chưa? (Dev). 확인 (Validation) = Khách ưng không? (User).
+> **Mạch chuyển:** Từ **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**, chuyển sang **105: 시각에 따른 테스트 (Verification vs Validation)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
+
+## 105: 시각에 따른 테스트 (Verification vs Validation)
+
+- **검증 (Verification - Xác minh):** 개발자 시각 (Góc nhìn Dev). "Làm đúng thiết kế/mã mã (code / 코드) không?". (Are we building the product right?).
+- **확인 (Validation - Thẩm định):** 사용자 시각 (Góc nhìn User). "Phần mềm này có đúng cái khách hàng cần không?". (Are we building the right product?).
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** 검증 (Verification) = mã (code / 코드) chuẩn chưa? (Dev). 확인 (Validation) = Khách ưng không? (User).
+
+---
+
+---
+
+> **Mạch chuyển:** Từ **105: 시각에 따른 테스트 (Verification vs Validation)**, chuyển sang **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -901,42 +1139,50 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 
 ### 테스트의 기본 원리 (Nguyên lý cơ bản)
 - **완벽한 테스트 불가능:** Không thể khẳng định 100% hết bug.
-- **파레토 법칙 (Pareto):** 80% bug nằm ở 20% code cốt lõi. (Đám mây lỗi).
-- **살충제 패러독스 (Pesticide Paradox):** Test hoài 1 kịch bản sẽ bị "nhờn", phải liên tục thay đổi bộ test.
-- **정황 의존 (Context):** Tùy thuộc ngữ cảnh (Web, Game) mà test khác nhau.
+- **파레토 법칙 (Pareto):** 80% bug nằm ở 20% mã (code / 코드) cốt lõi. (Đám mây lỗi).
+- **살충제 패러독스 (Pesticide Paradox):** kiểm thử (test / 테스트) hoài 1 kịch bản sẽ bị "nhờn", phải liên tục thay đổi bộ kiểm thử (test / 테스트).
+- **정황 의존 (Context):** Tùy thuộc ngữ cảnh (Web, Game) mà kiểm thử (test / 테스트) khác nhau.
 
 ### 테스트 분류 (Phân loại Test)
 1. **실행 여부 (Theo việc có chạy code không):**
-   - **정적 테스트 (Static):** Không chạy code. Đọc, review tài liệu (Walkthrough, Inspection).
-   - **동적 테스트 (Dynamic):** Chạy code. (White box, Black box).
+   - **정적 테스트 (Static):** Không chạy mã (code / 코드). Đọc, rà soát (review / 검토) tài liệu (Walkthrough, Inspection).
+   - **동적 테스트 (Dynamic):** Chạy mã (code / 코드). (White box, Black box).
 2. **테스트 기반 (Theo căn cứ Test):**
    - **명세 기반 (Specification):** Dựa vào tài liệu yêu cầu.
-   - **구조 기반 (Structure):** Dựa vào luồng logic của code.
+   - **구조 기반 (Structure):** Dựa vào luồng lô-gic (logic / 논리) của mã (code / 코드).
    - **경험 기반 (Experience):** Dựa vào kinh nghiệm tester (Đoán lỗi).
 3. **목적 (Theo mục đích):**
    - **강도 (Stress):** Ép tải (Dồn dập bắt nó sập).
-   - **회귀 (Regression):** Sửa code xong test lại xem có hỏng chỗ cũ không.
-   - **회복 (Recovery):** Giả vờ ngắt điện xem app phục hồi data được không.
+   - **회귀 (Regression):** Sửa mã (code / 코드) xong kiểm thử (test / 테스트) lại xem có hỏng chỗ cũ không.
+   - **회복 (Recovery):** Giả vờ ngắt điện xem app phục hồi dữ liệu (data / 데이터) được không.
    - **병행 (Parallel):** Chạy app cũ và app mới cùng lúc để so kết quả.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Inspection (Khám nghiệm) = Tĩnh (Static). Regression (Hồi quy) = Sửa xong test lại.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Inspection (Khám nghiệm) = Tĩnh (Static). Regression (Hồi quy) = Sửa xong kiểm thử (test / 테스트) lại.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**, chuyển sang **127 ~ 129: 화이트박스 테스트 (White Box Test)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 127 ~ 129: 화이트박스 테스트 (White Box Test)
 
-- 내부 로직과 제어 구조를 직접 관찰. (Test dựa trên mã nguồn (Source Code). Nhìn thấu bên trong).
+- 내부 로직과 제어 구조를 직접 관찰. (Test dựa trên source code. Nhìn thấu bên trong).
 - **종류 (Các kỹ thuật):** 기초 경로 (Đường dẫn cơ bản), 조건 (Điều kiện), 루프 (Vòng lặp), 데이터 흐름 (Luồng dữ liệu).
 - **검증 기준 (Coverage - Mức độ bao phủ):**
-  - **문장 검증 (Statement):** Mọi dòng code phải chạy qua 1 lần.
+  - **문장 검증 (Statement):** Mọi dòng mã (code / 코드) phải chạy qua 1 lần.
   - **분기/결정 검증 (Branch/Decision):** Mọi nhánh lệnh (If True / False) phải chạy qua 1 lần.
   - **조건 검증 (Condition):** Mọi biểu thức điều kiện con bên trong If phải kiểm tra T/F.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** White Box = Code (Câu lệnh, Rẽ nhánh, Vòng lặp). Do Dev tự làm.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** White Box = mã (code / 코드) (Câu lệnh, Rẽ nhánh, Vòng lặp). Do Dev tự làm.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **127 ~ 129: 화이트박스 테스트 (White Box Test)**, chuyển sang **130 & 131: 블랙박스 테스트 (Black Box Test)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -945,13 +1191,17 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 - 명세를 기초로 기능 테스트. 내부 구조 무시. (Dựa vào chức năng UI, không thèm nhìn code).
 - **종류 (Các kỹ thuật):**
   - **동치 분할 (Equivalence Partitioning):** Chia vùng tương đương (Nhập đại 1 số đại diện).
-  - **경계값 분석 (Boundary Value):** Test quanh cái mép (Max, Min, +1, -1). Lỗi hay nằm ở đây.
+  - **경계값 분석 (Boundary Value):** kiểm thử (test / 테스트) quanh cái mép (Max, Min, +1, -1). Lỗi hay nằm ở đây.
   - **원인-효과 그래프 (Cause-Effect):** Vẽ biểu đồ nhân quả.
   - **오류 예측 (Error Guessing):** Dựa vào kinh nghiệm (Kinh nghiệm Tester).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Black Box = UI, Chức năng. Các kỹ thuật thường chia theo vùng (Partition) và ranh giới (Boundary).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Black Box = UI, Chức năng. Các kỹ thuật thường chia theo vùng (Partition) và ranh giới (boundary / 경계).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **130 & 131: 블랙박스 테스트 (Black Box Test)**, chuyển sang **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -959,14 +1209,14 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 
 Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
-1. **단위 테스트 (Unit Test):** Test từng Module con. Thường dùng White Box.
-2. **통합 테스트 (Integration Test):** Ghép các module lại. (Có thể test kiểu Big Bang - Gom 1 cục, hoặc dần dần từ trên xuống, từ dưới lên). Tìm lỗi giao tiếp (Interface).
-3. **시스템 테스트 (System Test):** Test toàn bộ hệ thống trong môi trường giống thực tế nhất. Đánh giá tính năng + hiệu năng (Bảo mật, tốc độ).
-4. **인수 테스트 (Acceptance Test):** Khách hàng test để nghiệm thu.
-   - **알파 (Alpha):** Khách hàng test tại văn phòng dev (có dev đứng xem).
-   - **베타 (Beta):** Khách hàng tự test ở nhà (Giống Game Open Beta).
+1. **단위 테스트 (Unit Test):** kiểm thử (test / 테스트) từng mô-đun (module / 모듈) con. Thường dùng White Box.
+2. **통합 테스트 (Integration Test):** Ghép các mô-đun (module / 모듈) lại. (Có thể test kiểu Big Bang - Gom 1 cục, hoặc dần dần từ trên xuống, từ dưới lên). Tìm lỗi giao tiếp (Interface).
+3. **시스템 테스트 (System Test):** kiểm thử (test / 테스트) toàn bộ hệ thống trong môi trường giống thực tế nhất. Đánh giá tính năng + hiệu năng (Bảo mật, tốc độ).
+4. **인수 테스트 (Acceptance Test):** Khách hàng kiểm thử (test / 테스트) để nghiệm thu.
+   - **알파 (Alpha):** Khách hàng kiểm thử (test / 테스트) tại văn phòng dev (có dev đứng xem).
+   - **베타 (Beta):** Khách hàng tự kiểm thử (test / 테스트) ở nhà (Giống Game Open Beta).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Đơn vị (Unit) -> Tích hợp (Integration) -> Hệ thống (System) -> Nghiệm thu (Acceptance). Alpha = Nội bộ, Beta = Ở nhà.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** đơn vị (unit / 단위) -> tích hợp (integration / 통합) -> hệ thống (system / 시스템) -> Nghiệm thu (Acceptance). Alpha = Nội bộ, Beta = Ở nhà.
 
 # 136-1. 통합 테스트 (Integration Test - Kiểm thử tích hợp)
 
@@ -990,9 +1240,9 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[4] 예시 (Ví dụ thực tế):**
 - **비유 (자동차 조립 - Lắp ráp ô tô):**
-  - *Unit Test:* Kiểm tra động cơ, bánh xe, vô lăng riêng biệt. Tất cả đều tốt.
+  - *đơn vị (unit / 단위) kiểm thử (test / 테스트):* Kiểm tra động cơ, bánh xe, vô lăng riêng biệt. Tất cả đều tốt.
   - *Big Bang:* Lắp ráp toàn bộ rồi mới khởi động. Xe không nổ máy $\rightarrow$ Không biết do động cơ, bình ắc quy hay bugi.
-  - *Incremental:* Lắp động cơ vào hộp số rồi test (OK). Lắp thêm bánh xe rồi test (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
+  - *Incremental:* Lắp động cơ vào hộp số rồi kiểm thử (test / 테스트) (OK). Lắp thêm bánh xe rồi kiểm thử (test / 테스트) (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Big Bang** = "Bùm" một phát gom hết lại, nếu hỏng thì không biết sửa từ đâu.
@@ -1003,8 +1253,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 # 137 & 138. 하향식 / 상향식 통합 테스트 (Top Down & Bottom Up Integration Test)
 
 **[1] 개념 (Khái niệm):**
-- **하향식 (Top-down):** 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ module cấp cao nhất (chính) xuống các module cấp thấp (phụ).)*
-- **상향식 (Bottom-up):** 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ các module cấp thấp (cơ sở) dần lên module cấp cao.)*
+- **하향식 (Top-down):** 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ module cấp cao nhất (chính) xuống các mô-đun (module / 모듈) cấp thấp (phụ).)*
+- **상향식 (Bottom-up):** 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ các module cấp thấp (cơ sở) dần lên mô-đun (module / 모듈) cấp cao.)*
 
 **[2] 핵심 키워드 (Từ khóa chính):**
 - **하향식:** 깊이 우선(Depth-first), 넓이 우선(Breadth-first), **스텁(Stub)**.
@@ -1019,8 +1269,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
   - 상위 모듈이 없으므로, 하위 모듈을 gọi bằng **Driver** (테스트를 제어하는 가짜 상위 모듈 - module giả lập cấp trên điều khiển test).
 
 **[4] 예시 (Ví dụ thực tế):**
-- **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có database, ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
-- **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn code ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
+- **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có cơ sở dữ liệu (database / 데이터베이스), ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
+- **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn mã (code / 코드) ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Top-Down = Stub** (Từ trên xuống gặp tảng đá - S).
@@ -1052,10 +1302,10 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - 테스트 케이스 선정 (Lựa chọn test case hiệu quả)
 
 **[3] 예시 (Ví dụ thực tế):**
-- Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression Test* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
+- Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression kiểm thử (test / 테스트)* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
-> - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để test xem có hỏng không.
+> - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để kiểm thử (test / 테스트) xem có hỏng không.
 
 ---
 
@@ -1075,8 +1325,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **예시:** Kịch bản mua hàng: "Đăng nhập (Test Case 1) $\rightarrow$ Tìm kiếm sản phẩm (Test Case 2) $\rightarrow$ Thêm vào giỏ (Test Case 3) $\rightarrow$ Thanh toán (Test Case 4)."
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
-> - **Test Case** = Từng bước đi độc lập (Kiểm tra 1 hành động).
-> - **Test Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
+> - **trường hợp kiểm thử (test case / 테스트 케이스)** = Từng bước đi độc lập (Kiểm tra 1 hành động).
+> - **kiểm thử (test / 테스트) Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
 
 ---
 
@@ -1095,7 +1345,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - Máy tính bỏ túi:
   - *True Oracle:* Tính thử mọi phép tính có thể (Không tưởng).
   - *Sampling Oracle:* Chỉ tính thử $1+1$, $2*3$, $10/2$.
-  - *Consistent Oracle:* Bản update mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
+  - *Consistent Oracle:* Bản cập nhật (update / 업데이트) mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Oracle** = Nhà tiên tri (đưa ra đáp án chuẩn). 4 loại: **T**rue - **S**ampling - **H**euristic - **C**onsistent.
@@ -1117,10 +1367,10 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[4] 고려사항 (Lưu ý khi áp dụng):**
 - 재사용(Reusability) 불가능한 1회성 테스트는 자동화에서 제외.
-- 프로젝트 초기에 엔지니어 투입 (Early Involvement) để thiết kế cấu trúc test automation.
+- 프로젝트 초기에 엔지니어 투입 (Early Involvement) để thiết kế cấu trúc kiểm thử (test / 테스트) automation.
 
 **[5] 예시 (Ví dụ thực tế):**
-- Sử dụng *Selenium* (Công cụ tự động hóa) để code một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để test sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
+- Sử dụng *Selenium* (Công cụ tự động hóa) để mã (code / 코드) một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để kiểm thử (test / 테스트) sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Tự động hóa = "Máy rửa bát". Đắt tiền mua (초기 비용) nhưng rửa 1000 cái bát rất nhanh (반복 작업 최적화).
@@ -1134,9 +1384,9 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[2] 구성 요소 (Thành phần chính):**
 - **Driver / Stub:** (Đã giải thích ở trên).
-- **Test Suite (테스트 슈트):** 테스트 케이스들의 집합 (Tập hợp các test case).
-- **Test Script (테스트 스크립트):** 자동화된 테스트 실행 절차를 기록한 명세서 (Kịch bản code chạy tự động).
-- **Mock Object (목 오브젝트):** 사용자의 예정된 행위를 조건부로 입력해 둔 가짜 객체 (Đối tượng giả lập dữ liệu trả về).
+- **bộ kiểm thử (test suite / 테스트 스위트):** 테스트 케이스들의 집합 (Tập hợp các test case).
+- **kiểm thử (test / 테스트) Script (테스트 스크립트):** 자동화된 테스트 실행 절차를 기록한 명세서 (Kịch bản code chạy tự động).
+- **Mock đối tượng (object / 객체):** 사용자의 예정된 행위를 조건부로 입력해 둔 가짜 객체 (Đối tượng giả lập dữ liệu trả về).
 
 ---
 
@@ -1168,8 +1418,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **공식 (Công thức):** với một đồ thị luồng liên thông, $V(G) = E - N + 2$ (E: Edge, N: Node); tổng quát là $V(G)=E-N+2P$ với P là số thành phần liên thông. Có thể dùng số vùng kín + 1.
 
 **[4] 예시 (Ví dụ thực tế):**
-- **Throughput vs Response Time:** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
-- **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 Node và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
+- **thông lượng (throughput / 처리량) vs phản hồi (response / 응답) thời gian (time / 시간):** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
+- **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 nút (node / 노드) và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Công thức McCabe: **E**m **N**hớ **+ 2** ($E - N + 2$).
@@ -1180,14 +1430,14 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[1] 최적화 개념 (Khái niệm tối ưu hóa):**
 - 나쁜 코드(Bad Code / Spaghetti Code / Alien Code)를 배제하고, **클린 코드(Clean Code)**로 작성하여 가독성(Readability)과 유지보수성 향상.
-*(Viết code sạch sẽ, rõ ràng, dễ hiểu, tránh viết code rối như tơ vò (Spaghetti) hoặc code không ai hiểu được (Alien).*
+*(Viết code sạch sẽ, rõ ràng, dễ hiểu, tránh viết code rối như tơ vò (Spaghetti) hoặc mã (code / 코드) không ai hiểu được (Alien).*
 
 **[2] 소스 코드 품질 분석 도구 (Công cụ phân tích chất lượng code):**
 - **정적 분석 도구 (Static Analysis):** 코드를 실행하지 않고 패턴 분석 (VD: pmd, cppcheck, SonarQube).
 - **동적 분석 도구 (Dynamic Analysis):** 소스 코드를 실행하여 메모리 누수(Memory Leak) 분석 (VD: Valgrind, Avalanche).
 
 **[3] 예시 (Ví dụ thực tế):**
-- **Alien Code (Code người ngoài hành tinh):** Code từ chục năm trước, tài liệu bị mất, người viết code đã nghỉ việc, sếp bảo bạn sửa code đó $\rightarrow$ Không thể sửa nổi!
+- **Alien mã (code / 코드) (Code người ngoài hành tinh):** mã (code / 코드) từ chục năm trước, tài liệu bị mất, người viết mã (code / 코드) đã nghỉ việc, sếp bảo bạn sửa mã (code / 코드) đó $\rightarrow$ Không thể sửa nổi!
 
 ---
 
@@ -1295,7 +1545,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **도구 종류 (Các công cụ phổ biến):** Tripwire, AIDE, Samhain, Claymore, Fcheck.
 
 **[3] 예시 (Ví dụ thực tế):**
-- Hacker cài **Backdoor (Cửa hậu)** vào file `login.php`. Công cụ Tripwire sử dụng hàm băm (Hash) và phát hiện ra mã băm của `login.php` hôm nay khác với hôm qua $
+- Hacker cài **Backdoor (Cửa hậu)** vào tệp (file / 파일) `login.php`. Công cụ Tripwire sử dụng hàm băm (hash / 해시) và phát hiện ra mã băm của `login.php` hôm nay khác với hôm qua $
 ightarrow$ Phát chuông cảnh báo.
 
 ---
@@ -1322,10 +1572,10 @@ ightarrow$ Phát chuông cảnh báo.
 
 **[2] 유형 (Phân loại):**
 - **리소스 방식 (Resource - Theo tài nguyên):** Giám sát phần cứng như CPU, RAM (VD: Nagios, Zabbix).
-- **엔드투엔드 방식 (End-to-End - Toàn trình):** Giám sát từ lúc User click đến khi kết thúc giao dịch (VD: Jennifer, VisualVM, Scouter).
+- **엔드투엔드 방식 (End-to-End - Toàn trình):** Giám sát từ lúc người dùng (user / 사용자) click đến khi kết thúc giao dịch (VD: Jennifer, VisualVM, Scouter).
 
 **[3] 예시 (Ví dụ thực tế):**
-- Ngày Black Friday, hệ thống bán hàng bị chậm. Nhìn vào màn hình **Jennifer (APM)**, quản trị viên thấy biểu đồ "Database connection" đang đỏ chót $
+- Ngày Black Friday, hệ thống bán hàng bị chậm. Nhìn vào màn hình **Jennifer (APM)**, quản trị viên thấy biểu đồ "cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결)" đang đỏ chót $
 ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu RAM.
 
 ---
@@ -1336,9 +1586,9 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   - **빅오(Big-O):** Mua balo, luôn nghĩ tới lúc đựng nặng nhất xem có rách không (Worst case).
   - **순환 복잡도(McCabe):** Tính xem tòa nhà có bao nhiêu ngã rẽ để khi cháy bảo vệ phải đi kiểm tra từng ngóc ngách ít nhất bao nhiêu lần.
 - **인터페이스 통신 비유 (Giao tiếp & Bảo mật):**
-  - **XML / JSON:** Là các "thùng container" có quy chuẩn để chứa hàng (dữ liệu).
+  - **XML / JSON:** Là các "thùng bộ chứa (container / 컨테이너)" có quy chuẩn để chứa hàng (dữ liệu).
   - **AJAX:** Hệ thống "dỡ hàng bất đồng bộ" - Tàu không cần dừng hẳn, băng chuyền cứ lấy đồ ra từ từ mà hành khách không bị gián đoạn.
-  - **인터페이스 보안 (Security):** Ổ khóa khóa chặt cửa container lại.
+  - **인터페이스 보안 (Security):** Ổ khóa khóa chặt cửa bộ chứa (container / 컨테이너) lại.
   - **무결성 검사 (Integrity):** Hải quan kiểm tra "Tem niêm phong", xem tem có bị rách hay thay tem giả không (Tripwire).
   - **APM:** Camera giám sát toàn bộ hoạt động cảng biển xem xe nào kẹt, kho nào đầy (Jennifer).
 
@@ -1353,20 +1603,24 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 **[3] 특징 (Đặc điểm):**
 - 개발자는 원격 저장소의 자료를 복제(Clone)하여 오프라인에서도 작업 가능.
-- Server (Remote) bị sập thì vẫn còn dữ liệu nguyên vẹn ở Local Repo의 개발자.
+- máy chủ (server / 서버) (Remote) bị sập thì vẫn còn dữ liệu nguyên vẹn ở cục bộ (local / 로컬) Repo의 개발자.
 - **대표 도구 (Công cụ tiêu biểu):** Git, Mercurial.
 
 **[4] 예시 (Ví dụ thực tế):**
-- Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản code trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên Server.
+- Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản mã (code / 코드) trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên máy chủ (server / 서버).
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
-> - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
+> - **phân tán (distributed / 분산) = Git:** Không có mạng vẫn lưu mã (code / 코드) được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
 
 ---
 
-## A+ Deep Dive: 알고리즘 trace와 테스트 판정
+> **Mạch chuyển:** Từ **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**, chuyển sang **A+ Deep Dive: 알고리즘 dấu vết (trace / 추적)와 테스트 판정** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
-### 1. 이분 검색 trace
+---
+
+## A+ Deep Dive: 알고리즘 dấu vết (trace / 추적)와 테스트 판정
+
+### 1. 이분 검색 dấu vết (trace / 추적)
 
 정렬된 배열 `A = [2, 5, 8, 12, 16]`에서 `target = 12`를 찾는다.
 
@@ -1391,9 +1645,13 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 ### 자주 혼동하는 판별 포인트
 
 - **정적 분석**은 프로그램을 실행하지 않고 규칙·복잡도·잠재 오류를 분석한다. 실행 중 메모리 상태를 관찰하는 도구는 동적 분석으로 분류한다.
-- 선택 정렬은 매 회전마다 남은 구간의 최솟값을 앞에 둔다. 정렬 trace에서는 “한 번의 비교”가 아니라 “한 회전의 교환 결과”를 기록한다.
-- **Jenkins**는 CI/CD 자동화 서버이고, Gradle은 task 기반 빌드 자동화 도구다. 둘은 대체 관계가 아니라 연동할 수 있다.
+- 선택 정렬은 매 회전마다 남은 구간의 최솟값을 앞에 둔다. 정렬 dấu vết (trace / 추적)에서는 “한 번의 비교”가 아니라 “한 회전의 교환 결과”를 기록한다.
+- **Jenkins**는 CI/CD 자동화 서버이고, Gradle은 tác vụ (task / 작업) 기반 빌드 자동화 도구다. 둘은 대체 관계가 아니라 연동할 수 있다.
 - 함수 호출 복귀·수식 계산·괄호 검사처럼 후입선출이 필요한 문제는 **스택**, 도착 순서대로 처리하는 작업은 **큐**를 우선 떠올린다.
+
+---
+
+> **Mạch chuyển:** Từ **A+ Deep Dive: 알고리즘 dấu vết (trace / 추적)와 테스트 판정**, chuyển sang **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1402,9 +1660,13 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 * **응답 시간 (Response Time)**: 요청을 전달한 후 '응답이 도착할 때'까지 걸린 시간.
 * **경과 시간 (Turn Around Time)**: 작업을 의뢰한 후 '처리가 완료될 때'까지 걸린 시간.
 * **자원 사용률 (Resource Usage)**: CPU, 메모리, 네트워크 등의 자원 사용량.
-* **VI (Vietnamese) (Tiếng Việt):** Các chỉ số hiệu năng: Thông lượng (Throughput), Thời gian phản hồi (Response), Thời gian hoàn thành (Turn Around), Mức sử dụng tài nguyên (Resource Usage).
+* **VI (Vietnamese) (Tiếng Việt):** Các chỉ số hiệu năng: thông lượng (throughput / 처리량), Thời gian phản hồi (response / 응답), Thời gian hoàn thành (Turn Around), Mức sử dụng tài nguyên (Resource Usage).
 * **Example**: 식당에서 주문하고 물이 나오는 시간(응답 시간), 음식을 다 먹고 나오는 시간(경과 시간).
-* 💡 **Mẹo ghi nhớ**: Response = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ.
+* 💡 **Mẹo ghi nhớ**: phản hồi (response / 응답) = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ.
+
+---
+
+> **Mạch chuyển:** Từ **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**, chuyển sang **55. APM (애플리케이션 성능 관리/모니터링)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1427,19 +1689,23 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
 - **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
 - **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
-- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
+- **데크 (Deque):** Kết hợp ngăn xếp (stack / 스택) và hàng đợi (queue / 큐), có thể Vào/Ra ở CẢ HAI đầu.
 
 ### 비선형 구조 (Non-linear - Không nối tiếp)
-- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
+- **트리 (Tree):** Cây. Có nút (node / 노드) (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
 - **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
 
 - **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin.
-  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
-  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
-  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
+  - tuyến tính (linear / 선형) danh sách (list / 목록) như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
+  - Linked danh sách (list / 목록) như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
+  - ngăn xếp (stack / 스택) như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). hàng đợi (queue / 큐) như xếp hàng mua vé (FIFO - ai đến trước mua trước).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** ngăn xếp (stack / 스택) = LIFO (Gọi Hàm, Đệ quy). hàng đợi (queue / 큐) = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **55. APM (애플리케이션 성능 관리/모니터링)**, chuyển sang **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1451,6 +1717,10 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**, chuyển sang **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
 * **xUnit**: 다양한 언어에 적용되는 단위 테스트 프레임워크 (JUnit, CppUnit, NUnit).
 * **STAF**: 서비스 호출 및 컴포넌트 재사용 등 다양한 환경 지원.
@@ -1458,7 +1728,11 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 * **NTAF**: FitNesse와 STAF의 장점을 통합한 NHN(Naver)의 테스트 자동화 프레임워크.
 * **watir**: Ruby 기반 웹 애플리케이션 테스트 프레임워크.
 * **VI (Vietnamese) (Tiếng Việt):** Các công cụ kiểm thử giao diện. xUnit (kiểm thử đơn vị), STAF, FitNesse (Web), NTAF (Naver), watir (Ruby).
-* 💡 **Mẹo ghi nhớ**: xUnit là phổ biến nhất cho Unit Test. NTAF có chữ N (Naver).
+* 💡 **Mẹo ghi nhớ**: xUnit là phổ biến nhất cho đơn vị (unit / 단위) kiểm thử (test / 테스트). NTAF có chữ N (Naver).
+
+---
+
+> **Mạch chuyển:** Từ **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, chuyển sang **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1479,29 +1753,37 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**, chuyển sang **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
 
 ### 네트워크 보안 기술 (Kỹ thuật bảo mật mạng)
 - **IPSec (IP Security):** 네트워크 계층 (Network Layer). Chống giả mạo, ẩn giấu gói tin IP.
 - **SSL (Secure Socket Layer):** TCP/IP ~ 애플리케이션 계층 사이. Chứng thực, mã hóa (thường dùng cho HTTPS).
-- **S-HTTP:** 애플리케이션 계층 (Application Layer). Mã hóa mọi tin nhắn giữa Client và Server.
+- **S-HTTP:** 애플리케이션 계층 (Application Layer). Mã hóa mọi tin nhắn giữa máy khách (client / 클라이언트) và máy chủ (server / 서버).
 
 ### 인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)
 - **AJAX:** Bất đồng bộ (Asynchronous), dùng JS và XML để cập nhật một phần trang web mà không cần tải lại toàn bộ trang.
 - **JSON:** Cặp "Key-Value", định dạng nhẹ, dễ đọc (Thay thế cho XML rất nhiều).
 - **XML:** Thẻ Markup đa mục đích (như HTML nhưng tự tạo thẻ được).
-- **YAML:** "YAML Ain't Markup Language". Định dạng dữ liệu tuần tự hóa, rất dễ đọc cho con người (hay dùng làm file config).
+- **YAML:** "YAML Ain't Markup ngôn ngữ (language / 언어)". Định dạng dữ liệu tuần tự hóa, rất dễ đọc cho con người (hay dùng làm file config).
 
 ### 인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)
-- **xUnit:** Test từng "Đơn vị" (Unit) - jUnit, cppUnit.
-- **STAF:** Test trong "Môi trường phân tán" (Distributed environment).
-- **FitNesse:** Framework test nền web (Điền bảng là tự chạy test).
+- **xUnit:** kiểm thử (test / 테스트) từng "Đơn vị" (Unit) - jUnit, cppUnit.
+- **STAF:** kiểm thử (test / 테스트) trong "Môi trường phân tán" (Distributed environment).
+- **FitNesse:** khung phần mềm (framework / 프레임워크) kiểm thử (test / 테스트) nền web (Điền bảng là tự chạy test).
 - **NTAF:** Kết hợp FitNesse + STAF (Do Naver làm).
 
-- **Vietnamese Explanation:** Khi gửi dữ liệu giữa các máy, JSON đang là vua vì nhẹ và dễ nhìn. YAML thì thường dùng để cấu hình server. Khi test xem các máy tính nói chuyện với nhau ổn không, người ta dùng xUnit (Test từng hàm) hoặc STAF (Test qua nhiều máy).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = Phân tán (Phân tán (Distributed)).
+- **Vietnamese Explanation:** Khi gửi dữ liệu giữa các máy, JSON đang là vua vì nhẹ và dễ nhìn. YAML thì thường dùng để cấu hình máy chủ (server / 서버). Khi kiểm thử (test / 테스트) xem các máy tính nói chuyện với nhau ổn không, người ta dùng xUnit (Test từng hàm) hoặc STAF (Test qua nhiều máy).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** IPSec = Tầng Mạng (IP). SSL = Tầng giữa (Socket). JSON = Key-Value. STAF = phân tán (distributed / 분산).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**, chuyển sang **9. 스키마 3계층 (Three-Schema Architecture)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1510,51 +1792,75 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 * **개념 스키마 (Conceptual Schema)**: 전체적인 논리적 구조, 개체 간 관계/제약조건, 보안/무결성 규칙.
 * **내부 스키마 (Internal Schema)**: 물리적 저장장치 입장에서 본 구조 (레코드 형식, 물리적 순서).
 * **VI (Vietnamese) (Tiếng Việt):**
-  * External: Góc nhìn của người dùng (User view).
-  * Conceptual: Cấu trúc logic tổng thể, quan hệ, bảo mật.
-  * Internal: Cấu trúc lưu trữ vật lý.
+  * bên ngoài (external / 외부): Góc nhìn của người dùng (User view).
+  * Conceptual: Cấu trúc lô-gic (logic / 논리) tổng thể, quan hệ, bảo mật.
+  * nội bộ (internal / 내부): Cấu trúc lưu trữ vật lý.
 * **Example**: DB의 전체 테이블 구조는 개념 스키마, 사용자가 보는 뷰(View)는 외부 스키마, 파일 저장 방식은 내부 스키마.
 * 💡 **Mẹo ghi nhớ**: Ngoài (Người dùng) - Giữa/Khái niệm (Tổng thể logic) - Trong (Lưu trữ vật lý).
 
 ---
 
+> **Mạch chuyển:** Từ **9. 스키마 3계층 (Three-Schema Architecture)**, chuyển sang **14. 파레토 법칙 (Pareto Principle)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 14. 파레토 법칙 (Pareto Principle)
 * 소프트웨어 테스트에서 오류의 80%는 전체 모듈의 20% 내에서 발견된다는 법칙.
-* **VI (Vietnamese) (Tiếng Việt):** Nguyên lý 80/20. 80% lỗi nằm trong 20% module cốt lõi.
+* **VI (Vietnamese) (Tiếng Việt):** Nguyên lý 80/20. 80% lỗi nằm trong 20% mô-đun (module / 모듈) cốt lõi.
 * **Example**: 시스템에 10개의 모듈이 있다면, 대부분의 버그는 핵심 모듈 2개에 몰려있습니다.
 * 💡 **Mẹo ghi nhớ**: Pareto = 80/20.
+
+---
+
+> **Mạch chuyển:** Từ **14. 파레토 법칙 (Pareto Principle)**, chuyển sang **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
 * **O(1)**: 입력값 크기에 관계 없이 일정. (스택 삽입/삭제).
 * **O(n log n)**: n log n번 수행. (힙 정렬, 병합 정렬).
-* **VI (Vietnamese) (Tiếng Việt):** Độ phức tạp thời gian. O(1) là hằng số, O(n log n) cho Heap/Merge sort.
+* **VI (Vietnamese) (Tiếng Việt):** Độ phức tạp thời gian. O(1) là hằng số, O(n log n) cho vùng nhớ động (heap / 힙)/Merge sort.
 * **Example**: 데이터가 아무리 많아도 스택의 최상단에 값을 넣는 것은 1번의 연산만 필요하므로 O(1)입니다.
+
+---
+
+> **Mạch chuyển:** Từ **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, chuyển sang **19. 클린 코드 작성 원칙 (Clean Code Principles)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 19. 클린 코드 작성 원칙 (Clean Code Principles)
 * **가독성 (Readability)**: 누구든지 코드를 쉽게 읽을 수 있도록 작성.
 * **단순성 (Simplicity)**: 코드를 간단하게 작성.
-* **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc viết code sạch. Dễ đọc, đơn giản.
+* **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc viết mã (code / 코드) sạch. Dễ đọc, đơn giản.
 * **Example**: 변수 이름을 `a` 대신 `userCount`로 짓는 것이 가독성을 높이는 것입니다.
+
+---
+
+> **Mạch chuyển:** Từ **19. 클린 코드 작성 원칙 (Clean Code Principles)**, chuyển sang **21. 외계인 코드 (Alien Code)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 21. 외계인 코드 (Alien Code)
 * 아주 오래되거나 참고문서/개발자가 없어 유지보수 작업이 어려운 코드.
-* **VI (Vietnamese) (Tiếng Việt):** Alien Code là mã nguồn quá cũ, không có tài liệu hoặc người phát triển gốc, rất khó bảo trì.
+* **VI (Vietnamese) (Tiếng Việt):** Alien mã (code / 코드) là mã nguồn quá cũ, không có tài liệu hoặc người phát triển gốc, rất khó bảo trì.
 * **Example**: 20년 전에 퇴사한 직원이 주석 없이 짠 코드가 외계인 코드입니다.
 * 💡 **Mẹo ghi nhớ**: Alien = Người ngoài hành tinh, đọc không hiểu gì cả.
+
+---
+
+> **Mạch chuyển:** Từ **21. 외계인 코드 (Alien Code)**, chuyển sang **22. 정적 분석 도구 (Static Analysis Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 22. 정적 분석 도구 (Static Analysis Tools)
 * 코드를 실행하지 않고(하드웨어/소프트웨어적으로) 소스 코드 품질을 분석하는 도구.
 * **종류**: pmd, checkstyle, cppcheck 등.
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ phân tích tĩnh, phân tích source code mà không cần chạy chương trình.
+* **VI (Vietnamese) (Tiếng Việt):** Công cụ phân tích tĩnh, phân tích mã nguồn (source code / 소스 코드) mà không cần chạy chương trình.
 * **Example**: 코딩 표준을 잘 지켰는지 검사하는 Checkstyle.
+
+---
+
+> **Mạch chuyển:** Từ **22. 정적 분석 도구 (Static Analysis Tools)**, chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1573,10 +1879,18 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **23. EAI 구축 유형 (Enterprise Application Integration Types)**, chuyển sang **25. 트립와이어 (tripwire)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 25. 트립와이어 (tripwire)
 * 크래커가 침입하여 백도어를 만들어 놓거나, 설정 파일을 변경했을 때 분석하는 데이터 무결성 검사 도구.
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ kiểm tra tính toàn vẹn dữ liệu, phát hiện backdoor hoặc thay đổi file cấu hình.
+* **VI (Vietnamese) (Tiếng Việt):** Công cụ kiểm tra tính toàn vẹn dữ liệu, phát hiện backdoor hoặc thay đổi tệp (file / 파일) cấu hình.
 * 💡 **Mẹo ghi nhớ**: Tripwire = Dây bẫy, chạm vào là báo động.
+
+---
+
+> **Mạch chuyển:** Từ **25. 트립와이어 (tripwire)**, chuyển sang **27. JSON 및 AJAX (JSON & AJAX)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1587,6 +1901,10 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   * JSON: Định dạng dữ liệu dạng Key-Value dễ đọc.
   * AJAX: Công nghệ giao tiếp bất đồng bộ, tải dữ liệu mà không cần tải lại toàn bộ trang.
 * **Example**: 좋아요 버튼을 눌렀을 때 페이지 이동 없이 하트가 채워지는 것이 AJAX 기술입니다.
+
+---
+
+> **Mạch chuyển:** Từ **27. JSON 및 AJAX (JSON & AJAX)**, chuyển sang **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1601,9 +1919,13 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   * 중간 노드가 끊어지면 다음 노드를 찾기 힘듦.
 * **오버플로/언더플로 (Overflow/Underflow)**: 스택/리스트가 꽉 찬 상태에서 삽입하면 Overflow, 빈 상태에서 삭제하면 Underflow 발생.
 * **VI (Vietnamese) (Tiếng Việt):**
-  * Contiguous List (Mảng): Dữ liệu lưu liên tiếp. Chèn/Xóa chậm do phải dịch chuyển dữ liệu. Mật độ = 1.
-  * Linked List (Danh sách liên kết): Dữ liệu lưu rải rác, nối bằng pointer. Chèn/Xóa nhanh, nhưng truy cập chậm.
-* 💡 **Mẹo ghi nhớ**: Array = Nhà chung cư sát vách. Linked List = Các nhà rải rác nhưng có bản đồ chỉ đường đến nhà tiếp theo.
+  * Contiguous danh sách (list / 목록) (Mảng): Dữ liệu lưu liên tiếp. Chèn/Xóa chậm do phải dịch chuyển dữ liệu. Mật độ = 1.
+  * Linked danh sách (list / 목록): Dữ liệu lưu rải rác, nối bằng pointer. Chèn/Xóa nhanh, nhưng truy cập chậm.
+* 💡 **Mẹo ghi nhớ**: Array = Nhà chung cư sát vách. Linked danh sách (list / 목록) = Các nhà rải rác nhưng có bản đồ chỉ đường đến nhà tiếp theo.
+
+---
+
+> **Mạch chuyển:** Từ **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**, chuyển sang **33. DBMS (데이터베이스 관리 시스템)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1623,13 +1945,21 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **33. DBMS (데이터베이스 관리 시스템)**, chuyển sang **38. 릴리즈 노트 (Release Note)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 38. 릴리즈 노트 (Release Note)
 * 소프트웨어 배포(릴리즈) 정보를 최종 사용자와 공유하기 위한 문서 (초기/추가 배포 시 제공).
 * 개발팀에서 직접 현재 시제로 정확한 완전한 정보를 기반으로 작성.
 * **항목**: 머릿말(Header), 개요, 목적, 문제 요약, 재현 항목, 수정/개선 내용, 사용자 영향도, SW 지원 영향도, 면책 조항 등.
 * **VI (Vietnamese) (Tiếng Việt):** Ghi chú phát hành. Chia sẻ thông tin cập nhật, lỗi đã sửa cho người dùng.
 * **Example**: 앱스토어에서 앱 업데이트 시 적혀있는 "새로운 기능 및 버그 수정" 목록이 릴리즈 노트입니다.
-* 💡 **Mẹo ghi nhớ**: Release Note = Nhật ký cập nhật phần mềm.
+* 💡 **Mẹo ghi nhớ**: bản phát hành (release / 릴리스) ghi chú (note / 노트) = Nhật ký cập nhật phần mềm.
+
+---
+
+> **Mạch chuyển:** Từ **38. 릴리즈 노트 (Release Note)**, chuyển sang **51. 빅오 표기법 (Big-O Notation) 심화** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1644,6 +1974,10 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **51. 빅오 표기법 (Big-O Notation) 심화**, chuyển sang **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)
 * **소스 코드 최적화**: 배제해야 할 '나쁜 코드(Bad Code - 스파게티 코드, 외계인 코드)'와 작성해야 할 '클린 코드(Clean Code - 가독성, 단순성, 의존성 배제, 중복성 최소화, 추상화)'가 있음.
 * **순환 복잡도 (McCabe's Cyclomatic Complexity)**: 프로그램 논리의 복잡도를 측정.
@@ -1652,9 +1986,13 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   * **정적 분석 도구**: pmd, cppcheck, SonarQube, checkstyle, ccm.
   * **동적 분석 도구**: Avalanche, Valgrind (메모리 누수, 스레드 결함 발견).
 * **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe).
-  * Clean code > Bad code (Spaghetti/Alien).
-  * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng test case cơ bản cần thiết.
+  * Clean mã (code / 코드) > Bad mã (code / 코드).
+  * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng trường hợp kiểm thử (test case / 테스트 케이스) cơ bản cần thiết.
   * Công cụ tĩnh (không chạy code): SonarQube. Động (chạy code tìm rò rỉ bộ nhớ): Valgrind.
+
+---
+
+> **Mạch chuyển:** Từ **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**, chuyển sang **53. EAI와 ESB 심화 (EAI vs ESB)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1665,12 +2003,20 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **53. EAI와 ESB 심화 (EAI vs ESB)**, chuyển sang **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
 * **XML (eXtensible Markup Language)**: HTML의 비호환성과 SGML의 복잡성을 해결하기 위해 만든 다목적 마크업 언어.
 * **인터페이스 보안 - 네트워크 영역 (IPSec)**: 네트워크 계층에서 IP 패킷 단위의 데이터 변조 방지 (양방향 암호화 지원).
 * **데이터 무결성 검사 도구**: 시스템 파일 변경 유무 확인 (해시 함수 이용). 백도어 탐지.
   * **종류**: Tripwire, AIDE, Samhain, Claymore, Slipwire, Fcheck.
-* **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm Hash: Tripwire, AIDE.
+* **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm băm (hash / 해시): Tripwire, AIDE.
+
+---
+
+> **Mạch chuyển:** Từ **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**, chuyển sang **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1684,14 +2030,18 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ### 시간 복잡도 (Time Complexity - Độ phức tạp thời gian)
 - Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best case thì mới gắn với trường hợp đó.
+- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best trường hợp (case / 사례) thì mới gắn với trường hợp đó.
 - **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
 - O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
 
-- **Vietnamese Explanation:** Greedy giống như đi nhặt tiền: cứ thấy tờ to nhất trước mặt là nhặt, bất chấp sau đó dẫn vào ngõ cụt. Dynamic Programming giống như làm toán: kết quả bài 1 lưu ra nháp để dùng cho bài 2.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Divide = Cắt nhỏ. Dynamic = Nhớ bài cũ. Greedy = Tham bát bỏ mâm. Backtrack = Đi lùi. O(1) là nhanh nhất.
+- **Vietnamese Explanation:** Greedy giống như đi nhặt tiền: cứ thấy tờ to nhất trước mặt là nhặt, bất chấp sau đó dẫn vào ngõ cụt. động (dynamic / 동적) Programming giống như làm toán: kết quả bài 1 lưu ra nháp để dùng cho bài 2.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Divide = Cắt nhỏ. động (dynamic / 동적) = Nhớ bài cũ. Greedy = Tham bát bỏ mâm. Backtrack = Đi lùi. O(1) là nhanh nhất.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, chuyển sang **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1699,17 +2049,21 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 - **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
 - **Phân loại theo kỹ thuật:**
-  - **분석 (Analysis):** Hiểu code cũ để chọn cái cần tái sử dụng.
+  - **분석 (Analysis):** Hiểu mã (code / 코드) cũ để chọn cái cần tái sử dụng.
   - **재구조 (Restructuring):** Đổi cấu trúc, không đổi chức năng.
-  - **역공학 (Reverse Engineering):** Dịch ngược từ code ra bản thiết kế.
+  - **역공학 (Reverse Engineering):** Dịch ngược từ mã (code / 코드) ra bản thiết kế.
   - **이식 (Migration):** Chuyển sang môi trường / phần cứng mới.
   - **재개발 (Re-Development):** Đập đi xây lại có tham khảo cái cũ.
 - **Phân loại theo phạm vi:**
-  - Hàm & Đối tượng (Function/Class), Component, Ứng dụng (Application).
+  - Hàm & Đối tượng (Function/Class), thành phần (component / 컴포넌트), ứng dụng (application / 애플리케이션).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse kỹ thuật (engineering / 엔지니어링) (Dịch ngược) = Từ mã (code / 코드) -> Bản thiết kế. di chuyển (migration / 마이그레이션) = Chuyển nhà (môi trường).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**, chuyển sang **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1733,6 +2087,10 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ---
 
+> **Mạch chuyển:** Từ **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**, chuyển sang **핵심 클린 코드 작성 원칙 (Clean Code Principles)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 핵심 클린 코드 작성 원칙 (Clean Code Principles)
 
 - **클린 코드 (Clean Code):** 누구나 쉽게 이해하고 수정 및 추가할 수 있는 단순 명료한 코드. (Code sạch: Dễ hiểu, dễ sửa, dễ thêm tính năng.)
@@ -1747,10 +2105,14 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 | **중복성 최소화 (Minimizing Duplication)** | 코드의 중복을 최소화, 공통된 코드 사용. (DRY - Don't Repeat Yourself: Không copy-paste code.) |
 | **추상화 (Abstraction)** | 상위 수준에선 간략하게, 상세 내용은 하위에서 구현. (Trừu tượng hóa: Cái chung ở trên, cái chi tiết ở dưới.) |
 
-- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu).
+- **Vietnamese Explanation:** Clean mã (code / 코드) là "đạo đức" của lập trình viên. Đừng viết Alien mã (code / 코드) (code không ai hiểu nổi trừ người viết ban đầu).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** 5 nguyên tắc: Đọc - Đơn - Độc - Lặp - Trừu. (Đọc Đơn Độc Lặp Trừu (Đọc hiểu - Đơn giản - Độc lập - Không lặp - Trừu tượng)).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **핵심 클린 코드 작성 원칙 (Clean Code Principles)**, chuyển sang **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1758,7 +2120,7 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 - 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
 - **4대 기능 (4 Chức năng chính):**
-  - 코딩 (Coding): Gõ code.
+  - 코딩 (Coding): Gõ mã (code / 코드).
   - 컴파일 (Compile): Dịch ra mã máy.
   - 디버깅 (Debugging): Tìm và sửa lỗi (Bug).
   - 배포 (Deployment): Đóng gói và giao cho người dùng.
@@ -1770,6 +2132,10 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   - **안드로이드 스튜디오 (Android Studio):** Của Google, chuyên Android.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**, chuyển sang **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1787,9 +2153,13 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 - **디자인 (Thiết kế UI -> Code):** Zeplin, Sketch.
 - **기타:** Evernote (Ghi chú), Swagger (Tài liệu API tự động), GitHub (Lưu source code).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Jira = Quản lý công việc (Ticket). Slack = Chat. Zeplin = Thiết kế. Swagger = Viết Document cho API. Gradle = Build Android.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Jira = Quản lý công việc (Ticket). Slack = Chat. Zeplin = Thiết kế. Swagger = Viết Document cho API. Gradle = bản dựng (build / 빌드) Android.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**, chuyển sang **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1807,10 +2177,14 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 ### 사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)
 - **컴포넌트 단위 (Theo từng Component):** Chia nhỏ theo từng tính năng (Ví dụ: Hướng dẫn riêng cho Word, Excel).
-- **버전 관리 (Quản lý phiên bản):** App update tính năng thì Manual cũng phải update theo.
+- **버전 관리 (Quản lý phiên bản):** App cập nhật (update / 업데이트) tính năng thì Manual cũng phải cập nhật (update / 업데이트) theo.
 - **시각 자료 (Hình ảnh):** Bắt buộc phải có hình chụp màn hình UI để dễ hiểu.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**, chuyển sang **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1818,15 +2192,19 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 | 방식 (Cách thức) | 특징 (Đặc điểm) | 대표 도구 (Công cụ) |
 |---|---|---|
-| **공유 폴더 (Shared Folder)** | Copy đè file vào 1 folder dùng chung trên mạng Lan. Dễ mất dữ liệu. | SCCS, RCS, PVCS |
-| **클라이언트/서버 (Client/Server)** | Có 1 máy Server trung tâm giữ code. Máy cá nhân (Client) lấy về sửa rồi đẩy lên. Server chết là nghỉ làm. | **CVS, SVN** (Subversion), ClearCase |
-| **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). Copy (Clone) từ Server (Remote Repo) về. Server chết vẫn làm việc bình thường ở máy cá nhân, lúc nào Server sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
+| **공유 폴더 (Shared Folder)** | bản sao (copy / 복사) đè tệp (file / 파일) vào 1 folder dùng chung trên mạng Lan. Dễ mất dữ liệu. | SCCS, RCS, PVCS |
+| **클라이언트/서버 (Client/Server)** | Có 1 máy máy chủ (server / 서버) trung tâm giữ mã (code / 코드). Máy cá nhân (Client) lấy về sửa rồi đẩy lên. máy chủ (server / 서버) chết là nghỉ làm. | **CVS, SVN** (Subversion), ClearCase |
+| **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). bản sao (copy / 복사) (Clone) từ máy chủ (server / 서버) (Remote Repo) về. máy chủ (server / 서버) chết vẫn làm việc bình thường ở máy cá nhân, lúc nào máy chủ (server / 서버) sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
 
 - **Vietnamese Explanation:** SVN là kiểu "Đi mượn sách thư viện", mất thư viện là khỏi đọc. Git là kiểu "Photo cuốn sách về nhà", thư viện cháy mình vẫn còn sách đọc, sửa sách thoải mái.
 - 💡 **Mẹo ghi nhớ (Mnemonics):**
   - 공유 폴더 (Share folder) = RCS, PVCS.
   - 클라이언트/서버 = CVS, SVN (Server tập trung).
   - 분산 (Phân tán) = Git.
+
+---
+
+> **Mạch chuyển:** Từ **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**, chuyển sang **120-1: 소프트웨어의 분류 (Software Classification)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 

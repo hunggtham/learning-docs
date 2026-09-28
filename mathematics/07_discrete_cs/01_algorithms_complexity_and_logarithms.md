@@ -1,28 +1,31 @@
-# Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting work đến scalability
+# Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability
+
+> **Mạch đọc:** Đọc **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Trước Big-O phải chọn chi phí (cost / 비용) mô hình (model / 모델)** sang **Big-O là asymptotic upper bound**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Phân tích độ phức tạp (algorithmic complexity / 알고리즘 복잡도) không nhằm dự đoán chính xác chương trình chạy bao nhiêu milliseconds. Nó trả lời câu hỏi cấu trúc hơn:
 
-> Khi input size tăng, lượng resource cần thiết tăng theo **shape** nào?
+> Khi đầu vào (input / 입력) kích thước (size / 크기) tăng, lượng tài nguyên (resource / 자원) cần thiết tăng theo **shape** nào?
 
-Đây là câu hỏi về scalability. Một implementation rất nhanh ở `n=100` có thể trở nên vô dụng ở `n=10^9` nếu growth rate xấu. Ngược lại, algorithm có constant overhead lớn nhưng asymptotic tốt có thể thắng ở scale lớn.
+Đây là câu hỏi về scalability. Một hiện thực (implementation / 구현) rất nhanh ở `n=100` có thể trở nên vô dụng ở `n=10^9` nếu growth tỷ lệ (rate / 비율) xấu. Ngược lại, thuật toán (algorithm / 알고리즘) có constant overhead lớn nhưng asymptotic tốt có thể thắng ở quy mô (scale / 규모) lớn.
 
-## Trước Big-O phải chọn cost model
+## Trước Big-O phải chọn chi phí (cost / 비용) mô hình (model / 모델)
 
-Complexity luôn phụ thuộc điều ta đang count.
+Độ phức tạp (complexity / 복잡도) luôn phụ thuộc điều ta đang count.
 
 Ta có thể count:
 
 - arithmetic operations;
 - comparisons;
-- memory usage;
+- bộ nhớ (memory / 메모리) usage;
 - disk I/O;
-- network round trips;
-- cache misses;
-- parallel depth.
+- mạng (network / 네트워크) round trips;
+- bộ nhớ đệm (cache / 캐시) misses;
+- parallel độ sâu (depth / 깊이).
 
-Statement `O(n)` không có nghĩa universal “nhanh”. Một scan `O(n)` trên RAM và `O(n)` remote API calls có latency hoàn toàn khác.
+Statement `O(n)` không có nghĩa universal “nhanh”. Một scan `O(n)` trên RAM và `O(n)` remote API calls có độ trễ (latency / 지연 시간) hoàn toàn khác.
 
-Vì vậy analysis bắt đầu bằng input-size definition và cost model.
+Vì vậy phân tích (analysis / 분석) bắt đầu bằng input-size definition và chi phí (cost / 비용) mô hình (model / 모델).
 
 ## Big-O là asymptotic upper bound
 
@@ -34,7 +37,7 @@ Vì vậy analysis bắt đầu bằng input-size definition và cost model.
 
 với mọi `n\ge n_0`.
 
-Big-O nói rằng sau một scale đủ lớn, `f` không grow nhanh hơn `g` hơn constant factor.
+Big-O nói rằng sau một quy mô (scale / 규모) đủ lớn, `f` không grow nhanh hơn `g` hơn constant factor.
 
 Tight bound dùng `\Theta`:
 
@@ -62,13 +65,13 @@ Chia cho `n^2`:
 3+\frac{10}{n}+\frac{500}{n^2}.
 ```
 
-Khi `n\to\infty`, lower-order terms vanish và ratio tiến về 3. Growth structure dominant là quadratic:
+Khi `n\to\infty`, lower-order terms vanish và ratio tiến về 3. Growth cấu trúc (structure / 구조) dominant là quadratic:
 
 ```math
 T(n)=\Theta(n^2).
 ```
 
-Nhưng constants vẫn matter trong engineering. Complexity analysis và benchmarking trả lời hai câu hỏi khác nhau:
+Nhưng constants vẫn matter trong kỹ thuật (engineering / 엔지니어링). phân tích độ phức tạp (complexity analysis / 복잡도 분석) và benchmarking trả lời hai câu hỏi khác nhau:
 
 ```text
 complexity: scaling shape là gì?
@@ -77,21 +80,21 @@ benchmark: implementation này nhanh bao nhiêu trên workload/hardware cụ th�
 
 ## `O(1)` không nghĩa “một instruction”
 
-Constant complexity nghĩa cost không grow với chosen input size `n`.
+Constant độ phức tạp (complexity / 복잡도) nghĩa chi phí (cost / 비용) không grow với chosen đầu vào (input / 입력) kích thước (size / 크기) `n`.
 
-Hash-table lookup average-case có thể được gọi expected `O(1)` under assumptions, nhưng vẫn có hashing, memory access và collision handling.
+Hash-table lookup average-case có thể được gọi expected `O(1)` under các giả định (assumptions / 가정들), nhưng vẫn có hashing, bộ nhớ (memory / 메모리) truy cập (access / 접근) và collision handling.
 
-Database indexed lookup có thể look constant ở application abstraction nhưng storage engine thực tế dùng tree/page I/O. Complexity label chỉ meaningful khi model rõ.
+Cơ sở dữ liệu (database / 데이터베이스) indexed lookup có thể look constant ở ứng dụng (application / 애플리케이션) lớp trừu tượng (abstraction / 추상화) nhưng lưu trữ (storage / 저장소) engine thực tế dùng cây (tree / 트리)/page I/O. độ phức tạp (complexity / 복잡도) label chỉ meaningful khi mô hình (model / 모델) rõ.
 
-## Linear và quadratic growth
+## Tuyến tính (linear / 선형) và quadratic growth
 
-Linear scan:
+Tuyến tính (linear / 선형) scan:
 
 ```math
 T(n)=an+b
 ```
 
-scale proportionally với `n`.
+Quy mô (scale / 규모) proportionally với `n`.
 
 All-pairs comparison thường:
 
@@ -103,13 +106,13 @@ All-pairs comparison thường:
 \Theta(n^2).
 ```
 
-Nếu `n` tăng 10×, linear work tăng khoảng 10×, quadratic tăng khoảng 100×.
+Nếu `n` tăng 10×, tuyến tính (linear / 선형) công việc (work / 작업) tăng khoảng 10×, quadratic tăng khoảng 100×.
 
-Đây là practical meaning của growth class.
+Đây là practical meaning của growth lớp (class / 클래스).
 
 ## Logarithm xuất hiện khi progress là multiplicative
 
-Nếu mỗi step giảm problem size bởi factor `b>1`:
+Nếu mỗi step giảm bài toán (problem / 문제) kích thước (size / 크기) bởi factor `b>1`:
 
 ```math
 n,
@@ -136,11 +139,11 @@ và
 k\approx\log_b n.
 ```
 
-Vì vậy logarithmic complexity không đến từ việc code gọi hàm `log`. Nó xuất hiện từ repeated multiplicative shrinkage.
+Vì vậy logarithmic độ phức tạp (complexity / 복잡도) không đến từ việc mã (code / 코드) gọi hàm `log`. Nó xuất hiện từ repeated multiplicative shrinkage.
 
-## Worked example — binary search
+## Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)
 
-Sorted array size `n`. Mỗi comparison loại khoảng half candidates.
+Sorted array kích thước (size / 크기) `n`. Mỗi comparison loại khoảng half candidates.
 
 Recurrence:
 
@@ -172,7 +175,7 @@ Do đó
 T(n)=O(\log n).
 ```
 
-Log base không matter trong Big-O vì
+Log cơ sở (base / 기반) không matter trong Big-O vì
 
 ```math
 \log_a n
@@ -184,7 +187,7 @@ chỉ khác constant factor.
 
 ## Balanced trees và logarithmic height
 
-Balanced binary tree với branching factor roughly 2 có number nodes tăng exponential theo depth:
+Balanced nhị phân (binary / 이진) cây (tree / 트리) với branching factor roughly 2 có number nodes tăng exponential theo độ sâu (depth / 깊이):
 
 ```math
 1+2+4+\cdots+2^h\approx2^{h+1}.
@@ -196,7 +199,7 @@ Do đó storing `n` nodes cần height
 h=O(\log n).
 ```
 
-Search/update complexity xuất hiện từ same multiplicative geometry như binary search.
+Tìm kiếm (search / 검색)/cập nhật (update / 업데이트) độ phức tạp (complexity / 복잡도) xuất hiện từ same multiplicative hình học (geometry / 기하학) như tìm kiếm nhị phân (binary search / 이진 탐색).
 
 ## Divide and conquer: vì sao `n log n` xuất hiện?
 
@@ -206,7 +209,7 @@ Merge sort recurrence:
 T(n)=2T(n/2)+O(n).
 ```
 
-Recursion tree có `\log_2n` levels. Ở mỗi level, total merge work across subproblems là `O(n)`.
+Recursion cây (tree / 트리) có `\log_2n` levels. Ở mỗi mức (level / 수준), total merge công việc (work / 작업) across subproblems là `O(n)`.
 
 Do đó
 
@@ -214,9 +217,9 @@ Do đó
 T(n)=O(n\log n).
 ```
 
-Meaning: ta trả linear work ở mỗi logarithmic level of decomposition.
+Meaning: ta trả tuyến tính (linear / 선형) công việc (work / 작업) ở mỗi logarithmic mức (level / 수준) of decomposition.
 
-## Master theorem là pattern recognition, không phải spell
+## Master theorem là mẫu (pattern / 패턴) recognition, không phải spell
 
 Recurrence dạng
 
@@ -224,11 +227,11 @@ Recurrence dạng
 T(n)=aT(n/b)+f(n)
 ```
 
-so sánh work trong recursive subproblems với nonrecursive work `f(n)`.
+so sánh công việc (work / 작업) trong recursive subproblems với nonrecursive công việc (work / 작업) `f(n)`.
 
-Master theorem useful khi structure match, nhưng không thay thế việc hiểu recursion tree. Nếu recurrence không đúng form hoặc subproblem sizes irregular, theorem có thể không áp dụng.
+Master theorem useful khi cấu trúc (structure / 구조) match, nhưng không thay thế việc hiểu recursion cây (tree / 트리). Nếu recurrence không đúng form hoặc subproblem sizes irregular, theorem có thể không áp dụng.
 
-## Exponential explosion: khi micro-optimization không cứu được model
+## Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)
 
 Enumerate all subsets:
 
@@ -250,39 +253,39 @@ Ví dụ
 
 Dù xử lý one billion states mỗi second, exhaustive enumeration vẫn infeasible.
 
-Khi growth class exponential/factorial, solution thường cần **algorithmic insight**: dynamic programming, pruning, approximation, relaxations hoặc exploit problem structure.
+Khi growth lớp (class / 클래스) exponential/factorial, solution thường cần **algorithmic insight**: động (dynamic / 동적) programming, pruning, approximation, relaxations hoặc exploit bài toán (problem / 문제) cấu trúc (structure / 구조).
 
-## Worst-case, average-case và expected complexity
+## Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)
 
-Complexity statement phải nói case nào.
+Độ phức tạp (complexity / 복잡도) statement phải nói trường hợp (case / 사례) nào.
 
-Quicksort có average/expected `O(n\log n)` under common pivot assumptions nhưng worst-case `O(n^2)`.
+Quicksort có average/expected `O(n\log n)` under dùng chung (common / 공통) pivot các giả định (assumptions / 가정들) nhưng worst-case `O(n^2)`.
 
-Hash tables often expected `O(1)` lookup, nhưng adversarial collisions có thể degrade.
+Băm (hash / 해시) tables often expected `O(1)` lookup, nhưng adversarial collisions có thể degrade.
 
-Worst-case useful cho guarantees; expected/average useful khi probabilistic workload assumptions justified.
+Worst-case useful cho guarantees; expected/average useful khi probabilistic tải công việc (workload / 워크로드) các giả định (assumptions / 가정들) justified.
 
-## Amortized analysis: expensive operation nhưng cheap sequence
+## Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)
 
-Dynamic array append thường `O(1)`, nhưng occasionally resize costs `O(n)`.
+Động (dynamic / 동적) array append thường `O(1)`, nhưng occasionally resize costs `O(n)`.
 
-Nếu capacity doubles, total copied elements over many appends is geometric series:
+Nếu sức chứa (capacity / 용량) doubles, total copied elements over many appends is geometric series:
 
 ```math
 1+2+4+\cdots+n<2n.
 ```
 
-Across `n` appends, total resize work `O(n)`, nên amortized cost per append là `O(1)`.
+Across `n` appends, total resize công việc (work / 작업) `O(n)`, nên amortized chi phí (cost / 비용) per append là `O(1)`.
 
-Amortized không phải probabilistic average; nó là deterministic accounting over operation sequence.
+Amortized không phải probabilistic average; nó là deterministic accounting over thao tác (operation / 연산) chuỗi (sequence / 시퀀스).
 
-## Space complexity và time-space trade-off
+## Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)
 
-Memoization lưu previous results để tránh recomputation. Dynamic programming thường đổi extra memory lấy lower time.
+Memoization lưu previous results để tránh recomputation. động (dynamic / 동적) programming thường đổi extra bộ nhớ (memory / 메모리) lấy lower thời gian (time / 시간).
 
-BFS giữ frontier có thể lớn; DFS dùng stack depth khác. External-memory algorithms optimize I/O vì disk access dominates arithmetic.
+BFS giữ frontier có thể lớn; DFS dùng ngăn xếp (stack / 스택) độ sâu (depth / 깊이) khác. External-memory algorithms optimize I/O vì disk truy cập (access / 접근) dominates arithmetic.
 
-Algorithm design luôn là multi-resource problem, không chỉ time.
+Thuật toán (algorithm / 알고리즘) thiết kế (design / 설계) luôn là multi-resource bài toán (problem / 문제), không chỉ thời gian (time / 시간).
 
 ## Lower bounds: có những giới hạn không thể vượt bằng clever coding
 
@@ -292,9 +295,9 @@ Comparison sorting có lower bound
 \Omega(n\log n)
 ```
 
-trong comparison model.
+trong comparison mô hình (model / 모델).
 
-Proof idea: `n!` possible input orders cần được distinguish. Decision tree với binary comparisons depth `h` có tối đa `2^h` leaves, nên
+Proof idea: `n!` possible đầu vào (input / 입력) orders cần được distinguish. cây quyết định (decision tree / 의사결정 트리) với nhị phân (binary / 이진) comparisons độ sâu (depth / 깊이) `h` có tối đa `2^h` leaves, nên
 
 ```math
 2^h\ge n!,
@@ -306,15 +309,15 @@ suy ra
 h\ge\log_2(n!)=\Omega(n\log n).
 ```
 
-Meaning: merge sort/heapsort are asymptotically optimal among comparison-based sorts. Muốn beat bound phải change model/assumptions, như counting sort exploiting bounded integer keys.
+Meaning: merge sort/heapsort are asymptotically optimal among comparison-based sorts. Muốn beat bound phải thay đổi (change / 변경) mô hình (model / 모델)/các giả định (assumptions / 가정들), như counting sort exploiting bounded integer keys.
 
-## Complexity classes và tractability intuition
+## Độ phức tạp (complexity / 복잡도) classes và tractability intuition
 
 Polynomial-time algorithms thường được xem là tractable baseline trong theoretical CS, nhưng degree/constant vẫn matter. `O(n^{100})` không practical; `O(2^n)` có thể practical nếu `n=20`.
 
-Complexity theory nói asymptotic structure, engineering feasibility cần actual scale.
+Độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) nói asymptotic cấu trúc (structure / 구조), kỹ thuật (engineering / 엔지니어링) feasibility cần actual quy mô (scale / 규모).
 
-## Dynamic programming: reduce state explosion bằng overlapping structure
+## Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)
 
 Naive Fibonacci recursion:
 
@@ -324,54 +327,56 @@ F(n)=F(n-1)+F(n-2)
 
 recomputes same subproblems exponentially nhiều lần.
 
-Memoization stores each `F(k)` once, reducing time to `O(n)`.
+Memoization stores each `F(k)` once, reducing thời gian (time / 시간) to `O(n)`.
 
-DP không làm mọi exponential problem polynomial. It works when state space nhỏ enough và subproblems overlap with optimal substructure.
+DP không làm mọi exponential bài toán (problem / 문제) polynomial. It works when trạng thái (state / 상태) không gian (space / 공간) nhỏ enough và subproblems overlap with optimal substructure.
 
-## Graph algorithms: complexity phụ thuộc representation
+## Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)
 
-BFS/DFS với adjacency list:
+BFS/DFS với adjacency danh sách (list / 목록):
 
 ```math
 O(|V|+|E|).
 ```
 
-Adjacency matrix traversal có thể cost `O(|V|^2)` even when graph sparse.
+Adjacency ma trận (matrix / 행렬) traversal có thể chi phí (cost / 비용) `O(|V|^2)` even when đồ thị (graph / 그래프) sparse.
 
-Same algorithm idea có complexity khác theo data representation. Complexity analysis phải include representation choice.
+Same thuật toán (algorithm / 알고리즘) idea có độ phức tạp (complexity / 복잡도) khác theo dữ liệu (data / 데이터) biểu diễn (representation / 표현). phân tích độ phức tạp (complexity analysis / 복잡도 분석) phải include biểu diễn (representation / 표현) choice.
 
-## AI connection — training complexity
+## AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)
 
-Training cost depends on samples, model dimension, sequence length, batch size và hardware parallelism. Một operation theoretically `O(n^2)` như full attention becomes major bottleneck khi sequence length tăng.
+Huấn luyện (training / 학습) chi phí (cost / 비용) depends on samples, mô hình (model / 모델) dimension, chuỗi (sequence / 시퀀스) length, batch kích thước (size / 크기) và hardware parallelism. Một thao tác (operation / 연산) theoretically `O(n^2)` như full attention becomes major bottleneck khi chuỗi (sequence / 시퀀스) length tăng.
 
-Nhưng FLOP complexity alone chưa đủ: memory bandwidth, communication và kernel utilization có thể dominate wall-clock.
+Nhưng FLOP độ phức tạp (complexity / 복잡도) alone chưa đủ: bộ nhớ (memory / 메모리) bandwidth, communication và kernel utilization có thể dominate wall-clock.
 
-## Finance connection — Monte Carlo và scenario explosion
+## Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion
 
-Risk engines may simulate `N` scenarios across `M` instruments, roughly `O(NM)` valuation work if no sharing. Path-dependent derivatives add time steps. Variance reduction can reduce scenarios needed for same accuracy, effectively improving cost-to-error relation even if per-scenario complexity same.
+Rủi ro (risk / 위험) engines may simulate `N` scenarios across `M` instruments, roughly `O(NM)` valuation công việc (work / 작업) if no sharing. Path-dependent derivatives add thời gian (time / 시간) steps. Variance reduction can reduce scenarios needed for same accuracy, effectively improving cost-to-error quan hệ (relation / 관계) even if per-scenario độ phức tạp (complexity / 복잡도) same.
 
-## Assumptions và failure modes
+## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
-Asymptotic analysis can mislead when `n` small, constants huge, memory hierarchy dominates hoặc network latency matters.
+Asymptotic phân tích (analysis / 분석) can mislead when `n` small, constants huge, bộ nhớ (memory / 메모리) hierarchy dominates hoặc mạng (network / 네트워크) độ trễ (latency / 지연 시간) matters.
 
 Input-size definition itself can be subtle. Integer arithmetic on very large numbers is not constant-time if bit length grows.
 
-Parallel speedup limited by serial fractions and communication; work complexity và span/depth both matter.
+Parallel speedup limited by serial fractions and communication; công việc (work / 작업) độ phức tạp (complexity / 복잡도) và span/độ sâu (depth / 깊이) both matter.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Complexity analysis is growth accounting. Ask what state shrinks or expands each step, what resource is counted, and how many structurally distinct steps are needed as input scale grows. Logarithms appear when progress is multiplicative; polynomial/exponential distinctions tell when optimization should target code constants versus algorithmic structure.
+> phân tích độ phức tạp (complexity analysis / 복잡도 분석) is growth accounting. Ask what trạng thái (state / 상태) shrinks or expands each step, what tài nguyên (resource / 자원) is counted, and how many structurally distinct steps are needed as đầu vào (input / 입력) quy mô (scale / 규모) grows. Logarithms appear when progress is multiplicative; polynomial/exponential distinctions tell when tối ưu hóa (optimization / 최적화) should mục tiêu (target / 대상) mã (code / 코드) constants versus algorithmic cấu trúc (structure / 구조).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Big-O is exact runtime.”** Không; nó là asymptotic bound under a cost model.
+**“Big-O is chính xác (exact / 정확한) thời gian chạy (runtime / 런타임).”** Không; nó là asymptotic bound under a chi phí (cost / 비용) mô hình (model / 모델).
 
 **“`O(1)` means instant.”** Không; constant with respect to `n` can still be expensive.
 
-**“Nested loops always mean `O(n^2)`.”** Need analyze iteration ranges and state changes.
+**“Nested loops always mean `O(n^2)`.”** Need analyze iteration ranges and trạng thái (state / 상태) changes.
 
-**“`O(log n)` means code computes logarithm.”** Log often comes from repeated halving or multiplicative branching.
+**“`O(log n)` means mã (code / 코드) computes logarithm.”** Log often comes from repeated halving or multiplicative branching.
 
-**“Asymptotically better always faster.”** Not at every practical input size; constants, cache and hardware matter.
+**“Asymptotically better always faster.”** Not at every practical đầu vào (input / 입력) kích thước (size / 크기); constants, bộ nhớ đệm (cache / 캐시) and hardware matter.
 
-**“Optimization can rescue `2^n` by making code 10× faster.”** Growth-rate problems often require changing algorithmic structure.
+**“tối ưu hóa (optimization / 최적화) can rescue `2^n` by making mã (code / 코드) 10× faster.”** Growth-rate problems often require changing algorithmic cấu trúc (structure / 구조).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph theory](./00_graph_theory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)
 
+> **Mạch đọc:** Đọc **Phả hệ các tập đoàn lớn: doanh nghiệp Hàn Quốc đã “tiến hóa” như thế nào? (Corporate Genealogies / 기업 계보와 사업변천)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đọc phả hệ trên bốn trục** sang **Samsung: thương mại → sản xuất → điện tử → bán dẫn → công nghệ tiên tiến**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Tên một tập đoàn hiện tại dễ tạo ảo giác rằng ngành cốt lõi của nó đã tồn tại ngay từ đầu. Thực tế, phần lớn tập đoàn lớn Hàn Quốc trải qua nhiều lần **gia nhập ngành, rút khỏi ngành, mua lại, chia tách, sáp nhập, tái cơ cấu và chuyển đổi công nghệ**. Samsung không bắt đầu bằng bán dẫn; Hyundai không bắt đầu bằng ô tô; SK không bắt đầu bằng viễn thông hay chip nhớ; LG không bắt đầu bằng pin.
 
 Hiểu phả hệ giúp chuyển cách nhìn từ “tập đoàn = một ngành” sang **tập đoàn = hệ thống tích lũy và tái phân bổ vốn, năng lực và quyền kiểm soát theo thời gian**.
@@ -16,7 +19,7 @@ Khi theo dõi một tập đoàn qua nhiều thập niên, không nên chỉ li�
 
 **Phả hệ giới hạn:** mỗi ngành mới giải quyết vấn đề nào của thời đại—thiếu hàng cơ bản, thiếu thép, cần quy mô xuất khẩu, nhu cầu kết nối số, nội địa hóa pin hay điện toán tiên tiến?
 
-> **Mental Model:** lịch sử doanh nghiệp có giá trị khi nó giải thích vì sao doanh nghiệp hiện tại có tài sản, thói quen, nhà cung cấp, cấu trúc quản trị và hồ sơ rủi ro như hôm nay.
+> **mô hình tư duy (mental model / 사고 모델):** lịch sử doanh nghiệp có giá trị khi nó giải thích vì sao doanh nghiệp hiện tại có tài sản, thói quen, nhà cung cấp, cấu trúc quản trị và hồ sơ rủi ro như hôm nay.
 
 ## Samsung: thương mại → sản xuất → điện tử → bán dẫn → công nghệ tiên tiến
 
@@ -62,7 +65,7 @@ Hóa chất cơ bản
 → hệ thống pin và mạng sản xuất toàn cầu
 ```
 
-Việc tách LG Chem và LG Energy Solution cũng cho thấy phả hệ kinh doanh phải đi cùng phả hệ pháp nhân. Một ngành có thể tiếp tục phát triển nhưng quyền sở hữu tài sản và dòng tiền đã chuyển sang pháp nhân khác.
+Việc tách LG Chem và LG năng lượng (energy / 에너지) Solution cũng cho thấy phả hệ kinh doanh phải đi cùng phả hệ pháp nhân. Một ngành có thể tiếp tục phát triển nhưng quyền sở hữu tài sản và dòng tiền đã chuyển sang pháp nhân khác.
 
 ## SK: dệt may → năng lượng → viễn thông → bán dẫn
 
@@ -163,7 +166,7 @@ Nếu một mảng trưởng thành tạo tiền và tập đoàn dùng tiền �
 
 Phả hệ vì vậy nối trực tiếp với [quản trị doanh nghiệp](../08_corporate_governance_ownership_and_control.md) và [phân bổ vốn](../20_how_to_analyze_a_korean_company.md).
 
-## Mental Model — Đọc tập đoàn như một sinh vật tiến hóa
+## Mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa
 
 > Một tập đoàn lớn không phải danh sách công ty con. Nó là lịch sử của những dòng vốn, kỹ năng, quyền sở hữu và quyết định chiến lược được tích lũy qua thời gian.
 
@@ -180,3 +183,5 @@ Tiền ban đầu đến từ đâu?
 ```
 
 Trả lời được chuỗi này giúp hiểu vì sao hai tập đoàn cùng lớn nhưng có hồ sơ rủi ro, văn hóa đầu tư và khả năng cạnh tranh hoàn toàn khác nhau.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Đọc tập đoàn như một sinh vật tiến hóa**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

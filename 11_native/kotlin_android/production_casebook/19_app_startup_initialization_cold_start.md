@@ -1,22 +1,25 @@
-# Case 19 — App Startup, Initialization, Cold Start và Startup Performance
+# Trường hợp (case / 사례) 19 — App Startup, Initialization, Cold Start và Startup hiệu năng (performance / 성능)
 
-Một app có thể có architecture sạch nhưng vẫn tạo trải nghiệm tệ nếu cold start chậm, initialization chạy sai thread, SDK tự động khởi tạo quá sớm hoặc splash screen che một main-thread stall dài. Startup là nơi nhiều subsystem cùng tranh thời gian: process creation, class loading, `Application`, ContentProvider auto-init, DI graph, database/network config, Compose first frame và analytics/crash SDK.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 19 — App Startup, Initialization, Cold Start và Startup hiệu năng (performance / 성능)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Cold, warm và hot start là ba tình huống khác nhau** sang **2. Startup đường găng (critical path / 임계 경로)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này xây mental model startup từ OS process tới first useful frame, sau đó thiết kế initialization theo dependency/lifetime thay vì “nhét hết vào `Application.onCreate()`”.
+
+Một app có thể có kiến trúc (architecture / 아키텍처) sạch nhưng vẫn tạo trải nghiệm tệ nếu cold start chậm, initialization chạy sai luồng thực thi (thread / 스레드), SDK tự động khởi tạo quá sớm hoặc splash screen che một main-thread stall dài. Startup là nơi nhiều subsystem cùng tranh thời gian: tiến trình (process / 프로세스) creation, nạp lớp (class loading / 클래스 로딩), `Application`, ContentProvider auto-init, DI đồ thị (graph / 그래프), cơ sở dữ liệu (database / 데이터베이스)/mạng (network / 네트워크) cấu hình (config / 설정), Compose first frame và analytics/crash SDK.
+
+Chapter này xây mô hình tư duy (mental model / 사고 모델) startup từ OS tiến trình (process / 프로세스) tới first useful frame, sau đó thiết kế initialization theo phụ thuộc (dependency / 의존성)/thời gian tồn tại (lifetime / 수명) thay vì “nhét hết vào `Application.onCreate()`”.
 
 ## 1. Cold, warm và hot start là ba tình huống khác nhau
 
-**Cold start**: process chưa tồn tại. System phải tạo process, runtime, Application và Activity trước khi render UI.
+**Cold start**: tiến trình (process / 프로세스) chưa tồn tại. hệ thống (system / 시스템) phải tạo tiến trình (process / 프로세스), thời gian chạy (runtime / 런타임), ứng dụng (application / 애플리케이션) và Activity trước khi kết xuất (render / 렌더링) UI.
 
-**Warm start**: process còn nhưng Activity cần recreate hoặc app quay lại từ state không còn UI fully resident.
+**Warm start**: tiến trình (process / 프로세스) còn nhưng Activity cần recreate hoặc app quay lại từ trạng thái (state / 상태) không còn UI fully resident.
 
-**Hot start**: Activity/task còn gần như sẵn, resume nhanh.
+**Hot start**: Activity/tác vụ (task / 작업) còn gần như sẵn, resume nhanh.
 
 Khi nói “startup 800 ms”, phải nói scenario nào. Tối ưu hot start không giải cold-start regression.
 
-## 2. Startup critical path
+## 2. Startup đường găng (critical path / 임계 경로)
 
-Một mental model đơn giản:
+Một mô hình tư duy (mental model / 사고 모델) đơn giản:
 
 ```text
 launcher tap/deep link/notification
@@ -31,40 +34,40 @@ launcher tap/deep link/notification
 → content/data ready
 ```
 
-Không phải mọi bước đều chạy tuần tự tuyệt đối, nhưng model đủ để hỏi “work này có nằm trên path đến first frame không?”.
+Không phải mọi bước đều chạy tuần tự tuyệt đối, nhưng mô hình (model / 모델) đủ để hỏi “công việc (work / 작업) này có nằm trên đường dẫn (path / 경로) đến first frame không?”.
 
-## 3. Time to Initial Display và Time to Full Display
+## 3. thời gian (time / 시간) to Initial Display và thời gian (time / 시간) to Full Display
 
 **TTID** phản ánh thời gian tới frame đầu tiên meaningful enough để hiển thị. **TTFD** phản ánh thời gian tới khi UI thực sự ready với content quan trọng.
 
-Một app có thể TTID đẹp bằng cách render skeleton sớm nhưng TTFD rất chậm. Product performance nên theo cả perceived readiness, không chỉ launcher-to-first-pixel.
+Một app có thể TTID đẹp bằng cách kết xuất (render / 렌더링) skeleton sớm nhưng TTFD rất chậm. sản phẩm (product / 제품) hiệu năng (performance / 성능) nên theo cả perceived readiness, không chỉ launcher-to-first-pixel.
 
-## 4. `Application.onCreate()` là global startup hotspot
+## 4. `Application.onCreate()` là toàn cục (global / 전역) startup hotspot
 
-`Application.onCreate()` chạy sớm trên main thread của process. Code blocking ở đây trì hoãn mọi entry point.
+`Application.onCreate()` chạy sớm trên main luồng thực thi (thread / 스레드) của tiến trình (process / 프로세스). mã (code / 코드) blocking ở đây trì hoãn mọi entry điểm (point / 지점).
 
 Không nên:
 
-- open/migrate database nặng synchronous;
-- đọc file lớn;
-- network call;
-- parse config lớn;
-- eagerly create mọi repository/service;
+- open/migrate cơ sở dữ liệu (database / 데이터베이스) nặng synchronous;
+- đọc tệp (file / 파일) lớn;
+- mạng (network / 네트워크) lời gọi (call / 호출);
+- parse cấu hình (config / 설정) lớn;
+- eagerly create mọi repository/dịch vụ (service / 서비스);
 - initialize SDK không cần cho first screen.
 
-Global initialization phải nhỏ, deterministic và main-safe.
+Toàn cục (global / 전역) initialization phải nhỏ, deterministic và main-safe.
 
 ## 5. ContentProvider auto-initialization
 
-Nhiều libraries dùng `ContentProvider` để auto-init trước/around Application startup. Điều này tiện nhưng khiến work xuất hiện ngoài `Application.onCreate()`.
+Nhiều libraries dùng `ContentProvider` để auto-init trước/around ứng dụng (application / 애플리케이션) startup. Điều này tiện nhưng khiến công việc (work / 작업) xuất hiện ngoài `Application.onCreate()`.
 
-Khi startup chậm, inspect merged manifest và trace providers. Một SDK có thể add provider qua manifest dependency.
+Khi startup chậm, inspect merged manifest và dấu vết (trace / 추적) providers. Một SDK có thể add provider qua manifest phụ thuộc (dependency / 의존성).
 
 Không kết luận `Application` nhẹ nghĩa startup nhẹ.
 
 ## 6. AndroidX App Startup
 
-AndroidX Startup cung cấp cách khai báo initializer dependency và centralize initialization graph. Nó hữu ích khi nhiều component cần ordered initialization.
+AndroidX Startup cung cấp cách khai báo initializer phụ thuộc (dependency / 의존성) và centralize initialization đồ thị (graph / 그래프). Nó hữu ích khi nhiều thành phần (component / 컴포넌트) cần ordered initialization.
 
 Concept:
 
@@ -78,33 +81,33 @@ class AnalyticsInitializer : Initializer<Analytics> {
 }
 ```
 
-Tuy nhiên framework không biến heavy work thành free. Nếu initializer vẫn làm disk I/O trên main thread, startup vẫn chậm.
+Tuy nhiên khung phần mềm (framework / 프레임워크) không biến heavy công việc (work / 작업) thành free. Nếu initializer vẫn làm disk I/O trên main luồng thực thi (thread / 스레드), startup vẫn chậm.
 
 ## 7. Eager vs lazy initialization
 
-Một dependency nên eager chỉ nếu:
+Một phụ thuộc (dependency / 의존성) nên eager chỉ nếu:
 
-- mọi entry point cần nó ngay;
+- mọi entry điểm (point / 지점) cần nó ngay;
 - initialization rất rẻ;
-- delay sẽ gây race/correctness issue khó hơn.
+- delay sẽ gây race/tính đúng đắn (correctness / 정확성) issue khó hơn.
 
-Lazy tốt khi feature-specific hoặc expensive. Nhưng lazy không đồng nghĩa “first use muốn block bao lâu cũng được”. Nếu user mở feature, latency vẫn tồn tại—chỉ chuyển vị trí.
+Lazy tốt khi feature-specific hoặc expensive. Nhưng lazy không đồng nghĩa “first use muốn khối (block / 블록) bao lâu cũng được”. Nếu người dùng (user / 사용자) mở tính năng (feature / 기능), độ trễ (latency / 지연 시간) vẫn tồn tại—chỉ chuyển vị trí.
 
-Có thể prewarm sau first frame hoặc khi device idle phù hợp.
+Có thể prewarm sau first frame hoặc khi thiết bị (device / 장치) idle phù hợp.
 
-## 8. Dependency graph và initialization graph khác nhau
+## 8. phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) và initialization đồ thị (graph / 그래프) khác nhau
 
-DI graph nói object phụ thuộc object nào. Initialization graph nói side effect nào phải hoàn thành trước side effect khác.
+DI đồ thị (graph / 그래프) nói đối tượng (object / 객체) phụ thuộc đối tượng (object / 객체) nào. Initialization đồ thị (graph / 그래프) nói side tác động (effect / 효과) nào phải hoàn thành trước side tác động (effect / 효과) khác.
 
-Một singleton `Database` có thể được inject lazy nhưng schema migration vẫn là expensive initialization lúc first open.
+Một singleton `Database` có thể được inject lazy nhưng lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) vẫn là expensive initialization lúc first open.
 
-Một analytics interface có thể available sớm nhưng backend upload worker init sau.
+Một analytics giao diện (interface / 인터페이스) có thể available sớm nhưng backend upload worker init sau.
 
-Không dùng DI framework như implicit startup scheduler.
+Không dùng DI khung phần mềm (framework / 프레임워크) như implicit startup scheduler.
 
-## 9. Hilt/Dagger startup cost
+## 9. Hilt/Dagger startup chi phí (cost / 비용)
 
-Generated DI thường efficient nhưng object graph lớn/eager singleton constructors có thể tạo cost. Constructor nên gán dependency, không làm I/O hoặc heavy computation.
+Generated DI thường efficient nhưng đối tượng (object / 객체) đồ thị (graph / 그래프) lớn/eager singleton constructors có thể tạo chi phí (cost / 비용). Constructor nên gán phụ thuộc (dependency / 의존성), không làm I/O hoặc heavy computation.
 
 Anti-pattern:
 
@@ -119,19 +122,19 @@ class UserRepository @Inject constructor(
 }
 ```
 
-Constructor side effects làm creation path khó kiểm soát và test.
+Constructor side effects làm creation đường dẫn (path / 경로) khó kiểm soát và kiểm thử (test / 테스트).
 
 ## 10. SplashScreen API
 
-Modern Android có SplashScreen API/system splash behavior. Splash là visual transition trong startup, không phải license để block main thread.
+Hiện đại (modern / 현대적) Android có SplashScreen API/hệ thống (system / 시스템) splash hành vi (behavior / 동작). Splash là visual chuyển tiếp (transition / 전이) trong startup, không phải license để khối (block / 블록) main luồng thực thi (thread / 스레드).
 
-Nếu cần giữ splash tới condition, condition phải ngắn và bounded. Long authentication/network sync nên chuyển sang real loading UI.
+Nếu cần giữ splash tới điều kiện (condition / 조건), điều kiện (condition / 조건) phải ngắn và bounded. Long authentication/mạng (network / 네트워크) sync nên chuyển sang real loading UI.
 
 Một splash đứng 5 giây vẫn là app chậm dù animation đẹp.
 
-## 11. Startup route: auth state và deep link
+## 11. Startup tuyến (route / 경로): auth trạng thái (state / 상태) và deep link
 
-App thường phải quyết định route đầu:
+App thường phải quyết định tuyến (route / 경로) đầu:
 
 ```text
 cold start
@@ -141,68 +144,68 @@ cold start
 → render route
 ```
 
-Không cần gọi backend trước khi render nếu local durable session metadata đủ quyết định provisional route. Network validation có thể update sau với correct state transition.
+Không cần gọi backend trước khi kết xuất (render / 렌더링) nếu cục bộ (local / 로컬) durable session siêu dữ liệu (metadata / 메타데이터) đủ quyết định provisional tuyến (route / 경로). mạng (network / 네트워크) kiểm tra hợp lệ (validation / 검증) có thể cập nhật (update / 업데이트) sau với correct chuyển tiếp trạng thái (state transition / 상태 전이).
 
-Case 02/04 đã cover auth/navigation; startup đặt chúng trên critical path.
+Trường hợp (case / 사례) 02/04 đã cover auth/điều hướng (navigation / 내비게이션); startup đặt chúng trên đường găng (critical path / 임계 경로).
 
-## 12. Local state đọc bao nhiêu là đủ
+## 12. cục bộ (local / 로컬) trạng thái (state / 상태) đọc bao nhiêu là đủ
 
-DataStore/Room read nhỏ có thể cần để quyết route, nhưng loading toàn profile/feed database trước frame là không cần.
+DataStore/Room read nhỏ có thể cần để quyết tuyến (route / 경로), nhưng loading toàn profile/feed cơ sở dữ liệu (database / 데이터베이스) trước frame là không cần.
 
 Tách:
 
-- **startup-critical state**: theme, account existence, onboarding completed, pending route;
-- **screen data**: load sau khi UI owner xuất hiện.
+- **startup-critical trạng thái (state / 상태)**: theme, account existence, onboarding completed, pending tuyến (route / 경로);
+- **screen dữ liệu (data / 데이터)**: tải (load / 로드) sau khi UI đơn vị sở hữu (owner / 오너) xuất hiện.
 
 Minimize startup-critical dataset.
 
-## 13. Main thread và disk I/O
+## 13. Main luồng thực thi (thread / 스레드) và disk I/O
 
-Disk I/O latency có tail lớn tùy device/storage pressure. Nếu API cho synchronous disk read trong startup, hãy xem trace/StrictMode.
+Disk I/O độ trễ (latency / 지연 시간) có tail lớn tùy thiết bị (device / 장치)/lưu trữ (storage / 저장소) pressure. Nếu API cho synchronous disk read trong startup, hãy xem dấu vết (trace / 추적)/StrictMode.
 
-Một read “chỉ 5 ms trên Pixel dev” có thể 100+ ms trên low-end device dưới I/O contention.
+Một read “chỉ 5 ms trên điểm ảnh (pixel / 픽셀) dev” có thể 100+ ms trên low-end thiết bị (device / 장치) dưới I/O contention.
 
-Production performance phải quan tâm percentile, không chỉ median developer phone.
+Môi trường vận hành (production / 운영 환경) hiệu năng (performance / 성능) phải quan tâm percentile, không chỉ median nhà phát triển (developer / 개발자) phone.
 
-## 14. Class loading và static initialization
+## 14. nạp lớp (class loading / 클래스 로딩) và static initialization
 
-Large class graph, static initializer và reflection có thể tăng startup.
+Large lớp (class / 클래스) đồ thị (graph / 그래프), static initializer và reflection có thể tăng startup.
 
-Kotlin `object`, top-level property hoặc companion static initialization có thể tạo work lúc class load.
+Kotlin `object`, top-level thuộc tính (property / 속성) hoặc companion static initialization có thể tạo công việc (work / 작업) lúc lớp (class / 클래스) tải (load / 로드).
 
-Không đặt heavy expression vào global property:
+Không đặt heavy expression vào toàn cục (global / 전역) thuộc tính (property / 속성):
 
 ```kotlin
 val expensiveConfig = parseHugeConfig(loadFile()) // bad as implicit class init
 ```
 
-Prefer explicit/lazy lifecycle-controlled creation.
+Prefer tường minh (explicit / 명시적)/lazy lifecycle-controlled creation.
 
 ## 15. Compose first composition
 
-Compose startup gồm Activity setup, composition, layout, draw và potential resource/font/image work.
+Compose startup gồm Activity setup, composition, bố cục (layout / 레이아웃), draw và potential tài nguyên (resource / 자원)/font/ảnh (image / 이미지) công việc (work / 작업).
 
 First screen nên tránh:
 
-- huge list computation synchronous trong composable;
+- huge danh sách (list / 목록) computation synchronous trong composable;
 - decoding bitmap lớn trên main;
-- creating unstable giant state graph;
-- effect launch gây immediate recomposition storm;
+- creating unstable giant trạng thái (state / 상태) đồ thị (graph / 그래프);
+- tác động (effect / 효과) launch gây immediate recomposition storm;
 - reading disk directly trong composable.
 
-UI nên render from already modeled state; async load thuộc ViewModel/repository layer.
+UI nên kết xuất (render / 렌더링) from already modeled trạng thái (state / 상태); async tải (load / 로드) thuộc ViewModel/repository tầng (layer / 계층).
 
 ## 16. Baseline Profiles
 
-Baseline Profile cho runtime biết code paths quan trọng để cải thiện compilation/startup/runtime performance. Đây không phải magic replacement cho slow algorithm/main-thread I/O.
+Baseline Profile cho thời gian chạy (runtime / 런타임) biết mã (code / 코드) paths quan trọng để cải thiện compilation/startup/thời gian chạy (runtime / 런타임) hiệu năng (performance / 성능). Đây không phải magic replacement cho slow thuật toán (algorithm / 알고리즘)/main-thread I/O.
 
-Profile nên cover representative startup/critical journeys. Macrobenchmark đo benefit với profile enabled/disabled.
+Profile nên cover representative startup/trọng yếu (critical / 중요) journeys. Macrobenchmark đo benefit với profile enabled/disabled.
 
-Nếu app startup 2 giây do network blocking main thread, Baseline Profile không sửa architecture error đó.
+Nếu app startup 2 giây do mạng (network / 네트워크) blocking main luồng thực thi (thread / 스레드), Baseline Profile không sửa kiến trúc (architecture / 아키텍처) lỗi (error / 오류) đó.
 
-## 17. Macrobenchmark startup measurement
+## 17. Macrobenchmark startup đo lường (measurement / 측정)
 
-Macrobenchmark có thể đo cold/warm startup trên release-like build.
+Macrobenchmark có thể đo cold/warm startup trên release-like bản dựng (build / 빌드).
 
 Key principle:
 
@@ -213,13 +216,13 @@ benchmark production-like artifact
 + controlled compilation mode
 ```
 
-Debug build timing không đại diện release vì instrumentation/JIT/minification khác.
+Gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) timing không đại diện bản phát hành (release / 릴리스) vì instrumentation/JIT/minification khác.
 
-Theo dõi percentile/distribution, không chỉ một run.
+Theo dõi percentile/phân phối (distribution / 분포), không chỉ một run.
 
-## 18. Perfetto/System Trace
+## 18. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적)
 
-Khi startup chậm, trace cho evidence về main thread slices, binder calls, disk I/O, GC, class loading, rendering và scheduler.
+Khi startup chậm, dấu vết (trace / 추적) cho bằng chứng (evidence / 증거) về main luồng thực thi (thread / 스레드) slices, binder calls, disk I/O, GC, nạp lớp (class loading / 클래스 로딩), rendering và scheduler.
 
 Workflow:
 
@@ -236,59 +239,59 @@ Không optimize bằng cảm giác hoặc số log timestamps rời rạc nếu 
 
 ## 19. StrictMode trong development
 
-StrictMode giúp detect disk/network operation trên main thread và một số resource misuse. Bật policy phù hợp trong debug/dev giúp bắt startup anti-pattern sớm.
+StrictMode giúp detect disk/mạng (network / 네트워크) thao tác (operation / 연산) trên main luồng thực thi (thread / 스레드) và một số tài nguyên (resource / 자원) misuse. Bật chính sách (policy / 정책) phù hợp trong gỡ lỗi (debug / 디버그)/dev giúp bắt startup anti-pattern sớm.
 
-Không dùng StrictMode penalty làm production crash mechanism tùy tiện. Mục tiêu là development signal.
+Không dùng StrictMode penalty làm môi trường vận hành (production / 운영 환경) crash cơ chế (mechanism / 메커니즘) tùy tiện. Mục tiêu là development tín hiệu (signal / 신호).
 
-## 20. SDK initialization governance
+## 20. SDK initialization quản trị (governance / 거버넌스)
 
-Mỗi third-party SDK thêm startup code cần owner và budget.
+Mỗi third-party SDK thêm startup mã (code / 코드) cần đơn vị sở hữu (owner / 오너) và ngân sách (budget / 예산).
 
 Inventory nên ghi:
 
-| SDK | Need before first frame? | Auto provider? | Main-thread cost | Can lazy-init? | Owner |
+| SDK | Need before first frame? | Auto provider? | Main-thread chi phí (cost / 비용) | Can lazy-init? | đơn vị sở hữu (owner / 오너) |
 |---|---|---|---|---|---|
-| crash reporting | often early | maybe | measure | partially | platform |
-| analytics | usually no hard block | maybe | measure | yes | data |
+| crash reporting | often early | maybe | measure | partially | nền tảng (platform / 플랫폼) |
+| analytics | usually no hard khối (block / 블록) | maybe | measure | yes | dữ liệu (data / 데이터) |
 | ads | screen-specific | often | potentially high | yes | monetization |
 
 Không để 10 SDK cùng tự auto-init vì vendor default.
 
 ## 21. Crash reporting nên init sớm nhưng nhỏ
 
-Crash SDK cần available đủ sớm để capture startup crash, nhưng configuration không nên perform heavy network/remote fetch synchronously.
+Crash SDK cần available đủ sớm để capture startup crash, nhưng cấu hình (configuration / 구성) không nên perform heavy mạng (network / 네트워크)/remote fetch synchronously.
 
-Upload có thể defer/background. Crash metadata critical có thể set sau khi local user/session known.
+Upload có thể defer/background. Crash siêu dữ liệu (metadata / 메타데이터) trọng yếu (critical / 중요) có thể set sau khi cục bộ (local / 로컬) người dùng (user / 사용자)/session known.
 
-## 22. Remote Config không được là hard startup dependency
+## 22. Remote cấu hình (config / 설정) không được là hard startup phụ thuộc (dependency / 의존성)
 
-Nếu app cần network Remote Config trước khi render, outage config service có thể làm app không mở.
+Nếu app cần mạng (network / 네트워크) Remote cấu hình (config / 설정) trước khi kết xuất (render / 렌더링), outage cấu hình (config / 설정) dịch vụ (service / 서비스) có thể làm app không mở.
 
-Use cached defaults/local persisted config và refresh async. Critical kill-switch cần previous known state và safe default.
+Use cached defaults/cục bộ (local / 로컬) persisted cấu hình (config / 설정) và refresh async. trọng yếu (critical / 중요) kill-switch cần previous known trạng thái (state / 상태) và safe default.
 
-Startup phải resilient khi network offline.
+Startup phải resilient khi mạng (network / 네트워크) offline.
 
-## 23. Database migration trên startup
+## 23. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) trên startup
 
-Room DB first open có thể chạy migration. Large migration ngay khi user launch tạo long startup hoặc ANR nếu sai thread.
+Room DB first open có thể chạy di chuyển (migration / 마이그레이션). Large di chuyển (migration / 마이그레이션) ngay khi người dùng (user / 사용자) launch tạo long startup hoặc ANR nếu sai luồng thực thi (thread / 스레드).
 
-Schema migration strategy nên:
+Lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략) nên:
 
-- benchmark realistic DB size;
+- benchmark realistic DB kích thước (size / 크기);
 - avoid unnecessary full-table rewrite;
-- run via correct thread path;
-- show durable migration/loading UX nếu truly long;
-- backup/rollback compatibility đã được Case 03 cover.
+- run via correct luồng thực thi (thread / 스레드) đường dẫn (path / 경로);
+- show durable di chuyển (migration / 마이그레이션)/loading UX nếu truly long;
+- backup/quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성) đã được trường hợp (case / 사례) 03 cover.
 
-“Migration chỉ chạy một lần” không làm user experience ít quan trọng.
+“di chuyển (migration / 마이그레이션) chỉ chạy một lần” không làm người dùng (user / 사용자) experience ít quan trọng.
 
 ## 24. Process-specific initialization
 
-Nếu app có multi-process component, `Application.onCreate()` có thể chạy trong nhiều process.
+Nếu app có multi-process thành phần (component / 컴포넌트), `Application.onCreate()` có thể chạy trong nhiều tiến trình (process / 프로세스).
 
-Không giả định code startup chỉ chạy main app process. Heavy analytics/database initialization có thể bị duplicate ở service/provider process.
+Không giả định mã (code / 코드) startup chỉ chạy main app tiến trình (process / 프로세스). Heavy analytics/cơ sở dữ liệu (database / 데이터베이스) initialization có thể bị duplicate ở dịch vụ (service / 서비스)/provider tiến trình (process / 프로세스).
 
-Nếu multi-process thật sự cần, detect process name và initialize only required subsystem per process. Tránh multi-process trừ khi requirement rõ vì complexity tăng mạnh.
+Nếu multi-process thật sự cần, detect tiến trình (process / 프로세스) name và initialize only required subsystem per tiến trình (process / 프로세스). Tránh multi-process trừ khi yêu cầu (requirement / 요구사항) rõ vì độ phức tạp (complexity / 복잡도) tăng mạnh.
 
 ## 25. Startup entry points không chỉ launcher icon
 
@@ -300,17 +303,17 @@ Cold start có thể đến từ:
 - share intent;
 - widget;
 - shortcut;
-- service/receiver/provider.
+- dịch vụ (service / 서비스)/receiver/provider.
 
-Case 14 đã cover system surfaces. Startup design phải đảm bảo initialization order đúng cho tất cả entry point, không chỉ MainActivity path.
+Trường hợp (case / 사례) 14 đã cover hệ thống (system / 시스템) surfaces. Startup thiết kế (design / 설계) phải đảm bảo initialization thứ tự (order / 순서) đúng cho tất cả entry điểm (point / 지점), không chỉ MainActivity đường dẫn (path / 경로).
 
 ## 26. Lazy singleton race
 
-Lazy initialize shared resource từ nhiều threads cần thread-safety. Kotlin `lazy` default synchronized semantics có thể đủ cho object initialization đơn giản, nhưng async initialization cần state machine.
+Lazy initialize dùng chung (shared / 공유) tài nguyên (resource / 자원) từ nhiều threads cần thread-safety. Kotlin `lazy` default synchronized ngữ nghĩa (semantics / 의미론) có thể đủ cho đối tượng (object / 객체) initialization đơn giản, nhưng async initialization cần máy trạng thái (state machine / 상태 머신).
 
-Không dùng nullable global + `if (x == null) x = create()` unsynchronized.
+Không dùng nullable toàn cục (global / 전역) + `if (x == null) x = create()` unsynchronized.
 
-Async resource có thể model:
+Async tài nguyên (resource / 자원) có thể mô hình (model / 모델):
 
 ```text
 Uninitialized
@@ -323,31 +326,31 @@ Multiple callers await cùng initialization thay vì chạy duplicate.
 
 ## 27. Prewarming
 
-Sau first frame, app có thể prewarm resource có xác suất sắp dùng cao: database connection, decoder, cache index, feature module.
+Sau first frame, app có thể prewarm tài nguyên (resource / 자원) có xác suất sắp dùng cao: cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결), decoder, bộ nhớ đệm (cache / 캐시) chỉ mục (index / 인덱스), tính năng (feature / 기능) mô-đun (module / 모듈).
 
-Prewarm là speculation. Nếu làm quá nhiều sẽ tranh CPU/I/O với user interaction và tăng battery.
+Prewarm là speculation. Nếu làm quá nhiều sẽ tranh CPU/I/O với người dùng (user / 사용자) tương tác (interaction / 상호작용) và tăng battery.
 
-Chỉ prewarm thứ có measured benefit và bounded cost.
+Chỉ prewarm thứ có measured benefit và bounded chi phí (cost / 비용).
 
-## 28. Startup memory budget
+## 28. Startup bộ nhớ (memory / 메모리) ngân sách (budget / 예산)
 
-Eager initialization không chỉ tốn thời gian, còn tăng resident memory. Low-end device có thể bị memory pressure sớm.
+Eager initialization không chỉ tốn thời gian, còn tăng resident bộ nhớ (memory / 메모리). Low-end thiết bị (device / 장치) có thể bị bộ nhớ (memory / 메모리) pressure sớm.
 
-Một SDK singleton có cache 20 MB “để nhanh” có thể làm process dễ kill background hơn.
+Một SDK singleton có bộ nhớ đệm (cache / 캐시) 20 MB “để nhanh” có thể làm tiến trình (process / 프로세스) dễ kill background hơn.
 
-Startup optimization nên xem time + memory + battery trade-off.
+Startup tối ưu hóa (optimization / 최적화) nên xem thời gian (time / 시간) + bộ nhớ (memory / 메모리) + battery sự đánh đổi (trade-off / 트레이드오프).
 
-## 29. Startup network anti-pattern
+## 29. Startup mạng (network / 네트워크) anti-pattern
 
-Never require network round trip để app process trở thành usable nếu product có thể render offline/cached state.
+Never require mạng (network / 네트워크) round trip để app tiến trình (process / 프로세스) trở thành usable nếu sản phẩm (product / 제품) có thể kết xuất (render / 렌더링) offline/cached trạng thái (state / 상태).
 
-Network có unbounded tail: DNS, TLS, captive portal, packet loss, server latency.
+Mạng (network / 네트워크) có unbounded tail: DNS, TLS, captive portal, packet mất mát (loss / 손실), máy chủ (server / 서버) độ trễ (latency / 지연 시간).
 
-Nếu security requires fresh server validation trước sensitive action, gate **sensitive action**, không nhất thiết gate toàn app shell.
+Nếu bảo mật (security / 보안) requires fresh máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검증) trước sensitive hành động (action / 동작), gate **sensitive hành động (action / 동작)**, không nhất thiết gate toàn app shell.
 
 ## 30. First frame vs first useful content
 
-Đẩy mọi work sau first frame để metric đẹp có thể tạo skeleton nhấp nháy và content arrive quá muộn.
+Đẩy mọi công việc (work / 작업) sau first frame để chỉ số (metric / 지표) đẹp có thể tạo skeleton nhấp nháy và content arrive quá muộn.
 
 Optimize user-perceived journey:
 
@@ -359,30 +362,30 @@ fast stable shell
 
 Không metric-game bằng blank frame.
 
-## 31. Startup budget
+## 31. Startup ngân sách (budget / 예산)
 
-Team có thể đặt budget theo representative device tier, ví dụ TTID/TTFD percentile. Con số cụ thể tùy product; quan trọng là có budget và regression gate.
+Nhóm (team / 팀) có thể đặt ngân sách (budget / 예산) theo representative thiết bị (device / 장치) tier, ví dụ TTID/TTFD percentile. Con số cụ thể tùy sản phẩm (product / 제품); quan trọng là có ngân sách (budget / 예산) và regression gate.
 
-Build/CI benchmark nên detect trend chứ không fail vì noise một run. Performance test cần statistical tolerance.
+Bản dựng (build / 빌드)/CI benchmark nên detect trend chứ không thất bại (fail / 실패) vì noise một run. hiệu năng (performance / 성능) kiểm thử (test / 테스트) cần statistical tolerance.
 
-## 32. Startup regression ownership
+## 32. Startup regression quyền sở hữu (ownership / 소유권)
 
-Nếu every feature có thể thêm initializer tự do, startup sẽ chậm dần theo thời gian.
+Nếu every tính năng (feature / 기능) có thể thêm initializer tự do, startup sẽ chậm dần theo thời gian.
 
-Policy tốt:
+Chính sách (policy / 정책) tốt:
 
 - new eager initializer cần justification;
-- owner + measured cost;
-- trace before/after;
+- đơn vị sở hữu (owner / 오너) + measured chi phí (cost / 비용);
+- dấu vết (trace / 추적) before/after;
 - prefer feature-local lazy init;
-- review merged manifest providers;
-- startup benchmark in release pipeline.
+- rà soát (review / 검토) merged manifest providers;
+- startup benchmark in bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프라인).
 
-## 33. Case study mental model
+## 33. trường hợp (case / 사례) study mô hình tư duy (mental model / 사고 모델)
 
-Giả sử app cold start cần theme, auth state, analytics và feed.
+Giả sử app cold start cần theme, auth trạng thái (state / 상태), analytics và feed.
 
-Bad flow:
+Bad luồng (flow / 흐름):
 
 ```text
 Application
@@ -394,7 +397,7 @@ Application
 → Activity
 ```
 
-Better flow:
+Better luồng (flow / 흐름):
 
 ```text
 process
@@ -407,29 +410,31 @@ process
 → lazy/noncritical SDK init after first frame
 ```
 
-Không phải mọi app giống nhau, nhưng critical path thinking áp dụng rộng.
+Không phải mọi app giống nhau, nhưng đường găng (critical path / 임계 경로) thinking áp dụng rộng.
 
-## 34. Senior startup checklist
+## 34. cấp cao (senior / 시니어) startup checklist
 
-Trước release, hỏi:
+Trước bản phát hành (release / 릴리스), hỏi:
 
 - cold/warm/hot startup measured chưa;
-- main thread có disk/network/blocking lock không;
+- main luồng thực thi (thread / 스레드) có disk/mạng (network / 네트워크)/blocking khóa (lock / 잠금) không;
 - merged manifest có provider auto-init mới không;
 - `Application` constructor/onCreate làm gì;
 - DI singleton nào eager/heavy;
-- DB migration worst-case duration;
-- release Baseline Profile valid không;
-- notification/deep-link cold start test chưa;
-- low-end device percentile thế nào;
-- startup crash/ANR metrics segment theo version/device chưa.
+- DB di chuyển (migration / 마이그레이션) worst-case duration;
+- bản phát hành (release / 릴리스) Baseline Profile valid không;
+- notification/deep-link cold start kiểm thử (test / 테스트) chưa;
+- low-end thiết bị (device / 장치) percentile thế nào;
+- startup crash/ANR metrics segment theo phiên bản (version / 버전)/thiết bị (device / 장치) chưa.
 
 ## 35. Official references
 
-- App startup time: https://developer.android.com/topic/performance/vitals/launch-time
-- Baseline Profiles: https://developer.android.com/topic/performance/baselineprofiles/overview
-- Macrobenchmark: https://developer.android.com/topic/performance/benchmarking/macrobenchmark-overview
-- App Startup library: https://developer.android.com/topic/libraries/app-startup
-- Perfetto/System tracing: https://developer.android.com/topic/performance/tracing
+- App startup thời gian (time / 시간): https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/vitals/launch-time
+- Baseline Profiles: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/baselineprofiles/overview
+- Macrobenchmark: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/benchmarking/macrobenchmark-overview
+- App Startup thư viện (library / 라이브러리): https://nhà phát triển (developer / 개발자).android.com/topic/libraries/app-startup
+- Perfetto/hệ thống (system / 시스템) tracing: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/tracing
 
-Performance guidance evolve cùng runtime/toolchain. Benchmark trên release-like artifact và representative devices luôn quan trọng hơn con số trong tutorial.
+Hiệu năng (performance / 성능) guidance evolve cùng thời gian chạy (runtime / 런타임)/toolchain. Benchmark trên release-like sản phẩm tạo ra (artifact / 산출물) và representative devices luôn quan trọng hơn con số trong tutorial.
+
+> **Bàn giao:** Sau **35. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

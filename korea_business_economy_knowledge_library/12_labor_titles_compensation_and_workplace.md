@@ -1,16 +1,19 @@
 # Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)
 
+> **Mạch đọc:** Đặt **Lao động, chức danh, lương và cấu trúc tổ chức công ty Hàn Quốc (Labor & Organization / 노동·직급·보상)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **직무: loại công việc và bản sắc kỹ năng** sang **직급: cấp bậc trong hệ thống nhân sự**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Doanh nghiệp là một hệ thống phân công con người. Muốn hiểu môi trường làm việc Hàn Quốc từ bên trong, cần tách rõ **công việc chuyên môn (직무)**, **cấp bậc (직급)**, **vai trò trách nhiệm (직책)**, **loại hình lao động (고용형태)**, **đãi ngộ (보상)** và **đơn vị tổ chức (조직)**.
 
 Những từ này thường bị dịch chung thành “chức vụ”, nhưng chúng trả lời những câu hỏi hoàn toàn khác nhau.
 
-> Mental model: `직무` = bạn tạo giá trị bằng loại công việc gì; `직급` = bạn nằm ở đâu trong thang bậc nhân sự; `직책` = hiện tại bạn chịu trách nhiệm quản lý hoặc ra quyết định ở mức nào.
+> mô hình tư duy (mental model / 사고 모델): `직무` = bạn tạo giá trị bằng loại công việc gì; `직급` = bạn nằm ở đâu trong thang bậc nhân sự; `직책` = hiện tại bạn chịu trách nhiệm quản lý hoặc ra quyết định ở mức nào.
 
 ## 직무: loại công việc và bản sắc kỹ năng
 
 **직무 (job function / công việc chuyên môn)** mô tả loại giá trị người lao động tạo ra, ví dụ phát triển phần mềm, kế toán–tài chính, bán hàng, nhân sự, hoạch định sản phẩm, kỹ thuật sản xuất, đảm bảo chất lượng hoặc mua sắm.
 
-Job function liên quan trực tiếp tới năng lực, lộ trình nghề nghiệp và khả năng chuyển việc. Một lập trình viên có thể đổi công ty nhưng vẫn giữ bản sắc nghề nghiệp rộng là `개발` hoặc Application Engineering, trong khi cấp bậc nội bộ có thể được ánh xạ lại.
+Job hàm (function / 함수) liên quan trực tiếp tới năng lực, lộ trình nghề nghiệp và khả năng chuyển việc. Một lập trình viên có thể đổi công ty nhưng vẫn giữ bản sắc nghề nghiệp rộng là `개발` hoặc ứng dụng (application / 애플리케이션) kỹ thuật (engineering / 엔지니어링), trong khi cấp bậc nội bộ có thể được ánh xạ lại.
 
 Vì vậy khi so sánh nghề nghiệp giữa các công ty, **phạm vi công việc (job scope)** thường quan trọng hơn chức danh trên danh thiếp.
 
@@ -168,7 +171,7 @@ Doanh nghiệp có thể kết hợp MBO, KPI, đánh giá năng lực, xếp h�
 
 Bất kỳ chỉ số nào cũng thay đổi hành vi. Nếu lập trình viên bị đo bằng số ticket, họ có thể ưu tiên ticket nhỏ thay vì giải bài toán kiến trúc khó. Nếu sales chỉ bị đo doanh thu, họ có thể ký hợp đồng biên lợi nhuận thấp.
 
-Đây là logic của **Định luật Goodhart (Goodhart’s Law)**: khi một thước đo trở thành mục tiêu, nó có thể không còn đo tốt mục tiêu ban đầu.
+Đây là lô-gic (logic / 논리) của **Định luật Goodhart (Goodhart’s Law)**: khi một thước đo trở thành mục tiêu, nó có thể không còn đo tốt mục tiêu ban đầu.
 
 Vì vậy hệ thống đánh giá cần kết hợp đầu ra đo được với phán đoán chuyên môn.
 
@@ -257,13 +260,13 @@ Nên nhìn qua sáu lớp:
 1. **Chất lượng kinh doanh:** doanh thu ổn định không, đơn vị đang tăng hay giảm, mô hình có chu kỳ hay phụ thuộc dự án.
 2. **Chất lượng việc làm:** chính thức/hợp đồng, làm thêm, thưởng, phúc lợi, lịch sử tái cấu trúc.
 3. **Phạm vi công việc:** phát triển, vận hành, hỗ trợ, điều phối, khách hàng hay quản lý.
-4. **Tích lũy kỹ năng:** công nghệ, quyền sở hữu kiến trúc, kiến thức domain, ngôn ngữ và kỹ năng khách hàng.
+4. **Tích lũy kỹ năng:** công nghệ, quyền sở hữu kiến trúc, kiến thức lĩnh vực (domain / 도메인), ngôn ngữ và kỹ năng khách hàng.
 5. **Tổ chức:** quyền quyết định, chất lượng quản lý, quy mô nhóm và đường thăng tiến.
 6. **Lựa chọn thoát:** sau này có thể chuyển sang vai trò hoặc công ty nào.
 
 Cách nhìn này giúp tránh đánh giá nơi làm việc chỉ bằng uy tín thương hiệu.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thiết kế tổ chức chuyển chiến lược thành **vai trò + quyền quyết định + động cơ + trách nhiệm**. Nghề nghiệp của người lao động chuyển trải nghiệm công việc thành **vốn nhân lực + danh tiếng + lựa chọn tương lai**. Chức danh chỉ quan trọng khi nó phản ánh các cơ chế thật này.
 
@@ -284,3 +287,5 @@ Thăng tiến không phải lúc nào cũng tốt nếu vai trò mới đi xa m�
 ## Liên kết
 
 Đọc [`13_business_culture_decision_making_and_communication.md`](./13_business_culture_decision_making_and_communication.md) cho chuẩn giao tiếp–ra quyết định, [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md) cho cấu trúc lao động theo quy mô doanh nghiệp và [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) cho khoảng cách năng suất–tiền lương.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

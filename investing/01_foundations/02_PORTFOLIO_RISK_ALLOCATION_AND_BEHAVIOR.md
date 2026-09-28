@@ -1,5 +1,8 @@
 # Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư
 
+> **Mạch đọc:** Đặt **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Rủi ro không chỉ là độ biến động** sang **2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một danh mục tốt không phải là tập hợp nhiều mã chứng khoán, mà là một hệ thống được thiết kế để phục vụ mục tiêu tài chính trong giới hạn về thời gian, thanh khoản, khả năng chịu lỗ và hành vi của người sở hữu. Chương này xây nền từ định nghĩa rủi ro tới phân bổ tài sản, đóng góp rủi ro, tái cân bằng và kỷ luật ra quyết định.
 
 ## 1. Rủi ro không chỉ là độ biến động
@@ -245,7 +248,7 @@ Những gì vừa xảy ra thường bị phóng đại thành dự báo dài h�
 
 Phân bổ chiến lược và dải tái cân bằng giúp giảm hành vi này.
 
-## 24. Outcome bias và hindsight bias
+## 24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)
 
 Thiên lệch theo kết quả (outcome bias) đánh giá quyết định chỉ dựa trên lời/lỗ. Thiên lệch nhìn lại (hindsight bias) khiến kết quả đã xảy ra trông như “rõ ràng từ trước”.
 
@@ -255,7 +258,7 @@ Một quyết định có xác suất hợp lý vẫn có thể thua. Một quy�
 
 ## 25. Tuyên bố chính sách đầu tư
 
-Tuyên bố chính sách đầu tư (Investment Policy Statement, IPS) nên xác định:
+Tuyên bố chính sách đầu tư (Investment policy Statement, IPS) nên xác định:
 
 ```text
 Mục tiêu
@@ -333,3 +336,5 @@ Mục tiêu
 ```
 
 Đây là nền tảng để chuyển từ việc “mua tài sản” sang quản trị một hệ thống tài chính cá nhân có mục tiêu.
+
+> **Bàn giao:** Sau **29. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

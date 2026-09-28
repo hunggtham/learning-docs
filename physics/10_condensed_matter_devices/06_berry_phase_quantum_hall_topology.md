@@ -1,5 +1,8 @@
 # Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô
 
+> **Mạch đọc:** Đọc **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao topology cần nhiều hơn khái niệm band gap?** sang **Tiến hóa đoạn nhiệt và pha Berry**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao topology cần nhiều hơn khái niệm band gap?
 
 Lý thuyết dải giải thích rất nhiều về kim loại, bán dẫn và chất cách điện. Nhưng hai vật liệu đều có gap trong bulk vẫn có thể thuộc hai pha khác nhau theo cách không thể biến đổi liên tục từ pha này sang pha kia mà không đóng gap hoặc phá một đối xứng bảo vệ.
@@ -33,7 +36,7 @@ Pha hình học Berry là
 \cdot d\mathbf R.
 ```
 
-Pha của vector riêng tại từng điểm có tự do gauge:
+Pha của véc-tơ (vector / 벡터) riêng tại từng điểm có tự do gauge:
 
 ```math
 |n\rangle
@@ -42,9 +45,9 @@ Pha của vector riêng tại từng điểm có tự do gauge:
 
 Nhưng pha Berry quanh vòng kín, modulo `2\pi`, có nội dung vật lý gauge-invariant.
 
-## Berry connection và Berry curvature
+## Berry liên kết (connection / 연결) và Berry curvature
 
-Định nghĩa Berry connection:
+Định nghĩa Berry liên kết (connection / 연결):
 
 ```math
 \mathbf A_n(\mathbf R)
@@ -67,9 +70,9 @@ Bằng định lý Stokes,
 
 Cấu trúc này rất giống điện từ học:
 
-- Berry connection tương tự thế vectơ;
-- Berry curvature tương tự field strength;
-- connection phụ thuộc gauge;
+- Berry liên kết (connection / 연결) tương tự thế vectơ;
+- Berry curvature tương tự trường dữ liệu (field / 필드) strength;
+- liên kết (connection / 연결) phụ thuộc gauge;
 - các đại lượng tích phân phù hợp có nội dung gauge-invariant.
 
 Không gian tham số ở đây có thể là không gian động lượng `\mathbf k`, hướng từ trường hoặc tập tham số điều khiển khác.
@@ -84,7 +87,7 @@ Trạng thái Bloch có dạng
 |u_{n\mathbf k}\rangle.
 ```
 
-Phần tuần hoàn `|u_{n\mathbf k}\rangle` thay đổi theo `\mathbf k`. Chính sự biến đổi này tạo Berry connection và Berry curvature trong Brillouin zone.
+Phần tuần hoàn `|u_{n\mathbf k}\rangle` thay đổi theo `\mathbf k`. Chính sự biến đổi này tạo Berry liên kết (connection / 연결) và Berry curvature trong Brillouin zone.
 
 Trong động lực bán cổ điển của wavepacket electron,
 
@@ -125,7 +128,7 @@ Vì `C_n` là số nguyên, nhiễu nhỏ hoặc thay đổi tham số liên t�
 
 ## Số Chern là thuộc tính toàn cục
 
-Topology không chỉ hỏi trạng thái tại một điểm `\mathbf k`. Nó hỏi các vector riêng được nối với nhau trên toàn Brillouin zone như thế nào.
+Topology không chỉ hỏi trạng thái tại một điểm `\mathbf k`. Nó hỏi các véc-tơ (vector / 벡터) riêng được nối với nhau trên toàn Brillouin zone như thế nào.
 
 Tại từng vùng cục bộ, ta thường có thể chọn pha trạng thái trơn. Nhưng trên toàn không gian tham số, có thể không tồn tại một gauge trơn duy nhất ở mọi nơi.
 
@@ -135,15 +138,15 @@ Một trực giác đơn giản là winding number: một vòng có số lần q
 
 Trong band topology, đóng gap đóng vai trò như điểm singular cho phép bất biến đổi giá trị.
 
-## Bulk–boundary correspondence
+## Bulk–ranh giới (boundary / 경계) correspondence
 
-Nếu hai vùng bulk có bất biến tô pô khác nhau, interface giữa chúng phải giải quyết sự thay đổi bất biến.
+Nếu hai vùng bulk có bất biến tô pô khác nhau, giao diện (interface / 인터페이스) giữa chúng phải giải quyết sự thay đổi bất biến.
 
 Trong nhiều hệ, điều này buộc xuất hiện trạng thái biên nối các sector năng lượng.
 
 Trong hiệu ứng Hall lượng tử, bulk có gap nhưng cạnh có kênh dẫn chiral. Trong trường hợp lý tưởng, kênh chỉ truyền theo một chiều nên backscattering đàn hồi bị hạn chế mạnh.
 
-Đây là bulk–boundary correspondence: topology của bulk quyết định sự tồn tại của mode biên.
+Đây là bulk–ranh giới (boundary / 경계) correspondence: topology của bulk quyết định sự tồn tại của chế độ (mode / 모드) biên.
 
 ## Topological insulator và đối xứng đảo thời gian
 
@@ -188,9 +191,9 @@ Câu “electron graphene là hạt tương đối tính không khối lượng�
 
 Nếu hai dải chạm nhau tại các điểm cô lập với dispersion gần tuyến tính, quasiparticle năng lượng thấp có thể tuân Hamiltonian Dirac hoặc Weyl hiệu dụng.
 
-Một Weyl node hoạt động như nguồn hoặc hố của Berry curvature trong không gian động lượng và mang topological charge.
+Một Weyl nút (node / 노드) hoạt động như nguồn hoặc hố của Berry curvature trong không gian động lượng và mang topological charge.
 
-Trên bề mặt, có thể xuất hiện Fermi arc nối hình chiếu của các Weyl node.
+Trên bề mặt, có thể xuất hiện Fermi arc nối hình chiếu của các Weyl nút (node / 노드).
 
 Đây là ví dụ pha tô pô khi bulk không có gap hoàn toàn.
 
@@ -218,11 +221,11 @@ Trong điều kiện lý tưởng, điện tích bơm bị lượng tử hóa.
 
 Không thể giải thích đầy đủ bằng dải một hạt và số Chern đơn giản. Hệ tạo trạng thái nhiều hạt tương quan mạnh với quasiparticle có điện tích phân số và thống kê bất thường.
 
-Hiệu ứng Hall lượng tử phân số mở đường tới khái niệm **topological order**, nơi phân loại pha không chỉ dựa trên phá vỡ đối xứng Landau.
+Hiệu ứng Hall lượng tử phân số mở đường tới khái niệm **topological thứ tự (order / 순서)**, nơi phân loại pha không chỉ dựa trên phá vỡ đối xứng Landau.
 
-## Berry curvature và anomalous Hall effect
+## Berry curvature và anomalous Hall tác động (effect / 효과)
 
-Vật liệu sắt từ hoặc có spin–orbit coupling mạnh có thể có Hall response ngay cả khi không có từ trường ngoài lớn.
+Vật liệu sắt từ hoặc có spin–orbit coupling mạnh có thể có Hall phản hồi (response / 응답) ngay cả khi không có từ trường ngoài lớn.
 
 Phần nội tại của anomalous Hall conductivity liên hệ với tích phân Berry curvature của các trạng thái đã chiếm.
 
@@ -230,11 +233,11 @@ Do đó hình học của hàm sóng lượng tử có thể tạo hệ quả v�
 
 ## Tính topology bằng số
 
-Trong tính toán vật liệu, các vector riêng Bloch được lấy trên một lưới `k` rời rạc.
+Trong tính toán vật liệu, các véc-tơ (vector / 벡터) riêng Bloch được lấy trên một lưới `k` rời rạc.
 
-Không thể đơn giản sai phân pha thô của eigenvector vì mỗi vector riêng có pha tùy ý tại từng điểm `k`.
+Không thể đơn giản sai phân pha thô của eigenvector vì mỗi véc-tơ (vector / 벡터) riêng có pha tùy ý tại từng điểm `k`.
 
-Các thuật toán tốt dùng overlap gauge-covariant, Wilson loop hoặc phương pháp tương đương để giữ bất biến gauge.
+Các thuật toán tốt dùng overlap gauge-covariant, Wilson vòng lặp (loop / 루프) hoặc phương pháp tương đương để giữ bất biến gauge.
 
 Đây là bài học quan trọng cho scientific computing: biểu diễn số phải tôn trọng đối xứng và bất biến của lý thuyết, nếu không kết quả có thể phụ thuộc quy ước tùy ý.
 
@@ -244,19 +247,19 @@ Giả sử Hamiltonian thay đổi trơn theo tham số `\lambda` và dải đã
 
 Khi đó eigenstate có thể biến dạng trơn theo `\lambda`. Một số nguyên tô pô không thể thay đổi liên tục từ `0` sang `1`.
 
-Để bất biến nhảy, cấu trúc toán học phải mất tính trơn hoặc trở nên singular. Trong band theory, điều này thường xảy ra khi gap đóng tại chuyển pha tô pô.
+Để bất biến nhảy, cấu trúc toán học phải mất tính trơn hoặc trở nên singular. Trong band lý thuyết (theory / 이론), điều này thường xảy ra khi gap đóng tại chuyển pha tô pô.
 
 Sau đó gap có thể mở lại với topology mới.
 
 ## Điều kiện đoạn nhiệt và giới hạn
 
-Pha Berry đoạn nhiệt giả sử thay đổi tham số chậm so với thang thời gian đặt bởi gap tới các trạng thái khác. Nếu đi qua degeneracy hoặc thay đổi quá nhanh, transition giữa các dải có thể xảy ra và mô tả đoạn nhiệt đơn giản thất bại.
+Pha Berry đoạn nhiệt giả sử thay đổi tham số chậm so với thang thời gian đặt bởi gap tới các trạng thái khác. Nếu đi qua degeneracy hoặc thay đổi quá nhanh, chuyển tiếp (transition / 전이) giữa các dải có thể xảy ra và mô tả đoạn nhiệt đơn giản thất bại.
 
-Bất biến band một hạt rất mạnh với hệ electron gần độc lập, nhưng tương tác mạnh có thể đòi hỏi topology nhiều hạt, Green function hoặc các công cụ khác.
+Bất biến band một hạt rất mạnh với hệ electron gần độc lập, nhưng tương tác mạnh có thể đòi hỏi topology nhiều hạt, Green hàm (function / 함수) hoặc các công cụ khác.
 
 Topological protection cũng không loại bỏ mọi nguồn điện trở thực nghiệm.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Lý thuyết dải thông thường hỏi **năng lượng của trạng thái là bao nhiêu**. Band topology hỏi thêm **các hàm sóng được ghép với nhau toàn cục như thế nào trên không gian động lượng**.
 
@@ -289,8 +292,10 @@ Không. Lượng tử hóa Hall, trạng thái biên, dao động lượng tử 
 
 Không. Cần xét symmetry, gap, cấu trúc toàn cục của các dải và bất biến thích hợp.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tinh thể và dải Bloch](00_crystals_bands.md), [Đối xứng lượng tử và tích phân đường](../08_quantum/07_symmetry_operator_path_integral.md), [Thế gauge](../05_electromagnetism/06_potentials_gauge.md).
 
 **Liên hệ tiếp:** [Vận chuyển và Hall](02_transport_magnetism_superconductivity.md), [Phonon và vật chất tô pô](04_phonons_defects_topological_matter.md), [Thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md), [QFT và gauge](../09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

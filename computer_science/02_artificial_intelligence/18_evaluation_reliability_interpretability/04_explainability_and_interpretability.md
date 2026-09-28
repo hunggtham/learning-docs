@@ -1,6 +1,9 @@
 # Explainability và Interpretability
 
-AI model có thể đạt performance cao nhưng vẫn khó hiểu vì sao nó đưa ra prediction. **Explainability (설명 가능성)** và **interpretability (해석 가능성)** nghiên cứu cách con người hiểu model behavior, internal mechanisms hoặc reason behind outputs.
+> **Mạch đọc:** Đặt **Explainability và Interpretability** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao cần?** sang **toàn cục (global / 전역) vs cục bộ (local / 로컬) Explanation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+AI mô hình (model / 모델) có thể đạt hiệu năng (performance / 성능) cao nhưng vẫn khó hiểu vì sao nó đưa ra prediction. **Explainability (설명 가능성)** và **interpretability (해석 가능성)** nghiên cứu cách con người hiểu mô hình (model / 모델) hành vi (behavior / 동작), nội bộ (internal / 내부) mechanisms hoặc reason behind outputs.
 
 Hai thuật ngữ thường dùng gần nhau nhưng có thể phân biệt thực dụng:
 
@@ -13,81 +16,81 @@ Explainability   → technique tạo explanation cho một decision/model
 
 Use cases:
 
-- debug model;
+- gỡ lỗi (debug / 디버그) mô hình (model / 모델);
 - detect spurious features;
-- satisfy domain/user requirements;
-- support human review;
+- satisfy lĩnh vực (domain / 도메인)/người dùng (user / 사용자) requirements;
+- hỗ trợ (support / 지원) human rà soát (review / 검토);
 - investigate fairness;
-- validate safety assumptions;
+- validate an toàn (safety / 안전) các giả định (assumptions / 가정들);
 - scientific understanding.
 
-Nhưng explanation không tự động chứng minh model correct.
+Nhưng explanation không tự động chứng minh mô hình (model / 모델) correct.
 
-## Global vs Local Explanation
+## Toàn cục (global / 전역) vs cục bộ (local / 로컬) Explanation
 
-**Global**: model generally hoạt động ra sao?
+**toàn cục (global / 전역)**: mô hình (model / 모델) generally hoạt động ra sao?
 
-Examples: feature importance, tree structure, learned concepts.
+Examples: tính năng (feature / 기능) importance, cây (tree / 트리) cấu trúc (structure / 구조), learned concepts.
 
-**Local**: vì sao case cụ thể có output này?
+**cục bộ (local / 로컬)**: vì sao trường hợp (case / 사례) cụ thể có đầu ra (output / 출력) này?
 
-Examples: contribution of features for one loan decision.
+Examples: contribution of features for one loan quyết định (decision / 결정).
 
-## Intrinsically Interpretable Models
+## Intrinsically Interpretable các mô hình (models / 모델들)
 
-Linear model:
+Mô hình tuyến tính (linear model / 선형 모델):
 
 \[
 \hat y = w^Tx+b
 \]
 
-Coefficients dễ inspect nhưng interpretation phụ thuộc feature scaling, correlation và functional assumptions.
+Coefficients dễ inspect nhưng interpretation phụ thuộc tính năng (feature / 기능) scaling, correlation và functional các giả định (assumptions / 가정들).
 
-Decision tree có path readable, nhưng deep tree vẫn phức tạp.
+Cây quyết định (decision tree / 의사결정 트리) có đường dẫn (path / 경로) readable, nhưng deep cây (tree / 트리) vẫn phức tạp.
 
-Interpretability không đồng nghĩa causal explanation.
+Interpretability không đồng nghĩa nhân quả (causal / 인과적) explanation.
 
-## Feature Importance
+## Tính năng (feature / 기능) Importance
 
-Tree gain/split counts hoặc permutation importance estimate feature influence.
+Cây (tree / 트리) gain/split counts hoặc permutation importance estimate tính năng (feature / 기능) influence.
 
-Permutation importance đo performance drop khi shuffle feature. Nhưng correlated features có thể share/redundantly encode signal, làm interpretation tricky.
+Permutation importance đo hiệu năng (performance / 성능) drop khi shuffle tính năng (feature / 기능). Nhưng correlated features có thể share/redundantly encode tín hiệu (signal / 신호), làm interpretation tricky.
 
 ## Partial Dependence
 
-PDP estimate average prediction as one feature varies while marginalizing others.
+PDP estimate average prediction as one tính năng (feature / 기능) varies while marginalizing others.
 
-Nếu feature combinations generated unrealistic do correlation, plot có thể misleading.
+Nếu tính năng (feature / 기능) combinations generated unrealistic do correlation, plot có thể misleading.
 
 ## SHAP Intuition
 
-SHAP dựa Shapley values từ cooperative game theory: distribute prediction difference among features based on marginal contributions across coalitions.
+SHAP dựa Shapley values từ cooperative game lý thuyết (theory / 이론): distribute prediction difference among features based on marginal contributions across coalitions.
 
-Strong theoretical properties nhưng computational approximations/feature-dependence assumptions matter.
+Strong theoretical properties nhưng computational approximations/feature-dependence các giả định (assumptions / 가정들) matter.
 
-SHAP value không chứng minh causal effect.
+SHAP giá trị (value / 값) không chứng minh nhân quả (causal / 인과적) tác động (effect / 효과).
 
 ## LIME
 
-LIME fit local surrogate model quanh one example. Explanation quality depends perturbation distribution và local fidelity.
+LIME fit cục bộ (local / 로컬) surrogate mô hình (model / 모델) quanh one example. Explanation chất lượng (quality / 품질) depends perturbation phân phối (distribution / 분포) và cục bộ (local / 로컬) fidelity.
 
-Stable explanation cần test sensitivity.
+Stable explanation cần kiểm thử (test / 테스트) sensitivity.
 
 ## Counterfactual Explanation
 
 Question:
 
-> “Input cần thay đổi thế nào để prediction đổi?”
+> “đầu vào (input / 입력) cần thay đổi thế nào để prediction đổi?”
 
-Ví dụ loan denial → income/debt change needed.
+Ví dụ loan denial → income/debt thay đổi (change / 변경) needed.
 
-Counterfactual phải respect feasible/actionable constraints; không đề xuất immutable characteristics.
+Counterfactual phải respect feasible/actionable các ràng buộc (constraints / 제약조건들); không đề xuất immutable characteristics.
 
-Counterfactual relation vẫn không tự động causal nếu model itself spurious.
+Counterfactual quan hệ (relation / 관계) vẫn không tự động nhân quả (causal / 인과적) nếu mô hình (model / 모델) itself spurious.
 
 ## Saliency Maps
 
-Vision/NLP gradient-based saliency highlight input regions/tokens affecting output.
+Vision/NLP gradient-based saliency highlight đầu vào (input / 입력) regions/tokens affecting đầu ra (output / 출력).
 
 Challenges:
 
@@ -100,69 +103,69 @@ Need sanity checks, not trust visualization alone.
 
 ## Attention as Explanation?
 
-Attention weights cho biết model routing/weighting within architecture, nhưng attention weight không necessarily equal causal importance of token to final output.
+Attention weights cho biết mô hình (model / 모델) routing/weighting within kiến trúc (architecture / 아키텍처), nhưng attention weight không necessarily equal nhân quả (causal / 인과적) importance of đơn vị từ (token / 토큰) to final đầu ra (output / 출력).
 
 “Attention is explanation” quá simplistic.
 
 ## Concept-Based Explanation
 
-Instead of raw pixels/features, ask model sensitivity to human concepts: “striped”, “wheel”, “tumor boundary”.
+Instead of raw pixels/features, ask mô hình (model / 모델) sensitivity to human concepts: “striped”, “wheel”, “tumor ranh giới (boundary / 경계)”.
 
-Requires reliable concept representation/labels.
+Requires reliable concept biểu diễn (representation / 표현)/labels.
 
 ## Mechanistic Interpretability
 
-For neural networks/LLMs, mechanistic interpretability cố identify circuits/features/internal computations responsible behavior.
+For neural networks/LLMs, mechanistic interpretability cố identify circuits/features/nội bộ (internal / 내부) computations responsible hành vi (behavior / 동작).
 
 Topics include:
 
-- neuron/feature activation;
+- neuron/tính năng (feature / 기능) activation;
 - probing;
 - activation patching;
-- causal interventions;
-- sparse feature dictionaries.
+- nhân quả (causal / 인과적) interventions;
+- sparse tính năng (feature / 기능) dictionaries.
 
-Goal deeper than post-hoc explanation, nhưng scale and superposition make challenge lớn.
+Goal deeper than post-hoc explanation, nhưng quy mô (scale / 규모) and superposition make challenge lớn.
 
 ## Probing
 
-Train simple probe on hidden representation to see information decodable.
+Train simple probe on hidden biểu diễn (representation / 표현) to see thông tin (information / 정보) decodable.
 
 Important distinction:
 
-> Information being decodable does not prove model uses it causally.
+> thông tin (information / 정보) being decodable does not prove mô hình (model / 모델) uses it causally.
 
-Causal intervention needed for stronger claim.
+Nhân quả (causal / 인과적) intervention needed for stronger claim.
 
 ## Activation Patching
 
-Run clean/corrupted inputs, replace internal activation from clean run into corrupted run, observe output recovery.
+Run clean/corrupted inputs, replace nội bộ (internal / 내부) activation from clean run into corrupted run, observe đầu ra (output / 출력) khôi phục (recovery / 복구).
 
-This tests causal role of internal components more directly than correlation-only probe.
+This tests nhân quả (causal / 인과적) role of nội bộ (internal / 내부) components more directly than correlation-only probe.
 
 ## Superposition
 
-Network may represent many features in overlapping directions rather than one neuron-one-concept. This makes neuron-level interpretation incomplete.
+Mạng (network / 네트워크) may represent many features in overlapping directions rather than one neuron-one-concept. This makes neuron-level interpretation incomplete.
 
-## LLM Explanations vs Internal Reasoning
+## LLM Explanations vs nội bộ (internal / 내부) lập luận (reasoning / 추론)
 
-A generated natural-language rationale is output text, not guaranteed faithful transcript of internal computation.
+A generated natural-language rationale is đầu ra (output / 출력) văn bản (text / 텍스트), not guaranteed faithful transcript of nội bộ (internal / 내부) computation.
 
-Do not equate “chain-of-thought sounding explanation” with verified causal mechanism.
+Do not equate “chain-of-thought sounding explanation” with verified nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘).
 
 ## Explanation Fidelity
 
-An explanation should match actual model behavior. Evaluate by perturbing allegedly important features or measuring surrogate fidelity.
+An explanation should match actual mô hình (model / 모델) hành vi (behavior / 동작). Evaluate by perturbing allegedly important features or measuring surrogate fidelity.
 
 Human plausibility alone can be deceptive.
 
 ## Stability
 
-Similar inputs should often produce similar explanations if model behavior similar. Highly unstable explanations reduce trust.
+Similar inputs should often produce similar explanations if mô hình (model / 모델) hành vi (behavior / 동작) similar. Highly unstable explanations reduce trust.
 
 ## Explainability vs Privacy
 
-Detailed explanation can reveal sensitive features or model information. Need balance transparency with security/privacy.
+Detailed explanation can reveal sensitive features or mô hình (model / 모델) thông tin (information / 정보). Need balance transparency with bảo mật (security / 보안)/privacy.
 
 ## Explainability vs Fairness
 
@@ -170,33 +173,35 @@ Explanation can reveal protected attribute influence or proxies, but absence in 
 
 ## Regulatory/Operational Use
 
-Some domains require reason codes or contestability. Choose model/explanation architecture that can meet these requirements rather than bolting explanation on later.
+Some domains require reason codes or contestability. Choose mô hình (model / 모델)/explanation kiến trúc (architecture / 아키텍처) that can meet these requirements rather than bolting explanation on later.
 
 ## Human Factors
 
-Explanations can cause automation bias if presented with false authority. Interface should communicate limitations and uncertainty.
+Explanations can cause automation độ lệch (bias / 편향) if presented with false authority. giao diện (interface / 인터페이스) should communicate limitations and bất định (uncertainty / 불확실성).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Explanation is another model/measurement of behavior.
 It must itself be validated for fidelity and usefulness.
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “SHAP cho biết nguyên nhân”
 
-SHAP explains model prediction contributions under assumptions, not real-world causality.
+SHAP explains mô hình (model / 모델) prediction contributions under các giả định (assumptions / 가정들), not real-world causality.
 
-### “Model đưa rationale nghĩa đó là reasoning thật”
+### “mô hình (model / 모델) đưa rationale nghĩa đó là lập luận (reasoning / 추론) thật”
 
 Generated rationale may be post-hoc/unfaithful.
 
-### “Interpretable model luôn less accurate”
+### “Interpretable mô hình (model / 모델) luôn less accurate”
 
-Không universal; many tabular tasks simple models competitive and preferable.
+Không universal; many tabular tasks simple các mô hình (models / 모델들) competitive and preferable.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Linear Models](../04_machine_learning/05_linear_regression.md), [Neural Representations](../05_neural_networks/08_representation_learning.md), [Evaluation Foundations](./00_evaluation_foundations.md), [Ethics/Governance](../19_ai_safety_security_alignment/README.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

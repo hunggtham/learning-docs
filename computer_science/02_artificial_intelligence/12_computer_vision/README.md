@@ -1,6 +1,9 @@
 # Computer Vision — Reading Map
 
-Folder này xây Computer Vision từ bản chất image là measurement tensor, đi qua signal/image processing, hand-designed và learned features, CNN, các task spatial, rồi Vision Transformer và visual foundation models.
+> **Mạch đọc:** Đọc **Computer Vision — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này xây Computer Vision từ bản chất ảnh (image / 이미지) là đo lường (measurement / 측정) tensor, đi qua tín hiệu (signal / 신호)/xử lý ảnh (image processing / 이미지 처리), hand-designed và learned features, CNN, các tác vụ (task / 작업) spatial, rồi Vision Transformer và visual foundation các mô hình (models / 모델들).
 
 ```mermaid
 flowchart TD
@@ -29,7 +32,10 @@ flowchart TD
 - [07 — Vision Transformers](./07_vision_transformers.md)
 - [08 — Modern Visual Representation](./08_modern_visual_representation.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 ```text
 Image ≠ world itself
@@ -44,7 +50,10 @@ ViT ≠ Automatically Better Than CNN
 Foundation Model ≠ Domain Validation No Longer Needed
 ```
 
-## Mental Model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Physical scene
@@ -55,7 +64,10 @@ Physical scene
 → task output
 ```
 
-Computer Vision luôn là inverse problem: infer hidden scene structure từ finite 2D/3D measurements chịu noise, viewpoint và sensor limitations.
+Computer Vision luôn là inverse bài toán (problem / 문제): infer hidden scene cấu trúc (structure / 구조) từ finite 2D/3D measurements chịu noise, viewpoint và sensor limitations.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Connections
 
@@ -67,4 +79,6 @@ Nên liên hệ với:
 - [Transformer](../06_deep_learning_architectures/05_transformer.md)
 - [Representation Learning](../05_neural_networks/08_representation_learning.md)
 
-Layer tiếp theo `13_speech_audio_and_multimodal/` sẽ mở rộng perception sang time-frequency audio và cách vision/audio representations kết nối với language models.
+Tầng (layer / 계층) tiếp theo `13_speech_audio_and_multimodal/` sẽ mở rộng perception sang time-frequency audio và cách vision/audio representations kết nối với ngôn ngữ (language / 언어) các mô hình (models / 모델들).
+
+> **Bàn giao:** Sau **Connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 images as data](./00_images_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

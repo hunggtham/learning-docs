@@ -1,10 +1,13 @@
 # Caching và Batching trong hệ thống AI
 
+> **Mạch đọc:** Đặt **Caching và Batching trong hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Caching ở nhiều lớp** sang **bộ nhớ đệm (cache / 캐시) Key**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Caching và batching đều là kỹ thuật giúp giảm chi phí hoặc độ trễ, nhưng chúng giải quyết hai vấn đề khác nhau. **Bộ nhớ đệm (caching / 캐싱)** tái sử dụng kết quả tính toán đã có. **Gom lô (batching / 배칭)** gom nhiều phép tính mới để phần cứng xử lý hiệu quả hơn.
 
 ## Caching ở nhiều lớp
 
-Một hệ thống AI có thể cache:
+Một hệ thống AI có thể bộ nhớ đệm (cache / 캐시):
 
 ```text
 raw API response
@@ -17,13 +20,13 @@ KV cache
 tool result
 ```
 
-Không tồn tại một “AI cache” duy nhất. Mỗi lớp có cache key, TTL và consistency semantics riêng.
+Không tồn tại một “AI bộ nhớ đệm (cache / 캐시)” duy nhất. Mỗi lớp có bộ nhớ đệm (cache / 캐시) key, TTL và consistency ngữ nghĩa (semantics / 의미론) riêng.
 
-## Cache Key
+## Bộ nhớ đệm (cache / 캐시) Key
 
-Cache chỉ đúng khi key phản ánh đầy đủ mọi input có thể ảnh hưởng output.
+Bộ nhớ đệm (cache / 캐시) chỉ đúng khi key phản ánh đầy đủ mọi đầu vào (input / 입력) có thể ảnh hưởng đầu ra (output / 출력).
 
-Ví dụ một cache cho phản hồi LLM có thể cần:
+Ví dụ một bộ nhớ đệm (cache / 캐시) cho phản hồi LLM có thể cần:
 
 ```text
 model version
@@ -34,77 +37,77 @@ sampling parameters
 tool state
 ```
 
-Nếu bỏ `model version`, sau khi rollout model mới hệ thống vẫn có thể trả kết quả cũ từ cache.
+Nếu bỏ `model version`, sau khi rollout mô hình (model / 모델) mới hệ thống vẫn có thể trả kết quả cũ từ bộ nhớ đệm (cache / 캐시).
 
-## Exact Cache và Semantic Cache
+## Chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시) và ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시)
 
-**Exact cache** chỉ reuse khi key khớp chính xác.
+**chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시)** chỉ reuse khi key khớp chính xác.
 
-**Semantic cache** dùng embedding similarity để reuse câu trả lời cho query “gần nghĩa”. Cách này giảm cost nhưng có rủi ro cao hơn vì similarity không đồng nghĩa semantic equivalence.
+**ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시)** dùng embedding similarity để reuse câu trả lời cho truy vấn (query / 쿼리) “gần nghĩa”. Cách này giảm chi phí (cost / 비용) nhưng có rủi ro cao hơn vì similarity không đồng nghĩa ngữ nghĩa (semantic / 의미적) equivalence.
 
-Với tác vụ rủi ro cao, semantic cache cần threshold, domain constraint và validation rõ ràng.
+Với tác vụ rủi ro cao, ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) cần threshold, lĩnh vực (domain / 도메인) ràng buộc (constraint / 제약조건) và kiểm tra hợp lệ (validation / 검증) rõ ràng.
 
-## TTL và Invalidation
+## TTL và vô hiệu hóa (invalidation / 무효화)
 
-Cache invalidation khó vì kiến thức bên ngoài luôn thay đổi. RAG retrieval cache cần được invalidate khi corpus hoặc index update. Tool/API cache cũng cần freshness policy riêng.
+Bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화) khó vì kiến thức bên ngoài luôn thay đổi. RAG retrieval bộ nhớ đệm (cache / 캐시) cần được invalidate khi corpus hoặc chỉ mục (index / 인덱스) cập nhật (update / 업데이트). công cụ (tool / 도구)/API bộ nhớ đệm (cache / 캐시) cũng cần freshness chính sách (policy / 정책) riêng.
 
 TTL nên phụ thuộc độ biến động của dữ liệu, không nên dùng một con số chung cho toàn hệ thống.
 
-## KV Cache
+## KV bộ nhớ đệm (cache / 캐시)
 
-Trong autoregressive Transformer, token mới cần attention tới các token trước. **KV cache** lưu Key/Value của các layer/token đã xử lý để tránh tính lại toàn bộ prefix.
+Trong autoregressive Transformer, đơn vị từ (token / 토큰) mới cần attention tới các đơn vị từ (token / 토큰) trước. **KV bộ nhớ đệm (cache / 캐시)** lưu Key/giá trị (value / 값) của các tầng (layer / 계층)/đơn vị từ (token / 토큰) đã xử lý để tránh tính lại toàn bộ prefix.
 
-Chi phí memory xấp xỉ tăng theo:
+Chi phí bộ nhớ (memory / 메모리) xấp xỉ tăng theo:
 
 ```text
 layers × sequence length × hidden/head dimensions × precision × concurrent sequences
 ```
 
-Long context có thể làm KV cache trở thành bottleneck memory chính.
+Long ngữ cảnh (context / 맥락) có thể làm KV bộ nhớ đệm (cache / 캐시) trở thành bottleneck bộ nhớ (memory / 메모리) chính.
 
 Paged hoặc block-based KV management giúp giảm fragmentation và hỗ trợ continuous batching hiệu quả hơn.
 
 ## Prefix Caching
 
-Nếu nhiều request dùng chung một prefix lớn, ví dụ system prompt hoặc document context giống nhau, computation ở bước prefill có thể tái sử dụng.
+Nếu nhiều yêu cầu (request / 요청) dùng chung một prefix lớn, ví dụ hệ thống (system / 시스템) prompt hoặc document ngữ cảnh (context / 맥락) giống nhau, computation ở bước prefill có thể tái sử dụng.
 
-Lợi ích lớn nhất khi shared prefix dài. Tuy nhiên cache key phải khớp model, tokenizer và positional semantics.
+Lợi ích lớn nhất khi dùng chung (shared / 공유) prefix dài. Tuy nhiên bộ nhớ đệm (cache / 캐시) key phải khớp mô hình (model / 모델), tokenizer và positional ngữ nghĩa (semantics / 의미론).
 
 ## Batching
 
-Các dense accelerator kernel hoạt động hiệu quả hơn với matrix lớn. Batch size lớn giúp tăng hardware utilization nhưng đồng thời tăng queue wait và memory usage.
+Các dense accelerator kernel hoạt động hiệu quả hơn với ma trận (matrix / 행렬) lớn. Batch kích thước (size / 크기) lớn giúp tăng hardware utilization nhưng đồng thời tăng hàng đợi (queue / 큐) wait và bộ nhớ (memory / 메모리) usage.
 
-Offline training có thể dùng batch lớn. Online inference thường cần dynamic batching.
+Offline huấn luyện (training / 학습) có thể dùng batch lớn. Online suy luận (inference / 추론) thường cần động (dynamic / 동적) batching.
 
-## Dynamic Batching
+## Động (dynamic / 동적) Batching
 
-Server có thể chờ một khoảng rất ngắn để gom nhiều request thành một batch. Trade-off:
+Máy chủ (server / 서버) có thể chờ một khoảng rất ngắn để gom nhiều yêu cầu (request / 요청) thành một batch. sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 chờ lâu hơn → batch lớn hơn → throughput tốt hơn
 chờ ngắn hơn → latency tốt hơn → utilization thấp hơn
 ```
 
-Không có một batch size tối ưu cho mọi hệ thống.
+Không có một batch kích thước (size / 크기) tối ưu cho mọi hệ thống.
 
 ## Continuous Batching cho LLM
 
-Batching truyền thống thường yêu cầu các sequence tiến cùng nhịp. LLM có output length khác nhau nên dễ lãng phí padding và idle slot.
+Batching truyền thống thường yêu cầu các chuỗi (sequence / 시퀀스) tiến cùng nhịp. LLM có đầu ra (output / 출력) length khác nhau nên dễ lãng phí padding và idle slot.
 
-**Continuous batching** cho phép sequence hoàn thành rời khỏi batch và request mới được đưa vào scheduler ngay khi có chỗ.
+**Continuous batching** cho phép chuỗi (sequence / 시퀀스) hoàn thành rời khỏi batch và yêu cầu (request / 요청) mới được đưa vào scheduler ngay khi có chỗ.
 
 Scheduler cần quản lý:
 
 - prefill và decode;
-- KV memory;
+- KV bộ nhớ (memory / 메모리);
 - priority;
 - fairness;
-- max token;
+- max đơn vị từ (token / 토큰);
 - cancellation.
 
-## Microbatching trong Training
+## Microbatching trong huấn luyện (training / 학습)
 
-Khi GPU memory không đủ cho một batch lớn, gradient accumulation chia logical batch thành nhiều microbatch:
+Khi GPU bộ nhớ (memory / 메모리) không đủ cho một batch lớn, độ dốc (gradient / 기울기) accumulation chia logical batch thành nhiều microbatch:
 
 ```text
 microbatch 1 → accumulate gradient
@@ -113,17 +116,17 @@ microbatch 2 → accumulate gradient
 optimizer step
 ```
 
-Effective batch size lớn hơn physical batch size.
+Effective batch kích thước (size / 크기) lớn hơn vật lý (physical / 물리적) batch kích thước (size / 크기).
 
-## Request Coalescing
+## Yêu cầu (request / 요청) Coalescing
 
-Nếu nhiều client cùng yêu cầu một phép tính đắt tiền giống hệt nhau trong cùng thời điểm, hệ thống có thể gộp thành một in-flight request thay vì chạy nhiều bản trùng lặp.
+Nếu nhiều máy khách (client / 클라이언트) cùng yêu cầu một phép tính đắt tiền giống hệt nhau trong cùng thời điểm, hệ thống có thể gộp thành một in-flight yêu cầu (request / 요청) thay vì chạy nhiều bản trùng lặp.
 
-## Rủi ro chất lượng do Cache
+## Rủi ro chất lượng do bộ nhớ đệm (cache / 캐시)
 
-Caching có thể giữ nguyên lỗi cũ. Một câu trả lời hallucination nếu bị cache có thể trở thành hallucination lặp lại nhiều lần. Vì vậy cache policy nên phân biệt output xác định và ổn định với output cần freshness hoặc verification.
+Caching có thể giữ nguyên lỗi cũ. Một câu trả lời hallucination nếu bị bộ nhớ đệm (cache / 캐시) có thể trở thành hallucination lặp lại nhiều lần. Vì vậy bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) nên phân biệt đầu ra (output / 출력) xác định và ổn định với đầu ra (output / 출력) cần freshness hoặc xác minh (verification / 확인).
 
-## Observability
+## Khả năng quan sát (observability / 관측 가능성)
 
 Nên theo dõi:
 
@@ -138,7 +141,7 @@ tokens/sec
 memory utilization
 ```
 
-Hit rate cao nhưng stale result nhiều không phải là thành công.
+Hit tỷ lệ (rate / 비율) cao nhưng stale kết quả (result / 결과) nhiều không phải là thành công.
 
 ## Mô hình tư duy
 
@@ -149,18 +152,20 @@ Batching = làm công việc bắt buộc phải làm hiệu quả hơn
 
 ## Những nhầm lẫn thường gặp
 
-### “Cache càng nhiều càng tốt”
+### “bộ nhớ đệm (cache / 캐시) càng nhiều càng tốt”
 
-Không. Cache làm tăng complexity, invalidation risk và memory footprint.
+Không. bộ nhớ đệm (cache / 캐시) làm tăng độ phức tạp (complexity / 복잡도), vô hiệu hóa (invalidation / 무효화) rủi ro (risk / 위험) và bộ nhớ (memory / 메모리) footprint.
 
-### “Batch size càng lớn thì càng nhanh”
+### “Batch kích thước (size / 크기) càng lớn thì càng nhanh”
 
-Không. Throughput có thể tăng nhưng online latency và tail latency có thể xấu đi.
+Không. thông lượng (throughput / 처리량) có thể tăng nhưng online độ trễ (latency / 지연 시간) và tail độ trễ (latency / 지연 시간) có thể xấu đi.
 
-### “Semantic cache giống exact cache”
+### “ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) giống chính xác (exact / 정확한) bộ nhớ đệm (cache / 캐시)”
 
-Không. Semantic cache thêm một bước learned similarity judgment nên có rủi ro chất lượng riêng.
+Không. ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) thêm một bước learned similarity judgment nên có rủi ro chất lượng riêng.
 
 ## Liên kết kiến thức
 
 Xem [Model Serving](./03_model_serving.md), [Latency, Throughput and Cost](./09_latency_throughput_and_cost.md), [RAG](../09_retrieval_and_rag/README.md) và [Transformer trong LLM](../08_large_language_models/03_transformer_inside_llms.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

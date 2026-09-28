@@ -1,5 +1,8 @@
 # R&D, giáo dục và vốn con người trong nền kinh tế Hàn Quốc (Innovation, R&D & Human Capital / 연구개발·교육·인적자본)
 
+> **Mạch đọc:** Đặt **R&D, giáo dục và vốn con người trong nền kinh tế Hàn Quốc (Innovation, R&D & Human Capital / 연구개발·교육·인적자본)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vốn con người là một dạng vốn** sang **Từ bắt chước sang đổi mới ở biên công nghệ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hàn Quốc không thể duy trì mức sống cao chỉ bằng cách sản xuất ngày càng nhiều cùng một loại sản phẩm. Khi lương tăng và đối thủ bắt kịp, lợi thế phải chuyển từ **tích lũy yếu tố sản xuất (factor accumulation)** sang **tăng trưởng dựa trên đổi mới (innovation-driven growth)**: công nghệ, phần mềm, thiết kế, thương hiệu, IP, bí quyết quy trình và năng lực tổ chức.
 
 Trong giai đoạn bắt kịp, một quốc gia có thể tăng nhanh bằng cách nhập máy móc, học công nghệ đã tồn tại và chuyển lao động từ khu vực năng suất thấp sang sản xuất. Khi tiến gần **biên công nghệ (technology frontier / 기술 프런티어)**, khoảng trống để sao chép giảm dần. Tăng trưởng ngày càng phụ thuộc vào khả năng **tự tạo tri thức và thương mại hóa tri thức đó**.
@@ -134,7 +137,7 @@ Sản xuất tiên tiến cần kỹ sư quy trình, kỹ thuật viên, bảo t
 
 ## Học lại giữa sự nghiệp ngày càng quan trọng
 
-Vốn con người không chỉ được hình thành trước tuổi 25. Khi AI, tự động hóa và stack phần mềm thay đổi nhanh, kỹ năng cũng có thể mất giá.
+Vốn con người không chỉ được hình thành trước tuổi 25. Khi AI, tự động hóa và ngăn xếp (stack / 스택) phần mềm thay đổi nhanh, kỹ năng cũng có thể mất giá.
 
 Có thể nghĩ:
 
@@ -146,7 +149,7 @@ Nếu tốc độ học chậm hơn tốc độ công nghệ thay đổi, ngư�
 
 ## Tri thức ngầm và vai trò của kỹ sư giàu kinh nghiệm
 
-Không phải mọi tri thức đều có thể viết thành manual. **Tri thức ngầm (tacit knowledge / 암묵지)** là những hiểu biết khó diễn đạt hoàn toàn: biết máy nào “có dấu hiệu bất thường”, khách hàng nào nhạy với lỗi nào, hệ thống nào có dependency không được ghi lại.
+Không phải mọi tri thức đều có thể viết thành manual. **Tri thức ngầm (tacit knowledge / 암묵지)** là những hiểu biết khó diễn đạt hoàn toàn: biết máy nào “có dấu hiệu bất thường”, khách hàng nào nhạy với lỗi nào, hệ thống nào có phụ thuộc (dependency / 의존성) không được ghi lại.
 
 Khi nhân sự giàu kinh nghiệm rời đi, năng suất có thể giảm dù số lượng nhân viên không đổi. Vì vậy kế hoạch kế nhiệm và quản lý tri thức đặc biệt quan trọng trong xã hội già hóa.
 
@@ -162,13 +165,13 @@ Tuyển kỹ sư nước ngoài nhưng hệ thống thăng tiến, giao tiếp v
 
 ## AI thay đổi cấu trúc vốn con người
 
-AI có thể tự động hóa lập trình lặp lại, dịch, rà tài liệu, tìm kiếm và phân tích cơ bản. Nhưng giá trị con người chuyển nhiều hơn sang đặt đúng vấn đề, thiết kế hệ thống, hiểu domain, đánh giá rủi ro, kiểm chứng đầu ra và chịu trách nhiệm quyết định.
+AI có thể tự động hóa lập trình lặp lại, dịch, rà tài liệu, tìm kiếm và phân tích cơ bản. Nhưng giá trị con người chuyển nhiều hơn sang đặt đúng vấn đề, thiết kế hệ thống, hiểu lĩnh vực (domain / 도메인), đánh giá rủi ro, kiểm chứng đầu ra và chịu trách nhiệm quyết định.
 
 Đối với lập trình viên, AI không làm kiến trúc, bảo mật, ngữ cảnh nghiệp vụ và trách nhiệm biến mất. Nó làm phần triển khai lặp lại rẻ hơn và do đó làm **tư duy cấp cao** trở nên có giá trị hơn.
 
 ## Khoảng cách áp dụng AI có thể làm dualism rộng hơn
 
-Doanh nghiệp lớn thường có hạ tầng dữ liệu, đội bảo mật và ngân sách để triển khai AI sớm. SME có thể truy cập cùng model qua cloud nhưng thiếu dữ liệu sạch và tích hợp quy trình.
+Doanh nghiệp lớn thường có hạ tầng dữ liệu, đội bảo mật và ngân sách để triển khai AI sớm. SME có thể truy cập cùng mô hình (model / 모델) qua cloud nhưng thiếu dữ liệu sạch và tích hợp quy trình.
 
 Nếu khoảng cách hấp thụ công nghệ lớn, AI có thể làm khoảng cách năng suất rộng hơn thay vì tự động dân chủ hóa công nghệ.
 
@@ -178,13 +181,13 @@ Nếu khoảng cách hấp thụ công nghệ lớn, AI có thể làm khoảng 
 
 **Bằng sáng chế (patent / 특허)** đổi việc công khai phát minh lấy quyền độc quyền có thời hạn. **Bí mật thương mại (trade secret / 영업비밀)** giữ kiến thức trong nội bộ nhưng không ngăn người khác tự phát hiện độc lập. **Bản quyền (copyright / 저작권)** quan trọng với phần mềm và nội dung. **Nhãn hiệu (trademark / 상표)** bảo vệ nhận diện thương hiệu.
 
-Mỗi ngành có logic IP khác nhau. Bán dẫn dựa nhiều vào bí mật quy trình; pharma dựa mạnh vào patent và độc quyền pháp quy; giải trí dựa vào copyright và licensing; nền tảng có thể dựa vào network effect và dữ liệu hơn là số bằng sáng chế.
+Mỗi ngành có lô-gic (logic / 논리) IP khác nhau. Bán dẫn dựa nhiều vào bí mật quy trình; pharma dựa mạnh vào patent và độc quyền pháp quy; giải trí dựa vào copyright và licensing; nền tảng có thể dựa vào mạng (network / 네트워크) tác động (effect / 효과) và dữ liệu hơn là số bằng sáng chế.
 
 Vì vậy đếm patent không phải thước đo đổi mới phổ quát.
 
 ## Tiêu chuẩn công nghiệp có thể trở thành lợi thế cạnh tranh
 
-Ở ngành tiên tiến, lợi thế không chỉ nằm ở bằng sáng chế mà còn ở **tiêu chuẩn (standard)**. Nếu công nghệ của một công ty trở thành một phần tiêu chuẩn ngành, cả hệ sinh thái phải xây sản phẩm tương thích với nó.
+Ở ngành tiên tiến, lợi thế không chỉ nằm ở bằng sáng chế mà còn ở **tiêu chuẩn (standard / 표준)**. Nếu công nghệ của một công ty trở thành một phần tiêu chuẩn ngành, cả hệ sinh thái phải xây sản phẩm tương thích với nó.
 
 Viễn thông, sạc xe điện, giao diện chip, giao thức phần mềm và tiêu chuẩn an toàn đều có kinh tế của tiêu chuẩn. Tham gia xây tiêu chuẩn giúp doanh nghiệp nhìn hướng công nghệ sớm và có ảnh hưởng đến tính tương thích của thị trường.
 
@@ -212,7 +215,7 @@ Nếu công ty có nhiều tiền nhưng cơ hội R&D yếu, giữ chi tiêu ca
 
 Vì vậy chiến lược đổi mới là **phân bổ vốn dưới bất định (capital allocation under uncertainty)**.
 
-## Đổi mới và khả năng scale là hai năng lực khác nhau
+## Đổi mới và khả năng quy mô (scale / 규모) là hai năng lực khác nhau
 
 Startup có thể phát minh sản phẩm tốt nhưng nếu bán hàng, tuyển dụng, compliance, sản xuất và quản lý tiền mặt không mở rộng được, tăng trưởng vẫn dừng lại.
 
@@ -220,7 +223,7 @@ Hàn Quốc muốn tạo thêm doanh nghiệp trung bình có khả năng toàn 
 
 Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md) và [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md).
 
-## Đo đổi mới bằng chuỗi input → output → kết quả thương mại
+## Đo đổi mới bằng chuỗi đầu vào (input / 입력) → đầu ra (output / 출력) → kết quả thương mại
 
 Một dashboard tốt không chỉ hỏi “R&D bao nhiêu” mà nối cả chuỗi:
 
@@ -255,7 +258,7 @@ Doanh nghiệp lớn
 
 Vì vậy chính sách năng suất SME phải giải cả vấn đề vốn lẫn khả năng thu hút người giỏi.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Đổi mới là quá trình **biến tri thức thành năng lực thương mại**. R&D tạo lựa chọn; vốn con người biến công nghệ thành thực thi; tổ chức giúp năng lực đó mở rộng; thị trường quyết định cuối cùng nó có tạo tiền hay không.
 
@@ -275,8 +278,10 @@ Tái đầu tư vào tri thức mới
 
 ## Những nhầm lẫn thường gặp
 
-Chi nhiều R&D không tự động nghĩa đổi mới tốt. Nhiều bằng sáng chế không tự động tạo moat. Bằng cấp cao không đồng nghĩa năng suất cao nếu kỹ năng không phù hợp công việc. AI không tự thay thế nhu cầu phán đoán và hiểu domain. Tuyển nhân tài toàn cầu cũng không giúp nếu tổ chức không trao quyền và hấp thụ được kiến thức của họ.
+Chi nhiều R&D không tự động nghĩa đổi mới tốt. Nhiều bằng sáng chế không tự động tạo moat. Bằng cấp cao không đồng nghĩa năng suất cao nếu kỹ năng không phù hợp công việc. AI không tự thay thế nhu cầu phán đoán và hiểu lĩnh vực (domain / 도메인). Tuyển nhân tài toàn cầu cũng không giúp nếu tổ chức không trao quyền và hấp thụ được kiến thức của họ.
 
 ## Liên kết
 
 Đọc cùng [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

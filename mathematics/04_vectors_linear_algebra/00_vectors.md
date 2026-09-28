@@ -1,16 +1,18 @@
-# Vector: state, direction, projection và representation
+# Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)
 
-Vector (벡터 / vector) thường được dạy như “mũi tên có độ lớn và hướng”, nhưng đó chỉ là trực giác hình học đầu tiên. Về bản chất, vector là một object có thể cộng với vector khác và scale bởi scalar theo rules nhất quán. Vì vậy vector có thể biểu diễn displacement, velocity, force, signal, feature embedding, portfolio exposure hoặc state trong một không gian nhiều chiều.
+> **Mạch đọc:** Đọc **véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Scalar và véc-tơ (vector / 벡터) khác nhau ở loại câu hỏi nào?** sang **2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Véc-tơ (vector / 벡터) thường được dạy như “mũi tên có độ lớn và hướng”, nhưng đó chỉ là trực giác hình học đầu tiên. Về bản chất, véc-tơ (vector / 벡터) là một đối tượng (object / 객체) có thể cộng với véc-tơ (vector / 벡터) khác và quy mô (scale / 규모) bởi scalar theo rules nhất quán. Vì vậy véc-tơ (vector / 벡터) có thể biểu diễn displacement, velocity, force, tín hiệu (signal / 신호), tính năng (feature / 기능) embedding, portfolio exposure hoặc trạng thái (state / 상태) trong một không gian nhiều chiều.
 
 Cách nhìn quan trọng là:
 
-> vector không chỉ là list numbers; list numbers là coordinates của vector trong một basis đã chọn.
+> véc-tơ (vector / 벡터) không chỉ là danh sách (list / 목록) numbers; danh sách (list / 목록) numbers là coordinates của véc-tơ (vector / 벡터) trong một basis đã chọn.
 
-## 1. Scalar và vector khác nhau ở loại câu hỏi nào?
+## 1. Scalar và véc-tơ (vector / 벡터) khác nhau ở loại câu hỏi nào?
 
 Scalar (스칼라 / scalar) mô tả một quantity bằng một number, ví dụ temperature `25°C` hoặc mass `3 kg`.
 
-Vector cần nhiều components vì quantity có nhiều degrees of freedom:
+Véc-tơ (vector / 벡터) cần nhiều components vì quantity có nhiều degrees of freedom:
 
 ```math
 v=
@@ -19,11 +21,11 @@ v_1\\v_2\\\vdots\\v_n
 \end{bmatrix}.
 ```
 
-Trong 2D, `v=(3,4)` có thể là displacement. Trong ML, vector có thể có hàng nghìn dimensions mà không cần “mũi tên” literal.
+Trong 2D, `v=(3,4)` có thể là displacement. Trong ML, véc-tơ (vector / 벡터) có thể có hàng nghìn dimensions mà không cần “mũi tên” literal.
 
-## 2. Point và vector không phải cùng object
+## 2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)
 
-Point là location. Vector là displacement/direction/state increment.
+Điểm (point / 지점) là location. véc-tơ (vector / 벡터) là displacement/direction/trạng thái (state / 상태) increment.
 
 Nếu
 
@@ -37,19 +39,19 @@ thì
 Q-P=(3,4)
 ```
 
-là vector displacement từ `P` tới `Q`.
+là véc-tơ (vector / 벡터) displacement từ `P` tới `Q`.
 
-Ta có thể cộng vector vào point:
+Ta có thể cộng véc-tơ (vector / 벡터) vào điểm (point / 지점):
 
 ```math
 P+v=Q.
 ```
 
-Nhưng coordinates có thể làm point và vector trông giống nhau. Phân biệt semantics này quan trọng trong affine geometry, graphics và mechanics.
+Nhưng coordinates có thể làm điểm (point / 지점) và véc-tơ (vector / 벡터) trông giống nhau. Phân biệt ngữ nghĩa (semantics / 의미론) này quan trọng trong affine hình học (geometry / 기하학), graphics và mechanics.
 
-## 3. Vector addition là composition của displacements
+## 3. véc-tơ (vector / 벡터) addition là composition của displacements
 
-Nếu đi vector `u`, rồi vector `v`, net displacement là
+Nếu đi véc-tơ (vector / 벡터) `u`, rồi véc-tơ (vector / 벡터) `v`, net displacement là
 
 ```math
 u+v.
@@ -61,9 +63,9 @@ Theo components:
 (a,b)+(c,d)=(a+c,b+d).
 ```
 
-Geometric parallelogram rule và componentwise addition là cùng một operation được nhìn dưới hai representations.
+Geometric parallelogram quy tắc (rule / 규칙) và componentwise addition là cùng một thao tác (operation / 연산) được nhìn dưới hai representations.
 
-Addition commutative trong ordinary vector spaces:
+Addition commutative trong ordinary véc-tơ (vector / 벡터) spaces:
 
 ```math
 u+v=v+u.
@@ -71,25 +73,25 @@ u+v=v+u.
 
 Nhưng composition của transformations sau này không nhất thiết commutative. Đây là distinction quan trọng.
 
-## 4. Scalar multiplication là scale direction
+## 4. Scalar multiplication là quy mô (scale / 규모) direction
 
 ```math
 kv
 ```
 
-scale magnitude bởi `|k|`.
+Quy mô (scale / 규모) magnitude bởi `|k|`.
 
-Nếu `k>0`, direction giữ nguyên. Nếu `k<0`, direction đảo. Nếu `k=0`, mọi vector collapse về zero vector.
+Nếu `k>0`, direction giữ nguyên. Nếu `k<0`, direction đảo. Nếu `k=0`, mọi véc-tơ (vector / 벡터) collapse về zero véc-tơ (vector / 벡터).
 
-Linear combination
+Tuyến tính (linear / 선형) combination
 
 ```math
 a_1v_1+\cdots+a_kv_k
 ```
 
-là operation nền phía sau span, basis, matrix multiplication và linear models.
+là thao tác (operation / 연산) nền phía sau span, basis, phép nhân ma trận (matrix multiplication / 행렬 곱셈) và tuyến tính (linear / 선형) các mô hình (models / 모델들).
 
-## 5. Norm: vector dài bao nhiêu?
+## 5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?
 
 Euclidean norm:
 
@@ -98,15 +100,15 @@ Euclidean norm:
 =\sqrt{v_1^2+\cdots+v_n^2}.
 ```
 
-Trong 2D/3D, formula đến từ Pythagoras. Nó đo distance từ origin trong Euclidean geometry.
+Trong 2D/3D, formula đến từ Pythagoras. Nó đo distance từ origin trong Euclidean hình học (geometry / 기하학).
 
-Unit vector:
+Đơn vị (unit / 단위) véc-tơ (vector / 벡터):
 
 ```math
 \hat v=\frac{v}{\|v\|},\qquad v\ne0.
 ```
 
-Tách vector thành
+Tách véc-tơ (vector / 벡터) thành
 
 ```math
 v=\|v\|\hat v.
@@ -128,11 +130,11 @@ L-infinity norm:
 \|v\|_\infty=\max_i|v_i|.
 ```
 
-Mỗi norm tạo geometry khác nhau. Trong optimization và ML, choice of norm encode different assumptions và penalties.
+Mỗi norm tạo hình học (geometry / 기하학) khác nhau. Trong tối ưu hóa (optimization / 최적화) và ML, choice of norm encode different các giả định (assumptions / 가정들) và penalties.
 
-## 6. Dot product là measure của alignment
+## 6. Dot sản phẩm (product / 제품) là measure của alignment
 
-Dot product (내적 / inner product trong Euclidean coordinates):
+Dot sản phẩm (product / 제품):
 
 ```math
 u\cdot v=\sum_i u_iv_i.
@@ -151,9 +153,9 @@ Do đó:
 - zero → orthogonal;
 - negative → broadly opposite.
 
-Dot product không chỉ là arithmetic formula; nó nối coordinates với angle geometry.
+Dot sản phẩm (product / 제품) không chỉ là arithmetic formula; nó nối coordinates với angle hình học (geometry / 기하학).
 
-## 7. Vì sao dot product có form đó?
+## 7. Vì sao dot sản phẩm (product / 제품) có form đó?
 
 Từ
 
@@ -182,9 +184,9 @@ nên
 u\cdot v=\|u\|\|v\|\cos\theta.
 ```
 
-Dot product vì vậy encode angle geometry của Euclidean space.
+Dot sản phẩm (product / 제품) vì vậy encode angle hình học (geometry / 기하학) của Euclidean không gian (space / 공간).
 
-## 8. Projection: tách vector thành useful component và residual
+## 8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual
 
 Projection của `v` lên nonzero `u`:
 
@@ -200,7 +202,7 @@ Coefficient
 \frac{v\cdot u}{u\cdot u}
 ```
 
-cho biết cần bao nhiêu `u` để tạo component của `v` dọc direction `u`.
+cho biết cần bao nhiêu `u` để tạo thành phần (component / 컴포넌트) của `v` dọc direction `u`.
 
 Residual
 
@@ -210,7 +212,7 @@ r=v-\operatorname{proj}_u v
 
 orthogonal với `u`.
 
-Đây là seed concept của least squares: tách target thành phần giải thích được bởi subspace và phần residual vuông góc.
+Đây là seed concept của least squares: tách mục tiêu (target / 대상) thành phần giải thích được bởi subspace và phần residual vuông góc.
 
 ## 9. Worked example: projection
 
@@ -242,11 +244,11 @@ Residual:
 (3,4)-(3,0)=(0,4).
 ```
 
-Một vector đã được decomposition thành component along `u` và orthogonal component.
+Một véc-tơ (vector / 벡터) đã được decomposition thành thành phần (component / 컴포넌트) along `u` và orthogonal thành phần (component / 컴포넌트).
 
-## 10. Cosine similarity: geometry của direction, không phải universal similarity
+## 10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity
 
-Normalized dot product:
+Normalized dot sản phẩm (product / 제품):
 
 ```math
 \cos\theta
@@ -256,19 +258,19 @@ Normalized dot product:
 
 Cosine similarity bỏ magnitude và so alignment.
 
-Trong embeddings, điều này hữu ích khi direction encode semantics. Nhưng high cosine similarity chỉ meaningful relative to chosen representation/model.
+Trong embeddings, điều này hữu ích khi direction encode ngữ nghĩa (semantics / 의미론). Nhưng high cosine similarity chỉ meaningful relative to chosen biểu diễn (representation / 표현)/mô hình (model / 모델).
 
-Nếu embedding space distorted hoặc feature meanings khác nhau, cosine không tự động trở thành “semantic truth”.
+Nếu embedding không gian (space / 공간) distorted hoặc tính năng (feature / 기능) meanings khác nhau, cosine không tự động trở thành “ngữ nghĩa (semantic / 의미적) truth”.
 
-## 11. Cross product: oriented area trong 3D
+## 11. Cross sản phẩm (product / 제품): oriented area trong 3D
 
-Trong `\mathbb R^3`, cross product
+Trong `\mathbb R^3`, cross sản phẩm (product / 제품)
 
 ```math
 u\times v
 ```
 
-cho vector perpendicular với cả hai.
+cho véc-tơ (vector / 벡터) perpendicular với cả hai.
 
 Magnitude:
 
@@ -279,29 +281,29 @@ Magnitude:
 
 Đó là area của parallelogram span bởi `u,v`.
 
-Direction theo right-hand rule encode orientation.
+Direction theo right-hand quy tắc (rule / 규칙) encode orientation.
 
-Cross product xuất hiện trong torque, angular momentum, surface normals và graphics.
+Cross sản phẩm (product / 제품) xuất hiện trong torque, angular momentum, surface normals và graphics.
 
-## 12. Vector equation của line và plane
+## 12. véc-tơ (vector / 벡터) equation của line và plane
 
-Line qua point `P` direction `v`:
+Line qua điểm (point / 지점) `P` direction `v`:
 
 ```math
 L(t)=P+tv.
 ```
 
-Plane trong 3D có thể viết bằng point `P` và normal `n`:
+Plane trong 3D có thể viết bằng điểm (point / 지점) `P` và normal `n`:
 
 ```math
 n\cdot(x-P)=0.
 ```
 
-Vector notation làm geometry coordinate-free hơn slope formulas và generalize dễ hơn sang higher dimensions.
+Véc-tơ (vector / 벡터) notation làm hình học (geometry / 기하학) coordinate-free hơn slope formulas và generalize dễ hơn sang higher dimensions.
 
-## 13. Basis: coordinates phụ thuộc language đang dùng
+## 13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng
 
-Giả sử basis `e_1,e_2`. Vector
+Giả sử basis `e_1,e_2`. véc-tơ (vector / 벡터)
 
 ```math
 v=3e_1+4e_2
@@ -309,11 +311,11 @@ v=3e_1+4e_2
 
 có coordinates `(3,4)` trong basis đó.
 
-Nếu đổi basis, same vector có coordinates khác.
+Nếu đổi basis, same véc-tơ (vector / 벡터) có coordinates khác.
 
-Do đó statement như “vector này là `[3,4]`” thiếu context nếu basis/frame không implicit rõ.
+Do đó statement như “véc-tơ (vector / 벡터) này là `[3,4]`” thiếu ngữ cảnh (context / 맥락) nếu basis/frame không implicit rõ.
 
-Linear algebra sau này formalize basis change, eigenbasis và PCA theo cùng idea.
+Tuyến tính (linear / 선형) algebra sau này formalize basis thay đổi (change / 변경), eigenbasis và PCA theo cùng idea.
 
 ## 14. Matrix-vector multiplication là combination của columns
 
@@ -338,13 +340,13 @@ thì
 Ax=x_1a_1+\cdots+x_na_n.
 ```
 
-Matrix-vector product không chỉ là row-by-column algorithm; nó tạo một linear combination của output directions encoded bởi columns.
+Matrix-vector sản phẩm (product / 제품) không chỉ là row-by-column thuật toán (algorithm / 알고리즘); nó tạo một tuyến tính (linear / 선형) combination của đầu ra (output / 출력) directions encoded bởi columns.
 
-Điều này nối vectors trực tiếp với linear transformations.
+Điều này nối vectors trực tiếp với tuyến tính (linear / 선형) transformations.
 
-## 15. Physics: vectors là language của directional quantities
+## 15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities
 
-Displacement, velocity, acceleration, force và electric field đều cần direction.
+Displacement, velocity, acceleration, force và electric trường dữ liệu (field / 필드) đều cần direction.
 
 Newton's second law:
 
@@ -352,15 +354,15 @@ Newton's second law:
 F=ma
 ```
 
-là vector equation: direction của acceleration follow net force.
+là véc-tơ (vector / 벡터) equation: direction của acceleration follow net force.
 
-Work:
+Công việc (work / 작업):
 
 ```math
 W=F\cdot d
 ```
 
-chỉ lấy component force theo displacement direction.
+chỉ lấy thành phần (component / 컴포넌트) force theo displacement direction.
 
 Torque:
 
@@ -368,15 +370,15 @@ Torque:
 \tau=r\times F
 ```
 
-encode rotational effect.
+encode rotational tác động (effect / 효과).
 
-Dot/cross products vì vậy có physical meaning rõ, không chỉ formal operations.
+Dot/cross products vì vậy có vật lý (physical / 물리적) meaning rõ, không chỉ formal operations.
 
 ## 16. Computer Graphics
 
 Positions, normals, light directions và camera directions đều là vectors hoặc affine points.
 
-Surface normal `n` dùng dot product với light direction `l`:
+Surface normal `n` dùng dot sản phẩm (product / 제품) với light direction `l`:
 
 ```math
 \max(0,n\cdot l)
@@ -384,27 +386,27 @@ Surface normal `n` dùng dot product với light direction `l`:
 
 để approximate diffuse lighting.
 
-Normals còn transform khác positions dưới non-uniform scaling; đây là reminder rằng semantics của vector type matters.
+Normals còn transform khác positions dưới non-uniform scaling; đây là reminder rằng ngữ nghĩa (semantics / 의미론) của véc-tơ (vector / 벡터) kiểu (type / 타입) matters.
 
-## 17. AI/Data: feature vectors và representation assumptions
+## 17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)
 
-Data point:
+Dữ liệu (data / 데이터) điểm (point / 지점):
 
 ```math
 x=[x_1,\ldots,x_n]^T.
 ```
 
-Mỗi coordinate có semantics. Distance/dot product meaningful chỉ khi representation makes geometry meaningful.
+Mỗi coordinate có ngữ nghĩa (semantics / 의미론). Distance/dot sản phẩm (product / 제품) meaningful chỉ khi biểu diễn (representation / 표현) makes hình học (geometry / 기하학) meaningful.
 
-Feature scaling, whitening, embeddings và learned representations đều cố tạo geometry nơi vectors có useful relationships.
+Tính năng (feature / 기능) scaling, whitening, embeddings và learned representations đều cố tạo hình học (geometry / 기하학) nơi vectors có useful relationships.
 
-Neural network linear layer:
+Neural mạng (network / 네트워크) tuyến tính (linear / 선형) tầng (layer / 계층):
 
 ```math
 z=Wx+b
 ```
 
-biến input vector thành output vector qua affine map.
+biến đầu vào (input / 입력) véc-tơ (vector / 벡터) thành đầu ra (output / 출력) véc-tơ (vector / 벡터) qua affine map.
 
 ## 18. Finance: portfolio vectors
 
@@ -414,43 +416,45 @@ Portfolio weights:
 w=(w_1,\ldots,w_n)
 ```
 
-và asset return vector `r` cho portfolio return
+và asset return véc-tơ (vector / 벡터) `r` cho portfolio return
 
 ```math
 R_p=w^Tr.
 ```
 
-Đây là dot product.
+Đây là dot sản phẩm (product / 제품).
 
-Risk với covariance matrix `\Sigma`:
+Rủi ro (risk / 위험) với covariance ma trận (matrix / 행렬) `\Sigma`:
 
 ```math
 \operatorname{Var}(R_p)=w^T\Sigma w.
 ```
 
-Vector/matrix language làm portfolio theory trở thành geometry trong exposure space.
+Véc-tơ (vector / 벡터)/ma trận (matrix / 행렬) ngôn ngữ (language / 언어) làm portfolio lý thuyết (theory / 이론) trở thành hình học (geometry / 기하학) trong exposure không gian (space / 공간).
 
-## 19. High-dimensional geometry có thể counterintuitive
+## 19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive
 
 Trong high dimension:
 
 - distances có thể concentrate;
 - random vectors thường gần orthogonal;
-- volume behavior khác intuition 2D/3D;
+- volume hành vi (behavior / 동작) khác intuition 2D/3D;
 - raw nearest-neighbor distance có thể kém informative.
 
-Vì vậy vector representation powerful nhưng không nên kéo trực giác 2D sang high dimension một cách máy móc.
+Vì vậy véc-tơ (vector / 벡터) biểu diễn (representation / 표현) powerful nhưng không nên kéo trực giác 2D sang high dimension một cách máy móc.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Vector là một state/displacement được mô tả trong một basis. Norm hỏi “lớn bao nhiêu?”, dot product hỏi “align bao nhiêu?”, projection hỏi “bao nhiêu phần nằm theo direction/subspace này?”, còn matrices transform vectors sang representations/states mới.
+> véc-tơ (vector / 벡터) là một trạng thái (state / 상태)/displacement được mô tả trong một basis. Norm hỏi “lớn bao nhiêu?”, dot sản phẩm (product / 제품) hỏi “align bao nhiêu?”, projection hỏi “bao nhiêu phần nằm theo direction/subspace này?”, còn matrices transform vectors sang representations/states mới.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**Vector là list numbers.** List numbers chỉ là coordinates của vector trong basis cụ thể.
+**véc-tơ (vector / 벡터) là danh sách (list / 목록) numbers.** danh sách (list / 목록) numbers chỉ là coordinates của véc-tơ (vector / 벡터) trong basis cụ thể.
 
-**Point và vector interchangeable.** Chúng có thể có cùng tuple representation nhưng semantics khác.
+**điểm (point / 지점) và véc-tơ (vector / 벡터) interchangeable.** Chúng có thể có cùng tuple biểu diễn (representation / 표현) nhưng ngữ nghĩa (semantics / 의미론) khác.
 
-**Euclidean norm luôn là distance đúng.** Không; metric/norm phải match problem.
+**Euclidean norm luôn là distance đúng.** Không; chỉ số (metric / 지표)/norm phải match bài toán (problem / 문제).
 
-**Cosine similarity cao nghĩa objects giống nhau một cách tuyệt đối.** Không; nó chỉ nói vectors align trong chosen representation.
+**Cosine similarity cao nghĩa objects giống nhau một cách tuyệt đối.** Không; nó chỉ nói vectors align trong chosen biểu diễn (representation / 표현).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 matrices and linear systems](./01_matrices_and_linear_systems.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

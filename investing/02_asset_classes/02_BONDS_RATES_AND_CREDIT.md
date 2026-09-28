@@ -1,5 +1,8 @@
 # Trái phiếu, lãi suất và tín dụng
 
+> **Mạch đọc:** Đặt **Trái phiếu, lãi suất và tín dụng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trái phiếu là hợp đồng cho vay** sang **2. Giá trái phiếu là giá trị hiện tại của dòng tiền**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Trái phiếu thường bị mô tả như “sản phẩm an toàn trả lãi cố định”. Cách hiểu đó quá đơn giản. Trái phiếu là một tập hợp dòng tiền theo hợp đồng chịu đồng thời rủi ro lãi suất, lạm phát, tín dụng, thanh khoản, quyền chọn và đôi khi cả tỷ giá. Chương này xây tư duy từ nguyên lý định giá tới đường cong lợi suất, chênh lệch tín dụng, các cấu trúc chứng khoán hóa và cách triển khai qua quỹ trái phiếu.
 
 ## 1. Trái phiếu là hợp đồng cho vay
@@ -28,13 +31,13 @@ Dirty Price = Clean Price + Accrued Interest
 
 Khi so báo giá và tính lợi suất, phải biết thị trường đang sử dụng loại giá nào.
 
-## 4. Coupon, current yield và YTM khác nhau
+## 4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau
 
 Coupon là lãi theo hợp đồng trên mệnh giá. Lợi suất hiện tại (current yield) gần bằng coupon năm chia giá thị trường. Lợi suất đến đáo hạn (Yield to Maturity, YTM) là tỷ lệ chiết khấu khiến giá trị hiện tại của dòng tiền bằng giá hiện tại với một số giả định.
 
 YTM không phải lợi suất chắc chắn vì nhà đầu tư có thể bán trước đáo hạn, tổ chức phát hành có thể vỡ nợ hoặc dòng tiền phải tái đầu tư ở mức lãi khác.
 
-## 5. Yield to Call và Yield to Worst
+## 5. Yield to lời gọi (call / 호출) và Yield to Worst
 
 Trái phiếu có quyền mua lại trước hạn (callable bond) cho phép tổ chức phát hành hoàn trả sớm theo điều khoản.
 
@@ -341,3 +344,5 @@ Với ETF, thêm chất lượng tín dụng trung bình, cơ cấu holdings, th
 ## Kết luận
 
 Lợi suất trái phiếu không thể rút gọn thành “nhận coupon”. Cần tách **thu nhập, lãi suất, đường cong, tín dụng, quyền chọn, thanh khoản, vỡ nợ, thu hồi và tỷ giá**. Chỉ khi hiểu từng thành phần, nhà đầu tư mới biết trái phiếu đang đóng vai trò phòng thủ, tạo thu nhập hay thực chất là một khoản cược vào duration hoặc tín dụng.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

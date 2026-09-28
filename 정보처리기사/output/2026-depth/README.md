@@ -1,22 +1,22 @@
-# 정보처리기사 필기 2026 — Deep-Dive Track
+# 정보처리기사 필기 2026 — Deep-Dive nhánh học (track / 트랙)
 
-Thư mục này là lớp học **sau Master Guide**. Master Guide kiểm tra coverage toàn cục; các file ở đây tăng độ sâu từng môn tới mức có thể tự giải scenario, tính tay, trace code/SQL, đọc đúng thuật ngữ tiếng Hàn và phân biệt các đáp án rất gần nhau.
+Thư mục này là lớp học **sau Master Guide**. Master Guide kiểm tra coverage toàn cục; các tệp (file / 파일) ở đây tăng độ sâu từng môn tới mức có thể tự giải scenario, tính tay, dấu vết (trace / 추적) mã (code / 코드)/SQL, đọc đúng thuật ngữ tiếng Hàn và phân biệt các đáp án rất gần nhau.
 
 ## Luồng học
 
 1. Đọc [`../00-2026-written-exam-master-guide.md`](../00-2026-written-exam-master-guide.md) để biết toàn bộ phạm vi.
-2. Học 5 deep-dive theo môn, không bỏ qua phần procedural reasoning.
-3. Làm [Mixed Exam Drills](06-mixed-exam-drills.md) để kiểm tra khả năng chuyển context giữa 5 môn.
-4. Đọc [Cross-Subject Connection Map](07-cross-subject-connection-map.md) để nối requirement → design → code → DB → OS/network → operation/security.
+2. Học 5 deep-dive theo môn, không bỏ qua phần procedural lập luận (reasoning / 추론).
+3. Làm [Mixed Exam Drills](06-mixed-exam-drills.md) để kiểm tra khả năng chuyển ngữ cảnh (context / 맥락) giữa 5 môn.
+4. Đọc [Cross-Subject Connection Map](07-cross-subject-connection-map.md) để nối yêu cầu (requirement / 요구사항) → thiết kế (design / 설계) → mã (code / 코드) → DB → OS/mạng (network / 네트워크) → thao tác (operation / 연산)/bảo mật (security / 보안).
 5. Làm toàn bộ [Procedural Workbook](08-procedural-workbook.md) bằng tay; không tính là hoàn thành nếu chỉ đọc lời giải.
 6. Học [High-Risk Confusion Atlas](11-high-risk-confusion-atlas.md) để khóa ranh giới giữa các cặp khái niệm dễ bị distractor lợi dụng.
-7. Làm [Advanced Scenario Labs](12-advanced-scenario-labs.md) để luyện root cause, layer/scope và trade-off thay vì chọn keyword.
+7. Làm [Advanced Scenario Labs](12-advanced-scenario-labs.md) để luyện nguyên nhân gốc (root cause / 근본 원인), tầng (layer / 계층)/phạm vi (scope / 범위) và sự đánh đổi (trade-off / 트레이드오프) thay vì chọn từ khóa (keyword / 키워드).
 8. Dùng [Korean Term Bridge](13-korean-term-bridge.md) cho các concept đã hiểu bằng English/Vietnamese nhưng chưa nhận ra wording tiếng Hàn.
 9. Đọc [Edge-Case Coverage Supplement](15-edge-case-coverage-supplement.md) để bù các chi tiết có độ salience thấp nhưng vẫn nằm trong 21 chapter.
 10. Dùng [Active Recall Bank 250](17-active-recall-bank-250.md) để kiểm tra breadth mà không có lựa chọn A/B/C/D.
 11. Dùng [Coverage Audit & Closed-Book Recall](10-coverage-audit-and-recall.md) để kiểm tra đủ `Explain + Distinguish + Solve` cho 21 chapter.
 12. Làm [Full Mock Exam #1](09-full-mock-exam-100.md) trong một lượt và chấm riêng từng môn.
-13. Với mọi câu sai, dùng [Error Remediation Map](14-error-remediation-map.md) để phân loại lỗi và quay lại đúng file/drill cần sửa.
+13. Với mọi câu sai, dùng [Error Remediation Map](14-error-remediation-map.md) để phân loại lỗi và quay lại đúng tệp (file / 파일)/drill cần sửa.
 14. Chỉ sau remediation mới làm [Full Mock #2 — Hard Mode](16-full-mock-hard-mode-100.md), tránh overfit vào mock đầu.
 15. Một lỗi chỉ được đóng khi đạt `Explain → Distinguish → Reproduce → Transfer`, không làm đề liên tục chỉ để tăng cảm giác quen câu.
 
@@ -28,7 +28,7 @@ Thư mục này là lớp học **sau Master Guide**. Master Guide kiểm tra co
 4. [Môn 4 — 프로그래밍 언어 활용: Deep Dive](04-programming-language-depth.md)
 5. [Môn 5 — 정보시스템 구축 관리: Deep Dive](05-information-system-management-depth.md)
 
-## Practice + integration + remediation layer
+## Practice + tích hợp (integration / 통합) + remediation tầng (layer / 계층)
 
 6. [Mixed Exam Drills — 40 câu luyện liên môn](06-mixed-exam-drills.md)
 7. [Cross-Subject Connection Map — nối kiến thức giữa 5 môn](07-cross-subject-connection-map.md)
@@ -45,11 +45,11 @@ Thư mục này là lớp học **sau Master Guide**. Master Guide kiểm tra co
 
 ## Cách dùng với các lesson cũ
 
-Không đọc tuần tự hàng trăm lesson cũ trước. Khi deep-dive, audit hoặc remediation map phát hiện một phần chưa hiểu, mở lesson tương ứng trong folder môn để đào sâu. Các lesson cũ là **reference layer**, không phải learning path chính.
+Không đọc tuần tự hàng trăm lesson cũ trước. Khi deep-dive, kiểm tra (audit / 감사) hoặc remediation map phát hiện một phần chưa hiểu, mở lesson tương ứng trong folder môn để đào sâu. Các lesson cũ là **tham chiếu (reference / 참조) tầng (layer / 계층)**, không phải lộ trình học (learning path / 학습 경로) chính.
 
-## Error model
+## Lỗi (error / 오류) mô hình (model / 모델)
 
-Mọi lỗi trong mock/mixed drill nên được gán một primary code:
+Mọi lỗi trong mock/mixed drill nên được gán một primary mã (code / 코드):
 
 ```text
 COV  = coverage hole
@@ -71,21 +71,21 @@ Một chủ đề chỉ được coi là “đã học” khi đạt đủ bốn
 **Recognition:** nhìn thuật ngữ tiếng Hàn và biết nó nói về concept nào.
 **Explanation:** giải thích được bản chất bằng lời của mình.
 **Discrimination:** phân biệt được với 2–3 khái niệm gần nhất.
-**Application:** làm được một câu scenario/tính/code/SQL liên quan mà không nhìn đáp án.
+**ứng dụng (application / 애플리케이션):** làm được một câu scenario/tính/mã (code / 코드)/SQL liên quan mà không nhìn đáp án.
 
 Một lỗi chỉ được coi là “đã sửa” khi đạt thêm:
 
 **Reproduction:** làm lại procedure/scenario không nhìn lời giải.
 **Transfer:** làm đúng một câu mới với wording hoặc số liệu khác.
 
-Toàn bộ track chỉ được coi là `ready` khi:
+Toàn bộ nhánh học (track / 트랙) chỉ được coi là `ready` khi:
 
 - 21 chapter đều đạt `Explain + Distinguish + Solve`;
 - Edge-Case Supplement đạt ít nhất 24/30 ở closed-book check;
 - Active Recall đạt ít nhất 45/50 mỗi môn ở vòng cuối;
-- 50+ confusion pairs cốt lõi không còn phụ thuộc vào keyword đơn lẻ;
-- Procedural Workbook không còn dạng bài “biết lý thuyết nhưng không tự tính/trace được”;
-- Advanced Scenario Labs trung bình đạt ít nhất mức 3/4 theo rubric trong file;
+- 50+ confusion pairs cốt lõi không còn phụ thuộc vào từ khóa (keyword / 키워드) đơn lẻ;
+- Procedural Workbook không còn dạng bài “biết lý thuyết nhưng không tự tính/dấu vết (trace / 추적) được”;
+- Advanced Scenario Labs trung bình đạt ít nhất mức 3/4 theo rubric trong tệp (file / 파일);
 - Korean terms quan trọng map được `Korean → English concept → mechanism`;
 - cả hai Full Mock đều không có môn nào dưới 8/20; mục tiêu học là ít nhất 14/20 mỗi môn ở mock tự viết;
-- mọi lỗi COV/CON/PRO/LAY/TERM quan trọng đã đi qua remediation và transfer test.
+- mọi lỗi COV/CON/PRO/LAY/TERM quan trọng đã đi qua remediation và transfer kiểm thử (test / 테스트).

@@ -2,6 +2,8 @@
 
 A lightweight GitHub Pages reader for the Markdown and PDF files stored in this workspace. The site remains a static frontend: local reading works without an account, while optional Supabase Auth + PostgreSQL adds multi-device progress sync.
 
+> **Mạch vận hành:** Nội dung đi theo chuỗi `canonical Markdown/PDF → publication manifest → audit → build/index → reader → progress sync`. Khi debug hoặc thay đổi một lớp, quay lại lớp trước để xác định source of truth và đi tiếp tới evidence của lớp sau.
+
 ## What it does
 
 The library builds a searchable catalogue, renders Markdown with TOC/bookmarks, opens PDFs, tracks reading position/status/progress, supports review/offline/PWA features, and keeps manual JSON export/import as a backup. All existing `study-shelf-*` localStorage data remains supported.
@@ -85,3 +87,5 @@ The Pages workflow injects environment values only while generating `site/supaba
 Only files under reviewed prefixes or explicit paths in `library.config.json` are copied into the published site. Confirm ownership, redistribution permission, or a compatible open licence/public-domain status before allowing a document. Run `npm run audit:library` before publishing.
 
 See [PUBLISHING.md](PUBLISHING.md) for the current publication scope.
+
+> **Bàn giao:** Sau khi publication audit và build pass, kiểm tra reader/search/progress ở môi trường đích; lỗi hiển thị cần được trace ngược về source, manifest hoặc generated artifact thay vì sửa trực tiếp bản site.

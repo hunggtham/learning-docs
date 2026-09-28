@@ -1,6 +1,9 @@
 # Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử
 
-> **Hóa học hữu cơ (organic chemistry / 유기화학)** không nên được hiểu đơn giản là “hóa học của các hợp chất chứa carbon”. Giá trị thực sự của lĩnh vực này nằm ở việc carbon có thể tạo ra những **đồ thị phân tử (molecular graphs)** cực kỳ đa dạng, trong khi phân bố electron, hình học và nhóm chức biến các đồ thị đó thành một cảnh quan phản ứng có logic.
+> **Mạch đọc:** Đọc **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao carbon tạo được sự đa dạng đặc biệt** sang **Khung carbon như một đồ thị**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Hóa học hữu cơ (organic chemistry / 유기화학)** không nên được hiểu đơn giản là “hóa học của các hợp chất chứa carbon”. Giá trị thực sự của lĩnh vực này nằm ở việc carbon có thể tạo ra những **đồ thị phân tử (molecular graphs)** cực kỳ đa dạng, trong khi phân bố electron, hình học và nhóm chức biến các đồ thị đó thành một cảnh quan phản ứng có lô-gic (logic / 논리).
 
 ## Vì sao carbon tạo được sự đa dạng đặc biệt
 
@@ -55,7 +58,7 @@ sp C–H  >  sp2 C–H  >  sp3 C–H
 (độ acid)
 ```
 
-Base liên hợp trên carbon sp được ổn định hơn vì điện tích âm nằm trong orbital có mật độ gần hạt nhân hơn.
+Cơ sở (base / 기반) liên hợp trên carbon sp được ổn định hơn vì điện tích âm nằm trong orbital có mật độ gần hạt nhân hơn.
 
 ## Liên kết sigma và pi
 
@@ -115,7 +118,7 @@ Cation allyl, cation benzyl, carboxylate, amide và enolate đều được ổn
 Cộng hưởng ảnh hưởng:
 
 - độ dài liên kết;
-- độ acid/base;
+- độ acid/cơ sở (base / 기반);
 - tính ái nhân và ái điện;
 - hàng rào quay;
 - phổ học;
@@ -191,9 +194,9 @@ Mạch hydrocarbon dài hơn thường có nhiệt độ sôi cao hơn vì diệ
 
 Nhóm chức phân cực làm tăng tương tác lưỡng cực. Mẫu cho/nhận liên kết hydrogen ảnh hưởng độ tan và nhiệt độ sôi. Tính đối xứng đôi khi giúp đóng gói tinh thể tốt hơn và làm nhiệt độ nóng chảy tăng.
 
-## Độ acid/base như bài toán độ bền
+## Độ acid/cơ sở (base / 기반) như bài toán độ bền
 
-Thay vì học thuộc các giá trị \(pK_a\) rời rạc, hãy hỏi base hoặc acid liên hợp được ổn định như thế nào.
+Thay vì học thuộc các giá trị \(pK_a\) rời rạc, hãy hỏi cơ sở (base / 기반) hoặc acid liên hợp được ổn định như thế nào.
 
 Các yếu tố chính gồm:
 
@@ -205,7 +208,7 @@ Các yếu tố chính gồm:
 - tính thơm;
 - solvat hóa.
 
-Một acid mạnh hơn khi base liên hợp của nó tương đối bền hơn.
+Một acid mạnh hơn khi cơ sở (base / 기반) liên hợp của nó tương đối bền hơn.
 
 ## Góc nhìn orbital phân tử về khả năng phản ứng
 
@@ -248,3 +251,5 @@ Không. Chúng là các cách biểu diễn của một trạng thái electron p
 Hãy xem phân tử hữu cơ là **đồ thị carbon + hình học 3D + trường mật độ electron**. Kết nối trả lời “nguyên tử nào nối với nguyên tử nào”; hình học trả lời “chúng nằm ở đâu”; phân bố electron trả lời “vị trí nào có xu hướng cho hoặc nhận electron”; cảnh quan năng lượng quyết định con đường phản ứng nào có thể xảy ra.
 
 Xem tiếp: [Nhóm chức](./01_functional_groups.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 functional groups](./01_functional_groups.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

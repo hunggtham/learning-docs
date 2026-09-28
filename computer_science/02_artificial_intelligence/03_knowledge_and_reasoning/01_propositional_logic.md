@@ -1,8 +1,11 @@
-# Propositional Logic cho Artificial Intelligence
+# Propositional lô-gic (logic / 논리) cho Artificial Intelligence
 
-**Propositional Logic (명제 논리 / logic mệnh đề)** là một formal language để biểu diễn statements có truth value và suy luận từ chúng bằng rules chính xác. Nó là hệ logic đơn giản hơn First-Order Logic nhưng cực kỳ quan trọng vì cho ta vocabulary về syntax, semantics, entailment, proof, satisfiability và model checking.
+> **Mạch đọc:** Đặt **Propositional lô-gic (logic / 논리) cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Proposition** sang **Connectives**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Trong AI, Propositional Logic xuất hiện trong rule systems, SAT solving, planning encodings, verification và constraint reasoning. Học nó không phải để viết mọi knowledge thành `P ∧ Q`; mục tiêu là hiểu formal reasoning khác với statistical pattern matching ở đâu.
+
+**Propositional lô-gic (logic / 논리)** là một formal ngôn ngữ (language / 언어) để biểu diễn statements có truth giá trị (value / 값) và suy luận từ chúng bằng rules chính xác. Nó là hệ lô-gic (logic / 논리) đơn giản hơn First-Order lô-gic (logic / 논리) nhưng cực kỳ quan trọng vì cho ta vocabulary về cú pháp (syntax / 문법), ngữ nghĩa (semantics / 의미론), entailment, proof, satisfiability và mô hình (model / 모델) checking.
+
+Trong AI, Propositional lô-gic (logic / 논리) xuất hiện trong quy tắc (rule / 규칙) các hệ thống (systems / 시스템들), SAT solving, planning encodings, xác minh (verification / 확인) và ràng buộc (constraint / 제약조건) lập luận (reasoning / 추론). Học nó không phải để viết mọi kiến thức (knowledge / 지식) thành `P ∧ Q`; mục tiêu là hiểu formal lập luận (reasoning / 추론) khác với statistical mẫu (pattern / 패턴) matching ở đâu.
 
 Xem trước: [Knowledge Representation](./00_knowledge_representation.md).
 
@@ -25,11 +28,11 @@ Không phải proposition:
 x > 3                   → open formula until x assigned/quantified
 ```
 
-Propositional Logic treats `P` như atomic symbol; nó không nhìn inside structure “raining”.
+Propositional lô-gic (logic / 논리) treats `P` như atomic symbol; nó không nhìn inside cấu trúc (structure / 구조) “raining”.
 
 ## Connectives
 
-Common logical connectives:
+Dùng chung (common / 공통) logical connectives:
 
 | Symbol | English | 한국어 | Meaning |
 |---|---|---|---|
@@ -41,7 +44,7 @@ Common logical connectives:
 
 `∨` mặc định inclusive OR: true khi một hoặc cả hai true.
 
-## Truth table
+## Truth bảng (table / 테이블)
 
 Implication often causes confusion:
 
@@ -60,13 +63,13 @@ Because `P→Q` equivalent:
 \neg P\lor Q
 \]
 
-It only forbids case P true and Q false.
+It only forbids trường hợp (case / 사례) P true and Q false.
 
-Natural-language “if” may carry causal/temporal meaning not captured by material implication.
+Natural-language “if” may carry nhân quả (causal / 인과적)/temporal meaning not captured by material implication.
 
-## Syntax vs semantics
+## Cú pháp (syntax / 문법) vs ngữ nghĩa (semantics / 의미론)
 
-**Syntax** defines well-formed formulas.
+**cú pháp (syntax / 문법)** defines well-formed formulas.
 
 Example:
 
@@ -74,7 +77,7 @@ Example:
 (P\land Q)\rightarrow R
 \]
 
-**Semantics** defines truth under an interpretation/model assigning truth values to symbols.
+**ngữ nghĩa (semantics / 의미론)** defines truth under an interpretation/mô hình (model / 모델) assigning truth values to symbols.
 
 This distinction is fundamental:
 
@@ -83,11 +86,11 @@ syntax    = expression structure
 semantics = what makes expression true/false
 ```
 
-LLM can generate syntactically valid-looking formula while semantic mapping to domain may still be wrong.
+LLM can generate syntactically valid-looking formula while ngữ nghĩa (semantic / 의미적) ánh xạ (mapping / 매핑) to lĩnh vực (domain / 도메인) may still be wrong.
 
-## Model
+## Mô hình (model / 모델)
 
-A model `M` is assignment of truth values to propositions.
+A mô hình (model / 모델) `M` is assignment of truth values to propositions.
 
 If:
 
@@ -101,16 +104,16 @@ then `M` satisfies `P∨Q` but not `P∧Q`.
 Notation:
 
 \[
-M\models\alpha
+M\các mô hình (models / 모델들)\alpha
 \]
 
-means model `M` satisfies formula `α`.
+means mô hình (model / 모델) `M` satisfies formula `α`.
 
 ## Satisfiable, valid và unsatisfiable
 
-Formula is **satisfiable** if at least one model makes it true.
+Formula is **satisfiable** if at least one mô hình (model / 모델) makes it true.
 
-**Valid / tautology** if every model makes it true.
+**Valid / tautology** if every mô hình (model / 모델) makes it true.
 
 Example:
 
@@ -120,7 +123,7 @@ P\lor\neg P
 
 always true.
 
-**Unsatisfiable / contradiction** if no model makes true:
+**Unsatisfiable / contradiction** if no mô hình (model / 모델) makes true:
 
 \[
 P\land\neg P
@@ -130,17 +133,17 @@ These concepts power SAT solving and proof by contradiction.
 
 ## Entailment
 
-Knowledge base `KB` entails `α`:
+Kiến thức (knowledge / 지식) cơ sở (base / 기반) `KB` entails `α`:
 
 \[
-KB\models\alpha
+KB\các mô hình (models / 모델들)\alpha
 \]
 
-if every model satisfying `KB` also satisfies `α`.
+if every mô hình (model / 모델) satisfying `KB` also satisfies `α`.
 
 Important:
 
-> Entailment is semantic necessity, not merely that α “sounds plausible”.
+> Entailment is ngữ nghĩa (semantic / 의미적) necessity, not merely that α “sounds plausible”.
 
 Example:
 
@@ -151,12 +154,12 @@ KB=\{P\rightarrow Q, P\}
 then:
 
 \[
-KB\models Q
+KB\các mô hình (models / 모델들) Q
 \]
 
-## Inference
+## Suy luận (inference / 추론)
 
-Inference procedure derives formula syntactically:
+Suy luận (inference / 추론) procedure derives formula syntactically:
 
 \[
 KB\vdash\alpha
@@ -169,15 +172,15 @@ Distinguish:
 ⊢ syntactic derivability/proof
 ```
 
-A proof system is **sound** if it derives only entailed statements.
+A proof hệ thống (system / 시스템) is **sound** if it derives only entailed statements.
 
 It is **complete** if every entailed statement can in principle be derived.
 
-These terms are about proof systems, not ML accuracy.
+These terms are about proof các hệ thống (systems / 시스템들), not ML accuracy.
 
 ## Modus Ponens
 
-Rule:
+Quy tắc (rule / 규칙):
 
 \[
 P,\quad P\rightarrow Q
@@ -197,7 +200,7 @@ ServerDown
 ∴ Alert
 ```
 
-This is valid regardless domain meaning.
+This is valid regardless lĩnh vực (domain / 도메인) meaning.
 
 ## Modus Tollens
 
@@ -294,11 +297,11 @@ P\lor\neg Q\lor R
 
 CNF formula is set/conjunction of clauses.
 
-SAT solving uses this structure heavily.
+SAT solving uses this cấu trúc (structure / 구조) heavily.
 
 ## Resolution
 
-Resolution rule:
+Resolution quy tắc (rule / 규칙):
 
 \[
 (P\lor A),\quad(\neg P\lor B)
@@ -335,7 +338,7 @@ Resolve `¬P∨Q` with `¬Q` → `¬P`.
 
 Resolve `¬P` with `P` → empty clause.
 
-Thus assumptions + `¬Q` inconsistent, so Q entailed.
+Thus các giả định (assumptions / 가정들) + `¬Q` inconsistent, so Q entailed.
 
 ## Horn clauses
 
@@ -353,7 +356,7 @@ which corresponds:
 P\land Q\rightarrow R
 \]
 
-Horn logic supports efficient forward/backward chaining and underlies rule systems/logic programming fragments.
+Horn lô-gic (logic / 논리) supports efficient forward/backward chaining and underlies quy tắc (rule / 규칙) các hệ thống (systems / 시스템들)/lô-gic (logic / 논리) programming fragments.
 
 ## Forward chaining
 
@@ -374,7 +377,7 @@ Useful when many possible conclusions or streaming facts.
 
 ## Backward chaining
 
-Start from query/goal and ask what premises would prove it.
+Start from truy vấn (query / 쿼리)/goal and ask what premises would prove it.
 
 To prove `D`:
 
@@ -386,36 +389,36 @@ Check facts A,B
 
 Backward chaining is **goal-driven**.
 
-Prolog-style reasoning uses backward chaining with unification at First-Order level.
+Prolog-style lập luận (reasoning / 추론) uses backward chaining with unification at First-Order mức (level / 수준).
 
-## SAT problem
+## SAT bài toán (problem / 문제)
 
 SAT asks:
 
 > Is there an assignment to Boolean variables making formula true?
 
-SAT is NP-complete, yet modern solvers handle enormous structured instances.
+SAT is NP-complete, yet hiện đại (modern / 현대적) solvers handle enormous structured instances.
 
 Applications:
 
-- hardware verification;
+- hardware xác minh (verification / 확인);
 - planning;
-- scheduling/configuration;
-- dependency resolution;
+- scheduling/cấu hình (configuration / 구성);
+- phụ thuộc (dependency / 의존성) resolution;
 - theorem proving;
-- software analysis.
+- software phân tích (analysis / 분석).
 
 ## DPLL
 
 DPLL extends backtracking SAT with:
 
-- unit propagation;
+- đơn vị (unit / 단위) propagation;
 - pure literal elimination;
 - branching.
 
-Modern CDCL solvers build on related foundation with conflict learning and non-chronological backtracking.
+Hiện đại (modern / 현대적) CDCL solvers bản dựng (build / 빌드) on related foundation with xung đột (conflict / 충돌) học tập (learning / 학습) and non-chronological backtracking.
 
-## Unit propagation
+## Đơn vị (unit / 단위) propagation
 
 Clause:
 
@@ -427,13 +430,13 @@ If `A=false` and `B=false`, then `C=true` forced.
 
 Propagate forced assignments before branching.
 
-This is same “reason before search” principle seen in CSP.
+This is same “reason before tìm kiếm (search / 검색)” principle seen in CSP.
 
-## Conflict-Driven Clause Learning
+## Conflict-Driven Clause học tập (learning / 학습)
 
-When assignments cause conflict, analyze implication graph and learn clause preventing same reason for conflict.
+When assignments cause xung đột (conflict / 충돌), analyze implication đồ thị (graph / 그래프) and learn clause preventing same reason for xung đột (conflict / 충돌).
 
-CDCL loop conceptually:
+CDCL vòng lặp (loop / 루프) conceptually:
 
 ```text
 propagate
@@ -445,7 +448,7 @@ conflict?
   └─ yes → analyze → learn clause → backjump
 ```
 
-Learned clause is logically implied, so solver becomes smarter without sacrificing correctness.
+Learned clause is logically implied, so solver becomes smarter without sacrificing tính đúng đắn (correctness / 정확성).
 
 ## Knowledge-base consistency
 
@@ -461,17 +464,17 @@ and:
 \neg P
 \]
 
-classical logic KB inconsistent.
+classical lô-gic (logic / 논리) KB inconsistent.
 
-Under principle of explosion, from contradiction arbitrary formula can be derived in classical logic.
+Under principle of explosion, from contradiction arbitrary formula can be derived in classical lô-gic (logic / 논리).
 
-Real knowledge bases may contain conflicts, motivating paraconsistent logics, provenance-aware reasoning or explicit conflict-resolution policies.
+Real kiến thức (knowledge / 지식) bases may contain conflicts, motivating paraconsistent logics, provenance-aware lập luận (reasoning / 추론) or tường minh (explicit / 명시적) conflict-resolution policies.
 
-## Closed-world reasoning
+## Closed-world lập luận (reasoning / 추론)
 
-Propositional logic itself does not say absent facts false. Closed-world assumption is extra semantic policy.
+Propositional lô-gic (logic / 논리) itself does not say absent facts false. Closed-world giả định (assumption / 가정) is extra ngữ nghĩa (semantic / 의미적) chính sách (policy / 정책).
 
-Rule engine may implement **negation as failure**:
+Quy tắc (rule / 규칙) engine may implement **negation as thất bại (failure / 실패)**:
 
 ```text
 if cannot prove P, assume not P
@@ -481,9 +484,9 @@ This differs from classical logical negation.
 
 Confusing them causes subtle bugs.
 
-## Logic và software conditions
+## Lô-gic (logic / 논리) và software conditions
 
-Boolean logic underlies code:
+Boolean lô-gic (logic / 논리) underlies mã (code / 코드):
 
 ```java
 if (authenticated && !locked) {
@@ -491,9 +494,9 @@ if (authenticated && !locked) {
 }
 ```
 
-But program state/time/side effects make full software semantics richer than propositional formulas.
+But program trạng thái (state / 상태)/thời gian (time / 시간)/side effects make full software ngữ nghĩa (semantics / 의미론) richer than propositional formulas.
 
-Formal verification often translates program properties into SAT/SMT constraints.
+Formal xác minh (verification / 확인) often translates program properties into SAT/SMT các ràng buộc (constraints / 제약조건들).
 
 ## SAT vs SMT
 
@@ -513,31 +516,31 @@ Example:
 x>3\land y=x+2\land y<4
 \]
 
-requires arithmetic theory, not pure Boolean atoms alone unless encoded.
+requires arithmetic lý thuyết (theory / 이론), not pure Boolean atoms alone unless encoded.
 
-SMT is highly relevant for program verification and solver-backed agents.
+SMT is highly relevant for program xác minh (verification / 확인) and solver-backed agents.
 
-## Logic vs probability
+## Lô-gic (logic / 논리) vs xác suất (probability / 확률)
 
-Classical logic:
+Classical lô-gic (logic / 논리):
 
 ```text
 P true / false
 ```
 
-Probability:
+Xác suất (probability / 확률):
 
 ```text
 P(P)=0.7
 ```
 
-Logic captures structural certainty; probability captures uncertainty.
+Lô-gic (logic / 논리) captures structural certainty; xác suất (probability / 확률) captures bất định (uncertainty / 불확실성).
 
-A rule `Smoke→Fire` in strict logic means every smoke case implies fire. Real-world relation is probabilistic, so forcing it into strict implication is wrong modeling.
+A quy tắc (rule / 규칙) `Smoke→Fire` in strict lô-gic (logic / 논리) means every smoke trường hợp (case / 사례) implies fire. Real-world quan hệ (relation / 관계) is probabilistic, so forcing it into strict implication is wrong modeling.
 
-Representation must match domain semantics.
+Biểu diễn (representation / 표현) must match lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론).
 
-## Logic vs LLM reasoning
+## Lô-gic (logic / 논리) vs LLM lập luận (reasoning / 추론)
 
 LLM can produce logically valid sequences but next-token generation does not guarantee sound proof.
 
@@ -551,7 +554,7 @@ formal logic engine checks validity
 accept / reject / repair
 ```
 
-This pattern combines flexible language reasoning with symbolic verification.
+This mẫu (pattern / 패턴) combines flexible ngôn ngữ (language / 언어) lập luận (reasoning / 추론) with symbolic xác minh (verification / 확인).
 
 ## Planning as SAT
 
@@ -563,13 +566,13 @@ AtRobotRoom1_t
 AtRobotRoom2_t
 ```
 
-Constraints encode action preconditions, effects and exactly-one conditions.
+Các ràng buộc (constraints / 제약조건들) encode hành động (action / 동작) preconditions, effects and exactly-one conditions.
 
 SAT solver finding assignment corresponds to plan.
 
 This illustrates representational reduction: planning becomes satisfiability.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Proposition  = atomic true/false claim
@@ -583,11 +586,11 @@ Forward chain = facts → consequences
 Backward chain = goal → required premises
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “P→Q means P causes Q”
 
-Material implication encodes truth condition, not causality.
+Material implication encodes truth điều kiện (condition / 조건), not causality.
 
 ### “If Q is true and P→Q, then P must be true”
 
@@ -595,14 +598,16 @@ Affirming consequent is invalid.
 
 ### “Not known means false”
 
-Only under explicit closed-world/negation-as-failure assumptions.
+Only under tường minh (explicit / 명시적) closed-world/negation-as-failure các giả định (assumptions / 가정들).
 
 ### “SAT is NP-complete nên solver practical không dùng được”
 
 Worst-case hardness does not prevent solving many large structured instances efficiently.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Propositional Logic connects KR with CSP/SAT, planning and formal verification. It introduces the semantic/syntactic distinction needed before First-Order Logic and gives a baseline for understanding why probabilistic/neural reasoning offer different trade-offs.
+Propositional lô-gic (logic / 논리) connects KR with CSP/SAT, planning and formal xác minh (verification / 확인). It introduces the ngữ nghĩa (semantic / 의미적)/syntactic distinction needed before First-Order lô-gic (logic / 논리) and gives a baseline for understanding why probabilistic/neural lập luận (reasoning / 추론) offer different trade-offs.
 
 Xem tiếp: [First-Order Logic](./02_first_order_logic.md) và [Inference and Reasoning](./03_inference_and_reasoning.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

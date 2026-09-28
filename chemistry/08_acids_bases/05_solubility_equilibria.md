@@ -1,5 +1,8 @@
 # Cân bằng độ tan — kết tủa, \(K_{sp}\) và phân tách chọn lọc
 
+> **Mạch đọc:** Đọc **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“\(K{sp}\) nhỏ hơn luôn nghĩa độ tan mol thấp hơn”** sang **“\(Q{sp}>K{sp}\) là kết tủa xuất hiện ngay”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Tích số tan \(K_{sp}\) (solubility product / 용해도곱 상수)** mô tả cân bằng giữa chất rắn ít tan và các ion của nó trong dung dịch. Nhưng độ tan quan sát không chỉ do một con số \(K_{sp}\) quyết định. pH, tạo phức, ion chung, lực ion, hoạt độ và động học tạo mầm có thể làm lượng hòa tan thực tế thay đổi nhiều bậc độ lớn.
 
 Cách nhìn đúng là xem độ tan như **một bài toán cân bằng ghép nối giữa pha rắn và toàn bộ hóa học của dung dịch**.
@@ -110,7 +113,7 @@ Tuy nhiên trong dung dịch rất đậm đặc, activity coefficient thay đ�
 
 # pH có thể điều khiển độ tan
 
-Nếu anion của muối là base, proton hóa sẽ giảm nồng độ dạng anion tự do tham gia \(K_{sp}\).
+Nếu anion của muối là cơ sở (base / 기반), proton hóa sẽ giảm nồng độ dạng anion tự do tham gia \(K_{sp}\).
 
 Ví dụ:
 
@@ -139,7 +142,7 @@ Nếu một ion tham gia nhiều cân bằng phụ, có thể định nghĩa m�
 Ví dụ tổng fluoride hòa tan:
 
 \[
-C_F=[F^-]+[HF]+\text{các dạng phức khác}
+C_F=[F^-]+[HF]+\văn bản (text / 텍스트){các dạng phức khác}
 \]
 
 trong khi \(K_{sp}\) chỉ chứa \(a_{F^-}\).
@@ -188,7 +191,7 @@ K_{sp}=a_{M^{n+}}a_{OH^-}^n
 
 pH cao làm \(OH^-\) tăng và thường giảm độ tan của hydroxide đơn giản.
 
-Nhưng nhiều kim loại lưỡng tính có thể tan trở lại ở base rất mạnh do tạo hydroxo complex.
+Nhưng nhiều kim loại lưỡng tính có thể tan trở lại ở cơ sở (base / 기반) rất mạnh do tạo hydroxo complex.
 
 Ví dụ định tính:
 
@@ -209,20 +212,20 @@ Mỗi chất bắt đầu kết tủa khi tích ion đạt \(K_{sp}\).
 Với muối 1:1:
 
 \[
-[M_i][X]_{critical}=K_{sp,i}
+[M_i][X]_{trọng yếu (critical / 중요)}=K_{sp,i}
 \]
 
 nên:
 
 \[
-[X]_{critical}=\frac{K_{sp,i}}{[M_i]}
+[X]_{trọng yếu (critical / 중요)}=\frac{K_{sp,i}}{[M_i]}
 \]
 
 Ion có ngưỡng \([X]\) thấp hơn bắt đầu kết tủa trước.
 
 Nhưng để tách định lượng, không chỉ cần “bắt đầu trước”; cần một khoảng nồng độ \(X\) nơi một ion đã kết tủa gần hoàn toàn trong khi ion kia vẫn chủ yếu hòa tan.
 
-# Ví dụ logic của cửa sổ kết tủa
+# Ví dụ lô-gic (logic / 논리) của cửa sổ kết tủa
 
 Nếu \(M_1X\) bắt đầu kết tủa ở \([X]=10^{-8}\;M\) còn \(M_2X\) chỉ bắt đầu ở \(10^{-3}\;M\), có một cửa sổ lớn để tách.
 
@@ -254,7 +257,7 @@ Các mô hình Debye–Hückel hoặc mở rộng được dùng ở vùng lực
 
 # Tạo mầm — cầu nối giữa nhiệt động và việc thật sự nhìn thấy kết tủa
 
-Khi \(Q_{sp}>K_{sp}\), pha rắn làm giảm năng lượng tự do thể tích, nhưng tạo interface mới cần năng lượng.
+Khi \(Q_{sp}>K_{sp}\), pha rắn làm giảm năng lượng tự do thể tích, nhưng tạo giao diện (interface / 인터페이스) mới cần năng lượng.
 
 Với mầm cầu:
 
@@ -288,13 +291,13 @@ Trong dung dịch bão hòa có pha rắn, các ion vẫn liên tục rời kh�
 
 Cân bằng nghĩa tốc độ trung bình hai chiều bằng nhau, không phải “không còn gì xảy ra”.
 
-Đây là cùng mô hình cân bằng động đã gặp trong acid–base và cân bằng hóa học chung.
+Đây là cùng mô hình cân bằng động đã gặp trong acid–cơ sở (base / 기반) và cân bằng hóa học chung.
 
 # Ứng dụng trong xử lý nước
 
 Độ cứng và scaling thường liên quan carbonate, sulfate hoặc hydroxide.
 
-Khi \(IAP/K_{sp}\) tăng, nguy cơ tạo scale tăng nhưng động học, bề mặt thiết bị và chất ức chế vẫn quyết định tốc độ bám cặn thật.
+Khi \(IAP/K_{sp}\) tăng, nguy cơ tạo quy mô (scale / 규모) tăng nhưng động học, bề mặt thiết bị và chất ức chế vẫn quyết định tốc độ bám cặn thật.
 
 Trong xử lý kim loại nặng, nâng pH có thể làm hydroxide kết tủa, nhưng cần xem:
 
@@ -316,7 +319,7 @@ oxide/hydroxide rắn ở vùng khác
 kim loại ở vùng khử mạnh
 ```
 
-Giản đồ Pourbaix nối cân bằng acid–base, redox và pha rắn trong cùng không gian \(E\)–pH.
+Giản đồ Pourbaix nối cân bằng acid–cơ sở (base / 기반), redox và pha rắn trong cùng không gian \(E\)–pH.
 
 Do đó \(K_{sp}\) chỉ là một lát cắt của bài toán speciation rộng hơn.
 
@@ -347,3 +350,5 @@ Không. Hai quá trình vẫn xảy ra động với tốc độ trung bình b�
 \(K_{sp}\) tạo **ranh giới pha trong không gian hoạt độ ion**. pH, ligand, ion chung và lực ion thay đổi vị trí của hệ so với ranh giới đó; còn tạo mầm quyết định khi nào trạng thái thuận lợi về nhiệt động thực sự biến thành chất rắn quan sát được. Vì vậy muốn dự đoán độ tan thật phải hỏi cả **cân bằng nào đang ghép nối và động học pha rắn có kịp xảy ra không**.
 
 Xem tiếp: [Oxy hóa và khử](../09_redox_and_electrochemistry/00_oxidation_and_reduction.md) và [Hóa học nước](../16_environmental_chemistry/01_water_chemistry.md).
+
+> **Bàn giao:** Sau **“Trong dung dịch bão hòa không còn hòa tan/kết tủa”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 acid base models](./00_acid_base_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

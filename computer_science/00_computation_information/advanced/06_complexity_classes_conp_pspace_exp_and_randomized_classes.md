@@ -1,10 +1,13 @@
-# Complexity classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes
+# Độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes
 
-Khi nói một bài toán “khó”, ta cần hỏi **khó theo resource nào** và **input tăng thì resource tăng theo hàm nào**. Một bài toán có thể cần rất nhiều time nhưng ít memory; một bài khác có thể giải nhanh nếu chấp nhận xác suất lỗi rất nhỏ; một problem có certificate kiểm tra nhanh nhưng chưa biết cách tìm solution nhanh.
+> **Mạch đọc:** Đặt **độ phức tạp (complexity / 복잡도) classes beyond P/NP: co-NP, PSPACE, EXP và randomized classes** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. độ phức tạp (complexity / 복잡도) là asymptotic tài nguyên (resource / 자원) của bài toán (problem / 문제) family** sang **2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-**Complexity theory (lý thuyết độ phức tạp / 계산 복잡도 이론)** tổ chức các decision problems thành class dựa trên resource bound và computational model.
 
-Mental model:
+Khi nói một bài toán “khó”, ta cần hỏi **khó theo tài nguyên (resource / 자원) nào** và **đầu vào (input / 입력) tăng thì tài nguyên (resource / 자원) tăng theo hàm nào**. Một bài toán có thể cần rất nhiều thời gian (time / 시간) nhưng ít bộ nhớ (memory / 메모리); một bài khác có thể giải nhanh nếu chấp nhận xác suất lỗi rất nhỏ; một bài toán (problem / 문제) có certificate kiểm tra nhanh nhưng chưa biết cách tìm solution nhanh.
+
+**độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론)** tổ chức các quyết định (decision / 결정) problems thành lớp (class / 클래스) dựa trên tài nguyên (resource / 자원) bound và computational mô hình (model / 모델).
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 problem family
@@ -16,25 +19,25 @@ problem family
 → consequence nếu class collapse hoặc tách nhau
 ```
 
-Chapter này mở rộng từ P/NP sang co-NP, PSPACE, EXP và randomized classes, nhưng mục tiêu không phải thuộc sơ đồ class. Mục tiêu là biết mỗi class đang nói gì về **evidence, search, resource và uncertainty**.
+Chapter này mở rộng từ P/NP sang co-NP, PSPACE, EXP và randomized classes, nhưng mục tiêu không phải thuộc sơ đồ lớp (class / 클래스). Mục tiêu là biết mỗi lớp (class / 클래스) đang nói gì về **bằng chứng (evidence / 증거), tìm kiếm (search / 검색), tài nguyên (resource / 자원) và bất định (uncertainty / 불확실성)**.
 
-## 1. Complexity là asymptotic resource của problem family
+## 1. độ phức tạp (complexity / 복잡도) là asymptotic tài nguyên (resource / 자원) của bài toán (problem / 문제) family
 
-Một instance cụ thể có thể chạy nhanh hoặc chậm vì implementation/hardware. Complexity class nói về family khi input size tăng.
+Một instance cụ thể có thể chạy nhanh hoặc chậm vì hiện thực (implementation / 구현)/hardware. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) nói về family khi đầu vào (input / 입력) kích thước (size / 크기) tăng.
 
-Decision problem được dùng vì output chỉ `yes/no`, giúp định nghĩa class sạch. Optimization/search problem thường có thể liên hệ với decision version nhưng không phải lúc nào implementation cost giống nhau.
+Quyết định (decision / 결정) bài toán (problem / 문제) được dùng vì đầu ra (output / 출력) chỉ `yes/no`, giúp định nghĩa lớp (class / 클래스) sạch. tối ưu hóa (optimization / 최적화)/tìm kiếm (search / 검색) bài toán (problem / 문제) thường có thể liên hệ với quyết định (decision / 결정) phiên bản (version / 버전) nhưng không phải lúc nào hiện thực (implementation / 구현) chi phí (cost / 비용) giống nhau.
 
-Ví dụ SAT decision hỏi:
+Ví dụ SAT quyết định (decision / 결정) hỏi:
 
 ```text
 Có assignment nào làm formula đúng không?
 ```
 
-khác với task tìm assignment cụ thể hoặc tối ưu một objective.
+khác với tác vụ (task / 작업) tìm assignment cụ thể hoặc tối ưu một mục tiêu (objective / 목표).
 
-## 2. P: giải được bằng polynomial time trên deterministic machine
+## 2. P: giải được bằng polynomial thời gian (time / 시간) trên deterministic machine
 
-`P` chứa decision problems có algorithm deterministic chạy polynomial theo input size:
+`P` chứa quyết định (decision / 결정) problems có thuật toán (algorithm / 알고리즘) deterministic chạy polynomial theo đầu vào (input / 입력) kích thước (size / 크기):
 
 ```text
 O(n^k)
@@ -42,9 +45,9 @@ O(n^k)
 
 cho một constant `k` nào đó.
 
-Polynomial không đồng nghĩa “nhanh trong thực tế”. `n^100` là polynomial nhưng vô dụng cho input lớn. Ngược lại exponential algorithm có thể đủ nhanh khi parameter nhỏ.
+Polynomial không đồng nghĩa “nhanh trong thực tế”. `n^100` là polynomial nhưng vô dụng cho đầu vào (input / 입력) lớn. Ngược lại exponential thuật toán (algorithm / 알고리즘) có thể đủ nhanh khi parameter nhỏ.
 
-Ý nghĩa lý thuyết của P là một boundary robust cho efficient computation dưới nhiều reasonable machine models, không phải SLA production.
+Ý nghĩa lý thuyết của P là một ranh giới (boundary / 경계) robust cho efficient computation dưới nhiều reasonable machine các mô hình (models / 모델들), không phải SLA môi trường vận hành (production / 운영 환경).
 
 ## 3. NP: yes-instance có certificate kiểm tra polynomial
 
@@ -57,17 +60,17 @@ exists certificate w of polynomial length
 such that verifier V(x,w) accepts in polynomial time
 ```
 
-SAT: certificate là assignment. Hamiltonian cycle: certificate là sequence vertex. Verifier kiểm tra nhanh solution được đưa sẵn.
+SAT: certificate là assignment. Hamiltonian cycle: certificate là chuỗi (sequence / 시퀀스) vertex. Verifier kiểm tra nhanh solution được đưa sẵn.
 
-NP không có nghĩa “non-polynomial”. Nó là **nondeterministic polynomial time** hoặc tương đương certificate-verification view.
+NP không có nghĩa “non-polynomial”. Nó là **nondeterministic polynomial thời gian (time / 시간)** hoặc tương đương certificate-verification view.
 
-Mọi problem trong P cũng thuộc NP vì nếu tự giải nhanh được thì verification không khó hơn.
+Mọi bài toán (problem / 문제) trong P cũng thuộc NP vì nếu tự giải nhanh được thì xác minh (verification / 확인) không khó hơn.
 
 Câu hỏi nổi tiếng `P = NP?` vẫn chưa được giải quyết. Không được viết tài liệu như thể `P ≠ NP` đã là theorem.
 
 ## 4. co-NP: certificate cho phía “no” theo complement
 
-Với language `L`, complement `L̄` chứa các input không thuộc `L`. `co-NP` là class các problem mà complement thuộc NP.
+Với ngôn ngữ (language / 언어) `L`, complement `L̄` chứa các đầu vào (input / 입력) không thuộc `L`. `co-NP` là lớp (class / 클래스) các bài toán (problem / 문제) mà complement thuộc NP.
 
 Trực giác:
 
@@ -78,20 +81,20 @@ co-NP  → no có witness kiểm tra nhanh cho problem gốc
 
 Ví dụ TAUT hỏi formula Boolean có đúng với mọi assignment không. Complement là “tồn tại assignment làm formula sai”, có witness kiểm tra nhanh, nên TAUT thuộc co-NP.
 
-Không biết liệu `NP = co-NP` hay không. Nếu một NP-complete problem cũng được chứng minh nằm trong co-NP theo cách dẫn tới equality phù hợp, hậu quả complexity rất lớn.
+Không biết liệu `NP = co-NP` hay không. Nếu một NP-complete bài toán (problem / 문제) cũng được chứng minh nằm trong co-NP theo cách dẫn tới equality phù hợp, hậu quả độ phức tạp (complexity / 복잡도) rất lớn.
 
-## 5. Certificate view giúp phân biệt search và proof
+## 5. Certificate view giúp phân biệt tìm kiếm (search / 검색) và proof
 
-Trong engineering, ta thường gặp asymmetric work:
+Trong kỹ thuật (engineering / 엔지니어링), ta thường gặp asymmetric công việc (work / 작업):
 
 ```text
 finding solution may be expensive
 checking proposed solution may be cheap
 ```
 
-Constraint solver có thể mất lâu để tìm schedule, nhưng verifier độc lập kiểm tra schedule hợp lệ nhanh. Compiler optimizer có thể search plan khó, nhưng checker có thể xác nhận một số invariant của result.
+Ràng buộc (constraint / 제약조건) solver có thể mất lâu để tìm schedule, nhưng verifier độc lập kiểm tra schedule hợp lệ nhanh. trình biên dịch (compiler / 컴파일러) optimizer có thể tìm kiếm (search / 검색) plan khó, nhưng checker có thể xác nhận một số bất biến (invariant / 불변식) của kết quả (result / 결과).
 
-Complexity theory formalize một phần trực giác này, nhưng không nên suy ra mọi “dễ verify, khó find” đều là NP-complete.
+Độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) formalize một phần trực giác này, nhưng không nên suy ra mọi “dễ verify, khó find” đều là NP-complete.
 
 ## 6. Reduction là ngôn ngữ so sánh độ khó
 
@@ -101,15 +104,15 @@ Polynomial-time reduction từ `A` sang `B` nghĩa là nếu có solver hiệu q
 A ≤p B
 ```
 
-Nếu mọi problem trong class `C` reduce tới `B`, `B` là `C-hard`. Nếu thêm `B ∈ C`, nó là `C-complete`.
+Nếu mọi bài toán (problem / 문제) trong lớp (class / 클래스) `C` reduce tới `B`, `B` là `C-hard`. Nếu thêm `B ∈ C`, nó là `C-complete`.
 
-Complete problem là đại diện cho difficulty của class dưới reduction notion đã chọn.
+Complete bài toán (problem / 문제) là đại diện cho difficulty của lớp (class / 클래스) dưới reduction notion đã chọn.
 
-Reduction direction rất dễ nhầm. Để chứng minh `B` khó, reduce **problem đã biết khó A vào B**, không làm ngược lại.
+Reduction direction rất dễ nhầm. Để chứng minh `B` khó, reduce **bài toán (problem / 문제) đã biết khó A vào B**, không làm ngược lại.
 
 ## 7. NP-completeness không nói instance nào cũng khó
 
-Một NP-complete problem có thể có nhiều instance dễ. SAT solver hiện đại giải rất nhiều formula lớn nhờ structure, heuristics, clause learning và preprocessing.
+Một NP-complete bài toán (problem / 문제) có thể có nhiều instance dễ. SAT solver hiện đại giải rất nhiều formula lớn nhờ cấu trúc (structure / 구조), heuristics, clause học tập (learning / 학습) và preprocessing.
 
 Worst-case hardness không phủ nhận practical success.
 
@@ -122,13 +125,13 @@ parameterized structure
 real workload distribution
 ```
 
-Security còn quan tâm average-case/hard-on-distribution nhiều hơn worst-case đơn thuần, vì attacker gặp key/instance được sinh theo distribution cụ thể.
+Bảo mật (security / 보안) còn quan tâm average-case/hard-on-distribution nhiều hơn worst-case đơn thuần, vì attacker gặp key/instance được sinh theo phân phối (distribution / 분포) cụ thể.
 
-## 8. Space là resource khác time
+## 8. không gian (space / 공간) là tài nguyên (resource / 자원) khác thời gian (time / 시간)
 
-`PSPACE` chứa decision problems giải được bằng polynomial **space**, không giới hạn polynomial time.
+`PSPACE` chứa quyết định (decision / 결정) problems giải được bằng polynomial **không gian (space / 공간)**, không giới hạn polynomial thời gian (time / 시간).
 
-Một machine dùng polynomial memory có thể chạy rất lâu, thậm chí exponential time, miễn workspace không vượt polynomial bound.
+Một machine dùng polynomial bộ nhớ (memory / 메모리) có thể chạy rất lâu, thậm chí exponential thời gian (time / 시간), miễn workspace không vượt polynomial bound.
 
 Ta có containment cơ bản:
 
@@ -138,27 +141,27 @@ P ⊆ NP ⊆ PSPACE ⊆ EXP
 
 Một số inclusion có thể strict nhưng không phải tất cả separation đã được chứng minh.
 
-Space có thể reuse. Một depth-first search trên state space khổng lồ có thể cần ít memory hơn breadth-first traversal dù time rất lớn.
+Không gian (space / 공간) có thể reuse. Một depth-first tìm kiếm (search / 검색) trên trạng thái (state / 상태) không gian (space / 공간) khổng lồ có thể cần ít bộ nhớ (memory / 메모리) hơn breadth-first traversal dù thời gian (time / 시간) rất lớn.
 
 ## 9. PSPACE và game/planning có alternating choices
 
-Nhiều game hoặc planning problem có chuỗi lựa chọn “ta chọn, đối thủ chọn, ta chọn...” và horizon polynomial nhưng state tree exponential.
+Nhiều game hoặc planning bài toán (problem / 문제) có chuỗi lựa chọn “ta chọn, đối thủ chọn, ta chọn...” và horizon polynomial nhưng trạng thái (state / 상태) cây (tree / 트리) exponential.
 
-Quantified Boolean Formula (QBF) là canonical PSPACE-complete problem:
+Quantified Boolean Formula (QBF) là chuẩn gốc (canonical / 정본) PSPACE-complete bài toán (problem / 문제):
 
 ```text
 ∃x ∀y ∃z ... φ(x,y,z,...)
 ```
 
-Khác SAT chỉ có existential assignment, QBF xen kẽ existential/universal choice. Evaluation cần reasoning qua game tree của quantifier.
+Khác SAT chỉ có existential assignment, QBF xen kẽ existential/universal choice. Evaluation cần lập luận (reasoning / 추론) qua game cây (tree / 트리) của quantifier.
 
-Connection này dẫn tự nhiên tới interactive proof và alternating computation.
+Liên kết (connection / 연결) này dẫn tự nhiên tới interactive proof và alternating computation.
 
-## 10. EXP: exponential time nhưng vẫn có cấu trúc resource bound
+## 10. EXP: exponential thời gian (time / 시간) nhưng vẫn có cấu trúc tài nguyên (resource / 자원) bound
 
-`EXP` thường chỉ problems giải deterministic trong time `2^{poly(n)}`.
+`EXP` thường chỉ problems giải deterministic trong thời gian (time / 시간) `2^{poly(n)}`.
 
-Exponential không đồng nghĩa undecidable. Một problem có thể decidable nhưng cần resource cực lớn theo worst case.
+Exponential không đồng nghĩa undecidable. Một bài toán (problem / 문제) có thể decidable nhưng cần tài nguyên (resource / 자원) cực lớn theo worst trường hợp (case / 사례).
 
 Đây là distinction quan trọng:
 
@@ -172,42 +175,42 @@ intractable under known complexity
 
 Đọc lại [Formal models, reductions và computability](./00_formal_models_reductions_and_computability.md).
 
-## 11. Space hierarchy và time hierarchy: thêm resource thật sự tăng power
+## 11. không gian (space / 공간) hierarchy và thời gian (time / 시간) hierarchy: thêm tài nguyên (resource / 자원) thật sự tăng power
 
-Hierarchy theorems cho thấy dưới điều kiện phù hợp, cho machine nhiều time/space asymptotically hơn thực sự cho phép giải thêm problem.
+Hierarchy theorems cho thấy dưới điều kiện phù hợp, cho machine nhiều thời gian (time / 시간)/không gian (space / 공간) asymptotically hơn thực sự cho phép giải thêm bài toán (problem / 문제).
 
-Điều này quan trọng vì không phải mọi complexity-class separation đều bí ẩn. Một số separation như giữa các bound đủ cách nhau đã được chứng minh; các câu hỏi khó như P vs NP nằm ở boundary tinh tế hơn.
+Điều này quan trọng vì không phải mọi complexity-class separation đều bí ẩn. Một số separation như giữa các bound đủ cách nhau đã được chứng minh; các câu hỏi khó như P vs NP nằm ở ranh giới (boundary / 경계) tinh tế hơn.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 more allowed resource
 can increase computable decision power
 ```
 
-nhưng exact boundary phụ thuộc class/model.
+nhưng chính xác (exact / 정확한) ranh giới (boundary / 경계) phụ thuộc lớp (class / 클래스)/mô hình (model / 모델).
 
-## 12. Randomized algorithms thêm random bits như resource
+## 12. Randomized algorithms thêm random bits như tài nguyên (resource / 자원)
 
-Randomized complexity class cho algorithm được dùng random choices.
+Randomized độ phức tạp (complexity / 복잡도) lớp (class / 클래스) cho thuật toán (algorithm / 알고리즘) được dùng random choices.
 
-Một số class quan trọng:
+Một số lớp (class / 클래스) quan trọng:
 
 ### RP
 
-Nếu answer là `no`, algorithm luôn reject đúng. Nếu answer là `yes`, algorithm accept với probability đủ lớn, thường ít nhất một constant như `1/2`.
+Nếu answer là `no`, thuật toán (algorithm / 알고리즘) luôn reject đúng. Nếu answer là `yes`, thuật toán (algorithm / 알고리즘) accept với xác suất (probability / 확률) đủ lớn, thường ít nhất một constant như `1/2`.
 
-Đây là **one-sided error**.
+Đây là **one-sided lỗi (error / 오류)**.
 
 ### co-RP
 
-Đối xứng phía còn lại: yes-side luôn đúng, no-side có bounded probability error theo convention tương ứng.
+Đối xứng phía còn lại: yes-side luôn đúng, no-side có bounded xác suất (probability / 확률) lỗi (error / 오류) theo convention tương ứng.
 
 ### BPP
 
-**Bounded-error probabilistic polynomial time** cho phép error hai phía nhưng probability bị chặn dưới một constant nhỏ hơn `1/2`, ví dụ `1/3`.
+**Bounded-error probabilistic polynomial thời gian (time / 시간)** cho phép lỗi (error / 오류) hai phía nhưng xác suất (probability / 확률) bị chặn dưới một constant nhỏ hơn `1/2`, ví dụ `1/3`.
 
-Quan trọng là error có thể giảm bằng independent repetition/majority nếu random trials phù hợp:
+Quan trọng là lỗi (error / 오류) có thể giảm bằng independent repetition/majority nếu random trials phù hợp:
 
 ```text
 constant error
@@ -220,25 +223,25 @@ với polynomial overhead cho mức confidence hợp lý.
 
 ### ZPP
 
-Zero-error probabilistic polynomial expected time có thể nhìn như algorithm không trả answer sai nhưng runtime là random variable với expected polynomial bound.
+Zero-error probabilistic polynomial expected thời gian (time / 시간) có thể nhìn như thuật toán (algorithm / 알고리즘) không trả answer sai nhưng thời gian chạy (runtime / 런타임) là random variable với expected polynomial bound.
 
 ## 13. Monte Carlo và Las Vegas
 
-Trong algorithm engineering, terminology thường dùng:
+Trong thuật toán (algorithm / 알고리즘) kỹ thuật (engineering / 엔지니어링), terminology thường dùng:
 
-**Monte Carlo**: runtime bounded nhưng có xác suất answer sai.
+**Monte Carlo**: thời gian chạy (runtime / 런타임) bounded nhưng có xác suất answer sai.
 
-**Las Vegas**: answer luôn đúng nhưng runtime random.
+**Las Vegas**: answer luôn đúng nhưng thời gian chạy (runtime / 런타임) random.
 
-Không phải mọi textbook map terminology hoàn toàn một-một với complexity class, nhưng distinction về **error vs runtime uncertainty** rất hữu ích.
+Không phải mọi textbook map terminology hoàn toàn một-một với độ phức tạp (complexity / 복잡도) lớp (class / 클래스), nhưng distinction về **lỗi (error / 오류) vs thời gian chạy (runtime / 런타임) bất định (uncertainty / 불확실성)** rất hữu ích.
 
-Ví dụ randomized quicksort luôn sort đúng nhưng runtime phụ thuộc random pivot; đây là Las Vegas-style reasoning về performance.
+Ví dụ randomized quicksort luôn sort đúng nhưng thời gian chạy (runtime / 런타임) phụ thuộc random pivot; đây là Las Vegas-style lập luận (reasoning / 추론) về hiệu năng (performance / 성능).
 
-## 14. Amplification không sửa systematic bias
+## 14. Amplification không sửa systematic độ lệch (bias / 편향)
 
-Lặp randomized algorithm chỉ giảm error nếu trial cung cấp independence/condition phù hợp.
+Lặp randomized thuật toán (algorithm / 알고리즘) chỉ giảm lỗi (error / 오류) nếu trial cung cấp independence/điều kiện (condition / 조건) phù hợp.
 
-Nếu RNG bị correlated hoặc algorithm có deterministic blind spot, repeat cùng failure mode không giúp.
+Nếu RNG bị correlated hoặc thuật toán (algorithm / 알고리즘) có deterministic blind spot, repeat cùng dạng thất bại (failure mode / 실패 모드) không giúp.
 
 ```text
 independent random error
@@ -248,37 +251,37 @@ systematic model error
 → repetition may repeat the same mistake
 ```
 
-Đây là bridge tới [Randomness, entropy sources và computational unpredictability](./05_randomness_entropy_sources_and_computational_unpredictability.md).
+Đây là cầu nối (bridge / 브리지) tới [Randomness, entropy sources và computational unpredictability](./05_randomness_entropy_sources_and_computational_unpredictability.md).
 
 ## 15. Pseudorandomness và derandomization
 
-Nếu random bits có thể được thay bằng pseudorandom generator phù hợp mà algorithm không phân biệt hiệu quả, một randomized algorithm có thể được mô phỏng deterministic trong một số setting.
+Nếu random bits có thể được thay bằng pseudorandom generator phù hợp mà thuật toán (algorithm / 알고리즘) không phân biệt hiệu quả, một randomized thuật toán (algorithm / 알고리즘) có thể được mô phỏng deterministic trong một số setting.
 
-**Derandomization** nghiên cứu khi randomness thực sự tăng computational power hay chỉ giúp thiết kế algorithm đơn giản/nhanh hơn.
+**Derandomization** nghiên cứu khi randomness thực sự tăng computational power hay chỉ giúp thiết kế thuật toán (algorithm / 알고리즘) đơn giản/nhanh hơn.
 
-Quan hệ chính xác giữa BPP và P là chủ đề sâu; không nên tuyên bố equality chưa chứng minh như fact. Tuy nhiên nhiều kết quả cho thấy randomness và hardness assumption có connection chặt.
+Quan hệ chính xác giữa BPP và P là chủ đề sâu; không nên tuyên bố equality chưa chứng minh như fact. Tuy nhiên nhiều kết quả cho thấy randomness và hardness giả định (assumption / 가정) có liên kết (connection / 연결) chặt.
 
-## 16. Pseudo-polynomial time: nhìn input encoding
+## 16. Pseudo-polynomial thời gian (time / 시간): nhìn đầu vào (input / 입력) encoding
 
-Một algorithm chạy `O(nW)` có thể trông polynomial nếu `W` là numeric value. Nhưng nếu `W` được encode binary, input chỉ cần `log W` bits.
+Một thuật toán (algorithm / 알고리즘) chạy `O(nW)` có thể trông polynomial nếu `W` là numeric giá trị (value / 값). Nhưng nếu `W` được encode nhị phân (binary / 이진), đầu vào (input / 입력) chỉ cần `log W` bits.
 
-Do đó `O(W)` có thể exponential theo **input length**.
+Do đó `O(W)` có thể exponential theo **đầu vào (input / 입력) length**.
 
-Knapsack dynamic programming theo capacity là ví dụ kinh điển pseudo-polynomial.
+Knapsack động (dynamic / 동적) programming theo sức chứa (capacity / 용량) là ví dụ kinh điển pseudo-polynomial.
 
-Complexity luôn đo theo size của representation, không theo magnitude được viết ra nếu hai thứ khác nhau.
+Độ phức tạp (complexity / 복잡도) luôn đo theo kích thước (size / 크기) của biểu diễn (representation / 표현), không theo magnitude được viết ra nếu hai thứ khác nhau.
 
 ## 17. Strong vs weak NP-hardness
 
-Pseudo-polynomial algorithm dẫn tới distinction giữa weakly và strongly NP-hard trong optimization problems số học.
+Pseudo-polynomial thuật toán (algorithm / 알고리즘) dẫn tới distinction giữa weakly và strongly NP-hard trong tối ưu hóa (optimization / 최적화) problems số học.
 
-Weakly NP-hard problem có thể trở nên tractable khi numeric parameters nhỏ/bounded, trong khi strong NP-hardness vẫn tồn tại ngay khi numeric values bị giới hạn polynomial phù hợp.
+Weakly NP-hard bài toán (problem / 문제) có thể trở nên tractable khi numeric parameters nhỏ/bounded, trong khi strong NP-hardness vẫn tồn tại ngay khi numeric values bị giới hạn polynomial phù hợp.
 
-Đây là lý do “NP-hard” chưa đủ để chọn implementation; parameter distribution thực tế có thể làm dynamic programming rất hiệu quả.
+Đây là lý do “NP-hard” chưa đủ để chọn hiện thực (implementation / 구현); parameter phân phối (distribution / 분포) thực tế có thể làm động (dynamic / 동적) programming rất hiệu quả.
 
-## 18. Parameterized complexity: hỏi exponential theo cái gì
+## 18. Parameterized độ phức tạp (complexity / 복잡도): hỏi exponential theo cái gì
 
-Một problem có thể khó theo tổng input `n` nhưng dễ nếu một parameter `k` nhỏ:
+Một bài toán (problem / 문제) có thể khó theo tổng đầu vào (input / 입력) `n` nhưng dễ nếu một parameter `k` nhỏ:
 
 ```text
 T(n,k) = f(k) × poly(n)
@@ -286,9 +289,9 @@ T(n,k) = f(k) × poly(n)
 
 Đây là **fixed-parameter tractable (FPT)** form.
 
-Ví dụ production có graph rất lớn nhưng treewidth, solution size hoặc number of exceptional constraints nhỏ. Parameterized viewpoint có thể cho algorithm practical dù general problem khó.
+Ví dụ môi trường vận hành (production / 운영 환경) có đồ thị (graph / 그래프) rất lớn nhưng treewidth, solution kích thước (size / 크기) hoặc number of exceptional các ràng buộc (constraints / 제약조건들) nhỏ. Parameterized viewpoint có thể cho thuật toán (algorithm / 알고리즘) practical dù general bài toán (problem / 문제) khó.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 “exponential” chưa đủ
@@ -297,11 +300,11 @@ Mental model:
 
 ## 19. Approximation và hardness of approximation
 
-Nếu exact optimization quá khó, ta có thể chấp nhận solution gần optimum với approximation ratio được chứng minh.
+Nếu chính xác (exact / 정확한) tối ưu hóa (optimization / 최적화) quá khó, ta có thể chấp nhận solution gần optimum với approximation ratio được chứng minh.
 
-Nhưng không phải mọi NP-hard problem có approximation tốt. Complexity theory còn nghiên cứu giới hạn approximation dưới assumption nhất định.
+Nhưng không phải mọi NP-hard bài toán (problem / 문제) có approximation tốt. độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) còn nghiên cứu giới hạn approximation dưới giả định (assumption / 가정) nhất định.
 
-Engineering decision vì vậy có ba tầng:
+Kỹ thuật (engineering / 엔지니어링) quyết định (decision / 결정) vì vậy có ba tầng:
 
 ```text
 exact algorithm
@@ -309,15 +312,15 @@ approximation with guarantee
 heuristic without worst-case guarantee
 ```
 
-Heuristic có thể rất tốt thực tế nhưng evidence khác proof guarantee.
+Heuristic có thể rất tốt thực tế nhưng bằng chứng (evidence / 증거) khác proof guarantee.
 
 Cross-link DSA: [Hard problems, reductions và approximation](../../01_algorithms_data_structures/advanced/04_algorithmic_paradigms/09_hard_problems_reductions_and_approximation.md).
 
-## 20. Complexity class không phải performance benchmark
+## 20. độ phức tạp (complexity / 복잡도) lớp (class / 클래스) không phải hiệu năng (performance / 성능) benchmark
 
-Hai algorithm cùng `O(n log n)` có constant, cache locality, vectorization và parallelism khác nhau. Một polynomial algorithm có thể chậm hơn exponential algorithm trên input nhỏ.
+Hai thuật toán (algorithm / 알고리즘) cùng `O(n log n)` có constant, bộ nhớ đệm (cache / 캐시) locality, vectorization và parallelism khác nhau. Một polynomial thuật toán (algorithm / 알고리즘) có thể chậm hơn exponential thuật toán (algorithm / 알고리즘) trên đầu vào (input / 입력) nhỏ.
 
-Complexity theory bỏ nhiều chi tiết microarchitecture để tập trung scaling law. Production performance phải nối thêm:
+Độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) bỏ nhiều chi tiết microarchitecture để tập trung scaling law. môi trường vận hành (production / 운영 환경) hiệu năng (performance / 성능) phải nối thêm:
 
 ```text
 asymptotic work
@@ -329,19 +332,19 @@ asymptotic work
 → latency/cost
 ```
 
-Do đó class là upper-level feasibility reasoning, không thay benchmark.
+Do đó lớp (class / 클래스) là upper-level feasibility lập luận (reasoning / 추론), không thay benchmark.
 
-## 21. Complexity và cryptography
+## 21. độ phức tạp (complexity / 복잡도) và cryptography
 
-Cryptography không chỉ cần “problem worst-case khó”. Nó cần attacker khó giải instance được sinh theo distribution cụ thể, với resource/threat model cụ thể.
+Cryptography không chỉ cần “bài toán (problem / 문제) worst-case khó”. Nó cần attacker khó giải instance được sinh theo phân phối (distribution / 분포) cụ thể, với tài nguyên (resource / 자원)/threat mô hình (model / 모델) cụ thể.
 
-Một NP-complete problem không tự động là primitive cryptographic tốt. Nếu random instances hầu hết dễ, worst-case hardness không bảo vệ key.
+Một NP-complete bài toán (problem / 문제) không tự động là thành phần nguyên thủy (primitive / 기본 요소) cryptographic tốt. Nếu random instances hầu hết dễ, worst-case hardness không bảo vệ key.
 
-Security thường dựa trên stronger average-case/computational assumptions và concrete parameter sizes.
+Bảo mật (security / 보안) thường dựa trên stronger average-case/computational các giả định (assumptions / 가정들) và concrete parameter sizes.
 
-## 22. Complexity và proof systems
+## 22. độ phức tạp (complexity / 복잡도) và proof các hệ thống (systems / 시스템들)
 
-NP có certificate một chiều: prover đưa witness, verifier check. Nếu cho verifier tương tác nhiều vòng với prover và dùng randomness, class các statement có thể verify hiệu quả mở rộng đáng kể.
+NP có certificate một chiều: prover đưa witness, verifier check. Nếu cho verifier tương tác nhiều vòng với prover và dùng randomness, lớp (class / 클래스) các statement có thể verify hiệu quả mở rộng đáng kể.
 
 Đây là motivation cho [Interactive proofs, zero-knowledge và verifiable computation](./07_interactive_proofs_zero_knowledge_and_verifiable_computation.md).
 
@@ -349,19 +352,19 @@ NP có certificate một chiều: prover đưa witness, verifier check. Nếu ch
 
 **“NP là non-polynomial.”** Sai.
 
-**“NP-complete nghĩa mọi instance đều chậm.”** Sai; đây là worst-case class statement.
+**“NP-complete nghĩa mọi instance đều chậm.”** Sai; đây là worst-case lớp (class / 클래스) statement.
 
-**“P là nhanh.”** Không nhất thiết trong practical constants/input sizes.
+**“P là nhanh.”** Không nhất thiết trong practical constants/đầu vào (input / 입력) sizes.
 
-**“Exponential nghĩa undecidable.”** Sai; EXP vẫn là decidable resource-bounded class.
+**“Exponential nghĩa undecidable.”** Sai; EXP vẫn là decidable resource-bounded lớp (class / 클래스).
 
-**“Randomized algorithm không đáng tin.”** Bounded error có thể được quantify/amplify; reliability contract phải nói rõ xác suất.
+**“Randomized thuật toán (algorithm / 알고리즘) không đáng tin.”** Bounded lỗi (error / 오류) có thể được quantify/amplify; độ tin cậy (reliability / 신뢰성) đặc tả hợp đồng (contract / 계약) phải nói rõ xác suất.
 
 **“P ≠ NP đã được chứng minh.”** Chưa.
 
-**“NP-hard problem không thể giải thực tế.”** Không; structure, parameter, approximation và heuristic có thể làm workload cụ thể tractable.
+**“NP-hard bài toán (problem / 문제) không thể giải thực tế.”** Không; cấu trúc (structure / 구조), parameter, approximation và heuristic có thể làm tải công việc (workload / 워크로드) cụ thể tractable.
 
-## 24. Class map để reasoning
+## 24. lớp (class / 클래스) map để lập luận (reasoning / 추론)
 
 Một containment map cơ bản:
 
@@ -380,9 +383,9 @@ NP ?= co-NP  chưa biết
 P ?= NP      chưa biết
 ```
 
-Randomized classes tạo trục khác về error/randomness. Không nên ép chúng vào một line duy nhất nếu chưa nói rõ known containment và assumption.
+Randomized classes tạo trục khác về lỗi (error / 오류)/randomness. Không nên ép chúng vào một line duy nhất nếu chưa nói rõ known containment và giả định (assumption / 가정).
 
-## 25. Checklist reasoning
+## 25. Checklist lập luận (reasoning / 추론)
 
 ```text
 Problem là decision, search hay optimization?
@@ -399,7 +402,7 @@ Production bottleneck có thực sự do asymptotic complexity hay do memory/I/O
 
 ## Kết luận
 
-Complexity classes là bản đồ của **resource-bounded computation**, không phải bảng xếp hạng “dễ/khó” đơn giản.
+Độ phức tạp (complexity / 복잡도) classes là bản đồ của **resource-bounded computation**, không phải bảng xếp hạng “dễ/khó” đơn giản.
 
 ```text
 P        → deterministic polynomial time
@@ -410,4 +413,6 @@ EXP      → exponential-time decidable computation
 RP/BPP/ZPP → polynomial computation với các contract khác nhau về randomness/error
 ```
 
-Giá trị thực tế nằm ở việc biết một problem đang khó vì search space, memory, uncertainty hay representation; biết theorem nào thật sự tồn tại; và biết khi nào cần chuyển từ exact solution sang parameterization, approximation, randomization hoặc domain-specific structure.
+Giá trị thực tế nằm ở việc biết một bài toán (problem / 문제) đang khó vì tìm kiếm (search / 검색) không gian (space / 공간), bộ nhớ (memory / 메모리), bất định (uncertainty / 불확실성) hay biểu diễn (representation / 표현); biết theorem nào thật sự tồn tại; và biết khi nào cần chuyển từ chính xác (exact / 정확한) solution sang parameterization, approximation, randomization hoặc domain-specific cấu trúc (structure / 구조).
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 formal models reductions and computability](./00_formal_models_reductions_and_computability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

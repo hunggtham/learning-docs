@@ -1,20 +1,26 @@
-# Search, Reasoning and Planning Foundations
+# Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations
 
-Folder này xây phần **classical problem solving** của Artificial Intelligence. Nó trả lời câu hỏi: khi một agent có state, actions và goal, làm thế nào khám phá possibilities, dùng knowledge để giảm search, xử lý opponent/constraints, lập plan và cuối cùng ra quyết định khi outcome không chắc chắn?
+> **Mạch đọc:** Đọc **tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **phụ thuộc (dependency / 의존성) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Các ideas ở đây không bị Machine Learning thay thế. Modern AI thường dùng learned model để cung cấp heuristic, policy, value hoặc proposal, còn search/planning vẫn xử lý combinatorial structure và execution constraints.
+
+Folder này xây phần **classical bài toán (problem / 문제) solving** của Artificial Intelligence. Nó trả lời câu hỏi: khi một tác nhân (agent / 에이전트) có trạng thái (state / 상태), actions và goal, làm thế nào khám phá possibilities, dùng kiến thức (knowledge / 지식) để giảm tìm kiếm (search / 검색), xử lý opponent/các ràng buộc (constraints / 제약조건들), lập plan và cuối cùng ra quyết định khi kết quả (outcome / 결과) không chắc chắn?
+
+Các ideas ở đây không bị Machine học tập (learning / 학습) thay thế. hiện đại (modern / 현대적) AI thường dùng learned mô hình (model / 모델) để cung cấp heuristic, chính sách (policy / 정책), giá trị (value / 값) hoặc proposal, còn tìm kiếm (search / 검색)/planning vẫn xử lý combinatorial cấu trúc (structure / 구조) và thực thi (execution / 실행) các ràng buộc (constraints / 제약조건들).
 
 ## Chapters
 
-1. [State Space and Search](./00_state_space_and_search.md) — state, action, transition, frontier, completeness, optimality và combinatorial explosion.
-2. [Uninformed Search](./01_uninformed_search.md) — BFS, DFS, DLS, IDDFS, Uniform-Cost Search và bidirectional search.
+1. [State Space and Search](./00_state_space_and_search.md) — trạng thái (state / 상태), hành động (action / 동작), chuyển tiếp (transition / 전이), frontier, completeness, optimality và combinatorial explosion.
+2. [Uninformed Search](./01_uninformed_search.md) — BFS, DFS, DLS, IDDFS, Uniform-Cost tìm kiếm (search / 검색) và bidirectional tìm kiếm (search / 검색).
 3. [Heuristic Search](./02_heuristic_search.md) — Greedy Best-First, A*, admissibility, consistency, learned heuristics và memory-bounded variants.
-4. [Adversarial Search and Games](./03_adversarial_search_and_games.md) — minimax, alpha–beta, evaluation, MCTS và neural-guided game search.
-5. [Constraint Satisfaction](./04_constraint_satisfaction.md) — variables/domains/constraints, propagation, backtracking, SAT/CP và hybrid LLM + solver patterns.
-6. [Planning](./05_planning.md) — action preconditions/effects, STRIPS/PDDL, partial-order/HTN/temporal planning, validation, execution và replanning.
-7. [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md) — expected utility, MDP/POMDP, Bellman equations, bandits, value of information và risk.
+4. [Adversarial Search and Games](./03_adversarial_search_and_games.md) — minimax, alpha–beta, evaluation, MCTS và neural-guided game tìm kiếm (search / 검색).
+5. [Constraint Satisfaction](./04_constraint_satisfaction.md) — variables/domains/các ràng buộc (constraints / 제약조건들), propagation, backtracking, SAT/CP và hybrid LLM + solver patterns.
+6. [Planning](./05_planning.md) — hành động (action / 동작) preconditions/effects, STRIPS/PDDL, partial-order/HTN/temporal planning, kiểm tra hợp lệ (validation / 검증), thực thi (execution / 실행) và replanning.
+7. [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md) — expected utility, MDP/POMDP, Bellman equations, bandits, giá trị (value / 값) of thông tin (information / 정보) và rủi ro (risk / 위험).
 
-## Dependency map
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Phụ thuộc (dependency / 의존성) map
 
 ```mermaid
 flowchart TD
@@ -32,7 +38,10 @@ flowchart TD
     P --> AG
 ```
 
-## Một mental model chung
+
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **Một mô hình tư duy (mental model / 사고 모델) chung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Một mô hình tư duy (mental model / 사고 모델) chung
 
 ```text
 Representation
@@ -52,29 +61,32 @@ Observe outcome
 Update / replan
 ```
 
-### Search
+### Tìm kiếm (search / 검색)
 
-Search quyết định **candidate nào được explore tiếp**.
+Tìm kiếm (search / 검색) quyết định **candidate nào được explore tiếp**.
 
-### Constraint reasoning
+### Ràng buộc (constraint / 제약조건) lập luận (reasoning / 추론)
 
-Constraints loại bỏ **candidate không thể hợp lệ** trước hoặc trong search.
+Các ràng buộc (constraints / 제약조건들) loại bỏ **candidate không thể hợp lệ** trước hoặc trong tìm kiếm (search / 검색).
 
 ### Planning
 
-Planning dùng semantics của actions để tìm **sequence/dependency** đạt goal.
+Planning dùng ngữ nghĩa (semantics / 의미론) của actions để tìm **chuỗi (sequence / 시퀀스)/phụ thuộc (dependency / 의존성)** đạt goal.
 
-### Decision theory
+### Quyết định (decision / 결정) lý thuyết (theory / 이론)
 
-Decision theory thêm probabilities và consequences để chọn action khi future uncertain.
+Quyết định (decision / 결정) lý thuyết (theory / 이론) thêm probabilities và consequences để chọn hành động (action / 동작) khi future uncertain.
 
-### Learning
+### Học tập (learning / 학습)
 
-Machine Learning có thể học heuristic, transition model, value hoặc policy từ data, nhưng không thay đổi bản chất các problem structures ở trên.
+Machine học tập (learning / 학습) có thể học heuristic, chuyển tiếp (transition / 전이) mô hình (model / 모델), giá trị (value / 값) hoặc chính sách (policy / 정책) từ dữ liệu (data / 데이터), nhưng không thay đổi bản chất các bài toán (problem / 문제) structures ở trên.
 
-## Connection với Modern AI
 
-Các connection quan trọng sẽ được reuse sau:
+> **Chuyển mạch:** Từ **Một mô hình tư duy (mental model / 사고 모델) chung**, ta sang **liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI
+
+Các liên kết (connection / 연결) quan trọng sẽ được reuse sau:
 
 ```text
 A* heuristic              ↔ learned value / cost-to-go
@@ -87,4 +99,6 @@ Belief state / POMDP       ↔ agents with incomplete observations
 Bandit exploration         ↔ recommendation / online learning
 ```
 
-Đặc biệt, khi tới `10_agents_and_ai_systems/`, library sẽ không định nghĩa Agent từ đầu bằng buzzwords. Nó sẽ reuse state, action, environment, planning, uncertainty và execution concepts đã xây tại đây.
+Đặc biệt, khi tới `10_agents_and_ai_systems/`, thư viện (library / 라이브러리) sẽ không định nghĩa tác nhân (agent / 에이전트) từ đầu bằng buzzwords. Nó sẽ reuse trạng thái (state / 상태), hành động (action / 동작), môi trường (environment / 환경), planning, bất định (uncertainty / 불확실성) và thực thi (execution / 실행) concepts đã xây tại đây.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) với hiện đại (modern / 현대적) AI**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

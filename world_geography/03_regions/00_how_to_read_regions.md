@@ -1,5 +1,8 @@
 # Cách đọc một vùng địa lý
 
+> **Mạch đọc:** Đọc **Cách đọc một vùng địa lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vùng không phải chiếc hộp có sẵn trong tự nhiên** sang **Ba cách tạo ranh giới vùng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vùng không phải chiếc hộp có sẵn trong tự nhiên
 
 Một **vùng (region)** là mô hình phân tích dùng để gom những nơi có một số đặc điểm hoặc quan hệ chung. Ranh giới của vùng vì thế phụ thuộc câu hỏi đang đặt ra. “Đông Á” có thể được xác định theo lịch sử–văn hóa, mạng kinh tế hoặc vị trí địa lý; “Sahel” dựa nhiều hơn vào khí hậu và sinh thái; còn “vùng đô thị Seoul” lại được hiểu tốt hơn qua dòng đi làm, giao thông và thị trường lao động.
@@ -10,7 +13,7 @@ Một **vùng (region)** là mô hình phân tích dùng để gom những nơi 
 
 ## Ba cách tạo ranh giới vùng
 
-Trong thực tế, ranh giới vùng thường xuất hiện theo ba logic lớn. **Vùng hình thức (formal region)** gom các nơi có đặc tính tương đối giống nhau, chẳng hạn vùng khí hậu khô hoặc khu vực nói cùng một ngôn ngữ chiếm ưu thế. **Vùng chức năng (functional region)** được tổ chức bởi một nút và các dòng xung quanh, như vùng đi làm của một thành phố, vùng phục vụ của cảng hoặc lưu vực điện. **Vùng nhận thức (perceptual region)** hình thành từ lịch sử, bản sắc hoặc cách con người tưởng tượng không gian, như “Bắc Âu” hay “Trung Đông”.
+Trong thực tế, ranh giới vùng thường xuất hiện theo ba lô-gic (logic / 논리) lớn. **Vùng hình thức (formal region)** gom các nơi có đặc tính tương đối giống nhau, chẳng hạn vùng khí hậu khô hoặc khu vực nói cùng một ngôn ngữ chiếm ưu thế. **Vùng chức năng (functional region)** được tổ chức bởi một nút và các dòng xung quanh, như vùng đi làm của một thành phố, vùng phục vụ của cảng hoặc lưu vực điện. **Vùng nhận thức (perceptual region)** hình thành từ lịch sử, bản sắc hoặc cách con người tưởng tượng không gian, như “Bắc Âu” hay “Trung Đông”.
 
 Một lỗi phổ biến là dùng ranh giới của một loại vùng để giải thích hiện tượng thuộc loại khác. Ví dụ, dùng biên giới tỉnh để phân tích lũ có thể không phù hợp vì nước tuân theo lưu vực; dùng ranh giới thành phố để phân tích thị trường lao động có thể bỏ sót hàng trăm nghìn người đi làm từ đô thị vệ tinh.
 
@@ -18,7 +21,7 @@ Một lỗi phổ biến là dùng ranh giới của một loại vùng để gi
 
 Một vùng nên được đọc như hệ thống gồm nhiều lớp tác động qua lại. Nền vật lý tạo ra ràng buộc ban đầu: vĩ độ, địa hình, bờ biển, khí hậu, sông, đất và tài nguyên. Trên nền đó, lịch sử định cư, thể chế, công nghệ và mạng giao thông làm dân cư và hoạt động kinh tế phân bố không đều. Cuối cùng, các dòng thương mại, vốn, người và thông tin kết nối vùng với thế giới bên ngoài.
 
-Điều này không có nghĩa môi trường “quyết định” xã hội. Hai nơi có khí hậu gần nhau có thể phát triển rất khác vì thể chế, công nghệ và vị trí trong mạng thương mại khác nhau. Cách đọc tốt là xem tự nhiên tạo **ràng buộc (constraint)** và **cơ hội (opportunity)**, còn lịch sử và xã hội quyết định cách con người phản ứng với chúng.
+Điều này không có nghĩa môi trường “quyết định” xã hội. Hai nơi có khí hậu gần nhau có thể phát triển rất khác vì thể chế, công nghệ và vị trí trong mạng thương mại khác nhau. Cách đọc tốt là xem tự nhiên tạo **ràng buộc (constraint / 제약조건)** và **cơ hội (opportunity)**, còn lịch sử và xã hội quyết định cách con người phản ứng với chúng.
 
 Ví dụ, đồng bằng ven biển thường thuận lợi cho nông nghiệp, đô thị và cảng, nhưng mức phát triển không chỉ đến từ đất bằng. Nó còn phụ thuộc khả năng kiểm soát lũ, kết nối hậu phương, vốn đầu tư, năng lực quản trị và vị trí trong mạng thương mại.
 
@@ -36,7 +39,7 @@ Năm lớp này không độc lập. Một cảng lớn có thể xuất hiện 
 
 ## Quy mô có thể đảo ngược kết luận
 
-**Quy mô (scale / 규모)** là một trong những nguồn gây hiểu sai lớn nhất. Ở quy mô lục địa, Đông Á có thể được xem là vùng công nghiệp hóa cao. Ở quy mô quốc gia, chênh lệch giữa vùng thủ đô và vùng ngoại vi rất rõ. Ở quy mô đô thị, chỉ vài kilomet có thể tách khu tài chính khỏi khu dân cư thu nhập thấp.
+**quy mô (scale / 규모)** là một trong những nguồn gây hiểu sai lớn nhất. Ở quy mô lục địa, Đông Á có thể được xem là vùng công nghiệp hóa cao. Ở quy mô quốc gia, chênh lệch giữa vùng thủ đô và vùng ngoại vi rất rõ. Ở quy mô đô thị, chỉ vài kilomet có thể tách khu tài chính khỏi khu dân cư thu nhập thấp.
 
 Một nhận định đúng ở quy mô lớn không tự động đúng ở quy mô nhỏ. “Mỹ Latinh đô thị hóa cao” không có nghĩa mọi vùng trong lục địa đều mang tính đô thị. “Châu Phi có dân số trẻ” không có nghĩa mọi quốc gia hoặc thành phố có cùng cơ cấu tuổi.
 
@@ -89,3 +92,5 @@ Nhưng chính cấu trúc đó tạo rủi ro: đất thấp dễ ngập, trầm
 > Đọc một vùng như **hệ thống gồm nền vật lý + lịch sử + mạng lưới + dòng lưu chuyển + các quá trình chuyển đổi**. Đừng bắt đầu từ danh sách quốc gia; hãy bắt đầu từ câu hỏi “cơ chế nào tạo ra mẫu không gian này?”.
 
 Xem thêm: [Tư duy địa lý](../00_foundations/00_geographical_thinking.md), [Địa lý kinh tế](../02_human_geography/05_economic_geography.md), [Giao thông và toàn cầu hóa](../02_human_geography/08_transport_trade_globalization.md), [GIS và dữ liệu không gian](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 east asia](./01_east_asia.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,14 +1,17 @@
-# TypeScript 01 — Foundations & Runtime Boundary
+# TypeScript 01 — Foundations & thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계)
 
-> Canonical navigation: [TypeScript Index](typescript_00_index.md) → Foundations → [Type System Internals](typescript_02_type_system.md) → [Compiler & Tooling](typescript_03_tooling_modules_runtime.md) → [Senior Production](typescript_04_senior_production.md).
+> **Mạch đọc:** Đọc **TypeScript 01 — Foundations & thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. TypeScript giải quyết vấn đề nào?** sang **2. Compile-time và thời gian chạy (runtime / 런타임) là hai thế giới nối nhau bằng đặc tả hợp đồng (contract / 계약)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> chuẩn gốc (canonical / 정본) điều hướng (navigation / 내비게이션): [TypeScript Index](typescript_00_index.md) → Foundations → [Type System Internals](typescript_02_type_system.md) → [Compiler & Tooling](typescript_03_tooling_modules_runtime.md) → [Senior Production](typescript_04_senior_production.md).
 
 ## 1. TypeScript giải quyết vấn đề nào?
 
-JavaScript quyết định phần lớn lỗi theo runtime. Nếu một function mong nhận object có `email` nhưng caller truyền object khác shape, chương trình có thể chỉ phát hiện khi branch đó thật sự chạy. Với project nhỏ, developer có thể giữ contract trong đầu. Với project lớn, contract bị phân tán qua module, API, component, test và nhiều người cùng sửa; chi phí reasoning tăng nhanh hơn số dòng code.
+JavaScript quyết định phần lớn lỗi theo thời gian chạy (runtime / 런타임). Nếu một hàm (function / 함수) mong nhận đối tượng (object / 객체) có `email` nhưng caller truyền đối tượng (object / 객체) khác shape, chương trình có thể chỉ phát hiện khi branch đó thật sự chạy. Với dự án (project / 프로젝트) nhỏ, nhà phát triển (developer / 개발자) có thể giữ đặc tả hợp đồng (contract / 계약) trong đầu. Với dự án (project / 프로젝트) lớn, đặc tả hợp đồng (contract / 계약) bị phân tán qua mô-đun (module / 모듈), API, thành phần (component / 컴포넌트), kiểm thử (test / 테스트) và nhiều người cùng sửa; chi phí lập luận (reasoning / 추론) tăng nhanh hơn số dòng mã (code / 코드).
 
-TypeScript thêm một lớp mô hình tĩnh để compiler có thể hỏi trước khi chạy: expression này có thể tạo ra những value nào, property này có chắc tồn tại không, function này có thể return `undefined` không, caller có đang đưa đúng contract không? Giá trị lớn nhất không phải “viết thêm `: string`”, mà là biến implicit assumptions thành thứ toolchain có thể kiểm tra và refactor cùng bạn.
+TypeScript thêm một lớp mô hình tĩnh để trình biên dịch (compiler / 컴파일러) có thể hỏi trước khi chạy: expression này có thể tạo ra những giá trị (value / 값) nào, thuộc tính (property / 속성) này có chắc tồn tại không, hàm (function / 함수) này có thể return `undefined` không, caller có đang đưa đúng đặc tả hợp đồng (contract / 계약) không? Giá trị lớn nhất không phải “viết thêm `: string`”, mà là biến implicit các giả định (assumptions / 가정들) thành thứ toolchain có thể kiểm tra và refactor cùng bạn.
 
-Điểm quan trọng nhất: TypeScript **không thay đổi bản chất runtime của JavaScript**. Ví dụ:
+Điểm quan trọng nhất: TypeScript **không thay đổi bản chất thời gian chạy (runtime / 런타임) của JavaScript**. Ví dụ:
 
 ```ts
 type User = {
@@ -21,17 +24,17 @@ function greet(user: User) {
 }
 ```
 
-Sau khi compile, `type User` không trở thành một runtime class hay validation function. Runtime vẫn xử lý JavaScript object. Đây là **xóa kiểu (type erasure / 타입 소거)**. Vì thế một assertion như sau không kiểm tra gì ở runtime:
+Sau khi compile, `type User` không trở thành một thời gian chạy (runtime / 런타임) lớp (class / 클래스) hay kiểm tra hợp lệ (validation / 검증) hàm (function / 함수). thời gian chạy (runtime / 런타임) vẫn xử lý JavaScript đối tượng (object / 객체). Đây là **xóa kiểu (type erasure / 타입 소거)**. Vì thế một assertion như sau không kiểm tra gì ở thời gian chạy (runtime / 런타임):
 
 ```ts
 const data = JSON.parse(raw) as User;
 ```
 
-Nếu `raw` thiếu `name`, compiler vẫn tin assertion của bạn. Bạn đã tự cung cấp “bằng chứng” mà không kiểm chứng nó.
+Nếu `raw` thiếu `name`, trình biên dịch (compiler / 컴파일러) vẫn tin assertion của bạn. Bạn đã tự cung cấp “bằng chứng” mà không kiểm chứng nó.
 
-## 2. Compile-time và runtime là hai thế giới nối nhau bằng contract
+## 2. Compile-time và thời gian chạy (runtime / 런타임) là hai thế giới nối nhau bằng đặc tả hợp đồng (contract / 계약)
 
-Hãy dùng mental model hai tầng:
+Hãy dùng mô hình tư duy (mental model / 사고 모델) hai tầng:
 
 ```text
 source .ts
@@ -43,9 +46,9 @@ emit hoặc noEmit
 JavaScript + runtime environment
 ```
 
-Compiler nhìn source và declaration files. Runtime nhìn values thật. Một HTTP response, row database hay message từ native bridge không tự nhiên đáng tin chỉ vì variable phía TypeScript được annotation đẹp.
+Trình biên dịch (compiler / 컴파일러) nhìn nguồn (source / 소스) và declaration files. thời gian chạy (runtime / 런타임) nhìn values thật. Một HTTP phản hồi (response / 응답), row cơ sở dữ liệu (database / 데이터베이스) hay message từ bản địa (native / 네이티브) cầu nối (bridge / 브리지) không tự nhiên đáng tin chỉ vì variable phía TypeScript được annotation đẹp.
 
-Ví dụ production:
+Ví dụ môi trường vận hành (production / 운영 환경):
 
 ```ts
 interface ProfileResponse {
@@ -59,9 +62,9 @@ async function loadProfile(): Promise<ProfileResponse> {
 }
 ```
 
-Signature trên chỉ mô tả điều developer mong muốn. `response.json()` có thể trả bất kỳ JSON value nào. Senior code cần tách `unknown external data` khỏi `validated domain data`; phần này sẽ được làm đầy đủ ở chapter Senior Production.
+Signature trên chỉ mô tả điều nhà phát triển (developer / 개발자) mong muốn. `response.json()` có thể trả bất kỳ JSON giá trị (value / 값) nào. cấp cao (senior / 시니어) mã (code / 코드) cần tách `unknown external data` khỏi `validated domain data`; phần này sẽ được làm đầy đủ ở chapter cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경).
 
-## 3. Annotation và inference: đừng annotate mọi thứ
+## 3. Annotation và suy luận (inference / 추론): đừng annotate mọi thứ
 
 TypeScript có **suy luận kiểu (type inference / 타입 추론)**. Với:
 
@@ -71,9 +74,9 @@ const endpoint = "/api/users";
 const enabled = true;
 ```
 
-compiler đã biết type cần thiết. Annotation lặp lại như `const retryCount: number = 3` thường không thêm thông tin.
+Trình biên dịch (compiler / 컴파일러) đã biết kiểu (type / 타입) cần thiết. Annotation lặp lại như `const retryCount: number = 3` thường không thêm thông tin.
 
-Annotation có giá trị khi nó đặt contract tại boundary:
+Annotation có giá trị khi nó đặt đặc tả hợp đồng (contract / 계약) tại ranh giới (boundary / 경계):
 
 ```ts
 function calculateTotal(price: number, quantity: number): number {
@@ -81,24 +84,24 @@ function calculateTotal(price: number, quantity: number): number {
 }
 ```
 
-Hoặc khi muốn chống accidental widening hay xác nhận một public shape. Quy tắc thực dụng là: **để inference làm việc bên trong implementation, viết contract rõ ở public/module boundaries**.
+Hoặc khi muốn chống accidental widening hay xác nhận một công khai (public / 공개) shape. Quy tắc thực dụng là: **để suy luận (inference / 추론) làm việc bên trong hiện thực (implementation / 구현), viết đặc tả hợp đồng (contract / 계약) rõ ở công khai (public / 공개)/mô-đun (module / 모듈) boundaries**.
 
-## 4. Literal type, widening và `as const`
+## 4. Literal kiểu (type / 타입), widening và `as const`
 
-TypeScript phân biệt `string` với literal type như `"idle"`. Với mutable binding, compiler thường widen:
+TypeScript phân biệt `string` với literal kiểu (type / 타입) như `"idle"`. Với mutable binding, trình biên dịch (compiler / 컴파일러) thường widen:
 
 ```ts
 let status = "idle"; // string
 status = "running";
 ```
 
-Với `const`, compiler có thể giữ literal hẹp hơn vì binding không được reassign:
+Với `const`, trình biên dịch (compiler / 컴파일러) có thể giữ literal hẹp hơn vì binding không được reassign:
 
 ```ts
 const status = "idle"; // "idle"
 ```
 
-Object vẫn mutable nên property thường widen:
+Đối tượng (object / 객체) vẫn mutable nên thuộc tính (property / 속성) thường widen:
 
 ```ts
 const request = {
@@ -107,7 +110,7 @@ const request = {
 // request.method thường là string
 ```
 
-Khi muốn giữ literal structure sâu hơn:
+Khi muốn giữ literal cấu trúc (structure / 구조) sâu hơn:
 
 ```ts
 const request = {
@@ -116,11 +119,11 @@ const request = {
 } as const;
 ```
 
-`as const` làm các literal được giữ hẹp và properties/tuple trở nên readonly ở type level. Nó không `Object.freeze()` runtime object; đây tiếp tục là type/runtime boundary.
+`as const` làm các literal được giữ hẹp và properties/tuple trở nên readonly ở kiểu (type / 타입) mức (level / 수준). Nó không `Object.freeze()` thời gian chạy (runtime / 런타임) đối tượng (object / 객체); đây tiếp tục là kiểu (type / 타입)/thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계).
 
-## 5. Primitive, object và sự khác biệt giữa `string` với `String`
+## 5. thành phần nguyên thủy (primitive / 기본 요소), đối tượng (object / 객체) và sự khác biệt giữa `string` với `String`
 
-Trong TypeScript code hiện đại, dùng primitive types `string`, `number`, `boolean`, `bigint`, `symbol`. Các wrapper object types `String`, `Number`, `Boolean` đại diện cho boxed objects và gần như không phải thứ bạn muốn cho application contract.
+Trong TypeScript mã (code / 코드) hiện đại, dùng thành phần nguyên thủy (primitive / 기본 요소) types `string`, `number`, `boolean`, `bigint`, `symbol`. Các wrapper đối tượng (object / 객체) types `String`, `Number`, `Boolean` đại diện cho boxed objects và gần như không phải thứ bạn muốn cho đặc tả ứng dụng (application contract / 애플리케이션 계약).
 
 ```ts
 function normalize(value: string) {
@@ -128,9 +131,9 @@ function normalize(value: string) {
 }
 ```
 
-Đừng nhầm `object` với “object có property nào đó”. `object` chỉ loại primitive ra. `{}` lại mang semantics khác và quá rộng cho nhiều use case. Khi chưa biết shape external data, `unknown` thường đúng hơn.
+Đừng nhầm `object` với “đối tượng (object / 객체) có thuộc tính (property / 속성) nào đó”. `object` chỉ loại thành phần nguyên thủy (primitive / 기본 요소) ra. `{}` lại mang ngữ nghĩa (semantics / 의미론) khác và quá rộng cho nhiều use trường hợp (case / 사례). Khi chưa biết shape bên ngoài (external / 외부) dữ liệu (data / 데이터), `unknown` thường đúng hơn.
 
-## 6. `any`, `unknown`, `never`: ba type dễ dùng sai nhất
+## 6. `any`, `unknown`, `never`: ba kiểu (type / 타입) dễ dùng sai nhất
 
 `any` nói với checker: “đừng kiểm tra nữa”. Nó lan truyền rất nhanh:
 
@@ -139,7 +142,7 @@ let payload: any = getSomething();
 payload.user.profile.name.toUpperCase(); // compiler im lặng
 ```
 
-`unknown` nói: “có value, nhưng chưa có bằng chứng về shape”. Bạn buộc phải narrow trước:
+`unknown` nói: “có giá trị (value / 값), nhưng chưa có bằng chứng về shape”. Bạn buộc phải narrow trước:
 
 ```ts
 function printLength(value: unknown) {
@@ -149,7 +152,7 @@ function printLength(value: unknown) {
 }
 ```
 
-`never` đại diện cho tập value rỗng: branch không thể xảy ra nếu model đúng, hoặc function không hoàn tất bình thường.
+`never` đại diện cho tập giá trị (value / 값) rỗng: branch không thể xảy ra nếu mô hình (model / 모델) đúng, hoặc hàm (function / 함수) không hoàn tất bình thường.
 
 ```ts
 function fail(message: string): never {
@@ -159,7 +162,7 @@ function fail(message: string): never {
 
 `never` đặc biệt hữu ích cho exhaustive checking của discriminated union.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 any     = tắt phần lớn bằng chứng
@@ -167,9 +170,9 @@ unknown = chưa biết, phải chứng minh
 never   = không có value hợp lệ nào còn lại
 ```
 
-## 7. Union type và narrowing bằng control flow
+## 7. Union kiểu (type / 타입) và narrowing bằng điều khiển (control / 제어) luồng (flow / 흐름)
 
-Union `A | B` nghĩa value có thể thuộc một trong nhiều possibility. Bạn chỉ được dùng operation an toàn cho mọi possibility cho tới khi có evidence.
+Union `A | B` nghĩa giá trị (value / 값) có thể thuộc một trong nhiều possibility. Bạn chỉ được dùng thao tác (operation / 연산) an toàn cho mọi possibility cho tới khi có bằng chứng (evidence / 증거).
 
 ```ts
 function normalizeId(id: string | number) {
@@ -181,13 +184,13 @@ function normalizeId(id: string | number) {
 }
 ```
 
-Checker theo dõi control flow, assignment, `typeof`, equality, `in`, `instanceof`, truthiness và user-defined type predicates để thu hẹp kiểu.
+Checker theo dõi điều khiển (control / 제어) luồng (flow / 흐름), assignment, `typeof`, equality, `in`, `instanceof`, truthiness và user-defined kiểu (type / 타입) predicates để thu hẹp kiểu.
 
-Một lỗi reasoning phổ biến là narrow xong rồi gọi callback có thể chạy sau, trong khi mutable state đã thay đổi. Hãy nhớ narrowing là proof gắn với control-flow assumptions của compiler; async/callback boundaries và mutation có thể khiến proof không còn mạnh như bạn tưởng. Cách tốt thường là capture value đã được validate vào immutable local binding.
+Một lỗi lập luận (reasoning / 추론) phổ biến là narrow xong rồi gọi callback có thể chạy sau, trong khi mutable trạng thái (state / 상태) đã thay đổi. Hãy nhớ narrowing là proof gắn với control-flow các giả định (assumptions / 가정들) của trình biên dịch (compiler / 컴파일러); async/callback boundaries và mutation có thể khiến proof không còn mạnh như bạn tưởng. Cách tốt thường là capture giá trị (value / 값) đã được validate vào immutable cục bộ (local / 로컬) binding.
 
-## 8. Discriminated union: model state thay vì ghép boolean
+## 8. Discriminated union: mô hình (model / 모델) trạng thái (state / 상태) thay vì ghép boolean
 
-Giả sử request state dùng ba field:
+Giả sử yêu cầu (request / 요청) trạng thái (state / 상태) dùng ba trường dữ liệu (field / 필드):
 
 ```ts
 type BadState = {
@@ -199,7 +202,7 @@ type BadState = {
 
 Shape này cho phép những combination vô lý như `loading: true` đồng thời có cả `data` và `error`.
 
-Model tốt hơn:
+Mô hình (model / 모델) tốt hơn:
 
 ```ts
 type RequestState =
@@ -209,7 +212,7 @@ type RequestState =
   | { status: "error"; error: Error };
 ```
 
-`status` là discriminant. Khi kiểm tra `status`, compiler narrow toàn object. Đây không chỉ là “type trick”; nó biến invariant business thành cấu trúc mà compiler giữ giúp bạn.
+`status` là discriminant. Khi kiểm tra `status`, trình biên dịch (compiler / 컴파일러) narrow toàn đối tượng (object / 객체). Đây không chỉ là “kiểu (type / 타입) trick”; nó biến bất biến (invariant / 불변식) nghiệp vụ (business / 비즈니스) thành cấu trúc mà trình biên dịch (compiler / 컴파일러) giữ giúp bạn.
 
 ```ts
 function renderState(state: RequestState) {
@@ -230,11 +233,11 @@ function renderState(state: RequestState) {
 }
 ```
 
-Nếu thêm state mới mà quên xử lý, `never` biến omission thành diagnostic.
+Nếu thêm trạng thái (state / 상태) mới mà quên xử lý, `never` biến omission thành diagnostic.
 
-## 9. Intersection type không phải object spread
+## 9. Intersection kiểu (type / 타입) không phải đối tượng (object / 객체) spread
 
-`A & B` yêu cầu một value thỏa cả A và B. Nó không đồng nghĩa runtime merge hai objects.
+`A & B` yêu cầu một giá trị (value / 값) thỏa cả A và B. Nó không đồng nghĩa thời gian chạy (runtime / 런타임) merge hai objects.
 
 ```ts
 type Timestamped = { createdAt: Date };
@@ -243,11 +246,11 @@ type Entity = { id: string };
 type PersistedEntity = Entity & Timestamped;
 ```
 
-Nếu hai type có property cùng tên nhưng incompatible, intersection có thể tạo property thành `never` hoặc type rất khó dùng. Đây là dấu hiệu model đang mâu thuẫn, không phải compiler “ngu”.
+Nếu hai kiểu (type / 타입) có thuộc tính (property / 속성) cùng tên nhưng incompatible, intersection có thể tạo thuộc tính (property / 속성) thành `never` hoặc kiểu (type / 타입) rất khó dùng. Đây là dấu hiệu mô hình (model / 모델) đang mâu thuẫn, không phải trình biên dịch (compiler / 컴파일러) “ngu”.
 
-## 10. `interface` và `type`: chọn theo semantics, không theo giáo điều
+## 10. `interface` và `type`: chọn theo ngữ nghĩa (semantics / 의미론), không theo giáo điều
 
-Cả hai đều mô tả object shape tốt trong phần lớn trường hợp.
+Cả hai đều mô tả đối tượng (object / 객체) shape tốt trong phần lớn trường hợp.
 
 ```ts
 interface User {
@@ -259,18 +262,18 @@ type UserId = string;
 type LoadState = "idle" | "loading" | "done";
 ```
 
-`interface` có declaration merging và phù hợp public extensible object contracts trong một số library pattern. `type` diễn đạt union, intersection, primitive alias, tuple và type transformations linh hoạt hơn. Đừng biến lựa chọn này thành style war; hãy chọn cấu trúc phản ánh intent và tránh accidental merging ở application code nếu bạn không cần nó.
+`interface` có declaration merging và phù hợp công khai (public / 공개) extensible đối tượng (object / 객체) contracts trong một số thư viện (library / 라이브러리) mẫu (pattern / 패턴). `type` diễn đạt union, intersection, thành phần nguyên thủy (primitive / 기본 요소) alias, tuple và kiểu (type / 타입) transformations linh hoạt hơn. Đừng biến lựa chọn này thành style war; hãy chọn cấu trúc phản ánh intent và tránh accidental merging ở ứng dụng (application / 애플리케이션) mã (code / 코드) nếu bạn không cần nó.
 
-## 11. Optional property và `undefined` không hoàn toàn giống nhau
+## 11. Optional thuộc tính (property / 속성) và `undefined` không hoàn toàn giống nhau
 
 ```ts
 type A = { value?: string };
 type B = { value: string | undefined };
 ```
 
-A cho phép property không tồn tại. B yêu cầu property tồn tại nhưng value có thể là `undefined`. Sự khác biệt quan trọng khi serialize, spread, check `"value" in obj`, patch DTO và khi bật `exactOptionalPropertyTypes`.
+A cho phép thuộc tính (property / 속성) không tồn tại. B yêu cầu thuộc tính (property / 속성) tồn tại nhưng giá trị (value / 값) có thể là `undefined`. Sự khác biệt quan trọng khi serialize, spread, check `"value" in obj`, patch DTO và khi bật `exactOptionalPropertyTypes`.
 
-Với strict modeling, đừng dùng optional chỉ để “cho compiler im”. Hỏi domain thật: field có thể absent hay luôn present nhưng unknown/empty?
+Với strict modeling, đừng dùng optional chỉ để “cho trình biên dịch (compiler / 컴파일러) im”. Hỏi lĩnh vực (domain / 도메인) thật: trường dữ liệu (field / 필드) có thể absent hay luôn present nhưng unknown/empty?
 
 ## 12. `readonly` là compile-time restriction
 
@@ -280,17 +283,17 @@ type Config = {
 };
 ```
 
-`readonly` ngăn một số assignment qua type surface đó, nhưng không biến object thành immutable runtime object. Nếu cùng object được tham chiếu qua type mutable khác, runtime vẫn có thể thay đổi. Đây là ví dụ khác về việc static model không tự tạo runtime guarantee.
+`readonly` ngăn một số assignment qua kiểu (type / 타입) surface đó, nhưng không biến đối tượng (object / 객체) thành immutable thời gian chạy (runtime / 런타임) đối tượng (object / 객체). Nếu cùng đối tượng (object / 객체) được tham chiếu qua kiểu (type / 타입) mutable khác, thời gian chạy (runtime / 런타임) vẫn có thể thay đổi. Đây là ví dụ khác về việc static mô hình (model / 모델) không tự tạo thời gian chạy (runtime / 런타임) guarantee.
 
-## 13. Function types, optional parameter và callback contract
+## 13. hàm (function / 함수) types, optional parameter và callback đặc tả hợp đồng (contract / 계약)
 
 ```ts
 type Formatter = (value: number, locale?: string) => string;
 ```
 
-Function type là contract về parameter và return. Callback assignability có các rule riêng để phù hợp JavaScript ecosystem; khi `strictFunctionTypes` hoạt động, function parameter variance được kiểm tra chặt hơn ở nhiều context. Chi tiết variance nằm ở chapter 02.
+Hàm (function / 함수) kiểu (type / 타입) là đặc tả hợp đồng (contract / 계약) về parameter và return. Callback assignability có các quy tắc (rule / 규칙) riêng để phù hợp JavaScript ecosystem; khi `strictFunctionTypes` hoạt động, hàm (function / 함수) parameter variance được kiểm tra chặt hơn ở nhiều ngữ cảnh (context / 맥락). Chi tiết variance nằm ở chapter 02.
 
-Một anti-pattern là khai báo return type quá rộng:
+Một anti-pattern là khai báo return kiểu (type / 타입) quá rộng:
 
 ```ts
 function findUser(id: string): User | null | undefined {
@@ -298,22 +301,22 @@ function findUser(id: string): User | null | undefined {
 }
 ```
 
-Nếu domain thực chỉ có “found hoặc not found”, chọn một representation duy nhất. Type càng rộng, mọi caller càng phải carry ambiguity.
+Nếu lĩnh vực (domain / 도메인) thực chỉ có “found hoặc not found”, chọn một biểu diễn (representation / 표현) duy nhất. kiểu (type / 타입) càng rộng, mọi caller càng phải carry ambiguity.
 
-## 14. Type assertion và non-null assertion là lời hứa của developer
+## 14. kiểu (type / 타입) assertion và non-null assertion là lời hứa của nhà phát triển (developer / 개발자)
 
 ```ts
 const input = document.querySelector("#name") as HTMLInputElement;
 const token = maybeToken!;
 ```
 
-Assertion không thêm runtime check. `!` cũng không làm value bớt `null`. Nó chỉ nói checker tin bạn. Dùng assertion hợp lý khi bạn có evidence compiler không biểu diễn được, nhưng mỗi assertion nên được nhìn như một **proof obligation**: evidence nằm ở đâu? test nào giữ invariant? runtime nào có thể phá assumption?
+Assertion không thêm thời gian chạy (runtime / 런타임) check. `!` cũng không làm giá trị (value / 값) bớt `null`. Nó chỉ nói checker tin bạn. Dùng assertion hợp lý khi bạn có bằng chứng (evidence / 증거) trình biên dịch (compiler / 컴파일러) không biểu diễn được, nhưng mỗi assertion nên được nhìn như một **proof obligation**: bằng chứng (evidence / 증거) nằm ở đâu? kiểm thử (test / 테스트) nào giữ bất biến (invariant / 불변식)? thời gian chạy (runtime / 런타임) nào có thể phá giả định (assumption / 가정)?
 
-Khi assertion xuất hiện hàng loạt, thường model hoặc boundary validation đang yếu.
+Khi assertion xuất hiện hàng loạt, thường mô hình (model / 모델) hoặc ranh giới (boundary / 경계) kiểm tra hợp lệ (validation / 검증) đang yếu.
 
-## 15. `satisfies`: kiểm tra shape mà vẫn giữ inference hữu ích
+## 15. `satisfies`: kiểm tra shape mà vẫn giữ suy luận (inference / 추론) hữu ích
 
-Giả sử muốn config phải khớp một contract nhưng vẫn giữ literal keys/value để dùng tiếp:
+Giả sử muốn cấu hình (config / 설정) phải khớp một đặc tả hợp đồng (contract / 계약) nhưng vẫn giữ literal keys/giá trị (value / 값) để dùng tiếp:
 
 ```ts
 type RouteConfig = Record<string, {
@@ -327,11 +330,11 @@ const routes = {
 } satisfies RouteConfig;
 ```
 
-`satisfies` kiểm tra expression có assignable tới target type hay không nhưng không ép variable nhận chính target type như annotation thường làm. Đây là công cụ rất mạnh cho config maps, route tables và metadata khi bạn muốn validation + rich inference.
+`satisfies` kiểm tra expression có assignable tới mục tiêu (target / 대상) kiểu (type / 타입) hay không nhưng không ép variable nhận chính mục tiêu (target / 대상) kiểu (type / 타입) như annotation thường làm. Đây là công cụ rất mạnh cho cấu hình (config / 설정) maps, tuyến (route / 경로) tables và siêu dữ liệu (metadata / 메타데이터) khi bạn muốn kiểm tra hợp lệ (validation / 검증) + rich suy luận (inference / 추론).
 
-## 16. Excess property checking và “tại sao cùng object mà lúc lỗi, lúc không?”
+## 16. Excess thuộc tính (property / 속성) checking và “tại sao cùng đối tượng (object / 객체) mà lúc lỗi, lúc không?”
 
-TypeScript có kiểm tra đặc biệt với object literal ở một số context:
+TypeScript có kiểm tra đặc biệt với đối tượng (object / 객체) literal ở một số ngữ cảnh (context / 맥락):
 
 ```ts
 type User = { id: string };
@@ -342,24 +345,24 @@ const direct: User = {
 };
 ```
 
-Nhưng nếu object đi qua variable trước, structural assignability có thể chấp nhận extra fields:
+Nhưng nếu đối tượng (object / 객체) đi qua variable trước, structural assignability có thể chấp nhận extra fields:
 
 ```ts
 const source = { id: "u1", name: "Kim" };
 const user: User = source; // thường hợp lệ
 ```
 
-Đây không phải inconsistency ngẫu nhiên. Fresh object literal được kiểm tra excess property để bắt typo/config mistake, trong khi structural typing nói object có thể có nhiều capability hơn target yêu cầu. Hiểu hai rule này giúp tránh “fix” bằng `as User` chỉ để tắt lỗi.
+Đây không phải inconsistency ngẫu nhiên. Fresh đối tượng (object / 객체) literal được kiểm tra excess thuộc tính (property / 속성) để bắt typo/cấu hình (config / 설정) mistake, trong khi structural typing nói đối tượng (object / 객체) có thể có nhiều năng lực (capability / 역량) hơn mục tiêu (target / 대상) yêu cầu. Hiểu hai quy tắc (rule / 규칙) này giúp tránh “fix” bằng `as User` chỉ để tắt lỗi.
 
-## 17. Strict mode là baseline reasoning
+## 17. Strict chế độ (mode / 모드) là baseline lập luận (reasoning / 추론)
 
-Project hiện đại nên coi strict checking là baseline. `strictNullChecks` buộc `null`/`undefined` trở thành phần explicit của model. Các strict-family flags giúp compiler giữ invariant thay vì cho implicit `any` hoặc unsafe access lọt qua.
+Dự án (project / 프로젝트) hiện đại nên coi strict checking là baseline. `strictNullChecks` buộc `null`/`undefined` trở thành phần tường minh (explicit / 명시적) của mô hình (model / 모델). Các strict-family flags giúp trình biên dịch (compiler / 컴파일러) giữ bất biến (invariant / 불변식) thay vì cho implicit `any` hoặc unsafe truy cập (access / 접근) lọt qua.
 
-TypeScript 6.0/7.0 còn đi xa hơn về default strictness và modern module assumptions. Tuy nhiên project upgrade phải đọc release notes và config hiện hữu, vì đổi compiler version có thể thay diagnostic mà không đổi runtime code.
+TypeScript 6.0/7.0 còn đi xa hơn về default strictness và hiện đại (modern / 현대적) mô-đun (module / 모듈) các giả định (assumptions / 가정들). Tuy nhiên dự án (project / 프로젝트) upgrade phải đọc bản phát hành (release / 릴리스) notes và cấu hình (config / 설정) hiện hữu, vì đổi trình biên dịch (compiler / 컴파일러) phiên bản (version / 버전) có thể thay diagnostic mà không đổi thời gian chạy (runtime / 런타임) mã (code / 코드).
 
-## 18. Debugging một type error theo tầng
+## 18. Debugging một kiểu (type / 타입) lỗi (error / 오류) theo tầng
 
-Khi gặp diagnostic dài, đừng đọc từ câu cuối rồi cast. Hãy trace:
+Khi gặp diagnostic dài, đừng đọc từ câu cuối rồi cast. Hãy dấu vết (trace / 추적):
 
 ```text
 1. Value/runtime intent thật là gì?
@@ -369,14 +372,16 @@ Khi gặp diagnostic dài, đừng đọc từ câu cuối rồi cast. Hãy trac
 5. Diagnostic đầu tiên nơi information bị mất là đâu?
 ```
 
-Ví dụ một React prop error có thể bắt nguồn từ API DTO typed `any` quá sớm; một module type error có thể đến từ wrong resolution mode chứ không phải interface. Chapter sau sẽ đào sâu assignability và generic inference để trace các error kiểu này có hệ thống.
+Ví dụ một React prop lỗi (error / 오류) có thể bắt nguồn từ API DTO typed `any` quá sớm; một mô-đun (module / 모듈) kiểu (type / 타입) lỗi (error / 오류) có thể đến từ wrong resolution chế độ (mode / 모드) chứ không phải giao diện (interface / 인터페이스). Chapter sau sẽ đào sâu assignability và generic suy luận (inference / 추론) để dấu vết (trace / 추적) các lỗi (error / 오류) kiểu này có hệ thống.
 
-## 19. Failure modes cần nhớ
+## 19. thất bại (failure / 실패) modes cần nhớ
 
-TypeScript không cứu được bạn khỏi logic sai nhưng type-correct, race condition, stale cache, SQL bug, authorization bug hay malformed external data nếu bạn tự cast. Nó cũng không làm object immutable runtime chỉ vì `readonly`, không làm array bounds-safe mặc định, và không biến `private` type semantics thành security boundary.
+TypeScript không cứu được bạn khỏi lô-gic (logic / 논리) sai nhưng type-correct, race điều kiện (condition / 조건), stale bộ nhớ đệm (cache / 캐시), SQL bug, authorization bug hay malformed bên ngoài (external / 외부) dữ liệu (data / 데이터) nếu bạn tự cast. Nó cũng không làm đối tượng (object / 객체) immutable thời gian chạy (runtime / 런타임) chỉ vì `readonly`, không làm array bounds-safe mặc định, và không biến `private` kiểu (type / 타입) ngữ nghĩa (semantics / 의미론) thành ranh giới bảo mật (security boundary / 보안 경계).
 
-Giá trị của TypeScript xuất hiện mạnh nhất khi model phản ánh invariant thật và escape hatch được giữ ở boundary nhỏ, có evidence rõ.
+Giá trị của TypeScript xuất hiện mạnh nhất khi mô hình (model / 모델) phản ánh bất biến (invariant / 불변식) thật và escape hatch được giữ ở ranh giới (boundary / 경계) nhỏ, có bằng chứng (evidence / 증거) rõ.
 
 ---
 
 Tiếp theo: [TypeScript 02 — Type System Internals & Generic Modeling](typescript_02_type_system.md).
+
+> **Bàn giao:** Sau **19. thất bại (failure / 실패) modes cần nhớ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

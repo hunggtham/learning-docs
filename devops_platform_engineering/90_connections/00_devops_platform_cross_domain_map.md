@@ -1,70 +1,73 @@
-# Knowledge connections: DevOps / Platform Engineering ↔ Computer Science
+# Kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)
 
-Thư viện này cố ý không sở hữu toàn bộ kiến thức hệ thống bên dưới. File này chỉ ra khi nào nên rời DevOps layer để đọc canonical chapter sâu hơn.
+> **Mạch đọc:** Đọc **kiến thức (knowledge / 지식) connections: DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) ↔ Khoa học máy tính (computer science / 컴퓨터 과학)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. bộ chứa (container / 컨테이너) và Linux** sang **2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Container và Linux
 
-Khi câu hỏi là “Dockerfile nên build ra sao, image nên promote thế nào, probe/resource nên cấu hình theo operational contract nào”, đọc [`03_containers`](../03_containers/00_container_image_runtime_and_builds.md).
+Thư viện này cố ý không sở hữu toàn bộ kiến thức hệ thống bên dưới. tệp (file / 파일) này chỉ ra khi nào nên rời DevOps tầng (layer / 계층) để đọc chuẩn gốc (canonical / 정본) chapter sâu hơn.
 
-Khi câu hỏi chuyển sang “namespace thật sự cô lập gì, cgroup enforce CPU/memory ra sao, capability/seccomp cắt quyền kernel thế nào”, đọc [OS advanced — containers/namespaces/cgroups](../../computer_science/03_operating_systems/advanced/06_containers_namespaces_cgroups_capabilities_and_seccomp.md).
+## 1. bộ chứa (container / 컨테이너) và Linux
 
-Process, syscall, virtual memory, filesystem và scheduling thuộc [OS foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) và [OS advanced](../../computer_science/03_operating_systems/advanced/README.md).
+Khi câu hỏi là “Dockerfile nên bản dựng (build / 빌드) ra sao, ảnh (image / 이미지) nên promote thế nào, probe/tài nguyên (resource / 자원) nên cấu hình theo operational đặc tả hợp đồng (contract / 계약) nào”, đọc [`03_containers`](../03_containers/00_container_image_runtime_and_builds.md).
 
-## 2. Kubernetes và distributed systems
+Khi câu hỏi chuyển sang “không gian tên (namespace / 네임스페이스) thật sự cô lập gì, cgroup enforce CPU/bộ nhớ (memory / 메모리) ra sao, năng lực (capability / 역량)/seccomp cắt quyền kernel thế nào”, đọc [OS advanced — containers/namespaces/cgroups](../../computer_science/03_operating_systems/advanced/06_containers_namespaces_cgroups_capabilities_and_seccomp.md).
 
-Kubernetes chapter giải control loop, controller ownership, workload scheduling và operational failure. Khi cần hiểu vì sao heartbeat không chứng minh node chết, lease/fencing hay consensus store hoạt động thế nào, chuyển sang [Networks & Distributed Systems advanced](../../computer_science/06_networks_distributed_systems/advanced/README.md).
+Tiến trình (process / 프로세스), syscall, virtual bộ nhớ (memory / 메모리), filesystem và scheduling thuộc [OS foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) và [OS advanced](../../computer_science/03_operating_systems/advanced/README.md).
 
-Các connection trực tiếp gồm [failure detectors](../../computer_science/06_networks_distributed_systems/advanced/01_failure_detectors_membership_and_gossip.md), [leases/fencing/split brain](../../computer_science/06_networks_distributed_systems/advanced/02_leases_fencing_tokens_and_split_brain_prevention.md) và [consensus/log replication](../../computer_science/06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md).
+## 2. Kubernetes và phân tán (distributed / 분산) các hệ thống (systems / 시스템들)
 
-## 3. CI/CD và Software Engineering
+Kubernetes chapter giải vòng điều khiển (control loop / 제어 루프), controller quyền sở hữu (ownership / 소유권), tải công việc (workload / 워크로드) scheduling và operational thất bại (failure / 실패). Khi cần hiểu vì sao heartbeat không chứng minh nút (node / 노드) chết, lease/fencing hay consensus store hoạt động thế nào, chuyển sang [Networks & Distributed Systems advanced](../../computer_science/06_networks_distributed_systems/advanced/README.md).
 
-DevOps delivery chapters quan tâm flow, artifact identity, evidence và automation. Khi cần lý thuyết compatibility/refactoring/test architecture, đọc [Software Engineering advanced](../../computer_science/09_software_engineering/advanced/README.md).
+Các liên kết (connection / 연결) trực tiếp gồm [failure detectors](../../computer_science/06_networks_distributed_systems/advanced/01_failure_detectors_membership_and_gossip.md), [leases/fencing/split brain](../../computer_science/06_networks_distributed_systems/advanced/02_leases_fencing_tokens_and_split_brain_prevention.md) và [consensus/log replication](../../computer_science/06_networks_distributed_systems/advanced/03_consensus_log_replication_reconfiguration_and_snapshots.md).
 
-Safe rollout nối trực tiếp [deployment safety, canary, blue-green, flags và rollback](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md). Production verification nối [test architecture và production verification](../../computer_science/09_software_engineering/advanced/04_test_architecture_contract_mutation_property_and_production_verification.md).
+## 3. CI/CD và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
-## 4. Network platform và networking fundamentals
+DevOps delivery chapters quan tâm luồng (flow / 흐름), sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자), bằng chứng (evidence / 증거) và automation. Khi cần lý thuyết tính tương thích (compatibility / 호환성)/refactoring/kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처), đọc [Software Engineering advanced](../../computer_science/09_software_engineering/advanced/README.md).
 
-DevOps request-path chapter tập trung DNS/TLS/proxy/load balancer debugging. Protocol semantics và distributed networking sâu hơn thuộc [Networks & Distributed Systems](../../computer_science/06_networks_distributed_systems/advanced/README.md).
+Safe rollout nối trực tiếp [deployment safety, canary, blue-green, flags và rollback](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md). môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) nối [test architecture và production verification](../../computer_science/09_software_engineering/advanced/04_test_architecture_contract_mutation_property_and_production_verification.md).
 
-Khi symptom là connection/timeout, bắt đầu ở request path. Khi câu hỏi là ordering, failure semantics, causal consistency hoặc consensus, chuyển sang Computer Science.
+## 4. mạng (network / 네트워크) nền tảng (platform / 플랫폼) và networking fundamentals
 
-## 5. Security platform và Security & Reliability
+DevOps request-path chapter tập trung DNS/TLS/proxy/bộ cân bằng tải (load balancer / 로드 밸런서) debugging. giao thức (protocol / 프로토콜) ngữ nghĩa (semantics / 의미론) và phân tán (distributed / 분산) networking sâu hơn thuộc [Networks & Distributed Systems](../../computer_science/06_networks_distributed_systems/advanced/README.md).
 
-DevOps security chapter biến identity, secret, signature và policy thành secure default. Cryptographic mechanism, PKI validation, OAuth/OIDC và KMS internals nằm tại [Security & Reliability advanced](../../computer_science/07_security_reliability/advanced/README.md).
+Khi symptom là liên kết (connection / 연결)/hết thời gian chờ (timeout / 타임아웃), bắt đầu ở đường đi của yêu cầu (request path / 요청 경로). Khi câu hỏi là thứ tự (ordering / 순서), thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), nhân quả (causal / 인과적) consistency hoặc consensus, chuyển sang Khoa học máy tính (computer science / 컴퓨터 과학).
+
+## 5. bảo mật (security / 보안) nền tảng (platform / 플랫폼) và bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성)
+
+DevOps bảo mật (security / 보안) chapter biến định danh (identity / 식별자), secret, signature và chính sách (policy / 정책) thành secure default. Cryptographic cơ chế (mechanism / 메커니즘), PKI kiểm tra hợp lệ (validation / 검증), OAuth/OIDC và KMS internals nằm tại [Security & Reliability advanced](../../computer_science/07_security_reliability/advanced/README.md).
 
 Các liên kết quan trọng: [PKI/mTLS/service identity](../../computer_science/07_security_reliability/advanced/02_pki_certificate_validation_mtls_and_service_identity.md), [OAuth/OIDC token lifecycle](../../computer_science/07_security_reliability/advanced/03_oauth_oidc_token_lifecycle_and_federation_threats.md), [secrets/KMS/HSM](../../computer_science/07_security_reliability/advanced/06_secrets_kms_hsm_rotation_and_envelope_encryption.md).
 
-## 6. Reliability, SLO và failure semantics
+## 6. độ tin cậy (reliability / 신뢰성), SLO và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
-SRE chapter nói cách đặt SLI/SLO, error budget, incident và capacity. Khi cần hiểu retry/idempotency/exactly-once, đọc [distributed transactions và failure semantics](../../computer_science/06_networks_distributed_systems/advanced/00_distributed_transactions_exactly_once_and_failure_semantics.md).
+SRE chapter nói cách đặt SLI/SLO, lỗi (error / 오류) ngân sách (budget / 예산), sự cố (incident / 인시던트) và sức chứa (capacity / 용량). Khi cần hiểu thử lại (retry / 재시도)/idempotency/exactly-once, đọc [distributed transactions và failure semantics](../../computer_science/06_networks_distributed_systems/advanced/00_distributed_transactions_exactly_once_and_failure_semantics.md).
 
-Khi cần nối reliability với security boundary, đọc [Computer Science learning route 4](../../computer_science/README.md).
+Khi cần nối độ tin cậy (reliability / 신뢰성) với ranh giới bảo mật (security boundary / 보안 경계), đọc [Computer Science learning route 4](../../computer_science/README.md).
 
-## 7. Database operations
+## 7. cơ sở dữ liệu (database / 데이터베이스) operations
 
-DevOps library không dạy database internals riêng. Connection pool, backup/restore và deployment migration được nhắc ở operational boundary. MVCC, WAL, lock, query/storage internals thuộc [Data & Databases advanced](../../computer_science/05_data_databases/advanced/README.md).
+DevOps thư viện (library / 라이브러리) không dạy cơ sở dữ liệu (database / 데이터베이스) internals riêng. liên kết (connection / 연결) pool, backup/restore và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션) được nhắc ở operational ranh giới (boundary / 경계). MVCC, WAL, khóa (lock / 잠금), truy vấn (query / 쿼리)/lưu trữ (storage / 저장소) internals thuộc [Data & Databases advanced](../../computer_science/05_data_databases/advanced/README.md).
 
-Điều này tránh viết lại database book bên trong platform book.
+Điều này tránh viết lại cơ sở dữ liệu (database / 데이터베이스) book bên trong nền tảng (platform / 플랫폼) book.
 
-## 8. Performance
+## 8. hiệu năng (performance / 성능)
 
-Khi metric cho thấy CPU throttling, page fault, I/O hoặc scheduler latency và cần đi xuống kernel/hardware, đọc OS/Architecture canonical docs. DevOps giữ symptom→evidence path; Computer Science giải mechanism.
+Khi chỉ số (metric / 지표) cho thấy CPU throttling, page fault, I/O hoặc scheduler độ trễ (latency / 지연 시간) và cần đi xuống kernel/hardware, đọc OS/kiến trúc (architecture / 아키텍처) chuẩn gốc (canonical / 정본) docs. DevOps giữ symptom→bằng chứng (evidence / 증거) đường dẫn (path / 경로); Khoa học máy tính (computer science / 컴퓨터 과학) giải cơ chế (mechanism / 메커니즘).
 
 ## 9. AI/LLMOps
 
-AI library trong `computer_science/02_artificial_intelligence/` đã có LLMOps/AI Engineering. DevOps Platform chỉ nên cung cấp capability chung như CI/CD, secrets, Kubernetes, observability và platform API. Những vấn đề model evaluation, vector/RAG/agent reliability thuộc AI domain để tránh duplicate.
+AI thư viện (library / 라이브러리) trong `computer_science/02_artificial_intelligence/` đã có LLMOps/AI kỹ thuật (engineering / 엔지니어링). DevOps nền tảng (platform / 플랫폼) chỉ nên cung cấp năng lực (capability / 역량) chung như CI/CD, secrets, Kubernetes, khả năng quan sát (observability / 관측 가능성) và nền tảng (platform / 플랫폼) API. Những vấn đề mô hình (model / 모델) evaluation, véc-tơ (vector / 벡터)/RAG/tác nhân (agent / 에이전트) độ tin cậy (reliability / 신뢰성) thuộc AI lĩnh vực (domain / 도메인) để tránh duplicate.
 
 ## 10. Nguyên tắc quyết định nơi đặt nội dung mới
 
-Nếu nội dung giải thích **cơ chế nền độc lập với operating platform** như consensus, page table, TLS validation hoặc WAL, đặt/cải thiện canonical Computer Science.
+Nếu nội dung giải thích **cơ chế nền độc lập với operating nền tảng (platform / 플랫폼)** như consensus, bảng trang (page table / 페이지 테이블), TLS kiểm tra hợp lệ (validation / 검증) hoặc WAL, đặt/cải thiện chuẩn gốc (canonical / 정본) Khoa học máy tính (computer science / 컴퓨터 과학).
 
-Nếu nội dung giải thích **cách tổ chức delivery, automation, control loop, production operation hoặc developer self-service** trên các cơ chế đó, đặt trong DevOps / Platform Engineering.
+Nếu nội dung giải thích **cách tổ chức delivery, automation, vòng điều khiển (control loop / 제어 루프), môi trường vận hành (production / 운영 환경) thao tác (operation / 연산) hoặc nhà phát triển (developer / 개발자) self-service** trên các cơ chế đó, đặt trong DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링).
 
-Nếu một chapter mới chỉ mô tả một product/tool mà không tạo mental model mới, không nên tạo chapter riêng; thêm ví dụ vào chapter concept tương ứng là đủ.
+Nếu một chapter mới chỉ mô tả một sản phẩm (product / 제품)/công cụ (tool / 도구) mà không tạo mô hình tư duy (mental model / 사고 모델) mới, không nên tạo chapter riêng; thêm ví dụ vào chapter concept tương ứng là đủ.
 
-## 11. Route reasoning 1 — từ latency user xuống scheduler/kernel
+## 11. tuyến (route / 경로) lập luận (reasoning / 추론) 1 — từ độ trễ (latency / 지연 시간) người dùng (user / 사용자) xuống scheduler/kernel
 
-Khi user báo request chậm, không nên nhảy ngay xuống CPU flame graph. Đi từ contract ngoài vào trong:
+Khi người dùng (user / 사용자) báo yêu cầu (request / 요청) chậm, không nên nhảy ngay xuống CPU flame đồ thị (graph / 그래프). Đi từ đặc tả hợp đồng (contract / 계약) ngoài vào trong:
 
 ```text
 user-observed latency
@@ -76,13 +79,13 @@ user-observed latency
 → node scheduler / memory / I/O
 ```
 
-DevOps chapters giữ phần symptom, timeout budget, telemetry, resource boundary và production evidence. Khi evidence đã chỉ rõ scheduler latency, reclaim/page fault hoặc filesystem behavior là bottleneck, lúc đó chuyển sang OS canonical để hiểu internals.
+DevOps chapters giữ phần symptom, ngân sách thời gian chờ (timeout budget / 타임아웃 예산), telemetry, tài nguyên (resource / 자원) ranh giới (boundary / 경계) và bằng chứng vận hành (production evidence / 운영 증거). Khi bằng chứng (evidence / 증거) đã chỉ rõ scheduler độ trễ (latency / 지연 시간), reclaim/page fault hoặc filesystem hành vi (behavior / 동작) là bottleneck, lúc đó chuyển sang OS chuẩn gốc (canonical / 정본) để hiểu internals.
 
-Boundary này ngăn hai lỗi đối lập: operator chỉ nhìn dashboard cấp cao và không hiểu kernel, hoặc operator lao xuống kernel quá sớm khi failure thực ra là config/dependency.
+Ranh giới (boundary / 경계) này ngăn hai lỗi đối lập: operator chỉ nhìn dashboard cấp cao và không hiểu kernel, hoặc operator lao xuống kernel quá sớm khi thất bại (failure / 실패) thực ra là cấu hình (config / 설정)/phụ thuộc (dependency / 의존성).
 
-## 12. Route reasoning 2 — từ commit đến bytes đang phục vụ production
+## 12. tuyến (route / 경로) lập luận (reasoning / 추론) 2 — từ lần ghi nhận (commit / 커밋) đến bytes đang phục vụ môi trường vận hành (production / 운영 환경)
 
-Một release có thể được truy theo chuỗi:
+Một bản phát hành (release / 릴리스) có thể được truy theo chuỗi:
 
 ```text
 commit
@@ -95,11 +98,11 @@ commit
 → workload version serving traffic
 ```
 
-Mỗi arrow là một trust/identity boundary. Delivery System sở hữu reproducibility và artifact identity; Security sở hữu trust policy/provenance/signature; GitOps/Kubernetes sở hữu desired→actual reconciliation; Observability xác nhận version nào thực sự tạo outcome.
+Mỗi arrow là một trust/định danh (identity / 식별자) ranh giới (boundary / 경계). Delivery hệ thống (system / 시스템) sở hữu reproducibility và sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자); bảo mật (security / 보안) sở hữu trust chính sách (policy / 정책)/provenance/signature; GitOps/Kubernetes sở hữu desired→actual reconciliation; khả năng quan sát (observability / 관측 가능성) xác nhận phiên bản (version / 버전) nào thực sự tạo kết quả (outcome / 결과).
 
-Nếu production khác staging, route này giúp hỏi đúng thứ tự: bytes có giống không, config có giống contract không, runtime có resolve đúng digest không, data/dependency có khác không. Không rebuild artifact giữa chừng vì rebuild làm mất biến kiểm soát.
+Nếu môi trường vận hành (production / 운영 환경) khác staging, tuyến (route / 경로) này giúp hỏi đúng thứ tự: bytes có giống không, cấu hình (config / 설정) có giống đặc tả hợp đồng (contract / 계약) không, thời gian chạy (runtime / 런타임) có resolve đúng digest không, dữ liệu (data / 데이터)/phụ thuộc (dependency / 의존성) có khác không. Không rebuild sản phẩm tạo ra (artifact / 산출물) giữa chừng vì rebuild làm mất biến kiểm soát.
 
-## 13. Route reasoning 3 — từ desired state đến control-loop conflict
+## 13. tuyến (route / 경로) lập luận (reasoning / 추론) 3 — từ desired trạng thái (state / 상태) đến control-loop xung đột (conflict / 충돌)
 
 IaC, Kubernetes, GitOps, HPA, autoscaler và operator đều có thể được nhìn như controller:
 
@@ -111,13 +114,13 @@ desired state
 → observe again
 ```
 
-Khi state dao động hoặc “bị đổi ngược”, câu hỏi đầu tiên là **ai sở hữu field/state này**. Nếu hai loop có desired state khác nhau, từng controller có thể hoàn toàn đúng cục bộ nhưng hệ thống không hội tụ.
+Khi trạng thái (state / 상태) dao động hoặc “bị đổi ngược”, câu hỏi đầu tiên là **ai sở hữu trường dữ liệu (field / 필드)/trạng thái (state / 상태) này**. Nếu hai vòng lặp (loop / 루프) có desired trạng thái (state / 상태) khác nhau, từng controller có thể hoàn toàn đúng cục bộ nhưng hệ thống không hội tụ.
 
-Distributed Systems canonical giải các vấn đề consensus/failure detector/fencing khi chúng đi xuống cơ chế nền. DevOps/Platform Engineering giữ bài toán ownership, reconciliation latency, backoff, operational evidence và safe emergency override.
+Phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본) giải các vấn đề consensus/thất bại (failure / 실패) detector/fencing khi chúng đi xuống cơ chế nền. DevOps/kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giữ bài toán quyền sở hữu (ownership / 소유권), reconciliation độ trễ (latency / 지연 시간), backoff, operational bằng chứng (evidence / 증거) và safe emergency override.
 
-## 14. Route reasoning 4 — từ SLO đến topology/cost
+## 14. tuyến (route / 경로) lập luận (reasoning / 추론) 4 — từ SLO đến topology/chi phí (cost / 비용)
 
-SLO không chỉ là monitoring target. Nó truyền ngược thành yêu cầu kiến trúc:
+SLO không chỉ là monitoring mục tiêu (target / 대상). Nó truyền ngược thành yêu cầu kiến trúc:
 
 ```text
 business impact
@@ -129,13 +132,13 @@ business impact
 → cost
 ```
 
-Nếu FinOps tối ưu chi phí mà không giữ failure headroom cần cho SLO, optimization là sai boundary. Nếu multi-region được chọn mà business chỉ cần RTO dài và dữ liệu có thể restore, có thể đang trả complexity/cost không cần thiết.
+Nếu FinOps tối ưu chi phí mà không giữ thất bại (failure / 실패) headroom cần cho SLO, tối ưu hóa (optimization / 최적화) là sai ranh giới (boundary / 경계). Nếu multi-region được chọn mà nghiệp vụ (business / 비즈니스) chỉ cần RTO dài và dữ liệu có thể restore, có thể đang trả độ phức tạp (complexity / 복잡도)/chi phí (cost / 비용) không cần thiết.
 
-Vì vậy Platform Engineering kết nối Reliability với Economics: platform tier nên biểu diễn capability và failure contract, không chỉ kích thước CPU/RAM.
+Vì vậy kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) kết nối độ tin cậy (reliability / 신뢰성) với Economics: nền tảng (platform / 플랫폼) tier nên biểu diễn năng lực (capability / 역량) và thất bại (failure / 실패) đặc tả hợp đồng (contract / 계약), không chỉ kích thước CPU/RAM.
 
-## 15. Route reasoning 5 — incident quay lại platform default
+## 15. tuyến (route / 경로) lập luận (reasoning / 추론) 5 — sự cố (incident / 인시던트) quay lại nền tảng (platform / 플랫폼) default
 
-Một incident có giá trị lâu dài khi causal factor được chuyển thành system improvement:
+Một sự cố (incident / 인시던트) có giá trị lâu dài khi nhân quả (causal / 인과적) factor được chuyển thành hệ thống (system / 시스템) improvement:
 
 ```text
 incident evidence
@@ -146,13 +149,13 @@ incident evidence
 → verify recurrence risk giảm
 ```
 
-Nếu năm team đều gặp cùng lỗi certificate rotation, solution không nên chỉ là năm postmortem. Platform có thể chuẩn hóa issuance/rotation/expiry telemetry. Nếu nhiều service OOM vì heap bằng đúng container limit, golden path/runtime guidance có thể encode native headroom.
+Nếu năm nhóm (team / 팀) đều gặp cùng lỗi certificate rotation, solution không nên chỉ là năm postmortem. nền tảng (platform / 플랫폼) có thể chuẩn hóa issuance/rotation/expiry telemetry. Nếu nhiều dịch vụ (service / 서비스) OOM vì vùng nhớ động (heap / 힙) bằng đúng bộ chứa (container / 컨테이너) limit, golden đường dẫn (path / 경로)/thời gian chạy (runtime / 런타임) guidance có thể encode bản địa (native / 네이티브) headroom.
 
-Đây là connection quan trọng nhất giữa Production Practice và Platform Engineering: troubleshooting không kết thúc ở chữa service; failure lặp lại phải trở thành feedback cho shared capability.
+Đây là liên kết (connection / 연결) quan trọng nhất giữa môi trường vận hành (production / 운영 환경) Practice và kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링): troubleshooting không kết thúc ở chữa dịch vụ (service / 서비스); thất bại (failure / 실패) lặp lại phải trở thành phản hồi (feedback / 피드백) cho dùng chung (shared / 공유) năng lực (capability / 역량).
 
-## 16. Route reasoning 6 — từ overload tới admission, degradation và recovery
+## 16. tuyến (route / 경로) lập luận (reasoning / 추론) 6 — từ overload tới admission, degradation và khôi phục (recovery / 복구)
 
-Một saturation incident nên được nhìn như chuỗi control decision chứ không chỉ biểu đồ CPU:
+Một saturation sự cố (incident / 인시던트) nên được nhìn như chuỗi điều khiển (control / 제어) quyết định (decision / 결정) chứ không chỉ biểu đồ CPU:
 
 ```text
 arrival rate / concurrency tăng
@@ -164,13 +167,13 @@ arrival rate / concurrency tăng
 → recovery ramp-up + backlog drain
 ```
 
-SRE sở hữu capacity, retry budget, admission và degradation contract. Production Practice quan sát xem timeout có cancel work thật không, retry có tạo duplicate hay recovery có tạo second storm. Platform Engineering biến các cơ chế lặp lại thành default hoặc tier.
+SRE sở hữu sức chứa (capacity / 용량), thử lại (retry / 재시도) ngân sách (budget / 예산), admission và degradation đặc tả hợp đồng (contract / 계약). môi trường vận hành (production / 운영 환경) Practice quan sát xem hết thời gian chờ (timeout / 타임아웃) có cancel công việc (work / 작업) thật không, thử lại (retry / 재시도) có tạo duplicate hay khôi phục (recovery / 복구) có tạo second storm. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) biến các cơ chế lặp lại thành default hoặc tier.
 
-Khi cần formal queueing sâu hơn, chuyển sang Mathematics/Computer Science; DevOps giữ operational invariant: **không nhận work vượt khả năng rồi để tất cả chết chậm**.
+Khi cần formal queueing sâu hơn, chuyển sang Mathematics/Khoa học máy tính (computer science / 컴퓨터 과학); DevOps giữ operational bất biến (invariant / 불변식): **không nhận công việc (work / 작업) vượt khả năng rồi để tất cả chết chậm**.
 
-## 17. Route reasoning 7 — từ identity tới effective authority
+## 17. tuyến (route / 경로) lập luận (reasoning / 추론) 7 — từ định danh (identity / 식별자) tới effective authority
 
-Security incident không nên dừng ở “token này của ai”. Chuỗi cần theo authority:
+Bảo mật (security / 보안) sự cố (incident / 인시던트) không nên dừng ở “đơn vị từ (token / 토큰) này của ai”. Chuỗi cần theo authority:
 
 ```text
 caller identity
@@ -181,13 +184,13 @@ caller identity
 → audit evidence
 ```
 
-Đây là nơi confused deputy và identity propagation xuất hiện. Caller hợp lệ vẫn có thể khiến privileged platform controller làm action ngoài scope nếu request intent không được bind vào caller authorization.
+Đây là nơi confused deputy và định danh (identity / 식별자) propagation xuất hiện. Caller hợp lệ vẫn có thể khiến privileged nền tảng (platform / 플랫폼) controller làm hành động (action / 동작) ngoài phạm vi (scope / 범위) nếu yêu cầu (request / 요청) intent không được bind vào caller authorization.
 
-Computer Science Security giải token/PKI/OIDC mechanism; DevOps/Platform giữ scope, workload identity, delegated control và evidence chain trên production path.
+Khoa học máy tính (computer science / 컴퓨터 과학) bảo mật (security / 보안) giải đơn vị từ (token / 토큰)/PKI/OIDC cơ chế (mechanism / 메커니즘); DevOps/nền tảng (platform / 플랫폼) giữ phạm vi (scope / 범위), tải công việc (workload / 워크로드) định danh (identity / 식별자), delegated điều khiển (control / 제어) và bằng chứng (evidence / 증거) chuỗi (chain / 사슬) trên môi trường vận hành (production / 운영 환경) đường dẫn (path / 경로).
 
-## 18. Route reasoning 8 — từ tenant isolation tới fairness và economics
+## 18. tuyến (route / 경로) lập luận (reasoning / 추론) 8 — từ tenant isolation tới fairness và economics
 
-Multi-tenancy không chỉ hỏi “resource có tách không” mà còn:
+Multi-tenancy không chỉ hỏi “tài nguyên (resource / 자원) có tách không” mà còn:
 
 ```text
 shared resource
@@ -199,11 +202,11 @@ shared resource
 → shared-cost/externality attribution
 ```
 
-Một tenant dưới CPU quota vẫn có thể làm API server, log backend hoặc scheduler quá tải. Vì vậy isolation contract phải phủ cả control plane, data plane và shared service. Economics phải phản ánh externality đủ tốt để feedback quay về đúng owner.
+Một tenant dưới CPU quota vẫn có thể làm API máy chủ (server / 서버), log backend hoặc scheduler quá tải. Vì vậy isolation đặc tả hợp đồng (contract / 계약) phải phủ cả điều khiển (control / 제어) plane, mặt phẳng dữ liệu (data plane / 데이터 플레인) và dùng chung (shared / 공유) dịch vụ (service / 서비스). Economics phải phản ánh externality đủ tốt để phản hồi (feedback / 피드백) quay về đúng đơn vị sở hữu (owner / 오너).
 
-SLO quyết định blast-radius budget; blast-radius budget quyết định cell/dedicated/shared topology; topology lại quyết định cost. Đây là vòng Reliability ↔ Platform ↔ FinOps, không phải ba chủ đề rời nhau.
+SLO quyết định blast-radius ngân sách (budget / 예산); blast-radius ngân sách (budget / 예산) quyết định cell/dedicated/dùng chung (shared / 공유) topology; topology lại quyết định chi phí (cost / 비용). Đây là vòng độ tin cậy (reliability / 신뢰성) ↔ nền tảng (platform / 플랫폼) ↔ FinOps, không phải ba chủ đề rời nhau.
 
-## 19. Route reasoning 9 — từ self-service intent tới distributed lifecycle
+## 19. tuyến (route / 경로) lập luận (reasoning / 추론) 9 — từ self-service intent tới phân tán (distributed / 분산) vòng đời (lifecycle / 생명주기)
 
 Một nút `Create` trên portal thực chất có thể là workflow phân tán:
 
@@ -218,13 +221,13 @@ intent + stable identity
 → Day-2 resize / rotate / migrate / delete
 ```
 
-Platform API chỉ trưởng thành khi idempotency đi qua toàn workflow, status phản ánh invariant thật và delete có retention semantics rõ. Portal/UI là bề mặt; mechanism là state machine + reconciliation + ownership.
+Nền tảng (platform / 플랫폼) API chỉ trưởng thành khi idempotency đi qua toàn workflow, status phản ánh bất biến (invariant / 불변식) thật và delete có retention ngữ nghĩa (semantics / 의미론) rõ. Portal/UI là bề mặt; cơ chế (mechanism / 메커니즘) là máy trạng thái (state machine / 상태 머신) + reconciliation + quyền sở hữu (ownership / 소유권).
 
-Khi semantics chuyển sang exactly-once/idempotency/distributed transaction nền, đọc Distributed Systems canonical. Platform chapter giữ contract mà developer/operator cần để không phải hiểu mọi provider detail.
+Khi ngữ nghĩa (semantics / 의미론) chuyển sang exactly-once/idempotency/phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) nền, đọc phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본). nền tảng (platform / 플랫폼) chapter giữ đặc tả hợp đồng (contract / 계약) mà nhà phát triển (developer / 개발자)/operator cần để không phải hiểu mọi provider detail.
 
-## 20. Route reasoning 10 — từ delivery constraint tới feedback delay
+## 20. tuyến (route / 경로) lập luận (reasoning / 추론) 10 — từ delivery ràng buộc (constraint / 제약조건) tới phản hồi (feedback / 피드백) delay
 
-Flow engineering nên đi theo constraint chứ không theo tool đang dễ tối ưu nhất:
+Luồng (flow / 흐름) kỹ thuật (engineering / 엔지니어링) nên đi theo ràng buộc (constraint / 제약조건) chứ không theo công cụ (tool / 도구) đang dễ tối ưu nhất:
 
 ```text
 work arrives
@@ -235,13 +238,13 @@ work arrives
 → rework / next decision
 ```
 
-Nếu constraint là review queue, tăng build speed không đổi throughput. Nếu feedback production đến quá muộn, batch change tăng và rework đắt hơn. Nếu shared environment luôn 100% utilization, urgent change phải chờ dù tài nguyên nhìn “được tận dụng tốt”.
+Nếu ràng buộc (constraint / 제약조건) là rà soát (review / 검토) hàng đợi (queue / 큐), tăng bản dựng (build / 빌드) speed không đổi thông lượng (throughput / 처리량). Nếu phản hồi (feedback / 피드백) môi trường vận hành (production / 운영 환경) đến quá muộn, batch thay đổi (change / 변경) tăng và rework đắt hơn. Nếu dùng chung (shared / 공유) môi trường (environment / 환경) luôn 100% utilization, urgent thay đổi (change / 변경) phải chờ dù tài nguyên nhìn “được tận dụng tốt”.
 
-Foundations giữ operating-model reasoning; khi cần queueing theory chính thức có thể đọc Mathematics. Platform Engineering dùng kết quả này để quyết định chỗ nào nên self-service, chỗ nào cần reserve capacity và chỗ nào automation chỉ đang đẩy queue sang layer khác.
+Foundations giữ operating-model lập luận (reasoning / 추론); khi cần queueing lý thuyết (theory / 이론) chính thức có thể đọc Mathematics. kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) dùng kết quả này để quyết định chỗ nào nên self-service, chỗ nào cần reserve sức chứa (capacity / 용량) và chỗ nào automation chỉ đang đẩy hàng đợi (queue / 큐) sang tầng (layer / 계층) khác.
 
-## 21. Route reasoning 11 — từ sensor tới decision: evidence phải có semantics và freshness
+## 21. tuyến (route / 경로) lập luận (reasoning / 추론) 11 — từ sensor tới quyết định (decision / 결정): bằng chứng (evidence / 증거) phải có ngữ nghĩa (semantics / 의미론) và freshness
 
-Một decision production không nên chỉ hỏi “dashboard đang hiển thị gì” mà cần đi qua chuỗi:
+Một quyết định (decision / 결정) môi trường vận hành (production / 운영 환경) không nên chỉ hỏi “dashboard đang hiển thị gì” mà cần đi qua chuỗi:
 
 ```text
 system event/state
@@ -253,13 +256,13 @@ system event/state
 → human/controller decision
 ```
 
-Failure có thể xuất hiện ở bất kỳ arrow nào. `0 errors` có thể là zero thật hoặc missing series; log có thể duplicate; trace sample có bias; dashboard có thể stale. Vì vậy evidence cần biết metric type, population/sample, schema version và freshness.
+Thất bại (failure / 실패) có thể xuất hiện ở bất kỳ arrow nào. `0 errors` có thể là zero thật hoặc missing series; log có thể duplicate; dấu vết (trace / 추적) mẫu (sample / 표본) có độ lệch (bias / 편향); dashboard có thể stale. Vì vậy bằng chứng (evidence / 증거) cần biết chỉ số (metric / 지표) kiểu (type / 타입), population/mẫu (sample / 표본), lược đồ (schema / 스키마) phiên bản (version / 버전) và freshness.
 
-Observability chapter sở hữu sensor semantics. Production Practice sở hữu cách evidence được dùng để bác bỏ hypothesis. Reliability/Security quyết định signal nào đủ quan trọng để loss-of-signal tự nó trở thành incident.
+Khả năng quan sát (observability / 관측 가능성) chapter sở hữu sensor ngữ nghĩa (semantics / 의미론). môi trường vận hành (production / 운영 환경) Practice sở hữu cách bằng chứng (evidence / 증거) được dùng để bác bỏ hypothesis. độ tin cậy (reliability / 신뢰성)/bảo mật (security / 보안) quyết định tín hiệu (signal / 신호) nào đủ quan trọng để loss-of-signal tự nó trở thành sự cố (incident / 인시던트).
 
-## 22. Route reasoning 12 — từ mitigation tới recovery convergence
+## 22. tuyến (route / 경로) lập luận (reasoning / 추론) 12 — từ mitigation tới khôi phục (recovery / 복구) convergence
 
-Mitigation thành công chỉ là đầu recovery loop:
+Mitigation thành công chỉ là đầu khôi phục (recovery / 복구) vòng lặp (loop / 루프):
 
 ```text
 user impact reduced
@@ -271,13 +274,13 @@ user impact reduced
 → steady state + headroom restored
 ```
 
-Nếu mở toàn bộ backlog ngay sau failover, recovery có thể tạo outage thứ hai. Nếu endpoint 200 nhưng data giữa các system lệch, recovery chưa complete. Nếu old writer chưa fenced, failover có thể tạo split brain.
+Nếu mở toàn bộ backlog ngay sau failover, khôi phục (recovery / 복구) có thể tạo outage thứ hai. Nếu endpoint 200 nhưng dữ liệu (data / 데이터) giữa các hệ thống (system / 시스템) lệch, khôi phục (recovery / 복구) chưa complete. Nếu old writer chưa fenced, failover có thể tạo split brain.
 
-Incident/DR chapter giữ sequencing, exit criteria và validation; Distributed Systems canonical giải fencing/consistency mechanism; Platform Engineering có nhiệm vụ biến recovery pattern lặp lại thành workflow có idempotency, status và safe defaults.
+Sự cố (incident / 인시던트)/DR chapter giữ sequencing, exit criteria và kiểm tra hợp lệ (validation / 검증); phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본) giải fencing/consistency cơ chế (mechanism / 메커니즘); kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) có nhiệm vụ biến khôi phục (recovery / 복구) mẫu (pattern / 패턴) lặp lại thành workflow có idempotency, status và safe defaults.
 
-## 23. Route reasoning 13 — từ user contract tới SLO measurement correctness
+## 23. tuyến (route / 경로) lập luận (reasoning / 추론) 13 — từ người dùng (user / 사용자) đặc tả hợp đồng (contract / 계약) tới SLO đo lường (measurement / 측정) tính đúng đắn (correctness / 정확성)
 
-Một SLO có thể nhìn đẹp nhưng sai nếu denominator hoặc measurement window không đại diện user journey:
+Một SLO có thể nhìn đẹp nhưng sai nếu denominator hoặc đo lường (measurement / 측정) cửa sổ (window / 윈도우) không đại diện người dùng (user / 사용자) journey:
 
 ```text
 user journey
@@ -289,13 +292,13 @@ user journey
 → engineering action
 ```
 
-Low-traffic service cần xem sample size/synthetic signal; asynchronous workload cần age/deadline chứ không chỉ request latency; composite journey cần vẽ mandatory/fallback path trước khi ghép availability.
+Low-traffic dịch vụ (service / 서비스) cần xem cỡ mẫu (sample size / 표본 크기)/synthetic tín hiệu (signal / 신호); asynchronous tải công việc (workload / 워크로드) cần age/deadline chứ không chỉ yêu cầu (request / 요청) độ trễ (latency / 지연 시간); composite journey cần vẽ mandatory/fallback đường dẫn (path / 경로) trước khi ghép availability.
 
-Observability/SRE giữ measurement semantics. Architecture quyết định path nào thật sự critical; Platform/Security cần biết SLO state có đáng tin trước khi dùng nó để freeze release hay tự động thay policy.
+Khả năng quan sát (observability / 관측 가능성)/SRE giữ đo lường (measurement / 측정) ngữ nghĩa (semantics / 의미론). kiến trúc (architecture / 아키텍처) quyết định đường dẫn (path / 경로) nào thật sự trọng yếu (critical / 중요); nền tảng (platform / 플랫폼)/bảo mật (security / 보안) cần biết SLO trạng thái (state / 상태) có đáng tin trước khi dùng nó để freeze bản phát hành (release / 릴리스) hay tự động thay chính sách (policy / 정책).
 
-## 24. Route reasoning 14 — từ self-service operation tới cancellation, compensation và adoption
+## 24. tuyến (route / 경로) lập luận (reasoning / 추론) 14 — từ self-service thao tác (operation / 연산) tới cancellation, compensation và adoption
 
-Distributed platform workflow không dừng ở create/retry:
+Phân tán (distributed / 분산) nền tảng (platform / 플랫폼) workflow không dừng ở create/thử lại (retry / 재시도):
 
 ```text
 intent
@@ -307,13 +310,13 @@ intent
 → reconcile ownership
 ```
 
-Cancellation có thể chỉ dừng controller chứ không đảo external API. Compensation phục hồi invariant nhưng không nhất thiết trở lại exact state cũ. Resource orphan cần adoption/quarantine semantics thay vì xóa mù.
+Cancellation có thể chỉ dừng controller chứ không đảo bên ngoài (external / 외부) API. Compensation phục hồi bất biến (invariant / 불변식) nhưng không nhất thiết trở lại chính xác (exact / 정확한) trạng thái (state / 상태) cũ. tài nguyên (resource / 자원) orphan cần adoption/quarantine ngữ nghĩa (semantics / 의미론) thay vì xóa mù.
 
-Khi platform control plane tự hỏng, route còn phải kéo dài tới bootstrap path: state backend, identity, artifact và recovery controller nào tồn tại ngoài failure domain. Đây là connection trực tiếp giữa Platform Engineering, Distributed Systems và Incident/DR.
+Khi nền tảng (platform / 플랫폼) điều khiển (control / 제어) plane tự hỏng, tuyến (route / 경로) còn phải kéo dài tới bootstrap đường dẫn (path / 경로): trạng thái (state / 상태) backend, định danh (identity / 식별자), sản phẩm tạo ra (artifact / 산출물) và khôi phục (recovery / 복구) controller nào tồn tại ngoài miền lỗi (failure domain / 장애 도메인). Đây là liên kết (connection / 연결) trực tiếp giữa kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링), phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và sự cố (incident / 인시던트)/DR.
 
-## 25. Route reasoning 15 — từ secret/policy change tới security migration lifecycle
+## 25. tuyến (route / 경로) lập luận (reasoning / 추론) 15 — từ secret/chính sách (policy / 정책) thay đổi (change / 변경) tới bảo mật (security / 보안) di chuyển (migration / 마이그레이션) vòng đời (lifecycle / 생명주기)
 
-Security change cũng là state transition:
+Bảo mật (security / 보안) thay đổi (change / 변경) cũng là chuyển tiếp trạng thái (state transition / 상태 전이):
 
 ```text
 new credential/policy
@@ -324,13 +327,13 @@ new credential/policy
 → verify no stale authority
 ```
 
-Rotation chưa complete nếu consumer vẫn dùng credential cũ. Policy audit mode chưa bảo vệ invariant nếu không có đường sang enforce. Break-glass chưa kết thúc nếu privileged session/token chưa expire.
+Rotation chưa complete nếu bên tiêu thụ (consumer / 소비자) vẫn dùng credential cũ. chính sách (policy / 정책) kiểm tra (audit / 감사) chế độ (mode / 모드) chưa bảo vệ bất biến (invariant / 불변식) nếu không có đường sang enforce. Break-glass chưa kết thúc nếu privileged session/đơn vị từ (token / 토큰) chưa expire.
 
-Security chapter giữ trust/authority lifecycle; Observability cung cấp evidence; Platform biến pattern này thành default workflow để security không phụ thuộc thao tác thủ công khó kiểm chứng.
+Bảo mật (security / 보안) chapter giữ trust/authority vòng đời (lifecycle / 생명주기); khả năng quan sát (observability / 관측 가능성) cung cấp bằng chứng (evidence / 증거); nền tảng (platform / 플랫폼) biến mẫu (pattern / 패턴) này thành default workflow để bảo mật (security / 보안) không phụ thuộc thao tác thủ công khó kiểm chứng.
 
-## 26. Route reasoning 16 — từ symptom tới causal confidence
+## 26. tuyến (route / 경로) lập luận (reasoning / 추론) 16 — từ symptom tới nhân quả (causal / 인과적) confidence
 
-Production investigation trưởng thành đi xa hơn timeline:
+Môi trường vận hành (production / 운영 환경) investigation trưởng thành đi xa hơn timeline:
 
 ```text
 symptom
@@ -342,13 +345,13 @@ symptom
 → causal confidence + uncertainty
 ```
 
-Deploy trước incident là correlation; causal graph phải giải thích arrow. Restart giúp service khỏe chỉ chứng minh một state nào đó bị reset, không tự chứng minh memory leak. Fault injection chỉ có giá trị khi fault boundary và control cohort được verify.
+Deploy trước sự cố (incident / 인시던트) là correlation; nhân quả (causal / 인과적) đồ thị (graph / 그래프) phải giải thích arrow. Restart giúp dịch vụ (service / 서비스) khỏe chỉ chứng minh một trạng thái (state / 상태) nào đó bị reset, không tự chứng minh bộ nhớ (memory / 메모리) leak. Fault injection chỉ có giá trị khi fault ranh giới (boundary / 경계) và điều khiển (control / 제어) cohort được verify.
 
-Production Practice giữ discipline này; Observability quyết định detector coverage; Incident process điều phối state mutation để intervention của nhiều operator không phá chính evidence đang dùng để suy luận.
+Môi trường vận hành (production / 운영 환경) Practice giữ discipline này; khả năng quan sát (observability / 관측 가능성) quyết định detector coverage; sự cố (incident / 인시던트) tiến trình (process / 프로세스) điều phối trạng thái (state / 상태) mutation để intervention của nhiều operator không phá chính bằng chứng (evidence / 증거) đang dùng để suy luận.
 
-## 27. Route reasoning 17 — từ dependency latency tới isolation và load amplification
+## 27. tuyến (route / 경로) lập luận (reasoning / 추론) 17 — từ phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간) tới isolation và tải (load / 로드) amplification
 
-Một dependency chậm có thể trở thành failure của caller trước khi dependency chết hoàn toàn:
+Một phụ thuộc (dependency / 의존성) chậm có thể trở thành thất bại (failure / 실패) của caller trước khi phụ thuộc (dependency / 의존성) chết hoàn toàn:
 
 ```text
 slow/error dependency
@@ -361,13 +364,13 @@ slow/error dependency
 → controlled recovery probes
 ```
 
-Network chapter giữ connection/deadline/retry/breaker/bulkhead semantics. SRE giữ admission và overload budget. Distributed Systems giữ idempotency/failure ambiguity khi attempt bị lặp. Platform có thể chuẩn hóa default nhưng không thể chọn threshold đúng nếu không biết workload/dependency contract.
+Mạng (network / 네트워크) chapter giữ liên kết (connection / 연결)/deadline/thử lại (retry / 재시도)/breaker/bulkhead ngữ nghĩa (semantics / 의미론). SRE giữ admission và overload ngân sách (budget / 예산). phân tán (distributed / 분산) các hệ thống (systems / 시스템들) giữ idempotency/thất bại (failure / 실패) ambiguity khi attempt bị lặp. nền tảng (platform / 플랫폼) có thể chuẩn hóa default nhưng không thể chọn threshold đúng nếu không biết tải công việc (workload / 워크로드)/phụ thuộc (dependency / 의존성) đặc tả hợp đồng (contract / 계약).
 
-Điểm quan trọng là resilience mechanism cũng là traffic generator. Retry, hedge và half-open probe phải được tính vào downstream load thay vì coi chúng là “free reliability”.
+Điểm quan trọng là resilience cơ chế (mechanism / 메커니즘) cũng là traffic generator. thử lại (retry / 재시도), hedge và half-open probe phải được tính vào downstream tải (load / 로드) thay vì coi chúng là “free độ tin cậy (reliability / 신뢰성)”.
 
-## 28. Route reasoning 18 — từ schema change tới migration convergence
+## 28. tuyến (route / 경로) lập luận (reasoning / 추론) 18 — từ lược đồ (schema / 스키마) thay đổi (change / 변경) tới di chuyển (migration / 마이그레이션) convergence
 
-Một release stateful nên được nhìn như workflow dài hơn deployment:
+Một bản phát hành (release / 릴리스) stateful nên được nhìn như workflow dài hơn triển khai (deployment / 배포):
 
 ```text
 expand compatible schema/contract
@@ -380,13 +383,13 @@ expand compatible schema/contract
 → contract old state
 ```
 
-CI/CD giữ orchestration/evidence và rollback compatibility. Database canonical giải lock/WAL/MVCC/storage internals. Distributed Systems giải dual-write/idempotency ambiguity. Observability phải đo lag, mismatch và old-path usage.
+CI/CD giữ orchestration/bằng chứng (evidence / 증거) và quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성). cơ sở dữ liệu (database / 데이터베이스) chuẩn gốc (canonical / 정본) giải khóa (lock / 잠금)/WAL/MVCC/lưu trữ (storage / 저장소) internals. phân tán (distributed / 분산) các hệ thống (systems / 시스템들) giải dual-write/idempotency ambiguity. khả năng quan sát (observability / 관측 가능성) phải đo lag, mismatch và old-path usage.
 
-Migration hoàn tất khi data và consumer dependency đã converge, không phải khi DDL/job/deploy trả exit code 0.
+Di chuyển (migration / 마이그레이션) hoàn tất khi dữ liệu (data / 데이터) và bên tiêu thụ (consumer / 소비자) phụ thuộc (dependency / 의존성) đã converge, không phải khi DDL/job/deploy trả exit mã (code / 코드) 0.
 
-## 29. Route reasoning 19 — từ telemetry amplification tới observability survivability
+## 29. tuyến (route / 경로) lập luận (reasoning / 추론) 19 — từ telemetry amplification tới khả năng quan sát (observability / 관측 가능성) survivability
 
-Observability có thể trở thành amplifier của incident:
+Khả năng quan sát (observability / 관측 가능성) có thể trở thành amplifier của sự cố (incident / 인시던트):
 
 ```text
 application fault
@@ -397,13 +400,13 @@ application fault
 → operator mất visibility
 ```
 
-Observability chapter giữ priority, retention, cardinality và backend multi-tenancy. FinOps nối signal driver với cost. Multi-tenancy đặt quota/fairness cho ingestion/query. Production Practice phải kiểm tra sensor health trước khi dùng dashboard im lặng làm negative evidence.
+Khả năng quan sát (observability / 관측 가능성) chapter giữ priority, retention, cardinality và backend multi-tenancy. FinOps nối tín hiệu (signal / 신호) driver với chi phí (cost / 비용). Multi-tenancy đặt quota/fairness cho ingestion/truy vấn (query / 쿼리). môi trường vận hành (production / 운영 환경) Practice phải kiểm tra sensor health trước khi dùng dashboard im lặng làm negative bằng chứng (evidence / 증거).
 
-Mục tiêu không phải giữ mọi byte telemetry mà là bảo vệ **minimum diagnostic capability** khi hệ thống đang xấu nhất.
+Mục tiêu không phải giữ mọi byte telemetry mà là bảo vệ **minimum diagnostic năng lực (capability / 역량)** khi hệ thống đang xấu nhất.
 
-## 30. Route reasoning 20 — từ platform control-plane loss tới safe recovery
+## 30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)
 
-Platform DR không chỉ là restore database:
+Nền tảng (platform / 플랫폼) DR không chỉ là restore cơ sở dữ liệu (database / 데이터베이스):
 
 ```text
 control-plane failure
@@ -417,6 +420,8 @@ control-plane failure
 → full self-service
 ```
 
-Platform Engineering giữ state-machine/ownership/bootstrap semantics. Incident/DR giữ recovery ordering và drill. Security giữ break-glass authority. Multi-tenancy giữ priority/reservation để recovery của một tenant hoặc bulk create mới không starve control-plane work quan trọng.
+Kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giữ state-machine/quyền sở hữu (ownership / 소유권)/bootstrap ngữ nghĩa (semantics / 의미론). sự cố (incident / 인시던트)/DR giữ khôi phục (recovery / 복구) thứ tự (ordering / 순서) và drill. bảo mật (security / 보안) giữ break-glass authority. Multi-tenancy giữ priority/reservation để khôi phục (recovery / 복구) của một tenant hoặc bulk create mới không starve control-plane công việc (work / 작업) quan trọng.
 
-Điểm kết thúc không phải portal HTTP 200 mà là state đủ đáng tin để mutation mới không tạo duplicate, orphan hoặc cross-tenant blast radius.
+Điểm kết thúc không phải portal HTTP 200 mà là trạng thái (state / 상태) đủ đáng tin để mutation mới không tạo duplicate, orphan hoặc cross-tenant blast radius.
+
+> **Bàn giao:** Sau **30. tuyến (route / 경로) lập luận (reasoning / 추론) 20 — từ nền tảng (platform / 플랫폼) control-plane mất mát (loss / 손실) tới safe khôi phục (recovery / 복구)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.

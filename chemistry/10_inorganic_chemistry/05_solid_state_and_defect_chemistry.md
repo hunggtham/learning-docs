@@ -1,5 +1,8 @@
 # Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng
 
+> **Mạch đọc:** Đọc **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao chất rắn cần một cách tư duy riêng?** sang **Ô cơ sở và mạng tinh thể**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa học trạng thái rắn (solid-state chemistry / 고체화학)** nghiên cứu cách thành phần, cấu trúc tinh thể, trạng thái oxy hóa, khuyết tật và chuyển động ion/electron trong chất rắn phối hợp để tạo ra tính chất. Khác với hóa học phân tử, ở đây “đơn vị phản ứng” thường không phải một phân tử riêng lẻ mà là **một mạng mở rộng** có hàng tỷ vị trí nguyên tử liên kết với nhau.
 
 Một ý tưởng trung tâm của lĩnh vực là: **khuyết tật không chỉ là sai hỏng**. Trong nhiều vật liệu, chính vacancy, ion xen kẽ, trạng thái oxy hóa hỗn hợp và pha tạp quyết định độ dẫn, màu sắc, hoạt tính xúc tác, tính từ hoặc khả năng lưu trữ năng lượng.
@@ -272,7 +275,7 @@ với:
 - \(q\): điện tích;
 - \(\mu\): độ linh động.
 
-Muốn tăng conductivity có thể tăng số vacancy hoặc giảm hàng rào migration.
+Muốn tăng conductivity có thể tăng số vacancy hoặc giảm hàng rào di chuyển (migration / 마이그레이션).
 
 Nhưng quá nhiều defect có thể tương tác, clustering hoặc làm pha mất ổn định.
 
@@ -378,7 +381,7 @@ Pha ổn định phụ thuộc:
 - impurity;
 - năng lượng bề mặt.
 
-Ở nano scale, pha metastable đôi khi được ổn định vì đóng góp bề mặt lớn hơn.
+Ở nano quy mô (scale / 규모), pha metastable đôi khi được ổn định vì đóng góp bề mặt lớn hơn.
 
 ## Nhiễu xạ tia X
 
@@ -396,7 +399,7 @@ XRD có thể dùng để:
 
 - nhận dạng pha;
 - xác định lattice parameter;
-- ước lượng crystallite size;
+- ước lượng crystallite kích thước (size / 크기);
 - theo dõi chuyển pha.
 
 ## Công thức Scherrer
@@ -411,7 +414,7 @@ Nhưng peak broadening còn có thể đến từ strain và thiết bị, nên 
 
 ## Rietveld refinement
 
-**Tinh chỉnh Rietveld (Rietveld refinement)** fit toàn bộ pattern XRD với mô hình cấu trúc.
+**Tinh chỉnh Rietveld (Rietveld refinement)** fit toàn bộ mẫu (pattern / 패턴) XRD với mô hình cấu trúc.
 
 Có thể suy ra:
 
@@ -430,7 +433,7 @@ XRD cho thông tin trung bình trên lượng mẫu lớn. Các kỹ thuật mic
 - morphology;
 - grain;
 - defect;
-- interface;
+- giao diện (interface / 인터페이스);
 - diffraction cục bộ.
 
 EDS/EELS có thể thêm thông tin thành phần và trạng thái điện tử.
@@ -484,19 +487,19 @@ Một số oxide dẫn cả ion và electron.
 - membrane tách oxygen;
 - electrocatalysis.
 
-Nếu chỉ dẫn ion, reaction zone bị giới hạn gần interface ba pha. Nếu dẫn cả ion + electron, vùng phản ứng có thể mở rộng trên bề mặt lớn hơn.
+Nếu chỉ dẫn ion, reaction zone bị giới hạn gần giao diện (interface / 인터페이스) ba pha. Nếu dẫn cả ion + electron, vùng phản ứng có thể mở rộng trên bề mặt lớn hơn.
 
 ## Nhiệt động học pha và thế hóa học
 
 Ổn định của compound phụ thuộc chemical potentials của các thành phần.
 
-Một pha chỉ ổn định trong vùng mà Gibbs free energy thấp hơn các tổ hợp pha cạnh tranh.
+Một pha chỉ ổn định trong vùng mà Gibbs free năng lượng (energy / 에너지) thấp hơn các tổ hợp pha cạnh tranh.
 
 Trong vật liệu đa nguyên tố, có thể xây **sơ đồ ổn định pha (phase stability diagram)** theo chemical potential để xác định môi trường tổng hợp mà compound không phân hủy.
 
 ## Động học tổng hợp trạng thái rắn
 
-Phản ứng bột rắn thường chậm vì các species phải khuếch tán qua interface.
+Phản ứng bột rắn thường chậm vì các species phải khuếch tán qua giao diện (interface / 인터페이스).
 
 Một phản ứng có thể diễn ra:
 
@@ -523,7 +526,7 @@ Không phải mọi chất rắn cần tổng hợp ở nhiệt độ cực cao.
 
 ## Metastability
 
-Một chất rắn có thể tồn tại lâu dù không phải pha có Gibbs free energy thấp nhất nếu hàng rào chuyển pha lớn.
+Một chất rắn có thể tồn tại lâu dù không phải pha có Gibbs free năng lượng (energy / 에너지) thấp nhất nếu hàng rào chuyển pha lớn.
 
 Do diffusion trong chất rắn chậm, **pha siêu bền (metastable phase)** rất phổ biến.
 
@@ -540,7 +543,7 @@ cùng composition
 
 Trong chất rắn, polyhedron như `MO4` hoặc `MO6` có thể được xem như các đơn vị phối trí nối nhau.
 
-Crystal field splitting của kim loại chuyển tiếp vẫn tồn tại, nhưng các orbital giữa nhiều site bắt đầu tương tác và tạo band.
+Crystal trường dữ liệu (field / 필드) splitting của kim loại chuyển tiếp vẫn tồn tại, nhưng các orbital giữa nhiều site bắt đầu tương tác và tạo band.
 
 Do đó hóa học phối trí phân tử và hóa học trạng thái rắn không phải hai thế giới tách biệt. Một bên là giới hạn cục bộ, bên kia mở rộng các motif đó thành mạng vô hạn.
 
@@ -557,7 +560,7 @@ Pha tạp vì thế đồng thời là:
 - thay đổi carrier concentration;
 - dịch mức Fermi.
 
-Đây là nền tảng hóa học của semiconductor engineering.
+Đây là nền tảng hóa học của semiconductor kỹ thuật (engineering / 엔지니어링).
 
 ## Các hiểu lầm thường gặp
 
@@ -567,7 +570,7 @@ Không. Nhiều vật liệu cần defect để dẫn ion, hấp phụ hoặc t�
 
 ### “Công thức hóa học xác định duy nhất tính chất”
 
-Không. Polymorph, defect, cation ordering và microstructure đều quan trọng.
+Không. Polymorph, defect, cation thứ tự (ordering / 순서) và microstructure đều quan trọng.
 
 ### “Vacancy chỉ là một lỗ trống vô nghĩa”
 
@@ -575,7 +578,7 @@ Không. Vacancy là một species nhiệt động có nồng độ, điện tíc
 
 ### “Pha tạp chỉ thêm tạp chất”
 
-Không. Pha tạp điều khiển defect chemistry và electronic structure có chủ ý.
+Không. Pha tạp điều khiển defect chemistry và electronic cấu trúc (structure / 구조) có chủ ý.
 
 ### “Chất rắn không phản ứng vì nguyên tử đứng yên”
 
@@ -602,3 +605,5 @@ thành phần
 Điểm đặc biệt của chất rắn là **cấu trúc và khuyết tật có ký ức về lịch sử tổng hợp**. Muốn hiểu vật liệu không chỉ hỏi “nó gồm nguyên tố gì?” mà phải hỏi “nguyên tử nằm ở đâu, defect nào tồn tại, chúng di chuyển thế nào và hệ đã được tạo ra bằng con đường nào?”.
 
 Xem tiếp: [Hóa học vật liệu từ liên kết](../14_materials_and_polymer_chemistry/00_materials_from_chemical_bonding.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 inorganic compounds](./00_inorganic_compounds.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,29 +1,32 @@
 # CPU, GPU, TPU và AI Accelerator
 
-AI workload có thể chạy trên nhiều loại compute hardware. Không có accelerator “tốt nhất” cho mọi task; mỗi architecture tối ưu một pattern computation khác nhau.
+> **Mạch đọc:** Đặt **CPU, GPU, TPU và AI Accelerator** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **CPU** sang **GPU**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+AI tải công việc (workload / 워크로드) có thể chạy trên nhiều loại compute hardware. Không có accelerator “tốt nhất” cho mọi tác vụ (task / 작업); mỗi kiến trúc (architecture / 아키텍처) tối ưu một mẫu (pattern / 패턴) computation khác nhau.
 
 ## CPU
 
-**CPU (Central Processing Unit / 중앙처리장치)** mạnh ở control flow, công việc single-thread có latency thấp, logic tổng quát và software ecosystem lớn.
+**CPU (Central Processing Unit / 중앙처리장치)** mạnh ở điều khiển (control / 제어) luồng (flow / 흐름), công việc single-thread có độ trễ (latency / 지연 시간) thấp, lô-gic (logic / 논리) tổng quát và software ecosystem lớn.
 
-CPU có ít core hơn GPU nhưng mỗi core phức tạp hơn, cache hierarchy mạnh và branch prediction tốt.
+CPU có ít cốt lõi (core / 핵심) hơn GPU nhưng mỗi cốt lõi (core / 핵심) phức tạp hơn, bộ nhớ đệm (cache / 캐시) hierarchy mạnh và branch prediction tốt.
 
 Phù hợp với:
 
 - preprocessing;
 - classical ML;
 - orchestration;
-- small-model inference;
-- irregular workload;
-- data pipeline và control plane.
+- small-model suy luận (inference / 추론);
+- irregular tải công việc (workload / 워크로드);
+- dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) và điều khiển (control / 제어) plane.
 
 ## GPU
 
-**GPU (Graphics Processing Unit / 그래픽 처리 장치)** có rất nhiều execution unit và tối ưu throughput cho numerical workload có tính song song cao.
+**GPU (Graphics Processing Unit / 그래픽 처리 장치)** có rất nhiều đơn vị thực thi (execution unit / 실행 유닛) và tối ưu thông lượng (throughput / 처리량) cho numerical tải công việc (workload / 워크로드) có tính song song cao.
 
-Deep Learning sử dụng matrix multiplication, convolution và tensor operation quy mô lớn nên map rất tốt lên GPU.
+Deep học tập (learning / 학습) sử dụng phép nhân ma trận (matrix multiplication / 행렬 곱셈), convolution và tensor thao tác (operation / 연산) quy mô lớn nên map rất tốt lên GPU.
 
-Trade-off của GPU:
+Sự đánh đổi (trade-off / 트레이드오프) của GPU:
 
 ```text
 + parallel throughput cao
@@ -36,53 +39,53 @@ Trade-off của GPU:
 
 ## TPU và Domain-Specific Accelerator
 
-**TPU (Tensor Processing Unit)** là accelerator được thiết kế cho tensor và matrix workload. Các vendor khác cũng có NPU, AI ASIC và custom inference chip.
+**TPU (Tensor Processing Unit)** là accelerator được thiết kế cho tensor và ma trận (matrix / 행렬) tải công việc (workload / 워크로드). Các vendor khác cũng có NPU, AI ASIC và custom suy luận (inference / 추론) chip.
 
 Hardware chuyên biệt có thể tối ưu:
 
-- matrix multiply;
+- ma trận (matrix / 행렬) multiply;
 - low precision;
-- on-chip memory và dataflow;
+- on-chip bộ nhớ (memory / 메모리) và dataflow;
 - power efficiency.
 
 Đổi lại portability và ecosystem thường hẹp hơn GPU.
 
 ## NPU trên thiết bị
 
-Điện thoại và laptop ngày càng có **Neural Processing Unit (NPU)**. NPU hướng tới local inference tiết kiệm điện cho vision, audio hoặc generative model nhỏ hơn.
+Điện thoại và laptop ngày càng có **Neural Processing đơn vị (unit / 단위) (NPU)**. NPU hướng tới cục bộ (local / 로컬) suy luận (inference / 추론) tiết kiệm điện cho vision, audio hoặc generative mô hình (model / 모델) nhỏ hơn.
 
-Các constraint thường gồm:
+Các ràng buộc (constraint / 제약조건) thường gồm:
 
-- memory;
+- bộ nhớ (memory / 메모리);
 - operator được hỗ trợ;
 - thermal và power;
 - quantization format.
 
 ## Trực giác SIMD và SIMT
 
-CPU có SIMD vector instruction. GPU thường dùng execution kiểu **SIMT (Single Instruction, Multiple Threads)**: nhiều thread thực thi instruction stream tương tự nhau.
+CPU có SIMD véc-tơ (vector / 벡터) instruction. GPU thường dùng thực thi (execution / 실행) kiểu **SIMT (Single Instruction, Multiple Threads)**: nhiều luồng thực thi (thread / 스레드) thực thi instruction stream tương tự nhau.
 
-Branch divergence làm GPU kém hiệu quả nếu các thread trong cùng group đi theo control-flow path khác nhau.
+Branch divergence làm GPU kém hiệu quả nếu các luồng thực thi (thread / 스레드) trong cùng group đi theo control-flow đường dẫn (path / 경로) khác nhau.
 
-## Tensor Core và Matrix Unit
+## Tensor cốt lõi (core / 핵심) và ma trận (matrix / 행렬) đơn vị (unit / 단위)
 
-Accelerator hiện đại thường có dedicated matrix-multiply unit tối ưu low-precision hoặc mixed-precision operation.
+Accelerator hiện đại thường có dedicated matrix-multiply đơn vị (unit / 단위) tối ưu low-precision hoặc mixed-precision thao tác (operation / 연산).
 
-Tensor shape và precision của model phải phù hợp mới tận dụng được hardware peak.
+Tensor shape và precision của mô hình (model / 모델) phải phù hợp mới tận dụng được hardware peak.
 
-## Host và Device
+## Host và thiết bị (device / 장치)
 
-GPU thường là device riêng với VRAM hoặc HBM. CPU host chuẩn bị data và launch kernel.
+GPU thường là thiết bị (device / 장치) riêng với VRAM hoặc HBM. CPU host chuẩn bị dữ liệu (data / 데이터) và launch kernel.
 
-Truyền dữ liệu host-device có cost. Nếu pipeline liên tục copy tensor nhỏ qua lại, lợi thế của accelerator giảm đáng kể.
+Truyền dữ liệu host-device có chi phí (cost / 비용). Nếu chuỗi xử lý (pipeline / 파이프라인) liên tục bản sao (copy / 복사) tensor nhỏ qua lại, lợi thế của accelerator giảm đáng kể.
 
-## Unified Memory
+## Unified bộ nhớ (memory / 메모리)
 
-Một số hệ thống có shared hoặc unified memory architecture. Điều này giảm complexity của explicit transfer, nhưng bandwidth và latency semantics vẫn cần được hiểu rõ.
+Một số hệ thống có dùng chung (shared / 공유) hoặc unified bộ nhớ (memory / 메모리) kiến trúc (architecture / 아키텍처). Điều này giảm độ phức tạp (complexity / 복잡도) của tường minh (explicit / 명시적) transfer, nhưng bandwidth và độ trễ (latency / 지연 시간) ngữ nghĩa (semantics / 의미론) vẫn cần được hiểu rõ.
 
-## Chọn Hardware cho Training
+## Chọn Hardware cho huấn luyện (training / 학습)
 
-Training large model cần xét:
+Huấn luyện (training / 학습) large mô hình (model / 모델) cần xét:
 
 ```text
 memory capacity
@@ -93,24 +96,24 @@ reliability
 cost và availability
 ```
 
-Một accelerator đơn lẻ rất nhanh nhưng interconnect yếu có thể thua cluster khác trong distributed training.
+Một accelerator đơn lẻ rất nhanh nhưng interconnect yếu có thể thua cluster khác trong phân tán (distributed / 분산) huấn luyện (training / 학습).
 
-## Chọn Hardware cho Inference
+## Chọn Hardware cho suy luận (inference / 추론)
 
 Serving cần xem:
 
-- batch và concurrency;
-- latency SLO;
-- model có fit memory không;
+- batch và tính đồng thời (concurrency / 동시성);
+- độ trễ (latency / 지연 시간) SLO;
+- mô hình (model / 모델) có fit bộ nhớ (memory / 메모리) không;
 - precision;
-- token throughput;
-- power và cost.
+- đơn vị từ (token / 토큰) thông lượng (throughput / 처리량);
+- power và chi phí (cost / 비용).
 
-Small model với QPS thấp có thể kinh tế hơn trên CPU so với dedicated GPU.
+Small mô hình (model / 모델) với QPS thấp có thể kinh tế hơn trên CPU so với dedicated GPU.
 
 ## Edge và Cloud
 
-Cloud accelerator cung cấp scale và managed infrastructure. Edge inference giảm network latency, tăng privacy và khả năng offline nhưng bị giới hạn hardware.
+Cloud accelerator cung cấp quy mô (scale / 규모) và managed hạ tầng (infrastructure / 인프라). Edge suy luận (inference / 추론) giảm mạng (network / 네트워크) độ trễ (latency / 지연 시간), tăng privacy và khả năng offline nhưng bị giới hạn hardware.
 
 Kiến trúc hybrid có thể là:
 
@@ -119,17 +122,17 @@ mô hình nhỏ trên thiết bị
 → gọi cloud large model khi cần
 ```
 
-## Compiler và Runtime cũng quyết định Performance
+## Trình biên dịch (compiler / 컴파일러) và thời gian chạy (runtime / 런타임) cũng quyết định hiệu năng (performance / 성능)
 
-Hardware peak chỉ có ý nghĩa nếu framework, compiler và runtime tạo được kernel hiệu quả. Operator không được hỗ trợ có thể fallback sang slow path.
+Hardware peak chỉ có ý nghĩa nếu khung phần mềm (framework / 프레임워크), trình biên dịch (compiler / 컴파일러) và thời gian chạy (runtime / 런타임) tạo được kernel hiệu quả. Operator không được hỗ trợ có thể fallback sang slow đường dẫn (path / 경로).
 
 ## Benchmarking
 
-Benchmark phải dùng model thật, batch size thật, precision thật và target runtime thật. Peak specification của vendor không thay được workload benchmark.
+Benchmark phải dùng mô hình (model / 모델) thật, batch kích thước (size / 크기) thật, precision thật và mục tiêu (target / 대상) thời gian chạy (runtime / 런타임) thật. Peak specification của vendor không thay được tải công việc (workload / 워크로드) benchmark.
 
 ## Hiệu quả năng lượng
 
-Có thể đo bằng tokens/joule hoặc inferences/watt. Ở datacenter scale, power và cooling trở thành một ràng buộc kinh tế lớn.
+Có thể đo bằng tokens/joule hoặc inferences/watt. Ở datacenter quy mô (scale / 규모), power và cooling trở thành một ràng buộc kinh tế lớn.
 
 ## Mô hình tư duy
 
@@ -143,16 +146,18 @@ ASIC / TPU / NPU = dataflow chuyên biệt để tăng hiệu quả
 
 ### “GPU luôn nhanh hơn CPU”
 
-Không. Irregular hoặc small workload và host-device transfer overhead có thể làm CPU phù hợp hơn.
+Không. Irregular hoặc small tải công việc (workload / 워크로드) và host-device transfer overhead có thể làm CPU phù hợp hơn.
 
 ### “Accelerator có TFLOPS cao hơn chắc chắn tốt hơn”
 
-Không. Memory, interconnect, kernel và precision/operator support quyết định effective performance.
+Không. bộ nhớ (memory / 메모리), interconnect, kernel và precision/operator hỗ trợ (support / 지원) quyết định effective hiệu năng (performance / 성능).
 
-### “Model chạy được nghĩa là model chạy tối ưu”
+### “mô hình (model / 모델) chạy được nghĩa là mô hình (model / 모델) chạy tối ưu”
 
 Không. Fallback kernel hoặc tensor shape không phù hợp có thể làm utilization thấp.
 
 ## Liên kết kiến thức
 
 Xem [GPU Architecture](./02_gpu_architecture.md), [Memory and Bandwidth](./03_memory_and_bandwidth.md), [Parallel Computing](./04_parallel_computing.md) và [Model Serving](../15_ai_engineering/03_model_serving.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

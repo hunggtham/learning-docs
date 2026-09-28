@@ -1,5 +1,8 @@
 # Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng
 
+> **Mạch đọc:** Đặt **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tiền mặt, tiền gửi và dự trữ ngân hàng** sang **2. Khi ngân hàng cấp tín dụng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này giải thích “đường ống” của hệ thống tài chính bằng tiếng Việt. Các thuật ngữ tiếng Anh chỉ được giữ như từ khóa tra cứu ở lần xuất hiện cần thiết. Mục tiêu là phân biệt rõ tiền, tín dụng, thanh khoản, vốn, tài sản bảo đảm, nguồn vốn và khả năng thanh toán để hiểu vì sao một cú sốc nhỏ có thể bị khuếch đại thành khủng hoảng.
 
 # Phần I — Các lớp tiền khác nhau
@@ -449,3 +452,5 @@ Bảng cân đối
 ```
 
 Khi hiểu chuỗi này, các thuật ngữ như repo, haircut, QE, QT hay cơ sở hoán đổi chỉ còn là tên của các mắt xích cụ thể, không phải những từ tiếng Anh phải ghi nhớ mà chưa hiểu bản chất.
+
+> **Bàn giao:** Sau **40. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

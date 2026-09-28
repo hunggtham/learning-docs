@@ -1,55 +1,58 @@
-# Kotlin + Android Master Note — Advanced / Senior
+# Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)
 
-> Mục tiêu: hiểu sâu semantics của Kotlin, lifecycle/state/concurrency của Android, coroutine/Flow, Compose runtime, architecture, failure modes, performance, security, build/release và migration. Ở level này, không chỉ biết API nào tồn tại mà phải giải thích được **owner là ai, lifetime bao lâu, điều gì xảy ra khi interleave/process death/retry và API cũ nên giữ hay migrate vì lý do gì**.
+> **Mạch đọc:** Đặt **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục lục** sang **6.1 Suspension không đồng nghĩa background**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Mục tiêu: hiểu sâu ngữ nghĩa (semantics / 의미론) của Kotlin, vòng đời (lifecycle / 생명주기)/trạng thái (state / 상태)/tính đồng thời (concurrency / 동시성) của Android, coroutine/luồng (flow / 흐름), Compose thời gian chạy (runtime / 런타임), kiến trúc (architecture / 아키텍처), thất bại (failure / 실패) modes, hiệu năng (performance / 성능), bảo mật (security / 보안), bản dựng (build / 빌드)/bản phát hành (release / 릴리스) và di chuyển (migration / 마이그레이션). Ở mức (level / 수준) này, không chỉ biết API nào tồn tại mà phải giải thích được **đơn vị sở hữu (owner / 오너) là ai, thời gian tồn tại (lifetime / 수명) bao lâu, điều gì xảy ra khi interleave/tiến trình (process / 프로세스) death/thử lại (retry / 재시도) và API cũ nên giữ hay migrate vì lý do gì**.
 
 ## Mục lục
 
-1. Kotlin type system nâng cao
+1. Kotlin hệ kiểu (type system / 타입 시스템) nâng cao
 2. Inline, noinline, crossinline và reified
 3. Operator overloading và DSL
-4. Contracts và compiler reasoning
-5. Reflection, annotations và code generation
+4. Contracts và trình biên dịch (compiler / 컴파일러) lập luận (reasoning / 추론)
+5. Reflection, annotations và mã (code / 코드) generation
 6. Coroutine internals và cancellation
-7. Structured concurrency, exception và supervision
-8. Flow internals, hot/cold, backpressure và sharing
-9. State machine, UDF và event semantics
-10. Compose runtime, identity và recomposition
-11. Snapshot state, stability và phase performance
-12. Side effects và lifetime
-13. Android lifecycle, configuration change và process death
-14. SavedStateHandle và state reconstruction
-15. Multi-module architecture
-16. Build system và Gradle performance
-17. Dependency Injection ở quy mô lớn
-18. Offline-first, cache và sync
+7. Structured tính đồng thời (concurrency / 동시성), exception và supervision
+8. luồng (flow / 흐름) internals, hot/cold, backpressure và sharing
+9. máy trạng thái (state machine / 상태 머신), UDF và sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)
+10. Compose thời gian chạy (runtime / 런타임), định danh (identity / 식별자) và recomposition
+11. Snapshot trạng thái (state / 상태), stability và phase hiệu năng (performance / 성능)
+12. Side effects và thời gian tồn tại (lifetime / 수명)
+13. Android vòng đời (lifecycle / 생명주기), cấu hình (configuration / 구성) thay đổi (change / 변경) và tiến trình (process / 프로세스) death
+14. SavedStateHandle và trạng thái (state / 상태) reconstruction
+15. Multi-module kiến trúc (architecture / 아키텍처)
+16. hệ thống dựng (build system / 빌드 시스템) và Gradle hiệu năng (performance / 성능)
+17. phụ thuộc (dependency / 의존성) Injection ở quy mô lớn
+18. Offline-first, bộ nhớ đệm (cache / 캐시) và sync
 19. Pagination và Paging 3
-20. Background execution policy
-21. Security production
-22. Performance, memory và battery
+20. Background thực thi (execution / 실행) chính sách (policy / 정책)
+21. bảo mật (security / 보안) môi trường vận hành (production / 운영 환경)
+22. hiệu năng (performance / 성능), bộ nhớ (memory / 메모리) và battery
 23. Networking nâng cao
-24. Database nâng cao
-25. Testing strategy
+24. cơ sở dữ liệu (database / 데이터베이스) nâng cao
+25. Testing chiến lược (strategy / 전략)
 26. Java interoperability
-27. API design bằng Kotlin
-28. Common design patterns và Kotlin idioms
-29. Modern vs legacy API và migration strategy
-30. Senior review checklist
-31. Channel, Mutex, atomic và shared mutable state
+27. API thiết kế (design / 설계) bằng Kotlin
+28. dùng chung (common / 공통) thiết kế (design / 설계) patterns và Kotlin idioms
+29. hiện đại (modern / 현대적) vs legacy API và di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
+30. cấp cao (senior / 시니어) rà soát (review / 검토) checklist
+31. Channel, Mutex, atomic và dùng chung (shared / 공유) mutable trạng thái (state / 상태)
 32. Coroutine scheduler, dispatcher injection và starvation
-33. Compose performance: đo recomposition đúng cách
-34. Main thread, ANR, StrictMode và leak
+33. Compose hiệu năng (performance / 성능): đo recomposition đúng cách
+34. Main luồng thực thi (thread / 스레드), ANR, StrictMode và leak
 35. R8, shrinking và keep rules
-36. Signing, APK/AAB và release reproducibility
-37. API-level compatibility, behavior change và feature gating
-38. WebView như một security boundary
-39. Database migration và schema evolution
-40. Senior decision framework
+36. Signing, APK/AAB và bản phát hành (release / 릴리스) reproducibility
+37. API-level tính tương thích (compatibility / 호환성), hành vi (behavior / 동작) thay đổi (change / 변경) và tính năng (feature / 기능) gating
+38. WebView như một ranh giới bảo mật (security boundary / 보안 경계)
+39. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) và lược đồ (schema / 스키마) evolution
+40. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
 ---
 
-# 1. Kotlin type system nâng cao
+# 1. Kotlin hệ kiểu (type system / 타입 시스템) nâng cao
 
-Kotlin type system có nullable types, bottom type `Nothing`, top types `Any`/`Any?`, variance, smart cast và platform types từ Java. Senior developer phải xem platform type như một **boundary chưa được normalize**, không phải convenience type bình thường.
+Kotlin hệ kiểu (type system / 타입 시스템) có nullable types, bottom kiểu (type / 타입) `Nothing`, top types `Any`/`Any?`, variance, smart cast và nền tảng (platform / 플랫폼) types từ Java. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) phải xem nền tảng (platform / 플랫폼) kiểu (type / 타입) như một **ranh giới (boundary / 경계) chưa được normalize**, không phải convenience kiểu (type / 타입) bình thường.
 
 Nếu Java trả `String!`, normalize nullability càng sớm càng tốt:
 
@@ -57,35 +60,35 @@ Nếu Java trả `String!`, normalize nullability càng sớm càng tốt:
 val safeName: String = javaApi.name ?: "Unknown"
 ```
 
-Đừng để `String!` chảy sâu vào domain vì compiler không còn bảo vệ được invariant null-safety.
+Đừng để `String!` chảy sâu vào lĩnh vực (domain / 도메인) vì trình biên dịch (compiler / 컴파일러) không còn bảo vệ được bất biến (invariant / 불변식) null-safety.
 
 # 2. `inline`, `noinline`, `crossinline`, `reified`
 
-`inline` có thể loại call/lambda allocation và cho phép non-local return; `noinline` giữ lambda như object; `crossinline` cấm non-local return khi callback chạy ở context khác; `reified` cho type parameter của inline function được dùng tại call site.
+`inline` có thể loại lời gọi (call / 호출)/lambda allocation và cho phép non-local return; `noinline` giữ lambda như đối tượng (object / 객체); `crossinline` cấm non-local return khi callback chạy ở ngữ cảnh (context / 맥락) khác; `reified` cho kiểu (type / 타입) parameter của inline hàm (function / 함수) được dùng tại lời gọi (call / 호출) site.
 
 ```kotlin
 inline fun <reified T> Json.decode(text: String): T = ...
 ```
 
-Đừng inline mọi higher-order function. Public inline API còn có compatibility implication vì body có thể được copy vào bytecode consumer.
+Đừng inline mọi higher-order hàm (function / 함수). công khai (public / 공개) inline API còn có tính tương thích (compatibility / 호환성) implication vì body có thể được bản sao (copy / 복사) vào bytecode bên tiêu thụ (consumer / 소비자).
 
 # 3. Operator overloading và DSL
 
-Operator nên phản ánh semantics tự nhiên. `moneyA + moneyB` hợp lý; `user + server` mà âm thầm gọi network là API gây bất ngờ. Kotlin DSL dựa vào lambda with receiver/extension/builder; Compose sử dụng syntax DSL-like nhưng runtime không phải builder thuần.
+Operator nên phản ánh ngữ nghĩa (semantics / 의미론) tự nhiên. `moneyA + moneyB` hợp lý; `user + server` mà âm thầm gọi mạng (network / 네트워크) là API gây bất ngờ. Kotlin DSL dựa vào lambda with receiver/extension/builder; Compose sử dụng cú pháp (syntax / 문법) DSL-like nhưng thời gian chạy (runtime / 런타임) không phải builder thuần.
 
 # 4. Contracts
 
-Contracts giúp compiler hiểu một số quan hệ control-flow/state. Chỉ tạo custom contract khi hiểu effect và limitation; contract sai có thể làm compiler suy luận mạnh hơn behavior thực tế.
+Contracts giúp trình biên dịch (compiler / 컴파일러) hiểu một số quan hệ control-flow/trạng thái (state / 상태). Chỉ tạo custom đặc tả hợp đồng (contract / 계약) khi hiểu tác động (effect / 효과) và limitation; đặc tả hợp đồng (contract / 계약) sai có thể làm trình biên dịch (compiler / 컴파일러) suy luận mạnh hơn hành vi (behavior / 동작) thực tế.
 
-# 5. Reflection, annotations và code generation
+# 5. Reflection, annotations và mã (code / 코드) generation
 
-Reflection hữu ích nhưng có cost startup/size/obfuscation. Android ecosystem hiện đại thường ưu tiên code generation khi phù hợp. KSP hiểu Kotlin symbol trực tiếp; kapt dựa Java annotation processing/stub. **Modern không đồng nghĩa bắt buộc KSP**: migrate theo processor support/maturity, không đổi chỉ vì tên API mới hơn.
+Reflection hữu ích nhưng có chi phí (cost / 비용) startup/kích thước (size / 크기)/obfuscation. Android ecosystem hiện đại thường ưu tiên mã (code / 코드) generation khi phù hợp. KSP hiểu Kotlin symbol trực tiếp; kapt dựa Java annotation processing/stub. **hiện đại (modern / 현대적) không đồng nghĩa bắt buộc KSP**: migrate theo processor hỗ trợ (support / 지원)/maturity, không đổi chỉ vì tên API mới hơn.
 
-Generated code là một phần build architecture. Khi upgrade Kotlin/AGP mà lỗi nằm trong Room/Hilt/serialization/Compose generated path, kiểm tra plugin/processor compatibility trước khi sửa business code.
+Generated mã (code / 코드) là một phần bản dựng (build / 빌드) kiến trúc (architecture / 아키텍처). Khi upgrade Kotlin/AGP mà lỗi nằm trong Room/Hilt/serialization/Compose generated đường dẫn (path / 경로), kiểm tra plugin/processor tính tương thích (compatibility / 호환성) trước khi sửa nghiệp vụ (business / 비즈니스) mã (code / 코드).
 
 # 6. Coroutine internals và cancellation
 
-`suspend` không tạo thread. Compiler biến suspend function thành state machine với continuation. Coroutine có thể suspend mà không giữ thread và resume trên thread khác theo dispatcher/context.
+`suspend` không tạo luồng thực thi (thread / 스레드). trình biên dịch (compiler / 컴파일러) biến suspend hàm (function / 함수) thành máy trạng thái (state machine / 상태 머신) với continuation. Coroutine có thể suspend mà không giữ luồng thực thi (thread / 스레드) và resume trên luồng thực thi (thread / 스레드) khác theo dispatcher/ngữ cảnh (context / 맥락).
 
 ## 6.1 Suspension không đồng nghĩa background
 
@@ -95,11 +98,11 @@ suspend fun parseHugeJson(text: String): Model {
 }
 ```
 
-`suspend` chỉ nói function có thể suspend; nó không nói work main-safe. Blocking/CPU-heavy work cần execution policy rõ ở layer sở hữu implementation.
+`suspend` chỉ nói hàm (function / 함수) có thể suspend; nó không nói công việc (work / 작업) main-safe. Blocking/CPU-heavy công việc (work / 작업) cần thực thi (execution / 실행) chính sách (policy / 정책) rõ ở tầng (layer / 계층) sở hữu hiện thực (implementation / 구현).
 
-## 6.2 Cancellation là cooperative control flow
+## 6.2 Cancellation là cooperative điều khiển (control / 제어) luồng (flow / 흐름)
 
-CPU loop dài phải check cancellation:
+CPU vòng lặp (loop / 루프) dài phải check cancellation:
 
 ```kotlin
 while (hasMore()) {
@@ -120,15 +123,15 @@ try {
 }
 ```
 
-Generic `catch (Throwable)` rồi convert thành `UiError` có thể biến screen đã đóng thành operation tiếp tục chạy và emit state muộn.
+Generic `catch (Throwable)` rồi convert thành `UiError` có thể biến screen đã đóng thành thao tác (operation / 연산) tiếp tục chạy và emit trạng thái (state / 상태) muộn.
 
 ## 6.3 Cleanup và `NonCancellable`
 
-`finally` vẫn chạy khi cancel. Chỉ dùng `withContext(NonCancellable)` cho cleanup suspend nhỏ thật sự bắt buộc, ví dụ đóng transaction/protocol state. Bọc toàn operation trong `NonCancellable` phá structured cancellation.
+`finally` vẫn chạy khi cancel. Chỉ dùng `withContext(NonCancellable)` cho cleanup suspend nhỏ thật sự bắt buộc, ví dụ đóng giao dịch (transaction / 트랜잭션)/giao thức (protocol / 프로토콜) trạng thái (state / 상태). Bọc toàn thao tác (operation / 연산) trong `NonCancellable` phá structured cancellation.
 
-# 7. Structured concurrency, exception và supervision
+# 7. Structured tính đồng thời (concurrency / 동시성), exception và supervision
 
-Structured concurrency tạo tree lifetime/failure:
+Structured tính đồng thời (concurrency / 동시성) tạo cây (tree / 트리) thời gian tồn tại (lifetime / 수명)/thất bại (failure / 실패):
 
 ```text
 parent scope
@@ -136,9 +139,9 @@ parent scope
 └─ child B
 ```
 
-Với `coroutineScope`, child failure thường cancel siblings/parent scope. `supervisorScope` tách failure của siblings nhưng không “nuốt lỗi”. Bạn vẫn cần xử lý từng child failure.
+Với `coroutineScope`, child thất bại (failure / 실패) thường cancel siblings/parent phạm vi (scope / 범위). `supervisorScope` tách thất bại (failure / 실패) của siblings nhưng không “nuốt lỗi”. Bạn vẫn cần xử lý từng child thất bại (failure / 실패).
 
-`launch` và `async` khác mục đích: `launch` cho fire-and-join side effect trong scope; `async` tạo value cần `await`. Dùng `async` mà không `await` thường là smell.
+`launch` và `async` khác mục đích: `launch` cho fire-and-join side tác động (effect / 효과) trong phạm vi (scope / 범위); `async` tạo giá trị (value / 값) cần `await`. Dùng `async` mà không `await` thường là smell.
 
 ## 7.1 Concurrent start không phải always faster
 
@@ -150,15 +153,15 @@ coroutineScope {
 }
 ```
 
-Chỉ parallel nếu A/B độc lập và backend/device budget cho phép. Parallel hóa quá mức có thể tăng contention, rate-limit và battery cost.
+Chỉ parallel nếu A/B độc lập và backend/thiết bị (device / 장치) ngân sách (budget / 예산) cho phép. Parallel hóa quá mức có thể tăng contention, rate-limit và battery chi phí (cost / 비용).
 
-## 7.2 Stale result race
+## 7.2 Stale kết quả (result / 결과) race
 
-User search `a`, rồi `ab`; request `a` có thể finish sau `ab` và overwrite UI. Giải pháp không chỉ “dùng coroutine”: cần latest-wins cancellation (`flatMapLatest`/cancel previous), request generation ID hoặc state owner reject stale result.
+Người dùng (user / 사용자) tìm kiếm (search / 검색) `a`, rồi `ab`; yêu cầu (request / 요청) `a` có thể finish sau `ab` và overwrite UI. Giải pháp không chỉ “dùng coroutine”: cần latest-wins cancellation (`flatMapLatest`/cancel previous), yêu cầu (request / 요청) generation ID hoặc trạng thái (state / 상태) đơn vị sở hữu (owner / 오너) reject stale kết quả (result / 결과).
 
-# 8. Flow internals, hot/cold, backpressure và sharing
+# 8. luồng (flow / 흐름) internals, hot/cold, backpressure và sharing
 
-Cold Flow chạy producer theo mỗi collector. Hot Flow tồn tại độc lập collector tùy scope/lifetime.
+Cold luồng (flow / 흐름) chạy producer theo mỗi collector. Hot luồng (flow / 흐름) tồn tại độc lập collector tùy phạm vi (scope / 범위)/thời gian tồn tại (lifetime / 수명).
 
 ```text
 cold Flow
@@ -170,7 +173,7 @@ upstream/state có lifetime riêng
 
 ## 8.1 Backpressure operator mang nghĩa nghiệp vụ
 
-`buffer()` cho producer đi trước trong giới hạn buffer. `conflate()` bỏ intermediate values. `collectLatest` cancel xử lý value cũ. `flatMapLatest` cancel sub-flow cũ khi key mới đến.
+`buffer()` cho producer đi trước trong giới hạn buffer. `conflate()` bỏ intermediate values. `collectLatest` cancel xử lý giá trị (value / 값) cũ. `flatMapLatest` cancel sub-flow cũ khi key mới đến.
 
 ```kotlin
 queryFlow
@@ -179,20 +182,20 @@ queryFlow
     .flatMapLatest(repository::search)
 ```
 
-Search phù hợp latest-wins. Audit/payment event thì không được conflate vì mỗi event có nghĩa.
+Tìm kiếm (search / 검색) phù hợp latest-wins. kiểm tra (audit / 감사)/payment sự kiện (event / 이벤트) thì không được conflate vì mỗi sự kiện (event / 이벤트) có nghĩa.
 
-<!-- merge: preserve both canonical variants -->
-## 8.2 `stateIn`/`shareIn` thay đổi lifetime
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+## 8.2 `stateIn`/`shareIn` thay đổi thời gian tồn tại (lifetime / 수명)
 
-Chúng không chỉ tối ưu subscription; chúng biến cold upstream thành shared hot stream trong một scope. Nếu scope application-level, DB/network subscription có thể sống lâu hơn screen. `SharingStarted.WhileSubscribed(timeout)` phải chọn theo reconnect cost/staleness semantics.
+Chúng không chỉ tối ưu subscription; chúng biến cold upstream thành dùng chung (shared / 공유) hot stream trong một phạm vi (scope / 범위). Nếu phạm vi (scope / 범위) application-level, DB/mạng (network / 네트워크) subscription có thể sống lâu hơn screen. `SharingStarted.WhileSubscribed(timeout)` phải chọn theo reconnect chi phí (cost / 비용)/staleness ngữ nghĩa (semantics / 의미론).
 
-## 8.3 `StateFlow` vs event
+## 8.3 `StateFlow` vs sự kiện (event / 이벤트)
 
-`StateFlow` luôn có current state. Collector mới nhận trạng thái hiện tại. One-shot effect như “toast copied” có thể không cần survive process/recreation; payment success lại thường là domain state phải reconstruct. Trước khi chọn Channel/SharedFlow, hỏi event có được phép mất không và replay có nguy hiểm không.
+`StateFlow` luôn có trạng thái hiện tại (current state / 현재 상태). Collector mới nhận trạng thái hiện tại. One-shot tác động (effect / 효과) như “toast copied” có thể không cần survive tiến trình (process / 프로세스)/recreation; payment success lại thường là lĩnh vực (domain / 도메인) trạng thái (state / 상태) phải reconstruct. Trước khi chọn Channel/SharedFlow, hỏi sự kiện (event / 이벤트) có được phép mất không và replay có nguy hiểm không.
 
-# 9. State machine, UDF và event semantics
+# 9. máy trạng thái (state machine / 상태 머신), UDF và sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론)
 
-Nhiều boolean dễ tạo impossible state:
+Nhiều boolean dễ tạo impossible trạng thái (state / 상태):
 
 ```text
 loading=true
@@ -200,11 +203,11 @@ success=true
 error=true
 ```
 
-Model phase rõ hơn:
-<!-- merge: preserve both canonical variants -->
-# 9. State machine, UDF và architecture invariant
+Mô hình (model / 모델) phase rõ hơn:
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+# 9. máy trạng thái (state machine / 상태 머신), UDF và kiến trúc (architecture / 아키텍처) bất biến (invariant / 불변식)
 
-UDF không phải tên khác của MVI framework. Nó là một constraint giúp reasoning:
+UDF không phải tên khác của MVI khung phần mềm (framework / 프레임워크). Nó là một ràng buộc (constraint / 제약조건) giúp lập luận (reasoning / 추론):
 
 ```text
 authoritative state
@@ -220,11 +223,11 @@ source of truth thay đổi
 state mới
 ```
 
-Điểm Senior cần giữ không phải “mọi app phải có reducer”, mà là **mỗi fact quan trọng có owner và source of truth rõ**. Nếu cùng một bookmark tồn tại thành mutable state riêng ở database, repository cache, ViewModel và `remember`, hệ thống có bốn nơi có thể bất đồng.
+Điểm cấp cao (senior / 시니어) cần giữ không phải “mọi app phải có reducer”, mà là **mỗi fact quan trọng có đơn vị sở hữu (owner / 오너) và nguồn chuẩn (source of truth / 정본) rõ**. Nếu cùng một bookmark tồn tại thành mutable trạng thái (state / 상태) riêng ở cơ sở dữ liệu (database / 데이터베이스), repository bộ nhớ đệm (cache / 캐시), ViewModel và `remember`, hệ thống có bốn nơi có thể bất đồng.
 
-## 9.1 Bắt đầu architecture bằng invariant
+## 9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)
 
-Trước khi chọn MVVM/MVI/Clean Architecture, hãy viết invariant:
+Trước khi chọn MVVM/MVI/Clean kiến trúc (architecture / 아키텍처), hãy viết bất biến (invariant / 불변식):
 
 ```text
 User A không bao giờ nhìn thấy cache của User B.
@@ -233,9 +236,9 @@ UI chỉ render article snapshot từ local source of truth.
 Process recreation có thể reconstruct screen từ stable ID.
 ```
 
-Architecture có giá trị khi boundary làm invariant dễ giữ và dễ test.
+Kiến trúc (architecture / 아키텍처) có giá trị khi ranh giới (boundary / 경계) làm bất biến (invariant / 불변식) dễ giữ và dễ kiểm thử (test / 테스트).
 
-## 9.2 State machine tránh impossible state
+## 9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)
 
 Nhiều flags độc lập dễ tạo tổ hợp vô nghĩa:
 
@@ -246,7 +249,7 @@ contentEmpty=false
 paymentSucceeded=true
 ```
 
-Có hai kiểu model phổ biến:
+Có hai kiểu mô hình (model / 모델) phổ biến:
 
 ```text
 mutually exclusive phase
@@ -256,9 +259,9 @@ content có thể coexist với refresh/error metadata
 → immutable data class với invariant được document
 ```
 
-Không ép mọi screen thành sealed state nếu UX cần cached content + refresh + warning cùng lúc. Model phải theo business invariant, không theo template.
+Không ép mọi screen thành sealed trạng thái (state / 상태) nếu UX cần cached content + refresh + warning cùng lúc. mô hình (model / 모델) phải theo nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식), không theo template.
 
-## 9.3 Command, state và event phải phân biệt
+## 9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt
 
 ```text
 Command
@@ -271,11 +274,11 @@ Transient UI effect
 = Snackbar "Copied", haptic, focus request
 ```
 
-Nếu một fact quan trọng bị model thành event một lần và collector vắng mặt thì mất, design có thể sai. Durable fact nên có durable/source-of-truth representation.
+Nếu một fact quan trọng bị mô hình (model / 모델) thành sự kiện (event / 이벤트) một lần và collector vắng mặt thì mất, thiết kế (design / 설계) có thể sai. Durable fact nên có durable/source-of-truth biểu diễn (representation / 표현).
 
-## 9.4 Stale snapshot là architecture bug, không chỉ concurrency bug
+## 9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug
 
-Ví dụ ViewModel giữ object `Article` được truyền từ list screen sang detail. Trong lúc detail mở, DB sync article mới. Detail vẫn hiển thị object cũ vì navigation argument trở thành source of truth thứ hai.
+Ví dụ ViewModel giữ đối tượng (object / 객체) `Article` được truyền từ danh sách (list / 목록) screen sang detail. Trong lúc detail mở, DB sync article mới. Detail vẫn hiển thị đối tượng (object / 객체) cũ vì điều hướng (navigation / 내비게이션) argument trở thành nguồn chuẩn (source of truth / 정본) thứ hai.
 
 Tốt hơn:
 
@@ -285,7 +288,7 @@ navigation truyền articleId
 → UI luôn thấy authoritative snapshot
 ```
 
-Architecture phải giải thích data freshness và reconstruction, không chỉ dependency direction.
+Kiến trúc (architecture / 아키텍처) phải giải thích dữ liệu (data / 데이터) freshness và reconstruction, không chỉ phụ thuộc (dependency / 의존성) direction.
 <!-- end merged variant -->
 
 ```kotlin
@@ -297,20 +300,20 @@ sealed interface LoadState {
 }
 ```
 
-<!-- merge: preserve both canonical variants -->
-UDF nghĩa state đi xuống, event/action đi lên owner; không bắt buộc dùng MVI framework hay giant reducer.
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+UDF nghĩa trạng thái (state / 상태) đi xuống, sự kiện (event / 이벤트)/hành động (action / 동작) đi lên đơn vị sở hữu (owner / 오너); không bắt buộc dùng MVI khung phần mềm (framework / 프레임워크) hay giant reducer.
 
-State owner phải là nơi duy nhất quyết định authoritative transition. UI local `remember` không nên cạnh tranh với database/ViewModel cho cùng business state.
+Trạng thái (state / 상태) đơn vị sở hữu (owner / 오너) phải là nơi duy nhất quyết định authoritative chuyển tiếp (transition / 전이). UI cục bộ (local / 로컬) `remember` không nên cạnh tranh với cơ sở dữ liệu (database / 데이터베이스)/ViewModel cho cùng nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
-# 10. Compose runtime, identity và recomposition
+# 10. Compose thời gian chạy (runtime / 런타임), định danh (identity / 식별자) và recomposition
 
-Compose compiler/runtime tạo composition tree, theo dõi state reads và invalidate scope liên quan. Recomposition không đồng nghĩa redraw toàn screen.
+Compose trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) tạo composition cây (tree / 트리), theo dõi trạng thái (state / 상태) reads và invalidate phạm vi (scope / 범위) liên quan. Recomposition không đồng nghĩa redraw toàn screen.
 
-Composable body phải gần như pure render description. Side effect trực tiếp trong body sai vì body có thể chạy nhiều lần:
-<!-- merge: preserve both canonical variants -->
-Compose không phải “framework gọi lại toàn bộ screen mỗi khi state đổi”. Compiler Compose biến `@Composable` function thành code có thêm metadata/runtime protocol; runtime duy trì **Composition** để nhớ cấu trúc UI, identity của các call site và những state read nào xảy ra ở đâu. Khi observable state đổi, Compose invalidates đúng restart scope liên quan và cố làm lượng công việc tối thiểu cần thiết.
+Composable body phải gần như pure kết xuất (render / 렌더링) description. Side tác động (effect / 효과) trực tiếp trong body sai vì body có thể chạy nhiều lần:
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+Compose không phải “khung phần mềm (framework / 프레임워크) gọi lại toàn bộ screen mỗi khi trạng thái (state / 상태) đổi”. trình biên dịch (compiler / 컴파일러) Compose biến `@Composable` hàm (function / 함수) thành mã (code / 코드) có thêm siêu dữ liệu (metadata / 메타데이터)/thời gian chạy (runtime / 런타임) giao thức (protocol / 프로토콜); thời gian chạy (runtime / 런타임) duy trì **Composition** để nhớ cấu trúc UI, định danh (identity / 식별자) của các lời gọi (call / 호출) site và những trạng thái (state / 상태) read nào xảy ra ở đâu. Khi observable trạng thái (state / 상태) đổi, Compose invalidates đúng restart phạm vi (scope / 범위) liên quan và cố làm lượng công việc tối thiểu cần thiết.
 
-Mental model một frame:
+Mô hình tư duy (mental model / 사고 모델) một frame:
 
 ```text
 State/data
@@ -322,11 +325,11 @@ Layout — đo và đặt ở đâu?
 Draw — vẽ như thế nào?
 ```
 
-Recomposition chỉ nói về việc chạy lại phần **composition** cần thiết. Sau đó layout hoặc draw có thể chạy hoặc được bỏ qua tùy kết quả. Vì vậy “recomposition count cao” tự nó chưa chứng minh UI chậm.
+Recomposition chỉ nói về việc chạy lại phần **composition** cần thiết. Sau đó bố cục (layout / 레이아웃) hoặc draw có thể chạy hoặc được bỏ qua tùy kết quả. Vì vậy “recomposition count cao” tự nó chưa chứng minh UI chậm.
 
-## 10.1 Identity đến từ vị trí call site và key
+## 10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key
 
-Compose cần biết instance logic nào ở lần composition hiện tại tương ứng với instance nào trước đó để giữ `remember`, effect và state đúng chỗ.
+Compose cần biết instance lô-gic (logic / 논리) nào ở lần composition hiện tại tương ứng với instance nào trước đó để giữ `remember`, tác động (effect / 효과) và trạng thái (state / 상태) đúng chỗ.
 
 ```kotlin
 LazyColumn {
@@ -340,17 +343,17 @@ LazyColumn {
 }
 ```
 
-Key phải biểu diễn identity bền vững, không phải index nếu index thay đổi khi insert/delete/reorder.
+Key phải biểu diễn định danh (identity / 식별자) bền vững, không phải chỉ mục (index / 인덱스) nếu chỉ mục (index / 인덱스) thay đổi khi insert/delete/reorder.
 
-## 10.2 `remember` thuộc Composition, không thuộc business object
+## 10.2 `remember` thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)
 
 ```kotlin
 val state = remember(key) { expensiveInitialization(key) }
 ```
 
-Giá trị được giữ khi call site còn identity và key không đổi. `remember` không sống qua process death; không tự sống qua việc composable rời Composition; và không phải nơi giữ dữ liệu business lâu dài chỉ vì “muốn khỏi load lại”.
+Giá trị được giữ khi lời gọi (call / 호출) site còn định danh (identity / 식별자) và key không đổi. `remember` không sống qua tiến trình (process / 프로세스) death; không tự sống qua việc composable rời Composition; và không phải nơi giữ dữ liệu nghiệp vụ (business / 비즈니스) lâu dài chỉ vì “muốn khỏi tải (load / 로드) lại”.
 
-Phân lớp owner:
+Phân lớp đơn vị sở hữu (owner / 오너):
 
 ```text
 UI ephemeral state trong call site
@@ -366,15 +369,15 @@ durable data
 → repository + database/DataStore/server
 ```
 
-## 10.3 State read quyết định phase nào bị invalidated
+## 10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated
 
-Compose theo dõi nơi đọc state, không chỉ nơi state được tạo. Read trong composition có thể trigger recomposition; read trong placement có thể chỉ restart layout; read trong draw có thể chỉ restart draw.
+Compose theo dõi nơi đọc trạng thái (state / 상태), không chỉ nơi trạng thái (state / 상태) được tạo. Read trong composition có thể trigger recomposition; read trong placement có thể chỉ restart bố cục (layout / 레이아웃); read trong draw có thể chỉ restart draw.
 
-Senior optimization không phải chuyển mọi read xuống phase thấp nhất bằng mẹo khó đọc; nó là hiểu hot path để tránh work không cần thiết khi profiler chứng minh vấn đề.
+Cấp cao (senior / 시니어) tối ưu hóa (optimization / 최적화) không phải chuyển mọi read xuống phase thấp nhất bằng mẹo khó đọc; nó là hiểu đường xử lý nóng (hot path / 핫 패스) để tránh công việc (work / 작업) không cần thiết khi profiler chứng minh vấn đề.
 
 ## 10.4 Composable body phải gần pure
 
-Composable có thể chạy lại, bị skip hoặc một composition attempt có thể không được apply. Vì vậy body không phải nơi gọi side effect tùy ý:
+Composable có thể chạy lại, bị skip hoặc một composition attempt có thể không được apply. Vì vậy body không phải nơi gọi side tác động (effect / 효과) tùy ý:
 <!-- end merged variant -->
 
 ```kotlin
@@ -384,10 +387,10 @@ fun Bad(userId: String) {
 }
 ```
 
-<!-- merge: preserve both canonical variants -->
-## 10.1 Identity quan trọng như state
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+## 10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)
 
-Composition state gắn với vị trí/identity. Với list động, stable key giúp state đi theo entity:
+Composition trạng thái (state / 상태) gắn với vị trí/định danh (identity / 식별자). Với danh sách (list / 목록) động, stable key giúp trạng thái (state / 상태) đi theo thực thể (entity / 엔터티):
 
 ```kotlin
 LazyColumn {
@@ -396,24 +399,24 @@ LazyColumn {
     }
 }
 ```
-<!-- merge: preserve both canonical variants -->
-UI body nên chủ yếu mô tả output từ input/state. Business side effect thuộc event handler/ViewModel/data layer; effect gắn lifecycle UI dùng Effect API phù hợp.
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+UI body nên chủ yếu mô tả đầu ra (output / 출력) từ đầu vào (input / 입력)/trạng thái (state / 상태). nghiệp vụ (business / 비즈니스) side tác động (effect / 효과) thuộc sự kiện (event / 이벤트) handler/ViewModel/dữ liệu (data / 데이터) tầng (layer / 계층); tác động (effect / 효과) gắn vòng đời (lifecycle / 생명주기) UI dùng tác động (effect / 효과) API phù hợp.
 
-# 11. Snapshot State, stability và performance
+# 11. Snapshot trạng thái (state / 상태), stability và hiệu năng (performance / 성능)
 
-Compose Snapshot system cung cấp observable state model cho runtime. Ordinary Kotlin mutation không tự trở thành observable. Immutable snapshot hoặc Snapshot-aware collection làm mutation contract rõ hơn.
+Compose Snapshot hệ thống (system / 시스템) cung cấp observable trạng thái (state / 상태) mô hình (model / 모델) cho thời gian chạy (runtime / 런타임). Ordinary Kotlin mutation không tự trở thành observable. Immutable snapshot hoặc Snapshot-aware collection làm mutation đặc tả hợp đồng (contract / 계약) rõ hơn.
 
-**Immutable** và **Stable** không phải cùng khái niệm. Không annotate `@Stable`/`@Immutable` chỉ để giảm metric; annotation sai có thể khiến runtime bỏ work cần thiết và tạo correctness bug.
+**Immutable** và **Stable** không phải cùng khái niệm. Không annotate `@Stable`/`@Immutable` chỉ để giảm chỉ số (metric / 지표); annotation sai có thể khiến thời gian chạy (runtime / 런타임) bỏ công việc (work / 작업) cần thiết và tạo tính đúng đắn (correctness / 정확성) bug.
 
-`derivedStateOf` hữu ích khi input đổi thường xuyên nhưng output semantic đổi ít hơn. `remember` cache theo identity/key chứ không phải global cache. Lazy list cần stable key; key sai không chỉ ảnh hưởng performance mà còn có thể gắn state/effect nhầm entity.
+`derivedStateOf` hữu ích khi đầu vào (input / 입력) đổi thường xuyên nhưng đầu ra (output / 출력) ngữ nghĩa (semantic / 의미적) đổi ít hơn. `remember` bộ nhớ đệm (cache / 캐시) theo định danh (identity / 식별자)/key chứ không phải toàn cục (global / 전역) bộ nhớ đệm (cache / 캐시). Lazy danh sách (list / 목록) cần stable key; key sai không chỉ ảnh hưởng hiệu năng (performance / 성능) mà còn có thể gắn trạng thái (state / 상태)/tác động (effect / 효과) nhầm thực thể (entity / 엔터티).
 
-Performance phải đo theo frame: composition, measure/layout, draw, allocation/GC, main-thread block và lazy reuse. Correctness đứng trước skip optimization.
+Hiệu năng (performance / 성능) phải đo theo frame: composition, measure/bố cục (layout / 레이아웃), draw, allocation/GC, main-thread khối (block / 블록) và lazy reuse. tính đúng đắn (correctness / 정확성) đứng trước skip tối ưu hóa (optimization / 최적화).
 <!-- end merged variant -->
 
-Key sai có thể khiến text-field state/animation của item A nhảy sang B khi reorder.
+Key sai có thể khiến text-field trạng thái (state / 상태)/animation của item A nhảy sang B khi reorder.
 
-<!-- merge: preserve both canonical variants -->
-## 10.2 Route vs screen
+<!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
+## 10.2 tuyến (route / 경로) vs screen
 
 ```kotlin
 @Composable
@@ -429,13 +432,13 @@ Compose effect API tồn tại vì composable body nên side-effect free. Chọn
 
 Senior review phải hỏi:
 
-```text
-identity của effect là gì?
+```văn bản (text / 텍스트)
+định danh (identity / 식별자) của tác động (effect / 효과) là gì?
 key nào restart?
-value nào chỉ cần latest?
+giá trị (value / 값) nào chỉ cần latest?
 cleanup ở đâu?
-leaving Composition có nên cancel operation không?
-đây là UI effect hay business command?
+leaving Composition có nên cancel thao tác (operation / 연산) không?
+đây là UI tác động (effect / 효과) hay nghiệp vụ (business / 비즈니스) command?
 ```
 
 # 13. Lifecycle, configuration change và process death
@@ -454,14 +457,14 @@ Module hóa không phải mục tiêu tự thân. Một module nên tồn tại 
 
 Một graph có thể như:
 
-```text
+```văn bản (text / 텍스트)
 :app
   ↓
-:feature:home:impl ─────→ :feature:home:api
+:tính năng (feature / 기능):home:impl ─────→ :tính năng (feature / 기능):home:api
   ↓                           ↑
-:core:data ─────→ :core:model │
+:cốt lõi (core / 핵심):dữ liệu (data / 데이터) ─────→ :cốt lõi (core / 핵심):mô hình (model / 모델) │
   ↓                           │
-:core:database / :core:network
+:cốt lõi (core / 핵심):cơ sở dữ liệu (database / 데이터베이스) / :cốt lõi (core / 핵심):mạng (network / 네트워크)
 ```
 
 Dependency phải có hướng. Nếu `feature:A` import internal implementation của `feature:B`, boundary trên sơ đồ không tồn tại thực tế.
@@ -486,13 +489,13 @@ Tách `feature:checkout` thành module không tự giải quyết việc checkou
 
 Gradle build cần được hiểu theo phase thay vì xem như “Android Studio bấm Run”.
 
-```text
-Settings / project discovery
-→ configuration
-→ variant/task graph
-→ task execution
-→ compiler/code generation
-→ resource + manifest processing
+```văn bản (text / 텍스트)
+Settings / dự án (project / 프로젝트) discovery
+→ cấu hình (configuration / 구성)
+→ variant/tác vụ (task / 작업) đồ thị (graph / 그래프)
+→ tác vụ (task / 작업) thực thi (execution / 실행)
+→ trình biên dịch (compiler / 컴파일러)/mã (code / 코드) generation
+→ tài nguyên (resource / 자원) + manifest processing
 → D8/R8
 → packaging/signing
 → APK/AAB
@@ -510,15 +513,15 @@ Không chạy network/file scanning tùy ý trong configuration. Custom task ph�
 
 Production artifact phải truy được:
 
-```text
-source commit
+```văn bản (text / 텍스트)
+nguồn (source / 소스) lần ghi nhận (commit / 커밋)
 Gradle wrapper
 AGP/Kotlin/JDK
-resolved dependency graph
-build variant/flavor
+resolved phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
+bản dựng (build / 빌드) variant/flavor
 R8 rules
-signing identity/process
-feature/config inputs
+signing định danh (identity / 식별자)/tiến trình (process / 프로세스)
+tính năng (feature / 기능)/cấu hình (config / 설정) inputs
 ```
 
 Dynamic version như `1.+` phá reproducibility vì cùng commit có thể resolve dependency khác ở ngày khác.
@@ -527,14 +530,14 @@ Dynamic version như `1.+` phá reproducibility vì cùng commit có thể resol
 
 Release có thể khác debug ở:
 
-```text
-R8 shrinking/optimization/obfuscation
-resource shrinking
-BuildConfig/manifest value
+```văn bản (text / 텍스트)
+R8 shrinking/tối ưu hóa (optimization / 최적화)/obfuscation
+tài nguyên (resource / 자원) shrinking
+BuildConfig/manifest giá trị (value / 값)
 signing
-proguard consumer rules
-feature flag/environment
-native symbols
+proguard bên tiêu thụ (consumer / 소비자) rules
+cờ tính năng (feature flag / 기능 플래그)/môi trường (environment / 환경)
+bản địa (native / 네이티브) symbols
 ```
 
 Vì vậy CI cần compile/test release-like variant. Lỗi reflection/JNI/serialization chỉ xuất hiện sau minify là failure mode bình thường cần được thiết kế test.
@@ -543,8 +546,8 @@ Vì vậy CI cần compile/test release-like variant. Lỗi reflection/JNI/seria
 
 Khi bug chỉ xảy ra ở `prodRelease`, đừng reproduce bằng `devDebug` rồi kết luận. Ghi exact tuple:
 
-```text
-commit + variant + device/API + dependency lock + server/config version
+```văn bản (text / 텍스트)
+lần ghi nhận (commit / 커밋) + variant + thiết bị (device / 장치)/API + phụ thuộc (dependency / 의존성) khóa (lock / 잠금) + máy chủ (server / 서버)/cấu hình (config / 설정) phiên bản (version / 버전)
 ```
 
 Forensics bắt đầu từ artifact thật, không từ source “trông giống”.
@@ -553,10 +556,10 @@ Forensics bắt đầu từ artifact thật, không từ source “trông giốn
 
 DI không phải architecture; DI quản lý object graph và creation/lifetime. Scope phải phản ánh owner thật:
 
-```text
-application singleton
+```văn bản (text / 텍스트)
+ứng dụng (application / 애플리케이션) singleton
 session scoped
-activity/navigation graph scoped
+activity/điều hướng (navigation / 내비게이션) đồ thị (graph / 그래프) scoped
 ViewModel scoped
 transient
 ```
@@ -571,15 +574,15 @@ Offline-first không chỉ là “cache API response”. Phải định nghĩa c
 
 Một pattern production:
 
-```text
-UI observe local DB
-network refresh/sync
+```văn bản (text / 텍스트)
+UI observe cục bộ (local / 로컬) DB
+mạng (network / 네트워크) refresh/sync
     ↓
-transaction update local DB
+giao dịch (transaction / 트랜잭션) cập nhật (update / 업데이트) cục bộ (local / 로컬) DB
     ↓
 DB emit authoritative snapshot
     ↓
-UI update
+UI cập nhật (update / 업데이트)
 ```
 
 ## 18.1 Read-offline và write-offline khác độ khó
@@ -592,11 +595,11 @@ Nếu product không cần offline mutation, đừng xây distributed sync engin
 
 Request timeout không có nghĩa server chưa commit:
 
-```text
-client gửi POST
-server commit
-response mất
-client thấy timeout
+```văn bản (text / 텍스트)
+máy khách (client / 클라이언트) gửi POST
+máy chủ (server / 서버) lần ghi nhận (commit / 커밋)
+phản hồi (response / 응답) mất
+máy khách (client / 클라이언트) thấy hết thời gian chờ (timeout / 타임아웃)
 ```
 
 Nếu retry mù, duplicate side effect có thể xuất hiện. Idempotency key/server contract mới giải quyết được nhóm failure này.
@@ -605,8 +608,8 @@ Nếu retry mù, duplicate side effect có thể xuất hiện. Idempotency key/
 
 Nếu local optimistic update và pending operation phải luôn cùng tồn tại, ghi chúng trong cùng local transaction:
 
-```text
-entity state changed
+```văn bản (text / 텍스트)
+thực thể (entity / 엔터티) trạng thái (state / 상태) changed
 AND
 outbox mutation exists
 ```
@@ -633,21 +636,21 @@ UI cần handle refresh/append/prepend load states độc lập. Sai lầm thư�
 
 Không chọn background API theo câu hỏi “cái nào chạy nền?”, mà theo contract:
 
-```text
-work chỉ có ý nghĩa khi screen còn sống
-→ ViewModel/lifecycle coroutine
+```văn bản (text / 텍스트)
+công việc (work / 작업) chỉ có ý nghĩa khi screen còn sống
+→ ViewModel/vòng đời (lifecycle / 생명주기) coroutine
 
-work user-visible đang chạy liên tục
-→ foreground service nếu platform policy/use case cho phép
+Công việc (work / 작업) user-visible đang chạy liên tục
+→ foreground dịch vụ (service / 서비스) nếu nền tảng (platform / 플랫폼) chính sách (policy / 정책)/use trường hợp (case / 사례) cho phép
 
-work có thể trì hoãn nhưng cần eventually execute
+Công việc (work / 작업) có thể trì hoãn nhưng cần eventually execute
 → WorkManager
 
 đúng thời điểm gần tuyệt đối
-→ alarm API chỉ khi use case đủ điều kiện
+→ alarm API chỉ khi use trường hợp (case / 사례) đủ điều kiện
 
-server-triggered signal
-→ push/FCM, sau đó app quyết định work phù hợp
+server-triggered tín hiệu (signal / 신호)
+→ push/FCM, sau đó app quyết định công việc (work / 작업) phù hợp
 ```
 
 Service không phải thread. WorkManager không phải sync correctness engine; nó schedule execution, còn idempotency/source-of-truth/retry semantic thuộc business/data design.
@@ -660,12 +663,12 @@ Mobile client là môi trường người dùng kiểm soát. Attacker có thể
 
 ## 21.1 Trust boundary
 
-```text
+```văn bản (text / 텍스트)
 client-side role check
-= UX optimization
+= UX tối ưu hóa (optimization / 최적화)
 
 backend authorization
-= security authority
+= bảo mật (security / 보안) authority
 ```
 
 Không nhúng server secret dài hạn rồi trông chờ R8/obfuscation bảo vệ. Keystore bảo vệ key material tốt hơn file plaintext nhưng không biến compromised device thành trusted server.
@@ -674,14 +677,14 @@ Không nhúng server secret dài hạn rồi trông chờ R8/obfuscation bảo v
 
 Các boundary cần validate:
 
-```text
+```văn bản (text / 텍스트)
 Intent/deep link
-exported Activity/Service/Receiver/Provider
+exported Activity/dịch vụ (service / 서비스)/Receiver/Provider
 PendingIntent
 content URI/FileProvider
-WebView navigation/JS bridge
-notification action
-Binder/native input
+WebView điều hướng (navigation / 내비게이션)/JS cầu nối (bridge / 브리지)
+notification hành động (action / 동작)
+Binder/bản địa (native / 네이티브) đầu vào (input / 입력)
 ```
 
 Kiểm tra scheme/host/path/ID, authorization sau navigation, URI grant tối thiểu và `android:exported` có chủ đích.
@@ -700,27 +703,27 @@ Pinning chỉ dùng khi threat model biện minh và có rotation/recovery plan.
 
 Performance engineering theo vòng:
 
-```text
-user-visible metric
-→ reproduce trên representative device
-→ trace/profile
+```văn bản (text / 텍스트)
+user-visible chỉ số (metric / 지표)
+→ reproduce trên representative thiết bị (device / 장치)
+→ dấu vết (trace / 추적)/profile
 → hypothesis
-→ one controlled change
+→ one controlled thay đổi (change / 변경)
 → measure lại
 → regression guard
 ```
 
 Các metric khác nhau cần tool khác nhau:
 
-```text
+```văn bản (text / 텍스트)
 startup TTID/TTFD
-frame time/jank
-CPU hot path
-allocation/GC/memory peak
-DB latency/query plan
-network latency/bytes
+frame thời gian (time / 시간)/jank
+CPU đường xử lý nóng (hot path / 핫 패스)
+allocation/GC/bộ nhớ (memory / 메모리) peak
+DB độ trễ (latency / 지연 시간)/kế hoạch truy vấn (query plan / 쿼리 계획)
+mạng (network / 네트워크) độ trễ (latency / 지연 시간)/bytes
 battery/background wakeup
-APK/download size
+APK/download kích thước (size / 크기)
 ```
 
 Macrobenchmark phù hợp startup/interaction ở package level; Perfetto/System Trace nhìn thread/system timeline; memory profiler tìm retention/allocation; baseline profile cải thiện compiled hot path nhưng không sửa algorithm chậm.
@@ -733,13 +736,13 @@ Average 8 ms không có nghĩa smooth nếu p95/p99 có frame 80–150 ms. Produ
 
 Các pattern thường gặp:
 
-```text
+```văn bản (text / 텍스트)
 singleton giữ Activity/View
 listener không unregister
 Fragment binding sống sau onDestroyView
-coroutine scope sống dài hơn owner
-unbounded cache
-callback/lambda capture object graph lớn
+coroutine phạm vi (scope / 범위) sống dài hơn đơn vị sở hữu (owner / 오너)
+unbounded bộ nhớ đệm (cache / 캐시)
+callback/lambda capture đối tượng (object / 객체) đồ thị (graph / 그래프) lớn
 ```
 
 GC không thể thu object còn reachable. Debug bằng retention path thay vì gọi `System.gc()`.
@@ -752,14 +755,13 @@ Polling thường xuyên, location high accuracy liên tục, wakeup quá nhiề
 
 Phân biệt:
 
-```text
-DNS/connectivity/timeout
-TLS failure
-HTTP protocol status
-serialization/schema failure
-auth/session failure
-domain validation/conflict
-ambiguous outcome sau side effect
+```văn bản (text / 텍스트)
+DNS/connectivity/hết thời gian chờ (timeout / 타임아웃)
+TLS thất bại (failure / 실패)
+HTTP giao thức (protocol / 프로토콜) status
+serialization/lược đồ (schema / 스키마) thất bại (failure / 실패)
+auth/session miền lỗi (failure domain / 장애 도메인) kiểm tra hợp lệ (validation / 검증)/xung đột (conflict / 충돌)
+ambiguous kết quả (outcome / 결과) sau side tác động (effect / 효과)
 ```
 
 Không map tất cả thành `NetworkError` rồi retry.
@@ -775,7 +777,7 @@ HTTP cache và application DB cache là hai layer khác nhau. Cache policy phả
 Room transaction không chỉ để “chạy nhanh hơn”; nó bảo đảm nhóm write quan trọng commit/rollback cùng nhau.
 
 ```kotlin
-@Transaction
+@giao dịch (transaction / 트랜잭션)
 suspend fun replaceData(...) { ... }
 ```
 
@@ -795,9 +797,9 @@ Fake thường tốt hơn mock cho stateful collaborator vì giữ behavior gầ
 
 Senior test không chỉ happy path. Cần chủ động điều khiển order:
 
-```text
-request A bắt đầu
-request B bắt đầu
+```văn bản (text / 텍스트)
+yêu cầu (request / 요청) A bắt đầu
+yêu cầu (request / 요청) B bắt đầu
 B success
 A success muộn
 → assert A không overwrite B
@@ -805,15 +807,15 @@ A success muộn
 
 Các failure test có giá trị cao:
 
-```text
-process death giữa flow
-DB migration từ schema thực
-network timeout sau remote commit
+```văn bản (text / 텍스트)
+tiến trình (process / 프로세스) death giữa luồng (flow / 흐름)
+DB di chuyển (migration / 마이그레이션) từ lược đồ (schema / 스키마) thực
+mạng (network / 네트워크) hết thời gian chờ (timeout / 타임아웃) sau remote lần ghi nhận (commit / 커밋)
 401 đồng thời
 permission revoke
-disk full / serialization corrupt nếu domain quan trọng
-R8/minified release
-rollback đọc data version mới
+disk full / serialization corrupt nếu lĩnh vực (domain / 도메인) quan trọng
+R8/minified bản phát hành (release / 릴리스)
+quay lui (rollback / 롤백) đọc dữ liệu (data / 데이터) phiên bản (version / 버전) mới
 ```
 
 Compose UI test nên query semantics phản ánh meaning/accessibility thay vì chỉ testTag nếu có thể.
@@ -825,7 +827,7 @@ Annotations quan trọng gồm `@JvmStatic`, `@JvmField`, `@JvmOverloads`, `@Jvm
 SAM conversion hoạt động tốt với Java functional interface và Kotlin `fun interface`.
 
 ```kotlin
-fun interface Listener {
+fun giao diện (interface / 인터페이스) Listener {
     fun onEvent(value: String)
 <!-- end merged variant -->
 }
@@ -837,9 +839,9 @@ fun interface Listener {
 
 Compose frame có các phase chính:
 
-```text
+```văn bản (text / 텍스트)
 Composition
-→ Layout (measure/place)
+→ bố cục (layout / 레이아웃)
 → Draw
 ```
 
@@ -862,9 +864,9 @@ Public API cần document cả **behavioral contract**: threading, cancellation,
 <!-- merge: preserve both canonical variants -->
 Senior review hỏi hai câu:
 
-```text
-Effect này thuộc lifecycle nào?
-Nếu screen biến mất, work có nên tiếp tục không?
+```văn bản (text / 텍스트)
+tác động (effect / 효과) này thuộc vòng đời (lifecycle / 생명주기) nào?
+Nếu screen biến mất, công việc (work / 작업) có nên tiếp tục không?
 ```
 
 Nếu phải tiếp tục sau navigation/process background, owner có thể là ViewModel/repository/WorkManager thay vì composition.
@@ -873,30 +875,30 @@ Nếu phải tiếp tục sau navigation/process background, owner có thể là
 
 Phải phân biệt bốn lớp lifetime:
 
-```text
+```văn bản (text / 텍스트)
 recomposition
 < composable destination
 < Activity/Fragment instance
-< process
-< persistent storage/server
+< tiến trình (process / 프로세스)
+< persistent lưu trữ (storage / 저장소)/máy chủ (server / 서버)
 ```
 
 Configuration change recreate Activity/Fragment instance nhưng ViewModel có thể sống qua recreation. Process death giết toàn bộ in-memory state: ViewModel, singleton, coroutine scope, object cache đều biến mất.
 
 ## 13.1 State placement theo khả năng phục hồi
 
-```text
-render-local ephemeral state
+```văn bản (text / 텍스트)
+render-local ephemeral trạng thái (state / 상태)
 → remember
 
-small UI state cần survive recreation
+small UI trạng thái (state / 상태) cần survive recreation
 → rememberSaveable / SavedStateHandle
 
-screen/business state
-→ ViewModel + source of truth
+screen/nghiệp vụ (business / 비즈니스) trạng thái (state / 상태)
+→ ViewModel + nguồn chuẩn (source of truth / 정본)
 
-large/durable data
-→ database/file/server
+large/durable dữ liệu (data / 데이터)
+→ cơ sở dữ liệu (database / 데이터베이스)/tệp (file / 파일)/máy chủ (server / 서버)
 ```
 
 Không nhét object lớn/list vào Bundle. Binder/saved-state có limit và object lớn thường reconstruct được từ stable ID.
@@ -911,11 +913,11 @@ Flow UI collection phải gắn lifecycle phù hợp. Compose dùng `collectAsSt
 
 Pattern tốt:
 
-```text
+```văn bản (text / 텍스트)
 SavedStateHandle giữ articleId
 → ViewModel khởi tạo lại
-→ repository/Room load Article(articleId)
-→ UI state được reconstruct
+→ repository/Room tải (load / 로드) Article(articleId)
+→ UI trạng thái (state / 상태) được reconstruct
 ```
 
 Pattern xấu: serialize toàn `Article` graph/list/cache vào saved state rồi coi đó là source of truth.
@@ -946,12 +948,12 @@ Không xây sync engine nếu product chỉ cần read cache. Complexity phải 
 
 Chọn primitive theo lifetime/durability:
 
-```text
-screen-bound work → viewModelScope/coroutine
-short lifecycle UI work → lifecycle/composition scope
-persisted deferrable guaranteed work → WorkManager
-user-visible ongoing work → foreground service nếu use case/policy cho phép
-exact wall-clock need → exact alarm khi đủ điều kiện
+```văn bản (text / 텍스트)
+screen-bound công việc (work / 작업) → viewModelScope/coroutine
+short vòng đời (lifecycle / 생명주기) UI công việc (work / 작업) → vòng đời (lifecycle / 생명주기)/composition phạm vi (scope / 범위)
+persisted deferrable guaranteed công việc (work / 작업) → WorkManager
+user-visible ongoing công việc (work / 작업) → foreground dịch vụ (service / 서비스) nếu use trường hợp (case / 사례)/chính sách (policy / 정책) cho phép
+chính xác (exact / 정확한) wall-clock need → chính xác (exact / 정확한) alarm khi đủ điều kiện
 ```
 
 Service không phải thread. WorkManager không phải general async replacement cho mọi request.
@@ -968,8 +970,8 @@ WebView + JavaScript bridge là high-risk boundary. Chỉ expose capability tố
 
 Performance optimization phải theo:
 
-```text
-metric → trace → hypothesis → change → verify
+```văn bản (text / 텍스트)
+chỉ số (metric / 지표) → dấu vết (trace / 추적) → hypothesis → thay đổi (change / 변경) → verify
 ```
 
 # 23. Networking nâng cao
@@ -1002,18 +1004,18 @@ Kotlin làm nhiều GoF pattern nhẹ hơn: Strategy bằng function type, Singl
 
 Phân loại trước khi migrate:
 
-```text
+```văn bản (text / 텍스트)
 A. Deprecated/unsafe
 → lập kế hoạch migrate
 
 B. Supported nhưng replacement mới có benefit rõ
 → migrate incremental khi đáng chi phí
 
-C. Still-valid cho use case cụ thể
+C. Still-valid cho use trường hợp (case / 사례) cụ thể
 → giữ
 
 D. Historical
-→ biết để maintain, không chọn cho code mới
+→ biết để maintain, không chọn cho mã (code / 코드) mới
 ```
 
 ## 29.1 Bản đồ legacy → modern
@@ -1049,19 +1051,19 @@ Compose + Flow + Hilt + Kotlin 2.x vẫn có thể có duplicated state, leaked 
 
 Review theo invariant/lifetime thay vì syntax:
 
-```text
-state owner/source of truth?
-process death reconstruct thế nào?
-coroutine scope owner?
+```văn bản (text / 텍스트)
+trạng thái (state / 상태) đơn vị sở hữu (owner / 오너)/nguồn chuẩn (source of truth / 정본)?
+tiến trình (process / 프로세스) death reconstruct thế nào?
+coroutine phạm vi (scope / 범위) đơn vị sở hữu (owner / 오너)?
 cancellation propagate không?
-race/stale result có thể xảy ra không?
-Flow hot/cold/replay đúng semantics không?
-Compose effect đúng lifetime không?
-operation retry/idempotent không?
+race/stale kết quả (result / 결과) có thể xảy ra không?
+luồng (flow / 흐름) hot/cold/replay đúng ngữ nghĩa (semantics / 의미론) không?
+Compose tác động (effect / 효과) đúng thời gian tồn tại (lifetime / 수명) không?
+thao tác (operation / 연산) thử lại (retry / 재시도)/idempotent không?
 legacy API thuộc nhóm A/B/C/D nào?
-security boundary nào nhận input không tin cậy?
-performance metric nào quan trọng?
-release/minified path có test không?
+ranh giới bảo mật (security boundary / 보안 경계) nào nhận đầu vào (input / 입력) không tin cậy?
+hiệu năng (performance / 성능) chỉ số (metric / 지표) nào quan trọng?
+bản phát hành (release / 릴리스)/minified đường dẫn (path / 경로) có kiểm thử (test / 테스트) không?
 ```
 <!-- merge: preserve both canonical variants -->
 # 29. Legacy migration: strangler thay big-bang
@@ -1070,32 +1072,32 @@ Migration Java → Kotlin hoặc XML → Compose nên tạo seam và di chuyển
 
 Ví dụ:
 
-```text
+```văn bản (text / 텍스트)
 Rx repository cũ
-→ adapter boundary expose Flow cho feature mới
+→ adapter ranh giới (boundary / 경계) expose luồng (flow / 흐름) cho tính năng (feature / 기능) mới
 → migrate caller dần
-→ đo/test
-→ xóa Rx path khi không còn consumer
+→ đo/kiểm thử (test / 테스트)
+→ xóa Rx đường dẫn (path / 경로) khi không còn bên tiêu thụ (consumer / 소비자)
 ```
 
 Hoặc:
 
-```text
+```văn bản (text / 텍스트)
 Fragment host cũ
 → ComposeView cho leaf screen mới
-→ navigation/lifecycle vẫn giữ contract cũ
-→ migrate screen theo risk/ownership
+→ điều hướng (navigation / 내비게이션)/vòng đời (lifecycle / 생명주기) vẫn giữ đặc tả hợp đồng (contract / 계약) cũ
+→ migrate screen theo rủi ro (risk / 위험)/quyền sở hữu (ownership / 소유권)
 ```
 
 Mỗi migration phải có:
 
-```text
-behavior baseline
+```văn bản (text / 텍스트)
+hành vi (behavior / 동작) baseline
 entry/exit criteria
-coexistence contract
-telemetry/test
-rollback/fallback
-owner
+coexistence đặc tả hợp đồng (contract / 계약)
+telemetry/kiểm thử (test / 테스트)
+quay lui (rollback / 롤백)/fallback
+đơn vị sở hữu (owner / 오너)
 ngày/điều kiện xóa legacy
 ```
 
@@ -1105,22 +1107,22 @@ Convert source tự động không đồng nghĩa migration semantic hoàn tất
 
 Review theo chain thay vì theo framework:
 
-```text
-Requirement
-→ invariant
-→ owner/lifetime
-→ source of truth
-→ state transition
-→ execution context
-→ concurrency/ordering
-→ external boundary
-→ failure/retry/idempotency
+```văn bản (text / 텍스트)
+yêu cầu (requirement / 요구사항)
+→ bất biến (invariant / 불변식)
+→ đơn vị sở hữu (owner / 오너)/thời gian tồn tại (lifetime / 수명)
+→ nguồn chuẩn (source of truth / 정본)
+→ chuyển tiếp trạng thái (state transition / 상태 전이)
+→ thực thi (execution / 실행) ngữ cảnh (context / 맥락)
+→ tính đồng thời (concurrency / 동시성)/thứ tự (ordering / 순서)
+→ bên ngoài (external / 외부) ranh giới (boundary / 경계)
+→ thất bại (failure / 실패)/thử lại (retry / 재시도)/idempotency
 → persistence/reconstruction
-→ security/privacy
-→ performance budget
-→ test evidence
-→ build/artifact
-→ rollout/rollback
+→ bảo mật (security / 보안)/privacy
+→ hiệu năng (performance / 성능) ngân sách (budget / 예산)
+→ kiểm thử (test / 테스트) bằng chứng (evidence / 증거)
+→ bản dựng (build / 빌드)/sản phẩm tạo ra (artifact / 산출물)
+→ rollout/quay lui (rollback / 롤백)
 ```
 
 Một feature chưa production-ready nếu chỉ trả lời “dùng MVVM + Hilt + Room + Compose” nhưng không giải thích được race, process death, stale data, retry, security boundary hoặc rollback.
@@ -1140,9 +1142,9 @@ Coroutine không loại data race. `Mutex` phù hợp critical section suspend-a
 
 ```kotlin
 private val mutex = Mutex()
-private var cached: Token? = null
+private var cached: đơn vị từ (token / 토큰)? = null
 
-suspend fun token(): Token = mutex.withLock {
+suspend fun đơn vị từ (token / 토큰)(): đơn vị từ (token / 토큰) = mutex.withLock {
     cached ?: refreshToken().also { cached = it }
 }
 ```
@@ -1218,11 +1220,11 @@ Keep rule phải càng hẹp càng tốt. Library Android nên cung cấp consum
 
 Failure forensic:
 
-```text
-debug pass + release fail
-→ compare minify/resource shrink/BuildConfig/manifest/signing
-→ inspect R8 diagnostics/mapping/usage
-→ reproduce exact release variant
+```văn bản (text / 텍스트)
+gỡ lỗi (debug / 디버그) pass + bản phát hành (release / 릴리스) thất bại (fail / 실패)
+→ compare minify/tài nguyên (resource / 자원) shrink/BuildConfig/manifest/signing
+→ inspect R8 diagnostics/ánh xạ (mapping / 매핑)/usage
+→ reproduce chính xác (exact / 정확한) bản phát hành (release / 릴리스) variant
 ```
 
 # 36. Signing, APK/AAB và release reproducibility
@@ -1271,79 +1273,81 @@ Với staged rollout, app version cũ và mới có thể cùng tồn tại. Loc
 <!-- merge: preserve both canonical variants -->
 Khi gặp feature mới, đi theo chuỗi:
 
-```text
-Requirement
-→ invariant
-→ owner/lifetime
-→ state/source of truth
-→ concurrency/order
-→ cancellation/failure/retry
+```văn bản (text / 텍스트)
+yêu cầu (requirement / 요구사항)
+→ bất biến (invariant / 불변식)
+→ đơn vị sở hữu (owner / 오너)/thời gian tồn tại (lifetime / 수명)
+→ trạng thái (state / 상태)/nguồn chuẩn (source of truth / 정본)
+→ tính đồng thời (concurrency / 동시성)/thứ tự (order / 순서)
+→ cancellation/thất bại (failure / 실패)/thử lại (retry / 재시도)
 → persistence/reconstruction
-→ platform/version compatibility
-→ security
-→ performance evidence
+→ nền tảng (platform / 플랫폼)/phiên bản (version / 버전) tính tương thích (compatibility / 호환성)
+→ bảo mật (security / 보안)
+→ bằng chứng hiệu năng (performance evidence / 성능 증거)
 → tests
-→ release/rollback
+→ bản phát hành (release / 릴리스)/quay lui (rollback / 롤백)
 ```
 
 Nếu chuỗi này rõ, việc chọn MVVM/MVI, Hilt/Koin, Room/SQLDelight hay Retrofit/Ktor trở thành quyết định có lý do thay vì preference.
 <!-- merge: preserve both canonical variants -->
 Mobile production không chạy theo happy path. Một feature nên được review với failure matrix:
 
-```text
-Process
-- configuration recreate
-- process kill
-- app update
-- device reboot
+```văn bản (text / 텍스트)
+tiến trình (process / 프로세스)
+- cấu hình (configuration / 구성) recreate
+- tiến trình (process / 프로세스) kill
+- app cập nhật (update / 업데이트)
+- thiết bị (device / 장치) reboot
 
-Concurrency
+Tính đồng thời (concurrency / 동시성)
 - duplicate tap
-- request A/B out of order
+- yêu cầu (request / 요청) A/B out of thứ tự (order / 순서)
 - 401 storm
 - worker + foreground UI cùng mutate
 
-Network
+Mạng (network / 네트워크)
 - offline
-- timeout trước commit
-- timeout sau remote commit
-- partial payload/schema drift
+- hết thời gian chờ (timeout / 타임아웃) trước lần ghi nhận (commit / 커밋)
+- hết thời gian chờ (timeout / 타임아웃) sau remote lần ghi nhận (commit / 커밋)
+- partial payload/lược đồ (schema / 스키마) drift
 
 Persistence
-- migration
-- disk full/corrupt data
-- transaction partiality
-- rollback binary đọc schema mới
+- di chuyển (migration / 마이그레이션)
+- disk full/corrupt dữ liệu (data / 데이터)
+- giao dịch (transaction / 트랜잭션) partiality
+- quay lui (rollback / 롤백) nhị phân (binary / 이진) đọc lược đồ (schema / 스키마) mới
 
-Platform
+Nền tảng (platform / 플랫폼)
 - permission revoke
-- targetSdk behavior change
+- targetSdk hành vi (behavior / 동작) thay đổi (change / 변경)
 - OEM/WebView difference
 - background restriction
 
-Release
-- R8-only failure
+Bản phát hành (release / 릴리스)
+- R8-only thất bại (failure / 실패)
 - ABI/split issue
-- bad remote config
+- bad remote cấu hình (config / 설정)
 - staged rollout regression
 ```
 
 Sau đó hỏi theo chuỗi:
 
-```text
-state thuộc owner nào?
-lifetime bao lâu?
-source of truth ở đâu?
-operation blocking hay suspend?
-ordering được định nghĩa chưa?
-retry có an toàn/idempotent không?
-process death reconstruct thế nào?
-input nào untrusted?
-performance budget nào cần đo?
-test nào chứng minh invariant?
+```văn bản (text / 텍스트)
+trạng thái (state / 상태) thuộc đơn vị sở hữu (owner / 오너) nào?
+thời gian tồn tại (lifetime / 수명) bao lâu?
+nguồn chuẩn (source of truth / 정본) ở đâu?
+thao tác (operation / 연산) blocking hay suspend?
+thứ tự (ordering / 순서) được định nghĩa chưa?
+thử lại (retry / 재시도) có an toàn/idempotent không?
+tiến trình (process / 프로세스) death reconstruct thế nào?
+đầu vào (input / 입력) nào untrusted?
+hiệu năng (performance / 성능) ngân sách (budget / 예산) nào cần đo?
+kiểm thử (test / 테스트) nào chứng minh bất biến (invariant / 불변식)?
 telemetry nào phát hiện regression?
-rollback/fallback có thật sự khả thi không?
+quay lui (rollback / 롤백)/fallback có thật sự khả thi không?
 ```
 
 Nếu những câu hỏi này có đáp án rõ, lựa chọn MVVM/MVI, Hilt/Koin, Room/SQLDelight hoặc Retrofit/Ktor thường trở thành quyết định kỹ thuật dễ lý giải hơn.
 <!-- end merged variant -->
+
+> **Bàn giao:** Sau **10.2 Tuyến (route / 경로) vs screen**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

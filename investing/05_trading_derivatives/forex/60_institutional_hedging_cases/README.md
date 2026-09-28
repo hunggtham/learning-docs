@@ -1,8 +1,11 @@
-# Institutional FX Hedging Case Studies
+# Institutional FX Hedging trường hợp (case / 사례) Studies
 
-Folder này chuyển Forex từ góc nhìn `trade direction` sang **balance-sheet risk management**. Mục tiêu là hiểu doanh nghiệp, asset manager hoặc treasury desk không nhất thiết giao dịch FX để kiếm alpha; họ dùng spot/forward/NDF/swap/options để thay đổi distribution của cash flow, funding cost và portfolio return.
+> **Mạch đọc:** Đọc **Institutional FX Hedging trường hợp (case / 사례) Studies** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **trường hợp (case / 사례) studies** sang **Không dùng hedge P/L riêng để đánh giá hedge**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model chung:
+
+Folder này chuyển Forex từ góc nhìn `trade direction` sang **balance-sheet rủi ro (risk / 위험) management**. Mục tiêu là hiểu doanh nghiệp, asset manager hoặc treasury desk không nhất thiết giao dịch FX để kiếm alpha; họ dùng spot/forward/NDF/swap/options để thay đổi phân phối (distribution / 분포) của cash luồng (flow / 흐름), funding chi phí (cost / 비용) và portfolio return.
+
+Mô hình tư duy (mental model / 사고 모델) chung:
 
 ```text
 Underlying business / asset exposure
@@ -19,12 +22,15 @@ Underlying business / asset exposure
 
 Một hedge tốt không được đánh giá bằng việc derivative có lãi hay lỗ riêng lẻ. Phải đánh giá **hedged item + hedge instrument** cùng nhau.
 
-## Case studies
+## Trường hợp (case / 사례) studies
 
-1. [01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md](./01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md) — Korean exporter có USD receivables nhưng báo cáo chi phí/lợi nhuận chủ yếu bằng KRW; xây layered forward hedge và xử lý forecast error.
+1. [01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md](./01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md) — Korean exporter có USD receivables nhưng báo cáo chi phí/lợi nhuận chủ yếu bằng KRW; xây layered forward hedge và xử lý forecast lỗi (error / 오류).
 2. [02_KOREAN_IMPORTER_USD_PAYABLE_HEDGE.md](./02_KOREAN_IMPORTER_USD_PAYABLE_HEDGE.md) — importer có USD payables; so sánh unhedged, forward, option và layered hedge khi timing/amount của payable chưa chắc chắn.
 3. [03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md](./03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md) — portfolio foreign assets; tách local-asset return khỏi FX return, hedge ratio, hedge carry, rebalance và benchmark mismatch.
-4. [04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md](./04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md) — company/financial institution huy động một currency nhưng cần economic funding ở currency khác; nối debt, FX swap/cross-currency swap, basis, collateral và refinancing risk.
+4. [04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md](./04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md) — company/financial institution huy động một currency nhưng cần economic funding ở currency khác; nối debt, FX swap/cross-currency swap, basis, collateral và refinancing rủi ro (risk / 위험).
+
+
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) studies**, ta sang **Không dùng hedge P/L riêng để đánh giá hedge** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Không dùng hedge P/L riêng để đánh giá hedge
 
@@ -36,7 +42,7 @@ KRW strengthens
 → forward hedge tends to gain
 ```
 
-Nếu chỉ nhìn derivative P/L, hedge có thể “lãi”; nhưng mục tiêu là giảm variance của combined cash flow.
+Nếu chỉ nhìn derivative P/L, hedge có thể “lãi”; nhưng mục tiêu là giảm variance của combined cash luồng (flow / 흐름).
 
 Ngược lại:
 
@@ -46,9 +52,12 @@ KRW weakens
 → forward hedge tends to lose
 ```
 
-Derivative loss không tự động là failure.
+Derivative mất mát (loss / 손실) không tự động là thất bại (failure / 실패).
 
-## Các loại risk phải tách
+
+> **Chuyển mạch:** Từ **Không dùng hedge P/L riêng để đánh giá hedge**, ta sang **Các loại rủi ro (risk / 위험) phải tách** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Các loại rủi ro (risk / 위험) phải tách
 
 ```text
 Transaction exposure
@@ -65,9 +74,12 @@ Funding / rollover risk
 
 Không một hedge instrument nào xóa tất cả.
 
-## Hedge policy trước hedge trade
 
-Case nào cũng phải viết policy trước:
+> **Chuyển mạch:** Từ **Các loại rủi ro (risk / 위험) phải tách**, ta sang **Hedge chính sách (policy / 정책) trước hedge trade** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Hedge chính sách (policy / 정책) trước hedge trade
+
+Trường hợp (case / 사례) nào cũng phải viết chính sách (policy / 정책) trước:
 
 ```text
 What exposure is being hedged?
@@ -81,15 +93,23 @@ What is the treatment of over-hedge / under-hedge?
 How is hedge effectiveness measured?
 ```
 
+
+> **Chuyển mạch:** Từ **Hedge chính sách (policy / 정책) trước hedge trade**, ta sang **Kết nối với các phần khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Kết nối với các phần khác
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Intervention, reserves, REER and valuation](../90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md)
+- [Economic hedge vs hedge accounting](../90_connections/02_ECONOMIC_HEDGE_VS_HEDGE_ACCOUNTING.md)
+- [FX settlement, PvP, netting and liquidity](../90_connections/03_FX_SETTLEMENT_PVP_NETTING_AND_LIQUIDITY.md)
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [FX options and hedging](../14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 - [Systematic risk/attribution project](../70_systematic_project/README.md)
 
-## Output chuẩn cho mỗi case
+
+> **Chuyển mạch:** Từ **Kết nối với các phần khác**, ta sang **đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
 
 ```text
 Exposure map
@@ -106,4 +126,6 @@ Failure modes
 Decision review
 ```
 
-Các case là learning artifacts, không phải khuyến nghị hedge ratio hoặc sản phẩm cho một doanh nghiệp cụ thể.
+Các trường hợp (case / 사례) là học tập (learning / 학습) artifacts, không phải khuyến nghị hedge ratio hoặc sản phẩm cho một doanh nghiệp cụ thể.
+
+> **Bàn giao:** Sau **đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 KOREAN EXPORTER USD RECEIVABLE HEDGE](./01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

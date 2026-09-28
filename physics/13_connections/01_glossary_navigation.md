@@ -1,5 +1,8 @@
 # Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi
 
+> **Mạch đọc:** Đọc **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thuật ngữ nền tảng** sang **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệm khi đọc tài liệu tiếng Việt, tiếng Anh hoặc tiếng Hàn. Nó không thay thế phần giải thích trong từng chương. Cột tiếng Anh giữ thuật ngữ chuẩn để tra giáo trình và bài báo; cột tiếng Hàn hỗ trợ đối chiếu tài liệu học tại Hàn Quốc.
 
 ## Thuật ngữ nền tảng
@@ -7,15 +10,15 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 | Tiếng Việt | English | 한국어 | Đọc sâu |
 |---|---|---|---|
 | Vật lý | Physics | 물리학 | `00_foundations` |
-| Mô hình | Model | 모형 / 모델 | `00_foundations/00_physical_thinking.md` |
-| Đại lượng vật lý | Physical quantity | 물리량 | `00_foundations/01_measurement_units_uncertainty.md` |
-| Độ bất định | Uncertainty | 불확도 | `00_foundations/01_measurement_units_uncertainty.md` |
-| Vectơ | Vector | 벡터 | `00_foundations/02_space_time_vectors_frames.md` |
+| Mô hình | mô hình (model / 모델) | 모형 / 모델 | `00_foundations/00_physical_thinking.md` |
+| Đại lượng vật lý | vật lý (physical / 물리적) quantity | 물리량 | `00_foundations/01_measurement_units_uncertainty.md` |
+| Độ bất định | bất định (uncertainty / 불확실성) | 불확도 | `00_foundations/01_measurement_units_uncertainty.md` |
+| Vectơ | véc-tơ (vector / 벡터) | 벡터 | `00_foundations/02_space_time_vectors_frames.md` |
 | Vô hướng | Scalar | 스칼라 | `00_foundations/02_space_time_vectors_frames.md` |
-| Hệ quy chiếu | Reference frame | 기준계 | `00_foundations/02_space_time_vectors_frames.md` |
+| Hệ quy chiếu | tham chiếu (reference / 참조) frame | 기준계 | `00_foundations/02_space_time_vectors_frames.md` |
 | Phương trình vi phân riêng phần | Partial differential equation | 편미분방정식 | `00_foundations/05_pde_boundary_green_tensors.md` |
-| Điều kiện biên | Boundary condition | 경계조건 | `00_foundations/05_pde_boundary_green_tensors.md` |
-| Hàm Green | Green's function | 그린 함수 | `00_foundations/05_pde_boundary_green_tensors.md` |
+| Điều kiện biên | ranh giới (boundary / 경계) điều kiện (condition / 조건) | 경계조건 | `00_foundations/05_pde_boundary_green_tensors.md` |
+| Hàm Green | Green's hàm (function / 함수) | 그린 함수 | `00_foundations/05_pde_boundary_green_tensors.md` |
 | Tensor | Tensor | 텐서 | `00_foundations/05_pde_boundary_green_tensors.md` |
 | Độ dời | Displacement | 변위 | `01_mechanics/00_kinematics.md` |
 | Vận tốc | Velocity | 속도 | `01_mechanics/00_kinematics.md` |
@@ -25,10 +28,10 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 | Lực | Force | 힘 | `01_mechanics/01_newton_laws_dynamics.md` |
 | Quán tính | Inertia | 관성 | `01_mechanics/01_newton_laws_dynamics.md` |
 | Ma sát | Friction | 마찰 | `01_mechanics/02_common_forces.md` |
-| Công | Work | 일 | `01_mechanics/03_work_energy_power.md` |
-| Năng lượng | Energy | 에너지 | `01_mechanics/03_work_energy_power.md` |
+| Công | công việc (work / 작업) | 일 | `01_mechanics/03_work_energy_power.md` |
+| Năng lượng | năng lượng (energy / 에너지) | 에너지 | `01_mechanics/03_work_energy_power.md` |
 | Công suất | Power | 일률 / 전력 | `01_mechanics/03_work_energy_power.md` |
-| Thế năng | Potential energy | 위치에너지 | `01_mechanics/03_work_energy_power.md` |
+| Thế năng | Potential năng lượng (energy / 에너지) | 위치에너지 | `01_mechanics/03_work_energy_power.md` |
 | Động lượng | Momentum | 운동량 | `01_mechanics/04_momentum_collisions.md` |
 | Xung lượng | Impulse | 충격량 | `01_mechanics/04_momentum_collisions.md` |
 | Tâm khối | Center of mass | 질량중심 | `01_mechanics/04_momentum_collisions.md` |
@@ -36,7 +39,7 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 | Mômen quán tính | Moment of inertia | 관성모멘트 | `01_mechanics/05_rotation_rigid_body.md` |
 | Mômen động lượng | Angular momentum | 각운동량 | `01_mechanics/05_rotation_rigid_body.md` |
 | Hấp dẫn | Gravitation | 중력 / 만유인력 | `01_mechanics/06_gravitation_orbits.md` |
-| Biến đổi chính tắc | Canonical transformation | 정준변환 | `01_mechanics/10_canonical_transformations_hamilton_jacobi.md` |
+| Biến đổi chính tắc | chuẩn gốc (canonical / 정본) transformation | 정준변환 | `01_mechanics/10_canonical_transformations_hamilton_jacobi.md` |
 | Phương trình Hamilton–Jacobi | Hamilton–Jacobi equation | 해밀턴-야코비 방정식 | `01_mechanics/10_canonical_transformations_hamilton_jacobi.md` |
 | Lực Coriolis | Coriolis force | 코리올리 힘 | `01_mechanics/11_non_inertial_frames_rotating_systems.md` |
 | Hệ quy chiếu quay | Rotating frame | 회전 기준계 | `01_mechanics/11_non_inertial_frames_rotating_systems.md` |
@@ -55,22 +58,22 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 | Nhiệt động lực học | Thermodynamics | 열역학 | `04_thermal_statistical/00_thermodynamics.md` |
 | Nhiệt độ | Temperature | 온도 | `04_thermal_statistical/00_thermodynamics.md` |
 | Nhiệt | Heat | 열 | `04_thermal_statistical/00_thermodynamics.md` |
-| Nội năng | Internal energy | 내부에너지 | `04_thermal_statistical/00_thermodynamics.md` |
+| Nội năng | nội bộ (internal / 내부) năng lượng (energy / 에너지) | 내부에너지 | `04_thermal_statistical/00_thermodynamics.md` |
 | Entropy | Entropy | 엔트로피 | `04_thermal_statistical/01_entropy_statistical_mechanics.md` |
-| Chuyển pha | Phase transition | 상전이 | `04_thermal_statistical/02_phase_transitions_heat_transfer.md` |
-| Quá trình ngẫu nhiên | Stochastic process | 확률 과정 | `04_thermal_statistical/04_stochastic_nonequilibrium.md` |
+| Chuyển pha | Phase chuyển tiếp (transition / 전이) | 상전이 | `04_thermal_statistical/02_phase_transitions_heat_transfer.md` |
+| Quá trình ngẫu nhiên | Stochastic tiến trình (process / 프로세스) | 확률 과정 | `04_thermal_statistical/04_stochastic_nonequilibrium.md` |
 | Không cân bằng | Nonequilibrium | 비평형 | `04_thermal_statistical/04_stochastic_nonequilibrium.md` |
-| Hiện tượng tới hạn | Critical phenomena | 임계 현상 | `04_thermal_statistical/05_critical_phenomena_renormalization.md` |
+| Hiện tượng tới hạn | trọng yếu (critical / 중요) phenomena | 임계 현상 | `04_thermal_statistical/05_critical_phenomena_renormalization.md` |
 | Nhóm tái chuẩn hóa | Renormalization group | 재규격화군 | `04_thermal_statistical/05_critical_phenomena_renormalization.md` |
 | Định lý thăng giáng–tiêu tán | Fluctuation–dissipation theorem | 요동-소산 정리 | `04_thermal_statistical/07_linear_response_fluctuation_dissipation.md` |
 | Điện tích | Electric charge | 전하 | `05_electromagnetism/00_electrostatics.md` |
-| Điện trường | Electric field | 전기장 | `05_electromagnetism/00_electrostatics.md` |
+| Điện trường | Electric trường dữ liệu (field / 필드) | 전기장 | `05_electromagnetism/00_electrostatics.md` |
 | Điện thế | Electric potential | 전위 | `05_electromagnetism/00_electrostatics.md` |
 | Điện áp | Voltage | 전압 | `05_electromagnetism/01_dc_circuits.md` |
-| Dòng điện | Electric current | 전류 | `05_electromagnetism/01_dc_circuits.md` |
+| Dòng điện | Electric hiện tại (current / 현재) | 전류 | `05_electromagnetism/01_dc_circuits.md` |
 | Điện trở | Resistance | 저항 | `05_electromagnetism/01_dc_circuits.md` |
 | Tụ điện | Capacitor | 축전기 / 커패시터 | `05_electromagnetism/00_electrostatics.md` |
-| Từ trường | Magnetic field | 자기장 | `05_electromagnetism/03_magnetism_induction.md` |
+| Từ trường | Magnetic trường dữ liệu (field / 필드) | 자기장 | `05_electromagnetism/03_magnetism_induction.md` |
 | Cảm ứng điện từ | Electromagnetic induction | 전자기 유도 | `05_electromagnetism/03_magnetism_induction.md` |
 | Điện từ học | Electromagnetism | 전자기학 | `05_electromagnetism` |
 | Phân cực điện | Electric polarization | 분극 | `05_electromagnetism/07_fields_in_matter_dielectrics_magnetism.md` |
@@ -92,24 +95,24 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 | Cơ học lượng tử | Quantum mechanics | 양자역학 | `08_quantum` |
 | Hàm sóng | Wavefunction | 파동함수 | `08_quantum/00_quantum_foundations.md` |
 | Chồng chập | Superposition | 중첩 | `08_quantum/00_quantum_foundations.md` |
-| Nguyên lý bất định | Uncertainty principle | 불확정성 원리 | `08_quantum/00_quantum_foundations.md` |
+| Nguyên lý bất định | bất định (uncertainty / 불확실성) principle | 불확정성 원리 | `08_quantum/00_quantum_foundations.md` |
 | Rối lượng tử | Entanglement | 양자 얽힘 | `08_quantum/03_measurement_entanglement_decoherence.md` |
 | Hạt đồng nhất | Identical particles | 동일 입자 | `08_quantum/05_identical_particles_quantum_statistics.md` |
 | Fermion | Fermion | 페르미온 | `08_quantum/05_identical_particles_quantum_statistics.md` |
 | Boson | Boson | 보손 | `08_quantum/05_identical_particles_quantum_statistics.md` |
 | Nguyên lý loại trừ Pauli | Pauli exclusion principle | 파울리 배타 원리 | `08_quantum/05_identical_particles_quantum_statistics.md` |
-| Tích phân đường | Path integral | 경로 적분 | `08_quantum/07_symmetry_operator_path_integral.md` |
+| Tích phân đường | đường dẫn (path / 경로) integral | 경로 적분 | `08_quantum/07_symmetry_operator_path_integral.md` |
 | Hạt nhân nguyên tử | Atomic nucleus | 원자핵 | `09_atomic_nuclear_particle/01_nuclear_physics.md` |
 | Phóng xạ | Radioactivity | 방사능 / 방사성 붕괴 | `09_atomic_nuclear_particle/01_nuclear_physics.md` |
 | Phân hạch | Fission | 핵분열 | `09_atomic_nuclear_particle/01_nuclear_physics.md` |
 | Nhiệt hạch | Fusion | 핵융합 | `09_atomic_nuclear_particle/01_nuclear_physics.md` |
-| Mô hình Chuẩn | Standard Model | 표준 모형 | `09_atomic_nuclear_particle/03_particle_standard_model.md` |
-| Lý thuyết trường lượng tử | Quantum field theory | 양자장론 | `09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md` |
+| Mô hình Chuẩn | tiêu chuẩn (standard / 표준) mô hình (model / 모델) | 표준 모형 | `09_atomic_nuclear_particle/03_particle_standard_model.md` |
+| Lý thuyết trường lượng tử | Quantum trường dữ liệu (field / 필드) lý thuyết (theory / 이론) | 양자장론 | `09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md` |
 | Vật lý phân tử | Molecular physics | 분자물리학 | `09_atomic_nuclear_particle/04_molecular_physics.md` |
 | Xấp xỉ Born–Oppenheimer | Born–Oppenheimer approximation | 보른-오펜하이머 근사 | `09_atomic_nuclear_particle/04_molecular_physics.md` |
 | Vật lý chất rắn | Solid-state physics | 고체물리 | `10_condensed_matter_devices` |
 | Bán dẫn | Semiconductor | 반도체 | `10_condensed_matter_devices/01_semiconductors_devices.md` |
-| Dải năng lượng | Energy band | 에너지 밴드 | `10_condensed_matter_devices/00_crystals_bands.md` |
+| Dải năng lượng | năng lượng (energy / 에너지) band | 에너지 밴드 | `10_condensed_matter_devices/00_crystals_bands.md` |
 | Vùng cấm năng lượng | Band gap | 밴드갭 / 금지대 | `10_condensed_matter_devices/00_crystals_bands.md` |
 | Lỗ trống | Hole | 정공 | `10_condensed_matter_devices/00_crystals_bands.md` |
 | Plasma | Plasma | 플라즈마 | `10_condensed_matter_devices/03_plasma_physics.md` |
@@ -118,17 +121,20 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 | Ngưng tụ Bose–Einstein | Bose–Einstein condensate | 보스-아인슈타인 응축 | `10_condensed_matter_devices/05_bec_superfluid_quantum_fluids.md` |
 | Siêu chảy | Superfluidity | 초유동 | `10_condensed_matter_devices/05_bec_superfluid_quantum_fluids.md` |
 | Pha Berry | Berry phase | 베리 위상 | `10_condensed_matter_devices/06_berry_phase_quantum_hall_topology.md` |
-| Hiệu ứng Hall lượng tử | Quantum Hall effect | 양자 홀 효과 | `10_condensed_matter_devices/06_berry_phase_quantum_hall_topology.md` |
+| Hiệu ứng Hall lượng tử | Quantum Hall tác động (effect / 효과) | 양자 홀 효과 | `10_condensed_matter_devices/06_berry_phase_quantum_hall_topology.md` |
 | Vật chất tối | Dark matter | 암흑물질 | `11_astrophysics_cosmology/01_galaxies_cosmology.md` |
-| Năng lượng tối | Dark energy | 암흑에너지 | `11_astrophysics_cosmology/01_galaxies_cosmology.md` |
+| Năng lượng tối | Dark năng lượng (energy / 에너지) | 암흑에너지 | `11_astrophysics_cosmology/01_galaxies_cosmology.md` |
 | Vũ trụ sơ khai | Early universe | 초기 우주 | `11_astrophysics_cosmology/03_early_universe_dark_components.md` |
 | Bất ổn Jeans | Jeans instability | 진스 불안정성 | `11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md` |
-| Hình thành cấu trúc | Structure formation | 구조 형성 | `11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md` |
+| Hình thành cấu trúc | cấu trúc (structure / 구조) formation | 구조 형성 | `11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md` |
 | Hiệu chuẩn | Calibration | 교정 | `12_experimental_computational/00_measurement_experiment.md` |
 | Lấy mẫu | Sampling | 샘플링 / 표본화 | `12_experimental_computational/01_signals_sampling_noise.md` |
 | Rời rạc hóa | Discretization | 이산화 | `12_experimental_computational/02_computational_physics.md` |
-| Bài toán ngược | Inverse problem | 역문제 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
+| Bài toán ngược | Inverse bài toán (problem / 문제) | 역문제 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
 | Tính nhận dạng tham số | Identifiability | 식별가능성 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
+
+
+> **Chuyển mạch:** Từ **Thuật ngữ nền tảng**, ta sang **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý
 
@@ -141,6 +147,9 @@ Hậu tố `장` có nghĩa là trường (field): `전기장` là điện trư�
 `운동량` là động lượng (momentum), `각운동량` là mômen động lượng (angular momentum), còn `충격량` là xung lượng (impulse). Đây là ba khái niệm khác nhau dù đều liên quan chuyển động.
 
 Trong vật lý nguyên tử, `에너지 준위` là mức năng lượng (energy level). Trong vật lý chất rắn thường gặp thêm `에너지 밴드` là dải năng lượng, `가전자대` là dải hóa trị, `전도대` là dải dẫn và `금지대` là vùng cấm.
+
+
+> **Chuyển mạch:** Từ **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý**, ta sang **Điều hướng theo câu hỏi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Điều hướng theo câu hỏi
 
@@ -164,12 +173,20 @@ Nếu câu hỏi là “dữ liệu đo nói gì về tham số hoặc mô hình
 
 Nếu quan tâm sự hình thành cấu trúc lớn của Vũ trụ, một chuỗi hợp lý là [Hấp dẫn và quỹ đạo](../01_mechanics/06_gravitation_orbits.md) → [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md) → [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md) → [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md) → [Bất ổn hấp dẫn và hình thành cấu trúc](../11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md).
 
-## Mô hình tư duy (Mental Model)
+
+> **Chuyển mạch:** Từ **Điều hướng theo câu hỏi**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Bảng thuật ngữ chỉ là công cụ nhận diện. Mục tiêu thật sự là khi gặp `momentum`, `운동량` hay “động lượng”, người đọc nhận ra đó là cùng một khái niệm vật lý và nối nó vào cùng mạng kiến thức, thay vì học ba từ như ba kiến thức riêng biệt.
 
 Các thuật ngữ nâng cao cũng nên được đọc theo cùng cách: `Green's function`, `그린 함수` và “hàm Green” không phải ba kiến thức khác nhau; chúng là ba nhãn ngôn ngữ cho cùng một công cụ toán–lý. Việc giữ English/Korean bên cạnh chỉ nhằm tăng khả năng đối chiếu tài liệu, không thay thế phần giải thích tiếng Việt.
 
-## Liên kết kiến thức (Knowledge Connection)
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [README toàn bộ thư viện](../README.md), [Các cấu trúc lặp lại trong Vật lý](00_knowledge_connections.md), [Audit coverage và chất lượng](02_coverage_audit.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge connections](./00_knowledge_connections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

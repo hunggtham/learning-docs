@@ -1,28 +1,31 @@
-# Tailwind CSS — Beginner → Senior, bản giải thích đầy đủ
-## Modern Tailwind CSS v4.3 — học từ nền tảng đến production kiến trúc (architecture)
+# Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ
+
+> **Mạch đọc:** Đọc **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **hiện đại (modern / 현대적) Tailwind CSS v4.3 — học từ nền tảng đến kiến trúc vận hành (production architecture / 운영 아키텍처)** sang **Quy ước thuật ngữ Việt–Anh**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+## Hiện đại (modern / 현대적) Tailwind CSS v4.3 — học từ nền tảng đến kiến trúc vận hành (production architecture / 운영 아키텍처)
 
 > Đây là bản viết lại hoàn toàn của tài liệu Tailwind trước. Tài liệu được viết cho người muốn **học để hiểu**, không phải người đã biết Tailwind và chỉ cần cheat sheet.
 >
-> đường cơ sở (baseline) của tài liệu là **Tailwind CSS v4.3** — vẫn là release Tailwind CSS mới nhất được Tailwind công bố tính đến audit 2026-09-21. Khi một nội dung liên quan trực tiếp đến CSS, tài liệu sẽ giải thích CSS cần thiết ngay tại chỗ thay vì yêu cầu bạn quay về tài liệu CSS khác.
+> đường cơ sở (baseline) của tài liệu là **Tailwind CSS v4.3** — vẫn là bản phát hành (release / 릴리스) Tailwind CSS mới nhất được Tailwind công bố tính đến kiểm tra (audit / 감사) 2026-09-21. Khi một nội dung liên quan trực tiếp đến CSS, tài liệu sẽ giải thích CSS cần thiết ngay tại chỗ thay vì yêu cầu bạn quay về tài liệu CSS khác.
 >
 > Cách đọc xuyên suốt tài liệu:
 >
-> ```text
-> Tailwind syntax
-> → Tailwind hiểu class đó như thế nào
+> ```văn bản (text / 텍스트)
+> Tailwind cú pháp (syntax / 문법)
+> → Tailwind hiểu lớp (class / 클래스) đó như thế nào
 > → CSS được sinh ra có ý nghĩa gì
-> → browser xử lý CSS đó ra sao
+> → trình duyệt (browser / 브라우저) xử lý CSS đó ra sao
 > → ví dụ thực tế
-> → pattern / senior note
+> → mẫu (pattern / 패턴) / cấp cao (senior / 시니어) note
 > ```
 >
-> Mục tiêu sau khi học xong file này là bạn có thể đọc một component Tailwind production, tự thiết kế layout, responsive UI, form, trạng thái (state), dark mode, truy vấn vùng chứa (container query), theme, custom tiện ích (utility) và biết khi nào nên dùng Tailwind, khi nào nên quay về CSS thuần.
+> Mục tiêu sau khi học xong tệp (file / 파일) này là bạn có thể đọc một thành phần (component / 컴포넌트) Tailwind môi trường vận hành (production / 운영 환경), tự thiết kế bố cục (layout / 레이아웃), responsive UI, form, trạng thái (state / 상태), dark chế độ (mode / 모드), truy vấn vùng chứa (container query), theme, custom tiện ích (utility) và biết khi nào nên dùng Tailwind, khi nào nên quay về CSS thuần.
 
 ---
 
 ## Quy ước thuật ngữ Việt–Anh
 
-Trong tài liệu này, thuật ngữ Tailwind được diễn đạt bằng tiếng Việt trước rồi giữ từ gốc bên cạnh khi cần đối chiếu. Ví dụ: **mô hình ưu tiên tiện ích (utility-first)**, **tiện ích (utility)**, **biến thể trạng thái (state variant)**, **giá trị tùy ý (arbitrary value)**, **điểm ngắt (breakpoint)**, **truy vấn vùng chứa (container query)**, **phát hiện nguồn (source detection)**, **biên dịch tức thời (JIT, just-in-time)** và **cấu hình ưu tiên CSS (CSS-first configuration)**. Tên class, directive và utility literal trong code luôn được giữ nguyên.
+Trong tài liệu này, thuật ngữ Tailwind được diễn đạt bằng tiếng Việt trước rồi giữ từ gốc bên cạnh khi cần đối chiếu. Ví dụ: **mô hình ưu tiên tiện ích (utility-first)**, **tiện ích (utility)**, **biến thể trạng thái (state variant)**, **giá trị tùy ý (arbitrary value)**, **điểm ngắt (breakpoint)**, **truy vấn vùng chứa (container query)**, **phát hiện nguồn (source detection)**, **biên dịch tức thời (JIT, just-in-time)** và **cấu hình ưu tiên CSS (CSS-first configuration)**. Tên lớp (class / 클래스), directive và utility literal trong mã (code / 코드) luôn được giữ nguyên.
 
 
 # PHẦN I — HIỂU TAILWIND TỪ GỐC
@@ -31,15 +34,15 @@ Trong tài liệu này, thuật ngữ Tailwind được diễn đạt bằng ti�
 
 ## 1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó
 
-Tài liệu luôn liên hệ Tailwind với CSS nhưng không giả định bạn còn nhớ định nghĩa từ CSS library. Với mỗi tiện ích (utility), hãy hỏi bốn câu: tiện ích (utility) generate thuộc tính (property)/mechanism CSS nào; thuộc tính (property) đó tác động lên chính element hay quan hệ parent/children; layout context nào phải tồn tại để thuộc tính (property) có ý nghĩa; và biến thể (variant) phía trước class biến bộ chọn (selector) hay thêm media/container condition nào.
+Tài liệu luôn liên hệ Tailwind với CSS nhưng không giả định bạn còn nhớ định nghĩa từ CSS thư viện (library / 라이브러리). Với mỗi tiện ích (utility), hãy hỏi bốn câu: tiện ích (utility) generate thuộc tính (property / 속성)/cơ chế (mechanism / 메커니즘) CSS nào; thuộc tính (property / 속성) đó tác động lên chính element hay quan hệ parent/children; bố cục (layout / 레이아웃) ngữ cảnh (context / 맥락) nào phải tồn tại để thuộc tính (property / 속성) có ý nghĩa; và biến thể (variant) phía trước lớp (class / 클래스) biến bộ chọn (selector) hay thêm media/bộ chứa (container / 컨테이너) điều kiện (condition / 조건) nào.
 
-Ví dụ `items-center` không có nghĩa chung chung là “căn giữa”. Nó generate `align-items: center` và chỉ có behavior mong đợi khi element là Flex/Grid container. Trong `flex-row`, trục chéo (cross axis) thường theo chiều block/dọc; trong `flex-col`, trục đổi. Vì vậy phải hiểu container algorithm + axis + generated CSS, không học `items-center = center`.
+Ví dụ `items-center` không có nghĩa chung chung là “căn giữa”. Nó generate `align-items: center` và chỉ có hành vi (behavior / 동작) mong đợi khi element là Flex/Grid bộ chứa (container / 컨테이너). Trong `flex-row`, trục chéo (cross axis) thường theo chiều khối (block / 블록)/dọc; trong `flex-col`, trục đổi. Vì vậy phải hiểu bộ chứa (container / 컨테이너) thuật toán (algorithm / 알고리즘) + axis + generated CSS, không học `items-center = center`.
 
-`absolute` tương tự: tiện ích (utility) generate `position: absolute`, đưa box ra khỏi luồng bố cục thông thường (normal flow) và position theo khối chứa tham chiếu (containing block). `top-0` chỉ đặt inset sau khi khối chứa tham chiếu (containing block) đã được xác định. Nếu khối chứa tham chiếu (containing block) sai, thêm nhiều inset class không sửa root cause.
+`absolute` tương tự: tiện ích (utility) generate `position: absolute`, đưa box ra khỏi luồng bố cục thông thường (normal flow / 일반 흐름) và position theo khối chứa tham chiếu (containing block / 컨테이닝 블록). `top-0` chỉ đặt inset sau khi khối chứa tham chiếu (containing block / 컨테이닝 블록) đã được xác định. Nếu khối chứa tham chiếu (containing block / 컨테이닝 블록) sai, thêm nhiều inset lớp (class / 클래스) không sửa nguyên nhân gốc (root cause / 근본 원인).
 
-Responsive tiện ích (utility) cũng chỉ tạo conditional CSS. `md:grid-cols-2` đặt Grid tiện ích (utility) trong vùng nhìn (viewport) media condition; `@md:flex-row` dùng truy vấn vùng chứa (container query) condition. Browser vẫn chạy Grid/Flexbox bình thường. `hover:*` biến interaction bộ chọn (selector); `group-hover:*` tạo ancestor relationship; `peer-invalid:*` dựa sibling relationship.
+Responsive tiện ích (utility) cũng chỉ tạo conditional CSS. `md:grid-cols-2` đặt Grid tiện ích (utility) trong vùng nhìn (viewport) media điều kiện (condition / 조건); `@md:flex-row` dùng truy vấn vùng chứa (container query) điều kiện (condition / 조건). trình duyệt (browser / 브라우저) vẫn chạy Grid/Flexbox bình thường. `hover:*` biến tương tác (interaction / 상호작용) bộ chọn (selector); `group-hover:*` tạo ancestor relationship; `peer-invalid:*` dựa sibling relationship.
 
-Trace gỡ lỗi (debug) canonical là:
+Dấu vết (trace / 추적) gỡ lỗi (debug / 디버그) chuẩn gốc (canonical / 정본) là:
 
 ```text
 complete class candidate có tồn tại trong source?
@@ -50,10 +53,10 @@ complete class candidate có tồn tại trong source?
 → sizing / overflow / containing block / stacking có đúng không?
 ```
 
-Hai bước đầu thường là Tailwind/build problem. Các bước sau là browser behavior, nhưng mỗi section trong file phải giải thích behavior đó tại chỗ. Đây là cách học ưu tiên tiện ích (utility-first) mà không biến class names thành magic.
+Hai bước đầu thường là Tailwind/bản dựng (build / 빌드) bài toán (problem / 문제). Các bước sau là trình duyệt (browser / 브라우저) hành vi (behavior / 동작), nhưng mỗi section trong tệp (file / 파일) phải giải thích hành vi (behavior / 동작) đó tại chỗ. Đây là cách học ưu tiên tiện ích (utility-first) mà không biến lớp (class / 클래스) names thành magic.
 
 
-Tailwind CSS là một framework CSS theo hướng **ưu tiên tiện ích (utility-first)**. “tiện ích (utility)” ở đây có nghĩa là một class thường làm một nhiệm vụ tương đối nhỏ và rõ ràng. Ví dụ, `flex` bật Flexbox, `items-center` căn các phần tử Flex (flex item) theo trục chéo (cross axis), `p-4` tạo padding, còn `rounded-xl` tạo bo góc. Thay vì đặt một class có tên theo component rồi viết toàn bộ CSS trong một file riêng, Tailwind khuyến khích bạn ghép các tiện ích (utility) trực tiếp tại nơi bạn viết markup.
+Tailwind CSS là một khung phần mềm (framework / 프레임워크) CSS theo hướng **ưu tiên tiện ích (utility-first)**. “tiện ích (utility)” ở đây có nghĩa là một lớp (class / 클래스) thường làm một nhiệm vụ tương đối nhỏ và rõ ràng. Ví dụ, `flex` bật Flexbox, `items-center` căn các phần tử Flex (flex item) theo trục chéo (cross axis), `p-4` tạo padding, còn `rounded-xl` tạo bo góc. Thay vì đặt một lớp (class / 클래스) có tên theo thành phần (component / 컴포넌트) rồi viết toàn bộ CSS trong một tệp (file / 파일) riêng, Tailwind khuyến khích bạn ghép các tiện ích (utility) trực tiếp tại nơi bạn viết markup.
 
 Ví dụ với CSS truyền thống, bạn có thể viết:
 
@@ -95,28 +98,28 @@ Trong Tailwind, cùng ý tưởng đó có thể được viết:
 </div>
 ```
 
-Điểm cần hiểu là Tailwind không tạo ra một cơ chế layout mới. `flex` vẫn trở thành CSS `display: flex`; `gap-4` vẫn trở thành CSS `gap`; browser vẫn chạy đúng các thuật toán Flexbox, Grid, cơ chế phân tầng (cascade), sizing và painting của CSS. Tailwind chỉ thay đổi **cách bạn author CSS**.
+Điểm cần hiểu là Tailwind không tạo ra một cơ chế bố cục (layout / 레이아웃) mới. `flex` vẫn trở thành CSS `display: flex`; `gap-4` vẫn trở thành CSS `gap`; trình duyệt (browser / 브라우저) vẫn chạy đúng các thuật toán Flexbox, Grid, cơ chế phân tầng (cascade), sizing và painting của CSS. Tailwind chỉ thay đổi **cách bạn author CSS**.
 
-Một mô hình tư duy (mental model) rất quan trọng là:
+Một mô hình tư duy (mental model / 사고 모델) rất quan trọng là:
 
 ```text
 Tailwind = ngôn ngữ đặt tên utility ở tầng authoring
 CSS      = ngôn ngữ thực thi ở browser
 ```
 
-Nếu một layout không hoạt động mặc dù class Tailwind đã được generate, nguyên nhân thường không còn là Tailwind nữa mà nằm ở CSS thật bên dưới. Senior Tailwind vì vậy phải biết khi nào gỡ lỗi (debug) framework và khi nào gỡ lỗi (debug) browser.
+Nếu một bố cục (layout / 레이아웃) không hoạt động mặc dù lớp (class / 클래스) Tailwind đã được generate, nguyên nhân thường không còn là Tailwind nữa mà nằm ở CSS thật bên dưới. cấp cao (senior / 시니어) Tailwind vì vậy phải biết khi nào gỡ lỗi (debug / 디버그) khung phần mềm (framework / 프레임워크) và khi nào gỡ lỗi (debug / 디버그) trình duyệt (browser / 브라우저).
 
 ---
 
 ## 2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?
 
-Nhìn bề ngoài, một element có nhiều class Tailwind có thể làm bạn liên tưởng đến inline style:
+Nhìn bề ngoài, một element có nhiều lớp (class / 클래스) Tailwind có thể làm bạn liên tưởng đến inline style:
 
 ```html
 <button class="rounded-lg bg-blue-600 px-4 py-2 text-white">
 ```
 
-Nhưng tiện ích (utility) class không giống:
+Nhưng tiện ích (utility) lớp (class / 클래스) không giống:
 
 ```html
 <button
@@ -149,7 +152,7 @@ Tailwind tiện ích (utility) thì có thể kết hợp biến thể (variant)
 >
 ```
 
-Tailwind sẽ generate CSS tương đương với các lớp giả (pseudo-class) và truy vấn môi trường (media query) cần thiết. Vì vậy ưu tiên tiện ích (utility-first) vẫn là stylesheet-based CSS, chỉ khác cách bạn gọi các rule.
+Tailwind sẽ generate CSS tương đương với các lớp giả (pseudo-class) và truy vấn môi trường (media query) cần thiết. Vì vậy ưu tiên tiện ích (utility-first) vẫn là stylesheet-based CSS, chỉ khác cách bạn gọi các quy tắc (rule / 규칙).
 
 ---
 
@@ -170,13 +173,13 @@ export default {
 };
 ```
 
-Tailwind v4 chuyển mạnh sang **cấu hình ưu tiên CSS (CSS-first configuration)**. Một project mới thường bắt đầu bằng:
+Tailwind v4 chuyển mạnh sang **cấu hình ưu tiên CSS (CSS-first configuration)**. Một dự án (project / 프로젝트) mới thường bắt đầu bằng:
 
 ```css
 @import "tailwindcss";
 ```
 
-Sau đó token thiết kế (design token) có thể được khai báo trực tiếp bằng `@theme`:
+Sau đó đơn vị từ (token / 토큰) thiết kế (design token) có thể được khai báo trực tiếp bằng `@theme`:
 
 ```css
 @theme {
@@ -184,7 +187,7 @@ Sau đó token thiết kế (design token) có thể được khai báo trực t
 }
 ```
 
-Khi token `--color-brand` thuộc không gian tên (namespace) `--color-*`, Tailwind hiểu đây là color token và từ đó có thể tạo các tiện ích (utility) như:
+Khi đơn vị từ (token / 토큰) `--color-brand` thuộc không gian tên (namespace / 네임스페이스) `--color-*`, Tailwind hiểu đây là color đơn vị từ (token / 토큰) và từ đó có thể tạo các tiện ích (utility) như:
 
 ```text
 bg-brand
@@ -194,7 +197,7 @@ fill-brand
 stroke-brand
 ```
 
-V4 cũng có automatic phát hiện nguồn (source detection), nghĩa là phần lớn project không còn cần liệt kê `content` glob như v3. Khi cần source đặc biệt, bạn dùng `@source`.
+V4 cũng có automatic phát hiện nguồn (source detection), nghĩa là phần lớn dự án (project / 프로젝트) không còn cần liệt kê `content` glob như v3. Khi cần nguồn (source / 소스) đặc biệt, bạn dùng `@source`.
 
 Custom tiện ích (utility) và custom biến thể (variant) cũng chuyển sang ưu tiên CSS (CSS-first):
 
@@ -207,11 +210,11 @@ Custom tiện ích (utility) và custom biến thể (variant) cũng chuyển sa
   (&:where([data-theme="midnight"] *));
 ```
 
-Bạn vẫn có thể gặp `@config` và `@plugin` để tương thích với hệ sinh thái hoặc migrate project v3, nhưng tư duy nên học cho code mới là ưu tiên CSS (CSS-first).
+Bạn vẫn có thể gặp `@config` và `@plugin` để tương thích với hệ sinh thái hoặc migrate dự án (project / 프로젝트) v3, nhưng tư duy nên học cho mã (code / 코드) mới là ưu tiên CSS (CSS-first).
 
 ---
 
-## 4. Cài Tailwind và hiểu quy trình build (build pipeline)
+## 4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)
 
 Với Vite, setup cơ bản hiện đại thường là:
 
@@ -230,7 +233,7 @@ export default defineConfig({
 });
 ```
 
-Trong stylesheet chính:
+Trong biểu định kiểu (stylesheet / 스타일시트) chính:
 
 ```css
 @import "tailwindcss";
@@ -251,9 +254,9 @@ npx @tailwindcss/cli \
   --watch
 ```
 
-Điểm cần hiểu là Tailwind không chạy trong browser để đọc class rồi style element. Tailwind chạy ở **build time**. Nó scan source code, nhận ra các class có khả năng là Tailwind tiện ích (utility), generate CSS cần thiết và browser chỉ nhận stylesheet cuối.
+Điểm cần hiểu là Tailwind không chạy trong trình duyệt (browser / 브라우저) để đọc lớp (class / 클래스) rồi style element. Tailwind chạy ở **bản dựng (build / 빌드) thời gian (time / 시간)**. Nó scan mã nguồn (source code / 소스 코드), nhận ra các lớp (class / 클래스) có khả năng là Tailwind tiện ích (utility), generate CSS cần thiết và trình duyệt (browser / 브라우저) chỉ nhận biểu định kiểu (stylesheet / 스타일시트) cuối.
 
-Pipeline có thể hình dung:
+Chuỗi xử lý (pipeline / 파이프라인) có thể hình dung:
 
 ```text
 HTML / JSX / Vue / Svelte
@@ -271,7 +274,7 @@ generated CSS
 browser
 ```
 
-Vì vậy nếu bạn viết một class mà Tailwind không nhận ra ở build time, CSS tương ứng sẽ không tồn tại dù string đó xuất hiện thời gian chạy (runtime).
+Vì vậy nếu bạn viết một lớp (class / 클래스) mà Tailwind không nhận ra ở bản dựng (build / 빌드) thời gian (time / 시간), CSS tương ứng sẽ không tồn tại dù string đó xuất hiện thời gian chạy (runtime / 런타임).
 
 ---
 
@@ -283,7 +286,7 @@ Một dòng:
 @import "tailwindcss";
 ```
 
-không đơn giản là import một file CSS tĩnh khổng lồ. Tailwind v4 dùng các native CSS lớp phân tầng (cascade layer) quan trọng như:
+không đơn giản là import một tệp (file / 파일) CSS tĩnh khổng lồ. Tailwind v4 dùng các bản địa (native / 네이티브) CSS lớp phân tầng (cascade layer) quan trọng như:
 
 ```text
 theme
@@ -292,17 +295,17 @@ components
 utilities
 ```
 
-`theme` chứa token thiết kế (design tokens). `base` chứa Preflight (lớp reset nền của Tailwind) và base rules. `components` dành cho component-level custom styles. `utilities` chứa tiện ích (utility) rules.
+`theme` chứa đơn vị từ (token / 토큰) thiết kế (design tokens). `base` chứa Preflight (lớp reset nền của Tailwind) và cơ sở (base / 기반) rules. `components` dành cho component-level custom styles. `utilities` chứa tiện ích (utility) rules.
 
-CSS lớp phân tầng (cascade layer) giải quyết thứ tự ưu tiên giữa các nhóm rule. Trong cùng author origin với normal các khai báo (declarations), layer xuất hiện sau thường có priority cao hơn layer trước. Vì các tiện ích (utilities) nằm sau components, một tiện ích (utility) như `p-6` có thể override padding được đặt trong component layer mà không cần tăng độ đặc hiệu (specificity).
+CSS lớp phân tầng (cascade layer) giải quyết thứ tự ưu tiên giữa các nhóm quy tắc (rule / 규칙). Trong cùng author origin với normal các khai báo (declarations), tầng (layer / 계층) xuất hiện sau thường có priority cao hơn tầng (layer / 계층) trước. Vì các tiện ích (utilities) nằm sau components, một tiện ích (utility) như `p-6` có thể override padding được đặt trong thành phần (component / 컴포넌트) tầng (layer / 계층) mà không cần tăng độ đặc hiệu (specificity).
 
-Điều này giải thích một nguyên tắc senior: Tailwind cố gắng thắng bằng **kiến trúc (architecture) của cơ chế phân tầng (cascade)** thay vì tạo bộ chọn (selector) độ đặc hiệu (specificity) rất cao.
+Điều này giải thích một nguyên tắc cấp cao (senior / 시니어): Tailwind cố gắng thắng bằng **kiến trúc (architecture / 아키텍처) của cơ chế phân tầng (cascade)** thay vì tạo bộ chọn (selector) độ đặc hiệu (specificity) rất cao.
 
 ---
 
 ## 6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?
 
-Tailwind import mặc định bao gồm một base reset gọi là **Preflight (lớp reset nền của Tailwind)**. Browser vốn có user-agent stylesheet, nghĩa là `<h1>` tự có font-size và margin, `<ul>` tự có bullet, `<body>` có margin mặc định, button/input có một số style native.
+Tailwind import mặc định bao gồm một cơ sở (base / 기반) reset gọi là **Preflight (lớp reset nền của Tailwind)**. trình duyệt (browser / 브라우저) vốn có user-agent biểu định kiểu (stylesheet / 스타일시트), nghĩa là `<h1>` tự có font-size và margin, `<ul>` tự có bullet, `<body>` có margin mặc định, button/đầu vào (input / 입력) có một số style bản địa (native / 네이티브).
 
 Preflight (lớp reset nền của Tailwind) normalize nhiều thứ để UI bắt đầu từ nền tảng dễ kiểm soát hơn. Vì vậy nếu bạn viết:
 
@@ -310,7 +313,7 @@ Preflight (lớp reset nền của Tailwind) normalize nhiều thứ để UI b�
 <h1>Hello</h1>
 ```
 
-và thấy nó không to, đậm, có margin giống HTML thuần, đó là behavior có chủ ý. Tailwind muốn bạn nói rõ design:
+và thấy nó không to, đậm, có margin giống HTML thuần, đó là hành vi (behavior / 동작) có chủ ý. Tailwind muốn bạn nói rõ thiết kế (design / 설계):
 
 ```html
 <h1 class="text-3xl font-bold tracking-tight">
@@ -318,11 +321,11 @@ và thấy nó không to, đậm, có margin giống HTML thuần, đó là beha
 </h1>
 ```
 
-Preflight (lớp reset nền của Tailwind) rất tiện trong app mới, nhưng có thể gây xung đột khi nhúng Tailwind vào một hệ thống cũ đã có reset hoặc một widget chạy bên trong host page. Trong trường hợp đó, senior cần cân nhắc import các phần Tailwind một cách có kiểm soát thay vì mặc định dùng full Preflight (lớp reset nền của Tailwind).
+Preflight (lớp reset nền của Tailwind) rất tiện trong app mới, nhưng có thể gây xung đột khi nhúng Tailwind vào một hệ thống cũ đã có reset hoặc một widget chạy bên trong host page. Trong trường hợp đó, cấp cao (senior / 시니어) cần cân nhắc import các phần Tailwind một cách có kiểm soát thay vì mặc định dùng full Preflight (lớp reset nền của Tailwind).
 
 ---
 
-## 7. Cấu trúc một Tailwind class
+## 7. Cấu trúc một Tailwind lớp (class / 클래스)
 
 Hãy phân tích:
 
@@ -330,7 +333,7 @@ Hãy phân tích:
 md:hover:bg-blue-600/80
 ```
 
-Phần `bg-blue-600` là tiện ích (utility) chính. `bg-` nói rằng tiện ích (utility) ảnh hưởng background; `blue-600` là theme giá trị (value). `/80` là modifier opacity/alpha trong family này. `hover:` thêm điều kiện hover. `md:` thêm điều kiện responsive điểm ngắt (breakpoint).
+Phần `bg-blue-600` là tiện ích (utility) chính. `bg-` nói rằng tiện ích (utility) ảnh hưởng background; `blue-600` là theme giá trị (value / 값). `/80` là modifier opacity/alpha trong family này. `hover:` thêm điều kiện hover. `md:` thêm điều kiện responsive điểm ngắt (breakpoint).
 
 Bạn nên đọc từ ngoài vào trong theo ý nghĩa:
 
@@ -340,7 +343,7 @@ và element đang hover
 thì background dùng blue-600 với alpha 80%
 ```
 
-Một class khác:
+Một lớp (class / 클래스) khác:
 
 ```text
 w-[37rem]
@@ -348,21 +351,21 @@ w-[37rem]
 
 có tiện ích (utility) family `w-` và giá trị tùy ý (arbitrary value) `[37rem]`.
 
-Một class:
+Một lớp (class / 클래스):
 
 ```text
 text-(color:--label)
 ```
 
-dùng CSS biến (variable) `--label` và type hint `color` để nói rõ rằng `text-*` ở đây là text color chứ không phải font-size.
+dùng CSS biến (variable) `--label` và kiểu (type / 타입) hint `color` để nói rõ rằng `text-*` ở đây là văn bản (text / 텍스트) color chứ không phải font-size.
 
-Tailwind class vì vậy có grammar tương đối nhất quán. Khi hiểu grammar, bạn không cần thuộc mọi class.
+Tailwind lớp (class / 클래스) vì vậy có grammar tương đối nhất quán. Khi hiểu grammar, bạn không cần thuộc mọi lớp (class / 클래스).
 
 ---
 
-## 8. Spacing scale và vì sao `p-4` không phải “4px”
+## 8. Spacing quy mô (scale / 규모) và vì sao `p-4` không phải “4px”
 
-Một trong những hiểu nhầm đầu tiên là nghĩ `p-4` bằng `padding: 4px`. Trong Tailwind v4, nhiều spacing các tiện ích (utilities) được derive từ base spacing theme. Mặc định, `--spacing` thường có basis là `0.25rem`.
+Một trong những hiểu nhầm đầu tiên là nghĩ `p-4` bằng `padding: 4px`. Trong Tailwind v4, nhiều spacing các tiện ích (utilities) được derive từ cơ sở (base / 기반) spacing theme. Mặc định, `--spacing` thường có basis là `0.25rem`.
 
 Do đó:
 
@@ -374,22 +377,22 @@ p-6 ≈ 1.5rem
 p-8 ≈ 2rem
 ```
 
-Nếu root font-size mặc định là 16px thì `1rem` thường tương ứng 16 CSS pixels, nhưng hãy nhớ `rem` là font-relative unit, không phải hard-coded px.
+Nếu gốc (root / 루트) font-size mặc định là 16px thì `1rem` thường tương ứng 16 CSS pixels, nhưng hãy nhớ `rem` là font-relative đơn vị (unit / 단위), không phải hard-coded px.
 
-Tailwind v4 linh hoạt hơn v3 trong nhiều numeric tiện ích (utility) families. Những giá trị (value) như:
+Tailwind v4 linh hoạt hơn v3 trong nhiều numeric tiện ích (utility) families. Những giá trị (value / 값) như:
 
 ```text
 mt-17
 w-29
 ```
 
-có thể được derive từ spacing system nếu tiện ích (utility) family đó hỗ trợ. Điều này rất tiện, nhưng senior không nên biến sự linh hoạt của trình biên dịch (compiler) thành một hệ thống thiết kế (design system) hỗn loạn. Framework cho phép `p-13` không có nghĩa UI nên có spacing 13 ở khắp nơi.
+có thể được derive từ spacing hệ thống (system / 시스템) nếu tiện ích (utility) family đó hỗ trợ. Điều này rất tiện, nhưng cấp cao (senior / 시니어) không nên biến sự linh hoạt của trình biên dịch (compiler / 컴파일러) thành một hệ thống thiết kế (design system) hỗn loạn. khung phần mềm (framework / 프레임워크) cho phép `p-13` không có nghĩa UI nên có spacing 13 ở khắp nơi.
 
 ---
 
 ## 9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)
 
-Khi tiện ích (utility) token không có đúng giá trị (value) bạn cần, Tailwind cho phép giá trị tùy ý (arbitrary value):
+Khi tiện ích (utility) đơn vị từ (token / 토큰) không có đúng giá trị (value / 값) bạn cần, Tailwind cho phép giá trị tùy ý (arbitrary value):
 
 ```html
 <div class="top-[117px]">
@@ -409,7 +412,7 @@ Bạn vẫn dùng biến thể (variant) bình thường:
 
 giá trị tùy ý (arbitrary value) rất phù hợp cho những exception như vị trí một decorative illustration, một grid template phức tạp hoặc kích thước được quy định chính xác bởi asset.
 
-Nhưng nếu toàn project có:
+Nhưng nếu toàn dự án (project / 프로젝트) có:
 
 ```text
 rounded-[11px]
@@ -418,7 +421,7 @@ p-[13px]
 gap-[18px]
 ```
 
-lặp đi lặp lại, bạn đang mất lợi ích của token thiết kế (design token). Khi một giá trị tùy ý (arbitrary value) bắt đầu trở thành vocabulary lặp lại, hãy promote nó thành theme token.
+lặp đi lặp lại, bạn đang mất lợi ích của đơn vị từ (token / 토큰) thiết kế (design token). Khi một giá trị tùy ý (arbitrary value) bắt đầu trở thành vocabulary lặp lại, hãy promote nó thành theme đơn vị từ (token / 토큰).
 
 Ví dụ:
 
@@ -434,7 +437,7 @@ Sau đó:
 <div class="rounded-card">
 ```
 
-Đây là pattern:
+Đây là mẫu (pattern / 패턴):
 
 ```text
 one-off exception
@@ -446,7 +449,7 @@ one-off exception
 
 ## 10. các thuộc tính tùy ý (arbitrary properties)
 
-Không phải mọi CSS thuộc tính (property) đều cần một named Tailwind tiện ích (utility). Bạn có thể viết thuộc tính (property) trực tiếp:
+Không phải mọi CSS thuộc tính (property / 속성) đều cần một named Tailwind tiện ích (utility). Bạn có thể viết thuộc tính (property / 속성) trực tiếp:
 
 ```html
 <div class="[mask-type:luminance]">
@@ -458,7 +461,7 @@ Tailwind generate:
 mask-type: luminance;
 ```
 
-Có thể kết hợp trạng thái (state):
+Có thể kết hợp trạng thái (state / 상태):
 
 ```html
 <div class="hover:[mask-type:alpha]">
@@ -470,15 +473,15 @@ Hoặc đặt CSS biến (variable):
 <div class="[--header-offset:56px] lg:[--header-offset:72px]">
 ```
 
-thuộc tính tùy ý (arbitrary property) là cách rất mạnh để dùng ngay CSS platform mà không phải viết custom plugin cho một case nhỏ.
+thuộc tính tùy ý (arbitrary property) là cách rất mạnh để dùng ngay CSS nền tảng (platform / 플랫폼) mà không phải viết custom plugin cho một trường hợp (case / 사례) nhỏ.
 
-Senior cần tránh một cực đoan khác: đừng biến class attribute thành một stylesheet hoàn chỉnh bằng hàng chục các thuộc tính tùy ý (arbitrary properties). Nếu một rule phức tạp rõ ràng hơn khi viết CSS, hãy viết CSS.
+Cấp cao (senior / 시니어) cần tránh một cực đoan khác: đừng biến lớp (class / 클래스) attribute thành một biểu định kiểu (stylesheet / 스타일시트) hoàn chỉnh bằng hàng chục các thuộc tính tùy ý (arbitrary properties). Nếu một quy tắc (rule / 규칙) phức tạp rõ ràng hơn khi viết CSS, hãy viết CSS.
 
 ---
 
 ## 11. các biến thể tùy ý (arbitrary variants)
 
-biến thể tùy ý (arbitrary variant) cho phép bạn viết bộ chọn (selector) condition trực tiếp.
+biến thể tùy ý (arbitrary variant) cho phép bạn viết bộ chọn (selector) điều kiện (condition / 조건) trực tiếp.
 
 ```html
 <div class="[&>p]:mt-4">
@@ -508,13 +511,13 @@ Tailwind thay `_` thành whitespace khi phù hợp, nên bộ chọn (selector) 
 }
 ```
 
-các biến thể tùy ý (arbitrary variants) tuyệt vời cho integration ngắn hoặc markup bạn không kiểm soát. Nhưng nếu bộ chọn (selector) lặp đi lặp lại, hãy cân nhắc `@custom-variant`, component abstraction hoặc stylesheet integration riêng.
+các biến thể tùy ý (arbitrary variants) tuyệt vời cho tích hợp (integration / 통합) ngắn hoặc markup bạn không kiểm soát. Nhưng nếu bộ chọn (selector) lặp đi lặp lại, hãy cân nhắc `@custom-variant`, thành phần (component / 컴포넌트) lớp trừu tượng (abstraction / 추상화) hoặc biểu định kiểu (stylesheet / 스타일시트) tích hợp (integration / 통합) riêng.
 
 ---
 
-## 12. CSS biến (variable) shorthand và thời gian chạy (runtime) giá trị (value)
+## 12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)
 
-Một pattern cực quan trọng là kết hợp Tailwind static tiện ích (utility) với CSS biến (variable) dynamic giá trị (value).
+Một mẫu (pattern / 패턴) cực quan trọng là kết hợp Tailwind static tiện ích (utility) với CSS biến (variable) động (dynamic / 동적) giá trị (value / 값).
 
 Ví dụ:
 
@@ -537,23 +540,23 @@ React có thể set biến (variable):
 />
 ```
 
-Điểm mạnh là class `w-(--panel-width)` tồn tại hoàn chỉnh ở source nên Tailwind generate được CSS, trong khi giá trị `width` có thể thay đổi thời gian chạy (runtime).
+Điểm mạnh là lớp (class / 클래스) `w-(--panel-width)` tồn tại hoàn chỉnh ở nguồn (source / 소스) nên Tailwind generate được CSS, trong khi giá trị `width` có thể thay đổi thời gian chạy (runtime / 런타임).
 
-Pattern này tốt hơn:
+Mẫu (pattern / 패턴) này tốt hơn:
 
 ```jsx
 className={`w-[${width}px]`}
 ```
 
-vì string arbitrary class thời gian chạy (runtime) có thể không được scanner nhìn thấy.
+vì string arbitrary lớp (class / 클래스) thời gian chạy (runtime / 런타임) có thể không được scanner nhìn thấy.
 
 ---
 
-## 13. Tailwind scan source như text, không chạy code của bạn
+## 13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn
 
 Đây là kiến thức bắt buộc.
 
-Code sai:
+Mã (code / 코드) sai:
 
 ```jsx
 function Button({ color }) {
@@ -565,7 +568,7 @@ function Button({ color }) {
 }
 ```
 
-Khi scan source, Tailwind chỉ thấy các fragment `bg-`, `${color}`, `-600`. Nó không biết thời gian chạy (runtime) prop sẽ là `blue`, `red` hay `green`.
+Khi scan nguồn (source / 소스), Tailwind chỉ thấy các fragment `bg-`, `${color}`, `-600`. Nó không biết thời gian chạy (runtime / 런타임) prop sẽ là `blue`, `red` hay `green`.
 
 Cách đúng:
 
@@ -584,17 +587,17 @@ function Button({ color }) {
 }
 ```
 
-Các complete class strings đã nằm trong source, nên scanner nhận được.
+Các complete lớp (class / 클래스) strings đã nằm trong nguồn (source / 소스), nên scanner nhận được.
 
-Đây đồng thời là component design tốt hơn: component chỉ cho phép một tập biến thể (variant) hữu hạn thay vì cho caller tạo arbitrary Tailwind class.
+Đây đồng thời là thành phần (component / 컴포넌트) thiết kế (design / 설계) tốt hơn: thành phần (component / 컴포넌트) chỉ cho phép một tập biến thể (variant) hữu hạn thay vì cho caller tạo arbitrary Tailwind lớp (class / 클래스).
 
 ---
 
-# PHẦN II — LAYOUT VÀ mô hình hộp (box model) TRONG TAILWIND
+# PHẦN II — bố cục (layout / 레이아웃) VÀ mô hình hộp (box model / 박스 모델) TRONG TAILWIND
 
 ## 14. `display`: hiểu `block`, `inline`, `flex`, `grid` trước khi dùng
 
-CSS `display` quyết định element tham gia layout theo kiểu nào. Tailwind cung cấp những tiện ích (utility) trực tiếp như:
+CSS `display` quyết định element tham gia bố cục (layout / 레이아웃) theo kiểu nào. Tailwind cung cấp những tiện ích (utility) trực tiếp như:
 
 ```text
 block
@@ -609,9 +612,9 @@ contents
 hidden
 ```
 
-`block` tạo block-level box, thường chiếm available inline width theo luồng bố cục thông thường (normal flow). `inline` chạy trong dòng text và width/height không hoạt động giống block. `inline-block` giữ khả năng đứng trong inline flow nhưng có box sizing giống block hơn.
+`block` tạo block-level box, thường chiếm available inline width theo luồng bố cục thông thường (normal flow / 일반 흐름). `inline` chạy trong dòng văn bản (text / 텍스트) và width/height không hoạt động giống khối (block / 블록). `inline-block` giữ khả năng đứng trong inline luồng (flow / 흐름) nhưng có box sizing giống khối (block / 블록) hơn.
 
-`flex` tạo flex container. Children trực tiếp trở thành các phần tử Flex (flex items). `grid` tạo grid container. `hidden` đặt `display: none`, nghĩa là element bị loại khỏi layout; đây khác hoàn toàn với `invisible` hay `opacity-0`.
+`flex` tạo flex bộ chứa (container / 컨테이너). Children trực tiếp trở thành các phần tử Flex (flex items). `grid` tạo grid bộ chứa (container / 컨테이너). `hidden` đặt `display: none`, nghĩa là element bị loại khỏi bố cục (layout / 레이아웃); đây khác hoàn toàn với `invisible` hay `opacity-0`.
 
 Ví dụ responsive visibility:
 
@@ -621,33 +624,33 @@ Ví dụ responsive visibility:
 </nav>
 ```
 
-Ở base/mobile, nav không có box. Từ điểm ngắt (breakpoint) `md`, Tailwind generate rule `display: block`.
+Ở cơ sở (base / 기반)/mobile, nav không có box. Từ điểm ngắt (breakpoint) `md`, Tailwind generate quy tắc (rule / 규칙) `display: block`.
 
 ---
 
 ## 15. `hidden`, `invisible`, `opacity-0` khác nhau
 
-Ba tiện ích (utility) này thường bị dùng như nhau nhưng behavior rất khác.
+Ba tiện ích (utility) này thường bị dùng như nhau nhưng hành vi (behavior / 동작) rất khác.
 
 ```text
 hidden
 ```
 
-tương đương `display:none`. Element không chiếm layout và thông thường không tham gia khả năng tiếp cận (accessibility) tree như element hiển thị.
+tương đương `display:none`. Element không chiếm bố cục (layout / 레이아웃) và thông thường không tham gia cây khả năng tiếp cận (accessibility tree / 접근성 트리) như element hiển thị.
 
 ```text
 invisible
 ```
 
-tương đương `visibility:hidden`. Box vẫn chiếm chỗ, nhưng không được vẽ/interaction bình thường.
+tương đương `visibility:hidden`. Box vẫn chiếm chỗ, nhưng không được vẽ/tương tác (interaction / 상호작용) bình thường.
 
 ```text
 opacity-0
 ```
 
-tương đương `opacity:0`. Element vẫn tồn tại trong layout và có thể vẫn nhận pointer/focus tùy ngữ nghĩa (semantics).
+tương đương `opacity:0`. Element vẫn tồn tại trong bố cục (layout / 레이아웃) và có thể vẫn nhận pointer/focus tùy ngữ nghĩa (semantics / 의미론).
 
-Nếu bạn muốn animate fade, `opacity-0` thường phù hợp hơn vì `display:none` không đơn giản transition như opacity. Nếu bạn muốn bỏ element khỏi layout, `hidden` phù hợp hơn.
+Nếu bạn muốn animate fade, `opacity-0` thường phù hợp hơn vì `display:none` không đơn giản chuyển tiếp (transition / 전이) như opacity. Nếu bạn muốn bỏ element khỏi bố cục (layout / 레이아웃), `hidden` phù hợp hơn.
 
 ---
 
@@ -677,13 +680,13 @@ box-content
 → box-sizing:content-box
 ```
 
-Với `border-box`, declared width đã bao gồm padding và border. Đây là model thường dễ dùng hơn trong UI.
+Với `border-box`, declared width đã bao gồm padding và border. Đây là mô hình (model / 모델) thường dễ dùng hơn trong UI.
 
 ---
 
 ## 17. Position: `relative`, `absolute`, `fixed`, `sticky`
 
-`relative` thường được dùng để tạo positioning context cho `absolute` child:
+`relative` thường được dùng để tạo positioning ngữ cảnh (context / 맥락) cho `absolute` child:
 
 ```html
 <div class="relative">
@@ -699,7 +702,7 @@ Với `border-box`, declared width đã bao gồm padding và border. Đây là 
 </div>
 ```
 
-Parent vẫn nằm trong luồng bố cục thông thường (normal flow). Child `absolute` được lấy ra khỏi luồng bố cục thông thường (normal flow) và offset theo khối chứa tham chiếu (containing block) phù hợp, ở đây thường là parent `relative`.
+Parent vẫn nằm trong luồng bố cục thông thường (normal flow / 일반 흐름). Child `absolute` được lấy ra khỏi luồng bố cục thông thường (normal flow / 일반 흐름) và offset theo khối chứa tham chiếu (containing block / 컨테이닝 블록) phù hợp, ở đây thường là parent `relative`.
 
 `fixed` thường gắn theo vùng nhìn (viewport) và dùng cho full-screen overlay, floating button hoặc persistent UI.
 
@@ -709,13 +712,13 @@ Parent vẫn nằm trong luồng bố cục thông thường (normal flow). Chil
 <header class="sticky top-0">
 ```
 
-cần `top-0` làm sticky threshold. Nếu ancestor có overflow tạo vùng chứa cuộn (scroll container) khác, sticky sẽ liên quan container đó. Khi `sticky` không chạy, hãy kiểm tra vùng chứa cuộn (scroll container) trước khi thêm class ngẫu nhiên.
+cần `top-0` làm sticky threshold. Nếu ancestor có overflow tạo vùng chứa cuộn (scroll container) khác, sticky sẽ liên quan bộ chứa (container / 컨테이너) đó. Khi `sticky` không chạy, hãy kiểm tra vùng chứa cuộn (scroll container) trước khi thêm lớp (class / 클래스) ngẫu nhiên.
 
 ---
 
 ## 18. Inset và logical inset
 
-Các class:
+Các lớp (class / 클래스):
 
 ```text
 top-4
@@ -744,7 +747,7 @@ Nếu mục tiêu là “icon ở cuối dòng” chứ không phải “icon lu
 
 ---
 
-## 19. `z-*` và ngữ cảnh xếp chồng (stacking context)
+## 19. `z-*` và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)
 
 Tailwind cung cấp:
 
@@ -758,7 +761,7 @@ z-auto
 z-[999]
 ```
 
-Nhưng `z-index` chỉ có ý nghĩa trong stacking model của CSS. Một child `z-[9999]` vẫn có thể nằm dưới một element khác nếu parent của nó đang nằm trong ngữ cảnh xếp chồng (stacking context) thấp hơn.
+Nhưng `z-index` chỉ có ý nghĩa trong stacking mô hình (model / 모델) của CSS. Một child `z-[9999]` vẫn có thể nằm dưới một element khác nếu parent của nó đang nằm trong ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) thấp hơn.
 
 Do đó khi modal/dropdown bị che, đừng tăng `z-index` vô hạn. Hãy kiểm tra ancestor có:
 - transform,
@@ -766,9 +769,9 @@ Do đó khi modal/dropdown bị che, đừng tăng `z-index` vô hạn. Hãy ki�
 - cô lập (isolation),
 - positioned + z-index,
 - filter,
-hay thuộc tính (property) khác tạo ngữ cảnh xếp chồng (stacking context) hay không.
+hay thuộc tính (property / 속성) khác tạo ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) hay không.
 
-Trong hệ thống thiết kế (design system) lớn, nên có mang tính ngữ nghĩa (semantic) layer contract cho dropdown, sticky header, overlay, modal và toast thay vì mỗi component chọn số tùy ý.
+Trong hệ thống thiết kế (design system) lớn, nên có mang tính ngữ nghĩa (semantic / 의미적) tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) cho dropdown, sticky header, overlay, modal và toast thay vì mỗi thành phần (component / 컴포넌트) chọn số tùy ý.
 
 ---
 
@@ -786,9 +789,9 @@ overflow-x-auto
 overflow-y-auto
 ```
 
-`overflow-auto` tạo scroll khi content thực sự vượt box. `overflow-hidden` clip content và có scroll-container ngữ nghĩa (semantics) khác `overflow-clip`. `overflow-clip` chỉ clip theo intent mạnh hơn, không phải là một vùng chứa cuộn (scroll container) như hidden.
+`overflow-auto` tạo scroll khi content thực sự vượt box. `overflow-hidden` clip content và có scroll-container ngữ nghĩa (semantics / 의미론) khác `overflow-clip`. `overflow-clip` chỉ clip theo intent mạnh hơn, không phải là một vùng chứa cuộn (scroll container) như hidden.
 
-Một pattern cực phổ biến cho bảng:
+Một mẫu (pattern / 패턴) cực phổ biến cho bảng:
 
 ```html
 <div class="overflow-x-auto">
@@ -800,13 +803,13 @@ Một pattern cực phổ biến cho bảng:
 
 Wrapper chịu horizontal scroll thay vì làm cả page overflow.
 
-Senior phải nhớ overflow ảnh hưởng nhiều thứ khác ngoài scrollbar, đặc biệt là sticky positioning và clipping.
+Cấp cao (senior / 시니어) phải nhớ overflow ảnh hưởng nhiều thứ khác ngoài scrollbar, đặc biệt là sticky positioning và clipping.
 
 ---
 
 ## 21. Width: `w-*` không chỉ có px
 
-Tailwind width family bao gồm spacing-derived các giá trị (values), fraction, percentages, vùng nhìn (viewport) và định cỡ nội tại (intrinsic sizing).
+Tailwind width family bao gồm spacing-derived các giá trị (values), fraction, percentages, vùng nhìn (viewport) và định cỡ nội tại (intrinsic sizing / 내재 크기 결정).
 
 ```text
 w-4
@@ -821,19 +824,19 @@ w-fit
 w-[37rem]
 ```
 
-`w-full` thường là `width:100%` của khối chứa tham chiếu (containing block). `w-screen` là vùng nhìn (viewport) width kiểu `100vw`; `w-dvw` dùng dynamic vùng nhìn (viewport) width.
+`w-full` thường là `width:100%` của khối chứa tham chiếu (containing block / 컨테이닝 블록). `w-screen` là vùng nhìn (viewport) width kiểu `100vw`; `w-dvw` dùng động (dynamic / 동적) vùng nhìn (viewport) width.
 
 `w-min` tương ứng intrinsic `min-content`. `w-max` tương ứng `max-content`. `w-fit` dùng `fit-content`.
 
-Khi bạn chọn width, hãy nghĩ “constraint nào cần?” thay vì mặc định đặt số px.
+Khi bạn chọn width, hãy nghĩ “ràng buộc (constraint / 제약조건) nào cần?” thay vì mặc định đặt số px.
 
 ---
 
 ## 22. Height và vùng nhìn (viewport) units: `h-screen` không phải lúc nào cũng tốt nhất
 
-`h-screen` tương đương classic `100vh`. Trên mobile browser, UI chrome như address bar có thể làm vùng nhìn (viewport) thay đổi và `100vh` gây layout không đúng như mong muốn.
+`h-screen` tương đương classic `100vh`. Trên mobile trình duyệt (browser / 브라우저), UI chrome như address bar có thể làm vùng nhìn (viewport) thay đổi và `100vh` gây bố cục (layout / 레이아웃) không đúng như mong muốn.
 
-Modern các tiện ích (utilities):
+Hiện đại (modern / 현대적) các tiện ích (utilities):
 
 ```text
 h-dvh
@@ -842,9 +845,9 @@ h-lvh
 min-h-dvh
 ```
 
-liên hệ tới dynamic, small và large vùng nhìn (viewport) units.
+liên hệ tới động (dynamic / 동적), small và large vùng nhìn (viewport) units.
 
-Một full-page mobile layout thường tốt hơn với:
+Một full-page mobile bố cục (layout / 레이아웃) thường tốt hơn với:
 
 ```html
 <div class="min-h-dvh">
@@ -856,7 +859,7 @@ thay vì ép `h-screen`, vì minimum height cho phép content dài thêm và `dv
 
 ## 23. `max-w-*` và readable content
 
-Tailwind có các max width token như:
+Tailwind có các max width đơn vị từ (token / 토큰) như:
 
 ```text
 max-w-sm
@@ -868,9 +871,9 @@ max-w-full
 max-w-none
 ```
 
-`max-w-prose` rất hữu ích cho text body vì một dòng quá dài sẽ khó đọc. Đây không phải magic “prose component”, mà chỉ là width constraint được thiết kế quanh readable line measure.
+`max-w-prose` rất hữu ích cho văn bản (text / 텍스트) body vì một dòng quá dài sẽ khó đọc. Đây không phải magic “prose thành phần (component / 컴포넌트)”, mà chỉ là width ràng buộc (constraint / 제약조건) được thiết kế quanh readable line measure.
 
-Page container thường:
+Page bộ chứa (container / 컨테이너) thường:
 
 ```html
 <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -882,7 +885,7 @@ Page container thường:
 
 ---
 
-## 24. `min-w-0`: một class nhỏ nhưng cực kỳ senior
+## 24. `min-w-0`: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)
 
 Hãy xem:
 
@@ -914,7 +917,7 @@ Fix:
 
 ## 25. `min-h-0`: phiên bản vertical của cùng vấn đề
 
-Một layout dashboard:
+Một bố cục (layout / 레이아웃) dashboard:
 
 ```html
 <div class="flex h-dvh flex-col">
@@ -930,11 +933,11 @@ Một layout dashboard:
 
 Nếu `main` không có `min-h-0`, kích thước tối thiểu tự động (automatic minimum size) trong flex column có thể làm main không chịu co và toàn page overflow. `min-h-0` cho phép vùng còn lại co đúng để `overflow-auto` tạo scroller nội bộ.
 
-Pattern này rất phổ biến trong:
+Mẫu (pattern / 패턴) này rất phổ biến trong:
 - app shell,
 - modal body,
 - sidebar panel,
-- chat interface.
+- chat giao diện (interface / 인터페이스).
 
 ---
 
@@ -956,15 +959,15 @@ me-4
 mx-auto
 ```
 
-`m-*` áp mọi cạnh. `mx-*` và `my-*` là shorthand hai trục. `ms-*` và `me-*` là logical inline start/end. Prefix `-` tạo negative margin khi CSS thuộc tính (property) cho phép.
+`m-*` áp mọi cạnh. `mx-*` và `my-*` là shorthand hai trục. `ms-*` và `me-*` là logical inline start/end. Prefix `-` tạo negative margin khi CSS thuộc tính (property / 속성) cho phép.
 
-`mx-auto` là idiom center một block đã có width/max-width:
+`mx-auto` là idiom center một khối (block / 블록) đã có width/max-width:
 
 ```html
 <div class="mx-auto max-w-4xl">
 ```
 
-Negative margin nên dùng có chủ ý, thường cho overlap/visual composition. Nếu bạn liên tục cần negative margin để “sửa vị trí”, có thể layout kiến trúc (architecture) đang sai.
+Negative margin nên dùng có chủ ý, thường cho overlap/visual composition. Nếu bạn liên tục cần negative margin để “sửa vị trí”, có thể bố cục (layout / 레이아웃) kiến trúc (architecture / 아키텍처) đang sai.
 
 ---
 
@@ -984,7 +987,7 @@ ps-4
 pe-4
 ```
 
-Padding thuộc box của chính element và không thể âm. Khi button cần touch target, padding thường là phần làm component dễ bấm chứ không chỉ tạo khoảng cách đẹp.
+Padding thuộc box của chính element và không thể âm. Khi button cần touch mục tiêu (target / 대상), padding thường là phần làm thành phần (component / 컴포넌트) dễ bấm chứ không chỉ tạo khoảng cách đẹp.
 
 Một button:
 
@@ -992,7 +995,7 @@ Một button:
 <button class="min-h-11 rounded-lg px-4 py-2">
 ```
 
-`min-h-11` đảm bảo chiều cao tối thiểu, còn `px/py` tạo internal space.
+`min-h-11` đảm bảo chiều cao tối thiểu, còn `px/py` tạo nội bộ (internal / 내부) không gian (space / 공간).
 
 ---
 
@@ -1004,7 +1007,7 @@ Ví dụ:
 <div class="flex flex-col gap-4">
 ```
 
-`gap-4` map khóa–giá trị (map) tới CSS `gap`, nghĩa là spacing thuộc **container layout**, không phải margin của từng child.
+`gap-4` map khóa–giá trị (map) tới CSS `gap`, nghĩa là spacing thuộc **bộ chứa (container / 컨테이너) bố cục (layout / 레이아웃)**, không phải margin của từng child.
 
 So với:
 
@@ -1044,13 +1047,13 @@ divide
 → visual separator between items
 ```
 
-Một danh sách (list) có thể dùng cả hai nếu design cần, nhưng thường `divide` đã đóng vai trò divider.
+Một danh sách (list / 목록) có thể dùng cả hai nếu thiết kế (design / 설계) cần, nhưng thường `divide` đã đóng vai trò divider.
 
 ---
 
 # PHẦN III — FLEXBOX TRONG TAILWIND
 
-## 30. Flexbox: phải hiểu container và item
+## 30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item
 
 Khi viết:
 
@@ -1058,7 +1061,7 @@ Khi viết:
 <div class="flex">
 ```
 
-element này trở thành **flex container**, và các child trực tiếp trở thành **các phần tử Flex (flex items)**.
+element này trở thành **flex bộ chứa (container / 컨테이너)**, và các child trực tiếp trở thành **các phần tử Flex (flex items)**.
 
 Flexbox có hai trục:
 - trục chính (main axis),
@@ -1130,7 +1133,7 @@ Nhưng text-heavy UI đôi khi phù hợp với:
 items-baseline
 ```
 
-đường cơ sở (baseline) alignment căn dựa trên typography đường cơ sở (baseline) chứ không phải geometric box center. Ví dụ hai text có font-size khác nhau có thể trông tự nhiên hơn với đường cơ sở (baseline).
+đường cơ sở (baseline) alignment căn dựa trên typography đường cơ sở (baseline) chứ không phải geometric box center. Ví dụ hai văn bản (text / 텍스트) có font-size khác nhau có thể trông tự nhiên hơn với đường cơ sở (baseline).
 
 ---
 
@@ -1178,7 +1181,7 @@ Ví dụ:
 
 `aside` giữ width, `main` lấy phần còn lại.
 
-Nếu bạn chỉ viết `grow`, basis vẫn có thể khác và behavior không luôn giống `flex-1`.
+Nếu bạn chỉ viết `grow`, basis vẫn có thể khác và hành vi (behavior / 동작) không luôn giống `flex-1`.
 
 ---
 
@@ -1198,10 +1201,10 @@ Nếu thiếu `shrink-0`, trong row quá chật avatar có thể bị co nhỏ h
 - icon,
 - avatar,
 - fixed sidebar,
-- action button
-mà bạn không muốn bị co để nhường chỗ cho text.
+- hành động (action / 동작) button
+mà bạn không muốn bị co để nhường chỗ cho văn bản (text / 텍스트).
 
-Sau đó text container thường dùng:
+Sau đó văn bản (text / 텍스트) bộ chứa (container / 컨테이너) thường dùng:
 
 ```text
 min-w-0 flex-1
@@ -1224,15 +1227,15 @@ basis-auto
 basis-full
 ```
 
-Nếu bạn muốn sidebar “ban đầu khoảng 16rem nhưng có flex logic”, `basis-64` có thể thích hợp hơn `w-64` trong một số flex kiến trúc (architecture).
+Nếu bạn muốn sidebar “ban đầu khoảng 16rem nhưng có flex lô-gic (logic / 논리)”, `basis-64` có thể thích hợp hơn `w-64` trong một số flex kiến trúc (architecture / 아키텍처).
 
-Senior nên hiểu width và flex-basis có thể cùng tham gia sizing; không thêm cả hai nếu không biết cái nào đang quyết định.
+Cấp cao (senior / 시니어) nên hiểu width và flex-basis có thể cùng tham gia sizing; không thêm cả hai nếu không biết cái nào đang quyết định.
 
 ---
 
 ## 37. `self-*`
 
-Container đặt:
+Bộ chứa (container / 컨테이너) đặt:
 
 ```text
 items-center
@@ -1250,7 +1253,7 @@ Use khi một child thật sự có cross-axis alignment khác phần còn lại
 
 ---
 
-## 38. Flex pattern: Media Object
+## 38. Flex mẫu (pattern / 패턴): Media đối tượng (object / 객체)
 
 ```html
 <div class="flex gap-4">
@@ -1275,7 +1278,7 @@ Use khi một child thật sự có cross-axis alignment khác phần còn lại
 </div>
 ```
 
-Đây là pattern avatar/media + content kinh điển. `shrink-0` bảo vệ media, `min-w-0 flex-1` làm body linh hoạt.
+Đây là mẫu (pattern / 패턴) avatar/media + content kinh điển. `shrink-0` bảo vệ media, `min-w-0 flex-1` làm body linh hoạt.
 
 ---
 
@@ -1303,21 +1306,21 @@ grid-cols-12
 
 định nghĩa số cột bằng equal fractional tracks.
 
-Ví dụ card layout:
+Ví dụ card bố cục (layout / 레이아웃):
 
 ```html
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 ```
 
-Base một cột, md hai cột, lg ba cột.
+Cơ sở (base / 기반) một cột, md hai cột, lg ba cột.
 
 ---
 
 ## 40. `grid-cols-*` và `minmax(0,1fr)`
 
-Tailwind equal grid column các tiện ích (utilities) thường dùng track kiểu `minmax(0, 1fr)` thay vì plain `1fr`.
+Tailwind equal grid column các tiện ích (utilities) thường dùng nhánh học (track / 트랙) kiểu `minmax(0, 1fr)` thay vì plain `1fr`.
 
-Điều này quan trọng vì phần tử Grid (grid item) có intrinsic minimum size. `minmax(0,1fr)` cho track permission co xuống 0 minimum, giúp giảm overflow do content dài.
+Điều này quan trọng vì phần tử Grid (grid item) có intrinsic minimum kích thước (size / 크기). `minmax(0,1fr)` cho nhánh học (track / 트랙) permission co xuống 0 minimum, giúp giảm overflow do content dài.
 
 Đây là tư duy tương tự `min-w-0` trong Flexbox.
 
@@ -1347,7 +1350,7 @@ grid-template-columns:
   16rem minmax(0, 1fr);
 ```
 
-Arbitrary grid template là một trong những giá trị tùy ý (arbitrary value) use cases tốt nhất vì layout template thường mang tính structure hơn design-token scale.
+Arbitrary grid template là một trong những giá trị tùy ý (arbitrary value) use cases tốt nhất vì bố cục (layout / 레이아웃) template thường mang tính cấu trúc (structure / 구조) hơn design-token quy mô (scale / 규모).
 
 ---
 
@@ -1369,7 +1372,7 @@ col-start-2
 col-end-6
 ```
 
-`col-span-full` thường span từ first tới last explicit grid line.
+`col-span-full` thường span từ first tới last tường minh (explicit / 명시적) grid line.
 
 ---
 
@@ -1384,7 +1387,7 @@ row-start-1
 row-end-3
 ```
 
-Use khi layout thật sự cần row tracks rõ ràng. Nếu content height tự nhiên, không nên ép rows chỉ vì có tiện ích (utility).
+Use khi bố cục (layout / 레이아웃) thật sự cần row tracks rõ ràng. Nếu content height tự nhiên, không nên ép rows chỉ vì có tiện ích (utility).
 
 ---
 
@@ -1398,9 +1401,9 @@ grid-flow-col
 grid-flow-dense
 ```
 
-`dense` cho browser backfill holes trong grid. Nó có thể làm **visual order khác DOM order**.
+`dense` cho trình duyệt (browser / 브라우저) backfill holes trong grid. Nó có thể làm **visual thứ tự (order / 순서) khác DOM thứ tự (order / 순서)**.
 
-Vì screen reader/focus navigation thường dựa trên DOM order, hãy cẩn thận dùng dense cho interactive content. Decorative gallery có thể ổn; form hoặc navigation có thể gây confusion.
+Vì screen reader/focus điều hướng (navigation / 내비게이션) thường dựa trên DOM thứ tự (order / 순서), hãy cẩn thận dùng dense cho interactive content. Decorative gallery có thể ổn; form hoặc điều hướng (navigation / 내비게이션) có thể gây confusion.
 
 ---
 
@@ -1421,14 +1424,14 @@ Subgrid cho child grid reuse tracks của parent thay vì tự tạo một hệ 
 Use khi nhiều cards cần:
 - title,
 - body,
-- action
-align theo shared tracks.
+- hành động (action / 동작)
+align theo dùng chung (shared / 공유) tracks.
 
 ---
 
 ## 46. Intrinsic auto grid không cần điểm ngắt (breakpoint)
 
-Một advanced pattern:
+Một advanced mẫu (pattern / 패턴):
 
 ```html
 <div
@@ -1440,7 +1443,7 @@ Một advanced pattern:
 >
 ```
 
-Ý nghĩa CSS: browser tự fit nhiều cột nhất có thể, mỗi cột tối thiểu khoảng 18rem nhưng không rộng hơn container ở mobile.
+Ý nghĩa CSS: trình duyệt (browser / 브라우저) tự fit nhiều cột nhất có thể, mỗi cột tối thiểu khoảng 18rem nhưng không rộng hơn bộ chứa (container / 컨테이너) ở mobile.
 
 Điểm quan trọng: responsive không nhất thiết phải luôn `sm:`, `md:`, `lg:`. CSS bố cục nội tại (intrinsic layout) đôi khi responsive tự nhiên hơn điểm ngắt (breakpoint).
 
@@ -1458,7 +1461,7 @@ font-serif
 font-mono
 ```
 
-Chúng lấy giá trị (value) từ các biến chủ đề (theme variables) như `--font-sans`.
+Chúng lấy giá trị (value / 값) từ các biến chủ đề (theme variables) như `--font-sans`.
 
 Custom:
 
@@ -1477,11 +1480,11 @@ Use:
 <body class="font-brand">
 ```
 
-Đừng chỉ nghĩ font family là tên font. phương án dự phòng (fallback) chain rất quan trọng khi webfont chưa load hoặc glyph ngôn ngữ không có trong font đầu tiên.
+Đừng chỉ nghĩ font family là tên font. phương án dự phòng (fallback) chuỗi (chain / 사슬) rất quan trọng khi webfont chưa tải (load / 로드) hoặc glyph ngôn ngữ không có trong font đầu tiên.
 
 ---
 
-## 48. Font size
+## 48. Font kích thước (size / 크기)
 
 Các tiện ích (utility):
 
@@ -1496,7 +1499,7 @@ text-2xl
 text-9xl
 ```
 
-lấy từ theme type scale.
+lấy từ theme kiểu (type / 타입) quy mô (scale / 규모).
 
 Arbitrary:
 
@@ -1504,15 +1507,15 @@ Arbitrary:
 text-[17px]
 ```
 
-nhưng nếu 17px là body standard của product, hãy thêm token thay vì arbitrary ở mọi nơi.
+nhưng nếu 17px là body tiêu chuẩn (standard / 표준) của sản phẩm (product / 제품), hãy thêm đơn vị từ (token / 토큰) thay vì arbitrary ở mọi nơi.
 
-Tailwind hỗ trợ compact syntax cho line-height:
+Tailwind hỗ trợ compact cú pháp (syntax / 문법) cho line-height:
 
 ```text
 text-lg/7
 ```
 
-nghĩa là font-size `text-lg` với leading giá trị (value) tương ứng `7`.
+nghĩa là font-size `text-lg` với leading giá trị (value / 값) tương ứng `7`.
 
 ---
 
@@ -1537,7 +1540,7 @@ font-[650]
 
 rất hữu ích với biến (variable) fonts hỗ trợ intermediate weights.
 
-Không phải font nào cũng có thực glyph ở mọi weight. Browser có thể synthesize weight nếu file/font không support, nên hệ thống thiết kế (design system) cần load font các biến thể (variants) đúng.
+Không phải font nào cũng có thực glyph ở mọi weight. trình duyệt (browser / 브라우저) có thể synthesize weight nếu tệp (file / 파일)/font không hỗ trợ (support / 지원), nên hệ thống thiết kế (design system) cần tải (load / 로드) font các biến thể (variants) đúng.
 
 ---
 
@@ -1556,7 +1559,7 @@ leading-[1.65]
 
 Line-height ảnh hưởng khoảng cách hộp dòng (line box), không phải margin giữa paragraphs.
 
-Heading thường cần tighter leading; body text thường cần rộng hơn.
+Heading thường cần tighter leading; body văn bản (text / 텍스트) thường cần rộng hơn.
 
 Ví dụ:
 
@@ -1585,11 +1588,11 @@ tracking-widest
 
 Large display heading đôi khi đẹp hơn với tracking hơi âm, uppercase label đôi khi cần tracking dương.
 
-Đừng áp `tracking-wide` global chỉ vì “trông thoáng”; Korean, English và font khác nhau có visual density khác nhau.
+Đừng áp `tracking-wide` toàn cục (global / 전역) chỉ vì “trông thoáng”; Korean, English và font khác nhau có visual density khác nhau.
 
 ---
 
-## 52. Text alignment và logical alignment
+## 52. văn bản (text / 텍스트) alignment và logical alignment
 
 ```text
 text-left
@@ -1604,7 +1607,7 @@ text-end
 
 ---
 
-## 53. White-space và text wrapping
+## 53. White-space và văn bản (text / 텍스트) wrapping
 
 các tiện ích (utilities) quan trọng:
 
@@ -1616,9 +1619,9 @@ whitespace-pre-line
 whitespace-pre-wrap
 ```
 
-`whitespace-nowrap` thường đi với single-line control/ellipsis.
+`whitespace-nowrap` thường đi với single-line điều khiển (control / 제어)/ellipsis.
 
-`whitespace-pre-wrap` phù hợp user-generated text cần giữ newline/space nhưng vẫn wrap.
+`whitespace-pre-wrap` phù hợp user-generated văn bản (text / 텍스트) cần giữ newline/không gian (space / 공간) nhưng vẫn wrap.
 
 ---
 
@@ -1632,9 +1635,9 @@ text-overflow: ellipsis;
 white-space: nowrap;
 ```
 
-Nhưng nó chỉ hoạt động khi element có width constraint thực tế. Trong flex layout, bạn thường còn cần `min-w-0`.
+Nhưng nó chỉ hoạt động khi element có width ràng buộc (constraint / 제약조건) thực tế. Trong flex bố cục (layout / 레이아웃), bạn thường còn cần `min-w-0`.
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```html
 <div class="min-w-0 flex-1">
@@ -1644,7 +1647,7 @@ Pattern:
 </div>
 ```
 
-Nếu text vẫn không ellipsis, kiểm tra sizing context thay vì thêm nhiều `overflow-hidden`.
+Nếu văn bản (text / 텍스트) vẫn không ellipsis, kiểm tra sizing ngữ cảnh (context / 맥락) thay vì thêm nhiều `overflow-hidden`.
 
 ---
 
@@ -1660,10 +1663,10 @@ giới hạn nội dung theo số dòng.
 
 Dùng tốt cho:
 - card preview,
-- search result summary,
+- tìm kiếm (search / 검색) kết quả (result / 결과) summary,
 - feed snippet.
 
-Không dùng để giấu phần nội dung user bắt buộc phải đọc mà không có “Show more”.
+Không dùng để giấu phần nội dung người dùng (user / 사용자) bắt buộc phải đọc mà không có “Show more”.
 
 ---
 
@@ -1678,7 +1681,7 @@ break-all
 break-keep
 ```
 
-`break-keep` map khóa–giá trị (map) tới behavior `word-break: keep-all` và thường hữu ích cho Korean/CJK khi bạn muốn tránh break giữa characters như `break-all`.
+`break-keep` map khóa–giá trị (map) tới hành vi (behavior / 동작) `word-break: keep-all` và thường hữu ích cho Korean/CJK khi bạn muốn tránh break giữa characters như `break-all`.
 
 Ví dụ:
 
@@ -1688,13 +1691,13 @@ Ví dụ:
 </p>
 ```
 
-Nhưng text rất dài không có space như URL vẫn cần overflow strategy. Hãy test content thật thay vì áp một rule global cho mọi ngôn ngữ.
+Nhưng văn bản (text / 텍스트) rất dài không có không gian (space / 공간) như URL vẫn cần overflow chiến lược (strategy / 전략). Hãy kiểm thử (test / 테스트) content thật thay vì áp một quy tắc (rule / 규칙) toàn cục (global / 전역) cho mọi ngôn ngữ.
 
 ---
 
 ## 57. `text-balance` và `text-pretty`
 
-`text-balance` map khóa–giá trị (map) tới modern `text-wrap: balance`, hữu ích cho headings ngắn nhiều dòng vì browser cố cân độ dài các dòng.
+`text-balance` map khóa–giá trị (map) tới hiện đại (modern / 현대적) `text-wrap: balance`, hữu ích cho headings ngắn nhiều dòng vì trình duyệt (browser / 브라우저) cố cân độ dài các dòng.
 
 ```html
 <h1 class="text-balance text-5xl font-bold">
@@ -1702,11 +1705,11 @@ Nhưng text rất dài không có space như URL vẫn cần overflow strategy. 
 
 `text-pretty` hướng tới line breaking đẹp hơn, thường phù hợp paragraph.
 
-Đây là cải tiến lũy tiến (progressive enhancement); mức hỗ trợ trình duyệt (browser support) target vẫn cần được xem xét nếu product hỗ trợ browser cũ.
+Đây là cải tiến lũy tiến (progressive enhancement); mức hỗ trợ trình duyệt (browser support / 브라우저 지원) mục tiêu (target / 대상) vẫn cần được xem xét nếu sản phẩm (product / 제품) hỗ trợ trình duyệt (browser / 브라우저) cũ.
 
 ---
 
-## 58. Text decoration
+## 58. văn bản (text / 텍스트) decoration
 
 Tailwind cung cấp các tiện ích (utilities) cho:
 - underline,
@@ -1731,11 +1734,11 @@ Ví dụ link:
 >
 ```
 
-Text decoration tốt cho link khả năng tiếp cận (accessibility) hơn việc chỉ đổi màu khi link cần nhận biết rõ.
+Văn bản (text / 텍스트) decoration tốt cho link khả năng tiếp cận (accessibility / 접근성) hơn việc chỉ đổi màu khi link cần nhận biết rõ.
 
 ---
 
-## 59. Text transform
+## 59. văn bản (text / 텍스트) transform
 
 ```text
 uppercase
@@ -1744,9 +1747,9 @@ capitalize
 normal-case
 ```
 
-đây là visual transform. Source text/accessible name vẫn có ngữ nghĩa (semantics) riêng.
+đây là visual transform. nguồn (source / 소스) văn bản (text / 텍스트)/accessible name vẫn có ngữ nghĩa (semantics / 의미론) riêng.
 
-Nếu acronym cần uppercase vì nội dung thật sự là acronym, tốt hơn source cũng đúng thay vì dựa hoàn toàn vào CSS transform.
+Nếu acronym cần uppercase vì nội dung thật sự là acronym, tốt hơn nguồn (source / 소스) cũng đúng thay vì dựa hoàn toàn vào CSS transform.
 
 ---
 
@@ -1761,20 +1764,20 @@ slashed-zero
 
 `tabular-nums` cực hữu ích cho:
 - financial dashboard,
-- table,
+- bảng (table / 테이블),
 - countdown,
 - metrics
 vì mỗi chữ số có cùng advance width, giúp số không “nhảy” khi thay đổi.
 
-V4.2+ có `font-features-*` cho low-level `font-feature-settings`, nhưng hãy ưu tiên high-level tiện ích (utility) nếu có mang tính ngữ nghĩa (semantic) equivalent.
+V4.2+ có `font-features-*` cho low-level `font-feature-settings`, nhưng hãy ưu tiên high-level tiện ích (utility) nếu có mang tính ngữ nghĩa (semantic / 의미적) equivalent.
 
 ---
 
 # PHẦN VI — COLOR, BACKGROUND, BORDER, SHADOW
 
-## 61. Color system và palette
+## 61. Color hệ thống (system / 시스템) và palette
 
-Tailwind v4 dùng modern color system với palette rộng. Current release có các neutral families như:
+Tailwind v4 dùng hiện đại (modern / 현대적) color hệ thống (system / 시스템) với palette rộng. hiện tại (current / 현재) bản phát hành (release / 릴리스) có các neutral families như:
 
 ```text
 slate
@@ -1790,7 +1793,7 @@ taupe
 
 và chromatic families như red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose.
 
-Scale thường chạy từ `50` sáng tới `950` tối.
+Quy mô (scale / 규모) thường chạy từ `50` sáng tới `950` tối.
 
 Ví dụ:
 
@@ -1800,7 +1803,7 @@ text-gray-900
 border-gray-200
 ```
 
-Nhưng numeric shade không có mang tính ngữ nghĩa (semantic) meaning business. Một hệ thống thiết kế (design system) lớn nên bổ sung mang tính ngữ nghĩa (semantic) tokens như action, surface, danger thay vì để mọi component tự chọn palette.
+Nhưng numeric shade không có mang tính ý nghĩa (semantic meaning / 의미적 뜻) nghiệp vụ (business / 비즈니스). Một hệ thống thiết kế (design system) lớn nên bổ sung mang tính ngữ nghĩa (semantic / 의미적) tokens như hành động (action / 동작), surface, danger thay vì để mọi thành phần (component / 컴포넌트) tự chọn palette.
 
 ---
 
@@ -1826,7 +1829,7 @@ Arbitrary:
 bg-pink-500/[71.37%]
 ```
 
-Alpha modifier giúp tránh cần tạo riêng hàng loạt opacity color token.
+Alpha modifier giúp tránh cần tạo riêng hàng loạt opacity color đơn vị từ (token / 토큰).
 
 ---
 
@@ -1858,24 +1861,24 @@ map khóa–giá trị (map) tới background-size, background-position, backgro
 >
 ```
 
-Nếu background image URL là one-off:
+Nếu background ảnh (image / 이미지) URL là one-off:
 
 ```html
 <div class="bg-[url('/images/hero.webp')]">
 ```
 
-Nhưng với dynamic URL từ API, inline style/CSS biến (variable) có thể thích hợp hơn source-generated arbitrary class.
+Nhưng với động (dynamic / 동적) URL từ API, inline style/CSS biến (variable) có thể thích hợp hơn source-generated arbitrary lớp (class / 클래스).
 
 ---
 
-## 64. Gradient
+## 64. độ dốc (gradient / 기울기)
 
-Tailwind hỗ trợ gradient các tiện ích (utilities) và gradient color stops. Tư duy quan trọng không phải thuộc mọi tên class mà hiểu:
-- gradient là `background-image`,
-- direction/shape là hàm (function) argument,
+Tailwind hỗ trợ độ dốc (gradient / 기울기) các tiện ích (utilities) và độ dốc (gradient / 기울기) color stops. Tư duy quan trọng không phải thuộc mọi tên lớp (class / 클래스) mà hiểu:
+- độ dốc (gradient / 기울기) là `background-image`,
+- direction/shape là hàm (function / 함수) argument,
 - from/via/to xác định color stops.
 
-Một gradient UI nên dùng token/mang tính ngữ nghĩa (semantic) colors nếu là part của brand system, không hard-code arbitrary color khắp component.
+Một độ dốc (gradient / 기울기) UI nên dùng đơn vị từ (token / 토큰)/mang tính ngữ nghĩa (semantic / 의미적) colors nếu là part của brand hệ thống (system / 시스템), không hard-code arbitrary color khắp thành phần (component / 컴포넌트).
 
 ---
 
@@ -1936,7 +1939,7 @@ Có directional/logical corner các tiện ích (utilities). Khi app cần RTL, 
 
 ## 67. Outline và focus
 
-Accessible focus pattern:
+Accessible focus mẫu (pattern / 패턴):
 
 ```html
 <button
@@ -1948,7 +1951,7 @@ Accessible focus pattern:
 >
 ```
 
-`focus-visible` khác `focus`: browser cố chỉ hiển thị focus treatment khi input modality phù hợp, ví dụ keyboard navigation, thay vì mọi mouse click.
+`focus-visible` khác `focus`: trình duyệt (browser / 브라우저) cố chỉ hiển thị focus treatment khi đầu vào (input / 입력) modality phù hợp, ví dụ keyboard điều hướng (navigation / 내비게이션), thay vì mọi mouse click.
 
 Không viết:
 
@@ -1956,13 +1959,13 @@ Không viết:
 outline-none
 ```
 
-mà không có replacement chỉ báo tiêu điểm (focus indicator). Làm mất focus visible là khả năng tiếp cận (accessibility) regression.
+mà không có replacement chỉ báo tiêu điểm (focus indicator). Làm mất focus visible là khả năng tiếp cận (accessibility / 접근성) regression.
 
 ---
 
 ## 68. Ring các tiện ích (utilities)
 
-Tailwind có `ring-*`, nhưng CSS không có thuộc tính (property) tên `ring`. Tailwind implement ring bằng shadow/custom các thuộc tính (properties).
+Tailwind có `ring-*`, nhưng CSS không có thuộc tính (property / 속성) tên `ring`. Tailwind implement ring bằng shadow/custom các thuộc tính (properties).
 
 Ví dụ:
 
@@ -1970,7 +1973,7 @@ Ví dụ:
 <div class="ring-1 ring-black/10">
 ```
 
-Card subtle border-like effect rất đẹp bằng ring.
+Card subtle border-like tác động (effect / 효과) rất đẹp bằng ring.
 
 Focus có thể dùng ring:
 
@@ -1978,7 +1981,7 @@ Focus có thể dùng ring:
 <input class="focus:ring-2 focus:ring-blue-500/30">
 ```
 
-Nhưng outline có lợi thế mang tính ngữ nghĩa (semantic)/direct và không bị box-shadow composition ảnh hưởng giống ring. Senior chọn theo design/interaction context.
+Nhưng outline có lợi thế mang tính ngữ nghĩa (semantic / 의미적)/direct và không bị box-shadow composition ảnh hưởng giống ring. cấp cao (senior / 시니어) chọn theo thiết kế (design / 설계)/tương tác (interaction / 상호작용) ngữ cảnh (context / 맥락).
 
 ---
 
@@ -1994,7 +1997,7 @@ shadow-2xl
 shadow-none
 ```
 
-Shadow mô tả elevation hoặc visual separation. Đừng dùng càng lớn càng “premium”. Một hệ thống thiết kế (design system) nên có elevation scale rõ.
+Shadow mô tả elevation hoặc visual separation. Đừng dùng càng lớn càng “premium”. Một hệ thống thiết kế (design system) nên có elevation quy mô (scale / 규모) rõ.
 
 Tint:
 
@@ -2005,15 +2008,15 @@ shadow-blue-500/20
 
 ---
 
-## 70. Text shadow
+## 70. văn bản (text / 텍스트) shadow
 
-Current Tailwind v4 có text-shadow tiện ích (utility) family. Nó map khóa–giá trị (map) trực tiếp tới CSS `text-shadow`.
+Hiện tại (current / 현재) Tailwind v4 có text-shadow tiện ích (utility) family. Nó map khóa–giá trị (map) trực tiếp tới CSS `text-shadow`.
 
 Use:
-- decorative display text,
-- text trên ảnh khó đọc.
+- decorative display văn bản (text / 텍스트),
+- văn bản (text / 텍스트) trên ảnh khó đọc.
 
-Không dùng heavy text shadow cho body text vì giảm readability.
+Không dùng heavy văn bản (text / 텍스트) shadow cho body văn bản (text / 텍스트) vì giảm readability.
 
 ---
 
@@ -2027,7 +2030,7 @@ opacity-100
 
 `opacity` áp cho toàn rendered subtree, không chỉ background.
 
-Nếu bạn muốn background trong suốt mà text vẫn opaque:
+Nếu bạn muốn background trong suốt mà văn bản (text / 텍스트) vẫn opaque:
 
 ```text
 bg-white/50
@@ -2039,7 +2042,7 @@ tốt hơn:
 opacity-50
 ```
 
-trên container.
+trên bộ chứa (container / 컨테이너).
 
 ---
 
@@ -2047,15 +2050,15 @@ trên container.
 
 Tailwind có `mix-blend-*`, `bg-blend-*`, `isolate`.
 
-`mix-blend-mode` cho element blend với backdrop. `isolation:isolate` tạo cô lập (isolation) context để giới hạn blending/stacking behavior.
+`mix-blend-mode` cho element blend với backdrop. `isolation:isolate` tạo cô lập (isolation) ngữ cảnh (context / 맥락) để giới hạn blending/stacking hành vi (behavior / 동작).
 
-Đây là advanced visual tool, không phải normal layout mechanism.
+Đây là advanced visual công cụ (tool / 도구), không phải normal bố cục (layout / 레이아웃) cơ chế (mechanism / 메커니즘).
 
 ---
 
 ## 73. Filters
 
-Common:
+Dùng chung (common / 공통):
 
 ```text
 blur-*
@@ -2071,7 +2074,7 @@ drop-shadow-*
 
 `drop-shadow` là filter dựa trên alpha shape của rendered element, khác `box-shadow` luôn dựa box.
 
-hiệu năng (performance) của filter lớn, đặc biệt blur trên vùng rộng/animate liên tục, có thể đáng kể. Test bằng DevTools thay vì assume.
+Hiệu năng (performance / 성능) của filter lớn, đặc biệt blur trên vùng rộng/animate liên tục, có thể đáng kể. kiểm thử (test / 테스트) bằng DevTools thay vì assume.
 
 ---
 
@@ -2092,24 +2095,24 @@ Glass UI:
 
 `backdrop-blur-*` blur nội dung **phía sau** element, không phải element itself.
 
-Backdrop filter có thể tốn render cost, đặc biệt trên vùng full-screen hoặc mobile. Use có chọn lọc.
+Backdrop filter có thể tốn kết xuất (render / 렌더링) chi phí (cost / 비용), đặc biệt trên vùng full-screen hoặc mobile. Use có chọn lọc.
 
 ---
 
 ## 75. Mask các tiện ích (utilities)
 
-Mask kiểm soát transparency bằng image/gradient/luminance. Nó khác `clip-path`: clip thường quyết định vùng visible cứng hơn, mask cho phép alpha gradient.
+Mask kiểm soát transparency bằng ảnh (image / 이미지)/độ dốc (gradient / 기울기)/luminance. Nó khác `clip-path`: clip thường quyết định vùng visible cứng hơn, mask cho phép alpha độ dốc (gradient / 기울기).
 
-Tailwind current docs có tiện ích (utility) families cho:
-- mask image,
-- size,
+Tailwind hiện tại (current / 현재) docs có tiện ích (utility) families cho:
+- mask ảnh (image / 이미지),
+- kích thước (size / 크기),
 - position,
 - repeat,
 - origin,
 - clip,
-- mode,
+- chế độ (mode / 모드),
 - composite,
-- type.
+- kiểu (type / 타입).
 
 Nếu một option hiếm không có named tiện ích (utility) bạn nhớ, thuộc tính tùy ý (arbitrary property):
 
@@ -2148,7 +2151,7 @@ Avatar:
 >
 ```
 
-Aspect ratio reserve shape của box; `object-cover` quyết định resource bên trong fit/crop như thế nào.
+Aspect ratio reserve shape của box; `object-cover` quyết định tài nguyên (resource / 자원) bên trong fit/crop như thế nào.
 
 ---
 
@@ -2156,9 +2159,9 @@ Aspect ratio reserve shape của box; `object-cover` quyết định resource b�
 
 Ảnh 4:3 đặt trong box 1:1.
 
-`object-cover` phóng resource đủ để phủ toàn box và crop phần dư.
+`object-cover` phóng tài nguyên (resource / 자원) đủ để phủ toàn box và crop phần dư.
 
-`object-contain` thu/phóng để toàn resource nhìn thấy, có thể để khoảng trống.
+`object-contain` thu/phóng để toàn tài nguyên (resource / 자원) nhìn thấy, có thể để khoảng trống.
 
 ```html
 <img class="size-20 object-cover">
@@ -2166,7 +2169,7 @@ Aspect ratio reserve shape của box; `object-cover` quyết định resource b�
 
 rất phù hợp thumbnail.
 
-Focal point:
+Focal điểm (point / 지점):
 
 ```text
 object-top
@@ -2184,14 +2187,14 @@ giúp kiểm soát vùng crop.
 <div class="size-10">
 ```
 
-là shorthand width + height cùng giá trị (value).
+là shorthand width + height cùng giá trị (value / 값).
 
 Use cực nhiều cho:
 - avatar,
 - icon button,
 - square placeholder.
 
-Nó không thay `aspect-square` hoàn toàn: `size-*` đặt cả hai dimension; `aspect-square` chỉ giữ ratio khi một dimension được quyết định bởi context.
+Nó không thay `aspect-square` hoàn toàn: `size-*` đặt cả hai dimension; `aspect-square` chỉ giữ ratio khi một dimension được quyết định bởi ngữ cảnh (context / 맥락).
 
 ---
 
@@ -2220,7 +2223,7 @@ stroke-1
 stroke-2
 ```
 
-Inline SVG style được bởi CSS. SVG dùng qua `<img src="icon.svg">` là replaced resource và internal SVG không được stylesheet document target giống inline SVG.
+Inline SVG style được bởi CSS. SVG dùng qua `<img src="icon.svg">` là replaced tài nguyên (resource / 자원) và nội bộ (internal / 내부) SVG không được biểu định kiểu (stylesheet / 스타일시트) document mục tiêu (target / 대상) giống inline SVG.
 
 ---
 
@@ -2233,17 +2236,17 @@ Wrapper responsive:
   <table class="min-w-full table-auto">
 ```
 
-`table-auto` dùng content-sensitive table layout. `table-fixed` cho column sizing predictable hơn khi table width đã constrained.
+`table-auto` dùng content-sensitive bảng (table / 테이블) bố cục (layout / 레이아웃). `table-fixed` cho column sizing predictable hơn khi bảng (table / 테이블) width đã constrained.
 
-`border-collapse` merge adjacent borders; `border-separate` giữ separate border model và có thể dùng `border-spacing-*`.
+`border-collapse` merge adjacent borders; `border-separate` giữ separate border mô hình (model / 모델) và có thể dùng `border-spacing-*`.
 
-Data table lớn nên ưu tiên mang tính ngữ nghĩa (semantic) `<table>`, `<thead>`, `<tbody>`, `<th>`, `<td>` thay vì recreate bằng div chỉ để styling dễ.
+Dữ liệu (data / 데이터) bảng (table / 테이블) lớn nên ưu tiên mang tính ngữ nghĩa (semantic / 의미적) `<table>`, `<thead>`, `<tbody>`, `<th>`, `<td>` thay vì recreate bằng div chỉ để styling dễ.
 
 ---
 
 ## 81. Multi-column và fragmentation
 
-Tailwind có `columns-*` cho CSS multi-column layout. Đây không phải Grid columns. Browser flow text/content từ cột này sang cột tiếp theo.
+Tailwind có `columns-*` cho CSS multi-column bố cục (layout / 레이아웃). Đây không phải Grid columns. trình duyệt (browser / 브라우저) luồng (flow / 흐름) văn bản (text / 텍스트)/content từ cột này sang cột tiếp theo.
 
 Fragmentation các tiện ích (utilities) như:
 
@@ -2253,11 +2256,11 @@ break-before-page
 break-after-page
 ```
 
-hữu ích cho print/editorial layout.
+hữu ích cho print/editorial bố cục (layout / 레이아웃).
 
 ---
 
-# PHẦN VIII — TRANSFORM, TRANSITION, ANIMATION
+# PHẦN VIII — TRANSFORM, chuyển tiếp (transition / 전이), ANIMATION
 
 ## 82. Translate
 
@@ -2282,9 +2285,9 @@ Classic absolute center:
 >
 ```
 
-Ở đây `left-1/2 top-1/2` đặt top-left point vào center parent, còn negative translate 50% own size kéo element về center thật.
+Ở đây `left-1/2 top-1/2` đặt top-left điểm (point / 지점) vào center parent, còn negative translate 50% own kích thước (size / 크기) kéo element về center thật.
 
-Nếu chỉ cần center normal layout, Grid:
+Nếu chỉ cần center normal bố cục (layout / 레이아웃), Grid:
 
 ```text
 grid place-items-center
@@ -2294,7 +2297,7 @@ thường đơn giản hơn.
 
 ---
 
-## 83. Scale, rotate, skew
+## 83. quy mô (scale / 규모), rotate, skew
 
 ```text
 scale-95
@@ -2305,7 +2308,7 @@ rotate-45
 skew-x-6
 ```
 
-Transform không giống layout sizing. Scale làm rendered element to/nhỏ nhưng normal layout space ban đầu thường không được reflow giống width/height.
+Transform không giống bố cục (layout / 레이아웃) sizing. quy mô (scale / 규모) làm rendered element to/nhỏ nhưng normal bố cục (layout / 레이아웃) không gian (space / 공간) ban đầu thường không được reflow giống width/height.
 
 Hover microinteraction:
 
@@ -2336,7 +2339,7 @@ transform-flat
 backface-hidden
 ```
 
-3D transform nên dùng cho purposeful interaction như flip card, carousel hoặc visual editor. Đây không phải thứ cần rải khắp normal form/dashboard.
+3D transform nên dùng cho purposeful tương tác (interaction / 상호작용) như flip card, carousel hoặc visual editor. Đây không phải thứ cần rải khắp normal form/dashboard.
 
 ---
 
@@ -2354,7 +2357,7 @@ zoom-(--preview-zoom)
 
 map khóa–giá trị (map) tới CSS `zoom`.
 
-`zoom` khác `transform: scale()` vì zoom ảnh hưởng layout metrics theo cách khác. Một document preview có thể hợp lý:
+`zoom` khác `transform: scale()` vì zoom ảnh hưởng bố cục (layout / 레이아웃) metrics theo cách khác. Một document preview có thể hợp lý:
 
 ```html
 <div class="zoom-(--preview-scale)">
@@ -2362,11 +2365,11 @@ map khóa–giá trị (map) tới CSS `zoom`.
 
 Nhưng responsive app không nên dùng zoom để “thu nhỏ desktop UI cho mobile”.
 
-CSS `zoom` cũng không phải browser user zoom. Không bao giờ cố chống lại user zoom vì khả năng tiếp cận (accessibility).
+CSS `zoom` cũng không phải trình duyệt (browser / 브라우저) người dùng (user / 사용자) zoom. Không bao giờ cố chống lại người dùng (user / 사용자) zoom vì khả năng tiếp cận (accessibility / 접근성).
 
 ---
 
-## 86. Transition thuộc tính (property)
+## 86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)
 
 Tailwind có:
 
@@ -2380,9 +2383,9 @@ transition-transform
 transition-none
 ```
 
-`transition-all` tiện nhưng quá rộng. Nếu width, top, filter hoặc expensive thuộc tính (property) vô tình thay đổi, tất cả đều animate.
+`transition-all` tiện nhưng quá rộng. Nếu width, top, filter hoặc expensive thuộc tính (property / 속성) vô tình thay đổi, tất cả đều animate.
 
-Senior thường chọn target rõ:
+Cấp cao (senior / 시니어) thường chọn mục tiêu (target / 대상) rõ:
 
 ```html
 <button
@@ -2409,15 +2412,15 @@ ease-out
 ease-in-out
 ```
 
-Microinteraction UI thường ở khoảng nhanh. Modal/page transition có thể dài hơn.
+Microinteraction UI thường ở khoảng nhanh. Modal/page chuyển tiếp (transition / 전이) có thể dài hơn.
 
-Không có “thời lượng chuẩn Tailwind” cho mọi UX. Design motion system nên consistent.
+Không có “thời lượng chuẩn Tailwind” cho mọi UX. thiết kế (design / 설계) motion hệ thống (system / 시스템) nên consistent.
 
 ---
 
 ## 88. Built-in animations
 
-Common:
+Dùng chung (common / 공통):
 
 ```text
 animate-spin
@@ -2441,7 +2444,7 @@ Skeleton:
 </div>
 ```
 
-Không phải animation nào cũng phải loop. Animation nên communicate trạng thái (state), không chỉ trang trí.
+Không phải animation nào cũng phải vòng lặp (loop / 루프). Animation nên communicate trạng thái (state / 상태), không chỉ trang trí.
 
 ---
 
@@ -2472,7 +2475,7 @@ Use:
 <div class="animate-fade-in">
 ```
 
-Theme token cho animation biến animation name/giá trị (value) thành reusable tiện ích (utility) API.
+Theme đơn vị từ (token / 토큰) cho animation biến animation name/giá trị (value / 값) thành reusable tiện ích (utility) API.
 
 ---
 
@@ -2495,9 +2498,9 @@ Nếu motion chỉ là decoration, giảm/tắt nó cho người dùng đã yêu
 
 ---
 
-# PHẦN IX — FORMS VÀ INTERACTION
+# PHẦN IX — FORMS VÀ tương tác (interaction / 상호작용)
 
-## 91. Cursor không tạo ngữ nghĩa (semantics)
+## 91. Cursor không tạo ngữ nghĩa (semantics / 의미론)
 
 ```text
 cursor-pointer
@@ -2525,7 +2528,7 @@ nếu nó thật sự là button.
 </button>
 ```
 
-mang tính ngữ nghĩa (semantic) HTML mang keyboard behavior, khả năng tiếp cận (accessibility) role và form ngữ nghĩa (semantics) mà class không tạo được.
+mang tính ngữ nghĩa (semantic / 의미적) HTML mang keyboard hành vi (behavior / 동작), khả năng tiếp cận (accessibility / 접근성) role và form ngữ nghĩa (semantics / 의미론) mà lớp (class / 클래스) không tạo được.
 
 ---
 
@@ -2538,7 +2541,7 @@ pointer-events-auto
 
 `pointer-events-none` khiến element không nhận pointer targeting.
 
-Nó không phải mang tính ngữ nghĩa (semantic) disabled. Một button disabled nên có:
+Nó không phải mang tính ngữ nghĩa (semantic / 의미적) disabled. Một button disabled nên có:
 
 ```html
 <button
@@ -2550,11 +2553,11 @@ Nó không phải mang tính ngữ nghĩa (semantic) disabled. Một button disa
 >
 ```
 
-`disabled` attribute quyết định behavior; Tailwind chỉ style trạng thái (state) đó.
+`disabled` attribute quyết định hành vi (behavior / 동작); Tailwind chỉ style trạng thái (state / 상태) đó.
 
 ---
 
-## 93. User select
+## 93. người dùng (user / 사용자) select
 
 ```text
 select-none
@@ -2563,18 +2566,18 @@ select-all
 select-auto
 ```
 
-`select-none` hợp lý cho drag handle/icon control. Không disable selection toàn page vì user có thể cần copy text.
+`select-none` hợp lý cho drag handle/icon điều khiển (control / 제어). Không disable selection toàn page vì người dùng (user / 사용자) có thể cần bản sao (copy / 복사) văn bản (text / 텍스트).
 
 ---
 
-## 94. Appearance và native controls
+## 94. Appearance và bản địa (native / 네이티브) controls
 
 ```text
 appearance-none
 appearance-auto
 ```
 
-`appearance-none` loại bỏ native skin của form control. Khi làm vậy, bạn nhận trách nhiệm style:
+`appearance-none` loại bỏ bản địa (native / 네이티브) skin của form điều khiển (control / 제어). Khi làm vậy, bạn nhận trách nhiệm style:
 - focus,
 - checked,
 - disabled,
@@ -2582,7 +2585,7 @@ appearance-auto
 - hover,
 - high-contrast.
 
-Đừng custom native controls sâu chỉ vì có thể.
+Đừng custom bản địa (native / 네이티브) controls sâu chỉ vì có thể.
 
 ---
 
@@ -2595,17 +2598,17 @@ appearance-auto
 >
 ```
 
-`accent-color` là cách rất hiệu quả để theme checkbox/radio/range native mà vẫn giữ native behavior.
+`accent-color` là cách rất hiệu quả để theme checkbox/radio/phạm vi (range / 범위) bản địa (native / 네이티브) mà vẫn giữ bản địa (native / 네이티브) hành vi (behavior / 동작).
 
-Nhiều case không cần recreate checkbox bằng div/SVG.
+Nhiều trường hợp (case / 사례) không cần recreate checkbox bằng div/SVG.
 
 ---
 
-## 96. Field sizing
+## 96. trường dữ liệu (field / 필드) sizing
 
-Modern Tailwind có các tiện ích (utilities) liên quan `field-sizing`.
+Hiện đại (modern / 현대적) Tailwind có các tiện ích (utilities) liên quan `field-sizing`.
 
-`field-sizing: content` cho phép input/textarea trong mức hỗ trợ trình duyệt (browser support) phù hợp size theo content.
+`field-sizing: content` cho phép đầu vào (input / 입력)/textarea trong mức hỗ trợ trình duyệt (browser support / 브라우저 지원) phù hợp kích thước (size / 크기) theo content.
 
 Textarea:
 
@@ -2619,7 +2622,7 @@ Textarea:
 ></textarea>
 ```
 
-Bạn vẫn nên đặt min/max constraint để content không làm layout phát triển vô hạn.
+Bạn vẫn nên đặt min/max ràng buộc (constraint / 제약조건) để content không làm bố cục (layout / 레이아웃) phát triển vô hạn.
 
 ---
 
@@ -2638,11 +2641,11 @@ Textarea thường nên cho phép ít nhất vertical resize:
 <textarea class="resize-y">
 ```
 
-`resize-none` có thể làm UX kém nếu user cần mở rộng vùng nhập liệu.
+`resize-none` có thể làm UX kém nếu người dùng (user / 사용자) cần mở rộng vùng nhập liệu.
 
 ---
 
-# PHẦN X — SCROLL, TOUCH VÀ vùng nhìn (viewport) INTERACTION
+# PHẦN X — SCROLL, TOUCH VÀ vùng nhìn (viewport) tương tác (interaction / 상호작용)
 
 ## 98. Smooth scroll
 
@@ -2683,7 +2686,7 @@ Carousel:
 
 `scroll-snap-type` đặt trên vùng chứa cuộn (scroll container); `snap-start`, `snap-center`, `snap-end` đặt trên items.
 
-`mandatory` mạnh hơn `proximity`. Use carefully để không làm scrolling user khó chịu.
+`mandatory` mạnh hơn `proximity`. Use carefully để không làm scrolling người dùng (user / 사용자) khó chịu.
 
 ---
 
@@ -2701,13 +2704,13 @@ Nested modal scroller:
 >
 ```
 
-`overscroll-contain` giúp hạn chế truyền chuỗi cuộn (scroll chaining) ra page khi scroller bên trong đến boundary.
+`overscroll-contain` giúp hạn chế truyền chuỗi cuộn (scroll chaining) ra page khi scroller bên trong đến ranh giới (boundary / 경계).
 
 ---
 
 ## 101. Scroll margin và sticky headers
 
-Anchor target:
+Anchor mục tiêu (target / 대상):
 
 ```html
 <section
@@ -2716,13 +2719,13 @@ Anchor target:
 >
 ```
 
-Khi browser scroll tới `#billing`, `scroll-margin-top` tạo khoảng tránh sticky header che mất heading.
+Khi trình duyệt (browser / 브라우저) scroll tới `#billing`, `scroll-margin-top` tạo khoảng tránh sticky header che mất heading.
 
 Đây thường sạch hơn thêm fake padding/margin vào mọi section.
 
 ---
 
-## 102. Touch action
+## 102. Touch hành động (action / 동작)
 
 ```text
 touch-auto
@@ -2733,9 +2736,9 @@ touch-pinch-zoom
 touch-manipulation
 ```
 
-Custom carousel drag ngang trong page scroll dọc có thể dùng `touch-pan-y` để browser biết vertical scroll vẫn được phép.
+Custom carousel drag ngang trong page scroll dọc có thể dùng `touch-pan-y` để trình duyệt (browser / 브라우저) biết vertical scroll vẫn được phép.
 
-`touch-none` rất mạnh và có thể phá native scroll/zoom khả năng tiếp cận (accessibility). Chỉ dùng nếu component thực sự implement gesture thay thế đúng.
+`touch-none` rất mạnh và có thể phá bản địa (native / 네이티브) scroll/zoom khả năng tiếp cận (accessibility / 접근성). Chỉ dùng nếu thành phần (component / 컴포넌트) thực sự implement gesture thay thế đúng.
 
 ---
 
@@ -2768,9 +2771,9 @@ scrollbar-gutter-stable
 scrollbar-gutter-both
 ```
 
-`stable` reserve space cho classic scrollbar để giảm dịch chuyển bố cục (layout shift) khi scrollbar xuất hiện.
+`stable` reserve không gian (space / 공간) cho classic scrollbar để giảm dịch chuyển bố cục (layout shift) khi scrollbar xuất hiện.
 
-Scrollbar rendering vẫn phụ thuộc browser/OS. Tailwind không biến scrollbar thành pixel-identical cross-platform control.
+Scrollbar rendering vẫn phụ thuộc trình duyệt (browser / 브라우저)/OS. Tailwind không biến scrollbar thành pixel-identical cross-platform điều khiển (control / 제어).
 
 ---
 
@@ -2789,7 +2792,7 @@ Scrollbar rendering vẫn phụ thuộc browser/OS. Tailwind không biến scrol
 >
 ```
 
-Base style chạy ở mọi width trừ khi bị override.
+Cơ sở (base / 기반) style chạy ở mọi width trừ khi bị override.
 
 `md:grid-cols-2` nghĩa:
 
@@ -2802,11 +2805,11 @@ Nó không nghĩa “chỉ ở md”.
 
 `xl:grid-cols-4` tiếp tục override từ xl trở lên.
 
-Đây là mobile-first min-width model.
+Đây là mobile-first min-width mô hình (model / 모델).
 
 ---
 
-## 105. điểm ngắt (breakpoint) names không phải device names
+## 105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names
 
 Default Tailwind có:
 
@@ -2826,7 +2829,7 @@ md = tablet
 lg = laptop
 ```
 
-Layout nên chuyển khi **content cần**, không phải khi gặp tên device.
+Bố cục (layout / 레이아웃) nên chuyển khi **content cần**, không phải khi gặp tên thiết bị (device / 장치).
 
 Custom điểm ngắt (breakpoint):
 
@@ -2836,17 +2839,17 @@ Custom điểm ngắt (breakpoint):
 }
 ```
 
-Nếu team muốn mang tính ngữ nghĩa (semantic) điểm ngắt (breakpoint) name, có thể dùng, nhưng đừng tạo `iphone-15:` hoặc `ipad-pro:` nếu product không thật sự phụ thuộc một device cụ thể.
+Nếu nhóm (team / 팀) muốn mang tính ngữ nghĩa (semantic / 의미적) điểm ngắt (breakpoint) name, có thể dùng, nhưng đừng tạo `iphone-15:` hoặc `ipad-pro:` nếu sản phẩm (product / 제품) không thật sự phụ thuộc một thiết bị (device / 장치) cụ thể.
 
 ---
 
-## 106. Range responsive các biến thể (variants)
+## 106. phạm vi (range / 범위) responsive các biến thể (variants)
 
 ```html
 <div class="md:max-xl:grid">
 ```
 
-nghĩa là rule active từ `md` đến dưới `xl`.
+nghĩa là quy tắc (rule / 규칙) active từ `md` đến dưới `xl`.
 
 One-off:
 
@@ -2855,7 +2858,7 @@ min-[520px]:
 max-[760px]:
 ```
 
-Arbitrary điểm ngắt (breakpoint) hợp lý cho local exception, nhưng nếu cùng threshold lặp ở nhiều component, promote thành theme điểm ngắt (breakpoint) hoặc container token.
+Arbitrary điểm ngắt (breakpoint) hợp lý cho cục bộ (local / 로컬) exception, nhưng nếu cùng threshold lặp ở nhiều thành phần (component / 컴포넌트), promote thành theme điểm ngắt (breakpoint) hoặc bộ chứa (container / 컨테이너) đơn vị từ (token / 토큰).
 
 ---
 
@@ -2863,7 +2866,7 @@ Arbitrary điểm ngắt (breakpoint) hợp lý cho local exception, nhưng nế
 
 ## 107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)
 
-Một Card có thể được render:
+Một Card có thể được kết xuất (render / 렌더링):
 - full-width main content,
 - narrow sidebar,
 - modal,
@@ -2873,9 +2876,9 @@ Nếu Card chỉ nhìn vùng nhìn (viewport) bằng `md:`, nó có thể nghĩ 
 
 truy vấn vùng chứa (container query) hỏi:
 
-> container của component hiện rộng bao nhiêu?
+> bộ chứa (container / 컨테이너) của thành phần (component / 컴포넌트) hiện rộng bao nhiêu?
 
-Mark container:
+Mark bộ chứa (container / 컨테이너):
 
 ```html
 <div class="@container">
@@ -2899,7 +2902,7 @@ Child:
 
 ## 108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)
 
-Tailwind có các container size các biến thể (variants) như:
+Tailwind có các bộ chứa (container / 컨테이너) kích thước (size / 크기) các biến thể (variants) như:
 
 ```text
 @3xs
@@ -2912,9 +2915,9 @@ Tailwind có các container size các biến thể (variants) như:
 ...
 ```
 
-Current default container scale bắt đầu từ các size nhỏ như 16rem và tăng dần.
+Hiện tại (current / 현재) default bộ chứa (container / 컨테이너) quy mô (scale / 규모) bắt đầu từ các kích thước (size / 크기) nhỏ như 16rem và tăng dần.
 
-Bạn không cần thuộc từng số ngay. Điều quan trọng là hiểu không gian tên (namespace) `--container-*` quyết định truy vấn vùng chứa (container query) các biến thể (variants).
+Bạn không cần thuộc từng số ngay. Điều quan trọng là hiểu không gian tên (namespace / 네임스페이스) `--container-*` quyết định truy vấn vùng chứa (container query) các biến thể (variants).
 
 Custom:
 
@@ -2924,11 +2927,11 @@ Custom:
 }
 ```
 
-Sau đó API container có thể dùng token đó theo supported naming ngữ nghĩa (semantics).
+Sau đó API bộ chứa (container / 컨테이너) có thể dùng đơn vị từ (token / 토큰) đó theo supported naming ngữ nghĩa (semantics / 의미론).
 
 ---
 
-## 109. Container max/range
+## 109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)
 
 Bạn có thể viết:
 
@@ -2941,7 +2944,7 @@ Bạn có thể viết:
 
 Điều này cho component-local ranges.
 
-Đừng lạm dụng range nếu layout có thể được giải bằng intrinsic Grid/Flex.
+Đừng lạm dụng phạm vi (range / 범위) nếu bố cục (layout / 레이아웃) có thể được giải bằng intrinsic Grid/Flex.
 
 ---
 
@@ -2953,7 +2956,7 @@ Regular:
 @container
 ```
 
-tạo inline-size container, chủ yếu query width/inline dimension.
+tạo inline-size bộ chứa (container / 컨테이너), chủ yếu truy vấn (query / 쿼리) width/inline dimension.
 
 V4.3:
 
@@ -2961,7 +2964,7 @@ V4.3:
 @container-size
 ```
 
-tạo size container, cho phép dimension liên quan block-size/height.
+tạo kích thước (size / 크기) bộ chứa (container / 컨테이너), cho phép dimension liên quan block-size/height.
 
 Ví dụ:
 
@@ -2970,9 +2973,9 @@ Ví dụ:
   <div class="h-[50cqb]">
 ```
 
-`cqb` cần block size của query container.
+`cqb` cần khối (block / 블록) kích thước (size / 크기) của truy vấn (query / 쿼리) bộ chứa (container / 컨테이너).
 
-Size containment có ảnh hưởng sizing mạnh hơn inline containment, nên đừng đổi tất cả container sang `@container-size` chỉ vì nó “mạnh hơn”.
+Kích thước (size / 크기) containment có ảnh hưởng sizing mạnh hơn inline containment, nên đừng đổi tất cả bộ chứa (container / 컨테이너) sang `@container-size` chỉ vì nó “mạnh hơn”.
 
 ---
 
@@ -2984,9 +2987,9 @@ Size containment có ảnh hưởng sizing mạnh hơn inline containment, nên 
 <button class="bg-blue-600 hover:bg-blue-700">
 ```
 
-Tailwind generate hover bộ chọn (selector) cùng handling cho hover-capable environment.
+Tailwind generate hover bộ chọn (selector) cùng handling cho hover-capable môi trường (environment / 환경).
 
-Điều này quan trọng trên touch device vì “hover” không có cùng nghĩa như mouse desktop.
+Điều này quan trọng trên touch thiết bị (device / 장치) vì “hover” không có cùng nghĩa như mouse desktop.
 
 ---
 
@@ -3000,7 +3003,7 @@ focus-within:
 
 `focus:` style chính element khi focused.
 
-`focus-visible:` style khi browser xác định cần visible chỉ báo tiêu điểm (focus indicator).
+`focus-visible:` style khi trình duyệt (browser / 브라우저) xác định cần visible chỉ báo tiêu điểm (focus indicator).
 
 `focus-within:` style parent khi chính nó hoặc descendant focus.
 
@@ -3026,7 +3029,7 @@ active:
 
 map khóa–giá trị (map) tới `:active`, thường là thời điểm pointer/button đang được activate.
 
-Micro feedback:
+Micro phản hồi (feedback / 피드백):
 
 ```html
 <button class="active:scale-[.98]">
@@ -3051,19 +3054,19 @@ first-of-type:
 last-of-type:
 ```
 
-danh sách (list) divider:
+Danh sách (list / 목록) divider:
 
 ```html
 <li class="border-b last:border-b-0">
 ```
 
-Những bộ chọn (selector) này nên mô tả structure thật. Nếu trạng thái (state) business là “selected row”, hãy dùng `data-selected`/ARIA chứ không dùng `nth-child` để giả trạng thái (state).
+Những bộ chọn (selector) này nên mô tả cấu trúc (structure / 구조) thật. Nếu trạng thái (state / 상태) nghiệp vụ (business / 비즈니스) là “selected row”, hãy dùng `data-selected`/ARIA chứ không dùng `nth-child` để giả trạng thái (state / 상태).
 
 ---
 
 ## 115. `nth-*`
 
-Current Tailwind supports expressive nth các biến thể (variants).
+Hiện tại (current / 현재) Tailwind supports expressive nth các biến thể (variants).
 
 ```text
 nth-3:
@@ -3079,7 +3082,7 @@ nth-[2n+1_of_li]:
 
 map khóa–giá trị (map) tới CSS `:nth-child(...)` family.
 
-Use cho zebra striping hoặc layout pattern dựa structural order.
+Use cho zebra striping hoặc bố cục (layout / 레이아웃) mẫu (pattern / 패턴) dựa structural thứ tự (order / 순서).
 
 ---
 
@@ -3119,11 +3122,11 @@ Ví dụ:
 >
 ```
 
-`user-invalid` thường tạo UX tốt hơn `invalid` trong form vì tránh hiển thị lỗi quá sớm trước khi user interaction, tùy browser ngữ nghĩa (semantics).
+`user-invalid` thường tạo UX tốt hơn `invalid` trong form vì tránh hiển thị lỗi quá sớm trước khi người dùng (user / 사용자) tương tác (interaction / 상호작용), tùy trình duyệt (browser / 브라우저) ngữ nghĩa (semantics / 의미론).
 
 ---
 
-## 117. `group-*`: style child theo parent trạng thái (state)
+## 117. `group-*`: style child theo parent trạng thái (state / 상태)
 
 Parent:
 
@@ -3150,7 +3153,7 @@ Nếu không name, một child sâu có thể vô tình react với wrong ancest
 
 ---
 
-## 118. `peer-*`: style sibling theo sibling trạng thái (state)
+## 118. `peer-*`: style sibling theo sibling trạng thái (state / 상태)
 
 ```html
 <input
@@ -3168,9 +3171,9 @@ Nếu không name, một child sâu có thể vô tình react với wrong ancest
 </p>
 ```
 
-CSS sibling bộ chọn (selector) hoạt động từ element trước sang element sau, nên target phải xuất hiện sau peer trong DOM.
+CSS sibling bộ chọn (selector) hoạt động từ element trước sang element sau, nên mục tiêu (target / 대상) phải xuất hiện sau peer trong DOM.
 
-Nếu target cần style previous sibling, dùng parent `has-*` hoặc restructure DOM thay vì cố ép peer.
+Nếu mục tiêu (target / 대상) cần style previous sibling, dùng parent `has-*` hoặc restructure DOM thay vì cố ép peer.
 
 ---
 
@@ -3189,25 +3192,25 @@ các map khóa–giá trị (maps) conceptually tới:
 label:has(:checked)
 ```
 
-`:has()` giúp style parent dựa trên child trạng thái (state) mà không cần JS class toggle.
+`:has()` giúp style parent dựa trên child trạng thái (state / 상태) mà không cần JS lớp (class / 클래스) toggle.
 
 Use tốt cho:
-- checked control,
+- checked điều khiển (control / 제어),
 - invalid child,
 - optional slot existence,
 - focus child.
 
-Business trạng thái (state) không tồn tại trong DOM vẫn cần application logic.
+Nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) không tồn tại trong DOM vẫn cần ứng dụng (application / 애플리케이션) lô-gic (logic / 논리).
 
 ---
 
 ## 120. `in-*`
 
-`in-*` cho phép respond tới ancestor trạng thái (state) mà không mark explicit `.group`.
+`in-*` cho phép respond tới ancestor trạng thái (state / 상태) mà không mark tường minh (explicit / 명시적) `.group`.
 
 Điều này tiện trong shallow UI, nhưng càng nested càng khó biết ancestor nào kích hoạt.
 
-Senior preference: nếu ownership quan trọng, named `group` rõ hơn implicit `in-*`.
+Cấp cao (senior / 시니어) preference: nếu quyền sở hữu (ownership / 소유권) quan trọng, named `group` rõ hơn implicit `in-*`.
 
 ---
 
@@ -3217,11 +3220,11 @@ Senior preference: nếu ownership quan trọng, named `group` rõ hơn implicit
 <ul class="*:rounded-md *:px-3">
 ```
 
-`*:` target direct children.
+`*:` mục tiêu (target / 대상) direct children.
 
-`**:` target descendants sâu hơn.
+`**:` mục tiêu (target / 대상) descendants sâu hơn.
 
-Đây là convenience khi parent kiểm soát uniform child style. Nếu một child cần nhiều exception, class đặt trực tiếp trên child thường dễ reasoning hơn.
+Đây là convenience khi parent kiểm soát uniform child style. Nếu một child cần nhiều exception, lớp (class / 클래스) đặt trực tiếp trên child thường dễ lập luận (reasoning / 추론) hơn.
 
 ---
 
@@ -3237,13 +3240,13 @@ Senior preference: nếu ownership quan trọng, named `group` rõ hơn implicit
 >
 ```
 
-ARIA trạng thái (state) vừa có ngữ nghĩa (semantics) khả năng tiếp cận (accessibility) vừa là bộ chọn (selector) hook.
+ARIA trạng thái (state / 상태) vừa có ngữ nghĩa (semantics / 의미론) khả năng tiếp cận (accessibility / 접근성) vừa là bộ chọn (selector) hook.
 
-Nhưng không được set ARIA sai chỉ để style. Ví dụ random `<div aria-selected="true">` không nằm trong widget ngữ nghĩa (semantics) có thể misleading cho assistive technology.
+Nhưng không được set ARIA sai chỉ để style. Ví dụ random `<div aria-selected="true">` không nằm trong widget ngữ nghĩa (semantics / 의미론) có thể misleading cho assistive technology.
 
 ---
 
-## 123. Data các biến thể (variants)
+## 123. dữ liệu (data / 데이터) các biến thể (variants)
 
 ```html
 <div
@@ -3255,7 +3258,7 @@ Nhưng không được set ARIA sai chỉ để style. Ví dụ random `<div ari
 >
 ```
 
-Pattern senior:
+Mẫu (pattern / 패턴) cấp cao (senior / 시니어):
 
 ```text
 business/application state
@@ -3268,13 +3271,13 @@ Tailwind
 → presentation
 ```
 
-JS không cần hard-code visual CSS; Tailwind/CSS không cần biết business logic.
+JS không cần hard-code visual CSS; Tailwind/CSS không cần biết lô-gic nghiệp vụ (business logic / 비즈니스 로직).
 
 ---
 
-# PHẦN XIV — DARK MODE VÀ USER PREFERENCES
+# PHẦN XIV — DARK chế độ (mode / 모드) VÀ người dùng (user / 사용자) PREFERENCES
 
-## 124. Dark mode mặc định
+## 124. Dark chế độ (mode / 모드) mặc định
 
 ```html
 <div
@@ -3287,11 +3290,11 @@ JS không cần hard-code visual CSS; Tailwind/CSS không cần biết business 
 >
 ```
 
-By default, `dark:` có thể dựa trên system `prefers-color-scheme` theo Tailwind cấu hình (configuration)/default strategy hiện hành.
+By default, `dark:` có thể dựa trên hệ thống (system / 시스템) `prefers-color-scheme` theo Tailwind cấu hình (configuration / 구성)/default chiến lược (strategy / 전략) hiện hành.
 
 ---
 
-## 125. Manual dark mode
+## 125. Manual dark chế độ (mode / 모드)
 
 Nếu app có theme switcher:
 
@@ -3300,7 +3303,7 @@ Nếu app có theme switcher:
   (&:where(.dark, .dark *));
 ```
 
-Sau đó root:
+Sau đó gốc (root / 루트):
 
 ```html
 <html class="dark">
@@ -3308,7 +3311,7 @@ Sau đó root:
 
 activate `dark:*`.
 
-Data attribute biến thể (variant):
+Dữ liệu (data / 데이터) attribute biến thể (variant):
 
 ```css
 @custom-variant dark
@@ -3318,7 +3321,7 @@ Data attribute biến thể (variant):
   ));
 ```
 
-Root:
+Gốc (root / 루트):
 
 ```html
 <html data-theme="dark">
@@ -3326,16 +3329,16 @@ Root:
 
 ---
 
-## 126. System / Light / Dark ba trạng thái
+## 126. hệ thống (system / 시스템) / Light / Dark ba trạng thái
 
 Một app thường có:
 - light,
 - dark,
-- system.
+- hệ thống (system / 시스템).
 
-Tailwind không quản lý storage hay app preference cho bạn. JS/server xác định root trạng thái (state). Tailwind chỉ style theo condition.
+Tailwind không quản lý lưu trữ (storage / 저장소) hay app preference cho bạn. JS/máy chủ (server / 서버) xác định gốc (root / 루트) trạng thái (state / 상태). Tailwind chỉ style theo điều kiện (condition / 조건).
 
-kiến trúc (architecture):
+Kiến trúc (architecture / 아키텍처):
 
 ```text
 user preference
@@ -3345,13 +3348,13 @@ user preference
 → generated CSS
 ```
 
-Nếu root trạng thái (state) set quá muộn sau first paint, bạn có thể thấy flash sai theme. Đó là theme initialization issue, không phải Tailwind tiện ích (utility) issue.
+Nếu gốc (root / 루트) trạng thái (state / 상태) set quá muộn sau first paint, bạn có thể thấy flash sai theme. Đó là theme initialization issue, không phải Tailwind tiện ích (utility) issue.
 
 ---
 
 ## 127. `motion-reduce`, contrast, màu cưỡng bức (forced colors)
 
-Tailwind các biến thể (variants) cho user/environment preferences như:
+Tailwind các biến thể (variants) cho người dùng (user / 사용자)/môi trường (environment / 환경) preferences như:
 
 ```text
 motion-reduce:
@@ -3366,11 +3369,11 @@ pointer-fine:
 pointer-coarse:
 ```
 
-Use những condition phản ánh capability/preference thật thay vì đoán loại device.
+Use những điều kiện (condition / 조건) phản ánh năng lực (capability / 역량)/preference thật thay vì đoán loại thiết bị (device / 장치).
 
 ---
 
-# PHẦN XV — `@theme` VÀ token thiết kế (design tokens)
+# PHẦN XV — `@theme` VÀ đơn vị từ (token / 토큰) thiết kế (design tokens)
 
 ## 128. `@theme` khác `:root` như thế nào?
 
@@ -3382,7 +3385,7 @@ Normal CSS:
 }
 ```
 
-browser biết `--brand`, nhưng Tailwind không tự hiểu nó là color token để tạo `bg-brand`.
+Trình duyệt (browser / 브라우저) biết `--brand`, nhưng Tailwind không tự hiểu nó là color đơn vị từ (token / 토큰) để tạo `bg-brand`.
 
 Tailwind:
 
@@ -3392,15 +3395,15 @@ Tailwind:
 }
 ```
 
-`--color-*` thuộc color không gian tên (namespace), nên Tailwind vừa emit CSS biến (variable) vừa tạo relevant tiện ích (utility) APIs.
+`--color-*` thuộc color không gian tên (namespace / 네임스페이스), nên Tailwind vừa emit CSS biến (variable) vừa tạo relevant tiện ích (utility) APIs.
 
-Đây là lý do `@theme` không chỉ là “CSS các biến (variables) syntax khác”.
+Đây là lý do `@theme` không chỉ là “CSS các biến (variables) cú pháp (syntax / 문법) khác”.
 
 ---
 
-## 129. không gian tên (namespace) là API
+## 129. không gian tên (namespace / 네임스페이스) là API
 
-Một số không gian tên (namespace) quan trọng:
+Một số không gian tên (namespace / 네임스페이스) quan trọng:
 
 ```text
 --color-*
@@ -3420,13 +3423,13 @@ Một số không gian tên (namespace) quan trọng:
 --tab-size-*
 ```
 
-Bạn không cần nhớ mọi không gian tên (namespace) ngay. Nhưng cần hiểu pattern: không gian tên (namespace) quyết định tiện ích (utility) family.
+Bạn không cần nhớ mọi không gian tên (namespace / 네임스페이스) ngay. Nhưng cần hiểu mẫu (pattern / 패턴): không gian tên (namespace / 네임스페이스) quyết định tiện ích (utility) family.
 
 ---
 
-## 130. Primitive token và token ngữ nghĩa (semantic token)
+## 130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)
 
-Primitive:
+Thành phần nguyên thủy (primitive / 기본 요소):
 
 ```text
 blue-600
@@ -3434,7 +3437,7 @@ gray-200
 radius-lg
 ```
 
-mang tính ngữ nghĩa (semantic):
+mang tính ngữ nghĩa (semantic / 의미적):
 
 ```text
 action-primary
@@ -3444,7 +3447,7 @@ danger-bg
 danger-fg
 ```
 
-Primitive thuận tiện cho composition nhanh. mang tính ngữ nghĩa (semantic) thuận tiện cho rebrand/theme.
+Thành phần nguyên thủy (primitive / 기본 요소) thuận tiện cho composition nhanh. mang tính ngữ nghĩa (semantic / 의미적) thuận tiện cho rebrand/theme.
 
 Một hệ thống lớn có thể dùng:
 
@@ -3455,7 +3458,7 @@ Một hệ thống lớn có thể dùng:
 }
 ```
 
-và thêm thời gian chạy (runtime) mang tính ngữ nghĩa (semantic) vars:
+và thêm thời gian chạy (runtime / 런타임) mang tính ngữ nghĩa (semantic / 의미적) vars:
 
 ```css
 :root {
@@ -3466,7 +3469,7 @@ và thêm thời gian chạy (runtime) mang tính ngữ nghĩa (semantic) vars:
 
 ---
 
-## 131. Theme token không nhất thiết nên dùng cho mọi thuộc tính (property) role
+## 131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role
 
 Nếu:
 
@@ -3483,10 +3486,10 @@ Tailwind có thể expose:
 
 Nhưng hệ thống thiết kế (design system) có thể cần:
 - danger background nhạt,
-- danger text đậm,
+- danger văn bản (text / 텍스트) đậm,
 - danger border trung gian.
 
-Khi đó token nên chi tiết:
+Khi đó đơn vị từ (token / 토큰) nên chi tiết:
 
 ```text
 danger-bg
@@ -3494,11 +3497,11 @@ danger-fg
 danger-border
 ```
 
-Senior token design quan tâm ngữ nghĩa (semantics), không chỉ màu.
+Cấp cao (senior / 시니어) đơn vị từ (token / 토큰) thiết kế (design / 설계) quan tâm ngữ nghĩa (semantics / 의미론), không chỉ màu.
 
 ---
 
-## 132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)
+## 132. Reset không gian tên (namespace / 네임스페이스) cho strict hệ thống thiết kế (design system)
 
 ```css
 @theme {
@@ -3513,7 +3516,7 @@ Senior token design quan tâm ngữ nghĩa (semantics), không chỉ màu.
 
 Điều này remove default palette API và chỉ giữ approved colors.
 
-Lợi là dev không “chọn đại blue-500”. Hại là generic examples/library code dựa default palette có thể không work.
+Lợi là dev không “chọn đại blue-500”. Hại là generic examples/thư viện (library / 라이브러리) mã (code / 코드) dựa default palette có thể không công việc (work / 작업).
 
 Strict theme phù hợp hệ thống thiết kế (design system) mature hơn beginner app.
 
@@ -3549,7 +3552,7 @@ Khác với:
 }
 ```
 
-là một normal class, không nhất thiết tham gia Tailwind tiện ích (utility) resolution giống nhau.
+là một normal lớp (class / 클래스), không nhất thiết tham gia Tailwind tiện ích (utility) resolution giống nhau.
 
 ---
 
@@ -3558,12 +3561,12 @@ là một normal class, không nhất thiết tham gia Tailwind tiện ích (uti
 Custom tiện ích (utility) phù hợp khi concern:
 - atomic,
 - reusable,
-- project/core chưa có tiện ích (utility) rõ,
+- dự án (project / 프로젝트)/cốt lõi (core / 핵심) chưa có tiện ích (utility) rõ,
 - cần các biến thể (variants).
 
-Ví dụ `content-visibility` primitive là tiện ích (utility) tốt.
+Ví dụ `content-visibility` thành phần nguyên thủy (primitive / 기본 요소) là tiện ích (utility) tốt.
 
-Một `super-dashboard-card` chứa 15 các thuộc tính (properties), hover, child các bộ chọn (selectors) và trạng thái (state) thì không còn là atomic tiện ích (utility); đó là component/custom CSS.
+Một `super-dashboard-card` chứa 15 các thuộc tính (properties), hover, child các bộ chọn (selectors) và trạng thái (state / 상태) thì không còn là atomic tiện ích (utility); đó là thành phần (component / 컴포넌트)/custom CSS.
 
 ---
 
@@ -3582,12 +3585,12 @@ V4 cho phép tiện ích (utility) family:
 }
 ```
 
-Một definition có thể support:
-- theme token,
-- bare numeric giá trị (value),
+Một definition có thể hỗ trợ (support / 지원):
+- theme đơn vị từ (token / 토큰),
+- bare numeric giá trị (value / 값),
 - giá trị tùy ý (arbitrary value).
 
-`--value()` là **Tailwind build-time resolver**. Browser không biết hàm (function) này.
+`--value()` là **Tailwind build-time resolver**. trình duyệt (browser / 브라우저) không biết hàm (function / 함수) này.
 
 ---
 
@@ -3629,7 +3632,7 @@ Một candidate như:
 text-lg/7
 ```
 
-có main giá trị (value) `lg` và modifier `7`.
+có main giá trị (value / 값) `lg` và modifier `7`.
 
 Custom tiện ích (utility) cũng có thể dùng modifier cho secondary dimension.
 
@@ -3639,7 +3642,7 @@ Custom tiện ích (utility) cũng có thể dùng modifier cho secondary dimens
 
 ## 138. `@custom-variant`
 
-Nếu app có theme/trạng thái (state) repeated:
+Nếu app có theme/trạng thái (state / 상태) repeated:
 
 ```css
 @custom-variant theme-midnight
@@ -3652,7 +3655,7 @@ Use:
 <div class="theme-midnight:bg-black">
 ```
 
-Bạn đã biến một bộ chọn (selector) phức tạp thành mang tính ngữ nghĩa (semantic) biến thể (variant).
+Bạn đã biến một bộ chọn (selector) phức tạp thành mang tính ngữ nghĩa (semantic / 의미적) biến thể (variant).
 
 ---
 
@@ -3668,7 +3671,7 @@ Trong custom CSS:
 }
 ```
 
-V4.3 support compound/stacked biến thể (variant) forms tốt hơn, ví dụ:
+V4.3 hỗ trợ (support / 지원) compound/stacked biến thể (variant) forms tốt hơn, ví dụ:
 
 ```css
 @variant hover:focus {
@@ -3684,7 +3687,7 @@ và multiple:
 }
 ```
 
-`@variant` hữu ích khi bạn đã chọn custom CSS nhưng vẫn muốn reuse Tailwind biến thể (variant) logic.
+`@variant` hữu ích khi bạn đã chọn custom CSS nhưng vẫn muốn reuse Tailwind biến thể (variant) lô-gic (logic / 논리).
 
 ---
 
@@ -3698,13 +3701,13 @@ và multiple:
 
 `@apply` inline Tailwind các tiện ích (utilities) vào custom CSS bộ chọn (selector).
 
-Use case tốt:
+Use trường hợp (case / 사례) tốt:
 - third-party markup,
-- CMS/editor output,
+- CMS/editor đầu ra (output / 출력),
 - legacy bộ chọn (selector),
-- component style context không thể đặt tiện ích (utility) trực tiếp.
+- thành phần (component / 컴포넌트) style ngữ cảnh (context / 맥락) không thể đặt tiện ích (utility) trực tiếp.
 
-Use case xấu là tạo lại toàn bộ mang tính ngữ nghĩa (semantic) CSS kiến trúc (architecture) cũ:
+Use trường hợp (case / 사례) xấu là tạo lại toàn bộ mang tính ngữ nghĩa (semantic / 의미적) CSS kiến trúc (architecture / 아키텍처) cũ:
 
 ```css
 .btn-primary {
@@ -3712,13 +3715,13 @@ Use case xấu là tạo lại toàn bộ mang tính ngữ nghĩa (semantic) CSS
 }
 ```
 
-cho mọi button trong React app, rồi markup lại quay về `.btn-primary`. Nếu component abstraction đã tồn tại, hãy compose các tiện ích (utilities) trong component.
+cho mọi button trong React app, rồi markup lại quay về `.btn-primary`. Nếu thành phần (component / 컴포넌트) lớp trừu tượng (abstraction / 추상화) đã tồn tại, hãy compose các tiện ích (utilities) trong thành phần (component / 컴포넌트).
 
 ---
 
 ## 141. `@reference`
 
-Trong Vue/Svelte/CSS Modules, một style block riêng có thể không nhìn thấy custom theme/các tiện ích (utilities) của main stylesheet.
+Trong Vue/Svelte/CSS Modules, một style khối (block / 블록) riêng có thể không nhìn thấy custom theme/các tiện ích (utilities) của main biểu định kiểu (stylesheet / 스타일시트).
 
 ```css
 @reference "../../app.css";
@@ -3728,9 +3731,9 @@ Trong Vue/Svelte/CSS Modules, một style block riêng có thể không nhìn th
 }
 ```
 
-`@reference` cho Tailwind processing context biết definitions mà không duplicate CSS output.
+`@reference` cho Tailwind processing ngữ cảnh (context / 맥락) biết definitions mà không duplicate CSS đầu ra (output / 출력).
 
-Nếu chỉ cần một token:
+Nếu chỉ cần một đơn vị từ (token / 토큰):
 
 ```css
 .title {
@@ -3746,9 +3749,9 @@ thường đơn giản hơn.
 
 ## 142. Automatic phát hiện nguồn (source detection)
 
-Tailwind v4 scan project nhưng bỏ qua nhiều loại source không cần thiết như `node_modules`, binary, CSS file, ignored files.
+Tailwind v4 scan dự án (project / 프로젝트) nhưng bỏ qua nhiều loại nguồn (source / 소스) không cần thiết như `node_modules`, nhị phân (binary / 이진), CSS tệp (file / 파일), ignored files.
 
-Vì vậy dependency chứa Tailwind classes có thể cần explicit source registration.
+Vì vậy phụ thuộc (dependency / 의존성) chứa Tailwind classes có thể cần tường minh (explicit / 명시적) nguồn (source / 소스) registration.
 
 ---
 
@@ -3758,7 +3761,7 @@ Vì vậy dependency chứa Tailwind classes có thể cần explicit source reg
 @source "../node_modules/@acme/ui-lib";
 ```
 
-nói Tailwind scan package đó.
+nói Tailwind scan gói (package / 패키지) đó.
 
 Monorepo:
 
@@ -3768,24 +3771,24 @@ Monorepo:
 
 ---
 
-## 144. `source()` base path
+## 144. `source()` cơ sở (base / 기반) đường dẫn (path / 경로)
 
 ```css
 @import "tailwindcss"
   source("../src");
 ```
 
-Dùng khi current working directory của build khác application source root.
+Dùng khi hiện tại (current / 현재) working directory của bản dựng (build / 빌드) khác ứng dụng (application / 애플리케이션) nguồn (source / 소스) gốc (root / 루트).
 
 ---
 
-## 145. Ignore path
+## 145. Ignore đường dẫn (path / 경로)
 
 ```css
 @source not "../src/legacy";
 ```
 
-Nếu folder lớn không có Tailwind candidates, loại khỏi scan có thể giúp source ownership rõ và giảm work.
+Nếu folder lớn không có Tailwind candidates, loại khỏi scan có thể giúp nguồn (source / 소스) quyền sở hữu (ownership / 소유권) rõ và giảm công việc (work / 작업).
 
 ---
 
@@ -3799,9 +3802,9 @@ Nếu folder lớn không có Tailwind candidates, loại khỏi scan có thể 
 @source "../shared";
 ```
 
-Tắt automatic detection để bundle chỉ scan explicit roots.
+Tắt automatic detection để bundle chỉ scan tường minh (explicit / 명시적) roots.
 
-Rất hữu ích khi project có:
+Rất hữu ích khi dự án (project / 프로젝트) có:
 - admin.css,
 - storefront.css,
 - nhiều microfrontend.
@@ -3810,7 +3813,7 @@ Rất hữu ích khi project có:
 
 ## 147. danh sách ép giữ (safelist) bằng `@source inline()`
 
-Khi cần force generate class không nằm literal trong normal source, v4 dùng source inline API.
+Khi cần force generate lớp (class / 클래스) không nằm literal trong normal nguồn (source / 소스), v4 dùng nguồn (source / 소스) inline API.
 
 Ví dụ conceptual:
 
@@ -3824,9 +3827,9 @@ Nhưng broad danh sách ép giữ (safelist) làm Tailwind mất lợi ích usag
 
 ---
 
-# PHẦN XVIII — COMPONENT kiến trúc (architecture)
+# PHẦN XVIII — thành phần (component / 컴포넌트) kiến trúc (architecture / 아키텍처)
 
-## 148. Khi nào class dài là bình thường?
+## 148. Khi nào lớp (class / 클래스) dài là bình thường?
 
 Một button:
 
@@ -3854,13 +3857,13 @@ Một button:
 >
 ```
 
-không tự động là “bad” chỉ vì nhiều class. Bạn đang nhìn toàn bộ visual behavior ngay tại component.
+không tự động là “bad” chỉ vì nhiều lớp (class / 클래스). Bạn đang nhìn toàn bộ visual hành vi (behavior / 동작) ngay tại thành phần (component / 컴포넌트).
 
-Nó trở thành vấn đề khi same structure + same style + same các trạng thái (states) được copy vào nhiều nơi.
+Nó trở thành vấn đề khi same cấu trúc (structure / 구조) + same style + same các trạng thái (states) được bản sao (copy / 복사) vào nhiều nơi.
 
 ---
 
-## 149. Extract component chứ không nhất thiết extract CSS class
+## 149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)
 
 React:
 
@@ -3905,7 +3908,7 @@ function Button({
 }
 ```
 
-Consumer:
+Bên tiêu thụ (consumer / 소비자):
 
 ```jsx
 <Button variant="danger" size="lg">
@@ -3913,11 +3916,11 @@ Consumer:
 </Button>
 ```
 
-Consumer không cần biết Tailwind classes.
+Bên tiêu thụ (consumer / 소비자) không cần biết Tailwind classes.
 
 ---
 
-## 150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic)
+## 150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)
 
 Bad:
 
@@ -3931,7 +3934,7 @@ Better:
 <Button variant="danger">
 ```
 
-Nếu design đổi từ red-600 sang rose-700, caller không thay đổi.
+Nếu thiết kế (design / 설계) đổi từ red-600 sang rose-700, caller không thay đổi.
 
 Tương tự:
 
@@ -3945,11 +3948,11 @@ tốt hơn:
 padding="p-2"
 ```
 
-nếu component là public design-system component.
+nếu thành phần (component / 컴포넌트) là công khai (public / 공개) design-system thành phần (component / 컴포넌트).
 
 ---
 
-## 151. Class conflict
+## 151. lớp (class / 클래스) xung đột (conflict / 충돌)
 
 Bạn có thể compose:
 
@@ -3957,42 +3960,42 @@ Bạn có thể compose:
 px-4
 ```
 
-ở base và caller truyền:
+ở cơ sở (base / 기반) và caller truyền:
 
 ```text
 px-2
 ```
 
-Một lỗi tư duy là nghĩ class viết sau trong attribute chắc chắn thắng.
+Một lỗi tư duy là nghĩ lớp (class / 클래스) viết sau trong attribute chắc chắn thắng.
 
-CSS cơ chế phân tầng (cascade) dùng order của generated stylesheet, độ đặc hiệu (specificity) và layers, không đơn giản dùng token order trong HTML class attribute.
+CSS cơ chế phân tầng (cascade) dùng thứ tự (order / 순서) của generated biểu định kiểu (stylesheet / 스타일시트), độ đặc hiệu (specificity) và layers, không đơn giản dùng đơn vị từ (token / 토큰) thứ tự (order / 순서) trong HTML lớp (class / 클래스) attribute.
 
-Component library thường dùng conflict-aware merge helper để normalize Tailwind tiện ích (utility) groups nếu muốn caller override.
+Thành phần (component / 컴포넌트) thư viện (library / 라이브러리) thường dùng conflict-aware merge helper để normalize Tailwind tiện ích (utility) groups nếu muốn caller override.
 
 ---
 
 ## 152. `className` escape hatch
 
-Một reusable component thường vẫn nhận:
+Một reusable thành phần (component / 컴포넌트) thường vẫn nhận:
 
 ```jsx
 <Button className="w-full">
 ```
 
-mang tính ngữ nghĩa (semantic) biến thể (variant) quyết định core visual contract. `className` cho local layout override.
+mang tính ngữ nghĩa (semantic / 의미적) biến thể (variant) quyết định cốt lõi (core / 핵심) visual đặc tả hợp đồng (contract / 계약). `className` cho cục bộ (local / 로컬) bố cục (layout / 레이아웃) override.
 
 Bạn cần document:
 - caller override gì,
-- conflict merge thế nào,
-- internal classes hay caller classes ưu tiên.
+- xung đột (conflict / 충돌) merge thế nào,
+- nội bộ (internal / 내부) classes hay caller classes ưu tiên.
 
 ---
 
-# PHẦN XIX — khả năng tiếp cận (accessibility)
+# PHẦN XIX — khả năng tiếp cận (accessibility / 접근성)
 
-## 153. Tailwind không tạo khả năng tiếp cận (accessibility) ngữ nghĩa (semantics)
+## 153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)
 
-Tailwind có các tiện ích (utilities) tuyệt vời cho focus, motion, ARIA trạng thái (state), nhưng nó không biến:
+Tailwind có các tiện ích (utilities) tuyệt vời cho focus, motion, ARIA trạng thái (state / 상태), nhưng nó không biến:
 
 ```html
 <div class="cursor-pointer">
@@ -4000,7 +4003,7 @@ Tailwind có các tiện ích (utilities) tuyệt vời cho focus, motion, ARIA 
 
 thành button.
 
-mang tính ngữ nghĩa (semantic) HTML vẫn phải chọn đúng element.
+mang tính ngữ nghĩa (semantic / 의미적) HTML vẫn phải chọn đúng element.
 
 ---
 
@@ -4015,7 +4018,7 @@ mang tính ngữ nghĩa (semantic) HTML vẫn phải chọn đúng element.
 </button>
 ```
 
-`sr-only` dùng visually-hidden CSS pattern để text không nhìn thấy nhưng vẫn có accessible content.
+`sr-only` dùng visually-hidden CSS mẫu (pattern / 패턴) để văn bản (text / 텍스트) không nhìn thấy nhưng vẫn có accessible content.
 
 `not-sr-only` restore style.
 
@@ -4055,27 +4058,27 @@ Use:
 >
 ```
 
-Style không thay mang tính ngữ nghĩa (semantic) disabled.
+Style không thay mang tính ngữ nghĩa (semantic / 의미적) disabled.
 
-Nếu custom control không support native `disabled`, ARIA/business logic cần được thiết kế đúng chứ không chỉ thêm `opacity-50`.
+Nếu custom điều khiển (control / 제어) không hỗ trợ (support / 지원) bản địa (native / 네이티브) `disabled`, ARIA/lô-gic nghiệp vụ (business logic / 비즈니스 로직) cần được thiết kế đúng chứ không chỉ thêm `opacity-50`.
 
 ---
 
 ## 157. màu cưỡng bức (forced colors)
 
-độ tương phản cao (high contrast)/màu cưỡng bức (forced colors) mode có thể override colors.
+độ tương phản cao (high contrast)/màu cưỡng bức (forced colors) chế độ (mode / 모드) có thể override colors.
 
-Tailwind có forced-color related các biến thể (variants)/các tiện ích (utilities). Default nên cho browser adapt.
+Tailwind có forced-color related các biến thể (variants)/các tiện ích (utilities). Default nên cho trình duyệt (browser / 브라우저) adapt.
 
 Chỉ dùng `forced-color-adjust-none` targeted khi automatic override thực sự làm mất meaning.
 
 ---
 
-# PHẦN XX — hiệu năng (performance) VÀ gỡ lỗi (debugging)
+# PHẦN XX — hiệu năng (performance / 성능) VÀ gỡ lỗi (debugging)
 
-## 158. Tailwind CSS output không tỷ lệ trực tiếp với số class trong HTML
+## 158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML
 
-Nếu 100 buttons đều có `px-4`, generated CSS chỉ cần một `.px-4` tiện ích (utility) rule, không phải 100 copies.
+Nếu 100 buttons đều có `px-4`, generated CSS chỉ cần một `.px-4` tiện ích (utility) quy tắc (rule / 규칙), không phải 100 copies.
 
 Điều làm CSS tăng là số **unique candidates** và các biến thể (variants).
 
@@ -4100,9 +4103,9 @@ Một:
 w-[317px]
 ```
 
-không phải hiệu năng (performance) disaster.
+không phải hiệu năng (performance / 성능) disaster.
 
-Nhưng nếu data tạo:
+Nhưng nếu dữ liệu (data / 데이터) tạo:
 
 ```text
 w-[1px]
@@ -4113,7 +4116,7 @@ w-[1000px]
 
 thì bạn có hàng nghìn unique rules.
 
-Dynamic numeric data nên dùng CSS biến (variable).
+Động (dynamic / 동적) numeric dữ liệu (data / 데이터) nên dùng CSS biến (variable).
 
 ---
 
@@ -4127,11 +4130,11 @@ Use:
 - `@source not`,
 - `source(none)`.
 
-phát hiện nguồn (source detection) không chỉ là config; nó là bundle ownership kiến trúc (architecture).
+phát hiện nguồn (source detection) không chỉ là cấu hình (config / 설정); nó là bundle quyền sở hữu (ownership / 소유권) kiến trúc (architecture / 아키텍처).
 
 ---
 
-## 161. gỡ lỗi (debug) class không được generate
+## 161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate
 
 Hỏi lần lượt:
 
@@ -4145,13 +4148,13 @@ Theme token cần thiết có tồn tại không?
 Custom @utility có được register không?
 ```
 
-Nếu generated CSS không có rule, chưa cần gỡ lỗi (debug) browser layout.
+Nếu generated CSS không có quy tắc (rule / 규칙), chưa cần gỡ lỗi (debug / 디버그) trình duyệt (browser / 브라우저) bố cục (layout / 레이아웃).
 
 ---
 
-## 162. gỡ lỗi (debug) class có rule nhưng UI sai
+## 162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai
 
-Khi DevTools cho thấy tiện ích (utility) CSS tồn tại, chuyển mô hình tư duy (mental model) sang CSS:
+Khi DevTools cho thấy tiện ích (utility) CSS tồn tại, chuyển mô hình tư duy (mental model / 사고 모델) sang CSS:
 
 ```text
 computed style
@@ -4174,7 +4177,7 @@ browser support
 
 React dùng `className`.
 
-Static mapping pattern:
+Static ánh xạ (mapping / 매핑) mẫu (pattern / 패턴):
 
 ```jsx
 const sizeClasses = {
@@ -4184,9 +4187,9 @@ const sizeClasses = {
 };
 ```
 
-Tránh thời gian chạy (runtime) class synthesis.
+Tránh thời gian chạy (runtime / 런타임) lớp (class / 클래스) synthesis.
 
-Extract component khi combination lặp lại.
+Extract thành phần (component / 컴포넌트) khi combination lặp lại.
 
 ---
 
@@ -4194,7 +4197,7 @@ Extract component khi combination lặp lại.
 
 các tiện ích (utilities) trong template hoạt động tương tự HTML.
 
-Nếu dùng component-scoped `<style>` và `@apply`, bạn có thể cần `@reference` để Tailwind biết theme/custom APIs của stylesheet chính.
+Nếu dùng component-scoped `<style>` và `@apply`, bạn có thể cần `@reference` để Tailwind biết theme/custom APIs của biểu định kiểu (stylesheet / 스타일시트) chính.
 
 Nhưng đừng dùng scoped CSS + `@apply` chỉ để thay một color; CSS biến (variable) trực tiếp thường đơn giản hơn.
 
@@ -4202,7 +4205,7 @@ Nhưng đừng dùng scoped CSS + `@apply` chỉ để thay một color; CSS bi�
 
 ## 165. Tailwind + CSS Modules
 
-Bạn có thể dùng Tailwind trong markup và CSS Modules cho bộ chọn (selector) phức tạp/local style.
+Bạn có thể dùng Tailwind trong markup và CSS Modules cho bộ chọn (selector) phức tạp/cục bộ (local / 로컬) style.
 
 Không có luật bắt buộc phải chọn một trong hai.
 
@@ -4215,13 +4218,13 @@ CSS Module
 → theme token
 ```
 
-chỉ để đặt một `color`, abstraction đã quá nhiều.
+chỉ để đặt một `color`, lớp trừu tượng (abstraction / 추상화) đã quá nhiều.
 
 ---
 
 ## 166. Tailwind + SCSS
 
-Tailwind v4 là ưu tiên CSS (CSS-first), nên nhiều project Tailwind-heavy không còn cần SCSS.
+Tailwind v4 là ưu tiên CSS (CSS-first), nên nhiều dự án (project / 프로젝트) Tailwind-heavy không còn cần SCSS.
 
 Nếu vẫn dùng SCSS, phân trách nhiệm rõ:
 
@@ -4233,7 +4236,7 @@ SCSS
 → compile-time maps/functions/mixins nếu project thực sự cần
 ```
 
-Đừng maintain cùng một color token độc lập ở:
+Đừng maintain cùng một color đơn vị từ (token / 토큰) độc lập ở:
 - Sass map khóa–giá trị (map),
 - Tailwind `@theme`,
 - CSS `:root`
@@ -4266,7 +4269,7 @@ automatic source detection
 @source inline()
 ```
 
-chuyển đổi (migration) không chỉ đổi syntax; nó là cơ hội gom cấu hình (configuration) về ưu tiên CSS (CSS-first) kiến trúc (architecture).
+chuyển đổi (migration) không chỉ đổi cú pháp (syntax / 문법); nó là cơ hội gom cấu hình (configuration / 구성) về ưu tiên CSS (CSS-first) kiến trúc (architecture / 아키텍처).
 
 ---
 
@@ -4276,9 +4279,9 @@ chuyển đổi (migration) không chỉ đổi syntax; nó là cơ hội gom c�
 @config "../../tailwind.config.js";
 ```
 
-cho phép dùng legacy JS config trong v4 chuyển đổi (migration).
+cho phép dùng legacy JS cấu hình (config / 설정) trong v4 chuyển đổi (migration).
 
-Nó là bridge, không nhất thiết là target cuối cho greenfield project.
+Nó là cầu nối (bridge / 브리지), không nhất thiết là mục tiêu (target / 대상) cuối cho greenfield dự án (project / 프로젝트).
 
 ---
 
@@ -4294,7 +4297,7 @@ Project-owned simple custom tiện ích (utility)/biến thể (variant) nên c�
 
 ---
 
-## 170. Important syntax
+## 170. Important cú pháp (syntax / 문법)
 
 V4 preferred:
 
@@ -4303,13 +4306,13 @@ flex!
 bg-red-500!
 ```
 
-thay vì old leading `!` style trong code cũ.
+thay vì old leading `!` style trong mã (code / 코드) cũ.
 
 ---
 
-# PHẦN XXIII — các mẫu dùng trong production (production patterns)
+# PHẦN XXIII — các mẫu dùng trong môi trường vận hành (production / 운영 환경) (production patterns)
 
-## 171. Page container
+## 171. Page bộ chứa (container / 컨테이너)
 
 ```html
 <div
@@ -4326,21 +4329,21 @@ thay vì old leading `!` style trong code cũ.
 
 Đây là composition của:
 - fluid width,
-- max constraint,
+- max ràng buộc (constraint / 제약조건),
 - centering,
 - responsive gutters.
 
-Bạn không cần `.container-custom` nếu pattern chỉ dùng vài nơi, nhưng nếu app có universal page shell thì extract component là hợp lý.
+Bạn không cần `.container-custom` nếu mẫu (pattern / 패턴) chỉ dùng vài nơi, nhưng nếu app có universal page shell thì extract thành phần (component / 컴포넌트) là hợp lý.
 
 ---
 
-## 172. Stack
+## 172. ngăn xếp (stack / 스택)
 
 ```html
 <div class="flex flex-col gap-4">
 ```
 
-Stack là vertical composition primitive.
+Ngăn xếp (stack / 스택) là vertical composition thành phần nguyên thủy (primitive / 기본 요소).
 
 Use cho:
 - form,
@@ -4381,7 +4384,7 @@ Use cho:
 
 Simple viewport-responsive grid.
 
-Nếu component context thay đổi mạnh, cân nhắc truy vấn vùng chứa (container query) hoặc intrinsic auto-fit grid.
+Nếu thành phần (component / 컴포넌트) ngữ cảnh (context / 맥락) thay đổi mạnh, cân nhắc truy vấn vùng chứa (container query) hoặc intrinsic auto-fit grid.
 
 ---
 
@@ -4401,17 +4404,17 @@ Nếu component context thay đổi mạnh, cân nhắc truy vấn vùng chứa 
 >
 ```
 
-Senior checks:
+Cấp cao (senior / 시니어) checks:
 - sticky vùng chứa cuộn (scroll container),
-- backdrop hiệu năng (performance),
-- z-index contract,
-- dark mode token.
+- backdrop hiệu năng (performance / 성능),
+- z-index đặc tả hợp đồng (contract / 계약),
+- dark chế độ (mode / 모드) đơn vị từ (token / 토큰).
 
 ---
 
 ## 176. Dialog shell
 
-Use native `<dialog>` hoặc accessible dialog primitive.
+Use bản địa (native / 네이티브) `<dialog>` hoặc accessible dialog thành phần nguyên thủy (primitive / 기본 요소).
 
 ```html
 <dialog
@@ -4429,11 +4432,11 @@ Use native `<dialog>` hoặc accessible dialog primitive.
 >
 ```
 
-Tailwind style không tự cung cấp quản lý tiêu điểm (focus management) hay application trạng thái (state). Behavior vẫn thuộc native/platform/component layer.
+Tailwind style không tự cung cấp quản lý tiêu điểm (focus management) hay ứng dụng (application / 애플리케이션) trạng thái (state / 상태). hành vi (behavior / 동작) vẫn thuộc bản địa (native / 네이티브)/nền tảng (platform / 플랫폼)/thành phần (component / 컴포넌트) tầng (layer / 계층).
 
 ---
 
-## 177. Form field
+## 177. Form trường dữ liệu (field / 필드)
 
 ```html
 <label class="grid gap-1.5">
@@ -4462,7 +4465,7 @@ Tailwind style không tự cung cấp quản lý tiêu điểm (focus management
 </label>
 ```
 
-Mỗi class có responsibility rõ: box, spacing, focus, validation, disabled.
+Mỗi lớp (class / 클래스) có responsibility rõ: box, spacing, focus, kiểm tra hợp lệ (validation / 검증), disabled.
 
 ---
 
@@ -4491,15 +4494,15 @@ Mỗi class có responsibility rõ: box, spacing, focus, validation, disabled.
 </div>
 ```
 
-Đây là pattern production bạn nên thuộc vì nó kết hợp đúng định cỡ nội tại (intrinsic sizing) và flex behavior.
+Đây là mẫu (pattern / 패턴) môi trường vận hành (production / 운영 환경) bạn nên thuộc vì nó kết hợp đúng định cỡ nội tại (intrinsic sizing / 내재 크기 결정) và flex hành vi (behavior / 동작).
 
 ---
 
-# PHẦN XXIV — TƯ DUY SENIOR
+# PHẦN XXIV — TƯ DUY cấp cao (senior / 시니어)
 
 ## 179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?
 
-Dùng core tiện ích (utility) khi concern đã có vocabulary chuẩn:
+Dùng cốt lõi (core / 핵심) tiện ích (utility) khi concern đã có vocabulary chuẩn:
 
 ```text
 flex
@@ -4507,47 +4510,47 @@ gap-4
 rounded-lg
 ```
 
-Dùng giá trị tùy ý (arbitrary value) khi giá trị (value) thực sự one-off:
+Dùng giá trị tùy ý (arbitrary value) khi giá trị (value / 값) thực sự one-off:
 
 ```text
 top-[117px]
 ```
 
-Dùng `@theme` khi giá trị (value) lặp lại và thuộc design vocabulary:
+Dùng `@theme` khi giá trị (value / 값) lặp lại và thuộc thiết kế (design / 설계) vocabulary:
 
 ```text
 --radius-card
 --color-action
 ```
 
-Dùng CSS biến (variable) khi giá trị (value) phải thay đổi thời gian chạy (runtime).
+Dùng CSS biến (variable) khi giá trị (value / 값) phải thay đổi thời gian chạy (runtime / 런타임).
 
 Dùng `@utility` khi muốn thêm atomic reusable tiện ích (utility) family.
 
-Dùng plain CSS khi bộ chọn (selector)/behavior đọc dễ hơn bằng CSS.
+Dùng plain CSS khi bộ chọn (selector)/hành vi (behavior / 동작) đọc dễ hơn bằng CSS.
 
-Dùng component abstraction khi structure + style + trạng thái (state) lặp lại.
+Dùng thành phần (component / 컴포넌트) lớp trừu tượng (abstraction / 추상화) khi cấu trúc (structure / 구조) + style + trạng thái (state / 상태) lặp lại.
 
 ---
 
 ## 180. Tailwind không thay hệ thống thiết kế (design system)
 
-Tailwind cho rất nhiều class, nhưng một product tốt vẫn cần quyết định:
+Tailwind cho rất nhiều lớp (class / 클래스), nhưng một sản phẩm (product / 제품) tốt vẫn cần quyết định:
 - color roles,
-- typography scale,
+- typography quy mô (scale / 규모),
 - spacing rhythm,
 - border radius,
 - shadows,
-- component các biến thể (variants),
+- thành phần (component / 컴포넌트) các biến thể (variants),
 - các trạng thái (states).
 
-Nếu mọi developer tùy ý chọn `blue-500`, `blue-600`, `indigo-500`, `violet-600`, Tailwind vẫn compile hoàn hảo nhưng design không nhất quán.
+Nếu mọi nhà phát triển (developer / 개발자) tùy ý chọn `blue-500`, `blue-600`, `indigo-500`, `violet-600`, Tailwind vẫn compile hoàn hảo nhưng thiết kế (design / 설계) không nhất quán.
 
-Framework là tool; design governance là kiến trúc (architecture).
+Khung phần mềm (framework / 프레임워크) là công cụ (tool / 도구); thiết kế (design / 설계) quản trị (governance / 거버넌스) là kiến trúc (architecture / 아키텍처).
 
 ---
 
-## 181. Tailwind senior phải biết khi nào không dùng Tailwind
+## 181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind
 
 Một bộ chọn (selector):
 
@@ -4561,11 +4564,11 @@ Một bộ chọn (selector):
 
 có thể rõ hơn rất nhiều so với biến thể tùy ý (arbitrary variant) dài.
 
-Một third-party editor có hàng chục internal các bộ chọn (selectors) nên có integration stylesheet.
+Một third-party editor có hàng chục nội bộ (internal / 내부) các bộ chọn (selectors) nên có tích hợp (integration / 통합) biểu định kiểu (stylesheet / 스타일시트).
 
 Một custom CSS animation phức tạp có thể rõ hơn 20 các tiện ích (utilities).
 
-Senior Tailwind không theo ideology “không được viết CSS”. Senior chọn representation dễ hiểu, dễ test và dễ maintain nhất.
+Cấp cao (senior / 시니어) Tailwind không theo ideology “không được viết CSS”. cấp cao (senior / 시니어) chọn biểu diễn (representation / 표현) dễ hiểu, dễ kiểm thử (test / 테스트) và dễ maintain nhất.
 
 ---
 
@@ -4573,9 +4576,9 @@ Senior Tailwind không theo ideology “không được viết CSS”. Senior ch
 
 ## 182. Beginner phase
 
-Ở giai đoạn đầu, hãy tập trung layout và visual foundation. Bạn cần có thể nhìn một mockup và tự viết được spacing, sizing, typography, color, border, Flexbox, Grid và responsive các biến thể (variants) mà không liên tục copy từ example.
+Ở giai đoạn đầu, hãy tập trung bố cục (layout / 레이아웃) và visual foundation. Bạn cần có thể nhìn một mockup và tự viết được spacing, sizing, typography, color, border, Flexbox, Grid và responsive các biến thể (variants) mà không liên tục bản sao (copy / 복사) từ example.
 
-Một bài tập tốt là build ba component từ đầu: profile card, navbar và login form. Không dùng component library. Sau đó resize vùng nhìn (viewport) và sửa overflow bằng chính kiến thức sizing đã học.
+Một bài tập tốt là bản dựng (build / 빌드) ba thành phần (component / 컴포넌트) từ đầu: profile card, navbar và login form. Không dùng thành phần (component / 컴포넌트) thư viện (library / 라이브러리). Sau đó resize vùng nhìn (viewport) và sửa overflow bằng chính kiến thức sizing đã học.
 
 ---
 
@@ -4584,39 +4587,39 @@ Một bài tập tốt là build ba component từ đầu: profile card, navbar 
 Sau khi basic các tiện ích (utilities) đã tự nhiên, học:
 - các giá trị tùy ý (arbitrary values),
 - group/peer/has,
-- dark mode,
+- dark chế độ (mode / 모드),
 - các truy vấn vùng chứa (container queries),
 - `@theme`,
 - phát hiện nguồn (source detection),
-- component các biến thể (variants).
+- thành phần (component / 컴포넌트) các biến thể (variants).
 
-Ở giai đoạn này mục tiêu không còn là “làm cho đẹp”, mà là tạo component reusable trong nhiều context.
+Ở giai đoạn này mục tiêu không còn là “làm cho đẹp”, mà là tạo thành phần (component / 컴포넌트) reusable trong nhiều ngữ cảnh (context / 맥락).
 
 ---
 
-## 184. Senior phase
+## 184. cấp cao (senior / 시니어) phase
 
-Senior cần thiết kế:
-- mang tính ngữ nghĩa (semantic) component APIs,
-- theme/token vocabulary,
-- source ownership,
-- monorepo/package integration,
-- khả năng tiếp cận (accessibility) các trạng thái (states),
-- thời gian chạy (runtime) CSS biến (variable) bridge,
+Cấp cao (senior / 시니어) cần thiết kế:
+- mang tính ngữ nghĩa (semantic / 의미적) thành phần (component / 컴포넌트) APIs,
+- theme/đơn vị từ (token / 토큰) vocabulary,
+- nguồn (source / 소스) quyền sở hữu (ownership / 소유권),
+- monorepo/gói (package / 패키지) tích hợp (integration / 통합),
+- khả năng tiếp cận (accessibility / 접근성) các trạng thái (states),
+- thời gian chạy (runtime / 런타임) CSS biến (variable) cầu nối (bridge / 브리지),
 - custom các tiện ích (utilities)/các biến thể (variants),
-- CSS kiến trúc (architecture).
+- CSS kiến trúc (architecture / 아키텍처).
 
 Bạn cũng phải đọc DevTools generated CSS và giải thích vì sao một tiện ích (utility) đang thắng/thua trong cơ chế phân tầng (cascade).
 
 ---
 
-# PHẦN XXVI — SELF TEST
+# PHẦN XXVI — SELF kiểm thử (test / 테스트)
 
 ## 185. Kiểm tra kiến thức
 
-Sau khi học xong, bạn nên tự trả lời được bằng lời của mình: Tailwind khác inline style ở điểm nào; tại sao dynamic class string có thể không được generate; `@theme` khác normal CSS biến (variable) ra sao; tại sao `min-w-0` sửa ellipsis trong Flexbox; tại sao `md:` và `@md:` là hai loại responsive condition khác nhau; `group`, `peer`, `has` khác nhau theo bộ chọn (selector) relationship ra sao; `aria-*` và `data-*` nên dùng cho loại trạng thái (state) nào; khi nào giá trị tùy ý (arbitrary value) nên trở thành token; tại sao HTML class order không tự quyết định CSS winner; `@utility`, `@custom-variant`, `@apply`, `@reference` giải quyết các vấn đề khác nhau thế nào; và khi nào plain CSS tốt hơn Tailwind.
+Sau khi học xong, bạn nên tự trả lời được bằng lời của mình: Tailwind khác inline style ở điểm nào; tại sao động (dynamic / 동적) lớp (class / 클래스) string có thể không được generate; `@theme` khác normal CSS biến (variable) ra sao; tại sao `min-w-0` sửa ellipsis trong Flexbox; tại sao `md:` và `@md:` là hai loại responsive điều kiện (condition / 조건) khác nhau; `group`, `peer`, `has` khác nhau theo bộ chọn (selector) relationship ra sao; `aria-*` và `data-*` nên dùng cho loại trạng thái (state / 상태) nào; khi nào giá trị tùy ý (arbitrary value) nên trở thành đơn vị từ (token / 토큰); tại sao HTML lớp (class / 클래스) thứ tự (order / 순서) không tự quyết định CSS winner; `@utility`, `@custom-variant`, `@apply`, `@reference` giải quyết các vấn đề khác nhau thế nào; và khi nào plain CSS tốt hơn Tailwind.
 
-Nếu bạn chỉ nhớ class nhưng không trả lời được “CSS bên dưới đang làm gì?”, bạn chưa đạt senior. Nếu bạn có thể dự đoán behavior, thiết kế API component, gỡ lỗi (debug) generated CSS và chọn đúng abstraction, bạn đã có nền Tailwind rất mạnh.
+Nếu bạn chỉ nhớ lớp (class / 클래스) nhưng không trả lời được “CSS bên dưới đang làm gì?”, bạn chưa đạt cấp cao (senior / 시니어). Nếu bạn có thể dự đoán hành vi (behavior / 동작), thiết kế API thành phần (component / 컴포넌트), gỡ lỗi (debug / 디버그) generated CSS và chọn đúng lớp trừu tượng (abstraction / 추상화), bạn đã có nền Tailwind rất mạnh.
 
 ---
 
@@ -4626,7 +4629,7 @@ Tailwind CSS documentation:
 
 https://tailwindcss.com/docs
 
-Tailwind v4.3 release:
+Tailwind v4.3 bản phát hành (release / 릴리스):
 
 https://tailwindcss.com/blog/tailwindcss-v4-3
 
@@ -4658,21 +4661,21 @@ https://tailwindcss.com/docs/upgrade-guide
 
 ---
 
-# PHẦN XXVIII — UNDERLYING CSS MAPPING VÀ VERSION EVOLUTION
+# PHẦN XXVIII — UNDERLYING CSS ánh xạ (mapping / 매핑) VÀ phiên bản (version / 버전) EVOLUTION
 
-## 186. Đọc Tailwind theo CSS subsystem, không theo danh sách class
+## 186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)
 
-Tailwind chỉ dễ master khi class names được quy về CSS subsystem bên dưới. Khi thấy `flex items-center gap-4`, đừng dịch từng token rồi dừng lại. Hãy đọc: element trở thành flex ngữ cảnh định dạng (formatting context); direct children là các phần tử Flex (flex items); cross-axis alignment dùng `align-items:center`; spacing giữa items do `gap`; main-axis behavior vẫn phụ thuộc `flex-direction`, item basis/grow/shrink và không gian khả dụng (available space).
+Tailwind chỉ dễ master khi lớp (class / 클래스) names được quy về CSS subsystem bên dưới. Khi thấy `flex items-center gap-4`, đừng dịch từng đơn vị từ (token / 토큰) rồi dừng lại. Hãy đọc: element trở thành flex ngữ cảnh định dạng (formatting context / 서식 컨텍스트); direct children là các phần tử Flex (flex items); cross-axis alignment dùng `align-items:center`; spacing giữa items do `gap`; main-axis hành vi (behavior / 동작) vẫn phụ thuộc `flex-direction`, item basis/grow/shrink và không gian khả dụng (available space).
 
-Tương tự, `grid grid-cols-[16rem_minmax(0,1fr)]` không phải “hai class layout”. Nó tạo Grid ngữ cảnh định dạng (formatting context) và một explicit two-track template. Track thứ hai dùng `minmax(0,1fr)` để bỏ automatic intrinsic minimum của plain flexible track trong nhiều overflow cases. Nếu main content vẫn overflow, bạn tiếp tục kiểm nested grid/phần tử Flex (flex item) min-size chứ không tìm “Tailwind overflow class” ngẫu nhiên.
+Tương tự, `grid grid-cols-[16rem_minmax(0,1fr)]` không phải “hai lớp (class / 클래스) bố cục (layout / 레이아웃)”. Nó tạo Grid ngữ cảnh định dạng (formatting context / 서식 컨텍스트) và một tường minh (explicit / 명시적) two-track template. nhánh học (track / 트랙) thứ hai dùng `minmax(0,1fr)` để bỏ automatic intrinsic minimum của plain flexible nhánh học (track / 트랙) trong nhiều overflow cases. Nếu main content vẫn overflow, bạn tiếp tục kiểm nested grid/phần tử Flex (flex item) min-size chứ không tìm “Tailwind overflow lớp (class / 클래스)” ngẫu nhiên.
 
-`relative`/`absolute` phải đọc bằng khối chứa tham chiếu (containing block). `sticky top-0` phải đọc bằng vùng chứa cuộn (scroll container) + sticky inset + available scroll range. `truncate` phải đọc như `overflow:hidden + text-overflow:ellipsis + white-space:nowrap`, và trong Flex/Grid bạn còn phải đảm bảo item có thể co, thường bằng `min-w-0`. `h-dvh` phải đọc như dynamic vùng nhìn (viewport) sizing chứ không phải một Tailwind-specific full-screen mode.
+`relative`/`absolute` phải đọc bằng khối chứa tham chiếu (containing block / 컨테이닝 블록). `sticky top-0` phải đọc bằng vùng chứa cuộn (scroll container) + sticky inset + available scroll phạm vi (range / 범위). `truncate` phải đọc như `overflow:hidden + text-overflow:ellipsis + white-space:nowrap`, và trong Flex/Grid bạn còn phải đảm bảo item có thể co, thường bằng `min-w-0`. `h-dvh` phải đọc như động (dynamic / 동적) vùng nhìn (viewport) sizing chứ không phải một Tailwind-specific full-screen chế độ (mode / 모드).
 
-các biến thể trạng thái (state variants) cũng là CSS transformations. `hover:bg-*` tạo hover bộ chọn (selector); `focus-visible:*` dùng lớp giả (pseudo-class) cho keyboard-like focus indication; `group-hover:*` tạo ancestor-state bộ chọn (selector) relationship; `peer-invalid:*` dựa subsequent sibling relation; `has-*` dùng `:has()` relationship. Responsive các biến thể (variants) tạo at-rule conditions: `md:*` là vùng nhìn (viewport) truy vấn môi trường (media query), còn `@md:*` là truy vấn vùng chứa (container query). Khi biến thể (variant) không chạy, hãy gỡ lỗi (debug) relationship/condition trước khi đổi tiện ích (utility).
+các biến thể trạng thái (state variants) cũng là CSS transformations. `hover:bg-*` tạo hover bộ chọn (selector); `focus-visible:*` dùng lớp giả (pseudo-class) cho keyboard-like focus indication; `group-hover:*` tạo ancestor-state bộ chọn (selector) relationship; `peer-invalid:*` dựa subsequent sibling quan hệ (relation / 관계); `has-*` dùng `:has()` relationship. Responsive các biến thể (variants) tạo at-rule conditions: `md:*` là vùng nhìn (viewport) truy vấn môi trường (media query), còn `@md:*` là truy vấn vùng chứa (container query). Khi biến thể (variant) không chạy, hãy gỡ lỗi (debug / 디버그) relationship/điều kiện (condition / 조건) trước khi đổi tiện ích (utility).
 
-## 187. Mapping production bug từ Tailwind về CSS
+## 187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS
 
-Một bug Tailwind nên được phân loại thành hai nửa. Nếu class candidate không xuất hiện trong output, vấn đề nằm ở phát hiện nguồn (source detection), không gian tên chủ đề (theme namespace), tiện ích (utility) registration hoặc dynamic string construction. Nếu generated rule có mặt và khai báo (declaration) apply nhưng UI vẫn sai, vấn đề đã chuyển sang CSS/browser.
+Một bug Tailwind nên được phân loại thành hai nửa. Nếu lớp (class / 클래스) candidate không xuất hiện trong đầu ra (output / 출력), vấn đề nằm ở phát hiện nguồn (source detection), không gian tên chủ đề (theme namespace), tiện ích (utility) registration hoặc động (dynamic / 동적) string construction. Nếu generated quy tắc (rule / 규칙) có mặt và khai báo (declaration) apply nhưng UI vẫn sai, vấn đề đã chuyển sang CSS/trình duyệt (browser / 브라우저).
 
 ```text
 Tailwind/build side
@@ -4682,33 +4685,33 @@ Browser side
 generated rule → cascade → computed value → formatting context → layout → paint/composite
 ```
 
-Ví dụ `z-50` có trong computed style nhưng dropdown vẫn nằm dưới header. Tailwind đã hoàn thành nhiệm vụ; root cause có thể là parent ngữ cảnh xếp chồng (stacking context) hoặc top-layer behavior. `w-full` apply nhưng panel vẫn quá rộng; root cause có thể là khối chứa tham chiếu (containing block), padding, min-content hoặc flex minimum. `md:flex-row` có CSS rule nhưng layout vẫn column; kiểm media condition, competing `flex-col`, layer/cơ chế phân tầng (cascade) và component trạng thái (state).
+Ví dụ `z-50` có trong computed style nhưng dropdown vẫn nằm dưới header. Tailwind đã hoàn thành nhiệm vụ; nguyên nhân gốc (root cause / 근본 원인) có thể là parent ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) hoặc top-layer hành vi (behavior / 동작). `w-full` apply nhưng panel vẫn quá rộng; nguyên nhân gốc (root cause / 근본 원인) có thể là khối chứa tham chiếu (containing block / 컨테이닝 블록), padding, min-content hoặc flex minimum. `md:flex-row` có CSS quy tắc (rule / 규칙) nhưng bố cục (layout / 레이아웃) vẫn column; kiểm media điều kiện (condition / 조건), competing `flex-col`, tầng (layer / 계층)/cơ chế phân tầng (cascade) và thành phần (component / 컴포넌트) trạng thái (state / 상태).
 
-Cách gỡ lỗi (debug) này giúp bạn không đổ mọi lỗi styling cho framework.
+Cách gỡ lỗi (debug / 디버그) này giúp bạn không đổ mọi lỗi styling cho khung phần mềm (framework / 프레임워크).
 
-## 188. Tailwind version evolution — thay đổi programming model, không chỉ thêm tiện ích (utility)
+## 188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)
 
-Tailwind đời đầu phổ biến ưu tiên tiện ích (utility-first) như một authoring style nhưng generation vẫn gắn nhiều với pre-generated/configured stylesheet mindset. Sang thế hệ JIT (biên dịch tức thời), đặc biệt từ giai đoạn v2.x JIT (biên dịch tức thời) rồi v3, Tailwind chuyển mạnh sang **generate các tiện ích (utilities) theo candidates thực sự xuất hiện trong source**. Hệ quả lập trình quan trọng là các giá trị tùy ý (arbitrary values)/các biến thể (variants) trở nên practical hơn, build output dựa usage hơn, và complete static class strings trở thành contract giữa source code với trình biên dịch (compiler).
+Tailwind đời đầu phổ biến ưu tiên tiện ích (utility-first) như một authoring style nhưng generation vẫn gắn nhiều với pre-generated/configured biểu định kiểu (stylesheet / 스타일시트) mindset. Sang thế hệ JIT (biên dịch tức thời), đặc biệt từ giai đoạn v2.x JIT (biên dịch tức thời) rồi v3, Tailwind chuyển mạnh sang **generate các tiện ích (utilities) theo candidates thực sự xuất hiện trong nguồn (source / 소스)**. Hệ quả lập trình quan trọng là các giá trị tùy ý (arbitrary values)/các biến thể (variants) trở nên practical hơn, bản dựng (build / 빌드) đầu ra (output / 출력) dựa usage hơn, và complete static lớp (class / 클래스) strings trở thành đặc tả hợp đồng (contract / 계약) giữa mã nguồn (source code / 소스 코드) với trình biên dịch (compiler / 컴파일러).
 
-Tailwind v3 đưa JIT (biên dịch tức thời) engine thành mặc định và củng cố mô hình tư duy (mental model) `content → candidates → generated CSS`. Config vẫn chủ yếu JS-first qua `tailwind.config.js`, `content`, `theme.extend`, plugins và danh sách ép giữ (safelist). Nhiều codebase enterprise hiện tại vẫn ở generation này, nên bạn phải đọc được cả config-driven theme/plugin kiến trúc (architecture).
+Tailwind v3 đưa JIT (biên dịch tức thời) engine thành mặc định và củng cố mô hình tư duy (mental model / 사고 모델) `content → candidates → generated CSS`. cấu hình (config / 설정) vẫn chủ yếu JS-first qua `tailwind.config.js`, `content`, `theme.extend`, plugins và danh sách ép giữ (safelist). Nhiều codebase enterprise hiện tại vẫn ở generation này, nên bạn phải đọc được cả config-driven theme/plugin kiến trúc (architecture / 아키텍처).
 
-Tailwind v4 là thay đổi kiến trúc (architecture) lớn hơn syntax. Framework chuyển sang cấu hình ưu tiên CSS (CSS-first configuration): `@import "tailwindcss"`, `@theme`, automatic phát hiện nguồn (source detection), `@source`, ưu tiên CSS (CSS-first) `@utility`/`@custom-variant`, native lớp phân tầng (cascade layer) integration và các biến chủ đề (theme variables) trở thành CSS các biến (variables) thực sự. Đây là thay đổi từ “JavaScript config điều khiển CSS generator” sang “CSS entrypoint vừa định nghĩa design vocabulary vừa điều khiển generator”. Khi migrate, bạn nên thiết kế lại ownership của theme/source/custom các tiện ích (utilities) thay vì giữ toàn bộ v3 mô hình tư duy (mental model) qua compatibility bridges.
+Tailwind v4 là thay đổi kiến trúc (architecture / 아키텍처) lớn hơn cú pháp (syntax / 문법). khung phần mềm (framework / 프레임워크) chuyển sang cấu hình ưu tiên CSS (CSS-first configuration): `@import "tailwindcss"`, `@theme`, automatic phát hiện nguồn (source detection), `@source`, ưu tiên CSS (CSS-first) `@utility`/`@custom-variant`, bản địa (native / 네이티브) lớp phân tầng (cascade layer) tích hợp (integration / 통합) và các biến chủ đề (theme variables) trở thành CSS các biến (variables) thực sự. Đây là thay đổi từ “JavaScript cấu hình (config / 설정) điều khiển CSS generator” sang “CSS điểm vào (entrypoint / 진입점) vừa định nghĩa thiết kế (design / 설계) vocabulary vừa điều khiển generator”. Khi migrate, bạn nên thiết kế lại quyền sở hữu (ownership / 소유권) của theme/nguồn (source / 소스)/custom các tiện ích (utilities) thay vì giữ toàn bộ v3 mô hình tư duy (mental model / 사고 모델) qua tính tương thích (compatibility / 호환성) bridges.
 
-Tailwind v4.2 và v4.3 tiếp tục mở rộng API theo CSS platform thay vì đổi core mô hình tư duy (mental model). v4.2 bổ sung logical thuộc tính (property) các tiện ích (utilities), `font-features-*` và first-party webpack integration. v4.3 bổ sung scrollbar các tiện ích (utilities), `@container-size`, `zoom-*`, `tab-*`, stacked/compound `@variant` và default các giá trị (values) cho functional các tiện ích (utilities). Tính đến 21/09/2026, Tailwind blog vẫn liệt kê **v4.3** là release framework mới nhất. Những feature này quan trọng vì chúng giảm custom plugin/CSS ở edge cases, nhưng cách học vẫn là tiện ích (utility) → CSS mechanism → browser behavior.
+Tailwind v4.2 và v4.3 tiếp tục mở rộng API theo CSS nền tảng (platform / 플랫폼) thay vì đổi cốt lõi (core / 핵심) mô hình tư duy (mental model / 사고 모델). v4.2 bổ sung logical thuộc tính (property / 속성) các tiện ích (utilities), `font-features-*` và first-party webpack tích hợp (integration / 통합). v4.3 bổ sung scrollbar các tiện ích (utilities), `@container-size`, `zoom-*`, `tab-*`, stacked/compound `@variant` và default các giá trị (values) cho functional các tiện ích (utilities). Tính đến 21/09/2026, Tailwind blog vẫn liệt kê **v4.3** là bản phát hành (release / 릴리스) khung phần mềm (framework / 프레임워크) mới nhất. Những tính năng (feature / 기능) này quan trọng vì chúng giảm custom plugin/CSS ở edge cases, nhưng cách học vẫn là tiện ích (utility) → CSS cơ chế (mechanism / 메커니즘) → trình duyệt (browser / 브라우저) hành vi (behavior / 동작).
 
 ## 189. chuyển đổi (migration) v3 → v4 theo responsibility
 
-Đừng migrate bằng mapping syntax một-một. Hãy nhóm theo responsibility. Theme các giá trị (values)/config chuyển dần sang `@theme`; source ownership chuyển từ `content` glob sang automatic detection + `@source` khi cần; simple custom các tiện ích (utilities) chuyển sang `@utility`; repeated bộ chọn (selector) conditions có thể trở thành `@custom-variant`; legacy JS plugins giữ lại qua compatibility mechanism chỉ khi chúng thật sự cần JS logic.
+Đừng migrate bằng ánh xạ (mapping / 매핑) cú pháp (syntax / 문법) một-một. Hãy nhóm theo responsibility. Theme các giá trị (values)/cấu hình (config / 설정) chuyển dần sang `@theme`; nguồn (source / 소스) quyền sở hữu (ownership / 소유권) chuyển từ `content` glob sang automatic detection + `@source` khi cần; simple custom các tiện ích (utilities) chuyển sang `@utility`; repeated bộ chọn (selector) conditions có thể trở thành `@custom-variant`; legacy JS plugins giữ lại qua tính tương thích (compatibility / 호환성) cơ chế (mechanism / 메커니즘) chỉ khi chúng thật sự cần JS lô-gic (logic / 논리).
 
-Sau chuyển đổi (migration), kiểm generated CSS diff, Preflight (lớp reset nền của Tailwind) behavior, biến chủ đề (theme variable) output, source package scanning, arbitrary candidates, dark-mode strategy và hồi quy giao diện (visual regression). Một project “compile được” nhưng mất class từ shared package vẫn là chuyển đổi (migration) fail.
+Sau chuyển đổi (migration), kiểm generated CSS diff, Preflight (lớp reset nền của Tailwind) hành vi (behavior / 동작), biến chủ đề (theme variable) đầu ra (output / 출력), nguồn (source / 소스) gói (package / 패키지) scanning, arbitrary candidates, dark-mode chiến lược (strategy / 전략) và hồi quy giao diện (visual regression). Một dự án (project / 프로젝트) “compile được” nhưng mất lớp (class / 클래스) từ dùng chung (shared / 공유) gói (package / 패키지) vẫn là chuyển đổi (migration) thất bại (fail / 실패).
 
-## 190. mẫu dùng trong production (production pattern): mang tính ngữ nghĩa (semantic) giao diện thành phần (component API), Tailwind là implementation detail
+## 190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail
 
-Reusable component nên expose `variant="danger"`, `size="md"`, `density="compact"` thay vì `color="red-600"` hoặc `padding="p-4"`. Tailwind classes nằm trong static mapping để scanner nhìn thấy và để design implementation có thể thay đổi mà caller không đổi.
+Reusable thành phần (component / 컴포넌트) nên expose `variant="danger"`, `size="md"`, `density="compact"` thay vì `color="red-600"` hoặc `padding="p-4"`. Tailwind classes nằm trong static ánh xạ (mapping / 매핑) để scanner nhìn thấy và để thiết kế (design / 설계) hiện thực (implementation / 구현) có thể thay đổi mà caller không đổi.
 
-thời gian chạy (runtime) các giá trị (values) như progress width, user-selected color hoặc canvas coordinate nên đi qua CSS custom thuộc tính (property) với static Tailwind consumer. Điều này vừa scanner-safe vừa giữ CSS thời gian chạy (runtime) đúng chỗ. Theme lớn nên dùng mang tính ngữ nghĩa (semantic) CSS các biến (variables)/tokens thay vì lặp `dark:*` cho mọi thuộc tính (property) trên mọi component khi number of themes tăng.
+Thời gian chạy (runtime / 런타임) các giá trị (values) như progress width, user-selected color hoặc canvas coordinate nên đi qua CSS custom thuộc tính (property / 속성) với static Tailwind bên tiêu thụ (consumer / 소비자). Điều này vừa scanner-safe vừa giữ CSS thời gian chạy (runtime / 런타임) đúng chỗ. Theme lớn nên dùng mang tính ngữ nghĩa (semantic / 의미적) CSS các biến (variables)/tokens thay vì lặp `dark:*` cho mọi thuộc tính (property / 속성) trên mọi thành phần (component / 컴포넌트) khi number of themes tăng.
 
-khả năng tiếp cận (accessibility) vẫn nằm ngoài tiện ích (utility) syntax: native element/ARIA/trạng thái (state) ngữ nghĩa (semantics) phải đúng trước. Tailwind chỉ style `focus-visible`, `disabled`, `aria-*`, `motion-reduce` và forced-colors paths. hiệu năng (performance) cũng phải đo unique candidates, source scan boundaries, duplicate entrypoints và browser chi phí kết xuất (rendering cost); ưu tiên tiện ích (utility-first) không tự động làm app nhanh.
+Khả năng tiếp cận (accessibility / 접근성) vẫn nằm ngoài tiện ích (utility) cú pháp (syntax / 문법): bản địa (native / 네이티브) element/ARIA/trạng thái (state / 상태) ngữ nghĩa (semantics / 의미론) phải đúng trước. Tailwind chỉ style `focus-visible`, `disabled`, `aria-*`, `motion-reduce` và forced-colors paths. hiệu năng (performance / 성능) cũng phải đo unique candidates, nguồn (source / 소스) scan boundaries, duplicate entrypoints và trình duyệt (browser / 브라우저) chi phí kết xuất (rendering cost); ưu tiên tiện ích (utility-first) không tự động làm app nhanh.
 
 ---
 
@@ -4722,7 +4725,7 @@ p-4 = padding
 bg-blue-500 = blue
 ```
 
-rồi cố nhớ hàng nghìn class.
+rồi cố nhớ hàng nghìn lớp (class / 클래스).
 
 Cách học đúng là:
 
@@ -4733,12 +4736,14 @@ UI requirement
 → variants/token/component architecture
 ```
 
-Khi đạt senior, bạn nhìn:
+Khi đạt cấp cao (senior / 시니어), bạn nhìn:
 
 ```html
 <div class="min-w-0 flex-1 truncate">
 ```
 
-và không chỉ biết “đây là vài class Tailwind”. Bạn hiểu rằng Flexbox có kích thước tối thiểu tự động (automatic minimum size), `min-w-0` thay constraint, `flex-1` nhận không gian khả dụng (available space), còn `truncate` chỉ có thể ellipsis khi box thật sự được phép co.
+và không chỉ biết “đây là vài lớp (class / 클래스) Tailwind”. Bạn hiểu rằng Flexbox có kích thước tối thiểu tự động (automatic minimum size), `min-w-0` thay ràng buộc (constraint / 제약조건), `flex-1` nhận không gian khả dụng (available space), còn `truncate` chỉ có thể ellipsis khi box thật sự được phép co.
 
 Đó là mức hiểu Tailwind mà tài liệu này hướng tới.
+
+> **Bàn giao:** Sau **190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [TailwindCSS Master Supplement 2026](./TailwindCSS_Master_Supplement_2026.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

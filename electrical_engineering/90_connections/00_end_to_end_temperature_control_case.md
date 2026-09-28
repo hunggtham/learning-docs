@@ -1,110 +1,143 @@
-# End-to-End Case — Temperature Instrumentation and Control
+# End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)
 
-Case này nối cả chín nhánh trong một hệ nhỏ: đo nhiệt độ, biến đổi analog, sampling, điều khiển, power stage, firmware timing và hardware/software recovery. Số liệu là giả định để luyện reasoning; không dùng thay cho thiết kế safety-certified.
+> **Mạch đọc:** Đọc **End-to-End trường hợp (case / 사례) — Temperature Instrumentation and điều khiển (control / 제어)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. yêu cầu (requirement / 요구사항) và ranh giới (boundary / 경계)** sang **2. Sensor và analog front-end**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Requirement và boundary
+
+Trường hợp (case / 사례) này nối cả chín nhánh trong một hệ nhỏ: đo nhiệt độ, biến đổi analog, sampling, điều khiển, power stage, firmware timing và hardware/software khôi phục (recovery / 복구). Số liệu là giả định để luyện lập luận (reasoning / 추론); không dùng thay cho thiết kế safety-certified.
+
+## 1. yêu cầu (requirement / 요구사항) và ranh giới (boundary / 경계)
 
 Mục tiêu:
 
-- giữ nhiệt độ chamber ở reference 60 °C;
+- giữ nhiệt độ chamber ở tham chiếu (reference / 참조) 60 °C;
 - dải vận hành 0–100 °C;
-- steady-state error dưới 1 °C trong điều kiện nominal;
+- steady-state lỗi (error / 오류) dưới 1 °C trong điều kiện nominal;
 - không overshoot quá 5 °C;
-- sample sensor 100 Hz, update heater 10 Hz;
+- mẫu (sample / 표본) sensor 100 Hz, cập nhật (update / 업데이트) heater 10 Hz;
 - khi sensor invalid, over-temperature hoặc watchdog fault, heater phải về OFF.
 
-Boundary gồm sensor, analog front-end, ADC, MCU, PWM/MOSFET, heater, chamber và telemetry. Không đưa laptop/UI vào safety boundary; UI chỉ là observer.
+Ranh giới (boundary / 경계) gồm sensor, analog front-end, ADC, MCU, PWM/MOSFET, heater, chamber và telemetry. Không đưa laptop/UI vào an toàn (safety / 안전) ranh giới (boundary / 경계); UI chỉ là observer.
+
+
+> **Chuyển mạch:** Từ **1. yêu cầu (requirement / 요구사항) và ranh giới (boundary / 경계)**, ta sang **2. Sensor và analog front-end** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Sensor và analog front-end
 
-Giả sử sensor có output 0–1.0 V cho 0–100 °C. Chọn non-inverting amplifier gain 2.8 để output 0–2.8 V, chừa headroom dưới ADC 3.3 V.
+Giả sử sensor có đầu ra (output / 출력) 0–1.0 V cho 0–100 °C. Chọn non-inverting amplifier gain 2.8 để đầu ra (output / 출력) 0–2.8 V, chừa headroom dưới ADC 3.3 V.
 
 ADC 12-bit có LSB lý tưởng:
 
     LSB = 3.3 V / 4096 ≈ 0.806 mV
 
-Sau gain, 1 °C tương ứng 28 mV; lượng tử hóa lý tưởng tương đương khoảng 0.029 °C ở sensor output. Nhưng accuracy thật còn phụ thuộc sensor calibration, op-amp offset/drift, resistor ratio, reference và noise.
+Sau gain, 1 °C tương ứng 28 mV; lượng tử hóa lý tưởng tương đương khoảng 0.029 °C ở sensor đầu ra (output / 출력). Nhưng accuracy thật còn phụ thuộc sensor calibration, op-amp offset/drift, resistor ratio, tham chiếu (reference / 참조) và noise.
 
-Nếu sensor source impedance và ADC acquisition capacitor tạo settling error, cần buffer hoặc tăng acquisition time. Đây là lý do không thể chọn ADC chỉ bằng số bit.
+Nếu sensor nguồn (source / 소스) impedance và ADC acquisition capacitor tạo settling lỗi (error / 오류), cần buffer hoặc tăng acquisition thời gian (time / 시간). Đây là lý do không thể chọn ADC chỉ bằng số bit.
+
+
+> **Chuyển mạch:** Từ **2. Sensor và analog front-end**, ta sang **3. Sampling và filtering** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Sampling và filtering
 
-Thermal plant chậm nên signal hữu ích dưới 1 Hz, nhưng chọn sample 100 Hz để có margin và phát hiện fault. Analog low-pass đặt corner khoảng 5 Hz; digital filter có thể giảm noise thêm nhưng phải tính latency.
+Thermal plant chậm nên tín hiệu (signal / 신호) hữu ích dưới 1 Hz, nhưng chọn mẫu (sample / 표본) 100 Hz để có margin và phát hiện fault. Analog low-pass đặt corner khoảng 5 Hz; digital filter có thể giảm noise thêm nhưng phải tính độ trễ (latency / 지연 시간).
 
-Một moving average 10 mẫu ở 100 Hz thêm delay trung tâm khoảng 45 ms. Delay này nhỏ so với plant time constant 20 s nhưng phải ghi vào control model.
+Một moving average 10 mẫu ở 100 Hz thêm delay trung tâm khoảng 45 ms. Delay này nhỏ so với plant thời gian (time / 시간) constant 20 s nhưng phải ghi vào điều khiển (control / 제어) mô hình (model / 모델).
+
+
+> **Chuyển mạch:** Từ **3. Sampling và filtering**, ta sang **4. Plant và controller** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 4. Plant và controller
 
-Mô hình bậc nhất quanh operating point:
+Mô hình bậc nhất quanh operating điểm (point / 지점):
 
     G(s) = K / (τs + 1)
 
-Giả sử `τ = 20 s` và `K = 0.8 °C/% duty`. Controller chạy mỗi 100 ms, dùng PI với output giới hạn 0–100% duty. Integral anti-windup bắt buộc vì warm-up thường chạm saturation.
+Giả sử `τ = 20 s` và `K = 0.8 °C/% duty`. Controller chạy mỗi 100 ms, dùng PI với đầu ra (output / 출력) giới hạn 0–100% duty. Integral anti-windup bắt buộc vì warm-up thường chạm saturation.
 
-Khi reference đổi từ 25 lên 60 °C, heater saturate lúc đầu. Test phải đo rise time, overshoot, settling và integral state sau khi rời saturation; chỉ nhìn temperature cuối cùng là không đủ.
+Khi tham chiếu (reference / 참조) đổi từ 25 lên 60 °C, heater saturate lúc đầu. kiểm thử (test / 테스트) phải đo rise thời gian (time / 시간), overshoot, settling và integral trạng thái (state / 상태) sau khi rời saturation; chỉ nhìn temperature cuối cùng là không đủ.
+
+
+> **Chuyển mạch:** Từ **4. Plant và controller**, ta sang **5. Power stage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. Power stage
 
-Heater là tải điện trở 12 V, 2 A. Low-side N-MOSFET được điều khiển bằng PWM; vì tải không cảm, flyback diode không phải phần tử chính như với motor/relay, nhưng gate resistor, pull-down, current limit và thermal derating vẫn cần.
+Heater là tải điện trở 12 V, 2 A. Low-side N-MOSFET được điều khiển bằng PWM; vì tải không cảm, flyback diode không phải phần tử chính như với motor/relay, nhưng gate resistor, pull-down, hiện tại (current / 현재) limit và thermal derating vẫn cần.
 
-Power path phải có:
+Power đường dẫn (path / 경로) phải có:
 
 ```text
 12 V input → fuse/current limit → heater → MOSFET → return
 ```
 
-Independent thermal cutoff đặt ngoài MCU để xử lý MOSFET stuck-on hoặc firmware runaway. MOSFET temperature phải được tính từ conduction loss, switching loss và thermal resistance.
+Independent thermal cutoff đặt ngoài MCU để xử lý MOSFET stuck-on hoặc firmware runaway. MOSFET temperature phải được tính từ conduction mất mát (loss / 손실), switching mất mát (loss / 손실) và thermal resistance.
 
-## 6. Firmware state machine
+
+> **Chuyển mạch:** Từ **5. Power stage**, ta sang **6. Firmware máy trạng thái (state machine / 상태 머신)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 6. Firmware máy trạng thái (state machine / 상태 머신)
 
 ```text
 BOOT → SELF_TEST → IDLE → HEATING → HOLD
                   ↘ FAULT ← sensor/power/watchdog fault
 ```
 
-Các invariant:
+Các bất biến (invariant / 불변식):
 
-- heater chỉ được enable khi ADC/reference/clock self-test pass;
+- heater chỉ được enable khi ADC/tham chiếu (reference / 참조)/clock self-test pass;
 - duty luôn bị clamp trong 0–100%;
-- sensor range/rate/plausibility check fail thì vào FAULT;
-- FAULT phải tắt output trước khi ghi telemetry;
-- recovery cần explicit acknowledgement, không auto-retry vô hạn.
+- sensor phạm vi (range / 범위)/tỷ lệ (rate / 비율)/plausibility check thất bại (fail / 실패) thì vào FAULT;
+- FAULT phải tắt đầu ra (output / 출력) trước khi ghi telemetry;
+- khôi phục (recovery / 복구) cần tường minh (explicit / 명시적) acknowledgement, không auto-retry vô hạn.
 
-## 7. Timing và ownership
 
-Task 100 Hz đọc ADC và cập nhật filtered sample. Task 10 Hz chạy PI. ISR/DMA chỉ capture conversion-complete và publish buffer. Telemetry task chạy chậm hơn và không được block control task.
+> **Chuyển mạch:** Từ **6. Firmware máy trạng thái (state machine / 상태 머신)**, ta sang **7. Timing và quyền sở hữu (ownership / 소유권)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Timing budget mẫu:
+## 7. Timing và quyền sở hữu (ownership / 소유권)
 
-| Work | Period | WCET budget |
+Tác vụ (task / 작업) 100 Hz đọc ADC và cập nhật filtered mẫu (sample / 표본). tác vụ (task / 작업) 10 Hz chạy PI. ISR/DMA chỉ capture conversion-complete và publish buffer. Telemetry tác vụ (task / 작업) chạy chậm hơn và không được khối (block / 블록) điều khiển (control / 제어) tác vụ (task / 작업).
+
+Timing ngân sách (budget / 예산) mẫu:
+
+| công việc (work / 작업) | Period | WCET ngân sách (budget / 예산) |
 |---|---:|---:|
 | ADC/DMA handling | 10 ms | 0.2 ms |
 | filter + plausibility | 10 ms | 0.4 ms |
-| PI + PWM update | 100 ms | 0.5 ms |
+| PI + PWM cập nhật (update / 업데이트) | 100 ms | 0.5 ms |
 | telemetry | 1 s | 2 ms |
 
-Đây là budget, không phải average đo một lần. Cần trace ở clock, interrupt và queue saturation gần worst case.
+Đây là ngân sách (budget / 예산), không phải average đo một lần. Cần dấu vết (trace / 추적) ở clock, interrupt và hàng đợi (queue / 큐) saturation gần worst trường hợp (case / 사례).
+
+
+> **Chuyển mạch:** Từ **7. Timing và quyền sở hữu (ownership / 소유권)**, ta sang **8. Telemetry và diagnostics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Telemetry và diagnostics
 
-Mỗi record nên có timestamp, raw ADC, filtered temperature, reference, duty, state, fault code, watchdog counter, firmware version và sensor quality. Khi FAULT, ghi nguyên nhân đầu tiên và các fault đồng thời để tránh mất causal order.
+Mỗi bản ghi (record / 레코드) nên có timestamp, raw ADC, filtered temperature, tham chiếu (reference / 참조), duty, trạng thái (state / 상태), fault mã (code / 코드), watchdog counter, firmware phiên bản (version / 버전) và sensor chất lượng (quality / 품질). Khi FAULT, ghi nguyên nhân đầu tiên và các fault đồng thời để tránh mất nhân quả (causal / 인과적) thứ tự (order / 순서).
 
-## 9. Verification matrix
 
-| Scenario | Expected evidence |
+> **Chuyển mạch:** Từ **8. Telemetry và diagnostics**, ta sang **9. xác minh (verification / 확인) ma trận (matrix / 행렬)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 9. xác minh (verification / 확인) ma trận (matrix / 행렬)
+
+| Scenario | Expected bằng chứng (evidence / 증거) |
 |---|---|
-| Reference step 25→60 °C | rise/overshoot/settling trong budget |
-| Sensor open/short | FAULT, heater OFF, diagnostic code |
-| ADC stuck value | rate/plausibility detector hoạt động |
+| tham chiếu (reference / 참조) step 25→60 °C | rise/overshoot/settling trong ngân sách (budget / 예산) |
+| Sensor open/short | FAULT, heater OFF, diagnostic mã (code / 코드) |
+| ADC stuck giá trị (value / 값) | tỷ lệ (rate / 비율)/plausibility detector hoạt động |
 | MOSFET stuck-on | independent cutoff ngắt tải |
-| Watchdog timeout | reset cause lưu, output safe |
-| Queue/telemetry blocked | control deadline vẫn pass |
-| Brownout trong update | image cũ hoặc image mới hợp lệ, không boot dở |
-| Ambient/load thay đổi | stability và thermal margin còn đủ |
+| Watchdog hết thời gian chờ (timeout / 타임아웃) | reset cause lưu, đầu ra (output / 출력) safe |
+| hàng đợi (queue / 큐)/telemetry blocked | điều khiển (control / 제어) deadline vẫn pass |
+| Brownout trong cập nhật (update / 업데이트) | ảnh (image / 이미지) cũ hoặc ảnh (image / 이미지) mới hợp lệ, không boot dở |
+| Ambient/tải (load / 로드) thay đổi | stability và thermal margin còn đủ |
+
+
+> **Chuyển mạch:** Từ **9. xác minh (verification / 확인) ma trận (matrix / 행렬)**, ta sang **10. Kết luận thiết kế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 10. Kết luận thiết kế
 
-Case cho thấy bridge không phải chuỗi tuyến tính đơn giản. ADC accuracy ảnh hưởng control quality; filter latency ảnh hưởng phase margin; power fault cần hardware protection ngoài software; driver/telemetry phải biểu diễn uncertainty và state. Một end-to-end review phải đi qua cả signal, power, timing, control và recovery budget.
+Trường hợp (case / 사례) cho thấy cầu nối (bridge / 브리지) không phải chuỗi tuyến tính đơn giản. ADC accuracy ảnh hưởng điều khiển (control / 제어) chất lượng (quality / 품질); filter độ trễ (latency / 지연 시간) ảnh hưởng phase margin; power fault cần hardware protection ngoài software; driver/telemetry phải biểu diễn bất định (uncertainty / 불확실성) và trạng thái (state / 상태). Một end-to-end rà soát (review / 검토) phải đi qua cả tín hiệu (signal / 신호), power, timing, điều khiển (control / 제어) và khôi phục (recovery / 복구) ngân sách (budget / 예산).
+
+
+> **Chuyển mạch:** Từ **10. Kết luận thiết kế**, ta sang **Liên kết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Liên kết
 
@@ -116,3 +149,5 @@ Case cho thấy bridge không phải chuỗi tuyến tính đơn giản. ADC acc
 - [MCU real-time](../embedded_systems/00_mcu_runtime_real_time.md)
 - [Power protection](../power_electronics/00_switching_converters_protection.md)
 - [Driver contracts](../hardware_software_interfaces/00_register_bus_driver_contracts.md)
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 glossary vi en ko](./01_glossary_vi_en_ko.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

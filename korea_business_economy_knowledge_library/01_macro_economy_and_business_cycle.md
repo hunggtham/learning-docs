@@ -1,5 +1,8 @@
 # Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)
 
+> **Mạch đọc:** Đặt **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **GDP đo dòng giá trị gia tăng, không phải “tài sản của quốc gia”** sang **Giá trị gia tăng giúp tránh tính trùng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một công ty có thể được quản trị rất tốt nhưng vẫn chịu cú sốc từ lãi suất, đồng won, giá năng lượng, thương mại toàn cầu hoặc chu kỳ bán dẫn. **Kinh tế vĩ mô (macroeconomics / 거시경제학)** là cách nhìn nền kinh tế ở cấp hệ thống để hiểu những điều kiện chung đó.
 
 Mục tiêu của chương này không phải biến người đọc thành người dự báo. Mục tiêu là biết **biến vĩ mô nào đang thay đổi giới hạn của hộ gia đình, ngân hàng, ngành và doanh nghiệp**, rồi lần theo tác động xuống doanh thu, chi phí, bảng cân đối và định giá.
@@ -224,7 +227,7 @@ Nhu cầu AI ↑
 
 Đây là cách biến “tin kinh tế” thành chuỗi nguyên nhân–kết quả. Xem [cơ chế truyền dẫn từ kinh tế đến doanh nghiệp](./21_economy_to_company_transmission.md).
 
-## Mental Model — Mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Kinh tế vĩ mô không phải tập hợp GDP, CPI, lãi suất và tỷ giá. Nó là hệ thống các bảng cân đối và dòng tiền liên kết. Một cú sốc chỉ quan trọng với doanh nghiệp khi ta chỉ ra được đường truyền từ biến vĩ mô tới nhu cầu, giá, chi phí, vốn hoặc bảng cân đối của doanh nghiệp đó.
 
@@ -240,3 +243,5 @@ Biến nào thay đổi?
 ```
 
 Nếu chưa trả lời được chuỗi này, ta mới biết “số liệu”, chưa hiểu cơ chế.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

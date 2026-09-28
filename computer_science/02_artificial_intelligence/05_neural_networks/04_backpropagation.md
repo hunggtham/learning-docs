@@ -1,12 +1,15 @@
-# Backpropagation: Chain Rule trên Computational Graph
+# Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)
 
-Backpropagation (역전파 / lan truyền ngược) thường bị mô tả như “thuật toán giúp neural network học”. Chính xác hơn, backpropagation là một **efficient algorithm để tính gradients của một scalar output, thường là loss, đối với rất nhiều intermediate values và parameters trong computational graph**.
+> **Mạch đọc:** Đặt **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bắt đầu từ chuỗi (chain / 사슬) quy tắc (rule / 규칙)** sang **Một scalar example**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Learning còn cần optimizer dùng gradients để update parameters. Backprop chỉ trả lời:
 
-> Nếu parameter thay đổi rất nhỏ, loss sẽ thay đổi theo hướng và mức nào?
+Backpropagation (역전파 / lan truyền ngược) thường bị mô tả như “thuật toán giúp neural mạng (network / 네트워크) học”. Chính xác hơn, backpropagation là một **efficient thuật toán (algorithm / 알고리즘) để tính gradients của một scalar đầu ra (output / 출력), thường là mất mát (loss / 손실), đối với rất nhiều intermediate values và parameters trong computational đồ thị (graph / 그래프)**.
 
-## Bắt đầu từ Chain Rule
+Học tập (learning / 학습) còn cần optimizer dùng gradients để cập nhật (update / 업데이트) parameters. Backprop chỉ trả lời:
+
+> Nếu parameter thay đổi rất nhỏ, mất mát (loss / 손실) sẽ thay đổi theo hướng và mức nào?
+
+## Bắt đầu từ chuỗi (chain / 사슬) quy tắc (rule / 규칙)
 
 Nếu:
 
@@ -20,13 +23,13 @@ thì:
 \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}
 \]
 
-Neural network chỉ là composition lớn hơn:
+Neural mạng (network / 네트워크) chỉ là composition lớn hơn:
 
 \[
 L=f_L(f_{L-1}(...f_1(x)))
 \]
 
-Backprop áp dụng chain rule theo reverse topological order của computation graph.
+Backprop áp dụng chuỗi (chain / 사슬) quy tắc (rule / 규칙) theo reverse topological thứ tự (order / 순서) của computation đồ thị (graph / 그래프).
 
 ## Một scalar example
 
@@ -44,7 +47,7 @@ z=wx+b
 L=\frac12(\hat y-y)^2
 \]
 
-Muốn gradient theo `w`:
+Muốn độ dốc (gradient / 기울기) theo `w`:
 
 \[
 \frac{\partial L}{\partial w}
@@ -73,27 +76,27 @@ nên:
 \frac{\partial L}{\partial w}=(\hat y-y)\sigma(z)(1-\sigma(z))x
 \]
 
-Không có magic. Đây chỉ là chain rule qua các operations đã chạy ở forward pass.
+Không có magic. Đây chỉ là chuỗi (chain / 사슬) quy tắc (rule / 규칙) qua các operations đã chạy ở forward pass.
 
 ## Reverse-Mode Automatic Differentiation
 
-Nếu có millions parameters nhưng chỉ một scalar loss, ta cần derivatives:
+Nếu có millions parameters nhưng chỉ một scalar mất mát (loss / 손실), ta cần derivatives:
 
 \[
 \frac{\partial L}{\partial \theta_1},...,
 \frac{\partial L}{\partial \theta_m}
 \]
 
-Reverse-mode AD cực hiệu quả vì một backward traversal có thể compute gradient cho tất cả parameters với cost cùng order với forward pass, thường vài lần forward cost chứ không `m` forward passes.
+Reverse-mode AD cực hiệu quả vì một backward traversal có thể compute độ dốc (gradient / 기울기) cho tất cả parameters với chi phí (cost / 비용) cùng thứ tự (order / 순서) với forward pass, thường vài lần forward chi phí (cost / 비용) chứ không `m` forward passes.
 
-Backpropagation trong neural networks là application đặc biệt của reverse-mode automatic differentiation.
+Backpropagation trong neural networks là ứng dụng (application / 애플리케이션) đặc biệt của reverse-mode automatic differentiation.
 
-## Local gradients và upstream gradient
+## Cục bộ (local / 로컬) gradients và upstream độ dốc (gradient / 기울기)
 
-Mỗi operation chỉ cần biết:
+Mỗi thao tác (operation / 연산) chỉ cần biết:
 
-1. local derivative của output theo inputs;
-2. gradient đã truyền từ downstream.
+1. cục bộ (local / 로컬) derivative của đầu ra (output / 출력) theo inputs;
+2. độ dốc (gradient / 기울기) đã truyền từ downstream.
 
 Ví dụ `z=a+b`:
 
@@ -101,7 +104,7 @@ Ví dụ `z=a+b`:
 \frac{\partial z}{\partial a}=1,\qquad \frac{\partial z}{\partial b}=1
 \]
 
-Nếu upstream gradient là:
+Nếu upstream độ dốc (gradient / 기울기) là:
 
 \[
 \bar z=\frac{\partial L}{\partial z}
@@ -123,11 +126,11 @@ Với multiply `z=ab`:
 \bar b=\bar z\cdot a
 \]
 
-Autograd frameworks compose thousands such local rules.
+Autograd frameworks compose thousands such cục bộ (local / 로컬) rules.
 
-## Branching graph và gradient accumulation
+## Branching đồ thị (graph / 그래프) và độ dốc (gradient / 기울기) accumulation
 
-Nếu một tensor ảnh hưởng loss qua nhiều paths:
+Nếu một tensor ảnh hưởng mất mát (loss / 손실) qua nhiều paths:
 
 \[
 L=f(x)+g(x)
@@ -141,11 +144,11 @@ thì:
 
 Backward phải **sum gradients từ mọi downstream paths**.
 
-Đây là lý do frameworks accumulate gradients. Trong PyTorch, gọi `.backward()` nhiều lần mà không zero gradients có thể cộng gradient ngoài ý muốn — hoặc intentionally để gradient accumulation across mini-batches.
+Đây là lý do frameworks accumulate gradients. Trong PyTorch, gọi `.backward()` nhiều lần mà không zero gradients có thể cộng độ dốc (gradient / 기울기) ngoài ý muốn — hoặc intentionally để độ dốc (gradient / 기울기) accumulation across mini-batches.
 
-## Vector/Jacobian perspective
+## Véc-tơ (vector / 벡터)/Jacobian perspective
 
-Nếu function:
+Nếu hàm (function / 함수):
 
 \[
 y=f(x)
@@ -159,7 +162,7 @@ J_{ij}=\frac{\partial y_i}{\partial x_j}
 
 Nhưng backprop không cần materialize full Jacobian khổng lồ. Nó computes **vector-Jacobian products (VJP)** efficiently.
 
-Nếu upstream gradient `v=∂L/∂y`, backward computes:
+Nếu upstream độ dốc (gradient / 기울기) `v=∂L/∂y`, backward computes:
 
 \[
 v^TJ
@@ -167,9 +170,9 @@ v^TJ
 
 mà không xây `J` đầy đủ.
 
-Điều này cực quan trọng cho memory/compute feasibility.
+Điều này cực quan trọng cho bộ nhớ (memory / 메모리)/compute feasibility.
 
-## Backprop qua Linear Layer
+## Backprop qua tuyến tính (linear / 선형) tầng (layer / 계층)
 
 Batch form:
 
@@ -197,7 +200,7 @@ thì:
 \frac{\partial L}{\partial b}=\sum_{batch}G_Z
 \]
 
-Đây là matrix multiplications — lý do GPU rất phù hợp cả forward và backward.
+Đây là ma trận (matrix / 행렬) multiplications — lý do GPU rất phù hợp cả forward và backward.
 
 ## Backprop qua activation
 
@@ -214,17 +217,17 @@ thì:
 =rac{\partial L}{\partial h}\odot\phi'(z)
 \]
 
-Nếu `φ'(z)` thường gần zero, gradient shrink. Đây là vanishing-gradient connection.
+Nếu `φ'(z)` thường gần zero, độ dốc (gradient / 기울기) shrink. Đây là vanishing-gradient liên kết (connection / 연결).
 
 ## Sigmoid + Cross-Entropy simplification
 
-Binary sigmoid:
+Nhị phân (binary / 이진) sigmoid:
 
 \[
 p=\sigma(z)
 \]
 
-BCE loss:
+BCE mất mát (loss / 손실):
 
 \[
 L=-[y\log p+(1-y)\log(1-p)]
@@ -236,17 +239,17 @@ Derivative simplifies đẹp:
 \frac{\partial L}{\partial z}=p-y
 \]
 
-Softmax + cross-entropy multiclass cũng có analogous result:
+Softmax + cross-entropy multiclass cũng có analogous kết quả (result / 결과):
 
 \[
 \frac{\partial L}{\partial z_k}=p_k-y_k
 \]
 
-Sự cancellation này giúp gradient behavior và numerical implementation tốt hơn việc treat từng block naive.
+Sự cancellation này giúp độ dốc (gradient / 기울기) hành vi (behavior / 동작) và numerical hiện thực (implementation / 구현) tốt hơn việc treat từng khối (block / 블록) naive.
 
 ## Vanishing Gradients
 
-Gradient qua depth là product của many Jacobians:
+Độ dốc (gradient / 기울기) qua độ sâu (depth / 깊이) là sản phẩm (product / 제품) của many Jacobians:
 
 \[
 \frac{\partial L}{\partial h^{(l)}}
@@ -254,11 +257,11 @@ Gradient qua depth là product của many Jacobians:
 \frac{\partial L}{\partial h^{(L)}}
 \]
 
-Nếu norms thường <1, product shrink exponentially. Early layers nhận signal rất nhỏ.
+Nếu norms thường <1, sản phẩm (product / 제품) shrink exponentially. Early layers nhận tín hiệu (signal / 신호) rất nhỏ.
 
-Sigmoid/tanh saturation làm problem nặng hơn.
+Sigmoid/tanh saturation làm bài toán (problem / 문제) nặng hơn.
 
-Solutions/history:
+Solutions/lịch sử (history / 이력):
 
 - ReLU-family activations;
 - Xavier/He initialization;
@@ -270,28 +273,28 @@ Solutions/history:
 
 Nếu Jacobian products có norms >1 repeatedly, gradients explode. Symptoms:
 
-- loss NaN/Inf;
-- huge parameter update;
-- unstable training.
+- mất mát (loss / 손실) NaN/Inf;
+- huge parameter cập nhật (update / 업데이트);
+- unstable huấn luyện (training / 학습).
 
 Mitigations:
 
 - appropriate initialization;
 - normalization;
-- smaller learning rate;
-- gradient clipping.
+- smaller học tập (learning / 학습) tỷ lệ (rate / 비율);
+- độ dốc (gradient / 기울기) clipping.
 
-Gradient norm clipping:
+Độ dốc (gradient / 기울기) norm clipping:
 
 \[
 g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 \]
 
-limits global gradient norm to threshold `c`.
+limits toàn cục (global / 전역) độ dốc (gradient / 기울기) norm to threshold `c`.
 
-## Residual Connection và gradient highway
+## Residual liên kết (connection / 연결) và độ dốc (gradient / 기울기) highway
 
-Residual block:
+Residual khối (block / 블록):
 
 \[
 y=x+F(x)
@@ -303,17 +306,17 @@ Derivative:
 \frac{\partial y}{\partial x}=I+\frac{\partial F}{\partial x}
 \]
 
-Identity term tạo direct gradient path, giúp very deep networks trainable hơn.
+Định danh (identity / 식별자) term tạo direct độ dốc (gradient / 기울기) đường dẫn (path / 경로), giúp very deep networks trainable hơn.
 
 Transformers và ResNets đều phụ thuộc insight này.
 
-## Gradient Checkpointing
+## Độ dốc (gradient / 기울기) Checkpointing
 
-Backward cần activations từ forward. Nếu model lớn, memory cao.
+Backward cần activations từ forward. Nếu mô hình (model / 모델) lớn, bộ nhớ (memory / 메모리) cao.
 
 Checkpointing chỉ store một số activations; backward recompute missing forward segments.
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 less memory
@@ -321,48 +324,48 @@ less memory
 more compute
 ```
 
-Đây là systems consequence trực tiếp của backprop dependency.
+Đây là các hệ thống (systems / 시스템들) consequence trực tiếp của backprop phụ thuộc (dependency / 의존성).
 
-## Stop Gradient / Detach
+## Stop độ dốc (gradient / 기울기) / Detach
 
-Đôi khi muốn value participate forward nhưng không receive gradient.
+Đôi khi muốn giá trị (value / 값) participate forward nhưng không receive độ dốc (gradient / 기울기).
 
-`detach` / stop-gradient tạo boundary trong graph.
+`detach` / stop-gradient tạo ranh giới (boundary / 경계) trong đồ thị (graph / 그래프).
 
 Use cases:
 
-- target networks;
-- contrastive learning tricks;
+- mục tiêu (target / 대상) networks;
+- contrastive học tập (learning / 학습) tricks;
 - teacher-student setup;
 - preventing unwanted parameter updates.
 
-Dùng sai có thể silently break learning.
+Dùng sai có thể silently break học tập (learning / 학습).
 
 ## Higher-Order Gradients
 
-Backprop thường compute first-order gradients. Một số algorithms cần gradient of gradient, Hessian-vector products hoặc meta-learning derivatives.
+Backprop thường compute first-order gradients. Một số algorithms cần độ dốc (gradient / 기울기) of độ dốc (gradient / 기울기), Hessian-vector products hoặc meta-learning derivatives.
 
-Framework có thể build graph of backward computation nếu configured, nhưng memory/compute tăng mạnh.
+Khung phần mềm (framework / 프레임워크) có thể bản dựng (build / 빌드) đồ thị (graph / 그래프) of backward computation nếu configured, nhưng bộ nhớ (memory / 메모리)/compute tăng mạnh.
 
 ## Backprop không phải biologically plausible explanation
 
-Backprop là computational optimization algorithm, không phải established model về cách biological brain learns. Research có biologically plausible alternatives, nhưng engineering success của backprop không chứng minh brain dùng same mechanism.
+Backprop là computational tối ưu hóa (optimization / 최적화) thuật toán (algorithm / 알고리즘), không phải established mô hình (model / 모델) về cách biological brain learns. Research có biologically plausible alternatives, nhưng kỹ thuật (engineering / 엔지니어링) success của backprop không chứng minh brain dùng same cơ chế (mechanism / 메커니즘).
 
-## Gradient không phải explanation của model prediction
+## Độ dốc (gradient / 기울기) không phải explanation của mô hình (model / 모델) prediction
 
-Gradient `∂output/∂input` có thể dùng saliency, nhưng gradient chỉ local sensitivity. Nó không automatically là causal explanation hay full reasoning trace.
+Độ dốc (gradient / 기울기) `∂output/∂input` có thể dùng saliency, nhưng độ dốc (gradient / 기울기) chỉ cục bộ (local / 로컬) sensitivity. Nó không automatically là nhân quả (causal / 인과적) explanation hay full lập luận (reasoning / 추론) dấu vết (trace / 추적).
 
 ## Debugging gradients
 
 Useful diagnostics:
 
-- gradient norm per layer;
-- parameter norm/update ratio;
-- percent zero gradient;
+- độ dốc (gradient / 기울기) norm per tầng (layer / 계층);
+- parameter norm/cập nhật (update / 업데이트) ratio;
+- percent zero độ dốc (gradient / 기울기);
 - NaN/Inf;
-- exploding/vanishing across depth.
+- exploding/vanishing across độ sâu (depth / 깊이).
 
-Finite-difference gradient check cho small network:
+Finite-difference độ dốc (gradient / 기울기) check cho small mạng (network / 네트워크):
 
 \[
 \frac{\partial L}{\partial \theta}
@@ -370,9 +373,9 @@ Finite-difference gradient check cho small network:
 \frac{L(\theta+\epsilon)-L(\theta-\epsilon)}{2\epsilon}
 \]
 
-có thể verify custom backward implementation. Không dùng cho large-scale training vì expensive/numerically sensitive.
+có thể verify custom backward hiện thực (implementation / 구현). Không dùng cho large-scale huấn luyện (training / 학습) vì expensive/numerically sensitive.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Forward:
@@ -386,26 +389,28 @@ loss sensitivity
 → gradient for every parameter
 ```
 
-Backprop không “biết” cách sửa model theo semantic meaning. Nó chỉ propagate quantitative credit/blame defined bởi loss và computation graph.
+Backprop không “biết” cách sửa mô hình (model / 모델) theo ý nghĩa (semantic meaning / 의미적 뜻). Nó chỉ propagate quantitative credit/blame defined bởi mất mát (loss / 손실) và computation đồ thị (graph / 그래프).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Backpropagation = Gradient Descent”
+### “Backpropagation = độ dốc (gradient / 기울기) Descent”
 
-Backprop tính gradients. Gradient Descent/Adam dùng gradients để update.
+Backprop tính gradients. độ dốc (gradient / 기울기) Descent/Adam dùng gradients để cập nhật (update / 업데이트).
 
 ### “Autograd nghĩa không cần hiểu derivatives”
 
-Không hiểu gradient flow khiến khó debug saturation, detach, exploding gradient, custom operations và training instability.
+Không hiểu độ dốc (gradient / 기울기) luồng (flow / 흐름) khiến khó gỡ lỗi (debug / 디버그) saturation, detach, exploding độ dốc (gradient / 기울기), custom operations và huấn luyện (training / 학습) instability.
 
-### “Gradient lớn nghĩa feature quan trọng”
+### “độ dốc (gradient / 기울기) lớn nghĩa tính năng (feature / 기능) quan trọng”
 
-Gradient là local sensitivity, phụ thuộc scale/point/model; không tự động là global importance.
+Độ dốc (gradient / 기울기) là cục bộ (local / 로컬) sensitivity, phụ thuộc quy mô (scale / 규모)/điểm (point / 지점)/mô hình (model / 모델); không tự động là toàn cục (global / 전역) importance.
 
 ### “Backward pass lưu toàn bộ Jacobian”
 
-Reverse-mode AD dùng VJP/local rules để tránh materialize full Jacobians.
+Reverse-mode AD dùng VJP/cục bộ (local / 로컬) rules để tránh materialize full Jacobians.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Calculus for AI](../01_mathematical_foundations/04_calculus_for_ai.md), [Forward Propagation](./03_forward_propagation.md) và tiếp theo [Gradient Descent and Optimizers](./05_gradient_descent_and_optimizers.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

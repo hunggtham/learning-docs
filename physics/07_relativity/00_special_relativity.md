@@ -1,5 +1,8 @@
 # Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính
 
+> **Mạch đọc:** Đọc **Thuyết tương đối hẹp: không-thời gian, biến đổi Lorentz và động lực học tương đối tính** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vấn đề với phép biến đổi Galilei** sang **Hai tiên đề**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Thuyết tương đối hẹp (special relativity / 특수상대성이론) không phải một bộ công thức bổ sung vào cơ học Newton. Nó thay đổi cấu trúc nền của không gian và thời gian để các định luật vật lý, đặc biệt điện từ học, có cùng dạng trong mọi hệ quy chiếu quán tính.
 
 Mục tiêu của chương này là hiểu tại sao biến đổi Lorentz xuất hiện, vì sao sự đồng thời phụ thuộc hệ quy chiếu, cách các đại lượng bất biến tổ chức lý thuyết và tại sao cơ học Newton xuất hiện trở lại khi `v\ll c`.
@@ -184,7 +187,7 @@ x^2+y^2
 
 không đổi.
 
-Không-thời gian Minkowski có metric khác hình học Euclid, nhưng ý tưởng bất biến giúp tổ chức toàn bộ lý thuyết.
+Không-thời gian Minkowski có chỉ số (metric / 지표) khác hình học Euclid, nhưng ý tưởng bất biến giúp tổ chức toàn bộ lý thuyết.
 
 ## Timelike, lightlike và spacelike
 
@@ -220,7 +223,7 @@ Tập các đường ánh sáng đi qua một sự kiện tạo nón ánh sáng 
 
 Đây là lý do giới hạn tốc độ không chỉ là “giới hạn kỹ thuật của động cơ”; nó là cấu trúc nhân quả của không-thời gian.
 
-## Thời gian riêng từ metric
+## Thời gian riêng từ chỉ số (metric / 지표)
 
 Với một vật chuyển động,
 
@@ -265,7 +268,7 @@ L=\frac{L_0}{\gamma}.
 
 Một người ở Trái Đất, người kia đi xa rồi quay lại. Khi gặp lại, người du hành có thể trẻ hơn.
 
-Đây không phải nghịch lý logic. Hai worldline giữa cùng hai sự kiện đầu–cuối có thời gian riêng khác nhau:
+Đây không phải nghịch lý lô-gic (logic / 논리). Hai worldline giữa cùng hai sự kiện đầu–cuối có thời gian riêng khác nhau:
 
 ```math
 \tau=\int dt\sqrt{1-v^2/c^2}.
@@ -470,7 +473,7 @@ Không. So sánh đồng hồ ở xa phụ thuộc tính tương đối của s�
 
 Không. Khi `v\rightarrow c`, `\gamma\rightarrow\infty`, nên năng lượng cần thiết tăng không giới hạn trong lý thuyết.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Thuyết tương đối hẹp thay “không gian + thời gian tuyệt đối” bằng một không-thời gian bốn chiều có cấu trúc Minkowski. Các quan sát viên chia không-thời gian thành phần không gian và phần thời gian khác nhau, nhưng đồng ý về các bất biến và quan hệ nhân quả.
 
@@ -480,8 +483,10 @@ Một cách học hiệu quả là chuyển từ câu hỏi “đồng hồ nào
 2. Worldline của từng vật là gì?
 3. Đại lượng bất biến nào có thể tính mà không phụ thuộc hệ tọa độ?
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Hệ quy chiếu và vectơ](../00_foundations/02_space_time_vectors_frames.md), [Phương trình Maxwell](../05_electromagnetism/04_maxwell_em_waves.md).
 
 **Liên hệ tiếp:** [Thuyết tương đối rộng](01_general_relativity.md), [Vật lý hạt](../09_atomic_nuclear_particle/03_particle_standard_model.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 general relativity](./01_general_relativity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

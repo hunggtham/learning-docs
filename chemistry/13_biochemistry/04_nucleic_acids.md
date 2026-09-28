@@ -1,10 +1,13 @@
 # Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn
 
-> **Acid nucleic (nucleic acids / 핵산)** là polymer của nucleotide. DNA và RNA đặc biệt vì khung cộng hóa trị tạo trình tự bền, còn ghép cặp base thuận nghịch cho phép trình tự đó được đọc, sao chép và nhận diện. Hóa học của chúng kết hợp ester phosphate, dị vòng thơm, liên kết hydrogen, xếp chồng π, hóa học acid-base và tĩnh điện polymer.
+> **Mạch đọc:** Đọc **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nucleotide và nucleoside** sang **Ribose và deoxyribose**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Acid nucleic (nucleic acids / 핵산)** là polymer của nucleotide. DNA và RNA đặc biệt vì khung cộng hóa trị tạo trình tự bền, còn ghép cặp cơ sở (base / 기반) thuận nghịch cho phép trình tự đó được đọc, sao chép và nhận diện. Hóa học của chúng kết hợp ester phosphate, dị vòng thơm, liên kết hydrogen, xếp chồng π, hóa học acid-base và tĩnh điện polymer.
 
 ## Nucleotide và nucleoside
 
-**Nucleoside** gồm base nitrogen + đường pentose.
+**Nucleoside** gồm cơ sở (base / 기반) nitrogen + đường pentose.
 
 **Nucleotide** = nucleoside + một hoặc nhiều phosphate.
 
@@ -23,19 +26,19 @@ RNA dùng ribose có 2'-OH; DNA dùng 2'-deoxyribose thiếu nhóm OH này.
 Chỉ một oxygen khác biệt nhưng tạo hậu quả lớn:
 
 - RNA phản ứng hóa học mạnh hơn;
-- khung RNA dễ bị cắt dưới xúc tác base hơn;
+- khung RNA dễ bị cắt dưới xúc tác cơ sở (base / 기반) hơn;
 - xu hướng gấp của đường khác nhau;
 - hình học helix khác nhau.
 
 Việc DNA thiếu 2'-OH làm tăng độ bền hóa học dài hạn, phù hợp vai trò kho lưu trữ thông tin.
 
-## Base là các dị vòng thơm
+## Cơ sở (base / 기반) là các dị vòng thơm
 
 Purine: adenine (A), guanine (G).
 
 Pyrimidine: cytosine (C), thymine (T), uracil (U).
 
-Các base này là hệ dị vòng thơm liên hợp. Phân bố electron quyết định:
+Các cơ sở (base / 기반) này là hệ dị vòng thơm liên hợp. Phân bố electron quyết định:
 
 - mẫu cho/nhận liên kết hydrogen;
 - proton hóa;
@@ -45,7 +48,7 @@ Các base này là hệ dị vòng thơm liên hợp. Phân bố electron quyế
 
 ## Tautomer và độ chính xác sao chép
 
-Base có thể tồn tại với một lượng nhỏ dạng tautomer hiếm.
+Cơ sở (base / 기반) có thể tồn tại với một lượng nhỏ dạng tautomer hiếm.
 
 Các tautomer hiếm có thể thay đổi mẫu liên kết hydrogen và ghép sai tạm thời trong quá trình sao chép.
 
@@ -53,9 +56,9 @@ Vì vậy đột biến có thể bắt nguồn từ những tái sắp xếp pr
 
 ## Liên kết glycosidic
 
-Base gắn với đường qua liên kết N-glycosidic tại carbon anomer.
+Cơ sở (base / 기반) gắn với đường qua liên kết N-glycosidic tại carbon anomer.
 
-Quay quanh liên kết glycosidic cho phép cấu dạng syn/anti; dạng anti phổ biến với nhiều base trong cấu trúc duplex chuẩn.
+Quay quanh liên kết glycosidic cho phép cấu dạng syn/anti; dạng anti phổ biến với nhiều cơ sở (base / 기반) trong cấu trúc duplex chuẩn.
 
 Cấu dạng ảnh hưởng hình học helix và nhận diện enzyme.
 
@@ -107,7 +110,7 @@ Ion kim loại:
 
 Đây là ví dụ điển hình của xúc tác vô cơ sinh học trong chuyển hóa acid nucleic.
 
-## Ghép cặp base — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền
+## Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền
 
 Cặp Watson–Crick chuẩn:
 
@@ -116,9 +119,9 @@ Cặp Watson–Crick chuẩn:
 
 Mẫu hydrogen bond cho nhận diện định hướng.
 
-Nhưng độ bền duplex còn nhận đóng góp lớn từ **xếp chồng base (base stacking)**: lực phân tán, hiệu ứng kỵ nước và tương tác π giữa các base thơm kề nhau.
+Nhưng độ bền duplex còn nhận đóng góp lớn từ **xếp chồng cơ sở (base / 기반) (base stacking)**: lực phân tán, hiệu ứng kỵ nước và tương tác π giữa các cơ sở (base / 기반) thơm kề nhau.
 
-Vì vậy câu “G–C có ba hydrogen bond nên DNA bền hơn” là chưa đủ; tương tác giữa các cặp base lân cận và điều kiện ion cũng rất quan trọng.
+Vì vậy câu “G–C có ba hydrogen bond nên DNA bền hơn” là chưa đủ; tương tác giữa các cặp cơ sở (base / 기반) lân cận và điều kiện ion cũng rất quan trọng.
 
 ## Hai mạch đối song song
 
@@ -129,7 +132,7 @@ Hai mạch DNA chạy ngược chiều:
 3' ← 5'
 ```
 
-Hình học này sắp xếp base phù hợp cho ghép cặp và tạo rãnh lớn/rãnh nhỏ.
+Hình học này sắp xếp cơ sở (base / 기반) phù hợp cho ghép cặp và tạo rãnh lớn/rãnh nhỏ.
 
 Các rãnh để lộ mẫu hóa học đặc trưng mà không cần tách hai mạch, cho phép protein nhận diện trình tự.
 
@@ -147,16 +150,16 @@ Vì vậy cấu trúc acid nucleic phụ thuộc bối cảnh và tồn tại nh
 
 Protein có thể “đọc” DNA một phần qua các nhóm cho/nhận hydrogen bond và vùng kỵ nước lộ ra trong rãnh.
 
-Các cặp base khác nhau tạo mẫu cạnh khác nhau.
+Các cặp cơ sở (base / 기반) khác nhau tạo mẫu cạnh khác nhau.
 
-Điều này cho phép nhận diện trình tự mà không phải phá ghép cặp base.
+Điều này cho phép nhận diện trình tự mà không phải phá ghép cặp cơ sở (base / 기반).
 
 ## Nóng chảy DNA
 
 Gia nhiệt làm dịch cân bằng:
 
 \[
-duplex \rightleftharpoons \text{hai mạch đơn}
+duplex \rightleftharpoons \văn bản (text / 텍스트){hai mạch đơn}
 \]
 
 Nhiệt độ nóng chảy \(T_m\) phụ thuộc:
@@ -172,7 +175,7 @@ Muối ổn định duplex một phần bằng cách che chắn đẩy phosphate
 
 ## Hiệu ứng hyperchromic
 
-DNA mạch đơn hấp thụ UV gần 260 nm mạnh hơn DNA duplex có base xếp chồng.
+DNA mạch đơn hấp thụ UV gần 260 nm mạnh hơn DNA duplex có cơ sở (base / 기반) xếp chồng.
 
 Khi DNA nóng chảy, độ hấp thụ tăng — **hiệu ứng hyperchromic (hyperchromicity)** — vì tương tác điện tử do xếp chồng thay đổi.
 
@@ -182,7 +185,7 @@ Khi DNA nóng chảy, độ hấp thụ tăng — **hiệu ứng hyperchromic (h
 
 Hai mạch bổ sung ghép lại nếu lợi ích năng lượng tự do từ ghép cặp/xếp chồng đủ bù mất entropy.
 
-Một mismatch làm giảm độ bền duplex, nhưng mức ảnh hưởng phụ thuộc vị trí và các base lân cận.
+Một mismatch làm giảm độ bền duplex, nhưng mức ảnh hưởng phụ thuộc vị trí và các cơ sở (base / 기반) lân cận.
 
 PCR, giải trình tự, FISH và nhiều kỹ thuật chẩn đoán đều dựa trên việc điều khiển nhiệt động của lai hóa.
 
@@ -209,11 +212,11 @@ RNA có thể đóng vai trò:
 - ribozyme;
 - khung cấu trúc.
 
-Nhóm 2'-OH và khả năng ghép base linh hoạt hơn làm tăng đa dạng cấu trúc và xúc tác.
+Nhóm 2'-OH và khả năng ghép cơ sở (base / 기반) linh hoạt hơn làm tăng đa dạng cấu trúc và xúc tác.
 
-## Vì sao RNA dễ bị base cắt
+## Vì sao RNA dễ bị cơ sở (base / 기반) cắt
 
-Trong môi trường base, 2'-OH có thể bị khử proton rồi tấn công nội phân tử vào phosphate kề bên.
+Trong môi trường cơ sở (base / 기반), 2'-OH có thể bị khử proton rồi tấn công nội phân tử vào phosphate kề bên.
 
 Quá trình tạo chất trung gian phosphate vòng và cắt khung RNA.
 
@@ -228,7 +231,7 @@ Một mạch RNA đơn có thể tự gấp nhờ ghép cặp nội bộ thành:
 - hairpin;
 - stem;
 - bulge;
-- loop nội;
+- vòng lặp (loop / 루프) nội;
 - junction;
 - pseudoknot.
 
@@ -238,7 +241,7 @@ Trình tự quyết định đồ thị ghép cặp có thể có, còn \(Mg^{2+
 
 Một số RNA có hoạt tính xúc tác.
 
-Chúng dùng nhóm acid/base, ion kim loại và định vị cơ chất — các nguyên lý vật lý giống enzyme protein.
+Chúng dùng nhóm acid/cơ sở (base / 기반), ion kim loại và định vị cơ chất — các nguyên lý vật lý giống enzyme protein.
 
 Trung tâm peptidyl-transfer của ribosome chủ yếu do RNA tạo thành, cho thấy RNA có thể thực hiện xúc tác sinh học nền tảng.
 
@@ -248,7 +251,7 @@ Polymerase chọn nucleotide bằng hình học, hydrogen bond và cơ chế kh�
 
 Độ chính xác tăng qua:
 
-- chọn base;
+- chọn cơ sở (base / 기반);
 - phân biệt động học;
 - proofreading exonuclease 3'→5';
 - sửa chữa sau sao chép.
@@ -294,7 +297,7 @@ Photolyase ở một số sinh vật hoặc hệ sửa chữa cắt nucleotide c
 
 Các loại oxygen phản ứng có thể oxy hóa guanine thành 8-oxoG và các tổn thương khác.
 
-Base biến đổi có thể ghép cặp khác, làm tăng xác suất đột biến.
+Cơ sở (base / 기반) biến đổi có thể ghép cặp khác, làm tăng xác suất đột biến.
 
 Vì vậy hóa học oxy hóa-khử tác động trực tiếp tới độ toàn vẹn thông tin.
 
@@ -302,7 +305,7 @@ Vì vậy hóa học oxy hóa-khử tác động trực tiếp tới độ toàn
 
 Những tổn thương hóa học khác nhau cần chiến lược khác nhau:
 
-- sửa chữa cắt base;
+- sửa chữa cắt cơ sở (base / 기반);
 - sửa chữa cắt nucleotide;
 - sửa mismatch;
 - tái tổ hợp tương đồng;
@@ -342,7 +345,7 @@ Tĩnh điện + biến đổi cộng hóa trị trở thành một phần của 
 
 ## Phiên mã RNA
 
-RNA polymerase dùng cùng logic chuyển nucleotide như DNA polymerase nhưng với NTP.
+RNA polymerase dùng cùng lô-gic (logic / 논리) chuyển nucleotide như DNA polymerase nhưng với NTP.
 
 Nhận diện promoter và protein điều hòa quyết định nơi và thời điểm tổng hợp bắt đầu.
 
@@ -350,7 +353,7 @@ Phiên mã chuyển thông tin trình tự DNA thành phân tử RNA có bản c
 
 ## Liên hệ với dịch mã
 
-Codon mRNA được tRNA đọc qua ghép cặp base; ribosome xúc tác hình thành liên kết peptide.
+Codon mRNA được tRNA đọc qua ghép cặp cơ sở (base / 기반); ribosome xúc tác hình thành liên kết peptide.
 
 Dòng thông tin vì vậy nối hai hóa học polymer:
 
@@ -363,15 +366,15 @@ trình tự acid nucleic
 
 ## Biến đổi hóa học của acid nucleic
 
-Base DNA/RNA có thể được methyl hóa hoặc biến đổi theo cách khác.
+Cơ sở (base / 기반) DNA/RNA có thể được methyl hóa hoặc biến đổi theo cách khác.
 
-5-methylcytosine thay đổi nhận diện protein và điều hòa biểu sinh mà không thay cơ bản mã ghép cặp base.
+5-methylcytosine thay đổi nhận diện protein và điều hòa biểu sinh mà không thay cơ bản mã ghép cặp cơ sở (base / 기반).
 
 RNA có nhiều nucleoside biến đổi ảnh hưởng gấp cuộn, giải mã và độ bền.
 
 ## Giải trình tự như hóa phân tích
 
-Các công nghệ giải trình tự chuyển danh tính base thành tín hiệu đo được:
+Các công nghệ giải trình tự chuyển danh tính cơ sở (base / 기반) thành tín hiệu đo được:
 
 - huỳnh quang;
 - thay đổi pH;
@@ -398,7 +401,7 @@ DNA origami về bản chất là kỹ thuật cấu trúc ở thang phân tử 
 
 ### “Chỉ hydrogen bond giữ DNA kép lại”
 
-Không. Xếp chồng base, hiệu ứng kỵ nước và che chắn ion cũng đóng góp lớn.
+Không. Xếp chồng cơ sở (base / 기반), hiệu ứng kỵ nước và che chắn ion cũng đóng góp lớn.
 
 ### “Helix kép DNA là cấu trúc cứng”
 
@@ -414,6 +417,8 @@ Không. DNA liên tục bị tổn thương và được sửa chữa.
 
 ## Mô hình tư duy
 
-Acid nucleic là **polymer polyanion có định hướng, trong đó trình tự được lưu bền bằng khung cộng hóa trị nhưng có thể đọc thuận nghịch nhờ nhận diện ghép cặp base**. Khung cộng hóa trị giữ thứ tự; xếp chồng và ghép cặp tạo cấu trúc thuận nghịch; enzyme dùng hóa học chuyển phosphoryl để sao chép, sửa chữa và diễn giải thứ tự đó.
+Acid nucleic là **polymer polyanion có định hướng, trong đó trình tự được lưu bền bằng khung cộng hóa trị nhưng có thể đọc thuận nghịch nhờ nhận diện ghép cặp cơ sở (base / 기반)**. Khung cộng hóa trị giữ thứ tự; xếp chồng và ghép cặp tạo cấu trúc thuận nghịch; enzyme dùng hóa học chuyển phosphoryl để sao chép, sửa chữa và diễn giải thứ tự đó.
 
 Xem tiếp: [Enzyme](./05_enzymes.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 chemistry of life](./00_chemistry_of_life.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

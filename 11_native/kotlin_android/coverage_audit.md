@@ -1,253 +1,258 @@
-# Kotlin + Android — Coverage Audit
+# Kotlin + Android — Coverage kiểm tra (audit / 감사)
 
-Tài liệu này kiểm tra bộ note đã cover những lớp kiến thức nào và phần nào thuộc learning spine, deep-dive, production casebook hay depth lab. Đây không phải cheat sheet. Vai trò của nó là tránh hai lỗi khi library lớn dần: **bổ sung trùng lặp** và **bỏ sót một boundary/failure mode quan trọng**.
+> **Mạch đọc:** Đặt **Kotlin + Android — Coverage kiểm tra (audit / 감사)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kotlin ngôn ngữ (language / 언어) foundations** sang **2. Coroutine và luồng (flow / 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Kotlin language foundations
+
+Tài liệu này kiểm tra bộ ghi chú (note / 노트) đã cover những lớp kiến thức nào và phần nào thuộc trục học (learning spine / 학습 축), deep-dive, môi trường vận hành (production / 운영 환경) casebook hay độ sâu (depth / 깊이) lab. Đây không phải cheat sheet. Vai trò của nó là tránh hai lỗi khi thư viện (library / 라이브러리) lớn dần: **bổ sung trùng lặp** và **bỏ sót một ranh giới (boundary / 경계)/dạng thất bại (failure mode / 실패 모드) quan trọng**.
+
+## 1. Kotlin ngôn ngữ (language / 언어) foundations
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
-| syntax, `val`/`var`, type inference | Nền tảng đầy đủ | Beginner |
+| cú pháp (syntax / 문법), `val`/`var`, kiểu (type / 타입) suy luận (inference / 추론) | Nền tảng đầy đủ | Beginner |
 | null-safety, smart cast, cast | Nền tảng đầy đủ | Beginner |
-| function/default/named/vararg | Đầy đủ | Beginner |
-| class/property/inheritance/interface | Đầy đủ | Beginner |
-| data/enum/sealed | Đầy đủ theo level | Beginner + Intermediate |
-| package/import/top-level declaration | Deep dive | Deep Dive 01 |
-| equality/range/array/collection transformations | Đầy đủ | Beginner + Deep Dive 01 |
-| lambda/HOF/scope functions | Đầy đủ | Beginner + Intermediate |
-| generics/variance/projection/erasure | Đầy đủ | Intermediate + Advanced + Case 08 |
-| delegation/delegated property | Đầy đủ | Intermediate |
-| inline/reified/contracts/reflection | Advanced | Advanced + Case 08 |
-| value class/boxing/JVM representation | Master | Master + Case 08 |
-| suspend state machine/lambda capture | Under the hood | Case 08 |
-| Java interop/ABI/compiler plugin | Master | Advanced + Case 08 + Case 20 + Depth Lab 07 |
+| hàm (function / 함수)/default/named/vararg | Đầy đủ | Beginner |
+| lớp (class / 클래스)/thuộc tính (property / 속성)/inheritance/giao diện (interface / 인터페이스) | Đầy đủ | Beginner |
+| dữ liệu (data / 데이터)/enum/sealed | Đầy đủ theo mức (level / 수준) | Beginner + Intermediate |
+| gói (package / 패키지)/import/top-level declaration | Deep dive | Deep Dive 01 |
+| equality/phạm vi (range / 범위)/array/collection transformations | Đầy đủ | Beginner + Deep Dive 01 |
+| lambda/HOF/phạm vi (scope / 범위) functions | Đầy đủ | Beginner + Intermediate |
+| generics/variance/projection/erasure | Đầy đủ | Intermediate + Advanced + trường hợp (case / 사례) 08 |
+| delegation/delegated thuộc tính (property / 속성) | Đầy đủ | Intermediate |
+| inline/reified/contracts/reflection | Advanced | Advanced + trường hợp (case / 사례) 08 |
+| giá trị (value / 값) lớp (class / 클래스)/boxing/JVM biểu diễn (representation / 표현) | Master | Master + trường hợp (case / 사례) 08 |
+| suspend máy trạng thái (state machine / 상태 머신)/lambda capture | Under the hood | trường hợp (case / 사례) 08 |
+| Java interop/ABI/trình biên dịch (compiler / 컴파일러) plugin | Master | Advanced + trường hợp (case / 사례) 08 + trường hợp (case / 사례) 20 + độ sâu (depth / 깊이) Lab 07 |
 
-## 2. Coroutine và Flow
+## 2. Coroutine và luồng (flow / 흐름)
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
 | `suspend`, `launch`, `async`, `withContext` | Đầy đủ | Intermediate |
-| structured concurrency/supervision | Đầy đủ + reasoning sâu | Intermediate + Deep Dive 02 + Depth Lab 03 |
-| cancellation/exception propagation | Đầy đủ + failure semantics | Intermediate + Advanced + Depth Lab 03 |
-| `CoroutineContext`/Job hierarchy | Deep dive | Deep Dive 02 + Depth Lab 03 |
-| Flow cold/hot | Đầy đủ + lifetime semantics | Intermediate + Deep Dive 02 + Depth Lab 03 |
-| StateFlow/SharedFlow | Đầy đủ | Intermediate + Depth Lab 03 |
-| `stateIn`/`shareIn`/SharingStarted | Đầy đủ | Deep Dive 02 + Depth Lab 03 |
-| `flowOn`/context preservation | Đầy đủ | Deep Dive 02 + Depth Lab 03 |
-| `callbackFlow` | Đầy đủ | Deep Dive 02 + Case 06 + Depth Lab 03 |
-| buffer/conflate/collectLatest/backpressure | Senior sâu | Deep Dive 03 + Depth Lab 03 |
-| Channel/Mutex/atomic/shared state | Senior sâu | Advanced + Depth Lab 03 |
-| dispatcher injection/test scheduler | Senior | Advanced + Deep Dive 02 + Depth Lab 03 |
-| main-safety/thread confinement | Production | Case 09 + Depth Lab 03 |
-| stale-result/concurrent-session race | Production reasoning | Depth Lab 03 |
-| native callback/thread crossing | Production/native | Case 17 + Depth Lab 07 |
+| structured tính đồng thời (concurrency / 동시성)/supervision | Đầy đủ + lập luận (reasoning / 추론) sâu | Intermediate + Deep Dive 02 + độ sâu (depth / 깊이) Lab 03 |
+| cancellation/exception propagation | Đầy đủ + thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) | Intermediate + Advanced + độ sâu (depth / 깊이) Lab 03 |
+| `CoroutineContext`/Job hierarchy | Deep dive | Deep Dive 02 + độ sâu (depth / 깊이) Lab 03 |
+| luồng (flow / 흐름) cold/hot | Đầy đủ + thời gian tồn tại (lifetime / 수명) ngữ nghĩa (semantics / 의미론) | Intermediate + Deep Dive 02 + độ sâu (depth / 깊이) Lab 03 |
+| StateFlow/SharedFlow | Đầy đủ | Intermediate + độ sâu (depth / 깊이) Lab 03 |
+| `stateIn`/`shareIn`/SharingStarted | Đầy đủ | Deep Dive 02 + độ sâu (depth / 깊이) Lab 03 |
+| `flowOn`/ngữ cảnh (context / 맥락) preservation | Đầy đủ | Deep Dive 02 + độ sâu (depth / 깊이) Lab 03 |
+| `callbackFlow` | Đầy đủ | Deep Dive 02 + trường hợp (case / 사례) 06 + độ sâu (depth / 깊이) Lab 03 |
+| buffer/conflate/collectLatest/backpressure | cấp cao (senior / 시니어) sâu | Deep Dive 03 + độ sâu (depth / 깊이) Lab 03 |
+| Channel/Mutex/atomic/trạng thái dùng chung (shared state / 공유 상태) | cấp cao (senior / 시니어) sâu | Advanced + độ sâu (depth / 깊이) Lab 03 |
+| dispatcher injection/kiểm thử (test / 테스트) scheduler | cấp cao (senior / 시니어) | Advanced + Deep Dive 02 + độ sâu (depth / 깊이) Lab 03 |
+| main-safety/luồng thực thi (thread / 스레드) confinement | môi trường vận hành (production / 운영 환경) | trường hợp (case / 사례) 09 + độ sâu (depth / 깊이) Lab 03 |
+| stale-result/concurrent-session race | môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) | độ sâu (depth / 깊이) Lab 03 |
+| bản địa (native / 네이티브) callback/luồng thực thi (thread / 스레드) crossing | môi trường vận hành (production / 운영 환경)/bản địa (native / 네이티브) | trường hợp (case / 사례) 17 + độ sâu (depth / 깊이) Lab 07 |
 
-## 3. Android runtime và component model
+## 3. Android thời gian chạy (runtime / 런타임) và thành phần (component / 컴포넌트) mô hình (model / 모델)
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
-| Activity/Service/Receiver/Provider | Nền tảng → production | Beginner + Case 14 |
-| Context/Application/Activity lifetime | Đầy đủ | Deep Dive 01 + Case 09 |
-| Intent/Bundle/Uri | Đầy đủ | Beginner + Deep Dive 01 + Case 14 |
-| lifecycle/configuration change | Đầy đủ | Beginner → Advanced + Case 04 |
-| process death/SavedStateHandle | Đầy đủ + reconstruction reasoning | Intermediate + Advanced + Case 04/09 + Depth Lab 01/05 |
-| Linux process/app sandbox | Platform | Case 09 |
-| Looper/MessageQueue/Handler | Platform | Case 09 |
-| Binder/IPC/Parcelable transaction | Platform | Case 09 |
-| ART/DEX/class loading/runtime memory | Platform | Case 08/09 |
-| Service/Receiver/Provider cold entry | Production | Case 14 |
-| notification/widget/shortcut/tile | Production | Case 14 |
-| startup initialization critical path | Production sâu | Case 19 + Depth Lab 06 |
+| Activity/dịch vụ (service / 서비스)/Receiver/Provider | Nền tảng → môi trường vận hành (production / 운영 환경) | Beginner + trường hợp (case / 사례) 14 |
+| ngữ cảnh (context / 맥락)/ứng dụng (application / 애플리케이션)/Activity thời gian tồn tại (lifetime / 수명) | Đầy đủ | Deep Dive 01 + trường hợp (case / 사례) 09 |
+| Intent/Bundle/Uri | Đầy đủ | Beginner + Deep Dive 01 + trường hợp (case / 사례) 14 |
+| vòng đời (lifecycle / 생명주기)/cấu hình (configuration / 구성) thay đổi (change / 변경) | Đầy đủ | Beginner → Advanced + trường hợp (case / 사례) 04 |
+| tiến trình (process / 프로세스) death/SavedStateHandle | Đầy đủ + reconstruction lập luận (reasoning / 추론) | Intermediate + Advanced + trường hợp (case / 사례) 04/09 + độ sâu (depth / 깊이) Lab 01/05 |
+| Linux tiến trình (process / 프로세스)/app sandbox | nền tảng (platform / 플랫폼) | trường hợp (case / 사례) 09 |
+| Looper/MessageQueue/Handler | nền tảng (platform / 플랫폼) | trường hợp (case / 사례) 09 |
+| Binder/IPC/Parcelable giao dịch (transaction / 트랜잭션) | nền tảng (platform / 플랫폼) | trường hợp (case / 사례) 09 |
+| ART/DEX/nạp lớp (class loading / 클래스 로딩)/thời gian chạy (runtime / 런타임) bộ nhớ (memory / 메모리) | nền tảng (platform / 플랫폼) | trường hợp (case / 사례) 08/09 |
+| dịch vụ (service / 서비스)/Receiver/Provider cold entry | môi trường vận hành (production / 운영 환경) | trường hợp (case / 사례) 14 |
+| notification/widget/shortcut/tile | môi trường vận hành (production / 운영 환경) | trường hợp (case / 사례) 14 |
+| startup initialization đường găng (critical path / 임계 경로) | môi trường vận hành (production / 운영 환경) sâu | trường hợp (case / 사례) 19 + độ sâu (depth / 깊이) Lab 06 |
 
 ## 4. Jetpack Compose UI
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
-| composable/layout/modifier | Đầy đủ | Beginner + Deep Dive 01 |
-| state/recomposition/hoisting | Đầy đủ + reasoning sâu | Beginner → Advanced + Deep Dive 02 + Depth Lab 04 |
-| remember/rememberSaveable | Đầy đủ | Beginner + Intermediate + Depth Lab 04 |
-| effect APIs | Đầy đủ + lifetime semantics | Intermediate + Deep Dive 02 + Case 11 + Depth Lab 04 |
-| lazy identity/key | Đầy đủ sâu | Deep Dive 02/03 + Case 11 + Depth Lab 04 |
-| Snapshot State/CompositionLocal | Senior sâu | Advanced + Deep Dive 03 + Depth Lab 04 |
-| composition/layout/draw phases | Đầy đủ sâu | Deep Dive 03 + Case 11 + Depth Lab 04 |
-| constraint/custom layout/draw | Production UI | Case 11 + Depth Lab 04 |
-| gestures/nested scroll/input | Production UI | Case 11 + Depth Lab 04 |
-| focus/IME/hardware keyboard | Production UI | Case 11 + Depth Lab 04 |
-| animation state model | Production UI | Case 11 + Depth Lab 04 |
-| semantics/accessibility | Đầy đủ sâu | Master + Deep Dive 04 + Case 11 + Depth Lab 04/05 |
-| edge-to-edge/insets | Đầy đủ | Case 11 + Depth Lab 04 |
-| adaptive/foldable/window sizes | Đầy đủ | Master + Case 11 |
-| first composition/startup cost | Production performance | Case 19 + Depth Lab 06 |
-| phase-specific invalidation/performance | Senior/Master reasoning | Depth Lab 04 |
+| composable/bố cục (layout / 레이아웃)/modifier | Đầy đủ | Beginner + Deep Dive 01 |
+| trạng thái (state / 상태)/recomposition/hoisting | Đầy đủ + lập luận (reasoning / 추론) sâu | Beginner → Advanced + Deep Dive 02 + độ sâu (depth / 깊이) Lab 04 |
+| remember/rememberSaveable | Đầy đủ | Beginner + Intermediate + độ sâu (depth / 깊이) Lab 04 |
+| tác động (effect / 효과) APIs | Đầy đủ + thời gian tồn tại (lifetime / 수명) ngữ nghĩa (semantics / 의미론) | Intermediate + Deep Dive 02 + trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| lazy định danh (identity / 식별자)/key | Đầy đủ sâu | Deep Dive 02/03 + trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| Snapshot trạng thái (state / 상태)/CompositionLocal | cấp cao (senior / 시니어) sâu | Advanced + Deep Dive 03 + độ sâu (depth / 깊이) Lab 04 |
+| composition/bố cục (layout / 레이아웃)/draw phases | Đầy đủ sâu | Deep Dive 03 + trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| ràng buộc (constraint / 제약조건)/custom bố cục (layout / 레이아웃)/draw | môi trường vận hành (production / 운영 환경) UI | trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| gestures/nested scroll/đầu vào (input / 입력) | môi trường vận hành (production / 운영 환경) UI | trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| focus/IME/hardware keyboard | môi trường vận hành (production / 운영 환경) UI | trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| animation trạng thái (state / 상태) mô hình (model / 모델) | môi trường vận hành (production / 운영 환경) UI | trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| ngữ nghĩa (semantics / 의미론)/khả năng tiếp cận (accessibility / 접근성) | Đầy đủ sâu | Master + Deep Dive 04 + trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04/05 |
+| edge-to-edge/insets | Đầy đủ | trường hợp (case / 사례) 11 + độ sâu (depth / 깊이) Lab 04 |
+| adaptive/foldable/cửa sổ (window / 윈도우) sizes | Đầy đủ | Master + trường hợp (case / 사례) 11 |
+| first composition/startup chi phí (cost / 비용) | môi trường vận hành (production / 운영 환경) hiệu năng (performance / 성능) | trường hợp (case / 사례) 19 + độ sâu (depth / 깊이) Lab 06 |
+| phase-specific vô hiệu hóa (invalidation / 무효화)/hiệu năng (performance / 성능) | cấp cao (senior / 시니어)/Master lập luận (reasoning / 추론) | độ sâu (depth / 깊이) Lab 04 |
 
 ## 5. XML/View và legacy interoperability
 
-XML layout, View Binding, Fragment/View lifecycle, RecyclerView, Data Binding awareness và Compose/View interoperability được giữ từ Beginner/Intermediate. Case 06 mở rộng incremental migration Java/XML/Fragment/LiveData/Rx → Kotlin/coroutine/Flow/Compose. Case 11 cover `AndroidView`/`ComposeView` như interoperability boundary. Legacy API được phân loại thành deprecated/historical/still-valid thay vì gắn nhãn “sai” một cách máy móc.
+XML bố cục (layout / 레이아웃), View Binding, Fragment/View vòng đời (lifecycle / 생명주기), RecyclerView, dữ liệu (data / 데이터) Binding awareness và Compose/View interoperability được giữ từ Beginner/Intermediate. trường hợp (case / 사례) 06 mở rộng incremental di chuyển (migration / 마이그레이션) Java/XML/Fragment/LiveData/Rx → Kotlin/coroutine/luồng (flow / 흐름)/Compose. trường hợp (case / 사례) 11 cover `AndroidView`/`ComposeView` như interoperability ranh giới (boundary / 경계). Legacy API được phân loại thành deprecated/historical/still-valid thay vì gắn nhãn “sai” một cách máy móc.
 
-## 6. Architecture và state management
+## 6. kiến trúc (architecture / 아키텍처) và trạng thái (state / 상태) management
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
-| ViewModel/UiState/UDF | Đầy đủ | Intermediate + Case 01 |
-| repository/data source | Đầy đủ + semantic boundary | Intermediate + Case 01 + Depth Lab 01 |
-| source of truth | Đầy đủ + ownership reasoning | Intermediate + Deep Dive 02 + Case 01/03 + Depth Lab 01/02 |
-| domain/use-case layer decision | Đầy đủ | Intermediate + Case 01 + Depth Lab 01 |
-| offline-first/sync/conflict | Production sâu | Advanced/Master + Case 03 + Depth Lab 02 |
-| transaction invariant/outbox/idempotency | Production sâu | Case 03 + Depth Lab 01/02 |
-| stale snapshot/ambiguous outcome | Master reasoning | Depth Lab 01/02 |
-| multi-module architecture | Senior/Master | Advanced/Master + Case 06/07 |
-| dependency direction/API surface | Master | Master + Deep Dive 04 + Case 07/20 + Depth Lab 07 |
-| ADR/ownership/governance | Master | Deep Dive 04 + Case 07 + Depth Lab 01 |
-| legacy strangler migration | Đầy đủ | Case 06 |
-| state reconstruction after cold/system entry | Production | Case 04/14/19 + Depth Lab 01/05 |
+| ViewModel/UiState/UDF | Đầy đủ | Intermediate + trường hợp (case / 사례) 01 |
+| repository/dữ liệu (data / 데이터) nguồn (source / 소스) | Đầy đủ + ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계) | Intermediate + trường hợp (case / 사례) 01 + độ sâu (depth / 깊이) Lab 01 |
+| nguồn chuẩn (source of truth / 정본) | Đầy đủ + quyền sở hữu (ownership / 소유권) lập luận (reasoning / 추론) | Intermediate + Deep Dive 02 + trường hợp (case / 사례) 01/03 + độ sâu (depth / 깊이) Lab 01/02 |
+| lĩnh vực (domain / 도메인)/use-case tầng (layer / 계층) quyết định (decision / 결정) | Đầy đủ | Intermediate + trường hợp (case / 사례) 01 + độ sâu (depth / 깊이) Lab 01 |
+| offline-first/sync/xung đột (conflict / 충돌) | môi trường vận hành (production / 운영 환경) sâu | Advanced/Master + trường hợp (case / 사례) 03 + độ sâu (depth / 깊이) Lab 02 |
+| giao dịch (transaction / 트랜잭션) bất biến (invariant / 불변식)/outbox/idempotency | môi trường vận hành (production / 운영 환경) sâu | trường hợp (case / 사례) 03 + độ sâu (depth / 깊이) Lab 01/02 |
+| stale snapshot/ambiguous kết quả (outcome / 결과) | Master lập luận (reasoning / 추론) | độ sâu (depth / 깊이) Lab 01/02 |
+| multi-module kiến trúc (architecture / 아키텍처) | cấp cao (senior / 시니어)/Master | Advanced/Master + trường hợp (case / 사례) 06/07 |
+| phụ thuộc (dependency / 의존성) direction/API surface | Master | Master + Deep Dive 04 + trường hợp (case / 사례) 07/20 + độ sâu (depth / 깊이) Lab 07 |
+| ADR/quyền sở hữu (ownership / 소유권)/quản trị (governance / 거버넌스) | Master | Deep Dive 04 + trường hợp (case / 사례) 07 + độ sâu (depth / 깊이) Lab 01 |
+| legacy strangler di chuyển (migration / 마이그레이션) | Đầy đủ | trường hợp (case / 사례) 06 |
+| trạng thái (state / 상태) reconstruction after cold/hệ thống (system / 시스템) entry | môi trường vận hành (production / 운영 환경) | trường hợp (case / 사례) 04/14/19 + độ sâu (depth / 깊이) Lab 01/05 |
 
-## 7. Persistence và storage
+## 7. Persistence và lưu trữ (storage / 저장소)
 
-Room, DAO, relation, type converter, transaction, migration/schema evolution, DataStore, file/MediaStore/scoped storage, source of truth và backup concern đã được cover từ Intermediate → Senior. Case 03 đi sâu durable mutation queue, tombstone, conflict, pagination, migration và rollback compatibility. Case 12 bổ sung SAF/Photo Picker/MediaStore/content URI. Case 13 bổ sung backup/restore/upgrade-path test. Depth Lab 01–02 đào sâu transaction invariant, cursor atomicity, outbox durability, tombstone semantics và failure after partial commit.
+Room, DAO, quan hệ (relation / 관계), kiểu (type / 타입) converter, giao dịch (transaction / 트랜잭션), di chuyển (migration / 마이그레이션)/lược đồ (schema / 스키마) evolution, DataStore, tệp (file / 파일)/MediaStore/scoped lưu trữ (storage / 저장소), nguồn chuẩn (source of truth / 정본) và backup concern đã được cover từ Intermediate → cấp cao (senior / 시니어). trường hợp (case / 사례) 03 đi sâu durable mutation hàng đợi (queue / 큐), tombstone, xung đột (conflict / 충돌), pagination, di chuyển (migration / 마이그레이션) và quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성). trường hợp (case / 사례) 12 bổ sung SAF/Photo Picker/MediaStore/content URI. trường hợp (case / 사례) 13 bổ sung backup/restore/upgrade-path kiểm thử (test / 테스트). độ sâu (depth / 깊이) Lab 01–02 đào sâu giao dịch (transaction / 트랜잭션) bất biến (invariant / 불변식), cursor atomicity, outbox durability, tombstone ngữ nghĩa (semantics / 의미론) và thất bại (failure / 실패) after partial lần ghi nhận (commit / 커밋).
 
 ## 8. Networking
 
-Retrofit/serialization nằm ở Intermediate; timeout/error/cancellation ở Deep Dive 02; retry/idempotency/cache/TLS/WebSocket/SSE ở Deep Dive 03; auth/session/token refresh ở Case 02; offline sync ở Case 03; slow/unreliable connectivity ở Case 12/13. Depth Lab 02 đi sâu ambiguous outcome, idempotency key, jitter, retry classification, stale response/version guard và concurrent writer. Error được tách transport → protocol → domain; UI không phụ thuộc transport detail.
+Retrofit/serialization nằm ở Intermediate; hết thời gian chờ (timeout / 타임아웃)/lỗi (error / 오류)/cancellation ở Deep Dive 02; thử lại (retry / 재시도)/idempotency/bộ nhớ đệm (cache / 캐시)/TLS/WebSocket/SSE ở Deep Dive 03; auth/session/đơn vị từ (token / 토큰) refresh ở trường hợp (case / 사례) 02; offline sync ở trường hợp (case / 사례) 03; slow/unreliable connectivity ở trường hợp (case / 사례) 12/13. độ sâu (depth / 깊이) Lab 02 đi sâu ambiguous kết quả (outcome / 결과), idempotency key, jitter, thử lại (retry / 재시도) classification, stale phản hồi (response / 응답)/phiên bản (version / 버전) guard và concurrent writer. lỗi (error / 오류) được tách vận chuyển (transport / 전송) → giao thức (protocol / 프로토콜) → lĩnh vực (domain / 도메인); UI không phụ thuộc vận chuyển (transport / 전송) detail.
 
 ## 9. Authentication, authorization và session
 
-Case 02 cover Credential Manager, account/session state, access/refresh token, concurrent `401`, single-flight refresh, logout và secure storage. Case 10 nhấn mạnh OS permission không phải business entitlement. Depth Lab 02–03 bổ sung account isolation, session epoch, in-flight response từ account cũ và single-flight concurrency. Security model không xem client/device là trusted authority.
+Trường hợp (case / 사례) 02 cover Credential Manager, account/session trạng thái (state / 상태), truy cập (access / 접근)/refresh đơn vị từ (token / 토큰), concurrent `401`, single-flight refresh, logout và secure lưu trữ (storage / 저장소). trường hợp (case / 사례) 10 nhấn mạnh OS permission không phải nghiệp vụ (business / 비즈니스) entitlement. độ sâu (depth / 깊이) Lab 02–03 bổ sung account isolation, session epoch, in-flight phản hồi (response / 응답) từ account cũ và single-flight tính đồng thời (concurrency / 동시성). bảo mật (security / 보안) mô hình (model / 모델) không xem máy khách (client / 클라이언트)/thiết bị (device / 장치) là trusted authority.
 
-## 10. Dependency Injection
+## 10. phụ thuộc (dependency / 의존성) Injection
 
-Constructor injection, Hilt/DI concept, scope/lifetime và large-scale DI đã được cover. DI không được coi là architecture; nó quản lý dependency graph/lifetime. Case 14/19 nhấn mạnh system entry point và startup initialization không được phụ thuộc MainActivity chạy trước. Case 20/Depth Lab 07 cover dependency exposure từ góc SDK author.
+Constructor injection, Hilt/DI concept, phạm vi (scope / 범위)/thời gian tồn tại (lifetime / 수명) và large-scale DI đã được cover. DI không được coi là kiến trúc (architecture / 아키텍처); nó quản lý phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)/thời gian tồn tại (lifetime / 수명). trường hợp (case / 사례) 14/19 nhấn mạnh hệ thống (system / 시스템) entry điểm (point / 지점) và startup initialization không được phụ thuộc MainActivity chạy trước. trường hợp (case / 사례) 20/độ sâu (depth / 깊이) Lab 07 cover phụ thuộc (dependency / 의존성) exposure từ góc SDK author.
 
-## 11. Background execution
+## 11. Background thực thi (execution / 실행)
 
-WorkManager, foreground service/work, notification, exact-alarm awareness, coroutine lifetime và background restriction đã được cover. Deep Dive 03 có decision framework; Case 10 nối foreground execution với permission/system policy; Case 14 phân biệt Service/Receiver/WorkManager theo lifetime/durability; Case 18 đặt chúng vào target-SDK migration. Depth Lab 02 nhấn mạnh WorkManager là scheduler chứ không phải sync correctness engine.
+WorkManager, foreground dịch vụ (service / 서비스)/công việc (work / 작업), notification, exact-alarm awareness, coroutine thời gian tồn tại (lifetime / 수명) và background restriction đã được cover. Deep Dive 03 có quyết định (decision / 결정) khung phần mềm (framework / 프레임워크); trường hợp (case / 사례) 10 nối foreground thực thi (execution / 실행) với permission/hệ thống (system / 시스템) chính sách (policy / 정책); trường hợp (case / 사례) 14 phân biệt dịch vụ (service / 서비스)/Receiver/WorkManager theo thời gian tồn tại (lifetime / 수명)/durability; trường hợp (case / 사례) 18 đặt chúng vào target-SDK di chuyển (migration / 마이그레이션). độ sâu (depth / 깊이) Lab 02 nhấn mạnh WorkManager là scheduler chứ không phải sync tính đúng đắn (correctness / 정확성) engine.
 
 ## 12. Testing
 
 | Tầng | Coverage |
 |---|---|
-| pure Kotlin JVM unit test | Beginner + Intermediate |
-| fake/mock/test double | Deep Dive 02 + Depth Lab 05 |
-| coroutine virtual-time/Flow test | Intermediate + Deep Dive 02 + Depth Lab 03/05 |
-| deterministic race ordering | Senior/Master | Depth Lab 03/05 |
-| property-based/invariant testing | Master | Depth Lab 02/05 |
+| pure Kotlin JVM đơn vị (unit / 단위) kiểm thử (test / 테스트) | Beginner + Intermediate |
+| fake/mock/kiểm thử (test / 테스트) double | Deep Dive 02 + độ sâu (depth / 깊이) Lab 05 |
+| coroutine virtual-time/luồng (flow / 흐름) kiểm thử (test / 테스트) | Intermediate + Deep Dive 02 + độ sâu (depth / 깊이) Lab 03/05 |
+| deterministic race thứ tự (ordering / 순서) | cấp cao (senior / 시니어)/Master | độ sâu (depth / 깊이) Lab 03/05 |
+| property-based/bất biến (invariant / 불변식) testing | Master | độ sâu (depth / 깊이) Lab 02/05 |
 | Robolectric | Deep Dive 03 |
-| instrumented Android test | Beginner + Deep Dive 03 |
-| Compose UI/semantics/accessibility | Case 11/13 + Depth Lab 04/05 |
-| Room/network integration/contract | Advanced + Case 05 + Depth Lab 05 |
-| hardware/device integration | Case 12 + Depth Lab 05 |
-| migration/upgrade/rollback path | Case 03/13/18 + Depth Lab 05 |
-| process-death/cold-entry reconstruction | Case 04/14/19 + Depth Lab 01/05 |
-| Macrobenchmark/Baseline Profile | Case 05/19 + Depth Lab 05/06 |
-| OS/OEM/device matrix | Case 13/18 + Depth Lab 05/06 |
-| release bundle/split install | Case 16 + Depth Lab 06 |
-| native ABI/page size/symbol validation | Case 17 + Depth Lab 07 |
-| minified SDK consumer/API compatibility | Case 20 + Depth Lab 07 |
+| instrumented Android kiểm thử (test / 테스트) | Beginner + Deep Dive 03 |
+| Compose UI/ngữ nghĩa (semantics / 의미론)/khả năng tiếp cận (accessibility / 접근성) | trường hợp (case / 사례) 11/13 + độ sâu (depth / 깊이) Lab 04/05 |
+| Room/mạng (network / 네트워크) tích hợp (integration / 통합)/đặc tả hợp đồng (contract / 계약) | Advanced + trường hợp (case / 사례) 05 + độ sâu (depth / 깊이) Lab 05 |
+| hardware/thiết bị (device / 장치) tích hợp (integration / 통합) | trường hợp (case / 사례) 12 + độ sâu (depth / 깊이) Lab 05 |
+| di chuyển (migration / 마이그레이션)/upgrade/quay lui (rollback / 롤백) đường dẫn (path / 경로) | trường hợp (case / 사례) 03/13/18 + độ sâu (depth / 깊이) Lab 05 |
+| process-death/cold-entry reconstruction | trường hợp (case / 사례) 04/14/19 + độ sâu (depth / 깊이) Lab 01/05 |
+| Macrobenchmark/Baseline Profile | trường hợp (case / 사례) 05/19 + độ sâu (depth / 깊이) Lab 05/06 |
+| OS/OEM/thiết bị (device / 장치) ma trận (matrix / 행렬) | trường hợp (case / 사례) 13/18 + độ sâu (depth / 깊이) Lab 05/06 |
+| bản phát hành (release / 릴리스) bundle/split install | trường hợp (case / 사례) 16 + độ sâu (depth / 깊이) Lab 06 |
+| bản địa (native / 네이티브) ABI/page kích thước (size / 크기)/symbol kiểm tra hợp lệ (validation / 검증) | trường hợp (case / 사례) 17 + độ sâu (depth / 깊이) Lab 07 |
+| minified SDK bên tiêu thụ (consumer / 소비자)/API tính tương thích (compatibility / 호환성) | trường hợp (case / 사례) 20 + độ sâu (depth / 깊이) Lab 07 |
 
-## 13. Performance
+## 13. hiệu năng (performance / 성능)
 
-Main-thread/ANR/leak, Compose recomposition, R8, startup, Baseline Profile, Macrobenchmark, Perfetto, memory/battery/network và performance budget đã được cover. Case 09 đi sâu event loop/Binder/ART/GC/thread contention; Case 11 cover hot UI paths; Case 13 cover low-memory/thermal/device quality; Case 17 cover native memory/JNI overhead; Case 19 tập trung cold/warm/hot start và startup critical path. Depth Lab 04 nhấn mạnh phase-specific invalidation và evidence-based Compose optimization; Depth Lab 05–06 nối benchmark với SLO, release-like build và startup critical path.
+Main-thread/ANR/leak, Compose recomposition, R8, startup, Baseline Profile, Macrobenchmark, Perfetto, bộ nhớ (memory / 메모리)/battery/mạng (network / 네트워크) và hiệu năng (performance / 성능) ngân sách (budget / 예산) đã được cover. trường hợp (case / 사례) 09 đi sâu vòng lặp sự kiện (event loop / 이벤트 루프)/Binder/ART/GC/luồng thực thi (thread / 스레드) contention; trường hợp (case / 사례) 11 cover hot UI paths; trường hợp (case / 사례) 13 cover low-memory/thermal/thiết bị (device / 장치) chất lượng (quality / 품질); trường hợp (case / 사례) 17 cover bản địa (native / 네이티브) bộ nhớ (memory / 메모리)/JNI overhead; trường hợp (case / 사례) 19 tập trung cold/warm/hot start và startup đường găng (critical path / 임계 경로). độ sâu (depth / 깊이) Lab 04 nhấn mạnh phase-specific vô hiệu hóa (invalidation / 무효화) và evidence-based Compose tối ưu hóa (optimization / 최적화); độ sâu (depth / 깊이) Lab 05–06 nối benchmark với SLO, release-like bản dựng (build / 빌드) và startup đường găng (critical path / 임계 경로).
 
-## 14. Security và privacy
+## 14. bảo mật (security / 보안) và privacy
 
-Coverage gồm secure config, Credential Manager, WebView boundary, Android Keystore, TLS/Network Security Config, backend authorization, integrity awareness, backup policy, Data Safety/privacy inventory, PendingIntent/exported components, supply-chain dependency risk và native parser/memory-safety awareness. Obfuscation không được xem là secret storage; integrity chỉ là risk signal; external Intent/URI/Binder/native input đều được coi là untrusted. Depth Lab 07 bổ sung privacy/logging obligations của SDK consumer-facing.
+Coverage gồm secure cấu hình (config / 설정), Credential Manager, WebView ranh giới (boundary / 경계), Android Keystore, TLS/mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정), backend authorization, integrity awareness, backup chính sách (policy / 정책), dữ liệu (data / 데이터) an toàn (safety / 안전)/privacy inventory, PendingIntent/exported components, supply-chain phụ thuộc (dependency / 의존성) rủi ro (risk / 위험) và bản địa (native / 네이티브) parser/memory-safety awareness. Obfuscation không được xem là secret lưu trữ (storage / 저장소); integrity chỉ là rủi ro (risk / 위험) tín hiệu (signal / 신호); bên ngoài (external / 외부) Intent/URI/Binder/bản địa (native / 네이티브) đầu vào (input / 입력) đều được coi là untrusted. độ sâu (depth / 깊이) Lab 07 bổ sung privacy/logging obligations của SDK consumer-facing.
 
-## 15. Build, Gradle và AGP
+## 15. bản dựng (build / 빌드), Gradle và AGP
 
-Case 15 nâng phần build từ awareness lên production mental model: Gradle vs AGP vs Kotlin plugin; root/settings/module model; build type/product flavor/variant; source-set precedence; manifest/resource merging; dependency configurations; version catalogs; convention plugins; configuration/build cache; Java/Kotlin toolchain; Variant API; D8/R8; signing; reproducibility và CI variant strategy.
+Trường hợp (case / 사례) 15 nâng phần bản dựng (build / 빌드) từ awareness lên môi trường vận hành (production / 운영 환경) mô hình tư duy (mental model / 사고 모델): Gradle vs AGP vs Kotlin plugin; gốc (root / 루트)/settings/mô-đun (module / 모듈) mô hình (model / 모델); bản dựng (build / 빌드) kiểu (type / 타입)/sản phẩm (product / 제품) flavor/variant; source-set precedence; manifest/tài nguyên (resource / 자원) merging; phụ thuộc (dependency / 의존성) configurations; phiên bản (version / 버전) catalogs; convention plugins; cấu hình (configuration / 구성)/bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시); Java/Kotlin toolchain; Variant API; D8/R8; signing; reproducibility và CI variant chiến lược (strategy / 전략).
 
-Depth Lab 06 đào sâu build theo phase, dependency visibility, generated-code forensic, release-only R8 failure, variant-only issue, merged manifest/resource review, dependency lock và artifact provenance. Các file Beginner/Master/Deep Dive 04 vẫn giữ build fundamentals và governance.
+Độ sâu (depth / 깊이) Lab 06 đào sâu bản dựng (build / 빌드) theo phase, phụ thuộc (dependency / 의존성) visibility, generated-code forensic, release-only R8 thất bại (failure / 실패), variant-only issue, merged manifest/tài nguyên (resource / 자원) rà soát (review / 검토), phụ thuộc (dependency / 의존성) khóa (lock / 잠금) và sản phẩm tạo ra (artifact / 산출물) provenance. Các tệp (file / 파일) Beginner/Master/Deep Dive 04 vẫn giữ bản dựng (build / 빌드) fundamentals và quản trị (governance / 거버넌스).
 
-## 16. AAB, packaging và distribution
+## 16. AAB, packaging và phân phối (distribution / 분포)
 
-Case 16 cover APK vs AAB, split APK, `bundletool`, dynamic feature/Play Feature Delivery, install-time/on-demand/conditional delivery, asset/size concern, ABI/language splits, Play App Signing, version metadata, release tracks, staged rollout, mobile rollback limitation, distribution-channel boundary và artifact provenance.
+Trường hợp (case / 사례) 16 cover APK vs AAB, split APK, `bundletool`, động (dynamic / 동적) tính năng (feature / 기능)/Play tính năng (feature / 기능) Delivery, install-time/on-demand/conditional delivery, asset/kích thước (size / 크기) concern, ABI/ngôn ngữ (language / 언어) splits, Play App Signing, phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터), bản phát hành (release / 릴리스) tracks, staged rollout, mobile quay lui (rollback / 롤백) limitation, distribution-channel ranh giới (boundary / 경계) và sản phẩm tạo ra (artifact / 산출물) provenance.
 
-Depth Lab 06 nhấn mạnh final installed artifact có thể khác upload bundle theo device configuration, và release gate phải verify artifact/delivery path chứ không chỉ source. AAB upload size không được nhầm với download/install size thực tế. Dynamic feature chỉ dùng khi delivery benefit bù được install-state complexity.
+Độ sâu (depth / 깊이) Lab 06 nhấn mạnh final installed sản phẩm tạo ra (artifact / 산출물) có thể khác upload bundle theo thiết bị (device / 장치) cấu hình (configuration / 구성), và bản phát hành (release / 릴리스) gate phải verify sản phẩm tạo ra (artifact / 산출물)/delivery đường dẫn (path / 경로) chứ không chỉ nguồn (source / 소스). AAB upload kích thước (size / 크기) không được nhầm với download/install kích thước (size / 크기) thực tế. động (dynamic / 동적) tính năng (feature / 기능) chỉ dùng khi delivery benefit bù được install-state độ phức tạp (complexity / 복잡도).
 
-## 17. Native/NDK/JNI
+## 17. bản địa (native / 네이티브)/NDK/JNI
 
-Case 17 cover `.so`, ABI, JNI static/dynamic registration, local/global references, `JNIEnv` thread affinity, callback, array/direct buffer, native memory, RAII, CMake, prebuilt native libraries, native API levels, file descriptor bridge, symbolication, tombstone, sanitizers, JNI batching và security.
+Trường hợp (case / 사례) 17 cover `.so`, ABI, JNI static/động (dynamic / 동적) registration, cục bộ (local / 로컬)/toàn cục (global / 전역) references, `JNIEnv` luồng thực thi (thread / 스레드) affinity, callback, array/direct buffer, bản địa (native / 네이티브) bộ nhớ (memory / 메모리), RAII, CMake, prebuilt bản địa (native / 네이티브) libraries, bản địa (native / 네이티브) API levels, tệp (file / 파일) descriptor cầu nối (bridge / 브리지), symbolication, tombstone, sanitizers, JNI batching và bảo mật (security / 보안).
 
-Depth Lab 07 đào sâu consumer safety ở JNI boundary: thread ownership, pending Java exception, buffer/reference lifetime, coarse-grained boundary, ABI testing, native symbol provenance và host-process blast radius. 16 KB page-size compatibility được xem như release requirement đối với app/SDK có native library, bao gồm prebuilt vendor `.so`.
+Độ sâu (depth / 깊이) Lab 07 đào sâu bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전) ở JNI ranh giới (boundary / 경계): luồng thực thi (thread / 스레드) quyền sở hữu (ownership / 소유권), pending Java exception, buffer/tham chiếu (reference / 참조) thời gian tồn tại (lifetime / 수명), coarse-grained ranh giới (boundary / 경계), ABI testing, bản địa (native / 네이티브) symbol provenance và host-process blast radius. 16 KB page-size tính tương thích (compatibility / 호환성) được xem như bản phát hành (release / 릴리스) yêu cầu (requirement / 요구사항) đối với app/SDK có bản địa (native / 네이티브) thư viện (library / 라이브러리), bao gồm prebuilt vendor `.so`.
 
-## 18. Android compatibility engineering
+## 18. Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링)
 
-Case 18 cover bốn version axes (`minSdk`, `compileSdk`, `targetSdk`, device OS), all-app vs target-gated behavior changes, compatibility framework, API guards/`@RequiresApi`, Jetpack compat abstraction, desugaring, SDK Extensions, updatable system components, non-SDK restrictions, WebView versioning, target-API policy và OS/target migration playbook.
+Trường hợp (case / 사례) 18 cover bốn phiên bản (version / 버전) axes (`minSdk`, `compileSdk`, `targetSdk`, device OS), all-app vs target-gated hành vi (behavior / 동작) changes, tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크), API guards/`@RequiresApi`, Jetpack compat lớp trừu tượng (abstraction / 추상화), desugaring, SDK Extensions, updatable hệ thống (system / 시스템) components, non-SDK restrictions, WebView versioning, target-API chính sách (policy / 정책) và OS/mục tiêu (target / 대상) di chuyển (migration / 마이그레이션) playbook.
 
-Depth Lab 06 bổ sung forensic theo phase, compile migration vs behavior migration, OEM/WebView dimension, dependency/toolchain isolation và exact-variant reproduction. Platform upgrade được tách thành current-app-on-new-OS testing và targetSdk migration, thay vì tăng target rồi sửa lỗi đồng loạt.
+Độ sâu (depth / 깊이) Lab 06 bổ sung forensic theo phase, compile di chuyển (migration / 마이그레이션) vs hành vi (behavior / 동작) di chuyển (migration / 마이그레이션), OEM/WebView dimension, phụ thuộc (dependency / 의존성)/toolchain isolation và exact-variant reproduction. nền tảng (platform / 플랫폼) upgrade được tách thành current-app-on-new-OS testing và targetSdk di chuyển (migration / 마이그레이션), thay vì tăng mục tiêu (target / 대상) rồi sửa lỗi đồng loạt.
 
 ## 19. App startup và initialization
 
-Case 19 cover cold/warm/hot start, TTID/TTFD, Application/provider auto-init, AndroidX App Startup, lazy/eager initialization, DI constructor side effects, SplashScreen, startup routing, class loading/static init, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto, StrictMode, SDK initialization governance, DB migration/startup, multi-process init và startup budgets.
+Trường hợp (case / 사례) 19 cover cold/warm/hot start, TTID/TTFD, ứng dụng (application / 애플리케이션)/provider auto-init, AndroidX App Startup, lazy/eager initialization, DI constructor side effects, SplashScreen, startup routing, nạp lớp (class loading / 클래스 로딩)/static init, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto, StrictMode, SDK initialization quản trị (governance / 거버넌스), DB di chuyển (migration / 마이그레이션)/startup, multi-process init và startup budgets.
 
-Depth Lab 06 đi sâu startup như dependency critical path, phân loại eager/lazy/demand-driven work và tách TTID khỏi TTFD. Startup được coi là critical path có budget, không phải collection các `init()` call.
+Độ sâu (depth / 깊이) Lab 06 đi sâu startup như phụ thuộc (dependency / 의존성) đường găng (critical path / 임계 경로), phân loại eager/lazy/demand-driven công việc (work / 작업) và tách TTID khỏi TTFD. Startup được coi là đường găng (critical path / 임계 경로) có ngân sách (budget / 예산), không phải collection các `init()` lời gọi (call / 호출).
 
-## 20. Android library/SDK authoring
+## 20. Android thư viện (library / 라이브러리)/SDK authoring
 
-Case 20 cover AAR vs pure JVM library, public API surface, source/binary compatibility, Kotlin/Java interop, dependency exposure, resource/manifest contract, Compose library API, threading/coroutine/Flow contract, error model, consumer ProGuard rules, minified consumer test, custom lint, SemVer behavioral compatibility, ABI validation, public inline/data/enum evolution, publishing, sample apps, support matrix, deprecation và privacy/security obligations của SDK.
+Trường hợp (case / 사례) 20 cover AAR vs pure JVM thư viện (library / 라이브러리), API công khai (public API / 공개 API) surface, nguồn (source / 소스)/nhị phân (binary / 이진) tính tương thích (compatibility / 호환성), Kotlin/Java interop, phụ thuộc (dependency / 의존성) exposure, tài nguyên (resource / 자원)/manifest đặc tả hợp đồng (contract / 계약), Compose thư viện (library / 라이브러리) API, threading/coroutine/luồng (flow / 흐름) đặc tả hợp đồng (contract / 계약), lỗi (error / 오류) mô hình (model / 모델), bên tiêu thụ (consumer / 소비자) ProGuard rules, minified bên tiêu thụ (consumer / 소비자) kiểm thử (test / 테스트), custom lint, SemVer behavioral tính tương thích (compatibility / 호환성), ABI kiểm tra hợp lệ (validation / 검증), công khai (public / 공개) inline/dữ liệu (data / 데이터)/enum evolution, publishing, mẫu (sample / 표본) apps, hỗ trợ (support / 지원) ma trận (matrix / 행렬), deprecation và privacy/bảo mật (security / 보안) obligations của SDK.
 
-Depth Lab 07 đi sâu source vs binary vs behavioral compatibility, Kotlin/Java ABI ergonomics, dependency leakage, auto-init startup debt, callback/thread/error contract, consumer R8, API dump, old-consumer compatibility test và artifact provenance.
+Độ sâu (depth / 깊이) Lab 07 đi sâu nguồn (source / 소스) vs nhị phân (binary / 이진) vs behavioral tính tương thích (compatibility / 호환성), Kotlin/Java ABI ergonomics, phụ thuộc (dependency / 의존성) leakage, auto-init startup debt, callback/luồng thực thi (thread / 스레드)/lỗi (error / 오류) đặc tả hợp đồng (contract / 계약), bên tiêu thụ (consumer / 소비자) R8, API dump, old-consumer tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) và sản phẩm tạo ra (artifact / 산출물) provenance.
 
-## 21. Production governance
+## 21. môi trường vận hành (production / 운영 환경) quản trị (governance / 거버넌스)
 
-Master + Deep Dive 04 + Case 05/07/13/15/16 cover observability schema, performance budget, dependency governance/SBOM, ADR, code ownership, flaky-test policy, feature-flag lifecycle, target-SDK cadence, artifact provenance, incident response và rollback compatibility. Depth Lab 05 bổ sung SLI/SLO, structured telemetry, staged rollout guardrail, flaky-test debt và postmortem feedback loop.
+Master + Deep Dive 04 + trường hợp (case / 사례) 05/07/13/15/16 cover khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마), hiệu năng (performance / 성능) ngân sách (budget / 예산), phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)/SBOM, ADR, mã (code / 코드) quyền sở hữu (ownership / 소유권), flaky-test chính sách (policy / 정책), feature-flag vòng đời (lifecycle / 생명주기), target-SDK cadence, sản phẩm tạo ra (artifact / 산출물) provenance, sự cố (incident / 인시던트) phản hồi (response / 응답) và quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성). độ sâu (depth / 깊이) Lab 05 bổ sung SLI/SLO, structured telemetry, staged rollout guardrail, flaky-test debt và postmortem vòng phản hồi (feedback loop / 피드백 루프).
 
 ## 22. Kotlin Multiplatform
 
-KMP được giữ ở Master thay vì đưa vào Beginner. Coverage tập trung shared business logic, public API, `expect/actual`, platform boundary, threading/serialization và tiêu chí share đúng concern thay vì tối đa hóa phần trăm shared code.
+KMP được giữ ở Master thay vì đưa vào Beginner. Coverage tập trung dùng chung (shared / 공유) lô-gic nghiệp vụ (business logic / 비즈니스 로직), API công khai (public API / 공개 API), `expect/actual`, nền tảng (platform / 플랫폼) ranh giới (boundary / 경계), threading/serialization và tiêu chí share đúng concern thay vì tối đa hóa phần trăm dùng chung (shared / 공유) mã (code / 코드).
 
 ## 23. Offline-first và synchronization
 
-Case 03 cover optimistic write, durable queue, idempotency key, retry/backoff, tombstone, conflict resolution, cursor, Paging/RemoteMediator và schema migration. Depth Lab 02 tăng độ sâu bằng consistency model, outbox invariant, idempotency key lifecycle, retry+jitter, mutation compaction, version/conflict, pull/push ordering, checkpoint atomicity, poison mutation, sync debt và account isolation.
+Trường hợp (case / 사례) 03 cover optimistic ghi (write / 쓰기), durable hàng đợi (queue / 큐), idempotency key, thử lại (retry / 재시도)/backoff, tombstone, giải quyết xung đột (conflict resolution / 충돌 해결), cursor, Paging/RemoteMediator và lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션). độ sâu (depth / 깊이) Lab 02 tăng độ sâu bằng consistency mô hình (model / 모델), outbox bất biến (invariant / 불변식), idempotency key vòng đời (lifecycle / 생명주기), thử lại (retry / 재시도)+jitter, mutation compaction, phiên bản (version / 버전)/xung đột (conflict / 충돌), pull/push thứ tự (ordering / 순서), checkpoint atomicity, poison mutation, sync debt và account isolation.
 
-## 24. Permission, capability và system contract
+## 24. Permission, năng lực (capability / 역량) và hệ thống (system / 시스템) đặc tả hợp đồng (contract / 계약)
 
-Case 10 cover hardware capability vs permission, `<uses-feature>`, permission revocation, foreground/background location, Bluetooth/Nearby, local-network protection, notification, camera/mic, Photo Picker/SAF, foreground service, exact alarm, exported component, App Links và target-SDK concerns. Depth Lab 05 bổ sung permission revoke như failure-injection scenario.
+Trường hợp (case / 사례) 10 cover hardware năng lực (capability / 역량) vs permission, `<uses-feature>`, permission revocation, foreground/background location, Bluetooth/Nearby, local-network protection, notification, camera/mic, Photo Picker/SAF, foreground dịch vụ (service / 서비스), chính xác (exact / 정확한) alarm, exported thành phần (component / 컴포넌트), App Links và target-SDK concerns. độ sâu (depth / 깊이) Lab 05 bổ sung permission revoke như failure-injection scenario.
 
-## 25. Device/media/hardware integration
+## 25. thiết bị (device / 장치)/media/hardware tích hợp (integration / 통합)
 
-Case 12 cover CameraX, Media3/player/media session/audio focus, microphone, files/media picker, current/continuous location, geofence, BLE/GATT, NFC/sensor, connectivity và WebView. Những integration này được model như external stateful systems có resource ownership, timeout, lifecycle và recovery. Depth Lab 05 bổ sung hardware/device integration test theo risk.
+Trường hợp (case / 사례) 12 cover CameraX, Media3/player/media session/audio focus, microphone, files/media picker, hiện tại (current / 현재)/continuous location, geofence, BLE/GATT, NFC/sensor, connectivity và WebView. Những tích hợp (integration / 통합) này được mô hình (model / 모델) như bên ngoài (external / 외부) stateful các hệ thống (systems / 시스템들) có tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권), hết thời gian chờ (timeout / 타임아웃), vòng đời (lifecycle / 생명주기) và khôi phục (recovery / 복구). độ sâu (depth / 깊이) Lab 05 bổ sung hardware/thiết bị (device / 장치) kiểm thử tích hợp (integration test / 통합 테스트) theo rủi ro (risk / 위험).
 
-## 26. Accessibility, adaptive UI và advanced Compose
+## 26. khả năng tiếp cận (accessibility / 접근성), adaptive UI và advanced Compose
 
-Case 11 cover layout/draw/input pipeline, custom layout/draw, gesture/nested scroll, focus/IME, edge-to-edge, animation, semantics/accessibility, font/RTL, keyboard/mouse và adaptive/foldable strategy. Depth Lab 04 tăng độ sâu ở identity, Snapshot dependency tracking, effect key, stability, phase-specific state read, semantics tree và evidence-based optimization. Accessibility được coi là correctness/public semantic contract, không phải polish cuối.
+Trường hợp (case / 사례) 11 cover bố cục (layout / 레이아웃)/draw/đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인), custom bố cục (layout / 레이아웃)/draw, gesture/nested scroll, focus/IME, edge-to-edge, animation, ngữ nghĩa (semantics / 의미론)/khả năng tiếp cận (accessibility / 접근성), font/RTL, keyboard/mouse và adaptive/foldable chiến lược (strategy / 전략). độ sâu (depth / 깊이) Lab 04 tăng độ sâu ở định danh (identity / 식별자), Snapshot phụ thuộc (dependency / 의존성) tracking, tác động (effect / 효과) key, stability, phase-specific trạng thái (state / 상태) read, ngữ nghĩa (semantics / 의미론) cây (tree / 트리) và evidence-based tối ưu hóa (optimization / 최적화). khả năng tiếp cận (accessibility / 접근성) được coi là tính đúng đắn (correctness / 정확성)/công khai (public / 공개) ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약), không phải polish cuối.
 
-## 27. Production device matrix và app quality
+## 27. môi trường vận hành (production / 운영 환경) thiết bị (device / 장치) ma trận (matrix / 행렬) và app chất lượng (quality / 품질)
 
-Case 13 cover risk-based OS/OEM/device matrix, fresh install/upgrade path, rollback compatibility, localization/plural/timezone/RTL, font scaling/TalkBack, battery/Doze, slow network/retry storm, low-memory/thermal, privacy inventory, telemetry, feature flags, backup/restore và incident readiness. Depth Lab 05–06 nối device matrix với release SLO, failure injection và exact-artifact forensic.
+Trường hợp (case / 사례) 13 cover risk-based OS/OEM/thiết bị (device / 장치) ma trận (matrix / 행렬), fresh install/upgrade đường dẫn (path / 경로), quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성), localization/plural/timezone/RTL, font scaling/TalkBack, battery/Doze, slow mạng (network / 네트워크)/thử lại (retry / 재시도) storm, low-memory/thermal, privacy inventory, telemetry, tính năng (feature / 기능) flags, backup/restore và sự cố (incident / 인시던트) readiness. độ sâu (depth / 깊이) Lab 05–06 nối thiết bị (device / 장치) ma trận (matrix / 행렬) với bản phát hành (release / 릴리스) SLO, thất bại (failure / 실패) injection và exact-artifact forensic.
 
-## 28. System surfaces ngoài Activity
+## 28. hệ thống (system / 시스템) surfaces ngoài Activity
 
-Case 14 cover started/bound/foreground Service, BroadcastReceiver + `goAsync`, ContentProvider/ContentResolver/URI grant, notification/channel/action, PendingIntent identity/mutability, App Widget, Shortcut, Quick Settings Tile, multi-process awareness, WorkManager coordination và exported-component security.
+Trường hợp (case / 사례) 14 cover started/bound/foreground dịch vụ (service / 서비스), BroadcastReceiver + `goAsync`, ContentProvider/ContentResolver/URI grant, notification/channel/hành động (action / 동작), PendingIntent định danh (identity / 식별자)/mutability, App Widget, Shortcut, Quick Settings Tile, multi-process awareness, WorkManager coordination và exported-component bảo mật (security / 보안).
 
-## 29. Depth Labs — reasoning depth coverage
+## 29. độ sâu (depth / 깊이) Labs — lập luận (reasoning / 추론) độ sâu (depth / 깊이) coverage
 
 `depth_labs/` không mở thêm breadth mà làm sâu bảy trục đã có:
 
-| Depth Lab | Trọng tâm độ sâu |
+| độ sâu (depth / 깊이) Lab | Trọng tâm độ sâu |
 |---|---|
-| 01 Architecture | invariant, ownership, stale snapshot, transaction boundary, ambiguous outcome, timeline review |
-| 02 Offline Sync | consistency, durable outbox, idempotency, ordering, conflict, cursor atomicity, account isolation |
-| 03 Coroutine/Flow | Job tree, cancellation, supervision, shared-state race, backpressure, stream lifetime, deterministic test |
-| 04 Compose | Snapshot identity, effect lifetime, phase invalidation, stability, semantics, measured performance |
-| 05 Reliability | invariant-based test, migration/rollback, failure injection, SLI/SLO, telemetry, rollout/incident loop |
-| 06 Build/Compatibility | build phase forensic, R8/variant failure, target migration, startup critical path, artifact provenance |
-| 07 SDK/Native | public API/ABI, dependency leakage, consumer safety, JNI lifetime/threading, compatibility evolution |
+| 01 kiến trúc (architecture / 아키텍처) | bất biến (invariant / 불변식), quyền sở hữu (ownership / 소유권), stale snapshot, giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계), ambiguous kết quả (outcome / 결과), timeline rà soát (review / 검토) |
+| 02 Offline Sync | consistency, durable outbox, idempotency, thứ tự (ordering / 순서), xung đột (conflict / 충돌), cursor atomicity, account isolation |
+| 03 Coroutine/luồng (flow / 흐름) | Job cây (tree / 트리), cancellation, supervision, shared-state race, backpressure, stream thời gian tồn tại (lifetime / 수명), deterministic kiểm thử (test / 테스트) |
+| 04 Compose | Snapshot định danh (identity / 식별자), tác động (effect / 효과) thời gian tồn tại (lifetime / 수명), phase vô hiệu hóa (invalidation / 무효화), stability, ngữ nghĩa (semantics / 의미론), measured hiệu năng (performance / 성능) |
+| 05 độ tin cậy (reliability / 신뢰성) | invariant-based kiểm thử (test / 테스트), di chuyển (migration / 마이그레이션)/quay lui (rollback / 롤백), thất bại (failure / 실패) injection, SLI/SLO, telemetry, rollout/sự cố (incident / 인시던트) vòng lặp (loop / 루프) |
+| 06 bản dựng (build / 빌드)/tính tương thích (compatibility / 호환성) | bản dựng (build / 빌드) phase forensic, R8/variant thất bại (failure / 실패), mục tiêu (target / 대상) di chuyển (migration / 마이그레이션), startup đường găng (critical path / 임계 경로), sản phẩm tạo ra (artifact / 산출물) provenance |
+| 07 SDK/bản địa (native / 네이티브) | API công khai (public API / 공개 API)/ABI, phụ thuộc (dependency / 의존성) leakage, bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전), JNI thời gian tồn tại (lifetime / 수명)/threading, tính tương thích (compatibility / 호환성) evolution |
 
-Depth Labs được dùng khi người học đã biết API và cần giải thích **tại sao hệ thống vẫn đúng khi execution order không lý tưởng**.
+Độ sâu (depth / 깊이) Labs được dùng khi người học đã biết API và cần giải thích **tại sao hệ thống vẫn đúng khi thực thi (execution / 실행) thứ tự (order / 순서) không lý tưởng**.
 
 ## 30. Các chủ đề cố ý không biến thành vendor manual
 
-Bộ note không cố trở thành reference manual cho Firebase, từng DI framework, từng HTTP client, Google Maps, Billing SDK, từng ML stack, cloud vendor hay mọi API Play Console. Những sản phẩm đó evolve nhanh. Tài liệu ưu tiên mental model, contract, lifetime, failure, compatibility và integration boundary để tool mới vẫn đặt được vào hệ thống đã hiểu.
+Bộ ghi chú (note / 노트) không cố trở thành tham chiếu (reference / 참조) manual cho Firebase, từng DI khung phần mềm (framework / 프레임워크), từng HTTP máy khách (client / 클라이언트), Google Maps, Billing SDK, từng ML ngăn xếp (stack / 스택), cloud vendor hay mọi API Play Console. Những sản phẩm đó evolve nhanh. Tài liệu ưu tiên mô hình tư duy (mental model / 사고 모델), đặc tả hợp đồng (contract / 계약), thời gian tồn tại (lifetime / 수명), thất bại (failure / 실패), tính tương thích (compatibility / 호환성) và tích hợp (integration / 통합) ranh giới (boundary / 경계) để công cụ (tool / 도구) mới vẫn đặt được vào hệ thống đã hiểu.
 
-## 31. Tiêu chí cho vòng update tiếp theo
+## 31. Tiêu chí cho vòng cập nhật (update / 업데이트) tiếp theo
 
-Sau Case 20 + Depth Labs, breadth của Kotlin + Android đã rất rộng và các boundary chính đã có reasoning sâu. Chapter/lab mới chỉ nên được thêm khi ít nhất một điều đúng:
+Sau trường hợp (case / 사례) 20 + độ sâu (depth / 깊이) Labs, breadth của Kotlin + Android đã rất rộng và các ranh giới (boundary / 경계) chính đã có lập luận (reasoning / 추론) sâu. Chapter/lab mới chỉ nên được thêm khi ít nhất một điều đúng:
 
-1. Android/Kotlin có behavior mới làm thay đổi mental model hoặc migration path.
-2. Một boundary production quan trọng vẫn chưa được giải thích hoặc invariant chưa được chứng minh.
-3. Một nhóm legacy code phổ biến chưa có migration strategy.
-4. Một failure mode production chưa có recovery/test model.
-5. Toolchain/platform policy mới làm ví dụ hiện tại sai.
-6. Một domain Android chuyên biệt được quyết định học sâu riêng, ví dụ Wear/TV/Auto/XR, game/graphics hoặc ML on-device; khi đó nên tạo sub-library riêng thay vì nhồi vào core path.
+1. Android/Kotlin có hành vi (behavior / 동작) mới làm thay đổi mô hình tư duy (mental model / 사고 모델) hoặc di chuyển (migration / 마이그레이션) đường dẫn (path / 경로).
+2. Một ranh giới (boundary / 경계) môi trường vận hành (production / 운영 환경) quan trọng vẫn chưa được giải thích hoặc bất biến (invariant / 불변식) chưa được chứng minh.
+3. Một nhóm legacy mã (code / 코드) phổ biến chưa có di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략).
+4. Một dạng thất bại (failure mode / 실패 모드) môi trường vận hành (production / 운영 환경) chưa có khôi phục (recovery / 복구)/kiểm thử (test / 테스트) mô hình (model / 모델).
+5. Toolchain/nền tảng (platform / 플랫폼) chính sách (policy / 정책) mới làm ví dụ hiện tại sai.
+6. Một lĩnh vực (domain / 도메인) Android chuyên biệt được quyết định học sâu riêng, ví dụ Wear/TV/Auto/XR, game/graphics hoặc ML on-device; khi đó nên tạo sub-library riêng thay vì nhồi vào cốt lõi (core / 핵심) đường dẫn (path / 경로).
 7. Một chapter hiện có còn quá tóm tắt; trong trường hợp đó ưu tiên **đào sâu chapter/lab hiện hữu** thay vì tạo thêm title mới.
 
-Không mở rộng chỉ để tăng số dòng. Mục tiêu của bộ note là **đủ sâu nhưng có cấu trúc**, để người học biết khái niệm là gì, vì sao tồn tại, khi nào dùng, trade-off ra sao, invariant nào phải giữ, nó thất bại như thế nào, artifact nào thực sự chạy trên device và cách đặt nó vào một production system có thể build, test, release, quan sát và evolve lâu dài.
+Không mở rộng chỉ để tăng số dòng. Mục tiêu của bộ ghi chú (note / 노트) là **đủ sâu nhưng có cấu trúc**, để người học biết khái niệm là gì, vì sao tồn tại, khi nào dùng, sự đánh đổi (trade-off / 트레이드오프) ra sao, bất biến (invariant / 불변식) nào phải giữ, nó thất bại như thế nào, sản phẩm tạo ra (artifact / 산출물) nào thực sự chạy trên thiết bị (device / 장치) và cách đặt nó vào một môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) có thể bản dựng (build / 빌드), kiểm thử (test / 테스트), bản phát hành (release / 릴리스), quan sát và evolve lâu dài.
+
+> **Bàn giao:** Sau **31. Tiêu chí cho vòng cập nhật (update / 업데이트) tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

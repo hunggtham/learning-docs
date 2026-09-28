@@ -1,12 +1,15 @@
 # Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian
 
-> **Lý thuyết liên kết hóa trị (valence bond theory, VB / 원자가 결합 이론)** mô tả liên kết cộng hóa trị bằng sự chồng phủ của các obitan nguyên tử hoặc obitan đã được tổ hợp lại theo hướng phù hợp. **Lai hóa (hybridization / 혼성화)** là cách chọn một cơ sở obitan cục bộ thuận tiện để mô tả nhiều liên kết tương đương và hình học phân tử. Hai ý tưởng này rất mạnh trong hóa học hữu cơ, lập thể và reasoning về liên kết σ/π, nhưng chúng là **mô hình biểu diễn**, không phải những “cánh tay orbital” tồn tại độc lập trước khi phân tử hình thành.
+> **Mạch đọc:** Đọc **Lý thuyết liên kết hóa trị và lai hóa — mô hình các liên kết cục bộ trong không gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Hybridization là một sự kiện xảy ra trước bonding”** sang **“sp³ nghĩa chính xác (exact / 정확한) 25% s trên mọi orbital”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Lý thuyết liên kết hóa trị (valence bond theory, VB / 원자가 결합 이론)** mô tả liên kết cộng hóa trị bằng sự chồng phủ của các obitan nguyên tử hoặc obitan đã được tổ hợp lại theo hướng phù hợp. **Lai hóa (hybridization / 혼성화)** là cách chọn một cơ sở obitan cục bộ thuận tiện để mô tả nhiều liên kết tương đương và hình học phân tử. Hai ý tưởng này rất mạnh trong hóa học hữu cơ, lập thể và lập luận (reasoning / 추론) về liên kết σ/π, nhưng chúng là **mô hình biểu diễn**, không phải những “cánh tay orbital” tồn tại độc lập trước khi phân tử hình thành.
 
 # Vì sao cần một mô hình khác sau Lewis và VSEPR?
 
 Lewis nói electron pair nào được hạch toán thành bond hoặc lone pair.
 
-VSEPR nói electron domains sắp xếp theo geometry nào.
+VSEPR nói electron domains sắp xếp theo hình học (geometry / 기하학) nào.
 
 Nhưng hai mô hình trên chưa trả lời:
 
@@ -16,7 +19,7 @@ Nhưng hai mô hình trên chưa trả lời:
 - tại sao carbon tạo bốn bond tương đương;
 - stereochemistry liên hệ orbital ra sao.
 
-Valence-bond language lấp khoảng trống đó.
+Valence-bond ngôn ngữ (language / 언어) lấp khoảng trống đó.
 
 # Liên kết như sự chồng phủ orbital
 
@@ -66,13 +69,13 @@ Một C≡C:
 
 # Bài toán methane và ý tưởng hybridization
 
-Carbon ở trạng thái nguyên tử tự do có configuration đơn giản:
+Carbon ở trạng thái nguyên tử tự do có cấu hình (configuration / 구성) đơn giản:
 
 \[
 2s^22p^2
 \]
 
-Nếu lấy nguyên xi các atomic orbitals, khó thấy ngay vì sao CH₄ có bốn C–H bonds gần tương đương theo tetrahedral geometry.
+Nếu lấy nguyên xi các atomic orbitals, khó thấy ngay vì sao CH₄ có bốn C–H bonds gần tương đương theo tetrahedral hình học (geometry / 기하학).
 
 Ta có thể xây bốn tổ hợp tuyến tính từ one 2s + three 2p:
 
@@ -82,7 +85,7 @@ sp^3
 
 Các **obitan lai sp³ (sp3 hybrid orbitals)** định hướng gần tetrahedral và mỗi orbital overlap với H 1s.
 
-Đây là một change of basis toán học hữu ích cho localized bonding description.
+Đây là một thay đổi (change / 변경) of basis toán học hữu ích cho localized bonding description.
 
 # Hybrid orbitals là tổ hợp tuyến tính
 
@@ -94,11 +97,11 @@ Nếu \(\phi_s,\phi_{p_x},\phi_{p_y},\phi_{p_z}\) là atomic basis functions, m�
 
 Bốn combinations khác nhau chọn signs/coefficient để hướng về bốn tetrahedral directions.
 
-Điểm cốt lõi: ta không tạo electron mới hay orbital mới vật lý từ hư không. Ta **biểu diễn cùng orbital space bằng một basis định hướng thuận tiện hơn**.
+Điểm cốt lõi: ta không tạo electron mới hay orbital mới vật lý từ hư không. Ta **biểu diễn cùng orbital không gian (space / 공간) bằng một basis định hướng thuận tiện hơn**.
 
 # sp³ — bốn hướng liên kết cục bộ
 
-Ideal sp³ geometry:
+Ideal sp³ hình học (geometry / 기하학):
 
 \[
 109.5^\circ
@@ -125,7 +128,7 @@ unhybridized p → π bond
 
 Mỗi carbon gần trigonal planar. Vì π overlap đòi p orbitals song song, rotation quanh C=C bị hạn chế.
 
-# sp — linear và hai p orbitals còn lại
+# sp — tuyến tính (linear / 선형) và hai p orbitals còn lại
 
 One s + one p tạo two sp hybrids đối nhau 180°.
 
@@ -139,11 +142,11 @@ p–p overlap 1 → π
 p–p overlap 2 → π
 ```
 
-nên C≡C gần linear.
+nên C≡C gần tuyến tính (linear / 선형).
 
 # S-character và tính chất hóa học
 
-Trong simple hybrid model:
+Trong simple hybrid mô hình (model / 모델):
 
 ```text
 sp   → 50% s
@@ -165,9 +168,9 @@ Ví dụ approximate acidity trend:
 HC≡CH  >  H2C=CH2  >  H3C–CH3
 ```
 
-Hybridization ở đây nối structure với acid–base chemistry.
+Hybridization ở đây nối cấu trúc (structure / 구조) với acid–cơ sở (base / 기반) chemistry.
 
-# Bent’s rule — hybridization không nhất thiết nguyên vẹn sp³/sp²
+# Bent’s quy tắc (rule / 규칙) — hybridization không nhất thiết nguyên vẹn sp³/sp²
 
 Các bonds quanh cùng central atom không nhất thiết có identical hybrid character.
 
@@ -181,7 +184,7 @@ Các nhãn sp/sp²/sp³ là shorthand hữu ích, không phải quantum numbers.
 
 Lone pair có thể chiếm localized orbital với s/p character khác bonding orbitals.
 
-Trong amines, geometry gần pyramidal thường được mô tả sp³-like. Nhưng trong amides, lone pair trên N conjugate với carbonyl π system nên N gần planar.
+Trong amines, hình học (geometry / 기하학) gần pyramidal thường được mô tả sp³-like. Nhưng trong amides, lone pair trên N conjugate với carbonyl π hệ thống (system / 시스템) nên N gần planar.
 
 Điều này dẫn tới partial C–N double-bond character và restricted rotation.
 
@@ -189,7 +192,7 @@ Do đó không nên gán hybridization chỉ bằng cách đếm four groups; re
 
 # Conjugation đòi orbital alignment
 
-Trong một conjugated system:
+Trong một conjugated hệ thống (system / 시스템):
 
 ```text
 p–p–p–p continuous overlap
@@ -199,7 +202,7 @@ cho phép π electrons delocalize trên nhiều atoms.
 
 Nếu một atom trở thành strongly pyramidal và p orbital mất alignment, conjugation giảm.
 
-Đây là lý do planarity thường được ưu tiên trong amides, allylic systems và aromatic rings.
+Đây là lý do planarity thường được ưu tiên trong amides, allylic các hệ thống (systems / 시스템들) và aromatic rings.
 
 # Hyperconjugation
 
@@ -214,11 +217,11 @@ Hyperconjugation giúp giải thích:
 - conformational effects;
 - some bond length changes.
 
-Localized VB language vì thế không có nghĩa electron hoàn toàn bị khóa trong từng bond.
+Localized VB ngôn ngữ (language / 언어) vì thế không có nghĩa electron hoàn toàn bị khóa trong từng bond.
 
-# Resonance trong valence-bond theory
+# Resonance trong valence-bond lý thuyết (theory / 이론)
 
-Valence-bond theory có thể dùng nhiều localized structures và combine chúng thành wavefunction tốt hơn.
+Valence-bond lý thuyết (theory / 이론) có thể dùng nhiều localized structures và combine chúng thành wavefunction tốt hơn.
 
 Lewis resonance contributors là một phiên bản định tính của ý tưởng này.
 
@@ -228,9 +231,9 @@ Do đó “VB = localized, MO = delocalized” là simplification. VB hiện đ�
 
 # Orbital phase và phản ứng
 
-Overlap phụ thuộc phase/sign của wavefunctions, không chỉ geometry.
+Overlap phụ thuộc phase/sign của wavefunctions, không chỉ hình học (geometry / 기하학).
 
-Constructive overlap tạo bonding interaction; destructive overlap tạo node/antibonding character.
+Constructive overlap tạo bonding tương tác (interaction / 상호작용); destructive overlap tạo nút (node / 노드)/antibonding character.
 
 Trong organic reaction mechanisms, orientation của filled orbital với acceptor orbital quyết định stereoelectronic preference.
 
@@ -248,29 +251,29 @@ backside attack
 → inversion of configuration
 ```
 
-Đây là ví dụ mạnh cho việc geometry mechanism xuất phát từ donor–acceptor orbital interaction.
+Đây là ví dụ mạnh cho việc hình học (geometry / 기하학) cơ chế (mechanism / 메커니즘) xuất phát từ donor–acceptor orbital tương tác (interaction / 상호작용).
 
-# E2 — anti-periplanar requirement
+# E2 — anti-periplanar yêu cầu (requirement / 요구사항)
 
-Trong E2 elimination, C–H bond đang bị phá và C–leaving-group bond cần alignment để electron flow hiệu quả vào forming π bond.
+Trong E2 elimination, C–H bond đang bị phá và C–leaving-group bond cần alignment để electron luồng (flow / 흐름) hiệu quả vào forming π bond.
 
-Geometry anti-periplanar thường tối ưu overlap.
+Hình học (geometry / 기하학) anti-periplanar thường tối ưu overlap.
 
-Vì vậy conformational analysis của cyclohexane có thể dự đoán E2 reactivity: leaving group và β-H thường cần trans-diaxial arrangement.
+Vì vậy conformational phân tích (analysis / 분석) của cyclohexane có thể dự đoán E2 reactivity: leaving group và β-H thường cần trans-diaxial arrangement.
 
-Hybrid/orbital thinking nối trực tiếp molecular geometry với product outcome.
+Hybrid/orbital thinking nối trực tiếp molecular hình học (geometry / 기하학) với sản phẩm (product / 제품) kết quả (outcome / 결과).
 
 # Carbonyl — π và π* tạo electrophilicity
 
-C=O gồm σ framework và π interaction. Vì O electronegative hơn, occupied π orbital và unoccupied π* không phân bố đối xứng.
+C=O gồm σ khung phần mềm (framework / 프레임워크) và π tương tác (interaction / 상호작용). Vì O electronegative hơn, occupied π orbital và unoccupied π* không phân bố đối xứng.
 
 LUMO-like π* có coefficient đáng kể trên carbon, tạo acceptor site cho nucleophile.
 
 Nucleophile attack thường xảy ra theo một angle không hoàn toàn 90° với carbonyl plane, thường được mô tả bởi **Bürgi–Dunitz trajectory**.
 
-Đây là example advanced cho stereoelectronic control.
+Đây là example advanced cho stereoelectronic điều khiển (control / 제어).
 
-# Hybridization và geometry không phải nguyên nhân–kết quả đơn chiều
+# Hybridization và hình học (geometry / 기하학) không phải nguyên nhân–kết quả đơn chiều
 
 Textbook thường viết:
 
@@ -286,13 +289,13 @@ electronic Hamiltonian + nuclear positions
 → localized orbital analysis có thể biểu diễn bằng sp3-like basis
 ```
 
-Hybridization là một language mô tả geometry/bonding, không phải force bí ẩn làm atom chọn shape.
+Hybridization là một ngôn ngữ (language / 언어) mô tả hình học (geometry / 기하학)/bonding, không phải force bí ẩn làm atom chọn shape.
 
-# Promotion energy và “carbon kích electron lên p”
+# Promotion năng lượng (energy / 에너지) và “carbon kích electron lên p”
 
 Cách giải thích cổ điển nói carbon “promote” one 2s electron lên 2p rồi hybridize.
 
-Hình ảnh này có giá trị mnemonic nhưng không nên hiểu như một sequence vật lý riêng biệt:
+Hình ảnh này có giá trị mnemonic nhưng không nên hiểu như một chuỗi (sequence / 시퀀스) vật lý riêng biệt:
 
 ```text
 atom promote trước
@@ -300,7 +303,7 @@ atom promote trước
 → rồi bond
 ```
 
-Molecule hình thành như một toàn hệ lượng tử; energy gained from bonding được xét cùng mọi rearrangements electronic.
+Molecule hình thành như một toàn hệ lượng tử; năng lượng (energy / 에너지) gained from bonding được xét cùng mọi rearrangements electronic.
 
 # Hypervalent main-group compounds
 
@@ -308,7 +311,7 @@ Cách dạy cũ dùng sp³d/sp³d² hybrids chứa d orbitals cho PF₅/SF₆.
 
 Electronic-structure calculations cho thấy contribution của central-atom d orbitals thường không tương xứng với literal expanded-hybrid picture.
 
-Models như **three-center four-electron bonding (3c–4e)**, ionic resonance và MO delocalization thường phù hợp hơn.
+Các mô hình (models / 모델들) như **three-center four-electron bonding (3c–4e)**, ionic resonance và MO delocalization thường phù hợp hơn.
 
 Vì vậy:
 
@@ -316,7 +319,7 @@ Vì vậy:
 sp3d, sp3d2
 ```
 
-có thể giữ như geometry mnemonic trong contexts nhập môn, nhưng không nên coi là literal bonding mechanism.
+có thể giữ như hình học (geometry / 기하학) mnemonic trong contexts nhập môn, nhưng không nên coi là literal bonding cơ chế (mechanism / 메커니즘).
 
 # Three-center four-electron bond
 
@@ -332,25 +335,25 @@ I₃⁻ và XeF₂ là examples phù hợp để vượt khỏi localized two-ce
 
 # Localized orbitals từ MO wavefunction
 
-Ngay cả khi quantum chemistry tính canonical MOs delocalized, các occupied orbitals có thể được transform bằng unitary transformation thành **localized molecular orbitals** mà không thay tổng wavefunction determinant.
+Ngay cả khi quantum chemistry tính chuẩn gốc (canonical / 정본) MOs delocalized, các occupied orbitals có thể được transform bằng unitary transformation thành **localized molecular orbitals** mà không thay tổng wavefunction determinant.
 
 Các schemes như Boys hoặc Pipek–Mezey localization tạo orbitals giống bond/lone-pair picture.
 
-Điều này cho thấy localized VB-like và delocalized MO-like descriptions có thể là những coordinate systems khác nhau trên cùng electronic state.
+Điều này cho thấy localized VB-like và delocalized MO-like descriptions có thể là những coordinate các hệ thống (systems / 시스템들) khác nhau trên cùng electronic trạng thái (state / 상태).
 
-# Bond order không hoàn toàn là số bond Lewis
+# Bond thứ tự (order / 순서) không hoàn toàn là số bond Lewis
 
-Trong localized description, ta nói single/double/triple. Nhưng bond order thực có thể được estimate bằng nhiều definitions: Wiberg, Mayer, MO occupancy...
+Trong localized description, ta nói single/double/triple. Nhưng bond thứ tự (order / 순서) thực có thể được estimate bằng nhiều definitions: Wiberg, Mayer, MO occupancy...
 
-Các giá trị có thể không nguyên và phụ thuộc analysis method.
+Các giá trị có thể không nguyên và phụ thuộc phân tích (analysis / 분석) phương thức (method / 메서드).
 
-Do đó “bond order 1.3” không phải mâu thuẫn; nó phản ánh partial/delocalized bonding.
+Do đó “bond thứ tự (order / 순서) 1.3” không phải mâu thuẫn; nó phản ánh partial/delocalized bonding.
 
 # Hybridization và spectroscopy
 
-s-character ảnh hưởng NMR chemical shifts, coupling, core-level energies và vibrational frequencies gián tiếp qua geometry/bond strength.
+s-character ảnh hưởng NMR chemical shifts, coupling, core-level energies và vibrational frequencies gián tiếp qua hình học (geometry / 기하학)/bond strength.
 
-Spectroscopy vì vậy cung cấp evidence để kiểm tra localized bonding picture, không chỉ là một kỹ thuật nhận diện độc lập.
+Spectroscopy vì vậy cung cấp bằng chứng (evidence / 증거) để kiểm tra localized bonding picture, không chỉ là một kỹ thuật nhận diện độc lập.
 
 # Hybridization trong materials
 
@@ -362,14 +365,14 @@ planar graphene → sp2-like σ network + delocalized π system
 carbyne-like chains → sp-like local picture
 ```
 
-Khác local orbital organization tạo khác biệt lớn về hardness, dimensionality và electronic transport.
+Khác cục bộ (local / 로컬) orbital organization tạo khác biệt lớn về hardness, dimensionality và electronic vận chuyển (transport / 전송).
 
 # Khi nào nên dùng VB/hybridization?
 
-Model này đặc biệt hữu ích khi câu hỏi liên quan:
+Mô hình (model / 모델) này đặc biệt hữu ích khi câu hỏi liên quan:
 
-- local σ/π bonding;
-- molecular geometry;
+- cục bộ (local / 로컬) σ/π bonding;
+- molecular hình học (geometry / 기하학);
 - stereochemistry;
 - conformational restrictions;
 - donor–acceptor orbital orientation;
@@ -377,26 +380,26 @@ Model này đặc biệt hữu ích khi câu hỏi liên quan:
 
 Nên chuyển sang MO/quantum methods khi cần:
 
-- global delocalization;
+- toàn cục (global / 전역) delocalization;
 - magnetism;
 - excited states;
 - spectroscopy;
 - near-degenerate electronic states;
-- band structure.
+- band cấu trúc (structure / 구조).
 
 # Những hiểu lầm thường gặp
 
 ### “Hybridization là một sự kiện xảy ra trước bonding”
 
-Không. Đó là representation/basis transformation hữu ích của molecular electronic structure.
+Không. Đó là biểu diễn (representation / 표현)/basis transformation hữu ích của molecular electronic cấu trúc (structure / 구조).
 
-### “sp³ nghĩa exact 25% s trên mọi orbital”
+### “sp³ nghĩa chính xác (exact / 정확한) 25% s trên mọi orbital”
 
 Chỉ đúng trong idealized symmetric construction. Real molecules có thể rehybridize.
 
 ### “Mọi molecule phải gán hybridization”
 
-Không. Nhiều systems được mô tả tốt hơn bằng MO theory.
+Không. Nhiều các hệ thống (systems / 시스템들) được mô tả tốt hơn bằng MO lý thuyết (theory / 이론).
 
 ### “sp³d chứng minh d orbital tạo hypervalent bonds”
 
@@ -404,11 +407,11 @@ Không phải interpretation hiện đại đáng tin cậy mặc định.
 
 ### “Single bond luôn quay tự do”
 
-Không. Conjugation, steric effects và ring constraints có thể tạo rotational barriers lớn.
+Không. Conjugation, steric effects và ring các ràng buộc (constraints / 제약조건들) có thể tạo rotational barriers lớn.
 
 ## Mô hình tư duy
 
-Valence-bond language nhìn molecule như **mạng tương tác orbital cục bộ có directionality**:
+Valence-bond ngôn ngữ (language / 언어) nhìn molecule như **mạng tương tác orbital cục bộ có directionality**:
 
 ```text
 atomic/orbital basis
@@ -418,6 +421,8 @@ atomic/orbital basis
 → geometry và reactivity
 ```
 
-Hybridization là coordinate system rất hữu ích cho local chemistry, còn MO theory mở rộng sang electron states của toàn molecule.
+Hybridization là coordinate hệ thống (system / 시스템) rất hữu ích cho cục bộ (local / 로컬) chemistry, còn MO lý thuyết (theory / 이론) mở rộng sang electron states của toàn molecule.
 
 Xem tiếp: [Lý thuyết obitan phân tử](./06_molecular_orbital_theory.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

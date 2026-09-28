@@ -1,79 +1,84 @@
-# Software architecture và design reasoning
+# Software kiến trúc (architecture / 아키텍처) và thiết kế (design / 설계) lập luận (reasoning / 추론)
 
-Architecture không phải sơ đồ boxes đẹp; nó là tập decisions khó thay đổi về boundaries, data ownership, communication, deployment và quality attributes. Design tốt bắt đầu từ forces/constraints chứ không từ pattern names.
+> **Mạch đọc:** Đặt **Software kiến trúc (architecture / 아키텍처) và thiết kế (design / 설계) lập luận (reasoning / 추론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **kiến trúc (architecture / 아키텍처) như set of consequential decisions** sang **chất lượng (quality / 품질) attributes tạo kiến trúc (architecture / 아키텍처)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Architecture như set of consequential decisions
 
-Một decision “dùng PostgreSQL” có impact khác “field này tên `createdAt`”. Architecture decisions thường ảnh hưởng nhiều modules/teams và migration cost cao.
+Kiến trúc (architecture / 아키텍처) không phải sơ đồ boxes đẹp; nó là tập decisions khó thay đổi về boundaries, dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권), communication, triển khai (deployment / 배포) và chất lượng (quality / 품질) attributes. thiết kế (design / 설계) tốt bắt đầu từ forces/các ràng buộc (constraints / 제약조건들) chứ không từ mẫu (pattern / 패턴) names.
 
-Do đó Architecture Decision Record (ADR) nên ghi context, options, decision và consequences. Mục tiêu không phải bureaucracy mà giữ reasoning cho future maintainers.
+## Kiến trúc (architecture / 아키텍처) như set of consequential decisions
 
-## Quality attributes tạo architecture
+Một quyết định (decision / 결정) “dùng PostgreSQL” có impact khác “trường dữ liệu (field / 필드) này tên `createdAt`”. kiến trúc (architecture / 아키텍처) decisions thường ảnh hưởng nhiều modules/teams và di chuyển (migration / 마이그레이션) chi phí (cost / 비용) cao.
 
-Availability, latency, security, modifiability, scalability và cost thường conflict.
+Do đó kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) (ADR) nên ghi ngữ cảnh (context / 맥락), options, quyết định (decision / 결정) và consequences. Mục tiêu không phải bureaucracy mà giữ lập luận (reasoning / 추론) cho future maintainers.
 
-Ví dụ synchronous replication tăng durability/consistency nhưng tăng write latency và giảm availability khi replicas unavailable. Architecture chỉ có ý nghĩa khi gắn với quality priorities.
+## Chất lượng (quality / 품질) attributes tạo kiến trúc (architecture / 아키텍처)
+
+Availability, độ trễ (latency / 지연 시간), bảo mật (security / 보안), modifiability, scalability và chi phí (cost / 비용) thường xung đột (conflict / 충돌).
+
+Ví dụ synchronous replication tăng durability/consistency nhưng tăng ghi (write / 쓰기) độ trễ (latency / 지연 시간) và giảm availability khi replicas unavailable. kiến trúc (architecture / 아키텍처) chỉ có ý nghĩa khi gắn với chất lượng (quality / 품질) priorities.
 
 ## Coupling và cohesion
 
-Cohesion cao gom behavior/data thay đổi cùng nhau. Coupling thấp giảm số assumptions xuyên boundaries.
+Cohesion cao gom hành vi (behavior / 동작)/dữ liệu (data / 데이터) thay đổi cùng nhau. Coupling thấp giảm số các giả định (assumptions / 가정들) xuyên boundaries.
 
-Coupling có nhiều dạng: compile-time, runtime, data schema, temporal, organizational. Hai services không import code nhau nhưng cùng phụ thuộc release window vẫn bị coupled.
+Coupling có nhiều dạng: compile-time, thời gian chạy (runtime / 런타임), dữ liệu (data / 데이터) lược đồ (schema / 스키마), temporal, organizational. Hai services không import mã (code / 코드) nhau nhưng cùng phụ thuộc bản phát hành (release / 릴리스) cửa sổ (window / 윈도우) vẫn bị coupled.
 
-## Information hiding
+## Thông tin (information / 정보) hiding
 
-Module nên hide volatile design decision sau stable interface. Một storage module expose `saveOrder()` thay vì cho callers phụ thuộc table layout nếu layout có khả năng thay đổi.
+Mô-đun (module / 모듈) nên hide volatile thiết kế (design / 설계) quyết định (decision / 결정) sau stable giao diện (interface / 인터페이스). Một lưu trữ (storage / 저장소) mô-đun (module / 모듈) expose `saveOrder()` thay vì cho callers phụ thuộc bảng (table / 테이블) bố cục (layout / 레이아웃) nếu bố cục (layout / 레이아웃) có khả năng thay đổi.
 
-Information hiding giảm blast radius của change.
+Thông tin (information / 정보) hiding giảm blast radius của thay đổi (change / 변경).
 
 ## Layering
 
-Layer architecture tạo direction dependencies: presentation → application → domain → infrastructure tùy style. Layer giúp separation nhưng excessive layering có thể tạo pass-through boilerplate.
+Tầng (layer / 계층) kiến trúc (architecture / 아키텍처) tạo direction dependencies: presentation → ứng dụng (application / 애플리케이션) → lĩnh vực (domain / 도메인) → hạ tầng (infrastructure / 인프라) tùy style. tầng (layer / 계층) giúp separation nhưng excessive layering có thể tạo pass-through boilerplate.
 
-Layer là tool cho dependency control, không phải rule rằng mọi request phải đi qua N classes.
+Tầng (layer / 계층) là công cụ (tool / 도구) cho phụ thuộc (dependency / 의존성) điều khiển (control / 제어), không phải quy tắc (rule / 규칙) rằng mọi yêu cầu (request / 요청) phải đi qua N classes.
 
 ## Hexagonal/ports-and-adapters intuition
 
-Domain logic phụ thuộc abstractions/ports; external DB/UI/message broker là adapters. Goal là business rules không bị hard-wire vào framework infrastructure.
+Lĩnh vực (domain / 도메인) lô-gic (logic / 논리) phụ thuộc abstractions/ports; bên ngoài (external / 외부) DB/UI/message broker là adapters. Goal là nghiệp vụ (business / 비즈니스) rules không bị hard-wire vào khung phần mềm (framework / 프레임워크) hạ tầng (infrastructure / 인프라).
 
-Nhưng nếu domain đơn giản, thêm abstraction interfaces everywhere có thể overengineering. Boundary nên bảo vệ volatility thật.
+Nhưng nếu lĩnh vực (domain / 도메인) đơn giản, thêm lớp trừu tượng (abstraction / 추상화) interfaces everywhere có thể overengineering. ranh giới (boundary / 경계) nên bảo vệ volatility thật.
 
-## Architecture patterns và context
+## Kiến trúc (architecture / 아키텍처) patterns và ngữ cảnh (context / 맥락)
 
-Monolith, microservices, event-driven, CQRS, layered, pipes-and-filters không phải maturity ladder. Mỗi pattern giải một set forces và tạo liabilities.
+Monolith, microservices, event-driven, CQRS, layered, pipes-and-filters không phải maturity ladder. Mỗi mẫu (pattern / 패턴) giải một set forces và tạo liabilities.
 
-CQRS tách read/write models khi needs khác mạnh, nhưng thêm synchronization/evolution complexity. Event sourcing cho audit/replay nhưng làm schema evolution và debugging khó hơn.
+CQRS tách read/ghi (write / 쓰기) các mô hình (models / 모델들) khi needs khác mạnh, nhưng thêm synchronization/evolution độ phức tạp (complexity / 복잡도). sự kiện (event / 이벤트) sourcing cho kiểm tra (audit / 감사)/replay nhưng làm lược đồ (schema / 스키마) evolution và debugging khó hơn.
 
-## Data ownership
+## Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권)
 
-Architecture boundary mạnh thường cần ownership của state. Shared writable database làm services/modules phụ thuộc hidden invariants.
+Kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계) mạnh thường cần quyền sở hữu (ownership / 소유권) của trạng thái (state / 상태). dùng chung (shared / 공유) writable cơ sở dữ liệu (database / 데이터베이스) làm services/modules phụ thuộc hidden invariants.
 
-Ownership không đồng nghĩa không chia sẻ data; nó nghĩa một component có authority update và others truy cập qua contract/copy phù hợp.
+Quyền sở hữu (ownership / 소유권) không đồng nghĩa không chia sẻ dữ liệu (data / 데이터); nó nghĩa một thành phần (component / 컴포넌트) có authority cập nhật (update / 업데이트) và others truy cập qua đặc tả hợp đồng (contract / 계약)/bản sao (copy / 복사) phù hợp.
 
-## Dependency inversion
+## Phụ thuộc (dependency / 의존성) inversion
 
-High-level policy không nên phụ thuộc concrete low-level implementation khi volatility/coupling cần tách. Dependency inversion dùng interfaces/abstractions để direction source dependency phục vụ stability.
+High-level chính sách (policy / 정책) không nên phụ thuộc concrete low-level hiện thực (implementation / 구현) khi volatility/coupling cần tách. phụ thuộc (dependency / 의존성) inversion dùng interfaces/abstractions để direction nguồn (source / 소스) phụ thuộc (dependency / 의존성) phục vụ stability.
 
-Nhưng interface chỉ có một implementation và không có volatility không tự động hữu ích.
+Nhưng giao diện (interface / 인터페이스) chỉ có một hiện thực (implementation / 구현) và không có volatility không tự động hữu ích.
 
-## Architecture fitness functions
+## Kiến trúc (architecture / 아키텍처) fitness functions
 
-Một architecture intent có thể degrade theo thời gian. Automated checks như dependency rules, API compatibility tests, latency SLO, security policy scans có thể đóng vai fitness functions để phát hiện drift.
+Một kiến trúc (architecture / 아키텍처) intent có thể degrade theo thời gian. Automated checks như phụ thuộc (dependency / 의존성) rules, API tính tương thích (compatibility / 호환성) tests, độ trễ (latency / 지연 시간) SLO, bảo mật (security / 보안) chính sách (policy / 정책) scans có thể đóng vai fitness functions để phát hiện drift.
 
-Architecture vì vậy không chỉ là initial design; nó cần continuous verification.
+Kiến trúc (architecture / 아키텍처) vì vậy không chỉ là initial thiết kế (design / 설계); nó cần continuous xác minh (verification / 확인).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Architecture là chọn framework.”** Framework là implementation decision; architecture lớn hơn là boundaries và quality trade-offs.
+**“kiến trúc (architecture / 아키텍처) là chọn khung phần mềm (framework / 프레임워크).”** khung phần mềm (framework / 프레임워크) là hiện thực (implementation / 구현) quyết định (decision / 결정); kiến trúc (architecture / 아키텍처) lớn hơn là boundaries và chất lượng (quality / 품질) trade-offs.
 
-**“Pattern nổi tiếng nghĩa là best practice.”** Pattern chỉ hợp khi forces tương ứng tồn tại.
+**“mẫu (pattern / 패턴) nổi tiếng nghĩa là best practice.”** mẫu (pattern / 패턴) chỉ hợp khi forces tương ứng tồn tại.
 
-**“Clean architecture càng nhiều layers càng clean.”** Indirection không có purpose làm system khó hiểu hơn.
+**“Clean kiến trúc (architecture / 아키텍처) càng nhiều layers càng clean.”** Indirection không có purpose làm hệ thống (system / 시스템) khó hiểu hơn.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Architecture là cách phân bố responsibilities và constraints sao cho những thay đổi/failures quan trọng bị giới hạn trong boundaries hợp lý.
+> kiến trúc (architecture / 아키텍처) là cách phân bố responsibilities và các ràng buộc (constraints / 제약조건들) sao cho những thay đổi/failures quan trọng bị giới hạn trong boundaries hợp lý.
 
 ## Kết nối
 
 Đọc [system decomposition/services](../08_software_systems/07_system_decomposition_services_and_boundaries.md), [requirements](./00_requirements_specification_and_engineering_process.md) và [maintenance/technical debt](./04_maintenance_evolution_and_technical_debt.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 requirements specification and engineering process](./00_requirements_specification_and_engineering_process.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

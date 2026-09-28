@@ -1,5 +1,8 @@
 # Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)
 
+> **Mạch đọc:** Đặt **Dân số, hộ gia đình và nền kinh tế tiêu dùng Hàn Quốc (Demographics, Households & Consumption / 인구·가계·소비경제)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Chuyển đổi dân số: từ lợi tức dân số sang ràng buộc dân số** sang **Mức sinh thấp tác động theo nhiều khoảng thời gian**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Khi nhìn Hàn Quốc qua Samsung, Hyundai hay SK, rất dễ quên rằng phần lớn nhu cầu nội địa cuối cùng vẫn quay về **hộ gia đình (household / 가계)**. Con người đi làm, vay tiền, thuê hoặc mua nhà, nuôi con, tích lũy tài sản, nghỉ hưu và tiêu dùng. Dân số vì vậy không phải một thống kê nền; nó định hình cung lao động, nhu cầu nhà ở, giáo dục, lương hưu, y tế, kinh tế vùng và chiến lược doanh nghiệp.
 
 Một nền kinh tế có thể có các nhà xuất khẩu rất mạnh nhưng tiêu dùng nội địa vẫn yếu nếu thu nhập hộ gia đình, gánh nặng trả nợ hoặc niềm tin tiêu dùng suy giảm. Vì vậy khi phân tích bán lẻ, ngân hàng, viễn thông, nền tảng số, xây dựng hoặc y tế, cần đọc khu vực hộ gia đình cùng dữ liệu vĩ mô.
@@ -121,7 +124,7 @@ Xem [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma
 
 Hộ gia đình quyết định tiết kiệm dựa trên kỳ vọng thu nhập tương lai. Nếu lo lương hưu không đủ hoặc thời gian nghỉ hưu dài, họ có động lực tiết kiệm nhiều hơn ngay hôm nay.
 
-Đây là logic **tiêu dùng theo vòng đời (life-cycle consumption)**. Tuy nhiên hành vi thực tế khác nhau mạnh theo tài sản, nợ, hỗ trợ gia đình và tình trạng nhà ở.
+Đây là lô-gic (logic / 논리) **tiêu dùng theo vòng đời (life-cycle consumption)**. Tuy nhiên hành vi thực tế khác nhau mạnh theo tài sản, nợ, hỗ trợ gia đình và tình trạng nhà ở.
 
 Xã hội già hóa khiến lương hưu và thu nhập nghỉ hưu trở thành biến vĩ mô vì chúng tác động mức tiết kiệm quốc gia và tiêu dùng.
 
@@ -185,7 +188,7 @@ Giả sử dân số giảm nhưng số hộ vẫn tăng do quy mô hộ nhỏ l
 
 Vì vậy `dân số ↓` không thể trực tiếp suy ra `doanh thu ↓` cho mọi công ty. Doanh nghiệp phải được nối với **nhóm khách hàng (customer cohort)** cụ thể.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Dân số quyết định **bao nhiêu người** có thể làm việc và tiêu dùng. Bảng cân đối hộ gia đình quyết định **họ có khả năng tài chính bao nhiêu**. Kỳ vọng quyết định **họ tiêu hôm nay hay để dành**. Nhà ở và nợ quyết định **cú sốc vĩ mô truyền vào tiêu dùng mạnh đến đâu**.
 
@@ -208,3 +211,5 @@ Dân số giảm không có nghĩa mọi thị trường giảm. Giá nhà tăng
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`28_productivity_services_and_economic_dualism.md`](./28_productivity_services_and_economic_dualism.md) và [`31_biohealth_pharma_medical_devices_and_kbeauty.md`](./31_biohealth_pharma_medical_devices_and_kbeauty.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **001. 소프트웨어 생명 주기 (Software Life Cycle)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** và nối nó với **001. 소프트웨어 생명 주기 (Software Life Cycle)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -34,7 +36,7 @@
   - **스프링 (Spring):** 자바 플랫폼을 위한 경량형 오픈소스 프레임워크.
   - **전자정부 (e-Government):** 공공부문 정보화 사업을 지원하는 프레임워크.
   - **닷넷 (.NET):** 마이크로소프트의 Windows 개발 및 실행 환경.
-- **Tiếng Việt:** Đặc điểm của Framework: Mô-đun hóa, Tái sử dụng, Khả năng mở rộng, và Đảo ngược quyền điều khiển (IoC - Inversion of Control). Các loại: Spring (Java), e-Government (Hàn Quốc), .NET (Microsoft).
+- **Tiếng Việt:** Đặc điểm của khung phần mềm (framework / 프레임워크): Mô-đun hóa, Tái sử dụng, Khả năng mở rộng, và Đảo ngược quyền điều khiển (IoC - Inversion of Control). Các loại: Spring (Java), e-Government (Hàn Quốc), .NET (Microsoft).
 
 ### 11.2 네트워크 구조 및 표준 심화
 - **네트워크 토폴로지 (Network Topology):**
@@ -58,7 +60,7 @@
 - **Tiếng Việt:**
   - Topology mạng: Star, Ring, Bus, Mesh (Số đường truyền = n(n-1)/2).
   - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
-  - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
+  - luồng (flow / 흐름) điều khiển (control / 제어): Sliding cửa sổ (window / 윈도우) truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
 
 ### 11.3 데이터베이스 동시성 및 교착상태 심화
 - **교착상태 해결 방법 (Deadlock Handling):**
@@ -71,7 +73,7 @@
   - **즉각 갱신 기법 (Immediate Update):** 즉시 반영. 장애 시 Undo, Redo 모두 사용 가능.
   - **그림자 페이지 대체 기법 (Shadow Paging):** 그림자 페이지 보관 (Log, Undo, Redo 불필요).
   - **검사점 기법 (Check Point):** 검사점부터 회복하여 시간 절약.
-- **Tiếng Việt:** Xử lý Deadlock: Phòng ngừa (Prevention) -> Tránh (Avoidance - Thuật toán Banker) -> Phát hiện (Detection) -> Phục hồi (Recovery). Phục hồi DB bằng Log, Shadow Paging, Check Point.
+- **Tiếng Việt:** Xử lý Deadlock: Phòng ngừa (Prevention) -> Tránh (Avoidance - Thuật toán Banker) -> Phát hiện (Detection) -> Phục hồi (Recovery). Phục hồi DB bằng Log, Shadow Paging, Check điểm (point / 지점).
 
 ### 11.4 암호화 및 해시 알고리즘 심화
 - **암호화 키 개수 (Key Count):**

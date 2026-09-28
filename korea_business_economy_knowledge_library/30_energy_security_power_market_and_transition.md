@@ -1,5 +1,8 @@
 # Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)
 
+> **Mạch đọc:** Đặt **Năng lượng, an ninh điện và chuyển đổi carbon tại Hàn Quốc (Energy Security & Transition / 에너지안보·전력시장·탄소전환)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cân bằng năng lượng bắt đầu từ nhập khẩu** sang **An ninh năng lượng không đồng nghĩa tự cung 100%**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hàn Quốc là một nền kinh tế công nghiệp có cường độ sử dụng năng lượng cao nhưng ít tài nguyên hóa thạch trong nước và lưới điện gần như không kết nối với các nước láng giềng. Vì vậy năng lượng đồng thời là **vấn đề phụ thuộc nhập khẩu, chi phí công nghiệp, an ninh quốc gia và chuyển đổi carbon**.
 
 Một fab bán dẫn, nhà máy thép hay trung tâm dữ liệu AI không chỉ hỏi “điện bao nhiêu won/kWh?”. Doanh nghiệp còn phải hỏi khả năng đấu nối lưới, độ ổn định điện, chất lượng điện, khả năng mua điện tái tạo và mức độ ổn định của chính sách trong suốt vòng đời dự án.
@@ -75,9 +78,9 @@ Giá bán buôn được hình thành qua cơ chế thị trường, còn giá b
 
 Xem [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md).
 
-## SMP và logic chi phí cận biên
+## SMP và lô-gic (logic / 논리) chi phí cận biên
 
-Thị trường bán buôn sử dụng khái niệm **System Marginal Price (SMP / 계통한계가격)**. Mô hình tư duy đơn giản là nguồn có chi phí cận biên thấp được huy động trước, sau đó bổ sung nguồn đắt hơn khi nhu cầu tăng; nhà máy cận biên ảnh hưởng giá thanh toán.
+Thị trường bán buôn sử dụng khái niệm **hệ thống (system / 시스템) Marginal Price (SMP / 계통한계가격)**. Mô hình tư duy đơn giản là nguồn có chi phí cận biên thấp được huy động trước, sau đó bổ sung nguồn đắt hơn khi nhu cầu tăng; nhà máy cận biên ảnh hưởng giá thanh toán.
 
 Do đó giá gas và nhiên liệu có thể tác động giá điện bán buôn ngay cả khi điện hạt nhân hoặc tái tạo có chi phí nhiên liệu thấp hơn.
 
@@ -150,7 +153,7 @@ Dự án có thể đủ giấy phép và vốn nhưng vẫn không tạo giá t
 
 Fab cần điện liên tục với chất lượng cao. Trung tâm dữ liệu AI tạo tải rất lớn và mật độ công suất cao. Vì vậy chiến lược AI và bán dẫn nối trực tiếp với quy hoạch lưới điện.
 
-Không khu vực nào có thể thu hút vô hạn data center hoặc fab chỉ bằng ưu đãi thuế nếu hạ tầng điện không theo kịp.
+Không khu vực nào có thể thu hút vô hạn dữ liệu (data / 데이터) center hoặc fab chỉ bằng ưu đãi thuế nếu hạ tầng điện không theo kịp.
 
 ## Độ nhạy của ngành với giá điện rất khác nhau
 
@@ -215,9 +218,9 @@ Giá trị kinh tế phụ thuộc thiết kế thị trường: hệ thống c�
 
 ## Điều chỉnh nhu cầu: đôi khi công suất rẻ nhất là “không dùng điện lúc này”
 
-**Demand Response (수요반응)** trả tiền cho người dùng để dịch chuyển hoặc giảm tải khi hệ thống căng thẳng. Điều này có thể giảm nhu cầu xây nguồn đỉnh và giảm áp lực lưới.
+**Demand phản hồi (response / 응답)** trả tiền cho người dùng để dịch chuyển hoặc giảm tải khi hệ thống căng thẳng. Điều này có thể giảm nhu cầu xây nguồn đỉnh và giảm áp lực lưới.
 
-Khả năng tham gia khác nhau theo ngành; fab liên tục có ít linh hoạt hơn một số tải thương mại hoặc data center có hệ thống dự phòng.
+Khả năng tham gia khác nhau theo ngành; fab liên tục có ít linh hoạt hơn một số tải thương mại hoặc dữ liệu (data / 데이터) center có hệ thống dự phòng.
 
 ## Hiệu quả năng lượng là “nguồn cung ảo”
 
@@ -249,13 +252,13 @@ Với doanh nghiệp điện lực, theo dõi giá nhiên liệu, chi phí mua �
 
 Với doanh nghiệp thâm dụng điện, cần hỏi tỷ trọng điện trong chi phí, loại biểu giá, hồ sơ phụ tải, độ nhạy mất điện, nghĩa vụ điện tái tạo, khả năng chuyển giá và công suất đấu nối đã được bảo đảm hay chưa.
 
-## Stress test
+## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Các kịch bản hữu ích gồm LNG +30%, KRW yếu 10%, giá điện công nghiệp +15%, đấu nối lưới chậm 2 năm, giá carbon tăng gấp đôi hoặc nhu cầu AI tăng nhanh hơn hạ tầng lưới.
 
 Quan trọng là đưa cú sốc xuống dòng tiền doanh nghiệp và bảng cân đối utility, không dừng ở tiêu đề năng lượng.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Hàn Quốc phải tối ưu đồng thời bốn mục tiêu: **an ninh nguồn cung, khả năng chi trả, độ tin cậy và khử carbon**. Không có một công nghệ duy nhất tối đa hóa cả bốn; chiến lược năng lượng là bài toán danh mục và tích hợp hệ thống.
 
@@ -278,3 +281,5 @@ Lạm phát + sức cạnh tranh + đầu tư
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`14_semiconductors_electronics_display.md`](./14_semiconductors_electronics_display.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

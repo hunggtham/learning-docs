@@ -1,5 +1,8 @@
 # Những ngộ nhận phổ biến và giới hạn của mô hình Vật lý
 
+> **Mạch đọc:** Đọc **Những ngộ nhận phổ biến và giới hạn của mô hình Vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Lực không cần thiết để duy trì vận tốc không đổi** sang **Khối lượng và trọng lượng không phải một đại lượng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hiểu Vật lý không chỉ là biết điều gì đúng mà còn phải biết vì sao một cách hiểu nghe hợp lý lại sai. Nhiều lỗi kéo dài từ cơ học cơ bản tới lượng tử vì người học trộn lẫn ngôn ngữ đời thường, định nghĩa kỹ thuật và các mô hình có miền áp dụng khác nhau.
 
 ## Lực không cần thiết để duy trì vận tốc không đổi
@@ -120,6 +123,8 @@ Khi gặp một kết quả lạ, trước tiên hãy kiểm tra xem vấn đề
 
 Những phân biệt này là các lan can khái niệm giúp tránh mang một trực giác đúng ở lĩnh vực này sang lĩnh vực khác nơi nó không còn hợp lệ.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Đọc cùng:** [Cẩm nang giải bài Vật lý](03_problem_solving_playbook.md), [Các cấu trúc lặp lại trong Vật lý](00_knowledge_connections.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge connections](./00_knowledge_connections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

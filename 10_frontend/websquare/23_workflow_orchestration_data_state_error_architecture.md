@@ -1,14 +1,17 @@
-# 23 — Workflow Orchestration, Advanced Data State & Enterprise Error Architecture
+# 23 — Workflow Orchestration, Advanced dữ liệu (data / 데이터) trạng thái (state / 상태) & Enterprise lỗi (error / 오류) kiến trúc (architecture / 아키텍처)
 
-Chapter 03 đã giải thích DataCollection và Submission như hai primitive cốt lõi của WebSquare. Chapter này đi thêm một tầng: khi một user action không còn tương ứng với một request đơn lẻ mà trở thành **một workflow có nhiều bước, nhiều state transition và nhiều failure mode**, ta phải reasoning thế nào để screen vẫn đúng khi timing thay đổi.
+> **Mạch đọc:** Đặt **23 — Workflow Orchestration, Advanced dữ liệu (data / 데이터) trạng thái (state / 상태) & Enterprise lỗi (error / 오류) kiến trúc (architecture / 아키텍처)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Từ Submission đơn lẻ đến orchestration đồ thị (graph / 그래프)** sang **2. WebSquare Workflow giải quyết vấn đề gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu không phải học thuộc `$p.workflow`. Mục tiêu là nhìn một flow như `validate → load prerequisite → save → refresh → notify` và biết bước nào thực sự phụ thuộc bước nào, state nào được snapshot, lỗi nào có thể retry, và WebSquare Workflow chỉ orchestration phía client chứ không biến nhiều HTTP request thành một database transaction.
+
+Chapter 03 đã giải thích DataCollection và Submission như hai thành phần nguyên thủy (primitive / 기본 요소) cốt lõi của WebSquare. Chapter này đi thêm một tầng: khi một người dùng (user / 사용자) hành động (action / 동작) không còn tương ứng với một yêu cầu (request / 요청) đơn lẻ mà trở thành **một workflow có nhiều bước, nhiều chuyển tiếp trạng thái (state transition / 상태 전이) và nhiều dạng thất bại (failure mode / 실패 모드)**, ta phải lập luận (reasoning / 추론) thế nào để screen vẫn đúng khi timing thay đổi.
+
+Mục tiêu không phải học thuộc `$p.workflow`. Mục tiêu là nhìn một luồng (flow / 흐름) như `validate → load prerequisite → save → refresh → notify` và biết bước nào thực sự phụ thuộc bước nào, trạng thái (state / 상태) nào được snapshot, lỗi nào có thể thử lại (retry / 재시도), và WebSquare Workflow chỉ orchestration phía máy khách (client / 클라이언트) chứ không biến nhiều HTTP yêu cầu (request / 요청) thành một cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션).
 
 ---
 
-## 1. Từ Submission đơn lẻ đến orchestration graph
+## 1. Từ Submission đơn lẻ đến orchestration đồ thị (graph / 그래프)
 
-Một Submission đơn lẻ có mental model tương đối thẳng:
+Một Submission đơn lẻ có mô hình tư duy (mental model / 사고 모델) tương đối thẳng:
 
 ```text
 user intent
@@ -20,7 +23,7 @@ user intent
 → UI reaction
 ```
 
-Khi nghiệp vụ lớn hơn, developer thường viết chuỗi callback:
+Khi nghiệp vụ lớn hơn, nhà phát triển (developer / 개발자) thường viết chuỗi callback:
 
 ```text
 loadCode
@@ -31,9 +34,9 @@ loadCode
 → refresh
 ```
 
-Vấn đề là danh sách tuần tự này có thể đang che giấu dependency thật. `loadCode` và `loadMaster` có thể độc lập. `saveLines` có thể phụ thuộc `saveHeader` vì cần generated ID. `refresh` chỉ có ý nghĩa nếu save thành công. Nếu chỉ nối callback theo thứ tự code được viết, ta đang encode **temporal order** thay vì **business dependency**.
+Vấn đề là danh sách tuần tự này có thể đang che giấu phụ thuộc (dependency / 의존성) thật. `loadCode` và `loadMaster` có thể độc lập. `saveLines` có thể phụ thuộc `saveHeader` vì cần generated ID. `refresh` chỉ có ý nghĩa nếu save thành công. Nếu chỉ nối callback theo thứ tự mã (code / 코드) được viết, ta đang encode **temporal thứ tự (order / 순서)** thay vì **nghiệp vụ (business / 비즈니스) phụ thuộc (dependency / 의존성)**.
 
-Mental model tốt hơn là dependency graph:
+Mô hình tư duy (mental model / 사고 모델) tốt hơn là phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프):
 
 ```text
 loadCode ─────┐
@@ -47,15 +50,15 @@ validate
 → refresh
 ```
 
-Serial hay parallel phải là kết quả của dependency graph, không phải preference coding style.
+Serial hay parallel phải là kết quả của phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), không phải preference coding style.
 
 ---
 
 ## 2. WebSquare Workflow giải quyết vấn đề gì?
 
-SP5 cung cấp Workflow để định nghĩa thứ tự thực thi nhiều Submission. Official guide mô tả cả serial step, parallel step, result handling và việc quyết định bước sau dựa trên kết quả trước. `$p.workflow` có các capability như thực thi workflow đã khai báo, chạy serial/parallel trực tiếp, kiểm tra workflow đang chạy và reject workflow; exact signature cần đối chiếu engine build.
+SP5 cung cấp Workflow để định nghĩa thứ tự thực thi nhiều Submission. Official guide mô tả cả serial step, parallel step, kết quả (result / 결과) handling và việc quyết định bước sau dựa trên kết quả trước. `$p.workflow` có các năng lực (capability / 역량) như thực thi workflow đã khai báo, chạy serial/parallel trực tiếp, kiểm tra workflow đang chạy và reject workflow; chính xác (exact / 정확한) signature cần đối chiếu engine bản dựng (build / 빌드).
 
-Điểm quan trọng là Workflow giải quyết **client orchestration**:
+Điểm quan trọng là Workflow giải quyết **máy khách (client / 클라이언트) orchestration**:
 
 ```text
 Submission A
@@ -65,7 +68,7 @@ Submission C
 ordering / parallelism / result coordination
 ```
 
-Nó không tự tạo distributed transaction:
+Nó không tự tạo phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션):
 
 ```text
 A commit server
@@ -73,7 +76,7 @@ B commit server
 C fail
 ```
 
-Workflow biết C fail nhưng không thể tự rollback database commit của A và B nếu backend không cung cấp transaction/compensation contract.
+Workflow biết C thất bại (fail / 실패) nhưng không thể tự quay lui (rollback / 롤백) cơ sở dữ liệu (database / 데이터베이스) lần ghi nhận (commit / 커밋) của A và B nếu backend không cung cấp giao dịch (transaction / 트랜잭션)/compensation đặc tả hợp đồng (contract / 계약).
 
 Vì vậy:
 
@@ -81,15 +84,15 @@ Vì vậy:
 workflow atomicity ≠ database atomicity
 ```
 
-Đây là invariant quan trọng nhất của chapter.
+Đây là bất biến (invariant / 불변식) quan trọng nhất của chapter.
 
 ---
 
 ## 3. Serial không có nghĩa là đúng
 
-Serial execution phù hợp khi step sau cần output hoặc side effect của step trước.
+Serial thực thi (execution / 실행) phù hợp khi step sau cần đầu ra (output / 출력) hoặc side tác động (effect / 효과) của step trước.
 
-Ví dụ tạo order:
+Ví dụ tạo thứ tự (order / 순서):
 
 ```text
 createOrder
@@ -97,9 +100,9 @@ createOrder
 → createOrderLines(orderId)
 ```
 
-Nếu chạy parallel, line request chưa có `orderId`. Serial là dependency thật.
+Nếu chạy parallel, line yêu cầu (request / 요청) chưa có `orderId`. Serial là phụ thuộc (dependency / 의존성) thật.
 
-Nhưng flow sau không cần serial:
+Nhưng luồng (flow / 흐름) sau không cần serial:
 
 ```text
 loadDepartmentCodes
@@ -107,7 +110,7 @@ loadRoleCodes
 loadCountryCodes
 ```
 
-Nếu ba request độc lập, serial tạo latency:
+Nếu ba yêu cầu (request / 요청) độc lập, serial tạo độ trễ (latency / 지연 시간):
 
 ```text
 T_total ≈ T_department + T_role + T_country
@@ -119,13 +122,13 @@ Parallel lý tưởng gần hơn với:
 T_total ≈ max(T_department, T_role, T_country)
 ```
 
-Tất nhiên server capacity, connection limit và downstream load vẫn phải được tính. Parallel không phải “càng nhiều càng nhanh”.
+Tất nhiên máy chủ (server / 서버) sức chứa (capacity / 용량), liên kết (connection / 연결) limit và downstream tải (load / 로드) vẫn phải được tính. Parallel không phải “càng nhiều càng nhanh”.
 
 ---
 
-## 4. Parallel cũng không có nghĩa là độc lập về state
+## 4. Parallel cũng không có nghĩa là độc lập về trạng thái (state / 상태)
 
-Hai request có endpoint khác nhau vẫn có thể tranh chấp cùng client state.
+Hai yêu cầu (request / 요청) có endpoint khác nhau vẫn có thể tranh chấp cùng máy khách (client / 클라이언트) trạng thái (state / 상태).
 
 Ví dụ:
 
@@ -134,7 +137,7 @@ sbmLoadCustomer → target dlResult
 sbmLoadOrders   → target dlResult
 ```
 
-Chúng chạy parallel nhưng cùng target. Request về sau ghi đè request về trước. Đây không phải network bug; design đã cho hai operation cùng ownership.
+Chúng chạy parallel nhưng cùng mục tiêu (target / 대상). yêu cầu (request / 요청) về sau ghi đè yêu cầu (request / 요청) về trước. Đây không phải mạng (network / 네트워크) bug; thiết kế (design / 설계) đã cho hai thao tác (operation / 연산) cùng quyền sở hữu (ownership / 소유권).
 
 Parallel an toàn hơn khi:
 
@@ -145,23 +148,23 @@ request identity độc lập
 + completion aggregation rõ
 ```
 
-Nếu hai step cùng sửa một DataMap hoặc cùng bật/tắt spinner global, vẫn có race dù endpoint độc lập.
+Nếu hai step cùng sửa một DataMap hoặc cùng bật/tắt spinner toàn cục (global / 전역), vẫn có race dù endpoint độc lập.
 
 ---
 
-## 5. Snapshot request state trước khi orchestration
+## 5. Snapshot yêu cầu (request / 요청) trạng thái (state / 상태) trước khi orchestration
 
-Một lỗi enterprise phổ biến là Workflow đọc DataMap mutable ở từng step thay vì chụp user intent ban đầu.
+Một lỗi enterprise phổ biến là Workflow đọc DataMap mutable ở từng step thay vì chụp người dùng (user / 사용자) intent ban đầu.
 
-User bấm Search với:
+Người dùng (user / 사용자) bấm tìm kiếm (search / 검색) với:
 
 ```text
 customerId = A
 ```
 
-Workflow bắt đầu. Trong lúc request đầu đang chạy, user đổi input thành B. Step sau serialize lại `dmSearch` và gửi B.
+Workflow bắt đầu. Trong lúc yêu cầu (request / 요청) đầu đang chạy, người dùng (user / 사용자) đổi đầu vào (input / 입력) thành B. Step sau serialize lại `dmSearch` và gửi B.
 
-Một business action đã bị chia thành hai intent.
+Một nghiệp vụ (business / 비즈니스) hành động (action / 동작) đã bị chia thành hai intent.
 
 Khi consistency cần thiết, hãy snapshot:
 
@@ -177,13 +180,13 @@ scwin.search = function () {
 };
 ```
 
-Exact API lấy DataMap có thể khác theo project convention; mental model là **workflow input phải có identity và snapshot rõ**.
+Chính xác (exact / 정확한) API lấy DataMap có thể khác theo dự án (project / 프로젝트) convention; mô hình tư duy (mental model / 사고 모델) là **workflow đầu vào (input / 입력) phải có định danh (identity / 식별자) và snapshot rõ**.
 
 ---
 
-## 6. Workflow instance cũng cần identity
+## 6. Workflow instance cũng cần định danh (identity / 식별자)
 
-Nếu user chạy cùng workflow hai lần:
+Nếu người dùng (user / 사용자) chạy cùng workflow hai lần:
 
 ```text
 Search A → workflow W1
@@ -192,7 +195,7 @@ Search B → workflow W2
 
 thì tên workflow `wfSearch` không đủ phân biệt hai intent.
 
-Cần reasoning với:
+Cần lập luận (reasoning / 추론) với:
 
 ```text
 workflowDefinitionId = wfSearch
@@ -203,13 +206,13 @@ screenInstanceKey    = employeeSearch#3
 
 Khi callback về, câu hỏi không chỉ là “workflow nào?” mà là “run này còn thuộc intent hiện tại của screen instance này không?”.
 
-Đây là cùng một stale-result problem đã gặp ở Submission, popup và native bridge, nhưng ở orchestration level.
+Đây là cùng một stale-result bài toán (problem / 문제) đã gặp ở Submission, popup và bản địa (native / 네이티브) cầu nối (bridge / 브리지), nhưng ở orchestration mức (level / 수준).
 
 ---
 
-## 7. Cancel transport và cancel business intent là hai việc khác nhau
+## 7. Cancel vận chuyển (transport / 전송) và cancel nghiệp vụ (business / 비즈니스) intent là hai việc khác nhau
 
-SP5 Submission có cơ chế abort ở các build tương ứng, và Workflow có reject/cancel semantics. Nhưng abort client request không chứng minh server chưa commit.
+SP5 Submission có cơ chế abort ở các bản dựng (build / 빌드) tương ứng, và Workflow có reject/cancel ngữ nghĩa (semantics / 의미론). Nhưng abort máy khách (client / 클라이언트) yêu cầu (request / 요청) không chứng minh máy chủ (server / 서버) chưa lần ghi nhận (commit / 커밋).
 
 Timeline:
 
@@ -229,13 +232,13 @@ transport cancellation
 business cancellation
 ```
 
-Transport cancellation chỉ dừng chờ/nhận response ở client khi còn có thể. Business cancellation phải là domain command có contract server riêng nếu nghiệp vụ hỗ trợ.
+Vận chuyển (transport / 전송) cancellation chỉ dừng chờ/nhận phản hồi (response / 응답) ở máy khách (client / 클라이언트) khi còn có thể. nghiệp vụ (business / 비즈니스) cancellation phải là lĩnh vực (domain / 도메인) command có đặc tả hợp đồng (contract / 계약) máy chủ (server / 서버) riêng nếu nghiệp vụ hỗ trợ.
 
 ---
 
-## 8. Workflow result không nên bị giảm thành boolean
+## 8. Workflow kết quả (result / 결과) không nên bị giảm thành boolean
 
-Một orchestration lớn cần result model có cấu trúc.
+Một orchestration lớn cần kết quả (result / 결과) mô hình (model / 모델) có cấu trúc.
 
 Thay vì:
 
@@ -243,7 +246,7 @@ Thay vì:
 success = true;
 ```
 
-hãy reasoning theo:
+hãy lập luận (reasoning / 추론) theo:
 
 ```text
 workflowRunId
@@ -258,11 +261,11 @@ correlationId
 payload/result reference
 ```
 
-`success=false` không nói được step nào fail, có side effect trước đó không, hay retry toàn flow có duplicate dữ liệu không.
+`success=false` không nói được step nào thất bại (fail / 실패), có side tác động (effect / 효과) trước đó không, hay thử lại (retry / 재시도) toàn luồng (flow / 흐름) có duplicate dữ liệu không.
 
 ---
 
-## 9. Error taxonomy cho WebSquare enterprise screen
+## 9. lỗi (error / 오류) taxonomy cho WebSquare enterprise screen
 
 Không nên gom mọi lỗi vào một `alert("오류")`.
 
@@ -281,15 +284,15 @@ Integration/downstream error
 Unexpected client/runtime error
 ```
 
-Mỗi loại có owner và UX khác nhau.
+Mỗi loại có đơn vị sở hữu (owner / 오너) và UX khác nhau.
 
-Client validation thường map về field/row. Authentication có thể yêu cầu re-auth hoặc redirect. Authorization không nên retry. Conflict cần reload/compare. Transport timeout có thể retry chỉ khi operation idempotent hoặc có idempotency key. Business rule phải hiển thị message đủ context nhưng không leak server internals.
+Máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검증) thường map về trường dữ liệu (field / 필드)/row. Authentication có thể yêu cầu re-auth hoặc redirect. Authorization không nên thử lại (retry / 재시도). xung đột (conflict / 충돌) cần reload/compare. vận chuyển (transport / 전송) hết thời gian chờ (timeout / 타임아웃) có thể thử lại (retry / 재시도) chỉ khi thao tác (operation / 연산) idempotent hoặc có idempotency key. nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) phải hiển thị message đủ ngữ cảnh (context / 맥락) nhưng không leak máy chủ (server / 서버) internals.
 
 ---
 
-## 10. `submitdone` không đồng nghĩa business success
+## 10. `submitdone` không đồng nghĩa nghiệp vụ (business / 비즈니스) success
 
-SP5 phân biệt `submitdone` và `submiterror` chủ yếu theo HTTP response status. Vì vậy response HTTP 200 có thể vẫn chứa:
+SP5 phân biệt `submitdone` và `submiterror` chủ yếu theo HTTP phản hồi (response / 응답) status. Vì vậy phản hồi (response / 응답) HTTP 200 có thể vẫn chứa:
 
 ```json
 {
@@ -299,7 +302,7 @@ SP5 phân biệt `submitdone` và `submiterror` chủ yếu theo HTTP response s
 }
 ```
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 transport success
@@ -308,13 +311,13 @@ transport success
 ≠ state convergence
 ```
 
-Sau business success, client còn phải kiểm tra canonical state đã hội tụ chưa: version mới, generated key, normalized value, permission snapshot hoặc server-calculated field có được merge đúng không.
+Sau nghiệp vụ (business / 비즈니스) success, máy khách (client / 클라이언트) còn phải kiểm tra chuẩn gốc (canonical / 정본) trạng thái (state / 상태) đã hội tụ chưa: phiên bản (version / 버전) mới, generated key, normalized giá trị (value / 값), permission snapshot hoặc server-calculated trường dữ liệu (field / 필드) có được merge đúng không.
 
 ---
 
-## 11. Error envelope phải ổn định hơn message text
+## 11. lỗi (error / 오류) envelope phải ổn định hơn message văn bản (text / 텍스트)
 
-UI không nên branch theo text:
+UI không nên branch theo văn bản (text / 텍스트):
 
 ```javascript
 if (message === "이미 승인되었습니다") { ... }
@@ -322,7 +325,7 @@ if (message === "이미 승인되었습니다") { ... }
 
 Message thay đổi theo locale hoặc wording.
 
-Contract tốt hơn:
+Đặc tả hợp đồng (contract / 계약) tốt hơn:
 
 ```json
 {
@@ -338,19 +341,19 @@ Contract tốt hơn:
 }
 ```
 
-WebSquare page dùng `code/category` để chọn behavior, locale layer chọn message, correlation ID phục vụ incident trace.
+WebSquare page dùng `code/category` để chọn hành vi (behavior / 동작), locale tầng (layer / 계층) chọn message, correlation ID phục vụ sự cố (incident / 인시던트) dấu vết (trace / 추적).
 
 ---
 
-## 12. Field error, row error và global error là ba coordinate system
+## 12. trường dữ liệu (field / 필드) lỗi (error / 오류), row lỗi (error / 오류) và toàn cục (global / 전역) lỗi (error / 오류) là ba coordinate hệ thống (system / 시스템)
 
-Form error có coordinate:
+Form lỗi (error / 오류) có coordinate:
 
 ```text
 field = amount
 ```
 
-Grid batch error cần business identity:
+Grid batch lỗi (error / 오류) cần nghiệp vụ (business / 비즈니스) định danh (identity / 식별자):
 
 ```text
 entityKey = ORDER_LINE_9281
@@ -363,17 +366,17 @@ Không nên chỉ trả:
 rowIndex = 7
 ```
 
-vì sort/filter/paging có thể làm index 7 không còn là entity server đã validate.
+vì sort/filter/paging có thể làm chỉ mục (index / 인덱스) 7 không còn là thực thể (entity / 엔터티) máy chủ (server / 서버) đã validate.
 
-Global error như “downstream settlement unavailable” không thuộc field hay row cụ thể.
+Toàn cục (global / 전역) lỗi (error / 오류) như “downstream settlement unavailable” không thuộc trường dữ liệu (field / 필드) hay row cụ thể.
 
-Error mapping đúng phải giữ coordinate system rõ.
+Lỗi (error / 오류) ánh xạ (mapping / 매핑) đúng phải giữ coordinate hệ thống (system / 시스템) rõ.
 
 ---
 
-## 13. DataList dirty state là state machine, không phải boolean
+## 13. DataList dirty trạng thái (state / 상태) là máy trạng thái (state machine / 상태 머신), không phải boolean
 
-Developer thường hỏi “DataList có thay đổi chưa?”. Câu hỏi chính xác hơn là row nào đang ở transition nào.
+Nhà phát triển (developer / 개발자) thường hỏi “DataList có thay đổi chưa?”. Câu hỏi chính xác hơn là row nào đang ở chuyển tiếp (transition / 전이) nào.
 
 Conceptually:
 
@@ -391,15 +394,15 @@ server baseline
 → D
 ```
 
-Một row mới tạo rồi xóa trước khi save có thể có semantics khác row server đã tồn tại rồi bị xóa. Release notes của SP5 từng sửa behavior quanh modified/deleted serialization, cho thấy exact edge case có thể thay đổi theo build.
+Một row mới tạo rồi xóa trước khi save có thể có ngữ nghĩa (semantics / 의미론) khác row máy chủ (server / 서버) đã tồn tại rồi bị xóa. bản phát hành (release / 릴리스) notes của SP5 từng sửa hành vi (behavior / 동작) quanh modified/deleted serialization, cho thấy chính xác (exact / 정확한) trường hợp biên (edge case / 경계 사례) có thể thay đổi theo bản dựng (build / 빌드).
 
-Do đó code production không nên tự suy diễn row-state internals bằng array phụ nếu DataList đã là owner.
+Do đó mã (code / 코드) môi trường vận hành (production / 운영 환경) không nên tự suy diễn row-state internals bằng array phụ nếu DataList đã là đơn vị sở hữu (owner / 오너).
 
 ---
 
-## 14. Row status và cell status có memory cost
+## 14. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용)
 
-Tracking thay đổi cần metadata. Với DataList rất lớn, metadata theo row/cell có thể trở thành memory pressure đáng kể. SP5 release notes 2024–2025 có thay đổi để giảm phần tử rowStatus/cellStatus không cần thiết khi set large data.
+Tracking thay đổi cần siêu dữ liệu (metadata / 메타데이터). Với DataList rất lớn, siêu dữ liệu (metadata / 메타데이터) theo row/cell có thể trở thành bộ nhớ (memory / 메모리) pressure đáng kể. SP5 bản phát hành (release / 릴리스) notes 2024–2025 có thay đổi để giảm phần tử rowStatus/cellStatus không cần thiết khi set large dữ liệu (data / 데이터).
 
 Điều này cho một bài học bền hơn API cụ thể:
 
@@ -407,15 +410,15 @@ Tracking thay đổi cần metadata. Với DataList rất lớn, metadata theo r
 change tracking is not free
 ```
 
-Nếu screen chỉ xem 100.000 row mà không edit, đừng mặc định architecture giống editable 100.000-row client table. Server paging, chunk loading hoặc read-only representation có thể phù hợp hơn.
+Nếu screen chỉ xem 100.000 row mà không edit, đừng mặc định kiến trúc (architecture / 아키텍처) giống editable 100.000-row máy khách (client / 클라이언트) bảng (table / 테이블). máy chủ (server / 서버) paging, chunk loading hoặc read-only biểu diễn (representation / 표현) có thể phù hợp hơn.
 
 ---
 
-## 15. Type conversion là contract, không phải convenience
+## 15. kiểu (type / 타입) conversion là đặc tả hợp đồng (contract / 계약), không phải convenience
 
-DataList column có `dataType`, và các SP5 build mới bổ sung behavior như `preserveType`/`keepDataType` để xử lý dữ liệu string đi vào column number/date theo policy tương ứng.
+DataList column có `dataType`, và các SP5 bản dựng (build / 빌드) mới bổ sung hành vi (behavior / 동작) như `preserveType`/`keepDataType` để xử lý dữ liệu string đi vào column number/date theo chính sách (policy / 정책) tương ứng.
 
-Điều nguy hiểm là code chạy “có vẻ đúng” nhưng equality/sort/serialization dùng type khác kỳ vọng.
+Điều nguy hiểm là mã (code / 코드) chạy “có vẻ đúng” nhưng equality/sort/serialization dùng kiểu (type / 타입) khác kỳ vọng.
 
 Ví dụ:
 
@@ -424,7 +427,7 @@ Ví dụ:
 10 < 2        // numeric semantics
 ```
 
-Master rule:
+Master quy tắc (rule / 규칙):
 
 ```text
 server schema
@@ -432,13 +435,13 @@ server schema
 ↔ UI display/edit conversion
 ```
 
-phải được thiết kế nhất quán. Không dùng formatter để che type model sai.
+phải được thiết kế nhất quán. Không dùng formatter để che kiểu (type / 타입) mô hình (model / 모델) sai.
 
 ---
 
-## 16. `null`, empty string và missing field là ba trạng thái khác nhau
+## 16. `null`, empty string và missing trường dữ liệu (field / 필드) là ba trạng thái khác nhau
 
-SP5 mới hơn có `nullYN`/`nullYNType` cho DataList serialization/getter behavior ở các build tương ứng. Điều này tồn tại vì enterprise contract thường cần phân biệt:
+SP5 mới hơn có `nullYN`/`nullYNType` cho DataList serialization/getter hành vi (behavior / 동작) ở các bản dựng (build / 빌드) tương ứng. Điều này tồn tại vì enterprise đặc tả hợp đồng (contract / 계약) thường cần phân biệt:
 
 ```text
 field missing
@@ -446,7 +449,7 @@ field = null
 field = ""
 ```
 
-Ví dụ PATCH semantics:
+Ví dụ PATCH ngữ nghĩa (semantics / 의미론):
 
 ```text
 missing  → không thay đổi
@@ -454,17 +457,17 @@ null     → clear value
 ""       → business value rỗng hoặc normalize tùy schema
 ```
 
-Nếu frontend normalize tất cả về `""`, server mất thông tin intent.
+Nếu frontend normalize tất cả về `""`, máy chủ (server / 서버) mất thông tin intent.
 
-Null semantics phải được quyết định ở contract boundary, không để accidental conversion quyết định.
+Null ngữ nghĩa (semantics / 의미론) phải được quyết định ở đặc tả hợp đồng (contract / 계약) ranh giới (boundary / 경계), không để accidental conversion quyết định.
 
 ---
 
 ## 17. Modified payload cần snapshot trước async save
 
-Giả sử Save lấy changed rows từ DataList. User tiếp tục edit trong lúc request pending.
+Giả sử Save lấy changed rows từ DataList. người dùng (user / 사용자) tiếp tục edit trong lúc yêu cầu (request / 요청) pending.
 
-Nếu callback success rồi reset toàn DataList dirty state, edit mới chưa gửi có thể bị đánh dấu sạch.
+Nếu callback success rồi reset toàn DataList dirty trạng thái (state / 상태), edit mới chưa gửi có thể bị đánh dấu sạch.
 
 Timeline:
 
@@ -476,7 +479,7 @@ T3 response A success
 T4 reset all dirty state   ← B bị mất tracking
 ```
 
-Cần một strategy như:
+Cần một chiến lược (strategy / 전략) như:
 
 ```text
 snapshot/version changes gửi đi
@@ -485,15 +488,15 @@ snapshot/version changes gửi đi
 → preserve changes phát sinh sau snapshot
 ```
 
-Exact implementation phụ thuộc project/API, nhưng invariant là **acknowledgement không được xóa mutation chưa được acknowledge**.
+Chính xác (exact / 정확한) hiện thực (implementation / 구현) phụ thuộc dự án (project / 프로젝트)/API, nhưng bất biến (invariant / 불변식) là **acknowledgement không được xóa mutation chưa được acknowledge**.
 
 ---
 
-## 18. Derived view không được trở thành canonical identity
+## 18. Derived view không được trở thành chuẩn gốc (canonical / 정본) định danh (identity / 식별자)
 
-LinkedDataList, Grid sort/filter và paging tạo view coordinate. Business save/error mapping phải quay về stable entity identity.
+LinkedDataList, Grid sort/filter và paging tạo view coordinate. nghiệp vụ (business / 비즈니스) save/lỗi (error / 오류) ánh xạ (mapping / 매핑) phải quay về stable thực thể (entity / 엔터티) định danh (identity / 식별자).
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 canonical DataList/entity
@@ -505,11 +508,11 @@ Grid view row
 
 Không đi ngược bằng cách giả định `viewRowIndex === modelRowIndex`.
 
-Chapter 13 đi sâu Grid coordinate; chapter này nhấn mạnh orchestration/error mapping phải mang business key qua toàn flow.
+Chapter 13 đi sâu Grid coordinate; chapter này nhấn mạnh orchestration/lỗi (error / 오류) ánh xạ (mapping / 매핑) phải mang nghiệp vụ (business / 비즈니스) key qua toàn luồng (flow / 흐름).
 
 ---
 
-## 19. Workflow không nên sở hữu business rule
+## 19. Workflow không nên sở hữu nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙)
 
 Workflow nên orchestration:
 
@@ -520,15 +523,15 @@ prepare
 → continue/stop
 ```
 
-Không nên chứa hàng trăm dòng rule tính giá, quyền hay trạng thái domain. Rule thuần nên nằm ở function/module testable; invariant authoritative nằm server.
+Không nên chứa hàng trăm dòng quy tắc (rule / 규칙) tính giá, quyền hay trạng thái lĩnh vực (domain / 도메인). quy tắc (rule / 규칙) thuần nên nằm ở hàm (function / 함수)/mô-đun (module / 모듈) testable; bất biến (invariant / 불변식) authoritative nằm máy chủ (server / 서버).
 
-Nếu Workflow definition trở thành “business engine phía browser”, testability và security đều giảm.
+Nếu Workflow definition trở thành “nghiệp vụ (business / 비즈니스) engine phía trình duyệt (browser / 브라우저)”, testability và bảo mật (security / 보안) đều giảm.
 
 ---
 
-## 20. Compensation khi multi-step flow không atomic
+## 20. Compensation khi multi-step luồng (flow / 흐름) không atomic
 
-Flow:
+Luồng (flow / 흐름):
 
 ```text
 create attachment metadata
@@ -536,9 +539,9 @@ create attachment metadata
 → save business entity
 ```
 
-Nếu bước cuối fail, có thể còn metadata/file orphan.
+Nếu bước cuối thất bại (fail / 실패), có thể còn siêu dữ liệu (metadata / 메타데이터)/tệp (file / 파일) orphan.
 
-Các strategy:
+Các chiến lược (strategy / 전략):
 
 ```text
 staging + promote
@@ -548,15 +551,15 @@ idempotent upsert
 server-side transaction khi cùng boundary
 ```
 
-Client Workflow chỉ gọi strategy; nó không thay thế strategy.
+Máy khách (client / 클라이언트) Workflow chỉ gọi chiến lược (strategy / 전략); nó không thay thế chiến lược (strategy / 전략).
 
 ---
 
-## 21. Retry phải gắn với idempotency
+## 21. thử lại (retry / 재시도) phải gắn với idempotency
 
-Không retry chỉ vì timeout.
+Không thử lại (retry / 재시도) chỉ vì hết thời gian chờ (timeout / 타임아웃).
 
-Search/read thường dễ retry hơn command tạo side effect. Save/create cần biết:
+Tìm kiếm (search / 검색)/read thường dễ thử lại (retry / 재시도) hơn command tạo side tác động (effect / 효과). Save/create cần biết:
 
 ```text
 requestId / idempotencyKey
@@ -564,19 +567,19 @@ server deduplication policy
 commit ambiguity
 ```
 
-Nếu timeout xảy ra sau server commit, retry blind có thể duplicate.
+Nếu hết thời gian chờ (timeout / 타임아웃) xảy ra sau máy chủ (server / 서버) lần ghi nhận (commit / 커밋), thử lại (retry / 재시도) blind có thể duplicate.
 
-Master question trước retry:
+Master question trước thử lại (retry / 재시도):
 
-> Tôi có chứng minh được request này chưa commit, hoặc retry cùng identity sẽ không tạo side effect thứ hai không?
+> Tôi có chứng minh được yêu cầu (request / 요청) này chưa lần ghi nhận (commit / 커밋), hoặc thử lại (retry / 재시도) cùng định danh (identity / 식별자) sẽ không tạo side tác động (effect / 효과) thứ hai không?
 
-Nếu không, phải query status/reconcile thay vì retry mù.
+Nếu không, phải truy vấn (query / 쿼리) status/reconcile thay vì thử lại (retry / 재시도) mù.
 
 ---
 
-## 22. Loading indicator cũng cần ownership
+## 22. Loading indicator cũng cần quyền sở hữu (ownership / 소유권)
 
-Hai request parallel dùng một spinner global:
+Hai yêu cầu (request / 요청) parallel dùng một spinner toàn cục (global / 전역):
 
 ```text
 A start → spinner on
@@ -587,7 +590,7 @@ B still running
 
 UI báo ready sai.
 
-Dùng operation count hoặc owner token:
+Dùng thao tác (operation / 연산) count hoặc đơn vị sở hữu (owner / 오너) đơn vị từ (token / 토큰):
 
 ```text
 pending = 2
@@ -595,13 +598,13 @@ A done → 1
 B done → 0 → hide
 ```
 
-Tương tự disable Save button phải gắn với command instance, không phải boolean global dễ bị callback cũ reset.
+Tương tự disable Save button phải gắn với command instance, không phải boolean toàn cục (global / 전역) dễ bị callback cũ reset.
 
 ---
 
-## 23. Workflow observability
+## 23. Workflow khả năng quan sát (observability / 관측 가능성)
 
-Một workflow production nên trace được:
+Một workflow môi trường vận hành (production / 운영 환경) nên dấu vết (trace / 추적) được:
 
 ```text
 screenInstanceKey
@@ -616,15 +619,15 @@ start/end/elapsed
 result category
 ```
 
-Không cần log toàn payload nhạy cảm. Cần log identity và timing đủ nối graph.
+Không cần log toàn payload nhạy cảm. Cần log định danh (identity / 식별자) và timing đủ nối đồ thị (graph / 그래프).
 
-Khi incident “Save treo”, ta phải trả lời được nó treo ở validation, Workflow queue, Submission, gateway, server hay callback mapping.
+Khi sự cố (incident / 인시던트) “Save treo”, ta phải trả lời được nó treo ở kiểm tra hợp lệ (validation / 검증), Workflow hàng đợi (queue / 큐), Submission, gateway, máy chủ (server / 서버) hay callback ánh xạ (mapping / 매핑).
 
 ---
 
-## 24. Testing orchestration bằng permutation, không chỉ happy path
+## 24. Testing orchestration bằng permutation, không chỉ happy đường dẫn (path / 경로)
 
-Một test tốt thay đổi ordering:
+Một kiểm thử (test / 테스트) tốt thay đổi thứ tự (ordering / 순서):
 
 ```text
 A nhanh, B chậm
@@ -637,22 +640,22 @@ user chạy flow mới trước flow cũ xong
 retry sau ambiguous timeout
 ```
 
-Parallel flow cần test permutation. Serial flow cần test fail ở từng boundary.
+Parallel luồng (flow / 흐름) cần kiểm thử (test / 테스트) permutation. Serial luồng (flow / 흐름) cần kiểm thử (test / 테스트) thất bại (fail / 실패) ở từng ranh giới (boundary / 경계).
 
-Nếu test chỉ chạy network mock với response cố định 100 ms, race bug gần như không được kiểm tra.
+Nếu kiểm thử (test / 테스트) chỉ chạy mạng (network / 네트워크) mock với phản hồi (response / 응답) cố định 100 ms, race bug gần như không được kiểm tra.
 
 ---
 
-## 25. Case study — Search workflow trả state lai
+## 25. trường hợp (case / 사례) study — tìm kiếm (search / 검색) workflow trả trạng thái (state / 상태) lai
 
-Screen cần load customer và permission-dependent action list.
+Screen cần tải (load / 로드) customer và permission-dependent hành động (action / 동작) danh sách (list / 목록).
 
 ```text
 loadCustomer(A)
 loadActions(A)
 ```
 
-User nhanh chóng search B. Response order:
+Người dùng (user / 사용자) nhanh chóng tìm kiếm (search / 검색) B. phản hồi (response / 응답) thứ tự (order / 순서):
 
 ```text
 customer B
@@ -661,9 +664,9 @@ actions B
 actions A
 ```
 
-Nếu mỗi callback chỉ set target, cuối cùng UI có thể hiển thị customer A nhưng search box B.
+Nếu mỗi callback chỉ set mục tiêu (target / 대상), cuối cùng UI có thể hiển thị customer A nhưng tìm kiếm (search / 검색) box B.
 
-Fix không phải “thêm delay”. Fix là intent identity:
+Fix không phải “thêm delay”. Fix là intent định danh (identity / 식별자):
 
 ```text
 searchRunId
@@ -673,19 +676,19 @@ searchRunId
 
 ---
 
-## 26. Case study — Save header thành công, line fail
+## 26. trường hợp (case / 사례) study — Save header thành công, line thất bại (fail / 실패)
 
-Header đã commit và trả `orderId=1001`. Line save fail do validation.
+Header đã lần ghi nhận (commit / 커밋) và trả `orderId=1001`. Line save thất bại (fail / 실패) do kiểm tra hợp lệ (validation / 검증).
 
-UI không được hiển thị “Save failed, nothing changed”. Canonical state đã thay đổi.
+UI không được hiển thị “Save failed, nothing changed”. chuẩn gốc (canonical / 정본) trạng thái (state / 상태) đã thay đổi.
 
-Possible contract:
+Possible đặc tả hợp đồng (contract / 계약):
 
 ```text
 server endpoint atomic save header+lines
 ```
 
-hoặc nếu boundary buộc tách:
+hoặc nếu ranh giới (boundary / 경계) buộc tách:
 
 ```text
 header created
@@ -695,25 +698,25 @@ header created
 → compensation nếu domain cho phép
 ```
 
-Error UX phải phản ánh transaction reality.
+Lỗi (error / 오류) UX phải phản ánh giao dịch (transaction / 트랜잭션) reality.
 
 ---
 
-## 27. Case study — Success callback reset edit mới
+## 27. trường hợp (case / 사례) study — Success callback reset edit mới
 
-User bấm Save A rồi tiếp tục sửa B. Save A success callback gọi common function reset toàn row status.
+Người dùng (user / 사용자) bấm Save A rồi tiếp tục sửa B. Save A success callback gọi dùng chung (common / 공통) hàm (function / 함수) reset toàn row status.
 
 B không còn được gửi ở lần Save sau.
 
-Root cause là acknowledgement không có mutation identity.
+Nguyên nhân gốc (root cause / 근본 원인) là acknowledgement không có mutation định danh (identity / 식별자).
 
-Regression test phải thực hiện edit trong lúc Save pending; đây là case rất dễ bị bỏ sót nếu test disable toàn screen trong mọi request.
+Regression kiểm thử (test / 테스트) phải thực hiện edit trong lúc Save pending; đây là trường hợp (case / 사례) rất dễ bị bỏ sót nếu kiểm thử (test / 테스트) disable toàn screen trong mọi yêu cầu (request / 요청).
 
 ---
 
-## 28. Production review checklist
+## 28. môi trường vận hành (production / 운영 환경) rà soát (review / 검토) checklist
 
-Trước khi approve một multi-request flow, hãy trả lời:
+Trước khi approve một multi-request luồng (flow / 흐름), hãy trả lời:
 
 ```text
 Dependency graph thật là gì?
@@ -737,7 +740,7 @@ Test đã đảo response order chưa?
 
 ## 29. Master synthesis
 
-Ở mức Master, DataCollection, Submission và Workflow không còn là ba API riêng lẻ. Chúng tạo một state-transition system:
+Ở mức Master, DataCollection, Submission và Workflow không còn là ba API riêng lẻ. Chúng tạo một state-transition hệ thống (system / 시스템):
 
 ```text
 User intent
@@ -751,14 +754,16 @@ User intent
 → render
 ```
 
-Mỗi mũi tên cần ownership và failure semantics.
+Mỗi mũi tên cần quyền sở hữu (ownership / 소유권) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론).
 
-Nếu chỉ nhớ `$p.executeSubmission()` hay `$p.workflow.executeSerial()`, ta mới biết mechanism. Nếu có thể giải thích **dependency, snapshot, identity, atomicity, compensation, retry safety, dirty-state acknowledgement và evidence**, ta mới reasoning được production workflow.
+Nếu chỉ nhớ `$p.executeSubmission()` hay `$p.workflow.executeSerial()`, ta mới biết cơ chế (mechanism / 메커니즘). Nếu có thể giải thích **phụ thuộc (dependency / 의존성), snapshot, định danh (identity / 식별자), atomicity, compensation, thử lại (retry / 재시도) an toàn (safety / 안전), dirty-state acknowledgement và bằng chứng (evidence / 증거)**, ta mới lập luận (reasoning / 추론) được môi trường vận hành (production / 운영 환경) workflow.
 
 ---
 
-## 30. Nguồn kiểm chứng theo build
+## 30. Nguồn kiểm chứng theo bản dựng (build / 빌드)
 
-Khi cần exact API, đối chiếu WebSquare5 SP5 Development Guide/API Reference/Release Notes đúng engine build, đặc biệt các phần Workflow, Submission, DataCollection và các release note về `executeSerial`/`executeParallel`, `nullYNType`, `preserveType`/`keepDataType`, `getModifiedJSON()`/`getOnlyDeletedJSON()` và row/cell-status memory behavior.
+Khi cần chính xác (exact / 정확한) API, đối chiếu WebSquare5 SP5 Development Guide/API tham chiếu (reference / 참조)/bản phát hành (release / 릴리스) Notes đúng engine bản dựng (build / 빌드), đặc biệt các phần Workflow, Submission, DataCollection và các bản phát hành (release / 릴리스) ghi chú (note / 노트) về `executeSerial`/`executeParallel`, `nullYNType`, `preserveType`/`keepDataType`, `getModifiedJSON()`/`getOnlyDeletedJSON()` và row/cell-status bộ nhớ (memory / 메모리) hành vi (behavior / 동작).
 
-Các API/signature có thể tiến hóa theo build. Canonical invariant của chapter là dependency, identity, transaction boundary và state convergence; không phải một signature cố định.
+Các API/signature có thể tiến hóa theo bản dựng (build / 빌드). chuẩn gốc (canonical / 정본) bất biến (invariant / 불변식) của chapter là phụ thuộc (dependency / 의존성), định danh (identity / 식별자), giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và trạng thái (state / 상태) convergence; không phải một signature cố định.
+
+> **Bàn giao:** Sau **30. Nguồn kiểm chứng theo bản dựng (build / 빌드)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

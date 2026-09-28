@@ -1,6 +1,9 @@
 # Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng
 
-> **Nhóm carbonyl (carbonyl group / 카보닐기)** chứa liên kết đôi carbon–oxygen. Vì oxygen âm điện hơn carbon, C=O có sự bất đối xứng điện tử thường trực: oxygen giàu electron còn carbon nghèo electron. Chính sự phân cực đơn giản này tạo ra một trong những logic phản ứng tái sử dụng nhiều nhất trong hóa hữu cơ.
+> **Mạch đọc:** Đọc **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc điện tử — vì sao carbon có tính ái điện** sang **Thay đổi hình học khi nucleophile tấn công**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Nhóm carbonyl (carbonyl group / 카보닐기)** chứa liên kết đôi carbon–oxygen. Vì oxygen âm điện hơn carbon, C=O có sự bất đối xứng điện tử thường trực: oxygen giàu electron còn carbon nghèo electron. Chính sự phân cực đơn giản này tạo ra một trong những lô-gic (logic / 논리) phản ứng tái sử dụng nhiều nhất trong hóa hữu cơ.
 
 Hóa học carbonyl quan trọng vì cùng một nhóm chức có ba hành vi bổ sung cho nhau:
 
@@ -28,7 +31,10 @@ Cấu trúc thứ hai đóng góp ít hơn nhưng làm nổi bật sự phân c�
 
 Ở mức orbital phân tử, orbital phản liên kết \(\pi^*\) của C=O có một thùy đáng kể trên carbon. Nucleophile cho electron từ HOMO vào LUMO này, nên tấn công ái nhân tự nhiên xảy ra tại carbonyl carbon.
 
-Cặp electron tự do trên oxygen lại làm oxygen có tính base và ái nhân đối với proton hoặc acid Lewis.
+Cặp electron tự do trên oxygen lại làm oxygen có tính cơ sở (base / 기반) và ái nhân đối với proton hoặc acid Lewis.
+
+
+> **Chuyển mạch:** Từ **Cấu trúc điện tử — vì sao carbon có tính ái điện**, ta sang **Thay đổi hình học khi nucleophile tấn công** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thay đổi hình học khi nucleophile tấn công
 
@@ -37,6 +43,9 @@ Carbonyl carbon ban đầu gần tam giác phẳng, tương ứng môi trường
 Thay đổi hình học này có ý nghĩa lập thể. Nếu carbonyl carbon là **tiền đối quang (prochiral)**, nucleophile có thể tấn công từ mặt Re hoặc Si và tạo một tâm lập thể mới.
 
 Enzyme và chất xúc tác đối quang khai thác tính chọn lọc theo mặt này để tạo sản phẩm giàu một enantiomer.
+
+
+> **Chuyển mạch:** Từ **Thay đổi hình học khi nucleophile tấn công**, ta sang **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn
 
@@ -62,7 +71,10 @@ chất trung gian alkoxide tứ diện
 proton hóa / xử lý sau phản ứng
 ```
 
-Trong môi trường giàu nucleophile hoặc base, nucleophile thường tấn công trước. Trong xúc tác acid, oxygen carbonyl được proton hóa trước, làm hạ năng lượng LUMO ái điện và khiến carbon phản ứng mạnh hơn.
+Trong môi trường giàu nucleophile hoặc cơ sở (base / 기반), nucleophile thường tấn công trước. Trong xúc tác acid, oxygen carbonyl được proton hóa trước, làm hạ năng lượng LUMO ái điện và khiến carbon phản ứng mạnh hơn.
+
+
+> **Chuyển mạch:** Từ **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn**, ta sang **Khử bằng hydride** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Khử bằng hydride
 
@@ -73,6 +85,9 @@ NaBH4 tương đối nhẹ và thường khử aldehyde/ketone. LiAlH4 mạnh h�
 Khử aldehyde cho alcohol bậc một; khử ketone cho alcohol bậc hai.
 
 Về cơ chế, đây là cộng ái nhân của hydride rồi proton hóa.
+
+
+> **Chuyển mạch:** Từ **Khử bằng hydride**, ta sang **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C
 
@@ -92,7 +107,10 @@ Biến đổi này mạnh vì tạo một liên kết C–C mới. Loại alcoho
 - aldehyde → alcohol bậc hai;
 - ketone → alcohol bậc ba.
 
-Tuy nhiên các thuốc thử này cũng là base mạnh, nên nước, alcohol, acid và các nhóm có proton dễ tách sẽ phá hủy chúng. Tính tương thích nhóm chức vì vậy là một phần của thiết kế cơ chế.
+Tuy nhiên các thuốc thử này cũng là cơ sở (base / 기반) mạnh, nên nước, alcohol, acid và các nhóm có proton dễ tách sẽ phá hủy chúng. Tính tương thích nhóm chức vì vậy là một phần của thiết kế cơ chế.
+
+
+> **Chuyển mạch:** Từ **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C**, ta sang **Tạo cyanohydrin** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Tạo cyanohydrin
 
@@ -120,9 +138,12 @@ Alcohol tấn công carbonyl đã proton hóa để tạo **hemiacetal**, trong 
 
 Tạo acetal là quá trình thuận nghịch và thường được thúc đẩy bằng cách loại nước.
 
-Acetal là nhóm bảo vệ carbonyl hữu ích vì tương đối bền trong nhiều điều kiện base/ái nhân nhưng bị thủy phân trong acid nước.
+Acetal là nhóm bảo vệ carbonyl hữu ích vì tương đối bền trong nhiều điều kiện cơ sở (base / 기반)/ái nhân nhưng bị thủy phân trong acid nước.
 
 Đây là một chiến lược tổng hợp điển hình: tạm thời biến một nhóm phản ứng mạnh thành nhóm tương thích hơn với bước tiếp theo, sau đó khôi phục lại.
+
+
+> **Chuyển mạch:** Từ **Tạo cyanohydrin**, ta sang **Liên hệ sinh học: hemiacetal vòng trong đường** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Liên hệ sinh học: hemiacetal vòng trong đường
 
@@ -140,9 +161,12 @@ Các phản ứng này được xúc tác acid nhưng cần độ acid phù hợ
 
 Đây là ví dụ rõ của một điều kiện xúc tác tối ưu: acid giúp hoạt hóa carbonyl và tách nước, nhưng acid dư lại ức chế nucleophile.
 
+
+> **Chuyển mạch:** Từ **Liên hệ sinh học: hemiacetal vòng trong đường**, ta sang **Amination khử** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Amination khử
 
-Nếu imine hoặc iminium được khử, carbonyl được chuyển thành amine đồng thời tạo liên kết C–N. **Amination khử (reductive amination)** được dùng rộng trong tổng hợp và có logic gần với một số quá trình chuyển amin/khử trong sinh hóa.
+Nếu imine hoặc iminium được khử, carbonyl được chuyển thành amine đồng thời tạo liên kết C–N. **Amination khử (reductive amination)** được dùng rộng trong tổng hợp và có lô-gic (logic / 논리) gần với một số quá trình chuyển amin/khử trong sinh hóa.
 
 # Oxy hóa và khử carbonyl như một thang trạng thái oxy hóa
 
@@ -178,6 +202,9 @@ Enolate không phải “chỉ là anion oxygen” hay “chỉ là carbanion”
 
 Vì đầu carbon vẫn mang tính ái nhân đáng kể, enolate là tác nhân quan trọng để tạo liên kết C–C.
 
+
+> **Chuyển mạch:** Từ **Amination khử**, ta sang **Cân bằng enol–keto** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cân bằng enol–keto
 
 Hợp chất carbonyl có thể cân bằng với dạng enol:
@@ -188,15 +215,15 @@ C=O \rightleftharpoons C=C-OH
 
 Với ketone đơn giản, dạng keto thường chiếm ưu thế. Nhưng liên hợp, liên kết hydrogen hoặc tính thơm có thể ổn định enol mạnh.
 
-Chuyển hóa keto–enol cần chuyển proton và thường được xúc tác acid/base. Keto và enol là **tautomer** — đồng phân cấu tạo chuyển đổi bằng phản ứng cân bằng — chứ không phải cấu trúc cộng hưởng.
+Chuyển hóa keto–enol cần chuyển proton và thường được xúc tác acid/cơ sở (base / 기반). Keto và enol là **tautomer** — đồng phân cấu tạo chuyển đổi bằng phản ứng cân bằng — chứ không phải cấu trúc cộng hưởng.
 
 # Tạo enolate — kiểm soát động học và nhiệt động
 
 Ketone không đối xứng có thể tạo nhiều enolate.
 
-Base mạnh, cồng kềnh như LDA ở nhiệt độ thấp có thể lấy proton ít cản trở nhanh hơn, tạo **enolate động học (kinetic enolate)**.
+Cơ sở (base / 기반) mạnh, cồng kềnh như LDA ở nhiệt độ thấp có thể lấy proton ít cản trở nhanh hơn, tạo **enolate động học (kinetic enolate)**.
 
-Trong điều kiện ấm hơn và thuận nghịch với base nhỏ hơn, enolate thế nhiều và bền hơn có thể chiếm ưu thế — **enolate nhiệt động (thermodynamic enolate)**.
+Trong điều kiện ấm hơn và thuận nghịch với cơ sở (base / 기반) nhỏ hơn, enolate thế nhiều và bền hơn có thể chiếm ưu thế — **enolate nhiệt động (thermodynamic enolate)**.
 
 Đây chính là nguyên lý động học so với nhiệt động của hóa lý được biểu hiện dưới dạng khử proton chọn lọc vị trí.
 
@@ -218,6 +245,9 @@ Hóa học aldol là một trong các họ tạo liên kết C–C quan trọng 
 
 Aldol nội phân tử có thể tạo vòng năm hoặc sáu cạnh hiệu quả vì sự nối sẵn trong cùng phân tử làm tăng xác suất gặp nhau và các kích thước vòng này có hình học thuận lợi.
 
+
+> **Chuyển mạch:** Từ **Cân bằng enol–keto**, ta sang **Aldol chéo và bài toán chọn lọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Aldol chéo và bài toán chọn lọc
 
 Nếu trộn hai carbonyl khác nhau đều có thể tạo enolate, nhiều tổ hợp nucleophile/electrophile có thể xuất hiện. Thiết kế tổng hợp vì vậy thường dùng một chất không tạo enolate hoặc tạo trước một enolate xác định.
@@ -234,9 +264,12 @@ O=C-C=C \leftrightarrow O^- -C=C-C^+
 
 Vì vậy nucleophile có thể tấn công carbonyl carbon — **cộng 1,2** — hoặc carbon β — **cộng liên hợp 1,4**.
 
-Nucleophile cứng và base mạnh thường ưu tiên tấn công trực tiếp 1,2. Nucleophile mềm như organocuprate thường ưu tiên cộng 1,4.
+Nucleophile cứng và cơ sở (base / 기반) mạnh thường ưu tiên tấn công trực tiếp 1,2. Nucleophile mềm như organocuprate thường ưu tiên cộng 1,4.
 
 Điều này nối tư duy kiểu HSAB với chọn lọc vị trí trong hóa hữu cơ.
+
+
+> **Chuyển mạch:** Từ **Aldol chéo và bài toán chọn lọc**, ta sang **Cộng Michael** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cộng Michael
 
@@ -274,8 +307,13 @@ Không. Chúng khác vị trí proton và cách kết nối liên kết; chúng 
 
 Không. Đây là cân bằng nhiều bước xúc tác acid gồm cộng, chuyển proton và tách nước.
 
+
+> **Chuyển mạch:** Từ **Cộng Michael**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > Carbonyl là một **nền tảng phản ứng ba nút**. Carbonyl carbon là cổng nhận nucleophile, oxygen là vị trí tương tác với proton/acid Lewis, còn carbon α có thể trở thành cổng nucleophile sau khi tạo enolate. Phần lớn họ phản ứng carbonyl là tổ hợp của ba hành vi này.
 
-Xem tiếp: [Acid carboxylic và dẫn xuất](./08_carboxylic_acids_and_derivatives.md), nơi logic chất trung gian tứ diện chuyển từ cộng ái nhân sang thế acyl ái nhân.
+Xem tiếp: [Acid carboxylic và dẫn xuất](./08_carboxylic_acids_and_derivatives.md), nơi lô-gic (logic / 논리) chất trung gian tứ diện chuyển từ cộng ái nhân sang thế acyl ái nhân.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,9 +1,12 @@
 # bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)
+
+> **Mạch đọc:** Đọc **bảng thưa (Sparse Table) và tĩnh các truy vấn khoảng (range queries)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Power-of-two decomposition** sang **Tại sao các lũy thừa của hai?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **스파스 테이블과 정적 구간 질의**
 
-bảng thưa là một structure dành cho khối lượng công việc rất cụ thể: **dữ liệu tĩnh (static data / 정적 데이터)** nhưng có rất nhiều các truy vấn khoảng. Nếu mảng không cập nhật, ta có thể trả nhiều tiền xử lý và bộ nhớ hơn để truy vấn sau đó cực nhanh.
+bảng thưa là một cấu trúc (structure / 구조) dành cho khối lượng công việc rất cụ thể: **dữ liệu tĩnh (static data / 정적 데이터)** nhưng có rất nhiều các truy vấn khoảng. Nếu mảng không cập nhật, ta có thể trả nhiều tiền xử lý và bộ nhớ hơn để truy vấn sau đó cực nhanh.
 
-Đây là cùng sự đánh đổi (trade-off) quen thuộc của DSA:
+Đây là cùng sự đánh đổi (trade-off / 트레이드오프) quen thuộc của DSA:
 
 ```text
 ít mutation
@@ -11,7 +14,7 @@ bảng thưa là một structure dành cho khối lượng công việc rất c�
 → preprocess mạnh
 ```
 
-Sparse Table đặc biệt mạnh với các phép toán như cực tiểu, cực đại và GCD, cho phép trả lời truy vấn trong `O(1)` sau tiền xử lý `O(n log n)`.
+Sparse bảng (table / 테이블) đặc biệt mạnh với các phép toán như cực tiểu, cực đại và GCD, cho phép trả lời truy vấn trong `O(1)` sau tiền xử lý `O(n log n)`.
 
 ## Power-of-two decomposition
 
@@ -21,13 +24,13 @@ bảng thưa lưu aggregate của mọi interval có length là lũy thừa củ
 st[k][i] = aggregate của đoạn bắt đầu tại i, length 2^k
 ```
 
-Base:
+Cơ sở (base / 기반):
 
 ```text
 st[0][i] = a[i]
 ```
 
-Transition:
+Chuyển tiếp (transition / 전이):
 
 \[
 st[k][i] = kết hợp(st[k-1][i], st[k-1][i + 2^{k-1}])
@@ -41,11 +44,11 @@ Construction cần khoảng:
 O(n\log n)
 \]
 
-time và bộ nhớ.
+Thời gian (time / 시간) và bộ nhớ.
 
 ## Tại sao các lũy thừa của hai?
 
-Mọi positive length có logarithmic cách biểu diễn (representation) theo các lũy thừa của hai. Precompute intervals tăng gấp đôi giúp ta reuse kết quả nhỏ để tạo block lớn.
+Mọi positive length có logarithmic cách biểu diễn (representation / 표현) theo các lũy thừa của hai. Precompute intervals tăng gấp đôi giúp ta reuse kết quả nhỏ để tạo khối (block / 블록) lớn.
 
 Ý tưởng này xuất hiện nhiều nơi:
 
@@ -104,11 +107,11 @@ final class SparseMin {
 }
 ```
 
-Precompute `floor(log2(x))` tránh logarit dấu phẩy động trong truy vấn và làm ngữ nghĩa (semantics) integer rõ ràng.
+Precompute `floor(log2(x))` tránh logarit dấu phẩy động trong truy vấn và làm ngữ nghĩa (semantics / 의미론) integer rõ ràng.
 
 ## O(1) RMQ nhờ idempotence
 
-Cho range `[L,R]`, đặt:
+Cho phạm vi (range / 범위) `[L,R]`, đặt:
 
 \[
 k = \lfloor \log_2(R-L+1) \rfloor
@@ -174,9 +177,9 @@ GCD lũy đẳng (idempotent):
 \gcd(x,x)=x
 \]
 
-nên truy vấn range GCD cũng `O(1)` bằng hai blocks overlap.
+nên truy vấn phạm vi (range / 범위) GCD cũng `O(1)` bằng hai blocks overlap.
 
-Điều này hữu ích trong number-theory range problems.
+Điều này hữu ích trong number-theory phạm vi (range / 범위) problems.
 
 ## bảng thưa cho AND/OR
 
@@ -199,7 +202,7 @@ nên overlap trick không đúng.
 
 ## Non-overlapping decomposition
 
-Ngay cả với có tính kết hợp (associative) non-lũy đẳng (idempotent) thao tác, ordinary bảng thưa blocks vẫn có thể decompose range thành `O(log n)` disjoint power-of-two blocks.
+Ngay cả với có tính kết hợp (associative) non-lũy đẳng (idempotent) thao tác, ordinary bảng thưa blocks vẫn có thể decompose phạm vi (range / 범위) thành `O(log n)` disjoint power-of-two blocks.
 
 Ví dụ sum:
 
@@ -217,7 +220,7 @@ Nhưng với tĩnh sum, tổng tiền tố cho `O(1)` và bộ nhớ `O(n)` nên
 
 Mô hình tư duy khác classic bảng thưa.
 
-Ở mỗi tầng, mảng được chia thành blocks. Quanh midpoint của mỗi block, preprocess:
+Ở mỗi tầng, mảng được chia thành blocks. Quanh midpoint của mỗi khối (block / 블록), preprocess:
 
 ```text
 suffix aggregates bên trái midpoint
@@ -284,7 +287,7 @@ Nếu có sự thay đổi dữ liệu, cây đoạn thường là choice tự n
 
 ## bảng thưa vs cây Fenwick (Fenwick Tree)
 
-cây Fenwick tối ưu prefix-like group các thao tác và point các cập nhật:
+cây Fenwick tối ưu prefix-like group các thao tác và điểm (point / 지점) các cập nhật:
 
 ```text
 update O(log n)
@@ -298,9 +301,9 @@ Hai structures giải khối lượng công việc khác nhau; không nên chọ
 
 ## Vì sao cập nhật đắt?
 
-Một cập nhật điểm `a[p]` ảnh hưởng mọi precomputed block chứa `p`.
+Một cập nhật điểm `a[p]` ảnh hưởng mọi precomputed khối (block / 블록) chứa `p`.
 
-Ở tầng `k`, có thể có nhiều các vị trí bắt đầu `i` sao cho interval `[i,i+2^k)` chứa `p`. Tổng số affected table các mục không chỉ `O(log n)`.
+Ở tầng `k`, có thể có nhiều các vị trí bắt đầu `i` sao cho interval `[i,i+2^k)` chứa `p`. Tổng số affected bảng (table / 테이블) các mục không chỉ `O(log n)`.
 
 bảng thưa intentionally các phần tử trùng thông tin để truy vấn nhanh. sự thay đổi dữ liệu phá nhiều copies đó.
 
@@ -308,7 +311,7 @@ bảng thưa intentionally các phần tử trùng thông tin để truy vấn n
 
 ## bộ nhớ bố trí
 
-`st[k][i]` bố trí level-major như Java `int[][]` làm mỗi tầng contiguous logic mảng.
+`st[k][i]` bố trí level-major như Java `int[][]` làm mỗi tầng contiguous lô-gic (logic / 논리) mảng.
 
 truy vấn đọc hai cells cùng tầng. Construction quét sequentially.
 
@@ -335,7 +338,7 @@ Nếu mỗi cell `int` 4 byte:
 
 chưa tính mảng headers/các tham chiếu.
 
-Nếu dùng `long`, raw data khoảng 160 MB.
+Nếu dùng `long`, raw dữ liệu (data / 데이터) khoảng 160 MB.
 
 Đây là lý do bảng thưa không “free” chỉ vì truy vấn nhanh.
 
@@ -361,7 +364,7 @@ nhưng `Math.clz32` có 32-bit ngữ nghĩa. Với very large lengths, cách bi�
 
 Choice là readability vs small bộ nhớ saving/môi trường chạy (runtime) detail.
 
-## rỗng mảng và không hợp lệ range
+## rỗng mảng và không hợp lệ phạm vi (range / 범위)
 
 Trong hệ thống thực tế, API phải định nghĩa:
 
@@ -371,7 +374,7 @@ L > R thì sao?
 range out of bounds?
 ```
 
-Competitive-programming cách triển khai thường assume hợp lệ đầu vào; reusable library không nên.
+Competitive-programming cách triển khai thường assume hợp lệ đầu vào; reusable thư viện (library / 라이브러리) không nên.
 
 ## Inclusive vs half-open intervals
 
@@ -383,7 +386,7 @@ Half-open length:
 len = R - L
 ```
 
-và right block starts at:
+và right khối (block / 블록) starts at:
 
 ```text
 R - 2^k
@@ -393,7 +396,7 @@ Hãy chọn một convention và giữ nhất quán. Mixing interval ngữ nghĩ
 
 ## RMQ — Truy vấn cực tiểu trên khoảng (Range Minimum Query)
 
-RMQ là một foundational problem:
+RMQ là một foundational bài toán (problem / 문제):
 
 ```text
 query(L,R) = minimum value/index trên interval
@@ -401,7 +404,7 @@ query(L,R) = minimum value/index trên interval
 
 bảng thưa cho tĩnh RMQ `O(1)` sau `O(n log n)` preprocess.
 
-Nhưng RMQ còn có deeper các thuật toán đạt linear tiền xử lý + O(1) truy vấn bằng Cartesian cây/LCA reductions. Đây là chủ đề lý thuyết nâng cao hơn.
+Nhưng RMQ còn có deeper các thuật toán đạt tuyến tính (linear / 선형) tiền xử lý + O(1) truy vấn bằng Cartesian cây/LCA reductions. Đây là chủ đề lý thuyết nâng cao hơn.
 
 bảng thưa nổi bật vì cách triển khai đơn giản và constants practical.
 
@@ -409,7 +412,7 @@ bảng thưa nổi bật vì cách triển khai đơn giản và constants pract
 
 Lowest Phổ biến tổ tiên trên tĩnh cây có thể reduce thành RMQ.
 
-DFS Euler tour ghi sequence các nút và depths:
+DFS Euler tour ghi chuỗi (sequence / 시퀀스) các nút và depths:
 
 ```text
 node:  A B D B E B A C ...
@@ -429,21 +432,21 @@ Tree
 → O(1) LCA query
 ```
 
-Đây là example tuyệt đẹp của problem phép biến đổi.
+Đây là example tuyệt đẹp của bài toán (problem / 문제) phép biến đổi.
 
-## Cartesian cây connection
+## Cartesian cây liên kết (connection / 연결)
 
-Cartesian Tree của mảng duy trì tính chất heap theo giá trị và thứ tự inorder theo các chỉ số ban đầu.
+Cartesian cây (tree / 트리) của mảng duy trì tính chất vùng nhớ động (heap / 힙) theo giá trị và thứ tự inorder theo các chỉ số ban đầu.
 
-RMQ giữa hai vị trí có liên hệ với LCA của hai nút tương ứng trong Cartesian Tree.
+RMQ giữa hai vị trí có liên hệ với LCA của hai nút tương ứng trong Cartesian cây (tree / 트리).
 
-Vì vậy RMQ, Cartesian cây và LCA có equivalence sâu về structure.
+Vì vậy RMQ, Cartesian cây và LCA có equivalence sâu về cấu trúc (structure / 구조).
 
 ## tĩnh lũy đẳng (idempotent) truy vấn như semilattice intuition
 
 Min/max/GCD có algebraic các tính chất phù hợp: có tính kết hợp (associative) + lũy đẳng (idempotent).
 
-Không cần học lattice theory để dùng structure, nhưng biết algebra giúp chọn cấu trúc dữ liệu đúng hơn:
+Không cần học lattice lý thuyết (theory / 이론) để dùng cấu trúc (structure / 구조), nhưng biết algebra giúp chọn cấu trúc dữ liệu đúng hơn:
 
 ```text
 operation properties
@@ -455,7 +458,7 @@ operation properties
 
 ## 2D bảng thưa
 
-Với truy vấn cực tiểu 2D trên dữ liệu tĩnh, Sparse Table có thể được mở rộng theo hai chiều:
+Với truy vấn cực tiểu 2D trên dữ liệu tĩnh, Sparse bảng (table / 테이블) có thể được mở rộng theo hai chiều:
 
 ```text
 st[kx][ky][x][y]
@@ -469,11 +472,11 @@ Practical only khi dimensions vừa phải và truy vấn volume rất lớn.
 
 ## bảng thưa trên strings/các đối tượng
 
-Structure không bắt buộc numeric nếu kết hợp thao tác xác định và table lưu trữ feasible.
+Cấu trúc (structure / 구조) không bắt buộc numeric nếu kết hợp thao tác xác định và bảng (table / 테이블) lưu trữ feasible.
 
 Ví dụ có thể lưu chỉ số của phần tử nhỏ nhất theo một bộ so sánh tùy biến thay vì lưu trực tiếp giá trị. Cách này hữu ích khi cần trả về vị trí ban đầu.
 
-Store index:
+Store chỉ mục (index / 인덱스):
 
 ```text
 st[k][i] = index của best element trong block
@@ -490,7 +493,7 @@ smaller value wins
 if equal, smaller index wins
 ```
 
-Tie ngữ nghĩa phải được encoded trong `combine`. Otherwise giá trị đúng nhưng index kết quả có thể không đúng specification.
+Tie ngữ nghĩa phải được encoded trong `combine`. Otherwise giá trị đúng nhưng chỉ mục (index / 인덱스) kết quả có thể không đúng specification.
 
 ## ngoại tuyến các truy vấn vs bảng thưa
 
@@ -498,7 +501,7 @@ Nếu tất cả các truy vấn biết trước, có thể có ngoại tuyến 
 
 Ví dụ tĩnh RMQ ngoại tuyến có Tarjan LCA-like reductions hoặc Mo's thuật toán cho truy vấn classes khác.
 
-bảng thưa phù hợp khi muốn trực tuyến truy vấn sau one-time preprocess và data tĩnh.
+bảng thưa phù hợp khi muốn trực tuyến truy vấn sau one-time preprocess và dữ liệu (data / 데이터) tĩnh.
 
 ## Mo's thuật toán khác gì?
 
@@ -509,27 +512,27 @@ add/remove element khỏi current range rẻ
 operation không có simple prefix/segment structure
 ```
 
-Complexity thường khoảng `O((n+q)sqrt(n))` style tùy variant.
+Độ phức tạp (complexity / 복잡도) thường khoảng `O((n+q)sqrt(n))` style tùy variant.
 
-bảng thưa là preprocessing-based trực tuyến O(1) cho thao tác class hẹp hơn.
+bảng thưa là preprocessing-based trực tuyến O(1) cho thao tác lớp (class / 클래스) hẹp hơn.
 
 ## truy vấn volume và break-even
 
-bảng thưa preprocess `O(n log n)` chỉ đáng giá nếu q lớn hoặc độ trễ (latency) per truy vấn rất quan trọng.
+bảng thưa preprocess `O(n log n)` chỉ đáng giá nếu q lớn hoặc độ trễ (latency / 지연 시간) per truy vấn rất quan trọng.
 
 Nếu chỉ vài RMQ các truy vấn, cây đoạn hoặc even quét có thể đủ tùy n.
 
-DSA choice nên nhìn total lifecycle chi phí:
+DSA choice nên nhìn total vòng đời (lifecycle / 생명주기) chi phí:
 
 \[
 preprocess + q\times truy vấn + các cập nhật\times cập nhật
 \]
 
-không chỉ fastest truy vấn complexity.
+không chỉ fastest truy vấn độ phức tạp (complexity / 복잡도).
 
 ## bộ nhớ đệm hành vi
 
-truy vấn classic bảng thưa đọc hai positions. Rất ít bộ nhớ accesses, tốt cho độ trễ nhưng table lớn có thể vượt bộ nhớ đệm.
+truy vấn classic bảng thưa đọc hai positions. Rất ít bộ nhớ accesses, tốt cho độ trễ nhưng bảng (table / 테이블) lớn có thể vượt bộ nhớ đệm.
 
 tiền xử lý quét các tầng sequentially, khá thân thiện với bộ nhớ đệm.
 
@@ -547,29 +550,29 @@ const st = Array.from({length: levels}, () => new Int32Array(n));
 
 gọn hơn nếu miền giá trị số fit 32-bit.
 
-Nếu các giá trị vượt range, `Float64Array` hoặc BigInt cách biểu diễn cần cân nhắc.
+Nếu các giá trị vượt phạm vi (range / 범위), `Float64Array` hoặc BigInt cách biểu diễn cần cân nhắc.
 
 ## C cách triển khai caveat
 
 Nếu `1 << k` dùng `int` có dấu, phép dịch lớn có thể gây tràn hoặc rơi vào trường hợp hành vi không xác định tùy ngữ cảnh. Nên dùng kiểu không dấu hoặc kiểu kích thước phù hợp và bảo đảm `k` nằm trong độ rộng kiểu dữ liệu.
 
-cấp phát bộ nhớ `levels * n * sizeof(T)` cũng cần tràn số check cho general-purpose library.
+cấp phát bộ nhớ `levels * n * sizeof(T)` cũng cần tràn số check cho general-purpose thư viện (library / 라이브러리).
 
 ## Những hiểu lầm phổ biến
 
-“bảng thưa dùng cho mọi truy vấn khoảng” — sai; strength chính là tĩnh data và thao tác các tính chất phù hợp.
+“bảng thưa dùng cho mọi truy vấn khoảng” — sai; strength chính là tĩnh dữ liệu (data / 데이터) và thao tác các tính chất phù hợp.
 
 “Chỉ cần tính kết hợp là đủ để truy vấn `O(1)`” — sai với phương pháp các khối chồng lấn kinh điển; tính lũy đẳng mới cho phép hai khối truy vấn chồng lên nhau.
 
-“cập nhật chỉ sửa O(log n) cells vì có log các tầng” — sai; một point thuộc nhiều intervals ở each tầng.
+“cập nhật chỉ sửa O(log n) cells vì có log các tầng” — sai; một điểm (point / 지점) thuộc nhiều intervals ở each tầng.
 
 “bảng thưa luôn tốt hơn cây đoạn vì O(1)” — bỏ qua tiền xử lý, bộ nhớ và sự thay đổi dữ liệu.
 
-“Sum dùng hai block như min” — sai vì overlap double-count.
+“Sum dùng hai khối (block / 블록) như min” — sai vì overlap double-count.
 
 ## kiểm thử
 
-ngẫu nhiên hóa differential test rất đơn giản:
+ngẫu nhiên hóa differential kiểm thử (test / 테스트) rất đơn giản:
 
 ```text
 generate random array nhỏ
@@ -580,7 +583,7 @@ for random L,R:
     compare
 ```
 
-Test đặc biệt:
+Kiểm thử (test / 테스트) đặc biệt:
 
 ```text
 length 1
@@ -592,13 +595,13 @@ duplicates/ties
 negative values
 ```
 
-Nếu lưu index, test quy tắc phân xử khi bằng nhau separately.
+Nếu lưu chỉ mục (index / 인덱스), kiểm thử (test / 테스트) quy tắc phân xử khi bằng nhau separately.
 
 ## Mô hình tư duy
 
-> bảng thưa là **memoization cho mọi interval power-of-two của dữ liệu tĩnh**. Với lũy đẳng (idempotent) thao tác, một arbitrary range được cover bởi hai possibly-các khối chồng lấn nên truy vấn chỉ cần hai table reads. truy vấn cực nhanh được mua bằng redundant tiền xử lý và bộ nhớ, vì vậy structure này chỉ hợp khối lượng công việc ít/no các cập nhật và nhiều lặp lại các truy vấn.
+> bảng thưa là **memoization cho mọi interval power-of-two của dữ liệu tĩnh**. Với lũy đẳng (idempotent) thao tác, một arbitrary phạm vi (range / 범위) được cover bởi hai possibly-các khối chồng lấn nên truy vấn chỉ cần hai bảng (table / 테이블) reads. truy vấn cực nhanh được mua bằng redundant tiền xử lý và bộ nhớ, vì vậy cấu trúc (structure / 구조) này chỉ hợp khối lượng công việc ít/no các cập nhật và nhiều lặp lại các truy vấn.
 
-Khi gặp range-truy vấn problem, hãy hỏi:
+Khi gặp range-truy vấn bài toán (problem / 문제), hãy hỏi:
 
 ```text
 Data có update không?
@@ -611,3 +614,5 @@ Need online hay offline queries?
 ```
 
 Xem thêm: [Range Queries — Fenwick & Segment Tree](./01_range_queries_fenwick_segment_tree.md), [Tree Foundations — LCA](../02_trees/00_tree_foundations.md), [Bit Manipulation](./02_bit_manipulation_and_bitsets.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

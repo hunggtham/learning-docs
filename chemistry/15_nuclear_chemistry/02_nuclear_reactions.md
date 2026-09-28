@@ -1,5 +1,8 @@
 # Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố
 
+> **Mạch đọc:** Đọc **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ký hiệu tổng quát** sang **Các định luật bảo toàn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phản ứng hạt nhân (nuclear reaction / 핵반응)** là quá trình trong đó hạt nhân trao đổi hạt, năng lượng hoặc thay đổi bản sắc. Khác với phản ứng hóa học thông thường chỉ tái sắp xếp electron, phản ứng hạt nhân có thể biến một nguyên tố thành nguyên tố khác. Các công cụ suy luận cốt lõi là định luật bảo toàn, cân bằng khối lượng–năng lượng, xác suất phản ứng và cấu trúc hạt nhân.
 
 Chapter này nối trực tiếp từ [hạt nhân nguyên tử và năng lượng liên kết](./00_atomic_nucleus.md) và [phóng xạ](./01_radioactivity.md). Nếu phần phương trình tốc độ hoặc mạng phản ứng bị khó, có thể quay lại [động học hóa học](../06_chemical_kinetics/00_reaction_rates.md) và [mạng phản ứng hóa lượng](../04_chemical_quantities/06_stoichiometric_matrices_and_reaction_networks.md). Cùng một tư duy “trạng thái → thông lượng → biến đổi theo thời gian” được dùng lại, chỉ khác thang năng lượng và loại hạt tham gia.
@@ -45,10 +48,10 @@ Nếu \(Q<0\), hệ cần được cung cấp động năng từ bên ngoài.
 Nếu tổng khối lượng trước phản ứng lớn hơn tổng khối lượng sau phản ứng \(0.005\,u\), thì gần đúng:
 
 \[
-Q\approx0.005\times 931.5\;\text{MeV}\approx4.66\;\text{MeV}
+Q\approx0.005\times 931.5\;\văn bản (text / 텍스트){MeV}\approx4.66\;\văn bản (text / 텍스트){MeV}
 \]
 
-Con số khối lượng chênh rất nhỏ nhưng năng lượng trên mỗi sự kiện lại lớn vì hệ số chuyển đổi giữa khối lượng và năng lượng là rất lớn. Đây chính là cùng logic đã gặp ở **khuyết khối và năng lượng liên kết**.
+Con số khối lượng chênh rất nhỏ nhưng năng lượng trên mỗi sự kiện lại lớn vì hệ số chuyển đổi giữa khối lượng và năng lượng là rất lớn. Đây chính là cùng lô-gic (logic / 논리) đã gặp ở **khuyết khối và năng lượng liên kết**.
 
 ## Vì sao bảng khối lượng cũng là bảng năng lượng
 
@@ -308,7 +311,7 @@ Hai cơ chế này giải thích nguồn gốc của nhiều nguyên tố nặng
 Các hệ thiên văn và lò phản ứng có thể chứa hàng trăm hoặc hàng nghìn phản ứng ghép nối:
 
 \[
-\frac{dN_i}{dt}=\sum_j \text{tạo}_{j\to i}-\sum_k \text{mất}_{i\to k}
+\frac{dN_i}{dt}=\sum_j \văn bản (text / 텍스트){tạo}_{j\to i}-\sum_k \văn bản (text / 텍스트){mất}_{i\to k}
 \]
 
 Về toán học, đây rất giống mạng động học phản ứng hóa học với nhiều phương trình vi phân ghép nhau.
@@ -356,3 +359,5 @@ Không. Q chỉ nói về chênh lệch năng lượng ròng. Hàng rào Coulomb
 Phản ứng hạt nhân là **va chạm cộng với chuyển trạng thái lượng tử dưới các định luật bảo toàn**. Giá trị Q cho biết năng lượng được giải phóng hay cần cung cấp; tiết diện cho biết kênh phản ứng có xác suất lớn đến đâu; mạng phản ứng cho biết quần thể các nuclide thay đổi như thế nào theo thời gian.
 
 Xem tiếp: [Phân hạch và nhiệt hạch](./03_fission_and_fusion.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic nucleus](./00_atomic_nucleus.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

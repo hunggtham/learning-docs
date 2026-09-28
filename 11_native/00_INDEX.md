@@ -1,25 +1,35 @@
-# Native Mobile Development — Index
+# Phát triển di động bản địa (native mobile development / 네이티브 모바일 개발) — chỉ mục (index / 인덱스)
 
-Thư mục `11_native` chứa các bộ tài liệu native mobile theo hệ sinh thái. Mỗi bộ được tổ chức theo lộ trình từ nền tảng đến production/master, đồng thời giữ các công nghệ legacy quan trọng để có thể đọc và maintain codebase thực tế.
+> **Mạch đọc:** Đọc **phát triển di động bản địa (native mobile development / 네이티브 모바일 개발) — chỉ mục (index / 인덱스)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Swift & iOS** sang **Kotlin & Android**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Thư mục `11_native` chứa các bộ tài liệu bản địa (native / 네이티브) mobile theo hệ sinh thái. Mỗi bộ được tổ chức theo lộ trình từ nền tảng đến môi trường vận hành (production / 운영 환경)/master, đồng thời giữ các công nghệ legacy quan trọng để có thể đọc và maintain codebase thực tế.
 
 ## Swift & iOS
 
-Bộ Swift/iOS được đặt riêng trong [`swift_ios/`](swift_ios/README.md), sử dụng baseline hiện hành **Xcode 27 + Swift 6.4 + iOS 27 SDK** và vẫn giữ phần migration/legacy để đọc codebase Swift 5.x, UIKit, Combine, Core Data và Objective-C interop.
+Bộ Swift/iOS được đặt riêng trong [`swift_ios/`](swift_ios/README.md), sử dụng baseline hiện hành **Xcode 27 + Swift 6.4 + iOS 27 SDK** và vẫn giữ phần di chuyển (migration / 마이그레이션)/legacy để đọc codebase Swift 5.x, UIKit, Combine, cốt lõi (core / 핵심) dữ liệu (data / 데이터) và Objective-C interop.
 
-1. [Beginner](swift_ios/01_swift_ios_beginner.md): Swift core từ số 0, Xcode, Foundation, SwiftUI/UIKit nhập môn, state/navigation, networking, persistence, SPM, file system, form/focus, animation/gesture, testing và signing.
-2. [Intermediate](swift_ios/02_swift_ios_intermediate.md): generics/existentials, structured concurrency, actor/Sendable/AsyncSequence, data flow, networking layer, SwiftData/Core Data, architecture, background execution, module boundaries, sanitizers và deterministic testing.
-3. [Advanced / Senior](swift_ios/03_swift_ios_advanced_senior.md): ownership, actor reentrancy, performance, modularization, Instruments, resilient networking, database concurrency, security, CI/CD, Objective-C/C/C++ interop, production design và incident mindset.
-4. [Master](swift_ios/04_swift_ios_master.md): Swift 5→6.x migration, Swift 6.4, ABI/library evolution, macros, memory-safe systems APIs, offline sync, observability, App Extensions, StoreKit, CloudKit, release engineering và production-readiness audit.
+1. [Beginner](swift_ios/01_swift_ios_beginner.md): Swift cốt lõi (core / 핵심) từ số 0, Xcode, Foundation, SwiftUI/UIKit nhập môn, trạng thái (state / 상태)/điều hướng (navigation / 내비게이션), networking, persistence, SPM, tệp (file / 파일) hệ thống (system / 시스템), form/focus, animation/gesture, testing và signing.
+2. [Intermediate](swift_ios/02_swift_ios_intermediate.md): generics/existentials, structured tính đồng thời (concurrency / 동시성), actor/Sendable/AsyncSequence, luồng dữ liệu (data flow / 데이터 흐름), networking tầng (layer / 계층), SwiftData/cốt lõi (core / 핵심) dữ liệu (data / 데이터), kiến trúc (architecture / 아키텍처), background thực thi (execution / 실행), mô-đun (module / 모듈) boundaries, sanitizers và deterministic testing.
+3. [Advanced / Senior](swift_ios/03_swift_ios_advanced_senior.md): quyền sở hữu (ownership / 소유권), actor reentrancy, hiệu năng (performance / 성능), modularization, Instruments, resilient networking, cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성), bảo mật (security / 보안), CI/CD, Objective-C/C/C++ interop, môi trường vận hành (production / 운영 환경) thiết kế (design / 설계) và sự cố (incident / 인시던트) mindset.
+4. [Master](swift_ios/04_swift_ios_master.md): Swift 5→6.x di chuyển (migration / 마이그레이션), Swift 6.4, ABI/thư viện (library / 라이브러리) evolution, macros, memory-safe các hệ thống (systems / 시스템들) APIs, offline sync, khả năng quan sát (observability / 관측 가능성), App Extensions, StoreKit, CloudKit, bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링) và production-readiness kiểm tra (audit / 감사).
+
+
+> **Chuyển mạch:** Từ **Swift & iOS**, ta sang **Kotlin & Android** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kotlin & Android
 
-Bộ Kotlin được đặt riêng trong [`kotlin_android/`](kotlin_android/README.md) để không trộn file Android với iOS.
+Bộ Kotlin được đặt riêng trong [`kotlin_android/`](kotlin_android/README.md) để không trộn tệp (file / 파일) Android với iOS.
 
-1. [Beginner](kotlin_android/01_kotlin_beginner.md): Kotlin từ số 0, Android Studio/Gradle, OOP, null-safety, collection/lambda, Android components, Compose, XML/View, resource, permission và Activity Result API.
-2. [Intermediate](kotlin_android/02_kotlin_intermediate.md): Kotlin idioms/generics, coroutine/Flow, ViewModel, repository, Room, network, DI, WorkManager, DataStore, serialization, storage, deep link và testing.
-3. [Advanced / Senior](kotlin_android/03_kotlin_advanced_senior.md): coroutine/Flow internals, Compose runtime, modularization, offline-first, performance, R8, security, signing/release, API compatibility và production design.
-4. [Master](kotlin_android/04_kotlin_master.md): Kotlin 1.x→2.x/K2, JVM/build internals, large-scale architecture, compatibility, reliability, observability, performance engineering, release/rollback và KMP awareness.
+1. [Beginner](kotlin_android/01_kotlin_beginner.md): Kotlin từ số 0, Android Studio/Gradle, OOP, null-safety, collection/lambda, Android components, Compose, XML/View, tài nguyên (resource / 자원), permission và Activity kết quả (result / 결과) API.
+2. [Intermediate](kotlin_android/02_kotlin_intermediate.md): Kotlin idioms/generics, coroutine/luồng (flow / 흐름), ViewModel, repository, Room, mạng (network / 네트워크), DI, WorkManager, DataStore, serialization, lưu trữ (storage / 저장소), deep link và testing.
+3. [Advanced / Senior](kotlin_android/03_kotlin_advanced_senior.md): coroutine/luồng (flow / 흐름) internals, Compose thời gian chạy (runtime / 런타임), modularization, offline-first, hiệu năng (performance / 성능), R8, bảo mật (security / 보안), signing/bản phát hành (release / 릴리스), API tính tương thích (compatibility / 호환성) và môi trường vận hành (production / 운영 환경) thiết kế (design / 설계).
+4. [Master](kotlin_android/04_kotlin_master.md): Kotlin 1.x→2.x/K2, JVM/bản dựng (build / 빌드) internals, large-scale kiến trúc (architecture / 아키텍처), tính tương thích (compatibility / 호환성), độ tin cậy (reliability / 신뢰성), khả năng quan sát (observability / 관측 가능성), hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링), bản phát hành (release / 릴리스)/quay lui (rollback / 롤백) và KMP awareness.
 
-## Version baseline của Kotlin/Android
 
-Tại lần cập nhật 2026-09-20, bộ Kotlin dùng Kotlin 2.4.20; Android Studio Quail 4 / 2026.1.4 Patch 1; Android Gradle Plugin 9.4.1. Android 17 tương ứng API 37. Với Google Play, app mới và app update Android thông thường từ 2026-08-31 phải target Android 16 / API 36 trở lên.
+> **Chuyển mạch:** Từ **Kotlin & Android**, ta sang **phiên bản (version / 버전) baseline của Kotlin/Android** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Phiên bản (version / 버전) baseline của Kotlin/Android
+
+Tại lần cập nhật 2026-09-20, bộ Kotlin dùng Kotlin 2.4.20; Android Studio Quail 4 / 2026.1.4 Patch 1; Android Gradle Plugin 9.4.1. Android 17 tương ứng API 37. Với Google Play, app mới và app cập nhật (update / 업데이트) Android thông thường từ 2026-08-31 phải mục tiêu (target / 대상) Android 16 / API 36 trở lên.
+
+> **Bàn giao:** Sau **phiên bản (version / 버전) baseline của Kotlin/Android**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.

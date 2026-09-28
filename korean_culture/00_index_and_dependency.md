@@ -1,10 +1,13 @@
-# Master Knowledge Book — Văn hoá Hàn Quốc
+# Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc
+
+> **Mạch đọc:** Đặt **Master kiến thức (knowledge / 지식) Book — Văn hoá Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách đọc bộ sách** sang **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 > Phạm vi của bộ sách là văn hoá Hàn Quốc với trọng tâm là **Đại Hàn Dân Quốc (대한민국 / Republic of Korea)** đương đại, nhưng luôn quay về lịch sử của bán đảo Triều Tiên khi một tập quán hiện nay chỉ có thể hiểu đúng bằng nguồn gốc lịch sử của nó. “Văn hoá Hàn Quốc” ở đây không được hiểu như một danh sách món ăn, lễ hội hay quy tắc phép lịch sự, mà như một **hệ thống văn hoá (문화 체계 / cultural system)**: tập hợp các ý nghĩa, chuẩn mực, thiết chế, ký ức, môi trường vật chất, **động lực (incentive)** và công nghệ khiến một số cách diễn giải hay hành động trở nên có xác suất cao hơn trong những bối cảnh nhất định.
 
 ## Cách đọc bộ sách
 
-Văn hoá không hoạt động như một chương trình máy tính trong đó mọi người nhận cùng **đầu vào (input)** rồi trả về cùng **đầu ra (output)**. Một người Hàn sinh năm 1950 ở vùng nông thôn Jeolla, một nhân viên văn phòng sinh năm 1985 tại Seoul và một sinh viên sinh năm 2005 có thể cùng nói tiếng Hàn nhưng mang những trải nghiệm xã hội rất khác nhau. Vì vậy, mỗi chương cố gắng phân biệt **cấu trúc lịch sử**, **thiết chế**, **chuẩn mực quan hệ**, **điều kiện vật chất–kinh tế**, **công nghệ** và **mức độ biến thiên trong thực tế**.
+Văn hoá không hoạt động như một chương trình máy tính trong đó mọi người nhận cùng **đầu vào (input / 입력)** rồi trả về cùng **đầu ra (output / 출력)**. Một người Hàn sinh năm 1950 ở vùng nông thôn Jeolla, một nhân viên văn phòng sinh năm 1985 tại Seoul và một sinh viên sinh năm 2005 có thể cùng nói tiếng Hàn nhưng mang những trải nghiệm xã hội rất khác nhau. Vì vậy, mỗi chương cố gắng phân biệt **cấu trúc lịch sử**, **thiết chế**, **chuẩn mực quan hệ**, **điều kiện vật chất–kinh tế**, **công nghệ** và **mức độ biến thiên trong thực tế**.
 
 Một cách hữu ích là coi văn hoá như một hệ thống xác suất thay vì một tập luật tuyệt đối. Nếu ký hiệu hành vi của một cá nhân là `B`, tình huống là `S`, thế hệ là `G`, môi trường tổ chức là `O`, **ràng buộc vật chất (material constraint)** là `M` và tập các chuẩn mực văn hoá là `C`, ta có thể hình dung:
 
@@ -12,7 +15,10 @@ Một cách hữu ích là coi văn hoá như một hệ thống xác suất tha
 P(B\mid S,G,O,M,C)
 ```
 
-Biểu thức này không phải công thức xã hội học dùng để “tính người Hàn”, mà là một **mô hình tư duy (mental model)**. Văn hoá thay đổi **xác suất** của hành vi trong một bối cảnh; nó không quyết định tuyệt đối hành vi ấy. Cách nghĩ này giúp tránh **định kiến khái quát (stereotype)** và giúp người đọc cập nhật mô hình khi gặp dữ liệu mới.
+Biểu thức này không phải công thức xã hội học dùng để “tính người Hàn”, mà là một **mô hình tư duy (mental model / 사고 모델)**. Văn hoá thay đổi **xác suất** của hành vi trong một bối cảnh; nó không quyết định tuyệt đối hành vi ấy. Cách nghĩ này giúp tránh **định kiến khái quát (stereotype)** và giúp người đọc cập nhật mô hình khi gặp dữ liệu mới.
+
+
+> **Chuyển mạch:** Từ **Cách đọc bộ sách**, ta sang **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)
 
@@ -57,11 +63,14 @@ graph TD
     Z --> U
 ```
 
-Sơ đồ phụ thuộc này thể hiện logic hiểu biết, không phải thứ tự “dễ → khó”. Chẳng hạn, muốn hiểu vì sao một nhân viên trẻ vẫn dùng `존댓말` với đồng nghiệp lớn tuổi dù công ty quảng bá văn hoá phẳng, ta cần đồng thời hiểu lịch sử trật tự quan hệ, **siêu dữ liệu xã hội (social metadata)** về tuổi–vai trò, ngữ pháp kính ngữ và logic của tổ chức hiện đại. Tương tự, muốn hiểu vì sao giao hàng nhanh hoặc áp lực nuôi dạy con lại trở thành “văn hoá”, ta phải nối **hạ tầng (infrastructure)**, lao động, lịch sinh hoạt gia đình, động lực thị trường và kỳ vọng xã hội thay vì quy tất cả về tính cách dân tộc.
+Sơ đồ phụ thuộc này thể hiện lô-gic (logic / 논리) hiểu biết, không phải thứ tự “dễ → khó”. Chẳng hạn, muốn hiểu vì sao một nhân viên trẻ vẫn dùng `존댓말` với đồng nghiệp lớn tuổi dù công ty quảng bá văn hoá phẳng, ta cần đồng thời hiểu lịch sử trật tự quan hệ, **siêu dữ liệu xã hội (social metadata)** về tuổi–vai trò, ngữ pháp kính ngữ và lô-gic (logic / 논리) của tổ chức hiện đại. Tương tự, muốn hiểu vì sao giao hàng nhanh hoặc áp lực nuôi dạy con lại trở thành “văn hoá”, ta phải nối **hạ tầng (infrastructure / 인프라)**, lao động, lịch sinh hoạt gia đình, động lực thị trường và kỳ vọng xã hội thay vì quy tất cả về tính cách dân tộc.
+
+
+> **Chuyển mạch:** Từ **Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)**, ta sang **Lộ trình đọc khuyến nghị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lộ trình đọc khuyến nghị
 
-Không bắt buộc đọc theo số file. Nếu muốn xây mô hình từ nền tảng, có thể đi theo luồng sau:
+Không bắt buộc đọc theo số tệp (file / 파일). Nếu muốn xây mô hình từ nền tảng, có thể đi theo luồng sau:
 
 ```text
 01 → 21 → 02 → 22 → 03
@@ -77,9 +86,12 @@ Không bắt buộc đọc theo số file. Nếu muốn xây mô hình từ nề
 
 `16_connections_mental_models_misconceptions.md` nên đọc lại nhiều lần sau các nhóm chương lớn. Nó đóng vai trò như một **đồ thị kiến thức (knowledge graph)** bằng văn xuôi, không phải bản tóm tắt cuối sách.
 
+
+> **Chuyển mạch:** Từ **Lộ trình đọc khuyến nghị**, ta sang **Cấu trúc thư mục** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cấu trúc thư mục
 
-| File | Nội dung trung tâm |
+| tệp (file / 파일) | Nội dung trung tâm |
 |---|---|
 | [`01_cultural_system_history_geography.md`](01_cultural_system_history_geography.md) | Địa lý, bán đảo, nhà nước, chiến tranh, công nghiệp hoá và cách nhìn văn hoá như một hệ thống |
 | [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md) | Các lớp lịch sử Gojoseon, Tam Quốc (Three Kingdoms), Goryeo, Joseon, thuộc địa, chiến tranh và hiện đại hoá nén (compressed modernity) |
@@ -115,15 +127,21 @@ Không bắt buộc đọc theo số file. Nếu muốn xây mô hình từ nề
 | [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) | Bảng thuật ngữ Hàn–Anh–Việt và bản đồ nguồn tham khảo |
 | [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md) | Quy ước tên riêng Việt–Hàn–Anh, phiên âm La-tinh (romanization) và cách tránh dịch sai tên lịch sử |
 
-## Một mô hình tư duy (mental model) xuyên suốt: văn hoá là giao thức xã hội
+
+> **Chuyển mạch:** Từ **Cấu trúc thư mục**, ta sang **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội
 
 Trong mạng máy tính, **giao thức (protocol / 프로토콜)** không quyết định nội dung người dùng gửi, nhưng nó xác định cách các máy nhận diện nhau, bắt tay, chuyển thông tin và xử lý lỗi. Văn hoá có một chức năng tương tự. Nó cung cấp những quy ước mặc định về cách gọi nhau, ai nói trước, mức trực tiếp nào được chấp nhận, khi nào nên tặng quà, cách chia trách nhiệm, điều gì được xem là lịch sự hoặc gây mất mặt.
 
 Ẩn dụ này có giới hạn: con người không phải máy, chuẩn mực có thể bị phản đối, thương lượng và thay đổi. Nhưng nó giúp hiểu vì sao một người nước ngoài có thể biết từng từ tiếng Hàn mà vẫn “lệch giao thức”: câu đúng ngữ pháp nhưng sai quan hệ; hành động thiện chí nhưng sai thời điểm; ý kiến hợp lý nhưng trình bày theo cách khiến người nghe khó tiếp nhận.
 
+
+> **Chuyển mạch:** Từ **Một mô hình tư duy (mental model / 사고 모델) xuyên suốt: văn hoá là giao thức xã hội**, ta sang **Mô hình tư duy thứ hai: ràng buộc tạo hành vi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy thứ hai: ràng buộc tạo hành vi
 
-Nhiều điều trông giống “tính cách dân tộc” thực ra có thể xuất phát một phần từ **ràng buộc (constraint)**. Khi nhà ở, trường học, việc làm hoặc dòng thời gian quân sự tạo **điểm nghẽn (bottleneck)**, con người thích nghi với điểm nghẽn đó. Khi công nghệ làm giảm **chi phí giao dịch (transaction cost)**, hành vi mới xuất hiện.
+Nhiều điều trông giống “tính cách dân tộc” thực ra có thể xuất phát một phần từ **ràng buộc (constraint / 제약조건)**. Khi nhà ở, trường học, việc làm hoặc dòng thời gian quân sự tạo **điểm nghẽn (bottleneck)**, con người thích nghi với điểm nghẽn đó. Khi công nghệ làm giảm **chi phí giao dịch (transaction cost)**, hành vi mới xuất hiện.
 
 Vì vậy một cách giải thích nhân quả nên hỏi theo thứ tự:
 
@@ -141,7 +159,10 @@ Công nghệ / giao diện
 Hành vi quan sát được
 ```
 
-Không phải hiện tượng nào cũng đi qua đủ mọi lớp, nhưng mô hình này buộc người đọc tìm **cơ chế (mechanism)** trước khi gắn nhãn “đó là văn hoá Hàn”.
+Không phải hiện tượng nào cũng đi qua đủ mọi lớp, nhưng mô hình này buộc người đọc tìm **cơ chế (mechanism / 메커니즘)** trước khi gắn nhãn “đó là văn hoá Hàn”.
+
+
+> **Chuyển mạch:** Từ **Mô hình tư duy thứ hai: ràng buộc tạo hành vi**, ta sang **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí
 
@@ -158,8 +179,13 @@ Kỳ vọng mới nào được tạo ra sau khi sự tiện lợi trở thành 
 
 Câu hỏi này giúp nối văn hoá với kinh tế học, lao động và kỹ thuật thay vì chỉ mô tả bề mặt.
 
+
+> **Chuyển mạch:** Từ **Mô hình tư duy thứ ba: sự tiện lợi luôn có bản đồ chi phí**, ta sang **Nguyên tắc chống định kiến khái quát (stereotype)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Nguyên tắc chống định kiến khái quát (stereotype)
 
-Khi đọc những từ như `빨리빨리`, `정`, `눈치`, `유교`, `군대문화`, `재벌`, không nên chuyển chúng thành câu kiểu “người Hàn luôn...”. Câu hỏi tốt hơn là: **chuẩn mực hoặc khuôn mẫu (pattern) này được hình thành trong điều kiện lịch sử nào, được củng cố bởi thiết chế nào, xuất hiện mạnh trong bối cảnh nào, nhóm nào không tuân theo và đang thay đổi ra sao?**
+Khi đọc những từ như `빨리빨리`, `정`, `눈치`, `유교`, `군대문화`, `재벌`, không nên chuyển chúng thành câu kiểu “người Hàn luôn...”. Câu hỏi tốt hơn là: **chuẩn mực hoặc khuôn mẫu (pattern / 패턴) này được hình thành trong điều kiện lịch sử nào, được củng cố bởi thiết chế nào, xuất hiện mạnh trong bối cảnh nào, nhóm nào không tuân theo và đang thay đổi ra sao?**
 
 Một mô tả văn hoá tốt phải luôn chừa chỗ cho sự biến thiên. Seoul không phải toàn Hàn Quốc. Bình luận trực tuyến không phải dư luận xã hội. Một K-drama không phải nghiên cứu dân tộc học. Một công ty có thứ bậc cao không đại diện mọi nơi làm việc. Một gia đình dùng `산후조리원` không đại diện mọi hộ gia đình. Một khu căn hộ có quy tắc phân loại rác cụ thể không có nghĩa toàn quốc dùng đúng cùng cách triển khai. Một người Hàn không có nghĩa vụ “hành xử đúng như sách”.
+
+> **Bàn giao:** Sau **Nguyên tắc chống định kiến khái quát (stereotype)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cultural system history geography](./01_cultural_system_history_geography.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

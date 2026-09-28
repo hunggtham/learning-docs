@@ -26,7 +26,9 @@ const EXCLUDED_SEGMENTS = new Set([
   'site'
 ]);
 const EXCLUDED_TOP_LEVEL = new Set(['automation', 'learning-library', 'planner', 'prompt', 'supabase']);
+const EXCLUDED_ROOT_FILES = new Set(['README.md', 'CATALOG.md', 'SHARED_PROGRESS_SCHEMA.md']);
 const CONNECTION_RE = /mạch\s*(?:đọc|nối|học)|liên\s*kết|kết\s*nối|tiếp\s*(?:theo|nối)|dựa\s*trên|trước\s*đó|đọc\s*thêm|prerequisite|related|connection|next|previous|builds\s+on|extends/i;
+const CONNECTION_MARKER_RE = /^> \*\*Mạch đọc:\*\*/m;
 const HEADING_RE = /^(#{1,6})\s+(.+?)\s*$/;
 const LINK_RE = /\[[^\]]+\]\(([^)]+)\)/g;
 
@@ -36,14 +38,24 @@ function normalize(value) {
 
 function cleanHeading(value) {
   return value
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
     .replace(/[*_`~]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function cleanFileLabel(value) {
+  return value
+    .replace(/\.md$/i, '')
+    .replace(/[_-]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
 function isExcluded(relativePath) {
   const parts = normalize(relativePath).split('/');
-  return parts.some(part => EXCLUDED_SEGMENTS.has(part.toLowerCase()))
+  return (parts.length === 1 && EXCLUDED_ROOT_FILES.has(parts[0]))
+    || parts.some(part => EXCLUDED_SEGMENTS.has(part.toLowerCase()))
     || EXCLUDED_TOP_LEVEL.has(parts[0]);
 }
 
@@ -108,7 +120,7 @@ function connectionIntro(relativePath, headings, context, sibling) {
   const first = sections[0] || title;
   const second = sections[1] || null;
   const contextText = context
-    ? `Đặt **${title}** trong bản đồ [${cleanHeading(path.posix.basename(context, '.md'))}](${relativeLink(relativePath, context)}) để thấy owner và vị trí của nó.`
+    ? `Đặt **${title}** trong bản đồ [${cleanFileLabel(path.posix.basename(context))}](${relativeLink(relativePath, context)}) để thấy owner và vị trí của nó.`
     : `Đọc **${title}** như một mắt xích của learning path hiện tại, không như một ghi chú tách rời.`;
   if (second) {
     return `> **Mạch đọc:** ${contextText} Nội dung đi từ **${first}** sang **${second}**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.`;
@@ -125,17 +137,19 @@ function connectionFooter(relativePath, headings, context, sibling) {
   const sections = headings.filter(item => item.level >= 2).map(item => item.text);
   const last = sections.at(-1) || headings.find(item => item.level === 1)?.text || path.posix.basename(relativePath, '.md');
   const siblingText = sibling
-    ? ` Có thể đọc tiếp [${cleanHeading(path.posix.basename(sibling, '.md'))}](${relativeLink(relativePath, sibling)}) để đối chiếu boundary gần nhất.`
+    ? ` Có thể đọc tiếp [${cleanFileLabel(path.posix.basename(sibling))}](${relativeLink(relativePath, sibling)}) để đối chiếu boundary gần nhất.`
     : context
-      ? ` Quay lại [${cleanHeading(path.posix.basename(context, '.md'))}](${relativeLink(relativePath, context)}) khi cần định vị lại prerequisite hoặc owner.`
+      ? ` Quay lại [${cleanFileLabel(path.posix.basename(context))}](${relativeLink(relativePath, context)}) khi cần định vị lại prerequisite hoặc owner.`
       : '';
   return `> **Bàn giao:** Sau **${last}**, hãy chốt invariant và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.${siblingText}`;
 }
 
-function retrofit(relativePath, markdown, context, sibling) {
-  if (CONNECTION_RE.test(markdown)) return null;
+function retrofit(relativePath, markdown, context, sibling, forceMode = false) {
+  if (forceMode ? CONNECTION_MARKER_RE.test(markdown) : CONNECTION_RE.test(markdown)) return null;
   const headings = extractHeadings(markdown);
-  if (!headings.length) return null;
+  if (!headings.length) {
+    headings.push({ level: 1, text: cleanFileLabel(path.posix.basename(relativePath)) });
+  }
   const lines = markdown.replace(/\s+$/, '').split('\n');
   const h1Index = lines.findIndex(line => /^#\s+/.test(line));
   const intro = connectionIntro(relativePath, headings, context, sibling);
@@ -171,6 +185,7 @@ function retrofit(relativePath, markdown, context, sibling) {
 }
 
 const writeMode = process.argv.includes('--write');
+const forceMode = process.argv.includes('--all');
 const files = await walk(ROOT);
 const dirty = dirtyPaths();
 const filesByDirectory = new Map();
@@ -190,10 +205,10 @@ for (const relativePath of files.sort()) {
     continue;
   }
   const source = await readFile(path.join(ROOT, relativePath), 'utf8');
-  if (CONNECTION_RE.test(source)) continue;
+  if (forceMode ? CONNECTION_MARKER_RE.test(source) : CONNECTION_RE.test(source)) continue;
   candidates += 1;
   const { context, sibling } = chooseContext(relativePath, filesByDirectory);
-  const updated = retrofit(relativePath, source, context, sibling);
+  const updated = retrofit(relativePath, source, context, sibling, forceMode);
   if (!updated || updated === source) continue;
   changed += 1;
   if (writeMode) await writeFile(path.join(ROOT, relativePath), updated, 'utf8');

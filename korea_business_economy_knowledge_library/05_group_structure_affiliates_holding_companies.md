@@ -1,6 +1,9 @@
 # Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)
 
-Khi nhìn sơ đồ một tập đoàn Hàn Quốc, người mới thường thấy hàng chục pháp nhân rồi cố ghi nhớ tên từng công ty. Cách hiệu quả hơn là coi cả tập đoàn như một **đồ thị (graph)**: mỗi nút là một pháp nhân, còn mỗi cạnh thể hiện quan hệ sở hữu, kiểm soát, giao dịch, khoản vay hoặc bảo lãnh.
+> **Mạch đọc:** Đặt **Cấu trúc tập đoàn, công ty thành viên và công ty nắm giữ tại Hàn Quốc (Group Structure / 지주회사·계열회사 구조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thương hiệu tập đoàn khác với pháp nhân** sang **Parent, subsidiary, affiliate và associate khác nhau thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Khi nhìn sơ đồ một tập đoàn Hàn Quốc, người mới thường thấy hàng chục pháp nhân rồi cố ghi nhớ tên từng công ty. Cách hiệu quả hơn là coi cả tập đoàn như một **đồ thị (graph / 그래프)**: mỗi nút là một pháp nhân, còn mỗi cạnh thể hiện quan hệ sở hữu, kiểm soát, giao dịch, khoản vay hoặc bảo lãnh.
 
 Mục tiêu không phải nhớ mọi công ty con. Mục tiêu là hiểu **quyền kiểm soát đi qua đâu, tiền mặt nằm ở đâu, nợ nằm ở đâu và nhóm cổ đông nào thật sự nhận hoặc gánh kết quả kinh tế**.
 
@@ -225,7 +228,7 @@ Vì vậy cần phân tích đồng thời **phân bổ vốn cấp tập đoàn
 
 Quy trình này biến một sơ đồ phức tạp thành một hệ thống có thể phân tích.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Hãy đọc tập đoàn Hàn Quốc như một đồ thị trong khoa học máy tính: **nút = pháp nhân; cạnh = sở hữu / kiểm soát / tiền / bảo lãnh / giao dịch**. Thực tế kinh tế nằm trong quan hệ giữa các nút chứ không nằm ở tên thương hiệu.
 
@@ -254,3 +257,5 @@ Giá trị di chuyển giữa các pháp nhân thế nào?
 ## Liên kết
 
 Đọc cùng [`03_company_forms_and_size_classes.md`](./03_company_forms_and_size_classes.md), [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md), [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`19_major_groups_case_studies.md`](./19_major_groups_case_studies.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,10 +1,13 @@
 # Vision Transformers
 
-**Vision Transformer (ViT / 비전 트랜스포머)** áp dụng Transformer lên images bằng cách biến image thành sequence của patch tokens. Ý tưởng cốt lõi là thay inductive bias convolution mạnh bằng self-attention có khả năng model interactions toàn cục.
+> **Mạch đọc:** Đặt **Vision Transformers** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Patch Tokenization** sang **Vì sao cần Positional thông tin (information / 정보)?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+**Vision Transformer (ViT / 비전 트랜스포머)** áp dụng Transformer lên images bằng cách biến ảnh (image / 이미지) thành chuỗi (sequence / 시퀀스) của patch tokens. Ý tưởng cốt lõi là thay inductive độ lệch (bias / 편향) convolution mạnh bằng self-attention có khả năng mô hình (model / 모델) interactions toàn cục.
 
 ## Patch Tokenization
 
-Với image `H×W×C`, chia thành patches `P×P`.
+Với ảnh (image / 이미지) `H×W×C`, chia thành patches `P×P`.
 
 Số patches:
 
@@ -12,7 +15,7 @@ Số patches:
 N=\frac{HW}{P^2}
 \]
 
-Mỗi patch flatten thành vector size `P^2C`, sau đó linear projection:
+Mỗi patch flatten thành véc-tơ (vector / 벡터) kích thước (size / 크기) `P^2C`, sau đó tuyến tính (linear / 선형) projection:
 
 \[
 z_i = x_i W_E + b
@@ -29,19 +32,19 @@ image
 → task head
 ```
 
-## Vì sao cần Positional Information?
+## Vì sao cần Positional thông tin (information / 정보)?
 
 Self-attention nguyên bản không biết patch nào ở top-left hay bottom-right nếu không encode position.
 
-Positional embeddings thêm spatial order. Có thể learned absolute, relative hoặc 2D variants.
+Positional embeddings thêm spatial thứ tự (order / 순서). Có thể learned absolute, relative hoặc 2D variants.
 
-## CLS Token
+## CLS đơn vị từ (token / 토큰)
 
-Original ViT thêm learnable `[CLS]` token vào sequence. Sau encoder, representation của token này dùng cho classification.
+Original ViT thêm learnable `[CLS]` đơn vị từ (token / 토큰) vào chuỗi (sequence / 시퀀스). Sau encoder, biểu diễn (representation / 표현) của đơn vị từ (token / 토큰) này dùng cho classification.
 
-Alternatives dùng global average pooling trên patch features.
+Alternatives dùng toàn cục (global / 전역) average pooling trên patch features.
 
-## Self-Attention trong Image
+## Self-Attention trong ảnh (image / 이미지)
 
 Attention:
 
@@ -49,25 +52,25 @@ Attention:
 A=softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)
 \]
 
-cho mỗi patch aggregate information từ mọi patch khác.
+cho mỗi patch aggregate thông tin (information / 정보) từ mọi patch khác.
 
-Điểm mạnh: long-range interactions accessible ngay một layer, không cần stack many local convs để receptive field lan rộng.
+Điểm mạnh: long-range interactions accessible ngay một tầng (layer / 계층), không cần ngăn xếp (stack / 스택) many cục bộ (local / 로컬) convs để receptive trường dữ liệu (field / 필드) lan rộng.
 
-## Complexity
+## Độ phức tạp (complexity / 복잡도)
 
-Attention memory/compute theo số tokens gần:
+Attention bộ nhớ (memory / 메모리)/compute theo số tokens gần:
 
 \[
 O(N^2)
 \]
 
-Nếu patch size nhỏ hoặc high-resolution image, `N` tăng nhanh.
+Nếu patch kích thước (size / 크기) nhỏ hoặc high-resolution ảnh (image / 이미지), `N` tăng nhanh.
 
-Ví dụ doubling both H and W → patches ~4× → attention matrix ~16×.
+Ví dụ doubling both H and W → patches ~4× → attention ma trận (matrix / 행렬) ~16×.
 
 Do đó high-resolution ViT cần hierarchical/windowed/sparse attention variants.
 
-## CNN vs ViT Inductive Bias
+## CNN vs ViT Inductive độ lệch (bias / 편향)
 
 CNN hard-code:
 
@@ -75,19 +78,19 @@ CNN hard-code:
 - translation weight sharing;
 - hierarchical spatial processing.
 
-ViT hard-code ít hơn, cho model learn relations from data. Điều này từng khiến ViT cần large-scale pretraining hơn CNN, nhưng modern training/augmentation architectures thu hẹp gap.
+ViT hard-code ít hơn, cho mô hình (model / 모델) learn relations from dữ liệu (data / 데이터). Điều này từng khiến ViT cần large-scale pretraining hơn CNN, nhưng hiện đại (modern / 현대적) huấn luyện (training / 학습)/augmentation architectures thu hẹp gap.
 
-## Data Scale
+## Dữ liệu (data / 데이터) quy mô (scale / 규모)
 
-Weaker inductive bias means model may need more data/regularization to discover useful structure. Large pretraining giúp ViT shine.
+Weaker inductive độ lệch (bias / 편향) means mô hình (model / 모델) may need more dữ liệu (data / 데이터)/regularization to discover useful cấu trúc (structure / 구조). Large pretraining giúp ViT shine.
 
 Đây là example của general ML principle:
 
-> stronger prior → potentially better sample efficiency; weaker prior → more flexibility if data/compute abundant.
+> stronger prior → potentially better mẫu (sample / 표본) efficiency; weaker prior → more flexibility if dữ liệu (data / 데이터)/compute abundant.
 
 ## Hierarchical Vision Transformers
 
-Models như Swin process local windows và merge patches over stages:
+Các mô hình (models / 모델들) như Swin tiến trình (process / 프로세스) cục bộ (local / 로컬) windows và merge patches over stages:
 
 ```text
 fine patches
@@ -96,49 +99,49 @@ fine patches
 → coarser feature hierarchy
 ```
 
-Điều này recover multi-scale structure useful detection/segmentation và reduce quadratic cost.
+Điều này recover multi-scale cấu trúc (structure / 구조) useful detection/segmentation và reduce quadratic chi phí (cost / 비용).
 
 ## Windowed Attention
 
-Attention chỉ trong local windows giảm complexity. Shifted windows allow cross-window communication across layers.
+Attention chỉ trong cục bộ (local / 로컬) windows giảm độ phức tạp (complexity / 복잡도). Shifted windows allow cross-window communication across layers.
 
-Trade-off gần CNN: locality introduced lại để gain efficiency.
+Sự đánh đổi (trade-off / 트레이드오프) gần CNN: locality introduced lại để gain efficiency.
 
-## Hybrid Models
+## Hybrid các mô hình (models / 모델들)
 
-CNN stem + Transformer body hoặc convolution inside transformer block kết hợp local bias và global attention.
+CNN stem + Transformer body hoặc convolution inside transformer khối (block / 블록) kết hợp cục bộ (local / 로컬) độ lệch (bias / 편향) và toàn cục (global / 전역) attention.
 
-Modern vision architectures không còn binary CNN vs Transformer; ideas mix widely.
+Hiện đại (modern / 현대적) vision architectures không còn nhị phân (binary / 이진) CNN vs Transformer; ideas mix widely.
 
-## Masked Image Modeling
+## Masked ảnh (image / 이미지) Modeling
 
 ViT naturally supports masked-patch pretraining. Hide large fraction patches, train reconstruct pixels/features/latent targets.
 
-This resembles masked language modeling nhưng image patches have high redundancy, nên masking ratios/objectives khác NLP.
+This resembles masked ngôn ngữ (language / 언어) modeling nhưng ảnh (image / 이미지) patches have high redundancy, nên masking ratios/objectives khác NLP.
 
 ## Distillation
 
-Teacher model can transfer class/representation signals to ViT, improving data efficiency.
+Teacher mô hình (model / 모델) can transfer lớp (class / 클래스)/biểu diễn (representation / 표현) signals to ViT, improving dữ liệu (data / 데이터) efficiency.
 
 ## Detection with Transformers
 
-DETR uses CNN/ViT-like features + Transformer encoder-decoder + learned object queries. Detection becomes set prediction rather than anchor/NMS pipeline.
+DETR uses CNN/ViT-like features + Transformer encoder-decoder + learned đối tượng (object / 객체) queries. Detection becomes set prediction rather than anchor/NMS chuỗi xử lý (pipeline / 파이프라인).
 
 ## Segmentation with Transformers
 
-Patch features can be decoded into masks. Global context helps scene parsing; multi-scale/hierarchical features important boundary/detail.
+Patch features can be decoded into masks. toàn cục (global / 전역) ngữ cảnh (context / 맥락) helps scene parsing; multi-scale/hierarchical features important ranh giới (boundary / 경계)/detail.
 
 ## Position Resolution Transfer
 
-Fine-tuning at different image resolution may require interpolate positional embeddings if using absolute positions.
+Fine-tuning at different ảnh (image / 이미지) resolution may require interpolate positional embeddings if using absolute positions.
 
-This is an implementation consequence of learned positional table.
+This is an hiện thực (implementation / 구현) consequence of learned positional bảng (table / 테이블).
 
 ## Attention Maps
 
-Visualizing attention weights can show token interaction but should not be treated as exact causal explanation. Multiple heads/layers and residual pathways contribute.
+Visualizing attention weights can show đơn vị từ (token / 토큰) tương tác (interaction / 상호작용) but should not be treated as chính xác (exact / 정확한) nhân quả (causal / 인과적) explanation. Multiple heads/layers and residual pathways contribute.
 
-## Patch Size Trade-off
+## Patch kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)
 
 Large patch:
 
@@ -156,42 +159,44 @@ higher compute
 better local granularity
 ```
 
-Task and hardware determine sweet spot.
+Tác vụ (task / 작업) and hardware determine sweet spot.
 
 ## Vision Transformer và Multimodal AI
 
-Once image becomes sequence of embeddings, architecture aligns naturally with text token processing. Multimodal models can:
+Once ảnh (image / 이미지) becomes chuỗi (sequence / 시퀀스) of embeddings, kiến trúc (architecture / 아키텍처) aligns naturally with văn bản (text / 텍스트) đơn vị từ (token / 토큰) processing. Multimodal các mô hình (models / 모델들) can:
 
-- encode image separately then project into LLM space;
-- concatenate visual tokens with text tokens;
+- encode ảnh (image / 이미지) separately then dự án (project / 프로젝트) into LLM không gian (space / 공간);
+- concatenate visual tokens with văn bản (text / 텍스트) tokens;
 - use cross-attention between modalities.
 
-ViT therefore is a core bridge to vision-language models.
+ViT therefore is a cốt lõi (core / 핵심) cầu nối (bridge / 브리지) to vision-language các mô hình (models / 모델들).
 
-## Foundation Vision Models
+## Foundation Vision các mô hình (models / 모델들)
 
 Large pretrained visual encoders learn representations transferable across classification, detection, segmentation and multimodal alignment. Pretraining objectives may be supervised, contrastive, masked or multimodal.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **ViT xem image như một set/sequence patches cần học relation toàn cục; CNN xem image như một spatial signal nơi local pattern sharing được hard-code mạnh hơn.**
+> **ViT xem ảnh (image / 이미지) như một set/chuỗi (sequence / 시퀀스) patches cần học quan hệ (relation / 관계) toàn cục; CNN xem ảnh (image / 이미지) như một spatial tín hiệu (signal / 신호) nơi cục bộ (local / 로컬) mẫu (pattern / 패턴) sharing được hard-code mạnh hơn.**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “ViT không có spatial bias”
+### “ViT không có spatial độ lệch (bias / 편향)”
 
-Patch layout, positional encoding, augmentations và architecture variants vẫn encode spatial structure.
+Patch bố cục (layout / 레이아웃), positional encoding, augmentations và kiến trúc (architecture / 아키텍처) variants vẫn encode spatial cấu trúc (structure / 구조).
 
-### “Attention global nên luôn tốt hơn convolution”
+### “Attention toàn cục (global / 전역) nên luôn tốt hơn convolution”
 
-Global attention expensive và không phải mọi task cần global relation ở mọi layer.
+Toàn cục (global / 전역) attention expensive và không phải mọi tác vụ (task / 작업) cần toàn cục (global / 전역) quan hệ (relation / 관계) ở mọi tầng (layer / 계층).
 
 ### “Transformer đã thay CNN hoàn toàn”
 
-Modern systems sử dụng cả hai families và hybrid designs.
+Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) sử dụng cả hai families và hybrid designs.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Vision Transformer reuses [Attention](../06_deep_learning_architectures/04_attention.md) và [Transformer](../06_deep_learning_architectures/05_transformer.md) trong spatial domain.
+Vision Transformer reuses [Attention](../06_deep_learning_architectures/04_attention.md) và [Transformer](../06_deep_learning_architectures/05_transformer.md) trong spatial lĩnh vực (domain / 도메인).
 
 Xem tiếp: [Modern Visual Representation](./08_modern_visual_representation.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 images as data](./00_images_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

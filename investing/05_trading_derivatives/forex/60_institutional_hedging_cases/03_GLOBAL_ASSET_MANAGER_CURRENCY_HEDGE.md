@@ -1,8 +1,11 @@
-# Case 03 — Global Asset Manager: Currency Hedge cho Foreign-Asset Portfolio
+# Trường hợp (case / 사례) 03 — toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio
 
-Một investor Hàn Quốc có thể nắm US equities, European bonds hoặc global multi-asset portfolio. Khi reporting currency là KRW, total return không chỉ đến từ local asset. Nó còn đến từ FX.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 03 — toàn cục (global / 전역) Asset Manager: Currency Hedge cho Foreign-Asset Portfolio** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Unhedged foreign asset** sang **2. Return decomposition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model:
+
+Một investor Hàn Quốc có thể nắm US equities, European bonds hoặc toàn cục (global / 전역) multi-asset portfolio. Khi reporting currency là KRW, total return không chỉ đến từ cục bộ (local / 로컬) asset. Nó còn đến từ FX.
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Local Asset Return
@@ -13,7 +16,7 @@ Local Asset Return
 = Investor Return in Reporting Currency
 ```
 
-Currency hedge vì vậy không đơn giản là “xóa FX”. Nó thay đổi distribution, carry, benchmark tracking và liquidity requirements của portfolio.
+Currency hedge vì vậy không đơn giản là “xóa FX”. Nó thay đổi phân phối (distribution / 분포), carry, benchmark tracking và liquidity requirements của portfolio.
 
 ## 1. Unhedged foreign asset
 
@@ -25,7 +28,7 @@ Reporting currency = KRW
 USD/KRW spot = 1,360
 ```
 
-Initial KRW value:
+Initial KRW giá trị (value / 값):
 
 ```text
 136bn KRW
@@ -49,7 +52,7 @@ KRW Return
 + interaction term
 ```
 
-Exact multiplicative relationship:
+Chính xác (exact / 정확한) multiplicative relationship:
 
 ```text
 (1 + R_KRW)
@@ -76,7 +79,7 @@ Approximate KRW return:
 ≈ +1.2%
 ```
 
-Local asset gained 10%, but currency nearly erased result for KRW investor.
+Cục bộ (local / 로컬) asset gained 10%, but currency nearly erased kết quả (result / 결과) for KRW investor.
 
 ## 4. Opposite scenario
 
@@ -87,13 +90,13 @@ US asset falls 5%, but USD strengthens 12% vs KRW:
 ≈ +6.4%
 ```
 
-Investor can gain in KRW despite local asset loss.
+Investor can gain in KRW despite cục bộ (local / 로컬) asset mất mát (loss / 손실).
 
-This is why local-market performance is not investor return.
+This is why local-market hiệu năng (performance / 성능) is not investor return.
 
 ## 5. Full currency hedge concept
 
-Fund can approximately hedge USD asset value by:
+Fund can approximately hedge USD asset giá trị (value / 값) by:
 
 ```text
 Sell USD forward
@@ -125,9 +128,9 @@ Examples:
 100% fully hedged approximately
 ```
 
-“100%” is still approximate because asset value changes between rebalances.
+“100%” is still approximate because asset giá trị (value / 값) changes between rebalances.
 
-## 7. Asset value drift creates hedge mismatch
+## 7. Asset giá trị (value / 값) drift creates hedge mismatch
 
 At start:
 
@@ -153,7 +156,7 @@ This is **hedge drift**.
 
 ## 8. Rebalancing hedge
 
-Policy might rebalance:
+Chính sách (policy / 정책) might rebalance:
 
 ```text
 monthly
@@ -161,11 +164,11 @@ weekly
 when hedge ratio leaves tolerance band
 ```
 
-More frequent rebalancing reduces drift but increases turnover/cost.
+More frequent rebalancing reduces drift but increases turnover/chi phí (cost / 비용).
 
-## 9. Hedge ratio is a strategic allocation decision
+## 9. Hedge ratio is a strategic allocation quyết định (decision / 결정)
 
-Choosing 0%, 50% or 100% changes portfolio risk profile.
+Choosing 0%, 50% or 100% changes portfolio rủi ro (risk / 위험) profile.
 
 It should be based on:
 
@@ -183,9 +186,9 @@ not only short-term FX forecast.
 
 ## 10. Liability currency matters
 
-A Korean pension with KRW liabilities may value KRW stability more than a global investor with USD liabilities.
+A Korean pension with KRW liabilities may giá trị (value / 값) KRW stability more than a toàn cục (global / 전역) investor with USD liabilities.
 
-Same foreign asset can have different optimal hedge policy depending on liabilities.
+Same foreign asset can have different optimal hedge chính sách (policy / 정책) depending on liabilities.
 
 ## 11. Bonds vs equities
 
@@ -198,9 +201,9 @@ Foreign bond expected volatility = low/moderate
 FX volatility = comparable or larger
 ```
 
-Unhedged currency can dominate bond portfolio risk.
+Unhedged currency can dominate bond portfolio rủi ro (risk / 위험).
 
-For equities, local asset volatility is larger, so relative contribution differs.
+For equities, cục bộ (local / 로컬) asset volatility is larger, so relative contribution differs.
 
 ## 12. Hedge carry
 
@@ -222,7 +225,7 @@ Hedged Portfolio Return
 - Transaction Cost
 ```
 
-Currency spot effect is largely offset, not perfectly eliminated.
+Currency spot tác động (effect / 효과) is largely offset, not perfectly eliminated.
 
 ## 14. Forward points vs spot view
 
@@ -230,11 +233,11 @@ A 100% currency hedge can underperform unhedged portfolio when USD rises strongl
 
 That does not imply hedge failed.
 
-The benchmark/objective determines evaluation.
+The benchmark/mục tiêu (objective / 목표) determines evaluation.
 
 ## 15. Benchmark consistency
 
-If fund benchmark is currency-hedged index but manager holds unhedged assets:
+If fund benchmark is currency-hedged chỉ mục (index / 인덱스) but manager holds unhedged assets:
 
 ```text
 manager has active currency risk
@@ -254,7 +257,7 @@ from
 Tactical currency overlay
 ```
 
-If manager changes hedge ratio based on FX view, that active decision should be attributed separately.
+If manager changes hedge ratio based on FX view, that active quyết định (decision / 결정) should be attributed separately.
 
 ## 17. Currency overlay
 
@@ -269,7 +272,7 @@ centralized risk
 consistent execution
 ```
 
-But it introduces governance and attribution complexity.
+But it introduces quản trị (governance / 거버넌스) and attribution độ phức tạp (complexity / 복잡도).
 
 ## 18. Netting across portfolios
 
@@ -277,7 +280,7 @@ Portfolio A long USD 100m.
 
 Portfolio B economically short USD 30m.
 
-At firm level:
+At firm mức (level / 수준):
 
 ```text
 net USD exposure = 70m
@@ -287,7 +290,7 @@ Centralized hedge can reduce gross transactions if mandates allow.
 
 ## 19. Cross hedge
 
-If direct hedge market is illiquid, manager may hedge with correlated currency.
+If direct hedge thị trường (market / 시장) is illiquid, manager may hedge with correlated currency.
 
 Example conceptual:
 
@@ -296,13 +299,13 @@ illiquid EM currency exposure
 → hedge partly with regional/broad USD proxy
 ```
 
-This creates **basis risk** because correlation is imperfect and regime-dependent.
+This creates **basis rủi ro (risk / 위험)** because correlation is imperfect and regime-dependent.
 
 ## 20. NDF hedge
 
 For non-deliverable/restricted currency exposure, NDF may be used.
 
-Need model:
+Need mô hình (model / 모델):
 
 ```text
 fixing source
@@ -324,9 +327,9 @@ hedge tenor = short
 
 Hedge must roll repeatedly.
 
-Long-run result depends on sequence of forward points and roll execution.
+Long-run kết quả (result / 결과) depends on chuỗi (sequence / 시퀀스) of forward points and roll thực thi (execution / 실행).
 
-## 22. Roll risk
+## 22. Roll rủi ro (risk / 위험)
 
 At each maturity:
 
@@ -344,11 +347,11 @@ credit line tightens
 liquidity declines
 ```
 
-So hedge that reduced spot FX risk can introduce funding/liquidity risk.
+So hedge that reduced spot FX rủi ro (risk / 위험) can introduce funding/liquidity rủi ro (risk / 위험).
 
 ## 23. Collateral and variation margin
 
-Depending instrument/CSA/clearing structure, hedge can require collateral when marked against fund.
+Depending instrument/CSA/clearing cấu trúc (structure / 구조), hedge can require collateral when marked against fund.
 
 Important paradox:
 
@@ -382,7 +385,7 @@ can matter even though combined net worth is protected.
 
 A 100% hedge may require larger collateral buffer than 50% hedge.
 
-Risk policy should include:
+Rủi ro (risk / 위험) chính sách (policy / 정책) should include:
 
 ```text
 FX risk reduction
@@ -390,7 +393,7 @@ vs
 liquidity requirement
 ```
 
-not just volatility optimization.
+not just volatility tối ưu hóa (optimization / 최적화).
 
 ## 26. Currency-asset correlation
 
@@ -404,7 +407,7 @@ Therefore:
 currency risk is not always pure uncompensated noise
 ```
 
-Its interaction with asset return matters.
+Its tương tác (interaction / 상호작용) with asset return matters.
 
 ## 27. Correlation is not stable
 
@@ -414,9 +417,9 @@ Stress-test multiple correlation regimes.
 
 ## 28. Safe-haven currencies
 
-JPY, CHF, USD can behave differently across crises depending funding and shock source.
+JPY, CHF, USD can behave differently across crises depending funding and shock nguồn (source / 소스).
 
-Do not hard-code “safe haven” into hedge policy without scenario analysis.
+Do not hard-code “safe haven” into hedge chính sách (policy / 정책) without scenario phân tích (analysis / 분석).
 
 ## 29. Multi-currency portfolio
 
@@ -446,9 +449,9 @@ Underlying company revenues/assets = multiple currencies
 
 Direct portfolio FX hedge usually targets fund NAV currency exposure according to fund mechanics, not every corporate revenue exposure inside holdings.
 
-## 31. Look-through depth
+## 31. Look-through độ sâu (depth / 깊이)
 
-Decide whether risk system uses:
+Decide whether rủi ro (risk / 위험) hệ thống (system / 시스템) uses:
 
 ```text
 fund share-class currency
@@ -457,7 +460,7 @@ underlying asset currency
 company revenue currency
 ```
 
-Each level answers different question.
+Each mức (level / 수준) answers different question.
 
 Do not mix them.
 
@@ -467,7 +470,7 @@ Some funds offer currency-hedged share classes.
 
 Investor must understand hedge typically targets share-class currency exposure, not all economic FX exposure of underlying companies.
 
-## 33. Hedge effectiveness metric
+## 33. Hedge effectiveness chỉ số (metric / 지표)
 
 Measure difference between:
 
@@ -490,7 +493,7 @@ cash flows
 
 ## 34. Cash inflow/outflow
 
-Subscriptions/redemptions change foreign asset exposure.
+Subscriptions/redemptions thay đổi (change / 변경) foreign asset exposure.
 
 If hedge is not adjusted promptly:
 
@@ -500,7 +503,7 @@ fund becomes over/under-hedged
 
 Cash-flow forecasting matters.
 
-## 35. Market move between NAV and hedge execution
+## 35. thị trường (market / 시장) move between NAV and hedge thực thi (execution / 실행)
 
 If NAV is measured at one cutoff but hedge rebalances later:
 
@@ -508,27 +511,27 @@ If NAV is measured at one cutoff but hedge rebalances later:
 timing basis
 ```
 
-can create tracking error.
+can create tracking lỗi (error / 오류).
 
 ## 36. Time-zone challenge
 
-Global assets close at different local times.
+Toàn cục (global / 전역) assets close at different cục bộ (local / 로컬) times.
 
 FX trades nearly 24/5.
 
 Define consistent exposure snapshot and hedge-rebalance timestamp.
 
-This is a point-in-time systems problem.
+This is a point-in-time các hệ thống (systems / 시스템들) bài toán (problem / 문제).
 
 ## 37. Weekend gap
 
-Foreign asset market may close while FX or another market reprices at different times.
+Foreign asset thị trường (market / 시장) may close while FX or another thị trường (market / 시장) reprices at different times.
 
 Hedge and asset liquidity are not synchronized perfectly.
 
 ## 38. Stress scenario
 
-Test:
+Kiểm thử (test / 테스트):
 
 ```text
 Global equities -25%
@@ -561,11 +564,11 @@ USD unchanged
 USD -15%
 ```
 
-with local asset +10%/-10% combinations.
+with cục bộ (local / 로컬) asset +10%/-10% combinations.
 
-Observe that hedge ratio changes distribution, not absolute “quality”.
+Observe that hedge ratio changes phân phối (distribution / 분포), not absolute “chất lượng (quality / 품질)”.
 
-## 40. Strategic hedge decision framework
+## 40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
 ```text
 Liability currency
@@ -622,7 +625,7 @@ Currency hedge must be evaluated relative to liabilities,
 benchmark, asset behavior, carry and liquidity constraints.
 ```
 
-## 43. Case outputs
+## 43. trường hợp (case / 사례) outputs
 
 Create:
 
@@ -636,20 +639,22 @@ currency_attribution_report.md
 benchmark_tracking_report.md
 ```
 
-## 44. Review questions
+## 44. rà soát (review / 검토) questions
 
 Explain:
 
-1. Why local asset return differs from KRW investor return.
+1. Why cục bộ (local / 로컬) asset return differs from KRW investor return.
 2. Why 100% hedge drifts after asset price changes.
 3. Why hedge carry belongs in return attribution.
-4. Why a derivative loss can accompany successful hedge.
-5. Why collateral creates liquidity risk even for economically hedged portfolio.
+4. Why a derivative mất mát (loss / 손실) can accompany successful hedge.
+5. Why collateral creates liquidity rủi ro (risk / 위험) even for economically hedged portfolio.
 6. Why benchmark currency treatment matters.
 7. Why listing/trading currency is not always economic exposure.
 
-## Internal links
+## Nội bộ (internal / 내부) links
 
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Systematic risk and attribution engine](../70_systematic_project/03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md)
+
+> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 KOREAN EXPORTER USD RECEIVABLE HEDGE](./01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

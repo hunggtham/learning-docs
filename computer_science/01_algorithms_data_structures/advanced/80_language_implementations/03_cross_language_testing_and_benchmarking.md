@@ -1,4 +1,7 @@
 # Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript
+
+> **Mạch đọc:** Đọc **Kiểm thử và đo hiệu năng DSA trên C, Java và JavaScript** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Đặc tả trước kiểm thử** sang **2. Hành vi công khai và bất biến nội bộ là hai lớp khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **DSA Testing & Benchmarking / 자료구조·알고리즘 테스트와 벤치마킹**
 
 Một cách triển khai DSA đáng tin cậy phải trả lời ba câu hỏi khác nhau:
@@ -11,11 +14,11 @@ Chi phí thực tế trên môi trường chạy và phần cứng có đúng v�
 
 **Chứng minh (proof)**, **kiểm thử (testing)** và **đo hiệu năng (benchmarking)** giải quyết ba lớp vấn đề khác nhau. Chứng minh giải thích tính đúng đắn và mô hình tăng trưởng. Kiểm thử cố tìm phản ví dụ trong mã nguồn thật. Benchmark đo độ trễ, thông lượng, bộ nhớ và khả năng mở rộng trong một môi trường cụ thể.
 
-Benchmark không chứng minh tính đúng đắn, và một vài unit test cũng không chứng minh được Big-O.
+Benchmark không chứng minh tính đúng đắn, và một vài đơn vị (unit / 단위) kiểm thử (test / 테스트) cũng không chứng minh được Big-O.
 
 ## 1. Đặc tả trước kiểm thử
 
-Trước khi viết test, phải xác định **hợp đồng (contract)**:
+Trước khi viết kiểm thử (test / 테스트), phải xác định **hợp đồng (contract)**:
 
 ```text
 đầu vào hợp lệ là gì?
@@ -32,7 +35,7 @@ Ví dụ `topK(items, k)` có thể trả một tập không thứ tự, một d
 
 Hàng đợi phải giữ FIFO dù được cài bằng danh sách liên kết hay bộ đệm vòng. Kiểm thử hành vi công khai không nên phụ thuộc cách biểu diễn bên trong.
 
-Cấu trúc tự cài đặt còn cần kiểm tra **bất biến (invariant)**:
+Cấu trúc tự cài đặt còn cần kiểm tra **bất biến (invariant / 불변식)**:
 
 ```text
 heap: nút cha <= các nút con
@@ -63,9 +66,9 @@ validateFreeList()
 
 Assertion không thay cho việc kiểm tra đầu vào ở ranh giới API. Nó dùng để phát hiện giả định của lập trình viên bị phá vỡ.
 
-Một phép kiểm tra bất biến `O(n)` sau mỗi cập nhật có thể quá đắt cho production nhưng hoàn toàn hợp lý trong kiểm thử ngẫu nhiên.
+Một phép kiểm tra bất biến `O(n)` sau mỗi cập nhật có thể quá đắt cho môi trường vận hành (production / 운영 환경) nhưng hoàn toàn hợp lý trong kiểm thử ngẫu nhiên.
 
-## 4. Unit test nên bắt đầu từ trường hợp biên
+## 4. đơn vị (unit / 단위) kiểm thử (test / 테스트) nên bắt đầu từ trường hợp biên
 
 Các trường hợp cần ưu tiên:
 
@@ -238,7 +241,7 @@ chuỗi thao tác hoặc trường hợp đã sinh
 
 Không tái hiện được lỗi sẽ làm chi phí gỡ lỗi tăng mạnh.
 
-## 13. Kiểm thử thuật toán ngẫu nhiên mà không làm test chập chờn
+## 13. Kiểm thử thuật toán ngẫu nhiên mà không làm kiểm thử (test / 테스트) chập chờn
 
 Không nên kiểm tra kiểu “Quickselect luôn dùng ít hơn X phép so sánh” trong một lần chạy ngẫu nhiên. Thay vào đó:
 
@@ -277,7 +280,7 @@ Bảo đảm thống kê phải được kiểm thử bằng tiêu chí thống 
 
 ## 15. Mutation testing
 
-Một cách đánh giá chất lượng test suite là cố tình đưa vào các lỗi nhỏ:
+Một cách đánh giá chất lượng bộ kiểm thử (test suite / 테스트 스위트) là cố tình đưa vào các lỗi nhỏ:
 
 ```text
 < thành <=
@@ -287,7 +290,7 @@ bỏ một bước cập nhật
 sai biên +1
 ```
 
-Nếu toàn bộ test vẫn vượt qua, bộ kiểm thử đang thiếu khả năng phát hiện hành vi đó. **Mutation testing** đặc biệt hữu ích với DSA vì nhiều lỗi chỉ là một dòng nhưng phá bất biến sâu bên trong.
+Nếu toàn bộ kiểm thử (test / 테스트) vẫn vượt qua, bộ kiểm thử đang thiếu khả năng phát hiện hành vi đó. **Mutation testing** đặc biệt hữu ích với DSA vì nhiều lỗi chỉ là một dòng nhưng phá bất biến sâu bên trong.
 
 ## 16. Benchmark khác kiểm thử ở mục tiêu
 
@@ -333,7 +336,7 @@ Một tập dữ liệu ngẫu nhiên đồng đều duy nhất không đại di
 
 ## 19. Thông lượng và độ trễ
 
-**Thông lượng (throughput)** thường đo số thao tác mỗi giây. **Độ trễ (latency)** đo thời gian cho một thao tác hoặc yêu cầu.
+**thông lượng (throughput / 처리량)** thường đo số thao tác mỗi giây. **độ trễ (latency / 지연 시간)** đo thời gian cho một thao tác hoặc yêu cầu.
 
 Một cấu trúc có thông lượng trung bình tốt vẫn có thể có p99 xấu do thay đổi kích thước hoặc GC. Chi phí khấu hao `O(1)` không bảo đảm mỗi thao tác đều có độ trễ hằng số.
 
@@ -348,7 +351,7 @@ max
 
 ## 20. Bộ nhớ đệm nóng và lạnh
 
-Quét lặp lại cùng một mảng có thể chủ yếu đo trường hợp dữ liệu đã nằm trong cache. Điều này khác với lần truy cập đầu tiên hoặc tải công việc có tập dữ liệu lớn hơn LLC.
+Quét lặp lại cùng một mảng có thể chủ yếu đo trường hợp dữ liệu đã nằm trong bộ nhớ đệm (cache / 캐시). Điều này khác với lần truy cập đầu tiên hoặc tải công việc có tập dữ liệu lớn hơn LLC.
 
 Cần xác định rõ đang đo:
 
@@ -360,9 +363,9 @@ tập làm việc lớn hơn cache?
 
 ## 21. C: tối ưu hóa của trình biên dịch
 
-Benchmark C với `-O0` không đại diện cho bản dựng production đã tối ưu. Cần ghi lại cờ biên dịch, phiên bản compiler và kiến trúc đích.
+Benchmark C với `-O0` không đại diện cho bản dựng môi trường vận hành (production / 운영 환경) đã tối ưu. Cần ghi lại cờ biên dịch, phiên bản trình biên dịch (compiler / 컴파일러) và kiến trúc đích.
 
-Compiler còn có thể loại bỏ phép tính nếu kết quả không quan sát được. Benchmark phải sử dụng kết quả hoặc dùng harness phù hợp để tránh đo “công việc đã bị tối ưu mất”.
+Trình biên dịch (compiler / 컴파일러) còn có thể loại bỏ phép tính nếu kết quả không quan sát được. Benchmark phải sử dụng kết quả hoặc dùng harness phù hợp để tránh đo “công việc đã bị tối ưu mất”.
 
 Nếu chương trình có hành vi không xác định (undefined behavior), kết luận hiệu năng có thể hoàn toàn vô nghĩa vì optimizer được phép giả định UB không xảy ra.
 
@@ -376,7 +379,7 @@ Không có benchmark “thuần cấu trúc dữ liệu” tách hoàn toàn kh�
 
 ## 23. C: sanitizer và benchmark phải tách riêng
 
-AddressSanitizer và UBSan rất hữu ích để tìm lỗi nhưng làm tăng chi phí đáng kể. Không nên dùng bản dựng có sanitizer để kết luận hiệu năng production.
+AddressSanitizer và UBSan rất hữu ích để tìm lỗi nhưng làm tăng chi phí đáng kể. Không nên dùng bản dựng có sanitizer để kết luận hiệu năng môi trường vận hành (production / 운영 환경).
 
 Quy trình hợp lý:
 
@@ -416,25 +419,25 @@ GC count/time
 peak/live heap
 ```
 
-Mảng kiểu nguyên thủy và collection chứa object đóng hộp có thể tạo khác biệt lớn về bộ nhớ và GC.
+Mảng kiểu nguyên thủy và collection chứa đối tượng (object / 객체) đóng hộp có thể tạo khác biệt lớn về bộ nhớ và GC.
 
-## 26. Java: escape analysis và scalar replacement
+## 26. Java: escape phân tích (analysis / 분석) và scalar replacement
 
-JIT có thể loại bỏ một số cấp phát ngắn hạn nếu đối tượng không thoát khỏi phạm vi phân tích. Một microbenchmark quá nhân tạo có thể được tối ưu khác xa hệ thống thật, nơi object thoát qua collection hoặc API.
+JIT có thể loại bỏ một số cấp phát ngắn hạn nếu đối tượng không thoát khỏi phạm vi phân tích. Một microbenchmark quá nhân tạo có thể được tối ưu khác xa hệ thống thật, nơi đối tượng (object / 객체) thoát qua collection hoặc API.
 
 Benchmark nên mô phỏng vòng đời dữ liệu thật; không nên suy rộng quá xa từ một ví dụ nhỏ sang toàn bộ dịch vụ.
 
 ## 27. JavaScript: JIT và hình dạng dữ liệu
 
-Engine JavaScript tối ưu dựa trên phản hồi khi chạy. Kiểu dữ liệu trộn lẫn, hình dạng object thay đổi, mảng thưa hoặc truy cập đa hình có thể làm mã nóng mất tối ưu.
+Engine JavaScript tối ưu dựa trên phản hồi khi chạy. Kiểu dữ liệu trộn lẫn, hình dạng đối tượng (object / 객체) thay đổi, mảng thưa hoặc truy cập đa hình có thể làm mã nóng mất tối ưu.
 
-Dữ liệu benchmark phải có hình dạng gần tải công việc thật. Một phép đo chỉ dùng mảng số dày đặc không đại diện cho hệ thống chứa object và chuỗi.
+Dữ liệu benchmark phải có hình dạng gần tải công việc thật. Một phép đo chỉ dùng mảng số dày đặc không đại diện cho hệ thống chứa đối tượng (object / 객체) và chuỗi.
 
-## 28. JavaScript: event loop và nhiễu bất đồng bộ
+## 28. JavaScript: vòng lặp sự kiện (event loop / 이벤트 루프) và nhiễu bất đồng bộ
 
-Nếu đo DSA thuần CPU trong Node.js hoặc trình duyệt, nên tách mạng, file, timer và các nguồn nhiễu khác càng nhiều càng tốt.
+Nếu đo DSA thuần CPU trong nút (node / 노드).js hoặc trình duyệt, nên tách mạng, tệp (file / 파일), timer và các nguồn nhiễu khác càng nhiều càng tốt.
 
-`async` không làm một thuật toán CPU-bound nhanh hơn; nó thay đổi cách lập lịch. Chỉ đưa thời gian chờ event loop vào benchmark nếu đó thực sự là một phần của tải công việc cần nghiên cứu.
+`async` không làm một thuật toán CPU-bound nhanh hơn; nó thay đổi cách lập lịch. Chỉ đưa thời gian chờ vòng lặp sự kiện (event loop / 이벤트 루프) vào benchmark nếu đó thực sự là một phần của tải công việc cần nghiên cứu.
 
 ## 29. JavaScript: độ phân giải thời gian
 
@@ -448,7 +451,7 @@ So C, Java và JavaScript có thể phục vụ hai mục tiêu khác nhau.
 
 **So sánh thuật toán:** nên giữ cùng ngôn ngữ và môi trường để giảm nhiễu, tập trung vào khác biệt thuật toán.
 
-**So sánh stack hệ thống:** chi phí runtime, GC, JIT và cách biểu diễn chính là một phần của câu trả lời.
+**So sánh ngăn xếp (stack / 스택) hệ thống:** chi phí thời gian chạy (runtime / 런타임), GC, JIT và cách biểu diễn chính là một phần của câu trả lời.
 
 Không nên từ một microbenchmark kết luận rằng “ngôn ngữ X nhanh hơn ngôn ngữ Y nói chung”. Kết luận hợp lệ phải gắn với:
 
@@ -483,7 +486,7 @@ Thuật toán đếm hoặc cộng khoảng cách phải dùng cách biểu di�
 
 ## 34. Dung lượng bộ nhớ thực tế giữa các ngôn ngữ
 
-Một nút logic giống nhau có thể có chi phí khác:
+Một nút lô-gic (logic / 논리) giống nhau có thể có chi phí khác:
 
 ```text
 C    -> các trường struct + alignment + siêu dữ liệu allocator
@@ -491,7 +494,7 @@ Java -> object header + reference + ảnh hưởng GC
 JS   -> object shape + vùng lưu thuộc tính của engine
 ```
 
-Không thể chỉ đếm “một triệu nút” rồi kết luận bộ nhớ giống nhau. Nên đo lượng bộ nhớ thực tế. Mảng phẳng, `TypedArray` và mảng kiểu nguyên thủy thường cho cách so sánh bố trí dữ liệu rõ hơn đồ thị object.
+Không thể chỉ đếm “một triệu nút” rồi kết luận bộ nhớ giống nhau. Nên đo lượng bộ nhớ thực tế. Mảng phẳng, `TypedArray` và mảng kiểu nguyên thủy thường cho cách so sánh bố trí dữ liệu rõ hơn đồ thị đối tượng (object / 객체).
 
 ## 35. CPU profiling
 
@@ -511,7 +514,7 @@ Tối ưu mà không profile rất dễ tập trung sai chỗ.
 
 ## 36. Bộ đếm phần cứng
 
-Trong môi trường native hoặc nhạy về hiệu năng, các chỉ số như:
+Trong môi trường bản địa (native / 네이티브) hoặc nhạy về hiệu năng, các chỉ số như:
 
 ```text
 cycles
@@ -535,11 +538,11 @@ spare capacity
 fragmentation
 ```
 
-Bảng băm có ô dự phòng, cây có con trỏ hoặc object header, còn danh sách kề bằng object có thể tốn nhiều hơn CSR dùng mảng phẳng.
+Bảng băm có ô dự phòng, cây có con trỏ hoặc đối tượng (object / 객체) header, còn danh sách kề bằng đối tượng (object / 객체) có thể tốn nhiều hơn CSR dùng mảng phẳng.
 
 ## 38. Benchmark đầu-cuối
 
-Một phép `heap.poll()` nhanh hơn 20% không chắc làm dịch vụ nhanh hơn nếu heap chỉ chiếm 1% thời gian xử lý yêu cầu.
+Một phép `heap.poll()` nhanh hơn 20% không chắc làm dịch vụ nhanh hơn nếu vùng nhớ động (heap / 힙) chỉ chiếm 1% thời gian xử lý yêu cầu.
 
 Quyết định kiến trúc cần benchmark gần hệ thống thật, bao gồm khi phù hợp:
 
@@ -566,13 +569,13 @@ vị trí NUMA/lõi
 kích thước vùng tới hạn
 ```
 
-Một concurrent map có thể mở rộng tốt khi khóa phân tán nhưng sụp giảm hiệu năng khi mọi luồng cùng cập nhật một khóa hoặc một dòng cache.
+Một concurrent map có thể mở rộng tốt khi khóa phân tán nhưng sụp giảm hiệu năng khi mọi luồng cùng cập nhật một khóa hoặc một dòng bộ nhớ đệm (cache / 캐시).
 
 Nên báo cáo đường cong thông lượng theo số luồng, không chỉ một kết quả ở 8 luồng.
 
-## 40. Chia sẻ giả và tranh chấp dòng cache
+## 40. Chia sẻ giả và tranh chấp dòng bộ nhớ đệm (cache / 캐시)
 
-Hai bộ đếm logic khác nhau nhưng nằm trên cùng một dòng cache có thể khiến các lõi liên tục chuyển quyền sở hữu dòng cache cho nhau. Đây là **chia sẻ giả (false sharing)**.
+Hai bộ đếm lô-gic (logic / 논리) khác nhau nhưng nằm trên cùng một dòng bộ nhớ đệm (cache / 캐시) có thể khiến các lõi liên tục chuyển quyền sở hữu dòng bộ nhớ đệm (cache / 캐시) cho nhau. Đây là **chia sẻ giả (false sharing)**.
 
 Khi benchmark mảng hoặc hàng đợi dùng đồng thời, cần cân nhắc padding và alignment nếu kết quả có dấu hiệu bất thường. Đây là hiệu ứng phần cứng nằm ngoài Big-O tuần tự nhưng có tác động thực tế lớn.
 
@@ -592,7 +595,7 @@ Bộ lập lịch hệ điều hành, giới hạn nhiệt, tiến trình nền 
 
 ## 42. Benchmark hồi quy
 
-Benchmark hữu ích khi được chạy lặp lại qua commit hoặc release với ngưỡng hợp lý.
+Benchmark hữu ích khi được chạy lặp lại qua lần ghi nhận (commit / 커밋) hoặc bản phát hành (release / 릴리스) với ngưỡng hợp lý.
 
 Ví dụ:
 
@@ -653,13 +656,13 @@ Không có siêu dữ liệu, kết quả vài tháng sau gần như không th�
 
 **Bước 2 — Chứng minh và suy luận:** xác định bất biến, tính đúng đắn và độ phức tạp.
 
-**Bước 3 — Unit test:** kiểm tra trường hợp biên và ví dụ đã biết.
+**Bước 3 — đơn vị (unit / 단위) kiểm thử (test / 테스트):** kiểm tra trường hợp biên và ví dụ đã biết.
 
 **Bước 4 — Kiểm thử đối chiếu/tính chất:** sinh nhiều trường hợp nhỏ và so với oracle.
 
 **Bước 5 — Fuzzing/đối nghịch:** thử chuỗi thao tác dài và hình dạng khó.
 
-**Bước 6 — Công cụ kiểm tra runtime:** sanitizer cho C, assertion, công cụ phát hiện race khi phù hợp.
+**Bước 6 — Công cụ kiểm tra thời gian chạy (runtime / 런타임):** sanitizer cho C, assertion, công cụ phát hiện race khi phù hợp.
 
 **Bước 7 — Microbenchmark:** cô lập thao tác nguyên thủy cần đo.
 
@@ -671,7 +674,7 @@ Không có siêu dữ liệu, kết quả vài tháng sau gần như không th�
 
 ## 47. Ví dụ: hàng đợi ưu tiên tự cài đặt trên ba ngôn ngữ
 
-Giả sử cùng cài heap nhị phân ở C, Java và JavaScript.
+Giả sử cùng cài vùng nhớ động (heap / 힙) nhị phân ở C, Java và JavaScript.
 
 Kiểm thử tính đúng đắn:
 
@@ -691,9 +694,9 @@ payload kiểu nguyên thủy hay object
 dữ liệu đã có thứ tự hay ngẫu nhiên
 ```
 
-C cần xét chiến lược cấp phát, bố trí `struct` và cờ compiler. Java cần xét boxing, mảng kiểu nguyên thủy, JIT và GC. JavaScript cần xét `Number`/`BigInt`, `Array`/`TypedArray`, cấp phát tuple/object và độ ổn định hình dạng dữ liệu.
+C cần xét chiến lược cấp phát, bố trí `struct` và cờ trình biên dịch (compiler / 컴파일러). Java cần xét boxing, mảng kiểu nguyên thủy, JIT và GC. JavaScript cần xét `Number`/`BigInt`, `Array`/`TypedArray`, cấp phát tuple/đối tượng (object / 객체) và độ ổn định hình dạng dữ liệu.
 
-Đó mới là một so sánh có ý nghĩa; chạy một heap 1.000 phần tử đúng một lần là chưa đủ.
+Đó mới là một so sánh có ý nghĩa; chạy một vùng nhớ động (heap / 힙) 1.000 phần tử đúng một lần là chưa đủ.
 
 ## 48. Các lỗi benchmark phổ biến
 
@@ -717,3 +720,5 @@ lấy microbenchmark để suy ra toàn bộ ứng dụng
 Ba lớp này phải liên kết với nhau nhưng không thay thế nhau. Một cách triển khai DSA tốt là nơi **hợp đồng toán học, kiểm thử có thể thực thi và số liệu hiệu năng thực nghiệm** cùng mô tả nhất quán một hệ thống.
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [C Implementation](./00_c_dsa_implementation_patterns.md), [Java Collections](./01_java_collections_and_dsa.md), [JavaScript Runtime](./02_javascript_dsa_runtime_patterns.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 c dsa implementation patterns](./00_c_dsa_implementation_patterns.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

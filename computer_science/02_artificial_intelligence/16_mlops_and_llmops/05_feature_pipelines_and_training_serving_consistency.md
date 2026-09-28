@@ -1,10 +1,13 @@
-# Pipeline Đặc trưng và Tính nhất quán giữa Huấn luyện–Phục vụ
+# Chuỗi xử lý (pipeline / 파이프라인) Đặc trưng và Tính nhất quán giữa Huấn luyện–Phục vụ
 
-Một mô hình ML có thể chạy đúng trong notebook nhưng sai trong production nếu đặc trưng được tính khác nhau giữa huấn luyện và phục vụ. **Sai lệch huấn luyện–phục vụ (training–serving skew / 학습-서빙 불일치)** xảy ra khi biểu diễn lúc huấn luyện không khớp biểu diễn lúc suy luận.
+> **Mạch đọc:** Đặt **chuỗi xử lý (pipeline / 파이프라인) Đặc trưng và Tính nhất quán giữa Huấn luyện–Phục vụ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **chuỗi xử lý (pipeline / 파이프라인) đặc trưng là gì?** sang **Tính đúng theo thời điểm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Pipeline đặc trưng là gì?
 
-Pipeline đặc trưng biến sự kiện thô hoặc bảng dữ liệu thành đầu vào của mô hình:
+Một mô hình ML có thể chạy đúng trong notebook nhưng sai trong môi trường vận hành (production / 운영 환경) nếu đặc trưng được tính khác nhau giữa huấn luyện và phục vụ. **Sai lệch huấn luyện–phục vụ (training–serving skew / 학습-서빙 불일치)** xảy ra khi biểu diễn lúc huấn luyện không khớp biểu diễn lúc suy luận.
+
+## Chuỗi xử lý (pipeline / 파이프라인) đặc trưng là gì?
+
+Chuỗi xử lý (pipeline / 파이프라인) đặc trưng biến sự kiện thô hoặc bảng dữ liệu thành đầu vào của mô hình:
 
 ```text
 dữ liệu thô
@@ -22,9 +25,9 @@ Cùng một đặc trưng về mặt ngữ nghĩa phải giữ định nghĩa nh
 
 Giả sử đặc trưng `avg_spend_30d` được dùng cho dự đoán tại thời điểm `t`. Dữ liệu huấn luyện chỉ được dùng giao dịch xảy ra trước `t`.
 
-Nếu join với bảng khách hàng hiện tại có chứa thông tin từ tương lai, rò rỉ dữ liệu xảy ra.
+Nếu phép nối (join / 조인) với bảng khách hàng hiện tại có chứa thông tin từ tương lai, rò rỉ dữ liệu xảy ra.
 
-Feature store hoặc kho dữ liệu không tự động bảo đảm tính đúng theo thời điểm (point-in-time correctness); semantics của truy vấn mới là yếu tố quyết định.
+Tính năng (feature / 기능) store hoặc kho dữ liệu không tự động bảo đảm tính đúng theo thời điểm (point-in-time correctness); ngữ nghĩa (semantics / 의미론) của truy vấn mới là yếu tố quyết định.
 
 ## Đặc trưng Offline và Online
 
@@ -38,7 +41,7 @@ Kiến trúc phổ biến:
    └─ materialization online  → phục vụ
 ```
 
-Mục tiêu là tái sử dụng logic và contract, không nhất thiết dùng cùng một nơi lưu trữ vật lý.
+Mục tiêu là tái sử dụng lô-gic (logic / 논리) và đặc tả hợp đồng (contract / 계약), không nhất thiết dùng cùng một nơi lưu trữ vật lý.
 
 ## Tính nhất quán của phép biến đổi
 
@@ -50,15 +53,15 @@ Ví dụ chuẩn hóa:
 z=\frac{x-\mu_{train}}{\sigma_{train}}
 \]
 
-Không được tính lại `μ,σ` trên batch live theo một logic khác.
+Không được tính lại `μ,σ` trên batch live theo một lô-gic (logic / 논리) khác.
 
-## Tokenizer và tiền xử lý cũng là Pipeline đặc trưng
+## Tokenizer và tiền xử lý cũng là chuỗi xử lý (pipeline / 파이프라인) đặc trưng
 
-Trong LLM hoặc Vision, tokenizer, resize ảnh và chuẩn hóa audio đều là pipeline biểu diễn. Sai phiên bản có thể phá mô hình giống như sai lệch đặc trưng ở dữ liệu bảng.
+Trong LLM hoặc Vision, tokenizer, resize ảnh và chuẩn hóa audio đều là chuỗi xử lý (pipeline / 파이프라인) biểu diễn. Sai phiên bản có thể phá mô hình giống như sai lệch đặc trưng ở dữ liệu bảng.
 
-## Hợp đồng Schema
+## Hợp đồng lược đồ (schema / 스키마)
 
-Schema đầu vào cần mô tả:
+Lược đồ (schema / 스키마) đầu vào cần mô tả:
 
 ```text
 tên
@@ -74,14 +77,14 @@ Chỉ biết kiểu là `float` chưa đủ nếu một dịch vụ gửi USD c�
 
 ## Xử lý đặc trưng bị thiếu
 
-Tra cứu production có thể timeout hoặc thiếu dữ liệu. Chính sách phải tường minh:
+Tra cứu môi trường vận hành (production / 운영 환경) có thể hết thời gian chờ (timeout / 타임아웃) hoặc thiếu dữ liệu. Chính sách phải tường minh:
 
 - dùng giá trị mặc định;
 - dùng nguồn dự phòng;
 - từ chối dự đoán;
 - dùng mô hình giảm cấp.
 
-Huấn luyện nên mô phỏng tình trạng thiếu dữ liệu thực tế nếu deployment có thể gặp tình huống đó.
+Huấn luyện nên mô phỏng tình trạng thiếu dữ liệu thực tế nếu triển khai (deployment / 배포) có thể gặp tình huống đó.
 
 ## Độ mới
 
@@ -91,7 +94,7 @@ Theo dõi độ mới là một phần của độ tin cậy mô hình.
 
 ## Backfill
 
-Khi logic đặc trưng được sửa, backfill dữ liệu lịch sử cần versioning. Không nên ghi đè âm thầm tập dữ liệu cũ nếu muốn tái lập mô hình đã huấn luyện trước đó.
+Khi lô-gic (logic / 논리) đặc trưng được sửa, backfill dữ liệu lịch sử cần versioning. Không nên ghi đè âm thầm tập dữ liệu cũ nếu muốn tái lập mô hình đã huấn luyện trước đó.
 
 ## Rò rỉ qua dữ liệu tổng hợp
 
@@ -102,17 +105,17 @@ dự đoán tại ngày 10
 đặc trưng = tổng tháng tính tới ngày 30  ❌
 ```
 
-Tác vụ theo thời gian cần join đúng theo thời điểm.
+Tác vụ theo thời gian cần phép nối (join / 조인) đúng theo thời điểm.
 
 ## Kiểm tra tính nhất quán Huấn luyện–Phục vụ
 
-Có thể lấy mẫu từ request production rồi tính lại đặc trưng bằng pipeline offline để so sánh giá trị. Báo cáo chênh lệch giúp phát hiện skew.
+Có thể lấy mẫu từ yêu cầu (request / 요청) môi trường vận hành (production / 운영 환경) rồi tính lại đặc trưng bằng chuỗi xử lý (pipeline / 파이프라인) offline để so sánh giá trị. Báo cáo chênh lệch giúp phát hiện skew.
 
-## Feature Store chỉ là một Abstraction
+## Tính năng (feature / 기능) Store chỉ là một lớp trừu tượng (abstraction / 추상화)
 
-Feature store giúp khám phá, tái sử dụng và materialize đặc trưng, nhưng nếu định nghĩa đặc trưng sai thì kết quả vẫn sai. Công cụ không thay thế semantics của domain.
+Tính năng (feature / 기능) store giúp khám phá, tái sử dụng và materialize đặc trưng, nhưng nếu định nghĩa đặc trưng sai thì kết quả vẫn sai. Công cụ không thay thế ngữ nghĩa (semantics / 의미론) của lĩnh vực (domain / 도메인).
 
-## Pipeline Ngữ cảnh của LLM
+## Chuỗi xử lý (pipeline / 파이프라인) Ngữ cảnh của LLM
 
 Ứng dụng LLM có cấu trúc tương tự:
 
@@ -126,7 +129,7 @@ input của người dùng
 → prompt template
 ```
 
-Nếu huấn luyện hoặc đánh giá dùng cách lắp ráp context khác production thì đó cũng là một dạng skew.
+Nếu huấn luyện hoặc đánh giá dùng cách lắp ráp ngữ cảnh (context / 맥락) khác môi trường vận hành (production / 운영 환경) thì đó cũng là một dạng skew.
 
 ## Mô hình tư duy
 
@@ -139,16 +142,18 @@ Tính nhất quán của biểu diễn là một hợp đồng production.
 
 ### “Cùng tên cột nghĩa là cùng một đặc trưng”
 
-Không. Semantics, cửa sổ thời gian hoặc đơn vị có thể khác.
+Không. ngữ nghĩa (semantics / 의미론), cửa sổ thời gian hoặc đơn vị có thể khác.
 
-### “Feature store loại bỏ leakage”
+### “tính năng (feature / 기능) store loại bỏ leakage”
 
 Không nếu truy vấn point-in-time được viết sai.
 
-### “LLM không có feature engineering”
+### “LLM không có tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링)”
 
-Không đúng. Tokenizer, retrieval và quá trình lắp ráp prompt/context chính là kỹ thuật biểu diễn (representation engineering).
+Không đúng. Tokenizer, retrieval và quá trình lắp ráp prompt/ngữ cảnh (context / 맥락) chính là kỹ thuật biểu diễn (representation engineering).
 
 ## Liên kết kiến thức
 
 Xem [Data Leakage](../14_data_for_ai/05_data_leakage.md), [Training Pipeline](../15_ai_engineering/01_training_pipeline.md), [Inference Pipeline](../15_ai_engineering/02_inference_pipeline.md), [Monitoring](./06_monitoring_and_observability.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # 02. Lập pháp, hành pháp, tư pháp và chính quyền địa phương
 
+> **Mạch đọc:** Đặt **02. Lập pháp, hành pháp, tư pháp và chính quyền địa phương** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tại sao cần hiểu cấu trúc cơ quan?** sang **2. Quốc hội (국회) và cấu trúc lập pháp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## 1. Tại sao cần hiểu cấu trúc cơ quan?
 
 Người nước ngoài sống ở Hàn Quốc thường gặp một vấn đề rất thực tế: **cùng một việc nhưng hỏi sai cơ quan thì sẽ bị chuyển vòng**. Hiểu cấu trúc nhà nước giúp xác định đúng nơi cần tìm.
@@ -14,6 +17,9 @@ Tòa Hiến pháp (헌법재판소) → các vấn đề hiến pháp thuộc th
 Chính quyền địa phương (지방자치단체) → hành chính và chính sách địa phương
 ```
 
+
+> **Chuyển mạch:** Từ **1. Tại sao cần hiểu cấu trúc cơ quan?**, ta sang **2. Quốc hội (국회) và cấu trúc lập pháp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 2. Quốc hội (국회) và cấu trúc lập pháp
 
 Quốc hội là cơ quan lập pháp theo Hiến pháp. Trong thực tế, một dự luật (법률안) không biến thành luật ngay khi được đề xuất. Nó đi qua nhiều giai đoạn như đề xuất, xem xét tại ủy ban có thẩm quyền, thẩm tra, biểu quyết tại phiên toàn thể, chuyển sang Chính phủ và công bố theo quy trình hiến định.
@@ -25,6 +31,9 @@ Quốc hội là cơ quan lập pháp theo Hiến pháp. Trong thực tế, mộ
 - `law.go.kr` để kiểm tra **văn bản cuối cùng đang có hiệu lực**.
 
 Điểm rất quan trọng: **một dự luật (법률안) chưa phải là luật đang có hiệu lực**. Nếu thấy tin “dự luật đã được đề xuất” hoặc “ủy ban đã thông qua”, cần kiểm tra thêm trạng thái xử lý.
+
+
+> **Chuyển mạch:** Từ **2. Quốc hội (국회) và cấu trúc lập pháp**, ta sang **3. Hành pháp (행정부) và cơ quan hành chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Hành pháp (행정부) và cơ quan hành chính
 
@@ -39,13 +48,19 @@ Một số loại tên thường gặp:
 
 Khi đọc giấy tờ, hãy phân biệt **cơ quan ban hành** với **bộ chủ quản**. Một văn bản có thể được gửi từ chi nhánh địa phương của một cơ quan trung ương.
 
+
+> **Chuyển mạch:** Từ **3. Hành pháp (행정부) và cơ quan hành chính**, ta sang **4. Tư pháp (사법부) và hệ thống tòa án** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. Tư pháp (사법부) và hệ thống tòa án
 
 Theo Luật Tổ chức Tòa án hiện hành, các loại tòa gồm Tòa Tối cao (대법원), tòa cấp cao (고등법원), Tòa Sáng chế (특허법원), tòa địa phương (지방법원), tòa gia đình (가정법원), tòa hành chính (행정법원), tòa phục hồi/phá sản (회생법원), cùng các đơn vị trực thuộc theo luật.
 
-Đừng hiểu hệ thống tòa theo một đường thẳng duy nhất. Loại vụ việc quyết định tòa và thủ tục: dân sự, hình sự, gia đình, hành chính, phá sản, sở hữu trí tuệ có logic khác nhau.
+Đừng hiểu hệ thống tòa theo một đường thẳng duy nhất. Loại vụ việc quyết định tòa và thủ tục: dân sự, hình sự, gia đình, hành chính, phá sản, sở hữu trí tuệ có lô-gic (logic / 논리) khác nhau.
 
 `scourt.go.kr` cung cấp tra cứu vụ án, thông tin thủ tục, biểu mẫu và cổng điện tử liên quan.
+
+
+> **Chuyển mạch:** Từ **4. Tư pháp (사법부) và hệ thống tòa án**, ta sang **5. Cảnh sát (경찰) và công tố (검찰)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. Cảnh sát (경찰) và công tố (검찰)
 
@@ -59,6 +74,9 @@ Công tố (검찰) là một thiết chế riêng trong hệ thống tư pháp 
 
 Nguồn chính thức: `spo.go.kr`, `police.go.kr`, và các luật tố tụng trên `law.go.kr`.
 
+
+> **Chuyển mạch:** Từ **5. Cảnh sát (경찰) và công tố (검찰)**, ta sang **6. Chính quyền địa phương (지방자치단체)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 6. Chính quyền địa phương (지방자치단체)
 
 Luật Chính quyền địa phương hiện hành phân biệt các cấp như `특별시·광역시·특별자치시·도·특별자치도` và `시·군·구`, cùng các cấu trúc đặc biệt theo luật.
@@ -70,6 +88,9 @@ Một chính sách của Seoul không tự động áp dụng ở Gyeonggi-do. K
 ```text
 quốc gia → tỉnh/thành → thành phố/quận → 동 주민센터
 ```
+
+
+> **Chuyển mạch:** Từ **6. Chính quyền địa phương (지방자치단체)**, ta sang **7. Một ví dụ về chọn đúng cơ quan** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Một ví dụ về chọn đúng cơ quan
 
@@ -106,6 +127,9 @@ Cần xem cơ quan ra quyết định và văn bản thông báo:
 
 Không phải mọi vụ đều đi qua đủ các bước trên.
 
+
+> **Chuyển mạch:** Từ **7. Một ví dụ về chọn đúng cơ quan**, ta sang **8. Cách giữ nội dung civic/political trung lập** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 8. Cách giữ nội dung civic/political trung lập
 
 Khi nghiên cứu cấu trúc nhà nước, nên ghi theo bốn cột:
@@ -119,6 +143,9 @@ Khi nghiên cứu cấu trúc nhà nước, nên ghi theo bốn cột:
 
 Không cần đánh giá “cơ quan nào tốt hơn” hoặc “chính sách nào nên thắng” để hiểu hệ thống.
 
+
+> **Chuyển mạch:** Từ **8. Cách giữ nội dung civic/political trung lập**, ta sang **Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Nguồn chính thức
 
 - 대한민국 국회: https://www.assembly.go.kr/
@@ -127,3 +154,5 @@ Không cần đánh giá “cơ quan nào tốt hơn” hoặc “chính sách n
 - 경찰청: https://www.police.go.kr/
 - 대검찰청: https://www.spo.go.kr/
 - 국가법령정보센터: https://www.law.go.kr/
+
+> **Bàn giao:** Sau **Nguồn chính thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

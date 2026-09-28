@@ -1,5 +1,8 @@
 # Phân tích khấu hao, ngẫu nhiên hóa và tư duy xác suất
-**Amortized Analysis, Randomization & Probabilistic Reasoning / 상환 분석, 무작위화, 확률적 사고**
+
+> **Mạch đọc:** Đọc **Phân tích khấu hao, ngẫu nhiên hóa và tư duy xác suất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Amortized không phải average trường hợp (case / 사례)** sang **2. Phương pháp tổng hợp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**Amortized phân tích (analysis / 분석), Randomization & Probabilistic lập luận (reasoning / 추론) / 상환 분석, 무작위화, 확률적 사고**
 
 Không phải mọi bảo đảm trong DSA đều có dạng “mỗi thao tác luôn mất `O(f(n))`”. Có cấu trúc thỉnh thoảng thực hiện một thao tác rất đắt nhưng cả chuỗi thao tác vẫn rẻ. Có thuật toán chủ động dùng tính ngẫu nhiên để tránh đầu vào xấu. Có cấu trúc dữ liệu chấp nhận sai số xác suất để đổi lấy bộ nhớ nhỏ và khả năng xử lý quy mô lớn.
 
@@ -13,13 +16,13 @@ cấu trúc xác suất      -> cho phép sai số nào để tiết kiệm tài
 
 Điểm chung là ta không còn nhìn một thao tác hoặc một lần chạy riêng lẻ; ta nhìn **phân phối chi phí, chuỗi trạng thái hoặc phân phối xác suất của quá trình tính toán**.
 
-## 1. Amortized không phải average case
+## 1. Amortized không phải average trường hợp (case / 사례)
 
 **Phân tích khấu hao (amortized analysis)** không cần giả sử đầu vào ngẫu nhiên. Nó cho một cận trên đối với **mọi chuỗi thao tác hợp lệ** trong mô hình.
 
-Ngược lại, average-case analysis cần một phân phối đầu vào hoặc mô hình xác suất cụ thể.
+Ngược lại, average-case phân tích (analysis / 분석) cần một phân phối đầu vào hoặc mô hình xác suất cụ thể.
 
-Mảng động là ví dụ điển hình. Một lần `append` có thể phải sao chép toàn bộ `n` phần tử khi resize, nhưng nếu capacity tăng theo cấp số nhân thì `m` lần append có tổng chi phí tuyến tính. Vì vậy chi phí khấu hao mỗi append là `O(1)`.
+Mảng động là ví dụ điển hình. Một lần `append` có thể phải sao chép toàn bộ `n` phần tử khi resize, nhưng nếu sức chứa (capacity / 용량) tăng theo cấp số nhân thì `m` lần append có tổng chi phí tuyến tính. Vì vậy chi phí khấu hao mỗi append là `O(1)`.
 
 Điều này không có nghĩa từng append là `O(1)` trong trường hợp xấu nhất.
 
@@ -93,29 +96,29 @@ Splay Tree      -> tổng log kích thước subtree theo một rank phù hợp
 
 Không có công thức chung để đo thế năng. Cần hiểu điều gì khiến thao tác tương lai trở nên đắt, rồi đo lượng “nợ” đó trong trạng thái hiện tại.
 
-## 6. Stack với multipop
+## 6. ngăn xếp (stack / 스택) với multipop
 
-Giả sử stack hỗ trợ `push`, `pop`, `multipop(k)`. Một lần `multipop` có thể pop `O(n)` phần tử.
+Giả sử ngăn xếp (stack / 스택) hỗ trợ `push`, `pop`, `multipop(k)`. Một lần `multipop` có thể pop `O(n)` phần tử.
 
 Nhưng mỗi phần tử chỉ được push một lần và pop tối đa một lần. Vì vậy qua `m` thao tác, tổng số lần pop bị chặn bởi tổng số lần push.
 
-Total work là `O(m)`, nên chi phí khấu hao mỗi thao tác là `O(1)`.
+Total công việc (work / 작업) là `O(m)`, nên chi phí khấu hao mỗi thao tác là `O(1)`.
 
 Mẫu quan trọng:
 
 > nếu một vòng lặp bên trong tiêu thụ đối tượng mà đối tượng đó không quay trở lại, tổng số lần lặp có thể tuyến tính dù nhìn bề ngoài giống vòng lặp lồng nhau.
 
-## 7. Monotonic Stack và Deque
+## 7. Monotonic ngăn xếp (stack / 스택) và Deque
 
-Trong Next Greater Element, mỗi phần tử vào stack đúng một lần và rời stack tối đa một lần. Trong sliding-window maximum với deque đơn điệu, mỗi chỉ số cũng được push một lần và pop tối đa một lần.
+Trong Next Greater Element, mỗi phần tử vào ngăn xếp (stack / 스택) đúng một lần và rời ngăn xếp (stack / 스택) tối đa một lần. Trong sliding-window maximum với deque đơn điệu, mỗi chỉ số cũng được push một lần và pop tối đa một lần.
 
 Vì vậy các vòng `while` bên trong không tạo `O(n²)`; tổng số lần pop trên toàn bộ thuật toán vẫn `O(n)`.
 
-Đây là một trong những pattern khấu hao quan trọng nhất khi đọc code.
+Đây là một trong những mẫu (pattern / 패턴) khấu hao quan trọng nhất khi đọc mã (code / 코드).
 
 ## 8. DSU và “thao tác đắt làm tương lai rẻ hơn”
 
-Union-Find với union-by-rank/size và path compression có chi phí khấu hao:
+Union-Find với union-by-rank/kích thước (size / 크기) và đường dẫn (path / 경로) compression có chi phí khấu hao:
 
 \[
 O(\alpha(n))
@@ -125,21 +128,21 @@ với `α` là hàm Ackermann nghịch đảo, tăng cực chậm.
 
 Một lần `find` có thể đi qua nhiều nút, nhưng đồng thời nén đường và cải thiện cấu trúc cho các lần `find` sau. Chi phí hiện tại tạo lợi ích cho tương lai.
 
-Đây là dạng phân tích khấu hao khác dynamic array: thao tác đắt không chỉ hiếm mà còn **tự làm cấu trúc tốt hơn**.
+Đây là dạng phân tích khấu hao khác động (dynamic / 동적) array: thao tác đắt không chỉ hiếm mà còn **tự làm cấu trúc tốt hơn**.
 
-## 9. Splay Tree
+## 9. Splay cây (tree / 트리)
 
-Splay Tree không giữ cân bằng cứng sau mỗi thao tác. Một truy cập có thể tốn `O(n)`, nhưng một chuỗi thao tác có chi phí khấu hao `O(log n)` mỗi thao tác dưới phân tích chuẩn.
+Splay cây (tree / 트리) không giữ cân bằng cứng sau mỗi thao tác. Một truy cập có thể tốn `O(n)`, nhưng một chuỗi thao tác có chi phí khấu hao `O(log n)` mỗi thao tác dưới phân tích chuẩn.
 
-Ngoài ra, các phần tử được truy cập gần đây có xu hướng được đưa gần gốc, tạo tính thích nghi với locality của workload.
+Ngoài ra, các phần tử được truy cập gần đây có xu hướng được đưa gần gốc, tạo tính thích nghi với locality của tải công việc (workload / 워크로드).
 
 Bài học:
 
 > bảo đảm khấu hao cho phép thiết kế cấu trúc đơn giản hơn hoặc thích nghi tốt hơn, nhưng phải chấp nhận một thao tác đơn lẻ có thể đắt.
 
-## 10. Amortized guarantee và tail latency
+## 10. Amortized guarantee và tail độ trễ (latency / 지연 시간)
 
-Trong hệ thống latency-sensitive, “`O(1)` amortized” có thể chưa đủ. Resize của dynamic array hoặc rehash của Hash Table vẫn tạo một lần dừng lớn.
+Trong hệ thống latency-sensitive, “`O(1)` amortized” có thể chưa đủ. Resize của động (dynamic / 동적) array hoặc rehash của bảng băm (hash table / 해시 테이블) vẫn tạo một lần dừng lớn.
 
 Các kỹ thuật hệ thống gồm:
 
@@ -151,7 +154,7 @@ bounded ring buffer
 real-time queue
 ```
 
-Chúng cố biến một thao tác rất đắt thành nhiều phần việc nhỏ hơn để giảm tail latency.
+Chúng cố biến một thao tác rất đắt thành nhiều phần việc nhỏ hơn để giảm tail độ trễ (latency / 지연 시간).
 
 Thông lượng tốt và độ trễ đuôi thấp là hai mục tiêu khác nhau.
 
@@ -161,11 +164,11 @@ Thông lượng tốt và độ trễ đuôi thấp là hai mục tiêu khác nh
 
 Ví dụ, thay vì rehash toàn bảng trong một lần, ta di chuyển vài bucket sau mỗi thao tác. Trong thời gian chuyển đổi, tra cứu có thể phải kiểm tra cả bảng cũ và bảng mới.
 
-Ta trả thêm độ phức tạp implementation để đổi lấy latency ổn định hơn.
+Ta trả thêm độ phức tạp hiện thực (implementation / 구현) để đổi lấy độ trễ (latency / 지연 시간) ổn định hơn.
 
-## 12. Randomized Algorithm là gì?
+## 12. Randomized thuật toán (algorithm / 알고리즘) là gì?
 
-Thuật toán ngẫu nhiên dùng randomness như một phần của logic. Với cùng đầu vào, hai lần chạy có thể đi qua các trạng thái khác nhau.
+Thuật toán ngẫu nhiên dùng randomness như một phần của lô-gic (logic / 논리). Với cùng đầu vào, hai lần chạy có thể đi qua các trạng thái khác nhau.
 
 Mục tiêu thường là:
 
@@ -178,7 +181,7 @@ phân tán tải hoặc collision
 
 Randomized Quicksort là ví dụ kinh điển: pivot ngẫu nhiên làm một thứ tự đầu vào cố định không còn dễ ép thuật toán luôn chọn pivot tệ.
 
-## 13. Expected time phải nói expectation lấy trên cái gì
+## 13. Expected thời gian (time / 시간) phải nói expectation lấy trên cái gì
 
 Nói `O(n log n)` kỳ vọng là chưa đủ nếu không rõ expectation đến từ đâu.
 
@@ -201,7 +204,7 @@ Ví dụ: Randomized Quicksort vẫn trả mảng đã sắp xếp đúng.
 
 **Monte Carlo:** thời gian được kiểm soát tốt nhưng kết quả có xác suất sai.
 
-Ví dụ: fingerprint để kiểm tra bằng nhau hoặc một số primality test xác suất.
+Ví dụ: fingerprint để kiểm tra bằng nhau hoặc một số primality kiểm thử (test / 테스트) xác suất.
 
 Distinction này rất quan trọng vì một hệ thống có thể chấp nhận thời gian không xác định nhưng không được phép trả kết quả sai, hoặc ngược lại.
 
@@ -219,11 +222,11 @@ p^k
 
 ## 16. Universal Hashing
 
-Nếu adversary biết hàm hash cố định, họ có thể chọn khóa gây va chạm. Universal hashing chọn hàm từ một họ ngẫu nhiên sao cho với hai khóa khác nhau, xác suất collision bị chặn.
+Nếu adversary biết hàm băm (hash / 해시) cố định, họ có thể chọn khóa gây va chạm. Universal hashing chọn hàm từ một họ ngẫu nhiên sao cho với hai khóa khác nhau, xác suất collision bị chặn.
 
-Mục tiêu không phải “không bao giờ collision”, mà là làm một tập khóa cố định khó kiểm soát phân phối collision trước khi hàm hash được chọn.
+Mục tiêu không phải “không bao giờ collision”, mà là làm một tập khóa cố định khó kiểm soát phân phối collision trước khi hàm băm (hash / 해시) được chọn.
 
-Trong hệ thống nhận input không tin cậy, threat model này quan trọng hơn average-case trên dữ liệu ngẫu nhiên.
+Trong hệ thống nhận đầu vào (input / 입력) không tin cậy, threat mô hình (model / 모델) này quan trọng hơn average-case trên dữ liệu ngẫu nhiên.
 
 ## 17. Treap
 
@@ -236,25 +239,25 @@ heap order theo priority ngẫu nhiên
 
 Nếu priorities độc lập ngẫu nhiên, chiều cao kỳ vọng là `O(log n)`.
 
-Treap cho thấy randomness có thể được mã hóa trong **metadata của cấu trúc**, không nhất thiết là một nhánh random trong thuật toán.
+Treap cho thấy randomness có thể được mã hóa trong **siêu dữ liệu (metadata / 메타데이터) của cấu trúc**, không nhất thiết là một nhánh random trong thuật toán.
 
-Các thao tác split/merge còn làm Treap rất hữu ích cho sequence động và implicit tree.
+Các thao tác split/merge còn làm Treap rất hữu ích cho chuỗi (sequence / 시퀀스) động và implicit cây (tree / 트리).
 
-## 18. Skip List
+## 18. Skip danh sách (list / 목록)
 
-Skip List tạo các tầng “đường cao tốc” ngẫu nhiên. Mỗi node được promote lên tầng tiếp theo với xác suất `p`.
+Skip danh sách (list / 목록) tạo các tầng “đường cao tốc” ngẫu nhiên. Mỗi nút (node / 노드) được promote lên tầng tiếp theo với xác suất `p`.
 
 Kỳ vọng chiều cao `O(log n)`, tìm kiếm/chèn/xóa kỳ vọng `O(log n)`.
 
-Không cần rotation hoặc balance factor cứng. Balance đến từ phân phối ngẫu nhiên của chiều cao node.
+Không cần rotation hoặc balance factor cứng. Balance đến từ phân phối ngẫu nhiên của chiều cao nút (node / 노드).
 
 ## 19. Randomized Selection
 
 Quickselect với pivot ngẫu nhiên có thời gian kỳ vọng `O(n)`. Trực giác: pivot không cần luôn gần median; chỉ cần đủ thường xuyên tạo partition làm giảm đáng kể bài toán còn lại.
 
-Expected linear time không có nghĩa mỗi lần chạy linear. Nếu cần worst-case linear time, Median-of-Medians cung cấp bảo đảm mạnh hơn với constant factor và implementation phức tạp hơn.
+Expected tuyến tính (linear / 선형) thời gian (time / 시간) không có nghĩa mỗi lần chạy tuyến tính (linear / 선형). Nếu cần worst-case tuyến tính (linear / 선형) thời gian (time / 시간), Median-of-Medians cung cấp bảo đảm mạnh hơn với constant factor và hiện thực (implementation / 구현) phức tạp hơn.
 
-Đây là ví dụ rõ của trade-off:
+Đây là ví dụ rõ của sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 đơn giản + expected guarantee
@@ -267,7 +270,7 @@ phức tạp hơn + deterministic worst-case guarantee
 Một kỹ thuật phân tích rất mạnh là định nghĩa biến chỉ báo:
 
 \[
-I_i = 1 \text{ nếu sự kiện i xảy ra, ngược lại 0}
+I_i = 1 \văn bản (text / 텍스트){ nếu sự kiện i xảy ra, ngược lại 0}
 \]
 
 Khi đó:
@@ -296,11 +299,11 @@ E[X+Y]=E[X]+E[Y]
 
 đúng ngay cả khi `X` và `Y` phụ thuộc nhau.
 
-Điều này cực kỳ hữu ích vì phân tích trực tiếp toàn bộ random process thường khó, nhưng expected contribution của từng sự kiện riêng lẻ có thể dễ tính.
+Điều này cực kỳ hữu ích vì phân tích trực tiếp toàn bộ random tiến trình (process / 프로세스) thường khó, nhưng expected contribution của từng sự kiện riêng lẻ có thể dễ tính.
 
 ## 22. Kỳ vọng không mô tả tail
 
-Một thuật toán có expected time tốt vẫn có thể có phân phối đuôi xấu. Trong hệ thống, p99/p999 latency hoặc xác suất chạy quá deadline có thể quan trọng hơn mean.
+Một thuật toán có expected thời gian (time / 시간) tốt vẫn có thể có phân phối đuôi xấu. Trong hệ thống, p99/p999 độ trễ (latency / 지연 시간) hoặc xác suất chạy quá deadline có thể quan trọng hơn mean.
 
 Để nói mạnh hơn, cần các công cụ như:
 
@@ -350,11 +353,11 @@ O(f(n)) with high probability
 worst-case O(f(n))
 ```
 
-## 26. Probabilistic Data Structure khác Randomized Algorithm
+## 26. Probabilistic cấu trúc dữ liệu (data structure / 자료구조) khác Randomized thuật toán (algorithm / 알고리즘)
 
 Bloom Filter có thể trả dương tính giả. HyperLogLog ước lượng cardinality. Count-Min Sketch ước lượng frequency.
 
-Ở đây randomness không chỉ ảnh hưởng runtime; **output itself có uncertainty có kiểm soát**.
+Ở đây randomness không chỉ ảnh hưởng thời gian chạy (runtime / 런타임); **đầu ra (output / 출력) itself có bất định (uncertainty / 불확실성) có kiểm soát**.
 
 Mô hình thiết kế cần xác định:
 
@@ -366,19 +369,19 @@ khả năng merge
 khả năng delete/update
 ```
 
-## 27. One-sided và two-sided error
+## 27. One-sided và two-sided lỗi (error / 오류)
 
 Bloom Filter chuẩn có false positive nhưng không false negative trong mô hình chỉ chèn. Đây là **sai số một phía (one-sided error)**.
 
 Một estimator khác có thể cao hoặc thấp hơn giá trị thật, tạo **sai số hai phía (two-sided error)**.
 
-One-sided guarantee rất mạnh khi cấu trúc được dùng làm bộ lọc trước một bước chính xác: false positive chỉ tạo thêm work, còn false negative có thể phá tính đúng đắn.
+One-sided guarantee rất mạnh khi cấu trúc được dùng làm bộ lọc trước một bước chính xác: false positive chỉ tạo thêm công việc (work / 작업), còn false negative có thể phá tính đúng đắn.
 
 ## 28. Random Seed là một phần của khả năng tái hiện
 
-Randomized code khó debug nếu seed không được ghi lại. Trong test và benchmark nên cho phép cố định seed.
+Randomized mã (code / 코드) khó gỡ lỗi (debug / 디버그) nếu seed không được ghi lại. Trong kiểm thử (test / 테스트) và benchmark nên cho phép cố định seed.
 
-Trong production, seed có thể được chọn ngẫu nhiên hoặc bí mật để giảm khả năng adversary đoán cấu trúc hash. Đây là hai mục tiêu khác nhau:
+Trong môi trường vận hành (production / 운영 환경), seed có thể được chọn ngẫu nhiên hoặc bí mật để giảm khả năng adversary đoán cấu trúc băm (hash / 해시). Đây là hai mục tiêu khác nhau:
 
 ```text
 reproducibility trong test
@@ -387,21 +390,21 @@ unpredictability trong production
 
 ## 29. Adaptive Adversary
 
-Một số phân tích giả định adversary chọn input trước khi randomness được lộ. Nếu attacker có thể quan sát output hoặc timing rồi thích nghi input tiếp theo, bảo đảm có thể yếu hơn.
+Một số phân tích giả định adversary chọn đầu vào (input / 입력) trước khi randomness được lộ. Nếu attacker có thể quan sát đầu ra (output / 출력) hoặc timing rồi thích nghi đầu vào (input / 입력) tiếp theo, bảo đảm có thể yếu hơn.
 
-Trong hệ thống bảo mật hoặc online algorithm, cần biết threat model là **oblivious adversary** hay **adaptive adversary**.
+Trong hệ thống bảo mật hoặc online thuật toán (algorithm / 알고리즘), cần biết threat mô hình (model / 모델) là **oblivious adversary** hay **adaptive adversary**.
 
 Randomization không tự động chống được mọi đối thủ.
 
 ## 30. Pseudorandomness trong triển khai
 
-Thuật toán lý thuyết thường giả định random bits độc lập lý tưởng. Runtime thực tế dùng PRNG.
+Thuật toán lý thuyết thường giả định random bits độc lập lý tưởng. thời gian chạy (runtime / 런타임) thực tế dùng PRNG.
 
-Với DSA phổ thông, PRNG chất lượng tốt thường đủ. Với security, cần CSPRNG. Không nên dùng một bộ sinh yếu rồi giả định mọi theorem ngẫu nhiên vẫn giữ nguyên dưới đầu vào đối nghịch.
+Với DSA phổ thông, PRNG chất lượng tốt thường đủ. Với bảo mật (security / 보안), cần CSPRNG. Không nên dùng một bộ sinh yếu rồi giả định mọi theorem ngẫu nhiên vẫn giữ nguyên dưới đầu vào đối nghịch.
 
 ## 31. Testing Randomized Algorithms
 
-Không nên viết test kiểu “runtime luôn dưới X” cho một thuật toán expected-time.
+Không nên viết kiểm thử (test / 테스트) kiểu “thời gian chạy (runtime / 런타임) luôn dưới X” cho một thuật toán expected-time.
 
 Cách tốt hơn:
 
@@ -412,7 +415,7 @@ chạy nhiều seed cho statistical behavior
 kiểm tra invariants sau random operations
 ```
 
-Với cấu trúc xác suất, cần đo distribution của error qua nhiều dataset/seed chứ không chỉ một lần chạy.
+Với cấu trúc xác suất, cần đo phân phối (distribution / 분포) của lỗi (error / 오류) qua nhiều dataset/seed chứ không chỉ một lần chạy.
 
 ## 32. Khi nào nên chọn deterministic guarantee?
 
@@ -426,9 +429,9 @@ latency tail cực quan trọng
 reproducibility là yêu cầu mạnh
 ```
 
-Expected/amortized/randomized design phù hợp khi throughput và simplicity quan trọng hơn worst-case từng thao tác.
+Expected/amortized/randomized thiết kế (design / 설계) phù hợp khi thông lượng (throughput / 처리량) và simplicity quan trọng hơn worst-case từng thao tác.
 
-Không có một loại guarantee luôn tốt nhất; phải khớp với SLA và threat model.
+Không có một loại guarantee luôn tốt nhất; phải khớp với SLA và threat mô hình (model / 모델).
 
 ## 33. Bảng phân biệt nhanh
 
@@ -436,15 +439,17 @@ Không có một loại guarantee luôn tốt nhất; phải khớp với SLA v�
 |---|---|
 | Worst-case | một thao tác/lần chạy tệ nhất có thể đắt tới đâu? |
 | Amortized | tổng chi phí của mọi chuỗi thao tác bị chặn thế nào? |
-| Average-case | dưới phân phối input đã chọn, chi phí trung bình là gì? |
+| Average-case | dưới phân phối đầu vào (input / 입력) đã chọn, chi phí trung bình là gì? |
 | Expected randomized | expectation trên random choices của thuật toán là gì? |
-| High-probability | tail probability giảm mạnh tới mức nào? |
-| Probabilistic output | output có thể sai bao nhiêu và với xác suất nào? |
+| High-probability | tail xác suất (probability / 확률) giảm mạnh tới mức nào? |
+| Probabilistic đầu ra (output / 출력) | đầu ra (output / 출력) có thể sai bao nhiêu và với xác suất nào? |
 
 ## Mô hình tư duy
 
 > Phân tích khấu hao nói về **phân phối chi phí theo thời gian**. Ngẫu nhiên hóa nói về **phân phối hành vi theo lựa chọn random**. Cấu trúc xác suất nói về **phân phối sai số của câu trả lời**.
 
-Khi thấy một bảo đảm không phải worst-case đơn giản, hãy hỏi: **đang lấy trung bình trên cái gì, adversary được phép làm gì, một thao tác riêng lẻ có thể đắt tới đâu, tail probability ra sao, output có được phép sai không, và hệ thống cần throughput hay latency guarantee?**
+Khi thấy một bảo đảm không phải worst-case đơn giản, hãy hỏi: **đang lấy trung bình trên cái gì, adversary được phép làm gì, một thao tác riêng lẻ có thể đắt tới đâu, tail xác suất (probability / 확률) ra sao, đầu ra (output / 출력) có được phép sai không, và hệ thống cần thông lượng (throughput / 처리량) hay độ trễ (latency / 지연 시간) guarantee?**
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Mathematical Toolkit](../00_foundations/04_mathematical_toolkit_for_dsa.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [Skip Lists](../02_trees/07_skip_lists.md), [Probabilistic Data Structures](./06_probabilistic_data_structures.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

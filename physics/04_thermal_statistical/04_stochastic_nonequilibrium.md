@@ -1,8 +1,11 @@
 # Động lực học ngẫu nhiên và vật lý thống kê không cân bằng
 
+> **Mạch đọc:** Đọc **Động lực học ngẫu nhiên và vật lý thống kê không cân bằng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cân bằng không phải toàn bộ vật lý thống kê** sang **Chuyển động Brown: ngẫu nhiên nhưng có quy luật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Cân bằng không phải toàn bộ vật lý thống kê
 
-Cơ học thống kê cân bằng rất mạnh vì chỉ cần một số ràng buộc vĩ mô đã có thể xác định phân bố xác suất của hệ. Tuy nhiên, rất nhiều hệ thực luôn có dòng vận chuyển: nhiệt truyền qua vật, hạt khuếch tán theo gradient nồng độ, protein động cơ tiêu thụ năng lượng hóa học, khí quyển nhận năng lượng từ Mặt Trời rồi bức xạ ra không gian.
+Cơ học thống kê cân bằng rất mạnh vì chỉ cần một số ràng buộc vĩ mô đã có thể xác định phân bố xác suất của hệ. Tuy nhiên, rất nhiều hệ thực luôn có dòng vận chuyển: nhiệt truyền qua vật, hạt khuếch tán theo độ dốc (gradient / 기울기) nồng độ, protein động cơ tiêu thụ năng lượng hóa học, khí quyển nhận năng lượng từ Mặt Trời rồi bức xạ ra không gian.
 
 Vật lý thống kê không cân bằng (nonequilibrium statistical physics / 비평형 통계물리학) nghiên cứu các hệ có dòng, tác động ngoài hoặc quá trình thư giãn về trạng thái ổn định.
 
@@ -76,7 +79,7 @@ Nếu có trường trôi `a(x)`, một dạng phương trình Fokker–Planck l
 
 Hạng đầu vận chuyển xác suất có hướng; hạng sau làm phân bố lan rộng do nhiễu.
 
-Đây là cầu nối giữa phương trình vi phân ngẫu nhiên và PDE. Cấu trúc toán học tương tự xuất hiện trong tài chính định lượng, động lực quần thể, neuroscience và diffusion model trong machine learning, dù ý nghĩa vật lý của biến khác nhau.
+Đây là cầu nối giữa phương trình vi phân ngẫu nhiên và PDE. Cấu trúc toán học tương tự xuất hiện trong tài chính định lượng, động lực quần thể, neuroscience và diffusion mô hình (model / 모델) trong machine học tập (learning / 학습), dù ý nghĩa vật lý của biến khác nhau.
 
 ## Quá trình Markov và khái niệm bộ nhớ
 
@@ -104,7 +107,7 @@ Vì vậy:
 
 Một điện trở có dòng điện không đổi là ví dụ: các đại lượng vĩ mô ổn định, nhưng năng lượng vẫn liên tục tiêu tán thành nhiệt.
 
-## Entropy production trong hệ không cân bằng
+## Entropy môi trường vận hành (production / 운영 환경) trong hệ không cân bằng
 
 Trong nhiệt động lực học không thuận nghịch, các dòng thường được điều khiển bởi các lực nhiệt động.
 
@@ -126,11 +129,11 @@ Gần cân bằng, tốc độ sinh entropy thường có thể viết như tổ
 \dot S_{prod}\ge0.
 ```
 
-Không cân bằng không phá định luật II. Ngược lại, entropy production trở thành một đại lượng động lực học quan trọng để định lượng tính không thuận nghịch.
+Không cân bằng không phá định luật II. Ngược lại, entropy môi trường vận hành (production / 운영 환경) trở thành một đại lượng động lực học quan trọng để định lượng tính không thuận nghịch.
 
 ## Fluctuation theorem và các dao động hiếm
 
-Trong hệ vi mô hoặc khoảng thời gian rất ngắn, ta có thể quan sát những quỹ đạo mà entropy production tức thời có giá trị âm.
+Trong hệ vi mô hoặc khoảng thời gian rất ngắn, ta có thể quan sát những quỹ đạo mà entropy môi trường vận hành (production / 운영 환경) tức thời có giá trị âm.
 
 Điều này không phủ định định luật II ở quy mô vĩ mô. Các định lý thăng giáng (fluctuation theorem) định lượng xác suất tương đối giữa quỹ đạo “thuận” và “ngược”. Khi kích thước hệ hoặc thời gian quan sát tăng, các dao động ngược hiếm trở nên cực kỳ ít khả năng.
 
@@ -212,7 +215,7 @@ Ví dụ:
 - tọa độ phản ứng vượt rào năng lượng;
 - tín hiệu vượt một ngưỡng.
 
-Thời gian first-passage phụ thuộc cả động lực ngẫu nhiên lẫn điều kiện biên. Đây là ví dụ rõ cho thấy boundary condition tạo ra đại lượng quan sát mới.
+Thời gian first-passage phụ thuộc cả động lực ngẫu nhiên lẫn điều kiện biên. Đây là ví dụ rõ cho thấy ranh giới (boundary / 경계) điều kiện (condition / 조건) tạo ra đại lượng quan sát mới.
 
 ## Miền áp dụng và giới hạn
 
@@ -220,9 +223,9 @@ Mô hình nhiễu trắng giả sử tương quan thời gian của môi trườ
 
 Fokker–Planck chuẩn cũng giả sử quá trình có tính Markov và hệ số drift/diffusion được xác định thích hợp. Với bước nhảy lớn, phân bố đuôi nặng hoặc dynamics có bộ nhớ, cần các mô hình tổng quát hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Cơ học thống kê cân bằng hỏi phân bố nào xuất hiện khi các dòng vĩ mô đã chết đi. Vật lý không cân bằng hỏi xác suất, dòng và entropy production thay đổi thế nào khi hệ đang bị tác động, đang thư giãn hoặc liên tục trao đổi tài nguyên với môi trường.
+Cơ học thống kê cân bằng hỏi phân bố nào xuất hiện khi các dòng vĩ mô đã chết đi. Vật lý không cân bằng hỏi xác suất, dòng và entropy môi trường vận hành (production / 운영 환경) thay đổi thế nào khi hệ đang bị tác động, đang thư giãn hoặc liên tục trao đổi tài nguyên với môi trường.
 
 Một chuỗi tư duy hữu ích là
 
@@ -253,8 +256,10 @@ Không. Chuyển động Brown và nhiễu nhiệt điện áp là động lực
 
 Không. Khái niệm này chỉ hữu ích trong một số chế độ và không thay thế mô tả đầy đủ của hệ active hoặc far-from-equilibrium.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Hiện tượng vận chuyển](../03_continuum/02_transport_diffusion_heat.md), [Ensemble thống kê](03_ensembles_partition_functions.md).
 
 **Liên hệ tiếp:** [Thăng giáng–tiêu tán](07_linear_response_fluctuation_dissipation.md), [Vật chất mềm](../03_continuum/03_turbulence_rheology_soft_matter.md), [Tín hiệu và nhiễu](../12_experimental_computational/01_signals_sampling_noise.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

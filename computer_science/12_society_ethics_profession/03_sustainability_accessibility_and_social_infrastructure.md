@@ -1,73 +1,111 @@
-# Sustainability, accessibility và computing as social infrastructure
+# Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)
 
-Computer systems consume electricity, hardware, water/cooling capacity và human attention. Khi software trở thành infrastructure cho banking, health, education và public services, reliability/accessibility/environmental cost trở thành properties của society—not chỉ technical metrics.
+> **Mạch đọc:** Đặt **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **năng lượng (energy / 에너지) không chỉ là hardware concern** sang **Embodied chi phí (cost / 비용)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Energy không chỉ là hardware concern
 
-Algorithm complexity, data movement, polling frequency, model size, cache behavior và network traffic đều ảnh hưởng energy.
+Computer các hệ thống (systems / 시스템들) consume electricity, hardware, water/cooling sức chứa (capacity / 용량) và human attention. Khi software trở thành hạ tầng (infrastructure / 인프라) cho banking, health, education và công khai (public / 공개) services, độ tin cậy (reliability / 신뢰성)/khả năng tiếp cận (accessibility / 접근성)/environmental chi phí (cost / 비용) trở thành properties của society—not chỉ technical metrics.
 
-Moving data often costs significant energy relative to local arithmetic. Better locality/compression/batching có thể giảm both latency và energy.
+## Năng lượng (energy / 에너지) không chỉ là hardware concern
 
-## Embodied cost
+Thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도), dữ liệu (data / 데이터) movement, polling frequency, mô hình (model / 모델) kích thước (size / 크기), bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) và mạng (network / 네트워크) traffic đều ảnh hưởng năng lượng (energy / 에너지).
 
-Carbon/resource impact không chỉ operational electricity; manufacturing servers/devices, mining materials và disposal có embodied impact.
+Moving dữ liệu (data / 데이터) often costs significant năng lượng (energy / 에너지) relative to cục bộ (local / 로컬) arithmetic. Better locality/compression/batching có thể giảm both độ trễ (latency / 지연 시간) và năng lượng (energy / 에너지).
 
-Extending hardware lifetime qua efficient software có thể giảm replacement pressure, nhưng phải balance security/support constraints.
+
+> **Chuyển mạch:** Từ **năng lượng (energy / 에너지) không chỉ là hardware concern**, ta sang **Embodied chi phí (cost / 비용)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Embodied chi phí (cost / 비용)
+
+Carbon/tài nguyên (resource / 자원) impact không chỉ operational electricity; manufacturing servers/devices, mining materials và disposal có embodied impact.
+
+Extending hardware thời gian tồn tại (lifetime / 수명) qua efficient software có thể giảm replacement pressure, nhưng phải balance bảo mật (security / 보안)/hỗ trợ (support / 지원) các ràng buộc (constraints / 제약조건들).
+
+
+> **Chuyển mạch:** Từ **Embodied chi phí (cost / 비용)**, ta sang **Datacenter efficiency** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Datacenter efficiency
 
-Power Usage Effectiveness (PUE) roughly compares total facility energy với IT equipment energy. Lower overhead cooling/power distribution cải thiện efficiency, nhưng PUE không đo full carbon intensity hoặc hardware embodied emissions.
+Power Usage Effectiveness (PUE) roughly compares total facility năng lượng (energy / 에너지) với IT equipment năng lượng (energy / 에너지). Lower overhead cooling/power phân phối (distribution / 분포) cải thiện efficiency, nhưng PUE không đo full carbon intensity hoặc hardware embodied emissions.
 
-Workload scheduling theo renewable availability/location có thể giảm carbon nếu latency/data rules cho phép.
+Tải công việc (workload / 워크로드) scheduling theo renewable availability/location có thể giảm carbon nếu độ trễ (latency / 지연 시간)/dữ liệu (data / 데이터) rules cho phép.
+
+
+> **Chuyển mạch:** Từ **Datacenter efficiency**, ta sang **E-waste** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## E-waste
 
-Short support cycles và hardware obsolescence tạo electronic waste. Software requiring ever newer hardware has environmental/social cost.
+Short hỗ trợ (support / 지원) cycles và hardware obsolescence tạo electronic waste. Software requiring ever newer hardware has environmental/xã hội (social / 사회적) chi phí (cost / 비용).
 
-Repairability, modularity và long-term updates là product/system design concerns.
+Repairability, modularity và long-term updates là sản phẩm (product / 제품)/hệ thống (system / 시스템) thiết kế (design / 설계) concerns.
+
+
+> **Chuyển mạch:** Từ **E-waste**, ta sang **Digital divide** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Digital divide
 
-Assuming fast broadband, latest phone hoặc constant connectivity excludes users. Offline-first, low-bandwidth modes, smaller bundles và graceful degradation có social accessibility value.
+Assuming fast broadband, latest phone hoặc constant connectivity excludes users. Offline-first, low-bandwidth modes, smaller bundles và graceful degradation có xã hội (social / 사회적) khả năng tiếp cận (accessibility / 접근성) giá trị (value / 값).
 
-Performance optimization đôi khi là equity feature, không chỉ UX polish.
+Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) đôi khi là equity tính năng (feature / 기능), không chỉ UX polish.
 
-## Accessibility như infrastructure reliability
 
-Nếu public service không keyboard/screen-reader usable, một population effectively experiences outage dù server uptime 99.99%.
+> **Chuyển mạch:** Từ **Digital divide**, ta sang **khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Availability phải được nghĩ end-to-end từ infrastructure đến human access.
+## Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)
 
-## Platform concentration
+Nếu công khai (public / 공개) dịch vụ (service / 서비스) không keyboard/screen-reader usable, một population effectively experiences outage dù máy chủ (server / 서버) uptime 99.99%.
 
-Cloud/app stores/search/social platforms tạo economies of scale nhưng cũng concentration of control. API policy or outage của một platform có thể affect many dependent businesses/users.
+Availability phải được nghĩ end-to-end từ hạ tầng (infrastructure / 인프라) đến human truy cập (access / 접근).
 
-Architecture dependency có societal/economic dimension: technical lock-in biến thành bargaining power.
+
+> **Chuyển mạch:** Từ **khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)**, ta sang **nền tảng (platform / 플랫폼) concentration** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Nền tảng (platform / 플랫폼) concentration
+
+Cloud/app stores/tìm kiếm (search / 검색)/xã hội (social / 사회적) platforms tạo economies of quy mô (scale / 규모) nhưng cũng concentration of điều khiển (control / 제어). API chính sách (policy / 정책) or outage của một nền tảng (platform / 플랫폼) có thể affect many dependent businesses/users.
+
+Kiến trúc (architecture / 아키텍처) phụ thuộc (dependency / 의존성) có societal/economic dimension: technical lock-in biến thành bargaining power.
+
+
+> **Chuyển mạch:** Từ **nền tảng (platform / 플랫폼) concentration**, ta sang **Resilience** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Resilience
 
-Critical infrastructure cần disaster recovery, offline/manual fallback và communication plans. “Cloud highly available” không thay business continuity nếu identity provider/network/payment upstream cùng fail.
+Trọng yếu (critical / 중요) hạ tầng (infrastructure / 인프라) cần disaster khôi phục (recovery / 복구), offline/manual fallback và communication plans. “Cloud highly available” không thay nghiệp vụ (business / 비즈니스) continuity nếu định danh (identity / 식별자) provider/mạng (network / 네트워크)/payment upstream cùng thất bại (fail / 실패).
 
 Resilience includes organization/humans, not only replication.
 
+
+> **Chuyển mạch:** Từ **Resilience**, ta sang **Rebound effects** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Rebound effects
 
-Efficiency improvement có thể giảm cost rồi tăng total usage, khiến total resource consumption không giảm tương ứng. Đây là rebound effect.
+Efficiency improvement có thể giảm chi phí (cost / 비용) rồi tăng total usage, khiến total tài nguyên (resource / 자원) consumption không giảm tương ứng. Đây là rebound tác động (effect / 효과).
 
-Vì vậy per-request efficiency metric cần đi cùng total workload growth.
+Vì vậy per-request efficiency chỉ số (metric / 지표) cần đi cùng total tải công việc (workload / 워크로드) growth.
 
-## Common Misconceptions
 
-**“Software vô hình nên impact môi trường nhỏ.”** Compute/storage/network hardware và energy là physical infrastructure.
+> **Chuyển mạch:** Từ **Rebound effects**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“Accessibility chỉ là UI compliance.”** Network/device/performance constraints cũng quyết định access.
+## Dùng chung (common / 공통) Misconceptions
 
-**“Efficiency luôn giảm total consumption.”** Lower cost có thể stimulate more usage.
+**“Software vô hình nên impact môi trường nhỏ.”** Compute/lưu trữ (storage / 저장소)/mạng (network / 네트워크) hardware và năng lượng (energy / 에너지) là vật lý (physical / 물리적) hạ tầng (infrastructure / 인프라).
 
-## Mental Model
+**“khả năng tiếp cận (accessibility / 접근성) chỉ là UI compliance.”** mạng (network / 네트워크)/thiết bị (device / 장치)/hiệu năng (performance / 성능) các ràng buộc (constraints / 제약조건들) cũng quyết định truy cập (access / 접근).
 
-> Computing là physical + social infrastructure. Một optimization/architecture decision phân bố cost qua energy, devices, people và institutions—không chỉ CPU milliseconds.
+**“Efficiency luôn giảm total consumption.”** Lower chi phí (cost / 비용) có thể stimulate more usage.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> Computing là vật lý (physical / 물리적) + xã hội (social / 사회적) hạ tầng (infrastructure / 인프라). Một tối ưu hóa (optimization / 최적화)/kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) phân bố chi phí (cost / 비용) qua năng lượng (energy / 에너지), devices, people và institutions—không chỉ CPU milliseconds.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [hardware performance/power](../02_computer_architecture/07_performance_power_and_hardware_measurement.md), [performance/capacity](../08_software_systems/02_performance_capacity_and_scalability.md), [accessibility](../11_hci_graphics/01_interface_design_accessibility_and_usability.md) và [reliability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 computing ethics privacy and professional responsibility](./00_computing_ethics_privacy_and_professional_responsibility.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,8 +1,11 @@
-# Knowledge Connection — Distance, Similarity và Projection: chọn geometry cho problem
+# Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)
 
-“Gần nhau” không phải một fact tuyệt đối. Trong mathematics, statistics và machine learning, ta phải chọn **geometry**: metric nào đo difference, norm nào đo size, inner product nào đo alignment, projection nào giữ information relevant.
+> **Mạch đọc:** Đọc **liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Norm đo kích thước (size / 크기) của một véc-tơ (vector / 벡터)** sang **2. Distance từ norm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental flow:
+
+“Gần nhau” không phải một fact tuyệt đối. Trong mathematics, statistics và machine học tập (learning / 학습), ta phải chọn **hình học (geometry / 기하학)**: chỉ số (metric / 지표) nào đo difference, norm nào đo kích thước (size / 크기), inner sản phẩm (product / 제품) nào đo alignment, projection nào giữ thông tin (information / 정보) relevant.
+
+Mental luồng (flow / 흐름):
 
 ```text
 representation
@@ -13,9 +16,9 @@ representation
 → downstream behavior
 ```
 
-Metric choice không phải chi tiết implementation; nó là một phần của model.
+Chỉ số (metric / 지표) choice không phải chi tiết hiện thực (implementation / 구현); nó là một phần của mô hình (model / 모델).
 
-## 1. Norm đo size của một vector
+## 1. Norm đo kích thước (size / 크기) của một véc-tơ (vector / 벡터)
 
 Euclidean norm:
 
@@ -35,13 +38,13 @@ Max norm:
 \|x\|_\infty=\max_i|x_i|.
 ```
 
-Các norms khác nhau định nghĩa unit balls khác nhau, nên optimization geometry cũng khác.
+Các norms khác nhau định nghĩa đơn vị (unit / 단위) balls khác nhau, nên tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학) cũng khác.
 
-`L1` thường gắn với sparse structure; `L2` tạo smooth rotationally symmetric geometry; `L∞` kiểm soát worst coordinate deviation.
+`L1` thường gắn với sparse cấu trúc (structure / 구조); `L2` tạo smooth rotationally symmetric hình học (geometry / 기하학); `L∞` kiểm soát worst coordinate deviation.
 
 ## 2. Distance từ norm
 
-Một common construction:
+Một dùng chung (common / 공통) construction:
 
 ```math
 d(x,y)=\|x-y\|.
@@ -59,11 +62,11 @@ Manhattan distance:
 d_1(x,y)=\sum_i|x_i-y_i|.
 ```
 
-Trong grid movement, `L1` có thể natural hơn `L2`. Trong physical Euclidean space, `L2` thường phù hợp hơn.
+Trong grid movement, `L1` có thể natural hơn `L2`. Trong vật lý (physical / 물리적) Euclidean không gian (space / 공간), `L2` thường phù hợp hơn.
 
-## 3. Metric cần properties gì?
+## 3. chỉ số (metric / 지표) cần properties gì?
 
-Một metric `d` thường thỏa:
+Một chỉ số (metric / 지표) `d` thường thỏa:
 
 ```text
 d(x,y) ≥ 0
@@ -72,11 +75,11 @@ d(x,y) ≥ 0
  d(x,z) ≤ d(x,y)+d(y,z)
 ```
 
-Triangle inequality không chỉ là formalism; nó encode idea rằng indirect route không thể ngắn hơn arbitrary amount so với direct relation trong metric geometry.
+Triangle inequality không chỉ là formalism; nó encode idea rằng indirect tuyến (route / 경로) không thể ngắn hơn arbitrary amount so với direct quan hệ (relation / 관계) trong chỉ số (metric / 지표) hình học (geometry / 기하학).
 
-Không phải mọi similarity score là metric.
+Không phải mọi similarity score là chỉ số (metric / 지표).
 
-## 4. Scale quyết định geometry quan sát được
+## 4. quy mô (scale / 규모) quyết định hình học (geometry / 기하학) quan sát được
 
 Giả sử features:
 
@@ -95,7 +98,7 @@ z_j=\frac{x_j-\mu_j}{\sigma_j}
 
 rescale axes.
 
-Nhưng standardization cũng encode assumption:
+Nhưng standardization cũng encode giả định (assumption / 가정):
 
 ```text
 1 standard deviation ở feature A
@@ -103,17 +106,17 @@ Nhưng standardization cũng encode assumption:
 1 standard deviation ở feature B
 ```
 
-Preprocessing không neutral; nó thay geometry.
+Preprocessing không neutral; nó thay hình học (geometry / 기하학).
 
-## 5. Inner product đo alignment
+## 5. Inner sản phẩm (product / 제품) đo alignment
 
-Trong Euclidean space:
+Trong Euclidean không gian (space / 공간):
 
 ```math
 \langle x,y\rangle=x^Ty.
 ```
 
-Norm sinh từ inner product:
+Norm sinh từ inner sản phẩm (product / 제품):
 
 ```math
 \|x\|=\sqrt{\langle x,x\rangle}.
@@ -125,7 +128,7 @@ Angle:
 \cos\theta=\frac{\langle x,y\rangle}{\|x\|\|y\|}.
 ```
 
-Inner product không chỉ là multiplication trick. Nó tạo notion angle, orthogonality và projection.
+Inner sản phẩm (product / 제품) không chỉ là multiplication trick. Nó tạo notion angle, orthogonality và projection.
 
 ## 6. Cosine similarity bỏ magnitude
 
@@ -136,13 +139,13 @@ Inner product không chỉ là multiplication trick. Nó tạo notion angle, ort
 
 Nếu embeddings cùng direction nhưng norms khác, cosine có thể vẫn gần 1.
 
-Điều này hữu ích khi semantic direction quan trọng hơn scale, nhưng không universal.
+Điều này hữu ích khi ngữ nghĩa (semantic / 의미적) direction quan trọng hơn quy mô (scale / 규모), nhưng không universal.
 
-Nếu vector norm chứa meaningful confidence/intensity, normalize có thể bỏ information quan trọng.
+Nếu véc-tơ (vector / 벡터) norm chứa meaningful confidence/intensity, normalize có thể bỏ thông tin (information / 정보) quan trọng.
 
-## 7. Projection là nearest-point problem
+## 7. Projection là nearest-point bài toán (problem / 문제)
 
-Projection của `v` lên unit direction `u`:
+Projection của `v` lên đơn vị (unit / 단위) direction `u`:
 
 ```math
 \operatorname{proj}_u(v)=(u^Tv)u.
@@ -166,7 +169,7 @@ Projection formula không arbitrary; nó xuất hiện vì ta minimize squared E
 
 ## 8. Least squares là projection
 
-System overdetermined:
+Hệ thống (system / 시스템) overdetermined:
 
 ```math
 Ax\approx b
@@ -178,7 +181,7 @@ least squares chọn:
 \hat x=\arg\min_x\|Ax-b\|_2^2.
 ```
 
-Predicted vector `A\hat x` là projection của `b` lên column space `C(A)`.
+Predicted véc-tơ (vector / 벡터) `A\hat x` là projection của `b` lên column không gian (space / 공간) `C(A)`.
 
 Residual orthogonality:
 
@@ -192,9 +195,9 @@ nên normal equations:
 A^TA\hat x=A^Tb.
 ```
 
-Regression vì vậy là geometry trước khi là statistics.
+Regression vì vậy là hình học (geometry / 기하학) trước khi là statistics.
 
-## 9. PCA là projection nhưng criterion khác task relevance
+## 9. PCA là projection nhưng criterion khác tác vụ (task / 작업) relevance
 
 PCA chọn directions maximize variance.
 
@@ -207,13 +210,13 @@ high variance
 ≠ automatically high predictive importance
 ```
 
-Một low-variance direction vẫn có thể chứa class signal.
+Một low-variance direction vẫn có thể chứa lớp (class / 클래스) tín hiệu (signal / 신호).
 
 Dimensionality reduction luôn gắn với criterion cụ thể.
 
-## 10. Mahalanobis distance: covariance tạo geometry
+## 10. Mahalanobis distance: covariance tạo hình học (geometry / 기하학)
 
-Nếu data covariance là `Σ`, Mahalanobis distance:
+Nếu dữ liệu (data / 데이터) covariance là `Σ`, Mahalanobis distance:
 
 ```math
 d_M(x,\mu)
@@ -228,7 +231,7 @@ small-variance direction → same Euclidean deviation đáng kể hơn
 correlated directions → không double-count naive
 ```
 
-Nếu whiten data:
+Nếu whiten dữ liệu (data / 데이터):
 
 ```math
 z=\Sigma^{-1/2}(x-\mu),
@@ -251,11 +254,11 @@ use pseudoinverse
 work in lower-dimensional support
 ```
 
-Metric formula luôn mang assumptions về rank và conditioning.
+Chỉ số (metric / 지표) formula luôn mang các giả định (assumptions / 가정들) về rank và conditioning.
 
 ## 12. Kernel viewpoint: similarity có thể implicit
 
-Kernel method dùng function:
+Kernel phương thức (method / 메서드) dùng hàm (function / 함수):
 
 ```math
 k(x,y)=\langle\phi(x),\phi(y)\rangle
@@ -263,13 +266,13 @@ k(x,y)=\langle\phi(x),\phi(y)\rangle
 
 mà không nhất thiết explicitly construct high-dimensional `φ(x)`.
 
-Kernel trick nói similarity có thể encode inner product trong feature space khác.
+Kernel trick nói similarity có thể encode inner sản phẩm (product / 제품) trong tính năng (feature / 기능) không gian (space / 공간) khác.
 
-Điều này nối geometry với nonlinear models.
+Điều này nối hình học (geometry / 기하학) với nonlinear các mô hình (models / 모델들).
 
 ## 13. Distance concentration ở high dimensions
 
-Trong high-dimensional spaces, distances có thể trở nên less discriminative: nearest và farthest distances tương đối gần nhau dưới certain data distributions.
+Trong high-dimensional spaces, distances có thể trở nên less discriminative: nearest và farthest distances tương đối gần nhau dưới certain dữ liệu (data / 데이터) distributions.
 
 Đây là một aspect của **curse of dimensionality**.
 
@@ -281,9 +284,9 @@ sampling sparse hơn
 local neighborhoods kém intuitive hơn
 ```
 
-Metric choice và representation learning càng quan trọng.
+Chỉ số (metric / 지표) choice và biểu diễn (representation / 표현) học tập (learning / 학습) càng quan trọng.
 
-## 14. Clustering phụ thuộc geometry
+## 14. Clustering phụ thuộc hình học (geometry / 기하학)
 
 K-means minimizes:
 
@@ -291,15 +294,15 @@ K-means minimizes:
 \sum_i\|x_i-\mu_{c(i)}\|_2^2.
 ```
 
-Nó ưu tiên roughly spherical clusters theo Euclidean geometry.
+Nó ưu tiên roughly spherical clusters theo Euclidean hình học (geometry / 기하학).
 
-Nếu clusters curved, categorical hoặc strongly different density, K-means geometry có thể sai.
+Nếu clusters curved, categorical hoặc strongly different density, K-means hình học (geometry / 기하학) có thể sai.
 
-“Cluster thật” không độc lập với metric/model.
+“Cluster thật” không độc lập với chỉ số (metric / 지표)/mô hình (model / 모델).
 
-## 15. Similarity search trong embeddings
+## 15. Similarity tìm kiếm (search / 검색) trong embeddings
 
-Vector database thường dùng:
+Véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스) thường dùng:
 
 ```text
 cosine similarity
@@ -319,37 +322,37 @@ then:
 \|x-y\|_2^2=2-2x^Ty.
 ```
 
-Vì vậy cosine ranking và Euclidean ranking có thể equivalent trên unit sphere.
+Vì vậy cosine ranking và Euclidean ranking có thể equivalent trên đơn vị (unit / 단위) sphere.
 
-Đây là useful implementation connection.
+Đây là useful hiện thực (implementation / 구현) liên kết (connection / 연결).
 
-## 16. Camera projection và loss of information
+## 16. Camera projection và mất mát (loss / 손실) of thông tin (information / 정보)
 
-3D point projected lên 2D image mất depth information.
+3D điểm (point / 지점) projected lên 2D ảnh (image / 이미지) mất độ sâu (depth / 깊이) thông tin (information / 정보).
 
-Projection ở đây là many-to-one mapping.
+Projection ở đây là many-to-one ánh xạ (mapping / 매핑).
 
 Nó minh họa broader principle:
 
-> Projection giữ structure theo chosen representation nhưng discard orthogonal/unobserved information.
+> Projection giữ cấu trúc (structure / 구조) theo chosen biểu diễn (representation / 표현) nhưng discard orthogonal/unobserved thông tin (information / 정보).
 
-Inverse reconstruction cần additional assumptions, multiple views hoặc priors.
+Inverse reconstruction cần additional các giả định (assumptions / 가정들), multiple views hoặc priors.
 
 ## 17. Distance trong graphs khác Euclidean distance
 
-Graph shortest-path distance:
+Đồ thị (graph / 그래프) shortest-path distance:
 
 ```math
 d(u,v)=\text{length shortest path}
 ```
 
-đo connectivity cost, không geometric straight-line displacement.
+đo connectivity chi phí (cost / 비용), không geometric straight-line displacement.
 
-Social network “2 hops apart” và physical coordinates dùng different geometries.
+Xã hội (social / 사회적) mạng (network / 네트워크) “2 hops apart” và vật lý (physical / 물리적) coordinates dùng different geometries.
 
-Graph embeddings cố map structural distance/similarity vào vector space, luôn có distortion trade-off.
+Đồ thị (graph / 그래프) embeddings cố map structural distance/similarity vào véc-tơ (vector / 벡터) không gian (space / 공간), luôn có distortion sự đánh đổi (trade-off / 트레이드오프).
 
-## 18. Finance: covariance geometry của portfolios
+## 18. Finance: covariance hình học (geometry / 기하학) của portfolios
 
 Portfolio variance:
 
@@ -359,13 +362,13 @@ Portfolio variance:
 
 Contours constant variance là ellipsoids.
 
-Portfolio optimization không dùng Euclidean length của weights; covariance matrix định nghĩa risk geometry.
+Portfolio tối ưu hóa (optimization / 최적화) không dùng Euclidean length của weights; covariance ma trận (matrix / 행렬) định nghĩa rủi ro (risk / 위험) hình học (geometry / 기하학).
 
-Một direction trong weight space có thể “dài” về risk dù coefficients numerically nhỏ.
+Một direction trong weight không gian (space / 공간) có thể “dài” về rủi ro (risk / 위험) dù coefficients numerically nhỏ.
 
-## 19. Metric choice là modeling assumption
+## 19. chỉ số (metric / 지표) choice là modeling giả định (assumption / 가정)
 
-Nếu user vectors gần nhau, statement chính xác là:
+Nếu người dùng (user / 사용자) vectors gần nhau, statement chính xác là:
 
 ```text
 theo representation + metric hiện tại,
@@ -378,17 +381,17 @@ Không nên nâng nó thành:
 hai người thực sự giống nhau
 ```
 
-Geometry inherited from data/model/objective, không phải truth universal.
+Hình học (geometry / 기하학) inherited from dữ liệu (data / 데이터)/mô hình (model / 모델)/mục tiêu (objective / 목표), không phải truth universal.
 
-## Common failure modes
+## Dùng chung (common / 공통) thất bại (failure / 실패) modes
 
 ### Raw features khác units
 
-Distance bị scale dominate.
+Distance bị quy mô (scale / 규모) dominate.
 
 ### Normalize khi magnitude có meaning
 
-Có thể mất useful signal.
+Có thể mất useful tín hiệu (signal / 신호).
 
 ### Correlation ignored
 
@@ -396,13 +399,13 @@ Euclidean distance double-count redundant axes.
 
 ### High-dimensional intuition borrowed from 2D
 
-Nearest-neighbor geometry thay đổi mạnh.
+Nearest-neighbor hình học (geometry / 기하학) thay đổi mạnh.
 
 ### Projection interpreted as lossless
 
 Projection discard components ngoài subspace.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 ```text
 Pythagoras → L2 norm
@@ -417,6 +420,8 @@ AI search → embedding similarity
 Finance → quadratic risk geometry
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Chọn representation và metric là chọn geometry của problem. Distance nói “khác nhau bao nhiêu” theo geometry đó; similarity nói “align bao nhiêu”; projection giữ component phù hợp với chosen subspace/loss. Không có metric nào trung lập cho mọi domain.
+> Chọn biểu diễn (representation / 표현) và chỉ số (metric / 지표) là chọn hình học (geometry / 기하학) của bài toán (problem / 문제). Distance nói “khác nhau bao nhiêu” theo hình học (geometry / 기하학) đó; similarity nói “align bao nhiêu”; projection giữ thành phần (component / 컴포넌트) phù hợp với chosen subspace/mất mát (loss / 손실). Không có chỉ số (metric / 지표) nào trung lập cho mọi lĩnh vực (domain / 도메인).
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

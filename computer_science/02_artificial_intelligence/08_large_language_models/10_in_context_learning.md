@@ -1,6 +1,9 @@
-# In-Context Learning
+# In-Context học tập (learning / 학습)
 
-**In-Context Learning (ICL / 문맥 내 학습 / học trong ngữ cảnh)** là hiện tượng model thay đổi behavior dựa trên examples hoặc instructions nằm trong context **mà không cần update weights**.
+> **Mạch đọc:** Đặt **In-Context học tập (learning / 학습)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **“học tập (learning / 학습)” nhưng không cập nhật (update / 업데이트) parameters** sang **Zero-shot, one-shot, few-shot**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+**In-Context học tập (learning / 학습)** là hiện tượng mô hình (model / 모델) thay đổi hành vi (behavior / 동작) dựa trên examples hoặc instructions nằm trong ngữ cảnh (context / 맥락) **mà không cần cập nhật (update / 업데이트) weights**.
 
 Ví dụ:
 
@@ -15,11 +18,11 @@ Input: 7 + 2
 Output:
 ```
 
-Model có thể infer pattern output bằng chữ và trả `nine` dù không có gradient step nào xảy ra.
+Mô hình (model / 모델) có thể infer mẫu (pattern / 패턴) đầu ra (output / 출력) bằng chữ và trả `nine` dù không có độ dốc (gradient / 기울기) step nào xảy ra.
 
-## “Learning” nhưng không update parameters
+## “học tập (learning / 학습)” nhưng không cập nhật (update / 업데이트) parameters
 
-Tên gọi dễ gây nhầm. Trong ICL, model weights giữ nguyên trong inference session. Điều thay đổi là hidden states và attention patterns được condition bởi context.
+Tên gọi dễ gây nhầm. Trong ICL, mô hình (model / 모델) weights giữ nguyên trong suy luận (inference / 추론) session. Điều thay đổi là hidden states và attention patterns được điều kiện (condition / 조건) bởi ngữ cảnh (context / 맥락).
 
 Vì vậy cần phân biệt:
 
@@ -28,7 +31,7 @@ Training-time learning → update parameters
 In-context learning     → temporary behavior conditioned on prompt/context
 ```
 
-Context hết thì adaptation đó không được lưu vĩnh viễn vào weights.
+Ngữ cảnh (context / 맥락) hết thì adaptation đó không được lưu vĩnh viễn vào weights.
 
 ## Zero-shot, one-shot, few-shot
 
@@ -36,40 +39,40 @@ Context hết thì adaptation đó không được lưu vĩnh viễn vào weight
 
 **One-shot** cung cấp một demonstration.
 
-**Few-shot** cung cấp vài demonstrations để model infer task/format.
+**Few-shot** cung cấp vài demonstrations để mô hình (model / 모델) infer tác vụ (task / 작업)/format.
 
-Few-shot hữu ích khi task khó mô tả bằng rule nhưng dễ minh họa bằng examples.
+Few-shot hữu ích khi tác vụ (task / 작업) khó mô tả bằng quy tắc (rule / 규칙) nhưng dễ minh họa bằng examples.
 
 ## Demonstrations làm gì?
 
-Demonstrations có thể truyền nhiều loại information cùng lúc:
+Demonstrations có thể truyền nhiều loại thông tin (information / 정보) cùng lúc:
 
-- task mapping;
-- output format;
-- labels semantics;
+- tác vụ (task / 작업) ánh xạ (mapping / 매핑);
+- đầu ra (output / 출력) format;
+- labels ngữ nghĩa (semantics / 의미론);
 - tone/style;
 - edge-case handling;
-- reasoning pattern.
+- lập luận (reasoning / 추론) mẫu (pattern / 패턴).
 
-Vì vậy example quality quan trọng hơn chỉ số lượng.
+Vì vậy example chất lượng (quality / 품질) quan trọng hơn chỉ số lượng.
 
-## Order sensitivity
+## Thứ tự (order / 순서) sensitivity
 
-ICL có thể sensitive với thứ tự examples. Recent examples đôi khi ảnh hưởng mạnh hơn, label imbalance có thể bias output, và một bad demonstration có thể kéo model sai hướng.
+ICL có thể sensitive với thứ tự examples. Recent examples đôi khi ảnh hưởng mạnh hơn, label imbalance có thể độ lệch (bias / 편향) đầu ra (output / 출력), và một bad demonstration có thể kéo mô hình (model / 모델) sai hướng.
 
-Đây là lý do prompt eval cần test multiple example sets, không chỉ một handcrafted prompt.
+Đây là lý do prompt eval cần kiểm thử (test / 테스트) multiple example sets, không chỉ một handcrafted prompt.
 
-## Label semantics
+## Label ngữ nghĩa (semantics / 의미론)
 
-Nếu labels là arbitrary strings như `A`, `B`, `C`, few-shot examples giúp model map semantic class sang label token.
+Nếu labels là arbitrary strings như `A`, `B`, `C`, few-shot examples giúp mô hình (model / 모델) map ngữ nghĩa (semantic / 의미적) lớp (class / 클래스) sang label đơn vị từ (token / 토큰).
 
-Nếu example labels sai, model có thể follow demonstration thay vì internal prior.
+Nếu example labels sai, mô hình (model / 모델) có thể follow demonstration thay vì nội bộ (internal / 내부) prior.
 
-ICL vì vậy vừa là capability vừa là attack surface: malicious context có thể steer behavior.
+ICL vì vậy vừa là năng lực (capability / 역량) vừa là attack surface: malicious ngữ cảnh (context / 맥락) có thể steer hành vi (behavior / 동작).
 
-## Context as temporary program
+## Ngữ cảnh (context / 맥락) as temporary program
 
-Một mental model hữu ích là xem prompt như một **temporary program**:
+Một mô hình tư duy (mental model / 사고 모델) hữu ích là xem prompt như một **temporary program**:
 
 ```text
 instructions
@@ -79,23 +82,23 @@ instructions
 → temporary computation context
 ```
 
-Model weights là interpreter learned; context định nghĩa local task state.
+Mô hình (model / 모델) weights là trình thông dịch (interpreter / 인터프리터) learned; ngữ cảnh (context / 맥락) định nghĩa cục bộ (local / 로컬) tác vụ (task / 작업) trạng thái (state / 상태).
 
-Analogy này không hoàn hảo vì LLM execution probabilistic và không có formal semantics như programming language, nhưng hữu ích cho system design.
+Analogy này không hoàn hảo vì LLM thực thi (execution / 실행) probabilistic và không có formal ngữ nghĩa (semantics / 의미론) như programming ngôn ngữ (language / 언어), nhưng hữu ích cho hệ thống (system / 시스템) thiết kế (design / 설계).
 
 ## Why ICL emerges
 
-Trong pretraining, model quan sát rất nhiều text patterns nơi previous text defines local conventions: tutorials, examples, dialogues, code, question-answer sequences. Transformer học dùng context để predict next tokens under those local patterns.
+Trong pretraining, mô hình (model / 모델) quan sát rất nhiều văn bản (text / 텍스트) patterns nơi previous văn bản (text / 텍스트) defines cục bộ (local / 로컬) conventions: tutorials, examples, dialogues, mã (code / 코드), question-answer sequences. Transformer học dùng ngữ cảnh (context / 맥락) để predict next tokens under those cục bộ (local / 로컬) patterns.
 
-Scale và task diversity làm capability này mạnh hơn, nhưng exact mechanism vẫn là active research topic. Không cần giả định model chạy hidden gradient descent để sử dụng ICL hiệu quả trong engineering.
+Quy mô (scale / 규모) và tác vụ (task / 작업) diversity làm năng lực (capability / 역량) này mạnh hơn, nhưng chính xác (exact / 정확한) cơ chế (mechanism / 메커니즘) vẫn là active research topic. Không cần giả định mô hình (model / 모델) chạy hidden độ dốc (gradient / 기울기) descent để sử dụng ICL hiệu quả trong kỹ thuật (engineering / 엔지니어링).
 
 ## ICL vs Fine-Tuning
 
-ICL thích hợp khi task thay đổi nhanh, examples ít, cần no-training deployment hoặc user-specific customization theo session.
+ICL thích hợp khi tác vụ (task / 작업) thay đổi nhanh, examples ít, cần no-training triển khai (deployment / 배포) hoặc user-specific customization theo session.
 
-Fine-tuning thích hợp khi behavior phải consistent trên rất nhiều requests và pattern stable.
+Fine-tuning thích hợp khi hành vi (behavior / 동작) phải consistent trên rất nhiều requests và mẫu (pattern / 패턴) stable.
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 ICL          → flexible, no weight update, consumes context tokens
@@ -104,9 +107,9 @@ Fine-tuning  → persistent behavior, training cost, less prompt overhead
 
 ## ICL vs RAG
 
-RAG đưa external **knowledge/evidence** vào context. ICL đưa examples/instructions để định nghĩa **task behavior**.
+RAG đưa bên ngoài (external / 외부) **kiến thức (knowledge / 지식)/bằng chứng (evidence / 증거)** vào ngữ cảnh (context / 맥락). ICL đưa examples/instructions để định nghĩa **tác vụ (task / 작업) hành vi (behavior / 동작)**.
 
-Một RAG application có thể dùng cả hai:
+Một RAG ứng dụng (application / 애플리케이션) có thể dùng cả hai:
 
 ```text
 few-shot examples
@@ -115,52 +118,54 @@ few-shot examples
 → answer
 ```
 
-## Context length is not free
+## Ngữ cảnh (context / 맥락) length is not free
 
-Few-shot examples consume context window và inference cost. Too many examples có thể dilute relevant information hoặc push important content ra khỏi window.
+Few-shot examples consume ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) và suy luận (inference / 추론) chi phí (cost / 비용). Too many examples có thể dilute relevant thông tin (information / 정보) hoặc push important content ra khỏi cửa sổ (window / 윈도우).
 
-Selection therefore becomes retrieval problem: chọn demonstrations relevant nhất thay vì nhét toàn bộ examples.
+Selection therefore becomes retrieval bài toán (problem / 문제): chọn demonstrations relevant nhất thay vì nhét toàn bộ examples.
 
-## Dynamic few-shot selection
+## Động (dynamic / 동적) few-shot selection
 
-Có thể embed user query, retrieve similar labeled examples và insert chúng vào prompt. Đây là hybrid giữa retrieval và ICL.
+Có thể embed người dùng (user / 사용자) truy vấn (query / 쿼리), retrieve similar labeled examples và insert chúng vào prompt. Đây là hybrid giữa retrieval và ICL.
 
 Nhưng similarity không luôn đồng nghĩa examples tốt nhất. Sometimes diversity hoặc coverage quan trọng hơn nearest neighbor.
 
 ## Prompt contamination
 
-Retrieved/user-provided text có thể chứa instructions. Nếu application blindly mixes data và instructions, model có thể follow untrusted content.
+Retrieved/user-provided văn bản (text / 텍스트) có thể chứa instructions. Nếu ứng dụng (application / 애플리케이션) blindly mixes dữ liệu (data / 데이터) và instructions, mô hình (model / 모델) có thể follow untrusted content.
 
-ICL capability chính là lý do **prompt injection** nguy hiểm: model naturally learns behavior from context.
+ICL năng lực (capability / 역량) chính là lý do **prompt injection** nguy hiểm: mô hình (model / 모델) naturally learns hành vi (behavior / 동작) from ngữ cảnh (context / 맥락).
 
-## ICL và reasoning
+## ICL và lập luận (reasoning / 추론)
 
-Few-shot reasoning examples có thể improve performance bằng cách demonstrate decomposition pattern. Nhưng model cũng có thể copy superficial style mà không internalize correct logic.
+Few-shot lập luận (reasoning / 추론) examples có thể improve hiệu năng (performance / 성능) bằng cách demonstrate decomposition mẫu (pattern / 패턴). Nhưng mô hình (model / 모델) cũng có thể bản sao (copy / 복사) superficial style mà không internalize correct lô-gic (logic / 논리).
 
-Evaluation cần check answer correctness, not presence of reasoning-like prose.
+Evaluation cần check answer tính đúng đắn (correctness / 정확성), not presence of reasoning-like prose.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> In-context learning là **temporary adaptation through context**, không phải parameter update.
+> In-context học tập (learning / 학습) là **temporary adaptation through ngữ cảnh (context / 맥락)**, không phải parameter cập nhật (update / 업데이트).
 
-Model đọc prompt vừa như data vừa như task specification, vì vậy context design là một phần của programming AI system.
+Mô hình (model / 모델) đọc prompt vừa như dữ liệu (data / 데이터) vừa như tác vụ (task / 작업) specification, vì vậy ngữ cảnh (context / 맥락) thiết kế (design / 설계) là một phần của programming AI hệ thống (system / 시스템).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Few-shot examples train model ngay lúc inference”
+### “Few-shot examples train mô hình (model / 모델) ngay lúc suy luận (inference / 추론)”
 
-Không có standard weight update. Behavior change là context conditioning.
+Không có tiêu chuẩn (standard / 표준) weight cập nhật (update / 업데이트). hành vi (behavior / 동작) thay đổi (change / 변경) là ngữ cảnh (context / 맥락) conditioning.
 
 ### “Càng nhiều examples càng tốt”
 
-Không. Context cost, redundancy và conflicting examples có thể làm performance giảm.
+Không. ngữ cảnh (context / 맥락) chi phí (cost / 비용), redundancy và conflicting examples có thể làm hiệu năng (performance / 성능) giảm.
 
-### “Long context thay thế fine-tuning”
+### “Long ngữ cảnh (context / 맥락) thay thế fine-tuning”
 
-Không. Persistent behavior và session-specific conditioning giải quyết different problems.
+Không. Persistent hành vi (behavior / 동작) và session-specific conditioning giải quyết different problems.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-ICL nối [Pretraining](./04_pretraining.md), [Attention/Transformer](../06_deep_learning_architectures/04_attention.md), RAG và Agent context management.
+ICL nối [Pretraining](./04_pretraining.md), [Attention/Transformer](../06_deep_learning_architectures/04_attention.md), RAG và tác nhân (agent / 에이전트) ngữ cảnh (context / 맥락) management.
 
 Xem tiếp: [Prompting and Context Engineering](./11_prompting_and_context_engineering.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,10 +1,13 @@
-# Quality Audit — Round 11: computation, optimization và bridge chapters
+# Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters
 
-Round 11 tiếp tục chiến lược **quality over chapter count**. Mathematics Knowledge Library vẫn giữ nguyên **87 topic**; không thêm chapter mới chỉ để tăng coverage.
+> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 11: computation, tối ưu hóa (optimization / 최적화) và cầu nối (bridge / 브리지) chapters** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiêu chí kiểm tra (audit / 감사)** sang **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu của round này là audit nhóm advanced/core bridge còn lại sau Round 10 và chỉ rewrite nơi có depth gap thực sự.
 
-## Tiêu chí audit
+Round 11 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리) vẫn giữ nguyên **87 topic**; không thêm chapter mới chỉ để tăng coverage.
+
+Mục tiêu của round này là kiểm tra (audit / 감사) nhóm advanced/cốt lõi (core / 핵심) cầu nối (bridge / 브리지) còn lại sau Round 10 và chỉ rewrite nơi có độ sâu (depth / 깊이) gap thực sự.
+
+## Tiêu chí kiểm tra (audit / 감사)
 
 Một chapter chỉ được rewrite nếu có một hoặc nhiều dấu hiệu:
 
@@ -16,11 +19,14 @@ connections chỉ được nhắc tên thay vì derive
 chapter bridge chưa thực sự nối được các domain
 ```
 
-Ngược lại, chapter đủ coherent, có assumptions, mental model và downstream connections thì giữ nguyên dù file ngắn hơn chapter khác.
+Ngược lại, chapter đủ coherent, có các giả định (assumptions / 가정들), mô hình tư duy (mental model / 사고 모델) và downstream connections thì giữ nguyên dù tệp (file / 파일) ngắn hơn chapter khác.
 
-## Batch 1 — Automata/Computability + Linear Programming
 
-Commit:
+> **Chuyển mạch:** Từ **Tiêu chí kiểm tra (audit / 감사)**, ta sang **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming
+
+Lần ghi nhận (commit / 커밋):
 
 ```text
 aecdfa8bbdbb339d84694b11f2dc744021e0c319
@@ -28,9 +34,9 @@ aecdfa8bbdbb339d84694b11f2dc744021e0c319
 
 ### `07_discrete_cs/07_automata_formal_languages_and_computability.md`
 
-Bản cũ đúng về DFA, CFG, Turing machine, halting problem và P/NP nhưng còn giống overview.
+Bản cũ đúng về DFA, CFG, Turing machine, halting bài toán (problem / 문제) và P/NP nhưng còn giống overview.
 
-Bản mới tổ chức thành dependency chain:
+Bản mới tổ chức thành phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬):
 
 ```text
 alphabet / strings
@@ -49,26 +55,26 @@ alphabet / strings
 
 Các phần tăng sâu:
 
-- DFA state như compressed relevant history;
-- NFA vs DFA: same expressive power nhưng state blow-up;
-- regular expression theory vs production regex engines;
-- pumping/Myhill–Nerode intuition qua information capacity;
-- CFG/PDA và recursive syntax;
-- Chomsky hierarchy dưới viewpoint memory structure;
+- DFA trạng thái (state / 상태) như compressed relevant lịch sử (history / 이력);
+- NFA vs DFA: same expressive power nhưng trạng thái (state / 상태) blow-up;
+- regular expression lý thuyết (theory / 이론) vs môi trường vận hành (production / 운영 환경) regex engines;
+- pumping/Myhill–Nerode intuition qua thông tin (information / 정보) sức chứa (capacity / 용량);
+- CFG/PDA và recursive cú pháp (syntax / 문법);
+- Chomsky hierarchy dưới viewpoint bộ nhớ (memory / 메모리) cấu trúc (structure / 구조);
 - universal Turing machine và program-as-data;
 - Church–Turing thesis vs theorem;
 - recognizable vs decidable;
 - halting proof qua self-reference/diagonalization;
 - reduction direction;
 - NP-hard/NP-complete distinction;
-- state explosion trong model checking;
-- compiler lexing/parsing/semantic-analysis separation.
+- trạng thái (state / 상태) explosion trong mô hình (model / 모델) checking;
+- trình biên dịch (compiler / 컴파일러) lexing/parsing/semantic-analysis separation.
 
 ### `08_optimization_numerical/05_linear_programming_duality_and_simplex.md`
 
-Bản cũ đã có primal/dual/simplex và integer programming nhưng depth thấp hơn KKT/Numerical chapters mới.
+Bản cũ đã có primal/dual/simplex và integer programming nhưng độ sâu (depth / 깊이) thấp hơn KKT/Numerical chapters mới.
 
-Bản mới có learning flow:
+Bản mới có mạch học (learning flow / 학습 흐름):
 
 ```text
 modeling
@@ -88,7 +94,7 @@ Các phần tăng sâu:
 
 - feasible/infeasible/unbounded separation;
 - algebraic basis ↔ geometric vertex;
-- simplex pivot như basis change;
+- simplex pivot như basis thay đổi (change / 변경);
 - degeneracy/cycling;
 - weak duality derivation;
 - strong duality như optimality certificate;
@@ -98,21 +104,24 @@ Các phần tăng sâu:
 - total unimodularity;
 - max-flow/min-cut as structured duality;
 - numerical scaling/tolerance caveats;
-- deterministic LP vs uncertainty/robust optimization.
+- deterministic LP vs bất định (uncertainty / 불확실성)/robust tối ưu hóa (optimization / 최적화).
 
-## Batch 2 — `09_connections` bridge chapters
 
-Commit:
+> **Chuyển mạch:** Từ **Batch 1 — Automata/Computability + tuyến tính (linear / 선형) Programming**, ta sang **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 2 — `09_connections` cầu nối (bridge / 브리지) chapters
+
+Lần ghi nhận (commit / 커밋):
 
 ```text
 bb8f70afd1f53e251c00117f90da252b6a34ff52
 ```
 
-Sau Round 5–10, nhiều canonical topic chapters đã rất sâu nhưng một số `09_connections` chỉ còn 4–5 KB và giống summary. Round 11 nâng 5 bridge chapters để chúng thực sự giúp transfer mental model giữa domains.
+Sau Round 5–10, nhiều chuẩn gốc (canonical / 정본) topic chapters đã rất sâu nhưng một số `09_connections` chỉ còn 4–5 KB và giống summary. Round 11 nâng 5 cầu nối (bridge / 브리지) chapters để chúng thực sự giúp transfer mô hình tư duy (mental model / 사고 모델) giữa domains.
 
 ### `09_connections/00_rate_change_and_accumulation.md`
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 state
@@ -128,20 +137,20 @@ state
 
 Connections tăng sâu:
 
-- state vs rate vs accumulated total;
+- trạng thái (state / 상태) vs tỷ lệ (rate / 비율) vs accumulated total;
 - signed vs absolute accumulation;
 - discrete Fundamental-Theorem analogy;
 - additive vs multiplicative recurrence;
-- queue length vs arrival/service rates;
-- finance balance vs cash-flow rate;
+- hàng đợi (queue / 큐) length vs arrival/dịch vụ (service / 서비스) rates;
+- finance balance vs cash-flow tỷ lệ (rate / 비율);
 - marginal vs total quantities;
-- gradient descent as accumulated local updates;
+- độ dốc (gradient / 기울기) descent as accumulated cục bộ (local / 로컬) updates;
 - continuity/conservation equation;
 - dimensional sanity checks.
 
 ### `09_connections/01_distance_similarity_and_projection.md`
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 representation
@@ -157,22 +166,22 @@ representation
 Các phần tăng sâu:
 
 - L1/L2/L∞ geometries;
-- metric axioms và triangle inequality;
-- preprocessing thay đổi geometry;
-- cosine similarity và khi normalization làm mất signal;
-- projection as nearest-point problem;
-- least squares geometry;
-- PCA criterion vs task relevance;
+- chỉ số (metric / 지표) axioms và triangle inequality;
+- preprocessing thay đổi hình học (geometry / 기하학);
+- cosine similarity và khi normalization làm mất tín hiệu (signal / 신호);
+- projection as nearest-point bài toán (problem / 문제);
+- least squares hình học (geometry / 기하학);
+- PCA criterion vs tác vụ (task / 작업) relevance;
 - Mahalanobis/whitening;
 - singular covariance/pseudoinverse;
 - kernel viewpoint;
 - distance concentration/curse of dimensionality;
-- embedding similarity and vector search;
-- covariance geometry in finance.
+- embedding similarity and véc-tơ (vector / 벡터) tìm kiếm (search / 검색);
+- covariance hình học (geometry / 기하학) in finance.
 
 ### `09_connections/02_uncertainty_information_and_entropy.md`
 
-Learning flow:
+Mạch học (learning flow / 학습 흐름):
 
 ```text
 probability
@@ -188,20 +197,20 @@ probability
 Các phần tăng sâu:
 
 - entropy vs variance;
-- coding/Kraft connection;
+- coding/Kraft liên kết (connection / 연결);
 - data-processing inequality;
 - cross-entropy ↔ negative log-likelihood;
 - calibration vs entropy;
-- expected loss/decision;
+- expected mất mát (loss / 손실)/quyết định (decision / 결정);
 - proper scoring rules;
-- information gain;
-- entropy rate;
-- channel capacity;
+- thông tin (information / 정보) gain;
+- entropy tỷ lệ (rate / 비율);
+- channel sức chứa (capacity / 용량);
 - compression vs error-correcting redundancy.
 
 ### `09_connections/03_math_for_ai_data_and_software.md`
 
-Bản mới không còn chỉ liệt kê “môn toán dùng trong AI”. Nó tổ chức full system dependency:
+Bản mới không còn chỉ liệt kê “môn toán dùng trong AI”. Nó tổ chức full hệ thống (system / 시스템) phụ thuộc (dependency / 의존성):
 
 ```text
 representation
@@ -217,24 +226,24 @@ representation
 
 Các phần tăng sâu:
 
-- representation is a modeling choice;
-- computational graph + chain rule;
-- losses encode probabilistic/robustness assumptions;
-- empirical vs population risk;
+- biểu diễn (representation / 표현) is a modeling choice;
+- computational đồ thị (graph / 그래프) + chuỗi (chain / 사슬) quy tắc (rule / 규칙);
+- losses encode probabilistic/robustness các giả định (assumptions / 가정들);
+- empirical vs population rủi ro (risk / 위험);
 - conditioning/Hessian;
 - log-sum-exp stability;
-- floating point and mixed precision;
-- embedding geometry;
-- train/test inference and distribution shift;
+- floating điểm (point / 지점) and mixed precision;
+- embedding hình học (geometry / 기하학);
+- train/kiểm thử (test / 테스트) suy luận (inference / 추론) and phân phối (distribution / 분포) shift;
 - prediction vs causality;
-- graph/database/index/cardinality-estimation connections;
-- Big-O vs exact runtime;
-- observability metrics;
-- model correctness vs system correctness.
+- đồ thị (graph / 그래프)/cơ sở dữ liệu (database / 데이터베이스)/chỉ mục (index / 인덱스)/cardinality-estimation connections;
+- Big-O vs chính xác (exact / 정확한) thời gian chạy (runtime / 런타임);
+- khả năng quan sát (observability / 관측 가능성) metrics;
+- mô hình (model / 모델) tính đúng đắn (correctness / 정확성) vs hệ thống (system / 시스템) tính đúng đắn (correctness / 정확성).
 
 ### `09_connections/05_fourier_signals_and_frequency.md`
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 oscillation
@@ -250,24 +259,27 @@ oscillation
 
 Các phần tăng sâu:
 
-- Parseval/energy preservation;
+- Parseval/năng lượng (energy / 에너지) preservation;
 - differentiation as frequency multiplication;
-- LTI impulse/frequency response;
-- time-frequency localization trade-off;
+- LTI impulse/frequency phản hồi (response / 응답);
+- time-frequency localization sự đánh đổi (trade-off / 트레이드오프);
 - aliasing derivation intuition;
-- Nyquist assumptions;
-- DFT as matrix/basis change;
+- Nyquist các giả định (assumptions / 가정들);
+- DFT as ma trận (matrix / 행렬)/basis thay đổi (change / 변경);
 - spectral leakage/windowing;
-- frequency resolution vs sample rate;
-- filtering/causality trade-off;
+- frequency resolution vs mẫu (sample / 표본) tỷ lệ (rate / 비율);
+- filtering/causality sự đánh đổi (trade-off / 트레이드오프);
 - Gibbs phenomenon;
-- PDE mode decomposition;
+- PDE chế độ (mode / 모드) decomposition;
 - Fourier features and AI;
 - Fourier vs Laplace vs Z-transform mental map.
 
+
+> **Chuyển mạch:** Từ **Batch 2 — 09connections cầu nối (bridge / 브리지) chapters**, ta sang **Audited but intentionally not rewritten** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Audited but intentionally not rewritten
 
-Round 11 cũng audit các files sau nhưng giữ nguyên vì content hiện tại đã tương đối cân bằng với editorial standard.
+Round 11 cũng kiểm tra (audit / 감사) các files sau nhưng giữ nguyên vì content hiện tại đã tương đối cân bằng với editorial tiêu chuẩn (standard / 표준).
 
 ### `03_geometry_trigonometry/08_topology_continuity_connectivity.md`
 
@@ -284,11 +296,11 @@ boundary/interior/closure
 TDA / robotics connections
 ```
 
-File đã giải thích đúng distinction topology vs metric geometry và có assumptions/misconceptions đủ rõ.
+Tệp (file / 파일) đã giải thích đúng distinction topology vs chỉ số (metric / 지표) hình học (geometry / 기하학) và có các giả định (assumptions / 가정들)/misconceptions đủ rõ.
 
 ### `05_calculus/10_partial_differential_equations_and_fields_intro.md`
 
-Giữ nguyên vì đã có coherent chain:
+Giữ nguyên vì đã có coherent chuỗi (chain / 사슬):
 
 ```text
 field
@@ -299,31 +311,34 @@ field
 → numerical discretization/stability
 ```
 
-Nội dung đủ cho scope “intro”; viết sâu thêm sẽ bắt đầu thành course PDE riêng.
+Nội dung đủ cho phạm vi (scope / 범위) “intro”; viết sâu thêm sẽ bắt đầu thành course PDE riêng.
 
 ### `06_probability_statistics/10_likelihood_mle_map_and_model_selection.md`
 
-Giữ nguyên vì chapter đã derive Bernoulli MLE, giải thích log-likelihood/NLL, model-family assumptions và bridge sang ML/statistics. Đây không còn là bottleneck về depth.
+Giữ nguyên vì chapter đã derive Bernoulli MLE, giải thích log-likelihood/NLL, model-family các giả định (assumptions / 가정들) và cầu nối (bridge / 브리지) sang ML/statistics. Đây không còn là bottleneck về độ sâu (depth / 깊이).
 
 ### `06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md`
 
-Giữ nguyên vì chapter đã có process/sample-path, stationarity/autocorrelation, Markov property, transition structure và time-series bridge. Scope hiện phù hợp với dependency level của library.
+Giữ nguyên vì chapter đã có tiến trình (process / 프로세스)/sample-path, stationarity/autocorrelation, Markov thuộc tính (property / 속성), chuyển tiếp (transition / 전이) cấu trúc (structure / 구조) và time-series cầu nối (bridge / 브리지). phạm vi (scope / 범위) hiện phù hợp với phụ thuộc (dependency / 의존성) mức (level / 수준) của thư viện (library / 라이브러리).
 
 ### `07_discrete_cs/08_groups_rings_fields_and_algebraic_structures.md`
 
-Giữ nguyên vì đã có group/ring/field, symmetry, subgroup/generator, homomorphism/kernel/image, finite fields, zero divisors, quotient idea và connections với linear algebra/cryptography.
+Giữ nguyên vì đã có group/ring/trường dữ liệu (field / 필드), symmetry, subgroup/generator, homomorphism/kernel/ảnh (image / 이미지), finite fields, zero divisors, quotient idea và connections với tuyến tính (linear / 선형) algebra/cryptography.
 
 ### `09_connections/04_math_for_finance_work_and_daily_life.md`
 
-Giữ nguyên vì đã đủ sâu hơn nhóm connection cũ, gồm compounding, effective rates, discounting, NPV, annuity/loan derivation và quantitative business reasoning.
+Giữ nguyên vì đã đủ sâu hơn nhóm liên kết (connection / 연결) cũ, gồm compounding, effective rates, discounting, NPV, annuity/loan derivation và quantitative nghiệp vụ (business / 비즈니스) lập luận (reasoning / 추론).
 
 ### `09_connections/06_laplace_z_transform_and_dynamic_systems.md`
 
-Giữ nguyên vì chapter đã có transform definitions, derivative/recurrence simplification, transfer functions, poles/zeros, stability, convolution và continuous/discrete systems perspective.
+Giữ nguyên vì chapter đã có transform definitions, derivative/recurrence simplification, transfer functions, poles/zeros, stability, convolution và continuous/discrete các hệ thống (systems / 시스템들) perspective.
 
-## Depth balance sau Round 11
 
-Sau Round 11, các bridge chains sau đã cân bằng hơn đáng kể:
+> **Chuyển mạch:** Từ **Audited but intentionally not rewritten**, ta sang **độ sâu (depth / 깊이) balance sau Round 11** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Độ sâu (depth / 깊이) balance sau Round 11
+
+Sau Round 11, các cầu nối (bridge / 브리지) chains sau đã cân bằng hơn đáng kể:
 
 ```text
 formal language → machine memory → computability → complexity
@@ -335,9 +350,12 @@ AI model math → numerical/statistical production behavior
 trigonometry → Fourier → transforms / PDE / signals
 ```
 
+
+> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) balance sau Round 11**, ta sang **Priority hợp lý cho Round 12** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Priority hợp lý cho Round 12
 
-Không nên tiếp tục theo một fixed list chỉ dựa trên file size. Nên chuyển sang **library-wide consistency audit**:
+Không nên tiếp tục theo một fixed danh sách (list / 목록) chỉ dựa trên tệp (file / 파일) kích thước (size / 크기). Nên chuyển sang **library-wide consistency kiểm tra (audit / 감사)**:
 
 ```text
 1. cross-links giữa canonical chapters;
@@ -352,12 +370,17 @@ Không nên tiếp tục theo một fixed list chỉ dựa trên file size. Nên
 10. glossary coverage cho recurring terms.
 ```
 
-Nếu vẫn cần rewrite content, chỉ chọn chapter bị phát hiện qua consistency audit, thay vì tiếp tục “file nhỏ → viết dài”.
+Nếu vẫn cần rewrite content, chỉ chọn chapter bị phát hiện qua consistency kiểm tra (audit / 감사), thay vì tiếp tục “tệp (file / 파일) nhỏ → viết dài”.
+
+
+> **Chuyển mạch:** Từ **Priority hợp lý cho Round 12**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết luận
 
-Round 11 rewrite **7 canonical/connection files**, audit thêm 7 files và chủ động giữ nguyên chúng.
+Round 11 rewrite **7 chuẩn gốc (canonical / 정본)/liên kết (connection / 연결) files**, kiểm tra (audit / 감사) thêm 7 files và chủ động giữ nguyên chúng.
 
 Nguyên tắc được siết chặt hơn:
 
-> Độ hoàn thiện không được đo bằng số dòng. Một library mature cần chuyển từ mở rộng content sang consistency, dependency, notation, cross-link và editorial coherence.
+> Độ hoàn thiện không được đo bằng số dòng. Một thư viện (library / 라이브러리) mature cần chuyển từ mở rộng content sang consistency, phụ thuộc (dependency / 의존성), notation, cross-link và editorial coherence.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,7 +1,10 @@
 # String các thuật toán
+
+> **Mạch đọc:** Đọc **String các thuật toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đầu tiên phải định nghĩa “character”** sang **Cách đơn giản mẫu Matching**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Thuật toán chuỗi (String Algorithms / 문자열 알고리즘)**
 
-String là sequence, nhưng không phải sequence “bình thường”. Ngoài vị trí, string còn có **prefix, suffix, border, repetition, alphabet, substring, thứ tự từ điển và encoding**. Những structure này cho phép ta reuse thông tin từ các phép so sánh trước thay vì quay lại so từng ký tự từ đầu.
+String là chuỗi (sequence / 시퀀스), nhưng không phải chuỗi (sequence / 시퀀스) “bình thường”. Ngoài vị trí, string còn có **prefix, suffix, border, repetition, alphabet, substring, thứ tự từ điển và encoding**. Những cấu trúc (structure / 구조) này cho phép ta reuse thông tin từ các phép so sánh trước thay vì quay lại so từng ký tự từ đầu.
 
 Một mental mô hình tốt là:
 
@@ -9,7 +12,7 @@ Một mental mô hình tốt là:
 
 ## Đầu tiên phải định nghĩa “character”
 
-Trước cả KMP hay Trie, mã dùng trong hệ thống thực tế phải biết unit đang xử lý là gì:
+Trước cả KMP hay Trie, mã dùng trong hệ thống thực tế phải biết đơn vị (unit / 단위) đang xử lý là gì:
 
 ```text
 byte
@@ -25,9 +28,9 @@ Trong Java, `char` là UTF-16 đơn vị mã. Một điểm mã ngoài BMP dùng
 
 Trong JavaScript, lập chỉ mục string cũng chủ yếu theo UTF-16 các đơn vị mã.
 
-Emoji như `👨‍👩‍👧‍👦` có thể gồm nhiều các điểm mã nối bằng zero-width joiner. Vì vậy “reverse từng character” cho UI text không giống reverse các đơn vị mã.
+Emoji như `👨‍👩‍👧‍👦` có thể gồm nhiều các điểm mã nối bằng zero-width joiner. Vì vậy “reverse từng character” cho UI văn bản (text / 텍스트) không giống reverse các đơn vị mã.
 
-thuật toán phải xác định sự trừu tượng (abstraction) tầng trước khi nói complexity theo `n` characters.
+thuật toán phải xác định sự trừu tượng (abstraction) tầng trước khi nói độ phức tạp (complexity / 복잡도) theo `n` characters.
 
 ## Cách đơn giản mẫu Matching
 
@@ -44,9 +47,9 @@ trường hợp xấu nhất:
 O(nm)
 \]
 
-Ví dụ text nhiều `a` và mẫu `aaaa...ab`: mỗi start match gần hết mẫu rồi mới fail, lặp lại nhiều work.
+Ví dụ văn bản (text / 텍스트) nhiều `a` và mẫu `aaaa...ab`: mỗi start match gần hết mẫu rồi mới thất bại (fail / 실패), lặp lại nhiều công việc (work / 작업).
 
-Cách đơn giản matching không sai; với mẫu ngắn hoặc data nhỏ nó có thể đủ tốt. Vấn đề là nó **quên mọi prefix thông tin sau mismatch**.
+Cách đơn giản matching không sai; với mẫu ngắn hoặc dữ liệu (data / 데이터) nhỏ nó có thể đủ tốt. Vấn đề là nó **quên mọi prefix thông tin sau mismatch**.
 
 ## Border: khái niệm nối nhiều string các thuật toán
 
@@ -116,11 +119,11 @@ Có nested `while`, nên nhìn bề ngoài dễ sợ `O(n^2)`. Nhưng `j` chỉ 
 
 Tổng số lần tăng/giảm của matched-prefix length bị amortize tuyến tính. Ta không reset `j` về một giá trị lớn tùy ý rồi giảm lại vô hạn lần.
 
-Đây là một mẫu amortized reasoning tương tự stack monotonic hoặc đường đi compression ở mức nhẹ hơn.
+Đây là một mẫu amortized lập luận (reasoning / 추론) tương tự ngăn xếp (stack / 스택) monotonic hoặc đường đi compression ở mức nhẹ hơn.
 
 ## KMP Matching
 
-KMP preprocess mẫu bằng hàm tiền tố, rồi quét text một lần.
+KMP preprocess mẫu bằng hàm tiền tố, rồi quét văn bản (text / 텍스트) một lần.
 
 Khi xảy ra không khớp sau khi đã khớp `j` ký tự, thay vì di chuyển con trỏ văn bản lùi lại, ta lùi trạng thái mẫu theo thông tin tiền tố:
 
@@ -128,9 +131,9 @@ Khi xảy ra không khớp sau khi đã khớp `j` ký tự, thay vì di chuyể
 j = pi[j - 1]
 ```
 
-Text character hiện tại có thể được thử lại với shorter hợp lệ prefix ứng viên.
+Văn bản (text / 텍스트) character hiện tại có thể được thử lại với shorter hợp lệ prefix ứng viên.
 
-Complexity:
+Độ phức tạp (complexity / 복잡도):
 
 \[
 O(n+m)
@@ -187,7 +190,7 @@ KMP không phải “magic tìm kiếm tuyến tính”; nó chỉ tránh so l�
 - borders của string;
 - smallest period;
 - prefix occurrences;
-- lặp lại structure.
+- lặp lại cấu trúc (structure / 구조).
 
 Nếu chuỗi đầy đủ có độ dài `n` và border dài nhất có độ dài `b = pi[n-1]`, một chu kỳ ứng viên có thể là:
 
@@ -195,7 +198,7 @@ Nếu chuỗi đầy đủ có độ dài `n` và border dài nhất có độ d
 p = n-b
 \]
 
-Nếu `n % p == 0`, string có thể là repetition của block length `p`.
+Nếu `n % p == 0`, string có thể là repetition của khối (block / 블록) length `p`.
 
 ## Z-Function
 
@@ -210,7 +213,7 @@ a a b a a b a
 
 Z trực tiếp trả lời “prefix match dài bao nhiêu tại mỗi position?”.
 
-Efficient Z thuật toán giữ một interval `[L,R)` mà prefix match đã biết. Nếu `i < R`, ta reuse data từ mirrored prefix position trước khi mở rộng thêm.
+Efficient Z thuật toán giữ một interval `[L,R)` mà prefix match đã biết. Nếu `i < R`, ta reuse dữ liệu (data / 데이터) từ mirrored prefix position trước khi mở rộng thêm.
 
 Đây là cùng philosophy với KMP: không quên phép so sánh thông tin.
 
@@ -223,13 +226,13 @@ KMP / pi -> mỗi prefix kết thúc ở i có border dài nhất bao nhiêu?
 Z        -> từ i trở đi match prefix dài bao nhiêu?
 ```
 
-Nhiều problems giải được bằng cả hai; chọn cách biểu diễn (representation) khiến reasoning đơn giản hơn.
+Nhiều problems giải được bằng cả hai; chọn cách biểu diễn (representation / 표현) khiến lập luận (reasoning / 추론) đơn giản hơn.
 
 ## Rabin-Karp và băm trượt
 
-Thay vì so sánh toàn substring, **Rabin-Karp** so hash của mẫu với băm trượt của mỗi text window.
+Thay vì so sánh toàn substring, **Rabin-Karp** so băm (hash / 해시) của mẫu với băm trượt của mỗi văn bản (text / 텍스트) cửa sổ (window / 윈도우).
 
-Polynomial hash có dạng:
+Polynomial băm (hash / 해시) có dạng:
 
 \[
 H=s_0b^{m-1}+s_1b^{m-2}+\cdots+s_{m-1}\pmod M
@@ -241,7 +244,7 @@ kỳ vọng/practical matching có thể rất nhanh, nhất là khi cần nhi�
 
 ## Collision là tính đúng đắn concern
 
-Hai strings khác nhau có thể có cùng hash.
+Hai strings khác nhau có thể có cùng băm (hash / 해시).
 
 Vì vậy:
 
@@ -249,7 +252,7 @@ Vì vậy:
 hash equal != chắc chắn string equal
 ```
 
-Các strategy:
+Các chiến lược (strategy / 전략):
 
 ```text
 hash match -> verify actual substring
@@ -258,9 +261,9 @@ use 64-bit overflow hash với risk model rõ ràng
 use deterministic suffix/string structure nếu không chấp nhận collision
 ```
 
-Trong security-sensitive đầu vào, hash thuật toán còn có đối kháng concerns.
+Trong security-sensitive đầu vào, băm (hash / 해시) thuật toán còn có đối kháng concerns.
 
-## Prefix Hash và O(1) substring hash
+## Prefix băm (hash / 해시) và O(1) substring băm (hash / 해시)
 
 Ta precompute:
 
@@ -273,7 +276,7 @@ Giá trị băm của chuỗi con `[l,r)` có thể được suy ra từ hai gi�
 
 Điều này cho phép nhiều các thuật toán làm tìm kiếm nhị phân trên length, phần tử trùng substring checks hoặc palindrome các phép so sánh.
 
-Nhưng “O(1) tính bằng nhau của chuỗi con” chỉ xác định nếu cách biểu diễn không có collision hoặc có verification.
+Nhưng “O(1) tính bằng nhau của chuỗi con” chỉ xác định nếu cách biểu diễn không có collision hoặc có xác minh (verification / 확인).
 
 ## Trie và Prefix Sharing
 
@@ -289,13 +292,13 @@ longest prefix match
 routing/radix variants
 ```
 
-bảng băm (Hash Table) tốt cho chính xác khóa identity nhưng không tự nhiên cho prefix ngữ nghĩa (semantics).
+Bảng băm (hash table / 해시 테이블) tốt cho chính xác khóa định danh (identity / 식별자) nhưng không tự nhiên cho prefix ngữ nghĩa (semantics / 의미론).
 
 Xem chapter [Trie](../02_trees/04_tries.md).
 
 ## Aho-Corasick: khớp nhiều mẫu
 
-Nếu có hàng nghìn các mẫu và một text lớn, chạy KMP riêng từng mẫu lặp lại scanning work.
+Nếu có hàng nghìn các mẫu và một văn bản (text / 텍스트) lớn, chạy KMP riêng từng mẫu lặp lại scanning công việc (work / 작업).
 
 **Aho-Corasick (아호-코라식)** kết hợp:
 
@@ -305,17 +308,17 @@ failure link  -> fallback như KMP khi mismatch
 output links  -> report patterns kết thúc tại state
 ```
 
-xây dựng automaton từ các mẫu; quét text gần tuyến tính theo text length cộng số matches.
+xây dựng automaton từ các mẫu; quét văn bản (text / 텍스트) gần tuyến tính theo văn bản (text / 텍스트) length cộng số matches.
 
 Conceptually:
 
-> KMP reuse prefix knowledge của một mẫu; Aho-Corasick reuse prefix knowledge của cả một set các mẫu.
+> KMP reuse prefix kiến thức (knowledge / 지식) của một mẫu; Aho-Corasick reuse prefix kiến thức (knowledge / 지식) của cả một set các mẫu.
 
-Ứng dụng gồm keyword filtering, signature scanning, khớp từ điển và phát hiện token.
+Ứng dụng gồm từ khóa (keyword / 키워드) filtering, signature scanning, khớp từ điển và phát hiện đơn vị từ (token / 토큰).
 
 ## các liên kết thất bại là gì?
 
-Ở trie trạng thái (state) đại diện prefix `P`, nếu next character không có nút con, liên kết thất bại dẫn tới longest hậu tố đúng của `P` cũng là prefix của một mẫu trong trie.
+Ở trie trạng thái (state / 상태) đại diện prefix `P`, nếu next character không có nút con, liên kết thất bại dẫn tới longest hậu tố đúng của `P` cũng là prefix của một mẫu trong trie.
 
 Đây chính là border idea được nâng từ một mẫu lên automaton nhiều các mẫu.
 
@@ -327,7 +330,7 @@ Palindrome substring có symmetry. Cách đơn giản expand-around-center là `
 
 kết quả là `O(n)` để tìm palindrome radii cho mọi center.
 
-Mental connection với Z thuật toán rất mạnh:
+Mental liên kết (connection / 연결) với Z thuật toán rất mạnh:
 
 ```text
 cả hai giữ một interval match xa nhất
@@ -340,13 +343,13 @@ Nếu chỉ cần longest palindrome một lần và đầu vào vừa, center e
 
 Nếu `n` lớn hoặc cần radii cho mọi centers, Manacher `O(n)` hợp lý.
 
-Nếu cần động palindrome các truy vấn, structure khác có thể cần.
+Nếu cần động palindrome các truy vấn, cấu trúc (structure / 구조) khác có thể cần.
 
 Không nên dùng advanced thuật toán chỉ vì tồn tại.
 
 ## Suffix Structures
 
-Substring các truy vấn trên tĩnh text thường dẫn tới mảng hậu tố, cây hậu tố hoặc suffix automaton.
+Substring các truy vấn trên tĩnh văn bản (text / 텍스트) thường dẫn tới mảng hậu tố, cây hậu tố hoặc suffix automaton.
 
 khóa phép biến đổi:
 
@@ -391,7 +394,7 @@ String có period `p` nếu:
 s[i] == s[i-p]
 ```
 
-cho mọi index phù hợp.
+cho mọi chỉ mục (index / 인덱스) phù hợp.
 
 Border và chu kỳ có quan hệ chặt chẽ: nếu tiền tố độ dài `n-p` đồng thời là hậu tố, thì `p` là một chu kỳ ứng viên.
 
@@ -399,35 +402,35 @@ tính chu kỳ xuất hiện trong compression, mẫu repetition, synchronizatio
 
 ## Fine-Wilf intuition
 
-Nếu string có hai periods đủ “dài overlap”, gcd của hai periods cũng trở thành period dưới điều kiện Fine-Wilf. Không cần dùng theorem này hằng ngày, nhưng nó cho thấy periodic structure không phải collection mẹo; có algebra/tổ hợp (combinatorics) rõ ràng phía sau.
+Nếu string có hai periods đủ “dài overlap”, gcd của hai periods cũng trở thành period dưới điều kiện Fine-Wilf. Không cần dùng theorem này hằng ngày, nhưng nó cho thấy periodic cấu trúc (structure / 구조) không phải collection mẹo; có algebra/tổ hợp (combinatorics) rõ ràng phía sau.
 
 ## Minimal Rotation
 
-Một problem khác là tìm lexicographically smallest rotation của chuỗi vòng. Cách đơn giản generate all rotations tốn `O(n^2)` bộ nhớ/time.
+Một bài toán (problem / 문제) khác là tìm lexicographically smallest rotation của chuỗi vòng. Cách đơn giản generate all rotations tốn `O(n^2)` bộ nhớ/thời gian (time / 시간).
 
 Booth's thuật toán có thể làm tuyến tính bằng cách loại whole ranges of ứng viên starts sau mismatch.
 
-mẫu reasoning giống nhiều string các thuật toán: một phép so sánh thất bại không chỉ loại một ứng viên, mà loại cả một vùng dựa trên order thông tin.
+mẫu lập luận (reasoning / 추론) giống nhiều string các thuật toán: một phép so sánh thất bại không chỉ loại một ứng viên, mà loại cả một vùng dựa trên thứ tự (order / 순서) thông tin.
 
 ## String Matching trong xử lý luồng
 
-KMP/Aho-Corasick có thể xử lý text xử lý luồng vì trạng thái hiện tại chỉ cần matched-prefix/automaton trạng thái, không cần giữ toàn text.
+KMP/Aho-Corasick có thể xử lý văn bản (text / 텍스트) xử lý luồng vì trạng thái hiện tại chỉ cần matched-prefix/automaton trạng thái, không cần giữ toàn văn bản (text / 텍스트).
 
-Điều này quan trọng trong logs/mạng streams. thuật toán complexity giống nhau nhưng mô hình bộ nhớ (memory model) tốt hơn batch substring search.
+Điều này quan trọng trong logs/mạng streams. thuật toán độ phức tạp (complexity / 복잡도) giống nhau nhưng mô hình bộ nhớ (memory model) tốt hơn batch substring tìm kiếm (search / 검색).
 
-## C strings và bộ đệm safety
+## C strings và bộ đệm an toàn (safety / 안전)
 
-Trong C, `strlen` là `O(n)` nếu không bộ nhớ đệm length. Gọi `strlen` trong loop điều kiện có thể vô tình tạo quadratic hành vi tùy trình biên dịch/library context.
+Trong C, `strlen` là `O(n)` nếu không bộ nhớ đệm length. Gọi `strlen` trong vòng lặp (loop / 루프) điều kiện có thể vô tình tạo quadratic hành vi tùy trình biên dịch/thư viện (library / 라이브러리) ngữ cảnh (context / 맥락).
 
-String các bộ đệm phải có capacity và null-termination discipline rõ. `memcpy`/`memcmp` làm việc trên byte, không Unicode characters.
+String các bộ đệm phải có sức chứa (capacity / 용량) và null-termination discipline rõ. `memcpy`/`memcmp` làm việc trên byte, không Unicode characters.
 
-Nếu data có thể chứa zero byte, C string sự trừu tượng không phù hợp; dùng `(pointer,length)` byte slice.
+Nếu dữ liệu (data / 데이터) có thể chứa zero byte, C string sự trừu tượng không phù hợp; dùng `(pointer,length)` byte slice.
 
 ## Java String specifics
 
 `String` là bất biến sau khi tạo. Ngữ nghĩa và cách bố trí của `substring` đã thay đổi qua các phiên bản Java; không nên giả định rằng chuỗi con chia sẻ mảng nền trong Java hiện đại.
 
-lặp lại concatenation trong loop:
+lặp lại concatenation trong vòng lặp (loop / 루프):
 
 ```java
 s = s + piece;
@@ -443,16 +446,16 @@ có thể tạo nhiều các lần cấp phát/copies. `StringBuilder` phù hợ
 
 `for...of` iterate các điểm mã tốt hơn direct lập chỉ mục cho các cặp thay thế UTF-16, nhưng vẫn không tự động group các cụm ký tự hiển thị.
 
-`Intl.Segmenter` có thể hữu ích cho phân đoạn theo cách người dùng nhìn thấy trong UI/domain cần graphemes; đó là tầng khác với classic DSA string matching.
+`Intl.Segmenter` có thể hữu ích cho phân đoạn theo cách người dùng nhìn thấy trong UI/lĩnh vực (domain / 도메인) cần graphemes; đó là tầng khác với classic DSA string matching.
 
 ## Choosing the right string technique
 
-| Nhu cầu | Structure/thuật toán tự nhiên |
+| Nhu cầu | cấu trúc (structure / 구조)/thuật toán tự nhiên |
 |---|---|
-| một mẫu trong một text | KMP / Z / library search |
+| một mẫu trong một văn bản (text / 텍스트) | KMP / Z / thư viện (library / 라이브러리) tìm kiếm (search / 검색) |
 | nhiều chính xác các mẫu trong stream | Aho-Corasick |
 | prefix dictionary/tự động hoàn thành | Trie / radix cây |
-| many substring các truy vấn trên tĩnh text | mảng hậu tố + LCP |
+| many substring các truy vấn trên tĩnh văn bản (text / 텍스트) | mảng hậu tố + LCP |
 | substring-trạng thái analytics | suffix automaton |
 | palindrome radii | Manacher |
 | probabilistic tính bằng nhau của chuỗi con | băm trượt |
@@ -462,15 +465,15 @@ có thể tạo nhiều các lần cấp phát/copies. `StringBuilder` phù hợ
 
 ## Những hiểu lầm phổ biến
 
-**“KMP nhanh vì không bao giờ so sánh lại character.”** Không chính xác. Một text character có thể tham gia nhiều các phép so sánh, nhưng tổng các phép so sánh bị bound tuyến tính nhờ fallback structure.
+**“KMP nhanh vì không bao giờ so sánh lại character.”** Không chính xác. Một văn bản (text / 텍스트) character có thể tham gia nhiều các phép so sánh, nhưng tổng các phép so sánh bị bound tuyến tính nhờ fallback cấu trúc (structure / 구조).
 
-**“Hash equal nghĩa là substring equal.”** Không nếu hash có collision.
+**“băm (hash / 해시) equal nghĩa là substring equal.”** Không nếu băm (hash / 해시) có collision.
 
-**“Java/JS character = Unicode character.”** `char`/index thường là UTF-16 đơn vị mã.
+**“Java/JS character = Unicode character.”** `char`/chỉ mục (index / 인덱스) thường là UTF-16 đơn vị mã.
 
-**“Trie luôn nhanh hơn HashMap cho strings.”** Trie trả prefix capability nhưng bộ nhớ overhead có thể rất lớn.
+**“Trie luôn nhanh hơn HashMap cho strings.”** Trie trả prefix năng lực (capability / 역량) nhưng bộ nhớ overhead có thể rất lớn.
 
-**“Advanced string thuật toán luôn tốt hơn built-in search.”** Library cách triển khai có thể dùng native/vectorized optimizations rất mạnh. DSA knowledge giúp chọn mô hình, không buộc reimplement mọi thứ.
+**“Advanced string thuật toán luôn tốt hơn built-in tìm kiếm (search / 검색).”** thư viện (library / 라이브러리) cách triển khai có thể dùng bản địa (native / 네이티브)/vectorized optimizations rất mạnh. DSA kiến thức (knowledge / 지식) giúp chọn mô hình, không buộc reimplement mọi thứ.
 
 **“Suffix Array lập chỉ mục trực tiếp mọi chuỗi con.”** Không; nó sắp xếp các vị trí bắt đầu của hậu tố, rồi truy vấn chuỗi con trở thành tìm kiếm theo tiền tố trên thứ tự hậu tố.
 
@@ -489,14 +492,16 @@ duplicate patterns
 Unicode surrogate pairs / multibyte encoding theo chosen model
 ```
 
-Một differential test tốt là so sánh KMP đầu ra với đơn giản naive matcher trên ngẫu nhiên small strings.
+Một differential kiểm thử (test / 테스트) tốt là so sánh KMP đầu ra với đơn giản naive matcher trên ngẫu nhiên small strings.
 
-băm trượt nên test collision-handling đường đi nếu cách triển khai verify matches.
+băm trượt nên kiểm thử (test / 테스트) collision-handling đường đi nếu cách triển khai verify matches.
 
-Aho-Corasick cần test một mẫu là suffix của mẫu khác, vì đầu ra/các liên kết thất bại dễ sai ở case này.
+Aho-Corasick cần kiểm thử (test / 테스트) một mẫu là suffix của mẫu khác, vì đầu ra/các liên kết thất bại dễ sai ở trường hợp (case / 사례) này.
 
 ## Mô hình tư duy mở rộng
 
-> String các thuật toán là nghệ thuật **không quên structure đã khám phá**. Prefix-function nhớ borders, Z nhớ prefix-match intervals, băm trượt nhớ algebraic dữ liệu tóm lược, Trie nhớ các tiền tố dùng chung, Aho-Corasick nhớ fallback giữa prefixes, suffix structures nhớ order/share của suffixes.
+> String các thuật toán là nghệ thuật **không quên cấu trúc (structure / 구조) đã khám phá**. Prefix-function nhớ borders, Z nhớ prefix-match intervals, băm trượt nhớ algebraic dữ liệu tóm lược, Trie nhớ các tiền tố dùng chung, Aho-Corasick nhớ fallback giữa prefixes, suffix structures nhớ thứ tự (order / 순서)/share của suffixes.
 
 Khi gặp bài toán chuỗi, đừng bắt đầu bằng tên thuật toán. Hãy hỏi: truy vấn dựa trên tiền tố, hậu tố, chuỗi con, tính lặp, thứ tự hay việc chia sẻ giữa nhiều mẫu? Dữ liệu tĩnh hay được xử lý theo luồng? Cần kết quả chính xác tuyệt đối hay chấp nhận băm xác suất? Và “ký tự” trong miền bài toán thực sự là byte, điểm mã hay cụm tự vị (grapheme)?
+
+> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 range queries fenwick segment tree](./01_range_queries_fenwick_segment_tree.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

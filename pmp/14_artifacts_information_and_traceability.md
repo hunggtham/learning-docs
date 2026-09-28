@@ -1,24 +1,27 @@
-# 14 — Artifacts, information flow và traceability
+# 14 — Artifacts, thông tin (information / 정보) luồng (flow / 흐름) và traceability
 
-## Artifact chỉ có giá trị khi nó giữ hoặc truyền information cần cho decision
+> **Mạch đọc:** Đặt **14 — Artifacts, thông tin (information / 정보) luồng (flow / 흐름) và traceability** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **sản phẩm tạo ra (artifact / 산출물) chỉ có giá trị khi nó giữ hoặc truyền thông tin (information / 정보) cần cho quyết định (decision / 결정)** sang **sản phẩm tạo ra (artifact / 산출물) là bên ngoài (external / 외부) bộ nhớ (memory / 메모리) của temporary organization**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-PMP có nhiều tên artifact nên người học dễ biến chúng thành danh sách cần thuộc. Cách hiểu bền hơn là hỏi mỗi artifact giải quyết information problem nào. Một register giữ tập item cùng loại qua thời gian; một log ghi các event/decision cần theo dõi; một baseline tạo reference để đo variance; một plan định nghĩa cách một loại work/control sẽ được thực hiện; một report nén state thành information cho stakeholder; một agreement tạo commitment giữa các party.
 
-Nếu artifact không có consumer hoặc không thay đổi decision/control nào, nó có nguy cơ trở thành administrative waste. Ngược lại, thiếu artifact ở chỗ failure cost cao làm project mất memory và accountability.
+## Sản phẩm tạo ra (artifact / 산출물) chỉ có giá trị khi nó giữ hoặc truyền thông tin (information / 정보) cần cho quyết định (decision / 결정)
 
-Một artifact tốt cần answer bốn câu: ai dùng, để quyết điều gì, update khi nào, và đâu là source of truth. Nếu không trả lời được, artifact có thể đang tồn tại vì tradition chứ không vì information need.
+PMP có nhiều tên sản phẩm tạo ra (artifact / 산출물) nên người học dễ biến chúng thành danh sách cần thuộc. Cách hiểu bền hơn là hỏi mỗi sản phẩm tạo ra (artifact / 산출물) giải quyết thông tin (information / 정보) bài toán (problem / 문제) nào. Một register giữ tập item cùng loại qua thời gian; một log ghi các sự kiện (event / 이벤트)/quyết định (decision / 결정) cần theo dõi; một baseline tạo tham chiếu (reference / 참조) để đo variance; một plan định nghĩa cách một loại công việc (work / 작업)/điều khiển (control / 제어) sẽ được thực hiện; một report nén trạng thái (state / 상태) thành thông tin (information / 정보) cho stakeholder; một agreement tạo commitment giữa các party.
 
-## Artifact là external memory của temporary organization
+Nếu sản phẩm tạo ra (artifact / 산출물) không có bên tiêu thụ (consumer / 소비자) hoặc không thay đổi quyết định (decision / 결정)/điều khiển (control / 제어) nào, nó có nguy cơ trở thành administrative waste. Ngược lại, thiếu sản phẩm tạo ra (artifact / 산출물) ở chỗ thất bại (failure / 실패) chi phí (cost / 비용) cao làm dự án (project / 프로젝트) mất bộ nhớ (memory / 메모리) và accountability.
 
-Project là tổ chức tạm thời. Con người thay đổi, memory cá nhân mất đi và decision diễn ra ở nhiều thời điểm. Artifact tồn tại để externalize memory, làm coordination không phụ thuộc hoàn toàn vào việc “ai đó còn nhớ”.
+Một sản phẩm tạo ra (artifact / 산출물) tốt cần answer bốn câu: ai dùng, để quyết điều gì, cập nhật (update / 업데이트) khi nào, và đâu là nguồn chuẩn (source of truth / 정본). Nếu không trả lời được, sản phẩm tạo ra (artifact / 산출물) có thể đang tồn tại vì tradition chứ không vì thông tin (information / 정보) need.
 
-Điều này đặc biệt quan trọng ở project dài hoặc có nhiều vendor. Một quyết định không ghi rationale có thể bị tranh luận lại vài tháng sau hoặc bị hiểu sai khi người cũ rời team.
+## Sản phẩm tạo ra (artifact / 산출물) là bên ngoài (external / 외부) bộ nhớ (memory / 메모리) của temporary organization
 
-External memory còn giúp accountability công bằng hơn. Khi decision được đánh giá bằng hindsight, artifact cho biết information và assumption có sẵn tại thời điểm quyết định, thay vì dùng knowledge xuất hiện sau đó để phán xét quá khứ.
+Dự án (project / 프로젝트) là tổ chức tạm thời. Con người thay đổi, bộ nhớ (memory / 메모리) cá nhân mất đi và quyết định (decision / 결정) diễn ra ở nhiều thời điểm. sản phẩm tạo ra (artifact / 산출물) tồn tại để externalize bộ nhớ (memory / 메모리), làm coordination không phụ thuộc hoàn toàn vào việc “ai đó còn nhớ”.
 
-## Project information architecture có nhiều lớp
+Điều này đặc biệt quan trọng ở dự án (project / 프로젝트) dài hoặc có nhiều vendor. Một quyết định không ghi rationale có thể bị tranh luận lại vài tháng sau hoặc bị hiểu sai khi người cũ rời nhóm (team / 팀).
 
-Một mental model hữu ích là tách information thành bốn lớp:
+Bên ngoài (external / 외부) bộ nhớ (memory / 메모리) còn giúp accountability công bằng hơn. Khi quyết định (decision / 결정) được đánh giá bằng hindsight, sản phẩm tạo ra (artifact / 산출물) cho biết thông tin (information / 정보) và giả định (assumption / 가정) có sẵn tại thời điểm quyết định, thay vì dùng kiến thức (knowledge / 지식) xuất hiện sau đó để phán xét quá khứ.
+
+## Dự án (project / 프로젝트) thông tin (information / 정보) kiến trúc (architecture / 아키텍처) có nhiều lớp
+
+Một mô hình tư duy (mental model / 사고 모델) hữu ích là tách thông tin (information / 정보) thành bốn lớp:
 
 ```text
 source evidence
@@ -30,55 +33,55 @@ decision / commitment
 reporting / governance view
 ```
 
-Source evidence có thể là test result, invoice, system log, signed contract hoặc stakeholder approval. Operational state là risk status, work progress, forecast. Decision layer giữ approval, priority, exception và rationale. Reporting layer nén state cho steering committee hoặc stakeholder.
+Nguồn (source / 소스) bằng chứng (evidence / 증거) có thể là kiểm thử (test / 테스트) kết quả (result / 결과), invoice, hệ thống (system / 시스템) log, signed đặc tả hợp đồng (contract / 계약) hoặc stakeholder approval. Operational trạng thái (state / 상태) là rủi ro (risk / 위험) status, công việc (work / 작업) progress, forecast. quyết định (decision / 결정) tầng (layer / 계층) giữ approval, priority, exception và rationale. Reporting tầng (layer / 계층) nén trạng thái (state / 상태) cho steering committee hoặc stakeholder.
 
-Nếu report không trace được về source evidence, dispute khó resolve. Nếu source evidence có nhưng decision không được record, project biết “điều gì xảy ra” nhưng không biết “vì sao state đổi”.
+Nếu report không dấu vết (trace / 추적) được về nguồn (source / 소스) bằng chứng (evidence / 증거), dispute khó resolve. Nếu nguồn (source / 소스) bằng chứng (evidence / 증거) có nhưng quyết định (decision / 결정) không được bản ghi (record / 레코드), dự án (project / 프로젝트) biết “điều gì xảy ra” nhưng không biết “vì sao trạng thái (state / 상태) đổi”.
 
-## Từ assumption tới decision
+## Từ giả định (assumption / 가정) tới quyết định (decision / 결정)
 
-Assumption log ghi điều đang được coi là đúng nhưng chưa được chứng minh chắc chắn. Constraint là boundary phải tôn trọng. Risk register quản lý uncertainty có effect lên objective. Issue log quản lý problem đã materialize. Change log theo dõi proposed/approved/rejected change. Decision log giữ quyết định, rationale, owner và thời điểm.
+Giả định (assumption / 가정) log ghi điều đang được coi là đúng nhưng chưa được chứng minh chắc chắn. ràng buộc (constraint / 제약조건) là ranh giới (boundary / 경계) phải tôn trọng. rủi ro (risk / 위험) register quản lý bất định (uncertainty / 불확실성) có tác động (effect / 효과) lên mục tiêu (objective / 목표). Issue log quản lý bài toán (problem / 문제) đã materialize. thay đổi (change / 변경) log theo dõi proposed/approved/rejected thay đổi (change / 변경). quyết định (decision / 결정) log giữ quyết định, rationale, đơn vị sở hữu (owner / 오너) và thời điểm.
 
-Các artifact này không tách biệt hoàn toàn. Ví dụ assumption “vendor API ổn định trước UAT” bị evidence mới bác bỏ. Assumption chuyển thành risk hoặc issue; risk analysis tạo option; decision đổi integration plan; change có thể cập nhật schedule baseline. Traceability tốt cho phép đi ngược chuỗi để hiểu vì sao plan hiện tại khác plan ban đầu.
+Các sản phẩm tạo ra (artifact / 산출물) này không tách biệt hoàn toàn. Ví dụ giả định (assumption / 가정) “vendor API ổn định trước UAT” bị bằng chứng (evidence / 증거) mới bác bỏ. giả định (assumption / 가정) chuyển thành rủi ro (risk / 위험) hoặc issue; rủi ro (risk / 위험) phân tích (analysis / 분석) tạo option; quyết định (decision / 결정) đổi tích hợp (integration / 통합) plan; thay đổi (change / 변경) có thể cập nhật schedule baseline. Traceability tốt cho phép đi ngược chuỗi để hiểu vì sao plan hiện tại khác plan ban đầu.
 
-Một project information system trưởng thành không chỉ có nhiều document; nó cho phép state transition giữa các loại information mà không mất context.
+Một dự án (project / 프로젝트) thông tin (information / 정보) hệ thống (system / 시스템) trưởng thành không chỉ có nhiều document; nó cho phép chuyển tiếp trạng thái (state transition / 상태 전이) giữa các loại thông tin (information / 정보) mà không mất ngữ cảnh (context / 맥락).
 
-## Information state transition cần được model explicit
+## Thông tin (information / 정보) chuyển tiếp trạng thái (state transition / 상태 전이) cần được mô hình (model / 모델) tường minh (explicit / 명시적)
 
-Một signal thường đi qua nhiều state:
+Một tín hiệu (signal / 신호) thường đi qua nhiều trạng thái (state / 상태):
 
 ```text
 observation → assumption/question → risk/issue → analysis → decision → change/action → evidence → closure
 ```
 
-Không phải mọi signal đi hết chuỗi, nhưng mental model này giúp phát hiện “missing transition”. Nếu issue đã resolved nhưng decision/action evidence không có, status close có thể chỉ là administrative.
+Không phải mọi tín hiệu (signal / 신호) đi hết chuỗi, nhưng mô hình tư duy (mental model / 사고 모델) này giúp phát hiện “missing chuyển tiếp (transition / 전이)”. Nếu issue đã resolved nhưng quyết định (decision / 결정)/hành động (action / 동작) bằng chứng (evidence / 증거) không có, status close có thể chỉ là administrative.
 
-Nếu change được approved nhưng requirement/baseline không update, information state bị split. Nếu risk trigger xảy ra mà item vẫn nằm trong risk register như “open risk” nhưng không thành issue/action, tool đang giữ label cũ hơn reality.
+Nếu thay đổi (change / 변경) được approved nhưng yêu cầu (requirement / 요구사항)/baseline không cập nhật (update / 업데이트), thông tin (information / 정보) trạng thái (state / 상태) bị split. Nếu rủi ro (risk / 위험) trigger xảy ra mà item vẫn nằm trong rủi ro (risk / 위험) register như “open rủi ro (risk / 위험)” nhưng không thành issue/hành động (action / 동작), công cụ (tool / 도구) đang giữ label cũ hơn reality.
 
 ## Register, log, plan, baseline, report và agreement khác nhau về purpose
 
-Register thường là tập các item cùng loại cần theo dõi qua thời gian, ví dụ risk register hoặc stakeholder register. Log nhấn mạnh event/action history, ví dụ issue log hoặc decision log. Plan mô tả cách quản lý một domain. Baseline là reference được authorize. Report là view nén cho một audience. Agreement ghi commitment giữa party.
+Register thường là tập các item cùng loại cần theo dõi qua thời gian, ví dụ rủi ro (risk / 위험) register hoặc stakeholder register. Log nhấn mạnh sự kiện (event / 이벤트)/hành động (action / 동작) lịch sử (history / 이력), ví dụ issue log hoặc quyết định (decision / 결정) log. Plan mô tả cách quản lý một lĩnh vực (domain / 도메인). Baseline là tham chiếu (reference / 참조) được authorize. Report là view nén cho một audience. Agreement ghi commitment giữa party.
 
-Phân biệt theo information purpose giúp nhớ artifact tự nhiên hơn học tên riêng lẻ.
+Phân biệt theo thông tin (information / 정보) purpose giúp nhớ sản phẩm tạo ra (artifact / 산출물) tự nhiên hơn học tên riêng lẻ.
 
-## Semantic contract: cùng một field phải có cùng meaning
+## Ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약): cùng một trường dữ liệu (field / 필드) phải có cùng meaning
 
-Một dashboard có thể đúng về arithmetic nhưng sai về semantics. “Completed” ở team A có thể nghĩa code complete; ở team B nghĩa accepted; ở team C nghĩa deployed. Tổng 80% completion khi definitions khác nhau không có meaning ổn định.
+Một dashboard có thể đúng về arithmetic nhưng sai về ngữ nghĩa (semantics / 의미론). “Completed” ở nhóm (team / 팀) A có thể nghĩa mã (code / 코드) complete; ở nhóm (team / 팀) B nghĩa accepted; ở nhóm (team / 팀) C nghĩa deployed. Tổng 80% completion khi definitions khác nhau không có meaning ổn định.
 
-Critical metric/artifact cần semantic contract: definition, unit, source, owner, cutoff, inclusion/exclusion và update rule. Khi definition đổi, history có thể không còn comparable.
+Trọng yếu (critical / 중요) chỉ số (metric / 지표)/sản phẩm tạo ra (artifact / 산출물) cần ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약): definition, đơn vị (unit / 단위), nguồn (source / 소스), đơn vị sở hữu (owner / 오너), cutoff, inclusion/exclusion và cập nhật (update / 업데이트) quy tắc (rule / 규칙). Khi definition đổi, lịch sử (history / 이력) có thể không còn comparable.
 
-Semantic drift là failure mode khi cùng tên metric thay meaning theo thời gian nhưng chart vẫn nối thành một line như không có gì đổi.
+Ngữ nghĩa (semantic / 의미적) drift là dạng thất bại (failure mode / 실패 모드) khi cùng tên chỉ số (metric / 지표) thay meaning theo thời gian nhưng chart vẫn nối thành một line như không có gì đổi.
 
-## Data lineage: con số này đến từ đâu?
+## Dữ liệu (data / 데이터) lineage: con số này đến từ đâu?
 
-Lineage trả lời một reported value được tạo từ source nào, transform ra sao và version/cutoff nào. Ví dụ dashboard cost lấy invoice từ ERP, committed amount từ procurement và forecast từ PM tool.
+Lineage trả lời một reported giá trị (value / 값) được tạo từ nguồn (source / 소스) nào, transform ra sao và phiên bản (version / 버전)/cutoff nào. Ví dụ dashboard chi phí (cost / 비용) lấy invoice từ ERP, committed amount từ procurement và forecast từ PM công cụ (tool / 도구).
 
-Nếu steering committee hỏi vì sao EAC tăng 10%, team nên trace được change về vendor quote, scope decision hoặc productivity evidence. “Dashboard tự tính” không phải explanation.
+Nếu steering committee hỏi vì sao EAC tăng 10%, nhóm (team / 팀) nên dấu vết (trace / 추적) được thay đổi (change / 변경) về vendor quote, phạm vi (scope / 범위) quyết định (decision / 결정) hoặc productivity bằng chứng (evidence / 증거). “Dashboard tự tính” không phải explanation.
 
-Lineage đặc biệt quan trọng khi automation aggregate nhiều system. Tự động hóa làm calculation nhanh hơn nhưng cũng có thể propagate semantic error nhanh hơn.
+Lineage đặc biệt quan trọng khi automation aggregate nhiều hệ thống (system / 시스템). Tự động hóa làm calculation nhanh hơn nhưng cũng có thể propagate ngữ nghĩa (semantic / 의미적) lỗi (error / 오류) nhanh hơn.
 
-## Requirements Traceability Matrix như một graph
+## Requirements Traceability ma trận (matrix / 행렬) như một đồ thị (graph / 그래프)
 
-Requirements Traceability Matrix (RTM / 요구사항 추적 매트릭스) thường được dạy như một bảng. Mental model tốt hơn là graph:
+Requirements Traceability ma trận (matrix / 행렬) thường được dạy như một bảng. mô hình tư duy (mental model / 사고 모델) tốt hơn là đồ thị (graph / 그래프):
 
 ```text
 business need
@@ -92,119 +95,119 @@ verification / acceptance evidence
 outcome / benefit metric
 ```
 
-Không phải mọi project cần một spreadsheet RTM nặng. Nhưng regulated/high-risk project cần khả năng chứng minh requirement nào được thực hiện ở đâu và evidence nào xác nhận nó.
+Không phải mọi dự án (project / 프로젝트) cần một spreadsheet RTM nặng. Nhưng regulated/high-risk dự án (project / 프로젝트) cần khả năng chứng minh yêu cầu (requirement / 요구사항) nào được thực hiện ở đâu và bằng chứng (evidence / 증거) nào xác nhận nó.
 
-Trong software, traceability kỹ thuật có thể nối ticket → commit → build → test → deployment. PMP quan tâm boundary lớn hơn: requirement đó đến từ stakeholder/policy nào và acceptance/value được xác nhận ra sao.
+Trong software, traceability kỹ thuật có thể nối ticket → lần ghi nhận (commit / 커밋) → bản dựng (build / 빌드) → kiểm thử (test / 테스트) → triển khai (deployment / 배포). PMP quan tâm ranh giới (boundary / 경계) lớn hơn: yêu cầu (requirement / 요구사항) đó đến từ stakeholder/chính sách (policy / 정책) nào và acceptance/giá trị (value / 값) được xác nhận ra sao.
 
-## Traceability là graph hai chiều
+## Traceability là đồ thị (graph / 그래프) hai chiều
 
-Forward trace trả lời requirement này được implement và verify ở đâu. Backward trace trả lời feature hoặc control này tồn tại vì requirement/business need nào. Hai chiều đều quan trọng.
+Forward dấu vết (trace / 추적) trả lời yêu cầu (requirement / 요구사항) này được implement và verify ở đâu. Backward dấu vết (trace / 추적) trả lời tính năng (feature / 기능) hoặc điều khiển (control / 제어) này tồn tại vì yêu cầu (requirement / 요구사항)/nghiệp vụ (business / 비즈니스) need nào. Hai chiều đều quan trọng.
 
-Nếu một feature không trace được tới need nào, nó có thể là scope creep. Nếu một requirement không trace được tới verification evidence, project chưa chứng minh completion. Nếu một test không trace tới requirement, có thể đang kiểm thứ không cần hoặc requirement chưa rõ.
+Nếu một tính năng (feature / 기능) không dấu vết (trace / 추적) được tới need nào, nó có thể là phạm vi (scope / 범위) creep. Nếu một yêu cầu (requirement / 요구사항) không dấu vết (trace / 추적) được tới xác minh (verification / 확인) bằng chứng (evidence / 증거), dự án (project / 프로젝트) chưa chứng minh completion. Nếu một kiểm thử (test / 테스트) không dấu vết (trace / 추적) tới yêu cầu (requirement / 요구사항), có thể đang kiểm thứ không cần hoặc yêu cầu (requirement / 요구사항) chưa rõ.
 
 ## Traceability debt
 
-Traceability debt xuất hiện khi work vẫn tiến nhưng link giữa need, change, implementation và evidence không được cập nhật. Debt có thể chưa gây failure ngay, nhưng cost xuất hiện khi audit, incident hoặc change impact analysis cần reconstruct history.
+Traceability debt xuất hiện khi công việc (work / 작업) vẫn tiến nhưng link giữa need, thay đổi (change / 변경), hiện thực (implementation / 구현) và bằng chứng (evidence / 증거) không được cập nhật. Debt có thể chưa gây thất bại (failure / 실패) ngay, nhưng chi phí (cost / 비용) xuất hiện khi kiểm tra (audit / 감사), sự cố (incident / 인시던트) hoặc thay đổi (change / 변경) impact phân tích (analysis / 분석) cần reconstruct lịch sử (history / 이력).
 
-Debt tăng nhanh trong environment nhiều change. Nếu team liên tục sửa requirement nhưng RTM/test mapping chỉ update cuối release, họ đang tích information rework tương tự technical debt.
+Debt tăng nhanh trong môi trường (environment / 환경) nhiều thay đổi (change / 변경). Nếu nhóm (team / 팀) liên tục sửa yêu cầu (requirement / 요구사항) nhưng RTM/kiểm thử (test / 테스트) ánh xạ (mapping / 매핑) chỉ cập nhật (update / 업데이트) cuối bản phát hành (release / 릴리스), họ đang tích thông tin (information / 정보) rework tương tự technical debt.
 
-Không phải mọi project cần zero traceability debt. Low-risk prototype có thể chấp nhận nhẹ; regulated project có tolerance thấp hơn. Mức traceability phải tailor theo consequence.
+Không phải mọi dự án (project / 프로젝트) cần zero traceability debt. Low-risk prototype có thể chấp nhận nhẹ; regulated dự án (project / 프로젝트) có tolerance thấp hơn. Mức traceability phải tailor theo consequence.
 
-## Project management plan và subsidiary plans
+## Dự án (project / 프로젝트) management plan và subsidiary plans
 
-Project management plan là integrated control model. Các subsidiary plan như scope, schedule, cost, quality, resource, communication, risk, procurement hoặc stakeholder engagement chỉ nên tách khi complexity cần separation. Chúng trả lời “chúng ta sẽ quản lý domain này như thế nào?”, không phải “state hiện tại là gì?”.
+Dự án (project / 프로젝트) management plan là integrated điều khiển (control / 제어) mô hình (model / 모델). Các subsidiary plan như phạm vi (scope / 범위), schedule, chi phí (cost / 비용), chất lượng (quality / 품질), tài nguyên (resource / 자원), communication, rủi ro (risk / 위험), procurement hoặc stakeholder engagement chỉ nên tách khi độ phức tạp (complexity / 복잡도) cần separation. Chúng trả lời “chúng ta sẽ quản lý lĩnh vực (domain / 도메인) này như thế nào?”, không phải “trạng thái (state / 상태) hiện tại là gì?”.
 
-Đây là distinction hữu ích: plan mô tả method/control; document/register thường mô tả current information. Risk management plan định nghĩa risk process/scales/roles; risk register chứa risk cụ thể.
+Đây là distinction hữu ích: plan mô tả phương thức (method / 메서드)/điều khiển (control / 제어); document/register thường mô tả hiện tại (current / 현재) thông tin (information / 정보). rủi ro (risk / 위험) management plan định nghĩa rủi ro (risk / 위험) tiến trình (process / 프로세스)/scales/roles; rủi ro (risk / 위험) register chứa rủi ro (risk / 위험) cụ thể.
 
-Một plan stale nguy hiểm nếu team vẫn tưởng đó là operating rule hiện hành. Plan change cần governance phù hợp với impact.
+Một plan stale nguy hiểm nếu nhóm (team / 팀) vẫn tưởng đó là operating quy tắc (rule / 규칙) hiện hành. Plan thay đổi (change / 변경) cần quản trị (governance / 거버넌스) phù hợp với impact.
 
 ## Baseline và working document
 
-Baseline là authorized reference. Working forecast/document có thể thay đổi thường xuyên. Nhầm hai lớp tạo confusion: nếu mọi update forecast tự động rewrite baseline thì variance biến mất; nếu baseline không bao giờ được rebaseline dù objective đã formally đổi, metric mất ý nghĩa.
+Baseline là authorized tham chiếu (reference / 참조). Working forecast/document có thể thay đổi thường xuyên. Nhầm hai lớp tạo confusion: nếu mọi cập nhật (update / 업데이트) forecast tự động rewrite baseline thì variance biến mất; nếu baseline không bao giờ được rebaseline dù mục tiêu (objective / 목표) đã formally đổi, chỉ số (metric / 지표) mất ý nghĩa.
 
-Rebaseline phải là governance decision khi planning basis thay đổi đủ lớn, không phải cách che performance xấu.
+Rebaseline phải là quản trị (governance / 거버넌스) quyết định (decision / 결정) khi planning basis thay đổi đủ lớn, không phải cách che hiệu năng (performance / 성능) xấu.
 
-Một useful pattern là giữ baseline, actual và forecast tách rõ. Khi một stakeholder hỏi “plan là gì?”, cần biết họ đang hỏi commitment đã approve hay current expected outcome.
+Một useful mẫu (pattern / 패턴) là giữ baseline, actual và forecast tách rõ. Khi một stakeholder hỏi “plan là gì?”, cần biết họ đang hỏi commitment đã approve hay hiện tại (current / 현재) expected kết quả (outcome / 결과).
 
-## Artifact lifecycle: draft → reviewed → approved → effective → superseded → archived
+## Sản phẩm tạo ra (artifact / 산출물) vòng đời (lifecycle / 생명주기): draft → reviewed → approved → effective → superseded → archived
 
-Không phải file mới nhất luôn là file có hiệu lực. Contract amendment có thể signed nhưng effective từ tháng sau; policy draft mới hơn vẫn chưa replace approved version.
+Không phải tệp (file / 파일) mới nhất luôn là tệp (file / 파일) có hiệu lực. đặc tả hợp đồng (contract / 계약) amendment có thể signed nhưng effective từ tháng sau; chính sách (policy / 정책) draft mới hơn vẫn chưa replace approved phiên bản (version / 버전).
 
-Critical artifact nên có lifecycle state và effective date rõ. “Latest modified” khác “authorized current”.
+Trọng yếu (critical / 중요) sản phẩm tạo ra (artifact / 산출물) nên có vòng đời (lifecycle / 생명주기) trạng thái (state / 상태) và effective date rõ. “Latest modified” khác “authorized hiện tại (current / 현재)”.
 
-Superseded artifact vẫn có historical value. Xóa version cũ làm mất audit trail và khiến decision cũ khó hiểu.
+Superseded sản phẩm tạo ra (artifact / 산출물) vẫn có historical giá trị (value / 값). Xóa phiên bản (version / 버전) cũ làm mất kiểm tra (audit / 감사) trail và khiến quyết định (decision / 결정) cũ khó hiểu.
 
-## Immutable history và audit trail
+## Immutable lịch sử (history / 이력) và kiểm tra (audit / 감사) trail
 
-Một số evidence cần append-only hoặc immutable history: approval, financial transaction, test result, decision record. Không nhất thiết dùng blockchain; principle là không overwrite history tới mức không biết state trước.
+Một số bằng chứng (evidence / 증거) cần append-only hoặc immutable lịch sử (history / 이력): approval, financial giao dịch (transaction / 트랜잭션), kiểm thử (test / 테스트) kết quả (result / 결과), quyết định (decision / 결정) bản ghi (record / 레코드). Không nhất thiết dùng blockchain; principle là không overwrite lịch sử (history / 이력) tới mức không biết trạng thái (state / 상태) trước.
 
-Version-control system, signed document repository hoặc audit log có thể cung cấp mechanism. Mục tiêu là reconstruct được ai thay gì, khi nào, vì sao và authority nào.
+Version-control hệ thống (system / 시스템), signed document repository hoặc nhật ký kiểm tra (audit log / 감사 로그) có thể cung cấp cơ chế (mechanism / 메커니즘). Mục tiêu là reconstruct được ai thay gì, khi nào, vì sao và authority nào.
 
-Audit trail mạnh đặc biệt quan trọng khi exception/compliance decision có consequence cao.
+Kiểm tra (audit / 감사) trail mạnh đặc biệt quan trọng khi exception/compliance quyết định (decision / 결정) có consequence cao.
 
-## Change request như một information packet
+## Thay đổi (change / 변경) yêu cầu (request / 요청) như một thông tin (information / 정보) packet
 
-Change request không chỉ là câu “hãy đổi scope”. Một request tốt nên đủ context để authority ra decision: reason, affected objective, impact lên schedule/cost/risk/quality, option và urgency.
+Thay đổi (change / 변경) yêu cầu (request / 요청) không chỉ là câu “hãy đổi phạm vi (scope / 범위)”. Một yêu cầu (request / 요청) tốt nên đủ ngữ cảnh (context / 맥락) để authority ra quyết định (decision / 결정): reason, affected mục tiêu (objective / 목표), impact lên schedule/chi phí (cost / 비용)/rủi ro (risk / 위험)/chất lượng (quality / 품질), option và urgency.
 
-Nếu governance body phải tự tìm lại toàn bộ impact, decision latency tăng. Artifact tốt giảm transaction cost của governance.
+Nếu quản trị (governance / 거버넌스) body phải tự tìm lại toàn bộ impact, quyết định (decision / 결정) độ trễ (latency / 지연 시간) tăng. sản phẩm tạo ra (artifact / 산출물) tốt giảm giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) của quản trị (governance / 거버넌스).
 
-Decision packet càng high-impact càng cần evidence về alternative và recommendation, không chỉ one-option request. Nếu request chỉ trình bày solution mong muốn, governance khó biết trade-off thật.
+Quyết định (decision / 결정) packet càng high-impact càng cần bằng chứng (evidence / 증거) về alternative và recommendation, không chỉ one-option yêu cầu (request / 요청). Nếu yêu cầu (request / 요청) chỉ trình bày solution mong muốn, quản trị (governance / 거버넌스) khó biết sự đánh đổi (trade-off / 트레이드오프) thật.
 
-## Evidence package cho gate
+## Bằng chứng (evidence / 증거) gói (package / 패키지) cho gate
 
-Stage gate, go/no-go hoặc regulatory approval thường cần nhiều evidence: requirement status, test result, unresolved risk, operational readiness, contract status và approval.
+Stage gate, go/no-go hoặc regulatory approval thường cần nhiều bằng chứng (evidence / 증거): yêu cầu (requirement / 요구사항) status, kiểm thử (test / 테스트) kết quả (result / 결과), unresolved rủi ro (risk / 위험), operational readiness, đặc tả hợp đồng (contract / 계약) status và approval.
 
-Một gate package tốt không phải folder chứa mọi file. Nó là curated proof rằng exit criteria đã được đáp ứng hoặc exception đã được authority accept.
+Một gate gói (package / 패키지) tốt không phải folder chứa mọi tệp (file / 파일). Nó là curated proof rằng exit criteria đã được đáp ứng hoặc exception đã được authority accept.
 
-Gate theater xảy ra khi meeting vẫn “approve” dù evidence package incomplete vì deadline pressure. Khi đó artifact tồn tại nhưng control objective đã fail.
+Gate theater xảy ra khi meeting vẫn “approve” dù bằng chứng (evidence / 증거) gói (package / 패키지) incomplete vì deadline pressure. Khi đó sản phẩm tạo ra (artifact / 산출물) tồn tại nhưng điều khiển (control / 제어) mục tiêu (objective / 목표) đã thất bại (fail / 실패).
 
-## Decision log và assumption expiration
+## Quyết định (decision / 결정) log và giả định (assumption / 가정) expiration
 
-Decision log nên ghi không chỉ decision mà còn key assumption. Nếu assumption thay đổi, decision có thể cần review.
+Quyết định (decision / 결정) log nên ghi không chỉ quyết định (decision / 결정) mà còn key giả định (assumption / 가정). Nếu giả định (assumption / 가정) thay đổi, quyết định (decision / 결정) có thể cần rà soát (review / 검토).
 
-Ví dụ “chọn vendor A vì cost thấp nhất và API đáp ứng throughput 1.000 req/s”. Nếu forecast traffic tăng lên 5.000 req/s, decision cũ không sai tại thời điểm đó nhưng basis đã hết hạn.
+Ví dụ “chọn vendor A vì chi phí (cost / 비용) thấp nhất và API đáp ứng thông lượng (throughput / 처리량) 1.000 req/s”. Nếu forecast traffic tăng lên 5.000 req/s, quyết định (decision / 결정) cũ không sai tại thời điểm đó nhưng basis đã hết hạn.
 
-Điều này giúp organization tránh hai cực: giữ decision cũ quá lâu hoặc blame người cũ bằng information mới.
+Điều này giúp organization tránh hai cực: giữ quyết định (decision / 결정) cũ quá lâu hoặc blame người cũ bằng thông tin (information / 정보) mới.
 
-Một decision record mạnh nên gồm context, options considered, owner/authority, rationale, effective date, affected artifacts và review trigger.
+Một quyết định (decision / 결정) bản ghi (record / 레코드) mạnh nên gồm ngữ cảnh (context / 맥락), options considered, đơn vị sở hữu (owner / 오너)/authority, rationale, effective date, affected artifacts và rà soát (review / 검토) trigger.
 
-## Decision provenance
+## Quyết định (decision / 결정) provenance
 
-Provenance nối decision với evidence và authority. Nếu một scope exception được approve, cần biết request nào, analysis nào, ai approve và điều kiện nào đi kèm.
+Provenance nối quyết định (decision / 결정) với bằng chứng (evidence / 증거) và authority. Nếu một phạm vi (scope / 범위) exception được approve, cần biết yêu cầu (request / 요청) nào, phân tích (analysis / 분석) nào, ai approve và điều kiện nào đi kèm.
 
-Provenance khác mere history. History nói event đã xảy ra; provenance giải thích chain tạo ra state hiện tại.
+Provenance khác mere lịch sử (history / 이력). lịch sử (history / 이력) nói sự kiện (event / 이벤트) đã xảy ra; provenance giải thích chuỗi (chain / 사슬) tạo ra trạng thái (state / 상태) hiện tại.
 
-Trong incident hoặc audit, provenance giúp phân biệt unauthorized drift với explicit accepted exception.
+Trong sự cố (incident / 인시던트) hoặc kiểm tra (audit / 감사), provenance giúp phân biệt unauthorized drift với tường minh (explicit / 명시적) accepted exception.
 
-## Information radiator và dashboard
+## Thông tin (information / 정보) radiator và dashboard
 
-Adaptive team thường dùng visual board, burnup/burndown, cumulative flow hoặc release forecast như information radiator. Predictive project dùng milestone/Gantt/EVM/dashboard. Tool khác nhau nhưng problem giống nhau: làm state và deviation visible đủ nhanh.
+Adaptive nhóm (team / 팀) thường dùng visual board, burnup/burndown, cumulative luồng (flow / 흐름) hoặc bản phát hành (release / 릴리스) forecast như thông tin (information / 정보) radiator. Predictive dự án (project / 프로젝트) dùng milestone/Gantt/EVM/dashboard. công cụ (tool / 도구) khác nhau nhưng bài toán (problem / 문제) giống nhau: làm trạng thái (state / 상태) và deviation visible đủ nhanh.
 
-Burnup cho thấy completed scope và total scope nên nhìn được scope change tốt hơn burndown chỉ hiển thị remaining work. Cumulative flow cho thấy WIP theo state và bottleneck. Metric nên chọn theo question, không theo template.
+Burnup cho thấy completed phạm vi (scope / 범위) và total phạm vi (scope / 범위) nên nhìn được phạm vi (scope / 범위) thay đổi (change / 변경) tốt hơn burndown chỉ hiển thị remaining công việc (work / 작업). Cumulative luồng (flow / 흐름) cho thấy WIP theo trạng thái (state / 상태) và bottleneck. chỉ số (metric / 지표) nên chọn theo question, không theo template.
 
-Dashboard tốt không thay source system. Nó là projection của source data cho một decision audience. Nếu dashboard có số nhưng không thể truy ngược data source, trust giảm khi có dispute.
+Dashboard tốt không thay nguồn (source / 소스) hệ thống (system / 시스템). Nó là projection của nguồn (source / 소스) dữ liệu (data / 데이터) cho một quyết định (decision / 결정) audience. Nếu dashboard có số nhưng không thể truy ngược dữ liệu (data / 데이터) nguồn (source / 소스), trust giảm khi có dispute.
 
-## Information compression luôn làm mất detail
+## Thông tin (information / 정보) compression luôn làm mất detail
 
-Status report nén hàng nghìn event thành vài signal. Compression là cần thiết, nhưng người thiết kế report phải biết detail nào bị mất.
+Status report nén hàng nghìn sự kiện (event / 이벤트) thành vài tín hiệu (signal / 신호). Compression là cần thiết, nhưng người thiết kế report phải biết detail nào bị mất.
 
-Một green milestone có thể che critical risk nếu chỉ nhìn completion. Vì vậy report cần surface exception và confidence, không chỉ aggregate average.
+Một green milestone có thể che trọng yếu (critical / 중요) rủi ro (risk / 위험) nếu chỉ nhìn completion. Vì vậy report cần surface exception và confidence, không chỉ aggregate average.
 
-Compression cũng tạo aggregation bias. Average defect rate 2% có thể che một segment high-risk 20%. Report designer cần biết khi nào aggregate cần drill-down.
+Compression cũng tạo aggregation độ lệch (bias / 편향). Average defect tỷ lệ (rate / 비율) 2% có thể che một segment high-risk 20%. Report designer cần biết khi nào aggregate cần drill-down.
 
 ## Dashboard là view, không phải reality
 
-Dashboard thường dùng cutoff time và transform. Một dashboard 09:00 có thể stale sau incident 10:00. “Green” nghĩa green theo data captured và rule hiện tại, không phải metaphysical truth.
+Dashboard thường dùng cutoff thời gian (time / 시간) và transform. Một dashboard 09:00 có thể stale sau sự cố (incident / 인시던트) 10:00. “Green” nghĩa green theo dữ liệu (data / 데이터) captured và quy tắc (rule / 규칙) hiện tại, không phải metaphysical truth.
 
-Critical decision nên kiểm tra freshness và underlying evidence, đặc biệt khi state đang thay đổi nhanh.
+Trọng yếu (critical / 중요) quyết định (decision / 결정) nên kiểm tra freshness và underlying bằng chứng (evidence / 증거), đặc biệt khi trạng thái (state / 상태) đang thay đổi nhanh.
 
-## Information latency
+## Thông tin (information / 정보) độ trễ (latency / 지연 시간)
 
-Information latency là thời gian từ event xảy ra tới khi người có authority nhìn thấy signal usable. Latency dài làm control phản ứng muộn.
+Thông tin (information / 정보) độ trễ (latency / 지연 시간) là thời gian từ sự kiện (event / 이벤트) xảy ra tới khi người có authority nhìn thấy tín hiệu (signal / 신호) usable. độ trễ (latency / 지연 시간) dài làm điều khiển (control / 제어) phản ứng muộn.
 
-Ví dụ defect production xuất hiện hôm nay nhưng quality dashboard update weekly; management có thể tiếp tục rollout sáu ngày dựa trên stale state.
+Ví dụ defect môi trường vận hành (production / 운영 환경) xuất hiện hôm nay nhưng chất lượng (quality / 품질) dashboard cập nhật (update / 업데이트) weekly; management có thể tiếp tục rollout sáu ngày dựa trên stale trạng thái (state / 상태).
 
-Automation có thể giảm latency, nhưng only if alert threshold và ownership rõ. Alert không ai đọc chỉ chuyển latency từ data layer sang human queue.
+Automation có thể giảm độ trễ (latency / 지연 시간), nhưng only if alert threshold và quyền sở hữu (ownership / 소유권) rõ. Alert không ai đọc chỉ chuyển độ trễ (latency / 지연 시간) từ dữ liệu (data / 데이터) tầng (layer / 계층) sang human hàng đợi (queue / 큐).
 
 ## Communication channels formula và giới hạn của nó
 
@@ -214,98 +217,100 @@ Với `n` người nếu mọi cặp có thể giao tiếp trực tiếp, số c
 channels = n(n - 1) / 2
 ```
 
-5 người tạo 10 channel; 10 người tạo 45. Formula giải thích vì sao coordination complexity tăng nhanh khi team lớn. Nhưng nó không có nghĩa mọi channel hoạt động đều như nhau hoặc một project 10 người “phức tạp 4.5 lần” project 5 người. Structure, role và communication design làm giảm interaction cần thiết.
+5 người tạo 10 channel; 10 người tạo 45. Formula giải thích vì sao coordination độ phức tạp (complexity / 복잡도) tăng nhanh khi nhóm (team / 팀) lớn. Nhưng nó không có nghĩa mọi channel hoạt động đều như nhau hoặc một dự án (project / 프로젝트) 10 người “phức tạp 4.5 lần” dự án (project / 프로젝트) 5 người. cấu trúc (structure / 구조), role và communication thiết kế (design / 설계) làm giảm tương tác (interaction / 상호작용) cần thiết.
 
-Artifact và protocol chính là cách giảm coordination load. Shared API contract, architecture decision record hoặc acceptance criterion có thể thay hàng chục conversation lặp lại.
+Sản phẩm tạo ra (artifact / 산출물) và giao thức (protocol / 프로토콜) chính là cách giảm coordination tải (load / 로드). dùng chung (shared / 공유) Đặc tả API (API contract / API 계약), kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) hoặc acceptance criterion có thể thay hàng chục conversation lặp lại.
 
-## Single source of truth không có nghĩa một tool duy nhất
+## Single nguồn chuẩn (source of truth / 정본) không có nghĩa một công cụ (tool / 도구) duy nhất
 
-Một project lớn có thể dùng Jira cho work, Git cho code, CI cho test evidence và ERP cho actual cost. Không cần ép mọi information vào một tool.
+Một dự án (project / 프로젝트) lớn có thể dùng Jira cho công việc (work / 작업), Git cho mã (code / 코드), CI cho kiểm thử (test / 테스트) bằng chứng (evidence / 증거) và ERP cho actual chi phí (cost / 비용). Không cần ép mọi thông tin (information / 정보) vào một công cụ (tool / 도구).
 
-“Single source of truth” nên hiểu là mỗi loại fact có authoritative source rõ. Dashboard có thể aggregate nhiều source nhưng không nên tạo competing truth.
+“Single nguồn chuẩn (source of truth / 정본)” nên hiểu là mỗi loại fact có authoritative nguồn (source / 소스) rõ. Dashboard có thể aggregate nhiều nguồn (source / 소스) nhưng không nên tạo competing truth.
 
-Source ownership cũng cần conflict-resolution rule. Nếu ERP và procurement tool khác nhau về committed cost, organization phải biết system nào authoritative cho từng field hoặc cách reconcile.
+Nguồn (source / 소스) quyền sở hữu (ownership / 소유권) cũng cần conflict-resolution quy tắc (rule / 규칙). Nếu ERP và procurement công cụ (tool / 도구) khác nhau về committed chi phí (cost / 비용), organization phải biết hệ thống (system / 시스템) nào authoritative cho từng trường dữ liệu (field / 필드) hoặc cách reconcile.
 
-## Versioning và configuration control
+## Versioning và cấu hình (configuration / 구성) điều khiển (control / 제어)
 
-Artifact quan trọng cần biết version nào đang có hiệu lực. Điều này đặc biệt quan trọng với requirement, contract, design, baseline và test evidence.
+Sản phẩm tạo ra (artifact / 산출물) quan trọng cần biết phiên bản (version / 버전) nào đang có hiệu lực. Điều này đặc biệt quan trọng với yêu cầu (requirement / 요구사항), đặc tả hợp đồng (contract / 계약), thiết kế (design / 설계), baseline và kiểm thử (test / 테스트) bằng chứng (evidence / 증거).
 
-Nếu team review requirement v3 nhưng vendor implement v2, communication frequency cao cũng không cứu được configuration failure. Configuration management tạo identity và version control cho artifact/deliverable để mọi party làm việc trên cùng state.
+Nếu nhóm (team / 팀) rà soát (review / 검토) yêu cầu (requirement / 요구사항) v3 nhưng vendor implement v2, communication frequency cao cũng không cứu được cấu hình (configuration / 구성) thất bại (failure / 실패). cấu hình (configuration / 구성) management tạo định danh (identity / 식별자) và phiên bản (version / 버전) điều khiển (control / 제어) cho sản phẩm tạo ra (artifact / 산출물)/deliverable để mọi party làm việc trên cùng trạng thái (state / 상태).
 
-Version string chỉ có giá trị nếu mapping tới effective configuration. “v3-final-final2” không phải configuration management.
+Phiên bản (version / 버전) string chỉ có giá trị nếu ánh xạ (mapping / 매핑) tới effective cấu hình (configuration / 구성). “v3-final-final2” không phải cấu hình (configuration / 구성) management.
 
-## Artifact ownership và freshness
+## Sản phẩm tạo ra (artifact / 산출물) quyền sở hữu (ownership / 소유권) và freshness
 
-Artifact stale nguy hiểm hơn artifact thiếu vì nó tạo confidence giả. Mỗi critical artifact cần source of truth, owner, update trigger và archive/version policy. Nếu risk register chỉ cập nhật trước audit, nó không phải risk-control instrument.
+Sản phẩm tạo ra (artifact / 산출물) stale nguy hiểm hơn sản phẩm tạo ra (artifact / 산출물) thiếu vì nó tạo confidence giả. Mỗi trọng yếu (critical / 중요) sản phẩm tạo ra (artifact / 산출물) cần nguồn chuẩn (source of truth / 정본), đơn vị sở hữu (owner / 오너), cập nhật (update / 업데이트) trigger và archive/phiên bản (version / 버전) chính sách (policy / 정책). Nếu rủi ro (risk / 위험) register chỉ cập nhật trước kiểm tra (audit / 감사), nó không phải risk-control instrument.
 
-Automation có thể giảm maintenance: CI tạo test evidence, issue tracker sinh status, financial system cập nhật actual cost. Nhưng automation chỉ tốt nếu semantic definition đúng.
+Automation có thể giảm maintenance: CI tạo kiểm thử (test / 테스트) bằng chứng (evidence / 증거), issue tracker sinh status, financial hệ thống (system / 시스템) cập nhật actual chi phí (cost / 비용). Nhưng automation chỉ tốt nếu ngữ nghĩa (semantic / 의미적) definition đúng.
 
-Freshness requirement nên phụ thuộc decision cadence. Daily flow board cần cập nhật gần real time; benefits report có thể monthly/quarterly. Không phải artifact nào cũng cần cùng update frequency.
+Freshness yêu cầu (requirement / 요구사항) nên phụ thuộc quyết định (decision / 결정) cadence. Daily luồng (flow / 흐름) board cần cập nhật gần real thời gian (time / 시간); benefits report có thể monthly/quarterly. Không phải sản phẩm tạo ra (artifact / 산출물) nào cũng cần cùng cập nhật (update / 업데이트) frequency.
 
-## Freshness SLO cho information
+## Freshness SLO cho thông tin (information / 정보)
 
-Có thể nghĩ freshness như service level cho information. Critical incident status có thể cần dưới 15 phút; schedule forecast weekly; benefit realization monthly.
+Có thể nghĩ freshness như dịch vụ (service / 서비스) mức (level / 수준) cho thông tin (information / 정보). trọng yếu (critical / 중요) sự cố (incident / 인시던트) status có thể cần dưới 15 phút; schedule forecast weekly; benefit realization monthly.
 
-Nếu decision cadence nhanh hơn freshness, governance đang lái bằng rear-view mirror. Nếu update cadence quá cao so với decision need, team tạo reporting waste.
+Nếu quyết định (decision / 결정) cadence nhanh hơn freshness, quản trị (governance / 거버넌스) đang lái bằng rear-view mirror. Nếu cập nhật (update / 업데이트) cadence quá cao so với quyết định (decision / 결정) need, nhóm (team / 팀) tạo reporting waste.
 
-Tailoring artifact cadence là matching information half-life với decision cadence.
+Tailoring sản phẩm tạo ra (artifact / 산출물) cadence là matching thông tin (information / 정보) half-life với quyết định (decision / 결정) cadence.
 
-## Automation boundary và human validation
+## Automation ranh giới (boundary / 경계) và human kiểm tra hợp lệ (validation / 검증)
 
-Automation tốt cho deterministic transform: aggregate actual cost, link build-test evidence, calculate metric. Nhưng semantic exception cần human judgment.
+Automation tốt cho deterministic transform: aggregate actual chi phí (cost / 비용), link build-test bằng chứng (evidence / 증거), calculate chỉ số (metric / 지표). Nhưng ngữ nghĩa (semantic / 의미적) exception cần human judgment.
 
-Ví dụ tool có thể auto-close risk khi due date qua là dangerous; due date không chứng minh risk retired. Automation nên reduce clerical work mà không encode false business rule.
+Ví dụ công cụ (tool / 도구) có thể auto-close rủi ro (risk / 위험) khi due date qua là dangerous; due date không chứng minh rủi ro (risk / 위험) retired. Automation nên reduce clerical công việc (work / 작업) mà không encode false nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙).
 
-Automated artifact cần observable failure. Nếu integration từ ERP sang dashboard fail silently, report có thể stale mà người dùng không biết.
+Automated sản phẩm tạo ra (artifact / 산출물) cần observable thất bại (failure / 실패). Nếu tích hợp (integration / 통합) từ ERP sang dashboard thất bại (fail / 실패) silently, report có thể stale mà người dùng không biết.
 
-## Access control và information security
+## Kiểm soát truy cập (access control / 접근 제어) và thông tin (information / 정보) bảo mật (security / 보안)
 
-Không phải mọi artifact nên mở cho toàn project. Procurement bid, personal data, legal advice hoặc security finding có thể cần access boundary.
+Không phải mọi sản phẩm tạo ra (artifact / 산출물) nên mở cho toàn dự án (project / 프로젝트). Procurement bid, personal dữ liệu (data / 데이터), legal advice hoặc bảo mật (security / 보안) finding có thể cần truy cập (access / 접근) ranh giới (boundary / 경계).
 
-Transparency không có nghĩa phá confidentiality. Project information architecture phải cân bằng need-to-know, auditability và collaboration.
+Transparency không có nghĩa phá confidentiality. dự án (project / 프로젝트) thông tin (information / 정보) kiến trúc (architecture / 아키텍처) phải cân bằng need-to-know, auditability và collaboration.
 
-Access model cũng ảnh hưởng continuity. Nếu critical artifact nằm trong private account của một contractor, offboarding có thể làm project mất memory. Ownership nên thuộc organizational system khi appropriate.
+Truy cập (access / 접근) mô hình (model / 모델) cũng ảnh hưởng continuity. Nếu trọng yếu (critical / 중요) sản phẩm tạo ra (artifact / 산출물) nằm trong private account của một contractor, offboarding có thể làm dự án (project / 프로젝트) mất bộ nhớ (memory / 메모리). quyền sở hữu (ownership / 소유권) nên thuộc organizational hệ thống (system / 시스템) khi appropriate.
 
-## Knowledge transfer: artifact không thay conversation hoàn toàn
+## Kiến thức (knowledge / 지식) transfer: sản phẩm tạo ra (artifact / 산출물) không thay conversation hoàn toàn
 
-Tacit knowledge khó capture hoàn toàn bằng document. Handover tốt thường kết hợp artifact với walkthrough, shadowing hoặc joint operation period.
+Tacit kiến thức (knowledge / 지식) khó capture hoàn toàn bằng document. Handover tốt thường kết hợp sản phẩm tạo ra (artifact / 산출물) với walkthrough, shadowing hoặc joint thao tác (operation / 연산) period.
 
-Runbook có thể ghi step, nhưng operator vẫn cần hiểu failure signal và escalation context. Vì vậy knowledge transfer là combination của explicit knowledge và experience transfer.
+Runbook có thể ghi step, nhưng operator vẫn cần hiểu thất bại (failure / 실패) tín hiệu (signal / 신호) và escalation ngữ cảnh (context / 맥락). Vì vậy kiến thức (knowledge / 지식) transfer là combination của tường minh (explicit / 명시적) kiến thức (knowledge / 지식) và experience transfer.
 
-Teach-back hoặc simulation giúp verify knowledge transfer thay vì chỉ ghi “training completed”.
+Teach-back hoặc simulation giúp verify kiến thức (knowledge / 지식) transfer thay vì chỉ ghi “huấn luyện (training / 학습) completed”.
 
-## Artifact minimization heuristic
+## Sản phẩm tạo ra (artifact / 산출물) minimization heuristic
 
-Mỗi artifact có carrying cost: create, update, review, reconcile, archive. Vì vậy “có thêm document cho chắc” không luôn tốt.
+Mỗi sản phẩm tạo ra (artifact / 산출물) có carrying chi phí (cost / 비용): create, cập nhật (update / 업데이트), rà soát (review / 검토), reconcile, archive. Vì vậy “có thêm document cho chắc” không luôn tốt.
 
-Trước khi tạo artifact mới, hỏi: information này đã có authoritative source chưa, consumer/decision nào cần view khác, risk của không ghi là gì, và automation/view có đủ thay document mới không.
+Trước khi tạo sản phẩm tạo ra (artifact / 산출물) mới, hỏi: thông tin (information / 정보) này đã có authoritative nguồn (source / 소스) chưa, bên tiêu thụ (consumer / 소비자)/quyết định (decision / 결정) nào cần view khác, rủi ro (risk / 위험) của không ghi là gì, và automation/view có đủ thay document mới không.
 
-Nếu hai artifact luôn phải update cùng nhau và không có audience/control khác nhau, chúng có thể đang duplicate truth.
+Nếu hai sản phẩm tạo ra (artifact / 산출물) luôn phải cập nhật (update / 업데이트) cùng nhau và không có audience/điều khiển (control / 제어) khác nhau, chúng có thể đang duplicate truth.
 
-## Artifact anti-patterns
+## Sản phẩm tạo ra (artifact / 산출물) anti-patterns
 
-Document theater là tạo artifact để pass audit nhưng không dùng trong work. Duplicate truth xảy ra khi nhiều spreadsheet chứa cùng fact nhưng update khác nhau. Zombie document là file vẫn được link nhưng không còn owner. Dashboard theater là metric đẹp không nối decision. Traceability theater là RTM đầy đủ về hình thức nhưng link không được verify.
+Document theater là tạo sản phẩm tạo ra (artifact / 산출물) để pass kiểm tra (audit / 감사) nhưng không dùng trong công việc (work / 작업). Duplicate truth xảy ra khi nhiều spreadsheet chứa cùng fact nhưng cập nhật (update / 업데이트) khác nhau. Zombie document là tệp (file / 파일) vẫn được link nhưng không còn đơn vị sở hữu (owner / 오너). Dashboard theater là chỉ số (metric / 지표) đẹp không nối quyết định (decision / 결정). Traceability theater là RTM đầy đủ về hình thức nhưng link không được verify.
 
-Một anti-pattern khác là over-documentation: information được ghi ở quá nhiều nơi đến mức update cost cao hơn value và freshness giảm.
+Một anti-pattern khác là over-documentation: thông tin (information / 정보) được ghi ở quá nhiều nơi đến mức cập nhật (update / 업데이트) chi phí (cost / 비용) cao hơn giá trị (value / 값) và freshness giảm.
 
-Semantic drift làm cùng metric đổi meaning nhưng report không nói. Lineage break khiến number không trace về source. Gate theater approve dù evidence thiếu. History overwrite xóa state cũ. Automation blindness tin pipeline dù integration đã fail.
+Ngữ nghĩa (semantic / 의미적) drift làm cùng chỉ số (metric / 지표) đổi meaning nhưng report không nói. Lineage break khiến number không dấu vết (trace / 추적) về nguồn (source / 소스). Gate theater approve dù bằng chứng (evidence / 증거) thiếu. lịch sử (history / 이력) overwrite xóa trạng thái (state / 상태) cũ. Automation blindness tin chuỗi xử lý (pipeline / 파이프라인) dù tích hợp (integration / 통합) đã thất bại (fail / 실패).
 
-## Ví dụ reasoning
+## Ví dụ lập luận (reasoning / 추론)
 
-Một change request thêm biometric verification được sponsor nói miệng trong meeting. Team dev bắt đầu làm, procurement chưa biết vendor license thay đổi, privacy review chưa được cập nhật và schedule vẫn dùng baseline cũ. Problem không chỉ là “communication kém”. Project đã thiếu artifact transition từ request → impact analysis → approval → baseline/backlog update → compliance evidence.
+Một thay đổi (change / 변경) yêu cầu (request / 요청) thêm biometric xác minh (verification / 확인) được sponsor nói miệng trong meeting. nhóm (team / 팀) dev bắt đầu làm, procurement chưa biết vendor license thay đổi, privacy rà soát (review / 검토) chưa được cập nhật và schedule vẫn dùng baseline cũ. bài toán (problem / 문제) không chỉ là “communication kém”. dự án (project / 프로젝트) đã thiếu sản phẩm tạo ra (artifact / 산출물) chuyển tiếp (transition / 전이) từ yêu cầu (request / 요청) → impact phân tích (analysis / 분석) → approval → baseline/backlog cập nhật (update / 업데이트) → compliance bằng chứng (evidence / 증거).
 
-Một flow tốt làm decision visible và traceable, nhờ đó mỗi domain nhận đúng information tại đúng thời điểm.
+Một luồng (flow / 흐름) tốt làm quyết định (decision / 결정) visible và traceable, nhờ đó mỗi lĩnh vực (domain / 도메인) nhận đúng thông tin (information / 정보) tại đúng thời điểm.
 
-Một scenario khác: steering dashboard báo EAC 1.1 tỷ nhưng finance ERP chỉ có actual 600 triệu. Procurement tool cho biết 400 triệu PO đã committed; PM forecast thêm 200 triệu remaining. Nếu dashboard không có lineage, stakeholder có thể tranh luận vì “số không khớp”. Khi semantic contract rõ, ta hiểu EAC = actual/commitment/remaining forecast theo rule, còn ERP actual chỉ là một component.
+Một scenario khác: steering dashboard báo EAC 1.1 tỷ nhưng finance ERP chỉ có actual 600 triệu. Procurement công cụ (tool / 도구) cho biết 400 triệu PO đã committed; PM forecast thêm 200 triệu remaining. Nếu dashboard không có lineage, stakeholder có thể tranh luận vì “số không khớp”. Khi ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) rõ, ta hiểu EAC = actual/commitment/remaining forecast theo quy tắc (rule / 규칙), còn ERP actual chỉ là một thành phần (component / 컴포넌트).
 
-## Failure modes theo information system
+## Thất bại (failure / 실패) modes theo thông tin (information / 정보) hệ thống (system / 시스템)
 
-Failure ở capture: event không được ghi. Failure ở semantics: field có meaning khác nhau. Failure ở propagation: source đổi nhưng downstream view không đổi. Failure ở authority: người không có quyền sửa baseline. Failure ở lineage: report không trace về evidence. Failure ở freshness: data đúng nhưng quá cũ. Failure ở access: đúng người không xem được hoặc sai người xem được. Failure ở retention: history bị xóa trước khi audit/learning cần.
+Thất bại (failure / 실패) ở capture: sự kiện (event / 이벤트) không được ghi. thất bại (failure / 실패) ở ngữ nghĩa (semantics / 의미론): trường dữ liệu (field / 필드) có meaning khác nhau. thất bại (failure / 실패) ở propagation: nguồn (source / 소스) đổi nhưng downstream view không đổi. thất bại (failure / 실패) ở authority: người không có quyền sửa baseline. thất bại (failure / 실패) ở lineage: report không dấu vết (trace / 추적) về bằng chứng (evidence / 증거). thất bại (failure / 실패) ở freshness: dữ liệu (data / 데이터) đúng nhưng quá cũ. thất bại (failure / 실패) ở truy cập (access / 접근): đúng người không xem được hoặc sai người xem được. thất bại (failure / 실패) ở retention: lịch sử (history / 이력) bị xóa trước khi kiểm tra (audit / 감사)/học tập (learning / 학습) cần.
 
-Nhìn artifact theo failure mode giúp project manager thiết kế control thực dụng hơn memorizing template.
+Nhìn sản phẩm tạo ra (artifact / 산출물) theo dạng thất bại (failure mode / 실패 모드) giúp dự án (project / 프로젝트) manager thiết kế điều khiển (control / 제어) thực dụng hơn memorizing template.
 
-## Mental model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Artifact là external memory và evidence architecture của project. Mục tiêu không phải tạo nhiều document mà là giữ được lineage từ source → state → decision → commitment → evidence, với semantics, version, freshness và authority đủ rõ để project có một reality có thể kiểm chứng.
+> sản phẩm tạo ra (artifact / 산출물) là bên ngoài (external / 외부) bộ nhớ (memory / 메모리) và bằng chứng (evidence / 증거) kiến trúc (architecture / 아키텍처) của dự án (project / 프로젝트). Mục tiêu không phải tạo nhiều document mà là giữ được lineage từ nguồn (source / 소스) → trạng thái (state / 상태) → quyết định (decision / 결정) → commitment → bằng chứng (evidence / 증거), với ngữ nghĩa (semantics / 의미론), phiên bản (version / 버전), freshness và authority đủ rõ để dự án (project / 프로젝트) có một reality có thể kiểm chứng.
 
-Tiếp theo nên đọc [Quantitative reasoning](./15_quantitative_reasoning_worked_examples.md) để nối data/artifact với các phép tính PMP, hoặc [Case studies](./16_end_to_end_case_studies.md) để thấy nhiều artifact tương tác trong một project.
+Tiếp theo nên đọc [Quantitative reasoning](./15_quantitative_reasoning_worked_examples.md) để nối dữ liệu (data / 데이터)/sản phẩm tạo ra (artifact / 산출물) với các phép tính PMP, hoặc [Case studies](./16_end_to_end_case_studies.md) để thấy nhiều sản phẩm tạo ra (artifact / 산출물) tương tác trong một dự án (project / 프로젝트).
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 foundations value and project system](./00_foundations_value_and_project_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

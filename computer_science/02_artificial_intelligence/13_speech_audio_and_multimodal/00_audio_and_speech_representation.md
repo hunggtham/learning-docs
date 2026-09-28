@@ -1,6 +1,9 @@
-# Audio và Speech Representation
+# Audio và Speech biểu diễn (representation / 표현)
 
-Âm thanh là **time-varying pressure signal** được microphone biến thành electrical signal rồi sample thành numbers. Máy không trực tiếp nghe “giọng nói” hay “âm nhạc”; nó nhận discrete waveform.
+> **Mạch đọc:** Đặt **Audio và Speech biểu diễn (representation / 표현)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Sampling tỷ lệ (rate / 비율)** sang **Bit độ sâu (depth / 깊이)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Âm thanh là **time-varying pressure tín hiệu (signal / 신호)** được microphone biến thành electrical tín hiệu (signal / 신호) rồi mẫu (sample / 표본) thành numbers. Máy không trực tiếp nghe “giọng nói” hay “âm nhạc”; nó nhận discrete waveform.
 
 Một mono waveform:
 
@@ -8,9 +11,9 @@ Một mono waveform:
 x[n],\quad n=0,1,...,N-1
 \]
 
-## Sampling Rate
+## Sampling tỷ lệ (rate / 비율)
 
-Sampling rate `f_s` cho biết số samples mỗi giây, ví dụ 16 kHz cho speech hoặc 44.1 kHz cho music.
+Sampling tỷ lệ (rate / 비율) `f_s` cho biết số samples mỗi giây, ví dụ 16 kHz cho speech hoặc 44.1 kHz cho music.
 
 Nyquist theorem nói frequency cao nhất có thể represent không aliasing lý tưởng là:
 
@@ -20,29 +23,29 @@ f_{max}<\frac{f_s}{2}
 
 Vì speech intelligibility chủ yếu nằm dưới vài kHz, 16 kHz thường đủ cho ASR.
 
-## Bit Depth
+## Bit độ sâu (depth / 깊이)
 
-Bit depth controls quantization resolution. Higher bit depth giảm quantization noise nhưng tăng storage/bandwidth.
+Bit độ sâu (depth / 깊이) controls quantization resolution. Higher bit độ sâu (depth / 깊이) giảm quantization noise nhưng tăng lưu trữ (storage / 저장소)/bandwidth.
 
-## Waveform vs Frequency Domain
+## Waveform vs Frequency lĩnh vực (domain / 도메인)
 
-Raw waveform cho amplitude theo time. Fourier transform decompose thành frequencies:
+Raw waveform cho amplitude theo thời gian (time / 시간). Fourier transform decompose thành frequencies:
 
 \[
 X(f)=\mathcal F\{x(t)\}
 \]
 
-Nhưng speech changes over time, nên full-signal Fourier transform mất temporal locality.
+Nhưng speech changes over thời gian (time / 시간), nên full-signal Fourier transform mất temporal locality.
 
 ## Short-Time Fourier Transform
 
-STFT chia waveform thành overlapping windows rồi Fourier transform mỗi window:
+STFT chia waveform thành overlapping windows rồi Fourier transform mỗi cửa sổ (window / 윈도우):
 
 \[
 X(m,k)=\sum_n x[n]w[n-mH]e^{-j2\pi kn/N}
 \]
 
-`m` là frame index, `k` frequency bin, `H` hop size.
+`m` là frame chỉ mục (index / 인덱스), `k` frequency bin, `H` hop kích thước (size / 크기).
 
 Magnitude spectrogram:
 
@@ -50,38 +53,38 @@ Magnitude spectrogram:
 S(m,k)=|X(m,k)|^2
 \]
 
-cho time–frequency representation.
+cho thời gian (time / 시간)–frequency biểu diễn (representation / 표현).
 
-## Window Size Trade-off
+## Cửa sổ (window / 윈도우) kích thước (size / 크기) sự đánh đổi (trade-off / 트레이드오프)
 
-Long window:
+Long cửa sổ (window / 윈도우):
 
 ```text
 better frequency resolution
 worse time resolution
 ```
 
-Short window ngược lại. Đây là time-frequency uncertainty trade-off.
+Short cửa sổ (window / 윈도우) ngược lại. Đây là time-frequency bất định (uncertainty / 불확실성) sự đánh đổi (trade-off / 트레이드오프).
 
-## Mel Scale
+## Mel quy mô (scale / 규모)
 
-Human pitch perception không linear theo Hz. **Mel scale** compresses high frequencies. Mel filterbank aggregates spectrum into perceptually motivated bands.
+Human pitch perception không tuyến tính (linear / 선형) theo Hz. **Mel quy mô (scale / 규모)** compresses high frequencies. Mel filterbank aggregates spectrum into perceptually motivated bands.
 
-Mel spectrogram là common input cho speech/audio models.
+Mel spectrogram là dùng chung (common / 공통) đầu vào (input / 입력) cho speech/audio các mô hình (models / 모델들).
 
 ## Log-Mel Features
 
-Human loudness roughly logarithmic, nên dùng log energy:
+Human loudness roughly logarithmic, nên dùng log năng lượng (energy / 에너지):
 
 \[
 \log(S+\epsilon)
 \]
 
-cũng compress dynamic range và stabilize training.
+cũng compress động (dynamic / 동적) phạm vi (range / 범위) và stabilize huấn luyện (training / 학습).
 
 ## MFCC
 
-Mel-Frequency Cepstral Coefficients historically common in ASR:
+Mel-Frequency Cepstral Coefficients historically dùng chung (common / 공통) in ASR:
 
 ```text
 waveform
@@ -94,11 +97,11 @@ waveform
 
 MFCC compress spectral envelope linked to vocal tract characteristics.
 
-Modern deep models often use log-mel spectrogram or raw waveform directly.
+Hiện đại (modern / 현대적) deep các mô hình (models / 모델들) often use log-mel spectrogram or raw waveform directly.
 
-## Speech Production
+## Speech môi trường vận hành (production / 운영 환경)
 
-Speech signal reflects interaction của:
+Speech tín hiệu (signal / 신호) reflects tương tác (interaction / 상호작용) của:
 
 - vocal-source excitation;
 - vocal tract resonances/formants;
@@ -108,7 +111,7 @@ Speech signal reflects interaction của:
 
 This source-filter view helps understand why same phoneme differs across speakers but shares spectral patterns.
 
-## Phoneme, Grapheme, Token
+## Phoneme, Grapheme, đơn vị từ (token / 토큰)
 
 Speech recognition may map audio to:
 
@@ -119,11 +122,11 @@ subword tokens
 words
 ```
 
-Output unit choice affects alignment, vocabulary and multilingual behavior.
+Đầu ra (output / 출력) đơn vị (unit / 단위) choice affects alignment, vocabulary and multilingual hành vi (behavior / 동작).
 
 ## Prosody
 
-Meaning is not only lexical content. Pitch `F0`, energy, duration and rhythm encode emotion, emphasis and sentence structure.
+Meaning is not only lexical content. Pitch `F0`, năng lượng (energy / 에너지), duration and rhythm encode emotion, emphasis and sentence cấu trúc (structure / 구조).
 
 ASR may discard much prosody; TTS must recreate it.
 
@@ -137,15 +140,15 @@ Real recordings contain:
 
 - background noise;
 - echo/reverberation;
-- microphone frequency response;
+- microphone frequency phản hồi (response / 응답);
 - clipping;
 - packet compression.
 
-Training only clean studio speech causes deployment shift.
+Huấn luyện (training / 학습) only clean studio speech causes triển khai (deployment / 배포) shift.
 
 ## Beamforming
 
-Microphone arrays exploit spatial delays to emphasize source direction and suppress noise. This is signal processing before/alongside learned models.
+Microphone arrays exploit spatial delays to emphasize nguồn (source / 소스) direction and suppress noise. This is tín hiệu (signal / 신호) processing before/alongside learned các mô hình (models / 모델들).
 
 ## Audio Augmentation
 
@@ -155,44 +158,46 @@ Useful transforms:
 - speed perturbation;
 - room impulse convolution;
 - gain changes;
-- SpecAugment masks time/frequency regions.
+- SpecAugment masks thời gian (time / 시간)/frequency regions.
 
 Augmentations encode expected invariance but should not destroy label.
 
-## Raw-Waveform Models
+## Raw-Waveform các mô hình (models / 모델들)
 
-Learned convolutional encoders can directly transform waveform into latent features. This reduces handcrafted frontend but still must discover frequency/time structure from data.
+Learned convolutional encoders can directly transform waveform into latent features. This reduces handcrafted frontend but still must discover frequency/thời gian (time / 시간) cấu trúc (structure / 구조) from dữ liệu (data / 데이터).
 
 ## Audio Tokenization
 
-Generative audio models may quantize continuous acoustic representations into discrete codec tokens using vector quantization.
+Generative audio các mô hình (models / 모델들) may quantize continuous acoustic representations into discrete codec tokens using véc-tơ (vector / 벡터) quantization.
 
-Then audio can be modeled autoregressively like language tokens.
+Then audio can be modeled autoregressively like ngôn ngữ (language / 언어) tokens.
 
 ## Multi-Channel Audio
 
-Stereo/microphone arrays add channel dimension and spatial cues such as interaural time/level differences.
+Stereo/microphone arrays add channel dimension and spatial cues such as interaural thời gian (time / 시간)/mức (level / 수준) differences.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Audio AI là inference trên một signal vừa temporal vừa spectral. Waveform nói cái gì xảy ra theo time; spectrogram nói năng lượng nằm ở frequency nào tại từng time window.**
+> **Audio AI là suy luận (inference / 추론) trên một tín hiệu (signal / 신호) vừa temporal vừa spectral. Waveform nói cái gì xảy ra theo thời gian (time / 시간); spectrogram nói năng lượng nằm ở frequency nào tại từng thời gian (time / 시간) cửa sổ (window / 윈도우).**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Spectrogram là ảnh nên xử lý như image bình thường”
+### “Spectrogram là ảnh nên xử lý như ảnh (image / 이미지) bình thường”
 
-Nó là 2D tensor nhưng axes có physical meaning khác; augmentations valid cho image không necessarily valid cho audio.
+Nó là 2D tensor nhưng axes có vật lý (physical / 물리적) meaning khác; augmentations valid cho ảnh (image / 이미지) không necessarily valid cho audio.
 
-### “Higher sample rate luôn tốt hơn ASR”
+### “Higher mẫu (sample / 표본) tỷ lệ (rate / 비율) luôn tốt hơn ASR”
 
-Above task-relevant bandwidth, compute/data cost có thể tăng mà gain nhỏ.
+Above task-relevant bandwidth, compute/dữ liệu (data / 데이터) chi phí (cost / 비용) có thể tăng mà gain nhỏ.
 
-### “Speech = text trong audio form”
+### “Speech = văn bản (text / 텍스트) trong audio form”
 
-Speech còn speaker identity, prosody, emotion, acoustic environment.
+Speech còn speaker định danh (identity / 식별자), prosody, emotion, acoustic môi trường (environment / 환경).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Audio connects Signal Processing, Fourier Analysis, CNN/Transformer sequence models và representation learning.
+Audio connects tín hiệu (signal / 신호) Processing, Fourier phân tích (analysis / 분석), CNN/Transformer chuỗi (sequence / 시퀀스) các mô hình (models / 모델들) và biểu diễn (representation / 표현) học tập (learning / 학습).
 
 Xem tiếp: [Speech Recognition](./01_speech_recognition.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 speech recognition](./01_speech_recognition.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

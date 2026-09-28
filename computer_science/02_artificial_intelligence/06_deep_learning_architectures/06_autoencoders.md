@@ -1,18 +1,21 @@
-# Autoencoders: học representation bằng reconstruction
+# Autoencoders: học biểu diễn (representation / 표현) bằng reconstruction
 
-Autoencoder (오토인코더) là architecture học mapping:
+> **Mạch đọc:** Đặt **Autoencoders: học biểu diễn (representation / 표현) bằng reconstruction** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Undercomplete Autoencoder** sang **Reconstruction mất mát (loss / 손실)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Autoencoder (오토인코더) là kiến trúc (architecture / 아키텍처) học ánh xạ (mapping / 매핑):
 
 \[
 x\xrightarrow{Encoder}z\xrightarrow{Decoder}\hat x
 \]
 
-với objective reconstruct input:
+với mục tiêu (objective / 목표) reconstruct đầu vào (input / 입력):
 
 \[
 L=L(x,\hat x)
 \]
 
-Nó là một trong những cách trực quan nhất để hiểu representation learning không cần human labels. Nhưng “reconstruct tốt” không tự động nghĩa latent space semantically tốt; mọi thiết kế bottleneck/noise/objective đều quyết định information nào được giữ.
+Nó là một trong những cách trực quan nhất để hiểu biểu diễn (representation / 표현) học tập (learning / 학습) không cần human labels. Nhưng “reconstruct tốt” không tự động nghĩa latent không gian (space / 공간) semantically tốt; mọi thiết kế bottleneck/noise/mục tiêu (objective / 목표) đều quyết định thông tin (information / 정보) nào được giữ.
 
 ## Undercomplete Autoencoder
 
@@ -22,29 +25,29 @@ Nếu latent dimension:
 d_z<d_x
 \]
 
-network bị buộc compress input qua bottleneck.
+Mạng (network / 네트워크) bị buộc compress đầu vào (input / 입력) qua bottleneck.
 
-Linear autoencoder với squared-error và constraints phù hợp học subspace liên quan PCA. Nonlinear autoencoder có thể learn nonlinear manifold.
+Tuyến tính (linear / 선형) autoencoder với squared-error và các ràng buộc (constraints / 제약조건들) phù hợp học subspace liên quan PCA. Nonlinear autoencoder có thể learn nonlinear manifold.
 
-Nhưng nếu decoder quá powerful, latent có thể vẫn encode idiosyncratic detail thay vì useful abstraction.
+Nhưng nếu decoder quá powerful, latent có thể vẫn encode idiosyncratic detail thay vì useful lớp trừu tượng (abstraction / 추상화).
 
-## Reconstruction Loss
+## Reconstruction mất mát (loss / 손실)
 
-Continuous normalized data có thể dùng MSE:
+Continuous normalized dữ liệu (data / 데이터) có thể dùng MSE:
 
 \[
 L=\|x-\hat x\|_2^2
 \]
 
-Binary/Bernoulli-like pixels historically dùng BCE.
+Nhị phân (binary / 이진)/Bernoulli-like pixels historically dùng BCE.
 
-Modern image reconstruction may use perceptual losses vì pixel MSE penalizes small shifts strongly và often yields blurry averages.
+Hiện đại (modern / 현대적) ảnh (image / 이미지) reconstruction may use perceptual losses vì điểm ảnh (pixel / 픽셀) MSE penalizes small shifts strongly và often yields blurry averages.
 
-Loss defines what “similar reconstruction” means.
+Mất mát (loss / 손실) defines what “similar reconstruction” means.
 
 ## Overcomplete Autoencoder
 
-Nếu latent dimension lớn hơn input, model có thể learn identity trivially. Cần regularization hoặc corruption để force meaningful structure.
+Nếu latent dimension lớn hơn đầu vào (input / 입력), mô hình (model / 모델) có thể learn định danh (identity / 식별자) trivially. Cần regularization hoặc corruption để force meaningful cấu trúc (structure / 구조).
 
 Examples:
 
@@ -54,19 +57,19 @@ Examples:
 
 ## Sparse Autoencoder
 
-Encourage most latent activations near zero. Objective:
+Encourage most latent activations near zero. mục tiêu (objective / 목표):
 
 \[
 L=L_{recon}+\lambda R(z)
 \]
 
-Sparsity forces representation use limited active features per input.
+Sparsity forces biểu diễn (representation / 표현) use limited active features per đầu vào (input / 입력).
 
-Modern mechanistic interpretability also explores sparse autoencoders to decompose dense LLM activations into sparse learned features, though interpretation remains research problem.
+Hiện đại (modern / 현대적) mechanistic interpretability also explores sparse autoencoders to decompose dense LLM activations into sparse learned features, though interpretation remains research bài toán (problem / 문제).
 
 ## Denoising Autoencoder
 
-Corrupt input:
+Corrupt đầu vào (input / 입력):
 
 \[
 \tilde x\sim q(\tilde x\mid x)
@@ -78,33 +81,33 @@ train:
 \tilde x\to Encoder\to z\to Decoder\to \hat x\approx x
 \]
 
-Model cannot simply copy; it learns structure needed to recover clean data.
+Mô hình (model / 모델) cannot simply bản sao (copy / 복사); it learns cấu trúc (structure / 구조) needed to recover clean dữ liệu (data / 데이터).
 
-This principle connects directly to masked language modeling and diffusion denoising: corrupt data then learn recovery.
+This principle connects directly to masked ngôn ngữ (language / 언어) modeling and diffusion denoising: corrupt dữ liệu (data / 데이터) then learn khôi phục (recovery / 복구).
 
 ## Contractive Autoencoder
 
-Penalize sensitivity of latent representation to small input changes, e.g. encoder Jacobian norm:
+Penalize sensitivity of latent biểu diễn (representation / 표현) to small đầu vào (input / 입력) changes, e.g. encoder Jacobian norm:
 
 \[
 \|\partial f(x)/\partial x\|_F^2
 \]
 
-encouraging locally stable representation.
+encouraging locally stable biểu diễn (representation / 표현).
 
 ## Autoencoder for Anomaly Detection
 
-Train mostly normal data. If normal patterns reconstruct well, anomaly may have high reconstruction error:
+Train mostly normal dữ liệu (data / 데이터). If normal patterns reconstruct well, anomaly may have high reconstruction lỗi (error / 오류):
 
 \[
 s(x)=\|x-\hat x\|
 \]
 
-But high-capacity autoencoder can reconstruct anomalies too, and some normal rare patterns reconstruct poorly. Score needs validation/thresholding.
+But high-capacity autoencoder can reconstruct anomalies too, and some normal rare patterns reconstruct poorly. Score needs kiểm tra hợp lệ (validation / 검증)/thresholding.
 
 ## Latent Interpolation
 
-If latent space is smooth, interpolate:
+If latent không gian (space / 공간) is smooth, interpolate:
 
 \[
 z(\alpha)=(1-\alpha)z_1+\alpha z_2
@@ -112,15 +115,15 @@ z(\alpha)=(1-\alpha)z_1+\alpha z_2
 
 and decode intermediate samples.
 
-Vanilla autoencoder does not guarantee latent regions between training codes decode realistically. This motivates probabilistic regularization in VAE.
+Vanilla autoencoder does not guarantee latent regions between huấn luyện (training / 학습) codes decode realistically. This motivates probabilistic regularization in VAE.
 
-## Sequence Autoencoder
+## Chuỗi (sequence / 시퀀스) Autoencoder
 
-Encoder can be RNN/Transformer; decoder reconstructs sequence. Latent bottleneck may summarize sequence.
+Encoder can be RNN/Transformer; decoder reconstructs chuỗi (sequence / 시퀀스). Latent bottleneck may summarize chuỗi (sequence / 시퀀스).
 
-But token reconstruction with powerful autoregressive decoder risks **posterior/latent ignoring**: decoder can predict from context without using latent much.
+But đơn vị từ (token / 토큰) reconstruction with powerful autoregressive decoder risks **posterior/latent ignoring**: decoder can predict from ngữ cảnh (context / 맥락) without using latent much.
 
-Objective/architecture must ensure latent matters.
+Mục tiêu (objective / 목표)/kiến trúc (architecture / 아키텍처) must ensure latent matters.
 
 ## Convolutional Autoencoder
 
@@ -132,77 +135,79 @@ Transposed conv can produce checkerboard artifacts if stride/kernel interplay po
 
 PCA:
 
-- linear;
+- tuyến tính (linear / 선형);
 - closed-form/SVD;
-- globally optimal for linear squared reconstruction;
+- globally optimal for tuyến tính (linear / 선형) squared reconstruction;
 - components orthogonal.
 
 Autoencoder:
 
 - nonlinear;
 - trained iteratively;
-- flexible architecture/loss;
+- flexible kiến trúc (architecture / 아키텍처)/mất mát (loss / 손실);
 - latent dimensions not necessarily identifiable/orthogonal.
 
-Use PCA when linear structure sufficient and interpretability/stability matter; autoencoder when nonlinear representation justified by data/scale.
+Use PCA when tuyến tính (linear / 선형) cấu trúc (structure / 구조) sufficient and interpretability/stability matter; autoencoder when nonlinear biểu diễn (representation / 표현) justified by dữ liệu (data / 데이터)/quy mô (scale / 규모).
 
 ## Autoencoder vs Compression Codec
 
-A learned autoencoder can act compression system, but practical compression also requires quantization and entropy coding.
+A learned autoencoder can act compression hệ thống (system / 시스템), but practical compression also requires quantization and entropy coding.
 
-Continuous latent floats are not automatically compressed bitstream. Rate-distortion objective adds bitrate term:
+Continuous latent floats are not automatically compressed bitstream. Rate-distortion mục tiêu (objective / 목표) adds bitrate term:
 
 \[
-L=Distortion+\lambda Rate
+L=Distortion+\lambda tỷ lệ (rate / 비율)
 \]
 
-This connects representation learning with Information Theory.
+This connects biểu diễn (representation / 표현) học tập (learning / 학습) with thông tin (information / 정보) lý thuyết (theory / 이론).
 
 ## Bottleneck is not only dimensional
 
-Even if latent dimension large, constraints can create information bottleneck:
+Even if latent dimension large, các ràng buộc (constraints / 제약조건들) can create thông tin (information / 정보) bottleneck:
 
 - sparsity;
 - noise;
 - quantization;
 - low precision;
-- limited channel capacity;
+- limited channel sức chứa (capacity / 용량);
 - probabilistic prior.
 
-VAE uses distribution regularization rather than only dimension.
+VAE uses phân phối (distribution / 분포) regularization rather than only dimension.
 
-## Autoencoders and Foundation Models
+## Autoencoders and Foundation các mô hình (models / 모델들)
 
-Masked autoencoders reconstruct missing image patches. BERT-style masking reconstructs masked tokens/distributions. Denoising seq2seq corrupts text and reconstructs original.
+Masked autoencoders reconstruct missing ảnh (image / 이미지) patches. BERT-style masking reconstructs masked tokens/distributions. Denoising seq2seq corrupts văn bản (text / 텍스트) and reconstructs original.
 
-These are not identical to classic autoencoder, but share principle: **self-supervised learning through information removal/corruption and reconstruction**.
+These are not identical to classic autoencoder, but share principle: **self-supervised học tập (learning / 학습) through thông tin (information / 정보) removal/corruption and reconstruction**.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Autoencoder asks: “Nếu buộc dữ liệu đi qua một constrained channel, representation nào giữ đủ structure để reconstruct?”
+> Autoencoder asks: “Nếu buộc dữ liệu đi qua một constrained channel, biểu diễn (representation / 표현) nào giữ đủ cấu trúc (structure / 구조) để reconstruct?”
 
-Constraint defines what abstraction emerges.
+Ràng buộc (constraint / 제약조건) defines what lớp trừu tượng (abstraction / 추상화) emerges.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Latent smaller means representation meaningful”
+### “Latent smaller means biểu diễn (representation / 표현) meaningful”
 
-Compression alone không guarantee semantics.
+Compression alone không guarantee ngữ nghĩa (semantics / 의미론).
 
-### “Low reconstruction error means good downstream features”
+### “Low reconstruction lỗi (error / 오류) means good downstream features”
 
-Model may preserve nuisance detail irrelevant task.
+Mô hình (model / 모델) may preserve nuisance detail irrelevant tác vụ (task / 작업).
 
 ### “Autoencoder generates new realistic samples automatically”
 
-Vanilla latent distribution is irregular; arbitrary sampled `z` may decode nonsense.
+Vanilla latent phân phối (distribution / 분포) is irregular; arbitrary sampled `z` may decode nonsense.
 
-### “Autoencoder compression = file compression”
+### “Autoencoder compression = tệp (file / 파일) compression”
 
-Need quantization/entropy coding and rate model for actual bit-efficient codec.
+Need quantization/entropy coding and tỷ lệ (rate / 비율) mô hình (model / 모델) for actual bit-efficient codec.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Autoencoder extends [Representation Learning](../05_neural_networks/08_representation_learning.md) and [Dimensionality Reduction](../04_machine_learning/12_dimensionality_reduction.md).
 
-Xem tiếp: [Variational Autoencoders](./07_variational_autoencoders.md), where latent space becomes probabilistic and sampleable.
+Xem tiếp: [Variational Autoencoders](./07_variational_autoencoders.md), where latent không gian (space / 공간) becomes probabilistic and sampleable.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

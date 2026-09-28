@@ -1,6 +1,9 @@
 # AI Testing và Behavioral Evaluation
 
-Traditional software testing kiểm tra deterministic contracts tương đối rõ. AI system lại có stochastic output, fuzzy correctness, learned behavior và distribution-dependent failure. Vì vậy **AI testing** cần kết hợp unit/integration tests truyền thống với behavioral evaluation trên representative tasks.
+> **Mạch đọc:** Đặt **AI Testing và Behavioral Evaluation** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Pyramid mở rộng cho AI** sang **đơn vị (unit / 단위) Tests vẫn cần**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Traditional software testing kiểm tra deterministic contracts tương đối rõ. AI hệ thống (system / 시스템) lại có stochastic đầu ra (output / 출력), fuzzy tính đúng đắn (correctness / 정확성), learned hành vi (behavior / 동작) và distribution-dependent thất bại (failure / 실패). Vì vậy **AI testing** cần kết hợp đơn vị (unit / 단위)/tích hợp (integration / 통합) tests truyền thống với behavioral evaluation trên representative tasks.
 
 ## Pyramid mở rộng cho AI
 
@@ -14,24 +17,24 @@ unit tests
 → online monitoring
 ```
 
-Không layer nào thay thế hoàn toàn layer khác.
+Không tầng (layer / 계층) nào thay thế hoàn toàn tầng (layer / 계층) khác.
 
-## Unit Tests vẫn cần
+## Đơn vị (unit / 단위) Tests vẫn cần
 
-Test deterministic code:
+Kiểm thử (test / 테스트) deterministic mã (code / 코드):
 
 - preprocessing;
-- feature calculations;
+- tính năng (feature / 기능) calculations;
 - parser;
-- tool schemas;
+- công cụ (tool / 도구) schemas;
 - authorization;
 - postprocessing;
-- cache keys;
-- data transforms.
+- bộ nhớ đệm (cache / 캐시) keys;
+- dữ liệu (data / 데이터) transforms.
 
-Đừng dùng LLM judge để test thứ có thể assert bằng code.
+Đừng dùng LLM judge để kiểm thử (test / 테스트) thứ có thể assert bằng mã (code / 코드).
 
-## Data Tests
+## Dữ liệu (data / 데이터) Tests
 
 Kiểm tra:
 
@@ -45,11 +48,11 @@ point-in-time semantics
 label consistency
 ```
 
-Model tests vô nghĩa nếu input pipeline sai.
+Mô hình (model / 모델) tests vô nghĩa nếu đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인) sai.
 
 ## Behavioral Tests
 
-Behavioral test định nghĩa input category + expected property.
+Behavioral kiểm thử (test / 테스트) định nghĩa đầu vào (input / 입력) category + expected thuộc tính (property / 속성).
 
 Ví dụ customer-support LLM:
 
@@ -60,7 +63,7 @@ ambiguous request → ask clarification
 unsupported claim → abstain / qualify
 ```
 
-Expected behavior có thể là property, không exact string.
+Expected hành vi (behavior / 동작) có thể là thuộc tính (property / 속성), không chính xác (exact / 정확한) string.
 
 ## Invariance Tests
 
@@ -68,24 +71,24 @@ Meaning-preserving transformation không nên đổi answer quá nhiều:
 
 - paraphrase;
 - harmless formatting;
-- case variation;
-- irrelevant metadata.
+- trường hợp (case / 사례) variation;
+- irrelevant siêu dữ liệu (metadata / 메타데이터).
 
-Nếu output thay mạnh, expose brittleness.
+Nếu đầu ra (output / 출력) thay mạnh, expose brittleness.
 
 ## Directional Expectation Tests
 
-Một feature tăng nên prediction move expected direction trong domain-specific case.
+Một tính năng (feature / 기능) tăng nên prediction move expected direction trong domain-specific trường hợp (case / 사례).
 
 Không áp dụng nếu relationship not monotonic.
 
 ## Minimum Functionality Tests
 
-Simple obvious cases model should pass. Nếu fail MFT, sophisticated benchmark score ít meaningful.
+Simple obvious cases mô hình (model / 모델) should pass. Nếu thất bại (fail / 실패) MFT, sophisticated benchmark score ít meaningful.
 
 ## Metamorphic Testing
 
-Khi không có exact oracle, define relation giữa outputs under input transformations.
+Khi không có chính xác (exact / 정확한) oracle, define quan hệ (relation / 관계) giữa outputs under đầu vào (input / 입력) transformations.
 
 Examples:
 
@@ -97,34 +100,34 @@ translate round-trip → core meaning preserved
 
 ## Property-Based Testing
 
-Generate many inputs satisfying constraints và test invariants.
+Generate many inputs satisfying các ràng buộc (constraints / 제약조건들) và kiểm thử (test / 테스트) invariants.
 
-Useful for structured tool arguments, parsers and numeric models.
+Useful for structured công cụ (tool / 도구) arguments, parsers and numeric các mô hình (models / 모델들).
 
-## Golden Test Cases
+## Golden kiểm thử (test / 테스트) Cases
 
-Curated regression cases từ production incidents nên trở thành permanent tests.
+Curated regression cases từ môi trường vận hành (production / 운영 환경) incidents nên trở thành permanent tests.
 
-Each case nên include:
+Each trường hợp (case / 사례) nên include:
 
 - reason for inclusion;
-- expected property;
+- expected thuộc tính (property / 속성);
 - severity;
-- owner/domain.
+- đơn vị sở hữu (owner / 오너)/lĩnh vực (domain / 도메인).
 
 ## Fuzzing
 
-Generate malformed, extreme hoặc unexpected inputs để find crashes/schema errors/resource issues.
+Generate malformed, extreme hoặc unexpected inputs để find crashes/lược đồ (schema / 스키마) errors/tài nguyên (resource / 자원) issues.
 
-AI endpoints also need input-size/resource fuzzing to test denial-of-service resistance.
+AI endpoints also need input-size/tài nguyên (resource / 자원) fuzzing to kiểm thử (test / 테스트) denial-of-service resistance.
 
 ## Stochastic Outputs
 
-Generative model có variance. Tests có thể:
+Generative mô hình (model / 모델) có variance. Tests có thể:
 
 - fix temperature/seed when possible;
 - run multiple samples;
-- assert success rate threshold;
+- assert success tỷ lệ (rate / 비율) threshold;
 - use deterministic validators.
 
 Avoid flaky exact-string assertions.
@@ -145,23 +148,23 @@ model-based judge
 
 Prefer stronger deterministic/executable oracle when available.
 
-## Code Generation Testing
+## Mã (code / 코드) Generation Testing
 
-Best evaluation often execute generated code against tests rather than judge text similarity.
+Best evaluation often execute generated mã (code / 코드) against tests rather than judge văn bản (text / 텍스트) similarity.
 
-Security sandboxing required for untrusted code.
+Bảo mật (security / 보안) sandboxing required for untrusted mã (code / 코드).
 
-## Tool/Agent Testing
+## Công cụ (tool / 도구)/tác nhân (agent / 에이전트) Testing
 
-Test trajectory constraints:
+Kiểm thử (test / 테스트) trajectory các ràng buộc (constraints / 제약조건들):
 
 - allowed tools only;
 - no duplicate side effects;
-- correct order;
-- stop condition;
-- retry bounds;
-- state persistence;
-- rollback/compensation.
+- correct thứ tự (order / 순서);
+- stop điều kiện (condition / 조건);
+- thử lại (retry / 재시도) bounds;
+- trạng thái (state / 상태) persistence;
+- quay lui (rollback / 롤백)/compensation.
 
 Final answer alone may hide unsafe trajectory.
 
@@ -178,61 +181,63 @@ answer groundedness
 citation correctness
 ```
 
-End-to-end failure should be diagnosable to stage.
+End-to-end thất bại (failure / 실패) should be diagnosable to stage.
 
 ## Non-Functional Tests
 
-AI production also needs:
+AI môi trường vận hành (production / 운영 환경) also needs:
 
-- latency load test;
-- memory/OOM test;
-- concurrency;
-- cost budget;
+- độ trễ (latency / 지연 시간) kiểm thử tải (load test / 부하 테스트);
+- bộ nhớ (memory / 메모리)/OOM kiểm thử (test / 테스트);
+- tính đồng thời (concurrency / 동시성);
+- chi phí (cost / 비용) ngân sách (budget / 예산);
 - failover;
 - cancellation;
 - cold start.
 
-## Load Testing
+## Tải (load / 로드) Testing
 
-Traffic distribution should include prompt/input length distribution, not only QPS. LLM request cost varies strongly by tokens.
+Traffic phân phối (distribution / 분포) should include prompt/đầu vào (input / 입력) length phân phối (distribution / 분포), not only QPS. LLM yêu cầu (request / 요청) chi phí (cost / 비용) varies strongly by tokens.
 
 ## Chaos Testing
 
-Inject tool/API timeout, retrieval outage, worker loss hoặc slow model to verify fallback/recovery.
+Inject công cụ (tool / 도구)/API hết thời gian chờ (timeout / 타임아웃), retrieval outage, worker mất mát (loss / 손실) hoặc slow mô hình (model / 모델) to verify fallback/khôi phục (recovery / 복구).
 
 ## Regression Suite
 
-Every major incident/bug should become regression test if feasible. Suite grows from real failures, not only imagined happy paths.
+Every major sự cố (incident / 인시던트)/bug should become regression kiểm thử (test / 테스트) if feasible. Suite grows from real failures, not only imagined happy paths.
 
-## Test Data Privacy
+## Kiểm thử (test / 테스트) dữ liệu (data / 데이터) Privacy
 
-Do not copy raw production sensitive data into permanent test fixtures without governance. Use redacted/synthetic representative cases when possible.
+Do not bản sao (copy / 복사) raw môi trường vận hành (production / 운영 환경) sensitive dữ liệu (data / 데이터) into permanent kiểm thử (test / 테스트) fixtures without quản trị (governance / 거버넌스). Use redacted/synthetic representative cases when possible.
 
-## Release Gate
+## Bản phát hành (release / 릴리스) Gate
 
-Tests/evals can define blocking vs informational gates. High-severity safety regressions should block release even if average quality improves.
+Tests/evals can define blocking vs informational gates. High-severity an toàn (safety / 안전) regressions should khối (block / 블록) bản phát hành (release / 릴리스) even if average chất lượng (quality / 품질) improves.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Software tests validate code contracts.
 AI behavioral tests validate learned/system behavior under representative situations.
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “LLM output nondeterministic nên không test được”
+### “LLM đầu ra (output / 출력) nondeterministic nên không kiểm thử (test / 테스트) được”
 
-Test properties, validators and success probabilities.
+Kiểm thử (test / 테스트) properties, validators and success probabilities.
 
-### “Benchmark chính là test suite”
+### “Benchmark chính là bộ kiểm thử (test suite / 테스트 스위트)”
 
-Benchmark thường không cover integration, permissions, latency hoặc known product failure modes.
+Benchmark thường không cover tích hợp (integration / 통합), permissions, độ trễ (latency / 지연 시간) hoặc known sản phẩm (product / 제품) thất bại (failure / 실패) modes.
 
-### “Unit tests không quan trọng trong AI”
+### “đơn vị (unit / 단위) tests không quan trọng trong AI”
 
-Deterministic infrastructure bugs often cause more production failures than model math.
+Deterministic hạ tầng (infrastructure / 인프라) bugs often cause more môi trường vận hành (production / 운영 환경) failures than mô hình (model / 모델) math.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Metrics & Benchmarks](./01_metrics_benchmarks_and_test_design.md), [Robustness](./03_robustness_and_distribution_shift.md), [Red Teaming](./06_red_teaming_and_adversarial_evaluation.md), [CI/CD/CT](../16_mlops_and_llmops/04_ci_cd_ct_for_ai.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

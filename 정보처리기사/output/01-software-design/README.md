@@ -1,5 +1,7 @@
 # Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)
 
+> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng lesson theo chủ đề để đào sâu từng mắt xích. Mỗi lesson phải được nối lại với tiêu chí phân biệt và câu hỏi của lesson kế tiếp, không học như danh sách thuật ngữ rời.
+
 ## Bài học
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)

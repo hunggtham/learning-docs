@@ -1,5 +1,8 @@
 # Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)
 
+> **Mạch đọc:** Đọc **Thập niên 1970: công nghiệp nặng–hóa chất, tích hợp dọc và sự mở rộng của chaebol (HCI Drive / 중화학공업화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao công nghiệp nhẹ không thể là điểm dừng?** sang **HCI: chính sách công nghiệp ở quy mô lớn hơn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nếu thập niên 1960 chứng minh Hàn Quốc có thể xuất khẩu hàng công nghiệp, thì thập niên 1970 đặt ra bài toán khó hơn: **làm sao rời khỏi lợi thế lương thấp và xây các ngành có chi phí cố định, độ phức tạp kỹ thuật và yêu cầu công nghệ lớn hơn nhiều?**
 
 Đây là thời kỳ thúc đẩy **công nghiệp nặng và hóa chất (Heavy and Chemical Industries, HCI / 중화학공업)**, đồng thời là lúc nhiều tập đoàn kinh doanh bắt đầu có kiến trúc gần hơn với hình dạng hiện nay.
@@ -34,7 +37,7 @@ Một doanh nghiệp tư nhân có thể không dám đầu tư nếu không tin
 
 Kế hoạch do nhà nước dẫn dắt có thể giảm vấn đề này bằng cách đồng bộ hạ tầng, tài chính và công suất công nghiệp. Nhưng chính quyền lực phối hợp tập trung cũng tạo rủi ro đầu tư quá mức nếu giả định ban đầu sai.
 
-> **Mental Model:** chính sách công nghiệp giải quyết vấn đề phối hợp bằng cách tập trung quyết định; chính sự tập trung đó lại tạo rủi ro chọn sai ngành và phân bổ vốn sai.
+> **mô hình tư duy (mental model / 사고 모델):** chính sách công nghiệp giải quyết vấn đề phối hợp bằng cách tập trung quyết định; chính sự tập trung đó lại tạo rủi ro chọn sai ngành và phân bổ vốn sai.
 
 ## POSCO: thép thượng nguồn như một nền tảng công nghiệp
 
@@ -152,10 +155,12 @@ Không nên đánh giá giai đoạn này chỉ bằng hai nhãn “thành công
 
 > Những năng lực nào được tạo ra, chi phí nào phát sinh và cơ chế nào phải được sửa ở giai đoạn sau?
 
-## Connection — Tại sao thập niên 1980 cần ổn định và tự do hóa?
+## Liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?
 
 Sau một giai đoạn đầu tư lớn, nền kinh tế bước vào thập niên 1980 với cơ sở công nghiệp sâu hơn nhưng cũng có lạm phát, nợ, công suất và mức tập trung kinh tế cao hơn.
 
 Chương tiếp theo, [thập niên 1980: ổn định, tự do hóa và dân chủ hóa](./04_1980s_stabilization_liberalization_and_democratization.md), giải thích cách Hàn Quốc bắt đầu chuyển từ mô hình huy động nguồn lực tập trung sang hệ thống có nhiều kỷ luật thị trường hơn.
 
-> **Mental Model cuối:** HCI là quá trình dùng vốn, tín dụng và phối hợp để xây những năng lực thượng nguồn mà thị trường non trẻ khó tự hình thành nhanh. Nó tạo nền công nghiệp hiện đại của Hàn Quốc, đồng thời làm chaebol lớn hơn, đòn bẩy cao hơn và đặt ra các vấn đề quản trị–phân bổ vốn cho giai đoạn sau.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** HCI là quá trình dùng vốn, tín dụng và phối hợp để xây những năng lực thượng nguồn mà thị trường non trẻ khó tự hình thành nhanh. Nó tạo nền công nghiệp hiện đại của Hàn Quốc, đồng thời làm chaebol lớn hơn, đòn bẩy cao hơn và đặt ra các vấn đề quản trị–phân bổ vốn cho giai đoạn sau.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) — Tại sao thập niên 1980 cần ổn định và tự do hóa?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

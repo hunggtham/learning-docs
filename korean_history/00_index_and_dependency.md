@@ -1,12 +1,18 @@
-# Mục lục và Knowledge Dependency — Lịch sử Hàn Quốc
+# Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — Lịch sử Hàn Quốc
+
+> **Mạch đọc:** Đặt **Mục lục và kiến thức (knowledge / 지식) phụ thuộc (dependency / 의존성) — Lịch sử Hàn Quốc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Quy ước tên riêng Việt – Hàn – Anh** sang **Bản đồ toàn bộ thư viện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 ## Quy ước tên riêng Việt – Hàn – Anh
 
-Trong toàn bộ library, tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.
+Trong toàn bộ thư viện (library / 라이브러리), tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.
 
-Với tên lịch sử có Hán tự và đã có cách đọc Hán–Việt hữu ích, tài liệu ưu tiên dạng Việt hoá để người đọc hiểu nghĩa và liên hệ với sử liệu Việt Nam/Đông Á. Với tên người và địa danh hiện đại mà tiếng Việt không có tên dịch ổn định, tài liệu giữ romanization quốc tế làm tên chính, đồng thời ghi nguyên bản tiếng Hàn; không ép dịch Hán–Việt nếu cách gọi đó khiến tên trở nên xa lạ hoặc dễ gây nhầm. Tên file vẫn dùng tiếng Anh/romanization để URL, Git và cross-link ổn định.
+Với tên lịch sử có Hán tự và đã có cách đọc Hán–Việt hữu ích, tài liệu ưu tiên dạng Việt hoá để người đọc hiểu nghĩa và liên hệ với sử liệu Việt Nam/Đông Á. Với tên người và địa danh hiện đại mà tiếng Việt không có tên dịch ổn định, tài liệu giữ romanization quốc tế làm tên chính, đồng thời ghi nguyên bản tiếng Hàn; không ép dịch Hán–Việt nếu cách gọi đó khiến tên trở nên xa lạ hoặc dễ gây nhầm. Tên tệp (file / 파일) vẫn dùng tiếng Anh/romanization để URL, Git và cross-link ổn định.
 
 Các tên có thể mang nhiều convention khác nhau trong tiếng Việt sẽ được ghi chú ở glossary. Mục tiêu của quy ước này không phải thay thế tên Hàn Quốc bằng tên Hán–Việt, mà giúp người đọc nhận ra rằng **Cung Cảnh Phúc – Gyeongbokgung – 경복궁** là cùng một thực thể.
+
+
+> **Chuyển mạch:** Từ **Quy ước tên riêng Việt – Hàn – Anh**, ta sang **Bản đồ toàn bộ thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ toàn bộ thư viện
 
@@ -72,13 +78,19 @@ Các trục xuyên thời gian:
 01 → 29 Historiography / Collective Memory / Public History
 ```
 
-## Vì sao dependency này không phải Beginner → Advanced
 
-Ta cần biết Tam Quốc trước khi hiểu vì sao Goryeo tự đặt mình trong một legacy cụ thể; cần biết Goryeo trước khi hiểu những gì Joseon thay đổi; cần hiểu Joseon trước khi hiểu vì sao các cải cách cuối thế kỷ XIX đụng tới land, status, examination và ritual; cần hiểu colonial period trước khi hiểu division; và cần hiểu chiến tranh trước khi hiểu security state, nghĩa vụ quân sự và development model sau 1953.
+> **Chuyển mạch:** Từ **Bản đồ toàn bộ thư viện**, ta sang **Vì sao phụ thuộc (dependency / 의존성) này không phải Beginner → Advanced** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Đây là dependency về **causal context (bối cảnh nhân quả / 인과적 맥락)**, không phải difficulty level.
+## Vì sao phụ thuộc (dependency / 의존성) này không phải Beginner → Advanced
 
-## Mermaid knowledge graph
+Ta cần biết Tam Quốc trước khi hiểu vì sao Goryeo tự đặt mình trong một legacy cụ thể; cần biết Goryeo trước khi hiểu những gì Joseon thay đổi; cần hiểu Joseon trước khi hiểu vì sao các cải cách cuối thế kỷ XIX đụng tới land, status, examination và ritual; cần hiểu colonial period trước khi hiểu division; và cần hiểu chiến tranh trước khi hiểu bảo mật (security / 보안) trạng thái (state / 상태), nghĩa vụ quân sự và development mô hình (model / 모델) sau 1953.
+
+Đây là phụ thuộc (dependency / 의존성) về **nhân quả (causal / 인과적) ngữ cảnh (context / 맥락)**, không phải difficulty mức (level / 수준).
+
+
+> **Chuyển mạch:** Từ **Vì sao phụ thuộc (dependency / 의존성) này không phải Beginner → Advanced**, ta sang **Mermaid kiến thức (knowledge / 지식) đồ thị (graph / 그래프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mermaid kiến thức (knowledge / 지식) đồ thị (graph / 그래프)
 
 ```mermaid
 graph TD
@@ -110,10 +122,18 @@ graph TD
     R --> Y
 ```
 
-## Mental Model chung
 
-> Hãy đọc mỗi giai đoạn như một hệ thống có “state”: population, territory, institutions, technology, resource flows, status rules và beliefs. Một sự kiện lớn tạo shock, nhưng state mới luôn kế thừa một phần data và constraint của state cũ. Vì vậy lịch sử có cả rupture lẫn continuity.
+> **Chuyển mạch:** Từ **Mermaid kiến thức (knowledge / 지식) đồ thị (graph / 그래프)**, ta sang **mô hình tư duy (mental model / 사고 모델) chung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델) chung
+
+> Hãy đọc mỗi giai đoạn như một hệ thống có “trạng thái (state / 상태)”: population, territory, institutions, technology, tài nguyên (resource / 자원) flows, status rules và beliefs. Một sự kiện lớn tạo shock, nhưng trạng thái (state / 상태) mới luôn kế thừa một phần dữ liệu (data / 데이터) và ràng buộc (constraint / 제약조건) của trạng thái (state / 상태) cũ. Vì vậy lịch sử có cả rupture lẫn continuity.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) chung**, ta sang **Liên kết với bộ Văn hoá Hàn Quốc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Liên kết với bộ Văn hoá Hàn Quốc
 
-Bộ này tập trung vào **historical process**. Khi cần giải thích sâu về `유교`, `눈치`, `정`, `회식`, `아파트`, `재벌`, `한류` hoặc đời sống đương đại, xem thư mục anh em [`../korean_culture/`](../korean_culture/).
+Bộ này tập trung vào **historical tiến trình (process / 프로세스)**. Khi cần giải thích sâu về `유교`, `눈치`, `정`, `회식`, `아파트`, `재벌`, `한류` hoặc đời sống đương đại, xem thư mục anh em [`../korean_culture/`](../korean_culture/).
+
+> **Bàn giao:** Sau **Liên kết với bộ Văn hoá Hàn Quốc**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 how to read korean history](./01_how_to_read_korean_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

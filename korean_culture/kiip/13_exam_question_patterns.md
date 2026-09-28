@@ -1,6 +1,8 @@
 # 13. Exam Question Patterns — dạng câu hỏi và bẫy thường gặp
 
-File này không dự đoán đề thi. Mục tiêu là biến nội dung 8 domain thành các **pattern kiểm tra** để bạn biết cách tự hỏi lại kiến thức.
+> **Mạch đọc:** Đặt **13. Exam Question Patterns — dạng câu hỏi và bẫy thường gặp** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Matching — nối khái niệm với chức năng** sang **2. Contrast — chọn điểm khác biệt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Tệp (file / 파일) này không dự đoán đề thi. Mục tiêu là biến nội dung 8 lĩnh vực (domain / 도메인) thành các **mẫu (pattern / 패턴) kiểm tra** để bạn biết cách tự hỏi lại kiến thức.
 
 ## 1. Matching — nối khái niệm với chức năng
 
@@ -29,7 +31,7 @@ Các cặp phải luyện:
 
 Cách học tốt nhất là viết một câu `A는 …, B는 …` thay vì thuộc hai định nghĩa rời.
 
-## 3. Sequence — hỏi thứ tự
+## 3. chuỗi (sequence / 시퀀스) — hỏi thứ tự
 
 Các chuỗi high-yield:
 
@@ -93,12 +95,12 @@ Ví dụ:
 - fire/emergency → `119`
 - crime/police → `112`
 - immigration/visa inquiry → `1345`
-- housing contract → `등기부등본`, `전입신고`, `확정일자`
+- housing đặc tả hợp đồng (contract / 계약) → `등기부등본`, `전입신고`, `확정일자`
 - financial scam → dừng, xác minh qua kênh chính thức, không cài app/link lạ
 
 Ở dạng này, đề không hỏi định nghĩa mà hỏi **hành động phù hợp**.
 
-## 9. Cause–effect question
+## 9. Cause–tác động (effect / 효과) question
 
 Ví dụ:
 
@@ -117,15 +119,15 @@ Nhiều option không hoàn toàn sai, nhưng chỉ một option mô tả **đú
 
 Ví dụ `한류` không chỉ là “K-pop”. Câu đầy đủ hơn là sự lan rộng quốc tế của nội dung/sản phẩm văn hóa Hàn, trong đó K-pop là một phần.
 
-## 11. Source vs current trap
+## 11. nguồn (source / 소스) vs hiện tại (current / 현재) trap
 
-Một infographic cũ có thể chứa fact từng đúng nhưng đã thay đổi. Trong bộ note này, những điểm như `예금자보호 5천만원` hay `법정 최고금리 24%` đã được tách sang file correction.
+Một infographic cũ có thể chứa fact từng đúng nhưng đã thay đổi. Trong bộ ghi chú (note / 노트) này, những điểm như `예금자보호 5천만원` hay `법정 최고금리 24%` đã được tách sang tệp (file / 파일) correction.
 
-Rule:
+Quy tắc (rule / 규칙):
 
 `source를 이해한다 → current fact를 따로 확인한다 → 둘을 섞지 않는다`.
 
-## 12. Oral pattern
+## 12. Oral mẫu (pattern / 패턴)
 
 Khi gặp câu hỏi nói, tránh trả lời chỉ một danh từ.
 
@@ -137,11 +139,11 @@ Hãy nói:
 
 `국회는 국민의 대표기관으로 법률을 제정하고 예산을 심의합니다.`
 
-Schema:
+Lược đồ (schema / 스키마):
 
 `정의 → 기능 → 예시/비교`.
 
-## 13. 귀화용 심화 pattern
+## 13. 귀화용 심화 mẫu (pattern / 패턴)
 
 Câu 심화 thường có giá trị cao khi bạn hiểu **quan hệ giữa khái niệm**, ví dụ:
 
@@ -151,4 +153,6 @@ Câu 심화 thường có giá trị cao khi bạn hiểu **quan hệ giữa kh�
 `헌법 ↔ 국가기관`  
 `정부수립 ↔ 분단·전쟁·민주화`.
 
-Không nên chỉ học list từ; cần giải thích 2~4 câu.
+Không nên chỉ học danh sách (list / 목록) từ; cần giải thích 2~4 câu.
+
+> **Bàn giao:** Sau **13. 귀화용 심화 mẫu (pattern / 패턴)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

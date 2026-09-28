@@ -1,145 +1,150 @@
 # Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên
 
+> **Mạch đọc:** Đặt **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thesis không gian** sang **Nền địa chất cổ và relief tương đối thấp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Thesis không gian
 
 Australia là một quốc gia có quy mô lục địa nhưng phần lớn dân cư và chức năng kinh tế tập trung trên một số dải ven biển. Cấu trúc này không thể giải thích chỉ bằng câu “nội địa là sa mạc”. Nó là kết quả của nhiều lớp chồng lên nhau:
 
-**nền lục địa cổ + khí hậu khô và biến động + nguồn nước không đều → không gian định cư tập trung → các đại đô thị ven biển → mỏ/nông nghiệp ở hinterland → hành lang rail–road–port → thương mại mạnh với châu Á**.
+**nền lục địa cổ + khí hậu khô và biến động + nguồn nước không đều → không gian định cư tập trung → các đại đô thị ven biển → mỏ/nông nghiệp ở hinterland → hành lang rail–road–cổng (port / 포트) → thương mại mạnh với châu Á**.
 
-Australia là case rất tốt để học cách geography của tài nguyên và geography của dân cư có thể tách xa nhau nhưng vẫn được nối bởi infrastructure.
+Australia là trường hợp (case / 사례) rất tốt để học cách geography của tài nguyên và geography của dân cư có thể tách xa nhau nhưng vẫn được nối bởi hạ tầng (infrastructure / 인프라).
 
 ## Nền địa chất cổ và relief tương đối thấp
 
-Phần lớn Australia nằm trên nền lục địa cổ và ổn định hơn các active margin như Japan hay Indonesia. Địa hình trung bình tương đối thấp, nhưng không phải hoàn toàn bằng phẳng. Great Dividing Range tạo dải cao hơn ở phía đông; interior có plateau, basin và desert rộng.
+Phần lớn Australia nằm trên nền lục địa cổ và ổn định hơn các active margin như Japan hay Indonesia. Địa hình trung bình tương đối thấp, nhưng không phải hoàn toàn bằng phẳng. Great Dividing phạm vi (range / 범위) tạo dải cao hơn ở phía đông; interior có plateau, basin và desert rộng.
 
 Địa chất cổ tạo nhiều mineral deposit, trong khi relief thấp ở nhiều nơi làm một số corridor hạ tầng dễ xây hơn mountain belt rất trẻ. Tuy nhiên khoảng cách rất lớn và thiếu nước có thể quan trọng hơn slope.
 
-Vì vậy một vùng “địa hình thuận” vẫn có thể có effective distance cao nếu rất xa labor market, port hoặc water source.
+Vì vậy một vùng “địa hình thuận” vẫn có thể có effective distance cao nếu rất xa labor thị trường (market / 시장), cổng (port / 포트) hoặc water nguồn (source / 소스).
 
 ## Khí hậu: khô, biến động và khác biệt vùng rất lớn
 
 Phía bắc Australia mang tính nhiệt đới với wet–dry seasonality; interior chủ yếu arid/semi-arid; đông nam và tây nam ôn hòa hơn. East coast nhận ảnh hưởng của ocean và relief, còn interior chịu continentality và subtropical high-pressure regime mạnh hơn.
 
-Rainfall không chỉ thấp ở nhiều nơi mà còn biến động mạnh giữa các năm. ENSO, Indian Ocean variability và các circulation pattern khác có thể làm drought hoặc wet period thay đổi đáng kể.
+Rainfall không chỉ thấp ở nhiều nơi mà còn biến động mạnh giữa các năm. ENSO, Indian Ocean variability và các circulation mẫu (pattern / 패턴) khác có thể làm drought hoặc wet period thay đổi đáng kể.
 
-Điều này có nghĩa average rainfall là chỉ báo chưa đủ cho agriculture hay urban water planning. **Reliability và timing** quan trọng gần như tổng lượng mưa.
+Điều này có nghĩa average rainfall là chỉ báo chưa đủ cho agriculture hay urban water planning. **độ tin cậy (reliability / 신뢰성) và timing** quan trọng gần như tổng lượng mưa.
 
 ## Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái
 
-Murray–Darling Basin là một case kinh điển của basin-scale geography. Irrigation hỗ trợ agriculture có giá trị cao, nhưng water allocation phải cân giữa farm, town, ecosystem và downstream need.
+Murray–Darling Basin là một trường hợp (case / 사례) kinh điển của basin-scale geography. Irrigation hỗ trợ agriculture có giá trị cao, nhưng water allocation phải cân giữa farm, town, ecosystem và downstream need.
 
-Trong dry climate, evaporation loss có thể lớn. Reservoir và irrigation giúp ổn định production nhưng đồng thời tạo dependency vào storage, policy và inflow variability.
+Trong dry climate, evaporation mất mát (loss / 손실) có thể lớn. Reservoir và irrigation giúp ổn định môi trường vận hành (production / 운영 환경) nhưng đồng thời tạo phụ thuộc (dependency / 의존성) vào lưu trữ (storage / 저장소), chính sách (policy / 정책) và inflow variability.
 
 Nếu groundwater được dùng để bù surface-water shortage, áp lực có thể chuyển từ river stock sang aquifer stock. Đây là ứng dụng trực tiếp của [Water–Food–Energy Nexus](../../../04_global_systems/01_water_food_energy_nexus.md).
 
 ## Nội địa rộng không đồng nghĩa khả năng định cư cao
 
-Một map diện tích có thể tạo cảm giác Australia “còn rất nhiều đất để ở”, nhưng settlement suitability phụ thuộc water, climate, soil, distance và infrastructure.
+Một map diện tích có thể tạo cảm giác Australia “còn rất nhiều đất để ở”, nhưng settlement suitability phụ thuộc water, climate, soil, distance và hạ tầng (infrastructure / 인프라).
 
-Do đó population tập trung mạnh ở coastal metropolitan regions. Đây là ví dụ tốt của khái niệm **usable space**: diện tích vật lý và không gian có thể hỗ trợ dense settlement không phải cùng một đại lượng.
+Do đó population tập trung mạnh ở coastal metropolitan regions. Đây là ví dụ tốt của khái niệm **usable không gian (space / 공간)**: diện tích vật lý và không gian có thể hỗ trợ dense settlement không phải cùng một đại lượng.
 
 Nội địa có thể rất quan trọng về mining hoặc pastoralism dù population density thấp. Economic significance và population density không nhất thiết đi cùng nhau.
 
 ## Mạng đô thị ven biển
 
-Sydney, Melbourne, Brisbane, Perth và Adelaide là những node lớn về labor, service, finance, education, technology và logistics. Khoảng cách giữa các metropolitan region lớn tạo một network “đảo đô thị” trên cùng lục địa, nơi aviation và long-distance freight rất quan trọng.
+Sydney, Melbourne, Brisbane, Perth và Adelaide là những nút (node / 노드) lớn về labor, dịch vụ (service / 서비스), finance, education, technology và logistics. Khoảng cách giữa các metropolitan region lớn tạo một mạng (network / 네트워크) “đảo đô thị” trên cùng lục địa, nơi aviation và long-distance freight rất quan trọng.
 
-Các city này nằm gần coast nhưng không chỉ vì port history. Agglomeration, university, service market, infrastructure và path dependence củng cố concentration qua thời gian.
+Các city này nằm gần coast nhưng không chỉ vì cổng (port / 포트) lịch sử (history / 이력). Agglomeration, university, dịch vụ (service / 서비스) thị trường (market / 시장), hạ tầng (infrastructure / 인프라) và đường dẫn (path / 경로) dependence củng cố concentration qua thời gian.
 
-Vì vậy physical coast tạo opportunity ban đầu; urban network và institution duy trì lợi thế lâu dài.
+Vì vậy vật lý (physical / 물리적) coast tạo opportunity ban đầu; urban mạng (network / 네트워크) và institution duy trì lợi thế lâu dài.
 
 ## Mining geography: mỏ xa, cảng chuyên dụng và city điều phối
 
-Nhiều mỏ iron ore, coal, gas và mineral nằm xa các metropolitan core. Hệ điển hình là:
+Nhiều mỏ iron ore, coal, gas và mineral nằm xa các metropolitan cốt lõi (core / 핵심). Hệ điển hình là:
 
-**deposit → mine → power/water → dedicated rail/pipeline → specialized port → shipping → Asian processing/market**.
+**deposit → mine → power/water → dedicated rail/chuỗi xử lý (pipeline / 파이프라인) → specialized cổng (port / 포트) → shipping → Asian processing/thị trường (market / 시장)**.
 
-Một region khai thác có thể tạo export value rất lớn nhưng có population thấp vì production capital-intensive. Kỹ sư, finance, headquarters hoặc advanced services có thể tập trung ở Perth, Brisbane hoặc city khác thay vì ngay tại mine.
+Một region khai thác có thể tạo export giá trị (value / 값) rất lớn nhưng có population thấp vì môi trường vận hành (production / 운영 환경) capital-intensive. Kỹ sư, finance, headquarters hoặc advanced services có thể tập trung ở Perth, Brisbane hoặc city khác thay vì ngay tại mine.
 
-Đây là khác biệt giữa **material geography** và **command/service geography**.
+Đây là khác biệt giữa **material geography** và **command/dịch vụ (service / 서비스) geography**.
 
-## Tài nguyên không tự động tạo local development
+## Tài nguyên không tự động tạo cục bộ (local / 로컬) development
 
-Một mine-to-port corridor có thể hoạt động rất hiệu quả nhưng linkage với local economy vẫn hạn chế nếu supplier, processing và service chủ yếu nằm nơi khác.
+Một mine-to-port corridor có thể hoạt động rất hiệu quả nhưng linkage với cục bộ (local / 로컬) economy vẫn hạn chế nếu supplier, processing và dịch vụ (service / 서비스) chủ yếu nằm nơi khác.
 
-Vì vậy cần hỏi bao nhiêu value được giữ lại qua refining, engineering, maintenance, tax, training và local procurement. Export volume không phải proxy đầy đủ cho development.
+Vì vậy cần hỏi bao nhiêu giá trị (value / 값) được giữ lại qua refining, kỹ thuật (engineering / 엔지니어링), maintenance, tax, huấn luyện (training / 학습) và cục bộ (local / 로컬) procurement. Export volume không phải proxy đầy đủ cho development.
 
-Australia là case hữu ích để nối [Industry, Energy & Resources](../../../02_human_geography/07_industry_energy_resources.md) với [Development & Inequality](../../../02_human_geography/09_development_inequality.md).
+Australia là trường hợp (case / 사례) hữu ích để nối [Industry, Energy & Resources](../../../02_human_geography/07_industry_energy_resources.md) với [Development & Inequality](../../../02_human_geography/09_development_inequality.md).
 
-## Agriculture: đất rộng nhưng production phụ thuộc water và logistics
+## Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics
 
-Wheat, livestock, horticulture và các farming system khác phân bố theo rainfall, soil, irrigation và market access. Dryland farming phải quản lý rainfall variability; irrigated farming chuyển một phần risk sang reservoir, river và groundwater.
+Wheat, livestock, horticulture và các farming hệ thống (system / 시스템) khác phân bố theo rainfall, soil, irrigation và thị trường (market / 시장) truy cập (access / 접근). Dryland farming phải quản lý rainfall variability; irrigated farming chuyển một phần rủi ro (risk / 위험) sang reservoir, river và groundwater.
 
-Agricultural export còn phụ thuộc storage, rail/truck, port và cold chain. Một vùng có yield tốt nhưng transport bottleneck vẫn có thể mất competitiveness.
+Agricultural export còn phụ thuộc lưu trữ (storage / 저장소), rail/truck, cổng (port / 포트) và cold chuỗi (chain / 사슬). Một vùng có yield tốt nhưng vận chuyển (transport / 전송) bottleneck vẫn có thể mất competitiveness.
 
-Do đó agriculture phải được đọc như **farm + water + energy + logistics + port**.
+Do đó agriculture phải được đọc như **farm + water + năng lượng (energy / 에너지) + logistics + cổng (port / 포트)**.
 
 ## Indigenous geography và lớp lịch sử không gian
 
-Australia có các hệ tri thức, land relation và mobility của Aboriginal và Torres Strait Islander peoples tồn tại trước modern state geography rất lâu. Khi đọc resource project, conservation hay land management, cần nhận ra landscape không phải “empty space” trước khai thác hiện đại.
+Australia có các hệ tri thức, land quan hệ (relation / 관계) và mobility của Aboriginal và Torres Strait Islander peoples tồn tại trước hiện đại (modern / 현대적) trạng thái (state / 상태) geography rất lâu. Khi đọc tài nguyên (resource / 자원) dự án (project / 프로젝트), conservation hay land management, cần nhận ra landscape không phải “empty không gian (space / 공간)” trước khai thác hiện đại.
 
-Fire management, seasonal knowledge và cultural connection to Country cho thấy geography có cả lớp sinh thái, lịch sử và xã hội. Phân tích tốt không biến Indigenous geography thành footnote văn hóa, cũng không giả định mọi community có một pattern giống nhau.
+Fire management, seasonal kiến thức (knowledge / 지식) và cultural liên kết (connection / 연결) to Country cho thấy geography có cả lớp sinh thái, lịch sử và xã hội. Phân tích tốt không biến Indigenous geography thành footnote văn hóa, cũng không giả định mọi community có một mẫu (pattern / 패턴) giống nhau.
 
-## Bushfire: hazard gặp settlement pattern
+## Bushfire: hazard gặp settlement mẫu (pattern / 패턴)
 
-Bushfire risk không chỉ do heat. Nó phụ thuộc vegetation/fuel, drought, wind, ignition, terrain và nơi settlement mở rộng vào wildland–urban interface.
+Bushfire rủi ro (risk / 위험) không chỉ do heat. Nó phụ thuộc vegetation/fuel, drought, wind, ignition, terrain và nơi settlement mở rộng vào wildland–urban giao diện (interface / 인터페이스).
 
-Khi housing tiến sâu vào bushland, exposure tăng ngay cả nếu hazard regime không đổi. Ngược lại, climate condition có thể làm fire weather nghiêm trọng hơn trong một số period.
+Khi housing tiến sâu vào bushland, exposure tăng ngay cả nếu hazard regime không đổi. Ngược lại, climate điều kiện (condition / 조건) có thể làm fire weather nghiêm trọng hơn trong một số period.
 
-Risk analysis phải tách **hazard trend** khỏi **exposure trend**, đúng framework của [Natural Hazards & Risk](../../../01_physical_geography/07_natural_hazards_risk.md).
+Rủi ro (risk / 위험) phân tích (analysis / 분석) phải tách **hazard trend** khỏi **exposure trend**, đúng khung phần mềm (framework / 프레임워크) của [Natural Hazards & Risk](../../../01_physical_geography/07_natural_hazards_risk.md).
 
 ## Flood và cyclone: nước vẫn là hazard ở lục địa khô
 
-Một quốc gia khô không có nghĩa flood risk thấp. Rainfall cực đoan có thể gây river flood hoặc urban flood, đặc biệt khi precipitation tập trung trong thời gian ngắn.
+Một quốc gia khô không có nghĩa flood rủi ro (risk / 위험) thấp. Rainfall cực đoan có thể gây river flood hoặc urban flood, đặc biệt khi precipitation tập trung trong thời gian ngắn.
 
-Phía bắc và northeast chịu tropical cyclone risk cao hơn nhiều vùng southern coast. Damage đến từ wind, rainfall, storm surge và infrastructure exposure.
+Phía bắc và northeast chịu tropical cyclone rủi ro (risk / 위험) cao hơn nhiều vùng southern coast. Damage đến từ wind, rainfall, storm surge và hạ tầng (infrastructure / 인프라) exposure.
 
 Đây là ví dụ vì sao national climate label không đủ để mô tả hazard mosaic.
 
-## Năng lượng và mismatch giữa resource với demand
+## Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand
 
-Australia có renewable potential lớn ở nhiều vùng, nhưng demand tập trung trong city/industrial corridor. Solar/wind resource ở nơi xa load cần transmission, storage và grid reinforcement.
+Australia có renewable potential lớn ở nhiều vùng, nhưng demand tập trung trong city/industrial corridor. Solar/wind tài nguyên (resource / 자원) ở nơi xa tải (load / 로드) cần transmission, lưu trữ (storage / 저장소) và grid reinforcement.
 
-Đây là **spatial mismatch**: resource tốt nhất và nơi tiêu thụ lớn nhất không trùng nhau.
+Đây là **spatial mismatch**: tài nguyên (resource / 자원) tốt nhất và nơi tiêu thụ lớn nhất không trùng nhau.
 
-Energy transition vì thế là bài toán geography của grid, land, mineral supply, industrial skill và old energy region, không chỉ thay generator technology.
+Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) vì thế là bài toán geography của grid, land, mineral supply, industrial skill và old năng lượng (energy / 에너지) region, không chỉ thay generator technology.
 
 ## Cảng và vai trò của bờ biển trong economy
 
-Coastal cities và specialized export ports làm Australia gắn mạnh với maritime trade. Bulk commodity cần deep-water terminal và high-capacity hinterland corridor; container/service trade lại gắn với major metropolitan ports.
+Coastal cities và specialized export ports làm Australia gắn mạnh với maritime trade. Bulk commodity cần deep-water terminal và high-capacity hinterland corridor; bộ chứa (container / 컨테이너)/dịch vụ (service / 서비스) trade lại gắn với major metropolitan ports.
 
-Port không phải point độc lập. Mỗi port có hinterland, railway/highway, warehouse, processing node và shipping service riêng.
+Cổng (port / 포트) không phải điểm (point / 지점) độc lập. Mỗi cổng (port / 포트) có hinterland, railway/highway, warehouse, processing nút (node / 노드) và shipping dịch vụ (service / 서비스) riêng.
 
-Nếu inland corridor bị gián đoạn, natural harbor tốt vẫn không đủ duy trì flow.
+Nếu inland corridor bị gián đoạn, natural harbor tốt vẫn không đủ duy trì luồng (flow / 흐름).
 
 ## Australia–East Asia: complementary geography
 
-Australia có resource hinterland rộng và export corridor mạnh; East Asia có dense manufacturing, urban market và processing network. Hai cấu trúc tạo **complementarity** trong trade.
+Australia có tài nguyên (resource / 자원) hinterland rộng và export corridor mạnh; East Asia có dense manufacturing, urban thị trường (market / 시장) và processing mạng (network / 네트워크). Hai cấu trúc tạo **complementarity** trong trade.
 
-Đối với Korea, Japan, China và cả các manufacturing nodes Đông Nam Á như Vietnam, learning value nằm ở chain:
+Đối với Korea, Japan, China và cả các manufacturing nodes Đông Nam Á như Vietnam, học tập (learning / 학습) giá trị (value / 값) nằm ở chuỗi (chain / 사슬):
 
-**Australian mineral/energy/food → maritime route → Asian port → processing/manufacturing/consumption**.
+**Australian mineral/năng lượng (energy / 에너지)/food → maritime tuyến (route / 경로) → Asian cổng (port / 포트) → processing/manufacturing/consumption**.
 
-Không cần ghi nhớ một trade share theo năm để hiểu cấu trúc này. Điều quan trọng là dependency, substitute route, processing location và inventory.
+Không cần ghi nhớ một trade share theo năm để hiểu cấu trúc này. Điều quan trọng là phụ thuộc (dependency / 의존성), substitute tuyến (route / 경로), processing location và inventory.
 
 ## Khoảng cách tới thế giới không chỉ là kilomet
 
-Australia thường được mô tả là xa nhiều market lớn, nhưng shipping efficiency, aviation, digital connectivity và high-value services làm effective distance khác geometric distance.
+Australia thường được mô tả là xa nhiều thị trường (market / 시장) lớn, nhưng shipping efficiency, aviation, digital connectivity và high-value services làm effective distance khác geometric distance.
 
-Đồng thời remoteness vẫn quan trọng với spare part, medical supply hoặc time-sensitive goods. Geography không “biến mất”; technology làm ma sát của từng loại flow thay đổi khác nhau.
+Đồng thời remoteness vẫn quan trọng với spare part, medical supply hoặc time-sensitive goods. Geography không “biến mất”; technology làm ma sát của từng loại luồng (flow / 흐름) thay đổi khác nhau.
 
 ## Vai trò khu vực
 
-Australia vừa là phần của Oceania vừa kết nối sâu với East/Southeast Asia và Indian/Pacific shipping systems. Regional role của nó đến từ sự kết hợp giữa metropolitan service nodes, mineral/energy/food export, education/migration links và maritime geography.
+Australia vừa là phần của Oceania vừa kết nối sâu với East/Southeast Asia và Indian/Pacific shipping các hệ thống (systems / 시스템들). Regional role của nó đến từ sự kết hợp giữa metropolitan dịch vụ (service / 서비스) nodes, mineral/năng lượng (energy / 에너지)/food export, education/di chuyển (migration / 마이그레이션) links và maritime geography.
 
-Không nên đọc role này như kết quả của “vị trí chiến lược” trừu tượng. Nó được tạo bởi **resource + port + city + institution + network**.
+Không nên đọc role này như kết quả của “vị trí chiến lược” trừu tượng. Nó được tạo bởi **tài nguyên (resource / 자원) + cổng (port / 포트) + city + institution + mạng (network / 네트워크)**.
 
 ## Những hiểu lầm phổ biến
 
-“Australia có diện tích lớn nên dư không gian định cư” bỏ qua water/climate/accessibility. “Mining export cao nghĩa mining region đông dân và giàu rộng khắp” bỏ capital intensity và value capture. “Có nhiều renewable resource nghĩa transition dễ” bỏ grid và spatial mismatch. “Khô hạn nghĩa flood không quan trọng” bỏ extreme rainfall và river/urban exposure.
+“Australia có diện tích lớn nên dư không gian định cư” bỏ qua water/climate/khả năng tiếp cận (accessibility / 접근성). “Mining export cao nghĩa mining region đông dân và giàu rộng khắp” bỏ capital intensity và giá trị (value / 값) capture. “Có nhiều renewable tài nguyên (resource / 자원) nghĩa chuyển tiếp (transition / 전이) dễ” bỏ grid và spatial mismatch. “Khô hạn nghĩa flood không quan trọng” bỏ extreme rainfall và river/urban exposure.
 
 ## Mô hình tư duy
 
-> Australia = **lục địa cổ và khô → dân cư/đô thị tập trung ven biển → resource/agriculture nằm rộng trong hinterland → rail/pipeline/road nối tới cảng → trade gắn mạnh với Asia → development phụ thuộc khả năng biến resource corridor thành broader capability**.
+> Australia = **lục địa cổ và khô → dân cư/đô thị tập trung ven biển → tài nguyên (resource / 자원)/agriculture nằm rộng trong hinterland → rail/chuỗi xử lý (pipeline / 파이프라인)/road nối tới cảng → trade gắn mạnh với Asia → development phụ thuộc khả năng biến tài nguyên (resource / 자원) corridor thành broader năng lực (capability / 역량)**.
 
 Xem tiếp: [Oceania & Pacific](../../../03_regions/09_oceania_pacific.md), [Hydrology](../../../01_physical_geography/04_hydrology_rivers_groundwater.md), [Agriculture](../../../02_human_geography/06_agriculture_food_systems.md), [Industry/Energy/Resources](../../../02_human_geography/07_industry_energy_resources.md), [Global Trade Networks](../../../04_global_systems/05_global_trade_networks.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CCK cocos keeling islands](./CCK_cocos_keeling_islands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

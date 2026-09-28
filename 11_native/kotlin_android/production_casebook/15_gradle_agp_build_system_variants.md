@@ -1,36 +1,38 @@
-# Case 15 — Gradle, Android Gradle Plugin và Build Variant Model
+# Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)
 
-Android project không chỉ là tập source code Kotlin rồi bấm Run. Trước khi một dòng Kotlin trở thành APK/AAB, build system phải quyết định source set nào được lấy, manifest nào được merge, resource nào thắng khi trùng tên, dependency nào xuất hiện trong từng variant, compiler/plugin nào chạy, generated code nào được tạo, R8 có shrink/optimize hay không, artifact nào được ký và cuối cùng task graph nào thực sự cần chạy. Khi project nhỏ, Android Studio che phần lớn complexity này. Khi project lớn, không hiểu build model sẽ dẫn đến các bug kiểu “debug chạy nhưng release crash”, “flavor A có permission mà flavor B không có”, “CI build khác local”, hoặc “thay một file nhưng Gradle rebuild nửa repository”.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ba lớp phải phân biệt: Gradle, Android Gradle Plugin và Kotlin plugin** sang **2. Settings, gốc (root / 루트) bản dựng (build / 빌드) và mô-đun (module / 모듈) bản dựng (build / 빌드) có vai trò khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu chapter này là tạo mental model để đọc và thiết kế build, không phải thuộc mọi property của AGP DSL.
+Android dự án (project / 프로젝트) không chỉ là tập mã nguồn (source code / 소스 코드) Kotlin rồi bấm Run. Trước khi một dòng Kotlin trở thành APK/AAB, hệ thống dựng (build system / 빌드 시스템) phải quyết định nguồn (source / 소스) set nào được lấy, manifest nào được merge, tài nguyên (resource / 자원) nào thắng khi trùng tên, phụ thuộc (dependency / 의존성) nào xuất hiện trong từng variant, trình biên dịch (compiler / 컴파일러)/plugin nào chạy, generated mã (code / 코드) nào được tạo, R8 có shrink/optimize hay không, sản phẩm tạo ra (artifact / 산출물) nào được ký và cuối cùng tác vụ (task / 작업) đồ thị (graph / 그래프) nào thực sự cần chạy. Khi dự án (project / 프로젝트) nhỏ, Android Studio che phần lớn độ phức tạp (complexity / 복잡도) này. Khi dự án (project / 프로젝트) lớn, không hiểu bản dựng (build / 빌드) mô hình (model / 모델) sẽ dẫn đến các bug kiểu “gỡ lỗi (debug / 디버그) chạy nhưng bản phát hành (release / 릴리스) crash”, “flavor A có permission mà flavor B không có”, “CI bản dựng (build / 빌드) khác cục bộ (local / 로컬)”, hoặc “thay một tệp (file / 파일) nhưng Gradle rebuild nửa repository”.
+
+Mục tiêu chapter này là tạo mô hình tư duy (mental model / 사고 모델) để đọc và thiết kế bản dựng (build / 빌드), không phải thuộc mọi thuộc tính (property / 속성) của AGP DSL.
 
 ## 1. Ba lớp phải phân biệt: Gradle, Android Gradle Plugin và Kotlin plugin
 
-**Gradle** là general build engine. Nó quản lý project, plugin, task graph, dependency resolution, cache, configuration phase và execution phase. Gradle không tự hiểu Activity, AndroidManifest hay resource Android.
+**Gradle** là general bản dựng (build / 빌드) engine. Nó quản lý dự án (project / 프로젝트), plugin, tác vụ (task / 작업) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성) resolution, bộ nhớ đệm (cache / 캐시), cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase. Gradle không tự hiểu Activity, AndroidManifest hay tài nguyên (resource / 자원) Android.
 
-**Android Gradle Plugin — AGP** bổ sung Android-specific model vào Gradle. Nó hiểu `android {}`, `compileSdk`, `defaultConfig`, build types, product flavors, source sets, manifest merger, Android resources, D8/R8, signing, APK/AAB packaging và test variants.
+**Android Gradle Plugin — AGP** bổ sung Android-specific mô hình (model / 모델) vào Gradle. Nó hiểu `android {}`, `compileSdk`, `defaultConfig`, bản dựng (build / 빌드) types, sản phẩm (product / 제품) flavors, nguồn (source / 소스) sets, manifest merger, Android resources, D8/R8, signing, APK/AAB packaging và kiểm thử (test / 테스트) variants.
 
-**Kotlin Gradle Plugin** chịu trách nhiệm Kotlin compilation, compiler options và phần Kotlin-specific toolchain. Compose compiler, KSP và các compiler plugin khác lại là những lớp riêng gắn vào pipeline này.
+**Kotlin Gradle Plugin** chịu trách nhiệm Kotlin compilation, trình biên dịch (compiler / 컴파일러) options và phần Kotlin-specific toolchain. Compose trình biên dịch (compiler / 컴파일러), KSP và các trình biên dịch (compiler / 컴파일러) plugin khác lại là những lớp riêng gắn vào chuỗi xử lý (pipeline / 파이프라인) này.
 
-Khi build fail, trước tiên cần xác định failure thuộc lớp nào. Dependency resolution error khác AGP variant configuration error; Kotlin compiler error khác R8 missing-class error. Gom mọi lỗi thành “Gradle lỗi” khiến debug chậm hơn nhiều.
+Khi bản dựng (build / 빌드) thất bại (fail / 실패), trước tiên cần xác định thất bại (failure / 실패) thuộc lớp nào. phụ thuộc (dependency / 의존성) resolution lỗi (error / 오류) khác AGP variant cấu hình (configuration / 구성) lỗi (error / 오류); Kotlin trình biên dịch (compiler / 컴파일러) lỗi (error / 오류) khác R8 missing-class lỗi (error / 오류). Gom mọi lỗi thành “Gradle lỗi” khiến gỡ lỗi (debug / 디버그) chậm hơn nhiều.
 
-## 2. Settings, root build và module build có vai trò khác nhau
+## 2. Settings, gốc (root / 루트) bản dựng (build / 빌드) và mô-đun (module / 모듈) bản dựng (build / 빌드) có vai trò khác nhau
 
-`settings.gradle.kts` xác định project graph ở cấp repository: module nào được include, plugin/dependency repository nào được dùng, version catalog nào được import và đôi khi composite build/build-logic nào được gắn vào.
+`settings.gradle.kts` xác định dự án (project / 프로젝트) đồ thị (graph / 그래프) ở cấp repository: mô-đun (module / 모듈) nào được include, plugin/phụ thuộc (dependency / 의존성) repository nào được dùng, phiên bản (version / 버전) danh mục (catalog / 카탈로그) nào được import và đôi khi composite bản dựng (build / 빌드)/build-logic nào được gắn vào.
 
-Root `build.gradle.kts` ngày nay nên nhẹ. Nó thường khai báo plugin versions bằng `apply false`, hoặc rất ít cross-project configuration. Nhét mọi configuration vào root build file tạo hidden coupling và làm configuration phase khó tối ưu.
+Gốc (root / 루트) `build.gradle.kts` ngày nay nên nhẹ. Nó thường khai báo plugin versions bằng `apply false`, hoặc rất ít cross-project cấu hình (configuration / 구성). Nhét mọi cấu hình (configuration / 구성) vào gốc (root / 루트) bản dựng (build / 빌드) tệp (file / 파일) tạo hidden coupling và làm cấu hình (configuration / 구성) phase khó tối ưu.
 
-Mỗi module có `build.gradle.kts` riêng. Android application module thường dùng `com.android.application`; reusable Android library dùng `com.android.library`; pure Kotlin module có thể chỉ dùng Kotlin/JVM; dynamic feature dùng plugin riêng. Plugin quyết định module model và task graph nào tồn tại.
+Mỗi mô-đun (module / 모듈) có `build.gradle.kts` riêng. Android ứng dụng (application / 애플리케이션) mô-đun (module / 모듈) thường dùng `com.android.application`; reusable Android thư viện (library / 라이브러리) dùng `com.android.library`; pure Kotlin mô-đun (module / 모듈) có thể chỉ dùng Kotlin/JVM; động (dynamic / 동적) tính năng (feature / 기능) dùng plugin riêng. Plugin quyết định mô-đun (module / 모듈) mô hình (model / 모델) và tác vụ (task / 작업) đồ thị (graph / 그래프) nào tồn tại.
 
-Một module boundary tốt vì thế không chỉ là package organization. Nó là **build boundary**: dependency graph, compilation unit, public API surface và cache boundary.
+Một ranh giới mô-đun (module boundary / 모듈 경계) tốt vì thế không chỉ là gói (package / 패키지) organization. Nó là **bản dựng (build / 빌드) ranh giới (boundary / 경계)**: phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), compilation đơn vị (unit / 단위), API công khai (public API / 공개 API) surface và bộ nhớ đệm (cache / 캐시) ranh giới (boundary / 경계).
 
-## 3. `compileSdk`, `minSdk`, `targetSdk` không phải ba cách viết cùng một version
+## 3. `compileSdk`, `minSdk`, `targetSdk` không phải ba cách viết cùng một phiên bản (version / 버전)
 
-`compileSdk` quyết định bộ Android API mà source code được phép compile against. Tăng `compileSdk` cho phép gọi API mới nhưng tự nó không nói app sẽ chạy trên version nào.
+`compileSdk` quyết định bộ Android API mà mã nguồn (source code / 소스 코드) được phép compile against. Tăng `compileSdk` cho phép gọi API mới nhưng tự nó không nói app sẽ chạy trên phiên bản (version / 버전) nào.
 
-`minSdk` là OS thấp nhất app hỗ trợ. Nếu `minSdk = 26`, app không được cài trên API thấp hơn 26. Mọi code gọi API mới hơn minSdk phải được guard hoặc được library/desugaring abstraction xử lý phù hợp.
+`minSdk` là OS thấp nhất app hỗ trợ. Nếu `minSdk = 26`, app không được cài trên API thấp hơn 26. Mọi mã (code / 코드) gọi API mới hơn minSdk phải được guard hoặc được thư viện (library / 라이브러리)/desugaring lớp trừu tượng (abstraction / 추상화) xử lý phù hợp.
 
-`targetSdk` là lời tuyên bố app đã được kiểm thử theo behavior contract của Android version tương ứng. Nhiều breaking behavior changes chỉ bật khi app tăng target SDK. Vì vậy tăng target SDK là migration project, không nên xem như sửa một con số để upload Play Console.
+`targetSdk` là lời tuyên bố app đã được kiểm thử theo hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약) của Android phiên bản (version / 버전) tương ứng. Nhiều breaking hành vi (behavior / 동작) changes chỉ bật khi app tăng mục tiêu (target / 대상) SDK. Vì vậy tăng mục tiêu (target / 대상) SDK là di chuyển (migration / 마이그레이션) dự án (project / 프로젝트), không nên xem như sửa một con số để upload Play Console.
 
 ```kotlin
 android {
@@ -47,11 +49,11 @@ android {
 }
 ```
 
-Con số trên chỉ là ví dụ cấu trúc. Project thật phải dùng compatibility matrix và policy hiện hành thay vì copy cứng từ tài liệu học.
+Con số trên chỉ là ví dụ cấu trúc. dự án (project / 프로젝트) thật phải dùng tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) và chính sách (policy / 정책) hiện hành thay vì bản sao (copy / 복사) cứng từ tài liệu học.
 
-## 4. Build type giải quyết environment/build behavior, product flavor giải quyết product dimension
+## 4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension
 
-Build type thường biểu diễn cách artifact được build: `debug`, `release`, đôi khi `benchmark` hoặc `staging`. Nó điều khiển các concern như debuggable, minification, signing, suffix, resource value và optimization.
+Bản dựng (build / 빌드) kiểu (type / 타입) thường biểu diễn cách sản phẩm tạo ra (artifact / 산출물) được bản dựng (build / 빌드): `debug`, `release`, đôi khi `benchmark` hoặc `staging`. Nó điều khiển các concern như debuggable, minification, signing, suffix, tài nguyên (resource / 자원) giá trị (value / 값) và tối ưu hóa (optimization / 최적화).
 
 ```kotlin
 android {
@@ -72,7 +74,7 @@ android {
 }
 ```
 
-Product flavor biểu diễn một dimension của sản phẩm. Ví dụ `demo/full`, `internal/public`, hoặc brand/region. Khi có nhiều dimension, cần khai báo `flavorDimensions` rõ ràng.
+Sản phẩm (product / 제품) flavor biểu diễn một dimension của sản phẩm. Ví dụ `demo/full`, `internal/public`, hoặc brand/region. Khi có nhiều dimension, cần khai báo `flavorDimensions` rõ ràng.
 
 ```kotlin
 android {
@@ -96,13 +98,13 @@ android {
 }
 ```
 
-Build variant là cross-product của những lựa chọn đó, ví dụ `demoKrDebug` hoặc `fullGlobalRelease`. Nếu số dimension tăng không kiểm soát, variant explosion sẽ làm IDE sync, CI matrix và dependency maintenance phức tạp nhanh chóng.
+Bản dựng (build / 빌드) variant là cross-product của những lựa chọn đó, ví dụ `demoKrDebug` hoặc `fullGlobalRelease`. Nếu số dimension tăng không kiểm soát, variant explosion sẽ làm IDE sync, CI ma trận (matrix / 행렬) và phụ thuộc (dependency / 의존성) maintenance phức tạp nhanh chóng.
 
-Senior rule: chỉ tạo flavor khi khác biệt thực sự là build-time product dimension. Feature flag runtime không nên biến thành flavor chỉ vì “có hai trạng thái”.
+Cấp cao (senior / 시니어) quy tắc (rule / 규칙): chỉ tạo flavor khi khác biệt thực sự là build-time sản phẩm (product / 제품) dimension. cờ tính năng (feature flag / 기능 플래그) thời gian chạy (runtime / 런타임) không nên biến thành flavor chỉ vì “có hai trạng thái”.
 
-## 5. Source set precedence là nguyên nhân của rất nhiều “mystery behavior”
+## 5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”
 
-Android build có thể lấy source/resource/manifest từ nhiều source set. Với một variant kiểu `demoDebug`, Gradle có thể xem `src/demoDebug/`, `src/debug/`, `src/demo/`, rồi `src/main/` theo precedence tương ứng.
+Android bản dựng (build / 빌드) có thể lấy nguồn (source / 소스)/tài nguyên (resource / 자원)/manifest từ nhiều nguồn (source / 소스) set. Với một variant kiểu `demoDebug`, Gradle có thể xem `src/demoDebug/`, `src/debug/`, `src/demo/`, rồi `src/main/` theo precedence tương ứng.
 
 Ví dụ:
 
@@ -122,25 +124,25 @@ app/
         └── res/
 ```
 
-Resource có cùng tên có thể bị override theo precedence. Manifest cũng được merge theo rule tương tự. Nhưng Kotlin/Java class trùng fully-qualified name trong hai source set cùng tham gia variant thường gây duplicate-class error chứ không phải override như resource.
+Tài nguyên (resource / 자원) có cùng tên có thể bị override theo precedence. Manifest cũng được merge theo quy tắc (rule / 규칙) tương tự. Nhưng Kotlin/Java lớp (class / 클래스) trùng fully-qualified name trong hai nguồn (source / 소스) set cùng tham gia variant thường gây duplicate-class lỗi (error / 오류) chứ không phải override như tài nguyên (resource / 자원).
 
-Source sets rất hữu ích cho fake endpoint, debug-only screen, brand resource hoặc test implementation, nhưng lạm dụng sẽ tạo code path khó nhìn thấy bằng search thông thường.
+Nguồn (source / 소스) sets rất hữu ích cho fake endpoint, debug-only screen, brand tài nguyên (resource / 자원) hoặc kiểm thử (test / 테스트) hiện thực (implementation / 구현), nhưng lạm dụng sẽ tạo đường đi mã (code path / 코드 경로) khó nhìn thấy bằng tìm kiếm (search / 검색) thông thường.
 
-## 6. Manifest Merger là build-time composition system
+## 6. Manifest Merger là build-time composition hệ thống (system / 시스템)
 
-Manifest cuối cùng của app không nhất thiết giống `src/main/AndroidManifest.xml`. Nó có thể được merge từ app manifest, build type, flavor và manifests của dependencies.
+Manifest cuối cùng của app không nhất thiết giống `src/main/AndroidManifest.xml`. Nó có thể được merge từ app manifest, bản dựng (build / 빌드) kiểu (type / 타입), flavor và manifests của dependencies.
 
-Điều này giải thích tại sao một SDK có thể thêm permission/provider/service vào app dù bạn không viết chúng trong main manifest.
+Điều này giải thích tại sao một SDK có thể thêm permission/provider/dịch vụ (service / 서비스) vào app dù bạn không viết chúng trong main manifest.
 
-Khi có conflict, dùng Manifest Merger report thay vì đoán. Các `tools:` marker như `tools:replace`, `tools:remove`, `tools:node` có thể giải quyết merge conflict, nhưng phải hiểu hậu quả security/runtime của việc override metadata từ dependency.
+Khi có xung đột (conflict / 충돌), dùng Manifest Merger report thay vì đoán. Các `tools:` marker như `tools:replace`, `tools:remove`, `tools:node` có thể giải quyết merge xung đột (conflict / 충돌), nhưng phải hiểu hậu quả bảo mật (security / 보안)/thời gian chạy (runtime / 런타임) của việc override siêu dữ liệu (metadata / 메타데이터) từ phụ thuộc (dependency / 의존성).
 
-Một `android:exported`, provider authority hoặc permission sai trong manifest merged artifact có thể trở thành production vulnerability dù source manifest nhìn có vẻ đúng.
+Một `android:exported`, provider authority hoặc permission sai trong manifest merged sản phẩm tạo ra (artifact / 산출물) có thể trở thành môi trường vận hành (production / 운영 환경) vulnerability dù nguồn (source / 소스) manifest nhìn có vẻ đúng.
 
 ## 7. `BuildConfig`, `resValue`, manifest placeholder và secret
 
-Build-time values có nhiều cơ chế. `buildConfigField` tạo constant trong generated `BuildConfig`; `resValue` tạo Android resource; manifest placeholders thay token lúc merge manifest.
+Build-time values có nhiều cơ chế. `buildConfigField` tạo constant trong generated `BuildConfig`; `resValue` tạo Android tài nguyên (resource / 자원); manifest placeholders thay đơn vị từ (token / 토큰) lúc merge manifest.
 
-Không cơ chế nào biến value thành secret. Bất kỳ secret nào ship trong APK/AAB đều có thể bị trích xuất. API key có restriction vẫn có thể tồn tại trong app nếu service thiết kế cho client-side key, nhưng credential có quyền backend không được nhúng vào build config.
+Không cơ chế nào biến giá trị (value / 값) thành secret. Bất kỳ secret nào ship trong APK/AAB đều có thể bị trích xuất. API key có restriction vẫn có thể tồn tại trong app nếu dịch vụ (service / 서비스) thiết kế cho client-side key, nhưng credential có quyền backend không được nhúng vào bản dựng (build / 빌드) cấu hình (config / 설정).
 
 ```kotlin
 buildTypes {
@@ -150,21 +152,21 @@ buildTypes {
 }
 ```
 
-Build config là configuration distribution, không phải secure vault.
+Bản dựng (build / 빌드) cấu hình (config / 설정) là cấu hình (configuration / 구성) phân phối (distribution / 분포), không phải secure vault.
 
-## 8. Dependency configurations biểu diễn visibility và classpath
+## 8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath
 
-`implementation` nói dependency cần để compile module hiện tại nhưng không được expose như public transitive API cho consumer.
+`implementation` nói phụ thuộc (dependency / 의존성) cần để compile mô-đun (module / 모듈) hiện tại nhưng không được expose như công khai (public / 공개) transitive API cho bên tiêu thụ (consumer / 소비자).
 
-`api` trong library module expose dependency qua public API surface. Dùng `api` quá nhiều tăng coupling và recompilation cascade.
+`api` trong thư viện (library / 라이브러리) mô-đun (module / 모듈) expose phụ thuộc (dependency / 의존성) qua API công khai (public API / 공개 API) surface. Dùng `api` quá nhiều tăng coupling và recompilation cascade.
 
-`compileOnly` cần khi compile nhưng không package runtime implementation. `runtimeOnly` ngược lại: runtime cần nhưng compile code không trực tiếp reference. Test source sets có `testImplementation`, `androidTestImplementation`, v.v.
+`compileOnly` cần khi compile nhưng không gói (package / 패키지) thời gian chạy (runtime / 런타임) hiện thực (implementation / 구현). `runtimeOnly` ngược lại: thời gian chạy (runtime / 런타임) cần nhưng compile mã (code / 코드) không trực tiếp tham chiếu (reference / 참조). kiểm thử (test / 테스트) nguồn (source / 소스) sets có `testImplementation`, `androidTestImplementation`, v.v.
 
-Một heuristic tốt là mặc định `implementation`, chỉ dùng `api` khi public API của module thật sự để lộ type của dependency đó.
+Một heuristic tốt là mặc định `implementation`, chỉ dùng `api` khi API công khai (public API / 공개 API) của mô-đun (module / 모듈) thật sự để lộ kiểu (type / 타입) của phụ thuộc (dependency / 의존성) đó.
 
-## 9. Version catalog giúp centralize coordinates nhưng không thay dependency governance
+## 9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)
 
-`libs.versions.toml` giúp định danh dependency/plugin bằng alias nhất quán.
+`libs.versions.toml` giúp định danh phụ thuộc (dependency / 의존성)/plugin bằng alias nhất quán.
 
 ```toml
 [versions]
@@ -178,13 +180,13 @@ coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", ve
 android-application = { id = "com.android.application", version = "..." }
 ```
 
-Version catalog không tự đảm bảo compatibility, license, vulnerability hay reproducibility. Những concern đó cần dependency locking, verification, SBOM/vulnerability scanning và upgrade policy riêng.
+Phiên bản (version / 버전) danh mục (catalog / 카탈로그) không tự đảm bảo tính tương thích (compatibility / 호환성), license, vulnerability hay reproducibility. Những concern đó cần phụ thuộc (dependency / 의존성) locking, xác minh (verification / 확인), SBOM/vulnerability scanning và upgrade chính sách (policy / 정책) riêng.
 
-## 10. Convention plugin tốt hơn copy-paste Gradle block
+## 10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)
 
-Khi nhiều module lặp cùng compile options, lint, Compose config hoặc test dependencies, copy-paste khiến configuration drift. **Convention plugin** gom policy build thành code/plugin dùng lại.
+Khi nhiều mô-đun (module / 모듈) lặp cùng compile options, lint, Compose cấu hình (config / 설정) hoặc kiểm thử (test / 테스트) dependencies, copy-paste khiến cấu hình (configuration / 구성) drift. **Convention plugin** gom chính sách (policy / 정책) bản dựng (build / 빌드) thành mã (code / 코드)/plugin dùng lại.
 
-Thay vì mỗi module tự viết 50 dòng:
+Thay vì mỗi mô-đun (module / 모듈) tự viết 50 dòng:
 
 ```kotlin
 plugins {
@@ -192,31 +194,31 @@ plugins {
 }
 ```
 
-Convention plugin có thể áp AGP/Kotlin plugin, configure namespace policy, Java toolchain, compiler options, lint, Compose, test defaults và common dependencies.
+Convention plugin có thể áp AGP/Kotlin plugin, configure không gian tên (namespace / 네임스페이스) chính sách (policy / 정책), Java toolchain, trình biên dịch (compiler / 컴파일러) options, lint, Compose, kiểm thử (test / 테스트) defaults và dùng chung (common / 공통) dependencies.
 
-Điểm quan trọng là convention plugin chứa **convention**, không chứa mọi business-specific dependency. Nếu plugin trở thành một global god object, mọi module lại coupled theo cách khác.
+Điểm quan trọng là convention plugin chứa **convention**, không chứa mọi business-specific phụ thuộc (dependency / 의존성). Nếu plugin trở thành một toàn cục (global / 전역) god đối tượng (object / 객체), mọi mô-đun (module / 모듈) lại coupled theo cách khác.
 
-## 11. Gradle configuration phase và execution phase
+## 11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase
 
-Gradle trước tiên configuration project và tạo task graph, sau đó mới execute những task cần thiết. Configuration quá nặng làm mọi command chậm, kể cả task nhỏ.
+Gradle trước tiên cấu hình (configuration / 구성) dự án (project / 프로젝트) và tạo tác vụ (task / 작업) đồ thị (graph / 그래프), sau đó mới execute những tác vụ (task / 작업) cần thiết. cấu hình (configuration / 구성) quá nặng làm mọi command chậm, kể cả tác vụ (task / 작업) nhỏ.
 
-Các pattern như eager task creation, đọc file/network trong configuration, `afterEvaluate` tùy tiện hoặc global cross-project mutation làm build khó cache và khó parallelize.
+Các mẫu (pattern / 패턴) như eager tác vụ (task / 작업) creation, đọc tệp (file / 파일)/mạng (network / 네트워크) trong cấu hình (configuration / 구성), `afterEvaluate` tùy tiện hoặc toàn cục (global / 전역) cross-project mutation làm bản dựng (build / 빌드) khó bộ nhớ đệm (cache / 캐시) và khó parallelize.
 
-Configuration Cache cố tái sử dụng kết quả configuration giữa các build khi plugin/task compatible. Build Cache tái sử dụng task output khi input fingerprint giống. Hai cache giải quyết hai phase khác nhau.
+Cấu hình (configuration / 구성) bộ nhớ đệm (cache / 캐시) cố tái sử dụng kết quả cấu hình (configuration / 구성) giữa các bản dựng (build / 빌드) khi plugin/tác vụ (task / 작업) compatible. bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시) tái sử dụng tác vụ (task / 작업) đầu ra (output / 출력) khi đầu vào (input / 입력) fingerprint giống. Hai bộ nhớ đệm (cache / 캐시) giải quyết hai phase khác nhau.
 
-Senior debug build performance nên bắt đầu bằng measurement: Gradle Build Scan/profile, task timing, cache hit/miss, critical path, annotation/code generation cost. Không tối ưu chỉ vì thấy “nhiều module”.
+Cấp cao (senior / 시니어) gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) hiệu năng (performance / 성능) nên bắt đầu bằng đo lường (measurement / 측정): Gradle bản dựng (build / 빌드) Scan/profile, tác vụ (task / 작업) timing, bộ nhớ đệm (cache / 캐시) hit/miss, đường găng (critical path / 임계 경로), annotation/mã (code / 코드) generation chi phí (cost / 비용). Không tối ưu chỉ vì thấy “nhiều mô-đun (module / 모듈)”.
 
-## 12. Incremental build phụ thuộc input/output contract
+## 12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)
 
-Một task cacheable/incremental cần khai báo input/output chính xác. Plugin custom hoặc codegen đọc file ngoài model có thể khiến build không reproducible hoặc cache trả kết quả sai.
+Một tác vụ (task / 작업) cacheable/incremental cần khai báo đầu vào (input / 입력)/đầu ra (output / 출력) chính xác. Plugin custom hoặc codegen đọc tệp (file / 파일) ngoài mô hình (model / 모델) có thể khiến bản dựng (build / 빌드) không reproducible hoặc bộ nhớ đệm (cache / 캐시) trả kết quả sai.
 
-KSP thường được chọn thay KAPT trong ecosystem hiện đại khi processor support, một phần vì code generation model phù hợp Kotlin hơn và có thể giảm overhead so với Java annotation-processing pipeline. Tuy nhiên migration phải dựa processor thực tế; không phải mọi KAPT processor đều có replacement KSP tương đương.
+KSP thường được chọn thay KAPT trong ecosystem hiện đại khi processor hỗ trợ (support / 지원), một phần vì mã (code / 코드) generation mô hình (model / 모델) phù hợp Kotlin hơn và có thể giảm overhead so với Java annotation-processing chuỗi xử lý (pipeline / 파이프라인). Tuy nhiên di chuyển (migration / 마이그레이션) phải dựa processor thực tế; không phải mọi KAPT processor đều có replacement KSP tương đương.
 
-## 13. Toolchain và JVM target phải được hiểu là compatibility contract
+## 13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)
 
-JDK chạy Gradle/AGP, Java/Kotlin language level và bytecode/JVM target là các khái niệm khác nhau. Project có thể dùng một JDK để chạy build nhưng compile source với target khác.
+JDK chạy Gradle/AGP, Java/Kotlin ngôn ngữ (language / 언어) mức (level / 수준) và bytecode/JVM mục tiêu (target / 대상) là các khái niệm khác nhau. dự án (project / 프로젝트) có thể dùng một JDK để chạy bản dựng (build / 빌드) nhưng compile nguồn (source / 소스) với mục tiêu (target / 대상) khác.
 
-Java toolchain giúp build thống nhất giữa local và CI:
+Java toolchain giúp bản dựng (build / 빌드) thống nhất giữa cục bộ (local / 로컬) và CI:
 
 ```kotlin
 kotlin {
@@ -224,19 +226,19 @@ kotlin {
 }
 ```
 
-Con số cần theo compatibility matrix của Kotlin/AGP/project. Không nên upgrade JDK, Gradle, AGP, Kotlin và Compose compiler cùng lúc mà không có test matrix vì khi fail rất khó xác định layer gây regression.
+Con số cần theo tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) của Kotlin/AGP/dự án (project / 프로젝트). Không nên upgrade JDK, Gradle, AGP, Kotlin và Compose trình biên dịch (compiler / 컴파일러) cùng lúc mà không có kiểm thử (test / 테스트) ma trận (matrix / 행렬) vì khi thất bại (fail / 실패) rất khó xác định tầng (layer / 계층) gây regression.
 
-## 14. Android Components / Variant API dành cho plugin và build logic nâng cao
+## 14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao
 
-AGP có variant-oriented API để đọc hoặc biến đổi artifact/task configuration theo variant mà không dựa internal API không ổn định. Đây là hướng đúng khi viết plugin build hoặc instrumentation logic tùy variant.
+AGP có variant-oriented API để đọc hoặc biến đổi sản phẩm tạo ra (artifact / 산출물)/tác vụ (task / 작업) cấu hình (configuration / 구성) theo variant mà không dựa nội bộ (internal / 내부) API không ổn định. Đây là hướng đúng khi viết plugin bản dựng (build / 빌드) hoặc instrumentation lô-gic (logic / 논리) tùy variant.
 
-Anti-pattern phổ biến là script truy cập task name bằng string, `afterEvaluate`, hoặc internal AGP classes. Cách này thường vỡ khi upgrade AGP.
+Anti-pattern phổ biến là script truy cập tác vụ (task / 작업) name bằng string, `afterEvaluate`, hoặc nội bộ (internal / 내부) AGP classes. Cách này thường vỡ khi upgrade AGP.
 
-Nếu custom build logic cần biết variant, hãy ưu tiên public AGP Variant API và artifact API của version đang dùng.
+Nếu custom bản dựng (build / 빌드) lô-gic (logic / 논리) cần biết variant, hãy ưu tiên công khai (public / 공개) AGP Variant API và sản phẩm tạo ra (artifact / 산출물) API của phiên bản (version / 버전) đang dùng.
 
-## 15. Resource processing, D8, R8 và packaging pipeline
+## 15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)
 
-Một mental model đơn giản:
+Một mô hình tư duy (mental model / 사고 모델) đơn giản:
 
 ```text
 Kotlin/Java source
@@ -255,105 +257,107 @@ DEX + resources + native libs
 → APK/AAB artifact
 ```
 
-Pipeline thật chi tiết hơn, nhưng model này giúp xác định lỗi nằm ở compile, bytecode transform, shrinker hay packaging.
+Chuỗi xử lý (pipeline / 파이프라인) thật chi tiết hơn, nhưng mô hình (model / 모델) này giúp xác định lỗi nằm ở compile, bytecode transform, shrinker hay packaging.
 
-Debug build thường ít optimization hơn nên reflection bug hoặc missing keep rule chỉ xuất hiện ở release. Vì vậy “debug app chạy” không chứng minh release artifact đúng.
+Gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) thường ít tối ưu hóa (optimization / 최적화) hơn nên reflection bug hoặc missing keep quy tắc (rule / 규칙) chỉ xuất hiện ở bản phát hành (release / 릴리스). Vì vậy “gỡ lỗi (debug / 디버그) app chạy” không chứng minh bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) đúng.
 
-## 16. Consumer ProGuard rules của library
+## 16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)
 
-Android library có thể cần cung cấp `consumerProguardFiles` để rule cần thiết được merge vào app consumer khi R8 chạy.
+Android thư viện (library / 라이브러리) có thể cần cung cấp `consumerProguardFiles` để quy tắc (rule / 규칙) cần thiết được merge vào app bên tiêu thụ (consumer / 소비자) khi R8 chạy.
 
-Library author không nên bắt app consumer đoán reflection/JNI rule bên trong SDK. Ngược lại, keep rule quá rộng như giữ toàn bộ package làm giảm lợi ích shrinker cho mọi app dùng library.
+Thư viện (library / 라이브러리) author không nên bắt app bên tiêu thụ (consumer / 소비자) đoán reflection/JNI quy tắc (rule / 규칙) bên trong SDK. Ngược lại, keep quy tắc (rule / 규칙) quá rộng như giữ toàn bộ gói (package / 패키지) làm giảm lợi ích shrinker cho mọi app dùng thư viện (library / 라이브러리).
 
-Rule tốt phải càng hẹp càng tốt và đi cùng test minified consumer artifact.
+Quy tắc (rule / 규칙) tốt phải càng hẹp càng tốt và đi cùng kiểm thử (test / 테스트) minified bên tiêu thụ (consumer / 소비자) sản phẩm tạo ra (artifact / 산출물).
 
-## 17. Signing config và build credentials
+## 17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials
 
-Debug signing key có thể generated/local. Release signing key là production identity và cần được quản lý như credential quan trọng. Không commit keystore/password vào Git.
+Gỡ lỗi (debug / 디버그) signing key có thể generated/cục bộ (local / 로컬). bản phát hành (release / 릴리스) signing key là môi trường vận hành (production / 운영 환경) định danh (identity / 식별자) và cần được quản lý như credential quan trọng. Không lần ghi nhận (commit / 커밋) keystore/password vào Git.
 
-CI nên lấy signing material từ secret manager/secure environment, hạn chế quyền truy cập và audit usage. Nếu dùng Play App Signing, vẫn cần hiểu upload key khác app signing key về vai trò và recovery process.
+CI nên lấy signing material từ secret manager/secure môi trường (environment / 환경), hạn chế quyền truy cập và kiểm tra (audit / 감사) usage. Nếu dùng Play App Signing, vẫn cần hiểu upload key khác app signing key về vai trò và khôi phục (recovery / 복구) tiến trình (process / 프로세스).
 
-## 18. Reproducible build và supply-chain thinking
+## 18. Reproducible bản dựng (build / 빌드) và supply-chain thinking
 
-Hai build từ cùng commit ideally phải cho behavior tương đương và dependency graph có thể giải thích được. Dynamic versions kiểu `1.+`, repository không kiểm soát, plugin tải artifact bất định hoặc script phụ thuộc network mutable đều làm reproducibility kém.
+Hai bản dựng (build / 빌드) từ cùng lần ghi nhận (commit / 커밋) ideally phải cho hành vi (behavior / 동작) tương đương và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) có thể giải thích được. động (dynamic / 동적) versions kiểu `1.+`, repository không kiểm soát, plugin tải sản phẩm tạo ra (artifact / 산출물) bất định hoặc script phụ thuộc mạng (network / 네트워크) mutable đều làm reproducibility kém.
 
-Production build governance nên theo dõi:
+Môi trường vận hành (production / 운영 환경) bản dựng (build / 빌드) quản trị (governance / 거버넌스) nên theo dõi:
 
-- source commit;
+- nguồn (source / 소스) lần ghi nhận (commit / 커밋);
 - toolchain versions;
-- resolved dependency graph;
-- signing identity;
-- build flags/variant;
+- resolved phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프);
+- signing định danh (identity / 식별자);
+- bản dựng (build / 빌드) flags/variant;
 - generated SBOM nếu tổ chức yêu cầu;
-- artifact checksum;
-- mapping file của R8;
+- sản phẩm tạo ra (artifact / 산출물) checksum;
+- ánh xạ (mapping / 매핑) tệp (file / 파일) của R8;
 - provenance từ CI.
 
-Mục tiêu không phải bureaucracy mà là khả năng trả lời “binary đang chạy ngoài production được build từ cái gì?”.
+Mục tiêu không phải bureaucracy mà là khả năng trả lời “nhị phân (binary / 이진) đang chạy ngoài môi trường vận hành (production / 운영 환경) được bản dựng (build / 빌드) từ cái gì?”.
 
-## 19. Build performance: tránh cả hai cực đoan
+## 19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan
 
-Một monolith module có thể compile chậm và mọi thay đổi invalidate quá nhiều code. Nhưng hàng trăm module micro-granular cũng làm configuration/dependency graph phức tạp.
+Một monolith mô-đun (module / 모듈) có thể compile chậm và mọi thay đổi invalidate quá nhiều mã (code / 코드). Nhưng hàng trăm mô-đun (module / 모듈) micro-granular cũng làm cấu hình (configuration / 구성)/phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) phức tạp.
 
-Module hóa vì boundary có giá trị: ownership, parallel work, API isolation, testability, build isolation hoặc feature delivery. Không module hóa chỉ để số module lớn.
+Mô-đun (module / 모듈) hóa vì ranh giới (boundary / 경계) có giá trị: quyền sở hữu (ownership / 소유권), parallel công việc (work / 작업), API isolation, testability, bản dựng (build / 빌드) isolation hoặc tính năng (feature / 기능) delivery. Không mô-đun (module / 모듈) hóa chỉ để số mô-đun (module / 모듈) lớn.
 
 Những hướng tối ưu thường có impact thực tế hơn micro-tweak:
 
 - giảm `api` surface;
 - tránh annotation processor nặng không cần thiết;
-- bật/correct cache;
+- bật/correct bộ nhớ đệm (cache / 캐시);
 - dùng convention plugin;
-- bỏ configuration side effect;
-- tránh generated code invalidating quá rộng;
-- tách feature có churn độc lập;
-- profile CI critical path.
+- bỏ cấu hình (configuration / 구성) side tác động (effect / 효과);
+- tránh generated mã (code / 코드) invalidating quá rộng;
+- tách tính năng (feature / 기능) có churn độc lập;
+- profile CI đường găng (critical path / 임계 경로).
 
-## 20. CI matrix theo variant phải có chủ đích
+## 20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích
 
-Nếu project có 20 variants, test toàn bộ ở mọi commit có thể quá đắt. Nhưng chỉ test `debug` cũng không đủ.
+Nếu dự án (project / 프로젝트) có 20 variants, kiểm thử (test / 테스트) toàn bộ ở mọi lần ghi nhận (commit / 커밋) có thể quá đắt. Nhưng chỉ kiểm thử (test / 테스트) `debug` cũng không đủ.
 
 Một chiến lược thường hợp lý:
 
-- PR: compile/lint/unit test representative variants;
-- main/nightly: mở rộng variant/device matrix;
-- release: build đúng production variant, minified, signed-like pipeline, instrumentation/critical smoke test;
-- flavor có behavior riêng phải có test riêng, không chỉ rely common debug.
+- PR: compile/lint/đơn vị (unit / 단위) kiểm thử (test / 테스트) representative variants;
+- main/nightly: mở rộng variant/thiết bị (device / 장치) ma trận (matrix / 행렬);
+- bản phát hành (release / 릴리스): bản dựng (build / 빌드) đúng môi trường vận hành (production / 운영 환경) variant, minified, signed-like chuỗi xử lý (pipeline / 파이프라인), instrumentation/trọng yếu (critical / 중요) smoke kiểm thử (test / 테스트);
+- flavor có hành vi (behavior / 동작) riêng phải có kiểm thử (test / 테스트) riêng, không chỉ rely dùng chung (common / 공통) gỡ lỗi (debug / 디버그).
 
-CI matrix phải phản ánh risk chứ không phản ánh số variant một cách máy móc.
+CI ma trận (matrix / 행렬) phải phản ánh rủi ro (risk / 위험) chứ không phản ánh số variant một cách máy móc.
 
 ## 21. Các lỗi thường gặp và cách suy luận
 
-### Debug chạy, release crash
+### Gỡ lỗi (debug / 디버그) chạy, bản phát hành (release / 릴리스) crash
 
-Kiểm tra R8 keep rules, reflection/serialization, JNI symbol, release-only config, signing/network security config, resource shrinking và code path build type.
+Kiểm tra R8 keep rules, reflection/serialization, JNI symbol, release-only cấu hình (config / 설정), signing/mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정), tài nguyên (resource / 자원) shrinking và đường đi mã (code path / 코드 경로) bản dựng (build / 빌드) kiểu (type / 타입).
 
-### Một flavor có resource sai
+### Một flavor có tài nguyên (resource / 자원) sai
 
-Kiểm tra source-set precedence, flavor dimension order và resource merger output.
+Kiểm tra source-set precedence, flavor dimension thứ tự (order / 순서) và tài nguyên (resource / 자원) merger đầu ra (output / 출력).
 
 ### Permission “tự nhiên xuất hiện” trong manifest
 
-Mở merged manifest và tìm manifest từ dependency nào thêm permission/component.
+Mở merged manifest và tìm manifest từ phụ thuộc (dependency / 의존성) nào thêm permission/thành phần (component / 컴포넌트).
 
-### Local build được, CI fail
+### Cục bộ (local / 로컬) bản dựng (build / 빌드) được, CI thất bại (fail / 실패)
 
-Kiểm tra JDK/toolchain, dependency repository, case-sensitive filesystem, uncommitted generated/local file, environment variable và cached state.
+Kiểm tra JDK/toolchain, phụ thuộc (dependency / 의존성) repository, case-sensitive filesystem, uncommitted generated/cục bộ (local / 로컬) tệp (file / 파일), môi trường (environment / 환경) variable và cached trạng thái (state / 상태).
 
-### Build chậm sau khi thêm processor/plugin
+### Bản dựng (build / 빌드) chậm sau khi thêm processor/plugin
 
-Đo task graph, processor time và cacheability trước khi refactor project structure.
+Đo tác vụ (task / 작업) đồ thị (graph / 그래프), processor thời gian (time / 시간) và cacheability trước khi refactor cấu trúc dự án (project structure / 프로젝트 구조).
 
-## 22. Senior checklist cho build-system change
+## 22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)
 
-Khi review thay đổi build, hãy hỏi: thay đổi áp dụng variant nào; có thay manifest/resource precedence không; public dependency surface có tăng không; có ảnh hưởng release/minified artifact không; có làm configuration cache mất hiệu lực không; CI có build đúng variant mới không; secret/signing có bị đưa vào source không; và rollback toolchain có còn khả thi nếu upgrade fail không.
+Khi rà soát (review / 검토) thay đổi bản dựng (build / 빌드), hãy hỏi: thay đổi áp dụng variant nào; có thay manifest/tài nguyên (resource / 자원) precedence không; công khai (public / 공개) phụ thuộc (dependency / 의존성) surface có tăng không; có ảnh hưởng bản phát hành (release / 릴리스)/minified sản phẩm tạo ra (artifact / 산출물) không; có làm cấu hình (configuration / 구성) bộ nhớ đệm (cache / 캐시) mất hiệu lực không; CI có bản dựng (build / 빌드) đúng variant mới không; secret/signing có bị đưa vào nguồn (source / 소스) không; và quay lui (rollback / 롤백) toolchain có còn khả thi nếu upgrade thất bại (fail / 실패) không.
 
-Build system là production code. Một lỗi build configuration có thể không xuất hiện trong unit test nhưng vẫn thay permission, signing, resource, shrinker hoặc artifact được ship tới hàng triệu device.
+Hệ thống dựng (build system / 빌드 시스템) là môi trường vận hành (production / 운영 환경) mã (code / 코드). Một lỗi bản dựng (build / 빌드) cấu hình (configuration / 구성) có thể không xuất hiện trong đơn vị (unit / 단위) kiểm thử (test / 테스트) nhưng vẫn thay permission, signing, tài nguyên (resource / 자원), shrinker hoặc sản phẩm tạo ra (artifact / 산출물) được ship tới hàng triệu thiết bị (device / 장치).
 
 ## 23. Official references
 
-- Android build overview: https://developer.android.com/build
-- Build variants and source sets: https://developer.android.com/build/build-variants
-- Gradle tips: https://developer.android.com/build/gradle-tips
-- Android Gradle Plugin APIs: https://developer.android.com/reference/tools/gradle-api
+- Android bản dựng (build / 빌드) overview: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)
+- bản dựng (build / 빌드) variants and nguồn (source / 소스) sets: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/build-variants
+- Gradle tips: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/gradle-tips
+- Android Gradle Plugin APIs: https://nhà phát triển (developer / 개발자).android.com/tham chiếu (reference / 참조)/tools/gradle-api
 
-Đọc reference theo version AGP đang dùng; không giả định DSL/internal behavior của một version cũ vẫn đúng với version mới.
+Đọc tham chiếu (reference / 참조) theo phiên bản (version / 버전) AGP đang dùng; không giả định DSL/nội bộ (internal / 내부) hành vi (behavior / 동작) của một phiên bản (version / 버전) cũ vẫn đúng với phiên bản (version / 버전) mới.
+
+> **Bàn giao:** Sau **23. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Chất lỏng — cấu trúc động, dòng chảy và bề mặt
 
+> **Mạch đọc:** Đọc **Chất lỏng — cấu trúc động, dòng chảy và bề mặt** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chất lỏng nằm giữa khí và rắn như thế nào?** sang **Chất lỏng có cấu trúc hay không?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Chất lỏng (liquid / 액체)** là trạng thái vật chất có mật độ cao và thể tích gần cố định nhưng không giữ hình dạng riêng. Các tiểu phần nằm gần nhau như trong chất rắn, song có đủ tự do để liên tục đổi hàng xóm, khuếch tán và chảy. Vì vậy chất lỏng phải được hiểu như một **mạng tương tác linh động**, không phải một chất rắn mất trật tự hoàn toàn hay một chất khí bị nén mạnh.
 
 ## Chất lỏng nằm giữa khí và rắn như thế nào?
@@ -70,7 +73,7 @@ trong đó:
 
 - \(\tau\) là ứng suất trượt;
 - \(\eta\) là độ nhớt động lực;
-- \(dv/dy\) là gradient vận tốc.
+- \(dv/dy\) là độ dốc (gradient / 기울기) vận tốc.
 
 Ở mức phân tử, dòng chảy đòi hỏi các tiểu phần liên tục vượt qua hàng rào tái sắp xếp cục bộ. Tương tác mạnh, phân tử dài hoặc mạng liên kết rộng có thể làm quá trình đó chậm hơn.
 
@@ -223,7 +226,7 @@ Chất điện ly lỏng trong pin phải đồng thời:
 - làm ướt điện cực và separator;
 - an toàn về cháy và nhiệt.
 
-Một dung môi rất phân cực có thể hòa tan muối tốt nhưng tạo solvation quá mạnh, làm desolvation ở giao diện chậm hơn. Đây là ví dụ rõ của trade-off trong thiết kế chất lỏng kỹ thuật.
+Một dung môi rất phân cực có thể hòa tan muối tốt nhưng tạo solvation quá mạnh, làm desolvation ở giao diện chậm hơn. Đây là ví dụ rõ của sự đánh đổi (trade-off / 트레이드오프) trong thiết kế chất lỏng kỹ thuật.
 
 ## Các hiểu lầm thường gặp
 
@@ -260,3 +263,5 @@ cấu trúc phân tử
 ```
 
 Xem tiếp: [Chất rắn](./02_solids.md) và [Chuyển pha – giản đồ pha](./03_phase_changes_and_phase_diagrams.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 gases](./00_gases.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

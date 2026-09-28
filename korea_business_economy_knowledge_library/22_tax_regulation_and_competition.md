@@ -1,10 +1,13 @@
 # Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)
 
+> **Mạch đọc:** Đặt **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thuế thu nhập doanh nghiệp đánh trên thu nhập chịu thuế, không phải doanh thu** sang **Các bậc thuế doanh nghiệp năm 2026**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Doanh nghiệp không vận hành chỉ bằng hợp đồng giữa các bên tư nhân. Nhà nước xác định **cơ sở tính thuế, nghĩa vụ công bố, quy tắc cạnh tranh, mức sàn lao động, giới hạn môi trường, giấy phép và giới hạn đối với sở hữu hoặc hành vi thị trường**.
 
 Vì vậy quy định không phải một phụ lục pháp lý nằm ngoài mô hình kinh doanh. Trong nhiều ngành như tài chính, viễn thông, năng lượng, y tế, nền tảng số và quốc phòng, quy định trực tiếp quyết định doanh thu, chi phí, rào cản gia nhập và yêu cầu vốn.
 
-> Mental model: chính sách và quy định là **biến kinh tế (economic variable)** giống lãi suất, tỷ giá hay giá nguyên liệu. Nó thay đổi lợi ích và chi phí của quyết định kinh doanh.
+> mô hình tư duy (mental model / 사고 모델): chính sách và quy định là **biến kinh tế (economic variable)** giống lãi suất, tỷ giá hay giá nguyên liệu. Nó thay đổi lợi ích và chi phí của quyết định kinh doanh.
 
 ## Thuế thu nhập doanh nghiệp đánh trên thu nhập chịu thuế, không phải doanh thu
 
@@ -25,7 +28,7 @@ Vì vậy không thể chỉ lấy lợi nhuận kế toán nhân với thuế s
 
 ## Các bậc thuế doanh nghiệp năm 2026
 
-Với năm tài chính bắt đầu từ 1/1/2026, mức thuế suất cơ bản do National Tax Service công bố cho công ty vì lợi nhuận thông thường gồm:
+Với năm tài chính bắt đầu từ 1/1/2026, mức thuế suất cơ bản do National Tax dịch vụ (service / 서비스) công bố cho công ty vì lợi nhuận thông thường gồm:
 
 | Thu nhập chịu thuế | Thuế suất cơ bản |
 |---|---:|
@@ -220,13 +223,13 @@ Doanh nghiệp có cơ sở tài sản cũ có thể chịu rủi ro tài sản 
 
 Nếu doanh nghiệp chuẩn bị đầu tư nhà máy 10 nghìn tỷ KRW không thể đảo ngược nhưng quy định trợ cấp hoặc thuế quan sắp thay đổi, chờ đợi có thể có giá trị.
 
-Đây là logic **quyền chọn thực (real option)**. Bất định có thể khiến doanh nghiệp trì hoãn CAPEX, tăng tỷ suất tối thiểu, giữ nhiều tiền mặt hơn, chia dự án thành nhiều giai đoạn hoặc đa dạng hóa địa điểm.
+Đây là lô-gic (logic / 논리) **quyền chọn thực (real option)**. Bất định có thể khiến doanh nghiệp trì hoãn CAPEX, tăng tỷ suất tối thiểu, giữ nhiều tiền mặt hơn, chia dự án thành nhiều giai đoạn hoặc đa dạng hóa địa điểm.
 
 Vì vậy chỉ một thông báo chính sách cũng có thể thay đổi đầu tư trước khi quy định chính thức có hiệu lực.
 
 ## Tuân thủ ngày càng là bài toán phần mềm và hạ tầng
 
-Quy định hiện đại cần hệ thống giám sát giao dịch, audit log, kiểm soát riêng tư, dữ liệu kế toán, an ninh mạng và báo cáo.
+Quy định hiện đại cần hệ thống giám sát giao dịch, nhật ký kiểm tra (audit log / 감사 로그), kiểm soát riêng tư, dữ liệu kế toán, an ninh mạng và báo cáo.
 
 Chi phí tuân thủ vì thế không chỉ là nhân sự pháp lý mà trở thành kiến trúc CNTT doanh nghiệp. Với công ty SI/SM Hàn Quốc, chính quy định tạo ra một phần nhu cầu dự án hệ thống.
 
@@ -247,7 +250,7 @@ Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_a
 
 Sau đó xác định quy định nào thật sự đi thẳng vào dòng tiền.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thuế và quy định xác định **không gian chiến lược khả thi** của doanh nghiệp. Mô hình kinh doanh không chỉ là sản phẩm + khách hàng; nó còn là sản phẩm + khách hàng + luật + thuế + giấy phép + cấu trúc cạnh tranh. Nếu lợi nhuận phụ thuộc một quy định, quy định đó phải nằm trong mô hình định giá và rủi ro.
 
@@ -271,5 +274,7 @@ Sau đó xác định quy định nào thật sự đi thẳng vào dòng tiền
 
 ### Nguồn hiện hành
 
-- National Tax Service: thuế suất thuế thu nhập doanh nghiệp.
+- National Tax dịch vụ (service / 서비스): thuế suất thuế thu nhập doanh nghiệp.
 - Korea Fair Trade Commission: chính sách về tập đoàn doanh nghiệp lớn.
+
+> **Bàn giao:** Sau **Nguồn hiện hành**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

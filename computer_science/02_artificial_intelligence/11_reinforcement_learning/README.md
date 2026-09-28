@@ -1,6 +1,9 @@
-# Reinforcement Learning — Reading Map
+# Reinforcement học tập (learning / 학습) — Reading Map
 
-Folder này xây Reinforcement Learning từ first principles: agent tương tác với environment, reward định nghĩa learning signal, value functions nén consequence của future, Bellman equations tạo recursive structure, rồi sample-based methods học policy từ experience.
+> **Mạch đọc:** Đọc **Reinforcement học tập (learning / 학습) — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này xây Reinforcement học tập (learning / 학습) từ nguyên lý nền tảng (first principles / 제일 원리): tác nhân (agent / 에이전트) tương tác với môi trường (environment / 환경), reward định nghĩa học tập (learning / 학습) tín hiệu (signal / 신호), giá trị (value / 값) functions nén consequence của future, Bellman equations tạo recursive cấu trúc (structure / 구조), rồi sample-based methods học chính sách (policy / 정책) từ experience.
 
 ```mermaid
 flowchart TD
@@ -28,7 +31,10 @@ flowchart TD
 - [08 — Actor-Critic](./08_actor_critic.md)
 - [09 — Deep Reinforcement Learning](./09_deep_reinforcement_learning.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 ```text
 Reward ≠ true goal
@@ -43,7 +49,10 @@ RL ≠ RLHF
 High reward ≠ safe behavior
 ```
 
-## Mental Model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Agent policy
@@ -54,7 +63,10 @@ Value / policy update
     ↺
 ```
 
-Khác với supervised learning, policy ảnh hưởng distribution của data agent sẽ thu được tiếp theo. Vì vậy RL là learning problem nằm trong một feedback loop.
+Khác với supervised học tập (learning / 학습), chính sách (policy / 정책) ảnh hưởng phân phối (distribution / 분포) của dữ liệu (data / 데이터) tác nhân (agent / 에이전트) sẽ thu được tiếp theo. Vì vậy RL là học tập (learning / 학습) bài toán (problem / 문제) nằm trong một vòng phản hồi (feedback loop / 피드백 루프).
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Prerequisites và Connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Prerequisites và Connections
 
@@ -68,3 +80,5 @@ Nên liên hệ với:
 - [LLM RLHF](../08_large_language_models/08_rlhf.md)
 
 Sau RL, roadmap chuyển sang perception-oriented domains: Computer Vision và Speech/Audio/Multimodal AI.
+
+> **Bàn giao:** Sau **Prerequisites và Connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reinforcement learning foundations](./00_reinforcement_learning_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

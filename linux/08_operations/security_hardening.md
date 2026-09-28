@@ -1,10 +1,13 @@
 # Bảo mật Linux và gia cố máy chủ
 
+> **Mạch đọc:** Đọc **Bảo mật Linux và gia cố máy chủ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình đe dọa phải có trước cấu hình** sang **Đặc quyền tối thiểu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 **Gia cố bảo mật (security hardening)** không phải một checklist kiểu "tắt càng nhiều càng tốt". Mục tiêu là giảm xác suất và mức ảnh hưởng khi hệ thống bị xâm nhập, đồng thời vẫn giữ hệ thống vận hành đúng chức năng. Muốn làm đúng cần hiểu **tài sản cần bảo vệ, danh tính, ranh giới tin cậy (trust boundary), bề mặt tấn công (attack surface) và khả năng phục hồi**.
 
 ## Mô hình đe dọa phải có trước cấu hình
 
-Một máy chủ build nội bộ và một API công khai trên Internet có **mô hình đe dọa (threat model)** khác nhau. Trước khi gia cố, cần biết dữ liệu nào quan trọng, ai cần truy cập, mạng nào được tin cậy, dịch vụ nào phải công khai và loại thất bại nào có thể chấp nhận.
+Một máy chủ bản dựng (build / 빌드) nội bộ và một API công khai trên Internet có **mô hình đe dọa (threat model)** khác nhau. Trước khi gia cố, cần biết dữ liệu nào quan trọng, ai cần truy cập, mạng nào được tin cậy, dịch vụ nào phải công khai và loại thất bại nào có thể chấp nhận.
 
 Không tồn tại một tệp `sysctl.conf` thần kỳ phù hợp cho mọi máy chủ.
 
@@ -18,7 +21,7 @@ User=app
 Group=app
 ```
 
-Nếu ứng dụng chỉ cần một đặc quyền cụ thể, Linux capabilities hoặc cơ chế cô lập của systemd có thể giảm quyền so với việc cấp toàn bộ quyền root.
+Nếu ứng dụng chỉ cần một đặc quyền cụ thể, Linux capabilities hoặc cơ chế cô lập của systemd có thể giảm quyền so với việc cấp toàn bộ quyền gốc (root / 루트).
 
 Nguyên tắc **đặc quyền tối thiểu (least privilege / 최소 권한)** làm giảm phạm vi ảnh hưởng khi ứng dụng bị khai thác.
 
@@ -59,7 +62,7 @@ uname -r
 cat /etc/os-release
 ```
 
-Kiểm kê phiên bản giúp biết trạng thái thực tế của máy thay vì chỉ biết "đã chạy update".
+Kiểm kê phiên bản giúp biết trạng thái thực tế của máy thay vì chỉ biết "đã chạy cập nhật (update / 업데이트)".
 
 ## Quyền tệp và bí mật
 
@@ -70,7 +73,7 @@ chmod 600 secret.env
 chown app:app secret.env
 ```
 
-Nhưng quyền của hệ thống tệp chỉ là một lớp. Bí mật có thể rò rỉ qua bản dump biến môi trường, lịch sử câu lệnh, đối số tiến trình, nhật ký, bản sao lưu hoặc artifact của CI.
+Nhưng quyền của hệ thống tệp chỉ là một lớp. Bí mật có thể rò rỉ qua bản dump biến môi trường, lịch sử câu lệnh, đối số tiến trình, nhật ký, bản sao lưu hoặc sản phẩm tạo ra (artifact / 산출물) của CI.
 
 Vì vậy `chmod 600` chưa phải toàn bộ quá trình **quản lý bí mật (secret management)**.
 
@@ -82,19 +85,19 @@ Firewall trên host giới hạn đường truyền mạng theo chính sách. Li
 sudo nft list ruleset
 ```
 
-Luật firewall phải phù hợp với security group trên cloud, load balancer và địa chỉ bind của ứng dụng. Nhiều lớp chính sách có thể cùng tác động lên một kết nối.
+Luật firewall phải phù hợp với bảo mật (security / 보안) group trên cloud, bộ cân bằng tải (load balancer / 로드 밸런서) và địa chỉ bind của ứng dụng. Nhiều lớp chính sách có thể cùng tác động lên một kết nối.
 
 ## SELinux và AppArmor
 
-**Kiểm soát truy cập bắt buộc (Mandatory Access Control / MAC)** giới hạn tiến trình bằng chính sách bổ sung ngoài mô hình UID/mode truyền thống. SELinux thường xuất hiện trên họ RHEL, còn AppArmor phổ biến trên Ubuntu.
+**Kiểm soát truy cập bắt buộc (Mandatory Access Control / MAC)** giới hạn tiến trình bằng chính sách bổ sung ngoài mô hình UID/chế độ (mode / 모드) truyền thống. SELinux thường xuất hiện trên họ RHEL, còn AppArmor phổ biến trên Ubuntu.
 
-Tắt SELinux hoặc AppArmor để "sửa permission" có thể làm triệu chứng biến mất nhưng đồng thời loại bỏ một ranh giới bảo mật. Cách đúng là đọc bằng chứng bị từ chối rồi sửa policy hoặc context nếu ứng dụng thật sự cần quyền đó.
+Tắt SELinux hoặc AppArmor để "sửa permission" có thể làm triệu chứng biến mất nhưng đồng thời loại bỏ một ranh giới bảo mật. Cách đúng là đọc bằng chứng bị từ chối rồi sửa chính sách (policy / 정책) hoặc ngữ cảnh (context / 맥락) nếu ứng dụng thật sự cần quyền đó.
 
 ## Cô lập dịch vụ bằng systemd
 
-Systemd có nhiều chỉ thị giúp giới hạn capabilities, quyền truy cập hệ thống tệp, nâng đặc quyền và namespace tùy khả năng tương thích của dịch vụ. Ví dụ `NoNewPrivileges=`, `ProtectSystem=` hoặc `PrivateTmp=` có thể giảm bề mặt tấn công.
+Systemd có nhiều chỉ thị giúp giới hạn capabilities, quyền truy cập hệ thống tệp, nâng đặc quyền và không gian tên (namespace / 네임스페이스) tùy khả năng tương thích của dịch vụ. Ví dụ `NoNewPrivileges=`, `ProtectSystem=` hoặc `PrivateTmp=` có thể giảm bề mặt tấn công.
 
-Không nên bật hàng loạt chỉ thị mà không kiểm thử; ứng dụng có thể cần đường dẫn hoặc system call đang bị giới hạn.
+Không nên bật hàng loạt chỉ thị mà không kiểm thử; ứng dụng có thể cần đường dẫn hoặc lời gọi hệ thống (system call / 시스템 호출) đang bị giới hạn.
 
 ## Kiểm toán và nhật ký
 
@@ -110,7 +113,7 @@ Nguyên tắc này nối bảo mật với độ tin cậy: tính sẵn sàng v�
 
 ## Chuỗi cung ứng phần mềm
 
-Gói phần mềm, ảnh container, dependency và artifact triển khai đều là đầu vào cần được tin cậy. Khi hệ sinh thái hỗ trợ, nên xác minh nguồn, checksum hoặc chữ ký; có chính sách phiên bản rõ; và tránh tải một script không rõ rồi pipe thẳng vào shell có đặc quyền.
+Gói phần mềm, ảnh bộ chứa (container / 컨테이너), phụ thuộc (dependency / 의존성) và sản phẩm tạo ra (artifact / 산출물) triển khai đều là đầu vào cần được tin cậy. Khi hệ sinh thái hỗ trợ, nên xác minh nguồn, checksum hoặc chữ ký; có chính sách phiên bản rõ; và tránh tải một script không rõ rồi pipe thẳng vào shell có đặc quyền.
 
 Ví dụ:
 
@@ -120,7 +123,7 @@ curl https://example/install.sh | sudo bash
 
 trao nội dung từ xa quyền thực thi ngay lập tức. An toàn hơn là tải xuống, kiểm tra nguồn/nội dung và xác minh trước khi chạy, đặc biệt trong ngữ cảnh có đặc quyền cao.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Bảo mật có thể được nhìn như bài toán quản lý **ai có thể gây ra thay đổi trạng thái nào, thông qua giao diện nào**. Danh tính, quyền, mức phơi bày mạng, nguồn gốc phần mềm và khả năng phục hồi đều là các phần của cùng câu hỏi.
 
@@ -130,7 +133,7 @@ Bảo mật có thể được nhìn như bài toán quản lý **ai có thể g
 
 **"Đổi cổng SSH là biện pháp gia cố chính."** Nó giảm nhiễu quét tự động nhưng không thay thế xác thực, chính sách mạng và vá lỗi.
 
-**"Mật khẩu root mạnh là đủ."** Bề mặt tấn công còn gồm dịch vụ, lỗ hổng, khóa, sudo, chuỗi cung ứng và lỗi ứng dụng.
+**"Mật khẩu gốc (root / 루트) mạnh là đủ."** Bề mặt tấn công còn gồm dịch vụ, lỗ hổng, khóa, sudo, chuỗi cung ứng và lỗi ứng dụng.
 
 **"`chmod 777` sửa được permission."** Nó phá nguyên tắc đặc quyền tối thiểu và có thể không tác động tới chính sách MAC.
 
@@ -140,4 +143,6 @@ Bảo mật có thể được nhìn như bài toán quản lý **ai có thể g
 
 ## Kết nối kiến thức
 
-Bảo mật sử dụng mô hình danh tính từ [Người dùng và quyền truy cập](../03_identity/users_groups_permissions.md), mô hình mạng từ [Mạng, DNS, socket và cổng](../07_networking/networking_dns_sockets_ports.md), vòng đời gói phần mềm và khả năng quan sát hệ thống. Container không loại bỏ bảo mật của host; chúng chỉ bổ sung thêm các cơ chế cô lập và bề mặt cấu hình.
+Bảo mật sử dụng mô hình danh tính từ [Người dùng và quyền truy cập](../03_identity/users_groups_permissions.md), mô hình mạng từ [Mạng, DNS, socket và cổng](../07_networking/networking_dns_sockets_ports.md), vòng đời gói phần mềm và khả năng quan sát hệ thống. bộ chứa (container / 컨테이너) không loại bỏ bảo mật của host; chúng chỉ bổ sung thêm các cơ chế cô lập và bề mặt cấu hình.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [backup restore disaster recovery](./backup_restore_disaster_recovery.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)
 
+> **Mạch đọc:** Đặt **Từ kinh tế vĩ mô đến công ty: cơ chế truyền dẫn (Macro-to-Company Transmission / 거시경제의 기업 전이)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung cơ bản: một cú sốc phải đi qua nhiều tầng** sang **Bước 1 — Xác định loại cú sốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một trong những kỹ năng quan trọng nhất khi đọc kinh tế là không dừng ở tiêu đề. “Lãi suất tăng”, “KRW yếu”, “Trung Quốc giảm tốc” hay “CAPEX AI tăng” chỉ trở thành hiểu biết hữu ích khi ta mô tả được **cú sốc đi qua giá, sản lượng, chi phí, bảng cân đối và hành vi doanh nghiệp như thế nào**.
 
 Vĩ mô không tác động mọi công ty cùng dấu. Cùng một lần KRW mất giá có thể có lợi cho nhà xuất khẩu, bất lợi cho nhà nhập khẩu và tác động hỗn hợp với công ty có doanh thu USD nhưng cũng vay USD. Vì vậy phân tích phải đi qua **cơ chế truyền dẫn (transmission mechanism)** thay vì dùng khẩu hiệu.
@@ -207,15 +210,15 @@ CAPEX tăng
 
 Lợi ích chính sách hôm nay có thể tạo rủi ro dư cung vài năm sau. Đây là lý do cần tư duy bậc hai.
 
-## Stock và flow: đừng trộn hai loại dữ liệu
+## Stock và luồng (flow / 흐름): đừng trộn hai loại dữ liệu
 
 **Stock** đo tại một thời điểm: nợ, tồn kho, tiền mặt, backlog, công suất lắp đặt.
 
-**Flow** đo trong một khoảng thời gian: doanh thu, chi phí lãi, đơn hàng mới, CAPEX, dòng tiền.
+**luồng (flow / 흐름)** đo trong một khoảng thời gian: doanh thu, chi phí lãi, đơn hàng mới, CAPEX, dòng tiền.
 
-Bán hàng yếu là cú sốc flow; qua nhiều quý nó có thể làm stock tồn kho tăng. Đơn hàng mới là flow đi vào backlog; doanh thu ghi nhận là flow đi ra backlog.
+Bán hàng yếu là cú sốc luồng (flow / 흐름); qua nhiều quý nó có thể làm stock tồn kho tăng. Đơn hàng mới là luồng (flow / 흐름) đi vào backlog; doanh thu ghi nhận là luồng (flow / 흐름) đi ra backlog.
 
-Rất nhiều lỗi phân tích đến từ trộn stock và flow.
+Rất nhiều lỗi phân tích đến từ trộn stock và luồng (flow / 흐름).
 
 ## Động lực backlog
 
@@ -361,7 +364,7 @@ Nhà thầu trì hoãn CAPEX / tăng dự trữ thanh khoản
 
 Cây càng dài thì bất định tích lũy càng nhanh.
 
-## Stress test bảng cân đối, không chỉ EPS
+## Kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối, không chỉ EPS
 
 Cú sốc vĩ mô thường nguy hiểm nhất khi đánh đồng thời vào lợi nhuận và tài trợ.
 
@@ -388,11 +391,11 @@ Mô hình EPS có thể đánh giá thấp rủi ro nếu không mô hình thanh
 - **Ngân hàng:** lãi suất + cạnh tranh tiền gửi + cầu tín dụng + chất lượng tài sản + nhà ở.
 - **Xây dựng:** lãi suất + nhà ở + PF + vật liệu + quy định.
 - **Nền tảng:** tiêu dùng + ngân sách quảng cáo + quy định + hiệu ứng mạng.
-- **IT/SI:** CAPEX doanh nghiệp/công + chi phí lao động + cloud/AI + pipeline dự án.
+- **IT/SI:** CAPEX doanh nghiệp/công + chi phí lao động + cloud/AI + chuỗi xử lý (pipeline / 파이프라인) dự án.
 
 Loại doanh nghiệp giúp chọn biến vĩ mô cần theo dõi; không cần theo dõi mọi chỉ số.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Tin kinh tế chỉ trở thành hiểu biết về doanh nghiệp khi viết được chuỗi **cú sốc → giá/sản lượng/chi phí → dòng tiền/bảng cân đối → phản ứng quản lý → công suất tương lai/định giá**.
 
@@ -417,3 +420,5 @@ Không có cơ chế → không có kết luận.
 ## Liên kết cuối
 
 Dùng [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) để biến khung truyền dẫn thành mô hình theo từng công ty. Quay lại [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) và [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md) khi cần nền sâu hơn.
+
+> **Bàn giao:** Sau **Liên kết cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

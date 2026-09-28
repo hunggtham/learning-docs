@@ -10,6 +10,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
 
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Subquery** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
@@ -57,7 +61,7 @@ Main Query
 p.artist_id
 ```
 
-đến từ **main query**, còn:
+đến từ **main truy vấn (query / 쿼리)**, còn:
 
 ```sql
 a.id
@@ -135,7 +139,7 @@ EXISTS
 
 Theo ảnh:
 
-**서브쿼리는 SELECT, FROM, WHERE, HAVING, ORDER BY 절 등에 위치할 수 있다.**
+**서브쿼리는 SELECT, FROM, WHERE, HAVING, thứ tự (order / 순서) BY 절 등에 위치할 수 있다.**
 → Subquery có thể xuất hiện trong `SELECT`, `FROM`, `WHERE`, `HAVING`, `ORDER BY`...
 
 Ngoài ra còn có thể xuất hiện trong DML:
@@ -165,12 +169,12 @@ WHERE  → Nested
 
 ## 4. 연관 서브쿼리 vs 비연관 서브쿼리
 
-Đây là một cách phân loại **theo quan hệ với main query**.
+Đây là một cách phân loại **theo quan hệ với main truy vấn (query / 쿼리)**.
 
 ### 4.1 연관 서브쿼리 — Correlated Subquery
 
 **연관 서브쿼리는 서브쿼리가 메인쿼리의 컬럼을 참조하는 서브쿼리이다.**
-→ Correlated Subquery là subquery **tham chiếu cột của main query**.
+→ Correlated Subquery là subquery **tham chiếu cột của main truy vấn (query / 쿼리)**.
 
 Ví dụ:
 
@@ -191,13 +195,13 @@ FROM paintings p;
 p.artist_id
 ```
 
-Subquery đang sử dụng dữ liệu từ `p`, mà `p` được khai báo ở main query:
+Subquery đang sử dụng dữ liệu từ `p`, mà `p` được khai báo ở main truy vấn (query / 쿼리):
 
 ```sql
 FROM paintings p
 ```
 
-Do đó subquery **phụ thuộc main query**.
+Do đó subquery **phụ thuộc main truy vấn (query / 쿼리)**.
 
 Ta có thể tư duy:
 
@@ -220,14 +224,14 @@ trả artist_name
 ...
 ```
 
-> Đây là mô hình logic để hiểu correlated subquery; optimizer của DBMS có thể biến đổi cách thực thi thực tế.
+> Đây là mô hình lô-gic (logic / 논리) để hiểu correlated subquery; optimizer của DBMS có thể biến đổi cách thực thi thực tế.
 
 ---
 
 ### 4.2 비연관 서브쿼리 — Uncorrelated Subquery
 
 **비연관 서브쿼리는 메인쿼리의 컬럼을 참조하지 않는다.**
-→ Uncorrelated Subquery không phụ thuộc cột của main query.
+→ Uncorrelated Subquery không phụ thuộc cột của main truy vấn (query / 쿼리).
 
 Ví dụ:
 
@@ -255,7 +259,7 @@ Ví dụ:
 AVG(SAL) = 3500
 ```
 
-Sau đó về logic main query trở thành:
+Sau đó về lô-gic (logic / 논리) main truy vấn (query / 쿼리) trở thành:
 
 ```sql
 SELECT *
@@ -317,7 +321,7 @@ trả:
 3000
 ```
 
-thì main query tương đương:
+thì main truy vấn (query / 쿼리) tương đương:
 
 ```sql
 WHERE SAL > 3000
@@ -558,7 +562,7 @@ DEPTNO | MAX(SAL)
 30     | 3500
 ```
 
-Main query kiểm tra theo **cặp giá trị**:
+Main truy vấn (query / 쿼리) kiểm tra theo **cặp giá trị**:
 
 ```text
 (DEPTNO, SAL)
@@ -645,7 +649,7 @@ vào cùng một cell.
 
 ---
 
-## 14. Scalar Subquery và LEFT OUTER JOIN
+## 14. Scalar Subquery và LEFT OUTER phép nối (join / 조인)
 
 Ảnh chỉ ra một liên hệ rất đáng nhớ.
 
@@ -704,7 +708,7 @@ WHERE a.id = 10
 
 không tìm thấy row.
 
-Trong scalar context, kết quả biểu diễn thành:
+Trong scalar ngữ cảnh (context / 맥락), kết quả biểu diễn thành:
 
 ```text
 NULL
@@ -722,7 +726,7 @@ Do đó painting `108` vẫn tồn tại:
 LEFT JOIN
 ```
 
-vì LEFT JOIN vẫn giữ row bên trái.
+vì LEFT phép nối (join / 조인) vẫn giữ row bên trái.
 
 ⚠️ Nhưng không nên học thành quy tắc "`Scalar Subquery = LEFT JOIN` trong mọi trường hợp". Hai cách chỉ tương đương khi điều kiện và tính duy nhất của kết quả phù hợp.
 
@@ -818,7 +822,7 @@ EMPNO ENAME DEPTNO SAL  TOTAL_SAL
 
 `TOTAL_SAL` được lặp trên từng row.
 
-Đây chính là lý do aggregate function rất hay được dùng với scalar subquery:
+Đây chính là lý do aggregate hàm (function / 함수) rất hay được dùng với scalar subquery:
 
 ```text
 SUM()
@@ -884,7 +888,7 @@ FROM paintings
 GROUP BY artist_id;
 ```
 
-trước tiên tạo logic:
+trước tiên tạo lô-gic (logic / 논리):
 
 ```text
 artist_id | avg_price
@@ -919,10 +923,10 @@ p.price > p2.avg_price
 
 ---
 
-## 18. Tại sao Inline View được gọi là Dynamic View?
+## 18. Tại sao Inline View được gọi là động (dynamic / 동적) View?
 
 **인라인 뷰는 동적 뷰(Dynamic View)라고도 한다.**
-→ Inline View còn được gọi là Dynamic View.
+→ Inline View còn được gọi là động (dynamic / 동적) View.
 
 Vì kết quả:
 
@@ -932,9 +936,9 @@ Vì kết quả:
 )
 ```
 
-được tạo ra trong lúc query chạy.
+được tạo ra trong lúc truy vấn (query / 쿼리) chạy.
 
-Nó **không phải table vật lý được lưu cố định trong database**.
+Nó **không phải bảng (table / 테이블) vật lý được lưu cố định trong cơ sở dữ liệu (database / 데이터베이스)**.
 
 Có thể hình dung:
 
@@ -952,7 +956,7 @@ kết thúc query
 
 ---
 
-## 19. Inline View và JOIN — phần rất dễ nhầm
+## 19. Inline View và phép nối (join / 조인) — phần rất dễ nhầm
 
 Ảnh viết phiên bản:
 
@@ -964,9 +968,9 @@ FROM paintings p,
 WHERE p.artist_id = p2.artist_id
 ```
 
-Đây là kiểu join cũ.
+Đây là kiểu phép nối (join / 조인) cũ.
 
-Có thể viết rõ hơn bằng ANSI JOIN:
+Có thể viết rõ hơn bằng ANSI phép nối (join / 조인):
 
 ```sql
 SELECT p.artist_id,
@@ -990,7 +994,7 @@ Hai phần cần phân biệt:
 ON p.artist_id = p2.artist_id
 ```
 
-→ điều kiện JOIN.
+→ điều kiện phép nối (join / 조인).
 
 ```sql
 WHERE p.price > p2.avg_price
@@ -1002,12 +1006,12 @@ WHERE p.price > p2.avg_price
 
 ---
 
-## 20. Cartesian Product khi quên JOIN condition
+## 20. Cartesian sản phẩm (product / 제품) khi quên điều kiện nối (join condition / 조인 조건)
 
 Ảnh nhấn mạnh:
 
-**두 테이블 사이에 명확한 JOIN 조건이 없으면 Cartesian Product가 발생할 수 있다.**
-→ Nếu kết hợp hai bảng mà không có điều kiện nối thích hợp, có thể sinh Cartesian Product.
+**두 테이블 사이에 명확한 phép nối (join / 조인) 조건이 없으면 Cartesian sản phẩm (product / 제품)가 발생할 수 있다.**
+→ Nếu kết hợp hai bảng mà không có điều kiện nối thích hợp, có thể sinh Cartesian sản phẩm (product / 제품).
 
 Ví dụ:
 
@@ -1127,7 +1131,7 @@ FROM EMP
 
 trả một giá trị.
 
-Main query:
+Main truy vấn (query / 쿼리):
 
 ```sql
 SAL > giá_trị_đó
@@ -1164,7 +1168,7 @@ DEPTNO = 10
 SAL = 5000
 ```
 
-Subquery trở thành về mặt logic:
+Subquery trở thành về mặt lô-gic (logic / 논리):
 
 ```sql
 SELECT AVG(SAL)
@@ -1182,7 +1186,7 @@ Sau đó:
 
 Nếu đúng → KING được chọn.
 
-Tiếp theo main query xét nhân viên phòng 20.
+Tiếp theo main truy vấn (query / 쿼리) xét nhân viên phòng 20.
 
 Subquery lúc đó tính:
 
@@ -1190,13 +1194,13 @@ Subquery lúc đó tính:
 AVG(phòng 20)
 ```
 
-Vì thế correlated subquery phụ thuộc **row hiện tại của main query**.
+Vì thế correlated subquery phụ thuộc **row hiện tại của main truy vấn (query / 쿼리)**.
 
 ---
 
 ## 24. 상호 연관 서브쿼리의 논리적 순서
 
-Ảnh mô tả logic:
+Ảnh mô tả lô-gic (logic / 논리):
 
 ```text
 ① Main Query table READ
@@ -1220,7 +1224,7 @@ Ví dụ:
 WHERE E1.DEPTNO = E2.DEPTNO
 ```
 
-`E1.DEPTNO` được truyền từ row đang xét của main query.
+`E1.DEPTNO` được truyền từ row đang xét của main truy vấn (query / 쿼리).
 
 ---
 
@@ -1250,7 +1254,7 @@ thì subquery có thể xuất hiện ở `HAVING`.
 
 ---
 
-## 26. UPDATE SET에서 서브쿼리
+## 26. cập nhật (update / 업데이트) SET에서 서브쿼리
 
 Ảnh nhắc một lỗi quan trọng.
 
@@ -1265,7 +1269,7 @@ SET DEPTNO = (
 );
 ```
 
-Nếu subquery không tìm được row thì scalar result có thể trở thành:
+Nếu subquery không tìm được row thì scalar kết quả (result / 결과) có thể trở thành:
 
 ```text
 NULL
@@ -1416,7 +1420,7 @@ Nếu chỉ:
 WHERE b.order_id = a.order_id
 ```
 
-thì một order có thể có nhiều product.
+thì một thứ tự (order / 순서) có thể có nhiều sản phẩm (product / 제품).
 
 → Không xác định đúng row.
 
@@ -1428,3 +1432,5 @@ Khóa ghép gồm N cột
 ```
 
 ---
+
+> **Bàn giao:** Sau khi đọc, chốt đối tượng (object / 객체), điều kiện và thứ tự xử lý của bài này; nếu còn mơ hồ, quay lại ví dụ SQL rồi nối sang bài kế tiếp thay vì ghi nhớ câu lệnh như một mảnh rời.

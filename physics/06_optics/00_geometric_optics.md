@@ -1,5 +1,8 @@
 # Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh
 
+> **Mạch đọc:** Đọc **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi nào mô hình tia hợp lý?** sang **Chỉ số khúc xạ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Quang hình học (geometrical optics / 기하광학) mô tả ánh sáng bằng **tia (ray)**. Đây không phải mô hình cơ bản nhất của ánh sáng mà là xấp xỉ bước sóng ngắn: khi bước sóng nhỏ hơn nhiều kích thước đặc trưng của hệ, ta có thể bỏ qua phần lớn hiệu ứng nhiễu xạ và theo dõi hướng truyền năng lượng bằng các tia.
 
 Chương này tập trung vào việc hiểu vì sao các định luật phản xạ, khúc xạ và công thức thấu kính xuất hiện, chúng dựa trên giả định nào và khi nào phải chuyển sang quang học sóng.
@@ -271,7 +274,7 @@ Thấu kính thực không hội tụ mọi tia và mọi màu vào cùng một 
 
 **Quang sai sắc (chromatic aberration)** xuất hiện vì `n=n(\lambda)` nên tiêu cự phụ thuộc màu.
 
-Ngoài ra còn coma, astigmatism và field curvature.
+Ngoài ra còn coma, astigmatism và trường dữ liệu (field / 필드) curvature.
 
 Hệ quang học thực thường dùng nhiều phần tử với vật liệu và hình dạng khác nhau để bù các sai lệch này.
 
@@ -283,11 +286,11 @@ Cận thị thường làm ảnh của vật xa hội tụ trước võng mạc 
 
 Mắt không chỉ là camera sinh học. Võng mạc và hệ thần kinh xử lý tín hiệu mạnh trước khi thông tin trở thành nhận thức thị giác.
 
-## Sợi quang: từ ray picture tới mode picture
+## Sợi quang: từ ray picture tới chế độ (mode / 모드) picture
 
-Mô hình tia nói ánh sáng bị giữ trong lõi nhờ phản xạ toàn phần. Mô hình sóng nói chỉ những mode thỏa điều kiện biên mới lan truyền ổn định.
+Mô hình tia nói ánh sáng bị giữ trong lõi nhờ phản xạ toàn phần. Mô hình sóng nói chỉ những chế độ (mode / 모드) thỏa điều kiện biên mới lan truyền ổn định.
 
-Số mode phụ thuộc kích thước lõi, bước sóng và numerical aperture. Trong truyền thông tốc độ cao, dispersion mode, dispersion vật liệu, suy hao và hiệu ứng phi tuyến đều có thể giới hạn băng thông.
+Số chế độ (mode / 모드) phụ thuộc kích thước lõi, bước sóng và numerical aperture. Trong truyền thông tốc độ cao, dispersion chế độ (mode / 모드), dispersion vật liệu, suy hao và hiệu ứng phi tuyến đều có thể giới hạn băng thông.
 
 Vì vậy ray optics là trực giác ban đầu, còn thiết kế hệ sợi chính xác cần quang học sóng và điện từ học.
 
@@ -318,12 +321,14 @@ Nguyên lý Fermat nói đường quang học là stationary, không phải lúc
 
 Ban đầu giảm khẩu có thể giảm quang sai hình học, nhưng khi khẩu quá nhỏ, nhiễu xạ làm độ phân giải xấu đi.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Quang hình học là bài toán tối ưu pha và đường truyền trong giới hạn `\lambda/L\ll1`. Tia sáng hữu ích vì nó nén thông tin của wavefront thành hướng truyền cục bộ. Khi hệ bắt đầu nhạy với pha, bước sóng hoặc khẩu độ, phải quay lại mô hình sóng đầy đủ hơn.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Sóng điện từ](../05_electromagnetism/04_maxwell_em_waves.md), [Ngôn ngữ toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Quang học sóng](01_wave_optics.md), [Quang học Fourier và hệ tạo ảnh](04_fourier_imaging_instrumentation.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 wave optics](./01_wave_optics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,20 +1,23 @@
-# AI System Architecture: từ Model tới Production System
+# AI hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처): từ mô hình (model / 모델) tới môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)
 
-Khi học AI, người mới thường nhìn thấy một function rất đơn giản:
+> **Mạch đọc:** Đọc **AI hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처): từ mô hình (model / 모델) tới môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **mô hình (model / 모델) là thành phần (component / 컴포넌트), không phải toàn bộ hệ thống (system / 시스템)** sang **Offline đường dẫn (path / 경로) và Online đường dẫn (path / 경로)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Khi học AI, người mới thường nhìn thấy một hàm (function / 함수) rất đơn giản:
 
 ```text
 input → model → output
 ```
 
-Đây là abstraction đúng ở mức model, nhưng không đủ để hiểu một AI product thực tế. Production AI system phải giải quyết data ingestion, preprocessing, context, inference, retrieval, business logic, tools, permissions, validation, observability, evaluation, latency, cost và failure recovery.
+Đây là lớp trừu tượng (abstraction / 추상화) đúng ở mức mô hình (model / 모델), nhưng không đủ để hiểu một AI sản phẩm (product / 제품) thực tế. môi trường vận hành (production / 운영 환경) AI hệ thống (system / 시스템) phải giải quyết dữ liệu (data / 데이터) ingestion, preprocessing, ngữ cảnh (context / 맥락), suy luận (inference / 추론), retrieval, lô-gic nghiệp vụ (business logic / 비즈니스 로직), tools, permissions, kiểm tra hợp lệ (validation / 검증), khả năng quan sát (observability / 관측 가능성), evaluation, độ trễ (latency / 지연 시간), chi phí (cost / 비용) và thất bại (failure / 실패) khôi phục (recovery / 복구).
 
-Một system tốt không nhất thiết có model mạnh nhất. Nó cần **toàn bộ pipeline hoạt động nhất quán dưới constraints thực tế**.
+Một hệ thống (system / 시스템) tốt không nhất thiết có mô hình (model / 모델) mạnh nhất. Nó cần **toàn bộ chuỗi xử lý (pipeline / 파이프라인) hoạt động nhất quán dưới các ràng buộc (constraints / 제약조건들) thực tế**.
 
-## Model là component, không phải toàn bộ system
+## Mô hình (model / 모델) là thành phần (component / 컴포넌트), không phải toàn bộ hệ thống (system / 시스템)
 
-Giả sử xây internal assistant cho công ty. Nếu chỉ gọi LLM với user question, model chỉ có knowledge nằm trong parameters và context được gửi vào request. Nó không tự biết database nội bộ mới nhất, permission của user hay trạng thái hiện tại của business workflow.
+Giả sử xây nội bộ (internal / 내부) assistant cho công ty. Nếu chỉ gọi LLM với người dùng (user / 사용자) question, mô hình (model / 모델) chỉ có kiến thức (knowledge / 지식) nằm trong parameters và ngữ cảnh (context / 맥락) được gửi vào yêu cầu (request / 요청). Nó không tự biết cơ sở dữ liệu (database / 데이터베이스) nội bộ mới nhất, permission của người dùng (user / 사용자) hay trạng thái hiện tại của nghiệp vụ (business / 비즈니스) workflow.
 
-System cần orchestration:
+Hệ thống (system / 시스템) cần orchestration:
 
 ```mermaid
 flowchart LR
@@ -31,15 +34,15 @@ flowchart LR
     ORCH --> OBS[Logs / Traces / Evaluation]
 ```
 
-Mỗi box giải quyết một problem khác nhau. Nếu permission layer sai, model có thể expose information không nên thấy. Nếu retrieval sai, answer có thể grounded vào document không liên quan. Nếu tool execution thiếu validation, một hallucinated parameter có thể tạo side effect thật.
+Mỗi box giải quyết một bài toán (problem / 문제) khác nhau. Nếu permission tầng (layer / 계층) sai, mô hình (model / 모델) có thể expose thông tin (information / 정보) không nên thấy. Nếu retrieval sai, answer có thể grounded vào document không liên quan. Nếu công cụ (tool / 도구) thực thi (execution / 실행) thiếu kiểm tra hợp lệ (validation / 검증), một hallucinated parameter có thể tạo side tác động (effect / 효과) thật.
 
-## Offline path và Online path
+## Offline đường dẫn (path / 경로) và Online đường dẫn (path / 경로)
 
-AI system thường có ít nhất hai dòng xử lý.
+AI hệ thống (system / 시스템) thường có ít nhất hai dòng xử lý.
 
-### Offline path
+### Offline đường dẫn (path / 경로)
 
-Offline path chuẩn bị model/data trước khi user request đến:
+Offline đường dẫn (path / 경로) chuẩn bị mô hình (model / 모델)/dữ liệu (data / 데이터) trước khi người dùng (user / 사용자) yêu cầu (request / 요청) đến:
 
 ```text
 Raw data
@@ -51,11 +54,11 @@ Raw data
 → deployment
 ```
 
-Machine Learning training, embedding generation, document chunking và batch index build thường thuộc path này.
+Machine học tập (learning / 학습) huấn luyện (training / 학습), embedding generation, document chunking và batch chỉ mục (index / 인덱스) bản dựng (build / 빌드) thường thuộc đường dẫn (path / 경로) này.
 
-### Online path
+### Online đường dẫn (path / 경로)
 
-Online path phục vụ request:
+Online đường dẫn (path / 경로) phục vụ yêu cầu (request / 요청):
 
 ```text
 Request
@@ -67,19 +70,19 @@ Request
 → response
 ```
 
-Production design phải tối ưu online path cho latency và reliability trong khi vẫn có offline path để cập nhật knowledge/model.
+Môi trường vận hành (production / 운영 환경) thiết kế (design / 설계) phải tối ưu online đường dẫn (path / 경로) cho độ trễ (latency / 지연 시간) và độ tin cậy (reliability / 신뢰성) trong khi vẫn có offline đường dẫn (path / 경로) để cập nhật kiến thức (knowledge / 지식)/mô hình (model / 모델).
 
-## Data Pipeline
+## Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인)
 
-Model quality bị chặn bởi data quality. Data pipeline thường gồm ingestion, validation, transformation, storage và lineage.
+Mô hình (model / 모델) chất lượng (quality / 품질) bị chặn bởi dữ liệu (data / 데이터) chất lượng (quality / 품질). dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) thường gồm ingestion, kiểm tra hợp lệ (validation / 검증), transformation, lưu trữ (storage / 저장소) và lineage.
 
-Một feature được train theo cách A nhưng serve theo cách B tạo **training-serving skew**. Ví dụ training tính `average_spend_30d` theo UTC nhưng production tính theo local timezone. Model có thể degrade dù code inference không lỗi.
+Một tính năng (feature / 기능) được train theo cách A nhưng serve theo cách B tạo **training-serving skew**. Ví dụ huấn luyện (training / 학습) tính `average_spend_30d` theo UTC nhưng môi trường vận hành (production / 운영 환경) tính theo cục bộ (local / 로컬) timezone. mô hình (model / 모델) có thể degrade dù mã (code / 코드) suy luận (inference / 추론) không lỗi.
 
-Vì vậy feature definition, schema và versioning phải được quản lý như software contract.
+Vì vậy tính năng (feature / 기능) definition, lược đồ (schema / 스키마) và versioning phải được quản lý như software đặc tả hợp đồng (contract / 계약).
 
-## Model Serving
+## Mô hình (model / 모델) Serving
 
-**Model serving (모델 서빙)** là việc expose trained model để application gọi được. Serving có thể là:
+**mô hình (model / 모델) serving (모델 서빙)** là việc expose trained mô hình (model / 모델) để ứng dụng (application / 애플리케이션) gọi được. Serving có thể là:
 
 ```text
 batch inference
@@ -89,28 +92,28 @@ streaming inference
 on-device inference
 ```
 
-Trade-off chính gồm latency, throughput, memory, hardware utilization và cost.
+Sự đánh đổi (trade-off / 트레이드오프) chính gồm độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량), bộ nhớ (memory / 메모리), hardware utilization và chi phí (cost / 비용).
 
-Ví dụ interactive chatbot ưu tiên time-to-first-token và streaming. Batch scoring hàng triệu customers có thể ưu tiên throughput hơn latency từng record.
+Ví dụ interactive chatbot ưu tiên time-to-first-token và streaming. Batch scoring hàng triệu customers có thể ưu tiên thông lượng (throughput / 처리량) hơn độ trễ (latency / 지연 시간) từng bản ghi (record / 레코드).
 
 ## Stateful và Stateless AI
 
-Nhiều API service truyền thống cố stateless để scale dễ. Nhưng conversational AI và agent thường cần state.
+Nhiều API dịch vụ (service / 서비스) truyền thống cố stateless để quy mô (scale / 규모) dễ. Nhưng conversational AI và tác nhân (agent / 에이전트) thường cần trạng thái (state / 상태).
 
-State có thể nằm ở:
+Trạng thái (state / 상태) có thể nằm ở:
 
-- conversation history;
-- external database;
-- vector memory;
-- workflow state machine;
-- tool execution log;
-- user/profile store.
+- conversation lịch sử (history / 이력);
+- bên ngoài (external / 외부) cơ sở dữ liệu (database / 데이터베이스);
+- véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리);
+- workflow máy trạng thái (state machine / 상태 머신);
+- công cụ (tool / 도구) thực thi (execution / 실행) log;
+- người dùng (user / 사용자)/profile store.
 
-Không nên mặc định nhét mọi state vào prompt. Context window có cost, giới hạn capacity và có thể chứa stale/irrelevant information. Production design cần quyết định cái gì là transient context, cái gì là persistent state.
+Không nên mặc định nhét mọi trạng thái (state / 상태) vào prompt. ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) có chi phí (cost / 비용), giới hạn sức chứa (capacity / 용량) và có thể chứa stale/irrelevant thông tin (information / 정보). môi trường vận hành (production / 운영 환경) thiết kế (design / 설계) cần quyết định cái gì là transient ngữ cảnh (context / 맥락), cái gì là persistent trạng thái (state / 상태).
 
-## Retrieval Layer
+## Retrieval tầng (layer / 계층)
 
-Retrieval-Augmented Generation (RAG) thêm external knowledge trước inference:
+Retrieval-Augmented Generation (RAG) thêm bên ngoài (external / 외부) kiến thức (knowledge / 지식) trước suy luận (inference / 추론):
 
 ```text
 query
@@ -121,15 +124,15 @@ query
 → generation
 ```
 
-Điểm quan trọng: RAG không phải “vector DB + LLM”. Retrieval quality phụ thuộc chunking, indexing, metadata filter, query representation, ranking và context assembly.
+Điểm quan trọng: RAG không phải “véc-tơ (vector / 벡터) DB + LLM”. Retrieval chất lượng (quality / 품질) phụ thuộc chunking, indexing, siêu dữ liệu (metadata / 메타데이터) filter, truy vấn (query / 쿼리) biểu diễn (representation / 표현), ranking và ngữ cảnh (context / 맥락) assembly.
 
-Nếu retriever không lấy đúng evidence, generator khó tạo answer grounded đúng.
+Nếu retriever không lấy đúng bằng chứng (evidence / 증거), generator khó tạo answer grounded đúng.
 
-## Tool Layer
+## Công cụ (tool / 도구) tầng (layer / 계층)
 
-Tool use cho phép AI system tương tác với external systems: search, database query, CRM, calculator, code execution hoặc internal APIs.
+Công cụ (tool / 도구) use cho phép AI hệ thống (system / 시스템) tương tác với bên ngoài (external / 외부) các hệ thống (systems / 시스템들): tìm kiếm (search / 검색), truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리), CRM, calculator, mã (code / 코드) thực thi (execution / 실행) hoặc nội bộ (internal / 내부) APIs.
 
-Một tool nên có contract rõ:
+Một công cụ (tool / 도구) nên có đặc tả hợp đồng (contract / 계약) rõ:
 
 ```json
 {
@@ -140,13 +143,13 @@ Một tool nên có contract rõ:
 }
 ```
 
-Nhưng schema chỉ là bước đầu. System cần authorize action, validate arguments, limit side effects, retry có kiểm soát và record audit trail.
+Nhưng lược đồ (schema / 스키마) chỉ là bước đầu. hệ thống (system / 시스템) cần authorize hành động (action / 동작), validate arguments, limit side effects, thử lại (retry / 재시도) có kiểm soát và bản ghi (record / 레코드) kiểm tra (audit / 감사) trail.
 
-Đặc biệt phải phân biệt **read tool** và **write tool**. Sai khi đọc có thể tạo answer tệ; sai khi write có thể thay đổi dữ liệu thật.
+Đặc biệt phải phân biệt **read công cụ (tool / 도구)** và **ghi (write / 쓰기) công cụ (tool / 도구)**. Sai khi đọc có thể tạo answer tệ; sai khi ghi (write / 쓰기) có thể thay đổi dữ liệu thật.
 
-## Orchestration Layer
+## Orchestration tầng (layer / 계층)
 
-Orchestrator quyết định sequence giữa model, retrieval và tools. Có ba pattern phổ biến:
+Orchestrator quyết định chuỗi (sequence / 시퀀스) giữa mô hình (model / 모델), retrieval và tools. Có ba mẫu (pattern / 패턴) phổ biến:
 
 ```text
 Deterministic workflow
@@ -154,13 +157,13 @@ LLM-routed workflow
 Agentic loop
 ```
 
-Deterministic workflow phù hợp khi process rõ. LLM routing phù hợp khi cần semantic classification/chọn branch. Agentic loop phù hợp khi sequence action khó biết trước và cần adapt dựa vào intermediate result.
+Deterministic workflow phù hợp khi tiến trình (process / 프로세스) rõ. LLM routing phù hợp khi cần ngữ nghĩa (semantic / 의미적) classification/chọn branch. Agentic vòng lặp (loop / 루프) phù hợp khi chuỗi (sequence / 시퀀스) hành động (action / 동작) khó biết trước và cần adapt dựa vào intermediate kết quả (result / 결과).
 
-Một sai lầm phổ biến là dùng agent cho mọi thứ. More autonomy làm search space lớn hơn và khó test hơn. Nếu business flow đã xác định, workflow thường reliable hơn.
+Một sai lầm phổ biến là dùng tác nhân (agent / 에이전트) cho mọi thứ. More autonomy làm tìm kiếm (search / 검색) không gian (space / 공간) lớn hơn và khó kiểm thử (test / 테스트) hơn. Nếu nghiệp vụ (business / 비즈니스) luồng (flow / 흐름) đã xác định, workflow thường reliable hơn.
 
-## Guardrails và Validation
+## Guardrails và kiểm tra hợp lệ (validation / 검증)
 
-Guardrail không phải một layer thần kỳ “chặn AI sai”. Reliability thường cần nhiều lớp:
+Guardrail không phải một tầng (layer / 계층) thần kỳ “chặn AI sai”. độ tin cậy (reliability / 신뢰성) thường cần nhiều lớp:
 
 ```text
 input validation
@@ -172,11 +175,11 @@ business-rule validation
 human approval for high-impact action
 ```
 
-Ví dụ model sinh SQL thì không nên execute trực tiếp string bất kỳ. Có thể giới hạn read-only query, parse AST, enforce table allowlist và apply row-level permission.
+Ví dụ mô hình (model / 모델) sinh SQL thì không nên execute trực tiếp string bất kỳ. Có thể giới hạn read-only truy vấn (query / 쿼리), parse AST, enforce bảng (table / 테이블) allowlist và apply row-level permission.
 
-## Observability
+## Khả năng quan sát (observability / 관측 가능성)
 
-Traditional system quan sát CPU, memory, error rate và latency. AI system cần thêm model-specific signals:
+Traditional hệ thống (system / 시스템) quan sát CPU, bộ nhớ (memory / 메모리), lỗi (error / 오류) tỷ lệ (rate / 비율) và độ trễ (latency / 지연 시간). AI hệ thống (system / 시스템) cần thêm model-specific signals:
 
 ```text
 prompt/context version
@@ -191,38 +194,38 @@ evaluation scores
 failure category
 ```
 
-Đối với agent, trace từng step cực quan trọng vì final answer sai có thể do planning, retrieval, tool result hoặc state update.
+Đối với tác nhân (agent / 에이전트), dấu vết (trace / 추적) từng step cực quan trọng vì final answer sai có thể do planning, retrieval, công cụ (tool / 도구) kết quả (result / 결과) hoặc trạng thái (state / 상태) cập nhật (update / 업데이트).
 
 ## Evaluation như một subsystem
 
-AI output thường không deterministic và không có exact expected string. Vì vậy evaluation cần nhiều tầng:
+AI đầu ra (output / 출력) thường không deterministic và không có chính xác (exact / 정확한) expected string. Vì vậy evaluation cần nhiều tầng:
 
-- deterministic unit test cho code/business rule;
-- golden dataset cho expected behavior;
+- deterministic đơn vị (unit / 단위) kiểm thử (test / 테스트) cho mã (code / 코드)/nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙);
+- golden dataset cho expected hành vi (behavior / 동작);
 - task-specific metrics;
-- human review;
+- human rà soát (review / 검토);
 - model-based evaluator khi phù hợp;
-- online A/B hoặc business metrics.
+- online A/B hoặc nghiệp vụ (business / 비즈니스) metrics.
 
-Không nên thay unit test bằng LLM evaluator. Mỗi loại test phù hợp một failure mode khác nhau.
+Không nên thay đơn vị (unit / 단위) kiểm thử (test / 테스트) bằng LLM evaluator. Mỗi loại kiểm thử (test / 테스트) phù hợp một dạng thất bại (failure mode / 실패 모드) khác nhau.
 
-## Latency, Throughput và Cost
+## Độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và chi phí (cost / 비용)
 
-AI architecture luôn có resource constraints.
+AI kiến trúc (architecture / 아키텍처) luôn có tài nguyên (resource / 자원) các ràng buộc (constraints / 제약조건들).
 
-Nếu một pipeline gọi model 5 lần tuần tự, latency gần bằng tổng latency của từng call. Nếu có thể chạy independent calls song song, critical path giảm.
+Nếu một chuỗi xử lý (pipeline / 파이프라인) gọi mô hình (model / 모델) 5 lần tuần tự, độ trễ (latency / 지연 시간) gần bằng tổng độ trễ (latency / 지연 시간) của từng lời gọi (call / 호출). Nếu có thể chạy independent calls song song, đường găng (critical path / 임계 경로) giảm.
 
-Caching có thể giảm cost nhưng cần cache key đúng và invalidation policy. Batching tăng GPU utilization nhưng có thể tăng waiting latency. Model nhỏ hơn có thể đủ cho classification/routing, trong khi model mạnh hơn dùng cho difficult reasoning.
+Caching có thể giảm chi phí (cost / 비용) nhưng cần bộ nhớ đệm (cache / 캐시) key đúng và vô hiệu hóa (invalidation / 무효화) chính sách (policy / 정책). Batching tăng GPU utilization nhưng có thể tăng waiting độ trễ (latency / 지연 시간). mô hình (model / 모델) nhỏ hơn có thể đủ cho classification/routing, trong khi mô hình (model / 모델) mạnh hơn dùng cho difficult lập luận (reasoning / 추론).
 
-Do đó production architecture thường heterogeneous thay vì “một model làm tất cả”.
+Do đó kiến trúc vận hành (production architecture / 운영 아키텍처) thường heterogeneous thay vì “một mô hình (model / 모델) làm tất cả”.
 
 ## Fallback và Graceful Degradation
 
-AI system cần giả định component sẽ fail.
+AI hệ thống (system / 시스템) cần giả định thành phần (component / 컴포넌트) sẽ thất bại (fail / 실패).
 
-Retriever có thể timeout. Model API có thể rate-limit. Tool có thể trả schema mới. Output có thể không parse được.
+Retriever có thể hết thời gian chờ (timeout / 타임아웃). mô hình (model / 모델) API có thể rate-limit. công cụ (tool / 도구) có thể trả lược đồ (schema / 스키마) mới. đầu ra (output / 출력) có thể không parse được.
 
-Fallback strategy có thể là:
+Fallback chiến lược (strategy / 전략) có thể là:
 
 ```text
 retry with bounded policy
@@ -233,13 +236,13 @@ ask human review
 fail closed for sensitive action
 ```
 
-`Fail closed` quan trọng với action có security impact: nếu permission check không chắc, không execute.
+`Fail closed` quan trọng với hành động (action / 동작) có bảo mật (security / 보안) impact: nếu permission check không chắc, không execute.
 
-## Security Boundary
+## Ranh giới bảo mật (security boundary / 보안 경계)
 
-Prompt không phải security boundary. Nếu user prompt nói “hãy bỏ qua rule trước”, system không nên dựa vào model “tự nhớ policy” để bảo vệ database.
+Prompt không phải ranh giới bảo mật (security boundary / 보안 경계). Nếu người dùng (user / 사용자) prompt nói “hãy bỏ qua quy tắc (rule / 규칙) trước”, hệ thống (system / 시스템) không nên dựa vào mô hình (model / 모델) “tự nhớ chính sách (policy / 정책)” để bảo vệ cơ sở dữ liệu (database / 데이터베이스).
 
-Security phải nằm ở deterministic infrastructure:
+Bảo mật (security / 보안) phải nằm ở deterministic hạ tầng (infrastructure / 인프라):
 
 ```text
 Authentication
@@ -251,11 +254,11 @@ Secrets management
 Audit log
 ```
 
-Model chỉ nên được cấp minimum capability cần thiết.
+Mô hình (model / 모델) chỉ nên được cấp minimum năng lực (capability / 역량) cần thiết.
 
-## Example: Internal Knowledge Assistant
+## Example: nội bộ (internal / 내부) kiến thức (knowledge / 지식) Assistant
 
-Một architecture thực tế:
+Một kiến trúc (architecture / 아키텍처) thực tế:
 
 ```text
 User Question
@@ -271,7 +274,7 @@ User Question
 → Trace + feedback
 ```
 
-Nếu answer sai, investigation đi theo pipeline thay vì chỉ đổi prompt:
+Nếu answer sai, investigation đi theo chuỗi xử lý (pipeline / 파이프라인) thay vì chỉ đổi prompt:
 
 ```text
 Was query understood?
@@ -283,34 +286,36 @@ Did model use the evidence?
 Was citation attached correctly?
 ```
 
-Đây là system thinking.
+Đây là hệ thống (system / 시스템) thinking.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **AI system = Software System + Data System + Model + Feedback/Evaluation Loop.**
+> **AI hệ thống (system / 시스템) = Software hệ thống (system / 시스템) + dữ liệu (data / 데이터) hệ thống (system / 시스템) + mô hình (model / 모델) + phản hồi (feedback / 피드백)/Evaluation vòng lặp (loop / 루프).**
 
-Nếu chỉ optimize model benchmark mà bỏ qua ba phần còn lại, system khó production-ready.
+Nếu chỉ optimize mô hình (model / 모델) benchmark mà bỏ qua ba phần còn lại, hệ thống (system / 시스템) khó production-ready.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Đổi sang model mạnh hơn sẽ sửa system”
+### “Đổi sang mô hình (model / 모델) mạnh hơn sẽ sửa hệ thống (system / 시스템)”
 
-Model tốt hơn có thể tăng capability nhưng không sửa stale data, broken permission, bad retrieval, tool contract sai hoặc missing observability.
+Mô hình (model / 모델) tốt hơn có thể tăng năng lực (capability / 역량) nhưng không sửa stale dữ liệu (data / 데이터), broken permission, bad retrieval, công cụ (tool / 도구) đặc tả hợp đồng (contract / 계약) sai hoặc missing khả năng quan sát (observability / 관측 가능성).
 
-### “Prompt engineering là architecture”
+### “Prompt kỹ thuật (engineering / 엔지니어링) là kiến trúc (architecture / 아키텍처)”
 
-Prompt là một configuration/input layer. Architecture bao gồm component boundary, data flow, state, reliability và security.
+Prompt là một cấu hình (configuration / 구성)/đầu vào (input / 입력) tầng (layer / 계층). kiến trúc (architecture / 아키텍처) bao gồm thành phần (component / 컴포넌트) ranh giới (boundary / 경계), luồng dữ liệu (data flow / 데이터 흐름), trạng thái (state / 상태), độ tin cậy (reliability / 신뢰성) và bảo mật (security / 보안).
 
-### “RAG làm model luôn factual”
+### “RAG làm mô hình (model / 모델) luôn factual”
 
-RAG chỉ cung cấp evidence. Retrieval có thể sai và generator vẫn có thể bỏ qua hoặc diễn giải sai evidence.
+RAG chỉ cung cấp bằng chứng (evidence / 증거). Retrieval có thể sai và generator vẫn có thể bỏ qua hoặc diễn giải sai bằng chứng (evidence / 증거).
 
-### “Agent càng tự do càng thông minh”
+### “tác nhân (agent / 에이전트) càng tự do càng thông minh”
 
-Autonomy tăng flexibility nhưng cũng tăng số failure paths. Reliability thường đến từ việc giới hạn action space và explicit contracts.
+Autonomy tăng flexibility nhưng cũng tăng số thất bại (failure / 실패) paths. độ tin cậy (reliability / 신뢰성) thường đến từ việc giới hạn hành động (action / 동작) không gian (space / 공간) và tường minh (explicit / 명시적) contracts.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Chapter này nối AI với API Design, Distributed Systems, Database, Security, Observability, Cloud Infrastructure và Software Testing. Khi đi sâu vào RAG, Agent, MLOps và LLMOps, ta sẽ quay lại architecture này và mở từng component thành một domain riêng.
+Chapter này nối AI với API thiết kế (design / 설계), phân tán (distributed / 분산) các hệ thống (systems / 시스템들), cơ sở dữ liệu (database / 데이터베이스), bảo mật (security / 보안), khả năng quan sát (observability / 관측 가능성), Cloud hạ tầng (infrastructure / 인프라) và Software Testing. Khi đi sâu vào RAG, tác nhân (agent / 에이전트), MLOps và LLMOps, ta sẽ quay lại kiến trúc (architecture / 아키텍처) này và mở từng thành phần (component / 컴포넌트) thành một lĩnh vực (domain / 도메인) riêng.
 
 Xem tiếp: [AI vs ML vs DL vs Generative AI](./05_ai_vs_ml_vs_dl_vs_generative_ai.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is artificial intelligence](./00_what_is_artificial_intelligence.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

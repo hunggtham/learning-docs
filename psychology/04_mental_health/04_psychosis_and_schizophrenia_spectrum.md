@@ -1,5 +1,8 @@
 # Loạn thần và phổ tâm thần phân liệt
 
+> **Mạch đọc:** Đọc **Loạn thần và phổ tâm thần phân liệt** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Triệu chứng không đồng nghĩa chẩn đoán** sang **2. Triệu chứng dương tính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 **Loạn thần (psychosis)** không phải tên của một bệnh duy nhất. Đây là nhóm hiện tượng trong đó tri giác, cách hình thành niềm tin, cảm nhận mức độ quan trọng của sự kiện, tổ chức tư duy hoặc khả năng kiểm tra thực tại thay đổi đáng kể. Các triệu chứng loạn thần có thể xuất hiện trong phổ tâm thần phân liệt, rối loạn khí sắc, trạng thái do chất, bệnh lý thần kinh–y khoa hoặc một số tình trạng cấp tính khác.
 
 > **Trạng thái bằng chứng:** ảo giác, hoang tưởng, tư duy vô tổ chức, triệu chứng âm tính và khó khăn nhận thức là những hiện tượng lâm sàng đã được mô tả tương đối vững. Các mô hình về gán ý nghĩa bất thường (aberrant salience), xử lý dự đoán (predictive processing), dopamine hay rối loạn mạng lưới thần kinh là **lý thuyết hiện đại**, không phải một lời giải duy nhất cho mọi trường hợp.
@@ -176,3 +179,5 @@ diễn tiến lâm sàng + chức năng
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[12_developmental_psychopathology_risk_and_resilience]], [[../01_brain_and_mind/01_sensation_and_perception]], [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]], [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]], [[../05_intervention/02_biological_and_community_treatment]] và [[../06_applied/00_work_organization_and_leadership]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

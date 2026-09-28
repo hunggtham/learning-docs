@@ -1,6 +1,8 @@
-# LG Energy Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX
+# LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX
 
-Case này dùng LG Energy Solution như một bài thực hành để hiểu một trong những ngành sản xuất chiến lược quan trọng của Hàn Quốc: **pin thứ cấp (secondary battery / 이차전지)**. Nhìn bề ngoài, ngành pin có vẻ đơn giản: xe điện tăng thì nhu cầu pin tăng. Nhưng thực tế phức tạp hơn nhiều vì tăng trưởng nhu cầu, hóa học pin, hợp đồng khách hàng, giá nguyên liệu, tỷ lệ sử dụng nhà máy, trợ cấp, nội địa hóa sản xuất và CAPEX tương tác với nhau.
+> **Mạch đọc:** Đặt **LG năng lượng (energy / 에너지) Solution — kinh tế pin, tỷ lệ sử dụng công suất, hợp đồng và chu kỳ CAPEX** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Công ty pin thực sự bán gì?** sang **2. Nhu cầu xe điện không truyền thẳng 1:1 vào lượng pin giao hàng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Trường hợp (case / 사례) này dùng LG năng lượng (energy / 에너지) Solution như một bài thực hành để hiểu một trong những ngành sản xuất chiến lược quan trọng của Hàn Quốc: **pin thứ cấp (secondary battery / 이차전지)**. Nhìn bề ngoài, ngành pin có vẻ đơn giản: xe điện tăng thì nhu cầu pin tăng. Nhưng thực tế phức tạp hơn nhiều vì tăng trưởng nhu cầu, hóa học pin, hợp đồng khách hàng, giá nguyên liệu, tỷ lệ sử dụng nhà máy, trợ cấp, nội địa hóa sản xuất và CAPEX tương tác với nhau.
 
 Mục tiêu là chuyển câu chuyện “xe điện tăng trưởng” thành một mô hình nhân quả có thể nối tới doanh thu, biên lợi nhuận, dòng tiền và tỷ suất sinh lời trên vốn đầu tư (ROIC).
 
@@ -8,7 +10,7 @@ Xem nền tảng tại [15_automotive_battery_mobility](../15_automotive_battery
 
 ## 1. Công ty pin thực sự bán gì?
 
-Nhà sản xuất pin không chỉ bán một sản phẩm chung tên là “pin”. Đơn vị kinh tế có thể là cell, module, pack hoặc hệ thống lưu trữ năng lượng tùy khách hàng và ứng dụng.
+Nhà sản xuất pin không chỉ bán một sản phẩm chung tên là “pin”. Đơn vị kinh tế có thể là cell, mô-đun (module / 모듈), pack hoặc hệ thống lưu trữ năng lượng tùy khách hàng và ứng dụng.
 
 Có thể mô hình hóa gần đúng:
 
@@ -334,3 +336,5 @@ Sau đó ghi chú các nhà máy mới, JV, nền tảng xe lớn, sự cố thu
 > Nhà sản xuất pin là một **doanh nghiệp phân bổ công suất dưới ràng buộc công nghệ và chính sách**. Nhu cầu EV tạo cơ hội, nhưng giá trị cho cổ đông chỉ xuất hiện khi doanh nghiệp biến CAPEX thành công suất được chứng nhận, biến công suất thành sản lượng đạt chuẩn, biến sản lượng thành giao hàng cho khách hàng và cuối cùng biến giao hàng thành tiền với ROIC đủ cao.
 
 Đọc tiếp [08_hanwha_aerospace_defense_backlog_case](./08_hanwha_aerospace_defense_backlog_case.md) để so sánh ngành pin — nơi chu kỳ nhu cầu và công suất rất quan trọng — với quốc phòng, nơi backlog, mua sắm công và lịch giao hàng đóng vai trò trung tâm.
+
+> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

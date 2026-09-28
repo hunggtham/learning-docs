@@ -1,5 +1,8 @@
 # Lực liên phân tử — từ phân bố electron đến tính chất tập thể
 
+> **Mạch đọc:** Đọc **Lực liên phân tử — từ phân bố electron đến tính chất tập thể** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao lực yếu vẫn có thể tạo hiệu ứng rất lớn?** sang **Nền vật lý: điện tích và trường điện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Lực liên phân tử (intermolecular forces, IMF / 분자간 힘)** là các tương tác giữa những tiểu phần đã tồn tại như phân tử, ion hoặc cụm nguyên tử riêng biệt. Chúng thường yếu hơn liên kết cộng hóa trị hay liên kết ion bên trong một tiểu phần, nhưng khi tác dụng đồng thời trên rất nhiều hạt, chúng quyết định nhiệt độ sôi, áp suất hơi, độ nhớt, độ tan, sức căng bề mặt, sự tự lắp ráp, cấu trúc màng sinh học và nhiều tính chất của vật liệu mềm.
 
 Muốn hiểu lực liên phân tử, không nên học một bảng xếp hạng lực. Cần nhìn mỗi phân tử như một **phân bố điện tích động** có thể mang lưỡng cực vĩnh viễn, tạo lưỡng cực tức thời, bị phân cực bởi môi trường và tham gia những tương tác có tính định hướng.
@@ -240,17 +243,17 @@ Protein gấp cuộn nhờ tổ hợp nhiều hiệu ứng:
 - entropy chuỗi;
 - tương tác với dung môi.
 
-DNA được ổn định không chỉ bởi liên kết hydro giữa base mà còn bởi **xếp chồng base (base stacking)** và tương tác với ion/dung môi.
+DNA được ổn định không chỉ bởi liên kết hydro giữa cơ sở (base / 기반) mà còn bởi **xếp chồng cơ sở (base / 기반) (base stacking)** và tương tác với ion/dung môi.
 
 ## Tương tác trong vật liệu
 
 Polymer, chất kết dính, lớp phủ, tinh thể lỏng và vật liệu tự lắp ráp phụ thuộc mạnh vào tương tác liên phân tử.
 
-Ví dụ, thêm nhóm có khả năng tạo liên kết hydro vào polymer có thể tăng độ bền kết dính nhưng cũng có thể làm vật liệu hút ẩm nhiều hơn. Đây là một **trade-off**: tương tác mạnh hơn không phải lúc nào cũng tốt hơn ở mọi mục tiêu kỹ thuật.
+Ví dụ, thêm nhóm có khả năng tạo liên kết hydro vào polymer có thể tăng độ bền kết dính nhưng cũng có thể làm vật liệu hút ẩm nhiều hơn. Đây là một **sự đánh đổi (trade-off / 트레이드오프)**: tương tác mạnh hơn không phải lúc nào cũng tốt hơn ở mọi mục tiêu kỹ thuật.
 
 Trong chất điện ly pin, tương tác ion–dung môi mạnh giúp hòa tan muối nhưng nếu quá mạnh có thể làm việc tách lớp solvat hóa khi ion đi vào điện cực trở nên khó hơn. Vì vậy thiết kế dung môi phải cân bằng độ tan, độ dẫn ion, ổn định điện hóa và động học giao diện.
 
-## Mô phỏng phân tử và force field
+## Mô phỏng phân tử và force trường dữ liệu (field / 필드)
 
 Trong mô phỏng động lực học phân tử, các tương tác liên phân tử thường được mô tả bằng **trường lực (force field)** gồm các hạng điện tĩnh, Lennard–Jones và các thành phần liên kết.
 
@@ -261,7 +264,7 @@ Mô hình cổ điển có thể dự đoán nhiều tính chất vật liệu v
 - chuyển proton xảy ra;
 - hiệu ứng lượng tử quan trọng.
 
-Khi đó cần mô hình phản ứng, force field phân cực hoặc phương pháp lượng tử.
+Khi đó cần mô hình phản ứng, force trường dữ liệu (field / 필드) phân cực hoặc phương pháp lượng tử.
 
 ## Các hiểu lầm thường gặp
 
@@ -298,3 +301,5 @@ cấu trúc electron
 ```
 
 Xem tiếp: [Chất khí](../03_matter_and_phases/00_gases.md), [Chất lỏng](../03_matter_and_phases/01_liquids.md) và [Dung dịch – độ tan](../03_matter_and_phases/04_solutions_and_solubility.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

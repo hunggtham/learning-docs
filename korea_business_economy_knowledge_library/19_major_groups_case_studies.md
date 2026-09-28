@@ -1,5 +1,8 @@
 # Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)
 
+> **Mạch đọc:** Đặt **Nghiên cứu tình huống các nhóm doanh nghiệp lớn Hàn Quốc (Major Korean Business Groups / 주요 기업집단 사례)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Khung dùng cho mọi trường hợp** sang **Samsung — quy mô, chu kỳ công nghệ và quản trị cấp tập đoàn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Chapter này không nhằm xếp hạng “tập đoàn tốt nhất”. Mục tiêu là dùng các nhóm doanh nghiệp nổi tiếng như **phòng thí nghiệm để áp dụng mô hình tư duy của toàn thư viện**: lịch sử, sở hữu, phân bổ vốn, kinh tế ngành, quản trị, tài chính và truyền dẫn vĩ mô.
 
 Một nguyên tắc phải giữ xuyên suốt: **tên tập đoàn không phải pháp nhân**. Samsung, Hyundai, SK, LG hay CJ là mạng lưới nhiều pháp nhân. Khi phân tích đầu tư, tín dụng, tuyển dụng hoặc rủi ro đối tác, luôn phải quay về công ty cụ thể trên DART/KIND và cấu trúc sở hữu hiện hành.
@@ -40,7 +43,7 @@ Nhà đầu tư không thể mua “cổ phiếu Samsung Group”. Mỗi chứng
 
 ### Động cơ kinh tế
 
-Riêng Samsung Electronics đã kết hợp các mô hình rất khác nhau như bộ nhớ, foundry/system semiconductor, smartphone, điện tử tiêu dùng và hệ sinh thái linh kiện–màn hình thông qua các pháp nhân khác nhau.
+Riêng Samsung Electronics đã kết hợp các mô hình rất khác nhau như bộ nhớ, foundry/hệ thống (system / 시스템) semiconductor, smartphone, điện tử tiêu dùng và hệ sinh thái linh kiện–màn hình thông qua các pháp nhân khác nhau.
 
 Bộ nhớ có chu kỳ giá mạnh và đòn bẩy hoạt động do chi phí cố định lớn. Thiết bị di động phụ thuộc cơ cấu sản phẩm, sức mạnh thương hiệu, chi phí linh kiện và chu kỳ thay thế.
 
@@ -127,7 +130,7 @@ Khi nhiều mảng thâm dụng vốn cùng mở rộng, khả năng tái cấp 
 
 ### Biến stress chính
 
-Chu kỳ memory/HBM, độ ổn định viễn thông, chênh lệch năng lượng–hóa chất, utilization của mảng tăng trưởng, đòn bẩy công ty nắm giữ/công ty thành viên và khả năng tái cấp vốn.
+Chu kỳ bộ nhớ (memory / 메모리)/HBM, độ ổn định viễn thông, chênh lệch năng lượng–hóa chất, utilization của mảng tăng trưởng, đòn bẩy công ty nắm giữ/công ty thành viên và khả năng tái cấp vốn.
 
 ## LG — đa dạng hóa liên quan từ hóa chất–điện tử sang pin và vật liệu tiên tiến
 
@@ -143,7 +146,7 @@ Kiến thức hóa chất hỗ trợ vật liệu pin; năng lực điện tử 
 
 ### Cấu trúc pháp nhân
 
-LG Electronics, LG Chem, LG Energy Solution và các công ty thành viên khác có bảng cân đối và hồ sơ định giá khác nhau.
+LG Electronics, LG Chem, LG năng lượng (energy / 에너지) Solution và các công ty thành viên khác có bảng cân đối và hồ sơ định giá khác nhau.
 
 Việc chia tách hoặc niêm yết mảng tăng trưởng thay đổi nơi nhu cầu vốn, quyền sở hữu và phần tăng giá trị tương lai nằm lại. Vì vậy cổ đông công ty mẹ và cổ đông công ty con có thể có lợi ích kinh tế khác nhau.
 
@@ -189,7 +192,7 @@ Mảng năng lượng nhạy với chính sách, công suất toàn cầu, đầ
 
 ### Công ty tài chính
 
-Pháp nhân tài chính cần logic vốn pháp định và quản lý rủi ro riêng, không thể phân tích như công ty công nghiệp.
+Pháp nhân tài chính cần lô-gic (logic / 논리) vốn pháp định và quản lý rủi ro riêng, không thể phân tích như công ty công nghiệp.
 
 Câu hỏi trung tâm là tập đoàn có thật sự có **lợi thế phân bổ vốn** hay độ phức tạp đang che trợ cấp chéo và đòn bẩy.
 
@@ -300,7 +303,7 @@ Nguồn gốc công có thể tạo cơ sở tài sản và quan hệ chính sá
 
 Một bảng so sánh hữu ích không hỏi “tốt nhất/xấu nhất”, mà hỏi biến nào chi phối từng nhóm.
 
-| Tập đoàn / hệ sinh thái | Năng lực lịch sử | Logic kinh tế chính | Biến cần xem đầu tiên |
+| Tập đoàn / hệ sinh thái | Năng lực lịch sử | lô-gic (logic / 논리) kinh tế chính | Biến cần xem đầu tiên |
 |---|---|---|---|
 | Samsung | sản xuất quy trình + quy mô vốn | chu kỳ bán dẫn/điện tử | ASP, mix, yield, CAPEX, quản trị |
 | Hyundai Motor | thực thi dự án + nền tảng sản xuất | ô tô/mobility | số xe, ASP, ưu đãi, FX, CAPEX EV |
@@ -348,10 +351,12 @@ Bảng này chỉ xác định **lăng kính phân tích khác nhau**, không ch
 
 Mẫu này ép câu chuyện thương hiệu thành cấu trúc có thể kiểm chứng.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Một tập đoàn Hàn Quốc là **danh mục các pháp nhân được nối bằng sở hữu, vốn, hợp đồng, lịch sử và năng lực dùng chung**. Tập đoàn cung cấp bối cảnh chiến lược; pháp nhân cung cấp thực tế tài chính. Phân tích tốt phải di chuyển giữa hai cấp mà không trộn chúng.
 
 ## Liên kết
 
 Dùng [`00_history/08_company_genealogies.md`](./00_history/08_company_genealogies.md) cho phả hệ lịch sử, [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) cho kiến trúc sở hữu, [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho vấn đề kiểm soát và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình nghiên cứu ở cấp pháp nhân.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

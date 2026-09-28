@@ -1,10 +1,13 @@
 # Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp
 
+> **Mạch đọc:** Đọc **Ma trận hóa lượng và mạng phản ứng — từ một phương trình hóa học tới hệ phản ứng phức tạp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Ma trận hóa lượng là một cách cân bằng phản ứng phức tạp hơn”** sang **“Nếu \(S\mathbf v=0\) thì hệ ở cân bằng”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Hóa lượng (stoichiometry / 화학량론) thường được học qua từng phương trình riêng lẻ. Nhưng trong hệ thực tế — chuyển hóa sinh học, cháy, khí quyển, pin, reactor công nghiệp — hàng chục tới hàng nghìn phản ứng xảy ra đồng thời. Khi đó cách nhìn từng phương trình một trở nên khó kiểm soát. **Ma trận hóa lượng (stoichiometric matrix)** cung cấp một ngôn ngữ toán học thống nhất để biểu diễn bảo toàn vật chất và cấu trúc của cả mạng phản ứng.
 
 Chương này nối trực tiếp [phương trình hóa học](./02_chemical_equations.md), [hóa lượng](./03_stoichiometry.md), [động học](../06_chemical_kinetics/00_reaction_rates.md), [cân bằng](../07_chemical_equilibrium/00_dynamic_equilibrium.md) và [chuyển hóa sinh học](../13_biochemistry/06_metabolism_and_bioenergetics.md).
 
-# Từ một phản ứng tới vector hóa lượng
+# Từ một phản ứng tới véc-tơ (vector / 벡터) hóa lượng
 
 Xét phản ứng:
 
@@ -18,7 +21,7 @@ Nếu sắp thứ tự các chất là:
 H2, O2, H2O
 ```
 
-ta có thể biểu diễn phản ứng bằng vector hệ số:
+ta có thể biểu diễn phản ứng bằng véc-tơ (vector / 벡터) hệ số:
 
 \[
 \boldsymbol\nu=
@@ -34,7 +37,7 @@ Quy ước:
 - hệ số âm cho chất phản ứng;
 - hệ số dương cho sản phẩm.
 
-Vector này không mô tả tốc độ hay cơ chế; nó chỉ mô tả **mối quan hệ bảo toàn về lượng** khi phản ứng tiến thêm một mức xác định.
+Véc-tơ (vector / 벡터) này không mô tả tốc độ hay cơ chế; nó chỉ mô tả **mối quan hệ bảo toàn về lượng** khi phản ứng tiến thêm một mức xác định.
 
 # Mức tiến triển phản ứng
 
@@ -107,7 +110,7 @@ S=
 \end{bmatrix}
 \]
 
-Nếu vector mức tiến triển là:
+Nếu véc-tơ (vector / 벡터) mức tiến triển là:
 
 \[
 \boldsymbol\xi=
@@ -148,7 +151,7 @@ Nếu phản ứng bảo toàn nguyên tử, phải có:
 ES=0
 \]
 
-Ý nghĩa: khi ma trận hóa lượng tác động lên vector phản ứng, tổng số nguyên tử của mỗi nguyên tố không thay đổi.
+Ý nghĩa: khi ma trận hóa lượng tác động lên véc-tơ (vector / 벡터) phản ứng, tổng số nguyên tử của mỗi nguyên tố không thay đổi.
 
 Đây là cách đại số tuyến tính diễn đạt định luật bảo toàn khối lượng.
 
@@ -188,11 +191,11 @@ Bảo toàn từng nguyên tố tạo hệ:
 (x_1,x_2,x_3,x_4)=(1,5,3,4)
 \]
 
-Vì vậy cân bằng phản ứng thực chất là bài toán tìm một vector trong không gian nghiệm của ma trận bảo toàn.
+Vì vậy cân bằng phản ứng thực chất là bài toán tìm một véc-tơ (vector / 벡터) trong không gian nghiệm của ma trận bảo toàn.
 
 # Tốc độ phản ứng và tốc độ tạo chất
 
-Nếu mỗi phản ứng có tốc độ \(v_j\), tập hợp thành vector:
+Nếu mỗi phản ứng có tốc độ \(v_j\), tập hợp thành véc-tơ (vector / 벡터):
 
 \[
 \mathbf v=
@@ -294,9 +297,9 @@ Nếu một phản ứng có thể được tạo bằng tổ hợp tuyến tín
 - chọn biến trạng thái độc lập;
 - kiểm tra tính nhất quán của mạng.
 
-# Đại lượng bảo toàn từ null space bên trái
+# Đại lượng bảo toàn từ null không gian (space / 공간) bên trái
 
-Nếu tồn tại vector \(\mathbf l\) sao cho:
+Nếu tồn tại véc-tơ (vector / 벡터) \(\mathbf l\) sao cho:
 
 \[
 \mathbf l^TS=0
@@ -305,7 +308,7 @@ Nếu tồn tại vector \(\mathbf l\) sao cho:
 thì:
 
 \[
-\mathbf l^T\mathbf n=\text{hằng số}
+\mathbf l^T\mathbf n=\văn bản (text / 텍스트){hằng số}
 \]
 
 Đây là một **đại lượng bảo toàn (conserved quantity)**.
@@ -316,7 +319,7 @@ Trong mạng sinh hóa, các “moiety” như tổng NAD + NADH hoặc tổng a
 
 # Chu trình phản ứng
 
-Nếu tồn tại vector dòng phản ứng \(\mathbf v\neq0\) sao cho:
+Nếu tồn tại véc-tơ (vector / 벡터) dòng phản ứng \(\mathbf v\neq0\) sao cho:
 
 \[
 S\mathbf v=0
@@ -350,7 +353,7 @@ Nghĩa là các phản ứng có thể chạy liên tục, chỉ là lượng t�
 
 Tế bào sống là ví dụ điển hình của hệ trạng thái ổn định xa cân bằng.
 
-# Flux Balance Analysis
+# Flux Balance phân tích (analysis / 분석)
 
 Trong sinh hóa hệ thống, **phân tích cân bằng dòng (flux balance analysis, FBA)** dùng:
 
@@ -433,7 +436,7 @@ Nếu một số phản ứng xảy ra trong microsecond còn phản ứng khác
 
 Khi đó hệ ODE có thể **cứng (stiff)** và phương pháp tích phân số đơn giản cần bước thời gian cực nhỏ để ổn định.
 
-Đây là lý do chemistry simulation thường dùng các solver chuyên cho stiff systems.
+Đây là lý do chemistry simulation thường dùng các solver chuyên cho stiff các hệ thống (systems / 시스템들).
 
 # Ma trận Jacobian
 
@@ -504,36 +507,36 @@ Sau khi mô phỏng, nên kiểm tra:
 
 Một solver cho ra đường cong “đẹp” nhưng vi phạm bảo toàn là dấu hiệu lỗi mô hình hoặc lỗi số.
 
-# Biểu diễn phản ứng như graph và hypergraph
+# Biểu diễn phản ứng như đồ thị (graph / 그래프) và hypergraph
 
-Có thể xem mạng phản ứng dưới dạng graph, nhưng phản ứng thường có nhiều chất đầu vào và đầu ra nên **hypergraph** là biểu diễn tự nhiên hơn.
+Có thể xem mạng phản ứng dưới dạng đồ thị (graph / 그래프), nhưng phản ứng thường có nhiều chất đầu vào và đầu ra nên **hypergraph** là biểu diễn tự nhiên hơn.
 
 - species là nút;
-- reaction là hyperedge nối nhiều reactant với nhiều product.
+- reaction là hyperedge nối nhiều reactant với nhiều sản phẩm (product / 제품).
 
 Cách nhìn này kết nối chemistry với:
 
-- graph algorithms;
-- dependency analysis;
+- đồ thị (graph / 그래프) algorithms;
+- phụ thuộc (dependency / 의존성) phân tích (analysis / 분석);
 - shortest-path synthesis;
 - pathway enumeration;
-- network centrality.
+- mạng (network / 네트워크) centrality.
 
 # Từ hóa lượng tới reaction informatics
 
 Trong cơ sở dữ liệu phản ứng, máy tính cần biết:
 
-- atom mapping;
-- reactant/product identity;
+- atom ánh xạ (mapping / 매핑);
+- reactant/sản phẩm (product / 제품) định danh (identity / 식별자);
 - stoichiometric coefficients;
 - charge;
 - stereochemistry;
 - reagents/catalysts;
 - conditions.
 
-Nếu phương trình không được cân bằng hoặc atom mapping sai, mô hình reaction prediction có thể học tín hiệu không hóa học.
+Nếu phương trình không được cân bằng hoặc atom ánh xạ (mapping / 매핑) sai, mô hình reaction prediction có thể học tín hiệu không hóa học.
 
-Do đó hóa lượng là lớp kiểm tra chất lượng dữ liệu trước cả machine learning.
+Do đó hóa lượng là lớp kiểm tra chất lượng dữ liệu trước cả machine học tập (learning / 학습).
 
 # Một ví dụ tích hợp: lên men glucose
 
@@ -586,3 +589,5 @@ Không. Nó tìm dòng phản ứng thỏa bảo toàn và ràng buộc dưới 
 Hãy hình dung ma trận hóa lượng như **bộ khung bảo toàn của một mạng phản ứng**. Nó không quyết định mạng chạy nhanh bao nhiêu, nhưng xác định những hướng biến đổi nào được phép. Động học đặt tốc độ lên các hướng đó; nhiệt động lực học giới hạn chiều và mức thuận lợi; dữ liệu thực nghiệm xác định tham số; toán học và lập trình giúp giải hệ khi số phản ứng vượt quá khả năng xử lý thủ công.
 
 Xem tiếp: [Động học phản ứng](../06_chemical_kinetics/00_reaction_rates.md), [Cơ chế phản ứng](../06_chemical_kinetics/02_reaction_mechanisms.md), [Chuyển hóa và năng lượng sinh học](../13_biochemistry/06_metabolism_and_bioenergetics.md), [Hóa học và khoa học máy tính](../90_connections/chemistry_and_computer_science.md).
+
+> **Bàn giao:** Sau **“FBA dự đoán tốc độ enzyme trực tiếp”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,8 +1,11 @@
 # MLOps và LLMOps là gì?
 
-**Vận hành học máy (Machine Learning Operations — MLOps / 머신러닝 운영)** là tập hợp thực hành, kiến trúc và quy trình giúp hệ thống học máy (Machine Learning) có thể được phát triển, triển khai, quan sát, tái lập và cải tiến một cách có kiểm soát trong môi trường production. **LLMOps** mở rộng cùng bài toán quản lý vòng đời (lifecycle) sang mô hình ngôn ngữ lớn (Large Language Model — LLM), RAG, prompt, agent và pipeline đánh giá.
+> **Mạch đọc:** Đặt **MLOps và LLMOps là gì?** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao DevOps chưa đủ?** sang **Vòng đời ML**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-MLOps không đơn giản là “DevOps cộng thêm một tệp mô hình”. Hệ thống ML có thêm nhiều thành phần thay đổi theo thời gian mà phần mềm truyền thống ít gặp hơn: tập dữ liệu thay đổi, phân phối mục tiêu bị trôi (drift), quá trình huấn luyện không hoàn toàn xác định, dòng nguồn gốc của đặc trưng (feature lineage), chỉ số mô hình, metadata của thí nghiệm và quyết định huấn luyện lại.
+
+**Vận hành học máy (Machine Learning Operations — MLOps / 머신러닝 운영)** là tập hợp thực hành, kiến trúc và quy trình giúp hệ thống học máy (Machine Learning) có thể được phát triển, triển khai, quan sát, tái lập và cải tiến một cách có kiểm soát trong môi trường vận hành (production / 운영 환경). **LLMOps** mở rộng cùng bài toán quản lý vòng đời (lifecycle / 생명주기) sang mô hình ngôn ngữ lớn (Large Language model — LLM), RAG, prompt, tác nhân (agent / 에이전트) và chuỗi xử lý (pipeline / 파이프라인) đánh giá.
+
+MLOps không đơn giản là “DevOps cộng thêm một tệp mô hình”. Hệ thống ML có thêm nhiều thành phần thay đổi theo thời gian mà phần mềm truyền thống ít gặp hơn: tập dữ liệu thay đổi, phân phối mục tiêu bị trôi (drift), quá trình huấn luyện không hoàn toàn xác định, dòng nguồn gốc của đặc trưng (feature lineage), chỉ số mô hình, siêu dữ liệu (metadata / 메타데이터) của thí nghiệm và quyết định huấn luyện lại.
 
 ## Vì sao DevOps chưa đủ?
 
@@ -61,11 +64,11 @@ bộ đánh giá
 chính sách an toàn
 ```
 
-Chỉ cần thay đổi cách chia đoạn (chunking) hoặc system prompt cũng có thể làm hành vi thay đổi dù trọng số mô hình giữ nguyên.
+Chỉ cần thay đổi cách chia đoạn (chunking) hoặc hệ thống (system / 시스템) prompt cũng có thể làm hành vi thay đổi dù trọng số mô hình giữ nguyên.
 
 ## Khả năng tái lập
 
-Mục tiêu không nhất thiết là kết quả giống hệt từng bit; nhiều lần huấn luyện phân tán vẫn có tính không xác định. Nhưng cần đủ metadata để trả lời:
+Mục tiêu không nhất thiết là kết quả giống hệt từng bit; nhiều lần huấn luyện phân tán vẫn có tính không xác định. Nhưng cần đủ siêu dữ liệu (metadata / 메타데이터) để trả lời:
 
 ```text
 mô hình này được tạo từ đâu?
@@ -81,13 +84,13 @@ ai phê duyệt?
 
 ## Theo dõi thí nghiệm
 
-Theo dõi thí nghiệm (experiment tracking) không chỉ lưu chỉ số cuối cùng. Nên lưu tham số, phiên bản tập dữ liệu, SHA của mã nguồn, artifact, môi trường, phần cứng, random seed và kết quả đánh giá theo từng lát dữ liệu.
+Theo dõi thí nghiệm (experiment tracking) không chỉ lưu chỉ số cuối cùng. Nên lưu tham số, phiên bản tập dữ liệu, SHA của mã nguồn, sản phẩm tạo ra (artifact / 산출물), môi trường, phần cứng, random seed và kết quả đánh giá theo từng lát dữ liệu.
 
 Nếu chỉ số tăng nhưng phiên bản dữ liệu cũng thay đổi, việc kết luận nguyên nhân cần thận trọng.
 
 ## Registry
 
-Kho đăng ký mô hình (model registry) quản lý artifact, metadata và trạng thái vòng đời:
+Kho đăng ký mô hình (model registry) quản lý sản phẩm tạo ra (artifact / 산출물), siêu dữ liệu (metadata / 메타데이터) và trạng thái vòng đời:
 
 ```text
 ứng viên → đã kiểm định → staging → production → lưu trữ
@@ -97,15 +100,15 @@ Việc thăng cấp (promotion) nên dựa trên các cổng kiểm soát (gate)
 
 ## CI, CD và CT
 
-- **CI**: kiểm tra mã nguồn, schema, test và hợp đồng dữ liệu.
+- **CI**: kiểm tra mã nguồn, lược đồ (schema / 스키마), kiểm thử (test / 테스트) và hợp đồng dữ liệu.
 - **CD**: triển khai mô hình hoặc ứng dụng một cách an toàn.
-- **CT — Continuous Training**: huấn luyện lại theo lịch hoặc khi điều kiện phù hợp.
+- **CT — Continuous huấn luyện (training / 학습)**: huấn luyện lại theo lịch hoặc khi điều kiện phù hợp.
 
 CT không có nghĩa tự động huấn luyện lại mỗi khi xuất hiện dữ liệu mới. Huấn luyện lại thiếu kiểm soát có thể khuếch đại nhãn xấu hoặc drift nếu không có cổng chất lượng.
 
 ## Giám sát
 
-ML production phải theo dõi ít nhất hai lớp:
+ML môi trường vận hành (production / 운영 환경) phải theo dõi ít nhất hai lớp:
 
 ```text
 sức khỏe hệ thống → độ trễ, lỗi, tài nguyên
@@ -120,7 +123,7 @@ Sự trôi dữ liệu (data drift) không tự động nghĩa mô hình đã h�
 
 ## Quản trị
 
-Ai có quyền thăng cấp mô hình? Artifact nào được phép dùng? Tập dữ liệu có provenance và license không? Model card hoặc hồ sơ rủi ro được lưu ở đâu? Đây là **quản trị vận hành (operational governance)**, không phải giấy tờ tách rời khỏi engineering.
+Ai có quyền thăng cấp mô hình? sản phẩm tạo ra (artifact / 산출물) nào được phép dùng? Tập dữ liệu có provenance và license không? mô hình (model / 모델) card hoặc hồ sơ rủi ro được lưu ở đâu? Đây là **quản trị vận hành (operational governance)**, không phải giấy tờ tách rời khỏi kỹ thuật (engineering / 엔지니어링).
 
 ## Mức trưởng thành của MLOps
 
@@ -140,7 +143,7 @@ Không cần xây nền tảng phức tạp ngay từ ngày đầu; nên giải 
 
 ## Tự xây hay dùng nền tảng có sẵn
 
-Công cụ MLOps có thể hỗ trợ theo dõi, điều phối, registry và triển khai. Nhưng công cụ không tự định nghĩa hợp đồng dữ liệu, cổng chất lượng hoặc chính sách rollback cho tổ chức.
+Công cụ MLOps có thể hỗ trợ theo dõi, điều phối, registry và triển khai. Nhưng công cụ không tự định nghĩa hợp đồng dữ liệu, cổng chất lượng hoặc chính sách quay lui (rollback / 롤백) cho tổ chức.
 
 ## Mô hình tư duy
 
@@ -157,7 +160,7 @@ Không. Kubernetes chỉ là một lựa chọn hạ tầng.
 
 ### “Có registry là đã làm MLOps”
 
-Không. Registry không thay thế giám sát, lineage, test hay quy trình phát hành.
+Không. Registry không thay thế giám sát, lineage, kiểm thử (test / 테스트) hay quy trình phát hành.
 
 ### “LLMOps chỉ là quản lý prompt”
 
@@ -166,3 +169,5 @@ Không. Hệ thống LLM còn có mô hình, truy xuất, công cụ, đánh gi�
 ## Liên kết kiến thức
 
 Nối trực tiếp [AI Engineering](../15_ai_engineering/README.md), [Data for AI](../14_data_for_ai/README.md), [RAG](../09_retrieval_and_rag/README.md) và [Agents](../10_agents_and_ai_systems/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 experiment tracking and reproducibility](./01_experiment_tracking_and_reproducibility.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

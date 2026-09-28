@@ -1,8 +1,11 @@
 # Bayesian Networks trong Artificial Intelligence
 
-**Bayesian Network (베이지안 네트워크 / mạng Bayes)** là một directed acyclic graph (DAG) trong đó mỗi node là random variable và mỗi edge biểu diễn dependency trực tiếp trong factorization của joint probability. Nó cho phép ta mô hình hóa một distribution rất lớn bằng các local conditional distributions thay vì viết full joint table.
+> **Mạch đọc:** Đặt **Bayesian Networks trong Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tại sao cần đồ thị (graph / 그래프)?** sang **DAG cấu trúc (structure / 구조)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Bayesian Network quan trọng vì nó kết hợp ba thứ trong một representation:
+
+**Bayesian mạng (network / 네트워크)** là một directed acyclic đồ thị (graph / 그래프) (DAG) trong đó mỗi nút (node / 노드) là random variable và mỗi edge biểu diễn phụ thuộc (dependency / 의존성) trực tiếp trong factorization của joint xác suất (probability / 확률). Nó cho phép ta mô hình hóa một phân phối (distribution / 분포) rất lớn bằng các cục bộ (local / 로컬) conditional distributions thay vì viết full joint bảng (table / 테이블).
+
+Bayesian mạng (network / 네트워크) quan trọng vì nó kết hợp ba thứ trong một biểu diễn (representation / 표현):
 
 ```text
 graph structure
@@ -10,13 +13,13 @@ graph structure
 + conditional independence
 ```
 
-Điều này giúp reasoning về causes/evidence, inference dưới uncertainty và complexity của computation.
+Điều này giúp lập luận (reasoning / 추론) về causes/bằng chứng (evidence / 증거), suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성) và độ phức tạp (complexity / 복잡도) của computation.
 
 Xem trước: [Probabilistic Reasoning](./04_probabilistic_reasoning.md).
 
-## Tại sao cần graph?
+## Tại sao cần đồ thị (graph / 그래프)?
 
-Giả sử có `n` binary variables. Full joint distribution cần gần:
+Giả sử có `n` nhị phân (binary / 이진) variables. Full joint phân phối (distribution / 분포) cần gần:
 
 \[
 2^n-1
@@ -24,13 +27,13 @@ Giả sử có `n` binary variables. Full joint distribution cần gần:
 
 independent parameters.
 
-Với 30 binary variables, con số entries đã khoảng một tỷ.
+Với 30 nhị phân (binary / 이진) variables, con số entries đã khoảng một tỷ.
 
-Nhưng real domains thường có local structure: weather ảnh hưởng traffic; disease ảnh hưởng symptoms; component failure ảnh hưởng alarms. Không phải mọi variable trực tiếp depend mọi variable khác.
+Nhưng real domains thường có cục bộ (local / 로컬) cấu trúc (structure / 구조): weather ảnh hưởng traffic; disease ảnh hưởng symptoms; thành phần (component / 컴포넌트) thất bại (failure / 실패) ảnh hưởng alarms. Không phải mọi variable trực tiếp depend mọi variable khác.
 
-Bayesian Network khai thác structure này.
+Bayesian mạng (network / 네트워크) khai thác cấu trúc (structure / 구조) này.
 
-## DAG structure
+## DAG cấu trúc (structure / 구조)
 
 Ví dụ:
 
@@ -46,30 +49,30 @@ Interpretation probabilistic:
 
 - Alarm depends directly on Burglary and Earthquake.
 - JohnCalls and MaryCalls depend directly on Alarm.
-- Given Alarm, calls do not need directly depend on Burglary/Earthquake in this model.
+- Given Alarm, calls do not need directly depend on Burglary/Earthquake in this mô hình (model / 모델).
 
-Graph is modeling assumption, not automatically causal truth.
+Đồ thị (graph / 그래프) is modeling giả định (assumption / 가정), not automatically nhân quả (causal / 인과적) truth.
 
 ## Joint factorization
 
-For variables `X1,...,Xn` in topological order:
+For variables `X1,...,Xn` in topological thứ tự (order / 순서):
 
 \[
 P(X_1,...,X_n)=\prod_i P(X_i\mid Parents(X_i))
 \]
 
-For burglary network:
+For burglary mạng (network / 네트워크):
 
 \[
 P(B,E,A,J,M)=
 P(B)P(E)P(A\mid B,E)P(J\mid A)P(M\mid A)
 \]
 
-Instead of full 32-cell table for five binary variables, local CPTs require fewer parameters.
+Instead of full 32-cell bảng (table / 테이블) for five nhị phân (binary / 이진) variables, cục bộ (local / 로컬) CPTs require fewer parameters.
 
-## Conditional Probability Table
+## Conditional xác suất (probability / 확률) bảng (table / 테이블)
 
-For discrete variable, each node can have CPT.
+For discrete variable, each nút (node / 노드) can have CPT.
 
 Example `Alarm`:
 
@@ -82,35 +85,35 @@ Example `Alarm`:
 
 Numbers are illustrative modeling values.
 
-CPT rows must define valid probability distributions.
+CPT rows must define valid xác suất (probability / 확률) distributions.
 
-## Local Markov property
+## Cục bộ (local / 로컬) Markov thuộc tính (property / 속성)
 
 Each variable is conditionally independent of its non-descendants given its parents.
 
-This property justifies factorization.
+This thuộc tính (property / 속성) justifies factorization.
 
-Example `JohnCalls` independent of `Burglary` given `Alarm` in graph:
+Example `JohnCalls` independent of `Burglary` given `Alarm` in đồ thị (graph / 그래프):
 
 \[
 J\perp B\mid A
 \]
 
-But without conditioning on Alarm, they can be dependent because burglary changes alarm probability which changes call probability.
+But without conditioning on Alarm, they can be dependent because burglary changes alarm xác suất (probability / 확률) which changes lời gọi (call / 호출) xác suất (probability / 확률).
 
 ## d-Separation
 
 **d-separation** is graphical criterion for determining conditional independence implied by DAG.
 
-Three primitive path structures matter.
+Three thành phần nguyên thủy (primitive / 기본 요소) đường dẫn (path / 경로) structures matter.
 
-### Chain
+### Chuỗi (chain / 사슬)
 
 ```text
 X → Z → Y
 ```
 
-X and Y are generally dependent, but conditioning on Z blocks path:
+X and Y are generally dependent, but conditioning on Z blocks đường dẫn (path / 경로):
 
 \[
 X\perp Y\mid Z
@@ -122,7 +125,7 @@ X\perp Y\mid Z
 X ← Z → Y
 ```
 
-Z is common cause. Conditioning on Z blocks association:
+Z is dùng chung (common / 공통) cause. Conditioning on Z blocks association:
 
 \[
 X\perp Y\mid Z
@@ -134,11 +137,11 @@ X\perp Y\mid Z
 X → Z ← Y
 ```
 
-Path is blocked by default. Conditioning on collider `Z` or descendant can **open** path and create dependency.
+Đường dẫn (path / 경로) is blocked by default. Conditioning on collider `Z` or descendant can **open** đường dẫn (path / 경로) and create phụ thuộc (dependency / 의존성).
 
-This is explaining-away structure.
+This is explaining-away cấu trúc (structure / 구조).
 
-## Collider bias
+## Collider độ lệch (bias / 편향)
 
 Suppose Ability and Luck both influence being Selected:
 
@@ -148,29 +151,29 @@ Ability → Selected ← Luck
 
 In overall population, Ability/Luck may independent. Among selected people, if someone has low ability, observing they were selected increases belief they had luck. Conditioning on selection introduces association.
 
-This has major implications for dataset selection bias and causal analysis.
+This has major implications for dataset selection độ lệch (bias / 편향) and nhân quả (causal / 인과적) phân tích (analysis / 분석).
 
 ## Markov blanket
 
-Markov blanket of node consists of:
+Markov blanket of nút (node / 노드) consists of:
 
 - parents;
 - children;
 - other parents of its children.
 
-Conditioned on Markov blanket, node independent of rest of network.
+Conditioned on Markov blanket, nút (node / 노드) independent of rest of mạng (network / 네트워크).
 
-This can help feature selection/local inference intuition.
+This can help tính năng (feature / 기능) selection/cục bộ (local / 로컬) suy luận (inference / 추론) intuition.
 
-## Exact inference by enumeration
+## Chính xác (exact / 정확한) suy luận (inference / 추론) by enumeration
 
-Query:
+Truy vấn (query / 쿼리):
 
 \[
 P(B\mid J=true,M=true)
 \]
 
-Naive method sums over hidden variables:
+Naive phương thức (method / 메서드) sums over hidden variables:
 
 \[
 P(B,j,m) = \sum_e\sum_a P(B,e,a,j,m)
@@ -184,7 +187,7 @@ Correct but repeats many calculations and scales poorly.
 
 Variable Elimination reorders computation to reuse factors.
 
-Instead of enumerate every full assignment, multiply local factors and sum hidden variables as soon as possible.
+Instead of enumerate every full assignment, multiply cục bộ (local / 로컬) factors and sum hidden variables as soon as possible.
 
 Conceptually:
 
@@ -196,37 +199,37 @@ new smaller factor
  ↓ repeat
 ```
 
-Elimination order can radically change intermediate factor size.
+Elimination thứ tự (order / 순서) can radically thay đổi (change / 변경) intermediate factor kích thước (size / 크기).
 
 ## Treewidth
 
-Inference complexity is strongly related to graph treewidth after moralization/elimination structure.
+Suy luận (inference / 추론) độ phức tạp (complexity / 복잡도) is strongly related to đồ thị (graph / 그래프) treewidth after moralization/elimination cấu trúc (structure / 구조).
 
-Sparse-looking graph may still create large cliques under elimination.
+Sparse-looking đồ thị (graph / 그래프) may still create large cliques under elimination.
 
-This explains why probabilistic inference is not simply “number of nodes”. Graph topology matters.
+This explains why probabilistic suy luận (inference / 추론) is not simply “number of nodes”. đồ thị (graph / 그래프) topology matters.
 
 ## Belief propagation
 
-On tree-structured graphical models, messages pass between nodes/factors and yield exact marginals efficiently.
+On tree-structured graphical các mô hình (models / 모델들), messages pass between nodes/factors and yield chính xác (exact / 정확한) marginals efficiently.
 
 A message summarizes how one subtree influences another.
 
-On graphs with loops, **loopy belief propagation** can be used approximately but convergence/correctness not guaranteed generally.
+On graphs with loops, **loopy belief propagation** can be used approximately but convergence/tính đúng đắn (correctness / 정확성) not guaranteed generally.
 
-## Sampling inference
+## Sampling suy luận (inference / 추론)
 
 Likelihood weighting, Gibbs sampling and other Monte Carlo methods approximate posterior.
 
-Evidence with very low prior probability can make rejection sampling extremely inefficient because most samples rejected.
+Bằng chứng (evidence / 증거) with very low prior xác suất (probability / 확률) can make rejection sampling extremely inefficient because most samples rejected.
 
-Inference algorithm must match evidence/model structure.
+Suy luận (inference / 추론) thuật toán (algorithm / 알고리즘) must match bằng chứng (evidence / 증거)/mô hình (model / 모델) cấu trúc (structure / 구조).
 
-## Learning parameters
+## Học tập (learning / 학습) parameters
 
-If graph known and variables fully observed, CPT parameters can be estimated by counts/MLE or Bayesian estimates.
+If đồ thị (graph / 그래프) known and variables fully observed, CPT parameters can be estimated by counts/MLE or Bayesian estimates.
 
-For discrete node:
+For discrete nút (node / 노드):
 
 \[
 \hat P(X=x\mid Parents=u)=
@@ -235,11 +238,11 @@ For discrete node:
 
 Smoothing/prior avoids zero probabilities for unseen combinations.
 
-## Missing data và EM
+## Missing dữ liệu (data / 데이터) và EM
 
 When latent/missing variables exist, Expectation-Maximization (EM) can estimate parameters.
 
-Conceptual loop:
+Conceptual vòng lặp (loop / 루프):
 
 ```text
 E-step: infer expected latent assignments under current parameters
@@ -247,29 +250,29 @@ M-step: update parameters maximizing expected complete-data likelihood
 repeat
 ```
 
-EM increases likelihood each iteration under standard formulation but can converge local optimum.
+EM increases likelihood each iteration under tiêu chuẩn (standard / 표준) formulation but can converge cục bộ (local / 로컬) optimum.
 
-## Learning graph structure
+## Học tập (learning / 학습) đồ thị (graph / 그래프) cấu trúc (structure / 구조)
 
-Structure itself can be learned from data by search over DAGs using scores such as BIC/BDe-like criteria or constraint-based independence tests.
+Cấu trúc (structure / 구조) itself can be learned from dữ liệu (data / 데이터) by tìm kiếm (search / 검색) over DAGs using scores such as BIC/BDe-like criteria or constraint-based independence tests.
 
-Number DAGs grows super-exponentially, so exact search hard.
+Number DAGs grows super-exponentially, so chính xác (exact / 정확한) tìm kiếm (search / 검색) hard.
 
-Structure learning from observational data does not automatically recover causal graph without assumptions.
+Cấu trúc (structure / 구조) học tập (learning / 학습) from observational dữ liệu (data / 데이터) does not automatically recover nhân quả (causal / 인과적) đồ thị (graph / 그래프) without các giả định (assumptions / 가정들).
 
-## Bayesian Network vs Causal DAG
+## Bayesian mạng (network / 네트워크) vs nhân quả (causal / 인과적) DAG
 
-A Bayesian Network DAG encodes probabilistic factorization/conditional independencies.
+A Bayesian mạng (network / 네트워크) DAG encodes probabilistic factorization/conditional independencies.
 
-A **causal graph** adds stronger semantics: arrows represent causal mechanisms suitable for intervention reasoning.
+A **nhân quả (causal / 인과적) đồ thị (graph / 그래프)** adds stronger ngữ nghĩa (semantics / 의미론): arrows represent nhân quả (causal / 인과적) mechanisms suitable for intervention lập luận (reasoning / 추론).
 
-Same DAG shape can be used descriptively without causal interpretation.
+Same DAG shape can be used descriptively without nhân quả (causal / 인과적) interpretation.
 
-Do not infer “X causes Y” simply because edge `X→Y` appears in predictive network.
+Do not infer “X causes Y” simply because edge `X→Y` appears in predictive mạng (network / 네트워크).
 
 ## Intervention
 
-In causal model, intervention `do(X=x)` replaces mechanism generating X.
+In nhân quả (causal / 인과적) mô hình (model / 모델), intervention `do(X=x)` replaces cơ chế (mechanism / 메커니즘) generating X.
 
 Observation:
 
@@ -285,11 +288,11 @@ P(Y\mid do(X=x))
 
 can differ due confounding.
 
-Bayesian Networks provide graphical foundation, but causal inference requires causal assumptions beyond probability alone.
+Bayesian Networks provide graphical foundation, but nhân quả (causal / 인과적) suy luận (inference / 추론) requires nhân quả (causal / 인과적) các giả định (assumptions / 가정들) beyond xác suất (probability / 확률) alone.
 
-## Dynamic Bayesian Network
+## Động (dynamic / 동적) Bayesian mạng (network / 네트워크)
 
-DBN repeats structure across time:
+DBN repeats cấu trúc (structure / 구조) across thời gian (time / 시간):
 
 ```text
 X_t → X_{t+1}
@@ -297,17 +300,17 @@ X_t → X_{t+1}
 Y_t    Y_{t+1}
 ```
 
-HMM and Kalman Filter are special structured dynamic probabilistic models.
+HMM and Kalman Filter are special structured động (dynamic / 동적) probabilistic các mô hình (models / 모델들).
 
 DBNs generalize temporal dependencies to multiple variables.
 
 ## Noisy-OR
 
-When many independent-ish causes can trigger effect, full CPT grows exponential in parent count.
+When many independent-ish causes can trigger tác động (effect / 효과), full CPT grows exponential in parent count.
 
-Noisy-OR parameterizes causal influence compactly.
+Noisy-OR parameterizes nhân quả (causal / 인과적) influence compactly.
 
-If causes independently fail to trigger effect with probabilities, probability no cause succeeds is product; complement gives effect probability.
+If causes independently thất bại (fail / 실패) to trigger tác động (effect / 효과) with probabilities, xác suất (probability / 확률) no cause succeeds is sản phẩm (product / 제품); complement gives tác động (effect / 효과) xác suất (probability / 확률).
 
 This is example of structured CPD reducing parameter count.
 
@@ -315,7 +318,7 @@ This is example of structured CPD reducing parameter count.
 
 Bayesian Networks not limited to discrete CPTs. Conditional distributions can be Gaussian or parameterized functions.
 
-Linear Gaussian BN:
+Tuyến tính (linear / 선형) Gaussian BN:
 
 \[
 X_i = \beta_0 + \sum_j \beta_j Parent_j + \epsilon
@@ -323,11 +326,11 @@ X_i = \beta_0 + \sum_j \beta_j Parent_j + \epsilon
 
 with Gaussian noise.
 
-Hybrid discrete/continuous networks require compatible inference methods.
+Hybrid discrete/continuous networks require compatible suy luận (inference / 추론) methods.
 
 ## Bayesian Networks và diagnosis
 
-Diagnostic reasoning often goes from effects to causes:
+Diagnostic lập luận (reasoning / 추론) often goes from effects to causes:
 
 ```text
 Disease → Symptom
@@ -335,27 +338,27 @@ observe Symptom
 infer Disease posterior
 ```
 
-Graph direction follows generative/causal-like mechanism; inference can flow opposite edge direction through Bayes.
+Đồ thị (graph / 그래프) direction follows generative/causal-like cơ chế (mechanism / 메커니즘); suy luận (inference / 추론) can luồng (flow / 흐름) opposite edge direction through Bayes.
 
-This is crucial: edge direction does not limit query direction.
+This is crucial: edge direction does not limit truy vấn (query / 쿼리) direction.
 
 ## Explaining away in diagnosis
 
-Two diseases cause fever. Observing fever increases both beliefs. If test confirms disease A, belief disease B may decrease because fever already explained.
+Two diseases cause fever. Observing fever increases both beliefs. If kiểm thử (test / 테스트) confirms disease A, belief disease B may decrease because fever already explained.
 
-Independent causes become dependent after common effect observed.
+Independent causes become dependent after dùng chung (common / 공통) tác động (effect / 효과) observed.
 
-## Decision Networks
+## Quyết định (decision / 결정) Networks
 
-Influence Diagram extends Bayesian Network with:
+Influence Diagram extends Bayesian mạng (network / 네트워크) with:
 
 - chance nodes;
-- decision nodes;
+- quyết định (decision / 결정) nodes;
 - utility nodes.
 
-Then choose action maximizing expected utility.
+Then choose hành động (action / 동작) maximizing expected utility.
 
-This integrates probabilistic belief with decision theory.
+This integrates probabilistic belief with quyết định (decision / 결정) lý thuyết (theory / 이론).
 
 ## Bayesian Networks vs Neural Networks
 
@@ -366,19 +369,19 @@ Bayesian Network → probabilistic graphical model
 Neural Network   → parameterized differentiable function/computation graph
 ```
 
-A neural network can parameterize conditional probabilities inside a probabilistic model, but concepts are distinct.
+A neural mạng (network / 네트워크) can parameterize conditional probabilities inside a probabilistic mô hình (model / 모델), but concepts are distinct.
 
-## Neural conditional probability models
+## Neural conditional xác suất (probability / 확률) các mô hình (models / 모델들)
 
-Instead of CPT, use neural network:
+Instead of CPT, use neural mạng (network / 네트워크):
 
 \[
 P(X_i\mid Parents_i;\theta)
 \]
 
-This combines graph factorization with flexible function approximator.
+This combines đồ thị (graph / 그래프) factorization with flexible hàm (function / 함수) approximator.
 
-Autoregressive neural models are conceptually directed graphical models over sequence:
+Autoregressive neural các mô hình (models / 모델들) are conceptually directed graphical các mô hình (models / 모델들) over chuỗi (sequence / 시퀀스):
 
 \[
 P(x_{1:T})=\prod_tP(x_t\mid x_{<t})
@@ -386,11 +389,11 @@ P(x_{1:T})=\prod_tP(x_t\mid x_{<t})
 
 Transformer LMs implement these conditionals with neural networks.
 
-## Bayesian Network và RAG diagnosis
+## Bayesian mạng (network / 네트워크) và RAG diagnosis
 
-Enterprise AI can use graph to reason dependency while RAG retrieves textual evidence.
+Enterprise AI can use đồ thị (graph / 그래프) to reason phụ thuộc (dependency / 의존성) while RAG retrieves textual bằng chứng (evidence / 증거).
 
-Example incident response:
+Example sự cố (incident / 인시던트) phản hồi (response / 응답):
 
 ```text
 Observed logs
@@ -402,9 +405,9 @@ retrieve docs for top hypotheses
 LLM explains with sources
 ```
 
-Graph encodes uncertainty/structure; LLM handles language interface/explanation.
+Đồ thị (graph / 그래프) encodes bất định (uncertainty / 불확실성)/cấu trúc (structure / 구조); LLM handles ngôn ngữ (language / 언어) giao diện (interface / 인터페이스)/explanation.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 ```text
 Node      = random variable
@@ -416,26 +419,28 @@ d-separation = read conditional independencies from graph
 Inference = update/query probabilities given evidence
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Edge means causation”
 
-Only if model is given causal semantics/assumptions. Ordinary BN edge means dependency/factorization structure.
+Only if mô hình (model / 모델) is given nhân quả (causal / 인과적) ngữ nghĩa (semantics / 의미론)/các giả định (assumptions / 가정들). Ordinary BN edge means phụ thuộc (dependency / 의존성)/factorization cấu trúc (structure / 구조).
 
 ### “No edge means variables independent”
 
-Not necessarily marginally. Graph implies specific conditional independencies via d-separation.
+Not necessarily marginally. đồ thị (graph / 그래프) implies specific conditional independencies via d-separation.
 
-### “Conditioning always removes dependency”
+### “Conditioning always removes phụ thuộc (dependency / 의존성)”
 
-Conditioning on collider can create dependency.
+Conditioning on collider can create phụ thuộc (dependency / 의존성).
 
-### “Bayesian Network is neural network with Bayesian weights”
+### “Bayesian mạng (network / 네트워크) is neural mạng (network / 네트워크) with Bayesian weights”
 
-No. They are different model families.
+No. They are different mô hình (model / 모델) families.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Bayesian Networks make probabilistic reasoning structural: graph topology determines factorization and inference complexity. Concepts here reappear in causal inference, HMMs, probabilistic programming and autoregressive generative models.
+Bayesian Networks make probabilistic lập luận (reasoning / 추론) structural: đồ thị (graph / 그래프) topology determines factorization and suy luận (inference / 추론) độ phức tạp (complexity / 복잡도). Concepts here reappear in nhân quả (causal / 인과적) suy luận (inference / 추론), HMMs, probabilistic programming and autoregressive generative các mô hình (models / 모델들).
 
-Xem tiếp: [Knowledge Graphs](./06_knowledge_graphs.md), which represents semantic relations rather than probabilistic dependency by default.
+Xem tiếp: [Knowledge Graphs](./06_knowledge_graphs.md), which represents ngữ nghĩa (semantic / 의미적) relations rather than probabilistic phụ thuộc (dependency / 의존성) by default.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

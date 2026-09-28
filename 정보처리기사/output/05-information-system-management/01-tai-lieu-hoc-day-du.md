@@ -18,6 +18,8 @@
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
+> **Mạch nối:** Mỗi mục trong guide phải được đọc như một bước của cùng một chuỗi suy luận. Hãy dùng phần cuối của mục trước để đặt câu hỏi cho mục sau, rồi quay lại checklist để kiểm tra khái niệm vừa được mở rộng; không coi mỗi heading là một ghi chú tách rời.
+
 ---
 
 ## 1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)
@@ -28,12 +30,12 @@
 - **Tiếng Việt:** Là phương pháp luận trung tâm vào xử lý (Process), lập tài liệu yêu cầu người dùng theo quy trình phân tích chuẩn. Áp dụng nguyên lý chia để trị (Divide and Conquer) cho các vấn đề phức tạp.
 - **Example:**
   - *KR:* 큰 시스템을 여러 개의 작은 모듈로 나누어 개발.
-  - *VN:* Chia một hệ thống lớn thành nhiều module nhỏ để phát triển.
+  - *VN:* Chia một hệ thống lớn thành nhiều mô-đun (module / 모듈) nhỏ để phát triển.
 
 ### 1.2 정보공학 방법론 (Information Engineering Methodology)
 - 정보 시스템의 개발을 위해 정형화된 기법들을 상호 연관성 있게 통합 및 적용하는 **자료(Data) 중심**의 방법론이다.
 - 데이터베이스 설계를 위한 데이터 모델링으로 **개체 관계도 (ERD; Entity Relationship Diagram)**를 사용한다.
-- **Tiếng Việt:** Phương pháp luận trung tâm vào dữ liệu (Data), tích hợp các kỹ thuật chuẩn hóa để phát triển hệ thống. Sử dụng sơ đồ thực thể liên kết (ERD) cho mô hình hóa dữ liệu.
+- **Tiếng Việt:** Phương pháp luận trung tâm vào dữ liệu (data / 데이터), tích hợp các kỹ thuật chuẩn hóa để phát triển hệ thống. Sử dụng sơ đồ thực thể liên kết (ERD) cho mô hình hóa dữ liệu.
 - **Example:**
   - *KR:* 고객과 주문의 관계를 ERD로 모델링하여 시스템 구축.
   - *VN:* Mô hình hóa mối quan hệ giữa Khách hàng và Đơn hàng bằng ERD để xây dựng hệ thống.
@@ -41,10 +43,10 @@
 ### 1.3 컴포넌트 기반(CBD) 방법론 (Component-Based Development)
 - 기존의 시스템이나 소프트웨어를 구성하는 **컴포넌트를 조합**하여 하나의 새로운 애플리케이션을 만드는 방법론이다.
 - 분석 단계에서 사용자 요구사항 정의서가 산출된다.
-- **Tiếng Việt:** Phương pháp luận tạo ứng dụng mới bằng cách kết hợp các thành phần (component) có sẵn. Tài liệu định nghĩa yêu cầu được tạo ra ở bước phân tích.
+- **Tiếng Việt:** Phương pháp luận tạo ứng dụng mới bằng cách kết hợp các thành phần (component / 컴포넌트) có sẵn. Tài liệu định nghĩa yêu cầu được tạo ra ở bước phân tích.
 - **Example:**
   - *KR:* 결제 컴포넌트와 장바구니 컴포넌트를 조립하여 쇼핑몰 구축.
-  - *VN:* Lắp ráp component thanh toán và component giỏ hàng để tạo trang thương mại điện tử.
+  - *VN:* Lắp ráp thành phần (component / 컴포넌트) thanh toán và thành phần (component / 컴포넌트) giỏ hàng để tạo trang thương mại điện tử.
 - 💡 **Mẹo ghi nhớ:** CBD = "Lego" (lắp ráp các mảnh ghép có sẵn).
 
 ### 1.4 소프트웨어 개발 프레임워크 (Software Development Framework)
@@ -53,7 +55,11 @@
 - **Tiếng Việt:** Hệ thống phần mềm dạng bán thành phẩm cung cấp các thành phần và kiến trúc chung. Giải quyết sự phụ thuộc vào nhà cung cấp và tăng năng suất.
 - **Example:**
   - *KR:* Spring 프레임워크를 사용하여 Java 웹 애플리케이션을 빠르게 개발.
-  - *VN:* Sử dụng Spring framework để phát triển nhanh ứng dụng web Java.
+  - *VN:* Sử dụng Spring khung phần mềm (framework / 프레임워크) để phát triển nhanh ứng dụng web Java.
+
+---
+
+> **Mạch chuyển:** Từ **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, chuyển sang **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -67,6 +73,10 @@
 ### 2. 소프트웨어 개발 프레임워크 (Framework)
 공통 사용되는 구성 요소와 아키텍처를 일반화하여 제공하는 반제품 형태의 시스템. (예외 처리, 트랜잭션, DB 연동 등 기본 기능 제공).
 - **종류**: 스프링(Spring - Java용), 닷넷(.NET - Windows용), 전자정부 프레임워크(공공부문 지원).
+
+---
+
+> **Mạch chuyển:** Từ **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, chuyển sang **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -92,14 +102,22 @@
 
 ---
 
+> **Mạch chuyển:** Từ **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**, chuyển sang **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
+
+---
+
+> **Mạch chuyển:** Từ **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크**, chuyển sang **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 336. 소프트웨어 개발 프레임워크 (Software Development Framework)
 - **개념**: 개발에 공통 사용되는 구조를 제공하여 생산성을 높이는 기반.
 - **특성**: 모듈화, 재사용성, 확장성, **제어의 역흐름(IoC)**.
-- **Tiếng Việt**: Nền tảng cấu trúc sẵn giúp tăng năng suất (như Spring, .NET). Đặc tính: Module hóa, Tái sử dụng, Mở rộng, Đảo ngược luồng điều khiển (IoC).
+- **Tiếng Việt**: Nền tảng cấu trúc sẵn giúp tăng năng suất (như Spring, .NET). Đặc tính: mô-đun (module / 모듈) hóa, Tái sử dụng, Mở rộng, Đảo ngược luồng điều khiển (IoC).
 
 ### 자주 혼동하는 판별 포인트
 
@@ -107,6 +125,10 @@
 - RIP는 거리 벡터 방식이고 최대 15홉을 사용한다. OSPF는 링크 상태 방식, BGP는 AS 간 경로 제어다.
 - AES·DES·SEED는 대칭키, RSA는 공개키 알고리즘이다. 해시(MD5/SHA 계열)는 암·복호화 키를 교환하는 알고리즘이 아니라 일방향 요약 함수다.
 - Chinese Wall은 이해상충 방지, Bell-LaPadula는 기밀성, Biba는 무결성 중심 모델이다.
+
+---
+
+> **Mạch chuyển:** Từ **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**, chuyển sang **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -124,14 +146,14 @@
   - 개발 비용 = 노력(인월) × 단위 비용
   - 개발 기간 = 노력(인월) / 투입 인원
   - 생산성 = LOC / 노력(인월)
-- **Tiếng Việt:** Ước tính dựa trên số dòng code. Tính toán Nỗ lực (Person-Month) = Số dòng code / Số dòng code 1 người viết trong 1 tháng.
+- **Tiếng Việt:** Ước tính dựa trên số dòng mã (code / 코드). Tính toán Nỗ lực (Person-Month) = Số dòng mã (code / 코드) / Số dòng mã (code / 코드) 1 người viết trong 1 tháng.
 
 #### 수학적 산정 기법 (Mathematical Models)
 - **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
 - **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
 - **Tiếng Việt:**
-  - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
+  - COCOMO: Dựa vào số dòng mã (code / 코드) (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
   - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
   - FP (Function Point): Dựa trên tính năng.
 
@@ -141,7 +163,7 @@
 - **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
 - **Tiếng Việt:**
   - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
-  - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
+  - đường găng (critical path / 임계 경로): Đường dài nhất trong sơ đồ mạng.
   - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.
 
 ### 3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)
@@ -150,6 +172,10 @@
   - 내부적 기준: 목표 환경, 요구사항, 프로젝트 규모, 보유 기술.
   - 외부적 기준: 법적 제약사항(Compliance), 표준 품질 기준.
 - **Tiếng Việt:** Quản lý rủi ro (lên phương án phòng ngừa) và Cắt may phương pháp (Tailoring) - điều chỉnh quy trình phát triển cho phù hợp với đặc thù dự án.
+
+---
+
+> **Mạch chuyển:** Từ **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, chuyển sang **프로젝트 일정 관리 (Project Schedule Management)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -164,6 +190,10 @@
 
 ### 3. 간트 차트 (Gantt Chart, 시간선 차트)
 각 작업의 시작과 종료를 막대 도표로 표시하는 일정표. 적응성이 약하지만 이정표와 작업 기간을 한눈에 파악하기 쉽습니다.
+
+---
+
+> **Mạch chuyển:** Từ **프로젝트 일정 관리 (Project Schedule Management)**, chuyển sang **소프트웨어 비용 산정 기법 (Software Cost Estimation)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -185,7 +215,7 @@
 - **FP (Function Point, 기능 점수) 모형**: 알브레히트(Albrecht) 제안. 기능 요인(입력, 출력, 사용자 질의, 데이터 파일, 외부 인터페이스)별로 가중치를 부여해 산정.
 
 > **Vietnamese Explanation**:
-> - **LOC**: Tính chi phí dựa trên số dòng code.
+> - **LOC**: Tính chi phí dựa trên số dòng mã (code / 코드).
 > - **COCOMO**: Phân loại theo độ lớn dự án (Organic: nhỏ, Semi: vừa, Embedded: lớn).
 > - **Putnam**: Dựa trên đường cong phân bố nỗ lực theo thời gian Rayleigh-Norden.
 > - **FP (Function Point)**: Dựa trên số lượng chức năng phần mềm mang lại cho người dùng.
@@ -195,12 +225,20 @@
 
 ---
 
+> **Mạch chuyển:** Từ **소프트웨어 비용 산정 기법 (Software Cost Estimation)**, chuyển sang **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)
 - **개념**: 통계 공식을 활용한 비용 예측 기법 (Dự toán chi phí dựa trên công thức toán học).
 - **종류**:
   - **COCOMO**: LOC(라인 수) 기반 (Dựa vào số dòng code).
   - **Putnam**: 시간에 따른 인력 분포 곡선(Rayleigh-Norden) 활용 (Dựa vào đường cong phân bổ nhân lực).
   - **FP (Function Point)**: 입력, 출력, 인터페이스 등 기능적 요인 기반 (Dựa vào điểm chức năng).
+
+---
+
+> **Mạch chuyển:** Từ **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**, chuyển sang **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -234,6 +272,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)
 
 ### 1. ISO/IEC 12207
@@ -249,6 +291,10 @@
 
 > **Vietnamese Explanation**:
 > Các tiêu chuẩn như CMMI và SPICE dùng để đánh giá xem một công ty phần mềm làm việc chuyên nghiệp đến đâu. CMMI có 5 cấp độ (từ lộn xộn đến tối ưu hóa liên tục), còn SPICE có 6 cấp độ.
+
+---
+
+> **Mạch chuyển:** Từ **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**, chuyển sang **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -282,6 +328,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**, chuyển sang **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
 ### 2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)
@@ -290,7 +340,7 @@
 - **동기식 (Synchronous):** 프레임(블록) 단위로 일시에 전송. 속도 빠르고 효율 좋음. 비트/블록 동기 방식.
 - **Tiếng Việt:**
   - Đơn công (Simplex), Bán song công (Half-Duplex), Song công toàn phần (Full-Duplex).
-  - Bất đồng bộ: Dùng Start/Stop bit (overhead cao). Đồng bộ: Truyền theo block (nhanh, hiệu quả).
+  - Bất đồng bộ: Dùng Start/Stop bit (overhead cao). Đồng bộ: Truyền theo khối (block / 블록) (nhanh, hiệu quả).
 
 ### 2.2 신호 변환 장치 (MODEM & DSU)
 - **모뎀 (MODEM):** 디지털 ↔ 아날로그 변환.
@@ -311,6 +361,10 @@
 - **표본화 (Sampling):** 횟수 = 2 × 최고 주파수.
 - **Tiếng Việt:** Biến đổi Tương tự -> Số (dùng CODEC). Quá trình: Lấy mẫu -> Lượng tử hóa -> Mã hóa.
 - 💡 **Mẹo ghi nhớ:** Mẫu Lượng Mã Giải Lọc (Lấy mẫu -> Lượng tử hóa -> Mã hóa -> Giải mã -> Lọc).
+
+---
+
+> **Mạch chuyển:** Từ **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -357,6 +411,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**, chuyển sang **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
 ### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
@@ -379,7 +437,7 @@
   - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
 - **Tiếng Việt:**
   - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
-  - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
+  - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming mã (code / 코드): Sửa được lỗi 1 bit.
 
 ### 4.3 교환 방식 (Switching Methods)
 - **회선 교환 (Circuit Switching):** 물리적 전용선 할당. 고정 대역, 연속적 데이터 전송. (접속 지연 O, 전송 지연 X). 전화망.
@@ -405,7 +463,11 @@
   - **범람 (Flooding):** 모든 경로로 패킷 복사 전송 (네트워크 정보 불필요).
   - **임의 경로 (Random):** 인접 교환기 중 임의 선택.
 - **폭주(혼잡) 제어 (Congestion Control):** 오버플로를 방지하기 위해 네트워크 내 패킷 수 조절.
-- **Tiếng Việt:** Routing có Static (Tĩnh), Adaptive (Động), Flooding (Tràn ngập). Congestion Control giúp chống quá tải mạng.
+- **Tiếng Việt:** Routing có Static (Tĩnh), Adaptive (Động), Flooding (Tràn ngập). Congestion điều khiển (control / 제어) giúp chống quá tải mạng.
+
+---
+
+> **Mạch chuyển:** Từ **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**, chuyển sang **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -413,10 +475,18 @@
 
 ---
 
+> **Mạch chuyển:** Từ **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**, chuyển sang **2. 자원 처리 오류 (Resource Handling Errors)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 자원 처리 오류 (Resource Handling Errors)
 - **부적절한 자원 해제 (Improper Resource Release)**: 힙 메모리나 소켓을 사용 후 반환(close)하지 않아 자원 고갈 발생. (Không giải phóng bộ nhớ, kết nối sau khi dùng xong).
 - **해제된 자원 사용 (Use After Free)**: 반환된 메모리를 다시 참조하여 오작동 유발. (Dùng lại vùng nhớ đã được giải phóng).
 - **초기화되지 않은 변수 사용 (Uninitialized Variable)**: 변수 선언 후 값을 넣지 않고 사용하여 이전 쓰레기 값이 노출됨. (Dùng biến chưa khởi tạo giá trị).
+
+---
+
+> **Mạch chuyển:** Từ **2. 자원 처리 오류 (Resource Handling Errors)**, chuyển sang **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -450,7 +520,7 @@
 - **Tiếng Việt:**
   - CSMA/CD: Phát hiện xung đột (Mạng có dây).
   - CSMA/CA: Tránh xung đột (Mạng không dây).
-  - VLAN: Mạng LAN ảo, phân chia logic không phụ thuộc vật lý.
+  - VLAN: Mạng LAN ảo, phân chia lô-gic (logic / 논리) không phụ thuộc vật lý.
 
 ### 5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)
 - **ARP (Address Resolution Protocol):** IP 주소를 MAC 주소로 변환.
@@ -462,6 +532,10 @@
   - RIP: Dựa trên số Hop (tối đa 15).
   - OSPF: Dựa trên trạng thái Link, tìm đường ngắn nhất.
   - Stop-and-Wait: Chờ phản hồi (ACK) rồi mới gửi tiếp.
+
+---
+
+> **Mạch chuyển:** Từ **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, chuyển sang **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -499,9 +573,13 @@
 - **게이트웨이 (Gateway):** 전 계층(주로 상위), 프로토콜이 전혀 다른 네트워크 연결.
 - **Tiếng Việt:**
   - L1: Hub, Repeater (Khuếch đại tín hiệu).
-  - L2: Bridge (Nối LAN).
+  - L2: cầu nối (bridge / 브리지) (Nối LAN).
   - L3: Router (Định tuyến).
   - L4-L7: Gateway (Nối mạng khác giao thức).
+
+---
+
+> **Mạch chuyển:** Từ **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**, chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -526,9 +604,13 @@
 
 💡 **Mẹo ghi nhớ (Mnemonics):**
 - **RIP**: 15 Hops max (Dùng cho mạng nhỏ).
-- **OSPF**: Link State (Dùng cho mạng lớn).
+- **OSPF**: Link trạng thái (state / 상태) (Dùng cho mạng lớn).
 - **CSMA/CD**: Mạng LAN có dây (Collision Detection).
 - **CSMA/CA**: Mạng không dây (Collision Avoidance).
+
+---
+
+> **Mạch chuyển:** Từ **네트워크 구조 및 기술 (Network Structures & Technologies)**, chuyển sang **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -557,9 +639,17 @@
 
 ---
 
+> **Mạch chuyển:** Từ **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**, chuyển sang **네트워크 보안 기술 (Network Security Tech)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 네트워크 보안 기술 (Network Security Tech)
 - **VPN (가상 사설 통신망)**: 공중 네트워크를 전용 회선처럼 사용할 수 있게 해주는 암호화 보안 솔루션.
 - **SSH (시큐어 셸)**: 원격 로그인, 파일 복사 등을 안전하게 수행하는 프로토콜 (포트 22번 사용, 데이터 암호화 지원).
+
+---
+
+> **Mạch chuyển:** Từ **네트워크 보안 기술 (Network Security Tech)**, chuyển sang **6. 통신 프로토콜 (Giao thức Truyền thông)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -569,7 +659,7 @@
 - **구문 (Syntax):** 데이터 형식, 코딩.
 - **의미 (Semantics):** 제어 정보 및 오류 관리.
 - **시간 (Timing):** 속도 조절, 동기화.
-- **Tiếng Việt:** 3 yếu tố của giao thức: Cú pháp (Syntax), Ngữ nghĩa (Semantics), Thời gian (Timing).
+- **Tiếng Việt:** 3 yếu tố của giao thức: cú pháp (syntax / 문법), ngữ nghĩa (semantics / 의미론), Thời gian (Timing).
 
 ### 6.2 OSI 7계층 (OSI 7 Layers)
 1. **물리 계층 (Physical):** 기계/전기적 특성 (RS-232C, 리피터).
@@ -600,6 +690,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **6. 통신 프로토콜 (Giao thức Truyền thông)**, chuyển sang **기본 프로토콜 (Basic Protocols)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 기본 프로토콜 (Basic Protocols)
 * **ARP**: 호스트의 IP 주소(논리 주소)를 호스트와 연결된 네트워크 접속장치의 물리적 주소(MAC Address)로 변환함.
   * *Tiếng Việt*: Chuyển đổi địa chỉ IP (địa chỉ logic) của máy chủ thành địa chỉ vật lý (MAC Address) của thiết bị kết nối mạng.
@@ -622,6 +716,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **기본 프로토콜 (Basic Protocols)**, chuyển sang **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)
 
 ### 7.1 회복 및 동시성 제어 (Recovery & Concurrency)
@@ -632,7 +730,7 @@
   - **단위가 작으면:** 로크 수가 많아 관리 복잡/오버헤드 증가, 하지만 병행성 상승.
 - **타임 스탬프 순서 (Time Stamp Ordering):** 직렬성 순서를 결정하기 위해 트랜잭션 처리 순서를 미리 선택.
 - **Tiếng Việt:**
-  - Immediate Update: Cập nhật ngay lập tức (dùng Log để phục hồi).
+  - Immediate cập nhật (update / 업데이트): Cập nhật ngay lập tức (dùng Log để phục hồi).
   - Locking Granularity: Kích thước khóa. Khóa lớn -> dễ quản lý, đồng thời thấp. Khóa nhỏ -> khó quản lý, đồng thời cao.
 
 ### 7.2 교착상태 (Deadlock)
@@ -643,6 +741,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**, chuyển sang **데이터베이스 신기술 (DB New Technologies)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 데이터베이스 신기술 (DB New Technologies)
 
 ### 1. 빅데이터 및 분석 기술
@@ -650,6 +752,10 @@
 - **맵리듀스 (MapReduce)**: 하둡 기반 분산 처리 프로그래밍 모델 (Map으로 분류, Reduce로 추출).
 - **데이터 마이닝 (Data Mining)**: 대량의 데이터에서 패턴을 규명하여 유용한 정보를 추출하는 기법.
 - **OLAP**: 다차원 데이터로부터 통계적 요약 정보를 분석하여 의사결정에 활용. (연산: Roll-up, Drill-down, Pivoting 등).
+
+---
+
+> **Mạch chuyển:** Từ **데이터베이스 신기술 (DB New Technologies)**, chuyển sang **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -678,6 +784,10 @@
   - `btmp`: 실패한 로그인.
   - `lastlog`: 마지막 성공 로그인.
 - **Tiếng Việt:** Secure OS, IDS (phát hiện xâm nhập), HACMP (giải pháp độ sẵn sàng cao). Phân loại log kernel (wtmp, utmp, v.v.).
+
+---
+
+> **Mạch chuyển:** Từ **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**, chuyển sang **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -724,6 +834,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, chuyển sang **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 정보 보안 및 하드웨어 신기술 (Security & HW Tech)
 
 ### 1. 보안 용어 및 Secure OS
@@ -736,6 +850,10 @@
 - **HA (High Availability, 고가용성)**: 장애 발생 시 즉시 다른 시스템으로 대체 가능한 이중화 환경.
 - **RAID**: 여러 개의 하드디스크에 데이터를 분산 저장하여 속도와 안정성을 향상시키는 기술.
 - **트러스트존 (TrustZone)**: 프로세서 내에 일반 구역과 보안 구역을 분할하는 ARM의 하드웨어 보안 기술.
+
+---
+
+> **Mạch chuyển:** Từ **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**, chuyển sang **소프트웨어 보안 (Software Security)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -764,6 +882,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **소프트웨어 보안 (Software Security)**, chuyển sang **인증 및 보안 체계 (Authentication & Security System)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 인증 및 보안 체계 (Authentication & Security System)
 
 ### 1. 인증 수단 4가지
@@ -779,6 +901,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **인증 및 보안 체계 (Authentication & Security System)**, chuyển sang **소프트웨어 개발 보안 관련 법규** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 소프트웨어 개발 보안 관련 법규
 - **개인정보 보호법**: 개인정보 처리 및 보호에 관한 전반적 사항.
 - **정보통신망법**: 정보통신망을 통한 개인정보 수집/이용 보호.
@@ -787,7 +913,15 @@
 
 ---
 
+> **Mạch chuyển:** Từ **소프트웨어 개발 보안 관련 법규**, chuyển sang **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## ⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)
+
+---
+
+> **Mạch chuyển:** Từ **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**, chuyển sang **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -797,10 +931,14 @@
 - **하드코드된 비밀번호 (Hardcoded Password)**: 소스코드에 비밀번호를 직접 작성. (Ghi cứng mật khẩu trong source code).
 - **오류 메시지 통한 정보 노출 (Information Exposure Through Error Message)**: 시스템 내부 구조나 파일 경로가 오류 메시지에 포함되어 노출됨. (Thông báo lỗi làm lộ đường dẫn nội mục hệ thống).
 - **예시 (Example)**:
-  - (KR) DB 연결 실패 시 "root 계정 연결 실패" 같은 메시지를 띄우지 않고 "일시적인 오류입니다"로 대체.
-  - (VN) Thay vì hiện lỗi "Không kết nối được tài khoản root", chỉ hiển thị "Lỗi hệ thống tạm thời".
+  - (KR) DB 연결 실패 시 "gốc (root / 루트) 계정 연결 실패" 같은 메시지를 띄우지 않고 "일시적인 오류입니다"로 대체.
+  - (VN) Thay vì hiện lỗi "Không kết nối được tài khoản gốc (root / 루트)", chỉ hiển thị "Lỗi hệ thống tạm thời".
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)**, chuyển sang **9. 암호화 기술 (Công nghệ Mã hóa)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -822,7 +960,11 @@
 ### 9.2 해시 및 기타 암호화 요소
 - **해시 (Hash):** 임의의 길이를 고정된 길이로 변환. 복호화가 불가한 **일방향 함수**. (종류: SHA, MD4, MD5 등).
 - **솔트 (Salt):** 암호화 전 원문에 무작위 값을 덧붙이는 과정. (패스워드 보안 강화용).
-- **Tiếng Việt:** Hash là hàm một chiều không thể giải mã (SHA, MD5). Salt là thêm chuỗi ngẫu nhiên trước khi mã hóa để chống tấn công từ điển.
+- **Tiếng Việt:** băm (hash / 해시) là hàm một chiều không thể giải mã (SHA, MD5). Salt là thêm chuỗi ngẫu nhiên trước khi mã hóa để chống tấn công từ điển.
+
+---
+
+> **Mạch chuyển:** Từ **9. 암호화 기술 (Công nghệ Mã hóa)**, chuyển sang **암호화 기법 (Encryption Techniques)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -847,7 +989,11 @@
 > **Vietnamese Explanation**:
 > **Mã hóa đối xứng (Private Key)**: Dùng chung 1 chìa khóa để khóa và mở (nhanh nhưng khó chia sẻ chìa khóa an toàn).
 > **Mã hóa bất đối xứng (Public Key)**: Dùng khóa công khai để khóa, khóa bí mật để mở (chậm hơn nhưng an toàn).
-> **Hash (Băm)** là mã hóa 1 chiều (không dịch ngược được). **Salt (Muối)** là thêm chuỗi ngẫu nhiên vào mật khẩu trước khi băm để tăng độ khó.
+> **băm (hash / 해시)** là mã hóa 1 chiều (không dịch ngược được). **Salt (Muối)** là thêm chuỗi ngẫu nhiên vào mật khẩu trước khi băm để tăng độ khó.
+
+---
+
+> **Mạch chuyển:** Từ **암호화 기법 (Encryption Techniques)**, chuyển sang **1. 암호화 기본 개념 (Concepts)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -859,6 +1005,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **1. 암호화 기본 개념 (Concepts)**, chuyển sang **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)
 
 ### 2.1 소프트웨어 재사용 (Software Reuse)
@@ -867,11 +1017,11 @@
   - **합성 중심 (Composition-based):** 전자 칩 같은 소프트웨어 부품(모듈)을 만들어 끼워 맞추는 방법.
   - **생성 중심 (Generation-based):** 추상화 형태로 쓰여진 명세를 구체화하여 프로그램을 만드는 방법.
 - **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng.
-  - Tổng hợp: lắp ráp các module (như chip).
+  - Tổng hợp: lắp ráp các mô-đun (module / 모듈) (như chip).
   - Khởi tạo: tạo chương trình từ đặc tả trừu tượng.
 - **Example:**
   - *KR:* 이전에 만든 로그인 모듈을 새 프로젝트에 그대로 재사용.
-  - *VN:* Tái sử dụng nguyên bản module đăng nhập đã làm trước đó cho dự án mới.
+  - *VN:* Tái sử dụng nguyên bản mô-đun (module / 모듈) đăng nhập đã làm trước đó cho dự án mới.
 
 ### 2.2 소프트웨어 재공학 (Software Reengineering)
 - 기존 소프트웨어의 데이터와 기능을 변경 및 개선하여 유지보수성과 품질을 높이는 기법.
@@ -881,17 +1031,21 @@
   - **재구성 (Restructuring):** 코드 재구성하여 구조 향상.
   - **역공학 (Reverse Engineering):** 기존 소프트웨어를 분석하여 설계 정보를 재발견하는 활동.
   - **이식 (Migration):** 다른 운영체제나 하드웨어 환경으로 변환.
-- **Tiếng Việt:** Tái thiết kế phần mềm cũ để dễ bảo trì. Các hoạt động chính: Phân tích, Tái cấu trúc, Dịch ngược (Reverse Engineering), và Di chuyển (Migration).
+- **Tiếng Việt:** Tái thiết kế phần mềm cũ để dễ bảo trì. Các hoạt động chính: Phân tích, Tái cấu trúc, Dịch ngược (Reverse Engineering), và di chuyển (migration / 마이그레이션).
 - 💡 **Mẹo ghi nhớ:** Các bước Reengineering: "Phân Tích -> Tái Cấu Trúc -> Dịch Ngược -> Di Chuyển".
 
-### 2.3 CASE (Computer Aided Software Engineering)
+### 2.3 trường hợp (case / 사례) (Computer Aided Software Engineering)
 - 소프트웨어 개발 과정 전체 또는 일부를 자동화하는 전용 도구.
 - **원천 기술 (Core Technologies):** 구조적 기법, 프로토타이핑, 자동 프로그래밍, 정보 저장소, 분산처리.
 - **주요 기능 (Major Functions):** 생명 주기 전 단계 연결, 다양한 모델 지원, 그래픽 지원, 자료 흐름도 작성, 모순 검사 등.
 - **Tiếng Việt:** Công cụ tự động hóa toàn bộ hoặc một phần quá trình phát triển phần mềm. Hỗ trợ đồ họa, vẽ sơ đồ, kiểm tra lỗi.
 - **Example:**
   - *KR:* UML 설계 도구를 사용하여 코드를 자동 생성.
-  - *VN:* Sử dụng công cụ thiết kế UML để tự động sinh code.
+  - *VN:* Sử dụng công cụ thiết kế UML để tự động sinh mã (code / 코드).
+
+---
+
+> **Mạch chuyển:** Từ **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**, chuyển sang **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -906,7 +1060,7 @@
 - **텐서플로 (TensorFlow):** 구글의 기계학습/데이터 흐름 프로그래밍용 오픈소스 라이브러리.
 - **앤 스크린 (N-Screen):** 여러(N개) 단말기에서 동일한 콘텐츠를 자유롭게 이용.
 - **Tiếng Việt:**
-  - Docker: Nền tảng container hóa mã nguồn mở.
+  - Docker: Nền tảng bộ chứa (container / 컨테이너) hóa mã nguồn mở.
   - Mashup: Kết hợp các API/dịch vụ web để tạo dịch vụ mới.
   - Digital Twin: Bản sao kỹ thuật số của thế giới thực.
   - N-Screen: Xem một nội dung trên nhiều thiết bị.
@@ -919,13 +1073,17 @@
 - **Tiếng Việt:**
   - Hadoop: Nền tảng điện toán phân tán (dùng Sqoop kết nối RDB).
   - MapReduce: Mô hình lập trình xử lý phân tán.
-  - Data Mining: Khai phá dữ liệu.
+  - dữ liệu (data / 데이터) Mining: Khai phá dữ liệu.
   - OLAP: Xử lý phân tích đa chiều trực tuyến.
 
 ### 6.3 시스템 아키텍처 및 프로그래밍 요소
 - **SOA (Service Oriented Architecture) 기반 계층:** 표현(Presentation) → 업무 프로세스 → 서비스 중간 → 애플리케이션 → 데이터 저장.
 - **접근 지정자 (Access Modifiers):** 외부로부터의 접근을 제한 (Public, Protected, Default, Private).
 - **Tiếng Việt:** Kiến trúc hướng dịch vụ (SOA) và các chỉ định truy cập trong lập trình hướng đối tượng (OOP).
+
+---
+
+> **Mạch chuyển:** Từ **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**, chuyển sang **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -941,7 +1099,7 @@
   - **스프링 (Spring):** 자바 플랫폼을 위한 경량형 오픈소스 프레임워크.
   - **전자정부 (e-Government):** 공공부문 정보화 사업을 지원하는 프레임워크.
   - **닷넷 (.NET):** 마이크로소프트의 Windows 개발 및 실행 환경.
-- **Tiếng Việt:** Đặc điểm của Framework: Mô-đun hóa, Tái sử dụng, Khả năng mở rộng, và Đảo ngược quyền điều khiển (IoC - Inversion of Control). Các loại: Spring (Java), e-Government (Hàn Quốc), .NET (Microsoft).
+- **Tiếng Việt:** Đặc điểm của khung phần mềm (framework / 프레임워크): Mô-đun hóa, Tái sử dụng, Khả năng mở rộng, và Đảo ngược quyền điều khiển (IoC - Inversion of Control). Các loại: Spring (Java), e-Government (Hàn Quốc), .NET (Microsoft).
 
 ### 11.2 네트워크 구조 및 표준 심화
 - **네트워크 토폴로지 (Network Topology):**
@@ -965,7 +1123,7 @@
 - **Tiếng Việt:**
   - Topology mạng: Star, Ring, Bus, Mesh (Số đường truyền = n(n-1)/2).
   - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
-  - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
+  - luồng (flow / 흐름) điều khiển (control / 제어): Sliding cửa sổ (window / 윈도우) truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
 
 ### 11.3 데이터베이스 동시성 및 교착상태 심화
 - **교착상태 해결 방법 (Deadlock Handling):**
@@ -978,7 +1136,7 @@
   - **즉각 갱신 기법 (Immediate Update):** 즉시 반영. 장애 시 Undo, Redo 모두 사용 가능.
   - **그림자 페이지 대체 기법 (Shadow Paging):** 그림자 페이지 보관 (Log, Undo, Redo 불필요).
   - **검사점 기법 (Check Point):** 검사점부터 회복하여 시간 절약.
-- **Tiếng Việt:** Xử lý Deadlock: Phòng ngừa (Prevention) -> Tránh (Avoidance - Thuật toán Banker) -> Phát hiện (Detection) -> Phục hồi (Recovery). Phục hồi DB bằng Log, Shadow Paging, Check Point.
+- **Tiếng Việt:** Xử lý Deadlock: Phòng ngừa (Prevention) -> Tránh (Avoidance - Thuật toán Banker) -> Phát hiện (Detection) -> Phục hồi (Recovery). Phục hồi DB bằng Log, Shadow Paging, Check điểm (point / 지점).
 
 ### 11.4 암호화 및 해시 알고리즘 심화
 - **암호화 키 개수 (Key Count):**
@@ -1020,12 +1178,20 @@
 
 ---
 
+> **Mạch chuyển:** Từ **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, chuyển sang **001. 소프트웨어 생명 주기 (Software Life Cycle)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 001. 소프트웨어 생명 주기 (Software Life Cycle)
 * **개념**: 소프트웨어를 개발하기 위해 정의하고 운용, 유지보수 등의 과정을 각 단계별로 나눈 것. (소프트웨어 수명 주기)
   * *Tiếng Việt*: Vòng đời phần mềm là việc chia quá trình từ định nghĩa, phát triển, vận hành đến bảo trì phần mềm thành các giai đoạn.
   * *Ví dụ*: 앱을 기획하고, 만들고, 출시 후 업데이트하는 전체 과정. (Toàn bộ quá trình từ lên kế hoạch, tạo, đến cập nhật app sau khi ra mắt).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **001. 소프트웨어 생명 주기 (Software Life Cycle)**, chuyển sang **5과목 정보시스템 구축 관리 (Information System Construction Management)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1041,9 +1207,13 @@
 - **소프트웨어 재공학 (Reengineering)**: 기존 시스템의 분석·재구성·역공학·이식 등을 통해 유지보수성과 수명을 개선하는 활동이다. 신규 기능 추가 자체와 동일한 개념은 아니다.
 
 > **Vietnamese Explanation**:
-> - **Methodologies**: Structured (Tập trung vào quá trình), Information Engineering (Tập trung vào dữ liệu), CBD (Lắp ráp từ các linh kiện có sẵn).
-> - **Reuse**: Dùng lại code/module cũ cho dự án mới để tiết kiệm chi phí.
+> - **Methodologies**: Structured (Tập trung vào quá trình), thông tin (information / 정보) kỹ thuật (engineering / 엔지니어링) (Tập trung vào dữ liệu), CBD (Lắp ráp từ các linh kiện có sẵn).
+> - **Reuse**: Dùng lại mã (code / 코드)/mô-đun (module / 모듈) cũ cho dự án mới để tiết kiệm chi phí.
 > - **Reengineering**: Tái cấu trúc, cải tiến hệ thống cũ để dễ bảo trì và đáp ứng nhu cầu mới.
+
+---
+
+> **Mạch chuyển:** Từ **5과목 정보시스템 구축 관리 (Information System Construction Management)**, chuyển sang **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1062,9 +1232,17 @@
 
 ---
 
-## CASE (Computer Aided Software Engineering)
+> **Mạch chuyển:** Từ **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)**, chuyển sang **trường hợp (case / 사례) (Computer Aided Software Engineering)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
+## Trường hợp (case / 사례) (Computer Aided Software Engineering)
 - 소프트웨어 개발 생명 주기(요구 분석, 설계, 구현, 검사 등) 전체 또는 일부를 **컴퓨터와 전용 도구를 사용해 자동화**하는 기법.
 - 개발의 표준화를 지향하며 생산성 및 품질을 향상시킵니다.
+
+---
+
+> **Mạch chuyển:** Từ **trường hợp (case / 사례) (Computer Aided Software Engineering)**, chuyển sang **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1079,13 +1257,17 @@
 
 ### 2. 병행 제어 기법 (Concurrency Control)
 다중 트랜잭션 실행 시 DB의 일관성이 파괴되지 않도록 제어합니다.
-- **로킹 (Locking)**: 데이터 엑세스 전에 Lock(잠금)을 요청하는 기법. (로킹 단위: DB, 파일, 레코드 등 한꺼번에 잠그는 크기).
+- **로킹 (Locking)**: 데이터 엑세스 전에 khóa (lock / 잠금)을 요청하는 기법. (로킹 단위: DB, 파일, 레코드 등 한꺼번에 잠그는 크기).
 - **타임 스탬프 순서 (Time Stamp Ordering)**: 트랜잭션 실행 전 시간표(Time Stamp)를 부여해 그 순서대로 처리 (교착상태 미발생).
 - **다중 버전 기법**: 갱신될 때마다 새로운 버전(Version)을 부여해 관리.
 
 > **Vietnamese Explanation**:
-> **Recovery (Phục hồi DB)** có Deferred (chờ xong mới cập nhật - chỉ Redo), Immediate (cập nhật ngay - cần cả Undo và Redo).
-> **Concurrency Control (Kiểm soát đồng thời)** dùng Locking (khóa dữ liệu khi đang dùng) hoặc Time Stamp (cấp tem thời gian để xếp hàng trước sau) tránh việc 2 giao dịch cùng sửa 1 dữ liệu gây lỗi.
+> **khôi phục (recovery / 복구) (Phục hồi DB)** có Deferred (chờ xong mới cập nhật - chỉ Redo), Immediate (cập nhật ngay - cần cả Undo và Redo).
+> **tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) (Kiểm soát đồng thời)** dùng Locking (khóa dữ liệu khi đang dùng) hoặc thời gian (time / 시간) Stamp (cấp tem thời gian để xếp hàng trước sau) tránh việc 2 giao dịch cùng sửa 1 dữ liệu gây lỗi.
+
+---
+
+> **Mạch chuyển:** Từ **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**, chuyển sang **교착상태 (Dead Lock)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1110,6 +1292,10 @@
 
 ---
 
+> **Mạch chuyển:** Từ **교착상태 (Dead Lock)**, chuyển sang **침입 탐지 시스템 (IDS; Intrusion Detection System)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 침입 탐지 시스템 (IDS; Intrusion Detection System)
 컴퓨터 시스템의 비정상적인 사용, 오용, 남용 등을 실시간으로 탐지하는 시스템.
 - **오용 탐지 (Misuse Detection)**: 미리 입력해 둔 공격 패턴 감지 (시그니처 기반).
@@ -1120,11 +1306,19 @@
 
 ---
 
+> **Mạch chuyển:** Từ **침입 탐지 시스템 (IDS; Intrusion Detection System)**, chuyển sang **리눅스의 커널 로그 (Linux Kernel Logs)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 리눅스의 커널 로그 (Linux Kernel Logs)
 - `/var/log/wtmp`: 성공한 로그인/로그아웃 및 시스템 시작/종료 시간 기록.
 - `/var/run/utmp`: 현재 로그인한 사용자의 상태 기록.
 - `/var/log/btmp`: 실패한 로그인 기록.
 - `/var/log/lastlog`: 마지막으로 성공한 로그인 기록.
+
+---
+
+> **Mạch chuyển:** Từ **리눅스의 커널 로그 (Linux Kernel Logs)**, chuyển sang **소프트웨어 생명주기 모델 (SDLC Models)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1138,7 +1332,11 @@
 > - **Waterfall (Thác nước)**: Làm xong bước này mới qua bước khác.
 > - **Prototyping (Mẫu thử)**: Làm một bản nháp cho khách hàng xem trước.
 > - **Spiral (Xoắn ốc)**: Làm từng phần và liên tục đánh giá rủi ro (Risk analysis).
-> - **V Model (Chữ V)**: Nhấn mạnh vào việc kiểm thử (Testing) ở mỗi giai đoạn tương ứng.
+> - **V mô hình (model / 모델) (Chữ V)**: Nhấn mạnh vào việc kiểm thử (Testing) ở mỗi giai đoạn tương ứng.
+
+---
+
+> **Mạch chuyển:** Từ **소프트웨어 생명주기 모델 (SDLC Models)**, chuyển sang **스토리지 시스템 (Storage Systems)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1150,8 +1348,12 @@
 
 💡 **Mẹo ghi nhớ (Mnemonics):**
 - **DAS**: Direct (Cắm trực tiếp).
-- **NAS**: Network (Qua mạng LAN).
-- **SAN**: Area Network (Mạng quang riêng tốc độ cao).
+- **NAS**: mạng (network / 네트워크).
+- **SAN**: Area mạng (network / 네트워크).
+
+---
+
+> **Mạch chuyển:** Từ **스토리지 시스템 (Storage Systems)**, chuyển sang **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1166,13 +1368,21 @@
 
 ---
 
+> **Mạch chuyển:** Từ **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**, chuyển sang **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)
 - **개념**: 외부 입력값을 통해 시스템 명령어의 실행을 유도함으로써 권한을 탈취하거나 장애를 유발하는 취약점.
-- **Tiếng Việt**: Chèn các lệnh hệ điều hành thông qua đầu vào của người dùng để thực thi trái phép trên server.
+- **Tiếng Việt**: Chèn các lệnh hệ điều hành thông qua đầu vào của người dùng để thực thi trái phép trên máy chủ (server / 서버).
 - **예시 (Example)**:
   - (KR) 웹 입력창에 `; rm -rf /` 와 같은 명령어를 삽입하여 서버 파일을 삭제.
-  - (VN) Chèn lệnh `; rm -rf /` vào ô input trên web để xoá file trên máy chủ.
+  - (VN) Chèn lệnh `; rm -rf /` vào ô đầu vào (input / 입력) trên web để xoá tệp (file / 파일) trên máy chủ.
 - **대책**: 외부 입력값을 검증 없이 내부 명령어로 사용하지 않음.
+
+---
+
+> **Mạch chuyển:** Từ **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)**, chuyển sang **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1187,12 +1397,20 @@
 
 ---
 
+> **Mạch chuyển:** Từ **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**, chuyển sang **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)
 - **개념**: 널 포인터(값이 없는 메모리 주소)가 가리키는 메모리에 값을 저장하거나 읽을 때 발생하는 오류.
 - **Tiếng Việt**: Lỗi xảy ra khi cố gắng đọc/ghi dữ liệu thông qua con trỏ đang có giá trị Null.
 - **예시 (Example)**:
   - (KR) 객체가 생성되지 않았는데 그 객체의 메서드를 호출하여 시스템이 다운됨.
   - (VN) Gọi hàm của một đối tượng chưa được khởi tạo (bằng Null), làm app bị crash.
+
+---
+
+> **Mạch chuyển:** Từ **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)**, chuyển sang **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1207,7 +1425,15 @@
 
 ---
 
+> **Mạch chuyển:** Từ **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, chuyển sang **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)
+
+---
+
+> **Mạch chuyển:** Từ **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**, chuyển sang **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1242,7 +1468,15 @@
 
 ---
 
+> **Mạch chuyển:** Từ **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**, chuyển sang **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
+
+---
+
+> **Mạch chuyển:** Từ **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)**, chuyển sang **1. 인증 기술 (Authentication Types)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1251,6 +1485,10 @@
 - **소유 기반 (Possession)**: 가지고 있는 것 (Token, Smart Card, OTP).
 - **생체 기반 (Biometric)**: 고유한 신체 특징 (Vân tay, mống mắt).
 - **행위 기반 (Behavior)**: 행동 특징 (Chữ ký, dáng đi).
+
+---
+
+> **Mạch chuyển:** Từ **1. 인증 기술 (Authentication Types)**, chuyển sang **2. 접근 제어 정책 (Access Control Policies)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -1270,6 +1508,10 @@
 - **VPN (가상사설망)**: 공중망을 전용망처럼 안전하게 사용 (Mạng riêng ảo).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **2. 접근 제어 정책 (Access Control Policies)**, chuyển sang **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 

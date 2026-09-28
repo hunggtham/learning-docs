@@ -1,5 +1,8 @@
 # Biến đổi khí hậu như một hệ thống địa lý toàn cầu
 
+> **Mạch đọc:** Đặt **Biến đổi khí hậu như một hệ thống địa lý toàn cầu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Biến đổi khí hậu không phân bố đồng đều** sang **Cân bằng năng lượng: nền tảng vật lý của sự ấm lên**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Biến đổi khí hậu không phân bố đồng đều
 
 Sự ấm lên toàn cầu là tín hiệu ở quy mô toàn cầu, nhưng tác động luôn có tính địa lý. Đất liền thường phản ứng nhanh hơn đại dương; vĩ độ cao có thể khuếch đại mạnh; mẫu mưa thay đổi theo hoàn lưu; tác động mực nước biển thay đổi theo chuyển động của đất và động lực đại dương. Vì vậy một giá trị trung bình toàn cầu không đủ để lập kế hoạch cho một địa phương cụ thể.
@@ -16,7 +19,7 @@ Thay đổi đó thường được mô tả bằng **cưỡng bức bức xạ 
 
 ## Cưỡng bức, phản ứng và phản hồi không phải cùng một thứ
 
-**Cưỡng bức (forcing)** là tác động làm thay đổi cân bằng năng lượng. **Phản ứng (response)** là sự thay đổi của hệ, ví dụ nhiệt độ bề mặt tăng. **Phản hồi (feedback)** xảy ra khi phản ứng ban đầu lại làm tăng hoặc giảm tác động tiếp theo.
+**Cưỡng bức (forcing)** là tác động làm thay đổi cân bằng năng lượng. **Phản ứng (response)** là sự thay đổi của hệ, ví dụ nhiệt độ bề mặt tăng. **phản hồi (feedback / 피드백)** xảy ra khi phản ứng ban đầu lại làm tăng hoặc giảm tác động tiếp theo.
 
 Ví dụ, nhiệt độ tăng làm không khí có thể chứa nhiều hơi nước hơn; hơi nước lại là khí nhà kính, tạo phản hồi dương. Băng giảm làm suất phản chiếu giảm, khiến bề mặt hấp thụ nhiều năng lượng hơn. Ngược lại, một số phản hồi mây có thể khác nhau theo loại mây và vùng, làm tổng độ nhạy khí hậu chứa bất định.
 
@@ -32,7 +35,7 @@ Quán tính giải thích vì sao dừng tăng cưỡng bức không đồng ngh
 
 Carbon dioxide phát thải vào khí quyển không ở đó như một kho hoàn toàn cô lập. Carbon trao đổi giữa khí quyển, đại dương, thảm thực vật và đất. Một phần phát thải được các bể hấp thụ tự nhiên tiếp nhận, phần còn lại làm nồng độ khí quyển tăng.
 
-Vì vậy cần phân biệt **dòng phát thải (emission flow)** với **nồng độ tích lũy (concentration stock)**. Nếu phát thải vẫn dương nhưng thấp hơn trước, nồng độ CO₂ vẫn có thể tiếp tục tăng. Đây là cùng logic stock–flow đã dùng trong nước ngầm và dân số.
+Vì vậy cần phân biệt **dòng phát thải (emission flow)** với **nồng độ tích lũy (concentration stock)**. Nếu phát thải vẫn dương nhưng thấp hơn trước, nồng độ CO₂ vẫn có thể tiếp tục tăng. Đây là cùng lô-gic (logic / 논리) stock–luồng (flow / 흐름) đã dùng trong nước ngầm và dân số.
 
 ## Độ nhạy khí hậu và vì sao không thể chỉ nhìn một con số
 
@@ -100,7 +103,7 @@ Nhưng thành phố cũng có năng lực thích ứng lớn nhờ hạ tầng, 
 
 Nhà máy điện, đường bộ và đô thị tồn tại hàng chục năm. Khi đầu tư một cấu trúc phụ thuộc nhiên liệu và phương thức di chuyển nhất định, hệ thống tạo **khóa chặt carbon (carbon lock-in)** vì thay đổi về sau tốn chi phí lớn.
 
-Đây là path dependence trong địa lý khí hậu: quyết định xây dựng hôm nay ảnh hưởng quỹ đạo phát thải nhiều năm sau.
+Đây là đường dẫn (path / 경로) dependence trong địa lý khí hậu: quyết định xây dựng hôm nay ảnh hưởng quỹ đạo phát thải nhiều năm sau.
 
 ## Thích ứng: giảm thiệt hại thay vì chỉ dự báo hiểm họa
 
@@ -126,7 +129,7 @@ Do đó không nên trộn **bất định kịch bản**, **bất định mô h
 
 Một số thành phần hệ Trái Đất có thể phản ứng phi tuyến khi vượt ngưỡng, thường được gọi là **điểm tới hạn (tipping point)**. Khái niệm này hữu ích khi mô tả hệ có nhiều trạng thái ổn định hoặc phản hồi tự khuếch đại.
 
-Nhưng không nên dùng “tipping point” như nhãn chung cho mọi thay đổi nhanh. Cần hỏi cụ thể: biến trạng thái là gì, cơ chế phản hồi nào tồn tại, ngưỡng có chắc chắn không và quá trình có đảo ngược được không.
+Nhưng không nên dùng “tipping điểm (point / 지점)” như nhãn chung cho mọi thay đổi nhanh. Cần hỏi cụ thể: biến trạng thái là gì, cơ chế phản hồi nào tồn tại, ngưỡng có chắc chắn không và quá trình có đảo ngược được không.
 
 ## Khí hậu và di cư: không có một đường nhân quả đơn giản
 
@@ -161,3 +164,5 @@ Một raster mực nước 1 km không đủ để quyết định cao độ n�
 > Biến đổi khí hậu là **thay đổi cán cân năng lượng → phản hồi của hệ Trái Đất → dịch chuyển phân bố khí hậu → tác động không gian qua phơi lộ và dễ tổn thương**. Muốn hiểu một rủi ro cụ thể, đừng dừng ở “nhiệt độ tăng”; hãy lần theo chuỗi từ forcing tới cơ chế địa phương, ngưỡng hệ thống, hạ tầng và khả năng thích ứng.
 
 Xem thêm: [Hệ khí hậu toàn cầu](../01_physical_geography/03_global_climate_system.md), [Thiên tai và rủi ro](../01_physical_geography/07_natural_hazards_risk.md), [Địa lý năng lượng](../02_human_geography/07_industry_energy_resources.md), [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 water food energy nexus](./01_water_food_energy_nexus.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

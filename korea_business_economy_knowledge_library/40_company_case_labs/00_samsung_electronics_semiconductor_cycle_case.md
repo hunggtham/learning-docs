@@ -1,8 +1,11 @@
 # Samsung Electronics — từ công ty hợp nhất đến từng cỗ máy kinh tế
 
+> **Mạch đọc:** Đặt **Samsung Electronics — từ công ty hợp nhất đến từng cỗ máy kinh tế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Xác định đúng pháp nhân trước khi lập mô hình** sang **2. Không có một “biên lợi nhuận Samsung” duy nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Samsung Electronics là bài thực hành rất tốt để học một lỗi phổ biến trong phân tích doanh nghiệp: **một pháp nhân có thể chứa nhiều mảng kinh doanh có hàm sản xuất hoàn toàn khác nhau**. Nếu chỉ nhìn doanh thu hợp nhất, lợi nhuận hoạt động và P/E, người đọc dễ bỏ qua việc bán dẫn, điện thoại, màn hình và điện tử ô tô phản ứng với chu kỳ theo những cách khác nhau.
 
-Theo cấu trúc công bố của Samsung Electronics, công ty có các mảng lớn như DX (Device eXperience), DS (Device Solutions), SDC và Harman. DX gồm nhiều sản phẩm hoàn chỉnh như điện thoại, TV và đồ gia dụng; DS gồm Memory, Foundry và System LSI.
+Theo cấu trúc công bố của Samsung Electronics, công ty có các mảng lớn như DX (Device eXperience), DS (Device Solutions), SDC và Harman. DX gồm nhiều sản phẩm hoàn chỉnh như điện thoại, TV và đồ gia dụng; DS gồm bộ nhớ (memory / 메모리), Foundry và hệ thống (system / 시스템) LSI.
 
 Vì vậy câu “lợi nhuận Samsung tăng” chưa phải lời giải thích. Câu hỏi đúng là: **cỗ máy nào tạo ra thay đổi, nó đang ở pha nào của chu kỳ và dòng tiền còn bền sau CAPEX hay không?**
 
@@ -107,9 +110,9 @@ Nếu công suất tăng nhưng tỷ lệ sử dụng thấp, khấu hao trên m
 
 Vì vậy cần phân biệt “đã xây fab” với “fab đang tạo lợi nhuận”.
 
-## 6. System LSI: thiết kế chip có kinh tế khác foundry
+## 6. hệ thống (system / 시스템) LSI: thiết kế chip có kinh tế khác foundry
 
-System LSI tập trung nhiều hơn vào thiết kế và sản phẩm logic. Cơ chế giá trị nằm ở IP, kiến trúc chip, khả năng tích hợp và nhu cầu sản phẩm cuối.
+Hệ thống (system / 시스템) LSI tập trung nhiều hơn vào thiết kế và sản phẩm lô-gic (logic / 논리). Cơ chế giá trị nằm ở IP, kiến trúc chip, khả năng tích hợp và nhu cầu sản phẩm cuối.
 
 Một doanh nghiệp có thể có foundry mạnh nhưng thiết kế sản phẩm yếu, hoặc ngược lại. Không nên gộp tất cả “semiconductor” thành một khối.
 
@@ -303,7 +306,7 @@ Một giả thuyết tích cực về Samsung có thể sai nếu:
 
 Viết trước các điều kiện này giúp tránh thay đổi câu chuyện sau khi kết quả xấu xuất hiện.
 
-## Mental Model — Mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Samsung Electronics không phải một “công ty điện tử” duy nhất. Nó là nhiều cỗ máy kinh tế nằm trong cùng một pháp nhân hợp nhất. Phân tích tốt phải tách từng cỗ máy, hiểu động lực riêng rồi mới ghép lại thành doanh thu, lợi nhuận, dòng tiền và định giá hợp nhất.
 
@@ -318,3 +321,5 @@ Phân khúc nào thay đổi?
 → FCF còn lại bao nhiêu?
 → thị trường đang định giá chu kỳ hay thay đổi cấu trúc?
 ```
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 sk hynix hbm memory case](./01_sk_hynix_hbm_memory_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

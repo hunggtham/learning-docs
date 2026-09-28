@@ -1,5 +1,8 @@
 # Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)
 
+> **Mạch đọc:** Đặt **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Rủi ro tín dụng là gì?** sang **2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một doanh nghiệp có thể vẫn báo lợi nhuận hoạt động nhưng rơi vào khủng hoảng nếu nợ đáo hạn trước khi tiền mặt về. Vì vậy khi phân tích doanh nghiệp, đặc biệt là xây dựng, công nghiệp nặng, hàng không, bán lẻ, công ty mẹ có đòn bẩy cao hoặc doanh nghiệp dự án, phải tách **rủi ro lợi nhuận** khỏi **rủi ro tín dụng (credit risk / 신용위험)**.
 
 Phân tích tín dụng không hỏi đầu tiên “doanh nghiệp có tăng trưởng không?”. Nó hỏi: **doanh nghiệp có đủ tiền để trả đúng nghĩa vụ, đúng thời điểm, trong một phạm vi kịch bản hợp lý hay không?**
@@ -469,3 +472,5 @@ Một doanh nghiệp kinh doanh tốt nhưng cấu trúc vốn xấu vẫn có t
 - [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — cấu trúc tài trợ.
 - [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — rủi ro PF.
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) — khung phân tích doanh nghiệp.
+
+> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

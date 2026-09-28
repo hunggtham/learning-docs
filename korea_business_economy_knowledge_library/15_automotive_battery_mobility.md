@@ -1,5 +1,8 @@
 # Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)
 
+> **Mạch đọc:** Đặt **Ô tô, pin và di chuyển tại Hàn Quốc (Automotive & Battery / 자동차·배터리·모빌리티)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lịch sử nâng cấp năng lực: từ lắp ráp theo giấy phép tới OEM toàn cầu** sang **OEM là nhà tích hợp hệ thống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Ô tô là một trong những ngành tốt nhất để hiểu cách kinh tế Hàn Quốc kết hợp **mạng lưới nhà cung cấp (supplier network), kỷ luật sản xuất, thương hiệu, tài chính và sản xuất toàn cầu** thành lợi thế cạnh tranh. Quá trình chuyển sang xe điện làm ngành này phức tạp hơn vì ranh giới giữa ô tô, pin, điện tử, bán dẫn và phần mềm ngày càng mờ.
 
 Một chiếc xe không phải sản phẩm của một nhà máy đơn lẻ. Nó là đầu ra của mạng lưới sản xuất gồm hàng nghìn linh kiện, logistics, tài chính, đại lý–dịch vụ và ngày càng nhiều phần mềm–điện toán đám mây. Vì vậy phân tích doanh nghiệp phải nhìn **kinh tế nền tảng xe và hệ sinh thái**, không chỉ số xe bán ra.
@@ -36,9 +39,9 @@ Khủng hoảng 1997 là một bước ngoặt khác. Hyundai Motor mua Kia năm
 
 **Nhà sản xuất thiết bị gốc (OEM / 완성차 업체)** như Hyundai Motor hoặc Kia chịu trách nhiệm tích hợp kiến trúc xe, thương hiệu, an toàn–chứng nhận, sản xuất, phân phối, bảo hành và ngày càng nhiều phần mềm.
 
-Nhà cung cấp có thể làm module, linh kiện hoặc vật liệu, nhưng OEM là bên đứng trước khách hàng cuối và chịu lời hứa về chất lượng sản phẩm.
+Nhà cung cấp có thể làm mô-đun (module / 모듈), linh kiện hoặc vật liệu, nhưng OEM là bên đứng trước khách hàng cuối và chịu lời hứa về chất lượng sản phẩm.
 
-Nếu module phanh lỗi, người tiêu dùng không quan tâm nhà cung cấp nào làm ra linh kiện; thương hiệu OEM là bên chịu tổn hại. Vì vậy **tích hợp hệ thống và quản trị chất lượng nhà cung cấp** là năng lực cốt lõi.
+Nếu mô-đun (module / 모듈) phanh lỗi, người tiêu dùng không quan tâm nhà cung cấp nào làm ra linh kiện; thương hiệu OEM là bên chịu tổn hại. Vì vậy **tích hợp hệ thống và quản trị chất lượng nhà cung cấp** là năng lực cốt lõi.
 
 ## Kinh tế nền tảng xe: một quyết định ảnh hưởng nhiều năm
 
@@ -219,7 +222,7 @@ Nhà máy pin mới hiếm khi đạt yield và utilization tối ưu ngay từ 
 
 Trong giai đoạn này, nhà máy có thể lỗ dù đã có đơn hàng lớn.
 
-Điểm này giống bán dẫn ở logic học quy trình, nhưng hóa học, an toàn và chứng nhận ô tô tạo ràng buộc khác.
+Điểm này giống bán dẫn ở lô-gic (logic / 논리) học quy trình, nhưng hóa học, an toàn và chứng nhận ô tô tạo ràng buộc khác.
 
 ## Rủi ro utilization: công suất công bố không phải doanh thu
 
@@ -320,7 +323,7 @@ Nên theo dõi GWh giao bán, công suất lắp đặt và công suất đượ
 
 Tăng công suất nhưng utilization và chất lượng FCF yếu vẫn có thể phá hủy giá trị.
 
-## Stress test
+## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Với hãng xe, có thể kiểm tra kịch bản số xe toàn cầu -10%, ưu đãi +5%, KRW mạnh 10%, triệu hồi bảo hành lớn và chi phí tín dụng ở công ty tài chính tăng.
 
@@ -328,7 +331,7 @@ Với pin, có thể kiểm tra khách hàng EV trì hoãn mẫu xe, utilization
 
 Luôn lần theo tác động tới tiền mặt chứ không chỉ doanh thu.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Ô tô là **nền tảng xe + mạng lưới nhà cung cấp + quy mô sản xuất + thương hiệu + tài chính**. EV thêm **hóa học pin + nội địa hóa + phần mềm**. Chuyển đổi là quá trình tái phân bổ giá trị trong toàn mạng lưới, không chỉ thay động cơ đốt trong bằng motor điện.
 
@@ -363,3 +366,5 @@ Biên lợi nhuận / dòng tiền
 ## Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,15 @@
-# Transformer internals, attention, KV cache và inference cost
+# Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)
 
-Transformer quan trọng không chỉ vì model quality mà vì computation graph ánh xạ tốt lên parallel hardware trong training. Autoregressive inference lại có cost profile rất khác: prompt được xử lý theo batch lớn hơn, còn decode phải sinh token nối tiếp và liên tục đọc model state/KV state.
+> **Mạch đọc:** Đặt **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bài toán ban đầu: mô hình (model / 모델) math không tự nói serving hành vi (behavior / 동작)** sang **2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model của chương này là: **AI inference serving là một memory-and-scheduling system có model semantics ở trên**. Correctness cần request nào dùng đúng model/KV state; performance phụ thuộc arithmetic intensity, memory bandwidth, batching, queueing, fragmentation và scheduler policy.
 
-## 1. Bài toán ban đầu: model math không tự nói serving behavior
+Transformer quan trọng không chỉ vì mô hình (model / 모델) chất lượng (quality / 품질) mà vì computation đồ thị (graph / 그래프) ánh xạ tốt lên parallel hardware trong huấn luyện (training / 학습). Autoregressive suy luận (inference / 추론) lại có chi phí (cost / 비용) profile rất khác: prompt được xử lý theo batch lớn hơn, còn decode phải sinh đơn vị từ (token / 토큰) nối tiếp và liên tục đọc mô hình (model / 모델) trạng thái (state / 상태)/KV trạng thái (state / 상태).
 
-Cùng model weights có thể cho throughput/latency rất khác tùy:
+Mô hình tư duy (mental model / 사고 모델) của chương này là: **AI suy luận (inference / 추론) serving là một memory-and-scheduling hệ thống (system / 시스템) có mô hình (model / 모델) ngữ nghĩa (semantics / 의미론) ở trên**. tính đúng đắn (correctness / 정확성) cần yêu cầu (request / 요청) nào dùng đúng mô hình (model / 모델)/KV trạng thái (state / 상태); hiệu năng (performance / 성능) phụ thuộc arithmetic intensity, bộ nhớ (memory / 메모리) bandwidth, batching, queueing, fragmentation và scheduler chính sách (policy / 정책).
+
+## 1. Bài toán ban đầu: mô hình (model / 모델) math không tự nói serving hành vi (behavior / 동작)
+
+Cùng mô hình (model / 모델) weights có thể cho thông lượng (throughput / 처리량)/độ trễ (latency / 지연 시간) rất khác tùy:
 
 ```text
 prompt/context length
@@ -20,13 +23,13 @@ interconnect
 tensor/model parallelism
 ```
 
-Vì vậy “model có N parameters” không đủ để capacity plan. Cần map workload distribution vào resource consumption theo serving phase.
+Vì vậy “mô hình (model / 모델) có N parameters” không đủ để sức chứa (capacity / 용량) plan. Cần map tải công việc (workload / 워크로드) phân phối (distribution / 분포) vào tài nguyên (resource / 자원) consumption theo serving phase.
 
-## 2. Transformer block và state flow
+## 2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)
 
-Input tokens được ánh xạ thành vectors. Một transformer block điển hình có attention, feed-forward network, residual paths và normalization.
+Đầu vào (input / 입력) tokens được ánh xạ thành vectors. Một transformer khối (block / 블록) điển hình có attention, feed-forward mạng (network / 네트워크), residual paths và normalization.
 
-Attention cho mỗi position tổng hợp information từ positions khác. Nhưng serving system quan tâm thêm:
+Attention cho mỗi position tổng hợp thông tin (information / 정보) từ positions khác. Nhưng serving hệ thống (system / 시스템) quan tâm thêm:
 
 ```text
 weights: mostly read-only model state
@@ -35,31 +38,31 @@ KV cache: per-sequence persistent decode state
 scheduler metadata: ownership/lifetime of each sequence
 ```
 
-Tách các state classes này giúp hiểu memory pressure.
+Tách các trạng thái (state / 상태) classes này giúp hiểu bộ nhớ (memory / 메모리) pressure.
 
-## 3. Query, Key, Value và attention invariant
+## 3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)
 
-Mỗi token representation được project thành Q, K, V. Query của position hiện tại so với keys tạo scores/weights; weighted values tạo attention output.
+Mỗi đơn vị từ (token / 토큰) biểu diễn (representation / 표현) được dự án (project / 프로젝트) thành Q, K, V. truy vấn (query / 쿼리) của position hiện tại so với keys tạo scores/weights; weighted values tạo attention đầu ra (output / 출력).
 
 Multi-head attention dùng nhiều projections/subspaces. Kiến trúc không hứa một head luôn map tới một human-interpretable concept cụ thể.
 
-Correctness ở serving layer cần giữ **sequence association**: K/V của request A không được nhầm với request B, và positions/order phải map đúng logical prefix của sequence.
+Tính đúng đắn (correctness / 정확성) ở serving tầng (layer / 계층) cần giữ **chuỗi (sequence / 시퀀스) association**: K/V của yêu cầu (request / 요청) A không được nhầm với yêu cầu (request / 요청) B, và positions/thứ tự (order / 순서) phải map đúng logical prefix của chuỗi (sequence / 시퀀스).
 
-## 4. Full self-attention có quadratic interaction theo sequence length
+## 4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length
 
-Với sequence length `n`, full attention biểu diễn interactions giữa nhiều pairs positions, tạo component `n × n` trong naïve formulation.
+Với chuỗi (sequence / 시퀀스) length `n`, full attention biểu diễn interactions giữa nhiều pairs positions, tạo thành phần (component / 컴포넌트) `n × n` trong naïve formulation.
 
-Optimized kernels như tiled/flash-style attention có thể tránh materialize toàn matrix và giảm HBM traffic nhờ tiling/fusion, nhưng không thay mathematical dependency của exact full attention.
+Optimized kernels như tiled/flash-style attention có thể tránh materialize toàn ma trận (matrix / 행렬) và giảm HBM traffic nhờ tiling/fusion, nhưng không thay mathematical phụ thuộc (dependency / 의존성) của chính xác (exact / 정확한) full attention.
 
-Đây là pattern performance quan trọng:
+Đây là mẫu (pattern / 패턴) hiệu năng (performance / 성능) quan trọng:
 
-> Cùng algorithmic semantics, data movement strategy có thể thay dominant bottleneck.
+> Cùng algorithmic ngữ nghĩa (semantics / 의미론), dữ liệu (data / 데이터) movement chiến lược (strategy / 전략) có thể thay dominant bottleneck.
 
-## 5. Prefill và decode là hai execution phases khác nhau
+## 5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau
 
-**Prefill** xử lý toàn prompt/context mới. Nhiều tokens có thể được tính song song nên accelerator có cơ hội đạt high compute utilization.
+**Prefill** xử lý toàn prompt/ngữ cảnh (context / 맥락) mới. Nhiều tokens có thể được tính song song nên accelerator có cơ hội đạt high compute utilization.
 
-**Decode** sinh token từng bước. Token `t+1` phụ thuộc state/result trước, nên một sequence có ít parallelism theo time dimension.
+**Decode** sinh đơn vị từ (token / 토큰) từng bước. đơn vị từ (token / 토큰) `t+1` phụ thuộc trạng thái (state / 상태)/kết quả (result / 결과) trước, nên một chuỗi (sequence / 시퀀스) có ít parallelism theo thời gian (time / 시간) dimension.
 
 Metrics cần tách:
 
@@ -71,13 +74,13 @@ decode throughput
 end-to-end request latency
 ```
 
-Average tokens/s có thể che UX xấu nếu queue/TTFT cao.
+Average tokens/s có thể che UX xấu nếu hàng đợi (queue / 큐)/TTFT cao.
 
-## 6. KV cache đổi recomputation lấy memory
+## 6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)
 
-Nếu decode mỗi bước tính lại K/V cho toàn prefix, work lặp rất lớn. **KV cache** giữ K/V của prior tokens cho mỗi layer để token mới reuse.
+Nếu decode mỗi bước tính lại K/V cho toàn prefix, công việc (work / 작업) lặp rất lớn. **KV bộ nhớ đệm (cache / 캐시)** giữ K/V của prior tokens cho mỗi tầng (layer / 계층) để đơn vị từ (token / 토큰) mới reuse.
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 recompute ↓
@@ -85,19 +88,19 @@ recompute ↓
 per-sequence persistent memory ↑
 ```
 
-KV memory tăng với context length, active sequences, layers và KV dimensions/precision. Context “được hỗ trợ” không đồng nghĩa có thể phục vụ nhiều long-context requests đồng thời.
+KV bộ nhớ (memory / 메모리) tăng với ngữ cảnh (context / 맥락) length, active sequences, layers và KV dimensions/precision. ngữ cảnh (context / 맥락) “được hỗ trợ” không đồng nghĩa có thể phục vụ nhiều long-context requests đồng thời.
 
-## 7. KV cache có ownership/lifetime invariant
+## 7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)
 
-Serving scheduler có thể batch, preempt, swap hoặc free sequence state. Invariant là:
+Serving scheduler có thể batch, preempt, swap hoặc free chuỗi (sequence / 시퀀스) trạng thái (state / 상태). bất biến (invariant / 불변식) là:
 
-> KV blocks chỉ được reuse sau khi sequence sở hữu chúng thật sự kết thúc/evict theo protocol; page table/block mapping của sequence phải trỏ đúng logical token positions.
+> KV blocks chỉ được reuse sau khi chuỗi (sequence / 시퀀스) sở hữu chúng thật sự kết thúc/evict theo giao thức (protocol / 프로토콜); bảng trang (page table / 페이지 테이블)/khối (block / 블록) ánh xạ (mapping / 매핑) của chuỗi (sequence / 시퀀스) phải trỏ đúng logical đơn vị từ (token / 토큰) positions.
 
-Một bug allocator/scheduler có thể tạo corruption cross-request dù model math hoàn hảo. Đây là connection trực tiếp giữa AI serving và OS-style memory management.
+Một bug allocator/scheduler có thể tạo corruption cross-request dù mô hình (model / 모델) math hoàn hảo. Đây là liên kết (connection / 연결) trực tiếp giữa AI serving và OS-style bộ nhớ (memory / 메모리) management.
 
-## 8. Paged KV cache giảm fragmentation bằng indirection
+## 8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection
 
-Nếu mỗi sequence cần một contiguous buffer theo maximum context, memory waste lớn và resizing khó. Paged/block-based KV quản cache theo chunks và dùng mapping logical token range → physical block.
+Nếu mỗi chuỗi (sequence / 시퀀스) cần một contiguous buffer theo maximum ngữ cảnh (context / 맥락), bộ nhớ (memory / 메모리) waste lớn và resizing khó. Paged/block-based KV quản bộ nhớ đệm (cache / 캐시) theo chunks và dùng ánh xạ (mapping / 매핑) logical đơn vị từ (token / 토큰) phạm vi (range / 범위) → vật lý (physical / 물리적) khối (block / 블록).
 
 Lợi ích:
 
@@ -107,13 +110,13 @@ share/reuse blocks easier when semantics allow
 allocate incrementally with sequence growth
 ```
 
-Đổi lại có metadata/indirection cost và allocator pressure. “Paged” không miễn phí; nó chuyển memory-contiguity problem thành mapping/lifetime problem.
+Đổi lại có siêu dữ liệu (metadata / 메타데이터)/indirection chi phí (cost / 비용) và allocator pressure. “Paged” không miễn phí; nó chuyển memory-contiguity bài toán (problem / 문제) thành ánh xạ (mapping / 매핑)/thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제).
 
 ## 9. Decode thường memory-bandwidth-bound
 
-Mỗi decode step của một sequence cần đọc lượng lớn weights và KV state để tạo tương đối ít new output. Arithmetic intensity có thể thấp hơn prefill, làm HBM/memory bandwidth dominate.
+Mỗi decode step của một chuỗi (sequence / 시퀀스) cần đọc lượng lớn weights và KV trạng thái (state / 상태) để tạo tương đối ít new đầu ra (output / 출력). Arithmetic intensity có thể thấp hơn prefill, làm HBM/bộ nhớ (memory / 메모리) bandwidth dominate.
 
-Roofline-style reasoning hữu ích:
+Roofline-style lập luận (reasoning / 추론) hữu ích:
 
 ```text
 compute demand / bytes moved thấp
@@ -123,13 +126,13 @@ batching increases reuse/amortization
 → arithmetic intensity/utilization improve
 ```
 
-Đây là lý do theoretical FLOPS cao không tự bảo đảm low token latency.
+Đây là lý do theoretical FLOPS cao không tự bảo đảm low đơn vị từ (token / 토큰) độ trễ (latency / 지연 시간).
 
-## 10. Batching đổi latency lấy throughput
+## 10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)
 
-Batch nhiều sequences giúp amortize weight reads và tăng accelerator utilization. Nhưng scheduler có thể giữ request chờ để tạo batch lớn hơn.
+Batch nhiều sequences giúp amortize weight reads và tăng accelerator utilization. Nhưng scheduler có thể giữ yêu cầu (request / 요청) chờ để tạo batch lớn hơn.
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 larger batch
@@ -137,13 +140,13 @@ larger batch
 → queue + per-step latency/memory ↑
 ```
 
-Continuous batching chèn/rút sequences động để tận dụng slots tốt hơn fixed batch, nhưng tạo scheduling complexity: sequences có lengths khác nhau, finish khác nhau và memory footprint thay đổi mỗi decode step.
+Continuous batching chèn/rút sequences động để tận dụng slots tốt hơn fixed batch, nhưng tạo scheduling độ phức tạp (complexity / 복잡도): sequences có lengths khác nhau, finish khác nhau và bộ nhớ (memory / 메모리) footprint thay đổi mỗi decode step.
 
-## 11. Scheduler là admission controller cho GPU memory + compute
+## 11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute
 
-Một request long-context có thể tiêu KV memory gấp nhiều lần request ngắn. Nếu scheduler admit chỉ theo request count, một vài long requests có thể OOM hoặc làm concurrency collapse.
+Một yêu cầu (request / 요청) long-context có thể tiêu KV bộ nhớ (memory / 메모리) gấp nhiều lần yêu cầu (request / 요청) ngắn. Nếu scheduler admit chỉ theo yêu cầu (request / 요청) count, một vài long requests có thể OOM hoặc làm tính đồng thời (concurrency / 동시성) collapse.
 
-Useful admission cost model cần consider:
+Useful admission chi phí (cost / 비용) mô hình (model / 모델) cần consider:
 
 ```text
 prompt tokens
@@ -154,19 +157,19 @@ current free blocks
 latency class / priority / tenant quota
 ```
 
-Đây là weighted admission, giống general software systems nhưng resource unit là tokens/KV/GPU capacity.
+Đây là weighted admission, giống general software các hệ thống (systems / 시스템들) nhưng tài nguyên (resource / 자원) đơn vị (unit / 단위) là tokens/KV/GPU sức chứa (capacity / 용량).
 
 ## 12. Head-of-line blocking có thể xuất hiện trong batch
 
-Nếu batch policy ép requests cùng bước theo slowest/longest member, một long sequence có thể làm short requests chờ. Continuous scheduling giảm một số form nhưng không xóa all interference.
+Nếu batch chính sách (policy / 정책) ép requests cùng bước theo slowest/longest member, một long chuỗi (sequence / 시퀀스) có thể làm short requests chờ. Continuous scheduling giảm một số form nhưng không xóa all interference.
 
-Multi-tenant serving cần fairness: throughput tối đa toàn GPU có thể conflict với p99 SLO của interactive requests.
+Multi-tenant serving cần fairness: thông lượng (throughput / 처리량) tối đa toàn GPU có thể xung đột (conflict / 충돌) với p99 SLO của interactive requests.
 
 Separate pools/classes hoặc weighted scheduling có thể cần khi workloads khác mạnh.
 
-## 13. Context length làm giảm effective capacity theo nhiều chiều
+## 13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều
 
-Context dài:
+Ngữ cảnh (context / 맥락) dài:
 
 ```text
 KV memory ↑
@@ -176,13 +179,13 @@ possible batch size ↓
 number of concurrent sequences fit in memory ↓
 ```
 
-Capacity planning phải dùng **distribution** context/output length, không chỉ maximum context advertised.
+Sức chứa (capacity / 용량) planning phải dùng **phân phối (distribution / 분포)** ngữ cảnh (context / 맥락)/đầu ra (output / 출력) length, không chỉ maximum ngữ cảnh (context / 맥락) advertised.
 
-Một p99 100k-token workload khác hoàn toàn workload median 1k dù cùng model/context limit.
+Một p99 100k-token tải công việc (workload / 워크로드) khác hoàn toàn tải công việc (workload / 워크로드) median 1k dù cùng mô hình (model / 모델)/ngữ cảnh (context / 맥락) limit.
 
-## 14. Quantization giảm bytes nhưng tạo accuracy/kernel trade-off
+## 14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)
 
-Giảm precision weights/activations/KV có thể giảm footprint/bandwidth và tăng throughput nếu hardware/kernel path hỗ trợ tốt.
+Giảm precision weights/activations/KV có thể giảm footprint/bandwidth và tăng thông lượng (throughput / 처리량) nếu hardware/kernel đường dẫn (path / 경로) hỗ trợ tốt.
 
 Nhưng:
 
@@ -193,13 +196,13 @@ unsupported kernel may be slower
 some tensors are more sensitive than others
 ```
 
-“4-bit” không tự động nhanh hoặc đủ quality. Phải benchmark end-to-end workload + quality metrics.
+“4-bit” không tự động nhanh hoặc đủ chất lượng (quality / 품질). Phải benchmark end-to-end tải công việc (workload / 워크로드) + chất lượng (quality / 품질) metrics.
 
-## 15. Tensor/model parallelism đổi local memory problem thành communication problem
+## 15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)
 
-Nếu model không fit một device hoặc muốn tăng compute capacity, weights/operations có thể shard qua accelerators.
+Nếu mô hình (model / 모델) không fit một thiết bị (device / 장치) hoặc muốn tăng compute sức chứa (capacity / 용량), weights/operations có thể shard qua accelerators.
 
-Mỗi layer có thể cần collective communication. Decode latency lúc đó gồm:
+Mỗi tầng (layer / 계층) có thể cần collective communication. Decode độ trễ (latency / 지연 시간) lúc đó gồm:
 
 ```text
 kernel compute
@@ -209,21 +212,21 @@ interconnect collective
 synchronization/skew
 ```
 
-Thêm GPU có thể chậm hơn nếu per-step work nhỏ nhưng communication dominates. Topology/locality trở thành lower abstraction quyết định behavior.
+Thêm GPU có thể chậm hơn nếu per-step công việc (work / 작업) nhỏ nhưng communication dominates. Topology/locality trở thành lower lớp trừu tượng (abstraction / 추상화) quyết định hành vi (behavior / 동작).
 
-## 16. Prefix reuse/cache chỉ đúng khi semantic identity đúng
+## 16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng
 
-Nếu serving system reuse KV cho common prefix, key phải bind đúng model version, tokenizer, prompt bytes/tokens, positional semantics và any adapter/context affecting computation.
+Nếu serving hệ thống (system / 시스템) reuse KV cho dùng chung (common / 공통) prefix, key phải bind đúng mô hình (model / 모델) phiên bản (version / 버전), tokenizer, prompt bytes/tokens, positional ngữ nghĩa (semantics / 의미론) và any adapter/ngữ cảnh (context / 맥락) affecting computation.
 
-Cache hit với wrong semantic key là correctness bug, không phải stale-performance issue.
+Bộ nhớ đệm (cache / 캐시) hit với wrong ngữ nghĩa (semantic / 의미적) key là tính đúng đắn (correctness / 정확성) bug, không phải stale-performance issue.
 
-Đây là same family với cache invalidation: reuse chỉ an toàn khi identity/invalidation contract đúng.
+Đây là same family với bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화): reuse chỉ an toàn khi định danh (identity / 식별자)/vô hiệu hóa (invalidation / 무효화) đặc tả hợp đồng (contract / 계약) đúng.
 
-## 17. Model rollout phải version cả serving state
+## 17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)
 
-Nếu model weights/config/adapters đổi, existing KV cache được tạo từ version cũ thường không thể tùy ý reuse với version mới.
+Nếu mô hình (model / 모델) weights/cấu hình (config / 설정)/adapters đổi, existing KV bộ nhớ đệm (cache / 캐시) được tạo từ phiên bản (version / 버전) cũ thường không thể tùy ý reuse với phiên bản (version / 버전) mới.
 
-Deployment cần boundary:
+Triển khai (deployment / 배포) cần ranh giới (boundary / 경계):
 
 ```text
 request pinned to model version
@@ -232,13 +235,13 @@ new requests route gradually
 old in-flight requests drain or migrate only if explicitly supported
 ```
 
-Canary model serving vì vậy là protocol/state rollout, không chỉ load new file.
+Canary mô hình (model / 모델) serving vì vậy là giao thức (protocol / 프로토콜)/trạng thái (state / 상태) rollout, không chỉ tải (load / 로드) new tệp (file / 파일).
 
-## 18. OOM không phải failure duy nhất của memory pressure
+## 18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure
 
-Trước OOM, allocator fragmentation, KV eviction/swap, lower batch size và queue growth có thể làm p99 xấu.
+Trước OOM, allocator fragmentation, KV eviction/swap, lower batch kích thước (size / 크기) và hàng đợi (queue / 큐) growth có thể làm p99 xấu.
 
-Phase model:
+Phase mô hình (model / 모델):
 
 ```text
 ample memory → batch efficiently
@@ -247,19 +250,19 @@ pressure → preemption/eviction/swap/recompute
 overload → queue/timeout/retry/OOM
 ```
 
-Monitor free memory alone không đủ; cần block fragmentation, active tokens/sequences và queue age.
+Monitor free bộ nhớ (memory / 메모리) alone không đủ; cần khối (block / 블록) fragmentation, active tokens/sequences và hàng đợi (queue / 큐) age.
 
-## 19. Retry inference có thể gây duplicate expensive work
+## 19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)
 
-Client timeout không chứng minh generation đã dừng. Retry long prompt có thể chạy prefill lần nữa và consume expensive GPU time.
+Máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임아웃) không chứng minh generation đã dừng. thử lại (retry / 재시도) long prompt có thể chạy prefill lần nữa và consume expensive GPU thời gian (time / 시간).
 
-If streaming response, partial output complicates semantics further. Serving gateway cần deadline/cancellation propagation và retry budget; deterministic bad request không nên retry như transient transport failure.
+If streaming phản hồi (response / 응답), partial đầu ra (output / 출력) complicates ngữ nghĩa (semantics / 의미론) further. Serving gateway cần deadline/cancellation propagation và thử lại (retry / 재시도) ngân sách (budget / 예산); deterministic bad yêu cầu (request / 요청) không nên thử lại (retry / 재시도) như transient vận chuyển (transport / 전송) thất bại (failure / 실패).
 
-AI serving obey same retry→overload feedback loop as other distributed systems, nhưng work unit đắt hơn nhiều.
+AI serving obey same thử lại (retry / 재시도)→overload vòng phản hồi (feedback loop / 피드백 루프) as other phân tán (distributed / 분산) các hệ thống (systems / 시스템들), nhưng công việc (work / 작업) đơn vị (unit / 단위) đắt hơn nhiều.
 
-## 20. Production evidence
+## 20. bằng chứng vận hành (production evidence / 운영 증거)
 
-Evidence nên tách scheduler/model/hardware:
+Bằng chứng (evidence / 증거) nên tách scheduler/mô hình (model / 모델)/hardware:
 
 ```text
 Workload:
@@ -288,11 +291,11 @@ Reliability:
 - model-version/KV ownership
 ```
 
-Một GPU-utilization 100% graph không nói throughput useful hay queue health.
+Một GPU-utilization 100% đồ thị (graph / 그래프) không nói thông lượng (throughput / 처리량) useful hay hàng đợi (queue / 큐) health.
 
-## 21. Performance experiment phải giữ quality + workload semantics
+## 21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)
 
-Optimization inference không chỉ “tokens/s cao hơn”. Compare phải giữ:
+Tối ưu hóa (optimization / 최적화) suy luận (inference / 추론) không chỉ “tokens/s cao hơn”. Compare phải giữ:
 
 ```text
 same model/task or documented model change
@@ -302,16 +305,18 @@ same TTFT/token-latency SLO
 same concurrency/tenant mix
 ```
 
-Nếu quantization tăng throughput nhưng quality vượt error budget, optimization không đạt business invariant.
+Nếu quantization tăng thông lượng (throughput / 처리량) nhưng chất lượng (quality / 품질) vượt lỗi (error / 오류) ngân sách (budget / 예산), tối ưu hóa (optimization / 최적화) không đạt nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식).
 
-## 22. Abstraction nào thực sự quyết định behavior?
+## 22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
-Nếu TTFT cao nhưng decode nhanh, look queue/prefill. Nếu token latency cao ở large batch, inspect bandwidth/interconnect/scheduler. Nếu OOM dưới long context, KV capacity/admission quyết định. Nếu one tenant hurts all, fairness is missing. Nếu same model different hardware behaves oddly, data movement/kernel support may dominate theoretical FLOPS.
+Nếu TTFT cao nhưng decode nhanh, look hàng đợi (queue / 큐)/prefill. Nếu đơn vị từ (token / 토큰) độ trễ (latency / 지연 시간) cao ở large batch, inspect bandwidth/interconnect/scheduler. Nếu OOM dưới long ngữ cảnh (context / 맥락), KV sức chứa (capacity / 용량)/admission quyết định. Nếu one tenant hurts all, fairness is missing. Nếu same mô hình (model / 모델) different hardware behaves oddly, dữ liệu (data / 데이터) movement/kernel hỗ trợ (support / 지원) may dominate theoretical FLOPS.
 
 ## 23. Mô hình tư duy
 
-> Transformer inference là interaction giữa **model dependency graph, per-sequence KV state, scheduler và memory hierarchy**. KV cache đổi recomputation lấy persistent memory; batching đổi latency lấy throughput; quantization đổi precision/quality lấy bytes; parallelism đổi local compute lấy communication. **Serving correctness cần giữ request/model/KV ownership; serving performance cần quản queue, memory bandwidth và admission như một systems problem.**
+> Transformer suy luận (inference / 추론) là tương tác (interaction / 상호작용) giữa **mô hình (model / 모델) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), per-sequence KV trạng thái (state / 상태), scheduler và bộ nhớ (memory / 메모리) hierarchy**. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy persistent bộ nhớ (memory / 메모리); batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량); quantization đổi precision/chất lượng (quality / 품질) lấy bytes; parallelism đổi cục bộ (local / 로컬) compute lấy communication. **Serving tính đúng đắn (correctness / 정확성) cần giữ yêu cầu (request / 요청)/mô hình (model / 모델)/KV quyền sở hữu (ownership / 소유권); serving hiệu năng (performance / 성능) cần quản hàng đợi (queue / 큐), bộ nhớ (memory / 메모리) bandwidth và admission như một các hệ thống (systems / 시스템들) bài toán (problem / 문제).**
 
 ## Kết nối
 
-Ôn [AI neural/transformer foundation](../../basic/10_ai_foundations/03_neural_networks_and_representation_learning.md), đọc [training/inference lifecycle](./00_training_inference_systems_and_model_lifecycle.md), [distributed training](./02_distributed_training_data_model_and_pipeline_parallelism.md), [GPU execution model](../../02_computer_architecture/advanced/06_simd_vector_isa_and_gpu_execution_model.md), [queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md) và specialized AI library tại [`../../02_artificial_intelligence/`](../../02_artificial_intelligence/README.md).
+Ôn [AI neural/transformer foundation](../../basic/10_ai_foundations/03_neural_networks_and_representation_learning.md), đọc [training/inference lifecycle](./00_training_inference_systems_and_model_lifecycle.md), [distributed training](./02_distributed_training_data_model_and_pipeline_parallelism.md), [GPU execution model](../../02_computer_architecture/advanced/06_simd_vector_isa_and_gpu_execution_model.md), [queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md) và specialized AI thư viện (library / 라이브러리) tại [`../../02_artificial_intelligence/`](../../02_artificial_intelligence/README.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 training inference systems and model lifecycle](./00_training_inference_systems_and_model_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

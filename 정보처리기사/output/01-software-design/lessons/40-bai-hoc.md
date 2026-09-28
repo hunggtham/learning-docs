@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **16. 디자인 패턴 심화 (Design Patterns chuyên sâu)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **11. 디자인 패턴 (Design Pattern)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,11 +20,13 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 디자인 패턴 (Design Patterns - GoF)** và nối nó với **11. 디자인 패턴 (Design Pattern)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 4. 디자인 패턴 (Design Patterns - GoF)
-- **생성 패턴 (Creational - 5)**: Abstract Factory, Builder, Factory Method, Prototype, Singleton. (Tạo đối tượng)
-- **구조 패턴 (Structural - 7)**: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. (Cấu trúc, ghép nối)
-- **행위 패턴 (Behavioral - 11)**: Strategy, Mediator, Command, Observer, State, Iterator, Visitor, Chain of Responsibility, Interpreter, Memento, Template Method. (Hành vi, tương tác)
+- **생성 패턴 (Creational - 5)**: Abstract Factory, Builder, Factory phương thức (method / 메서드), Prototype, Singleton. (Tạo đối tượng)
+- **구조 패턴 (Structural - 7)**: Adapter, cầu nối (bridge / 브리지), Composite, Decorator, Facade, Flyweight, Proxy. (Cấu trúc, ghép nối)
+- **행위 패턴 (Behavioral - 11)**: chiến lược (strategy / 전략), Mediator, Command, Observer, trạng thái (state / 상태), Iterator, Visitor, chuỗi (chain / 사슬) of Responsibility, trình thông dịch (interpreter / 인터프리터), Memento, Template phương thức (method / 메서드). (Hành vi, tương tác)
 
 ---

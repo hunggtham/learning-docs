@@ -1,21 +1,24 @@
-# Gradient descent và convexity: geometry, convergence và conditioning
+# Độ dốc (gradient / 기울기) descent và convexity: hình học (geometry / 기하학), convergence và conditioning
 
-Gradient descent (경사하강법 / gradient descent) là một iterative method để giảm differentiable objective. Công thức update rất ngắn:
+> **Mạch đọc:** Đọc **độ dốc (gradient / 기울기) descent và convexity: hình học (geometry / 기하학), convergence và conditioning** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. tối ưu hóa (optimization / 최적화) landscape trước thuật toán (algorithm / 알고리즘)** sang **2. độ dốc (gradient / 기울기) là cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Độ dốc (gradient / 기울기) descent (경사하강법 / gradient descent) là một iterative phương thức (method / 메서드) để giảm differentiable mục tiêu (objective / 목표). Công thức cập nhật (update / 업데이트) rất ngắn:
 
 ```math
 x_{k+1}=x_k-\eta_k\nabla f(x_k),
 ```
 
-nhưng hiểu method cần nhiều hơn việc nhớ “đi ngược gradient”. Ta cần biết:
+nhưng hiểu phương thức (method / 메서드) cần nhiều hơn việc nhớ “đi ngược độ dốc (gradient / 기울기)”. Ta cần biết:
 
 - vì sao direction đó hợp lý;
-- learning rate liên hệ curvature thế nào;
+- học tập (learning / 학습) tỷ lệ (rate / 비율) liên hệ curvature thế nào;
 - convexity cung cấp guarantee gì;
 - conditioning làm convergence chậm ra sao;
 - stochastic gradients thay dynamics như thế nào;
-- optimizer không thể cứu objective/model sai.
+- optimizer không thể cứu mục tiêu (objective / 목표)/mô hình (model / 모델) sai.
 
-## 1. Optimization landscape trước algorithm
+## 1. tối ưu hóa (optimization / 최적화) landscape trước thuật toán (algorithm / 알고리즘)
 
 Ta đang solve
 
@@ -23,7 +26,7 @@ Ta đang solve
 \min_x f(x).
 ```
 
-Gradient descent chỉ là một strategy dùng local information. Nếu objective poorly specified, non-identifiable hoặc constraints bị bỏ qua, optimizer có thể converge hoàn hảo tới answer không có ý nghĩa.
+Độ dốc (gradient / 기울기) descent chỉ là một chiến lược (strategy / 전략) dùng cục bộ (local / 로컬) thông tin (information / 정보). Nếu mục tiêu (objective / 목표) poorly specified, non-identifiable hoặc các ràng buộc (constraints / 제약조건들) bị bỏ qua, optimizer có thể converge hoàn hảo tới answer không có ý nghĩa.
 
 Do đó luôn tách ba tầng:
 
@@ -33,7 +36,7 @@ problem/model
 → optimization algorithm
 ```
 
-## 2. Gradient là local linear model
+## 2. độ dốc (gradient / 기울기) là cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)
 
 Gần `x`:
 
@@ -49,29 +52,29 @@ Nếu giới hạn step có fixed Euclidean length
 \|\Delta\|_2=\epsilon,
 ```
 
-thì inner product nhỏ nhất khi `\Delta` ngược gradient:
+thì inner sản phẩm (product / 제품) nhỏ nhất khi `\Delta` ngược độ dốc (gradient / 기울기):
 
 ```math
 \Delta=-\epsilon\frac{\nabla f}{\|\nabla f\|}.
 ```
 
-Vì vậy negative gradient là steepest-descent direction **dưới Euclidean metric**.
+Vì vậy negative độ dốc (gradient / 기울기) là steepest-descent direction **dưới Euclidean chỉ số (metric / 지표)**.
 
-Điểm này quan trọng: đổi metric/preconditioner có thể đổi notion “steepest”.
+Điểm này quan trọng: đổi chỉ số (metric / 지표)/preconditioner có thể đổi notion “steepest”.
 
-## 3. Từ direction tới step size
+## 3. Từ direction tới step kích thước (size / 크기)
 
-Update thực tế:
+Cập nhật (update / 업데이트) thực tế:
 
 ```math
 x_{k+1}=x_k-\eta\nabla f(x_k).
 ```
 
-`\eta` (learning rate / 학습률) quyết định scale step.
+`\eta` (learning rate / 학습률) quyết định quy mô (scale / 규모) step.
 
-Direction đúng nhưng step quá lớn vẫn có thể tăng objective hoặc diverge. Vì local linear approximation chỉ valid trong neighborhood đủ nhỏ, learning rate phải respect curvature.
+Direction đúng nhưng step quá lớn vẫn có thể tăng mục tiêu (objective / 목표) hoặc diverge. Vì cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation chỉ valid trong neighborhood đủ nhỏ, học tập (learning / 학습) tỷ lệ (rate / 비율) phải respect curvature.
 
-## 4. Quadratic one-dimensional model cho convergence condition
+## 4. Quadratic one-dimensional mô hình (model / 모델) cho convergence điều kiện (condition / 조건)
 
 Xét
 
@@ -80,13 +83,13 @@ f(x)=\frac12ax^2,
 \qquad a>0.
 ```
 
-Gradient:
+Độ dốc (gradient / 기울기):
 
 ```math
 f'(x)=ax.
 ```
 
-Update:
+Cập nhật (update / 업데이트):
 
 ```math
 x_{k+1}=(1-\eta a)x_k.
@@ -110,11 +113,11 @@ hay
 0<\eta<\frac2a.
 ```
 
-Curvature `a` trực tiếp giới hạn stable learning rate.
+Curvature `a` trực tiếp giới hạn stable học tập (learning / 학습) tỷ lệ (rate / 비율).
 
-## 5. Smoothness: gradient thay đổi nhanh đến đâu?
+## 5. Smoothness: độ dốc (gradient / 기울기) thay đổi nhanh đến đâu?
 
-Một differentiable function có `L`-Lipschitz gradient nếu
+Một differentiable hàm (function / 함수) có `L`-Lipschitz độ dốc (gradient / 기울기) nếu
 
 ```math
 \|\nabla f(x)-\nabla f(y)\|
@@ -122,7 +125,7 @@ Một differentiable function có `L`-Lipschitz gradient nếu
 L\|x-y\|.
 ```
 
-`L` là upper curvature scale.
+`L` là upper curvature quy mô (scale / 규모).
 
 Smoothness cho descent lemma:
 
@@ -139,13 +142,13 @@ Chọn
 y=x-\eta\nabla f(x)
 ```
 
-với `0<\eta<2/L` cho objective decrease under standard conditions.
+với `0<\eta<2/L` cho mục tiêu (objective / 목표) decrease under tiêu chuẩn (standard / 표준) conditions.
 
-Đây là formal version của intuition “learning rate phải nhỏ so với steepest curvature”.
+Đây là formal phiên bản (version / 버전) của intuition “học tập (learning / 학습) tỷ lệ (rate / 비율) phải nhỏ so với steepest curvature”.
 
-## 6. Convexity: local information trở thành global information
+## 6. Convexity: cục bộ (local / 로컬) thông tin (information / 정보) trở thành toàn cục (global / 전역) thông tin (information / 정보)
 
-Function convex nếu
+Hàm (function / 함수) convex nếu
 
 ```math
 f(tx+(1-t)y)
@@ -154,7 +157,7 @@ tf(x)+(1-t)f(y),
 \qquad 0\le t\le1.
 ```
 
-Nếu differentiable, equivalent first-order condition:
+Nếu differentiable, equivalent first-order điều kiện (condition / 조건):
 
 ```math
 f(y)
@@ -162,7 +165,7 @@ f(y)
 f(x)+\nabla f(x)^T(y-x).
 ```
 
-Tangent plane là global under-estimator.
+Tangent plane là toàn cục (global / 전역) under-estimator.
 
 Vì vậy nếu
 
@@ -176,9 +179,9 @@ thì với mọi `y`:
 f(y)\ge f(x^*),
 ```
 
-nên `x^*` là global minimum.
+nên `x^*` là toàn cục (global / 전역) minimum.
 
-Đây là lý do convexity có giá trị: nó biến stationary condition từ local candidate thành global guarantee.
+Đây là lý do convexity có giá trị: nó biến stationary điều kiện (condition / 조건) từ cục bộ (local / 로컬) candidate thành toàn cục (global / 전역) guarantee.
 
 ## 7. Strict và strong convexity
 
@@ -193,15 +196,15 @@ f(x)+\nabla f(x)^T(y-x)
 +\frac\mu2\|y-x\|^2.
 ```
 
-Nó nói function có curvature lower bound; landscape không quá flat.
+Nó nói hàm (function / 함수) có curvature lower bound; landscape không quá flat.
 
-Nếu function vừa `L`-smooth vừa `\mu`-strongly convex, condition number:
+Nếu hàm (function / 함수) vừa `L`-smooth vừa `\mu`-strongly convex, điều kiện (condition / 조건) number:
 
 ```math
 \kappa=\frac L\mu.
 ```
 
-Large `\kappa` nghĩa curvature scales rất khác nhau, làm first-order optimization chậm.
+Large `\kappa` nghĩa curvature scales rất khác nhau, làm first-order tối ưu hóa (optimization / 최적화) chậm.
 
 ## 8. Conditioning: vì sao narrow valleys gây zig-zag?
 
@@ -213,7 +216,7 @@ f(x)=\frac12x^TAx-b^Tx,
 
 với symmetric positive-definite `A`.
 
-Gradient:
+Độ dốc (gradient / 기울기):
 
 ```math
 \nabla f(x)=Ax-b.
@@ -229,13 +232,13 @@ Nếu
 
 stable step phải nhỏ enough cho steep direction, nên progress theo flat direction rất chậm.
 
-Contour plot nhìn như narrow ellipse; gradient thường point across valley, tạo zig-zag.
+Contour plot nhìn như narrow ellipse; độ dốc (gradient / 기울기) thường điểm (point / 지점) across valley, tạo zig-zag.
 
-## 9. Feature scaling và preconditioning thay geometry
+## 9. tính năng (feature / 기능) scaling và preconditioning thay hình học (geometry / 기하학)
 
 Standardizing features có thể làm Hessian/curvature scales cân bằng hơn.
 
-Preconditioned update:
+Preconditioned cập nhật (update / 업데이트):
 
 ```math
 x_{k+1}
@@ -244,28 +247,28 @@ x_{k+1}
 
 với suitable positive-definite `M`.
 
-Thay vì chỉ “đổi optimizer”, ta đang đổi effective geometry của parameter space.
+Thay vì chỉ “đổi optimizer”, ta đang đổi effective hình học (geometry / 기하학) của parameter không gian (space / 공간).
 
-Newton method dùng Hessian:
+Newton phương thức (method / 메서드) dùng Hessian:
 
 ```math
 x_{k+1}
 =x_k-H(x_k)^{-1}\nabla f(x_k)
 ```
 
-để rescale directions theo curvature local.
+để rescale directions theo curvature cục bộ (local / 로컬).
 
 ## 10. Convergence rates có meaning gì?
 
-Với convex smooth functions, gradient descent thường có sublinear objective convergence kiểu
+Với convex smooth functions, độ dốc (gradient / 기울기) descent thường có sublinear mục tiêu (objective / 목표) convergence kiểu
 
 ```math
 f(x_k)-f(x^*)=O(1/k)
 ```
 
-under standard setup.
+under tiêu chuẩn (standard / 표준) setup.
 
-Với smooth strongly convex functions, fixed proper step có linear/geometric convergence:
+Với smooth strongly convex functions, fixed proper step có tuyến tính (linear / 선형)/geometric convergence:
 
 ```math
 \|x_k-x^*\|
@@ -274,17 +277,17 @@ C\rho^k,
 \qquad 0<\rho<1.
 ```
 
-“Linear convergence” trong numerical optimization không nghĩa objective là linear; nó means error shrinks by roughly constant factor each iteration.
+“tuyến tính (linear / 선형) convergence” trong numerical tối ưu hóa (optimization / 최적화) không nghĩa mục tiêu (objective / 목표) là tuyến tính (linear / 선형); nó means lỗi (error / 오류) shrinks by roughly constant factor each iteration.
 
-## 11. Line search: learning rate có thể được chọn adaptively
+## 11. Line tìm kiếm (search / 검색): học tập (learning / 학습) tỷ lệ (rate / 비율) có thể được chọn adaptively
 
-Thay fixed `\eta`, line search chọn step dọc direction `p_k`.
+Thay fixed `\eta`, line tìm kiếm (search / 검색) chọn step dọc direction `p_k`.
 
-Backtracking line search giảm step cho đến khi sufficient decrease condition như Armijo thỏa.
+Backtracking line tìm kiếm (search / 검색) giảm step cho đến khi sufficient decrease điều kiện (condition / 조건) như Armijo thỏa.
 
-Điều này useful khi curvature scale chưa biết, dù mỗi iteration cần extra function evaluations.
+Điều này useful khi curvature quy mô (scale / 규모) chưa biết, dù mỗi iteration cần extra hàm (function / 함수) evaluations.
 
-## 12. Momentum: thêm dynamics vào optimization
+## 12. Momentum: thêm dynamics vào tối ưu hóa (optimization / 최적화)
 
 Một simple momentum form:
 
@@ -296,25 +299,25 @@ v_{k+1}=\beta v_k+\nabla f(x_k)
 x_{k+1}=x_k-\eta v_{k+1}.
 ```
 
-Intuition: consistent gradient directions accumulate velocity; oscillating directions partially cancel.
+Intuition: consistent độ dốc (gradient / 기울기) directions accumulate velocity; oscillating directions partially cancel.
 
 Momentum có thể accelerate elongated valleys, nhưng introduces additional stability/tuning dynamics.
 
 ## 13. Nesterov acceleration
 
-Nesterov-style methods evaluate gradient at a look-ahead point and achieve improved theoretical rates for convex problems.
+Nesterov-style methods evaluate độ dốc (gradient / 기울기) at a look-ahead điểm (point / 지점) and achieve improved theoretical rates for convex problems.
 
-Điểm học quan trọng không phải memorize update variants, mà hiểu acceleration exploits predictable optimization dynamics rather than changing objective.
+Điểm học quan trọng không phải memorize cập nhật (update / 업데이트) variants, mà hiểu acceleration exploits predictable tối ưu hóa (optimization / 최적화) dynamics rather than changing mục tiêu (objective / 목표).
 
-## 14. Stochastic gradient descent
+## 14. Stochastic độ dốc (gradient / 기울기) descent
 
-Nếu objective là empirical average:
+Nếu mục tiêu (objective / 목표) là empirical average:
 
 ```math
 f(\theta)=\frac1N\sum_{i=1}^N\ell_i(\theta),
 ```
 
-full gradient:
+full độ dốc (gradient / 기울기):
 
 ```math
 \nabla f
@@ -338,45 +341,45 @@ E[\hat g_k\mid\theta_k]
 
 Nhưng variance tạo noisy trajectory.
 
-Noise không chỉ “bad”; nó giảm cost per step và đôi khi giúp escape narrow/saddle regions trong non-convex landscapes.
+Noise không chỉ “bad”; nó giảm chi phí (cost / 비용) per step và đôi khi giúp escape narrow/saddle regions trong non-convex landscapes.
 
-## 15. Batch size là variance-computation trade-off
+## 15. Batch kích thước (size / 크기) là variance-computation sự đánh đổi (trade-off / 트레이드오프)
 
 Larger batch:
 
-- lower gradient variance;
-- more compute/memory per update;
-- fewer updates per data pass.
+- lower độ dốc (gradient / 기울기) variance;
+- more compute/bộ nhớ (memory / 메모리) per cập nhật (update / 업데이트);
+- fewer updates per dữ liệu (data / 데이터) pass.
 
 Smaller batch:
 
 - noisier direction;
 - cheaper updates;
-- potentially better hardware/optimization dynamics depending setup.
+- potentially better hardware/tối ưu hóa (optimization / 최적화) dynamics depending setup.
 
-Không có universal best batch size tách khỏi model/hardware/data.
+Không có universal best batch kích thước (size / 크기) tách khỏi mô hình (model / 모델)/hardware/dữ liệu (data / 데이터).
 
 ## 16. Learning-rate schedules
 
-Trong stochastic optimization, constant learning rate có thể leave noise floor quanh optimum.
+Trong stochastic tối ưu hóa (optimization / 최적화), constant học tập (learning / 학습) tỷ lệ (rate / 비율) có thể leave noise floor quanh optimum.
 
-Decay schedules giảm step over time để stabilize convergence.
+Decay schedules giảm step over thời gian (time / 시간) để stabilize convergence.
 
-Warmup có thể hữu ích với adaptive optimizers/large batches khi early gradient scales unstable.
+Warmup có thể hữu ích với adaptive optimizers/large batches khi early độ dốc (gradient / 기울기) scales unstable.
 
-Schedule là part of optimization dynamics, không chỉ training ritual.
+Schedule là part of tối ưu hóa (optimization / 최적화) dynamics, không chỉ huấn luyện (training / 학습) ritual.
 
 ## 17. Adam và adaptive scaling
 
-Adam tracks moving estimates của first và second moments of gradients, rồi scale parameter-wise updates.
+Adam tracks moving estimates của first và second moments of gradients, rồi quy mô (scale / 규모) parameter-wise updates.
 
-Điều này giúp khi coordinates có different gradient scales và sparse gradients.
+Điều này giúp khi coordinates có different độ dốc (gradient / 기울기) scales và sparse gradients.
 
-Nhưng adaptive method không guarantee better generalization hoặc convergence in every problem. Hyperparameters, weight decay implementation và objective geometry vẫn matter.
+Nhưng adaptive phương thức (method / 메서드) không guarantee better generalization hoặc convergence in every bài toán (problem / 문제). Hyperparameters, weight decay hiện thực (implementation / 구현) và mục tiêu (objective / 목표) hình học (geometry / 기하학) vẫn matter.
 
 ## 18. Saddles và non-convex objectives
 
-Neural-network loss surfaces non-convex. Point có
+Neural-network mất mát (loss / 손실) surfaces non-convex. điểm (point / 지점) có
 
 ```math
 \nabla f=0
@@ -384,20 +387,20 @@ Neural-network loss surfaces non-convex. Point có
 
 có thể là:
 
-- local minimum;
-- local maximum;
+- cục bộ (local / 로컬) minimum;
+- cục bộ (local / 로컬) maximum;
 - saddle;
 - flat plateau.
 
-Hessian eigenvalues help classify local curvature.
+Hessian eigenvalues help classify cục bộ (local / 로컬) curvature.
 
-In high dimensions, saddle structure often more relevant than simple one-dimensional “many bad local minima” picture.
+In high dimensions, saddle cấu trúc (structure / 구조) often more relevant than simple one-dimensional “many bad cục bộ (local / 로컬) minima” picture.
 
-## 19. Gradient clipping và exploding gradients
+## 19. độ dốc (gradient / 기울기) clipping và exploding gradients
 
-Trong deep/recurrent models, gradients có thể grow very large through repeated Jacobian products.
+Trong deep/recurrent các mô hình (models / 모델들), gradients có thể grow very large through repeated Jacobian products.
 
-Gradient clipping modifies effective update, e.g.
+Độ dốc (gradient / 기울기) clipping modifies effective cập nhật (update / 업데이트), e.g.
 
 ```math
 \tilde g
@@ -405,17 +408,17 @@ Gradient clipping modifies effective update, e.g.
 g\min\left(1,\frac c{\|g\|}\right).
 ```
 
-Nó controls step norm, not underlying cause of instability. Architecture/normalization/initialization may still need fixing.
+Nó controls step norm, not underlying cause of instability. kiến trúc (architecture / 아키텍처)/normalization/initialization may still need fixing.
 
 ## 20. Vanishing gradients và products of Jacobians
 
-Backprop multiplies local Jacobians through layers/time.
+Backprop multiplies cục bộ (local / 로컬) Jacobians through layers/thời gian (time / 시간).
 
 If singular values mostly <1, gradients can shrink exponentially; >1 can explode.
 
-Thus optimization difficulties connect directly to linear algebra spectral behavior.
+Thus tối ưu hóa (optimization / 최적화) difficulties connect directly to tuyến tính (linear / 선형) algebra spectral hành vi (behavior / 동작).
 
-## 21. Regularization changes objective
+## 21. Regularization changes mục tiêu (objective / 목표)
 
 With L2:
 
@@ -424,11 +427,11 @@ F(\theta)
 =L(\theta)+\lambda\|\theta\|_2^2.
 ```
 
-Optimizer is now solving a different mathematical problem.
+Optimizer is now solving a different mathematical bài toán (problem / 문제).
 
-Regularization is not a post-processing correction; it encodes preference/trade-off in objective.
+Regularization is not a post-processing correction; it encodes preference/sự đánh đổi (trade-off / 트레이드오프) in mục tiêu (objective / 목표).
 
-## 22. Constraints require more than vanilla gradient descent
+## 22. các ràng buộc (constraints / 제약조건들) require more than vanilla độ dốc (gradient / 기울기) descent
 
 If
 
@@ -436,7 +439,7 @@ If
 x\in C,
 ```
 
-projected gradient descent can use
+projected độ dốc (gradient / 기울기) descent can use
 
 ```math
 x_{k+1}
@@ -445,27 +448,27 @@ x_{k+1}
 
 Other problems use proximal methods, Lagrange/KKT, barrier/interior-point methods or specialized algorithms.
 
-Ignoring constraints and clipping after the fact may solve a different problem.
+Ignoring các ràng buộc (constraints / 제약조건들) and clipping after the fact may solve a different bài toán (problem / 문제).
 
-## 23. Finance connection: portfolio quadratic optimization
+## 23. Finance liên kết (connection / 연결): portfolio quadratic tối ưu hóa (optimization / 최적화)
 
-Mean-variance style objective may contain
+Mean-variance style mục tiêu (objective / 목표) may contain
 
 ```math
 w^T\Sigma w
 ```
 
-as risk term.
+as rủi ro (risk / 위험) term.
 
-Gradient:
+Độ dốc (gradient / 기울기):
 
 ```math
 2\Sigma w.
 ```
 
-Conditioning of covariance matrix affects numerical optimization. Near-collinear assets can create unstable directions, tying portfolio optimization to eigenvalues/regularization.
+Conditioning of covariance ma trận (matrix / 행렬) affects numerical tối ưu hóa (optimization / 최적화). Near-collinear assets can create unstable directions, tying portfolio tối ưu hóa (optimization / 최적화) to eigenvalues/regularization.
 
-## 24. Physics connection: gradient flow
+## 24. Physics liên kết (connection / 연결): độ dốc (gradient / 기울기) luồng (flow / 흐름)
 
 Continuous-time analogue:
 
@@ -482,33 +485,35 @@ Then
 =-\|\nabla f\|^2\le0.
 ```
 
-Energy decreases monotonically along ideal gradient flow.
+Năng lượng (energy / 에너지) decreases monotonically along ideal độ dốc (gradient / 기울기) luồng (flow / 흐름).
 
-Discrete gradient descent approximates this dynamics, with step size controlling discretization stability.
+Discrete độ dốc (gradient / 기울기) descent approximates this dynamics, with step kích thước (size / 크기) controlling discretization stability.
 
-## 25. AI engineering: optimizer cannot repair bad problem definition
+## 25. AI kỹ thuật (engineering / 엔지니어링): optimizer cannot repair bad bài toán (problem / 문제) definition
 
 Even perfect convergence cannot fix:
 
-- data leakage;
+- dữ liệu (data / 데이터) leakage;
 - label noise;
-- wrong objective metric;
-- distribution shift;
-- under/overparameterized model;
-- invalid constraints.
+- wrong mục tiêu (objective / 목표) chỉ số (metric / 지표);
+- phân phối (distribution / 분포) shift;
+- under/overparameterized mô hình (model / 모델);
+- invalid các ràng buộc (constraints / 제약조건들).
 
-Optimization success must be separated from model/product success.
+Tối ưu hóa (optimization / 최적화) success must be separated from mô hình (model / 모델)/sản phẩm (product / 제품) success.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Gradient descent is local dynamics on an objective landscape. Gradient gives first-order direction; curvature controls safe step size; conditioning controls speed; stochasticity changes trajectory; convexity determines how much local information can be trusted globally.
+> độ dốc (gradient / 기울기) descent is cục bộ (local / 로컬) dynamics on an mục tiêu (objective / 목표) landscape. độ dốc (gradient / 기울기) gives first-order direction; curvature controls safe step kích thước (size / 크기); conditioning controls speed; stochasticity changes trajectory; convexity determines how much cục bộ (local / 로컬) thông tin (information / 정보) can be trusted globally.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**Negative gradient is universally steepest.** It is steepest under Euclidean metric; other geometries/preconditioners change the notion.
+**Negative độ dốc (gradient / 기울기) is universally steepest.** It is steepest under Euclidean chỉ số (metric / 지표); other geometries/preconditioners thay đổi (change / 변경) the notion.
 
-**Large learning rate means faster learning.** Above stability range it oscillates/diverges.
+**Large học tập (learning / 학습) tỷ lệ (rate / 비율) means faster học tập (learning / 학습).** Above stability phạm vi (range / 범위) it oscillates/diverges.
 
-**Convex means easy in every practical sense.** Convexity gives global structure, but conditioning and scale can still make computation slow.
+**Convex means easy in every practical sense.** Convexity gives toàn cục (global / 전역) cấu trúc (structure / 구조), but conditioning and quy mô (scale / 규모) can still make computation slow.
 
-**Adam/SGD determines the objective.** Optimizer changes search dynamics, not what objective fundamentally rewards.
+**Adam/SGD determines the mục tiêu (objective / 목표).** Optimizer changes tìm kiếm (search / 검색) dynamics, not what mục tiêu (objective / 목표) fundamentally rewards.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 optimization](./00_optimization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

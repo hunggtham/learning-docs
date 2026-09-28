@@ -1,5 +1,8 @@
 # Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử
 
+> **Mạch đọc:** Đọc **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Monosaccharide là hợp chất carbonyl có nhiều tâm lập thể** sang **Ký hiệu D/L không phải chiều quay quang học**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Carbohydrate (탄수화물)** là các aldehyde hoặc ketone đa hydroxyl cùng các dẫn xuất và polymer của chúng. Điều quan trọng không chỉ là “đường cung cấp năng lượng”, mà là cách **hóa lập thể + hóa học carbonyl + hóa học acetal** tạo ra một họ phân tử vừa tham gia chuyển hóa, vừa tạo vật liệu cấu trúc, vừa mã hóa sự nhận diện trên bề mặt tế bào.
 
 ## Monosaccharide là hợp chất carbonyl có nhiều tâm lập thể
@@ -145,13 +148,13 @@ Nhóm acetamide làm tăng khả năng tạo hydrogen bond và độ bền cấu
 
 Polysaccharide không chỉ được xác định bởi kết nối. Góc xoắn quanh liên kết glycosidic quyết định cấu trúc helix, sheet và sợi.
 
-Vì vậy trình tự/liên kết → cấu dạng → tính chất vật liệu, tương tự logic của protein.
+Vì vậy trình tự/liên kết → cấu dạng → tính chất vật liệu, tương tự lô-gic (logic / 논리) của protein.
 
 ## Thủy phân liên kết glycosidic
 
-Liên kết acetal tương đối bền với base nhưng có thể bị thủy phân dưới xúc tác acid hoặc enzyme.
+Liên kết acetal tương đối bền với cơ sở (base / 기반) nhưng có thể bị thủy phân dưới xúc tác acid hoặc enzyme.
 
-**Glycosidase** có độ đặc hiệu lập thể cao nhờ bố trí residue acid/base và ổn định trạng thái chuyển tiếp có đặc tính oxocarbenium.
+**Glycosidase** có độ đặc hiệu lập thể cao nhờ bố trí residue acid/cơ sở (base / 기반) và ổn định trạng thái chuyển tiếp có đặc tính oxocarbenium.
 
 Độ đặc hiệu enzyme giải thích vì sao con người tiêu hóa tinh bột liên kết α nhưng không tiêu hóa cellulose liên kết β hiệu quả.
 
@@ -298,3 +301,5 @@ Không. D/L là ký hiệu cấu hình, không phải dấu của góc quay quan
 Hóa học carbohydrate là **hóa học đồ thị lập thể được xây từ các vòng có nguồn gốc carbonyl**. Loại monomer quan trọng, nhưng cấu hình anomer, vị trí liên kết và tô-pô phân nhánh thường mang nhiều thông tin chức năng hơn công thức phân tử đơn thuần.
 
 Xem tiếp: [Lipid và màng](./03_lipids_and_membranes.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 chemistry of life](./00_chemistry_of_life.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

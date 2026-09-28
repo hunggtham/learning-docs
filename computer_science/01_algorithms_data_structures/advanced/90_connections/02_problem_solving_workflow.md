@@ -1,4 +1,7 @@
 # Quy trình giải bài DSA và thiết kế thuật toán
+
+> **Mạch đọc:** Đọc **Quy trình giải bài DSA và thiết kế thuật toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Đọc đề như một specification** sang **2. Viết lại bài toán bằng một câu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Problem-Solving Workflow / 문제 해결 흐름**
 
 Giải một bài DSA tốt không bắt đầu bằng việc cố nhớ “mẫu nào giống LeetCode”, mà bắt đầu bằng **đặc tả đúng vấn đề**, xây mô hình đúng, tìm một baseline đúng, rồi loại bỏ dần những phần công việc không cần thiết.
@@ -12,11 +15,11 @@ bất biến / chứng minh đúng
 mô hình chi phí phù hợp
 ```
 
-Nếu một trong bốn lớp sai, code có thể vẫn chạy trên sample nhưng lời giải không bền vững.
+Nếu một trong bốn lớp sai, mã (code / 코드) có thể vẫn chạy trên mẫu (sample / 표본) nhưng lời giải không bền vững.
 
 ## 1. Đọc đề như một specification
 
-Trước khi code, phải xác định:
+Trước khi mã (code / 코드), phải xác định:
 
 ```text
 input domain
@@ -50,21 +53,21 @@ Ví dụ:
 
 > “Tìm chi phí nhỏ nhất để đi từ `s` tới `t`, với trọng số cạnh không âm.”
 
-Câu này ngay lập tức làm lộ domain thích hợp cho Dijkstra.
+Câu này ngay lập tức làm lộ lĩnh vực (domain / 도메인) thích hợp cho Dijkstra.
 
-Nếu chưa viết được bài toán bằng câu ngắn, story layer vẫn đang che mô hình thật.
+Nếu chưa viết được bài toán bằng câu ngắn, story tầng (layer / 계층) vẫn đang che mô hình thật.
 
-## 3. Tách story khỏi computational model
+## 3. Tách story khỏi computational mô hình (model / 모델)
 
-“Thành phố” có thể là đỉnh. “Chuyến bay” là cạnh. “Khóa và cửa” có thể biến trạng thái thành `(position,keyMask)`. “Booking” là interval. “Undo” là stack. “Mạng lưới phụ thuộc” là DAG.
+“Thành phố” có thể là đỉnh. “Chuyến bay” là cạnh. “Khóa và cửa” có thể biến trạng thái thành `(position,keyMask)`. “Booking” là interval. “Undo” là ngăn xếp (stack / 스택). “Mạng lưới phụ thuộc” là DAG.
 
 Story chỉ là tên gọi. Thuật toán làm việc trên cấu trúc toán học bên dưới.
 
 Một thuật toán đúng trên mô hình sai vẫn giải sai vấn đề.
 
-## 4. Ràng buộc là ngân sách complexity
+## 4. Ràng buộc là ngân sách độ phức tạp (complexity / 복잡도)
 
-Hãy chuyển constraints thành quy mô work sơ bộ.
+Hãy chuyển các ràng buộc (constraints / 제약조건들) thành quy mô công việc (work / 작업) sơ bộ.
 
 ```text
 n <= 20         -> 2^n có thể khả thi
@@ -74,15 +77,15 @@ n ~ 10^6        -> memory/allocation cũng thành vấn đề lớn
 Q ~ 10^5        -> preprocessing/index có thể rất đáng
 ```
 
-Đây chỉ là heuristic, không phải luật cứng. Runtime, constant factor và time limit vẫn quan trọng.
+Đây chỉ là heuristic, không phải luật cứng. thời gian chạy (runtime / 런타임), constant factor và thời gian (time / 시간) limit vẫn quan trọng.
 
-Nhưng constraints giúp loại nhanh những ý tưởng bất khả thi.
+Nhưng các ràng buộc (constraints / 제약조건들) giúp loại nhanh những ý tưởng bất khả thi.
 
 ## 5. Đừng chỉ nhìn n; tìm mọi tham số
 
-Graph có `V` và `E`. String matching có `n` và `m`. Top-K có `n` và `k`. Knapsack có `n` và `W`.
+Đồ thị (graph / 그래프) có `V` và `E`. String matching có `n` và `m`. Top-K có `n` và `k`. Knapsack có `n` và `W`.
 
-Một complexity như:
+Một độ phức tạp (complexity / 복잡도) như:
 
 \[
 O(n\log k)
@@ -90,7 +93,7 @@ O(n\log k)
 
 có thể tốt hơn nhiều `O(n log n)` khi `k` nhỏ.
 
-Giữ tham số riêng giúp thấy structure mà việc ép tất cả thành một `n` sẽ che mất.
+Giữ tham số riêng giúp thấy cấu trúc (structure / 구조) mà việc ép tất cả thành một `n` sẽ che mất.
 
 ## 6. Tìm baseline đúng trước
 
@@ -104,11 +107,11 @@ làm oracle cho test nhỏ
 cho thấy work nào đang bị lặp
 ```
 
-Two Sum `O(n²)` làm lộ rằng inner loop chỉ đang hỏi “complement đã xuất hiện chưa?”, từ đó Hash Set loại quét lặp.
+Two Sum `O(n²)` làm lộ rằng inner vòng lặp (loop / 루프) chỉ đang hỏi “complement đã xuất hiện chưa?”, từ đó băm (hash / 해시) Set loại quét lặp.
 
-Range Sum brute force làm lộ rằng cùng prefix bị cộng lại nhiều lần, dẫn tới Prefix Sum.
+Phạm vi (range / 범위) Sum brute force làm lộ rằng cùng prefix bị cộng lại nhiều lần, dẫn tới Prefix Sum.
 
-Memoization làm lộ rằng nhiều nhánh recursion đang tính lại cùng state.
+Memoization làm lộ rằng nhiều nhánh recursion đang tính lại cùng trạng thái (state / 상태).
 
 ## 7. Hỏi: “Tôi đang tính lại cái gì?”
 
@@ -125,11 +128,11 @@ lookup tuyến tính lặp lại
 recompute aggregate sau mỗi update
 ```
 
-Structure thường xuất hiện để **materialize một summary** giúp tránh recomputation.
+Cấu trúc (structure / 구조) thường xuất hiện để **materialize một summary** giúp tránh recomputation.
 
-## 8. Thiết kế state
+## 8. Thiết kế trạng thái (state / 상태)
 
-Một state tốt phải đủ thông tin để tương lai được xác định, nhưng không giữ lịch sử thừa.
+Một trạng thái (state / 상태) tốt phải đủ thông tin để tương lai được xác định, nhưng không giữ lịch sử thừa.
 
 Ví dụ grid có key/door:
 
@@ -138,13 +141,13 @@ Ví dụ grid có key/door:
 (row, col, keyMask)     -> đủ hơn
 ```
 
-Nếu hai lịch sử khác nhau dẫn tới cùng state và từ đó mọi action/cost tương lai tương đương, ta có thể gộp chúng.
+Nếu hai lịch sử khác nhau dẫn tới cùng trạng thái (state / 상태) và từ đó mọi hành động (action / 동작)/chi phí (cost / 비용) tương lai tương đương, ta có thể gộp chúng.
 
-Đây là nền tảng của memoization, DP và state-space graph.
+Đây là nền tảng của memoization, DP và state-space đồ thị (graph / 그래프).
 
-## 9. Nhận diện state explosion
+## 9. Nhận diện trạng thái (state / 상태) explosion
 
-Nếu state có nhiều chiều:
+Nếu trạng thái (state / 상태) có nhiều chiều:
 
 ```text
 position × mask × time × resource
@@ -152,7 +155,7 @@ position × mask × time × resource
 
 không gian có thể tăng theo tích các miền.
 
-Trước khi code, ước lượng số state tối đa.
+Trước khi mã (code / 코드), ước lượng số trạng thái (state / 상태) tối đa.
 
 ```text
 n * 2^k
@@ -160,25 +163,25 @@ n * m * k
 V * stops
 ```
 
-Một DP transition `O(1)` vẫn vô dụng nếu số state là `10^12`.
+Một DP chuyển tiếp (transition / 전이) `O(1)` vẫn vô dụng nếu số trạng thái (state / 상태) là `10^12`.
 
-## 10. Dense hay Sparse State?
+## 10. Dense hay Sparse trạng thái (state / 상태)?
 
-Nếu phần lớn state có thể xuất hiện, array/table dense thường nhanh và memory predictable.
+Nếu phần lớn trạng thái (state / 상태) có thể xuất hiện, array/bảng (table / 테이블) dense thường nhanh và bộ nhớ (memory / 메모리) predictable.
 
-Nếu chỉ một phần rất nhỏ reachable, Hash Map/Set có thể tiết kiệm memory dù lookup đắt hơn.
+Nếu chỉ một phần rất nhỏ reachable, băm (hash / 해시) Map/Set có thể tiết kiệm bộ nhớ (memory / 메모리) dù lookup đắt hơn.
 
-Đừng chỉ hỏi “DP array hay map”; hãy hỏi density của reachable state.
+Đừng chỉ hỏi “DP array hay map”; hãy hỏi density của reachable trạng thái (state / 상태).
 
-## 11. Chọn representation trước thuật toán chi tiết
+## 11. Chọn biểu diễn (representation / 표현) trước thuật toán chi tiết
 
-Graph sparse:
+Đồ thị (graph / 그래프) sparse:
 
 ```text
 adjacency list
 ```
 
-Graph dense hoặc cần edge lookup nhanh:
+Đồ thị (graph / 그래프) dense hoặc cần edge lookup nhanh:
 
 ```text
 adjacency matrix
@@ -196,29 +199,29 @@ Key sparse/string:
 Hash Map
 ```
 
-Representation quyết định cost của operation tiếp theo.
+Biểu diễn (representation / 표현) quyết định chi phí (cost / 비용) của thao tác (operation / 연산) tiếp theo.
 
-## 12. Viết invariant trước loop phức tạp
+## 12. Viết bất biến (invariant / 불변식) trước vòng lặp (loop / 루프) phức tạp
 
-Nếu không thể nói loop đang bảo vệ điều gì, code rất dễ biến thành trial-and-error.
+Nếu không thể nói vòng lặp (loop / 루프) đang bảo vệ điều gì, mã (code / 코드) rất dễ biến thành trial-and-error.
 
-Binary search:
+Tìm kiếm nhị phân (binary search / 이진 탐색):
 
 > nếu answer tồn tại, nó vẫn nằm trong vùng ứng viên hiện tại.
 
-Sliding window:
+Sliding cửa sổ (window / 윈도우):
 
-> cửa sổ hiện tại luôn thỏa constraint; left là ranh giới nhỏ nhất/lớn nhất theo invariant đã chọn.
+> cửa sổ hiện tại luôn thỏa ràng buộc (constraint / 제약조건); left là ranh giới nhỏ nhất/lớn nhất theo bất biến (invariant / 불변식) đã chọn.
 
 Monotonic deque:
 
 > deque chứa đúng candidate chưa hết hạn, theo thứ tự giá trị đơn điệu.
 
-## 13. Invariant cần đủ mạnh
+## 13. bất biến (invariant / 불변식) cần đủ mạnh
 
 “Inorder prefix đã sorted” chưa đủ chứng minh sorting nếu không đảm bảo các phần tử không bị mất hoặc nhân đôi.
 
-Một invariant tốt thường gồm:
+Một bất biến (invariant / 불변식) tốt thường gồm:
 
 ```text
 shape/order property
@@ -228,15 +231,15 @@ candidate completeness
 
 Nó phải đủ mạnh để kết hợp với điều kiện dừng suy ra postcondition.
 
-## 14. Tách correctness và complexity
+## 14. Tách tính đúng đắn (correctness / 정확성) và độ phức tạp (complexity / 복잡도)
 
-Correctness trả lời:
+Tính đúng đắn (correctness / 정확성) trả lời:
 
 ```text
 vì sao answer đúng?
 ```
 
-Complexity trả lời:
+Độ phức tạp (complexity / 복잡도) trả lời:
 
 ```text
 phải làm bao nhiêu work và dùng bao nhiêu memory?
@@ -246,9 +249,9 @@ Một thuật toán có thể đúng nhưng quá chậm; hoặc nhanh nhưng sai
 
 Đừng dùng “Big-O tốt” như bằng chứng đúng đắn.
 
-## 15. Pattern chứng minh
+## 15. mẫu (pattern / 패턴) chứng minh
 
-Các pattern phổ biến:
+Các mẫu (pattern / 패턴) phổ biến:
 
 ```text
 loop invariant
@@ -262,7 +265,7 @@ optimal substructure
 residual/certificate proof
 ```
 
-Nhận diện pattern chứng minh thường quan trọng hơn nhận diện tên thuật toán.
+Nhận diện mẫu (pattern / 패턴) chứng minh thường quan trọng hơn nhận diện tên thuật toán.
 
 ## 16. Khi baseline O(n²), thử những câu hỏi nào?
 
@@ -289,11 +292,11 @@ n có ~40 không?                     -> meet-in-the-middle
 parameter nhỏ không?                -> FPT / bitmask DP
 ```
 
-Cây tìm kiếm lớn thường được giảm bằng cách hợp nhất state hoặc loại nhánh.
+Cây tìm kiếm lớn thường được giảm bằng cách hợp nhất trạng thái (state / 상태) hoặc loại nhánh.
 
-## 18. Khi có nhiều query
+## 18. Khi có nhiều truy vấn (query / 쿼리)
 
-Một query duy nhất có thể quét thẳng. `10^5` query trên cùng data thường đáng để preprocess.
+Một truy vấn (query / 쿼리) duy nhất có thể quét thẳng. `10^5` truy vấn (query / 쿼리) trên cùng dữ liệu (data / 데이터) thường đáng để preprocess.
 
 ```text
 sorting
@@ -307,20 +310,20 @@ suffix array
 Hãy so:
 
 \[
-C_{build}+Q\cdot C_{query}
+C_{bản dựng (build / 빌드)}+Q\cdot C_{truy vấn (query / 쿼리)}
 \]
 
 với cách không tiền xử lý.
 
-## 19. Khi vừa update vừa query
+## 19. Khi vừa cập nhật (update / 업데이트) vừa truy vấn (query / 쿼리)
 
-Nếu prefix sum bị phá bởi update, chuyển sang structure động như Fenwick/Segment Tree.
+Nếu prefix sum bị phá bởi cập nhật (update / 업데이트), chuyển sang cấu trúc (structure / 구조) động như Fenwick/Segment cây (tree / 트리).
 
-Nếu sorted array bị phá bởi insert/delete thường xuyên, chuyển sang balanced tree hoặc structure khác.
+Nếu sorted array bị phá bởi insert/delete thường xuyên, chuyển sang balanced cây (tree / 트리) hoặc cấu trúc (structure / 구조) khác.
 
-Update/query trade-off chính là lý do nhiều data structures tồn tại.
+Cập nhật (update / 업데이트)/truy vấn (query / 쿼리) sự đánh đổi (trade-off / 트레이드오프) chính là lý do nhiều dữ liệu (data / 데이터) structures tồn tại.
 
-## 20. Chú ý objective thay đổi thuật toán
+## 20. Chú ý mục tiêu (objective / 목표) thay đổi thuật toán
 
 Cùng dữ liệu interval:
 
@@ -331,17 +334,17 @@ minimum rooms                   -> sweep/heap
 union length                    -> merge/sweep
 ```
 
-Đừng nhận diện thuật toán chỉ từ “dữ liệu là interval”. Objective quyết định structure reasoning.
+Đừng nhận diện thuật toán chỉ từ “dữ liệu là interval”. mục tiêu (objective / 목표) quyết định cấu trúc (structure / 구조) lập luận (reasoning / 추론).
 
-## 21. Edge Case phải sinh từ assumption
+## 21. trường hợp biên (edge case / 경계 사례) phải sinh từ giả định (assumption / 가정)
 
-Nếu Dijkstra yêu cầu non-negative weight, test cạnh âm.
+Nếu Dijkstra yêu cầu non-negative weight, kiểm thử (test / 테스트) cạnh âm.
 
-Nếu binary search yêu cầu sorted array, test duplicates/boundaries.
+Nếu tìm kiếm nhị phân (binary search / 이진 탐색) yêu cầu sorted array, kiểm thử (test / 테스트) duplicates/boundaries.
 
-Nếu comparator yêu cầu transitive, test equal/tie cases.
+Nếu comparator yêu cầu transitive, kiểm thử (test / 테스트) equal/tie cases.
 
-Nếu recursion depth có thể `n`, test skewed tree/path graph.
+Nếu recursion độ sâu (depth / 깊이) có thể `n`, kiểm thử (test / 테스트) skewed cây (tree / 트리)/đường dẫn (path / 경로) đồ thị (graph / 그래프).
 
 Edge cases tốt nhất xuất phát từ **điều kiện mà proof sử dụng**.
 
@@ -361,15 +364,15 @@ mid = lo + (hi - lo) / 2
 
 Distance, prefix sum, count và multiplication phải được bound trước khi chọn kiểu số.
 
-## 23. Floating Point
+## 23. Floating điểm (point / 지점)
 
-Nếu comparator dùng epsilon thiếu nhất quán, có thể phá transitivity và làm sort/tree sai.
+Nếu comparator dùng epsilon thiếu nhất quán, có thể phá transitivity và làm sort/cây (tree / 트리) sai.
 
-Geometry predicate gần 0 có thể đổi dấu do rounding.
+Hình học (geometry / 기하학) predicate gần 0 có thể đổi dấu do rounding.
 
-Numeric semantics là một phần của specification.
+Numeric ngữ nghĩa (semantics / 의미론) là một phần của specification.
 
-## 24. Language-Specific Review
+## 24. Language-Specific rà soát (review / 검토)
 
 ### C
 
@@ -404,11 +407,11 @@ sort comparator
 UTF-16 semantics
 ```
 
-Một thuật toán trừu tượng đúng vẫn cần implementation phù hợp ngôn ngữ.
+Một thuật toán trừu tượng đúng vẫn cần hiện thực (implementation / 구현) phù hợp ngôn ngữ.
 
-## 25. Dry-Run như một state trace
+## 25. Dry-Run như một trạng thái (state / 상태) dấu vết (trace / 추적)
 
-Đừng chỉ đọc code bằng mắt. Tạo input nhỏ nhưng khó chịu và ghi:
+Đừng chỉ đọc mã (code / 코드) bằng mắt. Tạo đầu vào (input / 입력) nhỏ nhưng khó chịu và ghi:
 
 ```text
 lo/hi/mid
@@ -420,13 +423,13 @@ parent links
 window boundaries
 ```
 
-Mỗi transition phải giải thích được bằng invariant.
+Mỗi chuyển tiếp (transition / 전이) phải giải thích được bằng bất biến (invariant / 불변식).
 
 Nếu một biến cập nhật mà không biết nó bảo vệ tính chất nào, đó là dấu hiệu thiết kế chưa rõ.
 
-## 26. Test Oracle
+## 26. kiểm thử (test / 테스트) Oracle
 
-Với input nhỏ, dùng giải pháp chậm nhưng rõ ràng làm oracle.
+Với đầu vào (input / 입력) nhỏ, dùng giải pháp chậm nhưng rõ ràng làm oracle.
 
 ```text
 Dijkstra       vs Floyd-Warshall
@@ -436,11 +439,11 @@ MST            vs brute force nhỏ
 custom map     vs standard map
 ```
 
-Differential testing bắt implementation bug rất hiệu quả.
+Differential testing bắt hiện thực (implementation / 구현) bug rất hiệu quả.
 
 ## 27. Property-Based Testing
 
-Thay vì chỉ test output cụ thể, test tính chất:
+Thay vì chỉ kiểm thử (test / 테스트) đầu ra (output / 출력) cụ thể, kiểm thử (test / 테스트) tính chất:
 
 ```text
 sort output ordered + same multiset
@@ -449,11 +452,11 @@ DSU union(a,b) => find(a)==find(b)
 BFS dist[v] <= dist[u]+1 trên edge tree phù hợp
 ```
 
-Tính chất thường gần proof hơn example test.
+Tính chất thường gần proof hơn example kiểm thử (test / 테스트).
 
-## 28. Adversarial Test
+## 28. Adversarial kiểm thử (test / 테스트)
 
-Random input không thay thế input bệnh lý.
+Random đầu vào (input / 입력) không thay thế đầu vào (input / 입력) bệnh lý.
 
 ```text
 sorted/reverse/all equal
@@ -466,23 +469,23 @@ many equal event times
 maximum recursion depth
 ```
 
-Adversarial test kiểm tra đúng nơi asymptotic hoặc invariant dễ vỡ nhất.
+Adversarial kiểm thử (test / 테스트) kiểm tra đúng nơi asymptotic hoặc bất biến (invariant / 불변식) dễ vỡ nhất.
 
-## 29. Complexity Review toàn pipeline
+## 29. độ phức tạp (complexity / 복잡도) rà soát (review / 검토) toàn chuỗi xử lý (pipeline / 파이프라인)
 
-Nếu preprocessing `O(n log n)` và mỗi query `O(log n)`, với `Q` query:
+Nếu preprocessing `O(n log n)` và mỗi truy vấn (query / 쿼리) `O(log n)`, với `Q` truy vấn (query / 쿼리):
 
 \[
 O(n\log n + Q\log n)
 \]
 
-Nếu helper bên trong loop là `O(n)`, phải tính nó vào tổng.
+Nếu helper bên trong vòng lặp (loop / 루프) là `O(n)`, phải tính nó vào tổng.
 
-Nếu `sort()` được gọi trong mỗi iteration, complexity có thể lớn hơn trực giác rất nhiều.
+Nếu `sort()` được gọi trong mỗi iteration, độ phức tạp (complexity / 복잡도) có thể lớn hơn trực giác rất nhiều.
 
-Không chỉ phân tích “core loop”.
+Không chỉ phân tích “cốt lõi (core / 핵심) vòng lặp (loop / 루프)”.
 
-## 30. Space Review
+## 30. không gian (space / 공간) rà soát (review / 검토)
 
 Tính cả:
 
@@ -496,13 +499,13 @@ memo table
 adjacency edges
 ```
 
-`O(n)` memory có thể vẫn vượt limit vì hệ số lớn.
+`O(n)` bộ nhớ (memory / 메모리) có thể vẫn vượt limit vì hệ số lớn.
 
-## 31. Output Size Lower Bound
+## 31. đầu ra (output / 출력) kích thước (size / 크기) Lower Bound
 
-Nếu phải xuất `k` kết quả, complexity ít nhất `Ω(k)`.
+Nếu phải xuất `k` kết quả, độ phức tạp (complexity / 복잡도) ít nhất `Ω(k)`.
 
-Không thể yêu cầu liệt kê một triệu occurrence trong `O(log n)` chỉ vì index search nhanh.
+Không thể yêu cầu liệt kê một triệu occurrence trong `O(log n)` chỉ vì chỉ mục (index / 인덱스) tìm kiếm (search / 검색) nhanh.
 
 Luôn tách:
 
@@ -511,11 +514,11 @@ cost tìm vùng kết quả
 cost materialize output
 ```
 
-## 32. Stop Optimization khi đủ
+## 32. Stop tối ưu hóa (optimization / 최적화) khi đủ
 
-Nếu constraint cho phép `O(n²)` an toàn và solution đơn giản, đôi khi đó là lựa chọn tốt hơn một structure rất phức tạp.
+Nếu ràng buộc (constraint / 제약조건) cho phép `O(n²)` an toàn và solution đơn giản, đôi khi đó là lựa chọn tốt hơn một cấu trúc (structure / 구조) rất phức tạp.
 
-Độ phức tạp code tạo bug và maintenance cost.
+Độ phức tạp mã (code / 코드) tạo bug và maintenance chi phí (cost / 비용).
 
 Mục tiêu là **đủ tốt với proof rõ**, không phải luôn dùng thuật toán mạnh nhất biết được.
 
@@ -533,9 +536,9 @@ I/O
 network
 ```
 
-Đừng thay HashMap bằng custom structure chỉ từ trực giác nếu path đó chỉ chiếm 1% runtime.
+Đừng thay HashMap bằng custom cấu trúc (structure / 구조) chỉ từ trực giác nếu đường dẫn (path / 경로) đó chỉ chiếm 1% thời gian chạy (runtime / 런타임).
 
-## 34. Từ Interview Solution tới Production
+## 34. Từ Interview Solution tới môi trường vận hành (production / 운영 환경)
 
 Một solution algorithmic đúng còn cần:
 
@@ -550,9 +553,9 @@ backpressure
 failure recovery
 ```
 
-Production hardening không thay đổi proof lõi nhưng mở rộng contract của hệ thống.
+Môi trường vận hành (production / 운영 환경) hardening không thay đổi proof lõi nhưng mở rộng đặc tả hợp đồng (contract / 계약) của hệ thống.
 
-## 35. Viết Solution Note sau khi giải
+## 35. Viết Solution ghi chú (note / 노트) sau khi giải
 
 Một ghi chú tốt nên trả lời:
 
@@ -572,7 +575,7 @@ Cách này biến một bài giải đơn lẻ thành kiến thức tái sử d�
 
 ## 36. Postmortem khi sai
 
-Không chỉ sửa dòng code. Hãy phân loại lỗi:
+Không chỉ sửa dòng mã (code / 코드). Hãy phân loại lỗi:
 
 ```text
 mô hình sai
@@ -621,8 +624,10 @@ Có cách oracle nhỏ để đối chiếu không?
 
 ## Mô hình tư duy
 
-> Giải DSA là quá trình **giảm không gian bất định**: specification xác định câu hỏi, model xác định state, invariant loại bỏ trạng thái sai, data structure lưu thông tin hữu ích, còn thuật toán quyết định thứ tự khai thác thông tin đó.
+> Giải DSA là quá trình **giảm không gian bất định**: specification xác định câu hỏi, mô hình (model / 모델) xác định trạng thái (state / 상태), bất biến (invariant / 불변식) loại bỏ trạng thái sai, cấu trúc dữ liệu (data structure / 자료구조) lưu thông tin hữu ích, còn thuật toán quyết định thứ tự khai thác thông tin đó.
 
-Khi bí, đừng hỏi “mẫu này dùng thuật toán gì?”. Hãy quay lại hỏi: **baseline đang làm thừa công việc nào, state nào thực sự ảnh hưởng tương lai, invariant nào cho phép bỏ candidate, và structure nào materialize thông tin đó rẻ nhất?**
+Khi bí, đừng hỏi “mẫu này dùng thuật toán gì?”. Hãy quay lại hỏi: **baseline đang làm thừa công việc nào, trạng thái (state / 상태) nào thực sự ảnh hưởng tương lai, bất biến (invariant / 불변식) nào cho phép bỏ candidate, và cấu trúc (structure / 구조) nào materialize thông tin đó rẻ nhất?**
 
 Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Correctness & Invariants](../00_foundations/01_algorithm_correctness_and_invariants.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Choose the Right Data Structure](./00_choose_the_right_data_structure.md), [Cross-Language Testing](../80_language_implementations/03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

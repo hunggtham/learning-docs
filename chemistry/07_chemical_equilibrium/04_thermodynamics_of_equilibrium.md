@@ -1,8 +1,11 @@
 # Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng
 
+> **Mạch đọc:** Đọc **Nhiệt động lực học của cân bằng — từ Gibbs tới thành phần và pha cân bằng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ mức tiến triển phản ứng tới độ dốc của Gibbs** sang **Cân bằng bền cần nhiều hơn \(dG/d\xi=0\)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Cân bằng hóa học không phải một tập hợp quy tắc rời như `K`, `Q`, Le Châtelier, `Ksp`, `Ka` hay `Kf`. Tất cả đều có thể được nhìn trong một khuôn khổ duy nhất: **hệ thay đổi thành phần cho tới khi thế nhiệt động phù hợp đạt cực tiểu dưới các ràng buộc bảo toàn**.
 
-Trong điều kiện nhiệt độ và áp suất không đổi, thế đó là năng lượng tự do Gibbs \(G\). Cách nhìn này nối cân bằng phản ứng, cân bằng pha, hòa tan, acid–base, tạo phức và điện hóa vào cùng một ngôn ngữ.
+Trong điều kiện nhiệt độ và áp suất không đổi, thế đó là năng lượng tự do Gibbs \(G\). Cách nhìn này nối cân bằng phản ứng, cân bằng pha, hòa tan, acid–cơ sở (base / 기반), tạo phức và điện hóa vào cùng một ngôn ngữ.
 
 Chapter này **không định nghĩa lại đầy đủ** thế hóa học, hoạt độ, fugacity hay đại lượng mol riêng phần. Các công cụ đó đã được xây ở [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md). Ở đây mục tiêu là dùng chúng để trả lời bốn câu hỏi:
 
@@ -191,7 +194,7 @@ a_i=\frac{f_i}{f^\circ}
 
 Vì vậy hằng số biểu kiến dựa trên nồng độ có thể thay đổi khi lực ion, áp suất hoặc nền dung môi thay đổi.
 
-Điều này đặc biệt quan trọng trong nước biển, điện ly pin đậm đặc, acid/base đậm đặc, dung dịch protein và nước muối địa hóa.
+Điều này đặc biệt quan trọng trong nước biển, điện ly pin đậm đặc, acid/cơ sở (base / 기반) đậm đặc, dung dịch protein và nước muối địa hóa.
 
 ## Ảnh hưởng của nhiệt độ lên \(K\)
 
@@ -366,7 +369,7 @@ K_f'=\alpha_LK_f
 
 Vì \(\alpha_L\) phụ thuộc pH, khả năng liên kết biểu kiến cũng phụ thuộc pH dù \(K_f\) nội tại không đổi.
 
-Đây là cách cân bằng acid–base ghép vào [hóa học phối trí](../10_inorganic_chemistry/03_coordination_chemistry.md).
+Đây là cách cân bằng acid–cơ sở (base / 기반) ghép vào [hóa học phối trí](../10_inorganic_chemistry/03_coordination_chemistry.md).
 
 ## Thế điện hóa trong cân bằng
 
@@ -395,7 +398,7 @@ Trong dung dịch loãng:
 \Pi\approx cRT
 \]
 
-Đây là cùng framework thế hóa học, không phải một hiện tượng tách biệt khỏi cân bằng hóa học.
+Đây là cùng khung phần mềm (framework / 프레임워크) thế hóa học, không phải một hiện tượng tách biệt khỏi cân bằng hóa học.
 
 ## Cân bằng trong sinh học
 
@@ -442,9 +445,9 @@ Một bộ giải số không nên chỉ trả “đã hội tụ”. Cần ki�
 
 Một nghiệm của hệ phương trình có thể không phải cân bằng vật lý.
 
-### Ví dụ reasoning: vì sao nghiệm toán học chưa đủ?
+### Ví dụ lập luận (reasoning / 추론): vì sao nghiệm toán học chưa đủ?
 
-Một solver có thể tìm được nghiệm thỏa phương trình cân bằng nhưng đặt hệ ở nhánh siêu bền hoặc dùng hệ số hoạt độ ngoài phạm vi mô hình. Vì vậy validation phải kiểm tra cả **conservation + model validity + thermodynamic stability**, không chỉ residual nhỏ.
+Một solver có thể tìm được nghiệm thỏa phương trình cân bằng nhưng đặt hệ ở nhánh siêu bền hoặc dùng hệ số hoạt độ ngoài phạm vi mô hình. Vì vậy kiểm tra hợp lệ (validation / 검증) phải kiểm tra cả **conservation + mô hình (model / 모델) validity + thermodynamic stability**, không chỉ residual nhỏ.
 
 ## Những hiểu lầm thường gặp
 
@@ -484,7 +487,7 @@ thành phần + T + P
 → thành phần / pha cân bằng
 ```
 
-Các công cụ quen thuộc chỉ là nhiều giao diện cho cùng framework:
+Các công cụ quen thuộc chỉ là nhiều giao diện cho cùng khung phần mềm (framework / 프레임워크):
 
 ```text
 K và Q        → nhìn theo tọa độ phản ứng
@@ -496,3 +499,5 @@ G minimizer   → nhìn theo tối ưu toàn cục
 ```
 
 Xem tiếp: [Các mô hình acid–base](../08_acids_bases/00_acid_base_models.md), [Điện hóa](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md) và quay lại [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md) nếu cần activity/fugacity/nonideality chi tiết hơn.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

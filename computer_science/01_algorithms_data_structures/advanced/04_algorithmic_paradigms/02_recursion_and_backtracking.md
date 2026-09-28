@@ -1,15 +1,18 @@
 # Recursion và quay lui (backtracking)
+
+> **Mạch đọc:** Đọc **Recursion và quay lui (backtracking)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình tư duy** sang **hợp đồng đệ quy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Đệ quy và quay lui (Recursion & Backtracking / 재귀와 백트래킹)**
 
-Recursion không phải chỉ là “hàm gọi chính nó”. Nó là một cách mô hình hóa problem bằng **một contract nhỏ hơn của cùng loại problem**. quay lui xây trên recursion hoặc explicit stack để explore một không gian lựa chọn, nhưng thêm một ý tưởng quan trọng: sau khi thử một decision, ta có thể **undo** nó để thử decision khác.
+Recursion không phải chỉ là “hàm gọi chính nó”. Nó là một cách mô hình hóa bài toán (problem / 문제) bằng **một đặc tả hợp đồng (contract / 계약) nhỏ hơn của cùng loại bài toán (problem / 문제)**. quay lui xây trên recursion hoặc tường minh (explicit / 명시적) ngăn xếp (stack / 스택) để explore một không gian lựa chọn, nhưng thêm một ý tưởng quan trọng: sau khi thử một quyết định (decision / 결정), ta có thể **undo** nó để thử quyết định (decision / 결정) khác.
 
 Hai khái niệm thường đi cùng nhau nhưng không giống nhau. Duyệt cây có thể dùng đệ quy mà không phải quay lui theo nghĩa thử các lựa chọn. Bộ giải Sudoku thường vừa đệ quy vừa quay lui vì mỗi ứng viên tạo một nhánh có thể phải hoàn tác.
 
 ## Mô hình tư duy
 
-> Recursion là “giải subproblem rồi tin vào contract của subproblem”. quay lui là “choose → constrain → explore → undo”, tức DFS trên một trạng thái-space cây ngầm.
+> Recursion là “giải subproblem rồi tin vào đặc tả hợp đồng (contract / 계약) của subproblem”. quay lui là “choose → constrain → explore → undo”, tức DFS trên một trạng thái-space cây ngầm.
 
-Muốn hiểu một recursive thuật toán, đừng đọc bằng cách mô phỏng từng khung ngăn xếp ngay từ đầu. Hãy xác định contract của hàm trước.
+Muốn hiểu một recursive thuật toán, đừng đọc bằng cách mô phỏng từng khung ngăn xếp ngay từ đầu. Hãy xác định đặc tả hợp đồng (contract / 계약) của hàm trước.
 
 ## hợp đồng đệ quy
 
@@ -19,14 +22,14 @@ Giả sử hàm:
 solve(state)
 ```
 
-có contract:
+có đặc tả hợp đồng (contract / 계약):
 
-> trả lời đúng problem tương ứng với `state`.
+> trả lời đúng bài toán (problem / 문제) tương ứng với `state`.
 
 Một recursion đúng cần ba yếu tố:
 
 1. **trường hợp cơ sở** giải trực tiếp instance đủ nhỏ.
-2. **Recursive reduction** biến hiện tại problem thành một hay nhiều subproblems đúng cùng contract.
+2. **Recursive reduction** biến hiện tại bài toán (problem / 문제) thành một hay nhiều subproblems đúng cùng đặc tả hợp đồng (contract / 계약).
 3. **Progress measure** phải tiến gần trường hợp cơ sở để đảm bảo termination.
 
 Ví dụ cây nhị phân chiều cao:
@@ -66,7 +69,7 @@ show current combine logic tạo answer đúng
 
 ## ngăn xếp lời gọi thực sự giữ gì?
 
-Mỗi lời gọi hàm đang hoạt động cần lưu trạng thái để tiếp tục sau khi lời gọi đệ quy trả về: tham số, biến cục bộ, địa chỉ trả về và metadata của môi trường chạy.
+Mỗi lời gọi hàm đang hoạt động cần lưu trạng thái để tiếp tục sau khi lời gọi đệ quy trả về: tham số, biến cục bộ, địa chỉ trả về và siêu dữ liệu (metadata / 메타데이터) của môi trường chạy.
 
 Ví dụ:
 
@@ -77,17 +80,17 @@ int factorial(int n) {
 }
 ```
 
-Call `factorial(5)` phải giữ các pending multiplications `5 *`, `4 *`, `3 *`, `2 *` trên stack.
+Lời gọi (call / 호출) `factorial(5)` phải giữ các pending multiplications `5 *`, `4 *`, `3 *`, `2 *` trên ngăn xếp (stack / 스택).
 
-Độ sâu recursion là `O(n)`, nên bộ nhớ stack cũng `O(n)` dù arithmetic work chỉ `O(n)`.
+Độ sâu recursion là `O(n)`, nên bộ nhớ ngăn xếp (stack / 스택) cũng `O(n)` dù arithmetic công việc (work / 작업) chỉ `O(n)`.
 
 ## Tail recursion không phải lúc nào cũng tối ưu được
 
-Tail-hàm đệ quy có lời gọi đệ quy là thao tác cuối cùng. Một số languages/môi trường chạy có thể tối ưu thành loop, nhưng không nên giả định điều đó portable.
+Tail-hàm đệ quy có lời gọi đệ quy là thao tác cuối cùng. Một số languages/môi trường chạy có thể tối ưu thành vòng lặp (loop / 루프), nhưng không nên giả định điều đó portable.
 
-Java không đảm bảo tối ưu lời gọi đuôi. JavaScript specification/môi trường chạy hành vi cũng không nên được dựa vào như một optimization phổ biến. C trình biên dịch có thể optimize trong một số case nhưng không phải semantic bảo đảm chung.
+Java không đảm bảo tối ưu lời gọi đuôi. JavaScript specification/môi trường chạy hành vi cũng không nên được dựa vào như một tối ưu hóa (optimization / 최적화) phổ biến. C trình biên dịch có thể optimize trong một số trường hợp (case / 사례) nhưng không phải ngữ nghĩa (semantic / 의미적) bảo đảm chung.
 
-Nếu độ sâu có thể rất lớn, explicit loop/stack thường an toàn hơn.
+Nếu độ sâu có thể rất lớn, tường minh (explicit / 명시적) vòng lặp (loop / 루프)/ngăn xếp (stack / 스택) thường an toàn hơn.
 
 ## cây traversal: recursion khớp shape dữ liệu
 
@@ -98,7 +101,7 @@ Tree = empty
     hoặc Node(left Tree, value, right Tree)
 ```
 
-Vì vậy traversal recursive gần như trực tiếp từ structure:
+Vì vậy traversal recursive gần như trực tiếp từ cấu trúc (structure / 구조):
 
 ```java
 void inorder(Node x) {
@@ -109,11 +112,11 @@ void inorder(Node x) {
 }
 ```
 
-Ở đây recursion không phải trick; cách biểu diễn (representation) của data đã recursive.
+Ở đây recursion không phải trick; cách biểu diễn (representation / 표현) của dữ liệu (data / 데이터) đã recursive.
 
-## cây đệ quy và complexity
+## cây đệ quy và độ phức tạp (complexity / 복잡도)
 
-Một hàm đệ quy không thể phân tích chỉ bằng độ sâu. Phải xem hệ số phân nhánh và work mỗi nút.
+Một hàm đệ quy không thể phân tích chỉ bằng độ sâu. Phải xem hệ số phân nhánh và công việc (work / 작업) mỗi nút.
 
 Ví dụ naive Fibonacci:
 
@@ -121,7 +124,7 @@ Ví dụ naive Fibonacci:
 fib(n) = fib(n-1) + fib(n-2)
 ```
 
-tạo cây đệ quy có rất nhiều lặp lại các trạng thái. Complexity exponential không phải vì recursion bản thân chậm, mà vì cùng subproblem được recompute nhiều lần.
+tạo cây đệ quy có rất nhiều lặp lại các trạng thái. độ phức tạp (complexity / 복잡도) exponential không phải vì recursion bản thân chậm, mà vì cùng subproblem được recompute nhiều lần.
 
 Memoization biến trạng thái cây thành trạng thái DAG bằng cách reuse các kết quả.
 
@@ -179,7 +182,7 @@ for candidate in candidates(state):
 
 `undo` phải đối xứng với sự thay đổi dữ liệu. Nếu `apply()` thay đổi ba structures nhưng `undo()` chỉ restore hai, bug có thể chỉ xuất hiện ở branch sau.
 
-Trong code hệ thống thực tế, có ba strategy để quản trạng thái:
+Trong mã (code / 코드) hệ thống thực tế, có ba chiến lược (strategy / 전략) để quản trạng thái:
 
 ```text
 mutable + undo      -> ít allocation, dễ bug rollback
@@ -218,15 +221,15 @@ Với `n` distinct items, số permutations là:
 n!
 \]
 
-Dù pruning/check cực nhanh, nếu phải đầu ra tất cả permutations thì complexity ít nhất proportional `n!`.
+Dù pruning/check cực nhanh, nếu phải đầu ra tất cả permutations thì độ phức tạp (complexity / 복잡도) ít nhất proportional `n!`.
 
-quay lui không “làm exponential thành polynomial”. Nó giúp không gian search được biểu diễn gọn và cho phép prune branches không cần thiết.
+quay lui không “làm exponential thành polynomial”. Nó giúp không gian tìm kiếm (search / 검색) được biểu diễn gọn và cho phép prune branches không cần thiết.
 
 ## Pruning: loại cả cây con
 
 Nếu partial trạng thái đã không thể dẫn tới hợp lệ answer, các hậu duệ của nó không cần generate.
 
-Ví dụ N-Queens: nếu queen mới conflict với column hoặc diagonal đã dùng, toàn bộ placements tiếp theo dưới branch đó không hợp lệ.
+Ví dụ N-Queens: nếu queen mới xung đột (conflict / 충돌) với column hoặc diagonal đã dùng, toàn bộ placements tiếp theo dưới branch đó không hợp lệ.
 
 Thay vì quét board mỗi lần, maintain các ràng buộc:
 
@@ -252,11 +255,11 @@ main diagonals
 anti diagonals
 ```
 
-và compute available positions bằng bit các thao tác. Điều này giảm constant factor rất mạnh và tránh set/hash cấp phát.
+và compute available positions bằng bit các thao tác. Điều này giảm constant factor rất mạnh và tránh set/băm (hash / 해시) cấp phát.
 
-Nhưng bitmask không thay đổi trường hợp xấu nhất combinatorial nature; nó chỉ làm trạng thái transition rẻ hơn.
+Nhưng bitmask không thay đổi trường hợp xấu nhất combinatorial nature; nó chỉ làm trạng thái chuyển tiếp (transition / 전이) rẻ hơn.
 
-## phần tử trùng control phải gắn với trạng thái ngữ nghĩa (semantics)
+## phần tử trùng điều khiển (control / 제어) phải gắn với trạng thái ngữ nghĩa (semantics / 의미론)
 
 Giả sử đầu vào sorted có các phần tử trùng và ta generate combinations/permutations. quy tắc phổ biến:
 
@@ -264,13 +267,13 @@ Giả sử đầu vào sorted có các phần tử trùng và ta generate combin
 if (i > start && a[i] == a[i-1]) continue;
 ```
 
-Điểm quan trọng là **skip phần tử trùng ở cùng recursion độ sâu**, vì hai equal các ứng viên tại cùng choice position tạo cùng cây con semantic.
+Điểm quan trọng là **skip phần tử trùng ở cùng recursion độ sâu**, vì hai equal các ứng viên tại cùng choice position tạo cùng cây con ngữ nghĩa (semantic / 의미적).
 
 Nếu skip equal giá trị ở mọi độ sâu, ta có thể loại legitimate các lời giải có nhiều occurrences.
 
 quy tắc chống phần tử trùng phải derive từ câu hỏi:
 
-> Hai branches này có đại diện cùng decision tại trạng thái hiện tại hay không?
+> Hai branches này có đại diện cùng quyết định (decision / 결정) tại trạng thái hiện tại hay không?
 
 ## quay lui cho Combination Sum
 
@@ -282,13 +285,13 @@ candidate > remain -> không cần thử candidate lớn hơn nữa
 
 nếu các ứng viên sorted.
 
-Nếu các giá trị có negative numbers, reasoning này vỡ. Một branch đang overshoot có thể quay lại bằng số âm.
+Nếu các giá trị có negative numbers, lập luận (reasoning / 추론) này vỡ. Một branch đang overshoot có thể quay lại bằng số âm.
 
 Đây là ví dụ các giả định quyết định validity của pruning.
 
-## N-Queens: trạng thái-space reasoning
+## N-Queens: trạng thái-space lập luận (reasoning / 추론)
 
-Thay vì đặt queen ở bất kỳ cell nào, ta có thể mô hình mỗi row đặt đúng một queen. Điều đó giảm branching space ngay từ cách biểu diễn.
+Thay vì đặt queen ở bất kỳ cell nào, ta có thể mô hình mỗi row đặt đúng một queen. Điều đó giảm branching không gian (space / 공간) ngay từ cách biểu diễn.
 
 trạng thái tối thiểu chỉ cần:
 
@@ -300,7 +303,7 @@ occupied diagonals
 
 Không nhất thiết giữ full board nếu chỉ cần count các lời giải.
 
-Problem mô hình hóa tốt có thể quan trọng hơn micro-optimization trong DFS.
+Bài toán (problem / 문제) mô hình hóa tốt có thể quan trọng hơn micro-optimization trong DFS.
 
 ## Sudoku và ràng buộc propagation
 
@@ -308,7 +311,7 @@ Sudoku solver naive thử digits 1..9 cho mọi rỗng cell. Tốt hơn là main
 
 Một heuristic mạnh là chọn cell có **Minimum Remaining các giá trị (MRV)** — ít các ứng viên nhất.
 
-Tại sao? Nếu branch sắp fail, ta muốn fail sớm để prune cây con lớn.
+Tại sao? Nếu branch sắp thất bại (fail / 실패), ta muốn thất bại (fail / 실패) sớm để prune cây con lớn.
 
 Đây gọi là **fail-first principle** trong ràng buộc satisfaction.
 
@@ -324,13 +327,13 @@ candidate có khả năng fail sớm
 candidate có score tốt trước nếu branch-and-bound
 ```
 
-Nếu cần enumerate toàn bộ các lời giải, ordering chỉ thay sequence đầu ra, không giảm số hợp lệ các nút lá; pruning vẫn có thể giảm không hợp lệ các trạng thái.
+Nếu cần enumerate toàn bộ các lời giải, thứ tự (ordering / 순서) chỉ thay chuỗi (sequence / 시퀀스) đầu ra, không giảm số hợp lệ các nút lá; pruning vẫn có thể giảm không hợp lệ các trạng thái.
 
 ## quay lui và memoization
 
-Nếu tương lai answer chỉ phụ thuộc một canonical trạng thái, nhiều histories có thể merge.
+Nếu tương lai answer chỉ phụ thuộc một chuẩn gốc (canonical / 정본) trạng thái, nhiều histories có thể merge.
 
-Ví dụ recursive coin change có thể reach cùng trạng thái:
+Ví dụ recursive coin thay đổi (change / 변경) có thể reach cùng trạng thái:
 
 ```text
 (index, remainingAmount)
@@ -342,7 +345,7 @@ Lúc đó implicit cây thực chất là đồ thị với lặp lại các nú
 
 ### Dấu hiệu nên nghĩ DP
 
-Nếu bạn thấy cây đệ quy có nhiều calls với cùng parameters hoặc cùng logic trạng thái, hãy hỏi:
+Nếu bạn thấy cây đệ quy có nhiều calls với cùng parameters hoặc cùng lô-gic (logic / 논리) trạng thái, hãy hỏi:
 
 > Lịch sử đi tới trạng thái này có còn ảnh hưởng tương lai không?
 
@@ -356,15 +359,15 @@ DP xác định các lớp tương đương của histories thành các trạng 
 
 Một bài toán có thể dùng cả hai: quay lui để khám phá không gian cấu trúc, còn ghi nhớ (memoization) để hợp nhất các trạng thái lặp lại.
 
-Không nên phân loại bằng syntax “có recursion hay không”. Top-down DP cũng recursive.
+Không nên phân loại bằng cú pháp (syntax / 문법) “có recursion hay không”. Top-down DP cũng recursive.
 
 ## nhánh và cận
 
-**nhánh và cận (분기 한정법)** mở rộng quay lui cho optimization. Ngoài feasibility pruning, ta tính optimistic bound của best kết quả có thể đạt từ partial trạng thái.
+**nhánh và cận (분기 한정법)** mở rộng quay lui cho tối ưu hóa (optimization / 최적화). Ngoài feasibility pruning, ta tính optimistic bound của best kết quả có thể đạt từ partial trạng thái.
 
 Nếu bound còn tệ hơn best lời giải đã biết, prune branch.
 
-Ví dụ TSP chính xác solver có thể dùng cận dưới trên remaining route chi phí. Knapsack chính xác search có thể dùng fractional-knapsack cận trên (upper bound).
+Ví dụ TSP chính xác solver có thể dùng cận dưới trên remaining tuyến (route / 경로) chi phí. Knapsack chính xác tìm kiếm (search / 검색) có thể dùng fractional-knapsack cận trên (upper bound).
 
 Mô hình tư duy:
 
@@ -375,13 +378,13 @@ branch-and-bound  -> prune branches không thể beat incumbent
 
 ## Alpha-Beta như chuyên biệt pruning
 
-Trong minimax game cây, alpha-beta pruning loại branches không thể ảnh hưởng final decision do hiện tại lower/các cận trên.
+Trong minimax game cây, alpha-beta pruning loại branches không thể ảnh hưởng final quyết định (decision / 결정) do hiện tại lower/các cận trên.
 
 Nó là một ví dụ domain-specific của general idea: nếu partial thông tin đã chứng minh các hậu duệ không thể thay answer, skip whole cây con.
 
-## Explicit stack thay recursion
+## Tường minh (explicit / 명시적) ngăn xếp (stack / 스택) thay recursion
 
-Deep đồ thị/cây có thể tràn số ngăn xếp lời gọi. Ta có thể mô phỏng recursion bằng explicit stack.
+Deep đồ thị/cây có thể tràn số ngăn xếp lời gọi. Ta có thể mô phỏng recursion bằng tường minh (explicit / 명시적) ngăn xếp (stack / 스택).
 
 Nhưng với quay lui, frame cần lưu nhiều trạng thái hơn chỉ nút:
 
@@ -395,11 +398,11 @@ Cú pháp đệ quy tự động lưu bộ đếm lệnh và biến cục bộ t
 
 Đây là lý do iterative quay lui đôi khi phức tạp hơn iterative DFS đơn giản.
 
-## C: quyền sở hữu (ownership) và có thể thay đổi trạng thái
+## C: quyền sở hữu (ownership / 소유권) và có thể thay đổi trạng thái
 
-Trong C, hàm đệ quy cần rõ ai sở hữu các bộ đệm. Nếu mỗi lời gọi đệ quy `malloc` một trạng thái copy, overhead lớn và dễ leak khi early return.
+Trong C, hàm đệ quy cần rõ ai sở hữu các bộ đệm. Nếu mỗi lời gọi đệ quy `malloc` một trạng thái bản sao (copy / 복사), overhead lớn và dễ leak khi early return.
 
-mẫu có thể thay đổi shared các mảng + explicit undo thường hiệu quả hơn, nhưng cần discipline:
+mẫu có thể thay đổi dùng chung (shared / 공유) các mảng + tường minh (explicit / 명시적) undo thường hiệu quả hơn, nhưng cần discipline:
 
 ```c
 path[depth] = candidate;
@@ -410,7 +413,7 @@ used[candidate] = false;
 
 Nếu recursion có multiple exit các đường đi, cleanup phải nhất quán.
 
-## Java: collections và copy chi phí
+## Java: collections và bản sao (copy / 복사) chi phí
 
 Trong Java, mẫu:
 
@@ -432,9 +435,9 @@ ans.push([...path]);
 
 cho snapshot.
 
-Deep recursive search còn có call-stack limit phụ thuộc engine. Với đầu vào độ sâu không kiểm soát, explicit stack hoặc iterative design an toàn hơn.
+Deep recursive tìm kiếm (search / 검색) còn có call-stack limit phụ thuộc engine. Với đầu vào độ sâu không kiểm soát, tường minh (explicit / 명시적) ngăn xếp (stack / 스택) hoặc iterative thiết kế (design / 설계) an toàn hơn.
 
-## Complexity của quay lui
+## Độ phức tạp (complexity / 복잡도) của quay lui
 
 Một cách estimate tốt hơn chỉ nói “exponential” là:
 
@@ -456,19 +459,19 @@ Ví dụ generate all `n^n` board configurations rồi kiểm N-Queens là vô l
 
 **Quên hoàn tác thay đổi dữ liệu.** Nhánh sau sẽ thừa trạng thái của nhánh trước.
 
-**Undo sai thứ tự.** Nếu mutations phụ thuộc nhau, restore phải đối xứng reverse order.
+**Undo sai thứ tự.** Nếu mutations phụ thuộc nhau, restore phải đối xứng reverse thứ tự (order / 순서).
 
 **trường hợp cơ sở quá sớm/quá muộn.** Có thể miss lời giải hoặc recurse ngoài bounds.
 
 **Pruning không có chứng minh.** Có thể loại hợp lệ các lời giải.
 
-**Copy trạng thái quá nhiều.** Correct nhưng chậm/memory-heavy.
+**bản sao (copy / 복사) trạng thái quá nhiều.** Correct nhưng chậm/memory-heavy.
 
-**Dùng toàn cục có thể thay đổi trạng thái nhưng không reset giữa runs.** Test riêng lẻ pass, batch fail.
+**Dùng toàn cục có thể thay đổi trạng thái nhưng không reset giữa runs.** kiểm thử (test / 테스트) riêng lẻ pass, batch thất bại (fail / 실패).
 
 **Không xử lý các phần tử trùng đúng độ sâu.** Sinh phần tử trùng answers hoặc bỏ mất answers.
 
-**Assume recursion luôn an toàn.** Deep đầu vào có thể stack tràn số.
+**Assume recursion luôn an toàn.** Deep đầu vào có thể ngăn xếp (stack / 스택) tràn số.
 
 ## kiểm thử quay lui
 
@@ -481,7 +484,7 @@ permutations distinct -> n!
 
 Kiểm mỗi đầu ra thỏa các ràng buộc và không phần tử trùng nếu ngữ nghĩa yêu cầu unique.
 
-Một kỹ thuật mạnh là dùng brute-force generator đơn giản làm oracle cho small `n`, rồi so sánh optimized pruning version.
+Một kỹ thuật mạnh là dùng brute-force generator đơn giản làm oracle cho small `n`, rồi so sánh optimized pruning phiên bản (version / 버전).
 
 Ngoài final answers, có thể assert trạng thái restored sau mỗi lời gọi đệ quy trong gỡ lỗi xây dựng.
 
@@ -489,4 +492,6 @@ Ngoài final answers, có thể assert trạng thái restored sau mỗi lời g�
 
 > Quay lui không phải “thử tất cả một cách mù quáng”. Nó là **thiết kế không gian tìm kiếm (search-space engineering)**: chọn cách biểu diễn trạng thái, thứ tự ứng viên, bất biến và cận sao cho có thể loại bỏ cả cây con càng sớm càng tốt mà vẫn không bỏ sót nghiệm.
 
-Khi một problem có choices lồng nhau, hãy hỏi: trạng thái tối thiểu là gì, branch nào có thể prove impossible sớm, có lặp lại trạng thái để memoize không, và kích thước đầu ra itself có exponential không. Những câu hỏi đó quan trọng hơn việc nhớ một template recursion cụ thể.
+Khi một bài toán (problem / 문제) có choices lồng nhau, hãy hỏi: trạng thái tối thiểu là gì, branch nào có thể prove impossible sớm, có lặp lại trạng thái để memoize không, và kích thước đầu ra itself có exponential không. Những câu hỏi đó quan trọng hơn việc nhớ một template recursion cụ thể.
+
+> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

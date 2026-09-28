@@ -1,5 +1,8 @@
 # 12. Các tình huống đời sống và checklist tra cứu
 
+> **Mạch đọc:** Đặt **12. Các tình huống đời sống và checklist tra cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Công ty trả thiếu lương hoặc chưa trả lương** sang **2. Làm overtime nhưng không hiểu cách tính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## 1. Công ty trả thiếu lương hoặc chưa trả lương
 
 Đừng bắt đầu bằng tranh luận cảm tính. Hãy dựng hồ sơ sự kiện:
@@ -236,6 +239,8 @@ Không lấy điều kiện F-5 của một người khác làm điều kiện c
 
 Quốc tịch là lĩnh vực có hậu quả lâu dài, nên không dựa vào checklist community cũ.
 
-## 18. Cách dùng file này
+## 18. Cách dùng tệp (file / 파일) này
 
 Mỗi checklist là **đường dẫn nghiên cứu**, không phải câu trả lời pháp lý. Sau khi đi hết checklist, bạn mới có dữ liệu đủ tốt để hỏi cơ quan, tư vấn viên hoặc luật sư một câu hỏi chính xác.
+
+> **Bàn giao:** Sau **18. Cách dùng tệp (file / 파일) này**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

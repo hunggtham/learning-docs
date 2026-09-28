@@ -1,5 +1,8 @@
 # Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)
 
+> **Mạch đọc:** Đọc **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ổn định sau HCI: tăng trưởng không thể chỉ dựa vào lượng đầu tư** sang **Tái cơ cấu: vốn và công suất phải được phân bổ lại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Bước vào thập niên 1980, Hàn Quốc đã có nhà máy thép, xưởng đóng tàu, nhà máy ô tô, tổ hợp hóa dầu và cơ sở điện tử quy mô lớn. Nhưng thành công của chiến lược HCI trong thập niên 1970 đi cùng lạm phát, đòn bẩy cao, công suất dư thừa và một số méo mó trong phân bổ vốn. Vì vậy bài toán chính sách thay đổi: **không còn chỉ là xây thêm công suất, mà phải làm cho công suất hiện có hiệu quả và bền vững về tài chính hơn**.
 
 Thập niên 1980 vì thế là cây cầu giữa thời kỳ nhà nước phát triển (developmental state) và nền kinh tế dựa nhiều hơn vào cạnh tranh, tín hiệu thị trường, công nghệ và kỷ luật tài chính.
@@ -36,7 +39,7 @@ Các cơ chế tín dụng định hướng và quan hệ ngân hàng vẫn tồ
 
 Điểm này rất quan trọng để hiểu rủi ro thập niên 1990. Doanh nghiệp mở rộng nhanh hơn tốc độ trưởng thành của quản trị rủi ro, giám sát tài chính và cơ chế phá sản.
 
-> **Mental Model:** tự do hóa không phải công tắc `nhà nước → thị trường`; nó là quá trình thay đổi dần giá cả, thể chế và các giới hạn.
+> **mô hình tư duy (mental model / 사고 모델):** tự do hóa không phải công tắc `nhà nước → thị trường`; nó là quá trình thay đổi dần giá cả, thể chế và các giới hạn.
 
 ## Vì sao tín hiệu thị trường ngày càng quan trọng khi nền kinh tế phức tạp hơn?
 
@@ -137,10 +140,12 @@ Khi kiểm soát tài chính giảm và doanh nghiệp tiếp cận nhiều ngu�
 
 Đây là bài học quan trọng: **tự do hóa tài chính (financial liberalization / 금융자율화)** không tự động tạo kỷ luật thị trường. Kỷ luật chỉ hoạt động khi người cho vay chịu tổn thất thật, thông tin đủ tốt, giám sát đủ mạnh và cơ chế phá sản có thể xử lý doanh nghiệp yếu.
 
-## Connection — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?
+## Liên kết (connection / 연결) — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?
 
 Bước sang thập niên 1990, Hàn Quốc đã có doanh nghiệp toàn cầu hơn, thị trường vốn lớn hơn và khả năng vay quốc tế tốt hơn. Chính các thành tựu này mở ra cơ hội mở rộng nhanh, nhưng cũng cho phép doanh nghiệp và tổ chức tài chính vay nhiều hơn, kể cả bằng ngoại tệ và kỳ hạn ngắn.
 
 Chương tiếp theo, [thập niên 1990 và khủng hoảng 1997](./05_1990s_globalization_and_1997_crisis.md), giải thích vì sao tăng trưởng, tự do hóa tài chính, đòn bẩy và chênh lệch kỳ hạn có thể kết hợp thành khủng hoảng.
 
-> **Mental Model cuối:** thập niên 1980 là giai đoạn Hàn Quốc bắt đầu chuyển từ “huy động càng nhiều vốn càng tốt” sang “vốn phải được sử dụng hiệu quả hơn”. Thị trường, công nghệ, năng suất và quản trị trở nên quan trọng hơn; đồng thời tự do hóa tạo ra những rủi ro mới mà hệ thống giám sát lúc đó chưa hoàn toàn theo kịp.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** thập niên 1980 là giai đoạn Hàn Quốc bắt đầu chuyển từ “huy động càng nhiều vốn càng tốt” sang “vốn phải được sử dụng hiệu quả hơn”. Thị trường, công nghệ, năng suất và quản trị trở nên quan trọng hơn; đồng thời tự do hóa tạo ra những rủi ro mới mà hệ thống giám sát lúc đó chưa hoàn toàn theo kịp.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

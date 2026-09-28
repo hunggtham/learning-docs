@@ -1,12 +1,15 @@
-# Các mô hình acid–base — Arrhenius, Brønsted–Lowry và Lewis
+# Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis
 
-> **Hóa học acid–base (acid–base chemistry / 산염기 화학)** không có một định nghĩa duy nhất phù hợp cho mọi tình huống. Ba mô hình quan trọng — Arrhenius, Brønsted–Lowry và Lewis — mở rộng dần phạm vi từ ion trong dung dịch nước tới chuyển proton và tương tác cặp electron.
+> **Mạch đọc:** Đọc **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cần nhiều mô hình acid–cơ sở (base / 기반)?** sang **Mô hình Arrhenius**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Vì sao cần nhiều mô hình acid–base?
+
+> **Hóa học acid–cơ sở (base / 기반)** không có một định nghĩa duy nhất phù hợp cho mọi tình huống. Ba mô hình quan trọng — Arrhenius, Brønsted–Lowry và Lewis — mở rộng dần phạm vi từ ion trong dung dịch nước tới chuyển proton và tương tác cặp electron.
+
+## Vì sao cần nhiều mô hình acid–cơ sở (base / 기반)?
 
 Một mô hình hữu ích khi nó giải thích tốt một nhóm hiện tượng nhất định.
 
-Mô hình Arrhenius rất trực quan cho phản ứng trung hòa trong nước. Mô hình Brønsted–Lowry mở rộng sang mọi quá trình chuyển proton. Mô hình Lewis rộng hơn nữa khi xem acid–base như sự cho và nhận cặp electron, kể cả khi không có proton.
+Mô hình Arrhenius rất trực quan cho phản ứng trung hòa trong nước. Mô hình Brønsted–Lowry mở rộng sang mọi quá trình chuyển proton. Mô hình Lewis rộng hơn nữa khi xem acid–cơ sở (base / 기반) như sự cho và nhận cặp electron, kể cả khi không có proton.
 
 Có thể hình dung phạm vi:
 
@@ -22,7 +25,7 @@ Mô hình rộng hơn không làm mô hình hẹp hơn trở thành sai; nó ch�
 
 ## Mô hình Arrhenius
 
-Trong dung dịch nước, **acid Arrhenius (Arrhenius acid)** làm tăng hoạt độ của hydronium, còn **base Arrhenius (Arrhenius base)** làm tăng hoạt độ của hydroxide.
+Trong dung dịch nước, **acid Arrhenius (Arrhenius acid)** làm tăng hoạt độ của hydronium, còn **cơ sở (base / 기반) Arrhenius (Arrhenius base)** làm tăng hoạt độ của hydroxide.
 
 HCl trong nước:
 
@@ -42,17 +45,17 @@ Phản ứng trung hòa:
 H_3O^++OH^-\rightarrow2H_2O
 \]
 
-Mô hình này rất hiệu quả trong hóa học dung dịch nước nhưng không mô tả tự nhiên những base như `NH3` nếu ta chỉ yêu cầu base phải tạo `OH-` bằng phân ly trực tiếp.
+Mô hình này rất hiệu quả trong hóa học dung dịch nước nhưng không mô tả tự nhiên những cơ sở (base / 기반) như `NH3` nếu ta chỉ yêu cầu cơ sở (base / 기반) phải tạo `OH-` bằng phân ly trực tiếp.
 
 ## Mô hình Brønsted–Lowry
 
-**Acid Brønsted (Brønsted acid)** là chất cho proton; **base Brønsted (Brønsted base)** là chất nhận proton.
+**Acid Brønsted (Brønsted acid)** là chất cho proton; **cơ sở (base / 기반) Brønsted (Brønsted base)** là chất nhận proton.
 
 \[
 HA+B\rightleftharpoons A^-+HB^+
 \]
 
-Trong đó `HA/A-` là một **cặp acid–base liên hợp (conjugate acid–base pair)** và `HB+/B` là cặp còn lại.
+Trong đó `HA/A-` là một **cặp acid–cơ sở (base / 기반) liên hợp (conjugate acid–base pair)** và `HB+/B` là cặp còn lại.
 
 Nếu acid mất proton:
 
@@ -60,9 +63,9 @@ Nếu acid mất proton:
 HA\rightarrow H^++A^-
 \]
 
-thì `A-` là base liên hợp.
+thì `A-` là cơ sở (base / 기반) liên hợp.
 
-Nếu base nhận proton:
+Nếu cơ sở (base / 기반) nhận proton:
 
 \[
 B+H^+\rightarrow BH^+
@@ -70,9 +73,9 @@ B+H^+\rightarrow BH^+
 
 thì `BH+` là acid liên hợp.
 
-Một acid mạnh thường có base liên hợp yếu vì cân bằng đã nghiêng mạnh về phía mất proton.
+Một acid mạnh thường có cơ sở (base / 기반) liên hợp yếu vì cân bằng đã nghiêng mạnh về phía mất proton.
 
-## Một chất có thể vừa là acid vừa là base
+## Một chất có thể vừa là acid vừa là cơ sở (base / 기반)
 
 Nước có thể nhận proton:
 
@@ -80,7 +83,7 @@ Nước có thể nhận proton:
 HCl+H_2O\rightarrow H_3O^++Cl^-
 \]
 
-nên đóng vai trò base.
+nên đóng vai trò cơ sở (base / 기반).
 
 Nước cũng có thể cho proton:
 
@@ -92,11 +95,11 @@ nên đóng vai trò acid.
 
 Những tiểu phần có khả năng vừa cho vừa nhận proton được gọi là **lưỡng tính proton (amphiprotic)**. `HCO3-`, `H2PO4-` và nhiều amino acid là các ví dụ quan trọng.
 
-Vai trò acid hay base phụ thuộc đối tác phản ứng và môi trường, không phải nhãn cố định tuyệt đối.
+Vai trò acid hay cơ sở (base / 기반) phụ thuộc đối tác phản ứng và môi trường, không phải nhãn cố định tuyệt đối.
 
 ## Mô hình Lewis
 
-**Acid Lewis (Lewis acid / 루이스 산)** nhận cặp electron; **base Lewis (Lewis base / 루이스 염기)** cho cặp electron.
+**Acid Lewis (Lewis acid / 루이스 산)** nhận cặp electron; **cơ sở (base / 기반) Lewis (Lewis base / 루이스 염기)** cho cặp electron.
 
 Ví dụ:
 
@@ -106,11 +109,11 @@ BF_3+NH_3\rightarrow F_3B\leftarrow NH_3
 
 `NH3` cho cặp electron không liên kết trên nitrogen; `BF3` nhận cặp electron tại boron thiếu electron.
 
-Không có proton nào được chuyển, nhưng phản ứng vẫn là acid–base theo Lewis.
+Không có proton nào được chuyển, nhưng phản ứng vẫn là acid–cơ sở (base / 기반) theo Lewis.
 
 ## Liên hệ với hóa học phối trí
 
-Ion kim loại thường là acid Lewis, còn phối tử là base Lewis.
+Ion kim loại thường là acid Lewis, còn phối tử là cơ sở (base / 기반) Lewis.
 
 Ví dụ:
 
@@ -120,11 +123,11 @@ Cu^{2+}+4NH_3\rightleftharpoons[Cu(NH_3)_4]^{2+}
 
 Nitrogen trong ammonia cho mật độ electron vào tâm kim loại.
 
-Nhờ cách nhìn này, hóa học acid–base nối trực tiếp với hóa học phối trí, xúc tác và cơ chế phản ứng hữu cơ.
+Nhờ cách nhìn này, hóa học acid–cơ sở (base / 기반) nối trực tiếp với hóa học phối trí, xúc tác và cơ chế phản ứng hữu cơ.
 
 ## Mô hình Brønsted cũng có thể nhìn bằng obitan
 
-Trong một phản ứng chuyển proton, cặp electron của base được cho vào obitan phản liên kết của liên kết X–H trong acid.
+Trong một phản ứng chuyển proton, cặp electron của cơ sở (base / 기반) được cho vào obitan phản liên kết của liên kết X–H trong acid.
 
 Có thể hình dung:
 
@@ -196,7 +199,7 @@ pK_a=-\log K_a
 
 ## Những yếu tố làm acid mạnh hơn
 
-Cách suy luận hữu ích nhất là xem base liên hợp được ổn định tới mức nào.
+Cách suy luận hữu ích nhất là xem cơ sở (base / 기반) liên hợp được ổn định tới mức nào.
 
 Các yếu tố quan trọng gồm:
 
@@ -216,15 +219,15 @@ Trong nước, những acid mạnh hơn hydronium đều chuyển proton gần n
 
 Hiện tượng này gọi là **hiệu ứng san bằng (leveling effect)**.
 
-Muốn phân biệt những acid cực mạnh, có thể cần dung môi ít base hơn hoặc thang độ acid khác.
+Muốn phân biệt những acid cực mạnh, có thể cần dung môi ít cơ sở (base / 기반) hơn hoặc thang độ acid khác.
 
 Điều này cho thấy độ mạnh acid quan sát được phụ thuộc môi trường dung môi, không phải chỉ cấu trúc của phân tử cô lập.
 
 ## Liên hệ HSAB
 
-Trong hóa học Lewis, có thể dùng khái niệm **acid–base cứng và mềm (Hard and Soft Acids and Bases, HSAB)**.
+Trong hóa học Lewis, có thể dùng khái niệm **acid–cơ sở (base / 기반) cứng và mềm (Hard and Soft Acids and Bases, HSAB)**.
 
-Acid cứng như `H+`, `Mg2+`, `Al3+` thường ưu tiên base cứng như donor oxygen.
+Acid cứng như `H+`, `Mg2+`, `Al3+` thường ưu tiên cơ sở (base / 기반) cứng như donor oxygen.
 
 Acid mềm như `Ag+`, `Hg2+`, `Pd2+` thường tương tác thuận lợi hơn với donor mềm như sulfur hoặc phosphorus.
 
@@ -236,21 +239,21 @@ HSAB là mô hình định tính hữu ích, không thay thế tính toán nhi�
 
 Không. Acid Lewis như `BF3` không cần hydrogen.
 
-### “Base luôn phải chứa OH”
+### “cơ sở (base / 기반) luôn phải chứa OH”
 
-Không. `NH3` là base Brønsted và base Lewis dù không chứa nhóm hydroxide.
+Không. `NH3` là cơ sở (base / 기반) Brønsted và cơ sở (base / 기반) Lewis dù không chứa nhóm hydroxide.
 
 ### “H+ bơi tự do trong nước”
 
 Không. Proton được solvat hóa rất mạnh; `H+` chỉ là ký hiệu rút gọn.
 
-### “Chỉ có một định nghĩa acid–base đúng”
+### “Chỉ có một định nghĩa acid–cơ sở (base / 기반) đúng”
 
 Không. Mỗi mô hình có phạm vi và mức trừu tượng khác nhau.
 
 ## Mô hình tư duy
 
-Hóa học acid–base có thể nhìn theo ba lớp:
+Hóa học acid–cơ sở (base / 기반) có thể nhìn theo ba lớp:
 
 ```text
 Arrhenius: thay đổi H3O+/OH− trong nước
@@ -261,3 +264,5 @@ Lewis: cho–nhận cặp electron
 Khi gặp một phản ứng mới, hãy chọn mô hình đủ rộng để giải thích hiện tượng nhưng không phức tạp hơn mức cần thiết.
 
 Xem tiếp: [pH và độ mạnh acid](./01_ph_and_acid_strength.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ph and acid strength](./01_ph_and_acid_strength.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

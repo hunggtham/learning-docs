@@ -1,5 +1,8 @@
 # Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành
 
+> **Mạch đọc:** Đặt **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Cây câu hỏi** sang **2. Câu hỏi phải dẫn tới dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Mục tiêu của chương này là biến kiến thức thành một **quy trình nghiên cứu có thể lặp lại**. Thay vì đọc tin rồi phản ứng cảm tính, người đọc bắt đầu từ câu hỏi, chọn nguồn dữ liệu phù hợp, phân biệt dữ kiện, ước tính và ý kiến, xây cây động lực rồi cập nhật luận điểm theo lịch rõ ràng. Thuật ngữ tiếng Anh chỉ được giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
 # Phần I — Bắt đầu bằng câu hỏi
@@ -89,7 +92,7 @@ Tên cổng dữ liệu hoặc quy định cụ thể có thể thay đổi, nê
 
 ## 9. Giả định
 
-**Giả định (assumption)** là đầu vào do người nghiên cứu tự đặt vào mô hình.
+**giả định (assumption / 가정)** là đầu vào do người nghiên cứu tự đặt vào mô hình.
 
 Ví dụ:
 
@@ -431,7 +434,7 @@ Quy định phải ghi ngày hiệu lực và nguồn. Không dùng ghi chú cũ
 
 ## 42. Điều kiện vô hiệu hóa
 
-**Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy cơ chế của luận điểm không còn đúng.
+**Điều kiện vô hiệu hóa (invalidation / 무효화)** là bằng chứng cho thấy cơ chế của luận điểm không còn đúng.
 
 Giá đi ngược vài phiên chưa chắc là bằng chứng vô hiệu hóa.
 
@@ -516,7 +519,7 @@ Logic xác định quy mô vị thế
 06_thesis_log.md
 ```
 
-Tên file có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
+Tên tệp (file / 파일) có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
 
 ## 52. Bảng theo dõi quốc gia
 
@@ -601,3 +604,5 @@ Bằng chứng nào sẽ làm tôi đổi ý?
 ```
 
 Khi quy trình này được lặp lại đều đặn, thư viện kiến thức trở thành một hệ thống hỗ trợ ra quyết định thay vì chỉ là kho tài liệu.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

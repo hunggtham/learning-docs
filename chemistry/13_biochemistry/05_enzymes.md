@@ -1,5 +1,8 @@
 # Enzyme — chất xúc tác phân tử và kiểm soát động học
 
+> **Mạch đọc:** Đọc **Enzyme — chất xúc tác phân tử và kiểm soát động học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nhiệt động lực học và động học — nguyên lý đầu tiên** sang **Vị trí hoạt động là một vi môi trường hóa học**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Enzyme (효소)** là chất xúc tác sinh học làm tăng tốc phản ứng bằng cách hạ hàng rào năng lượng tự do hoạt hóa nhưng không thay đổi nhiệt động lực học tổng thể của phản ứng. Phần lớn enzyme là protein, nhưng RNA xúc tác (**ribozyme**) cho thấy khả năng xúc tác là tính chất của cấu trúc và động lực học phân tử, không phải đặc quyền của protein.
 
 Enzyme không “cung cấp năng lượng” cho phản ứng. Nó tạo một vi môi trường trong đó trạng thái chuyển tiếp có thể đạt được qua con đường có hàng rào thấp hơn.
@@ -7,7 +10,7 @@ Enzyme không “cung cấp năng lượng” cho phản ứng. Nó tạo một 
 Trước khi đọc sâu, nên nối lại các prerequisite:
 
 - [Năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md) để hiểu `ΔG`, cân bằng và hàng rào năng lượng;
-- [Động học phản ứng](../06_chemical_kinetics/00_reaction_rates.md) và [cơ chế phản ứng](../06_chemical_kinetics/02_reaction_mechanisms.md) để hiểu rate law, trạng thái chuyển tiếp và trạng thái ổn định;
+- [Động học phản ứng](../06_chemical_kinetics/00_reaction_rates.md) và [cơ chế phản ứng](../06_chemical_kinetics/02_reaction_mechanisms.md) để hiểu tỷ lệ (rate / 비율) law, trạng thái chuyển tiếp và trạng thái ổn định;
 - [Acid–base](../08_acids_bases/00_acid_base_models.md) để hiểu proton transfer và `pKa` cục bộ;
 - [Hóa học phối trí](../10_inorganic_chemistry/03_coordination_chemistry.md) để hiểu cofactor kim loại;
 - [Lực liên phân tử](../02_chemical_bonding/07_intermolecular_forces.md) để hiểu nhận diện cơ chất và ổn định trạng thái chuyển tiếp.
@@ -61,7 +64,7 @@ Hai chất phản ứng trong dung dịch phải va chạm với hình học ph�
 
 Điều này không có nghĩa “đưa gần nhau là đủ”; cấu dạng và hướng orbital vẫn phải phù hợp với cơ chế.
 
-### Xúc tác acid–base tổng quát
+### Xúc tác acid–cơ sở (base / 기반) tổng quát
 
 Residue như histidine, aspartate, glutamate, lysine, cysteine hoặc tyrosine có thể cho hoặc nhận proton.
 
@@ -76,7 +79,7 @@ Enzyme có thể tạm thời tạo liên kết cộng hóa trị với cơ ch�
 Ví dụ:
 
 - serine protease tạo chất trung gian acyl–enzyme;
-- lysine có thể tạo base Schiff;
+- lysine có thể tạo cơ sở (base / 기반) Schiff;
 - cysteine thiolate có thể làm tác nhân ái nhân mạnh.
 
 Liên kết tạm thời phải được phá ở bước sau để tái sinh enzyme; nếu không, enzyme trở thành thuốc thử hóa lượng chứ không còn là chất xúc tác.
@@ -307,7 +310,7 @@ Một số chất ức chế tạo liên kết cộng hóa trị hoặc làm enz
 
 Trong trường hợp này, hằng số cân bằng `Ki` đơn giản không đủ; các tham số phụ thuộc thời gian như `kinact` và hằng số liên kết biểu kiến trở nên quan trọng.
 
-Nhiều thuốc khai thác ức chế cộng hóa trị có chủ đích, nhưng trade-off là phải đạt độ chọn lọc cao để tránh phản ứng ngoài mục tiêu.
+Nhiều thuốc khai thác ức chế cộng hóa trị có chủ đích, nhưng sự đánh đổi (trade-off / 트레이드오프) là phải đạt độ chọn lọc cao để tránh phản ứng ngoài mục tiêu.
 
 ## Lineweaver–Burk và giới hạn của tuyến tính hóa
 
@@ -364,7 +367,7 @@ Vì vậy “pH tối ưu” không phải một con số cố định độc l�
 
 ## Phụ thuộc nhiệt độ
 
-Tốc độ phản ứng sơ cấp thường tăng theo nhiệt độ theo logic Arrhenius/Eyring.
+Tốc độ phản ứng sơ cấp thường tăng theo nhiệt độ theo lô-gic (logic / 논리) Arrhenius/Eyring.
 
 Nhưng protein đồng thời có thể mất cấu trúc hoạt động khi nhiệt độ tăng.
 
@@ -478,7 +481,7 @@ Không. Protein là ensemble cấu dạng động và trạng thái chuyển ti�
 
 Chỉ đúng trong vùng protein vẫn duy trì đủ cấu trúc hoạt động.
 
-### “Steady state nghĩa là equilibrium”
+### “Steady trạng thái (state / 상태) nghĩa là equilibrium”
 
 Không. Trạng thái ổn định có thể có dòng vật chất liên tục; cân bằng nhiệt động không có dòng ròng.
 
@@ -499,4 +502,6 @@ nhận diện cơ chất
 
 Các phương trình động học là mô hình nén hành vi của hệ này, không phải định nghĩa đầy đủ enzyme.
 
-Xem tiếp: [Chuyển hóa và sinh năng lượng](./06_metabolism_and_bioenergetics.md), nơi nhiều enzyme được ghép thành mạng phản ứng và gradient năng lượng.
+Xem tiếp: [Chuyển hóa và sinh năng lượng](./06_metabolism_and_bioenergetics.md), nơi nhiều enzyme được ghép thành mạng phản ứng và độ dốc (gradient / 기울기) năng lượng.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 chemistry of life](./00_chemistry_of_life.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
 
+> **Mạch đọc:** Đặt **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hệ sinh thái quốc phòng: nhà thầu chính không tự làm mọi thứ** sang **DAPA và thể chế mua sắm quốc phòng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Ngành quốc phòng khác sản xuất thương mại thông thường vì khách hàng chủ yếu là chính phủ, chu kỳ mua sắm dài, sản phẩm phải đáp ứng tiêu chuẩn độ tin cậy và an ninh rất cao, còn xuất khẩu thường gắn với ngoại giao, tài trợ, đào tạo và nội địa hóa.
 
 Khi doanh nghiệp quốc phòng Hàn Quốc mở rộng xuất khẩu, đó không chỉ là câu chuyện “vũ khí bán chạy”. Nó phản ánh nhiều thập niên tích lũy năng lực từ công nghiệp nặng, điện tử, đóng tàu, cơ khí chính xác, phần mềm và mua sắm công.
@@ -275,7 +278,7 @@ Cơ hội xuất khẩu này đi cùng rủi ro tập trung khách hàng.
 
 Bán động cơ ban đầu có thể biên thấp hơn trong khi dịch vụ vòng đời tạo lợi nhuận cao hơn.
 
-Logic “nền thiết bị đã lắp đặt” này tương tự bảo trì quốc phòng và thiết bị y tế.
+Lô-gic (logic / 논리) “nền thiết bị đã lắp đặt” này tương tự bảo trì quốc phòng và thiết bị y tế.
 
 ## Chu kỳ hàng không dân dụng và quân sự khác nhau
 
@@ -478,3 +481,5 @@ Bảo trì / nâng cấp
 # Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
+
+> **Bàn giao:** Sau **Công ty dữ liệu vũ trụ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

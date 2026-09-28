@@ -1,29 +1,40 @@
-# Lab and Measurement Checklist — Đo kiểm có thể lặp lại
+# Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại
 
-Một waveform đẹp không phải evidence đủ. Measurement phải ghi rõ setup, probe, bandwidth, reference, calibration, sample rate và điều kiện tải để người khác tái hiện được.
+> **Mạch đọc:** Đọc **Lab and đo lường (measurement / 측정) Checklist — Đo kiểm có thể lặp lại** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Oscilloscope** sang **2. lô-gic (logic / 논리) analyzer**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đo lường (measurement / 측정) phải ghi rõ setup, probe, bandwidth, tham chiếu (reference / 참조), calibration, mẫu (sample / 표본) tỷ lệ (rate / 비율) và điều kiện tải để người khác tái hiện được.
 
 ## 1. Oscilloscope
 
-- Ghi probe ratio, bandwidth limit, sample rate, record length và trigger.
-- Dùng short ground spring ở switch node; ground lead dài có thể tạo ringing giả.
-- Chụp cả startup, steady state, shutdown và fault transition.
-- Đo peak, RMS, frequency, overshoot và settling bằng cùng time/voltage scale.
-- Không nối earth-referenced ground clip vào node floating hoặc high-side nếu chưa phân tích safety.
+- Ghi probe ratio, bandwidth limit, mẫu (sample / 표본) tỷ lệ (rate / 비율), bản ghi (record / 레코드) length và trigger.
+- Dùng short ground spring ở switch nút (node / 노드); ground lead dài có thể tạo ringing giả.
+- Chụp cả startup, steady trạng thái (state / 상태), shutdown và fault chuyển tiếp (transition / 전이).
+- Đo peak, RMS, frequency, overshoot và settling bằng cùng thời gian (time / 시간)/voltage quy mô (scale / 규모).
+- Không nối earth-referenced ground clip vào nút (node / 노드) floating hoặc high-side nếu chưa phân tích an toàn (safety / 안전).
 
-## 2. Logic analyzer
 
-- Chọn sample rate đủ lớn so với fastest edge cần kiểm tra, không chỉ so với bit rate.
-- Ghi protocol decoder version và threshold voltage.
-- Kiểm tra framing, ACK/NACK, timeout, repeated start, reset giữa transaction và bus contention.
-- Correlate timestamp với oscilloscope hoặc firmware trace; hai thiết bị có thể có clock khác nhau.
+> **Chuyển mạch:** Từ **1. Oscilloscope**, ta sang **2. lô-gic (logic / 논리) analyzer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## 3. Power measurement
+## 2. lô-gic (logic / 논리) analyzer
 
-- Đo input voltage ngay tại DUT, không chỉ ở bench supply.
-- Tách average, peak, inrush, sleep và transient load.
-- Dùng shunt/current probe có bandwidth và burden phù hợp.
-- Tính cả conversion loss, thermal rise và derating ở ambient khác nhau.
-- Kiểm tra current-limit behavior và energy còn lại sau fault.
+- Chọn mẫu (sample / 표본) tỷ lệ (rate / 비율) đủ lớn so với fastest edge cần kiểm tra, không chỉ so với bit tỷ lệ (rate / 비율).
+- Ghi giao thức (protocol / 프로토콜) decoder phiên bản (version / 버전) và threshold voltage.
+- Kiểm tra framing, ACK/NACK, hết thời gian chờ (timeout / 타임아웃), repeated start, reset giữa giao dịch (transaction / 트랜잭션) và bus contention.
+- Correlate timestamp với oscilloscope hoặc firmware dấu vết (trace / 추적); hai thiết bị có thể có clock khác nhau.
+
+
+> **Chuyển mạch:** Từ **2. lô-gic (logic / 논리) analyzer**, ta sang **3. Power đo lường (measurement / 측정)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 3. Power đo lường (measurement / 측정)
+
+- Đo đầu vào (input / 입력) voltage ngay tại DUT, không chỉ ở bench supply.
+- Tách average, peak, inrush, sleep và transient tải (load / 로드).
+- Dùng shunt/hiện tại (current / 현재) probe có bandwidth và burden phù hợp.
+- Tính cả conversion mất mát (loss / 손실), thermal rise và derating ở ambient khác nhau.
+- Kiểm tra current-limit hành vi (behavior / 동작) và năng lượng (energy / 에너지) còn lại sau fault.
+
+
+> **Chuyển mạch:** Từ **3. Power đo lường (measurement / 측정)**, ta sang **4. HIL và fault injection** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 4. HIL và fault injection
 
@@ -39,23 +50,31 @@ brownout/reset giữa transaction
 actuator stuck-on/stuck-off
 ```
 
-Mỗi test cần expected safe state, deadline, fault code, recovery policy và evidence artifact.
+Mỗi kiểm thử (test / 테스트) cần expected safe trạng thái (state / 상태), deadline, fault mã (code / 코드), khôi phục (recovery / 복구) chính sách (policy / 정책) và bằng chứng (evidence / 증거) sản phẩm tạo ra (artifact / 산출물).
 
-## 5. Measurement record
 
-Một record tối thiểu có:
+> **Chuyển mạch:** Từ **4. HIL và fault injection**, ta sang **5. đo lường (measurement / 측정) bản ghi (record / 레코드)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 5. đo lường (measurement / 측정) bản ghi (record / 레코드)
+
+Một bản ghi (record / 레코드) tối thiểu có:
 
 | Trường | Ví dụ |
 |---|---|
 | DUT revision | board-A rev2 |
-| firmware/config | fw 1.4, control Kp/Ki |
-| supply/load | 12.0 V, 1.8 A, 25 °C |
-| instrument | scope model, probe, calibration date |
-| setup | ground point, cable, termination |
-| result | pass/fail, raw file, interpretation |
+| firmware/cấu hình (config / 설정) | fw 1.4, điều khiển (control / 제어) Kp/Ki |
+| supply/tải (load / 로드) | 12.0 V, 1.8 A, 25 °C |
+| instrument | phạm vi (scope / 범위) mô hình (model / 모델), probe, calibration date |
+| setup | ground điểm (point / 지점), cable, termination |
+| kết quả (result / 결과) | pass/thất bại (fail / 실패), raw tệp (file / 파일), interpretation |
 
-Không sửa waveform bằng smoothing rồi coi đó là raw evidence. Nếu có post-processing, giữ raw capture và ghi rõ transform.
+Không sửa waveform bằng smoothing rồi coi đó là raw bằng chứng (evidence / 증거). Nếu có post-processing, giữ raw capture và ghi rõ transform.
 
-## Bridge
 
-Dùng checklist này cho [end-to-end temperature control case](00_end_to_end_temperature_control_case.md), rồi quay lại từng nhánh để map measurement tới circuit, control, power và firmware contract.
+> **Chuyển mạch:** Từ **5. đo lường (measurement / 측정) bản ghi (record / 레코드)**, ta sang **cầu nối (bridge / 브리지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cầu nối (bridge / 브리지)
+
+Dùng checklist này cho [end-to-end temperature control case](00_end_to_end_temperature_control_case.md), rồi quay lại từng nhánh để map đo lường (measurement / 측정) tới circuit, điều khiển (control / 제어), power và firmware đặc tả hợp đồng (contract / 계약).
+
+> **Bàn giao:** Sau **cầu nối (bridge / 브리지)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 end to end temperature control case](./00_end_to_end_temperature_control_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

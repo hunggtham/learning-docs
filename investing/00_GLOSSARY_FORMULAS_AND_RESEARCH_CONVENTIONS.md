@@ -1,6 +1,9 @@
 # Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu
 
-> File này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu là giúp người đọc dùng cùng một hệ thuật ngữ, cùng quy ước công thức và cùng cách phân biệt dữ kiện, ước tính, giả định và luận điểm đầu tư. Phần giải thích luôn ưu tiên tiếng Việt; thuật ngữ tiếng Anh chỉ được giữ như từ khóa bổ sung để tra cứu tài liệu gốc.
+> **Mạch đọc:** Đặt **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Quy tắc ngôn ngữ của thư viện** sang **2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu là giúp người đọc dùng cùng một hệ thuật ngữ, cùng quy ước công thức và cùng cách phân biệt dữ kiện, ước tính, giả định và luận điểm đầu tư. Phần giải thích luôn ưu tiên tiếng Việt; thuật ngữ tiếng Anh chỉ được giữ như từ khóa bổ sung để tra cứu tài liệu gốc.
 
 ## 1. Quy tắc ngôn ngữ của thư viện
 
@@ -28,7 +31,7 @@ Một ghi chú nghiên cứu (research note) phải phân biệt rõ năm lớp 
 
 **Ước tính (estimate)** là con số dự báo của doanh nghiệp, nhà phân tích hoặc thị trường, ví dụ EPS đồng thuận (consensus EPS) cho năm sau. Ước tính luôn phải gắn với nguồn và thời điểm.
 
-**Giả định (assumption)** là đầu vào do người phân tích chủ động đặt vào mô hình, ví dụ biên lợi nhuận gộp (gross margin) 35% trong kịch bản cơ sở.
+**giả định (assumption / 가정)** là đầu vào do người phân tích chủ động đặt vào mô hình, ví dụ biên lợi nhuận gộp (gross margin) 35% trong kịch bản cơ sở.
 
 **Kịch bản (scenario)** là một tập hợp giả định nhất quán về đường đi của nền kinh tế hoặc doanh nghiệp.
 
@@ -116,7 +119,7 @@ Beta = Cov(Rasset, Rbenchmark) / Var(Rbenchmark)
 
 **Alpha** là phần lợi suất còn lại sau khi đã tính đến chỉ số tham chiếu hoặc mô hình nhân tố phù hợp. Không nên gọi toàn bộ phần vượt trội là alpha nếu nó chỉ đến từ việc nắm nhiều cổ phiếu giá trị, vốn hóa nhỏ hoặc một nhân tố quen thuộc khác.
 
-## 9. Sharpe, Sortino và Information Ratio
+## 9. Sharpe, Sortino và thông tin (information / 정보) Ratio
 
 Sharpe Ratio:
 
@@ -124,7 +127,7 @@ Sharpe Ratio:
 Sharpe = (Portfolio Return - Risk-Free Return) / Portfolio Volatility
 ```
 
-Sortino thay tổng độ biến động bằng độ lệch giảm giá (downside deviation). Information Ratio so lợi suất chủ động với sai lệch bám chỉ số (tracking error):
+Sortino thay tổng độ biến động bằng độ lệch giảm giá (downside deviation). thông tin (information / 정보) Ratio so lợi suất chủ động với sai lệch bám chỉ số (tracking error):
 
 ```text
 IR = Active Return / Tracking Error
@@ -152,7 +155,7 @@ Vì vậy quản trị danh mục phải chú trọng khả năng sống sót v�
 
 ## 11. VaR và Expected Shortfall
 
-**Giá trị chịu rủi ro (Value at Risk, VaR)** ước lượng ngưỡng tổn thất tại một mức tin cậy và khoảng thời gian nhất định. **Tổn thất kỳ vọng vượt ngưỡng (Expected Shortfall)** đo mức lỗ trung bình khi đã vượt ngưỡng VaR.
+**Giá trị chịu rủi ro (value at risk, VaR)** ước lượng ngưỡng tổn thất tại một mức tin cậy và khoảng thời gian nhất định. **Tổn thất kỳ vọng vượt ngưỡng (Expected Shortfall)** đo mức lỗ trung bình khi đã vượt ngưỡng VaR.
 
 Không chỉ số nào là “mức lỗ tối đa”. Chúng đều phụ thuộc mô hình, dữ liệu và giả định phân phối, đồng thời có thể đánh giá thấp các cú nhảy giá hoặc sự đứt gãy thanh khoản.
 
@@ -174,7 +177,7 @@ Một cầu nối đơn giản:
 Enterprise Value = Equity Value + Net Debt + Other Senior Claims - Non-operating Assets
 ```
 
-Giá trị doanh nghiệp (Enterprise Value, EV) và giá trị vốn chủ sở hữu (Equity Value) không thể dùng thay thế cho nhau. FCFF được chiết khấu bằng WACC để đi tới EV; FCFE được chiết khấu bằng chi phí vốn chủ sở hữu (cost of equity) để đi tới Equity Value.
+Giá trị doanh nghiệp (Enterprise value, EV) và giá trị vốn chủ sở hữu (Equity value) không thể dùng thay thế cho nhau. FCFF được chiết khấu bằng WACC để đi tới EV; FCFE được chiết khấu bằng chi phí vốn chủ sở hữu (cost of equity) để đi tới Equity giá trị (value / 값).
 
 ## 14. Dòng tiền tự do
 
@@ -345,7 +348,7 @@ Sau đó mới chuyển các động lực thành doanh thu, biên lợi nhuận
 
 ## 29. Chất xúc tác và điều kiện vô hiệu hóa
 
-**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường cập nhật kỳ vọng. **Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy luận điểm đầu tư không còn đúng.
+**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường cập nhật kỳ vọng. **Điều kiện vô hiệu hóa (invalidation / 무효화)** là bằng chứng cho thấy luận điểm đầu tư không còn đúng.
 
 Luận điểm không được biến thành niềm tin không thể kiểm chứng. Nếu cơ chế cốt lõi đã sai, phải cập nhật hoặc loại bỏ luận điểm.
 
@@ -402,3 +405,5 @@ Quy tắc mặc định:
 ```text
 Tiếng Việt để hiểu → Tiếng Anh trong ngoặc để tra cứu → Viết tắt để dùng thực tế
 ```
+
+> **Bàn giao:** Sau **33. Nguyên tắc cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ADVANCED DEPTH PATH](./ADVANCED_DEPTH_PATH.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

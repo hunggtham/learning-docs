@@ -1,5 +1,8 @@
 # Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian
 
+> **Mạch đọc:** Đọc **Cơ học giải tích: tọa độ suy rộng, Lagrangian và Hamiltonian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao Newton chưa phải ngôn ngữ duy nhất của cơ học?** sang **Bậc tự do và tọa độ suy rộng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao Newton chưa phải ngôn ngữ duy nhất của cơ học?
 
 Cơ học Newton rất trực quan khi hệ có vài vật và ta dễ liệt kê từng lực. Nhưng với con lắc kép, robot nhiều khớp, vật chuyển động trên mặt cong hoặc hệ có nhiều ràng buộc, việc viết từng thành phần lực trở nên cồng kềnh.
@@ -257,7 +260,7 @@ ta có thể dùng nhân tử Lagrange `\lambda_a` và viết
 
 Các `\lambda_a` thường liên hệ với lực ràng buộc.
 
-Phương pháp này đặc biệt hữu ích khi muốn vừa giữ tọa độ thuận tiện vừa tính phản lực constraint.
+Phương pháp này đặc biệt hữu ích khi muốn vừa giữ tọa độ thuận tiện vừa tính phản lực ràng buộc (constraint / 제약조건).
 
 ## Biến đổi Legendre và Hamiltonian
 
@@ -313,7 +316,7 @@ Cách nhìn này mở đường tới:
 - cơ học thống kê;
 - động lực phi tuyến;
 - chaos;
-- canonical transformations;
+- chuẩn gốc (canonical / 정본) transformations;
 - cơ học lượng tử.
 
 ## Ví dụ: Hamiltonian của dao động tử điều hòa
@@ -348,7 +351,7 @@ H=E
 
 trong không gian pha là ellipse.
 
-Do đó dao động điều hòa có thể được hiểu như chuyển động tuần hoàn trên một đường năng lượng cố định trong phase space.
+Do đó dao động điều hòa có thể được hiểu như chuyển động tuần hoàn trên một đường năng lượng cố định trong phase không gian (space / 공간).
 
 ## Lagrangian với lực không bảo toàn
 
@@ -374,7 +377,7 @@ và viết
 
 Tuy nhiên hệ tiêu tán không còn giữ đầy đủ cấu trúc Hamilton kín nếu ta chỉ theo dõi vài bậc tự do. Muốn mô tả vi mô đầy đủ thường phải mở rộng hệ để bao gồm môi trường.
 
-## Liên hệ với Engineering và Computer Science
+## Liên hệ với kỹ thuật (engineering / 엔지니어링) và Khoa học máy tính (computer science / 컴퓨터 과학)
 
 Robot nhiều khớp thường dùng tọa độ khớp `q` và phương trình dạng
 
@@ -384,23 +387,23 @@ M(q)\ddot q
 +g(q)=\tau.
 ```
 
-Các ma trận này được suy ra tự nhiên từ kinetic energy và potential energy.
+Các ma trận này được suy ra tự nhiên từ kinetic năng lượng (energy / 에너지) và potential năng lượng (energy / 에너지).
 
 Trong mô phỏng, việc giữ cấu trúc vật lý có lợi:
 
-- symplectic integrator giữ geometry của Hamiltonian tốt hơn trong mô phỏng dài;
-- differentiable physics cho phép lấy gradient qua simulator;
-- Hamiltonian Neural Network cố học một hàm sinh động lực thay vì trực tiếp fit trajectory derivative tùy ý.
+- symplectic integrator giữ hình học (geometry / 기하학) của Hamiltonian tốt hơn trong mô phỏng dài;
+- differentiable physics cho phép lấy độ dốc (gradient / 기울기) qua simulator;
+- Hamiltonian Neural mạng (network / 네트워크) cố học một hàm sinh động lực thay vì trực tiếp fit trajectory derivative tùy ý.
 
-Cấu trúc vật lý đóng vai trò inductive bias cho mô hình tính toán.
+Cấu trúc vật lý đóng vai trò inductive độ lệch (bias / 편향) cho mô hình tính toán.
 
 ## Miền áp dụng và giới hạn
 
 Cơ học Lagrange/Hamilton cổ điển vẫn nằm trong miền classical mechanics. Nó không tự xử lý hiệu ứng tương đối tính hoặc lượng tử nếu chưa thay Lagrangian/Hamiltonian bằng lý thuyết phù hợp.
 
-Một số ràng buộc không holonomic cần xử lý tinh tế hơn. Biến đổi Legendre cũng có thể suy biến nếu Hessian theo `\dot q` không khả nghịch, như trong gauge theory và constrained systems.
+Một số ràng buộc không holonomic cần xử lý tinh tế hơn. Biến đổi Legendre cũng có thể suy biến nếu Hessian theo `\dot q` không khả nghịch, như trong gauge lý thuyết (theory / 이론) và constrained các hệ thống (systems / 시스템들).
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Ba ngôn ngữ chính có thể nhìn như:
 
@@ -416,7 +419,7 @@ Chúng không cạnh tranh; mỗi ngôn ngữ làm một cấu trúc khác của
 
 ### “Nguyên lý tác dụng dừng nói tự nhiên luôn chọn đường ngắn nhất”
 
-Không. Đại lượng được làm stationary là action, không phải khoảng cách; nghiệm có thể là minimum, maximum hoặc saddle theo ngữ cảnh.
+Không. Đại lượng được làm stationary là hành động (action / 동작), không phải khoảng cách; nghiệm có thể là minimum, maximum hoặc saddle theo ngữ cảnh.
 
 ### “Lagrangian luôn bằng `T-V`”
 
@@ -428,10 +431,12 @@ Không trong mọi formulation. Cần tính từ biến đổi Legendre và xét
 
 ### “Cơ học giải tích chỉ là toán khó hơn để giải cùng bài đơn giản”
 
-Với hệ nhiều bậc tự do, symmetry và constraint, nó thường giảm độ phức tạp và mở ra các định luật bảo toàn khó thấy trong FBD.
+Với hệ nhiều bậc tự do, symmetry và ràng buộc (constraint / 제약조건), nó thường giảm độ phức tạp và mở ra các định luật bảo toàn khó thấy trong FBD.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Công và năng lượng](03_work_energy_power.md), [Chuyển động quay](05_rotation_rigid_body.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Hamilton–Jacobi và biến đổi chính tắc](10_canonical_transformations_hamilton_jacobi.md), [Động lực phi tuyến và chaos](09_nonlinear_dynamics_chaos.md), [Cơ học lượng tử](../08_quantum/00_quantum_foundations.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

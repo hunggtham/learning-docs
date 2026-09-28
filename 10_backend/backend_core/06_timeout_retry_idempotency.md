@@ -1,80 +1,103 @@
-# 06. Timeout, retry và idempotency
+# 06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency
 
-## Timeout budget
+> **Mạch đọc:** Đặt **06. hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và idempotency** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** sang **thử lại (retry / 재시도) có điều kiện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Timeout là một phần của contract. Nếu request có deadline 2 giây, các dependency
-không được mỗi cái tự chờ 2 giây. Truyền deadline/cancellation xuống chain và
-dành ngân sách cho serialization, queueing và response. Timeout cần phân biệt
-connect, TLS, pool acquire, read và total deadline khi client hỗ trợ.
 
-## Retry có điều kiện
+## Ngân sách thời gian chờ (timeout budget / 타임아웃 예산)
 
-Chỉ retry lỗi tạm thời, request còn deadline và operation an toàn để lặp. Không
-retry validation, permission, business conflict hoặc mọi `5xx` một cách mù quáng.
-Exponential backoff + jitter và giới hạn attempts ngăn synchronized retry storm.
-Mỗi layer không nên retry độc lập đến khi tổng số lần nhân lên ngoài dự kiến.
+Hết thời gian chờ (timeout / 타임아웃) là một phần của đặc tả hợp đồng (contract / 계약). Nếu yêu cầu (request / 요청) có deadline 2 giây, các phụ thuộc (dependency / 의존성)
+không được mỗi cái tự chờ 2 giây. Truyền deadline/cancellation xuống chuỗi (chain / 사슬) và
+dành ngân sách cho serialization, queueing và phản hồi (response / 응답). hết thời gian chờ (timeout / 타임아웃) cần phân biệt
+connect, TLS, pool acquire, read và total deadline khi máy khách (client / 클라이언트) hỗ trợ.
+
+
+> **Chuyển mạch:** Từ **ngân sách thời gian chờ (timeout budget / 타임아웃 예산)**, ta sang **thử lại (retry / 재시도) có điều kiện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Thử lại (retry / 재시도) có điều kiện
+
+Chỉ thử lại (retry / 재시도) lỗi tạm thời, yêu cầu (request / 요청) còn deadline và thao tác (operation / 연산) an toàn để lặp. Không
+thử lại (retry / 재시도) kiểm tra hợp lệ (validation / 검증), permission, nghiệp vụ (business / 비즈니스) xung đột (conflict / 충돌) hoặc mọi `5xx` một cách mù quáng.
+Exponential backoff + jitter và giới hạn attempts ngăn synchronized thử lại (retry / 재시도) storm.
+Mỗi tầng (layer / 계층) không nên thử lại (retry / 재시도) độc lập đến khi tổng số lần nhân lên ngoài dự kiến.
+
+
+> **Chuyển mạch:** Từ **thử lại (retry / 재시도) có điều kiện**, ta sang **Idempotency** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Idempotency
 
-Một operation idempotent có thể được gửi lại mà không tạo thêm hiệu ứng logic.
+Một thao tác (operation / 연산) idempotent có thể được gửi lại mà không tạo thêm hiệu ứng lô-gic (logic / 논리).
 Với mutation không tự idempotent:
 
 1. caller gửi idempotency key ổn định;
-2. server lưu key, request fingerprint và terminal result;
-3. request trùng fingerprint trả lại result cũ;
+2. máy chủ (server / 서버) lưu key, yêu cầu (request / 요청) fingerprint và terminal kết quả (result / 결과);
+3. yêu cầu (request / 요청) trùng fingerprint trả lại kết quả (result / 결과) cũ;
 4. key dùng với payload khác bị từ chối;
-5. retention đủ dài so với cửa sổ retry/replay.
+5. retention đủ dài so với cửa sổ thử lại (retry / 재시도)/replay.
 
-Unique constraint, state transition (`pending → completed`) và dedupe record bảo
-vệ lớp database/consumer. Idempotency key không thay thế authorization: cùng key
+Unique ràng buộc (constraint / 제약조건), chuyển tiếp trạng thái (state transition / 상태 전이) (`pending → completed`) và dedupe bản ghi (record / 레코드) bảo
+vệ lớp cơ sở dữ liệu (database / 데이터베이스)/bên tiêu thụ (consumer / 소비자). Idempotency key không thay thế authorization: cùng key
 nhưng subject/tenant khác phải bị từ chối.
+
+
+> **Chuyển mạch:** Từ **Idempotency**, ta sang **Quan sát** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quan sát
 
-Ghi attempt number, original request ID, dependency, timeout reason và final
-outcome. Phân biệt “timeout nhưng server đã commit” với “chưa tới server”; đây là
-lý do caller phải query trạng thái trước khi tạo lại side effect.
+Ghi attempt number, original yêu cầu (request / 요청) ID, phụ thuộc (dependency / 의존성), hết thời gian chờ (timeout / 타임아웃) reason và final
+kết quả (outcome / 결과). Phân biệt “hết thời gian chờ (timeout / 타임아웃) nhưng máy chủ (server / 서버) đã lần ghi nhận (commit / 커밋)” với “chưa tới máy chủ (server / 서버)”; đây là
+lý do caller phải truy vấn (query / 쿼리) trạng thái trước khi tạo lại side tác động (effect / 효과).
 
-## Đào sâu: retry topology
 
-Vẽ toàn bộ retry graph trước khi thêm retry loop:
+> **Chuyển mạch:** Từ **Quan sát**, ta sang **Đào sâu: thử lại (retry / 재시도) topology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Đào sâu: thử lại (retry / 재시도) topology
+
+Vẽ toàn bộ thử lại (retry / 재시도) đồ thị (graph / 그래프) trước khi thêm thử lại (retry / 재시도) vòng lặp (loop / 루프):
 
 ```text
 browser → API client → service A → service B → database/provider
 ```
 
-Nếu mỗi hop retry 3 lần, một request có thể tạo 81 attempts ở dependency cuối.
-Chọn một retry owner, truyền deadline còn lại và để hop khác fail fast hoặc chỉ
-retry lỗi transport rất hẹp. Circuit breaker/bulkhead bảo vệ pool nhưng không
-thay thế timeout và idempotency.
+Nếu mỗi hop thử lại (retry / 재시도) 3 lần, một yêu cầu (request / 요청) có thể tạo 81 attempts ở phụ thuộc (dependency / 의존성) cuối.
+Chọn một thử lại (retry / 재시도) đơn vị sở hữu (owner / 오너), truyền deadline còn lại và để hop khác thất bại (fail / 실패) fast hoặc chỉ
+thử lại (retry / 재시도) lỗi vận chuyển (transport / 전송) rất hẹp. Circuit breaker/bulkhead bảo vệ pool nhưng không
+thay thế hết thời gian chờ (timeout / 타임아웃) và idempotency.
 
-Timeout tạo trạng thái “unknown”, không phải luôn là failure. Với read, retry có
-thể an toàn; với mutation, query status bằng idempotency key/order ID trước khi
-tạo operation mới. API nên cung cấp endpoint status nếu operation có thể chạy sau
+Hết thời gian chờ (timeout / 타임아웃) tạo trạng thái “unknown”, không phải luôn là thất bại (failure / 실패). Với read, thử lại (retry / 재시도) có
+thể an toàn; với mutation, truy vấn (query / 쿼리) status bằng idempotency key/thứ tự (order / 순서) ID trước khi
+tạo thao tác (operation / 연산) mới. API nên cung cấp endpoint status nếu thao tác (operation / 연산) có thể chạy sau
 khi caller mất kết nối.
+
+
+> **Chuyển mạch:** Từ **Đào sâu: thử lại (retry / 재시도) topology**, ta sang **Bài tập suy luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bài tập suy luận
 
-Cho deadline 2 giây, gateway overhead 100 ms, service A gọi B và B gọi provider.
-Đề xuất budget từng hop, connect/read timeout, số retry tối đa và điều kiện dừng;
-giải thích vì sao tổng timeout không được vượt deadline dù có backoff.
+Cho deadline 2 giây, gateway overhead 100 ms, dịch vụ (service / 서비스) A gọi B và B gọi provider.
+Đề xuất ngân sách (budget / 예산) từng hop, connect/read hết thời gian chờ (timeout / 타임아웃), số thử lại (retry / 재시도) tối đa và điều kiện dừng;
+giải thích vì sao tổng hết thời gian chờ (timeout / 타임아웃) không được vượt deadline dù có backoff.
 
-## Circuit breaker, bulkhead và load shedding
 
-Ba cơ chế này giải quyết các failure khác nhau:
+> **Chuyển mạch:** Từ **Bài tập suy luận**, ta sang **Circuit breaker, bulkhead và tải (load / 로드) shedding** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-- **Circuit breaker:** ngừng gọi dependency đang lỗi sau ngưỡng có bằng chứng,
-  chuyển sang half-open có giới hạn để probe recovery.
-- **Bulkhead:** tách thread/connection/concurrency budget giữa dependency hoặc
-  workload để một pool cạn không kéo sập toàn process.
-- **Load shedding:** từ chối hoặc hạ chất lượng request khi hệ thống đã vượt
-  capacity, ưu tiên traffic quan trọng thay vì để mọi request timeout.
+## Circuit breaker, bulkhead và tải (load / 로드) shedding
 
-Breaker cần tránh một trạng thái global quá thô: lỗi của một tenant hoặc một
-route có thể không đại diện cho toàn provider. Probe recovery phải có jitter và
-quota. Fallback chỉ được dùng khi semantics an toàn; trả dữ liệu cache cũ cho
-permission-sensitive read có thể tạo security bug.
+Ba cơ chế này giải quyết các thất bại (failure / 실패) khác nhau:
 
-Dependency budget nên được mô hình hóa bằng concurrency × service time ≈ in-flight
-work. Khi queueing và saturation tăng, retry thường làm tình hình xấu hơn; hãy
+- **Circuit breaker:** ngừng gọi phụ thuộc (dependency / 의존성) đang lỗi sau ngưỡng có bằng chứng,
+  chuyển sang half-open có giới hạn để probe khôi phục (recovery / 복구).
+- **Bulkhead:** tách luồng thực thi (thread / 스레드)/liên kết (connection / 연결)/tính đồng thời (concurrency / 동시성) ngân sách (budget / 예산) giữa phụ thuộc (dependency / 의존성) hoặc
+  tải công việc (workload / 워크로드) để một pool cạn không kéo sập toàn tiến trình (process / 프로세스).
+- **tải (load / 로드) shedding:** từ chối hoặc hạ chất lượng yêu cầu (request / 요청) khi hệ thống đã vượt
+  sức chứa (capacity / 용량), ưu tiên traffic quan trọng thay vì để mọi yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃).
+
+Breaker cần tránh một trạng thái toàn cục (global / 전역) quá thô: lỗi của một tenant hoặc một
+tuyến (route / 경로) có thể không đại diện cho toàn provider. Probe khôi phục (recovery / 복구) phải có jitter và
+quota. Fallback chỉ được dùng khi ngữ nghĩa (semantics / 의미론) an toàn; trả dữ liệu bộ nhớ đệm (cache / 캐시) cũ cho
+permission-sensitive read có thể tạo bảo mật (security / 보안) bug.
+
+Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산) nên được mô hình hóa bằng tính đồng thời (concurrency / 동시성) × dịch vụ (service / 서비스) thời gian (time / 시간) ≈ in-flight
+công việc (work / 작업). Khi queueing và saturation tăng, thử lại (retry / 재시도) thường làm tình hình xấu hơn; hãy
 giảm intake trước khi tăng số worker.
+
+> **Bàn giao:** Sau **Circuit breaker, bulkhead và tải (load / 로드) shedding**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 backend request lifecycle](./00_backend_request_lifecycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

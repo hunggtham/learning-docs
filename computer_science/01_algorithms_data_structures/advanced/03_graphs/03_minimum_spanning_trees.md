@@ -1,4 +1,7 @@
 # cây khung nhỏ nhất
+
+> **Mạch đọc:** Đọc **cây khung nhỏ nhất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Tại sao lời giải tối ưu phải là cây?** sang **2. MST khác đường đi ngắn nhất cây**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Cây khung nhỏ nhất / cây khung nhỏ nhất (MST) / 최소 신장 트리**
 
 cây khung nhỏ nhất giải bài toán: **kết nối toàn bộ các đỉnh của một undirected đồ thị có trọng số với tổng cạnh chi phí nhỏ nhất**. Nó không tối ưu đường đi giữa từng cặp các nút như đường đi ngắn nhất (shortest path); nó tối ưu **tổng chi phí của toàn bộ hạ tầng kết nối**.
@@ -33,7 +36,7 @@ cây đường đi ngắn nhất hỏi:
 
 > “Từ một nguồn, làm sao khoảng cách tới từng đỉnh là nhỏ nhất?”
 
-Hai objective khác nhau nên không thể thay thế thuật toán cho nhau.
+Hai mục tiêu (objective / 목표) khác nhau nên không thể thay thế thuật toán cho nhau.
 
 ## 3. Cut tính chất — engine chứng minh của MST
 
@@ -88,7 +91,7 @@ for (Edge e : edges) {
 }
 ```
 
-Complexity:
+Độ phức tạp (complexity / 복잡도):
 
 \[
 O(E\log E)+O(E\alpha(V))=O(E\log E)
@@ -118,7 +121,7 @@ Prim giữ set `S` các đỉnh đã vào MST. Mỗi bước chọn cạnh nhẹ
 
 ### Lazy Prim
 
-Push outgoing các cạnh vào heap. Khi pop nếu endpoint ngoài đã đã thăm thì dùng, nếu stale thì skip.
+Push outgoing các cạnh vào vùng nhớ động (heap / 힙). Khi pop nếu endpoint ngoài đã đã thăm thì dùng, nếu stale thì skip.
 
 ```text
 visit start
@@ -135,9 +138,9 @@ while heap not empty:
 
 ### Eager Prim
 
-Giữ `key[v]` = cheapest cạnh hiện biết nối `v` vào cây. Khi thấy cạnh nhẹ hơn, cập nhật khóa/nút cha. Indexed heap/decrease-key cho cách triển khai gọn về trạng thái (state), nhưng standard hàng đợi ưu tiên không hỗ trợ decrease-key trực tiếp nên có thể dùng lazy các phần tử trùng.
+Giữ `key[v]` = cheapest cạnh hiện biết nối `v` vào cây. Khi thấy cạnh nhẹ hơn, cập nhật khóa/nút cha. Indexed vùng nhớ động (heap / 힙)/decrease-key cho cách triển khai gọn về trạng thái (state / 상태), nhưng tiêu chuẩn (standard / 표준) hàng đợi ưu tiên không hỗ trợ decrease-key trực tiếp nên có thể dùng lazy các phần tử trùng.
 
-## 8. Prim và Dijkstra giống code nhưng khác bất biến (invariant)
+## 8. Prim và Dijkstra giống mã (code / 코드) nhưng khác bất biến (invariant / 불변식)
 
 Dijkstra độ ưu tiên:
 
@@ -163,9 +166,9 @@ Prim chỉ so sánh:
 w(u,v)
 \]
 
-Nếu copy code mà không hiểu khóa ngữ nghĩa (semantics), bug rất dễ xuất hiện.
+Nếu bản sao (copy / 복사) mã (code / 코드) mà không hiểu khóa ngữ nghĩa (semantics / 의미론), bug rất dễ xuất hiện.
 
-## 9. Chọn Kruskal hay Prim theo cách biểu diễn (representation)
+## 9. Chọn Kruskal hay Prim theo cách biểu diễn (representation / 표현)
 
 Kruskal tự nhiên khi:
 
@@ -182,7 +185,7 @@ Prim tự nhiên khi:
 muốn grow từ vertex
 ```
 
-đồ thị dày có thể dùng Prim `O(V²)` với ma trận kề mà không cần heap; heap overhead không phải lúc nào cũng thắng.
+đồ thị dày có thể dùng Prim `O(V²)` với ma trận kề mà không cần vùng nhớ động (heap / 힙); vùng nhớ động (heap / 힙) overhead không phải lúc nào cũng thắng.
 
 thuật toán selection phải xét đồ thị density và cách biểu diễn, không chỉ một dòng Big-O.
 
@@ -190,15 +193,15 @@ thuật toán selection phải xét đồ thị density và cách biểu diễn,
 
 MST cây không có chu trình. Negative cạnh chỉ đơn giản là cạnh rất hấp dẫn về chi phí và sẽ được chọn nếu không phá cây điều kiện.
 
-Không có khái niệm negative chu trình làm objective xuống vô hạn vì spanning cây luôn có đúng `V-1` các cạnh.
+Không có khái niệm negative chu trình làm mục tiêu (objective / 목표) xuống vô hạn vì spanning cây luôn có đúng `V-1` các cạnh.
 
 ## 11. Unique MST và ties
 
 Nếu mọi cạnh các trọng số distinct, MST unique.
 
-Nếu có ties, nhiều MST khác nhau có thể cùng total trọng số. Test không nên bắt chính xác danh sách cạnh trừ khi quy tắc phân xử khi bằng nhau được cố ý cố định.
+Nếu có ties, nhiều MST khác nhau có thể cùng total trọng số. kiểm thử (test / 테스트) không nên bắt chính xác danh sách cạnh trừ khi quy tắc phân xử khi bằng nhau được cố ý cố định.
 
-Một cạnh là **critical** nếu xuất hiện trong mọi MST; **optional/pseudo-critical** nếu có thể xuất hiện trong một số MST; và **never-MST** nếu không thể xuất hiện.
+Một cạnh là **trọng yếu (critical / 중요)** nếu xuất hiện trong mọi MST; **optional/pseudo-critical** nếu có thể xuất hiện trong một số MST; và **never-MST** nếu không thể xuất hiện.
 
 Cut/chu trình các tính chất là nền cho classification này.
 
@@ -214,21 +217,21 @@ Lý do: nếu MST không chứa `e`, exchange bằng `e` giảm chi phí nghiêm
 
 Nếu `e` là unique heaviest trên một chu trình, không MST nào chứa `e`. Nếu chứa, thay nó bằng cạnh nhẹ hơn trên chu trình làm total giảm.
 
-Hai criteria này rất hữu ích trong sensitivity analysis.
+Hai criteria này rất hữu ích trong sensitivity phân tích (analysis / 분석).
 
 ## 14. Bottleneck view
 
-MST cũng là một **minimum bottleneck spanning cây**: trọng số lớn nhất trong cây là nhỏ nhất có thể theo bottleneck objective thích hợp.
+MST cũng là một **minimum bottleneck spanning cây**: trọng số lớn nhất trong cây là nhỏ nhất có thể theo bottleneck mục tiêu (objective / 목표) thích hợp.
 
 Kruskal cho intuition rõ. Khi tăng threshold `T` và cho phép tất cả các cạnh có trọng số `<=T`, threshold nhỏ nhất làm đồ thị connected chính là bottleneck phương án tối ưu.
 
-Connection này biến nhiều bài threshold-connectivity thành Kruskal/DSU problems.
+Liên kết (connection / 연결) này biến nhiều bài threshold-connectivity thành Kruskal/DSU problems.
 
 ## 15. Maximum Spanning cây
 
 Nếu mục tiêu chuyển thành tối đa hóa tổng trọng số, Kruskal có thể sắp xếp giảm dần hoặc đảo bộ so sánh. Lập luận dựa trên lát cắt và chu trình được áp dụng theo chiều ngược lại.
 
-Ứng dụng có thể là maximize affinity/reliability score trong một formulation phù hợp.
+Ứng dụng có thể là maximize affinity/độ tin cậy (reliability / 신뢰성) score trong một formulation phù hợp.
 
 ## 16. Single-Linkage Clustering
 
@@ -236,7 +239,7 @@ Xây MST trên points theo khoảng cách, rồi remove `k-1` các cạnh lớn 
 
 MST giữ các liên kết rẻ nhất cần cho connectivity; các cạnh lớn trong MST thường đại diện gaps giữa groups.
 
-Đây là connection giữa đồ thị theory và hierarchical clustering.
+Đây là liên kết (connection / 연결) giữa đồ thị lý thuyết (theory / 이론) và hierarchical clustering.
 
 ## 17. Euclidean MST và không materialize đồ thị đầy đủ
 
@@ -246,7 +249,7 @@ Trong plane, Euclidean MST là subgraph của Delaunay triangulation, nên cấu
 
 Bài học rộng hơn:
 
-> Đôi khi complexity bottleneck là **xây đồ thị**, không phải thuật toán đồ thị sau đó.
+> Đôi khi độ phức tạp (complexity / 복잡도) bottleneck là **xây đồ thị**, không phải thuật toán đồ thị sau đó.
 
 ## 18. Second-Best MST
 
@@ -260,7 +263,7 @@ newCost = mstCost + w - maxEdgeOnPath(u,v)
 
 Nếu preprocess nhảy nhị phân/LCA để truy vấn max cạnh đường đi `O(log V)`, có thể xét mọi non-tree cạnh hiệu quả.
 
-Đây là connection giữa MST và cây đường đi các truy vấn.
+Đây là liên kết (connection / 연결) giữa MST và cây đường đi các truy vấn.
 
 ## 19. Replacement cạnh và sensitivity
 
@@ -268,9 +271,9 @@ Nếu một MST cạnh bị xóa hoặc tăng trọng số, thành phần cây b
 
 Nếu nhiều các cập nhật xảy ra, recompute từ đầu có thể đắt; động MST structures quản lý replacement các cạnh phức tạp hơn.
 
-tĩnh sensitivity analysis vẫn có thể dùng cut/chu trình + tiền xử lý để trả lời “nếu cạnh này đổi chi phí thì MST thay đổi thế nào?”.
+tĩnh sensitivity phân tích (analysis / 분석) vẫn có thể dùng cut/chu trình + tiền xử lý để trả lời “nếu cạnh này đổi chi phí thì MST thay đổi thế nào?”.
 
-## 20. động MST khó vì cục bộ cập nhật có effect toàn cục
+## 20. động MST khó vì cục bộ cập nhật có tác động (effect / 효과) toàn cục
 
 Một cạnh insertion có thể tạo chu trình với đường đi trong MST. Nếu cạnh mới nhẹ hơn maximum cạnh trên đường đi, ta swap chúng.
 
@@ -300,11 +303,11 @@ chu trình tính chất giải thích tính đúng đắn. Cách đơn giản ki
 
 Spanning forests của đồ thị tạo một cấu trúc gọi là **graphic matroid**. Greedy chọn các cạnh theo trọng số hoạt động vì independent sets của matroid có exchange tính chất mạnh.
 
-Không cần học matroid theory để code Kruskal, nhưng nó giải thích vì sao greedy “sort rồi lấy nếu không tạo chu trình” đúng ở đây trong khi nhiều bài khác greedy tương tự lại sai.
+Không cần học matroid lý thuyết (theory / 이론) để mã (code / 코드) Kruskal, nhưng nó giải thích vì sao greedy “sort rồi lấy nếu không tạo chu trình” đúng ở đây trong khi nhiều bài khác greedy tương tự lại sai.
 
-Greedy tính đúng đắn không đến từ sorting; nó đến từ structure của feasible sets.
+Greedy tính đúng đắn không đến từ sorting; nó đến từ cấu trúc (structure / 구조) của feasible sets.
 
-## 23. đồ thị có hướng là problem khác
+## 23. đồ thị có hướng là bài toán (problem / 문제) khác
 
 Chuẩn MST áp dụng đồ thị vô hướng (undirected graph). Directed analogue là **cây phân nhánh có hướng nhỏ nhất** rooted tại một đỉnh, giải bằng Chu–Liu/Edmonds-type các thuật toán.
 
@@ -314,7 +317,7 @@ Không thể chỉ chạy Kruskal trên directed các cạnh rồi bỏ orientat
 
 Kruskal xử lý các cạnh song song tự nhiên; cạnh rẻ hơn giữa cùng endpoints thường được xét trước. Self-loop luôn tạo chu trình với chính đỉnh và không thể giúp connect thành phần khác, nên bị bỏ.
 
-cách triển khai nên giữ cạnh IDs nếu cần đầu ra chính xác cạnh identity.
+cách triển khai nên giữ cạnh IDs nếu cần đầu ra chính xác cạnh định danh (identity / 식별자).
 
 ## 25. tràn số và comparator tính đúng đắn
 
@@ -330,7 +333,7 @@ nếu tràn số có thể xảy ra. Dùng `Long.compare`/`Comparator.comparingL
 
 C cũng nên tránh subtraction comparator với signed tràn số.
 
-## 26. Verification của MST kết quả
+## 26. xác minh (verification / 확인) của MST kết quả
 
 Một đầu ra MST cần:
 
@@ -349,7 +352,7 @@ Nhưng ba structural các tính chất đầu chỉ chứng minh spanning cây, 
 
 Nếu có cây cạnh trên đường đi nặng hơn `w`, swap sẽ tạo spanning cây nhẹ hơn.
 
-tính chất này cho phép bộ xác minh độc lập mạnh hơn chỉ so đầu ra structure.
+tính chất này cho phép bộ xác minh độc lập mạnh hơn chỉ so đầu ra cấu trúc (structure / 구조).
 
 ## 27. Differential kiểm thử
 
@@ -375,7 +378,7 @@ disconnected graph
 very large weights
 ```
 
-## 28. MST trong cơ sở dữ liệu/mạng/hệ thống design
+## 28. MST trong cơ sở dữ liệu/mạng/hệ thống thiết kế (design / 설계)
 
 MST có thể mô hình:
 
@@ -397,12 +400,14 @@ geography
 fault domains
 ```
 
-Khi đó problem có thể không còn là pure MST. DSA mô hình phải khớp yêu cầu, không ép business problem vào thuật toán quen thuộc.
+Khi đó bài toán (problem / 문제) có thể không còn là pure MST. DSA mô hình phải khớp yêu cầu, không ép nghiệp vụ (business / 비즈니스) bài toán (problem / 문제) vào thuật toán quen thuộc.
 
 ## Mô hình tư duy
 
-> MST là bài toán **mua connectivity với total cạnh chi phí nhỏ nhất**. Cut tính chất nói cạnh nào an toàn để thêm; chu trình tính chất nói cạnh nào an toàn để loại. Kruskal và Prim chỉ là hai operational views của cùng optimality structure.
+> MST là bài toán **mua connectivity với total cạnh chi phí nhỏ nhất**. Cut tính chất nói cạnh nào an toàn để thêm; chu trình tính chất nói cạnh nào an toàn để loại. Kruskal và Prim chỉ là hai operational views của cùng optimality cấu trúc (structure / 구조).
 
-Khi gặp bài liên quan “connect tất cả với chi phí tổng nhỏ nhất”, hãy kiểm tra: đồ thị có undirected không, có cần redundancy không, có thêm các ràng buộc không. Nếu objective đúng là pure connectivity chi phí, MST là sự trừu tượng (abstraction) rất mạnh.
+Khi gặp bài liên quan “connect tất cả với chi phí tổng nhỏ nhất”, hãy kiểm tra: đồ thị có undirected không, có cần redundancy không, có thêm các ràng buộc không. Nếu mục tiêu (objective / 목표) đúng là pure connectivity chi phí, MST là sự trừu tượng (abstraction) rất mạnh.
 
 Xem thêm: [Union-Find](./05_union_find.md), [Tree Foundations](../02_trees/00_tree_foundations.md), [Greedy Algorithms](../04_algorithmic_paradigms/04_greedy_algorithms.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

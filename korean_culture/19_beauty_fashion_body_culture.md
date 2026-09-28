@@ -1,5 +1,8 @@
 # Làm đẹp, thời trang và văn hoá cơ thể
 
+> **Mạch đọc:** Đặt **Làm đẹp, thời trang và văn hoá cơ thể** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cơ thể là một bề mặt xã hội nhưng không phải tài sản công cộng** sang **외모관리: tại sao từ 관리 quan trọng?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Cơ thể là một bề mặt xã hội nhưng không phải tài sản công cộng
 
 Văn hoá làm đẹp Hàn Quốc thường bị kể theo hai cực: hoặc “người Hàn rất biết chăm sóc bản thân”, hoặc “xã hội Hàn ám ảnh ngoại hình”. Cả hai cách đều thiếu cơ chế giải thích. **Ngoại hình (외모 / appearance)** có giá trị xã hội vì nó có thể phát tín hiệu về tuổi, nghề nghiệp, mức tự chăm sóc, nhóm mà một người thuộc về, tầng lớp và mức độ phù hợp với bối cảnh.
@@ -8,7 +11,7 @@ Nhưng tín hiệu không đồng nghĩa nghĩa vụ. Việc một chuẩn mực
 
 ## 외모관리: tại sao từ `관리` quan trọng?
 
-`외모관리` mang sắc thái **quản lý và duy trì (management/maintenance)**. Nó đặt ngoại hình vào cùng logic với `건강관리`, `자기관리`: một thứ cần chăm sóc định kỳ chứ không chỉ là sự kiện đặc biệt.
+`외모관리` mang sắc thái **quản lý và duy trì (management/maintenance)**. Nó đặt ngoại hình vào cùng lô-gic (logic / 논리) với `건강관리`, `자기관리`: một thứ cần chăm sóc định kỳ chứ không chỉ là sự kiện đặc biệt.
 
 Thói quen có thể gồm tóc, chăm sóc da, trang điểm, quần áo, tư thế, thể lực, móng hoặc răng. Khi việc chăm chút ngoại hình được hiểu như bảo trì thường xuyên, thị trường tiêu dùng chuyển từ “mua một món” sang hệ thống lặp lại: sữa rửa mặt, kem chống nắng, phòng khám, salon, thành viên và chu kỳ điều trị.
 
@@ -22,7 +25,7 @@ ngoại hình trở thành tín hiệu
 → chuẩn mực lại làm nhu cầu tăng
 ```
 
-Đây là một **vòng phản hồi (feedback loop)**, không phải sở thích sinh học cố định.
+Đây là một **vòng phản hồi (feedback loop / 피드백 루프)**, không phải sở thích sinh học cố định.
 
 ## 피부관리: chăm sóc da như khoa học tiêu dùng + nghi thức
 
@@ -91,9 +94,9 @@ Cần tách:
 
 Các nhóm khác nhau về người thực hiện, rủi ro, quy định và mức bằng chứng.
 
-## 시술: kinh tế thủ thuật và logic bảo trì
+## 시술: kinh tế thủ thuật và lô-gic (logic / 논리) bảo trì
 
-Trong tiếng Hàn đời thường, `시술` có thể chỉ nhiều thủ thuật từ laser, tiêm đến chăm sóc da. Một số dịch vụ được tiếp thị như bảo trì định kỳ, khiến thị trường làm đẹp gần với logic thuê bao.
+Trong tiếng Hàn đời thường, `시술` có thể chỉ nhiều thủ thuật từ laser, tiêm đến chăm sóc da. Một số dịch vụ được tiếp thị như bảo trì định kỳ, khiến thị trường làm đẹp gần với lô-gic (logic / 논리) thuê bao.
 
 Điểm cần hiểu là **y khoa hoá ngoại hình (medicalization of appearance)**: một đặc điểm bình thường có thể được mô tả lại thành “vấn đề” có giải pháp bằng thủ thuật. Người tiêu dùng cần hỏi chỉ định, mức hiệu quả dự kiến, thời gian duy trì, tác dụng phụ và năng lực của người cung cấp dịch vụ.
 
@@ -273,7 +276,7 @@ trải nghiệm cá nhân
 
 Ba loại có thể cùng xuất hiện trong một video nhưng không có cùng trọng lượng chứng cứ.
 
-Một review chân thành vẫn có thể không đại diện cho người khác vì loại da, tiền sử, mục tiêu và cách dùng khác nhau.
+Một rà soát (review / 검토) chân thành vẫn có thể không đại diện cho người khác vì loại da, tiền sử, mục tiêu và cách dùng khác nhau.
 
 ## Thuật toán hình ảnh: chuẩn đẹp có thể bị khuếch đại qua cơ chế tuyển chọn
 
@@ -339,7 +342,7 @@ Giá ban đầu vì vậy không phải toàn bộ chi phí. Cần nhìn **tổn
 
 ## Tác dụng phụ, biến chứng và kết quả không đạt kỳ vọng là ba vấn đề khác nhau
 
-Trong diễn ngôn tiêu dùng, mọi kết quả xấu dễ bị gộp thành “side effect”. Nhưng về tư duy rủi ro nên tách:
+Trong diễn ngôn tiêu dùng, mọi kết quả xấu dễ bị gộp thành “side tác động (effect / 효과)”. Nhưng về tư duy rủi ro nên tách:
 
 ```text
 phản ứng dự kiến và thường gặp
@@ -355,7 +358,7 @@ Trong thị trường tín hiệu, giá cao có thể báo thương hiệu, vị
 
 Ngược lại, giá rẻ bất thường cũng có thể đi kèm khuyến mãi, công suất cao hoặc mô hình kinh doanh khác chứ không tự động nghĩa chất lượng kém.
 
-Do đó giá là **tín hiệu (signal)** chứ không phải thước đo trực tiếp. Cần xem thêm chuyên môn, quy trình, thành phần, hồ sơ rủi ro và mức phù hợp với nhu cầu.
+Do đó giá là **tín hiệu (signal / 신호)** chứ không phải thước đo trực tiếp. Cần xem thêm chuyên môn, quy trình, thành phần, hồ sơ rủi ro và mức phù hợp với nhu cầu.
 
 ## Du lịch làm đẹp và rào cản thông tin xuyên ngôn ngữ
 
@@ -419,7 +422,7 @@ lợi ích kỳ vọng
 
 Khung này không trả lời thay cá nhân nên hay không nên làm gì. Nó giúp tách mong muốn thật của bản thân khỏi quảng cáo, áp lực nhóm và cảm giác khẩn cấp do khuyến mãi.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Văn hoá làm đẹp Hàn Quốc là một **thị trường tín hiệu trên cơ thể (signaling market) có bất cân xứng thông tin**. Ngành công nghiệp cung cấp công cụ; camera và nền tảng tạo điểm tham chiếu; nhóm xã hội tạo chuẩn mực; trường học và công sở thêm kỳ vọng; còn dịch vụ y khoa đưa thêm lớp bằng chứng, rủi ro và đồng thuận. Hiểu hệ thống không đồng nghĩa phải tuân theo lý tưởng của hệ thống.
 
@@ -442,3 +445,5 @@ Khung này không trả lời thay cá nhân nên hay không nên làm gì. Nó 
 “Dịch vụ càng đắt thì càng an toàn” là suy luận yếu; giá và chất lượng không có quan hệ tuyến tính đơn giản.
 
 “Thủ thuật thẩm mỹ chỉ là một dạng tiêu dùng như mua mỹ phẩm” bỏ qua khác biệt về xâm lấn, khả năng đảo ngược và hồ sơ rủi ro.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

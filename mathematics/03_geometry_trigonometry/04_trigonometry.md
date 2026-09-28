@@ -1,14 +1,17 @@
 # Lượng giác: từ tam giác đến rotation, phase và wave
 
-Lượng giác (Trigonometry / 삼각함수) thường được giới thiệu bằng tam giác vuông, nhưng đó chỉ là cửa vào. Bản chất sâu hơn của lượng giác là **mô tả orientation và rotation bằng numbers**. Khi một point quay quanh circle, hai coordinates của nó thay đổi theo sine và cosine. Từ geometry này phát sinh triangle ratios, periodic functions, rotation matrices, wave models, Fourier analysis và nhiều công cụ trong graphics, robotics, signal processing và physics.
+> **Mạch đọc:** Đọc **Lượng giác: từ tam giác đến rotation, phase và wave** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao ratio trong tam giác chỉ phụ thuộc angle?** sang **Right-triangle definition chưa đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Lượng giác (Trigonometry / 삼각함수) thường được giới thiệu bằng tam giác vuông, nhưng đó chỉ là cửa vào. Bản chất sâu hơn của lượng giác là **mô tả orientation và rotation bằng numbers**. Khi một điểm (point / 지점) quay quanh circle, hai coordinates của nó thay đổi theo sine và cosine. Từ hình học (geometry / 기하학) này phát sinh triangle ratios, periodic functions, rotation matrices, wave các mô hình (models / 모델들), Fourier phân tích (analysis / 분석) và nhiều công cụ trong graphics, robotics, tín hiệu (signal / 신호) processing và physics.
 
 > Sine và cosine không phải hai công thức ngẫu nhiên gắn với tam giác. Chúng là hai coordinates của chuyển động quay.
 
 ## Vì sao ratio trong tam giác chỉ phụ thuộc angle?
 
-Xét hai right triangles có cùng acute angle `θ`. Hai tam giác đó similar, nên corresponding side lengths chỉ khác nhau bởi một common scale factor.
+Xét hai right triangles có cùng acute angle `θ`. Hai tam giác đó similar, nên corresponding side lengths chỉ khác nhau bởi một dùng chung (common / 공통) quy mô (scale / 규모) factor.
 
-Nếu một triangle được scale factor `k`, opposite, adjacent và hypotenuse đều nhân `k`. Vì thế ratios như
+Nếu một triangle được quy mô (scale / 규모) factor `k`, opposite, adjacent và hypotenuse đều nhân `k`. Vì thế ratios như
 
 ```math
 \frac{opposite}{hypotenuse}
@@ -38,19 +41,19 @@ Tangent cũng là ratio
 
 khi `cosθ≠0`.
 
-Điểm cần nhớ không phải mnemonic SOH-CAH-TOA tự thân, mà là **similarity makes these ratios invariant under scale**.
+Điểm cần nhớ không phải mnemonic SOH-CAH-TOA tự thân, mà là **similarity makes these ratios bất biến (invariant / 불변식) under quy mô (scale / 규모)**.
 
 ## Right-triangle definition chưa đủ
 
-Triangle definition works naturally cho acute angles từ `0` đến `π/2`. Nhưng trong real systems ta cần angles lớn hơn `90°`, negative rotations, nhiều vòng quay và continuous phase.
+Triangle definition works naturally cho acute angles từ `0` đến `π/2`. Nhưng trong real các hệ thống (systems / 시스템들) ta cần angles lớn hơn `90°`, negative rotations, nhiều vòng quay và continuous phase.
 
-Một robot arm có thể quay `-30°`; một signal có phase `5π`; một point có thể rotate nhiều vòng. Unit circle mở rộng trigonometry sang toàn bộ real line.
+Một robot arm có thể quay `-30°`; một tín hiệu (signal / 신호) có phase `5π`; một điểm (point / 지점) có thể rotate nhiều vòng. đơn vị (unit / 단위) circle mở rộng trigonometry sang toàn bộ real line.
 
-## Unit circle: definition cốt lõi
+## Đơn vị (unit / 단위) circle: definition cốt lõi
 
-Xét circle radius 1 centered at origin. Bắt đầu từ point `(1,0)` và rotate counterclockwise angle `θ`.
+Xét circle radius 1 centered at origin. Bắt đầu từ điểm (point / 지점) `(1,0)` và rotate counterclockwise angle `θ`.
 
-Point mới có coordinates
+Điểm (point / 지점) mới có coordinates
 
 ```math
 (\cos\theta,\sin\theta).
@@ -63,11 +66,11 @@ Point mới có coordinates
 
 Với this viewpoint, dấu của sine/cosine tự nhiên thay đổi theo quadrant.
 
-Trong quadrant II, x-coordinate âm nên cosine âm, trong khi y-coordinate dương nên sine dương. Không cần memorize bảng dấu nếu hình dung point trên circle.
+Trong quadrant II, x-coordinate âm nên cosine âm, trong khi y-coordinate dương nên sine dương. Không cần memorize bảng dấu nếu hình dung điểm (point / 지점) trên circle.
 
-## Pythagorean identity xuất hiện từ circle geometry
+## Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)
 
-Mọi point `(x,y)` trên unit circle thỏa
+Mọi điểm (point / 지점) `(x,y)` trên đơn vị (unit / 단위) circle thỏa
 
 ```math
 x^2+y^2=1.
@@ -85,7 +88,7 @@ cho
 \cos^2\theta+\sin^2\theta=1.
 ```
 
-Đây không phải identity để học thuộc riêng. Nó là Pythagorean theorem applied tới radius-1 triangle được tạo bởi point trên unit circle.
+Đây không phải định danh (identity / 식별자) để học thuộc riêng. Nó là Pythagorean theorem applied tới radius-1 triangle được tạo bởi điểm (point / 지점) trên đơn vị (unit / 단위) circle.
 
 Từ đó,
 
@@ -95,7 +98,7 @@ Từ đó,
 
 cũng follow bằng cách chia cho `cos²θ` khi `cosθ≠0`.
 
-## Radian: measure angle bằng geometry tự nhiên
+## Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên
 
 Degree chia full circle thành 360 parts do historical convention. Radian (Radian / 라디안) được định nghĩa trực tiếp từ arc length:
 
@@ -129,7 +132,7 @@ Radian là dimensionless ratio và phù hợp trực tiếp với calculus.
 
 ## Vì sao calculus muốn radians?
 
-Xét small angle `h` measured in radians. Trên unit circle, arc length bằng `h`. Khi `h→0`, geometry cho
+Xét small angle `h` measured in radians. Trên đơn vị (unit / 단위) circle, arc length bằng `h`. Khi `h→0`, hình học (geometry / 기하학) cho
 
 ```math
 \frac{\sin h}{h}\to1.
@@ -147,11 +150,11 @@ Nếu `x` measured in degrees, conversion factor `π/180` sẽ xuất hiện:
 \frac{d}{dx}\sin(x^\circ)=\frac{\pi}{180}\cos(x^\circ).
 ```
 
-Vì vậy radian không chỉ là một unit khác; nó là angle measure làm local geometry của circle có scale tự nhiên.
+Vì vậy radian không chỉ là một đơn vị (unit / 단위) khác; nó là angle measure làm cục bộ (local / 로컬) hình học (geometry / 기하학) của circle có quy mô (scale / 규모) tự nhiên.
 
 ## Periodicity đến từ quay trọn vòng
 
-Sau full rotation `2π`, point trở lại position cũ. Vì thế
+Sau full rotation `2π`, điểm (point / 지점) trở lại position cũ. Vì thế
 
 ```math
 \sin(\theta+2\pi)=\sin\theta,
@@ -169,11 +172,11 @@ Tangent có period `π` vì direction slope lặp sau half-turn:
 \tan(\theta+\pi)=\tan\theta.
 ```
 
-Period không phải arbitrary property của graph; nó đến từ rotational symmetry.
+Period không phải arbitrary thuộc tính (property / 속성) của đồ thị (graph / 그래프); nó đến từ rotational symmetry.
 
-## Reference angles và symmetry
+## Tham chiếu (reference / 참조) angles và symmetry
 
-Unit circle cho phép derive values ngoài first quadrant bằng symmetry.
+Đơn vị (unit / 단위) circle cho phép derive values ngoài first quadrant bằng symmetry.
 
 Ví dụ
 
@@ -195,13 +198,13 @@ Trigonometric identities thường trở nên dễ hiểu hơn khi nghĩ bằng 
 
 ## Tangent như slope của direction
 
-Với point on unit circle,
+Với điểm (point / 지점) on đơn vị (unit / 단위) circle,
 
 ```math
 \tan\theta=\frac{\sin\theta}{\cos\theta}=\frac{y}{x}.
 ```
 
-Đây chính là slope của ray từ origin đến point khi `x≠0`.
+Đây chính là slope của ray từ origin đến điểm (point / 지점) khi `x≠0`.
 
 Do đó tangent naturally link angle với slope.
 
@@ -211,13 +214,13 @@ Một line có direction angle `θ` relative x-axis có slope
 m=\tan\theta.
 ```
 
-Khi line vertical, `cosθ=0` và tangent undefined — đúng với fact vertical line có undefined/infinite slope trong standard Cartesian representation.
+Khi line vertical, `cosθ=0` và tangent undefined — đúng với fact vertical line có undefined/infinite slope trong tiêu chuẩn (standard / 표준) Cartesian biểu diễn (representation / 표현).
 
 ## Inverse trigonometric functions
 
-Nếu sine/cosine map nhiều angles tới same value do periodicity, chúng không invertible trên toàn `R`.
+Nếu sine/cosine map nhiều angles tới same giá trị (value / 값) do periodicity, chúng không invertible trên toàn `R`.
 
-Để define inverse, ta restrict domain.
+Để define inverse, ta restrict lĩnh vực (domain / 도메인).
 
 Arcsine
 
@@ -241,7 +244,7 @@ Notation `sin^{-1}x` thường nghĩa arcsin, **không phải** reciprocal `1/si
 
 ## From circle motion to sinusoidal motion
 
-Imagine point rotating uniformly around circle radius `A` với angular position
+Imagine điểm (point / 지점) rotating uniformly around circle radius `A` với angular position
 
 ```math
 \theta(t)=\omega t+\phi.
@@ -261,7 +264,7 @@ x(t)=A\cos(\omega t+\phi).
 
 Một sinusoid vì thế là **projection của uniform circular motion lên một axis**.
 
-Đây là mental model mạnh cho waves và oscillations.
+Đây là mô hình tư duy (mental model / 사고 모델) mạnh cho waves và oscillations.
 
 ## Amplitude, angular frequency, phase
 
@@ -273,7 +276,7 @@ y(t)=A\sin(\omega t+\phi).
 
 `A` là amplitude: maximum magnitude relative equilibrium.
 
-`ω` là angular frequency measured radians/time.
+`ω` là angular frequency measured radians/thời gian (time / 시간).
 
 `φ` là phase offset: vị trí trong cycle tại `t=0`.
 
@@ -289,7 +292,7 @@ nên period
 T=\frac{2\pi}{|\omega|}.
 ```
 
-Frequency cycles/time là
+Frequency cycles/thời gian (time / 시간) là
 
 ```math
 f=\frac1T=\frac{|\omega|}{2\pi}.
@@ -301,9 +304,9 @@ Do đó
 \omega=2\pi f.
 ```
 
-`f` đếm cycles; `ω` đo radians accumulated per unit time.
+`f` đếm cycles; `ω` đo radians accumulated per đơn vị (unit / 단위) thời gian (time / 시간).
 
-## Phase không chỉ là “dịch graph”
+## Phase không chỉ là “dịch đồ thị (graph / 그래프)”
 
 Hai signals
 
@@ -319,15 +322,15 @@ y_2=A\sin(\omega t+\phi)
 
 có same frequency/amplitude nhưng khác alignment trong cycle.
 
-Trong AC circuits, phase difference giữa voltage/current ảnh hưởng real power. Trong wave interference, relative phase quyết định constructive hay destructive combination.
+Trong AC circuits, phase difference giữa voltage/hiện tại (current / 현재) ảnh hưởng real power. Trong wave interference, relative phase quyết định constructive hay destructive combination.
 
-Phase vì thế represent timing/orientation trong periodic state, không chỉ cosmetic horizontal shift.
+Phase vì thế represent timing/orientation trong periodic trạng thái (state / 상태), không chỉ cosmetic horizontal shift.
 
 ## Addition formulas từ rotation composition
 
 Rotation by `α` rồi `β` tương đương rotation by `α+β`.
 
-Rotation matrix là
+Rotation ma trận (matrix / 행렬) là
 
 ```math
 R(\theta)=
@@ -361,9 +364,9 @@ Addition formulas vì vậy encode composition law của rotations.
 
 Đây là explanation structural tốt hơn memorizing sign patterns.
 
-## Rotation matrix: vì sao entries là sine và cosine?
+## Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?
 
-Standard basis vectors là
+Tiêu chuẩn (standard / 표준) basis vectors là
 
 ```math
 e_1=(1,0),\qquad e_2=(0,1).
@@ -381,7 +384,7 @@ Rotate `e_2` by `θ`:
 R(\theta)e_2=(-\sin\theta,\cos\theta).
 ```
 
-Matrix columns chính là images của basis vectors, nên
+Ma trận (matrix / 행렬) columns chính là images của basis vectors, nên
 
 ```math
 R(\theta)=
@@ -391,11 +394,11 @@ R(\theta)=
 \end{bmatrix}.
 ```
 
-Matrix không phải formula được “phát minh” riêng; nó là coordinate representation của rotation transformation.
+Ma trận (matrix / 행렬) không phải formula được “phát minh” riêng; nó là coordinate biểu diễn (representation / 표현) của rotation transformation.
 
 ## Rotation bảo toàn length và angle
 
-Rotation matrix thỏa
+Rotation ma trận (matrix / 행렬) thỏa
 
 ```math
 R(\theta)^TR(\theta)=I.
@@ -412,9 +415,9 @@ Do đó
 
 Rotation giữ Euclidean length. Nó cũng giữ dot products, nên giữ angles.
 
-Đây là bridge giữa trigonometry và orthogonal matrices trong linear algebra.
+Đây là cầu nối (bridge / 브리지) giữa trigonometry và orthogonal matrices trong tuyến tính (linear / 선형) algebra.
 
-## Dot product và cosine similarity
+## Dot sản phẩm (product / 제품) và cosine similarity
 
 Với nonzero vectors `u,v`:
 
@@ -434,7 +437,7 @@ Cosine đo alignment direction:
 - `0`: orthogonal;
 - `-1`: opposite direction.
 
-Cosine similarity trong information retrieval/embeddings dùng same geometry, dù high-dimensional vectors không thể visualise trực tiếp như arrows 2D.
+Cosine similarity trong thông tin (information / 정보) retrieval/embeddings dùng same hình học (geometry / 기하학), dù high-dimensional vectors không thể visualise trực tiếp như arrows 2D.
 
 ## Law of cosines: Pythagoras với non-right angle
 
@@ -450,7 +453,7 @@ Nếu `C=π/2`, `cos C=0`, ta recover Pythagorean theorem:
 c^2=a^2+b^2.
 ```
 
-Law of cosines có thể derive từ vector subtraction:
+Law of cosines có thể derive từ véc-tơ (vector / 벡터) subtraction:
 
 ```math
 \|u-v\|^2
@@ -463,7 +466,7 @@ Substitute
 u\cdot v=\|u\|\|v\|\cos C.
 ```
 
-Điều này cho thấy triangle geometry và vector algebra là cùng structure được viết bằng hai languages.
+Điều này cho thấy triangle hình học (geometry / 기하학) và véc-tơ (vector / 벡터) algebra là cùng cấu trúc (structure / 구조) được viết bằng hai languages.
 
 ## Law of sines
 
@@ -480,15 +483,15 @@ Cho triangle sides `a,b,c` đối diện angles `A,B,C`:
 
 trong đó `R` là circumradius.
 
-Law of sines useful khi biết angle-side pairs. Nó cũng nối triangle với circle vì constant `2R` đến từ circumcircle geometry.
+Law of sines useful khi biết angle-side pairs. Nó cũng nối triangle với circle vì constant `2R` đến từ circumcircle hình học (geometry / 기하학).
 
 ## Triangulation và localization
 
-Nếu biết baseline và angles tới target, ta có thể infer position/distance qua trigonometric constraints.
+Nếu biết baseline và angles tới mục tiêu (target / 대상), ta có thể infer position/distance qua trigonometric các ràng buộc (constraints / 제약조건들).
 
-Surveying dùng triangulation từ lâu. Computer vision recover geometry từ camera rays. Robotics dùng bearings/ranges. GPS chính xác hơn là trilateration/pseudorange geometry chứ không đơn giản “triangulation”, nhưng cùng idea broader: position được infer từ geometric constraints.
+Surveying dùng triangulation từ lâu. Computer vision recover hình học (geometry / 기하학) từ camera rays. Robotics dùng bearings/ranges. GPS chính xác hơn là trilateration/pseudorange hình học (geometry / 기하학) chứ không đơn giản “triangulation”, nhưng cùng idea broader: position được infer từ geometric các ràng buộc (constraints / 제약조건들).
 
-Modeling language quan trọng: angle measurements → trigonometric constraints → solve unknown geometry.
+Modeling ngôn ngữ (language / 언어) quan trọng: angle measurements → trigonometric các ràng buộc (constraints / 제약조건들) → solve unknown hình học (geometry / 기하학).
 
 ## Small-angle approximation
 
@@ -516,7 +519,7 @@ Ví dụ với `θ=0.01` rad,
 
 rất gần `0.01`.
 
-Small-angle approximations simplify pendulum equations, optics và control models, nhưng chỉ hợp lệ khi angle đủ nhỏ. Dùng degree value trực tiếp sẽ sai vì approximation assume radians.
+Small-angle approximations simplify pendulum equations, optics và điều khiển (control / 제어) các mô hình (models / 모델들), nhưng chỉ hợp lệ khi angle đủ nhỏ. Dùng degree giá trị (value / 값) trực tiếp sẽ sai vì approximation assume radians.
 
 ## Harmonic oscillator và trigonometry
 
@@ -532,26 +535,26 @@ có solutions
 x(t)=A\cos(\omega t)+B\sin(\omega t).
 ```
 
-Tại sao sine/cosine xuất hiện? Vì differentiation hai lần cho lại negative original function:
+Tại sao sine/cosine xuất hiện? Vì differentiation hai lần cho lại negative original hàm (function / 함수):
 
 ```math
 \frac{d^2}{dt^2}\sin(\omega t)
 =-\omega^2\sin(\omega t).
 ```
 
-Rotation geometry và differential equations gặp nhau tại cùng periodic structure.
+Rotation hình học (geometry / 기하학) và differential equations gặp nhau tại cùng periodic cấu trúc (structure / 구조).
 
 ## Euler's formula: rotation bằng complex exponential
 
-Một connection sâu là
+Một liên kết (connection / 연결) sâu là
 
 ```math
 e^{i\theta}=\cos\theta+i\sin\theta.
 ```
 
-Complex multiplication by `e^{iθ}` rotate point trên complex plane angle `θ` mà giữ magnitude.
+Complex multiplication by `e^{iθ}` rotate điểm (point / 지점) trên complex plane angle `θ` mà giữ magnitude.
 
-Điều này làm sine/cosine, exponentials và rotations trở thành facets của cùng object.
+Điều này làm sine/cosine, exponentials và rotations trở thành facets của cùng đối tượng (object / 객체).
 
 Từ Euler's formula:
 
@@ -563,11 +566,11 @@ Từ Euler's formula:
 \sin\theta=\frac{e^{i\theta}-e^{-i\theta}}{2i}.
 ```
 
-Đây là nền cho Fourier analysis và signal processing.
+Đây là nền cho Fourier phân tích (analysis / 분석) và tín hiệu (signal / 신호) processing.
 
-## Fourier viewpoint: periodic pattern như tổng của rotations
+## Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations
 
-Fourier theory nói broad classes of signals có thể decompose thành sums của sine/cosine hoặc complex exponentials với different frequencies.
+Fourier lý thuyết (theory / 이론) nói broad classes of signals có thể decompose thành sums của sine/cosine hoặc complex exponentials với different frequencies.
 
 Một waveform phức tạp có thể được represent như combination:
 
@@ -577,19 +580,19 @@ f(t)\approx
 A_k\cos(\omega_k t+\phi_k).
 ```
 
-Trigonometry vì thế không chỉ model one wave; nó cung cấp coordinate system cho whole signal space.
+Trigonometry vì thế không chỉ mô hình (model / 모델) one wave; nó cung cấp coordinate hệ thống (system / 시스템) cho whole tín hiệu (signal / 신호) không gian (space / 공간).
 
 ## Aliasing: sampling phải tôn trọng frequency
 
-Nếu continuous sinusoid được sample quá chậm, different frequencies có thể produce same sample pattern. Đây là aliasing.
+Nếu continuous sinusoid được mẫu (sample / 표본) quá chậm, different frequencies có thể produce same mẫu (sample / 표본) mẫu (pattern / 패턴). Đây là aliasing.
 
-Nyquist principle yêu cầu sampling frequency lớn hơn twice highest frequency component trong ideal band-limited setting:
+Nyquist principle yêu cầu sampling frequency lớn hơn twice highest frequency thành phần (component / 컴포넌트) trong ideal band-limited setting:
 
 ```math
 f_s>2f_{max}.
 ```
 
-Connection này cho thấy frequency/period không chỉ là textbook parameters; chúng quyết định digital representation có preserve signal information hay không.
+Liên kết (connection / 연결) này cho thấy frequency/period không chỉ là textbook parameters; chúng quyết định digital biểu diễn (representation / 표현) có preserve tín hiệu (signal / 신호) thông tin (information / 정보) hay không.
 
 ## Angles trong 3D: cần vectors/matrices hơn là một `θ`
 
@@ -597,11 +600,11 @@ Trong 2D, one angle đủ describe orientation. Trong 3D, rotation phức tạp 
 
 Euler angles, rotation matrices và quaternions là các representations phổ biến. Trigonometric functions vẫn xuất hiện trong matrices/quaternions, nhưng single-angle intuition không còn đủ.
 
-Graphics, robotics và AR/VR vì thế nối trigonometry với linear algebra và group structure của rotations.
+Graphics, robotics và AR/VR vì thế nối trigonometry với tuyến tính (linear / 선형) algebra và group cấu trúc (structure / 구조) của rotations.
 
 ## Degree/radian bug là model-unit bug
 
-Nếu API `sin()` mong radians nhưng code truyền degrees, formula algebraically đúng nhưng unit semantics sai.
+Nếu API `sin()` mong radians nhưng mã (code / 코드) truyền degrees, formula algebraically đúng nhưng đơn vị (unit / 단위) ngữ nghĩa (semantics / 의미론) sai.
 
 Ví dụ
 
@@ -617,45 +620,47 @@ Convert:
 \theta_{rad}=\theta_{deg}\frac{\pi}{180}.
 ```
 
-Unit mismatch là một trong những bugs dễ xảy ra nhất khi trigonometry đi vào code.
+Đơn vị (unit / 단위) mismatch là một trong những bugs dễ xảy ra nhất khi trigonometry đi vào mã (code / 코드).
 
-## Knowledge Connection — trigonometry và embeddings
+## Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings
 
-Cosine similarity không quan tâm vector magnitudes trực tiếp, chỉ normalized directional alignment:
+Cosine similarity không quan tâm véc-tơ (vector / 벡터) magnitudes trực tiếp, chỉ normalized directional alignment:
 
 ```math
 \operatorname{cosSim}(u,v)
 =\frac{u\cdot v}{\|u\|\|v\|}.
 ```
 
-Trong embedding space, “angle” không phải physical angle nhưng geometry vẫn hợp lệ trong high-dimensional inner-product space.
+Trong embedding không gian (space / 공간), “angle” không phải vật lý (physical / 물리적) angle nhưng hình học (geometry / 기하학) vẫn hợp lệ trong high-dimensional inner-product không gian (space / 공간).
 
-Điều này là ví dụ classic của concept sinh ra từ circle/triangle nhưng generalize thành tool trong AI.
+Điều này là ví dụ classic của concept sinh ra từ circle/triangle nhưng generalize thành công cụ (tool / 도구) trong AI.
 
-## Knowledge Connection — phase và distributed/signal systems
+## Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)
 
-Hai periodic processes có same frequency nhưng phase lệch có thể reinforce hoặc cancel khi combine. Trong AC power, communication và control, relative phase mang information về timing.
+Hai periodic processes có same frequency nhưng phase lệch có thể reinforce hoặc cancel khi combine. Trong AC power, communication và điều khiển (control / 제어), relative phase mang thông tin (information / 정보) về timing.
 
-Trong software, ta không nên kéo analogy quá xa, nhưng periodic jobs với same cadence cũng có phase/offset concept: staggering phase có thể tránh synchronized load spikes. Mathematical phase language giúp reason về cyclic timing.
+Trong software, ta không nên kéo analogy quá xa, nhưng periodic jobs với same cadence cũng có phase/offset concept: staggering phase có thể tránh synchronized tải (load / 로드) spikes. Mathematical phase ngôn ngữ (language / 언어) giúp reason về cyclic timing.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Hãy xem sine và cosine như **coordinates của rotation**. Tam giác chỉ là một local geometric view; unit circle mở rộng chúng cho mọi angle. Khi rotation diễn ra đều theo time, projection tạo sinusoidal wave. Khi nhiều rotations/frequencies cộng lại, ta tiến tới Fourier analysis. Trigonometry vì thế là bridge giữa geometry, linear algebra, differential equations và signal processing.
+> Hãy xem sine và cosine như **coordinates của rotation**. Tam giác chỉ là một cục bộ (local / 로컬) geometric view; đơn vị (unit / 단위) circle mở rộng chúng cho mọi angle. Khi rotation diễn ra đều theo thời gian (time / 시간), projection tạo sinusoidal wave. Khi nhiều rotations/frequencies cộng lại, ta tiến tới Fourier phân tích (analysis / 분석). Trigonometry vì thế là cầu nối (bridge / 브리지) giữa hình học (geometry / 기하학), tuyến tính (linear / 선형) algebra, differential equations và tín hiệu (signal / 신호) processing.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Trigonometry chỉ dùng cho triangles.”** Triangle ratios là entry point. Unit circle/rotation mới là framework general cho periodic motion và waves.
+**“Trigonometry chỉ dùng cho triangles.”** Triangle ratios là entry điểm (point / 지점). đơn vị (unit / 단위) circle/rotation mới là khung phần mềm (framework / 프레임워크) general cho periodic motion và waves.
 
 **“Degree và radian chỉ khác cách ghi.”** Chúng convert được, nhưng calculus formulas và small-angle approximations có clean form khi angle measured radians.
 
-**“`sin^{-1}` là `1/sin`.”** Trong common notation, `sin^{-1}` nghĩa arcsin; reciprocal là `csc`.
+**“`sin^{-1}` là `1/sin`.”** Trong dùng chung (common / 공통) notation, `sin^{-1}` nghĩa arcsin; reciprocal là `csc`.
 
 **“Tangent luôn là một finite ratio.”** `tanθ` undefined khi `cosθ=0`, tương ứng vertical direction có undefined slope.
 
-**“Amplitude lớn hơn nghĩa frequency cao hơn.”** Amplitude và frequency là independent parameters trong sinusoidal model.
+**“Amplitude lớn hơn nghĩa frequency cao hơn.”** Amplitude và frequency là independent parameters trong sinusoidal mô hình (model / 모델).
 
-**“Hai waves cùng frequency thì giống nhau.”** Phase và amplitude vẫn có thể khác, tạo rất different combined behavior.
+**“Hai waves cùng frequency thì giống nhau.”** Phase và amplitude vẫn có thể khác, tạo rất different combined hành vi (behavior / 동작).
 
 **“Cosine similarity bằng 1 nghĩa vectors bằng nhau.”** Nó chỉ nói same direction; magnitudes có thể khác nếu vectors chưa normalized.
 
-**“Rotation order trong 3D không quan trọng.”** 3D rotations generally do not commute. Rotate X then Y thường khác Y then X.
+**“Rotation thứ tự (order / 순서) trong 3D không quan trọng.”** 3D rotations generally do not commute. Rotate X then Y thường khác Y then X.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 euclidean geometry](./00_euclidean_geometry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

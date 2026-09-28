@@ -1,15 +1,18 @@
 # Phân tích thể tích — chuẩn độ như một phép đo định lượng
 
+> **Mạch đọc:** Đọc **Phân tích thể tích — chuẩn độ như một phép đo định lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chất chuẩn sơ cấp** sang **Dung dịch chuẩn thứ cấp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phân tích thể tích (volumetric analysis / 용량 분석)** xác định lượng chất phân tích từ thể tích của một thuốc thử có nồng độ đã biết và tỉ lượng phản ứng xác định. Điều cốt lõi không phải “nhỏ thuốc thử tới khi đổi màu”, mà là biến một thể tích đo được thành số mol thông qua chuẩn hóa, rồi dùng hóa lượng và cân bằng để suy lượng chất cần tìm.
 
-Chuẩn độ acid–base chỉ là một trường hợp. Cùng logic này xuất hiện trong chuẩn độ oxy hóa–khử, tạo phức, kết tủa và nhiều phép chuẩn độ ngược.
+Chuẩn độ acid–cơ sở (base / 기반) chỉ là một trường hợp. Cùng lô-gic (logic / 논리) này xuất hiện trong chuẩn độ oxy hóa–khử, tạo phức, kết tủa và nhiều phép chuẩn độ ngược.
 
 # Khung bảo toàn vật chất
 
 Nếu phản ứng:
 
 \[
-aA+bB\rightarrow \text{sản phẩm}
+aA+bB\rightarrow \văn bản (text / 텍스트){sản phẩm}
 \]
 
 thì tại điểm tương đương:
@@ -44,7 +47,7 @@ V_{endpoint}-V_{equivalence}
 
 có thể tạo **sai số chỉ thị (indicator error)** hoặc sai lệch endpoint.
 
-Một phương pháp tốt chọn chỉ thị hoặc thuật toán phát hiện sao cho endpoint gần equivalence point trong điều kiện thực tế.
+Một phương pháp tốt chọn chỉ thị hoặc thuật toán phát hiện sao cho endpoint gần equivalence điểm (point / 지점) trong điều kiện thực tế.
 
 # Dung dịch chuẩn sơ cấp và thứ cấp
 
@@ -60,6 +63,9 @@ Một phương pháp tốt chọn chỉ thị hoặc thuật toán phát hiện 
 - phản ứng nhanh và có hóa lượng rõ với titrant.
 
 Từ khối lượng chất chuẩn sơ cấp, số mol được xác định trực tiếp.
+
+
+> **Chuyển mạch:** Từ **Chất chuẩn sơ cấp**, ta sang **Dung dịch chuẩn thứ cấp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Dung dịch chuẩn thứ cấp
 
@@ -81,7 +87,7 @@ Do cần hai lần đọc, độ không đảm bảo của cả hai đều đón
 
 Buret phải được:
 
-- rửa và condition bằng titrant;
+- rửa và điều kiện (condition / 조건) bằng titrant;
 - loại bọt ở đầu;
 - đọc meniscus ở tầm mắt;
 - kiểm tra rò rỉ;
@@ -89,11 +95,11 @@ Buret phải được:
 
 Một bọt khí nhỏ thoát ra trong quá trình chuẩn độ làm thể tích đọc trên buret lớn hơn thể tích thật đi vào bình phản ứng.
 
-# Chuẩn độ acid–base — hóa lượng kết hợp cân bằng
+# Chuẩn độ acid–cơ sở (base / 기반) — hóa lượng kết hợp cân bằng
 
-Với acid mạnh–base mạnh, gần điểm tương đương pH thay đổi rất dốc vì chất dư chuyển nhanh từ \(H^+\) sang \(OH^-\).
+Với acid mạnh–cơ sở (base / 기반) mạnh, gần điểm tương đương pH thay đổi rất dốc vì chất dư chuyển nhanh từ \(H^+\) sang \(OH^-\).
 
-Với acid yếu–base mạnh, trước điểm tương đương tồn tại hỗn hợp acid và base liên hợp, tạo vùng đệm.
+Với acid yếu–cơ sở (base / 기반) mạnh, trước điểm tương đương tồn tại hỗn hợp acid và cơ sở (base / 기반) liên hợp, tạo vùng đệm.
 
 Phương trình Henderson–Hasselbalch gần đúng:
 
@@ -109,11 +115,14 @@ pH\approx pK_a
 
 Đây là lý do đường chuẩn độ không chỉ cho nồng độ; nó còn có thể chứa thông tin về \(pK_a\).
 
+
+> **Chuyển mạch:** Từ **Dung dịch chuẩn thứ cấp**, ta sang **pH tại điểm tương đương không luôn bằng 7** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## pH tại điểm tương đương không luôn bằng 7
 
-- acid mạnh + base mạnh: gần 7 ở 25 °C trong hệ lý tưởng;
-- acid yếu + base mạnh: thường >7 vì base liên hợp thủy phân;
-- base yếu + acid mạnh: thường <7 vì acid liên hợp thủy phân.
+- acid mạnh + cơ sở (base / 기반) mạnh: gần 7 ở 25 °C trong hệ lý tưởng;
+- acid yếu + cơ sở (base / 기반) mạnh: thường >7 vì cơ sở (base / 기반) liên hợp thủy phân;
+- cơ sở (base / 기반) yếu + acid mạnh: thường <7 vì acid liên hợp thủy phân.
 
 Do đó chọn chỉ thị phải dựa trên **vùng nhảy pH**, không dựa vào ý tưởng “điểm tương đương luôn trung tính”.
 
@@ -125,9 +134,9 @@ Nếu hai bước phân ly quá gần nhau, các vùng chồng lấp và khó t�
 
 Từ đây có một nguyên tắc tổng quát: **khả năng phân giải các bước hóa học phụ thuộc khoảng cách hằng số cân bằng, không chỉ phụ thuộc độ chính xác buret**.
 
-# Chỉ thị acid–base
+# Chỉ thị acid–cơ sở (base / 기반)
 
-Một chỉ thị thường là acid/base yếu có hai dạng màu khác nhau:
+Một chỉ thị thường là acid/cơ sở (base / 기반) yếu có hai dạng màu khác nhau:
 
 \[
 HIn\rightleftharpoons H^++In^-
@@ -135,7 +144,7 @@ HIn\rightleftharpoons H^++In^-
 
 Màu chuyển trong một vùng pH quanh \(pK_a\) của chỉ thị.
 
-Chỉ thị tốt phải có vùng chuyển nằm trong phần dốc của đường chuẩn độ. Nếu chọn sai, đổi màu có thể xảy ra trước hoặc sau equivalence point đáng kể.
+Chỉ thị tốt phải có vùng chuyển nằm trong phần dốc của đường chuẩn độ. Nếu chọn sai, đổi màu có thể xảy ra trước hoặc sau equivalence điểm (point / 지점) đáng kể.
 
 # Chuẩn độ điện thế
 
@@ -164,6 +173,9 @@ cho thấy một mol permanganate nhận 5 mol electron trong môi trường aci
 
 Nếu analyte nhường một electron mỗi mol, tỉ lệ hóa lượng trực tiếp theo số electron cân bằng.
 
+
+> **Chuyển mạch:** Từ **pH tại điểm tương đương không luôn bằng 7**, ta sang **Điện thế và độ dốc đường chuẩn độ redox** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Điện thế và độ dốc đường chuẩn độ redox
 
 Phương trình Nernst nối thế điện cực với tỉ số dạng oxy hóa/khử:
@@ -176,9 +188,12 @@ Gần điểm tương đương, thành phần redox thay đổi nhanh và điệ
 
 Điểm endpoint có thể nhận bằng chỉ thị redox, tự chỉ thị hoặc điện cực.
 
+
+> **Chuyển mạch:** Từ **Điện thế và độ dốc đường chuẩn độ redox**, ta sang **Permanganate tự chỉ thị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Permanganate tự chỉ thị
 
-\(MnO_4^-\) có màu tím mạnh. Trước equivalence point, lượng permanganate thêm vào bị tiêu thụ nhanh. Sau khi chất khử hết, một lượng nhỏ dư tạo màu tím/hồng bền.
+\(MnO_4^-\) có màu tím mạnh. Trước equivalence điểm (point / 지점), lượng permanganate thêm vào bị tiêu thụ nhanh. Sau khi chất khử hết, một lượng nhỏ dư tạo màu tím/hồng bền.
 
 Tuy nhiên màu endpoint vẫn phụ thuộc nền mẫu, ánh sáng và mức dư cần quan sát.
 
@@ -214,6 +229,9 @@ với \(\alpha_{Y^{4-}}\) là phần EDTA ở dạng có khả năng liên kết
 
 Đây là lý do buffer không chỉ “giữ pH”; nó trực tiếp thay đổi độ mạnh hiệu dụng của phản ứng chuẩn độ.
 
+
+> **Chuyển mạch:** Từ **Permanganate tự chỉ thị**, ta sang **Độ cứng nước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Độ cứng nước
 
 Ca²⁺ và Mg²⁺ có thể được chuẩn độ bằng EDTA. Điều kiện pH và chỉ thị kim loại được chọn để tạo endpoint đủ rõ.
@@ -232,11 +250,17 @@ trước điểm tương đương, \(Ag^+\) thêm vào bị tiêu thụ tạo k�
 
 Hình dạng đường chuẩn độ liên quan \(K_{sp}\), nồng độ và các phản ứng phụ như tạo phức.
 
+
+> **Chuyển mạch:** Từ **Độ cứng nước**, ta sang **Phương pháp Mohr** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Phương pháp Mohr
 
 Chromate được dùng làm chỉ thị; sau khi phần lớn chloride đã kết tủa, dư Ag⁺ bắt đầu tạo \(Ag_2CrO_4\) có màu.
 
 pH phải được kiểm soát vì chromate, dichromate và các kết tủa bạc khác phụ thuộc môi trường.
+
+
+> **Chuyển mạch:** Từ **Phương pháp Mohr**, ta sang **Volhard và chuẩn độ ngược** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Volhard và chuẩn độ ngược
 
@@ -271,7 +295,7 @@ Một phản ứng chuẩn độ lý tưởng phải:
 - ít phản ứng phụ;
 - có endpoint đo được.
 
-Nếu phản ứng chậm, titrant có thể tích lũy tạm thời và tạo endpoint giả. Nếu hằng số cân bằng không đủ lớn, lượng analyte còn lại tại equivalence point có thể đáng kể.
+Nếu phản ứng chậm, titrant có thể tích lũy tạm thời và tạo endpoint giả. Nếu hằng số cân bằng không đủ lớn, lượng analyte còn lại tại equivalence điểm (point / 지점) có thể đáng kể.
 
 Vì vậy “phương trình đã cân bằng” chưa đủ để chứng minh một phản ứng phù hợp cho chuẩn độ.
 
@@ -282,7 +306,7 @@ Nếu thuốc thử hoặc nền mẫu tự tiêu thụ một phần titrant, c�
 Thể tích hiệu chỉnh:
 
 \[
-V_{corrected}=V_{sample}-V_{blank}
+V_{corrected}=V_{mẫu (sample / 표본)}-V_{blank}
 \]
 
 Nhưng phép trừ blank cũng mang độ không đảm bảo riêng; nếu blank lớn và biến thiên mạnh, chất lượng phép đo suy giảm.
@@ -308,6 +332,9 @@ C_A=f(C_B,V_B,V_A,\ldots)
 \]
 
 thì độ không đảm bảo phải được truyền từ các biến đầu vào theo mô hình đo.
+
+
+> **Chuyển mạch:** Từ **Volhard và chuẩn độ ngược**, ta sang **Khi nào đọc buret không còn là nguồn chi phối?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Khi nào đọc buret không còn là nguồn chi phối?
 
@@ -344,11 +371,11 @@ Nhưng kết quả báo cáo cuối không chỉ là phép chia này. Còn phả
 
 ### “Điểm đổi màu chính là điểm tương đương”
 
-Không hoàn toàn. Đổi màu là endpoint thực nghiệm; equivalence point là trạng thái hóa lượng.
+Không hoàn toàn. Đổi màu là endpoint thực nghiệm; equivalence điểm (point / 지점) là trạng thái hóa lượng.
 
-### “Chuẩn độ acid–base nào cũng có pH = 7 tại điểm tương đương”
+### “Chuẩn độ acid–cơ sở (base / 기반) nào cũng có pH = 7 tại điểm tương đương”
 
-Không. Acid/base yếu tạo sản phẩm thủy phân và làm pH lệch khỏi 7.
+Không. Acid/cơ sở (base / 기반) yếu tạo sản phẩm thủy phân và làm pH lệch khỏi 7.
 
 ### “EDTA phản ứng 1:1 nên pH không quan trọng”
 
@@ -364,6 +391,8 @@ Không. Độ chính xác cuối cùng do toàn bộ chuỗi đo quyết định
 
 # Mô hình tư duy
 
-Phân tích thể tích là **một phép bảo toàn vật chất được neo vào phép đo thể tích**. Muốn suy luận đúng phải nối bốn tầng: titrant có nồng độ được chuẩn hóa → phản ứng có hóa lượng và cân bằng phù hợp → endpoint đại diện tốt cho equivalence point → các thể tích và nguồn độ không đảm bảo được kiểm soát.
+Phân tích thể tích là **một phép bảo toàn vật chất được neo vào phép đo thể tích**. Muốn suy luận đúng phải nối bốn tầng: titrant có nồng độ được chuẩn hóa → phản ứng có hóa lượng và cân bằng phù hợp → endpoint đại diện tốt cho equivalence điểm (point / 지점) → các thể tích và nguồn độ không đảm bảo được kiểm soát.
 
 Xem tiếp: [Phân tích khối lượng](./02_gravimetric_analysis.md).
+
+> **Bàn giao:** Sau **“Buret càng nhiều chữ số thì phép đo càng chính xác”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

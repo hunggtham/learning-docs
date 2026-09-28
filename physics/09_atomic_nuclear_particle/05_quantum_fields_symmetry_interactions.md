@@ -1,5 +1,8 @@
 # Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT
 
+> **Mạch đọc:** Đọc **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cơ học lượng tử với số hạt cố định chưa đủ?** sang **Từ dao động tử điều hòa tới chế độ (mode / 모드) của trường**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao cơ học lượng tử với số hạt cố định chưa đủ?
 
 Cơ học lượng tử không tương đối tính thường bắt đầu bằng hàm sóng của một hoặc vài hạt. Cách mô tả này hoạt động rất tốt khi số hạt gần như cố định.
@@ -18,9 +21,9 @@ Lý thuyết trường lượng tử (Quantum Field Theory, QFT / 양자장론) 
 
 Electron là excitation của trường electron; photon là excitation của trường điện từ.
 
-## Từ dao động tử điều hòa tới mode của trường
+## Từ dao động tử điều hòa tới chế độ (mode / 모드) của trường
 
-Một trường tự do cổ điển có thể được khai triển thành các mode chuẩn. Mỗi mode về mặt toán học gần giống một dao động tử điều hòa.
+Một trường tự do cổ điển có thể được khai triển thành các chế độ (mode / 모드) chuẩn. Mỗi chế độ (mode / 모드) về mặt toán học gần giống một dao động tử điều hòa.
 
 Dao động tử lượng tử có mức năng lượng
 
@@ -34,9 +37,9 @@ Ta định nghĩa toán tử tạo và hủy
 \hat a^\dagger,\qquad \hat a,
 ```
 
-làm tăng hoặc giảm số lượng tử của một mode.
+làm tăng hoặc giảm số lượng tử của một chế độ (mode / 모드).
 
-Trong QFT, mỗi mode theo số sóng, phân cực hoặc số lượng tử khác có các toán tử tương tự. “Tạo một photon” nghĩa là tăng occupation number của một mode trường điện từ.
+Trong QFT, mỗi chế độ (mode / 모드) theo số sóng, phân cực hoặc số lượng tử khác có các toán tử tương tự. “Tạo một photon” nghĩa là tăng occupation number của một chế độ (mode / 모드) trường điện từ.
 
 Đây là cầu nối tự nhiên từ dao động tử lượng tử sang trạng thái nhiều hạt.
 
@@ -69,9 +72,9 @@ cho phương trình Klein–Gordon.
 
 Điểm quan trọng là trước khi nói về “hạt”, QFT bắt đầu bằng trường như biến động lực học phân bố trên không-thời gian.
 
-## Lượng tử hóa các mode trường
+## Lượng tử hóa các chế độ (mode / 모드) trường
 
-Trong một hộp hữu hạn, trường tự do có thể khai triển Fourier thành nhiều mode. Sau lượng tử hóa, Hamiltonian có cấu trúc
+Trong một hộp hữu hạn, trường tự do có thể khai triển Fourier thành nhiều chế độ (mode / 모드). Sau lượng tử hóa, Hamiltonian có cấu trúc
 
 ```math
 H=\sum_{\mathbf k}
@@ -82,17 +85,17 @@ H=\sum_{\mathbf k}
 \right).
 ```
 
-Toán tử `a^\dagger_{\mathbf k}` tạo một lượng tử trong mode `\mathbf k`; `a_{\mathbf k}` hủy một lượng tử.
+Toán tử `a^\dagger_{\mathbf k}` tạo một lượng tử trong chế độ (mode / 모드) `\mathbf k`; `a_{\mathbf k}` hủy một lượng tử.
 
-Khái niệm hạt vì vậy nổi lên từ mode lượng tử hóa của trường.
+Khái niệm hạt vì vậy nổi lên từ chế độ (mode / 모드) lượng tử hóa của trường.
 
-Với trường boson, một mode có thể có nhiều lượng tử. Với trường fermion, quan hệ phản giao hoán dẫn đến nguyên lý Pauli và giới hạn occupation phù hợp.
+Với trường boson, một chế độ (mode / 모드) có thể có nhiều lượng tử. Với trường fermion, quan hệ phản giao hoán dẫn đến nguyên lý Pauli và giới hạn occupation phù hợp.
 
-## Fock space và số hạt biến đổi
+## Fock không gian (space / 공간) và số hạt biến đổi
 
 Không gian Hilbert với số hạt cố định không đủ cho quá trình tạo–hủy hạt.
 
-Fock space được xây như tổng trực tiếp
+Fock không gian (space / 공간) được xây như tổng trực tiếp
 
 ```math
 \mathcal F
@@ -107,7 +110,7 @@ Mỗi `\mathcal H_N` là sector có `N` hạt.
 
 Toán tử tạo ánh xạ `N\to N+1`; toán tử hủy ánh xạ `N\to N-1`.
 
-Với một mode boson đơn giản,
+Với một chế độ (mode / 모드) boson đơn giản,
 
 ```math
 \hat N=\hat a^\dagger\hat a
@@ -146,7 +149,7 @@ Với trường vô hướng, trong không gian động lượng ta gặp cấu 
 
 Đường bên trong Feynman diagram biểu diễn factor propagator trong một biểu thức tích phân. Nó không phải quỹ đạo camera ghi lại một hạt thật bay giữa hai vertex.
 
-## Interaction picture và khai triển nhiễu loạn
+## Tương tác (interaction / 상호작용) picture và khai triển nhiễu loạn
 
 Nếu
 
@@ -168,8 +171,8 @@ Khai triển hàm mũ tạo chuỗi theo lũy thừa của coupling.
 
 Wick theorem tổ chức các tích toán tử thành contraction; Feynman diagram là cách ghi hình học cho các hạng trong chuỗi đó.
 
-- tree level thường là bậc thấp nhất;
-- loop chứa hiệu chỉnh lượng tử và tích phân trên động lượng nội bộ.
+- cây (tree / 트리) mức (level / 수준) thường là bậc thấp nhất;
+- vòng lặp (loop / 루프) chứa hiệu chỉnh lượng tử và tích phân trên động lượng nội bộ.
 
 Diagram là công cụ bookkeeping của biên độ, không phải ảnh chụp literal của quá trình vi mô.
 
@@ -187,13 +190,13 @@ Lagrangian
 → cross section / decay rate
 ```
 
-Các định luật bảo toàn giới hạn phase space cuối cùng.
+Các định luật bảo toàn giới hạn phase không gian (space / 공간) cuối cùng.
 
 Trong giới hạn không tương đối tính, cấu trúc này nối trở lại định luật vàng Fermi và lý thuyết tán xạ lượng tử.
 
-## Vì sao loop có thể phân kỳ?
+## Vì sao vòng lặp (loop / 루프) có thể phân kỳ?
 
-Lý thuyết trường liên tục cho phép tích phân qua động lượng nội bộ tùy lớn. Một số loop integral vì vậy phân kỳ nếu tính trực tiếp.
+Lý thuyết trường liên tục cho phép tích phân qua động lượng nội bộ tùy lớn. Một số vòng lặp (loop / 루프) integral vì vậy phân kỳ nếu tính trực tiếp.
 
 Regularization tạm thời đưa vào một cách kiểm soát miền tích phân, chẳng hạn cutoff hoặc dimensional regularization.
 
@@ -262,9 +265,9 @@ Tuy nhiên, chính cấu trúc gauge lại quyết định tương tác, số b�
 
 Nếu thế của trường có nhiều minimum suy biến, phương trình có thể đối xứng trong khi trạng thái chân không cụ thể không giữ toàn bộ đối xứng đó.
 
-Với đối xứng toàn cục liên tục, phá vỡ tự phát dẫn tới mode Goldstone.
+Với đối xứng toàn cục liên tục, phá vỡ tự phát dẫn tới chế độ (mode / 모드) Goldstone.
 
-Trong gauge theory, cơ chế Higgs tổ chức lại các bậc tự do và làm gauge boson có khối lượng theo cách phù hợp với đối xứng của lý thuyết.
+Trong gauge lý thuyết (theory / 이론), cơ chế Higgs tổ chức lại các bậc tự do và làm gauge boson có khối lượng theo cách phù hợp với đối xứng của lý thuyết.
 
 Không nên nói đơn giản “Higgs cho mọi vật khối lượng”. Phần lớn khối lượng proton và neutron đến từ năng lượng động lực học QCD và liên kết, không phải chỉ từ tổng khối lượng bare của quark.
 
@@ -278,7 +281,7 @@ QCD mô tả quark và gluon với color charge.
 
 Khi kéo hai quark xa nhau, năng lượng trong trường màu tăng và cuối cùng thuận lợi hơn để tạo hadron mới thay vì giải phóng một quark đơn.
 
-## Effective Field Theory
+## Effective trường dữ liệu (field / 필드) lý thuyết (theory / 이론)
 
 Không cần biết vật lý ở mọi thang để dự đoán hiện tượng năng lượng thấp.
 
@@ -344,7 +347,7 @@ Trong vật chất ngưng tụ, ta gặp:
 - magnon;
 - quasiparticle;
 - tham số trật tự siêu dẫn;
-- mode Goldstone;
+- chế độ (mode / 모드) Goldstone;
 - lý thuyết tới hạn.
 
 Các excitation nổi lên có thể thỏa phương trình giống hạt tương đối tính dù mạng tinh thể vi mô không có đối xứng Lorentz chính xác.
@@ -353,13 +356,13 @@ Các excitation nổi lên có thể thỏa phương trình giống hạt tươn
 
 ## Năng lượng chân không và vấn đề hằng số vũ trụ
 
-Mỗi mode boson có hạng zero-point
+Mỗi chế độ (mode / 모드) boson có hạng zero-point
 
 ```math
 \frac12\hbar\omega.
 ```
 
-Cộng hình thức qua vô hạn mode tạo tổng phân kỳ.
+Cộng hình thức qua vô hạn chế độ (mode / 모드) tạo tổng phân kỳ.
 
 Trong QFT không có hấp dẫn, thường chỉ chênh lệch năng lượng hoặc đại lượng đã tái chuẩn hóa là trực tiếp quan trọng.
 
@@ -375,7 +378,7 @@ Khai triển nhiễu loạn chỉ hiệu quả khi coupling hoặc tham số kha
 
 EFT luôn đi kèm miền hiệu lực. Khi năng lượng tiến gần `\Lambda`, các toán tử bị bỏ qua không còn nhỏ và cần mô hình sâu hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 QFT thay cách nhìn “các hạt nhỏ tương tác với nhau” bằng
 
@@ -396,7 +399,7 @@ Renormalization tổ chức sự phụ thuộc theo thang; EFT nói rõ ta cần
 
 ### “Hạt ảo là hạt thật tạm thời vi phạm bảo toàn năng lượng”
 
-Không. Internal line là thành phần toán học của khai triển nhiễu loạn. Bảo toàn năng lượng–động lượng được áp dụng nhất quán tại vertex; hạt ảo không cần thỏa quan hệ on-shell của hạt được phát hiện.
+Không. nội bộ (internal / 내부) line là thành phần toán học của khai triển nhiễu loạn. Bảo toàn năng lượng–động lượng được áp dụng nhất quán tại vertex; hạt ảo không cần thỏa quan hệ on-shell của hạt được phát hiện.
 
 ### “Higgs tạo toàn bộ khối lượng vật chất”
 
@@ -408,14 +411,16 @@ Không. Một phần cốt lõi là coupling và tham số hiệu dụng phụ t
 
 ### “QFT chỉ là cơ học lượng tử cộng thuyết tương đối”
 
-Đó là động lực quan trọng nhưng chưa đủ. QFT thêm trường cục bộ, số hạt biến đổi, Fock space, chân không, renormalization và cấu trúc nhiều hạt.
+Đó là động lực quan trọng nhưng chưa đủ. QFT thêm trường cục bộ, số hạt biến đổi, Fock không gian (space / 공간), chân không, renormalization và cấu trúc nhiều hạt.
 
 ### “Gauge symmetry tạo một trạng thái vật lý khác khi ta đổi gauge”
 
 Không. Gauge choice thường là redundancy biểu diễn; dự đoán vật lý phải độc lập lựa chọn đó.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Mô hình Chuẩn](03_particle_standard_model.md), [Thế gauge](../05_electromagnetism/06_potentials_gauge.md), [Đối xứng và tích phân đường](../08_quantum/07_symmetry_operator_path_integral.md).
 
 **Liên hệ tiếp:** [Hiện tượng tới hạn và RG](../04_thermal_statistical/05_critical_phenomena_renormalization.md), [Vật chất tô pô](../10_condensed_matter_devices/04_phonons_defects_topological_matter.md), [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic physics](./00_atomic_physics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

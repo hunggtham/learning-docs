@@ -1,15 +1,18 @@
 # Kotlin + Android Master Notes
 
-Bộ tài liệu học Kotlin cho Android có **learning spine canonical duy nhất** theo thứ tự:
+> **Mạch đọc:** Đọc **Kotlin + Android Master Notes** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy tắc chống duplicate ghi chú (note / 노트)** sang **phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Bộ tài liệu học Kotlin cho Android có **trục học (learning spine / 학습 축) chuẩn gốc (canonical / 정본) duy nhất** theo thứ tự:
 
 1. `01_kotlin_beginner.md` — nền tảng Kotlin, Android Studio, Gradle, Android components, Compose và XML/View.
-2. `02_kotlin_intermediate.md` — idioms, generics, coroutine/Flow, ViewModel, architecture, Room, network, DI, WorkManager, DataStore và testing.
-3. `03_kotlin_advanced_senior.md` — coroutine/Flow internals, Compose runtime, modularization, offline-first, performance, security, Java interop và production design.
-4. `04_kotlin_master.md` — Kotlin 1.x→2.x, K2, bytecode awareness, large-scale architecture/build/release, KMP awareness, observability và master heuristics.
+2. `02_kotlin_intermediate.md` — idioms, generics, coroutine/luồng (flow / 흐름), ViewModel, kiến trúc (architecture / 아키텍처), Room, mạng (network / 네트워크), DI, WorkManager, DataStore và testing.
+3. `03_kotlin_advanced_senior.md` — coroutine/luồng (flow / 흐름) internals, Compose thời gian chạy (runtime / 런타임), modularization, offline-first, hiệu năng (performance / 성능), bảo mật (security / 보안), Java interop và môi trường vận hành (production / 운영 환경) thiết kế (design / 설계).
+4. `04_kotlin_master.md` — Kotlin 1.x→2.x, K2, bytecode awareness, large-scale kiến trúc (architecture / 아키텍처)/bản dựng (build / 빌드)/bản phát hành (release / 릴리스), KMP awareness, khả năng quan sát (observability / 관측 가능성) và master heuristics.
 
-**Learning flow luôn là Beginner → Intermediate → Advanced/Senior → Master.** Không có “level 5”. [`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) là **cross-cutting reference về version/evolution**, dùng song song khi gặp project cũ, migration/toolchain compatibility hoặc muốn hiểu vì sao API/build setup thay đổi theo thời gian.
+**mạch học (learning flow / 학습 흐름) luôn là Beginner → Intermediate → Advanced/cấp cao (senior / 시니어) → Master.** Không có “mức (level / 수준) 5”. [`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) là **cross-cutting tham chiếu (reference / 참조) về phiên bản (version / 버전)/evolution**, dùng song song khi gặp dự án (project / 프로젝트) cũ, di chuyển (migration / 마이그레이션)/toolchain tính tương thích (compatibility / 호환성) hoặc muốn hiểu vì sao API/bản dựng (build / 빌드) setup thay đổi theo thời gian.
 
-Các thư mục bổ sung không thay thế canonical spine:
+Các thư mục bổ sung không thay thế chuẩn gốc (canonical / 정본) spine:
 
 ```text
 01–04 canonical
@@ -28,92 +31,110 @@ depth_labs/
 = reference xuyên level cho timeline/version/migration
 ```
 
-## Quy tắc chống duplicate note
+## Quy tắc chống duplicate ghi chú (note / 노트)
 
-Khi update library, **ưu tiên sửa canonical file đang sở hữu concept**. Không tạo note mới chỉ vì phần hiện tại còn mỏng.
+Khi cập nhật (update / 업데이트) thư viện (library / 라이브러리), **ưu tiên sửa tệp chuẩn gốc (canonical file / 정본 파일) đang sở hữu concept**. Không tạo ghi chú (note / 노트) mới chỉ vì phần hiện tại còn mỏng.
 
-Một file bổ sung chỉ hợp lý nếu nó có vai trò khác hẳn canonical, ví dụ casebook mô phỏng một hệ thống end-to-end hoặc depth lab đào failure ordering. Nếu cùng câu hỏi học tập, cùng level và cùng mục tiêu giải thích đã tồn tại trong `01–04`, hãy cập nhật file đó thay vì tạo `*_v2`, `*_complete`, `*_extra` hoặc một Master Note song song.
+Một tệp (file / 파일) bổ sung chỉ hợp lý nếu nó có vai trò khác hẳn chuẩn gốc (canonical / 정본), ví dụ casebook mô phỏng một hệ thống end-to-end hoặc độ sâu (depth / 깊이) lab đào thất bại (failure / 실패) thứ tự (ordering / 순서). Nếu cùng câu hỏi học tập, cùng mức (level / 수준) và cùng mục tiêu giải thích đã tồn tại trong `01–04`, hãy cập nhật tệp (file / 파일) đó thay vì tạo `*_v2`, `*_complete`, `*_extra` hoặc một Master ghi chú (note / 노트) song song.
 
-Khi nội dung quan trọng chỉ tồn tại ở supplement nhưng cần thiết để đi từ Beginner → Master, hãy kéo **mental model tối thiểu bắt buộc** trở lại canonical rồi giữ supplement cho phần forensic/edge case. Đây là nguyên tắc được áp dụng cho version evolution, modern-vs-legacy API, lifecycle/concurrency, coroutine/Flow và Compose trong các vòng audit gần đây.
+Khi nội dung quan trọng chỉ tồn tại ở supplement nhưng cần thiết để đi từ Beginner → Master, hãy kéo **mô hình tư duy (mental model / 사고 모델) tối thiểu bắt buộc** trở lại chuẩn gốc (canonical / 정본) rồi giữ supplement cho phần forensic/trường hợp biên (edge case / 경계 사례). Đây là nguyên tắc được áp dụng cho phiên bản (version / 버전) evolution, modern-vs-legacy API, vòng đời (lifecycle / 생명주기)/tính đồng thời (concurrency / 동시성), coroutine/luồng (flow / 흐름) và Compose trong các vòng kiểm tra (audit / 감사) gần đây.
 
-Không xóa file chỉ vì có overlap từ khóa. Overlap có chủ đích giữa canonical → deep dive → casebook → depth lab được giữ khi mỗi tầng trả lời câu hỏi khác nhau. Chỉ xóa/merge khi hai file cùng owner, cùng learning objective và một file không còn giá trị riêng.
+Không xóa tệp (file / 파일) chỉ vì có overlap từ khóa. Overlap có chủ đích giữa chuẩn gốc (canonical / 정본) → deep dive → casebook → độ sâu (depth / 깊이) lab được giữ khi mỗi tầng trả lời câu hỏi khác nhau. Chỉ xóa/merge khi hai tệp (file / 파일) cùng đơn vị sở hữu (owner / 오너), cùng học tập (learning / 학습) mục tiêu (objective / 목표) và một tệp (file / 파일) không còn giá trị riêng.
 
-## Version evolution — đọc project cũ và hiểu toolchain hiện đại
 
-[`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) nên được mở như reference khi cần trả lời:
+> **Chuyển mạch:** Từ **Quy tắc chống duplicate ghi chú (note / 노트)**, ta sang **phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-- project Kotlin 1.3/1.5/1.9 khác project Kotlin 2.x ở đâu;
-- K1 và K2 compiler khác nhau về thế hệ như thế nào;
+## Phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại
+
+[`05_kotlin_android_version_evolution.md`](05_kotlin_android_version_evolution.md) nên được mở như tham chiếu (reference / 참조) khi cần trả lời:
+
+- dự án (project / 프로젝트) Kotlin 1.3/1.5/1.9 khác dự án (project / 프로젝트) Kotlin 2.x ở đâu;
+- K1 và K2 trình biên dịch (compiler / 컴파일러) khác nhau về thế hệ như thế nào;
 - khi nào JVM IR trở thành mặc định;
-- `sealed interface`, value class, `data object`, enum `entries`, context parameters và explicit backing fields xuất hiện/stable ở version nào;
-- vì sao Compose compiler trước Kotlin 2.0 cần compatibility mapping nhưng Kotlin 2.0+ dùng plugin cùng Kotlin version;
-- khác biệt giữa Kotlin version, `languageVersion`, `apiVersion`, `jvmTarget`, JDK toolchain, KGP/AGP và Gradle;
+- `sealed interface`, giá trị (value / 값) lớp (class / 클래스), `data object`, enum `entries`, ngữ cảnh (context / 맥락) parameters và tường minh (explicit / 명시적) backing fields xuất hiện/stable ở phiên bản (version / 버전) nào;
+- vì sao Compose trình biên dịch (compiler / 컴파일러) trước Kotlin 2.0 cần tính tương thích (compatibility / 호환성) ánh xạ (mapping / 매핑) nhưng Kotlin 2.0+ dùng plugin cùng Kotlin phiên bản (version / 버전);
+- khác biệt giữa Kotlin phiên bản (version / 버전), `languageVersion`, `apiVersion`, `jvmTarget`, JDK toolchain, KGP/AGP và Gradle;
 - khác biệt giữa `minSdk`, `compileSdk`, `targetSdk` và Android OS thực tế;
-- cách nhận diện synthetic view, `AsyncTask`, LiveData/Rx-heavy, `kotlinOptions {}`, kapt-heavy và map sang modern stack mà không rewrite máy móc;
-- cách upgrade toolchain bằng compatibility matrix, full-variant build, generated-code test và release validation.
+- cách nhận diện synthetic view, `AsyncTask`, LiveData/Rx-heavy, `kotlinOptions {}`, kapt-heavy và map sang hiện đại (modern / 현대적) ngăn xếp (stack / 스택) mà không rewrite máy móc;
+- cách upgrade toolchain bằng tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬), full-variant bản dựng (build / 빌드), generated-code kiểm thử (test / 테스트) và bản phát hành (release / 릴리스) kiểm tra hợp lệ (validation / 검증).
 
-Khi học canonical, có thể mở file này theo nhu cầu; khi làm migration thực tế, đọc thêm `production_casebook/18_android_compatibility_api_levels_sdk_extensions.md` và `depth_labs/08_version_compatibility_migration_forensics.md`.
+Khi học chuẩn gốc (canonical / 정본), có thể mở tệp (file / 파일) này theo nhu cầu; khi làm di chuyển (migration / 마이그레이션) thực tế, đọc thêm `production_casebook/18_android_compatibility_api_levels_sdk_extensions.md` và `depth_labs/08_version_compatibility_migration_forensics.md`.
 
-## Deep dives theo từng level
 
-- [`deep_dive/01_beginner_completion.md`](deep_dive/01_beginner_completion.md) — package/import, equality, range/array, collection transformation, nested/inner class, precondition, data-class identity, Context/Intent/Uri, Compose layout và testing căn bản.
-- [`deep_dive/02_intermediate_completion.md`](deep_dive/02_intermediate_completion.md) — CoroutineContext/Job hierarchy, supervision, Flow cold/hot/context, `stateIn`/`shareIn`, `callbackFlow`, resource lifetime, network error model, Room source-of-truth, Compose effect/state, coroutine testing, DI scope và navigation contract.
-- [`deep_dive/03_advanced_senior_completion.md`](deep_dive/03_advanced_senior_completion.md) — generic/type-erasure, cancellation safety, Flow backpressure, Compose Snapshot/CompositionLocal/identity, background execution, retry/idempotency/TLS, storage/backup, test layers, benchmark và static analysis.
-- [`deep_dive/04_master_completion.md`](deep_dive/04_master_completion.md) — Gradle/build governance, dependency locking/SBOM, ABI/module contract, target-SDK migration, observability, performance budget, security/integrity, privacy, accessibility/adaptive UI, ADR/ownership, release/rollback, KMP và operating model.
+> **Chuyển mạch:** Từ **phiên bản (version / 버전) evolution — đọc dự án (project / 프로젝트) cũ và hiểu toolchain hiện đại**, ta sang **Deep dives theo từng mức (level / 수준)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-[`coverage_audit.md`](coverage_audit.md) là ma trận coverage và checklist dùng để chọn **canonical gap yếu nhất** cho vòng update tiếp theo.
+## Deep dives theo từng mức (level / 수준)
 
-## Depth Labs — tăng độ sâu reasoning
+- [`deep_dive/01_beginner_completion.md`](deep_dive/01_beginner_completion.md) — gói (package / 패키지)/import, equality, phạm vi (range / 범위)/array, collection transformation, nested/inner lớp (class / 클래스), precondition, data-class định danh (identity / 식별자), ngữ cảnh (context / 맥락)/Intent/Uri, Compose bố cục (layout / 레이아웃) và testing căn bản.
+- [`deep_dive/02_intermediate_completion.md`](deep_dive/02_intermediate_completion.md) — CoroutineContext/Job hierarchy, supervision, luồng (flow / 흐름) cold/hot/ngữ cảnh (context / 맥락), `stateIn`/`shareIn`, `callbackFlow`, tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명), mạng (network / 네트워크) lỗi (error / 오류) mô hình (model / 모델), Room source-of-truth, Compose tác động (effect / 효과)/trạng thái (state / 상태), coroutine testing, DI phạm vi (scope / 범위) và điều hướng (navigation / 내비게이션) đặc tả hợp đồng (contract / 계약).
+- [`deep_dive/03_advanced_senior_completion.md`](deep_dive/03_advanced_senior_completion.md) — generic/type-erasure, cancellation an toàn (safety / 안전), luồng (flow / 흐름) backpressure, Compose Snapshot/CompositionLocal/định danh (identity / 식별자), background thực thi (execution / 실행), thử lại (retry / 재시도)/idempotency/TLS, lưu trữ (storage / 저장소)/backup, kiểm thử (test / 테스트) layers, benchmark và static phân tích (analysis / 분석).
+- [`deep_dive/04_master_completion.md`](deep_dive/04_master_completion.md) — Gradle/bản dựng (build / 빌드) quản trị (governance / 거버넌스), phụ thuộc (dependency / 의존성) locking/SBOM, ABI/mô-đun (module / 모듈) đặc tả hợp đồng (contract / 계약), target-SDK di chuyển (migration / 마이그레이션), khả năng quan sát (observability / 관측 가능성), hiệu năng (performance / 성능) ngân sách (budget / 예산), bảo mật (security / 보안)/integrity, privacy, khả năng tiếp cận (accessibility / 접근성)/adaptive UI, ADR/quyền sở hữu (ownership / 소유권), bản phát hành (release / 릴리스)/quay lui (rollback / 롤백), KMP và operating mô hình (model / 모델).
 
-Sau khi canonical concept đã rõ, dùng [`depth_labs/README.md`](depth_labs/README.md) để đào correctness ở boundary khó. Depth Labs không mở learning level mới; chúng đi sâu invariant, race condition, transaction semantics, cancellation, stale state, consistency, effect lifetime, performance evidence, failure injection, compatibility, artifact forensics và API/ABI evolution.
+[`coverage_audit.md`](coverage_audit.md) là ma trận coverage và checklist dùng để chọn **chuẩn gốc (canonical / 정본) gap yếu nhất** cho vòng cập nhật (update / 업데이트) tiếp theo.
+
+
+> **Chuyển mạch:** Từ **Deep dives theo từng mức (level / 수준)**, ta sang **độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)
+
+Sau khi chuẩn gốc (canonical / 정본) concept đã rõ, dùng [`depth_labs/README.md`](depth_labs/README.md) để đào tính đúng đắn (correctness / 정확성) ở ranh giới (boundary / 경계) khó. độ sâu (depth / 깊이) Labs không mở học tập (learning / 학습) mức (level / 수준) mới; chúng đi sâu bất biến (invariant / 불변식), race điều kiện (condition / 조건), giao dịch (transaction / 트랜잭션) ngữ nghĩa (semantics / 의미론), cancellation, stale trạng thái (state / 상태), consistency, tác động (effect / 효과) thời gian tồn tại (lifetime / 수명), bằng chứng hiệu năng (performance evidence / 성능 증거), thất bại (failure / 실패) injection, tính tương thích (compatibility / 호환성), sản phẩm tạo ra (artifact / 산출물) forensics và API/ABI evolution.
 
 Các lab hiện có:
 
-1. [`depth_labs/01_architecture_invariants_boundary_reasoning.md`](depth_labs/01_architecture_invariants_boundary_reasoning.md) — architecture invariant, state ownership, stale snapshot, transaction boundary và ambiguous outcome.
-2. [`depth_labs/02_offline_sync_consistency_race_conditions.md`](depth_labs/02_offline_sync_consistency_race_conditions.md) — sync correctness, outbox, idempotency, ordering, conflict, cursor, account isolation và failure injection.
-3. [`depth_labs/03_coroutine_flow_concurrency_failure_semantics.md`](depth_labs/03_coroutine_flow_concurrency_failure_semantics.md) — Job tree, cancellation, supervision, backpressure, stream lifetime và concurrency race.
-4. [`depth_labs/04_compose_runtime_state_performance_semantics.md`](depth_labs/04_compose_runtime_state_performance_semantics.md) — Snapshot state, identity, effect lifetime, phase invalidation, semantics và performance reasoning.
-5. [`depth_labs/05_testing_reliability_observability_failure_injection.md`](depth_labs/05_testing_reliability_observability_failure_injection.md) — invariant-based testing, migration/rollback, race test, Macrobenchmark, telemetry, SLI/SLO và rollout guardrail.
-6. [`depth_labs/06_build_compatibility_startup_release_forensics.md`](depth_labs/06_build_compatibility_startup_release_forensics.md) — Gradle/variant/R8, API compatibility, startup critical path và release artifact forensics.
-7. [`depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md`](depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md) — public API/ABI, SDK consumer safety, JNI/native ownership, compatibility và publishing evolution.
-8. [`depth_labs/08_version_compatibility_migration_forensics.md`](depth_labs/08_version_compatibility_migration_forensics.md) — Kotlin metadata, producer/consumer compiler boundary, JVM target mismatch, compiler-plugin lockstep, migration forensics, CI compatibility gates và artifact traceability.
+1. [`depth_labs/01_architecture_invariants_boundary_reasoning.md`](depth_labs/01_architecture_invariants_boundary_reasoning.md) — kiến trúc (architecture / 아키텍처) bất biến (invariant / 불변식), quyền sở hữu trạng thái (state ownership / 상태 소유권), stale snapshot, giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và ambiguous kết quả (outcome / 결과).
+2. [`depth_labs/02_offline_sync_consistency_race_conditions.md`](depth_labs/02_offline_sync_consistency_race_conditions.md) — sync tính đúng đắn (correctness / 정확성), outbox, idempotency, thứ tự (ordering / 순서), xung đột (conflict / 충돌), cursor, account isolation và thất bại (failure / 실패) injection.
+3. [`depth_labs/03_coroutine_flow_concurrency_failure_semantics.md`](depth_labs/03_coroutine_flow_concurrency_failure_semantics.md) — Job cây (tree / 트리), cancellation, supervision, backpressure, stream thời gian tồn tại (lifetime / 수명) và tính đồng thời (concurrency / 동시성) race.
+4. [`depth_labs/04_compose_runtime_state_performance_semantics.md`](depth_labs/04_compose_runtime_state_performance_semantics.md) — Snapshot trạng thái (state / 상태), định danh (identity / 식별자), tác động (effect / 효과) thời gian tồn tại (lifetime / 수명), phase vô hiệu hóa (invalidation / 무효화), ngữ nghĩa (semantics / 의미론) và hiệu năng (performance / 성능) lập luận (reasoning / 추론).
+5. [`depth_labs/05_testing_reliability_observability_failure_injection.md`](depth_labs/05_testing_reliability_observability_failure_injection.md) — invariant-based testing, di chuyển (migration / 마이그레이션)/quay lui (rollback / 롤백), race kiểm thử (test / 테스트), Macrobenchmark, telemetry, SLI/SLO và rollout guardrail.
+6. [`depth_labs/06_build_compatibility_startup_release_forensics.md`](depth_labs/06_build_compatibility_startup_release_forensics.md) — Gradle/variant/R8, API tính tương thích (compatibility / 호환성), startup đường găng (critical path / 임계 경로) và bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) forensics.
+7. [`depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md`](depth_labs/07_sdk_native_boundary_api_evolution_consumer_safety.md) — API công khai (public API / 공개 API)/ABI, SDK bên tiêu thụ (consumer / 소비자) an toàn (safety / 안전), JNI/bản địa (native / 네이티브) quyền sở hữu (ownership / 소유권), tính tương thích (compatibility / 호환성) và publishing evolution.
+8. [`depth_labs/08_version_compatibility_migration_forensics.md`](depth_labs/08_version_compatibility_migration_forensics.md) — Kotlin siêu dữ liệu (metadata / 메타데이터), producer/bên tiêu thụ (consumer / 소비자) trình biên dịch (compiler / 컴파일러) ranh giới (boundary / 경계), JVM mục tiêu (target / 대상) mismatch, compiler-plugin lockstep, di chuyển (migration / 마이그레이션) forensics, CI tính tương thích (compatibility / 호환성) gates và sản phẩm tạo ra (artifact / 산출물) traceability.
 
-## Production Casebook — nối kiến thức thành hệ thống thực tế
 
-Sau level Master, đọc [`production_casebook/README.md`](production_casebook/README.md) theo case phù hợp. Casebook không phải level 5; nó dùng kiến thức đã học để reasoning qua system boundary, failure mode và trade-off production.
+> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) Labs — tăng độ sâu lập luận (reasoning / 추론)**, ta sang **môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-1. [`production_casebook/01_architecture_end_to_end.md`](production_casebook/01_architecture_end_to_end.md) — requirement → UiState/UDF → ViewModel → repository → Room/network source of truth → DI/module boundary.
-2. [`production_casebook/02_auth_session_network_security.md`](production_casebook/02_auth_session_network_security.md) — Credential Manager, authentication vs authorization, session, access/refresh token, single-flight refresh, logout, secure storage và network security.
-3. [`production_casebook/03_offline_first_sync_and_database.md`](production_casebook/03_offline_first_sync_and_database.md) — optimistic write, durable mutation queue, idempotency, WorkManager sync, conflict, tombstone, cursor, Paging/RemoteMediator, Room migration và rollback compatibility.
-4. [`production_casebook/04_navigation_lifecycle_process_death.md`](production_casebook/04_navigation_lifecycle_process_death.md) — type-safe Navigation Compose, deep/App Link, notification navigation, lifecycle, SavedStateHandle, adaptive layout và process recreation.
-5. [`production_casebook/05_testing_performance_release.md`](production_casebook/05_testing_performance_release.md) — test strategy, coroutine/Flow/Room/network/Compose test, static analysis, Macrobenchmark, Baseline Profile, Perfetto, R8, signing, CI/CD, staged rollout và rollback.
-6. [`production_casebook/06_legacy_migration_and_modularization.md`](production_casebook/06_legacy_migration_and_modularization.md) — Java/XML/Fragment/callback/LiveData/Rx/SharedPreferences/SQLite legacy migration, interoperability, strangler pattern, feature flag và modularization.
-7. [`production_casebook/07_reference_app_blueprint.md`](production_casebook/07_reference_app_blueprint.md) — blueprint ghép module graph, source of truth, session, sync, navigation, test, observability, security và release thành một project production thống nhất.
-8. [`production_casebook/08_kotlin_jvm_compiler_runtime.md`](production_casebook/08_kotlin_jvm_compiler_runtime.md) — Kotlin/JVM/K2 internals: suspend state machine, inline/reified, type erasure, boxing/value class, lambda capture, annotation target, Java interop, KSP/KAPT/compiler plugin, R8 và binary compatibility.
-9. [`production_casebook/09_android_runtime_process_thread_binder.md`](production_casebook/09_android_runtime_process_thread_binder.md) — Linux process/app sandbox, main thread event loop, Looper/MessageQueue/Handler, Binder IPC, ART, DEX, memory/GC, ANR, process death và thread safety.
-10. [`production_casebook/10_permissions_capabilities_system_contracts.md`](production_casebook/10_permissions_capabilities_system_contracts.md) — hardware capability, runtime permission, location, Bluetooth, Android 17 local-network permission, notification, storage picker, foreground service, exported component và target-SDK migration.
-11. [`production_casebook/11_compose_ui_graphics_input_accessibility.md`](production_casebook/11_compose_ui_graphics_input_accessibility.md) — Compose composition/layout/draw phases, constraint/modifier, custom layout/draw, gesture/focus/IME, animation, semantics, accessibility, edge-to-edge và adaptive UI.
-12. [`production_casebook/12_media_camera_location_bluetooth_files.md`](production_casebook/12_media_camera_location_bluetooth_files.md) — CameraX, Media3/media session, audio focus, microphone, SAF/Photo Picker/MediaStore, location/geofence, BLE/GATT, NFC/sensor, WebView và device-resource ownership.
-13. [`production_casebook/13_production_quality_device_matrix.md`](production_casebook/13_production_quality_device_matrix.md) — device/OS/OEM matrix, upgrade/rollback testing, localization/timezone/RTL/font scale, battery/network/thermal, privacy, observability, feature flag và release readiness.
-14. [`production_casebook/14_system_surfaces_services_receivers_widgets.md`](production_casebook/14_system_surfaces_services_receivers_widgets.md) — Service, BroadcastReceiver, ContentProvider, notification/PendingIntent, App Widget, shortcut, Quick Settings Tile, cold-start entry point và exported-component security.
-15. [`production_casebook/15_gradle_agp_build_system_variants.md`](production_casebook/15_gradle_agp_build_system_variants.md) — Gradle/AGP/Kotlin plugin, build type/flavor/variant, source-set precedence, manifest/resource merge, dependency visibility, convention plugin, configuration/build cache, D8/R8, signing và CI build governance.
-16. [`production_casebook/16_aab_play_delivery_distribution.md`](production_casebook/16_aab_play_delivery_distribution.md) — AAB, split APK, `bundletool`, dynamic feature/Play Feature Delivery, app size, signing, rollout/rollback, distribution channel và artifact provenance.
-17. [`production_casebook/17_ndk_jni_abi_native_memory.md`](production_casebook/17_ndk_jni_abi_native_memory.md) — NDK/JNI, ABI, native `.so`, CMake, reference/thread ownership, native memory, symbolication/sanitizer, 16 KB page size và native release validation.
-18. [`production_casebook/18_android_compatibility_api_levels_sdk_extensions.md`](production_casebook/18_android_compatibility_api_levels_sdk_extensions.md) — `minSdk`/`compileSdk`/`targetSdk`, all-app vs target-gated behavior changes, compatibility framework, API guard, desugaring, SDK Extensions, non-SDK restrictions và platform migration playbook.
-19. [`production_casebook/19_app_startup_initialization_cold_start.md`](production_casebook/19_app_startup_initialization_cold_start.md) — cold/warm/hot start, Application/provider initialization, lazy/eager work, SplashScreen, App Startup, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto và startup budget.
-20. [`production_casebook/20_android_library_sdk_authoring.md`](production_casebook/20_android_library_sdk_authoring.md) — AAR/library/SDK authoring, public API/ABI, Java/Kotlin interop, resource/manifest contract, consumer R8 rules, lint, publishing, SemVer và migration compatibility.
+## Môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế
 
-## Baseline version
+Sau mức (level / 수준) Master, đọc [`production_casebook/README.md`](production_casebook/README.md) theo trường hợp (case / 사례) phù hợp. Casebook không phải mức (level / 수준) 5; nó dùng kiến thức đã học để lập luận (reasoning / 추론) qua hệ thống (system / 시스템) ranh giới (boundary / 경계), dạng thất bại (failure mode / 실패 모드) và sự đánh đổi (trade-off / 트레이드오프) môi trường vận hành (production / 운영 환경).
+
+1. [`production_casebook/01_architecture_end_to_end.md`](production_casebook/01_architecture_end_to_end.md) — yêu cầu (requirement / 요구사항) → UiState/UDF → ViewModel → repository → Room/mạng (network / 네트워크) nguồn chuẩn (source of truth / 정본) → DI/ranh giới mô-đun (module boundary / 모듈 경계).
+2. [`production_casebook/02_auth_session_network_security.md`](production_casebook/02_auth_session_network_security.md) — Credential Manager, authentication vs authorization, session, truy cập (access / 접근)/refresh đơn vị từ (token / 토큰), single-flight refresh, logout, secure lưu trữ (storage / 저장소) và mạng (network / 네트워크) bảo mật (security / 보안).
+3. [`production_casebook/03_offline_first_sync_and_database.md`](production_casebook/03_offline_first_sync_and_database.md) — optimistic ghi (write / 쓰기), durable mutation hàng đợi (queue / 큐), idempotency, WorkManager sync, xung đột (conflict / 충돌), tombstone, cursor, Paging/RemoteMediator, Room di chuyển (migration / 마이그레이션) và quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성).
+4. [`production_casebook/04_navigation_lifecycle_process_death.md`](production_casebook/04_navigation_lifecycle_process_death.md) — type-safe điều hướng (navigation / 내비게이션) Compose, deep/App Link, notification điều hướng (navigation / 내비게이션), vòng đời (lifecycle / 생명주기), SavedStateHandle, adaptive bố cục (layout / 레이아웃) và tiến trình (process / 프로세스) recreation.
+5. [`production_casebook/05_testing_performance_release.md`](production_casebook/05_testing_performance_release.md) — kiểm thử (test / 테스트) chiến lược (strategy / 전략), coroutine/luồng (flow / 흐름)/Room/mạng (network / 네트워크)/Compose kiểm thử (test / 테스트), static phân tích (analysis / 분석), Macrobenchmark, Baseline Profile, Perfetto, R8, signing, CI/CD, staged rollout và quay lui (rollback / 롤백).
+6. [`production_casebook/06_legacy_migration_and_modularization.md`](production_casebook/06_legacy_migration_and_modularization.md) — Java/XML/Fragment/callback/LiveData/Rx/SharedPreferences/SQLite legacy di chuyển (migration / 마이그레이션), interoperability, strangler mẫu (pattern / 패턴), cờ tính năng (feature flag / 기능 플래그) và modularization.
+7. [`production_casebook/07_reference_app_blueprint.md`](production_casebook/07_reference_app_blueprint.md) — blueprint ghép mô-đun (module / 모듈) đồ thị (graph / 그래프), nguồn chuẩn (source of truth / 정본), session, sync, điều hướng (navigation / 내비게이션), kiểm thử (test / 테스트), khả năng quan sát (observability / 관측 가능성), bảo mật (security / 보안) và bản phát hành (release / 릴리스) thành một dự án (project / 프로젝트) môi trường vận hành (production / 운영 환경) thống nhất.
+8. [`production_casebook/08_kotlin_jvm_compiler_runtime.md`](production_casebook/08_kotlin_jvm_compiler_runtime.md) — Kotlin/JVM/K2 internals: suspend máy trạng thái (state machine / 상태 머신), inline/reified, kiểu (type / 타입) erasure, boxing/giá trị (value / 값) lớp (class / 클래스), lambda capture, annotation mục tiêu (target / 대상), Java interop, KSP/KAPT/trình biên dịch (compiler / 컴파일러) plugin, R8 và nhị phân (binary / 이진) tính tương thích (compatibility / 호환성).
+9. [`production_casebook/09_android_runtime_process_thread_binder.md`](production_casebook/09_android_runtime_process_thread_binder.md) — Linux tiến trình (process / 프로세스)/app sandbox, main luồng thực thi (thread / 스레드) vòng lặp sự kiện (event loop / 이벤트 루프), Looper/MessageQueue/Handler, Binder IPC, ART, DEX, bộ nhớ (memory / 메모리)/GC, ANR, tiến trình (process / 프로세스) death và luồng thực thi (thread / 스레드) an toàn (safety / 안전).
+10. [`production_casebook/10_permissions_capabilities_system_contracts.md`](production_casebook/10_permissions_capabilities_system_contracts.md) — hardware năng lực (capability / 역량), thời gian chạy (runtime / 런타임) permission, location, Bluetooth, Android 17 local-network permission, notification, lưu trữ (storage / 저장소) picker, foreground dịch vụ (service / 서비스), exported thành phần (component / 컴포넌트) và target-SDK di chuyển (migration / 마이그레이션).
+11. [`production_casebook/11_compose_ui_graphics_input_accessibility.md`](production_casebook/11_compose_ui_graphics_input_accessibility.md) — Compose composition/bố cục (layout / 레이아웃)/draw phases, ràng buộc (constraint / 제약조건)/modifier, custom bố cục (layout / 레이아웃)/draw, gesture/focus/IME, animation, ngữ nghĩa (semantics / 의미론), khả năng tiếp cận (accessibility / 접근성), edge-to-edge và adaptive UI.
+12. [`production_casebook/12_media_camera_location_bluetooth_files.md`](production_casebook/12_media_camera_location_bluetooth_files.md) — CameraX, Media3/media session, audio focus, microphone, SAF/Photo Picker/MediaStore, location/geofence, BLE/GATT, NFC/sensor, WebView và device-resource quyền sở hữu (ownership / 소유권).
+13. [`production_casebook/13_production_quality_device_matrix.md`](production_casebook/13_production_quality_device_matrix.md) — thiết bị (device / 장치)/OS/OEM ma trận (matrix / 행렬), upgrade/quay lui (rollback / 롤백) testing, localization/timezone/RTL/font quy mô (scale / 규모), battery/mạng (network / 네트워크)/thermal, privacy, khả năng quan sát (observability / 관측 가능성), cờ tính năng (feature flag / 기능 플래그) và bản phát hành (release / 릴리스) readiness.
+14. [`production_casebook/14_system_surfaces_services_receivers_widgets.md`](production_casebook/14_system_surfaces_services_receivers_widgets.md) — dịch vụ (service / 서비스), BroadcastReceiver, ContentProvider, notification/PendingIntent, App Widget, shortcut, Quick Settings Tile, cold-start entry điểm (point / 지점) và exported-component bảo mật (security / 보안).
+15. [`production_casebook/15_gradle_agp_build_system_variants.md`](production_casebook/15_gradle_agp_build_system_variants.md) — Gradle/AGP/Kotlin plugin, bản dựng (build / 빌드) kiểu (type / 타입)/flavor/variant, source-set precedence, manifest/tài nguyên (resource / 자원) merge, phụ thuộc (dependency / 의존성) visibility, convention plugin, cấu hình (configuration / 구성)/bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시), D8/R8, signing và CI bản dựng (build / 빌드) quản trị (governance / 거버넌스).
+16. [`production_casebook/16_aab_play_delivery_distribution.md`](production_casebook/16_aab_play_delivery_distribution.md) — AAB, split APK, `bundletool`, động (dynamic / 동적) tính năng (feature / 기능)/Play tính năng (feature / 기능) Delivery, app kích thước (size / 크기), signing, rollout/quay lui (rollback / 롤백), phân phối (distribution / 분포) channel và sản phẩm tạo ra (artifact / 산출물) provenance.
+17. [`production_casebook/17_ndk_jni_abi_native_memory.md`](production_casebook/17_ndk_jni_abi_native_memory.md) — NDK/JNI, ABI, bản địa (native / 네이티브) `.so`, CMake, tham chiếu (reference / 참조)/luồng thực thi (thread / 스레드) quyền sở hữu (ownership / 소유권), bản địa (native / 네이티브) bộ nhớ (memory / 메모리), symbolication/sanitizer, 16 KB page kích thước (size / 크기) và bản địa (native / 네이티브) bản phát hành (release / 릴리스) kiểm tra hợp lệ (validation / 검증).
+18. [`production_casebook/18_android_compatibility_api_levels_sdk_extensions.md`](production_casebook/18_android_compatibility_api_levels_sdk_extensions.md) — `minSdk`/`compileSdk`/`targetSdk`, all-app vs target-gated hành vi (behavior / 동작) changes, tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크), API guard, desugaring, SDK Extensions, non-SDK restrictions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) playbook.
+19. [`production_casebook/19_app_startup_initialization_cold_start.md`](production_casebook/19_app_startup_initialization_cold_start.md) — cold/warm/hot start, ứng dụng (application / 애플리케이션)/provider initialization, lazy/eager công việc (work / 작업), SplashScreen, App Startup, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto và startup ngân sách (budget / 예산).
+20. [`production_casebook/20_android_library_sdk_authoring.md`](production_casebook/20_android_library_sdk_authoring.md) — AAR/thư viện (library / 라이브러리)/SDK authoring, API công khai (public API / 공개 API)/ABI, Java/Kotlin interop, tài nguyên (resource / 자원)/manifest đặc tả hợp đồng (contract / 계약), bên tiêu thụ (consumer / 소비자) R8 rules, lint, publishing, SemVer và di chuyển (migration / 마이그레이션) tính tương thích (compatibility / 호환성).
+
+
+> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) Casebook — nối kiến thức thành hệ thống thực tế**, ta sang **Baseline phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Baseline phiên bản (version / 버전)
 
 - Kotlin: **2.4.20** stable (2026-09-07).
 - Android Studio: **Quail 4 / 2026.1.4 Patch 1** stable.
 - Android Gradle Plugin baseline: **9.4.1** với Quail 4 Patch 1.
 - Compose stable BOM snapshot: **2026.09.00**.
-- Android platform reference: **Android 17 = API 37**.
-- Google Play target requirement từ 2026-08-31: app/update Android thông thường phải target **Android 16 / API 36+**, với ngoại lệ riêng cho một số form factor.
-- UI direction: Jetpack Compose cho code hiện đại; XML/View system và API legacy quan trọng vẫn được cover để đọc, maintain và migrate project cũ.
+- Android nền tảng (platform / 플랫폼) tham chiếu (reference / 참조): **Android 17 = API 37**.
+- Google Play mục tiêu (target / 대상) yêu cầu (requirement / 요구사항) từ 2026-08-31: app/cập nhật (update / 업데이트) Android thông thường phải mục tiêu (target / 대상) **Android 16 / API 36+**, với ngoại lệ riêng cho một số form factor.
+- UI direction: Jetpack Compose cho mã (code / 코드) hiện đại; XML/View hệ thống (system / 시스템) và API legacy quan trọng vẫn được cover để đọc, maintain và migrate dự án (project / 프로젝트) cũ.
 
-Version ở đây là snapshot để đọc project tại thời điểm biên soạn, không phải con số phải copy cứng mãi mãi. Khi upgrade cần đọc compatibility matrix và release notes của Kotlin, Android Studio/AGP, Android platform, Google Play policy và từng Jetpack/library dependency.
+Phiên bản (version / 버전) ở đây là snapshot để đọc dự án (project / 프로젝트) tại thời điểm biên soạn, không phải con số phải bản sao (copy / 복사) cứng mãi mãi. Khi upgrade cần đọc tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) và bản phát hành (release / 릴리스) notes của Kotlin, Android Studio/AGP, Android nền tảng (platform / 플랫폼), Google Play chính sách (policy / 정책) và từng Jetpack/thư viện (library / 라이브러리) phụ thuộc (dependency / 의존성).
+
+
+> **Chuyển mạch:** Từ **Baseline phiên bản (version / 버전)**, ta sang **Cách học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cách học
 
@@ -126,9 +147,9 @@ Version ở đây là snapshot để đọc project tại thời điểm biên s
 → 04 Master
 ```
 
-Ở mỗi level, sau khi hiểu canonical file có thể đọc `deep_dive/0N` để mở rộng. `05_kotlin_android_version_evolution.md` là reference ngang: mở khi gặp version/API generation/toolchain question, không phải một level bắt buộc sau Master.
+Ở mỗi mức (level / 수준), sau khi hiểu tệp chuẩn gốc (canonical file / 정본 파일) có thể đọc `deep_dive/0N` để mở rộng. `05_kotlin_android_version_evolution.md` là tham chiếu (reference / 참조) ngang: mở khi gặp phiên bản (version / 버전)/API generation/toolchain question, không phải một mức (level / 수준) bắt buộc sau Master.
 
-Sau Master, Casebook và Depth Labs chuyển trọng tâm từ “học concept” sang “ghép system và chứng minh correctness”:
+Sau Master, Casebook và độ sâu (depth / 깊이) Labs chuyển trọng tâm từ “học concept” sang “ghép hệ thống (system / 시스템) và chứng minh tính đúng đắn (correctness / 정확성)”:
 
 ```text
 Canonical Beginner → Master
@@ -137,13 +158,16 @@ Canonical Beginner → Master
 → tự thiết kế, build, release và giải thích trade-off production
 ```
 
-Khi học Casebook và Depth Labs, không chỉ copy code. Với mỗi case hãy tự trả lời: state owner là ai; source of truth ở đâu; process/thread/lifecycle nào đang chạy; invariant nào bắt buộc luôn đúng; failure nào retry được; result nào có thể stale; operation nào có ambiguous outcome; permission/capability nào có thể biến mất; artifact nào thật sự tới device; native/resource/build boundary nào có thể leak; dữ liệu nào nhạy cảm; operation nào cần idempotency; test nào chứng minh invariant; release gặp lỗi thì rollback hoặc disable bằng cách nào.
+Khi học Casebook và độ sâu (depth / 깊이) Labs, không chỉ bản sao (copy / 복사) mã (code / 코드). Với mỗi trường hợp (case / 사례) hãy tự trả lời: trạng thái (state / 상태) đơn vị sở hữu (owner / 오너) là ai; nguồn chuẩn (source of truth / 정본) ở đâu; tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드)/vòng đời (lifecycle / 생명주기) nào đang chạy; bất biến (invariant / 불변식) nào bắt buộc luôn đúng; thất bại (failure / 실패) nào thử lại (retry / 재시도) được; kết quả (result / 결과) nào có thể stale; thao tác (operation / 연산) nào có ambiguous kết quả (outcome / 결과); permission/năng lực (capability / 역량) nào có thể biến mất; sản phẩm tạo ra (artifact / 산출물) nào thật sự tới thiết bị (device / 장치); bản địa (native / 네이티브)/tài nguyên (resource / 자원)/bản dựng (build / 빌드) ranh giới (boundary / 경계) nào có thể leak; dữ liệu nào nhạy cảm; thao tác (operation / 연산) nào cần idempotency; kiểm thử (test / 테스트) nào chứng minh bất biến (invariant / 불변식); bản phát hành (release / 릴리스) gặp lỗi thì quay lui (rollback / 롤백) hoặc disable bằng cách nào.
+
+
+> **Chuyển mạch:** Từ **Cách học**, ta sang **Phạm vi đã cover** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Phạm vi đã cover
 
-Bộ tài liệu không chỉ dạy syntax Kotlin. Nó nối Kotlin language với Android runtime, lifecycle, Compose lẫn XML/View, Gradle/AGP, coroutine/Flow, persistence/networking, DI, navigation, background work, testing, performance, security, build/release, AAB/delivery, native NDK/JNI, platform compatibility, startup, library authoring, legacy migration, system components, hardware capability và production architecture.
+Bộ tài liệu không chỉ dạy cú pháp (syntax / 문법) Kotlin. Nó nối Kotlin ngôn ngữ (language / 언어) với Android thời gian chạy (runtime / 런타임), vòng đời (lifecycle / 생명주기), Compose lẫn XML/View, Gradle/AGP, coroutine/luồng (flow / 흐름), persistence/networking, DI, điều hướng (navigation / 내비게이션), background công việc (work / 작업), testing, hiệu năng (performance / 성능), bảo mật (security / 보안), bản dựng (build / 빌드)/bản phát hành (release / 릴리스), AAB/delivery, bản địa (native / 네이티브) NDK/JNI, nền tảng (platform / 플랫폼) tính tương thích (compatibility / 호환성), startup, thư viện (library / 라이브러리) authoring, legacy di chuyển (migration / 마이그레이션), hệ thống (system / 시스템) components, hardware năng lực (capability / 역량) và kiến trúc vận hành (production architecture / 운영 아키텍처).
 
-Mục tiêu cuối cùng không phải nhớ mọi API, mà là khi gặp requirement mới có thể tự suy luận theo các trục:
+Mục tiêu cuối cùng không phải nhớ mọi API, mà là khi gặp yêu cầu (requirement / 요구사항) mới có thể tự suy luận theo các trục:
 
 ```text
 invariant
@@ -160,4 +184,6 @@ invariant
 → release / recovery
 ```
 
-và khi cần có thể hạ xuống compiler/runtime/platform/native/build system để giải thích behavior thay vì dựa vào “magic”.
+và khi cần có thể hạ xuống trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임)/nền tảng (platform / 플랫폼)/bản địa (native / 네이티브)/hệ thống dựng (build system / 빌드 시스템) để giải thích hành vi (behavior / 동작) thay vì dựa vào “magic”.
+
+> **Bàn giao:** Sau **Phạm vi đã cover**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 kotlin beginner](./01_kotlin_beginner.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

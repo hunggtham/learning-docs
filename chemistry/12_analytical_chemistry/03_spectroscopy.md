@@ -1,5 +1,8 @@
 # Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học
 
+> **Mạch đọc:** Đọc **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Năng lượng photon và vì sao bước sóng quan trọng** sang **Hấp thụ, phát xạ và tán xạ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phổ học (spectroscopy / 분광학)** khai thác thông tin hóa học từ cách vật chất hấp thụ, phát xạ hoặc tán xạ bức xạ điện từ. Ý tưởng thống nhất là: nguyên tử và phân tử có các trạng thái năng lượng lượng tử hóa, còn bức xạ dùng để thăm dò chênh lệch năng lượng giữa các trạng thái đó.
 
 Phổ học không phải một thiết bị duy nhất. Đây là một họ phương pháp, trong đó **thang năng lượng quyết định bậc tự do nào của vật chất được quan sát**.
@@ -102,7 +105,7 @@ Vì vậy đây không chỉ là công thức thực nghiệm; nó phản ánh m
 Các nguyên nhân thường gặp gồm:
 
 - nồng độ cao làm tương tác giữa phân tử thay đổi;
-- cân bằng acid–base hoặc kết hợp làm dạng hấp thụ thay đổi theo nồng độ;
+- cân bằng acid–cơ sở (base / 기반) hoặc kết hợp làm dạng hấp thụ thay đổi theo nồng độ;
 - ánh sáng tạp tới bộ phát hiện;
 - băng thông nguồn quá rộng;
 - mẫu tán xạ;
@@ -298,7 +301,7 @@ SNR\propto\sqrt N
 
 Muốn tăng SNR gấp đôi thường phải tăng thời gian đo xấp xỉ bốn lần.
 
-Đây là một trade-off thực nghiệm rất quan trọng giữa **chất lượng dữ liệu và thời gian đo**.
+Đây là một sự đánh đổi (trade-off / 트레이드오프) thực nghiệm rất quan trọng giữa **chất lượng dữ liệu và thời gian đo**.
 
 ## Hiệu chuẩn và đường nền là một phần của phép đo
 
@@ -383,3 +386,5 @@ chọn vùng bức xạ
 Phổ không phải ảnh trực tiếp của phân tử. Nó là tập bằng chứng được tạo bởi quy tắc lượng tử, trạng thái mẫu và thiết bị đo.
 
 Xem tiếp: [Sắc ký](./04_chromatography.md), [Phổ khối](./05_mass_spectrometry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

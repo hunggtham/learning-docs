@@ -1,5 +1,8 @@
 # Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)
 
+> **Mạch đọc:** Đặt **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Lợi nhuận không bằng tiền mặt** sang **2. Chất lượng lợi nhuận là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Báo cáo tài chính không phải lời nói dối mặc định, nhưng cũng không phải “sự thật kinh tế” hoàn hảo. Kế toán là hệ thống đo lường dựa trên quy tắc, ước tính và giả định về thời điểm. Vì vậy cùng một mức lợi nhuận báo cáo có thể có chất lượng rất khác nhau.
 
 **Chất lượng lợi nhuận (earnings quality / 이익의 질)** hỏi một câu rất thực tế: lợi nhuận đang thấy có phản ánh hoạt động lặp lại không, có chuyển thành tiền mặt không, có phụ thuộc quá nhiều vào ước tính hay khoản một lần không và có bền vững qua chu kỳ hay không?
@@ -572,3 +575,5 @@ Nếu một mắt xích lệch nhau, đừng kết luận vội; hãy tìm lời
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md)
 - [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md)
 - [`37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md`](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md)
+
+> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

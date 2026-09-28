@@ -1,12 +1,15 @@
-# Case 10 — Permissions, Device Capability và System Contract
+# Trường hợp (case / 사례) 10 — Permissions, thiết bị (device / 장치) năng lực (capability / 역량) và hệ thống (system / 시스템) đặc tả hợp đồng (contract / 계약)
 
-Android permission thường bị học như một danh sách `Manifest.permission.*`, nhưng production bug hiếm khi đến từ việc “không nhớ tên permission”. Vấn đề thật thường là app nhầm **permission với capability**, request quá sớm, giữ permission như điều kiện tồn tại của feature, không xử lý denial/revocation, hoặc không hiểu rằng behavior phụ thuộc cả OS version lẫn `targetSdk`.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 10 — Permissions, thiết bị (device / 장치) năng lực (capability / 역량) và hệ thống (system / 시스템) đặc tả hợp đồng (contract / 계약)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Permission không đồng nghĩa năng lực (capability / 역량)** sang **2. <uses-feature> ảnh hưởng khả năng cài app**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này xây mental model theo thứ tự: feature requirement → hardware/software capability → manifest declaration → runtime permission → special access → user intent → fallback → lifecycle/revocation → version behavior.
 
-## 1. Permission không đồng nghĩa capability
+Android permission thường bị học như một danh sách `Manifest.permission.*`, nhưng môi trường vận hành (production / 운영 환경) bug hiếm khi đến từ việc “không nhớ tên permission”. Vấn đề thật thường là app nhầm **permission với năng lực (capability / 역량)**, yêu cầu (request / 요청) quá sớm, giữ permission như điều kiện tồn tại của tính năng (feature / 기능), không xử lý denial/revocation, hoặc không hiểu rằng hành vi (behavior / 동작) phụ thuộc cả OS phiên bản (version / 버전) lẫn `targetSdk`.
 
-Thiết bị có thể không có camera, Bluetooth, GPS, telephony hoặc NFC. Ngược lại, device có capability nhưng user không grant permission. Vì vậy hai câu hỏi phải tách riêng:
+Chapter này xây mô hình tư duy (mental model / 사고 모델) theo thứ tự: tính năng (feature / 기능) yêu cầu (requirement / 요구사항) → hardware/software năng lực (capability / 역량) → manifest declaration → thời gian chạy (runtime / 런타임) permission → special truy cập (access / 접근) → người dùng (user / 사용자) intent → fallback → vòng đời (lifecycle / 생명주기)/revocation → phiên bản (version / 버전) hành vi (behavior / 동작).
+
+## 1. Permission không đồng nghĩa năng lực (capability / 역량)
+
+Thiết bị có thể không có camera, Bluetooth, GPS, telephony hoặc NFC. Ngược lại, thiết bị (device / 장치) có năng lực (capability / 역량) nhưng người dùng (user / 사용자) không grant permission. Vì vậy hai câu hỏi phải tách riêng:
 
 ```text
 Device có khả năng này không?
@@ -21,11 +24,11 @@ val hasCamera = context.packageManager.hasSystemFeature(
 )
 ```
 
-Sau đó mới xét runtime permission nếu use case cần trực tiếp truy cập camera.
+Sau đó mới xét thời gian chạy (runtime / 런타임) permission nếu use trường hợp (case / 사례) cần trực tiếp truy cập camera.
 
 ## 2. `<uses-feature>` ảnh hưởng khả năng cài app
 
-Khai báo hardware feature với `android:required="true"` có thể khiến Google Play lọc thiết bị không có feature đó. Nếu camera chỉ là optional enhancement, nên khai báo `required="false"` và cung cấp fallback.
+Khai báo hardware tính năng (feature / 기능) với `android:required="true"` có thể khiến Google Play lọc thiết bị không có tính năng (feature / 기능) đó. Nếu camera chỉ là optional enhancement, nên khai báo `required="false"` và cung cấp fallback.
 
 Ví dụ:
 
@@ -35,11 +38,11 @@ Ví dụ:
     android:required="false" />
 ```
 
-Điều này rất quan trọng với tablet, Chromebook, foldable, external camera và form factor khác. Production app không nên vô tình giảm device availability chỉ vì manifest declaration quá mạnh.
+Điều này rất quan trọng với tablet, Chromebook, foldable, bên ngoài (external / 외부) camera và form factor khác. môi trường vận hành (production / 운영 환경) app không nên vô tình giảm thiết bị (device / 장치) availability chỉ vì manifest declaration quá mạnh.
 
-## 3. Permission nên gắn với user action
+## 3. Permission nên gắn với người dùng (user / 사용자) hành động (action / 동작)
 
-Request permission ngay khi mở app làm user khó hiểu tại sao app cần quyền. Flow tốt hơn là user bấm “Scan QR”, app giải thích use case nếu cần rồi request camera.
+Yêu cầu (request / 요청) permission ngay khi mở app làm người dùng (user / 사용자) khó hiểu tại sao app cần quyền. luồng (flow / 흐름) tốt hơn là người dùng (user / 사용자) bấm “Scan QR”, app giải thích use trường hợp (case / 사례) nếu cần rồi yêu cầu (request / 요청) camera.
 
 ```text
 User intent
@@ -51,17 +54,17 @@ User intent
 → fallback nếu denied
 ```
 
-Permission UX là một phần product architecture, không chỉ technical API.
+Permission UX là một phần sản phẩm (product / 제품) kiến trúc (architecture / 아키텍처), không chỉ technical API.
 
-## 4. Runtime permission là state có thể thay đổi
+## 4. thời gian chạy (runtime / 런타임) permission là trạng thái (state / 상태) có thể thay đổi
 
-Đừng cache `permissionGranted = true` vĩnh viễn. User có thể revoke permission trong Settings, policy có thể thay đổi, permission có thể auto-reset sau thời gian dài không dùng app.
+Đừng bộ nhớ đệm (cache / 캐시) `permissionGranted = true` vĩnh viễn. người dùng (user / 사용자) có thể revoke permission trong Settings, chính sách (policy / 정책) có thể thay đổi, permission có thể auto-reset sau thời gian dài không dùng app.
 
-Mỗi lần feature thực sự cần capability, hãy check lại state theo contract của API.
+Mỗi lần tính năng (feature / 기능) thực sự cần năng lực (capability / 역량), hãy check lại trạng thái (state / 상태) theo đặc tả hợp đồng (contract / 계약) của API.
 
-## 5. Activity Result API cho permission
+## 5. Activity kết quả (result / 결과) API cho permission
 
-Code hiện đại dùng Activity Result API thay vì override `onRequestPermissionsResult()` thủ công.
+Mã (code / 코드) hiện đại dùng Activity kết quả (result / 결과) API thay vì override `onRequestPermissionsResult()` thủ công.
 
 ```kotlin
 val cameraPermission = rememberLauncherForActivityResult(
@@ -73,60 +76,60 @@ val cameraPermission = rememberLauncherForActivityResult(
 }
 ```
 
-Trong Compose, launcher nên được tạo ở composition scope phù hợp; user event kích hoạt `launch()`.
+Trong Compose, launcher nên được tạo ở composition phạm vi (scope / 범위) phù hợp; người dùng (user / 사용자) sự kiện (event / 이벤트) kích hoạt `launch()`.
 
-## 6. `shouldShowRequestPermissionRationale()` không phải business state hoàn chỉnh
+## 6. `shouldShowRequestPermissionRationale()` không phải nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) hoàn chỉnh
 
-API này chỉ cung cấp tín hiệu platform để quyết định có nên giải thích thêm hay không. Đừng biến nó thành logic “nếu false thì user đã chọn Never ask again” tuyệt đối trong mọi version/device.
+API này chỉ cung cấp tín hiệu nền tảng (platform / 플랫폼) để quyết định có nên giải thích thêm hay không. Đừng biến nó thành lô-gic (logic / 논리) “nếu false thì người dùng (user / 사용자) đã chọn Never ask again” tuyệt đối trong mọi phiên bản (version / 버전)/thiết bị (device / 장치).
 
-Thiết kế UI theo outcome: granted, denied nhưng có thể request lại, hoặc feature hiện cần dẫn user tới Settings. Luôn có fallback rõ.
+Thiết kế UI theo kết quả (outcome / 결과): granted, denied nhưng có thể yêu cầu (request / 요청) lại, hoặc tính năng (feature / 기능) hiện cần dẫn người dùng (user / 사용자) tới Settings. Luôn có fallback rõ.
 
 # Location
 
 ## 7. Coarse và precise location
 
-Android hiện đại cho user quyền chia sẻ approximate location thay vì precise. Nếu app chỉ cần thành phố/khu vực, hãy thiết kế để `ACCESS_COARSE_LOCATION` đủ.
+Android hiện đại cho người dùng (user / 사용자) quyền chia sẻ approximate location thay vì precise. Nếu app chỉ cần thành phố/khu vực, hãy thiết kế để `ACCESS_COARSE_LOCATION` đủ.
 
-Nếu business logic yêu cầu precise, giải thích rõ lý do tại thời điểm feature cần.
+Nếu lô-gic nghiệp vụ (business logic / 비즈니스 로직) yêu cầu precise, giải thích rõ lý do tại thời điểm tính năng (feature / 기능) cần.
 
-Không yêu cầu precise chỉ vì API sample dùng nó.
+Không yêu cầu precise chỉ vì API mẫu (sample / 표본) dùng nó.
 
 ## 8. Foreground và background location là hai mức trust khác nhau
 
-Background location là sensitive capability cao hơn nhiều. App cần chứng minh use case thực sự cần location khi user không tương tác trực tiếp.
+Background location là sensitive năng lực (capability / 역량) cao hơn nhiều. App cần chứng minh use trường hợp (case / 사례) thực sự cần location khi người dùng (user / 사용자) không tương tác trực tiếp.
 
-Các app navigation, fitness tracking hoặc safety có thể có lý do; app thương mại thông thường không nên lấy background location chỉ để “analytics tốt hơn”.
+Các app điều hướng (navigation / 내비게이션), fitness tracking hoặc an toàn (safety / 안전) có thể có lý do; app thương mại thông thường không nên lấy background location chỉ để “analytics tốt hơn”.
 
-Về architecture, hãy tách:
+Về kiến trúc (architecture / 아키텍처), hãy tách:
 
 ```text
 feature foreground location
 feature background tracking
 ```
 
-vì permission, policy, battery và foreground-service requirement khác nhau.
+vì permission, chính sách (policy / 정책), battery và foreground-service yêu cầu (requirement / 요구사항) khác nhau.
 
-## 9. Location unavailable không phải exceptional crash case
+## 9. Location unavailable không phải exceptional crash trường hợp (case / 사례)
 
-Location có thể unavailable vì permission denied, sensor disabled, indoor environment, device không có hardware, policy hoặc timeout. API layer nên model điều này như state/domain outcome thay vì throw một exception chung rồi UI hiện “Unknown error”.
+Location có thể unavailable vì permission denied, sensor disabled, indoor môi trường (environment / 환경), thiết bị (device / 장치) không có hardware, chính sách (policy / 정책) hoặc hết thời gian chờ (timeout / 타임아웃). API tầng (layer / 계층) nên mô hình (model / 모델) điều này như trạng thái (state / 상태)/lĩnh vực (domain / 도메인) kết quả (outcome / 결과) thay vì throw một exception chung rồi UI hiện “Unknown lỗi (error / 오류)”.
 
 # Bluetooth và Nearby Devices
 
 ## 10. Bluetooth permission thay đổi mạnh từ Android 12
 
-Với target Android 12+, Bluetooth scan/connect/advertise dùng nhóm permission mới như `BLUETOOTH_SCAN`, `BLUETOOTH_CONNECT`, `BLUETOOTH_ADVERTISE` thay vì chỉ dựa vào location permission như các version cũ.
+Với mục tiêu (target / 대상) Android 12+, Bluetooth scan/connect/advertise dùng nhóm permission mới như `BLUETOOTH_SCAN`, `BLUETOOTH_CONNECT`, `BLUETOOTH_ADVERTISE` thay vì chỉ dựa vào location permission như các phiên bản (version / 버전) cũ.
 
-Nếu scan không dùng để suy ra physical location, manifest có thể dùng `neverForLocation` trong trường hợp phù hợp. Nhưng assertion này phải đúng với product behavior.
+Nếu scan không dùng để suy ra vật lý (physical / 물리적) location, manifest có thể dùng `neverForLocation` trong trường hợp phù hợp. Nhưng assertion này phải đúng với sản phẩm (product / 제품) hành vi (behavior / 동작).
 
-## 11. Companion Device Manager khi app ghép thiết bị companion
+## 11. Companion thiết bị (device / 장치) Manager khi app ghép thiết bị companion
 
-Nếu app pair với wearable, accessory hoặc IoT companion, `CompanionDeviceManager` có thể cung cấp system-mediated pairing UX và giảm nhu cầu permission/location ở một số flow.
+Nếu app pair với wearable, accessory hoặc IoT companion, `CompanionDeviceManager` có thể cung cấp system-mediated pairing UX và giảm nhu cầu permission/location ở một số luồng (flow / 흐름).
 
-Senior decision không phải “luôn scan BLE trực tiếp”, mà là hỏi system-mediated API có phù hợp không.
+Cấp cao (senior / 시니어) quyết định (decision / 결정) không phải “luôn scan BLE trực tiếp”, mà là hỏi system-mediated API có phù hợp không.
 
-## 12. Bluetooth state machine
+## 12. Bluetooth máy trạng thái (state machine / 상태 머신)
 
-BLE code production nên model connection lifecycle:
+BLE mã (code / 코드) môi trường vận hành (production / 운영 환경) nên mô hình (model / 모델) liên kết (connection / 연결) vòng đời (lifecycle / 생명주기):
 
 ```text
 Idle
@@ -139,33 +142,33 @@ Idle
 → Disconnected / Error
 ```
 
-Đừng dùng một boolean `isConnected`. Connection có timeout, reconnect, permission revoke, Bluetooth disabled và remote disconnect.
+Đừng dùng một boolean `isConnected`. liên kết (connection / 연결) có hết thời gian chờ (timeout / 타임아웃), reconnect, permission revoke, Bluetooth disabled và remote disconnect.
 
-# Android 17 Local Network
+# Android 17 cục bộ (local / 로컬) mạng (network / 네트워크)
 
 ## 13. `ACCESS_LOCAL_NETWORK`
 
-Android 17 bổ sung runtime permission cho app target API 37+ khi cần discover/communicate với thiết bị trong LAN trong những flow áp dụng. Đây là ví dụ điển hình của platform evolution: capability trước đây “tự do” có thể trở thành protected surface vì privacy/fingerprinting risk.
+Android 17 bổ sung thời gian chạy (runtime / 런타임) permission cho app mục tiêu (target / 대상) API 37+ khi cần discover/communicate với thiết bị trong LAN trong những luồng (flow / 흐름) áp dụng. Đây là ví dụ điển hình của nền tảng (platform / 플랫폼) evolution: năng lực (capability / 역량) trước đây “tự do” có thể trở thành protected surface vì privacy/fingerprinting rủi ro (risk / 위험).
 
-Nếu app điều khiển smart-home/casting/local server, phải kiểm tra migration khi nâng target SDK. Một option khác trong một số use case là system-mediated picker giúp user chọn local device mà không cần broad network discovery permission.
+Nếu app điều khiển smart-home/casting/cục bộ (local / 로컬) máy chủ (server / 서버), phải kiểm tra di chuyển (migration / 마이그레이션) khi nâng mục tiêu (target / 대상) SDK. Một option khác trong một số use trường hợp (case / 사례) là system-mediated picker giúp người dùng (user / 사용자) chọn cục bộ (local / 로컬) thiết bị (device / 장치) mà không cần broad mạng (network / 네트워크) discovery permission.
 
-Target SDK migration vì vậy phải có **capability audit**, không chỉ tăng con số trong Gradle.
+Mục tiêu (target / 대상) SDK di chuyển (migration / 마이그레이션) vì vậy phải có **năng lực (capability / 역량) kiểm tra (audit / 감사)**, không chỉ tăng con số trong Gradle.
 
 # Notifications
 
 ## 14. Notification permission
 
-Trên Android hiện đại, app không được giả định notification luôn hiển thị. User có thể deny permission hoặc disable channel.
+Trên Android hiện đại, app không được giả định notification luôn hiển thị. người dùng (user / 사용자) có thể deny permission hoặc disable channel.
 
-Business flow quan trọng không được phụ thuộc notification như kênh duy nhất để đảm bảo data correctness. Notification là delivery surface, không phải durable job queue.
+Nghiệp vụ (business / 비즈니스) luồng (flow / 흐름) quan trọng không được phụ thuộc notification như kênh duy nhất để đảm bảo dữ liệu (data / 데이터) tính đúng đắn (correctness / 정확성). Notification là delivery surface, không phải durable job hàng đợi (queue / 큐).
 
-Ví dụ sync background vẫn phải persist state; notification chỉ báo outcome.
+Ví dụ sync background vẫn phải persist trạng thái (state / 상태); notification chỉ báo kết quả (outcome / 결과).
 
-## 15. Notification channel là user-controlled contract
+## 15. Notification channel là user-controlled đặc tả hợp đồng (contract / 계약)
 
-Sau khi channel được tạo, user có quyền chỉnh importance/sound. App không nên liên tục tạo channel mới để né setting của user.
+Sau khi channel được tạo, người dùng (user / 사용자) có quyền chỉnh importance/sound. App không nên liên tục tạo channel mới để né setting của người dùng (user / 사용자).
 
-Thiết kế channel theo semantic ổn định như:
+Thiết kế channel theo ngữ nghĩa (semantic / 의미적) ổn định như:
 
 ```text
 messages
@@ -174,31 +177,31 @@ security_alerts
 background_progress
 ```
 
-thay vì theo từng campaign/version.
+thay vì theo từng campaign/phiên bản (version / 버전).
 
 ## 16. PendingIntent mutability
 
-Khi tạo `PendingIntent`, cần chọn immutable/mutable đúng contract. Mặc định nên immutable nếu receiver không cần system/other process fill thêm extras theo use case hợp lệ.
+Khi tạo `PendingIntent`, cần chọn immutable/mutable đúng đặc tả hợp đồng (contract / 계약). Mặc định nên immutable nếu receiver không cần hệ thống (system / 시스템)/other tiến trình (process / 프로세스) fill thêm extras theo use trường hợp (case / 사례) hợp lệ.
 
-Security principle: capability token càng hẹp càng tốt.
+Bảo mật (security / 보안) principle: năng lực (capability / 역량) đơn vị từ (token / 토큰) càng hẹp càng tốt.
 
 # Camera và Microphone
 
-## 17. Permission indicator và user expectation
+## 17. Permission indicator và người dùng (user / 사용자) expectation
 
-Camera/microphone là high-trust capability. Hệ thống có privacy indicators và user controls. App nên bắt đầu capture rõ ràng sau user intent, dừng capture đúng lifecycle và không giữ resource ở background không cần thiết.
+Camera/microphone là high-trust năng lực (capability / 역량). Hệ thống có privacy indicators và người dùng (user / 사용자) controls. App nên bắt đầu capture rõ ràng sau người dùng (user / 사용자) intent, dừng capture đúng vòng đời (lifecycle / 생명주기) và không giữ tài nguyên (resource / 자원) ở background không cần thiết.
 
 ## 18. Camera permission không có nghĩa camera đang usable
 
-Camera có thể đang được app khác sử dụng, lifecycle chưa ready hoặc hardware error. Camera layer phải model open/close/error thay vì chỉ check permission.
+Camera có thể đang được app khác sử dụng, vòng đời (lifecycle / 생명주기) chưa ready hoặc hardware lỗi (error / 오류). Camera tầng (layer / 계층) phải mô hình (model / 모델) open/close/lỗi (error / 오류) thay vì chỉ check permission.
 
-CameraX thường giảm complexity so với Camera2 cho app phổ biến, nhưng vẫn phải bind use case vào lifecycle đúng cách.
+CameraX thường giảm độ phức tạp (complexity / 복잡도) so với Camera2 cho app phổ biến, nhưng vẫn phải bind use trường hợp (case / 사례) vào vòng đời (lifecycle / 생명주기) đúng cách.
 
-# Storage, media và file access
+# Lưu trữ (storage / 저장소), media và truy cập tệp (file access / 파일 접근)
 
-## 19. Không xin storage permission nếu system picker đủ dùng
+## 19. Không xin lưu trữ (storage / 저장소) permission nếu hệ thống (system / 시스템) picker đủ dùng
 
-Nếu user chọn ảnh/video, Photo Picker thường là surface tốt hơn broad media permission. Nếu user chọn document/file, Storage Access Framework cho phép user grant URI access cụ thể.
+Nếu người dùng (user / 사용자) chọn ảnh/video, Photo Picker thường là surface tốt hơn broad media permission. Nếu người dùng (user / 사용자) chọn document/tệp (file / 파일), lưu trữ (storage / 저장소) truy cập (access / 접근) khung phần mềm (framework / 프레임워크) cho phép người dùng (user / 사용자) grant URI truy cập (access / 접근) cụ thể.
 
 Principle:
 
@@ -212,7 +215,7 @@ request broad library access
 
 ## 20. URI permission
 
-Khi nhận `content://` URI, app không nên assume có filesystem path thật. Dùng `ContentResolver` để mở stream/file descriptor.
+Khi nhận `content://` URI, app không nên assume có filesystem đường dẫn (path / 경로) thật. Dùng `ContentResolver` để mở stream/tệp (file / 파일) descriptor.
 
 ```kotlin
 context.contentResolver.openInputStream(uri)?.use { input ->
@@ -220,39 +223,39 @@ context.contentResolver.openInputStream(uri)?.use { input ->
 }
 ```
 
-Nếu cần access lâu dài cho document từ SAF, có thể cần persist URI permission theo contract của picker.
+Nếu cần truy cập (access / 접근) lâu dài cho document từ SAF, có thể cần persist URI permission theo đặc tả hợp đồng (contract / 계약) của picker.
 
-## 21. `FileProvider` cho share file
+## 21. `FileProvider` cho share tệp (file / 파일)
 
-Không expose raw `file://` path. Dùng `FileProvider`/content URI với temporary grant.
+Không expose raw `file://` đường dẫn (path / 경로). Dùng `FileProvider`/content URI với temporary grant.
 
-Intent sharing phải grant permission đúng scope và không expose file private ngoài ý muốn.
+Intent sharing phải grant permission đúng phạm vi (scope / 범위) và không expose tệp (file / 파일) private ngoài ý muốn.
 
-# Foreground Service và background execution
+# Foreground dịch vụ (service / 서비스) và background thực thi (execution / 실행)
 
-## 22. Permission không thể tách khỏi execution policy
+## 22. Permission không thể tách khỏi thực thi (execution / 실행) chính sách (policy / 정책)
 
-Một app có location permission chưa chắc được phép chạy tracking vô hạn ở background. Android áp foreground-service type, background start restriction và battery policy.
+Một app có location permission chưa chắc được phép chạy tracking vô hạn ở background. Android áp foreground-service kiểu (type / 타입), background start restriction và battery chính sách (policy / 정책).
 
-Khi feature cần user-visible long-running work, foreground service có thể đúng. Khi work durable nhưng không cần exact-time/user-visible, WorkManager thường phù hợp hơn.
+Khi tính năng (feature / 기능) cần user-visible long-running công việc (work / 작업), foreground dịch vụ (service / 서비스) có thể đúng. Khi công việc (work / 작업) durable nhưng không cần exact-time/user-visible, WorkManager thường phù hợp hơn.
 
-Đừng dùng foreground service như cách “giữ app sống”.
+Đừng dùng foreground dịch vụ (service / 서비스) như cách “giữ app sống”.
 
-## 23. Exact alarm là special capability
+## 23. chính xác (exact / 정확한) alarm là special năng lực (capability / 역량)
 
-Exact alarm ảnh hưởng battery và bị platform/policy quản lý. Chỉ use case thật sự exact-time như alarm clock/calendar-critical event mới nên dựa vào nó.
+Chính xác (exact / 정확한) alarm ảnh hưởng battery và bị nền tảng (platform / 플랫폼)/chính sách (policy / 정책) quản lý. Chỉ use trường hợp (case / 사례) thật sự exact-time như alarm clock/calendar-critical sự kiện (event / 이벤트) mới nên dựa vào nó.
 
 Periodic sync nên dùng WorkManager/flexible scheduling hơn.
 
-# Intents, exported component và external input
+# Intents, exported thành phần (component / 컴포넌트) và bên ngoài (external / 외부) đầu vào (input / 입력)
 
 ## 24. `android:exported`
 
-Component nhận implicit intent hoặc cần external access phải có exported configuration rõ. Component nội bộ nên không exported nếu không cần.
+Thành phần (component / 컴포넌트) nhận implicit intent hoặc cần bên ngoài (external / 외부) truy cập (access / 접근) phải có exported cấu hình (configuration / 구성) rõ. thành phần (component / 컴포넌트) nội bộ nên không exported nếu không cần.
 
-Đừng coi Activity/Service/Receiver exported chỉ là navigation detail; đó là attack surface.
+Đừng coi Activity/dịch vụ (service / 서비스)/Receiver exported chỉ là điều hướng (navigation / 내비게이션) detail; đó là attack surface.
 
-## 25. Intent input phải validate
+## 25. Intent đầu vào (input / 입력) phải validate
 
 Deep link như:
 
@@ -260,29 +263,29 @@ Deep link như:
 myapp://payment/confirm?amount=...
 ```
 
-không được tin amount/role/userId chỉ vì link mở từ app của bạn. External source có thể craft Intent.
+không được tin amount/role/userId chỉ vì link mở từ app của bạn. bên ngoài (external / 외부) nguồn (source / 소스) có thể craft Intent.
 
-Server-side authorization và domain validation vẫn là nguồn quyết định.
+Server-side authorization và lĩnh vực (domain / 도메인) kiểm tra hợp lệ (validation / 검증) vẫn là nguồn quyết định.
 
-## 26. App Links tốt hơn custom scheme cho web ownership
+## 26. App Links tốt hơn custom scheme cho web quyền sở hữu (ownership / 소유권)
 
-Verified App Links liên kết HTTP(S) domain với app ownership, giảm hijacking so với custom URI scheme trong nhiều use case.
+Verified App Links liên kết HTTP(S) lĩnh vực (domain / 도메인) với app quyền sở hữu (ownership / 소유권), giảm hijacking so với custom URI scheme trong nhiều use trường hợp (case / 사례).
 
-Navigation layer nên parse thành typed route/domain input rồi validate thay vì truyền URI string đi khắp app.
+Điều hướng (navigation / 내비게이션) tầng (layer / 계층) nên parse thành typed tuyến (route / 경로)/lĩnh vực (domain / 도메인) đầu vào (input / 입력) rồi validate thay vì truyền URI string đi khắp app.
 
-# Special App Access
+# Special App truy cập (access / 접근)
 
-## 27. Một số capability không phải runtime permission bình thường
+## 27. Một số năng lực (capability / 역량) không phải thời gian chạy (runtime / 런타임) permission bình thường
 
-Draw over other apps, manage all files, install unknown apps, exact alarms hoặc accessibility service có system setting/special access flow riêng. Không được request/khuyến khích chỉ vì muốn shortcut kỹ thuật.
+Draw over other apps, manage all files, install unknown apps, chính xác (exact / 정확한) alarms hoặc khả năng tiếp cận (accessibility / 접근성) dịch vụ (service / 서비스) có hệ thống (system / 시스템) setting/special truy cập (access / 접근) luồng (flow / 흐름) riêng. Không được yêu cầu (request / 요청)/khuyến khích chỉ vì muốn shortcut kỹ thuật.
 
-Nếu app cần special access, UX phải giải thích benefit cụ thể và feature vẫn degrade hợp lý khi user không cấp.
+Nếu app cần special truy cập (access / 접근), UX phải giải thích benefit cụ thể và tính năng (feature / 기능) vẫn degrade hợp lý khi người dùng (user / 사용자) không cấp.
 
-# Capability architecture
+# Năng lực (capability / 역량) kiến trúc (architecture / 아키텍처)
 
-## 28. Tạo abstraction theo capability, không theo permission API
+## 28. Tạo lớp trừu tượng (abstraction / 추상화) theo năng lực (capability / 역량), không theo permission API
 
-UI không nên biết chi tiết API level branching:
+UI không nên biết chi tiết API mức (level / 수준) branching:
 
 ```kotlin
 interface CameraCapability {
@@ -290,7 +293,7 @@ interface CameraCapability {
 }
 ```
 
-Implementation có thể check hardware, permission, policy và lifecycle. UI chỉ render state:
+Hiện thực (implementation / 구현) có thể check hardware, permission, chính sách (policy / 정책) và vòng đời (lifecycle / 생명주기). UI chỉ kết xuất (render / 렌더링) trạng thái (state / 상태):
 
 ```kotlin
 sealed interface CapabilityResult {
@@ -301,11 +304,11 @@ sealed interface CapabilityResult {
 }
 ```
 
-Cách này làm test dễ hơn và tránh permission logic rải khắp Composable.
+Cách này làm kiểm thử (test / 테스트) dễ hơn và tránh permission lô-gic (logic / 논리) rải khắp Composable.
 
-## 29. Permission state không phải domain entitlement
+## 29. Permission trạng thái (state / 상태) không phải lĩnh vực (domain / 도메인) entitlement
 
-User có camera permission không có nghĩa account được phép dùng feature premium. Ngược lại, subscription entitlement không có nghĩa OS permission đã grant.
+Người dùng (user / 사용자) có camera permission không có nghĩa account được phép dùng tính năng (feature / 기능) premium. Ngược lại, subscription entitlement không có nghĩa OS permission đã grant.
 
 Tách:
 
@@ -315,11 +318,11 @@ business entitlement
 backend authorization
 ```
 
-ba layer khác nhau.
+ba tầng (layer / 계층) khác nhau.
 
-# Version matrix
+# Phiên bản (version / 버전) ma trận (matrix / 행렬)
 
-## 30. `minSdk`, `targetSdk`, runtime OS
+## 30. `minSdk`, `targetSdk`, thời gian chạy (runtime / 런타임) OS
 
 Một app có thể:
 
@@ -329,7 +332,7 @@ targetSdk = 37
 chạy trên device API 29, 34, 37...
 ```
 
-Behavior phụ thuộc cả runtime OS và target SDK. Vì vậy code compatibility thường cần xét:
+Hành vi (behavior / 동작) phụ thuộc cả thời gian chạy (runtime / 런타임) OS và mục tiêu (target / 대상) SDK. Vì vậy mã (code / 코드) tính tương thích (compatibility / 호환성) thường cần xét:
 
 ```kotlin
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.X) {
@@ -337,52 +340,54 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.X) {
 }
 ```
 
-nhưng target-specific behavior không phải lúc nào cũng chỉ giải bằng `SDK_INT`; phải đọc behavior changes khi nâng target.
+nhưng target-specific hành vi (behavior / 동작) không phải lúc nào cũng chỉ giải bằng `SDK_INT`; phải đọc hành vi (behavior / 동작) changes khi nâng mục tiêu (target / 대상).
 
-## 31. Target SDK migration checklist
+## 31. mục tiêu (target / 대상) SDK di chuyển (migration / 마이그레이션) checklist
 
-Mỗi lần tăng target SDK, review ít nhất: permissions mới/đổi semantics, background execution, foreground-service types, notification, storage/media, intents/exported components, security/network, edge-to-edge/system UI, accessibility/IME, WebView behavior và hardware capability.
+Mỗi lần tăng mục tiêu (target / 대상) SDK, rà soát (review / 검토) ít nhất: permissions mới/đổi ngữ nghĩa (semantics / 의미론), background thực thi (execution / 실행), foreground-service types, notification, lưu trữ (storage / 저장소)/media, intents/exported components, bảo mật (security / 보안)/mạng (network / 네트워크), edge-to-edge/hệ thống (system / 시스템) UI, khả năng tiếp cận (accessibility / 접근성)/IME, WebView hành vi (behavior / 동작) và hardware năng lực (capability / 역량).
 
-Android 17 là ví dụ rõ với local network permission, MessageQueue implementation change, background audio tightening và các behavior khác.
+Android 17 là ví dụ rõ với cục bộ (local / 로컬) mạng (network / 네트워크) permission, MessageQueue hiện thực (implementation / 구현) thay đổi (change / 변경), background audio tightening và các hành vi (behavior / 동작) khác.
 
-# Testing permission/capability
+# Testing permission/năng lực (capability / 역량)
 
-## 32. Test matrix
+## 32. kiểm thử (test / 테스트) ma trận (matrix / 행렬)
 
-Permission feature nên test ít nhất:
+Permission tính năng (feature / 기능) nên kiểm thử (test / 테스트) ít nhất:
 
 | Scenario | Kỳ vọng |
 |---|---|
 | hardware absent | fallback rõ |
-| permission granted | feature chạy |
-| denied lần đầu | explain/retry hợp lý |
+| permission granted | tính năng (feature / 기능) chạy |
+| denied lần đầu | explain/thử lại (retry / 재시도) hợp lý |
 | denied lâu dài | Settings/fallback |
 | revoke khi app background | app recover |
-| OS version cũ | compatibility path |
-| target-SDK behavior mới | migration path |
+| OS phiên bản (version / 버전) cũ | tính tương thích (compatibility / 호환성) đường dẫn (path / 경로) |
+| target-SDK hành vi (behavior / 동작) mới | di chuyển (migration / 마이그레이션) đường dẫn (path / 경로) |
 
-## 33. Đừng chỉ test emulator “happy path”
+## 33. Đừng chỉ kiểm thử (test / 테스트) emulator “happy đường dẫn (path / 경로)”
 
-Bluetooth, camera, audio, sensor, foldable posture hoặc OEM permission behavior cần physical-device matrix khi risk cao. Emulator hữu ích nhưng không thay hết hardware integration.
+Bluetooth, camera, audio, sensor, foldable posture hoặc OEM permission hành vi (behavior / 동작) cần physical-device ma trận (matrix / 행렬) khi rủi ro (risk / 위험) cao. Emulator hữu ích nhưng không thay hết hardware tích hợp (integration / 통합).
 
-# Senior Notes
+# Cấp cao (senior / 시니어) Notes
 
-## 34. Permission tối thiểu là security và product quality
+## 34. Permission tối thiểu là bảo mật (security / 보안) và sản phẩm (product / 제품) chất lượng (quality / 품질)
 
-Ít permission hơn không chỉ giảm risk; nó giảm dialog, denial state, support burden, Play policy surface và code branch.
+Ít permission hơn không chỉ giảm rủi ro (risk / 위험); nó giảm dialog, denial trạng thái (state / 상태), hỗ trợ (support / 지원) burden, Play chính sách (policy / 정책) surface và mã (code / 코드) branch.
 
-## 35. System picker thường thắng custom broad access
+## 35. hệ thống (system / 시스템) picker thường thắng custom broad truy cập (access / 접근)
 
-Photo Picker, document picker, Credential Manager, Companion Device Manager và các system-mediated flow tồn tại để user grant access cụ thể với trust UX nhất quán. Dùng chúng khi phù hợp thay vì tự xây broad-scanning architecture.
+Photo Picker, document picker, Credential Manager, Companion thiết bị (device / 장치) Manager và các system-mediated luồng (flow / 흐름) tồn tại để người dùng (user / 사용자) grant truy cập (access / 접근) cụ thể với trust UX nhất quán. Dùng chúng khi phù hợp thay vì tự xây broad-scanning kiến trúc (architecture / 아키텍처).
 
-## 36. Capability phải có fallback
+## 36. năng lực (capability / 역량) phải có fallback
 
-Nếu app crash hoặc khóa toàn bộ flow chỉ vì camera/Bluetooth/location unavailable, architecture đang coupling feature quá chặt với hardware.
+Nếu app crash hoặc khóa toàn bộ luồng (flow / 흐름) chỉ vì camera/Bluetooth/location unavailable, kiến trúc (architecture / 아키텍처) đang coupling tính năng (feature / 기능) quá chặt với hardware.
 
-## 37. Permission denial là normal user choice
+## 37. Permission denial là normal người dùng (user / 사용자) choice
 
-Đừng dùng dark pattern ép user grant. Product tốt giải thích value và vẫn cho user đường khác nếu possible.
+Đừng dùng dark mẫu (pattern / 패턴) ép người dùng (user / 사용자) grant. sản phẩm (product / 제품) tốt giải thích giá trị (value / 값) và vẫn cho người dùng (user / 사용자) đường khác nếu possible.
 
 # Checklist kết thúc chapter
 
-Bạn nên có thể giải thích sự khác nhau giữa permission và hardware capability; vì sao `<uses-feature>` có thể ảnh hưởng Play availability; khi nào dùng system picker thay broad permission; vì sao permission có thể bị revoke; Bluetooth permission hiện đại khác legacy thế nào; Android 17 local-network permission ảnh hưởng app LAN ra sao; vì sao URI không phải filesystem path; foreground service khác WorkManager; `android:exported` và PendingIntent liên quan security thế nào; và tại sao target-SDK upgrade phải được xem như platform migration project chứ không phải sửa một số trong Gradle.
+Bạn nên có thể giải thích sự khác nhau giữa permission và hardware năng lực (capability / 역량); vì sao `<uses-feature>` có thể ảnh hưởng Play availability; khi nào dùng hệ thống (system / 시스템) picker thay broad permission; vì sao permission có thể bị revoke; Bluetooth permission hiện đại khác legacy thế nào; Android 17 local-network permission ảnh hưởng app LAN ra sao; vì sao URI không phải filesystem đường dẫn (path / 경로); foreground dịch vụ (service / 서비스) khác WorkManager; `android:exported` và PendingIntent liên quan bảo mật (security / 보안) thế nào; và tại sao target-SDK upgrade phải được xem như nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) dự án (project / 프로젝트) chứ không phải sửa một số trong Gradle.
+
+> **Bàn giao:** Sau **37. Permission denial là normal người dùng (user / 사용자) choice**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

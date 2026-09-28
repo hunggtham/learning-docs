@@ -1,5 +1,8 @@
 # Nền tảng về cây
-**Tree / 트리**
+
+> **Mạch đọc:** Đọc **Nền tảng về cây** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cây có gốc và bất biến n − 1 cạnh** sang **Cây là một đối tượng đệ quy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**cây (tree / 트리) / 트리**
 
 Cây là một trong những mô hình quan trọng nhất của Khoa học máy tính vì nó biểu diễn **quan hệ phân cấp (hierarchical relationship)**. Hệ thống tệp, DOM, AST, cây danh mục, chỉ mục cơ sở dữ liệu, cấu trúc định tuyến và cây quyết định đều có thể được nhìn dưới góc này.
 
@@ -32,13 +35,13 @@ int height(TreeNode node) {
 
 Tính đúng đắn có thể chứng minh bằng **quy nạp cấu trúc (structural induction)**. Cây rỗng là trường hợp cơ sở. Ở bước quy nạp, giả sử kết quả của các cây con đã đúng; ta chỉ cần chứng minh cách kết hợp chúng ở nút hiện tại là đúng.
 
-Đây là mô hình chứng minh lặp lại trong chiều cao, kích thước cây con, tổng cây con, kiểm tra BST và tree DP.
+Đây là mô hình chứng minh lặp lại trong chiều cao, kích thước cây con, tổng cây con, kiểm tra BST và cây (tree / 트리) DP.
 
 ## Độ sâu, chiều cao và kích thước cây con
 
-**Độ sâu (depth)** của nút thường là số cạnh từ gốc tới nút. **Chiều cao (height)** là độ dài đường đi dài nhất từ nút xuống một lá. **Kích thước cây con (subtree size)** là số nút thuộc cây con có gốc tại nút đó.
+**độ sâu (depth / 깊이)** của nút thường là số cạnh từ gốc tới nút. **Chiều cao (height)** là độ dài đường đi dài nhất từ nút xuống một lá. **Kích thước cây con (subtree size)** là số nút thuộc cây con có gốc tại nút đó.
 
-Ba đại lượng phục vụ các câu hỏi khác nhau. Độ sâu xuất hiện trong LCA và khoảng cách. Chiều cao quyết định chi phí trường hợp xấu nhất của nhiều cây tìm kiếm. Kích thước cây con hỗ trợ rank, order statistics và nhiều kỹ thuật rerooting.
+Ba đại lượng phục vụ các câu hỏi khác nhau. Độ sâu xuất hiện trong LCA và khoảng cách. Chiều cao quyết định chi phí trường hợp xấu nhất của nhiều cây tìm kiếm. Kích thước cây con hỗ trợ rank, thứ tự (order / 순서) statistics và nhiều kỹ thuật rerooting.
 
 Nếu cây nhị phân có chiều cao `h` với gốc ở độ sâu 0, số nút tối đa là:
 
@@ -52,15 +55,15 @@ Do đó cây có hình dạng cân bằng có chiều cao cỡ `O(log n)`, còn 
 
 Các thuật ngữ này mô tả các bất biến khác nhau.
 
-**Full binary tree**: mỗi nút có 0 hoặc 2 con.
+**Full nhị phân (binary / 이진) cây (tree / 트리)**: mỗi nút có 0 hoặc 2 con.
 
-**Complete binary tree**: mọi tầng trước tầng cuối đầy đủ và tầng cuối được lấp từ trái sang phải. Binary heap dựa vào tính chất này để biểu diễn bằng mảng.
+**Complete nhị phân (binary / 이진) cây (tree / 트리)**: mọi tầng trước tầng cuối đầy đủ và tầng cuối được lấp từ trái sang phải. nhị phân (binary / 이진) vùng nhớ động (heap / 힙) dựa vào tính chất này để biểu diễn bằng mảng.
 
-**Perfect binary tree**: mọi nút trong có đúng hai con và mọi lá cùng độ sâu.
+**Perfect nhị phân (binary / 이진) cây (tree / 트리)**: mọi nút trong có đúng hai con và mọi lá cùng độ sâu.
 
-**Balanced tree**: chiều cao được kiểm soát đủ tốt, thường ở mức logarithmic. AVL và Red-Black Tree dùng các bất biến khác nhau để đạt mục tiêu này.
+**Balanced cây (tree / 트리)**: chiều cao được kiểm soát đủ tốt, thường ở mức logarithmic. AVL và Red-Black cây (tree / 트리) dùng các bất biến khác nhau để đạt mục tiêu này.
 
-Không nên học các tên này tách rời mục đích. Heap cần complete shape; BST cần thứ tự khóa; AVL cần cân bằng chiều cao; B+Tree cần hệ số phân nhánh lớn và mức lấp đầy phù hợp với trang lưu trữ.
+Không nên học các tên này tách rời mục đích. vùng nhớ động (heap / 힙) cần complete shape; BST cần thứ tự khóa; AVL cần cân bằng chiều cao; B+cây (tree / 트리) cần hệ số phân nhánh lớn và mức lấp đầy phù hợp với trang lưu trữ.
 
 ## Duyệt cây là chọn thứ tự xử lý phụ thuộc
 
@@ -78,11 +81,11 @@ Postorder phù hợp khi cha cần kết quả của các con trước, ví dụ
 
 Inorder đặc biệt quan trọng với BST vì trả khóa theo thứ tự đã sắp xếp.
 
-**Duyệt theo tầng (level-order traversal)** dùng BFS và queue. Nó phù hợp với bài toán theo độ sâu, khoảng cách tính theo cạnh hoặc xử lý từng tầng.
+**Duyệt theo tầng (level-order traversal)** dùng BFS và hàng đợi (queue / 큐). Nó phù hợp với bài toán theo độ sâu, khoảng cách tính theo cạnh hoặc xử lý từng tầng.
 
 ## Đệ quy đang lưu trạng thái gì?
 
-Trong inorder đệ quy, khi đi xuống cây con trái, call stack đang nhớ những tổ tiên cần quay lại xử lý. Phiên bản lặp làm trạng thái này tường minh:
+Trong inorder đệ quy, khi đi xuống cây con trái, ngăn xếp lời gọi (call stack / 호출 스택) đang nhớ những tổ tiên cần quay lại xử lý. Phiên bản lặp làm trạng thái này tường minh:
 
 ```java
 Deque<TreeNode> stack = new ArrayDeque<>();
@@ -100,7 +103,7 @@ while (cur != null || !stack.isEmpty()) {
 }
 ```
 
-Đệ quy không phải phép màu; runtime chỉ đang quản lý một stack trạng thái thay cho ta. Hiểu điều này giúp chuyển thuật toán sang dạng lặp khi cây có thể quá sâu.
+Đệ quy không phải phép màu; thời gian chạy (runtime / 런타임) chỉ đang quản lý một ngăn xếp (stack / 스택) trạng thái thay cho ta. Hiểu điều này giúp chuyển thuật toán sang dạng lặp khi cây có thể quá sâu.
 
 ## Biểu diễn cây trong bộ nhớ
 
@@ -114,15 +117,15 @@ typedef struct TreeNode {
 } TreeNode;
 ```
 
-Java và JavaScript dùng reference được runtime quản lý. Logic topology có thể giống nhau nhưng chi phí vật lý khác nhau.
+Java và JavaScript dùng tham chiếu (reference / 참조) được thời gian chạy (runtime / 런타임) quản lý. lô-gic (logic / 논리) topology có thể giống nhau nhưng chi phí vật lý khác nhau.
 
-Một cây gồm hàng triệu object rải rác trên heap có thể có locality kém hơn cách biểu diễn bằng các mảng `value[]`, `left[]`, `right[]`. Vì vậy cần phân biệt **cấu trúc logic** với **bố trí vật lý**.
+Một cây gồm hàng triệu đối tượng (object / 객체) rải rác trên vùng nhớ động (heap / 힙) có thể có locality kém hơn cách biểu diễn bằng các mảng `value[]`, `left[]`, `right[]`. Vì vậy cần phân biệt **cấu trúc lô-gic (logic / 논리)** với **bố trí vật lý**.
 
 ## Có cần con trỏ cha không?
 
-Nếu chỉ duyệt từ gốc xuống, parent có thể được truyền qua stack/recursion. Nếu workload thường xuyên cần predecessor, successor, đi lên hoặc truy vấn tổ tiên, lưu parent có thể hữu ích.
+Nếu chỉ duyệt từ gốc xuống, parent có thể được truyền qua ngăn xếp (stack / 스택)/recursion. Nếu tải công việc (workload / 워크로드) thường xuyên cần predecessor, successor, đi lên hoặc truy vấn tổ tiên, lưu parent có thể hữu ích.
 
-Đổi lại, mỗi nút tốn thêm bộ nhớ và mọi phép xoay/nối lại phải cập nhật parent đúng. Mỗi metadata mới là một bất biến mới phải duy trì.
+Đổi lại, mỗi nút tốn thêm bộ nhớ và mọi phép xoay/nối lại phải cập nhật parent đúng. Mỗi siêu dữ liệu (metadata / 메타데이터) mới là một bất biến mới phải duy trì.
 
 ## Euler Tour: biến cây con thành đoạn liên tục
 
@@ -134,15 +137,15 @@ subtree(u) <-> [tin[u], tout[u]]
 
 Đây là cầu nối mạnh từ cây sang bài toán truy vấn đoạn.
 
-Ví dụ, nếu cần cập nhật giá trị một nút và truy vấn tổng toàn cây con, ta có thể flatten cây rồi dùng Fenwick Tree hoặc Segment Tree trên mảng Euler.
+Ví dụ, nếu cần cập nhật giá trị một nút và truy vấn tổng toàn cây con, ta có thể flatten cây rồi dùng Fenwick cây (tree / 트리) hoặc Segment cây (tree / 트리) trên mảng Euler.
 
 Một vấn đề phân cấp đã được chuyển thành bài toán khoảng mà vẫn giữ nguyên ngữ nghĩa cây con.
 
-## Lowest Common Ancestor
+## Lowest dùng chung (common / 공통) Ancestor
 
 **Tổ tiên chung thấp nhất (Lowest Common Ancestor – LCA / 최소 공통 조상)** của hai nút là tổ tiên chung có độ sâu lớn nhất.
 
-Nếu chỉ có ít truy vấn, có thể đưa hai nút lên theo parent. Với nhiều truy vấn, **binary lifting** tiền xử lý:
+Nếu chỉ có ít truy vấn, có thể đưa hai nút lên theo parent. Với nhiều truy vấn, **nhị phân (binary / 이진) lifting** tiền xử lý:
 
 ```text
 up[k][v] = tổ tiên của v cách 2^k cạnh
@@ -150,9 +153,9 @@ up[k][v] = tổ tiên của v cách 2^k cạnh
 
 Khoảng cách bất kỳ có thể phân rã thành tổng các lũy thừa của 2, nên ta có thể nâng nút theo các bit của độ sâu. Tiền xử lý thường `O(n log n)`, mỗi truy vấn `O(log n)`.
 
-Ý tưởng này cùng họ với Sparse Table và exponentiation by squaring: tiền xử lý các khối kích thước tăng gấp đôi để ghép nhanh một bước lớn.
+Ý tưởng này cùng họ với Sparse bảng (table / 테이블) và exponentiation by squaring: tiền xử lý các khối kích thước tăng gấp đôi để ghép nhanh một bước lớn.
 
-## Tree DP
+## Cây (tree / 트리) DP
 
 Khi đã cố định parent, các cây con không giao nhau. Đây là điều kiện lý tưởng cho quy hoạch động.
 
@@ -193,7 +196,7 @@ Ngược lại, nếu dữ liệu chỉ “trông giống cây” nhưng có th�
 Với cây không trọng số, nếu biết độ sâu và LCA:
 
 \[
-dist(u,v)=depth(u)+depth(v)-2\cdot depth(lca(u,v))
+dist(u,v)=độ sâu (depth / 깊이)(u)+độ sâu (depth / 깊이)(v)-2\cdot độ sâu (depth / 깊이)(lca(u,v))
 \]
 
 Công thức xuất phát từ việc đường đi duy nhất từ `u` tới `v` đi từ `u` lên LCA rồi xuống `v`.
@@ -225,15 +228,15 @@ Kỹ thuật này hữu ích cho truy vấn khoảng cách động trên cây v�
 
 ## Heavy-Light Decomposition
 
-Đường đi giữa hai nút không nhất thiết tạo một đoạn liên tục trong Euler order. **Heavy-Light Decomposition (HLD)** chia các cạnh thành heavy/light để một đường đi bất kỳ được biểu diễn bởi `O(log n)` đoạn liên tục trên các chain.
+Đường đi giữa hai nút không nhất thiết tạo một đoạn liên tục trong Euler thứ tự (order / 순서). **Heavy-Light Decomposition (HLD)** chia các cạnh thành heavy/light để một đường đi bất kỳ được biểu diễn bởi `O(log n)` đoạn liên tục trên các chuỗi (chain / 사슬).
 
-Kết hợp HLD với Segment Tree/Fenwick Tree cho phép xử lý nhiều truy vấn/cập nhật trên đường đi.
+Kết hợp HLD với Segment cây (tree / 트리)/Fenwick cây (tree / 트리) cho phép xử lý nhiều truy vấn/cập nhật trên đường đi.
 
-Trực giác là chọn cho mỗi nút một con “heavy” có subtree lớn nhất. Mỗi lần đi qua cạnh light, kích thước subtree giảm ít nhất khoảng một nửa, nên số lần đổi chain trên một đường bị chặn logarithmic.
+Trực giác là chọn cho mỗi nút một con “heavy” có subtree lớn nhất. Mỗi lần đi qua cạnh light, kích thước subtree giảm ít nhất khoảng một nửa, nên số lần đổi chuỗi (chain / 사슬) trên một đường bị chặn logarithmic.
 
 ## Cây và biểu thức
 
-AST và expression tree cho thấy traversal tương ứng trực tiếp với thứ tự đánh giá.
+AST và expression cây (tree / 트리) cho thấy traversal tương ứng trực tiếp với thứ tự đánh giá.
 
 Postorder phù hợp để tính biểu thức vì toán hạng con phải được tính trước toán tử cha. Preorder có thể tạo dạng prefix; inorder liên hệ với dạng infix nhưng cần ngoặc để bảo toàn cấu trúc.
 
@@ -251,19 +254,19 @@ Với cây nhị phân, preorder chỉ ghi giá trị thường không đủ. C�
 
 Khi đó quá trình đọc lại có thể tái dựng duy nhất cấu trúc.
 
-Nếu cây có thêm metadata như màu, chiều cao hoặc kích thước subtree, cần quyết định metadata nào được lưu và metadata nào có thể tính lại từ cấu trúc cơ sở.
+Nếu cây có thêm siêu dữ liệu (metadata / 메타데이터) như màu, chiều cao hoặc kích thước subtree, cần quyết định siêu dữ liệu (metadata / 메타데이터) nào được lưu và siêu dữ liệu (metadata / 메타데이터) nào có thể tính lại từ cấu trúc cơ sở.
 
 ## Tính đúng đắn khi biến đổi cây
 
 Các thao tác như rotation, split, merge hoặc transplant phải giữ những bất biến cụ thể.
 
-Ví dụ rotation trong BST phải giữ thứ tự inorder. Trong AVL còn phải cập nhật chiều cao. Trong order-statistic tree còn phải cập nhật kích thước subtree.
+Ví dụ rotation trong BST phải giữ thứ tự inorder. Trong AVL còn phải cập nhật chiều cao. Trong order-statistic cây (tree / 트리) còn phải cập nhật kích thước subtree.
 
-Một phép biến đổi có thể đúng về topology nhưng sai metadata. Vì vậy cách kiểm thử tốt là xác minh cả cấu trúc và mọi dữ liệu tăng cường sau chuỗi thao tác ngẫu nhiên.
+Một phép biến đổi có thể đúng về topology nhưng sai siêu dữ liệu (metadata / 메타데이터). Vì vậy cách kiểm thử tốt là xác minh cả cấu trúc và mọi dữ liệu tăng cường sau chuỗi thao tác ngẫu nhiên.
 
 ## Cây tĩnh và cây động
 
-Nếu cây không đổi sau khi xây dựng, ta có thể tiền xử lý mạnh: Euler tour, binary lifting, HLD, prefix theo gốc. Nếu liên kết cạnh thay đổi thường xuyên, nhiều tiền xử lý trở nên không hợp lệ và cần cấu trúc động chuyên biệt như Link-Cut Tree hoặc Euler Tour Tree.
+Nếu cây không đổi sau khi xây dựng, ta có thể tiền xử lý mạnh: Euler tour, nhị phân (binary / 이진) lifting, HLD, prefix theo gốc. Nếu liên kết cạnh thay đổi thường xuyên, nhiều tiền xử lý trở nên không hợp lệ và cần cấu trúc động chuyên biệt như Link-Cut cây (tree / 트리) hoặc Euler Tour cây (tree / 트리).
 
 Đây là một nguyên tắc tổng quát: **tính tĩnh của dữ liệu cho phép chuyển chi phí từ truy vấn sang tiền xử lý**.
 
@@ -275,7 +278,7 @@ Nếu cây không đổi sau khi xây dựng, ta có thể tiền xử lý mạn
 
 “Cây con luôn là một đoạn liên tục trong mọi thứ tự duyệt” — không; tính chất này phụ thuộc cách flatten và loại truy vấn.
 
-“Thêm parent/size/height chỉ là thêm dữ liệu” — mỗi trường mới tạo thêm bất biến phải được cập nhật ở mọi phép biến đổi.
+“Thêm parent/kích thước (size / 크기)/height chỉ là thêm dữ liệu” — mỗi trường mới tạo thêm bất biến phải được cập nhật ở mọi phép biến đổi.
 
 “Cây và đồ thị là hai thế giới tách biệt” — cây là trường hợp đặc biệt của đồ thị với bất biến mạnh hơn.
 
@@ -283,6 +286,8 @@ Nếu cây không đổi sau khi xây dựng, ta có thể tiền xử lý mạn
 
 > Cây mạnh vì nó biến một hệ thống lớn thành các cây con độc lập được nối bằng quan hệ cha–con. Đệ quy, quy nạp, DP và nhiều phép tiền xử lý đều khai thác chính ranh giới này.
 
-Khi gặp bài toán cây, hãy hỏi: **cây con cần trả thông tin gì cho cha, cha cần truyền thông tin gì xuống con, truy vấn nằm trên subtree hay path, cây tĩnh hay động, hình dạng có được cân bằng không, và metadata nào phải trở thành bất biến?**
+Khi gặp bài toán cây, hãy hỏi: **cây con cần trả thông tin gì cho cha, cha cần truyền thông tin gì xuống con, truy vấn nằm trên subtree hay đường dẫn (path / 경로), cây tĩnh hay động, hình dạng có được cân bằng không, và siêu dữ liệu (metadata / 메타데이터) nào phải trở thành bất biến?**
 
 Xem tiếp: [Binary Search Trees](./01_binary_search_trees.md), [Balanced Search Trees](./02_balanced_search_trees.md), [Heaps](./03_heaps.md), [Augmented Trees](./06_augmented_trees_and_order_statistics.md), [Range Queries](../05_specialized/01_range_queries_fenwick_segment_tree.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 binary search trees](./01_binary_search_trees.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

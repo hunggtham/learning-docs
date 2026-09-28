@@ -1,5 +1,7 @@
 # 09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch
 
+> **Mạch đọc:** Đặt **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bốn khái niệm phải tách riêng** sang **2. Luật nền tảng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## 1. Bốn khái niệm phải tách riêng
 
 Người nước ngoài ở Hàn Quốc thường dùng chung từ “visa”, nhưng pháp luật tách nhiều lớp:
@@ -45,7 +47,7 @@ Khi nghiên cứu một loại visa, không chỉ ghi tên và mã. Nên ghi the
 
 Một số thay đổi trong công việc, nơi làm việc, địa chỉ, hôn nhân hoặc tình trạng học tập có thể phải khai báo.
 
-## 4. Hi Korea và Immigration Service
+## 4. Hi Korea và Immigration dịch vụ (service / 서비스)
 
 Hai nguồn thực tế quan trọng:
 
@@ -83,7 +85,7 @@ Visa Navigator / 공식 안내
 → 관할 출입국 확인
 ```
 
-Không nên hard-code một mức thu nhập hoặc số năm duy nhất trong library vì các ngưỡng và route thay đổi.
+Không nên hard-code một mức thu nhập hoặc số năm duy nhất trong thư viện (library / 라이브러리) vì các ngưỡng và tuyến (route / 경로) thay đổi.
 
 ## 7. Thường trú không bằng nhập quốc tịch
 
@@ -99,7 +101,7 @@ Theo `국적법`, người chưa từng có quốc tịch Hàn có thể xin `�
 
 ## 9. KIIP và naturalization/permanent residence
 
-`사회통합프로그램 (KIIP)` có thể liên quan một số yêu cầu/đánh giá trong hệ thống cư trú hoặc quốc tịch, nhưng vai trò cụ thể phụ thuộc route. Không nên suy rằng hoàn thành KIIP tự động tạo quyền F-5 hoặc quốc tịch.
+`사회통합프로그램 (KIIP)` có thể liên quan một số yêu cầu/đánh giá trong hệ thống cư trú hoặc quốc tịch, nhưng vai trò cụ thể phụ thuộc tuyến (route / 경로). Không nên suy rằng hoàn thành KIIP tự động tạo quyền F-5 hoặc quốc tịch.
 
 Tài liệu KIIP trong repo: [`../korean_culture/kiip/`](../korean_culture/kiip/README.md).
 
@@ -157,4 +159,6 @@ Tình trạng cư trú có deadline nghiêm ngặt. Một 민원 chung không ch
 
 ## 14. Nguyên tắc an toàn
 
-Với visa, F-5 và quốc tịch, luôn ghi **mã tư cách cụ thể + loại route + ngày kiểm tra**. Không dùng một ví dụ của người khác làm quy tắc cho hồ sơ của mình.
+Với visa, F-5 và quốc tịch, luôn ghi **mã tư cách cụ thể + loại tuyến (route / 경로) + ngày kiểm tra**. Không dùng một ví dụ của người khác làm quy tắc cho hồ sơ của mình.
+
+> **Bàn giao:** Sau **14. Nguyên tắc an toàn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

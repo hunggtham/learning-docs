@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** và nối nó với **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -29,6 +31,6 @@
 - **VI (Vietnamese) (Tiếng Việt):** Các yếu tố trong mô hình dữ liệu.
   - Cấu trúc: Mối quan hệ giữa các kiểu thực thể (tĩnh).
   - Phép toán: Đặc tả công việc xử lý dữ liệu (động).
-  - Ràng buộc: Điều kiện giới hạn logic của dữ liệu.
+  - Ràng buộc: Điều kiện giới hạn lô-gic (logic / 논리) của dữ liệu.
 - **Example (Korean/Vietnamese):** 구조: 학생 테이블, 연산: 정보 검색, 제약조건: 나이는 0 이상. / Cấu trúc: Bảng sinh viên, Phép toán: Tìm kiếm, Ràng buộc: Tuổi >= 0.
 - 💡 **Mẹo ghi nhớ:** Cấu-Toán-Buộc (Cấu trúc, Toán tử, Ràng buộc).

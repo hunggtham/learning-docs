@@ -1,5 +1,8 @@
 # Hallyu, công nghiệp nội dung và văn hoá nền tảng
 
+> **Mạch đọc:** Đặt **Hallyu, công nghiệp nội dung và văn hoá nền tảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **한류: không phải một thể loại mà là một quá trình lưu thông** sang **Từ nội dung đến hệ thống lưu thông**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## 한류: không phải một thể loại mà là một quá trình lưu thông
 
 **Làn sóng Hàn Quốc (Korean Wave / Hallyu / 한류)** chỉ sự lan rộng quốc tế của nội dung văn hoá Hàn Quốc cùng các lối sống và sản phẩm liên quan. Nếu chỉ đồng nhất Hallyu với K-pop, ta sẽ bỏ qua phim truyền hình, điện ảnh, webtoon, trò chơi, ẩm thực, mỹ phẩm, văn học, du lịch và việc học tiếng Hàn.
@@ -142,7 +145,7 @@ tiếp xúc ban đầu
 → tương tác nhiều hơn
 ```
 
-Đây là vòng phản hồi (feedback loop). Tuy nhiên hiện tượng lan truyền không thể được thiết kế hoàn toàn. Thuật toán là độc quyền, khán giả không đồng nhất và thời điểm khó dự đoán. Vì vậy “chỉ cần tiếp thị là tạo được hit” là cách giải thích quá đơn giản.
+Đây là vòng phản hồi (feedback loop / 피드백 루프). Tuy nhiên hiện tượng lan truyền không thể được thiết kế hoàn toàn. Thuật toán là độc quyền, khán giả không đồng nhất và thời điểm khó dự đoán. Vì vậy “chỉ cần tiếp thị là tạo được hit” là cách giải thích quá đơn giản.
 
 ## Video ngắn làm thay đổi hình thức sáng tạo
 
@@ -640,5 +643,7 @@ Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá t
 ## Nguồn tham khảo cập nhật
 
 - Ministry of Culture, Sports and Tourism, 2025 Overseas Hallyu Survey, công bố 8/4/2025.
-- Ministry of Culture, Sports and Tourism, 2025 Global Hallyu Trend Analysis Report, công bố 25/2/2026.
+- Ministry of Culture, Sports and Tourism, 2025 toàn cục (global / 전역) Hallyu Trend phân tích (analysis / 분석) Report, công bố 25/2/2026.
 - Khi nghiên cứu hợp đồng hoặc quyền sở hữu trí tuệ cụ thể, cần dùng luật hiện hành, hợp đồng thực tế và nguồn chuyên môn; chương này chỉ cung cấp khung phân tích văn hoá–kinh tế.
+
+> **Bàn giao:** Sau **Nguồn tham khảo cập nhật**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

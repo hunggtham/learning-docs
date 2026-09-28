@@ -1,8 +1,11 @@
-# Root finding, interpolation và numerical linear algebra: approximation dưới finite precision
+# Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision
 
-Nhiều equations không có closed-form solution hữu ích. Máy tính vì thế không “biết đáp án rồi in ra”; nó tạo sequence approximations, theo dõi convergence và quản lý rounding/conditioning.
+> **Mạch đọc:** Đọc **gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. gốc (root / 루트) finding: rewrite về f(x)=0** sang **2. Bisection: theorem-driven robustness**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Core chain:
+
+Nhiều equations không có closed-form solution hữu ích. Máy tính vì thế không “biết đáp án rồi in ra”; nó tạo chuỗi (sequence / 시퀀스) approximations, theo dõi convergence và quản lý rounding/conditioning.
+
+Cốt lõi (core / 핵심) chuỗi (chain / 사슬):
 
 ```text
 problem formulation
@@ -15,7 +18,7 @@ problem formulation
 
 Numerical mathematics là study của **reliable approximation**, không chỉ của algorithms chạy được.
 
-## 1. Root finding: rewrite về `f(x)=0`
+## 1. gốc (root / 루트) finding: rewrite về `f(x)=0`
 
 Một equation:
 
@@ -29,9 +32,9 @@ có thể rewrite:
 f(x)=g(x)-h(x)=0.
 ```
 
-Root finding tìm `x` sao cho residual `f(x)` gần zero.
+Gốc (root / 루트) finding tìm `x` sao cho residual `f(x)` gần zero.
 
-Nhưng residual nhỏ không luôn đồng nghĩa root error nhỏ nếu derivative gần zero hoặc problem ill-conditioned.
+Nhưng residual nhỏ không luôn đồng nghĩa gốc (root / 루트) lỗi (error / 오류) nhỏ nếu derivative gần zero hoặc bài toán (problem / 문제) ill-conditioned.
 
 ## 2. Bisection: theorem-driven robustness
 
@@ -42,7 +45,7 @@ f continuous trên [a,b]
 f(a)f(b)<0
 ```
 
-Intermediate Value Theorem đảm bảo ít nhất một root trong interval.
+Intermediate giá trị (value / 값) Theorem đảm bảo ít nhất một gốc (root / 루트) trong interval.
 
 Midpoint:
 
@@ -50,7 +53,7 @@ Midpoint:
 m=\frac{a+b}{2}.
 ```
 
-Giữ half interval còn sign change.
+Giữ half interval còn sign thay đổi (change / 변경).
 
 After `n` steps:
 
@@ -58,7 +61,7 @@ After `n` steps:
 \text{width}_n=\frac{b-a}{2^n}.
 ```
 
-Absolute root uncertainty ≤ half interval width nếu root bracketed uniquely enough for purpose.
+Absolute gốc (root / 루트) bất định (uncertainty / 불확실성) ≤ half interval width nếu gốc (root / 루트) bracketed uniquely enough for purpose.
 
 ## 3. Bisection strength và limitation
 
@@ -78,9 +81,9 @@ requires sign-changing bracket
 cannot directly detect even-multiplicity root with no sign change
 ```
 
-Example `f(x)=x^2` có root at 0 nhưng sign không đổi.
+Example `f(x)=x^2` có gốc (root / 루트) at 0 nhưng sign không đổi.
 
-## 4. Newton method từ Taylor linearization
+## 4. Newton phương thức (method / 메서드) từ Taylor linearization
 
 Near `x_n`:
 
@@ -90,7 +93,7 @@ f(x)
 f(x_n)+f'(x_n)(x-x_n).
 ```
 
-Set local linear model to zero:
+Set cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델) to zero:
 
 ```math
 x_{n+1}
@@ -100,16 +103,16 @@ x_{n+1}
 
 Newton is not arbitrary formula; it solves the tangent-line approximation exactly each iteration.
 
-## 5. Quadratic convergence near simple root
+## 5. Quadratic convergence near simple gốc (root / 루트)
 
-Under suitable smoothness and if root `r` is simple:
+Under suitable smoothness and if gốc (root / 루트) `r` is simple:
 
 ```math
 f(r)=0,
 \qquad f'(r)\ne0,
 ```
 
-Newton error often satisfies locally:
+Newton lỗi (error / 오류) often satisfies locally:
 
 ```math
 |e_{n+1}|
@@ -118,11 +121,11 @@ Newton error often satisfies locally:
 
 Number of correct digits can roughly double each step once close enough.
 
-But this is local behavior, not global guarantee.
+But this is cục bộ (local / 로컬) hành vi (behavior / 동작), not toàn cục (global / 전역) guarantee.
 
-## 6. Newton failure modes
+## 6. Newton thất bại (failure / 실패) modes
 
-Newton may fail when:
+Newton may thất bại (fail / 실패) when:
 
 ```text
 initial guess poor
@@ -133,11 +136,11 @@ non-smooth function
 cycling/divergence
 ```
 
-For multiple root, convergence can degrade from quadratic to linear.
+For multiple gốc (root / 루트), convergence can degrade from quadratic to tuyến tính (linear / 선형).
 
-Modified Newton can use multiplicity information if known.
+Modified Newton can use multiplicity thông tin (information / 정보) if known.
 
-## 7. Secant method
+## 7. Secant phương thức (method / 메서드)
 
 Approximate derivative using two previous points:
 
@@ -163,7 +166,7 @@ bracketing safety
 
 For example, stay inside bracket; use fast step when trustworthy, otherwise fall back to bisection.
 
-Engineering lesson: robust software rarely uses the pure textbook method blindly.
+Kỹ thuật (engineering / 엔지니어링) lesson: robust software rarely uses the pure textbook phương thức (method / 메서드) blindly.
 
 ## 9. Fixed-point iteration
 
@@ -179,13 +182,13 @@ Iterate:
 x_{n+1}=g(x_n).
 ```
 
-Near fixed point `x^*`, if:
+Near fixed điểm (point / 지점) `x^*`, if:
 
 ```math
 |g'(x^*)|<1,
 ```
 
-mapping locally contracts errors:
+Ánh xạ (mapping / 매핑) locally contracts errors:
 
 ```math
 |e_{n+1}|
@@ -194,15 +197,15 @@ mapping locally contracts errors:
 
 Same equation can have convergent or divergent fixed-point forms depending on rearrangement.
 
-## 10. Contraction mapping viewpoint
+## 10. Contraction ánh xạ (mapping / 매핑) viewpoint
 
-In a complete metric space, contraction mapping has unique fixed point and iteration converges from suitable/global conditions.
+In a complete chỉ số (metric / 지표) không gian (space / 공간), contraction ánh xạ (mapping / 매핑) has unique fixed điểm (point / 지점) and iteration converges from suitable/toàn cục (global / 전역) conditions.
 
-This theorem connects numerical iteration with real analysis and dynamic programming.
+This theorem connects numerical iteration with real phân tích (analysis / 분석) and động (dynamic / 동적) programming.
 
 ## 11. Stopping criteria
 
-Common signals:
+Dùng chung (common / 공통) signals:
 
 ```text
 |f(x_n)| small
@@ -214,9 +217,9 @@ iteration limit
 
 No single criterion universally sufficient.
 
-Residual tolerance should reflect problem scale and conditioning.
+Residual tolerance should reflect bài toán (problem / 문제) quy mô (scale / 규모) and conditioning.
 
-## 12. Interpolation: exact fit tại known nodes
+## 12. Interpolation: chính xác (exact / 정확한) fit tại known nodes
 
 Given distinct nodes:
 
@@ -227,7 +230,7 @@ Given distinct nodes:
 
 there is unique polynomial degree ≤ `n` passing through them.
 
-Interpolation assumes values are treated as exact enough that matching them exactly is meaningful.
+Interpolation assumes values are treated as chính xác (exact / 정확한) enough that matching them exactly is meaningful.
 
 ## 13. Lagrange interpolation
 
@@ -246,13 +249,13 @@ L_i(x)
 \frac{x-x_j}{x_i-x_j}.
 ```
 
-Basis property:
+Basis thuộc tính (property / 속성):
 
 ```math
 L_i(x_j)=\delta_{ij}.
 ```
 
-Each basis polynomial selects one sample value.
+Each basis polynomial selects one mẫu (sample / 표본) giá trị (value / 값).
 
 ## 14. Newton divided differences
 
@@ -267,11 +270,11 @@ P_n(x)
 
 Coefficients come from divided differences.
 
-Advantage: adding a new node extends polynomial without rebuilding all basis terms.
+Advantage: adding a new nút (node / 노드) extends polynomial without rebuilding all basis terms.
 
-## 15. Interpolation error
+## 15. Interpolation lỗi (error / 오류)
 
-For sufficiently smooth `f`, degree-`n` interpolation error:
+For sufficiently smooth `f`, degree-`n` interpolation lỗi (error / 오류):
 
 ```math
 f(x)-P_n(x)
@@ -282,7 +285,7 @@ f(x)-P_n(x)
 
 for some `\xi` in relevant interval.
 
-Error depends both function derivatives and node placement.
+Lỗi (error / 오류) depends both hàm (function / 함수) derivatives and nút (node / 노드) placement.
 
 ## 16. Runge phenomenon
 
@@ -290,21 +293,21 @@ High-degree polynomial interpolation on equally spaced nodes can oscillate sever
 
 More degree does not automatically mean better approximation.
 
-This is a major lesson against “fit more exactly = improve model”.
+This is a major lesson against “fit more exactly = improve mô hình (model / 모델)”.
 
 ## 17. Chebyshev nodes
 
-Nodes clustered near endpoints can reduce worst-case polynomial interpolation error.
+Nodes clustered near endpoints can reduce worst-case polynomial interpolation lỗi (error / 오류).
 
-Chebyshev nodes minimize growth related to interpolation product and help control Runge behavior.
+Chebyshev nodes minimize growth related to interpolation sản phẩm (product / 제품) and help điều khiển (control / 제어) Runge hành vi (behavior / 동작).
 
-This shows **where** data is sampled can matter as much as number of samples.
+This shows **where** dữ liệu (data / 데이터) is sampled can matter as much as number of samples.
 
 ## 18. Splines
 
 Instead of one high-degree polynomial, use piecewise low-degree polynomials joined smoothly.
 
-Cubic splines typically impose continuity of function, first derivative and second derivative at knots.
+Cubic splines typically impose continuity of hàm (function / 함수), first derivative and second derivative at knots.
 
 Benefits:
 
@@ -330,9 +333,9 @@ Regression:
 allow residuals to model noisy observations
 ```
 
-If measurements noisy, exact interpolation may fit noise.
+If measurements noisy, chính xác (exact / 정확한) interpolation may fit noise.
 
-This is a modeling decision, not merely mathematical preference.
+This is a modeling quyết định (decision / 결정), not merely mathematical preference.
 
 ## 20. Approximation bases
 
@@ -350,7 +353,7 @@ orthogonal polynomials
 
 Basis choice should reflect smoothness, periodicity, locality and computational needs.
 
-## 21. Linear systems: exact algebra vs numerical solve
+## 21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve
 
 Mathematically:
 
@@ -368,9 +371,9 @@ Numerically, explicitly forming `A^{-1}` is usually unnecessary and often less s
 
 ## 22. Gaussian elimination
 
-Elimination transforms system into triangular form using row operations.
+Elimination transforms hệ thống (system / 시스템) into triangular form using row operations.
 
-Dense complexity roughly:
+Dense độ phức tạp (complexity / 복잡도) roughly:
 
 ```math
 O(n^3).
@@ -378,11 +381,11 @@ O(n^3).
 
 Back substitution then costs `O(n^2)`.
 
-This is practical for moderate dense systems but not huge sparse systems.
+This is practical for moderate dense các hệ thống (systems / 시스템들) but not huge sparse các hệ thống (systems / 시스템들).
 
 ## 23. Pivoting
 
-If pivot is zero/tiny, division can fail/amplify rounding.
+If pivot is zero/tiny, division can thất bại (fail / 실패)/amplify rounding.
 
 Partial pivoting swaps rows to choose larger pivot magnitude.
 
@@ -392,7 +395,7 @@ LU with pivoting:
 PA=LU.
 ```
 
-Pivoting is numerical stability strategy, not a change to mathematical solution.
+Pivoting is numerical stability chiến lược (strategy / 전략), not a thay đổi (change / 변경) to mathematical solution.
 
 ## 24. LU factorization
 
@@ -422,7 +425,7 @@ A=QR,
 
 with `Q` orthogonal and `R` upper triangular.
 
-QR is especially useful for least squares because orthogonal transforms preserve 2-norm and avoid squaring condition number as normal equations do.
+QR is especially useful for least squares because orthogonal transforms preserve 2-norm and avoid squaring điều kiện (condition / 조건) number as normal equations do.
 
 ## 26. Cholesky
 
@@ -432,21 +435,21 @@ If `A` symmetric positive definite:
 A=LL^T.
 ```
 
-Cholesky uses structure to reduce computation/storage relative to generic LU.
+Cholesky uses cấu trúc (structure / 구조) to reduce computation/lưu trữ (storage / 저장소) relative to generic LU.
 
-But applying Cholesky requires checking/knowing SPD assumptions.
+But applying Cholesky requires checking/knowing SPD các giả định (assumptions / 가정들).
 
-## 27. Sparse systems
+## 27. Sparse các hệ thống (systems / 시스템들)
 
-Real scientific/graph/PDE matrices are often sparse.
+Real scientific/đồ thị (graph / 그래프)/PDE matrices are often sparse.
 
-Dense algorithms waste memory/time. Sparse direct solvers exploit sparsity pattern, but fill-in can appear during factorization.
+Dense algorithms waste bộ nhớ (memory / 메모리)/thời gian (time / 시간). Sparse direct solvers exploit sparsity mẫu (pattern / 패턴), but fill-in can appear during factorization.
 
-Ordering strategies matter.
+Thứ tự (ordering / 순서) strategies matter.
 
-## 28. Iterative linear solvers
+## 28. Iterative tuyến tính (linear / 선형) solvers
 
-For very large systems, methods like:
+For very large các hệ thống (systems / 시스템들), methods like:
 
 ```text
 Jacobi
@@ -455,13 +458,13 @@ Conjugate Gradient
 GMRES
 ```
 
-build approximate solution iteratively.
+Bản dựng (build / 빌드) approximate solution iteratively.
 
-Choice depends matrix structure.
+Choice depends ma trận (matrix / 행렬) cấu trúc (structure / 구조).
 
-Conjugate Gradient requires symmetric positive definite matrix for standard guarantee.
+Conjugate độ dốc (gradient / 기울기) requires symmetric positive definite ma trận (matrix / 행렬) for tiêu chuẩn (standard / 표준) guarantee.
 
-## 29. Residual vs error
+## 29. Residual vs lỗi (error / 오류)
 
 Approximate solution `\hat x`:
 
@@ -469,13 +472,13 @@ Approximate solution `\hat x`:
 r=b-A\hat x.
 ```
 
-True error:
+True lỗi (error / 오류):
 
 ```math
 e=x-\hat x.
 ```
 
-Relation:
+Quan hệ (relation / 관계):
 
 ```math
 Ae=r.
@@ -487,11 +490,11 @@ so:
 e=A^{-1}r.
 ```
 
-If `A^{-1}` has large norm, tiny residual may correspond to large error.
+If `A^{-1}` has large norm, tiny residual may correspond to large lỗi (error / 오류).
 
-## 30. Condition number
+## 30. điều kiện (condition / 조건) number
 
-For invertible matrix:
+For invertible ma trận (matrix / 행렬):
 
 ```math
 \kappa(A)=\|A\|\|A^{-1}\|.
@@ -499,26 +502,26 @@ For invertible matrix:
 
 Roughly measures worst-case relative sensitivity of solution to perturbations.
 
-Large `\kappa` means problem intrinsically sensitive.
+Large `\kappa` means bài toán (problem / 문제) intrinsically sensitive.
 
-Even perfect algorithm cannot recover information absent from noisy/finite-precision input.
+Even perfect thuật toán (algorithm / 알고리즘) cannot recover thông tin (information / 정보) absent from noisy/finite-precision đầu vào (input / 입력).
 
 ## 31. Conditioning vs stability
 
-Conditioning is property of **problem**.
+Conditioning is thuộc tính (property / 속성) of **bài toán (problem / 문제)**.
 
-Stability is property of **algorithm**.
+Stability is thuộc tính (property / 속성) of **thuật toán (algorithm / 알고리즘)**.
 
 ```text
 well-conditioned + unstable algorithm → bad
 ill-conditioned + stable algorithm → still limited
 ```
 
-Backward stable algorithm returns exact solution to nearby problem.
+Backward stable thuật toán (algorithm / 알고리즘) returns chính xác (exact / 정확한) solution to nearby bài toán (problem / 문제).
 
-This distinction is central to numerical analysis.
+This distinction is central to numerical phân tích (analysis / 분석).
 
-## 32. Floating-point model
+## 32. Floating-point mô hình (model / 모델)
 
 Floating arithmetic often modeled:
 
@@ -528,9 +531,9 @@ Floating arithmetic often modeled:
 \qquad |\delta|\lesssim u,
 ```
 
-for operation `\circ` under normal conditions, where `u` is machine precision scale.
+for thao tác (operation / 연산) `\circ` under normal conditions, where `u` is machine precision quy mô (scale / 규모).
 
-Small local errors can accumulate/amplify depending algorithm/problem.
+Small cục bộ (local / 로컬) errors can accumulate/amplify depending thuật toán (algorithm / 알고리즘)/bài toán (problem / 문제).
 
 ## 33. Catastrophic cancellation
 
@@ -552,13 +555,13 @@ Rationalize:
 
 which is algebraically equivalent but numerically more stable.
 
-Representation affects computation.
+Biểu diễn (representation / 표현) affects computation.
 
 ## 34. Scaling và preconditioning
 
-Badly scaled variables/matrices can slow iterative methods or worsen numerical behavior.
+Badly scaled variables/matrices can slow iterative methods or worsen numerical hành vi (behavior / 동작).
 
-Preconditioner `M` transforms system so effective matrix has more favorable spectrum/conditioning.
+Preconditioner `M` transforms hệ thống (system / 시스템) so effective ma trận (matrix / 행렬) has more favorable spectrum/conditioning.
 
 For example solve:
 
@@ -568,15 +571,15 @@ M^{-1}Ax=M^{-1}b.
 
 Good preconditioner approximates inverse cheaply enough to accelerate convergence.
 
-## 35. Numerical eigenvalue connection
+## 35. Numerical eigenvalue liên kết (connection / 연결)
 
 Large-scale eigenproblems rarely compute characteristic polynomial.
 
-Methods like power iteration, Lanczos/Arnoldi exploit matrix-vector products and spectral structure.
+Methods like power iteration, Lanczos/Arnoldi exploit matrix-vector products and spectral cấu trúc (structure / 구조).
 
-This shows numerical linear algebra often uses iterative geometry rather than symbolic formulas.
+This shows numerical tuyến tính (linear / 선형) algebra often uses iterative hình học (geometry / 기하학) rather than symbolic formulas.
 
-## 36. Worked example: Newton for square root
+## 36. Worked example: Newton for square gốc (root / 루트)
 
 Solve:
 
@@ -603,15 +606,15 @@ This is classical Babylonian square-root iteration.
 
 ## 37. Worked example: ill-conditioned 2×2 intuition
 
-If two columns of `A` almost parallel, system nearly loses a direction.
+If two columns of `A` almost parallel, hệ thống (system / 시스템) nearly loses a direction.
 
-Small perturbation in `b` can demand large coefficient changes in `x` to reproduce output.
+Small perturbation in `b` can demand large coefficient changes in `x` to reproduce đầu ra (output / 출력).
 
-This is same geometry seen in rank/nullspace: near dependence ⇒ small singular value ⇒ large condition number.
+This is same hình học (geometry / 기하학) seen in rank/nullspace: near dependence ⇒ small singular giá trị (value / 값) ⇒ large điều kiện (condition / 조건) number.
 
-## 38. AI connection
+## 38. AI liên kết (connection / 연결)
 
-Training/linear algebra stacks rely heavily on:
+Huấn luyện (training / 학습)/tuyến tính (linear / 선형) algebra stacks rely heavily on:
 
 ```text
 matrix factorizations
@@ -621,7 +624,7 @@ low-rank approximation
 stable softmax/log-sum-exp
 ```
 
-Numerical correctness matters because high-dimensional optimization repeatedly amplifies small computational choices.
+Numerical tính đúng đắn (correctness / 정확성) matters because high-dimensional tối ưu hóa (optimization / 최적화) repeatedly amplifies small computational choices.
 
 ## 39. Scientific computing workflow
 
@@ -637,12 +640,14 @@ validate convergence
 compare against independent method when possible
 ```
 
-A number printed with many decimals is not evidence of accuracy.
+A number printed with many decimals is not bằng chứng (evidence / 증거) of accuracy.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Numerical mathematics studies what information survives finite precision and finite computation. A good method converges for the right structural reasons, exposes error, respects conditioning and uses problem structure instead of blindly applying formulas.
+> Numerical mathematics studies what thông tin (information / 정보) survives finite precision and finite computation. A good phương thức (method / 메서드) converges for the right structural reasons, exposes lỗi (error / 오류), respects conditioning and uses bài toán (problem / 문제) cấu trúc (structure / 구조) instead of blindly applying formulas.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Newton is not globally guaranteed. More interpolation degree may worsen approximation. Small residual does not always mean small solution error. Explicit inverse is usually not how production solvers solve `Ax=b`. Ill-conditioning cannot be repaired purely by a “more accurate” algorithm if input information is already insufficient.
+Newton is not globally guaranteed. More interpolation degree may worsen approximation. Small residual does not always mean small solution lỗi (error / 오류). tường minh (explicit / 명시적) inverse is usually not how môi trường vận hành (production / 운영 환경) solvers solve `Ax=b`. Ill-conditioning cannot be repaired purely by a “more accurate” thuật toán (algorithm / 알고리즘) if đầu vào (input / 입력) thông tin (information / 정보) is already insufficient.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 optimization](./00_optimization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,20 +20,22 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** và nối nó với **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
 
 - **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
 - **Phân loại theo kỹ thuật:**
-  - **분석 (Analysis):** Hiểu code cũ để chọn cái cần tái sử dụng.
+  - **분석 (Analysis):** Hiểu mã (code / 코드) cũ để chọn cái cần tái sử dụng.
   - **재구조 (Restructuring):** Đổi cấu trúc, không đổi chức năng.
-  - **역공학 (Reverse Engineering):** Dịch ngược từ code ra bản thiết kế.
+  - **역공학 (Reverse Engineering):** Dịch ngược từ mã (code / 코드) ra bản thiết kế.
   - **이식 (Migration):** Chuyển sang môi trường / phần cứng mới.
   - **재개발 (Re-Development):** Đập đi xây lại có tham khảo cái cũ.
 - **Phân loại theo phạm vi:**
-  - Hàm & Đối tượng (Function/Class), Component, Ứng dụng (Application).
+  - Hàm & Đối tượng (Function/Class), thành phần (component / 컴포넌트), ứng dụng (application / 애플리케이션).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse kỹ thuật (engineering / 엔지니어링) (Dịch ngược) = Từ mã (code / 코드) -> Bản thiết kế. di chuyển (migration / 마이그레이션) = Chuyển nhà (môi trường).
 
 ---

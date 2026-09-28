@@ -1,5 +1,8 @@
 # Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi
 
+> **Mạch đọc:** Đặt **Phân rã kết quả đầu tư, chi phí, thuế và đánh giá hành vi** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kết quả đầu tư phải được đặt cạnh mục tiêu** sang **2. Lợi suất tuyệt đối và lợi suất chủ động**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Danh mục tăng 15% không tự động nghĩa chiến lược tốt; danh mục giảm 8% cũng không tự động nghĩa quyết định sai. Chương này xây vòng phản hồi để trả lời: kết quả đến từ đâu, bao nhiêu là beta thị trường, bao nhiêu là lựa chọn chủ động, bao nhiêu bị mất bởi chi phí/thuế và liệu quy trình ra quyết định có thật sự tốt lên hay không.
 
 ## 1. Kết quả đầu tư phải được đặt cạnh mục tiêu
@@ -113,7 +116,7 @@ Một chiến lược có lợi thế trước chi phí 30 điểm cơ bản m�
 
 Cần đo chi phí thực tế theo quy mô, thời điểm và điều kiện thanh khoản.
 
-## 10. Implementation Shortfall
+## 10. hiện thực (implementation / 구현) Shortfall
 
 Thiếu hụt thực thi (implementation shortfall) so sánh kết quả thực tế với giá quyết định lý thuyết.
 
@@ -150,7 +153,7 @@ Thời điểm hiện thực hóa
 Tài khoản ưu đãi thuế
 ```
 
-Vì quy định thay đổi theo quốc gia và thời điểm, thư viện chỉ giữ logic. Trước quyết định thật cần kiểm tra nguồn chính thức.
+Vì quy định thay đổi theo quốc gia và thời điểm, thư viện chỉ giữ lô-gic (logic / 논리). Trước quyết định thật cần kiểm tra nguồn chính thức.
 
 ## 13. Lợi suất sau thuế là thứ nhà đầu tư sử dụng được
 
@@ -202,7 +205,7 @@ Bảng cân đối
 Chất xúc tác
 ```
 
-Khi kết quả khác dự kiến, phải xác định node nào sai. Không nên kết luận chung chung “thị trường vô lý”.
+Khi kết quả khác dự kiến, phải xác định nút (node / 노드) nào sai. Không nên kết luận chung chung “thị trường vô lý”.
 
 ## 17. Điều chỉnh dự báo và hiệu chỉnh xác suất
 
@@ -212,7 +215,7 @@ Ghi lại xác suất trước sự kiện và so với kết quả qua nhiều 
 
 Mục tiêu không phải đúng mọi lần mà là xác suất được ước lượng hợp lý.
 
-## 18. Outcome bias
+## 18. kết quả (outcome / 결과) độ lệch (bias / 편향)
 
 Một vị thế lời không chứng minh quyết định tốt. Một vị thế lỗ không chứng minh quyết định tệ.
 
@@ -228,13 +231,13 @@ Quy trình có được tuân thủ không?
 
 Sau đó mới dùng kết quả để cập nhật.
 
-## 19. Hindsight bias
+## 19. Hindsight độ lệch (bias / 편향)
 
 Sau khi sự kiện xảy ra, não dễ nghĩ “rõ ràng phải thế”. Điều này làm ta học sai vì xóa mất bất định đã tồn tại trước quyết định.
 
 Nhật ký ex-ante nên được khóa hoặc lưu phiên bản để có thể xem lại mình thực sự biết gì tại thời điểm đó.
 
-## 20. Behavior Gap
+## 20. hành vi (behavior / 동작) Gap
 
 Khoảng cách hành vi (behavior gap) là chênh lệch giữa lợi suất sản phẩm và lợi suất nhà đầu tư do thời điểm mua bán, hoảng loạn, FOMO hoặc bỏ kế hoạch.
 
@@ -395,3 +398,5 @@ Quyết định
 ```
 
 Đây là cách biến đầu tư thành quá trình học có kỷ luật thay vì chuỗi câu chuyện được viết lại sau khi giá đã chạy.
+
+> **Bàn giao:** Sau **31. Vòng phản hồi hoàn chỉnh**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

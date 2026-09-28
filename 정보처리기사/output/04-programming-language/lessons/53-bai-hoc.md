@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **소프트웨어 공학 및 실무 (Software Engineering & Practice)** và nối nó với **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -29,7 +31,7 @@
 ### 236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)
 - **리스트 (List)**: Khác kiểu dữ liệu, thêm xóa được.
 - **튜플 (Tuple)**: Không thể thay đổi (immutable).
-- **range**: Sinh dãy số liên tiếp.
+- **phạm vi (range / 범위)**: Sinh dãy số liên tiếp.
 
 ### 구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)
 - C언어: `struct sawon { char name[10]; int pay; };`

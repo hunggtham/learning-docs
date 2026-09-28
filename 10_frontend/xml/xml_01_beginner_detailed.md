@@ -1,13 +1,16 @@
 # XML — Beginner
+
+> **Mạch đọc:** Đọc **XML — Beginner** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML** sang **1. XML là gì và vì sao nó tồn tại?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML
 
-Tài liệu này được viết cho người chưa có nền tảng XML. Mục tiêu không phải là giúp bạn “nhớ vài tag”, mà là giúp bạn hiểu XML đang giải quyết vấn đề gì, XML document được tổ chức ra sao, vì sao cú pháp của XML chặt chẽ hơn HTML, và một XML parser thực sự nhìn dữ liệu như thế nào. Nếu đọc hết phần này và tự làm các ví dụ đi kèm, bạn phải có thể tự viết một tài liệu XML đúng cú pháp, đọc được các file cấu hình XML trong Java hoặc hệ thống enterprise, phân biệt được lỗi cú pháp với lỗi schema, và hiểu vì sao XML vẫn tồn tại rất nhiều trong các hệ thống lớn dù JSON đã rất phổ biến.
+Tài liệu này được viết cho người chưa có nền tảng XML. Mục tiêu không phải là giúp bạn “nhớ vài tag”, mà là giúp bạn hiểu XML đang giải quyết vấn đề gì, XML document được tổ chức ra sao, vì sao cú pháp của XML chặt chẽ hơn HTML, và một XML parser thực sự nhìn dữ liệu như thế nào. Nếu đọc hết phần này và tự làm các ví dụ đi kèm, bạn phải có thể tự viết một tài liệu XML đúng cú pháp, đọc được các tệp (file / 파일) cấu hình XML trong Java hoặc hệ thống enterprise, phân biệt được lỗi cú pháp với lỗi lược đồ (schema / 스키마), và hiểu vì sao XML vẫn tồn tại rất nhiều trong các hệ thống lớn dù JSON đã rất phổ biến.
 
 ---
 
 ## 1. XML là gì và vì sao nó tồn tại?
 
-XML là viết tắt của **Extensible Markup Language**, tức là ngôn ngữ đánh dấu có khả năng mở rộng. Từ “markup” nghĩa là dữ liệu được bao quanh bởi các dấu hiệu cấu trúc như `<user>`, `<name>`, `<price>`. Từ “extensible” nghĩa là XML không ép bạn phải dùng một tập tag cố định. Bạn có thể tự định nghĩa vocabulary của riêng mình, miễn là toàn bộ tài liệu tuân theo quy tắc cú pháp XML.
+XML là viết tắt của **Extensible Markup ngôn ngữ (language / 언어)**, tức là ngôn ngữ đánh dấu có khả năng mở rộng. Từ “markup” nghĩa là dữ liệu được bao quanh bởi các dấu hiệu cấu trúc như `<user>`, `<name>`, `<price>`. Từ “extensible” nghĩa là XML không ép bạn phải dùng một tập tag cố định. Bạn có thể tự định nghĩa vocabulary của riêng mình, miễn là toàn bộ tài liệu tuân theo quy tắc cú pháp XML.
 
 Ví dụ sau là một XML document rất đơn giản:
 
@@ -18,15 +21,15 @@ Ví dụ sau là một XML document rất đơn giản:
 </user>
 ```
 
-XML chỉ biết đây là một cây có element `user`, bên trong có `name` và `age`. XML không biết `age` là tuổi con người, không biết giá trị `27` là số nguyên, và cũng không biết `name` có bắt buộc hay không. Những ý nghĩa đó phải được định nghĩa bởi application, schema, protocol hoặc business rule ở tầng khác.
+XML chỉ biết đây là một cây có element `user`, bên trong có `name` và `age`. XML không biết `age` là tuổi con người, không biết giá trị `27` là số nguyên, và cũng không biết `name` có bắt buộc hay không. Những ý nghĩa đó phải được định nghĩa bởi ứng dụng (application / 애플리케이션), lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) hoặc nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) ở tầng khác.
 
-Điểm này rất quan trọng. Khi học HTML, bạn có thể học rằng `<a>` là hyperlink, `<button>` là button, `<table>` là bảng. Với XML thì không có một ý nghĩa chuẩn như vậy cho `<user>` hay `<order>`. XML chỉ cung cấp **cú pháp chung để biểu diễn dữ liệu có cấu trúc**. Chính Maven định nghĩa ý nghĩa của `<groupId>`, SOAP định nghĩa ý nghĩa của `<Envelope>`, Spring định nghĩa ý nghĩa của các tag cấu hình cũ, và Android định nghĩa ý nghĩa của các tag XML trong layout.
+Điểm này rất quan trọng. Khi học HTML, bạn có thể học rằng `<a>` là hyperlink, `<button>` là button, `<table>` là bảng. Với XML thì không có một ý nghĩa chuẩn như vậy cho `<user>` hay `<order>`. XML chỉ cung cấp **cú pháp chung để biểu diễn dữ liệu có cấu trúc**. Chính Maven định nghĩa ý nghĩa của `<groupId>`, SOAP định nghĩa ý nghĩa của `<Envelope>`, Spring định nghĩa ý nghĩa của các tag cấu hình cũ, và Android định nghĩa ý nghĩa của các tag XML trong bố cục (layout / 레이아웃).
 
 ---
 
 ## 2. XML document thực chất là một cây dữ liệu
 
-Một XML document nên được hình dung như một cây, không nên hình dung như một chuỗi text có nhiều dấu `<` và `>`. Xét ví dụ sau:
+Một XML document nên được hình dung như một cây, không nên hình dung như một chuỗi văn bản (text / 텍스트) có nhiều dấu `<` và `>`. Xét ví dụ sau:
 
 ```xml
 <company>
@@ -50,15 +53,15 @@ Document
             └── text "IT"
 ```
 
-Một XML parser không chỉ “tìm text giữa hai tag”. Nó có thể tạo ra các đối tượng hoặc sự kiện tương ứng với document, element, attribute, text node, comment và processing instruction. Khi sau này bạn dùng DOM, SAX, StAX, XPath hay XSLT, tất cả đều dựa trên tư duy cây hoặc stream được sinh ra từ XML này.
+Một XML parser không chỉ “tìm văn bản (text / 텍스트) giữa hai tag”. Nó có thể tạo ra các đối tượng hoặc sự kiện tương ứng với document, element, attribute, văn bản (text / 텍스트) nút (node / 노드), comment và processing instruction. Khi sau này bạn dùng DOM, SAX, StAX, XPath hay XSLT, tất cả đều dựa trên tư duy cây hoặc stream được sinh ra từ XML này.
 
-Đây cũng là lý do tại sao việc parse XML bằng `split("<name>")` hay regex là sai về mặt kiến trúc. Một file XML có thể có namespace, CDATA, entity, comment, encoding khác nhau và nested element rất sâu. String slicing chỉ hoạt động với ví dụ đồ chơi, không phải với XML thực tế.
+Đây cũng là lý do tại sao việc parse XML bằng `split("<name>")` hay regex là sai về mặt kiến trúc. Một tệp (file / 파일) XML có thể có không gian tên (namespace / 네임스페이스), CDATA, thực thể (entity / 엔터티), comment, encoding khác nhau và nested element rất sâu. String slicing chỉ hoạt động với ví dụ đồ chơi, không phải với XML thực tế.
 
 ---
 
-## 3. Root element là gì?
+## 3. gốc (root / 루트) element là gì?
 
-Một XML document đúng cú pháp phải có đúng **một document element**, thường được gọi đơn giản là root element. Ví dụ này hợp lệ:
+Một XML document đúng cú pháp phải có đúng **một document element**, thường được gọi đơn giản là gốc (root / 루트) element. Ví dụ này hợp lệ:
 
 ```xml
 <users>
@@ -67,7 +70,7 @@ Một XML document đúng cú pháp phải có đúng **một document element**
 </users>
 ```
 
-Ở đây `users` là root element.
+Ở đây `users` là gốc (root / 루트) element.
 
 Ví dụ sau không hợp lệ:
 
@@ -78,7 +81,7 @@ Ví dụ sau không hợp lệ:
 
 Lý do là tài liệu có hai top-level elements. XML parser không thể coi cả hai cùng là document element.
 
-Điều này không có nghĩa bên ngoài root hoàn toàn không được có gì. Một tài liệu vẫn có thể có XML declaration, comment, processing instruction hoặc DOCTYPE ở vị trí phù hợp. Nhưng về element tree thì chỉ có một element gốc.
+Điều này không có nghĩa bên ngoài gốc (root / 루트) hoàn toàn không được có gì. Một tài liệu vẫn có thể có XML declaration, comment, processing instruction hoặc DOCTYPE ở vị trí phù hợp. Nhưng về element cây (tree / 트리) thì chỉ có một element gốc.
 
 ---
 
@@ -90,7 +93,7 @@ Element là thành phần cấu trúc chính của XML. Ví dụ:
 <name>Alice</name>
 ```
 
-Element này có start tag `<name>`, content là text `Alice`, và end tag `</name>`.
+Element này có start tag `<name>`, content là văn bản (text / 텍스트) `Alice`, và end tag `</name>`.
 
 Element cũng có thể chứa các element khác:
 
@@ -101,7 +104,7 @@ Element cũng có thể chứa các element khác:
 </user>
 ```
 
-Khi đọc XML, bạn nên nghĩ rằng mỗi element là một node có tên và có thể có children. Children có thể là element khác, text hoặc các node đặc biệt khác.
+Khi đọc XML, bạn nên nghĩ rằng mỗi element là một nút (node / 노드) có tên và có thể có children. Children có thể là element khác, văn bản (text / 텍스트) hoặc các nút (node / 노드) đặc biệt khác.
 
 Element name trong XML phân biệt chữ hoa chữ thường. Vì vậy:
 
@@ -121,7 +124,7 @@ là hai tên khác nhau.
 
 ---
 
-## 5. Empty element và self-closing syntax
+## 5. Empty element và self-closing cú pháp (syntax / 문법)
 
 Nếu một element không có content, bạn có thể viết dạng đầy đủ:
 
@@ -135,9 +138,9 @@ hoặc viết dạng rút gọn:
 <active/>
 ```
 
-Trong XML, đây là empty-element syntax thực sự. Nó không phải chỉ là “cách formatter viết cho đẹp”.
+Trong XML, đây là empty-element cú pháp (syntax / 문법) thực sự. Nó không phải chỉ là “cách formatter viết cho đẹp”.
 
-Điểm này khác với HTML. Trong HTML, các void element như `<img>` hoặc `<br>` được quyết định bởi HTML parser và HTML specification. Việc bạn viết `<br />` trong một trang HTML thông thường không biến nó thành XML. XML và HTML có hai parsing model khác nhau.
+Điểm này khác với HTML. Trong HTML, các void element như `<img>` hoặc `<br>` được quyết định bởi HTML parser và HTML specification. Việc bạn viết `<br />` trong một trang HTML thông thường không biến nó thành XML. XML và HTML có hai parsing mô hình (model / 모델) khác nhau.
 
 ---
 
@@ -175,15 +178,15 @@ Ví dụ sai:
 </b>
 ```
 
-HTML browser có error recovery rất mạnh và thường cố “sửa” markup sai để vẫn render được. XML thì khác. XML parser được thiết kế để nghiêm ngặt hơn. Nếu tài liệu không well-formed, parser phải báo fatal error thay vì tự đoán cấu trúc theo kiểu browser HTML.
+HTML trình duyệt (browser / 브라우저) có lỗi (error / 오류) khôi phục (recovery / 복구) rất mạnh và thường cố “sửa” markup sai để vẫn kết xuất (render / 렌더링) được. XML thì khác. XML parser được thiết kế để nghiêm ngặt hơn. Nếu tài liệu không well-formed, parser phải báo fatal lỗi (error / 오류) thay vì tự đoán cấu trúc theo kiểu trình duyệt (browser / 브라우저) HTML.
 
-Điều này khiến XML thích hợp với các protocol hoặc file cấu hình nơi tính chính xác quan trọng hơn khả năng “render được dù sai”.
+Điều này khiến XML thích hợp với các giao thức (protocol / 프로토콜) hoặc tệp (file / 파일) cấu hình nơi tính chính xác quan trọng hơn khả năng “kết xuất (render / 렌더링) được dù sai”.
 
 ---
 
 ## 8. Attribute là gì?
 
-Attribute gắn metadata hoặc giá trị bổ sung cho element.
+Attribute gắn siêu dữ liệu (metadata / 메타데이터) hoặc giá trị bổ sung cho element.
 
 ```xml
 <employee id="E001" active="true">
@@ -193,7 +196,7 @@ Attribute gắn metadata hoặc giá trị bổ sung cho element.
 
 Ở đây `id` và `active` là attributes của element `employee`.
 
-Trong XML, attribute value phải được đặt trong dấu nháy. Cả hai cách sau đều hợp lệ:
+Trong XML, attribute giá trị (value / 값) phải được đặt trong dấu nháy. Cả hai cách sau đều hợp lệ:
 
 ```xml
 <user id="E001"/>
@@ -240,7 +243,7 @@ hoặc:
 
 Cả hai đều đúng XML. XML specification không nói một cách luôn đúng hơn.
 
-Trong thực tế, attribute thường phù hợp với metadata ngắn, identifier, flag, qualifier hoặc các giá trị mô tả element. Element thường phù hợp với business data, nested structure, repeating values và dữ liệu có khả năng mở rộng.
+Trong thực tế, attribute thường phù hợp với siêu dữ liệu (metadata / 메타데이터) ngắn, identifier, flag, qualifier hoặc các giá trị mô tả element. Element thường phù hợp với nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터), nested cấu trúc (structure / 구조), repeating values và dữ liệu có khả năng mở rộng.
 
 Ví dụ:
 
@@ -261,11 +264,11 @@ Ngược lại, nếu customer có nhiều địa chỉ, dùng element rõ ràng
 </customer>
 ```
 
-Senior XML design không dựa trên một luật “attribute luôn tốt hơn element” hay ngược lại. Thiết kế phụ thuộc domain, schema, khả năng versioning và cách dữ liệu được query/transform.
+Cấp cao (senior / 시니어) XML thiết kế (design / 설계) không dựa trên một luật “attribute luôn tốt hơn element” hay ngược lại. Thiết kế phụ thuộc lĩnh vực (domain / 도메인), lược đồ (schema / 스키마), khả năng versioning và cách dữ liệu được truy vấn (query / 쿼리)/transform.
 
 ---
 
-## 10. Text content thực chất vẫn là character data
+## 10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)
 
 Xét:
 
@@ -273,7 +276,7 @@ Xét:
 <age>27</age>
 ```
 
-Ở mức XML core, `27` chỉ là text. XML parser không tự biết đó là integer.
+Ở mức XML cốt lõi (core / 핵심), `27` chỉ là văn bản (text / 텍스트). XML parser không tự biết đó là integer.
 
 Tương tự:
 
@@ -283,13 +286,13 @@ Tương tự:
 
 không tự động trở thành boolean.
 
-Kiểu dữ liệu có thể được gán ở tầng XML Schema hoặc application. Điều này rất quan trọng khi bạn làm Java binding hoặc validate XML. Nếu không có schema hoặc mapping rule, parser chỉ trả về character data.
+Kiểu dữ liệu có thể được gán ở tầng XML lược đồ (schema / 스키마) hoặc ứng dụng (application / 애플리케이션). Điều này rất quan trọng khi bạn làm Java binding hoặc validate XML. Nếu không có lược đồ (schema / 스키마) hoặc ánh xạ (mapping / 매핑) quy tắc (rule / 규칙), parser chỉ trả về character dữ liệu (data / 데이터).
 
 ---
 
 ## 11. Escaping: vì sao một số ký tự không được viết trực tiếp?
 
-Ký tự `<` được XML dùng để bắt đầu markup. Vì vậy nếu bạn muốn lưu nội dung text `5 < 10`, bạn không thể viết trực tiếp:
+Ký tự `<` được XML dùng để bắt đầu markup. Vì vậy nếu bạn muốn lưu nội dung văn bản (text / 텍스트) `5 < 10`, bạn không thể viết trực tiếp:
 
 ```xml
 <value>5 < 10</value>
@@ -301,9 +304,9 @@ Bạn phải viết:
 <value>5 &lt; 10</value>
 ```
 
-Tương tự, dấu `&` bắt đầu entity reference nên phải viết thành `&amp;` khi bạn thực sự muốn ký tự `&`.
+Tương tự, dấu `&` bắt đầu thực thể (entity / 엔터티) tham chiếu (reference / 참조) nên phải viết thành `&amp;` khi bạn thực sự muốn ký tự `&`.
 
-XML định nghĩa sẵn năm entity quan trọng:
+XML định nghĩa sẵn năm thực thể (entity / 엔터티) quan trọng:
 
 ```text
 &lt;    <
@@ -325,13 +328,13 @@ hoặc trong attribute:
 <message text="He said &quot;Hello&quot;"/>
 ```
 
-Bạn không cần encode mọi Unicode character thành entity. Nếu file là UTF‑8, bạn có thể viết tiếng Việt, tiếng Hàn, tiếng Nhật trực tiếp miễn ký tự đó hợp lệ theo XML version.
+Bạn không cần encode mọi Unicode character thành thực thể (entity / 엔터티). Nếu tệp (file / 파일) là UTF‑8, bạn có thể viết tiếng Việt, tiếng Hàn, tiếng Nhật trực tiếp miễn ký tự đó hợp lệ theo XML phiên bản (version / 버전).
 
 ---
 
 ## 12. Numeric character references
 
-Ngoài named entity, XML còn cho phép numeric character reference.
+Ngoài named thực thể (entity / 엔터티), XML còn cho phép numeric character tham chiếu (reference / 참조).
 
 Decimal:
 
@@ -347,31 +350,31 @@ Hexadecimal:
 
 Cả hai biểu diễn ký tự ©.
 
-Numeric reference hữu ích khi cần biểu diễn ký tự theo code point hoặc trong một số toolchain đặc biệt, nhưng trong UTF‑8 XML hiện đại thường không cần lạm dụng.
+Numeric tham chiếu (reference / 참조) hữu ích khi cần biểu diễn ký tự theo mã (code / 코드) điểm (point / 지점) hoặc trong một số toolchain đặc biệt, nhưng trong UTF‑8 XML hiện đại thường không cần lạm dụng.
 
 ---
 
 ## 13. XML declaration
 
-Bạn thường thấy đầu file:
+Bạn thường thấy đầu tệp (file / 파일):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 ```
 
-`version="1.0"` cho biết XML version. Trong thực tế XML 1.0 là lựa chọn phổ biến nhất.
+`version="1.0"` cho biết XML phiên bản (version / 버전). Trong thực tế XML 1.0 là lựa chọn phổ biến nhất.
 
-`encoding="UTF-8"` mô tả encoding của bytes trong file.
+`encoding="UTF-8"` mô tả encoding của bytes trong tệp (file / 파일).
 
-Một điểm rất quan trọng là declaration không “chuyển đổi encoding”. Nếu file thực tế được lưu bằng một encoding khác nhưng declaration ghi UTF‑8, parser có thể decode sai hoặc báo lỗi. Vì vậy encoding declaration phải phản ánh đúng bytes thực tế.
+Một điểm rất quan trọng là declaration không “chuyển đổi encoding”. Nếu tệp (file / 파일) thực tế được lưu bằng một encoding khác nhưng declaration ghi UTF‑8, parser có thể decode sai hoặc báo lỗi. Vì vậy encoding declaration phải phản ánh đúng bytes thực tế.
 
-Trong hệ thống mới, UTF‑8 gần như luôn là lựa chọn tốt nhất trừ khi protocol hoặc hệ thống legacy yêu cầu khác.
+Trong hệ thống mới, UTF‑8 gần như luôn là lựa chọn tốt nhất trừ khi giao thức (protocol / 프로토콜) hoặc hệ thống legacy yêu cầu khác.
 
 ---
 
 ## 14. XML declaration có bắt buộc không?
 
-Không phải lúc nào XML declaration cũng bắt buộc. Ví dụ sau vẫn có thể là XML hợp lệ trong context UTF‑8:
+Không phải lúc nào XML declaration cũng bắt buộc. Ví dụ sau vẫn có thể là XML hợp lệ trong ngữ cảnh (context / 맥락) UTF‑8:
 
 ```xml
 <user>
@@ -379,7 +382,7 @@ Không phải lúc nào XML declaration cũng bắt buộc. Ví dụ sau vẫn c
 </user>
 ```
 
-Tuy nhiên trong file cấu hình, integration file hoặc tài liệu cần trao đổi qua nhiều hệ thống, việc ghi rõ:
+Tuy nhiên trong tệp (file / 파일) cấu hình, tích hợp (integration / 통합) tệp (file / 파일) hoặc tài liệu cần trao đổi qua nhiều hệ thống, việc ghi rõ:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -391,9 +394,9 @@ giúp giảm ambiguity và làm intent rõ hơn.
 
 ## 15. BOM là gì và có cần không?
 
-BOM là Byte Order Mark. Với UTF‑16, BOM từng rất quan trọng để xác định byte order. Với UTF‑8, BOM không cần thiết.
+BOM là Byte thứ tự (order / 순서) Mark. Với UTF‑16, BOM từng rất quan trọng để xác định byte thứ tự (order / 순서). Với UTF‑8, BOM không cần thiết.
 
-XML processor chuẩn có rules xử lý BOM, nhưng một số toolchain hoặc build system có thể có behavior riêng. Trong nhiều dự án hiện đại, `UTF‑8 without BOM` là lựa chọn đơn giản và ít rắc rối nhất, trừ khi hệ thống cụ thể yêu cầu BOM.
+XML processor chuẩn có rules xử lý BOM, nhưng một số toolchain hoặc hệ thống dựng (build system / 빌드 시스템) có thể có hành vi (behavior / 동작) riêng. Trong nhiều dự án hiện đại, `UTF‑8 without BOM` là lựa chọn đơn giản và ít rắc rối nhất, trừ khi hệ thống cụ thể yêu cầu BOM.
 
 ---
 
@@ -405,17 +408,17 @@ Comment XML có dạng:
 <!-- This is a comment -->
 ```
 
-Comment không phải business data. Parser có thể expose comment node hoặc bỏ qua tùy API/configuration.
+Comment không phải nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터). Parser có thể expose comment nút (node / 노드) hoặc bỏ qua tùy API/cấu hình (configuration / 구성).
 
-Một lỗi tư duy thường gặp là để secret trong comment vì “không hiển thị”. Comment vẫn nằm trong file và vẫn có thể được đọc bằng text editor, log, package hoặc network capture. Không bao giờ dùng XML comment để chứa password, API key hoặc token.
+Một lỗi tư duy thường gặp là để secret trong comment vì “không hiển thị”. Comment vẫn nằm trong tệp (file / 파일) và vẫn có thể được đọc bằng văn bản (text / 텍스트) editor, log, gói (package / 패키지) hoặc mạng (network / 네트워크) capture. Không bao giờ dùng XML comment để chứa password, API key hoặc đơn vị từ (token / 토큰).
 
-Ngoài ra XML comment có restrictions riêng về chuỗi `--`, vì vậy không nên dùng comment như nơi lưu arbitrary text.
+Ngoài ra XML comment có restrictions riêng về chuỗi `--`, vì vậy không nên dùng comment như nơi lưu arbitrary văn bản (text / 텍스트).
 
 ---
 
 ## 17. CDATA section
 
-CDATA giúp viết một đoạn character data chứa nhiều `<` hoặc `&` mà không phải escape từng ký tự.
+CDATA giúp viết một đoạn character dữ liệu (data / 데이터) chứa nhiều `<` hoặc `&` mà không phải escape từng ký tự.
 
 Ví dụ:
 
@@ -429,7 +432,7 @@ Ví dụ:
 </code>
 ```
 
-Điểm quan trọng là CDATA không tạo một loại dữ liệu mới. Trong nhiều data model, phần bên trong CDATA vẫn trở thành character data giống như khi bạn viết:
+Điểm quan trọng là CDATA không tạo một loại dữ liệu mới. Trong nhiều mô hình dữ liệu (data model / 데이터 모델), phần bên trong CDATA vẫn trở thành character dữ liệu (data / 데이터) giống như khi bạn viết:
 
 ```xml
 <text>5 &lt; 10</text>
@@ -441,9 +444,9 @@ so với:
 <text><![CDATA[5 < 10]]></text>
 ```
 
-Application thường nhận nội dung logic là `5 < 10`.
+Ứng dụng (application / 애플리케이션) thường nhận nội dung lô-gic (logic / 논리) là `5 < 10`.
 
-CDATA cũng không phải security feature. Nó chỉ là một cách lexical để viết text.
+CDATA cũng không phải bảo mật (security / 보안) tính năng (feature / 기능). Nó chỉ là một cách lexical để viết văn bản (text / 텍스트).
 
 ---
 
@@ -455,7 +458,7 @@ Chuỗi:
 ]]>
 ```
 
-là delimiter kết thúc CDATA section. Vì vậy bạn không thể chứa nguyên sequence này bên trong một CDATA section mà không split hoặc serialize lại.
+là delimiter kết thúc CDATA section. Vì vậy bạn không thể chứa nguyên chuỗi (sequence / 시퀀스) này bên trong một CDATA section mà không split hoặc serialize lại.
 
 Nếu bạn dùng XML serializer đúng chuẩn, serializer sẽ xử lý chuyện này tốt hơn việc tự nối string.
 
@@ -463,7 +466,7 @@ Nếu bạn dùng XML serializer đúng chuẩn, serializer sẽ xử lý chuy�
 
 ## 19. Processing Instruction
 
-Processing instruction có syntax:
+Processing instruction có cú pháp (syntax / 문법):
 
 ```xml
 <?target data?>
@@ -475,7 +478,7 @@ Ví dụ cổ điển:
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 ```
 
-PI dùng để truyền instruction cho processor hoặc application. Nó không phải business data thông thường.
+PI dùng để truyền instruction cho processor hoặc ứng dụng (application / 애플리케이션). Nó không phải nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) thông thường.
 
 XML declaration nhìn giống PI nhưng có grammar và vị trí đặc biệt. Không nên coi `<?xml ...?>` đơn giản là một PI tên `xml`.
 
@@ -492,11 +495,11 @@ Có. Ví dụ:
 </user>
 ```
 
-Giữa các child element có newline và spaces dùng để indent. Tùy parser và data model, các khoảng trắng đó có thể xuất hiện dưới dạng text node.
+Giữa các child element có newline và spaces dùng để indent. Tùy parser và mô hình dữ liệu (data model / 데이터 모델), các khoảng trắng đó có thể xuất hiện dưới dạng văn bản (text / 텍스트) nút (node / 노드).
 
-Điều này dẫn tới một bug kinh điển khi dùng DOM: developer nghĩ `childNodes` chỉ chứa element, nhưng thực tế có thể có cả whitespace text nodes.
+Điều này dẫn tới một bug kinh điển khi dùng DOM: nhà phát triển (developer / 개발자) nghĩ `childNodes` chỉ chứa element, nhưng thực tế có thể có cả whitespace văn bản (text / 텍스트) nodes.
 
-Vì vậy khi bạn muốn “lấy child elements”, hãy dùng API chọn element thay vì giả định mọi child node đều là element.
+Vì vậy khi bạn muốn “lấy child elements”, hãy dùng API chọn element thay vì giả định mọi child nút (node / 노드) đều là element.
 
 ---
 
@@ -520,7 +523,7 @@ default
 preserve
 ```
 
-`preserve` nói rằng whitespace trong subtree có ý nghĩa và nên được giữ theo XML processing expectations. Điều này đặc biệt quan trọng với document-centric XML, code snippets hoặc text formatting.
+`preserve` nói rằng whitespace trong subtree có ý nghĩa và nên được giữ theo XML processing expectations. Điều này đặc biệt quan trọng với document-centric XML, mã (code / 코드) snippets hoặc văn bản (text / 텍스트) formatting.
 
 ---
 
@@ -534,13 +537,13 @@ preserve
 </message>
 ```
 
-Nó hữu ích với document processing, accessibility, transformation hoặc hệ thống đa ngôn ngữ.
+Nó hữu ích với document processing, khả năng tiếp cận (accessibility / 접근성), transformation hoặc hệ thống đa ngôn ngữ.
 
 ---
 
 ## 23. `xml:base`
 
-`xml:base` đặt base URI cho relative URIs trong subtree.
+`xml:base` đặt cơ sở (base / 기반) URI cho relative URIs trong subtree.
 
 ```xml
 <catalog xml:base="https://example.com/assets/">
@@ -548,15 +551,15 @@ Nó hữu ích với document processing, accessibility, transformation hoặc h
 </catalog>
 ```
 
-Application có thể resolve `a.png` thành URL tuyệt đối dựa trên base URI này.
+Ứng dụng (application / 애플리케이션) có thể resolve `a.png` thành URL tuyệt đối dựa trên cơ sở (base / 기반) URI này.
 
-Ở mức senior, base URI còn ảnh hưởng XSLT, URI resolution và security, vì một relative path cuối cùng có thể trỏ tới external resource.
+Ở mức cấp cao (senior / 시니어), cơ sở (base / 기반) URI còn ảnh hưởng XSLT, URI resolution và bảo mật (security / 보안), vì một relative đường dẫn (path / 경로) cuối cùng có thể trỏ tới bên ngoài (external / 외부) tài nguyên (resource / 자원).
 
 ---
 
 ## 24. `xml:id`
 
-`xml:id` cung cấp standardized ID semantics trong XML ecosystem:
+`xml:id` cung cấp standardized ID ngữ nghĩa (semantics / 의미론) trong XML ecosystem:
 
 ```xml
 <section xml:id="intro">
@@ -570,7 +573,7 @@ Application có thể resolve `a.png` thành URL tuyệt đối dựa trên base
 <section id="intro">
 ```
 
-Vì một attribute có tên `id` không tự động có ID type ở mọi XML processing context. ID semantics có thể đến từ DTD, XSD, `xml:id` hoặc API configuration.
+Vì một attribute có tên `id` không tự động có ID kiểu (type / 타입) ở mọi XML processing ngữ cảnh (context / 맥락). ID ngữ nghĩa (semantics / 의미론) có thể đến từ DTD, XSD, `xml:id` hoặc API cấu hình (configuration / 구성).
 
 ---
 
@@ -578,7 +581,7 @@ Vì một attribute có tên `id` không tự động có ID type ở mọi XML 
 
 “Well-formed” nghĩa là tài liệu tuân toàn bộ cú pháp cơ bản của XML.
 
-Những điều beginner phải nhớ gồm có một root element, tag phải đóng đúng thứ tự, tên phân biệt hoa thường, attribute value phải có quote, không có duplicate attribute, ký tự đặc biệt phải escape đúng, và document chỉ chứa các ký tự hợp lệ theo XML version.
+Những điều beginner phải nhớ gồm có một gốc (root / 루트) element, tag phải đóng đúng thứ tự, tên phân biệt hoa thường, attribute giá trị (value / 값) phải có quote, không có duplicate attribute, ký tự đặc biệt phải escape đúng, và document chỉ chứa các ký tự hợp lệ theo XML phiên bản (version / 버전).
 
 Ví dụ sau không well-formed:
 
@@ -588,7 +591,7 @@ Ví dụ sau không well-formed:
 </name>
 ```
 
-XML parser phải báo fatal error.
+XML parser phải báo fatal lỗi (error / 오류).
 
 ---
 
@@ -604,7 +607,7 @@ Ví dụ:
 </user>
 ```
 
-Tài liệu này có thể hoàn toàn đúng cú pháp XML. Nhưng nếu schema quy định rằng `user` chỉ được chứa `name` và `email`, thì nó invalid theo schema.
+Tài liệu này có thể hoàn toàn đúng cú pháp XML. Nhưng nếu lược đồ (schema / 스키마) quy định rằng `user` chỉ được chứa `name` và `email`, thì nó invalid theo lược đồ (schema / 스키마).
 
 Vì vậy hãy nhớ:
 
@@ -630,13 +633,13 @@ Trong thực tế bạn thường gặp các tên như:
 <ns:user>
 ```
 
-Nhưng không nên tự viết một regex ASCII đơn giản rồi nghĩ đã validate được đầy đủ XML Name. XML hỗ trợ Unicode name characters rộng hơn nhiều. Parser hoặc schema library nên đảm nhiệm phần này.
+Nhưng không nên tự viết một regex ASCII đơn giản rồi nghĩ đã validate được đầy đủ XML Name. XML hỗ trợ Unicode name characters rộng hơn nhiều. Parser hoặc lược đồ (schema / 스키마) thư viện (library / 라이브러리) nên đảm nhiệm phần này.
 
 ---
 
 ## 28. Mixed content
 
-Mixed content là khi text và child elements xen kẽ nhau.
+Mixed content là khi văn bản (text / 텍스트) và child elements xen kẽ nhau.
 
 ```xml
 <p>
@@ -644,15 +647,15 @@ Mixed content là khi text và child elements xen kẽ nhau.
 </p>
 ```
 
-Đây là pattern rất quan trọng trong publishing, books, manuals và các document format.
+Đây là mẫu (pattern / 패턴) rất quan trọng trong publishing, books, manuals và các document format.
 
-Trong mixed content, whitespace và text node order có ý nghĩa lớn hơn nhiều so với data-centric XML. Nếu bạn tùy tiện pretty-print hoặc trim text, bạn có thể làm thay đổi nội dung.
+Trong mixed content, whitespace và văn bản (text / 텍스트) nút (node / 노드) thứ tự (order / 순서) có ý nghĩa lớn hơn nhiều so với data-centric XML. Nếu bạn tùy tiện pretty-print hoặc trim văn bản (text / 텍스트), bạn có thể làm thay đổi nội dung.
 
 ---
 
 ## 29. Data-centric XML
 
-Data-centric XML giống object/record:
+Data-centric XML giống đối tượng (object / 객체)/bản ghi (record / 레코드):
 
 ```xml
 <order>
@@ -661,7 +664,7 @@ Data-centric XML giống object/record:
 </order>
 ```
 
-Mỗi child element gần giống một field. Loại XML này thường dễ map sang Java object hoặc database row.
+Mỗi child element gần giống một trường dữ liệu (field / 필드). Loại XML này thường dễ map sang Java đối tượng (object / 객체) hoặc cơ sở dữ liệu (database / 데이터베이스) row.
 
 ---
 
@@ -678,19 +681,19 @@ Document-centric XML thiên về nội dung văn bản:
 </article>
 ```
 
-Ở đây text flow và mixed content quan trọng.
+Ở đây văn bản (text / 텍스트) luồng (flow / 흐름) và mixed content quan trọng.
 
-Điều này ảnh hưởng cách bạn thiết kế schema, XPath, XSLT và parser. Một serializer phù hợp với record-like XML chưa chắc xử lý document XML tốt nếu nó vô tình normalize whitespace hoặc reorder content.
+Điều này ảnh hưởng cách bạn thiết kế lược đồ (schema / 스키마), XPath, XSLT và parser. Một serializer phù hợp với record-like XML chưa chắc xử lý document XML tốt nếu nó vô tình normalize whitespace hoặc reorder content.
 
 ---
 
 ## 31. XML khác HTML như thế nào?
 
-XML và HTML có syntax bề ngoài giống nhau, nhưng mục tiêu và parsing model khác.
+XML và HTML có cú pháp (syntax / 문법) bề ngoài giống nhau, nhưng mục tiêu và parsing mô hình (model / 모델) khác.
 
-XML strict hơn: case-sensitive, proper nesting bắt buộc, attribute value phải quote, self-closing syntax có nghĩa thực sự, và parser không có HTML-style error recovery.
+XML strict hơn: case-sensitive, proper nesting bắt buộc, attribute giá trị (value / 값) phải quote, self-closing cú pháp (syntax / 문법) có nghĩa thực sự, và parser không có HTML-style lỗi (error / 오류) khôi phục (recovery / 복구).
 
-HTML có vocabulary và semantics do HTML Standard định nghĩa. `<button>` tự có behavior, `<a>` tự có navigation semantics. XML thì tag chỉ có meaning khi vocabulary/application định nghĩa.
+HTML có vocabulary và ngữ nghĩa (semantics / 의미론) do HTML tiêu chuẩn (standard / 표준) định nghĩa. `<button>` tự có hành vi (behavior / 동작), `<a>` tự có điều hướng (navigation / 내비게이션) ngữ nghĩa (semantics / 의미론). XML thì tag chỉ có meaning khi vocabulary/ứng dụng (application / 애플리케이션) định nghĩa.
 
 Đây là lý do không nên lấy kinh nghiệm HTML rồi suy thẳng sang XML.
 
@@ -698,7 +701,7 @@ HTML có vocabulary và semantics do HTML Standard định nghĩa. `<button>` t�
 
 ## 32. XHTML là gì?
 
-XHTML là HTML vocabulary được biểu diễn theo XML syntax/process model trong các context tương ứng.
+XHTML là HTML vocabulary được biểu diễn theo XML cú pháp (syntax / 문법)/tiến trình (process / 프로세스) mô hình (model / 모델) trong các ngữ cảnh (context / 맥락) tương ứng.
 
 Ví dụ:
 
@@ -710,19 +713,19 @@ Ví dụ:
 </html>
 ```
 
-Một file HTML thông thường có `<br />` vẫn có thể đang được parse bằng HTML parser nếu media type là `text/html`. Dấu `/` không tự chuyển parsing mode.
+Một tệp (file / 파일) HTML thông thường có `<br />` vẫn có thể đang được parse bằng HTML parser nếu media kiểu (type / 타입) là `text/html`. Dấu `/` không tự chuyển parsing chế độ (mode / 모드).
 
 ---
 
 ## 33. XML khác JSON như thế nào?
 
-JSON có mô hình object, array, number, boolean, null và string rất phù hợp với API hiện đại. XML có element, attribute, namespace, mixed content và một hệ sinh thái schema/query/transform rất mạnh.
+JSON có mô hình đối tượng (object / 객체), array, number, boolean, null và string rất phù hợp với API hiện đại. XML có element, attribute, không gian tên (namespace / 네임스페이스), mixed content và một hệ sinh thái lược đồ (schema / 스키마)/truy vấn (query / 쿼리)/transform rất mạnh.
 
-XML phù hợp đặc biệt tốt với document formats, namespace-rich protocols, enterprise integration, transformation pipeline, SOAP, SVG và các file cấu hình lâu đời.
+XML phù hợp đặc biệt tốt với document formats, namespace-rich protocols, enterprise tích hợp (integration / 통합), transformation chuỗi xử lý (pipeline / 파이프라인), SOAP, SVG và các tệp (file / 파일) cấu hình lâu đời.
 
 JSON thường nhẹ và dễ dùng hơn cho API object-oriented thông thường.
 
-Vì vậy không nên kết luận “XML cũ nên luôn thay bằng JSON”. Câu hỏi đúng là: domain nào đang cần mixed content, namespaces, XSD/XSLT, existing enterprise contracts hoặc document-centric processing?
+Vì vậy không nên kết luận “XML cũ nên luôn thay bằng JSON”. Câu hỏi đúng là: lĩnh vực (domain / 도메인) nào đang cần mixed content, namespaces, XSD/XSLT, existing enterprise contracts hoặc document-centric processing?
 
 ---
 
@@ -739,29 +742,29 @@ Một phần Maven POM có thể trông như sau:
 </project>
 ```
 
-XML chỉ nói đây là một cây. Maven mới hiểu rằng `groupId`, `artifactId`, `version` có ý nghĩa trong dependency/build model.
+XML chỉ nói đây là một cây. Maven mới hiểu rằng `groupId`, `artifactId`, `version` có ý nghĩa trong phụ thuộc (dependency / 의존성)/bản dựng (build / 빌드) mô hình (model / 모델).
 
-Tư duy này giúp bạn đọc mọi XML framework: trước tiên hiểu XML syntax, sau đó tìm vocabulary semantics của framework đó.
+Tư duy này giúp bạn đọc mọi XML khung phần mềm (framework / 프레임워크): trước tiên hiểu XML cú pháp (syntax / 문법), sau đó tìm vocabulary ngữ nghĩa (semantics / 의미론) của khung phần mềm (framework / 프레임워크) đó.
 
 ---
 
 ## 35. Tại sao không parse XML bằng regex?
 
-Giả sử bạn muốn lấy `<name>`. Một cách ngây thơ là tìm substring giữa `<name>` và `</name>`. Nhưng ngay lập tức sẽ gặp vấn đề với namespace:
+Giả sử bạn muốn lấy `<name>`. Một cách ngây thơ là tìm substring giữa `<name>` và `</name>`. Nhưng ngay lập tức sẽ gặp vấn đề với không gian tên (namespace / 네임스페이스):
 
 ```xml
 <u:name xmlns:u="urn:user">Alice</u:name>
 ```
 
-hoặc CDATA, comments, entity references, nested content và encoding.
+hoặc CDATA, comments, thực thể (entity / 엔터티) references, nested content và encoding.
 
-XML là grammar có cấu trúc. Regex/string split không hiểu tree, namespace và parser rules. Hãy dùng XML parser.
+XML là grammar có cấu trúc. Regex/string split không hiểu cây (tree / 트리), không gian tên (namespace / 네임스페이스) và parser rules. Hãy dùng XML parser.
 
 ---
 
-## 36. DOM mental model
+## 36. DOM mô hình tư duy (mental model / 사고 모델)
 
-Một DOM-like parser có thể materialize toàn bộ tree thành objects:
+Một DOM-like parser có thể materialize toàn bộ cây (tree / 트리) thành objects:
 
 ```text
 Document
@@ -772,7 +775,7 @@ Comment
 ProcessingInstruction
 ```
 
-DOM phù hợp khi document nhỏ hoặc vừa, bạn cần truy cập nhiều vị trí ngẫu nhiên, cần XPath hoặc cần sửa tree rồi serialize lại.
+DOM phù hợp khi document nhỏ hoặc vừa, bạn cần truy cập nhiều vị trí ngẫu nhiên, cần XPath hoặc cần sửa cây (tree / 트리) rồi serialize lại.
 
 Ở phần Intermediate, bạn sẽ học vì sao SAX/StAX tốt hơn khi XML rất lớn.
 
@@ -794,7 +797,7 @@ Hãy đọc tài liệu sau:
 </library>
 ```
 
-Bạn phải tự trả lời được rằng `library` là root element, `book` có hai attributes, `title` chứa text node, `29.99` ở mức XML core vẫn chỉ là character data, và `currency` là metadata mô tả cách hiểu price.
+Bạn phải tự trả lời được rằng `library` là gốc (root / 루트) element, `book` có hai attributes, `title` chứa văn bản (text / 텍스트) nút (node / 노드), `29.99` ở mức XML cốt lõi (core / 핵심) vẫn chỉ là character dữ liệu (data / 데이터), và `currency` là siêu dữ liệu (metadata / 메타데이터) mô tả cách hiểu price.
 
 Nếu title cần chứa chuỗi `A < B`, bạn phải viết:
 
@@ -806,11 +809,11 @@ Nếu bạn đổi end tag `</book>` thành `</Book>`, tài liệu sẽ không c
 
 ---
 
-## 38. Mental model cần giữ lại sau Beginner
+## 38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner
 
-Sau khi học xong phần này, bạn không nên nhìn XML như một file text có tag nữa. Bạn phải nhìn nó như một representation của cây dữ liệu được sinh ra từ bytes thông qua decoding và parsing.
+Sau khi học xong phần này, bạn không nên nhìn XML như một tệp (file / 파일) văn bản (text / 텍스트) có tag nữa. Bạn phải nhìn nó như một biểu diễn (representation / 표현) của cây dữ liệu được sinh ra từ bytes thông qua decoding và parsing.
 
-Flow đơn giản nhất là:
+Luồng (flow / 흐름) đơn giản nhất là:
 
 ```text
 bytes
@@ -821,13 +824,13 @@ bytes
 → application hiểu vocabulary
 ```
 
-Ở các phần sau, flow này sẽ được mở rộng thêm namespace, DTD, XSD, XPath, XSLT, security, canonicalization và signatures.
+Ở các phần sau, luồng (flow / 흐름) này sẽ được mở rộng thêm không gian tên (namespace / 네임스페이스), DTD, XSD, XPath, XSLT, bảo mật (security / 보안), canonicalization và signatures.
 
 ---
 
 ## 39. Những lỗi beginner phải tránh
 
-Không nối XML bằng string nếu có serializer phù hợp. Không parse XML bằng regex. Không coi text `"27"` là integer nếu chưa có type layer. Không nghĩ CDATA là encryption. Không để secret trong comment. Không bỏ qua encoding. Không coi XML và HTML là cùng parser. Không quên rằng whitespace có thể là dữ liệu thật.
+Không nối XML bằng string nếu có serializer phù hợp. Không parse XML bằng regex. Không coi văn bản (text / 텍스트) `"27"` là integer nếu chưa có kiểu (type / 타입) tầng (layer / 계층). Không nghĩ CDATA là encryption. Không để secret trong comment. Không bỏ qua encoding. Không coi XML và HTML là cùng parser. Không quên rằng whitespace có thể là dữ liệu thật.
 
 Nếu các nguyên tắc này trở thành phản xạ, bạn đã có nền tảng đúng để học XML nghiêm túc.
 
@@ -835,17 +838,17 @@ Nếu các nguyên tắc này trở thành phản xạ, bạn đã có nền t�
 
 # PHẦN BỔ SUNG — XML TRONG CÁC HỆ THỐNG THỰC TẾ
 
-## 40. XML trong file cấu hình không có nghĩa mọi tag đều thuộc XML Standard
+## 40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)
 
-Khi bạn mở một file như `pom.xml`, `AndroidManifest.xml` hoặc một file Spring XML cũ, điều quan trọng đầu tiên là tách hai lớp kiến thức. Lớp thứ nhất là **XML syntax**: element phải đóng đúng, attribute phải quote, namespace phải được bind đúng, document phải well-formed. Lớp thứ hai là **vocabulary của công cụ**: Maven mới định nghĩa `dependency`, Android mới định nghĩa `activity`, Spring mới định nghĩa `bean`. XML parser chỉ hiểu cấu trúc; framework hiểu ý nghĩa nghiệp vụ của từng tag.
+Khi bạn mở một tệp (file / 파일) như `pom.xml`, `AndroidManifest.xml` hoặc một tệp (file / 파일) Spring XML cũ, điều quan trọng đầu tiên là tách hai lớp kiến thức. Lớp thứ nhất là **XML cú pháp (syntax / 문법)**: element phải đóng đúng, attribute phải quote, không gian tên (namespace / 네임스페이스) phải được bind đúng, document phải well-formed. Lớp thứ hai là **vocabulary của công cụ**: Maven mới định nghĩa `dependency`, Android mới định nghĩa `activity`, Spring mới định nghĩa `bean`. XML parser chỉ hiểu cấu trúc; khung phần mềm (framework / 프레임워크) hiểu ý nghĩa nghiệp vụ của từng tag.
 
-Đây là mental model giúp bạn đọc một XML configuration lạ mà không bị choáng. Bạn không cần học lại XML cho từng framework. Bạn giữ nguyên kiến thức XML core, sau đó học vocabulary và schema/reference của framework đó.
+Đây là mô hình tư duy (mental model / 사고 모델) giúp bạn đọc một XML cấu hình (configuration / 구성) lạ mà không bị choáng. Bạn không cần học lại XML cho từng khung phần mềm (framework / 프레임워크). Bạn giữ nguyên kiến thức XML cốt lõi (core / 핵심), sau đó học vocabulary và lược đồ (schema / 스키마)/tham chiếu (reference / 참조) của khung phần mềm (framework / 프레임워크) đó.
 
 ---
 
 ## 41. Android dùng XML như thế nào?
 
-Android là một ví dụ rất rõ cho việc XML được dùng như một **declarative configuration language**. Mỗi Android app vẫn có `AndroidManifest.xml`. File manifest mô tả những thông tin mà Android build tools, hệ điều hành và Google Play cần biết về application, chẳng hạn application components, permissions, intent filters và required features.
+Android là một ví dụ rất rõ cho việc XML được dùng như một **declarative cấu hình (configuration / 구성) ngôn ngữ (language / 언어)**. Mỗi Android app vẫn có `AndroidManifest.xml`. tệp (file / 파일) manifest mô tả những thông tin mà Android bản dựng (build / 빌드) tools, hệ điều hành và Google Play cần biết về ứng dụng (application / 애플리케이션), chẳng hạn ứng dụng (application / 애플리케이션) components, permissions, intent filters và required features.
 
 Một manifest đơn giản có thể có dạng:
 
@@ -880,17 +883,17 @@ Một manifest đơn giản có thể có dạng:
 </manifest>
 ```
 
-Ở đây XML core chỉ nói rằng `manifest` là root, `application` và `activity` là child elements, còn các `android:*` là namespaced attributes. Chính Android định nghĩa rằng `activity` đại diện cho một Activity component, `uses-permission` khai báo permission, và `intent-filter` mô tả loại Intent mà component có thể nhận.
+Ở đây XML cốt lõi (core / 핵심) chỉ nói rằng `manifest` là gốc (root / 루트), `application` và `activity` là child elements, còn các `android:*` là namespaced attributes. Chính Android định nghĩa rằng `activity` đại diện cho một Activity thành phần (component / 컴포넌트), `uses-permission` khai báo permission, và `intent-filter` mô tả loại Intent mà thành phần (component / 컴포넌트) có thể nhận.
 
-Namespace declaration:
+Không gian tên (namespace / 네임스페이스) declaration:
 
 ```xml
 xmlns:android="http://schemas.android.com/apk/res/android"
 ```
 
-là một ví dụ thực tế cho kiến thức namespace mà bạn sẽ học sâu ở Intermediate. Prefix `android` giúp phân biệt attributes thuộc Android vocabulary với unprefixed attributes hoặc vocabulary khác.
+là một ví dụ thực tế cho kiến thức không gian tên (namespace / 네임스페이스) mà bạn sẽ học sâu ở Intermediate. Prefix `android` giúp phân biệt attributes thuộc Android vocabulary với unprefixed attributes hoặc vocabulary khác.
 
-Android còn dùng XML cho resource files. Với View-based UI, layout thường nằm trong `res/layout/*.xml` và mô tả hierarchy của `View`/`ViewGroup`:
+Android còn dùng XML cho tài nguyên (resource / 자원) files. Với View-based UI, bố cục (layout / 레이아웃) thường nằm trong `res/layout/*.xml` và mô tả hierarchy của `View`/`ViewGroup`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -910,17 +913,17 @@ Android còn dùng XML cho resource files. Với View-based UI, layout thường
 </LinearLayout>
 ```
 
-Điểm đáng chú ý là value như `@string/app_name`, `@drawable/icon` hoặc `@layout/main` không phải syntax đặc biệt của XML Standard. Đó là syntax reference do Android resource system định nghĩa. XML parser chỉ thấy chúng là attribute strings; Android build tools hiểu và compile chúng thành resource references.
+Điểm đáng chú ý là giá trị (value / 값) như `@string/app_name`, `@drawable/icon` hoặc `@layout/main` không phải cú pháp (syntax / 문법) đặc biệt của XML tiêu chuẩn (standard / 표준). Đó là cú pháp (syntax / 문법) tham chiếu (reference / 참조) do Android tài nguyên (resource / 자원) hệ thống (system / 시스템) định nghĩa. XML parser chỉ thấy chúng là attribute strings; Android bản dựng (build / 빌드) tools hiểu và compile chúng thành tài nguyên (resource / 자원) references.
 
-Jetpack Compose làm giảm nhu cầu dùng XML layout cho những UI viết hoàn toàn bằng Compose, nhưng điều đó không làm XML biến mất khỏi Android. Manifest và nhiều loại resource/configuration XML vẫn là một phần quan trọng của Android ecosystem. Vì vậy khi học Android/Kotlin, hiểu XML namespace và resource XML vẫn rất hữu ích.
+Jetpack Compose làm giảm nhu cầu dùng XML bố cục (layout / 레이아웃) cho những UI viết hoàn toàn bằng Compose, nhưng điều đó không làm XML biến mất khỏi Android. Manifest và nhiều loại tài nguyên (resource / 자원)/cấu hình (configuration / 구성) XML vẫn là một phần quan trọng của Android ecosystem. Vì vậy khi học Android/Kotlin, hiểu XML không gian tên (namespace / 네임스페이스) và tài nguyên (resource / 자원) XML vẫn rất hữu ích.
 
 ---
 
-## 42. Maven, Spring và configuration XML trong Java enterprise
+## 42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise
 
-Maven POM là ví dụ data-centric XML được dùng làm build configuration. `pom.xml` mô tả project model, dependencies, plugins và build configuration. Maven thường dùng default namespace và XSD-related metadata, vì vậy đây là một file rất tốt để luyện cách đọc namespace thay vì chỉ nhìn local tag names.
+Maven POM là ví dụ data-centric XML được dùng làm bản dựng (build / 빌드) cấu hình (configuration / 구성). `pom.xml` mô tả dự án (project / 프로젝트) mô hình (model / 모델), dependencies, plugins và bản dựng (build / 빌드) cấu hình (configuration / 구성). Maven thường dùng default không gian tên (namespace / 네임스페이스) và XSD-related siêu dữ liệu (metadata / 메타데이터), vì vậy đây là một tệp (file / 파일) rất tốt để luyện cách đọc không gian tên (namespace / 네임스페이스) thay vì chỉ nhìn cục bộ (local / 로컬) tag names.
 
-Spring hiện đại thường ưu tiên Java configuration, annotations và Spring Boot conventions, nhưng hệ thống enterprise cũ vẫn có thể chứa nhiều Spring XML configuration. Ví dụ:
+Spring hiện đại thường ưu tiên Java cấu hình (configuration / 구성), annotations và Spring Boot conventions, nhưng hệ thống enterprise cũ vẫn có thể chứa nhiều Spring XML cấu hình (configuration / 구성). Ví dụ:
 
 ```xml
 <bean
@@ -934,15 +937,15 @@ Spring hiện đại thường ưu tiên Java configuration, annotations và Spr
 </bean>
 ```
 
-Trong ví dụ này, XML không tự biết `bean` là object Java. Spring container đọc vocabulary của Spring và biến configuration thành object definitions/dependency wiring.
+Trong ví dụ này, XML không tự biết `bean` là đối tượng (object / 객체) Java. Spring bộ chứa (container / 컨테이너) đọc vocabulary của Spring và biến cấu hình (configuration / 구성) thành đối tượng (object / 객체) definitions/phụ thuộc (dependency / 의존성) wiring.
 
-Khi maintain legacy Java application, bạn thường phải đọc XML cùng Java code. Cách hiệu quả là xác định namespace/schema của file trước, sau đó xem framework map từng element/attribute sang runtime behavior như thế nào.
+Khi maintain legacy Java ứng dụng (application / 애플리케이션), bạn thường phải đọc XML cùng Java mã (code / 코드). Cách hiệu quả là xác định không gian tên (namespace / 네임스페이스)/lược đồ (schema / 스키마) của tệp (file / 파일) trước, sau đó xem khung phần mềm (framework / 프레임워크) map từng element/attribute sang hành vi thời gian chạy (runtime behavior / 런타임 동작) như thế nào.
 
 ---
 
-## 43. Cách đọc một XML configuration mà bạn chưa từng thấy
+## 43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy
 
-Khi gặp một file XML lạ, trước tiên hãy tìm root element và namespace declarations. Root cho bạn biết loại document tổng quát, còn namespace cho biết vocabulary nào đang được dùng. Sau đó hãy phân biệt element nào là structure chính, attribute nào là metadata/configuration, và value nào chỉ là string theo XML core nhưng được framework diễn giải thành enum, class name, URI hoặc resource reference.
+Khi gặp một tệp (file / 파일) XML lạ, trước tiên hãy tìm gốc (root / 루트) element và không gian tên (namespace / 네임스페이스) declarations. gốc (root / 루트) cho bạn biết loại document tổng quát, còn không gian tên (namespace / 네임스페이스) cho biết vocabulary nào đang được dùng. Sau đó hãy phân biệt element nào là cấu trúc (structure / 구조) chính, attribute nào là siêu dữ liệu (metadata / 메타데이터)/cấu hình (configuration / 구성), và giá trị (value / 값) nào chỉ là string theo XML cốt lõi (core / 핵심) nhưng được khung phần mềm (framework / 프레임워크) diễn giải thành enum, lớp (class / 클래스) name, URI hoặc tài nguyên (resource / 자원) tham chiếu (reference / 참조).
 
 Ví dụ nếu thấy:
 
@@ -958,17 +961,17 @@ Ví dụ nếu thấy:
 </config>
 ```
 
-bạn đã có thể suy ra rất nhiều trước khi biết framework cụ thể. `server` thuộc default namespace `urn:example:config`; `authentication` thuộc security namespace; `port="8080"` ở XML core vẫn là text attribute value và framework/schema mới quyết định nó phải là integer; `enabled="true"` cũng tương tự.
+bạn đã có thể suy ra rất nhiều trước khi biết khung phần mềm (framework / 프레임워크) cụ thể. `server` thuộc default không gian tên (namespace / 네임스페이스) `urn:example:config`; `authentication` thuộc bảo mật (security / 보안) không gian tên (namespace / 네임스페이스); `port="8080"` ở XML cốt lõi (core / 핵심) vẫn là văn bản (text / 텍스트) attribute giá trị (value / 값) và khung phần mềm (framework / 프레임워크)/lược đồ (schema / 스키마) mới quyết định nó phải là integer; `enabled="true"` cũng tương tự.
 
-Sau đó mới tìm schema hoặc documentation của vocabulary. Đây là cách đọc XML từ **cấu trúc chung → namespace → contract → framework meaning**, thay vì học thuộc từng file cấu hình.
+Sau đó mới tìm lược đồ (schema / 스키마) hoặc documentation của vocabulary. Đây là cách đọc XML từ **cấu trúc chung → không gian tên (namespace / 네임스페이스) → đặc tả hợp đồng (contract / 계약) → khung phần mềm (framework / 프레임워크) meaning**, thay vì học thuộc từng tệp (file / 파일) cấu hình.
 
 ---
 
 ## 44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?
 
-Nếu dữ liệu chỉ là object/array đơn giản cho REST API giữa web frontend và backend, JSON thường ngắn, dễ đọc và map tự nhiên vào JavaScript/Java DTO. Nếu protocol đã có XSD contract, cần namespace để kết hợp nhiều vocabularies, cần mixed content như document publishing, cần XSLT transformation hoặc phải tương thích với SOAP/B2B standards có sẵn, XML có những khả năng mà JSON không thay thế trực tiếp chỉ bằng việc đổi cú pháp.
+Nếu dữ liệu chỉ là đối tượng (object / 객체)/array đơn giản cho REST API giữa web frontend và backend, JSON thường ngắn, dễ đọc và map tự nhiên vào JavaScript/Java DTO. Nếu giao thức (protocol / 프로토콜) đã có XSD đặc tả hợp đồng (contract / 계약), cần không gian tên (namespace / 네임스페이스) để kết hợp nhiều vocabularies, cần mixed content như document publishing, cần XSLT transformation hoặc phải tương thích với SOAP/B2B standards có sẵn, XML có những khả năng mà JSON không thay thế trực tiếp chỉ bằng việc đổi cú pháp.
 
-Ví dụ một JSON object thường biểu diễn dữ liệu record rất tự nhiên:
+Ví dụ một JSON đối tượng (object / 객체) thường biểu diễn dữ liệu bản ghi (record / 레코드) rất tự nhiên:
 
 ```json
 {
@@ -977,7 +980,7 @@ Ví dụ một JSON object thường biểu diễn dữ liệu record rất tự
 }
 ```
 
-Trong khi XML mạnh hơn khi một document cần kết hợp metadata, namespace và mixed content:
+Trong khi XML mạnh hơn khi một document cần kết hợp siêu dữ liệu (metadata / 메타데이터), không gian tên (namespace / 네임스페이스) và mixed content:
 
 ```xml
 <article
@@ -992,4 +995,6 @@ Trong khi XML mạnh hơn khi một document cần kết hợp metadata, namespa
 </article>
 ```
 
-Vì vậy lựa chọn đúng không phải “XML hay JSON cái nào hiện đại hơn”, mà là **data model và ecosystem nào phù hợp contract của hệ thống**. Đây là tư duy bạn sẽ dùng lại khi học SOAP, XSD, Android resources và enterprise integration ở các phần sau.
+Vì vậy lựa chọn đúng không phải “XML hay JSON cái nào hiện đại hơn”, mà là **mô hình dữ liệu (data model / 데이터 모델) và ecosystem nào phù hợp đặc tả hợp đồng (contract / 계약) của hệ thống**. Đây là tư duy bạn sẽ dùng lại khi học SOAP, XSD, Android resources và enterprise tích hợp (integration / 통합) ở các phần sau.
+
+> **Bàn giao:** Sau **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [xml 02 intermediate detailed](./xml_02_intermediate_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

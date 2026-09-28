@@ -1,5 +1,8 @@
 # Không gian, thời gian, vectơ (vector) và hệ quy chiếu
 
+> **Mạch đọc:** Đọc **Không gian, thời gian, vectơ (vector) và hệ quy chiếu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phải định nghĩa “ở đâu” trước khi nói về chuyển động?** sang **Tọa độ và vị trí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao phải định nghĩa “ở đâu” trước khi nói về chuyển động?
 
 Chuyển động chỉ có nghĩa khi ta có cách mô tả vị trí và một đối tượng dùng làm mốc. Một người ngồi trên tàu có thể đứng yên đối với ghế nhưng chuyển động với vận tốc hàng trăm km/h so với mặt đất. Vì vậy vị trí và vận tốc không phải thuộc tính tuyệt đối tách khỏi bối cảnh; chúng được xác định trong một hệ quy chiếu (Reference Frame / 기준계, 좌표계).
@@ -80,7 +83,7 @@ hoặc theo thành phần:
 \vec A\cdot\vec B=A_xB_x+A_yB_y+A_zB_z
 ```
 
-Tại sao cosine xuất hiện? Dot product đo mức một vectơ “nằm theo hướng” của vectơ kia. `|B|cos\theta` chính là projection của `B` lên hướng `A`.
+Tại sao cosine xuất hiện? Dot sản phẩm (product / 제품) đo mức một vectơ “nằm theo hướng” của vectơ kia. `|B|cos\theta` chính là projection của `B` lên hướng `A`.
 
 Điều này sẽ xuất hiện tự nhiên trong công:
 
@@ -118,15 +121,15 @@ Sine xuất hiện vì chỉ thành phần vuông góc mới tạo quay (rotatio
 
 Trong cơ học Newton, thời gian (Time / 시간) được giả định là một tham số tuyệt đối giống nhau cho mọi người quan sát (observer). Một sự kiện có thể mô tả bằng `(t,x,y,z)`.
 
-Thuyết tương đối sẽ thay đổi giả định (assumption) này: các người quan sát chuyển động tương đối có thể đo khác nhau về khoảng thời gian và độ dài. Tuy nhiên ở vận tốc đời thường, sai khác cực nhỏ nên thời gian Newton là mô hình rất tốt.
+Thuyết tương đối sẽ thay đổi giả định (assumption / 가정) này: các người quan sát chuyển động tương đối có thể đo khác nhau về khoảng thời gian và độ dài. Tuy nhiên ở vận tốc đời thường, sai khác cực nhỏ nên thời gian Newton là mô hình rất tốt.
 
 ## Hệ quy chiếu quán tính
 
-Hệ quy chiếu quán tính (Inertial Frame / 관성계) là hệ mà vật không chịu tổng lực sẽ chuyển động thẳng đều. Đây là context tự nhiên của định luật Newton.
+Hệ quy chiếu quán tính (Inertial Frame / 관성계) là hệ mà vật không chịu tổng lực sẽ chuyển động thẳng đều. Đây là ngữ cảnh (context / 맥락) tự nhiên của định luật Newton.
 
 Một xe đang tăng tốc không phải hệ quy chiếu quán tính (inertial frame) lý tưởng. Người trong xe cảm thấy “bị đẩy lùi” dù không có một vật nào ở phía sau kéo họ. Trong hệ xe, ta phải đưa thêm lực quán tính giả để viết phương trình theo dạng quen thuộc.
 
-## Đổi hệ tọa độ và bất biến (invariant)
+## Đổi hệ tọa độ và bất biến (invariant / 불변식)
 
 Nếu quay hệ trục, các thành phần vectơ thay đổi nhưng độ lớn của vectơ không thay đổi. Đây là ví dụ đơn giản về bất biến (Invariant / 불변량): thứ không phụ thuộc vào cách ta chọn tọa độ.
 
@@ -142,14 +145,16 @@ v_{person,ground}=v_{person,train}+v_{train,ground}=22\,m/s
 
 Quy tắc cộng này hoạt động cực tốt ở vận tốc nhỏ. Nhưng nếu thay tàu bằng ánh sáng, ta không thể cộng như vậy; thuyết tương đối sẽ thay công thức để giữ tốc độ ánh sáng `c` như bất biến.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Tọa độ là nhãn do ta chọn; vectơ là đối tượng hình học không phụ thuộc nhãn đó. Một đại lượng vật lý tốt thường được diễn đạt sao cho khi đổi hệ tọa độ, cách viết có thể đổi nhưng quan hệ vật lý cốt lõi vẫn được bảo toàn.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
-vectơ không phải chỉ là “mảng số”. Mảng số là các thành phần (component) của vectơ trong một cơ sở (basis) cụ thể; đổi cơ sở thì thành phần đổi nhưng vectơ hình học không nhất thiết đổi.
+vectơ không phải chỉ là “mảng số”. Mảng số là các thành phần (component / 컴포넌트) của vectơ trong một cơ sở (basis) cụ thể; đổi cơ sở thì thành phần đổi nhưng vectơ hình học không nhất thiết đổi.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [Động học](../01_mechanics/00_kinematics.md), [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 physical thinking](./00_physical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

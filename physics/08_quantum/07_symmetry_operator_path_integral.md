@@ -1,5 +1,8 @@
 # Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử
 
+> **Mạch đọc:** Đọc **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đối xứng trong cơ học lượng tử** sang **Tịnh tiến và toán tử động lượng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Đối xứng trong cơ học lượng tử
 
 Trong vật lý cổ điển, đối xứng thường là một phép biến đổi không làm thay đổi định luật vật lý. Trong cơ học lượng tử, phép biến đổi trạng thái được biểu diễn bằng toán tử unitary `U`; một số đối xứng như đảo thời gian có thể cần toán tử antiunitary.
@@ -192,7 +195,7 @@ P=|\mathcal A_1+\mathcal A_2|^2.
 
 Hạng chéo tạo giao thoa.
 
-Nếu môi trường ghi lại thông tin đường đi đủ rõ, trạng thái môi trường gắn với hai nhánh trở nên gần trực giao. Khi lấy trace môi trường, giao thoa giảm: đây là mất kết hợp lượng tử (decoherence).
+Nếu môi trường ghi lại thông tin đường đi đủ rõ, trạng thái môi trường gắn với hai nhánh trở nên gần trực giao. Khi lấy dấu vết (trace / 추적) môi trường, giao thoa giảm: đây là mất kết hợp lượng tử (decoherence).
 
 ## Propagator và tính chất ghép nối
 
@@ -209,7 +212,7 @@ Cấu trúc này tương ứng với việc toán tử tiến hóa có thể đ�
 
 Tích phân đường và phương trình Schrödinger không phải hai lý thuyết cạnh tranh. Chúng là hai formulation tương đương trong miền áp dụng phù hợp, mỗi cách thuận lợi cho loại bài toán khác nhau.
 
-## Gauge field và pha lượng tử
+## Gauge trường dữ liệu (field / 필드) và pha lượng tử
 
 Trong điện từ trường, tác dụng của hạt tích điện chứa coupling với thế `A_\mu`.
 
@@ -221,7 +224,7 @@ Tích phân đường làm mối liên hệ giữa topology, gauge và pha lư�
 
 Pha toàn cục của trạng thái lượng tử không quan sát được trực tiếp. Nếu cho phép quy ước pha thay đổi theo vị trí–thời gian, đạo hàm thường sinh thêm hạng.
 
-Gauge field cung cấp kết nối để so sánh pha tại các điểm lân cận theo cách hiệp biến.
+Gauge trường dữ liệu (field / 필드) cung cấp kết nối để so sánh pha tại các điểm lân cận theo cách hiệp biến.
 
 Đây là cầu nối từ redundancy toán học của pha tới điện từ học và lý thuyết trường lượng tử.
 
@@ -242,14 +245,14 @@ Khi `S/\hbar` rất lớn, pha dao động nhanh và xấp xỉ pha dừng hiệ
 Tích phân đường đặc biệt hữu ích khi:
 
 - nghiên cứu giới hạn bán cổ điển;
-- xử lý gauge theory và QFT;
+- xử lý gauge lý thuyết (theory / 이론) và QFT;
 - phân tích tunneling bằng biến đổi thời gian Euclid;
-- xây partition function lượng tử;
+- xây partition hàm (function / 함수) lượng tử;
 - khai thác symmetry và topology.
 
 Tuy nhiên, đây không phải lúc nào là cách tính đơn giản nhất. Với giếng thế một chiều cơ bản, phương trình Schrödinger và phương pháp toán tử thường trực tiếp hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Trong cơ học lượng tử, đối xứng tổ chức không gian Hilbert, xác định generator, định luật bảo toàn và quy tắc chọn.
 
@@ -286,8 +289,10 @@ Không. Đối xứng vật lý có thể là tịnh tiến, quay pha nội tạ
 
 Không. Trong miền chuẩn của cơ học lượng tử không tương đối tính, chúng là các formulation tương đương.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Mômen động lượng](02_angular_momentum_spin.md), [Cơ học Hamilton nâng cao](../01_mechanics/10_canonical_transformations_hamilton_jacobi.md).
 
 **Liên hệ tiếp:** [Thế gauge](../05_electromagnetism/06_potentials_gauge.md), [Trường lượng tử](../09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md), [Thống kê lượng tử](05_identical_particles_quantum_statistics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

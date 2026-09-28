@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **130 & 131: 블랙박스 테스트 (Black Box Test)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **A+ Deep Dive: 알고리즘 dấu vết (trace / 추적)와 테스트 판정**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,20 +20,22 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** và nối nó với **A+ Deep Dive: 알고리즘 dấu vết (trace / 추적)와 테스트 판정**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)
 
 Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
-1. **단위 테스트 (Unit Test):** Test từng Module con. Thường dùng White Box.
-2. **통합 테스트 (Integration Test):** Ghép các module lại. (Có thể test kiểu Big Bang - Gom 1 cục, hoặc dần dần từ trên xuống, từ dưới lên). Tìm lỗi giao tiếp (Interface).
-3. **시스템 테스트 (System Test):** Test toàn bộ hệ thống trong môi trường giống thực tế nhất. Đánh giá tính năng + hiệu năng (Bảo mật, tốc độ).
-4. **인수 테스트 (Acceptance Test):** Khách hàng test để nghiệm thu.
-   - **알파 (Alpha):** Khách hàng test tại văn phòng dev (có dev đứng xem).
-   - **베타 (Beta):** Khách hàng tự test ở nhà (Giống Game Open Beta).
+1. **단위 테스트 (Unit Test):** kiểm thử (test / 테스트) từng mô-đun (module / 모듈) con. Thường dùng White Box.
+2. **통합 테스트 (Integration Test):** Ghép các mô-đun (module / 모듈) lại. (Có thể test kiểu Big Bang - Gom 1 cục, hoặc dần dần từ trên xuống, từ dưới lên). Tìm lỗi giao tiếp (Interface).
+3. **시스템 테스트 (System Test):** kiểm thử (test / 테스트) toàn bộ hệ thống trong môi trường giống thực tế nhất. Đánh giá tính năng + hiệu năng (Bảo mật, tốc độ).
+4. **인수 테스트 (Acceptance Test):** Khách hàng kiểm thử (test / 테스트) để nghiệm thu.
+   - **알파 (Alpha):** Khách hàng kiểm thử (test / 테스트) tại văn phòng dev (có dev đứng xem).
+   - **베타 (Beta):** Khách hàng tự kiểm thử (test / 테스트) ở nhà (Giống Game Open Beta).
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Đơn vị (Unit) -> Tích hợp (Integration) -> Hệ thống (System) -> Nghiệm thu (Acceptance). Alpha = Nội bộ, Beta = Ở nhà.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** đơn vị (unit / 단위) -> tích hợp (integration / 통합) -> hệ thống (system / 시스템) -> Nghiệm thu (Acceptance). Alpha = Nội bộ, Beta = Ở nhà.
 
 # 136-1. 통합 테스트 (Integration Test - Kiểm thử tích hợp)
 
@@ -57,9 +59,9 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[4] 예시 (Ví dụ thực tế):**
 - **비유 (자동차 조립 - Lắp ráp ô tô):**
-  - *Unit Test:* Kiểm tra động cơ, bánh xe, vô lăng riêng biệt. Tất cả đều tốt.
+  - *đơn vị (unit / 단위) kiểm thử (test / 테스트):* Kiểm tra động cơ, bánh xe, vô lăng riêng biệt. Tất cả đều tốt.
   - *Big Bang:* Lắp ráp toàn bộ rồi mới khởi động. Xe không nổ máy $\rightarrow$ Không biết do động cơ, bình ắc quy hay bugi.
-  - *Incremental:* Lắp động cơ vào hộp số rồi test (OK). Lắp thêm bánh xe rồi test (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
+  - *Incremental:* Lắp động cơ vào hộp số rồi kiểm thử (test / 테스트) (OK). Lắp thêm bánh xe rồi kiểm thử (test / 테스트) (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Big Bang** = "Bùm" một phát gom hết lại, nếu hỏng thì không biết sửa từ đâu.
@@ -70,8 +72,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 # 137 & 138. 하향식 / 상향식 통합 테스트 (Top Down & Bottom Up Integration Test)
 
 **[1] 개념 (Khái niệm):**
-- **하향식 (Top-down):** 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ module cấp cao nhất (chính) xuống các module cấp thấp (phụ).)*
-- **상향식 (Bottom-up):** 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ các module cấp thấp (cơ sở) dần lên module cấp cao.)*
+- **하향식 (Top-down):** 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ module cấp cao nhất (chính) xuống các mô-đun (module / 모듈) cấp thấp (phụ).)*
+- **상향식 (Bottom-up):** 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ các module cấp thấp (cơ sở) dần lên mô-đun (module / 모듈) cấp cao.)*
 
 **[2] 핵심 키워드 (Từ khóa chính):**
 - **하향식:** 깊이 우선(Depth-first), 넓이 우선(Breadth-first), **스텁(Stub)**.
@@ -86,8 +88,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
   - 상위 모듈이 없으므로, 하위 모듈을 gọi bằng **Driver** (테스트를 제어하는 가짜 상위 모듈 - module giả lập cấp trên điều khiển test).
 
 **[4] 예시 (Ví dụ thực tế):**
-- **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có database, ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
-- **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn code ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
+- **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có cơ sở dữ liệu (database / 데이터베이스), ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
+- **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn mã (code / 코드) ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Top-Down = Stub** (Từ trên xuống gặp tảng đá - S).
@@ -119,10 +121,10 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - 테스트 케이스 선정 (Lựa chọn test case hiệu quả)
 
 **[3] 예시 (Ví dụ thực tế):**
-- Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression Test* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
+- Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression kiểm thử (test / 테스트)* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
-> - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để test xem có hỏng không.
+> - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để kiểm thử (test / 테스트) xem có hỏng không.
 
 ---
 
@@ -142,8 +144,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **예시:** Kịch bản mua hàng: "Đăng nhập (Test Case 1) $\rightarrow$ Tìm kiếm sản phẩm (Test Case 2) $\rightarrow$ Thêm vào giỏ (Test Case 3) $\rightarrow$ Thanh toán (Test Case 4)."
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
-> - **Test Case** = Từng bước đi độc lập (Kiểm tra 1 hành động).
-> - **Test Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
+> - **trường hợp kiểm thử (test case / 테스트 케이스)** = Từng bước đi độc lập (Kiểm tra 1 hành động).
+> - **kiểm thử (test / 테스트) Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
 
 ---
 
@@ -162,7 +164,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - Máy tính bỏ túi:
   - *True Oracle:* Tính thử mọi phép tính có thể (Không tưởng).
   - *Sampling Oracle:* Chỉ tính thử $1+1$, $2*3$, $10/2$.
-  - *Consistent Oracle:* Bản update mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
+  - *Consistent Oracle:* Bản cập nhật (update / 업데이트) mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Oracle** = Nhà tiên tri (đưa ra đáp án chuẩn). 4 loại: **T**rue - **S**ampling - **H**euristic - **C**onsistent.
@@ -184,10 +186,10 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[4] 고려사항 (Lưu ý khi áp dụng):**
 - 재사용(Reusability) 불가능한 1회성 테스트는 자동화에서 제외.
-- 프로젝트 초기에 엔지니어 투입 (Early Involvement) để thiết kế cấu trúc test automation.
+- 프로젝트 초기에 엔지니어 투입 (Early Involvement) để thiết kế cấu trúc kiểm thử (test / 테스트) automation.
 
 **[5] 예시 (Ví dụ thực tế):**
-- Sử dụng *Selenium* (Công cụ tự động hóa) để code một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để test sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
+- Sử dụng *Selenium* (Công cụ tự động hóa) để mã (code / 코드) một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để kiểm thử (test / 테스트) sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Tự động hóa = "Máy rửa bát". Đắt tiền mua (초기 비용) nhưng rửa 1000 cái bát rất nhanh (반복 작업 최적화).
@@ -201,9 +203,9 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[2] 구성 요소 (Thành phần chính):**
 - **Driver / Stub:** (Đã giải thích ở trên).
-- **Test Suite (테스트 슈트):** 테스트 케이스들의 집합 (Tập hợp các test case).
-- **Test Script (테스트 스크립트):** 자동화된 테스트 실행 절차를 기록한 명세서 (Kịch bản code chạy tự động).
-- **Mock Object (목 오브젝트):** 사용자의 예정된 행위를 조건부로 입력해 둔 가짜 객체 (Đối tượng giả lập dữ liệu trả về).
+- **bộ kiểm thử (test suite / 테스트 스위트):** 테스트 케이스들의 집합 (Tập hợp các test case).
+- **kiểm thử (test / 테스트) Script (테스트 스크립트):** 자동화된 테스트 실행 절차를 기록한 명세서 (Kịch bản code chạy tự động).
+- **Mock đối tượng (object / 객체):** 사용자의 예정된 행위를 조건부로 입력해 둔 가짜 객체 (Đối tượng giả lập dữ liệu trả về).
 
 ---
 
@@ -235,8 +237,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **공식 (Công thức):** với một đồ thị luồng liên thông, $V(G) = E - N + 2$ (E: Edge, N: Node); tổng quát là $V(G)=E-N+2P$ với P là số thành phần liên thông. Có thể dùng số vùng kín + 1.
 
 **[4] 예시 (Ví dụ thực tế):**
-- **Throughput vs Response Time:** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
-- **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 Node và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
+- **thông lượng (throughput / 처리량) vs phản hồi (response / 응답) thời gian (time / 시간):** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
+- **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 nút (node / 노드) và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Công thức McCabe: **E**m **N**hớ **+ 2** ($E - N + 2$).
@@ -247,14 +249,14 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 **[1] 최적화 개념 (Khái niệm tối ưu hóa):**
 - 나쁜 코드(Bad Code / Spaghetti Code / Alien Code)를 배제하고, **클린 코드(Clean Code)**로 작성하여 가독성(Readability)과 유지보수성 향상.
-*(Viết code sạch sẽ, rõ ràng, dễ hiểu, tránh viết code rối như tơ vò (Spaghetti) hoặc code không ai hiểu được (Alien).*
+*(Viết code sạch sẽ, rõ ràng, dễ hiểu, tránh viết code rối như tơ vò (Spaghetti) hoặc mã (code / 코드) không ai hiểu được (Alien).*
 
 **[2] 소스 코드 품질 분석 도구 (Công cụ phân tích chất lượng code):**
 - **정적 분석 도구 (Static Analysis):** 코드를 실행하지 않고 패턴 분석 (VD: pmd, cppcheck, SonarQube).
 - **동적 분석 도구 (Dynamic Analysis):** 소스 코드를 실행하여 메모리 누수(Memory Leak) 분석 (VD: Valgrind, Avalanche).
 
 **[3] 예시 (Ví dụ thực tế):**
-- **Alien Code (Code người ngoài hành tinh):** Code từ chục năm trước, tài liệu bị mất, người viết code đã nghỉ việc, sếp bảo bạn sửa code đó $\rightarrow$ Không thể sửa nổi!
+- **Alien mã (code / 코드) (Code người ngoài hành tinh):** mã (code / 코드) từ chục năm trước, tài liệu bị mất, người viết mã (code / 코드) đã nghỉ việc, sếp bảo bạn sửa mã (code / 코드) đó $\rightarrow$ Không thể sửa nổi!
 
 ---
 
@@ -362,7 +364,7 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - **도구 종류 (Các công cụ phổ biến):** Tripwire, AIDE, Samhain, Claymore, Fcheck.
 
 **[3] 예시 (Ví dụ thực tế):**
-- Hacker cài **Backdoor (Cửa hậu)** vào file `login.php`. Công cụ Tripwire sử dụng hàm băm (Hash) và phát hiện ra mã băm của `login.php` hôm nay khác với hôm qua $
+- Hacker cài **Backdoor (Cửa hậu)** vào tệp (file / 파일) `login.php`. Công cụ Tripwire sử dụng hàm băm (hash / 해시) và phát hiện ra mã băm của `login.php` hôm nay khác với hôm qua $
 ightarrow$ Phát chuông cảnh báo.
 
 ---
@@ -389,10 +391,10 @@ ightarrow$ Phát chuông cảnh báo.
 
 **[2] 유형 (Phân loại):**
 - **리소스 방식 (Resource - Theo tài nguyên):** Giám sát phần cứng như CPU, RAM (VD: Nagios, Zabbix).
-- **엔드투엔드 방식 (End-to-End - Toàn trình):** Giám sát từ lúc User click đến khi kết thúc giao dịch (VD: Jennifer, VisualVM, Scouter).
+- **엔드투엔드 방식 (End-to-End - Toàn trình):** Giám sát từ lúc người dùng (user / 사용자) click đến khi kết thúc giao dịch (VD: Jennifer, VisualVM, Scouter).
 
 **[3] 예시 (Ví dụ thực tế):**
-- Ngày Black Friday, hệ thống bán hàng bị chậm. Nhìn vào màn hình **Jennifer (APM)**, quản trị viên thấy biểu đồ "Database connection" đang đỏ chót $
+- Ngày Black Friday, hệ thống bán hàng bị chậm. Nhìn vào màn hình **Jennifer (APM)**, quản trị viên thấy biểu đồ "cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결)" đang đỏ chót $
 ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu RAM.
 
 ---
@@ -403,9 +405,9 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
   - **빅오(Big-O):** Mua balo, luôn nghĩ tới lúc đựng nặng nhất xem có rách không (Worst case).
   - **순환 복잡도(McCabe):** Tính xem tòa nhà có bao nhiêu ngã rẽ để khi cháy bảo vệ phải đi kiểm tra từng ngóc ngách ít nhất bao nhiêu lần.
 - **인터페이스 통신 비유 (Giao tiếp & Bảo mật):**
-  - **XML / JSON:** Là các "thùng container" có quy chuẩn để chứa hàng (dữ liệu).
+  - **XML / JSON:** Là các "thùng bộ chứa (container / 컨테이너)" có quy chuẩn để chứa hàng (dữ liệu).
   - **AJAX:** Hệ thống "dỡ hàng bất đồng bộ" - Tàu không cần dừng hẳn, băng chuyền cứ lấy đồ ra từ từ mà hành khách không bị gián đoạn.
-  - **인터페이스 보안 (Security):** Ổ khóa khóa chặt cửa container lại.
+  - **인터페이스 보안 (Security):** Ổ khóa khóa chặt cửa bộ chứa (container / 컨테이너) lại.
   - **무결성 검사 (Integrity):** Hải quan kiểm tra "Tem niêm phong", xem tem có bị rách hay thay tem giả không (Tripwire).
   - **APM:** Camera giám sát toàn bộ hoạt động cảng biển xem xe nào kẹt, kho nào đầy (Jennifer).
 
@@ -420,11 +422,11 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 **[3] 특징 (Đặc điểm):**
 - 개발자는 원격 저장소의 자료를 복제(Clone)하여 오프라인에서도 작업 가능.
-- Server (Remote) bị sập thì vẫn còn dữ liệu nguyên vẹn ở Local Repo의 개발자.
+- máy chủ (server / 서버) (Remote) bị sập thì vẫn còn dữ liệu nguyên vẹn ở cục bộ (local / 로컬) Repo의 개발자.
 - **대표 도구 (Công cụ tiêu biểu):** Git, Mercurial.
 
 **[4] 예시 (Ví dụ thực tế):**
-- Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản code trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên Server.
+- Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản mã (code / 코드) trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên máy chủ (server / 서버).
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):**
-> - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
+> - **phân tán (distributed / 분산) = Git:** Không có mạng vẫn lưu mã (code / 코드) được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.

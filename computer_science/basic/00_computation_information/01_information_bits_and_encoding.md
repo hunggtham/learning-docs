@@ -1,6 +1,9 @@
 # Thông tin, bit, mã hóa và biểu diễn
 
-Máy tính không nhận trực tiếp “chữ A”, “màu đỏ”, “số tiền 10000 won” hay “ảnh một con mèo”. Nó nhận các **trạng thái vật lý (physical state)** mà phần cứng có thể phân biệt, sau đó phần mềm áp dụng quy ước để các trạng thái đó đại diện cho thông tin (information / 정보). Vì vậy, trước khi học cấu trúc dữ liệu hay gói tin mạng, cần hiểu một nguyên tắc nền tảng: **mọi dữ liệu số đều là một cách biểu diễn (representation) theo một quy tắc mã hóa (encoding)**.
+> **Mạch đọc:** Đọc **Thông tin, bit, mã hóa và biểu diễn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao bit trở thành đơn vị nền tảng?** sang **Mã hóa là quy ước nối mẫu bit với ý nghĩa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Máy tính không nhận trực tiếp “chữ A”, “màu đỏ”, “số tiền 10000 won” hay “ảnh một con mèo”. Nó nhận các **trạng thái vật lý (physical state)** mà phần cứng có thể phân biệt, sau đó phần mềm áp dụng quy ước để các trạng thái đó đại diện cho thông tin (information / 정보). Vì vậy, trước khi học cấu trúc dữ liệu hay gói tin mạng, cần hiểu một nguyên tắc nền tảng: **mọi dữ liệu số đều là một cách biểu diễn (representation / 표현) theo một quy tắc mã hóa (encoding)**.
 
 ## Tại sao bit trở thành đơn vị nền tảng?
 
@@ -9,6 +12,9 @@ Máy tính không nhận trực tiếp “chữ A”, “màu đỏ”, “số 
 Một bit chỉ phân biệt hai khả năng. Với `n` bit, ta có tối đa `2^n` mẫu bit. Đây là hệ quả của nguyên lý nhân: mỗi vị trí có hai lựa chọn độc lập nên số tổ hợp là `2 × 2 × ... × 2 = 2^n`.
 
 Tám bit thường được nhóm thành một **byte** (바이트). Byte là đơn vị địa chỉ hóa phổ biến trong bộ nhớ và lưu trữ, nhưng bản thân byte không có ý nghĩa cố định. Mẫu `01000001` có thể được hiểu là số nguyên 65 hoặc ký tự ASCII `A`, tùy cách diễn giải.
+
+
+> **Chuyển mạch:** Từ **Tại sao bit trở thành đơn vị nền tảng?**, ta sang **Mã hóa là quy ước nối mẫu bit với ý nghĩa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mã hóa là quy ước nối mẫu bit với ý nghĩa
 
@@ -28,6 +34,9 @@ bit / byte
 
 Khi đọc theo chiều ngược lại, phần cứng và phần mềm giải mã cách biểu diễn để tái tạo ký hiệu hoặc giá trị, sau đó ứng dụng gán ý nghĩa ngữ nghĩa cho chúng.
 
+
+> **Chuyển mạch:** Từ **Mã hóa là quy ước nối mẫu bit với ý nghĩa**, ta sang **Văn bản: từ ASCII tới Unicode và UTF-8** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Văn bản: từ ASCII tới Unicode và UTF-8
 
 ASCII ban đầu dùng mã 7 bit cho 128 ký hiệu, đủ cho chữ cái tiếng Anh, chữ số và một số ký tự điều khiển. Ví dụ `A = 65 = 0x41`. Khi máy tính được sử dụng toàn cầu, nhiều khu vực tạo bảng mã riêng; cùng một byte có thể mang ký tự khác nhau và gây bất tương thích.
@@ -38,19 +47,28 @@ UTF-8 giữ nguyên các ký tự ASCII trong một byte, còn nhiều điểm m
 
 Đây là ví dụ điển hình của **rò rỉ trừu tượng (abstraction leak)**: giao diện muốn cắt “10 ký tự”, nhưng nếu phần triển khai cắt tùy tiện theo byte thì có thể phá hỏng chuỗi mã hóa.
 
+
+> **Chuyển mạch:** Từ **Văn bản: từ ASCII tới Unicode và UTF-8**, ta sang **Ảnh và âm thanh: lấy mẫu và lượng tử hóa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Ảnh và âm thanh: lấy mẫu và lượng tử hóa
 
-Ảnh raster là một lưới các mẫu (sample). Mỗi điểm ảnh chứa các giá trị như RGB. Nếu mỗi kênh dùng 8 bit thì một điểm ảnh RGB thường cần 24 bit trước khi nén. Màu trong thế giới thực biến thiên liên tục, vì vậy ảnh số phải **lượng tử hóa (quantization / 양자화)** thành một số mức hữu hạn.
+Ảnh raster là một lưới các mẫu (sample / 표본). Mỗi điểm ảnh chứa các giá trị như RGB. Nếu mỗi kênh dùng 8 bit thì một điểm ảnh RGB thường cần 24 bit trước khi nén. Màu trong thế giới thực biến thiên liên tục, vì vậy ảnh số phải **lượng tử hóa (quantization / 양자화)** thành một số mức hữu hạn.
 
 Âm thanh cũng tương tự. Microphone tạo tín hiệu liên tục; quá trình chuyển đổi tương tự–số lấy mẫu theo thời gian rồi lượng tử hóa biên độ. **Tần số lấy mẫu (sample rate)** quyết định tần suất đo, còn **độ sâu bit (bit depth)** quyết định số mức biên độ có thể biểu diễn.
 
 Điểm chung là biểu diễn số không sao chép thế giới thực một cách hoàn hảo. Hệ thống chọn độ phân giải và miền giá trị phù hợp với mục đích, qua đó đánh đổi dung lượng lưu trữ và băng thông lấy độ trung thực (fidelity).
 
+
+> **Chuyển mạch:** Từ **Ảnh và âm thanh: lấy mẫu và lượng tử hóa**, ta sang **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự
 
-Giả sử ta có các byte `31 30 30`. Nếu diễn giải theo ASCII hoặc UTF-8 thì đó là chuỗi `100`; nếu muốn số nguyên 100 thì chương trình còn phải phân tích chuỗi thành số. Nếu tệp chứa nhiều trường, ta cần biết thêm ranh giới, kiểu và thứ tự của từng trường. Đây là vai trò của **định dạng tuần tự hóa (serialization format)** như JSON, Protocol Buffers, MessagePack hoặc giao thức nhị phân riêng.
+Giả sử ta có các byte `31 30 30`. Nếu diễn giải theo ASCII hoặc UTF-8 thì đó là chuỗi `100`; nếu muốn số nguyên 100 thì chương trình còn phải phân tích chuỗi thành số. Nếu tệp chứa nhiều trường, ta cần biết thêm ranh giới, kiểu và thứ tự của từng trường. Đây là vai trò của **định dạng tuần tự hóa (serialization format)** như JSON, giao thức (protocol / 프로토콜) Buffers, MessagePack hoặc giao thức nhị phân riêng.
 
 JSON biểu diễn số, văn bản và đối tượng bằng cú pháp văn bản dễ đọc nhưng có chi phí phụ. Định dạng nhị phân có thể gọn hơn và giữ kiểu dữ liệu chặt hơn nhưng khó kiểm tra thủ công. Giao thức mạng và định dạng lưu trữ đều phải cân bằng những đặc tính này.
+
+
+> **Chuyển mạch:** Từ **Dữ liệu có cấu trúc cần định dạng ngoài mã hóa ký tự**, ta sang **Nén: loại bỏ dư thừa chứ không tạo phép màu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nén: loại bỏ dư thừa chứ không tạo phép màu
 
@@ -60,11 +78,17 @@ Không phải dữ liệu nào cũng nén được nhiều. Một chuỗi gần 
 
 Xem thêm: [Lý thuyết thông tin](../../../mathematics/07_discrete_cs/06_information_theory_and_coding.md).
 
+
+> **Chuyển mạch:** Từ **Nén: loại bỏ dư thừa chứ không tạo phép màu**, ta sang **Phát hiện và sửa lỗi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Phát hiện và sửa lỗi
 
 Lưu trữ và mạng không tuyệt đối hoàn hảo: bit có thể bị lật. Hệ thống có thể thêm phần dư thừa có chủ đích để **phát hiện lỗi (error detection)** hoặc **sửa lỗi (error correction)**. Bit chẵn lẻ (parity bit) là ví dụ đơn giản. CRC mạnh hơn trong việc phát hiện nhiều kiểu lỗi theo cụm khi truyền dữ liệu. Bộ nhớ ECC dùng mã sửa lỗi để sửa một số lỗi bit.
 
 Điều đáng chú ý là phần dư thừa đôi khi bị loại bỏ để nén, nhưng trong trường hợp khác lại được thêm vào để tăng độ tin cậy. Mục tiêu khác nhau dẫn đến thiết kế khác nhau.
+
+
+> **Chuyển mạch:** Từ **Phát hiện và sửa lỗi**, ta sang **Đơn vị KB, KiB và sự nhầm lẫn thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Đơn vị KB, KiB và sự nhầm lẫn thường gặp
 
@@ -72,9 +96,15 @@ Theo SI, `1 kB = 1000 bytes` và `1 MB = 10^6 bytes`. Tiền tố nhị phân d�
 
 Băng thông thường được quảng cáo bằng bit/giây, còn kích thước tệp thường tính bằng byte. Đường truyền 100 Mbps không có nghĩa tải được 100 MB mỗi giây; giới hạn lý thuyết trước chi phí giao thức chỉ khoảng 12,5 MB/s.
 
+
+> **Chuyển mạch:** Từ **Đơn vị KB, KiB và sự nhầm lẫn thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 > **Bit không có ý nghĩa cố định. Ý nghĩa xuất hiện khi một tầng áp dụng quy tắc mã hóa, lược đồ hoặc giao thức lên các mẫu bit.** Khi dữ liệu “bị sai”, hãy kiểm tra xem sự không khớp nằm ở cách biểu diễn, ranh giới dữ liệu, kiểu dữ liệu, thứ tự byte, mã hóa ký tự hay cách diễn giải ngữ nghĩa.
+
+
+> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những hiểu lầm thường gặp
 
@@ -84,6 +114,11 @@ Băng thông thường được quảng cáo bằng bit/giây, còn kích thư�
 
 **“Nhị phân chính xác hơn thập phân.”** Nhị phân chỉ là một cơ số biểu diễn. Độ chính xác phụ thuộc kiểu dữ liệu và số bit. Số dấu phẩy động nhị phân còn không thể biểu diễn chính xác nhiều phân số thập phân như 0,1.
 
+
+> **Chuyển mạch:** Từ **Những hiểu lầm thường gặp**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Kết nối
 
 Biểu diễn bằng bit dẫn trực tiếp đến [biểu diễn số nguyên và số dấu phẩy động](./02_numbers_and_machine_representation.md), [mạch số](../02_computer_architecture/00_digital_logic_and_circuits.md), [tuần tự hóa](../08_software_systems/04_time_serialization_and_idempotency.md), [gói tin mạng](../06_networks_distributed_systems/00_network_layers_packets_and_encapsulation.md) và [bộ máy lưu trữ](../05_data_databases/04_storage_logs_recovery_and_durability.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what computer science studies](./00_what_computer_science_studies.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

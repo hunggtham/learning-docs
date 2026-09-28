@@ -1,8 +1,11 @@
 # Trường học, đại học và văn hoá thanh niên
 
+> **Mạch đọc:** Đặt **Trường học, đại học và văn hoá thanh niên** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Trường học là nơi học kiến thức và học cách làm thành viên của một nhóm** sang **학년, 학번 và hai kiểu “thâm niên” khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Trường học là nơi học kiến thức và học cách làm thành viên của một nhóm
 
-Chương về giáo dục đã tập trung vào `수능`, `학원`, `학벌` và logic cạnh tranh bằng cấp. Nhưng trải nghiệm trường học còn một lớp khác: **xã hội hoá (socialization / 사회화)**. Học sinh và sinh viên học cách xưng hô, tham gia nhóm, đọc cấu trúc thứ bậc, xây tình bạn, xử lý danh tiếng và chuyển từ đời sống do gia đình kiểm soát sang tự quản lý.
+Chương về giáo dục đã tập trung vào `수능`, `학원`, `학벌` và lô-gic (logic / 논리) cạnh tranh bằng cấp. Nhưng trải nghiệm trường học còn một lớp khác: **xã hội hoá (socialization / 사회화)**. Học sinh và sinh viên học cách xưng hô, tham gia nhóm, đọc cấu trúc thứ bậc, xây tình bạn, xử lý danh tiếng và chuyển từ đời sống do gia đình kiểm soát sang tự quản lý.
 
 Vì vậy văn hoá campus không phải phần phụ của giáo dục. Nó là cây cầu giữa gia đình, nhóm đồng trang lứa và nơi làm việc. Nhiều mẫu sau này xuất hiện trong công sở — thâm niên, ăn nhóm, chat nhóm, báo cáo và xây mạng lưới — đã có hình thức thử nghiệm trong trường và đại học.
 
@@ -24,9 +27,9 @@ Nếu onboarding tốt, quy tắc ngầm được nói rõ. Nếu onboarding d�
 
 ## OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?
 
-**Định hướng (orientation / 오리엔테이션, OT)**, chương trình chào tân sinh viên như `새터` và **Membership Training (MT)** là các hình thức giúp nhóm nhanh chóng làm quen. Nội dung thay đổi theo trường và thời kỳ, nhưng chức năng chung thường là giới thiệu con người, quy tắc, câu lạc bộ, lịch học và tạo tương tác ngoài lớp.
+**Định hướng (orientation / 오리엔테이션, OT)**, chương trình chào tân sinh viên như `새터` và **Membership huấn luyện (training / 학습) (MT)** là các hình thức giúp nhóm nhanh chóng làm quen. Nội dung thay đổi theo trường và thời kỳ, nhưng chức năng chung thường là giới thiệu con người, quy tắc, câu lạc bộ, lịch học và tạo tương tác ngoài lớp.
 
-Tên `MT` nghe như “training”, nhưng trong thực tế thường thiên về gắn kết xã hội hơn đào tạo kỹ thuật. Đi xa, ở cùng nhóm và ăn uống cùng nhau làm số lần tương tác tăng mạnh trong thời gian ngắn.
+Tên `MT` nghe như “huấn luyện (training / 학습)”, nhưng trong thực tế thường thiên về gắn kết xã hội hơn đào tạo kỹ thuật. Đi xa, ở cùng nhóm và ăn uống cùng nhau làm số lần tương tác tăng mạnh trong thời gian ngắn.
 
 Trong lý thuyết mạng, nếu nhóm có `n` người thì số cặp quan hệ tiềm năng tăng xấp xỉ:
 
@@ -316,3 +319,5 @@ Trong phần mềm, **môi trường thử (staging environment)** cho phép h�
 ## Đọc tiếp
 
 Đọc cùng [`02_confucianism_relations_hierarchy.md`](02_confucianism_relations_hierarchy.md), [`05_education_exams_credentials.md`](05_education_exams_credentials.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`23_military_conscription_service_culture.md`](23_military_conscription_service_culture.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

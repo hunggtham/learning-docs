@@ -1,6 +1,9 @@
-# Determinant, rank, null space và inverse: structure, information loss và reversibility
+# Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility
 
-Một matrix nên được nhìn như một linear transformation. Khi đó determinant, rank, null space và inverse không còn là bốn topics rời rạc mà là bốn cách đo cùng một structure:
+> **Mạch đọc:** Đọc **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Determinant là oriented volume scaling** sang **2. Vì sao det(AB)=det(A)det(B)?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Một ma trận (matrix / 행렬) nên được nhìn như một tuyến tính (linear / 선형) transformation. Khi đó determinant, rank, null không gian (space / 공간) và inverse không còn là bốn topics rời rạc mà là bốn cách đo cùng một cấu trúc (structure / 구조):
 
 ```text
 determinant → volume/orientation thay đổi ra sao?
@@ -9,11 +12,11 @@ null space  → directions nào bị xóa?
 inverse     → transformation có thể undo không?
 ```
 
-Các khái niệm này nối geometry, systems of equations, numerical stability, data compression và identifiability.
+Các khái niệm này nối hình học (geometry / 기하학), các hệ thống (systems / 시스템들) of equations, numerical stability, dữ liệu (data / 데이터) compression và identifiability.
 
 ## 1. Determinant là oriented volume scaling
 
-Với matrix vuông
+Với ma trận (matrix / 행렬) vuông
 
 ```math
 A\in\mathbb R^{n\times n},
@@ -25,7 +28,7 @@ determinant
 \det(A)
 ```
 
-đo signed factor mà `A` scale n-dimensional volume.
+đo signed factor mà `A` quy mô (scale / 규모) n-dimensional volume.
 
 Trong 2D:
 
@@ -43,7 +46,7 @@ thì
 \det(A)=ad-bc.
 ```
 
-Magnitude `|det(A)|` là area scaling của unit square. Sign encode orientation.
+Magnitude `|det(A)|` là area scaling của đơn vị (unit / 단위) square. Sign encode orientation.
 
 Nếu
 
@@ -71,15 +74,15 @@ volume collapses xuống dimension thấp hơn.
 
 ## 2. Vì sao det(AB)=det(A)det(B)?
 
-Composition `B` rồi `A` scale volume theo hai stages.
+Composition `B` rồi `A` quy mô (scale / 규모) volume theo hai stages.
 
-Nếu `B` scale volume factor `det(B)` và `A` tiếp tục scale factor `det(A)`, total scale phải là product:
+Nếu `B` quy mô (scale / 규모) volume factor `det(B)` và `A` tiếp tục quy mô (scale / 규모) factor `det(A)`, total quy mô (scale / 규모) phải là sản phẩm (product / 제품):
 
 ```math
 \det(AB)=\det(A)\det(B).
 ```
 
-Property này có geometric meaning, không chỉ algebraic identity.
+Thuộc tính (property / 속성) này có geometric meaning, không chỉ algebraic định danh (identity / 식별자).
 
 Nó cũng giải thích:
 
@@ -92,7 +95,7 @@ khi inverse tồn tại.
 
 ## 3. Row operations và determinant
 
-Elementary row operations ảnh hưởng determinant có structure rõ:
+Elementary row operations ảnh hưởng determinant có cấu trúc (structure / 구조) rõ:
 
 - swap two rows → đổi sign;
 - multiply row by `c` → determinant multiply `c`;
@@ -102,7 +105,7 @@ Elementary row operations ảnh hưởng determinant có structure rõ:
 
 Nó cũng cho cách compute determinant qua elimination thay vì cofactor expansion tốn kém.
 
-## 4. Cofactor expansion useful conceptually nhưng không phải default algorithm
+## 4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)
 
 Laplace/cofactor expansion giúp chứng minh properties và hiểu minors:
 
@@ -111,7 +114,7 @@ Laplace/cofactor expansion giúp chứng minh properties và hiểu minors:
 \sum_j(-1)^{i+j}a_{ij}M_{ij}.
 ```
 
-Nhưng recursive implementation có complexity rất tệ cho large matrices.
+Nhưng recursive hiện thực (implementation / 구현) có độ phức tạp (complexity / 복잡도) rất tệ cho large matrices.
 
 Numerical libraries thường dùng LU-like factorization để compute determinant hoặc log-determinant.
 
@@ -122,7 +125,7 @@ formula for theory
 ≠ algorithm for production
 ```
 
-## 5. Rank là dimension của reachable output
+## 5. Rank là dimension của reachable đầu ra (output / 출력)
 
 Nếu
 
@@ -138,7 +141,7 @@ rank là
 \dim\mathcal C(A).
 ```
 
-Column space là set all outputs:
+Column không gian (space / 공간) là set all outputs:
 
 ```math
 \mathcal C(A)
@@ -148,9 +151,9 @@ Column space là set all outputs:
 
 Do đó rank trả lời:
 
-> Transformation có thể tạo ra bao nhiêu independent output directions?
+> Transformation có thể tạo ra bao nhiêu independent đầu ra (output / 출력) directions?
 
-Một 3D map collapse mọi point xuống plane có rank 2.
+Một 3D map collapse mọi điểm (point / 지점) xuống plane có rank 2.
 
 Collapse xuống line có rank 1.
 
@@ -158,17 +161,17 @@ Map mọi thứ về zero có rank 0.
 
 ## 6. Row rank = column rank không phải coincidence
 
-Một theorem trung tâm nói dimension của row space bằng dimension của column space.
+Một theorem trung tâm nói dimension của row không gian (space / 공간) bằng dimension của column không gian (space / 공간).
 
 Vì vậy ta nói đơn giản “rank”.
 
-Proof đầy đủ cần linear algebra structure sâu hơn, nhưng intuition là row reduction bộc lộ cùng số independent constraints và independent output directions qua pivot structure.
+Proof đầy đủ cần tuyến tính (linear / 선형) algebra cấu trúc (structure / 구조) sâu hơn, nhưng intuition là row reduction bộc lộ cùng số independent các ràng buộc (constraints / 제약조건들) và independent đầu ra (output / 출력) directions qua pivot cấu trúc (structure / 구조).
 
 Pivot count là rank.
 
-## 7. Null space là information directions bị mất
+## 7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất
 
-Null space:
+Null không gian (space / 공간):
 
 ```math
 \mathcal N(A)
@@ -176,14 +179,14 @@ Null space:
 \{x:Ax=0\}.
 ```
 
-Nếu có nonzero `x` trong null space:
+Nếu có nonzero `x` trong null không gian (space / 공간):
 
 ```math
 Ax=0,
 \qquad x\ne0,
 ```
 
-thì inputs `z` và `z+x` map tới cùng output:
+thì inputs `z` và `z+x` map tới cùng đầu ra (output / 출력):
 
 ```math
 A(z+x)=Az+Ax=Az.
@@ -191,11 +194,11 @@ A(z+x)=Az+Ax=Az.
 
 Transformation không thể phân biệt hai inputs này.
 
-Đây là meaning sâu của null space:
+Đây là meaning sâu của null không gian (space / 공간):
 
-> null directions là directions mà representation làm mất hoàn toàn.
+> null directions là directions mà biểu diễn (representation / 표현) làm mất hoàn toàn.
 
-## 8. Rank–nullity là accounting identity của dimensions
+## 8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions
 
 Nếu `A` có `n` columns:
 
@@ -206,7 +209,7 @@ Nếu `A` có `n` columns:
 =n.
 ```
 
-Input dimensions chia thành hai nhóm:
+Đầu vào (input / 입력) dimensions chia thành hai nhóm:
 
 ```text
 directions visible in output
@@ -216,9 +219,9 @@ directions collapsed to zero
 total input dimensions
 ```
 
-Đây gần như conservation law của linear information.
+Đây gần như conservation law của tuyến tính (linear / 선형) thông tin (information / 정보).
 
-## 9. System Ax=b dưới viewpoint rank
+## 9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank
 
 Equation
 
@@ -232,7 +235,7 @@ solvable iff
 b\in\mathcal C(A).
 ```
 
-Nếu solvable và null space nontrivial, solutions không unique.
+Nếu solvable và null không gian (space / 공간) nontrivial, solutions không unique.
 
 Nếu `x_0` là một solution:
 
@@ -249,7 +252,7 @@ x=x_0+z,
 
 cũng là solution.
 
-Vì vậy general solution có structure:
+Vì vậy general solution có cấu trúc (structure / 구조):
 
 ```text
 one particular solution
@@ -265,13 +268,13 @@ Nếu `A` có full column rank:
 \operatorname{rank}(A)=n,
 ```
 
-null space chỉ có zero vector.
+null không gian (space / 공간) chỉ có zero véc-tơ (vector / 벡터).
 
 Khi `Ax=b` solvable, solution unique.
 
-Trong regression, nếu design matrix columns linearly dependent, coefficients không uniquely identifiable.
+Trong regression, nếu thiết kế (design / 설계) ma trận (matrix / 행렬) columns linearly dependent, coefficients không uniquely identifiable.
 
-Ví dụ nếu một feature luôn là exact sum của hai features khác, nhiều coefficient combinations cho cùng prediction.
+Ví dụ nếu một tính năng (feature / 기능) luôn là chính xác (exact / 정확한) sum của hai features khác, nhiều coefficient combinations cho cùng prediction.
 
 ## 11. Full row rank có meaning khác
 
@@ -281,17 +284,17 @@ Nếu `A\in\mathbb R^{m\times n}` có full row rank:
 \operatorname{rank}(A)=m,
 ```
 
-column space là toàn bộ `\mathbb R^m`.
+column không gian (space / 공간) là toàn bộ `\mathbb R^m`.
 
 Do đó mọi `b\in\mathbb R^m` đều reachable.
 
-Nhưng nếu `n>m`, null space vẫn có dimension ít nhất `n-m`, nên input solution thường không unique.
+Nhưng nếu `n>m`, null không gian (space / 공간) vẫn có dimension ít nhất `n-m`, nên đầu vào (input / 입력) solution thường không unique.
 
 Đây là distinction giữa surjectivity và injectivity.
 
-## 12. Invertible Matrix Theorem: nhiều statements là cùng một fact
+## 12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact
 
-Cho square matrix `A\in\mathbb R^{n\times n}`. Các statements sau equivalent:
+Cho square ma trận (matrix / 행렬) `A\in\mathbb R^{n\times n}`. Các statements sau equivalent:
 
 ```text
 A invertible
@@ -304,11 +307,11 @@ A invertible
 ⇔ 0 không là eigenvalue
 ```
 
-Đây không phải list cần memorize riêng. Tất cả đều nói:
+Đây không phải danh sách (list / 목록) cần memorize riêng. Tất cả đều nói:
 
-> Không direction nào bị collapse và transformation giữ đủ information để undo.
+> Không direction nào bị collapse và transformation giữ đủ thông tin (information / 정보) để undo.
 
-## 13. Determinant zero là binary singularity test, nhưng không đo conditioning tốt
+## 13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt
 
 Nếu
 
@@ -316,15 +319,15 @@ Nếu
 \det(A)=0,
 ```
 
-matrix singular.
+Ma trận (matrix / 행렬) singular.
 
 Nhưng determinant rất nhỏ không tự động nghĩa ill-conditioned theo scale-independent sense.
 
-Ví dụ scale toàn matrix bởi tiny constant làm determinant shrink mạnh dù relative geometry có thể không tệ tương ứng.
+Ví dụ quy mô (scale / 규모) toàn ma trận (matrix / 행렬) bởi tiny constant làm determinant shrink mạnh dù relative hình học (geometry / 기하학) có thể không tệ tương ứng.
 
-Condition number dựa trên singular values là metric reliability tốt hơn.
+Điều kiện (condition / 조건) number dựa trên singular values là chỉ số (metric / 지표) độ tin cậy (reliability / 신뢰성) tốt hơn.
 
-## 14. Singular values cho quantitative picture của rank loss
+## 14. Singular values cho quantitative picture của rank mất mát (loss / 손실)
 
 SVD:
 
@@ -338,11 +341,11 @@ Singular values:
 \sigma_1\ge\sigma_2\ge\cdots\ge0.
 ```
 
-Rank bằng số singular values nonzero trong exact math.
+Rank bằng số singular values nonzero trong chính xác (exact / 정확한) math.
 
-Nếu smallest singular value rất nhỏ nhưng nonzero, matrix technically invertible nhưng gần singular.
+Nếu smallest singular giá trị (value / 값) rất nhỏ nhưng nonzero, ma trận (matrix / 행렬) technically invertible nhưng gần singular.
 
-Condition number:
+Điều kiện (condition / 조건) number:
 
 ```math
 \kappa_2(A)
@@ -350,13 +353,13 @@ Condition number:
 \frac{\sigma_{max}}{\sigma_{min}}
 ```
 
-cho square invertible matrix.
+cho square invertible ma trận (matrix / 행렬).
 
 Large `\kappa` nghĩa some directions được stretch/compress rất khác nhau, khiến inverse amplify noise.
 
-## 15. Near-null directions quan trọng trong data
+## 15. Near-null directions quan trọng trong dữ liệu (data / 데이터)
 
-Trong noisy real data, exact zero singular values hiếm. Thay vào đó có very small singular values.
+Trong noisy real dữ liệu (data / 데이터), chính xác (exact / 정확한) zero singular values hiếm. Thay vào đó có very small singular values.
 
 Direction `v` với
 
@@ -366,11 +369,11 @@ Direction `v` với
 
 là near-null direction.
 
-Information ở direction đó gần như bị xóa; inversion phải divide by tiny scale và amplify noise.
+Thông tin (information / 정보) ở direction đó gần như bị xóa; inversion phải divide by tiny quy mô (scale / 규모) và amplify noise.
 
-Inverse problems, multicollinearity và ill-conditioned regression đều liên quan structure này.
+Inverse problems, multicollinearity và ill-conditioned regression đều liên quan cấu trúc (structure / 구조) này.
 
-## 16. Inverse là mathematical object, không phải default computational method
+## 16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)
 
 Nếu `A` invertible:
 
@@ -380,21 +383,21 @@ x=A^{-1}b.
 
 đúng về lý thuyết.
 
-Nhưng code thường nên solve
+Nhưng mã (code / 코드) thường nên solve
 
 ```text
 Ax = b
 ```
 
-bằng LU/QR/Cholesky/iterative solver tùy structure.
+bằng LU/QR/Cholesky/iterative solver tùy cấu trúc (structure / 구조).
 
-Tính explicit inverse:
+Tính tường minh (explicit / 명시적) inverse:
 
 - thường tốn hơn;
 - có thể kém stable;
-- tạo unnecessary storage/work.
+- tạo unnecessary lưu trữ (storage / 저장소)/công việc (work / 작업).
 
-Rule engineering:
+Quy tắc (rule / 규칙) kỹ thuật (engineering / 엔지니어링):
 
 ```text
 need solution? solve system
@@ -413,11 +416,11 @@ Với SVD, reciprocal chỉ áp cho nonzero singular values.
 
 Pseudoinverse cho least-squares/minimum-norm solution trong broad cases.
 
-Nếu system underdetermined, `A^+b` thường chọn solution có minimum Euclidean norm.
+Nếu hệ thống (system / 시스템) underdetermined, `A^+b` thường chọn solution có minimum Euclidean norm.
 
 Nếu overdetermined, nó cho least-squares projection solution.
 
-## 18. Determinant và change of variables
+## 18. Determinant và thay đổi (change / 변경) of variables
 
 Cho coordinate transform:
 
@@ -425,13 +428,13 @@ Cho coordinate transform:
 x=T(u).
 ```
 
-Jacobian matrix:
+Jacobian ma trận (matrix / 행렬):
 
 ```math
 J_T(u).
 ```
 
-Local volume scales theo
+Cục bộ (local / 로컬) volume scales theo
 
 ```math
 |\det J_T(u)|.
@@ -446,11 +449,11 @@ Do đó multiple integral đổi variables:
 |\det J_T(u)|\,du.
 ```
 
-Jacobian determinant không phải correction factor bí ẩn; nó đo local volume distortion.
+Jacobian determinant không phải correction factor bí ẩn; nó đo cục bộ (local / 로컬) volume distortion.
 
-## 19. Determinant trong probability
+## 19. Determinant trong xác suất (probability / 확률)
 
-Khi biến đổi continuous random vector, density phải compensate volume scaling.
+Khi biến đổi continuous random véc-tơ (vector / 벡터), density phải compensate volume scaling.
 
 Roughly:
 
@@ -461,13 +464,13 @@ p_X(x)
 \left|\det\frac{\partial x}{\partial y}\right|.
 ```
 
-Nếu mapping expand space, density per unit volume giảm tương ứng để total probability vẫn bằng 1.
+Nếu ánh xạ (mapping / 매핑) expand không gian (space / 공간), density per đơn vị (unit / 단위) volume giảm tương ứng để total xác suất (probability / 확률) vẫn bằng 1.
 
 Đây là cùng geometric meaning với calculus.
 
 ## 20. Rank trong PCA và compression
 
-Nếu data matrix có effective rank `k\ll n`, nhiều dimensions observed thực chất nằm gần low-dimensional subspace.
+Nếu dữ liệu (data / 데이터) ma trận (matrix / 행렬) có effective rank `k\ll n`, nhiều dimensions observed thực chất nằm gần low-dimensional subspace.
 
 Truncated SVD giữ top singular directions:
 
@@ -475,13 +478,13 @@ Truncated SVD giữ top singular directions:
 A_k=U_k\Sigma_kV_k^T.
 ```
 
-Eckart–Young theorem nói đây là best rank-k approximation dưới common norms.
+Eckart–Young theorem nói đây là best rank-k approximation dưới dùng chung (common / 공통) norms.
 
-Low rank = compressible linear structure.
+Low rank = compressible tuyến tính (linear / 선형) cấu trúc (structure / 구조).
 
 ## 21. Rank trong neural networks
 
-Weight matrix rank giới hạn dimension của transformed representation.
+Weight ma trận (matrix / 행렬) rank giới hạn dimension của transformed biểu diễn (representation / 표현).
 
 Low-rank factorization:
 
@@ -491,29 +494,29 @@ W\approx UV^T
 
 có thể giảm parameters/computation.
 
-Nhưng rank reduction cũng giới hạn representational capacity. Compression là trade-off, không phải free improvement.
+Nhưng rank reduction cũng giới hạn representational sức chứa (capacity / 용량). Compression là sự đánh đổi (trade-off / 트레이드오프), không phải free improvement.
 
-## 22. Null space trong constraints
+## 22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)
 
-Cho equality constraints:
+Cho equality các ràng buộc (constraints / 제약조건들):
 
 ```math
 Cx=d.
 ```
 
-Nếu `x_0` feasible, mọi feasible perturbation giữ constraints phải thỏa:
+Nếu `x_0` feasible, mọi feasible perturbation giữ các ràng buộc (constraints / 제약조건들) phải thỏa:
 
 ```math
 C\Delta x=0.
 ```
 
-Do đó feasible directions nằm trong null space của `C`.
+Do đó feasible directions nằm trong null không gian (space / 공간) của `C`.
 
-Optimization under linear constraints có thể parameterize solutions bằng null-space basis.
+Tối ưu hóa (optimization / 최적화) under tuyến tính (linear / 선형) các ràng buộc (constraints / 제약조건들) có thể parameterize solutions bằng null-space basis.
 
 ## 23. Worked example: redundant equations
 
-System:
+Hệ thống (system / 시스템):
 
 ```math
 x+y=2
@@ -523,9 +526,9 @@ x+y=2
 2x+2y=4.
 ```
 
-Second equation không thêm independent information.
+Second equation không thêm independent thông tin (information / 정보).
 
-Matrix:
+Ma trận (matrix / 행렬):
 
 ```math
 A=
@@ -537,7 +540,7 @@ A=
 
 Rank = 1, không phải 2.
 
-Null space dimension:
+Null không gian (space / 공간) dimension:
 
 ```math
 2-1=1.
@@ -549,13 +552,13 @@ Indeed:
 \begin{bmatrix}1\\-1\end{bmatrix}
 ```
 
-nằm trong null space.
+nằm trong null không gian (space / 공간).
 
-Solutions form a line, không phải unique point.
+Solutions form a line, không phải unique điểm (point / 지점).
 
-## 24. Worked example: rank loss as projection
+## 24. Worked example: rank mất mát (loss / 손실) as projection
 
-Matrix
+Ma trận (matrix / 행렬)
 
 ```math
 A=
@@ -571,7 +574,7 @@ map
 (x,y)\mapsto(x,0).
 ```
 
-Nó project plane xuống x-axis.
+Nó dự án (project / 프로젝트) plane xuống x-axis.
 
 ```text
 rank = 1
@@ -582,20 +585,20 @@ inverse = không tồn tại
 
 Bốn concepts đồng thời kể cùng một story.
 
-## 25. Numerical rank không phải exact rank trong finite precision
+## 25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision
 
-Trong floating point, ta cần threshold để quyết định singular value có “effectively zero” hay không.
+Trong floating điểm (point / 지점), ta cần threshold để quyết định singular giá trị (value / 값) có “effectively zero” hay không.
 
 Threshold phụ thuộc:
 
-- matrix scale;
+- ma trận (matrix / 행렬) quy mô (scale / 규모);
 - machine precision;
-- noise level;
-- application tolerance.
+- noise mức (level / 수준);
+- ứng dụng (application / 애플리케이션) tolerance.
 
-Vì vậy numerical rank là model/engineering judgment, không chỉ symbolic count.
+Vì vậy numerical rank là mô hình (model / 모델)/kỹ thuật (engineering / 엔지니어링) judgment, không chỉ symbolic count.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 ```text
 volume scaling → determinant
@@ -608,10 +611,12 @@ low-dimensional structure → SVD/PCA/compression
 coordinate volume change → Jacobian determinant
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Matrix là một channel truyền information qua linear transformation. **Rank** đo dimension của information đi qua. **Null space** chứa information bị xóa. **Determinant** đo signed volume distortion khi input/output dimensions bằng nhau. **Inverse** tồn tại khi không information nào bị mất. **Conditioning** hỏi việc phục hồi information nhạy với noise đến đâu.
+> ma trận (matrix / 행렬) là một channel truyền thông tin (information / 정보) qua tuyến tính (linear / 선형) transformation. **Rank** đo dimension của thông tin (information / 정보) đi qua. **Null không gian (space / 공간)** chứa thông tin (information / 정보) bị xóa. **Determinant** đo signed volume distortion khi đầu vào (input / 입력)/đầu ra (output / 출력) dimensions bằng nhau. **Inverse** tồn tại khi không thông tin (information / 정보) nào bị mất. **Conditioning** hỏi việc phục hồi thông tin (information / 정보) nhạy với noise đến đâu.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Determinant không phải chỉ để test inverse. Rank không phải số nonzero entries. `det(A)` nhỏ không tự động nghĩa matrix ill-conditioned nếu chưa xét scale. Square invertible matrix có null space `{0}`, nhưng rectangular matrices cần injective/surjective analysis riêng. Explicit inverse hiếm khi là cách tốt nhất để solve system. Numerical rank phụ thuộc tolerance; exact algebraic rank và practical rank có thể khác.
+Determinant không phải chỉ để kiểm thử (test / 테스트) inverse. Rank không phải số nonzero entries. `det(A)` nhỏ không tự động nghĩa ma trận (matrix / 행렬) ill-conditioned nếu chưa xét quy mô (scale / 규모). Square invertible ma trận (matrix / 행렬) có null không gian (space / 공간) `{0}`, nhưng rectangular matrices cần injective/surjective phân tích (analysis / 분석) riêng. tường minh (explicit / 명시적) inverse hiếm khi là cách tốt nhất để solve hệ thống (system / 시스템). Numerical rank phụ thuộc tolerance; chính xác (exact / 정확한) algebraic rank và practical rank có thể khác.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

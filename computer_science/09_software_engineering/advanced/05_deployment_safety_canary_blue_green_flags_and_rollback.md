@@ -1,10 +1,13 @@
-# Deployment safety: canary, blue-green, feature flags và rollback limits
+# Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits
 
-Deploy không chỉ là copy artifact. Nó thay đổi một running socio-technical system có traffic, persistent data, caches, queues và dependencies đang ở nhiều versions. Deployment strategy tốt giữ một invariant quan trọng: **mỗi bước rollout phải giới hạn blast radius, giữ compatibility trong coexistence window và tạo đủ evidence để quyết định tiếp tục, dừng, rollback hay roll-forward.**
+> **Mạch đọc:** Đặt **triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. triển khai (deployment / 배포) là một phân tán (distributed / 분산) chuyển tiếp trạng thái (state transition / 상태 전이)** sang **2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Deployment là một distributed state transition
 
-Khi fleet có 100 instances, rollout hiếm khi đổi từ version N sang N+1 atomically. Trong nhiều phút hoặc lâu hơn, hệ thống ở trạng thái mixed-version:
+Deploy không chỉ là bản sao (copy / 복사) sản phẩm tạo ra (artifact / 산출물). Nó thay đổi một running socio-technical hệ thống (system / 시스템) có traffic, persistent dữ liệu (data / 데이터), caches, queues và dependencies đang ở nhiều versions. triển khai (deployment / 배포) chiến lược (strategy / 전략) tốt giữ một bất biến (invariant / 불변식) quan trọng: **mỗi bước rollout phải giới hạn blast radius, giữ tính tương thích (compatibility / 호환성) trong coexistence cửa sổ (window / 윈도우) và tạo đủ bằng chứng (evidence / 증거) để quyết định tiếp tục, dừng, quay lui (rollback / 롤백) hay roll-forward.**
+
+## 1. triển khai (deployment / 배포) là một phân tán (distributed / 분산) chuyển tiếp trạng thái (state transition / 상태 전이)
+
+Khi fleet có 100 instances, rollout hiếm khi đổi từ phiên bản (version / 버전) N sang N+1 atomically. Trong nhiều phút hoặc lâu hơn, hệ thống ở trạng thái mixed-version:
 
 ```text
 clients cũ + mới
@@ -15,13 +18,13 @@ cache entries cũ
 background jobs cũ
 ```
 
-Correctness phải giữ trong **transition state**, không chỉ ở trạng thái cuối.
+Tính đúng đắn (correctness / 정확성) phải giữ trong **chuyển tiếp (transition / 전이) trạng thái (state / 상태)**, không chỉ ở trạng thái cuối.
 
-## 2. Compatibility là invariant đầu tiên của rolling deployment
+## 2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)
 
-Old/new versions coexist nên protocol/schema cần hỗ trợ overlap window. Nếu N+1 ghi data mà N không đọc được, rolling deploy hoặc rollback có thể fail dù từng version riêng lẻ test pass.
+Old/new versions coexist nên giao thức (protocol / 프로토콜)/lược đồ (schema / 스키마) cần hỗ trợ overlap cửa sổ (window / 윈도우). Nếu N+1 ghi dữ liệu (data / 데이터) mà N không đọc được, rolling deploy hoặc quay lui (rollback / 롤백) có thể thất bại (fail / 실패) dù từng phiên bản (version / 버전) riêng lẻ kiểm thử (test / 테스트) pass.
 
-Cần reasoning cả hai hướng khi cần:
+Cần lập luận (reasoning / 추론) cả hai hướng khi cần:
 
 ```text
 new reader đọc old data?
@@ -30,35 +33,35 @@ new writer tạo format old consumer có chịu được?
 message/event consumer lag có kéo version cũ tồn tại lâu hơn dự kiến?
 ```
 
-Compatibility boundary có thể là API, DB schema, event schema, cache encoding hoặc shared file format.
+Tính tương thích (compatibility / 호환성) ranh giới (boundary / 경계) có thể là API, DB lược đồ (schema / 스키마), sự kiện (event / 이벤트) lược đồ (schema / 스키마), bộ nhớ đệm (cache / 캐시) encoding hoặc dùng chung (shared / 공유) tệp (file / 파일) format.
 
-## 3. Rolling deployment giữ capacity nhưng làm state space lớn hơn
+## 3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn
 
-Thay instances dần giúp service tiếp tục phục vụ và giảm blast radius, nhưng mixed-version state tăng complexity.
+Thay instances dần giúp dịch vụ (service / 서비스) tiếp tục phục vụ và giảm blast radius, nhưng mixed-version trạng thái (state / 상태) tăng độ phức tạp (complexity / 복잡도).
 
-Nếu readiness sai, deployment controller có thể đưa instance chưa warm vào traffic. Nếu terminate quá nhanh, in-flight work bị cắt. Nếu rollout đồng thời quá nhiều nodes, remaining capacity có thể đi qua utilization knee.
+Nếu readiness sai, triển khai (deployment / 배포) controller có thể đưa instance chưa warm vào traffic. Nếu terminate quá nhanh, in-flight công việc (work / 작업) bị cắt. Nếu rollout đồng thời quá nhiều nodes, remaining sức chứa (capacity / 용량) có thể đi qua utilization knee.
 
-Deployment policy vì thế liên quan trực tiếp capacity engineering.
+Triển khai (deployment / 배포) chính sách (policy / 정책) vì thế liên quan trực tiếp sức chứa (capacity / 용량) kỹ thuật (engineering / 엔지니어링).
 
-## 4. Blue-green giảm traffic-switch cost nhưng không tách state tự động
+## 4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động
 
-Blue-green duy trì hai environments và chuyển traffic. Binary rollback routing có thể rất nhanh nếu state/protocol tương thích.
+Blue-green duy trì hai environments và chuyển traffic. nhị phân (binary / 이진) quay lui (rollback / 롤백) routing có thể rất nhanh nếu trạng thái (state / 상태)/giao thức (protocol / 프로토콜) tương thích.
 
-Nhưng database, message broker, third-party side effects thường vẫn shared. Nếu green đã chạy destructive migration hoặc phát external side effect, chuyển traffic về blue không đưa world quay lại trạng thái trước.
+Nhưng cơ sở dữ liệu (database / 데이터베이스), message broker, third-party side effects thường vẫn dùng chung (shared / 공유). Nếu green đã chạy destructive di chuyển (migration / 마이그레이션) hoặc phát bên ngoài (external / 외부) side tác động (effect / 효과), chuyển traffic về blue không đưa world quay lại trạng thái trước.
 
-“Blue-green rollback” chỉ mạnh tới boundary state mà hai environments thực sự tách được.
+“Blue-green quay lui (rollback / 롤백)” chỉ mạnh tới ranh giới (boundary / 경계) trạng thái (state / 상태) mà hai environments thực sự tách được.
 
 ## 5. Canary là experiment dưới traffic thật
 
-Canary gửi một phần traffic tới version mới rồi đo error, latency, saturation và business invariants.
+Canary gửi một phần traffic tới phiên bản (version / 버전) mới rồi đo lỗi (error / 오류), độ trễ (latency / 지연 시간), saturation và nghiệp vụ (business / 비즈니스) invariants.
 
-Canary giảm blast radius nhưng chỉ có giá trị nếu traffic sample chạm failure mode cần phát hiện. 1% random traffic có thể bỏ sót rare workflow, large tenant, specific region hoặc high-cost request class.
+Canary giảm blast radius nhưng chỉ có giá trị nếu traffic mẫu (sample / 표본) chạm dạng thất bại (failure mode / 실패 모드) cần phát hiện. 1% random traffic có thể bỏ sót rare workflow, large tenant, specific region hoặc high-cost yêu cầu (request / 요청) lớp (class / 클래스).
 
-Canary design nên chọn cohort theo risk, không chỉ percentage.
+Canary thiết kế (design / 설계) nên chọn cohort theo rủi ro (risk / 위험), không chỉ percentage.
 
-## 6. Guardrail phải gắn với invariant, không chỉ CPU/error rate
+## 6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)
 
-Một release có thể trả HTTP 200 nhưng phá business state. Guardrail tốt có thể gồm:
+Một bản phát hành (release / 릴리스) có thể trả HTTP 200 nhưng phá nghiệp vụ (business / 비즈니스) trạng thái (state / 상태). Guardrail tốt có thể gồm:
 
 ```text
 error/latency SLO burn
@@ -70,19 +73,19 @@ authorization-denied anomaly
 schema compatibility errors
 ```
 
-Metric noisy hoặc label cardinality sai có thể làm auto rollback giả. Guardrail cần threshold, window và baseline hợp lý.
+Chỉ số (metric / 지표) noisy hoặc label cardinality sai có thể làm auto quay lui (rollback / 롤백) giả. Guardrail cần threshold, cửa sổ (window / 윈도우) và baseline hợp lý.
 
-## 7. Feature flag tách code deployment khỏi feature exposure
+## 7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure
 
-Flag cho phép deploy dormant code rồi bật dần theo cohort.
+Flag cho phép deploy dormant mã (code / 코드) rồi bật dần theo cohort.
 
-Nhưng mỗi flag tạo thêm state dimension. N flags có thể tạo nhiều combinations khó test. Flag lâu ngày trở thành permanent branching complexity.
+Nhưng mỗi flag tạo thêm trạng thái (state / 상태) dimension. N flags có thể tạo nhiều combinations khó kiểm thử (test / 테스트). Flag lâu ngày trở thành permanent branching độ phức tạp (complexity / 복잡도).
 
-Flag cần owner, purpose, expiry/cleanup condition và safe default. Security-critical control không nên biến thành “flag có thể vô tình off” nếu invariant yêu cầu luôn enforce.
+Flag cần đơn vị sở hữu (owner / 오너), purpose, expiry/cleanup điều kiện (condition / 조건) và safe default. Security-critical điều khiển (control / 제어) không nên biến thành “flag có thể vô tình off” nếu bất biến (invariant / 불변식) yêu cầu luôn enforce.
 
-## 8. Rollback không phải time machine
+## 8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine
 
-Binary rollback không undo:
+Nhị phân (binary / 이진) quay lui (rollback / 롤백) không undo:
 
 ```text
 DB migration đã mất data
@@ -93,13 +96,13 @@ external API side effect
 cache/state đã đổi format
 ```
 
-Do đó cần tách **reversible code state** khỏi **irreversible world state**.
+Do đó cần tách **reversible mã (code / 코드) trạng thái (state / 상태)** khỏi **irreversible world trạng thái (state / 상태)**.
 
-Nhiều incident an toàn hơn khi roll-forward bằng compatibility fix thay vì cố chạy old binary trên state mới.
+Nhiều sự cố (incident / 인시던트) an toàn hơn khi roll-forward bằng tính tương thích (compatibility / 호환성) fix thay vì cố chạy old nhị phân (binary / 이진) trên trạng thái (state / 상태) mới.
 
-## 9. Database migration là phần deployment khó đảo nhất
+## 9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất
 
-Expand-contract pattern:
+Expand-contract mẫu (pattern / 패턴):
 
 ```text
 1. add compatible structure
@@ -110,25 +113,25 @@ Expand-contract pattern:
 6. remove old structure sau safe window
 ```
 
-Destructive drop/rename sớm phá rollback và mixed-version fleet.
+Destructive drop/rename sớm phá quay lui (rollback / 롤백) và mixed-version fleet.
 
-Backfill cũng là workload production. Nó có thể saturate DB/storage và làm user traffic chậm, nên migration cần rate limit và observability.
+Backfill cũng là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경). Nó có thể saturate DB/lưu trữ (storage / 저장소) và làm người dùng (user / 사용자) traffic chậm, nên di chuyển (migration / 마이그레이션) cần tỷ lệ (rate / 비율) limit và khả năng quan sát (observability / 관측 가능성).
 
-## 10. Queue/event làm coexistence window dài hơn rollout window
+## 10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)
 
-Dù toàn fleet đã lên N+1, queue có thể còn message được producer N tạo từ trước. Consumer phải hỗ trợ format cũ tới khi backlog drain hoặc retention window hết.
+Dù toàn fleet đã lên N+1, hàng đợi (queue / 큐) có thể còn message được producer N tạo từ trước. bên tiêu thụ (consumer / 소비자) phải hỗ trợ format cũ tới khi backlog drain hoặc retention cửa sổ (window / 윈도우) hết.
 
-Do đó protocol deprecation cần dựa **data/message lifetime**, không chỉ “deployment đã hoàn tất”.
+Do đó giao thức (protocol / 프로토콜) deprecation cần dựa **dữ liệu (data / 데이터)/message thời gian tồn tại (lifetime / 수명)**, không chỉ “triển khai (deployment / 배포) đã hoàn tất”.
 
-Đây là reason schema evolution là distributed protocol theo thời gian.
+Đây là reason lược đồ (schema / 스키마) evolution là phân tán (distributed / 분산) giao thức (protocol / 프로토콜) theo thời gian.
 
 ## 11. Readiness, liveness và health là control-loop inputs
 
-Process start không nghĩa ready nhận traffic. Readiness nên phản ánh local ability phục vụ request cần thiết.
+Tiến trình (process / 프로세스) start không nghĩa ready nhận traffic. Readiness nên phản ánh cục bộ (local / 로컬) ability phục vụ yêu cầu (request / 요청) cần thiết.
 
-Nhưng nếu readiness phụ thuộc mọi downstream service, một dependency incident có thể làm toàn fleet tự rút khỏi load balancer, tạo outage lớn hơn.
+Nhưng nếu readiness phụ thuộc mọi downstream dịch vụ (service / 서비스), một phụ thuộc (dependency / 의존성) sự cố (incident / 인시던트) có thể làm toàn fleet tự rút khỏi bộ cân bằng tải (load balancer / 로드 밸런서), tạo outage lớn hơn.
 
-Health signal phải được thiết kế theo recovery action tương ứng:
+Health tín hiệu (signal / 신호) phải được thiết kế theo khôi phục (recovery / 복구) hành động (action / 동작) tương ứng:
 
 ```text
 restart process giải được không?
@@ -136,27 +139,27 @@ rút khỏi traffic có giảm blast radius không?
 dependency failure là local hay shared?
 ```
 
-Health check sai là feedback controller sai.
+Health check sai là phản hồi (feedback / 피드백) controller sai.
 
-## 12. Connection draining giữ in-flight invariant
+## 12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)
 
-Khi instance bị terminate/rút traffic, existing requests/connections cần thời gian hoàn tất hoặc cancellation semantics rõ.
+Khi instance bị terminate/rút traffic, existing requests/connections cần thời gian hoàn tất hoặc cancellation ngữ nghĩa (semantics / 의미론) rõ.
 
-HTTP/2, WebSocket, long polling hoặc background task có lifetime dài hơn request đơn giản. Drain timeout quá ngắn làm user-visible errors; quá dài làm rollout chậm và giữ old version lâu.
+HTTP/2, WebSocket, long polling hoặc background tác vụ (task / 작업) có thời gian tồn tại (lifetime / 수명) dài hơn yêu cầu (request / 요청) đơn giản. Drain hết thời gian chờ (timeout / 타임아웃) quá ngắn làm user-visible errors; quá dài làm rollout chậm và giữ old phiên bản (version / 버전) lâu.
 
-Deployment controller phải hiểu connection/work lifecycle thực tế.
+Triển khai (deployment / 배포) controller phải hiểu liên kết (connection / 연결)/công việc (work / 작업) vòng đời (lifecycle / 생명주기) thực tế.
 
-## 13. Cache warm-up và cold-start là phase khác steady state
+## 13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)
 
-New instance có empty local cache, cold JIT, unloaded code/data pages và empty connection pools. Canary latency ban đầu có thể xấu vì warm-up, hoặc ngược lại canary nhẹ load nên trông tốt hơn full rollout.
+New instance có empty cục bộ (local / 로컬) bộ nhớ đệm (cache / 캐시), cold JIT, unloaded mã (code / 코드)/dữ liệu (data / 데이터) pages và empty liên kết (connection / 연결) pools. Canary độ trễ (latency / 지연 시간) ban đầu có thể xấu vì warm-up, hoặc ngược lại canary nhẹ tải (load / 로드) nên trông tốt hơn full rollout.
 
-Rollout evidence cần phân biệt warm-up effect với regression thật.
+Rollout bằng chứng (evidence / 증거) cần phân biệt warm-up tác động (effect / 효과) với regression thật.
 
-Một deployment có thể pass canary nhưng fail ở 50% traffic khi shared DB/cache pressure tăng phi tuyến.
+Một triển khai (deployment / 배포) có thể pass canary nhưng thất bại (fail / 실패) ở 50% traffic khi dùng chung (shared / 공유) DB/bộ nhớ đệm (cache / 캐시) pressure tăng phi tuyến.
 
-## 14. Capacity headroom là điều kiện deployment safety
+## 14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)
 
-Rolling update làm một phần capacity unavailable. Nếu steady state đã chạy gần utilization knee, rollout itself có thể tạo overload.
+Rolling cập nhật (update / 업데이트) làm một phần sức chứa (capacity / 용량) unavailable. Nếu steady trạng thái (state / 상태) đã chạy gần utilization knee, rollout itself có thể tạo overload.
 
 Safe deploy cần headroom cho:
 
@@ -169,25 +172,25 @@ cache cold miss
 rollback overlap
 ```
 
-Deployment và capacity planning không thể tách rời.
+Triển khai (deployment / 배포) và sức chứa (capacity / 용량) planning không thể tách rời.
 
-## 15. Failure mode: retry storm trong rollout
+## 15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout
 
-Nếu new version chậm, client/proxy retry có thể tăng load lên cả old và new fleet. Auto rollback cũng tạo connection churn/cold cache, làm recovery khó hơn.
+Nếu new phiên bản (version / 버전) chậm, máy khách (client / 클라이언트)/proxy thử lại (retry / 재시도) có thể tăng tải (load / 로드) lên cả old và new fleet. Auto quay lui (rollback / 롤백) cũng tạo liên kết (connection / 연결) churn/cold bộ nhớ đệm (cache / 캐시), làm khôi phục (recovery / 복구) khó hơn.
 
-Guardrail cần nhìn attempt/retry rate và queue depth, không chỉ error rate. Rollback action bản thân cũng là một load event cần capacity.
+Guardrail cần nhìn attempt/thử lại (retry / 재시도) tỷ lệ (rate / 비율) và hàng đợi (queue / 큐) độ sâu (depth / 깊이), không chỉ lỗi (error / 오류) tỷ lệ (rate / 비율). quay lui (rollback / 롤백) hành động (action / 동작) bản thân cũng là một tải (load / 로드) sự kiện (event / 이벤트) cần sức chứa (capacity / 용량).
 
-## 16. Security rollout cũng có compatibility window
+## 16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)
 
-Certificate/trust bundle, authorization policy, signing key hoặc token issuer rotation đều là deployment-like distributed state changes.
+Certificate/trust bundle, authorization chính sách (policy / 정책), signing key hoặc đơn vị từ (token / 토큰) issuer rotation đều là deployment-like phân tán (distributed / 분산) trạng thái (state / 상태) changes.
 
-Publish verifier trust trước khi issuer chuyển key thường an toàn hơn đổi issuer trước rồi hy vọng consumers update kịp.
+Publish verifier trust trước khi issuer chuyển key thường an toàn hơn đổi issuer trước rồi hy vọng consumers cập nhật (update / 업데이트) kịp.
 
-Security config nên có canary/audit/rollback discipline tương tự code, nhưng không được rollback theo cách resurrect credential đã revoke vì compromise.
+Bảo mật (security / 보안) cấu hình (config / 설정) nên có canary/kiểm tra (audit / 감사)/quay lui (rollback / 롤백) discipline tương tự mã (code / 코드), nhưng không được quay lui (rollback / 롤백) theo cách resurrect credential đã revoke vì compromise.
 
-## 17. Production evidence trước khi tăng rollout
+## 17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout
 
-Một promotion decision nên dựa trên cohort-aware evidence:
+Một promotion quyết định (decision / 결정) nên dựa trên cohort-aware bằng chứng (evidence / 증거):
 
 ```text
 request success/error by version
@@ -200,13 +203,13 @@ schema/protocol decode errors
 log/trace anomalies
 ```
 
-So sánh canary với control cùng traffic/time window tốt hơn nhìn metric tuyệt đối đơn lẻ.
+So sánh canary với điều khiển (control / 제어) cùng traffic/thời gian (time / 시간) cửa sổ (window / 윈도우) tốt hơn nhìn chỉ số (metric / 지표) tuyệt đối đơn lẻ.
 
-## 18. Deployment incident timeline phải giữ version identity
+## 18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)
 
-Trace/log/metric cần biết instance/version/build/config/flag state. Nếu không, mixed-version incident khó reconstruct.
+Dấu vết (trace / 추적)/log/chỉ số (metric / 지표) cần biết instance/phiên bản (version / 버전)/bản dựng (build / 빌드)/cấu hình (config / 설정)/flag trạng thái (state / 상태). Nếu không, mixed-version sự cố (incident / 인시던트) khó reconstruct.
 
-Useful metadata:
+Useful siêu dữ liệu (metadata / 메타데이터):
 
 ```text
 artifact digest/version
@@ -216,11 +219,11 @@ deployment wave/cohort
 instance/zone/region
 ```
 
-Observability không version-aware sẽ biến deployment regression thành “random errors across fleet”.
+Khả năng quan sát (observability / 관측 가능성) không version-aware sẽ biến triển khai (deployment / 배포) regression thành “random errors across fleet”.
 
-## 19. Reversibility phải được test, không chỉ viết trong runbook
+## 19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook
 
-Rollback path có thể thối theo thời gian. Test cần bao gồm:
+Quay lui (rollback / 롤백) đường dẫn (path / 경로) có thể thối theo thời gian. kiểm thử (test / 테스트) cần bao gồm:
 
 ```text
 deploy N+1 → rollback N
@@ -230,12 +233,14 @@ queue còn old/new messages
 failure giữa migration steps
 ```
 
-Nếu rollback chưa được test với production-like state, nó là hypothesis chứ chưa phải capability.
+Nếu quay lui (rollback / 롤백) chưa được kiểm thử (test / 테스트) với production-like trạng thái (state / 상태), nó là hypothesis chứ chưa phải năng lực (capability / 역량).
 
 ## 20. Mô hình tư duy
 
-> Safe deployment là **controlled exposure dưới uncertainty**. Rolling/canary/blue-green/flags chỉ là mechanisms. Invariant thật là compatibility trong transition, bounded blast radius, sufficient capacity và evidence để quyết định bước tiếp theo. Rollback chỉ tồn tại trong phạm vi code/data/protocol còn reversible; ngoài phạm vi đó phải thiết kế roll-forward và reconciliation.
+> Safe triển khai (deployment / 배포) là **controlled exposure dưới bất định (uncertainty / 불확실성)**. Rolling/canary/blue-green/flags chỉ là mechanisms. bất biến (invariant / 불변식) thật là tính tương thích (compatibility / 호환성) trong chuyển tiếp (transition / 전이), bounded blast radius, sufficient sức chứa (capacity / 용량) và bằng chứng (evidence / 증거) để quyết định bước tiếp theo. quay lui (rollback / 롤백) chỉ tồn tại trong phạm vi mã (code / 코드)/dữ liệu (data / 데이터)/giao thức (protocol / 프로토콜) còn reversible; ngoài phạm vi đó phải thiết kế roll-forward và reconciliation.
 
 ## Kết nối
 
 Đọc cùng [Architecture decisions/System Design](./00_architecture_decisions_evolution_and_socio_technical_constraints.md), [Schema/protocol evolution](../../08_software_systems/advanced/06_schema_protocol_evolution_and_compatibility_contracts.md), [Capacity/admission control](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md) và [Security identity rotation](../../07_security_reliability/advanced/02_pki_certificate_validation_mtls_and_service_identity.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 architecture decisions evolution and socio technical constraints](./00_architecture_decisions_evolution_and_socio_technical_constraints.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

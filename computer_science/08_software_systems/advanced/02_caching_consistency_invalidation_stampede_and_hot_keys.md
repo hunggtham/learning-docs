@@ -1,14 +1,17 @@
-# Caching consistency, invalidation, stampede và hot keys
+# Caching consistency, vô hiệu hóa (invalidation / 무효화), stampede và hot keys
 
-Cache giảm latency và load bằng cách giữ bản sao state gần consumer hơn. Nhưng ngay khi có thêm một bản sao, hệ thống phải trả lời: **source of truth ở đâu, stale bao lâu được chấp nhận, update/invalidation được ordering thế nào, và backend sống sót ra sao khi cache đồng loạt miss hoặc biến mất.**
+> **Mạch đọc:** Đặt **Caching consistency, vô hiệu hóa (invalidation / 무효화), stampede và hot keys** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. bất biến (invariant / 불변식) đầu tiên: phải biết authoritative trạng thái (state / 상태) nằm ở đâu** sang **2. Cache-aside đơn giản nhưng có race thứ tự (ordering / 순서)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một cache vì thế không chỉ là data structure; nó là một **replication protocol có eviction policy**.
 
-## 1. Invariant đầu tiên: phải biết authoritative state nằm ở đâu
+Bộ nhớ đệm (cache / 캐시) giảm độ trễ (latency / 지연 시간) và tải (load / 로드) bằng cách giữ bản sao trạng thái (state / 상태) gần bên tiêu thụ (consumer / 소비자) hơn. Nhưng ngay khi có thêm một bản sao, hệ thống phải trả lời: **nguồn chuẩn (source of truth / 정본) ở đâu, stale bao lâu được chấp nhận, cập nhật (update / 업데이트)/vô hiệu hóa (invalidation / 무효화) được thứ tự (ordering / 순서) thế nào, và backend sống sót ra sao khi bộ nhớ đệm (cache / 캐시) đồng loạt miss hoặc biến mất.**
 
-Nếu database có `V2` nhưng cache còn `V1`, đó không tự động là bug. Nó chỉ là bug nếu freshness contract nói reader phải thấy `V2` ở thời điểm đó.
+Một bộ nhớ đệm (cache / 캐시) vì thế không chỉ là cấu trúc dữ liệu (data structure / 자료구조); nó là một **replication giao thức (protocol / 프로토콜) có eviction chính sách (policy / 정책)**.
 
-Trước khi thêm cache, cần định nghĩa contract như:
+## 1. bất biến (invariant / 불변식) đầu tiên: phải biết authoritative trạng thái (state / 상태) nằm ở đâu
+
+Nếu cơ sở dữ liệu (database / 데이터베이스) có `V2` nhưng bộ nhớ đệm (cache / 캐시) còn `V1`, đó không tự động là bug. Nó chỉ là bug nếu freshness đặc tả hợp đồng (contract / 계약) nói reader phải thấy `V2` ở thời điểm đó.
+
+Trước khi thêm bộ nhớ đệm (cache / 캐시), cần định nghĩa đặc tả hợp đồng (contract / 계약) như:
 
 ```text
 strongly fresh?
@@ -18,11 +21,11 @@ stale-while-revalidate được không?
 cache failure có bypass về origin không?
 ```
 
-Không có contract, team chỉ tranh luận “stale thế này có chấp nhận được không?” sau incident.
+Không có đặc tả hợp đồng (contract / 계약), nhóm (team / 팀) chỉ tranh luận “stale thế này có chấp nhận được không?” sau sự cố (incident / 인시던트).
 
-## 2. Cache-aside đơn giản nhưng có race ordering
+## 2. Cache-aside đơn giản nhưng có race thứ tự (ordering / 순서)
 
-Trong cache-aside, reader miss cache → đọc DB → populate cache. Writer thường update DB rồi invalidate/update cache.
+Trong cache-aside, reader miss bộ nhớ đệm (cache / 캐시) → đọc DB → populate bộ nhớ đệm (cache / 캐시). Writer thường cập nhật (update / 업데이트) DB rồi invalidate/cập nhật (update / 업데이트) bộ nhớ đệm (cache / 캐시).
 
 Race điển hình:
 
@@ -32,29 +35,29 @@ Writer ghi DB V2 → invalidate cache
 Reader cũ set cache V1
 ```
 
-Stale value bị resurrect. TTL cuối cùng có thể sửa nhưng window stale vẫn tồn tại.
+Stale giá trị (value / 값) bị resurrect. TTL cuối cùng có thể sửa nhưng cửa sổ (window / 윈도우) stale vẫn tồn tại.
 
-Mitigation có thể là versioned value/key, delayed/double invalidation, write-through hoặc ordering token tùy requirement. Không có strategy universal.
+Mitigation có thể là versioned giá trị (value / 값)/key, delayed/double vô hiệu hóa (invalidation / 무효화), write-through hoặc thứ tự (ordering / 순서) đơn vị từ (token / 토큰) tùy yêu cầu (requirement / 요구사항). Không có chiến lược (strategy / 전략) universal.
 
 ## 3. TTL là freshness bound thô, không phải consistency proof
 
-TTL chỉ định entry được reuse trong bao lâu trước refresh/expiry. TTL dài tăng hit rate nhưng stale lâu; TTL ngắn tăng origin load.
+TTL chỉ định entry được reuse trong bao lâu trước refresh/expiry. TTL dài tăng hit tỷ lệ (rate / 비율) nhưng stale lâu; TTL ngắn tăng origin tải (load / 로드).
 
 Nếu hàng nghìn keys cùng TTL và cùng populate lúc deploy, expiry đồng loạt tạo traffic spike. Jitter TTL giúp phân tán expiry.
 
-TTL giải cleanup và bounded staleness thô, nhưng không giải read-your-writes hay race ordering tự động.
+TTL giải cleanup và bounded staleness thô, nhưng không giải read-your-writes hay race thứ tự (ordering / 순서) tự động.
 
-## 4. Write-through và write-behind đổi failure semantics
+## 4. Write-through và write-behind đổi thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
-Write-through đặt cache trong write path; read freshness tốt hơn nhưng write latency/coupling tăng.
+Write-through đặt bộ nhớ đệm (cache / 캐시) trong ghi (write / 쓰기) đường dẫn (path / 경로); read freshness tốt hơn nhưng ghi (write / 쓰기) độ trễ (latency / 지연 시간)/coupling tăng.
 
-Write-behind ghi cache/buffer rồi flush source async; throughput có thể tốt nhưng durability, ordering và recovery trở nên khó hơn. Khi cache node chết trước flush, logical write có thể mất nếu cache đang đóng vai trò queue bền mà thực tế không durable.
+Write-behind ghi bộ nhớ đệm (cache / 캐시)/buffer rồi flush nguồn (source / 소스) async; thông lượng (throughput / 처리량) có thể tốt nhưng durability, thứ tự (ordering / 순서) và khôi phục (recovery / 복구) trở nên khó hơn. Khi bộ nhớ đệm (cache / 캐시) nút (node / 노드) chết trước flush, logical ghi (write / 쓰기) có thể mất nếu bộ nhớ đệm (cache / 캐시) đang đóng vai trò hàng đợi (queue / 큐) bền mà thực tế không durable.
 
-Do đó cache pattern phải được đánh giá cùng durability contract, không chỉ hit rate.
+Do đó bộ nhớ đệm (cache / 캐시) mẫu (pattern / 패턴) phải được đánh giá cùng durability đặc tả hợp đồng (contract / 계약), không chỉ hit tỷ lệ (rate / 비율).
 
-## 5. Multi-layer cache làm invalidation path dài hơn
+## 5. Multi-layer bộ nhớ đệm (cache / 캐시) làm vô hiệu hóa (invalidation / 무효화) đường dẫn (path / 경로) dài hơn
 
-Browser, CDN, reverse proxy, service-local cache, distributed cache và DB buffer pool có thể cùng giữ state.
+Trình duyệt (browser / 브라우저), CDN, reverse proxy, service-local bộ nhớ đệm (cache / 캐시), phân tán (distributed / 분산) bộ nhớ đệm (cache / 캐시) và DB buffer pool có thể cùng giữ trạng thái (state / 상태).
 
 ```text
 origin DB
@@ -64,21 +67,21 @@ origin DB
 → browser
 ```
 
-Fix Redis invalidation không giúp nếu CDN vẫn giữ stale response. Debugging cần biết key/version/header semantics ở từng layer.
+Fix Redis vô hiệu hóa (invalidation / 무효화) không giúp nếu CDN vẫn giữ stale phản hồi (response / 응답). Debugging cần biết key/phiên bản (version / 버전)/header ngữ nghĩa (semantics / 의미론) ở từng tầng (layer / 계층).
 
-Cache càng nhiều tầng, consistency contract càng cần rõ về nơi nào được phép stale bao lâu.
+Bộ nhớ đệm (cache / 캐시) càng nhiều tầng, consistency đặc tả hợp đồng (contract / 계약) càng cần rõ về nơi nào được phép stale bao lâu.
 
 ## 6. Read-your-writes là guarantee riêng
 
-User vừa update profile rồi GET ngay có thể đọc cache cũ. Global strong consistency có thể quá đắt, nhưng session-scoped read-your-writes đôi khi đủ.
+Người dùng (user / 사용자) vừa cập nhật (update / 업데이트) profile rồi GET ngay có thể đọc bộ nhớ đệm (cache / 캐시) cũ. toàn cục (global / 전역) strong consistency có thể quá đắt, nhưng session-scoped read-your-writes đôi khi đủ.
 
-Write path có thể update/invalidate đồng bộ, response trả version token, hoặc subsequent read tạm bypass stale layer.
+Ghi (write / 쓰기) đường dẫn (path / 경로) có thể cập nhật (update / 업데이트)/invalidate đồng bộ, phản hồi (response / 응답) trả phiên bản (version / 버전) đơn vị từ (token / 토큰), hoặc subsequent read tạm bypass stale tầng (layer / 계층).
 
 Điểm quan trọng là guarantee phải được thiết kế, không xuất hiện tự nhiên từ TTL.
 
-## 7. Cache stampede là synchronized miss failure
+## 7. bộ nhớ đệm (cache / 캐시) stampede là synchronized miss thất bại (failure / 실패)
 
-Hot key hết hạn và hàng nghìn requests cùng miss có thể cùng gọi origin. Cache được thêm để giảm load nhưng lại biến thành trigger cho thundering herd.
+Hot key hết hạn và hàng nghìn requests cùng miss có thể cùng gọi origin. bộ nhớ đệm (cache / 캐시) được thêm để giảm tải (load / 로드) nhưng lại biến thành trigger cho thundering herd.
 
 Mitigation gồm:
 
@@ -90,47 +93,47 @@ per-key refresh ownership
 bounded regeneration concurrency
 ```
 
-Invariant performance cần là: một miss wave không được biến thành N expensive origin calls nếu regeneration có thể share.
+Bất biến (invariant / 불변식) hiệu năng (performance / 성능) cần là: một miss wave không được biến thành N expensive origin calls nếu regeneration có thể share.
 
-## 8. Hot key là skew problem, không phải average-capacity problem
+## 8. Hot key là skew bài toán (problem / 문제), không phải average-capacity bài toán (problem / 문제)
 
-Consistent hashing phân keys giữa shards nhưng không chia được một key duy nhất nếu mỗi key chỉ có một owner shard.
+Consistent hashing phân keys giữa shards nhưng không chia được một key duy nhất nếu mỗi key chỉ có một đơn vị sở hữu (owner / 오너) shard.
 
-Một key cực nóng có thể saturate shard dù cluster trung bình còn rảnh. Giải pháp có thể dùng near-cache, replication của hot value, request coalescing hoặc thay đổi data model.
+Một key cực nóng có thể saturate shard dù cluster trung bình còn rảnh. Giải pháp có thể dùng near-cache, replication của hot giá trị (value / 값), yêu cầu (request / 요청) coalescing hoặc thay đổi mô hình dữ liệu (data model / 데이터 모델).
 
-Average QPS/shard che mất distribution skew. Production evidence cần per-key/per-shard tail.
+Average QPS/shard che mất phân phối (distribution / 분포) skew. bằng chứng vận hành (production evidence / 운영 증거) cần per-key/per-shard tail.
 
-## 9. Negative caching cũng có consistency cost
+## 9. Negative caching cũng có consistency chi phí (cost / 비용)
 
-Lưu `not found` giúp ngăn repeated lookup cho object không tồn tại hoặc attack probing. Nhưng object vừa được tạo có thể bị che bởi negative entry cho tới TTL.
+Lưu `not found` giúp ngăn repeated lookup cho đối tượng (object / 객체) không tồn tại hoặc attack probing. Nhưng đối tượng (object / 객체) vừa được tạo có thể bị che bởi negative entry cho tới TTL.
 
-Negative TTL thường cần ngắn hơn và creation path có thể cần invalidation. Absence cũng là state cần version/freshness policy.
+Negative TTL thường cần ngắn hơn và creation đường dẫn (path / 경로) có thể cần vô hiệu hóa (invalidation / 무효화). Absence cũng là trạng thái (state / 상태) cần phiên bản (version / 버전)/freshness chính sách (policy / 정책).
 
-## 10. Versioned key giảm invalidation race bằng immutable naming
+## 10. Versioned key giảm vô hiệu hóa (invalidation / 무효화) race bằng immutable naming
 
-Thay vì mutate `profile:123`, system có thể dùng `profile:123:v42`. Update tạo version mới; old key tự expire.
+Thay vì mutate `profile:123`, hệ thống (system / 시스템) có thể dùng `profile:123:v42`. cập nhật (update / 업데이트) tạo phiên bản (version / 버전) mới; old key tự expire.
 
-Điều này biến invalidation thành pointer/version update, giảm một số race. Đổi lại key churn/memory footprint tăng và vẫn cần nơi authoritative để biết current version.
+Điều này biến vô hiệu hóa (invalidation / 무효화) thành pointer/phiên bản (version / 버전) cập nhật (update / 업데이트), giảm một số race. Đổi lại key churn/bộ nhớ (memory / 메모리) footprint tăng và vẫn cần nơi authoritative để biết hiện tại (current / 현재) phiên bản (version / 버전).
 
 Versioned key là ví dụ đổi mutable-state coordination lấy immutable-state indirection.
 
-## 11. Cache key correctness là security invariant
+## 11. bộ nhớ đệm (cache / 캐시) key tính đúng đắn (correctness / 정확성) là bảo mật (security / 보안) bất biến (invariant / 불변식)
 
-Nếu response semantic phụ thuộc tenant, user, locale, permission hoặc feature state nhưng cache key thiếu dimension tương ứng, system có thể trả data của principal khác.
+Nếu phản hồi (response / 응답) ngữ nghĩa (semantic / 의미적) phụ thuộc tenant, người dùng (user / 사용자), locale, permission hoặc tính năng (feature / 기능) trạng thái (state / 상태) nhưng bộ nhớ đệm (cache / 캐시) key thiếu dimension tương ứng, hệ thống (system / 시스템) có thể trả dữ liệu (data / 데이터) của principal khác.
 
-Đây là data leak, không chỉ stale bug.
+Đây là dữ liệu (data / 데이터) leak, không chỉ stale bug.
 
-Invariant cần là:
+Bất biến (invariant / 불변식) cần là:
 
-> Mọi input ảnh hưởng tới authorization/semantic response phải được phản ánh trong cache partition/key hoặc response phải thật sự share-safe.
+> Mọi đầu vào (input / 입력) ảnh hưởng tới authorization/ngữ nghĩa (semantic / 의미적) phản hồi (response / 응답) phải được phản ánh trong bộ nhớ đệm (cache / 캐시) partition/key hoặc phản hồi (response / 응답) phải thật sự share-safe.
 
-Caching vì vậy giao trực tiếp với security boundary.
+Caching vì vậy giao trực tiếp với ranh giới bảo mật (security boundary / 보안 경계).
 
-## 12. Cache outage có thể làm origin collapse
+## 12. bộ nhớ đệm (cache / 캐시) outage có thể làm origin collapse
 
-Nếu backend được provision với steady-state miss rate 5%, cache outage/cold start có thể đưa 100% traffic về origin. Một dependency được gọi là “optional optimization” trên architecture diagram có thể là hard capacity dependency trong thực tế.
+Nếu backend được provision với steady-state miss tỷ lệ (rate / 비율) 5%, bộ nhớ đệm (cache / 캐시) outage/cold start có thể đưa 100% traffic về origin. Một phụ thuộc (dependency / 의존성) được gọi là “optional tối ưu hóa (optimization / 최적화)” trên kiến trúc (architecture / 아키텍처) diagram có thể là hard sức chứa (capacity / 용량) phụ thuộc (dependency / 의존성) trong thực tế.
 
-Failure chain:
+Thất bại (failure / 실패) chuỗi (chain / 사슬):
 
 ```text
 cache node/cluster fail
@@ -141,23 +144,23 @@ cache node/cluster fail
 → origin overload
 ```
 
-Resilience cần rate limit, circuit breaker, stale/degraded fallback hoặc origin headroom phù hợp.
+Resilience cần tỷ lệ (rate / 비율) limit, circuit breaker, stale/degraded fallback hoặc origin headroom phù hợp.
 
-## 13. Cache node failure và remapping tạo cold-start burst
+## 13. bộ nhớ đệm (cache / 캐시) nút (node / 노드) thất bại (failure / 실패) và remapping tạo cold-start burst
 
-Distributed cache partition bằng consistent hashing giảm lượng keys phải remap khi node thay đổi, nhưng remapped keys vẫn cold. Cache cluster event có thể tạo miss burst không đồng đều theo shard/key popularity.
+Phân tán (distributed / 분산) bộ nhớ đệm (cache / 캐시) partition bằng consistent hashing giảm lượng keys phải remap khi nút (node / 노드) thay đổi, nhưng remapped keys vẫn cold. bộ nhớ đệm (cache / 캐시) cluster sự kiện (event / 이벤트) có thể tạo miss burst không đồng đều theo shard/key popularity.
 
-Capacity test cần simulate cold cache, không chỉ benchmark steady-state warm cache.
+Sức chứa (capacity / 용량) kiểm thử (test / 테스트) cần simulate cold bộ nhớ đệm (cache / 캐시), không chỉ benchmark steady-state warm bộ nhớ đệm (cache / 캐시).
 
-## 14. Performance pressure và eviction interaction
+## 14. hiệu năng (performance / 성능) pressure và eviction tương tác (interaction / 상호작용)
 
-Khi working set lớn hơn cache capacity, churn/eviction tăng. Hit rate có thể giảm dần hoặc collapse nếu access pattern không phù hợp replacement policy.
+Khi working set lớn hơn bộ nhớ đệm (cache / 캐시) sức chứa (capacity / 용량), churn/eviction tăng. Hit tỷ lệ (rate / 비율) có thể giảm dần hoặc collapse nếu truy cập (access / 접근) mẫu (pattern / 패턴) không phù hợp replacement chính sách (policy / 정책).
 
-Large entries giảm effective key capacity. Hot/cold mix, TTL và admission policy có thể quyết định cache pollution.
+Large entries giảm effective key sức chứa (capacity / 용량). Hot/cold mix, TTL và admission chính sách (policy / 정책) có thể quyết định bộ nhớ đệm (cache / 캐시) pollution.
 
 Một hit-rate aggregate 99% chưa đủ nếu 1% misses chính là những keys đắt nhất.
 
-## 15. Production evidence
+## 15. bằng chứng vận hành (production evidence / 운영 증거)
 
 Cần quan sát:
 
@@ -173,18 +176,20 @@ cold-start behavior
 backend latency khi cache degraded
 ```
 
-Trace nên cho biết request hit layer nào, miss ở đâu và có regeneration/retry hay không.
+Dấu vết (trace / 추적) nên cho biết yêu cầu (request / 요청) hit tầng (layer / 계층) nào, miss ở đâu và có regeneration/thử lại (retry / 재시도) hay không.
 
-## 16. Lower abstraction nào quyết định behavior?
+## 16. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?
 
-Nếu stale do propagation race, ordering/version protocol quyết định. Nếu p99 tăng vì hot shard, partition/key distribution quyết định. Nếu cache outage kéo DB chết, origin capacity/backpressure quyết định. Nếu data leak qua cache, authorization/key derivation boundary quyết định.
+Nếu stale do propagation race, thứ tự (ordering / 순서)/phiên bản (version / 버전) giao thức (protocol / 프로토콜) quyết định. Nếu p99 tăng vì hot shard, partition/key phân phối (distribution / 분포) quyết định. Nếu bộ nhớ đệm (cache / 캐시) outage kéo DB chết, origin sức chứa (capacity / 용량)/backpressure quyết định. Nếu dữ liệu (data / 데이터) leak qua bộ nhớ đệm (cache / 캐시), authorization/key derivation ranh giới (boundary / 경계) quyết định.
 
 “Redis chậm” thường chỉ là symptom-level label.
 
 ## 17. Mô hình tư duy
 
-> Cache là **replicated, disposable state với freshness và eviction policy**. Mọi cache design phải reasoning authority, staleness, invalidation ordering, miss amplification, key correctness và origin capacity khi cache biến mất. Tối ưu hit rate mà không giữ các invariant đó chỉ dời failure sang một layer khó quan sát hơn.
+> bộ nhớ đệm (cache / 캐시) là **replicated, disposable trạng thái (state / 상태) với freshness và eviction chính sách (policy / 정책)**. Mọi bộ nhớ đệm (cache / 캐시) thiết kế (design / 설계) phải lập luận (reasoning / 추론) authority, staleness, vô hiệu hóa (invalidation / 무효화) thứ tự (ordering / 순서), miss amplification, key tính đúng đắn (correctness / 정확성) và origin sức chứa (capacity / 용량) khi bộ nhớ đệm (cache / 캐시) biến mất. Tối ưu hit tỷ lệ (rate / 비율) mà không giữ các bất biến (invariant / 불변식) đó chỉ dời thất bại (failure / 실패) sang một tầng (layer / 계층) khó quan sát hơn.
 
 ## Kết nối
 
 Đọc cùng [Capacity/admission control](./01_capacity_planning_utilization_knee_and_admission_control.md), [Load balancing và locality](./03_load_balancing_connection_pools_and_locality.md), [Distributed consistency](../../06_networks_distributed_systems/advanced/04_crdts_causal_consistency_and_conflict_resolution.md), [Authorization foundation](../../basic/07_security_reliability/02_identity_authentication_and_authorization.md) và [End-to-end overload path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 queueing tail latency and backpressure](./00_queueing_tail_latency_and_backpressure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

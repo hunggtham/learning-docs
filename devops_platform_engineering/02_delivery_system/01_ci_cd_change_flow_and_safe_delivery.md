@@ -1,254 +1,257 @@
-# CI/CD: biến thay đổi thành flow có bằng chứng
+# CI/CD: biến thay đổi thành luồng (flow / 흐름) có bằng chứng
 
-## 1. Continuous Integration là giảm integration risk
+> **Mạch đọc:** Đọc **CI/CD: biến thay đổi thành luồng (flow / 흐름) có bằng chứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Continuous tích hợp (integration / 통합) là giảm tích hợp (integration / 통합) rủi ro (risk / 위험)** sang **2. chuỗi xử lý (pipeline / 파이프라인) phải trả lời câu hỏi theo tầng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Continuous Integration (CI / 지속적 통합) không đồng nghĩa với “có server chạy test”. Bản chất là tích hợp thay đổi nhỏ vào nhánh chính thường xuyên và nhận feedback tự động đủ nhanh để lỗi integration không tích tụ.
 
-Nếu branch sống hai tuần rồi mới merge nhưng có Jenkins chạy mỗi commit, hệ thống có automation nhưng feedback integration vẫn muộn. Nếu test mất sáu giờ và thường flaky, developer có xu hướng bỏ qua signal. Do đó CI là thiết kế feedback loop, không chỉ YAML pipeline.
+## 1. Continuous tích hợp (integration / 통합) là giảm tích hợp (integration / 통합) rủi ro (risk / 위험)
 
-## 2. Pipeline phải trả lời câu hỏi theo tầng
+Continuous tích hợp (integration / 통합) không đồng nghĩa với “có máy chủ (server / 서버) chạy kiểm thử (test / 테스트)”. Bản chất là tích hợp thay đổi nhỏ vào nhánh chính thường xuyên và nhận phản hồi (feedback / 피드백) tự động đủ nhanh để lỗi tích hợp (integration / 통합) không tích tụ.
 
-Một pipeline tốt tổ chức check từ rẻ/nhanh đến đắt/chậm, nhưng không biến pipeline thành một chuỗi tuần tự dài vô lý. Lint/static check cho feedback nhanh. Unit test kiểm tra logic cục bộ. Integration/contract test kiểm tra boundary. Security/supply-chain checks xác minh policy. Build tạo artifact. Một số stage có thể chạy song song nếu dependency cho phép.
+Nếu branch sống hai tuần rồi mới merge nhưng có Jenkins chạy mỗi lần ghi nhận (commit / 커밋), hệ thống có automation nhưng phản hồi (feedback / 피드백) tích hợp (integration / 통합) vẫn muộn. Nếu kiểm thử (test / 테스트) mất sáu giờ và thường flaky, nhà phát triển (developer / 개발자) có xu hướng bỏ qua tín hiệu (signal / 신호). Do đó CI là thiết kế vòng phản hồi (feedback loop / 피드백 루프), không chỉ YAML chuỗi xử lý (pipeline / 파이프라인).
 
-Điểm quan trọng là mỗi stage phải có failure semantics rõ. “Pipeline đỏ” nhưng không biết check nào đáng tin, ai sở hữu, có retry được không sẽ tạo alert fatigue giống production monitoring.
+## 2. chuỗi xử lý (pipeline / 파이프라인) phải trả lời câu hỏi theo tầng
 
-## 3. Flaky test là reliability debt
+Một chuỗi xử lý (pipeline / 파이프라인) tốt tổ chức check từ rẻ/nhanh đến đắt/chậm, nhưng không biến chuỗi xử lý (pipeline / 파이프라인) thành một chuỗi tuần tự dài vô lý. Lint/static check cho phản hồi (feedback / 피드백) nhanh. đơn vị (unit / 단위) kiểm thử (test / 테스트) kiểm tra lô-gic (logic / 논리) cục bộ. tích hợp (integration / 통합)/đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) kiểm tra ranh giới (boundary / 경계). bảo mật (security / 보안)/supply-chain checks xác minh chính sách (policy / 정책). bản dựng (build / 빌드) tạo sản phẩm tạo ra (artifact / 산출물). Một số stage có thể chạy song song nếu phụ thuộc (dependency / 의존성) cho phép.
 
-Test lúc pass lúc fail mà source không đổi làm pipeline mất vai trò oracle. Team bắt đầu rerun đến khi xanh và CI trở thành nghi thức. Flaky test cần được đo, quarantine có kiểm soát và sửa có owner. Không nên giữ build đỏ vô hạn, nhưng cũng không được coi rerun là remediation.
+Điểm quan trọng là mỗi stage phải có thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) rõ. “chuỗi xử lý (pipeline / 파이프라인) đỏ” nhưng không biết check nào đáng tin, ai sở hữu, có thử lại (retry / 재시도) được không sẽ tạo alert fatigue giống môi trường vận hành (production / 운영 환경) monitoring.
 
-Một senior practice là theo dõi false positive/false negative của validation system. Pipeline cũng là production system phục vụ developer; nó có SLO về thời gian, availability và signal quality.
+## 3. Flaky kiểm thử (test / 테스트) là độ tin cậy (reliability / 신뢰성) debt
 
-## 4. Continuous Delivery khác Continuous Deployment
+Kiểm thử (test / 테스트) lúc pass lúc thất bại (fail / 실패) mà nguồn (source / 소스) không đổi làm chuỗi xử lý (pipeline / 파이프라인) mất vai trò oracle. nhóm (team / 팀) bắt đầu rerun đến khi xanh và CI trở thành nghi thức. Flaky kiểm thử (test / 테스트) cần được đo, quarantine có kiểm soát và sửa có đơn vị sở hữu (owner / 오너). Không nên giữ bản dựng (build / 빌드) đỏ vô hạn, nhưng cũng không được coi rerun là remediation.
 
-Continuous Delivery nghĩa mainline luôn ở trạng thái có thể phát hành thông qua process tự động đáng tin. Continuous Deployment đi thêm một bước: thay đổi đạt policy sẽ tự động vào production mà không cần quyết định thủ công cho từng release.
+Một cấp cao (senior / 시니어) practice là theo dõi false positive/false negative của kiểm tra hợp lệ (validation / 검증) hệ thống (system / 시스템). chuỗi xử lý (pipeline / 파이프라인) cũng là môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) phục vụ nhà phát triển (developer / 개발자); nó có SLO về thời gian, availability và tín hiệu (signal / 신호) chất lượng (quality / 품질).
 
-Tổ chức có thể chọn delivery mà không deployment tự động vì regulation hoặc risk model. Điều quan trọng là approval nếu có phải nằm đúng nơi: xác nhận business/risk decision, không phải bù cho pipeline thiếu test.
+## 4. Continuous Delivery khác Continuous triển khai (deployment / 배포)
 
-## 5. Environment promotion
+Continuous Delivery nghĩa mainline luôn ở trạng thái có thể phát hành thông qua tiến trình (process / 프로세스) tự động đáng tin. Continuous triển khai (deployment / 배포) đi thêm một bước: thay đổi đạt chính sách (policy / 정책) sẽ tự động vào môi trường vận hành (production / 운영 환경) mà không cần quyết định thủ công cho từng bản phát hành (release / 릴리스).
 
-Một anti-pattern là mỗi môi trường build lại source. Confidence tốt hơn khi build một lần và promote cùng artifact. Environment khác nhau chủ yếu qua config, credential, capacity và external integration.
+Tổ chức có thể chọn delivery mà không triển khai (deployment / 배포) tự động vì regulation hoặc rủi ro (risk / 위험) mô hình (model / 모델). Điều quan trọng là approval nếu có phải nằm đúng nơi: xác nhận nghiệp vụ (business / 비즈니스)/rủi ro (risk / 위험) quyết định (decision / 결정), không phải bù cho chuỗi xử lý (pipeline / 파이프라인) thiếu kiểm thử (test / 테스트).
 
-Promotion cần evidence. Ví dụ artifact A qua integration test, deploy staging, chạy smoke/e2e, rồi mới đủ điều kiện production. Evidence có thể được lưu cùng release metadata. Khi production incident, ta cần biết chính xác artifact, config, migration và deployment event nào vừa xảy ra.
+## 5. môi trường (environment / 환경) promotion
 
-## 6. Deployment không kết thúc khi API trả thành công
+Một anti-pattern là mỗi môi trường bản dựng (build / 빌드) lại nguồn (source / 소스). Confidence tốt hơn khi bản dựng (build / 빌드) một lần và promote cùng sản phẩm tạo ra (artifact / 산출물). môi trường (environment / 환경) khác nhau chủ yếu qua cấu hình (config / 설정), credential, sức chứa (capacity / 용량) và bên ngoài (external / 외부) tích hợp (integration / 통합).
 
-Một deployment command thành công chỉ chứng minh control plane chấp nhận desired state. Safe delivery cần xác minh actual behavior sau rollout. Có thể workload chưa ready, traffic error tăng hoặc dependency saturation xuất hiện sau vài phút.
+Promotion cần bằng chứng (evidence / 증거). Ví dụ sản phẩm tạo ra (artifact / 산출물) A qua kiểm thử tích hợp (integration test / 통합 테스트), deploy staging, chạy smoke/e2e, rồi mới đủ điều kiện môi trường vận hành (production / 운영 환경). bằng chứng (evidence / 증거) có thể được lưu cùng bản phát hành (release / 릴리스) siêu dữ liệu (metadata / 메타데이터). Khi môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트), ta cần biết chính xác sản phẩm tạo ra (artifact / 산출물), cấu hình (config / 설정), di chuyển (migration / 마이그레이션) và triển khai (deployment / 배포) sự kiện (event / 이벤트) nào vừa xảy ra.
 
-Deployment verification nên dùng production signal liên quan user impact. Canary, blue-green, rolling update và feature flag là các mechanism giảm blast radius. Theory và trade-off đã có canonical chapter [deployment safety, canary, blue-green, flags và rollback](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md).
+## 6. triển khai (deployment / 배포) không kết thúc khi API trả thành công
 
-DevOps layer phải nối mechanism đó vào pipeline/controller để promotion dựa trên evidence chứ không dựa vào “deploy command exited 0”.
+Một triển khai (deployment / 배포) command thành công chỉ chứng minh điều khiển (control / 제어) plane chấp nhận desired trạng thái (state / 상태). Safe delivery cần xác minh actual hành vi (behavior / 동작) sau rollout. Có thể tải công việc (workload / 워크로드) chưa ready, traffic lỗi (error / 오류) tăng hoặc phụ thuộc (dependency / 의존성) saturation xuất hiện sau vài phút.
 
-## 7. Rollback không luôn là inverse
+Triển khai (deployment / 배포) xác minh (verification / 확인) nên dùng môi trường vận hành (production / 운영 환경) tín hiệu (signal / 신호) liên quan người dùng (user / 사용자) impact. Canary, blue-green, rolling cập nhật (update / 업데이트) và cờ tính năng (feature flag / 기능 플래그) là các cơ chế (mechanism / 메커니즘) giảm blast radius. lý thuyết (theory / 이론) và sự đánh đổi (trade-off / 트레이드오프) đã có chuẩn gốc (canonical / 정본) chapter [deployment safety, canary, blue-green, flags và rollback](../../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md).
 
-Nếu release chỉ thay stateless code tương thích, rollback image có thể dễ. Nhưng nếu release đã migrate database schema, publish event theo schema mới hoặc gọi external side effect, rollback code có thể làm tình hình tệ hơn.
+DevOps tầng (layer / 계층) phải nối cơ chế (mechanism / 메커니즘) đó vào chuỗi xử lý (pipeline / 파이프라인)/controller để promotion dựa trên bằng chứng (evidence / 증거) chứ không dựa vào “deploy command exited 0”.
 
-Safe change cần backward/forward compatibility. Database migration thường nên theo expand-and-contract: thêm capability tương thích trước, chuyển traffic/code, sau đó mới bỏ cấu trúc cũ khi chắc chắn không còn consumer. Khi state đã biến đổi không thể đảo, roll-forward có thể an toàn hơn rollback.
+## 7. quay lui (rollback / 롤백) không luôn là inverse
 
-## 8. Feature flag tách deploy khỏi release
+Nếu bản phát hành (release / 릴리스) chỉ thay stateless mã (code / 코드) tương thích, quay lui (rollback / 롤백) ảnh (image / 이미지) có thể dễ. Nhưng nếu bản phát hành (release / 릴리스) đã migrate cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마), publish sự kiện (event / 이벤트) theo lược đồ (schema / 스키마) mới hoặc gọi bên ngoài (external / 외부) side tác động (effect / 효과), quay lui (rollback / 롤백) mã (code / 코드) có thể làm tình hình tệ hơn.
 
-Deploy là đưa code vào environment. Release là làm behavior mới có hiệu lực với user. Feature flag cho phép hai thời điểm khác nhau. Điều này giảm blast radius và cho progressive exposure, nhưng flag tạo state và complexity riêng.
+Safe thay đổi (change / 변경) cần backward/forward tính tương thích (compatibility / 호환성). cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) thường nên theo expand-and-contract: thêm năng lực (capability / 역량) tương thích trước, chuyển traffic/mã (code / 코드), sau đó mới bỏ cấu trúc cũ khi chắc chắn không còn bên tiêu thụ (consumer / 소비자). Khi trạng thái (state / 상태) đã biến đổi không thể đảo, roll-forward có thể an toàn hơn quay lui (rollback / 롤백).
 
-Flag cần owner, expiry và cleanup. Flag tồn tại nhiều tháng có thể tạo combinatorial behavior mà test không bao phủ. Platform nên hỗ trợ lifecycle chứ không chỉ cung cấp SDK.
+## 8. cờ tính năng (feature flag / 기능 플래그) tách deploy khỏi bản phát hành (release / 릴리스)
 
-## 9. Change metadata là telemetry
+Deploy là đưa mã (code / 코드) vào môi trường (environment / 환경). bản phát hành (release / 릴리스) là làm hành vi (behavior / 동작) mới có hiệu lực với người dùng (user / 사용자). cờ tính năng (feature flag / 기능 플래그) cho phép hai thời điểm khác nhau. Điều này giảm blast radius và cho progressive exposure, nhưng flag tạo trạng thái (state / 상태) và độ phức tạp (complexity / 복잡도) riêng.
 
-Mỗi deployment nên phát event có service, artifact version, commit, environment, actor/automation, thời gian và result. Khi dashboard latency tăng lúc 14:03, operator phải dễ overlay deployment event để thấy correlation. Không có change telemetry, investigation thường bắt đầu bằng câu “có ai vừa deploy gì không?”.
+Flag cần đơn vị sở hữu (owner / 오너), expiry và cleanup. Flag tồn tại nhiều tháng có thể tạo combinatorial hành vi (behavior / 동작) mà kiểm thử (test / 테스트) không bao phủ. nền tảng (platform / 플랫폼) nên hỗ trợ vòng đời (lifecycle / 생명주기) chứ không chỉ cung cấp SDK.
 
-## 10. Pipeline security boundary
+## 9. thay đổi (change / 변경) siêu dữ liệu (metadata / 메타데이터) là telemetry
 
-CI thường có quyền đọc source, token registry, cloud credential hoặc deploy permission. Vì vậy runner và workflow là security boundary. Pull request từ code chưa tin cậy không nên tự động nhận production secret. Dependency action/plugin phải được pin và kiểm soát. Least privilege nên áp dụng cho job identity theo stage.
+Mỗi triển khai (deployment / 배포) nên phát sự kiện (event / 이벤트) có dịch vụ (service / 서비스), sản phẩm tạo ra (artifact / 산출물) phiên bản (version / 버전), lần ghi nhận (commit / 커밋), môi trường (environment / 환경), actor/automation, thời gian và kết quả (result / 결과). Khi dashboard độ trễ (latency / 지연 시간) tăng lúc 14:03, operator phải dễ overlay triển khai (deployment / 배포) sự kiện (event / 이벤트) để thấy correlation. Không có thay đổi (change / 변경) telemetry, investigation thường bắt đầu bằng câu “có ai vừa deploy gì không?”.
 
-## 11. Ví dụ reasoning một release
+## 10. chuỗi xử lý (pipeline / 파이프라인) ranh giới bảo mật (security boundary / 보안 경계)
 
-Giả sử `orders-api` thay logic tính phí. CI xác minh unit/contract test rồi build image digest D. D được scan và publish một lần. Staging deploy D với config staging. Smoke test và contract với dependency pass. Production rollout bắt đầu 5% traffic, theo dõi error rate, latency và business invariant. Nếu signal xấu, controller dừng promotion; rollback hoặc disable feature tùy state compatibility.
+CI thường có quyền đọc nguồn (source / 소스), đơn vị từ (token / 토큰) registry, cloud credential hoặc deploy permission. Vì vậy runner và workflow là ranh giới bảo mật (security boundary / 보안 경계). Pull yêu cầu (request / 요청) từ mã (code / 코드) chưa tin cậy không nên tự động nhận môi trường vận hành (production / 운영 환경) secret. phụ thuộc (dependency / 의존성) hành động (action / 동작)/plugin phải được pin và kiểm soát. Least privilege nên áp dụng cho job định danh (identity / 식별자) theo stage.
 
-Điểm cốt lõi không nằm ở Jenkins/GitHub Actions/Argo Rollouts. Nó nằm ở identity của artifact, staged evidence, blast-radius control và recovery path.
+## 11. Ví dụ lập luận (reasoning / 추론) một bản phát hành (release / 릴리스)
 
-## 12. Senior note: tối ưu lead time bằng giảm queue, không bỏ evidence
+Giả sử `orders-api` thay lô-gic (logic / 논리) tính phí. CI xác minh đơn vị (unit / 단위)/đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) rồi bản dựng (build / 빌드) ảnh (image / 이미지) digest D. D được scan và publish một lần. Staging deploy D với cấu hình (config / 설정) staging. Smoke kiểm thử (test / 테스트) và đặc tả hợp đồng (contract / 계약) với phụ thuộc (dependency / 의존성) pass. môi trường vận hành (production / 운영 환경) rollout bắt đầu 5% traffic, theo dõi lỗi (error / 오류) tỷ lệ (rate / 비율), độ trễ (latency / 지연 시간) và nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식). Nếu tín hiệu (signal / 신호) xấu, controller dừng promotion; quay lui (rollback / 롤백) hoặc disable tính năng (feature / 기능) tùy trạng thái (state / 상태) tính tương thích (compatibility / 호환성).
 
-Khi pipeline chậm, phản xạ nguy hiểm là bỏ test. Trước tiên tìm critical path: setup dependency, duplicate build, serialized job, scarce runner, flaky rerun hay test suite không partition. Tối ưu feedback time bằng cache đúng, parallelism, test selection và architecture tốt hơn.
+Điểm cốt lõi không nằm ở Jenkins/GitHub Actions/Argo Rollouts. Nó nằm ở định danh (identity / 식별자) của sản phẩm tạo ra (artifact / 산출물), staged bằng chứng (evidence / 증거), blast-radius điều khiển (control / 제어) và khôi phục (recovery / 복구) đường dẫn (path / 경로).
 
-Delivery performance cao và reliability không phải hai mục tiêu đối nghịch nếu hệ thống được thiết kế để thay đổi nhỏ, feedback nhanh và rollback/risk boundary rõ.
+## 12. cấp cao (senior / 시니어) ghi chú (note / 노트): tối ưu lead thời gian (time / 시간) bằng giảm hàng đợi (queue / 큐), không bỏ bằng chứng (evidence / 증거)
 
-## 13. Pipeline là DAG có critical path, không phải một danh sách stage
+Khi chuỗi xử lý (pipeline / 파이프라인) chậm, phản xạ nguy hiểm là bỏ kiểm thử (test / 테스트). Trước tiên tìm đường găng (critical path / 임계 경로): setup phụ thuộc (dependency / 의존성), duplicate bản dựng (build / 빌드), serialized job, scarce runner, flaky rerun hay bộ kiểm thử (test suite / 테스트 스위트) không partition. Tối ưu phản hồi (feedback / 피드백) thời gian (time / 시간) bằng bộ nhớ đệm (cache / 캐시) đúng, parallelism, kiểm thử (test / 테스트) selection và kiến trúc (architecture / 아키텍처) tốt hơn.
 
-Một pipeline có thể có 30 job nhưng lead time chủ yếu do chuỗi dependency dài nhất quyết định. Hai job 20 phút chạy song song chỉ thêm khoảng 20 phút vào critical path, còn chạy tuần tự thành 40 phút.
+Delivery hiệu năng (performance / 성능) cao và độ tin cậy (reliability / 신뢰성) không phải hai mục tiêu đối nghịch nếu hệ thống được thiết kế để thay đổi nhỏ, phản hồi (feedback / 피드백) nhanh và quay lui (rollback / 롤백)/rủi ro (risk / 위험) ranh giới (boundary / 경계) rõ.
 
-Vì vậy tối ưu pipeline nên vẽ dependency DAG: job nào thật sự cần output của job trước, job nào có thể chạy song song, job nào rebuild cùng artifact và job nào chỉ chờ scarce runner. Việc đổi tên stage hoặc tăng runner không giúp nếu critical path nằm ở integration environment mất 40 phút provision.
+## 13. chuỗi xử lý (pipeline / 파이프라인) là DAG có đường găng (critical path / 임계 경로), không phải một danh sách stage
 
-Pipeline design tốt tách **feedback fast path** cho developer khỏi **evidence deep path** nhưng vẫn giữ policy release. Ví dụ lint/unit/security static chạy sớm; integration suite nặng có thể parallel và promotion chỉ chờ đúng evidence cần thiết.
+Một chuỗi xử lý (pipeline / 파이프라인) có thể có 30 job nhưng lead thời gian (time / 시간) chủ yếu do chuỗi phụ thuộc (dependency / 의존성) dài nhất quyết định. Hai job 20 phút chạy song song chỉ thêm khoảng 20 phút vào đường găng (critical path / 임계 경로), còn chạy tuần tự thành 40 phút.
 
-## 14. Validation có thể stale khi base thay đổi
+Vì vậy tối ưu chuỗi xử lý (pipeline / 파이프라인) nên vẽ phụ thuộc (dependency / 의존성) DAG: job nào thật sự cần đầu ra (output / 출력) của job trước, job nào có thể chạy song song, job nào rebuild cùng sản phẩm tạo ra (artifact / 산출물) và job nào chỉ chờ scarce runner. Việc đổi tên stage hoặc tăng runner không giúp nếu đường găng (critical path / 임계 경로) nằm ở tích hợp (integration / 통합) môi trường (environment / 환경) mất 40 phút provision.
 
-Một pull request pass toàn bộ test trên commit X + base B. Trong lúc chờ merge, base có thêm change C. Nếu merge tạo state X+C nhưng pipeline không revalidate combination đó, “PR xanh” không chứng minh mainline mới xanh.
+Chuỗi xử lý (pipeline / 파이프라인) thiết kế (design / 설계) tốt tách **phản hồi (feedback / 피드백) fast đường dẫn (path / 경로)** cho nhà phát triển (developer / 개발자) khỏi **bằng chứng (evidence / 증거) deep đường dẫn (path / 경로)** nhưng vẫn giữ chính sách (policy / 정책) bản phát hành (release / 릴리스). Ví dụ lint/đơn vị (unit / 단위)/bảo mật (security / 보안) static chạy sớm; tích hợp (integration / 통합) suite nặng có thể parallel và promotion chỉ chờ đúng bằng chứng (evidence / 증거) cần thiết.
 
-Đây là integration race. Cách xử lý có thể là merge queue, rebase/merge-latest-base rồi test lại, hoặc post-merge verification nhanh tùy repository risk. Mental model quan trọng: **evidence phải gắn với exact revision/composition được release**, không chỉ với branch từng xanh.
+## 14. kiểm tra hợp lệ (validation / 검증) có thể stale khi cơ sở (base / 기반) thay đổi
 
-IaC/GitOps cũng có stale-plan problem tương tự; đây là pattern chung của concurrent change.
+Một pull yêu cầu (request / 요청) pass toàn bộ kiểm thử (test / 테스트) trên lần ghi nhận (commit / 커밋) X + cơ sở (base / 기반) B. Trong lúc chờ merge, cơ sở (base / 기반) có thêm thay đổi (change / 변경) C. Nếu merge tạo trạng thái (state / 상태) X+C nhưng chuỗi xử lý (pipeline / 파이프라인) không revalidate combination đó, “PR xanh” không chứng minh mainline mới xanh.
 
-## 15. Deploy concurrency phải có ownership theo environment/service
+Đây là tích hợp (integration / 통합) race. Cách xử lý có thể là merge hàng đợi (queue / 큐), rebase/merge-latest-base rồi kiểm thử (test / 테스트) lại, hoặc post-merge xác minh (verification / 확인) nhanh tùy repository rủi ro (risk / 위험). mô hình tư duy (mental model / 사고 모델) quan trọng: **bằng chứng (evidence / 증거) phải gắn với chính xác (exact / 정확한) revision/composition được bản phát hành (release / 릴리스)**, không chỉ với branch từng xanh.
 
-Hai pipeline cùng deploy một service/environment có thể race. Release A bắt đầu canary, release B tới sau thay desired state; metric của A và B trộn lẫn làm verification không còn nghĩa.
+IaC/GitOps cũng có stale-plan bài toán (problem / 문제) tương tự; đây là mẫu (pattern / 패턴) chung của concurrent thay đổi (change / 변경).
 
-Platform nên có concurrency policy: serialize production rollout theo service, cancel superseded run khi safe, hoặc dùng release controller có state machine rõ. “Pipeline job chạy song song nhanh hơn” không áp dụng cho mutation cùng một ownership boundary.
+## 15. Deploy tính đồng thời (concurrency / 동시성) phải có quyền sở hữu (ownership / 소유권) theo môi trường (environment / 환경)/dịch vụ (service / 서비스)
 
-Nếu release B phụ thuộc A, explicit dependency/version tốt hơn để race ngẫu nhiên quyết định order.
+Hai chuỗi xử lý (pipeline / 파이프라인) cùng deploy một dịch vụ (service / 서비스)/môi trường (environment / 환경) có thể race. bản phát hành (release / 릴리스) A bắt đầu canary, bản phát hành (release / 릴리스) B tới sau thay desired trạng thái (state / 상태); chỉ số (metric / 지표) của A và B trộn lẫn làm xác minh (verification / 확인) không còn nghĩa.
 
-## 16. Migration nên được coi là một release contract riêng
+Nền tảng (platform / 플랫폼) nên có tính đồng thời (concurrency / 동시성) chính sách (policy / 정책): serialize môi trường vận hành (production / 운영 환경) rollout theo dịch vụ (service / 서비스), cancel superseded run khi safe, hoặc dùng bản phát hành (release / 릴리스) controller có máy trạng thái (state machine / 상태 머신) rõ. “chuỗi xử lý (pipeline / 파이프라인) job chạy song song nhanh hơn” không áp dụng cho mutation cùng một quyền sở hữu (ownership / 소유권) ranh giới (boundary / 경계).
 
-Database/schema/message migration có lifecycle dài hơn process deploy. Expand-and-contract thường gồm ít nhất: thêm schema mới tương thích, deploy producer/consumer hiểu cả hai, migrate/backfill data nếu cần, verify usage, rồi mới remove old path.
+Nếu bản phát hành (release / 릴리스) B phụ thuộc A, tường minh (explicit / 명시적) phụ thuộc (dependency / 의존성)/phiên bản (version / 버전) tốt hơn để race ngẫu nhiên quyết định thứ tự (order / 순서).
 
-Pipeline không nên coi migration thành một shell command chạy trước deploy mà không có idempotency, lock/ownership và resume semantics. Migration failure giữa chừng có thể để state partial; rerun phải an toàn hoặc có recovery plan.
+## 16. di chuyển (migration / 마이그레이션) nên được coi là một bản phát hành (release / 릴리스) đặc tả hợp đồng (contract / 계약) riêng
 
-Change metadata nên lưu migration version/trạng thái cùng artifact/config để incident biết code nào tương thích data state nào.
+Cơ sở dữ liệu (database / 데이터베이스)/lược đồ (schema / 스키마)/message di chuyển (migration / 마이그레이션) có vòng đời (lifecycle / 생명주기) dài hơn tiến trình (process / 프로세스) deploy. Expand-and-contract thường gồm ít nhất: thêm lược đồ (schema / 스키마) mới tương thích, deploy producer/bên tiêu thụ (consumer / 소비자) hiểu cả hai, migrate/backfill dữ liệu (data / 데이터) nếu cần, verify usage, rồi mới remove old đường dẫn (path / 경로).
+
+Chuỗi xử lý (pipeline / 파이프라인) không nên coi di chuyển (migration / 마이그레이션) thành một shell command chạy trước deploy mà không có idempotency, khóa (lock / 잠금)/quyền sở hữu (ownership / 소유권) và resume ngữ nghĩa (semantics / 의미론). di chuyển (migration / 마이그레이션) thất bại (failure / 실패) giữa chừng có thể để trạng thái (state / 상태) partial; rerun phải an toàn hoặc có khôi phục (recovery / 복구) plan.
+
+Thay đổi (change / 변경) siêu dữ liệu (metadata / 메타데이터) nên lưu di chuyển (migration / 마이그레이션) phiên bản (version / 버전)/trạng thái cùng sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정) để sự cố (incident / 인시던트) biết mã (code / 코드) nào tương thích dữ liệu (data / 데이터) trạng thái (state / 상태) nào.
 
 ## 17. Canary cần guardrail chống false confidence
 
-Canary 1% traffic chỉ có giá trị nếu sample chạm workload đại diện. Rare tenant, write path, batch job hoặc region nhỏ có thể không xuất hiện. Metric aggregate toàn fleet cũng có thể che canary failure vì 1% signal bị 99% stable traffic pha loãng.
+Canary 1% traffic chỉ có giá trị nếu mẫu (sample / 표본) chạm tải công việc (workload / 워크로드) đại diện. Rare tenant, ghi (write / 쓰기) đường dẫn (path / 경로), batch job hoặc region nhỏ có thể không xuất hiện. chỉ số (metric / 지표) aggregate toàn fleet cũng có thể che canary thất bại (failure / 실패) vì 1% tín hiệu (signal / 신호) bị 99% stable traffic pha loãng.
 
-Verification nên dimension theo version/canary cohort và chọn business/technical invariant phù hợp. Một canary healthy 10 phút không chứng minh memory leak xảy ra sau 6 giờ; observation window phải phù hợp failure class.
+Xác minh (verification / 확인) nên dimension theo phiên bản (version / 버전)/canary cohort và chọn nghiệp vụ (business / 비즈니스)/technical bất biến (invariant / 불변식) phù hợp. Một canary healthy 10 phút không chứng minh bộ nhớ (memory / 메모리) leak xảy ra sau 6 giờ; observation cửa sổ (window / 윈도우) phải phù hợp thất bại (failure / 실패) lớp (class / 클래스).
 
-Canary là cách giảm blast radius và tăng evidence, không phải chứng minh tuyệt đối release an toàn.
+Canary là cách giảm blast radius và tăng bằng chứng (evidence / 증거), không phải chứng minh tuyệt đối bản phát hành (release / 릴리스) an toàn.
 
-## 18. Rollback decision cần compatibility matrix
+## 18. quay lui (rollback / 롤백) quyết định (decision / 결정) cần tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
-Trước production release, team nên biết ít nhất bốn lớp có thể rollback độc lập đến đâu: application artifact, configuration, database/schema/data và external protocol/event contract.
+Trước môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스), nhóm (team / 팀) nên biết ít nhất bốn lớp có thể quay lui (rollback / 롤백) độc lập đến đâu: ứng dụng (application / 애플리케이션) sản phẩm tạo ra (artifact / 산출물), cấu hình (configuration / 구성), cơ sở dữ liệu (database / 데이터베이스)/lược đồ (schema / 스키마)/dữ liệu (data / 데이터) và bên ngoài (external / 외부) giao thức (protocol / 프로토콜)/sự kiện (event / 이벤트) đặc tả hợp đồng (contract / 계약).
 
-Có thể biểu diễn mental model:
+Có thể biểu diễn mô hình tư duy (mental model / 사고 모델):
 
 ```text
 code N+1 ↔ config C2 ↔ schema S2 ↔ event/API E2
 ```
 
-Rollback code về N chỉ an toàn nếu N còn hiểu C2/S2/E2 hoặc các lớp kia cũng có recovery path tương thích. Nếu schema S2 đã drop column N cần, rollback image nhanh sẽ fail ngay.
+Quay lui (rollback / 롤백) mã (code / 코드) về N chỉ an toàn nếu N còn hiểu C2/S2/E2 hoặc các lớp kia cũng có khôi phục (recovery / 복구) đường dẫn (path / 경로) tương thích. Nếu lược đồ (schema / 스키마) S2 đã drop column N cần, quay lui (rollback / 롤백) ảnh (image / 이미지) nhanh sẽ thất bại (fail / 실패) ngay.
 
-Senior delivery review không chỉ hỏi “có nút rollback không?” mà hỏi “rollback target có còn compatible với actual state sau release không?”.
+Cấp cao (senior / 시니어) delivery rà soát (review / 검토) không chỉ hỏi “có nút quay lui (rollback / 롤백) không?” mà hỏi “quay lui (rollback / 롤백) mục tiêu (target / 대상) có còn compatible với actual trạng thái (state / 상태) sau bản phát hành (release / 릴리스) không?”.
 
-## 19. Pipeline SLO và error budget cũng áp dụng cho developer experience
+## 19. chuỗi xử lý (pipeline / 파이프라인) SLO và lỗi (error / 오류) ngân sách (budget / 예산) cũng áp dụng cho nhà phát triển (developer / 개발자) experience
 
-Nếu CI availability thấp hoặc p95 feedback 50 phút, developer batch change lớn hơn và rerun nhiều hơn, làm integration risk tăng. Pipeline là shared production system có downstream impact lên delivery behavior.
+Nếu CI availability thấp hoặc p95 phản hồi (feedback / 피드백) 50 phút, nhà phát triển (developer / 개발자) batch thay đổi (change / 변경) lớn hơn và rerun nhiều hơn, làm tích hợp (integration / 통합) rủi ro (risk / 위험) tăng. chuỗi xử lý (pipeline / 파이프라인) là dùng chung (shared / 공유) môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) có downstream impact lên delivery hành vi (behavior / 동작).
 
-Platform team có thể đo queue time, execution time, flaky rerun rate, runner saturation và failure do platform vs source. Mục tiêu không phải pipeline luôn xanh; source bug phải làm đỏ. Mục tiêu là **signal đúng, nhanh và đáng tin** để developer không học thói quen bypass.
+Nền tảng (platform / 플랫폼) nhóm (team / 팀) có thể đo hàng đợi (queue / 큐) thời gian (time / 시간), thực thi (execution / 실행) thời gian (time / 시간), flaky rerun tỷ lệ (rate / 비율), runner saturation và thất bại (failure / 실패) do nền tảng (platform / 플랫폼) vs nguồn (source / 소스). Mục tiêu không phải chuỗi xử lý (pipeline / 파이프라인) luôn xanh; nguồn (source / 소스) bug phải làm đỏ. Mục tiêu là **tín hiệu (signal / 신호) đúng, nhanh và đáng tin** để nhà phát triển (developer / 개발자) không học thói quen bypass.
 
-## 20. Superseded work nên được hủy khi evidence của nó không còn giá trị
+## 20. Superseded công việc (work / 작업) nên được hủy khi bằng chứng (evidence / 증거) của nó không còn giá trị
 
-Developer push commit B sau commit A nhưng pipeline A vẫn chiếm runner 40 phút. Nếu kết quả A không còn được dùng để merge/release, tiếp tục chạy chỉ làm tăng queue cho evidence mới hơn. Tuy nhiên không phải job nào cũng cancel an toàn; migration/test environment có side effect cần cleanup.
+Nhà phát triển (developer / 개발자) push lần ghi nhận (commit / 커밋) B sau lần ghi nhận (commit / 커밋) A nhưng chuỗi xử lý (pipeline / 파이프라인) A vẫn chiếm runner 40 phút. Nếu kết quả A không còn được dùng để merge/bản phát hành (release / 릴리스), tiếp tục chạy chỉ làm tăng hàng đợi (queue / 큐) cho bằng chứng (evidence / 증거) mới hơn. Tuy nhiên không phải job nào cũng cancel an toàn; di chuyển (migration / 마이그레이션)/kiểm thử (test / 테스트) môi trường (environment / 환경) có side tác động (effect / 효과) cần cleanup.
 
-Pipeline nên phân biệt work **pure verification** có thể cancel với work **mutation** cần state machine/cleanup. Cancel-on-new-commit cho lint/unit thường hợp lý; cancel một production deployment giữa migration cần semantics rõ.
+Chuỗi xử lý (pipeline / 파이프라인) nên phân biệt công việc (work / 작업) **pure xác minh (verification / 확인)** có thể cancel với công việc (work / 작업) **mutation** cần máy trạng thái (state machine / 상태 머신)/cleanup. Cancel-on-new-commit cho lint/đơn vị (unit / 단위) thường hợp lý; cancel một môi trường vận hành (production / 운영 환경) triển khai (deployment / 배포) giữa di chuyển (migration / 마이그레이션) cần ngữ nghĩa (semantics / 의미론) rõ.
 
-Đây là queue discipline: giảm WIP không phải bằng bỏ test mà bằng ngừng tiêu capacity cho evidence đã stale.
+Đây là hàng đợi (queue / 큐) discipline: giảm WIP không phải bằng bỏ kiểm thử (test / 테스트) mà bằng ngừng tiêu sức chứa (capacity / 용량) cho bằng chứng (evidence / 증거) đã stale.
 
 ## 21. Approval cũng có thể stale
 
-Một người approve release khi evidence gắn với artifact D và config C. Sau đó pipeline rerun build tạo D2 hoặc config thay C2 nhưng approval cũ vẫn được reuse. Khi đó approval không còn xác nhận subject thực sự được deploy.
+Một người approve bản phát hành (release / 릴리스) khi bằng chứng (evidence / 증거) gắn với sản phẩm tạo ra (artifact / 산출물) D và cấu hình (config / 설정) C. Sau đó chuỗi xử lý (pipeline / 파이프라인) rerun bản dựng (build / 빌드) tạo D2 hoặc cấu hình (config / 설정) thay C2 nhưng approval cũ vẫn được reuse. Khi đó approval không còn xác nhận subject thực sự được deploy.
 
-Manual gate chỉ có ý nghĩa nếu nó bind tới exact release subject: artifact digest, config/revision, migration state và risk context liên quan. Nếu subject đổi đáng kể, approval/evidence cần được đánh giá lại theo policy.
+Manual gate chỉ có ý nghĩa nếu nó bind tới chính xác (exact / 정확한) bản phát hành (release / 릴리스) subject: sản phẩm tạo ra (artifact / 산출물) digest, cấu hình (config / 설정)/revision, di chuyển (migration / 마이그레이션) trạng thái (state / 상태) và rủi ro (risk / 위험) ngữ cảnh (context / 맥락) liên quan. Nếu subject đổi đáng kể, approval/bằng chứng (evidence / 증거) cần được đánh giá lại theo chính sách (policy / 정책).
 
-Điều này giống cryptographic attestation ở cấp quy trình: statement “tôi chấp nhận risk” phải nói rõ chấp nhận **cái gì**.
+Điều này giống cryptographic attestation ở cấp quy trình: statement “tôi chấp nhận rủi ro (risk / 위험)” phải nói rõ chấp nhận **cái gì**.
 
-## 22. Shared integration environment là nguồn nondeterminism và coupling
+## 22. dùng chung (shared / 공유) tích hợp (integration / 통합) môi trường (environment / 환경) là nguồn nondeterminism và coupling
 
-Hai pipeline dùng cùng database/test tenant có thể ảnh hưởng nhau: test A xóa data test B, schema migration race, rate limit chung hoặc background job chạy chéo. Kết quả flaky không nhất thiết do test code mà do environment không có isolation contract.
+Hai chuỗi xử lý (pipeline / 파이프라인) dùng cùng cơ sở dữ liệu (database / 데이터베이스)/kiểm thử (test / 테스트) tenant có thể ảnh hưởng nhau: kiểm thử (test / 테스트) A xóa dữ liệu (data / 데이터) kiểm thử (test / 테스트) B, lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) race, tỷ lệ (rate / 비율) limit chung hoặc background job chạy chéo. Kết quả flaky không nhất thiết do kiểm thử (test / 테스트) mã (code / 코드) mà do môi trường (environment / 환경) không có isolation đặc tả hợp đồng (contract / 계약).
 
-Có ba chiến lược chính: environment per change, shared environment nhưng namespace/data isolation mạnh, hoặc serialize class test có conflict. Mỗi lựa chọn đổi cost, fidelity và feedback time.
+Có ba chiến lược chính: môi trường (environment / 환경) per thay đổi (change / 변경), dùng chung (shared / 공유) môi trường (environment / 환경) nhưng không gian tên (namespace / 네임스페이스)/dữ liệu (data / 데이터) isolation mạnh, hoặc serialize lớp (class / 클래스) kiểm thử (test / 테스트) có xung đột (conflict / 충돌). Mỗi lựa chọn đổi chi phí (cost / 비용), fidelity và phản hồi (feedback / 피드백) thời gian (time / 시간).
 
-Không cần mọi PR có full production clone. Nhưng test signal phải biết dependency nào shared và failure do environment phải được phân biệt với failure của source change.
+Không cần mọi PR có full môi trường vận hành (production / 운영 환경) clone. Nhưng kiểm thử (test / 테스트) tín hiệu (signal / 신호) phải biết phụ thuộc (dependency / 의존성) nào dùng chung (shared / 공유) và thất bại (failure / 실패) do môi trường (environment / 환경) phải được phân biệt với thất bại (failure / 실패) của nguồn (source / 소스) thay đổi (change / 변경).
 
-## 23. Release controller cần trạng thái `paused`, không chỉ pass/fail
+## 23. bản phát hành (release / 릴리스) controller cần trạng thái `paused`, không chỉ pass/thất bại (fail / 실패)
 
-Trong progressive delivery, signal có thể chưa đủ rõ để promote cũng chưa đủ xấu để rollback. Nếu state machine chỉ có “continue” hoặc “fail”, operator dễ chọn action vội.
+Trong progressive delivery, tín hiệu (signal / 신호) có thể chưa đủ rõ để promote cũng chưa đủ xấu để quay lui (rollback / 롤백). Nếu máy trạng thái (state machine / 상태 머신) chỉ có “continue” hoặc “thất bại (fail / 실패)”, operator dễ chọn hành động (action / 동작) vội.
 
-`Paused` cho phép giữ cohort hiện tại, thu thêm evidence hoặc điều tra dependency mà không tăng blast radius. Tuy nhiên pause có cost: hai version cùng tồn tại lâu hơn, schema/config compatibility window kéo dài và capacity surge tiếp tục bị giữ.
+`Paused` cho phép giữ cohort hiện tại, thu thêm bằng chứng (evidence / 증거) hoặc điều tra phụ thuộc (dependency / 의존성) mà không tăng blast radius. Tuy nhiên pause có chi phí (cost / 비용): hai phiên bản (version / 버전) cùng tồn tại lâu hơn, lược đồ (schema / 스키마)/cấu hình (config / 설정) tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) kéo dài và sức chứa (capacity / 용량) surge tiếp tục bị giữ.
 
-Do đó release state cần timeout/owner: ai quyết định tiếp, evidence nào cần thêm và sau bao lâu phải rollback/roll-forward. “Để canary treo” không phải strategy.
+Do đó bản phát hành (release / 릴리스) trạng thái (state / 상태) cần hết thời gian chờ (timeout / 타임아웃)/đơn vị sở hữu (owner / 오너): ai quyết định tiếp, bằng chứng (evidence / 증거) nào cần thêm và sau bao lâu phải quay lui (rollback / 롤백)/roll-forward. “Để canary treo” không phải chiến lược (strategy / 전략).
 
-## 24. Health verification cần phân biệt release fault với platform/dependency fault
+## 24. Health xác minh (verification / 확인) cần phân biệt bản phát hành (release / 릴리스) fault với nền tảng (platform / 플랫폼)/phụ thuộc (dependency / 의존성) fault
 
-Nếu canary error tăng đúng lúc external payment provider outage toàn fleet, tự động rollback canary có thể không cải thiện gì và còn tạo thêm churn. Ngược lại aggregate fleet error có thể che lỗi chỉ ở canary.
+Nếu canary lỗi (error / 오류) tăng đúng lúc bên ngoài (external / 외부) payment provider outage toàn fleet, tự động quay lui (rollback / 롤백) canary có thể không cải thiện gì và còn tạo thêm churn. Ngược lại aggregate fleet lỗi (error / 오류) có thể che lỗi chỉ ở canary.
 
-Verification tốt dùng comparative/cohort reasoning: canary vs baseline trong cùng region/tenant/dependency window, kết hợp absolute SLO guardrail. Nếu cả old và new cùng xấu, suspect shared dependency/platform; nếu new xấu riêng, evidence cho release fault mạnh hơn.
+Xác minh (verification / 확인) tốt dùng comparative/cohort lập luận (reasoning / 추론): canary vs baseline trong cùng region/tenant/phụ thuộc (dependency / 의존성) cửa sổ (window / 윈도우), kết hợp absolute SLO guardrail. Nếu cả old và new cùng xấu, suspect dùng chung (shared / 공유) phụ thuộc (dependency / 의존성)/nền tảng (platform / 플랫폼); nếu new xấu riêng, bằng chứng (evidence / 증거) cho bản phát hành (release / 릴리스) fault mạnh hơn.
 
-Automation vẫn có thể chọn conservative stop, nhưng reason phải observable để operator biết rollback dự kiến tác động gì.
+Automation vẫn có thể chọn conservative stop, nhưng reason phải observable để operator biết quay lui (rollback / 롤백) dự kiến tác động gì.
 
-## 25. Merge queue là một controller cho integration concurrency
+## 25. Merge hàng đợi (queue / 큐) là một controller cho tích hợp (integration / 통합) tính đồng thời (concurrency / 동시성)
 
-Khi nhiều PR cùng xanh trên base cũ, merge queue tạo candidate composition gần state sẽ vào main rồi verify theo thứ tự. Nó không “làm test tốt hơn”; nó quản concurrency và freshness của evidence.
+Khi nhiều PR cùng xanh trên cơ sở (base / 기반) cũ, merge hàng đợi (queue / 큐) tạo candidate composition gần trạng thái (state / 상태) sẽ vào main rồi verify theo thứ tự. Nó không “làm kiểm thử (test / 테스트) tốt hơn”; nó quản tính đồng thời (concurrency / 동시성) và freshness của bằng chứng (evidence / 증거).
 
-Queue cũng có throughput/capacity. Nếu test lâu và arrival rate PR cao hơn merge service rate, wait time tăng. Tối ưu cần giảm critical path, tăng parallelism an toàn hoặc giảm batch size; bypass queue khi đông chỉ chuyển queue từ CI sang broken mainline.
+Hàng đợi (queue / 큐) cũng có thông lượng (throughput / 처리량)/sức chứa (capacity / 용량). Nếu kiểm thử (test / 테스트) lâu và arrival tỷ lệ (rate / 비율) PR cao hơn merge dịch vụ (service / 서비스) tỷ lệ (rate / 비율), wait thời gian (time / 시간) tăng. Tối ưu cần giảm đường găng (critical path / 임계 경로), tăng parallelism an toàn hoặc giảm batch kích thước (size / 크기); bypass hàng đợi (queue / 큐) khi đông chỉ chuyển hàng đợi (queue / 큐) từ CI sang broken mainline.
 
-Đây là cùng mental model với production admission control: khi resource verification hữu hạn, cần policy chọn work nào được vào và bằng chứng nào còn fresh.
+Đây là cùng mô hình tư duy (mental model / 사고 모델) với môi trường vận hành (production / 운영 환경) admission điều khiển (control / 제어): khi tài nguyên (resource / 자원) xác minh (verification / 확인) hữu hạn, cần chính sách (policy / 정책) chọn công việc (work / 작업) nào được vào và bằng chứng nào còn fresh.
 
-## 26. Senior walkthrough: release được approve nhưng deploy artifact khác
+## 26. cấp cao (senior / 시니어) walkthrough: bản phát hành (release / 릴리스) được approve nhưng deploy sản phẩm tạo ra (artifact / 산출물) khác
 
-Giả sử artifact D1 pass staging và được approve. Sau approval, pipeline dùng lệnh build lại trước production, tạo D2 vì base image đã đổi. Production incident xảy ra và audit log chỉ ghi commit giống nhau.
+Giả sử sản phẩm tạo ra (artifact / 산출물) D1 pass staging và được approve. Sau approval, chuỗi xử lý (pipeline / 파이프라인) dùng lệnh bản dựng (build / 빌드) lại trước môi trường vận hành (production / 운영 환경), tạo D2 vì cơ sở (base / 기반) ảnh (image / 이미지) đã đổi. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) xảy ra và nhật ký kiểm tra (audit log / 감사 로그) chỉ ghi lần ghi nhận (commit / 커밋) giống nhau.
 
-Lỗi cấu trúc là gate bind tới source commit thay vì immutable artifact subject. Correct flow là build/publish D1 một lần, gắn evidence/approval vào D1 rồi promote chính digest đó. Nếu buộc rebuild, D2 phải được coi release subject mới và validation tương ứng phải chạy lại.
+Lỗi cấu trúc là gate bind tới nguồn (source / 소스) lần ghi nhận (commit / 커밋) thay vì immutable sản phẩm tạo ra (artifact / 산출물) subject. Correct luồng (flow / 흐름) là bản dựng (build / 빌드)/publish D1 một lần, gắn bằng chứng (evidence / 증거)/approval vào D1 rồi promote chính digest đó. Nếu buộc rebuild, D2 phải được coi bản phát hành (release / 릴리스) subject mới và kiểm tra hợp lệ (validation / 검증) tương ứng phải chạy lại.
 
-Bài học là CI/CD maturity phụ thuộc **evidence identity + freshness + ownership**, không phụ thuộc số stage hay số nút approval.
+Bài học là CI/CD maturity phụ thuộc **bằng chứng (evidence / 증거) định danh (identity / 식별자) + freshness + quyền sở hữu (ownership / 소유권)**, không phụ thuộc số stage hay số nút approval.
 
-## 27. Online schema change phải xét lock, rewrite và runtime cost chứ không chỉ DDL hợp lệ
+## 27. Online lược đồ (schema / 스키마) thay đổi (change / 변경) phải xét khóa (lock / 잠금), rewrite và thời gian chạy (runtime / 런타임) chi phí (cost / 비용) chứ không chỉ DDL hợp lệ
 
-Một migration có thể đúng về cú pháp nhưng nguy hiểm về vận hành. `ALTER TABLE` tùy database/version có thể lấy lock mạnh, rewrite lượng dữ liệu lớn, tăng WAL/replication lag hoặc giữ transaction lâu. Vì vậy câu hỏi production không phải chỉ là “migration chạy được không?” mà là “nó tranh resource gì, trong bao lâu và failure giữa chừng để lại state nào?”.
+Một di chuyển (migration / 마이그레이션) có thể đúng về cú pháp nhưng nguy hiểm về vận hành. `ALTER TABLE` tùy cơ sở dữ liệu (database / 데이터베이스)/phiên bản (version / 버전) có thể lấy khóa (lock / 잠금) mạnh, rewrite lượng dữ liệu lớn, tăng WAL/replication lag hoặc giữ giao dịch (transaction / 트랜잭션) lâu. Vì vậy câu hỏi môi trường vận hành (production / 운영 환경) không phải chỉ là “di chuyển (migration / 마이그레이션) chạy được không?” mà là “nó tranh tài nguyên (resource / 자원) gì, trong bao lâu và thất bại (failure / 실패) giữa chừng để lại trạng thái (state / 상태) nào?”.
 
-Pipeline nên tách validation schema khỏi execution risk. Với bảng lớn, cần estimate row/data volume, lock behavior, replication headroom và maintenance/retry semantics; có thể dùng online migration mechanism hoặc chia thay đổi thành nhiều phase. Database internals cụ thể thuộc canonical Data & Databases, nhưng delivery contract phải nhìn thấy operational consequence.
+Chuỗi xử lý (pipeline / 파이프라인) nên tách kiểm tra hợp lệ (validation / 검증) lược đồ (schema / 스키마) khỏi thực thi (execution / 실행) rủi ro (risk / 위험). Với bảng lớn, cần estimate row/dữ liệu (data / 데이터) volume, khóa (lock / 잠금) hành vi (behavior / 동작), replication headroom và maintenance/thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론); có thể dùng online di chuyển (migration / 마이그레이션) cơ chế (mechanism / 메커니즘) hoặc chia thay đổi thành nhiều phase. cơ sở dữ liệu (database / 데이터베이스) internals cụ thể thuộc chuẩn gốc (canonical / 정본) dữ liệu (data / 데이터) & Databases, nhưng delivery đặc tả hợp đồng (contract / 계약) phải nhìn thấy operational consequence.
 
-Một migration chạy tốt trên staging nhỏ không chứng minh production an toàn nếu cost tăng theo data size. Evidence phải đại diện volume và concurrency thực tế hoặc có model đủ bảo thủ.
+Một di chuyển (migration / 마이그레이션) chạy tốt trên staging nhỏ không chứng minh môi trường vận hành (production / 운영 환경) an toàn nếu chi phí (cost / 비용) tăng theo dữ liệu (data / 데이터) kích thước (size / 크기). bằng chứng (evidence / 증거) phải đại diện volume và tính đồng thời (concurrency / 동시성) thực tế hoặc có mô hình (model / 모델) đủ bảo thủ.
 
-## 28. Backfill là một workload production cần throttle, checkpoint và invariant
+## 28. Backfill là một tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경) cần throttle, checkpoint và bất biến (invariant / 불변식)
 
-Sau khi thêm field/schema mới, backfill hàng triệu record thường kéo dài lâu hơn deploy application. Nếu chạy tối đa tốc độ, backfill có thể chiếm I/O, connection và lock budget của traffic user. Nếu dừng giữa chừng mà không có checkpoint, rerun có thể làm duplicate side effect hoặc phải quét lại toàn bộ.
+Sau khi thêm trường dữ liệu (field / 필드)/lược đồ (schema / 스키마) mới, backfill hàng triệu bản ghi (record / 레코드) thường kéo dài lâu hơn deploy ứng dụng (application / 애플리케이션). Nếu chạy tối đa tốc độ, backfill có thể chiếm I/O, liên kết (connection / 연결) và khóa (lock / 잠금) ngân sách (budget / 예산) của traffic người dùng (user / 사용자). Nếu dừng giữa chừng mà không có checkpoint, rerun có thể làm duplicate side tác động (effect / 효과) hoặc phải quét lại toàn bộ.
 
-Backfill trưởng thành có stable progress identity, chunk/checkpoint, rate/concurrency limit, resume semantics và metric về remaining work/error. Quan trọng hơn, phải định nghĩa invariant trong giai đoạn mixed state: record cũ chưa migrate được đọc thế nào, record mới được ghi theo schema nào, và khi nào có thể tuyên bố old representation không còn cần.
+Backfill trưởng thành có stable progress định danh (identity / 식별자), chunk/checkpoint, tỷ lệ (rate / 비율)/tính đồng thời (concurrency / 동시성) limit, resume ngữ nghĩa (semantics / 의미론) và chỉ số (metric / 지표) về remaining công việc (work / 작업)/lỗi (error / 오류). Quan trọng hơn, phải định nghĩa bất biến (invariant / 불변식) trong giai đoạn mixed trạng thái (state / 상태): bản ghi (record / 레코드) cũ chưa migrate được đọc thế nào, bản ghi (record / 레코드) mới được ghi theo lược đồ (schema / 스키마) nào, và khi nào có thể tuyên bố old biểu diễn (representation / 표현) không còn cần.
 
-Deployment controller không nhất thiết chạy backfill trực tiếp, nhưng release state phải biết dependency này. Không được contract/drop old field chỉ vì application N+1 đã deploy 100% nếu data migration vẫn chưa converge.
+Triển khai (deployment / 배포) controller không nhất thiết chạy backfill trực tiếp, nhưng bản phát hành (release / 릴리스) trạng thái (state / 상태) phải biết phụ thuộc (dependency / 의존성) này. Không được đặc tả hợp đồng (contract / 계약)/drop old trường dữ liệu (field / 필드) chỉ vì ứng dụng (application / 애플리케이션) N+1 đã deploy 100% nếu dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) vẫn chưa converge.
 
-## 29. Dual-write tạo cửa sổ inconsistency cần reconciliation chứ không chỉ test happy path
+## 29. Dual-write tạo cửa sổ inconsistency cần reconciliation chứ không chỉ kiểm thử (test / 테스트) happy đường dẫn (path / 경로)
 
-Một migration có thể tạm thời ghi cả old store và new store. Hai write không atomic qua hai hệ thống nên có thể xảy ra `old success/new fail`, `new success/old fail`, timeout không biết side effect nào đã commit hoặc retry tạo duplicate. Vì vậy dual-write là distributed consistency problem, không phải shortcut miễn phí.
+Một di chuyển (migration / 마이그레이션) có thể tạm thời ghi cả old store và new store. Hai ghi (write / 쓰기) không atomic qua hai hệ thống nên có thể xảy ra `old success/new fail`, `new success/old fail`, hết thời gian chờ (timeout / 타임아웃) không biết side tác động (effect / 효과) nào đã lần ghi nhận (commit / 커밋) hoặc thử lại (retry / 재시도) tạo duplicate. Vì vậy dual-write là phân tán (distributed / 분산) consistency bài toán (problem / 문제), không phải shortcut miễn phí.
 
-Nếu buộc dùng dual-write, cần xác định source of truth trong từng phase, idempotency key, retry/compensation, discrepancy detector và reconciliation job. Read path cũng cần strategy: đọc old, đọc new, shadow compare hay fallback; mỗi lựa chọn tạo evidence khác nhau.
+Nếu buộc dùng dual-write, cần xác định nguồn chuẩn (source of truth / 정본) trong từng phase, idempotency key, thử lại (retry / 재시도)/compensation, discrepancy detector và reconciliation job. Read đường dẫn (path / 경로) cũng cần chiến lược (strategy / 전략): đọc old, đọc new, shadow compare hay fallback; mỗi lựa chọn tạo bằng chứng (evidence / 증거) khác nhau.
 
-Cutover chỉ nên xảy ra khi mismatch rate, lag và unresolved discrepancy nằm trong threshold đã định nghĩa. Sau cutover vẫn nên giữ compatibility window trước khi xóa old path để rollback/forensic còn khả thi.
+Cutover chỉ nên xảy ra khi mismatch tỷ lệ (rate / 비율), lag và unresolved discrepancy nằm trong threshold đã định nghĩa. Sau cutover vẫn nên giữ tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) trước khi xóa old đường dẫn (path / 경로) để quay lui (rollback / 롤백)/forensic còn khả thi.
 
-## 30. Contract evolution phải theo consumer lag, không theo producer deploy success
+## 30. đặc tả hợp đồng (contract / 계약) evolution phải theo bên tiêu thụ (consumer / 소비자) lag, không theo producer deploy success
 
-API/event/schema producer có thể deploy version mới trong vài phút nhưng consumer nâng chậm hàng tuần. Nếu producer ngừng phát field/event cũ ngay sau khi chính nó xanh, hidden consumer có thể vỡ mà release dashboard producer vẫn healthy.
+API/sự kiện (event / 이벤트)/lược đồ (schema / 스키마) producer có thể deploy phiên bản (version / 버전) mới trong vài phút nhưng bên tiêu thụ (consumer / 소비자) nâng chậm hàng tuần. Nếu producer ngừng phát trường dữ liệu (field / 필드)/sự kiện (event / 이벤트) cũ ngay sau khi chính nó xanh, hidden bên tiêu thụ (consumer / 소비자) có thể vỡ mà bản phát hành (release / 릴리스) dashboard producer vẫn healthy.
 
-Compatibility window cần dựa trên inventory/telemetry của consumer thực: version nào đang đọc, consumer nào offline/batch theo lịch, replay có thể đọc event cũ bao lâu và retention kéo dài thế nào. Với event log, một consumer mới restart từ offset cũ có thể gặp schema lịch sử dù live traffic đã chuyển hết.
+Tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) cần dựa trên inventory/telemetry của bên tiêu thụ (consumer / 소비자) thực: phiên bản (version / 버전) nào đang đọc, bên tiêu thụ (consumer / 소비자) nào offline/batch theo lịch, replay có thể đọc sự kiện (event / 이벤트) cũ bao lâu và retention kéo dài thế nào. Với sự kiện (event / 이벤트) log, một bên tiêu thụ (consumer / 소비자) mới restart từ offset cũ có thể gặp lược đồ (schema / 스키마) lịch sử dù live traffic đã chuyển hết.
 
-Mental model release vì vậy là `producer capability → coexistence → consumer adoption → evidence không còn old dependency → contract removal`. “Deploy xong producer” chỉ là đầu migration, không phải điểm kết thúc.
+Mô hình tư duy (mental model / 사고 모델) bản phát hành (release / 릴리스) vì vậy là `producer capability → coexistence → consumer adoption → evidence không còn old dependency → contract removal`. “Deploy xong producer” chỉ là đầu di chuyển (migration / 마이그레이션), không phải điểm kết thúc.
 
-## 31. Runtime configuration là một release surface độc lập với artifact
+## 31. thời gian chạy (runtime / 런타임) cấu hình (configuration / 구성) là một bản phát hành (release / 릴리스) surface độc lập với sản phẩm tạo ra (artifact / 산출물)
 
-Một binary/image không đổi nhưng thay timeout, pool size, routing weight, cache policy hoặc business threshold vẫn có thể tạo incident lớn. Vì vậy configuration phải được coi là một release subject có identity, history, validation và rollout semantics riêng, không phải “text file nhỏ nên ít rủi ro”.
+Một nhị phân (binary / 이진)/ảnh (image / 이미지) không đổi nhưng thay hết thời gian chờ (timeout / 타임아웃), pool kích thước (size / 크기), routing weight, bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) hoặc nghiệp vụ (business / 비즈니스) threshold vẫn có thể tạo sự cố (incident / 인시던트) lớn. Vì vậy cấu hình (configuration / 구성) phải được coi là một bản phát hành (release / 릴리스) subject có định danh (identity / 식별자), lịch sử (history / 이력), kiểm tra hợp lệ (validation / 검증) và rollout ngữ nghĩa (semantics / 의미론) riêng, không phải “văn bản (text / 텍스트) tệp (file / 파일) nhỏ nên ít rủi ro”.
 
-Invariant quan trọng là operator phải trả lời được `artifact nào + config revision nào + flag state nào` đang tạo behavior quan sát được. Nếu config được mutate trực tiếp mà không có revision/effective-state evidence, rollback code có thể không thay đổi behavior vì nguyên nhân thực nằm ở config mới.
+Bất biến (invariant / 불변식) quan trọng là operator phải trả lời được `artifact nào + config revision nào + flag state nào` đang tạo hành vi (behavior / 동작) quan sát được. Nếu cấu hình (config / 설정) được mutate trực tiếp mà không có revision/effective-state bằng chứng (evidence / 증거), quay lui (rollback / 롤백) mã (code / 코드) có thể không thay đổi hành vi (behavior / 동작) vì nguyên nhân thực nằm ở cấu hình (config / 설정) mới.
 
-Config rollout cũng cần staged exposure khi blast radius lớn. Một thay đổi pool từ 20 lên 200 có thể làm service local khỏe hơn nhưng đẩy database vào saturation; một timeout dài hơn có thể giảm error bề mặt nhưng giữ resource lâu hơn. Validation phải xét system effect, không chỉ schema/type của config.
+Cấu hình (config / 설정) rollout cũng cần staged exposure khi blast radius lớn. Một thay đổi pool từ 20 lên 200 có thể làm dịch vụ (service / 서비스) cục bộ (local / 로컬) khỏe hơn nhưng đẩy cơ sở dữ liệu (database / 데이터베이스) vào saturation; một hết thời gian chờ (timeout / 타임아웃) dài hơn có thể giảm lỗi (error / 오류) bề mặt nhưng giữ tài nguyên (resource / 자원) lâu hơn. kiểm tra hợp lệ (validation / 검증) phải xét hệ thống (system / 시스템) tác động (effect / 효과), không chỉ lược đồ (schema / 스키마)/kiểu (type / 타입) của cấu hình (config / 설정).
 
-## 32. Feature flag là state machine có cohort và cleanup invariant
+## 32. cờ tính năng (feature flag / 기능 플래그) là máy trạng thái (state machine / 상태 머신) có cohort và cleanup bất biến (invariant / 불변식)
 
-Flag không chỉ là boolean. Progressive release thường có rule theo tenant, region, percentage, account class hoặc prerequisite flag khác. Vì vậy effective behavior là kết quả của `code revision + flag definition + targeting rule + evaluation context`.
+Flag không chỉ là boolean. Progressive bản phát hành (release / 릴리스) thường có quy tắc (rule / 규칙) theo tenant, region, percentage, account lớp (class / 클래스) hoặc prerequisite flag khác. Vì vậy effective hành vi (behavior / 동작) là kết quả của `code revision + flag definition + targeting rule + evaluation context`.
 
-Một flag lifecycle trưởng thành có ít nhất các state: tạo ở trạng thái an toàn, enable cho cohort nhỏ, mở rộng theo evidence, đạt default mới, rồi **xóa cả old branch lẫn flag definition**. Nếu chỉ để flag ở 100% mãi mãi, codebase vẫn mang hai behavior path và operator vẫn phải reasoning về một control surface không còn giá trị.
+Một flag vòng đời (lifecycle / 생명주기) trưởng thành có ít nhất các trạng thái (state / 상태): tạo ở trạng thái an toàn, enable cho cohort nhỏ, mở rộng theo bằng chứng (evidence / 증거), đạt default mới, rồi **xóa cả old branch lẫn flag definition**. Nếu chỉ để flag ở 100% mãi mãi, codebase vẫn mang hai hành vi (behavior / 동작) đường dẫn (path / 경로) và operator vẫn phải lập luận (reasoning / 추론) về một điều khiển (control / 제어) surface không còn giá trị.
 
-Rollback bằng flag cũng có giới hạn. Nếu behavior mới đã ghi data theo representation mới, phát external side effect hoặc consumer khác đã phụ thuộc output mới, tắt flag không đảo state đã tạo. Vì vậy flag giảm exposure nhưng không thay thế compatibility/recovery design.
+Quay lui (rollback / 롤백) bằng flag cũng có giới hạn. Nếu hành vi (behavior / 동작) mới đã ghi dữ liệu (data / 데이터) theo biểu diễn (representation / 표현) mới, phát bên ngoài (external / 외부) side tác động (effect / 효과) hoặc bên tiêu thụ (consumer / 소비자) khác đã phụ thuộc đầu ra (output / 출력) mới, tắt flag không đảo trạng thái (state / 상태) đã tạo. Vì vậy flag giảm exposure nhưng không thay thế tính tương thích (compatibility / 호환성)/khôi phục (recovery / 복구) thiết kế (design / 설계).
 
-## 33. Shadow traffic và dark launch tạo evidence nhưng không chứng minh side effect an toàn
+## 33. Shadow traffic và dark launch tạo bằng chứng (evidence / 증거) nhưng không chứng minh side tác động (effect / 효과) an toàn
 
-Một cách kiểm tra version mới là copy request production sang candidate nhưng không dùng response của candidate cho user. Cách này cho workload distribution thực tế tốt hơn synthetic test, đặc biệt cho parsing, query planning hoặc read path. Tuy nhiên traffic shadow làm tăng downstream load và có thể vô tình tạo side effect nếu request không được biến thành read-only/dry-run semantics.
+Một cách kiểm tra phiên bản (version / 버전) mới là bản sao (copy / 복사) yêu cầu (request / 요청) môi trường vận hành (production / 운영 환경) sang candidate nhưng không dùng phản hồi (response / 응답) của candidate cho người dùng (user / 사용자). Cách này cho tải công việc (workload / 워크로드) phân phối (distribution / 분포) thực tế tốt hơn synthetic kiểm thử (test / 테스트), đặc biệt cho parsing, truy vấn (query / 쿼리) planning hoặc read đường dẫn (path / 경로). Tuy nhiên traffic shadow làm tăng downstream tải (load / 로드) và có thể vô tình tạo side tác động (effect / 효과) nếu yêu cầu (request / 요청) không được biến thành read-only/dry-run ngữ nghĩa (semantics / 의미론).
 
-Candidate cũng có thể nhận request trễ hơn original, thiếu session state hoặc dùng dependency khác nên kết quả mismatch chưa chắc là bug. Evidence cần phân biệt input equivalence, dependency revision và comparison semantics. Với nondeterministic output, so byte-for-byte có thể tạo false alarm.
+Candidate cũng có thể nhận yêu cầu (request / 요청) trễ hơn original, thiếu session trạng thái (state / 상태) hoặc dùng phụ thuộc (dependency / 의존성) khác nên kết quả mismatch chưa chắc là bug. bằng chứng (evidence / 증거) cần phân biệt đầu vào (input / 입력) equivalence, phụ thuộc (dependency / 의존성) revision và comparison ngữ nghĩa (semantics / 의미론). Với nondeterministic đầu ra (output / 출력), so byte-for-byte có thể tạo false alarm.
 
-Dark launch vì vậy là **measurement experiment**: phải định nghĩa cái gì được phép thực thi, workload overhead budget, mismatch nào có nghĩa và cách dừng experiment nếu candidate gây pressure. Nó không phải cách miễn phí để “test production trước khi release”.
+Dark launch vì vậy là **đo lường (measurement / 측정) experiment**: phải định nghĩa cái gì được phép thực thi, tải công việc (workload / 워크로드) overhead ngân sách (budget / 예산), mismatch nào có nghĩa và cách dừng experiment nếu candidate gây pressure. Nó không phải cách miễn phí để “kiểm thử (test / 테스트) môi trường vận hành (production / 운영 환경) trước khi bản phát hành (release / 릴리스)”.
 
-## 34. Release identity phải bao phủ artifact, config, flag và migration state
+## 34. bản phát hành (release / 릴리스) định danh (identity / 식별자) phải bao phủ sản phẩm tạo ra (artifact / 산출물), cấu hình (config / 설정), flag và di chuyển (migration / 마이그레이션) trạng thái (state / 상태)
 
-Nhiều incident khó điều tra vì dashboard chỉ dimension theo application version trong khi behavior thực phụ thuộc nhiều control surface. Một release identity hữu ích nên liên kết immutable artifact digest với config revision, relevant flag snapshot/rule revision, schema/migration phase và environment/region.
+Nhiều sự cố (incident / 인시던트) khó điều tra vì dashboard chỉ dimension theo ứng dụng (application / 애플리케이션) phiên bản (version / 버전) trong khi hành vi (behavior / 동작) thực phụ thuộc nhiều điều khiển (control / 제어) surface. Một bản phát hành (release / 릴리스) định danh (identity / 식별자) hữu ích nên liên kết immutable sản phẩm tạo ra (artifact / 산출물) digest với cấu hình (config / 설정) revision, relevant flag snapshot/quy tắc (rule / 규칙) revision, lược đồ (schema / 스키마)/di chuyển (migration / 마이그레이션) phase và môi trường (environment / 환경)/region.
 
-Điều này không có nghĩa đóng băng mọi dynamic config. Nó có nghĩa mọi mutation quan trọng phải có event/revision để reconstruct effective state tại thời điểm T. Khi operator hỏi “vì sao cùng version nhưng chỉ tenant A lỗi?”, cohort/flag/config evidence phải cho phép giải thích khác biệt đó.
+Điều này không có nghĩa đóng băng mọi động (dynamic / 동적) cấu hình (config / 설정). Nó có nghĩa mọi mutation quan trọng phải có sự kiện (event / 이벤트)/revision để reconstruct effective trạng thái (state / 상태) tại thời điểm T. Khi operator hỏi “vì sao cùng phiên bản (version / 버전) nhưng chỉ tenant A lỗi?”, cohort/flag/cấu hình (config / 설정) bằng chứng (evidence / 증거) phải cho phép giải thích khác biệt đó.
 
-Mental model cuối cùng là:
+Mô hình tư duy (mental model / 사고 모델) cuối cùng là:
 
 ```text
 source change
@@ -260,4 +263,6 @@ source change
 → cleanup old compatibility state
 ```
 
-Safe delivery chỉ hoàn tất khi temporary compatibility/flag/migration state đã được thu hồi và hệ thống trở lại một steady state dễ reasoning, không phải ngay khi 100% traffic chạy binary mới.
+Safe delivery chỉ hoàn tất khi temporary tính tương thích (compatibility / 호환성)/flag/di chuyển (migration / 마이그레이션) trạng thái (state / 상태) đã được thu hồi và hệ thống trở lại một steady trạng thái (state / 상태) dễ lập luận (reasoning / 추론), không phải ngay khi 100% traffic chạy nhị phân (binary / 이진) mới.
+
+> **Bàn giao:** Sau **34. bản phát hành (release / 릴리스) định danh (identity / 식별자) phải bao phủ sản phẩm tạo ra (artifact / 산출물), cấu hình (config / 설정), flag và di chuyển (migration / 마이그레이션) trạng thái (state / 상태)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 git build artifacts and reproducibility](./00_git_build_artifacts_and_reproducibility.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

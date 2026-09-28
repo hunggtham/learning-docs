@@ -1,5 +1,8 @@
 # Hồi quy và tương quan: association, conditional modeling và prediction
 
+> **Mạch đọc:** Đọc **Hồi quy và tương quan: association, conditional modeling và prediction** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Covariance: direction của joint variation** sang **2. Pearson correlation là normalized covariance**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hồi quy (regression / 회귀) và tương quan (correlation / 상관관계) đều mô tả relationships giữa variables, nhưng chúng trả lời những câu hỏi khác nhau.
 
 Correlation hỏi:
@@ -8,9 +11,9 @@ Correlation hỏi:
 
 Regression hỏi:
 
-> Ta muốn model/predict outcome như function của predictors ra sao, và coefficients nên được hiểu như thế nào dưới assumptions của model?
+> Ta muốn mô hình (model / 모델)/predict kết quả (outcome / 결과) như hàm (function / 함수) của predictors ra sao, và coefficients nên được hiểu như thế nào dưới các giả định (assumptions / 가정들) của mô hình (model / 모델)?
 
-Cả hai đều **không tự động là causal analysis**.
+Cả hai đều **không tự động là nhân quả (causal / 인과적) phân tích (analysis / 분석)**.
 
 ## 1. Covariance: direction của joint variation
 
@@ -23,7 +26,7 @@ Với random variables `X,Y`, covariance:
 
 Nếu deviations thường cùng sign, covariance positive. Nếu opposite sign, negative.
 
-Nhưng magnitude phụ thuộc units. Nếu đổi KRW thành million KRW, covariance đổi scale.
+Nhưng magnitude phụ thuộc units. Nếu đổi KRW thành million KRW, covariance đổi quy mô (scale / 규모).
 
 Do đó cần normalized measure để so association across scales.
 
@@ -37,7 +40,7 @@ Do đó cần normalized measure để so association across scales.
 }.
 ```
 
-Sample version:
+Mẫu (sample / 표본) phiên bản (version / 버전):
 
 ```math
 r=
@@ -51,11 +54,11 @@ r=
 
 Giá trị nằm trong `[-1,1]`.
 
-Một geometric interpretation rất hữu ích: sau khi center observations, correlation là cosine giữa hai centered data vectors.
+Một geometric interpretation rất hữu ích: sau khi center observations, correlation là cosine giữa hai centered dữ liệu (data / 데이터) vectors.
 
 Vì vậy `r=1` khi standardized patterns align perfectly linearly.
 
-## 3. Correlation chỉ đo linear association
+## 3. Correlation chỉ đo tuyến tính (linear / 선형) association
 
 `r≈0` không nghĩa “không có relationship”.
 
@@ -65,23 +68,23 @@ Ví dụ nếu
 Y=X^2
 ```
 
-và `X` symmetric quanh zero, linear correlation có thể gần 0 dù `Y` được xác định hoàn toàn bởi `X`.
+và `X` symmetric quanh zero, tuyến tính (linear / 선형) correlation có thể gần 0 dù `Y` được xác định hoàn toàn bởi `X`.
 
-Do đó trước khi đọc correlation coefficient cần plot data và hiểu shape.
+Do đó trước khi đọc correlation coefficient cần plot dữ liệu (data / 데이터) và hiểu shape.
 
 Spearman correlation dùng ranks và đo monotonic association, nhưng cũng không phải universal dependence measure.
 
-## 4. Correlation không invariant trước selection
+## 4. Correlation không bất biến (invariant / 불변식) trước selection
 
-Nếu sample bị restricted range, correlation có thể shrink.
+Nếu mẫu (sample / 표본) bị restricted phạm vi (range / 범위), correlation có thể shrink.
 
 Nếu combine subgroups có centers khác nhau, correlation aggregate có thể khác hoặc đảo sign so với within-group correlations.
 
-Đây là geometric/statistical version của Simpson's paradox và selection effects.
+Đây là geometric/statistical phiên bản (version / 버전) của Simpson's paradox và selection effects.
 
-## 5. Simple linear regression bắt đầu từ conditional mean model
+## 5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)
 
-Model:
+Mô hình (model / 모델):
 
 ```math
 Y_i=\beta_0+\beta_1X_i+\varepsilon_i.
@@ -94,13 +97,13 @@ E[Y\mid X=x]
 =\beta_0+\beta_1x
 ```
 
-nếu error có conditional mean zero.
+nếu lỗi (error / 오류) có conditional mean zero.
 
-Ta không nói mọi point nằm trên line. Line mô tả conditional center; residuals mô tả unexplained variation.
+Ta không nói mọi điểm (point / 지점) nằm trên line. Line mô tả conditional center; residuals mô tả unexplained variation.
 
 ## 6. Least squares đến từ projection
 
-Given data, least squares chọn
+Given dữ liệu (data / 데이터), least squares chọn
 
 ```math
 \hat\beta_0,\hat\beta_1
@@ -112,25 +115,25 @@ Given data, least squares chọn
 \sum_i(y_i-\hat y_i)^2.
 ```
 
-Trong matrix form:
+Trong ma trận (matrix / 행렬) form:
 
 ```math
 \min_\beta\|X\beta-y\|_2^2.
 ```
 
-Prediction vector `X\hat\beta` là orthogonal projection của `y` lên column space của design matrix `X`.
+Prediction véc-tơ (vector / 벡터) `X\hat\beta` là orthogonal projection của `y` lên column không gian (space / 공간) của thiết kế (design / 설계) ma trận (matrix / 행렬) `X`.
 
-Đây là connection trực tiếp với linear algebra, không phải một statistics formula riêng.
+Đây là liên kết (connection / 연결) trực tiếp với tuyến tính (linear / 선형) algebra, không phải một statistics formula riêng.
 
 ## 7. Derive simple-regression slope
 
-Với centered variables, model không cần intercept tạm thời:
+Với centered variables, mô hình (model / 모델) không cần intercept tạm thời:
 
 ```math
 \tilde y_i\approx\beta_1\tilde x_i.
 ```
 
-Least-squares objective:
+Least-squares mục tiêu (objective / 목표):
 
 ```math
 S(\beta_1)
@@ -163,7 +166,7 @@ Population analogue:
 =\frac{\operatorname{Cov}(X,Y)}{\operatorname{Var}(X)}
 ```
 
-under linear projection interpretation.
+under tuyến tính (linear / 선형) projection interpretation.
 
 ## 8. Units của coefficient mang meaning
 
@@ -173,33 +176,33 @@ Nếu regress electricity bill `Y` (KRW) trên usage `X` (kWh):
 \hat Y=8000+120X,
 ```
 
-slope 120 có unit
+slope 120 có đơn vị (unit / 단위)
 
 ```text
 KRW / kWh.
 ```
 
-Nó nói conditional predicted bill thay khoảng 120 KRW cho mỗi additional kWh trong observed/model range.
+Nó nói conditional predicted bill thay khoảng 120 KRW cho mỗi additional kWh trong observed/mô hình (model / 모델) phạm vi (range / 범위).
 
-Intercept 8000 là prediction tại `X=0`; nếu data chỉ từ 200–500 kWh, interpretation intercept có thể là extrapolation và không meaningful.
+Intercept 8000 là prediction tại `X=0`; nếu dữ liệu (data / 데이터) chỉ từ 200–500 kWh, interpretation intercept có thể là extrapolation và không meaningful.
 
 ## 9. Multiple regression và “holding other variables fixed”
 
-Model:
+Mô hình (model / 모델):
 
 ```math
 Y=\beta_0+\beta_1X_1+\cdots+\beta_pX_p+\varepsilon.
 ```
 
-Coefficient `\beta_j` mô tả difference in model prediction per one-unit `X_j` change while included other predictors held fixed.
+Coefficient `\beta_j` mô tả difference in mô hình (model / 모델) prediction per one-unit `X_j` thay đổi (change / 변경) while included other predictors held fixed.
 
-Nhưng “hold fixed” trong regression là algebra/model comparison, không automatically equal a physical intervention.
+Nhưng “hold fixed” trong regression là algebra/mô hình (model / 모델) comparison, không automatically equal a vật lý (physical / 물리적) intervention.
 
 Nếu predictors correlated strongly, such comparisons may correspond to rare/unrealistic states.
 
-## 10. Omitted variable bias: vì sao causal interpretation dễ sai
+## 10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai
 
-Suppose true relation:
+Suppose true quan hệ (relation / 관계):
 
 ```math
 Y=\beta_1X+\beta_2Z+\varepsilon,
@@ -207,13 +210,13 @@ Y=\beta_1X+\beta_2Z+\varepsilon,
 
 nhưng ta regress only `Y` on `X`.
 
-Nếu `Z` ảnh hưởng `Y` và correlated với `X`, estimated slope on `X` absorbs part of `Z` effect.
+Nếu `Z` ảnh hưởng `Y` và correlated với `X`, estimated slope on `X` absorbs part of `Z` tác động (effect / 효과).
 
-Đây là omitted-variable bias.
+Đây là omitted-variable độ lệch (bias / 편향).
 
-Ví dụ salary và defects có thể correlate vì seniority/project complexity. Regression coefficient không tự động là causal effect của salary.
+Ví dụ salary và defects có thể correlate vì seniority/dự án (project / 프로젝트) độ phức tạp (complexity / 복잡도). Regression coefficient không tự động là nhân quả (causal / 인과적) tác động (effect / 효과) của salary.
 
-## 11. Residuals là data về model failure
+## 11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)
 
 Residual:
 
@@ -223,17 +226,17 @@ e_i=y_i-\hat y_i.
 
 Residual diagnostics hỏi:
 
-- còn nonlinear pattern không?
-- variance có tăng theo fitted value không?
+- còn nonlinear mẫu (pattern / 패턴) không?
+- variance có tăng theo fitted giá trị (value / 값) không?
 - residuals có serial dependence không?
 - có influential points không?
-- tails có heavier hơn assumed distribution không?
+- tails có heavier hơn assumed phân phối (distribution / 분포) không?
 
 Một high `R^2` không trả lời những questions này.
 
 ## 12. Homoskedasticity và heteroskedasticity
 
-Homoskedasticity assumption roughly:
+Homoskedasticity giả định (assumption / 가정) roughly:
 
 ```math
 \operatorname{Var}(\varepsilon\mid X)=\sigma^2.
@@ -241,19 +244,19 @@ Homoskedasticity assumption roughly:
 
 Nếu residual spread phụ thuộc `X`, ta có heteroskedasticity.
 
-OLS coefficient estimates có thể vẫn unbiased/consistent dưới some conditions, nhưng conventional standard errors có thể sai. Robust standard errors hoặc model variance structure có thể cần thiết.
+OLS coefficient estimates có thể vẫn unbiased/consistent dưới some conditions, nhưng conventional tiêu chuẩn (standard / 표준) errors có thể sai. Robust tiêu chuẩn (standard / 표준) errors hoặc mô hình (model / 모델) variance cấu trúc (structure / 구조) có thể cần thiết.
 
-## 13. Independence và time series
+## 13. Independence và thời gian (time / 시간) series
 
-Trong time series, residuals thường autocorrelated.
+Trong thời gian (time / 시간) series, residuals thường autocorrelated.
 
-Nếu assume iid errors khi data có serial dependence, uncertainty estimates có thể quá optimistic.
+Nếu assume iid errors khi dữ liệu (data / 데이터) có serial dependence, bất định (uncertainty / 불확실성) estimates có thể quá optimistic.
 
-Regression cho time-indexed data cần diagnostics/modeling như AR terms, Newey–West style robust errors hoặc full time-series models tùy goal.
+Regression cho time-indexed dữ liệu (data / 데이터) cần diagnostics/modeling như AR terms, Newey–West style robust errors hoặc full time-series các mô hình (models / 모델들) tùy goal.
 
 ## 14. `R^2` là gì và không phải gì?
 
-Standard definition:
+Tiêu chuẩn (standard / 표준) definition:
 
 ```math
 R^2
@@ -262,27 +265,27 @@ R^2
 {\sum_i(y_i-\bar y)^2}.
 ```
 
-Nó so residual squared error với baseline predict mean.
+Nó so residual squared lỗi (error / 오류) với baseline predict mean.
 
 High `R^2` không guarantee:
 
-- causal validity;
+- nhân quả (causal / 인과적) validity;
 - good extrapolation;
 - correct functional form;
 - unbiased predictions for subgroups;
-- production generalization.
+- môi trường vận hành (production / 운영 환경) generalization.
 
-Adding predictors thường không decrease training `R^2`, nên adjusted metrics/cross-validation cần cho model comparison.
+Adding predictors thường không decrease huấn luyện (training / 학습) `R^2`, nên adjusted metrics/cross-validation cần cho mô hình (model / 모델) comparison.
 
 ## 15. Prediction intervals khác confidence intervals
 
-Confidence interval cho mean response tại `x` quantify uncertainty về conditional mean.
+Confidence interval cho mean phản hồi (response / 응답) tại `x` quantify bất định (uncertainty / 불확실성) về conditional mean.
 
-Prediction interval cho một new observation rộng hơn vì gồm cả model-mean uncertainty và irreducible observation noise.
+Prediction interval cho một new observation rộng hơn vì gồm cả model-mean bất định (uncertainty / 불확실성) và irreducible observation noise.
 
 Hai intervals answer different questions.
 
-## 16. Regularization: đổi objective để trade bias lấy variance
+## 16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance
 
 Ridge regression:
 
@@ -302,9 +305,9 @@ Lasso:
 
 Ridge shrink coefficients và stabilize multicollinearity. Lasso có thể produce sparse coefficients.
 
-Regularization deliberately introduces bias để reduce variance/generalization error.
+Regularization deliberately introduces độ lệch (bias / 편향) để reduce variance/generalization lỗi (error / 오류).
 
-Đây là statistics version của bias-variance trade-off.
+Đây là statistics phiên bản (version / 버전) của bias-variance sự đánh đổi (trade-off / 트레이드오프).
 
 ## 17. Multicollinearity và identifiability
 
@@ -312,15 +315,15 @@ Nếu columns predictors gần linearly dependent, many coefficient combinations
 
 Then individual coefficients become unstable even if overall predictions okay.
 
-Condition number/SVD từ numerical linear algebra giúp diagnose this geometry.
+Điều kiện (condition / 조건) number/SVD từ numerical tuyến tính (linear / 선형) algebra giúp diagnose this hình học (geometry / 기하학).
 
-Statistics và numerical linear algebra gặp nhau trực tiếp ở đây.
+Statistics và numerical tuyến tính (linear / 선형) algebra gặp nhau trực tiếp ở đây.
 
-## 18. Logistic regression: linear model trên log-odds scale
+## 18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)
 
-Với binary outcome, probability must stay in `[0,1]`.
+Với nhị phân (binary / 이진) kết quả (outcome / 결과), xác suất (probability / 확률) must stay in `[0,1]`.
 
-Model:
+Mô hình (model / 모델):
 
 ```math
 \log\frac{p}{1-p}
@@ -334,7 +337,7 @@ p=
 \frac{1}{1+e^{-(\beta_0+\beta^Tx)}}.
 ```
 
-Coefficient `\beta_j` là additive change in log-odds per unit predictor; exponentiating gives odds ratio:
+Coefficient `\beta_j` là additive thay đổi (change / 변경) in log-odds per đơn vị (unit / 단위) predictor; exponentiating gives odds ratio:
 
 ```math
 e^{\beta_j}.
@@ -344,72 +347,72 @@ e^{\beta_j}.
 
 ## 19. Maximum likelihood viewpoint
 
-Under Gaussian error assumptions with constant variance, minimizing squared error tương đương maximizing Gaussian likelihood.
+Under Gaussian lỗi (error / 오류) các giả định (assumptions / 가정들) with constant variance, minimizing squared lỗi (error / 오류) tương đương maximizing Gaussian likelihood.
 
-Do đó least squares không chỉ geometric projection; nó cũng là probabilistic estimation under a specific noise model.
+Do đó least squares không chỉ geometric projection; nó cũng là probabilistic estimation under a specific noise mô hình (model / 모델).
 
-Nếu noise model khác, optimal loss có thể khác.
+Nếu noise mô hình (model / 모델) khác, optimal mất mát (loss / 손실) có thể khác.
 
-Ví dụ Laplace noise liên hệ L1 loss.
+Ví dụ Laplace noise liên hệ L1 mất mát (loss / 손실).
 
-## 20. Nonlinear regression và model flexibility
+## 20. Nonlinear regression và mô hình (model / 모델) flexibility
 
-Regression không đồng nghĩa linear regression.
+Regression không đồng nghĩa tuyến tính (linear / 선형) regression.
 
 Ta có thể dùng:
 
 - polynomial basis;
 - splines;
-- generalized linear models;
+- generalized tuyến tính (linear / 선형) các mô hình (models / 모델들);
 - trees;
 - neural networks.
 
-Càng flexible, approximation bias có thể giảm nhưng overfitting risk tăng. Cross-validation và regularization trở nên quan trọng.
+Càng flexible, approximation độ lệch (bias / 편향) có thể giảm nhưng overfitting rủi ro (risk / 위험) tăng. Cross-validation và regularization trở nên quan trọng.
 
-## 21. Extrapolation là assumption mạnh
+## 21. Extrapolation là giả định (assumption / 가정) mạnh
 
-Model fit tốt trong observed range không guarantee behavior ngoài range.
+Mô hình (model / 모델) fit tốt trong observed phạm vi (range / 범위) không guarantee hành vi (behavior / 동작) ngoài phạm vi (range / 범위).
 
 Một quadratic fit cho historical growth có thể explode absurdly khi extrapolate xa.
 
-Physics/domain constraints đôi khi quan trọng hơn fit error trong-sample.
+Physics/lĩnh vực (domain / 도메인) các ràng buộc (constraints / 제약조건들) đôi khi quan trọng hơn fit lỗi (error / 오류) trong-sample.
 
 ## 22. Worked example: confounding
 
-Suppose data cho thấy projects có higher developer salary cũng có more defects.
+Suppose dữ liệu (data / 데이터) cho thấy projects có higher nhà phát triển (developer / 개발자) salary cũng có more defects.
 
 Simple regression có positive salary coefficient.
 
-Nhưng nếu high-salary senior engineers được assign tới projects phức tạp hơn, project complexity là confounder ảnh hưởng cả salary composition và defects.
+Nhưng nếu high-salary cấp cao (senior / 시니어) engineers được assign tới projects phức tạp hơn, dự án (project / 프로젝트) độ phức tạp (complexity / 복잡도) là confounder ảnh hưởng cả salary composition và defects.
 
-Thêm complexity variables có thể change coefficient, nhưng causal validity còn phụ thuộc whether confounders measured correctly và no major unmeasured confounding.
+Thêm độ phức tạp (complexity / 복잡도) variables có thể thay đổi (change / 변경) coefficient, nhưng nhân quả (causal / 인과적) validity còn phụ thuộc whether confounders measured correctly và no major unmeasured confounding.
 
-Regression adjustment là tool, không phải automatic causal machine.
+Regression adjustment là công cụ (tool / 도구), không phải automatic nhân quả (causal / 인과적) machine.
 
-## 23. Finance: beta là regression coefficient có assumptions
+## 23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)
 
-CAPM-style beta thường estimated từ regression asset excess returns trên market excess returns:
+CAPM-style beta thường estimated từ regression asset excess returns trên thị trường (market / 시장) excess returns:
 
 ```math
 R_i-R_f
 =\alpha+\beta(R_m-R_f)+\varepsilon.
 ```
 
-`\beta` đo linear sensitivity in sample/model.
+`\beta` đo tuyến tính (linear / 선형) sensitivity in mẫu (sample / 표본)/mô hình (model / 모델).
 
-Nó không phải immutable physical constant; estimate phụ thuộc window, frequency, regime và data quality.
+Nó không phải immutable vật lý (physical / 물리적) constant; estimate phụ thuộc cửa sổ (window / 윈도우), frequency, regime và dữ liệu (data / 데이터) chất lượng (quality / 품질).
 
-## 24. AI: regression as supervised learning
+## 24. AI: regression as supervised học tập (learning / 학습)
 
-Supervised learning generalizes regression idea:
+Supervised học tập (learning / 학습) generalizes regression idea:
 
 ```text
 features X → target Y
 ```
 
-Loss function defines what “best fit” means.
+Hàm mất mát (loss function / 손실 함수) defines what “best fit” means.
 
-Train error measures fit observed data; validation/test estimate generalization. Distribution shift can break both regression assumptions và ML performance.
+Train lỗi (error / 오류) measures fit observed dữ liệu (data / 데이터); kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) estimate generalization. phân phối (distribution / 분포) shift can break both regression các giả định (assumptions / 가정들) và ML hiệu năng (performance / 성능).
 
 ## 25. Correlation, regression và causality — relationship map
 
@@ -422,20 +425,22 @@ Causal inference
     ↓ asks intervention/counterfactual effect
 ```
 
-Chúng có thể dùng chung algebra/probability, nhưng estimand khác nhau.
+Chúng có thể dùng chung algebra/xác suất (probability / 확률), nhưng estimand khác nhau.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Correlation measures alignment. Regression constructs a predictive/conditional surface. Causal inference asks what would change under intervention. Least squares is projection geometry; statistical interpretation arrives only after specifying how data/noise were generated.
+> Correlation measures alignment. Regression constructs a predictive/conditional surface. nhân quả (causal / 인과적) suy luận (inference / 추론) asks what would thay đổi (change / 변경) under intervention. Least squares is projection hình học (geometry / 기하학); statistical interpretation arrives only after specifying how dữ liệu (data / 데이터)/noise were generated.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**`r=0` means no relationship.** Không; it means no linear association under Pearson measure.
+**`r=0` means no relationship.** Không; it means no tuyến tính (linear / 선형) association under Pearson measure.
 
-**High `R^2` means model is correct.** Không; wrong causal/functional model có thể vẫn fit sample tốt.
+**High `R^2` means mô hình (model / 모델) is correct.** Không; wrong nhân quả (causal / 인과적)/functional mô hình (model / 모델) có thể vẫn fit mẫu (sample / 표본) tốt.
 
-**Regression coefficient is automatically a causal effect.** Không; causal interpretation needs identification assumptions/design.
+**Regression coefficient is automatically a nhân quả (causal / 인과적) tác động (effect / 효과).** Không; nhân quả (causal / 인과적) interpretation needs identification các giả định (assumptions / 가정들)/thiết kế (design / 설계).
 
-**More predictors always improve model.** Training fit often improves, but variance, multicollinearity and overfitting can worsen generalization.
+**More predictors always improve mô hình (model / 모델).** huấn luyện (training / 학습) fit often improves, but variance, multicollinearity and overfitting can worsen generalization.
 
 **OLS formula `(X^TX)^{-1}X^Ty` is how software should always solve regression.** Numerical implementations often prefer QR/SVD for stability.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 counting and combinatorics](./00_counting_and_combinatorics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

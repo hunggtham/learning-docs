@@ -1,5 +1,8 @@
 # Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm
 
+> **Mạch đọc:** Đọc **Các hệ lượng tử mẫu: giếng thế, dao động tử điều hòa và xuyên hầm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hạt trong giếng thế vô hạn** sang **Vì sao năng lượng bị lượng tử hóa?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Các hệ mẫu trong cơ học lượng tử không chỉ là bài tập kỹ thuật. Chúng đóng vai trò giống như “mẫu thiết kế” của lý thuyết: cùng một cấu trúc toán học xuất hiện lặp lại trong nguyên tử, phân tử, chất rắn, quang học lượng tử và vật lý hạt.
 
 Ba mô hình quan trọng nhất ở mức nền tảng là:
@@ -95,7 +98,7 @@ Sau khi chuẩn hóa,
 
 ## Vì sao năng lượng bị lượng tử hóa?
 
-Các giá trị năng lượng rời rạc không được gắn vào bằng tay. Chúng xuất hiện vì phương trình vi phân và điều kiện biên chỉ cho phép một số mode không gian nhất định.
+Các giá trị năng lượng rời rạc không được gắn vào bằng tay. Chúng xuất hiện vì phương trình vi phân và điều kiện biên chỉ cho phép một số chế độ (mode / 모드) không gian nhất định.
 
 Cấu trúc này giống sóng dừng trên một sợi dây cố định hai đầu:
 
@@ -133,7 +136,7 @@ E_1=\frac{\pi^2\hbar^2}{2mL^2}>0.
 
 Ngay cả ở trạng thái năng lượng thấp nhất, hạt vẫn không thể đồng thời bị giam trong hộp và có động lượng bằng chính xác zero. Điều này phù hợp với nguyên lý bất định.
 
-## Ý nghĩa của scale `1/L^2`
+## Ý nghĩa của quy mô (scale / 규모) `1/L^2`
 
 Năng lượng trong giếng thế tỉ lệ
 
@@ -141,9 +144,9 @@ Năng lượng trong giếng thế tỉ lệ
 E_n\propto\frac{1}{L^2}.
 ```
 
-Khi hộp nhỏ hơn, gradient không gian của hàm sóng phải lớn hơn để vẫn thỏa điều kiện biên. Gradient lớn tương ứng động lượng lớn hơn và do đó động năng lớn hơn.
+Khi hộp nhỏ hơn, độ dốc (gradient / 기울기) không gian của hàm sóng phải lớn hơn để vẫn thỏa điều kiện biên. độ dốc (gradient / 기울기) lớn tương ứng động lượng lớn hơn và do đó động năng lớn hơn.
 
-Đây là lý do confinement ở nanoscale có thể tạo energy spacing đáng kể, trong khi ở scale vĩ mô các mức nằm rất sát nhau và gần như liên tục.
+Đây là lý do confinement ở nanoscale có thể tạo năng lượng (energy / 에너지) spacing đáng kể, trong khi ở quy mô (scale / 규모) vĩ mô các mức nằm rất sát nhau và gần như liên tục.
 
 ## Xác suất và giá trị kỳ vọng trong hộp
 
@@ -153,7 +156,7 @@ Mật độ xác suất là
 \rho_n(x)=|\psi_n(x)|^2.
 ```
 
-Nó không đồng đều. Ở các node của hàm sóng, xác suất bằng zero.
+Nó không đồng đều. Ở các nút (node / 노드) của hàm sóng, xác suất bằng zero.
 
 Với một trạng thái chuẩn hóa, giá trị kỳ vọng vị trí là
 
@@ -293,7 +296,7 @@ Mỗi lần nâng trạng thái, năng lượng tăng đúng
 \hbar\omega.
 ```
 
-Đại số này trở thành ngôn ngữ cốt lõi của quang học lượng tử và lý thuyết trường: photon, phonon và nhiều quasiparticle mode được mô tả như các kích thích lượng tử của những mode dao động.
+Đại số này trở thành ngôn ngữ cốt lõi của quang học lượng tử và lý thuyết trường: photon, phonon và nhiều quasiparticle chế độ (mode / 모드) được mô tả như các kích thích lượng tử của những chế độ (mode / 모드) dao động.
 
 ## Xuyên hầm lượng tử
 
@@ -344,7 +347,7 @@ T\propto e^{-2\kappa a},
 
 một thay đổi rất nhỏ của chiều rộng `a` có thể tạo thay đổi rất lớn của xác suất xuyên hầm.
 
-Đó là cơ sở vật lý của kính hiển vi xuyên hầm quét (Scanning Tunneling Microscope, STM). Khoảng cách đầu dò–bề mặt thay đổi ở scale nguyên tử làm tunneling current thay đổi mạnh, từ đó có thể suy ra topography và electronic structure.
+Đó là cơ sở vật lý của kính hiển vi xuyên hầm quét (Scanning Tunneling Microscope, STM). Khoảng cách đầu dò–bề mặt thay đổi ở quy mô (scale / 규모) nguyên tử làm tunneling hiện tại (current / 현재) thay đổi mạnh, từ đó có thể suy ra topography và electronic cấu trúc (structure / 구조).
 
 ## Xuyên hầm không phải “mượn năng lượng”
 
@@ -352,7 +355,7 @@ Một cách giải thích phổ biến nhưng sai là hạt “mượn năng lư
 
 Trong bài stationary tunneling, năng lượng toàn phần `E` của trạng thái vẫn được bảo toàn. Điều thay đổi là cấu trúc nghiệm của phương trình Schrödinger trong vùng mà động năng cổ điển sẽ âm.
 
-Do đó không cần vi phạm conservation of energy để có tunneling.
+Do đó không cần vi phạm conservation of năng lượng (energy / 에너지) để có tunneling.
 
 ## Ứng dụng của tunneling
 
@@ -390,7 +393,7 @@ Nó liên hệ với phương trình liên tục
 
 Đây là dạng conservation law của xác suất.
 
-Trong bài scattering/tunneling, hệ số phản xạ và truyền qua được xác định từ tỉ số các probability current, chứ không chỉ từ biên độ wavefunction một cách tùy ý.
+Trong bài scattering/tunneling, hệ số phản xạ và truyền qua được xác định từ tỉ số các xác suất (probability / 확률) hiện tại (current / 현재), chứ không chỉ từ biên độ wavefunction một cách tùy ý.
 
 ## Liên hệ với giới hạn cổ điển
 
@@ -411,9 +414,9 @@ Nếu wavepacket đủ hẹp và thế biến thiên chậm trên kích thước
 
 thì tâm wavepacket gần tuân phương trình Newton.
 
-Nhưng classical limit không chỉ đến từ `\hbar` nhỏ theo nghĩa tuyệt đối. Nó còn phụ thuộc scale của action, decoherence và độ phân giải quan sát.
+Nhưng classical limit không chỉ đến từ `\hbar` nhỏ theo nghĩa tuyệt đối. Nó còn phụ thuộc quy mô (scale / 규모) của hành động (action / 동작), decoherence và độ phân giải quan sát.
 
-## Assumptions và giới hạn mô hình
+## Các giả định (assumptions / 가정들) và giới hạn mô hình
 
 ### Giếng thế vô hạn
 
@@ -433,7 +436,7 @@ T\sim e^{-2\kappa a}
 
 chỉ là xấp xỉ trong một số regime. Barrier profile thực, matching conditions và resonance có thể làm transmission phức tạp hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Ba hệ mẫu này cho ba bài học nền tảng:
 
@@ -456,20 +459,22 @@ wavefunction tail
 
 Không. Bound states thường cho phổ rời rạc, nhưng free/scattering states có thể có phổ liên tục.
 
-### “Ground state là hạt đứng yên”
+### “Ground trạng thái (state / 상태) là hạt đứng yên”
 
-Không. Ground state có thể có năng lượng và momentum uncertainty khác zero.
+Không. Ground trạng thái (state / 상태) có thể có năng lượng và momentum bất định (uncertainty / 불확실성) khác zero.
 
 ### “Tunneling vi phạm bảo toàn năng lượng”
 
-Không. Stationary state giữ nguyên tổng năng lượng; phần classically forbidden nằm ở cấu trúc của nghiệm, không phải ở việc hạt vay năng lượng.
+Không. Stationary trạng thái (state / 상태) giữ nguyên tổng năng lượng; phần classically forbidden nằm ở cấu trúc của nghiệm, không phải ở việc hạt vay năng lượng.
 
-### “Expectation value là kết quả chắc chắn của phép đo”
+### “Expectation giá trị (value / 값) là kết quả chắc chắn của phép đo”
 
 Không. Nó là trung bình thống kê của phân bố kết quả trên nhiều lần chuẩn bị giống nhau.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md).
 
 **Liên hệ tiếp:** [Xấp xỉ lượng tử](04_approximation_perturbation.md), [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md), [Bán dẫn và thiết bị](../10_condensed_matter_devices/01_semiconductors_devices.md), [BEC và chất lưu lượng tử](../10_condensed_matter_devices/05_bec_superfluid_quantum_fluids.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

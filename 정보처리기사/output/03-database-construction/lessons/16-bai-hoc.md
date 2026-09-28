@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **115. 무결성 (Integrity)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **123-125. 정규화 (Normalization)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,17 +20,19 @@
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
 
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **116-121. 관계대수 (Relational Algebra)** và nối nó với **123-125. 정규화 (Normalization)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
 ---
 
 ## 116-121. 관계대수 (Relational Algebra)
 - 절차적인 언어 (Procedural Language). 질의에 대한 해를 구하기 위한 연산 순서 명시.
 - **Select (σ):** 조건에 맞는 튜플 부분집합 추출 (행 추출).
-- **Project (π):** 속성 리스트에 제시된 속성값 추출 (열 추출).
-- **Join (⋈):** 두 릴레이션을 하나로 합침.
+- **dự án (project / 프로젝트) (π):** 속성 리스트에 제시된 속성값 추출 (열 추출).
+- **phép nối (join / 조인) (⋈):** 두 릴레이션을 하나로 합침.
 - **Division (÷):** 속성값을 모두 가진 튜플 추출.
 - **교차곱 (Cartesian Product):** 두 릴레이션 튜플들의 모든 순서쌍. 카디널리티의 곱.
 - **VI (Vietnamese) (Tiếng Việt):** Đại số quan hệ (Ngôn ngữ thủ tục).
   - Select (σ): Lọc hàng (hàng).
-  - Project (π): Chọn cột (cột).
-  - Join (⋈): Kết nối 2 bảng.
+  - dự án (project / 프로젝트) (π): Chọn cột (cột).
+  - phép nối (join / 조인) (⋈): Kết nối 2 bảng.
   - Division (÷): Chia quan hệ.

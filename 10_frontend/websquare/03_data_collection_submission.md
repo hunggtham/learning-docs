@@ -1,18 +1,21 @@
 # 03 — DataCollection & Submission
 
-## 1. Tách dữ liệu khỏi component
+> **Mạch đọc:** Đặt **03 — DataCollection & Submission** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)** sang **2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một trong những ý tưởng quan trọng nhất của WebSquare là không bắt mọi component tự giữ business data. Framework cung cấp **DataCollection**, một nhóm object dữ liệu được tạo trong browser memory để màn hình dùng chung.
+
+## 1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)
+
+Một trong những ý tưởng quan trọng nhất của WebSquare là không bắt mọi thành phần (component / 컴포넌트) tự giữ nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터). khung phần mềm (framework / 프레임워크) cung cấp **DataCollection**, một nhóm đối tượng (object / 객체) dữ liệu được tạo trong trình duyệt (browser / 브라우저) bộ nhớ (memory / 메모리) để màn hình dùng chung.
 
 Ba loại thường gặp là:
 
-`DataMap` — dữ liệu dạng một record hoặc key/value.
+`DataMap` — dữ liệu dạng một bản ghi (record / 레코드) hoặc key/giá trị (value / 값).
 
-`DataList` — dữ liệu nhiều dòng, gần với table/list.
+`DataList` — dữ liệu nhiều dòng, gần với bảng (table / 테이블)/danh sách (list / 목록).
 
-`LinkedDataList` — một view dẫn xuất từ DataList, thường dùng cho filter/sort mà không cần coi kết quả đó là một business dataset hoàn toàn mới.
+`LinkedDataList` — một view dẫn xuất từ DataList, thường dùng cho filter/sort mà không cần coi kết quả đó là một nghiệp vụ (business / 비즈니스) dataset hoàn toàn mới.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 server data
@@ -24,11 +27,11 @@ binding / script
 components
 ```
 
-Nếu component chỉ là view, code nghiệp vụ nên ưu tiên thao tác model thay vì cố đọc từng cell UI để dựng lại dữ liệu.
+Nếu thành phần (component / 컴포넌트) chỉ là view, mã (code / 코드) nghiệp vụ nên ưu tiên thao tác mô hình (model / 모델) thay vì cố đọc từng cell UI để dựng lại dữ liệu.
 
-## 2. DataMap: record có schema
+## 2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)
 
-Một `DataMap` thường có key definition và value tương ứng. Nó phù hợp cho điều kiện tìm kiếm, form chi tiết hoặc request parameter dạng một object.
+Một `DataMap` thường có key definition và giá trị (value / 값) tương ứng. Nó phù hợp cho điều kiện tìm kiếm, form chi tiết hoặc yêu cầu (request / 요청) parameter dạng một đối tượng (object / 객체).
 
 Ví dụ conceptual:
 
@@ -40,7 +43,7 @@ dmSearch
  └─ toDate
 ```
 
-Nếu các Input bind vào `dmSearch`, flow tìm kiếm trở nên dễ hiểu:
+Nếu các đầu vào (input / 입력) bind vào `dmSearch`, luồng (flow / 흐름) tìm kiếm trở nên dễ hiểu:
 
 ```text
 User nhập điều kiện
@@ -49,9 +52,9 @@ User nhập điều kiện
 → request được gửi
 ```
 
-Điểm mạnh không chỉ là code ngắn hơn. Nó tạo một boundary rõ giữa UI state và request state.
+Điểm mạnh không chỉ là mã (code / 코드) ngắn hơn. Nó tạo một ranh giới (boundary / 경계) rõ giữa UI trạng thái (state / 상태) và yêu cầu (request / 요청) trạng thái (state / 상태).
 
-## 3. DataList: table model phía client
+## 3. DataList: bảng (table / 테이블) mô hình (model / 모델) phía máy khách (client / 클라이언트)
 
 `DataList` giữ nhiều row và cung cấp API như `getRowCount()`, `getCellData(rowIndex, colId)`, `getRowJSON(rowIndex)` và `getAllJSON(...)`.
 
@@ -64,9 +67,9 @@ for (var i = 0; i < count; i++) {
 }
 ```
 
-Nhưng DataList không nên bị hiểu đơn giản là JavaScript Array. Nó còn giữ metadata và row state phục vụ binding, CRUD và Submission.
+Nhưng DataList không nên bị hiểu đơn giản là JavaScript Array. Nó còn giữ siêu dữ liệu (metadata / 메타데이터) và row trạng thái (state / 상태) phục vụ binding, CRUD và Submission.
 
-## 4. Row status là một mini state machine
+## 4. Row status là một mini máy trạng thái (state machine / 상태 머신)
 
 DataList có thể theo dõi trạng thái của từng row. Trong WebSquare5 SP5, các status thường gặp gồm:
 
@@ -78,7 +81,7 @@ D = deleted
 V = inserted rồi deleted
 ```
 
-`getRowStatus(rowIndex)` cho phép kiểm tra trạng thái hiện tại. Một row không chỉ chứa data; nó còn chứa lịch sử thay đổi đủ để hệ thống biết row nào cần insert/update/delete khi save.
+`getRowStatus(rowIndex)` cho phép kiểm tra trạng thái hiện tại. Một row không chỉ chứa dữ liệu (data / 데이터); nó còn chứa lịch sử thay đổi đủ để hệ thống biết row nào cần insert/cập nhật (update / 업데이트)/delete khi save.
 
 ```javascript
 for (var i = 0; i < dlUser.getRowCount(); i++) {
@@ -90,23 +93,23 @@ for (var i = 0; i < dlUser.getRowCount(); i++) {
 }
 ```
 
-Senior note: đừng tự tạo thêm cột `STATUS` chỉ để duplicate row status framework nếu không có business reason. Nếu server contract cần một status field explicit thì mapping có thể cần, nhưng phải phân biệt business status với client row state.
+Cấp cao (senior / 시니어) ghi chú (note / 노트): đừng tự tạo thêm cột `STATUS` chỉ để duplicate row status khung phần mềm (framework / 프레임워크) nếu không có nghiệp vụ (business / 비즈니스) reason. Nếu máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) cần một status trường dữ liệu (field / 필드) tường minh (explicit / 명시적) thì ánh xạ (mapping / 매핑) có thể cần, nhưng phải phân biệt nghiệp vụ (business / 비즈니스) status với máy khách (client / 클라이언트) row trạng thái (state / 상태).
 
 ## 5. Delete không phải lúc nào cũng biến mất ngay
 
-Trong CRUD grid, một row bị delete có thể được đánh dấu `D` nhưng vẫn tồn tại trong model để Submission biết phải gửi delete instruction. GridView có option để ẩn row đã delete, nhưng model vẫn có thể giữ nó.
+Trong CRUD grid, một row bị delete có thể được đánh dấu `D` nhưng vẫn tồn tại trong mô hình (model / 모델) để Submission biết phải gửi delete instruction. GridView có option để ẩn row đã delete, nhưng mô hình (model / 모델) vẫn có thể giữ nó.
 
-Điều này giải thích bug kiểu “UI chỉ còn 9 dòng nhưng API DataList vẫn thấy 10”. Câu hỏi đúng là API đang trả **visible rows**, **all rows**, hay **rows bao gồm delete state**. Khi export, validate hoặc count, phải chọn semantics phù hợp.
+Điều này giải thích bug kiểu “UI chỉ còn 9 dòng nhưng API DataList vẫn thấy 10”. Câu hỏi đúng là API đang trả **visible rows**, **all rows**, hay **rows bao gồm delete trạng thái (state / 상태)**. Khi export, validate hoặc count, phải chọn ngữ nghĩa (semantics / 의미론) phù hợp.
 
-## 6. Data mutation cần phân biệt insert/remove/delete
+## 6. dữ liệu (data / 데이터) mutation cần phân biệt insert/remove/delete
 
-Một framework data model thường phân biệt insert để tạo row mới và đánh dấu state mới, update để sửa row hiện có, delete để đánh dấu row cho server commit, còn remove có thể chỉ loại row khỏi client model mà không mang cùng semantic delete, tùy API/build.
+Một khung phần mềm (framework / 프레임워크) mô hình dữ liệu (data model / 데이터 모델) thường phân biệt insert để tạo row mới và đánh dấu trạng thái (state / 상태) mới, cập nhật (update / 업데이트) để sửa row hiện có, delete để đánh dấu row cho máy chủ (server / 서버) lần ghi nhận (commit / 커밋), còn remove có thể chỉ loại row khỏi máy khách (client / 클라이언트) mô hình (model / 모델) mà không mang cùng ngữ nghĩa (semantic / 의미적) delete, tùy API/bản dựng (build / 빌드).
 
-Do tên API giữa generation/build có thể khác hoặc có option khác nhau, hãy tra reference đúng build trước khi chọn. Điều quan trọng là reasoning: **bạn muốn thay UI list, thay client model, hay phát sinh một delete operation cần server commit?**
+Do tên API giữa generation/bản dựng (build / 빌드) có thể khác hoặc có option khác nhau, hãy tra tham chiếu (reference / 참조) đúng bản dựng (build / 빌드) trước khi chọn. Điều quan trọng là lập luận (reasoning / 추론): **bạn muốn thay UI danh sách (list / 목록), thay máy khách (client / 클라이언트) mô hình (model / 모델), hay phát sinh một delete thao tác (operation / 연산) cần máy chủ (server / 서버) lần ghi nhận (commit / 커밋)?**
 
 ## 7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới
 
-Nếu một màn hình cần filter/sort một DataList, tạo bản copy thủ công bằng loop thường làm mất row identity và status relationship. LinkedDataList tồn tại để biểu diễn một view dẫn xuất.
+Nếu một màn hình cần filter/sort một DataList, tạo bản bản sao (copy / 복사) thủ công bằng vòng lặp (loop / 루프) thường làm mất row định danh (identity / 식별자) và status relationship. LinkedDataList tồn tại để biểu diễn một view dẫn xuất.
 
 ```text
 source DataList
@@ -118,11 +121,11 @@ source DataList
 LinkedDataList
 ```
 
-Không nên mặc định coi LinkedDataList là một source of truth độc lập. Hãy hiểu relation của nó với source trước khi update/save.
+Không nên mặc định coi LinkedDataList là một nguồn chuẩn (source of truth / 정본) độc lập. Hãy hiểu quan hệ (relation / 관계) của nó với nguồn (source / 소스) trước khi cập nhật (update / 업데이트)/save.
 
-## 8. Submission là communication description, không phải business transaction
+## 8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)
 
-WebSquare `Submission` mô tả client-server communication: action/endpoint, request reference, response target, mode và callback lifecycle.
+WebSquare `Submission` mô tả client-server communication: hành động (action / 동작)/endpoint, yêu cầu (request / 요청) tham chiếu (reference / 참조), phản hồi (response / 응답) mục tiêu (target / 대상), chế độ (mode / 모드) và callback vòng đời (lifecycle / 생명주기).
 
 ```text
 dmSearch
@@ -140,13 +143,13 @@ dlUser target
 GridView
 ```
 
-Submission giúp chuẩn hóa serialization và mapping nhưng nó không tự biến nhiều HTTP call thành một database transaction. Transaction thật nằm ở server.
+Submission giúp chuẩn hóa serialization và ánh xạ (mapping / 매핑) nhưng nó không tự biến nhiều HTTP lời gọi (call / 호출) thành một cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션). giao dịch (transaction / 트랜잭션) thật nằm ở máy chủ (server / 서버).
 
-## 9. Reference và Target là contract dữ liệu
+## 9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu
 
-**Reference** biểu diễn client data được serialize thành request. **Target** biểu diễn client model nhận response.
+**tham chiếu (reference / 참조)** biểu diễn máy khách (client / 클라이언트) dữ liệu (data / 데이터) được serialize thành yêu cầu (request / 요청). **mục tiêu (target / 대상)** biểu diễn máy khách (client / 클라이언트) mô hình (model / 모델) nhận phản hồi (response / 응답).
 
-Nếu request chạy thành công nhưng Grid rỗng, hãy tách pipeline:
+Nếu yêu cầu (request / 요청) chạy thành công nhưng Grid rỗng, hãy tách chuỗi xử lý (pipeline / 파이프라인):
 
 ```text
 HTTP response có data?
@@ -158,9 +161,9 @@ Target DataList có data?
 GridView có bind đúng DataList?
 ```
 
-Đừng nhảy thẳng từ “Network 200” sang “Grid bug”.
+Đừng nhảy thẳng từ “mạng (network / 네트워크) 200” sang “Grid bug”.
 
-## 10. Execute Submission và async reasoning
+## 10. Execute Submission và async lập luận (reasoning / 추론)
 
 Một cách thường gặp để chạy Submission là:
 
@@ -168,14 +171,14 @@ Một cách thường gặp để chạy Submission là:
 $p.executeSubmission(sbmSearchUser);
 ```
 
-Nếu mode là asynchronous, dòng tiếp theo không chờ response.
+Nếu chế độ (mode / 모드) là asynchronous, dòng tiếp theo không chờ phản hồi (response / 응답).
 
 ```javascript
 $p.executeSubmission(sbmSearchUser);
 console.log(dlUser.getRowCount()); // không được giả định response đã về
 ```
 
-Mental model đúng:
+Mô hình tư duy (mental model / 사고 모델) đúng:
 
 ```text
 executeSubmission()
@@ -185,13 +188,13 @@ executeSubmission()
 → submitdone hoặc submiterror chạy
 ```
 
-Nếu code cần dùng response, đặt nó ở lifecycle callback tương ứng hoặc trong function được callback gọi.
+Nếu mã (code / 코드) cần dùng phản hồi (response / 응답), đặt nó ở vòng đời (lifecycle / 생명주기) callback tương ứng hoặc trong hàm (function / 함수) được callback gọi.
 
 ## 11. Success HTTP không đồng nghĩa success nghiệp vụ
 
-Server có thể trả HTTP 200 nhưng payload báo business failure, ví dụ duplicate key, validation fail hoặc insufficient business permission.
+Máy chủ (server / 서버) có thể trả HTTP 200 nhưng payload báo nghiệp vụ (business / 비즈니스) thất bại (failure / 실패), ví dụ duplicate key, kiểm tra hợp lệ (validation / 검증) thất bại (fail / 실패) hoặc insufficient nghiệp vụ (business / 비즈니스) permission.
 
-Cần phân biệt ít nhất ba lớp result:
+Cần phân biệt ít nhất ba lớp kết quả (result / 결과):
 
 ```text
 transport result
@@ -204,11 +207,11 @@ business result
 operation có được chấp nhận không?
 ```
 
-Một handler `submitdone` không nên mặc định hiển thị “Save success” chỉ vì transport không lỗi. Nó phải đọc business result contract.
+Một handler `submitdone` không nên mặc định hiển thị “Save success” chỉ vì vận chuyển (transport / 전송) không lỗi. Nó phải đọc nghiệp vụ (business / 비즈니스) kết quả (result / 결과) đặc tả hợp đồng (contract / 계약).
 
-## 12. Error path phải là first-class path
+## 12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)
 
-Nhiều màn hình chỉ viết happy path:
+Nhiều màn hình chỉ viết happy đường dẫn (path / 경로):
 
 ```javascript
 scwin.sbmSave_submitdone = function () {
@@ -216,23 +219,23 @@ scwin.sbmSave_submitdone = function () {
 };
 ```
 
-Production flow phải nghĩ đến timeout, 401/403, 500, network loss, malformed payload, duplicate click và server business failure. Nếu UI set loading state trước request thì mọi terminal path phải reset state. Nếu chỉ reset ở success, user có thể bị kẹt nút Save sau error.
+Môi trường vận hành (production / 운영 환경) luồng (flow / 흐름) phải nghĩ đến hết thời gian chờ (timeout / 타임아웃), 401/403, 500, mạng (network / 네트워크) mất mát (loss / 손실), malformed payload, duplicate click và máy chủ (server / 서버) nghiệp vụ (business / 비즈니스) thất bại (failure / 실패). Nếu UI set loading trạng thái (state / 상태) trước yêu cầu (request / 요청) thì mọi terminal đường dẫn (path / 경로) phải reset trạng thái (state / 상태). Nếu chỉ reset ở success, người dùng (user / 사용자) có thể bị kẹt nút Save sau lỗi (error / 오류).
 
-## 13. Race condition giữa các search request
+## 13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)
 
-Một case phổ biến là request A được gửi trước nhưng chậm, request B được gửi sau nhưng nhanh. B hiển thị trước, rồi A về sau và ghi đè result. UI cuối cùng không còn phản ánh user intent mới nhất.
+Một trường hợp (case / 사례) phổ biến là yêu cầu (request / 요청) A được gửi trước nhưng chậm, yêu cầu (request / 요청) B được gửi sau nhưng nhanh. B hiển thị trước, rồi A về sau và ghi đè kết quả (result / 결과). UI cuối cùng không còn phản ánh người dùng (user / 사용자) intent mới nhất.
 
-Giải pháp tùy framework/build và API: abort request cũ, disable new search khi request đang chạy, hoặc attach request identity và bỏ response stale. WebSquare có mechanism abort Submission ở các API/build tương ứng, nhưng first principle vẫn là: **asynchronous response không đảm bảo về đúng thứ tự user intent**.
+Giải pháp tùy khung phần mềm (framework / 프레임워크)/bản dựng (build / 빌드) và API: abort yêu cầu (request / 요청) cũ, disable new tìm kiếm (search / 검색) khi yêu cầu (request / 요청) đang chạy, hoặc attach yêu cầu (request / 요청) định danh (identity / 식별자) và bỏ phản hồi (response / 응답) stale. WebSquare có cơ chế (mechanism / 메커니즘) abort Submission ở các API/bản dựng (build / 빌드) tương ứng, nhưng first principle vẫn là: **asynchronous phản hồi (response / 응답) không đảm bảo về đúng thứ tự người dùng (user / 사용자) intent**.
 
-## 14. Query flow và Save flow nên tách
+## 14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách
 
-Search/query thường read-only, dễ retry/cancel và response thường thay result list. Save là mutation, cần validation, duplicate protection, concurrency handling và xử lý partial/business failure cẩn thận.
+Tìm kiếm (search / 검색)/truy vấn (query / 쿼리) thường read-only, dễ thử lại (retry / 재시도)/cancel và phản hồi (response / 응답) thường thay kết quả (result / 결과) danh sách (list / 목록). Save là mutation, cần kiểm tra hợp lệ (validation / 검증), duplicate protection, tính đồng thời (concurrency / 동시성) handling và xử lý partial/nghiệp vụ (business / 비즈니스) thất bại (failure / 실패) cẩn thận.
 
-Đừng dùng cùng một helper mơ hồ cho mọi Submission nếu nó che mất semantics này.
+Đừng dùng cùng một helper mơ hồ cho mọi Submission nếu nó che mất ngữ nghĩa (semantics / 의미론) này.
 
-## 15. CRUD screen pattern
+## 15. CRUD screen mẫu (pattern / 패턴)
 
-Một flow enterprise điển hình:
+Một luồng (flow / 흐름) enterprise điển hình:
 
 ```text
 Search
@@ -254,11 +257,11 @@ success
 re-query hoặc normalize client state
 ```
 
-Sau save, **re-query** lấy lại dữ liệu canonical từ server và an toàn khi server có trigger/default/normalization. **Local commit/reset** giữ data hiện tại rồi reset row state, nhanh hơn nhưng dễ lệch nếu server biến đổi dữ liệu. Chọn dựa trên contract, không theo thói quen.
+Sau save, **re-query** lấy lại dữ liệu chuẩn gốc (canonical / 정본) từ máy chủ (server / 서버) và an toàn khi máy chủ (server / 서버) có trigger/default/normalization. **cục bộ (local / 로컬) lần ghi nhận (commit / 커밋)/reset** giữ dữ liệu (data / 데이터) hiện tại rồi reset row trạng thái (state / 상태), nhanh hơn nhưng dễ lệch nếu máy chủ (server / 서버) biến đổi dữ liệu. Chọn dựa trên đặc tả hợp đồng (contract / 계약), không theo thói quen.
 
 ## 16. Dirty check
 
-Trước khi save, nên biết có row thay đổi hay không. Có thể duyệt row status hoặc dùng API hỗ trợ của build.
+Trước khi save, nên biết có row thay đổi hay không. Có thể duyệt row status hoặc dùng API hỗ trợ của bản dựng (build / 빌드).
 
 ```javascript
 scwin.hasChangedRows = function () {
@@ -274,11 +277,11 @@ scwin.hasChangedRows = function () {
 };
 ```
 
-Nhưng cần hiểu semantics của deleted row và filtered view. Nếu `getRowCount()` không bao gồm một loại row trong configuration cụ thể, dirty check có thể sai. Kiểm tra API reference/build khi implementation cần production guarantee.
+Nhưng cần hiểu ngữ nghĩa (semantics / 의미론) của deleted row và filtered view. Nếu `getRowCount()` không bao gồm một loại row trong cấu hình (configuration / 구성) cụ thể, dirty check có thể sai. Kiểm tra API tham chiếu (reference / 참조)/bản dựng (build / 빌드) khi hiện thực (implementation / 구현) cần môi trường vận hành (production / 운영 환경) guarantee.
 
 ## 17. Validate changed rows, không nhất thiết validate toàn bộ dataset
 
-Một Grid 10.000 row nhưng user chỉ sửa 2 row. Validate mọi cell mọi row trước save có thể lãng phí và tạo UX kém. Nếu business rule cho phép, chỉ validate row state `C`/`U` và các row `D` cần delete constraint.
+Một Grid 10.000 row nhưng người dùng (user / 사용자) chỉ sửa 2 row. Validate mọi cell mọi row trước save có thể lãng phí và tạo UX kém. Nếu nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) cho phép, chỉ validate row trạng thái (state / 상태) `C`/`U` và các row `D` cần delete ràng buộc (constraint / 제약조건).
 
 ```javascript
 scwin.validateChanges = function () {
@@ -298,15 +301,15 @@ scwin.validateChanges = function () {
 };
 ```
 
-## 18. Server contract phải explicit
+## 18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)
 
-Client không nên gửi “mọi thứ có trong DataList” rồi để server đoán. Contract cần xác định field required/writable/server-owned, row status encode ra sao, null/empty semantics, number/date format và error payload shape.
+Máy khách (client / 클라이언트) không nên gửi “mọi thứ có trong DataList” rồi để máy chủ (server / 서버) đoán. đặc tả hợp đồng (contract / 계약) cần xác định trường dữ liệu (field / 필드) required/writable/server-owned, row status encode ra sao, null/empty ngữ nghĩa (semantics / 의미론), number/date format và lỗi (error / 오류) payload shape.
 
-Nếu client gửi cả field không được phép sửa, server vẫn phải whitelist/validate. Không tin payload chỉ vì nó do WebSquare tạo.
+Nếu máy khách (client / 클라이언트) gửi cả trường dữ liệu (field / 필드) không được phép sửa, máy chủ (server / 서버) vẫn phải whitelist/validate. Không tin payload chỉ vì nó do WebSquare tạo.
 
 ## 19. Empty string, null và undefined
 
-Enterprise bug rất hay nằm ở semantic rỗng.
+Enterprise bug rất hay nằm ở ngữ nghĩa (semantic / 의미적) rỗng.
 
 ```text
 ""        = giá trị rỗng?
@@ -314,11 +317,11 @@ null      = không có giá trị?
 undefined = field không tồn tại/không được gửi?
 ```
 
-JavaScript, serializer, WebSquare DataCollection và server binding framework có thể xử lý khác nhau. Với update API, `field absent` và `field: null` thường mang ý nghĩa khác. Đừng normalize tất cả về `""` chỉ để “dễ”. Contract phải quyết định.
+JavaScript, serializer, WebSquare DataCollection và máy chủ (server / 서버) binding khung phần mềm (framework / 프레임워크) có thể xử lý khác nhau. Với cập nhật (update / 업데이트) API, `field absent` và `field: null` thường mang ý nghĩa khác. Đừng normalize tất cả về `""` chỉ để “dễ”. đặc tả hợp đồng (contract / 계약) phải quyết định.
 
 ## 20. Date và number không nên đi qua UI format mơ hồ
 
-Một số component có display/edit format. Data gửi server nên có canonical representation.
+Một số thành phần (component / 컴포넌트) có display/edit format. dữ liệu (data / 데이터) gửi máy chủ (server / 서버) nên có chuẩn gốc (canonical / 정본) biểu diễn (representation / 표현).
 
 ```text
 UI: 2026/09/22
@@ -326,17 +329,17 @@ model: 20260922
 hoặc API contract: 2026-09-22
 ```
 
-Chọn một representation ổn định ở API boundary. Đừng parse locale-formatted string ở server nếu có thể tránh.
+Chọn một biểu diễn (representation / 표현) ổn định ở API ranh giới (boundary / 경계). Đừng parse locale-formatted string ở máy chủ (server / 서버) nếu có thể tránh.
 
 ## 21. Submission so với AJAX thấp hơn
 
-WebSquare cũng có AJAX utility cho trường hợp cần control request/response ở mức thấp hơn. Nhưng đừng dùng AJAX chỉ vì quen `fetch`/jQuery.
+WebSquare cũng có AJAX utility cho trường hợp cần điều khiển (control / 제어) yêu cầu (request / 요청)/phản hồi (response / 응답) ở mức thấp hơn. Nhưng đừng dùng AJAX chỉ vì quen `fetch`/jQuery.
 
-Submission có lợi khi flow phù hợp DataCollection mapping, framework lifecycle và convention của project. AJAX phù hợp khi request không khớp model đó, cần raw payload/stream/special header hoặc integration đặc biệt. Decision nên dựa vào abstraction fit, không dựa vào sở thích cá nhân.
+Submission có lợi khi luồng (flow / 흐름) phù hợp DataCollection ánh xạ (mapping / 매핑), khung phần mềm (framework / 프레임워크) vòng đời (lifecycle / 생명주기) và convention của dự án (project / 프로젝트). AJAX phù hợp khi yêu cầu (request / 요청) không khớp mô hình (model / 모델) đó, cần raw payload/stream/special header hoặc tích hợp (integration / 통합) đặc biệt. quyết định (decision / 결정) nên dựa vào lớp trừu tượng (abstraction / 추상화) fit, không dựa vào sở thích cá nhân.
 
 ## 22. Workflow và orchestration
 
-Nếu nhiều Submission phụ thuộc thứ tự, project có thể dùng workflow hoặc orchestration bằng script.
+Nếu nhiều Submission phụ thuộc thứ tự, dự án (project / 프로젝트) có thể dùng workflow hoặc orchestration bằng script.
 
 ```text
 loadCodeList
@@ -346,11 +349,11 @@ loadUserDetail
 loadPermission
 ```
 
-Sai pattern là fire cả ba cùng lúc rồi dùng `setTimeout` để hy vọng thứ tự. Nếu request độc lập, chạy song song có thể nhanh hơn. Nếu có dependency, encode dependency explicit.
+Sai mẫu (pattern / 패턴) là fire cả ba cùng lúc rồi dùng `setTimeout` để hy vọng thứ tự. Nếu yêu cầu (request / 요청) độc lập, chạy song song có thể nhanh hơn. Nếu có phụ thuộc (dependency / 의존성), encode phụ thuộc (dependency / 의존성) tường minh (explicit / 명시적).
 
-## 23. Performance: payload trước, Grid sau
+## 23. hiệu năng (performance / 성능): payload trước, Grid sau
 
-Khi màn hình chậm, tách latency:
+Khi màn hình chậm, tách độ trễ (latency / 지연 시간):
 
 ```text
 T_total = request_wait
@@ -361,11 +364,11 @@ T_total = request_wait
         + script side effects
 ```
 
-Nếu Network cho thấy response mất 3 giây, tối ưu Grid không giải quyết chính. Nếu response 50 ms nhưng UI freeze 2 giây với 50.000 row, vấn đề nằm client rendering/data processing. Evidence trước optimization.
+Nếu mạng (network / 네트워크) cho thấy phản hồi (response / 응답) mất 3 giây, tối ưu Grid không giải quyết chính. Nếu phản hồi (response / 응답) 50 ms nhưng UI freeze 2 giây với 50.000 row, vấn đề nằm máy khách (client / 클라이언트) rendering/dữ liệu (data / 데이터) processing. bằng chứng (evidence / 증거) trước tối ưu hóa (optimization / 최적화).
 
-## 24. Security boundary
+## 24. ranh giới bảo mật (security boundary / 보안 경계)
 
-DataCollection nằm trong browser memory. User có DevTools có thể đọc/sửa client state.
+DataCollection nằm trong trình duyệt (browser / 브라우저) bộ nhớ (memory / 메모리). người dùng (user / 사용자) có DevTools có thể đọc/sửa máy khách (client / 클라이언트) trạng thái (state / 상태).
 
 ```text
 DataMap/DataList ≠ trusted storage
@@ -374,19 +377,19 @@ hidden column ≠ secret
 readOnly field ≠ immutable business data
 ```
 
-Server phải xác thực identity, authorization, ownership và invariant trước khi commit.
+Máy chủ (server / 서버) phải xác thực định danh (identity / 식별자), authorization, quyền sở hữu (ownership / 소유권) và bất biến (invariant / 불변식) trước khi lần ghi nhận (commit / 커밋).
 
-## 25. Debugging Submission theo pipeline
+## 25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)
 
-Khi Save thất bại, kiểm tra theo pipeline: handler Save có chạy, validation có pass, DataCollection trước submit chứa gì, reference trỏ đúng object không, request payload thực tế là gì, HTTP status/header/body là gì, business result là gì, target mapping sau response ra sao, callback nào chạy và cuối cùng có callback khác ghi đè UI không.
+Khi Save thất bại, kiểm tra theo chuỗi xử lý (pipeline / 파이프라인): handler Save có chạy, kiểm tra hợp lệ (validation / 검증) có pass, DataCollection trước submit chứa gì, tham chiếu (reference / 참조) trỏ đúng đối tượng (object / 객체) không, yêu cầu (request / 요청) payload thực tế là gì, HTTP status/header/body là gì, nghiệp vụ (business / 비즈니스) kết quả (result / 결과) là gì, mục tiêu (target / 대상) ánh xạ (mapping / 매핑) sau phản hồi (response / 응답) ra sao, callback nào chạy và cuối cùng có callback khác ghi đè UI không.
 
 Đi theo thứ tự này tốt hơn việc thêm `alert()` ngẫu nhiên.
 
-## 26. `submitdone` và `submiterror`: hiểu đúng transport boundary
+## 26. `submitdone` và `submiterror`: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)
 
-Tài liệu SP5 định nghĩa `submitdone(e)` chạy khi response status code nằm trong vùng thành công, còn `submiterror(e)` chạy khi status nhỏ hơn 200 hoặc từ 300 trở lên. Điều này tạo một boundary rất cụ thể: hai callback này trước hết phản ánh **HTTP/Submission transport outcome**, không phải business outcome.
+Tài liệu SP5 định nghĩa `submitdone(e)` chạy khi phản hồi (response / 응답) status mã (code / 코드) nằm trong vùng thành công, còn `submiterror(e)` chạy khi status nhỏ hơn 200 hoặc từ 300 trở lên. Điều này tạo một ranh giới (boundary / 경계) rất cụ thể: hai callback này trước hết phản ánh **HTTP/Submission vận chuyển (transport / 전송) kết quả (outcome / 결과)**, không phải nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과).
 
-Event object của `submitdone` có các dữ liệu như `responseStatusCode`, `responseHeaders`, `responseText`, `responseBody` và, khi response `Content-Type` chứa JSON, `responseJSON`. Vì vậy code production không cần parse cùng một response theo ba cách ngẫu nhiên. Hãy chọn representation dựa trên media type và contract.
+Sự kiện (event / 이벤트) đối tượng (object / 객체) của `submitdone` có các dữ liệu như `responseStatusCode`, `responseHeaders`, `responseText`, `responseBody` và, khi phản hồi (response / 응답) `Content-Type` chứa JSON, `responseJSON`. Vì vậy mã (code / 코드) môi trường vận hành (production / 운영 환경) không cần parse cùng một phản hồi (response / 응답) theo ba cách ngẫu nhiên. Hãy chọn biểu diễn (representation / 표현) dựa trên media kiểu (type / 타입) và đặc tả hợp đồng (contract / 계약).
 
 ```javascript
 scwin.sbmSave_submitdone = function (e) {
@@ -401,15 +404,15 @@ scwin.sbmSave_submitdone = function (e) {
 };
 ```
 
-Ví dụ trên chỉ là contract minh họa; key `success` không phải chuẩn WebSquare. Điểm cần nhớ là WebSquare quyết định transport callback, còn application quyết định business success.
+Ví dụ trên chỉ là đặc tả hợp đồng (contract / 계약) minh họa; key `success` không phải chuẩn WebSquare. Điểm cần nhớ là WebSquare quyết định vận chuyển (transport / 전송) callback, còn ứng dụng (application / 애플리케이션) quyết định nghiệp vụ (business / 비즈니스) success.
 
-`submiterror(e)` cũng có `requestBody` và `responseText` ở SP5. Đây là evidence hữu ích khi debug nhưng có thể chứa PII hoặc credential-like data. Không dump toàn bộ event vào production log chỉ vì nó tiện.
+`submiterror(e)` cũng có `requestBody` và `responseText` ở SP5. Đây là bằng chứng (evidence / 증거) hữu ích khi gỡ lỗi (debug / 디버그) nhưng có thể chứa PII hoặc credential-like dữ liệu (data / 데이터). Không dump toàn bộ sự kiện (event / 이벤트) vào môi trường vận hành (production / 운영 환경) log chỉ vì nó tiện.
 
-## 27. Async là default reasoning; sync là compatibility debt
+## 27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt
 
-SP5 Development Guide khuyến nghị Submission bất đồng bộ (asynchronous / 비동기) và có configuration cảnh báo khi dùng synchronous mode. Lý do không chỉ là style: synchronous network work khóa execution/UI path, làm browser kém responsive và khiến control flow phụ thuộc một behavior mà platform web hiện đại tránh.
+SP5 Development Guide khuyến nghị Submission bất đồng bộ (asynchronous / 비동기) và có cấu hình (configuration / 구성) cảnh báo khi dùng synchronous chế độ (mode / 모드). Lý do không chỉ là style: synchronous mạng (network / 네트워크) công việc (work / 작업) khóa thực thi (execution / 실행)/UI đường dẫn (path / 경로), làm trình duyệt (browser / 브라우저) kém responsive và khiến điều khiển (control / 제어) luồng (flow / 흐름) phụ thuộc một hành vi (behavior / 동작) mà nền tảng (platform / 플랫폼) web hiện đại tránh.
 
-Khi gặp project legacy dùng sync Submission, đừng đổi toàn bộ sang async bằng search-replace. Sync code thường vô tình dựa vào invariant:
+Khi gặp dự án (project / 프로젝트) legacy dùng sync Submission, đừng đổi toàn bộ sang async bằng search-replace. Sync mã (code / 코드) thường vô tình dựa vào bất biến (invariant / 불변식):
 
 ```text
 executeSubmission()
@@ -417,17 +420,17 @@ executeSubmission()
 → dòng kế tiếp đọc target
 ```
 
-Khi chuyển async, invariant đó biến mất. Migration phải tìm mọi read-after-submit, state transition, popup close, navigation và error path phụ thuộc timing cũ rồi chuyển chúng vào callback/orchestration explicit.
+Khi chuyển async, bất biến (invariant / 불변식) đó biến mất. di chuyển (migration / 마이그레이션) phải tìm mọi read-after-submit, chuyển tiếp trạng thái (state transition / 상태 전이), popup close, điều hướng (navigation / 내비게이션) và lỗi (error / 오류) đường dẫn (path / 경로) phụ thuộc timing cũ rồi chuyển chúng vào callback/orchestration tường minh (explicit / 명시적).
 
 ## 28. `getAllJSON()` không chỉ là “convert DataList thành Array”
 
-SP5 cho phép `getAllJSON()` trả toàn bộ DataList và có option liên quan row-status data. Điều này củng cố mental model rằng DataList gồm **business cells + framework metadata**, không phải chỉ một array object.
+SP5 cho phép `getAllJSON()` trả toàn bộ DataList và có option liên quan row-status dữ liệu (data / 데이터). Điều này củng cố mô hình tư duy (mental model / 사고 모델) rằng DataList gồm **nghiệp vụ (business / 비즈니스) cells + khung phần mềm (framework / 프레임워크) siêu dữ liệu (metadata / 메타데이터)**, không phải chỉ một array đối tượng (object / 객체).
 
-Khi API server chỉ cần business data, đừng vô thức gửi metadata. Khi save contract cần change semantics, đừng vô thức bỏ metadata rồi tự đoán lại change bằng cách compare object. Hãy chọn API theo ý nghĩa dữ liệu cần lấy.
+Khi API máy chủ (server / 서버) chỉ cần nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터), đừng vô thức gửi siêu dữ liệu (metadata / 메타데이터). Khi save đặc tả hợp đồng (contract / 계약) cần thay đổi (change / 변경) ngữ nghĩa (semantics / 의미론), đừng vô thức bỏ siêu dữ liệu (metadata / 메타데이터) rồi tự đoán lại thay đổi (change / 변경) bằng cách compare đối tượng (object / 객체). Hãy chọn API theo ý nghĩa dữ liệu cần lấy.
 
-Các API như `getInsertedJSON()`, `getUpdatedJSON()`, `getModifiedJSON()` và `getOnlyDeletedJSON()` tồn tại ở các SP5 build tương ứng để lấy tập thay đổi theo semantic rõ hơn. Chúng hữu ích khi save changed rows, nhưng exact option và treatment của null/status phải được đối chiếu build đang chạy.
+Các API như `getInsertedJSON()`, `getUpdatedJSON()`, `getModifiedJSON()` và `getOnlyDeletedJSON()` tồn tại ở các SP5 bản dựng (build / 빌드) tương ứng để lấy tập thay đổi theo ngữ nghĩa (semantic / 의미적) rõ hơn. Chúng hữu ích khi save changed rows, nhưng chính xác (exact / 정확한) option và treatment của null/status phải được đối chiếu bản dựng (build / 빌드) đang chạy.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 getAllJSON       → snapshot rộng
@@ -437,13 +440,13 @@ getModifiedJSON  → change set theo contract API
 getOnlyDeletedJSON → delete set
 ```
 
-Đừng chọn API vì tên “có vẻ đúng”; kiểm tra xem deleted row, rowStatus và null conversion được trả như thế nào trong build thật.
+Đừng chọn API vì tên “có vẻ đúng”; kiểm tra xem deleted row, rowStatus và null conversion được trả như thế nào trong bản dựng (build / 빌드) thật.
 
-## 29. Filtered index và real index là hai coordinate system
+## 29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)
 
-Khi DataList/LinkedDataList bị filter, vị trí người dùng thấy có thể khác index thật của source. SP5 có API như `getFilteredRowIndex(realRowIndex)` để ánh xạ index thật sang vị trí sau filter.
+Khi DataList/LinkedDataList bị filter, vị trí người dùng thấy có thể khác chỉ mục (index / 인덱스) thật của nguồn (source / 소스). SP5 có API như `getFilteredRowIndex(realRowIndex)` để ánh xạ chỉ mục (index / 인덱스) thật sang vị trí sau filter.
 
-Đây không phải detail nhỏ. Nếu code giữ `selectedIndex = 5`, sau filter/sort thì “5” có thể chỉ là **tọa độ của view**, không còn là identity của business row.
+Đây không phải detail nhỏ. Nếu mã (code / 코드) giữ `selectedIndex = 5`, sau filter/sort thì “5” có thể chỉ là **tọa độ của view**, không còn là định danh (identity / 식별자) của nghiệp vụ (business / 비즈니스) row.
 
 ```text
 business key = identity ổn định
@@ -451,41 +454,41 @@ real row index = vị trí trong source model
 filtered/view index = vị trí trong projection hiện tại
 ```
 
-Senior code ưu tiên business key cho operation sống lâu hơn một interaction tức thời. Index chỉ nên được giữ ngắn hạn trong đúng coordinate system của nó.
+Cấp cao (senior / 시니어) mã (code / 코드) ưu tiên nghiệp vụ (business / 비즈니스) key cho thao tác (operation / 연산) sống lâu hơn một tương tác (interaction / 상호작용) tức thời. chỉ mục (index / 인덱스) chỉ nên được giữ ngắn hạn trong đúng coordinate hệ thống (system / 시스템) của nó.
 
 ## 30. Null handling đã trở thành một phần version-sensitive của DataList
 
-Các SP5 engine mới bổ sung `nullYN` ở column và `nullYNType` ở DataList cho các API trả JSON. Với column được đánh dấu phù hợp, empty data có thể được giữ theo default behavior, bị exclude khỏi object hoặc được trả thành `null`, tùy configuration/build.
+Các SP5 engine mới bổ sung `nullYN` ở column và `nullYNType` ở DataList cho các API trả JSON. Với column được đánh dấu phù hợp, empty dữ liệu (data / 데이터) có thể được giữ theo default hành vi (behavior / 동작), bị exclude khỏi đối tượng (object / 객체) hoặc được trả thành `null`, tùy cấu hình (configuration / 구성)/bản dựng (build / 빌드).
 
-Điều này có consequence lớn với PATCH/update contract:
+Điều này có consequence lớn với PATCH/cập nhật (update / 업데이트) đặc tả hợp đồng (contract / 계약):
 
 ```text
 { name: "" }   ≠   { name: null }   ≠   { }
 ```
 
-Nếu backend hiểu ba payload trên khác nhau, một thay đổi engine/config ở DataList có thể thay business behavior dù handler JavaScript không đổi. Vì vậy regression test serialization phải kiểm tra payload thật, không chỉ kiểm tra value hiển thị trên Grid.
+Nếu backend hiểu ba payload trên khác nhau, một thay đổi engine/cấu hình (config / 설정) ở DataList có thể thay nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작) dù handler JavaScript không đổi. Vì vậy regression kiểm thử (test / 테스트) serialization phải kiểm tra payload thật, không chỉ kiểm tra giá trị (value / 값) hiển thị trên Grid.
 
-## 31. Data type coercion cũng là contract, không phải convenience vô hại
+## 31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại
 
-SP5 các build gần đây có behavior/config như `preserveType` hoặc `keepDataType` để xử lý việc string được set vào column khai báo `dataType="number"` và các type khác. Đây là dấu hiệu quan trọng: type của DataList có thể tham gia coercion khi data đi vào model.
+SP5 các bản dựng (build / 빌드) gần đây có hành vi (behavior / 동작)/cấu hình (config / 설정) như `preserveType` hoặc `keepDataType` để xử lý việc string được set vào column khai báo `dataType="number"` và các kiểu (type / 타입) khác. Đây là dấu hiệu quan trọng: kiểu (type / 타입) của DataList có thể tham gia coercion khi dữ liệu (data / 데이터) đi vào mô hình (model / 모델).
 
-Giả sử server trả:
+Giả sử máy chủ (server / 서버) trả:
 
 ```json
 { "ACCOUNT_NO": "00123" }
 ```
 
-Nếu column bị model như number và coercion biến nó thành `123`, leading zero đã mất trước khi Submission tiếp theo chạy. Vấn đề không nằm ở Grid formatter mà ở **domain modeling**: account number nhìn giống số nhưng bản chất là identifier, vì vậy nên là string.
+Nếu column bị mô hình (model / 모델) như number và coercion biến nó thành `123`, leading zero đã mất trước khi Submission tiếp theo chạy. Vấn đề không nằm ở Grid formatter mà ở **lĩnh vực (domain / 도메인) modeling**: account number nhìn giống số nhưng bản chất là identifier, vì vậy nên là string.
 
-Quy tắc first-principles: chọn DataList `dataType` theo ý nghĩa domain và phép toán hợp lệ, không theo hình dạng ký tự.
+Quy tắc first-principles: chọn DataList `dataType` theo ý nghĩa lĩnh vực (domain / 도메인) và phép toán hợp lệ, không theo hình dạng ký tự.
 
-## 32. Row status và cell status có memory cost thật
+## 32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật
 
-Release note SP5 2025 ghi nhận tối ưu internal arrays liên quan `rowStatus` và `cellStatus` để giảm memory khi set lượng dữ liệu lớn. Điều này xác nhận một điều mà developer thường quên: change tracking có footprint, đặc biệt với DataList lớn.
+Bản phát hành (release / 릴리스) ghi chú (note / 노트) SP5 2025 ghi nhận tối ưu nội bộ (internal / 내부) arrays liên quan `rowStatus` và `cellStatus` để giảm bộ nhớ (memory / 메모리) khi set lượng dữ liệu lớn. Điều này xác nhận một điều mà nhà phát triển (developer / 개발자) thường quên: thay đổi (change / 변경) tracking có footprint, đặc biệt với DataList lớn.
 
-Nếu màn hình load 50.000 × 30 cells chỉ để read-only report, hãy hỏi liệu client có thực sự cần toàn bộ dataset và full editing/change tracking hay không. Pagination, server aggregation, read-only projection hoặc lazy data strategy thường có leverage lớn hơn micro-optimize loop JavaScript.
+Nếu màn hình tải (load / 로드) 50.000 × 30 cells chỉ để read-only report, hãy hỏi liệu máy khách (client / 클라이언트) có thực sự cần toàn bộ dataset và full editing/thay đổi (change / 변경) tracking hay không. Pagination, máy chủ (server / 서버) aggregation, read-only projection hoặc lazy dữ liệu (data / 데이터) chiến lược (strategy / 전략) thường có leverage lớn hơn micro-optimize vòng lặp (loop / 루프) JavaScript.
 
-Performance reasoning nên đi từ:
+Hiệu năng (performance / 성능) lập luận (reasoning / 추론) nên đi từ:
 
 ```text
 number of rows × number of columns
@@ -497,15 +500,15 @@ number of rows × number of columns
 
 chứ không chỉ nhìn DOM row count.
 
-## 33. Workflow không phải Promise chain “cổ điển” cần thay bằng tay
+## 33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay
 
-WebSquare có `xf:workflow` để mô tả thứ tự `submit`/`submitDone` khi nhiều Submission cần phối hợp; guide SP5 khuyến nghị workflow chủ yếu cho communication kiểu Select. Ý nghĩa kiến trúc là dependency được khai báo thay vì giấu trong timer hoặc callback lồng sâu.
+WebSquare có `xf:workflow` để mô tả thứ tự `submit`/`submitDone` khi nhiều Submission cần phối hợp; guide SP5 khuyến nghị workflow chủ yếu cho communication kiểu Select. Ý nghĩa kiến trúc là phụ thuộc (dependency / 의존성) được khai báo thay vì giấu trong timer hoặc callback lồng sâu.
 
-Tuy vậy workflow không tự giải quyết business transaction, rollback hay distributed consistency. Nếu `loadA → loadB → loadC` chỉ là query dependency, workflow có thể phù hợp. Nếu `saveA → saveB` phải atomic ở database, giải pháp đúng thường là một server-side transaction boundary, không phải hai client Submission nối nhau rồi hy vọng cả hai cùng thành công.
+Tuy vậy workflow không tự giải quyết nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션), quay lui (rollback / 롤백) hay phân tán (distributed / 분산) consistency. Nếu `loadA → loadB → loadC` chỉ là truy vấn (query / 쿼리) phụ thuộc (dependency / 의존성), workflow có thể phù hợp. Nếu `saveA → saveB` phải atomic ở cơ sở dữ liệu (database / 데이터베이스), giải pháp đúng thường là một server-side giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계), không phải hai máy khách (client / 클라이언트) Submission nối nhau rồi hy vọng cả hai cùng thành công.
 
-## 34. Submission serialization phải được regression-test như public contract
+## 34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)
 
-Một màn hình có thể nhìn hoàn toàn đúng nhưng payload thay đổi sau engine upgrade, config change hoặc DataList schema edit. Vì vậy với flow quan trọng, test nên cố định các case:
+Một màn hình có thể nhìn hoàn toàn đúng nhưng payload thay đổi sau engine upgrade, cấu hình (config / 설정) thay đổi (change / 변경) hoặc DataList lược đồ (schema / 스키마) edit. Vì vậy với luồng (flow / 흐름) quan trọng, kiểm thử (test / 테스트) nên cố định các trường hợp (case / 사례):
 
 ```text
 empty string
@@ -521,16 +524,18 @@ server 4xx/5xx
 stale async response
 ```
 
-Evidence cuối cùng là request body trong Network hoặc test harness, không phải screenshot UI. Đây là điểm nối trực tiếp sang [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md).
+Bằng chứng (evidence / 증거) cuối cùng là yêu cầu (request / 요청) body trong mạng (network / 네트워크) hoặc kiểm thử (test / 테스트) harness, không phải screenshot UI. Đây là điểm nối trực tiếp sang [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md).
 
-## 35. Checklist reasoning trước khi sửa Submission bug
+## 35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug
 
-Trước khi sửa code, trả lời được các câu sau: source of truth hiện nằm ở DataMap/DataList nào; row đang ở state gì; index đang dùng là source index hay filtered/view index; serializer có chuyển null/type không; request nào là latest user intent; callback đang phản ánh transport hay business result; response target có replace/merge state nào; và sau success client sẽ re-query hay tự commit local state.
+Trước khi sửa mã (code / 코드), trả lời được các câu sau: nguồn chuẩn (source of truth / 정본) hiện nằm ở DataMap/DataList nào; row đang ở trạng thái (state / 상태) gì; chỉ mục (index / 인덱스) đang dùng là nguồn (source / 소스) chỉ mục (index / 인덱스) hay filtered/view chỉ mục (index / 인덱스); serializer có chuyển null/kiểu (type / 타입) không; yêu cầu (request / 요청) nào là latest người dùng (user / 사용자) intent; callback đang phản ánh vận chuyển (transport / 전송) hay nghiệp vụ (business / 비즈니스) kết quả (result / 결과); phản hồi (response / 응답) mục tiêu (target / 대상) có replace/merge trạng thái (state / 상태) nào; và sau success máy khách (client / 클라이언트) sẽ re-query hay tự lần ghi nhận (commit / 커밋) cục bộ (local / 로컬) trạng thái (state / 상태).
 
 Nếu một câu chưa trả lời được, fix bằng thêm `if` thường chỉ che symptom.
 
 ## 36. Kết nối
 
-DataCollection và Submission trở nên phức tạp hơn khi page được chia thành nhiều frame/scope. Tiếp theo đọc [04 — Scope, WFrame, Popup & SPA](04_scope_wframe_popup_spa.md).
+DataCollection và Submission trở nên phức tạp hơn khi page được chia thành nhiều frame/phạm vi (scope / 범위). Tiếp theo đọc [04 — Scope, WFrame, Popup & SPA](04_scope_wframe_popup_spa.md).
 
-Khi cần kiểm thử payload, race, row-state và engine upgrade, đọc [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md). Khi behavior chỉ khác giữa local/UAT/production, đối chiếu thêm [12 — Build, Configuration, Deployment & Environment Reasoning](12_build_config_deployment.md).
+Khi cần kiểm thử payload, race, row-state và engine upgrade, đọc [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md). Khi hành vi (behavior / 동작) chỉ khác giữa cục bộ (local / 로컬)/UAT/môi trường vận hành (production / 운영 환경), đối chiếu thêm [12 — Build, Configuration, Deployment & Environment Reasoning](12_build_config_deployment.md).
+
+> **Bàn giao:** Sau **36. Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 platform runtime page model](./01_platform_runtime_page_model.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

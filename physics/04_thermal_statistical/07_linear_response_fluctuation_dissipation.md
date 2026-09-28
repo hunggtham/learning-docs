@@ -1,5 +1,8 @@
 # Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán
 
+> **Mạch đọc:** Đọc **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Câu hỏi trung tâm** sang **Đáp ứng tuyến tính như xấp xỉ bậc nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Câu hỏi trung tâm
 
 Khi một hệ đang gần cân bằng bị tác động rất yếu, đáp ứng của nó thường gần tuyến tính theo nhiễu loạn ngoài. Điều sâu hơn là **cách hệ tiêu tán năng lượng khi bị kích thích** liên hệ trực tiếp với **các thăng giáng tự phát của chính hệ khi không bị kích thích**.
@@ -46,7 +49,7 @@ Trong nhiều hệ:
 
 Ví dụ, trong điện môi, phần ảo của hằng số điện môi liên hệ với hấp thụ. Trong dao động cơ học, phần ảo của compliance liên hệ với mất mát năng lượng.
 
-Tiêu tán không phải một chi tiết phụ: nó quyết định entropy production, độ rộng cộng hưởng và thời gian sống của mode.
+Tiêu tán không phải một chi tiết phụ: nó quyết định entropy môi trường vận hành (production / 운영 환경), độ rộng cộng hưởng và thời gian sống của chế độ (mode / 모드).
 
 ## Nhân quả và quan hệ Kramers–Kronig
 
@@ -171,11 +174,11 @@ Hàm bước `\theta(t)` bảo đảm nhân quả. Commutator xuất hiện vì 
 
 Độ dẫn điện, susceptibility từ và đáp ứng quang học của hệ nhiều hạt thường được suy ra bằng formalism Kubo.
 
-## Dynamic structure factor và quang phổ học
+## Động (dynamic / 동적) cấu trúc (structure / 구조) factor và quang phổ học
 
-Dao động mật độ trong vật chất có thể được mô tả bằng dynamic structure factor `S(q,\omega)`.
+Dao động mật độ trong vật chất có thể được mô tả bằng động (dynamic / 동적) cấu trúc (structure / 구조) factor `S(q,\omega)`.
 
-Tán xạ neutron, tia X và ánh sáng đo các đại lượng liên quan đến `S`. Vị trí peak cho biết mode tập thể, còn độ rộng peak liên hệ với damping và thời gian sống.
+Tán xạ neutron, tia X và ánh sáng đo các đại lượng liên quan đến `S`. Vị trí peak cho biết chế độ (mode / 모드) tập thể, còn độ rộng peak liên hệ với damping và thời gian sống.
 
 FDT nối phổ thăng giáng với phần tiêu tán của susceptibility. Vì vậy đo nhiễu tự phát và đo đáp ứng cưỡng bức có thể cung cấp thông tin về cùng động lực vi mô.
 
@@ -197,7 +200,7 @@ Khi có từ trường hoặc biến đổi có tính lẻ dưới đảo thời
 
 Hiệu ứng Seebeck–Peltier trong nhiệt điện là ví dụ quan trọng về vận chuyển ghép chéo.
 
-## Entropy production trong nhiệt động lực học không thuận nghịch tuyến tính
+## Entropy môi trường vận hành (production / 운영 환경) trong nhiệt động lực học không thuận nghịch tuyến tính
 
 Tốc độ sinh entropy thường có dạng
 
@@ -209,7 +212,7 @@ Tốc độ sinh entropy thường có dạng
 
 Đây là cầu nối giữa nhiệt động lực học không cân bằng dạng hiện tượng luận và lý thuyết tương quan vi mô.
 
-## Critical slowing down
+## Trọng yếu (critical / 중요) slowing down
 
 Gần chuyển pha liên tục, độ dài tương quan tăng và thời gian thư giãn cũng có thể tăng mạnh.
 
@@ -260,9 +263,9 @@ D=\mu k_BT,
 
 `k_BT` có đơn vị năng lượng, nên tích với `\mu` phải cho đơn vị `m^2/s` của hệ số khuếch tán.
 
-Các kiểm tra thứ nguyên như vậy đặc biệt hữu ích vì linear response thường chứa nhiều hệ số hiện tượng luận.
+Các kiểm tra thứ nguyên như vậy đặc biệt hữu ích vì tuyến tính (linear / 선형) phản hồi (response / 응답) thường chứa nhiều hệ số hiện tượng luận.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Cân bằng không phải trạng thái “im lặng”. Các bậc tự do vi mô luôn thăng giáng.
 
@@ -296,8 +299,10 @@ Không nhất thiết. Tính không thuận nghịch vĩ mô có thể nổi lê
 
 Không. Nó thường mang thông tin trực tiếp về hấp thụ và mất mát năng lượng.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Ensemble thống kê](03_ensembles_partition_functions.md), [Động lực ngẫu nhiên](04_stochastic_nonequilibrium.md), [Tín hiệu và mật độ phổ](../12_experimental_computational/01_signals_sampling_noise.md).
 
 **Liên hệ tiếp:** [Hiện tượng vận chuyển](../03_continuum/02_transport_diffusion_heat.md), [Vận chuyển trong vật chất ngưng tụ](../10_condensed_matter_devices/02_transport_magnetism_superconductivity.md), [Quang học phi tuyến và tán sắc](../06_optics/03_polarization_dispersion_nonlinear_optics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

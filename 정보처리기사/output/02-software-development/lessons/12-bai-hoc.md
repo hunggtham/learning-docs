@@ -10,7 +10,7 @@
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 앞의 **6. 정렬 알고리즘 (Sorting Algorithms)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **028: 정렬 (Sorting / Thuật toán sắp xếp)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -19,6 +19,8 @@
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** và nối nó với **028: 정렬 (Sorting / Thuật toán sắp xếp)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -30,6 +32,6 @@
 * **VI (Vietnamese) (Tiếng Việt):** Các thuật toán sắp xếp bổ sung:
   * Quick Sort: Chia để trị (Divide & Conquer), dùng chốt (pivot).
   * Merge Sort: Trộn 2 mảng đã sắp xếp.
-  * Heap Sort: Dùng cây nhị phân hoàn chỉnh.
+  * vùng nhớ động (heap / 힙) Sort: Dùng cây nhị phân hoàn chỉnh.
 * **Example**: 퀵 정렬은 반장(기준)을 뽑아서 키 작은 사람은 왼쪽, 큰 사람은 오른쪽으로 세우는 방식입니다.
-* 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/Heap = Luôn ổn định O(n log n).
+* 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/vùng nhớ động (heap / 힙) = Luôn ổn định O(n log n).

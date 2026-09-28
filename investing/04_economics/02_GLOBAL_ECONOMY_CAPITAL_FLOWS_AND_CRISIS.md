@@ -1,5 +1,8 @@
 # Kinh tế toàn cầu, dòng vốn và khủng hoảng
 
+> **Mạch đọc:** Đặt **Kinh tế toàn cầu, dòng vốn và khủng hoảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Không có nền kinh tế nào hoàn toàn độc lập** sang **2. Lợi thế so sánh**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này giải thích cách các nền kinh tế liên kết với nhau qua thương mại, tỷ giá, ngân hàng, thị trường vốn, hàng hóa và hệ thống USD. Mục tiêu là hiểu **cơ chế truyền dẫn xuyên biên giới**, không chỉ ghi nhớ tên khủng hoảng hoặc chỉ số.
 
 # Phần I — Nền kinh tế toàn cầu như một mạng lưới
@@ -62,7 +65,7 @@ Sau các cú sốc lớn, doanh nghiệp thường chấp nhận chi phí cao h�
 
 # Phần II — Cán cân thanh toán
 
-## 6. Current account
+## 6. hiện tại (current / 현재) account
 
 Tài khoản vãng lai (current account) gồm:
 
@@ -75,7 +78,7 @@ Thặng dư nghĩa nền kinh tế đang tiết kiệm nhiều hơn đầu tư t
 
 ## 7. Capital / financial account
 
-Nếu một quốc gia có thâm hụt current account, nó phải được tài trợ bằng dòng vốn từ bên ngoài hoặc giảm tài sản dự trữ.
+Nếu một quốc gia có thâm hụt hiện tại (current / 현재) account, nó phải được tài trợ bằng dòng vốn từ bên ngoài hoặc giảm tài sản dự trữ.
 
 Dòng vốn có thể đến từ:
 
@@ -87,13 +90,13 @@ Dòng vốn có thể đến từ:
 
 Chất lượng nguồn tài trợ quan trọng không kém quy mô.
 
-## 8. FDI và portfolio flow khác nhau
+## 8. FDI và portfolio luồng (flow / 흐름) khác nhau
 
 FDI thường gắn với nhà máy, doanh nghiệp hoặc tài sản vận hành và có horizon dài hơn.
 
-Portfolio flow có thể đảo chiều nhanh khi lợi suất hoặc risk sentiment thay đổi.
+Portfolio luồng (flow / 흐름) có thể đảo chiều nhanh khi lợi suất hoặc rủi ro (risk / 위험) sentiment thay đổi.
 
-Một nền kinh tế phụ thuộc dòng vốn ngắn hạn thường nhạy hơn với global tightening.
+Một nền kinh tế phụ thuộc dòng vốn ngắn hạn thường nhạy hơn với toàn cục (global / 전역) tightening.
 
 # Phần III — USD và hệ thống tiền tệ quốc tế
 
@@ -125,7 +128,7 @@ Vai trò này tạo cả lợi ích lẫn trách nhiệm cho quốc gia phát h�
 
 Hệ thống Bretton Woods sau Thế chiến II gắn nhiều đồng tiền với USD và USD với vàng.
 
-Khi hệ thống kết thúc, tỷ giá lớn chuyển sang linh hoạt hơn nhưng USD vẫn giữ vai trò trung tâm nhờ quy mô tài chính và network effect.
+Khi hệ thống kết thúc, tỷ giá lớn chuyển sang linh hoạt hơn nhưng USD vẫn giữ vai trò trung tâm nhờ quy mô tài chính và mạng (network / 네트워크) tác động (effect / 효과).
 
 ## 12. Eurodollar và USD ngoài Mỹ
 
@@ -133,7 +136,7 @@ Khi hệ thống kết thúc, tỷ giá lớn chuyển sang linh hoạt hơn nh�
 
 Điều này cho thấy nguồn cung USD toàn cầu không chỉ phụ thuộc trực tiếp vào Fed.
 
-## 13. Global dollar funding
+## 13. toàn cục (global / 전역) dollar funding
 
 Doanh nghiệp và ngân hàng ngoài Mỹ có thể vay USD nhưng tạo thu nhập bằng nội tệ.
 
@@ -237,7 +240,7 @@ Short-Term USD Debt
 
 Khủng hoảng cán cân thanh toán có thể xuất hiện khi:
 
-- current account yếu;
+- hiện tại (current / 현재) account yếu;
 - nợ ngoại tệ cao;
 - dự trữ thấp;
 - tỷ giá khó duy trì;
@@ -268,7 +271,7 @@ Khả năng trả nợ phụ thuộc:
 - primary balance;
 - maturity;
 - currency of debt;
-- investor base.
+- investor cơ sở (base / 기반).
 
 Nợ bằng nội tệ có cơ chế rủi ro khác nợ bằng ngoại tệ.
 
@@ -304,13 +307,13 @@ Sovereign Risk ↑
 → Sovereign Risk ↑
 ```
 
-Đây là **sovereign-bank doom loop**.
+Đây là **sovereign-bank doom vòng lặp (loop / 루프)**.
 
 # Phần IX — Repo, collateral và hệ thống phi ngân hàng
 
 ## 28. Collateral
 
-Tài sản bảo đảm không chỉ giảm credit risk; nó còn tạo khả năng vay.
+Tài sản bảo đảm không chỉ giảm credit rủi ro (risk / 위험); nó còn tạo khả năng vay.
 
 Khi giá collateral giảm hoặc haircut tăng, sức vay của hệ thống có thể co nhanh.
 
@@ -338,24 +341,24 @@ Asset Price ↓
 Mỹ ảnh hưởng hệ thống qua:
 
 - USD;
-- Treasury market;
+- Treasury thị trường (market / 시장);
 - Fed;
 - consumption;
 - technology;
-- global risk appetite.
+- toàn cục (global / 전역) rủi ro (risk / 위험) appetite.
 
 ## 32. Trung Quốc
 
 Trung Quốc ảnh hưởng qua:
 
 - manufacturing;
-- property;
+- thuộc tính (property / 속성);
 - commodities;
 - regional trade;
-- supply chain;
-- industrial policy.
+- supply chuỗi (chain / 사슬);
+- industrial chính sách (policy / 정책).
 
-Cần tách stimulus dành cho property, infrastructure hay consumption vì tác động tới thế giới khác nhau.
+Cần tách stimulus dành cho thuộc tính (property / 속성), hạ tầng (infrastructure / 인프라) hay consumption vì tác động tới thế giới khác nhau.
 
 ## 33. Eurozone
 
@@ -369,7 +372,7 @@ Nhật có lịch sử dài với:
 
 - low inflation;
 - aging;
-- yield-curve policy;
+- yield-curve chính sách (policy / 정책);
 - JPY funding;
 - large domestic savings.
 
@@ -393,15 +396,15 @@ Việt Nam nhạy với:
 - FDI;
 - manufacturing exports;
 - domestic credit;
-- property;
-- public investment;
+- thuộc tính (property / 속성);
+- công khai (public / 공개) investment;
 - USD/VND.
 
 # Phần XI — Hàng hóa và vận tải
 
 ## 37. Dầu
 
-Dầu là input quan trọng cho sản xuất, vận tải và lạm phát.
+Dầu là đầu vào (input / 입력) quan trọng cho sản xuất, vận tải và lạm phát.
 
 Cú sốc dầu do cầu mạnh có ý nghĩa khác cú sốc do nguồn cung bị gián đoạn.
 
@@ -412,7 +415,7 @@ Kim loại công nghiệp nhạy với:
 - xây dựng;
 - manufacturing;
 - China;
-- energy transition;
+- năng lượng (energy / 에너지) chuyển tiếp (transition / 전이);
 - mine supply.
 
 ## 39. Nông sản và thực phẩm
@@ -434,7 +437,7 @@ Cấm vận có thể tác động:
 - thanh toán;
 - logistics;
 - năng lượng;
-- technology access;
+- technology truy cập (access / 접근);
 - reserves.
 
 Tác động thứ cấp thường rất quan trọng.
@@ -446,9 +449,9 @@ Thuế quan có thể làm giá nhập khẩu tăng nhưng mức truyền sang C
 - tỷ giá;
 - margin importer;
 - substitution;
-- domestic capacity.
+- domestic sức chứa (capacity / 용량).
 
-## 43. Industrial policy
+## 43. Industrial chính sách (policy / 정책)
 
 Trợ cấp, tax credit và quy định nội địa hóa có thể làm thay đổi vị trí nhà máy và capex toàn cầu.
 
@@ -468,10 +471,10 @@ Khi thương mại và đầu tư bị chia thành các khối, hiệu quả to�
 
 Chip tiên tiến liên quan đồng thời:
 
-- national security;
+- national bảo mật (security / 보안);
 - AI;
 - export controls;
-- foundry capacity;
+- foundry sức chứa (capacity / 용량);
 - equipment;
 - materials.
 
@@ -495,9 +498,9 @@ Nhưng cần phân biệt đầu tư tạo nhu cầu bền vững và đầu tư
 
 # Phần XIV — Khí hậu và chuyển dịch năng lượng
 
-## 48. Energy transition
+## 48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)
 
-Chuyển dịch năng lượng làm tăng nhu cầu một số kim loại và grid investment nhưng cũng tạo stranded-asset risk cho tài sản cũ.
+Chuyển dịch năng lượng làm tăng nhu cầu một số kim loại và grid investment nhưng cũng tạo stranded-asset rủi ro (risk / 위험) cho tài sản cũ.
 
 ## 49. Climate shock
 
@@ -505,7 +508,7 @@ Khí hậu có thể tác động giá thực phẩm, bảo hiểm, hạ tầng 
 
 Không nên xem đây chỉ là câu chuyện ESG; nó có thể là biến kinh tế thực.
 
-# Phần XV — Cách đọc global macro
+# Phần XV — Cách đọc toàn cục (global / 전역) macro
 
 ## 50. Dollar smile
 
@@ -516,7 +519,7 @@ Một trực giác thường dùng là USD có thể mạnh trong hai trạng th
 
 Đây là **dollar smile**, không phải quy luật cứng.
 
-## 51. Global liquidity
+## 51. toàn cục (global / 전역) liquidity
 
 Thanh khoản toàn cầu chịu ảnh hưởng bởi:
 
@@ -524,7 +527,7 @@ Thanh khoản toàn cầu chịu ảnh hưởng bởi:
 - USD funding;
 - cross-border bank lending;
 - collateral;
-- risk appetite;
+- rủi ro (risk / 위험) appetite;
 - China credit;
 - major central banks.
 
@@ -571,7 +574,7 @@ Short-Term Foreign Debt
 → Currency / Banking Crisis
 ```
 
-## 55. Global Financial Crisis
+## 55. toàn cục (global / 전역) Financial Crisis
 
 Cơ chế nổi bật:
 
@@ -583,7 +586,7 @@ Cơ chế nổi bật:
 
 ## 56. Eurozone crisis
 
-Khủng hoảng cho thấy vòng phản hồi giữa sovereign và banking system trong một monetary union.
+Khủng hoảng cho thấy vòng phản hồi giữa sovereign và banking hệ thống (system / 시스템) trong một monetary union.
 
 ## 57. Pandemic shock
 
@@ -651,3 +654,5 @@ Trade
 ```
 
 Điểm quan trọng nhất không phải ghi nhớ cuộc khủng hoảng nào xảy ra năm nào, mà nhận ra **cơ chế nào đang lặp lại dưới hình thức mới**.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

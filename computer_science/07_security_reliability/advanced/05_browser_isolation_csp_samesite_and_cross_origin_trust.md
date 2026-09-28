@@ -1,47 +1,72 @@
-# Browser isolation, CSP, SameSite và cross-origin trust
+# Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust
 
-Browser chạy code từ nhiều origins trên cùng máy và cùng lúc giữ cookies, credentials, camera/microphone permissions. Security model của web vì thế xoay quanh việc ngăn một origin tùy ý đọc/điều khiển authority của origin khác.
+> **Mạch đọc:** Đặt **trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Origin là ranh giới (boundary / 경계) cơ bản** sang **CORS**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Origin là boundary cơ bản
+Trình duyệt (browser / 브라우저) chạy mã (code / 코드) từ nhiều origins trên cùng máy và cùng lúc giữ cookies, credentials, camera/microphone permissions. bảo mật (security / 보안) mô hình (model / 모델) của web vì thế xoay quanh việc ngăn một origin tùy ý đọc/điều khiển authority của origin khác.
 
-Origin thường được xác định bởi scheme, host và port. **Same-Origin Policy (SOP)** hạn chế script từ origin A đọc response/state nhạy cảm của origin B.
+## Origin là ranh giới (boundary / 경계) cơ bản
 
-SOP không ngăn mọi cross-origin request; nhiều request vẫn có thể được gửi. Điều quan trọng thường là quyền đọc response và access DOM/state.
+Origin thường được xác định bởi scheme, host và cổng (port / 포트). **Same-Origin chính sách (policy / 정책) (SOP)** hạn chế script từ origin A đọc phản hồi (response / 응답)/trạng thái (state / 상태) nhạy cảm của origin B.
+
+SOP không ngăn mọi cross-origin yêu cầu (request / 요청); nhiều yêu cầu (request / 요청) vẫn có thể được gửi. Điều quan trọng thường là quyền đọc phản hồi (response / 응답) và truy cập (access / 접근) DOM/trạng thái (state / 상태).
+
+
+> **Chuyển mạch:** Từ **Origin là ranh giới (boundary / 경계) cơ bản**, ta sang **CORS** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## CORS
 
-**CORS** là protocol để server nói browser rằng origin nào được phép đọc cross-origin response. Nó không phải authentication và không ngăn non-browser client gọi API.
+**CORS** là giao thức (protocol / 프로토콜) để máy chủ (server / 서버) nói trình duyệt (browser / 브라우저) rằng origin nào được phép đọc cross-origin phản hồi (response / 응답). Nó không phải authentication và không ngăn non-browser máy khách (client / 클라이언트) gọi API.
 
-Cấu hình `Access-Control-Allow-Origin: *` có thể hợp lệ cho public resource nhưng nguy hiểm nếu developer tưởng nó thay thế authorization.
+Cấu hình `Access-Control-Allow-Origin: *` có thể hợp lệ cho công khai (public / 공개) tài nguyên (resource / 자원) nhưng nguy hiểm nếu nhà phát triển (developer / 개발자) tưởng nó thay thế authorization.
+
+
+> **Chuyển mạch:** Từ **CORS**, ta sang **CSRF và SameSite** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## CSRF và SameSite
 
-Cookie có thể được browser tự động gửi kèm request, tạo nguy cơ Cross-Site Request Forgery nếu attacker khiến browser user gửi state-changing request tới site đang login.
+Cookie có thể được trình duyệt (browser / 브라우저) tự động gửi kèm yêu cầu (request / 요청), tạo nguy cơ Cross-Site yêu cầu (request / 요청) Forgery nếu attacker khiến trình duyệt (browser / 브라우저) người dùng (user / 사용자) gửi state-changing yêu cầu (request / 요청) tới site đang login.
 
-`SameSite` cookie giảm một số cross-site sending contexts. CSRF token vẫn hữu ích trong architecture cần bảo vệ các flow không được SameSite cover đầy đủ.
+`SameSite` cookie giảm một số cross-site sending contexts. CSRF đơn vị từ (token / 토큰) vẫn hữu ích trong kiến trúc (architecture / 아키텍처) cần bảo vệ các luồng (flow / 흐름) không được SameSite cover đầy đủ.
+
+
+> **Chuyển mạch:** Từ **CSRF và SameSite**, ta sang **XSS và CSP** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## XSS và CSP
 
-Cross-Site Scripting cho attacker chạy script trong origin của application, nghĩa script thừa hưởng quyền origin đó. Output encoding, safe DOM APIs và framework escaping là primary defense.
+Cross-Site Scripting cho attacker chạy script trong origin của ứng dụng (application / 애플리케이션), nghĩa script thừa hưởng quyền origin đó. đầu ra (output / 출력) encoding, safe DOM APIs và khung phần mềm (framework / 프레임워크) escaping là primary defense.
 
-**Content Security Policy (CSP)** giới hạn nguồn script/resource và có thể giảm impact khi injection xảy ra. CSP tốt là defense-in-depth, không thay thế fix XSS.
+**Content bảo mật (security / 보안) chính sách (policy / 정책) (CSP)** giới hạn nguồn script/tài nguyên (resource / 자원) và có thể giảm impact khi injection xảy ra. CSP tốt là defense-in-depth, không thay thế fix XSS.
+
+
+> **Chuyển mạch:** Từ **XSS và CSP**, ta sang **iframe và embedding** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## iframe và embedding
 
-Iframe tạo browsing context riêng nhưng parent/child communication qua `postMessage` cần validate `origin` và message schema. Dùng wildcard target origin hoặc tin mọi incoming message làm boundary yếu đi.
+Iframe tạo browsing ngữ cảnh (context / 맥락) riêng nhưng parent/child communication qua `postMessage` cần validate `origin` và message lược đồ (schema / 스키마). Dùng wildcard mục tiêu (target / 대상) origin hoặc tin mọi incoming message làm ranh giới (boundary / 경계) yếu đi.
 
 Frame-ancestors/CSP hoặc X-Frame-Options giúp chống clickjacking bằng cách kiểm soát ai được embed page.
 
-## Browser storage
 
-LocalStorage dễ dùng nhưng script cùng origin có thể đọc, nên XSS có thể lấy bearer token lưu ở đó. HttpOnly cookie không cho JavaScript đọc trực tiếp nhưng vẫn cần CSRF reasoning.
+> **Chuyển mạch:** Từ **iframe và embedding**, ta sang **lưu trữ trình duyệt (browser storage / 브라우저 저장소)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Không có storage choice “an toàn tuyệt đối”; threat model quyết định trade-off giữa XSS exposure, CSRF và UX/session architecture.
+## Lưu trữ trình duyệt (browser storage / 브라우저 저장소)
+
+LocalStorage dễ dùng nhưng script cùng origin có thể đọc, nên XSS có thể lấy bearer đơn vị từ (token / 토큰) lưu ở đó. HttpOnly cookie không cho JavaScript đọc trực tiếp nhưng vẫn cần CSRF lập luận (reasoning / 추론).
+
+Không có lưu trữ (storage / 저장소) choice “an toàn tuyệt đối”; threat mô hình (model / 모델) quyết định sự đánh đổi (trade-off / 트레이드오프) giữa XSS exposure, CSRF và UX/session kiến trúc (architecture / 아키텍처).
+
+
+> **Chuyển mạch:** Từ **lưu trữ trình duyệt (browser storage / 브라우저 저장소)**, ta sang **Site isolation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Site isolation
 
-Modern browsers còn dùng process isolation để tách sites/origins ở OS process level, giảm blast radius của renderer compromise và side-channel classes. Đây là ví dụ security boundary được reinforce qua nhiều layers: web policy + process sandbox + hardware mitigations.
+Hiện đại (modern / 현대적) browsers còn dùng tiến trình (process / 프로세스) isolation để tách sites/origins ở OS tiến trình (process / 프로세스) mức (level / 수준), giảm blast radius của renderer compromise và side-channel classes. Đây là ví dụ ranh giới bảo mật (security boundary / 보안 경계) được reinforce qua nhiều layers: web chính sách (policy / 정책) + tiến trình (process / 프로세스) sandbox + hardware mitigations.
 
-## Mental Model
 
-> Web security là quản lý authority giữa origins. SOP đặt default boundary; CORS mở quyền đọc có kiểm soát; SameSite/CSRF bảo vệ ambient credentials; CSP giảm script authority khi injection xảy ra. Mỗi mechanism xử lý threat khác nhau.
+> **Chuyển mạch:** Từ **Site isolation**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> Web bảo mật (security / 보안) là quản lý authority giữa origins. SOP đặt default ranh giới (boundary / 경계); CORS mở quyền đọc có kiểm soát; SameSite/CSRF bảo vệ ambient credentials; CSP giảm script authority khi injection xảy ra. Mỗi cơ chế (mechanism / 메커니즘) xử lý threat khác nhau.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 security boundaries attack chains and exploitability](./00_security_boundaries_attack_chains_and_exploitability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,6 @@
-# 정보처리기사 필기 2026 — Full Mock #2: Hard Mode 100
+# 정보처리기사 필기 2026 — Full Mock #2: Hard chế độ (mode / 모드) 100
 
-> **100 câu tự viết mới, 20 câu/môn.** Mock #2 cố ý dùng wording gần nhau, scenario nhiều layer và distractor “đúng nhưng không đúng nhất”. Không mở answer key trước khi hoàn thành toàn bộ 100 câu.
+> **100 câu tự viết mới, 20 câu/môn.** Mock #2 cố ý dùng wording gần nhau, scenario nhiều tầng (layer / 계층) và distractor “đúng nhưng không đúng nhất”. Không mở answer key trước khi hoàn thành toàn bộ 100 câu.
 >
 > Chấm như đề thật: mỗi môn 20 câu; mô phỏng 과락 nếu dưới 8/20 ở bất kỳ môn nào. Sau khi chấm, dùng `14-error-remediation-map.md` thay vì chỉ ghi đáp án.
 
@@ -9,7 +9,7 @@
 # 제1과목 — 소프트웨어 설계
 
 ## Q1
-Hai requirement sau cùng tồn tại:
+Hai yêu cầu (requirement / 요구사항) sau cùng tồn tại:
 
 ```text
 R1: User session hết hạn sau 30 phút không hoạt động.
@@ -24,15 +24,15 @@ C. Incompleteness
 D. Untraceability
 
 ## Q2
-Requirement “search phải nhanh” có vấn đề chính nào trước tiên?
+yêu cầu (requirement / 요구사항) “tìm kiếm (search / 검색) phải nhanh” có vấn đề chính nào trước tiên?
 
 A. Không functional
 B. Không measurable/verifiable đủ rõ
-C. Không thể implement bằng database
-D. Không thể trace
+C. Không thể implement bằng cơ sở dữ liệu (database / 데이터베이스)
+D. Không thể dấu vết (trace / 추적)
 
 ## Q3
-Context-level DFD có input `Order` và output `Receipt`. Khi phân rã process, level con tạo thêm external output `CreditScore` nhưng level trên không có. Khái niệm cần kiểm tra là:
+Context-level DFD có đầu vào (input / 입력) `Order` và đầu ra (output / 출력) `Receipt`. Khi phân rã tiến trình (process / 프로세스), mức (level / 수준) con tạo thêm bên ngoài (external / 외부) đầu ra (output / 출력) `CreditScore` nhưng mức (level / 수준) trên không có. Khái niệm cần kiểm tra là:
 
 A. Encapsulation
 B. DFD balancing
@@ -40,15 +40,15 @@ C. Polymorphism
 D. Fan-in
 
 ## Q4
-Muốn biểu diễn một object `Order` chuyển `CREATED → PAID → SHIPPED` theo event. Diagram phù hợp nhất:
+Muốn biểu diễn một đối tượng (object / 객체) `Order` chuyển `CREATED → PAID → SHIPPED` theo sự kiện (event / 이벤트). Diagram phù hợp nhất:
 
 A. Activity
-B. State Machine
-C. Deployment
-D. Component
+B. máy trạng thái (state machine / 상태 머신)
+C. triển khai (deployment / 배포)
+D. thành phần (component / 컴포넌트)
 
 ## Q5
-Use case `Checkout` luôn gọi `Validate Cart`; `Apply Coupon` chỉ xảy ra khi có coupon. Quan hệ phù hợp nhất:
+Use trường hợp (case / 사례) `Checkout` luôn gọi `Validate Cart`; `Apply Coupon` chỉ xảy ra khi có coupon. Quan hệ phù hợp nhất:
 
 A. Checkout extend Validate Cart; Apply Coupon include Checkout
 B. Checkout include Validate Cart; Apply Coupon extend Checkout
@@ -56,7 +56,7 @@ C. Cả hai đều generalization
 D. Cả hai đều composition
 
 ## Q6
-Một class `ReportService` vừa query DB, format PDF, gửi email, ghi audit và upload S3. Principle bị đe dọa trực tiếp nhất:
+Một lớp (class / 클래스) `ReportService` vừa truy vấn (query / 쿼리) DB, format PDF, gửi email, ghi kiểm tra (audit / 감사) và upload S3. Principle bị đe dọa trực tiếp nhất:
 
 A. LSP
 B. SRP
@@ -64,7 +64,7 @@ C. ISP
 D. OCP
 
 ## Q7
-Một interface có 25 method; client A chỉ cần 2 method nhưng buộc implement/depend toàn bộ. Principle phù hợp nhất:
+Một giao diện (interface / 인터페이스) có 25 phương thức (method / 메서드); máy khách (client / 클라이언트) A chỉ cần 2 phương thức (method / 메서드) nhưng buộc implement/depend toàn bộ. Principle phù hợp nhất:
 
 A. ISP
 B. LSP
@@ -72,7 +72,7 @@ C. SRP
 D. Singleton
 
 ## Q8
-Subclass `Square` kế thừa `Rectangle`, nhưng setter width/height của base class làm code client phá assumption khi dùng Square. Principle được nhắc tới rõ nhất:
+Subclass `Square` kế thừa `Rectangle`, nhưng setter width/height của cơ sở (base / 기반) lớp (class / 클래스) làm mã (code / 코드) máy khách (client / 클라이언트) phá giả định (assumption / 가정) khi dùng Square. Principle được nhắc tới rõ nhất:
 
 A. DIP
 B. LSP
@@ -80,39 +80,39 @@ C. ISP
 D. SRP
 
 ## Q9
-Module A truyền cả `CustomerRecord` cho B, trong khi B chỉ dùng `customerId`. Đây là:
+mô-đun (module / 모듈) A truyền cả `CustomerRecord` cho B, trong khi B chỉ dùng `customerId`. Đây là:
 
-A. Data coupling
+A. dữ liệu (data / 데이터) coupling
 B. Stamp coupling
-C. Control coupling
-D. Common coupling
+C. điều khiển (control / 제어) coupling
+D. dùng chung (common / 공통) coupling
 
 ## Q10
-Hai module cùng phụ thuộc vào một định dạng file bên ngoài cố định. Đây gần nhất với:
+Hai mô-đun (module / 모듈) cùng phụ thuộc vào một định dạng tệp (file / 파일) bên ngoài cố định. Đây gần nhất với:
 
-A. External coupling
-B. Common coupling
+A. bên ngoài (external / 외부) coupling
+B. dùng chung (common / 공통) coupling
 C. Content coupling
-D. Data coupling
+D. dữ liệu (data / 데이터) coupling
 
 ## Q11
-Pattern nào phù hợp nhất khi behavior thay đổi theo **internal lifecycle state** của object?
+mẫu (pattern / 패턴) nào phù hợp nhất khi hành vi (behavior / 동작) thay đổi theo **nội bộ (internal / 내부) vòng đời (lifecycle / 생명주기) trạng thái (state / 상태)** của đối tượng (object / 객체)?
 
-A. Strategy
-B. State
+A. chiến lược (strategy / 전략)
+B. trạng thái (state / 상태)
 C. Adapter
 D. Facade
 
 ## Q12
-Pattern nào phù hợp khi cần thay đổi algorithm tính phí theo market/channel mà caller dùng cùng interface?
+mẫu (pattern / 패턴) nào phù hợp khi cần thay đổi thuật toán (algorithm / 알고리즘) tính phí theo thị trường (market / 시장)/channel mà caller dùng cùng giao diện (interface / 인터페이스)?
 
-A. State
-B. Strategy
+A. trạng thái (state / 상태)
+B. chiến lược (strategy / 전략)
 C. Observer
 D. Composite
 
 ## Q13
-Một subsystem có 8 service phức tạp; client chỉ cần một entry point đơn giản. Pattern:
+Một subsystem có 8 dịch vụ (service / 서비스) phức tạp; máy khách (client / 클라이언트) chỉ cần một entry điểm (point / 지점) đơn giản. mẫu (pattern / 패턴):
 
 A. Adapter
 B. Facade
@@ -120,31 +120,31 @@ C. Decorator
 D. Prototype
 
 ## Q14
-Một wrapper thêm logging và caching quanh service mà giữ cùng interface. Pattern gần nhất:
+Một wrapper thêm logging và caching quanh dịch vụ (service / 서비스) mà giữ cùng giao diện (interface / 인터페이스). mẫu (pattern / 패턴) gần nhất:
 
 A. Decorator
 B. Builder
-C. State
+C. trạng thái (state / 상태)
 D. Memento
 
 ## Q15
-Diagram nào trả lời tốt nhất câu hỏi “artifact nào deploy trên node nào?”
+Diagram nào trả lời tốt nhất câu hỏi “sản phẩm tạo ra (artifact / 산출물) nào deploy trên nút (node / 노드) nào?”
 
-A. Component
-B. Deployment
-C. Class
-D. Sequence
+A. thành phần (component / 컴포넌트)
+B. triển khai (deployment / 배포)
+C. lớp (class / 클래스)
+D. chuỗi (sequence / 시퀀스)
 
 ## Q16
 Traceability giúp trực tiếp nhất cho:
 
 A. Tăng CPU clock
-B. Impact analysis và kiểm coverage từ requirement tới test
+B. Impact phân tích (analysis / 분석) và kiểm coverage từ yêu cầu (requirement / 요구사항) tới kiểm thử (test / 테스트)
 C. Chọn subnet mask
-D. Mã hóa file
+D. Mã hóa tệp (file / 파일)
 
 ## Q17
-Một payment request timeout sau khi server đã commit. Client retry cùng logical request. Property cần thiết nhất ở interface/business operation là:
+Một payment yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) sau khi máy chủ (server / 서버) đã lần ghi nhận (commit / 커밋). máy khách (client / 클라이언트) thử lại (retry / 재시도) cùng logical yêu cầu (request / 요청). thuộc tính (property / 속성) cần thiết nhất ở giao diện (interface / 인터페이스)/nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) là:
 
 A. Inheritance
 B. Idempotency
@@ -152,23 +152,23 @@ C. Compression
 D. Aggregation
 
 ## Q18
-Thay field API từ optional thành required mà không versioning có rủi ro chính:
+Thay trường dữ liệu (field / 필드) API từ optional thành required mà không versioning có rủi ro chính:
 
-A. Physical fragmentation
-B. Backward compatibility break
+A. vật lý (physical / 물리적) fragmentation
+B. Backward tính tương thích (compatibility / 호환성) break
 C. CPU starvation
 D. Deadlock
 
 ## Q19
-Point-to-point integration giữa N systems tăng vấn đề gì khi N lớn?
+Point-to-point tích hợp (integration / 통합) giữa N các hệ thống (systems / 시스템들) tăng vấn đề gì khi N lớn?
 
-A. Dependency/connection complexity
+A. phụ thuộc (dependency / 의존성)/liên kết (connection / 연결) độ phức tạp (complexity / 복잡도)
 B. Không thể dùng HTTP
-C. Không thể retry
-D. Không có data format
+C. Không thể thử lại (retry / 재시도)
+D. Không có dữ liệu (data / 데이터) format
 
 ## Q20
-Một architecture style chia xử lý thành nhiều stage độc lập, output stage trước thành input stage sau. Gần nhất:
+Một kiến trúc (architecture / 아키텍처) style chia xử lý thành nhiều stage độc lập, đầu ra (output / 출력) stage trước thành đầu vào (input / 입력) stage sau. Gần nhất:
 
 A. Repository
 B. Pipe-and-Filter
@@ -180,31 +180,31 @@ D. Client-Server
 # 제2과목 — 소프트웨어 개발
 
 ## Q21
-Stack là:
+ngăn xếp (stack / 스택) là:
 
-A. Implementation duy nhất bằng array
-B. ADT có thể implement bằng nhiều structure
+A. hiện thực (implementation / 구현) duy nhất bằng array
+B. ADT có thể implement bằng nhiều cấu trúc (structure / 구조)
 C. Luôn FIFO
-D. Luôn tree
+D. Luôn cây (tree / 트리)
 
 ## Q22
 Một max-heap bảo đảm điều gì?
 
-A. Mọi node trái nhỏ hơn mọi node phải
-B. Parent không nhỏ hơn child theo heap property
+A. Mọi nút (node / 노드) trái nhỏ hơn mọi nút (node / 노드) phải
+B. Parent không nhỏ hơn child theo vùng nhớ động (heap / 힙) thuộc tính (property / 속성)
 C. Inorder traversal luôn sorted
-D. Search arbitrary key luôn O(log n)
+D. tìm kiếm (search / 검색) arbitrary key luôn O(log n)
 
 ## Q23
-Graph có 1 triệu vertices nhưng chỉ 2 triệu edges. Representation thường tiết kiệm memory hơn:
+đồ thị (graph / 그래프) có 1 triệu vertices nhưng chỉ 2 triệu edges. biểu diễn (representation / 표현) thường tiết kiệm bộ nhớ (memory / 메모리) hơn:
 
-A. Adjacency Matrix
-B. Adjacency List
-C. Full table V×V bắt buộc
-D. Stack
+A. Adjacency ma trận (matrix / 행렬)
+B. Adjacency danh sách (list / 목록)
+C. Full bảng (table / 테이블) V×V bắt buộc
+D. ngăn xếp (stack / 스택)
 
 ## Q24
-Muốn shortest path theo số cạnh trong graph unweighted:
+Muốn shortest đường dẫn (path / 경로) theo số cạnh trong đồ thị (graph / 그래프) unweighted:
 
 A. DFS
 B. BFS
@@ -212,9 +212,9 @@ C. Prim
 D. Kruskal
 
 ## Q25
-Mục tiêu của Minimum Spanning Tree là:
+Mục tiêu của Minimum Spanning cây (tree / 트리) là:
 
-A. Tối thiểu distance từ source tới mọi node
+A. Tối thiểu distance từ nguồn (source / 소스) tới mọi nút (node / 노드)
 B. Nối tất cả vertices với tổng edge weight nhỏ nhất mà không cycle
 C. Tìm strongly connected components
 D. Sort vertices
@@ -222,69 +222,69 @@ D. Sort vertices
 ## Q26
 Sort ổn định nghĩa là:
 
-A. Không dùng memory phụ
+A. Không dùng bộ nhớ (memory / 메모리) phụ
 B. Luôn O(n log n)
-C. Giữ relative order của records có key bằng nhau
+C. Giữ relative thứ tự (order / 순서) của records có key bằng nhau
 D. Không bao giờ swap
 
 ## Q27
-Hash collision là:
+băm (hash / 해시) collision là:
 
 A. Cùng logical key xuất hiện hai lần
-B. Hai key khác nhau map tới cùng bucket/index
-C. Table đầy hoàn toàn
-D. Hash function trả negative
+B. Hai key khác nhau map tới cùng bucket/chỉ mục (index / 인덱스)
+C. bảng (table / 테이블) đầy hoàn toàn
+D. băm (hash / 해시) hàm (function / 함수) trả negative
 
 ## Q28
-Trong linear probing, xóa một item bằng cách đặt slot thành “never used” có thể phá:
+Trong tuyến tính (linear / 선형) probing, xóa một item bằng cách đặt slot thành “never used” có thể phá:
 
-A. Probe chain
-B. Tree balance
-C. Stack pointer
-D. TCP sequence
+A. Probe chuỗi (chain / 사슬)
+B. cây (tree / 트리) balance
+C. ngăn xếp (stack / 스택) pointer
+D. TCP chuỗi (sequence / 시퀀스)
 
 ## Q29
-Review source code mà không execute là:
+rà soát (review / 검토) mã nguồn (source code / 소스 코드) mà không execute là:
 
-A. Dynamic testing
+A. động (dynamic / 동적) testing
 B. Static testing
-C. Load testing
+C. tải (load / 로드) testing
 D. Beta testing
 
 ## Q30
-Human hiểu sai requirement và viết sai condition. Sai condition trong code là:
+Human hiểu sai yêu cầu (requirement / 요구사항) và viết sai điều kiện (condition / 조건). Sai điều kiện (condition / 조건) trong mã (code / 코드) là:
 
-A. Failure observable
+A. thất bại (failure / 실패) observable
 B. Defect/Fault
-C. Network latency
-D. Recovery point
+C. mạng (network / 네트워크) độ trễ (latency / 지연 시간)
+D. khôi phục (recovery / 복구) điểm (point / 지점)
 
 ## Q31
-Một test suite đạt 100% statement coverage. Kết luận an toàn nhất:
+Một bộ kiểm thử (test suite / 테스트 스위트) đạt 100% statement coverage. Kết luận an toàn nhất:
 
 A. Mọi branch đã chạy cả true và false
-B. Mọi path đã test
-C. Không thể suy ra branch/path coverage đầy đủ
+B. Mọi đường dẫn (path / 경로) đã kiểm thử (test / 테스트)
+C. Không thể suy ra branch/đường dẫn (path / 경로) coverage đầy đủ
 D. Không còn bug
 
 ## Q32
 Black-box technique nào tập trung ngay cạnh giới hạn hợp lệ/không hợp lệ?
 
 A. Branch Coverage
-B. Boundary Value Analysis
-C. Path Coverage
+B. ranh giới (boundary / 경계) giá trị (value / 값) phân tích (analysis / 분석)
+C. đường dẫn (path / 경로) Coverage
 D. Statement Coverage
 
 ## Q33
-Top-down integration khi module con chưa có dùng:
+Top-down tích hợp (integration / 통합) khi mô-đun (module / 모듈) con chưa có dùng:
 
 A. Driver
 B. Stub
 C. Proxy bắt buộc
-D. Hash table
+D. bảng băm (hash table / 해시 테이블)
 
 ## Q34
-Bottom-up integration khi caller phía trên chưa có dùng:
+Bottom-up tích hợp (integration / 통합) khi caller phía trên chưa có dùng:
 
 A. Stub
 B. Driver
@@ -292,52 +292,52 @@ C. Semaphore
 D. Mock DB bắt buộc
 
 ## Q35
-Sau bug fix, chạy test cụ thể chứng minh bug đã hết gọi gần nhất là:
+Sau bug fix, chạy kiểm thử (test / 테스트) cụ thể chứng minh bug đã hết gọi gần nhất là:
 
-A. Retest/confirmation test
+A. Retest/confirmation kiểm thử (test / 테스트)
 B. Regression-only
-C. Alpha test
-D. Static test
+C. Alpha kiểm thử (test / 테스트)
+D. Static kiểm thử (test / 테스트)
 
 ## Q36
 Chạy broader existing suite để xem bug fix có phá chức năng khác là:
 
-A. Regression test
-B. Unit compile
+A. Regression kiểm thử (test / 테스트)
+B. đơn vị (unit / 단위) compile
 C. Acceptance-only
 D. Mutation-only
 
 ## Q37
-Artifact nào có thể là configuration item?
+sản phẩm tạo ra (artifact / 산출물) nào có thể là cấu hình (configuration / 구성) item?
 
-A. Chỉ source code
-B. Source, config, schema, build script, test artifact, manual
-C. Chỉ binary
+A. Chỉ mã nguồn (source code / 소스 코드)
+B. nguồn (source / 소스), cấu hình (config / 설정), lược đồ (schema / 스키마), bản dựng (build / 빌드) script, kiểm thử (test / 테스트) sản phẩm tạo ra (artifact / 산출물), manual
+C. Chỉ nhị phân (binary / 이진)
 D. Chỉ README
 
 ## Q38
-Build khác release ở đâu?
+bản dựng (build / 빌드) khác bản phát hành (release / 릴리스) ở đâu?
 
-A. Build tạo artifact; release là process/decision đưa version xác định ra environment/user
+A. bản dựng (build / 빌드) tạo sản phẩm tạo ra (artifact / 산출물); bản phát hành (release / 릴리스) là tiến trình (process / 프로세스)/quyết định (decision / 결정) đưa phiên bản (version / 버전) xác định ra môi trường (environment / 환경)/người dùng (user / 사용자)
 B. Hai từ đồng nghĩa
-C. Release chỉ compile source
-D. Build luôn production
+C. bản phát hành (release / 릴리스) chỉ compile nguồn (source / 소스)
+D. bản dựng (build / 빌드) luôn môi trường vận hành (production / 운영 환경)
 
 ## Q39
-Checksum trên package chủ yếu kiểm:
+Checksum trên gói (package / 패키지) chủ yếu kiểm:
 
 A. Authorization
-B. Integrity/change/corruption
+B. Integrity/thay đổi (change / 변경)/corruption
 C. CPU speed
-D. Business role
+D. nghiệp vụ (business / 비즈니스) role
 
 ## Q40
-Một interface production có timeout tăng nhưng error rate thấp. Metric quan trọng để phát hiện issue này là:
+Một giao diện (interface / 인터페이스) môi trường vận hành (production / 운영 환경) có hết thời gian chờ (timeout / 타임아웃) tăng nhưng lỗi (error / 오류) tỷ lệ (rate / 비율) thấp. chỉ số (metric / 지표) quan trọng để phát hiện issue này là:
 
-A. Latency/response-time distribution
+A. độ trễ (latency / 지연 시간)/response-time phân phối (distribution / 분포)
 B. Chỉ success count
-C. Chỉ version number
-D. Chỉ line count source
+C. Chỉ phiên bản (version / 버전) number
+D. Chỉ line count nguồn (source / 소스)
 
 ---
 
@@ -360,12 +360,12 @@ C. Luôn surrogate key
 D. Luôn single-column
 
 ## Q43
-Một table dùng surrogate `id`, nhưng email phải unique theo business. Cần:
+Một bảng (table / 테이블) dùng surrogate `id`, nhưng email phải unique theo nghiệp vụ (business / 비즈니스). Cần:
 
-A. Không cần constraint email vì đã có id
-B. Unique constraint/business candidate-key enforcement cho email nếu requirement yêu cầu
+A. Không cần ràng buộc (constraint / 제약조건) email vì đã có id
+B. Unique ràng buộc (constraint / 제약조건)/nghiệp vụ (business / 비즈니스) candidate-key enforcement cho email nếu yêu cầu (requirement / 요구사항) yêu cầu
 C. Bỏ primary key
-D. Chuyển email thành index không unique là đủ
+D. Chuyển email thành chỉ mục (index / 인덱스) không unique là đủ
 
 ## Q44
 FD `{A,B} → A` là:
@@ -376,7 +376,7 @@ C. Transitive
 D. Multivalued
 
 ## Q45
-Relation có candidate key `(A,B)`, và `A → C`, C non-prime. Vi phạm rõ nhất:
+quan hệ (relation / 관계) có candidate key `(A,B)`, và `A → C`, C non-prime. Vi phạm rõ nhất:
 
 A. 1NF
 B. 2NF
@@ -386,10 +386,10 @@ D. Không normalization issue
 ## Q46
 3NF formal cho FD `X → A` chấp nhận nếu:
 
-A. X là superkey hoặc A là prime attribute, ngoài trivial condition
+A. X là superkey hoặc A là prime attribute, ngoài trivial điều kiện (condition / 조건)
 B. X luôn single attribute
 C. A phải foreign key
-D. Relation có index
+D. quan hệ (relation / 관계) có chỉ mục (index / 인덱스)
 
 ## Q47
 BCNF mạnh hơn 3NF chủ yếu vì:
@@ -402,26 +402,26 @@ D. Cấm NULL
 ## Q48
 Lossless decomposition bảo đảm:
 
-A. Query luôn nhanh hơn
-B. Join lại không tạo/mất information sai theo dependency assumptions
+A. truy vấn (query / 쿼리) luôn nhanh hơn
+B. phép nối (join / 조인) lại không tạo/mất thông tin (information / 정보) sai theo phụ thuộc (dependency / 의존성) các giả định (assumptions / 가정들)
 C. Không cần indexes
 D. Không có deadlock
 
 ## Q49
-Dependency preservation quan tâm:
+phụ thuộc (dependency / 의존성) preservation quan tâm:
 
-A. Có enforce các FD từ relation con mà không cần join phức tạp không
-B. Disk capacity
+A. Có enforce các FD từ quan hệ (relation / 관계) con mà không cần phép nối (join / 조인) phức tạp không
+B. Disk sức chứa (capacity / 용량)
 C. TCP retransmission
 D. Backup retention
 
 ## Q50
-Index `(customer_id, created_at)` hữu ích tự nhiên cho query equality theo customer + range/order theo time vì:
+chỉ mục (index / 인덱스) `(customer_id, created_at)` hữu ích tự nhiên cho truy vấn (query / 쿼리) equality theo customer + phạm vi (range / 범위)/thứ tự (order / 순서) theo thời gian (time / 시간) vì:
 
-A. B+Tree key ordering có thể thu hẹp prefix rồi scan ordered range
-B. Hash luôn hỗ trợ range tốt hơn
-C. Index bỏ qua equality
-D. Normalization tự tạo index
+A. B+cây (tree / 트리) key thứ tự (ordering / 순서) có thể thu hẹp prefix rồi scan ordered phạm vi (range / 범위)
+B. băm (hash / 해시) luôn hỗ trợ phạm vi (range / 범위) tốt hơn
+C. chỉ mục (index / 인덱스) bỏ qua equality
+D. Normalization tự tạo chỉ mục (index / 인덱스)
 
 ## Q51
 Một boolean column phân bố gần 50/50 thường có:
@@ -429,15 +429,15 @@ Một boolean column phân bố gần 50/50 thường có:
 A. Selectivity rất cao như unique key
 B. Selectivity tương đối thấp
 C. Cardinality bằng số rows luôn
-D. Không thể index
+D. Không thể chỉ mục (index / 인덱스)
 
 ## Q52
-`WHERE YEAR(created_at)=2026` trên indexed `created_at` có thể kém sargable hơn range predicate vì:
+`WHERE YEAR(created_at)=2026` trên indexed `created_at` có thể kém sargable hơn phạm vi (range / 범위) predicate vì:
 
-A. Function trên column có thể cản index range seek tùy DBMS
-B. YEAR luôn syntax error
-C. Index không dùng với date
-D. Range query không tồn tại
+A. hàm (function / 함수) trên column có thể cản chỉ mục (index / 인덱스) phạm vi (range / 범위) seek tùy DBMS
+B. YEAR luôn cú pháp (syntax / 문법) lỗi (error / 오류)
+C. chỉ mục (index / 인덱스) không dùng với date
+D. phạm vi (range / 범위) truy vấn (query / 쿼리) không tồn tại
 
 ## Q53
 SQL kiểm NULL đúng cách:
@@ -464,43 +464,43 @@ C. UNION luôn nhanh hơn
 D. UNION ALL sort bắt buộc
 
 ## Q56
-T2 đọc uncommitted value từ T1; T1 abort khiến T2 phải rollback. Đây liên quan:
+T2 đọc uncommitted giá trị (value / 값) từ T1; T1 abort khiến T2 phải quay lui (rollback / 롤백). Đây liên quan:
 
-A. Cascading rollback
+A. Cascading quay lui (rollback / 롤백)
 B. Phantom only
-C. Heap overflow
+C. vùng nhớ động (heap / 힙) overflow
 D. NAT
 
 ## Q57
 Basic Two-Phase Locking có phases:
 
-A. Read/Write
-B. Growing acquire locks rồi Shrinking release locks
-C. Commit/Rollback only
+A. Read/ghi (write / 쓰기)
+B. Growing acquire locks rồi Shrinking bản phát hành (release / 릴리스) locks
+C. lần ghi nhận (commit / 커밋)/quay lui (rollback / 롤백) only
 D. Encode/Decode
 
 ## Q58
-Precedence graph có cycle. Kết luận:
+Precedence đồ thị (graph / 그래프) có cycle. Kết luận:
 
 A. Conflict-serializable
 B. Không conflict-serializable
-C. Chắc chắn deadlock runtime
+C. Chắc chắn deadlock thời gian chạy (runtime / 런타임)
 D. Chắc chắn recoverable
 
 ## Q59
 Checkpoint khác backup vì:
 
-A. Checkpoint hỗ trợ recovery coordination/log scan; backup là copy data để restore
+A. Checkpoint hỗ trợ khôi phục (recovery / 복구) coordination/log scan; backup là bản sao (copy / 복사) dữ liệu (data / 데이터) để restore
 B. Checkpoint luôn offsite
 C. Backup nằm trong RAM
 D. Hai cái đồng nghĩa
 
 ## Q60
-Migration chỉ so row count là chưa đủ vì có thể vẫn sai:
+di chuyển (migration / 마이그레이션) chỉ so row count là chưa đủ vì có thể vẫn sai:
 
-A. Value precision, encoding, referential integrity, aggregates, business invariants
+A. giá trị (value / 값) precision, encoding, referential integrity, aggregates, nghiệp vụ (business / 비즈니스) invariants
 B. Chỉ CSS
-C. Chỉ CPU model
+C. Chỉ CPU mô hình (model / 모델)
 D. Chỉ DNS TTL
 
 ---
@@ -508,95 +508,95 @@ D. Chỉ DNS TTL
 # 제4과목 — 프로그래밍 언어 활용
 
 ## Q61
-Static typing đồng nghĩa tuyệt đối với compiled language?
+Static typing đồng nghĩa tuyệt đối với compiled ngôn ngữ (language / 언어)?
 
 A. Có
-B. Không; typing discipline và execution model là dimensions khác nhau
+B. Không; typing discipline và mô hình thực thi (execution model / 실행 모델) là dimensions khác nhau
 C. Chỉ với Java
 D. Chỉ với C
 
 ## Q62
-Scope khác lifetime vì:
+phạm vi (scope / 범위) khác thời gian tồn tại (lifetime / 수명) vì:
 
-A. Scope là visibility trong source; lifetime là thời gian object/storage tồn tại runtime
+A. phạm vi (scope / 범위) là visibility trong nguồn (source / 소스); thời gian tồn tại (lifetime / 수명) là thời gian đối tượng (object / 객체)/lưu trữ (storage / 저장소) tồn tại thời gian chạy (runtime / 런타임)
 B. Hai cái giống nhau
-C. Lifetime chỉ compile-time
-D. Scope chỉ heap
+C. thời gian tồn tại (lifetime / 수명) chỉ compile-time
+D. phạm vi (scope / 범위) chỉ vùng nhớ động (heap / 힙)
 
 ## Q63
 Trong C, `int **pp` là:
 
-A. Int value
+A. Int giá trị (value / 값)
 B. Pointer tới pointer tới int
 C. Array 2 chiều bắt buộc
-D. Function pointer
+D. hàm (function / 함수) pointer
 
 ## Q64
-Trong C function parameter `int a[]`, `sizeof(a)` thường cho:
+Trong C hàm (function / 함수) parameter `int a[]`, `sizeof(a)` thường cho:
 
-A. Total original array size
-B. Pointer size do parameter adjustment
+A. Total original array kích thước (size / 크기)
+B. Pointer kích thước (size / 크기) do parameter adjustment
 C. 0
-D. Compile error luôn
+D. Compile lỗi (error / 오류) luôn
 
 ## Q65
 Union khác struct chủ yếu ở:
 
-A. Members share storage
-B. Không có type
+A. Members share lưu trữ (storage / 저장소)
+B. Không có kiểu (type / 타입)
 C. Không thể chứa int
 D. Luôn lớn hơn tổng members
 
 ## Q66
-Java instance method overridden được chọn chủ yếu theo:
+Java instance phương thức (method / 메서드) overridden được chọn chủ yếu theo:
 
-A. Runtime object type
-B. Chỉ reference variable name
-C. Return type
-D. File name
+A. thời gian chạy (runtime / 런타임) đối tượng (object / 객체) kiểu (type / 타입)
+B. Chỉ tham chiếu (reference / 참조) variable name
+C. Return kiểu (type / 타입)
+D. tệp (file / 파일) name
 
 ## Q67
-Java static method khi subclass định nghĩa cùng signature:
+Java static phương thức (method / 메서드) khi subclass định nghĩa cùng signature:
 
-A. Dynamic overriding giống instance method hoàn toàn
-B. Method hiding/resolution khác dynamic instance dispatch
-C. Compile error luôn
+A. động (dynamic / 동적) overriding giống instance phương thức (method / 메서드) hoàn toàn
+B. phương thức (method / 메서드) hiding/resolution khác động (dynamic / 동적) instance dispatch
+C. Compile lỗi (error / 오류) luôn
 D. Không thể có static
 
 ## Q68
-Với object references Java, `==` thường kiểm:
+Với đối tượng (object / 객체) references Java, `==` thường kiểm:
 
 A. Logical equality do `.equals()`
-B. Reference identity
-C. Hash code equality bắt buộc
+B. tham chiếu (reference / 참조) định danh (identity / 식별자)
+C. băm (hash / 해시) mã (code / 코드) equality bắt buộc
 D. String content luôn
 
 ## Q69
-Python shallow copy của nested list:
+Python shallow bản sao (copy / 복사) của nested danh sách (list / 목록):
 
-A. Copy recursively mọi nested object
-B. Outer container mới nhưng nested objects có thể vẫn shared
-C. Không tạo object mới
+A. bản sao (copy / 복사) recursively mọi nested đối tượng (object / 객체)
+B. Outer bộ chứa (container / 컨테이너) mới nhưng nested objects có thể vẫn dùng chung (shared / 공유)
+C. Không tạo đối tượng (object / 객체) mới
 D. Chuyển thành tuple
 
 ## Q70
-Python mutable default argument có thể giữ state giữa calls vì:
+Python mutable default argument có thể giữ trạng thái (state / 상태) giữa calls vì:
 
-A. Default được evaluate khi function definition executed
-B. Python reset process mỗi call
-C. List immutable
-D. `def` không tạo object
+A. Default được evaluate khi hàm (function / 함수) definition executed
+B. Python reset tiến trình (process / 프로세스) mỗi lời gọi (call / 호출)
+C. danh sách (list / 목록) immutable
+D. `def` không tạo đối tượng (object / 객체)
 
 ## Q71
 SJF tại thời điểm t chỉ được chọn trong:
 
-A. Mọi process kể cả chưa arrive
+A. Mọi tiến trình (process / 프로세스) kể cả chưa arrive
 B. Ready processes đã arrive
 C. Terminated processes
 D. I/O devices
 
 ## Q72
-Response time là:
+phản hồi (response / 응답) thời gian (time / 시간) là:
 
 A. Completion - arrival
 B. First CPU run - arrival
@@ -608,7 +608,7 @@ Aging dùng để giảm:
 
 A. Starvation
 B. Deadlock cycle bắt buộc
-C. Page size
+C. Page kích thước (size / 크기)
 D. IP fragmentation
 
 ## Q74
@@ -617,14 +617,14 @@ TLB miss có nghĩa:
 A. Chắc chắn page fault
 B. Translation không ở TLB; page vẫn có thể resident
 C. Disk hỏng
-D. Process deadlock
+D. tiến trình (process / 프로세스) deadlock
 
 ## Q75
 Thrashing xảy ra khi:
 
-A. Useful work bị áp đảo bởi paging activity
-B. CPU không có cache
-C. DNS fail
+A. Useful công việc (work / 작업) bị áp đảo bởi paging activity
+B. CPU không có bộ nhớ đệm (cache / 캐시)
+C. DNS thất bại (fail / 실패)
 D. DB normalize
 
 ## Q76
@@ -636,7 +636,7 @@ C. 169.0.0.0/8 toàn bộ
 D. 11.0.0.0/8
 
 ## Q77
-Host `192.168.1.70/26` thuộc network:
+Host `192.168.1.70/26` thuộc mạng (network / 네트워크):
 
 A. 192.168.1.0
 B. 192.168.1.64
@@ -646,24 +646,24 @@ D. 192.168.1.192
 ## Q78
 Default gateway dùng khi:
 
-A. Destination nằm ngoài local subnet và cần router forward
-B. Resolve domain
+A. Destination nằm ngoài cục bộ (local / 로컬) subnet và cần router forward
+B. Resolve lĩnh vực (domain / 도메인)
 C. Encrypt packet
 D. Detect SQL injection
 
 ## Q79
-TCP flow control chủ yếu bảo vệ:
+TCP luồng (flow / 흐름) điều khiển (control / 제어) chủ yếu bảo vệ:
 
 A. Receiver khỏi sender gửi quá nhanh
-B. Toàn Internet khỏi routing loop
-C. Password storage
+B. Toàn Internet khỏi routing vòng lặp (loop / 루프)
+C. Password lưu trữ (storage / 저장소)
 D. DNS authority
 
 ## Q80
 Three-way handshake của TCP không cung cấp trực tiếp:
 
-A. Connection state establishment
-B. Sequence synchronization
+A. liên kết (connection / 연결) trạng thái (state / 상태) establishment
+B. chuỗi (sequence / 시퀀스) synchronization
 C. Encryption/confidentiality
 D. Connection-oriented setup
 
@@ -672,11 +672,11 @@ D. Connection-oriented setup
 # 제5과목 — 정보시스템 구축 관리
 
 ## Q81
-Risk khác issue ở điểm:
+rủi ro (risk / 위험) khác issue ở điểm:
 
-A. Risk chưa chắc xảy ra; issue đã xảy ra/cần xử lý
+A. rủi ro (risk / 위험) chưa chắc xảy ra; issue đã xảy ra/cần xử lý
 B. Issue luôn positive
-C. Risk không có impact
+C. rủi ro (risk / 위험) không có impact
 D. Hai cái giống nhau
 
 ## Q82
@@ -684,38 +684,38 @@ Trong CPM, forward pass chủ yếu tính:
 
 A. Earliest start/finish
 B. Latest start/finish
-C. Password hash
-D. Subnet range
+C. Password băm (hash / 해시)
+D. Subnet phạm vi (range / 범위)
 
 ## Q83
-Một non-critical activity có float 3 ngày. Delay 2 ngày, mọi assumption khác giữ nguyên. Kết luận hợp lý nhất:
+Một non-critical activity có float 3 ngày. Delay 2 ngày, mọi giả định (assumption / 가정) khác giữ nguyên. Kết luận hợp lý nhất:
 
-A. Project chắc chắn delay 2 ngày
+A. dự án (project / 프로젝트) chắc chắn delay 2 ngày
 B. Có thể chưa ảnh hưởng final finish nếu vẫn trong float
-C. Critical path biến mất
+C. đường găng (critical path / 임계 경로) biến mất
 D. Không cần theo dõi nữa
 
 ## Q84
 Vertical scaling là:
 
 A. Thêm nodes
-B. Tăng resource của một node
+B. Tăng tài nguyên (resource / 자원) của một nút (node / 노드)
 C. Chia subnet
 D. Add backup site
 
 ## Q85
-Load balancing khác failover vì:
+tải (load / 로드) balancing khác failover vì:
 
-A. Load balancing phân phối work; failover chuyển sang healthy/standby khi failure
+A. tải (load / 로드) balancing phân phối công việc (work / 작업); failover chuyển sang healthy/standby khi thất bại (failure / 실패)
 B. Hai cái đồng nghĩa
 C. Failover chỉ DB
-D. Load balancing chỉ storage
+D. tải (load / 로드) balancing chỉ lưu trữ (storage / 저장소)
 
 ## Q86
-Synchronous replication trade-off điển hình:
+Synchronous replication sự đánh đổi (trade-off / 트레이드오프) điển hình:
 
-A. Giảm data-loss window nhưng tăng latency/coupling với replica health
-B. Không cần network
+A. Giảm data-loss cửa sổ (window / 윈도우) nhưng tăng độ trễ (latency / 지연 시간)/coupling với replica health
+B. Không cần mạng (network / 네트워크)
 C. RPO luôn vô hạn
 D. Không có consistency
 
@@ -723,22 +723,22 @@ D. Không có consistency
 Differential backup thường chứa:
 
 A. Changes từ last full backup
-B. Changes từ immediate previous backup bất kể type
+B. Changes từ immediate previous backup bất kể kiểu (type / 타입)
 C. Toàn disk bắt buộc
-D. Chỉ metadata
+D. Chỉ siêu dữ liệu (metadata / 메타데이터)
 
 ## Q88
 Hot site so với cold site thường:
 
-A. Recovery nhanh hơn nhưng cost cao hơn
-B. Recovery chậm hơn và rẻ hơn luôn
+A. khôi phục (recovery / 복구) nhanh hơn nhưng chi phí (cost / 비용) cao hơn
+B. khôi phục (recovery / 복구) chậm hơn và rẻ hơn luôn
 C. Không có equipment
-D. Không có data strategy
+D. Không có dữ liệu (data / 데이터) chiến lược (strategy / 전략)
 
 ## Q89
 RPO 5 phút nghĩa:
 
-A. Service phải phục hồi trong 5 phút
+A. dịch vụ (service / 서비스) phải phục hồi trong 5 phút
 B. Mục tiêu mức mất dữ liệu theo thời gian tối đa khoảng 5 phút
 C. Backup chạy 5 phút
 D. MTTR 5 phút
@@ -754,15 +754,15 @@ D. CPU clock giảm
 ## Q91
 Trong IaaS, customer thường còn trách nhiệm nhiều hơn SaaS về:
 
-A. OS/middleware/application configuration
-B. Physical datacenter hoàn toàn
+A. OS/middleware/ứng dụng (application / 애플리케이션) cấu hình (configuration / 구성)
+B. vật lý (physical / 물리적) datacenter hoàn toàn
 C. Provider staff
 D. Internet backbone toàn cầu
 
 ## Q92
-Container image là:
+ảnh bộ chứa (container image / 컨테이너 이미지) là:
 
-A. Runtime process instance duy nhất
+A. thời gian chạy (runtime / 런타임) tiến trình (process / 프로세스) instance duy nhất
 B. Packaged template/layers dùng để tạo containers
 C. Hypervisor
 D. DNS zone
@@ -772,37 +772,37 @@ Base64 là:
 
 A. Encryption
 B. Encoding
-C. Hash
+C. băm (hash / 해시)
 D. Signature
 
 ## Q94
 Password salt chủ yếu giúp:
 
-A. Chống precomputed hash/rainbow attacks và làm cùng password không ra cùng stored hash pattern
+A. Chống precomputed băm (hash / 해시)/rainbow attacks và làm cùng password không ra cùng stored băm (hash / 해시) mẫu (pattern / 패턴)
 B. Mã hóa reversible password
-C. Thay password policy
+C. Thay password chính sách (policy / 정책)
 D. Tạo digital signature
 
 ## Q95
 MAC khác digital signature vì MAC:
 
-A. Dùng shared secret giữa parties
-B. Luôn dùng public/private key
+A. Dùng dùng chung (shared / 공유) secret giữa parties
+B. Luôn dùng công khai (public / 공개)/private key
 C. Không kiểm integrity
-D. Chỉ dùng cho database
+D. Chỉ dùng cho cơ sở dữ liệu (database / 데이터베이스)
 
 ## Q96
 RBAC cấp quyền bằng cách:
 
 A. Gắn permissions với roles rồi assign users vào roles
 B. Mỗi packet có ACL
-C. Mọi user admin
+C. Mọi người dùng (user / 사용자) admin
 D. Chỉ dùng encryption
 
 ## Q97
 Least privilege khác Separation of Duties vì:
 
-A. Một cái giảm mức quyền; một cái chia critical responsibility qua nhiều principals/roles
+A. Một cái giảm mức quyền; một cái chia trọng yếu (critical / 중요) responsibility qua nhiều principals/roles
 B. Hai cái giống nhau
 C. SoD chỉ firewall
 D. Least privilege chỉ password
@@ -810,26 +810,26 @@ D. Least privilege chỉ password
 ## Q98
 Stateful firewall khác stateless filter vì:
 
-A. Theo dõi connection/session state
+A. Theo dõi liên kết (connection / 연결)/session trạng thái (state / 상태)
 B. Luôn decrypt TLS
 C. Luôn là WAF
 D. Không có rules
 
 ## Q99
-Vulnerability scan khác penetration test ở chỗ:
+Vulnerability scan khác penetration kiểm thử (test / 테스트) ở chỗ:
 
-A. Scan thường tìm known weaknesses tự động hơn; pentest cố exploit/chaining để chứng minh impact trong scope
+A. Scan thường tìm known weaknesses tự động hơn; pentest cố exploit/chaining để chứng minh impact trong phạm vi (scope / 범위)
 B. Pentest không cần authorization
 C. Scan luôn sửa bug
 D. Hai cái giống nhau
 
 ## Q100
-Incident response sau containment thường cần tiếp tục với:
+sự cố (incident / 인시던트) phản hồi (response / 응답) sau containment thường cần tiếp tục với:
 
-A. Eradication và recovery, rồi lessons learned
+A. Eradication và khôi phục (recovery / 복구), rồi lessons learned
 B. Xóa logs
 C. Tắt backup
-D. Bỏ root-cause analysis
+D. Bỏ root-cause phân tích (analysis / 분석)
 
 ---
 
@@ -867,88 +867,88 @@ D. Bỏ root-cause analysis
 # High-value rationales
 
 ## Q1
-Hai requirement cho cùng session lifetime nhưng đưa constraint mâu thuẫn. Đây là **inconsistency**, không phải ambiguity.
+Hai yêu cầu (requirement / 요구사항) cho cùng session thời gian tồn tại (lifetime / 수명) nhưng đưa ràng buộc (constraint / 제약조건) mâu thuẫn. Đây là **inconsistency**, không phải ambiguity.
 
 ## Q3
-DFD decomposition phải bảo toàn logical external input/output của parent process. Đây là **balancing**.
+DFD decomposition phải bảo toàn logical bên ngoài (external / 외부) đầu vào (input / 입력)/đầu ra (output / 출력) của parent tiến trình (process / 프로세스). Đây là **balancing**.
 
 ## Q5
-`include` cho behavior được reuse như phần bắt buộc; `extend` cho behavior tùy điều kiện/extension point.
+`include` cho hành vi (behavior / 동작) được reuse như phần bắt buộc; `extend` cho hành vi (behavior / 동작) tùy điều kiện/extension điểm (point / 지점).
 
 ## Q8
-LSP hỏi subtype có thay thế base type mà không phá expectation/contract không.
+LSP hỏi subtype có thay thế cơ sở (base / 기반) kiểu (type / 타입) mà không phá expectation/đặc tả hợp đồng (contract / 계약) không.
 
 ## Q10
-External coupling liên quan external format/protocol/device interface chung; common coupling là shared global data.
+bên ngoài (external / 외부) coupling liên quan bên ngoài (external / 외부) format/giao thức (protocol / 프로토콜)/thiết bị (device / 장치) giao diện (interface / 인터페이스) chung; dùng chung (common / 공통) coupling là dùng chung (shared / 공유) toàn cục (global / 전역) dữ liệu (data / 데이터).
 
 ## Q17
-Timeout làm client không biết outcome cuối cùng; idempotency bảo repeated same logical operation không nhân side effect.
+hết thời gian chờ (timeout / 타임아웃) làm máy khách (client / 클라이언트) không biết kết quả (outcome / 결과) cuối cùng; idempotency bảo repeated same logical thao tác (operation / 연산) không nhân side tác động (effect / 효과).
 
 ## Q22
-Heap chỉ bảo đảm parent-child heap property, không full ordering như BST.
+vùng nhớ động (heap / 힙) chỉ bảo đảm parent-child vùng nhớ động (heap / 힙) thuộc tính (property / 속성), không full thứ tự (ordering / 순서) như BST.
 
 ## Q25
-MST tối ưu tổng weight để connect all vertices, khác shortest path từ source.
+MST tối ưu tổng weight để connect all vertices, khác shortest đường dẫn (path / 경로) từ nguồn (source / 소스).
 
 ## Q31
-Statement coverage không chứng minh mọi branch outcome/path được exercise.
+Statement coverage không chứng minh mọi branch kết quả (outcome / 결과)/đường dẫn (path / 경로) được exercise.
 
 ## Q35–36
-Retest xác nhận defect cụ thể đã sửa; regression kiểm side effects trên behavior khác.
+Retest xác nhận defect cụ thể đã sửa; regression kiểm side effects trên hành vi (behavior / 동작) khác.
 
 ## Q43
-Surrogate primary key không tự enforce business uniqueness của candidate key tự nhiên.
+Surrogate primary key không tự enforce nghiệp vụ (business / 비즈니스) uniqueness của candidate key tự nhiên.
 
 ## Q46
-3NF formal cho phép determinant là superkey **hoặc** dependent attribute là prime, ngoài trivial dependency.
+3NF formal cho phép determinant là superkey **hoặc** dependent attribute là prime, ngoài trivial phụ thuộc (dependency / 의존성).
 
 ## Q48–49
-Lossless bảo toàn information khi join lại; dependency preservation bảo toàn khả năng enforce dependencies ở relations con.
+Lossless bảo toàn thông tin (information / 정보) khi phép nối (join / 조인) lại; phụ thuộc (dependency / 의존성) preservation bảo toàn khả năng enforce dependencies ở relations con.
 
 ## Q52
-Sargability nối cách viết predicate với khả năng optimizer dùng access path/index hiệu quả.
+Sargability nối cách viết predicate với khả năng optimizer dùng truy cập (access / 접근) đường dẫn (path / 경로)/chỉ mục (index / 인덱스) hiệu quả.
 
 ## Q56
-Dirty dependency có thể gây cascading rollback nếu reader phụ thuộc transaction chưa commit.
+Dirty phụ thuộc (dependency / 의존성) có thể gây cascading quay lui (rollback / 롤백) nếu reader phụ thuộc giao dịch (transaction / 트랜잭션) chưa lần ghi nhận (commit / 커밋).
 
 ## Q61
-Static/dynamic typing và compiled/interpreted/JIT là dimensions khác nhau.
+Static/động (dynamic / 동적) typing và compiled/interpreted/JIT là dimensions khác nhau.
 
 ## Q67
-Static method không dùng runtime polymorphic dispatch giống overridden instance method.
+Static phương thức (method / 메서드) không dùng thời gian chạy (runtime / 런타임) polymorphic dispatch giống overridden instance phương thức (method / 메서드).
 
 ## Q74
-TLB miss chỉ là translation cache miss; page table có thể map tới resident frame nên không page fault.
+TLB miss chỉ là translation trượt bộ nhớ đệm (cache miss / 캐시 미스); bảng trang (page table / 페이지 테이블) có thể map tới resident frame nên không page fault.
 
 ## Q77
-`/26` block size 64: ranges 0–63, 64–127, ...; 70 thuộc network `.64`.
+`/26` khối (block / 블록) kích thước (size / 크기) 64: ranges 0–63, 64–127, ...; 70 thuộc mạng (network / 네트워크) `.64`.
 
 ## Q79
-TCP flow control bảo vệ receiver; congestion control phản ứng trạng thái network path.
+TCP luồng (flow / 흐름) điều khiển (control / 제어) bảo vệ receiver; congestion điều khiển (control / 제어) phản ứng trạng thái mạng (network / 네트워크) đường dẫn (path / 경로).
 
 ## Q83
-Float/slack cho phép một mức delay không đổi project finish, nếu assumptions/network không đổi.
+Float/slack cho phép một mức delay không đổi dự án (project / 프로젝트) finish, nếu các giả định (assumptions / 가정들)/mạng (network / 네트워크) không đổi.
 
 ## Q86
-Sync replication trade RPO/data durability against write latency và dependence vào replica/network availability.
+Sync replication trade RPO/dữ liệu (data / 데이터) durability against ghi (write / 쓰기) độ trễ (latency / 지연 시간) và dependence vào replica/mạng (network / 네트워크) availability.
 
 ## Q89
-RPO là data-loss objective; RTO là service recovery-time objective.
+RPO là data-loss mục tiêu (objective / 목표); RTO là dịch vụ (service / 서비스) recovery-time mục tiêu (objective / 목표).
 
 ## Q93
-Encoding không cung cấp confidentiality. Base64 chỉ thay representation.
+Encoding không cung cấp confidentiality. Base64 chỉ thay biểu diễn (representation / 표현).
 
 ## Q95
-MAC dựa shared secret; digital signature dùng asymmetric key và có trust/non-repudiation semantics khác.
+MAC dựa dùng chung (shared / 공유) secret; digital signature dùng asymmetric key và có trust/non-repudiation ngữ nghĩa (semantics / 의미론) khác.
 
 ## Q97
-Least privilege hỏi “bao nhiêu quyền”; SoD hỏi “một người có được làm toàn bộ critical flow không”.
+Least privilege hỏi “bao nhiêu quyền”; SoD hỏi “một người có được làm toàn bộ trọng yếu (critical / 중요) luồng (flow / 흐름) không”.
 
 ---
 
 # Score interpretation
 
-| Môn | Correct / 20 | Action |
+| Môn | Correct / 20 | hành động (action / 동작) |
 |---|---:|---|
 | 1 | ___ | nếu < 12: quay `01`, `11`, `12`, `15` |
 | 2 | ___ | nếu < 12: quay `02`, `08`, `11`, `15` |
@@ -956,9 +956,9 @@ Least privilege hỏi “bao nhiêu quyền”; SoD hỏi “một người có 
 | 4 | ___ | nếu < 12: quay `04`, `08`, `13`, `15` |
 | 5 | ___ | nếu < 12: quay `05`, `11`, `12`, `15` |
 
-Ngưỡng 8/20 ở đây chỉ mô phỏng 과락 40 điểm. Mục tiêu học nên cao hơn: **ít nhất 14/20 mỗi môn ở mock tự viết**, vì đề thật có thể dùng wording và distribution khác.
+Ngưỡng 8/20 ở đây chỉ mô phỏng 과락 40 điểm. Mục tiêu học nên cao hơn: **ít nhất 14/20 mỗi môn ở mock tự viết**, vì đề thật có thể dùng wording và phân phối (distribution / 분포) khác.
 
-## Error audit bắt buộc
+## Lỗi (error / 오류) kiểm tra (audit / 감사) bắt buộc
 
 Mỗi câu sai phải ghi:
 
@@ -972,4 +972,4 @@ Source file to revisit:
 Transfer question I can now answer:
 ```
 
-Không làm lại ngay cùng câu để “nhớ đáp án”. Sau remediation, hãy tự tạo một scenario mới cùng mechanism nhưng đổi nouns/numbers.
+Không làm lại ngay cùng câu để “nhớ đáp án”. Sau remediation, hãy tự tạo một scenario mới cùng cơ chế (mechanism / 메커니즘) nhưng đổi nouns/numbers.

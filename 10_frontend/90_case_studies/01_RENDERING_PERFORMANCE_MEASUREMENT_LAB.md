@@ -1,6 +1,9 @@
-# Rendering Performance Measurement Lab — đo style, layout, paint và composite thay vì đoán
+# Rendering hiệu năng (performance / 성능) đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán
 
-Frontend performance rất dễ bị biến thành folklore:
+> **Mạch đọc:** Đặt **Rendering hiệu năng (performance / 성능) đo lường (measurement / 측정) Lab — đo style, bố cục (layout / 레이아웃), paint và composite thay vì đoán** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **dấu vết (trace / 추적) A — tương tác (interaction / 상호작용)** sang **dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Frontend hiệu năng (performance / 성능) rất dễ bị biến thành folklore:
 
 ```text
 transform = nhanh
@@ -11,7 +14,7 @@ GPU = tốt
 will-change = tối ưu
 ```
 
-Một số câu có thể đúng trong một context cụ thể, nhưng không câu nào đủ để thay measurement.
+Một số câu có thể đúng trong một ngữ cảnh (context / 맥락) cụ thể, nhưng không câu nào đủ để thay đo lường (measurement / 측정).
 
 Lab này tập trung vào một nguyên tắc:
 
@@ -20,7 +23,7 @@ Không tối ưu rendering bằng tên property.
 Tối ưu bằng trace của work thực tế.
 ```
 
-Mục tiêu không phải học thuộc internals của một browser engine cụ thể. Mục tiêu là xây workflow có thể lặp lại:
+Mục tiêu không phải học thuộc internals của một trình duyệt (browser / 브라우저) engine cụ thể. Mục tiêu là xây workflow có thể lặp lại:
 
 ```text
 Symptom
@@ -37,11 +40,11 @@ Symptom
 
 ---
 
-# 1. Performance là câu hỏi về critical path
+# 1. hiệu năng (performance / 성능) là câu hỏi về đường găng (critical path / 임계 경로)
 
-Một page có thể làm rất nhiều work nhưng user chỉ bị block bởi phần nằm trên critical path của intent hiện tại.
+Một page có thể làm rất nhiều công việc (work / 작업) nhưng người dùng (user / 사용자) chỉ bị khối (block / 블록) bởi phần nằm trên đường găng (critical path / 임계 경로) của intent hiện tại.
 
-Ví dụ user click “Open detail”. Ta quan tâm:
+Ví dụ người dùng (user / 사용자) click “Open detail”. Ta quan tâm:
 
 ```text
 input
@@ -53,7 +56,7 @@ input
 → next useful frame
 ```
 
-Nếu đồng thời background analytics chạy 20 ms sau frame, nó vẫn là cost đáng quan tâm nhưng không nhất thiết là nguyên nhân chính của click latency đó.
+Nếu đồng thời background analytics chạy 20 ms sau frame, nó vẫn là chi phí (cost / 비용) đáng quan tâm nhưng không nhất thiết là nguyên nhân chính của click độ trễ (latency / 지연 시간) đó.
 
 Do đó trước khi profile phải xác định:
 
@@ -63,7 +66,7 @@ Expected visible result nào?
 Start và end của interaction ở đâu?
 ```
 
-Không có scope này, trace dễ biến thành một ảnh đầy màu nhưng không có câu hỏi.
+Không có phạm vi (scope / 범위) này, dấu vết (trace / 추적) dễ biến thành một ảnh đầy màu nhưng không có câu hỏi.
 
 ---
 
@@ -94,9 +97,9 @@ Scenario phải đủ cụ thể để before/after có thể so.
 
 ---
 
-# 3. Ghi environment trước khi ghi metric
+# 3. Ghi môi trường (environment / 환경) trước khi ghi chỉ số (metric / 지표)
 
-Performance result không có context thì rất khó tái tạo.
+Hiệu năng (performance / 성능) kết quả (result / 결과) không có ngữ cảnh (context / 맥락) thì rất khó tái tạo.
 
 Ghi:
 
@@ -112,15 +115,15 @@ network/cache condition
 CPU/network throttling nếu có
 ```
 
-Không cần mọi benchmark phải lab-grade. Nhưng cần đủ context để biết hai run có đang so cùng một hệ thống hay không.
+Không cần mọi benchmark phải lab-grade. Nhưng cần đủ ngữ cảnh (context / 맥락) để biết hai run có đang so cùng một hệ thống hay không.
 
 ---
 
-# 4. Warm cache và cold cache là hai câu hỏi khác nhau
+# 4. Warm bộ nhớ đệm (cache / 캐시) và cold bộ nhớ đệm (cache / 캐시) là hai câu hỏi khác nhau
 
-Cold load có thể bị chi phối bởi network/resource startup.
+Cold tải (load / 로드) có thể bị chi phối bởi mạng (network / 네트워크)/tài nguyên (resource / 자원) startup.
 
-Warm interaction có thể bị chi phối bởi JavaScript/rendering.
+Warm tương tác (interaction / 상호작용) có thể bị chi phối bởi JavaScript/rendering.
 
 Đừng gộp:
 
@@ -131,13 +134,13 @@ interaction performance
 
 thành một con số “frontend speed”.
 
-Nếu mục tiêu là rendering khi filter rows, warm page trước rồi đo interaction. Nếu mục tiêu là first navigation, cold/warm cache phải được ghi rõ.
+Nếu mục tiêu là rendering khi filter rows, warm page trước rồi đo tương tác (interaction / 상호작용). Nếu mục tiêu là first điều hướng (navigation / 내비게이션), cold/warm bộ nhớ đệm (cache / 캐시) phải được ghi rõ.
 
 ---
 
-# 5. Baseline trước optimization
+# 5. Baseline trước tối ưu hóa (optimization / 최적화)
 
-Trước khi sửa code, ghi baseline.
+Trước khi sửa mã (code / 코드), ghi baseline.
 
 Ví dụ:
 
@@ -151,25 +154,25 @@ Other: 7 ms
 Affected DOM nodes: ~5.000
 ```
 
-Các con số chỉ là ví dụ. Tool/browser có thể nhóm work khác nhau.
+Các con số chỉ là ví dụ. công cụ (tool / 도구)/trình duyệt (browser / 브라우저) có thể nhóm công việc (work / 작업) khác nhau.
 
 Điểm quan trọng là decomposition.
 
-Nếu không có baseline, sau optimization ta chỉ biết “cảm giác nhanh hơn”.
+Nếu không có baseline, sau tối ưu hóa (optimization / 최적화) ta chỉ biết “cảm giác nhanh hơn”.
 
 ---
 
-# 6. Scripting, style, layout, paint và composite là categories, không phải blame labels
+# 6. Scripting, style, bố cục (layout / 레이아웃), paint và composite là categories, không phải blame labels
 
-Khi thấy layout lớn, đừng kết luận CSS team sai.
+Khi thấy bố cục (layout / 레이아웃) lớn, đừng kết luận CSS nhóm (team / 팀) sai.
 
-Layout có thể bị kích hoạt bởi JavaScript mutation.
+Bố cục (layout / 레이아웃) có thể bị kích hoạt bởi JavaScript mutation.
 
-Khi thấy scripting lớn, đừng kết luận framework sai.
+Khi thấy scripting lớn, đừng kết luận khung phần mềm (framework / 프레임워크) sai.
 
-Scripting có thể là app business transform hoặc third-party code.
+Scripting có thể là app nghiệp vụ (business / 비즈니스) transform hoặc third-party mã (code / 코드).
 
-Reasoning phải nối:
+Lập luận (reasoning / 추론) phải nối:
 
 ```text
 Who caused invalidation?
@@ -177,13 +180,13 @@ What work became necessary?
 How large was affected scope?
 ```
 
-Owner của **cause** và owner của **work category** có thể khác nhau.
+Đơn vị sở hữu (owner / 오너) của **cause** và đơn vị sở hữu (owner / 오너) của **công việc (work / 작업) category** có thể khác nhau.
 
 ---
 
-# 7. Style invalidation
+# 7. Style vô hiệu hóa (invalidation / 무효화)
 
-Một DOM/class/state change có thể làm browser phải tính lại style cho một scope nào đó.
+Một DOM/lớp (class / 클래스)/trạng thái (state / 상태) thay đổi (change / 변경) có thể làm trình duyệt (browser / 브라우저) phải tính lại style cho một phạm vi (scope / 범위) nào đó.
 
 Ví dụ:
 
@@ -191,29 +194,29 @@ Ví dụ:
 document.body.classList.add('dark')
 ```
 
-Nếu theme selector ảnh hưởng phần lớn tree, style work có thể rộng.
+Nếu theme selector ảnh hưởng phần lớn cây (tree / 트리), style công việc (work / 작업) có thể rộng.
 
 Nhưng không nên nói:
 
-> đổi class body luôn chậm.
+> đổi lớp (class / 클래스) body luôn chậm.
 
-Cost phụ thuộc:
+Chi phí (cost / 비용) phụ thuộc:
 
-- selector graph;
+- selector đồ thị (graph / 그래프);
 - số affected nodes;
-- implementation;
-- current state;
-- follow-up layout/paint.
+- hiện thực (implementation / 구현);
+- trạng thái hiện tại (current state / 현재 상태);
+- follow-up bố cục (layout / 레이아웃)/paint.
 
-Trace mới trả lời scenario cụ thể.
+Dấu vết (trace / 추적) mới trả lời scenario cụ thể.
 
 ---
 
-# 8. Layout invalidation
+# 8. bố cục (layout / 레이아웃) vô hiệu hóa (invalidation / 무효화)
 
-Layout work xảy ra khi geometry cần được xác định lại.
+Bố cục (layout / 레이아웃) công việc (work / 작업) xảy ra khi hình học (geometry / 기하학) cần được xác định lại.
 
-Các thay đổi liên quan size/flow có thể kéo theo layout, nhưng scope không phải lúc nào cũng toàn document.
+Các thay đổi liên quan kích thước (size / 크기)/luồng (flow / 흐름) có thể kéo theo bố cục (layout / 레이아웃), nhưng phạm vi (scope / 범위) không phải lúc nào cũng toàn document.
 
 Câu hỏi đúng:
 
@@ -223,22 +226,22 @@ Ancestor/descendant/sibling nào phụ thuộc geometry đó?
 Formatting context nào bị ảnh hưởng?
 ```
 
-Một component được isolate tốt có thể giới hạn propagation tốt hơn một tree có dependency rộng.
+Một thành phần (component / 컴포넌트) được isolate tốt có thể giới hạn propagation tốt hơn một cây (tree / 트리) có phụ thuộc (dependency / 의존성) rộng.
 
 ---
 
-# 9. Forced synchronous layout là ordering problem
+# 9. Forced synchronous bố cục (layout / 레이아웃) là thứ tự (ordering / 순서) bài toán (problem / 문제)
 
-Pattern kinh điển:
+Mẫu (pattern / 패턴) kinh điển:
 
 ```js
 el.style.width = '200px';
 const width = el.offsetWidth;
 ```
 
-Code vừa mutation có khả năng invalidate layout, sau đó ngay lập tức đọc geometry cần giá trị cập nhật.
+Mã (code / 코드) vừa mutation có khả năng invalidate bố cục (layout / 레이아웃), sau đó ngay lập tức đọc hình học (geometry / 기하학) cần giá trị cập nhật.
 
-Browser có thể buộc phải resolve pending layout trước khi trả kết quả read.
+Trình duyệt (browser / 브라우저) có thể buộc phải resolve pending bố cục (layout / 레이아웃) trước khi trả kết quả read.
 
 Đây không đơn giản là:
 
@@ -246,11 +249,11 @@ Browser có thể buộc phải resolve pending layout trước khi trả kết 
 offsetWidth = slow
 ```
 
-Vấn đề là **read/write ordering**.
+Vấn đề là **read/ghi (write / 쓰기) thứ tự (ordering / 순서)**.
 
-Một read riêng lẻ khi layout already clean có thể rẻ hơn nhiều.
+Một read riêng lẻ khi bố cục (layout / 레이아웃) already clean có thể rẻ hơn nhiều.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 write that invalidates geometry
@@ -260,9 +263,9 @@ write that invalidates geometry
 
 ---
 
-# 10. Layout thrashing
+# 10. bố cục (layout / 레이아웃) thrashing
 
-Xấu hơn là xen kẽ read/write trong loop:
+Xấu hơn là xen kẽ read/ghi (write / 쓰기) trong vòng lặp (loop / 루프):
 
 ```js
 for (const item of items) {
@@ -271,7 +274,7 @@ for (const item of items) {
 }
 ```
 
-Potential pattern:
+Potential mẫu (pattern / 패턴):
 
 ```text
 write
@@ -281,30 +284,30 @@ write
 → ...
 ```
 
-Một strategy tốt hơn có thể batch reads rồi writes nếu semantic cho phép.
+Một chiến lược (strategy / 전략) tốt hơn có thể batch reads rồi writes nếu ngữ nghĩa (semantic / 의미적) cho phép.
 
-Nhưng đừng refactor chỉ vì thấy pattern. Profile để xác nhận layout thực sự đáng kể trong scenario.
+Nhưng đừng refactor chỉ vì thấy mẫu (pattern / 패턴). Profile để xác nhận bố cục (layout / 레이아웃) thực sự đáng kể trong scenario.
 
 ---
 
-# 11. Paint cost phụ thuộc vùng và visual complexity
+# 11. Paint chi phí (cost / 비용) phụ thuộc vùng và visual độ phức tạp (complexity / 복잡도)
 
-Paint không phải binary “property A paint, property B không paint”.
+Paint không phải nhị phân (binary / 이진) “thuộc tính (property / 속성) A paint, thuộc tính (property / 속성) B không paint”.
 
-Cost còn phụ thuộc:
+Chi phí (cost / 비용) còn phụ thuộc:
 
 - area bị invalidate;
 - number of elements;
 - clipping;
 - effects;
-- text;
+- văn bản (text / 텍스트);
 - images;
 - scrolling;
-- raster scale.
+- raster quy mô (scale / 규모).
 
-Một effect đắt trên full-screen layer khác hoàn toàn cùng effect trên icon 20×20.
+Một tác động (effect / 효과) đắt trên full-screen tầng (layer / 계층) khác hoàn toàn cùng tác động (effect / 효과) trên icon 20×20.
 
-Do đó khi audit paint, hỏi:
+Do đó khi kiểm tra (audit / 감사) paint, hỏi:
 
 ```text
 What region repainted?
@@ -317,15 +320,15 @@ How large/complex?
 
 # 12. Composite không miễn phí
 
-Nếu browser có thể composite một layer mà không repaint content, điều đó có thể hữu ích.
+Nếu trình duyệt (browser / 브라우저) có thể composite một tầng (layer / 계층) mà không repaint content, điều đó có thể hữu ích.
 
-Nhưng layers có cost:
+Nhưng layers có chi phí (cost / 비용):
 
-- memory;
+- bộ nhớ (memory / 메모리);
 - management;
 - raster surfaces;
-- transfer/upload depending on architecture;
-- composition complexity.
+- transfer/upload depending on kiến trúc (architecture / 아키텍처);
+- composition độ phức tạp (complexity / 복잡도).
 
 Nếu promote hàng nghìn element “để GPU chạy”, ta có thể đổi một bottleneck sang bottleneck khác.
 
@@ -340,9 +343,9 @@ more layers
 
 # 13. `will-change` là hint, không phải turbo button
 
-`will-change` có thể cho browser biết một property có khả năng thay đổi, giúp chuẩn bị optimization trong một số case.
+`will-change` có thể cho trình duyệt (browser / 브라우저) biết một thuộc tính (property / 속성) có khả năng thay đổi, giúp chuẩn bị tối ưu hóa (optimization / 최적화) trong một số trường hợp (case / 사례).
 
-Nhưng giữ nó rộng/lâu trên nhiều node có thể tăng resource cost.
+Nhưng giữ nó rộng/lâu trên nhiều nút (node / 노드) có thể tăng tài nguyên (resource / 자원) chi phí (cost / 비용).
 
 Workflow đúng:
 
@@ -353,7 +356,7 @@ measured bottleneck
 → remove if no evidence / avoid global blanket use
 ```
 
-Không thêm `will-change: transform` vào mọi component như default reset.
+Không thêm `will-change: transform` vào mọi thành phần (component / 컴포넌트) như default reset.
 
 ---
 
@@ -361,13 +364,13 @@ Không thêm `will-change: transform` vào mọi component như default reset.
 
 Tạo một box di chuyển 300 px trong 500 ms.
 
-Version A thay `left`.
+Phiên bản (version / 버전) A thay `left`.
 
-Version B dùng `transform: translateX(...)`.
+Phiên bản (version / 버전) B dùng `transform: translateX(...)`.
 
 Không bắt đầu bằng kết luận B thắng.
 
-Record:
+Bản ghi (record / 레코드):
 
 ```text
 main-thread work
@@ -378,7 +381,7 @@ frame consistency
 memory/layers if observable
 ```
 
-Trong nhiều environment, transform animation có thể tránh layout tốt hơn. Nhưng lab chỉ đạt khi người học có thể **show evidence**, không chỉ lặp câu này.
+Trong nhiều môi trường (environment / 환경), transform animation có thể tránh bố cục (layout / 레이아웃) tốt hơn. Nhưng lab chỉ đạt khi người học có thể **show bằng chứng (evidence / 증거)**, không chỉ lặp câu này.
 
 Sau đó tăng:
 
@@ -388,22 +391,22 @@ Sau đó tăng:
 → 2.000 boxes
 ```
 
-Quan sát scaling. Một optimization ở scale 1 có thể có trade-off khác ở scale lớn.
+Quan sát scaling. Một tối ưu hóa (optimization / 최적화) ở quy mô (scale / 규모) 1 có thể có sự đánh đổi (trade-off / 트레이드오프) khác ở quy mô (scale / 규모) lớn.
 
 ---
 
-# 15. Animation lab B — visual effect lớn
+# 15. Animation lab B — visual tác động (effect / 효과) lớn
 
 Tạo card lớn có shadow/filter và animate.
 
 Thử:
 
-- animate geometry;
+- animate hình học (geometry / 기하학);
 - animate opacity;
 - animate transform;
-- thay size vùng effect.
+- thay kích thước (size / 크기) vùng tác động (effect / 효과).
 
-Mục tiêu không phải lập bảng universal property cost.
+Mục tiêu không phải lập bảng universal thuộc tính (property / 속성) chi phí (cost / 비용).
 
 Mục tiêu là thấy:
 
@@ -413,13 +416,13 @@ same property family
 → different total cost
 ```
 
-Performance là property của workload, không chỉ syntax.
+Hiệu năng (performance / 성능) là thuộc tính (property / 속성) của tải công việc (workload / 워크로드), không chỉ cú pháp (syntax / 문법).
 
 ---
 
-# 16. List lab — 100, 1.000, 10.000 rows
+# 16. danh sách (list / 목록) lab — 100, 1.000, 10.000 rows
 
-Render cùng component với dataset tăng dần.
+Kết xuất (render / 렌더링) cùng thành phần (component / 컴포넌트) với dataset tăng dần.
 
 Ghi:
 
@@ -432,7 +435,7 @@ memory trend
 scroll behavior
 ```
 
-Sau đó test một số intervention:
+Sau đó kiểm thử (test / 테스트) một số intervention:
 
 ```text
 reduce rendered columns
@@ -446,15 +449,15 @@ Không apply tất cả cùng lúc. Mỗi run chỉ nên thay đủ ít để at
 
 ---
 
-# 17. Framework render và browser rendering phải tách
+# 17. khung phần mềm (framework / 프레임워크) kết xuất (render / 렌더링) và trình duyệt (browser / 브라우저) rendering phải tách
 
-Trong React, “render” thường được dùng cho framework render/reconciliation.
+Trong React, “kết xuất (render / 렌더링)” thường được dùng cho khung phần mềm (framework / 프레임워크) kết xuất (render / 렌더링)/reconciliation.
 
-Browser rendering lại có style/layout/paint/composite.
+Trình duyệt (browser / 브라우저) rendering lại có style/bố cục (layout / 레이아웃)/paint/composite.
 
-Hai từ giống nhau nhưng khác layer.
+Hai từ giống nhau nhưng khác tầng (layer / 계층).
 
-Có thể có case:
+Có thể có trường hợp (case / 사례):
 
 ```text
 React render nhiều
@@ -480,30 +483,30 @@ browser rendering pipeline
 
 ---
 
-# 18. Measure commit/output, không chỉ function calls
+# 18. Measure lần ghi nhận (commit / 커밋)/đầu ra (output / 출력), không chỉ hàm (function / 함수) calls
 
-Một component function chạy 20 lần chưa tự nói user bị chậm bao nhiêu.
+Một thành phần (component / 컴포넌트) hàm (function / 함수) chạy 20 lần chưa tự nói người dùng (user / 사용자) bị chậm bao nhiêu.
 
 Cần biết:
 
-- mỗi run làm work gì;
-- output có thay không;
-- commit/mutation nào xảy ra;
-- browser work sau commit là gì.
+- mỗi run làm công việc (work / 작업) gì;
+- đầu ra (output / 출력) có thay không;
+- lần ghi nhận (commit / 커밋)/mutation nào xảy ra;
+- trình duyệt (browser / 브라우저) công việc (work / 작업) sau lần ghi nhận (commit / 커밋) là gì.
 
-Count là signal, không phải verdict.
+Count là tín hiệu (signal / 신호), không phải verdict.
 
 ---
 
-# 19. Memoization có cost và semantic risk
+# 19. Memoization có chi phí (cost / 비용) và ngữ nghĩa (semantic / 의미적) rủi ro (risk / 위험)
 
-Memoization có thể tránh computation/render work lặp lại, nhưng cũng có:
+Memoization có thể tránh computation/kết xuất (render / 렌더링) công việc (work / 작업) lặp lại, nhưng cũng có:
 
-- memory;
-- comparison cost;
-- dependency complexity;
-- stale value bug nếu dependency model sai;
-- cognitive cost.
+- bộ nhớ (memory / 메모리);
+- comparison chi phí (cost / 비용);
+- phụ thuộc (dependency / 의존성) độ phức tạp (complexity / 복잡도);
+- stale giá trị (value / 값) bug nếu phụ thuộc (dependency / 의존성) mô hình (model / 모델) sai;
+- cognitive chi phí (cost / 비용).
 
 Do đó:
 
@@ -519,13 +522,13 @@ component → memo everywhere
 
 ---
 
-# 20. Event handler latency và rendering latency khác nhau
+# 20. sự kiện (event / 이벤트) handler độ trễ (latency / 지연 시간) và rendering độ trễ (latency / 지연 시간) khác nhau
 
-Một input handler có thể chạy 5 ms nhưng frame xuất hiện 80 ms sau vì rendering work.
+Một đầu vào (input / 입력) handler có thể chạy 5 ms nhưng frame xuất hiện 80 ms sau vì rendering công việc (work / 작업).
 
-Ngược lại handler có thể chạy 70 ms nhưng DOM change nhỏ.
+Ngược lại handler có thể chạy 70 ms nhưng DOM thay đổi (change / 변경) nhỏ.
 
-Trace interaction phải giữ cả hai.
+Dấu vết (trace / 추적) tương tác (interaction / 상호작용) phải giữ cả hai.
 
 Một useful decomposition:
 
@@ -535,34 +538,34 @@ processing time
 presentation delay
 ```
 
-Tên cụ thể trong metric/tool có thể khác theo platform, nhưng mental model giúp không đổ mọi latency cho handler.
+Tên cụ thể trong chỉ số (metric / 지표)/công cụ (tool / 도구) có thể khác theo nền tảng (platform / 플랫폼), nhưng mô hình tư duy (mental model / 사고 모델) giúp không đổ mọi độ trễ (latency / 지연 시간) cho handler.
 
 ---
 
-# 21. Long task: boundary hữu ích nhưng không phải root cause
+# 21. Long tác vụ (task / 작업): ranh giới (boundary / 경계) hữu ích nhưng không phải nguyên nhân gốc (root cause / 근본 원인)
 
-Nếu main thread bị một task dài, user input có thể phải chờ.
+Nếu main luồng thực thi (thread / 스레드) bị một tác vụ (task / 작업) dài, người dùng (user / 사용자) đầu vào (input / 입력) có thể phải chờ.
 
-Nhưng “long task” chỉ nói container work dài.
+Nhưng “long tác vụ (task / 작업)” chỉ nói bộ chứa (container / 컨테이너) công việc (work / 작업) dài.
 
 Bên trong có thể là:
 
-- application JavaScript;
+- ứng dụng (application / 애플리케이션) JavaScript;
 - JSON transform;
-- framework rendering;
-- style/layout forced synchronously;
-- third-party code;
+- khung phần mềm (framework / 프레임워크) rendering;
+- style/bố cục (layout / 레이아웃) forced synchronously;
+- third-party mã (code / 코드);
 - logging/instrumentation.
 
-Drill down call stack/timeline để tìm owner.
+Drill down ngăn xếp lời gọi (call stack / 호출 스택)/timeline để tìm đơn vị sở hữu (owner / 오너).
 
 ---
 
 # 22. Microtask starvation
 
-Code có thể không có một synchronous loop lớn nhưng vẫn chain Promise/microtask liên tục.
+Mã (code / 코드) có thể không có một synchronous vòng lặp (loop / 루프) lớn nhưng vẫn chuỗi (chain / 사슬) Promise/microtask liên tục.
 
-Nếu microtasks tiếp tục tạo microtask mới, browser có thể bị trì hoãn trước rendering opportunity hoặc other task.
+Nếu microtasks tiếp tục tạo microtask mới, trình duyệt (browser / 브라우저) có thể bị trì hoãn trước rendering opportunity hoặc other tác vụ (task / 작업).
 
 Lab nhỏ:
 
@@ -573,18 +576,18 @@ function spin() {
 spin();
 ```
 
-Không chạy vô hạn trong production. Đây chỉ là conceptual warning rằng:
+Không chạy vô hạn trong môi trường vận hành (production / 운영 환경). Đây chỉ là conceptual warning rằng:
 
 ```text
 Promise-based
 ≠ automatically cooperative with rendering
 ```
 
-Scheduling semantics quan trọng.
+Scheduling ngữ nghĩa (semantics / 의미론) quan trọng.
 
 ---
 
-# 23. `requestAnimationFrame` không sửa algorithm nặng
+# 23. `requestAnimationFrame` không sửa thuật toán (algorithm / 알고리즘) nặng
 
 `requestAnimationFrame` giúp schedule callback quanh rendering cycle, hữu ích cho visual updates.
 
@@ -596,23 +599,23 @@ rAF
 → missed frames
 ```
 
-API đúng không cứu workload quá lớn.
+API đúng không cứu tải công việc (workload / 워크로드) quá lớn.
 
-Nếu computation có thể split/offload, cần reasoning riêng về scheduling/worker/data transfer.
+Nếu computation có thể split/offload, cần lập luận (reasoning / 추론) riêng về scheduling/worker/dữ liệu (data / 데이터) transfer.
 
 ---
 
 # 24. Worker không phải miễn phí
 
-Web Worker có thể đưa CPU work khỏi main thread, nhưng có cost:
+Web Worker có thể đưa CPU công việc (work / 작업) khỏi main luồng thực thi (thread / 스레드), nhưng có chi phí (cost / 비용):
 
 - message serialization/structured clone;
 - transfer;
 - worker startup;
-- duplicated state/coordination;
-- architecture complexity.
+- duplicated trạng thái (state / 상태)/coordination;
+- kiến trúc (architecture / 아키텍처) độ phức tạp (complexity / 복잡도).
 
-Dùng worker khi workload và latency justify, không phải vì “multithreading luôn nhanh hơn”.
+Dùng worker khi tải công việc (workload / 워크로드) và độ trễ (latency / 지연 시간) justify, không phải vì “multithreading luôn nhanh hơn”.
 
 Measure end-to-end:
 
@@ -626,31 +629,31 @@ total latency
 
 ---
 
-# 25. Scroll performance
+# 25. Scroll hiệu năng (performance / 성능)
 
 Scroll jank có thể liên quan:
 
-- main-thread event work;
-- layout during scroll;
+- main-thread sự kiện (event / 이벤트) công việc (work / 작업);
+- bố cục (layout / 레이아웃) during scroll;
 - large paint area;
 - sticky/fixed effects;
-- image decode/raster;
+- ảnh (image / 이미지) decode/raster;
 - huge DOM;
 - third-party listeners.
 
-Đừng chỉ search code `scroll` listener.
+Đừng chỉ tìm kiếm (search / 검색) mã (code / 코드) `scroll` listener.
 
-Record scroll session và xem work thực tế.
+Bản ghi (record / 레코드) scroll session và xem công việc (work / 작업) thực tế.
 
 Nếu listener không xuất hiện đáng kể mà paint dominates, tối ưu listener không giải quyết vấn đề.
 
 ---
 
-# 26. Resize performance
+# 26. Resize hiệu năng (performance / 성능)
 
-Resize là stress test tốt cho responsive layout.
+Resize là kiểm thử sức chịu tải (stress test / 스트레스 테스트) tốt cho responsive bố cục (layout / 레이아웃).
 
-Một layout có thể ổn khi static nhưng resize gây:
+Một bố cục (layout / 레이아웃) có thể ổn khi static nhưng resize gây:
 
 ```text
 repeated JS measurement
@@ -660,86 +663,86 @@ DOM write
 forced layout
 ```
 
-Nếu code resize handler tự đo/mutate liên tục, framework/CSS responsive features có thể bị vô hiệu hóa bởi application loop.
+Nếu mã (code / 코드) resize handler tự đo/mutate liên tục, khung phần mềm (framework / 프레임워크)/CSS responsive features có thể bị vô hiệu hóa bởi ứng dụng (application / 애플리케이션) vòng lặp (loop / 루프).
 
-Trace để biết bottleneck ở CSS layout hay JS measurement pattern.
+Dấu vết (trace / 추적) để biết bottleneck ở CSS bố cục (layout / 레이아웃) hay JS đo lường (measurement / 측정) mẫu (pattern / 패턴).
 
 ---
 
-# 27. Image decode và raster là phần user-visible pipeline
+# 27. ảnh (image / 이미지) decode và raster là phần user-visible chuỗi xử lý (pipeline / 파이프라인)
 
-Image request complete không nhất thiết pixel đã sẵn sàng ngay.
+Ảnh (image / 이미지) yêu cầu (request / 요청) complete không nhất thiết điểm ảnh (pixel / 픽셀) đã sẵn sàng ngay.
 
-Browser còn cần decode/raster/process tùy format/path.
+Trình duyệt (browser / 브라우저) còn cần decode/raster/tiến trình (process / 프로세스) tùy format/đường dẫn (path / 경로).
 
-Với gallery lớn, network có thể nhanh nhưng image processing + memory vẫn gây jank.
+Với gallery lớn, mạng (network / 네트워크) có thể nhanh nhưng xử lý ảnh (image processing / 이미지 처리) + bộ nhớ (memory / 메모리) vẫn gây jank.
 
-Optimization có thể gồm:
+Tối ưu hóa (optimization / 최적화) có thể gồm:
 
 - đúng resolution;
 - lazy loading phù hợp;
 - reserve dimensions;
-- avoid decoding huge source chỉ để display thumbnail;
-- reduce simultaneous heavy work.
+- avoid decoding huge nguồn (source / 소스) chỉ để display thumbnail;
+- reduce simultaneous heavy công việc (work / 작업).
 
-Nhưng lại phải đo workload cụ thể.
+Nhưng lại phải đo tải công việc (workload / 워크로드) cụ thể.
 
 ---
 
-# 28. Font performance
+# 28. Font hiệu năng (performance / 성능)
 
-Font ảnh hưởng cả network lẫn layout.
+Font ảnh hưởng cả mạng (network / 네트워크) lẫn bố cục (layout / 레이아웃).
 
 Lab:
 
-1. record page với fallback only;
-2. record web font;
-3. quan sát font request;
-4. quan sát text/layout shift nếu có;
-5. kiểm tra font size/weight subsets và usage.
+1. bản ghi (record / 레코드) page với fallback only;
+2. bản ghi (record / 레코드) web font;
+3. quan sát font yêu cầu (request / 요청);
+4. quan sát văn bản (text / 텍스트)/bố cục (layout / 레이아웃) shift nếu có;
+5. kiểm tra font kích thước (size / 크기)/weight subsets và usage.
 
-Mục tiêu là thấy font decision không chỉ là design choice.
+Mục tiêu là thấy font quyết định (decision / 결정) không chỉ là thiết kế (design / 설계) choice.
 
 ---
 
-# 29. Hidden work
+# 29. Hidden công việc (work / 작업)
 
-Một element invisible với user chưa chắc không tạo cost.
+Một element invisible với người dùng (user / 사용자) chưa chắc không tạo chi phí (cost / 비용).
 
 Tùy cách hide:
 
-- nó có thể không participate layout;
-- có thể vẫn giữ subtree/state/listeners;
-- có thể vẫn được framework update;
-- có thể giữ media/resource.
+- nó có thể không participate bố cục (layout / 레이아웃);
+- có thể vẫn giữ subtree/trạng thái (state / 상태)/listeners;
+- có thể vẫn được khung phần mềm (framework / 프레임워크) cập nhật (update / 업데이트);
+- có thể giữ media/tài nguyên (resource / 자원).
 
-Không suy từ “không thấy trên màn hình” rằng work bằng 0.
+Không suy từ “không thấy trên màn hình” rằng công việc (work / 작업) bằng 0.
 
-Measure component/application behavior.
+Measure thành phần (component / 컴포넌트)/ứng dụng (application / 애플리케이션) hành vi (behavior / 동작).
 
 ---
 
 # 30. CSS selector folklore
 
-Modern engines có nhiều optimization; selector syntax đơn lẻ hiếm khi là nơi nên bắt đầu nếu không có evidence.
+Hiện đại (modern / 현대적) engines có nhiều tối ưu hóa (optimization / 최적화); selector cú pháp (syntax / 문법) đơn lẻ hiếm khi là nơi nên bắt đầu nếu không có bằng chứng (evidence / 증거).
 
 Nếu style recalculation lớn, inspect:
 
-- affected node count;
-- invalidation source;
-- selector/cascade structure;
-- DOM scope;
+- affected nút (node / 노드) count;
+- vô hiệu hóa (invalidation / 무효화) nguồn (source / 소스);
+- selector/cascade cấu trúc (structure / 구조);
+- DOM phạm vi (scope / 범위);
 - frequency.
 
-Không dành hàng giờ đổi `.parent .child` thành `.child` nếu trace cho thấy 90% cost là JavaScript computation.
+Không dành hàng giờ đổi `.parent .child` thành `.child` nếu dấu vết (trace / 추적) cho thấy 90% chi phí (cost / 비용) là JavaScript computation.
 
 ---
 
 # 31. Containment và isolation
 
-CSS/platform có các cơ chế giúp giới hạn scope layout/rendering trong một số scenario.
+CSS/nền tảng (platform / 플랫폼) có các cơ chế giúp giới hạn phạm vi (scope / 범위) bố cục (layout / 레이아웃)/rendering trong một số scenario.
 
-Nhưng containment thay semantic/layout behavior và cần hiểu contract.
+Nhưng containment thay ngữ nghĩa (semantic / 의미적)/bố cục (layout / 레이아웃) hành vi (behavior / 동작) và cần hiểu đặc tả hợp đồng (contract / 계약).
 
 Không thêm chỉ vì benchmark nhỏ đẹp hơn.
 
@@ -753,62 +756,62 @@ accessibility
 sticky/positioning interaction
 ```
 
-Optimization không được phá invariant.
+Tối ưu hóa (optimization / 최적화) không được phá bất biến (invariant / 불변식).
 
 ---
 
-# 32. Performance fix có thể tạo accessibility regression
+# 32. hiệu năng (performance / 성능) fix có thể tạo khả năng tiếp cận (accessibility / 접근성) regression
 
-Virtualization hoặc custom scrolling có thể cải thiện frame time nhưng phá:
+Virtualization hoặc custom scrolling có thể cải thiện frame thời gian (time / 시간) nhưng phá:
 
-- keyboard navigation;
+- keyboard điều hướng (navigation / 내비게이션);
 - screen-reader traversal;
 - find-in-page;
 - focus restoration;
-- semantic table/list structure.
+- ngữ nghĩa (semantic / 의미적) bảng (table / 테이블)/danh sách (list / 목록) cấu trúc (structure / 구조).
 
 Do đó before/after không chỉ là timing.
 
-Regression matrix phải gồm public behavior.
+Regression ma trận (matrix / 행렬) phải gồm công khai (public / 공개) hành vi (behavior / 동작).
 
 ---
 
-# 33. Performance fix có thể tạo correctness regression
+# 33. hiệu năng (performance / 성능) fix có thể tạo tính đúng đắn (correctness / 정확성) regression
 
-Debounce search giúp giảm work nhưng thay semantics.
+Debounce tìm kiếm (search / 검색) giúp giảm công việc (work / 작업) nhưng thay ngữ nghĩa (semantics / 의미론).
 
-Nếu user type rồi immediately submit, pending debounced state có được commit đúng không?
+Nếu người dùng (user / 사용자) kiểu (type / 타입) rồi immediately submit, pending debounced trạng thái (state / 상태) có được lần ghi nhận (commit / 커밋) đúng không?
 
-Nếu filter là accessibility-critical feedback, delay có hợp lý không?
+Nếu filter là accessibility-critical phản hồi (feedback / 피드백), delay có hợp lý không?
 
-Optimization không được được đánh giá riêng khỏi behavior contract.
+Tối ưu hóa (optimization / 최적화) không được được đánh giá riêng khỏi hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약).
 
 ---
 
-# 34. Performance fix có thể chuyển cost sang server/network
+# 34. hiệu năng (performance / 성능) fix có thể chuyển chi phí (cost / 비용) sang máy chủ (server / 서버)/mạng (network / 네트워크)
 
 Client-side filter 100k records chậm.
 
-Ta chuyển sang server search.
+Ta chuyển sang máy chủ (server / 서버) tìm kiếm (search / 검색).
 
-Client nhẹ hơn, nhưng system có thêm:
+Máy khách (client / 클라이언트) nhẹ hơn, nhưng hệ thống (system / 시스템) có thêm:
 
-- request latency;
-- server load;
+- yêu cầu (request / 요청) độ trễ (latency / 지연 시간);
+- máy chủ (server / 서버) tải (load / 로드);
 - cancellation/stale race;
 - pagination;
-- cache;
-- offline/error behavior.
+- bộ nhớ đệm (cache / 캐시);
+- offline/lỗi (error / 오류) hành vi (behavior / 동작).
 
 Đây có thể vẫn là kiến trúc tốt, nhưng phải đánh giá end-to-end chứ không tuyên bố “frontend nhanh hơn” rồi dừng.
 
 ---
 
-# 35. Production-like data quan trọng hơn toy data
+# 35. Production-like dữ liệu (data / 데이터) quan trọng hơn toy dữ liệu (data / 데이터)
 
-Một table 20 rows không reveal bottleneck của table 20.000 rows.
+Một bảng (table / 테이블) 20 rows không reveal bottleneck của bảng (table / 테이블) 20.000 rows.
 
-Performance test cần data distribution gần use case:
+Hiệu năng (performance / 성능) kiểm thử (test / 테스트) cần dữ liệu (data / 데이터) phân phối (distribution / 분포) gần use trường hợp (case / 사례):
 
 ```text
 row count
@@ -819,17 +822,17 @@ nested components
 error/empty/loading states
 ```
 
-Không cần copy dữ liệu nhạy cảm; synthetic dataset có cùng shape/distribution là đủ tốt hơn toy demo.
+Không cần bản sao (copy / 복사) dữ liệu nhạy cảm; synthetic dataset có cùng shape/phân phối (distribution / 분포) là đủ tốt hơn toy demo.
 
 ---
 
-# 36. Tail latency
+# 36. Tail độ trễ (latency / 지연 시간)
 
-Average interaction 30 ms nhưng thỉnh thoảng 250 ms vẫn gây vấn đề.
+Average tương tác (interaction / 상호작용) 30 ms nhưng thỉnh thoảng 250 ms vẫn gây vấn đề.
 
 Do đó đừng chỉ report mean.
 
-Có thể xem distribution:
+Có thể xem phân phối (distribution / 분포):
 
 ```text
 median
@@ -838,13 +841,13 @@ p95/p99 khi sample đủ
 worst observed with context
 ```
 
-Không cần dùng percentile nếu sample quá nhỏ để có ý nghĩa. Nhưng principle là performance có distribution.
+Không cần dùng percentile nếu mẫu (sample / 표본) quá nhỏ để có ý nghĩa. Nhưng principle là hiệu năng (performance / 성능) có phân phối (distribution / 분포).
 
 ---
 
 # 37. Run-to-run variance
 
-Garbage collection, background process, cache, JIT/runtime state và OS scheduling có thể làm run khác nhau.
+Garbage collection, background tiến trình (process / 프로세스), bộ nhớ đệm (cache / 캐시), JIT/thời gian chạy (runtime / 런타임) trạng thái (state / 상태) và OS scheduling có thể làm run khác nhau.
 
 Đừng kết luận từ một run:
 
@@ -856,17 +859,17 @@ After 98 ms
 
 Nếu variance tự nhiên ±15 ms, kết luận đó không đáng tin.
 
-Lặp run và nhìn effect size so với noise.
+Lặp run và nhìn tác động (effect / 효과) kích thước (size / 크기) so với noise.
 
 ---
 
-# 38. Synthetic lab và field telemetry trả lời câu hỏi khác nhau
+# 38. Synthetic lab và trường dữ liệu (field / 필드) telemetry trả lời câu hỏi khác nhau
 
-Local trace giúp causal debugging sâu.
+Cục bộ (local / 로컬) dấu vết (trace / 추적) giúp nhân quả (causal / 인과적) debugging sâu.
 
-Field telemetry/RUM giúp biết user population thực gặp gì.
+Trường dữ liệu (field / 필드) telemetry/RUM giúp biết người dùng (user / 사용자) population thực gặp gì.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Lab profiling
@@ -876,35 +879,35 @@ Field telemetry
 → How often, for whom, on what devices/network, does this problem happen?
 ```
 
-Một lab fix tốt nên sau đó được monitor field nếu app có telemetry.
+Một lab fix tốt nên sau đó được monitor trường dữ liệu (field / 필드) nếu app có telemetry.
 
 ---
 
 # 39. Third-party scripts
 
-Analytics, chat widget, tag manager hoặc ad/monitoring SDK có thể chiếm main thread/network.
+Analytics, chat widget, tag manager hoặc ad/monitoring SDK có thể chiếm main luồng thực thi (thread / 스레드)/mạng (network / 네트워크).
 
-Không loại chúng khỏi trace chỉ vì “không phải code team mình”.
+Không loại chúng khỏi dấu vết (trace / 추적) chỉ vì “không phải mã (code / 코드) nhóm (team / 팀) mình”.
 
-User trả cost của toàn page.
+Người dùng (user / 사용자) trả chi phí (cost / 비용) của toàn page.
 
 Nếu third-party là bottleneck, mitigation có thể là:
 
-- defer/lazy load;
+- defer/lazy tải (load / 로드);
 - reduce provider count;
-- conditional load;
+- conditional tải (load / 로드);
 - isolate;
-- renegotiate requirement.
+- renegotiate yêu cầu (requirement / 요구사항).
 
-Architecture includes external dependencies.
+Kiến trúc (architecture / 아키텍처) includes bên ngoài (external / 외부) dependencies.
 
 ---
 
-# 40. Memory và GC
+# 40. bộ nhớ (memory / 메모리) và GC
 
-Rendering performance không chỉ frame timing.
+Rendering hiệu năng (performance / 성능) không chỉ frame timing.
 
-Nếu component/list leak memory:
+Nếu thành phần (component / 컴포넌트)/danh sách (list / 목록) leak bộ nhớ (memory / 메모리):
 
 ```text
 navigation count ↑
@@ -913,9 +916,9 @@ navigation count ↑
 → long pauses / eventual crash
 ```
 
-Lab dài hơn có thể repeat open/close modal hoặc route navigation nhiều lần, sau đó inspect retention trend.
+Lab dài hơn có thể repeat open/close modal hoặc tuyến (route / 경로) điều hướng (navigation / 내비게이션) nhiều lần, sau đó inspect retention trend.
 
-Một fast first run không chứng minh runtime stable sau hai giờ sử dụng.
+Một fast first run không chứng minh thời gian chạy (runtime / 런타임) stable sau hai giờ sử dụng.
 
 ---
 
@@ -929,19 +932,19 @@ close modal
 repeat 100 times
 ```
 
-Track:
+Nhánh học (track / 트랙):
 
 - detached DOM nodes nếu observable;
 - retained listeners/subscriptions;
-- object count/memory trend;
-- network/subscription duplication;
-- later interaction latency.
+- đối tượng (object / 객체) count/bộ nhớ (memory / 메모리) trend;
+- mạng (network / 네트워크)/subscription duplication;
+- later tương tác (interaction / 상호작용) độ trễ (latency / 지연 시간).
 
-Nếu memory tăng không quay lại ngay, chưa chắc leak vì GC timing. Cần inspect retention/reference path thay vì chỉ nhìn một memory number.
+Nếu bộ nhớ (memory / 메모리) tăng không quay lại ngay, chưa chắc leak vì GC timing. Cần inspect retention/tham chiếu (reference / 참조) đường dẫn (path / 경로) thay vì chỉ nhìn một bộ nhớ (memory / 메모리) number.
 
 ---
 
-# 42. Large table experiment
+# 42. Large bảng (table / 테이블) experiment
 
 Tạo three versions:
 
@@ -964,21 +967,21 @@ complexity
 
 Không có winner universal.
 
-Pagination thay information architecture. Virtualization giữ continuous list feel nhưng tăng implementation complexity. Render all có thể hoàn toàn đủ cho 200 rows.
+Pagination thay thông tin (information / 정보) kiến trúc (architecture / 아키텍처). Virtualization giữ continuous danh sách (list / 목록) feel nhưng tăng hiện thực (implementation / 구현) độ phức tạp (complexity / 복잡도). kết xuất (render / 렌더링) all có thể hoàn toàn đủ cho 200 rows.
 
-Optimization phải phù hợp scale thực tế.
+Tối ưu hóa (optimization / 최적화) phải phù hợp quy mô (scale / 규모) thực tế.
 
 ---
 
-# 43. Layout shift experiment
+# 43. bố cục (layout / 레이아웃) shift experiment
 
-Tạo card với image không có reserved size.
+Tạo card với ảnh (image / 이미지) không có reserved kích thước (size / 크기).
 
-Record.
+Bản ghi (record / 레코드).
 
-Sau đó thêm width/height/aspect-ratio contract phù hợp.
+Sau đó thêm width/height/aspect-ratio đặc tả hợp đồng (contract / 계약) phù hợp.
 
-Record lại.
+Bản ghi (record / 레코드) lại.
 
 Quan sát:
 
@@ -988,19 +991,19 @@ layout work
 user target movement
 ```
 
-Bài này nối performance với correctness/UX mà không cần framework.
+Bài này nối hiệu năng (performance / 성능) với tính đúng đắn (correctness / 정확성)/UX mà không cần khung phần mềm (framework / 프레임워크).
 
 ---
 
 # 44. Stacking/overlay experiment
 
-Tạo modal trong ancestor có transform/stacking context.
+Tạo modal trong ancestor có transform/ngữ cảnh xếp chồng (stacking context / 쌓임 맥락).
 
-Thử tăng z-index rồi quan sát vì sao không vượt context ngoài.
+Thử tăng z-index rồi quan sát vì sao không vượt ngữ cảnh (context / 맥락) ngoài.
 
-Sau đó thay physical DOM placement/stacking architecture phù hợp.
+Sau đó thay vật lý (physical / 물리적) DOM placement/stacking kiến trúc (architecture / 아키텍처) phù hợp.
 
-Đây không phải performance lab trực tiếp, nhưng nó dạy nguyên tắc chung:
+Đây không phải hiệu năng (performance / 성능) lab trực tiếp, nhưng nó dạy nguyên tắc chung:
 
 ```text
 đừng tối ưu hoặc sửa dựa trên property folklore;
@@ -1009,11 +1012,11 @@ trace tree/boundary thực tế.
 
 ---
 
-# 45. Build artifact experiment
+# 45. hiện vật bản dựng (build artifact / 빌드 산출물) experiment
 
-Profile local dev build và production build.
+Profile cục bộ (local / 로컬) dev bản dựng (build / 빌드) và môi trường vận hành (production / 운영 환경) bản dựng (build / 빌드).
 
-Không giả định production luôn nhanh hơn.
+Không giả định môi trường vận hành (production / 운영 환경) luôn nhanh hơn.
 
 So:
 
@@ -1027,13 +1030,13 @@ cache
 initialization work
 ```
 
-Nếu production-specific bug/perf regression xuất hiện, cần artifact-level evidence.
+Nếu production-specific bug/perf regression xuất hiện, cần artifact-level bằng chứng (evidence / 증거).
 
 ---
 
-# 46. One-change rule
+# 46. One-change quy tắc (rule / 규칙)
 
-Khi benchmark, tránh commit cùng lúc:
+Khi benchmark, tránh lần ghi nhận (commit / 커밋) cùng lúc:
 
 ```text
 virtualization
@@ -1043,13 +1046,13 @@ virtualization
 + image lazy-load
 ```
 
-Nếu result tốt hơn, không biết phần nào tạo effect.
+Nếu kết quả (result / 결과) tốt hơn, không biết phần nào tạo tác động (effect / 효과).
 
-Thực tế engineering đôi khi phải bundle fixes, nhưng learning/research phase nên cô lập variable càng nhiều càng tốt.
+Thực tế kỹ thuật (engineering / 엔지니어링) đôi khi phải bundle fixes, nhưng học tập (learning / 학습)/research phase nên cô lập variable càng nhiều càng tốt.
 
 ---
 
-# 47. Performance report template
+# 47. hiệu năng (performance / 성능) report template
 
 Mỗi experiment nên có:
 
@@ -1113,9 +1116,9 @@ Con số chỉ minh họa format, không phải threshold universal.
 
 ---
 
-# 49. Performance budget phải có owner
+# 49. hiệu năng (performance / 성능) ngân sách (budget / 예산) phải có đơn vị sở hữu (owner / 오너)
 
-Nếu team đặt budget:
+Nếu nhóm (team / 팀) đặt ngân sách (budget / 예산):
 
 ```text
 filter interaction < X
@@ -1123,17 +1126,17 @@ bundle < Y
 layout work < Z
 ```
 
-phải có owner và measurement path.
+phải có đơn vị sở hữu (owner / 오너) và đo lường (measurement / 측정) đường dẫn (path / 경로).
 
-Một budget không được đo trong CI/telemetry/profile routine sẽ nhanh chóng thành documentation stale.
+Một ngân sách (budget / 예산) không được đo trong CI/telemetry/profile routine sẽ nhanh chóng thành documentation stale.
 
-Nếu automation không ổn định, ít nhất cần checklist release/profile rõ.
+Nếu automation không ổn định, ít nhất cần checklist bản phát hành (release / 릴리스)/profile rõ.
 
 ---
 
-# 50. Không tối ưu khi không có user problem hoặc system risk
+# 50. Không tối ưu khi không có người dùng (user / 사용자) bài toán (problem / 문제) hoặc hệ thống (system / 시스템) rủi ro (risk / 위험)
 
-Performance engineering có opportunity cost.
+Hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링) có opportunity chi phí (cost / 비용).
 
 Không phải mọi 5 ms đều cần tối ưu.
 
@@ -1148,7 +1151,7 @@ business criticality
 regression risk
 ```
 
-Độ sâu không có nghĩa micro-optimize mọi function. Độ sâu là biết **khi nào optimization có bằng chứng đủ mạnh để đáng làm**.
+Độ sâu không có nghĩa micro-optimize mọi hàm (function / 함수). Độ sâu là biết **khi nào tối ưu hóa (optimization / 최적화) có bằng chứng đủ mạnh để đáng làm**.
 
 ---
 
@@ -1176,17 +1179,17 @@ Hoặc:
 "React render nhiều nên thêm memo."
 ```
 
-Không có trace/evidence thì chưa đạt gate.
+Không có dấu vết (trace / 추적)/bằng chứng (evidence / 증거) thì chưa đạt gate.
 
 ---
 
 # 52. Bài tập cuối
 
-Chọn một page thật và tạo hai trace:
+Chọn một page thật và tạo hai dấu vết (trace / 추적):
 
-## Trace A — interaction
+## Dấu vết (trace / 추적) A — tương tác (interaction / 상호작용)
 
-Ví dụ filter/search/open modal.
+Ví dụ filter/tìm kiếm (search / 검색)/open modal.
 
 Bắt buộc tách:
 
@@ -1199,9 +1202,12 @@ paint/composite
 next useful frame
 ```
 
-## Trace B — load/update
 
-Ví dụ navigation hoặc API data update.
+> **Chuyển mạch:** Từ **dấu vết (trace / 추적) A — tương tác (interaction / 상호작용)**, ta sang **dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)
+
+Ví dụ điều hướng (navigation / 내비게이션) hoặc API dữ liệu (data / 데이터) cập nhật (update / 업데이트).
 
 Bắt buộc tách:
 
@@ -1214,7 +1220,7 @@ rendering work
 artifact/build identity
 ```
 
-Sau đó chọn **một** bottleneck có evidence mạnh nhất, sửa và remeasure.
+Sau đó chọn **một** bottleneck có bằng chứng (evidence / 증거) mạnh nhất, sửa và remeasure.
 
 Cuối cùng ghi một đoạn post-mortem:
 
@@ -1225,12 +1231,17 @@ Which boundary was the real owner?
 What regression guard should remain?
 ```
 
-Nếu câu trả lời ban đầu và evidence khác nhau, đó không phải thất bại. Đó chính là lý do performance profiling tồn tại.
+Nếu câu trả lời ban đầu và bằng chứng (evidence / 증거) khác nhau, đó không phải thất bại. Đó chính là lý do hiệu năng (performance / 성능) profiling tồn tại.
+
+
+> **Chuyển mạch:** Từ **dấu vết (trace / 추적) B — tải (load / 로드)/cập nhật (update / 업데이트)**, ta sang **Cross-link** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cross-link
 
 - [Request → Pixel → Interaction Trace](./00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md)
 - [`../COVERAGE_AUDIT.md`](../COVERAGE_AUDIT.md)
-- CSS Master/Supplement cho cascade, layout, paint/composite reasoning.
-- JavaScript Senior/Master cho event loop, long task, worker, performance và artifact boundary.
-- React/WebSquare profiling chapter khi cần map browser evidence sang framework-specific ownership.
+- CSS Master/Supplement cho cascade, bố cục (layout / 레이아웃), paint/composite lập luận (reasoning / 추론).
+- JavaScript cấp cao (senior / 시니어)/Master cho vòng lặp sự kiện (event loop / 이벤트 루프), long tác vụ (task / 작업), worker, hiệu năng (performance / 성능) và sản phẩm tạo ra (artifact / 산출물) ranh giới (boundary / 경계).
+- React/WebSquare profiling chapter khi cần map trình duyệt (browser / 브라우저) bằng chứng (evidence / 증거) sang framework-specific quyền sở hữu (ownership / 소유권).
+
+> **Bàn giao:** Sau **Cross-link**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 REQUEST TO PIXEL AND INTERACTION TRACE](./00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Tài sản thực và tài sản thay thế
 
+> **Mạch đọc:** Đặt **Tài sản thực và tài sản thay thế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tài sản thực và tài sản tài chính** sang **2. Bất động sản trực tiếp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Tài sản thực không phải một nhóm “an toàn hơn cổ phiếu” và tài sản thay thế cũng không tự động tạo đa dạng hóa. Chương này đi từ bất động sản, vàng và hàng hóa tới cơ sở hạ tầng, crypto và thị trường tư nhân, tập trung vào nguồn dòng tiền, đòn bẩy, thanh khoản, định giá và rủi ro riêng của từng cấu trúc.
 
 ## 1. Tài sản thực và tài sản tài chính
@@ -28,13 +31,13 @@ Thu nhập vận hành ròng (Net Operating Income, NOI) gần bằng doanh thu 
 
 NOI là nền để định giá tài sản bất động sản tạo thu nhập.
 
-## 4. Cap Rate
+## 4. Cap tỷ lệ (rate / 비율)
 
 ```text
 Cap Rate ≈ NOI / Property Value
 ```
 
-Cap rate tăng thường làm giá trị tài sản giảm nếu NOI không đổi. Cap rate chịu ảnh hưởng của lãi suất, tăng trưởng thuê, rủi ro tài sản, thanh khoản và nguồn vốn.
+Cap tỷ lệ (rate / 비율) tăng thường làm giá trị tài sản giảm nếu NOI không đổi. Cap tỷ lệ (rate / 비율) chịu ảnh hưởng của lãi suất, tăng trưởng thuê, rủi ro tài sản, thanh khoản và nguồn vốn.
 
 Không nên kết luận “lạm phát tốt cho bất động sản” nếu chi phí vốn tăng nhanh hơn tiền thuê.
 
@@ -46,7 +49,7 @@ Tỷ lệ khoản vay trên giá trị tài sản (Loan-to-Value, LTV):
 LTV = Debt / Property Value
 ```
 
-Tỷ lệ bao phủ nghĩa vụ nợ (Debt Service Coverage Ratio, DSCR):
+Tỷ lệ bao phủ nghĩa vụ nợ (Debt service Coverage Ratio, DSCR):
 
 ```text
 DSCR = Cash Flow Available for Debt Service / Debt Service
@@ -78,13 +81,13 @@ AFFO cố điều chỉnh thêm capex duy trì và các khoản không lặp l�
 
 ## 9. REIT chịu cả rủi ro cổ phiếu và bất động sản
 
-REIT giao dịch trên sở nên chịu thanh khoản và định giá thị trường như cổ phiếu. Đồng thời dòng tiền phụ thuộc tiền thuê, occupancy, cap rate và tái cấp vốn.
+REIT giao dịch trên sở nên chịu thanh khoản và định giá thị trường như cổ phiếu. Đồng thời dòng tiền phụ thuộc tiền thuê, occupancy, cap tỷ lệ (rate / 비율) và tái cấp vốn.
 
 Trong cú sốc lãi suất, REIT có thể giảm dù tiền thuê vẫn tăng vì chi phí vốn và tỷ lệ chiết khấu thay đổi.
 
 ## 10. Các loại bất động sản khác nhau
 
-Văn phòng, logistics, data center, nhà ở, bán lẻ, khách sạn và y tế có động lực cầu khác nhau.
+Văn phòng, logistics, dữ liệu (data / 데이터) center, nhà ở, bán lẻ, khách sạn và y tế có động lực cầu khác nhau.
 
 Không nên coi “REIT” là một factor đồng nhất. Một data-center REIT nhạy với capex số hóa và nguồn điện; văn phòng nhạy với tỷ lệ sử dụng; khách sạn gần mô hình kinh doanh vận hành hơn tài sản cho thuê dài hạn.
 
@@ -188,7 +191,7 @@ Không nên dùng hệ số định giá của tài sản sở hữu vĩnh viễ
 
 ## 24. Crypto
 
-Crypto không phải một nhóm kinh tế đồng nhất. Có tài sản đóng vai trò token tiện ích, tài sản thế chấp, quyền quản trị hoặc đơn vị của mạng lưới.
+Crypto không phải một nhóm kinh tế đồng nhất. Có tài sản đóng vai trò đơn vị từ (token / 토큰) tiện ích, tài sản thế chấp, quyền quản trị hoặc đơn vị của mạng lưới.
 
 Cần phân tích:
 
@@ -328,3 +331,5 @@ Kịch bản xấu
 ## Kết luận
 
 Tài sản thực và tài sản thay thế hữu ích khi chúng thêm **nguồn lợi suất thực sự khác** và phù hợp với thanh khoản của nhà đầu tư. Nhãn “private”, “real asset” hay “alternative” không làm rủi ro biến mất; nhiều rủi ro chỉ được che bởi định giá chậm, đòn bẩy hoặc hợp đồng phức tạp. Luôn nhìn xuyên cấu trúc về dòng tiền, quyền lợi pháp lý và thời điểm cần tiền.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

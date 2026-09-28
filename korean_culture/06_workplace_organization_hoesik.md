@@ -1,5 +1,8 @@
 # Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ
 
+> **Mạch đọc:** Đặt **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Công ty là nơi nhiều lớp văn hoá va vào nhau** sang **직급, 직책, 연차: ba trục dễ nhầm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Công ty là nơi nhiều lớp văn hoá va vào nhau
 
 Công sở Hàn Quốc hiện đại là một “phòng thí nghiệm xã hội” đặc biệt: thứ bậc chịu ảnh hưởng Nho giáo, quản trị kiểu công nghiệp, luật lao động, thông lệ của công ty đa quốc gia, phát triển phần mềm linh hoạt và kỳ vọng của thế hệ trẻ cùng tồn tại. Vì vậy không có một “văn hoá công ty Hàn” duy nhất. Chaebol, công ty khởi nghiệp, ngân hàng, studio game, công ty SI/SM và cơ quan nhà nước có **kiến trúc tổ chức (organizational architecture)** rất khác nhau.
@@ -73,7 +76,7 @@ Một chuỗi phê duyệt có thể trông như:
 
 Nếu người học dịch tất cả thành một từ “approve”, họ sẽ bỏ mất kiến trúc của quy trình.
 
-**Định luật Little (Little’s Law)** trong lý thuyết hàng đợi cho thấy lượng công việc đang xử lý liên quan tới tốc độ việc đến và thời gian nằm trong hệ thống. Không cần áp công thức máy móc để thấy logic: nếu mọi yêu cầu phải qua nhiều người duyệt đang bận, hàng đợi sẽ dài. “Văn hoá chậm” đôi khi không phải thái độ mà là kiến trúc của quy trình phê duyệt.
+**Định luật Little (Little’s Law)** trong lý thuyết hàng đợi cho thấy lượng công việc đang xử lý liên quan tới tốc độ việc đến và thời gian nằm trong hệ thống. Không cần áp công thức máy móc để thấy lô-gic (logic / 논리): nếu mọi yêu cầu phải qua nhiều người duyệt đang bận, hàng đợi sẽ dài. “Văn hoá chậm” đôi khi không phải thái độ mà là kiến trúc của quy trình phê duyệt.
 
 ## 회의: cuộc họp và quyền nói
 
@@ -98,7 +101,7 @@ Ví dụ, thay vì trực tiếp `그건 틀렸습니다` trong tình huống nh
 
 Trong hệ thống phân tán, đạt đồng thuận có chi phí cao. Trong nhóm con người, biên bản họp là một vật chứng đồng thuận có chi phí thấp.
 
-## 공유: “chia sẻ” không chỉ là gửi file
+## 공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)
 
 `공유드립니다`, `내용 공유 부탁드립니다`, `관련자에게 공유해 주세요` xuất hiện rất nhiều trong tiếng Hàn doanh nghiệp. `공유` có thể nghĩa là gửi thông tin để những người liên quan cùng nắm bối cảnh.
 
@@ -125,7 +128,7 @@ Email CC, nhắc tên trên trình nhắn tin và công cụ quản lý dự án
 과거 의사결정 이유
 ```
 
-Nếu chỉ truyền file mà không truyền lý do của quyết định cũ, người mới nhận việc có mã nguồn nhưng mất bối cảnh. Đây là vấn đề mất kiến thức tổ chức.
+Nếu chỉ truyền tệp (file / 파일) mà không truyền lý do của quyết định cũ, người mới nhận việc có mã nguồn nhưng mất bối cảnh. Đây là vấn đề mất kiến thức tổ chức.
 
 ## 회식: ăn uống như hạ tầng quan hệ
 
@@ -173,7 +176,7 @@ SI thường xoay quanh cột mốc, yêu cầu, UAT, phát hành và thời h�
 
 Các từ hay gặp:
 
-- `요구사항`: yêu cầu (requirement);
+- `요구사항`: yêu cầu (requirement / 요구사항);
 - `개발`: phát triển;
 - `테스트`: kiểm thử;
 - `검수`: nghiệm thu/kiểm tra;
@@ -292,7 +295,7 @@ vấn đề cần giải quyết
 → thời điểm cần xem lại
 ```
 
-Trong phát triển phần mềm, cách làm này gần với **bản ghi quyết định kiến trúc (architecture decision record)**. Giá trị lớn nhất không phải tạo thêm giấy tờ mà là bảo tồn **logic của quyết định** để tổ chức không phải trả lại cùng một chi phí suy nghĩ nhiều lần.
+Trong phát triển phần mềm, cách làm này gần với **bản ghi quyết định kiến trúc (architecture decision record)**. Giá trị lớn nhất không phải tạo thêm giấy tờ mà là bảo tồn **lô-gic (logic / 논리) của quyết định** để tổ chức không phải trả lại cùng một chi phí suy nghĩ nhiều lần.
 
 ## 리뷰: kiểm tra đồng cấp khác với đánh giá con người
 
@@ -357,7 +360,7 @@ Ví dụ giảm **thời gian khôi phục trung bình (mean time to recovery)**
 
 ## 버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức
 
-Nếu chỉ một người biết cách triển khai, biết mật khẩu cũ, hiểu logic nghiệp vụ hoặc có quan hệ với khách hàng, tổ chức có một **điểm lỗi duy nhất về tri thức (single point of knowledge)**.
+Nếu chỉ một người biết cách triển khai, biết mật khẩu cũ, hiểu lô-gic (logic / 논리) nghiệp vụ hoặc có quan hệ với khách hàng, tổ chức có một **điểm lỗi duy nhất về tri thức (single point of knowledge)**.
 
 Khái niệm **hệ số xe buýt (bus factor)** hỏi: nếu vài người chủ chốt đột ngột không thể làm việc, nhóm còn vận hành được không?
 
@@ -411,7 +414,7 @@ mục tiêu
 
 Do đó an toàn tâm lý, tài liệu hoá và khả năng quan sát không phải “phần mềm mềm”. Chúng quyết định chất lượng của vòng phản hồi quản trị.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Đừng chỉ hỏi “công ty Hàn có thứ bậc không?”. Hãy hỏi thứ bậc nằm ở lớp nào: chức danh, lương, phê duyệt, thứ tự phát biểu, đánh giá, loại hợp đồng hay kiến thức. Sau đó hỏi tiếp: ai có quyền quyết định, thông tin được lưu ở đâu, hệ thống phản ứng ra sao khi lỗi xảy ra và bài học có đi vào quy trình hay chỉ nằm trong trí nhớ của một người.
 
@@ -430,3 +433,5 @@ Do đó an toàn tâm lý, tài liệu hoá và khả năng quan sát không ph�
 “Viết tài liệu nghĩa là tri thức đã được chuyển giao” là sai; tài liệu phải được tìm thấy, cập nhật và được người khác sử dụng thực tế.
 
 “Hậu kiểm không đổ lỗi nghĩa là không ai chịu trách nhiệm” là sai; mục tiêu là giữ trách nhiệm nhưng tìm cả nguyên nhân hệ thống để lỗi khó tái diễn hơn.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

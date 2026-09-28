@@ -1,6 +1,9 @@
 # Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư
 
-> File này nối các chương kế toán, chất lượng doanh nghiệp, định giá, forensic và quản trị thành một quy trình phân tích hoàn chỉnh. Mục tiêu là có thể đi từ **mô hình kinh doanh → động lực doanh thu → biên lợi nhuận → vốn lưu động → capex → dòng tiền → bảng cân đối → định giá → luận điểm → theo dõi sau đầu tư**.
+> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Không bắt đầu bằng P/E** sang **2. Xây cây động lực doanh thu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này nối các chương kế toán, chất lượng doanh nghiệp, định giá, forensic và quản trị thành một quy trình phân tích hoàn chỉnh. Mục tiêu là có thể đi từ **mô hình kinh doanh → động lực doanh thu → biên lợi nhuận → vốn lưu động → capex → dòng tiền → bảng cân đối → định giá → luận điểm → theo dõi sau đầu tư**.
 
 ## 1. Không bắt đầu bằng P/E
 
@@ -167,7 +170,7 @@ Lợi nhuận báo cáo
 
 Nhưng không được loại mọi chi phí “khó chịu”. Nếu tái cấu trúc xuất hiện mỗi năm, nó là một phần kinh tế thực.
 
-## 10. Three-statement model phải tự khóa logic
+## 10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)
 
 Ba báo cáo phải nối được:
 
@@ -406,11 +409,11 @@ Thay đổi chính sách
 Kết quả quý xác nhận thesis
 ```
 
-## 26. Invalidation phải liên quan cơ chế
+## 26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế
 
-Không dùng “giá giảm 15%” làm invalidation nếu luận điểm cơ bản không đổi.
+Không dùng “giá giảm 15%” làm vô hiệu hóa (invalidation / 무효화) nếu luận điểm cơ bản không đổi.
 
-Invalidation tốt hơn:
+Vô hiệu hóa (invalidation / 무효화) tốt hơn:
 
 ```text
 Khách hàng chủ chốt rời đi
@@ -454,9 +457,9 @@ Chọn một doanh nghiệp và hoàn thành:
 3. lịch vốn lưu động;
 4. lịch capex–khấu hao;
 5. lịch nợ;
-6. three-statement model 5 năm;
+6. three-statement mô hình (model / 모델) 5 năm;
 7. FCFF/FCFE;
-8. base/bull/bear;
+8. cơ sở (base / 기반)/bull/bear;
 9. reverse DCF;
 10. one-page thesis;
 11. danh sách KPI theo dõi hàng quý.
@@ -489,3 +492,5 @@ Mô hình kinh doanh
 ```
 
 Một mô hình chỉ có giá trị khi nó giúp người đọc hiểu **vì sao** kết quả thay đổi và **điều gì phải xảy ra để luận điểm sai**.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

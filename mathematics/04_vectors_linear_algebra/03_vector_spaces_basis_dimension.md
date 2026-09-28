@@ -1,20 +1,23 @@
-# Không gian vector, cơ sở và số chiều
+# Không gian véc-tơ (vector / 벡터), cơ sở và số chiều
 
-Khi mới học vector, ta thường nghĩ đến mũi tên trong mặt phẳng hoặc không gian 3D. Nhưng linear algebra đi xa hơn nhiều: điều quan trọng không phải object “trông như mũi tên”, mà là object có thể **cộng** và **nhân với scalar** theo những quy tắc nhất quán hay không. Từ observation đó xuất hiện khái niệm không gian vector (Vector Space / 벡터공간).
+> **Mạch đọc:** Đọc **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao cần lớp trừu tượng (abstraction / 추상화) này?** sang **véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một vector space là một universe trong đó ta có thể tạo linear combinations mà vẫn ở trong cùng universe. Các vectors có thể là coordinate tuples, polynomials, functions, signals, matrices, images đã vector hóa hoặc states của một dynamic system.
 
-> Không gian vector không phải một nơi có hình học sẵn. Nó là một structure của những objects có thể được kết hợp tuyến tính.
+Khi mới học véc-tơ (vector / 벡터), ta thường nghĩ đến mũi tên trong mặt phẳng hoặc không gian 3D. Nhưng tuyến tính (linear / 선형) algebra đi xa hơn nhiều: điều quan trọng không phải đối tượng (object / 객체) “trông như mũi tên”, mà là đối tượng (object / 객체) có thể **cộng** và **nhân với scalar** theo những quy tắc nhất quán hay không. Từ observation đó xuất hiện khái niệm không gian véc-tơ (vector / 벡터).
 
-## Tại sao cần abstraction này?
+Một véc-tơ (vector / 벡터) không gian (space / 공간) là một universe trong đó ta có thể tạo tuyến tính (linear / 선형) combinations mà vẫn ở trong cùng universe. Các vectors có thể là coordinate tuples, polynomials, functions, signals, matrices, images đã véc-tơ (vector / 벡터) hóa hoặc states của một hệ động (dynamic system / 동적 시스템).
 
-Giả sử ta hiểu linear algebra chỉ trên `R^2` và `R^3`. Khi chuyển sang polynomial
+> Không gian véc-tơ (vector / 벡터) không phải một nơi có hình học sẵn. Nó là một cấu trúc (structure / 구조) của những objects có thể được kết hợp tuyến tính.
+
+## Tại sao cần lớp trừu tượng (abstraction / 추상화) này?
+
+Giả sử ta hiểu tuyến tính (linear / 선형) algebra chỉ trên `R^2` và `R^3`. Khi chuyển sang polynomial
 
 ```math
 p(x)=a+bx+cx^2,
 ```
 
-hoặc signal
+hoặc tín hiệu (signal / 신호)
 
 ```math
 f(t)=a\sin t+b\cos t,
@@ -24,16 +27,16 @@ ta có vẻ bước sang lĩnh vực khác. Nhưng algebra bên dưới giống 
 
 - cộng hai polynomials vẫn là polynomial;
 - multiply polynomial với scalar vẫn là polynomial;
-- cộng hai signals vẫn là signal;
-- multiply signal với scalar vẫn hợp lệ.
+- cộng hai signals vẫn là tín hiệu (signal / 신호);
+- multiply tín hiệu (signal / 신호) với scalar vẫn hợp lệ.
 
-Nếu bỏ qua bề ngoài và giữ lại operations, ta thấy cùng một linear structure. Vector space abstraction cho phép một theorem về basis, projection hoặc linear transformation áp dụng đồng thời cho geometry, signals, data và differential equations.
+Nếu bỏ qua bề ngoài và giữ lại operations, ta thấy cùng một tuyến tính (linear / 선형) cấu trúc (structure / 구조). véc-tơ (vector / 벡터) không gian (space / 공간) lớp trừu tượng (abstraction / 추상화) cho phép một theorem về basis, projection hoặc tuyến tính (linear / 선형) transformation áp dụng đồng thời cho hình học (geometry / 기하학), signals, dữ liệu (data / 데이터) và differential equations.
 
-## Vector space cần những properties nào?
+## Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?
 
-Cho một set `V` và scalar field thường là `R` hoặc `C`. Ta có vector addition và scalar multiplication.
+Cho một set `V` và scalar trường dữ liệu (field / 필드) thường là `R` hoặc `C`. Ta có véc-tơ (vector / 벡터) addition và scalar multiplication.
 
-Các operations phải behave giống linear arithmetic quen thuộc: addition associative và commutative, có zero vector, mỗi vector có additive inverse, scalar multiplication compatible với scalar multiplication, và distributive laws phải đúng.
+Các operations phải behave giống tuyến tính (linear / 선형) arithmetic quen thuộc: addition associative và commutative, có zero véc-tơ (vector / 벡터), mỗi véc-tơ (vector / 벡터) có additive inverse, scalar multiplication compatible với scalar multiplication, và distributive laws phải đúng.
 
 Ví dụ:
 
@@ -53,11 +56,11 @@ a(u+v)=au+av,
 (a+b)v=av+bv.
 ```
 
-Điểm của axioms không phải để memorize một danh sách. Chúng xác định minimum structure cần để algebra của linear combinations hoạt động đáng tin cậy.
+Điểm của axioms không phải để memorize một danh sách. Chúng xác định minimum cấu trúc (structure / 구조) cần để algebra của tuyến tính (linear / 선형) combinations hoạt động đáng tin cậy.
 
-## Linear combination: building block trung tâm
+## Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm
 
-Cho vectors `v_1,...,v_k`, một linear combination là
+Cho vectors `v_1,...,v_k`, một tuyến tính (linear / 선형) combination là
 
 ```math
 c_1v_1+c_2v_2+\cdots+c_kv_k,
@@ -65,7 +68,7 @@ c_1v_1+c_2v_2+\cdots+c_kv_k,
 
 trong đó `c_i` là scalars.
 
-Mọi concept quan trọng trong chapter này đều xoay quanh câu hỏi: **những linear combinations nào có thể được tạo ra, và có bao nhiêu directions thực sự độc lập?**
+Mọi concept quan trọng trong chapter này đều xoay quanh câu hỏi: **những tuyến tính (linear / 선형) combinations nào có thể được tạo ra, và có bao nhiêu directions thực sự độc lập?**
 
 Nếu ta có hai vectors trong `R^2`,
 
@@ -73,7 +76,7 @@ Nếu ta có hai vectors trong `R^2`,
 v_1=(1,0),\qquad v_2=(0,1),
 ```
 
-thì mọi vector `(x,y)` có thể viết
+thì mọi véc-tơ (vector / 벡터) `(x,y)` có thể viết
 
 ```math
 (x,y)=xv_1+yv_2.
@@ -83,7 +86,7 @@ Hai vectors đó đủ để generate toàn plane.
 
 ## Span: những gì ta có thể tạo ra
 
-Span của một collection vectors là set của tất cả linear combinations:
+Span của một collection vectors là set của tất cả tuyến tính (linear / 선형) combinations:
 
 ```math
 \operatorname{span}\{v_1,\ldots,v_k\}
@@ -91,17 +94,17 @@ Span của một collection vectors là set của tất cả linear combinations
 \left\{\sum_{i=1}^k c_iv_i\;:\;c_i\in\mathbb F\right\}.
 ```
 
-Span trả lời câu hỏi **reachability bằng linear combination**.
+Span trả lời câu hỏi **reachability bằng tuyến tính (linear / 선형) combination**.
 
 Trong `R^3`:
 
-- một nonzero vector span một line qua origin;
+- một nonzero véc-tơ (vector / 벡터) span một line qua origin;
 - hai nonparallel vectors span một plane qua origin;
 - ba vectors phù hợp có thể span toàn `R^3`.
 
-Nếu một dataset có feature vectors nằm gần một low-dimensional span, dimensionality reduction có thể compress data bằng cách tìm basis thích hợp cho subspace đó.
+Nếu một dataset có tính năng (feature / 기능) vectors nằm gần một low-dimensional span, dimensionality reduction có thể compress dữ liệu (data / 데이터) bằng cách tìm basis thích hợp cho subspace đó.
 
-## Linear dependence: khi có redundancy
+## Tuyến tính (linear / 선형) dependence: khi có redundancy
 
 Vectors `v_1,...,v_k` linearly independent nếu equation
 
@@ -135,24 +138,24 @@ Tức `v_j` có thể được tạo từ những vectors còn lại. Nó không
 
 Đây là mathematical meaning của redundancy.
 
-Trong regression, nếu một feature là exact linear combination của others, design matrix mất full column rank. Parameters có thể không unique. Trong database/reporting, nếu một derived column hoàn toàn được determine bởi các columns khác, nó không thêm independent information theo linear sense.
+Trong regression, nếu một tính năng (feature / 기능) là chính xác (exact / 정확한) tuyến tính (linear / 선형) combination của others, thiết kế (design / 설계) ma trận (matrix / 행렬) mất full column rank. Parameters có thể không unique. Trong cơ sở dữ liệu (database / 데이터베이스)/reporting, nếu một derived column hoàn toàn được determine bởi các columns khác, nó không thêm independent thông tin (information / 정보) theo tuyến tính (linear / 선형) sense.
 
 ## Basis: spanning mà không dư thừa
 
-Một basis (Basis / 기저) của vector space `V` là collection vectors vừa:
+Một basis (Basis / 기저) của véc-tơ (vector / 벡터) không gian (space / 공간) `V` là collection vectors vừa:
 
 1. linearly independent;
 2. span toàn `V`.
 
-Hai conditions này cùng nhau tạo ra một coordinate system tối thiểu: đủ để represent mọi vector, nhưng không có redundancy.
+Hai conditions này cùng nhau tạo ra một coordinate hệ thống (system / 시스템) tối thiểu: đủ để represent mọi véc-tơ (vector / 벡터), nhưng không có redundancy.
 
-Standard basis của `R^3` là
+Tiêu chuẩn (standard / 표준) basis của `R^3` là
 
 ```math
 e_1=(1,0,0),\quad e_2=(0,1,0),\quad e_3=(0,0,1).
 ```
 
-Mọi vector
+Mọi véc-tơ (vector / 벡터)
 
 ```math
 v=(x,y,z)
@@ -164,13 +167,13 @@ v=(x,y,z)
 v=xe_1+ye_2+ze_3.
 ```
 
-Tính **unique representation** này là consequence trực tiếp của independence + spanning.
+Tính **unique biểu diễn (representation / 표현)** này là consequence trực tiếp của independence + spanning.
 
-Nếu representation không unique, basis vectors dependent. Nếu một số vector không represent được, collection chưa span toàn space.
+Nếu biểu diễn (representation / 표현) không unique, basis vectors dependent. Nếu một số véc-tơ (vector / 벡터) không represent được, collection chưa span toàn không gian (space / 공간).
 
 ## Basis không phải duy nhất
 
-Trong `R^2`, standard basis
+Trong `R^2`, tiêu chuẩn (standard / 표준) basis
 
 ```math
 (1,0),(0,1)
@@ -184,15 +187,15 @@ chỉ là một lựa chọn. Collection
 
 cũng là basis vì hai vectors independent và span plane.
 
-Object không đổi khi basis đổi. Chỉ coordinates của object thay đổi.
+Đối tượng (object / 객체) không đổi khi basis đổi. Chỉ coordinates của đối tượng (object / 객체) thay đổi.
 
-Đây là một trong những mental shifts quan trọng nhất của linear algebra:
+Đây là một trong những mental shifts quan trọng nhất của tuyến tính (linear / 선형) algebra:
 
-> coordinates không phải vector; chúng là description của vector relative to a chosen basis.
+> coordinates không phải véc-tơ (vector / 벡터); chúng là description của véc-tơ (vector / 벡터) relative to a chosen basis.
 
-## Change of basis: cùng object, ngôn ngữ tọa độ khác
+## Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác
 
-Giả sử basis `B={b_1,...,b_n}`. Một vector `v` có coordinates
+Giả sử basis `B={b_1,...,b_n}`. Một véc-tơ (vector / 벡터) `v` có coordinates
 
 ```math
 [v]_B=
@@ -209,7 +212,7 @@ nếu
 v=c_1b_1+\cdots+c_nb_n.
 ```
 
-Nếu matrix
+Nếu ma trận (matrix / 행렬)
 
 ```math
 P=
@@ -220,7 +223,7 @@ b_1&\cdots&b_n\\
 \end{bmatrix},
 ```
 
-thì standard coordinates thỏa
+thì tiêu chuẩn (standard / 표준) coordinates thỏa
 
 ```math
 v=P[v]_B.
@@ -232,23 +235,23 @@ Nếu `P` invertible,
 [v]_B=P^{-1}v.
 ```
 
-Change of basis vì thế là matrix transformation giữa hai coordinate descriptions của cùng abstract vector.
+Thay đổi (change / 변경) of basis vì thế là ma trận (matrix / 행렬) transformation giữa hai coordinate descriptions của cùng abstract véc-tơ (vector / 벡터).
 
-## Vì sao chọn basis tốt có thể thay đổi toàn bộ problem?
+## Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?
 
-Một operator phức tạp trong standard basis có thể trở nên diagonal trong eigenbasis. Một signal khó nhìn theo time samples có thể trở nên sparse theo Fourier basis. PCA chọn orthogonal directions sao cho variance được concentrate vào few components.
+Một operator phức tạp trong tiêu chuẩn (standard / 표준) basis có thể trở nên diagonal trong eigenbasis. Một tín hiệu (signal / 신호) khó nhìn theo thời gian (time / 시간) samples có thể trở nên sparse theo Fourier basis. PCA chọn orthogonal directions sao cho variance được concentrate vào few components.
 
-Đây không phải cosmetic coordinate change. Representation phù hợp có thể biến computation từ coupled thành gần independent, làm pattern rõ hơn và giảm dimension cần thiết.
+Đây không phải cosmetic coordinate thay đổi (change / 변경). biểu diễn (representation / 표현) phù hợp có thể biến computation từ coupled thành gần independent, làm mẫu (pattern / 패턴) rõ hơn và giảm dimension cần thiết.
 
 ## Dimension: số degrees of freedom độc lập
 
-Dimension (Dimension / 차원) của finite-dimensional vector space là số vectors trong bất kỳ basis nào của space đó.
+Dimension (Dimension / 차원) của finite-dimensional véc-tơ (vector / 벡터) không gian (space / 공간) là số vectors trong bất kỳ basis nào của không gian (space / 공간) đó.
 
-Một theorem nền tảng bảo đảm mọi bases của cùng finite-dimensional space có cùng number of vectors. Vì vậy dimension là property của space, không phải của basis cụ thể.
+Một theorem nền tảng bảo đảm mọi bases của cùng finite-dimensional không gian (space / 공간) có cùng number of vectors. Vì vậy dimension là thuộc tính (property / 속성) của không gian (space / 공간), không phải của basis cụ thể.
 
 `R^2` dimension 2, `R^3` dimension 3.
 
-Space của polynomials degree at most 2,
+Không gian (space / 공간) của polynomials degree at most 2,
 
 ```math
 P_2=\{a+bx+cx^2\},
@@ -262,7 +265,7 @@ có basis
 
 nên dimension 3.
 
-Space của `2×2` real matrices có dimension 4 vì một matrix
+Không gian (space / 공간) của `2×2` real matrices có dimension 4 vì một ma trận (matrix / 행렬)
 
 ```math
 \begin{bmatrix}
@@ -273,21 +276,21 @@ c&d
 
 cần bốn independent coefficients.
 
-Dimension không phải “số values đang lưu” một cách máy móc. Nó là số independent coordinates cần để specify arbitrary vector trong space.
+Dimension không phải “số values đang lưu” một cách máy móc. Nó là số independent coordinates cần để specify arbitrary véc-tơ (vector / 벡터) trong không gian (space / 공간).
 
-## Subspace: một linear universe nhỏ hơn bên trong space lớn
+## Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn
 
-Một subset `W⊆V` là subspace nếu nó tự đóng dưới vector addition và scalar multiplication.
+Một subset `W⊆V` là subspace nếu nó tự đóng dưới véc-tơ (vector / 벡터) addition và scalar multiplication.
 
-Một practical test là:
+Một practical kiểm thử (test / 테스트) là:
 
 - `0∈W`;
 - nếu `u,v∈W` thì `u+v∈W`;
 - nếu `v∈W` và scalar `c`, thì `cv∈W`.
 
-Column space, row space, null space và eigenspaces là các subspaces tự nhiên.
+Column không gian (space / 공간), row không gian (space / 공간), null không gian (space / 공간) và eigenspaces là các subspaces tự nhiên.
 
-Một affine plane không đi qua origin không phải linear subspace, vì zero vector không thuộc nó. Nó là translated subspace.
+Một affine plane không đi qua origin không phải tuyến tính (linear / 선형) subspace, vì zero véc-tơ (vector / 벡터) không thuộc nó. Nó là translated subspace.
 
 Distinction này giải thích vì sao equation homogeneous
 
@@ -303,32 +306,32 @@ Ax=b
 
 với `b≠0` thường tạo affine set.
 
-## Column space và null space
+## Column không gian (space / 공간) và null không gian (space / 공간)
 
-Cho matrix
+Cho ma trận (matrix / 행렬)
 
 ```math
 A\in\mathbb R^{m\times n}.
 ```
 
-Column space là span của columns của `A`. Nó chứa mọi possible output của transformation
+Column không gian (space / 공간) là span của columns của `A`. Nó chứa mọi possible đầu ra (output / 출력) của transformation
 
 ```math
 x\mapsto Ax.
 ```
 
-Null space là
+Null không gian (space / 공간) là
 
 ```math
 \mathcal N(A)=\{x:Ax=0\}.
 ```
 
-Nó chứa input directions mà transformation collapse về zero.
+Nó chứa đầu vào (input / 입력) directions mà transformation collapse về zero.
 
 Hai spaces này trả lời hai questions khác nhau:
 
 - transformation có thể tạo ra outputs nào?
-- transformation làm mất những input directions nào?
+- transformation làm mất những đầu vào (input / 입력) directions nào?
 
 ## Rank-nullity: accounting của dimensions
 
@@ -340,23 +343,23 @@ Một theorem trung tâm là
 
 với `A` có `n` columns.
 
-`rank(A)` là dimension của column space. `nullity(A)` là dimension của null space.
+`rank(A)` là dimension của column không gian (space / 공간). `nullity(A)` là dimension của null không gian (space / 공간).
 
 Interpretation:
 
-> input space có `n` degrees of freedom; một phần survive thành independent output directions, phần còn lại bị collapse vào null space.
+> đầu vào (input / 입력) không gian (space / 공간) có `n` degrees of freedom; một phần survive thành independent đầu ra (output / 출력) directions, phần còn lại bị collapse vào null không gian (space / 공간).
 
 Ví dụ nếu `A:R^5→R^3` có rank 3, thì nullity là 2. Transformation giữ được ba independent directions và mất hai degrees of freedom.
 
-Đây là một dạng conservation/accounting law cho linear information.
+Đây là một dạng conservation/accounting law cho tuyến tính (linear / 선형) thông tin (information / 정보).
 
-## Coordinates như compression khi structure tồn tại
+## Coordinates như compression khi cấu trúc (structure / 구조) tồn tại
 
-Nếu một object sống trong high-dimensional ambient space nhưng thực sự nằm trong lower-dimensional subspace, basis của subspace cho representation compact hơn.
+Nếu một đối tượng (object / 객체) sống trong high-dimensional ambient không gian (space / 공간) nhưng thực sự nằm trong lower-dimensional subspace, basis của subspace cho biểu diễn (representation / 표현) compact hơn.
 
-Ví dụ image 100×100 pixels có 10,000 raw dimensions, nhưng nếu dataset variation chủ yếu nằm gần một lower-dimensional manifold/subspace, PCA có thể represent phần lớn variance bằng vài hundred components.
+Ví dụ ảnh (image / 이미지) 100×100 pixels có 10,000 raw dimensions, nhưng nếu dataset variation chủ yếu nằm gần một lower-dimensional manifold/subspace, PCA có thể represent phần lớn variance bằng vài hundred components.
 
-Đây là lý do dimension reduction không chỉ là “xóa columns”. Nó tìm coordinate system nơi information relevant concentrate hơn.
+Đây là lý do dimension reduction không chỉ là “xóa columns”. Nó tìm coordinate hệ thống (system / 시스템) nơi thông tin (information / 정보) relevant concentrate hơn.
 
 ## Orthogonal và orthonormal basis
 
@@ -366,7 +369,7 @@ Nếu basis vectors mutually orthogonal,
 b_i\cdot b_j=0\quad(i\ne j),
 ```
 
-và mỗi vector normalized,
+và mỗi véc-tơ (vector / 벡터) normalized,
 
 ```math
 \|b_i\|=1,
@@ -380,13 +383,13 @@ Với orthonormal basis, coefficient rất dễ tính:
 c_i=v\cdot b_i.
 ```
 
-Không cần solve full linear system. Projection, least squares, Fourier coefficients và QR decomposition đều hưởng lợi từ orthogonality.
+Không cần solve full hệ tuyến tính (linear system / 선형 시스템). Projection, least squares, Fourier coefficients và QR decomposition đều hưởng lợi từ orthogonality.
 
 Orthonormal bases cũng thường numerically stable hơn vì basis vectors không gần dependent.
 
-## Function spaces: vector spaces có thể vô hạn chiều
+## Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều
 
-Linear algebra không dừng ở finite tuples. Consider space của functions trên interval. Nếu `f` và `g` là functions, ta có
+Tuyến tính (linear / 선형) algebra không dừng ở finite tuples. Consider không gian (space / 공간) của functions trên interval. Nếu `f` và `g` là functions, ta có
 
 ```math
 (f+g)(x)=f(x)+g(x)
@@ -398,25 +401,25 @@ và
 (cf)(x)=cf(x).
 ```
 
-Nhiều function spaces là vector spaces, thường infinite-dimensional.
+Nhiều hàm (function / 함수) spaces là véc-tơ (vector / 벡터) spaces, thường infinite-dimensional.
 
-Fourier analysis nhìn function như combination của basis-like sinusoids. Quantum mechanics dùng Hilbert spaces. Differential equations thường tìm unknown function trong một function space phù hợp.
+Fourier phân tích (analysis / 분석) nhìn hàm (function / 함수) như combination của basis-like sinusoids. Quantum mechanics dùng Hilbert spaces. Differential equations thường tìm unknown hàm (function / 함수) trong một hàm (function / 함수) không gian (space / 공간) phù hợp.
 
-Vì vậy idea basis/dimension mở đường từ elementary linear algebra sang analysis và mathematical physics.
+Vì vậy idea basis/dimension mở đường từ elementary tuyến tính (linear / 선형) algebra sang phân tích (analysis / 분석) và mathematical physics.
 
-## Feature space trong machine learning
+## Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)
 
-Một sample có thể được represent thành feature vector
+Một mẫu (sample / 표본) có thể được represent thành tính năng (feature / 기능) véc-tơ (vector / 벡터)
 
 ```math
 x=(x_1,\ldots,x_d).
 ```
 
-`d` là ambient feature dimension, nhưng không nhất thiết intrinsic dimension của data.
+`d` là ambient tính năng (feature / 기능) dimension, nhưng không nhất thiết intrinsic dimension của dữ liệu (data / 데이터).
 
-Nếu features strongly correlated, effective information dimension có thể thấp hơn. Nếu một feature exact combination của others, design matrix rank giảm.
+Nếu features strongly correlated, effective thông tin (information / 정보) dimension có thể thấp hơn. Nếu một tính năng (feature / 기능) chính xác (exact / 정확한) combination của others, thiết kế (design / 설계) ma trận (matrix / 행렬) rank giảm.
 
-Điều này nối trực tiếp linear independence, rank và conditioning với practical ML issues như multicollinearity.
+Điều này nối trực tiếp tuyến tính (linear / 선형) independence, rank và conditioning với practical ML issues như multicollinearity.
 
 ## Curse of dimensionality: tại sao nhiều dimensions khó?
 
@@ -436,62 +439,64 @@ Nếu `k=10` và `d=2`, có 100 cells. Với `d=10`, đã có
 
 cells.
 
-Space volume tăng cực nhanh theo dimension, nên fixed number data points trở nên sparse.
+Không gian (space / 공간) volume tăng cực nhanh theo dimension, nên fixed number dữ liệu (data / 데이터) points trở nên sparse.
 
-Distance geometry cũng thay đổi. Trong many high-dimensional distributions, nearest và farthest distances có thể trở nên tương đối gần nhau; intuition từ 2D/3D không còn tốt.
+Distance hình học (geometry / 기하학) cũng thay đổi. Trong many high-dimensional distributions, nearest và farthest distances có thể trở nên tương đối gần nhau; intuition từ 2D/3D không còn tốt.
 
-Đây là lý do algorithms dựa trên local density hoặc nearest neighbors cần careful scaling, regularization, dimensionality reduction hoặc structural assumptions.
+Đây là lý do algorithms dựa trên cục bộ (local / 로컬) density hoặc nearest neighbors cần careful scaling, regularization, dimensionality reduction hoặc structural các giả định (assumptions / 가정들).
 
-## Basis và representation trong software/data systems
+## Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)
 
 Cùng idea “choose coordinates” xuất hiện ngoài pure mathematics.
 
-One-hot encoding chọn standard basis-like representation cho categories. Embedding học một coordinate representation dense hơn. PCA chọn orthogonal basis từ covariance structure. Fourier transform đổi từ time/sample coordinates sang frequency coordinates. Wavelets chọn localized multi-scale basis.
+One-hot encoding chọn tiêu chuẩn (standard / 표준) basis-like biểu diễn (representation / 표현) cho categories. Embedding học một coordinate biểu diễn (representation / 표현) dense hơn. PCA chọn orthogonal basis từ covariance cấu trúc (structure / 구조). Fourier transform đổi từ thời gian (time / 시간)/mẫu (sample / 표본) coordinates sang frequency coordinates. Wavelets chọn localized multi-scale basis.
 
-Không phải mọi representation là literal linear basis, nhưng mental model giống nhau: **cùng object có thể dễ hiểu hơn trong coordinate system phù hợp**.
+Không phải mọi biểu diễn (representation / 표현) là literal tuyến tính (linear / 선형) basis, nhưng mô hình tư duy (mental model / 사고 모델) giống nhau: **cùng đối tượng (object / 객체) có thể dễ hiểu hơn trong coordinate hệ thống (system / 시스템) phù hợp**.
 
-## Khi linear space model không đủ
+## Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ
 
-Vector space giả định closure dưới arbitrary scalar multiplication và addition. Nhiều real-world sets không thỏa.
+Véc-tơ (vector / 벡터) không gian (space / 공간) giả định closure dưới arbitrary scalar multiplication và addition. Nhiều real-world sets không thỏa.
 
-Probability distributions không thể cộng arbitrary coefficients rồi vẫn là valid probability distribution. Rotations form a group, không phải vector space dưới matrix addition. Points trên sphere không đóng dưới addition.
+Xác suất (probability / 확률) distributions không thể cộng arbitrary coefficients rồi vẫn là valid xác suất (probability / 확률) phân phối (distribution / 분포). Rotations form a group, không phải véc-tơ (vector / 벡터) không gian (space / 공간) dưới ma trận (matrix / 행렬) addition. Points trên sphere không đóng dưới addition.
 
-Trong các trường hợp đó, forcing vector-space intuition có thể gây sai. Ta có thể cần affine spaces, manifolds, groups, cones hoặc probability simplices.
+Trong các trường hợp đó, forcing vector-space intuition có thể gây sai. Ta có thể cần affine spaces, manifolds, groups, cones hoặc xác suất (probability / 확률) simplices.
 
-Biết khi nào linear structure không phù hợp cũng quan trọng như biết dùng nó.
+Biết khi nào tuyến tính (linear / 선형) cấu trúc (structure / 구조) không phù hợp cũng quan trọng như biết dùng nó.
 
-## Knowledge Connection — basis và eigenvectors
+## Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors
 
-Nếu linear operator `A` có đủ independent eigenvectors, chúng tạo basis `P` và
+Nếu tuyến tính (linear / 선형) operator `A` có đủ independent eigenvectors, chúng tạo basis `P` và
 
 ```math
 A=PDP^{-1}.
 ```
 
-Trong eigenbasis, operator trở thành diagonal scaling. Đây là ultimate example của “choose basis to expose structure”.
+Trong eigenbasis, operator trở thành diagonal scaling. Đây là ultimate example của “choose basis to expose cấu trúc (structure / 구조)”.
 
-Nếu matrix defective và không có đủ eigenvectors, diagonal basis không tồn tại; ta cần richer structures như Jordan form. Vì vậy basis availability ảnh hưởng trực tiếp cách ta simplify transformation.
+Nếu ma trận (matrix / 행렬) defective và không có đủ eigenvectors, diagonal basis không tồn tại; ta cần richer structures như Jordan form. Vì vậy basis availability ảnh hưởng trực tiếp cách ta simplify transformation.
 
-## Knowledge Connection — basis và Fourier
+## Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier
 
-Sine/cosine hoặc complex exponentials đóng vai trò basis functions cho nhiều signal spaces. Time-domain waveform có thể được represent bằng coefficients theo frequency components.
+Sine/cosine hoặc complex exponentials đóng vai trò basis functions cho nhiều tín hiệu (signal / 신호) spaces. Time-domain waveform có thể được represent bằng coefficients theo frequency components.
 
-Cùng signal không thay đổi; chỉ coordinate language đổi. Một convolution khó nhìn trong time domain có thể trở thành multiplication đơn giản trong frequency domain.
+Cùng tín hiệu (signal / 신호) không thay đổi; chỉ coordinate ngôn ngữ (language / 언어) đổi. Một convolution khó nhìn trong thời gian (time / 시간) lĩnh vực (domain / 도메인) có thể trở thành multiplication đơn giản trong frequency lĩnh vực (domain / 도메인).
 
-Đây là lý do basis không phải một khái niệm abstract tách khỏi engineering — nó quyết định representation nơi operation trở nên đơn giản.
+Đây là lý do basis không phải một khái niệm abstract tách khỏi kỹ thuật (engineering / 엔지니어링) — nó quyết định biểu diễn (representation / 표현) nơi thao tác (operation / 연산) trở nên đơn giản.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Vector space là một universe của những objects có thể được kết hợp tuyến tính. Span hỏi “ta tạo được những gì?”, independence hỏi “có redundancy không?”, basis là vocabulary tối thiểu đủ để diễn đạt mọi vector, còn dimension là số degrees of freedom độc lập. Đổi basis không đổi object; nó đổi ngôn ngữ mô tả object, và một ngôn ngữ tốt có thể làm structure ẩn trở nên hiển nhiên.
+> véc-tơ (vector / 벡터) không gian (space / 공간) là một universe của những objects có thể được kết hợp tuyến tính. Span hỏi “ta tạo được những gì?”, independence hỏi “có redundancy không?”, basis là vocabulary tối thiểu đủ để diễn đạt mọi véc-tơ (vector / 벡터), còn dimension là số degrees of freedom độc lập. Đổi basis không đổi đối tượng (object / 객체); nó đổi ngôn ngữ mô tả đối tượng (object / 객체), và một ngôn ngữ tốt có thể làm cấu trúc (structure / 구조) ẩn trở nên hiển nhiên.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Vector space nghĩa là không gian hình học có mũi tên.”** Không. Polynomials, functions và matrices cũng có thể là vectors nếu operations thỏa vector-space axioms.
+**“véc-tơ (vector / 벡터) không gian (space / 공간) nghĩa là không gian hình học có mũi tên.”** Không. Polynomials, functions và matrices cũng có thể là vectors nếu operations thỏa vector-space axioms.
 
-**“Basis là duy nhất.”** Basis có thể có vô số lựa chọn. Dimension mới là invariant.
+**“Basis là duy nhất.”** Basis có thể có vô số lựa chọn. Dimension mới là bất biến (invariant / 불변식).
 
-**“Có nhiều coordinates nghĩa là có nhiều independent information.”** Không. Coordinates/features có thể linearly dependent. Rank đo independent linear directions, không phải raw column count.
+**“Có nhiều coordinates nghĩa là có nhiều independent thông tin (information / 정보).”** Không. Coordinates/features có thể linearly dependent. Rank đo independent tuyến tính (linear / 선형) directions, không phải raw column count.
 
-**“Mọi plane trong `R^3` là subspace.”** Chỉ plane đi qua origin mới là linear subspace. Plane translated khỏi origin là affine set.
+**“Mọi plane trong `R^3` là subspace.”** Chỉ plane đi qua origin mới là tuyến tính (linear / 선형) subspace. Plane translated khỏi origin là affine set.
 
-**“High dimension luôn tốt vì chứa nhiều information.”** Higher ambient dimension có thể chỉ thêm redundancy/noise và làm estimation khó hơn. Value nằm ở independent, relevant structure chứ không phải dimension count tự thân.
+**“High dimension luôn tốt vì chứa nhiều thông tin (information / 정보).”** Higher ambient dimension có thể chỉ thêm redundancy/noise và làm estimation khó hơn. giá trị (value / 값) nằm ở independent, relevant cấu trúc (structure / 구조) chứ không phải dimension count tự thân.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

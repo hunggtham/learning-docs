@@ -1,5 +1,8 @@
 # Độ phức tạp thời gian, không gian và phân tích tiệm cận
 
+> **Mạch đọc:** Đọc **Độ phức tạp thời gian, không gian và phân tích tiệm cận** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Kích thước đầu vào là gì?** sang **Mô hình chi phí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nếu hai thuật toán đều đúng, câu hỏi tiếp theo là chi phí của chúng tăng như thế nào khi đầu vào lớn dần. **Độ phức tạp tính toán (computational complexity / 계산 복잡도)** xây một mô hình đủ đơn giản để bỏ qua chi tiết của từng máy cụ thể nhưng vẫn giữ được tốc độ tăng chi phí theo kích thước đầu vào.
 
 ## Kích thước đầu vào là gì?
@@ -10,7 +13,7 @@ Chi tiết này dễ bị bỏ qua nhưng có thể làm phân loại độ ph�
 
 ## Mô hình chi phí
 
-Mô hình RAM thường giả định các thao tác cơ bản như đọc hoặc ghi một từ máy và phép số học đơn giản có chi phí hằng số. Đây là một phép xấp xỉ. Số nguyên lớn, trượt cache, I/O đĩa và vòng khứ hồi mạng không thật sự có chi phí hằng số.
+Mô hình RAM thường giả định các thao tác cơ bản như đọc hoặc ghi một từ máy và phép số học đơn giản có chi phí hằng số. Đây là một phép xấp xỉ. Số nguyên lớn, trượt bộ nhớ đệm (cache / 캐시), I/O đĩa và vòng khứ hồi mạng không thật sự có chi phí hằng số.
 
 Mô hình không “sai”; nó chỉ có phạm vi áp dụng. Khi tốc độ tăng của thuật toán là yếu tố chính, mô hình RAM rất hữu ích. Khi hiệu năng phụ thuộc mạnh vào phân cấp bộ nhớ hoặc I/O, cần mô hình giàu chi tiết hơn.
 
@@ -44,7 +47,7 @@ Một thao tác có thể đôi lúc rất đắt nhưng xảy ra hiếm. Thêm 
 
 ## Độ phức tạp không gian và đánh đổi thời gian–bộ nhớ
 
-Ghi nhớ kết quả (memoization) dùng thêm bộ nhớ để tránh tính lại. Chỉ mục băm dùng dung lượng lưu trữ để giảm thời gian truy vấn. Cache dùng RAM để giảm I/O. Bloom filter chấp nhận xác suất dương tính giả để tiết kiệm không gian.
+Ghi nhớ kết quả (memoization) dùng thêm bộ nhớ để tránh tính lại. Chỉ mục băm dùng dung lượng lưu trữ để giảm thời gian truy vấn. bộ nhớ đệm (cache / 캐시) dùng RAM để giảm I/O. Bloom filter chấp nhận xác suất dương tính giả để tiết kiệm không gian.
 
 Vì vậy thời gian và không gian không độc lập. Nhiều thiết kế thực tế chỉ là chuyển chi phí từ tài nguyên này sang tài nguyên khác.
 
@@ -56,7 +59,7 @@ Counting sort có thể đạt `O(n+k)` vì nó không bị giới hạn bởi m
 
 ## Độ phức tạp và hiệu năng thực tế
 
-Chèn vào danh sách liên kết có thể là `O(1)` nếu đã có con trỏ đúng vị trí, nhưng việc duyệt và tính cục bộ kém có thể khiến nó chậm hơn cấu trúc dựa trên mảng. Quét liên tục `O(n)` có thể rất nhanh nhờ cache và nạp trước. Tra cứu B-tree `O(log n)` trong cơ sở dữ liệu có thể bị độ trễ đĩa hoặc mạng chi phối.
+Chèn vào danh sách liên kết có thể là `O(1)` nếu đã có con trỏ đúng vị trí, nhưng việc duyệt và tính cục bộ kém có thể khiến nó chậm hơn cấu trúc dựa trên mảng. Quét liên tục `O(n)` có thể rất nhanh nhờ bộ nhớ đệm (cache / 캐시) và nạp trước. Tra cứu B-tree `O(log n)` trong cơ sở dữ liệu có thể bị độ trễ đĩa hoặc mạng chi phối.
 
 Phân tích tiệm cận trả lời “chi phí tăng theo quy mô thế nào”. Đo hiệu năng trả lời “trên cách triển khai, tải và phần cứng này nhanh đến đâu”. Cả hai đều cần thiết.
 
@@ -80,8 +83,10 @@ Hai bài toán con kích thước `n/2` và bước trộn tuyến tính dẫn t
 
 **“O(n) nghĩa chính xác n thao tác.”** Không đúng. Nó mô tả lớp tăng trưởng bậc tuyến tính.
 
-**“Tra cứu hash trung bình O(1) nghĩa trường hợp xấu nhất cũng O(1).”** Không đúng. Va chạm và đầu vào đối kháng có thể làm chuỗi hoặc quá trình dò dài.
+**“Tra cứu băm (hash / 해시) trung bình O(1) nghĩa trường hợp xấu nhất cũng O(1).”** Không đúng. Va chạm và đầu vào đối kháng có thể làm chuỗi hoặc quá trình dò dài.
 
 ## Kết nối
 
 [Phân bố bộ nhớ](./02_memory_models_and_data_layout.md) giải thích hệ số thực tế và tính cục bộ; [hiệu năng và năng lực xử lý](../08_software_systems/02_performance_capacity_and_scalability.md) mở rộng từ một thuật toán sang hệ thống đầu-cuối có hàng đợi, I/O và đồng thời.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn
 
-Case này dùng Shinhan Financial Group như một bài thực hành để hiểu **công ty mẹ tài chính (financial holding company / 금융지주회사)** tại Hàn Quốc. Mục tiêu không phải đánh giá Shinhan tốt hay xấu, mà học cách đọc một tập đoàn tài chính có cấu trúc kinh tế rất khác doanh nghiệp sản xuất.
+> **Mạch đọc:** Đặt **Shinhan Financial Group — ngân hàng, công ty mẹ tài chính, chu kỳ tín dụng và an toàn vốn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Xác định đúng pháp nhân: Shinhan Financial Group không đồng nghĩa Shinhan Bank** sang **2. Ngân hàng thực sự kiếm tiền như thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Trường hợp (case / 사례) này dùng Shinhan Financial Group như một bài thực hành để hiểu **công ty mẹ tài chính (financial holding company / 금융지주회사)** tại Hàn Quốc. Mục tiêu không phải đánh giá Shinhan tốt hay xấu, mà học cách đọc một tập đoàn tài chính có cấu trúc kinh tế rất khác doanh nghiệp sản xuất.
 
 Với doanh nghiệp sản xuất, ta thường bắt đầu từ sản lượng, giá bán, chi phí, CAPEX và dòng tiền tự do (free cash flow / FCF). Với ngân hàng, tiền vừa là phương tiện thanh toán vừa gần giống “nguyên liệu đầu vào” của mô hình kinh doanh. Tiền gửi, nguồn vốn thị trường, khoản vay, chứng khoán, tổn thất tín dụng và vốn pháp định cùng tạo thành một **cỗ máy bảng cân đối kế toán (balance-sheet engine)**. Vì vậy nếu áp dụng máy móc công thức của doanh nghiệp công nghiệp, mô hình tư duy sẽ sai ngay từ đầu.
 
@@ -10,7 +13,7 @@ Xem nền tảng tại [35_financial_sector_securities_insurance_asset_managemen
 
 Một **công ty mẹ tài chính (financial holding company / 금융지주회사)** sở hữu nhiều công ty con tài chính. Ngân hàng thương mại có thể là động cơ lợi nhuận lớn nhất, nhưng tập đoàn còn có thẻ tín dụng, chứng khoán, bảo hiểm, quản lý tài sản và các dịch vụ tài chính khác.
 
-Mỗi công ty con có mô hình kinh tế và quy định riêng. Ngân hàng phụ thuộc vào tiền gửi, chất lượng khoản vay và vốn an toàn. Công ty chứng khoán nhạy với môi giới, ngân hàng đầu tư, giao dịch và thanh khoản thị trường. Công ty thẻ nhạy với tín dụng tiêu dùng, chi phí vốn và nợ quá hạn. Bảo hiểm phải đọc theo logic nghĩa vụ bảo hiểm, danh mục đầu tư và khả năng thanh toán.
+Mỗi công ty con có mô hình kinh tế và quy định riêng. Ngân hàng phụ thuộc vào tiền gửi, chất lượng khoản vay và vốn an toàn. Công ty chứng khoán nhạy với môi giới, ngân hàng đầu tư, giao dịch và thanh khoản thị trường. Công ty thẻ nhạy với tín dụng tiêu dùng, chi phí vốn và nợ quá hạn. Bảo hiểm phải đọc theo lô-gic (logic / 논리) nghĩa vụ bảo hiểm, danh mục đầu tư và khả năng thanh toán.
 
 Do đó câu “lợi nhuận Shinhan tăng” mới chỉ là quan sát ban đầu. Cần hỏi **công ty con nào tạo ra thay đổi, bằng động lực nào và phải sử dụng bao nhiêu vốn để tạo ra mức sinh lời đó**.
 
@@ -259,7 +262,7 @@ Thanh khoản chỉ là một chiều. Khả năng thanh toán dài hạn còn p
 
 ## 16. Bài tập nghiên cứu
 
-Khi tự cập nhật case bằng báo cáo mới, hãy dựng bảng 5 năm:
+Khi tự cập nhật trường hợp (case / 사례) bằng báo cáo mới, hãy dựng bảng 5 năm:
 
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
@@ -273,10 +276,12 @@ Khi tự cập nhật case bằng báo cáo mới, hãy dựng bảng 5 năm:
 | CET1 | | | | | |
 | RWA | | | | | |
 
-Sau đó giải thích **cơ chế (mechanism)** của từng điểm chuyển hướng thay vì chỉ mô tả tăng/giảm.
+Sau đó giải thích **cơ chế (mechanism / 메커니즘)** của từng điểm chuyển hướng thay vì chỉ mô tả tăng/giảm.
 
 ## Mô hình tư duy cuối
 
 > Một tập đoàn tài chính Hàn Quốc là cỗ máy biến **nguồn vốn + vốn pháp định → tài sản và dịch vụ tài chính có điều chỉnh theo rủi ro**. Lợi nhuận chỉ là dòng chảy của một năm; chất lượng thật nằm ở nền tảng tiền gửi, thẩm định tín dụng, chất lượng tài sản, bộ đệm vốn và khả năng phân bổ vốn giữa các công ty con.
 
-Case tiếp theo nên đọc cùng [07_lg_energy_solution_battery_case](./07_lg_energy_solution_battery_case.md) để thấy sự khác biệt giữa **tài chính dựa trên bảng cân đối kế toán (balance-sheet-intensive finance)** và **sản xuất thâm dụng vốn (CAPEX-intensive manufacturing)**.
+Trường hợp (case / 사례) tiếp theo nên đọc cùng [07_lg_energy_solution_battery_case](./07_lg_energy_solution_battery_case.md) để thấy sự khác biệt giữa **tài chính dựa trên bảng cân đối kế toán (balance-sheet-intensive finance)** và **sản xuất thâm dụng vốn (CAPEX-intensive manufacturing)**.
+
+> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng
 
+> **Mạch đọc:** Đọc **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chất xúc tác thực sự làm gì?** sang **Chu trình xúc tác — chất xúc tác là một mạng phản ứng nhỏ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Chất xúc tác (catalyst / 촉매)** làm tăng tốc độ phản ứng bằng cách cung cấp cơ chế hoặc con đường có hàng rào hoạt hóa hiệu dụng thấp hơn, đồng thời được tái sinh trong chu trình xúc tác tổng. Chất xúc tác không làm thay đổi \(\Delta G^\circ\) hay hằng số cân bằng của phản ứng ròng.
 
 Một cách nhìn sâu hơn là: xúc tác **tái thiết kế cảnh quan động học** giữa chất phản ứng và sản phẩm. Chất xúc tác tạo các chất trung gian, trạng thái chuyển tiếp và bề mặt tương tác mới sao cho một hoặc nhiều hàng rào năng lượng giảm xuống, đồng thời có thể làm một con đường phản ứng trở nên ưu tiên hơn các con đường cạnh tranh.
@@ -13,7 +16,7 @@ Nếu phản ứng không xúc tác phải đi qua một hàng rào cao, chất 
 - định hướng các chất phản ứng;
 - chia phản ứng thành nhiều bước có hàng rào thấp hơn;
 - tạo chất trung gian có phản ứng tính cao hơn;
-- thay đổi môi trường điện tử hoặc acid–base cục bộ.
+- thay đổi môi trường điện tử hoặc acid–cơ sở (base / 기반) cục bộ.
 
 Năng lượng tự do của trạng thái đầu và cuối không đổi. Thứ thay đổi là **địa hình năng lượng giữa chúng**.
 
@@ -42,7 +45,7 @@ Hai đại lượng thường dùng để đánh giá xúc tác là:
 **Số vòng quay (turnover number, TON)**:
 
 \[
-TON=\frac{n_{product}}{n_{catalyst}}
+TON=\frac{n_{sản phẩm (product / 제품)}}{n_{catalyst}}
 \]
 
 cho biết một đơn vị catalyst tạo được bao nhiêu đơn vị sản phẩm trước khi mất hoạt tính.
@@ -50,7 +53,7 @@ cho biết một đơn vị catalyst tạo được bao nhiêu đơn vị sản 
 **Tần suất quay vòng (turnover frequency, TOF)**:
 
 \[
-TOF=\frac{1}{n_{catalyst}}\frac{dn_{product}}{dt}
+TOF=\frac{1}{n_{catalyst}}\frac{dn_{sản phẩm (product / 제품)}}{dt}
 \]
 
 cho biết tốc độ tạo sản phẩm trên mỗi lượng catalyst.
@@ -114,15 +117,15 @@ Các bước điển hình trong organometallic catalysis gồm:
 
 Không phải mọi chu trình đều có tất cả các bước này, nhưng chúng là “từ vựng cơ chế” quan trọng.
 
-## Xúc tác acid–base
+## Xúc tác acid–cơ sở (base / 기반)
 
 Xúc tác acid có thể proton hóa một nhóm chức và làm nó trở thành electrophile mạnh hơn hoặc nhóm rời tốt hơn.
 
-Xúc tác base có thể lấy proton và tạo nucleophile hoặc carbanion mạnh hơn.
+Xúc tác cơ sở (base / 기반) có thể lấy proton và tạo nucleophile hoặc carbanion mạnh hơn.
 
-Với **xúc tác acid–base tổng quát (general acid/base catalysis)**, species khác dung môi trực tiếp tham gia chuyển proton trong trạng thái chuyển tiếp.
+Với **xúc tác acid–cơ sở (base / 기반) tổng quát (general acid/base catalysis)**, species khác dung môi trực tiếp tham gia chuyển proton trong trạng thái chuyển tiếp.
 
-Với **xúc tác acid–base riêng (specific acid/base catalysis)**, tốc độ chủ yếu phụ thuộc nồng độ `H3O+` hoặc `OH−` sau khi cân bằng proton hóa nhanh đã được thiết lập.
+Với **xúc tác acid–cơ sở (base / 기반) riêng (specific acid/base catalysis)**, tốc độ chủ yếu phụ thuộc nồng độ `H3O+` hoặc `OH−` sau khi cân bằng proton hóa nhanh đã được thiết lập.
 
 Phân biệt này rất quan trọng trong cơ chế enzyme và động học dung dịch.
 
@@ -200,7 +203,7 @@ Một hướng thiết kế hiện đại là phá các quan hệ này bằng:
 
 - site nhiều chức năng;
 - hợp kim;
-- interface;
+- giao diện (interface / 인터페이스);
 - catalyst phân tử;
 - điện trường hoặc môi trường đặc biệt.
 
@@ -214,14 +217,14 @@ Trong hạt catalyst xốp, còn có khuếch tán trong lỗ xốp.
 
 Khi phản ứng rất nhanh so với khuếch tán, phần bên trong hạt không được sử dụng hiệu quả.
 
-Điều này giải thích vì sao catalyst có hoạt tính hóa học cao hơn chưa chắc tạo reactor nhanh hơn nếu transport trở thành nút thắt.
+Điều này giải thích vì sao catalyst có hoạt tính hóa học cao hơn chưa chắc tạo reactor nhanh hơn nếu vận chuyển (transport / 전송) trở thành nút thắt.
 
 ## Hệ số hiệu dụng
 
 **Hệ số hiệu dụng (effectiveness factor)**:
 
 \[
-\eta=\frac{\text{tốc độ thực trong hạt}}{\text{tốc độ nếu toàn hạt ở nồng độ bề mặt}}
+\eta=\frac{\văn bản (text / 텍스트){tốc độ thực trong hạt}}{\văn bản (text / 텍스트){tốc độ nếu toàn hạt ở nồng độ bề mặt}}
 \]
 
 Nếu \(\eta<1\), khuếch tán nội hạt đang làm giảm mức sử dụng catalyst.
@@ -350,7 +353,7 @@ Một catalyst quang tốt cần đồng thời:
 
 Học máy có thể xây mô hình thay thế để sàng lọc nhanh hàng nghìn thành phần hoặc bề mặt trước khi làm tính toán chính xác hơn.
 
-Tuy nhiên dự đoán catalyst cần tránh một lỗi quan trọng: tối ưu một descriptor đơn lẻ trong khi catalyst thật còn chịu ảnh hưởng của ổn định pha, transport, solvent, điện trường và suy giảm hoạt tính.
+Tuy nhiên dự đoán catalyst cần tránh một lỗi quan trọng: tối ưu một descriptor đơn lẻ trong khi catalyst thật còn chịu ảnh hưởng của ổn định pha, vận chuyển (transport / 전송), solvent, điện trường và suy giảm hoạt tính.
 
 ## Từ cơ chế tới thiết kế catalyst
 
@@ -391,10 +394,12 @@ Không. Liên kết quá mạnh có thể làm intermediate hoặc sản phẩm 
 
 ### “Hoạt tính cao là đủ để catalyst tốt”
 
-Không. Độ chọn lọc, tuổi thọ, khả năng tái sinh, chi phí và transport đều quan trọng.
+Không. Độ chọn lọc, tuổi thọ, khả năng tái sinh, chi phí và vận chuyển (transport / 전송) đều quan trọng.
 
 ## Mô hình tư duy
 
 Chất xúc tác là **kỹ sư tuyến đường trên địa hình năng lượng**. Nó không hạ thung lũng đích; nó thay đổi các đèo, hố trung gian và giao lộ giữa các con đường. Catalyst tốt không chỉ làm một bước nhanh hơn mà phải điều phối cả chu trình để chất phản ứng vào được, trạng thái chuyển tiếp được ổn định đúng mức, sản phẩm thoát ra được và catalyst sống đủ lâu để quay vòng nhiều lần.
 
 Xem tiếp: [Cân bằng động](../07_chemical_equilibrium/00_dynamic_equilibrium.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reaction rates](./00_reaction_rates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

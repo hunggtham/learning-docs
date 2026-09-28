@@ -1,5 +1,8 @@
 # Trường tinh thể và trường phối tử — sự tách mức orbital d
 
+> **Mạch đọc:** Đọc **Trường tinh thể và trường phối tử — sự tách mức orbital d** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ ion kim loại tự do** sang **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Lý thuyết trường tinh thể (crystal field theory, CFT / 결정장 이론)** mô hình hóa phối tử như nguồn trường tĩnh điện làm mất tính suy biến của các orbital d trên kim loại. **Lý thuyết trường phối tử (ligand field theory, LFT / 리간드장 이론)** mở rộng mô hình đó bằng liên kết orbital phân tử và thành phần cộng hóa trị. Hai mô hình giúp giải thích màu sắc, từ tính, trạng thái spin, hình học và một phần khả năng phản ứng của phức kim loại chuyển tiếp.
 
 Điểm quan trọng nhất không phải học thuộc sơ đồ \(t_{2g}\) và \(e_g\), mà hiểu rằng **đối xứng của môi trường phối tử làm các orbital d tương tác khác nhau**, từ đó tái định hình trạng thái điện tử của tâm kim loại.
@@ -263,3 +266,5 @@ Không. Chúng có độ chi tiết khác nhau. CFT phù hợp cho trực giác 
 > Phối tử tạo một **cảnh quan năng lượng phụ thuộc đối xứng** cho electron d của kim loại. Cách electron chiếm cảnh quan này quyết định spin, phổ và một phần hình học/khả năng phản ứng. CFT cho bản đồ đơn giản; LFT giải thích bản đồ đó xuất hiện từ tương tác orbital như thế nào.
 
 Xem tiếp: [Hóa học trạng thái rắn và khuyết tật](./05_solid_state_and_defect_chemistry.md), nơi các ý tưởng về mức năng lượng, ion kim loại và cấu trúc cục bộ được mở rộng từ một phức riêng lẻ sang mạng tinh thể và vật liệu.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 inorganic compounds](./00_inorganic_compounds.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,23 +1,26 @@
-# Systemd sâu hơn: unit graph, dependency, resource control và sandboxing
+# Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing
 
-Chương [Quá trình khởi động, systemd và dịch vụ](./systemd_boot_services.md) giới thiệu systemd như trình quản lý vòng đời dịch vụ. Chương này đi sâu hơn vào cách systemd thực sự xây dựng đồ thị phụ thuộc, cách các unit được kích hoạt, cách resource control nối với cgroup, và vì sao nhiều lỗi “service chạy tay được nhưng systemd không chạy” xuất phát từ việc hiểu sai execution context.
+> **Mạch đọc:** Đọc **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Systemd không chỉ là một công cụ restart dịch vụ (service / 서비스)** sang **đơn vị (unit / 단위) đồ thị (graph / 그래프) thay cho chuỗi script tuần tự**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Systemd không chỉ là một công cụ restart service
+
+Chương [Quá trình khởi động, systemd và dịch vụ](./systemd_boot_services.md) giới thiệu systemd như trình quản lý vòng đời dịch vụ. Chương này đi sâu hơn vào cách systemd thực sự xây dựng đồ thị phụ thuộc, cách các đơn vị (unit / 단위) được kích hoạt, cách tài nguyên (resource / 자원) điều khiển (control / 제어) nối với cgroup, và vì sao nhiều lỗi “dịch vụ (service / 서비스) chạy tay được nhưng systemd không chạy” xuất phát từ việc hiểu sai thực thi (execution / 실행) ngữ cảnh (context / 맥락).
+
+## Systemd không chỉ là một công cụ restart dịch vụ (service / 서비스)
 
 Systemd là `PID 1` trên nhiều bản phân phối Linux hiện đại. Nó quản lý:
 
-- dependency graph;
-- process lifecycle;
+- phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프);
+- tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기);
 - socket activation;
 - timer activation;
 - mount units;
-- logging integration;
-- resource controls qua cgroup;
-- một phần sandboxing/security policy.
+- logging tích hợp (integration / 통합);
+- tài nguyên (resource / 자원) controls qua cgroup;
+- một phần sandboxing/bảo mật (security / 보안) chính sách (policy / 정책).
 
 Do đó `systemctl restart app` chỉ là một giao diện nhỏ của toàn bộ hệ thống.
 
-## Unit graph thay cho chuỗi script tuần tự
+## Đơn vị (unit / 단위) đồ thị (graph / 그래프) thay cho chuỗi script tuần tự
 
 Mô hình cũ dễ hình dung như:
 
@@ -28,7 +31,7 @@ script A
 → script C
 ```
 
-Nhưng cách này không biểu diễn tốt dependency thực và làm boot chậm do tuần tự hóa không cần thiết.
+Nhưng cách này không biểu diễn tốt phụ thuộc (dependency / 의존성) thực và làm boot chậm do tuần tự hóa không cần thiết.
 
 Systemd dùng đồ thị:
 
@@ -38,15 +41,15 @@ filesystem.mount ├─→ app.service
 secret.mount ────┘
 ```
 
-Các unit độc lập có thể khởi động song song.
+Các đơn vị (unit / 단위) độc lập có thể khởi động song song.
 
-## Quan hệ ordering khác requirement
+## Quan hệ thứ tự (ordering / 순서) khác yêu cầu (requirement / 요구사항)
 
 Đây là điểm gây nhầm rất nhiều.
 
-`After=A` nói rằng nếu A và unit hiện tại cùng có trong transaction, unit hiện tại được start sau A.
+`After=A` nói rằng nếu A và đơn vị (unit / 단위) hiện tại cùng có trong giao dịch (transaction / 트랜잭션), đơn vị (unit / 단위) hiện tại được start sau A.
 
-`Requires=A` nói A là dependency mạnh; khi unit được start, A cũng được kéo vào.
+`Requires=A` nói A là phụ thuộc (dependency / 의존성) mạnh; khi đơn vị (unit / 단위) được start, A cũng được kéo vào.
 
 `Wants=A` tương tự nhưng yếu hơn.
 
@@ -60,54 +63,54 @@ không tự động đảm bảo `network.target` được kéo vào, và càng 
 
 ## `Before=`
 
-`Before=A` là quan hệ ordering ngược với `After=A`.
+`Before=A` là quan hệ thứ tự (ordering / 순서) ngược với `After=A`.
 
 Không nên khai báo cả hai chiều gây cycle.
 
-Có thể kiểm tra cycle/dependency bằng:
+Có thể kiểm tra cycle/phụ thuộc (dependency / 의존성) bằng:
 
 ```bash
 systemctl list-dependencies app.service
 systemctl list-dependencies --reverse app.service
 ```
 
-## `Requires=` và failure propagation
+## `Requires=` và thất bại (failure / 실패) propagation
 
-Nếu A `Requires=B`, failure của B có thể ảnh hưởng A tùy tình huống activation/lifecycle.
+Nếu A `Requires=B`, thất bại (failure / 실패) của B có thể ảnh hưởng A tùy tình huống activation/vòng đời (lifecycle / 생명주기).
 
-Nhưng dependency semantics không thay thế application-level retry hoặc readiness.
+Nhưng phụ thuộc (dependency / 의존성) ngữ nghĩa (semantics / 의미론) không thay thế application-level thử lại (retry / 재시도) hoặc readiness.
 
-Một database service “active” chưa chắc đã sẵn sàng trả query.
+Một cơ sở dữ liệu (database / 데이터베이스) dịch vụ (service / 서비스) “active” chưa chắc đã sẵn sàng trả truy vấn (query / 쿼리).
 
 ## `Wants=` khi nào phù hợp?
 
-`Wants=` phù hợp với dependency mong muốn nhưng không nên làm unit chính fail nếu dependency phụ không lên được.
+`Wants=` phù hợp với phụ thuộc (dependency / 의존성) mong muốn nhưng không nên làm đơn vị (unit / 단위) chính thất bại (fail / 실패) nếu phụ thuộc (dependency / 의존성) phụ không lên được.
 
-Ví dụ observability sidecar hoặc optional cache có thể phù hợp tùy architecture.
+Ví dụ khả năng quan sát (observability / 관측 가능성) sidecar hoặc optional bộ nhớ đệm (cache / 캐시) có thể phù hợp tùy kiến trúc (architecture / 아키텍처).
 
 ## `BindsTo=`
 
-`BindsTo=` tạo quan hệ lifecycle chặt hơn, thường dùng khi unit phải dừng nếu dependency biến mất.
+`BindsTo=` tạo quan hệ vòng đời (lifecycle / 생명주기) chặt hơn, thường dùng khi đơn vị (unit / 단위) phải dừng nếu phụ thuộc (dependency / 의존성) biến mất.
 
-Không nên dùng tràn lan; lifecycle coupling quá mạnh có thể tạo cascading failure.
+Không nên dùng tràn lan; vòng đời (lifecycle / 생명주기) coupling quá mạnh có thể tạo cascading thất bại (failure / 실패).
 
 ## `PartOf=`
 
-`PartOf=` hữu ích khi muốn restart/stop một parent-like unit kéo theo unit khác.
+`PartOf=` hữu ích khi muốn restart/stop một parent-like đơn vị (unit / 단위) kéo theo đơn vị (unit / 단위) khác.
 
-Ví dụ một nhóm service có thể được tổ chức để restart cùng nhau.
+Ví dụ một nhóm dịch vụ (service / 서비스) có thể được tổ chức để restart cùng nhau.
 
 ## `Conflicts=`
 
-Một số unit không thể active đồng thời.
+Một số đơn vị (unit / 단위) không thể active đồng thời.
 
 `Conflicts=` biểu diễn quan hệ loại trừ.
 
-Ví dụ hai implementation cạnh tranh cùng một resource có thể được cấu hình để không cùng chạy.
+Ví dụ hai hiện thực (implementation / 구현) cạnh tranh cùng một tài nguyên (resource / 자원) có thể được cấu hình để không cùng chạy.
 
-## Target unit
+## Mục tiêu (target / 대상) đơn vị (unit / 단위)
 
-Target không chạy business logic. Nó nhóm và đồng bộ các unit khác.
+Mục tiêu (target / 대상) không chạy lô-gic nghiệp vụ (business logic / 비즈니스 로직). Nó nhóm và đồng bộ các đơn vị (unit / 단위) khác.
 
 Ví dụ:
 
@@ -115,9 +118,9 @@ Ví dụ:
 systemctl list-dependencies multi-user.target
 ```
 
-Target gần với “mốc trạng thái hệ thống” hơn là service.
+Mục tiêu (target / 대상) gần với “mốc trạng thái hệ thống” hơn là dịch vụ (service / 서비스).
 
-## Activation transaction
+## Activation giao dịch (transaction / 트랜잭션)
 
 Khi yêu cầu:
 
@@ -125,13 +128,13 @@ Khi yêu cầu:
 systemctl start app.service
 ```
 
-systemd không đơn giản gọi `ExecStart`. Nó xây một transaction gồm các unit được kéo vào bởi dependency, kiểm tra ordering, job conflicts và sau đó thực thi theo graph.
+systemd không đơn giản gọi `ExecStart`. Nó xây một giao dịch (transaction / 트랜잭션) gồm các đơn vị (unit / 단위) được kéo vào bởi phụ thuộc (dependency / 의존성), kiểm tra thứ tự (ordering / 순서), job conflicts và sau đó thực thi theo đồ thị (graph / 그래프).
 
-Đây là lý do một unit file nhỏ có thể kéo theo rất nhiều operations.
+Đây là lý do một đơn vị (unit / 단위) tệp (file / 파일) nhỏ có thể kéo theo rất nhiều operations.
 
 ## Socket activation
 
-Systemd có thể mở listening socket trước rồi chỉ start service khi traffic tới.
+Systemd có thể mở listening socket trước rồi chỉ start dịch vụ (service / 서비스) khi traffic tới.
 
 Ví dụ conceptual:
 
@@ -147,15 +150,15 @@ socket FD được truyền cho service
 
 Lợi ích:
 
-- service có thể start on demand;
+- dịch vụ (service / 서비스) có thể start on demand;
 - socket có thể tồn tại sớm trong boot;
 - một số restart có thể giảm khoảng trống listener.
 
-Nhưng application phải hỗ trợ socket activation semantics.
+Nhưng ứng dụng (application / 애플리케이션) phải hỗ trợ socket activation ngữ nghĩa (semantics / 의미론).
 
 ## Timer activation
 
-Timer unit tách lịch khỏi business process.
+Timer đơn vị (unit / 단위) tách lịch khỏi nghiệp vụ (business / 비즈니스) tiến trình (process / 프로세스).
 
 Ví dụ:
 
@@ -165,34 +168,34 @@ OnCalendar=*-*-* 02:00:00
 Persistent=true
 ```
 
-Timer kích hoạt service unit riêng.
+Timer kích hoạt dịch vụ (service / 서비스) đơn vị (unit / 단위) riêng.
 
-Điều này giúp job có logging, identity, resource limit và sandbox giống service bình thường.
+Điều này giúp job có logging, định danh (identity / 식별자), tài nguyên (resource / 자원) limit và sandbox giống dịch vụ (service / 서비스) bình thường.
 
-## Path activation
+## Đường dẫn (path / 경로) activation
 
-Systemd còn có `.path` unit để kích hoạt service khi path/file thay đổi theo một số điều kiện.
+Systemd còn có `.path` đơn vị (unit / 단위) để kích hoạt dịch vụ (service / 서비스) khi đường dẫn (path / 경로)/tệp (file / 파일) thay đổi theo một số điều kiện.
 
-Đây là event-driven alternative cho polling loop trong một số use case.
+Đây là event-driven alternative cho polling vòng lặp (loop / 루프) trong một số use trường hợp (case / 사례).
 
-## Service `Type=`
+## Dịch vụ (service / 서비스) `Type=`
 
-`Type=` ảnh hưởng cách systemd xác định service đã khởi động.
+`Type=` ảnh hưởng cách systemd xác định dịch vụ (service / 서비스) đã khởi động.
 
 Một số kiểu phổ biến:
 
-- `simple` — process từ `ExecStart` được coi là main process gần như ngay lập tức;
+- `simple` — tiến trình (process / 프로세스) từ `ExecStart` được coi là main tiến trình (process / 프로세스) gần như ngay lập tức;
 - `exec` — giống simple nhưng systemd chờ `execve()` thành công;
 - `forking` — daemon fork rồi parent exit;
-- `oneshot` — command chạy xong rồi unit có thể chuyển trạng thái phù hợp;
-- `notify` — service chủ động báo READY cho systemd;
+- `oneshot` — command chạy xong rồi đơn vị (unit / 단위) có thể chuyển trạng thái phù hợp;
+- `notify` — dịch vụ (service / 서비스) chủ động báo READY cho systemd;
 - `dbus` — readiness gắn với D-Bus name.
 
-Chọn sai `Type=` có thể làm systemd nghĩ service healthy quá sớm hoặc theo dõi sai process.
+Chọn sai `Type=` có thể làm systemd nghĩ dịch vụ (service / 서비스) healthy quá sớm hoặc theo dõi sai tiến trình (process / 프로세스).
 
 ## `Type=notify` và readiness tốt hơn
 
-Nếu application hỗ trợ `sd_notify`, nó có thể báo:
+Nếu ứng dụng (application / 애플리케이션) hỗ trợ `sd_notify`, nó có thể báo:
 
 ```text
 READY=1
@@ -200,17 +203,17 @@ READY=1
 
 chỉ sau khi đã hoàn tất initialization.
 
-Điều này chính xác hơn `sleep 10` hoặc đoán readiness từ process existence.
+Điều này chính xác hơn `sleep 10` hoặc đoán readiness từ tiến trình (process / 프로세스) existence.
 
 ## Main PID
 
-Systemd phải biết process nào là main process để theo dõi lifecycle.
+Systemd phải biết tiến trình (process / 프로세스) nào là main tiến trình (process / 프로세스) để theo dõi vòng đời (lifecycle / 생명주기).
 
 ```bash
 systemctl show app -p MainPID
 ```
 
-Nếu daemon double-fork hoặc wrapper shell không dùng `exec`, systemd có thể theo dõi process không như mong muốn.
+Nếu daemon double-fork hoặc wrapper shell không dùng `exec`, systemd có thể theo dõi tiến trình (process / 프로세스) không như mong muốn.
 
 ## Vì sao shell wrapper nên dùng `exec` trong một số tình huống?
 
@@ -221,7 +224,7 @@ Ví dụ script:
 java -jar app.jar
 ```
 
-shell process giữ vai trò parent.
+shell tiến trình (process / 프로세스) giữ vai trò parent.
 
 Nếu viết:
 
@@ -229,9 +232,9 @@ Nếu viết:
 exec java -jar app.jar
 ```
 
-shell được thay bằng Java process. Signal/lifecycle thường đơn giản hơn.
+shell được thay bằng Java tiến trình (process / 프로세스). tín hiệu (signal / 신호)/vòng đời (lifecycle / 생명주기) thường đơn giản hơn.
 
-Không phải mọi script đều cần `exec`, nhưng cần hiểu process tree.
+Không phải mọi script đều cần `exec`, nhưng cần hiểu tiến trình (process / 프로세스) cây (tree / 트리).
 
 ## `ExecStartPre=` và `ExecStartPost=`
 
@@ -243,15 +246,15 @@ ExecStart=/usr/bin/java -jar /opt/app/app.jar
 ExecStartPost=/usr/local/bin/register-service.sh
 ```
 
-Không nên biến unit file thành một deployment script dài. Những bước có transactional logic phức tạp thường nên nằm ngoài service startup.
+Không nên biến đơn vị (unit / 단위) tệp (file / 파일) thành một triển khai (deployment / 배포) script dài. Những bước có transactional lô-gic (logic / 논리) phức tạp thường nên nằm ngoài dịch vụ (service / 서비스) startup.
 
 ## `ExecCondition=`
 
-`ExecCondition=` cho phép kiểm tra điều kiện trước start với semantics riêng.
+`ExecCondition=` cho phép kiểm tra điều kiện trước start với ngữ nghĩa (semantics / 의미론) riêng.
 
-Nó hữu ích để tránh start unit khi precondition không đúng mà không coi mọi trường hợp là failure.
+Nó hữu ích để tránh start đơn vị (unit / 단위) khi precondition không đúng mà không coi mọi trường hợp là thất bại (failure / 실패).
 
-## Environment
+## Môi trường (environment / 환경)
 
 Systemd không tự đọc `.bashrc` hoặc `.profile` giống interactive login shell.
 
@@ -262,7 +265,7 @@ Environment=SPRING_PROFILES_ACTIVE=prod
 EnvironmentFile=/etc/app/app.env
 ```
 
-Nhưng secret management cần cẩn thận: environment có thể lộ qua debugging, dump hoặc quyền đọc process state tùy hệ thống.
+Nhưng secret management cần cẩn thận: môi trường (environment / 환경) có thể lộ qua debugging, dump hoặc quyền đọc tiến trình (process / 프로세스) trạng thái (state / 상태) tùy hệ thống.
 
 ## Working directory
 
@@ -270,9 +273,9 @@ Nhưng secret management cần cẩn thận: environment có thể lộ qua debu
 WorkingDirectory=/opt/app
 ```
 
-Nếu ứng dụng dùng relative path mà không khai báo working directory, service có thể tìm file sai chỗ.
+Nếu ứng dụng dùng relative đường dẫn (path / 경로) mà không khai báo working directory, dịch vụ (service / 서비스) có thể tìm tệp (file / 파일) sai chỗ.
 
-Tốt hơn nữa là application dùng absolute/configured paths cho dữ liệu quan trọng.
+Tốt hơn nữa là ứng dụng (application / 애플리케이션) dùng absolute/configured paths cho dữ liệu quan trọng.
 
 ## `User=` và `Group=`
 
@@ -281,9 +284,9 @@ User=app
 Group=app
 ```
 
-Systemd thiết lập credentials trước khi exec process.
+Systemd thiết lập credentials trước khi exec tiến trình (process / 프로세스).
 
-Đây là lý do command chạy bằng root trong SSH có thể thành công nhưng service user lại bị permission denied.
+Đây là lý do command chạy bằng gốc (root / 루트) trong SSH có thể thành công nhưng dịch vụ (service / 서비스) người dùng (user / 사용자) lại bị permission denied.
 
 ## Supplementary groups
 
@@ -293,23 +296,23 @@ Có thể dùng:
 SupplementaryGroups=appops
 ```
 
-khi service cần thêm group access.
+khi dịch vụ (service / 서비스) cần thêm group truy cập (access / 접근).
 
-Không nên thêm process vào quá nhiều group vì mở rộng privilege surface.
+Không nên thêm tiến trình (process / 프로세스) vào quá nhiều group vì mở rộng privilege surface.
 
 ## `UMask=`
 
-Systemd có thể đặt `UMask=` riêng cho service.
+Systemd có thể đặt `UMask=` riêng cho dịch vụ (service / 서비스).
 
-Điều này ảnh hưởng mode của file mới được tạo.
+Điều này ảnh hưởng chế độ (mode / 모드) của tệp (file / 파일) mới được tạo.
 
 ```ini
 UMask=0027
 ```
 
-Nếu app tạo log/config với permission khác khi chạy tay và khi chạy service, đây là một điểm cần kiểm tra.
+Nếu app tạo log/cấu hình (config / 설정) với permission khác khi chạy tay và khi chạy dịch vụ (service / 서비스), đây là một điểm cần kiểm tra.
 
-## Resource limits kiểu POSIX
+## Tài nguyên (resource / 자원) limits kiểu POSIX
 
 Systemd hỗ trợ các limit như:
 
@@ -318,17 +321,17 @@ LimitNOFILE=65535
 LimitNPROC=4096
 ```
 
-Những giá trị này tương ứng với resource limit của process.
+Những giá trị này tương ứng với tài nguyên (resource / 자원) limit của tiến trình (process / 프로세스).
 
-Kiểm tra runtime:
+Kiểm tra thời gian chạy (runtime / 런타임):
 
 ```bash
 cat /proc/<PID>/limits
 ```
 
-Đừng chỉ nhìn unit file; cần verify process thực tế nhận giá trị gì.
+Đừng chỉ nhìn đơn vị (unit / 단위) tệp (file / 파일); cần verify tiến trình (process / 프로세스) thực tế nhận giá trị gì.
 
-## Cgroup resource control
+## Cgroup tài nguyên (resource / 자원) điều khiển (control / 제어)
 
 Systemd tổ chức services vào cgroups.
 
@@ -341,11 +344,11 @@ CPUQuota=200%
 TasksMax=4096
 ```
 
-`CPUQuota=200%` thường tương đương tối đa khoảng hai logical CPUs worth of CPU time trong period phù hợp, không phải “được gắn riêng 2 CPU vật lý”.
+`CPUQuota=200%` thường tương đương tối đa khoảng hai logical CPUs worth of CPU thời gian (time / 시간) trong period phù hợp, không phải “được gắn riêng 2 CPU vật lý”.
 
 ## `MemoryMax=`
 
-Nếu service vượt `MemoryMax`, cgroup OOM có thể xảy ra dù host còn RAM.
+Nếu dịch vụ (service / 서비스) vượt `MemoryMax`, cgroup OOM có thể xảy ra dù host còn RAM.
 
 Kiểm tra:
 
@@ -359,7 +362,7 @@ hoặc cgroup files tương ứng.
 
 `MemoryHigh` tạo pressure/throttling trước hard kill ở `MemoryMax`.
 
-Nó hữu ích để tạo soft boundary nhưng có thể làm latency tăng khi reclaim.
+Nó hữu ích để tạo soft ranh giới (boundary / 경계) nhưng có thể làm độ trễ (latency / 지연 시간) tăng khi reclaim.
 
 ## `TasksMax=`
 
@@ -367,7 +370,7 @@ Giới hạn số tasks/threads trong cgroup.
 
 Java app tạo quá nhiều threads có thể chạm limit dù `ulimit -u` nhìn còn cao.
 
-## Restart policy sâu hơn
+## Restart chính sách (policy / 정책) sâu hơn
 
 Các giá trị thường gặp:
 
@@ -386,7 +389,7 @@ StartLimitIntervalSec=60
 StartLimitBurst=5
 ```
 
-Nếu service fail ngay lập tức và `Restart=always`, restart storm có thể gây log storm hoặc tải dependency.
+Nếu dịch vụ (service / 서비스) thất bại (fail / 실패) ngay lập tức và `Restart=always`, restart storm có thể gây log storm hoặc tải phụ thuộc (dependency / 의존성).
 
 ## Exit status nào được coi là success?
 
@@ -396,36 +399,36 @@ Có thể điều chỉnh:
 SuccessExitStatus=143
 ```
 
-nhưng chỉ nên làm khi hiểu application signal/exit semantics.
+nhưng chỉ nên làm khi hiểu ứng dụng (application / 애플리케이션) tín hiệu (signal / 신호)/exit ngữ nghĩa (semantics / 의미론).
 
-Ví dụ JVM nhận SIGTERM không nhất thiết luôn trả 143 tùy wrapper/runtime.
+Ví dụ JVM nhận SIGTERM không nhất thiết luôn trả 143 tùy wrapper/thời gian chạy (runtime / 런타임).
 
-## Timeout khi start/stop
+## Hết thời gian chờ (timeout / 타임아웃) khi start/stop
 
 ```ini
 TimeoutStartSec=60
 TimeoutStopSec=30
 ```
 
-Nếu shutdown cần drain traffic lâu hơn timeout, systemd có thể escalate sang kill.
+Nếu shutdown cần drain traffic lâu hơn hết thời gian chờ (timeout / 타임아웃), systemd có thể escalate sang kill.
 
 Đây là lý do graceful shutdown của Spring/Kubernetes/systemd phải được thiết kế đồng bộ.
 
-## Kill mode
+## Kill chế độ (mode / 모드)
 
-Systemd có `KillMode=` để quyết định signal gửi cho process nào trong cgroup.
+Systemd có `KillMode=` để quyết định tín hiệu (signal / 신호) gửi cho tiến trình (process / 프로세스) nào trong cgroup.
 
-`control-group` thường giúp dừng toàn bộ process con còn lại.
+`control-group` thường giúp dừng toàn bộ tiến trình (process / 프로세스) con còn lại.
 
-Nếu chọn sai, child process có thể bị orphan hoặc sống sau khi service tưởng đã stop.
+Nếu chọn sai, child tiến trình (process / 프로세스) có thể bị orphan hoặc sống sau khi dịch vụ (service / 서비스) tưởng đã stop.
 
 ## Watchdog
 
-Một service hỗ trợ watchdog có thể gửi heartbeat cho systemd.
+Một dịch vụ (service / 서비스) hỗ trợ watchdog có thể gửi heartbeat cho systemd.
 
-Nếu heartbeat dừng, systemd coi service unhealthy và có thể restart.
+Nếu heartbeat dừng, systemd coi dịch vụ (service / 서비스) unhealthy và có thể restart.
 
-Watchdog khác health endpoint: nó đo việc process còn phản hồi theo protocol với service manager.
+Watchdog khác health endpoint: nó đo việc tiến trình (process / 프로세스) còn phản hồi theo giao thức (protocol / 프로토콜) với dịch vụ (service / 서비스) manager.
 
 ## Sandboxing với systemd
 
@@ -441,48 +444,48 @@ RestrictSUIDSGID=true
 CapabilityBoundingSet=
 ```
 
-Không nên bật toàn bộ rồi hy vọng application vẫn chạy. Mỗi directive thay đổi execution environment và cần test.
+Không nên bật toàn bộ rồi hy vọng ứng dụng (application / 애플리케이션) vẫn chạy. Mỗi directive thay đổi thực thi (execution / 실행) môi trường (environment / 환경) và cần kiểm thử (test / 테스트).
 
 ## `NoNewPrivileges=`
 
-Khi bật, process và descendants không thể đạt thêm privilege qua `execve()` theo một số cơ chế như setuid/capabilities.
+Khi bật, tiến trình (process / 프로세스) và descendants không thể đạt thêm privilege qua `execve()` theo một số cơ chế như setuid/capabilities.
 
-Đây là control quan trọng để giảm privilege escalation.
+Đây là điều khiển (control / 제어) quan trọng để giảm privilege escalation.
 
 ## `ProtectSystem=`
 
-Có thể làm nhiều phần filesystem read-only trong namespace của service.
+Có thể làm nhiều phần filesystem read-only trong không gian tên (namespace / 네임스페이스) của dịch vụ (service / 서비스).
 
-Ứng dụng cần write path phải được mở riêng bằng directives như `ReadWritePaths=`.
+Ứng dụng cần ghi (write / 쓰기) đường dẫn (path / 경로) phải được mở riêng bằng directives như `ReadWritePaths=`.
 
 ## `PrivateTmp=`
 
-Service nhận `/tmp` và `/var/tmp` riêng trong mount namespace.
+Dịch vụ (service / 서비스) nhận `/tmp` và `/var/tmp` riêng trong mount không gian tên (namespace / 네임스페이스).
 
-Nếu hai service trước đây trao đổi file qua `/tmp`, bật `PrivateTmp` có thể phá integration đó.
+Nếu hai dịch vụ (service / 서비스) trước đây trao đổi tệp (file / 파일) qua `/tmp`, bật `PrivateTmp` có thể phá tích hợp (integration / 통합) đó.
 
 ## `PrivateDevices=`
 
-Giảm access tới device nodes.
+Giảm truy cập (access / 접근) tới thiết bị (device / 장치) nodes.
 
-Phù hợp nhiều daemon không cần hardware access trực tiếp.
+Phù hợp nhiều daemon không cần hardware truy cập (access / 접근) trực tiếp.
 
-## Capability bounding
+## Năng lực (capability / 역량) bounding
 
-Thay vì full root, có thể giới hạn capabilities:
+Thay vì full gốc (root / 루트), có thể giới hạn capabilities:
 
 ```ini
 CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 ```
 
-Điều này cho phép app bind low port mà không giữ toàn bộ root privilege trong một số mô hình.
+Điều này cho phép app bind low cổng (port / 포트) mà không giữ toàn bộ gốc (root / 루트) privilege trong một số mô hình.
 
 ## `DynamicUser=`
 
-Systemd có thể tạo user runtime tạm thời cho service.
+Systemd có thể tạo người dùng (user / 사용자) thời gian chạy (runtime / 런타임) tạm thời cho dịch vụ (service / 서비스).
 
-Hữu ích với daemon không cần persistent UID, nhưng cần hiểu ownership của persistent files trước khi dùng.
+Hữu ích với daemon không cần persistent UID, nhưng cần hiểu quyền sở hữu (ownership / 소유권) của persistent files trước khi dùng.
 
 ## `systemd-analyze security`
 
@@ -492,11 +495,11 @@ Có thể đánh giá một số hardening options:
 systemd-analyze security app.service
 ```
 
-Điểm số không phải chân lý. Tool chỉ đánh giá theo một tập heuristic; security thật còn phụ thuộc application và threat model.
+Điểm số không phải chân lý. công cụ (tool / 도구) chỉ đánh giá theo một tập heuristic; bảo mật (security / 보안) thật còn phụ thuộc ứng dụng (application / 애플리케이션) và threat mô hình (model / 모델).
 
 ## Drop-in override
 
-Thay vì sửa trực tiếp unit do package quản lý:
+Thay vì sửa trực tiếp đơn vị (unit / 단위) do gói (package / 패키지) quản lý:
 
 ```bash
 sudo systemctl edit app.service
@@ -504,9 +507,9 @@ sudo systemctl edit app.service
 
 systemd tạo drop-in override dưới `/etc/systemd/system/...`.
 
-Điều này tốt hơn vì package upgrade ít ghi đè customization.
+Điều này tốt hơn vì gói (package / 패키지) upgrade ít ghi đè customization.
 
-Kiểm tra merged config:
+Kiểm tra merged cấu hình (config / 설정):
 
 ```bash
 systemctl cat app.service
@@ -514,17 +517,17 @@ systemctl cat app.service
 
 ## `daemon-reload` khác restart
 
-Sau khi sửa unit definition:
+Sau khi sửa đơn vị (unit / 단위) definition:
 
 ```bash
 sudo systemctl daemon-reload
 ```
 
-systemd đọc lại metadata unit.
+systemd đọc lại siêu dữ liệu (metadata / 메타데이터) đơn vị (unit / 단위).
 
-Nhưng process đang chạy chưa tự thay đổi.
+Nhưng tiến trình (process / 프로세스) đang chạy chưa tự thay đổi.
 
-Sau đó tùy thay đổi có thể cần restart/reload service.
+Sau đó tùy thay đổi có thể cần restart/reload dịch vụ (service / 서비스).
 
 ## Mask
 
@@ -532,11 +535,11 @@ Sau đó tùy thay đổi có thể cần restart/reload service.
 sudo systemctl mask app.service
 ```
 
-mask thường tạo liên kết tới `/dev/null` để ngăn unit được start kể cả gián tiếp.
+mask thường tạo liên kết tới `/dev/null` để ngăn đơn vị (unit / 단위) được start kể cả gián tiếp.
 
 `disable` chỉ bỏ enablement relationship; `mask` mạnh hơn.
 
-## Transient unit
+## Transient đơn vị (unit / 단위)
 
 Có thể chạy command tạm dưới systemd:
 
@@ -544,17 +547,17 @@ Có thể chạy command tạm dưới systemd:
 systemd-run --unit=test-job --property=MemoryMax=1G /usr/local/bin/job.sh
 ```
 
-Đây là cách hay để áp resource control cho task không cần tạo unit file cố định.
+Đây là cách hay để áp tài nguyên (resource / 자원) điều khiển (control / 제어) cho tác vụ (task / 작업) không cần tạo đơn vị (unit / 단위) tệp (file / 파일) cố định.
 
-## Scope unit
+## Phạm vi (scope / 범위) đơn vị (unit / 단위)
 
-Interactive process có thể được group trong `.scope` unit.
+Interactive tiến trình (process / 프로세스) có thể được group trong `.scope` đơn vị (unit / 단위).
 
-Desktop session/container manager thường tận dụng scope/service hierarchy để tổ chức cgroups.
+Desktop session/bộ chứa (container / 컨테이너) manager thường tận dụng phạm vi (scope / 범위)/dịch vụ (service / 서비스) hierarchy để tổ chức cgroups.
 
-## Journal metadata theo unit
+## Journal siêu dữ liệu (metadata / 메타데이터) theo đơn vị (unit / 단위)
 
-Systemd-journald gắn metadata như `_SYSTEMD_UNIT`, PID, UID vào log.
+Systemd-journald gắn siêu dữ liệu (metadata / 메타데이터) như `_SYSTEMD_UNIT`, PID, UID vào log.
 
 Do đó:
 
@@ -562,24 +565,24 @@ Do đó:
 journalctl -u app.service
 ```
 
-lọc theo metadata, không chỉ grep text.
+lọc theo siêu dữ liệu (metadata / 메타데이터), không chỉ grep văn bản (text / 텍스트).
 
-## Một case production: service “active” nhưng chưa ready
+## Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): dịch vụ (service / 서비스) “active” nhưng chưa ready
 
-Systemd `active` chỉ phản ánh lifecycle theo `Type=`.
+Systemd `active` chỉ phản ánh vòng đời (lifecycle / 생명주기) theo `Type=`.
 
-Nếu Spring Boot mất 30 giây để warm cache nhưng unit `Type=simple`, systemd có thể coi active ngay khi JVM start.
+Nếu Spring Boot mất 30 giây để warm bộ nhớ đệm (cache / 캐시) nhưng đơn vị (unit / 단위) `Type=simple`, systemd có thể coi active ngay khi JVM start.
 
-Load balancer cần readiness riêng.
+Bộ cân bằng tải (load balancer / 로드 밸런서) cần readiness riêng.
 
 Giải pháp có thể là:
 
 - application-level readiness endpoint;
 - `Type=notify` nếu hỗ trợ;
 - orchestration readiness probe;
-- dependency consumer có retry/backoff.
+- phụ thuộc (dependency / 의존성) bên tiêu thụ (consumer / 소비자) có thử lại (retry / 재시도)/backoff.
 
-## Một case: service restart loop làm disk đầy
+## Một trường hợp (case / 사례): dịch vụ (service / 서비스) restart vòng lặp (loop / 루프) làm disk đầy
 
 Chuỗi:
 
@@ -600,9 +603,9 @@ journalctl -u app --since '-10 min'
 systemctl show app -p NRestarts
 ```
 
-Sau đó fix root cause và restart policy/rate limit phù hợp.
+Sau đó fix nguyên nhân gốc (root cause / 근본 원인) và restart chính sách (policy / 정책)/tỷ lệ (rate / 비율) limit phù hợp.
 
-## Một case: chạy tay được nhưng service không chạy
+## Một trường hợp (case / 사례): chạy tay được nhưng dịch vụ (service / 서비스) không chạy
 
 So sánh:
 
@@ -619,11 +622,11 @@ systemctl show app -p User -p Group -p Environment -p WorkingDirectory -p LimitN
 
 Các khác biệt thường nằm ở:
 
-- identity;
-- PATH/JAVA_HOME;
+- định danh (identity / 식별자);
+- đường dẫn (path / 경로)/JAVA_HOME;
 - working directory;
-- file permissions;
-- resource limits;
+- tệp (file / 파일) permissions;
+- tài nguyên (resource / 자원) limits;
 - sandboxing directives.
 
 ## Mô hình tư duy
@@ -640,22 +643,24 @@ process/cgroup lifecycle
 resource + security policy
 ```
 
-`systemctl` chỉ là client điều khiển bốn lớp này.
+`systemctl` chỉ là máy khách (client / 클라이언트) điều khiển bốn lớp này.
 
 ## Những hiểu lầm phổ biến
 
-**“After=network.target nghĩa mạng đã dùng được.”** Không; đó chỉ là ordering tương đối với một target.
+**“After=mạng (network / 네트워크).mục tiêu (target / 대상) nghĩa mạng đã dùng được.”** Không; đó chỉ là thứ tự (ordering / 순서) tương đối với một mục tiêu (target / 대상).
 
-**“Service active nghĩa ứng dụng healthy.”** Không; readiness/business health là lớp khác.
+**“dịch vụ (service / 서비스) active nghĩa ứng dụng healthy.”** Không; readiness/nghiệp vụ (business / 비즈니스) health là lớp khác.
 
-**“LimitNOFILE trong shell áp cho systemd service.”** Không nhất thiết; systemd có limit riêng.
+**“LimitNOFILE trong shell áp cho systemd dịch vụ (service / 서비스).”** Không nhất thiết; systemd có limit riêng.
 
-**“Restart=always tăng reliability.”** Có thể tạo restart storm nếu failure persistent.
+**“Restart=always tăng độ tin cậy (reliability / 신뢰성).”** Có thể tạo restart storm nếu thất bại (failure / 실패) persistent.
 
-**“Bật mọi hardening directive luôn tốt.”** Có thể phá application; cần threat model và test.
+**“Bật mọi hardening directive luôn tốt.”** Có thể phá ứng dụng (application / 애플리케이션); cần threat mô hình (model / 모델) và kiểm thử (test / 테스트).
 
-**“disable ngăn service start hoàn toàn.”** `mask` mới là cơ chế mạnh hơn cho mục tiêu đó.
+**“disable ngăn dịch vụ (service / 서비스) start hoàn toàn.”** `mask` mới là cơ chế mạnh hơn cho mục tiêu đó.
 
 ## Kết nối kiến thức
 
-Đọc [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md) để hiểu resource/security primitives phía dưới systemd, [Bảo mật và gia cố](../08_operations/security_hardening.md) để hiểu threat model, và [Deployment/rollback](../08_operations/deployment_release_rollback.md) để nối lifecycle service với release process.
+Đọc [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md) để hiểu tài nguyên (resource / 자원)/bảo mật (security / 보안) primitives phía dưới systemd, [Bảo mật và gia cố](../08_operations/security_hardening.md) để hiểu threat mô hình (model / 모델), và [Deployment/rollback](../08_operations/deployment_release_rollback.md) để nối vòng đời (lifecycle / 생명주기) dịch vụ (service / 서비스) với quy trình phát hành (release process / 릴리스 프로세스).
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [boot kernel initramfs](./boot_kernel_initramfs.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

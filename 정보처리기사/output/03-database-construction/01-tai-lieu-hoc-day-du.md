@@ -18,6 +18,8 @@
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
+> **Mạch nối:** Mỗi mục trong guide phải được đọc như một bước của cùng một chuỗi suy luận. Hãy dùng phần cuối của mục trước để đặt câu hỏi cho mục sau, rồi quay lại checklist để kiểm tra khái niệm vừa được mở rộng; không coi mỗi heading là một ghi chú tách rời.
+
 ---
 
 ## 101. 개념적 설계 (Conceptual Design)
@@ -29,20 +31,32 @@
 
 ---
 
+> **Mạch chuyển:** Từ **101. 개념적 설계 (Conceptual Design)**, chuyển sang **102. 논리적 설계 (Logical Design / Data Modeling)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 102. 논리적 설계 (Logical Design / Data Modeling)
 - 자료를 특정 DBMS가 지원하는 논리적 자료 구조로 변환(mapping)시키는 과정이다.
-- **VI (Vietnamese) (Tiếng Việt):** Thiết kế logic (Mô hình hóa dữ liệu). Quá trình chuyển đổi (ánh xạ) dữ liệu thành cấu trúc dữ liệu logic được hỗ trợ bởi một DBMS cụ thể.
+- **VI (Vietnamese) (Tiếng Việt):** Thiết kế lô-gic (logic / 논리) (Mô hình hóa dữ liệu). Quá trình chuyển đổi (ánh xạ) dữ liệu thành cấu trúc dữ liệu lô-gic (logic / 논리) được hỗ trợ bởi một DBMS cụ thể.
 - **Example (Korean/Vietnamese):** E-R 다이어그램을 관계형 데이터베이스의 테이블 구조로 변환하는 것. / Chuyển đổi sơ đồ E-R thành cấu trúc bảng của cơ sở dữ liệu quan hệ.
 - 💡 **Mẹo ghi nhớ:** Logic-Bảng (Thiết kế Logic = Chuyển đổi sang Bảng).
+
+---
+
+> **Mạch chuyển:** Từ **102. 논리적 설계 (Logical Design / Data Modeling)**, chuyển sang **103. 물리적 설계 (Physical Design)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 103. 물리적 설계 (Physical Design)
 - 논리적 구조로 표현된 데이터를 물리적 구조의 데이터로 변환하는 과정이다.
 - 데이터베이스 파일의 저장 구조 및 액세스 경로를 결정한다.
-- **VI (Vietnamese) (Tiếng Việt):** Thiết kế vật lý. Quá trình chuyển đổi dữ liệu cấu trúc logic thành cấu trúc vật lý (lưu trữ ổ đĩa, đường dẫn truy cập).
-- **Example (Korean/Vietnamese):** 테이블에 인덱스를 생성하여 검색 속도를 높이는 것. / Tạo chỉ mục (index) trên bảng để tăng tốc độ tìm kiếm.
+- **VI (Vietnamese) (Tiếng Việt):** Thiết kế vật lý. Quá trình chuyển đổi dữ liệu cấu trúc lô-gic (logic / 논리) thành cấu trúc vật lý (lưu trữ ổ đĩa, đường dẫn truy cập).
+- **Example (Korean/Vietnamese):** 테이블에 인덱스를 생성하여 검색 속도를 높이는 것. / Tạo chỉ mục (index / 인덱스) trên bảng để tăng tốc độ tìm kiếm.
 - 💡 **Mẹo ghi nhớ:** Vật-Lưu (Thiết kế Vật lý = Cấu trúc Lưu trữ).
+
+---
+
+> **Mạch chuyển:** Từ **103. 물리적 설계 (Physical Design)**, chuyển sang **163-167. 데이터베이스 설계 순서 (Database Design Process)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -53,8 +67,12 @@
 - **물리적 설계 (Physical Design - 166):** 물리적 구조 변환, 접근 경로, 저장 레코드 양식 결정.
 - **구현 (Implementation):** DDL로 DB 생성.
 - **VI (Vietnamese) (Tiếng Việt):** Quy trình thiết kế CSDL.
-  - Phân tích yêu cầu -> Thiết kế Khái niệm (E-R) -> Thiết kế Logic (Bảng/Lược đồ logic) -> Thiết kế Vật lý (Lưu trữ) -> Triển khai (Code DDL).
+  - Phân tích yêu cầu -> Thiết kế Khái niệm (E-R) -> Thiết kế lô-gic (logic / 논리) -> Thiết kế Vật lý (Lưu trữ) -> Triển khai (Code DDL).
 - 💡 **Mẹo ghi nhớ:** Yêu-Khái-Lo-Vật-Cài (Yêu cầu -> Khái niệm -> Logic -> Vật lý -> Cài đặt).
+
+---
+
+> **Mạch chuyển:** Từ **163-167. 데이터베이스 설계 순서 (Database Design Process)**, chuyển sang **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -64,13 +82,17 @@
 |---|---|---|
 | **1. 요구조건 분석** | 목적 파악, 요구조건 식별 | Phân tích yêu cầu: Tìm hiểu người dùng cần gì. |
 | **2. 개념적 설계** | 개념 스키마, E-R 다이어그램, 트랜잭션 모델링 | Thiết kế Khái niệm: Độc lập với DBMS. Vẽ biểu đồ ER (Thực thể - Mối quan hệ). |
-| **3. 논리적 설계** | 논리적 자료구조, **정규화(Normalization)**, 트랜잭션 인터페이스 설계 | Thiết kế Logic: Chuyển đổi ER sang bảng (Table). **Thực hiện chuẩn hóa (Normalization)**. |
-| **4. 물리적 설계** | 물리적 구조, 저장 레코드 양식, **접근 경로(Access Path)** | Thiết kế Vật lý: Định dạng file trên đĩa cứng, chọn kiểu dữ liệu thực tế, thiết lập cấu trúc lưu trữ và Index (Đường truy cập). |
+| **3. 논리적 설계** | 논리적 자료구조, **정규화(Normalization)**, 트랜잭션 인터페이스 설계 | Thiết kế lô-gic (logic / 논리): Chuyển đổi ER sang bảng (table / 테이블). **Thực hiện chuẩn hóa (Normalization)**. |
+| **4. 물리적 설계** | 물리적 구조, 저장 레코드 양식, **접근 경로(Access Path)** | Thiết kế Vật lý: Định dạng tệp (file / 파일) trên đĩa cứng, chọn kiểu dữ liệu thực tế, thiết lập cấu trúc lưu trữ và chỉ mục (index / 인덱스) (Đường truy cập). |
 
-> 💡 **Mẹo ghi nhớ:** **Yêu - Khái - Lo - Vật** (Yêu cầu -> Khái niệm -> Logic -> Vật lý). Dễ thi: Chuẩn hóa ở bước Logic, Access Path/Lưu trữ ở bước Vật lý.
+> 💡 **Mẹo ghi nhớ:** **Yêu - Khái - Lo - Vật** (Yêu cầu -> Khái niệm -> Logic -> Vật lý). Dễ thi: Chuẩn hóa ở bước lô-gic (logic / 논리), truy cập (access / 접근) đường dẫn (path / 경로)/Lưu trữ ở bước Vật lý.
 
-test
+Kiểm thử (test / 테스트)
 ---
+
+---
+
+> **Mạch chuyển:** Từ **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**, chuyển sang **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -81,9 +103,13 @@ test
 - **VI (Vietnamese) (Tiếng Việt):** Các yếu tố trong mô hình dữ liệu.
   - Cấu trúc: Mối quan hệ giữa các kiểu thực thể (tĩnh).
   - Phép toán: Đặc tả công việc xử lý dữ liệu (động).
-  - Ràng buộc: Điều kiện giới hạn logic của dữ liệu.
+  - Ràng buộc: Điều kiện giới hạn lô-gic (logic / 논리) của dữ liệu.
 - **Example (Korean/Vietnamese):** 구조: 학생 테이블, 연산: 정보 검색, 제약조건: 나이는 0 이상. / Cấu trúc: Bảng sinh viên, Phép toán: Tìm kiếm, Ràng buộc: Tuổi >= 0.
 - 💡 **Mẹo ghi nhớ:** Cấu-Toán-Buộc (Cấu trúc, Toán tử, Ràng buộc).
+
+---
+
+> **Mạch chuyển:** Từ **104. 데이터 모델에 표시할 요소 (Elements of Data Model)**, chuyển sang **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -98,6 +124,10 @@ test
 - **VI (Vietnamese) (Tiếng Việt):** Mô hình E-R và Mô hình quan hệ.
   - E-R: Thuộc tính khóa chính có gạch chân, thuộc tính phức hợp có nhiều vòng bầu dục.
   - Đặc điểm quan hệ (Bảng): Hàng không trùng lặp (duy nhất), không quan trọng thứ tự hàng/cột, chỉ chứa giá trị nguyên tử.
+
+---
+
+> **Mạch chuyển:** Từ **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**, chuyển sang **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -123,13 +153,17 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, chuyển sang **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)
 
 ### 데이터 모델 구성 요소 (Thành phần mô hình dữ liệu)
 - **개체 (Entity):** Đối tượng thực tế (ví dụ: Sinh viên, Môn học).
 - **속성 (Attribute):** Đặc điểm của đối tượng (ví dụ: Mã SV, Tên).
 - **관계 (Relationship):** Sự liên kết giữa các đối tượng (ví dụ: Đăng ký).
-- *Lưu ý: 3 yếu tố cơ bản của mô hình là Cấu trúc (Structure), Phép toán (Operation), và Ràng buộc (Constraint).*
+- *Lưu ý: 3 yếu tố cơ bản của mô hình là cấu trúc (structure / 구조), Phép toán (Operation), và ràng buộc (constraint / 제약조건).*
 
 ### E-R 다이어그램 기호 (Ký hiệu biểu đồ E-R - Peter Chen)
 | 기호 (Ký hiệu) | 의미 (Ý nghĩa) | Giải thích (VN) |
@@ -145,6 +179,10 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**, chuyển sang **105. E-R 다이어그램 (E-R Diagram)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 105. E-R 다이어그램 (E-R Diagram)
 - 사각형 (Rectangle): 개체 (Entity)
 - 마름모 (Diamond): 관계 (Relationship)
@@ -153,6 +191,10 @@ test
 - 선 (Line): 연결 (Link)
 - **VI (Vietnamese) (Tiếng Việt):** Sơ đồ E-R. Hình chữ nhật (Thực thể), Hình thoi (Mối quan hệ), Hình bầu dục (Thuộc tính), Hình bầu dục kép (Thuộc tính đa trị).
 - **Example:** 고객(사각형)이 상품(사각형)을 구매(마름모)한다. / Khách hàng (HCN) mua (Hình thoi) sản phẩm (HCN).
+
+---
+
+> **Mạch chuyển:** Từ **105. E-R 다이어그램 (E-R Diagram)**, chuyển sang **110-114. 키 (Keys)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -171,20 +213,28 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **110-114. 키 (Keys)**, chuyển sang **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)
-*Note: Includes duplicated points consolidated.*
+*ghi chú (note / 노트): Includes duplicated points consolidated.*
 - **도메인 무결성 (Domain Integrity):** 속성 값이 정의된 도메인에 속해야 함.
 - **사용자 정의 무결성 (User-Defined Integrity):** 사용자가 정의한 제약 조건 만족.
 - **순수 관계 연산자 (Pure Relational Operators):**
   - Select (σ): 수평 연산 (Horizontal) - 튜플 구함.
-  - Project (π): 수직 연산 (Vertical) - 속성 구함.
-  - Join (⋈) / Division (÷).
-- **일반 집합 연산자 (Set Operators):** UNION (합집합), INTERSECTION (교집합), DIFFERENCE (차집합), CARTESIAN PRODUCT (교차곱).
+  - dự án (project / 프로젝트) (π): 수직 연산 (Vertical) - 속성 구함.
+  - phép nối (join / 조인) (⋈) / Division (÷).
+- **일반 집합 연산자 (Set Operators):** UNION (합집합), INTERSECTION (교집합), DIFFERENCE (차집합), CARTESIAN sản phẩm (product / 제품).
 - **VI (Vietnamese) (Tiếng Việt):** Các ràng buộc và Đại số quan hệ (nhắc lại).
   - Toàn vẹn miền (Domain): Giá trị phải nằm trong miền cho phép.
   - Select: Phép toán ngang (lọc hàng).
-  - Project: Phép toán dọc (lọc cột).
+  - dự án (project / 프로젝트): Phép toán dọc (lọc cột).
   - Phép toán tập hợp: Hợp, Giao, Hiệu, Tích Đề-các.
+
+---
+
+> **Mạch chuyển:** Từ **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**, chuyển sang **5. 스키마 (Schema - Lược đồ)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -197,6 +247,10 @@ test
 > 💡 **Mẹo ghi nhớ:** **Ngoại - Khái - Nội** (Người dùng (Ngoại) -> Thiết kế CSDL (Khái) -> Ổ cứng (Nội)).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **5. 스키마 (Schema - Lược đồ)**, chuyển sang **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -221,6 +275,10 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**, chuyển sang **115. 무결성 (Integrity)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 115. 무결성 (Integrity)
 - **개체 무결성 (Entity Integrity):** 기본키는 NULL값이나 중복값을 가질 수 없다.
 - **참조 무결성 (Referential Integrity):** 외래키 값은 NULL이거나 참조 릴레이션의 기본키 값과 동일해야 한다.
@@ -230,18 +288,26 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **115. 무결성 (Integrity)**, chuyển sang **116-121. 관계대수 (Relational Algebra)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 116-121. 관계대수 (Relational Algebra)
 - 절차적인 언어 (Procedural Language). 질의에 대한 해를 구하기 위한 연산 순서 명시.
 - **Select (σ):** 조건에 맞는 튜플 부분집합 추출 (행 추출).
-- **Project (π):** 속성 리스트에 제시된 속성값 추출 (열 추출).
-- **Join (⋈):** 두 릴레이션을 하나로 합침.
+- **dự án (project / 프로젝트) (π):** 속성 리스트에 제시된 속성값 추출 (열 추출).
+- **phép nối (join / 조인) (⋈):** 두 릴레이션을 하나로 합침.
 - **Division (÷):** 속성값을 모두 가진 튜플 추출.
 - **교차곱 (Cartesian Product):** 두 릴레이션 튜플들의 모든 순서쌍. 카디널리티의 곱.
 - **VI (Vietnamese) (Tiếng Việt):** Đại số quan hệ (Ngôn ngữ thủ tục).
   - Select (σ): Lọc hàng (hàng).
-  - Project (π): Chọn cột (cột).
-  - Join (⋈): Kết nối 2 bảng.
+  - dự án (project / 프로젝트) (π): Chọn cột (cột).
+  - phép nối (join / 조인) (⋈): Kết nối 2 bảng.
   - Division (÷): Chia quan hệ.
+
+---
+
+> **Mạch chuyển:** Từ **116-121. 관계대수 (Relational Algebra)**, chuyển sang **123-125. 정규화 (Normalization)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -255,6 +321,10 @@ test
 - **5NF:** 조인 종속성 이용.
 - **VI (Vietnamese) (Tiếng Việt):** Chuẩn hóa. Giảm thiểu dư thừa dữ liệu để ngăn ngừa dị thường (Anomaly).
 - 💡 **Mẹo ghi nhớ:** Nguyên-Phần-Bắc-Quyết-Đa-Chung (Nguyên tử -> Từng phần -> Bắc cầu -> Quyết định -> Đa trị -> Chung).
+
+---
+
+> **Mạch chuyển:** Từ **123-125. 정규화 (Normalization)**, chuyển sang **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -272,13 +342,21 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**, chuyển sang **184-185. 반정규화 (Denormalization)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 184-185. 반정규화 (Denormalization)
 - 시스템 성능 향상을 위해 정규화 원칙을 의도적으로 위배 (통합, 중복, 분리).
 - **방법:** 테이블 통합, 테이블 분할 (수평/수직 분할), 중복 테이블/속성 추가.
 - **VI (Vietnamese) (Tiếng Việt):** Phi chuẩn hóa.
   - Cố tình phá vỡ quy tắc chuẩn hóa để tăng hiệu suất truy vấn.
   - Phương pháp: Gộp bảng, Chia bảng (ngang/dọc), Thêm cột/bảng dư thừa.
-- **Example:** 조인(Join)을 피하기 위해 부서 테이블의 '부서명'을 사원 테이블에 중복 저장. / Thêm cột 'Tên phòng' vào bảng 'Nhân viên' để tránh phải Join.
+- **Example:** 조인(Join)을 피하기 위해 부서 테이블의 '부서명'을 사원 테이블에 중복 저장. / Thêm cột 'Tên phòng' vào bảng 'Nhân viên' để tránh phải phép nối (join / 조인).
+
+---
+
+> **Mạch chuyển:** Từ **184-185. 반정규화 (Denormalization)**, chuyển sang **16. 정규화(Normalization)와 이상 현상(Anomaly)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -307,6 +385,10 @@ test
 
 ---
 
+> **Mạch chuyển:** Từ **16. 정규화(Normalization)와 이상 현상(Anomaly)**, chuyển sang **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)
 
 ### 쿼리 성능 최적화 (Query Optimization)
@@ -317,10 +399,14 @@ Tối ưu hóa tốc độ chạy SQL thông qua **Optimizer (옵티마이저 - 
 
 ### 반정규화 (Denormalization - Phi chuẩn hóa)
 - **개념:** Cố tình phá vỡ chuẩn hóa (Gộp bảng, thêm dữ liệu trùng lặp).
-- **목적:** Để **tăng hiệu suất truy vấn (조회 속도 향상)** khi thao tác JOIN quá nhiều.
+- **목적:** Để **tăng hiệu suất truy vấn (조회 속도 향상)** khi thao tác phép nối (join / 조인) quá nhiều.
 - **단점:** Đánh đổi bằng sự **suy giảm tính nhất quán** (데이터 정합성 저하) và khó khăn khi cập nhật dữ liệu.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**, chuyển sang **130-132. 트랜잭션 (Transaction)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -331,7 +417,7 @@ Tối ưu hóa tốc độ chạy SQL thông qua **Optimizer (옵티마이저 - 
   - **Consistency (일관성):** 성공 시 일관성 있는 상태 유지.
   - **Isolation (독립성/격리성):** 다른 트랜잭션의 연산이 끼어들 수 없음.
   - **Durability (영속성):** 성공한 결과는 시스템 고장에도 영구 반영.
-- **VI (Vietnamese) (Tiếng Việt):** Giao dịch (Transaction) & Tính chất ACID.
+- **VI (Vietnamese) (Tiếng Việt):** giao dịch (transaction / 트랜잭션) & Tính chất ACID.
   - Atomicity (Tính nguyên tử): Tất cả hoặc không có gì.
   - Consistency (Tính nhất quán): Giữ trạng thái nhất quán.
   - Isolation (Tính độc lập): Không bị can thiệp bởi giao dịch khác.
@@ -339,11 +425,19 @@ Tối ưu hóa tốc độ chạy SQL thông qua **Optimizer (옵티마이저 - 
 
 ---
 
+> **Mạch chuyển:** Từ **130-132. 트랜잭션 (Transaction)**, chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)
 - **상태 (188):** 활동(Active) -> [부분 완료(Partially Committed) -> 완료(Committed)] 또는 [실패(Failed) -> 철회(Aborted/Rollback)].
 - **특성 (189):** 원자성(Atomicity - 전부 또는 전무), 일관성(Consistency), 독립성(Isolation - 병행 중 간섭 불가), 영속성(Durability).
 - **VI (Vietnamese) (Tiếng Việt):** Trạng thái và tính chất giao dịch.
-  - Trạng thái: Đang chạy -> Hoàn thành một phần -> Commit HOẶC Lỗi -> Rollback.
+  - Trạng thái: Đang chạy -> Hoàn thành một phần -> lần ghi nhận (commit / 커밋) HOẶC Lỗi -> quay lui (rollback / 롤백).
+
+---
+
+> **Mạch chuyển:** Từ **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**, chuyển sang **9. 인덱스와 트랜잭션 (Index và Giao dịch)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -354,15 +448,15 @@ Dùng để tăng tốc độ tìm kiếm.
 - **트리 기반 (Tree-based):** Thường dùng B-Tree, tốt cho tìm theo khoảng.
 - **해시 (Hash):** Dùng Key-Value, truy cập nhanh và chi phí đồng đều, không tốt cho tìm khoảng.
 - **비트맵 (Bitmap):** Dùng bit 0 và 1, phù hợp cho cột có ít giá trị khác biệt (Gender: M/F).
-- **클러스터드 인덱스 (Clustered Index):** Dữ liệu thực sự được sắp xếp vật lý theo thứ tự Index. Rất tốt để tìm khoảng (Range search).
+- **클러스터드 인덱스 (Clustered Index):** Dữ liệu thực sự được sắp xếp vật lý theo thứ tự chỉ mục (index / 인덱스). Rất tốt để tìm khoảng (Range search).
 
 ### 트랜잭션 (Transaction - Giao dịch) - ACID
 | 특징 (Đặc tính) | 설명 (Mô tả) | Ý nghĩa (VN) |
 |---|---|---|
-| **원자성 (Atomicity)** | All or Nothing (모두 반영되거나 전혀 반영되지 않음). | **Tính nguyên tử:** Chuyển tiền: hoặc cả 2 người cùng cập nhật, hoặc không ai thay đổi gì. Dùng Commit/Rollback. |
+| **원자성 (Atomicity)** | All or Nothing (모두 반영되거나 전혀 반영되지 않음). | **Tính nguyên tử:** Chuyển tiền: hoặc cả 2 người cùng cập nhật, hoặc không ai thay đổi gì. Dùng lần ghi nhận (commit / 커밋)/quay lui (rollback / 롤백). |
 | **일관성 (Consistency)** | 일관적인 DB 상태 유지 (Trạng thái DB nhất quán). | **Tính nhất quán:** Dữ liệu sau giao dịch phải hợp lệ. |
 | **고립성 (Isolation)** | 서로 간섭 불가 (Không can thiệp lẫn nhau). | **Tính cô lập:** Khi giao dịch A đang chạy, giao dịch B không thể nhảy vào làm sai lệch. |
-| **영속성 (Durability)** | 영구적으로 결과 저장 (Lưu kết quả vĩnh viễn). | **Tính bền vững:** Sau khi COMMIT, dù sập nguồn dữ liệu vẫn tồn tại. |
+| **영속성 (Durability)** | 영구적으로 결과 저장 (Lưu kết quả vĩnh viễn). | **Tính bền vững:** Sau khi lần ghi nhận (commit / 커밋), dù sập nguồn dữ liệu vẫn tồn tại. |
 
 > 💡 **Mẹo ghi nhớ:** **ACID** (Nguyên tử - Nhất quán - Cô lập - Bền vững).
 
@@ -370,18 +464,22 @@ Dùng để tăng tốc độ tìm kiếm.
 
 ---
 
+> **Mạch chuyển:** Từ **9. 인덱스와 트랜잭션 (Index và Giao dịch)**, chuyển sang **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
 ### 병행제어 기법 (Concurrency Control - Kiểm soát đồng thời)
 - **로킹 (Locking):** Khóa tài nguyên để đảm bảo giao dịch chạy tuần tự (직렬화).
-  - *Đơn vị khóa (Locking Unit):* Càng lớn (DB, Bảng) -> Ít Lock, Overhead nhỏ, Tính đồng thời giảm. Càng nhỏ (Bản ghi, Trường) -> Nhiều Lock, Overhead lớn, Tính đồng thời cao.
+  - *Đơn vị khóa (Locking Unit):* Càng lớn (DB, Bảng) -> Ít khóa (lock / 잠금), Overhead nhỏ, Tính đồng thời giảm. Càng nhỏ (Bản ghi, Trường) -> Nhiều khóa (lock / 잠금), Overhead lớn, Tính đồng thời cao.
 - **타임스탬프 (Time Stamping):** Gắn mốc thời gian để ưu tiên.
 - **다중버전 동시제어 (MVCC):** Giữ nhiều phiên bản dữ liệu.
 - **낙관적 병행제어 (Optimistic):** Cứ cho chạy đi, kết thúc mới kiểm tra lỗi (thích hợp môi trường ít xung đột).
 
 ### 트랜잭션 상태 (Trạng thái giao dịch)
 - **활동 (Active):** Đang chạy.
-- **부분 완료 (Partially Committed):** Đã chạy lệnh xong, chuẩn bị COMMIT nhưng chưa ghi lên đĩa.
+- **부분 완료 (Partially Committed):** Đã chạy lệnh xong, chuẩn bị lần ghi nhận (commit / 커밋) nhưng chưa ghi lên đĩa.
 - **완료 (Committed):** Thành công và lưu vĩnh viễn.
 - **실패 (Failed):** Có lỗi xảy ra.
 - **철회 (Aborted):** Bị hủy bỏ (Rollback).
@@ -394,16 +492,24 @@ Dùng để tăng tốc độ tìm kiếm.
 
 ---
 
+> **Mạch chuyển:** Từ **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, chuyển sang **143-145. SQL 분류 (SQL Categories)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 143-145. SQL 분류 (SQL Categories)
 - **DDL (데이터 정의어):** CREATE, ALTER, DROP (스키마, 테이블 등 정의/변경/삭제).
-- **DML (데이터 조작어):** SELECT, INSERT, DELETE, UPDATE (데이터 조회 및 변경).
+- **DML (데이터 조작어):** SELECT, INSERT, DELETE, cập nhật (update / 업데이트).
 - **DCL (데이터 제어어):** GRANT, REVOKE (권한 제어).
-- **TCL (트랜잭션 제어어):** COMMIT, ROLLBACK, SAVEPOINT (트랜잭션 제어).
+- **TCL (트랜잭션 제어어):** lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT (트랜잭션 제어).
 - **VI (Vietnamese) (Tiếng Việt):** Phân loại SQL.
   - DDL (Định nghĩa dữ liệu): CREATE, ALTER, DROP.
-  - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, UPDATE.
+  - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, cập nhật (update / 업데이트).
   - DCL (Điều khiển dữ liệu): GRANT, REVOKE (điều khiển quyền).
-  - TCL (Điều khiển giao dịch): COMMIT, ROLLBACK, SAVEPOINT (điều khiển giao dịch).
+  - TCL (Điều khiển giao dịch): lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT (điều khiển giao dịch).
+
+---
+
+> **Mạch chuyển:** Từ **143-145. SQL 분류 (SQL Categories)**, chuyển sang **204-219. SQL 명령어 심화 (SQL Commands Detail)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -424,6 +530,10 @@ Dùng để tăng tốc độ tìm kiếm.
 
 ---
 
+> **Mạch chuyển:** Từ **204-219. SQL 명령어 심화 (SQL Commands Detail)**, chuyển sang **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)
 
 | 종류 (Loại) | 설명 (Mô tả) | Ví dụ & Giải thích (VN) |
@@ -436,14 +546,18 @@ Dùng để tăng tốc độ tìm kiếm.
 
 ---
 
+> **Mạch chuyển:** Từ **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**, chuyển sang **4. SQL 문법의 종류 (Các loại cú pháp SQL)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 4. SQL 문법의 종류 (Các loại cú pháp SQL)
 
 | 종류 (Loại) | 명령어 (Lệnh) | 설명 & 역할 (Mô tả & Vai trò) | Giải thích (VN) |
 |---|---|---|---|
 | **DDL** (Data Definition Language) | CREATE, ALTER, DROP, TRUNCATE | 데이터베이스를 **정의**하는 언어, 구조 결정. (Ngôn ngữ định nghĩa dữ liệu - Cấu trúc). | Dùng để Tạo (CREATE), Sửa (ALTER), Xóa hoàn toàn (DROP), hoặc Xóa trắng (TRUNCATE) bảng. Giống như việc xây/đập một ngôi nhà. |
-| **DML** (Data Manipulation Language) | SELECT, INSERT, UPDATE, DELETE | 저장된 자료를 조회, 삽입, 수정, 삭제. (Ngôn ngữ thao tác dữ liệu - Nội dung). | Dùng để Thêm, Sửa, Xóa, Lấy dữ liệu bên trong bảng. Giống như việc sắp xếp đồ đạc trong nhà. |
+| **DML** (Data Manipulation Language) | SELECT, INSERT, cập nhật (update / 업데이트), DELETE | 저장된 자료를 조회, 삽입, 수정, 삭제. (Ngôn ngữ thao tác dữ liệu - Nội dung). | Dùng để Thêm, Sửa, Xóa, Lấy dữ liệu bên trong bảng. Giống như việc sắp xếp đồ đạc trong nhà. |
 | **DCL** (Data Control Language) | GRANT, REVOKE | 데이터 보안과 권한 제어. (Ngôn ngữ điều khiển dữ liệu - Quyền). | Dùng để cấp quyền hoặc thu hồi quyền. |
-| **TCL** (Transaction Control Language) | COMMIT, ROLLBACK, SAVEPOINT | 트랜잭션의 확정, 취소, 부분 복귀. (Ngôn ngữ điều khiển giao dịch). | Dùng để xác nhận, hoàn tác hoặc đặt điểm khôi phục giao dịch. |
+| **TCL** (Transaction Control Language) | lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT | 트랜잭션의 확정, 취소, 부분 복귀. (Ngôn ngữ điều khiển giao dịch). | Dùng để xác nhận, hoàn tác hoặc đặt điểm khôi phục giao dịch. |
 
 > 💡 **Mẹo ghi nhớ:**
 > DDL: **CADT** (Create, Alter, Drop, Truncate - "Cắt" cấu trúc).
@@ -451,6 +565,10 @@ Dùng để tăng tốc độ tìm kiếm.
 > DCL: **GR** (Grant, Revoke - "Gác quyền"). TCL: **CRS** (Commit, Rollback, Savepoint - "Chốt/Rút/Save").
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **4. SQL 문법의 종류 (Các loại cú pháp SQL)**, chuyển sang **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -495,9 +613,13 @@ ORDER BY total DESC;
 
 ---
 
+> **Mạch chuyển:** Từ **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**, chuyển sang **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 150-155. 데이터 조작어 (DML) 확장 및 조건 연산자
 - **DELETE (150):** 튜플을 삭제. `DELETE FROM 테이블명 [WHERE 조건];`
-- **UPDATE (151):** 튜플 내용 변경. `UPDATE 테이블명 SET 속성명 = 데이터 [WHERE 조건];`
+- **cập nhật (update / 업데이트) (151):** 튜플 내용 변경. `UPDATE 테이블명 SET 속성명 = 데이터 [WHERE 조건];`
 - **SELECT (152, 153):** 데이터 검색. `SELECT [DISTINCT] 속성명 FROM 테이블명 [WHERE] [GROUP BY] [HAVING] [ORDER BY ASC|DESC];`
 - **LIKE (154):** 문자 패턴 일치 검색.
   - `%`: 모든 문자
@@ -506,7 +628,7 @@ ORDER BY total DESC;
 - **BETWEEN (155):** 두 숫자 사이의 값 검색.
 - **VI (Vietnamese) (Tiếng Việt):** Mở rộng DML và toán tử điều kiện.
   - DELETE: Xóa dữ liệu (hàng).
-  - UPDATE: Cập nhật dữ liệu.
+  - cập nhật (update / 업데이트): Cập nhật dữ liệu.
   - SELECT: Truy vấn dữ liệu (DISTINCT: Loại bỏ trùng lặp).
   - LIKE: Tìm kiếm theo mẫu ký tự. `%` đại diện cho chuỗi, `_` đại diện 1 ký tự, `#` đại diện 1 số.
   - BETWEEN: Trong khoảng giá trị.
@@ -514,10 +636,18 @@ ORDER BY total DESC;
 
 ---
 
+> **Mạch chuyển:** Từ **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**, chuyển sang **193. 뷰 (View)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 193. 뷰 (View)
 - 기본 테이블로부터 유도된 가상 테이블 (물리적 구현 X).
 - 장점: 논리적 데이터 독립성, 보안 강화. 단점: 인덱스 불가, 뷰 정의 변경 불가, 갱신 제약.
-- **VI (Vietnamese) (Tiếng Việt):** Khung nhìn (View). Bảng ảo. Ưu điểm: Độc lập dữ liệu, bảo mật. Nhược điểm: Không có index độc lập, khó cập nhật.
+- **VI (Vietnamese) (Tiếng Việt):** Khung nhìn (View). Bảng ảo. Ưu điểm: Độc lập dữ liệu, bảo mật. Nhược điểm: Không có chỉ mục (index / 인덱스) độc lập, khó cập nhật.
+
+---
+
+> **Mạch chuyển:** Từ **193. 뷰 (View)**, chuyển sang **8. 서브쿼리와 뷰 (Truy vấn con và View)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -532,15 +662,23 @@ ORDER BY total DESC;
 - `CREATE VIEW 뷰명 AS (SELECT문);`
 - `DROP VIEW 뷰명;`
 - **장점 (Ưu điểm):** Bảo mật (chỉ cho xem cột cần thiết), Đơn giản hóa truy vấn phức tạp, Đảm bảo tính toàn vẹn dữ liệu.
-- **단점 (Nhược điểm):** Không thể sửa đổi cấu trúc dễ dàng, cơ bản là Read Only, **Không thể gắn Index (인덱스 불가능)**.
+- **단점 (Nhược điểm):** Không thể sửa đổi cấu trúc dễ dàng, cơ bản là Read Only, **Không thể gắn chỉ mục (index / 인덱스)**.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **8. 서브쿼리와 뷰 (Truy vấn con và View)**, chuyển sang **191-192. 인덱스 (Index)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 191-192. 인덱스 (Index)
 - 데이터 접근을 빠르게 하기 위한 <키 값, 포인터> 구조. DDL로 제어. 트리 기반(B+ 트리), 비트맵, 함수 기반, 도메인 인덱스 등.
-- **VI (Vietnamese) (Tiếng Việt):** Chỉ mục (Index). Cấu trúc <Khóa, Con trỏ> giúp truy cập nhanh. Sử dụng B+ Tree, Bitmap...
+- **VI (Vietnamese) (Tiếng Việt):** chỉ mục (index / 인덱스). Cấu trúc <Khóa, Con trỏ> giúp truy cập nhanh. Sử dụng B+ cây (tree / 트리), Bitmap...
+
+---
+
+> **Mạch chuyển:** Từ **191-192. 인덱스 (Index)**, chuyển sang **136-137. 분산 데이터베이스 (Distributed DB)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -551,9 +689,17 @@ ORDER BY total DESC;
 
 ---
 
+> **Mạch chuyển:** Từ **136-137. 분산 데이터베이스 (Distributed DB)**, chuyển sang **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 195-196. 분산 데이터베이스 목표 (Distributed DB Goals)
 - 위치 투명성(Location), 중복 투명성(Replication), 병행 투명성(Concurrency), 장애 투명성(Failure).
 - **VI (Vietnamese) (Tiếng Việt):** Mục tiêu CSDL phân tán (Tính trong suốt về: vị trí, nhân bản, đồng thời, sự cố).
+
+---
+
+> **Mạch chuyển:** Từ **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**, chuyển sang **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -563,6 +709,10 @@ ORDER BY total DESC;
 - **VI (Vietnamese) (Tiếng Việt):** Ưu nhược điểm của CSDL phân tán.
   - Ưu điểm: Độc lập cục bộ, tăng chia sẻ, tin cậy cao, dễ mở rộng.
   - Nhược điểm: Phức tạp, khó thiết kế, tăng chi phí và lỗi tiềm ẩn.
+
+---
+
+> **Mạch chuyển:** Từ **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, chuyển sang **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -583,9 +733,13 @@ Dữ liệu phân bố ở nhiều nơi (máy chủ khác nhau) nhưng người 
 1. **위치 투명성 (Location):** Người dùng không cần biết dữ liệu nằm ở máy chủ nào.
 2. **중복(복제) 투명성 (Replication):** Không cần biết dữ liệu được nhân bản ra sao.
 3. **병행 투명성 (Concurrency):** Nhiều người truy cập cùng lúc vẫn không bị lỗi kết quả.
-4. **장애 투명성 (Failure):** Một Node chết, toàn hệ thống vẫn hoạt động bình thường.
+4. **장애 투명성 (Failure):** Một nút (node / 노드) chết, toàn hệ thống vẫn hoạt động bình thường.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**, chuyển sang **201-203. 스토리지 시스템 (Storage Systems)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -600,12 +754,20 @@ Dữ liệu phân bố ở nhiều nơi (máy chủ khác nhau) nhưng người 
 
 ---
 
+> **Mạch chuyển:** Từ **201-203. 스토리지 시스템 (Storage Systems)**, chuyển sang **198. 암호화 심화 (Encryption Deep Dive)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 198. 암호화 심화 (Encryption Deep Dive)
 - **개인키(비밀키) 암호 방식 (Private/Symmetric Key):** 암호화와 복호화 키가 동일. 단일키, 대칭 암호. (예: DES)
 - **공개키 암호 방식 (Public/Asymmetric Key):** 암호화 키는 공개(Public), 복호화 키는 비밀(Secret). 비대칭 암호. (예: RSA)
 - **VI (Vietnamese) (Tiếng Việt):** Mã hóa dữ liệu.
   - Khóa cá nhân (Đối xứng): Khóa mã hóa và giải mã giống nhau (DES).
   - Khóa công khai (Bất đối xứng): Khóa mã hóa công khai, khóa giải mã bí mật (RSA).
+
+---
+
+> **Mạch chuyển:** Từ **198. 암호화 심화 (Encryption Deep Dive)**, chuyển sang **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -624,6 +786,10 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 - **복호화 (Decryption):** Giải mã từ Ciphertext về Plaintext.
 - **키 (Key):** Chìa khóa dùng để mã hóa và giải mã.
 ---
+
+---
+
+> **Mạch chuyển:** Từ **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, chuyển sang **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -654,14 +820,22 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 
 ---
 
+> **Mạch chuyển:** Từ **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**, chuyển sang **106-107. 튜플(Tuple)과 속성(Attribute)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 106-107. 튜플(Tuple)과 속성(Attribute)
 - **튜플 (Tuple):** 릴레이션을 구성하는 행(Row). 튜플의 수 = 카디널리티 (Cardinality).
 - **속성 (Attribute):** 데이터베이스를 구성하는 가장 작은 논리적 단위. 열(Column). 속성의 수 = 디그리 (Degree).
 - **VI (Vietnamese) (Tiếng Việt):** Tuple (Hàng) và Attribute (Cột).
   - Tuple: Hàng. Số hàng = Cardinality.
-  - Attribute: Cột, đơn vị logic nhỏ nhất. Số cột = Degree.
+  - Attribute: Cột, đơn vị lô-gic (logic / 논리) nhỏ nhất. Số cột = Degree.
 - **Example:** 학생 테이블의 '홍길동' 데이터 한 줄이 튜플, '이름', '학번' 열이 속성. / Một dòng dữ liệu 'Hong Gil-dong' là Tuple, các cột 'Tên', 'Mã SV' là Attribute.
 - 💡 **Mẹo ghi nhớ:** Tu-Car (Tuple = Cardinality), At-De (Attribute = Degree).
+
+---
+
+> **Mạch chuyển:** Từ **106-107. 튜플(Tuple)과 속성(Attribute)**, chuyển sang **108. 도메인 (Domain)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -669,6 +843,10 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 - 하나의 애트리뷰트가 취할 수 있는 같은 타입의 원자(Atomic) 값들의 집합.
 - **VI (Vietnamese) (Tiếng Việt):** Miền giá trị. Tập hợp các giá trị nguyên tử (không thể chia nhỏ) cùng kiểu mà một thuộc tính có thể nhận.
 - **Example:** '성별' 속성의 도메인은 {남, 여}. / Miền giá trị của thuộc tính 'Giới tính' là {Nam, Nữ}.
+
+---
+
+> **Mạch chuyển:** Từ **108. 도메인 (Domain)**, chuyển sang **178. 관계해석 (Relational Calculus)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -681,10 +859,18 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 
 ---
 
+> **Mạch chuyển:** Từ **178. 관계해석 (Relational Calculus)**, chuyển sang **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)
 - **함수적 종속 (Functional Dependency):** X -> Y (X가 결정되면 Y가 결정됨).
 - **이행적 종속 (Transitive Dependency):** A -> B, B -> C 일 때 A -> C 인 관계.
 - **VI (Vietnamese) (Tiếng Việt):** Phụ thuộc hàm và Phụ thuộc bắc cầu.
+
+---
+
+> **Mạch chuyển:** Từ **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**, chuyển sang **186. 시스템 카탈로그 (System Catalog)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -697,16 +883,28 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 
 ---
 
+> **Mạch chuyển:** Từ **186. 시스템 카탈로그 (System Catalog)**, chuyển sang **190. CRUD 분석** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 190. CRUD 분석
-- Create, Read, Update, Delete 연산의 매트릭스 분석으로 데이터 양 유추.
+- Create, Read, cập nhật (update / 업데이트), Delete 연산의 매트릭스 분석으로 데이터 양 유추.
 - **VI (Vietnamese) (Tiếng Việt):** Phân tích ma trận CRUD (Tạo, Đọc, Sửa, Xóa).
+
+---
+
+> **Mạch chuyển:** Từ **190. CRUD 분석**, chuyển sang **194. 파티션 (Partition)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
 ## 194. 파티션 (Partition)
 - 대용량 테이블/인덱스를 작은 논리적 단위로 분할.
 - 종류: 범위(Range - 예: 월별), 해시(Hash), 조합(Composite), 목록(List), 라운드 로빈(Round Robin).
-- **VI (Vietnamese) (Tiếng Việt):** Phân vùng dữ liệu (Partition). Chia bảng lớn thành phần nhỏ: theo Khoảng (Range), Băm (Hash), Danh sách (List)...
+- **VI (Vietnamese) (Tiếng Việt):** Phân vùng dữ liệu (Partition). Chia bảng lớn thành phần nhỏ: theo Khoảng (Range), băm (hash / 해시), danh sách (list / 목록)...
+
+---
+
+> **Mạch chuyển:** Từ **194. 파티션 (Partition)**, chuyển sang **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -722,6 +920,10 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
   - DAC: Dựa trên danh tính (Người dùng cấp quyền).
   - MAC: Dựa trên cấp độ bảo mật (Hệ thống cấp quyền). Các mô hình: Bell-LaPadula (Bảo mật), Biba (Toàn vẹn)...
   - RBAC: Dựa trên vai trò (Role).
+
+---
+
+> **Mạch chuyển:** Từ **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**, chuyển sang **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -744,6 +946,10 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 
 ---
 
+> **Mạch chuyển:** Từ **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**, chuyển sang **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
 ### 6.1 DDL 문법 (Cú pháp DDL)
@@ -754,16 +960,16 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
   - `DROP` (Xóa cột): `ALTER TABLE table_name DROP col_name;`
   - `RENAME COLUMN`: Đổi tên cột.
 - `DROP TABLE` [CASCADE | RESTRICT]: Xóa bảng. CASCADE (xóa luôn đối tượng phụ thuộc), RESTRICT (không xóa nếu đang bị tham chiếu).
-- `TRUNCATE TABLE`: Xóa nhanh toàn bộ dữ liệu, giữ lại cấu trúc, **không thể ROLLBACK**.
+- `TRUNCATE TABLE`: Xóa nhanh toàn bộ dữ liệu, giữ lại cấu trúc, **không thể quay lui (rollback / 롤백)**.
 
 ### 6.2 DCL 문법 (Cú pháp DCL)
 - `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
 - `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
 
 ### 6.3 TCL 문법 (Cú pháp TCL)
-- `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
+- `COMMIT`: Lưu vĩnh viễn giao dịch (transaction / 트랜잭션) thành công.
 - `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
-- `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
+- `SAVEPOINT`: Đặt điểm lưu để quay lui (rollback / 롤백) về điểm đó thay vì toàn bộ.
 
 ### 6.3 DML 문법 (Cú pháp DML)
 - `SELECT [DISTINCT] 속성명 FROM 테이블 WHERE 조건 GROUP BY 속성명 HAVING 조건 ORDER BY 속성명 [ASC|DESC];`
@@ -781,6 +987,10 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 
 ---
 
+> **Mạch chuyển:** Từ **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**, chuyển sang **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
 
 ### 집합 연산자 (Toán tử tập hợp)
@@ -790,13 +1000,17 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 - `MINUS` / `EXCEPT`: Hiệu (Lấy bảng 1 trừ đi các dòng có trong bảng 2).
 
 ### 조인 (JOIN)
-- **INNER JOIN**: Lấy các dòng có dữ liệu khớp nhau (Giao). `SELECT * FROM A INNER JOIN B ON A.id = B.id;`
-- **OUTER JOIN (LEFT, RIGHT, FULL)**: Lấy cả dữ liệu không khớp. Bên thiếu dữ liệu sẽ điền NULL.
+- **INNER phép nối (join / 조인)**: Lấy các dòng có dữ liệu khớp nhau (Giao). `SELECT * FROM A INNER JOIN B ON A.id = B.id;`
+- **OUTER phép nối (join / 조인) (LEFT, RIGHT, FULL)**: Lấy cả dữ liệu không khớp. Bên thiếu dữ liệu sẽ điền NULL.
   - Cú pháp Oracle (+): `WHERE A.id = B.id(+)` (Đây là LEFT OUTER JOIN vì dấu (+) nằm ở bảng B, tức là bảng B thiếu cũng không sao).
-- **SELF JOIN**: Bảng tự JOIN với chính nó. (Dùng `AS` để tạo bí danh).
-- **CROSS JOIN**: Tích Đề-các (Cartesian product), bắt cặp tất cả các dòng của 2 bảng.
+- **SELF phép nối (join / 조인)**: Bảng tự phép nối (join / 조인) với chính nó. (Dùng `AS` để tạo bí danh).
+- **CROSS phép nối (join / 조인)**: Tích Đề-các (Cartesian product), bắt cặp tất cả các dòng của 2 bảng.
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**, chuyển sang **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -812,13 +1026,17 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 | 연산자 (Toán tử) | 기호 (Ký hiệu) | 설명 (Mô tả) |
 |---|---|---|
 | **Select (선택)** | **σ (Sigma)** | Lấy các **Hàng (Tuple)** thỏa mãn điều kiện (Phép toán nằm ngang - 수평). |
-| **Project (추출)** | **π (Pi)** | Lấy các **Cột (Attribute)** được chỉ định, loại bỏ trùng lặp (Phép toán dọc - 수직). |
-| **Join (조인)** | **⋈ (Bowtie)** | Kết hợp 2 bảng dựa trên thuộc tính chung. |
+| **dự án (project / 프로젝트)** | **π (Pi)** | Lấy các **Cột (Attribute)** được chỉ định, loại bỏ trùng lặp (Phép toán dọc - 수직). |
+| **phép nối (join / 조인)** | **⋈ (Bowtie)** | Kết hợp 2 bảng dựa trên thuộc tính chung. |
 | **Division (나누기)** | **÷ (Divide)** | Trả về các 튜플 của bảng R mà khớp với tất cả giá trị thuộc tính của bảng S. |
 
 > 💡 **Mẹo ghi nhớ:** **Se-Hàng, Pro-Cột** (Select = Hàng/Tuple, Project = Cột/Attribute).
 
 ---
+
+---
+
+> **Mạch chuyển:** Từ **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**, chuyển sang **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
 
 ---
 
@@ -836,17 +1054,21 @@ Quản lý trạng thái lỗi trong quá trình chuyển đổi:
 - **Open (Mở):** Phát hiện lỗi, chưa phân tích.
 - **Assigned (Đã giao):** Giao cho lập trình viên sửa.
 - **Fixed (Đã sửa):** Đã sửa xong.
-- **Closed (Đóng):** Đã test lại và xác nhận bình thường.
+- **Closed (Đóng):** Đã kiểm thử (test / 테스트) lại và xác nhận bình thường.
 - **Deferred (Trì hoãn):** Quyết định chưa sửa lúc này (hoặc không phải lỗi).
 
 ---
 
 ---
 
+> **Mạch chuyển:** Từ **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**, chuyển sang **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** để mở rộng cùng một chuỗi khái niệm; hãy giữ lại tiêu chí phân biệt vừa học trước khi đọc mục mới.
+
+---
+
 ## 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
 
 ### CRUD 분석 (Phân tích CRUD)
-- Tạo ma trận (Matrix) giữa **Process (Tiến trình)** và **Table (Bảng)**.
+- Tạo ma trận (matrix / 행렬) giữa **tiến trình (process / 프로세스)** và **bảng (table / 테이블)**.
 - Đánh dấu **C**reate, **R**ead, **U**pdate, **D**elete để xem bảng nào bị thao tác nhiều/ít, phát hiện bảng bị bỏ sót (ít nhất mỗi bảng phải có 1 thao tác).
 
 ### MyBatis (프레임워크)

@@ -1,5 +1,7 @@
 # 04. Luật dân sự, hợp đồng và quyền người tiêu dùng
 
+> **Mạch đọc:** Đặt **04. Luật dân sự, hợp đồng và quyền người tiêu dùng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Luật dân sự (민법) là nền của nhiều quan hệ đời sống** sang **2. Hợp đồng không chỉ là tờ giấy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## 1. Luật dân sự (민법) là nền của nhiều quan hệ đời sống
 
 Rất nhiều tranh chấp đời sống không bắt đầu từ một “luật đặc biệt”, mà từ quan hệ dân sự: mua bán, vay tiền, thuê nhà, đặt cọc, bồi thường thiệt hại, ủy quyền, nghĩa vụ thanh toán, chấm dứt hợp đồng.
@@ -15,6 +17,9 @@ Bộ luật Dân sự Hàn Quốc (민법) tạo ra khung chung cho:
 - gia đình và thừa kế.
 
 Luật chuyên ngành có thể bổ sung hoặc thay đổi quy tắc chung trong phạm vi riêng. Ví dụ thuê nhà chịu thêm `주택임대차보호법`; tiêu dùng chịu thêm các luật bảo vệ người tiêu dùng; lao động chịu `근로기준법`.
+
+
+> **Chuyển mạch:** Từ **1. Luật dân sự (민법) là nền của nhiều quan hệ đời sống**, ta sang **2. Hợp đồng không chỉ là tờ giấy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Hợp đồng không chỉ là tờ giấy
 
@@ -33,6 +38,9 @@ ai là bên ký?
 ```
 
 Một điều khoản viết trong hợp đồng không tự động hợp pháp chỉ vì hai bên đã ký. Một số quy định bảo vệ người thuê, người lao động hoặc người tiêu dùng có tính bắt buộc.
+
+
+> **Chuyển mạch:** Từ **2. Hợp đồng không chỉ là tờ giấy**, ta sang **3. Từ khóa hợp đồng tiếng Hàn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Từ khóa hợp đồng tiếng Hàn
 
@@ -53,6 +61,9 @@ Một điều khoản viết trong hợp đồng không tự động hợp pháp
 
 `해지` và `해제` thường bị dịch giống nhau trong hội thoại, nhưng ý nghĩa pháp lý có thể khác. Khi đọc hợp đồng, nên giữ nguyên từ Hàn.
 
+
+> **Chuyển mạch:** Từ **3. Từ khóa hợp đồng tiếng Hàn**, ta sang **4. Trước khi ký: kiểm tra người, quyền và đối tượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. Trước khi ký: kiểm tra người, quyền và đối tượng
 
 Một checklist chung:
@@ -72,6 +83,9 @@ Một checklist chung:
 
 Với thuê nhà, cần thêm kiểm tra đăng ký bất động sản (등기부), chủ sở hữu và quyền bảo đảm. Với lao động, cần xem `근로계약서` và quy định bắt buộc của luật lao động.
 
+
+> **Chuyển mạch:** Từ **4. Trước khi ký: kiểm tra người, quyền và đối tượng**, ta sang **5. Chứng cứ quan trọng hơn trí nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 5. Chứng cứ quan trọng hơn trí nhớ
 
 Khi tranh chấp xảy ra, khả năng chứng minh sự kiện là yếu tố thực tế rất lớn. Các loại chứng cứ thường có giá trị:
@@ -86,7 +100,10 @@ Khi tranh chấp xảy ra, khả năng chứng minh sự kiện là yếu tố t
 - thông báo chính thức;
 - nội dung tư vấn của doanh nghiệp.
 
-Nên lưu file gốc và thời gian, không chỉ chụp màn hình rời rạc.
+Nên lưu tệp (file / 파일) gốc và thời gian, không chỉ chụp màn hình rời rạc.
+
+
+> **Chuyển mạch:** Từ **5. Chứng cứ quan trọng hơn trí nhớ**, ta sang **6. Quyền người tiêu dùng (소비자 권리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. Quyền người tiêu dùng (소비자 권리)
 
@@ -100,6 +117,9 @@ Nguồn thực tế quan trọng:
 
 Theo thông tin chính thức của 한국소비자원 trong năm 2026, khi phát sinh thiệt hại, người tiêu dùng nên chuẩn bị **giao dịch và chứng từ** trước khi yêu cầu tư vấn hoặc 피해구제.
 
+
+> **Chuyển mạch:** Từ **6. Quyền người tiêu dùng (소비자 권리)**, ta sang **7. 환불, 청약철회, 계약해지 không phải một khái niệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 7. `환불`, `청약철회`, `계약해지` không phải một khái niệm
 
 Trong đời sống, mọi người thường nói “refund”, nhưng pháp luật phân biệt:
@@ -111,6 +131,9 @@ Trong đời sống, mọi người thường nói “refund”, nhưng pháp lu
 - hoàn tiền theo chính sách tự nguyện của doanh nghiệp.
 
 Thời hạn và điều kiện phụ thuộc loại giao dịch. Không nên áp một quy tắc “7 ngày” hoặc “14 ngày” cho mọi hàng hóa/dịch vụ.
+
+
+> **Chuyển mạch:** Từ **7. 환불, 청약철회, 계약해지 không phải một khái niệm**, ta sang **8. Điều khoản mẫu và điều khoản bất lợi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Điều khoản mẫu và điều khoản bất lợi
 
@@ -128,6 +151,9 @@ Một điều khoản càng quan trọng càng nên hỏi rõ trước khi ký, 
 연체료
 ```
 
+
+> **Chuyển mạch:** Từ **8. Điều khoản mẫu và điều khoản bất lợi**, ta sang **9. Tranh chấp dân sự: từ thương lượng đến tòa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 9. Tranh chấp dân sự: từ thương lượng đến tòa
 
 Một đường xử lý có thể là:
@@ -142,14 +168,20 @@ thông báo bằng văn bản
 
 Không phải mọi vụ đều cần đi tòa. Đồng thời, cơ chế hòa giải hoặc tư vấn không tự động bảo toàn mọi thời hạn pháp lý.
 
+
+> **Chuyển mạch:** Từ **9. Tranh chấp dân sự: từ thương lượng đến tòa**, ta sang **10. Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 10. Nguồn chính thức
 
 - 민법 và luật liên quan: https://www.law.go.kr/
 - 찾기쉬운 생활법령정보: https://www.easylaw.go.kr/
-- 소비자24: https://www.consumer.go.kr/
+- 소비자24: https://www.bên tiêu thụ (consumer / 소비자).go.kr/
 - 한국소비자원: https://www.kca.go.kr/
 - 공정거래위원회: https://www.ftc.go.kr/
 - 대한민국 법원: https://www.scourt.go.kr/
+
+
+> **Chuyển mạch:** Từ **10. Nguồn chính thức**, ta sang **11. Câu hỏi tự kiểm tra** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 11. Câu hỏi tự kiểm tra
 
@@ -162,3 +194,5 @@ Khi đọc một hợp đồng, bạn có thể trả lời chính xác năm câ
 5. Luật bắt buộc nào có thể mạnh hơn điều khoản hợp đồng?
 
 Nếu chưa trả lời được, hợp đồng chưa được đọc xong.
+
+> **Bàn giao:** Sau **11. Câu hỏi tự kiểm tra**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

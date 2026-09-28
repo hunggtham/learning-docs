@@ -1,16 +1,19 @@
-# Memory, web và injection vulnerabilities
+# Bộ nhớ (memory / 메모리), web và injection vulnerabilities
 
-Software vulnerability (취약점 / lỗ hổng) xuất hiện khi attacker-controlled input/state vượt qua assumption của program và đạt effect không được phép. Học từng CVE không đủ; cần nhận ra recurring structures: memory boundary violations, code/data confusion, trust-boundary validation failures và authorization gaps.
+> **Mạch đọc:** Đọc **bộ nhớ (memory / 메모리), web và injection vulnerabilities** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **bộ nhớ (memory / 메모리) corruption** sang **Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Memory corruption
 
-Trong memory-unsafe languages, out-of-bounds write, use-after-free, double free và integer overflow có thể corrupt control/data. Stack buffer overflow kinh điển có thể overwrite return metadata; modern mitigations gồm stack canaries, ASLR, NX/DEP, CFI, hardened allocators.
+Software vulnerability (취약점 / lỗ hổng) xuất hiện khi attacker-controlled đầu vào (input / 입력)/trạng thái (state / 상태) vượt qua giả định (assumption / 가정) của program và đạt tác động (effect / 효과) không được phép. Học từng CVE không đủ; cần nhận ra recurring structures: bộ nhớ (memory / 메모리) ranh giới (boundary / 경계) violations, mã (code / 코드)/dữ liệu (data / 데이터) confusion, trust-boundary kiểm tra hợp lệ (validation / 검증) failures và authorization gaps.
 
-Mitigations tăng difficulty nhưng không thay fix root bug. Memory-safe languages loại nhiều classes này by construction/checks, nhưng native libraries/unsafe blocks vẫn là boundary.
+## Bộ nhớ (memory / 메모리) corruption
 
-## Injection: khi data bị hiểu thành code/command
+Trong memory-unsafe languages, out-of-bounds ghi (write / 쓰기), use-after-free, double free và integer overflow có thể corrupt điều khiển (control / 제어)/dữ liệu (data / 데이터). ngăn xếp (stack / 스택) buffer overflow kinh điển có thể overwrite return siêu dữ liệu (metadata / 메타데이터); hiện đại (modern / 현대적) mitigations gồm ngăn xếp (stack / 스택) canaries, ASLR, NX/DEP, CFI, hardened allocators.
 
-SQL injection xảy ra khi attacker input được concatenated vào query syntax, làm dữ liệu trở thành SQL code. Parameterized query giữ query structure và values separate.
+Mitigations tăng difficulty nhưng không thay fix gốc (root / 루트) bug. Memory-safe languages loại nhiều classes này by construction/checks, nhưng bản địa (native / 네이티브) libraries/unsafe blocks vẫn là ranh giới (boundary / 경계).
+
+## Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command
+
+SQL injection xảy ra khi attacker đầu vào (input / 입력) được concatenated vào truy vấn (query / 쿼리) cú pháp (syntax / 문법), làm dữ liệu trở thành SQL mã (code / 코드). Parameterized truy vấn (query / 쿼리) giữ truy vấn (query / 쿼리) cấu trúc (structure / 구조) và values separate.
 
 ```sql
 -- nguy hiểm về pattern
@@ -20,58 +23,60 @@ SQL injection xảy ra khi attacker input được concatenated vào query synta
 SELECT ... WHERE name = ?
 ```
 
-Same pattern xuất hiện shell injection, LDAP injection, template injection: **code and data channels bị trộn**.
+Same mẫu (pattern / 패턴) xuất hiện shell injection, LDAP injection, template injection: **mã (code / 코드) and dữ liệu (data / 데이터) channels bị trộn**.
 
-Parameterization không giải dynamic identifiers/order clauses tự động; allowlist/structured APIs cần cho syntax positions không parameterizable.
+Parameterization không giải động (dynamic / 동적) identifiers/thứ tự (order / 순서) clauses tự động; allowlist/structured APIs cần cho cú pháp (syntax / 문법) positions không parameterizable.
 
 ## XSS
 
-Cross-Site Scripting cho attacker-controlled content execute trong browser origin context. Stored, reflected, DOM-based variants khác source/flow nhưng root issue là untrusted data vào executable HTML/JS context without proper context-sensitive escaping/sanitization.
+Cross-Site Scripting cho attacker-controlled content execute trong trình duyệt (browser / 브라우저) origin ngữ cảnh (context / 맥락). Stored, reflected, DOM-based variants khác nguồn (source / 소스)/luồng (flow / 흐름) nhưng gốc (root / 루트) issue là untrusted dữ liệu (data / 데이터) vào executable HTML/JS ngữ cảnh (context / 맥락) without proper context-sensitive escaping/sanitization.
 
-Output encoding phải phù hợp HTML text, attribute, JavaScript, URL contexts. CSP là defense-in-depth, không thay correct encoding.
+Đầu ra (output / 출력) encoding phải phù hợp HTML văn bản (text / 텍스트), attribute, JavaScript, URL contexts. CSP là defense-in-depth, không thay correct encoding.
 
 ## CSRF
 
-Browser tự gửi cookies tới matching site; malicious page có thể trigger request nếu server chỉ dựa cookie. SameSite, anti-CSRF token, origin validation và requiring custom headers/API patterns là mitigations theo context.
+Trình duyệt (browser / 브라우저) tự gửi cookies tới matching site; malicious page có thể trigger yêu cầu (request / 요청) nếu máy chủ (server / 서버) chỉ dựa cookie. SameSite, anti-CSRF đơn vị từ (token / 토큰), origin kiểm tra hợp lệ (validation / 검증) và requiring custom headers/API patterns là mitigations theo ngữ cảnh (context / 맥락).
 
-CSRF khác XSS: XSS chạy code trong trusted origin; CSRF lợi dụng ambient authority từ browser.
+CSRF khác XSS: XSS chạy mã (code / 코드) trong trusted origin; CSRF lợi dụng ambient authority từ trình duyệt (browser / 브라우저).
 
 ## SSRF
 
-Server-Side Request Forgery khiến server request URL attacker-controlled, có thể reach internal metadata/services không public. Mitigation cần allowlist destinations/protocols, network egress controls, DNS/IP validation cẩn thận và metadata protections.
+Server-Side yêu cầu (request / 요청) Forgery khiến máy chủ (server / 서버) yêu cầu (request / 요청) URL attacker-controlled, có thể reach nội bộ (internal / 내부) siêu dữ liệu (metadata / 메타데이터)/services không công khai (public / 공개). Mitigation cần allowlist destinations/protocols, mạng (network / 네트워크) egress controls, DNS/IP kiểm tra hợp lệ (validation / 검증) cẩn thận và siêu dữ liệu (metadata / 메타데이터) protections.
 
-## Path traversal
+## Đường dẫn (path / 경로) traversal
 
-Input như `../../etc/passwd` có thể escape intended directory nếu path join/canonicalization sai. Safe design use generated IDs/storage APIs, normalize và enforce resolved path under allowed root. String prefix check naive có edge cases symbolic links/encoding/platform.
+Đầu vào (input / 입력) như `../../etc/passwd` có thể escape intended directory nếu đường dẫn (path / 경로) phép nối (join / 조인)/canonicalization sai. Safe thiết kế (design / 설계) use generated IDs/lưu trữ (storage / 저장소) APIs, normalize và enforce resolved đường dẫn (path / 경로) under allowed gốc (root / 루트). String prefix check naive có edge cases symbolic links/encoding/nền tảng (platform / 플랫폼).
 
 ## Deserialization
 
-Unsafe deserialization of attacker data can instantiate unexpected object graphs or trigger gadget chains in ecosystems supporting polymorphic/object deserialization. Prefer simple data formats + explicit schemas/types; never treat untrusted serialized object stream as trustworthy code structure.
+Unsafe deserialization of attacker dữ liệu (data / 데이터) can instantiate unexpected đối tượng (object / 객체) graphs or trigger gadget chains in ecosystems supporting polymorphic/đối tượng (object / 객체) deserialization. Prefer simple dữ liệu (data / 데이터) formats + tường minh (explicit / 명시적) schemas/types; never treat untrusted serialized đối tượng (object / 객체) stream as trustworthy mã (code / 코드) cấu trúc (structure / 구조).
 
 ## Race vulnerabilities
 
-TOCTOU — Time Of Check To Time Of Use: check permission/path/state rồi attacker changes before use. Atomic OS APIs, file descriptors, transactions hoặc locks reduce gap. Security often requires same atomicity reasoning as concurrency correctness.
+TOCTOU — thời gian (time / 시간) Of Check To thời gian (time / 시간) Of Use: check permission/đường dẫn (path / 경로)/trạng thái (state / 상태) rồi attacker changes before use. Atomic OS APIs, tệp (file / 파일) descriptors, transactions hoặc locks reduce gap. bảo mật (security / 보안) often requires same atomicity lập luận (reasoning / 추론) as tính đồng thời (concurrency / 동시성) tính đúng đắn (correctness / 정확성).
 
-## Dependency/supply chain
+## Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)
 
-Vulnerability can enter through dependency, build script, package registry compromise or CI secret leakage. Pin versions/check integrity, minimize dependencies, SBOM/scanning, protected CI credentials and reproducible build practices reduce risk.
+Vulnerability can enter through phụ thuộc (dependency / 의존성), bản dựng (build / 빌드) script, gói (package / 패키지) registry compromise or CI secret leakage. Pin versions/check integrity, minimize dependencies, SBOM/scanning, protected CI credentials and reproducible bản dựng (build / 빌드) practices reduce rủi ro (risk / 위험).
 
-## Input validation không phải universal sanitizer
+## Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer
 
-Validate semantic domain at boundary; encode when outputting into syntax context; parameterize code/data; authorize every resource action. One “sanitize()” function cannot safely cover SQL, HTML, shell, URL and JSON contexts.
+Validate ngữ nghĩa (semantic / 의미적) lĩnh vực (domain / 도메인) at ranh giới (boundary / 경계); encode when outputting into cú pháp (syntax / 문법) ngữ cảnh (context / 맥락); parameterize mã (code / 코드)/dữ liệu (data / 데이터); authorize every tài nguyên (resource / 자원) hành động (action / 동작). One “sanitize()” hàm (function / 함수) cannot safely cover SQL, HTML, shell, URL and JSON contexts.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Nhiều vulnerabilities là **boundary confusion**: data becomes code, untrusted identity becomes authorized, path escapes namespace, memory write escapes object. Hãy xác định parser/interpreter nào sẽ đọc input tiếp theo và giữ data ở đúng channel.
+> Nhiều vulnerabilities là **ranh giới (boundary / 경계) confusion**: dữ liệu (data / 데이터) becomes mã (code / 코드), untrusted định danh (identity / 식별자) becomes authorized, đường dẫn (path / 경로) escapes không gian tên (namespace / 네임스페이스), bộ nhớ (memory / 메모리) ghi (write / 쓰기) escapes đối tượng (object / 객체). Hãy xác định parser/trình thông dịch (interpreter / 인터프리터) nào sẽ đọc đầu vào (input / 입력) tiếp theo và giữ dữ liệu (data / 데이터) ở đúng channel.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“ORM ngăn mọi SQL injection.”** Raw queries/dynamic syntax vẫn có thể inject; parameterization principle mới quan trọng.
+**“ORM ngăn mọi SQL injection.”** Raw queries/động (dynamic / 동적) cú pháp (syntax / 문법) vẫn có thể inject; parameterization principle mới quan trọng.
 
-**“Frontend validation đủ vì user không nhập được giá trị xấu.”** Attacker gọi API trực tiếp; server must enforce.
+**“Frontend kiểm tra hợp lệ (validation / 검증) đủ vì người dùng (user / 사용자) không nhập được giá trị xấu.”** Attacker gọi API trực tiếp; máy chủ (server / 서버) must enforce.
 
-**“Escaping HTML một lần bảo vệ mọi context.”** JavaScript/URL/attribute contexts có rules khác.
+**“Escaping HTML một lần bảo vệ mọi ngữ cảnh (context / 맥락).”** JavaScript/URL/attribute contexts có rules khác.
 
 ## Kết nối
 
 [Compiler/language parsing](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md) giúp hiểu code-vs-data. [Identity/auth](./02_identity_authentication_and_authorization.md) giải authorization flaws. [Transactions/concurrency](../05_data_databases/02_transactions_acid_and_concurrency_control.md) cung cấp atomic boundaries chống một số race/TOCTOU patterns.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 threat models and security principles](./00_threat_models_and_security_principles.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,36 +1,45 @@
-# 20 — Comparative Case Studies: đọc lịch sử qua các hệ thống cụ thể
+# 20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể
 
-Các chapter 01–17 cung cấp period frame. File này là **application layer**: cùng một causal question được đặt vào nhiều vùng để kiểm tra mô hình có thực sự chuyển giao được hay không.
+> **Mạch đọc:** Đặt **20 — Comparative trường hợp (case / 사례) Studies: đọc lịch sử qua các hệ thống cụ thể** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **trường hợp (case / 사례) 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus** sang **Câu hỏi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Case 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus
+
+Các chapter 01–17 cung cấp period frame. tệp (file / 파일) này là **ứng dụng (application / 애플리케이션) tầng (layer / 계층)**: cùng một nhân quả (causal / 인과적) question được đặt vào nhiều vùng để kiểm tra mô hình có thực sự chuyển giao được hay không.
+
+## Trường hợp (case / 사례) 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus
 
 ### Câu hỏi
 
 Vì sao cùng dựa vào sông nhưng hình thái nhà nước, đô thị và bằng chứng quyền lực khác nhau?
 
-### Causal comparison
+### Nhân quả (causal / 인과적) comparison
 
-| Basin | Constraint chính | Hệ thống phối hợp | Rủi ro/giới hạn |
+| Basin | ràng buộc (constraint / 제약조건) chính | Hệ thống phối hợp | Rủi ro/giới hạn |
 | --- | --- | --- | --- |
 | Nile | nhịp lũ tương đối theo mùa, thung lũng hẹp | lịch, kho, lao động và kingship | phụ thuộc vào lũ và logistics dọc sông |
-| Mesopotamia | lũ thất thường, muối hoá, nhiều city-state | kênh, temple/palace, cạnh tranh thành bang | chiến tranh basin và maintenance cost |
+| Mesopotamia | lũ thất thường, muối hoá, nhiều city-state | kênh, temple/palace, cạnh tranh thành bang | chiến tranh basin và maintenance chi phí (cost / 비용) |
 | Indus | monsoon biến động, nhiều ecology | đô thị quy hoạch, craft/weight/trade | ít văn bản giải đọc được; không nên tự suy ra monarchy |
 
-**Bài học:** “hydraulic state” có thể giải thích một số investment vào nước, nhưng không đủ để suy ra cùng một bureaucracy. Cần đọc water cùng land tenure, trade, craft specialization, disease và legitimacy.
+**Bài học:** “hydraulic trạng thái (state / 상태)” có thể giải thích một số investment vào nước, nhưng không đủ để suy ra cùng một bureaucracy. Cần đọc water cùng land tenure, trade, craft specialization, disease và legitimacy.
 
-## Case 2 — Silk Roads và Indian Ocean
 
-Silk Roads phụ thuộc caravan, oasis, steppe corridor, tribute và translation; Indian Ocean phụ thuộc monsoon, port, ship technology, merchant diaspora và credit. Cả hai đều truyền hàng, người, text và bệnh, nhưng topology khác:
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 1 — Ba basin nông nghiệp: Nile, Mesopotamia và Indus**, ta sang **trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean
+
+Silk Roads phụ thuộc caravan, oasis, steppe corridor, tribute và translation; Indian Ocean phụ thuộc monsoon, cổng (port / 포트), ship technology, merchant diaspora và credit. Cả hai đều truyền hàng, người, văn bản (text / 텍스트) và bệnh, nhưng topology khác:
 
 ```text
 oasis/steppe → relay node → imperial protection → caravan risk
 port/monsoon → seasonal window → merchant partnership → maritime risk
 ```
-Trong cả hai mạng, broker địa phương và trust institution quan trọng hơn một “trung tâm toàn cầu” duy nhất. Một đế chế có thể bảo vệ corridor nhưng cũng tăng toll và militarize node. Khi chiến tranh hoặc plague làm đứt một route, flow thường chuyển sang route khác thay vì biến mất.
+Trong cả hai mạng, broker địa phương và trust institution quan trọng hơn một “trung tâm toàn cầu” duy nhất. Một đế chế có thể bảo vệ corridor nhưng cũng tăng toll và militarize nút (node / 노드). Khi chiến tranh hoặc plague làm đứt một tuyến (route / 경로), luồng (flow / 흐름) thường chuyển sang tuyến (route / 경로) khác thay vì biến mất.
 
-## Case 3 — Atlantic, plantation và slavery
 
-Atlantic system nối land, ship, credit, insurance, plantation, port, forced labor và consumer market. Sugar/cotton/tobacco không chỉ là crops; chúng là một **institutional bundle** gồm property law, racial status, violence, accounting và ecological exhaustion.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean**, ta sang **trường hợp (case / 사례) 3 — Atlantic, plantation và slavery** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 3 — Atlantic, plantation và slavery
+
+Atlantic hệ thống (system / 시스템) nối land, ship, credit, insurance, plantation, cổng (port / 포트), forced labor và bên tiêu thụ (consumer / 소비자) thị trường (market / 시장). Sugar/cotton/tobacco không chỉ là crops; chúng là một **institutional bundle** gồm thuộc tính (property / 속성) law, racial status, violence, accounting và ecological exhaustion.
 
 ```text
 land seizure → coerced labor → commodity export
@@ -38,11 +47,14 @@ land seizure → coerced labor → commodity export
 → resistance, abolition politics, emancipation constraint
 ```
 
-Người bị bắt, Indigenous communities, women, sailors và workers là actors chứ không chỉ là “labor input”. Abolition thay đổi law nhưng không tự xóa debt, racial hierarchy, land concentration hay coercive labor mới.
+Người bị bắt, Indigenous communities, women, sailors và workers là actors chứ không chỉ là “labor đầu vào (input / 입력)”. Abolition thay đổi law nhưng không tự xóa debt, racial hierarchy, land concentration hay coercive labor mới.
 
-## Case 4 — West Africa: vàng, Sahel, rừng và đô thị
 
-Các đế chế Ghana, Mali, Songhai và nhiều mạng coastal/forest cho thấy African history không phải phần phụ của Atlantic history. Gold, salt, cattle, grain, river transport, Islamic scholarship và local authority tạo các corridor khác nhau.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 3 — Atlantic, plantation và slavery**, ta sang **trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị
+
+Các đế chế Ghana, Mali, Songhai và nhiều mạng coastal/forest cho thấy African lịch sử (history / 이력) không phải phần phụ của Atlantic lịch sử (history / 이력). Gold, salt, cattle, grain, river vận chuyển (transport / 전송), Islamic scholarship và cục bộ (local / 로컬) authority tạo các corridor khác nhau.
 
 ```text
 ecological gradient (Sahara–Sahel–savanna–forest)
@@ -52,11 +64,14 @@ ecological gradient (Sahara–Sahel–savanna–forest)
 → succession, drought, firearms/coastal trade và reorientation
 ```
 
-Islamization có thể đi qua scholar/merchant mà không xoá ngay practice bản địa. Đô thị như Timbuktu hoặc các port không chỉ là “trung tâm thương mại”; chúng là nơi luật, học thuật, credit và identity được thương lượng.
+Islamization có thể đi qua scholar/merchant mà không xoá ngay practice bản địa. Đô thị như Timbuktu hoặc các cổng (port / 포트) không chỉ là “trung tâm thương mại”; chúng là nơi luật, học thuật, credit và định danh (identity / 식별자) được thương lượng.
 
-## Case 5 — South và Southeast Asia: monsoon, rice và port-polity
 
-Monsoon tạo seasonal predictability nhưng cũng tạo cửa sổ rủi ro. Wet-rice systems cần water control và labor coordination; upland, forest, island và coastal societies có portfolio khác. Port-polity ở Đông Nam Á thường kiểm soát **flow và chokepoint** hơn là một lãnh thổ liền mạch.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị**, ta sang **trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity
+
+Monsoon tạo seasonal predictability nhưng cũng tạo cửa sổ rủi ro. Wet-rice các hệ thống (systems / 시스템들) cần water điều khiển (control / 제어) và labor coordination; upland, forest, island và coastal societies có portfolio khác. Port-polity ở Đông Nam Á thường kiểm soát **luồng (flow / 흐름) và chokepoint** hơn là một lãnh thổ liền mạch.
 
 ```text
 monsoon window → rice/forest/maritime production
@@ -66,17 +81,23 @@ monsoon window → rice/forest/maritime production
 → colonial boundary/cash crop/state reorganization
 ```
 
-Không áp dụng mô hình “làng lúa → bureaucracy” cho toàn khu vực. Cần phân biệt delta density, archipelago mobility, upland autonomy, caste/status và port cosmopolitanism.
+Không áp dụng mô hình “làng lúa → bureaucracy” cho toàn khu vực. Cần phân biệt delta density, archipelago mobility, upland autonomy, caste/status và cổng (port / 포트) cosmopolitanism.
 
-## Case 6 — East Asia: bureaucracy, print, frontier và biển
 
-China, Korea, Japan và các cộng đồng vùng biển/biên giới chia sẻ chữ viết, kỹ thuật, thương mại và religious circulation nhưng có state formation khác nhau. Bureaucratic examination, land tax, military frontier, maritime ban/opening, silver flow và household registration tạo path dependency.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity**, ta sang **trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Korea hữu ích như case về một bán đảo nằm giữa continental empire, maritime Japan và local agrarian state; Nhật Bản cho thấy island geography không ngăn selective borrowing; Trung Hoa cho thấy quy mô nội địa lớn có thể vừa giảm vừa tăng phụ thuộc vào biển. Xem [Korean History](../korean_history/README.md) để đi sâu chronology và institutions.
+## Trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển
 
-## Case 7 — Mesoamerica và Andes: đô thị, tribute và ecology
+China, Korea, Japan và các cộng đồng vùng biển/biên giới chia sẻ chữ viết, kỹ thuật, thương mại và religious circulation nhưng có trạng thái (state / 상태) formation khác nhau. Bureaucratic examination, land tax, military frontier, maritime ban/opening, silver luồng (flow / 흐름) và household registration tạo đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
 
-Mesoamerica phát triển city-state, tribute, market và calendrical/religious institutions trong ecology khác Andes. Andes dùng terrace, vertical exchange, road và labor obligation để phối hợp altitude; không nên đánh giá theo tiêu chí “có alphabetic writing hay không”.
+Korea hữu ích như trường hợp (case / 사례) về một bán đảo nằm giữa continental empire, maritime Japan và cục bộ (local / 로컬) agrarian trạng thái (state / 상태); Nhật Bản cho thấy island geography không ngăn selective borrowing; Trung Hoa cho thấy quy mô nội địa lớn có thể vừa giảm vừa tăng phụ thuộc vào biển. Xem [Korean History](../korean_history/README.md) để đi sâu chronology và institutions.
+
+
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển**, ta sang **trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology
+
+Mesoamerica phát triển city-state, tribute, thị trường (market / 시장) và calendrical/religious institutions trong ecology khác Andes. Andes dùng terrace, vertical exchange, road và labor obligation để phối hợp altitude; không nên đánh giá theo tiêu chí “có alphabetic writing hay không”.
 
 ```text
 ecological complementarity → labor/tribute → storage/road
@@ -86,20 +107,26 @@ ecological complementarity → labor/tribute → storage/road
 
 Conquest châu Âu dựa trên Indigenous alliances, disease, steel, horses, siege và political fracture cùng lúc. “Spanish victory” không phải bằng chứng rằng một công nghệ đơn lẻ quyết định toàn bộ.
 
-## Case 8 — Industrialization ngoài Britain
 
-Britain cung cấp một path cụ thể, không phải template. Germany dựa vào chemistry, bank–industry và rail; Japan kết hợp state procurement, education và selective technology transfer; Russia và Ottoman territories chịu constraint về finance, land, war và foreign capital; thuộc địa thường bị đẩy vào raw-material specialization.
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology**, ta sang **trường hợp (case / 사례) 8 — Industrialization ngoài Britain** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) 8 — Industrialization ngoài Britain
+
+Britain cung cấp một đường dẫn (path / 경로) cụ thể, không phải template. Germany dựa vào chemistry, bank–industry và rail; Japan kết hợp trạng thái (state / 상태) procurement, education và selective technology transfer; Russia và Ottoman territories chịu ràng buộc (constraint / 제약조건) về finance, land, war và foreign capital; thuộc địa thường bị đẩy vào raw-material specialization.
 
 So sánh theo bốn câu hỏi:
 
-1. Ai sở hữu energy, land, machine và credit?
+1. Ai sở hữu năng lượng (energy / 에너지), land, machine và credit?
 2. Nhà nước có thể bảo hộ, đầu tư và đào tạo đến đâu?
 3. Labor mobility và coercion phân phối chi phí thế nào?
-4. Market access thuộc về domestic consumer hay imperial network?
+4. thị trường (market / 시장) truy cập (access / 접근) thuộc về domestic bên tiêu thụ (consumer / 소비자) hay imperial mạng (network / 네트워크)?
 
-## Cách dùng case study
 
-Sau khi đọc một case, quay lại chapter gốc và ghi:
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) 8 — Industrialization ngoài Britain**, ta sang **Cách dùng trường hợp (case / 사례) study** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cách dùng trường hợp (case / 사례) study
+
+Sau khi đọc một trường hợp (case / 사례), quay lại chapter gốc và ghi:
 
 ```text
 mô hình nào chuyển giao được?
@@ -107,3 +134,5 @@ mô hình nào chỉ đúng trong ecology/institution cụ thể?
 ai bị ẩn trong narrative?
 flow nào nối case với thế giới rộng hơn?
 ```
+
+> **Bàn giao:** Sau **Cách dùng trường hợp (case / 사례) study**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

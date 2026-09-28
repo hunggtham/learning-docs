@@ -1,12 +1,15 @@
 # Rối loạn ăn uống và hình ảnh cơ thể
 
+> **Mạch đọc:** Đọc **Rối loạn ăn uống và hình ảnh cơ thể** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Kích thước cơ thể không phải chẩn đoán** sang **2. Hình ảnh cơ thể là một hệ thống nhiều thành phần**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Rối loạn ăn uống (eating disorders) không đơn giản là “ăn quá ít” hoặc “ăn quá nhiều”. Đây là nhóm rối loạn phức tạp trong đó hành vi ăn uống, kiểm soát, hình ảnh cơ thể, cảm xúc, học tập phần thưởng, áp lực xã hội và hậu quả sinh học có thể duy trì lẫn nhau theo thời gian.
 
 > **Trạng thái bằng chứng:** các chẩn đoán như anorexia nervosa, bulimia nervosa, binge-eating disorder và ARFID có tiêu chuẩn lâm sàng và bằng chứng điều trị riêng. Không nên suy ra rối loạn chỉ từ cân nặng, ngoại hình hoặc một hành vi đơn lẻ.
 
 ## 1. Kích thước cơ thể không phải chẩn đoán
 
-Một người có rối loạn ăn uống có thể ở nhiều mức cân nặng khác nhau. Body size không cho biết đầy đủ mức độ bệnh, nguy cơ y khoa hoặc cơ chế tâm lý đang hoạt động.
+Một người có rối loạn ăn uống có thể ở nhiều mức cân nặng khác nhau. Body kích thước (size / 크기) không cho biết đầy đủ mức độ bệnh, nguy cơ y khoa hoặc cơ chế tâm lý đang hoạt động.
 
 Điều này rất quan trọng vì stereotype “phải rất gầy mới là eating disorder” có thể làm chậm phát hiện và điều trị.
 
@@ -57,7 +60,7 @@ Vì vậy điều trị không chỉ nhắm “ngừng binge” mà còn cần p
 
 Không nên diễn giải đây là “thiếu ý chí”. Lịch sử hạn chế ăn, stress, điều hòa cảm xúc, học tập phần thưởng và bối cảnh môi trường có thể cùng tham gia.
 
-## 6. ARFID cho thấy eating disorder không phải lúc nào cũng xoay quanh body image
+## 6. ARFID cho thấy eating disorder không phải lúc nào cũng xoay quanh body ảnh (image / 이미지)
 
 **Rối loạn tránh né/hạn chế tiếp nhận thức ăn (Avoidant/Restrictive Food Intake Disorder — ARFID)** có thể liên quan nhạy cảm cảm giác, sợ hậu quả khó chịu khi ăn hoặc ít hứng thú với ăn uống, không nhất thiết do lo ngại cân nặng/hình dáng.
 
@@ -87,11 +90,11 @@ Nếu giá trị bản thân bị “neo” vào một dimension khó kiểm so�
 
 Cả checking lẫn avoidance đều có thể ngăn kỳ vọng được cập nhật bằng trải nghiệm mới, nên chúng vừa là triệu chứng vừa là cơ chế duy trì.
 
-## 9. Social comparison, digital context và thuật toán
+## 9. xã hội (social / 사회적) comparison, digital ngữ cảnh (context / 맥락) và thuật toán
 
-Social media có thể tăng cơ hội so sánh ngoại hình, nhưng effect không đồng nhất ở mọi người. Điều quan trọng hơn tổng thời gian màn hình là kiểu sử dụng: scrolling tập trung appearance, exposure lặp lại từ thuật toán và habit so sánh.
+Xã hội (social / 사회적) media có thể tăng cơ hội so sánh ngoại hình, nhưng tác động (effect / 효과) không đồng nhất ở mọi người. Điều quan trọng hơn tổng thời gian màn hình là kiểu sử dụng: scrolling tập trung appearance, exposure lặp lại từ thuật toán và habit so sánh.
 
-Không nên nói “social media gây eating disorder” theo một đường nhân quả đơn. Nó là một phần của môi trường rủi ro ở một số người.
+Không nên nói “xã hội (social / 사회적) media gây eating disorder” theo một đường nhân quả đơn. Nó là một phần của môi trường rủi ro ở một số người.
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
 
@@ -113,28 +116,28 @@ Rối loạn ăn uống có thể ảnh hưởng tim mạch, điện giải, n�
 
 Không nên tự áp dụng meal plan hoặc exposure lâm sàng khi có dấu hiệu mất ổn định y khoa.
 
-## 13. Điều trị: không có một protocol duy nhất cho mọi diagnosis
+## 13. Điều trị: không có một giao thức (protocol / 프로토콜) duy nhất cho mọi diagnosis
 
-Evidence hiện tại cho thấy treatment cần phân biệt theo tuổi và diagnosis. CBT có vai trò mạnh trong bulimia và binge-eating disorder ở người lớn; family-based treatment có vị trí quan trọng ở trẻ vị thành niên với một số eating disorders; anorexia ở người lớn thường cần nhiều lựa chọn psychotherapy chuyên biệt kết hợp phục hồi dinh dưỡng và theo dõi y khoa.
+Bằng chứng (evidence / 증거) hiện tại cho thấy treatment cần phân biệt theo tuổi và diagnosis. CBT có vai trò mạnh trong bulimia và binge-eating disorder ở người lớn; family-based treatment có vị trí quan trọng ở trẻ vị thành niên với một số eating disorders; anorexia ở người lớn thường cần nhiều lựa chọn psychotherapy chuyên biệt kết hợp phục hồi dinh dưỡng và theo dõi y khoa.
 
-Điểm quan trọng không phải nhớ tên mọi protocol mà là hiểu:
+Điểm quan trọng không phải nhớ tên mọi giao thức (protocol / 프로토콜) mà là hiểu:
 
 ```text
 chẩn đoán + tuổi + nguy cơ y khoa + mechanism duy trì
 → lựa chọn treatment phù hợp
 ```
 
-Treatment efficacy cho một nhóm không đồng nghĩa mọi mechanism theory phía sau đã được chứng minh hoàn toàn.
+Treatment efficacy cho một nhóm không đồng nghĩa mọi cơ chế (mechanism / 메커니즘) lý thuyết (theory / 이론) phía sau đã được chứng minh hoàn toàn.
 
 ## 14. Ranh giới bằng chứng
 
-**Bằng chứng tương đối vững:** eating disorders là rối loạn đa yếu tố; body size không đủ để chẩn đoán; restriction/binge/compensation có thể tạo vòng duy trì mạnh; medical risk cần được đánh giá độc lập với ngoại hình.
+**Bằng chứng tương đối vững:** eating disorders là rối loạn đa yếu tố; body kích thước (size / 크기) không đủ để chẩn đoán; restriction/binge/compensation có thể tạo vòng duy trì mạnh; medical rủi ro (risk / 위험) cần được đánh giá độc lập với ngoại hình.
 
-**Lý thuyết hiện đại:** reward-learning, habit, interoception, cognitive rigidity và social-comparison models giúp giải thích một phần cơ chế.
+**Lý thuyết hiện đại:** reward-learning, habit, interoception, cognitive rigidity và social-comparison các mô hình (models / 모델들) giúp giải thích một phần cơ chế.
 
-**Còn tranh luận:** trọng số tương đối của từng mechanism, biomarker cá nhân và mức độ khái quát của một số model theo culture/gender.
+**Còn tranh luận:** trọng số tương đối của từng cơ chế (mechanism / 메커니즘), biomarker cá nhân và mức độ khái quát của một số mô hình (model / 모델) theo culture/gender.
 
-**Không được nói:** eating disorder = vanity, “chỉ cần ăn bình thường”, hoặc social media là nguyên nhân duy nhất.
+**Không được nói:** eating disorder = vanity, “chỉ cần ăn bình thường”, hoặc xã hội (social / 사회적) media là nguyên nhân duy nhất.
 
 ## 15. Những hiểu lầm phổ biến
 
@@ -144,7 +147,7 @@ Treatment efficacy cho một nhóm không đồng nghĩa mọi mechanism theory 
 
 **“Eating disorder là vì quá quan tâm ngoại hình.”** Sai; đây là psychopathology phức tạp.
 
-**“Body positivity tự nó chữa được eating disorder.”** Một thái độ hỗ trợ có thể có giá trị nhưng không thay thế treatment có evidence khi disorder hiện diện.
+**“Body positivity tự nó chữa được eating disorder.”** Một thái độ hỗ trợ có thể có giá trị nhưng không thay thế treatment có bằng chứng (evidence / 증거) khi disorder hiện diện.
 
 ## Mô hình tư duy
 
@@ -161,3 +164,5 @@ sinh học + restriction/reward + fear
 ## Kết nối kiến thức
 
 Xem [[01_assessment_and_diagnosis]], [[12_depressive_disorders_and_anhedonia]], [[06_personality_pathology]], [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]], [[../03_human_development_and_person/02_motivation_and_emotion]], [[../03_human_development_and_person/05_sex_gender_and_identity]], [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]] và [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
