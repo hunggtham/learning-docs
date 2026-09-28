@@ -1,238 +1,208 @@
-# Forex Coverage Audit
+# Forex — Coverage Audit
 
-`as_of_date: 2026-09-25`
+## Kết luận hiện tại
 
-File này kiểm tra coverage của nhánh `investing/05_trading_derivatives/forex/` để tránh hai lỗi ngược nhau: thiếu nền tảng quan trọng hoặc tiếp tục tạo chapter mới chỉ để lặp lại nội dung đã có.
+Forex hiện có canonical learning path đủ sâu từ retail/instrument mechanics tới institutional FX. Path không được coi là “hoàn thành” chỉ vì có nhiều chapter; completion gate là người học phải nối được **instrument → funding → macro → execution → data → strategy → portfolio → jurisdiction** mà không biến chart pattern hoặc macro headline thành causal rule.
 
-Canonical route vẫn là `01–15`. `90_connections/` giữ institutional bridges, `90_labs/` giữ practice và `80_case_studies/` giữ historical stress regimes. Cách tổ chức này tăng depth mà không biến library thành chuỗi chapter tuyến tính chỉ để tăng số lượng.
+Sau institutional depth pass mới nhất, hai khoảng trống quan trọng trước đây đã được lấp:
 
-## 1. Coverage map
+- `16` nối NDF, forward points, FX swaps, cross-currency basis, funding và capital-control wedges;
+- `17` nối intervention, reserves, exchange-rate regime, REER/PPP và currency valuation.
 
-| Area | Canonical chapter | Depth status | Practice / case depth |
+## Canonical route
+
+```text
+01 Market Structure & Instruments
+02 Quotes, Pips, Lots & P/L
+03 Leverage, Margin & Position Sizing
+04 Macro Drivers, Rates, Carry & Sessions
+05 Execution, Brokers, Costs & Risk
+06 Price Action, Trend, Range & Volatility Regimes
+07 Technical Indicators as Data Transformations
+08 Fundamental & Event-Driven FX Analysis
+09 Carry, Momentum, Value & Macro FX Strategies
+10 Backtesting & Point-in-Time FX Data
+11 Portfolio FX Risk, Correlation & Factor Exposure
+12 Trading Journal, Review & Performance Attribution
+13 Advanced FX Microstructure & Order Flow
+14 FX Options, Volatility & Hedging
+15 Korea / Vietnam FX Market Context & Regulations
+16 NDF, Forward Points, Basis & Funding
+17 Intervention, Reserves, REER & Currency Valuation
+```
+
+## Coverage matrix
+
+| Layer | Trạng thái | Nội dung đã có | Next-depth nếu cần |
 |---|---|---|---|
-| FX market structure, OTC, spot/forward/swap/futures/options | `01_MARKET_STRUCTURE_AND_INSTRUMENTS.md` | Deep foundation | Lab 04; ERM/CHF cases |
-| Quote, base/quote, pip, lot, cross-rate, P/L | `02_QUOTES_PIPS_LOTS_AND_PNL.md` | Deep foundation | Lab 00 |
-| Leverage, margin, sizing, portfolio heat | `03_LEVERAGE_MARGIN_POSITION_SIZING.md` | Deep foundation | Lab 00, Lab 03; CHF case |
-| Rates, central banks, carry, BOP, flows, sessions | `04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md` | Deep foundation | Lab 01, Lab 04; all historical cases |
-| Orders, broker/dealer, spread, slippage, financing, operational risk | `05_EXECUTION_BROKERS_COSTS_AND_RISK.md` | Deep foundation | Lab 01, Lab 02; CHF case |
-| Trend/range/volatility, support/resistance, breakout/pullback, SMC/ICT framing | `06_PRICE_ACTION_TREND_RANGE_AND_VOLATILITY_REGIMES.md` | Deep | Lab 02 |
-| MA/EMA, RSI, MACD, ATR, Bollinger, indicator normalization | `07_TECHNICAL_INDICATORS_AS_DATA_TRANSFORMATIONS.md` | Deep | Lab 02 |
-| Macro-event research, expectations, surprise, transmission | `08_FUNDAMENTAL_AND_EVENT_DRIVEN_FX_ANALYSIS.md` | Deep | Lab 01; historical cases |
-| Carry, momentum, value, macro strategy families | `09_CARRY_MOMENTUM_VALUE_AND_MACRO_FX_STRATEGIES.md` | Deep | Lab 02; Asian-crisis/CHF tail-risk context |
-| Point-in-time data, bias, cost, robustness, walk-forward | `10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md` | Deep | Lab 02; regime-break cases |
-| Currency-factor aggregation, correlation, stress, hedging | `11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md` | Deep | Lab 03; Asian/2020 cases |
-| Journal, attribution, MAE/MFE, process review | `12_TRADING_JOURNAL_REVIEW_AND_PERFORMANCE_ATTRIBUTION.md` | Deep | integrated across labs/cases |
-| Dealer flow, liquidity, venue fragmentation, order flow | `13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md` | Advanced | Labs 01/03; CHF/2020 cases |
-| FX options, IV, skew, Greeks, hedging | `14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md` | Advanced bridge | quantitative lab remains optional |
-| Korea/Vietnam FX context and current regulation | `15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md` | Context-specific deep | Lab 04; Asian/2020 Korea links |
-| Forward points, CIP, FX swaps, NDF, basis, funding, onshore/offshore segmentation | `90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md` | Advanced institutional bridge | 2020 USD-funding case; future point-in-time funding lab optional |
-| Intervention, reserves, exchange-rate regimes, PPP/REER, valuation uncertainty | `90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md` | Advanced macro-policy bridge | ERM/Asian/CHF cases; future intervention case optional |
+| Market mechanics | Strong | OTC structure, spot/forward/swap/futures/options/CFD, settlement, counterparty, CLS, quotes/pips/lots | prime brokerage/credit lines nếu cần institutional specialization |
+| Risk & leverage | Strong | notional vs margin vs amount-at-risk, liquidation, position sizing, portfolio heat | margin optimization across venues |
+| Macro | Strong | rates, reaction functions, yields, carry, BOP/capital flows, terms of trade, sessions | cross-asset macro factor estimation |
+| Execution | Strong | spread/slippage/rollover, broker due diligence, order types, TCA, operational risk | algorithmic execution benchmark design |
+| Technical analysis | Strong boundary | price action as description; indicators as transformations; formalization/backtest requirement | no need to add indicator encyclopedia |
+| Strategy research | Strong | carry/momentum/value/event/mean reversion, point-in-time data, OOS/walk-forward, multiple testing | advanced statistical learning only if research use-case exists |
+| Portfolio | Strong | currency-factor decomposition, covariance/stress correlation, VaR/ES, attribution | dynamic hedging optimization |
+| Microstructure | Strong | fragmentation, inventory, adverse selection, last look, order flow, fixing, markout | venue-specific empirical data if available |
+| Options | Strong bridge | vol/skew/smile, Greeks, event vol, hedging | advanced FX option conventions/exotics only if needed |
+| Korea/Vietnam | Current + time-sensitive | onshore/offshore context, access/regulatory boundaries, corporate exposure | recurring regulatory refresh, not static expansion |
+| Funding/NDF | **Strong after depth pass** | forward points, CIP, basis, FX swaps, NDF fixing, onshore/offshore wedges, collateral/funding | empirical basis/NDF case study if point-in-time data available |
+| Valuation/policy | **Strong after depth pass** | REER/PPP, NIIP, reserves, intervention, regimes, BEER/FEER intuition | historical intervention case studies with source/version control |
 
-## 2. What is intentionally not duplicated
+## Depth gates
 
-Các nội dung sau đã có canonical depth ở phần khác của `investing/` và Forex chỉ cross-link:
+### Gate 1 — Product identity
+
+Before any strategy, learner must distinguish:
 
 ```text
-General derivatives mechanics
-→ ../01_DERIVATIVES_FUTURES_OPTIONS_CFD.md
-
-Systematic research methodology
-→ ../02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md
-
-Execution and market microstructure
-→ ../03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md
-
-Strategy robustness / portfolio of strategies
-→ ../04_STRATEGY_RESEARCH_ROBUSTNESS_AND_PORTFOLIO_OF_STRATEGIES.md
-
-Advanced options / volatility surface / Greeks
-→ ../05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md
-
-Trading system production controls
-→ ../06_TRADING_SYSTEM_DESIGN_RISK_AND_EXECUTION_LAB.md
+deliverable spot
+forward
+FX swap
+NDF
+futures
+options
+retail rolling FX / CFD
 ```
 
-General open-economy macro theory, monetary policy, exchange-rate crises và econometric identification vẫn thuộc [`../../../../economics/`](../../../../economics/README.md). `90_connections/` chỉ giữ **FX-specific implementation and interpretation**: forward/NDF/basis/funding plumbing và cách reserves/intervention/REER đi vào currency analysis.
+Ticker similarity does not imply same legal/economic product.
 
-Không tạo lại các chapter Forex có cùng nội dung chỉ đổi ví dụ từ stock/futures sang EUR/USD nếu không có FX-specific mechanics mới.
+### Gate 2 — P/L and funding
 
-## 3. Institutional connection coverage
-
-### Funding / forward / NDF layer
-
-`90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md` nối:
+Must be able to decompose:
 
 ```text
-spot
-→ relative rates
-→ forward points
-→ FX swap
-→ cross-currency basis
-→ collateral / dealer balance sheet
-→ NDF / fixing
-→ onshore-offshore segmentation
+spot movement
++ forward/carry/financing
++ spread/commission/slippage
++ hedge/basis effects
+= realized economics
 ```
 
-Depth gate là phân biệt **directional FX view** với **hedging/funding flow**, và hiểu rằng capital-control wedge hoặc basis deviation không tự động là exploitable arbitrage.
+### Gate 3 — Risk
 
-### Policy / valuation layer
-
-`90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md` nối:
+Must separate:
 
 ```text
-PPP / REER
-→ external balance / NIIP
-→ reserves
-→ intervention
-→ exchange-rate regime
-→ valuation model
-→ catalyst / invalidation
+notional exposure
+margin requirement
+loss-at-risk
+portfolio factor exposure
 ```
 
-Depth gate là hiểu **valuation ≠ timing**, **reserve change ≠ intervention amount**, và **intervention ≠ guaranteed reversal**.
+Leverage is a balance-sheet multiplier, not an edge.
 
-## 4. Practice coverage
+### Gate 4 — Macro evidence
 
-Practice layer hiện có:
+Must avoid rules such as:
 
 ```text
-Lab 00 — mechanics, P/L, margin, position sizing
-Lab 01 — macro event analysis without hindsight
-Lab 02 — point-in-time backtest and robustness
-Lab 03 — portfolio FX factor risk
-Lab 04 — Korea/Vietnam context and regulatory verification
+rate hike → currency up
+trade surplus → currency up
+high yield → free carry
+intervention → guaranteed reversal
+cheap REER → buy now
 ```
 
-Các lab được thiết kế để tạo artifact reviewable thay vì quiz ghi nhớ.
+Every macro claim needs expectations, relative side, regime, risk premium and positioning context.
 
-Institutional connections chưa cần lab riêng chỉ để đủ số lượng. Chỉ tạo lab khi có data phù hợp để kiểm tra fixing, forward curve, basis, reserve/intervention hoặc hedge roll theo point-in-time convention.
+### Gate 5 — Research integrity
 
-## 5. Historical case-study coverage
-
-Folder `80_case_studies/` đã bổ sung depth theo regime/mechanism:
+Backtest must state:
 
 ```text
-1992 ERM / sterling
-→ exchange-rate commitment vs domestic policy constraint
-
-1997 Asian Financial Crisis
-→ currency mismatch + short-term foreign funding + banking feedback loop
-
-2015 CHF floor removal
-→ policy floor + discontinuous liquidity + stop/broker risk
-
-2020 global USD funding stress
-→ offshore dollar shortage + FX swaps/basis + central-bank swap lines
+point-in-time inputs
+signal timestamp
+execution timestamp
+bid/ask/cost model
+financing
+margin
+sample selection
+model-selection process
+OOS validation
+reproducibility
 ```
 
-Case studies không nhằm tạo historical pattern để trade. Chúng dùng để stress mental models của các chapter `01–15` và institutional connections dưới những regime cực đoan.
+### Gate 6 — Institutional plumbing
 
-## 6. Remaining optional extensions
-
-Các phần dưới đây **không phải gap nền tảng**. Chỉ mở rộng nếu có mục tiêu học cụ thể.
-
-### A. FX options quantitative lab
-
-Có thể thêm khi cần thực hành:
+Advanced learner must understand:
 
 ```text
-Delta / Gamma / Vega P&L decomposition
-Risk reversal / butterfly quote conventions
-Volatility surface interpolation
-Delta-hedged option P/L
-Event implied-vs-realized volatility
+CIP
+forward points
+FX swaps
+cross-currency basis
+NDF fixing
+settlement risk / CLS
+collateral / dealer balance sheet
+reserves / intervention
+onshore-offshore segmentation
 ```
 
-### B. Systematic FX coding project
+### Gate 7 — Jurisdiction
 
-Có thể thêm khi cần implementation bằng code:
+Access, product classification and investor protection are jurisdiction-specific. Chapter `15` is time-sensitive and must be rechecked before practical decisions.
+
+## Anti-duplication contract
+
+Forex stays a child of Investing.
+
+- [`../../../../economics/`](../../../../economics/README.md) owns general macroeconomic theory and econometrics.
+- [`../`](../README.md) owns general derivatives/options/systematic trading and execution concepts shared across asset classes.
+- Forex owns currency-specific market structure, funding, strategy implementation, microstructure and jurisdiction context.
+- [`../../06_markets_korea_vietnam/`](../../06_markets_korea_vietnam/README.md) owns broader Korea/Vietnam investing and market-access application.
+
+Cross-link instead of copying entire macro/options chapters.
+
+## Evidence contract
+
+Forex content should distinguish:
 
 ```text
-point-in-time data pipeline
-session/DST normalization
-transaction-cost model
-walk-forward engine
-portfolio exposure aggregator
-research notebook → production spec
+Accounting / pricing identity
+Empirical tendency
+Causal mechanism
+Trading hypothesis
+Backtest evidence
+Live execution evidence
+Regulatory fact
 ```
 
-Đây nên nằm ở bridge giữa Forex và Computer Science/Data Engineering thay vì biến toàn bộ Forex library thành coding tutorial.
+A pricing identity is not a profit guarantee. A historical factor return is not a future edge. A backtest is not live evidence. A broker's product page is not regulatory authority.
 
-### C. Additional historical/regime cases
+## Time-sensitive content
 
-Chỉ thêm nếu tạo mechanism mới chưa được bốn case hiện tại bao phủ. Candidate hợp lý:
+The most time-sensitive chapter is `15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md`.
 
-```text
-2022 JPY / global rate divergence and intervention
-2008 Korea USD funding / FX stress
-selected Vietnam FX-management stress episode
-```
+Refresh triggers include:
 
-Không thêm chỉ vì một event nổi tiếng.
+- Korean FX-market access/hours/RFI changes;
+- KOFIA/FSC/FSS rules for retail FX-margin/intermediaries;
+- SBV foreign-exchange circular/decree changes;
+- Vietnam IFC scope/rules;
+- material market-structure changes affecting data/backtests.
 
-### D. Institutional hedging case studies
+Record source, publication/effective date and retrieval date.
 
-Có thể mở rộng bằng application artifacts:
+## What should **not** be added next
 
-```text
-exporter hedge
-importer hedge
-foreign-asset manager hedge
-rolling forward hedge
-hedge-ratio / basis-risk analysis
-```
+Do not expand by creating:
 
-Cross-currency funding theory không còn là gap; `90_connections/00` đã sở hữu phần đó. Case mới chỉ nên thêm khi có concrete balance-sheet/data example.
+- dozens of candlestick-pattern files;
+- indicator-by-indicator chapters;
+- “best strategy” lists;
+- broker rankings without a current shopping/compliance need;
+- deterministic macro trading rules;
+- duplicated general options/economics theory.
 
-## 7. Quality risks to monitor
+These increase file count without increasing causal/market understanding.
 
-Khi update về sau, kiểm tra các lỗi sau:
+## Next legitimate depth candidates
 
-```text
-Indicator explanation turns into trading signal promise
-SMC/ICT terminology presented as proven mechanism without test
-Current market statistics treated as timeless facts
-US retail-forex regulation copied to Korea/Vietnam
-Broker marketing terminology treated as standardized legal category
-Backtest ignores bid/ask, financing or timestamp availability
-Pair-level risk treated as independent portfolio risk
-FX options content duplicates parent options chapter
-Historical case is rewritten as deterministic trading pattern
-Policy commitment is treated as physical guarantee
-Forward price is presented as pure future-spot forecast
-Basis / NDF wedge is presented as risk-free arbitrage without access constraints
-Reserve change is presented as direct intervention amount
-REER/PPP valuation is presented as entry timing signal
-```
+Only expand when a concrete learning need appears. Highest-value candidates are:
 
-## 8. Review cadence
+1. an empirical **FX funding/basis crisis case study** using documented point-in-time data;
+2. an **intervention/regime-change case study** showing reserve, rates, spot/forward and policy timeline together;
+3. an **end-to-end FX research lab** from hypothesis to data lineage, backtest, execution assumptions and live attribution;
+4. advanced **FX option market conventions/exotics** only if options become a real study goal.
 
-Các chapter mechanics có thể review chậm hơn. Các phần sau phải review khi regulation/market convention thay đổi:
-
-```text
-01 market structure where current statistics are cited
-05 broker/regulatory execution context
-15 Korea/Vietnam FX market context and regulations
-90_connections/00 when funding/benchmark/market conventions materially change
-90_connections/01 when regime/intervention methodology or source conventions materially change
-```
-
-Chapter `15` phải giữ `as_of_date` hoặc nguồn có ngày rõ ràng cho rule hiện hành.
-
-Historical cases không cần refresh vì chronology thay đổi, nhưng source links và interpretation nên được review nếu thêm research mới hoặc sửa mechanism.
-
-## 9. Current conclusion
-
-Nhánh Forex hiện có năm layer:
-
-```text
-Theory / mechanism      → chapters 01–15
-Institutional bridges   → 90_connections/
-Practice                → 90_labs/
-Historical regime depth → 80_case_studies/
-Coverage governance     → COVERAGE_AUDIT.md
-```
-
-Coverage đã đi từ **beginner mechanics → macro/strategy research → portfolio/microstructure/options → jurisdiction context → institutional funding/policy → practical application → historical stress regimes**.
-
-Bước tiếp theo không nên là tạo thêm chapter tuyến tính chỉ để tăng số lượng. Extension có giá trị cao nhất nếu tiếp tục là **systematic FX implementation project, quantitative options lab hoặc institutional hedging cases**, vì các hướng này thêm capability mới thay vì duplicate theory.
+Until then, priority should be QA, cross-links, regulatory freshness and exercises rather than more theory chapters.
