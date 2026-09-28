@@ -1,10 +1,10 @@
-# Maritime Vietnam: ports, merchant diasporas và sea routes từ cổ đại tới bộ chứa (container / 컨테이너) economy
+# Việt Nam hướng ra biển: cảng, cộng đồng thương nhân và tuyến hàng hải từ cổ đại tới kinh tế container
 
 ## Vì sao phải xoay bản đồ ra biển?
 
 Lịch sử Việt Nam thường được kể theo trục đất liền: capital → province → frontier. Cách nhìn đó dễ làm coastline trở thành edge của country. Nhưng trong nhiều thế kỷ, sea là một highway nối duyên hải Việt Nam với southern China, island Southeast Asia, Indian Ocean và xa hơn.
 
-Chapter này hỏi: **khi nhìn từ sea vào land, các cổng (port / 포트), river mouth và merchant diaspora đã thay đổi economy, warfare, religion và trạng thái (state / 상태) sức chứa (capacity / 용량) như thế nào?**
+Chương này hỏi: **khi nhìn từ biển vào đất liền, các cảng, cửa sông và cộng đồng thương nhân đã thay đổi kinh tế, chiến tranh, tôn giáo và năng lực nhà nước như thế nào?** Hãy đặt Hội An, Vân Đồn, Sài Gòn và các cảng hiện đại cạnh chương 13, 17 và 23; như vậy biển trở thành một tuyến nối xuyên thời gian chứ không chỉ là “mép bản đồ”.
 
 Cốt lõi (core / 핵심) idea: cổng (port / 포트) không phải một dot độc lập. Nó là giao diện (interface / 인터페이스) giữa hinterland và long-distance mạng (network / 네트워크).
 

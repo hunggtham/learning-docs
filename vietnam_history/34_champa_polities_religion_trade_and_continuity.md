@@ -1,10 +1,10 @@
-# Champa: nhiều trung tâm quyền lực, maritime economy và continuity sau các cuộc chinh phục
+# Champa: nhiều trung tâm quyền lực, kinh tế biển và sự tiếp nối sau chinh phục
 
 ## Vì sao Champa cần một chapter riêng?
 
 [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) đã đặt Champa vào bài toán frontier của Đại Việt và Nguyễn. Nhưng nếu chỉ đọc Champa tại những thời điểm nó va chạm với Đại Việt, ta lại vô tình biến một historical hệ thống (system / 시스템) tồn tại nhiều thế kỷ thành “phần phía nam của lịch sử Việt Nam”.
 
-Chapter này đổi điểm nhìn. Câu hỏi trung tâm là: **các polity Chăm hình thành và duy trì quyền lực trong một dải duyên hải hẹp bằng cách nào, chúng kết nối coast với highlands và overseas trade ra sao, và vì sao việc một political centre thất bại không đồng nghĩa society Chăm biến mất?**
+Chương này đổi điểm nhìn. Câu hỏi trung tâm là: **các chính thể Chăm hình thành và duy trì quyền lực trong một dải duyên hải hẹp bằng cách nào, kết nối bờ biển với vùng cao và thương mại đường biển ra sao, và vì sao một trung tâm chính trị thất bại không đồng nghĩa xã hội Chăm biến mất?** Hãy đọc cạnh chương 14 và ghé Mỹ Sơn, Nha Trang, Ninh Thuận để nối trung tâm quyền lực với tôn giáo, cảng và cộng đồng còn tiếp tục sống.
 
 Điểm đầu tiên phải bỏ là hình ảnh Champa như một trạng thái (state / 상태) luôn thống nhất, có một capital cố định và ranh giới (boundary / 경계) giống nation-state hiện đại. Trong nhiều thời kỳ, các trung tâm như Amaravati/Indrapura ở phía bắc, Vijaya ở vùng Bình Định, Kauthara quanh Nha Trang và Panduranga ở vùng Ninh Thuận–Bình Thuận có mức độ nổi trội khác nhau. Political tích hợp (integration / 통합) thay đổi theo dynasty, warfare, trade tuyến (route / 경로) và cục bộ (local / 로컬) elite.
 

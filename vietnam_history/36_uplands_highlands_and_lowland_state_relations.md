@@ -1,10 +1,10 @@
-# Uplands và Central Highlands: trade, autonomy và quan hệ không đều với lowland states
+# Vùng cao và Tây Nguyên: trao đổi, tự chủ và quan hệ không đều với nhà nước đồng bằng
 
 ## Vì sao mountain lịch sử (history / 이력) thường bị viết mỏng?
 
 Lịch sử (history / 이력) textbook thường có nhiều nguồn (source / 소스) từ court, capital, inscription, tax archive và monument ở lowland. Mountain communities để lại ít hơn loại bằng chứng (evidence / 증거) mà centralized states thích sản xuất. Kết quả là nguồn (source / 소스) độ lệch (bias / 편향) dễ bị nhầm thành historical absence.
 
-Chapter này hỏi: **upland/highland societies đã tham gia economy, diplomacy, warfare và trạng thái (state / 상태) formation của vùng Việt Nam như thế nào, và vì sao lowland trạng thái (state / 상태) thường vừa cần uplands vừa khó kiểm soát chúng hoàn toàn?**
+Chương này hỏi: **các xã hội vùng cao đã tham gia kinh tế, ngoại giao, chiến tranh và quá trình hình thành nhà nước ở Việt Nam như thế nào, và vì sao nhà nước đồng bằng vừa cần vùng cao vừa khó kiểm soát hoàn toàn?** Hãy đọc cùng chương 14 và 33 để nối đường trao đổi, cộng đồng tộc người, địa hình và di tích cụ thể.
 
 Điểm xuất phát là bỏ nhị phân (binary / 이진) “civilized lowland / backward highland”. Different ecology tạo different môi trường vận hành (production / 운영 환경), mobility và political incentives; khác không đồng nghĩa thấp hơn.
 

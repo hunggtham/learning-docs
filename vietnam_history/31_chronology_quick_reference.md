@@ -1,6 +1,6 @@
-# Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam
+# Bảng niên đại tham khảo nhanh — Lịch sử Việt Nam
 
-Tệp (file / 파일) này là **coordinate map**, không thay thế các chapter nhân quả (causal / 인과적). Với giai đoạn cổ, niên đại truyền thống và niên đại archaeological không phải lúc nào trùng nhau; các mốc bất định (uncertainty / 불확실성) được ghi thận trọng.
+Tệp này là **bản đồ tọa độ**, không thay thế các chương giải thích nguyên nhân. Dùng nó sau chương 38 để định vị mốc, rồi quay lại chương tương ứng để đọc kinh tế, xã hội và địa điểm; với giai đoạn cổ, niên đại truyền thống và niên đại khảo cổ không phải lúc nào trùng nhau.
 
 ## Tiền sử và early trạng thái (state / 상태)
 

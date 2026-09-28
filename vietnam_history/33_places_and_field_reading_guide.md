@@ -1,8 +1,8 @@
-# Historical Places & Trường dữ liệu (field / 필드) Reading Guide — học lịch sử Việt Nam bằng landscape
+# Hướng dẫn đọc di tích và địa điểm — học lịch sử Việt Nam qua cảnh quan
 
 ## Mục tiêu
 
-This is not a tourism checklist. Each place below is a **kiến thức (knowledge / 지식) checkpoint**: you visit/visualize it to kiểm thử (test / 테스트) a historical cơ chế (mechanism / 메커니즘).
+Đây không phải danh sách du lịch. Mỗi địa điểm dưới đây là một **điểm kiểm tra kiến thức**: ta đến hoặc hình dung nó để thử một cơ chế lịch sử. Hãy bắt đầu từ tuyến 38, rồi dùng địa điểm tương ứng để kiểm tra điều chương niên đại đã giải thích.
 
 Use four questions everywhere:
 

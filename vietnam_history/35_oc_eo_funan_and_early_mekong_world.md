@@ -1,10 +1,10 @@
-# Óc Eo, Phù Nam và Lower Mekong: một early urban–commercial world trước các quốc gia hiện đại
+# Óc Eo, Phù Nam và hạ lưu Mekong: thế giới đô thị–thương mại trước quốc gia hiện đại
 
 ## Vì sao Lower Mekong cần được học như một historical hệ thống (system / 시스템) riêng?
 
 Nếu bắt đầu lịch sử Việt Nam từ Red River rồi đi dần xuống phía nam, người đọc dễ có impression rằng Mekong Delta chỉ “bước vào lịch sử” khi Nguyễn expansion tới đó. Archaeology cho thấy điều ngược lại: Lower Mekong đã là một complex settlement, môi trường vận hành (production / 운영 환경) và long-distance exchange zone từ rất sớm.
 
-Chapter này hỏi: **vì sao một vùng delta ngập nước lại có thể hình thành urban/craft centres và international trade mạng (network / 네트워크) từ những thế kỷ đầu Công nguyên, và relationship giữa archaeology Óc Eo với polity thường được gọi là Phù Nam (Funan) nên hiểu thế nào?**
+Chương này hỏi: **vì sao một vùng châu thổ ngập nước lại có thể hình thành trung tâm đô thị–thủ công và mạng thương mại quốc tế từ những thế kỷ đầu Công nguyên, và nên hiểu quan hệ giữa khảo cổ Óc Eo với chính thể thường gọi là Phù Nam thế nào?** Hãy nối nó với chương 14 về vùng biên phía Nam và chương 38 về đời sống sông nước, thay vì coi Mekong chỉ bắt đầu “được biết đến” khi Nguyễn mở rộng.
 
 Điều quan trọng nhất là không dùng hiện đại (modern / 현대적) national map để sở hữu quá khứ. Óc Eo hiện nằm trong Việt Nam; Angkor Borei hiện nằm trong Cambodia; nhưng early Lower Mekong là một regional hệ thống (system / 시스템) có trước cả hai nation-state hiện đại.
 

@@ -1,8 +1,8 @@
-# Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam
+# Bảng thuật ngữ và bản đồ nguồn — Lịch sử Việt Nam
 
 ## Cách dùng
 
-Tệp (file / 파일) này không phải dictionary độc lập. Nó chuẩn hóa các concept lặp lại trong thư viện (library / 라이브러리) và chỉ ra **kiểu ở mã nguồn (source type / 소스 타입) nào phù hợp với loại câu hỏi nào**.
+Tệp này không phải từ điển độc lập. Nó chuẩn hóa các khái niệm lặp lại trong thư viện và chỉ ra **loại nguồn nào phù hợp với loại câu hỏi nào**. Hãy dùng nó khi một chương 03–30 mở ra thuật ngữ mới hoặc khi cần kiểm tra giới hạn của chứng cứ.
 
 ## Cốt lõi (core / 핵심) analytical terms
 
