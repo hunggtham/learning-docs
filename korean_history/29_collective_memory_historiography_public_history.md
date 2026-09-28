@@ -40,3 +40,29 @@ A memory becomes durable when encoded into school curriculum, holiday, monument,
 
 Truth commissions and later investigations can reopen cases suppressed under authoritarian regimes. New archive declassification or witness testimony changes established narrative. Historical knowledge is versioned; correction is not evidence history is “unreliable” but evidence method can update with data.
 
+## Đọc một tượng đài như một lập luận
+
+Một đài tưởng niệm không chỉ “giữ ký ức”; nó chọn ngày khánh thành, tên người, biểu tượng, tuyến tham quan và giọng kể. Hãy tách ít nhất ba lớp: **sự kiện được khẳng định**, **cảm xúc được khơi lên** và **trách nhiệm được phân bổ**. Ví dụ, một không gian về Gwangju có thể đồng thời là nơi tưởng niệm nạn nhân, bằng chứng về thay đổi pháp lý và biểu tượng cho tính chính danh dân chủ sau này.
+
+## Việt Nam và bài toán ký ức sau chiến tranh
+
+Các địa điểm như Điện Biên Phủ, Thành cổ Quảng Trị, Bảo tàng Chứng tích Chiến tranh và nghĩa trang liệt sĩ ở Việt Nam cũng cho thấy quá khứ được tổ chức bằng hiện vật, nghi lễ và giáo dục. So sánh với Gwangju, DMZ hoặc Seodaemun không nhằm cân đo đau khổ; nó giúp nhận ra mỗi xã hội đặt trọng tâm khác nhau vào giải phóng, thống nhất, nạn nhân dân sự, hy sinh quân sự và hòa giải.
+
+## Công thức kiểm tra provenance trước khi kể lại
+
+Khi gặp một claim về lịch sử, hãy ghi nhanh:
+
+```text
+claim → nguồn tạo ra khi nào → ai có lợi khi kể như vậy
+      → nguồn độc lập nào đối chiếu → phần nào vẫn chưa biết
+```
+
+Một bộ phim có thể mở câu hỏi về đời sống; một bia tưởng niệm có thể chứng minh ký ức cộng đồng; một sắc lệnh có thể cho biết ý định của nhà nước. Không nguồn nào một mình trả lời toàn bộ trải nghiệm xã hội. Việc ghi rõ ranh giới này giúp người học không biến một cảnh xúc động thành bằng chứng cho mọi chi tiết.
+
+## Địa điểm như phòng thí nghiệm công khai
+
+Hãy thử cùng một tuyến đọc: **Seodaemun Prison History Hall** cho đàn áp thuộc địa, **May 18th National Cemetery** cho bạo lực và dân chủ hóa, **War Memorial of Korea** cho narrative an ninh, rồi **DMZ** cho đình chiến kéo dài. Mỗi nơi có một chủ sở hữu ký ức, một đối tượng khách tham quan và một điều không được nói hết. So sánh các khoảng trống cũng quan trọng như so sánh hiện vật.
+
+## Cầu nối trở lại timeline
+
+Ký ức không thay thế chronology. Nó giải thích vì sao mốc **1919**, **1950**, **1980**, **1987** hoặc **2016–2017** vẫn có sức nặng chính trị vượt quá ngày tháng. Hãy dùng [`30_timeline_key_dates.md`](30_timeline_key_dates.md) để định vị sự kiện, rồi quay lại nguồn và địa điểm để hỏi cách mỗi thế hệ đã diễn giải nó.
