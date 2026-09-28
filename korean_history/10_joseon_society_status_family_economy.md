@@ -39,3 +39,51 @@ State cần commerce để goods circulate nhưng Confucian political thought th
 ## Status erosion
 
 Late Joseon chứng kiến mua bán/claim yangban status rộng hơn, nobi population/legal status thay đổi và formal hereditary boundary suy yếu. Nhưng inequality không biến mất; nó chuyển mechanism từ birth category thuần sang combination của wealth, education, network và symbolic capital.
+
+## Một ngày bình thường quan trọng hơn một sơ đồ class
+
+Hãy hình dung một household ở Gyeonggi thế kỷ XVI. Ngày của họ xoay quanh season, crop, storage, fuel, textile work, ritual obligation, market day và tax demand. Trẻ em không mặc định đi school; literacy phụ thuộc family resource và gender/status. Travel chậm, nên marriage network và village reputation có economic value thực sự. Illness, crop failure hay military levy có thể phá household budget nhanh hơn nhiều so với một biến động court politics xa xôi.
+
+Với một yangban household, “không trực tiếp làm ruộng” không có nghĩa tách khỏi agriculture: income và status vẫn liên quan land, tenant/labor relation, exam preparation và kin network. Với sangmin household, labor time là constraint trung tâm. Với nobi, legal dependency làm option set hẹp hơn nữa.
+
+## Land không chỉ là tài sản; land là dòng cash-flow của premodern state
+
+Land tạo food, rent và tax. Vì vậy tranh luận land register, assessment và ownership thực chất là tranh luận **ai được quyền nhận surplus**. Khi một household mất land nhưng vẫn còn labor, họ có thể chuyển thành tenant hoặc dependent worker; khi elite tích lũy land, wealth có thể chuyển thành education và office opportunity cho thế hệ sau.
+
+Causal chain thường là:
+
+```text
+land/control → surplus → education/leisure → examination/network → office/status → ability to protect/acquire more resources
+```
+
+Đây là mechanism khiến inequality có thể reproduce qua generation ngay cả khi formal examination tồn tại.
+
+## Gender: đừng project late Joseon ngược về toàn bộ 500 năm
+
+Joseon thế kỷ XV và Joseon thế kỷ XVIII không có identical family norm. Patrilineal lineage, eldest-son ritual centrality và inheritance pattern thay đổi dần. Vì vậy khi thấy modern narrative nói “truyền thống Hàn Quốc từ xưa luôn như vậy”, phải hỏi **xưa là thế kỷ nào?**
+
+Một institution family có thể cần nhiều generation để trở thành common sense. Khi rule đã internalized, người sau dễ tưởng nó timeless.
+
+## Việt Nam cùng thời: Lê sơ, Mạc, Lê–Trịnh/Nguyễn và cùng một agrarian constraint
+
+Early Joseon overlap với Lê sơ; thế kỷ XVI–XVII overlap với biến động Mạc, Lê Trung Hưng và competition Trịnh–Nguyễn ở Việt Nam. Cả hai society đều dựa heavily vào agrarian tax base, Confucian literacy và household registration, nhưng land regime, village autonomy, warfare và court structure khác nhau.
+
+Comparison useful ở level mechanism: premodern state muốn army và bureaucracy thì phải **biết dân ở đâu, đất ở đâu và surplus ở đâu**. Nhưng cách Korean lineage, Vietnamese village, examination và regional power interact không nên bị gộp thành một “mô hình Nho giáo Đông Á” duy nhất.
+
+## Market day: nơi status hierarchy gặp economic reality
+
+Trong market, official moral ranking không quyết định hoàn toàn ai có bargaining power. Merchant có cash và information; farmer có seasonal produce; artisan có specialized skill; intermediary biết route và price. Market làm visible một reality: **economic value có thể di chuyển nhanh hơn social prestige**.
+
+Đây là seed để hiểu Late Joseon. Khi commercial network dày hơn, old status categories không biến mất ngay nhưng ngày càng phải coexist với wealth không đến trực tiếp từ office/land pedigree.
+
+## Đi đâu để quan sát social order?
+
+**Hahoe (하회)** hoặc **Yangdong (양동)** village giúp nhìn spatial relation giữa elite lineage, housing, ritual và village geography. **Jongmyo** cho thấy ancestral ritual ở royal scale. Traditional markets và reconstructed hanok district không phải time machine hoàn hảo, nhưng architecture vẫn gợi câu hỏi về courtyard, gendered space, storage, heating và household production.
+
+Khi tới một hanok, đừng chỉ hỏi “đẹp không”. Hãy hỏi kitchen ở đâu, ondol cần fuel thế nào, storage ở đâu, ai dùng room nào, household labor vận hành ra sao. Architecture là frozen social relation.
+
+## Causal bridge sang chiến tranh và Late Joseon
+
+War 1592–1598 và invasions thế kỷ XVII sẽ phá population register, land record, settlement và household stability. Sau shock đó, tax reform và market change không phải side story; chúng là response để rebuild resource flow. Đồng thời, family/lineage institution tiếp tục deepening trong chính thời kỳ reconstruction.
+
+Đọc tiếp [`11_imjin_manhu_wars_and_reconstruction.md`](11_imjin_manhu_wars_and_reconstruction.md), [`12_late_joseon_commerce_silhak_social_change.md`](12_late_joseon_commerce_silhak_social_change.md) và thematic [`26_social_history_everyday_life.md`](26_social_history_everyday_life.md).

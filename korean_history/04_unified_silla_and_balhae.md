@@ -38,3 +38,38 @@ Balhae adopted administrative forms influenced by Tang while maintaining own cou
 
 Balhae history có fewer surviving internal sources than Silla, và nhiều records đến từ neighbors. Đây là reminder rằng archive survival bias ảnh hưởng độ chi tiết của narrative: society để lại nhiều text thường trông “quan trọng hơn” chỉ vì ta thấy nó rõ hơn.
 
+## Timeline để không mất phương hướng: 676 → 698 → thế kỷ VIII → thế kỷ IX
+
+Năm **676**, Silla đẩy Tang khỏi phần lớn bán đảo phía nam và hình thành trật tự thường gọi Unified Silla. Năm **698**, Balhae xuất hiện ở phía bắc. Thế kỷ VIII là thời kỳ Gyeongju, Buddhist culture và state order đạt mức ổn định cao; sang thế kỷ IX, local power, maritime nodes và fiscal fragmentation ngày càng quan trọng. Vì vậy giai đoạn này không phải một khối “Silla thịnh vượng 250 năm”, mà có một đường cong từ consolidation tới concentration rồi fragmentation.
+
+## Nếu sống ở Gyeongju khoảng thế kỷ VIII
+
+Một người bình thường sẽ không trải nghiệm “Unified Silla” qua bản đồ chính trị. Họ cảm nhận state qua grain levy, labor obligation, market, temple, road, military demand và hierarchy. Elite household gần capital có access tới land revenue, craft goods và Buddhist patronage khác xa farmer ở peripheral county. Temple không chỉ là nơi tôn giáo: nó có land, labor, storage, literacy và network với court.
+
+Điều này giúp giải thích vì sao các công trình như **Phật Quốc tự (불국사 / Bulguksa)** hay **Thạch Quật am (석굴암 / Seokguram Grotto)** cần được nhìn như output của một hệ thống có surplus lớn, skilled artisan, logistics và patronage, không chỉ là “kiến trúc đẹp”. Monument càng phức tạp thì phía sau càng có nhiều invisible coordination.
+
+## Economy: surplus đi từ ruộng tới capital như thế nào?
+
+Agrarian surplus là nền của state. Grain, cloth, local products và labor đi qua administrative network tới elite, army, court và temples. Gyeongju có thể duy trì population phi nông nghiệp lớn vì food và resource được kéo từ hinterland vào center. Đây là basic urban equation: một city lớn tồn tại khi countryside tạo đủ surplus và transport cost không vượt quá khả năng của system.
+
+Maritime trade bổ sung một layer khác. Cheonghaejin của Jang Bogo cho thấy southern coast không chỉ là rìa map mà có thể trở thành gateway nối Silla với Tang và Japan. Ai kiểm soát route, ship, harbor và armed protection có thể tích lũy economic power rồi chuyển nó thành political influence.
+
+## Cùng thời ở Việt Nam: Bắc thuộc và bước chuyển tới tự chủ
+
+Trong phần lớn thời Unified Silla/Balhae, vùng Bắc Bộ Việt Nam vẫn nằm trong các đơn vị cai trị của các triều đại Trung Hoa, đặc biệt dưới Tang trong nhiều thế kỷ. Nhưng local society không phải passive: uprising, local elite và regional identity tiếp tục tồn tại. Tới thế kỷ X, khi Silla cũng bước vào fragmentation, Việt Nam chuyển mạnh sang phase tự chủ với Khúc Thừa Dụ đầu thế kỷ X, Ngô Quyền và Bạch Đằng năm 938.
+
+Điểm so sánh hữu ích không phải “hai nước giống nhau”, mà là cả Đông Á đang trải qua **post-Tang fragmentation**. Tang suy yếu rồi sụp năm 907; Silla mất khả năng giữ local network; Balhae bị Khitan đánh bại năm 926; ở Việt Nam, weakening của imperial center mở space cho local autonomy. Một continental shock có thể tạo nhiều trajectory khác nhau ở các peripheral region.
+
+## Đi đâu hôm nay để nhìn thấy thời đại này?
+
+Ở **Gyeongju (경주)**, nên đọc landscape như một former capital: royal tomb clusters, palace/pond space, temples và astronomical/ritual sites nằm đủ gần để cho thấy court, religion và elite residence từng tập trung dày đặc. **Bulguksa** và **Seokguram** giúp nhìn trực tiếp quan hệ giữa Buddhist cosmology, engineering và state/elite patronage.
+
+Nếu muốn hiểu maritime economy thế kỷ IX, **Wando (완도)** và khu Cheonghaejin liên hệ Jang Bogo cho một góc nhìn khác: Korean history không chỉ diễn ra ở palace và inland capital mà còn ở sea lane, harbor và merchant-military network.
+
+Balhae khó “đi xem” từ South Korea hơn vì core sites nằm ngoài biên giới hiện nay. Chính sự bất tiện này cũng là một lesson về historiography: modern border quyết định chúng ta tiếp cận physical evidence dễ hay khó, nhưng không được để modern accessibility thu nhỏ historical geography.
+
+## Causal bridge sang Late Silla
+
+Sự thịnh vượng của Gyeongju đồng thời chứa seed của vấn đề sau này. Khi land, office và prestige tập trung trong aristocratic network; khi bone-rank giới hạn mobility; và khi regional actor có trade/military base riêng, center ngày càng khó biến formal authority thành actual extraction. Vì vậy chapter tiếp theo không phải câu chuyện “vua bỗng nhiên yếu đi”, mà là việc **center–periphery balance đã đổi**.
+
+Để đọc song song, xem thêm [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md), [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md), [`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md) và [`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md).
