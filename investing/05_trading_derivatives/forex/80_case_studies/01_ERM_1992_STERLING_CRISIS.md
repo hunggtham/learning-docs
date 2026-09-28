@@ -1,15 +1,12 @@
-# Trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle
+# Case 01 — Sterling và ERM 1992: khi external anchor xung đột domestic cycle
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 01 — Sterling và ERM 1992: khi bên ngoài (external / 외부) anchor xung đột domestic cycle** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. ERM là gì trong trường hợp (case / 사례) này?** sang **2. Domestic UK điều kiện (condition / 조건)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Case này thường được kể như một trận đấu giữa speculator và central bank. Cách đọc đó quá đơn giản. Điều cần học là **một exchange-rate commitment chỉ bền khi monetary policy, domestic macro conditions và market expectations vẫn tương thích với nhau**.
 
+## 1. ERM là gì trong case này?
 
-Trường hợp (case / 사례) này thường được kể như một trận đấu giữa speculator và central bank. Cách đọc đó quá đơn giản. Điều cần học là **một exchange-rate commitment chỉ bền khi monetary chính sách (policy / 정책), domestic macro conditions và thị trường (market / 시장) expectations vẫn tương thích với nhau**.
+European Exchange Rate Mechanism (ERM) yêu cầu các đồng tiền thành viên duy trì tỷ giá trong một band quanh central parity so với các đồng tiền khác trong hệ thống.
 
-## 1. ERM là gì trong trường hợp (case / 사례) này?
-
-European Exchange tỷ lệ (rate / 비율) cơ chế (mechanism / 메커니즘) (ERM) yêu cầu các đồng tiền thành viên duy trì tỷ giá trong một band quanh central parity so với các đồng tiền khác trong hệ thống.
-
-Về mô hình tư duy (mental model / 사고 모델):
+Về mental model:
 
 ```text
 Exchange-rate commitment
@@ -20,11 +17,11 @@ Exchange-rate commitment
 
 Sterling tham gia ERM năm 1990. Trong giai đoạn đầu, membership hỗ trợ credibility chống lạm phát và cho phép UK giảm lãi suất khi inflation giảm.
 
-Nhưng một fixed/semi-fixed regime không xóa nghiệp vụ (business / 비즈니스) cycle. Nó chỉ thêm một ràng buộc (constraint / 제약조건).
+Nhưng một fixed/semi-fixed regime không xóa business cycle. Nó chỉ thêm một constraint.
 
-## 2. Domestic UK điều kiện (condition / 조건)
+## 2. Domestic UK condition
 
-Đến 1992, UK khôi phục (recovery / 복구) yếu và domestic conditions tạo lý do cho monetary easing.
+Đến 1992, UK recovery yếu và domestic conditions tạo lý do cho monetary easing.
 
 Một economy yếu thường tạo pressure theo hướng:
 
@@ -41,13 +38,13 @@ Can UK cut rates
 without pushing sterling below its ERM band?
 ```
 
-Khi câu trả lời ngày càng trở thành “khó”, domestic monetary mục tiêu (objective / 목표) và bên ngoài (external / 외부) exchange-rate mục tiêu (objective / 목표) bắt đầu xung đột.
+Khi câu trả lời ngày càng trở thành “khó”, domestic monetary objective và external exchange-rate objective bắt đầu xung đột.
 
 ## 3. Germany ở phía đối diện
 
-German reunification tạo fiscal và inflationary pressures, khiến German monetary chính sách (policy / 정책) duy trì tương đối tight.
+German reunification tạo fiscal và inflationary pressures, khiến German monetary policy duy trì tương đối tight.
 
-Khi Germany cần tỷ lệ (rate / 비율) cao trong khi UK economy yếu, một structural tension xuất hiện:
+Khi Germany cần rate cao trong khi UK economy yếu, một structural tension xuất hiện:
 
 ```text
 Germany needs relatively tight policy
@@ -67,7 +64,7 @@ Sterling assets become less attractive relative to DM assets
 → sterling pressure increases
 ```
 
-Trong floating regime, exchange tỷ lệ (rate / 비율) có thể điều chỉnh.
+Trong floating regime, exchange rate có thể điều chỉnh.
 
 Trong ERM, authorities phải cố giữ sterling trong band bằng:
 
@@ -83,7 +80,7 @@ credible expectation that parity will hold
 
 Một peg không tồn tại chỉ vì central bank nói sẽ bảo vệ nó.
 
-Thị trường (market / 시장) phải tin rằng authorities có:
+Market phải tin rằng authorities có:
 
 ```text
 Political willingness
@@ -94,9 +91,9 @@ Political willingness
 
 Nếu defense yêu cầu lãi suất quá cao so với domestic economic conditions, credibility có thể suy yếu ngay cả trước khi reserves cạn hoàn toàn.
 
-## 6. Maastricht bất định (uncertainty / 불확실성) as a focal điểm (point / 지점)
+## 6. Maastricht uncertainty as a focal point
 
-Năm 1992, bất định (uncertainty / 불확실성) quanh Maastricht Treaty và tiến trình European monetary tích hợp (integration / 통합) làm thị trường (market / 시장) tập trung mạnh hơn vào khả năng realignment của ERM.
+Năm 1992, uncertainty quanh Maastricht Treaty và tiến trình European monetary integration làm market tập trung mạnh hơn vào khả năng realignment của ERM.
 
 Điểm cần học:
 
@@ -106,7 +103,7 @@ Existing macro inconsistency
 → market searches for weak links in the regime
 ```
 
-Political sự kiện (event / 이벤트) không nhất thiết là nguyên nhân gốc (root cause / 근본 원인). Nó có thể chỉ là catalyst làm participants coordination nhanh hơn.
+Political event không nhất thiết là root cause. Nó có thể chỉ là catalyst làm participants coordination nhanh hơn.
 
 ## 7. Self-reinforcing pressure
 
@@ -121,15 +118,15 @@ Sell sterling
 → more selling
 ```
 
-Đây là vòng phản hồi (feedback loop / 피드백 루프) giữa expectation và chính sách (policy / 정책) sức chứa (capacity / 용량).
+Đây là feedback loop giữa expectation và policy capacity.
 
-Không phải mọi attack vào fixed exchange tỷ lệ (rate / 비율) đều tự hoàn thành, nhưng nếu underlying chính sách (policy / 정책) inconsistency đủ lớn thì expectation có thể tăng tốc adjustment.
+Không phải mọi attack vào fixed exchange rate đều tự hoàn thành, nhưng nếu underlying policy inconsistency đủ lớn thì expectation có thể tăng tốc adjustment.
 
 ## 8. September 16, 1992
 
-Ngày 16/09/1992, trong thị trường (market / 시장) conditions rất căng thẳng, UK authorities thực hiện heavy official purchases of sterling để hỗ trợ currency.
+Ngày 16/09/1992, trong market conditions rất căng thẳng, UK authorities thực hiện heavy official purchases of sterling để hỗ trợ currency.
 
-Minimum lending tỷ lệ (rate / 비율) được nâng lên 12%, và từng có kế hoạch đưa lên 15% vào ngày hôm sau, nhưng mức 15% cuối cùng không được thực thi.
+Minimum lending rate được nâng lên 12%, và từng có kế hoạch đưa lên 15% vào ngày hôm sau, nhưng mức 15% cuối cùng không được thực thi.
 
 Cùng ngày, UK suspended sterling's membership of the ERM.
 
@@ -145,11 +142,11 @@ exchange rate allowed to adjust outside ERM commitment
 
 ## 9. Vì sao tăng rates không đủ?
 
-Tỷ lệ (rate / 비율) hike có thể hỗ trợ currency bằng cách tăng return tương đối của domestic assets.
+Rate hike có thể hỗ trợ currency bằng cách tăng return tương đối của domestic assets.
 
 Nhưng effectiveness phụ thuộc credibility.
 
-Nếu thị trường (market / 시장) nghĩ:
+Nếu market nghĩ:
 
 ```text
 Required high rate
@@ -165,11 +162,11 @@ High rate
 ≠ automatically credible defense
 ```
 
-Nếu tỷ lệ (rate / 비율) mức (level / 수준) làm recession/debt-service bài toán (problem / 문제) nặng hơn, participants có thể tin authorities cuối cùng sẽ abandon parity.
+Nếu rate level làm recession/debt-service problem nặng hơn, participants có thể tin authorities cuối cùng sẽ abandon parity.
 
 ## 10. Intervention is not infinite in economic terms
 
-Một central bank có thể mua domestic currency bằng foreign reserves. Nhưng defense có chi phí (cost / 비용):
+Một central bank có thể mua domestic currency bằng foreign reserves. Nhưng defense có cost:
 
 ```text
 Reserve usage
@@ -179,17 +176,17 @@ Political cost
 Interest-rate cost
 ```
 
-Ngay cả khi technical sức chứa (capacity / 용량) lớn, economic willingness không phải vô hạn.
+Ngay cả khi technical capacity lớn, economic willingness không phải vô hạn.
 
-## 11. Regime ràng buộc (constraint / 제약조건) vs fair giá trị (value / 값)
+## 11. Regime constraint vs fair value
 
-Một dùng chung (common / 공통) mistake là hỏi:
+Một common mistake là hỏi:
 
-> Sterling “fair giá trị (value / 값)” lúc đó là bao nhiêu?
+> Sterling “fair value” lúc đó là bao nhiêu?
 
 Question đó chưa đủ.
 
-Trong fixed/semi-fixed hệ thống (system / 시스템), short-term price dynamics phụ thuộc:
+Trong fixed/semi-fixed system, short-term price dynamics phụ thuộc:
 
 ```text
 Band
@@ -200,13 +197,13 @@ Policy credibility
 Expected probability of realignment
 ```
 
-Price gần band edge chứa thông tin về regime survival, không chỉ PPP/fundamental giá trị (value / 값).
+Price gần band edge chứa thông tin về regime survival, không chỉ PPP/fundamental value.
 
 ## 12. Optionality hidden in a peg
 
-Một fixed exchange-rate commitment tạo payoff gần giống một chính sách (policy / 정책) option.
+Một fixed exchange-rate commitment tạo payoff gần giống một policy option.
 
-Thị trường (market / 시장) participants biết authorities sẽ defend một vùng nhất định, nên chiến lược (strategy / 전략) có thể tập trung quanh question:
+Market participants biết authorities sẽ defend một vùng nhất định, nên strategy có thể tập trung quanh question:
 
 ```text
 Will defense survive?
@@ -214,15 +211,15 @@ Will defense survive?
 
 Nếu downside của short currency bị giới hạn bởi band nhưng upside lớn nếu peg breaks, payoff có thể trở nên asymmetric.
 
-Tất nhiên giao dịch (transaction / 트랜잭션) chi phí (cost / 비용), intervention rủi ro (risk / 위험) và sudden chính sách (policy / 정책) hành động (action / 동작) vẫn rất lớn.
+Tất nhiên transaction cost, intervention risk và sudden policy action vẫn rất lớn.
 
 ## 13. The role of reserves
 
-Reserve dữ liệu (data / 데이터) thường được thị trường (market / 시장) theo dõi vì nó cho tín hiệu (signal / 신호) về defense sức chứa (capacity / 용량).
+Reserve data thường được market theo dõi vì nó cho signal về defense capacity.
 
-Nhưng reserves không phải chỉ số (metric / 지표) duy nhất.
+Nhưng reserves không phải metric duy nhất.
 
-Một peg có thể thất bại (fail / 실패) dù reserves chưa bằng zero nếu:
+Một peg có thể fail dù reserves chưa bằng zero nếu:
 
 ```text
 Interest-rate defense becomes unacceptable
@@ -231,9 +228,9 @@ Market expects imminent realignment
 Banking system cannot tolerate tightening
 ```
 
-## 14. Monetary-policy trilemma liên kết (connection / 연결)
+## 14. Monetary-policy trilemma connection
 
-Trường hợp (case / 사례) này liên hệ với impossible trinity / monetary-policy trilemma:
+Case này liên hệ với impossible trinity / monetary-policy trilemma:
 
 Một country không thể đồng thời có hoàn toàn:
 
@@ -243,9 +240,9 @@ Free capital mobility
 Independent monetary policy
 ```
 
-UK trong ERM với capital mobility phải sacrifice một phần monetary independence để giữ exchange tỷ lệ (rate / 비율).
+UK trong ERM với capital mobility phải sacrifice một phần monetary independence để giữ exchange rate.
 
-Khi domestic economy cần chính sách (policy / 정책) khác với anchor country, tension tăng.
+Khi domestic economy cần policy khác với anchor country, tension tăng.
 
 ## 15. Why Germany mattered disproportionately
 
@@ -258,36 +255,36 @@ Other ERM countries
 may need tighter policy than domestic conditions warrant
 ```
 
-Do đó hệ thống (system / 시스템) không hoàn toàn symmetric trên thực tế.
+Do đó system không hoàn toàn symmetric trên thực tế.
 
 ## 16. What changed after exit?
 
 Sau suspension from ERM, sterling không còn phải giữ parity cũ.
 
-Monetary chính sách (policy / 정책) có thêm room để điều chỉnh theo domestic economy.
+Monetary policy có thêm room để điều chỉnh theo domestic economy.
 
-Trường hợp (case / 사례) này cho thấy regime break có thể:
+Case này cho thấy regime break có thể:
 
 ```text
 remove one constraint
 but introduce new exchange-rate volatility
 ```
 
-Không có chính sách (policy / 정책) regime miễn phí.
+Không có policy regime miễn phí.
 
 ## 17. Trader lesson vs macro lesson
 
 ### Macro lesson
 
-Exchange-rate regime phải consistent với relative macro chính sách (policy / 정책).
+Exchange-rate regime phải consistent với relative macro policy.
 
 ### Trader lesson
 
 Không được coi central-bank line là guaranteed floor/ceiling chỉ vì authority từng defend mạnh.
 
-### Rủi ro (risk / 위험) lesson
+### Risk lesson
 
-Khi peg breaks, move có thể discontinuous. Stop-loss và historical volatility các mô hình (models / 모델들) có thể underestimate gap rủi ro (risk / 위험).
+Khi peg breaks, move có thể discontinuous. Stop-loss và historical volatility models có thể underestimate gap risk.
 
 ## 18. Signals that regime stress was rising
 
@@ -304,7 +301,7 @@ Political commitment
 Options/implied volatility if available
 ```
 
-Không chỉ số (metric / 지표) nào đủ một mình.
+Không metric nào đủ một mình.
 
 ## 19. What not to learn
 
@@ -347,11 +344,11 @@ B. parity is realigned
 C. UK suspends membership
 ```
 
-Không dùng kết quả (outcome / 결과) thật để điều chỉnh prior probabilities.
+Không dùng outcome thật để điều chỉnh prior probabilities.
 
-## 21. Generalization to hiện đại (modern / 현대적) FX
+## 21. Generalization to modern FX
 
-Trường hợp (case / 사례) này vẫn hữu ích khi nghiên cứu:
+Case này vẫn hữu ích khi nghiên cứu:
 
 ```text
 currency pegs
@@ -361,9 +358,9 @@ central-bank floors/ceilings
 capital-control regimes
 ```
 
-Nhưng institutional thiết kế (design / 설계) khác nhau nên không bản sao (copy / 복사) mechanical quy tắc (rule / 규칙).
+Nhưng institutional design khác nhau nên không copy mechanical rule.
 
-## 22. cơ chế (mechanism / 메커니즘) map
+## 22. Mechanism map
 
 ```text
 German reunification / tight German policy
@@ -379,9 +376,9 @@ German reunification / tight German policy
 → regime shift to greater FX flexibility
 ```
 
-## 23. rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)
+## 23. Risk checklist derived from the case
 
-Khi trade asset có tường minh (explicit / 명시적)/implicit chính sách (policy / 정책) floor:
+Khi trade asset có explicit/implicit policy floor:
 
 ```text
 What exactly is the policy commitment?
@@ -396,10 +393,8 @@ What counterparties fail if volatility jumps?
 
 ## Nguồn nền
 
-- Bank of England, *thao tác (operation / 연산) of monetary chính sách (policy / 정책)*, Quarterly Bulletin 1992 Q4.
-- Bank of England cơ sở dữ liệu (database / 데이터베이스) notes on 16 September 1992 minimum lending tỷ lệ (rate / 비율) changes and ERM exit.
-- Bank of England, *The international môi trường (environment / 환경)*, 1992 Q4.
+- Bank of England, *Operation of monetary policy*, Quarterly Bulletin 1992 Q4.
+- Bank of England database notes on 16 September 1992 minimum lending rate changes and ERM exit.
+- Bank of England, *The international environment*, 1992 Q4.
 
-Các nguồn trên được dùng để reconstruct chính sách (policy / 정책) mechanics và chronology; trường hợp (case / 사례) study không nhằm đánh giá cá nhân hay biến lịch sử thành deterministic trading quy tắc (rule / 규칙).
-
-> **Bàn giao:** Sau **Nguồn nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 ASIAN FINANCIAL CRISIS 1997](./02_ASIAN_FINANCIAL_CRISIS_1997.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Các nguồn trên được dùng để reconstruct policy mechanics và chronology; case study không nhằm đánh giá cá nhân hay biến lịch sử thành deterministic trading rule.

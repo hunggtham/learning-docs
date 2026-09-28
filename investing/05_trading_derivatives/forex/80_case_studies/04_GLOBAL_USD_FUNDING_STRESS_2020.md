@@ -1,11 +1,8 @@
-# Trường hợp (case / 사례) 04 — toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ
+# Case 04 — Global USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ
 
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 04 — toàn cục (global / 전역) USD Funding Stress 2020: khi dollar shortage xuất hiện ngoài nước Mỹ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao non-US institutions cần USD?** sang **2. Offshore dollar hệ thống (system / 시스템)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Tháng 3/2020 cho thấy một point rất quan trọng: USD không chỉ là domestic currency của Mỹ mà còn là **global funding currency**. Khi global institutions cần dollar liquidity cùng lúc, FX market có thể phản ánh funding stress chứ không chỉ relative macro view.
 
-
-Tháng 3/2020 cho thấy một điểm (point / 지점) rất quan trọng: USD không chỉ là domestic currency của Mỹ mà còn là **toàn cục (global / 전역) funding currency**. Khi toàn cục (global / 전역) institutions cần dollar liquidity cùng lúc, FX thị trường (market / 시장) có thể phản ánh funding stress chứ không chỉ relative macro view.
-
-Trường hợp (case / 사례) này nối Forex với money markets, cross-currency basis, central-bank swap lines và toàn cục (global / 전역) financial plumbing.
+Case này nối Forex với money markets, cross-currency basis, central-bank swap lines và global financial plumbing.
 
 ## 1. Vì sao non-US institutions cần USD?
 
@@ -23,11 +20,11 @@ Hedging demand
 
 Do đó một institution ở Europe, Japan hoặc Korea có thể thiếu USD dù domestic currency của họ vẫn đầy đủ.
 
-## 2. Offshore dollar hệ thống (system / 시스템)
+## 2. Offshore dollar system
 
-Nhiều USD liabilities được tạo ngoài US banking hệ thống (system / 시스템).
+Nhiều USD liabilities được tạo ngoài US banking system.
 
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Non-US bank / firm
@@ -38,17 +35,17 @@ borrows USD
 
 Khi normal funding markets hoạt động, rollover có vẻ routine.
 
-Crisis bắt đầu khi everyone tries to secure USD at same thời gian (time / 시간).
+Crisis bắt đầu khi everyone tries to secure USD at same time.
 
 ## 3. COVID shock as liquidity shock
 
-Đầu 2020, pandemic bất định (uncertainty / 불확실성) làm markets reprice mạnh.
+Đầu 2020, pandemic uncertainty làm markets reprice mạnh.
 
 Participants tăng demand for cash and safe liquid assets.
 
 Corporates drew credit lines; funds faced redemptions; institutions needed collateral and margin.
 
-Kết quả (result / 결과):
+Result:
 
 ```text
 Demand for dollars rises sharply
@@ -57,7 +54,7 @@ while market-making capacity and risk appetite fall
 
 ## 4. Dollar appreciation can be funding-driven
 
-Một dùng chung (common / 공통) macro narrative:
+Một common macro narrative:
 
 ```text
 USD up because US economy stronger
@@ -75,7 +72,7 @@ Global participants urgently need USD liquidity
 
 FX move therefore can come from balance-sheet demand, not growth optimism.
 
-## 5. Cross-currency basis as funding stress tín hiệu (signal / 신호)
+## 5. Cross-currency basis as funding stress signal
 
 Covered interest parity links spot, forward and interest-rate differentials.
 
@@ -92,9 +89,9 @@ Need USD
 
 If many institutions compete for USD, basis can move sharply.
 
-## 6. FX swap is funding instrument, not only trading sản phẩm (product / 제품)
+## 6. FX swap is funding instrument, not only trading product
 
-A large share of toàn cục (global / 전역) FX turnover comes from swaps.
+A large share of global FX turnover comes from swaps.
 
 During funding stress, FX swaps are part of the plumbing that moves dollars across currencies and maturities.
 
@@ -105,7 +102,7 @@ FX swap market dysfunction
 can transmit into spot FX, bond markets and credit conditions
 ```
 
-## 7. Why balance-sheet sức chứa (capacity / 용량) matters
+## 7. Why balance-sheet capacity matters
 
 Dealers intermediate funding and hedges.
 
@@ -133,13 +130,13 @@ Sell liquid assets
 → more collateral/liquidity demand
 ```
 
-Price movement is then driven partly by financing các ràng buộc (constraints / 제약조건들).
+Price movement is then driven partly by financing constraints.
 
 ## 9. Margin calls amplify dollar demand
 
-Suppose toàn cục (global / 전역) portfolio holds risky assets financed with leverage.
+Suppose global portfolio holds risky assets financed with leverage.
 
-Thị trường (market / 시장) falls:
+Market falls:
 
 ```text
 Asset value down
@@ -149,13 +146,13 @@ Asset value down
 → further pressure
 ```
 
-This is leverage vòng phản hồi (feedback loop / 피드백 루프).
+This is leverage feedback loop.
 
 ## 10. Central-bank swap lines
 
 Federal Reserve has standing dollar liquidity swap lines with several major central banks.
 
-Cơ chế (mechanism / 메커니즘) simplified:
+Mechanism simplified:
 
 ```text
 Foreign central bank provides its currency to Fed
@@ -164,7 +161,7 @@ Foreign central bank lends USD domestically
 At maturity, currencies are swapped back at same exchange rate
 ```
 
-This allows foreign central bank to act as cục bộ (local / 로컬) distributor of dollar liquidity.
+This allows foreign central bank to act as local distributor of dollar liquidity.
 
 ## 11. Why swap lines reduce FX funding pressure
 
@@ -183,7 +180,7 @@ Central bank can supply USD against local collateral framework
 → private scramble for dollars can ease
 ```
 
-Swap lines therefore mục tiêu (target / 대상) funding thị trường (market / 시장), not exchange-rate mức (level / 수준) directly.
+Swap lines therefore target funding market, not exchange-rate level directly.
 
 ## 12. March 15, 2020 enhancement
 
@@ -194,7 +191,7 @@ Pricing lowered to OIS + 25 bp
 84-day operations added
 ```
 
-Goal: improve truy cập (access / 접근) to term USD liquidity.
+Goal: improve access to term USD liquidity.
 
 This matters because crisis participants may fear not only today's funding but funding several weeks/months ahead.
 
@@ -202,9 +199,9 @@ This matters because crisis participants may fear not only today's funding but f
 
 Fed established temporary USD swap arrangements with nine additional central banks, including Bank of Korea.
 
-For several central banks, line kích thước (size / 크기) reached up to USD 60 billion.
+For several central banks, line size reached up to USD 60 billion.
 
-This is a direct example of toàn cục (global / 전역) dollar kiến trúc (architecture / 아키텍처) reaching Korea during stress.
+This is a direct example of global dollar architecture reaching Korea during stress.
 
 ## 14. Daily operations
 
@@ -234,9 +231,9 @@ Actual dollars supplied
 
 Backstop credibility can reduce precautionary hoarding.
 
-## 16. Korea liên kết (connection / 연결)
+## 16. Korea connection
 
-Bank of Korea received temporary swap line truy cập (access / 접근) during March 2020.
+Bank of Korea received temporary swap line access during March 2020.
 
 This mattered because Korea has:
 
@@ -246,7 +243,7 @@ foreign portfolio flows
 banks/corporates interacting with USD markets
 ```
 
-During toàn cục (global / 전역) dollar stress, USD/KRW can move not only from Korea-specific fundamentals but also from system-wide USD funding demand.
+During global dollar stress, USD/KRW can move not only from Korea-specific fundamentals but also from system-wide USD funding demand.
 
 ## 17. FIMA Repo Facility
 
@@ -270,11 +267,11 @@ Pledge Treasuries temporarily
 → avoid outright sale
 ```
 
-This connects FX reserve management with Treasury thị trường (market / 시장) functioning.
+This connects FX reserve management with Treasury market functioning.
 
 ## 18. Safe asset can become funding collateral
 
-US Treasuries are safe credit assets, but during cash scramble even Treasury thị trường (market / 시장) can face liquidity stress.
+US Treasuries are safe credit assets, but during cash scramble even Treasury market can face liquidity stress.
 
 Distinction:
 
@@ -293,7 +290,7 @@ If EUR/USD falls during dollar funding stress, reading chart only as:
 EUR weak / USD strong
 ```
 
-misses cơ chế (mechanism / 메커니즘).
+misses mechanism.
 
 Need inspect:
 
@@ -306,7 +303,7 @@ Dealer balance-sheet conditions
 Treasury market liquidity
 ```
 
-FX is connected to funding mạng (network / 네트워크).
+FX is connected to funding network.
 
 ## 20. Cross-currency basis and covered interest parity
 
@@ -330,7 +327,7 @@ Funding scarcity
 Collateral constraints
 ```
 
-Therefore basis is not just pricing anomaly; it can measure hệ thống (system / 시스템) ràng buộc (constraint / 제약조건).
+Therefore basis is not just pricing anomaly; it can measure system constraint.
 
 ## 21. Corporate dollar debt
 
@@ -348,9 +345,9 @@ Currency and credit stress can happen together.
 
 ## 22. Hedging demand can worsen funding pressure
 
-Suppose institution owns US assets funded in cục bộ (local / 로컬) currency and hedges FX.
+Suppose institution owns US assets funded in local currency and hedges FX.
 
-Large thị trường (market / 시장) moves thay đổi (change / 변경) hedge requirements.
+Large market moves change hedge requirements.
 
 ```text
 Portfolio revaluation
@@ -371,7 +368,7 @@ and
 Global crisis / funding stress
 ```
 
-But cơ chế (mechanism / 메커니즘) differs.
+But mechanism differs.
 
 This is why same price direction must not be treated as same regime.
 
@@ -392,11 +389,11 @@ Again, maturity mismatch is central.
 
 ## 25. Why swap line is not FX intervention
 
-FX intervention typically aims to influence exchange-rate conditions by buying/selling currency in thị trường (market / 시장).
+FX intervention typically aims to influence exchange-rate conditions by buying/selling currency in market.
 
 Dollar swap line instead aims to provide **funding liquidity**.
 
-It may affect FX indirectly, but instrument mục tiêu (objective / 목표) differs.
+It may affect FX indirectly, but instrument objective differs.
 
 Do not confuse:
 
@@ -420,7 +417,7 @@ from
 Ex-post crisis stabilization question
 ```
 
-## 27. What dữ liệu (data / 데이터) should be monitored?
+## 27. What data should be monitored?
 
 ```text
 Cross-currency basis
@@ -435,7 +432,7 @@ Bank CDS / funding spreads
 Margin and collateral conditions
 ```
 
-Not all dữ liệu (data / 데이터) are available in real thời gian (time / 시간) to retail researcher.
+Not all data are available in real time to retail researcher.
 
 ## 28. USD/KRW-specific stress dashboard
 
@@ -450,13 +447,13 @@ Cross-currency basis / swap points if available
 Semiconductor/export fundamentals
 ```
 
-Purpose: separate Korea-specific weakness from toàn cục (global / 전역) dollar squeeze.
+Purpose: separate Korea-specific weakness from global dollar squeeze.
 
-## 29. Why ordinary volatility các mô hình (models / 모델들) thất bại (fail / 실패)
+## 29. Why ordinary volatility models fail
 
 March 2020 was not just “volatility higher”.
 
-Thị trường (market / 시장) relationships changed because:
+Market relationships changed because:
 
 ```text
 Funding constraints bind
@@ -466,11 +463,11 @@ Liquidity disappears
 Policy backstops activate
 ```
 
-Regime-aware rủi ro (risk / 위험) mô hình (model / 모델) must include liquidity/funding trạng thái (state / 상태).
+Regime-aware risk model must include liquidity/funding state.
 
-## 30. chiến lược (strategy / 전략) implication
+## 30. Strategy implication
 
-A macro chiến lược (strategy / 전략) long USD may profit during funding squeeze, but if thesis says “US growth outperforming”, attribution is wrong.
+A macro strategy long USD may profit during funding squeeze, but if thesis says “US growth outperforming”, attribution is wrong.
 
 Journal should separate:
 
@@ -480,7 +477,7 @@ vs
 Funding-stress beta
 ```
 
-Otherwise researcher may think mô hình (model / 모델) works for wrong reason.
+Otherwise researcher may think model works for wrong reason.
 
 ## 31. Portfolio implication
 
@@ -497,11 +494,11 @@ Cross-currency carry
 
 may all suffer when USD funding tightens.
 
-True diversification requires factor phân tích (analysis / 분석).
+True diversification requires factor analysis.
 
 ## 32. Counterparty implication
 
-Funding stress raises counterparty and settlement rủi ro (risk / 위험).
+Funding stress raises counterparty and settlement risk.
 
 Even if directional FX view is correct:
 
@@ -511,9 +508,9 @@ Margin requirement
 Settlement capacity
 ```
 
-may thay đổi (change / 변경) rapidly.
+may change rapidly.
 
-## 33. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
+## 33. Reverse stress test
 
 Instead of asking:
 
@@ -525,7 +522,7 @@ Ask:
 
 This is more useful for leveraged portfolio.
 
-## 34. cơ chế (mechanism / 메커니즘) map
+## 34. Mechanism map
 
 ```text
 COVID shock
@@ -542,9 +539,9 @@ COVID shock
 → funding stress eases
 ```
 
-## 35. rủi ro (risk / 위험) checklist derived from the trường hợp (case / 사례)
+## 35. Risk checklist derived from the case
 
-For any toàn cục (global / 전역) portfolio, ask:
+For any global portfolio, ask:
 
 ```text
 Where are USD liabilities?
@@ -579,7 +576,7 @@ Collateral call = 0.5bn USD
 
 Calculate immediate USD liquidity gap.
 
-Then assume BOK provides USD auction truy cập (access / 접근) through Fed swap line and institution can obtain 1bn USD. Recalculate gap.
+Then assume BOK provides USD auction access through Fed swap line and institution can obtain 1bn USD. Recalculate gap.
 
 Goal: see difference between **solvency, currency exposure and funding liquidity**.
 
@@ -591,7 +588,7 @@ Wrong lesson:
 "Fed swap lines always weaken USD."
 ```
 
-No deterministic quy tắc (rule / 규칙).
+No deterministic rule.
 
 Better lesson:
 
@@ -606,16 +603,14 @@ Wrong lesson:
 "USD strength means US fundamentals are strong."
 ```
 
-Funding stress can strengthen USD during weak toàn cục (global / 전역)/US conditions.
+Funding stress can strengthen USD during weak global/US conditions.
 
 ## Nguồn nền
 
-- Federal Reserve, 15 March 2020 coordinated hành động (action / 동작) to enhance USD liquidity swap lines.
+- Federal Reserve, 15 March 2020 coordinated action to enhance USD liquidity swap lines.
 - Federal Reserve, 19 March 2020 temporary USD liquidity arrangements with nine additional central banks, including Bank of Korea.
 - Federal Reserve, 20 March 2020 increase in frequency of 7-day USD operations.
 - Federal Reserve Financial Stability Report, May 2020.
-- BIS Annual Economic Report 2020, chapter on central-bank crisis phản hồi (response / 응답) and toàn cục (global / 전역) dollar funding.
+- BIS Annual Economic Report 2020, chapter on central-bank crisis response and global dollar funding.
 
-Trường hợp (case / 사례) này phân tích toàn cục (global / 전역) funding mechanics; chính xác (exact / 정확한) facility terms và eligible counterparties phải được đọc từ official documentation của từng thời điểm.
-
-> **Bàn giao:** Sau **Nguồn nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ERM 1992 STERLING CRISIS](./01_ERM_1992_STERLING_CRISIS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Case này phân tích global funding mechanics; exact facility terms và eligible counterparties phải được đọc từ official documentation của từng thời điểm.
