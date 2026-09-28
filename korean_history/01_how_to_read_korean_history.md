@@ -1,37 +1,22 @@
 # Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả
 
-> **Mạch đọc:** Đặt **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lịch sử không phải cơ sở dữ liệu (database / 데이터베이스) của sự kiện** sang **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-
 ## Lịch sử không phải cơ sở dữ liệu (database / 데이터베이스) của sự kiện
 
 Một lịch sử tốt không chỉ trả lời “chuyện gì xảy ra”. Nó phải giải thích vì sao một kết quả (outcome / 결과) trở nên khả dĩ. Trong khoa học dữ liệu, hai biến xuất hiện cùng lúc không có nghĩa biến này gây ra biến kia. Lịch sử cũng vậy. Nếu industrialization và authoritarian quy tắc (rule / 규칙) cùng tồn tại trong một thời kỳ, ta không thể chỉ từ correlation mà kết luận một cái là điều kiện tất yếu của cái kia. Ta cần so sánh cơ chế (mechanism / 메커니즘), counterfactual và bằng chứng (evidence / 증거).
 
 **Primary nguồn (source / 소스)** là tài liệu được tạo gần thời điểm nghiên cứu: inscription, annal, letter, census, treaty, newspaper, photograph, oral testimony, sản phẩm tạo ra (artifact / 산출물). **Secondary nguồn (source / 소스)** là công trình phân tích của sử gia dựa trên nhiều nguồn. Một nguồn sơ cấp không tự động “đúng hơn”: court chronicle có thể thiên về court; police bản ghi (record / 레코드) có thể mô tả xã hội theo mục tiêu quản trị; memoir có thể sai ký ức.
 
-
-> **Chuyển mạch:** Từ **Lịch sử không phải cơ sở dữ liệu (database / 데이터베이스) của sự kiện**, ta sang **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)
 
 Đàn Quân (단군 / Dangun) là ví dụ tốt để phân biệt ba lớp. Một origin myth có thể không cho phép ta xác nhận toàn bộ chi tiết như fact khảo cổ, nhưng nó vẫn là dữ liệu lịch sử về cách cộng đồng hình dung nguồn gốc và legitimacy. Sai lầm thường gặp là hoặc tin myth theo nghĩa literal, hoặc vứt bỏ myth hoàn toàn. Cách đúng là hỏi: văn bản được viết khi nào, bởi ai, trong bối cảnh nào và được dùng để tạo meaning gì.
-
-
-> **Chuyển mạch:** Từ **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)**, ta sang **Periodization là mô hình (model / 모델) chứ không phải tự nhiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Periodization là mô hình (model / 모델) chứ không phải tự nhiên
 
 Tên như “Three Kingdoms”, “Tân La Thống nhất (통일신라 / Unified Silla)”, “Late Joseon” là **periodization (phân kỳ lịch sử / 시대구분)**. Chúng giúp compress lượng dữ liệu lớn thành mô hình (model / 모델), giống cách software engineer chia hệ thống (system / 시스템) thành mô-đun (module / 모듈). Nhưng ranh giới (boundary / 경계) của mô-đun (module / 모듈) có thể che khuất quá trình chuyển tiếp. Năm 1392 rất quan trọng vì triều nhà Triều Tiên (조선 / Joseon) được thành lập, nhưng không phải mọi cấu trúc xã hội Cao Ly (고려 / Goryeo) biến mất vào ngày hôm đó.
 
-
-> **Chuyển mạch:** Từ **Periodization là mô hình (model / 모델) chứ không phải tự nhiên**, ta sang **Peninsula ≠ Republic of Korea** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Peninsula ≠ Republic of Korea
 
 Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **Korean Peninsula (bán đảo Triều Tiên / 한반도)**, **Republic of Korea (Đại Hàn Dân Quốc / 대한민국)** và **Democratic People's Republic of Korea (CHDCND Triều Tiên / 조선민주주의인민공화국)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
-
-
-> **Chuyển mạch:** Từ **Peninsula ≠ Republic of Korea**, ta sang **nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)
 
@@ -48,8 +33,25 @@ ideology ─> legitimacy ──────────┤
 
 Đồ thị (graph / 그래프) này không nói mọi xã hội đều đi cùng một đường. Nó chỉ buộc ta hỏi mỗi mũi tên có bằng chứng (evidence / 증거) nào và có biến trung gian nào bị bỏ quên.
 
+## Bốn lớp phải gắn vào mỗi giai đoạn
 
-> **Chuyển mạch:** Từ **nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Từ đây, một chapter chỉ có sự kiện (event / 이벤트) và nhân vật được xem là chưa hoàn chỉnh. Khi đọc một giai đoạn, hãy dựng mental scene theo bốn tầng (layer / 계층).
+
+**Thứ nhất là chronology:** trước và sau giai đoạn này là gì, đâu là 3–5 mốc đủ để không đảo nhân quả. Niên đại là coordinate, không phải mục tiêu học thuộc.
+
+**Thứ hai là economy và everyday life:** trạng thái (state / 상태) lấy revenue từ land, tax, tribute, trade hay credit nào; người bình thường tạo livelihood ra sao; war/reform làm household chịu chi phí (cost / 비용) gì. Điều này nối palace với farm, chính sách (policy / 정책) với thị trường (market / 시장) và industrial plan với factory worker.
+
+**Thứ ba là Việt Nam cùng thời:** dùng Việt Nam như temporal anchor để người đọc Việt dễ hình dung. Ví dụ Goryeo thế kỷ XIII được đặt cạnh Đại Việt thời Trần và các cuộc chiến Mông Cổ–Nguyên; Joseon thế kỷ XV được đặt cạnh Hậu Lê; South Korean industrialization được đặt cạnh bối cảnh chiến tranh rồi tái thiết của Việt Nam. Comparison chỉ có giá trị khi cùng nhìn một variable hoặc regional shock; không dùng để suy ra hai trajectory giống nhau hay để xếp hạng.
+
+**Thứ tư là vật lý (physical / 물리적) place:** một giai đoạn phải nối được với ít nhất một landscape, sản phẩm tạo ra (artifact / 산출물) hoặc institution có thể quan sát: Gyeongju với Silla, Ganghwa với Mongol wars, Haeinsa với kiến thức (knowledge / 지식) hạ tầng (infrastructure / 인프라), Gyeongbokgung/Jongmyo với Joseon trạng thái (state / 상태), Suwon Hwaseong với late-Joseon kỹ thuật (engineering / 엔지니어링), Seodaemun Prison với colonial repression, DMZ với armistice hệ thống (system / 시스템), Ulsan/Pohang với industrialization, Gwangju với democratization và công khai (public / 공개) bộ nhớ (memory / 메모리).
+
+Ba companion tệp (file / 파일) `33`–`35` được xây để cung cấp các tầng (layer / 계층) này xuyên suốt thư viện (library / 라이브러리), nhưng mục tiêu cuối cùng vẫn là đọc chapter chính như một nhân quả (causal / 인과적) story chứ không phải đổi sang học một checklist mới.
+
+## Một cách tự kiểm tra xem mình đã hiểu chưa
+
+Sau một chapter, thử kể lại mà không nhìn sách bằng một luồng (flow / 흐름) tự nhiên: **hệ thống (system / 시스템) trước đó có ràng buộc (constraint / 제약조건) gì → shock/thay đổi (change / 변경) nào xuất hiện → institution nào phản ứng → economy và người dân bị tác động ra sao → trạng thái (state / 상태) mới khác trạng thái (state / 상태) cũ ở đâu → Việt Nam cùng lúc đang ở phase nào → hôm nay còn nhìn thấy bằng chứng (evidence / 증거) ở đâu**.
+
+Nếu chỉ nhớ được tên vua, battle và năm thì mới có coordinate. Nếu kể được luồng (flow / 흐름) trên, ta bắt đầu có historical mô hình (model / 모델).
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -61,4 +63,10 @@ Facts có thể được kiểm chứng tương đối chắc, nhưng lựa ch�
 
 Niên đại là coordinate. Nó cần thiết để không đảo nhân quả, nhưng hiểu lịch sử đòi hỏi biết cơ chế (mechanism / 메커니즘) giữa các coordinate đó.
 
-> **Bàn giao:** Sau **“Biết nhiều niên đại nghĩa là hiểu lịch sử”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+### “Đặt Hàn Quốc cạnh Việt Nam nghĩa là hai nước đi cùng một đường”
+
+Không. Parallel timeline là công cụ orientation. Một similarity chỉ có ý nghĩa sau khi chỉ rõ variable đang so sánh, và một difference cần giải thích bằng institutions, geography, bên ngoài (external / 외부) relations hoặc historical contingency thay vì national-character stereotype.
+
+### “Đi di tích là phần phụ sau khi đã học xong lịch sử”
+
+Vật lý (physical / 물리적) place có thể là bằng chứng (evidence / 증거) ngay từ đầu. Fortification cho biết threat mô hình (model / 모델), palace bố cục (layout / 레이아웃) cho biết hierarchy, tomb cho biết labor mobilization, railway cho biết luồng (flow / 흐름) hàng hoá và colonial priorities, factory city cho biết industrial chính sách (policy / 정책) đã biến thành geography như thế nào. Trường dữ liệu (field / 필드) trip vì vậy là một phương pháp đọc lịch sử (history / 이력) chứ không chỉ là tourism.

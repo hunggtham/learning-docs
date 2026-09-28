@@ -2,13 +2,13 @@
 
 ## Prerequisite, phạm vi và câu hỏi trung tâm
 
-Ta đã biết từ [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) rằng Bắc Bộ và Bắc Trung Bộ là network sông–đồng bằng–trung du chứ không phải một mặt phẳng. Chapter này hỏi: **trước khi có chính sử mô tả rõ nhà nước, archaeology cho thấy xã hội đã thay đổi như thế nào về settlement, nông nghiệp, metallurgy, specialization và inequality?**
+Ta đã biết từ [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) rằng Bắc Bộ và Bắc Trung Bộ là mạng (network / 네트워크) sông–đồng bằng–trung du chứ không phải một mặt phẳng. Chapter này hỏi: **trước khi có chính sử mô tả rõ nhà nước, archaeology cho thấy xã hội đã thay đổi như thế nào về settlement, nông nghiệp, metallurgy, specialization và inequality?**
 
-Mục tiêu không phải học thuộc taxonomy khảo cổ. Phùng Nguyên → Đồng Đậu → Gò Mun → Đông Sơn được dùng như các coordinate để nhìn một process kéo dài nhiều thế kỷ. Niên đại của từng culture thay đổi đôi chút theo site và scholarship, nên các range dưới đây là xấp xỉ.
+Mục tiêu không phải học thuộc taxonomy khảo cổ. Phùng Nguyên → Đồng Đậu → Gò Mun → Đông Sơn được dùng như các coordinate để nhìn một tiến trình (process / 프로세스) kéo dài nhiều thế kỷ. Niên đại của từng culture thay đổi đôi chút theo site và scholarship, nên các phạm vi (range / 범위) dưới đây là xấp xỉ.
 
 ## Một timeline vật chất thay vì timeline vua chúa
 
-Ở Bắc Bộ, sequence thường được mô tả gần đúng như sau:
+Ở Bắc Bộ, chuỗi (sequence / 시퀀스) thường được mô tả gần đúng như sau:
 
 ```text
 Phùng Nguyên      ~ thiên niên kỷ II TCN, giai đoạn sớm
@@ -20,37 +20,37 @@ Gò Mun            ~ cuối thiên niên kỷ II → đầu thiên niên kỷ I 
 Đông Sơn          ~ khoảng thế kỷ VII TCN → những thế kỷ đầu Công nguyên
 ```
 
-Các mốc không phải hard boundary. Một technology không biến mất vào đúng ngày culture label đổi tên. Archaeologist dùng pottery style, metallurgy, burial, settlement layer và nhiều indicator khác để periodize material change.
+Các mốc không phải hard ranh giới (boundary / 경계). Một technology không biến mất vào đúng ngày culture label đổi tên. Archaeologist dùng pottery style, metallurgy, burial, settlement tầng (layer / 계층) và nhiều indicator khác để periodize material thay đổi (change / 변경).
 
 ## Từ farming settlement đến surplus: “kinh tế” thời này trông như thế nào?
 
-Không có GDP, coinage thống nhất hay tax record để ta đo trực tiếp. Economic history phải reconstruct từ dấu tích sản xuất và consumption. Wet-rice agriculture có vai trò quan trọng, nhưng cư dân còn fishing, hunting, gathering, animal husbandry và khai thác river/wetland resources. Stone, bone, bronze và về sau iron tools thay đổi năng suất và phạm vi việc có thể làm.
+Không có GDP, coinage thống nhất hay tax bản ghi (record / 레코드) để ta đo trực tiếp. Economic lịch sử (history / 이력) phải reconstruct từ dấu tích sản xuất và consumption. Wet-rice agriculture có vai trò quan trọng, nhưng cư dân còn fishing, hunting, gathering, animal husbandry và khai thác river/wetland resources. Stone, bone, bronze và về sau iron tools thay đổi năng suất và phạm vi việc có thể làm.
 
-Điểm quan trọng là **storage và surplus**. Khi một settlement tạo được food dư tương đối ổn định, không phải mọi household member đều phải dành toàn bộ thời gian tìm food. Một phần labor có thể chuyển sang pottery, weaving, metallurgy, boat building, ritual production hoặc warfare. Từ đây xuất hiện **craft specialization (chuyên môn hóa thủ công)**.
+Điểm quan trọng là **lưu trữ (storage / 저장소) và surplus**. Khi một settlement tạo được food dư tương đối ổn định, không phải mọi household member đều phải dành toàn bộ thời gian tìm food. Một phần labor có thể chuyển sang pottery, weaving, metallurgy, boat building, ritual môi trường vận hành (production / 운영 환경) hoặc warfare. Từ đây xuất hiện **craft specialization (chuyên môn hóa thủ công)**.
 
-Surplus không tự động tạo elite, nhưng nó tạo thứ có thể được control, exchange, redistribute hoặc display. Khi burial goods và labor cost của mộ khác nhau đáng kể, ta có evidence rằng social differentiation đã tăng — dù archaeology không thể luôn cho biết title chính xác của từng người.
+Surplus không tự động tạo elite, nhưng nó tạo thứ có thể được điều khiển (control / 제어), exchange, redistribute hoặc display. Khi burial goods và labor chi phí (cost / 비용) của mộ khác nhau đáng kể, ta có bằng chứng (evidence / 증거) rằng xã hội (social / 사회적) differentiation đã tăng — dù archaeology không thể luôn cho biết title chính xác của từng người.
 
-## Bronze metallurgy là production system, không chỉ là “biết đúc đồng”
+## Bronze metallurgy là môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템), không chỉ là “biết đúc đồng”
 
-Một bronze drum hoặc weapon hoàn thiện che khuất supply chain phía sau: ore/material acquisition, alloy knowledge, furnace, mold, skilled labor, fuel, transport và social demand. Nếu production đạt quy mô lớn, xã hội phải coordinate nhiều input khác nhau.
+Một bronze drum hoặc weapon hoàn thiện che khuất supply chuỗi (chain / 사슬) phía sau: ore/material acquisition, alloy kiến thức (knowledge / 지식), furnace, mold, skilled labor, fuel, vận chuyển (transport / 전송) và xã hội (social / 사회적) demand. Nếu môi trường vận hành (production / 운영 환경) đạt quy mô lớn, xã hội phải coordinate nhiều đầu vào (input / 입력) khác nhau.
 
-Đông Sơn nổi tiếng với trống đồng, nhưng nếu chỉ nhìn trống như biểu tượng nghệ thuật ta bỏ lỡ economic mechanism. Trống có material cost và skill cost cao; distribution của chúng cho thấy network exchange và status. Weapons, agricultural tools, molds và production debris lại giúp thấy military/agricultural economy phía dưới elite display.
+Đông Sơn nổi tiếng với trống đồng, nhưng nếu chỉ nhìn trống như biểu tượng nghệ thuật ta bỏ lỡ economic cơ chế (mechanism / 메커니즘). Trống có material chi phí (cost / 비용) và skill chi phí (cost / 비용) cao; phân phối (distribution / 분포) của chúng cho thấy mạng (network / 네트워크) exchange và status. Weapons, agricultural tools, molds và môi trường vận hành (production / 운영 환경) debris lại giúp thấy military/agricultural economy phía dưới elite display.
 
-Tại Cổ Loa, các phát hiện liên quan khuôn đúc và lượng lớn mũi tên đồng là một lý do quan trọng để chapter tiếp theo đặt câu hỏi về centralized production và political capacity.
+Tại Cổ Loa, các phát hiện liên quan khuôn đúc và lượng lớn mũi tên đồng là một lý do quan trọng để chapter tiếp theo đặt câu hỏi về centralized môi trường vận hành (production / 운영 환경) và political sức chứa (capacity / 용량).
 
 ## Đông Sơn không phải một “dân tộc đóng hộp”
 
-**Đông Sơn culture (văn hóa Đông Sơn)** là category khảo cổ học được nhận diện qua assemblage vật chất và phân bố site. Không nên biến category này thành một identity hiện đại với boundary tuyệt đối. Các community giao lưu với vùng nam Trung Hoa và Đông Nam Á; vật liệu, motif, technology và goods di chuyển qua network rộng.
+**Đông Sơn culture (văn hóa Đông Sơn)** là category khảo cổ học được nhận diện qua assemblage vật chất và phân bố site. Không nên biến category này thành một định danh (identity / 식별자) hiện đại với ranh giới (boundary / 경계) tuyệt đối. Các community giao lưu với vùng nam Trung Hoa và Đông Nam Á; vật liệu, motif, technology và goods di chuyển qua mạng (network / 네트워크) rộng.
 
-Điều này không làm lịch sử “kém Việt Nam”. Ngược lại, nó cho thấy societies hình thành trong interaction. Identity, state và culture hiếm khi phát triển trong isolation.
+Điều này không làm lịch sử “kém Việt Nam”. Ngược lại, nó cho thấy societies hình thành trong tương tác (interaction / 상호작용). Định danh (identity / 식별자), trạng thái (state / 상태) và culture hiếm khi phát triển trong isolation.
 
 ## Đời sống thường ngày: có thể biết gì, và không biết gì?
 
-Từ settlement, tool, pottery, plant/animal remains và burial, ta có thể reconstruct một phần diet, production và household activity. Nhưng cần phân biệt **probable pattern** với cinematic detail. Ta có thể nói agriculture, river resources và craft đều quan trọng; khó hơn nhiều để nói chính xác một gia đình cụ thể ăn gì vào một ngày cụ thể hay dùng social title nào nếu không có source.
+Từ settlement, công cụ (tool / 도구), pottery, plant/animal remains và burial, ta có thể reconstruct một phần diet, môi trường vận hành (production / 운영 환경) và household activity. Nhưng cần phân biệt **probable mẫu (pattern / 패턴)** với cinematic detail. Ta có thể nói agriculture, river resources và craft đều quan trọng; khó hơn nhiều để nói chính xác một gia đình cụ thể ăn gì vào một ngày cụ thể hay dùng xã hội (social / 사회적) title nào nếu không có nguồn (source / 소스).
 
-Một cách tưởng tượng có kiểm soát là đi từ constraint: monsoon quyết định season; rice cultivation tạo work peak; river cung cấp transport và fish; house/storage phải thích nghi humidity/flood; tool technology giới hạn năng suất. Đây là reconstruction từ environment + evidence, không phải fiction.
+Một cách tưởng tượng có kiểm soát là đi từ ràng buộc (constraint / 제약조건): monsoon quyết định season; rice cultivation tạo công việc (work / 작업) peak; river cung cấp vận chuyển (transport / 전송) và fish; house/lưu trữ (storage / 저장소) phải thích nghi humidity/flood; công cụ (tool / 도구) technology giới hạn năng suất. Đây là reconstruction từ môi trường (environment / 환경) + bằng chứng (evidence / 증거), không phải fiction.
 
-## Từ technology đến political complexity: causal chain nào hợp lý?
+## Từ technology đến political độ phức tạp (complexity / 복잡도): chuỗi nhân quả (causal chain / 인과 사슬) nào hợp lý?
 
 ```text
 agriculture + river resources
@@ -67,25 +67,25 @@ when institutions can mobilize labor and enforce authority:
 larger political organization becomes possible
 ```
 
-Mỗi mũi tên là hypothesis cần evidence; không phải law của lịch sử. Nhưng chain này giải thích vì sao chapter về Đông Sơn phải đứng trước Cổ Loa: monumental fortification không xuất hiện trong vacuum.
+Mỗi mũi tên là hypothesis cần bằng chứng (evidence / 증거); không phải law của lịch sử. Nhưng chuỗi (chain / 사슬) này giải thích vì sao chapter về Đông Sơn phải đứng trước Cổ Loa: monumental fortification không xuất hiện trong vacuum.
 
 ## Địa điểm và hiện vật để “neo” kiến thức
 
-**Di chỉ Đông Sơn (Thanh Hóa)** nằm bên hệ thống sông Mã và là địa điểm đặt tên cho archaeological culture. Đến vùng này, điều cần nhớ không phải “Thanh Hóa = nơi duy nhất có Đông Sơn”, mà là lưu vực sông Mã là một node quan trọng trong network rộng ở miền Bắc và Bắc Trung Bộ.
+**Di chỉ Đông Sơn (Thanh Hóa)** nằm bên hệ thống sông Mã và là địa điểm đặt tên cho archaeological culture. Đến vùng này, điều cần nhớ không phải “Thanh Hóa = nơi duy nhất có Đông Sơn”, mà là lưu vực sông Mã là một nút (node / 노드) quan trọng trong mạng (network / 네트워크) rộng ở miền Bắc và Bắc Trung Bộ.
 
-**Bảo tàng Lịch sử Quốc gia tại Hà Nội** lưu giữ nhiều hiện vật Đông Sơn và giúp nhìn trực tiếp scale/technology của bronze objects. Museum context hữu ích vì nhiều artifact đã rời original site; khi nhìn hiện vật cần đọc provenance — tìm thấy ở đâu, trong burial hay settlement, layer nào — chứ không chỉ nhìn hình thức.
+**Bảo tàng Lịch sử Quốc gia tại Hà Nội** lưu giữ nhiều hiện vật Đông Sơn và giúp nhìn trực tiếp quy mô (scale / 규모)/technology của bronze objects. Museum ngữ cảnh (context / 맥락) hữu ích vì nhiều sản phẩm tạo ra (artifact / 산출물) đã rời original site; khi nhìn hiện vật cần đọc provenance — tìm thấy ở đâu, trong burial hay settlement, tầng (layer / 계층) nào — chứ không chỉ nhìn hình thức.
 
-**Cổ Loa (Đông Anh, Hà Nội)** là checkpoint kế tiếp: nơi archaeological sequence, metallurgy và massive earthworks gặp nhau. Cục Di sản Văn hóa mô tả khu vực có nhiều lớp cư trú từ trước Đông Sơn, còn nghiên cứu khảo cổ hiện đại đặt monumental construction của Cổ Loa trong cuối thiên niên kỷ I TCN.
+**Cổ Loa (Đông Anh, Hà Nội)** là checkpoint kế tiếp: nơi archaeological chuỗi (sequence / 시퀀스), metallurgy và massive earthworks gặp nhau. Cục Di sản Văn hóa mô tả khu vực có nhiều lớp cư trú từ trước Đông Sơn, còn nghiên cứu khảo cổ hiện đại đặt monumental construction của Cổ Loa trong cuối thiên niên kỷ I TCN.
 
 ## Đông Sơn và ký ức Việt Nam hôm nay
 
-Trống đồng xuất hiện như symbol trong museum, visual design và national narrative hiện đại. Đây là ví dụ tốt về **afterlife of artifacts**: một object có chức năng/status trong xã hội cổ nhưng được gán thêm meaning ở thời hiện đại. Library sẽ không coi modern symbolic use là bằng chứng cho original meaning; thay vào đó nó là data cho public memory.
+Trống đồng xuất hiện như symbol trong museum, visual thiết kế (design / 설계) và national narrative hiện đại. Đây là ví dụ tốt về **afterlife of artifacts**: một đối tượng (object / 객체) có chức năng/status trong xã hội cổ nhưng được gán thêm meaning ở thời hiện đại. Thư viện (library / 라이브러리) sẽ không coi hiện đại (modern / 현대적) symbolic use là bằng chứng cho original meaning; thay vào đó nó là dữ liệu (data / 데이터) cho công khai (public / 공개) bộ nhớ (memory / 메모리).
 
-## Recap, boundary và đường đọc tiếp
+## Recap, ranh giới (boundary / 경계) và đường đọc tiếp
 
-Ta đã đi từ settlement và subsistence tới surplus, specialization, metallurgy và social differentiation. Boundary quan trọng là: **archaeology cho thấy mức độ complexity tăng, nhưng tên “Văn Lang”, danh sách Hùng Vương và chronology truyền thống thuộc một evidence layer khác**.
+Ta đã đi từ settlement và subsistence tới surplus, specialization, metallurgy và xã hội (social / 사회적) differentiation. Ranh giới (boundary / 경계) quan trọng là: **archaeology cho thấy mức độ độ phức tạp (complexity / 복잡도) tăng, nhưng tên “Văn Lang”, danh sách Hùng Vương và chronology truyền thống thuộc một bằng chứng (evidence / 증거) tầng (layer / 계층) khác**.
 
-[`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md) sẽ nối hai layer này. Câu hỏi không còn chỉ là “có nhà nước đầu tiên năm nào?”, mà là: tradition nói gì, material evidence thực sự cho thấy gì, và Cổ Loa thay đổi cách ta hiểu early state formation ở Bắc Bộ như thế nào.
+[`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md) sẽ nối hai tầng (layer / 계층) này. Câu hỏi không còn chỉ là “có nhà nước đầu tiên năm nào?”, mà là: tradition nói gì, material bằng chứng (evidence / 증거) thực sự cho thấy gì, và Cổ Loa thay đổi cách ta hiểu early trạng thái (state / 상태) formation ở Bắc Bộ như thế nào.
 
 ### Nguồn đọc nền
 

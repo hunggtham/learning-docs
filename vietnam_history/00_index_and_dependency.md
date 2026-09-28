@@ -1,10 +1,10 @@
-# Mục lục và Knowledge Dependency — Lịch sử Việt Nam
+# Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Việt Nam
 
-## Cách đọc library này
+## Cách đọc thư viện (library / 라이브러리) này
 
-Timeline giữ cho ta không đảo trước–sau, nhưng lịch sử chỉ dễ hiểu khi biết **state nào của xã hội tạo điều kiện cho state tiếp theo**. Vì vậy thứ tự dưới đây là **causal dependency (phụ thuộc nhân quả)**, không phải Beginner → Advanced.
+Timeline giữ cho ta không đảo trước–sau, nhưng lịch sử chỉ dễ hiểu khi biết **trạng thái (state / 상태) nào của xã hội tạo điều kiện cho trạng thái (state / 상태) tiếp theo**. Vì vậy thứ tự dưới đây là **nhân quả (causal / 인과적) phụ thuộc (dependency / 의존성)**, không phải Beginner → Advanced.
 
-Mental model chung:
+Mô hình tư duy (mental model / 사고 모델) chung:
 
 ```text
 environment + geography
@@ -22,9 +22,9 @@ new political order
 continuity + rupture in everyday life
 ```
 
-Geography không “quyết định” outcome. Nó tạo constraint/opportunity; technology, institution và human choice quyết định cách constraint được xử lý.
+Geography không “quyết định” kết quả (outcome / 결과). Nó tạo ràng buộc (constraint / 제약조건)/opportunity; technology, institution và human choice quyết định cách ràng buộc (constraint / 제약조건) được xử lý.
 
-## Route 1 — Timeline chính: 01 → 23
+## Tuyến (route / 경로) 1 — Timeline chính: 01 → 23
 
 ```text
 01 Cách đọc lịch sử: evidence, myth, chronology, causal reasoning
@@ -74,9 +74,9 @@ Geography không “quyết định” outcome. Nó tạo constraint/opportunity
 23 21st century: GVC, urbanization, aging, digitalization, climate
 ```
 
-Timeline là backbone, nhưng chapter 14 chỉ đóng vai trò junction. Các vùng có history riêng được mở sâu ở Route 3 thay vì chỉ xuất hiện lúc central state mở rộng tới đó.
+Timeline là backbone, nhưng chapter 14 chỉ đóng vai trò junction. Các vùng có lịch sử (history / 이력) riêng được mở sâu ở Tuyến (route / 경로) 3 thay vì chỉ xuất hiện lúc central trạng thái (state / 상태) mở rộng tới đó.
 
-## Route 2 — Các trục xuyên thời gian: 24 → 30
+## Tuyến (route / 경로) 2 — Các trục xuyên thời gian: 24 → 30
 
 Sau timeline, đọc lại lịch sử theo variable thay vì dynasty:
 
@@ -103,11 +103,11 @@ Sau timeline, đọc lại lịch sử theo variable thay vì dynasty:
    chronicles → archaeology → archives → oral history → museums/heritage
 ```
 
-Các file 24–30 không lặp timeline. Mỗi file theo một causal variable qua nhiều thời kỳ để thấy continuity và structural change.
+Các tệp (file / 파일) 24–30 không lặp timeline. Mỗi tệp (file / 파일) theo một nhân quả (causal / 인과적) variable qua nhiều thời kỳ để thấy continuity và structural thay đổi (change / 변경).
 
-## Route 3 — Regional & network deep dives: 34 → 37
+## Tuyến (route / 경로) 3 — Regional & mạng (network / 네트워크) deep dives: 34 → 37
 
-Route này sửa bias thường gặp khi national history lấy Red River/Đại Việt làm default rồi chỉ nói vùng khác khi chúng gặp central state.
+Tuyến (route / 경로) này sửa độ lệch (bias / 편향) thường gặp khi national lịch sử (history / 이력) lấy Red River/Đại Việt làm default rồi chỉ nói vùng khác khi chúng gặp central trạng thái (state / 상태).
 
 ```text
 34 Champa
@@ -127,9 +127,9 @@ Route này sửa bias thường gặp khi national history lấy Red River/Đạ
    → colonial steam ports → Hải Phòng/Sài Gòn → container/GVC
 ```
 
-Các file này phải được đọc như historical systems riêng trước khi quay lại chapter 14. Modern border không phải analytical container bất biến.
+Các tệp (file / 파일) này phải được đọc như historical các hệ thống (systems / 시스템들) riêng trước khi quay lại chapter 14. Hiện đại (modern / 현대적) border không phải analytical bộ chứa (container / 컨테이너) bất biến.
 
-Recommended dependency:
+Recommended phụ thuộc (dependency / 의존성):
 
 ```text
 02 Historical Geography
@@ -141,10 +141,10 @@ Recommended dependency:
       reread 14 Frontier formation
 ```
 
-## Route 4 — Reference layer: 31 → 33
+## Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33
 
 - [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): coordinate map để tra nhanh mốc.
-- [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): analytical vocabulary, evidence level và source owner.
+- [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): analytical vocabulary, bằng chứng (evidence / 증거) mức (level / 수준) và nguồn (source / 소스) đơn vị sở hữu (owner / 오너).
 - [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md): biến di tích/địa điểm thành checkpoint học tại landscape.
 
 Không dùng chronology 31 thay cho explanatory chapter. Không dùng UNESCO/heritage label trong 33 như proof cho mọi legend.
@@ -153,12 +153,12 @@ Không dùng chronology 31 thay cho explanatory chapter. Không dùng UNESCO/her
 
 Không cần học hàng trăm năm như password. Trước hết giữ các coordinate:
 
-- cuối thiên niên kỷ I TCN: Đông Sơn/Cổ Loa và early state complexity;
+- cuối thiên niên kỷ I TCN: Đông Sơn/Cổ Loa và early trạng thái (state / 상태) độ phức tạp (complexity / 복잡도);
 - khoảng đầu Công nguyên–thế kỷ VII: Óc Eo/Lower Mekong early urban-commercial world;
 - khoảng thế kỷ IV–XIII: Mỹ Sơn là major Champa religious/political centre qua nhiều phase;
-- **111 TCN**: Han conquest of Nanyue đưa Bắc Bộ sâu vào imperial system;
-- **938**: Bạch Đằng và bước ngoặt khỏi direct northern imperial rule;
-- **968**: Đinh state consolidation tại Hoa Lư;
+- **111 TCN**: Han conquest of Nanyue đưa Bắc Bộ sâu vào imperial hệ thống (system / 시스템);
+- **938**: Bạch Đằng và bước ngoặt khỏi direct northern imperial quy tắc (rule / 규칙);
+- **968**: Đinh trạng thái (state / 상태) consolidation tại Hoa Lư;
 - **1010**: dời đô Thăng Long;
 - **1225**: mở triều Trần;
 - **1407–1427/28**: Ming occupation → Lam Sơn → restored Đại Việt;
@@ -166,7 +166,7 @@ Không cần học hàng trăm năm như password. Trước hết giữ các coo
 - **1527** và thế kỷ XVI–XVII: dynastic fragmentation, Mạc/Lê–Trịnh/Nguyễn;
 - **1771–1802**: Tây Sơn và wars of reunification;
 - **1802**: Nguyễn unified monarchy, Huế capital;
-- **1832**: major turning point in incorporation of Panduranga;
+- **1832**: major turning điểm (point / 지점) in incorporation of Panduranga;
 - **1858** onward: French conquest accelerates;
 - **1945**, **1954**, **1975**, **1986**: major twentieth-century structural coordinates;
 - **1995**: ASEAN membership và U.S. normalization;
@@ -176,7 +176,7 @@ Mỗi anchor phải trả lời: cấu trúc nào thay đổi và cấu trúc n�
 
 ## Những vùng không được ép vào narrative Đại Việt duy nhất
 
-History of current Vietnamese territory includes multiple systems:
+Lịch sử (history / 이력) of hiện tại (current / 현재) Vietnamese territory includes multiple các hệ thống (systems / 시스템들):
 
 ```text
 Red River / Đại Việt core
@@ -187,53 +187,53 @@ Chinese/overseas merchant networks
 maritime South China Sea / Southeast Asian networks
 ```
 
-Political border today is not timeless analytical container. Chapter 14 owns frontier/inter-polity relation; chapters 34–37 own regional/network depth; chapters 24–30 revisit all of them from economy/social/religion/environment angles.
+Political border today is not timeless analytical bộ chứa (container / 컨테이너). Chapter 14 owns frontier/inter-polity quan hệ (relation / 관계); chapters 34–37 own regional/mạng (network / 네트워크) độ sâu (depth / 깊이); chapters 24–30 revisit all of them from economy/xã hội (social / 사회적)/religion/môi trường (environment / 환경) angles.
 
-## Di tích như evidence checkpoint
+## Di tích như bằng chứng (evidence / 증거) checkpoint
 
 At every site ask:
 
 1. phần vật chất nào thật sự thuộc period đang học?
 2. phần nào được rebuilt later?
 3. site nằm ở đây vì geography/logistics gì?
-4. nó giúp kiểm tra mechanism nào?
+4. nó giúp kiểm tra cơ chế (mechanism / 메커니즘) nào?
 
 Examples:
 
-- Đền Hùng → collective memory more than literal chronology proof;
-- Cổ Loa → early-state labor/fortification + later memory;
+- Đền Hùng → collective bộ nhớ (memory / 메모리) more than literal chronology proof;
+- Cổ Loa → early-state labor/fortification + later bộ nhớ (memory / 메모리);
 - Óc Eo–Ba Thê → delta archaeology, craft và long-distance connectivity;
-- Mỹ Sơn → Champa sacred/political system + Thu Bồn network;
+- Mỹ Sơn → Champa sacred/political hệ thống (system / 시스템) + Thu Bồn mạng (network / 네트워크);
 - Hoa Lư → defensive geography;
 - Thăng Long → long-duration administrative centre;
 - Vân Đồn → medieval maritime exchange;
-- Hội An → port/trade/diaspora network;
-- Huế → Nguyễn state spatial organization;
+- Hội An → cổng (port / 포트)/trade/diaspora mạng (network / 네트워크);
+- Huế → Nguyễn trạng thái (state / 상태) spatial organization;
 - Điện Biên → terrain/logistics;
-- industrial belts → Đổi Mới/GVC infrastructure.
+- industrial belts → Đổi Mới/GVC hạ tầng (infrastructure / 인프라).
 
-Full route: [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md).
+Full tuyến (route / 경로): [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md).
 
-## Evidence contract
+## Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)
 
-Library phân biệt:
+Thư viện (library / 라이브러리) phân biệt:
 
 - **well established fact**;
-- **archaeological inference**;
+- **archaeological suy luận (inference / 추론)**;
 - **historical interpretation**;
 - **contested interpretation**;
 - **tradition / legend**;
-- **collective memory / heritage claim**.
+- **collective bộ nhớ (memory / 메모리) / heritage claim**.
 
-A traditional narrative can be historically important without being literal verified chronology. An archaeological artifact can support production/state-capacity inference without proving a later legend.
+A traditional narrative can be historically important without being literal verified chronology. An archaeological sản phẩm tạo ra (artifact / 산출물) can hỗ trợ (support / 지원) môi trường vận hành (production / 운영 환경)/state-capacity suy luận (inference / 추론) without proving a later legend.
 
-Đặc biệt với regional history, không đồng nhất external textual label với self-identity: “Funan” trong Chinese texts, “Lâm Ấp” trong court record hay colonial ethnic category đều cần source criticism.
+Đặc biệt với regional lịch sử (history / 이력), không đồng nhất bên ngoài (external / 외부) textual label với self-identity: “Funan” trong Chinese texts, “Lâm Ấp” trong court bản ghi (record / 레코드) hay colonial ethnic category đều cần nguồn (source / 소스) criticism.
 
-## Suggested learning paths
+## Suggested học tập (learning / 학습) paths
 
 ### Nếu muốn hiểu toàn bộ lịch sử
 
-01 → 23, sau đó 24 → 30, rồi 34 → 37; cuối cùng dùng 31–33 để review/field learning.
+01 → 23, sau đó 24 → 30, rồi 34 → 37; cuối cùng dùng 31–33 để rà soát (review / 검토)/trường dữ liệu (field / 필드) học tập (learning / 학습).
 
 ### Nếu muốn hiểu miền Trung/Champa
 
@@ -257,8 +257,8 @@ A traditional narrative can be historically important without being literal veri
 
 ### Nếu cần tra nhanh một mốc
 
-31 → quay lại chapter owner; không dừng ở 31.
+31 → quay lại chapter đơn vị sở hữu (owner / 오너); không dừng ở 31.
 
 ## Bàn giao
 
-Bắt đầu với [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md), rồi [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md). Sau timeline 01–23, dùng 24–30 để rebuild structural history và 34–37 để thay modern-national map bằng regional/network map trước khi review bằng 31–33.
+Bắt đầu với [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md), rồi [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md). Sau timeline 01–23, dùng 24–30 để rebuild structural lịch sử (history / 이력) và 34–37 để thay modern-national map bằng regional/mạng (network / 네트워크) map trước khi rà soát (review / 검토) bằng 31–33.
