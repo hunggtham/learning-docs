@@ -1,5 +1,5 @@
-const SHELL_CACHE = 'study-shelf-shell-v5';
-const CONTENT_CACHE = 'study-shelf-content-v5';
+const SHELL_CACHE = 'study-shelf-shell-v6';
+const CONTENT_CACHE = 'study-shelf-content-v6';
 const USER_CACHE = 'study-shelf-user-v1';
 const SHELL = [
   './',

@@ -1,5 +1,6 @@
 const app = document.querySelector('#app');
-const state = { docs: [], query: '', folder: '', expandedFolders: new Set() };
+const PAGE_SIZE = 48;
+const state = { docs: [], query: '', folder: '', expandedFolders: new Set(), visibleLimit: PAGE_SIZE };
 let disposeReader = () => {};
 
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[char]);
@@ -78,6 +79,7 @@ function folderVisible(folder) {
 }
 function selectFolder(folder, { clearSearch = true } = {}) {
   state.folder = folder;
+  resetVisibleLimit();
   folderAncestors(folder).forEach(path => state.expandedFolders.add(path));
   if (clearSearch) {
     state.query = '';
@@ -87,13 +89,14 @@ function selectFolder(folder, { clearSearch = true } = {}) {
   renderFolderTree();
   renderCards();
 }
+function resetVisibleLimit() { state.visibleLimit = PAGE_SIZE; }
 
 function renderHome() {
   disposeReader();
   app.replaceChildren(document.querySelector('#home-template').content.cloneNode(true));
   const search = document.querySelector('#search');
   search.value = state.query;
-  search.addEventListener('input', event => { state.query = event.target.value; renderCards(); });
+  search.addEventListener('input', event => { state.query = event.target.value; resetVisibleLimit(); renderCards(); });
   window.addEventListener('keydown', event => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); search.focus(); } }, { once: true });
   renderFolderTree();
   renderCards();
@@ -154,8 +157,10 @@ function renderCards() {
     const matches = !term || `${titleOf(doc)} ${doc.displayPath || doc.path} ${doc.category} ${doc.language || ''}`.toLowerCase().includes(term);
     return inScope && matches;
   });
+  const visible = docs.slice(0, state.visibleLimit);
+  const countLabel = docs.length > visible.length ? `${visible.length}/${docs.length}` : `${docs.length}`;
 
-  document.querySelector('#result-count').textContent = term ? `${docs.length} kết quả` : `${docs.length} file · ${childFolders.length} folder`;
+  document.querySelector('#result-count').textContent = term ? `${countLabel} kết quả` : `${countLabel} file · ${childFolders.length} folder`;
   document.querySelector('#result-title').textContent = term ? `Kết quả cho “${state.query.trim()}”` : folderName(state.folder);
 
   const childContainer = document.querySelector('#folder-children');
@@ -164,7 +169,10 @@ function renderCards() {
 
   const grid = document.querySelector('#document-grid');
   if (docs.length) {
-    grid.innerHTML = docs.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('');
+    const cards = visible.map(doc => `<a class="doc-card" href="#/read/${encodeURIComponent(doc.path)}"><div class="doc-meta"><span class="type-badge">${doc.type}</span><span>${formatSize(doc.size)}</span></div><h3>${escapeHtml(titleOf(doc))}</h3><p class="doc-language">${escapeHtml(doc.language || 'vi')} · ${escapeHtml(doc.rights || 'author-confirmed')}</p><p class="doc-path">${escapeHtml(doc.displayPath || doc.path)}</p></a>`).join('');
+    const more = docs.length > visible.length ? `<button id="load-more-docs" class="load-more" type="button">Xem thêm ${Math.min(PAGE_SIZE, docs.length - visible.length)} tài liệu</button>` : '';
+    grid.innerHTML = `${cards}${more}`;
+    document.querySelector('#load-more-docs')?.addEventListener('click', () => { state.visibleLimit += PAGE_SIZE; renderCards(); });
   } else if (term) {
     grid.innerHTML = '<p class="empty">Không tìm thấy tài liệu phù hợp.</p>';
   } else if (!childFolders.length) {
