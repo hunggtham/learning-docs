@@ -1,12 +1,10 @@
-# Mixed Methods, Ethics, Reproducibility & Open Science — Tích hợp bằng chứng (evidence / 증거) mà không đánh đổi integrity
+# Mixed Methods, Ethics, Reproducibility & Open Science — Tích hợp evidence mà không đánh đổi integrity
 
-> **Mạch đọc:** Đặt **Mixed Methods, Ethics, Reproducibility & Open Science — Tích hợp bằng chứng (evidence / 증거) mà không đánh đổi integrity** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Mixed methods không phải “có cả survey và interview”** sang **2. Convergent thiết kế (design / 설계)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-Research thiết kế (design / 설계) không kết thúc khi dữ liệu (data / 데이터) đã được phân tích. Một study cần tích hợp các nguồn bằng chứng (evidence / 증거) đúng lô-gic (logic / 논리), bảo vệ participants, phân biệt exploratory với confirmatory phân tích (analysis / 분석), và để người khác có thể kiểm tra (audit / 감사)/reproduce những gì đã làm.
+Research design không kết thúc khi data đã được phân tích. Một study cần tích hợp các nguồn evidence đúng logic, bảo vệ participants, phân biệt exploratory với confirmatory analysis, và để người khác có thể audit/reproduce những gì đã làm.
 
 ## 1. Mixed methods không phải “có cả survey và interview”
 
-Mixed-method research cần tích hợp (integration / 통합) lô-gic (logic / 논리):
+Mixed-method research cần integration logic:
 
 ```text
 Why is one method insufficient?
@@ -17,37 +15,37 @@ Where are results integrated?
 
 Nếu hai methods chạy song song nhưng không inform each other, đó chỉ là multi-method collection.
 
-## 2. Convergent thiết kế (design / 설계)
+## 2. Convergent design
 
-Quantitative và qualitative dữ liệu (data / 데이터) được thu tương đối song song rồi compare/integrate.
+Quantitative và qualitative data được thu tương đối song song rồi compare/integrate.
 
 Useful khi cần kiểm tra convergence, complementarity hoặc contradiction.
 
-Disagreement không nên bị ép thành một kết luận giả tạo; nó có thể reveal đo lường (measurement / 측정)/ngữ cảnh (context / 맥락) differences.
+Disagreement không nên bị ép thành một kết luận giả tạo; nó có thể reveal measurement/context differences.
 
-## 3. Explanatory sequential thiết kế (design / 설계)
+## 3. Explanatory sequential design
 
 Quantitative phase trước, qualitative phase sau để giải thích patterns/outliers/mechanisms.
 
-Ví dụ survey tìm thấy subgroup tác động (effect / 효과); interviews investigate why.
+Ví dụ survey tìm thấy subgroup effect; interviews investigate why.
 
 Participant selection cho phase 2 nên follow analytic purpose.
 
-## 4. Exploratory sequential thiết kế (design / 설계)
+## 4. Exploratory sequential design
 
-Qualitative phase khám phá concepts/contexts trước, sau đó phát triển quy mô (scale / 규모)/survey hoặc quantitative kiểm thử (test / 테스트).
+Qualitative phase khám phá concepts/contexts trước, sau đó phát triển scale/survey hoặc quantitative test.
 
 Useful khi construct chưa được định nghĩa tốt.
 
-## 5. Embedded thiết kế (design / 설계)
+## 5. Embedded design
 
-Một phương thức (method / 메서드) đóng vai trò phụ bên trong primary thiết kế (design / 설계), ví dụ interviews embedded trong RCT để study hiện thực (implementation / 구현)/cơ chế (mechanism / 메커니즘).
+Một method đóng vai trò phụ bên trong primary design, ví dụ interviews embedded trong RCT để study implementation/mechanism.
 
-Need distinguish primary estimand from supportive tiến trình (process / 프로세스) bằng chứng (evidence / 증거).
+Need distinguish primary estimand from supportive process evidence.
 
-## 6. tích hợp (integration / 통합) points
+## 6. Integration points
 
-Tích hợp (integration / 통합) can occur at:
+Integration can occur at:
 
 ```text
 design
@@ -57,11 +55,11 @@ analysis
 interpretation
 ```
 
-A strong mixed-method study states chính xác (exact / 정확한) tích hợp (integration / 통합) điểm (point / 지점).
+A strong mixed-method study states exact integration point.
 
 ## 7. Joint displays
 
-Tables/matrices can align quantitative kết quả (result / 결과), qualitative theme and integrated interpretation for same subgroup/tiến trình (process / 프로세스).
+Tables/matrices can align quantitative result, qualitative theme and integrated interpretation for same subgroup/process.
 
 Joint display prevents methods from living in separate chapters without synthesis.
 
@@ -73,15 +71,15 @@ Complementarity uses different methods to answer different dimensions.
 
 Do not demand numeric and interview findings “match” if they measure different constructs.
 
-## 9. Research ethics starts at question/thiết kế (design / 설계)
+## 9. Research ethics starts at question/design
 
-Ethics is not paperwork after giao thức (protocol / 프로토콜) is complete.
+Ethics is not paperwork after protocol is complete.
 
-Ask whether study is necessary, rủi ro (risk / 위험) proportionate, recruitment fair, dữ liệu (data / 데이터) minimally invasive and participants can meaningfully consent.
+Ask whether study is necessary, risk proportionate, recruitment fair, data minimally invasive and participants can meaningfully consent.
 
 ## 10. Informed consent
 
-Consent requires thông tin (information / 정보), comprehension and voluntariness.
+Consent requires information, comprehension and voluntariness.
 
 A signed form does not guarantee understanding or absence of pressure.
 
@@ -95,91 +93,91 @@ Recruitment and withdrawal must avoid coercion or consequences.
 
 ## 12. Privacy vs confidentiality
 
-Privacy concerns truy cập (access / 접근) to person/ngữ cảnh (context / 맥락); confidentiality concerns handling thông tin (information / 정보) after collection.
+Privacy concerns access to person/context; confidentiality concerns handling information after collection.
 
-Anonymization is difficult when rich qualitative or linked administrative dữ liệu (data / 데이터) contain indirect identifiers.
+Anonymization is difficult when rich qualitative or linked administrative data contain indirect identifiers.
 
-## 13. dữ liệu (data / 데이터) minimization
+## 13. Data minimization
 
 Collect only fields needed for question.
 
-“Maybe useful later” is not enough justification for highly sensitive dữ liệu (data / 데이터).
+“Maybe useful later” is not enough justification for highly sensitive data.
 
 ## 14. De-identification
 
 Removing names does not guarantee anonymity. Location, age, job title, rare events or timestamps can re-identify.
 
-Rủi ro (risk / 위험) grows when datasets can be linked externally.
+Risk grows when datasets can be linked externally.
 
 ## 15. Sensitive topics
 
-Research on health, immigration, workplace xung đột (conflict / 충돌), violence or illegal activity requires special lưu trữ (storage / 저장소)/truy cập (access / 접근)/reporting plans.
+Research on health, immigration, workplace conflict, violence or illegal activity requires special storage/access/reporting plans.
 
 Publication excerpts should not accidentally identify participants.
 
-## 16. Secondary dữ liệu (data / 데이터) ethics
+## 16. Secondary data ethics
 
-Existing dữ liệu (data / 데이터) may be legally accessible but ethically sensitive.
+Existing data may be legally accessible but ethically sensitive.
 
-Original consent/ngữ cảnh (context / 맥락) and reasonable expectations matter.
+Original consent/context and reasonable expectations matter.
 
 ## 17. Internet research ethics
 
-Công khai (public / 공개) posts vary in expected privacy. Quoting searchable văn bản (text / 텍스트) can identify users even without username.
+Public posts vary in expected privacy. Quoting searchable text can identify users even without username.
 
-Paraphrase or permission may be needed depending rủi ro (risk / 위험)/ngữ cảnh (context / 맥락).
+Paraphrase or permission may be needed depending risk/context.
 
 ## 18. Risk-benefit assessment
 
-Research benefit is often societal/kiến thức (knowledge / 지식) benefit; participant bears immediate rủi ro (risk / 위험).
+Research benefit is often societal/knowledge benefit; participant bears immediate risk.
 
-Thiết kế (design / 설계) should minimize harm independently of hoped-for importance.
+Design should minimize harm independently of hoped-for importance.
 
 ## 19. Researcher conflicts of interest
 
-Funding, employment, consulting or ideological commitments can influence question, phân tích (analysis / 분석) and reporting.
+Funding, employment, consulting or ideological commitments can influence question, analysis and reporting.
 
-Disclosure does not eliminate độ lệch (bias / 편향) but enables assessment.
+Disclosure does not eliminate bias but enables assessment.
 
 ## 20. Preregistration
 
-Preregistration records hypotheses, outcomes and phân tích (analysis / 분석) plans before observing relevant results.
+Preregistration records hypotheses, outcomes and analysis plans before observing relevant results.
 
-It reduces undisclosed flexibility but does not make weak thiết kế (design / 설계) strong.
+It reduces undisclosed flexibility but does not make weak design strong.
 
-Exploratory công việc (work / 작업) remains legitimate if labeled.
+Exploratory work remains legitimate if labeled.
 
 ## 21. Pre-analysis plans
 
-Detailed plans may specify samples, exclusions, transformations, các mô hình (models / 모델들), outcomes and multiple-testing adjustments.
+Detailed plans may specify samples, exclusions, transformations, models, outcomes and multiple-testing adjustments.
 
 Deviations are acceptable when explained transparently.
 
 ## 22. Registered reports
 
-Study question/phương thức (method / 메서드) undergo peer rà soát (review / 검토) before results are known; publication commitment depends less on significance.
+Study question/method undergo peer review before results are known; publication commitment depends less on significance.
 
-This directly reduces publication độ lệch (bias / 편향) for confirmatory công việc (work / 작업).
+This directly reduces publication bias for confirmatory work.
 
 ## 23. Reproducibility
 
-Computational reproducibility asks whether same dữ liệu (data / 데이터)/mã (code / 코드)/môi trường (environment / 환경) regenerate figures/tables/results.
+Computational reproducibility asks whether same data/code/environment regenerate figures/tables/results.
 
-It requires versioned inputs, mã (code / 코드), dependencies and deterministic processing where possible.
+It requires versioned inputs, code, dependencies and deterministic processing where possible.
 
 ## 24. Replicability
 
-Replication repeats study with new dữ liệu (data / 데이터)/mẫu (sample / 표본) to assess whether finding recurs.
+Replication repeats study with new data/sample to assess whether finding recurs.
 
-A reproducible phân tích (analysis / 분석) can still be scientifically wrong; reproducibility is necessary transparency, not validity proof.
+A reproducible analysis can still be scientifically wrong; reproducibility is necessary transparency, not validity proof.
 
-## 25. dữ liệu (data / 데이터) provenance
+## 25. Data provenance
 
-Nhánh học (track / 트랙) raw nguồn (source / 소스), collection date, transformations, merges and exclusions.
+Track raw source, collection date, transformations, merges and exclusions.
 
-Never overwrite raw dữ liệu (data / 데이터) with cleaned phiên bản (version / 버전).
+Never overwrite raw data with cleaned version.
 
-## 26. Reproducible chuỗi xử lý (pipeline / 파이프라인)
+## 26. Reproducible pipeline
 
 A strong workflow:
 
@@ -193,19 +191,19 @@ raw data (read-only)
 
 Manual spreadsheet edits should be avoided or logged.
 
-## 27. phiên bản (version / 버전) điều khiển (control / 제어)
+## 27. Version control
 
-Git or equivalent tracks mã (code / 코드)/giao thức (protocol / 프로토콜) changes.
+Git or equivalent tracks code/protocol changes.
 
-Dữ liệu (data / 데이터) versions need separate handling when files large/sensitive.
+Data versions need separate handling when files large/sensitive.
 
-Lần ghi nhận (commit / 커밋) lịch sử (history / 이력) should reflect meaningful analytical changes, not replace documentation.
+Commit history should reflect meaningful analytical changes, not replace documentation.
 
-## 28. môi trường (environment / 환경) capture
+## 28. Environment capture
 
-Gói (package / 패키지)/thư viện (library / 라이브러리) versions can alter results.
+Package/library versions can alter results.
 
-Use lockfiles, môi trường (environment / 환경) files or containers where appropriate.
+Use lockfiles, environment files or containers where appropriate.
 
 ## 29. Random seeds
 
@@ -215,25 +213,25 @@ Seed alone does not guarantee reproducibility across hardware/software implement
 
 ## 30. Reproducible figures/tables
 
-Final numbers should be generated from mã (code / 코드), not manually copied/edited.
+Final numbers should be generated from code, not manually copied/edited.
 
-This prevents report/mã (code / 코드) drift.
+This prevents report/code drift.
 
-## 31. dữ liệu (data / 데이터) sharing
+## 31. Data sharing
 
-Open dữ liệu (data / 데이터) improves kiểm tra (audit / 감사)/replication but may xung đột (conflict / 충돌) with privacy, contracts or indigenous/community quản trị (governance / 거버넌스).
+Open data improves audit/replication but may conflict with privacy, contracts or indigenous/community governance.
 
-Options include synthetic dữ liệu (data / 데이터), secure enclaves, restricted truy cập (access / 접근) or sharing mã (code / 코드)/dữ liệu (data / 데이터) dictionaries only.
+Options include synthetic data, secure enclaves, restricted access or sharing code/data dictionaries only.
 
-## 32. mã (code / 코드) sharing
+## 32. Code sharing
 
-Even when dữ liệu (data / 데이터) cannot be dùng chung (shared / 공유), phân tích (analysis / 분석) mã (code / 코드), schemas and simulated examples can expose lô-gic (logic / 논리).
+Even when data cannot be shared, analysis code, schemas and simulated examples can expose logic.
 
 Remove credentials/identifiers before publication.
 
 ## 33. FAIR principles
 
-Dữ liệu (data / 데이터) should be as Findable, Accessible, Interoperable and Reusable as ethically/legal feasible.
+Data should be as Findable, Accessible, Interoperable and Reusable as ethically/legal feasible.
 
 “Open” is not always appropriate; “as open as possible, as closed as necessary” is better.
 
@@ -251,7 +249,7 @@ Guidelines improve completeness but do not substitute for methodological judgmen
 
 ## 36. Null and negative results
 
-Report meaningful null/contradictory bằng chứng (evidence / 증거) rather than hiding it.
+Report meaningful null/contradictory evidence rather than hiding it.
 
 Selective reporting distorts literature and future meta-analysis.
 
@@ -263,41 +261,41 @@ Post-hoc hypotheses are valuable for future testing if labeled exploratory.
 
 ## 38. P-hacking and analytical flexibility
 
-Trying many exclusions/outcomes/các mô hình (models / 모델들) until significance appears inflates false positives.
+Trying many exclusions/outcomes/models until significance appears inflates false positives.
 
-Transparent multiverse/specification phân tích (analysis / 분석) and preregistration reduce hidden flexibility.
+Transparent multiverse/specification analysis and preregistration reduce hidden flexibility.
 
 ## 39. AI-assisted research
 
-AI can help tìm kiếm (search / 검색), mã (code / 코드), summarize or draft, but researcher remains responsible for nguồn (source / 소스) xác minh (verification / 확인), privacy and analytical tính đúng đắn (correctness / 정확성).
+AI can help search, code, summarize or draft, but researcher remains responsible for source verification, privacy and analytical correctness.
 
-Do not upload sensitive dữ liệu (data / 데이터) to các hệ thống (systems / 시스템들) without approved dữ liệu (data / 데이터) handling.
+Do not upload sensitive data to systems without approved data handling.
 
 Generated citations/claims must be checked against original sources.
 
 ## 40. Automation risks
 
-Automated cleaning/classification can silently propagate errors at quy mô (scale / 규모).
+Automated cleaning/classification can silently propagate errors at scale.
 
-Bản dựng (build / 빌드) kiểm tra hợp lệ (validation / 검증) checks, mẫu (sample / 표본) manual rà soát (review / 검토) and logs.
+Build validation checks, sample manual review and logs.
 
 ## 41. Research notebook
 
 Maintain decisions, anomalies, failed analyses and rationale.
 
-This is especially important when final report shows only polished đường dẫn (path / 경로).
+This is especially important when final report shows only polished path.
 
-## 42. nhóm (team / 팀) workflows
+## 42. Team workflows
 
-Define quyền sở hữu (ownership / 소유권) of dữ liệu (data / 데이터), mã (code / 코드), phân tích (analysis / 분석) decisions and rà soát (review / 검토).
+Define ownership of data, code, analysis decisions and review.
 
-Rà soát mã (code review / 코드 리뷰) and double-checking trọng yếu (critical / 중요) transformations reduce single-person errors.
+Code review and double-checking critical transformations reduce single-person errors.
 
-## 43. Reproducibility kiểm tra (audit / 감사)
+## 43. Reproducibility audit
 
-Before bản phát hành (release / 릴리스), another person should be able to run chuỗi xử lý (pipeline / 파이프라인) from documented inputs and regenerate outputs.
+Before release, another person should be able to run pipeline from documented inputs and regenerate outputs.
 
-Missing đường dẫn (path / 경로), hidden manual step or local-only phụ thuộc (dependency / 의존성) is a reproducibility defect.
+Missing path, hidden manual step or local-only dependency is a reproducibility defect.
 
 ## 44. Interpretation discipline
 
@@ -313,9 +311,9 @@ prediction
 
 Do not upgrade claim category during writing.
 
-## 45. bất định (uncertainty / 불확실성) communication
+## 45. Uncertainty communication
 
-Report sampling/statistical bất định (uncertainty / 불확실성) plus thiết kế (design / 설계), đo lường (measurement / 측정) and external-validity bất định (uncertainty / 불확실성) qualitatively where not quantifiable.
+Report sampling/statistical uncertainty plus design, measurement and external-validity uncertainty qualitatively where not quantifiable.
 
 Precision is not certainty.
 
@@ -325,31 +323,29 @@ Avoid sensationalizing vulnerable groups, overclaiming intervention benefits or 
 
 Participants are not raw materials for a compelling story.
 
-## 47. thất bại (failure / 실패) modes
+## 47. Failure modes
 
-Sai lầm thứ nhất là lời gọi (call / 호출) any two-method dự án (project / 프로젝트) “mixed methods”.
+Sai lầm thứ nhất là call any two-method project “mixed methods”.
 
-Sai lầm thứ hai là treat ethics approval as complete ethical lập luận (reasoning / 추론).
+Sai lầm thứ hai là treat ethics approval as complete ethical reasoning.
 
-Sai lầm thứ ba là equate reproducibility with tính đúng đắn (correctness / 정확성).
+Sai lầm thứ ba là equate reproducibility with correctness.
 
-Sai lầm thứ tư là hide exploratory decisions behind confirmatory ngôn ngữ (language / 언어).
+Sai lầm thứ tư là hide exploratory decisions behind confirmatory language.
 
-Sai lầm thứ năm là open sensitive dữ liệu (data / 데이터) without re-identification assessment.
+Sai lầm thứ năm là open sensitive data without re-identification assessment.
 
 ## 48. Final research-quality checklist
 
-1. question/thiết kế (design / 설계) alignment rõ chưa?
-2. đo lường (measurement / 측정)/sampling credible không?
-3. quantitative/qualitative suy luận (inference / 추론) category đúng không?
-4. mixed-method tích hợp (integration / 통합) điểm (point / 지점) ở đâu?
+1. question/design alignment rõ chưa?
+2. measurement/sampling credible không?
+3. quantitative/qualitative inference category đúng không?
+4. mixed-method integration point ở đâu?
 5. ethics/consent/privacy risks được xử lý chưa?
-6. giao thức (protocol / 프로토콜)/deviations documented chưa?
-7. raw→clean→phân tích (analysis / 분석) chuỗi xử lý (pipeline / 파이프라인) reproducible không?
-8. mã (code / 코드)/material/dữ liệu (data / 데이터) sharing phù hợp chưa?
-9. null/negative bằng chứng (evidence / 증거) có bị selective reporting không?
-10. final claims có đúng phạm vi bằng chứng (evidence / 증거) không?
+6. protocol/deviations documented chưa?
+7. raw→clean→analysis pipeline reproducible không?
+8. code/material/data sharing phù hợp chưa?
+9. null/negative evidence có bị selective reporting không?
+10. final claims có đúng phạm vi evidence không?
 
-Research Methods kết thúc ở đây với một principle: rigor không đến từ một phương thức (method / 메서드) label. Nó đến từ alignment giữa question, bằng chứng (evidence / 증거), thiết kế (design / 설계), phân tích (analysis / 분석), transparency và phạm vi claim.
-
-> **Bàn giao:** Sau **48. Final research-quality checklist**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 research questions theory and design](./00_research_questions_theory_and_design.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Research Methods kết thúc ở đây với một principle: rigor không đến từ một method label. Nó đến từ alignment giữa question, evidence, design, analysis, transparency và phạm vi claim.

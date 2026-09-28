@@ -1,24 +1,22 @@
-# Systematic Reviews & bằng chứng (evidence / 증거) Synthesis — Từ literature tìm kiếm (search / 검색) đến kết luận có trọng số
+# Systematic Reviews & Evidence Synthesis — Từ literature search đến kết luận có trọng số
 
-> **Mạch đọc:** Đặt **Systematic Reviews & bằng chứng (evidence / 증거) Synthesis — Từ literature tìm kiếm (search / 검색) đến kết luận có trọng số** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Narrative rà soát (review / 검토) vs systematic rà soát (review / 검토)** sang **2. rà soát (review / 검토) question**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Literature review không nên là danh sách paper nối bằng prose. Evidence synthesis cần question, inclusion criteria, search strategy, quality assessment và logic kết hợp findings đủ rõ để người khác hiểu vì sao một study được đưa vào và một study khác bị loại.
 
-Literature rà soát (review / 검토) không nên là danh sách paper nối bằng prose. bằng chứng (evidence / 증거) synthesis cần question, inclusion criteria, tìm kiếm (search / 검색) chiến lược (strategy / 전략), chất lượng (quality / 품질) assessment và lô-gic (logic / 논리) kết hợp findings đủ rõ để người khác hiểu vì sao một study được đưa vào và một study khác bị loại.
+## 1. Narrative review vs systematic review
 
-## 1. Narrative rà soát (review / 검토) vs systematic rà soát (review / 검토)
+Narrative review linh hoạt, hữu ích để map theory/history nhưng dễ bị selection bias.
 
-Narrative rà soát (review / 검토) linh hoạt, hữu ích để map lý thuyết (theory / 이론)/lịch sử (history / 이력) nhưng dễ bị selection độ lệch (bias / 편향).
-
-Systematic rà soát (review / 검토) pre-specifies transparent tìm kiếm (search / 검색)/screening/synthesis tiến trình (process / 프로세스).
+Systematic review pre-specifies transparent search/screening/synthesis process.
 
 Neither is automatically superior; purpose differs.
 
-## 2. rà soát (review / 검토) question
+## 2. Review question
 
-A rà soát (review / 검토) question should specify population/ngữ cảnh (context / 맥락), exposure/intervention, comparison, kết quả (outcome / 결과) and study types when relevant.
+A review question should specify population/context, exposure/intervention, comparison, outcome and study types when relevant.
 
-Frameworks như PICO/SPIDER help cấu trúc (structure / 구조) but should not force inappropriate biomedical format onto xã hội (social / 사회적) questions.
+Frameworks như PICO/SPIDER help structure but should not force inappropriate biomedical format onto social questions.
 
-## 3. giao thức (protocol / 프로토콜)
+## 3. Protocol
 
 Before searching, define:
 
@@ -33,31 +31,31 @@ extraction fields
 synthesis plan
 ```
 
-Giao thức (protocol / 프로토콜) reduces post-hoc selection.
+Protocol reduces post-hoc selection.
 
-## 4. tìm kiếm (search / 검색) chiến lược (strategy / 전략)
+## 4. Search strategy
 
-Tìm kiếm (search / 검색) needs synonyms, controlled vocabulary, Boolean lô-gic (logic / 논리), citation chaining and grey literature where appropriate.
+Search needs synonyms, controlled vocabulary, Boolean logic, citation chaining and grey literature where appropriate.
 
-One cơ sở dữ liệu (database / 데이터베이스) rarely covers all fields.
+One database rarely covers all fields.
 
-## 5. tìm kiếm (search / 검색) sensitivity vs precision
+## 5. Search sensitivity vs precision
 
-Broad tìm kiếm (search / 검색) captures more relevant studies but increases screening tải (load / 로드).
+Broad search captures more relevant studies but increases screening load.
 
-Narrow tìm kiếm (search / 검색) is efficient but risks missing bằng chứng (evidence / 증거).
+Narrow search is efficient but risks missing evidence.
 
 Balance should be documented.
 
 ## 6. Grey literature
 
-Theses, reports, preprints, working papers and government documents can reduce publication độ lệch (bias / 편향) but vary in rà soát (review / 검토) chất lượng (quality / 품질).
+Theses, reports, preprints, working papers and government documents can reduce publication bias but vary in review quality.
 
 Exclusion should be reasoned, not automatic.
 
 ## 7. Citation chaining
 
-Backward chaining checks references; forward chaining finds later công việc (work / 작업) citing key studies.
+Backward chaining checks references; forward chaining finds later work citing key studies.
 
 Useful for terminology changes and interdisciplinary topics.
 
@@ -69,19 +67,19 @@ Multiple reviewers can estimate disagreement and reduce arbitrary inclusion.
 
 ## 9. Inclusion/exclusion criteria
 
-Criteria should reflect question and minimum bằng chứng (evidence / 증거) requirements, not desired results.
+Criteria should reflect question and minimum evidence requirements, not desired results.
 
-Examples: population, timeframe, thiết kế (design / 설계), kết quả (outcome / 결과) definition, ngôn ngữ (language / 언어), publication kiểu (type / 타입).
+Examples: population, timeframe, design, outcome definition, language, publication type.
 
-## 10. PRISMA-style luồng (flow / 흐름)
+## 10. PRISMA-style flow
 
-A luồng (flow / 흐름) diagram records identified, deduplicated, screened, excluded and included records.
+A flow diagram records identified, deduplicated, screened, excluded and included records.
 
 Transparency about exclusion is part of reproducibility.
 
-## 11. dữ liệu (data / 데이터) extraction
+## 11. Data extraction
 
-Extract more than tác động (effect / 효과) kích thước (size / 크기):
+Extract more than effect size:
 
 ```text
 sample/context
@@ -95,47 +93,47 @@ uncertainty
 funding/conflicts
 ```
 
-This enables heterogeneity phân tích (analysis / 분석).
+This enables heterogeneity analysis.
 
-## 12. rủi ro (risk / 위험) of độ lệch (bias / 편향)
+## 12. Risk of bias
 
-Study chất lượng (quality / 품질) should be threat-specific: randomization, attrition, confounding, đo lường (measurement / 측정), selective reporting, etc.
+Study quality should be threat-specific: randomization, attrition, confounding, measurement, selective reporting, etc.
 
-Avoid one opaque total chất lượng (quality / 품질) score that treats all flaws as interchangeable.
+Avoid one opaque total quality score that treats all flaws as interchangeable.
 
-## 13. bằng chứng (evidence / 증거) hierarchy limitations
+## 13. Evidence hierarchy limitations
 
-RCTs are powerful for nhân quả (causal / 인과적) intervention questions, but observational/qualitative/historical designs may be necessary for long-term, rare, institutional or cơ chế (mechanism / 메커니즘) questions.
+RCTs are powerful for causal intervention questions, but observational/qualitative/historical designs may be necessary for long-term, rare, institutional or mechanism questions.
 
-Thiết kế (design / 설계) suitability matters more than universal hierarchy.
+Design suitability matters more than universal hierarchy.
 
-## 14. tác động (effect / 효과) kích thước (size / 크기)
+## 14. Effect size
 
-Meta-analysis needs comparable tác động (effect / 효과) metrics: mean difference, standardized mean difference, rủi ro (risk / 위험) ratio, odds ratio, correlation or transformed coefficients.
+Meta-analysis needs comparable effect metrics: mean difference, standardized mean difference, risk ratio, odds ratio, correlation or transformed coefficients.
 
-Conversion các giả định (assumptions / 가정들) should be documented.
+Conversion assumptions should be documented.
 
-## 15. Fixed-effect mô hình (model / 모델)
+## 15. Fixed-effect model
 
-Fixed-effect meta-analysis assumes studies estimate one dùng chung (common / 공통) true tác động (effect / 효과) and differences are sampling lỗi (error / 오류).
+Fixed-effect meta-analysis assumes studies estimate one common true effect and differences are sampling error.
 
 Appropriate only when substantive homogeneity is plausible.
 
-## 16. Random-effects mô hình (model / 모델)
+## 16. Random-effects model
 
 Random-effects allows true effects vary across studies/settings.
 
-Pooled estimate is mean of tác động (effect / 효과) phân phối (distribution / 분포) under mô hình (model / 모델), not a universal tác động (effect / 효과) applying everywhere.
+Pooled estimate is mean of effect distribution under model, not a universal effect applying everywhere.
 
 ## 17. Heterogeneity
 
 Statistical heterogeneity measures like `I²` summarize inconsistency but do not explain it.
 
-Substantive heterogeneity may come from population, treatment intensity, thiết kế (design / 설계), đo lường (measurement / 측정) or institutions.
+Substantive heterogeneity may come from population, treatment intensity, design, measurement or institutions.
 
 ## 18. Prediction intervals
 
-Confidence interval estimates bất định (uncertainty / 불확실성) around mean tác động (effect / 효과); prediction interval estimates phạm vi (range / 범위) for tác động (effect / 효과) in a new comparable study under mô hình (model / 모델).
+Confidence interval estimates uncertainty around mean effect; prediction interval estimates range for effect in a new comparable study under model.
 
 High heterogeneity makes prediction interval especially important.
 
@@ -143,27 +141,27 @@ High heterogeneity makes prediction interval especially important.
 
 Meta-regression explores study-level moderators.
 
-It is observational at study mức (level / 수준) and vulnerable to confounding/ecological độ lệch (bias / 편향), especially with few studies.
+It is observational at study level and vulnerable to confounding/ecological bias, especially with few studies.
 
-## 20. Publication độ lệch (bias / 편향)
+## 20. Publication bias
 
 Positive/significant findings may be overrepresented.
 
-Funnel plots/tests can detect asymmetry but also respond to heterogeneity and thiết kế (design / 설계) differences.
+Funnel plots/tests can detect asymmetry but also respond to heterogeneity and design differences.
 
-No single correction solves publication độ lệch (bias / 편향) reliably.
+No single correction solves publication bias reliably.
 
 ## 21. P-hacking and selective outcomes
 
 A published study may report one of many outcomes/specifications.
 
-Compare protocols/registrations when available; kết quả (outcome / 결과) switching affects synthesis.
+Compare protocols/registrations when available; outcome switching affects synthesis.
 
 ## 22. Small-study effects
 
-Small studies may have larger effects due publication độ lệch (bias / 편향), different populations/interventions or higher variance.
+Small studies may have larger effects due publication bias, different populations/interventions or higher variance.
 
-Treat as diagnostic mẫu (pattern / 패턴) requiring explanation.
+Treat as diagnostic pattern requiring explanation.
 
 ## 23. Dependence among effects
 
@@ -173,7 +171,7 @@ Use pre-specified selection, multilevel meta-analysis or robust variance methods
 
 ## 24. Clustered and repeated designs
 
-Tác động (effect / 효과) sizes must respect original thiết kế (design / 설계). Ignoring cluster randomization or repeated measures can understate variance.
+Effect sizes must respect original design. Ignoring cluster randomization or repeated measures can understate variance.
 
 ## 25. Combining different designs
 
@@ -181,81 +179,81 @@ RCTs, observational and qualitative studies may answer different pieces of quest
 
 Do not mechanically pool incomparable estimands. Use separate synthesis layers then integrate conclusions.
 
-## 26. Qualitative bằng chứng (evidence / 증거) synthesis
+## 26. Qualitative evidence synthesis
 
-Thematic synthesis, meta-ethnography and khung phần mềm (framework / 프레임워크) synthesis combine concepts/themes across qualitative studies.
+Thematic synthesis, meta-ethnography and framework synthesis combine concepts/themes across qualitative studies.
 
-Goal is interpretation/cơ chế (mechanism / 메커니즘), not numeric averaging.
+Goal is interpretation/mechanism, not numeric averaging.
 
-## 27. Scoping rà soát (review / 검토)
+## 27. Scoping review
 
-Scoping rà soát (review / 검토) maps breadth, concepts, bằng chứng (evidence / 증거) gaps and study types when question too broad/immature for tác động (effect / 효과) synthesis.
+Scoping review maps breadth, concepts, evidence gaps and study types when question too broad/immature for effect synthesis.
 
-It should still use transparent tìm kiếm (search / 검색)/screening.
+It should still use transparent search/screening.
 
-## 28. Umbrella rà soát (review / 검토)
+## 28. Umbrella review
 
-Umbrella rà soát (review / 검토) synthesizes existing systematic reviews.
+Umbrella review synthesizes existing systematic reviews.
 
-Rủi ro (risk / 위험): double-counting primary studies and propagating weak reviews.
+Risk: double-counting primary studies and propagating weak reviews.
 
-## 29. Living rà soát (review / 검토)
+## 29. Living review
 
-For fast-moving topics, living systematic rà soát (review / 검토) updates searches/synthesis periodically.
+For fast-moving topics, living systematic review updates searches/synthesis periodically.
 
 Requires automation/workflow and clear versioning.
 
-## 30. bằng chứng (evidence / 증거) certainty
+## 30. Evidence certainty
 
-Certainty should consider độ lệch (bias / 편향), consistency, precision, directness and publication/reporting concerns.
+Certainty should consider bias, consistency, precision, directness and publication/reporting concerns.
 
-“Many papers” is not equivalent to strong bằng chứng (evidence / 증거).
+“Many papers” is not equivalent to strong evidence.
 
 ## 31. Directness
 
-A study can be internally valid but indirect for mục tiêu (target / 대상) question due different population, intervention, kết quả (outcome / 결과) or ngữ cảnh (context / 맥락).
+A study can be internally valid but indirect for target question due different population, intervention, outcome or context.
 
 Synthesis should separate validity from applicability.
 
-## 32. cơ chế (mechanism / 메커니즘) synthesis
+## 32. Mechanism synthesis
 
-When effects vary, ask which mechanisms/ranh giới (boundary / 경계) conditions explain variation.
+When effects vary, ask which mechanisms/boundary conditions explain variation.
 
-This connects systematic rà soát (review / 검토) to lý thuyết (theory / 이론) rather than ending at pooled number.
+This connects systematic review to theory rather than ending at pooled number.
 
 ## 33. Contradictory studies
 
 Do not vote-count “5 positive vs 3 negative”.
 
-Compare estimands, power, designs, contexts and đo lường (measurement / 측정). Apparent contradiction may be different questions.
+Compare estimands, power, designs, contexts and measurement. Apparent contradiction may be different questions.
 
 ## 34. Null results
 
-Null/non-significant studies contribute thông tin (information / 정보) if precision adequate.
+Null/non-significant studies contribute information if precision adequate.
 
-Do not treat non-significance as bằng chứng (evidence / 증거) of chính xác (exact / 정확한) zero.
+Do not treat non-significance as evidence of exact zero.
 
-## 35. Citation chất lượng (quality / 품질)
+## 35. Citation quality
 
-Rà soát (review / 검토) should cite primary bằng chứng (evidence / 증거) for empirical claims where possible, not only secondary summaries.
+Review should cite primary evidence for empirical claims where possible, not only secondary summaries.
 
-Check whether cited study actually supports chính xác (exact / 정확한) claim/population/thời gian (time / 시간).
+Check whether cited study actually supports exact claim/population/time.
 
 ## 36. Automation and AI assistance
 
 Tools can deduplicate, screen candidates or extract fields, but researcher must validate inclusion and interpretation.
 
-Automated summarization can hallucinate study details; retain tầng mã nguồn (source-level / 소스 수준) kiểm tra (audit / 감사) trail.
+Automated summarization can hallucinate study details; retain source-level audit trail.
 
-## 37. Reproducible rà soát (review / 검토) gói (package / 패키지)
+## 37. Reproducible review package
 
-Store tìm kiếm (search / 검색) strings, dates, databases, deduplication rules, screening decisions, extraction sheet and synthesis mã (code / 코드).
+Store search strings, dates, databases, deduplication rules, screening decisions, extraction sheet and synthesis code.
 
-Tìm kiếm (search / 검색) date matters because literature changes.
+Search date matters because literature changes.
 
-## 38. thất bại (failure / 실패) modes
+## 38. Failure modes
 
-Sai lầm thứ nhất là lời gọi (call / 호출) prose bibliography a systematic rà soát (review / 검토).
+Sai lầm thứ nhất là call prose bibliography a systematic review.
 
 Sai lầm thứ hai là pool incomparable estimands because they share topic label.
 
@@ -263,21 +261,19 @@ Sai lầm thứ ba là use I² as explanation of heterogeneity.
 
 Sai lầm thứ tư là vote-count significance.
 
-Sai lầm thứ năm là equate publication count with bằng chứng (evidence / 증거) certainty.
+Sai lầm thứ năm là equate publication count with evidence certainty.
 
-## 39. rà soát (review / 검토) checklist
+## 39. Review checklist
 
-1. rà soát (review / 검토) question rõ không?
-2. giao thức (protocol / 프로토콜)/tìm kiếm (search / 검색) sources đủ không?
+1. review question rõ không?
+2. protocol/search sources đủ không?
 3. screening criteria pre-specified không?
 4. study designs/estimands comparable không?
 5. risk-of-bias assessed by threats nào?
 6. heterogeneity substantive ở đâu?
-7. publication/selective-reporting rủi ro (risk / 위험) nào?
-8. pooled tác động (effect / 효과) có meaningful không?
-9. prediction/directness/bên ngoài (external / 외부) validity ra sao?
-10. all decisions/tìm kiếm (search / 검색)/mã (code / 코드) reproducible không?
+7. publication/selective-reporting risk nào?
+8. pooled effect có meaningful không?
+9. prediction/directness/external validity ra sao?
+10. all decisions/search/code reproducible không?
 
-Bằng chứng (evidence / 증거) synthesis giúp biết “literature collectively nói gì”. Chapter cuối cần đảm bảo toàn research tiến trình (process / 프로세스) — quantitative lẫn qualitative — có ethics, reproducibility, mixed-method tích hợp (integration / 통합) và transparent reporting.
-
-> **Bàn giao:** Sau **39. rà soát (review / 검토) checklist**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 research questions theory and design](./00_research_questions_theory_and_design.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Evidence synthesis giúp biết “literature collectively nói gì”. Chapter cuối cần đảm bảo toàn research process — quantitative lẫn qualitative — có ethics, reproducibility, mixed-method integration và transparent reporting.

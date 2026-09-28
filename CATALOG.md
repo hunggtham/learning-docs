@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-26
+last_reviewed: 2026-09-24
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -63,7 +63,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Philosophical reasoning, epistemology, metaphysics, philosophy of science, philosophy of mind, ethics, social-political philosophy, technology, history, and cross-domain connections.
     prerequisites: []
-    related: [mathematics, physics, biology, psychology, computer_science, research_methods, sociology]
+    related: [mathematics, physics, biology, psychology, computer_science, research_methods]
   - id: research_methods
     title: Research Methods
     group: Methods
@@ -73,7 +73,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Research questions and design, measurement and sampling, survey design, qualitative methods, systematic review and evidence synthesis, mixed methods, ethics, reproducibility, and open science.
     prerequisites: []
-    related: [philosophy, mathematics, economics, psychology, sociology, world_history, computer_science]
+    related: [philosophy, mathematics, economics, psychology, world_history, computer_science]
 
   - id: computer_science
     title: Computer Science
@@ -101,8 +101,8 @@ domains:
     path: 10_frontend/
     entrypoint: 10_frontend/javascript/javascript_beginner_rebuilt.md
     status: canonical
-    last_reviewed: 2026-09-26
-    scope: Web platform, HTML/CSS/JavaScript/TypeScript, React, WebSquare and XML with cross-framework request-to-pixel tracing, rendering-performance evidence, accessibility, security, build/deployment provenance, and production debugging practice.
+    last_reviewed: 2026-09-23
+    scope: Web platform, JavaScript, TypeScript, React, CSS, XML, WebSquare, and frontend production practice.
     prerequisites: [computer_science]
     related: [backend, native, devops_platform_engineering]
   - id: native
@@ -145,6 +145,16 @@ domains:
     scope: Linux foundations, filesystem, shell, identity, processes, resources, networking, operations, and production systems.
     prerequisites: [computer_science]
     related: [devops_platform_engineering, backend]
+  - id: automation
+    title: Automation
+    group: Computing
+    path: automation/
+    entrypoint: automation/README.md
+    status: canonical
+    last_reviewed: 2026-09-23
+    scope: Automation workflows, prompts, and operational tooling for the learning repository.
+    prerequisites: [computer_science]
+    related: [devops_platform_engineering, backend]
 
   - id: psychology
     title: Psychology
@@ -155,17 +165,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Psychology as a science with concepts, mechanisms, evidence status, limitations, and cross-domain connections.
     prerequisites: [biology]
-    related: [computer_science, korean_culture, research_methods, sociology]
-  - id: sociology
-    title: Sociology
-    group: Human & Society
-    path: sociology/
-    entrypoint: sociology/README.md
-    status: canonical
-    last_reviewed: 2026-09-25
-    scope: Social structure, culture and socialization, identity and deviance, groups/networks/organizations, stratification and mobility, social institutions, population, urbanization, collective behavior, and social change.
-    prerequisites: []
-    related: [research_methods, psychology, economics, world_history, world_geography, korean_culture]
+    related: [computer_science, korean_culture, research_methods]
   - id: korean_history
     title: Korean History
     group: Human & Society
@@ -185,7 +185,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: World history as a causal system from human origins through agrarian states, classical and medieval networks, industrialisation, imperialism, world wars, the Cold War, decolonisation, and the post-Cold-War world.
     prerequisites: []
-    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods, sociology]
+    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods]
   - id: korean_culture
     title: Korean Culture
     group: Human & Society
@@ -195,7 +195,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean society, relationships, family, education, work, food, arts, regions, Hallyu, and modern life.
     prerequisites: [korean_history]
-    related: [korea_law_civic_life, kiip, korean_history, sociology]
+    related: [korea_law_civic_life, kiip, korean_history]
   - id: korea_business_economy
     title: Korea Business & Economy
     group: Human & Society
@@ -225,7 +225,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Core-domain complete Economics library covering foundations, microeconomics, market structure/game theory, macroeconomics, applied economics, econometrics, and economic history/institutions with explicit evidence and integration boundaries.
     prerequisites: [mathematics]
-    related: [investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods]
+    related: [investing, korea_business_economy, psychology, world_history, world_geography, computer_science, research_methods]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -235,7 +235,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Earth systems, regional geography, world atlas, human geography, and global connections.
     prerequisites: []
-    related: [world_history, biology, physics, korea_business_economy, sociology]
+    related: [world_history, biology, physics, korea_business_economy]
 
   - id: investing
     title: Investing
@@ -243,10 +243,10 @@ domains:
     path: investing/
     entrypoint: investing/README.md
     status: canonical
-    last_reviewed: 2026-09-25
-    scope: Coverage-complete Investing library spanning foundations, asset classes, company analysis, applied macro/economics, trading and derivatives with dedicated Forex institutional/practice/case layers, Korea/Vietnam markets, and integrated cases/capstone.
+    last_reviewed: 2026-09-23
+    scope: Investing foundations, asset classes, company analysis, applied economics, trading, derivatives, and Korea/Vietnam markets.
     prerequisites: [mathematics]
-    related: [economics, korea_business_economy, research_methods, data_engineering, pmp, sql]
+    related: [economics, korea_business_economy, pmp, sql]
   - id: pmp
     title: Project Management / PMP
     group: Professional
@@ -294,10 +294,6 @@ supporting:
     path: dev_everyday/
     status: support
     scope: Personal developer notes and local workflow configuration; not a canonical knowledge library.
-  - id: automation
-    path: automation/
-    status: support
-    scope: Workflow/worker tooling for automated textbook generation and repository operations; not a canonical knowledge domain.
   - id: study_planner
     path: planner/
     status: support
@@ -339,12 +335,12 @@ Computing
 ├── Native Mobile Development
 ├── Data Engineering
 ├── DevOps / Platform Engineering
-└── Linux
+├── Linux
+└── Automation
 
 Human & Society
 ├── Philosophy
 ├── Psychology
-├── Sociology
 ├── Korean History
 ├── World History
 ├── Korean Culture
@@ -363,8 +359,6 @@ Certifications
 └── KIIP / Korean Society
 
 Supporting
-├── Developer Notes
-├── Automation
 ├── Study Planner
 ├── Study Library
 └── Templates
@@ -392,15 +386,9 @@ Economics giữ explicit boundaries: theory không thay evidence, accounting ide
 
 [`research_methods/`](research_methods/README.md) giữ methodology dùng chung cho toàn repository: research question/design, measurement/sampling/surveys, qualitative methods, systematic reviews/evidence synthesis, mixed methods, ethics, reproducibility và open science. Estimator-level causal/statistical methods tiếp tục nằm ở [`economics/05_econometrics/`](economics/05_econometrics/README.md); Philosophy giữ epistemology/philosophy-of-science foundation.
 
-Mục tiêu là tránh mỗi domain tự lặp lại generic research methods và tạo một evidence contract thống nhất cho các library sau này.
+Mục tiêu là tránh mỗi domain tự lặp lại generic research methods và tạo một evidence contract thống nhất cho các library sau này, đặc biệt Sociology.
 
-## 9. Sociology: social structure and institutions
-
-[`sociology/`](sociology/README.md) giữ canonical sociological mechanisms từ agency/structure, culture/socialization/identity và deviance đến groups/networks/organizations, stratification/mobility, family/education/work/media/civic institutions và population/urbanization/social change. Generic methodology được cross-link sang Research Methods; individual cognition/behavior sang Psychology; markets/incentives sang Economics; chronology sang History.
-
-Domain được tổ chức theo levels và mechanisms thay vì các “vấn đề xã hội” rời rạc, nhằm giúp người đọc phân biệt individual attribute với relational/institutional explanations.
-
-## 10. P3 — Electrical / Electronics / Control
+## 9. P3 — Electrical / Electronics / Control
 
 Physics hiện đã rất mạnh, bao gồm Maxwell, circuits, transmission line, semiconductor, MOSFET, signal/noise và các nền tảng liên quan. Nhưng **Physics không đồng nghĩa với Electrical Engineering**: engineering cần thêm topology, design trade-off, measurement, timing, power, control, verification và failure handling.
 
