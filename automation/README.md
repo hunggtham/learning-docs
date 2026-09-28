@@ -113,6 +113,20 @@ Auditor cũng report domain chưa có root `README.md` hoặc `COVERAGE_AUDIT.md
 
 Không kiểm tra live availability của website ngoài repository vì network check dễ flaky, chậm và không phù hợp với nhiệm vụ chính là bảo toàn cấu trúc canonical nội bộ.
 
+### Canonical docs và raw provenance
+
+CI link gate chỉ áp dụng cho Markdown thuộc learning/output/navigation layer. Các path có segment sau được loại khỏi canonical link gate:
+
+```text
+raw/
+raw_md/
+workflow-output/
+```
+
+Đây là provenance/import/intermediate material có thể giữ nguyên syntax hoặc link encoding từ nguồn bên ngoài. Không nên sửa nguồn thô chỉ để làm đẹp repository QA. Khi nội dung được chuyển thành canonical learning document, link của bản canonical phải pass strict audit.
+
+`repo_audit.py` vẫn có thể được chạy trực tiếp trên toàn working tree khi cần forensic audit; exclusion ở trên là policy của GitHub Actions canonical gate.
+
 ### Chạy local
 
 Chạy unit tests:
@@ -146,20 +160,24 @@ python automation/repo_audit.py \
 
 Workflow `Repository audit` chạy unit tests trước.
 
-Trên **pull request**, workflow lấy các Markdown file thay đổi trong diff và kiểm tra local links ở `strict` mode. Điều này ngăn một PR mới đưa broken internal link vào repository mà không bắt toàn bộ legacy debt phải được sửa trong cùng PR.
+Trên **pull request**, workflow lấy các canonical Markdown file thay đổi trong diff và kiểm tra local links ở `strict` mode. Điều này ngăn một PR mới đưa broken internal link vào repository mà không bắt toàn bộ legacy/provenance debt phải được sửa trong cùng PR.
 
-Trên **push vào `main`** hoặc chạy thủ công, auditor quét toàn bộ Markdown repository ở report mode. Broken local links cũ được hiển thị như warning để tạo backlog; catalog structural errors vẫn là lỗi vì chúng làm source-of-truth metadata không còn đáng tin.
+Trên **push vào `main`** hoặc chạy thủ công, auditor quét toàn bộ canonical Markdown repository ở report mode. Broken local links cũ được hiển thị như warning để tạo backlog; catalog structural errors vẫn là lỗi vì chúng làm source-of-truth metadata không còn đáng tin.
 
 Mental model của policy:
 
 ```text
-New change
+New canonical change
 → must not introduce new broken structure
 
-Existing repository
+Existing canonical repository
 → continuously expose legacy debt
 → fix incrementally
 → tighten policy only after baseline is clean
+
+Raw provenance
+→ preserve source fidelity
+→ do not block canonical CI on imported link syntax
 ```
 
 Workflow chỉ có quyền `contents: read` và không thay đổi file tự động. Fix vẫn phải đi qua branch/PR bình thường để diff có thể review.
