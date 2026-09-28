@@ -25,24 +25,35 @@
     return clientPromise;
   }
 
+  function authErrorMessage(error) {
+    const message = error?.message || String(error);
+    if (/database error saving new user/i.test(message)) {
+      return `${message}. Request đã tới Supabase Auth nhưng database không lưu được user; cần kiểm tra Auth/Postgres logs và trigger/constraint trên auth.users.`;
+    }
+    return message;
+  }
+
   async function signUp(panel) {
     const errorNode = panel.querySelector('#learning-auth-error');
+    const state = panel.querySelector('#learning-auth-state');
     const email = panel.querySelector('#learning-auth-email')?.value.trim();
     const password = panel.querySelector('#learning-auth-password')?.value || '';
     errorNode.textContent = '';
+    if (state) state.textContent = 'Đang đăng ký…';
+
     try {
       if (!email || !password) throw new Error('Nhập email và mật khẩu.');
       if (password.length < 6) throw new Error('Mật khẩu cần ít nhất 6 ký tự.');
       const client = await getClient();
       const { data, error } = await client.auth.signUp({ email, password });
       if (error) throw error;
-      const state = panel.querySelector('#learning-auth-state');
       if (state) state.textContent = data.session
         ? 'Đăng ký và đăng nhập thành công. Đang tải dữ liệu đồng bộ…'
         : 'Đăng ký thành công. Nếu Supabase yêu cầu xác nhận email, hãy xác nhận rồi đăng nhập.';
       if (data.session) setTimeout(() => location.reload(), 250);
     } catch (error) {
-      errorNode.textContent = error.message || String(error);
+      if (state) state.textContent = 'Đăng ký thất bại.';
+      errorNode.textContent = authErrorMessage(error);
     }
   }
 
