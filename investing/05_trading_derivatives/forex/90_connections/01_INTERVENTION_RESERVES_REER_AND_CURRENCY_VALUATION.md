@@ -1,11 +1,8 @@
-# FX Intervention, Reserves, REER & Currency Valuation — nối chính sách (policy / 정책) regime với medium-run FX
+# FX Intervention, Reserves, REER & Currency Valuation — nối policy regime với medium-run FX
 
-> **Mạch đọc:** Đọc **FX Intervention, Reserves, REER & Currency Valuation — nối chính sách (policy / 정책) regime với medium-run FX** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Valuation và timing là hai câu hỏi khác nhau** sang **2. Nominal exchange tỷ lệ (rate / 비율)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Chapter bridge này nối Forex với open-economy macroeconomics và economic policy. Mục tiêu không phải tạo thêm “fundamental signal”, mà để hiểu vì sao các khái niệm như **PPP, REER, reserves, intervention và exchange-rate regime** có giá trị phân tích nhưng không thể dùng như rule giao dịch một biến.
 
-
-Chapter cầu nối (bridge / 브리지) này nối Forex với open-economy macroeconomics và economic chính sách (policy / 정책). Mục tiêu không phải tạo thêm “fundamental tín hiệu (signal / 신호)”, mà để hiểu vì sao các khái niệm như **PPP, REER, reserves, intervention và exchange-rate regime** có giá trị phân tích nhưng không thể dùng như quy tắc (rule / 규칙) giao dịch một biến.
-
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Relative prices / productivity / inflation
@@ -31,7 +28,7 @@ Timing hỏi:
 Khi nào price sẽ converge, nếu có?
 ```
 
-Một currency có thể undervalued rất lâu nếu productivity, capital controls, rủi ro (risk / 위험) premium hoặc regime làm equilibrium thay đổi.
+Một currency có thể undervalued rất lâu nếu productivity, capital controls, risk premium hoặc regime làm equilibrium thay đổi.
 
 Do đó:
 
@@ -39,7 +36,7 @@ Do đó:
 cheap currency ≠ immediate buy signal
 ```
 
-## 2. Nominal exchange tỷ lệ (rate / 비율)
+## 2. Nominal exchange rate
 
 Nominal FX chỉ là relative price giữa hai currencies.
 
@@ -53,29 +50,29 @@ USD/VND
 
 Nominal appreciation/depreciation không tự nói competitiveness vì domestic/foreign prices cũng thay đổi.
 
-## 3. Real exchange tỷ lệ (rate / 비율)
+## 3. Real exchange rate
 
-Bilateral real exchange tỷ lệ (rate / 비율) adjusts nominal tỷ lệ (rate / 비율) for relative price levels.
+Bilateral real exchange rate adjusts nominal rate for relative price levels.
 
-A simplified biểu diễn (representation / 표현):
+A simplified representation:
 
 ```text
 Real FX ≈ Nominal FX × Foreign Prices / Domestic Prices
 ```
 
-Chính xác (exact / 정확한) sign/interpretation depends quote convention, nhưng intuition là real FX đo purchasing-cost competitiveness hơn nominal quote alone.
+Exact sign/interpretation depends quote convention, nhưng intuition là real FX đo purchasing-cost competitiveness hơn nominal quote alone.
 
 ## 4. NEER và REER
 
-**Nominal Effective Exchange tỷ lệ (rate / 비율) (NEER)** aggregates bilateral nominal exchange rates using partner weights.
+**Nominal Effective Exchange Rate (NEER)** aggregates bilateral nominal exchange rates using partner weights.
 
-**Real Effective Exchange tỷ lệ (rate / 비율) (REER)** adjusts effective tỷ lệ (rate / 비율) by relative prices/costs.
+**Real Effective Exchange Rate (REER)** adjusts effective rate by relative prices/costs.
 
-Thus REER is a basket chỉ mục (index / 인덱스), not executable thị trường (market / 시장) price.
+Thus REER is a basket index, not executable market price.
 
 ## 5. REER = 110 không nghĩa 10% overvalued
 
-REER indexes are normalized to a cơ sở (base / 기반) period.
+REER indexes are normalized to a base period.
 
 Need know:
 
@@ -87,7 +84,7 @@ methodology
 structural changes
 ```
 
-An chỉ mục (index / 인덱스) mức (level / 수준) alone does not provide fair giá trị (value / 값).
+An index level alone does not provide fair value.
 
 ## 6. Purchasing Power Parity — PPP
 
@@ -110,9 +107,9 @@ Absolute PPP is therefore too strong for many practical cases.
 
 Relative PPP connects inflation differentials to long-run exchange-rate adjustment.
 
-If domestic prices rise persistently faster than foreign prices, nominal exchange tỷ lệ (rate / 비율) may need to adjust over long horizon to prevent indefinite real appreciation.
+If domestic prices rise persistently faster than foreign prices, nominal exchange rate may need to adjust over long horizon to prevent indefinite real appreciation.
 
-But this is not a short-term forecast quy tắc (rule / 규칙).
+But this is not a short-term forecast rule.
 
 ## 8. Balassa–Samuelson intuition
 
@@ -130,9 +127,9 @@ national real income can improve
 → currency pressure may shift
 ```
 
-For commodity exporters/importers, terms-of-trade shock can matter as much as domestic tỷ lệ (rate / 비율) differential.
+For commodity exporters/importers, terms-of-trade shock can matter as much as domestic rate differential.
 
-## 10. hiện tại (current / 현재) account is not a deterministic FX tín hiệu (signal / 신호)
+## 10. Current account is not a deterministic FX signal
 
 A current-account surplus can be offset by resident capital outflows or reserve accumulation.
 
@@ -149,7 +146,7 @@ Need analyze counterpart financial flows.
 
 ## 11. NIIP — Net International Investment Position
 
-NIIP compares bên ngoài (external / 외부) financial assets and liabilities.
+NIIP compares external financial assets and liabilities.
 
 A large negative NIIP may increase vulnerability, especially when liabilities are:
 
@@ -162,7 +159,7 @@ bank-funded
 
 But composition is more informative than net number alone.
 
-## 12. Gross bên ngoài (external / 외부) balance sheets
+## 12. Gross external balance sheets
 
 Two countries can have same NIIP but very different gross assets/liabilities.
 
@@ -175,11 +172,11 @@ funding risk
 portfolio rebalancing
 ```
 
-FX phân tích (analysis / 분석) needs gross balance sheet where relevant.
+FX analysis needs gross balance sheet where relevant.
 
 ## 13. Foreign-exchange reserves
 
-Reserve assets are bên ngoài (external / 외부) assets controlled by monetary authorities for chính sách (policy / 정책)/liquidity purposes under official reserve definitions.
+Reserve assets are external assets controlled by monetary authorities for policy/liquidity purposes under official reserve definitions.
 
 Economic functions include:
 
@@ -190,11 +187,11 @@ confidence support
 payment resilience
 ```
 
-## 14. Reserve kích thước (size / 크기) needs a denominator
+## 14. Reserve size needs a denominator
 
-Absolute reserve number is weak without ngữ cảnh (context / 맥락).
+Absolute reserve number is weak without context.
 
-Dùng chung (common / 공통) lenses:
+Common lenses:
 
 ```text
 reserves / imports
@@ -217,9 +214,9 @@ derivative positions
 institutional access constraints
 ```
 
-When crisis phân tích (analysis / 분석) matters, investigate reserve composition/commitments rather than headline stock only.
+When crisis analysis matters, investigate reserve composition/commitments rather than headline stock only.
 
-## 16. Reserve thay đổi (change / 변경) ≠ intervention amount
+## 16. Reserve change ≠ intervention amount
 
 Reserve valuation changes because of:
 
@@ -231,7 +228,7 @@ government transactions
 portfolio management
 ```
 
-Thus monthly reserve thay đổi (change / 변경) cannot be mechanically read as central-bank buying/selling FX.
+Thus monthly reserve change cannot be mechanically read as central-bank buying/selling FX.
 
 ## 17. Forward positions can hide future pressure
 
@@ -239,11 +236,11 @@ Authorities can use forwards/swaps as well as spot.
 
 Spot reserve stock may remain stable today while forward commitments create future settlement exposure.
 
-When published, forward positions are important for reserve-liquidity phân tích (analysis / 분석).
+When published, forward positions are important for reserve-liquidity analysis.
 
 ## 18. FX intervention
 
-FX intervention broadly means official hành động (action / 동작) in FX markets intended to influence exchange-rate conditions or thị trường (market / 시장) functioning.
+FX intervention broadly means official action in FX markets intended to influence exchange-rate conditions or market functioning.
 
 Possible forms:
 
@@ -254,11 +251,11 @@ verbal signaling
 liquidity provision
 ```
 
-Not every FX-related central-bank thao tác (operation / 연산) has same mục tiêu (objective / 목표).
+Not every FX-related central-bank operation has same objective.
 
 ## 19. Buy foreign currency / sell domestic currency
 
-Simplified tác động (effect / 효과):
+Simplified effect:
 
 ```text
 central bank buys FX
@@ -266,7 +263,7 @@ central bank buys FX
 → resists domestic-currency appreciation
 ```
 
-But actual impact depends on sterilization, thị trường (market / 시장) độ sâu (depth / 깊이) and expectations.
+But actual impact depends on sterilization, market depth and expectations.
 
 ## 20. Sell foreign currency / buy domestic currency
 
@@ -290,7 +287,7 @@ This attempts to influence FX while keeping monetary conditions from changing on
 
 If liquidity impact is not offset, intervention overlaps monetary-policy stance directly.
 
-Then it is misleading to attribute exchange-rate reaction purely to “official FX luồng (flow / 흐름)”.
+Then it is misleading to attribute exchange-rate reaction purely to “official FX flow”.
 
 ## 23. Why intervention may affect FX
 
@@ -304,11 +301,11 @@ expectation / coordination channel
 positioning / stop-loss channel
 ```
 
-Effectiveness differs by regime and trạng thái (state / 상태).
+Effectiveness differs by regime and state.
 
 ## 24. Signaling channel
 
-Thị trường (market / 시장) may infer that intervention signals:
+Market may infer that intervention signals:
 
 ```text
 future monetary/fiscal action
@@ -316,13 +313,13 @@ policy discomfort with speed/level
 information held by authority
 ```
 
-Credibility matters. Repeated unsuccessful defense can weaken the tín hiệu (signal / 신호).
+Credibility matters. Repeated unsuccessful defense can weaken the signal.
 
 ## 25. Portfolio-balance channel
 
-If domestic and foreign assets are imperfect substitutes, changing relative asset supply can alter required rủi ro (risk / 위험) premium.
+If domestic and foreign assets are imperfect substitutes, changing relative asset supply can alter required risk premium.
 
-Tác động (effect / 효과) is stronger in some thị trường (market / 시장) structures than others.
+Effect is stronger in some market structures than others.
 
 ## 26. Liquidity-restoration intervention
 
@@ -336,15 +333,15 @@ fix a permanent price level
 
 This distinction changes how intervention success should be evaluated.
 
-## 27. Defending a mức (level / 수준) against fundamentals
+## 27. Defending a level against fundamentals
 
-If monetary/fiscal/bên ngoài (external / 외부) conditions continuously push opposite direction, intervention can consume reserves without durable success.
+If monetary/fiscal/external conditions continuously push opposite direction, intervention can consume reserves without durable success.
 
-Reserve sức chứa (capacity / 용량) cannot substitute indefinitely for inconsistent macro chính sách (policy / 정책).
+Reserve capacity cannot substitute indefinitely for inconsistent macro policy.
 
 ## 28. Exchange-rate regime
 
-Dùng chung (common / 공통) regime categories include:
+Common regime categories include:
 
 ```text
 hard peg
@@ -353,13 +350,13 @@ managed float
 free float
 ```
 
-Actual hành vi (behavior / 동작) can differ from label.
+Actual behavior can differ from label.
 
 ## 29. De jure vs de facto regime
 
-**De jure** = announced khung phần mềm (framework / 프레임워크).
+**De jure** = announced framework.
 
-**De facto** = observed hành vi (behavior / 동작).
+**De facto** = observed behavior.
 
 Research should examine:
 
@@ -382,13 +379,13 @@ free capital mobility
 independent monetary policy
 ```
 
-A country cannot usually maximize all three simultaneously without các ràng buộc (constraints / 제약조건들)/trade-offs.
+A country cannot usually maximize all three simultaneously without constraints/trade-offs.
 
-This explains why regime choice shapes tỷ lệ (rate / 비율) chính sách (policy / 정책) and intervention needs.
+This explains why regime choice shapes rate policy and intervention needs.
 
 ## 31. Capital controls are part of valuation dynamics
 
-Capital controls can prevent textbook arbitrage and thay đổi (change / 변경) how interest differentials translate into FX.
+Capital controls can prevent textbook arbitrage and change how interest differentials translate into FX.
 
 Controls also create segmentation between:
 
@@ -398,23 +395,23 @@ offshore NDF
 official channels
 ```
 
-Read together with the funding/NDF cầu nối (bridge / 브리지).
+Read together with the funding/NDF bridge.
 
 ## 32. Monetary-policy credibility
 
-A central bank defending currency while inflation expectations are unanchored may face a different bài toán (problem / 문제) from one smoothing temporary thị trường (market / 시장) disorder.
+A central bank defending currency while inflation expectations are unanchored may face a different problem from one smoothing temporary market disorder.
 
-Credibility affects how much chính sách (policy / 정책) hành động (action / 동작) is needed to shift expectations.
+Credibility affects how much policy action is needed to shift expectations.
 
-## 33. Fiscal tương tác (interaction / 상호작용)
+## 33. Fiscal interaction
 
-FX valuation and reserve defense can be undermined if fiscal chính sách (policy / 정책) keeps widening funding/inflation pressure.
+FX valuation and reserve defense can be undermined if fiscal policy keeps widening funding/inflation pressure.
 
-Analyze chính sách (policy / 정책) mix, not central bank alone.
+Analyze policy mix, not central bank alone.
 
 ## 34. Valuation-model families
 
-Dùng chung (common / 공통) frameworks include:
+Common frameworks include:
 
 ```text
 PPP / REER mean reversion
@@ -429,7 +426,7 @@ Each answers a different question.
 
 ## 35. BEER intuition
 
-BEER-style các mô hình (models / 모델들) empirically relate real exchange tỷ lệ (rate / 비율) to fundamentals such as:
+BEER-style models empirically relate real exchange rate to fundamentals such as:
 
 ```text
 productivity
@@ -438,15 +435,15 @@ net foreign assets
 rate differentials
 ```
 
-Resulting “misvaluation” depends mô hình (model / 모델) specification and mẫu (sample / 표본).
+Resulting “misvaluation” depends model specification and sample.
 
 ## 36. FEER intuition
 
-FEER-style approaches ask what real exchange tỷ lệ (rate / 비율) is consistent with nội bộ (internal / 내부)/bên ngoài (external / 외부) balance under các giả định (assumptions / 가정들) about sustainable đầu ra (output / 출력)/hiện tại (current / 현재) account.
+FEER-style approaches ask what real exchange rate is consistent with internal/external balance under assumptions about sustainable output/current account.
 
-Therefore FEER contains normative/mô hình (model / 모델) các giả định (assumptions / 가정들), not just observation.
+Therefore FEER contains normative/model assumptions, not just observation.
 
-## 37. Fair giá trị (value / 값) should be a phạm vi (range / 범위)
+## 37. Fair value should be a range
 
 A precise statement such as:
 
@@ -454,9 +451,9 @@ A precise statement such as:
 fair EUR/USD = 1.0837
 ```
 
-usually overstates mô hình (model / 모델) certainty.
+usually overstates model certainty.
 
-Better đầu ra (output / 출력):
+Better output:
 
 ```text
 valuation range
@@ -466,7 +463,7 @@ catalyst
 invalidation
 ```
 
-## 38. Historical z-score can thất bại (fail / 실패) after regime thay đổi (change / 변경)
+## 38. Historical z-score can fail after regime change
 
 If inflation, productivity, capital mobility or monetary regime changed, historical mean may no longer represent equilibrium.
 
@@ -488,7 +485,7 @@ reserve loss
 
 can overwhelm valuation anchor.
 
-## 40. Intervention sự kiện (event / 이벤트) study
+## 40. Intervention event study
 
 A proper research notebook should capture:
 
@@ -528,7 +525,7 @@ partner-price moves
 weight changes
 ```
 
-Same chỉ mục (index / 인덱스) move can imply different cơ chế (mechanism / 메커니즘).
+Same index move can imply different mechanism.
 
 ## 43. Firm-level competitiveness ≠ country REER one-to-one
 
@@ -561,9 +558,9 @@ local asset return
 
 A cheap currency can coexist with unattractive total asset return.
 
-## 45. tương tác (interaction / 상호작용) with NDF/basis
+## 45. Interaction with NDF/basis
 
-Intervention and capital controls can alter onshore/offshore wedges, forward pricing and NDF hành vi (behavior / 동작).
+Intervention and capital controls can alter onshore/offshore wedges, forward pricing and NDF behavior.
 
 Read with:
 
@@ -571,34 +568,32 @@ Read with:
 - [`../04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md`](../04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 - [`../15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md`](../15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md)
 
-## 46. liên kết (connection / 연결) to Economics
+## 46. Connection to Economics
 
-General lý thuyết (theory / 이론) is owned by:
+General theory is owned by:
 
 - [`../../../../economics/03_macroeconomics/05_open_economy_exchange_rates_and_crises.md`](../../../../economics/03_macroeconomics/05_open_economy_exchange_rates_and_crises.md)
 - [`../../../../economics/03_macroeconomics/03_money_banking_and_monetary_policy.md`](../../../../economics/03_macroeconomics/03_money_banking_and_monetary_policy.md)
 
-This cầu nối (bridge / 브리지) owns FX-market interpretation and ứng dụng (application / 애플리케이션).
+This bridge owns FX-market interpretation and application.
 
 ## 47. Mental checklist
 
 Before using reserves/REER/intervention in a currency thesis, ask:
 
 1. What regime is actually operating?
-2. Spot intervention, funding hỗ trợ (support / 지원) or signaling?
-3. Are reserve changes giao dịch (transaction / 트랜잭션) or valuation?
+2. Spot intervention, funding support or signaling?
+3. Are reserve changes transaction or valuation?
 4. What denominator defines reserve adequacy?
 5. Are capital controls material?
-6. Is REER methodology comparable through thời gian (time / 시간)?
-7. Which valuation mô hình (model / 모델) defines cheap/expensive?
+6. Is REER methodology comparable through time?
+7. Which valuation model defines cheap/expensive?
 8. What catalyst closes the gap?
 9. Could funding/momentum dominate valuation?
 10. What falsifies the thesis?
 
 ## 48. Kết luận
 
-Valuation là **slow anchor**, intervention là **chính sách (policy / 정책) instrument**, reserves là **sức chứa (capacity / 용량) indicator**. Không thứ nào là automatic trading trigger.
+Valuation là **slow anchor**, intervention là **policy instrument**, reserves là **capacity indicator**. Không thứ nào là automatic trading trigger.
 
-Robust FX phân tích (analysis / 분석) phải combine valuation, bên ngoài (external / 외부) balance, funding, regime, positioning và executable instrument — rồi trạng thái (state / 상태) rõ bất định (uncertainty / 불확실성) và vô hiệu hóa (invalidation / 무효화).
-
-> **Bàn giao:** Sau **48. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 FX FUNDING NDF BASIS AND FORWARD CURVE](./00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Robust FX analysis phải combine valuation, external balance, funding, regime, positioning và executable instrument — rồi state rõ uncertainty và invalidation.

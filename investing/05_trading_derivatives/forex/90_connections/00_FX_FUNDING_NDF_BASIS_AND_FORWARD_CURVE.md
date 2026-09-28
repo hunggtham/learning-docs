@@ -1,13 +1,10 @@
-# FX Funding, NDF, Basis & Forward Curve — nối spot Forex với money thị trường (market / 시장) và funding
+# FX Funding, NDF, Basis & Forward Curve — nối spot Forex với money market và funding
 
-> **Mạch đọc:** Đọc **FX Funding, NDF, Basis & Forward Curve — nối spot Forex với money thị trường (market / 시장) và funding** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Spot direction và funding economics là hai thứ khác nhau** sang **2. Forward price không phải thị trường (market / 시장) forecast thuần túy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+Chapter bridge này không nằm trong linear route `01–15`. Nó tồn tại để trả lời một câu hỏi mà spot chart không trả lời được: **khi một tổ chức hedge, vay hoặc chuyển funding giữa hai đồng tiền, tỷ giá forward/NDF/basis được hình thành như thế nào và vì sao chúng có thể tách khỏi textbook parity?**
 
+Đây là bridge giữa Forex, derivatives và macro funding. Nếu mục tiêu chỉ là hiểu retail spot mechanics, có thể đọc sau. Nếu muốn hiểu institutional FX, corporate hedging, KRW/VND offshore pricing hoặc USD funding stress, đây là phần bắt buộc.
 
-Chapter cầu nối (bridge / 브리지) này không nằm trong tuyến tính (linear / 선형) tuyến (route / 경로) `01–15`. Nó tồn tại để trả lời một câu hỏi mà spot chart không trả lời được: **khi một tổ chức hedge, vay hoặc chuyển funding giữa hai đồng tiền, tỷ giá forward/NDF/basis được hình thành như thế nào và vì sao chúng có thể tách khỏi textbook parity?**
-
-Đây là cầu nối (bridge / 브리지) giữa Forex, derivatives và macro funding. Nếu mục tiêu chỉ là hiểu retail spot mechanics, có thể đọc sau. Nếu muốn hiểu institutional FX, corporate hedging, KRW/VND offshore pricing hoặc USD funding stress, đây là phần bắt buộc.
-
-Mô hình tư duy (mental model / 사고 모델):
+Mental model:
 
 ```text
 Spot FX
@@ -23,7 +20,7 @@ Spot FX
 
 Một trader có thể đúng hướng spot nhưng vẫn nhận P/L khác kỳ vọng vì financing hoặc hedge roll. Một corporation có thể giao dịch forward lớn dù không có directional view. Một bank có thể mua USD qua FX swap vì funding need chứ không phải vì bullish USD.
 
-Do đó khi nhìn luồng (flow / 흐름), cần hỏi trước:
+Do đó khi nhìn flow, cần hỏi trước:
 
 ```text
 Directional position?
@@ -35,17 +32,17 @@ Regulatory balance-sheet management?
 
 Không được suy `large USD buy = bullish USD view` một cách máy móc.
 
-## 2. Forward price không phải thị trường (market / 시장) forecast thuần túy
+## 2. Forward price không phải market forecast thuần túy
 
-Trong covered-interest-parity intuition, forward tỷ lệ (rate / 비율) liên kết với spot và hai interest rates.
+Trong covered-interest-parity intuition, forward rate liên kết với spot và hai interest rates.
 
-Với quote A/B, một biểu diễn (representation / 표현) đơn giản có dạng:
+Với quote A/B, một representation đơn giản có dạng:
 
 ```text
 F = S × (1 + r_B T) / (1 + r_A T)
 ```
 
-Chính xác (exact / 정확한) convention phụ thuộc day count, compounding và quote direction. Nhưng ý nghĩa cốt lõi là:
+Exact convention phụ thuộc day count, compounding và quote direction. Nhưng ý nghĩa cốt lõi là:
 
 ```text
 Forward rate
@@ -59,11 +56,11 @@ Vì vậy:
 Forward ≠ expected future spot
 ```
 
-Forward có thể cao/thấp hơn spot chỉ vì interest differential, ngay cả khi thị trường (market / 시장) expectation về future spot không cùng hướng.
+Forward có thể cao/thấp hơn spot chỉ vì interest differential, ngay cả khi market expectation về future spot không cùng hướng.
 
 ## 3. Forward points
 
-Thị trường (market / 시장) thường quote:
+Market thường quote:
 
 ```text
 Forward = Spot + Forward Points
@@ -90,15 +87,15 @@ Nếu không, một backtest có thể gọi financing return là directional al
 
 ## 4. Covered Interest Parity — CIP
 
-Textbook no-arbitrage lô-gic (logic / 논리) so sánh hai paths.
+Textbook no-arbitrage logic so sánh hai paths.
 
-Đường dẫn (path / 경로) A:
+Path A:
 
 ```text
 hold/invest currency A
 ```
 
-Đường dẫn (path / 경로) B:
+Path B:
 
 ```text
 borrow A
@@ -107,11 +104,11 @@ borrow A
 → lock B back into A with forward
 ```
 
-Nếu markets frictionless, covered returns phải gần bằng nhau sau conversion. Nếu không, arbitrageur theoretically có thể khóa (lock / 잠금) return difference.
+Nếu markets frictionless, covered returns phải gần bằng nhau sau conversion. Nếu không, arbitrageur theoretically có thể lock return difference.
 
 ## 5. Vì sao CIP có thể không khớp hoàn hảo
 
-Real institutional thị trường (market / 시장) có các ràng buộc (constraints / 제약조건들):
+Real institutional market có constraints:
 
 ```text
 counterparty limits
@@ -129,7 +126,7 @@ Do đó actual forward/swap pricing có thể lệch khỏi simple textbook pari
 
 ## 6. Cross-currency basis
 
-**Cross-currency basis** là adjustment cần thêm để actual synthetic funding economics khớp thị trường (market / 시장) prices.
+**Cross-currency basis** là adjustment cần thêm để actual synthetic funding economics khớp market prices.
 
 Trực giác:
 
@@ -141,9 +138,9 @@ Synthetic USD funding via FX swap
 
 Nếu many institutions urgently need USD funding, synthetic USD can become expensive relative to textbook parity.
 
-Basis vì thế là một cửa sổ (window / 윈도우) vào funding pressure và dealer intermediation sức chứa (capacity / 용량).
+Basis vì thế là một window vào funding pressure và dealer intermediation capacity.
 
-## 7. Basis không phải simple spot trading tín hiệu (signal / 신호)
+## 7. Basis không phải simple spot trading signal
 
 Một basis move có thể đến từ:
 
@@ -156,13 +153,13 @@ risk-off deleveraging
 regulatory reporting dates
 ```
 
-Không có ánh xạ (mapping / 매핑) universal:
+Không có mapping universal:
 
 ```text
 basis wider → spot must go up/down
 ```
 
-Need identify cơ chế (mechanism / 메커니즘) first.
+Need identify mechanism first.
 
 ## 8. FX swap khác currency swap
 
@@ -176,7 +173,7 @@ far leg reversing currency exchange
 
 Nó thường phục vụ short-to-medium funding/liquidity transformation.
 
-Cross-currency swap thường dài hạn hơn và có interest legs, principal exchanges và richer collateral/credit cấu trúc (structure / 구조).
+Cross-currency swap thường dài hạn hơn và có interest legs, principal exchanges và richer collateral/credit structure.
 
 Không được dùng hai tên thay thế nhau tùy tiện.
 
@@ -212,7 +209,7 @@ ON / TN
 
 Different tenors can show different pressure.
 
-A 1Y điểm (point / 지점) may reflect medium-horizon tỷ lệ (rate / 비율) differential while ON/TN can be dominated by settlement/calendar/liquidity effects.
+A 1Y point may reflect medium-horizon rate differential while ON/TN can be dominated by settlement/calendar/liquidity effects.
 
 ## 11. Settlement calendars matter
 
@@ -227,7 +224,7 @@ business-day convention
 tenor convention
 ```
 
-A one-day date lỗi (error / 오류) can materially thay đổi (change / 변경) short-dated swap points.
+A one-day date error can materially change short-dated swap points.
 
 Backtest must not treat every calendar day as tradable/settleable.
 
@@ -242,11 +239,11 @@ intermediation capacity ↓
 → FX swap / basis pricing can distort
 ```
 
-If a chiến lược (strategy / 전략) sees recurring basis moves around calendar dates, do not immediately lời gọi (call / 호출) it structural alpha. It may be funding/accounting seasonality.
+If a strategy sees recurring basis moves around calendar dates, do not immediately call it structural alpha. It may be funding/accounting seasonality.
 
 ## 13. Collateral currency matters
 
-Two OTC derivatives with same headline payoff can differ in giá trị (value / 값) if collateral terms differ.
+Two OTC derivatives with same headline payoff can differ in value if collateral terms differ.
 
 Why?
 
@@ -262,11 +259,11 @@ counterparty credit
 clearing status
 ```
 
-Công khai (public / 공개) thị trường (market / 시장) quotes are simplifications relative to bilateral institutional contracts.
+Public market quotes are simplifications relative to bilateral institutional contracts.
 
 ## 14. Counterparty and credit limits
 
-Even when an apparent arbitrage exists, institution may be unable to quy mô (scale / 규모) it because:
+Even when an apparent arbitrage exists, institution may be unable to scale it because:
 
 ```text
 credit line exhausted
@@ -279,9 +276,9 @@ Thus “why doesn't arbitrage close this?” often has a balance-sheet answer.
 
 ## 15. NDF — Non-Deliverable Forward
 
-NDF is a forward đặc tả hợp đồng (contract / 계약) that settles net cash difference instead of delivering full principal currencies.
+NDF is a forward contract that settles net cash difference instead of delivering full principal currencies.
 
-Typical cấu trúc (structure / 구조):
+Typical structure:
 
 ```text
 Agree notional + forward rate today
@@ -289,11 +286,11 @@ Agree notional + forward rate today
 → settle net difference in settlement currency
 ```
 
-It is especially relevant where cục bộ (local / 로컬) currency is not freely deliverable/offshore accessible.
+It is especially relevant where local currency is not freely deliverable/offshore accessible.
 
 ## 16. Why NDF markets exist
 
-NDFs help thị trường (market / 시장) participants hedge/speculate when there are các ràng buộc (constraints / 제약조건들) such as:
+NDFs help market participants hedge/speculate when there are constraints such as:
 
 ```text
 limited convertibility
@@ -302,11 +299,11 @@ onshore access restrictions
 local-currency delivery limits
 ```
 
-Therefore NDF pricing can contain chính sách (policy / 정책)/truy cập (access / 접근) thông tin (information / 정보) not present in freely deliverable G10 forwards.
+Therefore NDF pricing can contain policy/access information not present in freely deliverable G10 forwards.
 
 ## 17. NDF is not retail CFD
 
-Both may settle cash, but economics and legal cấu trúc (structure / 구조) differ.
+Both may settle cash, but economics and legal structure differ.
 
 NDF has defined:
 
@@ -319,9 +316,9 @@ notional
 forward rate
 ```
 
-Retail CFD/rolling FX often has ongoing financing and broker-specific margin/thực thi (execution / 실행) terms.
+Retail CFD/rolling FX often has ongoing financing and broker-specific margin/execution terms.
 
-Do not merge them into one sản phẩm (product / 제품) category.
+Do not merge them into one product category.
 
 ## 18. Fixing convention is part of the instrument
 
@@ -337,9 +334,9 @@ settlement date
 quote direction
 ```
 
-Using arbitrary daily close instead of official fixing can produce a backtest that does not correspond to the đặc tả hợp đồng (contract / 계약).
+Using arbitrary daily close instead of official fixing can produce a backtest that does not correspond to the contract.
 
-## 19. Onshore vs offshore thị trường (market / 시장)
+## 19. Onshore vs offshore market
 
 A currency may have:
 
@@ -351,7 +348,7 @@ offshore NDF
 
 with different participants, hours, regulations and funding conditions.
 
-Price discovery can shift between them by thời gian (time / 시간) zone and chính sách (policy / 정책) regime.
+Price discovery can shift between them by time zone and policy regime.
 
 ## 20. Onshore-offshore basis
 
@@ -366,9 +363,9 @@ intervention expectation
 offshore positioning
 ```
 
-Persistent difference does not automatically mean arbitrage because the arbitrage tuyến (route / 경로) itself may be restricted.
+Persistent difference does not automatically mean arbitrage because the arbitrage route itself may be restricted.
 
-## 21. Capital controls thay đổi (change / 변경) arbitrage không gian (space / 공간)
+## 21. Capital controls change arbitrage space
 
 Textbook parity assumes capital can move freely.
 
@@ -383,7 +380,7 @@ bring proceeds back
 
 then price gaps can persist without being exploitable.
 
-Ràng buộc (constraint / 제약조건) is part of the economic mô hình (model / 모델).
+Constraint is part of the economic model.
 
 ## 22. Synthetic funding
 
@@ -401,7 +398,7 @@ The spread between them can reveal funding scarcity or balance-sheet friction.
 
 ## 23. USD funding channel
 
-USD is deeply used in toàn cục (global / 전역) finance. During stress:
+USD is deeply used in global finance. During stress:
 
 ```text
 USD funding demand ↑
@@ -410,7 +407,7 @@ USD funding demand ↑
 → dealer balance-sheet strain
 ```
 
-This can coexist with spot USD strength, but the relationship is not an định danh (identity / 식별자).
+This can coexist with spot USD strength, but the relationship is not an identity.
 
 ## 24. Central-bank swap lines
 
@@ -423,13 +420,13 @@ Funding-liquidity support
 ≠ spot FX intervention aimed at exchange-rate level
 ```
 
-Do not label every central-bank FX-related thao tác (operation / 연산) “intervention”.
+Do not label every central-bank FX-related operation “intervention”.
 
-## 25. Corporate hedge luồng (flow / 흐름)
+## 25. Corporate hedge flow
 
 Exporter with foreign-currency receivable may sell FX forward. Importer with future payable may buy forward.
 
-These flows are often rủi ro (risk / 위험) management, not speculation.
+These flows are often risk management, not speculation.
 
 Therefore:
 
@@ -440,7 +437,7 @@ hedging flow
 
 ## 26. Asset-manager hedge ratios
 
-A toàn cục (global / 전역) bond/equity investor may vary hedge ratio over thời gian (time / 시간).
+A global bond/equity investor may vary hedge ratio over time.
 
 Changes in hedge ratio can create large forward demand even when underlying asset position is unchanged.
 
@@ -458,13 +455,13 @@ Local asset return
 − transaction cost
 ```
 
-A “currency-hedged return” without roll/funding chi phí (cost / 비용) is incomplete.
+A “currency-hedged return” without roll/funding cost is incomplete.
 
 ## 28. Rolling forwards
 
 Most hedges are not one-shot forever. Short-dated forward hedges must be rolled.
 
-Roll kết quả (outcome / 결과) depends on:
+Roll outcome depends on:
 
 ```text
 forward curve
@@ -474,11 +471,11 @@ liquidity
 basis
 ```
 
-This creates đường dẫn (path / 경로) phụ thuộc (dependency / 의존성) in long-horizon hedged returns.
+This creates path dependency in long-horizon hedged returns.
 
 ## 29. Spot, forward and NDF return series are not interchangeable
 
-Before research, define đối tượng (object / 객체) precisely:
+Before research, define object precisely:
 
 ```text
 spot return
@@ -488,13 +485,13 @@ futures return
 retail rolling P/L
 ```
 
-A chiến lược (strategy / 전략) tested on one instrument cannot be assumed executable identically on another.
+A strategy tested on one instrument cannot be assumed executable identically on another.
 
 ## 30. Academic carry vs retail carry
 
 Academic carry research often uses forward rates.
 
-Retail hiện thực (implementation / 구현) may use broker swap/rollover with:
+Retail implementation may use broker swap/rollover with:
 
 ```text
 markup
@@ -503,9 +500,9 @@ broker credit terms
 instrument-specific financing
 ```
 
-Cầu nối (bridge / 브리지) from academic return to real thực thi (execution / 실행) explicitly.
+Bridge from academic return to real execution explicitly.
 
-## 31. dữ liệu (data / 데이터) alignment
+## 31. Data alignment
 
 Institutional study should align:
 
@@ -526,7 +523,7 @@ Mid-price parity deviations may disappear after executable spreads.
 
 No-arbitrage research should use bid/ask and realistic funding, not just midpoint algebra.
 
-## 33. dùng chung (common / 공통) NDF backtest errors
+## 33. Common NDF backtest errors
 
 Typical mistakes:
 
@@ -539,7 +536,7 @@ ignoring capital controls
 stitching different regimes blindly
 ```
 
-## 34. dùng chung (common / 공통) basis research errors
+## 34. Common basis research errors
 
 Typical mistakes:
 
@@ -563,9 +560,9 @@ How stable is carry after realistic forward/roll cost?
 Does hedge demand change around large cross-border asset flows?
 ```
 
-Each needs point-in-time dữ liệu (data / 데이터) and tường minh (explicit / 명시적) identification limits.
+Each needs point-in-time data and explicit identification limits.
 
-## 36. liên kết (connection / 연결) map
+## 36. Connection map
 
 Read with:
 
@@ -575,7 +572,7 @@ Read with:
 - [`../../03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md`](../../03_EXECUTION_MICROSTRUCTURE_AND_TRADING_PORTFOLIO.md)
 - [`../../../04_economics/README.md`](../../../04_economics/README.md)
 
-General monetary/funding lý thuyết (theory / 이론) belongs to Economics; this tệp (file / 파일) owns FX-specific hiện thực (implementation / 구현) and instrument interpretation.
+General monetary/funding theory belongs to Economics; this file owns FX-specific implementation and instrument interpretation.
 
 ## 37. Mental checklist
 
@@ -584,18 +581,16 @@ Before interpreting forward/NDF/basis, ask:
 1. Deliverable or non-deliverable?
 2. Quote direction?
 3. Tenor and settlement date?
-4. Which tỷ lệ (rate / 비율) benchmarks?
+4. Which rate benchmarks?
 5. What basis/funding pressure?
-6. Which collateral/counterparty các giả định (assumptions / 가정들)?
-7. Onshore/offshore truy cập (access / 접근) các ràng buộc (constraints / 제약조건들)?
+6. Which collateral/counterparty assumptions?
+7. Onshore/offshore access constraints?
 8. Which fixing?
 9. Are timestamps synchronized?
-10. Is the luồng (flow / 흐름) hedge, funding or directional?
+10. Is the flow hedge, funding or directional?
 
 ## 38. Kết luận
 
-Spot chart chỉ là một tầng (layer / 계층) của FX. Forward points, FX swaps, NDF và basis cho thấy foreign exchange cũng là **funding hạ tầng (infrastructure / 인프라)**.
+Spot chart chỉ là một layer của FX. Forward points, FX swaps, NDF và basis cho thấy foreign exchange cũng là **funding infrastructure**.
 
-Nếu không hiểu funding, convertibility và settlement conventions, researcher dễ nhầm hedging luồng (flow / 흐름) với tín hiệu (signal / 신호), capital-control wedge với arbitrage và financing return với directional edge.
-
-> **Bàn giao:** Sau **38. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INTERVENTION RESERVES REER AND CURRENCY VALUATION](./01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu không hiểu funding, convertibility và settlement conventions, researcher dễ nhầm hedging flow với signal, capital-control wedge với arbitrage và financing return với directional edge.
