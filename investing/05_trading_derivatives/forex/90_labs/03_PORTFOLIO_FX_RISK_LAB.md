@@ -1,7 +1,4 @@
-# Lab 03 — Portfolio FX rủi ro (risk / 위험)
-
-> **Mạch đọc:** Đặt **Lab 03 — Portfolio FX rủi ro (risk / 위험)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bối cảnh** sang **Bước 1 — Currency decomposition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+# Lab 03 — Portfolio FX Risk
 
 Lab này chuyển tư duy từ từng ticket sang **currency-factor exposure**. Nhiều pair khác nhau có thể thực chất là cùng một directional bet được lặp lại.
 
@@ -19,9 +16,6 @@ Long XAU/USD   position with 70,000 USD-equivalent notional
 
 Account currency là USD.
 
-
-> **Chuyển mạch:** Từ **Bối cảnh**, ta sang **Bước 1 — Currency decomposition** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Bước 1 — Currency decomposition
 
 Viết mỗi position thành hai legs:
@@ -37,9 +31,6 @@ Với gold, ghi rõ đây không phải currency pair nhưng vẫn có USD-price
 
 Sau đó quy đổi approximate exposures về một reporting currency để có thể aggregate.
 
-
-> **Chuyển mạch:** Từ **Bước 1 — Currency decomposition**, ta sang **Bước 2 — Gross và net** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Bước 2 — Gross và net
 
 Tính:
@@ -52,14 +43,11 @@ Other currency exposures
 Gross leverage
 ```
 
-Giải thích tại sao net exposure nhỏ không có nghĩa gross liquidity/margin rủi ro (risk / 위험) nhỏ.
-
-
-> **Chuyển mạch:** Từ **Bước 2 — Gross và net**, ta sang **Bước 3 — Correlation is conditional** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Giải thích tại sao net exposure nhỏ không có nghĩa gross liquidity/margin risk nhỏ.
 
 ## Bước 3 — Correlation is conditional
 
-Lấy một correlation cửa sổ (window / 윈도우) bình thường và một stress cửa sổ (window / 윈도우) nếu có dữ liệu. So sánh:
+Lấy một correlation window bình thường và một stress window nếu có dữ liệu. So sánh:
 
 ```text
 EUR/USD vs GBP/USD
@@ -68,9 +56,6 @@ USD/JPY vs AUD/JPY
 ```
 
 Không kết luận diversification chỉ từ full-sample correlation.
-
-
-> **Chuyển mạch:** Từ **Bước 3 — Correlation is conditional**, ta sang **Bước 4 — Stress scenarios** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bước 4 — Stress scenarios
 
@@ -93,12 +78,9 @@ Largest factor contributor
 Expected spread/slippage deterioration
 ```
 
-
-> **Chuyển mạch:** Từ **Bước 4 — Stress scenarios**, ta sang **Bước 5 — Portfolio heat** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Bước 5 — Portfolio heat
 
-Giả sử mỗi trade riêng lẻ có planned stop mất mát (loss / 손실) bằng `0.5%` equity. Tính nominal sum của planned risks, sau đó tạo common-shock scenario làm nhiều stops bị hit cùng lúc với slippage gấp đôi bình thường.
+Giả sử mỗi trade riêng lẻ có planned stop loss bằng `0.5%` equity. Tính nominal sum của planned risks, sau đó tạo common-shock scenario làm nhiều stops bị hit cùng lúc với slippage gấp đôi bình thường.
 
 So sánh:
 
@@ -108,10 +90,7 @@ vs
 Correlated stressed loss
 ```
 
-
-> **Chuyển mạch:** Từ **Bước 5 — Portfolio heat**, ta sang **Bước 6 — Hedge chất lượng (quality / 품질)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Bước 6 — Hedge chất lượng (quality / 품질)
+## Bước 6 — Hedge quality
 
 Thử hedge một phần USD exposure bằng một instrument khác. Không chỉ hỏi hedge ratio theo notional. Hãy ghi:
 
@@ -125,12 +104,9 @@ Maturity mismatch if any
 Residual exposure
 ```
 
-Một hedge làm giảm beta nhưng tạo carry hoặc basis rủi ro (risk / 위험) vẫn cần được attribution riêng.
+Một hedge làm giảm beta nhưng tạo carry hoặc basis risk vẫn cần được attribution riêng.
 
-
-> **Chuyển mạch:** Từ **Bước 6 — Hedge chất lượng (quality / 품질)**, ta sang **Bước 7 — rủi ro (risk / 위험) limits** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Bước 7 — rủi ro (risk / 위험) limits
+## Bước 7 — Risk limits
 
 Thiết kế limits theo nhiều lớp:
 
@@ -146,9 +122,6 @@ Minimum free-margin buffer
 ```
 
 Không dùng một limit duy nhất như “mỗi trade 1%”.
-
-
-> **Chuyển mạch:** Từ **Bước 7 — rủi ro (risk / 위험) limits**, ta sang **Đầu ra bắt buộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Đầu ra bắt buộc
 
@@ -170,9 +143,6 @@ Hedge status
 
 Thêm một bảng stress tổng hợp và một phần giải thích limit nào sẽ kích hoạt trước trong từng scenario.
 
-
-> **Chuyển mạch:** Từ **Đầu ra bắt buộc**, ta sang **Tự chấm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Tự chấm
 
 Bài đạt khi bạn có thể nhìn ba trade khác nhau và nhận ra chúng có thể là **một macro bet được nhân ba**.
@@ -181,5 +151,3 @@ Bài đạt khi bạn có thể nhìn ba trade khác nhau và nhận ra chúng c
 
 - [11 — Portfolio FX risk, correlation and factor exposure](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [03 — Leverage, margin and position sizing](../03_LEVERAGE_MARGIN_POSITION_SIZING.md)
-
-> **Bàn giao:** Sau **Tự chấm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 QUOTES MARGIN AND POSITION SIZING LAB](./00_QUOTES_MARGIN_AND_POSITION_SIZING_LAB.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

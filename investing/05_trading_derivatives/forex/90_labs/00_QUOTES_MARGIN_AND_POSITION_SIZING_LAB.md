@@ -1,10 +1,8 @@
 # Lab 00 — Quotes, Margin và Position Sizing
 
-> **Mạch đọc:** Đặt **Lab 00 — Quotes, Margin và Position Sizing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **trường hợp (case / 사례) A — EUR/USD, account USD** sang **trường hợp (case / 사례) B — USD/JPY, account USD**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
 Lab này kiểm tra xem bạn có thực sự hiểu economics của một FX position hay chỉ đang nhập số vào calculator của broker.
 
-## Trường hợp (case / 사례) A — EUR/USD, account USD
+## Case A — EUR/USD, account USD
 
 Giả sử:
 
@@ -18,7 +16,7 @@ Commission = 7 USD per standard-lot round trip
 Expected slippage on stop = 1.5 pip
 ```
 
-Không bắt đầu bằng lot kích thước (size / 크기). Hãy tính theo đúng luồng (flow / 흐름):
+Không bắt đầu bằng lot size. Hãy tính theo đúng flow:
 
 ```text
 1. Planned entry price
@@ -33,12 +31,9 @@ Không bắt đầu bằng lot kích thước (size / 크기). Hãy tính theo �
 10. Loss if stop fills with 1.5-pip adverse slippage
 ```
 
-Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position kích thước (size / 크기) vừa tính không? Giải thích tại sao.
+Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position size vừa tính không? Giải thích tại sao.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) A — EUR/USD, account USD**, ta sang **trường hợp (case / 사례) B — USD/JPY, account USD** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Trường hợp (case / 사례) B — USD/JPY, account USD
+## Case B — USD/JPY, account USD
 
 ```text
 USD/JPY = 148.40 / 148.42
@@ -57,12 +52,9 @@ Pip value in JPY
 Pip value in USD
 ```
 
-Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip giá trị (value / 값) theo USD thay đổi dù đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) không đổi.
+Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip value theo USD thay đổi dù contract size không đổi.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) B — USD/JPY, account USD**, ta sang **trường hợp (case / 사례) C — EUR/GBP, account KRW** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Trường hợp (case / 사례) C — EUR/GBP, account KRW
+## Case C — EUR/GBP, account KRW
 
 ```text
 EUR/GBP entry = 0.8650
@@ -80,12 +72,9 @@ GBP
 → KRW
 ```
 
-Sau đó giải thích tại sao account return còn phụ thuộc conversion đường dẫn (path / 경로) dù trade thesis ban đầu chỉ là EUR so với GBP.
+Sau đó giải thích tại sao account return còn phụ thuộc conversion path dù trade thesis ban đầu chỉ là EUR so với GBP.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) C — EUR/GBP, account KRW**, ta sang **trường hợp (case / 사례) D — Margin stress** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Trường hợp (case / 사례) D — Margin stress
+## Case D — Margin stress
 
 Giả sử:
 
@@ -96,7 +85,7 @@ Gross notional = 120,000 USD
 Required margin = 4,000 USD
 ```
 
-Tính equity, free margin và margin mức (level / 수준) ban đầu. Sau đó stress lần lượt:
+Tính equity, free margin và margin level ban đầu. Sau đó stress lần lượt:
 
 ```text
 Scenario 1: floating loss -1,500
@@ -115,12 +104,9 @@ Margin Level
 Effective Gross Leverage
 ```
 
-Mục tiêu là thấy margin stress có thể tăng dù chiến lược (strategy / 전략) chưa chạm stop.
+Mục tiêu là thấy margin stress có thể tăng dù strategy chưa chạm stop.
 
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) D — Margin stress**, ta sang **trường hợp (case / 사례) E — Portfolio heat** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Trường hợp (case / 사례) E — Portfolio heat
+## Case E — Portfolio heat
 
 Bạn đang có:
 
@@ -130,7 +116,7 @@ Long GBP/USD: planned loss 100 USD
 Short USD/JPY: planned loss 100 USD
 ```
 
-Không được kết luận tổng rủi ro (risk / 위험) chỉ là `300 USD` độc lập. Hãy viết currency decomposition:
+Không được kết luận tổng risk chỉ là `300 USD` độc lập. Hãy viết currency decomposition:
 
 ```text
 EUR exposure
@@ -140,9 +126,6 @@ USD exposure
 ```
 
 Sau đó tạo stress `USD strengthens rapidly` và mô tả vì sao ba vị thế có thể cùng bị adverse move và cùng chịu spread/slippage cao hơn bình thường.
-
-
-> **Chuyển mạch:** Từ **trường hợp (case / 사례) E — Portfolio heat**, ta sang **Đầu ra bắt buộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Đầu ra bắt buộc
 
@@ -165,16 +148,11 @@ Currency-factor exposure
 Portfolio heat contribution
 ```
 
-
-> **Chuyển mạch:** Từ **Đầu ra bắt buộc**, ta sang **Tự chấm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
 ## Tự chấm
 
-Bài đạt khi bạn có thể đi từ **account-risk ngân sách (budget / 예산) → vô hiệu hóa (invalidation / 무효화) → kích thước (size / 크기) → notional → margin → stress mất mát (loss / 손실)** mà không dùng “broker cho bao nhiêu lot” làm điểm xuất phát.
+Bài đạt khi bạn có thể đi từ **account-risk budget → invalidation → size → notional → margin → stress loss** mà không dùng “broker cho bao nhiêu lot” làm điểm xuất phát.
 
 Đọc lại nếu cần:
 
 - [02 — Quotes, pips, lots and P/L](../02_QUOTES_PIPS_LOTS_AND_PNL.md)
 - [03 — Leverage, margin and position sizing](../03_LEVERAGE_MARGIN_POSITION_SIZING.md)
-
-> **Bàn giao:** Sau **Tự chấm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 EVENT DRIVEN FX ANALYSIS LAB](./01_EVENT_DRIVEN_FX_ANALYSIS_LAB.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
