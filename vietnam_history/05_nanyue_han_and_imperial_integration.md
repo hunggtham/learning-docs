@@ -2,21 +2,21 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md) kết thúc ở một society đã có trung tâm quyền lực lớn tại Cổ Loa nhưng nằm trong môi trường cạnh tranh rộng hơn của nam Trung Hoa và Bắc Việt. Chapter này bắt đầu từ chính điểm đó: **vì sao một polity bản địa ở châu thổ sông Hồng lại bị hút vào một hệ thống đế quốc lớn hơn, và việc đó thay đổi đời sống, economy và institution như thế nào?**
+[`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md) kết thúc ở một xã hội đã có trung tâm quyền lực lớn tại Cổ Loa nhưng nằm trong môi trường cạnh tranh rộng hơn của nam Trung Hoa và Bắc Việt. Chương này bắt đầu từ chính điểm đó: **vì sao một chính thể bản địa ở châu thổ sông Hồng lại bị hút vào một hệ thống đế quốc lớn hơn, và việc đó thay đổi đời sống, kinh tế và thiết chế (institution / 제도) như thế nào?**
 
 Không nên học giai đoạn này bằng công thức “Âu Lạc mất → Bắc thuộc bắt đầu”. Trước nhà Hán còn có **Nam Việt (Nanyue / 南越)**; sau khi Hán thôn tính Nam Việt, quyền lực đế quốc cũng không phủ đều xuống từng làng. Cần nhìn theo nhiều tầng: quân sự, tuyến giao thông (route / 경로), trung tâm hành chính, tầng lớp địa phương và hộ gia đình. Mốc **111 TCN**, lợi ích về lương thực–thuế–nhân lực của châu thổ, bối cảnh Nam Việt–Hán và các điểm Luy Lâu–Mê Linh sẽ được đọc như một chuỗi nguyên nhân, không phải bốn mảnh rời.
 
 ## Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại
 
-Cuối thế kỷ III TCN, sau khi nhà Tần tan rã, Triệu Đà xây dựng Nam Việt ở vùng Lĩnh Nam. Polity này bao gồm phần lớn Quảng Đông, Quảng Tây hiện nay và về sau kiểm soát khu vực Âu Lạc. Dùng nation-state hiện đại để gắn nhãn ngay sẽ gây sai mô hình: Nam Việt là một **frontier kingdom (vương quốc biên địa)** nơi populations, elite, military networks và cultural practices pha trộn.
+Cuối thế kỷ III TCN, sau khi nhà Tần tan rã, Triệu Đà xây dựng Nam Việt ở vùng Lĩnh Nam. Chính thể này bao gồm phần lớn Quảng Đông, Quảng Tây hiện nay và về sau kiểm soát khu vực Âu Lạc. Dùng quốc gia–dân tộc hiện đại để gắn nhãn ngay sẽ gây sai mô hình: Nam Việt là một **vương quốc biên địa (frontier kingdom / 변경 왕국)** nơi các cộng đồng, tinh hoa, mạng lưới quân sự và thực hành văn hóa pha trộn.
 
 Điều quan trọng với Việt Nam là Nam Việt tạo ra một tầng trung gian giữa Cổ Loa và đế quốc Hán. Việc châu thổ sông Hồng bị hấp thụ không diễn ra trực tiếp từ Âu Lạc sang Hán trong một bước duy nhất.
 
 ## 111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị
 
-Năm **111 TCN**, nhà Hán đánh bại Nam Việt. Từ đây, vùng Bắc và Bắc Trung Bộ hiện nay được đặt sâu hơn vào một imperial administrative mạng (network / 네트워크). Trong thời Hán, ba đơn vị thường được liên hệ trực tiếp tới lãnh thổ Việt Nam ngày nay là **Giao Chỉ**, **Cửu Chân** và **Nhật Nam**. Các đơn vị này không trùng với tỉnh hiện đại, và ranh giới thay đổi qua thời gian.
+Năm **111 TCN**, nhà Hán đánh bại Nam Việt. Từ đây, vùng Bắc và Bắc Trung Bộ hiện nay được đặt sâu hơn vào mạng lưới hành chính đế quốc (imperial administrative network / 제국 행정망). Trong thời Hán, ba đơn vị thường được liên hệ trực tiếp tới lãnh thổ Việt Nam ngày nay là **Giao Chỉ**, **Cửu Chân** và **Nhật Nam**. Các đơn vị này không trùng với tỉnh hiện đại, và ranh giới thay đổi qua thời gian.
 
-Khác biệt lớn so với early trạng thái (state / 상태) như Cổ Loa là **bureaucratic administration (quản trị quan liêu)**. Đế quốc không chỉ cần đánh thắng. Nó cần bổ nhiệm officials, ghi nhận population, thu tài nguyên (resource / 자원), duy trì tuyến (route / 경로), xét xử dispute và kết nối vùng biên với center.
+Khác biệt lớn so với nhà nước sơ kỳ như Cổ Loa là **quản trị quan liêu (bureaucratic administration / 관료 행정)**. Đế quốc không chỉ cần đánh thắng. Nó cần bổ nhiệm quan lại, ghi nhận dân số, thu tài nguyên, duy trì tuyến đường, xét xử tranh chấp và kết nối vùng biên với trung tâm.
 
 Một mô hình tư duy (mental model / 사고 모델) hữu ích:
 
@@ -36,13 +36,13 @@ Nhưng mỗi mũi tên đều có friction. Official ở trị sở không đồ
 
 ## Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?
 
-Hãy quay lại geography. Bắc Bộ có agricultural cơ sở (base / 기반) lớn, river hệ thống (system / 시스템) nối interior với coast, lại nằm trên corridor giữa nam Trung Hoa và mainland Southeast Asia. Một đế quốc muốn giữ vùng này không chỉ vì prestige. Nó có lợi ích về **food, tax, manpower, transit và strategic độ sâu (depth / 깊이)**.
+Hãy quay lại địa lý. Bắc Bộ có nền nông nghiệp lớn, hệ thống sông nối nội địa với ven biển, lại nằm trên hành lang giữa nam Trung Hoa và Đông Nam Á lục địa. Một đế quốc muốn giữ vùng này không chỉ vì uy tín. Nó có lợi ích về **lương thực, thuế, nhân lực, trung chuyển và chiều sâu chiến lược (strategic depth / 전략적 종심)**.
 
 River tuyến (route / 경로) cũng giải thích vì sao các center như Mê Linh, Luy Lâu hay Long Biên quan trọng. Trong thế giới chưa có đường cao tốc, waterways là hạ tầng (infrastructure / 인프라) vận tải chính. Điều khiển (control / 제어) một nút (node / 노드) sông có thể giúp move grain, officials, troops và thông tin (information / 정보).
 
 ## Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)
 
-Khu vực **Luy Lâu** ở Bắc Ninh là checkpoint rất tốt cho giai đoạn này. Nơi đây từng là một trung tâm hành chính quan trọng của Giao Chỉ/Giao Châu và về sau trở thành một center lớn của Buddhism và exchange.
+Khu vực **Luy Lâu** ở Bắc Ninh là điểm kiểm tra kiến thức tốt cho giai đoạn này. Nơi đây từng là một trung tâm hành chính quan trọng của Giao Chỉ/Giao Châu và về sau trở thành một trung tâm lớn của Phật giáo và trao đổi.
 
 Nếu đứng ở vùng Luy Lâu hôm nay, đừng chỉ hỏi “đây có phải thủ phủ không?”. Hãy hỏi: tại sao một center lớn lại nằm ở vùng Kinh Bắc, gần mạng (network / 네트워크) sông? Commodity và người đi qua đâu? Vì sao religion mới có thể lan mạnh tại một trade-administrative hub?
 

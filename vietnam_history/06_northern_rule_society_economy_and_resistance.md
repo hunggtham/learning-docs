@@ -2,13 +2,13 @@
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`05_nanyue_han_and_imperial_integration.md`](05_nanyue_han_and_imperial_integration.md) đã giải thích cơ chế (mechanism / 메커니즘) cơ bản của imperial tích hợp (integration / 통합): conquest → administrative district → thông tin (information / 정보) → extraction → dependence on cục bộ (local / 로컬) intermediaries. Chapter này hỏi câu khó hơn: **vì sao một vùng có thể ở trong các imperial các hệ thống (systems / 시스템들) phương bắc nhiều thế kỷ nhưng cuối cùng vẫn phát triển khả năng tự trị và một political định danh (identity / 식별자) đủ mạnh để hình thành trạng thái (state / 상태) độc lập?**
+[`05_nanyue_han_and_imperial_integration.md`](05_nanyue_han_and_imperial_integration.md) đã giải thích cơ chế (mechanism / 메커니즘) cơ bản của hội nhập đế quốc (imperial integration / 제국 통합): chinh phục → đơn vị hành chính → thông tin → thu tài nguyên → phụ thuộc vào trung gian địa phương. Chương này hỏi câu khó hơn: **vì sao một vùng có thể ở trong các hệ thống đế quốc phương bắc nhiều thế kỷ nhưng cuối cùng vẫn phát triển khả năng tự trị và một căn tính chính trị (political identity / 정치적 정체성) đủ mạnh để hình thành nhà nước độc lập?**
 
 Câu trả lời không thể là “người Việt liên tục chống lại suốt một nghìn năm”. Có nổi dậy, nhưng cũng có những giai đoạn dài thích nghi, hôn phối, thương mại, giữ chức vụ, di chuyển (migration / 마이그레이션) và tiếp nhận thể chế. Lịch sử thật nằm trong tension giữa **tích hợp (integration / 통합) và bản địa hóa (localization / 현지화)**. Vì vậy mỗi phần cần nối mốc triều đại với nền kinh tế, mạng địa phương, bối cảnh đế chế và địa điểm như Luy Lâu, chùa Dâu, Mê Linh hay Thanh Hóa.
 
 ## “Bắc thuộc” là một convenience label, không phải một regime duy nhất
 
-Từ thế kỷ II TCN tới đầu thế kỷ X, vùng Bắc Việt lần lượt nằm dưới nhiều dynastic các hệ thống (systems / 시스템들): Hán, các chính quyền thời phân liệt, Tùy, Đường và các giai đoạn cục bộ (local / 로컬) autonomy xen kẽ. Administrative terminology, territorial organization và center of power thay đổi.
+Từ thế kỷ II TCN tới đầu thế kỷ X, vùng Bắc Việt lần lượt nằm dưới nhiều hệ thống triều đại: Hán, các chính quyền thời phân liệt, Tùy, Đường và các giai đoạn tự trị địa phương xen kẽ. Thuật ngữ hành chính, tổ chức lãnh thổ và trung tâm quyền lực thay đổi.
 
 Dùng một label giúp định vị chronology nhưng dễ tạo illusion rằng chính sách (policy / 정책) không đổi suốt một thiên niên kỷ. Thực tế, một strong unified empire có sức chứa (capacity / 용량) khác hẳn một dynasty đang nội chiến; cục bộ (local / 로컬) elites cũng mạnh/yếu khác nhau theo từng giai đoạn.
 
@@ -28,9 +28,9 @@ degree of effective control
 
 ## Administration dần sâu hơn nhưng không bao giờ đồng đều
 
-Sau Han conquest, Giao Chỉ, Cửu Chân và Nhật Nam được nối với bureaucratic hierarchy. Về sau tên gọi và cấp quản trị thay đổi, đặc biệt tới thời Đường với **An Nam đô hộ phủ (Annan Protectorate)**.
+Sau cuộc chinh phục của nhà Hán, Giao Chỉ, Cửu Chân và Nhật Nam được nối vào thứ bậc hành chính quan liêu. Về sau tên gọi và cấp quản trị thay đổi, đặc biệt tới thời Đường với **An Nam đô hộ phủ (Annan Protectorate / 안남도호부)**.
 
-Điểm quan trọng là distinction giữa **formal sovereignty (chủ quyền danh nghĩa)** và **effective quản trị (governance / 거버넌스)**. Một court ở phương bắc có thể claim một territory rộng, nhưng tax collection, dispute resolution và troop mobilization ở vùng xa phụ thuộc cục bộ (local / 로컬) conditions.
+Điểm quan trọng là phân biệt **chủ quyền danh nghĩa (formal sovereignty / 형식적 주권)** và **quản trị thực tế (effective governance / 실질 통치)**. Một triều đình phương bắc có thể tuyên bố lãnh thổ rộng, nhưng thu thuế, giải quyết tranh chấp và huy động quân ở vùng xa vẫn phụ thuộc điều kiện địa phương.
 
 Mountainous zones, frontier corridors và các communities xa administrative center thường có degrees of autonomy khác nhau. Đây cũng là lý do lịch sử Việt Nam không nên bị giản lược thành lịch sử (history / 이력) của Red River Delta alone.
 
@@ -44,11 +44,11 @@ Luy Lâu đặc biệt đáng chú ý vì nó không chỉ là bureaucracy. Nó 
 
 ## Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation
 
-Buddhism vào khu vực qua nhiều tuyến (route / 경로), không nên mô hình (model / 모델) như một dòng duy nhất “từ Trung Quốc xuống”. Mainland Southeast Asia kết nối cả đường bộ và maritime tuyến (route / 경로) với India, South China Sea và southern China. Các commercial hubs tạo môi trường cho monks, merchants và texts di chuyển.
+Phật giáo vào khu vực qua nhiều tuyến đường, không nên hình dung như một dòng duy nhất “từ Trung Quốc xuống”. Đông Nam Á lục địa kết nối cả đường bộ và đường biển với Ấn Độ, Biển Đông và nam Trung Hoa. Các trung tâm thương mại tạo môi trường cho tăng lữ, thương nhân và kinh sách di chuyển.
 
 Vùng Dâu–Luy Lâu về sau trở thành một trong những trung tâm Buddhism sớm nổi bật. Tín ngưỡng **Tứ Pháp** là ví dụ rất hay về localization: Buddhist forms kết hợp với cục bộ (local / 로컬) agricultural concerns như mây, mưa, sấm, chớp.
 
-Đây là cơ chế (mechanism / 메커니즘) cultural thay đổi (change / 변경) quan trọng: imported religion không đơn giản replace cục bộ (local / 로컬) belief; nó được **vernacularized (bản địa hóa)** để giải quyết concern của community đang sống bằng rice agriculture.
+Đây là cơ chế biến đổi văn hóa (cultural change / 문화 변화) quan trọng: tôn giáo du nhập không đơn giản thay thế tín ngưỡng địa phương; nó được **bản địa hóa (vernacularized / 토착화)** để đáp ứng mối quan tâm của cộng đồng sống bằng nông nghiệp lúa nước.
 
 Nếu đến chùa Dâu, hãy nhìn nó như checkpoint của trade + religion + cục bộ (local / 로컬) ecology, không chỉ như “ngôi chùa cổ”.
 
@@ -60,7 +60,7 @@ Cuối thế kỷ II–đầu III, khi nhà Hán suy yếu và thế giới Trun
 
 ## Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?
 
-Cuộc nổi dậy gắn với **Triệu Thị Trinh / Bà Triệu** năm **248** diễn ra trong bối cảnh khác Hai Bà Trưng. Regime, cục bộ (local / 로컬) elite cấu trúc (structure / 구조) và military môi trường (environment / 환경) đã thay đổi.
+Cuộc nổi dậy gắn với **Triệu Thị Trinh / Bà Triệu** năm **248** diễn ra trong bối cảnh khác Hai Bà Trưng. Chế độ, cấu trúc tinh hoa địa phương và môi trường quân sự đã thay đổi.
 
 Không nên ghép mọi uprising vào một master story identical. Mỗi rebellion cần hỏi: grievance là gì, coalition dựa vào ai, geographic cơ sở (base / 기반) ở đâu, imperial center lúc đó mạnh hay yếu, và vì sao movement mở rộng hoặc thất bại.
 

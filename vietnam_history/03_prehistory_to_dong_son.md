@@ -2,7 +2,7 @@
 
 ## Prerequisite, phạm vi và câu hỏi trung tâm
 
-Ta đã biết từ [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) rằng Bắc Bộ và Bắc Trung Bộ là mạng (network / 네트워크) sông–đồng bằng–trung du chứ không phải một mặt phẳng. Chapter này hỏi: **trước khi có chính sử mô tả rõ nhà nước, archaeology cho thấy xã hội đã thay đổi như thế nào về settlement, nông nghiệp, metallurgy, specialization và inequality?**
+Ta đã biết từ [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md) rằng Bắc Bộ và Bắc Trung Bộ là mạng lưới (network / 네트워크) sông–đồng bằng–trung du chứ không phải một mặt phẳng. Chương này hỏi: **trước khi có chính sử mô tả rõ nhà nước, khảo cổ học (archaeology / 고고학) cho thấy xã hội đã thay đổi như thế nào về cư trú (settlement / 정착), nông nghiệp, luyện kim (metallurgy / 금속 공예), chuyên môn hóa (specialization / 전문화) và bất bình đẳng (inequality / 불평등)?**
 
 Mục tiêu không phải học thuộc phân loại khảo cổ. Phùng Nguyên → Đồng Đậu → Gò Mun → Đông Sơn được dùng như các mốc tọa độ để nhìn một tiến trình (process / 프로세스) kéo dài nhiều thế kỷ. Niên đại của từng văn hóa thay đổi đôi chút theo địa điểm và nghiên cứu, nên các phạm vi (range / 범위) dưới đây là xấp xỉ. Khi đọc, hãy đồng thời hỏi bốn điều: cư dân sống bằng gì, họ trao đổi với vùng nào, công cụ thay đổi sức chứa xã hội ra sao, và hôm nay có thể nhìn thấy dấu vết ở đâu.
 
@@ -20,11 +20,11 @@ Gò Mun            ~ cuối thiên niên kỷ II → đầu thiên niên kỷ I 
 Đông Sơn          ~ khoảng thế kỷ VII TCN → những thế kỷ đầu Công nguyên
 ```
 
-Các mốc không phải hard ranh giới (boundary / 경계). Một technology không biến mất vào đúng ngày culture label đổi tên. Archaeologist dùng pottery style, metallurgy, burial, settlement tầng (layer / 계층) và nhiều indicator khác để periodize material thay đổi (change / 변경).
+Các mốc không phải ranh giới cứng (boundary / 경계). Một công nghệ (technology / 기술) không biến mất đúng ngày nhãn văn hóa (culture / 문화) đổi tên. Nhà khảo cổ dùng kiểu gốm, luyện kim, mộ táng, các lớp cư trú và nhiều chỉ dấu khác để phân kỳ biến đổi vật chất (material change / 물질 변화).
 
 ## Từ farming settlement đến surplus: “kinh tế” thời này trông như thế nào?
 
-Không có GDP, coinage thống nhất hay tax bản ghi (record / 레코드) để ta đo trực tiếp. Economic lịch sử (history / 이력) phải reconstruct từ dấu tích sản xuất và consumption. Wet-rice agriculture có vai trò quan trọng, nhưng cư dân còn fishing, hunting, gathering, animal husbandry và khai thác river/wetland resources. Stone, bone, bronze và về sau iron tools thay đổi năng suất và phạm vi việc có thể làm.
+Không có GDP, tiền tệ thống nhất hay sổ thuế để đo trực tiếp. Lịch sử kinh tế (economic history / 경제사) phải dựng lại từ dấu tích sản xuất và tiêu dùng (consumption / 소비). Nông nghiệp lúa nước giữ vai trò quan trọng, nhưng cư dân còn đánh bắt, săn bắt, hái lượm, chăn nuôi và khai thác tài nguyên sông–đầm. Công cụ đá, xương, đồng và về sau là sắt thay đổi năng suất và phạm vi công việc có thể làm.
 
 Điểm quan trọng là **lưu trữ (storage / 저장소) và surplus**. Khi một settlement tạo được food dư tương đối ổn định, không phải mọi household member đều phải dành toàn bộ thời gian tìm food. Một phần labor có thể chuyển sang pottery, weaving, metallurgy, boat building, ritual môi trường vận hành (production / 운영 환경) hoặc warfare. Từ đây xuất hiện **craft specialization (chuyên môn hóa thủ công)**.
 
@@ -32,9 +32,9 @@ Surplus không tự động tạo elite, nhưng nó tạo thứ có thể đư�
 
 ## Bronze metallurgy là môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템), không chỉ là “biết đúc đồng”
 
-Một bronze drum hoặc weapon hoàn thiện che khuất supply chuỗi (chain / 사슬) phía sau: ore/material acquisition, alloy kiến thức (knowledge / 지식), furnace, mold, skilled labor, fuel, vận chuyển (transport / 전송) và xã hội (social / 사회적) demand. Nếu môi trường vận hành (production / 운영 환경) đạt quy mô lớn, xã hội phải coordinate nhiều đầu vào (input / 입력) khác nhau.
+Một trống đồng hoặc vũ khí hoàn thiện che khuất chuỗi cung ứng (supply chain / 공급망) phía sau: khai thác quặng, hiểu biết về hợp kim, lò nung, khuôn đúc, lao động lành nghề, nhiên liệu, vận chuyển và nhu cầu xã hội. Nếu sản xuất đạt quy mô lớn, xã hội phải phối hợp nhiều đầu vào (input / 입력) khác nhau.
 
-Đông Sơn nổi tiếng với trống đồng, nhưng nếu chỉ nhìn trống như biểu tượng nghệ thuật ta bỏ lỡ economic cơ chế (mechanism / 메커니즘). Trống có material chi phí (cost / 비용) và skill chi phí (cost / 비용) cao; phân phối (distribution / 분포) của chúng cho thấy mạng (network / 네트워크) exchange và status. Weapons, agricultural tools, molds và môi trường vận hành (production / 운영 환경) debris lại giúp thấy military/agricultural economy phía dưới elite display.
+Đông Sơn nổi tiếng với trống đồng, nhưng nếu chỉ nhìn trống như biểu tượng nghệ thuật ta bỏ lỡ cơ chế kinh tế (economic mechanism / 경제 메커니즘). Trống đòi hỏi chi phí vật liệu và kỹ năng cao; sự phân bố (distribution / 분포) của chúng cho thấy mạng lưới trao đổi và địa vị (status / 지위). Vũ khí, nông cụ, khuôn đúc và phế liệu sản xuất lại giúp thấy nền kinh tế quân sự–nông nghiệp phía dưới việc phô diễn của tầng lớp tinh hoa.
 
 Tại Cổ Loa, các phát hiện liên quan khuôn đúc và lượng lớn mũi tên đồng là một lý do quan trọng để chapter tiếp theo đặt câu hỏi về centralized môi trường vận hành (production / 운영 환경) và political sức chứa (capacity / 용량).
 
@@ -46,7 +46,7 @@ Tại Cổ Loa, các phát hiện liên quan khuôn đúc và lượng lớn mũ
 
 ## Đời sống thường ngày: có thể biết gì, và không biết gì?
 
-Từ settlement, công cụ (tool / 도구), pottery, plant/animal remains và burial, ta có thể reconstruct một phần diet, môi trường vận hành (production / 운영 환경) và household activity. Nhưng cần phân biệt **probable mẫu (pattern / 패턴)** với cinematic detail. Ta có thể nói agriculture, river resources và craft đều quan trọng; khó hơn nhiều để nói chính xác một gia đình cụ thể ăn gì vào một ngày cụ thể hay dùng xã hội (social / 사회적) title nào nếu không có nguồn (source / 소스).
+Từ khu cư trú, công cụ, đồ gốm, dấu tích thực vật–động vật và mộ táng, ta có thể dựng lại một phần chế độ ăn, hoạt động sản xuất và sinh hoạt hộ gia đình. Nhưng cần phân biệt **mẫu hình có khả năng đúng (probable pattern / 개연적 패턴)** với chi tiết tưởng tượng như trong phim. Ta có thể nói nông nghiệp, tài nguyên sông và nghề thủ công đều quan trọng; khó hơn nhiều để nói chính xác một gia đình cụ thể ăn gì vào một ngày cụ thể hay dùng danh xưng xã hội nào nếu không có nguồn.
 
 Một cách tưởng tượng có kiểm soát là đi từ ràng buộc (constraint / 제약조건): monsoon quyết định season; rice cultivation tạo công việc (work / 작업) peak; river cung cấp vận chuyển (transport / 전송) và fish; house/lưu trữ (storage / 저장소) phải thích nghi humidity/flood; công cụ (tool / 도구) technology giới hạn năng suất. Đây là reconstruction từ môi trường (environment / 환경) + bằng chứng (evidence / 증거), không phải fiction.
 
@@ -79,11 +79,11 @@ Mỗi mũi tên là hypothesis cần bằng chứng (evidence / 증거); không 
 
 ## Đông Sơn và ký ức Việt Nam hôm nay
 
-Trống đồng xuất hiện như symbol trong museum, visual thiết kế (design / 설계) và national narrative hiện đại. Đây là ví dụ tốt về **afterlife of artifacts**: một đối tượng (object / 객체) có chức năng/status trong xã hội cổ nhưng được gán thêm meaning ở thời hiện đại. Thư viện (library / 라이브러리) sẽ không coi hiện đại (modern / 현대적) symbolic use là bằng chứng cho original meaning; thay vào đó nó là dữ liệu (data / 데이터) cho công khai (public / 공개) bộ nhớ (memory / 메모리).
+Trống đồng xuất hiện như biểu tượng trong bảo tàng, thiết kế thị giác (visual design / 시각 디자인) và tường thuật quốc gia hiện đại. Đây là ví dụ về “đời sau của hiện vật” (afterlife of artifacts / 유물의 후대 생애): một đồ vật có chức năng và địa vị trong xã hội cổ nhưng được gán thêm ý nghĩa ở thời hiện đại. Thư viện sẽ không coi cách dùng biểu tượng hiện nay là bằng chứng cho ý nghĩa ban đầu; nó là dữ liệu về ký ức công cộng (public memory / 공공 기억).
 
 ## Recap, ranh giới (boundary / 경계) và đường đọc tiếp
 
-Ta đã đi từ settlement và subsistence tới surplus, specialization, metallurgy và xã hội (social / 사회적) differentiation. Ranh giới (boundary / 경계) quan trọng là: **archaeology cho thấy mức độ độ phức tạp (complexity / 복잡도) tăng, nhưng tên “Văn Lang”, danh sách Hùng Vương và chronology truyền thống thuộc một bằng chứng (evidence / 증거) tầng (layer / 계층) khác**.
+Ta đã đi từ cư trú và tự cung tự cấp đến phần dư, chuyên môn hóa, luyện kim và phân hóa xã hội. Ranh giới quan trọng là: **khảo cổ học cho thấy mức độ phức tạp tăng, nhưng tên “Văn Lang”, danh sách Hùng Vương và niên đại truyền thống thuộc một tầng chứng cứ khác**.
 
 [`04_van_lang_au_lac_co_loa.md`](04_van_lang_au_lac_co_loa.md) sẽ nối hai tầng (layer / 계층) này. Câu hỏi không còn chỉ là “có nhà nước đầu tiên năm nào?”, mà là: tradition nói gì, material bằng chứng (evidence / 증거) thực sự cho thấy gì, và Cổ Loa thay đổi cách ta hiểu early trạng thái (state / 상태) formation ở Bắc Bộ như thế nào.
 
