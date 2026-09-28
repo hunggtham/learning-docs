@@ -1,8 +1,5 @@
 # Philosophy — Conceptual Dependencies
 
-> **Mạch đọc:** Đặt **Philosophy — Conceptual Dependencies** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Các tuyến (route / 경로) chính** sang **Claim → bằng chứng (evidence / 증거) → mô hình (model / 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
-
 Đây là đồ thị (graph / 그래프) điều hướng, không phải một syllabus cứng. Mũi tên biểu diễn concept nên có trước để đọc một chapter mà không biến premise thành black box.
 
 ```mermaid
@@ -27,7 +24,14 @@ flowchart TD
     Meta --> Ethics[Moral reasoning and action]
     Ethics --> Applied[Bio, climate, professional, animal ethics]
     Ethics --> Pol[Justice, rights, democracy, power]
-    Pol --> Global[Global justice, identity, difference]
+    Pol --> EconPol[Capitalism, labor, institutions]
+    EconPol --> ML[Marx, Lenin, Marxism–Leninism]
+    ML -. empirical check .-> Econ[Economics and economic history]
+    Pol --> Ideo[Comparative political ideologies]
+    Ideo --> EconPol
+    Ideo --> Global[Global justice, identity, difference]
+    Ideo -. empirical check .-> Soc[Sociology, history, economics]
+    Pol --> Global
     Ethics --> Tech[Technology, design, agency]
     Tech --> Info[Information, platforms, automation]
     Tech --> AI[AI alignment and moral agency]
@@ -35,6 +39,8 @@ flowchart TD
     Math --> AI
     History[History of traditions] -. context .-> R
     History -. concepts .-> Meta
+    History -. intellectual context .-> ML
+    History -. political context .-> Ideo
 ```
 
 ## Các tuyến (route / 경로) chính
@@ -51,15 +57,22 @@ flowchart TD
 
 `05_ethics` → `06_social_political_philosophy` → `07_philosophy_of_technology` → `90_connections/03–04`.
 
+### Political economy → Marx/Lenin → bằng chứng (evidence / 증거)
+
+`06_social_political_philosophy/02_capitalism_labor_and_institutions.md` → `06_social_political_philosophy/04_marxism_leninism/README.md` → `../economics/06_economic_history_institutions/README.md`.
+
+Tuyến (route / 경로) này giữ ba tầng (layer / 계층) tách biệt: philosophical argument về thuộc tính (property / 속성)/power, intellectual genealogy của Marx–Lenin–Marxism–Leninism, và empirical evaluation bằng economics/lịch sử (history / 이력). Một tầng (layer / 계층) không được dùng làm shortcut thay tầng (layer / 계층) khác.
+
+### Political foundations → ideology comparison → institutions
+
+`06_social_political_philosophy/00_justice_power_and_legitimacy.md` → `06_social_political_philosophy/05_political_ideologies/README.md` → `06_social_political_philosophy/05_political_ideologies/09_comparative_synthesis.md` → `06_social_political_philosophy/02_capitalism_labor_and_institutions.md` / empirical owners.
+
+Tuyến (route / 경로) này không dùng ideology label như verdict. Nó phân rã mỗi tradition thành conception of freedom, authority, thuộc tính (property / 속성), equality, community, voice/exit/contest, institutional cơ chế (mechanism / 메커니즘) và dạng thất bại (failure mode / 실패 모드); claim về actual outcomes phải chuyển sang Economics, Sociology hoặc Lịch sử (history / 이력).
+
 ### Lịch sử (history / 이력) as ngữ cảnh (context / 맥락)
 
-`08_history_of_philosophy` không phải prerequisite tuyệt đối; đọc song song để biết mỗi concept xuất hiện nhằm xử lý bài toán (problem / 문제) nào và đã bị phản biện ra sao.
-
-
-> **Chuyển mạch:** Từ **Các tuyến (route / 경로) chính**, ta sang **Quy tắc link** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+`08_history_of_philosophy` không phải prerequisite tuyệt đối; đọc song song để biết mỗi concept xuất hiện nhằm xử lý bài toán (problem / 문제) nào và đã bị phản biện ra sao. Với political ideology, intellectual lịch sử (history / 이력) cũng giúp tránh gán một contemporary party position ngược thành definition timeless của cả tradition.
 
 ## Quy tắc link
 
 Mỗi chapter mới nên có ít nhất một link ngược đến prerequisite, một link sang downstream implication và một link sang lĩnh vực (domain / 도메인) thực nghiệm hoặc kỹ thuật khi claim cần bằng chứng (evidence / 증거) ngoài Philosophy.
-
-> **Bàn giao:** Sau **Quy tắc link**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

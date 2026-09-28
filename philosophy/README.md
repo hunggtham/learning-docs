@@ -1,7 +1,4 @@
-# Philosophy thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học
-
-> **Mạch đọc:** Đọc **Philosophy thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Những câu hỏi trung tâm** sang **Cấu trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+# Philosophy Thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học
 
 `philosophy/` là nơi sở hữu các câu hỏi nền tảng về tri thức, thực tại, khoa học, tâm trí, đạo đức và đời sống chung. Thư viện không trình bày triết học như danh sách học thuyết để ghi nhớ; mỗi chapter đi theo mạch:
 
@@ -13,14 +10,12 @@ Mục tiêu là giúp người đọc nhận ra một claim đang nói về **m�
 
 ## Những câu hỏi trung tâm
 
-- Ta biết một điều bằng cách nào? bằng chứng (evidence / 증거) là gì? Một claim được justified ra sao?
+- Ta biết một điều bằng cách nào? Bằng chứng (evidence / 증거) là gì? Một claim được justified ra sao?
 - Causality khác correlation ở đâu? Scientific mô hình (model / 모델) nói gì về reality?
 - Mind, consciousness và định danh (identity / 식별자) là gì? Mô tả ngôi thứ nhất liên hệ thế nào với giải thích ngôi thứ ba?
 - Moral lập luận (reasoning / 추론) hoạt động ra sao? Justice, freedom, power và legitimacy có quan hệ thế nào?
+- Political ideologies khác nhau ở conception nào về freedom, authority, thuộc tính (property / 속성), equality, community và institutional thay đổi (change / 변경)?
 - Technology chỉ là công cụ hay còn định hình agency, kiến thức (knowledge / 지식), công việc (work / 작업) và xã hội (social / 사회적) thứ tự (order / 순서)?
-
-
-> **Chuyển mạch:** Từ **Những câu hỏi trung tâm**, ta sang **Cấu trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cấu trúc
 
@@ -34,16 +29,16 @@ philosophy/
 ├── 03_philosophy_of_science/         (4 chapters)
 ├── 04_philosophy_of_mind/            (3 chapters)
 ├── 05_ethics/                        (4 chapters)
-├── 06_social_political_philosophy/   (4 chapters)
+├── 06_social_political_philosophy/
+│   ├── 4 core chapters
+│   ├── 04_marxism_leninism/          (20 chapters)
+│   └── 05_political_ideologies/      (10 chapters)
 ├── 07_philosophy_of_technology/      (3 chapters)
 ├── 08_history_of_philosophy/         (4 chapters)
 └── 90_connections/                   (5 chapters)
 
 Hai file điều phối nằm ở root: [Conceptual Dependencies](CONCEPTUAL_DEPENDENCIES.md) và [Editorial Standard](EDITORIAL_STANDARD.md). Chúng là contract cho mọi chapter mới: không thêm topic nếu chưa biết prerequisite, objection, evidence boundary và downstream connection.
 ```
-
-
-> **Chuyển mạch:** Từ **Cấu trúc**, ta sang **Reading đường dẫn (path / 경로)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Reading đường dẫn (path / 경로)
 
@@ -64,13 +59,12 @@ Hai file điều phối nằm ở root: [Conceptual Dependencies](CONCEPTUAL_DEP
 - [Modality, time và free will](02_metaphysics/01_modality_time_and_free_will.md) → [Reduction và emergence](02_metaphysics/02_reduction_emergence_and_naturalism.md) → [Scientific realism](03_philosophy_of_science/01_scientific_realism_laws_and_underdetermination.md).
 - [Measurement, statistics và replication](03_philosophy_of_science/02_measurement_statistics_and_replication.md) → [Mental causation và embodiment](04_philosophy_of_mind/01_mental_causation_embodiment_and_extended_mind.md) → [Metaethics](05_ethics/01_metaethics_and_normative_frameworks.md).
 - [Bioethics, climate và AI ethics](05_ethics/02_bioethics_climate_and_ai_ethics.md) → [Democracy và public reason](06_social_political_philosophy/01_democracy_rights_and_public_reason.md) → [Technology ethics](07_philosophy_of_technology/01_technology_ethics_data_and_automation.md) → [AI alignment](90_connections/03_ai_alignment_and_moral_agency.md).
+- [Capitalism, Labor và Institutions](06_social_political_philosophy/02_capitalism_labor_and_institutions.md) → [Marx, Marxism, Lenin và Marxism–Leninism](06_social_political_philosophy/04_marxism_leninism/README.md) → [Major critiques](06_social_political_philosophy/04_marxism_leninism/08_major_critiques_and_open_questions.md) → [Comparative political economy](06_social_political_philosophy/04_marxism_leninism/10_comparative_political_economy.md) → [Primary-text reading guide](06_social_political_philosophy/04_marxism_leninism/11_primary_text_reading_guide.md) → worked Soviet/China/Vietnam cases và evidence-depth chapters. Tuyến (route / 경로) này tách intellectual lịch sử (history / 이력), doctrine, institutional hiện thực (implementation / 구현), critique và empirical economics.
+- [Political Ideologies — comparative learning route](06_social_political_philosophy/05_political_ideologies/README.md) → [Comparison framework](06_social_political_philosophy/05_political_ideologies/00_comparison_framework.md) → Liberalism → Conservatism → Socialism/Xã hội (social / 사회적) Democracy → Anarchism → Libertarianism → Republicanism → Nationalism → Fascism → [Comparative synthesis](06_social_political_philosophy/05_political_ideologies/09_comparative_synthesis.md). Tuyến (route / 경로) này dùng cùng institutional grammar cho các traditions thay vì xếp chúng trên một score trái–phải duy nhất.
 
 Các tuyến (route / 경로) nâng cao không phải thứ tự bắt buộc. Chúng làm lộ phụ thuộc (dependency / 의존성): lô-gic (logic / 논리) giúp kiểm tra argument; epistemology kiểm tra warrant; philosophy of science kiểm tra mô hình (model / 모델)/bằng chứng (evidence / 증거); ethics và political philosophy kiểm tra hành động (action / 동작)/institution; technology và AI đưa toàn bộ chuỗi vào trường hợp (case / 사례) thực tế.
 
-Độ sâu (depth / 깊이) pass hiện tại không mở thêm không gian tên (namespace / 네임스페이스). Các nút (node / 노드) trung tâm về epistemology, causality, free will, consciousness, ethics, justice và technology đã được viết lại theo chuỗi `question → definition → strongest argument → premises → objection → reply → rival position → empirical boundary → implication`; primary-source ngữ cảnh (context / 맥락) chỉ dùng để định vị tranh luận, không biến chapter thành tuyển tập trích dẫn.
-
-
-> **Chuyển mạch:** Từ **Reading đường dẫn (path / 경로)**, ta sang **kiến thức (knowledge / 지식) connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Độ sâu (depth / 깊이) pass hiện tại không mở thêm top-level không gian tên (namespace / 네임스페이스). Xã hội (social / 사회적)/political philosophy giờ có hai focused routes bổ sung nhau: Marxism–Leninism đi sâu genealogy → doctrine → hiện thực (implementation / 구현) → bằng chứng (evidence / 증거); Political Ideologies mở breadth có kiểm soát giữa liberalism, conservatism, socialism, anarchism, libertarianism, republicanism, nationalism và fascism. Cả hai tuyến (route / 경로) đều dùng đặc tả hợp đồng (contract / 계약) `problem → definition → mechanism → institution → objection → evidence boundary → handoff`, không biến lịch sử (history / 이력) of ideas thành glossary hoặc bảng xếp hạng ideology.
 
 ## Kiến thức (knowledge / 지식) connections
 
@@ -79,10 +73,10 @@ Các tuyến (route / 경로) nâng cao không phải thứ tự bắt buộc. C
 - [Mathematics](../mathematics/README.md) cung cấp lô-gic (logic / 논리), xác suất (probability / 확률), bất định (uncertainty / 불확실성) và formal các mô hình (models / 모델들).
 - [Physics](../physics/README.md) và [Biology](../biology/README.md) cung cấp các trường hợp về mô hình (model / 모델), explanation, emergence và reduction.
 - [Psychology](../psychology/README.md) kiểm tra các claim về cognition, consciousness, định danh (identity / 식별자) và moral judgment bằng bằng chứng (evidence / 증거) thực nghiệm.
+- [Economics](../economics/README.md) là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) khi political philosophy tạo claim về price, profit, thị trường (market / 시장) cấu trúc (structure / 구조), growth, planning, welfare, institutions hoặc historical economic outcomes.
+- [Sociology](../sociology/README.md) là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) cho lớp (class / 클래스), status, institutions, socialization, collective hành động (action / 동작), nation/định danh (identity / 식별자) và cấu trúc (structure / 구조)/agency khi political lý thuyết (theory / 이론) mở sang empirical xã hội (social / 사회적) explanation.
+- [World History](../world_history/README.md) là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) khi ideology chapter chuyển từ conceptual genealogy sang historical movements, wars, trạng thái (state / 상태) formation hoặc regime thay đổi (change / 변경).
 - [Computer Science / AI](../computer_science/README.md) mở rộng các câu hỏi về computation, biểu diễn (representation / 표현), agency, alignment và responsibility.
-
-
-> **Chuyển mạch:** Từ **kiến thức (knowledge / 지식) connections**, ta sang **Chuẩn biên soạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chuẩn biên soạn
 
@@ -91,10 +85,8 @@ Mỗi chapter nên phân biệt rõ:
 1. **descriptive claim** — thế giới hoặc con người đang vận hành thế nào;
 2. **normative claim** — nên hành động hoặc tổ chức thế nào;
 3. **conceptual claim** — một từ/khái niệm được định nghĩa và phân biệt ra sao;
-4. **empirical premise** — tiền đề cần bằng chứng (evidence / 증거) từ Psychology, Biology, Physics hoặc các khoa học khác.
+4. **empirical premise** — tiền đề cần bằng chứng (evidence / 증거) từ Economics, Sociology, Lịch sử (history / 이력), Psychology hoặc các khoa học khác.
 
-Lập luận phải ghi rõ premise, suy luận (inference / 추론), conclusion, counterargument và điều kiện khiến nó thất bại. Không trình bày một quan điểm lịch sử như consensus hiện đại; các truyền thống và tác giả được đặt trong bối cảnh, ảnh hưởng, điểm mạnh, phản biện và giới hạn của chúng.
+Lập luận phải ghi rõ premise, suy luận (inference / 추론), conclusion, counterargument và điều kiện khiến nó thất bại. Không trình bày một quan điểm lịch sử như consensus hiện đại; các traditions và tác giả được đặt trong bối cảnh, ảnh hưởng, nội bộ (internal / 내부) variation, objections và giới hạn. Với political ideologies, không suy definition của một tradition từ một party/country đương đại duy nhất và không so ideal của một side với worst historical trường hợp (case / 사례) của side khác.
 
 Xem [Coverage Audit](COVERAGE_AUDIT.md) để theo dõi phạm vi, các gap còn lại và thứ tự mở rộng chapter.
-
-> **Bàn giao:** Sau **Chuẩn biên soạn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CONCEPTUAL DEPENDENCIES](./CONCEPTUAL_DEPENDENCIES.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
