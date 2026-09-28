@@ -1,8 +1,8 @@
-# Writing, Education & Kiến thức (knowledge / 지식) Các hệ thống (systems / 시스템들): Hán văn → Nôm → Quốc ngữ → mass schooling
+# Chữ viết, giáo dục và hệ thống tri thức: Hán văn → Nôm → Quốc ngữ → giáo dục đại chúng
 
-## Central question
+## Câu hỏi trung tâm
 
-A trạng thái (state / 상태) cannot govern only with soldiers. It needs names, records, laws, maps, exam answers, tax lists and reproducible kiến thức (knowledge / 지식). This chapter tracks **thông tin (information / 정보) technology of society**: script, school, examination, printing, press and digital mạng (network / 네트워크).
+Nhà nước không thể cai quản chỉ bằng binh lính. Nhà nước cần tên gọi, sổ sách, luật, bản đồ, bài thi, danh sách thuế và tri thức có thể truyền lại. Chương này theo dõi “công nghệ thông tin” của xã hội: chữ viết, trường học, khoa cử, in ấn, báo chí và mạng số; từ đó nối quản trị cổ–trung đại với xã hội đại chúng hiện đại.
 
 The cốt lõi (core / 핵심) chuỗi nhân quả (causal chain / 인과 사슬):
 

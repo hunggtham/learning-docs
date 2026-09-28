@@ -1,10 +1,10 @@
-# Economic Lịch sử (history / 이력) Việt Nam: đất, thuế, thị trường và sự thay đổi của tài nguyên (resource / 자원) luồng (flow / 흐름)
+# Lịch sử kinh tế Việt Nam: đất, thuế, thị trường và dòng tài nguyên thay đổi
 
 ## Vì sao cần một trục kinh tế xuyên thời gian?
 
 Timeline 03–23 cho thấy từng regime, nhưng một câu hỏi lớn chỉ thấy rõ khi zoom out: **xã hội Việt Nam qua các thời đại tạo ra surplus ở đâu, ai có quyền claim surplus đó, và tài nguyên (resource / 자원) được chuyển từ household tới trạng thái (state / 상태)/thị trường (market / 시장) bằng cơ chế (mechanism / 메커니즘) nào?**
 
-Economic lịch sử (history / 이력) không đồng nghĩa lịch sử GDP. Với thời cổ–trung đại ta thường không có national accounts; thay vào đó phải reconstruct từ settlement, land regime, tax, corvée, trade, coin, cổng (port / 포트), granary, price, household chiến lược (strategy / 전략) và material bằng chứng (evidence / 증거).
+Lịch sử kinh tế không đồng nghĩa với lịch sử GDP. Với thời cổ–trung đại ta thường không có sổ liệu quốc dân; thay vào đó phải dựng lại từ cư trú, chế độ ruộng đất, thuế, lao dịch, buôn bán, tiền, cảng, kho lương, giá cả, chiến lược hộ gia đình và chứng cứ vật chất. Chương này quay lại các mốc 03–23, rồi nối chúng với câu hỏi hiện đại về cải cách đất đai và thị trường.
 
 Mô hình tư duy (mental model / 사고 모델) xuyên suốt:
 

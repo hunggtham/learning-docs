@@ -1,8 +1,8 @@
-# Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới
+# Việt Nam thế kỷ XXI: chuỗi giá trị toàn cầu, đô thị hóa và những giới hạn mới
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`22_doi_moi_market_transition_and_global_reintegration.md`](22_doi_moi_market_transition_and_global_reintegration.md) cho thấy Đổi Mới đã thay đổi incentive, price, enterprise và bên ngoài (external / 외부) tích hợp (integration / 통합). Khi bước vào thế kỷ XXI, câu hỏi không còn chỉ là **làm sao thoát khỏi shortage và poverty** mà dần chuyển thành: **làm sao tăng productivity, move up giá trị (value / 값) chuỗi (chain / 사슬), quản lý urbanization, aging và environmental rủi ro (risk / 위험) trong một economy đã hội nhập sâu?**
+[`22_doi_moi_market_transition_and_global_reintegration.md`](22_doi_moi_market_transition_and_global_reintegration.md) cho thấy Đổi Mới đã thay đổi động lực, giá cả, doanh nghiệp và hội nhập bên ngoài. Khi bước vào thế kỷ XXI, câu hỏi không còn chỉ là **làm sao thoát khỏi thiếu thốn và nghèo đói** mà dần chuyển thành: **làm sao tăng năng suất, nâng vị trí trong chuỗi giá trị, quản lý đô thị hóa, già hóa và rủi ro môi trường trong một nền kinh tế đã hội nhập sâu?** Hãy nối mốc gia nhập WTO **2007**, các chuỗi sản xuất điện tử, đô thị Hà Nội–Thành phố Hồ Chí Minh và áp lực đồng bằng sông Cửu Long để thấy chương này tiếp tục câu chuyện Đổi Mới.
 
 Đây là chuyển tiếp (transition / 전이) từ **low-income catch-up bài toán (problem / 문제)** sang **middle-income structural transformation bài toán (problem / 문제)**.
 

@@ -1,10 +1,10 @@
-# Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation
+# Lịch sử môi trường và thiên tai: sông, lũ, hạn, dịch bệnh và thích ứng
 
 ## Nature không phải background cố định
 
 Historical narrative thường đặt môi trường (environment / 환경) như scenery: sông Hồng, dãy Trường Sơn, Mekong Delta. Nhưng môi trường (environment / 환경) itself changes and reacts to human intervention.
 
-Central question của chapter này là: **climate, river, disease, soil và disaster giới hạn option của society ra sao, và con người làm thay đổi chính môi trường (environment / 환경) bằng dike, canal, forest clearing, war và urbanization như thế nào?**
+Câu hỏi trung tâm của chương là: **khí hậu, sông ngòi, dịch bệnh, đất và thiên tai giới hạn lựa chọn của xã hội ra sao, và con người làm thay đổi chính môi trường bằng đê, kênh, phá rừng, chiến tranh và đô thị hóa như thế nào?** Hãy đặt các vòng phản hồi này cạnh lịch sử kinh tế, công nghệ và Đổi Mới; phần tiếp theo về ký ức sẽ cho thấy cộng đồng ghi nhớ thiên tai và di sản ấy ra sao.
 
 Mô hình tư duy (mental model / 사고 모델):
 

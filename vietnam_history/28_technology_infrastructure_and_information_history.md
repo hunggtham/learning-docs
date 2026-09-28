@@ -1,8 +1,8 @@
-# Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)
+# Lịch sử công nghệ và hạ tầng: từ đồng, đê điều tới điện, container và mạng số
 
-## Technology is năng lực (capability / 역량), not gadget danh sách (list / 목록)
+## Công nghệ là năng lực, không phải danh sách thiết bị
 
-A technology matters historically when it changes **chi phí (cost / 비용), speed, quy mô (scale / 규모) or độ tin cậy (reliability / 신뢰성)** of môi trường vận hành (production / 운영 환경)/coordination.
+A technology có ý nghĩa lịch sử khi nó thay đổi **chi phí, tốc độ, quy mô hoặc độ tin cậy** của sản xuất và phối hợp. Chương này nối Cổ Loa, đê điều, đường sắt, điện khí hóa và hạ tầng số với các chuyển biến kinh tế–quân sự–xã hội đã trình bày ở 03–23.
 
 This chapter therefore asks not “what invention existed?” but **what new hành động (action / 동작) became possible or cheaper?**
 

@@ -1,8 +1,8 @@
-# Historiography, Collective Bộ nhớ (memory / 메모리) & Heritage: lịch sử được tạo thành kiến thức (knowledge / 지식) như thế nào?
+# Sử học, ký ức tập thể và di sản: lịch sử được tạo thành tri thức như thế nào?
 
 ## “Quá khứ” và “lịch sử” không hoàn toàn giống nhau
 
-The past is everything that happened. Lịch sử (history / 이력) is a reconstruction built from surviving bằng chứng (evidence / 증거), questions and interpretation.
+Quá khứ là tất cả những gì đã xảy ra. Lịch sử là sự dựng lại dựa trên chứng cứ còn sót, câu hỏi và diễn giải. Chương này là điểm nối phương pháp cho toàn bộ tuyến 03–29: nó giải thích vì sao cùng một địa điểm như Cổ Loa, Huế hay Điện Biên Phủ có thể mang nhiều lớp ký ức và tranh luận khác nhau.
 
 This distinction matters because bằng chứng (evidence / 증거) is incomplete and uneven. Court leaves văn bản (text / 텍스트); poor household may leave few documents. War destroys archives. Later regime selects what to preserve.
 

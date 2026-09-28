@@ -1,12 +1,12 @@
-# Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion
+# Lịch sử tôn giáo, niềm tin và nghi lễ: tính chính danh, cộng đồng và đời sống thực
 
-## Không nên hỏi “Việt Nam theo tôn giáo nào?” như một single-choice trường dữ liệu (field / 필드)
+## Không nên hỏi “Việt Nam theo tôn giáo nào?” như một ô chọn duy nhất
 
 Vietnamese religious life historically combines ancestor ritual, cục bộ (local / 로컬) deity cult, Buddhism, Confucian ethics, Daoist practice, Christianity, Islam among some communities, Cao Đài, Hòa Hảo and many cục bộ (local / 로컬) traditions.
 
 People can participate in multiple ritual các hệ thống (systems / 시스템들) without seeing them as mutually exclusive định danh (identity / 식별자) boxes.
 
-Thus better concept is **lived religion (tôn giáo trong đời sống thực)**: what people actually do, where, for what bài toán (problem / 문제) and with whom.
+Vì vậy khái niệm hữu ích hơn là **tôn giáo trong đời sống thực**: người ta thực sự làm gì, ở đâu, vì nhu cầu nào và cùng với ai. Đọc chương này sau các chương về làng, nhà nước và ký ức sẽ giúp nối nghi lễ với đất đai, quyền lực và căn tính địa phương.
 
 ## Ancestor ritual as intergenerational institution
 

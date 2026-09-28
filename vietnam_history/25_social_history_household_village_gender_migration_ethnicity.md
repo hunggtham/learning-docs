@@ -1,10 +1,10 @@
-# Xã hội (social / 사회적) Lịch sử (history / 이력) Việt Nam: household, làng, status, gender, di chuyển (migration / 마이그레이션) và ethnicity
+# Lịch sử xã hội Việt Nam: hộ gia đình, làng, địa vị, giới, di cư và tộc người
 
 ## Vì sao political timeline không đủ?
 
 Dynasty can thay đổi (change / 변경) while household routine changes slowly; conversely a railway, school or di chuyển (migration / 마이그레이션) wave may transform everyday life without a throne changing.
 
-Xã hội (social / 사회적) lịch sử (history / 이력) asks: **people lived in what units, inherited what status, formed family how, moved where, belonged to which community and negotiated trạng thái (state / 상태)/thị trường (market / 시장) through which intermediary?**
+Lịch sử xã hội hỏi: **con người sống trong những đơn vị nào, thừa hưởng địa vị ra sao, lập gia đình thế nào, di chuyển đến đâu, thuộc cộng đồng nào và thương lượng với nhà nước hay thị trường qua trung gian nào?** Hãy đọc chương này cạnh các mốc chiến tranh, mở đất và công nghiệp hóa ở 13–23; phần sau sẽ chỉ ra vì sao cùng một chính sách lại tạo trải nghiệm khác nhau giữa hộ, làng và vùng.
 
 The cốt lõi (core / 핵심) đơn vị (unit / 단위) is often not isolated individual but **household + kin + village + occupational/ethnic mạng (network / 네트워크)**.
 
