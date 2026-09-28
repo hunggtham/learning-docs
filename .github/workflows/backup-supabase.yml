@@ -1,0 +1,56 @@
+name: Backup Supabase data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 18 * * 0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-data-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check backup secrets
+        env:
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          SUPABASE_BACKUP_PASSPHRASE: ${{ secrets.SUPABASE_BACKUP_PASSPHRASE }}
+        run: |
+          test -n "$SUPABASE_SECRET_KEY" || { echo 'Missing SUPABASE_SECRET_KEY repository secret.'; exit 1; }
+          test -n "$SUPABASE_BACKUP_PASSPHRASE" || { echo 'Missing SUPABASE_BACKUP_PASSPHRASE repository secret.'; exit 1; }
+
+      - name: Export Supabase public data
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          BACKUP_OUTPUT: /tmp/supabase-backup.json
+        run: node scripts/backup-supabase-data.mjs
+
+      - name: Compress and encrypt backup
+        env:
+          SUPABASE_BACKUP_PASSPHRASE: ${{ secrets.SUPABASE_BACKUP_PASSPHRASE }}
+        run: |
+          gzip -9 /tmp/supabase-backup.json
+          openssl enc -aes-256-cbc -pbkdf2 -salt \
+            -in /tmp/supabase-backup.json.gz \
+            -out /tmp/supabase-backup.json.gz.enc \
+            -pass env:SUPABASE_BACKUP_PASSPHRASE
+          rm -f /tmp/supabase-backup.json.gz
+
+      - name: Upload encrypted backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: supabase-data-backup-${{ github.run_id }}
+          path: /tmp/supabase-backup.json.gz.enc
+          if-no-files-found: error
+          retention-days: 90
