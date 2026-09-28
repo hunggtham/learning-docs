@@ -27,7 +27,11 @@ flowchart TD
     Pol --> EconPol[Capitalism, labor, institutions]
     EconPol --> ML[Marx, Lenin, Marxism–Leninism]
     ML -. empirical check .-> Econ[Economics and economic history]
-    Pol --> Global[Global justice, identity, difference]
+    Pol --> Ideo[Comparative political ideologies]
+    Ideo --> EconPol
+    Ideo --> Global[Global justice, identity, difference]
+    Ideo -. empirical check .-> Soc[Sociology, history, economics]
+    Pol --> Global
     Ethics --> Tech[Technology, design, agency]
     Tech --> Info[Information, platforms, automation]
     Tech --> AI[AI alignment and moral agency]
@@ -36,6 +40,7 @@ flowchart TD
     History[History of traditions] -. context .-> R
     History -. concepts .-> Meta
     History -. intellectual context .-> ML
+    History -. political context .-> Ideo
 ```
 
 ## Các route chính
@@ -58,9 +63,15 @@ flowchart TD
 
 Route này giữ ba layer tách biệt: philosophical argument về property/power, intellectual genealogy của Marx–Lenin–Marxism–Leninism, và empirical evaluation bằng economics/history. Một layer không được dùng làm shortcut thay layer khác.
 
+### Political foundations → ideology comparison → institutions
+
+`06_social_political_philosophy/00_justice_power_and_legitimacy.md` → `06_social_political_philosophy/05_political_ideologies/README.md` → `06_social_political_philosophy/05_political_ideologies/09_comparative_synthesis.md` → `06_social_political_philosophy/02_capitalism_labor_and_institutions.md` / empirical owners.
+
+Route này không dùng ideology label như verdict. Nó phân rã mỗi tradition thành conception of freedom, authority, property, equality, community, voice/exit/contest, institutional mechanism và failure mode; claim về actual outcomes phải chuyển sang Economics, Sociology hoặc History.
+
 ### History as context
 
-`08_history_of_philosophy` không phải prerequisite tuyệt đối; đọc song song để biết mỗi concept xuất hiện nhằm xử lý problem nào và đã bị phản biện ra sao.
+`08_history_of_philosophy` không phải prerequisite tuyệt đối; đọc song song để biết mỗi concept xuất hiện nhằm xử lý problem nào và đã bị phản biện ra sao. Với political ideology, intellectual history cũng giúp tránh gán một contemporary party position ngược thành definition timeless của cả tradition.
 
 ## Quy tắc link
 
