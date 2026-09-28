@@ -1,11 +1,8 @@
-# Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin
-
-> **Mạch đọc:** Đặt **trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Exposure map** sang **2. Directional rủi ro (risk / 위험)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+# Case 02 — Korean Importer: Hedge USD Payables và Procurement Margin
 
 Một Korean importer mua nguyên liệu/máy móc bằng USD nhưng bán sản phẩm hoặc thu doanh thu chủ yếu bằng KRW. Công ty có **economic short USD / long KRW exposure** trên khoản phải trả: nếu USD/KRW tăng, cùng một invoice USD cần nhiều KRW hơn để thanh toán.
 
-Hedge mục tiêu (objective / 목표) là ổn định **KRW procurement chi phí (cost / 비용)**, không phải đánh cược rằng USD sẽ tăng hay giảm.
+Hedge objective là ổn định **KRW procurement cost**, không phải đánh cược rằng USD sẽ tăng hay giảm.
 
 ## 1. Exposure map
 
@@ -18,20 +15,20 @@ Functional currency = KRW
 Current USD/KRW spot = 1,360
 ```
 
-Unhedged KRW chi phí (cost / 비용):
+Unhedged KRW cost:
 
 ```text
 KRW cost = USD 8m × future USD/KRW
 ```
 
-Tham chiếu (reference / 참조) at hiện tại (current / 현재) spot:
+Reference at current spot:
 
 ```text
 8,000,000 × 1,360
 = 10.88bn KRW
 ```
 
-## 2. Directional rủi ro (risk / 위험)
+## 2. Directional risk
 
 Importer bất lợi khi:
 
@@ -58,7 +55,7 @@ USD/KRW 1,500 → 12.0bn KRW
 
 Difference giữa 1,250 và 1,500 là 2.0bn KRW.
 
-Nếu gross margin dự kiến chỉ vài tỷ KRW, currency move có thể thay đổi profitability của entire đặc tả hợp đồng (contract / 계약).
+Nếu gross margin dự kiến chỉ vài tỷ KRW, currency move có thể thay đổi profitability của entire contract.
 
 ## 4. Forward hedge
 
@@ -69,20 +66,20 @@ Buy USD forward
 Sell KRW forward
 ```
 
-Giả sử 4-month forward tỷ lệ (rate / 비율):
+Giả sử 4-month forward rate:
 
 ```text
 USD/KRW forward = 1,370
 ```
 
-Approximate locked KRW chi phí (cost / 비용):
+Approximate locked KRW cost:
 
 ```text
 8,000,000 × 1,370
 = 10.96bn KRW
 ```
 
-Ignoring giao dịch (transaction / 트랜잭션)/credit details.
+Ignoring transaction/credit details.
 
 ## 5. USD strengthens to 1,500
 
@@ -99,7 +96,7 @@ Forward approximate gain:
 = +1.04bn KRW
 ```
 
-Combined chi phí (cost / 비용):
+Combined cost:
 
 ```text
 12.0bn - 1.04bn
@@ -114,7 +111,7 @@ Underlying payable costs:
 10.0bn KRW
 ```
 
-Forward approximate mất mát (loss / 손실):
+Forward approximate loss:
 
 ```text
 (1,370 - 1,250) × 8m
@@ -128,11 +125,11 @@ Combined:
 ≈ 10.96bn KRW
 ```
 
-Again, derivative mất mát (loss / 손실) can indicate hedge is working.
+Again, derivative loss can indicate hedge is working.
 
-## 7. Procurement pricing liên kết (connection / 연결)
+## 7. Procurement pricing connection
 
-Suppose importer signs KRW sales đặc tả hợp đồng (contract / 계약) today but USD supplier invoice is due in four months.
+Suppose importer signs KRW sales contract today but USD supplier invoice is due in four months.
 
 Without hedge:
 
@@ -142,7 +139,7 @@ Input cost floating in USD/KRW
 → gross margin floats with FX
 ```
 
-A forward can convert uncertain FX chi phí (cost / 비용) into known procurement chi phí (cost / 비용), helping price the final sản phẩm (product / 제품).
+A forward can convert uncertain FX cost into known procurement cost, helping price the final product.
 
 ## 8. Natural hedge before derivatives
 
@@ -163,7 +160,7 @@ Buying 8m forward ignores natural offset.
 
 ## 9. Payment certainty
 
-Purchase thứ tự (order / 순서) may be:
+Purchase order may be:
 
 ```text
 firm and non-cancelable
@@ -174,9 +171,9 @@ subject to shipping delay
 
 Hedge ratio should reflect certainty.
 
-A 100% forward against uncertain purchase can create long USD speculation if thứ tự (order / 순서) is canceled.
+A 100% forward against uncertain purchase can create long USD speculation if order is canceled.
 
-## 10. Timing rủi ro (risk / 위험) from shipment delay
+## 10. Timing risk from shipment delay
 
 Expected payment day 120 may move to day 150 because shipment/customs delay.
 
@@ -188,15 +185,15 @@ Treasury may need:
 FX swap / forward roll
 ```
 
-The hedge direction was right, but tenor mismatched actual cash luồng (flow / 흐름).
+The hedge direction was right, but tenor mismatched actual cash flow.
 
-## 11. Early payment rủi ro (risk / 위험)
+## 11. Early payment risk
 
 Supplier may offer discount for payment day 90 instead of 120.
 
 Hedge maturity no longer aligns.
 
-Closing/rolling can create mark-to-market cash flows before operating giao dịch (transaction / 트랜잭션) settles.
+Closing/rolling can create mark-to-market cash flows before operating transaction settles.
 
 ## 12. Layered purchase hedge
 
@@ -212,7 +209,7 @@ A layered hedge can reflect confidence by horizon.
 
 ## 13. Rolling hedge program
 
-For continuous imports, treasury may maintain chính sách (policy / 정책) such as:
+For continuous imports, treasury may maintain policy such as:
 
 ```text
 Month 1–3: 80% hedged
@@ -229,17 +226,17 @@ forecast updates
 hedge book is rebalanced
 ```
 
-This is a tiến trình (process / 프로세스), not one trade.
+This is a process, not one trade.
 
-## 14. Rolling creates đường dẫn (path / 경로) dependence
+## 14. Rolling creates path dependence
 
-Weighted-average hedge tỷ lệ (rate / 비율) depends on when layers were added.
+Weighted-average hedge rate depends on when layers were added.
 
-Two companies with same final exposure can have different hedge portfolio rates because thực thi (execution / 실행) dates differ.
+Two companies with same final exposure can have different hedge portfolio rates because execution dates differ.
 
-Do not judge kết quả (result / 결과) from one maturity snapshot only.
+Do not judge result from one maturity snapshot only.
 
-## 15. Forward points affect locked chi phí (cost / 비용)
+## 15. Forward points affect locked cost
 
 Importer comparing spot 1,360 with forward 1,370 may say forward is “10 KRW more expensive”.
 
@@ -265,9 +262,9 @@ buy/invest USD today
 use matured USD to pay supplier
 ```
 
-Forward pricing should relate to this synthetic funding đường dẫn (path / 경로).
+Forward pricing should relate to this synthetic funding path.
 
-This explains why rates enter forward tỷ lệ (rate / 비율).
+This explains why rates enter forward rate.
 
 ## 17. Option hedge
 
@@ -287,11 +284,11 @@ Useful when amount/timing is uncertain or company values favorable FX participat
 
 If purchase is canceled, a forward creates offsetting exposure that must be closed.
 
-An option can simply expire unused, limiting downside to premium, depending on cấu trúc (structure / 구조).
+An option can simply expire unused, limiting downside to premium, depending on structure.
 
-Therefore optionality can have giá trị (value / 값) when underlying giao dịch (transaction / 트랜잭션) itself is uncertain.
+Therefore optionality can have value when underlying transaction itself is uncertain.
 
-## 19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)
+## 19. Premium is real budget cost
 
 Option premium should be allocated into procurement economics.
 
@@ -302,21 +299,21 @@ Forward = free
 Option = expensive
 ```
 
-Forward has opportunity chi phí (cost / 비용)/locked payoff; option pays for asymmetry.
+Forward has opportunity cost/locked payoff; option pays for asymmetry.
 
 ## 20. Collars and structured hedges
 
-A collar can finance protection by giving up benefit beyond another tỷ lệ (rate / 비율).
+A collar can finance protection by giving up benefit beyond another rate.
 
 But structured products may add barriers/leverage/conditional notional.
 
-Treasury must mô hình (model / 모델) full payoff, especially under large USD move.
+Treasury must model full payoff, especially under large USD move.
 
 ## 21. Supplier currency negotiation
 
-Rủi ro (risk / 위험) can be changed commercially before derivatives.
+Risk can be changed commercially before derivatives.
 
-Possible đặc tả hợp đồng (contract / 계약) choices:
+Possible contract choices:
 
 ```text
 Pay supplier in KRW
@@ -325,15 +322,15 @@ Split currency invoice
 Shorter price validity
 ```
 
-Supplier will price its own FX rủi ro (risk / 위험) into terms, so rủi ro (risk / 위험) does not disappear—it is redistributed.
+Supplier will price its own FX risk into terms, so risk does not disappear—it is redistributed.
 
 ## 22. Inventory holding period
 
 Even after supplier is paid, imported inventory may be sold months later.
 
-If final selling price can adjust with FX, economic exposure differs from a fully fixed KRW sales đặc tả hợp đồng (contract / 계약).
+If final selling price can adjust with FX, economic exposure differs from a fully fixed KRW sales contract.
 
-Treasury needs nghiệp vụ (business / 비즈니스) tiến trình (process / 프로세스) map, not invoice danh sách (list / 목록) only.
+Treasury needs business process map, not invoice list only.
 
 ## 23. Pass-through
 
@@ -344,21 +341,21 @@ FX cost shock
 → partially passed to customers
 ```
 
-Then long-run economic exposure may be smaller than giao dịch (transaction / 트랜잭션) exposure suggests.
+Then long-run economic exposure may be smaller than transaction exposure suggests.
 
-But pass-through timing and competitive các ràng buộc (constraints / 제약조건들) matter.
+But pass-through timing and competitive constraints matter.
 
 ## 24. Working-capital impact
 
-USD appreciation can increase KRW working-capital yêu cầu (requirement / 요구사항) before customer pricing adjusts.
+USD appreciation can increase KRW working-capital requirement before customer pricing adjusts.
 
 Even if long-run margins recover, short-term liquidity can tighten.
 
 Hedge can protect liquidity timing as well as accounting margin.
 
-## 25. Credit and FX tương tác (interaction / 상호작용)
+## 25. Credit and FX interaction
 
-If supplier requires margin/prepayment when thị trường (market / 시장) stress rises:
+If supplier requires margin/prepayment when market stress rises:
 
 ```text
 USD strengthens
@@ -380,7 +377,7 @@ can impair hedge program.
 
 Large corporate treasury often tracks counterparty limits.
 
-## 27. Settlement rủi ro (risk / 위험)
+## 27. Settlement risk
 
 Deliverable forward requires actual currency settlement.
 
@@ -394,7 +391,7 @@ payment instruction
 supplier settlement
 ```
 
-A correctly priced hedge can thất bại (fail / 실패) operationally if payment tiến trình (process / 프로세스) fails.
+A correctly priced hedge can fail operationally if payment process fails.
 
 ## 28. Cash-flow-at-risk view
 
@@ -406,11 +403,11 @@ KRW cash needed at payment date
 
 under scenarios.
 
-Hedge chính sách (policy / 정책) can mục tiêu (target / 대상) maximum acceptable cash-flow-at-risk.
+Hedge policy can target maximum acceptable cash-flow-at-risk.
 
-## 29. ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)
+## 29. Budget rate vs market rate
 
-Nghiệp vụ (business / 비즈니스) plan may assume:
+Business plan may assume:
 
 ```text
 USD/KRW budget = 1,400
@@ -418,9 +415,9 @@ USD/KRW budget = 1,400
 
 Treasury hedges at weighted 1,370.
 
-This may create procurement margin buffer relative to ngân sách (budget / 예산), but it is not trading alpha.
+This may create procurement margin buffer relative to budget, but it is not trading alpha.
 
-Ngân sách (budget / 예산) tỷ lệ (rate / 비율) is nội bộ (internal / 내부) quyết định (decision / 결정) benchmark.
+Budget rate is internal decision benchmark.
 
 ## 30. Over-hedge example
 
@@ -448,24 +445,24 @@ Remaining:
 2m USD unhedged
 ```
 
-If USD spikes, residual chi phí (cost / 비용) can still be material.
+If USD spikes, residual cost can still be material.
 
-## 32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)
+## 32. Forecast-quality feedback loop
 
-Hedge effectiveness depends on procurement forecast chất lượng (quality / 품질).
+Hedge effectiveness depends on procurement forecast quality.
 
-Nhánh học (track / 트랙):
+Track:
 
 ```text
 forecast vs actual amount
 forecast vs actual payment date
 ```
 
-Improving supply-chain forecast can reduce FX rủi ro (risk / 위험) as much as changing derivative instrument.
+Improving supply-chain forecast can reduce FX risk as much as changing derivative instrument.
 
-## 33. Scenario ma trận (matrix / 행렬)
+## 33. Scenario matrix
 
-Kiểm thử (test / 테스트):
+Test:
 
 ```text
 USD/KRW = 1,200 / 1,350 / 1,500 / 1,650
@@ -494,21 +491,21 @@ and
 actual import amount exceeds forecast
 ```
 
-Residual unhedged amount faces high spot tỷ lệ (rate / 비율).
+Residual unhedged amount faces high spot rate.
 
-Rủi ro (risk / 위험) management must stress volume and tỷ lệ (rate / 비율) jointly.
+Risk management must stress volume and rate jointly.
 
-## 35. Stress — thứ tự (order / 순서) cancellation + USD spike
+## 35. Stress — order cancellation + USD spike
 
 If purchase canceled but forward remains, company long USD via hedge.
 
-USD spike may create gain, but that is accidental speculation after nghiệp vụ (business / 비즈니스) exposure disappeared.
+USD spike may create gain, but that is accidental speculation after business exposure disappeared.
 
-Chính sách (policy / 정책) should require prompt exposure/hedge reconciliation.
+Policy should require prompt exposure/hedge reconciliation.
 
 ## 36. Hedge attribution
 
-Rà soát (review / 검토):
+Review:
 
 ```text
 Unhedged procurement FX effect
@@ -545,7 +542,7 @@ Wrong:
 Importer should always buy USD early when USD looks cheap.
 ```
 
-That is a thị trường (market / 시장) view, not hedge chính sách (policy / 정책).
+That is a market view, not hedge policy.
 
 Wrong:
 
@@ -553,7 +550,7 @@ Wrong:
 Option is always safer than forward.
 ```
 
-Options have premium, liquidity, valuation and cấu trúc (structure / 구조) rủi ro (risk / 위험).
+Options have premium, liquidity, valuation and structure risk.
 
 Better:
 
@@ -562,7 +559,7 @@ Instrument and hedge ratio must fit certainty, horizon,
 cash-flow objective and residual-risk tolerance.
 ```
 
-## 39. trường hợp (case / 사례) outputs
+## 39. Case outputs
 
 Create:
 
@@ -575,22 +572,20 @@ cash_flow_at_risk_report.md
 hedge_effectiveness_report.md
 ```
 
-## 40. rà soát (review / 검토) questions
+## 40. Review questions
 
 You should explain:
 
 1. Why importer is short USD economically.
 2. Why natural USD revenue reduces derivative need.
-3. Why delayed shipment creates roll rủi ro (risk / 위험).
+3. Why delayed shipment creates roll risk.
 4. Why option can be useful when purchase amount is uncertain.
 5. Why forward points belong to funding economics.
-6. Why procurement forecast accuracy is part of FX rủi ro (risk / 위험) management.
-7. Why combined underlying + hedge kết quả (result / 결과) matters more than derivative P/L.
+6. Why procurement forecast accuracy is part of FX risk management.
+7. Why combined underlying + hedge result matters more than derivative P/L.
 
-## Nội bộ (internal / 내부) links
+## Internal links
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [FX options and hedging](../14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
-
-> **Bàn giao:** Sau **nội bộ (internal / 내부) links**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 KOREAN EXPORTER USD RECEIVABLE HEDGE](./01_KOREAN_EXPORTER_USD_RECEIVABLE_HEDGE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
