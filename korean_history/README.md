@@ -18,14 +18,15 @@ Quy tắc chi tiết nằm tại [`32_naming_translation_conventions.md`](32_nam
 
 Bắt đầu từ [`00_index_and_dependency.md`](00_index_and_dependency.md). Nếu cần một đường đọc tuyến tính, hãy đi từ 01 đến 25. Nếu đã có kiến thức lịch sử cơ bản, các file 26–29 cho phép đọc theo các trục xuyên thời gian như social history, economic history, history of knowledge và public memory. File 30 là chronology để tra nhanh; file 31 là glossary Việt–Hàn–Anh và bản đồ nguồn; file 32 quy định cách ghi tên riêng Việt–Hàn–Anh.
 
-Để tránh đọc lịch sử như danh sách sự kiện, dùng thêm bốn contextual companion:
+Để tránh đọc lịch sử như danh sách sự kiện, dùng thêm các contextual companion và một lớp thực hành:
 
 - [`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md): đặt Korea và Việt Nam trên cùng trục thời gian, đồng thời giải thích economy, regional context và transition mà không đánh đồng hai lịch sử.
 - [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md): biến dolmen, Gyeongju, Ganghwa, palace, fortress, prison, DMZ, industrial city và memorial site thành evidence để đọc lịch sử ngoài đời.
 - [`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md): theo dõi production, land, tax, trade, labor, household và đời sống thường ngày từ tiền sử đến hiện đại.
 - [`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md): giải thích vì sao river basin, mountain pass, capital, port, railway và logistics làm một số địa điểm trở thành trung tâm quyền lực hoặc chiến trường qua nhiều thời kỳ.
+- [`37_historical_case_labs.md`](37_historical_case_labs.md): sáu tình huống thực hành từ Gyeongju, Ganghwa, Hanseong, Seodaemun, Busan, Ulsan và Gwangju; mỗi tình huống nối mốc thời gian, kinh tế, đời sống, Việt Nam và địa điểm thành một câu hỏi nhân quả.
 
-Các companion không thay thế chapter chronology. Chúng là layer để quay sang khi một sự kiện vẫn còn cảm giác trừu tượng: `33` giúp đặt đúng thời gian, `35` trả lời xã hội vận hành bằng gì, `34` cho biết hôm nay nhìn thấy dấu vết ở đâu, còn `36` giải thích vì sao sự kiện lại xảy ra ở chính không gian đó.
+Các companion không thay thế chapter chronology. Chúng là layer để quay sang khi một sự kiện vẫn còn cảm giác trừu tượng: `33` giúp đặt đúng thời gian, `35` trả lời xã hội vận hành bằng gì, `34` cho biết hôm nay nhìn thấy dấu vết ở đâu, `36` giải thích vì sao sự kiện lại xảy ra ở chính không gian đó, còn `37` cho phép luyện cách nối cả bốn lớp vào một tình huống cụ thể.
 
 Các chapter cố ý phân biệt giữa **fact tương đối chắc**, **cách diễn giải của sử học**, **ký ức tập thể** và **narrative quốc gia**. Với các vấn đề còn tranh luận, tài liệu tránh biến một cách kể duy nhất thành chân lý tuyệt đối. Comparison với Việt Nam cũng tuân theo nguyên tắc này: dùng để tạo temporal/geographic context, không để xếp hạng hay kết luận hai xã hội “giống nhau”.
 

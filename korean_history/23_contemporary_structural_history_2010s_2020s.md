@@ -48,3 +48,18 @@ Low fertility debate is inseparable from who performs childcare/eldercare and ho
 
 Recent history has unresolved archives and living political stakes. A document created today may later alter interpretation. Good practice is timestamp claims and avoid writing current trend as permanent destination. “Korea has become X” is usually weaker than “by the mid-2020s indicators show trend X under conditions Y”.
 
+## Một ngày đương đại vẫn có lịch sử ở phía sau
+
+Một người trẻ trả tiền thuê `wolse` hoặc đặt đồ ăn qua ứng dụng đang sống trong kết quả của nhiều lớp trước đó: tập trung việc làm quanh Seoul, đô thị hóa công nghiệp, khủng hoảng IMF, phổ cập băng rộng và tài chính hóa nhà ở. Nhìn chuỗi này giúp tránh hai cực đoan: coi vấn đề hiện tại là “tâm lý thế hệ” thuần túy hoặc quy mọi thứ về một chính sách duy nhất.
+
+## Việt Nam cùng thời: hội nhập số và bài toán dân số
+
+Việt Nam từ thập niên 2010 cũng mở rộng thương mại điện tử, sản xuất điện tử, nền tảng giao hàng và đô thị hóa; đồng thời đối diện khác biệt vùng miền, chi phí nhà ở và thay đổi tỷ lệ sinh. Hai xã hội có thể gặp cùng một công nghệ nhưng chịu ràng buộc khác nhau về doanh nghiệp, phúc lợi, dân số và quản trị dữ liệu. So sánh nên ghi rõ mốc và chỉ báo, thay vì nói “Hàn Quốc đi trước Việt Nam” như một định mệnh tuyến tính.
+
+## Địa điểm để nhìn cấu trúc hiện tại
+
+Các khu căn hộ và tuyến tàu điện vùng thủ đô cho thấy mật độ, giá đất và thời gian đi làm; **Songdo** cho thấy thử nghiệm thành phố thông minh; **Gwanghwamun** và **Quảng trường Seoul** cho thấy không gian công cộng vẫn là nơi công dân thương lượng ý nghĩa của khủng hoảng và trách nhiệm. Những nơi này không tự giải thích nguyên nhân, nhưng giúp kiểm tra xem một khái niệm như “tập trung vùng thủ đô” đã biến thành hạ tầng và lịch trình sống ra sao.
+
+## Bàn giao cho người học
+
+Với lịch sử rất gần, mục tiêu không phải tiên đoán kết cục cuối cùng mà là giữ **sổ theo dõi biến số (variable ledger / 변수 기록)**: dân số, nhà ở, việc làm, nền tảng, giới, quan hệ liên Triều và khí hậu. Khi có dữ liệu mới, ta cập nhật mô hình thay vì sửa quá khứ để khớp một khẩu hiệu. Từ đây có thể quay lại [`29_collective_memory_historiography_public_history.md`](29_collective_memory_historiography_public_history.md) để hỏi ai được quyền đặt tên cho “hiện tại” và bằng chứng nào sẽ còn lại.

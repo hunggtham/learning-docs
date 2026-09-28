@@ -32,3 +32,20 @@ Even under poverty, schooling expanded rapidly. Household willingness to invest 
 
 Seoul and other cities absorbed war-displaced populations. Housing shortage produced informal settlements, street commerce and precarious work. “Miracle on the Han River” imagery can obscure this low-income urban foundation.
 
+## Viện trợ, trường học và nền móng xã hội của tăng trưởng
+
+Viện trợ Hoa Kỳ giúp nhập lương thực, phân bón, nhiên liệu và máy móc, nhưng viện trợ không tự biến thành năng suất. Nhà nước phải quyết định ưu tiên ngoại tệ, kiểm soát lạm phát và phân phối hàng khan hiếm; doanh nghiệp và hộ gia đình phải học cách hoạt động trong một nền kinh tế mà giá cả, giấy phép và thị trường chợ đen cùng tồn tại.
+
+Trong lúc đó, tỷ lệ đi học tăng nhanh dù thu nhập thấp. Một gia đình có thể coi học phí, sách vở và thời gian học của trẻ là khoản đầu tư dài hạn trong khi trước mắt vẫn thiếu nhà ở và việc làm. Nguồn nhân lực có học vấn này trở thành đầu vào cho công nghiệp hóa sau **1961**, nhưng không nên kể ngược rằng mọi thành quả giáo dục đã được thiết kế sẵn cho “kỳ tích”.
+
+## Việt Nam cùng thời: tái thiết trong hai chiến tranh khác nhau
+
+Từ **1954**, miền Bắc Việt Nam xây dựng kinh tế kế hoạch hóa trong khi miền Nam tiếp tục chiến tranh và nhận hỗ trợ lớn từ Hoa Kỳ; đến **1975**, cả nước mới bước vào một chu kỳ tái thiết khác. South Korea nhận viện trợ và bảo trợ an ninh trong một nhà nước chống cộng thống nhất ở miền Nam. So sánh này hữu ích khi hỏi viện trợ đi vào lương thực, giáo dục, quân sự hay công nghiệp bằng cơ chế nào; nó không chứng minh một mô hình có thể sao chép nguyên trạng.
+
+## Địa điểm của đời sống tái thiết
+
+**Cheonggyecheon và các khu dân cư cũ ở Seoul** cho thấy quá trình dọn dẹp, di dời và chính thức hóa một đô thị từng đầy nhà tạm; **War Memorial of Korea** cho thấy câu chuyện lịch sử của nhà nước (narrative / 역사 서사) về chiến tranh, còn chợ truyền thống và khu nhà tạm được bảo tồn cho thấy người dân kiếm sống thế nào. Nên xem các địa điểm chính thức cùng với ký ức của người di cư để tránh đồng nhất tái thiết với phá bỏ.
+
+## Cầu nối sang nhà nước phát triển
+
+Đảo chính năm 1961 không tạo ra từ khoảng không. Nó xuất hiện trong bối cảnh dân chủ nghị viện ngắn ngủi, bất ổn kinh tế và chiến tranh lạnh; đồng thời thừa hưởng một xã hội đã có cải cách đất, giáo dục đại chúng và bộ máy hành chính. Chapter [`19_developmental_state_industrialization_1961_1979.md`](19_developmental_state_industrialization_1961_1979.md) vì vậy cần đọc cả những năng lực được tích lũy trước đảo chính lẫn cái giá chính trị của mô hình mới.

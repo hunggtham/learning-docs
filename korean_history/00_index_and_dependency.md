@@ -77,6 +77,7 @@ Các trục xuyên thời gian:
 34 → Historical places / field guide
 35 → Economy / society / everyday life
 36 → Geography / routes / historical space
+37 → Historical case labs: sáu tình huống nối chronology, economy, Việt Nam và địa điểm
 ```
 
 ## Lớp đọc mới: timeline + kinh tế + Việt Nam + địa điểm + geography
@@ -103,6 +104,8 @@ chapter chronology 02–23
 36: geography/logistics khiến system vận hành ở đâu và vì sao
         ↓
 34: dấu vết vật chất hôm nay nằm ở đâu
+        ↓
+37: luyện đọc bằng tình huống và câu hỏi nhân quả
         ↓
 26–29: thematic deep dive khi cần
 ```
