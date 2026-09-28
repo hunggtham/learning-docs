@@ -1,4 +1,4 @@
-# Lab 03 — Portfolio FX Risk
+# Lab 03 — Portfolio FX Rủi ro (risk / 위험)
 
 Lab này chuyển tư duy từ từng ticket sang **currency-factor exposure**. Nhiều pair khác nhau có thể thực chất là cùng một directional bet được lặp lại.
 
@@ -43,11 +43,11 @@ Other currency exposures
 Gross leverage
 ```
 
-Giải thích tại sao net exposure nhỏ không có nghĩa gross liquidity/margin risk nhỏ.
+Giải thích tại sao net exposure nhỏ không có nghĩa gross liquidity/margin rủi ro (risk / 위험) nhỏ.
 
 ## Bước 3 — Correlation is conditional
 
-Lấy một correlation window bình thường và một stress window nếu có dữ liệu. So sánh:
+Lấy một correlation cửa sổ (window / 윈도우) bình thường và một stress cửa sổ (window / 윈도우) nếu có dữ liệu. So sánh:
 
 ```text
 EUR/USD vs GBP/USD
@@ -80,7 +80,7 @@ Expected spread/slippage deterioration
 
 ## Bước 5 — Portfolio heat
 
-Giả sử mỗi trade riêng lẻ có planned stop loss bằng `0.5%` equity. Tính nominal sum của planned risks, sau đó tạo common-shock scenario làm nhiều stops bị hit cùng lúc với slippage gấp đôi bình thường.
+Giả sử mỗi trade riêng lẻ có planned stop mất mát (loss / 손실) bằng `0.5%` equity. Tính nominal sum của planned risks, sau đó tạo common-shock scenario làm nhiều stops bị hit cùng lúc với slippage gấp đôi bình thường.
 
 So sánh:
 
@@ -90,7 +90,7 @@ vs
 Correlated stressed loss
 ```
 
-## Bước 6 — Hedge quality
+## Bước 6 — Hedge chất lượng (quality / 품질)
 
 Thử hedge một phần USD exposure bằng một instrument khác. Không chỉ hỏi hedge ratio theo notional. Hãy ghi:
 
@@ -104,9 +104,9 @@ Maturity mismatch if any
 Residual exposure
 ```
 
-Một hedge làm giảm beta nhưng tạo carry hoặc basis risk vẫn cần được attribution riêng.
+Một hedge làm giảm beta nhưng tạo carry hoặc basis rủi ro (risk / 위험) vẫn cần được attribution riêng.
 
-## Bước 7 — Risk limits
+## Bước 7 — Rủi ro (risk / 위험) limits
 
 Thiết kế limits theo nhiều lớp:
 

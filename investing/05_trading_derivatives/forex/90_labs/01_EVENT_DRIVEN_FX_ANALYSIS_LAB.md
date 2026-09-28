@@ -1,4 +1,4 @@
-# Lab 01 — Event-Driven FX Analysis
+# Lab 01 — Event-Driven FX Phân tích (analysis / 분석)
 
 Mục tiêu của lab là luyện cách phân tích sự kiện vĩ mô mà không kể chuyện ngược từ chart. Bạn phải ghi **kỳ vọng trước sự kiện** trước khi nhìn kết quả.
 
@@ -16,11 +16,11 @@ Korea CPI / exports
 Vietnam monetary-policy or FX-management announcement
 ```
 
-Nếu dùng dữ liệu lịch sử thật, phải lưu source và timestamp. Nếu dùng case giả định, ghi rõ là simulation.
+Nếu dùng dữ liệu lịch sử thật, phải lưu nguồn (source / 소스) và timestamp. Nếu dùng trường hợp (case / 사례) giả định, ghi rõ là simulation.
 
-## Bước 1 — Pre-event state
+## Bước 1 — Pre-event trạng thái (state / 상태)
 
-Trước release, ghi:
+Trước bản phát hành (release / 릴리스), ghi:
 
 ```text
 Event timestamp and timezone
@@ -37,7 +37,7 @@ Positioning proxy if available
 Major correlated markets
 ```
 
-Sau đó viết market narrative bằng một causal chain, không quá ba giả thuyết cạnh tranh.
+Sau đó viết thị trường (market / 시장) narrative bằng một chuỗi nhân quả (causal chain / 인과 사슬), không quá ba giả thuyết cạnh tranh.
 
 Ví dụ:
 
@@ -49,7 +49,7 @@ If CPI materially > consensus
 → USD may strengthen
 ```
 
-Đây chỉ là hypothesis, không phải rule.
+Đây chỉ là hypothesis, không phải quy tắc (rule / 규칙).
 
 ## Bước 2 — Define surprise before seeing reaction
 
@@ -61,13 +61,13 @@ Moderate surprise
 Large surprise
 ```
 
-Nếu có nhiều components, ghi importance hierarchy. Với CPI có thể gồm headline/core/monthly; với payrolls có thể gồm payroll, unemployment, wages và revisions.
+Nếu có nhiều components, ghi importance hierarchy. Với CPI có thể gồm headline/cốt lõi (core / 핵심)/monthly; với payrolls có thể gồm payroll, unemployment, wages và revisions.
 
-Không được sau sự kiện mới chọn component nào “quan trọng nhất” chỉ vì nó khớp với price move.
+Không được sau sự kiện mới chọn thành phần (component / 컴포넌트) nào “quan trọng nhất” chỉ vì nó khớp với price move.
 
 ## Bước 3 — Observe transmission
 
-Sau release ghi theo nhiều horizon:
+Sau bản phát hành (release / 릴리스) ghi theo nhiều horizon:
 
 ```text
 T+1 minute
@@ -101,7 +101,7 @@ Data surprise
 
 ## Bước 4 — Competing explanations
 
-Nếu FX reaction không theo hypothesis ban đầu, không được kết luận ngay “market irrational”. Hãy kiểm tra:
+Nếu FX reaction không theo hypothesis ban đầu, không được kết luận ngay “thị trường (market / 시장) irrational”. Hãy kiểm tra:
 
 ```text
 Was the surprise already priced?
@@ -113,9 +113,9 @@ Was the move mostly mechanical flow / fixing / liquidity?
 Did guidance dominate the headline decision?
 ```
 
-## Bước 5 — Execution reality
+## Bước 5 — Thực thi (execution / 실행) reality
 
-Giả sử strategy muốn trade ngay sau release. So sánh:
+Giả sử chiến lược (strategy / 전략) muốn trade ngay sau bản phát hành (release / 릴리스). So sánh:
 
 ```text
 Signal price
@@ -127,11 +127,11 @@ Stop distance
 Position size if volatility doubles
 ```
 
-Sau đó trả lời liệu edge gross có đủ lớn để tồn tại sau event execution cost hay không.
+Sau đó trả lời liệu edge gross có đủ lớn để tồn tại sau sự kiện (event / 이벤트) thực thi (execution / 실행) chi phí (cost / 비용) hay không.
 
-## Case extension — BOK và USD/KRW
+## Trường hợp (case / 사례) extension — BOK và USD/KRW
 
-Với BOK decision, thêm:
+Với BOK quyết định (decision / 결정), thêm:
 
 ```text
 Fed path
@@ -142,7 +142,7 @@ Oil/import cost
 FX-policy communication
 ```
 
-Không được dùng một rule kiểu `BOK hike → KRW strong` nếu không phân tích expectation và Fed side.
+Không được dùng một quy tắc (rule / 규칙) kiểu `BOK hike → KRW strong` nếu không phân tích expectation và Fed side.
 
 ## Đầu ra bắt buộc
 

@@ -1,8 +1,8 @@
-# 04 — Forward Test, Monitoring và Kill Switch cho Systematic FX
+# 04 — Forward Kiểm thử (test / 테스트), Monitoring và Kill Switch cho Systematic FX
 
-Một backtest tốt chỉ chứng minh strategy **đáng được kiểm tra tiếp**, không chứng minh system đã sẵn sàng nhận capital. Giữa research và live trading còn một lớp lớn gồm market-data reliability, order reconciliation, implementation shortfall, margin, operational failure và model drift.
+Một backtest tốt chỉ chứng minh chiến lược (strategy / 전략) **đáng được kiểm tra tiếp**, không chứng minh hệ thống (system / 시스템) đã sẵn sàng nhận capital. Giữa research và live trading còn một lớp lớn gồm market-data độ tin cậy (reliability / 신뢰성), thứ tự (order / 순서) reconciliation, hiện thực (implementation / 구현) shortfall, margin, operational thất bại (failure / 실패) và mô hình (model / 모델) drift.
 
-Module này xây progression:
+Mô-đun (module / 모듈) này xây progression:
 
 ```text
 Backtest
@@ -13,9 +13,9 @@ Backtest
 → Pause / Kill / Retire when evidence deteriorates
 ```
 
-Mục tiêu không phải automation tối đa. Mục tiêu là **failure phải observable, bounded và recoverable**.
+Mục tiêu không phải automation tối đa. Mục tiêu là **thất bại (failure / 실패) phải observable, bounded và recoverable**.
 
-## 1. Promotion gate từ backtest sang forward test
+## 1. Promotion gate từ backtest sang forward kiểm thử (test / 테스트)
 
 Không forward-test chỉ vì Sharpe đẹp.
 
@@ -33,7 +33,7 @@ Operational controls
 Retirement criteria
 ```
 
-Nếu strategy spec vẫn thay đổi mỗi tuần theo recent P/L, forward test không còn independent validation.
+Nếu chiến lược (strategy / 전략) spec vẫn thay đổi mỗi tuần theo recent P/L, forward kiểm thử (test / 테스트) không còn independent kiểm tra hợp lệ (validation / 검증).
 
 ## 2. Paper/demo phase có mục tiêu gì?
 
@@ -52,11 +52,11 @@ Monitoring
 Reconciliation
 ```
 
-Demo execution có thể optimistic hơn live, nên không dùng demo slippage làm final cost estimate.
+Demo thực thi (execution / 실행) có thể optimistic hơn live, nên không dùng demo slippage làm final chi phí (cost / 비용) estimate.
 
 ## 3. Small-live phase
 
-Sau paper, dùng capital nhỏ đủ để observe real execution nhưng không material nếu failure xảy ra.
+Sau paper, dùng capital nhỏ đủ để observe real thực thi (execution / 실행) nhưng không material nếu thất bại (failure / 실패) xảy ra.
 
 Monitor:
 
@@ -73,9 +73,9 @@ platform incidents
 
 Mục tiêu là calibrate **backtest-to-live gap**.
 
-## 4. Scale only by evidence
+## 4. Quy mô (scale / 규모) only by bằng chứng (evidence / 증거)
 
-Scale gate có thể yêu cầu:
+Quy mô (scale / 규모) gate có thể yêu cầu:
 
 ```text
 minimum live observations
@@ -85,11 +85,11 @@ risk limits stable
 strategy behavior consistent with expected distribution
 ```
 
-Không scale chỉ vì vài trade đầu thắng.
+Không quy mô (scale / 규모) chỉ vì vài trade đầu thắng.
 
-## 5. Live state must be authoritative
+## 5. Live trạng thái (state / 상태) must be authoritative
 
-Internal system có expected position.
+Nội bộ (internal / 내부) hệ thống (system / 시스템) có expected position.
 
 Broker/dealer có actual position.
 
@@ -101,9 +101,9 @@ vs
 External Authoritative State
 ```
 
-Nếu khác, không assume internal system đúng.
+Nếu khác, không assume nội bộ (internal / 내부) hệ thống (system / 시스템) đúng.
 
-## 6. Reconciliation loop
+## 6. Reconciliation vòng lặp (loop / 루프)
 
 Regularly compare:
 
@@ -118,11 +118,11 @@ financing
 margin
 ```
 
-Mismatch becomes explicit incident.
+Mismatch becomes tường minh (explicit / 명시적) sự cố (incident / 인시던트).
 
-## 7. Unknown state is a real state
+## 7. Unknown trạng thái (state / 상태) is a real trạng thái (state / 상태)
 
-Network timeout after order submission:
+Mạng (network / 네트워크) hết thời gian chờ (timeout / 타임아웃) after thứ tự (order / 순서) submission:
 
 ```text
 Did broker receive order?
@@ -137,13 +137,13 @@ Mark:
 ORDER_STATE_UNKNOWN
 ```
 
-then query broker/order history before action.
+then truy vấn (query / 쿼리) broker/thứ tự (order / 순서) lịch sử (history / 이력) before hành động (action / 동작).
 
 ## 8. Idempotency
 
-If API supports client order ID, generate stable unique ID.
+If API supports máy khách (client / 클라이언트) thứ tự (order / 순서) ID, generate stable unique ID.
 
-Retry should not accidentally create duplicate economic order.
+Thử lại (retry / 재시도) should not accidentally create duplicate economic thứ tự (order / 순서).
 
 Concept:
 
@@ -156,7 +156,7 @@ where supported.
 
 ## 9. Duplicate-order prevention
 
-Track:
+Nhánh học (track / 트랙):
 
 ```text
 strategy_id
@@ -166,11 +166,11 @@ intended_side
 intended_quantity
 ```
 
-Before new send, check whether same intent already has active/filled order.
+Before new send, check whether same intent already has active/filled thứ tự (order / 순서).
 
 ## 10. Heartbeat
 
-System needs liveness signal for:
+Hệ thống (system / 시스템) needs liveness tín hiệu (signal / 신호) for:
 
 ```text
 market data
@@ -180,13 +180,13 @@ risk service
 clock synchronization
 ```
 
-Missing heartbeat should trigger degraded state, not silent continuation.
+Missing heartbeat should trigger degraded trạng thái (state / 상태), not silent continuation.
 
 ## 11. Stale-data detection
 
 A valid-looking price can still be stale.
 
-Define maximum acceptable age by strategy/timeframe:
+Define maximum acceptable age by chiến lược (strategy / 전략)/timeframe:
 
 ```text
 now - last_market_timestamp <= threshold
@@ -198,13 +198,13 @@ If stale:
 block new risk
 ```
 
-and decide whether existing positions require manual/automated safe action.
+and decide whether existing positions require manual/automated safe hành động (action / 동작).
 
 ## 12. Clock synchronization
 
-Event-driven systems need synchronized clocks.
+Event-driven các hệ thống (systems / 시스템들) need synchronized clocks.
 
-Monitor local clock drift.
+Monitor cục bộ (local / 로컬) clock drift.
 
 Timestamp inconsistency can break:
 
@@ -215,7 +215,7 @@ session filters
 reconciliation
 ```
 
-## 13. Data-quality kill condition
+## 13. Data-quality kill điều kiện (condition / 조건)
 
 Examples:
 
@@ -227,13 +227,13 @@ price jump inconsistent across sources
 macro event feed delayed
 ```
 
-Do not trade through unknown data state by default.
+Do not trade through unknown dữ liệu (data / 데이터) trạng thái (state / 상태) by default.
 
 ## 14. Pre-trade kill switch
 
-Kill switch can block **new orders** while leaving system able to manage existing positions.
+Kill switch can khối (block / 블록) **new orders** while leaving hệ thống (system / 시스템) able to manage existing positions.
 
-This is often safer than shutting entire process immediately.
+This is often safer than shutting entire tiến trình (process / 프로세스) immediately.
 
 States could be:
 
@@ -245,9 +245,9 @@ CLOSE_ALL
 HALTED
 ```
 
-## 15. Daily loss limit
+## 15. Daily mất mát (loss / 손실) limit
 
-A daily loss limit is operational guardrail, not proof strategy is bad.
+A daily mất mát (loss / 손실) limit is operational guardrail, not proof chiến lược (strategy / 전략) is bad.
 
 When breached:
 
@@ -256,7 +256,7 @@ stop new risk
 review state
 ```
 
-Do not automatically increase size to recover.
+Do not automatically increase kích thước (size / 크기) to recover.
 
 ## 16. Drawdown limit
 
@@ -268,7 +268,7 @@ strategy pause
 full research review
 ```
 
-Threshold should reflect expected distribution and uncertainty.
+Threshold should reflect expected phân phối (distribution / 분포) and bất định (uncertainty / 불확실성).
 
 ## 17. Gross leverage limit
 
@@ -278,7 +278,7 @@ Monitor continuously:
 Gross Leverage = Σ|notional| / equity
 ```
 
-Equity drop can cause leverage limit breach without any new order.
+Equity drop can cause leverage limit breach without any new thứ tự (order / 순서).
 
 ## 18. Currency-factor limit
 
@@ -288,13 +288,13 @@ If USD short exposure exceeds cap because several strategies align:
 block additional USD-short risk
 ```
 
-even if each strategy individually remains within position limit.
+even if each chiến lược (strategy / 전략) individually remains within position limit.
 
 ## 19. Margin utilization limit
 
 Do not operate near broker stop-out threshold.
 
-Define internal buffer substantially more conservative than external minimum.
+Define nội bộ (internal / 내부) buffer substantially more conservative than bên ngoài (external / 외부) minimum.
 
 Monitor:
 
@@ -304,11 +304,11 @@ free_margin
 margin_level
 ```
 
-## 20. Margin-policy change
+## 20. Margin-policy thay đổi (change / 변경)
 
-Broker may change requirements.
+Broker may thay đổi (change / 변경) requirements.
 
-On notification or detected change:
+On notification or detected thay đổi (change / 변경):
 
 ```text
 recompute all projected margins
@@ -334,7 +334,7 @@ Persistent deterioration may erase edge before gross P/L reveals it clearly.
 
 ## 22. Spread drift
 
-Track live spread distribution against backtest data.
+Nhánh học (track / 트랙) live spread phân phối (distribution / 분포) against backtest dữ liệu (data / 데이터).
 
 If live spread materially worse:
 
@@ -344,7 +344,7 @@ estimated net expectancy must be recomputed
 
 ## 23. Rejection-rate monitoring
 
-High rejection rate can indicate:
+High rejection tỷ lệ (rate / 비율) can indicate:
 
 ```text
 bad order assumptions
@@ -353,13 +353,13 @@ market stress
 broker restrictions
 ```
 
-Do not treat rejected order as zero-cost missing observation.
+Do not treat rejected thứ tự (order / 순서) as zero-cost missing observation.
 
 ## 24. Fill-rate monitoring for limits
 
-Limit-order strategy may look profitable if backtest assumes fills too easily.
+Limit-order chiến lược (strategy / 전략) may look profitable if backtest assumes fills too easily.
 
-Forward test compares:
+Forward kiểm thử (test / 테스트) compares:
 
 ```text
 modeled fill probability
@@ -367,9 +367,9 @@ vs
 actual fill rate
 ```
 
-by market regime.
+by thị trường (market / 시장) regime.
 
-## 25. Implementation shortfall dashboard
+## 25. Hiện thực (implementation / 구현) shortfall dashboard
 
 For each trade:
 
@@ -400,9 +400,9 @@ Opening Equity
 = Closing Equity
 ```
 
-Differences beyond rounding threshold become incident.
+Differences beyond rounding threshold become sự cố (incident / 인시던트).
 
-## 27. Strategy expected distribution
+## 27. Chiến lược (strategy / 전략) expected phân phối (distribution / 분포)
 
 Before live, freeze expected ranges for:
 
@@ -416,13 +416,13 @@ volatility
 max losing streak distribution
 ```
 
-Use ranges, not one exact forecast.
+Use ranges, not one chính xác (exact / 정확한) forecast.
 
-## 28. Performance drift
+## 28. Hiệu năng (performance / 성능) drift
 
 A few losses are not drift.
 
-Monitor statistical/process evidence such as:
+Monitor statistical/tiến trình (process / 프로세스) bằng chứng (evidence / 증거) such as:
 
 ```text
 rolling expectancy
@@ -435,21 +435,21 @@ regime mix
 
 Avoid overreacting to noise.
 
-## 29. Feature drift
+## 29. Tính năng (feature / 기능) drift
 
-If signal feature distribution shifts far from training history:
+If tín hiệu (signal / 신호) tính năng (feature / 기능) phân phối (distribution / 분포) shifts far from huấn luyện (training / 학습) lịch sử (history / 이력):
 
 ```text
 strategy may be extrapolating
 ```
 
-Monitor quantiles/range/out-of-distribution flags.
+Monitor quantiles/phạm vi (range / 범위)/out-of-distribution flags.
 
 ## 30. Regime drift
 
-A strategy tested mainly in low-volatility monetary-policy regime may face new state.
+A chiến lược (strategy / 전략) tested mainly in low-volatility monetary-policy regime may face new trạng thái (state / 상태).
 
-Regime detector should be context, not magical switch.
+Regime detector should be ngữ cảnh (context / 맥락), not magical switch.
 
 Potential inputs:
 
@@ -463,7 +463,7 @@ liquidity/spread state
 
 ## 31. Data-source drift
 
-Vendor can change methodology or symbol mapping.
+Vendor can thay đổi (change / 변경) methodology or symbol ánh xạ (mapping / 매핑).
 
 Detect via:
 
@@ -474,11 +474,11 @@ cross-source divergence
 missing fields
 ```
 
-Model drift may actually be data drift.
+Mô hình (model / 모델) drift may actually be dữ liệu (data / 데이터) drift.
 
-## 32. Model versioning
+## 32. Mô hình (model / 모델) versioning
 
-Every live order should map to:
+Every live thứ tự (order / 순서) should map to:
 
 ```text
 strategy_version
@@ -486,13 +486,13 @@ config_version
 risk_model_version
 ```
 
-If config changes intraday, preserve exact effective time.
+If cấu hình (config / 설정) changes intraday, preserve chính xác (exact / 정확한) effective thời gian (time / 시간).
 
-## 33. Controlled configuration changes
+## 33. Controlled cấu hình (configuration / 구성) changes
 
-Do not edit production parameters manually without record.
+Do not edit môi trường vận hành (production / 운영 환경) parameters manually without bản ghi (record / 레코드).
 
-Use change log:
+Use thay đổi (change / 변경) log:
 
 ```text
 who/what changed
@@ -503,7 +503,7 @@ reason
 approval if applicable
 ```
 
-For personal system, “who” may be one person; audit still matters.
+For personal hệ thống (system / 시스템), “who” may be one person; kiểm tra (audit / 감사) still matters.
 
 ## 34. Secret management
 
@@ -523,9 +523,9 @@ Use least privilege if provider supports it.
 
 Trading API generally should not need withdrawal permission.
 
-If provider offers permission scopes, avoid unnecessary fund-transfer capability.
+If provider offers permission scopes, avoid unnecessary fund-transfer năng lực (capability / 역량).
 
-## 36. Environment separation
+## 36. Môi trường (environment / 환경) separation
 
 Conceptual environments:
 
@@ -538,43 +538,43 @@ LIVE_SCALED
 
 Do not let research notebook accidentally send live orders.
 
-## 37. Explicit live flag is not enough
+## 37. Tường minh (explicit / 명시적) live flag is not enough
 
 Prefer separate credentials/endpoints/accounts over one Boolean `LIVE=true` where possible.
 
-Reduce catastrophic operator error.
+Reduce catastrophic operator lỗi (error / 오류).
 
-## 38. Max order size
+## 38. Max thứ tự (order / 순서) kích thước (size / 크기)
 
-Hard cap at execution gateway:
+Hard cap at thực thi (execution / 실행) gateway:
 
 ```text
 requested quantity <= max_order_size
 ```
 
-independent of strategy calculation.
+independent of chiến lược (strategy / 전략) calculation.
 
-This catches unit bugs such as 10,000 vs 1,000,000.
+This catches đơn vị (unit / 단위) bugs such as 10,000 vs 1,000,000.
 
 ## 39. Price sanity check
 
-Reject order if proposed price/reference deviates excessively from current validated market state.
+Reject thứ tự (order / 순서) if proposed price/tham chiếu (reference / 참조) deviates excessively from hiện tại (current / 현재) validated thị trường (market / 시장) trạng thái (state / 상태).
 
 Avoid sending nonsensical orders after stale/decimal bug.
 
 ## 40. Position sanity check
 
-Before execution:
+Before thực thi (execution / 실행):
 
 ```text
 projected_position
 ```
 
-must stay within hard safety bound even if strategy/risk service malfunctions.
+must stay within hard an toàn (safety / 안전) bound even if chiến lược (strategy / 전략)/rủi ro (risk / 위험) dịch vụ (service / 서비스) malfunctions.
 
-Defense in depth matters.
+Defense in độ sâu (depth / 깊이) matters.
 
-## 41. Rate limiting
+## 41. Tỷ lệ (rate / 비율) limiting
 
 Cap:
 
@@ -598,7 +598,7 @@ margin
 stress loss
 ```
 
-### Execution
+### Thực thi (execution / 실행)
 
 ```text
 slippage spike
@@ -606,7 +606,7 @@ rejection spike
 fill anomaly
 ```
 
-### Data
+### Dữ liệu (data / 데이터)
 
 ```text
 stale feed
@@ -623,9 +623,9 @@ unknown positions
 process instability
 ```
 
-## 43. Kill switch action must be predefined
+## 43. Kill switch hành động (action / 동작) must be predefined
 
-Trigger without action is incomplete.
+Trigger without hành động (action / 동작) is incomplete.
 
 Define for each:
 
@@ -640,11 +640,11 @@ require manual resume?
 
 ## 44. Avoid blind close-all
 
-In some crisis states, market orders to close all may create worse loss than controlled reduction.
+In some crisis states, thị trường (market / 시장) orders to close all may create worse mất mát (loss / 손실) than controlled reduction.
 
-Kill action should consider liquidity.
+Kill hành động (action / 동작) should consider liquidity.
 
-Sometimes safest first state is:
+Sometimes safest first trạng thái (state / 상태) is:
 
 ```text
 NO_NEW_RISK
@@ -656,7 +656,7 @@ NO_NEW_RISK
 
 Manual override must itself be logged.
 
-If human resumes system:
+If human resumes hệ thống (system / 시스템):
 
 ```text
 reason
@@ -680,9 +680,9 @@ emergency contact
 
 Do not promise tools that provider does not offer; document actual account options.
 
-## 47. Internet/device failure
+## 47. Internet/thiết bị (device / 장치) thất bại (failure / 실패)
 
-For local personal system, plan:
+For cục bộ (local / 로컬) personal hệ thống (system / 시스템), plan:
 
 ```text
 power/network loss
@@ -690,19 +690,19 @@ machine sleep
 process crash
 ```
 
-Use broker-side protective orders where appropriate, but remember stop execution is not guaranteed price.
+Use broker-side protective orders where appropriate, but remember stop thực thi (execution / 실행) is not guaranteed price.
 
-## 48. Process supervision
+## 48. Tiến trình (process / 프로세스) supervision
 
-Critical services need restart/alert policy.
+Trọng yếu (critical / 중요) services need restart/alert chính sách (policy / 정책).
 
-But automatic restart after crash must first reconcile external state.
+But automatic restart after crash must first reconcile bên ngoài (external / 외부) trạng thái (state / 상태).
 
 Never restart and assume no orders filled during downtime.
 
-## 49. Checkpoint state
+## 49. Checkpoint trạng thái (state / 상태)
 
-Persist enough state to recover:
+Persist enough trạng thái (state / 상태) to recover:
 
 ```text
 last processed event
@@ -725,7 +725,7 @@ CRITICAL
 HALT
 ```
 
-Not every warning should wake operator; critical state should be unmistakable.
+Not every warning should wake operator; trọng yếu (critical / 중요) trạng thái (state / 상태) should be unmistakable.
 
 ## 51. Monitoring dashboard
 
@@ -747,7 +747,7 @@ Slippage vs model
 Active kill-switch state
 ```
 
-## 52. Research vs production metrics
+## 52. Research vs môi trường vận hành (production / 운영 환경) metrics
 
 Research cares about:
 
@@ -757,7 +757,7 @@ expectancy
 robustness
 ```
 
-Production also cares about:
+Môi trường vận hành (production / 운영 환경) also cares about:
 
 ```text
 latency
@@ -767,11 +767,11 @@ uptime
 data freshness
 ```
 
-A profitable model with unreliable production pipeline is not deployable.
+A profitable mô hình (model / 모델) with unreliable môi trường vận hành (production / 운영 환경) chuỗi xử lý (pipeline / 파이프라인) is not deployable.
 
 ## 53. Promotion from small-live to scaled
 
-Require evidence such as:
+Require bằng chứng (evidence / 증거) such as:
 
 ```text
 N minimum trades/events
@@ -781,11 +781,11 @@ Risk process worked during adverse events
 No material unexplained P/L
 ```
 
-Scale gradually.
+Quy mô (scale / 규모) gradually.
 
-## 54. Scaling changes strategy behavior
+## 54. Scaling changes chiến lược (strategy / 전략) hành vi (behavior / 동작)
 
-Larger size can cause:
+Larger kích thước (size / 크기) can cause:
 
 ```text
 more slippage
@@ -794,11 +794,11 @@ higher market impact
 capacity limit
 ```
 
-Do not assume small-live execution scales linearly.
+Do not assume small-live thực thi (execution / 실행) scales linearly.
 
-## 55. Capacity monitoring
+## 55. Sức chứa (capacity / 용량) monitoring
 
-As size grows, track:
+As kích thước (size / 크기) grows, nhánh học (track / 트랙):
 
 ```text
 cost per unit notional
@@ -806,11 +806,11 @@ fill rate
 slippage vs size
 ```
 
-Stop scaling when marginal implementation cost consumes expected edge.
+Stop scaling when marginal hiện thực (implementation / 구현) chi phí (cost / 비용) consumes expected edge.
 
-## 56. Pause rule
+## 56. Pause quy tắc (rule / 규칙)
 
-Pause can be triggered by uncertain evidence where full retirement is premature.
+Pause can be triggered by uncertain bằng chứng (evidence / 증거) where full retirement is premature.
 
 Examples:
 
@@ -821,11 +821,11 @@ feature out-of-distribution
 regulatory/product term change
 ```
 
-Pause is research state, not punishment.
+Pause is research trạng thái (state / 상태), not punishment.
 
-## 57. Retirement rule
+## 57. Retirement quy tắc (rule / 규칙)
 
-Predefine retirement conditions before strategy loses money.
+Predefine retirement conditions before chiến lược (strategy / 전략) loses money.
 
 Possible:
 
@@ -839,13 +839,13 @@ risk exceeds mandate
 
 ## 58. Do not retire only because drawdown hurts
 
-Drawdown may be within expected distribution.
+Drawdown may be within expected phân phối (distribution / 분포).
 
-Compare actual behavior with pre-defined expectation.
+Compare actual hành vi (behavior / 동작) with pre-defined expectation.
 
-Likewise, do not keep strategy just because “it always comes back”.
+Likewise, do not keep chiến lược (strategy / 전략) just because “it always comes back”.
 
-## 59. Strategy post-mortem
+## 59. Chiến lược (strategy / 전략) post-mortem
 
 When paused/retired:
 
@@ -862,9 +862,9 @@ Decision errors
 Conclusion
 ```
 
-## 60. Incident post-mortem
+## 60. Sự cố (incident / 인시던트) post-mortem
 
-Operational incident template:
+Operational sự cố (incident / 인시던트) template:
 
 ```text
 Timeline
@@ -878,11 +878,11 @@ Permanent control
 Test added
 ```
 
-No blame language needed; focus system mechanics.
+No blame ngôn ngữ (language / 언어) needed; focus hệ thống (system / 시스템) mechanics.
 
 ## 61. Experiment/live linkage
 
-Every live strategy version should point to research experiment approved for deployment.
+Every live chiến lược (strategy / 전략) phiên bản (version / 버전) should điểm (point / 지점) to research experiment approved for triển khai (deployment / 배포).
 
 ```text
 live_strategy_version
@@ -928,11 +928,11 @@ Regime
 Unknown
 ```
 
-Avoid changing model until gap is understood.
+Avoid changing mô hình (model / 모델) until gap is understood.
 
 ## 64. Operational rehearsal
 
-Before scaling, intentionally test:
+Before scaling, intentionally kiểm thử (test / 테스트):
 
 ```text
 market data disconnect
@@ -944,9 +944,9 @@ reconciliation mismatch
 kill switch
 ```
 
-A control not rehearsed may fail when needed.
+A điều khiển (control / 제어) not rehearsed may thất bại (fail / 실패) when needed.
 
-## 65. Recovery criterion
+## 65. Khôi phục (recovery / 복구) criterion
 
 After HALT, resumption requires checklist:
 
@@ -961,7 +961,7 @@ System tests pass
 
 ## 66. Weekend/reopen plan
 
-If strategy holds weekends:
+If chiến lược (strategy / 전략) holds weekends:
 
 ```text
 expected open gap risk
@@ -970,13 +970,13 @@ margin buffer
 news monitoring responsibilities
 ```
 
-must be explicit.
+must be tường minh (explicit / 명시적).
 
-If no weekend holding, verify system actually closes before provider schedule with enough liquidity buffer.
+If no weekend holding, verify hệ thống (system / 시스템) actually closes before provider schedule with enough liquidity buffer.
 
-## 67. Scheduled-event mode
+## 67. Scheduled-event chế độ (mode / 모드)
 
-Before CPI/FOMC/BOK-type events, risk policy may:
+Before CPI/FOMC/BOK-type events, rủi ro (risk / 위험) chính sách (policy / 정책) may:
 
 ```text
 reduce size
@@ -984,13 +984,13 @@ block new entries
 widen modeled cost assumptions
 ```
 
-only if strategy spec says so. Do not improvise event rules live.
+only if chiến lược (strategy / 전략) spec says so. Do not improvise sự kiện (event / 이벤트) rules live.
 
 ## 68. Regulation/product-term monitoring
 
-Retail FX terms and access can change.
+Retail FX terms and truy cập (access / 접근) can thay đổi (change / 변경).
 
-Maintain review date for:
+Maintain rà soát (review / 검토) date for:
 
 ```text
 leverage limits
@@ -1000,7 +1000,7 @@ product eligibility
 broker legal entity
 ```
 
-Especially for Korea/Vietnam-specific context, verify current official rules.
+Especially for Korea/Vietnam-specific ngữ cảnh (context / 맥락), verify hiện tại (current / 현재) official rules.
 
 ## 69. Monitoring retention
 
@@ -1015,11 +1015,11 @@ data health
 incident
 ```
 
-Avoid sensitive secret/token logging.
+Avoid sensitive secret/đơn vị từ (token / 토큰) logging.
 
 ## 70. Completion criteria
 
-Project is not complete until you can demonstrate:
+Dự án (project / 프로젝트) is not complete until you can demonstrate:
 
 ```text
 System detects stale data
@@ -1047,9 +1047,9 @@ strategy_retirement_rule.md
 forward_test_report.md
 ```
 
-## Kết thúc project
+## Kết thúc dự án (project / 프로젝트)
 
-Sau bốn module, một systematic FX project phải nối được:
+Sau bốn mô-đun (module / 모듈), một systematic FX dự án (project / 프로젝트) phải nối được:
 
 ```text
 Point-in-Time Data
@@ -1062,7 +1062,7 @@ Point-in-Time Data
 → Safe Failure / Retirement
 ```
 
-Đây mới là bridge từ “strategy idea” sang một research/production process có thể kiểm tra.
+Đây mới là cầu nối (bridge / 브리지) từ “chiến lược (strategy / 전략) idea” sang một research/môi trường vận hành (production / 운영 환경) tiến trình (process / 프로세스) có thể kiểm tra.
 
 Liên quan:
 

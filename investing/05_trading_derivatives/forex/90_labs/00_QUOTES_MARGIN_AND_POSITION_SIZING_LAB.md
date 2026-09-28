@@ -2,7 +2,7 @@
 
 Lab này kiểm tra xem bạn có thực sự hiểu economics của một FX position hay chỉ đang nhập số vào calculator của broker.
 
-## Case A — EUR/USD, account USD
+## Trường hợp (case / 사례) A — EUR/USD, account USD
 
 Giả sử:
 
@@ -16,7 +16,7 @@ Commission = 7 USD per standard-lot round trip
 Expected slippage on stop = 1.5 pip
 ```
 
-Không bắt đầu bằng lot size. Hãy tính theo đúng flow:
+Không bắt đầu bằng lot kích thước (size / 크기). Hãy tính theo đúng luồng (flow / 흐름):
 
 ```text
 1. Planned entry price
@@ -31,9 +31,9 @@ Không bắt đầu bằng lot size. Hãy tính theo đúng flow:
 10. Loss if stop fills with 1.5-pip adverse slippage
 ```
 
-Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position size vừa tính không? Giải thích tại sao.
+Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position kích thước (size / 크기) vừa tính không? Giải thích tại sao.
 
-## Case B — USD/JPY, account USD
+## Trường hợp (case / 사례) B — USD/JPY, account USD
 
 ```text
 USD/JPY = 148.40 / 148.42
@@ -52,9 +52,9 @@ Pip value in JPY
 Pip value in USD
 ```
 
-Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip value theo USD thay đổi dù contract size không đổi.
+Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip giá trị (value / 값) theo USD thay đổi dù đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) không đổi.
 
-## Case C — EUR/GBP, account KRW
+## Trường hợp (case / 사례) C — EUR/GBP, account KRW
 
 ```text
 EUR/GBP entry = 0.8650
@@ -72,9 +72,9 @@ GBP
 → KRW
 ```
 
-Sau đó giải thích tại sao account return còn phụ thuộc conversion path dù trade thesis ban đầu chỉ là EUR so với GBP.
+Sau đó giải thích tại sao account return còn phụ thuộc conversion đường dẫn (path / 경로) dù trade thesis ban đầu chỉ là EUR so với GBP.
 
-## Case D — Margin stress
+## Trường hợp (case / 사례) D — Margin stress
 
 Giả sử:
 
@@ -85,7 +85,7 @@ Gross notional = 120,000 USD
 Required margin = 4,000 USD
 ```
 
-Tính equity, free margin và margin level ban đầu. Sau đó stress lần lượt:
+Tính equity, free margin và margin mức (level / 수준) ban đầu. Sau đó stress lần lượt:
 
 ```text
 Scenario 1: floating loss -1,500
@@ -104,9 +104,9 @@ Margin Level
 Effective Gross Leverage
 ```
 
-Mục tiêu là thấy margin stress có thể tăng dù strategy chưa chạm stop.
+Mục tiêu là thấy margin stress có thể tăng dù chiến lược (strategy / 전략) chưa chạm stop.
 
-## Case E — Portfolio heat
+## Trường hợp (case / 사례) E — Portfolio heat
 
 Bạn đang có:
 
@@ -116,7 +116,7 @@ Long GBP/USD: planned loss 100 USD
 Short USD/JPY: planned loss 100 USD
 ```
 
-Không được kết luận tổng risk chỉ là `300 USD` độc lập. Hãy viết currency decomposition:
+Không được kết luận tổng rủi ro (risk / 위험) chỉ là `300 USD` độc lập. Hãy viết currency decomposition:
 
 ```text
 EUR exposure
@@ -150,7 +150,7 @@ Portfolio heat contribution
 
 ## Tự chấm
 
-Bài đạt khi bạn có thể đi từ **account-risk budget → invalidation → size → notional → margin → stress loss** mà không dùng “broker cho bao nhiêu lot” làm điểm xuất phát.
+Bài đạt khi bạn có thể đi từ **account-risk ngân sách (budget / 예산) → vô hiệu hóa (invalidation / 무효화) → kích thước (size / 크기) → notional → margin → stress mất mát (loss / 손실)** mà không dùng “broker cho bao nhiêu lot” làm điểm xuất phát.
 
 Đọc lại nếu cần:
 

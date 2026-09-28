@@ -10,7 +10,7 @@ Notional Exposure
 ≠ Amount at Risk
 ```
 
-**Đòn bẩy (leverage, 레버리지)** nói về quan hệ giữa exposure và capital/equity. **Ký quỹ (margin, 증거금)** là collateral broker yêu cầu để duy trì position. **Amount at risk** là mức loss có thể xảy ra theo price path, stop, gap, slippage và các điều khoản liquidation. Ba con số này liên hệ với nhau nhưng không thay thế nhau.
+**Đòn bẩy (leverage, 레버리지)** nói về quan hệ giữa exposure và capital/equity. **Ký quỹ (margin, 증거금)** là collateral broker yêu cầu để duy trì position. **Amount at rủi ro (risk / 위험)** là mức mất mát (loss / 손실) có thể xảy ra theo price đường dẫn (path / 경로), stop, gap, slippage và các điều khoản liquidation. Ba con số này liên hệ với nhau nhưng không thay thế nhau.
 
 ## 1. Leverage không tạo ra edge
 
@@ -25,7 +25,7 @@ Effective Leverage
 = 10x
 ```
 
-Nếu underlying exposure giảm 1% và bỏ qua cost:
+Nếu underlying exposure giảm 1% và bỏ qua chi phí (cost / 비용):
 
 ```text
 Loss ≈ 1% × 100,000
@@ -42,7 +42,7 @@ Leverage không làm xác suất dự đoán đúng tăng. Nó chỉ làm cùng 
 
 ## 2. Broker leverage limit và effective leverage khác nhau
 
-Broker có thể quảng cáo maximum leverage, ví dụ `1:30`, `1:50`, `1:100` hoặc mức khác tùy jurisdiction/product/client classification.
+Broker có thể quảng cáo maximum leverage, ví dụ `1:30`, `1:50`, `1:100` hoặc mức khác tùy jurisdiction/sản phẩm (product / 제품)/máy khách (client / 클라이언트) classification.
 
 Nhưng nếu broker cho phép `1:100`, trader không bắt buộc dùng 100x.
 
@@ -58,9 +58,9 @@ Do đó câu hỏi đúng không phải:
 
 mà là:
 
-> Tổng notional exposure hiện tại bằng bao nhiêu lần equity và account sẽ mất bao nhiêu nếu market di chuyển bất lợi theo các stress scenario?
+> Tổng notional exposure hiện tại bằng bao nhiêu lần equity và account sẽ mất bao nhiêu nếu thị trường (market / 시장) di chuyển bất lợi theo các stress scenario?
 
-## 3. Margin requirement
+## 3. Margin yêu cầu (requirement / 요구사항)
 
 Một cách xấp xỉ đơn giản:
 
@@ -77,25 +77,25 @@ Required Margin
 = 5,000 USD
 ```
 
-Cũng có thể biểu diễn bằng margin rate:
+Cũng có thể biểu diễn bằng margin tỷ lệ (rate / 비율):
 
 ```text
 Margin Rate = 1 / Leverage
 ```
 
-20x tương đương khoảng 5% margin requirement.
+20x tương đương khoảng 5% margin yêu cầu (requirement / 요구사항).
 
-Nhưng broker thực tế có thể tính margin theo contract specification, pair, account currency, tiered notional, volatility regime hoặc regulatory rule. Công thức trên là mental model, không thay thế rule của broker.
+Nhưng broker thực tế có thể tính margin theo đặc tả hợp đồng (contract / 계약) specification, pair, account currency, tiered notional, volatility regime hoặc regulatory quy tắc (rule / 규칙). Công thức trên là mô hình tư duy (mental model / 사고 모델), không thay thế quy tắc (rule / 규칙) của broker.
 
-## 4. Margin không phải maximum loss
+## 4. Margin không phải maximum mất mát (loss / 손실)
 
 Đây là distinction quan trọng nhất.
 
-Nếu broker yêu cầu 2.000 USD margin cho position 100.000 USD, không có nghĩa loss bị giới hạn ở 2.000 USD.
+Nếu broker yêu cầu 2.000 USD margin cho position 100.000 USD, không có nghĩa mất mát (loss / 손실) bị giới hạn ở 2.000 USD.
 
 P/L vẫn được tạo từ **100.000 USD exposure**.
 
-Trong market move lớn hoặc gap:
+Trong thị trường (market / 시장) move lớn hoặc gap:
 
 ```text
 Loss can consume margin
@@ -103,15 +103,15 @@ Loss can consume margin
 → potentially exceed planned loss
 ```
 
-Treatment của negative balance phụ thuộc jurisdiction, client type và contractual terms. Không được giả định protection tồn tại nếu chưa kiểm tra.
+Treatment của negative balance phụ thuộc jurisdiction, máy khách (client / 클라이언트) kiểu (type / 타입) và contractual terms. Không được giả định protection tồn tại nếu chưa kiểm tra.
 
-CFTC cũng nhấn mạnh leverage trong retail OTC forex có thể khuếch đại loss mạnh và customer cần hiểu margin obligation trước khi giao dịch.
+CFTC cũng nhấn mạnh leverage trong retail OTC forex có thể khuếch đại mất mát (loss / 손실) mạnh và customer cần hiểu margin obligation trước khi giao dịch.
 
 ## 5. Balance, equity, used margin và free margin
 
 ### Balance
 
-Balance thường phản ánh account value sau các transaction đã realized, chưa bao gồm floating P/L của open positions theo cách hiển thị phổ biến.
+Balance thường phản ánh account giá trị (value / 값) sau các giao dịch (transaction / 트랜잭션) đã realized, chưa bao gồm floating P/L của open positions theo cách hiển thị phổ biến.
 
 ### Equity
 
@@ -143,9 +143,9 @@ Free margin giảm khi:
 
 - mở thêm position;
 - floating losses tăng;
-- margin requirement tăng.
+- margin yêu cầu (requirement / 요구사항) tăng.
 
-## 6. Margin level
+## 6. Margin mức (level / 수준)
 
 Nhiều retail platforms dùng:
 
@@ -167,27 +167,27 @@ thì:
 Margin Level = 200%
 ```
 
-Broker có thể đặt threshold riêng cho margin call hoặc automatic stop-out. Không có một universal stop-out percentage cho mọi broker.
+Broker có thể đặt threshold riêng cho margin lời gọi (call / 호출) hoặc automatic stop-out. Không có một universal stop-out percentage cho mọi broker.
 
-## 7. Margin call và stop-out không giống stop-loss
+## 7. Margin lời gọi (call / 호출) và stop-out không giống stop-loss
 
 ### Stop-loss
 
-Order do strategy/trader đặt để cố thoát khi market tới một mức nhất định.
+Thứ tự (order / 순서) do chiến lược (strategy / 전략)/trader đặt để cố thoát khi thị trường (market / 시장) tới một mức nhất định.
 
-### Margin call / stop-out
+### Margin lời gọi (call / 호출) / stop-out
 
-Risk-control mechanism của broker/account, xảy ra khi account không còn đủ collateral theo rule.
+Risk-control cơ chế (mechanism / 메커니즘) của broker/account, xảy ra khi account không còn đủ collateral theo quy tắc (rule / 규칙).
 
-Nếu để position đi đến stop-out, trader đã chuyển quyền kiểm soát exit từ strategy sang margin system.
+Nếu để position đi đến stop-out, trader đã chuyển quyền kiểm soát exit từ chiến lược (strategy / 전략) sang margin hệ thống (system / 시스템).
 
-Một risk process tốt thường không dựa vào:
+Một rủi ro (risk / 위험) tiến trình (process / 프로세스) tốt thường không dựa vào:
 
 ```text
 “I will be liquidated before things get too bad.”
 ```
 
-Liquidation có thể xảy ra trong điều kiện spread rộng và liquidity xấu, chính là lúc execution quality giảm.
+Liquidation có thể xảy ra trong điều kiện spread rộng và liquidity xấu, chính là lúc thực thi (execution / 실행) chất lượng (quality / 품질) giảm.
 
 ## 8. Effective leverage tăng khi equity giảm
 
@@ -200,7 +200,7 @@ Equity = 20,000
 Effective leverage = 5x
 ```
 
-Sau loss:
+Sau mất mát (loss / 손실):
 
 ```text
 Equity = 10,000
@@ -209,7 +209,7 @@ Effective leverage = 10x
 
 Không cần mở thêm trade, portfolio đã **tự trở nên leveraged hơn** khi equity giảm.
 
-Đây là feedback loop nguy hiểm:
+Đây là vòng phản hồi (feedback loop / 피드백 루프) nguy hiểm:
 
 ```text
 Loss
@@ -230,28 +230,28 @@ Long 100k EUR/USD
 Short 100k GBP/USD equivalent
 ```
 
-Net USD exposure có thể nhỏ hơn gross exposure, nhưng portfolio vẫn có substantial EUR-vs-GBP relative exposure và execution/liquidity risk ở cả hai legs.
+Net USD exposure có thể nhỏ hơn gross exposure, nhưng portfolio vẫn có substantial EUR-vs-GBP relative exposure và thực thi (execution / 실행)/liquidity rủi ro (risk / 위험) ở cả hai legs.
 
-Một approximate gross leverage metric:
+Một approximate gross leverage chỉ số (metric / 지표):
 
 ```text
 Gross Leverage
 = Sum(|Position Notional|) / Equity
 ```
 
-Netting chỉ theo USD có thể che giấu cross-currency risk.
+Netting chỉ theo USD có thể che giấu cross-currency rủi ro (risk / 위험).
 
-## 10. Position sizing phải bắt đầu từ invalidation
+## 10. Position sizing phải bắt đầu từ vô hiệu hóa (invalidation / 무효화)
 
 Một trade setup cần trả lời:
 
 1. Thesis là gì?
 2. Điều kiện nào làm thesis sai hoặc setup invalid?
-3. Từ entry đến invalidation bao xa?
+3. Từ entry đến vô hiệu hóa (invalidation / 무효화) bao xa?
 4. Account chấp nhận mất bao nhiêu nếu scenario đó xảy ra?
-5. Size nào biến distance đó thành allowed loss?
+5. Kích thước (size / 크기) nào biến distance đó thành allowed mất mát (loss / 손실)?
 
-Flow:
+Luồng (flow / 흐름):
 
 ```text
 Thesis
@@ -291,7 +291,7 @@ Base Units
 ≈ Required Pip Value / Pip Size
 ```
 
-đối với structure đơn giản như EUR/USD account USD.
+đối với cấu trúc (structure / 구조) đơn giản như EUR/USD account USD.
 
 ## 12. Ví dụ sizing
 
@@ -301,7 +301,7 @@ Account equity:
 20,000 USD
 ```
 
-Giả sử research policy cho phép initial planned risk `0.5%` equity cho một trade:
+Giả sử research chính sách (policy / 정책) cho phép initial planned rủi ro (risk / 위험) `0.5%` equity cho một trade:
 
 ```text
 Allowed Loss
@@ -309,9 +309,9 @@ Allowed Loss
 = 100 USD
 ```
 
-Setup EUR/USD có invalidation 40 pips.
+Setup EUR/USD có vô hiệu hóa (invalidation / 무효화) 40 pips.
 
-Required pip value:
+Required pip giá trị (value / 값):
 
 ```text
 100 / 40
@@ -332,46 +332,46 @@ Approximate standard-lot notation:
 0.25 lot
 ```
 
-Đây chỉ là planned loss **trước** slippage, gap và some costs.
+Đây chỉ là planned mất mát (loss / 손실) **trước** slippage, gap và some costs.
 
-## 13. Fixed percentage risk có lợi ích gì?
+## 13. Fixed percentage rủi ro (risk / 위험) có lợi ích gì?
 
-Nếu mỗi trade risk một fraction của current equity, size tự co lại sau drawdown và tăng dần khi equity tăng.
+Nếu mỗi trade rủi ro (risk / 위험) một fraction của hiện tại (current / 현재) equity, kích thước (size / 크기) tự co lại sau drawdown và tăng dần khi equity tăng.
 
-Ví dụ risk 1%:
+Ví dụ rủi ro (risk / 위험) 1%:
 
 ```text
 Equity 10,000 → planned risk 100
 Equity 8,000  → planned risk 80
 ```
 
-Cơ chế này giảm tốc độ mất vốn tương đối so với fixed-dollar risk khi account giảm mạnh.
+Cơ chế này giảm tốc độ mất vốn tương đối so với fixed-dollar rủi ro (risk / 위험) khi account giảm mạnh.
 
-Nhưng fixed percentage không tự tạo edge. Một strategy có negative expectancy vẫn mất tiền, chỉ có thể mất chậm hơn.
+Nhưng fixed percentage không tự tạo edge. Một chiến lược (strategy / 전략) có negative expectancy vẫn mất tiền, chỉ có thể mất chậm hơn.
 
-## 14. Vì sao “risk 2% mỗi trade” không phải quy tắc universal?
+## 14. Vì sao “rủi ro (risk / 위험) 2% mỗi trade” không phải quy tắc universal?
 
-Các con số như 1% hoặc 2% thường được truyền như rule-of-thumb. Không có một tỷ lệ phù hợp cho mọi strategy.
+Các con số như 1% hoặc 2% thường được truyền như rule-of-thumb. Không có một tỷ lệ phù hợp cho mọi chiến lược (strategy / 전략).
 
-Risk fraction cần phụ thuộc:
+Rủi ro (risk / 위험) fraction cần phụ thuộc:
 
-- edge uncertainty;
-- stop behavior;
-- return distribution;
-- gap/tail risk;
+- edge bất định (uncertainty / 불확실성);
+- stop hành vi (behavior / 동작);
+- return phân phối (distribution / 분포);
+- gap/tail rủi ro (risk / 위험);
 - number of simultaneous positions;
 - correlation;
-- strategy frequency;
+- chiến lược (strategy / 전략) frequency;
 - maximum tolerable drawdown;
-- operational constraints.
+- operational các ràng buộc (constraints / 제약조건들).
 
-Một strategy có nhiều correlated trades không thể đánh giá risk từng trade riêng lẻ.
+Một chiến lược (strategy / 전략) có nhiều correlated trades không thể đánh giá rủi ro (risk / 위험) từng trade riêng lẻ.
 
 ## 15. Portfolio heat
 
-**Portfolio heat** là tổng planned loss/exposure nếu nhiều positions cùng đi tới stop hoặc stress threshold.
+**Portfolio heat** là tổng planned mất mát (loss / 손실)/exposure nếu nhiều positions cùng đi tới stop hoặc stress threshold.
 
-Ví dụ có 5 trades, mỗi trade planned `1%` account risk. Không nên ngay lập tức kết luận portfolio risk là “an toàn vì mỗi trade chỉ 1%”.
+Ví dụ có 5 trades, mỗi trade planned `1%` account rủi ro (risk / 위험). Không nên ngay lập tức kết luận portfolio rủi ro (risk / 위험) là “an toàn vì mỗi trade chỉ 1%”.
 
 Nếu cả 5 đều là variants của short USD:
 
@@ -382,7 +382,7 @@ USD shock
 → portfolio loss clusters
 ```
 
-Cần stress cả **common factor**.
+Cần stress cả **dùng chung (common / 공통) factor**.
 
 ## 16. Currency-factor decomposition
 
@@ -404,7 +404,7 @@ Có thể mô tả sơ bộ:
 
 USD short exposure xuất hiện ba lần.
 
-Một risk dashboard tốt nên aggregate theo currency:
+Một rủi ro (risk / 위험) dashboard tốt nên aggregate theo currency:
 
 ```text
 EUR exposure
@@ -419,13 +419,13 @@ thay vì chỉ đếm tickets.
 
 ## 17. Stop distance nên liên hệ volatility
 
-Một fixed 20-pip stop có ý nghĩa rất khác khi pair daily range là 40 pips so với 200 pips.
+Một fixed 20-pip stop có ý nghĩa rất khác khi pair daily phạm vi (range / 범위) là 40 pips so với 200 pips.
 
-Nếu stop nằm bên trong normal noise, strategy có thể bị exit liên tục dù thesis chưa invalidated.
+Nếu stop nằm bên trong normal noise, chiến lược (strategy / 전략) có thể bị exit liên tục dù thesis chưa invalidated.
 
-Có thể dùng volatility measure như ATR hoặc realized volatility để **normalize context**, nhưng indicator không quyết định stop thay cho thesis.
+Có thể dùng volatility measure như ATR hoặc realized volatility để **normalize ngữ cảnh (context / 맥락)**, nhưng indicator không quyết định stop thay cho thesis.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Market structure / thesis invalidation
@@ -434,21 +434,21 @@ Market structure / thesis invalidation
 → size adjusted to keep account risk controlled
 ```
 
-Không nên giữ size cố định rồi nới stop trong high volatility; làm vậy risk tăng hai lần.
+Không nên giữ kích thước (size / 크기) cố định rồi nới stop trong high volatility; làm vậy rủi ro (risk / 위험) tăng hai lần.
 
-## 18. Gap risk
+## 18. Gap rủi ro (risk / 위험)
 
 FX spot thường giao dịch gần liên tục trong tuần, nhưng gap vẫn có thể xảy ra:
 
 - weekend reopen;
-- unexpected geopolitical event;
-- sudden policy announcement;
+- unexpected geopolitical sự kiện (event / 이벤트);
+- sudden chính sách (policy / 정책) announcement;
 - liquidity vacuum;
 - instrument-specific trading halt/price discontinuity.
 
-Stop order chỉ kích hoạt execution; nó không guarantee exact fill.
+Stop thứ tự (order / 순서) chỉ kích hoạt thực thi (execution / 실행); nó không guarantee chính xác (exact / 정확한) fill.
 
-Planned loss:
+Planned mất mát (loss / 손실):
 
 ```text
 100 USD
@@ -462,7 +462,7 @@ có thể thành:
 
 nếu price jumps qua stop.
 
-Risk model phải có tail scenario thay vì giả định continuous price path.
+Rủi ro (risk / 위험) mô hình (model / 모델) phải có tail scenario thay vì giả định continuous price đường dẫn (path / 경로).
 
 ## 19. Spread widening cũng làm liquidation pressure tăng
 
@@ -477,20 +477,20 @@ mark-to-market loss increases
 
 Ngay cả khi mid-price không di chuyển nhiều, account có thể chịu stress từ spread.
 
-Đây là lý do margin headroom cần lớn hơn minimum requirement.
+Đây là lý do margin headroom cần lớn hơn minimum yêu cầu (requirement / 요구사항).
 
 ## 20. Rollover và financing ảnh hưởng equity
 
-Position giữ lâu có financing debit/credit. Với leveraged position lớn, cost nhỏ theo notional có thể trở thành đáng kể so với equity.
+Position giữ lâu có financing debit/credit. Với leveraged position lớn, chi phí (cost / 비용) nhỏ theo notional có thể trở thành đáng kể so với equity.
 
-Ví dụ financing cost annualized chỉ vài phần trăm của notional nhưng effective leverage cao:
+Ví dụ financing chi phí (cost / 비용) annualized chỉ vài phần trăm của notional nhưng effective leverage cao:
 
 ```text
 small % of large notional
 → material % of account equity
 ```
 
-Do đó backtest swing/carry strategy phải include financing.
+Do đó backtest swing/carry chiến lược (strategy / 전략) phải include financing.
 
 ## 21. Drawdown math
 
@@ -502,31 +502,31 @@ Nếu account mất:
 50% → cần +100%
 ```
 
-Loss và recovery không đối xứng.
+Mất mát (loss / 손실) và khôi phục (recovery / 복구) không đối xứng.
 
-Leverage cao làm account dễ rơi vào vùng mà mathematical recovery trở nên khó.
+Leverage cao làm account dễ rơi vào vùng mà mathematical khôi phục (recovery / 복구) trở nên khó.
 
-Mục tiêu risk management vì vậy không chỉ là tránh bankruptcy, mà là **preserve compounding capacity**.
+Mục tiêu rủi ro (risk / 위험) management vì vậy không chỉ là tránh bankruptcy, mà là **preserve compounding sức chứa (capacity / 용량)**.
 
-## 22. Risk of ruin
+## 22. Rủi ro (risk / 위험) of ruin
 
-**Risk of ruin** là xác suất capital rơi xuống mức không thể tiếp tục strategy theo cách dự kiến.
+**Rủi ro (risk / 위험) of ruin** là xác suất capital rơi xuống mức không thể tiếp tục chiến lược (strategy / 전략) theo cách dự kiến.
 
 Nó tăng khi:
 
-- risk per trade tăng;
+- rủi ro (risk / 위험) per trade tăng;
 - edge nhỏ hoặc không chắc;
-- payoff distribution có fat tails;
+- payoff phân phối (distribution / 분포) có fat tails;
 - trades correlated;
 - leverage cao;
-- execution loss lớn hơn model;
-- trader thay đổi rule sau drawdown.
+- thực thi (execution / 실행) mất mát (loss / 손실) lớn hơn mô hình (model / 모델);
+- trader thay đổi quy tắc (rule / 규칙) sau drawdown.
 
-Một strategy có positive expectancy vẫn có thể ruin nếu sizing quá lớn.
+Một chiến lược (strategy / 전략) có positive expectancy vẫn có thể ruin nếu sizing quá lớn.
 
-## 23. Sequence risk
+## 23. Chuỗi (sequence / 시퀀스) rủi ro (risk / 위험)
 
-Hai traders có cùng 60 wins và 40 losses nhưng thứ tự trade khác nhau có thể trải qua drawdown rất khác nếu sizing phụ thuộc current equity hoặc leverage.
+Hai traders có cùng 60 wins và 40 losses nhưng thứ tự trade khác nhau có thể trải qua drawdown rất khác nếu sizing phụ thuộc hiện tại (current / 현재) equity hoặc leverage.
 
 Đây là lý do Monte Carlo reshuffling hữu ích:
 
@@ -536,23 +536,23 @@ same trade distribution
 → distribution of drawdowns
 ```
 
-Backtest equity curve duy nhất không cho thấy đầy đủ path risk.
+Backtest equity curve duy nhất không cho thấy đầy đủ đường dẫn (path / 경로) rủi ro (risk / 위험).
 
 ## 24. Kelly criterion: tối ưu growth không đồng nghĩa dễ chịu hay robust
 
-Kelly framework liên hệ optimal betting fraction với edge/payoff dưới assumptions cụ thể.
+Kelly khung phần mềm (framework / 프레임워크) liên hệ optimal betting fraction với edge/payoff dưới các giả định (assumptions / 가정들) cụ thể.
 
 Vấn đề trong trading thực tế:
 
 - true edge không biết chính xác;
-- distribution thay đổi;
-- tail risk bị estimate kém;
-- transaction cost thay đổi;
+- phân phối (distribution / 분포) thay đổi;
+- tail rủi ro (risk / 위험) bị estimate kém;
+- giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) thay đổi;
 - psychological tolerance thấp hơn mathematical tolerance.
 
-Vì vậy nếu dùng Kelly trong research, thường cần hiểu fractional Kelly và estimation error. Không nên lấy một Kelly fraction từ backtest nhỏ rồi coi là “size tối ưu”.
+Vì vậy nếu dùng Kelly trong research, thường cần hiểu fractional Kelly và estimation lỗi (error / 오류). Không nên lấy một Kelly fraction từ backtest nhỏ rồi coi là “kích thước (size / 크기) tối ưu”.
 
-## 25. Margin stress test
+## 25. Margin kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Một position plan nên kiểm tra ít nhất vài scenario:
 
@@ -577,31 +577,31 @@ Margin Level
 Remaining Gross Leverage
 ```
 
-Risk plan chỉ nhìn stop-loss mà không nhìn margin dynamics là chưa đủ cho leveraged product.
+Rủi ro (risk / 위험) plan chỉ nhìn stop-loss mà không nhìn margin dynamics là chưa đủ cho leveraged sản phẩm (product / 제품).
 
-## 26. Leverage và time horizon
+## 26. Leverage và thời gian (time / 시간) horizon
 
 Shorter timeframe không tự động cho phép leverage cao hơn an toàn.
 
-Intraday strategy có thể tránh overnight gap nhưng lại chịu:
+Intraday chiến lược (strategy / 전략) có thể tránh overnight gap nhưng lại chịu:
 
-- nhiều transaction costs;
-- execution noise;
-- event spikes;
-- operational risk;
-- latency/slippage.
+- nhiều giao dịch (transaction / 트랜잭션) costs;
+- thực thi (execution / 실행) noise;
+- sự kiện (event / 이벤트) spikes;
+- operational rủi ro (risk / 위험);
+- độ trễ (latency / 지연 시간)/slippage.
 
-Longer horizon có fewer trades nhưng chịu overnight/weekend risk và financing lâu hơn.
+Longer horizon có fewer trades nhưng chịu overnight/weekend rủi ro (risk / 위험) và financing lâu hơn.
 
-Leverage phải phù hợp **distribution of adverse moves**, không chỉ holding period label.
+Leverage phải phù hợp **phân phối (distribution / 분포) of adverse moves**, không chỉ holding period label.
 
 ## 27. Broker margin có thể thay đổi
 
-Margin requirement không nhất thiết cố định mãi.
+Margin yêu cầu (requirement / 요구사항) không nhất thiết cố định mãi.
 
-Trong stress hoặc quanh sự kiện, broker/venue/risk system có thể thay đổi margin according to terms/rules.
+Trong stress hoặc quanh sự kiện, broker/venue/rủi ro (risk / 위험) hệ thống (system / 시스템) có thể thay đổi margin according to terms/rules.
 
-Nếu strategy chỉ tồn tại vì đang dùng gần maximum allowed leverage:
+Nếu chiến lược (strategy / 전략) chỉ tồn tại vì đang dùng gần maximum allowed leverage:
 
 ```text
 margin increase
@@ -633,31 +633,31 @@ Gap/event risk: ...
 Portfolio heat after entry: ...
 ```
 
-Notice rằng `0.25 lot` chỉ là một dòng trong risk specification, không phải trung tâm của plan.
+Notice rằng `0.25 lot` chỉ là một dòng trong rủi ro (risk / 위험) specification, không phải trung tâm của plan.
 
 ## 29. Sai lầm cần loại bỏ
 
 ### “Margin là tiền mất tối đa”
 
-Sai. Margin là collateral requirement.
+Sai. Margin là collateral yêu cầu (requirement / 요구사항).
 
 ### “Broker cho leverage 1:100 nên dùng 100x mới hiệu quả vốn”
 
 Sai. Maximum buying power không phải recommended exposure.
 
-### “Có stop-loss nên không thể mất hơn planned risk”
+### “Có stop-loss nên không thể mất hơn planned rủi ro (risk / 위험)”
 
-Sai trong gap/slippage hoặc operational failure.
+Sai trong gap/slippage hoặc operational thất bại (failure / 실패).
 
-### “Mỗi trade risk 1% nên 10 trades = diversified”
+### “Mỗi trade rủi ro (risk / 위험) 1% nên 10 trades = diversified”
 
 Sai nếu trades cùng factor.
 
-### “Lot nhỏ nghĩa là risk nhỏ”
+### “Lot nhỏ nghĩa là rủi ro (risk / 위험) nhỏ”
 
-Chưa đủ. Cần stop distance, pip value, volatility và account size.
+Chưa đủ. Cần stop distance, pip giá trị (value / 값), volatility và account kích thước (size / 크기).
 
-### “Không bị margin call nghĩa là position an toàn”
+### “Không bị margin lời gọi (call / 호출) nghĩa là position an toàn”
 
 Sai. Account có thể chịu drawdown rất lớn trước liquidation threshold.
 
@@ -665,26 +665,26 @@ Sai. Account có thể chịu drawdown rất lớn trước liquidation threshol
 
 Bạn cần tự giải thích được:
 
-1. Notional, margin và risk khác nhau thế nào.
+1. Notional, margin và rủi ro (risk / 위험) khác nhau thế nào.
 2. Effective leverage khác broker maximum leverage ra sao.
 3. Equity giảm làm leverage tự tăng như thế nào.
-4. Margin level được hình thành từ equity/used margin ra sao.
-5. Vì sao stop-out không phải risk plan.
-6. Cách sizing từ allowed loss và invalidation distance.
+4. Margin mức (level / 수준) được hình thành từ equity/used margin ra sao.
+5. Vì sao stop-out không phải rủi ro (risk / 위험) plan.
+6. Cách sizing từ allowed mất mát (loss / 손실) và vô hiệu hóa (invalidation / 무효화) distance.
 7. Vì sao correlated positions làm portfolio heat lớn hơn tưởng tượng.
-8. Vì sao gap/slippage khiến planned loss chỉ là estimate.
+8. Vì sao gap/slippage khiến planned mất mát (loss / 손실) chỉ là estimate.
 9. Vì sao margin headroom quan trọng ngay cả khi mỗi trade có stop.
 
 ## Nối sang chương tiếp theo
 
-Sau khi biết position tạo risk ra sao, câu hỏi tiếp theo là: **điều gì làm relative value của hai currency thay đổi?**
+Sau khi biết position tạo rủi ro (risk / 위험) ra sao, câu hỏi tiếp theo là: **điều gì làm relative giá trị (value / 값) của hai currency thay đổi?**
 
 → [04 — Macro drivers, rates, carry and sessions](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 
 ## Nguồn và liên kết
 
 - CFTC — Eight Things You Should Know Before Trading Forex: https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html
-- CFTC — Foreign Currency (Forex) Fraud / risk information: https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_forex.html
+- CFTC — Foreign Currency (Forex) Fraud / rủi ro (risk / 위험) thông tin (information / 정보): https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_forex.html
 - [02 — Quotes, pips, lots and P/L](./02_QUOTES_PIPS_LOTS_AND_PNL.md)
 - [Systematic risk, backtest and execution](../02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md)
 - [Glossary, formulas and research conventions](../../00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md)

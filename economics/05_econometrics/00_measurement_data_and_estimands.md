@@ -1,18 +1,18 @@
-# Measurement, Data & Estimands — Trước regression phải biết mình đang đo gì
+# Đo lường (measurement / 측정), Dữ liệu (data / 데이터) & Estimands — Trước regression phải biết mình đang đo gì
 
-Econometrics không bắt đầu bằng việc chọn một model. Nó bắt đầu bằng câu hỏi: **economic concept nào cần đo, population nào đang được nói tới, outcome/treatment là gì, và quantity nào thật sự cần estimate?** Nếu measurement hoặc estimand sai, một regression chạy hoàn hảo về kỹ thuật vẫn trả lời sai câu hỏi.
+Econometrics không bắt đầu bằng việc chọn một mô hình (model / 모델). Nó bắt đầu bằng câu hỏi: **economic concept nào cần đo, population nào đang được nói tới, kết quả (outcome / 결과)/treatment là gì, và quantity nào thật sự cần estimate?** Nếu đo lường (measurement / 측정) hoặc estimand sai, một regression chạy hoàn hảo về kỹ thuật vẫn trả lời sai câu hỏi.
 
-## 1. Data không phải reality nguyên bản
+## 1. Dữ liệu (data / 데이터) không phải reality nguyên bản
 
-Một dataset là kết quả của measurement process: definitions, sampling frame, reporting incentives, missing data, timing, revisions và transformations.
+Một dataset là kết quả của đo lường (measurement / 측정) tiến trình (process / 프로세스): definitions, sampling frame, reporting incentives, missing dữ liệu (data / 데이터), timing, revisions và transformations.
 
 Ví dụ “income” có thể là gross labor income, disposable household income, taxable income hoặc total economic resources. “Employment” có thể là payroll job, person employed, hours worked hoặc self-reported labor status.
 
-Trước khi model hóa, phải viết operational definition.
+Trước khi mô hình (model / 모델) hóa, phải viết operational definition.
 
-## 2. Unit of observation
+## 2. Đơn vị (unit / 단위) of observation
 
-Unit có thể là:
+Đơn vị (unit / 단위) có thể là:
 
 ```text
 person
@@ -26,50 +26,50 @@ person-year
 firm-quarter
 ```
 
-Nếu outcome ở firm level nhưng treatment ở region level, standard error và interpretation phải phản ánh assignment/clustering level.
+Nếu kết quả (outcome / 결과) ở firm mức (level / 수준) nhưng treatment ở region mức (level / 수준), tiêu chuẩn (standard / 표준) lỗi (error / 오류) và interpretation phải phản ánh assignment/clustering mức (level / 수준).
 
-## 3. Cross-section, time series và panel
+## 3. Cross-section, thời gian (time / 시간) series và panel
 
-Cross-sectional data quan sát nhiều units tại một thời điểm hoặc window ngắn.
+Cross-sectional dữ liệu (data / 데이터) quan sát nhiều units tại một thời điểm hoặc cửa sổ (window / 윈도우) ngắn.
 
-Time-series data theo dõi một aggregate/unit qua thời gian.
+Time-series dữ liệu (data / 데이터) theo dõi một aggregate/đơn vị (unit / 단위) qua thời gian.
 
-Panel/longitudinal data theo dõi cùng units qua nhiều periods.
+Panel/longitudinal dữ liệu (data / 데이터) theo dõi cùng units qua nhiều periods.
 
-Cấu trúc data quyết định variation nào có thể dùng để identify effect. Panel không tự động causal; nó chỉ mở thêm within-unit variation.
+Cấu trúc dữ liệu (data / 데이터) quyết định variation nào có thể dùng để identify tác động (effect / 효과). Panel không tự động nhân quả (causal / 인과적); nó chỉ mở thêm within-unit variation.
 
-## 4. Population, sample và sampling frame
+## 4. Population, mẫu (sample / 표본) và sampling frame
 
-Population là tập đối tượng target của inference. Sample là phần thực sự quan sát. Sampling frame là danh sách/process từ đó sample được lấy.
+Population là tập đối tượng mục tiêu (target / 대상) của suy luận (inference / 추론). Mẫu (sample / 표본) là phần thực sự quan sát. Sampling frame là danh sách/tiến trình (process / 프로세스) từ đó mẫu (sample / 표본) được lấy.
 
-Một random sample từ wrong frame vẫn không đại diện target population.
+Một random mẫu (sample / 표본) từ wrong frame vẫn không đại diện mục tiêu (target / 대상) population.
 
-Ví dụ survey online tự nguyện có thể overrepresent người quan tâm topic dù sample size rất lớn.
+Ví dụ survey online tự nguyện có thể overrepresent người quan tâm topic dù cỡ mẫu (sample size / 표본 크기) rất lớn.
 
-## 5. Selection into sample
+## 5. Selection into mẫu (sample / 표본)
 
-Selection bias xuất hiện khi probability được quan sát liên quan tới variables quan trọng cho question.
+Selection độ lệch (bias / 편향) xuất hiện khi xác suất (probability / 확률) được quan sát liên quan tới variables quan trọng cho question.
 
 Examples:
 
-- wage data chỉ có cho employed workers;
-- hospital outcome chỉ có cho patients who seek care;
-- app usage data chỉ có users who adopt app;
-- firm survival data bỏ firms đã exit.
+- wage dữ liệu (data / 데이터) chỉ có cho employed workers;
+- hospital kết quả (outcome / 결과) chỉ có cho patients who seek care;
+- app usage dữ liệu (data / 데이터) chỉ có users who adopt app;
+- firm survival dữ liệu (data / 데이터) bỏ firms đã exit.
 
-Cần hỏi missingness/selection xảy ra trước hay sau treatment/outcome.
+Cần hỏi missingness/selection xảy ra trước hay sau treatment/kết quả (outcome / 결과).
 
-## 6. Missing data mechanisms
+## 6. Missing dữ liệu (data / 데이터) mechanisms
 
 Một taxonomy thường dùng:
 
 - **MCAR**: missingness độc lập với observed/unobserved values;
-- **MAR**: conditional on observed variables, missingness không còn phụ thuộc missing value;
-- **MNAR**: missingness vẫn phụ thuộc unobserved value.
+- **MAR**: conditional on observed variables, missingness không còn phụ thuộc missing giá trị (value / 값);
+- **MNAR**: missingness vẫn phụ thuộc unobserved giá trị (value / 값).
 
-MCAR rất mạnh. Imputation không “chữa” MNAR nếu mechanism không được model hoặc bounded.
+MCAR rất mạnh. Imputation không “chữa” MNAR nếu cơ chế (mechanism / 메커니즘) không được mô hình (model / 모델) hoặc bounded.
 
-## 7. Measurement error
+## 7. Sai số đo lường (measurement error / 측정 오차)
 
 Observed variable có thể viết:
 
@@ -77,29 +77,29 @@ Observed variable có thể viết:
 X_observed = X_true + measurement error
 ```
 
-Classical measurement error trong regressor thường attenuate slope toward zero trong simple regression, nhưng non-classical error có thể bias bất kỳ hướng nào.
+Classical sai số đo lường (measurement error / 측정 오차) trong regressor thường attenuate slope toward zero trong simple regression, nhưng non-classical lỗi (error / 오류) có thể độ lệch (bias / 편향) bất kỳ hướng nào.
 
-Outcome measurement error thường tăng noise nếu independent, nhưng differential reporting theo treatment có thể tạo bias.
+Kết quả (outcome / 결과) sai số đo lường (measurement error / 측정 오차) thường tăng noise nếu independent, nhưng differential reporting theo treatment có thể tạo độ lệch (bias / 편향).
 
 ## 8. Construct validity
 
-Economic constructs như productivity, market power, trust, financial stress hoặc skill không quan sát trực tiếp hoàn hảo.
+Economic constructs như productivity, thị trường (market / 시장) power, trust, financial stress hoặc skill không quan sát trực tiếp hoàn hảo.
 
 Proxy có construct validity khi nó thật sự capture concept cần nghiên cứu, không chỉ correlate thuận tiện.
 
-Ví dụ test score đo một phần academic skill nhưng không đồng nhất toàn bộ human capital.
+Ví dụ kiểm thử (test / 테스트) score đo một phần academic skill nhưng không đồng nhất toàn bộ human capital.
 
-## 9. Reliability khác validity
+## 9. Độ tin cậy (reliability / 신뢰성) khác validity
 
-Measurement reliable nghĩa lặp lại cho kết quả ổn định. Valid nghĩa đo đúng construct.
+Đo lường (measurement / 측정) reliable nghĩa lặp lại cho kết quả ổn định. Valid nghĩa đo đúng construct.
 
-Một scale có thể rất reliable nhưng consistently đo sai thing.
+Một quy mô (scale / 규모) có thể rất reliable nhưng consistently đo sai thing.
 
-## 10. Nominal, real và index construction
+## 10. Nominal, real và chỉ mục (index / 인덱스) construction
 
-Economic data cần normalization. Nominal revenue tăng có thể do price hoặc quantity. Real variables cần deflator phù hợp.
+Economic dữ liệu (data / 데이터) cần normalization. Nominal revenue tăng có thể do price hoặc quantity. Real variables cần deflator phù hợp.
 
-Index numbers phụ thuộc basket, weights, rebasing và quality adjustment. Không coi index là physical unit trực tiếp.
+Chỉ mục (index / 인덱스) numbers phụ thuộc basket, weights, rebasing và chất lượng (quality / 품질) adjustment. Không coi chỉ mục (index / 인덱스) là vật lý (physical / 물리적) đơn vị (unit / 단위) trực tiếp.
 
 ## 11. Log transformation
 
@@ -109,31 +109,31 @@ Logs thường dùng vì:
 log differences ≈ percentage changes
 ```
 
-và biến multiplicative relation thành additive.
+và biến multiplicative quan hệ (relation / 관계) thành additive.
 
 Nhưng log không defined cho zero/negative values; cách thêm constant tùy tiện có thể đổi interpretation.
 
-## 12. Rate, ratio và denominator problem
+## 12. Tỷ lệ (rate / 비율), ratio và denominator bài toán (problem / 문제)
 
-Một rate thay đổi có thể do numerator hoặc denominator.
+Một tỷ lệ (rate / 비율) thay đổi có thể do numerator hoặc denominator.
 
-Unemployment rate giảm vì employed tăng khác hoàn toàn labor force shrink. Debt/GDP giảm có thể do debt repayment, nominal GDP growth hoặc inflation.
+Unemployment tỷ lệ (rate / 비율) giảm vì employed tăng khác hoàn toàn labor force shrink. Debt/GDP giảm có thể do debt repayment, nominal GDP growth hoặc inflation.
 
-Luôn decomposed denominator trước khi kể causal story.
+Luôn decomposed denominator trước khi kể nhân quả (causal / 인과적) story.
 
-## 13. Stock, flow và timing alignment
+## 13. Stock, luồng (flow / 흐름) và timing alignment
 
-Một stock tại cuối năm không nên tùy tiện regress với flow của period khác mà không xác định timing.
+Một stock tại cuối năm không nên tùy tiện regress với luồng (flow / 흐름) của period khác mà không xác định timing.
 
-Treatment phải xảy ra trước outcome nếu causal direction yêu cầu như vậy. Data annual có thể che intra-year ordering.
+Treatment phải xảy ra trước kết quả (outcome / 결과) nếu nhân quả (causal / 인과적) direction yêu cầu như vậy. Dữ liệu (data / 데이터) annual có thể che intra-year thứ tự (ordering / 순서).
 
-## 14. Data-generating process
+## 14. Data-generating tiến trình (process / 프로세스)
 
-Data-generating process (DGP) là conceptual mechanism tạo observed data.
+Data-generating tiến trình (process / 프로세스) (DGP) là conceptual cơ chế (mechanism / 메커니즘) tạo observed dữ liệu (data / 데이터).
 
-Một model không cần replicate toàn bộ reality; nó phải capture phần DGP cần cho estimand.
+Một mô hình (model / 모델) không cần replicate toàn bộ reality; nó phải capture phần DGP cần cho estimand.
 
-Econometric reasoning hỏi:
+Econometric lập luận (reasoning / 추론) hỏi:
 
 ```text
 What variation generated X?
@@ -141,9 +141,9 @@ Why did Y move?
 Which common causes generated both?
 ```
 
-## 15. Descriptive parameter vs causal estimand
+## 15. Descriptive parameter vs nhân quả (causal / 인과적) estimand
 
-Descriptive target có thể là:
+Descriptive mục tiêu (target / 대상) có thể là:
 
 ```text
 mean income
@@ -153,81 +153,81 @@ forecast error
 conditional expectation
 ```
 
-Causal target có thể là average treatment effect.
+Nhân quả (causal / 인과적) mục tiêu (target / 대상) có thể là average treatment tác động (effect / 효과).
 
-Không mọi useful question đều causal. Forecasting tomorrow’s demand có thể cần prediction, không cần treatment effect.
+Không mọi useful question đều nhân quả (causal / 인과적). Forecasting tomorrow’s demand có thể cần prediction, không cần treatment tác động (effect / 효과).
 
 ## 16. Potential outcomes
 
-Causal framework thường viết mỗi unit có hai potential outcomes:
+Nhân quả (causal / 인과적) khung phần mềm (framework / 프레임워크) thường viết mỗi đơn vị (unit / 단위) có hai potential outcomes:
 
 ```text
 Y_i(1) = outcome if treated
 Y_i(0) = outcome if untreated
 ```
 
-Individual treatment effect:
+Individual treatment tác động (effect / 효과):
 
 ```text
 τ_i = Y_i(1) − Y_i(0)
 ```
 
-Fundamental problem: cùng một unit không thể simultaneously quan sát cả hai states tại cùng thời điểm. Causal inference là bài toán xây credible counterfactual cho potential outcome bị thiếu.
+Fundamental bài toán (problem / 문제): cùng một đơn vị (unit / 단위) không thể simultaneously quan sát cả hai states tại cùng thời điểm. Nhân quả (causal / 인과적) suy luận (inference / 추론) là bài toán xây credible counterfactual cho potential kết quả (outcome / 결과) bị thiếu.
 
 ## 17. ATE, ATT và LATE
 
-Average Treatment Effect:
+Average Treatment Tác động (effect / 효과):
 
 ```text
 ATE = E[Y(1) − Y(0)]
 ```
 
-Average Treatment Effect on the Treated:
+Average Treatment Tác động (effect / 효과) on the Treated:
 
 ```text
 ATT = E[Y(1) − Y(0) | D=1]
 ```
 
-Instrumental-variable settings có thể identify Local Average Treatment Effect (LATE) cho compliers dưới assumptions cụ thể.
+Instrumental-variable settings có thể identify Cục bộ (local / 로컬) Average Treatment Tác động (effect / 효과) (LATE) cho compliers dưới các giả định (assumptions / 가정들) cụ thể.
 
-Các estimands không interchangeable. Policy question phải quyết định population nào quan trọng.
+Các estimands không interchangeable. Chính sách (policy / 정책) question phải quyết định population nào quan trọng.
 
 ## 18. Treatment phải được định nghĩa rõ
 
-“Education”, “policy”, “exposure” hoặc “credit” thường quá mơ hồ.
+“Education”, “chính sách (policy / 정책)”, “exposure” hoặc “credit” thường quá mơ hồ.
 
-Treatment cần dose, timing, duration và version. Một year schooling thêm ở primary school có thể khác university. Tax reform có nhiều components cùng lúc.
+Treatment cần dose, timing, duration và phiên bản (version / 버전). Một year schooling thêm ở primary school có thể khác university. Tax reform có nhiều components cùng lúc.
 
-Nếu treatment có multiple versions, Stable Unit Treatment Value Assumption (SUTVA) có thể bị đe dọa.
+Nếu treatment có multiple versions, Stable Đơn vị (unit / 단위) Treatment Giá trị (value / 값) Giả định (assumption / 가정) (SUTVA) có thể bị đe dọa.
 
 ## 19. Interference và spillovers
 
-Standard potential-outcomes notation thường giả định outcome của unit i không phụ thuộc treatment của unit j.
+Tiêu chuẩn (standard / 표준) potential-outcomes notation thường giả định kết quả (outcome / 결과) của đơn vị (unit / 단위) i không phụ thuộc treatment của đơn vị (unit / 단위) j.
 
-Network, vaccination, classroom, labor market và geographic policy thường có spillovers.
+Mạng (network / 네트워크), vaccination, classroom, labor thị trường (market / 시장) và geographic chính sách (policy / 정책) thường có spillovers.
 
-Nếu interference tồn tại, estimand phải mở rộng từ own-treatment effect sang direct/indirect/network effects.
+Nếu interference tồn tại, estimand phải mở rộng từ own-treatment tác động (effect / 효과) sang direct/indirect/mạng (network / 네트워크) effects.
 
 ## 20. Counterfactual không phải prediction đơn thuần
 
-Prediction hỏi `Y sẽ là bao nhiêu?`. Causal counterfactual hỏi `Y sẽ khác bao nhiêu nếu intervention thay đổi trong khi các điều kiện relevant khác được giữ theo causal structure?`
+Prediction hỏi `Y sẽ là bao nhiêu?`. Nhân quả (causal / 인과적) counterfactual hỏi `Y sẽ khác bao nhiêu nếu intervention thay đổi trong khi các điều kiện relevant khác được giữ theo causal structure?`
 
-Một model forecast tốt không nhất thiết estimate causal effect đúng nếu nó dựa vào variables downstream hoặc proxies của selection.
+Một mô hình (model / 모델) forecast tốt không nhất thiết estimate nhân quả (causal / 인과적) tác động (effect / 효과) đúng nếu nó dựa vào variables downstream hoặc proxies của selection.
 
 ## 21. DAG intuition
 
-Directed acyclic graph (DAG) là công cụ biểu diễn assumptions về causal paths.
+Directed acyclic đồ thị (graph / 그래프) (DAG) là công cụ biểu diễn các giả định (assumptions / 가정들) về nhân quả (causal / 인과적) paths.
 
-Nếu `Z` gây cả treatment `D` và outcome `Y`, `Z` là confounder:
+Nếu `Z` gây cả treatment `D` và kết quả (outcome / 결과) `Y`, `Z` là confounder:
 
 ```text
 Z → D
 Z → Y
 ```
 
-Conditioning on confounder có thể block backdoor path. Nhưng conditioning on collider có thể tạo bias.
+Conditioning on confounder có thể khối (block / 블록) backdoor đường dẫn (path / 경로). Nhưng conditioning on collider có thể tạo độ lệch (bias / 편향).
 
-## 22. Collider bias
+## 22. Collider độ lệch (bias / 편향)
 
 Nếu:
 
@@ -235,45 +235,45 @@ Nếu:
 D → C ← U
 ```
 
-và ta condition on `C`, D và U có thể trở nên statistically associated dù ban đầu independent.
+và ta điều kiện (condition / 조건) on `C`, D và U có thể trở nên statistically associated dù ban đầu independent.
 
-Examples thường xuất hiện khi sample chỉ gồm hired workers, hospitalized patients hoặc selected applicants.
+Examples thường xuất hiện khi mẫu (sample / 표본) chỉ gồm hired workers, hospitalized patients hoặc selected applicants.
 
-Không phải “control càng nhiều càng tốt”.
+Không phải “điều khiển (control / 제어) càng nhiều càng tốt”.
 
 ## 23. Bad controls
 
-Control variable nằm sau treatment có thể absorb một phần treatment effect hoặc mở collider path.
+Điều khiển (control / 제어) variable nằm sau treatment có thể absorb một phần treatment tác động (effect / 효과) hoặc mở collider đường dẫn (path / 경로).
 
-Nếu policy `D` làm income `M` tăng và income làm health `Y` tăng, controlling for `M` chuyển estimand từ total effect sang something closer to direct effect.
+Nếu chính sách (policy / 정책) `D` làm income `M` tăng và income làm health `Y` tăng, controlling for `M` chuyển estimand từ total tác động (effect / 효과) sang something closer to direct tác động (effect / 효과).
 
-Control choice phải dựa causal question, không chỉ p-value.
+Điều khiển (control / 제어) choice phải dựa nhân quả (causal / 인과적) question, không chỉ p-value.
 
-## 24. Sampling uncertainty vs identification uncertainty
+## 24. Sampling bất định (uncertainty / 불확실성) vs identification bất định (uncertainty / 불확실성)
 
-Standard error đo sampling uncertainty conditional on model/design. Nó không đo uncertainty về omitted confounders, wrong functional form, invalid instrument hay bad measurement.
+Tiêu chuẩn (standard / 표준) lỗi (error / 오류) đo sampling bất định (uncertainty / 불확실성) conditional on mô hình (model / 모델)/thiết kế (design / 설계). Nó không đo bất định (uncertainty / 불확실성) về omitted confounders, wrong functional form, invalid instrument hay bad đo lường (measurement / 측정).
 
 Một estimate có SE cực nhỏ vẫn có thể causally wrong.
 
-## 25. Internal và external validity
+## 25. Nội bộ (internal / 내부) và bên ngoài (external / 외부) validity
 
-Internal validity hỏi estimate có credible cho studied sample/context không.
+Nội bộ (internal / 내부) validity hỏi estimate có credible cho studied mẫu (sample / 표본)/ngữ cảnh (context / 맥락) không.
 
-External validity hỏi effect có generalize sang population, time, institution hoặc scale khác không.
+Bên ngoài (external / 외부) validity hỏi tác động (effect / 효과) có generalize sang population, thời gian (time / 시간), institution hoặc quy mô (scale / 규모) khác không.
 
-Randomization mạnh về internal validity nhưng không tự đảm bảo external validity.
+Randomization mạnh về nội bộ (internal / 내부) validity nhưng không tự đảm bảo bên ngoài (external / 외부) validity.
 
 ## 26. Statistical significance vs economic significance
 
-Large sample có thể làm tiny effect statistically significant.
+Large mẫu (sample / 표본) có thể làm tiny tác động (effect / 효과) statistically significant.
 
-Cần report effect size, units, confidence interval và economic magnitude.
+Cần report tác động (effect / 효과) kích thước (size / 크기), units, confidence interval và economic magnitude.
 
-Một coefficient `0.002` có thể nhỏ hoặc lớn tùy outcome scale và policy cost.
+Một coefficient `0.002` có thể nhỏ hoặc lớn tùy kết quả (outcome / 결과) quy mô (scale / 규모) và chính sách (policy / 정책) chi phí (cost / 비용).
 
 ## 27. Pre-analysis thinking
 
-Trước khi chạy model, nên viết:
+Trước khi chạy mô hình (model / 모델), nên viết:
 
 ```text
 Question
@@ -290,33 +290,33 @@ Falsification / robustness ideas
 
 Workflow này ngăn “regression fishing” sau khi nhìn kết quả.
 
-## 28. Failure modes
+## 28. Thất bại (failure / 실패) modes
 
-Sai lầm thứ nhất là dùng dataset lớn để thay cho representative/credible design.
+Sai lầm thứ nhất là dùng dataset lớn để thay cho representative/credible thiết kế (design / 설계).
 
-Sai lầm thứ hai là gọi coefficient causal trước khi xác định counterfactual.
+Sai lầm thứ hai là gọi coefficient nhân quả (causal / 인과적) trước khi xác định counterfactual.
 
-Sai lầm thứ ba là control mọi variable available.
+Sai lầm thứ ba là điều khiển (control / 제어) mọi variable available.
 
 Sai lầm thứ tư là dùng statistical significance thay economic magnitude.
 
-Sai lầm thứ năm là không phân biệt ATE, ATT và local effect.
+Sai lầm thứ năm là không phân biệt ATE, ATT và cục bộ (local / 로컬) tác động (effect / 효과).
 
-Sai lầm thứ sáu là bỏ timing, missingness và measurement process.
+Sai lầm thứ sáu là bỏ timing, missingness và đo lường (measurement / 측정) tiến trình (process / 프로세스).
 
-## 29. Mental model
+## 29. Mô hình tư duy (mental model / 사고 모델)
 
-Trước mọi econometric analysis, hãy hỏi:
+Trước mọi econometric phân tích (analysis / 분석), hãy hỏi:
 
 1. Economic concept chính xác là gì?
-2. Unit, population và sampling frame là gì?
-3. Variable được đo thế nào, có error/selection nào?
+2. Đơn vị (unit / 단위), population và sampling frame là gì?
+3. Variable được đo thế nào, có lỗi (error / 오류)/selection nào?
 4. Question là description, prediction hay causality?
 5. Estimand chính xác là gì?
 6. Counterfactual nào bị thiếu?
 7. Variation trong treatment đến từ đâu?
 8. Confounders/colliders/post-treatment variables nằm ở đâu?
-9. Standard error có đang che identification uncertainty không?
-10. Result có economic magnitude và external validity ra sao?
+9. Tiêu chuẩn (standard / 표준) lỗi (error / 오류) có đang che identification bất định (uncertainty / 불확실성) không?
+10. Kết quả (result / 결과) có economic magnitude và bên ngoài (external / 외부) validity ra sao?
 
-Sau khi xác định data và estimand, regression mới trở thành công cụ hữu ích. Chapter tiếp theo xây regression từ conditional expectation và projection, thay vì học OLS như một nút bấm.
+Sau khi xác định dữ liệu (data / 데이터) và estimand, regression mới trở thành công cụ hữu ích. Chapter tiếp theo xây regression từ conditional expectation và projection, thay vì học OLS như một nút bấm.

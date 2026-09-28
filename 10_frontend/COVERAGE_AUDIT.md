@@ -1,189 +1,189 @@
-# Frontend Coverage Audit
+# Frontend Coverage Kiểm tra (audit / 감사)
 
-File này kiểm tra `10_frontend/` theo mental model cấp domain, không chỉ theo
-số lượng file. Mục tiêu là phát hiện nơi người học có thể biết syntax nhưng
-chưa hiểu boundary, ownership, ordering, failure, evidence hoặc deployment
-artifact.
+Tệp (file / 파일) này kiểm tra `10_frontend/` theo mô hình tư duy (mental model / 사고 모델) cấp lĩnh vực (domain / 도메인), không chỉ theo
+số lượng tệp (file / 파일). Mục tiêu là phát hiện nơi người học có thể biết cú pháp (syntax / 문법) nhưng
+chưa hiểu ranh giới (boundary / 경계), quyền sở hữu (ownership / 소유권), thứ tự (ordering / 순서), thất bại (failure / 실패), bằng chứng (evidence / 증거) hoặc triển khai (deployment / 배포)
+sản phẩm tạo ra (artifact / 산출물).
 
 `CATALOG.md` vẫn dùng
 [`javascript/javascript_beginner_rebuilt.md`](./javascript/javascript_beginner_rebuilt.md)
-làm entrypoint. [`README.md`](./README.md) là map cấp domain và giải thích vì
-sao entrypoint là JavaScript track trong khi learning model bắt đầu từ browser
-request và Web Platform.
+làm điểm vào (entrypoint / 진입점). [`README.md`](./README.md) là map cấp lĩnh vực (domain / 도메인) và giải thích vì
+sao điểm vào (entrypoint / 진입점) là JavaScript nhánh học (track / 트랙) trong khi học tập (learning / 학습) mô hình (model / 모델) bắt đầu từ trình duyệt (browser / 브라우저)
+yêu cầu (request / 요청) và Nền tảng Web (web platform / 웹 플랫폼).
 
 ## Cách đọc trạng thái
 
-- **Covered** — có canonical owner và có đủ explanation để đi từ mechanism đến
-  production implication.
-- **Deep** — canonical owner đã có, đồng thời có supplement/master/framework
-  material hoặc case/lab để reasoning ở boundary khó.
-- **Distributed** — coverage nằm ở nhiều track; người học phải theo cross-link,
+- **Covered** — có đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자) và có đủ explanation để đi từ cơ chế (mechanism / 메커니즘) đến
+  môi trường vận hành (production / 운영 환경) implication.
+- **Deep** — đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자) đã có, đồng thời có supplement/master/khung phần mềm (framework / 프레임워크)
+  material hoặc trường hợp (case / 사례)/lab để lập luận (reasoning / 추론) ở ranh giới (boundary / 경계) khó.
+- **Phân tán (distributed / 분산)** — coverage nằm ở nhiều nhánh học (track / 트랙); người học phải theo cross-link,
   nhưng không phải thiếu nội dung.
-- **Partial** — đã có nội dung đáng kể nhưng map cấp domain hoặc một invariant /
-  evidence path còn mỏng; đây là candidate cho vòng update sau.
-- **Intentional boundary** — không duplicate ở Frontend vì domain khác là owner;
-  Frontend chỉ giữ contract cần để tích hợp.
+- **Partial** — đã có nội dung đáng kể nhưng map cấp lĩnh vực (domain / 도메인) hoặc một bất biến (invariant / 불변식) /
+  bằng chứng (evidence / 증거) đường dẫn (path / 경로) còn mỏng; đây là candidate cho vòng cập nhật (update / 업데이트) sau.
+- **Intentional ranh giới (boundary / 경계)** — không duplicate ở Frontend vì lĩnh vực (domain / 도메인) khác là đơn vị sở hữu (owner / 오너);
+  Frontend chỉ giữ đặc tả hợp đồng (contract / 계약) cần để tích hợp.
 
-## 1. Audit theo mental model
+## 1. Kiểm tra (audit / 감사) theo mô hình tư duy (mental model / 사고 모델)
 
-| Stage | Owner chính | Coverage | Bằng chứng / câu hỏi kiểm tra |
+| Stage | Đơn vị sở hữu (owner / 오너) chính | Coverage | Bằng chứng / câu hỏi kiểm tra |
 |---|---|---|---|
-| URL / request | JavaScript + HTML Master; cross-link Computer Science/Backend | Deep | Có phân biệt URL, navigation, resource request, `fetch`, cache, CORS và API contract không? Theory được nối end-to-end bằng `90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md`. |
-| Browser / network | JavaScript Senior/Master; HTML Master; WebSquare 15/21 | Deep | Có nhìn browser là host environment thay vì chỉ ECMAScript không? Có trace timeout, cancellation, retry, cache, cross-origin và stale response theo timeline không? |
-| HTML parse | HTML Beginner + Master | Deep | Có phân biệt source markup, parser repair, DOM tree, optional end tag, raw text/RCDATA và SSR parser-stable markup không? |
-| DOM | HTML + JavaScript Beginner/Intermediate | Deep | Có phân biệt DOM node, component object, attribute/live property, logical identity và physical DOM representation không? |
-| CSS parse / CSSOM | CSS Beginner + Master | Deep | Có giải thích declaration → cascade → specified/computed/used/actual value và formatting tree khác DOM tree không? |
-| Style / cascade | CSS Beginner + Master; SCSS/Tailwind authoring | Deep | Có reasoning về specificity, layers, inheritance, scope proximity, `!important`, token và source order thay vì tăng selector bừa không? |
-| Layout | CSS Beginner + Master + Rendering Measurement Lab | Deep | Có hiểu normal flow, BFC/IFC, flex/grid, intrinsic sizing, fragmentation, container query, invalidation cost, forced synchronous layout và read/write ordering không? |
-| Paint | CSS Master; JavaScript Senior; Rendering Measurement Lab | Deep | Có phân biệt style/layout/paint/composite và chứng minh repaint bằng trace/profile thay vì suy từ property folklore không? Có xem invalidated area, frequency và visual complexity không? |
-| Composite | CSS Master; JavaScript Senior; Rendering Measurement Lab | Deep | Có hiểu compositing/layer là optimization có memory/resource cost, không phải `transform`/GPU = miễn phí? Có baseline → trace → change → re-measure không? |
-| Interaction | HTML + CSS + JavaScript Beginner/Intermediate; React/WebSquare | Deep | Có phân biệt semantic HTML, keyboard/focus/pointer/input, bubbling/capturing/delegation, form state và framework event abstraction không? |
-| JavaScript / event loop | JavaScript Beginner → Intermediate → Senior → Master | Deep | Có trace stack, task, microtask, render opportunity, timer, `requestAnimationFrame`, worker, stream, cancellation và reentrancy theo timeline không? |
-| State / data | JavaScript Intermediate/Senior; React; WebSquare | Deep | Có xác định source of truth, state machine, derived state, DTO boundary, stale result, optimistic update, identity và ownership của async operation không? |
-| Accessibility | HTML Master; CSS; React; WebSquare 09 | Deep | Có xem accessibility tree/semantic contract là correctness, không phải polish? Có kiểm tra accessible name, focus, keyboard, live region, `aria-*`, form error và screen-reader behavior không? |
-| Performance | JavaScript Senior; CSS Master; React; WebSquare 24; `90_case_studies/` | Deep | Có đo network, main-thread, layout/paint, bundle, memory, large DOM, formatter/render amplification, RUM/profile và production budget thay vì tối ưu theo cảm giác không? |
-| Security | HTML Master; JavaScript Senior/Master; React/WebSquare; Backend boundary | Deep | Có trace untrusted input → parser/DOM/URL/HTML sink, XSS, CSP/Trusted Types, CSRF, token, `postMessage`, bridge, supply chain và server authorization không? |
-| Deployment | JavaScript Senior/Master; WebSquare 12/22; DevOps boundary; Request→Pixel case | Deep | Có phân biệt source, build artifact, bundle/source map, config, cache, deployment identity, rollback và browser đang chạy artifact nào không? Case end-to-end buộc nối commit/build/hash/config với resource browser thực sự nhận. |
+| URL / yêu cầu (request / 요청) | JavaScript + HTML Master; cross-link Khoa học máy tính (computer science / 컴퓨터 과학)/Backend | Deep | Có phân biệt URL, điều hướng (navigation / 내비게이션), yêu cầu tài nguyên (resource request / 리소스 요청), `fetch`, bộ nhớ đệm (cache / 캐시), CORS và Đặc tả API (API contract / API 계약) không? Lý thuyết (theory / 이론) được nối end-to-end bằng `90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md`. |
+| Trình duyệt (browser / 브라우저) / mạng (network / 네트워크) | JavaScript Cấp cao (senior / 시니어)/Master; HTML Master; WebSquare 15/21 | Deep | Có nhìn trình duyệt (browser / 브라우저) là host môi trường (environment / 환경) thay vì chỉ ECMAScript không? Có dấu vết (trace / 추적) hết thời gian chờ (timeout / 타임아웃), cancellation, thử lại (retry / 재시도), bộ nhớ đệm (cache / 캐시), cross-origin và stale phản hồi (response / 응답) theo timeline không? |
+| HTML parse | HTML Beginner + Master | Deep | Có phân biệt nguồn (source / 소스) markup, parser repair, DOM cây (tree / 트리), optional end tag, raw văn bản (text / 텍스트)/RCDATA và SSR parser-stable markup không? |
+| DOM | HTML + JavaScript Beginner/Intermediate | Deep | Có phân biệt DOM nút (node / 노드), thành phần (component / 컴포넌트) đối tượng (object / 객체), attribute/live thuộc tính (property / 속성), logical định danh (identity / 식별자) và vật lý (physical / 물리적) DOM biểu diễn (representation / 표현) không? |
+| CSS parse / CSSOM | CSS Beginner + Master | Deep | Có giải thích declaration → cascade → specified/computed/used/actual giá trị (value / 값) và formatting cây (tree / 트리) khác DOM cây (tree / 트리) không? |
+| Style / cascade | CSS Beginner + Master; SCSS/Tailwind authoring | Deep | Có lập luận (reasoning / 추론) về specificity, layers, inheritance, phạm vi (scope / 범위) proximity, `!important`, đơn vị từ (token / 토큰) và nguồn (source / 소스) thứ tự (order / 순서) thay vì tăng selector bừa không? |
+| Bố cục (layout / 레이아웃) | CSS Beginner + Master + Rendering Đo lường (measurement / 측정) Lab | Deep | Có hiểu luồng bố cục thông thường (normal flow / 일반 흐름), BFC/IFC, flex/grid, định cỡ nội tại (intrinsic sizing / 내재 크기 결정), fragmentation, bộ chứa (container / 컨테이너) truy vấn (query / 쿼리), vô hiệu hóa (invalidation / 무효화) chi phí (cost / 비용), forced synchronous bố cục (layout / 레이아웃) và read/ghi (write / 쓰기) thứ tự (ordering / 순서) không? |
+| Paint | CSS Master; JavaScript Cấp cao (senior / 시니어); Rendering Đo lường (measurement / 측정) Lab | Deep | Có phân biệt style/bố cục (layout / 레이아웃)/paint/composite và chứng minh repaint bằng dấu vết (trace / 추적)/profile thay vì suy từ thuộc tính (property / 속성) folklore không? Có xem invalidated area, frequency và visual độ phức tạp (complexity / 복잡도) không? |
+| Composite | CSS Master; JavaScript Cấp cao (senior / 시니어); Rendering Đo lường (measurement / 측정) Lab | Deep | Có hiểu compositing/tầng (layer / 계층) là tối ưu hóa (optimization / 최적화) có bộ nhớ (memory / 메모리)/tài nguyên (resource / 자원) chi phí (cost / 비용), không phải `transform`/GPU = miễn phí? Có baseline → dấu vết (trace / 추적) → thay đổi (change / 변경) → re-measure không? |
+| Tương tác (interaction / 상호작용) | HTML + CSS + JavaScript Beginner/Intermediate; React/WebSquare | Deep | Có phân biệt ngữ nghĩa (semantic / 의미적) HTML, keyboard/focus/pointer/đầu vào (input / 입력), bubbling/capturing/delegation, form trạng thái (state / 상태) và khung phần mềm (framework / 프레임워크) sự kiện (event / 이벤트) lớp trừu tượng (abstraction / 추상화) không? |
+| JavaScript / vòng lặp sự kiện (event loop / 이벤트 루프) | JavaScript Beginner → Intermediate → Cấp cao (senior / 시니어) → Master | Deep | Có dấu vết (trace / 추적) ngăn xếp (stack / 스택), tác vụ (task / 작업), microtask, kết xuất (render / 렌더링) opportunity, timer, `requestAnimationFrame`, worker, stream, cancellation và reentrancy theo timeline không? |
+| Trạng thái (state / 상태) / dữ liệu (data / 데이터) | JavaScript Intermediate/Cấp cao (senior / 시니어); React; WebSquare | Deep | Có xác định nguồn chuẩn (source of truth / 정본), máy trạng thái (state machine / 상태 머신), derived trạng thái (state / 상태), DTO ranh giới (boundary / 경계), stale kết quả (result / 결과), optimistic cập nhật (update / 업데이트), định danh (identity / 식별자) và quyền sở hữu (ownership / 소유권) của async thao tác (operation / 연산) không? |
+| Khả năng tiếp cận (accessibility / 접근성) | HTML Master; CSS; React; WebSquare 09 | Deep | Có xem cây khả năng tiếp cận (accessibility tree / 접근성 트리)/ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) là tính đúng đắn (correctness / 정확성), không phải polish? Có kiểm tra accessible name, focus, keyboard, live region, `aria-*`, form lỗi (error / 오류) và screen-reader hành vi (behavior / 동작) không? |
+| Hiệu năng (performance / 성능) | JavaScript Cấp cao (senior / 시니어); CSS Master; React; WebSquare 24; `90_case_studies/` | Deep | Có đo mạng (network / 네트워크), main-thread, bố cục (layout / 레이아웃)/paint, bundle, bộ nhớ (memory / 메모리), large DOM, formatter/kết xuất (render / 렌더링) amplification, RUM/profile và môi trường vận hành (production / 운영 환경) ngân sách (budget / 예산) thay vì tối ưu theo cảm giác không? |
+| Bảo mật (security / 보안) | HTML Master; JavaScript Cấp cao (senior / 시니어)/Master; React/WebSquare; Backend ranh giới (boundary / 경계) | Deep | Có dấu vết (trace / 추적) untrusted đầu vào (input / 입력) → parser/DOM/URL/HTML sink, XSS, CSP/Trusted Types, CSRF, đơn vị từ (token / 토큰), `postMessage`, cầu nối (bridge / 브리지), supply chuỗi (chain / 사슬) và máy chủ (server / 서버) authorization không? |
+| Triển khai (deployment / 배포) | JavaScript Cấp cao (senior / 시니어)/Master; WebSquare 12/22; DevOps ranh giới (boundary / 경계); Yêu cầu (request / 요청)→Điểm ảnh (pixel / 픽셀) trường hợp (case / 사례) | Deep | Có phân biệt nguồn (source / 소스), hiện vật bản dựng (build artifact / 빌드 산출물), bundle/bản đồ mã nguồn (source map / 소스 맵), cấu hình (config / 설정), bộ nhớ đệm (cache / 캐시), triển khai (deployment / 배포) định danh (identity / 식별자), quay lui (rollback / 롤백) và trình duyệt (browser / 브라우저) đang chạy sản phẩm tạo ra (artifact / 산출물) nào không? Trường hợp (case / 사례) end-to-end buộc nối lần ghi nhận (commit / 커밋)/bản dựng (build / 빌드)/băm (hash / 해시)/cấu hình (config / 설정) với tài nguyên (resource / 자원) trình duyệt (browser / 브라우저) thực sự nhận. |
 
-### Kết luận pipeline
+### Kết luận chuỗi xử lý (pipeline / 파이프라인)
 
-Pipeline hiện có coverage mạnh từ request tới deployment. Gap trước đây ở
-paint/composite đã được đóng bằng một evidence path riêng: theory vẫn thuộc CSS
-Master và JavaScript Senior, còn
+Chuỗi xử lý (pipeline / 파이프라인) hiện có coverage mạnh từ yêu cầu (request / 요청) tới triển khai (deployment / 배포). Gap trước đây ở
+paint/composite đã được đóng bằng một bằng chứng (evidence / 증거) đường dẫn (path / 경로) riêng: lý thuyết (theory / 이론) vẫn thuộc CSS
+Master và JavaScript Cấp cao (senior / 시니어), còn
 [`90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md)
-buộc người học tạo baseline, record trace, phân loại scripting/style/layout/
-paint/composite, xác định invalidation rồi re-measure sau một thay đổi duy nhất.
+buộc người học tạo baseline, bản ghi (record / 레코드) dấu vết (trace / 추적), phân loại scripting/style/bố cục (layout / 레이아웃)/
+paint/composite, xác định vô hiệu hóa (invalidation / 무효화) rồi re-measure sau một thay đổi duy nhất.
 
 Tương tự, [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md)
-đã nối navigation/resource discovery, parser, DOM/CSSOM, event loop, state,
-accessibility, security và source→build→cache→deployed artifact thành một case
-duy nhất. Vì vậy hai P1 gap này không còn cần thêm theory file; vòng sau chỉ nên
-mở rộng khi có capability/evidence mới.
+đã nối điều hướng (navigation / 내비게이션)/tài nguyên (resource / 자원) discovery, parser, DOM/CSSOM, vòng lặp sự kiện (event loop / 이벤트 루프), trạng thái (state / 상태),
+khả năng tiếp cận (accessibility / 접근성), bảo mật (security / 보안) và nguồn (source / 소스)→bản dựng (build / 빌드)→bộ nhớ đệm (cache / 캐시)→deployed sản phẩm tạo ra (artifact / 산출물) thành một trường hợp (case / 사례)
+duy nhất. Vì vậy hai P1 gap này không còn cần thêm lý thuyết (theory / 이론) tệp (file / 파일); vòng sau chỉ nên
+mở rộng khi có năng lực (capability / 역량)/bằng chứng (evidence / 증거) mới.
 
-## 2. Audit theo track
+## 2. Kiểm tra (audit / 감사) theo nhánh học (track / 트랙)
 
-| Track | Learning spine | Đã cover tốt | Boundary cần giữ |
+| Nhánh học (track / 트랙) | Trục học (learning spine / 학습 축) | Đã cover tốt | Ranh giới (boundary / 경계) cần giữ |
 |---|---|---|---|
-| HTML | Beginner → Master Implementation | Semantics, parser, forms, DOM relation, resources, a11y, security, legacy và SSR | Không biến HTML thành XML; không dùng ARIA thay native semantics khi native element đã đủ. |
-| CSS | Beginner → Senior → Master Supplement | Cascade, selectors, box/formatting, sizing, responsive, animation, rendering và modern CSS | CSS authoring không đồng nghĩa rendering; SCSS/Tailwind không thay CSS mental model. |
-| SCSS | Beginner → Senior → Master Supplement | Compile-time language, module/configuration, mixin/function, selector algebra, colors và Dart Sass evolution | Output canonical vẫn là CSS; runtime token nên tách khỏi compile-time config. |
-| Tailwind | Beginner → Senior → Master Supplement | Utility-first, v4 build model, tokens, variants, responsive, component boundary và production governance | Utility class không loại bỏ cascade, accessibility, design semantics hoặc performance review. |
-| JavaScript | Beginner → Intermediate → Senior → Master Supplement | Language/runtime, browser host, DOM/event, async, state, memory, concurrency, performance, security, testing và architecture | Đây là catalog entrypoint; không để React/WebSquare thay thế JavaScript semantics. |
-| TypeScript | Foundations → Type System → Tooling/Modules → Senior Production → Version/Migration | Static/runtime boundary, structural typing, generics, compiler/tooling, declarations, validation và migration | Type annotation không phải runtime validation và không tạo authorization. |
-| React | Beginner → Intermediate → Advanced/Senior → Master + Legacy Reference | Render/reconciliation, identity, state/effects, concurrency, SSR/hydration/RSC, compiler, performance, security và migration | React là consumer của Web Platform; debug DOM/CSS/event/network trước khi gán lỗi cho React. |
-| WebSquare | 01 → 24 + glossary/coverage | Runtime/page/scope, DataCollection/Submission, Grid, reusable architecture, lifecycle, test, build, auth, integration, observability, workflow và profiling | Framework contract có thể build/version-dependent; XML source, runtime engine và W-Pack artifact phải tách. |
-| XML | Beginner → Intermediate → Senior → Master Supplement | Syntax/tree, namespace, validation, transformation, security và integration | XML là data/config/document boundary; không dùng XML parser assumptions để giải thích HTML parser. |
-| Case/Lab | Request→Pixel trace → Rendering Measurement Lab | Cross-owner causal trace, production evidence, layout/paint/composite profiling, artifact identity | Không biến case thành owner theory mới; framework-specific profiler chỉ bổ sung browser/platform evidence. |
+| HTML | Beginner → Master Hiện thực (implementation / 구현) | Ngữ nghĩa (semantics / 의미론), parser, forms, DOM quan hệ (relation / 관계), resources, a11y, bảo mật (security / 보안), legacy và SSR | Không biến HTML thành XML; không dùng ARIA thay bản địa (native / 네이티브) ngữ nghĩa (semantics / 의미론) khi bản địa (native / 네이티브) element đã đủ. |
+| CSS | Beginner → Cấp cao (senior / 시니어) → Master Supplement | Cascade, selectors, box/formatting, sizing, responsive, animation, rendering và hiện đại (modern / 현대적) CSS | CSS authoring không đồng nghĩa rendering; SCSS/Tailwind không thay CSS mô hình tư duy (mental model / 사고 모델). |
+| SCSS | Beginner → Cấp cao (senior / 시니어) → Master Supplement | Compile-time ngôn ngữ (language / 언어), mô-đun (module / 모듈)/cấu hình (configuration / 구성), mixin/hàm (function / 함수), selector algebra, colors và Dart Sass evolution | Đầu ra (output / 출력) chuẩn gốc (canonical / 정본) vẫn là CSS; thời gian chạy (runtime / 런타임) đơn vị từ (token / 토큰) nên tách khỏi compile-time cấu hình (config / 설정). |
+| Tailwind | Beginner → Cấp cao (senior / 시니어) → Master Supplement | Utility-first, v4 bản dựng (build / 빌드) mô hình (model / 모델), tokens, variants, responsive, thành phần (component / 컴포넌트) ranh giới (boundary / 경계) và môi trường vận hành (production / 운영 환경) quản trị (governance / 거버넌스) | Utility lớp (class / 클래스) không loại bỏ cascade, khả năng tiếp cận (accessibility / 접근성), thiết kế (design / 설계) ngữ nghĩa (semantics / 의미론) hoặc hiệu năng (performance / 성능) rà soát (review / 검토). |
+| JavaScript | Beginner → Intermediate → Cấp cao (senior / 시니어) → Master Supplement | Ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임), trình duyệt (browser / 브라우저) host, DOM/sự kiện (event / 이벤트), async, trạng thái (state / 상태), bộ nhớ (memory / 메모리), tính đồng thời (concurrency / 동시성), hiệu năng (performance / 성능), bảo mật (security / 보안), testing và kiến trúc (architecture / 아키텍처) | Đây là danh mục (catalog / 카탈로그) điểm vào (entrypoint / 진입점); không để React/WebSquare thay thế JavaScript ngữ nghĩa (semantics / 의미론). |
+| TypeScript | Foundations → Hệ kiểu (type system / 타입 시스템) → Tooling/Modules → Cấp cao (senior / 시니어) Môi trường vận hành (production / 운영 환경) → Phiên bản (version / 버전)/Di chuyển (migration / 마이그레이션) | Static/thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계), structural typing, generics, trình biên dịch (compiler / 컴파일러)/tooling, declarations, kiểm tra hợp lệ (validation / 검증) và di chuyển (migration / 마이그레이션) | Kiểu (type / 타입) annotation không phải thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증) và không tạo authorization. |
+| React | Beginner → Intermediate → Advanced/Cấp cao (senior / 시니어) → Master + Legacy Tham chiếu (reference / 참조) | Kết xuất (render / 렌더링)/reconciliation, định danh (identity / 식별자), trạng thái (state / 상태)/effects, tính đồng thời (concurrency / 동시성), SSR/hydration/RSC, trình biên dịch (compiler / 컴파일러), hiệu năng (performance / 성능), bảo mật (security / 보안) và di chuyển (migration / 마이그레이션) | React là bên tiêu thụ (consumer / 소비자) của Nền tảng Web (web platform / 웹 플랫폼); gỡ lỗi (debug / 디버그) DOM/CSS/sự kiện (event / 이벤트)/mạng (network / 네트워크) trước khi gán lỗi cho React. |
+| WebSquare | 01 → 24 + glossary/coverage | Thời gian chạy (runtime / 런타임)/page/phạm vi (scope / 범위), DataCollection/Submission, Grid, reusable kiến trúc (architecture / 아키텍처), vòng đời (lifecycle / 생명주기), kiểm thử (test / 테스트), bản dựng (build / 빌드), auth, tích hợp (integration / 통합), khả năng quan sát (observability / 관측 가능성), workflow và profiling | Khung phần mềm (framework / 프레임워크) đặc tả hợp đồng (contract / 계약) có thể bản dựng (build / 빌드)/version-dependent; XML nguồn (source / 소스), thời gian chạy (runtime / 런타임) engine và W-Pack sản phẩm tạo ra (artifact / 산출물) phải tách. |
+| XML | Beginner → Intermediate → Cấp cao (senior / 시니어) → Master Supplement | Cú pháp (syntax / 문법)/cây (tree / 트리), không gian tên (namespace / 네임스페이스), kiểm tra hợp lệ (validation / 검증), transformation, bảo mật (security / 보안) và tích hợp (integration / 통합) | XML là dữ liệu (data / 데이터)/cấu hình (config / 설정)/document ranh giới (boundary / 경계); không dùng XML parser các giả định (assumptions / 가정들) để giải thích HTML parser. |
+| Trường hợp (case / 사례)/Lab | Yêu cầu (request / 요청)→Điểm ảnh (pixel / 픽셀) dấu vết (trace / 추적) → Rendering Đo lường (measurement / 측정) Lab | Cross-owner nhân quả (causal / 인과적) dấu vết (trace / 추적), bằng chứng vận hành (production evidence / 운영 증거), bố cục (layout / 레이아웃)/paint/composite profiling, sản phẩm tạo ra (artifact / 산출물) định danh (identity / 식별자) | Không biến trường hợp (case / 사례) thành đơn vị sở hữu (owner / 오너) lý thuyết (theory / 이론) mới; framework-specific profiler chỉ bổ sung trình duyệt (browser / 브라우저)/nền tảng (platform / 플랫폼) bằng chứng (evidence / 증거). |
 
-## 3. Cross-cutting invariant audit
+## 3. Cross-cutting bất biến (invariant / 불변식) kiểm tra (audit / 감사)
 
 Người học đạt coverage thực dụng khi có thể trả lời các câu hỏi sau mà không
-đổi câu trả lời theo framework:
+đổi câu trả lời theo khung phần mềm (framework / 프레임워크):
 
-### Identity và ownership
+### Định danh (identity / 식별자) và quyền sở hữu (ownership / 소유권)
 
-- Resource nào được định danh bởi URL/cache key/build ID; entity nào được định
-  danh bởi business key thay vì array index hoặc DOM position?
-- Component, DOM node, screen instance, request, session, workflow và artifact
-  có lifetime nào; ai tạo, ai sở hữu, ai dispose?
-- State canonical nằm ở đâu; state nào chỉ là derived view, cache, optimistic
+- Tài nguyên (resource / 자원) nào được định danh bởi URL/bộ nhớ đệm (cache / 캐시) key/bản dựng (build / 빌드) ID; thực thể (entity / 엔터티) nào được định
+  danh bởi nghiệp vụ (business / 비즈니스) key thay vì array chỉ mục (index / 인덱스) hoặc DOM position?
+- Thành phần (component / 컴포넌트), DOM nút (node / 노드), screen instance, yêu cầu (request / 요청), session, workflow và sản phẩm tạo ra (artifact / 산출물)
+  có thời gian tồn tại (lifetime / 수명) nào; ai tạo, ai sở hữu, ai dispose?
+- Trạng thái (state / 상태) chuẩn gốc (canonical / 정본) nằm ở đâu; trạng thái (state / 상태) nào chỉ là derived view, bộ nhớ đệm (cache / 캐시), optimistic
   projection hoặc UI affordance?
 
-### Ordering và async
+### Thứ tự (ordering / 순서) và async
 
-- Một event đi qua capture → target → bubble hay framework dispatch nào?
-- Promise continuation, timer, rendering opportunity, user input và network
-  response có thể xen kẽ như thế nào?
-- Khi response cũ về sau intent mới, operation bị cancel, session đổi hoặc
-  screen bị dispose, invariant nào ngăn stale update?
+- Một sự kiện (event / 이벤트) đi qua capture → mục tiêu (target / 대상) → bubble hay khung phần mềm (framework / 프레임워크) dispatch nào?
+- Promise continuation, timer, rendering opportunity, người dùng (user / 사용자) đầu vào (input / 입력) và mạng (network / 네트워크)
+  phản hồi (response / 응답) có thể xen kẽ như thế nào?
+- Khi phản hồi (response / 응답) cũ về sau intent mới, thao tác (operation / 연산) bị cancel, session đổi hoặc
+  screen bị dispose, bất biến (invariant / 불변식) nào ngăn stale cập nhật (update / 업데이트)?
 
-### Semantics và accessibility
+### Ngữ nghĩa (semantics / 의미론) và khả năng tiếp cận (accessibility / 접근성)
 
-- Native HTML element đã biểu diễn đúng semantics chưa, hay code đang thêm ARIA
+- Bản địa (native / 네이티브) HTML element đã biểu diễn đúng ngữ nghĩa (semantics / 의미론) chưa, hay mã (code / 코드) đang thêm ARIA
   để che markup sai?
-- Focus, keyboard, accessible name, error announcement và reduced motion có
-  được xem là public behavior cần regression test không?
-- React/WebSquare abstraction có giữ được semantics khi render conditionally,
+- Focus, keyboard, accessible name, lỗi (error / 오류) announcement và reduced motion có
+  được xem là công khai (public / 공개) hành vi (behavior / 동작) cần regression kiểm thử (test / 테스트) không?
+- React/WebSquare lớp trừu tượng (abstraction / 추상화) có giữ được ngữ nghĩa (semantics / 의미론) khi kết xuất (render / 렌더링) conditionally,
   lazy, portal, popup, WFrame hoặc hydration không?
 
-### Performance và evidence
+### Hiệu năng (performance / 성능) và bằng chứng (evidence / 증거)
 
-- Độ trễ được chia thành DNS/connect/response/parse/script/style/layout/paint/
-  interaction hay chỉ gọi chung là “frontend chậm”?
-- Work có bị khuếch đại theo rows × cells × listeners × renders không?
-- Kết luận tối ưu dựa trên trace/profile/metric nào; có guard trong test hoặc
-  release gate không?
-- Có phân biệt framework render/reconciliation với browser rendering không?
-- Có ghi scenario, environment, build ID và run variance trước khi so before/after không?
+- Độ trễ được chia thành DNS/connect/phản hồi (response / 응답)/parse/script/style/bố cục (layout / 레이아웃)/paint/
+  tương tác (interaction / 상호작용) hay chỉ gọi chung là “frontend chậm”?
+- Công việc (work / 작업) có bị khuếch đại theo rows × cells × listeners × renders không?
+- Kết luận tối ưu dựa trên dấu vết (trace / 추적)/profile/chỉ số (metric / 지표) nào; có guard trong kiểm thử (test / 테스트) hoặc
+  bản phát hành (release / 릴리스) gate không?
+- Có phân biệt khung phần mềm (framework / 프레임워크) kết xuất (render / 렌더링)/reconciliation với trình duyệt (browser / 브라우저) rendering không?
+- Có ghi scenario, môi trường (environment / 환경), bản dựng (build / 빌드) ID và run variance trước khi so before/after không?
 
-### Security và trust boundary
+### Bảo mật (security / 보안) và trust ranh giới (boundary / 경계)
 
-- Dữ liệu đến từ URL, HTML, storage, postMessage, iframe, WebView bridge,
-  backend hay user input được coi là untrusted ở đâu?
-- Validation/encoding/sanitization khác nhau thế nào; vì sao UI validation
-  không thay server authorization?
-- CSP, cookie/token, CSRF, CORS và dependency/build supply chain thuộc boundary
-  nào; evidence nào chứng minh policy đang active?
+- Dữ liệu đến từ URL, HTML, lưu trữ (storage / 저장소), postMessage, iframe, WebView cầu nối (bridge / 브리지),
+  backend hay người dùng (user / 사용자) đầu vào (input / 입력) được coi là untrusted ở đâu?
+- Kiểm tra hợp lệ (validation / 검증)/encoding/sanitization khác nhau thế nào; vì sao UI kiểm tra hợp lệ (validation / 검증)
+  không thay máy chủ (server / 서버) authorization?
+- CSP, cookie/đơn vị từ (token / 토큰), CSRF, CORS và phụ thuộc (dependency / 의존성)/bản dựng (build / 빌드) supply chuỗi (chain / 사슬) thuộc ranh giới (boundary / 경계)
+  nào; bằng chứng (evidence / 증거) nào chứng minh chính sách (policy / 정책) đang active?
 
-### Artifact và deployment
+### Sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포)
 
-- Source markup/code, generated CSS/JS, bundle, source map, config, cache và
-  deployed resource liên hệ với nhau ra sao?
-- Khi chỉ production lỗi, có biết build ID, engine/browser, feature flag,
-  config và cache version để tái tạo không?
-- Rollback có trả đúng artifact/config/schema contract hay chỉ quay lại Git
+- Nguồn (source / 소스) markup/mã (code / 코드), generated CSS/JS, bundle, bản đồ mã nguồn (source map / 소스 맵), cấu hình (config / 설정), bộ nhớ đệm (cache / 캐시) và
+  deployed tài nguyên (resource / 자원) liên hệ với nhau ra sao?
+- Khi chỉ môi trường vận hành (production / 운영 환경) lỗi, có biết bản dựng (build / 빌드) ID, engine/trình duyệt (browser / 브라우저), cờ tính năng (feature flag / 기능 플래그),
+  cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시) phiên bản (version / 버전) để tái tạo không?
+- Quay lui (rollback / 롤백) có trả đúng sản phẩm tạo ra (artifact / 산출물)/cấu hình (config / 설정)/lược đồ (schema / 스키마) đặc tả hợp đồng (contract / 계약) hay chỉ quay lại Git
   branch?
 
-## 4. Framework placement audit
+## 4. Khung phần mềm (framework / 프레임워크) placement kiểm tra (audit / 감사)
 
-Framework track được xem là đạt khi mỗi chương trả lời được ba câu hỏi:
+Nhánh học khung phần mềm (framework track / 프레임워크 트랙) được xem là đạt khi mỗi chương trả lời được ba câu hỏi:
 
-1. Browser primitive nào đang được dùng (DOM, CSS, event, history, fetch,
+1. Trình duyệt (browser / 브라우저) thành phần nguyên thủy (primitive / 기본 요소) nào đang được dùng (DOM, CSS, event, history, fetch,
    storage, accessibility hoặc Web Worker)?
-2. Framework thêm state/lifecycle/rendering abstraction nào, và abstraction đó
-   sở hữu identity, subscription, cleanup, error và scheduling ra sao?
-3. Application phải kiểm chứng contract nào bằng test, telemetry và artifact
-   evidence?
+2. Khung phần mềm (framework / 프레임워크) thêm trạng thái (state / 상태)/vòng đời (lifecycle / 생명주기)/rendering lớp trừu tượng (abstraction / 추상화) nào, và lớp trừu tượng (abstraction / 추상화) đó
+   sở hữu định danh (identity / 식별자), subscription, cleanup, lỗi (error / 오류) và scheduling ra sao?
+3. Ứng dụng (application / 애플리케이션) phải kiểm chứng đặc tả hợp đồng (contract / 계약) nào bằng kiểm thử (test / 테스트), telemetry và sản phẩm tạo ra (artifact / 산출물)
+   bằng chứng (evidence / 증거)?
 
-React và WebSquare đều đã có canonical index riêng và đều cross-link về
-JavaScript/XML/platform. Không coi framework README là domain entrypoint là
+React và WebSquare đều đã có chuẩn gốc (canonical / 정본) chỉ mục (index / 인덱스) riêng và đều cross-link về
+JavaScript/XML/nền tảng (platform / 플랫폼). Không coi khung phần mềm (framework / 프레임워크) README là lĩnh vực (domain / 도메인) điểm vào (entrypoint / 진입점) là
 điều kiện bắt buộc để tránh “framework-first drift”.
 
-## 5. Gaps và ưu tiên vòng audit tiếp theo
+## 5. Gaps và ưu tiên vòng kiểm tra (audit / 감사) tiếp theo
 
-Backlog hiện chuyển từ thiếu foundation sang **integration/compatibility và
-regression evidence**. Không nên mở thêm framework chapter chỉ để tăng breadth.
+Backlog hiện chuyển từ thiếu foundation sang **tích hợp (integration / 통합)/tính tương thích (compatibility / 호환성) và
+regression bằng chứng (evidence / 증거)**. Không nên mở thêm khung phần mềm (framework / 프레임워크) chapter chỉ để tăng breadth.
 
 | Priority | Cơ hội cải thiện | Trạng thái / hướng xử lý |
 |---|---|---|
-| P0 | Giữ một canonical domain map và một catalog entrypoint duy nhất | Đã xử lý bằng `README.md`; giữ catalog entrypoint là JavaScript Beginner. |
-| P1 | Nối URL/navigation/resource request với DOM/CSS/render trace trong một browser case | **Đã xử lý** bằng `90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md`. |
-| P1 | Làm rõ paint/composite evidence và layout invalidation bằng profile production-like | **Đã xử lý** bằng `90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md`; theory owner vẫn là CSS/JavaScript. |
-| P1 | Chuẩn hóa source → build → cache → deployed artifact vocabulary giữa React/WebSquare/vanilla | **Đã có canonical chain** trong Request→Pixel case; có thể bổ sung glossary nhỏ chỉ khi track-specific vocabulary lệch nhau. |
-| P2 | Tạo capability matrix cho browser, WebView, React và WebSquare | Chỉ thêm khi có migration/compatibility use case thực; matrix phải có version/evidence, không phải feature checklist chung. |
-| P2 | Bổ sung end-to-end accessibility regression example xuyên native HTML và framework | Đây là candidate depth tiếp theo nếu cần; đặt case ở layer integration và cross-link owner, không duplicate a11y theory. |
-| P2 | Tạo one-screen production incident drill | Candidate cao: artifact mismatch + stale request + performance + accessibility/security checks trong một incident, nếu muốn luyện vận hành thay vì thêm theory. |
+| P0 | Giữ một chuẩn gốc (canonical / 정본) lĩnh vực (domain / 도메인) map và một danh mục (catalog / 카탈로그) điểm vào (entrypoint / 진입점) duy nhất | Đã xử lý bằng `README.md`; giữ danh mục (catalog / 카탈로그) điểm vào (entrypoint / 진입점) là JavaScript Beginner. |
+| P1 | Nối URL/điều hướng (navigation / 내비게이션)/yêu cầu tài nguyên (resource request / 리소스 요청) với DOM/CSS/kết xuất (render / 렌더링) dấu vết (trace / 추적) trong một trình duyệt (browser / 브라우저) trường hợp (case / 사례) | **Đã xử lý** bằng `90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md`. |
+| P1 | Làm rõ paint/composite bằng chứng (evidence / 증거) và bố cục (layout / 레이아웃) vô hiệu hóa (invalidation / 무효화) bằng profile production-like | **Đã xử lý** bằng `90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md`; lý thuyết (theory / 이론) đơn vị sở hữu (owner / 오너) vẫn là CSS/JavaScript. |
+| P1 | Chuẩn hóa nguồn (source / 소스) → bản dựng (build / 빌드) → bộ nhớ đệm (cache / 캐시) → deployed sản phẩm tạo ra (artifact / 산출물) vocabulary giữa React/WebSquare/vanilla | **Đã có chuẩn gốc (canonical / 정본) chuỗi (chain / 사슬)** trong Yêu cầu (request / 요청)→Điểm ảnh (pixel / 픽셀) trường hợp (case / 사례); có thể bổ sung glossary nhỏ chỉ khi track-specific vocabulary lệch nhau. |
+| P2 | Tạo năng lực (capability / 역량) ma trận (matrix / 행렬) cho trình duyệt (browser / 브라우저), WebView, React và WebSquare | Chỉ thêm khi có di chuyển (migration / 마이그레이션)/tính tương thích (compatibility / 호환성) use trường hợp (case / 사례) thực; ma trận (matrix / 행렬) phải có phiên bản (version / 버전)/bằng chứng (evidence / 증거), không phải tính năng (feature / 기능) checklist chung. |
+| P2 | Bổ sung end-to-end khả năng tiếp cận (accessibility / 접근성) regression example xuyên bản địa (native / 네이티브) HTML và khung phần mềm (framework / 프레임워크) | Đây là candidate độ sâu (depth / 깊이) tiếp theo nếu cần; đặt trường hợp (case / 사례) ở tầng (layer / 계층) tích hợp (integration / 통합) và cross-link đơn vị sở hữu (owner / 오너), không duplicate a11y lý thuyết (theory / 이론). |
+| P2 | Tạo one-screen môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) drill | Candidate cao: sản phẩm tạo ra (artifact / 산출물) mismatch + stale yêu cầu (request / 요청) + hiệu năng (performance / 성능) + khả năng tiếp cận (accessibility / 접근성)/bảo mật (security / 보안) checks trong một sự cố (incident / 인시던트), nếu muốn luyện vận hành thay vì thêm lý thuyết (theory / 이론). |
 
-## 6. Exit criteria cho Frontend domain
+## 6. Exit criteria cho Frontend lĩnh vực (domain / 도메인)
 
-Coverage cấp domain được xem là đủ mạnh khi người học có thể:
+Coverage cấp lĩnh vực (domain / 도메인) được xem là đủ mạnh khi người học có thể:
 
-1. vẽ request → parser → tree → style → layout → paint → composite → event →
-   state → deployment timeline cho một màn hình thật;
-2. chỉ ra canonical owner của một concept và không giải thích browser behavior
-   bằng framework folklore;
-3. đặt tên identity, owner, lifetime, ordering và invariant của async state;
-4. kiểm tra accessibility như semantics và public behavior;
-5. đo performance bằng evidence, phân biệt client work với network/server work;
-6. trace untrusted data qua HTML/DOM/URL/message/bridge/backend boundary;
-7. nối source commit với generated artifact, config, cache, deployed resource và
-   rollback plan;
-8. đọc code legacy, chọn migration boundary và giữ nguyên invariant thay vì
+1. vẽ yêu cầu (request / 요청) → parser → cây (tree / 트리) → style → bố cục (layout / 레이아웃) → paint → composite → sự kiện (event / 이벤트) →
+   trạng thái (state / 상태) → triển khai (deployment / 배포) timeline cho một màn hình thật;
+2. chỉ ra đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자) của một concept và không giải thích trình duyệt (browser / 브라우저) hành vi (behavior / 동작)
+   bằng khung phần mềm (framework / 프레임워크) folklore;
+3. đặt tên định danh (identity / 식별자), đơn vị sở hữu (owner / 오너), thời gian tồn tại (lifetime / 수명), thứ tự (ordering / 순서) và bất biến (invariant / 불변식) của async trạng thái (state / 상태);
+4. kiểm tra khả năng tiếp cận (accessibility / 접근성) như ngữ nghĩa (semantics / 의미론) và công khai (public / 공개) hành vi (behavior / 동작);
+5. đo hiệu năng (performance / 성능) bằng bằng chứng (evidence / 증거), phân biệt máy khách (client / 클라이언트) công việc (work / 작업) với mạng (network / 네트워크)/máy chủ (server / 서버) công việc (work / 작업);
+6. dấu vết (trace / 추적) untrusted dữ liệu (data / 데이터) qua HTML/DOM/URL/message/cầu nối (bridge / 브리지)/backend ranh giới (boundary / 경계);
+7. nối nguồn (source / 소스) lần ghi nhận (commit / 커밋) với generated sản phẩm tạo ra (artifact / 산출물), cấu hình (config / 설정), bộ nhớ đệm (cache / 캐시), deployed tài nguyên (resource / 자원) và
+   quay lui (rollback / 롤백) plan;
+8. đọc mã (code / 코드) legacy, chọn di chuyển (migration / 마이그레이션) ranh giới (boundary / 경계) và giữ nguyên bất biến (invariant / 불변식) thay vì
    rewrite theo trend;
-9. tạo performance report có scenario, baseline, trace observation, hypothesis,
+9. tạo hiệu năng (performance / 성능) report có scenario, baseline, dấu vết (trace / 추적) observation, hypothesis,
    one-change experiment, variance và regression check.
 
-Hiện domain đã có canonical owner cho toàn bộ các exit criteria trên. Nội dung
-mới chỉ nên được thêm khi tạo **new capability, migration evidence, production
-incident drill hoặc regression artifact**, không nên mở rộng chỉ vì xuất hiện
-một framework hay CSS API mới.
+Hiện lĩnh vực (domain / 도메인) đã có đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자) cho toàn bộ các exit criteria trên. Nội dung
+mới chỉ nên được thêm khi tạo **new năng lực (capability / 역량), di chuyển (migration / 마이그레이션) bằng chứng (evidence / 증거), môi trường vận hành (production / 운영 환경)
+sự cố (incident / 인시던트) drill hoặc regression sản phẩm tạo ra (artifact / 산출물)**, không nên mở rộng chỉ vì xuất hiện
+một khung phần mềm (framework / 프레임워크) hay CSS API mới.

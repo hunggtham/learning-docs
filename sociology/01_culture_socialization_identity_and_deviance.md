@@ -1,58 +1,58 @@
-# Culture, Socialization, Identity & Deviance — Meaning systems, self và social control
+# Culture, Socialization, Định danh (identity / 식별자) & Deviance — Meaning các hệ thống (systems / 시스템들), self và xã hội (social / 사회적) điều khiển (control / 제어)
 
-Culture gives people shared symbols, classifications and expectations; socialization transmits and transforms those meanings; identity locates a person within social relations; deviance reveals how norms are enforced and contested. These topics are connected because “normal” behavior is not just individual preference—it is produced through interaction, institutions and sanctions.
+Culture gives people dùng chung (shared / 공유) symbols, classifications and expectations; socialization transmits and transforms those meanings; định danh (identity / 식별자) locates a person within xã hội (social / 사회적) relations; deviance reveals how norms are enforced and contested. These topics are connected because “normal” hành vi (behavior / 동작) is not just individual preference—it is produced through tương tác (interaction / 상호작용), institutions and sanctions.
 
 ## 1. Culture
 
-Culture includes symbols, language, values, norms, practices, knowledge and material artifacts shared unevenly across groups.
+Culture includes symbols, ngôn ngữ (language / 언어), values, norms, practices, kiến thức (knowledge / 지식) and material artifacts dùng chung (shared / 공유) unevenly across groups.
 
-Culture is not a perfectly coherent package. Societies contain subcultures, contradictions and contested meanings.
+Culture is not a perfectly coherent gói (package / 패키지). Societies contain subcultures, contradictions and contested meanings.
 
 ## 2. Values vs norms
 
-Values are broad ideas about what is desirable. Norms are more specific expectations for behavior.
+Values are broad ideas about what is desirable. Norms are more specific expectations for hành vi (behavior / 동작).
 
-A society may value equality while norms/institutions reproduce unequal outcomes; stated values and enacted norms can diverge.
+A society may giá trị (value / 값) equality while norms/institutions reproduce unequal outcomes; stated values and enacted norms can diverge.
 
-## 3. Symbols and language
+## 3. Symbols and ngôn ngữ (language / 언어)
 
-Symbols carry shared meanings. Language classifies experience and allows coordination.
+Symbols carry dùng chung (shared / 공유) meanings. Ngôn ngữ (language / 언어) classifies experience and allows coordination.
 
-Language influences attention and categories without strictly determining thought.
+Ngôn ngữ (language / 언어) influences attention and categories without strictly determining thought.
 
 ## 4. Material culture
 
-Technology, clothing, architecture and objects shape practices as well as express meaning.
+Technology, clothing, kiến trúc (architecture / 아키텍처) and objects shape practices as well as express meaning.
 
-A smartphone is not only a tool; it changes communication timing, privacy and social expectations.
+A smartphone is not only a công cụ (tool / 도구); it changes communication timing, privacy and xã hội (social / 사회적) expectations.
 
 ## 5. Cultural lag
 
-Technology/institutions can change faster than norms/laws, creating adjustment tensions.
+Technology/institutions can thay đổi (change / 변경) faster than norms/laws, creating adjustment tensions.
 
-The concept is useful when mechanism is specified rather than used as generic explanation for any conflict.
+The concept is useful when cơ chế (mechanism / 메커니즘) is specified rather than used as generic explanation for any xung đột (conflict / 충돌).
 
 ## 6. Subculture and counterculture
 
 Subculture has distinctive meanings/practices within broader society. Counterculture explicitly rejects central norms/values.
 
-Boundaries are often porous and commercialized over time.
+Boundaries are often porous and commercialized over thời gian (time / 시간).
 
 ## 7. Cultural capital
 
-Knowledge, tastes, language styles and credentials can be socially valued and converted into educational/status advantages.
+Kiến thức (knowledge / 지식), tastes, ngôn ngữ (language / 언어) styles and credentials can be socially valued and converted into educational/status advantages.
 
 Cultural capital matters because institutions reward some competencies more than others; it is not just “being cultured”.
 
 ## 8. Socialization
 
-Socialization is process through which people learn language, norms, roles and identities.
+Socialization is tiến trình (process / 프로세스) through which people learn ngôn ngữ (language / 언어), norms, roles and identities.
 
 It continues across life course, not only childhood.
 
 ## 9. Primary and secondary socialization
 
-Primary socialization occurs in early family/caregiver context. Secondary socialization occurs through schools, workplaces, professions, military, peer groups and institutions.
+Primary socialization occurs in early family/caregiver ngữ cảnh (context / 맥락). Secondary socialization occurs through schools, workplaces, professions, military, peer groups and institutions.
 
 Transitions may require resocialization.
 
@@ -60,41 +60,41 @@ Transitions may require resocialization.
 
 Family, peers, education, media, religious organizations, workplaces and digital platforms transmit different expectations.
 
-Agents can conflict; people learn to switch roles/codes across settings.
+Agents can xung đột (conflict / 충돌); people learn to switch roles/codes across settings.
 
 ## 11. Hidden curriculum
 
 Schools teach formal subjects but also punctuality, authority relations, competition/cooperation and institutional routines.
 
-These latent lessons vary by school structure and culture.
+These latent lessons vary by school cấu trúc (structure / 구조) and culture.
 
 ## 12. Life course
 
-Age categories and transitions are socially organized: schooling, work, marriage, retirement.
+Age categories and transitions are socially organized: schooling, công việc (work / 작업), marriage, retirement.
 
 Historical cohorts experience different opportunity structures, so age effects and cohort effects must be separated.
 
-## 13. Self and interaction
+## 13. Self and tương tác (interaction / 상호작용)
 
-Identity develops partly by seeing oneself through others’ reactions and shared categories.
+Định danh (identity / 식별자) develops partly by seeing oneself through others’ reactions and dùng chung (shared / 공유) categories.
 
-The “self” is neither wholly private nor wholly determined; interaction provides mirrors and vocabularies.
+The “self” is neither wholly private nor wholly determined; tương tác (interaction / 상호작용) provides mirrors and vocabularies.
 
 ## 14. Looking-glass self
 
 People imagine how others see/judge them and incorporate perceived reactions into self-concept.
 
-The process can occur even when perceptions of others are inaccurate.
+The tiến trình (process / 프로세스) can occur even when perceptions of others are inaccurate.
 
 ## 15. Role-taking
 
-Understanding expectations of specific others and generalized social rules lets people coordinate behavior.
+Understanding expectations of specific others and generalized xã hội (social / 사회적) rules lets people coordinate hành vi (behavior / 동작).
 
-Complex social life requires switching perspectives across roles.
+Complex xã hội (social / 사회적) life requires switching perspectives across roles.
 
-## 16. Identity
+## 16. Định danh (identity / 식별자)
 
-Identity can include personal narratives and social categories such as occupation, nationality, family role, gender, class or community.
+Định danh (identity / 식별자) can include personal narratives and xã hội (social / 사회적) categories such as occupation, nationality, family role, gender, lớp (class / 클래스) or community.
 
 Salience of identities changes across contexts.
 
@@ -102,97 +102,97 @@ Salience of identities changes across contexts.
 
 Some status can dominate how others interpret a person across situations.
 
-This can simplify interaction but also stereotype and constrain opportunity.
+This can simplify tương tác (interaction / 상호작용) but also stereotype and constrain opportunity.
 
-## 18. Identity work
+## 18. Định danh (identity / 식별자) công việc (work / 작업)
 
 People actively present, negotiate and repair identities through speech, dress, credentials, associations and narratives.
 
-Identity is not infinitely flexible because audiences/institutions control recognition.
+Định danh (identity / 식별자) is not infinitely flexible because audiences/institutions điều khiển (control / 제어) recognition.
 
 ## 19. Stigma
 
-Stigma arises when an attribute is socially discrediting within a context.
+Stigma arises when an attribute is socially discrediting within a ngữ cảnh (context / 맥락).
 
-Consequences depend visibility, controllability assumptions, disclosure and institutional discrimination.
+Consequences depend visibility, controllability các giả định (assumptions / 가정들), disclosure and institutional discrimination.
 
 ## 20. Passing and covering
 
-People may conceal stigmatized attributes (passing) or downplay them (covering) to manage interaction risk.
+People may conceal stigmatized attributes (passing) or downplay them (covering) to manage tương tác (interaction / 상호작용) rủi ro (risk / 위험).
 
-These strategies impose psychological and relational costs and depend context.
+These strategies impose psychological and relational costs and depend ngữ cảnh (context / 맥락).
 
-## 21. Boundary work
+## 21. Ranh giới (boundary / 경계) công việc (work / 작업)
 
 Groups create symbolic boundaries between “us” and “them” through tastes, morality, credentials, ethnicity, profession or politics.
 
-When symbolic boundaries gain institutional consequences they can become social boundaries affecting resources/opportunities.
+When symbolic boundaries gain institutional consequences they can become xã hội (social / 사회적) boundaries affecting resources/opportunities.
 
 ## 22. Norm enforcement
 
 Norms persist through formal sanctions and informal approval/disapproval.
 
-Monitoring, group cohesion and repeated interaction strengthen enforcement.
+Monitoring, group cohesion and repeated tương tác (interaction / 상호작용) strengthen enforcement.
 
 ## 23. Deviance
 
-Deviance is behavior/identity judged as violating norms in a social context.
+Deviance is hành vi (behavior / 동작)/định danh (identity / 식별자) judged as violating norms in a xã hội (social / 사회적) ngữ cảnh (context / 맥락).
 
-It is relational: same behavior can be deviant in one setting and normal in another.
+It is relational: same hành vi (behavior / 동작) can be deviant in one setting and normal in another.
 
 ## 24. Crime vs deviance
 
-Crime violates law; deviance violates social norms. They overlap but are not identical.
+Crime violates law; deviance violates xã hội (social / 사회적) norms. They overlap but are not identical.
 
-Some illegal acts are socially tolerated; some legal behavior is stigmatized.
+Some illegal acts are socially tolerated; some legal hành vi (behavior / 동작) is stigmatized.
 
 ## 25. Strain approaches
 
 Deviance can emerge when culturally valued goals are emphasized but legitimate means are unequally available.
 
-This links deviance to opportunity structure rather than only individual pathology.
+This links deviance to opportunity cấu trúc (structure / 구조) rather than only individual pathology.
 
-## 26. Differential association / learning
+## 26. Differential association / học tập (learning / 학습)
 
 Behavioral norms can be learned through close groups that provide definitions, techniques and reinforcement.
 
 Peer association and selection must be distinguished empirically.
 
-## 27. Labeling theory
+## 27. Labeling lý thuyết (theory / 이론)
 
-Social reaction can transform a rule violation into a durable deviant identity by changing opportunities, networks and self-concept.
+Xã hội (social / 사회적) reaction can transform a quy tắc (rule / 규칙) violation into a durable deviant định danh (identity / 식별자) by changing opportunities, networks and self-concept.
 
-Labeling does not claim initial behavior has no causes; it emphasizes consequences of classification.
+Labeling does not claim initial hành vi (behavior / 동작) has no causes; it emphasizes consequences of classification.
 
-## 28. Social control
+## 28. Xã hội (social / 사회적) điều khiển (control / 제어)
 
-Social control includes institutions/practices that encourage conformity: family supervision, schools, workplaces, policing, professional licensing, reputation systems.
+Xã hội (social / 사회적) điều khiển (control / 제어) includes institutions/practices that encourage conformity: family supervision, schools, workplaces, policing, professional licensing, reputation các hệ thống (systems / 시스템들).
 
-Control can be formal or informal and can be unequally applied.
+Điều khiển (control / 제어) can be formal or informal and can be unequally applied.
 
 ## 29. Surveillance
 
-Digital and organizational systems make behavior more observable and measurable.
+Digital and organizational các hệ thống (systems / 시스템들) make hành vi (behavior / 동작) more observable and measurable.
 
-Surveillance can improve coordination/safety but also change self-presentation and power asymmetry.
+Surveillance can improve coordination/an toàn (safety / 안전) but also thay đổi (change / 변경) self-presentation and power asymmetry.
 
 ## 30. Moral panic
 
-Public concern can become disproportionate when media, authorities and groups amplify a perceived threat and construct “folk devils”.
+Công khai (public / 공개) concern can become disproportionate when media, authorities and groups amplify a perceived threat and construct “folk devils”.
 
-Claims of moral panic require comparison between objective harm, representation and policy response; not every intense concern is a panic.
+Claims of moral panic require comparison between mục tiêu (objective / 목표) harm, biểu diễn (representation / 표현) and chính sách (policy / 정책) phản hồi (response / 응답); not every intense concern is a panic.
 
 ## 31. Collective identities
 
-Movements, professions and communities create shared identity through narratives, symbols and boundaries.
+Movements, professions and communities create dùng chung (shared / 공유) định danh (identity / 식별자) through narratives, symbols and boundaries.
 
-Collective identity can mobilize action even when individual material interests differ.
+Collective định danh (identity / 식별자) can mobilize hành động (action / 동작) even when individual material interests differ.
 
 ## 32. Cultural diffusion
 
-Ideas/practices spread through networks, organizations, media and migration.
+Ideas/practices spread through networks, organizations, media and di chuyển (migration / 마이그레이션).
 
-Adoption depends prestige, compatibility, network exposure and institutional incentives.
+Adoption depends prestige, tính tương thích (compatibility / 호환성), mạng (network / 네트워크) exposure and institutional incentives.
 
 ## 33. Homophily
 
@@ -200,41 +200,41 @@ People tend to form ties with similar others due preference, opportunity and ins
 
 Homophily can reproduce cultural similarity without direct influence.
 
-## 34. Cultural change
+## 34. Cultural thay đổi (change / 변경)
 
-Culture changes through generational replacement, innovation, migration, institutional reform, commercialization and social movements.
+Culture changes through generational replacement, innovation, di chuyển (migration / 마이그레이션), institutional reform, commercialization and xã hội (social / 사회적) movements.
 
-Change is not necessarily linear toward one modern endpoint.
+Thay đổi (change / 변경) is not necessarily tuyến tính (linear / 선형) toward one hiện đại (modern / 현대적) endpoint.
 
-## 35. Measurement
+## 35. Đo lường (measurement / 측정)
 
-Culture/identity can be studied through surveys, experiments, interviews, ethnography, texts and digital trace data.
+Culture/định danh (identity / 식별자) can be studied through surveys, experiments, interviews, ethnography, texts and digital dấu vết (trace / 추적) dữ liệu (data / 데이터).
 
-Each method observes different layer; self-report attitudes do not automatically equal behavior.
+Each phương thức (method / 메서드) observes different tầng (layer / 계층); self-report attitudes do not automatically equal hành vi (behavior / 동작).
 
-## 36. Failure modes
+## 36. Thất bại (failure / 실패) modes
 
 Sai lầm thứ nhất là treat culture as homogeneous national personality.
 
-Sai lầm thứ hai là explain behavior by “culture” without specifying norms/sanctions/transmission.
+Sai lầm thứ hai là explain hành vi (behavior / 동작) by “culture” without specifying norms/sanctions/transmission.
 
-Sai lầm thứ ba là equate identity with fixed essence.
+Sai lầm thứ ba là equate định danh (identity / 식별자) with fixed essence.
 
-Sai lầm thứ tư là define deviance outside social context.
+Sai lầm thứ tư là define deviance outside xã hội (social / 사회적) ngữ cảnh (context / 맥락).
 
 Sai lầm thứ năm là infer peer influence from similarity without handling selection.
 
-## 37. Analysis template
+## 37. Phân tích (analysis / 분석) template
 
-1. cultural symbol/norm/value nào?
-2. group/context nào defines meaning?
-3. socialization agent nào transmits it?
-4. identity/status nào activated?
+1. cultural symbol/norm/giá trị (value / 값) nào?
+2. group/ngữ cảnh (context / 맥락) nào defines meaning?
+3. socialization tác nhân (agent / 에이전트) nào transmits it?
+4. định danh (identity / 식별자)/status nào activated?
 5. sanctions/rewards nào enforce norm?
 6. selection vs influence mechanisms nào?
-7. stigma/boundary creates resource consequence nào?
-8. formal law và informal norm align hay conflict?
+7. stigma/ranh giới (boundary / 경계) creates tài nguyên (resource / 자원) consequence nào?
+8. formal law và informal norm align hay xung đột (conflict / 충돌)?
 9. historical/cohort changes nào?
-10. evidence measures attitudes, practices hay interaction?
+10. bằng chứng (evidence / 증거) measures attitudes, practices hay tương tác (interaction / 상호작용)?
 
-Culture and identity emerge through relationships. Chapter tiếp theo moves to those relational structures explicitly: groups, networks, organizations and bureaucracy.
+Culture and định danh (identity / 식별자) emerge through relationships. Chapter tiếp theo moves to those relational structures explicitly: groups, networks, organizations and bureaucracy.

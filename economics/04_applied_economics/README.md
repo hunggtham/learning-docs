@@ -1,14 +1,14 @@
 # 04 — Applied Economics
 
-Applied Economics dùng theory từ Microeconomics, Market Structure/Game Theory và Macroeconomics cùng identification discipline từ Econometrics để phân tích labor, taxation/public policy, trade, development và industries cụ thể. Module này không phải tập hợp case studies. Mỗi chapter phải trả lời đồng thời: **mechanism nào đang hoạt động, estimand nào cần đo, variation nào identify effect, ai chịu incidence, và result có generalize/scale được không?**
+Applied Economics dùng lý thuyết (theory / 이론) từ Microeconomics, Thị trường (market / 시장) Cấu trúc (structure / 구조)/Game Lý thuyết (theory / 이론) và Macroeconomics cùng identification discipline từ Econometrics để phân tích labor, taxation/công khai (public / 공개) chính sách (policy / 정책), trade, development và industries cụ thể. Mô-đun (module / 모듈) này không phải tập hợp trường hợp (case / 사례) studies. Mỗi chapter phải trả lời đồng thời: **cơ chế (mechanism / 메커니즘) nào đang hoạt động, estimand nào cần đo, variation nào identify tác động (effect / 효과), ai chịu incidence, và kết quả (result / 결과) có generalize/quy mô (scale / 규모) được không?**
 
-## Thứ tự học canonical
+## Thứ tự học chuẩn gốc (canonical / 정본)
 
-1. [Labor Economics](./00_labor_economics.md) — labor demand/supply, human capital, signaling, search/matching, monopsony, minimum wage, unions, discrimination, migration và labor-policy identification.
-2. [Public Economics](./01_public_economics.md) — taxation/incidence, redistribution, social insurance, health/education provision, administrative burden, optimal-tax logic và policy evaluation.
-3. [International Trade](./02_international_trade.md) — comparative advantage, factor distribution, gravity, firm heterogeneity, tariffs, global value chains, trade adjustment và empirical trade designs.
-4. [Development Economics](./03_development_economics.md) — poverty, credit/risk constraints, health/education, structural transformation, infrastructure, institutions/state capacity, industrial policy và scale-up.
-5. [Industrial Organization](./04_industrial_organization.md) — demand estimation, substitution, markups, entry, vertical/platform markets, mergers, procurement, innovation và structural/reduced-form IO.
+1. [Labor Economics](./00_labor_economics.md) — labor demand/supply, human capital, signaling, tìm kiếm (search / 검색)/matching, monopsony, minimum wage, unions, discrimination, di chuyển (migration / 마이그레이션) và labor-policy identification.
+2. [Public Economics](./01_public_economics.md) — taxation/incidence, redistribution, xã hội (social / 사회적) insurance, health/education provision, administrative burden, optimal-tax lô-gic (logic / 논리) và chính sách (policy / 정책) evaluation.
+3. [International Trade](./02_international_trade.md) — comparative advantage, factor phân phối (distribution / 분포), gravity, firm heterogeneity, tariffs, toàn cục (global / 전역) giá trị (value / 값) chains, trade adjustment và empirical trade designs.
+4. [Development Economics](./03_development_economics.md) — poverty, credit/rủi ro (risk / 위험) các ràng buộc (constraints / 제약조건들), health/education, structural transformation, hạ tầng (infrastructure / 인프라), institutions/trạng thái (state / 상태) sức chứa (capacity / 용량), industrial chính sách (policy / 정책) và scale-up.
+5. [Industrial Organization](./04_industrial_organization.md) — demand estimation, substitution, markups, entry, vertical/nền tảng (platform / 플랫폼) markets, mergers, procurement, innovation và structural/reduced-form IO.
 
 ## Applied spine
 
@@ -24,20 +24,20 @@ Economic mechanism
 → policy limits
 ```
 
-Nếu một chapter chỉ có theory mà không nói data/design, nó chưa đủ applied. Nếu chỉ có empirical correlation mà không có mechanism/counterfactual, nó cũng chưa đủ applied.
+Nếu một chapter chỉ có lý thuyết (theory / 이론) mà không nói dữ liệu (data / 데이터)/thiết kế (design / 설계), nó chưa đủ applied. Nếu chỉ có empirical correlation mà không có cơ chế (mechanism / 메커니즘)/counterfactual, nó cũng chưa đủ applied.
 
-## Dependency
+## Phụ thuộc (dependency / 의존성)
 
 Applied Economics nên được đọc sau hoặc song song với:
 
-- [Microeconomics](../01_microeconomics/README.md) cho incentives, welfare và market failures;
-- [Market Structure & Game Theory](../02_market_structure_game_theory/README.md) cho strategic interaction, market power và mechanism design;
-- [Macroeconomics](../03_macroeconomics/README.md) cho aggregate constraints, fiscal/monetary/open-economy regimes;
-- [Econometrics](../05_econometrics/README.md) cho estimands, counterfactuals, OLS/IV/RDD/DiD/time series và robustness.
+- [Microeconomics](../01_microeconomics/README.md) cho incentives, welfare và thị trường (market / 시장) failures;
+- [Market Structure & Game Theory](../02_market_structure_game_theory/README.md) cho strategic tương tác (interaction / 상호작용), thị trường (market / 시장) power và cơ chế (mechanism / 메커니즘) thiết kế (design / 설계);
+- [Macroeconomics](../03_macroeconomics/README.md) cho aggregate các ràng buộc (constraints / 제약조건들), fiscal/monetary/open-economy regimes;
+- [Econometrics](../05_econometrics/README.md) cho estimands, counterfactuals, OLS/IV/RDD/DiD/thời gian (time / 시간) series và robustness.
 
-Folder numbering giữ `04 Applied`, `05 Econometrics`, nhưng implementation order cố ý xây Econometrics trước để module này có evidence discipline ngay từ đầu.
+Folder numbering giữ `04 Applied`, `05 Econometrics`, nhưng hiện thực (implementation / 구현) thứ tự (order / 순서) cố ý xây Econometrics trước để mô-đun (module / 모듈) này có bằng chứng (evidence / 증거) discipline ngay từ đầu.
 
-## Evidence contract
+## Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)
 
 Mỗi empirical claim trong Applied Economics phải ghi rõ ít nhất một trong ba trạng thái:
 
@@ -49,28 +49,28 @@ Structural/model-based counterfactual
 
 Không trộn ba tầng này.
 
-Một exporter productivity premium là descriptive cho đến khi xử lý selection. Một DiD estimate là causal chỉ nếu parallel trends/counterfactual credible. Một merger simulation là structural counterfactual conditional on estimated demand/conduct assumptions.
+Một exporter productivity premium là descriptive cho đến khi xử lý selection. Một DiD estimate là nhân quả (causal / 인과적) chỉ nếu parallel trends/counterfactual credible. Một merger simulation là structural counterfactual conditional on estimated demand/conduct các giả định (assumptions / 가정들).
 
-## Distribution và general equilibrium
+## Phân phối (distribution / 분포) và general equilibrium
 
-Applied policy gần như luôn tạo winners/losers. Vì vậy average effect không đủ nếu incidence khác mạnh theo income, skill, geography, firm size hoặc market position.
+Applied chính sách (policy / 정책) gần như luôn tạo winners/losers. Vì vậy average tác động (effect / 효과) không đủ nếu incidence khác mạnh theo income, skill, geography, firm kích thước (size / 크기) hoặc thị trường (market / 시장) position.
 
-Ngoài ra, effect local/pilot có thể đổi khi scale: wages, prices, rents, firm entry, migration, taxes và political response đều có thể điều chỉnh. Module này phải luôn nêu partial-equilibrium vs general-equilibrium boundary.
+Ngoài ra, tác động (effect / 효과) cục bộ (local / 로컬)/pilot có thể đổi khi quy mô (scale / 규모): wages, prices, rents, firm entry, di chuyển (migration / 마이그레이션), taxes và political phản hồi (response / 응답) đều có thể điều chỉnh. Mô-đun (module / 모듈) này phải luôn nêu partial-equilibrium vs general-equilibrium ranh giới (boundary / 경계).
 
-## Policy interpretation
+## Chính sách (policy / 정책) interpretation
 
-Economics có thể estimate consequences, trade-offs và welfare under explicit social assumptions. Một estimate không tự chuyển thành policy recommendation. Policy còn phụ thuộc distributional weights, legal constraints, implementation capacity, rights, political institutions và uncertainty.
+Economics có thể estimate consequences, trade-offs và welfare under tường minh (explicit / 명시적) xã hội (social / 사회적) các giả định (assumptions / 가정들). Một estimate không tự chuyển thành chính sách (policy / 정책) recommendation. Chính sách (policy / 정책) còn phụ thuộc distributional weights, legal các ràng buộc (constraints / 제약조건들), hiện thực (implementation / 구현) sức chứa (capacity / 용량), rights, political institutions và bất định (uncertainty / 불확실성).
 
 ## Connections
 
-- [Korea Business & Economy](../../korea_business_economy_knowledge_library/README.md) là case layer để áp dụng labor, trade, industrial policy, firm structure và finance trong bối cảnh Hàn Quốc.
+- [Korea Business & Economy](../../korea_business_economy_knowledge_library/README.md) là trường hợp (case / 사례) tầng (layer / 계층) để áp dụng labor, trade, industrial chính sách (policy / 정책), firm cấu trúc (structure / 구조) và finance trong bối cảnh Hàn Quốc.
 - [Investing](../../investing/README.md) dùng firm/industry/macro results để phân tích assets và companies; không thay thế applied economics.
-- [World Geography](../../world_geography/README.md) cung cấp spatial, transport, resource và market-access constraints.
-- [World History](../../world_history/README.md) cung cấp institutional/historical sequence nhưng không tự đóng vai causal design.
-- [Psychology](../../psychology/README.md) liên quan labor supply, salience, take-up, expectations và behavioral public economics.
+- [World Geography](../../world_geography/README.md) cung cấp spatial, vận chuyển (transport / 전송), tài nguyên (resource / 자원) và market-access các ràng buộc (constraints / 제약조건들).
+- [World History](../../world_history/README.md) cung cấp institutional/historical chuỗi (sequence / 시퀀스) nhưng không tự đóng vai nhân quả (causal / 인과적) thiết kế (design / 설계).
+- [Psychology](../../psychology/README.md) liên quan labor supply, salience, take-up, expectations và behavioral công khai (public / 공개) economics.
 
 ## Checklist khi đọc một applied claim
 
-Hãy hỏi: mechanism nào; unit/population nào; outcome/treatment là gì; estimand nào; assignment/source of variation nào; selection/endogeneity nào; design assumptions nào không test được trực tiếp; incidence rơi vào ai; short-run/long-run khác nhau không; equilibrium/scale-up có đổi effect không; result có external validity sang institution khác không.
+Hãy hỏi: cơ chế (mechanism / 메커니즘) nào; đơn vị (unit / 단위)/population nào; kết quả (outcome / 결과)/treatment là gì; estimand nào; assignment/nguồn (source / 소스) of variation nào; selection/endogeneity nào; thiết kế (design / 설계) các giả định (assumptions / 가정들) nào không kiểm thử (test / 테스트) được trực tiếp; incidence rơi vào ai; short-run/long-run khác nhau không; equilibrium/scale-up có đổi tác động (effect / 효과) không; kết quả (result / 결과) có bên ngoài (external / 외부) validity sang institution khác không.
 
-Applied Economics hoàn tất core khi người đọc không chỉ biết “policy X thường có effect Y”, mà có thể giải thích **vì sao, effect nào được đo, từ variation nào, cho population nào, và kết luận dừng ở đâu**.
+Applied Economics hoàn tất cốt lõi (core / 핵심) khi người đọc không chỉ biết “chính sách (policy / 정책) X thường có tác động (effect / 효과) Y”, mà có thể giải thích **vì sao, tác động (effect / 효과) nào được đo, từ variation nào, cho population nào, và kết luận dừng ở đâu**.

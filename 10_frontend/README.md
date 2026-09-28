@@ -179,20 +179,20 @@ từ tên CSS thuộc tính (property / 속성) hoặc khung phần mềm (frame
 
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab**, ta sang **Kiểm tra coverage** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Case studies và evidence lab
+## Trường hợp (case / 사례) studies và bằng chứng (evidence / 증거) lab
 
-[`90_case_studies/README.md`](./90_case_studies/README.md) là lớp integration cấp
-domain. Nó không tạo owner theory mới mà buộc người học nối các owner hiện có
-thành causal trace có thể đo và review.
+[`90_case_studies/README.md`](./90_case_studies/README.md) là lớp tích hợp (integration / 통합) cấp
+lĩnh vực (domain / 도메인). Nó không tạo đơn vị sở hữu (owner / 오너) lý thuyết (theory / 이론) mới mà buộc người học nối các đơn vị sở hữu (owner / 오너) hiện có
+thành nhân quả (causal / 인과적) dấu vết (trace / 추적) có thể đo và rà soát (review / 검토).
 
 Bắt đầu với:
 
-- [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để trace một màn hình từ document request, parser, DOM/CSSOM và rendering tới async state, security boundary và deployed artifact.
-- [`Rendering Performance Measurement Lab`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md) để đo scripting/style/layout/paint/composite, layout invalidation và framework/browser rendering bằng baseline → trace → hypothesis → one change → re-measure.
+- [`Request → Pixel → Interaction Trace`](./90_case_studies/00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md) để dấu vết (trace / 추적) một màn hình từ document yêu cầu (request / 요청), parser, DOM/CSSOM và rendering tới async trạng thái (state / 상태), ranh giới bảo mật (security boundary / 보안 경계) và deployed sản phẩm tạo ra (artifact / 산출물).
+- [`Rendering Performance Measurement Lab`](./90_case_studies/01_RENDERING_PERFORMANCE_MEASUREMENT_LAB.md) để đo scripting/style/bố cục (layout / 레이아웃)/paint/composite, bố cục (layout / 레이아웃) vô hiệu hóa (invalidation / 무효화) và khung phần mềm (framework / 프레임워크)/trình duyệt (browser / 브라우저) rendering bằng baseline → dấu vết (trace / 추적) → hypothesis → one thay đổi (change / 변경) → re-measure.
 
-Hai case này là evidence path cho các gap cấp domain mà theory riêng lẻ khó kiểm
-tra: người đọc phải chứng minh browser đang làm work gì thay vì suy nguyên nhân
-từ tên CSS property hoặc framework abstraction.
+Hai trường hợp (case / 사례) này là bằng chứng (evidence / 증거) đường dẫn (path / 경로) cho các gap cấp lĩnh vực (domain / 도메인) mà lý thuyết (theory / 이론) riêng lẻ khó kiểm
+tra: người đọc phải chứng minh trình duyệt (browser / 브라우저) đang làm công việc (work / 작업) gì thay vì suy nguyên nhân
+từ tên CSS thuộc tính (property / 속성) hoặc khung phần mềm (framework / 프레임워크) lớp trừu tượng (abstraction / 추상화).
 
 ## Kiểm tra coverage
 

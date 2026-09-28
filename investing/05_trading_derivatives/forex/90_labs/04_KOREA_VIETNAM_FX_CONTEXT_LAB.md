@@ -1,8 +1,8 @@
-# Lab 04 — Korea / Vietnam FX Context
+# Lab 04 — Korea / Vietnam FX Ngữ cảnh (context / 맥락)
 
-Lab này luyện phân tích USD/KRW và USD/VND như hai hệ thống khác nhau về market structure, policy framework, capital flows và khả năng tiếp cận. Không được lấy rule của EUR/USD rồi áp thẳng sang KRW hoặc VND.
+Lab này luyện phân tích USD/KRW và USD/VND như hai hệ thống khác nhau về thị trường (market / 시장) cấu trúc (structure / 구조), chính sách (policy / 정책) khung phần mềm (framework / 프레임워크), capital flows và khả năng tiếp cận. Không được lấy quy tắc (rule / 규칙) của EUR/USD rồi áp thẳng sang KRW hoặc VND.
 
-## Case A — USD/KRW shock map
+## Trường hợp (case / 사례) A — USD/KRW shock map
 
 Giả sử:
 
@@ -15,7 +15,7 @@ BOK expected path changes only slightly
 Broad DXY +4%
 ```
 
-Viết causal map:
+Viết nhân quả (causal / 인과적) map:
 
 ```text
 US rates
@@ -28,9 +28,9 @@ US rates
 → exporter/importer earnings sensitivity
 ```
 
-Sau đó tách ít nhất ba forces có thể đi ngược nhau. Ví dụ semiconductor export strength có thể hỗ trợ Korea external income trong khi oil và foreign outflow gây áp lực KRW.
+Sau đó tách ít nhất ba forces có thể đi ngược nhau. Ví dụ semiconductor export strength có thể hỗ trợ Korea bên ngoài (external / 외부) income trong khi oil và foreign outflow gây áp lực KRW.
 
-## Case B — USD/VND pressure
+## Trường hợp (case / 사례) B — USD/VND pressure
 
 Giả sử:
 
@@ -55,9 +55,9 @@ Reserve / policy considerations
 Market-access constraints
 ```
 
-Mục tiêu là hiểu VND không có cùng price-discovery structure với major freely floating FX pairs.
+Mục tiêu là hiểu VND không có cùng price-discovery cấu trúc (structure / 구조) với major freely floating FX pairs.
 
-## Case C — Cross-border investor
+## Trường hợp (case / 사례) C — Cross-border investor
 
 Một investor sống tại Hàn Quốc có KRW liabilities nhưng nắm:
 
@@ -93,9 +93,9 @@ VND weakens while underlying Vietnamese assets rise 12%
 
 Giải thích local-asset return và investor return có thể khác nhau như thế nào.
 
-## Case D — Regulation/access checklist
+## Trường hợp (case / 사례) D — Regulation/truy cập (access / 접근) checklist
 
-Không ghi một rule pháp lý từ trí nhớ. Với Korea và Vietnam, tạo checklist research:
+Không ghi một quy tắc (rule / 규칙) pháp lý từ trí nhớ. Với Korea và Vietnam, tạo checklist research:
 
 ```text
 Exact product
@@ -109,9 +109,9 @@ Settlement / conversion mechanics
 Official source URL
 ```
 
-Nếu một rule có thể thay đổi, ghi `verify current rule before use` và ngày kiểm tra.
+Nếu một quy tắc (rule / 규칙) có thể thay đổi, ghi `verify current rule before use` và ngày kiểm tra.
 
-## Case E — Korea retail FX-margin distinction
+## Trường hợp (case / 사례) E — Korea retail FX-margin distinction
 
 Giải thích bằng lời của bạn sự khác nhau giữa:
 
@@ -122,11 +122,11 @@ Exchange-traded currency futures
 Retail leveraged FX-margin product
 ```
 
-Sau đó xác định loại intermediary/legal framework nào cần được kiểm tra trước khi giao dịch retail leveraged FX tại Korea.
+Sau đó xác định loại intermediary/legal khung phần mềm (framework / 프레임워크) nào cần được kiểm tra trước khi giao dịch retail leveraged FX tại Korea.
 
 Không biến phần này thành broker recommendation.
 
-## Case F — Event transmission comparison
+## Trường hợp (case / 사례) F — Sự kiện (event / 이벤트) transmission comparison
 
 Chọn một broad USD shock và so:
 
@@ -149,7 +149,7 @@ Data quality / accessibility
 Execution implication
 ```
 
-Mục tiêu là thấy cùng một USD shock có thể truyền khác nhau vì institutional structure khác nhau.
+Mục tiêu là thấy cùng một USD shock có thể truyền khác nhau vì institutional cấu trúc (structure / 구조) khác nhau.
 
 ## Đầu ra bắt buộc
 
@@ -162,11 +162,11 @@ cross_border_currency_exposure.md
 fx_regulatory_verification_checklist.md
 ```
 
-Mỗi file phải có `as_of_date` nếu dùng regulation hoặc market-structure facts có thể thay đổi.
+Mỗi tệp (file / 파일) phải có `as_of_date` nếu dùng regulation hoặc market-structure facts có thể thay đổi.
 
 ## Tự chấm
 
-Bài chưa đạt nếu kết luận chỉ là `Fed hawkish → USD/KRW up` hoặc `USD mạnh → USD/VND up`. Bài đạt khi bạn chỉ ra được **policy constraint, flow, market structure, access rule và transmission channel** khác nhau giữa hai thị trường.
+Bài chưa đạt nếu kết luận chỉ là `Fed hawkish → USD/KRW up` hoặc `USD mạnh → USD/VND up`. Bài đạt khi bạn chỉ ra được **chính sách (policy / 정책) ràng buộc (constraint / 제약조건), luồng (flow / 흐름), thị trường (market / 시장) cấu trúc (structure / 구조), truy cập (access / 접근) quy tắc (rule / 규칙) và transmission channel** khác nhau giữa hai thị trường.
 
 Đọc lại:
 

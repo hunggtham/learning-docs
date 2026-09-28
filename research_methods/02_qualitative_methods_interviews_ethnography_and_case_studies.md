@@ -1,6 +1,6 @@
-# Qualitative Methods — Interviews, observation, ethnography và case-based inference
+# Qualitative Methods — Interviews, observation, ethnography và case-based suy luận (inference / 추론)
 
-Qualitative methods phù hợp khi research question cần hiểu meaning, process, context, institutional practice hoặc mechanism khó capture bằng standardized variables. Mục tiêu không phải “thu thập ý kiến” thay cho quantitative data, mà xây evidence có hệ thống từ lời nói, hành vi, documents và field context.
+Qualitative methods phù hợp khi research question cần hiểu meaning, tiến trình (process / 프로세스), ngữ cảnh (context / 맥락), institutional practice hoặc cơ chế (mechanism / 메커니즘) khó capture bằng standardized variables. Mục tiêu không phải “thu thập ý kiến” thay cho quantitative dữ liệu (data / 데이터), mà xây bằng chứng (evidence / 증거) có hệ thống từ lời nói, hành vi, documents và trường dữ liệu (field / 필드) ngữ cảnh (context / 맥락).
 
 ## 1. Qualitative questions
 
@@ -13,38 +13,38 @@ Why does institution behave differently across contexts?
 What mechanism connects event A to outcome B?
 ```
 
-Nếu mục tiêu là estimate population prevalence chính xác, qualitative sample thường không phải tool chính.
+Nếu mục tiêu là estimate population prevalence chính xác, qualitative mẫu (sample / 표본) thường không phải công cụ (tool / 도구) chính.
 
-## 2. Case và field boundary
+## 2. Trường hợp (case / 사례) và trường dữ liệu (field / 필드) ranh giới (boundary / 경계)
 
-Một case cần boundary rõ: organization, community, event, policy episode, project hoặc process trong time/place cụ thể.
+Một trường hợp (case / 사례) cần ranh giới (boundary / 경계) rõ: organization, community, sự kiện (event / 이벤트), chính sách (policy / 정책) episode, dự án (project / 프로젝트) hoặc tiến trình (process / 프로세스) trong thời gian (time / 시간)/place cụ thể.
 
-Không có boundary thì data collection dễ nở vô hạn.
+Không có ranh giới (boundary / 경계) thì dữ liệu (data / 데이터) collection dễ nở vô hạn.
 
 ## 3. Purposive sampling
 
-Qualitative sampling chọn cases/participants vì information value, không nhất thiết represent population statistically.
+Qualitative sampling chọn cases/participants vì thông tin (information / 정보) giá trị (value / 값), không nhất thiết represent population statistically.
 
 Strategies gồm:
 
 - maximum variation;
-- typical case;
-- critical case;
-- deviant case;
+- typical trường hợp (case / 사례);
+- trọng yếu (critical / 중요) trường hợp (case / 사례);
+- deviant trường hợp (case / 사례);
 - criterion sampling;
 - theoretical sampling.
 
-Sampling logic phải phù hợp inference goal.
+Sampling lô-gic (logic / 논리) phải phù hợp suy luận (inference / 추론) goal.
 
 ## 4. Saturation
 
-Saturation thường được dùng khi additional data không tạo themes/concepts mới đáng kể.
+Saturation thường được dùng khi additional dữ liệu (data / 데이터) không tạo themes/concepts mới đáng kể.
 
-Nó không phải universal numeric threshold và phụ thuộc heterogeneity, question breadth, interview depth và analytic framework.
+Nó không phải universal numeric threshold và phụ thuộc heterogeneity, question breadth, interview độ sâu (depth / 깊이) và analytic khung phần mềm (framework / 프레임워크).
 
 ## 5. Interviews
 
-Interview tạo data qua interaction giữa researcher và participant.
+Interview tạo dữ liệu (data / 데이터) qua tương tác (interaction / 상호작용) giữa researcher và participant.
 
 Semi-structured interview cân bằng comparability với khả năng follow-up unexpected themes.
 
@@ -66,35 +66,35 @@ How did you decide that?
 Was there a case where this did not happen?
 ```
 
-Negative-case probes rất quan trọng để tránh confirmation bias.
+Negative-case probes rất quan trọng để tránh confirmation độ lệch (bias / 편향).
 
 ## 8. Interviewer effects
 
-Identity, status, language và demeanor của interviewer ảnh hưởng responses.
+Định danh (identity / 식별자), status, ngôn ngữ (language / 언어) và demeanor của interviewer ảnh hưởng responses.
 
-Reflexivity yêu cầu researcher ghi nhận position của mình trong data-generation process.
+Reflexivity yêu cầu researcher ghi nhận position của mình trong data-generation tiến trình (process / 프로세스).
 
 ## 9. Focus groups
 
-Focus groups useful để study shared norms, disagreement và interaction.
+Focus groups useful để study dùng chung (shared / 공유) norms, disagreement và tương tác (interaction / 상호작용).
 
-Group pressure có thể suppress sensitive/minority views; data không phải simply many individual interviews at once.
+Group pressure có thể suppress sensitive/minority views; dữ liệu (data / 데이터) không phải simply many individual interviews at once.
 
 ## 10. Observation
 
-Observation captures behavior/practice that participants may not articulate or may report inaccurately.
+Observation captures hành vi (behavior / 동작)/practice that participants may not articulate or may report inaccurately.
 
 Structured observation uses predefined categories; participant observation embeds researcher deeper in setting.
 
 ## 11. Ethnography
 
-Ethnography studies social practices through prolonged immersion, observation, participation, interviews và artifacts.
+Ethnography studies xã hội (social / 사회적) practices through prolonged immersion, observation, participation, interviews và artifacts.
 
-Its strength is context/process; weakness includes access, researcher influence, time cost and limited statistical generalization.
+Its strength is ngữ cảnh (context / 맥락)/tiến trình (process / 프로세스); weakness includes truy cập (access / 접근), researcher influence, thời gian (time / 시간) chi phí (cost / 비용) and limited statistical generalization.
 
-## 12. Field notes
+## 12. Trường dữ liệu (field / 필드) notes
 
-Field notes should separate as much as possible:
+Trường dữ liệu (field / 필드) notes should separate as much as possible:
 
 ```text
 descriptive observations
@@ -104,7 +104,7 @@ questions/hypotheses
 reflexive notes
 ```
 
-Writing soon after fieldwork reduces memory reconstruction.
+Writing soon after fieldwork reduces bộ nhớ (memory / 메모리) reconstruction.
 
 ## 13. Documents and archives
 
@@ -114,7 +114,7 @@ Analyze provenance, author, intended audience, incentives, missing records and a
 
 ## 14. Digital ethnography
 
-Online communities/platforms create observable interactions but identity, deleted content, algorithmic curation and consent require special care.
+Online communities/platforms create observable interactions but định danh (identity / 식별자), deleted content, algorithmic curation and consent require special care.
 
 Publicly accessible ≠ ethically unrestricted.
 
@@ -122,9 +122,9 @@ Publicly accessible ≠ ethically unrestricted.
 
 Coding assigns labels to meaningful segments.
 
-Codes can be deductive from theory or inductive from data.
+Codes can be deductive from lý thuyết (theory / 이론) or inductive from dữ liệu (data / 데이터).
 
-Coding is analytic interpretation, not mere text sorting.
+Coding is analytic interpretation, not mere văn bản (text / 텍스트) sorting.
 
 ## 16. Codebook
 
@@ -132,89 +132,89 @@ Codebook should document definition, inclusion/exclusion rules and examples.
 
 Iterative revision is normal, but versions/changes should be tracked.
 
-## 17. Thematic analysis
+## 17. Thematic phân tích (analysis / 분석)
 
-Thematic analysis identifies patterned meaning across data.
+Thematic phân tích (analysis / 분석) identifies patterned meaning across dữ liệu (data / 데이터).
 
-A theme is more than frequently occurring word; it is an analytically coherent pattern relevant to question.
+A theme is more than frequently occurring word; it is an analytically coherent mẫu (pattern / 패턴) relevant to question.
 
-## 18. Grounded-theory logic
+## 18. Grounded-theory lô-gic (logic / 논리)
 
-Grounded theory uses iterative collection/comparison to build concepts/theory from data.
+Grounded lý thuyết (theory / 이론) uses iterative collection/comparison to bản dựng (build / 빌드) concepts/lý thuyết (theory / 이론) from dữ liệu (data / 데이터).
 
-It is not simply “I had no theory beforehand”. Constant comparison and theoretical sampling are core.
+It is not simply “I had no lý thuyết (theory / 이론) beforehand”. Constant comparison and theoretical sampling are cốt lõi (core / 핵심).
 
-## 19. Content analysis
+## 19. Content phân tích (analysis / 분석)
 
-Content analysis can be qualitative or quantitative. It systematically codes documents/media for categories, frames or patterns.
+Content phân tích (analysis / 분석) can be qualitative or quantitative. It systematically codes documents/media for categories, frames or patterns.
 
-Sampling of texts and coding reliability remain important.
+Sampling of texts and coding độ tin cậy (reliability / 신뢰성) remain important.
 
-## 20. Discourse analysis
+## 20. Discourse phân tích (analysis / 분석)
 
-Discourse analysis examines how language constructs categories, identities, legitimacy and power relations.
+Discourse phân tích (analysis / 분석) examines how ngôn ngữ (language / 언어) constructs categories, identities, legitimacy and power relations.
 
 It asks how something becomes sayable/normal, not merely how often words appear.
 
-## 21. Process tracing
+## 21. Tiến trình (process / 프로세스) tracing
 
-Within-case causal analysis looks for sequential evidence of hypothesized mechanism.
+Within-case nhân quả (causal / 인과적) phân tích (analysis / 분석) looks for sequential bằng chứng (evidence / 증거) of hypothesized cơ chế (mechanism / 메커니즘).
 
-Different evidence has different diagnostic value; an observation highly expected under many theories is weak evidence.
+Different bằng chứng (evidence / 증거) has different diagnostic giá trị (value / 값); an observation highly expected under many theories is weak bằng chứng (evidence / 증거).
 
 ## 22. Triangulation
 
-Triangulation compares multiple sources/methods to assess whether finding survives different measurement biases.
+Triangulation compares multiple sources/methods to assess whether finding survives different đo lường (measurement / 측정) biases.
 
-Agreement strengthens confidence; disagreement is data to explain rather than nuisance to hide.
+Agreement strengthens confidence; disagreement is dữ liệu (data / 데이터) to explain rather than nuisance to hide.
 
 ## 23. Member checking
 
-Participants can review interpretations/transcripts, useful for factual correction and perspective.
+Participants can rà soát (review / 검토) interpretations/transcripts, useful for factual correction and perspective.
 
 Participant agreement does not determine final analytic truth; actors have partial perspectives and interests too.
 
 ## 24. Inter-coder agreement
 
-When coding aims standardized classification, multiple coders and agreement checks improve reliability.
+When coding aims standardized classification, multiple coders and agreement checks improve độ tin cậy (reliability / 신뢰성).
 
-Interpretive projects may value analytic dialogue more than high numeric agreement; standard should match epistemic goal.
+Interpretive projects may giá trị (value / 값) analytic dialogue more than high numeric agreement; tiêu chuẩn (standard / 표준) should match epistemic goal.
 
 ## 25. Reflexivity
 
-Researcher documents how access, identity, assumptions and relationships may shape evidence.
+Researcher documents how truy cập (access / 접근), định danh (identity / 식별자), các giả định (assumptions / 가정들) and relationships may shape bằng chứng (evidence / 증거).
 
 Reflexivity is not self-focused autobiography; it is methodological transparency.
 
 ## 26. Negative cases
 
-Actively search cases contradicting emerging explanation.
+Actively tìm kiếm (search / 검색) cases contradicting emerging explanation.
 
-A theory revised to explain negative cases is stronger than one built only from confirming excerpts.
+A lý thuyết (theory / 이론) revised to explain negative cases is stronger than one built only from confirming excerpts.
 
 ## 27. Thick description
 
-Rich contextual description lets reader judge transferability and mechanism.
+Rich contextual description lets reader judge transferability and cơ chế (mechanism / 메커니즘).
 
 Detail must be analytically relevant, not decorative narrative.
 
 ## 28. Generalization
 
-Qualitative research can generalize analytically/theoretically: mechanism from case may apply to other settings sharing conditions.
+Qualitative research can generalize analytically/theoretically: cơ chế (mechanism / 메커니즘) from trường hợp (case / 사례) may apply to other settings sharing conditions.
 
 This differs from statistical population generalization.
 
-## 29. Case comparison
+## 29. Trường hợp (case / 사례) comparison
 
-Cross-case matrices can compare mechanism, conditions and outcomes systematically.
+Cross-case matrices can compare cơ chế (mechanism / 메커니즘), conditions and outcomes systematically.
 
-Do not let narrative format obscure explicit comparison dimensions.
+Do not let narrative format obscure tường minh (explicit / 명시적) comparison dimensions.
 
-## 30. Qualitative causal claims
+## 30. Qualitative nhân quả (causal / 인과적) claims
 
-Causal inference can draw on temporal sequence, mechanism evidence, counterfactual comparison and rival-explanation elimination.
+Nhân quả (causal / 인과적) suy luận (inference / 추론) can draw on temporal chuỗi (sequence / 시퀀스), cơ chế (mechanism / 메커니즘) bằng chứng (evidence / 증거), counterfactual comparison and rival-explanation elimination.
 
-Claim strength should reflect evidence; a participant saying “X caused Y” is itself testimony, not causal proof.
+Claim strength should reflect bằng chứng (evidence / 증거); a participant saying “X caused Y” is itself testimony, not nhân quả (causal / 인과적) proof.
 
 ## 31. Translation
 
@@ -224,45 +224,45 @@ Keep important original terms alongside translations and document translation de
 
 ## 32. Transcription
 
-Level of transcription detail should fit method. Conversation analysis may require pauses/overlap; thematic analysis may not.
+Mức (level / 수준) of transcription detail should fit phương thức (method / 메서드). Conversation phân tích (analysis / 분석) may require pauses/overlap; thematic phân tích (analysis / 분석) may not.
 
-Automated transcription needs quality checking, especially multilingual/audio-noisy data.
+Automated transcription needs chất lượng (quality / 품질) checking, especially multilingual/audio-noisy dữ liệu (data / 데이터).
 
-## 33. Researcher safety and participant risk
+## 33. Researcher an toàn (safety / 안전) and participant rủi ro (risk / 위험)
 
 Fieldwork can expose participants/researchers to political, occupational or interpersonal risks.
 
-Data protection plans should account not just names but indirect identifiers.
+Dữ liệu (data / 데이터) protection plans should account not just names but indirect identifiers.
 
-## 34. Audit trail
+## 34. Kiểm tra (audit / 감사) trail
 
-Store decisions about sampling, code changes, exclusions, memoing and interpretation.
+Store decisions about sampling, mã (code / 코드) changes, exclusions, memoing and interpretation.
 
-An audit trail supports transparency even when exact replication of social interaction is impossible.
+An kiểm tra (audit / 감사) trail supports transparency even when chính xác (exact / 정확한) replication of xã hội (social / 사회적) tương tác (interaction / 상호작용) is impossible.
 
-## 35. Failure modes
+## 35. Thất bại (failure / 실패) modes
 
-Sai lầm thứ nhất là call a few informal conversations “qualitative research”.
+Sai lầm thứ nhất là lời gọi (call / 호출) a few informal conversations “qualitative research”.
 
-Sai lầm thứ hai là choose participants only because they support hypothesis.
+Sai lầm thứ hai là choose participants only because they hỗ trợ (support / 지원) hypothesis.
 
-Sai lầm thứ ba là present quotes without analytic coding/context.
+Sai lầm thứ ba là present quotes without analytic coding/ngữ cảnh (context / 맥락).
 
 Sai lầm thứ tư là equate saturation with arbitrary interview count.
 
-Sai lầm thứ năm là claim statistical representativeness from purposive sample.
+Sai lầm thứ năm là claim statistical representativeness from purposive mẫu (sample / 표본).
 
 ## 36. Qualitative checklist
 
-1. question cần meaning/process/context nào?
-2. case/field boundary là gì?
-3. sampling logic là gì?
-4. access/positionality affect data ra sao?
-5. collection protocol có probes/observation/document sources nào?
-6. coding/analytic framework nào?
+1. question cần meaning/tiến trình (process / 프로세스)/ngữ cảnh (context / 맥락) nào?
+2. trường hợp (case / 사례)/trường dữ liệu (field / 필드) ranh giới (boundary / 경계) là gì?
+3. sampling lô-gic (logic / 논리) là gì?
+4. truy cập (access / 접근)/positionality affect dữ liệu (data / 데이터) ra sao?
+5. collection giao thức (protocol / 프로토콜) có probes/observation/document sources nào?
+6. coding/analytic khung phần mềm (framework / 프레임워크) nào?
 7. negative cases được tìm chưa?
 8. triangulation/disagreement xử lý thế nào?
 9. claim là descriptive, interpretive hay causal-process?
 10. transferability limits là gì?
 
-Qualitative evidence thường bổ sung quantitative work bằng mechanism/context. Mixed-method design cần integration logic rõ, không chỉ đặt survey và interviews cạnh nhau.
+Qualitative bằng chứng (evidence / 증거) thường bổ sung quantitative công việc (work / 작업) bằng cơ chế (mechanism / 메커니즘)/ngữ cảnh (context / 맥락). Mixed-method thiết kế (design / 설계) cần tích hợp (integration / 통합) lô-gic (logic / 논리) rõ, không chỉ đặt survey và interviews cạnh nhau.

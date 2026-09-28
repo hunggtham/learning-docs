@@ -1,10 +1,10 @@
-# Measurement, Sampling & Survey Design — Đo đúng trước khi phân tích đúng
+# Đo lường (measurement / 측정), Sampling & Survey Thiết kế (design / 설계) — Đo đúng trước khi phân tích đúng
 
-Research quality thường bị quyết định ở measurement và sampling trước khi analyst mở statistical software. Một measure có thể rất precise nhưng đo sai construct; một sample rất lớn nhưng không đại diện population; một survey có response rate cao nhưng wording tạo systematic bias.
+Research chất lượng (quality / 품질) thường bị quyết định ở đo lường (measurement / 측정) và sampling trước khi analyst mở statistical software. Một measure có thể rất precise nhưng đo sai construct; một mẫu (sample / 표본) rất lớn nhưng không đại diện population; một survey có phản hồi (response / 응답) tỷ lệ (rate / 비율) cao nhưng wording tạo systematic độ lệch (bias / 편향).
 
 ## 1. Concept → construct → indicator
 
-Chuỗi measurement:
+Chuỗi đo lường (measurement / 측정):
 
 ```text
 Concept
@@ -13,24 +13,24 @@ Concept
 → observable indicator(s)
 ```
 
-Ví dụ “job satisfaction” không phải một trực tiếp observable fact. Nó có thể được operationalize bằng validated scale, interview coding hoặc behavioral proxy — mỗi cách capture một phần khác nhau.
+Ví dụ “job satisfaction” không phải một trực tiếp observable fact. Nó có thể được operationalize bằng validated quy mô (scale / 규모), interview coding hoặc behavioral proxy — mỗi cách capture một phần khác nhau.
 
-## 2. Reliability
+## 2. Độ tin cậy (reliability / 신뢰성)
 
-Reliability là consistency của measure.
+Độ tin cậy (reliability / 신뢰성) là consistency của measure.
 
 Các forms gồm:
 
-- test–retest reliability;
-- inter-rater reliability;
-- internal consistency;
-- measurement stability across forms/occasions.
+- kiểm thử (test / 테스트)–retest độ tin cậy (reliability / 신뢰성);
+- inter-rater độ tin cậy (reliability / 신뢰성);
+- nội bộ (internal / 내부) consistency;
+- đo lường (measurement / 측정) stability across forms/occasions.
 
-High reliability không đảm bảo validity.
+High độ tin cậy (reliability / 신뢰성) không đảm bảo validity.
 
 ## 3. Validity
 
-Measurement validity hỏi measure có represent intended construct không.
+Đo lường (measurement / 측정) validity hỏi measure có represent intended construct không.
 
 Các dimensions:
 
@@ -39,91 +39,91 @@ Các dimensions:
 - criterion validity;
 - construct validity.
 
-No single coefficient can fully “prove validity”; it accumulates through theory + evidence.
+No single coefficient can fully “prove validity”; it accumulates through lý thuyết (theory / 이론) + bằng chứng (evidence / 증거).
 
-## 4. Measurement invariance
+## 4. Đo lường (measurement / 측정) invariance
 
-A scale may behave differently across languages, cultures, genders, age groups or time.
+A quy mô (scale / 규모) may behave differently across languages, cultures, genders, age groups or thời gian (time / 시간).
 
 If respondents interpret items differently, comparing raw means can be invalid.
 
-Translation requires semantic/conceptual equivalence, not word-for-word mapping only.
+Translation requires ngữ nghĩa (semantic / 의미적)/conceptual equivalence, not word-for-word ánh xạ (mapping / 매핑) only.
 
 ## 5. Reflective vs formative measures
 
-Reflective model treats latent construct as causing observed indicators.
+Reflective mô hình (model / 모델) treats latent construct as causing observed indicators.
 
-Formative model treats indicators as composing construct.
+Formative mô hình (model / 모델) treats indicators as composing construct.
 
-Dropping one item has different meaning in the two models.
+Dropping one item has different meaning in the two các mô hình (models / 모델들).
 
 ## 6. Single-item vs multi-item measures
 
-Single-item questions are efficient for concrete variables. Complex constructs often benefit from multiple items to cover dimensions and reduce random error.
+Single-item questions are efficient for concrete variables. Complex constructs often benefit from multiple items to cover dimensions and reduce random lỗi (error / 오류).
 
 More items are not automatically better if redundant or poorly worded.
 
-## 7. Scale construction
+## 7. Quy mô (scale / 규모) construction
 
-Good scale development involves theory, item generation, cognitive testing, pilot data and validation.
+Good quy mô (scale / 규모) development involves lý thuyết (theory / 이론), item generation, cognitive testing, pilot dữ liệu (data / 데이터) and kiểm tra hợp lệ (validation / 검증).
 
 Do not create arbitrary score by averaging unrelated questions because Cronbach’s alpha looks acceptable.
 
-## 8. Internal consistency
+## 8. Nội bộ (internal / 내부) consistency
 
 Cronbach’s alpha depends on item number/correlation and assumes conditions often ignored.
 
 High alpha can reflect redundancy, not unidimensionality.
 
-Factor structure and substantive content matter.
+Factor cấu trúc (structure / 구조) and substantive content matter.
 
-## 9. Inter-rater reliability
+## 9. Inter-rater độ tin cậy (reliability / 신뢰성)
 
-When humans code texts/behavior, agreement needs training and explicit codebook.
+When humans mã (code / 코드) texts/hành vi (behavior / 동작), agreement needs huấn luyện (training / 학습) and tường minh (explicit / 명시적) codebook.
 
-Raw percent agreement can be misleading with imbalanced categories; kappa/ICC may be more appropriate depending data.
+Raw percent agreement can be misleading with imbalanced categories; kappa/ICC may be more appropriate depending dữ liệu (data / 데이터).
 
-Disagreement can reveal ambiguous construct boundaries, not merely coder failure.
+Disagreement can reveal ambiguous construct boundaries, not merely coder thất bại (failure / 실패).
 
-## 10. Measurement error
+## 10. Sai số đo lường (measurement error / 측정 오차)
 
-Observed value:
+Observed giá trị (value / 값):
 
 ```text
 Observed = True construct component + error/bias
 ```
 
-Random error reduces precision; systematic error biases inference.
+Random lỗi (error / 오류) reduces precision; systematic lỗi (error / 오류) biases suy luận (inference / 추론).
 
-Self-report, administrative and sensor data have different error structures.
+Self-report, administrative and sensor dữ liệu (data / 데이터) have different lỗi (error / 오류) structures.
 
-## 11. Common-method bias
+## 11. Common-method độ lệch (bias / 편향)
 
-If predictor and outcome come from same survey at same moment, response style/social desirability can inflate association.
+If predictor and kết quả (outcome / 결과) come from same survey at same moment, phản hồi (response / 응답) style/xã hội (social / 사회적) desirability can inflate association.
 
-Design remedies include temporal separation, multiple sources and objective measures where appropriate.
+Thiết kế (design / 설계) remedies include temporal separation, multiple sources and mục tiêu (objective / 목표) measures where appropriate.
 
-## 12. Social desirability
+## 12. Xã hội (social / 사회적) desirability
 
 Sensitive topics can produce under/over-reporting based on norms.
 
-Anonymity, indirect questioning or list/randomized-response methods can reduce bias but increase complexity.
+Anonymity, indirect questioning or danh sách (list / 목록)/randomized-response methods can reduce độ lệch (bias / 편향) but increase độ phức tạp (complexity / 복잡도).
 
-## 13. Recall bias
+## 13. Recall độ lệch (bias / 편향)
 
-Retrospective questions degrade with time and salience.
+Retrospective questions degrade with thời gian (time / 시간) and salience.
 
 Event-history calendars or records can help.
 
-Recall error may differ systematically by outcome/group.
+Recall lỗi (error / 오류) may differ systematically by kết quả (outcome / 결과)/group.
 
 ## 14. Question wording
 
-Leading, double-barreled, vague or loaded items change responses.
+Leading, double-barreled, vague or loaded items thay đổi (change / 변경) responses.
 
-Ask one concept at a time and specify timeframe/reference.
+Ask one concept at a thời gian (time / 시간) and specify timeframe/tham chiếu (reference / 참조).
 
-## 15. Response options
+## 15. Phản hồi (response / 응답) options
 
 Categories should be mutually exclusive, collectively sensible and ordered consistently when ordinal.
 
@@ -135,11 +135,11 @@ Likert-type items are ordinal responses to statements; summated scales combine m
 
 Treating ordinal scores as interval may be practical under conditions but should be justified rather than assumed invisibly.
 
-## 17. Order effects
+## 17. Thứ tự (order / 순서) effects
 
-Earlier questions prime later responses. Randomization or careful grouping can diagnose/order effects.
+Earlier questions prime later responses. Randomization or careful grouping can diagnose/thứ tự (order / 순서) effects.
 
-Survey flow should balance context coherence with contamination risk.
+Survey luồng (flow / 흐름) should balance ngữ cảnh (context / 맥락) coherence with contamination rủi ro (risk / 위험).
 
 ## 18. Cognitive interviewing
 
@@ -149,27 +149,27 @@ This reveals interpretation problems quantitative pilots may miss.
 
 ## 19. Pilot studies
 
-Pilot tests instrument, recruitment, timing, data pipeline and analysis feasibility.
+Pilot tests instrument, recruitment, timing, dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) and phân tích (analysis / 분석) feasibility.
 
-Pilot effect estimates are usually too noisy to serve as final evidence.
+Pilot tác động (effect / 효과) estimates are usually too noisy to serve as final bằng chứng (evidence / 증거).
 
-## 20. Target population
+## 20. Mục tiêu (target / 대상) population
 
-Define who inference concerns.
+Define who suy luận (inference / 추론) concerns.
 
-Population can be narrower than accessible respondents. Avoid vague phrases like “people” when sample is “Korean office workers in Seoul tech firms”.
+Population can be narrower than accessible respondents. Avoid vague phrases like “people” when mẫu (sample / 표본) is “Korean office workers in Seoul tech firms”.
 
 ## 21. Sampling frame
 
-Sampling frame is operational list/process from which sample is drawn.
+Sampling frame is operational danh sách (list / 목록)/tiến trình (process / 프로세스) from which mẫu (sample / 표본) is drawn.
 
-Coverage error occurs when frame excludes portions of target population.
+Coverage lỗi (error / 오류) occurs when frame excludes portions of mục tiêu (target / 대상) population.
 
-## 22. Probability sampling
+## 22. Xác suất (probability / 확률) sampling
 
 Units have known/nonzero selection probabilities.
 
-Common designs:
+Dùng chung (common / 공통) designs:
 
 - simple random;
 - stratified;
@@ -180,101 +180,101 @@ Weights may be required for unequal probabilities.
 
 ## 23. Stratified sampling
 
-Divide population into strata and sample within each.
+Divide population into strata and mẫu (sample / 표본) within each.
 
-Useful to guarantee representation of small important groups and improve precision.
+Useful to guarantee biểu diễn (representation / 표현) of small important groups and improve precision.
 
-Analysis should account sampling weights/design.
+Phân tích (analysis / 분석) should account sampling weights/thiết kế (design / 설계).
 
 ## 24. Cluster sampling
 
-Sample groups like schools/areas then units within them.
+Mẫu (sample / 표본) groups like schools/areas then units within them.
 
-Cost-efficient but intra-cluster similarity reduces effective sample size.
+Cost-efficient but intra-cluster similarity reduces effective cỡ mẫu (sample size / 표본 크기).
 
 ## 25. Convenience sampling
 
-Easy-access samples can be useful for exploratory work but limit population inference.
+Easy-access samples can be useful for exploratory công việc (work / 작업) but limit population suy luận (inference / 추론).
 
-Large convenience sample is not transformed into probability sample by N alone.
+Large convenience mẫu (sample / 표본) is not transformed into xác suất (probability / 확률) mẫu (sample / 표본) by N alone.
 
 ## 26. Snowball/respondent-driven sampling
 
-Useful for hidden populations through network recruitment.
+Useful for hidden populations through mạng (network / 네트워크) recruitment.
 
-Network structure and differential recruitment probabilities complicate representativeness.
+Mạng (network / 네트워크) cấu trúc (structure / 구조) and differential recruitment probabilities complicate representativeness.
 
 ## 27. Nonresponse
 
-Response rate alone does not determine bias.
+Phản hồi (response / 응답) tỷ lệ (rate / 비율) alone does not determine độ lệch (bias / 편향).
 
-Bias occurs when response propensity relates to survey variables after weighting/adjustment.
+Độ lệch (bias / 편향) occurs when phản hồi (response / 응답) propensity relates to survey variables after weighting/adjustment.
 
-A lower response rate can be less biased than a higher but selective one.
+A lower phản hồi (response / 응답) tỷ lệ (rate / 비율) can be less biased than a higher but selective one.
 
 ## 28. Post-stratification and weighting
 
-Weights adjust sample to known population margins or selection probabilities.
+Weights adjust mẫu (sample / 표본) to known population margins or selection probabilities.
 
-They can reduce bias but increase variance and cannot fix unmeasured differences automatically.
+They can reduce độ lệch (bias / 편향) but increase variance and cannot fix unmeasured differences automatically.
 
-## 29. Sample size
+## 29. Cỡ mẫu (sample size / 표본 크기)
 
-Sample size should follow estimand, expected variance, minimum meaningful effect, design effect and subgroup requirements.
+Cỡ mẫu (sample size / 표본 크기) should follow estimand, expected variance, minimum meaningful tác động (effect / 효과), thiết kế (design / 설계) tác động (effect / 효과) and subgroup requirements.
 
 “30 is enough” or “1000 is always representative” are not general rules.
 
 ## 30. Power
 
-Power is probability of detecting a specified effect under assumptions.
+Power is xác suất (probability / 확률) of detecting a specified tác động (effect / 효과) under các giả định (assumptions / 가정들).
 
-Planning needs meaningful effect size, not only historical average.
+Planning needs meaningful tác động (effect / 효과) kích thước (size / 크기), not only historical average.
 
 For descriptive estimation, precision/margin-of-error may be more relevant than hypothesis-test power.
 
-## 31. Census data are not error-free
+## 31. Census dữ liệu (data / 데이터) are not error-free
 
 Administrative/census sources can have undercoverage, coding changes, incentives and missingness.
 
-No sampling error does not mean no measurement error.
+No sampling lỗi (error / 오류) does not mean no sai số đo lường (measurement error / 측정 오차).
 
-## 32. Administrative data
+## 32. Administrative dữ liệu (data / 데이터)
 
-Advantages: scale, longitudinal coverage, less recall.
+Advantages: quy mô (scale / 규모), longitudinal coverage, less recall.
 
 Risks: variables created for operational—not research—purposes; policy-driven coding and missing populations.
 
-## 33. Digital trace data
+## 33. Digital dấu vết (trace / 추적) dữ liệu (data / 데이터)
 
-Clicks, GPS, logs and platform data measure behavior at high frequency but only for platform users under platform-generated environment.
+Clicks, GPS, logs and nền tảng (platform / 플랫폼) dữ liệu (data / 데이터) measure hành vi (behavior / 동작) at high frequency but only for nền tảng (platform / 플랫폼) users under platform-generated môi trường (environment / 환경).
 
-Platform changes can change data-generating process.
+Nền tảng (platform / 플랫폼) changes can thay đổi (change / 변경) data-generating tiến trình (process / 프로세스).
 
-## 34. Missing data
+## 34. Missing dữ liệu (data / 데이터)
 
 Missingness may be item nonresponse, attrition or unavailable records.
 
-Deletion is unbiased only under restrictive mechanisms; imputation requires assumptions and should preserve uncertainty.
+Deletion is unbiased only under restrictive mechanisms; imputation requires các giả định (assumptions / 가정들) and should preserve bất định (uncertainty / 불확실성).
 
-## 35. Mode effects
+## 35. Chế độ (mode / 모드) effects
 
-Phone, face-to-face, paper and online surveys can produce different answers due privacy, interviewer presence and interface.
+Phone, face-to-face, paper and online surveys can produce different answers due privacy, interviewer presence and giao diện (interface / 인터페이스).
 
-Mode changes across waves threaten comparability.
+Chế độ (mode / 모드) changes across waves threaten comparability.
 
 ## 36. Translation and multilingual research
 
 Back-translation helps but does not guarantee conceptual equivalence.
 
-Use bilingual expert review + cognitive interviews in target language/culture.
+Use bilingual expert rà soát (review / 검토) + cognitive interviews in mục tiêu (target / 대상) ngôn ngữ (language / 언어)/culture.
 
-## 37. Pretesting data pipeline
+## 37. Pretesting dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인)
 
 Research errors also occur in IDs, merges, timestamps, coding and units.
 
-Validation rules, range checks, duplicate detection and provenance should be designed before full collection.
+Kiểm tra hợp lệ (validation / 검증) rules, phạm vi (range / 범위) checks, duplicate detection and provenance should be designed before full collection.
 
-## 38. Data dictionary
+## 38. Dữ liệu (data / 데이터) dictionary
 
 Every variable should document:
 
@@ -291,29 +291,29 @@ transformations
 
 This is part of scientific reproducibility.
 
-## 39. Failure modes
+## 39. Thất bại (failure / 실패) modes
 
-Sai lầm thứ nhất là equate reliability with validity.
+Sai lầm thứ nhất là equate độ tin cậy (reliability / 신뢰성) with validity.
 
-Sai lầm thứ hai là use a popular scale without checking population/language validity.
+Sai lầm thứ hai là use a popular quy mô (scale / 규모) without checking population/ngôn ngữ (language / 언어) validity.
 
-Sai lầm thứ ba là call large convenience sample representative.
+Sai lầm thứ ba là lời gọi (call / 호출) large convenience mẫu (sample / 표본) representative.
 
-Sai lầm thứ tư là treat response rate as sole nonresponse-bias measure.
+Sai lầm thứ tư là treat phản hồi (response / 응답) tỷ lệ (rate / 비율) as sole nonresponse-bias measure.
 
-Sai lầm thứ năm là change survey mode/items across waves without comparability analysis.
+Sai lầm thứ năm là thay đổi (change / 변경) survey chế độ (mode / 모드)/items across waves without comparability phân tích (analysis / 분석).
 
-## 40. Measurement/sampling checklist
+## 40. Đo lường (measurement / 측정)/sampling checklist
 
-1. target population là ai?
+1. mục tiêu (target / 대상) population là ai?
 2. frame cover ai và bỏ ai?
-3. sampling mechanism nào?
+3. sampling cơ chế (mechanism / 메커니즘) nào?
 4. construct definition là gì?
 5. indicators capture dimensions nào?
-6. reliability + validity evidence nào?
-7. wording/mode/social-desirability threats nào?
-8. missing/nonresponse mechanism nào?
-9. weights/design effects cần xử lý không?
-10. instrument/data pipeline đã pilot chưa?
+6. độ tin cậy (reliability / 신뢰성) + validity bằng chứng (evidence / 증거) nào?
+7. wording/chế độ (mode / 모드)/social-desirability threats nào?
+8. missing/nonresponse cơ chế (mechanism / 메커니즘) nào?
+9. weights/thiết kế (design / 설계) effects cần xử lý không?
+10. instrument/dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) đã pilot chưa?
 
-Quantitative measurement chỉ là một route. Nhiều câu hỏi về meaning, process và institutions cần qualitative methods để tạo evidence sâu thay vì ép thành scale quá sớm.
+Quantitative đo lường (measurement / 측정) chỉ là một tuyến (route / 경로). Nhiều câu hỏi về meaning, tiến trình (process / 프로세스) và institutions cần qualitative methods để tạo bằng chứng (evidence / 증거) sâu thay vì ép thành quy mô (scale / 규모) quá sớm.
