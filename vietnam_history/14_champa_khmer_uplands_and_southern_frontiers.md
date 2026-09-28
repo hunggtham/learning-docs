@@ -30,9 +30,9 @@ Sau thất bại của Vijaya, các Cham political centres và communities vẫn
 
 ## Vì sao Nguyễn expansion tăng tốc từ miền Trung?
 
-Đàng Trong cần land, population và revenue, nhưng geography tạo ràng buộc (constraint / 제약조건) mạnh: đồng bằng nhỏ, núi sát biển. Expansion southward có thể mở thêm agricultural zone, harbour và strategic độ sâu (depth / 깊이).
+Đàng Trong cần đất, dân số và nguồn thu, nhưng địa lý tạo ràng buộc mạnh: đồng bằng nhỏ, núi sát biển. Mở rộng về phía nam có thể mở thêm vùng nông nghiệp, bến cảng và chiều sâu chiến lược.
 
-Cùng lúc, di chuyển (migration / 마이그레이션) không chỉ do trạng thái (state / 상태) command. Peasant household, soldier-settler, merchant, religious community và refugee có incentive riêng. Một frontier thường hình thành qua tương tác (interaction / 상호작용) giữa **top-down administration** và **bottom-up mobility**.
+Đồng thời, di cư không chỉ do mệnh lệnh nhà nước. Hộ nông dân, binh lính–khẩn hoang, thương nhân, cộng đồng tôn giáo và người tị nạn có động lực riêng. Một vùng biên thường hình thành qua tương tác giữa **quản trị từ trên xuống (top-down administration / 하향식 행정)** và **sự dịch chuyển từ dưới lên (bottom-up mobility / 상향식 이동)**.
 
 ```text
 state security + revenue goals
@@ -46,9 +46,9 @@ Khi hai dòng incentive gặp nhau, settlement có thể tăng nhanh hơn sức 
 
 ## Phú Yên, Khánh Hòa và Panduranga: frontier dịch chuyển theo từng bước
 
-Trong thế kỷ XVII, Nguyễn authority mở rộng dần xuống vùng Phú Yên và Khánh Hòa. Những shifts này không phải một campaign duy nhất. Warfare, military settlement và administrative reclassification diễn ra theo thời gian.
+Trong thế kỷ XVII, chính quyền Nguyễn mở rộng dần xuống vùng Phú Yên và Khánh Hòa. Những chuyển dịch này không phải một chiến dịch duy nhất. Chiến tranh, đồn điền quân sự và phân loại hành chính lại diễn ra theo thời gian.
 
-Cuối thế kỷ XVII, Panduranga chịu pressure mạnh hơn và eventually bị đặt vào một relationship lệ thuộc chặt với Nguyễn authority, nhưng Cham cục bộ (local / 로컬) structures vẫn có mức autonomy đáng kể trong những giai đoạn nhất định.
+Cuối thế kỷ XVII, Panduranga chịu sức ép mạnh hơn và dần bị đặt vào quan hệ lệ thuộc chặt với chính quyền Nguyễn, nhưng các cấu trúc địa phương Chăm vẫn có mức tự chủ đáng kể trong những giai đoạn nhất định.
 
 Đây là ranh giới (boundary / 경계) quan trọng: **annexation trên document không bằng instantaneous homogenization ngoài xã hội**.
 

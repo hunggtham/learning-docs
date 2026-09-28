@@ -36,13 +36,13 @@ Nguyễn military-fiscal capacity
 
 Điều này không có nghĩa thương mại một mình tạo ra Đàng Trong. Nó nghĩa rằng geography làm thay đổi mix tài nguyên mà trạng thái (state / 상태) có thể khai thác.
 
-## Chiến tranh Trịnh–Nguyễn 1627–1672: logistics trước khi là battle danh sách (list / 목록)
+## Chiến tranh Trịnh–Nguyễn 1627–1672: hậu cần trước khi là danh sách trận đánh
 
 Các cuộc chiến lớn giữa Trịnh và Nguyễn diễn ra nhiều đợt từ **1627 đến 1672**. Thay vì học thuộc từng campaign, hãy hỏi tại sao không bên nào dễ dàng tiêu diệt bên kia.
 
-Đàng Ngoài có population và agrarian cơ sở (base / 기반) lớn hơn ở Red River delta, nhưng muốn tấn công xuống nam phải kéo quân qua một corridor dài, duy trì supply và vượt các defensive line. Đàng Trong có territory hẹp hơn nhưng có thể phòng thủ trên những choke điểm (point / 지점) địa lý phù hợp, đồng thời đầu tư fortification và gunpowder weaponry.
+Đàng Ngoài có dân số và nền nông nghiệp lớn hơn ở đồng bằng sông Hồng, nhưng muốn tấn công xuống nam phải kéo quân qua một hành lang dài, duy trì tiếp tế và vượt các tuyến phòng thủ. Đàng Trong có lãnh thổ hẹp hơn nhưng có thể phòng thủ tại những điểm nghẽn địa lý phù hợp, đồng thời đầu tư vào công sự và vũ khí thuốc súng.
 
-Các lũy ở Quảng Bình gắn với Đào Duy Từ là checkpoint tốt để hiểu **defense-in-depth**. Một bức lũy không tự thắng chiến tranh; nó làm cho attacker phải tăng chi phí (cost / 비용), tập trung quân ở những hướng dự đoán được và phụ thuộc mạnh hơn vào supply line.
+Các lũy ở Quảng Bình gắn với Đào Duy Từ là điểm kiểm tra tốt để hiểu **phòng thủ chiều sâu (defense in depth / 종심 방어)**. Một bức lũy không tự thắng chiến tranh; nó làm cho bên tấn công phải tăng chi phí, tập trung quân ở những hướng dự đoán được và phụ thuộc mạnh hơn vào tuyến tiếp tế.
 
 ```text
 attacker numerical advantage
@@ -66,9 +66,9 @@ Red River delta vẫn là agrarian cốt lõi (core / 핵심) với population d
 
 ## Đàng Trong: một maritime political economy
 
-Đàng Trong nổi bật vì mức độ gắn với trade quốc tế. Các chúa Nguyễn khuyến khích commercial contact vì trade đem lại revenue, metal, weapon, luxury good, currency và diplomatic liên kết (connection / 연결).
+Đàng Trong nổi bật vì mức độ gắn với thương mại quốc tế. Các chúa Nguyễn khuyến khích tiếp xúc thương mại vì buôn bán đem lại nguồn thu, kim loại, vũ khí, hàng xa xỉ, tiền tệ và liên kết ngoại giao.
 
-Hội An trở thành một major international cổng (port / 포트), nơi merchant từ Nhật Bản, Trung Hoa, Đông Nam Á và châu Âu tương tác với cục bộ (local / 로컬) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). UNESCO mô tả Hội An như một trading cổng (port / 포트) hoạt động mạnh từ thế kỷ XV đến XIX và là material bằng chứng (evidence / 증거) rõ về sự kết hợp văn hóa bản địa, Trung Hoa, Nhật Bản và sau đó là châu Âu.
+Hội An trở thành một cảng quốc tế lớn, nơi thương nhân từ Nhật Bản, Trung Hoa, Đông Nam Á và châu Âu tương tác với mạng lưới sản xuất địa phương. UNESCO mô tả Hội An như một cảng thương mại hoạt động mạnh từ thế kỷ XV đến XIX và là bằng chứng vật chất rõ về sự kết hợp văn hóa bản địa, Trung Hoa, Nhật Bản và sau đó là châu Âu.
 
 Điểm quan trọng là trade không nằm ngoài trạng thái (state / 상태). Cổng (port / 포트) chính sách (policy / 정책) có thể tác động trực tiếp tới military sức chứa (capacity / 용량). European firearms, imported metal, ships và tax/customs revenue làm thay đổi balance giữa các regional powers.
 

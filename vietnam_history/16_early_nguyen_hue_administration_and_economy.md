@@ -30,9 +30,9 @@ roads / stations / records / regional officials
 
 ## Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy
 
-**Quần thể di tích Cố đô Huế** không chỉ là palace aesthetics. Spatial organization biểu đạt political hierarchy: outer capital, imperial city, restricted inner zones, ritual axes và quan hệ (relation / 관계) giữa court với landscape.
+**Quần thể di tích Cố đô Huế** không chỉ là vẻ đẹp cung điện. Tổ chức không gian biểu đạt thứ bậc chính trị: kinh thành bên ngoài, hoàng thành, các khu vực hạn chế, trục nghi lễ và quan hệ giữa triều đình với cảnh quan.
 
-Monumentality có hai hàm (function / 함수) đồng thời. Nó centralizes administration physically và communicates legitimacy symbolically.
+Tính monumental có hai chức năng đồng thời. Nó tập trung hành chính về mặt vật chất và truyền đạt tính chính danh về mặt biểu tượng.
 
 Nếu đứng ở Huế, hãy hỏi movement tuyến (route / 경로) của official, document, guard, tax thông tin (information / 정보) và ritual delegation. Capital là workplace của trạng thái (state / 상태) trước khi là heritage attraction.
 
@@ -60,7 +60,7 @@ Minh Mạng về sau push mạnh bước standardization.
 
 ## Minh Mạng và provincial reform 1831–1832
 
-Dưới **Minh Mạng**, centralization tăng rõ. Các regional command structures lớn bị thay bằng hệ thống tỉnh, governor/official hierarchy và reporting chains chặt hơn vào court.
+Dưới **Minh Mạng**, tập quyền tăng rõ. Các cơ cấu chỉ huy vùng lớn bị thay bằng hệ thống tỉnh, thứ bậc quan lại và chuỗi báo cáo gắn chặt hơn với triều đình.
 
 Mốc **1831–1832** quan trọng vì administrative map được standardized sâu hơn trên toàn realm. Nhưng again, map thay đổi (change / 변경) không đồng nghĩa cục bộ (local / 로컬) society instantly becomes uniform.
 
@@ -68,7 +68,7 @@ Centralization giải quyết một số bài toán (problem / 문제): giảm p
 
 ## Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)
 
-Một premodern trạng thái (state / 상태) không nhìn population trực tiếp. Nó nhìn qua **household register, land register, tax category, official report và cục bộ (local / 로컬) intermediary**.
+Một nhà nước tiền hiện đại không nhìn dân số trực tiếp. Nó nhìn qua **sổ hộ tịch, sổ ruộng đất, loại thuế, báo cáo quan lại và trung gian địa phương**.
 
 Nếu bản ghi (record / 레코드) sai, trạng thái (state / 상태) sức chứa (capacity / 용량) bị distort. Ví dụ land khai khẩn mới nhưng chưa registered có thể escape tax; household di chuyển (migration / 마이그레이션) làm population count outdated; cục bộ (local / 로컬) elite có thể manipulate assessment.
 

@@ -40,9 +40,9 @@ rebellion recruitment cheaper
 
 Đây là cơ chế (mechanism / 메커니즘) tổng quát; từng locality có intensity khác nhau.
 
-## Rice là military variable
+## Lúa gạo là biến số quân sự
 
-Một điểm rất quan trọng của thế kỷ XVIII là **food supply**. Army, city và court đều cần rice. Southern water frontier đã tạo môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) lớn, nhưng civil war có thể cắt shipping tuyến (route / 경로) và biến abundance thành scarcity.
+Một điểm rất quan trọng của thế kỷ XVIII là **nguồn cung lương thực (food supply / 식량 공급)**. Quân đội, thành thị và triều đình đều cần gạo. Vùng biên sông nước phía Nam đã tạo mạng lưới sản xuất lớn, nhưng nội chiến có thể cắt tuyến vận chuyển và biến dồi dào thành khan hiếm.
 
 Nghiên cứu về food politics cho thấy khi rice shipment về political centres bị disrupted, military và urban stability suy giảm nhanh. Vì vậy rice boat đôi khi quan trọng không kém cannon.
 
@@ -70,9 +70,9 @@ Không nên biến xung đột (conflict / 충돌) thành duel cá nhân Nguyễ
 
 ## 1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention
 
-Nguyễn Ánh tìm hỗ trợ (support / 지원) từ Siam; Siamese forces tiến vào southern Vietnam. Nguyễn Huệ đánh bại lực lượng này tại **Rạch Gầm–Xoài Mút năm 1785**.
+Nguyễn Ánh tìm hỗ trợ từ Xiêm; quân Xiêm tiến vào Nam Bộ. Nguyễn Huệ đánh bại lực lượng này tại **Rạch Gầm–Xoài Mút năm 1785**.
 
-Nếu chỉ nhớ “trận đánh lớn”, ta bỏ qua geography. Mekong distributaries tạo môi trường (environment / 환경) mà fleet movement, ambush điểm (point / 지점), riverbank artillery và cục bộ (local / 로컬) kiến thức (knowledge / 지식) quyết định kết quả (outcome / 결과). Đây là water warfare khác hẳn Bạch Đằng nhưng cùng nhắc một principle: **điều khiển (control / 제어) movement corridor = điều khiển (control / 제어) battle hình học (geometry / 기하학)**.
+Nếu chỉ nhớ “trận đánh lớn”, ta bỏ qua địa lý. Các nhánh sông Mekong tạo môi trường mà sự cơ động của hạm đội, điểm phục kích, pháo binh ven sông và hiểu biết địa phương quyết định kết quả. Đây là chiến tranh sông nước khác hẳn Bạch Đằng nhưng cùng nhắc một nguyên tắc: **kiểm soát hành lang di chuyển = kiểm soát hình học trận đánh**.
 
 Khu vực Tiền Giang ngày nay là checkpoint tốt để đặt battle trên river map.
 

@@ -28,17 +28,17 @@ French-Spanish intervention 1858
 
 ## Đà Nẵng 1858: landing không bằng conquest
 
-Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng không nhanh chóng ép Nguyễn court đầu hàng. Disease, logistics và cục bộ (local / 로컬) resistance làm campaign bị kẹt.
+Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng không nhanh chóng ép triều Nguyễn đầu hàng. Bệnh dịch, hậu cần và sự kháng cự địa phương làm chiến dịch bị sa lầy.
 
-Điểm này quan trọng vì nó phá myth “vũ khí hiện đại = auto-win”. Technology tạo advantage, nhưng terrain, supply và occupation bài toán (problem / 문제) vẫn quyết định.
+Điểm này quan trọng vì nó phá bỏ huyền thoại “vũ khí hiện đại thì tự động chiến thắng”. Công nghệ tạo lợi thế, nhưng địa hình, tiếp tế và bài toán chiếm đóng vẫn quyết định.
 
 Pháp chuyển trọng tâm xuống **Gia Định/Sài Gòn**, nơi river truy cập (access / 접근) và southern rice economy tạo strategic lô-gic (logic / 논리) khác.
 
 ## Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?
 
-Sài Gòn–Mekong region có agricultural surplus, water vận chuyển (transport / 전송) và maritime truy cập (access / 접근). Nếu kiểm soát được nút (node / 노드) này, expedition force dễ resupply hơn và có revenue/tài nguyên (resource / 자원) cơ sở (base / 기반).
+Vùng Sài Gòn–Mekong có phần dư nông nghiệp, vận chuyển đường nước và lối ra biển. Nếu kiểm soát nút này, lực lượng viễn chinh dễ tiếp tế hơn và có nền nguồn thu–tài nguyên.
 
-French conquest vì vậy không chỉ là battle map; nó là tìm kiếm (search / 검색) for a sustainable cơ sở (base / 기반).
+Vì vậy cuộc chinh phục của Pháp không chỉ là bản đồ trận đánh; đó là việc tìm kiếm một căn cứ bền vững.
 
 Năm **1862**, Treaty of Saigon chuyển ba tỉnh miền Đông Nam Kỳ cho Pháp. Đến **1867**, Pháp kiểm soát toàn bộ sáu tỉnh Nam Kỳ và tổ chức Cochinchina như colony trực tiếp.
 
