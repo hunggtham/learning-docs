@@ -82,6 +82,12 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "vietnam_history",
+      "category": "Vietnamese history",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "world_history",
       "category": "World history",
       "language": "vi-en",
