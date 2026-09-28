@@ -4,16 +4,16 @@
 
 Đây không phải danh sách du lịch. Mỗi địa điểm dưới đây là một **điểm kiểm tra kiến thức**: ta đến hoặc hình dung nó để thử một cơ chế lịch sử. Hãy bắt đầu từ tuyến 38, rồi dùng địa điểm tương ứng để kiểm tra điều chương niên đại đã giải thích.
 
-Use four questions everywhere:
+Hãy dùng bốn câu hỏi ở mọi địa điểm:
 
-1. What vật lý (physical / 물리적) tầng (layer / 계층) belongs to the studied period?
-2. What was rebuilt later?
-3. Why is the place located here geographically?
-4. Which economic/political/xã hội (social / 사회적) cơ chế (mechanism / 메커니즘) becomes visible here?
+1. Lớp vật chất nào thuộc đúng thời kỳ đang học?
+2. Phần nào được xây dựng hoặc trùng tu về sau?
+3. Vì sao địa điểm này nằm ở đây về mặt địa lý?
+4. Cơ chế kinh tế, chính trị hoặc xã hội nào hiện ra tại đây?
 
 ## Phú Thọ — Đền Hùng
 
-**Use for:** origin tradition, collective bộ nhớ (memory / 메모리), ritual, nation-building.
+**Dùng để học:** truyền thống nguồn gốc, ký ức tập thể, nghi lễ và quá trình xây dựng quốc gia.
 
 Do not use present temples as direct proof of literal Hùng chronology. Instead observe how landscape, festival and trạng thái (state / 상태)/community commemoration preserve and recreate Hùng bộ nhớ (memory / 메모리).
 
@@ -21,7 +21,7 @@ Read with chapters 04, 27 and 30.
 
 ## Đông Anh, Hà Nội — Cổ Loa
 
-**Use for:** early trạng thái (state / 상태) formation, fortification, labor mobilization, bronze military môi trường vận hành (production / 운영 환경).
+**Dùng để học:** hình thành nhà nước sơ kỳ, công sự, huy động lao động và sản xuất quân sự bằng đồng.
 
 Walk/inspect quy mô (scale / 규모) of ramparts and moat rather than only temple. Ask how many workers/food days/material flows monumental earthwork implies.
 

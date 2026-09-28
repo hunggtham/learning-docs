@@ -2,11 +2,11 @@
 
 ## Vì sao phải xoay bản đồ ra biển?
 
-Lịch sử Việt Nam thường được kể theo trục đất liền: capital → province → frontier. Cách nhìn đó dễ làm coastline trở thành edge của country. Nhưng trong nhiều thế kỷ, sea là một highway nối duyên hải Việt Nam với southern China, island Southeast Asia, Indian Ocean và xa hơn.
+Lịch sử Việt Nam thường được kể theo trục đất liền: kinh đô → tỉnh → biên giới. Cách nhìn đó dễ làm bờ biển thành rìa của đất nước. Nhưng trong nhiều thế kỷ, biển là một xa lộ nối duyên hải Việt Nam với nam Trung Hoa, Đông Nam Á hải đảo, Ấn Độ Dương và xa hơn.
 
 Chương này hỏi: **khi nhìn từ biển vào đất liền, các cảng, cửa sông và cộng đồng thương nhân đã thay đổi kinh tế, chiến tranh, tôn giáo và năng lực nhà nước như thế nào?** Hãy đặt Hội An, Vân Đồn, Sài Gòn và các cảng hiện đại cạnh chương 13, 17 và 23; như vậy biển trở thành một tuyến nối xuyên thời gian chứ không chỉ là “mép bản đồ”.
 
-Cốt lõi (core / 핵심) idea: cổng (port / 포트) không phải một dot độc lập. Nó là giao diện (interface / 인터페이스) giữa hinterland và long-distance mạng (network / 네트워크).
+Ý tưởng cốt lõi: cảng không phải một chấm độc lập. Nó là giao diện (interface / 인터페이스) giữa vùng hậu phương và mạng lưới đường dài.
 
 ```text
 upland / delta production
@@ -22,9 +22,9 @@ foreign goods / silver / technology / ideas
 
 Nếu một link đứt, cổng (port / 포트) suy yếu dù buildings vẫn còn.
 
-## Monsoon tạo calendar cho commerce
+## Gió mùa tạo lịch cho thương mại
 
-Premodern sailors không có diesel engine để đi bất kỳ lúc nào. Seasonal wind mẫu (pattern / 패턴) ảnh hưởng departure/arrival, waiting thời gian (time / 시간) và merchant residence.
+Thủy thủ tiền hiện đại không có động cơ diesel để đi bất kỳ lúc nào. Mô hình gió theo mùa ảnh hưởng giờ khởi hành–đến nơi, thời gian chờ và thời gian thương nhân lưu trú.
 
 Monsoon trade tạo một xã hội (social / 사회적) consequence quan trọng: merchants có thể phải ở lại cổng (port / 포트) nhiều tháng chờ wind thuận. Long residence encourages warehouse, foreign quarter, religious site, intermarriage và broker community.
 

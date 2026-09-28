@@ -1,12 +1,12 @@
 # Vùng cao và Tây Nguyên: trao đổi, tự chủ và quan hệ không đều với nhà nước đồng bằng
 
-## Vì sao mountain lịch sử (history / 이력) thường bị viết mỏng?
+## Vì sao lịch sử vùng núi thường bị viết mỏng?
 
-Lịch sử (history / 이력) textbook thường có nhiều nguồn (source / 소스) từ court, capital, inscription, tax archive và monument ở lowland. Mountain communities để lại ít hơn loại bằng chứng (evidence / 증거) mà centralized states thích sản xuất. Kết quả là nguồn (source / 소스) độ lệch (bias / 편향) dễ bị nhầm thành historical absence.
+Sách giáo khoa lịch sử thường có nhiều nguồn từ triều đình, kinh đô, bia ký, kho thuế và di tích ở đồng bằng. Cộng đồng miền núi để lại ít hơn loại chứng cứ mà nhà nước tập quyền thường tạo ra. Vì vậy sự lệch của nguồn dễ bị nhầm thành “không có lịch sử”.
 
 Chương này hỏi: **các xã hội vùng cao đã tham gia kinh tế, ngoại giao, chiến tranh và quá trình hình thành nhà nước ở Việt Nam như thế nào, và vì sao nhà nước đồng bằng vừa cần vùng cao vừa khó kiểm soát hoàn toàn?** Hãy đọc cùng chương 14 và 33 để nối đường trao đổi, cộng đồng tộc người, địa hình và di tích cụ thể.
 
-Điểm xuất phát là bỏ nhị phân (binary / 이진) “civilized lowland / backward highland”. Different ecology tạo different môi trường vận hành (production / 운영 환경), mobility và political incentives; khác không đồng nghĩa thấp hơn.
+Điểm xuất phát là bỏ nhị phân “đồng bằng văn minh / vùng cao lạc hậu”. Sinh thái khác nhau tạo ra môi trường sản xuất, khả năng di chuyển và động lực chính trị khác nhau; khác biệt không đồng nghĩa thấp kém.
 
 ## Upland không phải một vùng duy nhất
 

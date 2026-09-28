@@ -8,8 +8,8 @@ Mỗi phần có cùng nhịp lập luận (reasoning / 추론):
 
 1. **Mốc neo:** năm hoặc khoảng thời gian giúp không đảo trước–sau.
 2. **Kinh tế và đời sống:** đất, nước, lao động, thuế, trao đổi và rủi ro mà người đương thời phải xử lý.
-3. **Bối cảnh khu vực:** các đế chế, cộng đồng và mạng lưới (network / 네트워크) bên ngoài đang tạo sức ép hay cơ hội gì.
-4. **Địa điểm đọc:** di tích (heritage site / 유적지), cảnh quan hoặc bảo tàng giúp nhìn thấy cơ chế (mechanism / 메커니즘), không chỉ chụp lại một biểu tượng.
+3. **Bối cảnh khu vực:** các đế chế, cộng đồng và mạng lưới bên ngoài đang tạo sức ép hay cơ hội gì.
+4. **Địa điểm đọc:** di tích, cảnh quan hoặc bảo tàng giúp nhìn thấy cơ chế, không chỉ chụp lại một biểu tượng.
 
 Đây không phải bản tóm tắt thay cho các chương chính. Khi một phần mở ra câu hỏi, hãy đi theo liên kết ở cuối phần; khi cần kiểm tra nguồn và giới hạn diễn giải, quay lại [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md) và [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md).
 

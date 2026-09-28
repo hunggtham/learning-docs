@@ -4,23 +4,23 @@
 
 Tệp này không phải từ điển độc lập. Nó chuẩn hóa các khái niệm lặp lại trong thư viện và chỉ ra **loại nguồn nào phù hợp với loại câu hỏi nào**. Hãy dùng nó khi một chương 03–30 mở ra thuật ngữ mới hoặc khi cần kiểm tra giới hạn của chứng cứ.
 
-## Cốt lõi (core / 핵심) analytical terms
+## Các thuật ngữ phân tích cốt lõi
 
 ### Trạng thái (state / 상태) sức chứa (capacity / 용량) — năng lực nhà nước
 
-Khả năng của trạng thái (state / 상태) để collect thông tin (information / 정보)/tài nguyên (resource / 자원), enforce quy tắc (rule / 규칙), provide hạ tầng (infrastructure / 인프라), mobilize military và implement chính sách (policy / 정책) trên territory.
+Khả năng của nhà nước (state / 국가) thu thập thông tin, tài nguyên, thực thi quy tắc, cung cấp hạ tầng, huy động quân sự và triển khai chính sách trên lãnh thổ.
 
 Không đồng nghĩa “trạng thái (state / 상태) mạnh về quân sự”. Một trạng thái (state / 상태) có army lớn nhưng tax/cơ sở dữ liệu (database / 데이터베이스)/dịch vụ (service / 서비스) yếu vẫn có sức chứa (capacity / 용량) profile không đồng đều.
 
 ### Legitimacy — tính chính danh / sự chấp nhận quyền lực
 
-Cơ sở khiến quy tắc (rule / 규칙) được xem là có quyền cai trị: dynasty, ritual, law, ideology, hiệu năng (performance / 성능), revolution, election/institution tùy period/hệ thống (system / 시스템).
+Cơ sở khiến quyền lực được xem là có quyền cai trị: triều đại, nghi lễ, luật pháp, hệ tư tưởng, hiệu năng, cách mạng hoặc bầu cử–thiết chế tùy thời kỳ.
 
 Legitimacy là analytical term, không phải assistant phán xét regime nào “xứng đáng”.
 
 ### Extraction — huy động/thu tài nguyên (resource / 자원)
 
-Tax, tribute, rent, corvée labor, requisition hoặc other cơ chế (mechanism / 메커니즘) chuyển tài nguyên (resource / 자원) từ household/economy tới ruler/trạng thái (state / 상태)/elite.
+Thuế, cống nạp, tô, lao dịch, trưng dụng hoặc các cơ chế khác chuyển tài nguyên từ hộ gia đình/nền kinh tế tới người cai trị, nhà nước hoặc tinh hoa.
 
 ### Corvée — lao dịch
 

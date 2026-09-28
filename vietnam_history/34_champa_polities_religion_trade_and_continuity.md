@@ -1,16 +1,16 @@
 # Champa: nhiều trung tâm quyền lực, kinh tế biển và sự tiếp nối sau chinh phục
 
-## Vì sao Champa cần một chapter riêng?
+## Vì sao Champa cần một chương riêng?
 
-[`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) đã đặt Champa vào bài toán frontier của Đại Việt và Nguyễn. Nhưng nếu chỉ đọc Champa tại những thời điểm nó va chạm với Đại Việt, ta lại vô tình biến một historical hệ thống (system / 시스템) tồn tại nhiều thế kỷ thành “phần phía nam của lịch sử Việt Nam”.
+[`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) đã đặt Champa vào bài toán vùng biên của Đại Việt và Nguyễn. Nhưng nếu chỉ đọc Champa tại những thời điểm va chạm với Đại Việt, ta vô tình biến một hệ thống lịch sử tồn tại nhiều thế kỷ thành “phần phía nam của lịch sử Việt Nam”.
 
 Chương này đổi điểm nhìn. Câu hỏi trung tâm là: **các chính thể Chăm hình thành và duy trì quyền lực trong một dải duyên hải hẹp bằng cách nào, kết nối bờ biển với vùng cao và thương mại đường biển ra sao, và vì sao một trung tâm chính trị thất bại không đồng nghĩa xã hội Chăm biến mất?** Hãy đọc cạnh chương 14 và ghé Mỹ Sơn, Nha Trang, Ninh Thuận để nối trung tâm quyền lực với tôn giáo, cảng và cộng đồng còn tiếp tục sống.
 
-Điểm đầu tiên phải bỏ là hình ảnh Champa như một trạng thái (state / 상태) luôn thống nhất, có một capital cố định và ranh giới (boundary / 경계) giống nation-state hiện đại. Trong nhiều thời kỳ, các trung tâm như Amaravati/Indrapura ở phía bắc, Vijaya ở vùng Bình Định, Kauthara quanh Nha Trang và Panduranga ở vùng Ninh Thuận–Bình Thuận có mức độ nổi trội khác nhau. Political tích hợp (integration / 통합) thay đổi theo dynasty, warfare, trade tuyến (route / 경로) và cục bộ (local / 로컬) elite.
+Điểm đầu tiên phải bỏ là hình ảnh Champa như một nhà nước luôn thống nhất, có một kinh đô cố định và ranh giới giống quốc gia hiện đại. Trong nhiều thời kỳ, các trung tâm như Amaravati/Indrapura ở phía bắc, Vijaya ở Bình Định, Kauthara quanh Nha Trang và Panduranga ở Ninh Thuận–Bình Thuận có mức độ nổi trội khác nhau. Sự tích hợp chính trị thay đổi theo triều đại, chiến tranh, tuyến thương mại và tinh hoa địa phương.
 
 ## Geography: miền Trung hẹp nhưng không hề đơn giản
 
-Duyên hải miền Trung có mẫu (pattern / 패턴) rất khác đồng bằng sông Hồng. Trường Sơn tiến gần biển, tạo các basin và river valley tương đối tách nhau. Mỗi basin có thể nối một agricultural hinterland nhỏ với một cửa biển, trong khi mountain pass nối coast với upland tài nguyên (resource / 자원) zone.
+Duyên hải miền Trung có mô hình rất khác đồng bằng sông Hồng. Trường Sơn tiến gần biển, tạo các lòng chảo và thung lũng sông tương đối tách nhau. Mỗi lòng chảo có thể nối một vùng nông nghiệp phía sau với cửa biển, trong khi đèo núi nối bờ biển với vùng tài nguyên cao nguyên.
 
 Điều này tạo một political economy dạng mạng (network / 네트워크):
 

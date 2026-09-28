@@ -2,15 +2,15 @@
 
 Tệp này là **bản đồ tọa độ**, không thay thế các chương giải thích nguyên nhân. Dùng nó sau chương 38 để định vị mốc, rồi quay lại chương tương ứng để đọc kinh tế, xã hội và địa điểm; với giai đoạn cổ, niên đại truyền thống và niên đại khảo cổ không phải lúc nào trùng nhau.
 
-## Tiền sử và early trạng thái (state / 상태)
+## Tiền sử và nhà nước sơ kỳ
 
-- Khoảng thiên niên kỷ II–I TCN: các cultural chuỗi (sequence / 시퀀스) Phùng Nguyên → Đồng Đậu → Gò Mun; agriculture/metallurgy ngày càng complex.
+- Khoảng thiên niên kỷ II–I TCN: chuỗi văn hóa (cultural sequence / 문화 연속체) Phùng Nguyên → Đồng Đậu → Gò Mun; nông nghiệp và luyện kim ngày càng phức tạp.
 - Khoảng thế kỷ VII TCN–đầu Công nguyên: Đông Sơn phát triển ở Bắc Bộ và vùng liên quan.
-- Khoảng thế kỷ III TCN: Cổ Loa trở thành major fortified political centre; tradition gắn với Âu Lạc/An Dương Vương.
+- Khoảng thế kỷ III TCN: Cổ Loa trở thành trung tâm chính trị có công sự lớn; truyền thống gắn với Âu Lạc/An Dương Vương.
 - Khoảng 207 TCN: Triệu Đà hình thành Nam Việt (Nanyue) ở khu vực nam Trung Hoa và Bắc Việt hiện nay.
 - 111 TCN: nhà Hán đánh bại Nam Việt, đưa Bắc Bộ vào imperial commandery hệ thống (system / 시스템).
 
-## Bắc thuộc và cục bộ (local / 로컬) autonomy attempts
+## Bắc thuộc và những nỗ lực tự trị địa phương
 
 - 40–43: khởi nghĩa Hai Bà Trưng.
 - 248: khởi nghĩa Bà Triệu theo truyền thống/sử liệu.
@@ -20,7 +20,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 791: Phùng Hưng associated with cục bộ (local / 로컬) uprising/điều khiển (control / 제어) of Tống Bình.
 - 905: Khúc Thừa Dụ gains cục bộ (local / 로컬) điều khiển (control / 제어) amid Tang collapse.
 - 930s: Dương Đình Nghệ và Ngô Quyền tiếp tục contest southern Chinese điều khiển (control / 제어).
-- 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — major break from direct northern imperial quy tắc (rule / 규칙).
+- 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — bước ngoặt lớn khỏi sự cai trị trực tiếp của đế chế phương Bắc.
 
 ## Thế kỷ X và early dynastic trạng thái (state / 상태)
 
