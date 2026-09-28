@@ -1,131 +1,108 @@
-# Economics — Coverage kiểm tra (audit / 감사)
-
-> **Mạch đọc:** Đặt **Economics — Coverage kiểm tra (audit / 감사)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kết luận hiện tại** sang **Coverage ma trận (matrix / 행렬)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+# Economics — Coverage Audit
 
 ## Kết luận hiện tại
 
-Economics cốt lõi (core / 핵심) hiện đã hoàn chỉnh ở cấp chuẩn gốc (canonical / 정본) lộ trình học (learning path / 학습 경로): `00 Foundations`, `01 Microeconomics`, `02 Market Structure & Game Theory`, `03 Macroeconomics`, `04 Applied Economics`, `05 Econometrics` và `06 Economic History & Institutions` đều có trục học (learning spine / 학습 축), độ sâu (depth / 깊이) gate, bằng chứng (evidence / 증거) ranh giới (boundary / 경계) và cross-domain tích hợp (integration / 통합).
+Economics đã có canonical boundary và hiện đã hoàn thiện tương đối sâu ba lớp đầu: `00 Foundations`, `01 Microeconomics` và `02 Market Structure & Game Theory`. Hai module sau không còn ở trạng thái skeleton: chúng đã có learning path, model assumptions, welfare/policy boundary, failure modes và cross-links đủ để đọc liên tục.
 
-Điều này không có nghĩa mọi advanced subfield đã được viết. Nó nghĩa người đọc hiện có một tuyến (route / 경로) đầy đủ từ nguyên lý nền tảng (first principles / 제일 원리) → individual/firm choice → strategic markets → aggregate economy → nhân quả (causal / 인과적) empirical methods → applied fields → institutions/lịch sử (history / 이력) mà không cần nhảy ra ngoài chỉ để lấp các khái niệm cốt lõi (core / 핵심).
+Khoảng trống lớn tiếp theo nằm ở `03 Macroeconomics`, `04 Applied Economics`, `05 Econometrics` và `06 Economic History & Institutions`. `investing/04_economics/` tiếp tục là nguồn tham chiếu tạm thời cho macro/policy trong bối cảnh đầu tư; không copy hàng loạt nội dung sang Economics nếu chưa tách được boundary general-purpose.
 
+## Coverage matrix
 
-> **Chuyển mạch:** Từ **Kết luận hiện tại**, ta sang **Coverage ma trận (matrix / 행렬)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Coverage ma trận (matrix / 행렬)
-
-| mô-đun (module / 모듈) | Trạng thái | Coverage hiện có | Advanced gaps chỉ mở khi cần |
+| Module | Trạng thái | Coverage hiện có | Khoảng trống chính |
 |---|---|---|---|
-| 00 Foundations | chuẩn gốc (canonical / 정본) baseline | scarcity, opportunity chi phí (cost / 비용), marginal phân tích (analysis / 분석), incentives, equilibrium, PPF, efficiency/equity, positive/normative, comparative statics | bất định (uncertainty / 불확실성) formal hơn, behavioral/institutional foundations |
-| 01 Microeconomics | **cốt lõi (core / 핵심) complete** | bên tiêu thụ (consumer / 소비자)/producer; welfare; externality; công khai (public / 공개) goods/commons; thông tin (information / 정보) asymmetry/contracts | intertemporal choice, expected utility, general equilibrium |
-| 02 thị trường (market / 시장) cấu trúc (structure / 구조) & Game lý thuyết (theory / 이론) | **cốt lõi (core / 핵심) complete** | monopoly/competition, oligopoly, Cournot/Bertrand, sequential/repeated games, entry/collusion, auctions/cơ chế (mechanism / 메커니즘) thiết kế (design / 설계) | động (dynamic / 동적) games, advanced cơ chế (mechanism / 메커니즘) thiết kế (design / 설계) |
-| 03 Macroeconomics | **cốt lõi (core / 핵심) complete** | đo lường (measurement / 측정); growth; labor/inflation; money/banking; monetary/fiscal chính sách (policy / 정책); nghiệp vụ (business / 비즈니스) cycles; open economy/crises | heterogeneous-agent macro, advanced DSGE/structural macro |
-| 04 Applied Economics | **cốt lõi (core / 핵심) complete** | labor; công khai (public / 공개); trade; development; industrial organization | environmental, health, education, urban/spatial if needed |
-| 05 Econometrics | **Foundation complete** | đo lường (measurement / 측정)/estimands; OLS; experiments/selection; IV/RDD; panel/DiD; thời gian (time / 시간) series/macro identification; robustness/bên ngoài (external / 외부) validity | nhân quả (causal / 인과적) ML, structural estimation, duration/count/spatial methods |
-| 06 Economic lịch sử (history / 이력) & Institutions | **cốt lõi (core / 핵심) complete** | thuộc tính (property / 속성)/contracts/trạng thái (state / 상태) sức chứa (capacity / 용량); money/finance/fiscal states; industrialization/globalization; crises/regimes/đường dẫn (path / 경로) dependence | deeper regional/period trường hợp (case / 사례) studies via cross-links, not duplicated chronology |
+| 00 Foundations | Đã có baseline | scarcity, opportunity cost, marginal analysis, incentives, equilibrium, PPF, efficiency/equity, positive/normative, comparative statics | uncertainty formal hơn, institutions và behavioral limits |
+| 01 Microeconomics | **Depth pass hoàn tất** | consumer/producer; welfare theorems, surplus, tax incidence; externality; public goods/commons; information asymmetry, contracts và principal–agent | advanced general equilibrium, uncertainty/expected utility, intertemporal choice có thể mở rộng sau |
+| 02 Market Structure & Game Theory | **Depth pass hoàn tất** | competition/monopoly, market power, oligopoly, Cournot/Bertrand, sequential/repeated games, entry/collusion, auctions, mechanism design | advanced IO estimation và dynamic structural models thuộc Applied/Econometrics |
+| 03 Macroeconomics | Chưa có module độc lập | reference rải rác trong Investing | national accounts → growth → labor/inflation/money/banking → policy → cycle → open economy |
+| 04 Applied Economics | Chưa viết | chưa có canonical chapters | labor, public, trade, development, industrial organization và policy cases có causal boundary |
+| 05 Econometrics | Chưa viết | statistics background nằm ở Mathematics | identification, regression, experiments, IV, DiD, panel, time series, robustness, interpretation |
+| 06 Economic History & Institutions | Chưa viết | cross-domain material có trong History/Korea/Geography | periodization, institutions, technology, finance, trade, state capacity và comparative cases |
 
+## Nội dung vừa được nâng độ sâu
 
-> **Chuyển mạch:** Từ **Coverage ma trận (matrix / 행렬)**, ta sang **06 — Economic lịch sử (history / 이력) & Institutions độ sâu (depth / 깊이) gate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+### 01 — Microeconomics
 
-## 06 — Economic lịch sử (history / 이력) & Institutions độ sâu (depth / 깊이) gate
-
-Chuẩn gốc (canonical / 정본) chuỗi (sequence / 시퀀스):
+Canonical sequence hiện là:
 
 ```text
-00 Institutions, Property Rights & State Capacity
-01 Money, Finance & Fiscal States
-02 Technology, Industrialization & Globalization
-03 Crises, Regime Change & Path Dependence
+00 Consumer & Producer Theory
+01 Welfare & Market Efficiency
+02 Externalities & Policy
+03 Public Goods & Common Resources
+04 Information Asymmetry & Contracts
 ```
 
-Độ sâu (depth / 깊이) gate gồm:
+Depth gate đã được bổ sung ở các điểm trước đây còn thiếu: welfare theorem không bị đồng nhất với fairness; tax incidence được nối với elasticity; externality phân biệt private/social margins và government failure; public goods phân biệt rivalry/excludability và commons; information asymmetry đi qua adverse selection, moral hazard, signaling, screening, principal–agent, incomplete contracts và Bayesian belief.
 
-- formal vs informal institutions; rules vs enforcement; thuộc tính (property / 속성)/đặc tả hợp đồng (contract / 계약) rights; fiscal/thông tin (information / 정보)/legal trạng thái (state / 상태) sức chứa (capacity / 용량); credible commitment; rent-seeking và political power;
-- money/payment institutions, banking/clearing, công khai (public / 공개) debt, fiscal sức chứa (capacity / 용량), corporate forms, financial deepening, regulation và crisis hạ tầng (infrastructure / 인프라);
-- Malthusian ràng buộc (constraint / 제약조건), năng lượng (energy / 에너지), general-purpose technologies, diffusion, factory/management organization, vận chuyển (transport / 전송), structural transformation, globalization, di chuyển (migration / 마이그레이션) và động (dynamic / 동적) comparative advantage;
-- leverage/amplification, banking/sovereign/currency crises, chính sách (policy / 정책) regimes, reconstruction, Lucas critique, hysteresis, lock-in, multiple equilibria và historical identification.
+### 02 — Market Structure & Game Theory
 
-Lịch sử (history / 이력) is used as a cơ chế (mechanism / 메커니즘) laboratory. Chronology, political actors and detailed sự kiện (event / 이벤트) chuỗi (sequence / 시퀀스) remain chuẩn gốc (canonical / 정본) in `world_history/` and `korean_history/`.
+Canonical sequence hiện là:
 
+```text
+00 Competition, Monopoly & Market Power
+01 Oligopoly & Strategic Interaction
+02 Repeated Games, Entry & Collusion
+03 Auctions & Mechanism Design
+```
 
-> **Chuyển mạch:** Từ **06 — Economic lịch sử (history / 이력) & Institutions độ sâu (depth / 깊이) gate**, ta sang **Economics-wide bằng chứng (evidence / 증거) discipline** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Depth gate đã được bổ sung ở market definition, markup/elasticity, natural monopoly, price discrimination, Cournot/Bertrand model selection, best response/Nash, credible commitment, repeated-game monitoring, entry deterrence, reputation, winner's curse, revenue equivalence, incentive compatibility, participation constraint và mechanism-design boundary.
 
-## Economics-wide bằng chứng (evidence / 증거) discipline
+## Tiêu chí chất lượng và dependency
 
-Giữ bốn rules:
+Mỗi chapter mới phải đi từ vấn đề đến intuition, formalism, assumptions, mechanism, prediction/comparative statics, evidence và failure modes. Công thức không được đứng một mình; ký hiệu, domain và điều kiện validity phải đủ để đọc độc lập.
+
+Dependency ưu tiên hiện tại:
+
+```text
+Mathematics
+→ Foundations
+→ Microeconomics
+→ Market Structure & Game Theory
+→ Macroeconomics
+→ Applied Economics
+→ Econometrics
+→ Economic History & Institutions
+```
+
+Đây là learning route, không phải DAG cứng. Econometrics có thể học song song từ sớm nếu cần kiểm tra empirical claim; History, Geography, Psychology và Investing là bridge layers để test model boundaries.
+
+## Evidence discipline
+
+Từ depth pass này trở đi, Economics phải giữ rule rõ:
 
 ```text
 Model ≠ Evidence
-Accounting Identity ≠ Causal Theory
-Estimator ≠ Identification Strategy
-Causal Estimate ≠ Policy Recommendation
 ```
 
-Historical tầng (layer / 계층) thêm:
+Model xác định mechanism, counterfactual và variable cần đo. Evidence cần identification strategy. Một anecdote, concentration ratio hoặc correlation đơn lẻ không đủ để chứng minh market power, collusion, external damage hay causal policy effect.
 
-```text
-Persistence ≠ Path Dependence
-Formal Rule ≠ Effective Enforcement
-```
+Đây là lý do `05 Econometrics` trở thành gate quan trọng trước khi mở rộng nhiều case trong `04 Applied Economics`.
 
-Một historical association chỉ trở thành nhân quả (causal / 인과적) claim khi assignment/nguồn (source / 소스) of variation và alternative persistent channels được xử lý đủ rõ.
+## Connection audit
 
+- **Math:** calculus, optimization, probability/statistics, linear algebra, dynamical systems và game theory formalism là nền cho marginal choice, equilibrium, strategic interaction, econometrics và macro.
+- **History:** World History và Korean History cung cấp sequence về thể chế, công nghệ, thương mại, chiến tranh, demography, finance và state capacity.
+- **Psychology:** bounded rationality, belief formation, attention và behavior mở rộng rational-choice baseline.
+- **Geography:** location, resources, transport, spatial interaction, trade networks và development constraints tạo context cho production và inequality.
+- **Investing:** application layer cho asset, company, capital-flow và policy transmission; không phải nơi thay thế Economics general-purpose.
+- **Korea Business:** case layer để kiểm tra theory qua chaebol, labor, trade, industrial policy, finance và institutions của Hàn Quốc.
+- **Computer Science:** relevant với auctions, mechanism design, platform markets, matching và computational constraints.
 
-> **Chuyển mạch:** Từ **Economics-wide bằng chứng (evidence / 증거) discipline**, ta sang **tích hợp (integration / 통합) rules** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+## Quy tắc migrate từ Investing
 
-## Tích hợp (integration / 통합) rules
+Chỉ migrate một chapter khi:
 
-- **lịch sử (history / 이력):** Economics cross-link chronology; không bản sao (copy / 복사) timeline.
-- **Geography:** geography có thể là ràng buộc (constraint / 제약조건), treatment, confounder hoặc instrument; phải nêu cơ chế (mechanism / 메커니즘).
-- **Psychology:** hành vi (behavior / 동작)/expectations/salience bổ sung rational baseline.
-- **Investing:** thị trường (market / 시장)/asset interpretation giữ ở Investing; Economics giữ cơ chế (mechanism / 메커니즘) và bằng chứng (evidence / 증거) foundation.
-- **Korea nghiệp vụ (business / 비즈니스):** contemporary Korean institutional/company cases ở trường hợp (case / 사례) tầng (layer / 계층) riêng.
-- **Khoa học máy tính (computer science / 컴퓨터 과학):** computational methods/platforms/auctions được cross-link khi relevant.
+1. nội dung có giá trị general-purpose ngoài quyết định đầu tư;
+2. boundary và prerequisite đã viết rõ;
+3. internal links trong Investing có thể redirect mà không tạo vòng lặp;
+4. ví dụ asset-market được thay bằng ví dụ tổng quát hoặc đặt ở bridge section;
+5. không làm mất context macro/policy cần thiết cho investment.
 
+## Next audit gates
 
-> **Chuyển mạch:** Từ **tích hợp (integration / 통합) rules**, ta sang **Advanced expansion gate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+1. **Mở `03 Macroeconomics`** theo sequence national accounts → growth → unemployment/labor → inflation → money/banking → monetary policy → fiscal policy → business cycle → open economy. Đây là ưu tiên trực tiếp tiếp theo.
+2. **Mở `05 Econometrics` sớm ở mức foundation** thay vì đợi cuối: measurement → identification → regression → experiment → IV/DiD → panel/time series. Điều này giúp Applied Economics không phát triển thành case notes thiếu causal discipline.
+3. Sau khi macro + econometrics foundation có mặt, mở `04 Applied Economics` theo labor/public/trade/development/industrial organization và buộc mọi case chỉ rõ model + identification.
+4. `06 Economic History & Institutions` nên được viết sau khi macro/applied spine đủ rõ để tránh duplicate World History và Korea Business.
 
-## Advanced expansion gate
-
-Không tiếp tục mở Economics theo lô-gic (logic / 논리) “còn subfield là phải có folder”. Chỉ thêm advanced chapter khi ít nhất một điều kiện đúng:
-
-1. existing chapter cần prerequisite đó để không giải thích nửa chừng;
-2. một lĩnh vực (domain / 도메인) khác phụ thuộc trực tiếp vào nó;
-3. topic tạo học tập (learning / 학습) giá trị (value / 값) khác biệt, không duplicate;
-4. có thể viết đủ các giả định (assumptions / 가정들)/bằng chứng (evidence / 증거)/thất bại (failure / 실패) modes, không chỉ glossary.
-
-Các ứng viên sau này: intertemporal choice/bất định (uncertainty / 불확실성), heterogeneous-agent macro, structural IO, nhân quả (causal / 인과적) ML, spatial/environmental/health economics.
-
-
-> **Chuyển mạch:** Từ **Advanced expansion gate**, ta sang **Repo-wide priority sau Economics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Repo-wide priority sau Economics
-
-Sau độ sâu (depth / 깊이) pass này, Economics không còn là lĩnh vực (domain / 도메인) ưu tiên cần mở rộng tiếp ngay. Priority nên quay sang các vùng còn mỏng hơn:
-
-```text
-Research Methods
-→ Sociology
-→ Frontend canonical/root structure
-→ repo-wide audit automation
-```
-
-Sau đó mới chạy cross-domain rà soát (review / 검토) để tìm gaps thật sự thay vì tiếp tục thêm files vào các thư viện (library / 라이브러리) đã đủ cốt lõi (core / 핵심).
-
-
-> **Chuyển mạch:** Từ **Repo-wide priority sau Economics**, ta sang **Completion criterion** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Completion criterion
-
-Economics được đánh dấu **core-domain complete** khi:
-
-- tất cả `00–06` có chuẩn gốc (canonical / 정본) tuyến (route / 경로);
-- README + coverage kiểm tra (audit / 감사) + danh mục (catalog / 카탈로그) phản ánh nguồn chuẩn (source of truth / 정본);
-- nội bộ (internal / 내부) boundaries với Investing/lịch sử (history / 이력)/Korea/Geography rõ;
-- lý thuyết (theory / 이론), bằng chứng (evidence / 증거) và normative conclusions được tách;
-- applied chapters có estimand + identification;
-- historical chapters có enforcement/power/persistence cơ chế (mechanism / 메커니즘).
-
-Các tiêu chí trên hiện đã đạt sau độ sâu (depth / 깊이) pass này, subject to final danh mục (catalog / 카탈로그) synchronization on `main`.
-
-> **Bàn giao:** Sau **Completion criterion**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Quay lại [README](./README.md) khi cần định vị lại prerequisite hoặc đơn vị sở hữu (owner / 오너).
+Chỉ đánh dấu Economics hoàn tất toàn domain khi `03–06` có canonical learning path, chapter cơ chế đủ sâu, evidence discipline và integration với các domain liên quan.
