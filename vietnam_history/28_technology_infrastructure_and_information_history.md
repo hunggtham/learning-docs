@@ -40,7 +40,7 @@ Red River civilization cannot be understood without this long hydraulic lịch s
 
 ## River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads
 
-Bulk goods are expensive over land. Rivers make rice, timber, stone and troop movement cheaper.
+Hàng rời vận chuyển trên đất liền rất tốn kém. Sông ngòi làm cho việc chuyển gạo, gỗ, đá và quân đội rẻ hơn.
 
 This explains location of Thăng Long and many thị trường (market / 시장) towns.
 
@@ -48,7 +48,7 @@ Historical map should be read with waterways foregrounded; hiện đại (modern
 
 ## Gunpowder and firearms
 
-Gunpowder weapon changes fortification and military organization gradually. Early-modern Trịnh–Nguyễn competition occurs in wider Asian thị trường (market / 시장) for firearm/cannon technology.
+Vũ khí thuốc súng dần thay đổi công sự và tổ chức quân sự. Cạnh tranh Trịnh–Nguyễn thời cận đại diễn ra trong thị trường châu Á rộng hơn về công nghệ súng và đại bác.
 
 Imported technology still requires cục bộ (local / 로컬) casting, powder supply, huấn luyện (training / 학습) and maintenance.
 
@@ -56,7 +56,7 @@ Buying weapon is not same as possessing military năng lực (capability / 역�
 
 ## Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)
 
-Sail technology, monsoon kiến thức (knowledge / 지식) and ship mạng (network / 네트워크) connect Hội An/Vân Đồn with distant markets.
+Công nghệ buồm, hiểu biết về gió mùa và mạng lưới tàu thuyền nối Hội An/Vân Đồn với các thị trường xa.
 
 Cổng (port / 포트) hạ tầng (infrastructure / 인프라) includes pilot kiến thức (knowledge / 지식), warehouse, merchant quarter, customs and credit—not just pier.
 
@@ -74,7 +74,7 @@ Hạ tầng (infrastructure / 인프라) simultaneously creates economic opportu
 
 ## Colonial railways
 
-French-built railway integrates selected regions into colonial vận chuyển (transport / 전송) mạng (network / 네트워크). Rail dramatically reduces thời gian (time / 시간)/chi phí (cost / 비용) for bulk movement compared with premodern land tuyến (route / 경로).
+Đường sắt do Pháp xây dựng kết nối một số vùng vào mạng vận chuyển thuộc địa. So với tuyến đường bộ tiền hiện đại, đường sắt giảm mạnh thời gian và chi phí chở hàng rời.
 
 But mạng (network / 네트워크) hình học (geometry / 기하학) reflects political-economic priorities. Technology itself is neutral in vật lý (physical / 물리적) hàm (function / 함수); investment choice is institutional.
 
@@ -86,7 +86,7 @@ Thời gian (time / 시간) becomes more standardized, supporting regular commer
 
 ## Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)
 
-Telegraph separates thông tin (information / 정보) speed from vận chuyển (transport / 전송) speed. A message no longer needs a person/horse/boat to travel the whole distance.
+Điện báo tách tốc độ truyền thông tin khỏi tốc độ vận chuyển. Một thông điệp không còn cần người, ngựa hay thuyền đi hết quãng đường.
 
 This is revolutionary for military command, administration and thị trường (market / 시장) price.
 

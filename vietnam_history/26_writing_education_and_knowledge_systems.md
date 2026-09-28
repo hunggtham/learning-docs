@@ -36,7 +36,7 @@ Analogous to hiện đại (modern / 현대적) states continuing legacy softwar
 
 ## Chữ Nôm: adapting script to Vietnamese
 
-**Chữ Nôm** uses/creates characters to represent Vietnamese words. It enables literature in vernacular more directly.
+**Chữ Nôm** dùng hoặc tạo chữ để biểu đạt từ tiếng Việt. Nó cho phép văn chương bằng tiếng bản địa phát triển trực tiếp hơn.
 
 But Nôm is complex and never fully replaces Hán văn in trạng thái (state / 상태) administration/exam hệ thống (system / 시스템).
 
@@ -48,7 +48,7 @@ Thus premodern literacy is layered:
 
 ## Examination as personnel technology
 
-Civil examination is not only education. It is a **recruitment giao thức (protocol / 프로토콜)** for bureaucracy.
+Khoa cử không chỉ là giáo dục. Nó là một **giao thức tuyển dụng (recruitment protocol / 채용 프로토콜)** cho bộ máy quan liêu.
 
 Exam standardizes what candidate must know, creates credential and records successful personnel. Văn Miếu–Quốc Tử Giám and doctoral stelae materialize this hệ thống (system / 시스템).
 
@@ -60,7 +60,7 @@ Hiện đại (modern / 현대적) standardized testing faces structurally simil
 
 ## Village school and unequal truy cập (access / 접근)
 
-Premodern schooling often depends on teacher, family tài nguyên (resource / 자원) and cục bộ (local / 로컬) tradition. Elite family can supply book/thời gian (time / 시간)/mạng (network / 네트워크) more easily.
+Giáo dục tiền hiện đại thường phụ thuộc vào thầy dạy, tài nguyên gia đình và truyền thống địa phương. Gia đình tinh hoa dễ cung cấp sách, thời gian và mạng lưới hơn.
 
 Therefore exam can provide upward mobility without making society equal.
 
@@ -68,7 +68,7 @@ Truy cập (access / 접근) to literacy itself is an economic asset.
 
 ## Printing
 
-Woodblock printing lowers marginal reproduction chi phí (cost / 비용) relative to hand-copying once khối (block / 블록) is carved. Buddhist văn bản (text / 텍스트), official book and educational material become more reproducible.
+In khắc gỗ làm giảm chi phí tái bản so với chép tay sau khi ván khắc được tạo. Kinh Phật, sách quan phương và tài liệu giáo dục có thể được sao in nhiều hơn.
 
 Printing changes độ tin cậy (reliability / 신뢰성): multiple copies can share tiêu chuẩn (standard / 표준) wording.
 
@@ -82,7 +82,7 @@ Initially this script is not national mass literacy công cụ (tool / 도구). 
 
 ## Colonial schooling changes kiến thức (knowledge / 지식) hierarchy
 
-French colonial hệ thống (system / 시스템) reduces old Confucian examination thứ tự (order / 순서) and expands Franco-Vietnamese schooling, though truy cập (access / 접근) remains limited and structured by colonial goals.
+Hệ thống thuộc địa Pháp làm suy giảm trật tự khoa cử Nho giáo cũ và mở rộng trường Pháp–Việt, dù quyền tiếp cận vẫn hạn chế và được tổ chức theo mục tiêu thuộc địa.
 
 Traditional examination ends in early twentieth century. Credential hierarchy shifts toward hiện đại (modern / 현대적) school diploma, administrative ngôn ngữ (language / 언어) and professional education.
 

@@ -36,15 +36,15 @@ Middleware can translate, buffer, distort or enforce quy tắc (rule / 규칙).
 
 ## Status and elite reproduction
 
-Premodern society has rulers, officials, scholar families, soldiers, farmers, craft workers, servants/slaves in different forms and cục bộ (local / 로컬) elites.
+Xã hội tiền hiện đại có người cai trị, quan lại, gia đình nhà nho, binh lính, nông dân, thợ thủ công, người hầu/nô lệ dưới nhiều hình thức và các tinh hoa địa phương.
 
-Exam hệ thống (system / 시스템) creates one channel of mobility but does not erase family advantage: literacy, teacher truy cập (access / 접근) and thời gian (time / 시간) to study require tài nguyên (resource / 자원).
+Hệ thống khoa cử tạo một kênh dịch chuyển địa vị nhưng không xóa lợi thế gia đình: khả năng đọc viết, tiếp cận thầy dạy và thời gian học đều cần tài nguyên.
 
 Thus meritocratic institution can coexist with unequal starting điều kiện (condition / 조건).
 
 ## Women: avoid both “traditional equality” and “complete subordination” stereotypes
 
-Women participated in agriculture, thị trường (market / 시장), household thuộc tính (property / 속성) and religious life to varying degrees. Legal and Confucian norms could privilege patrilineal authority, but actual practice varied by lớp (class / 클래스), region and period.
+Phụ nữ tham gia nông nghiệp, thị trường, tài sản hộ gia đình và đời sống tôn giáo ở mức khác nhau. Chuẩn mực pháp lý và Nho giáo có thể ưu tiên quyền phụ hệ, nhưng thực hành thay đổi theo giai tầng, vùng và thời kỳ.
 
 Historical phương thức (method / 메서드) should separate **normative văn bản (text / 텍스트)** from **observed practice**. A law/manual telling women what they should do proves norm-setting effort, not automatic compliance.
 
@@ -60,7 +60,7 @@ Ancestor worship is not simply “religion”; it can coordinate family obligati
 
 ## Ethnicity is historical, not timeless box
 
-Hiện đại (modern / 현대적) official ethnic categories should not be projected mechanically backward. Communities thay đổi (change / 변경) ngôn ngữ (language / 언어), định danh (identity / 식별자), political affiliation and settlement over centuries.
+Không nên áp ngược máy móc các phân loại tộc người chính thức hiện đại về quá khứ. Cộng đồng thay đổi ngôn ngữ, căn tính, liên kết chính trị và nơi cư trú qua nhiều thế kỷ.
 
 Kinh, Tày, Nùng, Thái, Mường, Chăm, Khmer, Hmong and many other groups have different historical relationships with lowland trạng thái (state / 상태) and cross-border networks.
 
@@ -76,7 +76,7 @@ Therefore mountain lịch sử (history / 이력) is central to diplomacy and ec
 
 ## Chăm and Khmer communities after territorial thay đổi (change / 변경)
 
-When political borders shift, population does not vanish. Chăm and Khmer communities continue religious, linguistic and economic life inside changing jurisdictions.
+Khi biên giới chính trị thay đổi, dân cư không biến mất. Các cộng đồng Chăm và Khmer tiếp tục đời sống tôn giáo, ngôn ngữ và kinh tế trong những đơn vị cai trị khác nhau.
 
 A conquest date cannot be treated as demographic replacement date.
 
@@ -104,7 +104,7 @@ This new **công khai (public / 공개) sphere** helps nationalism, reformism an
 
 ## War and displacement
 
-1945–1975 repeatedly moves population: evacuation, refugee luồng (flow / 흐름), military mobilization, strategic relocation and urban influx.
+Giai đoạn 1945–1975 liên tục làm dân cư dịch chuyển: sơ tán, dòng người tị nạn, động viên quân sự, tái định cư chiến lược và dồn vào đô thị.
 
 War changes family cấu trúc (structure / 구조) when men/women are mobilized, child schooling interrupted, thuộc tính (property / 속성) abandoned or household separated.
 

@@ -39,7 +39,7 @@ Chronicle periodization also privileges dynastic centre; upland, village and min
 
 ## Chinese sources: bên ngoài (external / 외부) but indispensable
 
-For early periods, Chinese dynastic histories and administrative sources are major written bằng chứng (evidence / 증거). They can preserve dates/names unavailable elsewhere but describe region through imperial categories.
+Với thời kỳ sớm, sử liệu triều đại và nguồn hành chính Trung Hoa là những chứng cứ văn bản lớn. Chúng có thể giữ lại niên đại/tên gọi nơi khác không có, nhưng mô tả khu vực qua các phạm trù đế quốc.
 
 Neither reject them as “foreign” nor accept them literally. Cross-check archaeology and other texts.
 
@@ -53,7 +53,7 @@ This is one reason thư viện (library / 라이브러리) avoids treating hiệ
 
 ## Colonial archive
 
-French administration generated huge bản ghi (record / 레코드): census, tax, map, police, school, court, hạ tầng (infrastructure / 인프라) and economic report.
+Chính quyền Pháp tạo ra khối hồ sơ rất lớn: điều tra dân số, thuế, bản đồ, cảnh sát, trường học, tòa án, hạ tầng và báo cáo kinh tế.
 
 Administrative abundance creates temptation to over-trust colonial categories. A category designed for quản trị (governance / 거버넌스) can simplify fluid identities or informal economy.
 
@@ -69,13 +69,13 @@ A newspaper silence is not proof sự kiện (event / 이벤트) absent; perhaps
 
 ## Oral lịch sử (history / 이력)
 
-Oral testimony is crucial for war, di chuyển (migration / 마이그레이션) and everyday life. Bộ nhớ (memory / 메모리) can contain chronology errors while accurately preserving emotion, xã hội (social / 사회적) quan hệ (relation / 관계) and perceived causality.
+Lời kể truyền miệng rất quan trọng khi nghiên cứu chiến tranh, di cư và đời sống thường ngày. Ký ức có thể sai niên đại nhưng vẫn bảo tồn chính xác cảm xúc, quan hệ xã hội và cách người kể cảm nhận nguyên nhân.
 
 Do not use “bộ nhớ (memory / 메모리) is imperfect” to discard testimony. Instead ask what kiểu (type / 타입) of claim it can hỗ trợ (support / 지원).
 
 ## National lịch sử (history / 이력) and nation-building
 
-Hiện đại (modern / 현대적) states use school textbook, museum, monument and anniversary to bản dựng (build / 빌드) dùng chung (shared / 공유) narrative. Vietnam is no exception; neither are Korea, France, China or United States.
+Các nhà nước hiện đại dùng sách giáo khoa, bảo tàng, tượng đài và ngày kỷ niệm để dựng nên tường thuật chung. Việt Nam cũng vậy; Hàn Quốc, Pháp, Trung Quốc và Hoa Kỳ cũng không ngoại lệ.
 
 National narrative selects origin, hero, sacrifice and turning điểm (point / 지점) to create collective định danh (identity / 식별자).
 
@@ -83,7 +83,7 @@ Historical scholarship may overlap with national narrative but has different obl
 
 ## Heroic bộ nhớ (memory / 메모리) versus structural lịch sử (history / 이력)
 
-A battle is easier to remember through named hero than through logistics and fiscal hệ thống (system / 시스템). Công khai (public / 공개) bộ nhớ (memory / 메모리) therefore often personalizes structural tiến trình (process / 프로세스).
+Một trận đánh dễ được nhớ qua tên người anh hùng hơn là qua hậu cần và hệ thống tài chính. Vì vậy ký ức công cộng thường nhân cách hóa các tiến trình cấu trúc.
 
 The thư viện (library / 라이브러리) keeps hero story but adds cơ chế (mechanism / 메커니즘):
 

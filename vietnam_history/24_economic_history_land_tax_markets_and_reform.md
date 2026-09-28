@@ -34,13 +34,13 @@ Ta chưa có tax ledger, nên không nên invent tax tỷ lệ (rate / 비율). 
 
 Khi Bắc Bộ vào Han/Chinese imperial hệ thống (system / 시스템), written administration làm extraction legible hơn. Household registration, administrative units, tribute/tax và official tuyến (route / 경로) tăng khả năng trung tâm quan sát population.
 
-Key concept là **legibility**: trạng thái (state / 상태) thu tài nguyên (resource / 자원) hiệu quả hơn khi biết ai ở đâu, land nào produce gì, household nào owe obligation.
+Khái niệm then chốt là **khả năng đọc được xã hội (legibility / 가독성)**: nhà nước thu tài nguyên hiệu quả hơn khi biết ai ở đâu, ruộng nào sản xuất gì, hộ nào phải thực hiện nghĩa vụ.
 
 Nhưng formal quy tắc (rule / 규칙) không đồng nghĩa full điều khiển (control / 제어). Cục bộ (local / 로컬) elite và village mạng (network / 네트워크) vẫn mediation giữa administrative command và actual môi trường vận hành (production / 운영 환경).
 
 ## Nhà nước độc lập và fiscal cơ sở (base / 기반)
 
-Từ thế kỷ X, Đại Việt phải sustain court, army, irrigation và diplomacy bằng domestic tài nguyên (resource / 자원). Land/agricultural tax trở thành fiscal backbone vì majority đầu ra (output / 출력) nằm ở agriculture.
+Từ thế kỷ X, Đại Việt phải duy trì triều đình, quân đội, thủy lợi và ngoại giao bằng tài nguyên trong nước. Thuế ruộng và thuế nông nghiệp trở thành xương sống tài chính (fiscal backbone / 재정 기반) vì phần lớn sản lượng nằm ở nông nghiệp.
 
 Trạng thái (state / 상태) sức chứa (capacity / 용량) có ceiling do vận chuyển (transport / 전송): rice bulky, road poor, river seasonal. Vì vậy tax collection often relies on cục bộ (local / 로컬) lưu trữ (storage / 저장소), in-kind payment và layered intermediaries.
 
@@ -48,7 +48,7 @@ Premodern trạng thái (state / 상태) không thể tax every giao dịch (tra
 
 ## Ruộng công, ruộng tư và quyền sử dụng
 
-Lịch sử land không thể nén thành “đất của vua” hay “đất của dân”. Nhiều form cùng tồn tại: village communal land, royal/temple estate, private holding, military estate và land granted under different rights.
+Lịch sử ruộng đất không thể nén thành “đất của vua” hay “đất của dân”. Nhiều hình thức cùng tồn tại: ruộng công làng xã, điền trang hoàng gia/chùa, ruộng tư, quân điền và đất được ban với các quyền khác nhau.
 
 Điều quan trọng là **bundle of rights**:
 
@@ -62,7 +62,7 @@ Hai plot có cùng crop nhưng economic quan hệ (relation / 관계) rất khá
 
 ## Thủy lợi là economic hạ tầng (infrastructure / 인프라)
 
-Dike, canal và irrigation increase expected đầu ra (output / 출력) nhưng require coordination. Red River Delta particularly makes water management central.
+Đê, kênh và thủy lợi làm tăng sản lượng kỳ vọng nhưng đòi hỏi phối hợp. Đồng bằng sông Hồng đặc biệt khiến quản lý nước trở thành vấn đề trung tâm.
 
 Hạ tầng (infrastructure / 인프라) creates collective-action bài toán (problem / 문제): upstream/downstream benefit khác nhau; maintenance chi phí (cost / 비용) hôm nay nhưng flood prevention benefit uncertain.
 
@@ -70,7 +70,7 @@ Trạng thái (state / 상태)/village institution xuất hiện không chỉ đ
 
 ## Thương mại thời Lý–Trần: thị trường (market / 시장) không phải foreign import
 
-Thị trường (market / 시장) existed long before colonial capitalism. River ports, coastal trade, coin circulation, ceramics và merchant community cho thấy Đại Việt nằm trong regional exchange mạng (network / 네트워크).
+Thị trường tồn tại từ rất lâu trước chủ nghĩa tư bản thuộc địa. Cảng sông, buôn bán ven biển, tiền lưu thông, đồ gốm và cộng đồng thương nhân cho thấy Đại Việt nằm trong mạng lưới trao đổi khu vực.
 
 Vân Đồn là good checkpoint: island/coastal geography connected domestic products with maritime trade.
 
@@ -78,7 +78,7 @@ Thị trường (market / 시장) độ sâu (depth / 깊이) vẫn limited by v
 
 ## Hội An và early-modern commercial expansion
 
-Thế kỷ XVI–XVII, Hội An becomes major cổng (port / 포트) in mạng (network / 네트워크) linking Japanese, Chinese, Southeast Asian và European traders. Nguyễn realm benefited from customs, imported weapon/material và commercial luồng (flow / 흐름).
+Thế kỷ XVI–XVII, Hội An trở thành cảng lớn trong mạng lưới nối thương nhân Nhật Bản, Trung Hoa, Đông Nam Á và châu Âu. Chính quyền Nguyễn hưởng lợi từ thuế cảng, vũ khí–vật liệu nhập khẩu và dòng thương mại.
 
 This reveals political economy cơ chế (mechanism / 메커니즘):
 
@@ -95,7 +95,7 @@ Trade and warfare therefore reinforce each other.
 
 Expansion toward central/southern regions often converted land-use regime, settlement mẫu (pattern / 패턴) và tax jurisdiction. Chăm, Khmer, Việt, Hoa và cục bộ (local / 로컬) communities interacted through trade, xung đột (conflict / 충돌), di chuyển (migration / 마이그레이션) and administration.
 
-Economic lịch sử (history / 이력) must ask **whose land-use mẫu (pattern / 패턴) was displaced/reclassified**, not simply “new land was opened”.
+Lịch sử kinh tế phải hỏi **mô hình sử dụng đất của ai bị thay thế hoặc phân loại lại**, chứ không chỉ nói “đất mới được mở”.
 
 Mekong Delta development depends on canal, water điều khiển (control / 제어), thị trường (market / 시장) town and migrant mạng (network / 네트워크); ecology imposes acid soil, flood and salinity các ràng buộc (constraints / 제약조건들).
 

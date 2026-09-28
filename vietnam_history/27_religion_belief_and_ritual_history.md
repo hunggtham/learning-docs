@@ -38,7 +38,7 @@ Again normative văn bản (text / 텍스트) ≠ complete everyday hành vi (be
 
 ## Daoist and folk practice
 
-Daoist cosmology, ritual specialists, geomancy, spirit practice and cục bộ (local / 로컬) folk belief often intermingle.
+Vũ trụ quan Đạo giáo, thầy nghi lễ, thuật phong thủy, thực hành với thần linh và tín ngưỡng dân gian địa phương thường đan xen.
 
 Trying to classify every ritual as purely “Buddhist/Daoist/folk” can distort actual hybridity.
 
@@ -46,7 +46,7 @@ Historical actors did not always use hiện đại (modern / 현대적) taxonomy
 
 ## Trạng thái (state / 상태) ritual and legitimacy
 
-Court sacrifices, temple recognition, royal genealogy and calendar are tools of legitimacy. Trạng thái (state / 상태) decides which cult receives official recognition and sometimes regulates heterodox practice.
+Tế lễ triều đình, việc công nhận đền miếu, gia phả hoàng gia và lịch pháp là những công cụ tạo chính danh. Nhà nước quyết định tín ngưỡng nào được công nhận chính thức và đôi khi kiểm soát các thực hành bị xem là dị giáo.
 
 Ritual is therefore quản trị (governance / 거버넌스) technology: it maps moral thứ tự (order / 순서) onto territory.
 
@@ -58,7 +58,7 @@ UNESCO recognition of worship practices in hiện đại (modern / 현대적) pe
 
 ## Champa and Hindu–Buddhist landscapes
 
-Champa lịch sử (history / 이력) includes Hindu and Buddhist traditions with temple towers, Sanskrit/Cham inscriptions and maritime links.
+Lịch sử Champa bao gồm các truyền thống Hindu giáo và Phật giáo, với tháp đền, bia ký Sanskrit/Chăm và liên kết hàng hải.
 
 Mỹ Sơn is key checkpoint: kiến trúc (architecture / 아키텍처) and inscription reveal polity, ritual economy and liên kết (connection / 연결) with wider Indic world.
 
@@ -66,7 +66,7 @@ After territorial thay đổi (change / 변경), Chăm religious communities con
 
 ## Khmer Theravada Buddhism
 
-Khmer communities in Mekong Delta maintain Theravada Buddhist institutions. Pagoda can be religious, educational and cultural centre.
+Các cộng đồng Khmer ở đồng bằng sông Cửu Long duy trì thiết chế Phật giáo Theravada. Chùa có thể đồng thời là trung tâm tôn giáo, giáo dục và văn hóa.
 
 This demonstrates why “religion of Vietnam” cannot be reduced to lowland Kinh mẫu (pattern / 패턴).
 
@@ -78,7 +78,7 @@ Avoid treating Chăm as one religious khối (block / 블록).
 
 ## Christianity and missionary mạng (network / 네트워크)
 
-Catholicism grows through missionary activity from early-modern period and later becomes significant community. Missionary mạng (network / 네트워크) also participates in linguistic/educational thay đổi (change / 변경), including romanized writing.
+Công giáo phát triển qua hoạt động truyền giáo từ thời cận đại và về sau trở thành một cộng đồng quan trọng. Mạng lưới truyền giáo cũng tham gia vào thay đổi ngôn ngữ–giáo dục, trong đó có chữ viết La-tinh hóa.
 
 Under different regimes, Christian communities experience periods of protection, xung đột (conflict / 충돌), restriction or political sensitivity.
 
@@ -100,7 +100,7 @@ Their rise shows new religion can emerge from existing symbolic vocabulary while
 
 ## Religion during war
 
-War can transform religious institution into refuge, mạng (network / 네트워크), political actor or mục tiêu (target / 대상). Clergy/community positions vary; no religion has one political stance.
+Chiến tranh có thể biến thiết chế tôn giáo thành nơi trú ẩn, mạng lưới hỗ trợ, tác nhân chính trị hoặc mục tiêu. Lập trường của giáo sĩ và cộng đồng khác nhau; không tôn giáo nào chỉ có một thái độ chính trị.
 
 Use specific organization/person/thời gian (time / 시간) rather than generalizing “Buddhists supported X” or “Catholics supported Y”.
 
