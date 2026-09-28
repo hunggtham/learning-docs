@@ -1,10 +1,8 @@
 # MVP tự động tạo giáo trình 정보처리기사
 
-Luồng (flow / 흐름) này dùng GitHub cho cả đầu vào (input / 입력) và đầu ra (output / 출력). n8n trên home máy chủ (server / 서버) gọi worker; worker kéo hai tệp (file / 파일) Markdown hiện có, dùng OpenAI Responses API viết lại thành 5 phần giáo trình, kiểm tra chất lượng, rồi chỉ lần ghi nhận (commit / 커밋) khi `PUSH_CHANGES=true`.
+Flow này dùng GitHub cho cả input và output. n8n trên home server gọi worker; worker kéo hai file Markdown hiện có, dùng OpenAI Responses API viết lại thành 5 phần giáo trình, kiểm tra chất lượng, rồi chỉ commit khi `PUSH_CHANGES=true`.
 
-> **Mạch chuỗi xử lý (pipeline / 파이프라인):** Automation đi theo `input/source → draft generation → quality gates → output/manifest → optional commit`. Mỗi bước phải giữ provenance và mở đủ ngữ cảnh (context / 맥락) cho bước sau; worker pass không đồng nghĩa đầu ra (output / 출력) đã được publish.
-
-## Đầu ra (output / 출력)
+## Output
 
 ```text
 output/정보처리기사/
@@ -17,24 +15,24 @@ output/정보처리기사/
 └── manifest.json
 ```
 
-Tài liệu không bị ép vào format cố định. AI được quyền đổi vị trí nguồn (source / 소스) để dễ hiểu, nhưng phải bảo toàn mã `핵심 001...`, không tự thêm fact thiếu căn cứ và đánh dấu phần chưa chắc chắn.
+Tài liệu không bị ép vào format cố định. AI được quyền đổi vị trí source để dễ hiểu, nhưng phải bảo toàn mã `핵심 001...`, không tự thêm fact thiếu căn cứ và đánh dấu phần chưa chắc chắn.
 
 ## Chuẩn bị một lần
 
 1. Chuyển repository sang **private** nếu tiếp tục lưu tài liệu có bản quyền.
-2. Tạo GitHub fine-grained đơn vị từ (token / 토큰) chỉ cho repo này, quyền `Contents: Read and write`. Không ghi đơn vị từ (token / 토큰) vào GitHub hoặc workflow JSON.
-3. Tạo OpenAI dự án (project / 프로젝트) riêng, hard limit $30 và API key riêng. Chỉ lưu key trong Coolify secret.
+2. Tạo GitHub fine-grained token chỉ cho repo này, quyền `Contents: Read and write`. Không ghi token vào GitHub hoặc workflow JSON.
+3. Tạo OpenAI project riêng, hard limit $30 và API key riêng. Chỉ lưu key trong Coolify secret.
 
 ## Deploy worker trong Coolify
 
-Tạo ứng dụng (application / 애플리케이션) từ repository này và chọn branch `docs/정보처리기사`:
+Tạo Application từ repository này và chọn branch `docs/정보처리기사`:
 
-- cơ sở (base / 기반) directory: `/automation`
-- bản dựng (build / 빌드) pack: `Dockerfile`
-- cổng (port / 포트): `8090`
-- Persistent lưu trữ (storage / 저장소): `/opt/learning-docs-worker` → `/data`
+- Base directory: `/automation`
+- Build pack: `Dockerfile`
+- Port: `8090`
+- Persistent storage: `/opt/learning-docs-worker` → `/data`
 
-Môi trường (environment / 환경) variables lấy từ `.env.example`. Giá trị quan trọng:
+Environment variables lấy từ `.env.example`. Giá trị quan trọng:
 
 ```text
 GITHUB_REPOSITORY=hunggtham/learning-docs
@@ -49,7 +47,7 @@ MAX_RUN_USD=5
 PUSH_CHANGES=false
 ```
 
-Nếu bộ chứa (container / 컨테이너) không gọi được `host.docker.internal`, dùng IP LAN/Tailscale của home máy chủ (server / 서버). Không công khai (public / 공개) cổng (port / 포트) 8090 ra Internet; chỉ cho n8n gọi qua Docker mạng (network / 네트워크)/nội bộ (internal / 내부) URL.
+Nếu container không gọi được `host.docker.internal`, dùng IP LAN/Tailscale của home server. Không public port 8090 ra Internet; chỉ cho n8n gọi qua Docker network/internal URL.
 
 Kiểm tra:
 
@@ -60,32 +58,32 @@ curl http://<worker-internal-url>:8090/health
 ## Import vào n8n
 
 1. Import `automation/n8n/정보처리기사-textbook.json`.
-2. Trong dịch vụ (service / 서비스) n8n, thêm môi trường (environment / 환경):
+2. Trong service n8n, thêm environment:
 
 ```text
 TEXTBOOK_WORKER_URL=http://<tên-service-worker>:8090
 ```
 
 3. Redeploy n8n.
-4. Trong workflow, bấm `Execute Workflow` một lần để kiểm thử (test / 테스트).
-5. Khi kiểm thử (test / 테스트) thành công, Activate. Schedule mặc định chạy mỗi giờ; manifest SHA-256 ngăn xử lý lại khi đầu vào (input / 입력) không đổi.
+4. Trong workflow, bấm `Execute Workflow` một lần để test.
+5. Khi test thành công, Activate. Schedule mặc định chạy mỗi giờ; manifest SHA-256 ngăn xử lý lại khi input không đổi.
 
-Lần chạy thử đầu tiên đặt `TARGET_PARTS=1`, `MAX_CHUNKS_PER_PART=1`, `MAX_API_CALLS=2`, `MAX_RUN_USD=1`, `PUSH_CHANGES=false`. Sau khi duyệt đầu ra (output / 출력) mới bỏ hai giới hạn mẫu và bật push.
+Lần chạy thử đầu tiên đặt `TARGET_PARTS=1`, `MAX_CHUNKS_PER_PART=1`, `MAX_API_CALLS=2`, `MAX_RUN_USD=1`, `PUSH_CHANGES=false`. Sau khi duyệt output mới bỏ hai giới hạn mẫu và bật push.
 
 ## An toàn và khôi phục
 
-- đơn vị từ (token / 토큰) chỉ nằm trong secret/môi trường (environment / 환경) của Coolify.
-- Worker reset cục bộ (local / 로컬) clone về branch GitHub trước mỗi lượt; GitHub vẫn là nguồn chuẩn (source of truth / 정본).
-- Nếu AI lỗi, API trả HTTP 500 và không push đầu ra (output / 출력) dở lên GitHub.
+- Token chỉ nằm trong secret/environment của Coolify.
+- Worker reset local clone về branch GitHub trước mỗi lượt; GitHub vẫn là source of truth.
+- Nếu AI lỗi, API trả HTTP 500 và không push output dở lên GitHub.
 - Xem `quality-report.md` trước khi dùng tài liệu để ôn thi.
 
 ---
 
-## Repository QA — danh mục (catalog / 카탈로그) và Markdown links
+## Repository QA — catalog và Markdown links
 
-Repo QA là luồng (flow / 흐름) độc lập với worker tạo giáo trình ở trên. Nó không gọi OpenAI, không gọi GitHub API và không cần secret; mục tiêu là phát hiện structural drift ngay trong working cây (tree / 트리) trước khi tài liệu được merge.
+Repo QA là flow độc lập với worker tạo giáo trình ở trên. Nó không gọi OpenAI, không gọi GitHub API và không cần secret; mục tiêu là phát hiện structural drift ngay trong working tree trước khi tài liệu được merge.
 
-Các tệp (file / 파일) liên quan:
+Các file liên quan:
 
 ```text
 automation/repo_audit.py
@@ -95,9 +93,9 @@ automation/test_repo_audit.py
 
 ### Auditor kiểm tra gì?
 
-`repo_audit.py` dùng Python thư viện chuẩn (standard library / 표준 라이브러리) và kiểm tra hai lớp chính.
+`repo_audit.py` dùng Python standard library và kiểm tra hai lớp chính.
 
-**danh mục (catalog / 카탈로그) đặc tả hợp đồng (contract / 계약)** kiểm tra:
+**Catalog contract** kiểm tra:
 
 ```text
 CATALOG.md tồn tại
@@ -109,29 +107,15 @@ CATALOG.md tồn tại
 → scope không bị bỏ trống
 ```
 
-Auditor cũng report lĩnh vực (domain / 도메인) chưa có gốc (root / 루트) `README.md` hoặc `COVERAGE_AUDIT.md`, nhưng hai trường hợp này chỉ là thông tin vì một số lĩnh vực (domain / 도메인) có thể cố ý dùng điểm vào (entrypoint / 진입점) khác.
+Auditor cũng report domain chưa có root `README.md` hoặc `COVERAGE_AUDIT.md`, nhưng hai trường hợp này chỉ là thông tin vì một số domain có thể cố ý dùng entrypoint khác.
 
-**Markdown cục bộ (local / 로컬) links** kiểm tra link nội bộ trỏ tới tệp (file / 파일)/đường dẫn (path / 경로) trong repository. Fragment như `#section` không cần tệp (file / 파일) lookup riêng; bên ngoài (external / 외부) URL không được gọi qua mạng (network / 네트워크).
+**Markdown local links** kiểm tra link nội bộ trỏ tới file/path trong repository. Fragment như `#section` không cần file lookup riêng; external URL không được gọi qua network.
 
-Không kiểm tra live availability của website ngoài repository vì mạng (network / 네트워크) check dễ flaky, chậm và không phù hợp với nhiệm vụ chính là bảo toàn cấu trúc chuẩn gốc (canonical / 정본) nội bộ.
+Không kiểm tra live availability của website ngoài repository vì network check dễ flaky, chậm và không phù hợp với nhiệm vụ chính là bảo toàn cấu trúc canonical nội bộ.
 
-### Chuẩn gốc (canonical / 정본) docs và raw provenance
+### Chạy local
 
-CI link gate chỉ áp dụng cho Markdown thuộc học tập (learning / 학습)/đầu ra (output / 출력)/điều hướng (navigation / 내비게이션) tầng (layer / 계층). Các đường dẫn (path / 경로) có segment sau được loại khỏi chuẩn gốc (canonical / 정본) link gate:
-
-```text
-raw/
-raw_md/
-workflow-output/
-```
-
-Đây là provenance/import/intermediate material có thể giữ nguyên cú pháp (syntax / 문법) hoặc link encoding từ nguồn bên ngoài. Không nên sửa nguồn thô chỉ để làm đẹp repository QA. Khi nội dung được chuyển thành chuẩn gốc (canonical / 정본) học tập (learning / 학습) document, link của bản chuẩn gốc (canonical / 정본) phải pass strict kiểm tra (audit / 감사).
-
-`repo_audit.py` vẫn có thể được chạy trực tiếp trên toàn working cây (tree / 트리) khi cần forensic kiểm tra (audit / 감사); exclusion ở trên là chính sách (policy / 정책) của GitHub Actions chuẩn gốc (canonical / 정본) gate.
-
-### Chạy cục bộ (local / 로컬)
-
-Chạy đơn vị (unit / 단위) tests:
+Chạy unit tests:
 
 ```bash
 python -m unittest automation/test_repo_audit.py
@@ -143,13 +127,13 @@ Quét toàn bộ repository:
 python automation/repo_audit.py --root .
 ```
 
-Muốn broken cục bộ (local / 로컬) link trở thành lỗi blocking:
+Muốn broken local link trở thành lỗi blocking:
 
 ```bash
 python automation/repo_audit.py --root . --strict-links
 ```
 
-Có thể kiểm tra (audit / 감사) chỉ một tập tệp (file / 파일) Markdown bằng danh sách newline-separated:
+Có thể audit chỉ một tập file Markdown bằng danh sách newline-separated:
 
 ```bash
 python automation/repo_audit.py \
@@ -158,30 +142,24 @@ python automation/repo_audit.py \
   --strict-links
 ```
 
-### GitHub Actions chính sách (policy / 정책)
+### GitHub Actions policy
 
-Workflow `Repository audit` chạy đơn vị (unit / 단위) tests trước.
+Workflow `Repository audit` chạy unit tests trước.
 
-Trên **pull yêu cầu (request / 요청)**, workflow lấy các chuẩn gốc (canonical / 정본) Markdown tệp (file / 파일) thay đổi trong diff và kiểm tra cục bộ (local / 로컬) links ở `strict` chế độ (mode / 모드). Điều này ngăn một PR mới đưa broken nội bộ (internal / 내부) link vào repository mà không bắt toàn bộ legacy/provenance debt phải được sửa trong cùng PR.
+Trên **pull request**, workflow lấy các Markdown file thay đổi trong diff và kiểm tra local links ở `strict` mode. Điều này ngăn một PR mới đưa broken internal link vào repository mà không bắt toàn bộ legacy debt phải được sửa trong cùng PR.
 
-Trên **push vào `main`** hoặc chạy thủ công, auditor quét toàn bộ chuẩn gốc (canonical / 정본) Markdown repository ở report chế độ (mode / 모드). Broken cục bộ (local / 로컬) links cũ được hiển thị như warning để tạo backlog; danh mục (catalog / 카탈로그) structural errors vẫn là lỗi vì chúng làm source-of-truth siêu dữ liệu (metadata / 메타데이터) không còn đáng tin.
+Trên **push vào `main`** hoặc chạy thủ công, auditor quét toàn bộ Markdown repository ở report mode. Broken local links cũ được hiển thị như warning để tạo backlog; catalog structural errors vẫn là lỗi vì chúng làm source-of-truth metadata không còn đáng tin.
 
-Mô hình tư duy (mental model / 사고 모델) của chính sách (policy / 정책):
+Mental model của policy:
 
 ```text
-New canonical change
+New change
 → must not introduce new broken structure
 
-Existing canonical repository
+Existing repository
 → continuously expose legacy debt
 → fix incrementally
 → tighten policy only after baseline is clean
-
-Raw provenance
-→ preserve source fidelity
-→ do not block canonical CI on imported link syntax
 ```
 
-Workflow chỉ có quyền `contents: read` và không thay đổi tệp (file / 파일) tự động. Fix vẫn phải đi qua branch/PR bình thường để diff có thể rà soát (review / 검토).
-
-> **Bàn giao:** Sau một run, đối chiếu chất lượng (quality / 품질) report, manifest, diff và publication kiểm tra (audit / 감사); nếu có lỗi, quay lại stage tạo draft hoặc kiểm chứng thay vì bật `PUSH_CHANGES` để che mất nguyên nhân.
+Workflow chỉ có quyền `contents: read` và không thay đổi file tự động. Fix vẫn phải đi qua branch/PR bình thường để diff có thể review.
