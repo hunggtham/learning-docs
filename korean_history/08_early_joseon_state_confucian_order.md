@@ -76,4 +76,18 @@ Nhiều category về family line, ancestral ritual, education prestige, examina
 
 Chapter 09 và 10 nên được đọc như zoom-in: một chapter theo information technology và Hangul; chapter kia theo status, family và economy. Sau đó chapter 11 sẽ cho thấy institutional order này phản ứng ra sao trước shock chiến tranh cuối thế kỷ XVI và đầu XVII.
 
+## Từ luật trên giấy tới làng quê
+
+Một bộ luật trung ương không tự đi vào đời sống. Sắc lệnh phải được sao chép, chuyển qua đường bộ hoặc đường sông, giải thích bởi quan địa phương, rồi biến thành sổ đất, nghĩa vụ lao động, xét xử và nghi lễ. Ở mỗi bước, thư lại và hào trưởng có thể làm chậm, diễn giải hoặc chiếm dụng thông tin. Vì vậy **khả năng đọc được xã hội (administrative legibility / 행정 가독성)** vừa tăng năng lực của nhà nước, vừa mở cơ hội cho người trung gian giữ quyền lực.
+
+Điều này giải thích tại sao cùng một quy tắc có thể tạo trải nghiệm khác nhau giữa Hanseong, một huyện ven biển và vùng biên. Người học nên hỏi không chỉ “Joseon quy định gì?” mà còn “ai ghi, ai thu, ai kiểm tra và hộ gia đình nào chịu chi phí?”.
+
+## Di tích như sơ đồ của một trật tự xã hội
+
+Ở Gyeongbokgung, trục cổng–sân–điện làm thứ bậc triều đình thành chuyển động của thân thể; ở Jongmyo, nghi lễ biến dòng họ hoàng gia thành lịch thời gian; ở Sungkyunkwan, giáo dục biến văn bản kinh điển thành điều kiện vào quan trường. Một chuyến đi bộ qua ba nơi có thể trả lời cùng một câu hỏi: nhà nước biến **ý tưởng (ideology / 이념)** thành không gian, âm thanh và cơ hội nghề nghiệp thế nào?
+
+## Cầu nối sang Hangul và chiến tranh
+
+Khi nhà nước đã xây một hệ thống quan liêu dựa trên văn bản, bất kỳ thay đổi nào về chữ viết, đo lường hay in ấn đều có thể làm thay đổi chi phí quản trị. Đó là lý do chapter `09` không chỉ là lịch sử ngôn ngữ. Đồng thời, một trật tự phụ thuộc vào thuế lương thực, đường vận chuyển và nghĩa vụ quân sự sẽ bị thử thách khi chiến tranh Imjin nổ ra năm **1592**; chapter `11` là bài kiểm tra thực tế của rulebook Joseon.
+
 Đọc song song: [`34_historical_places_field_guide.md`](34_historical_places_field_guide.md), [`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md), [`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md).

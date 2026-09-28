@@ -40,3 +40,22 @@ Iron tools/weapons rẻ và scalable hơn bronze khi production network mature. 
 
 Sau 108 BCE, Han commanderies đặc biệt Lelang trở thành node trade, administration và cultural exchange. Không nên model chúng như simple “foreign block” tách khỏi local world. Frontier zone thường có mixed population, bilingual mediation và economic interdependence.
 
+## Mốc thời gian không phải đường thẳng từ “bộ lạc” tới “nhà nước”
+
+Có thể neo giai đoạn này bằng ba chuyển động: cộng đồng định cư và đồ gốm từ thiên niên kỷ VIII–I TCN, các xã hội đồ đồng và mộ đá phát triển trong thiên niên kỷ I TCN, rồi Cổ Triều Tiên và các nhà nước khu vực xuất hiện rõ hơn trong nguồn chữ viết. Những mốc này không phải các bậc thang đồng đều: nhiều hình thức tổ chức cùng tồn tại, thay đổi theo vùng, khí hậu, sông ngòi và mạng lưới trao đổi.
+
+## Kinh tế của một xã hội chưa có “thị trường” theo nghĩa hiện đại
+
+Hạt kê, lúa nước, cá, muối, đồ đồng và đồ sắt đi qua nhiều kênh: trao đổi giữa làng, quà tặng cho thủ lĩnh, chiến lợi phẩm, cống nạp và buôn bán đường dài. Khi một vật thể ngoại nhập xuất hiện trong mộ, ta có thể suy ra có một tuyến kết nối; chưa thể suy ra người chết đã tự mình buôn bán hay toàn xã hội giàu lên. Đời sống thường ngày nằm ở việc trữ hạt, sửa công cụ, chia lao động theo mùa và thương lượng khi thu hoạch thất bát.
+
+## Việt Nam cùng thời: Đông Sơn và những trung tâm quyền lực khác nhau
+
+Trong khi Cổ Triều Tiên và các nhà nước sớm phát triển ở phía bắc bán đảo, vùng Bắc Bộ Việt Nam nổi bật với văn hóa Đông Sơn, trống đồng, nông nghiệp lúa nước và các mạng lưới ven sông. Cả hai không gian đều kết nối với các tuyến trao đổi rộng hơn, nhưng vật liệu, địa hình và quan hệ với các đế chế lân cận khác nhau. So sánh nên hỏi cách một cộng đồng huy động lao động và bảo vệ lương thực, không nên tìm một “phiên bản Triều Tiên” của Đông Sơn.
+
+## Đi đâu để nhìn thấy tiền sử bằng chứng cứ vật chất?
+
+**Amsa-dong Prehistoric Settlement** ở Seoul gợi đời sống định cư thời đồ đá mới; các cụm **mộ đá Gochang, Hwasun và Ganghwa** cho thấy quy mô lao động và nghi lễ thời đồ đồng. Khi đến nơi, hãy quan sát vị trí nguồn nước, vật liệu đá, kích thước công trình và cách bảo tàng nói về điều chưa chắc chắn. Di tích không cho ta tên người lãnh đạo; nó cho ta dấu vết của phối hợp, bất bình đẳng và kỹ thuật.
+
+## Cầu nối sang Tam Quốc
+
+Từ đây, câu hỏi không còn chỉ là “ai là nhà nước đầu tiên”, mà là tại sao một số trung tâm có thể biến surplus, sắt, đường sông và liên minh thành quân đội–hành chính bền hơn những trung tâm khác. Chuyển sang [`03_three_kingdoms_and_gaya.md`](03_three_kingdoms_and_gaya.md) để theo dõi quá trình cạnh tranh đó, rồi dùng `34_historical_places_field_guide.md` để đối chiếu mộ, thành và cảng với bản đồ.
