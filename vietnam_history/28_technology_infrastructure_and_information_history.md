@@ -30,7 +30,7 @@ Quy mô (scale / 규모) implies survey/planning and mass labor mobilization.
 
 A fortress therefore measures trạng thái (state / 상태) sức chứa (capacity / 용량) as much as military technology.
 
-## Irrigation and dike
+## Thủy lợi và đê điều
 
 Rice economy depends on water timing. Dike protects against flood but can alter sediment/water mẫu (pattern / 패턴); canal distributes water/vận chuyển (transport / 전송).
 
@@ -38,7 +38,7 @@ Hạ tầng (infrastructure / 인프라) produces đường dẫn (path / 경로
 
 Red River civilization cannot be understood without this long hydraulic lịch sử (history / 이력).
 
-## River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads
+## Vận chuyển đường sông trước đường bộ hiện đại
 
 Hàng rời vận chuyển trên đất liền rất tốn kém. Sông ngòi làm cho việc chuyển gạo, gỗ, đá và quân đội rẻ hơn.
 
@@ -46,7 +46,7 @@ This explains location of Thăng Long and many thị trường (market / 시장)
 
 Historical map should be read with waterways foregrounded; hiện đại (modern / 현대적) highway map can mislead intuition.
 
-## Gunpowder and firearms
+## Thuốc súng và súng đạn
 
 Vũ khí thuốc súng dần thay đổi công sự và tổ chức quân sự. Cạnh tranh Trịnh–Nguyễn thời cận đại diễn ra trong thị trường châu Á rộng hơn về công nghệ súng và đại bác.
 
@@ -54,7 +54,7 @@ Imported technology still requires cục bộ (local / 로컬) casting, powder s
 
 Buying weapon is not same as possessing military năng lực (capability / 역량).
 
-## Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)
+## Hàng hải và cảng
 
 Công nghệ buồm, hiểu biết về gió mùa và mạng lưới tàu thuyền nối Hội An/Vân Đồn với các thị trường xa.
 
@@ -66,7 +66,7 @@ Woodblock printing increases reproduction độ tin cậy (reliability / 신뢰�
 
 Thông tin (information / 정보) technology belongs in same lịch sử (history / 이력) as road because both reduce transfer chi phí (cost / 비용)—one for ideas, one for goods.
 
-## Nguyễn roads, stations and canals
+## Đường, trạm và kênh đào thời Nguyễn
 
 Long unified territory requires official road and relay. Canal such as Vĩnh Tế combines vận chuyển (transport / 전송), settlement, frontier administration and military lô-gic (logic / 논리).
 
@@ -84,7 +84,7 @@ Saigon/Haiphong cổng (port / 포트) connect commodity export and imported mac
 
 Thời gian (time / 시간) becomes more standardized, supporting regular commercial timetable.
 
-## Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)
+## Điện báo: tốc độ thông tin của nhà nước
 
 Điện báo tách tốc độ truyền thông tin khỏi tốc độ vận chuyển. Một thông điệp không còn cần người, ngựa hay thuyền đi hết quãng đường.
 
@@ -98,13 +98,13 @@ Electricity changes factory, lighting, communication and urban daily rhythm. Gri
 
 Hiện đại (modern / 현대적) society becomes more productive but also vulnerable to grid thất bại (failure / 실패).
 
-## Automobile and road society
+## Ô tô và xã hội đường bộ
 
 Twentieth-century road/vehicle changes settlement khả năng tiếp cận (accessibility / 접근성). In Vietnam, motorcycle later becomes especially important flexible mobility technology.
 
 Motorcycle supports informal commerce and urban expansion because household can truy cập (access / 접근) jobs beyond walking radius without full mass transit mạng (network / 네트워크).
 
-## War logistics and kỹ thuật (engineering / 엔지니어링)
+## Hậu cần chiến tranh và kỹ thuật
 
 1945–1975 demonstrates technology under destruction ràng buộc (constraint / 제약조건): roads/bridges repeatedly damaged and repaired; trail/mạng (network / 네트워크) adapted; anti-air and logistics các hệ thống (systems / 시스템들) evolved.
 
@@ -122,7 +122,7 @@ Industrial park bundles land, electricity, road, customs/dịch vụ (service / 
 
 This is hạ tầng (infrastructure / 인프라) as **nền tảng (platform / 플랫폼)**, not single construction.
 
-## Telecom and internet
+## Viễn thông và internet
 
 Mobile mạng (network / 네트워크) allows coordination without fixed-line buildout at every household. Internet reduces communication chi phí (cost / 비용) drastically and enables software, e-commerce, remote kiến thức (knowledge / 지식).
 
@@ -140,7 +140,7 @@ Having technology nationally does not mean every household gains same benefit. E
 
 Always distinguish **availability** from **effective truy cập (access / 접근)**.
 
-## Hạ tầng (infrastructure / 인프라) creates winners and losers
+## Hạ tầng tạo ra người hưởng lợi và người chịu thiệt
 
 New road can raise nearby land giá trị (value / 값) but bypass old thị trường (market / 시장) town. Dam may supply electricity but alter downstream ecology. Cổng (port / 포트) expansion creates job and displacement simultaneously.
 

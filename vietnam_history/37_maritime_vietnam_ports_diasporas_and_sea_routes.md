@@ -70,7 +70,7 @@ If capital depends on harbour for bên ngoài (external / 외부) supply/communi
 
 This is **maritime logistics**, a tầng (layer / 계층) often missing when battle is narrated only by army movement on land.
 
-## Hội An: early-modern cổng (port / 포트) as a hệ thống (system / 시스템)
+## Hội An: cảng cận đại như một hệ thống
 
 UNESCO describes Hội An as a remarkably preserved Southeast Asian trading cổng (port / 포트) active from roughly the fifteenth to nineteenth centuries, with particularly strong international commerce in early-modern centuries.
 
@@ -99,7 +99,7 @@ Diaspora mạng (network / 네트워크) reduces giao dịch (transaction / 트�
 
 This is why merchant association, temple and family house matter economically, not only culturally.
 
-## Silver, ceramics, silk and weapons: trade changes trạng thái (state / 상태) sức chứa (capacity / 용량)
+## Bạc, gốm, lụa và vũ khí: thương mại thay đổi năng lực nhà nước
 
 Early-modern Asian commerce moves many goods, but some flows have disproportionate political tác động (effect / 효과). Silver can deepen monetization; firearms/material can thay đổi (change / 변경) warfare; imported luxury goods can hỗ trợ (support / 지원) elite prestige; export ceramics/forest products generate revenue.
 
@@ -124,7 +124,7 @@ Writing lịch sử (history / 이력) as “Europeans discovered Vietnamese tra
 
 European advantage grows later through toàn cục (global / 전역) empire, industrial technology and naval power—not automatically from first arrival.
 
-## Missionaries, print and ngôn ngữ (language / 언어) travel through cổng (port / 포트) networks too
+## Nhà truyền giáo, in ấn và ngôn ngữ cũng đi qua mạng lưới cảng
 
 Christian missionaries often move along same shipping routes as merchants. Cổng (port / 포트) contact gives truy cập (access / 접근) to translators and cosmopolitan communities.
 
@@ -166,7 +166,7 @@ Colonial cổng (port / 포트) investment can raise thông lượng (throughput
 
 Hạ tầng (infrastructure / 인프라) is therefore never neutral: ask **what luồng (flow / 흐름) was it optimized for?**
 
-## Hải Phòng and colonial northern hạ tầng (infrastructure / 인프라)
+## Hải Phòng và hạ tầng thuộc địa miền Bắc
 
 French colonial development of Hải Phòng tied cổng (port / 포트) to Hanoi and northern môi trường vận hành (production / 운영 환경)/mining zones via hiện đại (modern / 현대적) vận chuyển (transport / 전송). Railway and road reduce hinterland chi phí (cost / 비용) and allow export/import flows at larger quy mô (scale / 규모).
 
@@ -178,7 +178,7 @@ Sailing trade depends heavily on wind; steam reduces seasonal dependence and mak
 
 Vận chuyển (transport / 전송) revolution is therefore thông tin (information / 정보) revolution too. If ship arrives on schedule, đặc tả hợp đồng (contract / 계약) and administration can coordinate more tightly.
 
-## War and ports in the twentieth century
+## Chiến tranh và cảng trong thế kỷ XX
 
 Ports become military logistics targets because imported fuel, equipment and aid often enter by sea. Naval blockade, mining, bombing or cổng (port / 포트) closure can have economy-wide effects.
 
@@ -186,7 +186,7 @@ But this chapter avoids reducing ports to battle sites. Civilian supply, refugee
 
 Historical cổng (port / 포트) has multiple overlapping các hệ thống (systems / 시스템들): military, commercial and xã hội (social / 사회적).
 
-## After 1975: cổng (port / 포트) geography meets thị trường (market / 시장) reform
+## Sau 1975: địa lý cảng gặp cải cách thị trường
 
 Postwar reconstruction and later Đổi Mới increase importance of export manufacturing and international shipping. Containerization standardizes cargo handling and sharply lowers giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) when ports, road and customs are coordinated.
 

@@ -64,7 +64,7 @@ Vì vậy khi nói “ruộng đất nhà nước” hay “ruộng tư”, cầ
 
 Land là economic cơ sở (base / 기반) nhưng cũng là political quan hệ (relation / 관계). Một ruler không cần sở hữu literal mọi trường dữ liệu (field / 필드); trạng thái (state / 상태) power thể hiện qua khả năng claim tax/dịch vụ (service / 서비스) và recognize cục bộ (local / 로컬) rights.
 
-## Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution
+## Phật giáo: tôn giáo, tính chính danh, mạng lưới và thiết chế
 
 Thời Lý, **Buddhism (Phật giáo)** có vị trí rất lớn trong court culture và political legitimacy. Monks không chỉ làm ritual; monasteries là places of học tập (learning / 학습), landholding, charity, văn bản (text / 텍스트) circulation và elite networking.
 
@@ -122,13 +122,13 @@ Cách an toàn hơn là nhìn centralization như **độ dốc (gradient / 기�
 
 Điều này không làm nhà Lý “yếu”. Nó chỉ giúp ta dùng đúng mô hình (model / 모델) cho premodern polity.
 
-## Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?
+## Nếu đi Hà Nội hôm nay, nối chương này vào đâu?
 
 **Hoàng thành Thăng Long**: đọc political layers và urban hạ tầng (infrastructure / 인프라). **Văn Miếu – Quốc Tử Giám**: đọc lịch sử (history / 이력) của literate elite và trạng thái (state / 상태) education, nhưng nhớ nhiều buildings hiện nay thuộc later reconstruction. **Chùa Một Cột** và các Buddhist monuments: dùng để thấy court Buddhism, song không coi kiến trúc (architecture / 아키텍처) hiện tồn là unchanged từ thế kỷ XI.
 
 Đi quanh hồ, sông và old urban cốt lõi (core / 핵심) cũng nên nhớ Thăng Long đã sống cùng water hệ thống (system / 시스템) trong một millennium. Hiện đại (modern / 현대적) Hanoi che lấp nhiều old waterways, nên historical map rất useful để recover geography.
 
-## Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?
+## Tại sao nhà Trần là chương tiếp theo chứ không phải chỉ “đổi triều”?
 
 Đến đầu thế kỷ XIII, nhà Lý đối mặt court instability, regional military power và succession bài toán (problem / 문제). Nhà Trần lên thay không xóa Thăng Long, Buddhist culture hay agrarian cơ sở (base / 기반). Họ inherit hệ thống (system / 시스템) rồi reorganize elite and military relations.
 

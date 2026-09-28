@@ -22,7 +22,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 930s: Dương Đình Nghệ và Ngô Quyền tiếp tục contest southern Chinese điều khiển (control / 제어).
 - 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — bước ngoặt lớn khỏi sự cai trị trực tiếp của đế chế phương Bắc.
 
-## Thế kỷ X và early dynastic trạng thái (state / 상태)
+## Thế kỷ X và các nhà nước đầu triều đại
 
 - 968: Đinh Bộ Lĩnh establishes Đại Cồ Việt and imperial monarchy at Hoa Lư.
 - 980: Tiền Lê begins under Lê Hoàn.
@@ -47,7 +47,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1427: Ming forces defeated/withdrawal settlement.
 - 1428: Lê Lợi establishes restored Đại Việt under Lê dynasty.
 
-## Lê sơ and fragmentation
+## Lê sơ và phân mảnh quyền lực
 
 - 1460–1497: reign of Lê Thánh Tông; major bureaucratic/legal expansion.
 - 1471: Đại Việt campaign defeats Vijaya, transforming Đại Việt–Champa balance.
@@ -55,7 +55,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1533 onward: Lê restoration movement forms rival court.
 - 1592: Trịnh–Lê forces retake Thăng Long; Mạc power survives in northern pockets afterward.
 
-## Trịnh–Nguyễn and southern frontier
+## Trịnh–Nguyễn và vùng biên phía Nam
 
 - 1558: Nguyễn Hoàng sent to Thuận Hóa, starting durable Nguyễn regional cơ sở (base / 기반).
 - 1627–1672: repeated Trịnh–Nguyễn wars.
@@ -82,7 +82,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1867: French điều khiển (control / 제어) extends over remaining Cochinchina provinces.
 - 1883–1884: treaties establish French protectorate khung phần mềm (framework / 프레임워크) over Annam/Tonkin; colonial hệ thống (system / 시스템) consolidates over following years.
 
-## Colonial era and revolution
+## Thời thuộc địa và cách mạng
 
 - Early 1900s: reformist/nationalist movements expand; Đông Du associated with Phan Bội Châu.
 - 1919: end of Nguyễn civil-service examinations.
@@ -93,7 +93,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - August 1945: August Revolution amid Japanese surrender and imperial collapse.
 - 2 September 1945: Hồ Chí Minh declares Democratic Republic of Vietnam in Hanoi.
 
-## First Indochina War and division
+## Chiến tranh Đông Dương lần thứ nhất và chia cắt
 
 - December 1946: full-scale Franco–Viet Minh war begins.
 - 1949–1950: xung đột (conflict / 충돌) internationalizes strongly amid Chinese Communist victory and Cold War alignment.
@@ -109,7 +109,7 @@ Tệp này là **bản đồ tọa độ**, không thay thế các chương gi�
 - 1973: Paris Peace Accords; U.S. combat forces withdraw.
 - 30 April 1975: Republic of Vietnam government collapses; war ends with northern/revolutionary forces controlling Saigon.
 
-## Reunification, crisis and reform
+## Thống nhất, khủng hoảng và cải cách
 
 - 1976: Socialist Republic of Vietnam formally established; national political-administrative reunification.
 - 1978–1979: Cambodia xung đột (conflict / 충돌) expands; 1979 Sino-Vietnamese border war.

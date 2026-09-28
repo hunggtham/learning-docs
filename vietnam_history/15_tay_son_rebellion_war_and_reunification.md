@@ -62,7 +62,7 @@ military collapse / unrest
 
 Đây là một ví dụ điển hình cho liên kết (connection / 연결) Economy ↔ War.
 
-## Tây Sơn đánh Nguyễn: collapse của một regional trạng thái (state / 상태)
+## Tây Sơn đánh Nguyễn: sự sụp đổ của một nhà nước khu vực
 
 Tây Sơn nhanh chóng mở rộng và tấn công Nguyễn authority. Đến cuối thập niên 1770, phần lớn Nguyễn ruling family bị đánh bại; **Nguyễn Ánh** trở thành survivor quan trọng và về sau tổ chức resistance dài hạn.
 

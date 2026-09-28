@@ -42,7 +42,7 @@ Hãy coi capital/administrative seat như một máy chủ (server / 서버) nú
 
 Luy Lâu đặc biệt đáng chú ý vì nó không chỉ là bureaucracy. Nó còn nằm trong commercial–religious mạng (network / 네트워크) lớn.
 
-## Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation
+## Phật giáo: tôn giáo đi cùng thương mại, di cư và dịch thuật
 
 Phật giáo vào khu vực qua nhiều tuyến đường, không nên hình dung như một dòng duy nhất “từ Trung Quốc xuống”. Đông Nam Á lục địa kết nối cả đường bộ và đường biển với Ấn Độ, Biển Đông và nam Trung Hoa. Các trung tâm thương mại tạo môi trường cho tăng lữ, thương nhân và kinh sách di chuyển.
 
@@ -82,7 +82,7 @@ Nhà Tùy rồi Đường tái lập stronger imperial sức chứa (capacity / 
 
 Tang administration dựa vào officials, garrisons và fiscal hệ thống (system / 시스템), nhưng cục bộ (local / 로컬) families, villages và regional leaders vẫn là actors. Khi Tang power giảm trong thế kỷ IX, những actors này có nhiều room hơn để chuyển administrative experience thành autonomy.
 
-## Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)
+## Mai Thúc Loan: nổi dậy gắn với tài chính và mạng lưới khu vực
 
 Cuộc nổi dậy của **Mai Thúc Loan** thường được đặt vào đầu thế kỷ VIII; chronology trong nguồn có khác biệt, thường gặp các mốc khoảng **713 hoặc 722**. Đây là nơi thư viện (library / 라이브러리) tránh false precision.
 
@@ -134,7 +134,7 @@ Written administration và elite scholarship chịu ảnh hưởng rất mạnh 
 
 Kết quả là một society có nhiều East Asian institutional layers nhưng vẫn không trở thành một southern Chinese province vĩnh viễn.
 
-## Di tích và địa điểm nên gắn khi đọc chapter này
+## Di tích và địa điểm nên gắn khi đọc chương này
 
 **Luy Lâu – chùa Dâu, Bắc Ninh** giúp nhìn administrative center + Buddhism + trade. **Đền Bà Triệu ở Thanh Hóa** giúp theo dõi bộ nhớ (memory / 메모리) của uprising năm 248. Các địa điểm gắn với Lý Nam Đế và Triệu Quang Phục ở Bắc Bộ giúp đặt rebellion vào terrain thực. Với mỗi nơi, luôn hỏi kiến trúc hiện tồn thuộc niên đại nào và tầng (layer / 계층) bộ nhớ (memory / 메모리) nào được dựng sau.
 

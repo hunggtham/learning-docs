@@ -34,7 +34,7 @@ tribute / exchange / alliance
 
 Indirect quan hệ (relation / 관계) vì thế thường economical hơn direct administration.
 
-## “Không bị cai trị trực tiếp” không có nghĩa isolated
+## “Không bị cai trị trực tiếp” không có nghĩa là biệt lập
 
 Một community có thể nằm ngoài routine tax bureaucracy nhưng tham gia long-distance trade. Oxford scholarship về Laos/Vietnam nhấn mạnh maritime trade dựa một phần lớn vào forest products từ upland hinterlands.
 

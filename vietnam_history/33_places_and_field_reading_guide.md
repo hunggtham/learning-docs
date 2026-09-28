@@ -109,7 +109,7 @@ Read city as operating hệ thống (system / 시스템): gate hierarchy, imperi
 
 Connect 16, 27, 28 and 30.
 
-## An Giang/Kiên Giang — kênh Vĩnh Tế and southwest canal landscape
+## An Giang/Kiên Giang — kênh Vĩnh Tế và cảnh quan kênh rạch Tây Nam
 
 **Use for:** frontier tích hợp (integration / 통합), hydraulic hạ tầng (infrastructure / 인프라), labor and Mekong geography.
 
@@ -125,7 +125,7 @@ Rather than one site, read mạng (network / 네트워크): cổng (port / 포�
 
 Compare name/hàm (function / 함수) changes across Gia Định → Sài Gòn → Thành phố Hồ Chí Minh.
 
-## Hà Nội — colonial quarter and Long Biên area
+## Hà Nội — khu phố thuộc địa và khu vực Long Biên
 
 **Use for:** colonial urban planning, rail/cầu nối (bridge / 브리지), administrative modernization and later war damage/reconstruction.
 
@@ -189,25 +189,25 @@ Connect 22–25.
 
 Question: how does authority move from bộ nhớ (memory / 메모리)/early polity to durable bureaucratic capital?
 
-### Tuyến (route / 경로) B — Medieval and early-modern coast
+### Tuyến B — duyên hải trung đại và cận đại
 
 Vân Đồn → Thăng Long → Hội An → Mỹ Sơn.
 
 Question: how does inland court connect to maritime Asia and non-Đại-Việt polities?
 
-### Tuyến (route / 경로) C — Nguyễn and southern tích hợp (integration / 통합)
+### Tuyến C — nhà Nguyễn và hội nhập phương Nam
 
 Huế → Hội An → Gia Định/HCMC → Vĩnh Tế/Mekong.
 
 Question: how does a long territory become connected through administration, di chuyển (migration / 마이그레이션) and water/road networks?
 
-### Tuyến (route / 경로) D — Twentieth-century war and reconstruction
+### Tuyến D — chiến tranh và tái thiết thế kỷ XX
 
 Hà Nội → Điện Biên → DMZ/Quảng Trị → HCMC.
 
 Question: how do logistics, international các hệ thống (systems / 시스템들) and urban society thay đổi (change / 변경) across 1945–1975?
 
-### Tuyến (route / 경로) E — Đổi Mới and hiện đại (modern / 현대적) economy
+### Tuyến E — Đổi Mới và kinh tế hiện đại
 
 HCMC/Bình Dương → Mekong Delta or Hà Nội/Bắc Ninh → Hải Phòng.
 

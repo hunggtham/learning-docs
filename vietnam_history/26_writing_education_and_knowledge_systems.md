@@ -46,7 +46,7 @@ Thus premodern literacy is layered:
 - Classical Chinese for elite official kiến thức (knowledge / 지식);
 - Nôm for significant vernacular writing/literature.
 
-## Examination as personnel technology
+## Khoa cử như công nghệ tuyển dụng quan lại
 
 Khoa cử không chỉ là giáo dục. Nó là một **giao thức tuyển dụng (recruitment protocol / 채용 프로토콜)** cho bộ máy quan liêu.
 
@@ -58,7 +58,7 @@ Các ràng buộc (constraints / 제약조건들): expensive preparation, narrow
 
 Hiện đại (modern / 현대적) standardized testing faces structurally similar sự đánh đổi (trade-off / 트레이드오프).
 
-## Village school and unequal truy cập (access / 접근)
+## Trường làng và khả năng tiếp cận không bình đẳng
 
 Giáo dục tiền hiện đại thường phụ thuộc vào thầy dạy, tài nguyên gia đình và truyền thống địa phương. Gia đình tinh hoa dễ cung cấp sách, thời gian và mạng lưới hơn.
 
@@ -74,7 +74,7 @@ Printing changes độ tin cậy (reliability / 신뢰성): multiple copies can 
 
 But khối (block / 블록) môi trường vận hành (production / 운영 환경) remains costly; phân phối (distribution / 분포)/logistics still limit reach.
 
-## Missionaries and Romanized Vietnamese
+## Nhà truyền giáo và chữ La-tinh hóa tiếng Việt
 
 European missionaries participate in development/use of Romanized Vietnamese writing that later becomes **chữ Quốc ngữ**. Alexandre de Rhodes is well known but should not be treated as single inventor; romanization emerged through cumulative missionary công việc (work / 작업) and linguistic tương tác (interaction / 상호작용).
 
@@ -88,7 +88,7 @@ Traditional examination ends in early twentieth century. Credential hierarchy sh
 
 Kiến thức (knowledge / 지식) useful for bureaucracy changes from classical canon toward French, hiện đại (modern / 현대적) science, law and accounting.
 
-## Quốc ngữ and low reproduction chi phí (cost / 비용)
+## Quốc ngữ và chi phí tái bản thấp
 
 Alphabetic Quốc ngữ has lower entry barrier for printing/typesetting and học tập (learning / 학습) than character-based classical literacy for many learners. Combined with printing press and school, it enables rapid expansion of newspapers and books.
 

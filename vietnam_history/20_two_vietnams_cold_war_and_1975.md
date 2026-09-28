@@ -24,7 +24,7 @@ Movement changed demography, land demand, church/community networks and politics
 
 Di chuyển (migration / 마이그레이션) is not a footnote. When population chooses or is pressured to move, border becomes xã hội (social / 사회적) reality.
 
-## North Vietnam: socialist transformation and trạng thái (state / 상태) penetration
+## Miền Bắc: chuyển đổi xã hội chủ nghĩa và mức độ thâm nhập của nhà nước
 
 DRV pursued land reform, collectivization over thời gian (time / 시간), industrial planning and expansion of party-state institutions. These policies aimed to transform lớp (class / 클래스)/thuộc tính (property / 속성) relations and increase trạng thái (state / 상태) sức chứa (capacity / 용량).
 
@@ -50,7 +50,7 @@ South Vietnamese leadership rejected elections under conditions it argued could 
 
 The kết quả (result / 결과) was not peaceful reunification. Separate trạng thái (state / 상태) institutions deepened and mutual distrust rose.
 
-## Insurgency in the South: cục bộ (local / 로컬) roots + northern chiến lược (strategy / 전략)
+## Nổi dậy ở miền Nam: gốc rễ địa phương và chiến lược từ miền Bắc
 
 By late 1950s, armed xung đột (conflict / 충돌) in South Vietnam intensified. Former Viet Minh networks, cục bộ (local / 로컬) grievances, government repression and decisions by Hanoi leadership all mattered.
 
@@ -82,7 +82,7 @@ Subsequent governments in South Vietnam experienced repeated political turnover 
 
 Lesson: bên ngoài (external / 외부) aid cannot substitute for domestic coalition management. Army kích thước (size / 크기) and equipment are only one dimension of trạng thái (state / 상태) sức chứa (capacity / 용량).
 
-## 1965: large-scale US ground war and North Vietnamese regular forces
+## 1965: chiến tranh bộ binh quy mô lớn của Hoa Kỳ và quân chính quy miền Bắc
 
 From 1965, United States deployed large ground forces and conducted sustained air campaigns. North Vietnam increased infiltration and triển khai (deployment / 배포) of regular forces to the south while continuing hỗ trợ (support / 지원) for NLF/People's Liberation Armed Forces.
 
@@ -116,7 +116,7 @@ Rural communities across xung đột (conflict / 충돌) zones faced displacemen
 
 GDP-style aggregate alone cannot describe wartime welfare.
 
-## 1968 Tet Offensive: military, political and media outcomes differ
+## Tổng tiến công Tết 1968: kết quả quân sự, chính trị và truyền thông khác nhau
 
 During **Tet 1968**, communist forces launched widespread attacks across South Vietnam. Militarily, attackers suffered heavy losses and failed to hold most urban objectives for long. Politically and psychologically, the offensive had major consequences, especially for perceptions in the United States about progress and war duration.
 

@@ -16,7 +16,7 @@ Nhà Trần lên ngôi năm **1225**, sau một giai đoạn court instability c
 
 Nhà Trần tiếp tục dùng Thăng Long, tiếp tục bureaucracy, education và Buddhist institutions của thời trước. Nhưng họ reorganize royal family và military elite theo cách riêng, đặc biệt dựa mạnh vào kinship within ruling house.
 
-## Royal clan như một quản trị (governance / 거버넌스) technology
+## Hoàng tộc như một công nghệ quản trị
 
 Trong trạng thái (state / 상태) chưa có professional bureaucracy đủ dày như hiện đại (modern / 현대적) government, trust là scarce tài nguyên (resource / 자원). Nhà Trần phân bố members của royal clan vào nhiều vị trí quân sự–chính trị để giảm agency bài toán (problem / 문제): ruler biết người chỉ huy là họ hàng gần và có stake trong survival của dynasty.
 
@@ -36,7 +36,7 @@ Phật giáo tiếp tục có ảnh hưởng sâu dưới Trần. Sau các cuộ
 
 Văn Miếu–Quốc Tử Giám tiếp tục được tu sửa và sử dụng dưới Trần; Chu Văn An về sau trở thành một symbol của learned official culture.
 
-## Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia
+## Mông Cổ bành trướng làm thay đổi môi trường an ninh của toàn lục địa Á–Âu
 
 Để hiểu Đại Việt thế kỷ XIII, phải mở rộng khung nhìn. Các cuộc chinh phục của Mông Cổ không phải một xung đột song phương “Việt Nam–Trung Quốc”. Quân Mông Cổ đã đánh từ Trung Á tới Đông Âu, chinh phục Đại Lý–Vân Nam, tiêu diệt Nam Tống và gây sức ép lên nhiều nhà nước Đông Nam Á.
 

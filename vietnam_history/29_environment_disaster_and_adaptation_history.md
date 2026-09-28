@@ -68,7 +68,7 @@ famine risk
 
 This khung phần mềm (framework / 프레임워크) is crucial for understanding the 1944–45 famine: weather and crop problems interacted with wartime extraction, vận chuyển (transport / 전송) các ràng buộc (constraints / 제약조건들) and political-economic disruption.
 
-## Forest and upland tài nguyên (resource / 자원)
+## Rừng và tài nguyên vùng cao
 
 Forest provides timber, fuel, medicinal sản phẩm (product / 제품), wildlife and upland livelihood. Lowland trạng thái (state / 상태) often views forest as tài nguyên (resource / 자원)/frontier, while upland communities may have different land-use hệ thống (system / 시스템).
 
@@ -76,7 +76,7 @@ Commercial extraction and settlement expansion thay đổi (change / 변경) bot
 
 Thus deforestation lịch sử (history / 이력) is also frontier lịch sử (history / 이력).
 
-## Champa and central-coast môi trường (environment / 환경)
+## Champa và môi trường duyên hải miền Trung
 
 Miền Trung có đồng bằng ven biển hẹp, núi gần biển và thường xuyên chịu bão lũ. Trung tâm chính trị và cảng phải vận hành với các hệ thống sông ngắn và đường bờ biến đổi.
 
@@ -84,7 +84,7 @@ This ecology differs sharply from Red River and Mekong, helping explain differen
 
 But ecology constrains; it does not determine one inevitable culture/trạng thái (state / 상태) form.
 
-## Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium
+## Đồng bằng Mekong: nước như phương tiện vận chuyển và môi trường sản xuất
 
 Mekong Delta has seasonal flood, canal mạng (network / 네트워크) and low elevation. Settlement/productive expansion depends on reading water rather than simply excluding it.
 
@@ -92,7 +92,7 @@ Canal can drain, irrigate, move goods and extend administrative reach simultaneo
 
 Historical development therefore transforms hydrology.
 
-## Vĩnh Tế and canalization
+## Vĩnh Tế và việc đào kênh
 
 Early Nguyễn canal building illustrates multi-function hạ tầng (infrastructure / 인프라): military/frontier truy cập (access / 접근), settlement and trade.
 
@@ -100,7 +100,7 @@ Moving water tuyến (route / 경로) changes which land becomes economically ac
 
 Environmental lịch sử (history / 이력) asks not only “who built canal?” but what new luồng (flow / 흐름) of sediment, people and goods it created.
 
-## Typhoon and central/northern coast
+## Bão và duyên hải miền Trung–Bắc
 
 Storm periodically destroys crop, house, ship and cổng (port / 포트). Maritime economy must price weather rủi ro (risk / 위험).
 

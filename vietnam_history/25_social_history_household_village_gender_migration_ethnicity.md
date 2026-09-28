@@ -34,7 +34,7 @@ household implementation
 
 Middleware can translate, buffer, distort or enforce quy tắc (rule / 규칙).
 
-## Status and elite reproduction
+## Địa vị và sự tái tạo tinh hoa
 
 Xã hội tiền hiện đại có người cai trị, quan lại, gia đình nhà nho, binh lính, nông dân, thợ thủ công, người hầu/nô lệ dưới nhiều hình thức và các tinh hoa địa phương.
 
@@ -42,7 +42,7 @@ Hệ thống khoa cử tạo một kênh dịch chuyển địa vị nhưng khô
 
 Thus meritocratic institution can coexist with unequal starting điều kiện (condition / 조건).
 
-## Women: avoid both “traditional equality” and “complete subordination” stereotypes
+## Phụ nữ: tránh cả khuôn mẫu “bình đẳng truyền thống” lẫn “phụ thuộc hoàn toàn”
 
 Phụ nữ tham gia nông nghiệp, thị trường, tài sản hộ gia đình và đời sống tôn giáo ở mức khác nhau. Chuẩn mực pháp lý và Nho giáo có thể ưu tiên quyền phụ hệ, nhưng thực hành thay đổi theo giai tầng, vùng và thời kỳ.
 
@@ -50,7 +50,7 @@ Historical phương thức (method / 메서드) should separate **normative văn
 
 Female figures such as Hai Bà Trưng also become later bộ nhớ (memory / 메모리) symbols; their historical role and hiện đại (modern / 현대적) symbolic use are related but distinct questions.
 
-## Kinship and ancestor ritual
+## Quan hệ họ hàng và nghi lễ tổ tiên
 
 Patrilineal lineage becomes important in many lowland communities, especially under stronger Neo-Confucian influence, but kinship practice is diverse.
 
@@ -102,7 +102,7 @@ They communicate through newspaper/association/café/school rather than only vil
 
 This new **công khai (public / 공개) sphere** helps nationalism, reformism and revolutionary politics circulate.
 
-## War and displacement
+## Chiến tranh và sự ly tán dân cư
 
 Giai đoạn 1945–1975 liên tục làm dân cư dịch chuyển: sơ tán, dòng người tị nạn, động viên quân sự, tái định cư chiến lược và dồn vào đô thị.
 

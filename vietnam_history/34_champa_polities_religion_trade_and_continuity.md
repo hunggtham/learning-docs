@@ -56,7 +56,7 @@ new local political/religious language
 
 Vì vậy một lingam, Sanskrit inscription hay temple plan cho thấy strong transregional liên kết (connection / 연결) nhưng không chứng minh cục bộ (local / 로컬) society bị thay thế bởi người từ India.
 
-## Mỹ Sơn: temple complex như political technology
+## Mỹ Sơn: quần thể đền tháp như công nghệ chính trị
 
 **Mỹ Sơn** ở Quảng Nam là checkpoint đặc biệt vì nó không chỉ là collection of towers. UNESCO xác định sanctuary phát triển từ khoảng thế kỷ IV tới XIII và từng là một religious/political centre quan trọng của Champa.
 
@@ -76,7 +76,7 @@ Khi Hội An nổi lên mạnh ở các thế kỷ sau, nó không xuất hiện
 
 Đây là reason thư viện (library / 라이브러리) không chia “Champa cổ” và “Hội An early hiện đại (modern / 현대적)” thành hai câu chuyện không liên quan.
 
-## Economy: agriculture + craft + forest products + maritime exchange
+## Kinh tế: nông nghiệp, nghề thủ công, sản vật rừng và trao đổi đường biển
 
 Champa không phải chỉ “vương quốc thương mại biển”, cũng không chỉ “xã hội nông nghiệp”. Coastal basin cần agriculture để nuôi population; uplands cung cấp nhiều forest commodity; cổng (port / 포트) cho phép exchange với wider Asia.
 

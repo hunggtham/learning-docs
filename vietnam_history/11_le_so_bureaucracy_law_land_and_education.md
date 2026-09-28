@@ -8,7 +8,7 @@ Câu hỏi trung tâm của chương là: **làm thế nào nhà Lê biến liê
 
 Đây là phase mà paperwork itself trở thành historical bằng chứng (evidence / 증거) quan trọng.
 
-## Từ war coalition sang administration
+## Từ liên minh chiến tranh sang quản trị
 
 Lam Sơn thắng nhờ personal loyalty, regional military networks và flexible command. Peace đòi thứ khác: predictable tax, appointments, courts, cadastral kiến thức (knowledge / 지식) và succession.
 
@@ -76,7 +76,7 @@ Nhưng written law không equal daily practice. Village custom, bargaining và c
 
 Cần tách **legal văn bản (text / 텍스트)**, **legal ideology** và **actual practice**.
 
-## Education and examinations: recruiting officials through a kiến thức (knowledge / 지식) chuỗi xử lý (pipeline / 파이프라인)
+## Giáo dục và khoa cử: tuyển quan lại qua chuỗi tri thức
 
 Lê sơ mở rộng Nho học và examination hệ thống (system / 시스템). Năm **1484**, Lê Thánh Tông cho dựng những bia Tiến sĩ đầu tiên ở Văn Miếu–Quốc Tử Giám để bản ghi (record / 레코드) successful candidates từ các examinations bắt đầu năm 1442.
 
@@ -92,7 +92,7 @@ Collectively, stelae cho phép ask social-history questions: talent came from wh
 
 Đây là điểm (point / 지점) where monument becomes dataset.
 
-## Confucian trạng thái (state / 상태) không có nghĩa Buddhism biến mất
+## Nhà nước Nho giáo không có nghĩa Phật giáo biến mất
 
 Court ideology và official education trở nên more Confucian, nhưng village cults, Buddhism và Daoist practices vẫn tồn tại. State-sponsored orthodoxy không map one-to-one onto lived religion.
 
@@ -104,13 +104,13 @@ Trạng thái (state / 상태) revenue vẫn anchored in agriculture, nhưng mar
 
 Bureaucratic stability can lower giao dịch (transaction / 트랜잭션) rủi ro (risk / 위험), but tax and corvée also impose costs. Economic lịch sử (history / 이력) phải giữ both sides: trạng thái (state / 상태) thứ tự (order / 순서) may facilitate exchange while extraction funds army and court.
 
-## 1471 và Champa: trạng thái (state / 상태) sức chứa (capacity / 용량) biến thành territorial power
+## 1471 và Champa: năng lực nhà nước biến thành quyền lực lãnh thổ
 
 Năm **1471**, Lê Thánh Tông dẫn major campaign against Vijaya/Champa, producing a decisive shift in central Vietnam. Chapter này chỉ cần thấy một cơ chế (mechanism / 메커니즘): bureaucratic-fiscal trạng thái (state / 상태) có larger mobilization sức chứa (capacity / 용량) than earlier fragmented courts.
 
 Nhưng không nên kể sự kiện (event / 이벤트) này như empty “mở rộng lãnh thổ”. Nó involved war, population displacement, surviving Cham polities và long-term frontier tương tác (interaction / 상호작용). [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) sẽ xử lý đầy đủ from multiple sides.
 
-## Lam Kinh và Thăng Long: two centers of legitimacy
+## Lam Kinh và Thăng Long: hai trung tâm của tính chính danh
 
 Lê dynasty rules from Thăng Long but keeps **Lam Kinh** as ancestral–memorial center. Đây là useful distinction giữa administrative capital và dynastic sacred homeland.
 

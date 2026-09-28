@@ -120,7 +120,7 @@ Nhưng ở thế kỷ XVII, Quốc ngữ chưa phải mass literacy hệ thống
 
 Do đó thay vì hỏi nhị phân “Việt Nam lúc đó có bị chia đôi không?”, hãy hỏi **cái gì bị chia, cái gì còn chung, và ở tầng (layer / 계층) nào**.
 
-## Di tích và địa điểm nên nối với chapter này
+## Di tích và địa điểm nên nối với chương này
 
 **Hội An** cho thấy maritime commercial hệ thống (system / 시스템). **Thanh Chiêm** gần Hội An gắn với administrative centre của Quảng Nam dinh và mạng (network / 네트워크) truyền giáo–thương mại. **Lũy Thầy/Quảng Bình** giúp đọc geography của Trịnh–Nguyễn warfare. **Phú Xuân–Huế** bắt đầu nổi lên như một political centre của họ Nguyễn và sẽ trở thành key nút (node / 노드) trong chapter Tây Sơn và Nguyễn dynasty.
 

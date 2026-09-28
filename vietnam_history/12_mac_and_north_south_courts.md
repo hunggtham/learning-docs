@@ -46,7 +46,7 @@ Thanh Hóa đã là cơ sở (base / 기반) của Hồ và Lam Sơn. Geography 
 
 Lê dynastic bộ nhớ (memory / 메모리) ở Lam Kinh tạo symbolic capital; families with military followings provide organizational capital. Khi Thăng Long controlled by Mạc, restoration movement needs an alternative center far enough to survive.
 
-## Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)
+## Triều Minh: nội chiến Đại Việt trở thành bài toán đối ngoại
 
 Mạc usurpation đặt nhà Minh trước difficult choice. Một faction favored intervention to restore Lê; others remembered high chi phí (cost / 비용) of 1407–1427 occupation and preferred caution.
 
@@ -56,7 +56,7 @@ Nghiên cứu của Cambridge cho thấy triều Minh tranh luận về việc c
 
 Ritual hierarchy therefore không equal mất mát (loss / 손실) of all sovereignty.
 
-## Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break
+## Hệ thống khoa cử tiếp tục dưới Mạc: tính liên tục của nhà nước qua thay đổi triều đại
 
 Mạc rulers continued Confucian education, examinations và repair of Quốc Tử Giám. This matters because political legitimacy was contested through the same institutional ngôn ngữ (language / 언어) both sides dùng chung (shared / 공유).
 
@@ -64,7 +64,7 @@ The UNESCO-listed doctoral stelae include examinations from both Lê and Mạc p
 
 A regime seeking legitimacy often preserves institutions people already recognize.
 
-## Civil war economy: fragmentation không có nghĩa economy stops everywhere
+## Kinh tế thời nội chiến: phân mảnh không có nghĩa kinh tế dừng ở mọi nơi
 
 Chiến tranh kéo dài làm tăng thuế, trưng binh và bất an, nhưng tác động khác nhau theo địa lý. Một số hành lang trở thành vùng chiến sự; nơi khác có thể hưởng lợi từ việc chuyển hướng thương mại hoặc quyền tự chủ địa phương.
 
@@ -72,7 +72,7 @@ This is a general quy tắc (rule / 규칙): **political fragmentation and comme
 
 Do not infer GDP collapse merely from dynastic warfare without regional bằng chứng (evidence / 증거).
 
-## Military families replace a single court as the main political actors
+## Gia đình quân sự thay thế triều đình đơn nhất làm tác nhân chính trị chủ yếu
 
 Nguyễn Kim's death brings **Trịnh Kiểm** to dominance in Lê restoration government. From this điểm (point / 지점), the restored Lê king increasingly functions alongside powerful military family leadership.
 
@@ -96,7 +96,7 @@ Therefore 1592 is major coordinate, not an instant national reunification switch
 
 Trạng thái (state / 상태) fragmentation transitions into a new cấu hình (configuration / 구성) rather than disappearing.
 
-## From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis
+## Từ Lê–Mạc đến Trịnh–Nguyễn: vì sao trục phân chia tiếp theo thay đổi
 
 Nguyễn family members eventually bản dựng (build / 빌드) a power cơ sở (base / 기반) further south, especially after Nguyễn Hoàng enters Thuận Hóa. The political axis shifts from **Mạc vs restored Lê** to **Trịnh in north vs Nguyễn in south**, while Lê monarchs remain as nominal dynasty in north.
 

@@ -50,7 +50,7 @@ regional circulation of food + goods
 
 Nước vừa tạo rủi ro (risk / 위험) vừa giảm vận chuyển (transport / 전송) chi phí (cost / 비용). Đây là reason ecology không nên được gọi đơn giản là “swamp waiting to be reclaimed”.
 
-## Early trạng thái (state / 상태) formation không cần chờ “Indianization”
+## Hình thành nhà nước sơ kỳ không cần chờ “Ấn Độ hóa”
 
 Một older explanation từng mô tả Funan như sản phẩm (product / 제품) của Indian cultural influence. Recent archaeology nhấn mạnh rằng Lower Mekong đã có cục bộ (local / 로컬) settlement traditions, agriculture và connectivity trước khi Indic religious/political forms trở nên visible mạnh.
 
@@ -104,7 +104,7 @@ Mediterranean / West Asia
 
 Historical significance nằm ở **mạng (network / 네트워크) reach**, không ở romantic story về direct voyage nếu bằng chứng (evidence / 증거) không đủ.
 
-## India–Southeast Asia contact: trade, religion và technology đi cùng nhưng không cùng tốc độ
+## Tiếp xúc Ấn Độ–Đông Nam Á: thương mại, tôn giáo và công nghệ không đi cùng một tốc độ
 
 Artifacts và religious forms cho thấy connections với South Asia. Sanskrit/Indic scripts, Hindu/Buddhist forms và craft techniques có thể circulate qua merchants, monks, specialists và elite diplomacy.
 
@@ -112,7 +112,7 @@ Nhưng adoption không simultaneous. Một community có thể dùng imported be
 
 Do đó “Indian influence” phải tách thành multiple channels: trade goods, scripts, ritual, political vocabulary, art style và technical practice.
 
-## Angkor Borei và Lower Mekong không dừng ở hiện đại (modern / 현대적) border
+## Angkor Borei và hạ lưu Mekong không dừng ở biên giới hiện đại
 
 Angkor Borei ở present-day Cambodia là một major early centre có quan hệ (relation / 관계) với broader Funan archaeology. Canal/waterway bằng chứng (evidence / 증거) và material phân phối (distribution / 분포) cho thấy Lower Mekong should be studied cross-border.
 
@@ -182,7 +182,7 @@ Tương tự, việc region sau này nằm trong Nguyễn/Vietnamese trạng th�
 
 Khi chapter 14 đi tới Gia Định, Hà Tiên và Mekong frontier, reader đã biết đây không phải blank ecological zone mà là landscape có deep historical layers.
 
-## Trường dữ liệu (field / 필드) reading: Óc Eo–Ba Thê
+## Đọc địa điểm thực địa: Óc Eo–Ba Thê
 
 Nếu tới **Óc Eo–Ba Thê, An Giang**, đừng tìm một intact stone city giống Angkor. Delta archaeology thường survive dưới dạng mound, foundation dấu vết (trace / 추적), sản phẩm tạo ra (artifact / 산출물) assemblage, canal line và buried tầng (layer / 계층).
 

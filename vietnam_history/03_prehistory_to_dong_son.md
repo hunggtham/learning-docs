@@ -50,7 +50,7 @@ Từ khu cư trú, công cụ, đồ gốm, dấu tích thực vật–động v
 
 Một cách tưởng tượng có kiểm soát là đi từ ràng buộc (constraint / 제약조건): monsoon quyết định season; rice cultivation tạo công việc (work / 작업) peak; river cung cấp vận chuyển (transport / 전송) và fish; house/lưu trữ (storage / 저장소) phải thích nghi humidity/flood; công cụ (tool / 도구) technology giới hạn năng suất. Đây là reconstruction từ môi trường (environment / 환경) + bằng chứng (evidence / 증거), không phải fiction.
 
-## Từ technology đến political độ phức tạp (complexity / 복잡도): chuỗi nhân quả (causal chain / 인과 사슬) nào hợp lý?
+## Từ công nghệ đến độ phức tạp chính trị: chuỗi nhân quả nào hợp lý?
 
 ```text
 agriculture + river resources

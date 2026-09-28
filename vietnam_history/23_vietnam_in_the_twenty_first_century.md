@@ -46,7 +46,7 @@ Một factory có productivity cao nhưng truck kẹt đường, cổng (port / 
 
 Vì vậy hiện đại (modern / 현대적) hạ tầng (infrastructure / 인프라) không chỉ “phục vụ giao thông”; nó giảm **giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** và **coordination độ trễ (latency / 지연 시간)** của economy.
 
-## Urbanization: city là labor thị trường (market / 시장) lớn
+## Đô thị hóa: thành phố là thị trường lao động lớn
 
 Hà Nội, Thành phố Hồ Chí Minh cùng các urban–industrial region mở rộng mạnh. City tạo density: worker, firm, university, finance, customer và supplier ở gần nhau.
 
@@ -120,7 +120,7 @@ Normalization năm 1995 mở một important channel; sau đó trade và people-
 
 Historical significance nằm ở giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và option set mở rộng qua thời gian.
 
-## China: thị trường (market / 시장), supply chuỗi (chain / 사슬) và geopolitical ràng buộc (constraint / 제약조건) cùng lúc
+## Trung Quốc: thị trường, chuỗi cung ứng và ràng buộc địa chính trị cùng lúc
 
 China là neighbor lớn và major trade/supply-chain nút (node / 노드). Việt Nam nhập nhiều machinery/đầu vào (input / 입력) từ China trong khi cũng cạnh tranh và trade extensively.
 
@@ -186,7 +186,7 @@ Hai household cùng income hiện tại có thể có very different asset, land
 
 Xã hội (social / 사회적) cấu trúc (structure / 구조) therefore cannot be compressed into GDP per capita.
 
-## COVID-19 như hệ thống (system / 시스템) kiểm thử sức chịu tải (stress test / 스트레스 테스트)
+## COVID-19 như phép thử sức chịu tải của hệ thống
 
 Pandemic đầu 2020s là toàn cục (global / 전역) shock đối với supply chuỗi (chain / 사슬), mobility, công khai (public / 공개) health và dịch vụ (service / 서비스) employment.
 

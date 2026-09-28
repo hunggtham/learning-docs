@@ -48,7 +48,7 @@ Nếu đứng ở vùng Luy Lâu hôm nay, đừng chỉ hỏi “đây có ph�
 
 Hiện nay Bắc Ninh vẫn tiếp tục khảo cổ và quy hoạch bảo tồn vùng Luy Lâu. Điều này cũng nhắc rằng historical landscape không phải sản phẩm tạo ra (artifact / 산출물) đóng băng; nhiều lớp cư trú, religious building và later reconstruction chồng lên nhau.
 
-## Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng
+## Kinh tế dưới quy tắc đế quốc: thuế quan trọng, nhưng thị trường và di chuyển cũng quan trọng
 
 Ta dễ hình dung Bắc thuộc chỉ bằng “bị bóc lột thuế”. Taxation là một phần thực, nhưng economy phức tạp hơn. Khi một vùng đi vào imperial mạng (network / 네트워크), ít nhất bốn tiến trình (process / 프로세스) có thể diễn ra đồng thời.
 
@@ -64,7 +64,7 @@ Một empire rộng không đủ officials để thay thế toàn bộ cục b�
 
 Do đó “assimilation” không phải one-way overwrite. Institutional borrowing có thể về sau phục vụ independence.
 
-## Chữ Hán và thông tin (information / 정보) technology của nhà nước
+## Chữ Hán và công nghệ thông tin của nhà nước
 
 Trong society chưa có mass literacy, writing là một technology quyền lực. **Classical Chinese / Hán văn** cho phép bản ghi (record / 레코드) decree, tax, legal quyết định (decision / 결정) và correspondence trên quy mô (scale / 규모) lớn hơn oral administration.
 

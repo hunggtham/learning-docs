@@ -66,7 +66,7 @@ Mốc **1831–1832** quan trọng vì administrative map được standardized 
 
 Centralization giải quyết một số bài toán (problem / 문제): giảm power của semi-autonomous regional bosses, chuẩn hóa reporting, tăng court visibility. Nhưng nó cũng tăng burden lên central bureaucracy và có thể tạo friction ở regions có institutional lịch sử (history / 이력) khác nhau.
 
-## Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)
+## Hộ tịch, sổ ruộng và thuế: nhà nước “nhìn” xã hội qua hồ sơ
 
 Một nhà nước tiền hiện đại không nhìn dân số trực tiếp. Nó nhìn qua **sổ hộ tịch, sổ ruộng đất, loại thuế, báo cáo quan lại và trung gian địa phương**.
 
@@ -94,7 +94,7 @@ Mekong Delta tiếp tục expand agricultural môi trường vận hành (produc
 
 Trạng thái (state / 상태) chính sách (policy / 정책) phải balance extraction với keeping household productive. Over-extraction có thể shrink future revenue—một classic fiscal ràng buộc (constraint / 제약조건).
 
-## Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất
+## Kênh, đường và kho lương: hạ tầng là năng lực vật chất của nhà nước
 
 Hạ tầng (infrastructure / 인프라) dưới Nguyễn không chỉ “công trình công cộng”. Road and postal stations reduce thông tin (information / 정보) độ trễ (latency / 지연 시간); canal improves vận chuyển (transport / 전송) and frontier settlement; granary buffers harvest shock; citadel supports military điều khiển (control / 제어).
 
@@ -153,7 +153,7 @@ Sai lầm là dùng nhị phân (binary / 이진) **open vs closed**. Câu hỏi
 
 Chapter 17 sẽ cho thấy khi European industrial-military gap và colonial expansion tăng, những choices này trở nên increasingly consequential.
 
-## Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)
+## Kitô giáo: tôn giáo, mạng lưới và an ninh nhà nước
 
 Catholic communities đã tồn tại từ nhiều thế kỷ trước. Early Nguyễn relationship với missionaries và Christians thay đổi theo reign và ngữ cảnh (context / 맥락).
 

@@ -16,19 +16,19 @@ Hàm (function / 함수) can be simultaneously religious, moral and xã hội (s
 
 It also stabilizes thuộc tính (property / 속성)/family bộ nhớ (memory / 메모리): who belongs to lineage and where ancestral land/grave lies matters materially.
 
-## Cục bộ (local / 로컬) deity and village protection
+## Thần địa phương và sự bảo hộ làng xã
 
 Đình, temple and tutelary deity organize community festival and cục bộ (local / 로컬) định danh (identity / 식별자). Deity narrative often incorporates historical figure, natural force or legendary founder.
 
 Ritual therefore becomes cục bộ (local / 로컬) archive—though archive of bộ nhớ (memory / 메모리), not necessarily literal factual bản ghi (record / 레코드).
 
-## Buddhism and early states
+## Phật giáo và các nhà nước sơ kỳ
 
 Buddhism entered region through multiple routes and became particularly influential under Lý–Trần court. Monastery can hàm (function / 함수) as ritual centre, landholder, education mạng (network / 네트워크) and political symbolic tài nguyên (resource / 자원).
 
 Court patronage does not mean all society has uniform Buddhist doctrine.
 
-## Confucianism: more than religion label
+## Nho giáo: nhiều hơn một nhãn tôn giáo
 
 Confucian tradition is better understood partly as ethical-political and educational thứ tự (order / 순서): family hierarchy, ritual, classics, examination and official conduct.
 
@@ -76,7 +76,7 @@ Some Chăm communities practice forms of Islam, with regional variation. Religio
 
 Avoid treating Chăm as one religious khối (block / 블록).
 
-## Christianity and missionary mạng (network / 네트워크)
+## Kitô giáo và mạng lưới truyền giáo
 
 Công giáo phát triển qua hoạt động truyền giáo từ thời cận đại và về sau trở thành một cộng đồng quan trọng. Mạng lưới truyền giáo cũng tham gia vào thay đổi ngôn ngữ–giáo dục, trong đó có chữ viết La-tinh hóa.
 
