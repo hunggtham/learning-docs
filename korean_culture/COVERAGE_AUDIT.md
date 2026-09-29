@@ -1,33 +1,33 @@
-# Korean Culture — Root Coverage Audit
+# Văn hóa Hàn Quốc — điểm vào kiểm toán phạm vi
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `korean_culture/`
+**Ngày rà soát:** 2026-09-29  
+**Root chuẩn gốc:** `korean_culture/`
 
-The detailed quality/coverage audit already exists at:
+Bản kiểm toán chi tiết về chất lượng và độ phủ đã tồn tại tại:
 
 - [`coverage_audit.md`](./coverage_audit.md)
 
-This root file exists so repository-level governance has one predictable `COVERAGE_AUDIT.md` entrypoint. The detailed file remains the owner for chapter-by-chapter depth, overlap, language quality and source-freshness review.
+Tệp root này chỉ tạo một **điểm vào governance nhất quán** cho tooling cấp repository. Audit chi tiết vẫn là nơi sở hữu đánh giá theo chapter về độ sâu, trùng lặp, chất lượng ngôn ngữ và độ mới của nguồn.
 
-## Root contract
+## Hợp đồng cấp root
 
-Korean Culture should explain social/cultural patterns through mechanisms and variation rather than stereotypes:
+Korean Culture phải giải thích pattern xã hội/văn hóa qua cơ chế và biến thiên, không qua stereotype:
 
 ```text
-history/ecology
-→ institution
-→ material constraint
-→ relationship/incentive
-→ technology/interface
-→ observed behavior
-→ variation/exceptions
-→ feedback/change
+lịch sử / sinh thái
+→ thiết chế
+→ ràng buộc vật chất
+→ quan hệ + động lực
+→ công nghệ / giao diện
+→ hành vi quan sát được
+→ biến thiên / ngoại lệ
+→ phản hồi / thay đổi
 ```
 
-Do not treat one generation, workplace, region or online sample as representative of all Koreans. Time-sensitive statistics or current institutional details need source/date context.
+Không dùng một thế hệ, một công ty, một vùng hoặc một cộng đồng online làm đại diện cho toàn bộ người Hàn. Các thống kê hoặc chi tiết thể chế nhạy theo thời gian cần có nguồn và mốc kiểm tra.
 
-KIIP exam material remains a separate subdomain at [`kiip/`](./kiip/README.md) and is not included in the detailed Korean Culture audit unless explicitly stated.
+KIIP là subdomain ôn thi riêng tại [`kiip/`](./kiip/README.md); nó không thuộc coverage audit chi tiết của Korean Culture trừ khi tài liệu nói rõ.
 
-## Review rule
+## Quy tắc review và bàn giao
 
-Update [`coverage_audit.md`](./coverage_audit.md) when substantive domain coverage or quality status changes. Keep this root file as the stable governance pointer.
+Khi coverage hoặc chất lượng của domain thay đổi thực sự, cập nhật [`coverage_audit.md`](./coverage_audit.md). Chỉ sửa tệp root này khi owner hoặc vị trí audit chi tiết thay đổi.
