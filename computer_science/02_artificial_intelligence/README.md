@@ -90,7 +90,7 @@ Các thư mục `00`–`20` hiện đều đã có nội dung canonical trong re
 └── 20_ethics_governance_and_society/       ✅ canonical
 ```
 
-Tuyến xuyên tầng mới: [AI data → evaluation → provenance → production evidence](../../90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md). Route này nối Data for AI, MLOps/LLMOps, Evaluation/Reliability, Research Methods và production observability thành một evidence lifecycle duy nhất.
+Tuyến xuyên tầng mới: [AI data → evaluation → provenance → production evidence](../90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md). Route này nối Data for AI, MLOps/LLMOps, Evaluation/Reliability, Research Methods và production observability thành một evidence lifecycle duy nhất.
 
 > **Chuyển mạch:** Từ **hiện tại (current / 현재) cấu trúc (structure / 구조)**, ta sang **Những distinction quan trọng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
@@ -142,4 +142,4 @@ Không học khung phần mềm (framework / 프레임워크) trước cơ chế
 
 Mỗi tầng (layer / 계층) vì vậy đi từ bài toán (problem / 문제) → cơ chế (mechanism / 메커니즘) → các giả định (assumptions / 가정들) → examples → limitations → hệ thống (system / 시스템) connections.
 
-> **Bàn giao:** Sau **học tập (learning / 학습) principle**, nếu đã học từng module riêng lẻ nhưng chưa thấy cách chúng nối thành release evidence, đọc [AI data → evaluation → provenance → production evidence](../../90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md).
+> **Bàn giao:** Sau **học tập (learning / 학습) principle**, nếu đã học từng module riêng lẻ nhưng chưa thấy cách chúng nối thành release evidence, đọc [AI data → evaluation → provenance → production evidence](../90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md).
