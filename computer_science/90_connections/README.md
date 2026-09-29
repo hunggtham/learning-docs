@@ -44,4 +44,11 @@ Có thể chọn route theo câu hỏi:
 → threat model → control → evidence
 ```
 
+## Handoff sang domain owner
+
+- Cần database internals sâu hơn → [Data & Databases](../05_data_databases/README.md).
+- Cần pipeline/warehouse/semantic layer sâu hơn → [Data Engineering](../../data_engineering/README.md).
+- Cần AI module/evaluation/MLOps sâu hơn → [Artificial Intelligence](../02_artificial_intelligence/README.md).
+- Cần production incident/recovery reasoning → [DevOps Production Practice](../../devops_platform_engineering/10_production_practice/README.md).
+
 > **Bàn giao:** Nếu muốn luyện đường đi của một request bình thường, bắt đầu với [browser → database](./01_browser_to_database_request.md). Nếu muốn luyện correctness của dữ liệu sau nhiều lần sao chép/biến đổi, đọc [query → transaction → pipeline → analytical serving](./06_query_transaction_pipeline_and_analytical_serving.md). Nếu muốn luyện lifecycle của một AI release, đọc [AI data → evaluation → provenance → production evidence](./07_ai_data_evaluation_provenance_and_production_evidence.md).
