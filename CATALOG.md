@@ -421,15 +421,22 @@ electrical_engineering/
 ├── control_systems
 ├── embedded_systems
 ├── power_electronics
-├── hardware_software_interface
-├── 90_connections
-└── advanced
+└── hardware_software_interfaces
 ```
 
-Electrical Engineering sở hữu **design and implementation reasoning**; Physics giữ physical law/field/material explanation; Computer Science giữ algorithms/systems/software; embedded/controls đóng vai trò bridge.
+Bridge kiến thức chủ đích:
 
-## 11. P3 — Practical Research Methods
+```text
+Physics
+→ Electronics
+→ Digital logic
+→ Computer Architecture
+→ Embedded
+→ Software
+```
 
-Repository đã có statistics trong Mathematics, econometrics trong Economics, Psychology có experimental reasoning và Philosophy có epistemology. Khoảng trống còn lại là **workflow nghiên cứu dùng chung**: biến câu hỏi thành design, measurement, sampling, evidence synthesis và reproducible output.
+Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
 
-Vì vậy đã thêm [`research_methods/`](research_methods/README.md) làm methodology owner. Domain này không sở hữu estimator chuyên sâu; khi cần OLS/IV/DiD/RDD/panel/time series, quay về Economics/Econometrics; khi cần probability/statistics foundation, quay về Mathematics.
+## Domain entrypoints
+
+Các link entrypoint đầy đủ nằm trong YAML ở đầu file để máy đọc được; README root chỉ là phần giới thiệu ngắn. Đây là catalog cấp repository, không thay thế README chuyên sâu của từng library.
