@@ -1,128 +1,101 @@
-# Linux — Coverage Audit
+# Linux — kiểm toán phạm vi và độ sâu
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `linux/`  
-**Entrypoint:** [`README.md`](./README.md)
+> **Mạch đọc:** Đọc tệp này sau [`README.md`](./README.md). README giải thích Linux như một hệ thống cơ chế; audit này trả lời: **những lớp nào đã đủ mạnh, ranh giới nào cần giữ với Computer Science/Backend/DevOps, và các deep dive hiện có nên được nối lại thành reasoning production như thế nào?**
 
-## 1. Canonical ownership
+**Ngày rà soát:** 2026-09-29.
 
-`linux/` owns the host/runtime operating-system layer used by development and production systems: kernel/userspace boundaries, filesystems, processes, identity/permissions, shell, systemd, logging, time, CPU/memory/storage, networking, package/deployment mechanics, security controls, tracing, containers and production troubleshooting.
+## 1. Phạm vi sở hữu
 
-It should explain mechanisms and observable system state rather than become a command cheat sheet.
+`linux/` sở hữu lớp hệ điều hành/thời gian chạy của máy chủ: ranh giới hạt nhân–không gian người dùng (kernel/userspace boundary / 커널·사용자 공간 경계), hệ thống tệp (filesystem / 파일시스템), tiến trình và luồng (process/thread / 프로세스·스레드), identity/permission, shell, `systemd`, logging, thời gian, CPU/bộ nhớ/lưu trữ, mạng, package/runtime provenance, tracing, container primitives và xử lý sự cố production.
 
-Adjacent owners:
+Mục tiêu của domain không phải học thuộc lệnh. Một command chỉ là **công cụ quan sát hoặc tác động lên trạng thái**. Khái niệm thật nằm ở object/resource nào đang tồn tại, kernel đang giữ trạng thái gì, accounting/limit nào đang áp dụng, failure xuất hiện ra sao và bằng chứng nào xác nhận giả thuyết.
 
-- OS theory, algorithms and distributed systems → [`../computer_science/`](../computer_science/README.md);
-- backend application contracts → [`../10_backend/`](../10_backend/README.md);
-- container orchestration, delivery, SRE and platform engineering → [`../devops_platform_engineering/`](../devops_platform_engineering/README.md).
+Lý thuyết hệ điều hành và distributed systems sâu hơn thuộc [Computer Science](../computer_science/README.md); contract của ứng dụng thuộc [Backend](../10_backend/README.md); Kubernetes, delivery, SRE và platform operations thuộc [DevOps / Platform Engineering](../devops_platform_engineering/README.md).
 
-## 2. Coverage currently strong
+## 2. Coverage hiện đã mạnh
 
-The current README exposes a dependency graph rather than a flat list. Strong areas include:
+README hiện có dependency graph rộng và hợp lý: kernel/userspace, `/proc`/`/sys`, filesystem–VFS–page cache–writeback, process/thread/signal/IPC, Bash đáng tin cậy, credential/capability/ACL/MAC, boot/initramfs/systemd, journald/rsyslog, clock/NTP, storage/memory/reclaim/OOM, scheduler/I/O, routing/NAT/conntrack/DNS/TCP/TLS, `strace`/`perf`/eBPF, namespace/cgroup/seccomp/container, deployment/backup/restore và incident/SRE.
 
-- kernel/userspace/system-call boundary;
-- `/proc`, `/sys`, device/kernel interfaces;
-- filesystem/inode/VFS/page-cache/writeback/crash-consistency concepts;
-- processes, threads, signals and IPC;
-- shell pipelines and reliable Bash scripting;
-- credentials, ACL, capabilities, MAC and seccomp;
-- boot/initramfs/systemd/service dependencies;
-- journald/rsyslog/log pipelines and time synchronization;
-- storage, virtual memory, reclaim, OOM, scheduling and I/O performance;
-- routing/NAT/conntrack/DNS/TCP/TLS/reverse proxy;
-- tracing with `strace`, `perf` and eBPF;
-- namespaces/cgroups/capabilities/seccomp and containers;
-- deployment, backup/restore, incident reasoning and SRE connections.
+Điểm mạnh của thư viện là nhiều chapter đã đi tới cơ chế chứ không dừng ở syntax. Vì vậy vòng nâng cấp tiếp theo nên **nối các deep dive thành đường suy luận xuyên tài nguyên**, thay vì tiếp tục thêm chapter lệnh rời rạc.
 
-This is substantially deeper than an administration-command library and already supports production reasoning.
+## 3. Bất biến khi viết Linux
 
-## 3. Invariants for future chapters
-
-Every substantial Linux topic should make the following chain explicit where applicable:
+Một topic Linux nên tạo được chuỗi:
 
 ```text
 resource/object
 → kernel state
 → user-space interface
-→ accounting/limits
+→ accounting/limit
 → observable evidence
 → failure mode
 → recovery/change action
 ```
 
-A command is evidence or an actuator, not the concept itself.
+Ví dụ, “memory pressure” không đồng nghĩa với một con số `free`. Cần nối working set, page cache, reclaim, cgroup limit và PSI tới latency/OOM. Khi người học hiểu chuỗi đó, `free`, `/proc`, `vmstat`, PSI hay cgroup counters mới có nghĩa; nếu học command trước, rất dễ diễn giải sai bằng chứng.
 
-For example:
+## 4. Ranh giới dễ nhầm
 
-```text
-memory pressure
-≠ free output
+### Linux networking và network theory
 
-memory pressure
-→ working sets + page cache + reclaim + cgroup limits + PSI
-→ observable counters/events
-→ latency/OOM consequences
-```
+Linux sở hữu socket, routing table, namespace, conntrack, host-level TCP state và packet-path evidence. Thiết kế protocol và distributed-system theory vẫn thuộc Computer Science.
 
-## 4. Boundaries to preserve
+### Container primitives và orchestration
 
-### Linux networking vs network theory
+Linux sở hữu namespace, cgroup, capability và seccomp. Scheduler, controller, GitOps và cluster operations thuộc DevOps/Platform Engineering.
 
-Linux may own sockets, routing tables, namespaces, conntrack, packet path observability and host-level TCP behavior. Protocol design and distributed-system theory remain in Computer Science.
+### Host troubleshooting và application debugging
 
-### Linux containers vs orchestration
+Linux xác định trạng thái host/process/resource. Backend xác định transaction, business invariant và application semantics. Một CPU spike có thể là bằng chứng, nhưng không tự cho biết request nào vi phạm business invariant.
 
-Linux owns namespace/cgroup/capability/seccomp mechanics. Kubernetes scheduling, controllers, GitOps and cluster operations remain DevOps/Platform Engineering.
+### Security enforcement và security architecture
 
-### Linux troubleshooting vs application debugging
+Linux giải thích cơ chế enforcement cục bộ. Threat model, identity architecture và control/evidence chain xuyên hệ thống thuộc Computer Science Security.
 
-Linux owns host/process/resource evidence. Application transaction semantics and business invariants remain Backend or the relevant application domain.
+## 5. Khoảng trống ưu tiên
 
-### Security controls vs security architecture
+### P1 — Tuyến overload xuyên nhiều tài nguyên
 
-Linux may explain kernel/user-space enforcement mechanisms and local privilege boundaries. Threat modeling, identity architecture and cross-system control/evidence chains remain Computer Science Security.
-
-## 5. Gaps / next depth
-
-### P1 — Unified resource-pressure route
-
-Create a connection route that follows one overloaded service through:
+Cần một case nối:
 
 ```text
-traffic increase
+traffic tăng
 → socket/backlog
 → process/thread/event-loop pressure
 → CPU scheduling
 → memory/page cache/reclaim
 → storage/network I/O
-→ cgroup limits
-→ latency/errors
-→ evidence and recovery
+→ cgroup limit
+→ latency/error
+→ evidence
+→ recovery
 ```
 
-This would connect existing deep dives without duplicating them.
+Giá trị của case này là dạy **quan hệ nhân quả giữa các counter**. Nếu từng chapter CPU/memory/network được đọc tách rời, người học dễ tối ưu sai bottleneck.
 
-### P1 — Filesystem/database durability boundary
+### P1 — Ranh giới durability giữa filesystem và database
 
-Strengthen the cross-domain explanation of:
+Cần làm rõ đường:
 
-- application write;
-- userspace buffering;
-- page cache;
-- filesystem journal;
-- block layer/device cache;
-- `fsync`/barriers;
-- what a database commit can and cannot assume.
+```text
+application write
+→ userspace buffer
+→ page cache
+→ filesystem journal
+→ block/device cache
+→ fsync/barrier
+→ database durability assumption
+```
 
-Linux should explain the OS/storage side and link to database owners for WAL/transaction semantics.
+Linux chỉ sở hữu phần OS/storage; WAL/transaction semantics thuộc database owner. Mục tiêu là giải thích vì sao “đã write()” hoặc “process đã trả success” chưa chắc tương đương với durability sau mất điện.
 
-### P1 — cgroup v2 operational accounting
+### P1 — cgroup v2 như mô hình accounting thống nhất
 
-Consolidate CPU, memory, I/O and PID limits around cgroup v2 as a single resource-governance model, including how host-level and container-level observations can disagree.
+CPU, memory, I/O và PID limits nên được nối quanh cgroup v2 để người học hiểu host view và container view có thể khác nhau. Đây là nền cho capacity reasoning trong production containerized systems.
 
-### P2 — Network namespace packet-path evidence
+### P2 — Packet-path troubleshooting
 
-Add a reusable packet-path troubleshooting model:
+Cần một mô hình bằng chứng dùng lại được:
 
 ```text
 process/socket
@@ -133,69 +106,45 @@ process/socket
 → remote path
 ```
 
-The goal is evidence localization, not command memorization.
+Mục tiêu là khoanh vùng failure, không phải nhớ chuỗi command cố định.
 
-### P2 — eBPF safety and interpretation boundary
+### P2 — eBPF: khi nào dùng và giới hạn diễn giải
 
-Explain when eBPF adds useful evidence, when lower-cost tools are sufficient, and how instrumentation overhead/sampling/aggregation can mislead diagnosis.
+Cần giải thích khi eBPF tạo thêm evidence, khi `strace`/`perf`/counters đã đủ, và overhead/sampling/aggregation có thể làm chẩn đoán sai ra sao. Công cụ quan sát cũng có failure mode của chính nó.
 
 ### P2 — Package/runtime provenance
 
-Strengthen the chain from package/repository/signature to installed files, dynamic libraries, service executable and running process. This should connect supply-chain reasoning to actual host evidence.
+Nên nối repository/signature → installed files → shared libraries → executable → running process. Điều này biến “package nào đã cài?” thành câu hỏi có thể truy ngược tới binary thật đang chạy.
 
-### P2 — Recovery-state verification
+### P2 — Xác minh sau recovery
 
-After restart, rollback, restore or failover, teach verification of:
+Restart/rollback/restore/failover không kết thúc ở việc process “running”. Cần xác minh mount, time sync, network binding/route, resource limits, log continuity và application-facing health. Recovery chỉ hoàn tất khi trạng thái phục vụ đúng invariant, không chỉ khi daemon sống lại.
 
-- process/service state;
-- mounted storage;
-- clocks/time sync;
-- network bindings/routes;
-- resource limits;
-- logs/journal continuity;
-- application-facing health.
+## 6. Thông tin nhạy theo phiên bản
 
-Recovery is not complete merely because the service process is running.
+Cơ chế Linux tương đối bền, nhưng kernel feature, `systemd`, distro defaults, packaging và tool behavior thay đổi theo phiên bản. Khi một chapter dựa vào hành vi cụ thể, phải phân biệt đó là kernel invariant, `systemd` behavior, distro default, container-runtime behavior hay tool-version behavior.
 
-## 6. Version/time sensitivity
+Không lấy mặc định của một distro làm chân lý chung cho Linux.
 
-Linux mechanisms are relatively durable, but commands, defaults, kernel features, systemd behavior and distribution packaging can change.
+## 7. Quy trình review
 
-When a chapter makes a version-sensitive claim, record enough context to distinguish:
-
-- kernel behavior;
-- systemd behavior;
-- distribution-specific packaging/defaults;
-- container-runtime behavior;
-- tool-version behavior.
-
-Avoid presenting one distro's default as a universal Linux invariant.
-
-## 7. Review protocol
-
-For major Linux additions:
+Khi thêm nội dung lớn, kiểm theo chuỗi:
 
 ```text
-concept owner
+owner
 → kernel/userspace boundary
 → resource/accounting model
-→ observable evidence
+→ evidence
 → failure mode
-→ change/recovery semantics
+→ recovery/change semantics
 → version/distro sensitivity
-→ links to Backend/DevOps/Computer Science
+→ handoff sang Backend/DevOps/Computer Science
 ```
 
-Reject additions that are only lists of commands without explaining system state and interpretation.
+Một danh sách command chỉ nên tồn tại khi từng command được gắn với trạng thái cần quan sát hoặc thao tác cần thực hiện.
 
-## 8. Current assessment
+## 8. Kết luận và bàn giao
 
-**Conceptual breadth: very strong.**  
-**Kernel/resource depth: strong.**  
-**Production troubleshooting coverage: strong.**  
-**Cross-resource overload reasoning: partial.**  
-**cgroup v2 as unified accounting model: can be stronger.**  
-**Durability boundary with databases: can be stronger.**  
-**Version/distro sensitivity governance: should be made explicit in future updates.**
+Độ rộng khái niệm, kernel/resource depth và production troubleshooting hiện **mạnh**. Gap có giá trị nhất là reasoning xuyên tài nguyên, cgroup v2 như accounting model, durability boundary với database và recovery verification.
 
-The highest-value next work is integration across existing deep dives, not adding more isolated command chapters.
+Từ đây, nên đọc tiếp [production request → storage → queue → failure → recovery](../devops_platform_engineering/10_production_practice/01_request_storage_queue_failure_and_recovery_case.md) để thấy Linux evidence tham gia vào một failure xuyên nhiều lớp như thế nào.
