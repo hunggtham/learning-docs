@@ -1,12 +1,12 @@
-# Native Mobile Development — Coverage Audit
+# Phát triển ứng dụng bản địa — kiểm toán phạm vi
 
-> **Mạch đọc:** Đặt audit này cạnh [README](./README.md) và [00_INDEX](./00_INDEX.md). README là entrypoint ổn định, `00_INDEX.md` giữ learning map chi tiết; audit này chỉ ghi trạng thái coverage, ranh giới sở hữu và điều kiện cần rà soát lại.
+> **Mạch đọc:** Đọc audit này sau [README](./README.md) và [00_INDEX](./00_INDEX.md). README là điểm vào ổn định, `00_INDEX.md` giữ bản đồ học chi tiết; audit này chỉ trả lời **hai track Swift/iOS và Kotlin/Android đã phủ tới đâu, phần nào thuộc owner khác và thông tin nào phải kiểm lại theo phiên bản nền tảng**.
 
-Cập nhật: **2026-09-29**. `main` là nguồn chuẩn (source of truth / 정본) sau khi thay đổi được merge.
+**Ngày rà soát:** 2026-09-29. `main` là nguồn chuẩn (source of truth / 정본) sau khi thay đổi được merge.
 
-## Phạm vi và canonical owner
+## 1. Phạm vi sở hữu
 
-`11_native/` sở hữu kiến thức phát triển ứng dụng mobile bản địa (native mobile development / 네이티브 모바일 개발) theo hai track:
+`11_native/` sở hữu kiến thức phát triển ứng dụng di động bản địa (native mobile development / 네이티브 모바일 개발) theo hai đường:
 
 ```text
 Native Mobile
@@ -14,46 +14,57 @@ Native Mobile
 └── Kotlin / Android
 ```
 
-Mỗi track đi từ ngôn ngữ và platform foundation tới concurrency, persistence, networking, architecture, security, performance, testing, build/release và production engineering.
+Mỗi đường đi từ ngôn ngữ và nền tảng tới concurrency, persistence, networking, architecture, security, performance, testing, build/release và production engineering.
 
-Các cơ chế tổng quát không được copy lại nếu đã có canonical owner khác: thuật toán/hệ điều hành/mạng/cơ sở dữ liệu thuộc `computer_science/`; API/backend contract thuộc `10_backend/`; CI/CD, observability và platform operations thuộc `devops_platform_engineering/`.
+Các cơ chế tổng quát không nên copy lại nếu đã có owner rõ: thuật toán/hệ điều hành/mạng/database thuộc `computer_science/`; API/backend contract thuộc `10_backend/`; CI/CD, observability và platform operations thuộc `devops_platform_engineering/`.
 
-## Trạng thái coverage
+## 2. Coverage hiện đã mạnh
 
-| Vùng | Coverage | Trạng thái |
-|---|---|---|
-| Swift language + iOS foundations | beginner → intermediate → advanced → master | Strong |
-| Swift concurrency / ownership / interoperability | structured concurrency, actor/Sendable, Objective-C/C/C++ interop | Strong |
-| iOS UI / state / navigation / persistence / networking | SwiftUI, UIKit và production boundaries | Strong |
-| iOS production engineering | performance, security, release, observability, offline/sync | Strong |
-| Kotlin language + Android foundations | beginner → intermediate → advanced → master | Strong |
-| Kotlin coroutine / Flow / Android runtime | concurrency, lifecycle, Compose/runtime reasoning | Strong |
-| Android data / networking / background work | Room, DataStore, WorkManager, offline-first | Strong |
-| Android production engineering | R8, signing, security, performance, release/rollback | Strong |
+Swift/iOS và Kotlin/Android đều đã có learning spine từ nền tảng tới production. Các vùng quan trọng như lifecycle, state ownership, concurrency, persistence, networking, offline/sync, security, performance, testing và release/rollback đều đã có chỗ trong cấu trúc hiện tại.
 
-## Bất biến cần giữ
+Điểm cần giữ là: framework/API chỉ là cách hiện thực. Một chapter đủ sâu phải làm rõ **vòng đời nền tảng (platform lifecycle / 플랫폼 수명주기)**, **quyền sở hữu trạng thái (state ownership / 상태 소유권)**, **ranh giới đồng thời (concurrency boundary / 동시성 경계)**, **failure của lưu trữ/mạng**, **ranh giới bảo mật**, **chi phí tài nguyên/hiệu năng** và **đường release/recovery**.
 
-Một chapter native chỉ được coi là đủ sâu khi người đọc hiểu được **platform lifecycle**, **state ownership**, **thread/concurrency boundary**, **persistence/network failure**, **security boundary**, **resource/performance cost** và **release/recovery path**. Framework hoặc API cụ thể không thay thế các cơ chế này.
+Nếu chapter chỉ ghi “dùng API X” nhưng không giải thích state, lifecycle hoặc failure, nó chưa đạt chuẩn common prompt.
 
-Version/platform claim là dữ liệu thay đổi theo thời gian. Các thông tin như Xcode, Swift, iOS SDK, Kotlin, Android Studio, AGP, Android API level hoặc yêu cầu store phải có **ngày kiểm tra** và khi cập nhật phải đối chiếu nguồn chính thức; không biến version hiện tại thành kiến thức vĩnh viễn.
+## 3. Thông tin nhạy theo phiên bản
 
-## Gaps còn lại
+Xcode, Swift, iOS SDK, Kotlin, Android Studio, AGP, Android API level và store policy đều có thể thay đổi. Những claim này phải có ngày kiểm tra và ưu tiên nguồn chính thức.
 
-Không có gap P0/P1 về learning spine tại lần audit này. Chỉ mở rộng khi có dependency thực, ưu tiên:
+Cần tách rõ hai lớp:
 
-1. case end-to-end về offline conflict, sync và recovery giữa client–backend;
-2. production incident case về memory/performance/battery/network degradation;
-3. platform migration case khi Swift/Kotlin/SDK thay đổi làm xuất hiện cơ chế hoặc failure mode mới;
-4. cross-platform awareness chỉ ở mức boundary/comparison, không biến domain native thành catalog framework đa nền tảng.
+```text
+cơ chế bền tương đối
+→ lifecycle / state / concurrency / persistence / networking
 
-## Review protocol
+fact theo phiên bản
+→ API availability / toolchain / store rule / SDK behavior
+```
 
-Khi sửa domain này:
+Không biến default hoặc policy hiện tại thành “kiến thức vĩnh viễn”.
 
-1. kiểm tra `README.md` và `00_INDEX.md` vẫn trỏ đúng hai track;
-2. giữ beginner → master như learning spine nhưng giải thích theo mechanism, không theo danh sách API;
+## 4. Khoảng trống ưu tiên
+
+Hiện chưa có gap P0/P1 ở learning spine. Giá trị tiếp theo nằm ở case tích hợp:
+
+- **offline conflict → sync → recovery** giữa client và backend, để nối state local với server authority;
+- production incident về memory/performance/battery/network degradation, để người học dùng telemetry thay vì đoán;
+- platform migration case khi Swift/Kotlin/SDK thay đổi behavior hoặc failure mode;
+- cross-platform comparison chỉ ở mức boundary, không biến Native thành catalog framework đa nền tảng.
+
+Các case này quan trọng vì production failure thường cắt qua nhiều chapter cùng lúc; thêm một API chapter riêng lẻ không giúp luyện reasoning xuyên boundary.
+
+## 5. Quy trình review
+
+Khi sửa domain:
+
+1. kiểm `README.md` và `00_INDEX.md` vẫn định tuyến đúng hai track;
+2. giữ learning spine từ foundation tới master nhưng giải thích theo mechanism, không theo API list;
 3. với version/store policy, ghi ngày kiểm tra và nguồn chính thức;
-4. kiểm tra internal links và handoff sang Computer Science, Backend, DevOps;
-5. chỉ đổi trạng thái coverage khi có bằng chứng từ chapter/case cụ thể.
+4. kiểm handoff sang Computer Science, Backend và DevOps;
+5. chỉ thay trạng thái coverage khi có chapter/case cụ thể làm bằng chứng.
 
-> **Bàn giao:** Bắt đầu học tại [README](./README.md); dùng [00_INDEX](./00_INDEX.md) để chọn Swift/iOS hoặc Kotlin/Android. Audit này chỉ dùng để quyết định nên mở rộng domain ở đâu, không thay thế learning material.
+## 6. Kết luận và bàn giao
+
+Coverage của cả Swift/iOS và Kotlin/Android hiện **mạnh**; chưa cần mở thêm track. Vòng tiếp theo nên ưu tiên end-to-end failure/recovery và migration cases.
+
+Bắt đầu học tại [README](./README.md), dùng [00_INDEX](./00_INDEX.md) để chọn track. Khi vấn đề chuyển sang server contract hoặc production platform, bàn giao lần lượt sang [Backend](../10_backend/README.md) và [DevOps / Platform Engineering](../devops_platform_engineering/README.md).
