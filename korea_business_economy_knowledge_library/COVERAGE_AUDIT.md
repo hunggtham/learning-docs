@@ -1,124 +1,87 @@
-# Korea Business & Economy — Coverage Audit
+# Doanh nghiệp và kinh tế Hàn Quốc — kiểm toán phạm vi
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `korea_business_economy_knowledge_library/`  
-**Entrypoint:** [`README.md`](./README.md)
+> **Mạch đọc:** Đọc tệp này sau [`README.md`](./README.md). README trình bày đường đi từ lịch sử và thể chế tới doanh nghiệp, kế toán, nguồn vốn và ngành; audit này trả lời: **coverage hiện đã đủ tới đâu, dữ kiện nào phải có provenance theo thời điểm, và các case/company chapter cần dùng cùng một khung reasoning như thế nào để so sánh được?**
 
-## 1. Canonical ownership
+**Ngày rà soát:** 2026-09-29.
 
-This domain owns the applied Korean economy/business layer that connects historical development, institutions, macro conditions, industry structure, firm behavior, accounting/cash flow, funding, governance, capital markets and company/sector cases.
+## 1. Phạm vi sở hữu
 
-It should answer how the Korean economic/business system works, not duplicate general economic theory or become an investment recommendation library.
+Domain này sở hữu lớp ứng dụng của kinh tế và doanh nghiệp Hàn Quốc: lịch sử phát triển, thể chế, điều kiện vĩ mô, cấu trúc ngành, hành vi doanh nghiệp, kế toán/dòng tiền, tài trợ, quản trị, thị trường vốn và company/sector cases.
 
-Adjacent owners:
+Lý thuyết kinh tế tổng quát và econometrics thuộc [Economics](../economics/README.md); portfolio/investment decision thuộc [Investing](../investing/README.md); chronology Hàn Quốc thuộc [Korean History](../korean_history/README.md); xã hội/văn hóa công sở thuộc [Korean Culture](../korean_culture/README.md); quyền/thủ tục pháp lý hiện hành thuộc [Korea Law/Civic Life](../korea_law_civic_life/README.md).
 
-- general economic theory/econometrics → [`../economics/`](../economics/README.md);
-- investment decision/portfolio layer → [`../investing/`](../investing/README.md);
-- Korean historical chronology → [`../korean_history/`](../korean_history/README.md);
-- Korean society/culture/workplace context → [`../korean_culture/`](../korean_culture/README.md);
-- current legal/civic procedure → [`../korea_law_civic_life/`](../korea_law_civic_life/README.md).
+Ranh giới này giúp domain trả lời “cơ chế đó biểu hiện trong doanh nghiệp và ngành Hàn Quốc ra sao?” thay vì viết lại theory hoặc chuyển thành khuyến nghị mua/bán tài sản.
 
-## 2. Coverage currently strong
+## 2. Coverage hiện đã mạnh
 
-The root route already has a coherent causal architecture:
+Mạch root hiện có kiến trúc nhân quả hợp lý:
 
 ```text
-history
-→ institutions
-→ capital/labor/technology
-→ industry structure
-→ firm behavior
-→ accounting/cash flow
-→ funding/governance
-→ market value and risk
+lịch sử
+→ thể chế
+→ vốn / lao động / công nghệ
+→ cấu trúc ngành
+→ hành vi doanh nghiệp
+→ kế toán / dòng tiền
+→ tài trợ / quản trị
+→ giá trị thị trường và rủi ro
 ```
 
-Strong coverage includes:
+Coverage đã rộng ở công nghiệp hóa, macro/business cycle, thương mại và chuỗi giá trị; chaebol, SME/startup, ownership/control; DART/KIND, accounting/disclosure; ngân hàng, trái phiếu, credit/restructuring; labor/organization; và nhiều ngành từ semiconductor, auto/battery, shipbuilding, construction/PF tới platform, finance, energy, logistics, biohealth và cloud/IT services.
 
-- industrialization and economic-history sequence;
-- macro/business-cycle and export/global-value-chain mechanisms;
-- company forms, chaebol/group structures, SMEs and startups;
-- ownership, control and corporate governance;
-- accounting/disclosure and DART/KIND usage;
-- banks, corporate funding, securities/insurance/asset management;
-- credit, bonds, default/restructuring and corporate actions;
-- forensic-accounting/earnings-quality reasoning;
-- labor/organization/business communication;
-- sector mechanics across semiconductors, autos/batteries, heavy industry, platforms/telecom/content, construction/PF, energy, biohealth, defense/aerospace, logistics and digital/fintech/cloud/IT services;
-- institutions, regulation, regional clusters, public enterprises and demographics/household demand.
+Vì độ rộng đã lớn, giá trị của vòng tiếp theo nằm ở **chất lượng bằng chứng, khả năng so sánh và kỷ luật cập nhật**, không phải thêm thật nhiều sector chapter mới.
 
-The architecture is already broad enough that future value should come primarily from evidence quality, cross-sector comparison and update discipline.
+## 3. Hợp đồng reasoning cho company/sector chapter
 
-## 3. Core reasoning contract
-
-A company/sector chapter should be able to trace:
+Một chapter doanh nghiệp/ngành nên nối được:
 
 ```text
-market/institutional constraint
+ràng buộc thị trường/thể chế
 → business model
-→ volume/price/unit economics
-→ capacity and utilization
-→ working capital/capex
+→ volume / price / unit economics
+→ capacity + utilization
+→ working capital + capex
 → accounting statement
 → cash flow
-→ funding/liquidity
-→ governance/control
+→ funding + liquidity
+→ ownership + control
 → downside/failure mode
 → observable evidence
 ```
 
-A macro-to-company explanation should not stop at “GDP/rates/export up or down”. It should identify the transmission path into revenue, cost, balance sheet, financing or valuation-sensitive cash flows.
+Nếu giải thích macro tác động đến doanh nghiệp, không nên dừng ở “GDP/lãi suất/xuất khẩu tăng hay giảm”. Cần chỉ ra transmission path tới revenue, cost, balance sheet, funding hoặc cash flow nhạy với valuation.
 
-## 4. Time-sensitive evidence boundary
+## 4. Dữ kiện nhạy theo thời gian
 
-The following are dynamic and should not be treated as timeless facts:
+Market share, ranking, doanh thu/lợi nhuận/dòng tiền, ownership stake, group structure, listing/index membership, policy/subsidy/tax, lãi suất, tỷ giá, credit rating, capacity/utilization, export mix và management guidance đều là dữ kiện động.
 
-- market shares/rankings;
-- company revenue/profit/cash flow;
-- ownership stakes/group structures;
-- index membership/listing status;
-- policy/subsidy/tax/regulatory details;
-- benchmark interest rates/exchange rates;
-- debt ratios/credit ratings;
-- industry capacity/utilization;
-- export composition/prices;
-- management strategy and guidance.
-
-When these appear, record enough provenance to recover:
+Khi dùng các fact này, phải truy ngược được:
 
 ```text
 entity/metric
-→ reporting period/as-of date
+→ reporting period hoặc as-of date
 → source
 → accounting/statistical definition
 → revision/restatement risk
 ```
 
-Historical and mechanism chapters may remain relatively stable; current company/market facts require tighter freshness handling.
+Mechanism chapter có thể bền lâu; current company/market fact thì không. Không ghi “Samsung chiếm X%” hoặc “debt ratio là Y” như chân lý không có ngày.
 
-## 5. Boundaries to preserve
+## 5. Ranh giới dễ nhầm
 
-### Korea-specific application vs general economics
+**Korea-specific application và Economics:** theory về monetary transmission, market structure, causal inference hay trade model nên link sang Economics; domain này cho thấy theory đó đi qua institution/sector/company Hàn Quốc như thế nào.
 
-Use Economics for general theory such as monetary transmission, market structure, causal inference or trade models. This domain should show how those mechanisms appear in Korean institutions, sectors and firms.
+**Company analysis và investment advice:** có thể phân tích earnings quality, leverage, capital allocation, valuation inputs và risk; không biến thư viện thành “nên mua cổ phiếu nào”.
 
-### Company analysis vs investment recommendation
+**Business culture và Korean Culture:** reporting/approval/decision right/incentive thuộc đây khi liên quan trực tiếp tới vận hành doanh nghiệp; nền xã hội rộng hơn bàn giao sang Korean Culture.
 
-It is valid to explain earnings quality, leverage, capital allocation, valuation inputs and risk. Do not convert the library into “which stock to buy” or individualized portfolio advice.
+**Regulation và legal procedure:** domain này giải thích regulation ảnh hưởng economics của ngành/doanh nghiệp ra sao; quyền và thủ tục cá nhân thuộc Korea Law/Civic Life.
 
-### Corporate culture vs Korean Culture duplication
+## 6. Khoảng trống ưu tiên
 
-Business-specific decision rights, reporting, approvals, incentives and organizational information flow belong here when linked to firm operation. Broader social/cultural explanation should link to Korean Culture.
+### P1 — Company evidence sheet dùng chung
 
-### Regulation vs legal-advice duplication
-
-This domain may explain how a regulation affects industry/company economics. Current procedural/legal rights and individual compliance questions belong to Korea Law/Civic Life.
-
-## 6. Gaps / next depth
-
-### P1 — Standard company evidence sheet
-
-Create a reusable analytical template:
+Cần một template để case khác nhau có thể so sánh:
 
 ```text
 business model
@@ -135,109 +98,85 @@ business model
 → key uncertainties
 ```
 
-This would make company cases comparable without imposing one valuation model.
+Template này không ép một valuation model; nó ép người viết làm rõ evidence và mechanism trước khi kết luận.
 
-### P1 — Korean disclosure/provenance workflow
+### P1 — Workflow DART/KIND và provenance
 
-Strengthen a reusable path for DART/KIND/company materials:
+Cần một route tái sử dụng:
 
 ```text
 filing period
-→ consolidated vs separate statements
+→ consolidated vs separate
 → segment definition
 → accounting policy
-→ footnotes/related parties
+→ footnotes / related parties
 → cash-flow reconciliation
 → restatement/comparability check
 ```
 
-The goal is evidence literacy, not merely portal usage.
+Mục tiêu là đọc disclosure như bằng chứng, không chỉ biết cách mở portal.
 
-### P1 — Industry-cycle comparison route
+### P1 — So sánh chu kỳ giữa các ngành
 
-Build a cross-sector route comparing how cycles propagate differently through:
+Semiconductor, auto/battery, shipbuilding, construction/PF, platform/service và financial institution phản ứng khác nhau với cùng một shock. Một route chung nên dùng lens:
 
-- semiconductors;
-- autos/batteries;
-- shipbuilding/heavy industry;
-- construction/PF;
-- platforms/services;
-- financial institutions.
+```text
+order/backlog
+→ capacity
+→ inventory/working capital
+→ pricing
+→ margin
+→ capex
+→ financing
+→ recovery lag
+```
 
-Use a shared lens: order/backlog → capacity → inventory/working capital → pricing → margins → capex → financing → recovery lag.
+So sánh theo cùng mechanism giúp người đọc thấy “cyclical” không phải một nhãn giống nhau cho mọi ngành.
 
-### P1 — Group-control and related-party evidence
+### P1 — Economic control và related-party evidence
 
-Deepen practical reasoning from legal entity to economic control:
+Cần nối legal entity với economic control:
 
 ```text
 shareholding
 → voting/control rights
 → affiliates/related parties
-→ intra-group transactions/guarantees
+→ intra-group transaction/guarantee
 → consolidation scope
-→ minority-interest consequences
+→ minority-interest consequence
 ```
 
-### P2 — Macro surprise to company transmission
+Đây là vùng đặc biệt quan trọng khi đọc chaebol, vì ownership percentage đơn lẻ chưa mô tả đầy đủ quyền kiểm soát kinh tế.
 
-Connect current macro evidence to company effects while explicitly separating:
+### P2 — Macro surprise tới company exposure
 
-```text
-observed macro data
-→ interpretation
-→ transmission channel
-→ firm exposure
-→ already-priced expectation
-→ scenario/update condition
-```
+Nên nối observed macro data → interpretation → transmission channel → firm exposure → already-priced expectation → scenario/update condition. Portfolio action tiếp tục bàn giao sang Investing.
 
-Link to Investing for portfolio decisions rather than duplicating that layer.
+### P2 — Failure/restructuring case
 
-### P2 — Failure/restructuring case studies
+Các case nên theo operating stress → liquidity stress → refinancing/covenant problem → funding/rating response → asset sale/equity injection/workout → stakeholder outcome. Khi đi hết chuỗi, người đọc mới thấy accounting, cash flow và capital structure tương tác thế nào trong khủng hoảng.
 
-Add more end-to-end cases where the reader follows:
+## 7. Quy trình review
+
+Khi sửa nội dung lớn:
 
 ```text
-operating stress
-→ liquidity stress
-→ covenant/refinancing problem
-→ rating/funding response
-→ asset sale/equity injection/workout/restructuring
-→ stakeholder outcomes
-```
-
-### P2 — Freshness register for company/market facts
-
-A compact current-facts register would help locate stale company rankings, ownership, market share and regulatory numbers without forcing every durable chapter to be rewritten frequently.
-
-## 7. Review protocol
-
-For substantial business/economy changes:
-
-```text
-canonical owner
+owner
 → mechanism
 → Korea-specific institution/context
 → accounting/statistical definition
-→ source and as-of date
+→ source + as-of date
 → transmission path
 → alternative explanation
 → company/sector evidence
-→ boundary with Economics/Investing/Law/Culture
+→ boundary với Economics/Investing/Law/Culture
 → internal links
 ```
 
-For claims about specific companies, current markets or policies, require explicit date/provenance rather than relying on a timeless narrative.
+Với company, market hoặc policy claim hiện hành, provenance và date là bắt buộc hơn prose kể chuyện.
 
-## 8. Current assessment
+## 8. Kết luận và bàn giao
 
-**Breadth: very strong.**  
-**Historical/institutional integration: strong.**  
-**Firm/accounting/funding coverage: strong.**  
-**Sector coverage: broad and practical.**  
-**Evidence/provenance workflow: can be more standardized.**  
-**Cross-sector cycle comparison: high-value next step.**  
-**Current-fact freshness governance: should be strengthened.**
+Độ rộng, tích hợp lịch sử–thể chế, accounting/funding và sector coverage hiện **mạnh**. Gap có giá trị cao nhất là evidence sheet thống nhất, DART/KIND workflow, cross-sector cycle comparison và freshness governance.
 
-The next pass should improve comparability, provenance and dynamic-data maintenance rather than add more isolated sector/company chapters.
+Sau audit này, nếu câu hỏi chuyển từ company/sector evidence sang portfolio action, bàn giao sang [`../investing/`](../investing/README.md). Nếu câu hỏi cần theory tổng quát hơn, quay sang [`../economics/`](../economics/README.md).
