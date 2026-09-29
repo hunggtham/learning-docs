@@ -1,125 +1,86 @@
-# Korean History — Coverage Audit
+# Lịch sử Hàn Quốc — kiểm toán phạm vi và chiều sâu
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `korean_history/`  
-**Entrypoint:** [`README.md`](./README.md)
+> **Mạch đọc:** Đọc tệp này sau [`README.md`](./README.md) và [`00_index_and_dependency.md`](./00_index_and_dependency.md). Hai tệp đó cho biết chronology và đường học; audit này trả lời: **library đã giải thích lịch sử như một hệ thống nhân quả tới đâu, phần nào là fact tương đối chắc, phần nào là diễn giải, và các tuyến xuyên thời gian nào còn thiếu?**
 
-## 1. Canonical ownership
+**Ngày rà soát:** 2026-09-29.
 
-`korean_history/` owns the historical development of the Korean peninsula and the Republic of Korea as a causal, chronological and comparative knowledge system.
+## 1. Phạm vi sở hữu
 
-It should explain not only what happened, but how political authority, land, taxation, labor, military organization, technology, trade, demography, institutions, ideas and geography interacted across periods.
+`korean_history/` sở hữu lịch sử bán đảo Triều Tiên và Đại Hàn Dân Quốc như một hệ thống có chronology, cơ chế và bối cảnh so sánh. Mục tiêu không chỉ trả lời “điều gì đã xảy ra?” mà còn “vì sao trật tự đó hình thành, nguồn lực nào duy trì nó, cú sốc nào làm nó đổi và di sản nào còn kéo dài tới hiện tại?”.
 
-Adjacent owners:
+Các lớp lân cận có owner riêng: xã hội/văn hóa đương đại thuộc [Korean Culture](../korean_culture/README.md); pháp luật và thủ tục hiện hành thuộc [Korea Law/Civic Life](../korea_law_civic_life/README.md); kinh tế/doanh nghiệp hiện đại thuộc [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md); chronology thế giới thuộc [World History](../world_history/README.md); facts ôn KIIP thuộc [`../korean_culture/kiip/`](../korean_culture/kiip/README.md).
 
-- contemporary Korean society/culture → [`../korean_culture/`](../korean_culture/README.md);
-- Korean law/civic institutions and current procedures → [`../korea_law_civic_life/`](../korea_law_civic_life/README.md);
-- Korean economy/business mechanisms and company cases → [`../korea_business_economy_knowledge_library/`](../korea_business_economy_knowledge_library/README.md);
-- world chronology/comparative context → [`../world_history/`](../world_history/README.md);
-- KIIP exam recall → [`../korean_culture/kiip/`](../korean_culture/kiip/README.md).
+## 2. Coverage hiện đã mạnh
 
-## 2. Coverage currently strong
+Library có chronology liên tục từ tiền sử, các quốc gia sớm, Tam Quốc, Cao Ly, Triều Tiên, chuyển tiếp cận đại, thời thuộc địa, giải phóng–chia cắt, chiến tranh, công nghiệp hóa, dân chủ hóa tới Hàn Quốc đương đại.
 
-The library has a continuous chronological spine from prehistory and early states through the Three Kingdoms, Goryeo, Joseon, the modern transition, colonial period, liberation/division, war, industrialization, democratization and contemporary Korea.
+Bên cạnh chronology, các companion đã bổ sung lịch sử xã hội, lịch sử kinh tế, lịch sử tri thức/thông tin, ký ức công cộng, timeline Hàn–Việt, field guide địa điểm lịch sử, đời sống theo từng thời kỳ và geography/routes. Kiến trúc này đúng vì chronology giữ vai trò xương sống, còn thematic route trả lời những câu hỏi mà timeline đơn thuần không thể giải thích.
 
-It also contains transversal companion layers for:
+## 3. Hợp đồng reasoning lịch sử
 
-- social history;
-- economic history;
-- knowledge/information history;
-- public memory;
-- Korea–Vietnam parallel chronology/context;
-- historical places and field observation;
-- economy/society/everyday life by period;
-- geography/routes/historical space;
-- chronology and glossary;
-- naming/translation conventions.
-
-This is a strong architecture because chronology remains canonical while thematic companions prevent history from becoming a list of events.
-
-## 3. Historical reasoning contract
-
-A substantial chapter should answer, where relevant:
+Một chapter quan trọng nên nối được:
 
 ```text
-starting conditions
-→ institutions/power structure
-→ resource and fiscal base
+điều kiện ban đầu
+→ cấu trúc quyền lực/thể chế
+→ đất đai, thuế và nguồn lực
 → production/trade/technology
-→ social groups and incentives
-→ external/regional context
-→ shock/conflict/change mechanism
-→ new equilibrium/order
-→ persistence/path dependence
-→ material traces and present-day legacy
+→ nhóm xã hội và incentive
+→ bối cảnh khu vực
+→ shock/xung đột/cơ chế thay đổi
+→ trật tự mới
+→ path dependence
+→ dấu vết vật chất và di sản hiện tại
 ```
 
-Chronology is necessary but not sufficient.
+Chronology là cần thiết nhưng chưa đủ. Nếu biết một cuộc cải cách diễn ra năm nào nhưng không hiểu nó thay đổi tax base, military mobilization, landholding hoặc social mobility ra sao, người đọc vẫn chưa có mô hình lịch sử.
 
-## 4. Evidence and interpretation boundary
+## 4. Fact, bằng chứng và diễn giải phải tách nhau
 
-Historical writing should distinguish:
+Nội dung lịch sử cần phân biệt ít nhất:
 
-1. relatively well-established chronology/facts;
-2. interpretation supported by historical scholarship;
-3. contested interpretation;
-4. collective/public memory;
-5. national narrative;
-6. later political use of the past.
+1. chronology/fact tương đối chắc;
+2. diễn giải được hỗ trợ bởi sử học;
+3. diễn giải còn tranh luận;
+4. ký ức tập thể/công cộng;
+5. narrative quốc gia;
+6. cách quá khứ được sử dụng cho mục tiêu chính trị/xã hội về sau.
 
-Do not collapse these categories into one voice.
+Không gộp sáu lớp thành một giọng kể duy nhất. Với vấn đề tranh luận, trước hết giữ baseline fact có bằng chứng mạnh nhất, sau đó mới mô tả các cách giải thích và loại evidence mà mỗi cách dựa vào.
 
-When an issue is contested, preserve the strongest factual baseline first, then identify major interpretations and what evidence each relies on. Avoid presenting one later national narrative as though it were the only historical description.
+Điều này đặc biệt quan trọng ở lịch sử hiện đại. Một chapter càng gần hiện tại thì càng phải tách historical analysis đã đủ bằng chứng khỏi đánh giá về actor/party/event đang còn tranh luận.
 
-## 5. Korea–Vietnam comparison boundary
+## 5. So sánh Hàn Quốc – Việt Nam
 
-The parallel timeline is useful for temporal orientation, but comparison should remain analytic rather than superficial.
+Timeline song song có giá trị để định vị thời gian nhưng không được biến thành so sánh bề mặt. Một comparison tốt phải hỏi cùng thời kỳ đó hai xã hội có state capacity, land/tax/labor regime, trade network, military technology và geographic constraint giống hay khác nhau như thế nào.
 
-A valid comparison asks:
+Hai dynasty cùng tồn tại trong một thế kỷ không có nghĩa cơ chế nhà nước hoặc kết quả xã hội tương đương. So sánh chỉ hữu ích khi nó làm nổi bật mechanism, không phải khi nó ép hai lịch sử vào một template chung.
 
-```text
-same period?
-→ similar or different state capacity?
-→ land/tax/labor regime?
-→ trade and regional system?
-→ technology/military environment?
-→ demographic/geographic constraints?
-→ similar outcome for same mechanism, or not?
-```
+## 6. Di tích và địa điểm là bằng chứng, không phải trang trí
 
-Do not infer equivalence merely because two dynasties, wars or reforms occurred in the same century.
+Khi nối một địa điểm với một thời kỳ, cần phân biệt chức năng gốc, phần tái dựng/phục dựng, archaeological/material evidence, memorial interpretation và tourism/heritage framing ngày nay.
 
-## 6. Historical-place boundary
+Một cung điện hoặc memorial hiện tại có thể chứa nhiều lớp lịch sử. Vì vậy “địa điểm còn tồn tại” không tự đồng nghĩa “đây là nguyên trạng của thế kỷ đó”.
 
-Places and monuments are evidence, not decoration. When linking a site to a period, distinguish:
+## 7. Khoảng trống ưu tiên
 
-- original historical function;
-- later rebuilding/restoration;
-- archaeological/material evidence;
-- memorial interpretation;
-- present-day tourism/heritage framing.
+### P1 — Provenance theo từng giai đoạn
 
-A current monument may represent several historical layers rather than a preserved snapshot of one era.
-
-## 7. Gaps / next depth
-
-### P1 — Explicit source/provenance map by period
-
-The README already defines a strong baseline source set. The next step is to make period-level provenance easier to audit:
+README đã có baseline nguồn tốt, nhưng period-level provenance vẫn nên rõ hơn:
 
 ```text
 chapter/period
-→ primary or near-primary evidence where relevant
-→ institutional reference source
-→ modern scholarship/interpretive source
+→ primary hoặc near-primary evidence khi phù hợp
+→ institutional reference
+→ modern scholarship
 → contested questions
 ```
 
-This does not require citation overload; the goal is traceability for claims most likely to be disputed or revised.
+Mục tiêu không phải nhồi citation mà là giúp người review biết claim nào cần quay lại nguồn khi có tranh luận hoặc cập nhật.
 
-### P1 — State capacity / fiscal-military comparison route
+### P1 — Tuyến state capacity / fiscal-military xuyên thời gian
 
-Create a cross-period route following:
+Nên nối:
 
 ```text
 land/household registration
@@ -131,57 +92,27 @@ land/household registration
 → crisis response
 ```
 
-This would connect many existing chapters without duplicating chronology.
+Đây là một mechanism route có thể giải thích vì sao các triều đại khác nhau phản ứng khác nhau với chiến tranh, famine hoặc fiscal stress.
 
-### P1 — Household/everyday-life continuity route
+### P1 — Household/everyday-life continuity
 
-Strengthen continuity across periods for:
+Cần nối family structure, gender roles, tenancy/landholding, labor obligation, food/energy/material life, literacy/education và urban–rural difference xuyên các thời kỳ. Khi làm vậy, thay đổi thể chế mới hiện ra như thay đổi trong đời sống thật thay vì chỉ là decree ở tầng nhà nước.
 
-- household structure;
-- gender/family roles;
-- landholding/tenancy;
-- labor obligations;
-- food/energy/material life;
-- literacy/education;
-- urban/rural differences.
+### P2 — Bất định của dữ liệu lịch sử
 
-The goal is to make institutional change visible in ordinary life.
+Population, production, fiscal và casualty estimate thường không chính xác tuyệt đối. Khi con số không chắc, nên nêu nguồn, measurement problem, range hợp lý và kết luận nào vẫn đứng vững dù estimate thay đổi.
 
-### P2 — Historical data uncertainty
+### P2 — Public-memory/heritage update protocol
 
-Add clearer handling of uncertain population, production, fiscal or casualty estimates:
+Museum panel, memorial text và heritage designation là framing hiện tại, không phải tự động là historical truth. Các chapter về di sản nên ghi rõ khi đang nói về evidence lịch sử và khi đang nói về cách một institution ngày nay diễn giải quá khứ.
 
-```text
-estimate
-→ source base
-→ measurement problem
-→ plausible range
-→ what conclusion survives the uncertainty
-```
+## 8. Quy ước tên và ngôn ngữ
 
-### P2 — Public-memory and heritage update protocol
+Giữ mô hình **tên tiếng Việt dễ đọc + nguyên bản tiếng Hàn + English/Romanization khi hữu ích**. Không ép Hán–Việt cho tên hiện đại nếu làm người đọc khó nhận diện nhân vật/địa điểm. File path giữ ổn định để bảo toàn internal links.
 
-For museums, memorial sites, heritage designations and interpretation panels, distinguish durable historical claims from current institutional framing. Current exhibition text should not silently become canonical historical truth.
+## 9. Quy trình review
 
-### P2 — Modern-period current-boundary rule
-
-The closer a chapter approaches the present, the more carefully it should separate completed historical analysis from ongoing political/current-affairs evaluation. Current political actors, parties and unresolved events should be described factually and sourced rather than ranked or judged.
-
-## 8. Naming and language governance
-
-The existing Vietnamese–Korean–English naming convention is a strong asset. Preserve:
-
-```text
-Vietnamese readable name
-+ Korean original
-+ English/Romanization when useful
-```
-
-Do not force Sino-Vietnamese forms where they make a modern person/place harder to recognize. File paths should remain stable and practical for links/Git.
-
-## 9. Review protocol
-
-For substantial changes:
+Khi sửa nội dung lớn:
 
 ```text
 chronological placement
@@ -189,22 +120,16 @@ chronological placement
 → institutional/economic/social context
 → regional context
 → evidence/provenance
-→ contested interpretation check
-→ Korea–Vietnam comparison check if present
+→ contested-interpretation check
+→ Korea–Vietnam comparison check nếu có
 → naming convention
 → internal links
 ```
 
-For modern political history, add a neutrality/source pass before merge.
+Với lịch sử chính trị hiện đại, thêm lượt kiểm tra neutrality và source trước merge.
 
-## 10. Current assessment
+## 10. Kết luận và bàn giao
 
-**Chronological coverage: strong.**  
-**Economic/social contextualization: strong.**  
-**Places/material-history integration: strong.**  
-**Korea–Vietnam contextual comparison: strong architecture.**  
-**Evidence-vs-interpretation distinction: explicitly present and should be maintained.**  
-**Period-level provenance visibility: can be stronger.**  
-**Cross-period state-capacity and household routes: high-value next work.**
+Chronology, economic/social context, historical places và kiến trúc so sánh Hàn–Việt hiện **mạnh**. Gap có giá trị cao nhất là provenance theo period và các mechanism route xuyên nhiều thế kỷ, đặc biệt state capacity và household life.
 
-The next depth pass should connect existing chapters through mechanisms and evidence rather than add another parallel chronology.
+Từ đây, người đọc có thể quay lại [`33_korea_vietnam_parallel_timeline_and_context.md`](./33_korea_vietnam_parallel_timeline_and_context.md) để đối chiếu chronology, hoặc sang [`35_economy_society_everyday_life_by_period.md`](./35_economy_society_everyday_life_by_period.md) để xem thay đổi thể chế đi xuống đời sống thường ngày như thế nào.
