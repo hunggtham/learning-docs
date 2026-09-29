@@ -107,6 +107,8 @@ Nói đơn giản: biết A thì xác định duy nhất được B. A ở bên 
 Ví dụ cuối rất quan trọng: chỉ biết `학번` thì chưa biết điểm môn nào; chỉ biết `과목코드` cũng chưa biết điểm của sinh viên nào. Phải biết cả hai mới có điểm. Vì vậy `(학번, 과목코드)` là **복합키 (composite key, khóa ghép)**.
 
 ### 키 용어 / Thuật ngữ khóa
+Phần “키 용어 / Thuật ngữ khóa” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | Korean | English | Nghĩa Việt |
 |---|---|---|
@@ -226,6 +228,8 @@ BCNF chặt hơn 3NF. Cách kiểm tra: nhìn **mọi vế trái** của depende
 ---
 
 ### 5.5 4NF·5NF — 기억할 키워드
+Phần “5.5 4NF·5NF — 기억할 키워드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | Form | Korean | Loại bỏ | Mẹo Việt |
 |---|---|---|---|
@@ -269,6 +273,8 @@ Trong 정보처리기사, **하향식 (top-down)** còn xuất hiện ở **통�
 ---
 
 ## 8. 시험 직전 30초 암기 노트
+Phần “8. 시험 직전 30초 암기 노트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ```text
 [DB 설계]

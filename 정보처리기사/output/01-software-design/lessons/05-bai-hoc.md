@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **9. 요구사항 및 시스템 파악 (
 
 ## 9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)
 
-Sau khi đã đặt nền bằng **2. 요구사항 개발 (Phát triển Yêu cầu)**, ta chuyển sang **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**. Đây là mắt xích 5/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **2. 요구사항 개발 (Phát triển Yêu cầu)**, ta chuyển sang **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**. Đây là mắt xích 5/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **요구사항 검증 방법 (Phương 
 ### 요구사항 검증 방법 (Phương pháp xác minh yêu cầu)
 
 Phần nguồn của **요구사항 검증 방법 (Phương pháp xác minh yêu cầu)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “요구사항 검증 방법 (Phương pháp xác minh yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **동료검토 (Peer Review):** 작성자가 명세서 내용을 직접 설명하면서 결함을 발견함. (Tác giả trực tiếp giải thích tài liệu để đồng nghiệp tìm lỗi - Phi chính thức).
 - **워크스루 (Walk Through):** 미리 배포한 명세서를 사전 검토한 후 결함을 발견함. (Phát tài liệu trước, sau đó họp để tìm lỗi - Phi chính thức).
@@ -52,6 +54,8 @@ Ta vừa chốt **요구사항 검증 방법 (Phương pháp xác minh yêu cầ
 
 Các ý ngay dưới **미들웨어 (Middleware)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “미들웨어 (Middleware)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 분산 컴퓨팅 환경에서 서로 다른 기종 간을 연결한다. (Kết nối các nền tảng khác nhau trong môi trường điện toán phân tán).
 - 운영체제와 응용 프로그램 사이에서 다양한 서비스를 제공한다. (Cung cấp các dịch vụ nằm giữa HĐH và Ứng dụng).
 - 위치 투명성을 제공한다. (Cung cấp tính trong suốt về vị trí - User không cần biết server nằm đâu).
@@ -66,6 +70,8 @@ Sau khi đọc **미들웨어 (Middleware)**, đừng bắt đầu lại từ s�
 ### 스크럼(Scrum) 상세 (Chi tiết về Scrum)
 
 Bây giờ ta đi vào nội dung của **스크럼(Scrum) 상세 (Chi tiết về Scrum)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “스크럼(Scrum) 상세 (Chi tiết về Scrum)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **제품 책임자 (PO; Product Owner):** 요구사항을 작성하고 우선순위를 결정하는 주체. (Người đại diện khách hàng, tạo và quản lý thứ tự ưu tiên của Product Backlog).
 - **스크럼 마스터 (SM; Scrum Master):** 스크럼 회의를 주관하고 장애 요소를 해결하는 가이드. (Người hướng dẫn, giải quyết khó khăn cho team, không phải là sếp quản lý).
@@ -84,6 +90,8 @@ Với **XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)**, m�
 
 Phần nguồn của **XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “XP 주요 실천 방법 (Các kỹ thuật thực hành của XP)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **짝 프로그래밍 (Pair Programming):** 2 người cùng code trên 1 máy tính.
 - **공동 코드 소유 (Collective Ownership):** Code là của chung, ai cũng có quyền sửa.
 - **테스트 주도 개발 (TDD - Test-Driven Development):** Viết Test case trước, viết Code sau.
@@ -101,6 +109,8 @@ Ta vừa chốt **XP 주요 실천 방법 (Các kỹ thuật thực hành của 
 
 Các ý ngay dưới **현행 시스템 파악 (Phân tích hệ thống hiện tại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “현행 시스템 파악 (Phân tích hệ thống hiện tại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 1단계: 시스템 구성, 기능, 인터페이스 파악. (Bước 1: Nắm bắt Cấu trúc, Chức năng, Interface).
 - 2단계: 아키텍처 및 소프트웨어 구성 파악. (Bước 2: Nắm bắt Kiến trúc và Phần mềm).
 - 3단계: 하드웨어 및 네트워크 구성 파악. (Bước 3: Nắm bắt Phần cứng và Mạng).
@@ -115,6 +125,8 @@ Sau khi đọc **현행 시스템 파악 (Phân tích hệ thống hiện tại)
 
 Bây giờ ta đi vào nội dung của **운영체제 (OS - Operating System)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “운영체제 (OS - Operating System)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 컴퓨터 시스템의 자원들을 효율적으로 관리하며, 환경을 제공하는 소프트웨어이다. (Là phần mềm quản lý tài nguyên máy tính hiệu quả và cung cấp môi trường chạy ứng dụng).
 - 고려사항 (Các yếu tố cần cân nhắc khi chọn): 가용성 (Tính sẵn sàng), 성능 (Hiệu năng), 기술 지원 (Hỗ trợ kỹ thuật), 주변 기기 (Thiết bị ngoại vi), 구축 비용 (Chi phí).
 
@@ -126,6 +138,8 @@ Với **데이터베이스 관리 시스템 (DBMS)**, mục tiêu đọc là nh�
 ### 데이터베이스 관리 시스템 (DBMS)
 
 Phần nguồn của **데이터베이스 관리 시스템 (DBMS)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “데이터베이스 관리 시스템 (DBMS)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 사용자와 데이터베이스 사이에서 정보를 생성하고 관리해 주는 소프트웨어이다. (Phần mềm nằm giữa User và Database để quản lý dữ liệu - giải quyết vấn đề trùng lặp và phụ thuộc).
 - 고려사항: 가용성, 성능, 기술 지원, 상호 호환성 (Tính tương thích), 구축 비용.

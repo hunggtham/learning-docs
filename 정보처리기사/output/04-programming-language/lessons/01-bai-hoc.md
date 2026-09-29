@@ -4,7 +4,7 @@
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **프로그래밍 언어 기초 (Programming Language Basics)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Programming Language Basics)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Programming Language Basics)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -22,13 +22,13 @@ Mục đích của bài này là hiểu **프로그래밍 언어 기초 (Program
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **프로그래밍 언어 기초 (Programming Language Basics)** và nối nó với **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **프로그래밍 언어 기초 (Programming Language Basics)** và nối nó với **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 
-Chúng ta bắt đầu mạch học bằng **프로그래밍 언어 기초 (Programming Language Basics)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/78 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
+Chúng ta bắt đầu mạch học bằng **프로그래밍 언어 기초 (Programming Language Basics)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/91 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
 
 Để đọc **프로그래밍 언어 기초 (Programming Language Basics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **159. C/JAVA의 자료형 (Data Types / Kiểu dữ l
 ### 159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)
 
 Bây giờ ta đi vào nội dung của **159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **C (exam assumption / giả định đề thi phổ biến):** `char` 1 byte, `int` 4 bytes; `long` phụ thuộc ABI/compiler và không nên ghi là 8 bytes tuyệt đối.
 - **Java:** `byte` 1 byte, `short` 2 bytes, `int` 4 bytes, `long` 8 bytes, `char` 2 bytes (Unicode), `float` 4 bytes, `double` 8 bytes. `boolean` là kiểu logic; Java không quy định một kích thước lưu trữ cố định.
@@ -51,6 +53,8 @@ Với **162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt t
 ### 162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)
 
 Phần nguồn của **162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc đặt tên biến)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. (Có thể sử dụng chữ cái tiếng Anh, số và dấu gạch dưới).
 - 첫 글자는 숫자는 올 수 없다. (Chữ cái đầu tiên không được là số).
@@ -69,6 +73,8 @@ Sau khi đọc **162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc
 
 Các ý ngay dưới **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 선언만 하고 사용하지 않는 변수들이 점유한 메모리 공간을 강제로 해제하여 다른 프로그램들이 사용할 수 있도록 하는 것이다. (Tự động giải phóng không gian bộ nhớ do các biến được khai báo nhưng không sử dụng để các chương trình khác có thể sử dụng).
   - *Example / Ví dụ*: Trong Java, Garbage Collector (GC) tự động dọn dẹp các đối tượng không còn được tham chiếu.
   - 💡 *Mẹo ghi nhớ*: "Garbage" (rác) -> Dọn dẹp bộ nhớ không dùng đến.
@@ -77,4 +83,4 @@ Các ý về **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác
 
 Như vậy, **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **프로그래밍 언어 기초 (Programming Language Basics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **프로그래밍 언어 기초 (Programming Language Basics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

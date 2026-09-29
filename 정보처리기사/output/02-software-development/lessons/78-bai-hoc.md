@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **25. 트립와이어 (tripwire)** như 
 
 ## 25. 트립와이어 (tripwire)
 
-Từ **23. EAI 구축 유형 (Enterprise Application Integration Types)**, ta đã có điểm tựa để bước vào **25. 트립와이어 (tripwire)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 78/95 trước khi đi vào chi tiết.
+Từ **23. EAI 구축 유형 (Enterprise Application Integration Types)**, ta đã có điểm tựa để bước vào **25. 트립와이어 (tripwire)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 78/101 trước khi đi vào chi tiết.
 
 Để đọc **25. 트립와이어 (tripwire)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “25. 트립와이어 (tripwire)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * 크래커가 침입하여 백도어를 만들어 놓거나, 설정 파일을 변경했을 때 분석하는 데이터 무결성 검사 도구.
 * **VI (Vietnamese) (Tiếng Việt):** Công cụ kiểm tra tính toàn vẹn dữ liệu, phát hiện backdoor hoặc thay đổi file cấu hình.

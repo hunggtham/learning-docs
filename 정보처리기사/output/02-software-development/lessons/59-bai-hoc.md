@@ -1,18 +1,18 @@
-# 105: 시각에 따른 테스트 (Verification vs Validation)
+# 44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **105: 시각에 따른 테스트 (Verification vs Validation)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **105: 시각에 따른 테스트 (Verification vs Validation)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-시각에, 따른, 테스트
+화이트박스, 테스트, 검증, 기준
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**에서 만든 기준을 이어받아 **105: 시각에 따른 테스트 (Verification vs Validation)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **43. 테스트 분류 방식 (Test Classification)**에서 만든 기준을 이어받아 **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,21 +22,23 @@ Mục đích của bài này là hiểu **105: 시각에 따른 테스트 (Verif
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **105: 시각에 따른 테스트 (Verification vs Validation)** và nối nó với **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** và nối nó với **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 105: 시각에 따른 테스트 (Verification vs Validation)
+## 44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)
 
-Sau khi đã đặt nền bằng **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**, ta chuyển sang **105: 시각에 따른 테스트 (Verification vs Validation)**. Đây là mắt xích 59/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **43. 테스트 분류 방식 (Test Classification)**, ta chuyển sang **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**. Đây là mắt xích 59/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **105: 시각에 따른 테스트 (Verification vs Validation)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **문장(구문) 검증 기준 (Statement Coverage)**, **결정/분기 검증 기준 (Decision/Branch Coverage)**, **조건 검증 기준 (Condition Coverage)**, **분기/조건 기준 (Branch/Condition Coverage)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **검증 (Verification - Xác minh):** 개발자 시각 (Góc nhìn Dev). "Làm đúng thiết kế/mã code không?". (Are we building the product right?).
-- **확인 (Validation - Thẩm định):** 사용자 시각 (Góc nhìn User). "Phần mềm này có đúng cái khách hàng cần không?". (Are we building the right product?).
+Phần “44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 검증 (Verification) = Code chuẩn chưa? (Dev). 확인 (Validation) = Khách ưng không? (User).
+* **문장(구문) 검증 기준 (Statement Coverage)**: 소스 코드의 **모든 구문**이 한 번 이상 수행되도록 설계.
+* **결정/분기 검증 기준 (Decision/Branch Coverage)**: 모든 조건문에 대해 조건이 **True인 경우와 False인 경우**가 한 번 이상 수행되도록 설계.
+* **조건 검증 기준 (Condition Coverage)**: 조건문에 포함된 **개별 조건식**의 결과가 T/F 한 번 이상 수행되도록 설계.
+* **분기/조건 기준 (Branch/Condition Coverage)**: 위 두 가지를 모두 만족하는 설계.
+* **VI (Vietnamese) (Tiếng Việt):** Các tiêu chí độ phủ (Coverage) trong kiểm thử hộp trắng: Bao phủ cú pháp (Statement), Bao phủ nhánh/quyết định (Branch - lệnh IF chạy cả T/F), Bao phủ điều kiện (Condition - từng điều kiện nhỏ chạy cả T/F), Bao phủ nhánh/điều kiện.
+* 💡 **Mẹo ghi nhớ**: Statement = Dòng code. Branch = Ngã rẽ (IF). Condition = Điều kiện nhỏ trong IF.
 
----
-
-Ta có thể khép mục **105: 시각에 따른 테스트 (Verification vs Validation)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

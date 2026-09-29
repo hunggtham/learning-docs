@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **4. 프로세스 품질 표준 (Tiêu c
 
 ## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
-Ở bước 10/61, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** xuất hiện như phần tiếp nối của **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 10/86, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** xuất hiện như phần tiếp nối của **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **4.1 ISO/IEC 12207** vào câu hỏi chung của mụ
 ### 4.1 ISO/IEC 12207
 
 Bây giờ ta đi vào nội dung của **4.1 ISO/IEC 12207**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “4.1 ISO/IEC 12207” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **기본 생명 주기:** 획득, 공급, 개발, 운영, 유지보수.
 - **지원 생명 주기:** 품질 보증, 검증, 확인, 문서화, 형상 관리 등.
@@ -68,6 +70,8 @@ Sau khi đọc **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)**, đừng b�
 ### 4.3 SPICE (ISO/IEC 15504)
 
 Các ý ngay dưới **4.3 SPICE (ISO/IEC 15504)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “4.3 SPICE (ISO/IEC 15504)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 소프트웨어 프로세스 평가 및 개선 국제 표준.
 - **수행 능력 6단계 (Capability Levels):**

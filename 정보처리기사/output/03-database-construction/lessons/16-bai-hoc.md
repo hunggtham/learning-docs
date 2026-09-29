@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **116-121. 관계대수 (Relational Alge
 
 ## 116-121. 관계대수 (Relational Algebra)
 
-Ở bước 16/56, **116-121. 관계대수 (Relational Algebra)** xuất hiện như phần tiếp nối của **115. 무결성 (Integrity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 16/54, **116-121. 관계대수 (Relational Algebra)** xuất hiện như phần tiếp nối của **115. 무결성 (Integrity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **116-121. 관계대수 (Relational Algebra)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “116-121. 관계대수 (Relational Algebra)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 절차적인 언어 (Procedural Language). 질의에 대한 해를 구하기 위한 연산 순서 명시.
 - **Select (σ):** 조건에 맞는 튜플 부분집합 추출 (행 추출).

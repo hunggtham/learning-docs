@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **12. 관계형 데이터 모델과 릴�
 
 ## 12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)
 
-Sau khi đã đặt nền bằng **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**, ta chuyển sang **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**. Đây là mắt xích 8/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**, ta chuyển sang **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**. Đây là mắt xích 8/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **12.1 릴레이션의 구조 (Cấu tr
 ### 12.1 릴레이션의 구조 (Cấu trúc Relation / Bảng)
 
 Phần nguồn của **12.1 릴레이션의 구조 (Cấu trúc Relation / Bảng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “12.1 릴레이션의 구조 (Cấu trúc Relation / Bảng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **릴레이션 (Relation):** Bảng dữ liệu gồm hàng và cột.
 - **튜플 (Tuple):** Hàng (Row / Record).
@@ -56,6 +58,8 @@ Ta vừa chốt **12.1 릴레이션의 구조 (Cấu trúc Relation / Bảng)** 
 ### 12.2 릴레이션의 특징 (Đặc điểm của Relation)
 
 Các ý ngay dưới **12.2 릴레이션의 특징 (Đặc điểm của Relation)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “12.2 릴레이션의 특징 (Đặc điểm của Relation)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **튜플의 유일성:** Không có 2 hàng nào giống hệt nhau.
 - **튜플/속성의 무순서:** Thứ tự của các hàng và các cột **không quan trọng**.

@@ -1,18 +1,18 @@
-# 120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)
+# 45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **127 ~ 129: 화이트박스 테스트 (White Box Test)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-애플리케이션, 테스트, 이론
+모델
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **105: 시각에 따른 테스트 (Verification vs Validation)**에서 만든 기준을 이어받아 **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**에서 만든 기준을 이어받아 **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,55 +22,49 @@ Mục đích của bài này là hiểu **120-2 ~ 126: 애플리케이션 테스
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** và nối nó với **127 ~ 129: 화이트박스 테스트 (White Box Test)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** và nối nó với **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)
+## 45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계
 
-Từ **105: 시각에 따른 테스트 (Verification vs Validation)**, ta đã có điểm tựa để bước vào **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/95 trước khi đi vào chi tiết.
+Từ **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**, ta đã có điểm tựa để bước vào **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/101 trước khi đi vào chi tiết.
 
-Để đọc **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **하향식 (Top-down)**, **상향식 (Bottom-up)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **테스트의 기본 원리 (Nguyên lý cơ bản)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
-
-### 테스트의 기본 원리 (Nguyên lý cơ bản)
-
-Các ý ngay dưới **테스트의 기본 원리 (Nguyên lý cơ bản)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- **완벽한 테스트 불가능:** Không thể khẳng định 100% hết bug.
-- **파레토 법칙 (Pareto):** 80% bug nằm ở 20% code cốt lõi. (Đám mây lỗi).
-- **살충제 패러독스 (Pesticide Paradox):** Test hoài 1 kịch bản sẽ bị "nhờn", phải liên tục thay đổi bộ test.
-- **정황 의존 (Context):** Tùy thuộc ngữ cảnh (Web, Game) mà test khác nhau.
-
-Các bullet của **테스트의 기본 원리 (Nguyên lý cơ bản)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **테스트의 기본 원리 (Nguyên lý cơ bản)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **테스트 분류 (Phân loại Test)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **테스트 분류 (Phân loại Test)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
-### 테스트 분류 (Phân loại Test)
-
-Bây giờ ta đi vào nội dung của **테스트 분류 (Phân loại Test)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-1. **실행 여부 (Theo việc có chạy code không):**
-   - **정적 테스트 (Static):** Không chạy code. Đọc, review tài liệu (Walkthrough, Inspection).
-   - **동적 테스트 (Dynamic):** Chạy code. (White box, Black box).
-2. **테스트 기반 (Theo căn cứ Test):**
-   - **명세 기반 (Specification):** Dựa vào tài liệu yêu cầu.
-   - **구조 기반 (Structure):** Dựa vào luồng logic của code.
-   - **경험 기반 (Experience):** Dựa vào kinh nghiệm tester (Đoán lỗi).
-3. **목적 (Theo mục đích):**
-   - **강도 (Stress):** Ép tải (Dồn dập bắt nó sập).
-   - **회귀 (Regression):** Sửa code xong test lại xem có hỏng chỗ cũ không.
-   - **회복 (Recovery):** Giả vờ ngắt điện xem app phục hồi data được không.
-   - **병행 (Parallel):** Chạy app cũ và app mới cùng lúc để so kết quả.
-
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Inspection (Khám nghiệm) = Tĩnh (Static). Regression (Hồi quy) = Sửa xong test lại.
+개발 단계와 테스트 단계를 짝지어 놓은 모델.
+1. **단위 테스트 (Unit Test)** - *구현(Code)* 단계와 짝. 모듈/컴포넌트 초점 (주로 구조 기반/화이트박스).
+2. **통합 테스트 (Integration Test)** - *설계(Design)* 단계와 짝. 모듈들을 결합하여 테스트.
+   * **하향식 (Top-down)**: 스텁(Stub) 사용. 깊이/넓이 우선. 테스트 초기부터 시스템 구조 파악 가능.
+   * **상향식 (Bottom-up)**: 드라이버(Driver)와 클러스터(Cluster) 사용.
 
 ---
 
-Với **테스트 분류 (Phân loại Test)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+- **Bandwidth (대역폭/전송률 - Băng thông):** Tốc độ truyền dữ liệu tối đa trong 1 giây (đơn vị bit/s hoặc byte/s). Băng thông càng lớn máy càng nhanh.
+- **접근 속도 (Tốc độ tiếp cận Nhanh -> Chậm):** CPU 레지스터 -> Cache -> RAM(Main Memory) -> ROM -> 자기 코어 -> 자기 디스크 (HDD) -> 자기 테이프 (Tape).
 
-Điểm chốt của **테스트 분류 (Phân loại Test)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+Để không đọc **ROM (Read Only Memory - Bộ nhớ chỉ đọc)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
-Điểm chốt của **120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **127 ~ 129: 화이트박스 테스트 (White Box Test)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+### ROM (Read Only Memory - Bộ nhớ chỉ đọc)
+
+Các ý ngay dưới **ROM (Read Only Memory - Bộ nhớ chỉ đọc)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “ROM (Read Only Memory - Bộ nhớ chỉ đọc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 전원이 꺼져도 내용이 지워지지 않는 비휘발성 (Không bay hơi khi mất điện).
+- 주로 기본 입·출력 시스템(BIOS), 자가 진단 프로그램(POST) 저장 (Thường chứa BIOS, POST).
+- **ROM 종류 (Các loại ROM):**
+  - Mask ROM: Nhà máy làm sẵn, không đổi được.
+  - PROM: Ghi được **1번** (1 lần).
+  - EPROM: 자외선 (Tia cực tím - UV) để xóa, ghi lại nhiều lần.
+  - EEPROM (EAROM): 전기적인 방법 (Phương pháp điện - Electrical) để xóa và ghi. (Ví dụ: USB Flash Drive, SSD).
+
+- **Vietnamese Explanation:** Cycle Time luôn dài hơn Access Time vì bộ nhớ cần thời gian phục hồi lại năng lượng sau khi đọc. ROM giữ lại dữ liệu khi mất điện, có nhiều loại từ cứng nhắc (Mask) đến linh hoạt (EEPROM - dùng điện để xóa).
+- **Ví dụ (Example):** EEPROM chính là công nghệ đằng sau cái USB nhỏ xinh bạn hay dùng. EPROM thì giống cái bảng viết phấn, bôi đi bằng tia UV (giẻ lau) rồi viết lại. Mask ROM là bia đá khắc chữ sẵn.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** "E" đầu tiên = Erasable (Xóa được). Nhớ: EPROM = UV (Tia cực tím), EEPROM = Điện (Electonic). Cycle Time ≥ Access Time.
+
+Với **ROM (Read Only Memory - Bộ nhớ chỉ đọc)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Với **ROM (Read Only Memory - Bộ nhớ chỉ đọc)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+
+Điểm chốt của **45. V-모델 (V-Model) 기반 애플리케이션 테스트 단계** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

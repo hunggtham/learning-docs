@@ -28,9 +28,11 @@ UML, 구성요소, 상세
 
 ## 5. UML 구성요소 상세 (UML Components Detail)
 
-Sau khi đã đặt nền bằng **4. UML (Unified Modeling Language)**, ta chuyển sang **5. UML 구성요소 상세 (UML Components Detail)**. Đây là mắt xích 17/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **4. UML (Unified Modeling Language)**, ta chuyển sang **5. UML 구성요소 상세 (UML Components Detail)**. Đây là mắt xích 17/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **5. UML 구성요소 상세 (UML Components Detail)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **클래스 다이어그램 (Class Diagram)**, **유스케이스 다이어그램 (Use Case Diagram)**, **순차 다이어그램 (Sequence Diagram)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “5. UML 구성요소 상세 (UML Components Detail)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **클래스 다이어그램 (Class Diagram)**: Class Name, Attribute, Operation.
   - 접근 제어자 (Access Modifier): `+` (Public), `-` (Private), `#` (Protected), `~` (Package).

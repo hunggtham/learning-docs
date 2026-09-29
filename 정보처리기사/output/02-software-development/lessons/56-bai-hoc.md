@@ -1,18 +1,18 @@
-# 핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)
+# 35. 테스트 케이스 (Test Case)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **35. 테스트 케이스 (Test Case)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 044: 테스트 자동화 도구 (Test Automation Tools)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **35. 테스트 케이스 (Test Case)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 단위, 통합, 시스템, 인수, 테스트
+테스트, 케이스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)**에서 만든 기준을 이어받아 **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**에서 만든 기준을 이어받아 **35. 테스트 케이스 (Test Case)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,31 +22,22 @@ Mục đích của bài này là hiểu **핵심 043: 단위 / 통합 / 시스�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)** và nối nó với **핵심 044: 테스트 자동화 도구 (Test Automation Tools)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **35. 테스트 케이스 (Test Case)** và nối nó với **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)
+## 35. 테스트 케이스 (Test Case)
 
-Sau khi đã đặt nền bằng **핵심 042: 블랙박스 테스트 / 화이트박스 테스트 (Black-Box vs White-Box)**, ta chuyển sang **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)**. Đây là mắt xích 56/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **20. 하향식 통합 테스트와 테스트 스텁 (Top-down Integration Test & Test Stub)**, ta chuyển sang **35. 테스트 케이스 (Test Case)**. Đây là mắt xích 56/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **35. 테스트 케이스 (Test Case)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **구성 요소 (ISO/IEC/IEEE 29119-3)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration) → 시스템 (System) → 인수 (Acceptance)**.
+Phần “35. 테스트 케이스 (Test Case)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-| 단계 (Giai đoạn) | 설명 (Giải thích) | 방식 / 기법 (Cách thức) |
-|---|---|---|
-| **단위 (Unit Test)** | Test từng Module, hàm độc lập. | White-box, Black-box, Test cấu trúc dữ liệu. |
-| **통합 (Integration)** | Nối các module lại và test sự giao tiếp giữa chúng. | - **빅뱅 (Big Bang):** Gom tất cả test 1 lần (dễ bị rối).
-- **상향식 (Bottom-Up):** Dưới lên. Cần **Driver** (Trình điều khiển giả).
-- **하향식 (Top-Down):** Trên xuống. Cần **Stub** (Mô đun con giả mạo). |
-| **시스템 (System)** | Test toàn bộ hệ thống xem có đúng yêu cầu (Chức năng + Hiệu năng). | Yêu cầu chức năng và phi chức năng. |
-| **인수 (Acceptance)** | Khách hàng/Người dùng cuối tự test để nghiệm thu. | - **알파 (Alpha):** Khách hàng test tại cty lập trình viên, có dev đứng ngó.
-- **베타 (Beta):** Tung ra cho nhiều người dùng tự test ở nhà (Field Test), tự do. |
+* 사용자의 요구사항을 정확하게 준수했는지 확인하기 위해 설계된 테스트 항목에 대한 명세서.
+* **구성 요소 (ISO/IEC/IEEE 29119-3)**:
+  * 식별자, 테스트 항목, 입력 명세(Input), 출력 명세(Output/예상 결과), 환경 설정, 특수 절차 요구, 의존성 기술.
+* **VI (Vietnamese) (Tiếng Việt):** Kịch bản kiểm thử (Test Case). Bao gồm: ID, Môi trường, Đầu vào, Đầu ra mong đợi.
+* **Example**: 로그인 기능을 위해 "ID: admin, PW: 1234를 넣었을 때 관리자 페이지로 넘어가는가?"를 문서화한 것입니다.
 
-- **Vietnamese Explanation:** Tích hợp (Integration) rất hay ra thi. Nếu ráp từ dưới lên (Bottom-up) thì module con xong rồi, nhưng thiếu thằng gọi nó => Cần viết cục **Driver** giả để gọi. Nếu ráp từ trên xuống (Top-down), module chính có rồi nhưng chưa viết xong module con => Cần viết cục **Stub** (Cục gạch giả) để thế chỗ. Alpha test là test "nội bộ" có kiểm soát, Beta test là "open beta" như game.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Từ trên xuống (Top-Down) = Stub (Top-Stub / T-S). 상향식 (Bottom-Up) = Driver (Bottom-Driver / B-D). Alpha = Ở cty Dev. Beta = Ở nhà.
-
----
-
-Ta có thể khép mục **핵심 043: 단위 / 통합 / 시스템 / 인수 테스트 (Test Levels)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 044: 테스트 자동화 도구 (Test Automation Tools)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **35. 테스트 케이스 (Test Case)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

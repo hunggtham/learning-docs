@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **프레임워크 특징 및 SW 신기�
 
 ## 프레임워크 특징 및 SW 신기술 (Framework & SW Tech)
 
-Từ **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, ta đã có điểm tựa để bước vào **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/61 trước khi đi vào chi tiết.
+Từ **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, ta đã có điểm tựa để bước vào **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/86 trước khi đi vào chi tiết.
 
 Để đọc **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **모듈화 (Modularity)**, **재사용성 (Reusability)**, **확장성 (Extensibility)**, **제어의 역흐름 (Inversion of Control)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailor
 ### 1. 프레임워크의 특성 (Characteristics of Framework)
 
 Các ý ngay dưới **1. 프레임워크의 특성 (Characteristics of Framework)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “1. 프레임워크의 특성 (Characteristics of Framework)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **모듈화 (Modularity)**: 캡슐화로 모듈화를 강화하여 변경 영향을 최소화.
 - **재사용성 (Reusability)**: 재사용 가능한 모듈 제공으로 생산성 향상.
@@ -65,6 +67,8 @@ Với **3. 주요 SW 및 관련 용어**, mục tiêu đọc là nhận ra đố
 ### 3. 주요 SW 및 관련 용어
 
 Phần nguồn của **3. 주요 SW 및 관련 용어** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “3. 주요 SW 및 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **SOA (Service Oriented Architecture)**: 서비스나 컴포넌트 중심으로 구축하는 아키텍처.
 - **디지털 트윈 (Digital Twin)**: 물리적 자산을 소프트웨어로 가상화(복제)하여 효율성을 높이는 기술.

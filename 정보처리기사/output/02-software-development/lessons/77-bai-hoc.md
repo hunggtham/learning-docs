@@ -28,9 +28,11 @@ EAI, 구축, 유형
 
 ## 23. EAI 구축 유형 (Enterprise Application Integration Types)
 
-Sau khi đã đặt nền bằng **22. 정적 분석 도구 (Static Analysis Tools)**, ta chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)**. Đây là mắt xích 77/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **22. 정적 분석 도구 (Static Analysis Tools)**, ta chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)**. Đây là mắt xích 77/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **23. EAI 구축 유형 (Enterprise Application Integration Types)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **Point-to-Point**, **Hub & Spoke**, **Message Bus (ESB 방식)**, **Hybrid** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “23. EAI 구축 유형 (Enterprise Application Integration Types)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **Point-to-Point**: 애플리케이션을 1:1로 직접 연결.
 * **Hub & Spoke**: 단일 접점인 허브 시스템을 통해 데이터를 전송하는 중앙 집중형 방식.

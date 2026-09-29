@@ -12,7 +12,7 @@ Mục đích của bài này là hiểu **네트워크 구조 및 기술 (Networ
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**에서 만든 기준을 이어받아 **네트워크 구조 및 기술 (Network Structures & Technologies)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **네트워크 관련 장비 (Network Equipment)**에서 만든 기준을 이어받아 **네트워크 구조 및 기술 (Network Structures & Technologies)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **네트워크 구조 및 기술 (Networ
 
 ## 네트워크 구조 및 기술 (Network Structures & Technologies)
 
-Sau khi đã đặt nền bằng **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**, ta chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)**. Đây là mắt xích 20/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **네트워크 관련 장비 (Network Equipment)**, ta chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)**. Đây là mắt xích 20/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **네트워크 구조 및 기술 (Network Structures & Technologies)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **성형 (Star, 중앙 집중형)**, **링형 (Ring, 루프형)**, **버스형 (Bus)**, **계층형 (Tree, 분산형)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **1. 네트워크 설치 구조 (Networ
 ### 1. 네트워크 설치 구조 (Network Topologies)
 
 Phần nguồn của **1. 네트워크 설치 구조 (Network Topologies)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “1. 네트워크 설치 구조 (Network Topologies)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **성형 (Star, 중앙 집중형)**: 중앙 컴퓨터를 중심으로 단말기가 연결 (Point-to-Point).
 - **링형 (Ring, 루프형)**: 이웃하는 장치끼리 연결. 단방향 시 하나만 고장나도 전체 마비.
@@ -53,6 +55,8 @@ Ta vừa chốt **1. 네트워크 설치 구조 (Network Topologies)** bằng c�
 
 Các ý ngay dưới **2. 근거리 통신망 (LAN) 표준 및 기술** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “2. 근거리 통신망 (LAN) 표준 및 기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IEEE 802 규격**: 802.3(CSMA/CD), 802.4(토큰 버스), 802.5(토큰 링), 802.11(무선 LAN).
 - **VLAN**: 물리적 배치와 상관없이 논리적으로 분리하는 기술.
 - **CSMA/CA**: 무선 LAN(802.11)에서 매체가 비어있음을 확인 후 충돌 회피(Avoidance)를 위해 기다렸다가 전송하는 방식.
@@ -65,6 +69,8 @@ Sau khi đọc **2. 근거리 통신망 (LAN) 표준 및 기술**, đừng bắt
 ### 3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)
 
 Bây giờ ta đi vào nội dung của **3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **IGP (내부 게이트웨이 프로토콜)**: AS 내에서 사용. **RIP**(거리 벡터, 최대 15홉 제한)와 **OSPF**(링크 상태, 대규모 망)가 있음.
 - **EGP / BGP**: AS(자율 시스템) 간의 라우팅 프로토콜.

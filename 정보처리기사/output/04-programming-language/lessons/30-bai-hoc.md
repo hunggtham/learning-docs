@@ -12,7 +12,7 @@ Mục đích của bài này là hiểu **080 - 081. 라이브러리와 예외�
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **라이브러리 및 예외 처리 (Libraries & Exception Handling)**에서 만든 기준을 이어받아 **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**에서 만든 기준을 이어받아 **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **080 - 081. 라이브러리와 예외�
 
 ## 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
 
-Từ **라이브러리 및 예외 처리 (Libraries & Exception Handling)**, ta đã có điểm tựa để bước vào **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/78 trước khi đi vào chi tiết.
+Từ **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, ta đã có điểm tựa để bước vào **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/91 trước khi đi vào chi tiết.
 
 Để đọc **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **C언어 표준 라이브러리**, **예외처리 (Exception Handling)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **C언어 표준 라이브러리**:
   - `stdio.h`: 입출력 (`printf`, `scanf`).

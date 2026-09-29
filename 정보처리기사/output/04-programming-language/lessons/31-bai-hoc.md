@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **279 - 280. 라이브러리 (Library)**
 
 ## 279 - 280. 라이브러리 (Library)
 
-Ở bước 31/78, **279 - 280. 라이브러리 (Library)** xuất hiện như phần tiếp nối của **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 31/91, **279 - 280. 라이브러리 (Library)** xuất hiện như phần tiếp nối của **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **279 - 280. 라이브러리 (Library)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **라이브러리**, **C언어 표준 라이브러리 (Header Files)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “279 - 280. 라이브러리 (Library)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **라이브러리**: 자주 사용되는 함수/데이터를 모아 놓은 집합체 (개발 시간 단축, 코드 재사용).
 - **C언어 표준 라이브러리 (Header Files)**:

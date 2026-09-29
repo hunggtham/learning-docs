@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **22. 정적 분석 도구 (Static Analy
 
 ## 22. 정적 분석 도구 (Static Analysis Tools)
 
-Ở bước 76/95, **22. 정적 분석 도구 (Static Analysis Tools)** xuất hiện như phần tiếp nối của **21. 외계인 코드 (Alien Code)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 76/101, **22. 정적 분석 도구 (Static Analysis Tools)** xuất hiện như phần tiếp nối của **21. 외계인 코드 (Alien Code)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **22. 정적 분석 도구 (Static Analysis Tools)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **종류**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “22. 정적 분석 도구 (Static Analysis Tools)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * 코드를 실행하지 않고(하드웨어/소프트웨어적으로) 소스 코드 품질을 분석하는 도구.
 * **종류**: pmd, checkstyle, cppcheck 등.

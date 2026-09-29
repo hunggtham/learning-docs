@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **110-114. 키 (Keys)** như một khái
 
 ## 110-114. 키 (Keys)
 
-Sau khi đã đặt nền bằng **105. E-R 다이어그램 (E-R Diagram)**, ta chuyển sang **110-114. 키 (Keys)**. Đây là mắt xích 11/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **105. E-R 다이어그램 (E-R Diagram)**, ta chuyển sang **110-114. 키 (Keys)**. Đây là mắt xích 11/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **110-114. 키 (Keys)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “110-114. 키 (Keys)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **후보키 (Candidate Key):** 튜플을 유일하게 식별하는 속성. 유일성과 최소성 만족.
 - **기본키 (Primary Key):** 후보키 중 선정된 주키. 중복과 NULL 불가.

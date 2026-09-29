@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **13. 데이터 모델과 E-R 다이어�
 
 ## 13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)
 
-Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, ta đã có điểm tựa để bước vào **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/56 trước khi đi vào chi tiết.
+Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, ta đã có điểm tựa để bước vào **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/54 trước khi đi vào chi tiết.
 
 Để đọc **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu qua
 ### 데이터 모델 구성 요소 (Thành phần mô hình dữ liệu)
 
 Các ý ngay dưới **데이터 모델 구성 요소 (Thành phần mô hình dữ liệu)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “데이터 모델 구성 요소 (Thành phần mô hình dữ liệu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **개체 (Entity):** Đối tượng thực tế (ví dụ: Sinh viên, Môn học).
 - **속성 (Attribute):** Đặc điểm của đối tượng (ví dụ: Mã SV, Tên).
@@ -51,6 +53,8 @@ Ta vừa chốt **데이터 모델 구성 요소 (Thành phần mô hình dữ l
 ### E-R 다이어그램 기호 (Ký hiệu biểu đồ E-R - Peter Chen)
 
 Bây giờ ta đi vào nội dung của **E-R 다이어그램 기호 (Ký hiệu biểu đồ E-R - Peter Chen)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “E-R 다이어그램 기호 (Ký hiệu biểu đồ E-R - Peter Chen)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 | 기호 (Ký hiệu) | 의미 (Ý nghĩa) | Giải thích (VN) |
 |---|---|---|

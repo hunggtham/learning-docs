@@ -17,6 +17,8 @@
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **방향/무방향 그래프의 060** 치기 **최대 간선 수** 
+Phần “초 **방향/무방향 그래프의 060** 치기 **최대 간선 수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 무방향 그래프의 최대 간선 수 :�n(n-1)/2 
 
@@ -96,6 +98,8 @@ A<br>1 3<br>B C<br>2<br>D E F G<br>H I<br><!-- End of picture text -->
 ## 정보처리기사 핵심 요약 
 
 ###### Preorder 운행법의 방문 순서 
+Phần “Preorder 운행법의 방문 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ①�Preorder는�Root�→�Left�→�Right이므로�A13이�된다. 
 
@@ -208,6 +212,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **066** 치기초 **삽입 정렬(Insertion Sort)** 
 
 ###### 예제 8, 5, 6, 2, 4를 삽입 정렬로 정렬하시오. 
+Phần “예제 8, 5, 6, 2, 4를 삽입 정렬로 정렬하시오.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -229,6 +235,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **068** 치기초 **버블 정렬(Bubble Sort)** 
 
 ###### 예제 8, 5, 6, 2, 4를 버블 정렬로 정렬하시오. 
+Phần “예제 8, 5, 6, 2, 4를 버블 정렬로 정렬하시오.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •초기 상태 : 8 5 6 2 4 
 
@@ -249,6 +257,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **069** 
 
 ##### 치기초 **이분 검색(이진 검색)** 
+Phần “치기초 **이분 검색(이진 검색)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 검색할�데이터가�정렬되어�있어야�한다. 
 
@@ -266,6 +276,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 067 치기초 선택 정렬(Selection Sort)<br><!-- End of picture text -->
 
 ###### 예제 8, 5, 6, 2, 4를 선택 정렬로 정렬하시오. 
+Phần “예제 8, 5, 6, 2, 4를 선택 정렬로 정렬하시오.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •초기 상태 : 8 5 6 2 4 
 
@@ -274,6 +286,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - •2회전 : 2 6 8 5 4 2 5 8 6 4 2 4 8 6 5 •3회전 : 2 4 6 8 5 2 4 5 8 6 •4회전 : 2 4 5 6 8 
 
 # **070** 치기초 **주요 해싱 함수** 
+Phần “**070** 치기초 **주요 해싱 함수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제산법(Division) :�레코드�키�값(K)을� <u>해시표(Hash� Table)의�크기보다�큰�수�중에서�가장�작은�소수 (Prime,�Q)로�나눈�나머지를�홈�주소로�삼는�방식</u> 
 
@@ -288,6 +302,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ## 정보처리기사 핵심 요약 
 
 # **071** 치기초 **스키마 3계층** 
+Phần “**071** 치기초 **스키마 3계층**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 외부 스키마 :�사용자나�응용�프로그래머가�각�개인의�입 장에서�필요로�하는�데이터베이스의�논리적�구조를�정 <u>의한�것</u> 
 
@@ -301,6 +317,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **DRM(디지털 저작권 관리)의 075** 치기 **구성 요소** 
+Phần “초 **DRM(디지털 저작권 관리)의 075** 치기 **구성 요소**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •클리어링 하우스(Clearing House) :�저작권에�대한�사용�권 한,�라이선스�발급,�사용량에�따른�결제�관리�등을�수행 하는�곳 
 
@@ -326,6 +344,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - •Gradle :�Groovy를�기반으로�한�오픈�소스�형태의�빌드� 자동화�도구 
 
 # 초 **DRM(디지털 저작권 관리)의 076** 치기 **기술 요소** 
+Phần “초 **DRM(디지털 저작권 관리)의 076** 치기 **기술 요소**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 콘텐츠�암호화�및�키�관리 
 
@@ -351,6 +371,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **077** 
 
 ##### 치기초 **소프트웨어 설치 매뉴얼** 
+Phần “치기초 **소프트웨어 설치 매뉴얼**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 설치�매뉴얼은�사용자를�기준으로�작성한다. 
 
@@ -389,6 +411,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # **082** 치기초 **화이트박스 테스트의 종류** 
+Phần “**082** 치기초 **화이트박스 테스트의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기초�경로�검사 
 
@@ -403,6 +427,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - ※  기초 경로(Base Path = Basis Path) :�수행�가능한�모든�경 <u>로를�의미함</u> 
 
 # 초 **소프트웨어의 버전 등록 관련 079** 치기 **주요 기능** 
+Phần “초 **소프트웨어의 버전 등록 관련 079** 치기 **주요 기능**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 체크아웃(Check-Out) :�프로그램을�수정하기�위해�저장 <u>소에서�파일을�받아옴</u> 
 
@@ -427,6 +453,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - �프로그램의�제어�구조에�따라�선택,�반복�등의�분기점� 부분들을�수행함으로써�논리적�경로를�제어한다. 
 
 # **083** 치기초 **블랙박스 테스트 종류** 
+Phần “**083** 치기초 **블랙박스 테스트 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 동치�분할�검사 
 
@@ -443,6 +471,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 코딩�직후�소프트웨어�설계의�최소�단위인�모듈이나�컴포 <u>넌트에�초점을�맞춰�테스트하는�것이다.</u> 
 
 # 초 **단위 테스트로 발견 가능한 085** 치기 **오류** 
+Phần “초 **단위 테스트로 발견 가능한 085** 치기 **오류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 알고리즘�오류에�따른�원치�않는�결과 
 
@@ -457,12 +487,16 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ## 정보처리기사 핵심 요약 
 
 # **086** 치기초 **인수 테스트의 종류** 
+Phần “**086** 치기초 **인수 테스트의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 알파 테스트 :�개발자의�장소에서�사용자가�개발자�앞에 서�행하는�테스트�기법 
 
 - 베타 테스트 :�선정된�최종� <u>사용자가�여러�명의�사용 자�앞에서�행하는�테스트�기법으로,�필드�테스팅(Field�</u> Testing)이라고도�불림 
 
 # **090** 치기초 **테스트 오라클(Test Oracle)** 
+Phần “**090** 치기초 **테스트 오라클(Test Oracle)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �테스트�결과가�올바른지�판단하기�위해�사전에�정의된� <u>참�값을�대입하여�비교하는�기법�및�활동이다.</u> 
 
@@ -509,6 +543,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 **089** 치기초 **테스트 스텁(Test Stub)** 
 
 # **093** 치기초 **외계인 코드(Alien Code)** 
+Phần “**093** 치기초 **외계인 코드(Alien Code)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �일시적으로�필요한�조건만을�가지고�있는�시험용�모듈 이다. 
 
@@ -521,6 +557,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ## 정보처리기사 핵심 요약 
 
 # 초 **소스 코드 품질 분석 도구 - 094** 치기 **정적 분석 도구** 
+Phần “초 **소스 코드 품질 분석 도구 - 094** 치기 **정적 분석 도구**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>�하드웨어�또는�소프트웨어적인�방법으로�코드�분석이�</u> 가능하다. 
 
@@ -541,6 +579,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **인터페이스 보안 기능 적용 - 098** 치기 **네트워크 영역** 
+Phần “초 **인터페이스 보안 기능 적용 - 098** 치기 **네트워크 영역**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 네트워크�트래픽에�대한�암호화를�설정한다. 
 
@@ -612,6 +652,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ### 핵심 **<mark>073</mark>** 
 
 #### 자료 구조의 분류 
+Phần “자료 구조의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||배열(Array)|연속 리스트|
 |---|---|---|
@@ -878,6 +920,8 @@ Postfix나 Prefix는 스택을 이용하여 처리하므로 Infix는 Postfix나 
 > 예제 1 다음과 같이 Infix로 표기된 수식을 Prefix와 Postfix로 변 환하시오. 
 
 ###### X = A / B * (C + D) + E 
+Phần “X = A / B * (C + D) + E” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Prefix로 변환하기 
 
@@ -898,6 +942,8 @@ Postfix나 Prefix는 스택을 이용하여 처리하므로 Infix는 Postfix나 
 - 방문 순서 : HDIBEAFCG 
 
 ###### Postorder 
+Phần “Postorder” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Postorder는 Left → Right → Root이므로 13A가 된다. 
 
@@ -1097,6 +1143,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 2403902<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제산법(Division) : 레코드 키(K)를 해시표(Hash Table) 의 크기보다 큰 수 중에서 가장 작은 소수(Prime, Q)로 나눈 나머지를 홈 주소로 삼는 방식, 즉 h(K) = K mod Q임 
 
@@ -1129,6 +1177,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 대수적 코딩법(Algebraic Coding) : 키 값을 이루고 있는 각 자리의 비트 수를 한 다항식의 계수로 간주하고, 이 다항식을 해시표의 크기에 의해 정의된 다항식으로 나 누어 얻은 나머지 다항식의 계수를 홈 주소로 삼는 방식 
 
@@ -1174,6 +1224,8 @@ DBMS란 사용자와 데이터베이스 사이에서 사용자의 요구 에 따
 2404004<br><!-- End of picture text -->
 
 ### 핵심 **<mark>090</mark>** DBMS의 장·단점 
+Phần “핵심 **<mark>090</mark>** DBMS의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •데이터의 논리적, 물리적 독립성이 보장됨 
 
@@ -1399,6 +1451,8 @@ Ant와 동일한 아파치 소프트웨어 재단에서 개발된 것으 Maven �
 2404602<br><!-- End of picture text -->
 
 ### **<mark>100</mark>** 
+Phần “**<mark>100</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 시스템 환경, 즉 운영체제(OS), CPU, 메모리 등에 필요한 최소 환경을 정의한다. 
 
@@ -1656,6 +1710,8 @@ Ant와 동일한 아파치 소프트웨어 재단에서 개발된 것으 Maven �
 ### 핵심 **<mark>111</mark>** 
 
 #### 형상 관리 기능 
+Phần “형상 관리 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 형상 식별 : 형상 관리 대상에 이름과 관리 번호를 부여 하고, 계층(Tree) 구조로 구분하여 수정 및 추적이 용이 하도록 하는 작업 
 
@@ -1683,6 +1739,8 @@ Ant와 동일한 아파치 소프트웨어 재단에서 개발된 것으 Maven �
 
 
 ### **<mark>110</mark>** 형상 관리의 중요성 
+Phần “**<mark>110</mark>** 형상 관리의 중요성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 지속적인 소프트웨어의 변경 사항을 체계적으로 추적 하고 통제할 수 있다. 
 
@@ -1928,6 +1986,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2405501<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |정적<br>테스트|• 프로그램을 실행하지 않고 명세서나 소스 코드를 대상<br>으로 분석하는 테스트<br>• 소프트웨어 개발 초기에 결함을 발견할 수 있어 소프<br>트웨어의 개발 비용을 낮추는데 도움이 됨<br>• 종류 : 워크스루, 인스펙션, 코드 검사 등|
 |---|---|
@@ -1943,6 +2003,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2405502<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |명세 기반<br>테스트|• 사용자의 요구사항에 대한 명세를 빠짐없이 테스트<br>케이스로 만들어 구현하고 있는지 확인하는 테스트<br>• 종류 : 동등 분할, 경계 값 분석 등|
 |---|---|
@@ -1991,6 +2053,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ### **<mark>125</mark>** 시각에 따른 테스트 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |검증<br>|개발자의 시각에서 제품의 생산 과정을 테스트하|
 |---|---|
@@ -2365,6 +2429,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 테스트 자동화는 사람이 반복적으로 수행하던 테스트 절 차를 스크립트 형태로 구현하는 자동화 도구를 적용함으로 써 쉽고 효율적으로 테스트를 수행할 수 있도록 한 것이다. 
 
 ###### 테스트 자동화 도구의 유형 
+Phần “테스트 자동화 도구의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |23.2, 22.4, 20.9|2406005|
 |---|---|
@@ -2393,6 +2459,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||• 스크립트 언어를 사용하여 테스트를 실행하는<br>방법으로, 테스트 데이터와 테스트 수행 방법<br>등이 포함된 스크립트를 작성한 후 실행함|
 |---|---|
@@ -2447,6 +2515,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2406131<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테스트 드라이버(Test Driver) : 테스트 대상의 하위 모듈 을 호출하고, 매개변수(Parameter)를 전달하고, 모듈 테스트 수행 후의 결과를 도출하는 도구 
 
@@ -2484,6 +2554,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |O(1)|입력값(n)에 관계 없이 일정하게 문제 해결에 하나의<br>단계만을 거침<br>스택의 삽입(Push), 삭제(Pop)|
 |---|---|
@@ -2566,6 +2638,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 **44** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 비교적 애플리케이션 개발 초기의 결함을 찾는데 사 용되고, 개발 완료 시점에서는 개발된 소스 코드의 품질을 검증하는 차원에서 사용된다. 
 
@@ -2612,6 +2686,8 @@ ESB는 애플리케이션 간 연계, 데이터 변환, 웹 서비스 지 원 �
 2459911<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - EAI는 기업 내 각종 애플리케이션 및 플랫폼 간의 정보 전달, 연계, 통합 등 상호 연동이 가능하게 해주는 솔루 션이다. 
 
@@ -2682,6 +2758,8 @@ XML은 특수한 목적을 갖는 마크업 언어를 만드는 데 사 용되�
 ### **<mark>160</mark>** 데이터 무결성 검사 도구 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 무결성 검사 도구는 시스템 파일의 변경 유무를 확인하고, 파일이 변경되었을 경우 이를 관리자에게 알 려주는 도구로, 인터페이스 보안 취약점을 분석하는데 사용된다. 
 
@@ -2736,6 +2814,8 @@ AJAX는 자바 스크립트(JavaScript) 등을 이용하여 클라 이언트와 
 2407402<br><!-- End of picture text -->
 
 ### **<mark>160</mark>** 인터페이스 구현 검증 도구 
+Phần “**<mark>160</mark>** 인터페이스 구현 검증 도구” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터페이스 구현을 검증하기 위해서는 인터페이스 단 위 기능과 시나리오 등을 기반으로 하는 통합 테스트가 필요하다. 
 
@@ -2751,6 +2831,8 @@ AJAX는 자바 스크립트(JavaScript) 등을 이용하여 클라 이언트와 
 **46** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |FitNesse|웹 기반 테스트케이스 설계, 실행, 결과 확인 등을 지원<br>하는 테스트 프레임워크|
 |---|---|
@@ -2793,6 +2875,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 핵심 02.9, 02.5 
 
 ## **<mark>062</mark>** 불대수의 기본 공식 
+Phần “**<mark>062</mark>** 불대수의 기본 공식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 교환법칙 :�A+B�=�B+A,�A·B�=�B·A 
 
@@ -2813,6 +2897,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 핵심 12.8, 12.5, 11.8, 11.3, 10.5, 10.3, 08.9, 08.5, 02.5, 99.4 **<mark>063</mark>** 논리식의 간소화 
 
 ###### 불 대수의 기본 공식 이용하기 
+Phần “불 대수의 기본 공식 이용하기” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶��합의�곱((A+B)(C+D))�표현을�곱의�합(AC+AD+� BC+BD)�표현으로�변환한다. 
 
@@ -2823,6 +2909,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 - 카르노�맵은�변수(입력선)의�개수에�따라�표의�크기가� 달라지며�칸의�위치에�따라서�각�칸의�불�함수가�정해 진다. 
 
 ###### <변수가 두 개일 때> 
+Phần “<변수가 두 개일 때>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A<br>B<br>0<br>(B)|1<br>(B)|
 |---|---|
@@ -2832,6 +2920,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 
 
 ###### <변수가 세 개일 때> 
+Phần “<변수가 세 개일 때>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A는 1 B는 0 C는 0이므로|0(A)<br>A<br>BC|000:0<br>00<br>(BC)|001:1<br>01<br>(BC)|011:3<br>11<br>(BC)|010:2<br>10<br>(BC)|
 |---|---|---|---|---|---|
@@ -2955,6 +3045,8 @@ A A<br>➊ B ➍<br>B<br>B<br>➋ C C<br>A<br>➌<br>C<br><!-- End of picture te
 자리올림�수(C�i)를�포함하여�1Bit�크기의�2진수�3자리를�더 하여�합(Sum)과�자리올림�수(Carry)를�구하는�회로이다. 
 
 ###### 진리표 
+Phần “진리표” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A||B|Ci|Sum|Ci+1|
 |---|---|---|---|---|---|
@@ -2970,6 +3062,8 @@ A A<br>➊ B ➍<br>B<br>B<br>➋ C C<br>A<br>➌<br>C<br><!-- End of picture te
 
 
 ###### 논리식 
+Phần “논리식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •합계(Sum)�=�(A`⊕```B)�⊕�C�i 
 
@@ -2989,6 +3083,8 @@ A A<br>➊ B ➍<br>B<br>B<br>➋ C C<br>A<br>➌<br>C<br><!-- End of picture te
 1Bit짜리�2진수�2개를�덧셈한�합(S)과�자리올림�수(C)를� 구하는�회로이다. 
 
 ###### 진리표 
+Phần “진리표” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A||B||Sum|Carry|
 |---|---|---|---|---|---|
@@ -3025,6 +3121,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>068</mark>** 디코더(Decoder) 
+Phần “**<mark>068</mark>** 디코더(Decoder)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - n�Bit의�Code화된�정보를�그�Code의�각�Bit�조합에� 따라�2�n개의�출력으로�번역하는�회로이다. 
 
@@ -3045,6 +3143,8 @@ D0<br>D1<br>D2<br>D3<br><!-- End of picture text -->
 핵심 14.8, 14.5, 12.8, 12.3, 11.3, 10.5, 10.3, 08.9, 08.3, 06.5, 06.3, 05.5, 04.9, 03.5, 02.9, 02.5, 00.7, 99.4 
 
 ## **<mark>069</mark>** 플립플롭 
+Phần “**<mark>069</mark>** 플립플롭” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 플립플롭은�전원이�공급되고�있는�한,�상태의�변화를� 위한�신호가�발생할�때까지�현재의�상태를�그대로�유지 하는�논리회로이다. 
 
@@ -3065,6 +3165,8 @@ D0<br>D1<br>D2<br>D3<br><!-- End of picture text -->
 ###### <RS 플립플롭> 
 
 ###### <JK 플립플롭> 
+Phần “<JK 플립플롭>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |S|R|Q(T+1)|암기|J|K|Q(T+1)|암기|
 |---|---|---|---|---|---|---|---|
@@ -3097,6 +3199,8 @@ D0<br>D1<br>D2<br>D3<br><!-- End of picture text -->
 
 
 ## 핵심 11.6, 10.9, 08.3, 07.5, 01.9, 00.10 **<mark>070</mark>** 자료 구성의 단위 
+Phần “핵심 11.6, 10.9, 08.3, 07.5, 01.9, 00.10 **<mark>070</mark>** 자료 구성의 단위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |비트(Bit,<br>Binary Digit)|•자료(정보)표현의최소단위<br>•2가지상태(0과1)를표시하는2진수1자리<br>•nBit를이용하여2<br>n가지를표현할수있음|
 |---|---|
@@ -3156,6 +3260,8 @@ www.sinagong.co.kr
 
 
 ###### 2진수, 8진수, 16진수 상호 변환 
+Phần “2진수, 8진수, 16진수 상호 변환” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |2진수|8진수|16진수|
 |---|---|---|
@@ -3170,6 +3276,8 @@ www.sinagong.co.kr
 
 
 ###### <소수 부분> 
+Phần “<소수 부분>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |2진수|8진수|16진수|
 |---|---|---|
@@ -3240,6 +3348,8 @@ www.sinagong.co.kr
 부호화�2의�보수법 양수�표현에�대하여� 한�가지�형태의�0만� (Signed�2's� 2의�보수를�취함 존재(+0) Complement) 
 
 ###### 표현 범위 
+Phần “표현 범위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종 류|범 위|n=8|n=16|n=32|
 |---|---|---|---|---|
@@ -3251,6 +3361,8 @@ www.sinagong.co.kr
 
 
 ###### 잠깐만요 ! 2의 보수 표현법이 널리 사용되는 이유 
+Phần “잠깐만요 ! 2의 보수 표현법이 널리 사용되는 이유” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�2의�보수�표현법은�1의�보수�표현법에�비해�음수�표현�시�숫자�1개 를�더�표현할�수�있습니다. 
 
@@ -3267,6 +3379,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>073</mark>** 2진 연산 
+Phần “**<mark>073</mark>** 2진 연산” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정수값을�2진수로�변환하여�표현하는�방식이다. 
 
@@ -3354,6 +3468,8 @@ www.sinagong.co.kr
 - ➎�가수의�나눗셈을�한다. 
 
 ## 핵심 13.8, 12.3, 08.5, 08.3 **<mark>076</mark>** 해밍 코드의 오류 검출 
+Phần “핵심 13.8, 12.3, 08.5, 08.3 **<mark>076</mark>** 해밍 코드의 오류 검출” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 해밍�코드�중��1,�2,�4,�8,�16�……�2�<sup>n</sup> �번째�비트는�오류� 검출을�위한�패리티�비트이다. 
 
@@ -3364,6 +3480,8 @@ www.sinagong.co.kr
       - <mark>패리티�비트</mark> 
 
 ## 핵심 14.3, 11.6, 03.5, 02.3, 01.9, 99.10 **<mark>075</mark>** 자료 표현 코드 
+Phần “핵심 14.3, 11.6, 03.5, 02.3, 01.9, 99.10 **<mark>075</mark>** 자료 표현 코드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |BCD 코드|•10진수1자리의수를2진수4Bit로표현함<br>•4Bit의2진수각Bit가8(2<br>3),4(2<br>2),2(2<br>1),1(2<br>0)의자리<br>값을가지므로8421코드라고도함<br>•대표적인가중치코드<br>•문자코드인BCD에서Zone부분을생략한형태임<br>•10진수입·출력이간편함|
 |---|---|
@@ -3437,6 +3555,8 @@ Gray Code를 2진수로 변환하는 방법
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
 
 ## 핵심 14.8, 12.8, 12.5, 12.3, 11.6, 07.5, 07.3, 04.5, 04.3, 02.9, 02.5, 00.7, 00.3 **<mark>078</mark>** 중앙처리장치의 구성 요소 
+Phần “핵심 14.8, 12.8, 12.5, 12.3, 11.6, 07.5, 07.3, 04.5, 04.3, 02.9, 02.5, 00.7, 00.3 **<mark>078</mark>** 중앙처리장치의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�컴퓨터에�있는�모든�장치들의�동작을�지시하고�제어하는� 장치 
 
@@ -3505,6 +3625,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>079</mark>** 주요 레지스터 
+Phần “**<mark>079</mark>** 주요 레지스터” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |레지스터|기 능|
 |---|---|
@@ -3524,6 +3646,8 @@ www.sinagong.co.kr
 핵심 04.5, 00.10 
 
 ## **<mark>080</mark>** 버스 
+Phần “**<mark>080</mark>** 버스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CPU,�메모리,�I/O�장치�등과�상호�필요한�정보를�교환 하기�위해�연결하는�공동의�전송선이다. 
 
@@ -3534,6 +3658,8 @@ www.sinagong.co.kr
 ##### ~~핵심 요약~~ 
 
 ###### • 버스의 종류 
+Phần “• 버스의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 번지 버스(Address Bus) :�CPU가�메모리나� 입·출력�기기의�번지를�지정할�때�사용하는� 단방향�전송선 
 
@@ -3550,6 +3676,8 @@ www.sinagong.co.kr
 핵심 12.5, 11.3, 10.9, 10.5, 10.3, 09.8, 08.9, 08.3, 07.9, 07.5, 06.3, 05.9, 05.3, 04.5, 03.8, 03.5, 03.3, 02.3, 00.7 
 
 ## **<mark>081</mark>** 명령어의 구성 
+Phần “**<mark>081</mark>** 명령어의 구성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Operation Code, 연산자부|모드(Mode)부|Operand, 자료부|
 |---|---|---|
@@ -3603,6 +3731,8 @@ www.sinagong.co.kr
 13.8, 10.9, 10.3, 07.3, 06.2, 05.4, 05.3, 04.4, 04.2, 03.3, 03.1, 02.4, 02.3, 02.2, 02.1, 01.1, 00.3, 00.2, 97.3 
 
 ## 핵심 **<mark>082</mark>** 연산자(Operation Code)의 기능 
+Phần “핵심 **<mark>082</mark>** 연산자(Operation Code)의 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 
 
@@ -3625,6 +3755,8 @@ NOT�A처럼�피연산자가�1개만�필요한�연산자를�단항�
 단항 연산자 NOT,�COMPLEMENT,�SHIFT,�ROTATE,� (Unary Operator) MOVE,�CLEAR�등 이항 연산자 사칙�연산,�AND,�OR,�XOR,�XNOR (Binary Operator) 
 
 ## 핵심 14.3, 13.6, 12.5, 10.5, 08.9, 08.5, 05.9, 05.5, 05.3, 04.3, 03.3, 00.3, 99.4 **<mark>084</mark>** 연산 
+Phần “핵심 14.3, 13.6, 12.5, 10.5, 08.9, 08.5, 05.9, 05.5, 05.3, 04.3, 03.3, 00.3, 99.4 **<mark>084</mark>** 연산” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�2개의�데이터를�비교하거나�특정�비트를�반전시킬� 
 
@@ -3703,6 +3835,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 1�1�0�1�0�1�0�1��→��1�0�1�0�1�0�1�0 잃어버리는�비트 부호�비트 Padding�비트 
 
 ## 03.5, 03.3, 02.9, 02.5 핵심 14.5, 14.3, 13.8, 12.5, 11.8, 11.6, 10.9, 09.8, 09.3, 07.9, 07.5, 07.3, 06.9, 06.5, 06.3, 05.9, 05.5, 05.3, 04.5, 04.3, 03.8, **<mark>086</mark>** 명령어 형식 
+Phần “03.5, 03.3, 02.9, 02.5 핵심 14.5, 14.3, 13.8, 12.5, 11.8, 11.6, 10.9, 09.8, 09.3, 07.9, 07.5, 07.3, 06.9, 06.5, 06.3, 05.9, 05.5, 05.3, 04.5, 04.3, 03.8, **<mark>086</mark>** 명령어 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�Operand부가�3개로�구성되는�명령어�형식으로�여러� 개의�범용�레지스터(GPR)를�가진�컴퓨터에서�사용함 
 
@@ -3725,6 +3859,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |2 번지<br>명령어|•단점<br>-연산의결과는주로Operand1에저장되므로<br>Operand1에있던원래의자료가파괴됨<br>-전체프로그램의길이가길어짐|
 |---|---|
@@ -3735,6 +3871,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 
 
 ## 핵심 14.8, 14.3, 05.9, 05.5, 00.7, 99.8 **<mark>087</mark>** 주소 설계 시 고려 사항 
+Phần “핵심 14.8, 14.3, 05.9, 05.5, 00.7, 99.8 **<mark>087</mark>** 주소 설계 시 고려 사항” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 표현의 효율성 : 빠르게�접근하고�주소�지정에�적은�비트 수를�사용할�수�있도록�다양한�어드레스�모드를�사용할� 수�있어야�함 
 
@@ -3747,6 +3885,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 - �- 기억공간�:�주기억장치�내의�실제�기억공간 
 
 ## 00.1 핵심 14.8, 13.8, 12.8, 12.5, 10.9, 10.5, 09.5, 08.9, 08.5, 07.5, 06.9, 06.3, 05.9, 05.3, 04.9, 03.8, 03.5, 02.5, 01.9, 01.6, 01.3, **<mark>088</mark>** 주소지정방식의 종류 
+Phần “00.1 핵심 14.8, 13.8, 12.8, 12.5, 10.9, 10.5, 09.5, 08.9, 08.5, 07.5, 06.9, 06.3, 05.9, 05.3, 04.9, 03.8, 03.5, 02.5, 01.9, 01.6, 01.3, **<mark>088</mark>** 주소지정방식의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |암시적 주소<br>지정방식<br>(Implied<br>Mode)|•명령실행에필요한데이터의위치를지정하지<br>않고누산기나스택의데이터를묵시적으로지<br>정하여사용함<br>•오퍼랜드가없는명령이나‘PUSHR1’처럼오퍼<br>랜드가1개인명령어형식에사용됨|
 |---|---|
@@ -3795,6 +3935,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>089</mark>** 마이크로 오퍼레이션(Micro Operation)의 정의 
+Phần “**<mark>089</mark>** 마이크로 오퍼레이션(Micro Operation)의 정의” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Instruction을�수행하기�위해�CPU�내의�레지스터와� 플래그가�의미�있는�상태�변환을�하도록�하는�동작이다. 
 
@@ -3807,6 +3949,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 마이크로�오퍼레이션의�순서를�결정하기�위하여�제어 장치가�발생하는�신호를�제어신호라고�한다. 
 
@@ -3864,12 +4008,16 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>091</mark>** 메이저 스테이트 
+Phần “**<mark>091</mark>** 메이저 스테이트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 현재�CPU가�무엇을�하고�있는가를�나타내는�상태로서� Fetch,�Indirect,�Execute,�Interrupt�이렇게�4개 의�상태가�있다. 
 
 - CPU는�메이저�스테이트의�4가지�단계를�반복적으로� 거치면서�동작을�수행한다. 
 
 ###### • 동작 순서 
+Phần “• 동작 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Micro Operation|의 미|
 |---|---|
@@ -3892,6 +4040,8 @@ www.sinagong.co.kr
 핵심 10.9, 10.3, 09.8, 09.3, 07.5, 06.9, 05.4, 05.3, 03.8, 99.10 
 
 ## **<mark>093</mark>** 간접 단계(Indirect Cycle) 
+Phần “**<mark>093</mark>** 간접 단계(Indirect Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Fetch�단계에서�해석된�명령의�주소부가�간접주소인� 경우�수행된다. 
 
@@ -3906,6 +4056,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>092</mark>** 인출 단계(Fetch Cycle) 
+Phần “**<mark>092</mark>** 인출 단계(Fetch Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 명령어를�주기억장치에서�중앙처리장치의�명령�레지스 터로�가져와�해독하는�단계이다. 
 
@@ -3929,6 +4081,8 @@ www.sinagong.co.kr
 핵심 12.8, 12.5, 11.8, 10.9, 09.5, 08.9, 05.4, 05.3, 04.5, 03.5, 02.9,  01.9, 01.6, 01.3, 00.3, 99.10 
 
 ## **<mark>094</mark>** 인터럽트 단계(Interrept Cycle) 
+Phần “**<mark>094</mark>** 인터럽트 단계(Interrept Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터럽트�발생�시�복귀주소(PC)를�저장시키고,�제어순 서를�인터럽트�처리�프로그램의�첫�번째�명령으로�옮기 는�단계이다. 
 
@@ -4013,6 +4167,8 @@ BSA(Branch and Save Return Address)
 
 
 ## 핵심 13.6, 10.9, 08.3, 02.3, 01.3 **<mark>096</mark>** 제어 데이터 
+Phần “핵심 13.6, 10.9, 08.3, 02.3, 01.3 **<mark>096</mark>** 제어 데이터” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제어장치가�제어�신호를�발생하기�위한�자료로서,� CPU가�특정한�메이저�상태와�타이밍�상태에�있을�때� 제어�자료에�따른�제어�규칙에�의해�제어�신호가�발생 한다. 
 
@@ -4063,12 +4219,16 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제어�기억장치의�용량을�줄일�수�있다.� 
 
 - 마이크로�명령어의�코드화된�비트들을�해독하기�위 한�지연이�발생한다.� 
 
 ###### 나노 명령(Nano Instruction) 
+Phần “나노 명령(Nano Instruction)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 나노�메모리(Nano�Memory)라는�낮은�레벨의�메모 리에�저장된�마이크로�명령을�나노�명령이라�한다. 
 
@@ -4080,6 +4240,8 @@ www.sinagong.co.kr
 핵심 12.3, 11.6, 09.5, 09.3, 03.8, 03.5, 00.10, 99.10<br>099 입·출력장치의 구성<br>입· 출력장치<br>주기억장치<br>입· 출력장치 제어기<br>주<br>기<br>억 입· 출력 제어기 인터페이스 입· 출력 버스<br>장<br>치<br>입· 출력 제어기 인터페이스 입· 출력 버스<br>버<br>스<br>입· 출력장치 제어기<br>중앙처리장치<br>입· 출력장치<br><!-- End of picture text -->
 
 ###### 입·출력 제어장치 
+Phần “입·출력 제어장치” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 입·출력장치와�컴퓨터�사이의�자료�전송을�제어하 는�장치이다. 
 
@@ -4110,6 +4272,8 @@ www.sinagong.co.kr
 - 종류 :�DMA,�채널,�입·출력�프로세서,�입·출력�컴 퓨터�등 
 
 ###### 입·출력 인터페이스 
+Phần “입·출력 인터페이스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 동작�방식이나�데이터�형식이�서로�다른�컴퓨터�내 부의�주기억장치나�CPU의�레지스터와�외부�입·출 력장치�간의�2진�정보를�원활하게�전송하기�위한�방 법을�제공한다. 
 
@@ -4167,6 +4331,8 @@ www.sinagong.co.kr
 핵심 10.5, 07.9, 06.3, 04.9, 03.5, 03.3, 02.9, 99.8 
 
 ## **<mark>101</mark>** 스풀링(SPOOLING) 
+Phần “**<mark>101</mark>** 스풀링(SPOOLING)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •Simultaneous�Peripheral�Operation�On-Line 의�약자이다. 
 
@@ -4188,6 +4354,8 @@ www.sinagong.co.kr
 05.5, 05.3, 04.9, 04.3, 03.8, 03.5, 02.5, 02.3, 01.9, 01.6, 00.7, 00.3, 99.10 14.8, 13.8, 13.6, 13.3, 12.5, 12.3, 11.8, 11.6, 11.3, 10.9, 10.5, 09.8, 09.5, 08.9, 08.5, 08.3, 07.5, 07.3, 06.9, 06.5, 06.3, 
 
 ## 핵심 **<mark>102</mark>** 입·출력(Input-Output) 제어 방식 
+Phần “핵심 **<mark>102</mark>** 입·출력(Input-Output) 제어 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�원하는�I/O가�완료되었는지의�여부를�검사하기� 위해서�CPU가�상태�Flag를�계속�조사하여�I/O가� 완료�되었으면�MDR(MBR)과�AC�사이의�자료�전 송을�CPU가�직접�처리하는�I/O�방식 
 
@@ -4280,6 +4448,8 @@ www.sinagong.co.kr
 ###### Cycle Steal 
 
 ###### 잠깐만요 ! 
+Phần “잠깐만요 !” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터�채널(DMA�제어기)과�CPU가�주기억장치를�동시에�Access 할�때�우선순위를�데이터�채널에게�주는�방식입니다. 
 
@@ -4304,6 +4474,8 @@ www.sinagong.co.kr
 02.3, 01.6, 01.3, 00.10, 00.7, 99.8 핵심 14.8, 12.8, 12.3, 10.3, 09.3, 08.5, 08.3, 07.9, 07.3, 06.5, 05.5, 05.4, 05.3, 04.9, 04.5, 04.3, 03.5, 03.3, 02.9, 02.5, 
 
 ## **<mark>103</mark>** 인터럽트의 종류 및 발생 원인 
+Phần “**<mark>103</mark>** 인터럽트의 종류 및 발생 원인” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램을�실행하는�도중에�예기치�않은�상황이�발생 할�경우�현재�실행중인�작업을�즉시�중단하고,�발생된� 상황을�우선�처리한�후�실행중이던�작업으로�복귀하여� 계속�처리하는�것,�일명�“끼어들기”라고도�한다. 
 
@@ -4344,6 +4516,8 @@ www.sinagong.co.kr
 핵심 06.9, 04.3, 01.6 
 
 ## **<mark>104</mark>** 인터럽트 발생 시 CPU가 확인할 사항 
+Phần “**<mark>104</mark>** 인터럽트 발생 시 CPU가 확인할 사항” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램�카운터의�내용 
 
@@ -4382,6 +4556,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>105</mark>** 인터럽트의 동작 순서 
+Phần “**<mark>105</mark>** 인터럽트의 동작 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ➊ 인터럽트 요청 신호 발생 
 
@@ -4392,6 +4568,8 @@ www.sinagong.co.kr
 - ➍  인터럽트 처리 루틴을 실행함 : 인터럽트를�요청한�장치 를�식별함 
 
 ## **<mark>106</mark>** 인터럽트 우선순위 
+Phần “**<mark>106</mark>** 인터럽트 우선순위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 목적 : 여러�장치에서�동시에�인터럽트가�발생하였을�때� 먼저�서비스할�장치를�결정하기�위해서임 
 
@@ -4400,6 +4578,8 @@ www.sinagong.co.kr
 03.3, 02.5, 02.3, 01.6, 01.3, 00.10 
 
 ## 핵심 13.6, 13.3, 12.8, 11.8, 11.6, 11.3, 10.3, 08.9, 08.5, 08.3, 07.9, 07.3, 06.9, 05.9, 05.4, 05.3, 04.9, 04.5, 04.3, 03.8, 03.5, **<mark>107</mark>** 인터럽트 우선순위 판별 방법 
+Phần “핵심 13.6, 13.3, 12.8, 11.8, 11.6, 11.3, 10.3, 08.9, 08.5, 08.3, 07.9, 07.3, 06.9, 05.9, 05.4, 05.3, 04.9, 04.5, 04.3, 03.8, 03.5, **<mark>107</mark>** 인터럽트 우선순위 판별 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ➎  인터럽트 서비스(취급) 루틴을 실행함 
 
@@ -4462,6 +4642,8 @@ www.sinagong.co.kr
 ###### 14.3, 12.5, 12.3, 10.9, 09.3, 08.5, 05.5, 04.3, 03.8, 02.9, 02.3, 01.6, 99.4 
 
 ## 핵심 **<mark>108</mark>** 기억장치의 특성을 결정하는 요소 
+Phần “핵심 **<mark>108</mark>** 기억장치의 특성을 결정하는 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |기억 용량|기억장치는무조건기억용량이큰것을사용한다<br>고해서좋은것이아니라,사용목적에따라성능<br>당경비비율이적은것을사용하는것이바람직함|
 |---|---|
@@ -4478,6 +4660,8 @@ www.sinagong.co.kr
 핵심 10.9, 07.3, 06.5, 05.9, 00.7 
 
 ## **<mark>109</mark>** ROM(Read Only Memory) 
+Phần “**<mark>109</mark>** ROM(Read Only Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기억된�내용을�읽을�수만�있는�기억장치로서�일반적으 로�쓰기는�불가능하다. 
 
@@ -4500,6 +4684,8 @@ www.sinagong.co.kr
 핵심 13.6, 07.3, 04.5, 02.9 
 
 ## **<mark>110</mark>** RAM(Random Access Memory) 
+Phần “**<mark>110</mark>** RAM(Random Access Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자유롭게�읽고�쓸�수�있는�기억장치로,�RWM(Read� Write�Memory)이라고도�한다. 
 
@@ -4559,6 +4745,8 @@ Chip 선택 1 CS1 Chip 선택 1 CS1<br>Chip 선택 2 CS2 Chip 선택 2 CS2<br>12
 - CS1, CS2 :�칩�선택선 
 
 ###### RAM/ROM의 용량 계산 
+Phần “RAM/ROM의 용량 계산” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 위�그림에서�RAM은�주소선이�7개이고,�Data�Bus가� 8Bit이므로�128(2�<sup>7</sup> )×8Bit의�용량이고,�ROM은�주소 선이�9개이고,�Data�Bus가�16Bit이므로�512(2�<sup>9</sup> )× 16Bit의�용량이다. 
 
@@ -4569,6 +4757,8 @@ Chip 선택 1 CS1 Chip 선택 1 CS1<br>Chip 선택 2 CS2 Chip 선택 2 CS2<br>12
 - ���Data�Bus의�비트�수�=�MBR�=�IR 
 
 ## 핵심 09.3, 05.4, 03.8, 02.9, 00.7, 99.8 **<mark>112</mark>** 자기 코어 
+Phần “핵심 09.3, 05.4, 03.8, 02.9, 00.7, 99.8 **<mark>112</mark>** 자기 코어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 자기�코어는�전류�일치�기술(Coincident-Current� Technique)에�의하여�기억장소를�선별한다. 
 
@@ -4599,6 +4789,8 @@ Chip 선택 1 CS1 Chip 선택 1 CS1<br>Chip 선택 2 CS2 Chip 선택 2 CS2<br>12
 ## **<mark>113</mark>** 보조기억장치 
 
 ###### 보조기억장치의 특징 
+Phần “보조기억장치의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 주기억장치에�비해�속도는�느리지만�저장�용량이�크다. 
 
@@ -4619,6 +4811,8 @@ www.sinagong.co.kr
 ~~시험에~~ 나오는 것만 ~~공부한다! 시나공~~ <u>시리즈</u> 
 
 ###### 보조기억장치의 종류 
+Phần “보조기억장치의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |자기 테이프|•순차처리(SASD)만할수있는대용량저장매체<br>•가격이저렴하고용량이커서자료의백업용으로<br>많이사용함<br>•자성물질이코팅된얇은플라스틱테이프를동<br>그란릴에감아놓은형태<br>•테이프의시작과끝부분을알리는은박지사이<br>의정보저장부분을7~9트랙으로구성함<br>•트랙별로1비트를저장하므로동시에7~9비트를<br>읽거나쓸수있음|
 |---|---|
@@ -4629,6 +4823,8 @@ www.sinagong.co.kr
 핵심 09.5, 04.9, 00.10 
 
 ## **<mark>114</mark>** 디스크의 Access Time 
+Phần “**<mark>114</mark>** 디스크의 Access Time” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 디스크�시스템은�디스크�번호,�디스크�표면�번호,�트랙� 번호,�섹터�번호를�표현하는�번지�Bit를�가지고�디스크 의�기억공간을�Access한다. 
 
@@ -4643,12 +4839,16 @@ www.sinagong.co.kr
 핵심 13.6, 10.9, 07.9, 07.3, 05.9, 05.4, 05.3, 04.9, 04.5, 04.3, 03.8, 03.3, 02.5, 01.9, 01.6, 01.3, 00.10 
 
 ## **<mark>115</mark>** 연관 기억장치(Associative Memory) 
+Phần “**<mark>115</mark>** 연관 기억장치(Associative Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기억장치에서�자료를�찾을�때�주소에�의해�접근하지�않 고,�기억된�내용의�일부를�이용하여�접근할�수�있는�기 억장치로,�CAM(Content�Addressable�Memory)이 라고도�한다. 
 
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 주소에�의해서만�접근이�가능한�기억장치보다�정보�검 색이�신속하다.� 
 
@@ -4659,6 +4859,8 @@ www.sinagong.co.kr
 핵심 14.8, 14.5, 14.3, 12.5, 11.6, 11.3, 10.5, 09.5, 09.3, 07.9, 07.5, 07.3, 06.9, 03.5, 00.10, 99.8, 99.4 
 
 ## **<mark>116</mark>** 메모리 인터리빙(Memory Interleaving) 
+Phần “**<mark>116</mark>** 메모리 인터리빙(Memory Interleaving)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 여러�개의�독립된�모듈로�이루어진�복수�모듈�메모리와� CPU�간의�주소�버스가�한�개로만�구성되어�있으면�같 은�시각에�CPU로부터�여러�모듈들로�동시에�주소를� 전달할�수�없기�때문에,�CPU가�각�모듈로�전송할�주소 를�교대로�분산�배치한�후�차례대로�전송하여�여러�모 듈을�병행�접근하는�기법이다. 
 
@@ -4671,6 +4873,8 @@ www.sinagong.co.kr
 잠깐만요 ! 메모리�인터리빙은�인터리빙,�디스크�인터리빙으로�혼용 되어�사용됩니다. 
 
 ## 핵심 13.8, 13.6, 13.3, 12.5, 11.6, 10.5, 10.3, 08.9, 08.5, 07.3, 06.3, 05.3, 03.5, 02.3, 01.9, 01.6, 01.3, 00.3, 99.8, 99,4 **<mark>117</mark>** 캐시 메모리(Cache Memory) 
+Phần “핵심 13.8, 13.6, 13.3, 12.5, 11.6, 10.5, 10.3, 08.9, 08.5, 07.3, 06.3, 05.3, 03.5, 02.3, 01.9, 01.6, 01.3, 00.3, 99.8, 99,4 **<mark>117</mark>** 캐시 메모리(Cache Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CPU의�속도와�메모리의�속도�차이를�줄이기�위해�사 용하는�고속�Buffer�Memory이다. 
 
@@ -4729,6 +4933,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 주기억장치의�이용률과�다중�프로그래밍의�효율을�높 일�수�있다.� 
 
@@ -4788,6 +4994,8 @@ www.sinagong.co.kr
 14.8, 14.5, 13.8, 12.3, 10.9, 10.5, 11.8, 06.5, 04.5, 99.10 
 
 ## 핵심 **<mark>120</mark>** 병렬처리기법 
+Phần “핵심 **<mark>120</mark>** 병렬처리기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�CPU의�처리속도를�높이기�위해�2개�이상의�명령 (Instruction)을�동시에�병렬�처리하는�장치로,�분업 화의�원리를�활용하여�시간적�병렬�처리를�함 
 
@@ -4814,6 +5022,8 @@ www.sinagong.co.kr
 # **Chapter 1. 데이터 입출력 구현** 
 
 # **023 자료구조★★★** 
+Phần “**023 자료구조★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁선형 vs 비선형 자료구조 
 
@@ -4832,6 +5042,8 @@ www.sinagong.co.kr
 자료구조 특징<br>리스트 -<br>일정한 순서에 의해 나열된 자료구조 (선형 리스트, 연결 리스트)<br>(List)<br>- 순서가 있는 리스트에서 데이터의 삽입(Push), 삭제(Pop)가<br>스택 일어나며  LIFO(Last-In-First-Out) 의 특징을  가지는 자료구조<br>(Stack)<br>복귀 주소  저장, 함수 호출의 순서 제어, 재귀호출,<br>큐<br>(Dequeue)가 일어나는  FIFO(First-In Frist-Out)<br>(Queue)<br>-  (응용분야) 운영체제의 작업 스케줄링<br><!-- End of picture text -->
 
 # ⦁자료구조의 종류 
+Phần “⦁자료구조의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**자료구조**|**특징**|
 |---|---|---|
@@ -4864,6 +5076,8 @@ www.sinagong.co.kr
 데크(Deque) 트리(Tree) 그래프(Graph)<br>선형 리스트 연결 리스트<br>(Linear List) (Linked List)<br>배열과 같이 연속되는 기억 장소에 저장되는 리<br>노드와 포인터 부분으로 서로 연결시킨 리스트<br>스트<br>고정적인 크기 가변적인 크기<br>노드들이 포인터로 연결되어 있어 삽입, 삭제<br>검색 빠름<br>연산 쉬움<br>- 포인터(Pointer)를 위한 추가 공간 필요<br>- 검색 느림<br>삽입, 삭제 연산이 연결 리스트에 비해 느림<br>- 연결 리스트 중에 중간 노드 연결이 끊어지<br><!-- End of picture text -->
 
 # **024 선형 자료구조★★** 
+Phần “**024 선형 자료구조★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁선형 리스트(Linear List) vs 연결 리스트(Linked List) 
 
@@ -4959,6 +5173,8 @@ www.sinagong.co.kr
 - 시간 복잡도 O(1)의 의미: 알고리즘 수행시간이 입력 데이터 수와 관계없이 일정 
 
 # **028 정렬 ★★★** 
+Phần “**028 정렬 ★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**알고리즘**|**설명**|**최적**|**평균**|**최악**|
 |---|---|---|---|---|
@@ -5015,6 +5231,8 @@ www.sinagong.co.kr
 # ⦁해싱 함수(Hashing Function) 
 
 # ⦁해시 충돌 해결 방법 
+Phần “⦁해시 충돌 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**방법**<br>**설**|**명**|
 |---|---|
@@ -5071,6 +5289,8 @@ www.sinagong.co.kr
 - 명백한 역할을 가지고 독립적으로 존재할 수 있는 시스템의 부분으로 넓은 의미에서는 재사용되는 모 든 단위라고 볼 수 있으며, 인터페이스를 통해서만 접근할 수 있는 것 
 
 # **032 형상 관리 ★★★** 
+Phần “**032 형상 관리 ★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁형상 관리 
 
@@ -5087,6 +5307,8 @@ www.sinagong.co.kr
 
 
 # ⦁형상 관리 방식(=버전 관리 방식) 
+Phần “⦁형상 관리 방식(=버전 관리 방식)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**설명**|
 |---|---|
@@ -5108,6 +5330,8 @@ www.sinagong.co.kr
 # ⦁형상 관리 도구 기능 
 
 # **033 IDE·협업 도구** 
+Phần “**033 IDE·협업 도구**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁IDE(Integrated Development Environment) 도구 
 
@@ -5154,6 +5378,8 @@ www.sinagong.co.kr
 - 재사용 단점: 기존 소프트웨어에 재사용 소프트웨어를 추가하기 어려움, 새로운 개발 방법론 도입 어 려움, 프로그램 언어가 종속적, 프로그램의 표준화가 부족 
 
 # ⦁재사용(Reuse) 기법에 따른 분류 
+Phần “⦁재사용(Reuse) 기법에 따른 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**설명**|
 |---|---|
@@ -5201,6 +5427,8 @@ www.sinagong.co.kr
 디지털 콘텐츠에 대한 권리정보를 지정하고 암호화 기술을 이용하여 허가된 사용자의 허가된 권한 범위 내에서 콘텐츠의 이용이 가능하도록 통제하는 기술 
 
 # ⦁디지털 저작권 관리(DRM) 기술요소 
+Phần “⦁디지털 저작권 관리(DRM) 기술요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**기술요소**|**설명**|
 |---|---|
@@ -5240,6 +5468,8 @@ y<br>외우기 Tip!  클리어링 하우스에는, 에는,  콘텐츠 제공자,
 **외우기 Tip!** 클리어링 하우스에는, 에는, 콘텐츠 제공자, 소비자, 분배자가 살고, 패키저로 패키징된 가 살고, 패키저로 패키징된 DRM 콘텐 츠는 는 DRM 컨트롤러 경비와 보안 컨테이너 잠금장치로 보호된다. 
 
 # **037 제품 소프트웨어 매뉴얼 작성 ★★** 
+Phần “**037 제품 소프트웨어 매뉴얼 작성 ★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁제품 소프트웨어 매뉴얼 
 
@@ -5262,6 +5492,8 @@ y<br>외우기 Tip!  클리어링 하우스에는, 에는,  콘텐츠 제공자,
 **외우기 Tip!** 사용자 매뉴얼은 이렇게 작성하자! 지침 정하고, 구성 요소 정의하고, 작성한 다음, 매뉴얼 검토하면 끝! 
 
 # **038 애플리케이션 빌드자동화·버전관리·모니터링 도구 ★★** 
+Phần “**038 애플리케이션 빌드자동화·버전관리·모니터링 도구 ★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁빌드자동화·버전관리·모니터링 대표 도구 
 
@@ -5281,6 +5513,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 # **039 소프트웨어 품질 관련 국제 표준 ★★★** 
 
 # ⦁소프트웨어 품질 관련 국제 표준 
+Phần “⦁소프트웨어 품질 관련 국제 표준” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**품질 표준**|**설명**|
 |---|---|
@@ -5292,6 +5526,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 
 
 # ⦁ISO/IEC 9126의 소프트웨어 품질 특성 
+Phần “⦁ISO/IEC 9126의 소프트웨어 품질 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**품질 특성**|**설명**|**부특성**|
 |---|---|---|
@@ -5315,6 +5551,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 
 
 # **Chapter 4. 애플리케이션 테스트 관리 040 애플리케이션 테스트 원리 및 종류 ★★** ⦁애플리케이션 테스트의 기본 원리 
+Phần “**Chapter 4. 애플리케이션 테스트 관리 040 애플리케이션 테스트 원리 및 종류 ★★** ⦁애플리케이션 테스트의 기본 원리” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**원리**|**설명**|
 |---|---|
@@ -5333,6 +5571,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 달라질 수 있으므로, 정황에 따라 테스트를 다르게 수행해야 한다는 원리<br>오류-부재의 궤변<br>결함을 없다고 해도 사용자의 요구사항을 만족시키지 못하면 품질이 높다고 볼 수 없다<br>(Absence of Errors<br>는 원리<br>Fallacy)<br>⦁프로그램 실행 여부에 따른 분류 - 정적 vs 동적 테스트<br>구분 설명 종류<br>- 프로그램을 실행하지 않고 명세서나 소스 코드를 대상으로 분<br>- 워크스루<br>석하는 테스트<br>정적 테스트 - 인스펙션<br>- 소프트웨어 개발 초기에 결함을 발견할 수 있어 소프트웨어의<br>- 코드 검사 등<br>개발 비용을 낮추는데 도움이 됨<br>- 블랙박스(=명세 기반) 테스트<br>- 프로그램을 실행하여 오류를 찾는 테스트<br>동적 테스트 - 화이트박스(=구조 기반) 테스트<br>- 소프트웨어 개발의 모든 단계에서 테스트를 수행할 수 있음<br>-  경험 기반 테스트<br><!-- End of picture text -->
 
 # ⦁프로그램 실행 여부에 따른 분류 - 정적 vs 동적 테스트 
+Phần “⦁프로그램 실행 여부에 따른 분류 - 정적 vs 동적 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**||**설명**|**종류**|
 |---|---|---|---|
@@ -5342,6 +5582,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 
 
 # **041 테스트 케이스 / 테스트 시나리오 / 테스트 오라클 ★★** 
+Phần “**041 테스트 케이스 / 테스트 시나리오 / 테스트 오라클 ★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁테스트 케이스(Test Case) 
 
@@ -5367,6 +5609,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 
 
 # ⦁테스트 시나리오(Test Scenario) 
+Phần “⦁테스트 시나리오(Test Scenario)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테스트 케이스를 적용하는 순서에 따라 여러 개의 테스트 케이스들을 묶은 집합으로, 테스트 케이스들 을 적용하는 구체적인 절차를 명세한 문서 
 
@@ -5402,6 +5646,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 
 
 # ⦁블랙박스 테스트의 종류 
+Phần “⦁블랙박스 테스트의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**테스트종류**|**설명**|
 |---|---|
@@ -5422,6 +5668,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 - 다른 블랙 박스 테스트 기법으로는 찾아낼 수 없는 오류를 찾아내는 일련의 보충적 <u>검사 기법</u> 
 
 # ⦁화이트박스 테스트의 종류 
+Phần “⦁화이트박스 테스트의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**테스트종류**|**설명**|
 |---|---|
@@ -5443,6 +5691,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 # **043 개발 단계에 따른 애플리케이션 테스트: 단위/통합/시스템/인수 테스트 ★★★** 
 
 # ⦁개발 단계에 따른 테스트 분류 - 단위/통합/시스템/인수 테스트 
+Phần “⦁개발 단계에 따른 테스트 분류 - 단위/통합/시스템/인수 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**테스트종류**|**설명**|**기법**|
 |---|---|---|
@@ -5498,6 +5748,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 
 
 # **045 애플리케이션 성능 분석 및 코드 최적화 ★★★** 
+Phần “**045 애플리케이션 성능 분석 및 코드 최적화 ★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁클린 코드 작성 원칙 
 
@@ -5552,6 +5804,8 @@ A nt,  Ma ven,  G radle,  Je nkins<br>빌드 자동화 도구<br>→  A(아) Ma(
 # **047 인터페이스 보안, 기능 구현 및 검증 ★★★** 
 
 # ⦁네트워크 영역의 인터페이스 보안 기술 
+Phần “⦁네트워크 영역의 인터페이스 보안 기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**네트워크 보안 기술**|**설명**|
 |---|---|
@@ -5621,6 +5875,8 @@ Favorite: No
 ## 073. 자료 구조의 분류 (Data Structure)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 데이터를 효율적으로 저장하고 관리하기 위해 분류하는 체계
 - * 핵심 키워드**: 선형 구조, 비선형 구조, 선형 리스트, 트리, 그래프
@@ -5630,6 +5886,8 @@ Favorite: No
 - * 연관 설명**: 074, 075, 076, 078
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 선형 구조(Linear Structure): 데이터가 일렬로 나열되는 구조 (배열, 리스트, 스택, 큐)
 - 비선형 구조(Non-Linear Structure): 데이터가 계층적이거나 망 형태로 연결된 구조 (트리, 그래프)
@@ -5821,6 +6079,8 @@ Favorite: No
 ## 077. 방향/무방향 그래프의 최대 간선 수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 정점(Node) 수 n에 따라 그래프가 가질 수 있는 링크(Edge)의 최대 개수.
 - * 핵심 키워드**: n(n-1)/2, n(n-1), 정점(n), 간선.
@@ -5830,6 +6090,8 @@ Favorite: No
 - * 연관 설명**: 073
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정점이 4개인 경우: 무방향 그래프의 최대 간선 수는 $4(4-1)/2 = 6$개임.
 - 정점이 4개인 경우: 방향 그래프의 최대 간선 수는 $4(4-1) = 12$개임.
@@ -6117,6 +6379,8 @@ Favorite: No
 ## 085. 힙 정렬 (Heap Sort)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 전이진 트리를 힙 트리(Heap Tree)로 변환하여 정렬하는 방식
 - * 핵심 키워드**: 전이진 트리(Complete Binary Tree), 힙 트리 변환, $O(n\log_2n)$
@@ -6126,6 +6390,8 @@ Favorite: No
 - * 연관 설명**: 078, 150
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 전이진 트리 사용: 각 노드가 최대 두 개의 자식을 가지는 구조를 활용함
 - 힙 트리 구축: 부모 노드의 값이 자식보다 크거나 작은 상태를 만듦
@@ -6136,6 +6402,8 @@ Favorite: No
 ## 086. 2-Way 합병 정렬 (Merge Sort)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 이미 정렬된 두 개의 파일을 하나의 파일로 합치며 정렬하는 방식
 - * 핵심 키워드**: 합병(Merge), 2-Way, 분할 및 병합, $O(n\log_2n)$
@@ -6145,6 +6413,8 @@ Favorite: No
 - * 연관 설명**: 150
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 단계적 병합: 요소를 두 개씩 묶어 합치며 정렬된 덩어리를 점점 키워 나감
 - 안정성: 동일한 값의 상대적 순서가 보존되는 안정 정렬(Stable Sort)임
@@ -6201,6 +6471,8 @@ Favorite: No
 ## 088. 해싱 함수 (Hashing Function)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **[1] 개념:** **해시 함수(Hash Function)**를 이용하여 레코드 키에 대한 **해시 테이블(Hash Table)** 내의 **홈 주소(Home Address)**를 계산하여 데이터를 직접 저장하거나 검색하는 방식**[2] 핵심 키워드:** **Hash Table**, **Bucket/Slot**, **Collision(충돌)**, **Overflow**, **제산법(Division)[3] 구조 / 관점 / 분류:** 알고리즘 - 검색 (직접 접근 파일 구조)**[4] 시험 포인트:**
 • **구조 용어 (구분 필수):**
@@ -6215,6 +6487,8 @@ Favorite: No
     ◦ **제곱법, 폴딩법, 기수 변환법** 등이 있음.**[5] 한 문장 설명:** 해싱은 해시 함수를 통해 키를 주소로 변환하여 해시 테이블(버킷/슬롯)에 저장하는 방식으로, 충돌(Collision)과 오버플로(Overflow) 처리가 중요하며 주로 제산법(나머지 연산)을 사용한다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 해싱(Hashing)은 **해시 테이블(Hash Table)**이라는 기억공간을 할당하고,
 
@@ -6233,6 +6507,8 @@ Favorite: No
 ---
 
 ### 무작위법 (Random) : *난수(Random Number)**를 발생시켜 나온 값을 홈 주소로 삼는 방식.
+Phần “무작위법 (Random) : *난수(Random Number)**를 발생시켜 나온 값을 홈 주소로 삼는 방식.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ---
 
@@ -6299,6 +6575,8 @@ Favorite: No
 ## 089. DBMS (Database Management System)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 사용자와 데이터베이스 사이에서 정보를 생성해주고 관리해 주는 소프트웨어.
 - * 핵심 키워드**: 정의 기능(Definition), 조작 기능(Manipulation), 제어 기능(Control).
@@ -6308,6 +6586,8 @@ Favorite: No
 - * 연관 설명**: 163, 170
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정의 기능: 데이터 구조(Type, Structure) 정의, 이용 방식, 제약 조건 명시.
 - 조작 기능: 사용자와 DB 사이의 인터페이스 제공(검색, 갱신, 삽입, 삭제).
@@ -6330,6 +6610,8 @@ Favorite: No
 ## 091. 스키마 (Schema)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 데이터베이스의 구조와 제약 조건에 관해 전반적인 명세를 기술한 것.
 - * 핵심 키워드**: 외부 스키마, 개념 스키마, 내부 스키마.
@@ -6339,6 +6621,8 @@ Favorite: No
 - * 연관 설명**: 089
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 외부 스키마: 서브 스키마라고도 하며 사용자나 응용 프로그래머 관점의 구조.
 - 개념 스키마: 조직 전체의 관점에서 본 통합 논리 구조 (일반적으로 '스키마'라고 하면 이를 지칭).
@@ -6600,6 +6884,8 @@ Favorite: No
 ## 093. 단위 모듈 (Unit Module)의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로그램의 단위 기능을 구현하는 독립적인 최소 소프트웨어 단위.
 - * 핵심 키워드**: 단위 기능 명세서, 알고리즘 구현, 입·출력 기능, 독립적 컴파일.
@@ -6609,6 +6895,8 @@ Favorite: No
 - * 연관 설명**: 038, 133
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 단위 모듈은 기능별로 세분화되어 재사용성과 유지보수성이 높아야 함.
 - 구현 전 단계에서 단위 기능 명세서를 통해 모듈의 역할을 명확히 정의함.
@@ -6739,6 +7027,8 @@ Favorite: No
 ## 094. IPC (Inter-Process Communication)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 모듈 간 통신 또는 복수의 프로세스 간 통신을 구현하기 위한 인터페이스
 - 
@@ -6750,6 +7040,8 @@ Favorite: No
 - * 연관 설명**: 072, 297
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Shared Memory: 다수 프로세스가 동일한 메모리 영역을 공유하여 가장 빠른 통신 가능.
 - Socket: 네트워크를 통해 서로 다른 시스템 간의 프로세스 통신을 지원.
@@ -6802,6 +7094,8 @@ Favorite: No
 ## 095. 단위 모듈 테스트 (Unit Module Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 코딩 직후 소프트웨어 설계의 최소 단위인 모듈이나 컴포넌트에 초점을 맞추어 정해진 기능을 정확히 수행하는지 검증하는 것,
 - * 핵심 키워드**: 모듈/컴포넌트, 화이트박스 테스트, 기능성 테스트, 명세 기반 테스트,
@@ -6811,6 +7105,8 @@ Favorite: No
 - * 연관 설명**: 093, 127, 133
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터페이스, 외부 입·출력(I/O), 자료 구조, 오류처리 경로 등을 중점적으로 검토함
 - 사용자의 요구사항을 기반으로 한 기능성 테스트를 최우선으로 수행함
@@ -6836,6 +7132,8 @@ Favorite: No
 ## 096. 테스트 케이스 (Test Case)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 사용자의 요구사항을 정확하게 준수했는지 확인하기 위한 입력 값, 실행 조건, 기대 결과의 명세서이다.
 - * 핵심 키워드**: 명세 기반 테스트, ISO/IEC/IEEE 29119-3, 입력 명세, 출력 명세.
@@ -6845,6 +7143,8 @@ Favorite: No
 - * 연관 설명**: 142, 143
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 구성 요소: 식별자, 테스트 항목, 입력 명세, 출력 명세, 환경 설정, 특수 절차 요구, 의존성 기술.
 - 개발자가 실제 코드를 작성하기 전에 테스트 케이스를 먼저 작성하여 작업 내용을 명확히 파악하게 함.
@@ -6865,6 +7165,8 @@ Favorite: No
 ## 097. 통합 개발 환경 (IDE; Integrated Development Environment)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 코딩, 디버그, 컴파일, 배포 등 프로그램 개발에 필요한 모든 작업을 하나의 프로그램에서 처리하는 개발 환경이다.
 - * 핵심 키워드**: 코딩, 컴파일, 디버깅, 배포.
@@ -6874,6 +7176,8 @@ Favorite: No
 - * 연관 설명**: 098
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 코딩(Coding): 프로그래밍 언어로 프로그램을 작성하는 기능.
 - 컴파일(Compile): 고급 언어를 컴퓨터가 이해할 수 있는 목적 프로그램으로 변환함.
@@ -6938,6 +7242,8 @@ Favorite: No
 ## 098. 빌드 도구 (Build Tool)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소스 코드 파일들을 컴퓨터에서 실행할 수 있는 제품 소프트웨어로 변환하는 과정을 수행하는 소프트웨어이다.
 - * 핵심 키워드**: Ant, Maven, Gradle, 전처리, 컴파일.
@@ -6947,6 +7253,8 @@ Favorite: No
 - * 연관 설명**: 097, 118, 120
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Ant: 자바 프로젝트의 공식 빌드 도구로 아파치 재단에서 개발함.
 - Maven: Ant의 대안으로 개발되었으며 의존성 관리가 용이함.
@@ -6983,6 +7291,8 @@ Favorite: No
 ## 099. 소프트웨어 패키징 (Software Packaging)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 모듈별로 생성한 실행 파일들을 묶어 배포용 설치 파일을 만드는 과정이다.
 - * 핵심 키워드**: 모듈화, 배포 형태, 사용자 중심, 설치 파일.
@@ -6992,6 +7302,8 @@ Favorite: No
 - * 연관 설명**: 100, 109
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발자 입장이 아닌 실제 소프트웨어를 사용하는 사용자 중심으로 진행함.
 - 다양한 사용자 시스템 환경(OS, CPU, 메모리 등)을 이해하고 그에 맞춰 패키징함.
@@ -7001,6 +7313,8 @@ Favorite: No
 ## 100. 패키징 시 고려사항
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 배포용 소프트웨어를 제작할 때 사용자 편의성과 보안성을 보장하기 위해 확인해야 할 사항들이다.
 - * 핵심 키워드**: 최소 환경 정의, UI 시각 자료, Managed Service, DRM 연동.
@@ -7010,6 +7324,8 @@ Favorite: No
 - * 연관 설명**: 099, 103
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 운영체제, CPU, 메모리 등 실행에 필요한 최소 환경을 명확히 정의함.
 - 시각적인 UI 자료를 제공하고 매뉴얼 내용과 화면을 일치시켜 패키징함.
@@ -7129,6 +7445,8 @@ Favorite: No
 ## 101. DRM 패키징 및 라이선스 등록
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 디지털 콘텐츠를 암호화하여 패키징하고, 저작권자가 설정한 권한 정보를 클리어링 하우스에 등록하는 과정
 - * 핵심 키워드**: 패키징(Packaging), 라이선스(License), 클리어링 하우스, 전자서명
@@ -7138,6 +7456,8 @@ Favorite: No
 - * 연관 설명**: 102, 103
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 원본 콘텐츠가 아날로그인 경우 디지털로 변환한 후 패키저(Packager)에 의해 DRM 패키징 수행
 - 음원이나 문서처럼 크기가 작은 경우 사용자의 요청 시점에서 실시간으로 패키징함
@@ -7148,6 +7468,8 @@ Favorite: No
 ## 102. 클리어링 하우스 (Clearing House)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 디지털 저작권에 대한 사용 권한 설정, 라이선스 발급, 결제 관리 등을 수행하는 통합 관리소
 - * 핵심 키워드**: 라이선스 발급, 키 관리, 결제 관리, 사용량 측정
@@ -7157,6 +7479,8 @@ Favorite: No
 - * 연관 설명**: 103, 104
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 저작권자에 의해 설정된 라이선스 정보를 데이터베이스화하여 관리함
 - 암호화된 키(Key)를 관리하며 콘텐츠 소비자의 요청에 따라 라이선스를 발급함
@@ -7167,6 +7491,8 @@ Favorite: No
 ## 103. 디지털 저작권 관리 (DRM)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 허가된 사용자만 디지털 콘텐츠에 접근할 수 있도록 암호화 및 라이선스 기술을 사용하는 보호 기술
 - * 핵심 키워드**: 콘텐츠 보호, 유통 관리, 복제 방지, 보안 기술
@@ -7176,6 +7502,8 @@ Favorite: No
 - * 연관 설명**: 099, 100, 104
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 단순히 복제를 막는 것뿐만 아니라 사용자의 이용 권한(읽기, 복사, 기간 등)을 정교하게 제어함
 - 콘텐츠의 생성부터 유통, 소비, 폐기까지 전체 생명 주기를 관리함
@@ -7186,6 +7514,8 @@ Favorite: No
 ## 104. 디지털 저작권 관리(DRM)의 구성 요소
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: DRM 시스템을 구성하는 주요 주체들과 기술적 도구들의 집합
 - * 핵심 키워드**: 콘텐츠 제공자, 패키저, 분배자, DRM 컨트롤러, 보안 컨테이너
@@ -7195,6 +7525,8 @@ Favorite: No
 - * 연관 설명**: 103
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 콘텐츠 제공자(Provider): 콘텐츠를 제작하고 저작권을 소유한 주체
 - 패키저(Packager): 콘텐츠를 메타데이터와 함께 묶어 암호화하는 프로그램
@@ -7295,6 +7627,8 @@ Favorite: No
 ## 105. 시각에 따른 테스트 (Verification vs Validation)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 개발자 시각에서 명세 준수 여부를 확인하거나 사용자 시각에서 요구사항 충족 여부를 확인하는 테스트 분류
 - * 핵심 키워드**: 검증(Verification), 확인(Validation), 개발자 시각, 사용자 시각
@@ -7304,6 +7638,8 @@ Favorite: No
 -**: 연관 설명: 121, 132
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 검증(Verification): 제품의 생산 과정을 테스트하며, 설계 명세서와 일치하게 구현되었는지 개발자 시각에서 점검함
 - 확인(Validation): 생산된 제품의 결과를 테스트하며, 실제 사용자가 원하는 기능을 수행하는지 사용자 시각에서 확인함
@@ -7313,6 +7649,8 @@ Favorite: No
 ## 106. 소프트웨어 설치 매뉴얼의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 사용자가 소프트웨어를 설치하는 전 과정을 순서대로 설명한 문서
 - * 핵심 키워드**: 사용자 기준, 설치 과정, 예외 상황, Uninstall
@@ -7322,6 +7660,8 @@ Favorite: No
 -**: 연관 설명: 107
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 설치 과정에서 발생할 수 있는 오류 메시지와 예외 상황은 별도로 분류하여 설명해야 함
 - 사용자가 환경 설정이나 필요한 하드웨어 사양을 미리 알 수 있도록 기본 사항을 포함함
@@ -7331,6 +7671,8 @@ Favorite: No
 ## 107. 소프트웨어 설치 매뉴얼의 기본 사항
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 설치 매뉴얼 제작 시 필수적으로 포함되어야 할 상세 항목 명세
 - * 핵심 키워드**: 소프트웨어 개요, 설치 파일, 설치 아이콘, 프로그램 삭제
@@ -7340,6 +7682,8 @@ Favorite: No
 -**: 연관 설명: 106
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 개요: 주요 기능 및 화면 상의 버튼, 프레임 등을 그림(스크린샷)으로 설명하여 이해를 도움
 - 설치 관련 파일: 설치에 필요한 실행 파일 및 설정 파일의 용도를 상세히 기재함
@@ -7350,6 +7694,8 @@ Favorite: No
 ## 108. 소프트웨어 사용자 매뉴얼의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 사용자가 소프트웨어를 사용하는 데 필요한 절차와 환경 등을 기록한 설명서
 - * 핵심 키워드**: 사용 절차, 환경 설정, 컴포넌트 단위, 버전 관리
@@ -7359,6 +7705,8 @@ Favorite: No
 -**: 연관 설명: 093
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자가 소프트웨어 사용에 필요한 제반 사항(OS 환경, 메모리 등)을 모두 포함해야 함
 - 컴포넌트 명세서와 구현 설계서를 토대로 실제 기능 위주로 상세히 작성함
@@ -7368,6 +7716,8 @@ Favorite: No
 ## 109. 소프트웨어 패키징의 형상 관리 (SCM)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어 개발 생명 주기 전반에서 발생하는 변경 사항을 체계적으로 관리하는 활동
 - * 핵심 키워드**: 변경 제어, 가시성, 추적성, 기준선(Base Line)
@@ -7377,6 +7727,8 @@ Favorite: No
 -**: 연관 설명: 110, 111, 112
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SCM(Software Configuration Management)은 전체 개발 비용을 줄이고 방해 요인을 최소화하는 것이 목적임
 - 관리 항목: 소스 코드뿐만 아니라 요구 분석서, 설계서, 지침서 등 모든 산출물이 포함됨
@@ -7386,6 +7738,8 @@ Favorite: No
 ## 110. 형상 관리의 중요성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어 개발 및 유지보수 과정에서 품질 보증을 위한 핵심적인 관리 활동
 - * 핵심 키워드**: 무절제한 변경 방지, 버그 추적, 동시 개발, 배포본 관리
@@ -7395,6 +7749,8 @@ Favorite: No
 - * 연관 설명**: 109, 111
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **가시성(Visibility)**: 무형의 소프트웨어 개발 과정을 눈으로 확인하고 진행 상황을 파악하게 함
 - **추적성(Traceability)**: 제품 소프트웨어에서 발견된 버그나 수정 사항의 이력을 끝까지 추적 가능함
@@ -7405,6 +7761,8 @@ Favorite: No
 ## 111. 형상 관리 기능
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어의 변경 사항을 식별, 제어, 감사, 기록하는 일련의 활동
 - * 핵심 키워드**: 형상 식별, 버전 제어, 형상 통제, 형상 감사, 형상 기록
@@ -7414,6 +7772,8 @@ Favorite: No
 - * 연관 설명**: 109, 110, 112
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **형상 식별**: 대상에 이름과 번호를 부여하고 계층(Tree) 구조로 구분하여 추적을 용이하게 함
 - **버전 제어**: 업그레이드나 유지 보수 중 생성된 다양한 버전의 형상 항목을 도구(Tool)로 관리함
@@ -7424,6 +7784,8 @@ Favorite: No
 ## 112. 버전 관리 용어
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 제품 소프트웨어의 버전 관리를 수행할 때 사용되는 주요 기술적 용어
 - * 핵심 키워드**: 저장소(Repository), 가져오기(Import), 체크아웃, 체크인, 커밋, 동기화
@@ -7433,6 +7795,8 @@ Favorite: No
 - * 연관 설명**: 111, 113, 116
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **저장소(Repository)**: 최신 버전의 파일들과 변경 내역에 대한 정보가 실제로 저장되는 공간
 - **가져오기(Import)**: 버전 관리가 되지 않은 상태의 파일을 저장소에 처음으로 복사하는 작업
@@ -7443,6 +7807,8 @@ Favorite: No
 ## 113. 공유 폴더 방식
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 버전 관리 자료를 로컬 컴퓨터의 특정 공유 폴더에 저장하여 관리하는 방식
 - * 핵심 키워드**: 공유 폴더, SCCS, RCS, PVCS, QVCS
@@ -7452,6 +7818,8 @@ Favorite: No
 - * 연관 설명**: 114, 117
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발자가 작업을 마치면 약속된 네트워크 폴더에 파일을 수동으로 업로드함
 - 관리자는 공유 폴더의 내용을 취합하여 이상 유무를 직접 확인해야 함
@@ -7461,6 +7829,8 @@ Favorite: No
 ## 114. 클라이언트/서버 방식
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 버전 관리 자료를 중앙 시스템(서버)에 저장하여 집중 관리하는 방식
 - * 핵심 키워드**: 중앙 서버, CVS, SVN(Subversion), ClearCase
@@ -7470,6 +7840,8 @@ Favorite: No
 - * 연관 설명**: 113, 116
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발자가 자신의 PC(클라이언트)에서 작업을 완료한 후 서버에 반영(Commit)함
 - 서버가 주도권을 가지며 데이터의 무결성과 보안을 강화하기에 유리함
@@ -7503,6 +7875,8 @@ Favorite: No
 ## 116. Subversion (서브버전, SVN)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 아파치 소프트웨어 재단에서 CVS를 개선하여 발표한 중앙 집중형 버전 관리 시스템
 - * 핵심 키워드**: Trunk, Branches, Merge, Revision, Commit
@@ -7512,6 +7886,8 @@ Favorite: No
 - * 연관 설명**: 112, 114
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Trunk**: 모든 개발 작업이 기본적으로 수행되는 메인 디렉토리
 - **Branches**: 추가적인 작업이나 실험적 기능을 위해 분리된 별도의 작업 공간
@@ -7522,6 +7898,8 @@ Favorite: No
 ## 117. Git (깃)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 리누스 토발즈가 개발한 분산형 버전 관리 시스템으로 snap-shot 기반의 관리를 수행함
 - * 핵심 키워드**: 지역(로컬) 저장소, 원격 저장소, 스냅샷(Snapshot), 브랜치(Branch)
@@ -7531,6 +7909,8 @@ Favorite: No
 - * 연관 설명**: 115
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **지역 저장소**: 개발자가 자신의 PC에서 실제 개발을 진행하고 버전 관리를 처리하는 장소
 - **원격 저장소**: 협업을 위해 여러 사람이 공유하는 곳으로 로컬 내역을 반영하거나 가져올 때 사용
@@ -7541,6 +7921,8 @@ Favorite: No
 ## 118. 빌드 자동화 도구
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소스 코드를 컴파일하여 실행 파일로 만드는 빌드와 테스트, 배포를 자동화하는 도구
 - * 핵심 키워드**: 지속적인 통합(CI), 컴파일, Jenkins, Gradle, Ant
@@ -7550,6 +7932,8 @@ Favorite: No
 - * 연관 설명**: 005, 098, 119
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **지속적인 통합(Continuous Integration)**: 모듈 단위 코드를 수시로 통합하여 오류를 조기에 발견함
 - **Ant**: 자바 프로젝트 빌드 도구로 오래전부터 사용된 전통적인 방식
@@ -7559,6 +7943,8 @@ Favorite: No
 ## 119. Jenkins
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: Java 기반의 오픈 소스로 가장 널리 사용되는 서버 기반 빌드 자동화 도구
 - * 핵심 키워드**: 서블릿 컨테이너, Web GUI, 분산 빌드, 형상 관리 연동
@@ -7568,6 +7954,8 @@ Favorite: No
 - * 연관 설명**: 118, 120
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **서블릿 컨테이너**: 톰캣(Tomcat)과 같은 환경에서 실행되는 서버 애플리케이션임
 - **분산 테스트/빌드**: 한 대가 아닌 여러 컴퓨터로 부하를 나눠 신속한 결과 확인 가능
@@ -7576,6 +7964,8 @@ Favorite: No
 ## 120. Gradle
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: Groovy 기반의 오픈 소스 자동화 도구로 안드로이드 앱 개발 환경에서 표준으로 사용됨
 - * 핵심 키워드**: Groovy, DSL, 태스크(Task), 빌드 캐시
@@ -7585,6 +7975,8 @@ Favorite: No
 - * 연관 설명**: 118, 119
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **DSL(Domain Specific Language)**: 빌드 설정을 위해 특화된 간결한 언어 구조를 사용함
 - **태스크(Task)**: 실행할 처리 명령들을 묶은 단위로, 의존 관계를 설정해 순차 실행함
@@ -7667,6 +8059,8 @@ Favorite: No
 ## 121. 애플리케이션 테스트의 개념
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 애플리케이션에 잠재되어 있는 결함을 찾아내는 일련의 행위 또는 절차
 - * 핵심 키워드**: 결함 발견, 확인(Validation), 검증(Verification), 품질 보증
@@ -7676,6 +8070,8 @@ Favorite: No
 - * 연관 설명**: 122, 123, 125
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **검증(Verification)**: 개발자 시각에서 제품이 명세서대로 올바르게 만들어졌는지 점검
 - **확인(Validation)**: 사용자 시각에서 실제 요구사항에 부합하고 정상 동작하는지 확인
@@ -7685,6 +8081,8 @@ Favorite: No
 ## 122. 애플리케이션 테스트 관련 용어
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어의 품질을 확인하고 검증하기 위해 사용되는 핵심적인 용어 정의
 - * 핵심 키워드**: 확인(Validation), 검증(Verification)
@@ -7694,6 +8092,8 @@ Favorite: No
 - **: 연관 설명**: 121, 125
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **확인(Validation)**: 사용자가 요청한 대로 기능이 동작하는지, 즉 '사용자 시각'에서 결과를 중시함
 - **검증(Verification)**: 개발자가 설계한 명세서나 규격에 맞게 만들어졌는지, 즉 '개발자 시각'에서 과정을 중시함
@@ -7727,6 +8127,8 @@ Favorite: No
 ## 123. 프로그램 실행 여부에 따른 테스트
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로그램을 직접 실행하여 오류를 찾는지, 혹은 실행 없이 분석하는지에 따른 분류
 - * 핵심 키워드**: 정적 테스트(Static), 동적 테스트(Dynamic), 워크스루, 인스펙션
@@ -7736,6 +8138,8 @@ Favorite: No
 - **: 연관 설명**: 127, 130
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **정적 테스트**: 개발 초기에 명세서나 소스 코드를 분석하여 결함을 미리 발견함으로써 개발 비용을 절감함
 - **워크스루(Walkthrough)**: 개발자가 직접 설명하고 동료들이 검토하는 비정식적인 회의 방식
@@ -7745,6 +8149,8 @@ Favorite: No
 ## 124. 테스트 기반(Test Bases)에 따른 테스트
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 테스트 케이스를 설계할 때 무엇을 근거(기반)로 하는지에 따른 분류
 - * 핵심 키워드**: 명세 기반(Specification), 구조 기반(Structure), 경험 기반(Experience)
@@ -7754,6 +8160,8 @@ Favorite: No
 - **: 연관 설명**: 096, 130, 131
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **명세 기반 테스트**: 사용자의 요구사항을 빠짐없이 테스트 케이스로 만들어 확인하며, 동등 분할이나 경계 값 분석 등이 포함됨
 - **구조 기반 테스트**: 프로그램 내부의 로직과 제어 흐름을 직접 확인하며 구문 기반, 결정 기반 등이 있음
@@ -7762,6 +8170,8 @@ Favorite: No
 ## 125. 시각에 따른 테스트
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 테스트를 수행하는 주체(개발자 vs 사용자)와 목적에 따른 분류
 - * 핵심 키워드**: 검증(Verification), 확인(Validation), 살충제 패러독스, 오류-부재의 궤변
@@ -7771,6 +8181,8 @@ Favorite: No
 - **: 연관 설명**: 122
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **살충제 패러독스(Pesticide Paradox)**: 동일한 테스트 케이스로 반복 테스트를 하면 더 이상 새로운 결함을 찾을 수 없는 현상
 - **결함 집중(Defect Clustering)**: 대다수의 결함은 특정 소수 모듈에 집중되어 발생한다는 이론 (파레토 법칙 적용)
@@ -7779,6 +8191,8 @@ Favorite: No
 ## 126. 목적에 따른 테스트
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 무엇을 검증하고자 하는지에 따라 다양한 목적으로 분류되는 테스트 유형
 - * 핵심 키워드**: 회복, 안전, 강도(Stress), 성능, 회귀(Regression), 병행
@@ -7788,6 +8202,8 @@ Favorite: No
 - **: 연관 설명**: 132, 140
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **강도(Stress) 테스트**: 시스템에 과도한 정보량이나 빈도를 부과하여 과부하 시의 정상 실행 여부를 확인 함
 - **회귀(Regression) 테스트**: 수정된 코드가 기존 기능에 영향을 주지 않았는지 보증하기 위해 반복 수행함
@@ -7802,6 +8218,8 @@ Favorite: No
 ## 127. 화이트박스 테스트 (White Box Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 모듈의 원시 코드를 오픈시킨 상태에서 원시 코드의 논리적인 모든 경로를 테스트하여 테스트 케이스를 설계하는 방법
 - * 핵심 키워드**: 원시 코드 오픈, 논리적 경로, 제어 구조, 동적 테스트
@@ -7811,6 +8229,8 @@ Favorite: No
 - * 연관 설명**: 123, 128, 129
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램 내부의 작동 과정을 직접 들여다보며 테스트 케이스를 설계함
 - 선택(if), 반복(for, while) 등의 분기점 부분을 수행하여 논리적 경로를 제어함
@@ -7821,6 +8241,8 @@ Favorite: No
 ## 128. 화이트박스 테스트의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 화이트박스 테스트를 수행하기 위해 사용되는 세부적인 검사 기법들
 - * 핵심 키워드**: 기초 경로 검사, 조건 검사, 루프 검사, 데이터 흐름 검사
@@ -7830,6 +8252,8 @@ Favorite: No
 - * 연관 설명**: 127, 129
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **기초 경로 검사(Base Path Testing)**: 절차적 설계의 논리적 복잡성을 측정하여 실행 경로의 지침으로 사용함
 - **조건 검사(Condition Testing)**: 모듈 내에 있는 논리적 조건(True/False)을 테스트함
@@ -7839,6 +8263,8 @@ Favorite: No
 ## 129. 화이트박스 테스트의 검증 기준 (Coverage)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 테스트 케이스가 소스 코드의 논리적 구조를 얼마나 충실히 수행했는지 측정하는 기준
 - * 핵심 키워드**: 문장 검증, 분기 검증, 조건 검증, 분기/조건 기준
@@ -7848,6 +8274,8 @@ Favorite: No
 - * 연관 설명**: 127, 128
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **문장 검증(Statement Coverage)**: 모든 구문이 최소 한 번은 실행되도록 설계함
 - **분기 검증(Branch Coverage)**: 결정 검증(Decision Coverage)이라고도 하며, 조건문의 모든 결과(T/F)를 확인 함
@@ -7857,6 +8285,8 @@ Favorite: No
 ## 130. 블랙박스 테스트 (Black Box Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어가 수행할 특정 기능이 완전히 작동되는지 입증하기 위해 명세를 기초로 실시하는 테스트
 - * 핵심 키워드**: 기능 테스트, 명세 기반, 인터페이스 오류, 후반부 적용
@@ -7866,6 +8296,8 @@ Favorite: No
 - * 연관 설명**: 121, 123, 131
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 인터페이스(입출력) 단계에서 주로 실시되는 테스트임
 - 부정확하거나 누락된 기능, 초기화 및 종료 오류 등을 발견하기 위해 사용함
@@ -7875,6 +8307,8 @@ Favorite: No
 ## 131. 블랙박스 테스트의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 블랙박스 테스트를 수행하기 위해 입력 데이터와 결과값에 초점을 맞춘 기법들
 - * 핵심 키워드**: 동치 분할, 경계값 분석, 원인-효과 그래프, 오류 예측, 비교 검사
@@ -7884,6 +8318,8 @@ Favorite: No
 - * 연관 설명**: 130
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **동치 분할(Equivalence Partitioning)**: 입력 조건을 타당한 것과 타당하지 않은 것으로 나누어 테스트 케이스를 생성함
 - **원인-효과 그래프**: 입력 데이터 간의 관계와 출력에 미치는 상황을 체계적으로 분석함
@@ -7891,6 +8327,8 @@ Favorite: No
 - **비교 검사(Comparison Testing)**: 여러 버전의 프로그램에 동일 데이터를 넣어 결과가 같은지 비교함
 
 ## 127-131: So sánh nhanh Black Box vs White Box (đề thi rất thích)
+Phần “127-131: So sánh nhanh Black Box vs White Box (đề thi rất thích)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | Tiêu chí | Black Box | White Box |
 | --- | --- | --- |
@@ -7917,6 +8355,8 @@ Favorite: No
 ## 132. 개발 단계에 따른 애플리케이션 테스트
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어 개발 생명 주기에 따라 단계별로 분류되는 테스트 레벨
 - * 핵심 키워드**: V-모델, 단위 테스트, 통합 테스트, 시스템 테스트, 인수 테스트
@@ -7926,6 +8366,8 @@ Favorite: No
 - * 연관 설명**: 001, 133, 134, 135, 136
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **V-모델**: 요구사항-인수, 분석-시스템, 설계-통합, 구현-단위 테스트가 서로 대응됨
 - 하위 단계에서 상위 단계로 갈수록 테스트의 범위가 넓어짐
@@ -7940,6 +8382,8 @@ Favorite: No
 ## 133. 단위 테스트 (Unit Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 코딩 직후 소프트웨어 설계의 최소 단위인 모듈이나 컴포넌트에 초점을 맞춰 기능을 검증하는 것
 - * 핵심 키워드**: 모듈/컴포넌트, 인터페이스, 구조 기반 테스트, 오류처리 경로
@@ -7949,6 +8393,8 @@ Favorite: No
 - * 연관 설명**: 132, 134
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 요구사항을 기반으로 한 기능성 테스트를 최우선으로 수행함
 - **구조 기반 테스트**: 프로그램 내부의 논리 흐름에 따라 테스트 케이스를 작성하는 방식
@@ -7958,6 +8404,8 @@ Favorite: No
 ## 134. 통합 테스트 (Integration Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)`
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)`” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 단위 테스트가 완료된 모듈들을 결합하여 하나의 시스템으로 완성시키는 과정의 테스트
 - * 핵심 키워드**: 모듈 결합, 점진적/비점진적 방식, 인터페이스 오류, 상호작용
@@ -7967,6 +8415,8 @@ Favorite: No
 - * 연관 설명**: 133, 137, 138
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **점진적 방식**: 모듈을 하나씩 추가하며 테스트하므로 오류 수정이 용이함
 - **비점진적 방식**: 모든 모듈이 결합된 상태에서 한 번에 테스트하는 빅뱅 방식
@@ -7975,6 +8425,8 @@ Favorite: No
 ## 135. 시스템 테스트 (System Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 개발된 소프트웨어가 해당 컴퓨터 시스템에서 완벽하게 수행되는지 점검하는 테스트
 - * 핵심 키워드**: 실제 사용 환경, 기능적 요구사항, 비기능적 요구사항, 리스크 최소화
@@ -7984,6 +8436,8 @@ Favorite: No
 - * 연관 설명**: 132, 136
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 분석 단계의 명세서(Specification)를 기준으로 테스트가 이루어짐
 - 환경적인 장애 리스크를 줄이기 위해 실제 운영 환경과의 일치성이 중요함
@@ -7992,6 +8446,8 @@ Favorite: No
 ## 136. 인수 테스트 (Acceptance Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 개발한 소프트웨어가 사용자의 요구사항을 충족하는지에 중점을 둔 테스트
 - * 핵심 키워드**: 사용자 직접 참여, 알파 테스트, 베타 테스트, 프로젝트 종료 결정
@@ -8001,6 +8457,8 @@ Favorite: No
 - * 연관 설명**: 132, 135
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **알파 테스트**: 통제된 환경(개발자 장소)에서 사용자와 개발자가 함께 확인하는 기법
 - **베타 테스트**: 최종 사용자가 실제 업무 환경(Field Testing)에서 직접 수행하며 발견된 오류를 보고함
@@ -8031,6 +8489,8 @@ Favorite: No
 ## 137. 하향식 통합 테스트 (Top Down Integration Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하며 테스트하는 기법
 - * 핵심 키워드**: 주요 제어 모듈, 깊이 우선(Depth-first), 넓이 우선(Breadth-first), 스텁(Stub)
@@ -8040,6 +8500,8 @@ Favorite: No
 - * 연관 설명**: 134, 139
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **깊이 우선 통합**: 제어 경로를 따라 수직 방향의 모듈들을 먼저 통합함
 - **넓이 우선 통합**: 구조의 수평 방향에 있는 모듈들을 차례로 통합함
@@ -8048,6 +8510,8 @@ Favorite: No
 ## 138. 상향식 통합 테스트 (Bottom Up Integration Test)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하며 테스트하는 기법
 - * 핵심 키워드**: 클러스터(Cluster), 테스트 드라이버(Driver), 하위 모듈 우선, 스텁 불필요
@@ -8057,6 +8521,8 @@ Favorite: No
 - * 연관 설명**: 134, 139
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **클러스터(Cluster)**: 하나의 주요 제어 모듈과 관련된 종속 모듈의 그룹
 - 하위 단계부터 테스트하므로 별도의 스텁(Stub)은 필요하지 않음
@@ -8065,6 +8531,8 @@ Favorite: No
 ## 139. 테스트 드라이버와 테스트 스텁 (Test Driver vs Test Stub)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 결합 테스트 시 미구현된 모듈을 대체하거나 구동하기 위한 가짜(Dummy) 모듈
 - * 핵심 키워드**: 상위 모듈 대체(Driver), 하위 모듈 대체(Stub), 가짜 모듈, 매개변수 전달
@@ -8074,6 +8542,8 @@ Favorite: No
 - * 연관 설명**: 137, 138, 147
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **드라이버(Driver)**: 테스트 대상 모듈에 데이터를 전달하고 결과를 도출하는 상위 역할 수행
 - **스텁(Stub)**: 시험용으로 일시적인 조건만 가지고 하위 모듈의 기능을 흉내 냄
@@ -8082,6 +8552,8 @@ Favorite: No
 ## 140. 회귀 테스팅 (Regression Testing)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 수정된 모듈이나 컴포넌트가 다른 부분에 영향을 미치는지 확인하기 위해 테스트를 반복하는 것
 - * 핵심 키워드**: 변경/수정 후 반복, 새로운 오류 확인, 결함 보증, 테스트 케이스 선정
@@ -8091,11 +8563,15 @@ Favorite: No
 - * 연관 설명**: 126, 134
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통합 테스트 중 발생한 결함을 수정한 뒤, 이 수정이 시스템의 다른 부분에 부작용을 일으키지 않았는지 확인함
 - 시간과 비용 절감을 위해 기존 테스트 케이스 중 영향도가 큰 항목을 선별함
 
 ## So sánh nhanh (rất nên nhớ)
+Phần “So sánh nhanh (rất nên nhớ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | Loại test | Mục đích |
 | --- | --- |
@@ -8135,6 +8611,8 @@ Favorite: No
 ## 141. 애플리케이션 테스트 프로세스
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어의 결함을 찾고 요구사항 준수 여부를 확인하는 체계적인 절차
 - * 핵심 키워드**: 테스트 계획, 분석 및 디자인, 케이스 작성, 수행, 평가 및 리포팅
@@ -8144,6 +8622,8 @@ Favorite: No
 - * 연관 설명**: 121, 142
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **테스트 계획**: 목표 정의, 대상 및 범위 결정
 - **테스트 분석 및 디자인**: 목적과 원칙 검토 및 사용자 요구사항 분석
@@ -8152,6 +8632,8 @@ Favorite: No
 ## 142. 테스트 케이스 (Test Case)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 요구사항 준수 여부 확인을 위해 설계된 입력 값, 실행 조건, 기대 결과의 명세서
 - * 핵심 키워드**: 명세 기반 테스트, 입력/출력 명세, ISO/IEC/IEEE 29119-3, 설계 산출물
@@ -8161,6 +8643,8 @@ Favorite: No
 - * 연관 설명**: 096, 143
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 구성 요소: 식별자(ID), 테스트 항목, 입력 명세, 출력 명세, 환경 설정, 특수 절차 요구, 의존성 기술
 - 직관적인 테스트는 불필요한 반복이나 누락을 유발하므로 정형화된 케이스가 필요함
@@ -8169,6 +8653,8 @@ Favorite: No
 ## 143. 테스트 시나리오 (Test Scenario)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 테스트 케이스를 적용하는 순서에 따라 여러 개의 테스트 케이스들을 묶은 집합 문서
 - * 핵심 키워드**: 적용 순서, 테스트 케이스 집합, 구체적인 절차, 사전 조건
@@ -8178,6 +8664,8 @@ Favorite: No
 - * 연관 설명**: 141, 142
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테스트 케이스가 무엇을 테스트할지 정의한다면, 시나리오는 어떤 순서로 테스트할지 정의함
 - 테스트 순서에 대한 구체적인 절차, 사전 조건, 입력 데이터 등을 사전에 설정함
@@ -8210,6 +8698,8 @@ Favorite: No
 ## 144. 테스트 오라클 (Test Oracle)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 테스트 결과가 올바른지 판단하기 위해 사전에 정의된 참(True) 값을 대입하여 비교하는 기법
 - * 핵심 키워드**: 참 값(True Value), 결과 판단, 예상 결과 계산, 비교 활동
@@ -8219,6 +8709,8 @@ Favorite: No
 - * 연관 설명**: 145
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 오라클은 소프트웨어의 특정 실행 결과가 명세서의 의도와 일치하는지를 자동 또는 수동으로 확인함
 - 테스트 자동화 도구와 연계하여 효율적인 결과 검증을 지원함
@@ -8226,6 +8718,8 @@ Favorite: No
 ## 145. 테스트 오라클의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 제공하는 정답(참 값)의 범위와 방식에 따른 오라클의 분류
 - * 핵심 키워드**: 참(True), 샘플링(Sampling), 추정(Heuristic), 일관성(Consistent)
@@ -8235,6 +8729,8 @@ Favorite: No
 - * 연관 설명**: 144
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **참 오라클**: 모든 오류를 검출할 수 있도록 모든 입력에 기대 결과를 제공함
 - **샘플링 오라클**: 특정한 몇몇 입력 값들에 대해서만 결과를 제공함
@@ -8250,6 +8746,8 @@ Favorite: No
 ## 146. 테스트 자동화 도구 (Test Automation Tools)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 테스트 수행 및 결과 분석 등 반복적인 테스트 활동을 자동화 소프트웨어로 대체하는 것
 - * 핵심 키워드**: 반복 작업 감소, 신뢰성 향상, 정적/동적 분석 도구
@@ -8259,6 +8757,8 @@ Favorite: No
 - * 연관 설명**: 118, 119, 120, 147
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **정적 분석 도구**: 소스 코드를 실행하지 않고 결함이나 복잡도, 모델 의존성 등을 분석함
 - **동적 분석 도구**: 소스 코드를 직접 실행하여 메모리 누수나 스레드 결함 등을 파악함
@@ -8315,6 +8815,8 @@ Favorite: No
 ## 147. 테스트 하네스의 구성 요소 (Components of Test Harness)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 애플리케이션의 컴포넌트 및 모듈을 테스트하기 위해 생성된 코드와 데이터의 집합
 - * 핵심 키워드**: 드라이버, 스텁, 슈트, 스크립트, 목 오브젝트
@@ -8324,6 +8826,8 @@ Favorite: No
 - * 연관 설명**: 137, 138, 139
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **테스트 드라이버**: 하위 모듈을 호출하고 매개변수를 전달하며 결과를 도출하는 상위 모듈 대체 도구
 - **테스트 스텁**: 제어 모듈이 호출할 때 단순 응답만 제공하는 하위 모듈 대체 도구
@@ -8334,6 +8838,8 @@ Favorite: No
 ## 148. 결함 (Fault)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어가 개발자의 설계와 다르게 동작하거나 잘못된 결과를 발생시키는 현상
 - * 핵심 키워드**: 오류 발생, 작동 실패, 불일치, 결함 추적
@@ -8343,6 +8849,8 @@ Favorite: No
 - * 연관 설명**: 121, 141
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소스 코드뿐만 아니라 분석서나 설계서와 업무 내용이 맞지 않는 것도 결함에 포함됨
 - 테스트 결과 평가 및 리포팅 단계에서 결함의 위치와 종류를 기록함
@@ -8352,6 +8860,8 @@ Favorite: No
 ## 149. 애플리케이션 성능 분석 (Application Performance Analysis)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 사용자의 요구 기능을 최소 자원으로 얼마나 신속하고 효율적으로 처리하는지 측정하는 활동
 - * 핵심 키워드**: 처리량, 응답 시간, 경과 시간, 자원 사용률
@@ -8361,6 +8871,8 @@ Favorite: No
 - * 연관 설명**: 126, 150
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **처리량 (Throughput)**: 일정 시간 동안 애플리케이션이 처리하는 작업의 양
 - **응답 시간 (Response Time)**: 요청 전달부터 응답이 도착하기 시작할 때까지의 시간
@@ -8371,6 +8883,8 @@ Favorite: No
 ## 150. 빅오 표기법 (Big-O Notation)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 알고리즘의 실행 시간이 최악일 때(Worst Case)를 기준으로 복잡도를 표기하는 방법
 - * 핵심 키워드**: 최악의 시간 복잡도, 성능 예측, 실행 단계 측정
@@ -8380,6 +8894,8 @@ Favorite: No
 - * 연관 설명**: 151
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **O(1)**: 입력값에 관계없이 일정 (스택의 Push/Pop)
 - **O(log n)**: 해결 단계가 입력값에 따라 감소 (이진 트리 검색)
@@ -8389,6 +8905,8 @@ Favorite: No
 ## 151. 순환 복잡도 (Cyclomatic Complexity)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로그램의 논리적인 복잡도를 측정하기 위해 독립적인 경로의 수를 수치화한 척도
 - * 핵심 키워드**: 맥케이브(McCabe), 제어 흐름도, 영역(Region), 독립적 경로
@@ -8398,6 +8916,8 @@ Favorite: No
 - * 연관 설명**: 127, 150
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 맥케이브 순환도라고도 불리며 제어 흐름도 이론에 기초를 둠
 - 계산된 값은 프로그램의 독립적인 경로 수를 정의함
@@ -8406,6 +8926,8 @@ Favorite: No
 ## 152. 소스 코드 최적화
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 나쁜 코드(Bad Code)를 배제하고, 클린 코드(Clean Code)로 작성하여 프로그램의 가독성과 유지보수성을 높이는 활동
 - * 핵심 키워드**: 가독성, 단순성, 의존성 배제, 중복성 최소화, 추상화
@@ -8415,6 +8937,8 @@ Favorite: No
 - * 연관 설명**: 153
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **클린 코드(Clean Code)**: 누구나 쉽게 이해하고 수정할 수 있는 단순하고 명료한 코드임
 - **스파게티 코드**: 소스 코드가 복잡하게 얽혀 있어 로직을 파악하기 힘든 상태임
@@ -8425,6 +8949,8 @@ Favorite: No
 ## 153. 소스 코드 품질 분석 도구
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소스 코드의 스타일, 복잡도, 결함 등을 확인하여 코드의 품질을 정량적으로 분석하는 도구
 - * 핵심 키워드**: 정적 분석 도구, 동적 분석 도구, 결함 발견, 복잡도 분석
@@ -8434,6 +8960,8 @@ Favorite: No
 - * 연관 설명**: 152
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **정적 분석 도구**: 코드를 실행하지 않고 자료 흐름이나 논리 흐름을 분석하여 비정상적인 패턴을 찾음
 - **동적 분석 도구**: 소스 코드를 실제 실행하여 메모리 누수(Memory Leak)나 스레드(Thread) 결함 등을 분석함
@@ -8444,6 +8972,8 @@ Favorite: No
 ## 154. EAI(Enterprise Application Integration)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 기업 내 각종 애플리케이션 및 플랫폼 간의 정보 전달과 연계를 가능하게 하는 통합 솔루션
 - * 핵심 키워드**: Point-to-Point, Hub & Spoke, Message Bus, Hybrid
@@ -8453,6 +8983,8 @@ Favorite: No
 - * 연관 설명**: 155, 159
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Point-to-Point**: 애플리케이션을 1:1로 직접 연결하며 변경 시 비용이 많이 발생함
 - **Hub & Spoke**: 중앙 허브를 통해 데이터를 전송하며 관리와 확장이 비교적 용이함
@@ -8463,6 +8995,8 @@ Favorite: No
 ## 155. ESB(Enterprise Service Bus)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 애플리케이션 간 연계 및 데이터 변환을 지원하는 표준 기반의 서비스 중심 통합 솔루션
 - * 핵심 키워드**: 서비스 중심 통합(SOA), 약한 결합(Loosely Coupled), 표준 인터페이스
@@ -8472,6 +9006,8 @@ Favorite: No
 - * 연관 설명**: 154, 346
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **SOA(Service Oriented Architecture)**: 서비스를 중심으로 시스템을 구축하는 설계 원칙을 따름
 - **약한 결합(Loosely Coupled)**: 특정 서비스에 국한되지 않고 범용적으로 연결하여 변경에 유연하게 대응함
@@ -8481,6 +9017,8 @@ Favorite: No
 ## 156. JSON(JavaScript Object Notation)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 속성-값 쌍(Attribute-Value Pairs)으로 이루어진 데이터 객체를 전달하기 위해 사람이 읽을 수 있는 텍스트를 사용하는 개방형 표준 포맷
 - * 핵심 키워드**: 속성-값 쌍, AJAX 연동, XML 대체, 개방형 표준
@@ -8490,6 +9028,8 @@ Favorite: No
 - * 연관 설명**: 157, 158
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **비동기 처리**: 웹 페이지의 새로고침 없이 서버와 데이터를 주고받는 AJAX 기술에 주로 활용됨
 - **XML 대체**: 구조가 복잡한 XML보다 표현이 간결하고 데이터 파싱(Parsing) 속도가 빠름
@@ -8504,6 +9044,8 @@ Favorite: No
 ## 157. XML(eXtensible Markup Language)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 특수한 목적을 갖는 마크업 언어를 만드는 데 사용되는 다목적 마크업 언어.
 - * 핵심 키워드**: 마크업 언어, HTML 단점 보완, 사용자 정의 태그, 유연성.
@@ -8513,6 +9055,8 @@ Favorite: No
 - * 연관 설명**: 156, 158
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SGML의 복잡함과 HTML의 비효율성을 해결하기 위해 개발됨.
 - **구조화된 문서**: 문서의 내용(Content)과 이를 표현하는 방식(Style)이 독립적임.
@@ -8522,6 +9066,8 @@ Favorite: No
 ## 158. AJAX(Asynchronous JavaScript and XML)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 자바스크립트를 이용해 클라이언트와 서버 간에 데이터를 주고받는 비동기 통신 기술.
 - * 핵심 키워드**: 비동기 통신, 자바스크립트, 새로고침 없음, XML/JSON 데이터 교환.
@@ -8531,6 +9077,8 @@ Favorite: No
 - * 연관 설명**: 156, 157
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **비동기(Asynchronous)**: 데이터 요청 후 결과가 올 때까지 기다리지 않고 다른 작업을 계속 수행할 수 있는 방식임.
 - 초기에는 주로 XML을 사용했으나 현재는 전송 효율을 위해 JSON을 더 많이 사용함.
@@ -8539,6 +9087,8 @@ Favorite: No
 ## 159. 인터페이스 보안 기능 적용
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 인터페이스 송·수신 시 데이터 탈취 및 변조를 방지하기 위해 각 영역에 보안 설정을 적용하는 활동.
 - * 핵심 키워드**: 네트워크 트래픽 암호화, IPsec, SSL, 데이터베이스 접근 제어.
@@ -8548,6 +9098,8 @@ Favorite: No
 - * 연관 설명**: 154, 155, 356
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **네트워크 영역**: 인터페이스 아키텍처에 따라 IPsec, SSL, S-HTTP 등 다양한 암호화 방식 적용.
 - **애플리케이션 영역**: 소프트웨어 개발 보안 가이드를 참조하여 코드상의 취약점 보완.
@@ -8557,6 +9109,8 @@ Favorite: No
 ## 160. 데이터 무결성 검사 도구
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 시스템 파일의 변경 유무를 확인하고 파일 변동 시 관리자에게 알려주는 보안 도구.
 - * 핵심 키워드**: Tripwire, AIDE, 해시(Hash) 함수, 백도어 감지.
@@ -8566,6 +9120,8 @@ Favorite: No
 - * 연관 설명**: 159, 365
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **백도어(Backdoor)**: 시스템 침입 후 흔적을 감추기 위해 만들어 놓은 비밀 통로를 의미함.
 - 도구 종류: **Tripwire**, **AIDE**, Samhain, Claymore, Fcheck 등 (이름 암기 필수).
@@ -8574,6 +9130,8 @@ Favorite: No
 ## 161. 인터페이스 구현 검증 도구
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 구현된 인터페이스가 정상적으로 작동하는지 확인하기 위해 사용되는 테스트 자동화 프레임워크.
 - * 핵심 키워드**: FitNesse, Selenium, watir, STAF, NTAF.
@@ -8583,6 +9141,8 @@ Favorite: No
 - * 연관 설명**: 146, 147
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **FitNesse**: 웹 기반으로 테스트 케이스 설계, 실행, 결과 확인을 지원함.
 - **Selenium**: 웹 애플리케이션 테스트에 특화되어 있으며 다국적 브라우저 지원이 강점임.
@@ -8592,6 +9152,8 @@ Favorite: No
 ## 162. APM(Application Performance Management)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, 트랜잭션 수행 내역 등을 모니터링하는 도구.
 - * 핵심 키워드**: 리소스 방식, 엔드투엔드(End-to-End), 제니퍼(Jennifer), 스카우터(Scouter).
@@ -8601,6 +9163,8 @@ Favorite: No
 - * 연관 설명**: 149
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **리소스 방식**: 서버의 CPU, 메모리 등 하드웨어 자원 상태 중심 모니터링 (Nagios, Zabbix).
 - **엔드투엔드 방식**: 사용자 요청부터 처리 완료까지 전체 비즈니스 로직 중심 모니터링 (Jennifer, Scouter).
@@ -8614,6 +9178,8 @@ Favorite: No
 ## 162. APM(Application Performance Management)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, 트랜잭션 수행 내역 등을 모니터링하는 도구
 - * 핵심 키워드**: 리소스 방식, 엔드투엔드(End-to-End), 제니퍼(Jennifer), 스카우터(Scouter)
@@ -8623,6 +9189,8 @@ Favorite: No
 - **: 연관 설명**: 149
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **리소스 방식**: 서버의 CPU, 메모리 등 하드웨어적 자원 상태 중심 모니터링
 - **엔드투엔드 방식**: 사용자 요청부터 처리 완료까지 비즈니스 로직 전 과정을 추적
@@ -8631,6 +9199,8 @@ Favorite: No
 ## 115. 분산 저장소 방식
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 버전 관리 자료가 하나의 원격 저장소와 분산된 개발자 PC의 로컬 저장소에 함께 저장되어 관리되는 방식이다.
 - * 핵심 키워드**: 로컬 저장소, 원격 저장소, 오프라인 작업, Git.
@@ -8640,6 +9210,8 @@ Favorite: No
 -**: 연관 설명: 113, 114.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발자는 원격 저장소의 자료를 자신의 로컬 PC로 복제하여 독립적으로 작업한다.
 - 변경된 내용은 먼저 로컬 저장소에 반영(버전 관리)한 후, 최종적으로 원격 저장소에 반영한다.

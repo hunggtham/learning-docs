@@ -1,18 +1,18 @@
-# 118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)
+# 40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **11. DRM (디지털 저작권 관리, Digital Rights Management)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-빌드, 자동화, 도구
+형상, 관리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)**에서 만든 기준을 이어받아 **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **13. 형상 관리 (SCM - Software Configuration Management)**에서 만든 기준을 이어받아 **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,22 +22,31 @@ Mục đích của bài này là hiểu **118 ~ 120: 빌드 자동화 도구 (Bu
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** và nối nó với **11. DRM (디지털 저작권 관리, Digital Rights Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** và nối nó với **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)
+## 40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)
 
-Ở bước 37/95, **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** xuất hiện như phần tiếp nối của **핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 37/101, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** xuất hiện như phần tiếp nối của **13. 형상 관리 (SCM - Software Configuration Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **형상 관리 (SCM)**, **기능**, **버전 관리 방식 3가지**, **SVN (Subversion)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- 소스 코드를 실행 파일로 만드는 과정과 배포를 자동화. (Tự động hóa việc dịch code, test và đóng gói phát hành - CI/CD).
-- **Jenkins:** Viết bằng Java, chạy trên web (Web GUI). Điểm mạnh là test phân tán trên nhiều máy.
-- **Gradle:** Viết bằng Groovy (Ngôn ngữ kịch bản), dùng **DSL**. Điểm mạnh là có **빌드 캐시 (Build Cache)** giúp build lại cực nhanh, thường dùng làm chuẩn cho Android.
+Phần “40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Jenkins = Java, Web GUI, Phân tán. Gradle = Groovy, DSL, Cache, Android.
+* **형상 관리 (SCM)**: 소프트웨어 개발 과정에서 변경 사항을 관리하는 일련의 활동.
+  * **기능**: 형상 식별, 버전 제어, 형상 통제(변경 관리), 형상 감사, 형상 기록.
+* **버전 관리 방식 3가지**:
+  1. **공유 폴더 방식 (Shared Folder)**: 로컬 공유 폴더에 저장. (SCCS, RCS 등).
+  2. **클라이언트/서버 방식 (C/S)**: 중앙 서버에 저장하여 관리. (CVS, SVN 등).
+     * **SVN (Subversion)**: `trunk`에서 주로 개발, `branches`에서 추가 작업 후 병합(merge). 커밋 시 리비전(Revision) 1씩 증가.
+  3. **분산 저장소 방식 (Distributed)**: 로컬 저장소와 원격 저장소에 함께 저장. (Git 등).
+     * **Git**: 로컬에서 버전 관리가 가능해 빠르고 네트워크 문제 시에도 작업 가능. 스냅샷(Snapshot)으로 파일 변화를 저장.
+* **주요 기능**: Repository, Import, Check-Out(가져오기), Check-In/Commit(반영), Update(동기화).
+* **VI (Vietnamese) (Tiếng Việt):** Quản lý cấu hình (SCM) và các cách quản lý phiên bản.
+  * Shared Folder: Lưu ở thư mục chung.
+  * C/S: Lưu ở server trung tâm (SVN).
+  * Distributed: Lưu phân tán cả local và server (Git). Git dùng Snapshot để lưu thay đổi.
+* **Example**: 회사에서 SVN을 쓰면 중앙 서버가 죽었을 때 작업을 올릴 수 없지만, Git을 쓰면 내 PC(Local)에 저장해뒀다가 서버가 복구되면 올릴 수 있습니다.
 
----
-
-Như vậy, **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **11. DRM (디지털 저작권 관리, Digital Rights Management)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **40. 형상 관리 (SCM) 및 버전 관리 방식 (Version Control Methods)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

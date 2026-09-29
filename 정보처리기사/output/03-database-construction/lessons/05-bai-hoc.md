@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **11. 데이터베이스 설계 (Thiết
 
 ## 11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)
 
-Sau khi đã đặt nền bằng **163-167. 데이터베이스 설계 순서 (Database Design Process)**, ta chuyển sang **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**. Đây là mắt xích 5/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **163-167. 데이터베이스 설계 순서 (Database Design Process)**, ta chuyển sang **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**. Đây là mắt xích 5/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 | 단계 (Giai đoạn) | 설명 (Mô tả & Hoạt động) | Giải thích (VN) |
 |---|---|---|

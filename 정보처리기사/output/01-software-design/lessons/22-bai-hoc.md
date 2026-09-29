@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **5. 요구공학 (Requirements Engineer
 
 ## 5. 요구공학 (Requirements Engineering)
 
-Ở bước 22/57, **5. 요구공학 (Requirements Engineering)** xuất hiện như phần tiếp nối của **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 22/69, **5. 요구공학 (Requirements Engineering)** xuất hiện như phần tiếp nối của **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **5. 요구공학 (Requirements Engineering)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **도출 (Elicitation)**, **분석 (Analysis)**, **명세 (Specification)**, **확인 (Validation)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “5. 요구공학 (Requirements Engineering)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **도출 (Elicitation)**: Lặp đi lặp lại trong suốt vòng đời (SDLC).
 - **분석 (Analysis)**: Giải quyết xung đột (중재), dùng DFD, DD.

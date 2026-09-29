@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **173-177. 키와 무결성, 관계대�
 
 ## 173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)
 
-Từ **110-114. 키 (Keys)**, ta đã có điểm tựa để bước vào **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/56 trước khi đi vào chi tiết.
+Từ **110-114. 키 (Keys)**, ta đã có điểm tựa để bước vào **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/54 trước khi đi vào chi tiết.
 
 Để đọc **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 *Note: Includes duplicated points consolidated.*
 - **도메인 무결성 (Domain Integrity):** 속성 값이 정의된 도메인에 속해야 함.

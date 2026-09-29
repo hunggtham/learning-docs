@@ -1,18 +1,18 @@
-# 9. 효과적인 모듈 설계 방안 (Effective Module Design)
+# 4. 디자인 패턴 (Design Patterns - GoF)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **9. 효과적인 모듈 설계 방안 (Effective Module Design)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **4. 디자인 패턴 (Design Patterns - GoF)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **9. 효과적인 모듈 설계 방안 (Effective Module Design)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **4. 디자인 패턴 (Design Patterns - GoF)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **11. 디자인 패턴 (Design Pattern)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-효과적인, 모듈, 설계, 방안
+디자인, 패턴
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **7. 공통 모듈 (Common Module)**에서 만든 기준을 이어받아 **9. 효과적인 모듈 설계 방안 (Effective Module Design)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **8. 디자인 패턴 (Design Patterns)**에서 만든 기준을 이어받아 **4. 디자인 패턴 (Design Patterns - GoF)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,20 +22,22 @@ Mục đích của bài này là hiểu **9. 효과적인 모듈 설계 방안 (
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **9. 효과적인 모듈 설계 방안 (Effective Module Design)** và nối nó với **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 디자인 패턴 (Design Patterns - GoF)** và nối nó với **11. 디자인 패턴 (Design Pattern)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
+## 4. 디자인 패턴 (Design Patterns - GoF)
 
-Từ **7. 공통 모듈 (Common Module)**, ta đã có điểm tựa để bước vào **9. 효과적인 모듈 설계 방안 (Effective Module Design)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/57 trước khi đi vào chi tiết.
+Từ **8. 디자인 패턴 (Design Patterns)**, ta đã có điểm tựa để bước vào **4. 디자인 패턴 (Design Patterns - GoF)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/69 trước khi đi vào chi tiết.
 
-Để đọc **9. 효과적인 모듈 설계 방안 (Effective Module Design)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **4. 디자인 패턴 (Design Patterns - GoF)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **생성 패턴 (Creational - 5)**, **구조 패턴 (Structural - 7)**, **행위 패턴 (Behavioral - 11)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-*   **Korean:** 결합도↓, 응집도↑. 모듈의 영향 영역(Scope of Effect)이 제어 영역(Scope of Control) 안에 있어야 함. 단일 입구/단일 출구(Single Entry, Single Exit). 복잡도와 중복성 감소.
-*   **VI (Vietnamese) (Tiếng Việt):** Coupling thấp, Cohesion cao. **Phạm vi ảnh hưởng (Scope of Effect) phải nằm TRONG Phạm vi kiểm soát (Scope of Control)** của module. Chỉ có 1 đầu vào và 1 đầu ra. Giảm độ phức tạp và dư thừa.
-*   **Example:** Một hàm sắp xếp chỉ nên thay đổi mảng truyền vào nó (trong vùng kiểm soát), không nên vô tình thay đổi giao diện UI (vùng ảnh hưởng ngoài kiểm soát).
+Phần “4. 디자인 패턴 (Design Patterns - GoF)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **생성 패턴 (Creational - 5)**: Abstract Factory, Builder, Factory Method, Prototype, Singleton. (Tạo đối tượng)
+- **구조 패턴 (Structural - 7)**: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. (Cấu trúc, ghép nối)
+- **행위 패턴 (Behavioral - 11)**: Strategy, Mediator, Command, Observer, State, Iterator, Visitor, Chain of Responsibility, Interpreter, Memento, Template Method. (Hành vi, tương tác)
 
 ---
 
-Điểm chốt của **9. 효과적인 모듈 설계 방안 (Effective Module Design)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Điểm chốt của **4. 디자인 패턴 (Design Patterns - GoF)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **11. 디자인 패턴 (Design Pattern)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

@@ -28,7 +28,7 @@ Deep, Dive, 개발, 모형, 선택과, 요구사항, 검증
 
 ## A+ Deep Dive: 개발 모형 선택과 요구사항 검증
 
-Sau khi đã đặt nền bằng **12. 요구사항 (Requirements)**, ta chuyển sang **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**. Đây là mắt xích 11/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **12. 요구사항 (Requirements)**, ta chuyển sang **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**. Đây là mắt xích 11/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **1. 모형 선택 비교표**. Hãy x�
 ### 1. 모형 선택 비교표
 
 Phần nguồn của **1. 모형 선택 비교표** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “1. 모형 선택 비교표” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 | 모형 | 가장 강한 신호 | 변경 대응 | 시험 함정 |
 |---|---|---|---|
@@ -69,6 +71,8 @@ Sau khi đọc **2. 요구사항 검증 미니 트레이스**, đừng bắt đ�
 ### 자주 혼동하는 판별 포인트
 
 Bây giờ ta đi vào nội dung của **자주 혼동하는 판별 포인트**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “자주 혼동하는 판별 포인트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **형상 관리 항목**은 소스 코드만이 아니라 요구사항·설계서·설치/운영 문서처럼 변경 이력을 추적해야 하는 산출물까지 포함한다. 개인 일정이나 예산 자체는 형상 항목이 아니다.
 - **EAI Hybrid**는 Hub-and-Spoke와 Message Bus를 조합한다. 모든 애플리케이션을 직접 연결하는 Point-to-Point와 다르다.

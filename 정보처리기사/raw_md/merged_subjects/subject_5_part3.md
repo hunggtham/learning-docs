@@ -27,6 +27,8 @@
 ###### 22.7 
 
 ### 핵심 **<mark>145</mark>** 테스트 오라클의 종류 
+Phần “핵심 **<mark>145</mark>** 테스트 오라클의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |참(True)<br>오라클|모든 테스트 케이스의 입력 값에 대해 기대하는 결<br>과를 제공하는 오라클로, 발생된 모든 오류를 검출<br>할 수 있음|
 |---|---|
@@ -52,6 +54,8 @@
 테스트 자동화는 사람이 반복적으로 수행하던 테스트 절 차를 스크립트 형태로 구현하는 자동화 도구를 적용함으로 써 쉽고 효율적으로 테스트를 수행할 수 있도록 한 것이다. 
 
 ###### 테스트 자동화 도구의 유형 
+Phần “테스트 자동화 도구의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |정적 분석 도구<br>(Static Analysis<br>Tools)|프로그램을 실행하지 않고 분석하는 도구로, 소<br>스 코드에 대한 코딩 표준, 코딩 스타일, 코드<br>복잡도 및 남은 결함 등을 발견하기 위해 사용<br>된다.|
 |---|---|
@@ -88,6 +92,8 @@
 2406131<br><!-- End of picture text -->
 
 ### 핵심 **<mark>147</mark>** 
+Phần “핵심 **<mark>147</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테스트 드라이버(Test Driver) : 테스트 대상의 하위 모듈 을 호출하고, 매개변수(Parameter)를 전달하고, 모듈 테스트 수행 후의 결과를 도출하는 도구 
 
@@ -397,6 +403,8 @@ JSON은 속성-값 쌍(Attribute-Value Pairs)으로 이루 어진 데이터 객�
 ###### 데이터 무결성 검사 도구 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 무결성 검사 도구는 시스템 파일의 변경 유무를 확인하고, 파일이 변경되었을 경우 이를 관리자에게 알 려주는 도구로, 인터페이스 보안 취약점을 분석하는데 사용된다. 
 
@@ -431,6 +439,8 @@ JSON은 속성-값 쌍(Attribute-Value Pairs)으로 이루 어진 데이터 객�
 ### 22.7, 21.5, 20.9, 20.8 핵심 **<mark>161</mark>** 인터페이스 구현 검증 도구 
 
 ### **<mark>161</mark>** 
+Phần “**<mark>161</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터페이스 구현을 검증하기 위해서는 인터페이스 단 위 기능과 시나리오 등을 기반으로 하는 통합 테스트가 필요하다. 
 
@@ -483,6 +493,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 2407603<br><!-- End of picture text -->
 
 ### 핵심 **<mark>163</mark>** 데이터베이스 설계 순서 
+Phần “핵심 **<mark>163</mark>** 데이터베이스 설계 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |요구 조건 분석<br>개념적 설계<br>논리적 설계|요구 조건 명세서 작성<br>개념 스키마, 트랜잭션 모델링, E-R 모델<br>목표 DBMS에 맞는 논리 스키마 설계, 트랜잭션<br>인터페이스 설계|
 |---|---|
@@ -569,6 +581,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 데이터 모델은 현실 세계의 정보들을 컴퓨터에 표현하기 위해서 단순화, 추상화하여 체계적으로 표현한 개념적 모 형이다. 
 
 ###### 데이터 모델의 구성 요소 
+Phần “데이터 모델의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |개체<br>(Entity)|데이터베이스에 표현하려는 것으로, 사람이 생각<br>하는 개념이나 정보 단위 같은 현실 세계의 대상체|
 |---|---|
@@ -585,6 +599,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 #### 정보처리기사 필기 핵심 요약 
 
 ###### 데이터 모델에 표시할 요소 
+Phần “데이터 모델에 표시할 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |구조<br>(Structure)|논리적으로 표현된 개체 타입들 간의 관계로서 데이<br>터 구조 및 정적 성질을 표현함|
 |---|---|
@@ -680,6 +696,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 #### 정보처리기사 필기 핵심 요약 
 
 ###### 튜플(Tuple) 
+Phần “튜플(Tuple)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 튜플은 릴레이션을 구성하는 각각의 행을 말한다. 
 
@@ -742,6 +760,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ### **<mark>172</mark>** 
 
 ###### 릴레이션의 특징 
+Phần “릴레이션의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 릴레이션에는 똑같은 튜플이 포함될 수 없으므로 릴 레이션에 포함된 튜플들은 모두 상이하다. 
 
@@ -778,6 +798,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 **50** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 릴레이션 내에 있는 속성들의 집합으로 구성된 키로서 릴레이션을 구성하는 모든 튜플들 중 슈퍼 
 
@@ -886,6 +908,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ###### 21.8, 21.5 
 
 ### 핵심 **<mark>177</mark>** 일반 집합 연산자 
+Phần “핵심 **<mark>177</mark>** 일반 집합 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |연산자|기능 및 수학적 표현|카디널리티|
 |---|---|---|
@@ -963,6 +987,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ### **<mark>180</mark>** 
 
 ###### 정규화의 목적 
+Phần “정규화의 목적” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 구조의 안정성 및 무결성을 유지한다. 
 
@@ -1085,6 +1111,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 ### 핵심 **<mark>185</mark>** 
 
 ###### 반정규화 방법 
+Phần “반정규화 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 두 개의 테이블이 조인(Join)되는 경우가 많아 하나의 테이블로 합쳐 사용하는 것이 성능 향상에 도움이 
 
@@ -1177,6 +1205,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 ### **<mark>188</mark>** 
 
 ###### 트랜잭션의 상태 
+Phần “트랜잭션의 상태” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 활동(Active) : 트랜잭션이 실행 중인 상태 
 
@@ -1204,6 +1234,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 22.7, 22.4, 21.8, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>189</mark>** 트랜잭션의 특성 
+Phần “핵심 **<mark>189</mark>** 트랜잭션의 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 트랜잭션의 연산은 데이터베이스에 모두 반영되 도록 완료(Commit)되든지 아니면 전혀 반영되지 않도록 복구(Rollback)되어야 함 
 
@@ -1269,6 +1301,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 > 핵심 **<mark>192</mark>** 
 
 ###### 인덱스의 종류 
+Phần “인덱스의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |트리 기반<br>인덱스|인덱스를 저장하는 블록들이 트리 구조를 이루고 있<br>는 것으로, 상용 DBMS에서는 트리 구조 기반의 B+<br>트리 인덱스를 주로 활용함|
 |---|---|
@@ -1299,6 +1333,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 뷰는 데이터 보정 작업, 처리 과정 시험 등 임시적인 작 업을 위한 용도로 활용된다. 
 
 ###### 뷰(View)의 특징 
+Phần “뷰(View)의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 뷰는 기본 테이블로부터 유도된 테이블이기 때문에 기 본 테이블과 같은 형태의 구조를 사용하며, 조작도 기 본 테이블과 거의 같다. 
 
@@ -1317,6 +1353,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 뷰를 정의할 때는 CREATE문, 제거할 때는 DROP문을 사용한다. 
 
 ###### 뷰(View)의 장·단점 
+Phần “뷰(View)의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•논리적 데이터 독립성을 제공함<br>• 동일 데이터에 대해 동시에 여러 사용자의 상이한 응용<br>이나 요구를 지원해 줌<br>•사용자의 데이터 관리를 간단하게 해줌<br>•접근 제어를 통한 자동 보안이 제공됨|
 |---|---|
@@ -1338,6 +1376,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 대용량 DB의 경우 중요한 몇 개의 테이블에만 집중되 어 데이터가 증가되므로, 이런 테이블들을 작은 단위로 나눠 분산시키면 성능 저하를 방지할 뿐만 아니라 데이 터 관리도 쉬워진다. 
 
 ###### 파티션의 종류 
+Phần “파티션의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |범위 분할<br>(Range<br>Partitioning)|지정한 열의 값을 기준으로 범위를 지정하여 분할<br>함<br>일별, 월별, 분기별 등|
 |---|---|
@@ -1366,6 +1406,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 #### 정보처리기사 필기 핵심 요약 
 
 ###### • 분산 데이터베이스의 구성 요소 
+Phần “• 분산 데이터베이스의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |분산 처리기|자체적으로 처리 능력을 가지며, 지리적으로 분산<br>되어 있는 컴퓨터 시스템|
 |---|---|
@@ -1405,6 +1447,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 ###### 분산 데이터베이스의 목표 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 위치 투명성(Location Transparency) : 액세스하려는 데 이터베이스의 실제 위치를 알 필요 없이 단지 데이터베 이스의 논리적인 명칭만으로 액세스할 수 있음 
 
@@ -1424,6 +1468,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 ### **<mark>197</mark>** 분산 데이터베이스의 장·단점 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•지역 자치성이 높음<br>•자료의 공유성이 향상됨<br>•분산 제어가 가능함<br>•시스템 성능이 향상됨<br>• 중앙 컴퓨터의 장애가 전체 시스템에 영향을 끼치지 않음<br>•효용성과 융통성이 높음<br>•신뢰성 및 가용성이 높음<br>•점진적 시스템 용량 확장이 용이함|
 |---|---|
@@ -1538,6 +1584,8 @@ DAS는 서버와 저장장치를 전용 케이블로 직접 연결하는 방식�
 2410231<br><!-- End of picture text -->
 
 ###### 벨 라파듈라 모델(Bell-LaPadula Model) 
+Phần “벨 라파듈라 모델(Bell-LaPadula Model)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 군대의 보안 레벨처럼 정보의 기밀성에 따라 상하 관계 가 구분된 정보를 보호하기 위해 사용한다. 
 
@@ -1561,6 +1609,8 @@ DAS는 서버와 저장장치를 전용 케이블로 직접 연결하는 방식�
 ### **<mark>202</mark>** 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - NAS는 서버와 저장장치를 네트워크를 통해 연결하는 방식이다. 
 
@@ -1753,6 +1803,8 @@ ALTER TABLE 테이블명 ADD 속성명 데이터_타입  [DEFAULT ‘기 본값�
 > 예제 2 <학생> 테이블의 ‘학번’ 필드의 데이터 타입과 크기 를 VARCHAR(10)으로 하고 NULL 값이 입력되지 않도 록 변경하시오. 
 
 ###### ALTER TABLE 학생 ALTER 학번 VARCHAR(10) NOT NULL; 
+Phần “ALTER TABLE 학생 ALTER 학번 VARCHAR(10) NOT NULL;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - FOREIGN KEY ~ REFERENCES ~ 
 
@@ -1884,6 +1936,8 @@ DCL(데이터 제어어)는 데이터의 보안, 무결성, 회복, 병 행 제�
 > 예제 2 사용자 ID가 “STAR”인 사람에게 단순히 데이터베 이스에 있는 정보를 검색할 수 있는 권한을 부여하는 SQL 문을 작성하시오. 
 
 ###### GRANT CONNECT TO STAR; 
+Phần “GRANT CONNECT TO STAR;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테이블 및 속성에 대한 권한 부여 및 취소 
 
@@ -1930,6 +1984,8 @@ INSERT INTO 테이블명([속성명1, 속성명2,…]) VALUES (데이터1, 데�
 - SELECT문을 사용하여 다른 테이블의 검색 결과를 삽 입할 수 있다. 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -1971,12 +2027,16 @@ INSERT INTO 테이블명([속성명1, 속성명2,…]) VALUES (데이터1, 데�
 ###### 일반 형식 
 
 ###### DELETE FROM 테이블명 [WHERE 조건]; 
+Phần “DELETE FROM 테이블명 [WHERE 조건];” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모든 레코드를 삭제할 때는 WHERE절을 생략한다. 
 
 - 모든 레코드를 삭제하더라도 테이블 구조는 남아 있기 때문에 디스크에서 테이블을 완전히 제거하는 DROP과 는 다르다. 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2029,6 +2089,8 @@ INSERT INTO 편집부원(이름, 생일, 주소, 기본급) SELECT 이름, 생�
 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE 조건]; 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2087,6 +2149,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 ### **<mark>217</mark>** 
 
 ### 핵심 **<mark>217</mark>** 데이터 조작문의 네 가지 유형 
+Phần “핵심 **<mark>217</mark>** 데이터 조작문의 네 가지 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SELECT(검색) : SELECT~ FROM~ WHERE~ 
 
@@ -2116,6 +2180,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 ###### <사원> 
 
 ###### <여가활동> 
+Phần “<여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -2135,6 +2201,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 SELECT DISTINCT 주소 FROM 사원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |주소<br>대흥동<br>망원동|
 |---|
@@ -2150,6 +2218,8 @@ SELECT DISTINCT 주소 FROM 사원;
 SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름<br>성춘향|부서<br>기획|생일<br>02/20/64|주소<br> 대흥동|기본급<br>100|
 |---|---|---|---|---|
@@ -2177,6 +2247,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 ###### 조건 연산자 
 
 ###### • 비교 연산자 
+Phần “• 비교 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |연산자||의미|
 |---|---|---|
@@ -2202,6 +2274,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 
 
 ###### 연산자 우선순위 
+Phần “연산자 우선순위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종류|연산자||우선순위|
 |---|---|---|---|
@@ -2220,6 +2294,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 ###### <사원> 
 
 ###### <여가활동> 
+Phần “<여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -2239,6 +2315,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 SELECT * FROM 사원 WHERE 이름 LIKE “김%”; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2262,6 +2340,8 @@ SELECT * FROM 사원 WHERE 이름 LIKE “김%”;
 하위 질의는 조건절에 주어진 질의를 먼저 수행하여 그 검 색 결과를 조건절의 피연산자로 사용한다. 
 
 ###### <사원> <여가활동> 
+Phần “<사원> <여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -2290,6 +2370,8 @@ SELECT 이름, 주소 FROM 사원
 WHERE 이름 =  (SELECT 이름 FROM 여가활동 WHERE 취미 = ‘나이트댄스’) ; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름<br>성춘향|주소<br>대흥동|
 |---|---|
@@ -2303,6 +2385,8 @@ SELECT 부서 FROM 사원
 WHERE EXISTS  (SELECT 이름 FROM 여가활동 WHERE 여가활 동.이름 = 사원.이름); 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서<br>인터넷<br>편집<br>기획<br>기획|
 |---|
@@ -2337,6 +2421,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 그룹함수 : GROUP BY절에 지정된 그룹별로 속성의 값 을 집계할 함수를 기술함 
 
@@ -2376,6 +2462,8 @@ GROUP BY절에 지정된 그룹별로 속성의 값을 집계할 때 사용된�
 - VARIANCE(속성명) : 그룹별 분산을 구하는 함수 
 
 ###### <상여금> 
+Phần “<상여금>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서|이름|상여내역|상여금|
 |---|---|---|---|
@@ -2399,6 +2487,8 @@ GROUP BY절에 지정된 그룹별로 속성의 값을 집계할 때 사용된�
 SELECT 부서, COUNT(*) AS 사원수 FROM 상여금 WHERE 상여금 >= 100 GROUP BY 부서 HAVING COUNT(*) >= 2; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서<br>사원수<br>기획<br>3|
 |---|
@@ -2437,6 +2527,8 @@ SELECT 속성명1, 속성명2, … FROM 테이블명 UNION | UNION ALL | INTERSE
 ###### <사원> 
 
 ###### <직원> 
+Phần “<직원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|사원|직급|
 |---|---|---|---|
@@ -2476,6 +2568,8 @@ INNER JOIN은 일반적으로 EQUI JOIN과 NON-EQUI JOIN으로 구분된다.
 SELECT * FROM 사원 UNION SELECT * FROM 직원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|
 |---|---|
@@ -2493,6 +2587,8 @@ SELECT * FROM 사원 UNION SELECT * FROM 직원;
 SELECT * FROM 사원 INTERSECT SELECT * FROM 직원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|
 |---|---|
@@ -2531,6 +2627,8 @@ SELECT [테이블명1.]속성명, [테이블명2.]속성명, … FROM 테이블�
 **67** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SELECT 학번, 이름, 학생.학과코드, 학과명 FROM 학생, 학과 WHERE 학생.학과코드 = 학과.학과코드; 
 
@@ -2539,6 +2637,8 @@ SELECT [테이블명1.]속성명, [테이블명2.]속성명, … FROM 테이블�
 - SELECT 학번, 이름, 학생.학과코드, 학과명 FROM 학생 JOIN 학과 USING(학과코드); 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |학번|이름|학과코드|학과명|
 |---|---|---|---|
@@ -2576,6 +2676,8 @@ ODBC(Open DataBase Connectivity)
 - ODBC도 접속하려는 DBMS에 맞는 드라이버가 필요하 지만, 접속하려는 DBMS의 인터페이스를 알지 못하더 라도 ODBC 문장을 사용하여 SQL을 작성하면 ODBC에 포함된 드라이버 관리자가 해당 DBMS의 인터페이스에 맞게 연결해 주므로 DBMS의 종류를 몰라도 된다. 
 
 ###### MyBatis 
+Phần “MyBatis” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - MyBatis는 JDBC 코드를 단순화하여 사용할 수 있는 SQL Mapping 기반 오픈 소스 접속 프레임워크이다. 
 
@@ -2704,6 +2806,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 오류 데이터 정제는 오류 관리 목록의 각 항목을 분석하여 원천 데이터를 정제하거나 전환 프로그램을 수정하는 것 이다. 
 
 ###### 오류 데이터 분석 
+Phần “오류 데이터 분석” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 오류 관리 목록의 오류 데이터를 분석하여 오류 상태, 심각도, 해결 방안을 확인 및 기재한다. 
 
@@ -2804,6 +2908,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 틀린 문제만 모아 오답 노트를 만들고 싶다고요? 까먹기 전에 다시 한 번 복습하고 싶다고요? 지금 당장 QR 코드를 스캔해 보세요. 
 
 ###### 20.8 
+Phần “20.8” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**233**<br>핵심|C/C++의 데이터<br>기억 범위|타입 크기|및|<br>400102|
 |---|---|---|---|---|
@@ -2887,6 +2993,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 - 변수는 저장하는 값에 따라 정수형, 실수형, 문자형, 포 인터형 등으로 구분한다. 
 
 ###### 변수명 작성 규칙 
+Phần “변수명 작성 규칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. 
 
@@ -2921,6 +3029,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 ### 가비지 콜렉터 **<mark>238</mark>** (Garbage Collector) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수를 선언만 하고 사용하지 않으면 이 변수들이 점유 한 메모리 공간은 다른 프로그램들이 사용할 수 없게 된다. 
 
@@ -3078,6 +3188,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 400408<br><!-- End of picture text -->
 
 ### 22.3, 21.8, 21.5 핵심 **<mark>245</mark>** 연산자 우선순위 
+Phần “22.3, 21.8, 21.5 핵심 **<mark>245</mark>** 연산자 우선순위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 개의 수식에 여러 개의 연산자가 사용되면 기본적으 로 아래 표의 순서대로 처리된다. 
 
@@ -3088,6 +3200,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |대분류|중분류|연산자<br>결합규칙|우선 순위|
 |---|---|---|---|
@@ -3123,6 +3237,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 
 
 ###### 특징 
+Phần “특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 입력받을 데이터의 자료형, 자릿수 등을 지정할 수 있다. 
 
@@ -3138,6 +3254,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 2459933<br><!-- End of picture text -->
 
 ### 핵심 **<mark>247</mark>** 서식 문자열 
+Phần “핵심 **<mark>247</mark>** 서식 문자열” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |서식 문자열|의미|
 |---|---|
@@ -3193,10 +3311,14 @@ printf( ) 함수는 C언어의 표준 출력 함수로, 인수로 주어 진 값
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 -   printf("%-8.2f", 200.2); (∨는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -3222,6 +3344,8 @@ printf( ) 함수는 C언어의 표준 출력 함수로, 인수로 주어 진 값
 ###### JAVA에서의 표준 출력 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - JAVA에서 값을 화면에 출력할 때는 System 클래스의 서브 클래스인 out 클래스의 메소드 print( ), println( ), printf( ) 등을 사용하여 출력한다. 
 
@@ -3236,6 +3360,8 @@ System.out.printf(서식 문자열, 변수)
 -   System.out.printf(“%-8.2f”, 200.2); (V는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -3284,6 +3410,8 @@ System.out.print( )
 -  System.out.print(“abc123” + “def”); 
 
 ###### <mark>abc123def</mark> 
+Phần “<mark>abc123def</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식 3 : 값이나 변수의 내용을 형식없이 출력한 후 커 서를 다음 줄의 처음으로 이동함 
 
@@ -3490,6 +3618,8 @@ switch문은 조건에 따라 분기할 곳이 여러 곳인 경우 간 단하�
 실행할 문장3; 
 
 ###### } ❺ 
+Phần “} ❺” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - case문의 레이블에는 한 개의 상수만 지정할 수 있으 며, int, char, enum형의 상수만 가능하다. 
 
@@ -3602,6 +3732,8 @@ while문은 조건이 참인 동안 실행할 문장을 반복 수행하 는 제
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • 형식 
+Phần “• 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - while(조건) • while은 반복문에 사용되는 예약어로 그대로 입력 한다. 
 
@@ -3726,6 +3858,8 @@ main( ) { int a = 0, hap = 0; while(1) ❶ 조건이 참(1)이므로 무한 반�
 **79** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C 언어에서 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주소를 지정하는 것과 같다. 
 
@@ -3770,6 +3904,8 @@ main( ) { int a = 0, hap = 0; while(1) ❶ 조건이 참(1)이므로 무한 반�
 ###### 2차원 배열 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 2차원 배열은 변수들을 평면, 즉 행과 열로 조합한 배 열이다. 
 
@@ -3792,6 +3928,8 @@ b[0][2] : b는 배열의 이름이고, 0은 행 첨자, 2는 열 첨자로서 �
 > 예제 3행 4열의 배열에 다음과 같이 숫자 저장하기 
 
 #include <stdio.h> main( ) { 
+Phần “include <stdio.h> main( ) {” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다. 선언할 때는 사용할 개수를 선언하고, 사용할 때는 첨자를 0부터 사용하 므로 주의해야 한다. 
 
@@ -3849,6 +3987,8 @@ for (j = 0; j < 4; j++) ❸
 **80** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - { ❹ ❹~❼이 ❸번 반복문의 반복 범위이다. 
 
@@ -3877,6 +4017,8 @@ C언어에서는 큰따옴표(“ ”)로 묶인 글자는 글자 수에 관계 
 - 형식 
 
 ###### char 배열이름[크기] = “문자열” 
+Phần “char 배열이름[크기] = “문자열”” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 배열에 문자열을 저장하면 문자열의 끝을 알리기 위한 널 문자(‘\0’)가 문자열 끝에 자동으로 삽입된다. 
 
@@ -3890,6 +4032,8 @@ C언어에서는 큰따옴표(“ ”)로 묶인 글자는 글자 수에 관계 
 ### 20.6 핵심 **<mark>260</mark>** 배열의 초기화 
 
 ### **<mark>260</mark>** 
+Phần “**<mark>260</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 배열 선언 시 초기값을 지정할 수 있다. 
 

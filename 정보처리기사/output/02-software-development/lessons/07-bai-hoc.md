@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **30. 트리 구조 추가 용어 (Tree 
 
 ## 30. 트리 구조 추가 용어 (Tree Terminology Additional)
 
-Ở bước 7/95, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** xuất hiện như phần tiếp nối của **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 7/101, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** xuất hiện như phần tiếp nối của **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **30. 트리 구조 추가 용어 (Tree Terminology Additional)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **자식 노드 (Son Node)**, **부모 노드 (Parent Node)**, **형제 노드 (Sibling / Brother Node)**, **트리의 디그리 (Degree of a Tree)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “30. 트리 구조 추가 용어 (Tree Terminology Additional)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **자식 노드 (Son Node)**: 어떤 노드에 연결된 다음 레벨의 노드들.
 * **부모 노드 (Parent Node)**: 어떤 노드에 연결된 이전 레벨의 노드.

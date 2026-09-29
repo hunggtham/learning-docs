@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **2. 요구사항 개발 (Phát triển 
 
 ## 2. 요구사항 개발 (Phát triển Yêu cầu)
 
-Ở bước 4/57, **2. 요구사항 개발 (Phát triển Yêu cầu)** xuất hiện như phần tiếp nối của **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 4/69, **2. 요구사항 개발 (Phát triển Yêu cầu)** xuất hiện như phần tiếp nối của **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **2. 요구사항 개발 (Phát triển Yêu cầu)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **007. 주요 비기능 요구사항 (Các yêu cầu 
 ### 007. 주요 비기능 요구사항 (Các yêu cầu phi chức năng chính / Non-functional Requirements)
 
 Bây giờ ta đi vào nội dung của **007. 주요 비기능 요구사항 (Các yêu cầu phi chức năng chính / Non-functional Requirements)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “007. 주요 비기능 요구사항 (Các yêu cầu phi chức năng chính / Non-functional Requirements)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 성능 요구사항 (Yêu cầu hiệu năng)
 - 보안 요구사항 (Yêu cầu bảo mật)
@@ -55,6 +57,8 @@ Với **008. 요구사항 개발 프로세스 (Quy trình phát triển yêu c�
 
 Phần nguồn của **008. 요구사항 개발 프로세스 (Quy trình phát triển yêu cầu)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “008. 요구사항 개발 프로세스 (Quy trình phát triển yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 도출 (Elicitation - Khám phá/Rút ra) → 분석 (Analysis - Phân tích) → 명세 (Specification - Đặc tả) → 확인 (Validation - Xác nhận)
 - **Ví dụ (Example):** Phỏng vấn user (도출), lọc ra các yêu cầu hợp lý (분석), viết tài liệu SRS (명세), nhờ user ký duyệt (확인).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **ĐPMX** (Đồ - Phân - Minh - Xác): **Đi Phượt Một Xe**.
@@ -67,6 +71,8 @@ Sau khi đọc **008. 요구사항 개발 프로세스 (Quy trình phát triển
 ### 009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)
 
 Các ý ngay dưới **009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 개발 대상에 대한 사용자의 요구사항을 이해하고 문서화(명세화)하는 활동을 의미한다. (Hoạt động hiểu và tài liệu hóa (đặc tả) yêu cầu của người dùng về đối tượng cần phát triển.)
 - 소프트웨어 개발의 실제적인 첫 단계이다. (Là bước thực tế đầu tiên của phát triển phần mềm.)
@@ -83,6 +89,8 @@ Các ý về **009. 요구사항 분석 (Phân tích yêu cầu / Requirements A
 
 Bây giờ ta đi vào nội dung của **010. 자료 흐름도 (DFD - Data Flow Diagram) 의 구성 요소**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “010. 자료 흐름도 (DFD - Data Flow Diagram) 의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로세스 (Process - Quy trình): Hình tròn / Hình bầu dục. (Ví dụ: 물품 확인 - Kiểm tra hàng hóa)
 - 자료 흐름 (Data Flow - Luồng dữ liệu): Mũi tên. (Ví dụ: 물품 코드 - Mã hàng hóa)
 - 자료 저장소 (Data Store - Kho lưu trữ dữ liệu): Hai đường thẳng song song. (Ví dụ: 물품대장 - Sổ hàng hóa)
@@ -97,6 +105,8 @@ Với **011. 자료 사전 (Data Dictionary) 의 표기 기호**, mục tiêu đ
 ### 011. 자료 사전 (Data Dictionary) 의 표기 기호
 
 Phần nguồn của **011. 자료 사전 (Data Dictionary) 의 표기 기호** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “011. 자료 사전 (Data Dictionary) 의 표기 기호” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - `=`: 정의 (Định nghĩa - is composed of)
 - `+`: 연결 (Kết nối/Và - and)
@@ -115,6 +125,8 @@ Sau khi đọc **011. 자료 사전 (Data Dictionary) 의 표기 기호**, đừ
 ### 012. HIPO (Hierarchy plus Input-Process-Output)
 
 Các ý ngay dưới **012. HIPO (Hierarchy plus Input-Process-Output)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “012. HIPO (Hierarchy plus Input-Process-Output)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 하향식 소프트웨어 개발을 위한 문서화 도구이다. (Là công cụ tài liệu hóa cho phát triển phần mềm theo hướng từ trên xuống - Top-down.)
 - 기호, 도표 등을 사용하므로 보기 쉽고 이해하기도 쉽다. (Sử dụng ký hiệu, biểu đồ nên dễ nhìn và dễ hiểu.)

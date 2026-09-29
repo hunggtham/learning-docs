@@ -1,6 +1,8 @@
 # 과목 4. 소프트웨어 공학 (Phần 2)
 
 ## 169. 일반적인 소프트웨어 생명 주기 (General Software Life Cycle / Vòng đời phát triển phần mềm chung)
+Phần “169. 일반적인 소프트웨어 생명 주기 (General Software Life Cycle / Vòng đời phát triển phần mềm chung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **정의 단계 (Definition Phase / Giai đoạn định nghĩa)**: ‘무엇(What)’을 처리하는 소프트웨어를 개발할 것인지 정의하는 단계. 관리자와 사용자가 가장 많이 참여함.
   - **타당성 검토 단계 (Feasibility Study)**: 법적, 경제적, 기술적으로 실현 가능성이 있는지 조사.
   - **개발 계획 단계 (Development Planning)**: 자원과 비용을 측정.
@@ -26,6 +28,8 @@ Xây dựng ứng dụng đặt đồ ăn:
 ---
 
 ## 170. 소프트웨어 생명 주기 모형 - 폭포수 모형 (Waterfall Model / Mô hình thác nước)
+Phần “170. 소프트웨어 생명 주기 모형 - 폭포수 모형 (Waterfall Model / Mô hình thác nước)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 공학에서 가장 오래되고 폭넓게 사용된 전통적/고전적 생명 주기 모형.
 - 각 단계를 확실히 매듭짓고, 철저한 검토 및 승인 후 다음 단계로 진행하는 **선형 순차적 모형(Linear Sequential Model)**.
 - 이전 단계로 되돌아갈 수 없음.
@@ -45,6 +49,8 @@ Giống như việc xây một ngôi nhà truyền thống. Bạn phải hoàn t
 ---
 
 ## 171. 소프트웨어 생명 주기 모형 - 프로토타입 모형 (Prototype Model / Mô hình nguyên mẫu)
+Phần “171. 소프트웨어 생명 주기 모형 - 프로토타입 모형 (Prototype Model / Mô hình nguyên mẫu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 사용자 요구사항을 정확히 파악하기 위해 실제 개발될 소프트웨어의 **견본(시제품, Prototype)**을 만들어 최종 결과물을 예측하는 모형.
 - 시제품은 사용자와 시스템 사이의 **인터페이스에 중점**을 둠.
 - 개발 단계 안에서 유지보수가 이루어지며 별도의 유지보수 단계가 없어짐.
@@ -64,6 +70,8 @@ Trước khi may một bộ vest thật (bằng vải đắt tiền), thợ may 
 ---
 
 ## 172. 소프트웨어 생명 주기 모형 - 나선형 모형 (Spiral Model / Mô hình xoắn ốc)
+Phần “172. 소프트웨어 생명 주기 모형 - 나선형 모형 (Spiral Model / Mô hình xoắn ốc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 보헴(Boehm) 제안. 폭포수 모형과 프로토타입 모형의 장점에 **위험 분석(Risk Analysis)** 기능을 추가.
 - 나선을 따라 돌 듯 점진적으로 완벽한 소프트웨어를 개발 (**점진적 모형**).
 - 목적: 소프트웨어 개발 중 발생할 수 있는 **위험을 관리하고 최소화**.
@@ -84,6 +92,8 @@ Phát triển phần mềm cho tên lửa vũ trụ. Qua mỗi vòng xoắn ốc
 ---
 
 ## 173. 프로젝트 관리 (Project Management / Quản lý dự án)
+Phần “173. 프로젝트 관리 (Project Management / Quản lý dự án)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 주어진 기간 내 최소 비용으로 사용자를 만족시키는 시스템을 개발하기 위한 전반적인 활동.
 - **효과적인 프로젝트 관리를 위한 3P (3대 요소)**:
   1. **사람 (People)**: 가장 기본이 되는 인적 자원.
@@ -106,6 +116,8 @@ Dự án game: People (lập trình viên, hoạ sĩ thiết kế), Problem (gam
 ---
 
 ## 174. 프로젝트 계획 수립 & 비용 결정 요소 (Project Planning & Cost Factors / Lập kế hoạch dự án & Các yếu tố chi phí)
+Phần “174. 프로젝트 계획 수립 & 비용 결정 요소 (Project Planning & Cost Factors / Lập kế hoạch dự án & Các yếu tố chi phí)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **소프트웨어 개발 영역 결정**: 프로젝트 계획 수립의 첫 번째 업무. 처리될 데이터, 기능, 성능, 제약조건, 인터페이스 등을 결정.
 - **프로젝트 비용 결정 요소**:
   - **프로젝트 요소**: 제품의 복잡도, 시스템 크기, 요구 신뢰도.
@@ -121,6 +133,8 @@ Chi phí phụ thuộc = **프자생** (프로젝트, 자원, 생산성).
 ---
 
 ## 175. 비용 산정 기법 - LOC 기법 (Lines Of Code / Kỹ thuật dòng mã lệnh)
+Phần “175. 비용 산정 기법 - LOC 기법 (Lines Of Code / Kỹ thuật dòng mã lệnh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 각 기능의 원시 코드 라인 수(LOC)의 비관치, 낙관치, 기대치를 측정하여 예측치를 구함.
 - 측정이 용이하고 이해가 쉬워 가장 많이 사용됨.
 - **산정 공식 (Dự đoán số dòng code)**: 
@@ -139,6 +153,8 @@ Làm web cần 6000 dòng code. Một Dev viết được 1000 dòng/tháng. Suy
 ---
 
 ## 176 - 177. 비용 산정 기법 - COCOMO 모형 (COnstructive COst MOdel / Kỹ thuật COCOMO)
+Phần “176 - 177. 비용 산정 기법 - COCOMO 모형 (COnstructive COst MOdel / Kỹ thuật COCOMO)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 보헴(Boehm)이 제안. 원시 프로그램 규모(LOC)에 의한 비용 산정 기법.
 - 소프트웨어 개발 유형:
   - **조직형 (Organic Mode)**: 기관 내부 중·소규모, 5만 라인(50KDSI) 이하 (예: 사무/업무용).
@@ -165,6 +181,8 @@ COCOMO là mô hình tính phí dựa vào số dòng code nhưng phân loại t
 ---
 
 ## 178. 프로젝트 일정 계획 (Project Scheduling / Lập lịch dự án)
+Phần “178. 프로젝트 일정 계획 (Project Scheduling / Lập lịch dự án)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **브룩스(Brooks)의 법칙**: 프로젝트 진행 중에 새로운 인력을 투입할 경우 적응 기간과 부작용으로 일정이 더욱 지연됨. (Thêm người vào dự án đang trễ sẽ làm nó trễ hơn).
 - **PERT (Program Evaluation and Review Technique)**:
   - 낙관치, 기대치, 비관치 3가지로 각 단계별 종료 시기를 결정.
@@ -183,6 +201,8 @@ PERT và CPM là 2 biểu đồ mạng lưới giúp tìm ra đường găng (Cr
 ---
 
 ## 179. 간트 차트 (Gantt Chart / Biểu đồ Gantt)
+Phần “179. 간트 차트 (Gantt Chart / Biểu đồ Gantt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 작업 일정을 **막대 도표(Bar Chart)**를 이용하여 표시하는 프로젝트 일정표. **시간선(Time-Line) 차트**라고도 함.
 - 수평 막대 길이는 작업 기간을 나타냄.
 - 중간 목표 미달성 이유와 예산 초과 등도 관리 가능. (단, 작업 간 의존성 파악은 CPM보다 약함).
@@ -193,6 +213,8 @@ Biểu đồ Gantt thể hiện các công việc bằng các thanh ngang (bar) 
 ---
 
 ## 180. 프로젝트 팀 구성 (Team Organization / Cấu trúc nhóm dự án)
+Phần “180. 프로젝트 팀 구성 (Team Organization / Cấu trúc nhóm dự án)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **분산형 팀 (민주주의식 팀 / Democratic Team)**:
   - 팀원 모두 의사 결정 참여. 장기 프로젝트에 적합. 이직률이 낮음.
   - 단점: 의사 결정 시간이 늦어지고 책임감이 분산될 수 있음. 의사소통 경로 수 = n(n-1)/2.
@@ -230,6 +252,8 @@ Chất lượng = **정신효무 사유이재상** (Đúng-Tin-Hiệu-Toàn Dùn
 ---
 
 ## 182. 품질 보증 / 정형 기술 검토 / 검토 회의 / 검열 (Quality Assurance & Reviews / Đảm bảo chất lượng & Đánh giá)
+Phần “182. 품질 보증 / 정형 기술 검토 / 검토 회의 / 검열 (Quality Assurance & Reviews / Đảm bảo chất lượng & Đánh giá)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **품질 보증 (QA)**: 소프트웨어가 요구사항과 일치하는지 확인하는 체계적인 작업.
 - **정형 기술 검토 (FTR, Formal Technical Review)**: 소프트웨어 기술자들에 의해 수행되는 품질 보증 활동.
   - 지침: 제품 검토에만 집중, 의제 제한, 논쟁/반박 제한, 해결책(개선책) 논하지 않음, 참가자 수 제한 및 사전 준비.
@@ -249,8 +273,12 @@ Chất lượng = **정신효무 사유이재상** (Đúng-Tin-Hiệu-Toàn Dùn
 ---
 
 ## 183. 위험 관리 (Risk Management / Quản lý rủi ro)
+Phần “183. 위험 관리 (Risk Management / Quản lý rủi ro)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로젝트 추진 과정에서 예상되는 돌발 상황을 미리 예상하고 대책을 수립하는 활동.
 ## 183. 위험 관리 절차 (Risk Management Procedure / Quy trình quản lý rủi ro) - Tiếp theo
+Phần “183. 위험 관리 절차 (Risk Management Procedure / Quy trình quản lý rủi ro) - Tiếp theo” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Yếu tố rủi ro tiêu biểu nhất là **사용자 요구 변경** (Sự thay đổi yêu cầu từ người dùng).
 - **절차 (Quy trình)**:
   1. **위험 식별 (Nhận diện rủi ro)**: Nắm bắt các rủi ro có thể đoán trước.
@@ -270,6 +298,8 @@ Khách hàng liên tục thay đổi yêu cầu là rủi ro lớn nhất khi l�
 ---
 
 ## 184. 형상 관리 (SCM - Software Configuration Management / Quản lý cấu hình phần mềm)
+Phần “184. 형상 관리 (SCM - Software Configuration Management / Quản lý cấu hình phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 개발 과정에서 생산물을 확인하고 통제, **변경 상태를 기록하고 보관**하는 일련의 작업.
 - 변경의 원인을 제어하고 적절히 변경되고 있는지 담당자에게 통보.
 - 소프트웨어 생명 주기 **전 단계에 적용**되며 (유지보수 단계 포함), 방해 요인을 최소화하는 것이 목적.
@@ -287,6 +317,8 @@ Khi dùng Git để quản lý source code. Bạn commit một tính năng mới
 ---
 
 ## 185. 요구사항 분석 (Requirements Analysis / Phân tích yêu cầu)
+Phần “185. 요구사항 분석 (Requirements Analysis / Phân tích yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 개발의 실질적인 첫 단계. 사용자의 요구를 이해하고 **문서화(명세화)**함.
 - 분석 결과는 '설계 단계'의 기본 자료가 됨.
 - **작업 과정**: 문제 인식 (면담, 설문조사) → 평가와 종합 (해결책 종합) → 모델 제작 (도식화, 이해하기 쉽게) → 문서화와 검토 (명세서 작성).
@@ -298,6 +330,8 @@ Phân tích yêu cầu là bước đầu tiên để biết khách hàng thực
 ---
 
 ## 186. 자료 흐름도 (DFD - Data Flow Diagram / Biểu đồ luồng dữ liệu)
+Phần “186. 자료 흐름도 (DFD - Data Flow Diagram / Biểu đồ luồng dữ liệu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 자료의 흐름과 변환 과정을 도형 중심으로 기술. **버블(Bubble) 차트**라고도 함.
 - 시스템의 범위를 표현하는 단계를 **배경도 (Level 0)**라고 함.
 - **기호 (Ký hiệu)**:
@@ -315,6 +349,8 @@ DFD vẽ ra cách dữ liệu chạy trong hệ thống. Ví dụ khi bạn mua 
 ---
 
 ## 187. 자료 사전 (DD - Data Dictionary / Từ điển dữ liệu)
+Phần “187. 자료 사전 (DD - Data Dictionary / Từ điển dữ liệu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - DFD에 있는 자료를 더 자세히 정의. 데이터를 설명하는 데이터이므로 **메타 데이터(Meta Data)**라고도 함.
 - **표기 기호**:
   - `=` : 정의 (~로 구성되어 있다 / is composed of)
@@ -335,6 +371,8 @@ Từ điển dữ liệu giải thích chi tiết các thành phần trong DFD. 
 ---
 
 ## 188. HIPO (Hierarchy plus Input-Process-Output)
+Phần “188. HIPO (Hierarchy plus Input-Process-Output)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 입력, 처리, 출력의 기능을 나타내는 하향식 소프트웨어 개발 문서화 도구.
 - **종류**:
   - **가시적 도표 (Visual Table of Contents)**: 전체적인 기능과 흐름을 보여주는 계층(Tree) 구조도.
@@ -350,6 +388,8 @@ HIPO là tài liệu thiết kế chia hệ thống theo cấu trúc từ trên 
 ---
 
 ## 189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)
+Phần “189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **모듈화 (Modularity)**: 시스템을 모듈 단위로 나눔.
 - **추상화 (Abstraction)**: 포괄적 개념 먼저 설계 후 세분화 (기능, 제어, 자료 추상화).
 - **정보 은닉 (Information Hiding)**: 모듈 내부의 세부 정보를 감추어 다른 모듈이 변경하지 못하게 함 (유지보수 용이).
@@ -368,6 +408,8 @@ Khi thiết kế phần mềm, ta chia nhỏ thành các hàm/chức năng (Modu
 ---
 
 ## 190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)
+Phần “190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 적당한 모듈 크기를 유지.
 - **결합도(Coupling)는 약하게, 응집도(Cohesion)는 강하게 설계한다**.
 
@@ -377,6 +419,8 @@ Một thiết kế phần mềm chuẩn mực phải đảm bảo: "Mối liên 
 ---
 
 ## 191. 결합도 (Coupling / Mức độ phụ thuộc)
+Phần “191. 결합도 (Coupling / Mức độ phụ thuộc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 모듈 간에 상호 의존하는 정도. 약할수록 독립성이 높고 품질이 좋음.
 - **결합도가 약한 것부터 강한 순서 (Tốt -> Xấu)**:
   1. **자료 (Data)**: 파라미터로 단순 데이터(값)만 전달 (가장 좋음).
@@ -396,6 +440,8 @@ Tốt nhất là Data (chỉ truyền tham trị như `int a`). Tệ nhất là 
 ---
 
 ## 192. 응집도 (Cohesion / Mức độ gắn kết)
+Phần “192. 응집도 (Cohesion / Mức độ gắn kết)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 모듈 안의 요소들이 서로 관련되어 있는 정도. 강할수록 독립성이 높고 품질이 좋음.
 - **응집도가 약한 것부터 강한 순서 (Xấu -> Tốt)**:
   1. **우연적 (Coincidental)**: 아무 관련 없는 요소들이 우연히 모임 (가장 나쁨).
@@ -415,6 +461,8 @@ Cohesion đo lường sự tập trung của một module. Nếu một hàm vừ
 ---
 
 ## 193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)
+Phần “193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **모듈화 방안**: 결합도를 줄이고 응집도를 높임 (Low Coupling, High Cohesion). 모듈 크기는 이해하기 쉽게 분해. 하나의 입구와 하나의 출구를 가짐.
 - **N-S 차트**: 논리 기술에 중점을 둔 도형 (박스 다이어그램).
   - 순차, 선택, 반복 구조를 시각적으로 표현.
@@ -427,6 +475,8 @@ Biểu đồ N-S (Nassi-Schneiderman) là loại biểu đồ khối chữ nhậ
 ---
 
 ## 195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)
+Phần “195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **구현(코딩)**: 설계 명세서를 컴퓨터가 알 수 있는 코드로 변환.
 - **구조적 프로그래밍**: 순차(Sequence), 선택(Selection), 반복(Iteration)의 3가지 제어 구조만 사용하여 코딩 (Dijkstra 제안). 신뢰성 향상.
 - **순환 복잡도 (Cyclomatic Complexity)**: 프로그램의 논리적 복잡도 척도.
@@ -442,6 +492,8 @@ Nếu biểu đồ luồng có 5 Node (N=5) và 6 Cạnh/Mũi tên (E=6).
 ---
 
 ## 196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)
+Phần “196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 모듈의 **원시 코드(Source Code)를 오픈시킨 상태**에서 논리적인 모든 경로를 검사.
 - 내부 구조, 제어 흐름, 논리 흐름(루프)을 직접 관찰하며 테스트.
 - 조건의 참/거짓 경로를 적어도 한 번 이상 실행.
@@ -457,6 +509,8 @@ Hộp trắng trong suốt -> Nhìn thấu được code bên trong. Trọng tâ
 ---
 
 ## 198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)
+Phần “198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **기능 검사**라고도 함. 내부 코드를 보지 않고, 소프트웨어의 인터페이스(입·출력)에서 기능이 완전히 작동하는지 입증.
 - 테스트 과정 **후반부**에 적용됨.
 - 종류:
@@ -464,6 +518,8 @@ Hộp trắng trong suốt -> Nhìn thấu được code bên trong. Trọng tâ
   - **경계값 분석 (Boundary Value Analysis)**: 경계값에서 오류가 발생할 확률이 높음을 이용. (Ví dụ: Test case: 0, 1, 100, 101).
   - **원인-효과 그래프 (Cause-Effect Graphing)**: 입력(원인)과 출력(효과)의 관계 분석.
 ## 199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)
+Phần “199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **단위 검사 (Unit Testing)**: 코딩 후 최소 단위인 '모듈' 초점 검사 (화이트 박스 기법).
 - **하향식 통합 검사 (Top-Down Integration)**: 상위 모듈 -> 하위 모듈 방향. 임시 시험용 모듈인 **스터브(Stub)** 필요.
 - **상향식 통합 검사 (Bottom-Up Integration)**: 하위 모듈 -> 상위 모듈 방향. 제어 모듈과 종속 모듈 그룹인 **클러스터(Cluster)**와 드라이버(Driver) 필요. (Stub 불필요).
@@ -483,6 +539,8 @@ Hộp trắng trong suốt -> Nhìn thấu được code bên trong. Trọng tâ
 ---
 
 ## 200. 유지보수 (Maintenance / Bảo trì phần mềm)
+Phần “200. 유지보수 (Maintenance / Bảo trì phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 개발 중 가장 많은 노력과 비용이 투입됨.
 - **유형 (Phân loại)**:
   1. **수정(Corrective) 보수 (하자 보수)**: 검사 단계에서 못 찾은 '오류(버그) 수정'.
@@ -502,6 +560,8 @@ Hộp trắng trong suốt -> Nhìn thấu được code bên trong. Trọng tâ
 ---
 
 ## 201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)
+Phần “201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 아주 오래 전에 개발되어(보통 15년 전) 문서화가 제대로 되어 있지 않아 유지보수가 매우 어려운 프로그램.
 - 해결책: 문서화(Documentation)를 철저히 해야 함.
 
@@ -511,6 +571,8 @@ Hộp trắng trong suốt -> Nhìn thấu được code bên trong. Trọng tâ
 ---
 
 ## 202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)
+Phần “202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 현실 세계의 개체(Entity)를 기계 부품(Object)처럼 만들어 조립식으로 소프트웨어 개발. 재사용/확장 용이.
 - **구성 요소**:
   - **데이터 (Data/Attribute)**: 객체가 가진 정보 (속성, 상태).
@@ -537,6 +599,8 @@ OOP (Lập trình hướng đối tượng) giống như trò chơi xếp hình 
 ---
 
 ## 204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)
+Phần “204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **객체지향 분석**: 사용자의 요구사항을 분석하여 클래스(객체), 속성, 연산, 관계 등을 정의하는 작업.
 - **분석 방법론**:
   - **Booch**: 미시적/거시적 개발 프로세스 모두 사용.
@@ -561,6 +625,8 @@ Phương pháp phân tích của Rumbaugh là kinh điển nhất trong thi. G�
 ---
 
 ## 206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)
+Phần “206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **설계 (OOD)**: 분석 모델을 설계 모델로 변환 (추상화, 정보 은닉, 상속 등 활용). 가장 중요한 것은 **모듈화**. 설계 명세서를 작성.
 - **프로그래밍 (OOP)**: 현실 세계에 가까운 방식으로 프로그래밍. 유지보수/재사용성 향상.
   - 객체지향성 언어: Simula (최초), Smalltalk, C++, Java 등.
@@ -568,6 +634,8 @@ Phương pháp phân tích của Rumbaugh là kinh điển nhất trong thi. G�
 ---
 
 ## 208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)
+Phần “208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 이미 개발된 소프트웨어 전체/일부를 다른 개발에 사용하는 것. 개발 시간/비용 단축, 품질 향상.
 - **컴포넌트 (Component)**: 객체들의 모임으로 대규모 재사용 단위.
 - 모듈 크기가 작고 일반적일수록 재사용률이 높음.
@@ -579,6 +647,8 @@ Phương pháp phân tích của Rumbaugh là kinh điển nhất trong thi. G�
 ---
 
 ## 209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)
+Phần “209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 기존 시스템을 수정 보완하거나 기능을 추가하여 성능을 향상 (예방 유지보수).
 - 목적: 유지보수 비용 절감, 품질 향상, 소프트웨어 위기 해결.
 - **주요 활동**:
@@ -598,6 +668,8 @@ Reengineering là đập đi xây lại hoặc tu sửa lại nhà cũ cho hiệ
 ---
 
 ## 210. CASE (Computer-Aided Software Engineering)
+Phần “210. CASE (Computer-Aided Software Engineering)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 생명주기 전체 또는 일부를 **자동화하는 소프트웨어 도구**.
 - 개발 기간 단축, 비용 절감, 품질 및 생산성 향상. 개발 주기의 표준화.
 - **CASE 정보 저장소 (Repository)**: 개발 중 모아진 정보 보관 (현재의 Database 역할). 일관성 유지.
@@ -614,6 +686,8 @@ CASE là các phần mềm hỗ trợ kỹ sư làm phần mềm. Giống như E
 # 4과목 프로그래밍 언어 활용 (Phần 4: Ứng dụng ngôn ngữ lập trình)
 
 ## 070. 서버개발 프레임워크 (Server Development Framework)
+Phần “070. 서버개발 프레임워크 (Server Development Framework)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **모듈화 (Modularity)**: 캡슐화로 영향 최소화, 유지보수 용이.
 - **재사용성 (Reusability)**: 반복 모듈 제공으로 생산성/품질 향상.
 - **확장성 (Extensibility)**: 다형성 통한 인터페이스 확장.
@@ -625,6 +699,8 @@ Framework (như Spring, Django) là một bộ khung có sẵn. Tính năng đ�
 ---
 
 ## 071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)
+Phần “071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **버퍼 오버플로 (Buffer Overflow)**: 메모리를 다루는 데 오류 발생시켜 덮어쓰는 공격.
 - **허상 포인터 (Dangling Pointer)**: 삭제된 객체를 가리키고 있는 포인터 (메모리 보안 위반).
 - **FTP 바운스 공격**: FTP 프로토콜 구조 허점 이용.
@@ -640,6 +716,8 @@ Framework (như Spring, Django) là một bộ khung có sẵn. Tính năng đ�
 ---
 
 ## 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
+Phần “072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **데이터 타입 (Data Types)**:
   - 정수형 (Integer): `int`, `short`, `long` (Ví dụ: 1, -1).
   - 부동 소수형 (Float Point): `float`, `double` (실수, 소수점) (Ví dụ: 3.14).
@@ -658,6 +736,8 @@ Framework (như Spring, Django) là một bộ khung có sẵn. Tính năng đ�
   - 논리 (Logical): `&&` (AND), `||` (OR), `!` (NOT).
   - 삼항 (Ternary): `(조건) ? (참) : (거짓);`
 ## 074. 데이터 입출력 (Data Input/Output)
+Phần “074. 데이터 입출력 (Data Input/Output)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **표준 입력 함수 (C언어)**: `scanf("서식 문자열", &변수명);` (변수의 주소 `&`를 붙임).
 - **표준 출력 함수 (C언어)**: `printf("서식 문자열", 변수);`
 - **서식 문자열 유형 (Format Strings)**:
@@ -675,6 +755,8 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 ---
 
 ## 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
+Phần “075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **배열 (Array)**: `자료형 변수명[개수] = {초깃값};` (C/Java). 2차원 배열은 `변수명[행][열]`.
 - **조건문 (if/switch)**:
   - C/Java: `if (조건) { ... } else if (조건) { ... } else { ... }`
@@ -693,6 +775,8 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 ---
 
 ## 078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)
+Phần “078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **접근 제어자 (JAVA Access Modifiers)**:
   1. `public`: 모든 접근 허용 (Bất cứ đâu cũng gọi được).
   2. `protected`: 같은 패키지 + 상속받은 자식 클래스만 허용.
@@ -705,6 +789,8 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 ---
 
 ## 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
+Phần “079. 프로그래밍 언어의 종류 (Types of Programming Languages)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **절차적 언어 (Procedural)**: 코드를 순차적인 함수(Procedure) 단위로 나누어 해결. (C, FORTRAN, ALGOL 등).
 - **객체지향 언어 (Object-Oriented)**: 데이터와 메소드를 묶어 '객체'로 만듦 (캡슐화, 상속, 다형성 지원). (C++, JAVA 등). JAVA는 '가비지 컬렉터(Garbage Collector)'가 메모리를 자동 관리함.
 - **스크립트 언어 (Scripting)**: 컴파일 없이 인터프리터 방식으로 바로 실행되는 언어. (Python, JavaScript, PHP, Bash 등).
@@ -719,6 +805,8 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 ---
 
 ## 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
+Phần “080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **C언어 표준 라이브러리**:
   - `stdio.h`: 입출력 (`printf`, `scanf`).
   - `stdlib.h`: 자료형 변환 (`atoi`: char->int).
@@ -734,6 +822,8 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 # Chapter 3. 응용 SW 기초 기술 활용 (Phần 3: Ứng dụng kỹ thuật cơ sở phần mềm)
 
 ## 082. 운영체제 기능 및 종류 (Operating System OS)
+Phần “082. 운영체제 기능 및 종류 (Operating System OS)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **운영체제의 주요 프로그램**:
   - **제어 프로그램 (Control Program)**: 감시(Kernel), 작업 제어, 데이터 관리.
   - **처리 프로그램 (Processing Program)**: 언어 번역(컴파일러), 서비스, 문제 프로그램.
@@ -756,6 +846,8 @@ OS giống như quản gia của máy tính.
 ---
 
 ## 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
+Phần “083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **최초 적합 (First fit)**: 가장 처음 만나는 빈 공간에 할당 (빠름).
 - **최적 적합 (Best fit)**: 자원 낭비(단편화)가 가장 적은 핏(딱 맞는) 공간에 할당.
 - **최악 적합 (Worst fit)**: 단편화가 가장 큰(넓은) 공간에 할당 (남은 공간을 다시 쓰기 위해).
@@ -769,6 +861,8 @@ Khi một phần mềm cần RAM, OS sẽ nhét nó vào đâu?
 ---
 
 ## 084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)
+Phần “084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 메모리가 꽉 찼을 때 어떤 페이지를 내보낼지 결정.
 - **FIFO (First In First Out)**: 가장 먼저 들어온 페이지를 교체.
 - **OPT (Optimal)**: 앞으로 가장 오랫동안 사용되지 않을 페이지를 교체 (이론상 최적).
@@ -790,6 +884,8 @@ Khi RAM đầy, máy phải đẩy tạm dữ liệu ra ổ cứng.
 ---
 
 ## 085. 프로세스 및 스레드 (Process & Thread)
+Phần “085. 프로세스 및 스레드 (Process & Thread)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **프로세스 상태 (Process States)**: 생성(Create) -> 준비(Ready) -> 실행(Running) -> 대기(Wait/Block) -> 종료(Exit).
 - **상태 전이 (State Transitions)**:
   - **Dispatch**: 준비 -> 실행 (CPU 할당받음, 문맥교환 발생).
@@ -810,6 +906,8 @@ Khi Process A đang chạy, hết thời gian (Timeout), OS sẽ cất trạng t
 ---
 
 ## 086. 프로세스 스케줄링 (Process Scheduling)
+Phần “086. 프로세스 스케줄링 (Process Scheduling)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **선점형 (Preemptive)**: 운영체제가 CPU를 강제로 뺏을 수 있음. 빠르고 대화식 시스템에 유리하지만 오버헤드 발생. (RR, SRT, MLQ, MLFQ).
 - **비선점형 (Non-Preemptive)**: 한 프로세스가 끝나야만 다음 프로세스가 CPU를 씀. 일괄처리에 적합. (FCFS, SJF, HRN).
   - **FCFS**: 먼저 온 놈이 먼저 (First Come First Serve).
@@ -825,6 +923,8 @@ Lập lịch cho CPU:
 ---
 
 ## 교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)
+Phần “교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **교착상태(Deadlock)**: 두 프로세스가 서로의 자원을 기다리며 멈춰버린 현상.
 - **상호배제 알고리즘 (Mutual Exclusion)**: 한 번에 하나의 프로세스만 자원을 쓰게 함.
   - Dekker: 두 프로세스 간 Flag와 Turn 변수 사용.
@@ -832,6 +932,8 @@ Lập lịch cho CPU:
   - Lamport: 고유 번호(티켓) 부여, 번호순 진입.
   - Semaphore: 정수 변수(P연산, V연산)를 이용해 접근 통제.
 ## 086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속
+Phần “086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **교착상태(Deadlock) 4가지 필요충분조건**:
   1. **상호배제 (Mutual Exclusion)**: 한 번에 한 프로세스만 자원 사용.
   2. **점유와 대기 (Hold and Wait)**: 자원을 가진 채로 다른 자원을 기다림.
@@ -856,6 +958,8 @@ Giải quyết: **예회발복** (Dự - Tị - Phát - Phục).
 ---
 
 ## 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
+Phần “087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **환경변수 명령어**:
   - `printenv`: 단일 변수 반환.
   - `env`: 환경 변수 출력/설정.
@@ -881,6 +985,8 @@ Giải quyết: **예회발복** (Dự - Tị - Phát - Phục).
 ---
 
 ## 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
+Phần “088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IEEE 802 표준**: 802.3 (Ethernet, 유선랜), 802.11 (무선랜, Wi-Fi).
 - **OSI 7계층 (상위 계층부터)**:
   7. **응용 계층 (Application)**: 사용자 인터페이스. (HTTP, FTP, DNS) - 데이터 단위: Data.
@@ -902,6 +1008,8 @@ Tên 7 tầng từ dưới lên (1->7): **물데네 전세표응** (Vật - Dữ
 ---
 
 ## 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
+Phần “088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **TCP (Transmission Control Protocol)**: 연결 지향, 신뢰성 높음, 흐름 및 오류 제어 지원. 속도는 느림.
 - **UDP (User Datagram Protocol)**: 비연결 지향, 신뢰성 낮음(오류 복구 안함). 실시간 전송(스트리밍)에 유리하여 속도가 빠름.
 - **TCP 흐름 제어 (Flow Control)**: 수신측이 처리할 수 있는 만큼만 보냄 (Window 크기 사용).
@@ -920,6 +1028,8 @@ Tên 7 tầng từ dưới lên (1->7): **물데네 전세표응** (Vật - Dữ
 ---
 
 ## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
+Phần “089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IPv4 헤더 필드**: Version, Header Length, TOS, Total Length, TTL (수명), Source/Destination Address 등.
 - **IPv4 클래스**:
   - Class A: `0.~` (거대 망)
@@ -949,6 +1059,8 @@ Các kiểu truyền:
 ## 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
 
 ### 232. 배치 프로그램 (Batch Program)
+Phần “232. 배치 프로그램 (Batch Program)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 대량의 데이터를 사용자 개입 없이 정해진 순서에 따라 **일괄적으로 처리**하는 방식.
 - 야간 시간대 등 자원 소모가 적은 시간에 실행됨.
 - **필수 요소 5가지**: 대용량, 자동화, 견고성, 안정성, 성능.
@@ -957,6 +1069,8 @@ Các kiểu truyền:
 Chương trình Batch (xử lý hàng loạt) là loại phần mềm tự động chạy ngầm, thường vào ban đêm. Ví dụ: Cuối ngày ngân hàng tổng hợp lại toàn bộ giao dịch trong ngày, xử lý một lúc hàng triệu giao dịch mà không cần người bấm nút.
 
 ### 233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)
+Phần “233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **C/C++**: `char`(1바이트), `short`(2바이트), `int`(4바이트), `float`(4바이트), `double`(8바이트).
 - **JAVA**: `byte`(1바이트), **`char`(2바이트, 유니코드 지원)**, `int`(4바이트), `boolean`(1바이트).
 
@@ -964,22 +1078,32 @@ Chương trình Batch (xử lý hàng loạt) là loại phần mềm tự độ
 Lưu ý quan trọng: Trong C, `char` (kí tự) chiếm 1 byte. Nhưng trong Java, `char` chiếm 2 byte vì Java dùng bảng mã Unicode để hỗ trợ mọi ngôn ngữ trên thế giới (kể cả tiếng Hàn, tiếng Việt).
 
 ### 234. C언어의 구조체 (struct)
+Phần “234. C언어의 구조체 (struct)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 서로 다른 데이터 타입을 하나로 묶어 관리하는 사용자 정의 자료형. 배열(동일 타입)과의 차이점.
 - (Ví dụ: Một `struct SinhVien` có thể chứa Tên(string), Tuổi(int), Điểm(float)).
 
 ### 236. Python 시퀀스 자료형
+Phần “236. Python 시퀀스 자료형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 리스트(List): `[]` 변경 가능.
 - 튜플(Tuple): `()` **변경 불가능(Immutable)**.
 - (Ví dụ: Tuple dùng để lưu toạ độ GPS không bao giờ đổi).
 
 ### 238. 가비지 콜렉터 (Garbage Collector)
+Phần “238. 가비지 콜렉터 (Garbage Collector)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 사용되지 않는 메모리를 자동으로 해제해주는 기능 (메모리 누수 방지). Java 등 현대 언어의 핵심.
 
 ### 239 - 244. 각종 연산자
+Phần “239 - 244. 각종 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 산술(`%`, `++`), 관계(`==`, `!=`), 비트(`&`, `|`, `^`, `<<`), 논리(`&&`, `||`), 대입(`+=`), 조건 삼항연산자.
 - `a += 1`은 `a = a + 1`과 같다.
 - 비트 XOR(`^`): 두 비트가 다를 때만 1을 반환.
 ## 232. 배치 프로그램 (Batch Program)
+Phần “232. 배치 프로그램 (Batch Program)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 대량의 데이터를 사용자 개입 없이 정해진 순서에 따라 **일괄적으로 처리**하는 방식.
 - 야간 시간대 등 자원 소모가 적은 시간에 실행됨.
 - **필수 요소 5가지**: 대용량, 자동화, 견고성(오류 시에도 중단 없이 기록/지속), 안정성, 성능.
@@ -994,6 +1118,8 @@ Chương trình Batch (xử lý hàng loạt) tự động chạy ngầm để x
 ---
 
 ## 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
+Phần “233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `char`: 1바이트 (문자 하나)
 - `short`: 2바이트 (짧은 정수)
 - `int` / `long`: 4바이트 (기본 정수)
@@ -1007,6 +1133,8 @@ Kích thước bộ nhớ các biến trong C/C++. Chữ cái (char) chiếm 1 b
 ---
 
 ## 234. C언어의 구조체 (struct in C)
+Phần “234. C언어의 구조체 (struct in C)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형.
 - 배열(Array)은 **동일한 자료형**만 모으지만, 구조체(Struct)는 **상이한 자료형**을 모을 수 있음.
 
@@ -1016,6 +1144,8 @@ Struct (Cấu trúc) dùng để gom nhóm nhiều biến khác kiểu lại v�
 ---
 
 ## 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
+Phần “235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `byte`: 1바이트 (작은 숫자)
 - `boolean`: 1바이트 (참/거짓)
 - **`char`: 2바이트** (유니코드 지원으로 인해 C언어와 달리 2바이트를 차지함)
@@ -1029,6 +1159,8 @@ Java có 2 điểm khác biệt lớn với C: `char` chiếm 2 byte (để lưu
 ---
 
 ## 236. Python의 시퀀스 자료형 (Sequence Data Types in Python)
+Phần “236. Python의 시퀀스 자료형 (Sequence Data Types in Python)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 여러 값이 연속적으로 이어진 데이터 구조.
 - **리스트(List)**: `[]` 사용. 데이터의 추가/삭제/변경이 자유로움 (Mutable).
 - **튜플(Tuple)**: `()` 사용. 한 번 생성하면 데이터의 변경(수정/삭제)이 **불가능함** (Immutable). 읽기 전용에 적합.
@@ -1040,6 +1172,8 @@ List và Tuple đều dùng để lưu danh sách. Nhưng List có thể sửa �
 ---
 
 ## 237. 변수명 작성 규칙 (Variable Naming Rules)
+Phần “237. 변수명 작성 규칙 (Variable Naming Rules)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 영문자, 숫자, 밑줄(`_`)의 조합만 가능.
 - **첫 글자는 숫자로 시작할 수 없음** (예: `1a` 안됨).
 - 공백이나 특수문자(`+`, `-`, `*`, `/`, `@` 등) 사용 금지.
@@ -1052,6 +1186,8 @@ Quy tắc đặt tên biến: Không được bắt đầu bằng số, không c
 ---
 
 ## 238. 가비지 콜렉터 (Garbage Collector)
+Phần “238. 가비지 콜렉터 (Garbage Collector)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 더 이상 사용되지 않고 메모리를 점유하고 있는 변수/객체를 시스템이 **자동으로 해제**하여 자원을 회수하는 모듈.
 - 메모리 누수(Memory Leak)를 방지. JAVA 등에서 사용됨.
 
@@ -1061,6 +1197,8 @@ Quy tắc đặt tên biến: Không được bắt đầu bằng số, không c
 ---
 
 ## 239 - 243. 연산자 (Operators)
+Phần “239 - 243. 연산자 (Operators)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **산술 연산자**: 사칙연산, `%`(나머지), `++`/`--`(증감).
   - 전치(`++a`): 먼저 증가시키고 연산. 후치(`a++`): 연산 후 증가시킴.
 - **관계 연산자**: `==`(같다), `!=`(다르다), `>`, `<`. C언어에서는 0 이외의 값을 참(True)으로 간주.
@@ -1071,6 +1209,8 @@ Quy tắc đặt tên biến: Không được bắt đầu bằng số, không c
 ---
 
 ## 244. 조건(삼항) 연산자 (Ternary Operator)
+Phần “244. 조건(삼항) 연산자 (Ternary Operator)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 조건의 참/거짓에 따라 서로 다른 값을 반환.
 - 형식: `조건 ? 참일때_값 : 거짓일때_값;`
 - (예: `int max = (a > b) ? a : b;`)
@@ -1081,6 +1221,8 @@ Toán tử 3 ngôi giúp viết tắt câu lệnh if-else trên 1 dòng. Trả v
 ---
 
 ## 245. 연산자 우선순위 (Operator Precedence)
+Phần “245. 연산자 우선순위 (Operator Precedence)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 하나의 수식에 여러 연산자가 있을 때 계산되는 순서.
 - 순위: **단항**(`!`, `++`, `~`) > **산술**(`*`, `/` > `+`, `-`) > **관계**(`>`, `==`) > **논리**(`&&` > `||`) > **대입**(`=`, `+=`).
 - 괄호 `()`가 가장 우선.
@@ -1094,6 +1236,8 @@ Thứ tự ưu tiên tính toán: Ngoặc () -> Đơn nguyên (phủ định, t�
 ---
 
 ## 246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)
+Phần “246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **`scanf("서식문자열", &변수)`**: C언어 표준 입력. 변수명 앞에 주소 연산자 **`&`**를 반드시 붙여야 함.
 - **`printf("서식문자열", 변수)`**: C언어 표준 출력. `&`를 붙이지 않음.
 - **서식 문자열**:
@@ -1108,6 +1252,8 @@ Nhớ kĩ `scanf` phải có dấu `&` (địa chỉ) để nhét dữ liệu v�
 ---
 
 ## 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
+Phần “250. JAVA에서의 표준 출력 (Standard Output in JAVA)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `System.out.print()`: 형식 없이 그대로 출력 (줄바꿈 없음).
 - `System.out.println()`: 출력 후 자동으로 줄바꿈(Enter) 수행.
 - `System.out.printf()`: C언어처럼 서식 문자열(`%d` 등)을 사용하여 출력.
@@ -1116,6 +1262,8 @@ Nhớ kĩ `scanf` phải có dấu `&` (địa chỉ) để nhét dữ liệu v�
 ---
 
 ## 251. 단순 if문 (Simple if Statement)
+Phần “251. 단순 if문 (Simple if Statement)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 조건의 참/거짓에 따라 실행할 문장 결정.
 - 문장이 두 개 이상이면 반드시 중괄호 `{ }`로 묶어야 함.
 - C언어에서는 조건식 결과가 0이면 거짓(False), **0 이외의 모든 값은 참(True)**으로 간주.
@@ -1123,6 +1271,8 @@ Nhớ kĩ `scanf` phải có dấu `&` (địa chỉ) để nhét dữ liệu v�
 ---
 
 ## 252. 다중 if문 (Multiple if Statement)
+Phần “252. 다중 if문 (Multiple if Statement)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 처리할 조건이 여러 개일 때 `else if`를 사용해 순차적으로 판단.
 - 위에서 조건이 참이면 해당 블록을 실행하고 빠져나옴 (아래 조건은 검사하지 않음).
 - 모든 조건이 거짓일 때 마지막 `else`가 실행됨.
@@ -1130,8 +1280,12 @@ Nhớ kĩ `scanf` phải có dấu `&` (địa chỉ) để nhét dữ liệu v�
 ---
 
 ## 253. switch문 (switch Statement)
+Phần “253. switch문 (switch Statement)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 변수의 값에 따라 일치하는 `case` 문장을 실행하는 다분기 제어문.
 ## 254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)
+Phần “254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **for문**: 횟수가 정해진 반복(초기화, 조건검사, 증감식). 배열 순회에 주로 사용.
 - **while문**: 조건이 참인 동안 반복(선행 판단). 조건이 항상 참이면 무한 루프 발생.
 - **do~while문**: **최소 1번은 무조건 실행**한 후 조건을 검사(후행 판단).
@@ -1147,6 +1301,8 @@ Nhớ kĩ `scanf` phải có dấu `&` (địa chỉ) để nhét dữ liệu v�
 ---
 
 ## 258 - 261. 배열과 문자열 (Arrays & Strings)
+Phần “258 - 261. 배열과 문자열 (Arrays & Strings)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **배열 (Array)**: **동일한 자료형**의 변수들을 연속된 메모리에 모아둔 것. `인덱스(첨자)`는 0부터 시작. 배열 이름 자체가 **첫 번째 요소의 시작 주소**를 의미.
 - **2차원 배열**: 행과 열의 평면 구조 (예: `a[3][4]`는 3행 4열로 총 12개).
 - **배열 초기화**: 선언과 동시에 값을 넣는 것. 크기를 생략해도 값의 개수만큼 자동 결정됨. 초기화되지 않은 빈칸은 자동으로 `0`으로 채워짐.
@@ -1158,6 +1314,8 @@ Trong C, chuỗi "love" sẽ chiếm 5 ô nhớ (l, o, v, e, `\0`). Ký tự `\0
 ---
 
 ## 262 - 263. 포인터 (Pointers)
+Phần “262 - 263. 포인터 (Pointers)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **포인터 (Pointer)**: 변수의 실제 **메모리 주소값**을 저장하는 특수 변수.
 - `*` (간접 참조 연산자): 포인터가 가리키는 주소의 '값'.
 - `&` (주소 연산자): 변수의 '주소'.
@@ -1170,6 +1328,8 @@ Pointer (Con trỏ) không lưu giá trị (như số 5), mà lưu "địa chỉ
 ---
 
 ## 264 - 274. 파이썬 문법 (Python Syntax & Basics)
+Phần “264 - 274. 파이썬 문법 (Python Syntax & Basics)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **기본 문법**: 자료형 선언 생략, 세미콜론(`;`) 불필요. 코드 블록은 중괄호 `{}` 대신 **콜론(`:`)과 들여쓰기(Indentation)**로 구분.
 - **입출력**: `input()` (기본적으로 모두 문자열로 입력받음), `print()`. `sep`(분리 문자), `end`(종료 문자).
 - **형변환 (Casting)**: `int()`(정수), `float()`(실수). 여러 개 입력 받을 땐 `map(int, input().split())` 사용.
@@ -1189,6 +1349,8 @@ Pointer (Con trỏ) không lưu giá trị (như số 5), mà lưu "địa chỉ
 ---
 
 ## 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
+Phần “275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **절차적 언어**: 실행 순서 중시. 
   - `COBOL` (사무용), `FORTRAN` (과학 기술 계산용), `C` (시스템 프로그래밍), `ALGOL`.
 - **객체지향 언어**: 데이터+기능 캡슐화. 재사용성 높음.
@@ -1199,6 +1361,8 @@ Pointer (Con trỏ) không lưu giá trị (như số 5), mà lưu "địa chỉ
 ---
 
 ## 279 - 280. 라이브러리 (Library)
+Phần “279 - 280. 라이브러리 (Library)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **라이브러리**: 자주 사용되는 함수/데이터를 모아 놓은 집합체 (개발 시간 단축, 코드 재사용).
 - **C언어 표준 라이브러리 (Header Files)**:
   - `stdio.h`: 입출력 (`printf`, `scanf`)
@@ -1212,6 +1376,8 @@ Thư viện (Library) giống như siêu thị bán đồ làm sẵn. Bạn khô
 ---
 
 ## 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
+Phần “281. 매시업과 SOA (SW Related Terms: Mashup & SOA)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **매시업 (Mashup)**: 웹 서비스나 콘텐츠를 조합하여 **새로운 서비스를 만드는 기술** (예: 구글 지도 + 부동산 정보).
 - **SOA (Service Oriented Architecture, 서비스 지향 아키텍처)**: 시스템을 **공유/재사용 가능한 서비스 단위**로 구축하는 구조. (계층: 표현, 업무 프로세스, 서비스 중간, 애플리케이션, 데이터 저장).
 
@@ -1221,9 +1387,13 @@ Thư viện (Library) giống như siêu thị bán đồ làm sẵn. Bạn khô
 ---
 
 ## 282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)
+Phần “282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **운영체제(OS)**: 컴퓨터 자원(CPU, 메모리 등)을 효율적으로 관리하고 사용자에게 편리한 환경을 제공하는 소프트웨어 (Windows, Linux 등).
 - 목적: 자원 관리, 편리한 인터페이스 제공, 가용성 극대화, 신뢰도 향상.
 ## 283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)
+Phần “283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **운영체제 구성**:
   - **제어 프로그램**: 감시(Supervisor, 핵심), 작업 제어, 데이터 관리.
   - **처리 프로그램**: 언어 번역(컴파일러), 서비스(유틸리티).
@@ -1241,6 +1411,8 @@ Thư viện (Library) giống như siêu thị bán đồ làm sẵn. Bạn khô
 ---
 
 ## 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
+Phần “289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **배치 전략 (Placement)**: 최초 적합(First Fit, 빠름), 최적 적합(Best Fit, 단편화 최소), 최악 적합(Worst Fit, 큰 공간 남김).
 - **페이징(Paging)**: 메모리를 **동일한 고정 크기**로 나눔. **내부 단편화** 발생 (빈 공간이 남아버림).
 - **세그먼테이션(Segmentation)**: 논리적 의미(함수 등)에 따라 **가변 크기**로 나눔. **외부 단편화** 발생 (공간이 작아서 못 들어감).
@@ -1255,6 +1427,8 @@ Thư viện (Library) giống như siêu thị bán đồ làm sẵn. Bạn khô
 ---
 
 ## 297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)
+Phần “297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **프로세스(Process)**: **PCB(Process Control Block)를 가진** 실행 중인 프로그램.
 - **상태 전이**:
   - **Dispatch**: 준비(Ready) -> 실행(Run) (CPU 할당 받음).
@@ -1269,6 +1443,8 @@ Thư viện (Library) giống như siêu thị bán đồ làm sẵn. Bạn khô
 ---
 
 ## 305 - 308. IP 주소 체계 (IPv4 vs IPv6)
+Phần “305 - 308. IP 주소 체계 (IPv4 vs IPv6)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IPv4**: 32비트 (8비트씩 4부분). 클래스 A~E로 나뉨.
 - **IPv6**: 128비트 (16비트씩 8부분). 콜론(`:`)으로 구분, 16진수 사용. 
 - **IPv6의 특징**: 무한대에 가까운 주소, 보안 강화, 패킷 크기 확장, PnP(자동 설정).
@@ -1280,6 +1456,8 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 ---
 
 ## 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
+Phần “309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **응용 계층 (Application, 7계층)**: HTTP(웹), FTP(파일), SMTP(메일), DNS(도메인->IP 변환), SNMP(네트워크 관리).
 - **전송 계층 (Transport, 4계층)**: 
   - **TCP**: 연결형, 신뢰성 보장, 양방향. 흐름 제어.
@@ -1297,6 +1475,8 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 ---
 
 ## 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
+Phần “226 - 227. 데이터베이스 접속 기술 (Database Connectivity)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **JDBC (Java DataBase Connectivity)**: **자바(Java)** 프로그램 내에서 데이터베이스(DBMS)에 접속하여 SQL 문을 실행하기 위한 표준 API. 운영체제에 독립적.
 - **ODBC (Open DataBase Connectivity)**: 프로그래밍 **언어에 관계없이** (C, C++, VB 등) 다양한 DBMS에 접근할 수 있게 마이크로소프트가 만든 개방형 표준 API.
 

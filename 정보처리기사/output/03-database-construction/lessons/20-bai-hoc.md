@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **16. 정규화(Normalization)와 이상
 
 ## 16. 정규화(Normalization)와 이상 현상(Anomaly)
 
-Sau khi đã đặt nền bằng **184-185. 반정규화 (Denormalization)**, ta chuyển sang **16. 정규화(Normalization)와 이상 현상(Anomaly)**. Đây là mắt xích 20/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **184-185. 반정규화 (Denormalization)**, ta chuyển sang **16. 정규화(Normalization)와 이상 현상(Anomaly)**. Đây là mắt xích 20/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **16. 정규화(Normalization)와 이상 현상(Anomaly)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -39,6 +39,8 @@ Ta bắt đầu phần nội dung bằng **이상 현상 (Anomaly - Bất thư�
 ### 이상 현상 (Anomaly - Bất thường)
 
 Phần nguồn của **이상 현상 (Anomaly - Bất thường)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “이상 현상 (Anomaly - Bất thường)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **삽입 이상 (Insertion Anomaly):** Lỗi khi thêm dữ liệu (phải thêm các dữ liệu không mong muốn).
 - **갱신 이상 (Update Anomaly):** Lỗi khi cập nhật (cập nhật thiếu sót dẫn đến dữ liệu không nhất quán).
@@ -52,6 +54,8 @@ Ta vừa chốt **이상 현상 (Anomaly - Bất thường)** bằng các điề
 ### 정규화 단계 (Các chuẩn - Bắt buộc học thuộc)
 
 Các ý ngay dưới **정규화 단계 (Các chuẩn - Bắt buộc học thuộc)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “정규화 단계 (Các chuẩn - Bắt buộc học thuộc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 | 정규형 (Chuẩn) | 조건 (Điều kiện để đạt được) | Mẹo ghi nhớ (VN) |
 |---|---|---|

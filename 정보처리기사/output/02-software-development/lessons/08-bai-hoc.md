@@ -4,7 +4,7 @@
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **025: 트리 (Tree / Cây)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **025: 트리 (Tree / Cây)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **026: 그래프 (Graph / Đồ thị)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **025: 트리 (Tree / Cây)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -22,15 +22,17 @@ Mục đích của bài này là hiểu **025: 트리 (Tree / Cây)** như một
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **025: 트리 (Tree / Cây)** và nối nó với **026: 그래프 (Graph / Đồ thị)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **025: 트리 (Tree / Cây)** và nối nó với **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 025: 트리 (Tree / Cây)
 
-Sau khi đã đặt nền bằng **30. 트리 구조 추가 용어 (Tree Terminology Additional)**, ta chuyển sang **025: 트리 (Tree / Cây)**. Đây là mắt xích 8/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **30. 트리 구조 추가 용어 (Tree Terminology Additional)**, ta chuyển sang **025: 트리 (Tree / Cây)**. Đây là mắt xích 8/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **025: 트리 (Tree / Cây)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “025: 트리 (Tree / Cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 | 용어 (Thuật ngữ) | 설명 (Giải thích) | 예시 (Ví dụ) |
 |---|---|---|
@@ -47,6 +49,8 @@ Ta bắt đầu phần nội dung bằng **트리 순회 (Tree Traversal - Duy�
 
 Phần nguồn của **트리 순회 (Tree Traversal - Duyệt cây)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “트리 순회 (Tree Traversal - Duyệt cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **전위 순회 (Preorder):** Root -> Left -> Right.
 - **중위 순회 (Inorder):** Left -> Root -> Right.
 - **후위 순회 (Postorder):** Left -> Right -> Root.
@@ -60,4 +64,4 @@ Với **트리 순회 (Tree Traversal - Duyệt cây)**, hãy đọc các công 
 
 Với **트리 순회 (Tree Traversal - Duyệt cây)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Ta có thể khép mục **025: 트리 (Tree / Cây)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **026: 그래프 (Graph / Đồ thị)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **025: 트리 (Tree / Cây)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **078 & 079: 트리 및 운행법 (Tree & Tree Traversal)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

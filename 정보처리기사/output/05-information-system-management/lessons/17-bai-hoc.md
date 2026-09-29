@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **2. 자원 처리 오류 (Resource Hand
 
 ## 2. 자원 처리 오류 (Resource Handling Errors)
 
-Sau khi đã đặt nền bằng **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**, ta chuyển sang **2. 자원 처리 오류 (Resource Handling Errors)**. Đây là mắt xích 17/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**, ta chuyển sang **2. 자원 처리 오류 (Resource Handling Errors)**. Đây là mắt xích 17/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **2. 자원 처리 오류 (Resource Handling Errors)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **부적절한 자원 해제 (Improper Resource Release)**, **해제된 자원 사용 (Use After Free)**, **초기화되지 않은 변수 사용 (Uninitialized Variable)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “2. 자원 처리 오류 (Resource Handling Errors)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **부적절한 자원 해제 (Improper Resource Release)**: 힙 메모리나 소켓을 사용 후 반환(close)하지 않아 자원 고갈 발생. (Không giải phóng bộ nhớ, kết nối sau khi dùng xong).
 - **해제된 자원 사용 (Use After Free)**: 반환된 메모리를 다시 참조하여 오작동 유발. (Dùng lại vùng nhớ đã được giải phóng).

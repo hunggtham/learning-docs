@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **4. 사용자 인터페이스 (Giao di�
 
 ## 4. 사용자 인터페이스 (Giao diện người dùng - UI)
 
-Ở bước 19/57, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** xuất hiện như phần tiếp nối của **7. UML 심화 (Advanced UML)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 19/69, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** xuất hiện như phần tiếp nối của **7. UML 심화 (Advanced UML)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **4. 사용자 인터페이스 (Giao diện người dùng - UI)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **020. 사용자 인터페이스의 특징 (Đặc đi
 ### 020. 사용자 인터페이스의 특징 (Đặc điểm của giao diện người dùng)
 
 Bây giờ ta đi vào nội dung của **020. 사용자 인터페이스의 특징 (Đặc điểm của giao diện người dùng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “020. 사용자 인터페이스의 특징 (Đặc điểm của giao diện người dùng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 사용자의 편리성과 가독성을 높여준다. (Tăng tính tiện lợi và khả năng đọc cho người dùng.)
 - 작업 시간을 단축시킨다. (Rút ngắn thời gian làm việc.)
@@ -52,6 +54,8 @@ Với **021. 사용자 인터페이스의 구분 (Phân loại giao diện ngư�
 
 Phần nguồn của **021. 사용자 인터페이스의 구분 (Phân loại giao diện người dùng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “021. 사용자 인터페이스의 구분 (Phân loại giao diện người dùng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - CLI (Command Line Interface): 명령과 출력이 텍스트 형태로 이뤄지는 인터페이스 (Giao diện mà lệnh và đầu ra đều dưới dạng văn bản - VD: CMD, Terminal).
 - GUI (Graphical User Interface): 아이콘이나 메뉴를 마우스로 선택하여 작업을 수행하는 그래픽 환경의 인터페이스 (Giao diện môi trường đồ họa, dùng chuột chọn icon/menu - VD: Windows, MacOS).
 - NUI (Natural User Interface): 사용자의 말이나 행동으로 기기를 조작하는 인터페이스 (Giao diện thao tác thiết bị bằng lời nói hoặc hành động của người dùng - VD: Siri, Kinect).
@@ -64,6 +68,8 @@ Sau khi đọc **021. 사용자 인터페이스의 구분 (Phân loại giao di�
 ### 022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)
 
 Các ý ngay dưới **022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 직관성 (Tính trực quan): 누구나 쉽게 이해하고 사용할 수 있어야 한다. (Bất kỳ ai cũng có thể dễ dàng hiểu và sử dụng.)
 - 유효성 (Tính hữu hiệu): 사용자의 목적을 정확하고 완벽하게 달성해야 한다. (Phải đạt được mục đích của người dùng một cách chính xác và hoàn hảo.)
@@ -79,6 +85,8 @@ Các bullet của **022. 사용자 인터페이스의 기본 원칙 (Nguyên t�
 ### 023. 목업 (Mockup)
 
 Bây giờ ta đi vào nội dung của **023. 목업 (Mockup)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “023. 목업 (Mockup)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 와이어프레임보다 좀 더 실제 화면과 유사하게 만든 정적인 형태의 모형이다. (Là mô hình dạng tĩnh, được làm giống với màn hình thực tế hơn so với Wireframe.)
 - 시각적으로만 구성 요소를 배치하는 것으로 실제로 구현되지는 않는다. (Chỉ bố trí các thành phần về mặt thị giác chứ thực tế không hoạt động/code chưa chạy.)

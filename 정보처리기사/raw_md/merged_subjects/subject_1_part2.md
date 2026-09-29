@@ -3,6 +3,8 @@
 - Committed(완료)�:�트랜잭션이�성공적으로�종료되어� Commit�연산을�실행한�후의�상태 
 
 ## 핵심 12.3, 10.9, 01.6, 01.3, 99.10 **<mark>043</mark>** 회복(Recovery) 
+Phần “핵심 12.3, 10.9, 01.6, 01.3, 99.10 **<mark>043</mark>** 회복(Recovery)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�회복은�트랜잭션들의�처리를�수행하는�도중�장애가�발 생하여�데이터베이스가�손상되었을�때�손상되기�이전 의�정상�상태로�복구시키는�작업이다. 
 
@@ -15,6 +17,8 @@
 핵심 05.9, 03.3, 99.4 
 
 ## **<mark>041</mark>** Commit, Rollback 연산 
+Phần “**<mark>041</mark>** Commit, Rollback 연산” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Commit 연산�:�하나의�논리적�단위(트랜잭션)에�대한� 작업이�성공적으로�끝났고,�데이터베이스가�다시�일관 된�상태에�있을�때�이�트랜잭션이�행한�갱신�연산이�완 료된�것을�트랜잭션�관리자에게�알려주는�연산 
 
@@ -37,6 +41,8 @@
 핵심 05.3, 01.3 
 
 ## **<mark>042</mark>** 트랜잭션의 상태 
+Phần “**<mark>042</mark>** 트랜잭션의 상태” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Active(활동)�:�트랜잭션이�실행중에�있는�상태 
 
@@ -71,6 +77,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>044</mark>** 병행 제어(Concurrency Control) 
+Phần “**<mark>044</mark>** 병행 제어(Concurrency Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �다중�프로그램의�이점을�활용하여�동시에�여러�개의�트 랜잭션을�병행�수행시킬�때,�동시에�실행되는�트랜잭션 들이�데이터베이스의�일관성을�파괴하지�않도록�트랜 잭션�간의�상호작용을�제어하는�것이다. 
 
@@ -123,6 +131,8 @@ www.sinagong.co.kr
 - �보안은�데이터베이스�사용자들이�데이터베이스를�사용 하고자�할�때�언제든지�사용할�수�있도록�보장하는�것 이고,�무결성은�정확하게�사용할�수�있도록�보장하는� 것을�말한다. 
 
 ###### 암호화 기법 
+Phần “암호화 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개인키 암호 방식(Private Key Encryption) = 비밀키 암호 방식 
 
@@ -165,6 +175,8 @@ www.sinagong.co.kr
 핵심 11.3, 09.8, 07.9, 06.9, 05.9, 05.3, 04.9, 04.3, 03.8, 03.3, 01.9 
 
 ## **<mark>046</mark>** 분산 데이터베이스 
+Phần “**<mark>046</mark>** 분산 데이터베이스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�분산�데이터베이스는�논리적으로는�하나의�시스템에� 속하지만�물리적으로는�네트워크를�통해�연결된�여러� 개의�컴퓨터�사이트(Site)에�분산되어�있는�데이터베이 스를�의미한다. 
 
@@ -179,6 +191,8 @@ www.sinagong.co.kr
 
 
 ## 핵심 14.3, 11.8, 10.5, 10.3, 08.9, 08.5, 07.5, 06.9, 06.3, 05.4, 04.5, 03.8, 02.5, 02.3, 01.9, 00.10 **<mark>047</mark>** 분산 데이터베이스의 장·단점 
+Phần “핵심 14.3, 11.8, 10.5, 10.3, 08.9, 08.5, 07.5, 06.9, 06.3, 05.4, 04.5, 03.8, 02.5, 02.3, 01.9, 00.10 **<mark>047</mark>** 분산 데이터베이스의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장 점|단 점|
 |---|---|
@@ -195,6 +209,8 @@ www.sinagong.co.kr
 핵심 13.8, 13.3, 12.8, 12.5, 07.5, 07.3, 06.9, 06.5, 05.5, 04.5, 03.8, 03.3, 01.6, 01.3 
 
 ## **<mark>048</mark>** 자료 구조의 분류 
+Phần “**<mark>048</mark>** 자료 구조의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�선형 구조�:�선형�리스트(배열),�연결�리스트,�스택,�큐,�데크 
 
@@ -203,6 +219,8 @@ www.sinagong.co.kr
 ###### 핵심 07.9, 02.9, 01.9, 00.10, 00.3 
 
 ## **<mark>049</mark>** 연결 리스트(Linked List) 
+Phần “**<mark>049</mark>** 연결 리스트(Linked List)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �연결�리스트는�자료들을�임의의�기억공간에�기억시키 되,�자료�항목의�순서에�따라�노드의�포인터�부분을�이 용하여�서로�연결시킨�자료�구조이다. 
 
@@ -223,6 +241,8 @@ www.sinagong.co.kr
 03.8, 03.3, 01.9, 00.3, 14.8, 14.5, 13.8, 12.8, 12.5, 11.8, 11.6, 10.9, 10.5, 09.5, 09.3, 08.9, 08.5, 08.3, 07.9, 07.3, 06.9, 06.5, 05.4, 05.3, 04.5, 
 
 ## 핵심 **<mark>050</mark>** 스택(Stack) 
+Phần “핵심 **<mark>050</mark>** 스택(Stack)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �리스트의�한쪽�끝으로만�자료의�삽입,�삭제�작업이�이 루어지는�자료�구조이다. 
 
@@ -271,6 +291,8 @@ www.sinagong.co.kr
 핵심 12.8, 12.3, 08.5, 07.9, 06.5, 05.9, 03.5, 03.3, 02.5, 02.3, 00.10 
 
 ## **<mark>051</mark>** 큐(Queue) 
+Phần “**<mark>051</mark>** 큐(Queue)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�선형�리스트의�한쪽에서는�삽입�작업이�이루어지고�다 른�한쪽에서는�삭제�작업이�이루어지도록�구성한�자료� 구조이다. 
 
@@ -323,6 +345,8 @@ Queue를 이용하는 예
 ###### 핵심 
 
 ## **<mark>052</mark>** 데크(Deque) 
+Phần “**<mark>052</mark>** 데크(Deque)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �삽입과�삭제가�리스트의�양쪽�끝에서�모두�발생할�수� 있는�자료�구조이다. 
 
@@ -381,6 +405,8 @@ www.sinagong.co.kr
 - ∴ 방문 순서 :�ABDHIECFG 
 
 ###### <Inorder 운행법의 방문 순서> 
+Phần “<Inorder 운행법의 방문 순서>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ➊ �Inorder는�Left�→�Root�→�Right이므로�1A3이�된다.� 
 
@@ -422,6 +448,8 @@ A<br>B C<br>D E F G<br>H I<br><!-- End of picture text -->
 - ∴ 방문 순서�:�HDIBEAFCG 
 
 ###### <Postorder의 방문 순서> 
+Phần “<Postorder의 방문 순서>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ➊ �Postorder는�Left�→�Right�→�Root이므로�13A가� 된다. 
 
@@ -434,6 +462,8 @@ A<br>B C<br>D E F G<br>H I<br><!-- End of picture text -->
 - ∴ 방문 순서�:�HIDEBFGCA 
 
 ## 핵심 14.5, 12.3, 09.5, 09.3, 07.9, 07.3, 06.5, 06.3, 05.5, 05.4, 05.3, 04.9, 04.3, 03.5 **<mark>055</mark>** 수식의 표기법 
+Phần “핵심 14.5, 12.3, 09.5, 09.3, 07.9, 07.3, 06.5, 06.3, 05.5, 05.4, 05.3, 04.9, 04.3, 03.5 **<mark>055</mark>** 수식의 표기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -496,12 +526,16 @@ Infix로�표기된�수식에서�연산자를�해당�피연산자�2�
 파일을�구성하는�각�레코드들을�특정�키�항목을�기준으 로�오름차순(Ascending)�또는�내림차순(Descending)으 로�재배열하는�작업이다. 
 
 ###### 내부 정렬 
+Phần “내부 정렬” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�소량의�데이터를�주기억장치에만�기억시켜서�정렬하 는�방식이다. 
 
 - 종류�:�히프�정렬,�삽입�정렬,�셸�정렬,�버블�정렬,�선택� 정렬,�퀵�정렬,�2-Way�Merge�정렬,�기수�정렬 (=Radix�Sort) 
 
 ###### 외부 정렬 
+Phần “외부 정렬” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �대량의�데이터를�보조기억장치에�기억시켜서�정렬하 는�방식으로,�대부분�병합�정렬(Merge�Sort)�기법으로� 처리한다. 
 
@@ -614,6 +648,8 @@ www.sinagong.co.kr
 - ���(71,�2)�(38,�5)�(7,�61)�(11,�26)�(53,�42) 
 
 ## 핵심 13.6, 11.3, 06.3, 05.5, 04.9, 03.3, 02.5, 00.7 **<mark>058</mark>** 이분 검색(이진 검색) 
+Phần “핵심 13.6, 11.3, 06.3, 05.5, 04.9, 03.3, 02.5, 00.7 **<mark>058</mark>** 이분 검색(이진 검색)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �제어�검색의�일종인�이분�검색은�반드시�순서화된�파일 이어야�검색할�수�있다. 
 
@@ -628,6 +664,8 @@ www.sinagong.co.kr
 - •중간 레코드 번호(M)�:� 2<sup>(단,�F�:�첫�번째�레코드�번호,</sup> ���������������������������������������L�:�마지막�레코드�번호) 
 
 ## 핵심 13.3, 08.5, 07.5, 06.3, 04.5, 04.3, 01.3, 99.4 **<mark>059</mark>** 해싱(Hashing) 
+Phần “핵심 13.3, 08.5, 07.5, 06.3, 04.5, 04.3, 01.3, 99.4 **<mark>059</mark>** 해싱(Hashing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �Hash�Table이라는�기억공간을�할당하고,�해시�함수 (Hash�Function)를�이용하여�레코드�키에�대한�Hash� Table�내의�Home�Address를�계산한�후�주어진�레코드 를�해당�기억장소에�저장하거나�검색�작업을�수행하는� 방식이다. 
 
@@ -650,6 +688,8 @@ www.sinagong.co.kr
 - 키-주소�변환�방법이라고도�한다. 
 
 ###### 해시 테이블(Hash Table) 
+Phần “해시 테이블(Hash Table)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�레코드를�1개�이상�보관할�수�있는�Home�Bucket들로�구 성한�기억공간으로,�보조기억장치에�구성할�수도�있고� 주기억장치에�구성할�수도�있다. 
 
@@ -672,6 +712,8 @@ www.sinagong.co.kr
 ###### 핵심 14.8, 13.6, 12.3, 11.3, 10.9, 10.5 
 
 ## **<mark>060</mark>** 순차 파일(Sequential File) = 순서 파일 
+Phần “**<mark>060</mark>** 순차 파일(Sequential File) = 순서 파일” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�입력되는�데이터들을�논리적인�순서에�따라�물리적�연 속�공간에�순차적으로�기록하는�방식이다. 
 
@@ -684,6 +726,8 @@ www.sinagong.co.kr
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
 
 ###### 순차 파일의 장점 
+Phần “순차 파일의 장점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�기록�밀도가�높아�기억공간을�효율적으로�사용할�수�있다. 
 
@@ -694,12 +738,16 @@ www.sinagong.co.kr
 - •�레코드를�기록할�때�사용한�키�순서대로�레코드를�처리 하는�경우,�다른�편성법보다�처리�속도가�빠르다. 
 
 ###### 순차 파일의 단점 
+Phần “순차 파일의 단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�파일에�새로운�레코드를�삽입,�삭제,�수정하는�경우�파 일�전체를�복사해야�하므로�시간이�많이�소요된다. 
 
 - •�데이터�검색�시�처음부터�순차적으로�하기�때문에�검색� 효율이�낮다. 
 
 ## 핵심 14.5, 14.3, 13.3, 10.3, 09.5, 09.3, 08.9, 05.3, 03.3, 02.9, 02.3, 00.5, 00.3, 99.6 **<mark>061</mark>** 색인 순차 파일(Indexed Sequential File) 
+Phần “핵심 14.5, 14.3, 13.3, 10.3, 09.5, 09.3, 08.9, 05.3, 03.3, 02.9, 02.3, 00.5, 00.3, 99.6 **<mark>061</mark>** 색인 순차 파일(Indexed Sequential File)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�순차�처리와�랜덤�처리가�모두�가능하도록�레코드들을� 키�값�순으로�정렬(Sort)시켜�기록하고,�레코드의�키�항 목만을�모은�색인을�구성하여�편성하는�방식이다. 
 
@@ -735,12 +783,16 @@ www.sinagong.co.kr
 ~~시험에~~ 나오는 것만 ~~공부한다! 시나공~~ <u>시리즈</u> 
 
 ###### 색인 순차 파일의 장점 
+Phần “색인 순차 파일의 장점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�순차�처리와�랜덤�처리가�모두�가능하므로,�목적에�따 라�융통성�있게�처리할�수�있다. 
 
 - •�효율적인�검색이�가능하고�레코드의�삽입,�삭제,�갱신 이�용이하다. 
 
 ###### 색인 순차 파일의 단점 
+Phần “색인 순차 파일의 단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�색인�구역과�오버플로우�구역을�구성하기�위한�추가� 기억�공간이�필요하다. 
 
@@ -751,6 +803,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 다음�불�함수를�간략화하시오. 
 
@@ -775,6 +829,8 @@ www.sinagong.co.kr
 # **1과목 Chapter 1. 요구사항 확인 001 현행 시스템 분석** 
 
 # ⦁플랫폼 성능 특성 측정 항목 
+Phần “⦁플랫폼 성능 특성 측정 항목” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**측정 항목**|**설명**|
 |---|---|
@@ -786,6 +842,8 @@ www.sinagong.co.kr
 
 
 # ⦁운영체제 현행 시스템 분석 고려사항 
+Phần “⦁운영체제 현행 시스템 분석 고려사항” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**고려사항**|**설명**|
 |---|---|
@@ -856,6 +914,8 @@ www.sinagong.co.kr
 - ⦁자료 사전(DD; Data Dictionary): 데이터 요소의 정의, 유형, 길이, 사용 방법 등을 기술하고 데이터 요소 간의 관계를 나타낸 문서 
 
 # **004 요구사항 분석 자동화 및 관리 도구★★★** 
+Phần “**004 요구사항 분석 자동화 및 관리 도구★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁요구사항 분석을 위한 자동화 및 관리 도구(CASE; Computer Aided Software Engineering)의 특징 
 
@@ -908,6 +968,8 @@ www.sinagong.co.kr
 
 
 # ⦁UML의 관계(Relationships) 
+Phần “⦁UML의 관계(Relationships)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**설명**|
 |---|---|
@@ -932,6 +994,8 @@ www.sinagong.co.kr
 # ⦁행위적/동적 다이어그램(Behavioral/Dynamic Diagram)의 종류와 특징 
 
 # ⦁클래스 다이어그램의 구성요소 
+Phần “⦁클래스 다이어그램의 구성요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구성요소**|**설명**|
 |---|---|
@@ -951,6 +1015,8 @@ www.sinagong.co.kr
 
 
 # ⦁유스케이스 다이어그램의 구성요소 
+Phần “⦁유스케이스 다이어그램의 구성요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구성요소**|**설명**|
 |---|---|
@@ -974,6 +1040,8 @@ www.sinagong.co.kr
 # ⦁순차 다이어그램의 구성요소 
 
 # ⦁UML 확장 모델의 스테레오 타입(Stereotype) 
+Phần “⦁UML 확장 모델의 스테레오 타입(Stereotype)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |타입|설명|
 |---|---|
@@ -986,6 +1054,8 @@ www.sinagong.co.kr
 
 
 # **007 애자일 방법론★★★** 
+Phần “**007 애자일 방법론★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁애자일 방법론: 개발과 함께 즉시 피드백을 받아서 유동적으로 개발하는 소프트웨어 개발방법론 
 
@@ -1000,6 +1070,8 @@ www.sinagong.co.kr
 - 계획을 따르기보다는 <u>변화에 유연하게 대응하는 것에 더 가치를 둔다.</u> 
 
 # **008 스크럼(Scrum)/XP(eXtreme Programming)★★★** 
+Phần “**008 스크럼(Scrum)/XP(eXtreme Programming)★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁스크럼(Scrum): 개발팀이 자체적으로 일정을 조율하고 업무를 수행하는 프로젝트 관리 방법 - 스크럼 주요 용어 
 
@@ -1057,6 +1129,8 @@ www.sinagong.co.kr
 ⦁UI(User Interface): 사용자와 시스템 간의 상호작용이 원활하게 이루어지도록 도와주는 인터페이스 
 
 # ⦁UI 유형 
+Phần “⦁UI 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**유형**|**설명**|
 |---|---|
@@ -1082,6 +1156,8 @@ www.sinagong.co.kr
 
 
 # ⦁UI 특징 
+Phần “⦁UI 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |⦁UI 원칙|
 |---|
@@ -1166,6 +1242,8 @@ www.sinagong.co.kr
 선행조건 컴포넌트의 오퍼레이션 사용 전에 참이 되어야 할 조건<br>결과 조건 사용 후 만족되어야 할 조건<br>불변 조건 오퍼레이션이 실행되는 동안 항상 만족되어야 할 조건<br>소프트웨어 시스템을 구성하는 개별적인 모듈의 기능, 인터페이스, 내부 구조 등을 설계하<br>상위 설계 하위 설계<br>템의 전반적인 구조  형태 시스템의 내부 구조  및 동작<br>자료구조 설계, 아키텍처 설계, 인터페이스<br>모듈 설계<br> 프로시저 설계, 협약에 의한 설계<br>설명<br>구분석에서 도출된 결과와 비즈니스  목표  등을 분석하여 시스템의 설계 목표  설정<br> 요 고  으로  스<br><!-- End of picture text -->
 
 # ⦁소프트웨어 상위 설계와 하위 설계 
+Phần “⦁소프트웨어 상위 설계와 하위 설계” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**상위 설계**<br>**하위 설계**|
 |---|---|
@@ -1184,6 +1262,8 @@ www.sinagong.co.kr
 # ⦁소프트웨어 아키텍처 설계 과정 
 
 # ⦁소프트웨어 아키텍처 품질 속성 
+Phần “⦁소프트웨어 아키텍처 품질 속성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**품질 속성**|
 |---|---|
@@ -1196,6 +1276,8 @@ www.sinagong.co.kr
 
 
 # **013 소프트웨어 아키텍처 패턴★★★** 
+Phần “**013 소프트웨어 아키텍처 패턴★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁소프트웨어 아키텍처 패턴: 설계할 때 발생하는 일반적인 문제에 대한 일반적인 해결책을 제공하는 반 복적인 설계 패턴 
 
@@ -1217,10 +1299,14 @@ www.sinagong.co.kr
 있는 형태로 표현<br>- 모델과 뷰 사이의 연<br>결고리<br>컨트롤러<br>- 사용자의 입력에 따라<br>(Controlle<br>모델 업데이트, 모델<br>r)<br>의 상태에 따라 뷰<br>업데이트<br>- 구성요소가 서로 독립적으로 존재하므<br>로, 유지보수성이 높아지고 코드 재사용<br>성이 증가, 구성요소의 역할이 분명하게<br>정의되어 개발자 간의 협업 원활<br>- 분산 시스템에서 서비스 제공자와 사용<br>자 사이에 중개 역할을 수행하는 중개자<br>브로커 패턴 를 사용하여 상호작용하는 패턴<br>(Broker Pattern) - 클라이언트-서버 패턴과 유사하지만, 클<br>라이언트는 서비스 제공자를 직접 호출<br>하지 않고 중개자를 통해 서비스에 접근<br>- 하나의 마스터(Master) 노드가 전반적인<br>마스터-슬레이브 패턴 제어를 담당하고, 여러 개의 슬레이브<br>(Master-Slave (Slave) 노드가 마스터로부터 작업을 받<br>Pattern) 아 처리하는 구조 패턴<br>- 실시간 시스템에서 사용<br>014 객체지향(OOP)★★★<br>⦁객체지향(OOP; Object Oriented Programming): 현실 세계의 객체(Entity)를 소프트웨어 객체<br>(Object)로 추상화하여 프로그래밍하는 방법<br><!-- End of picture text -->
 
 # **014 객체지향(OOP)★★★** 
+Phần “**014 객체지향(OOP)★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁객체지향(OOP; Object Oriented Programming): 현실 세계의 객체(Entity)를 소프트웨어 객체 (Object)로 추상화하여 프로그래밍하는 방법 
 
 # ⦁객체지향 구성요소 
+Phần “⦁객체지향 구성요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구성요소**|**설명**|
 |---|---|
@@ -1278,6 +1364,8 @@ www.sinagong.co.kr
 
 
 # **016 객체지향 분석 방법론★★★** 
+Phần “**016 객체지향 분석 방법론★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 객체지향 분석 방법(OOA; Object Orient Analysis): 소프트웨어를 개발하기 위한 비지니스(업무)를 객체와 속성, 클래스와 멤버, 전체와 부분 등으로 나누어서 분석하는 방법 
 
@@ -1287,6 +1375,8 @@ www.sinagong.co.kr
 설명<br>- OMT(Object Modeling Technique)<br>객체 모형<br>(Object Modeling) - 객체 다이어그램 활용<br>동적 모형<br>(Dynamic  서와 같은 동적 행위를 표현<br>Modeling) -  상태 다이어그램 활용<br>기능 모형<br>(Functional<br>Modeling)<br>- 객체 모형, 동적 모형, 기능 모형의 3개 모형을 생성하는 방법<br> 모델링 →  동적 모델링 →  기능 모델링 순서로  진행<br>- OOD(Object Orient Design)<br><!-- End of picture text -->
 
 # **⦁** 객체지향 분석 방법론의 종류 
+Phần “**⦁** 객체지향 분석 방법론의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**종류**||**설명**|
 |---|---|---|
@@ -1303,6 +1393,8 @@ www.sinagong.co.kr
 
 
 # **017 모듈★★★** 
+Phần “**017 모듈★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 모듈(Module): 프로그램에서 독립적으로 컴파일하고 링크될 수 있는 최소한의 단위 
 
@@ -1326,6 +1418,8 @@ www.sinagong.co.kr
 
 
 # ⦁모듈화(Modularity)의 유형 
+Phần “⦁모듈화(Modularity)의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 결합도(Coupling): 모듈 간에 연관 관계 강도 
 
@@ -1383,6 +1477,8 @@ www.sinagong.co.kr
 # **⦁** 디자인 패턴 활용 시, 장·단점 
 
 # **⦁** 디자인 패턴의 유형 
+Phần “**⦁** 디자인 패턴의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 생성 패턴(Creational Pattern): 객체를 생성하는 방법과 관련된 패턴으로 객체 생성에 대한 복잡성을 해결하고, 객체 생성에 대한 유연성을 높이는 패턴 
 
@@ -1434,6 +1530,8 @@ www.sinagong.co.kr
 
 
 # **⦁** 인터페이스 요구사항의 프로세스 
+Phần “**⦁** 인터페이스 요구사항의 프로세스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**프로세스 이름**|**설명**|
 |---|---|
@@ -1507,10 +1605,14 @@ www.sinagong.co.kr
 정형 기술 검토 주요<br>설명<br>기법<br>동료검토 요구사항 명세서 작성자가 명세서 내용을 직접 설명 후, 이해관계자들이 직접 결함을 발<br>(Peer Review) 견하는 검토방법<br>워크 스루 검토 자료를 회의 전에 배포하여, 참가자들의 사전검토 후, 짧은 시간 동안 검토 회의를<br>(Walk Through) 진행하여 빠른 시간 내에 결함을 발견하는 검토방법<br>요구사항 명세서 작성자를 제외한 다른 전문가 또는 팀이 요구사항 명세서를 확인하며 결<br>함을 발견하는 검토방법<br>인스펙션<br>(Inspection)<br>021 시스템 아키텍처와 인터페이스 시스템<br>인터페이스 시스템(Interface System): 독립적인 두 개의 시스템을 이어주는 접속 및 중계 시스템으로<br>송신 시스템, 수신 시스템<br>구성 설명<br>연계할 데이터를 데이터베이스와 애플리케이션으로부터 연계 테이블 또는 파일 형태로 생<br>송신 시스템<br>성하여 송신하는 시스템<br>수신한 연계 테이블 또는 파일을 저장하거나 애플리케이션에서 활용할 수 있도록 변환하<br>수신 시스템<br>는 시스템<br><!-- End of picture text -->
 
 # **021 시스템 아키텍처와 인터페이스 시스템** 
+Phần “**021 시스템 아키텍처와 인터페이스 시스템**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 인터페이스 시스템(Interface System): 독립적인 두 개의 시스템을 이어주는 접속 및 중계 시스템으로 송신 시스템, 수신 시스템 
 
 # **022 송수신 연계 기술 및 미들웨어 솔루션★★★** 
+Phần “**022 송수신 연계 기술 및 미들웨어 솔루션★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 송·수신 연계 기술: 개발할 시스템과 연계할 내·외부 시스템 사이 송·수신을 위해 사용되는 기술 
 
@@ -1574,6 +1676,8 @@ Favorite: No
 ## 001. 소프트웨어 생명 주기 (Software Life Cycle)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 소프트웨어 개발 방법론의 바탕이 되는 것으로, 개발을 위해 정의하고 운용, 유지보수 등의 과정을 각 단계별로 나눈 것이다.
 - 핵심 키워드: 개발 방법론, 단계별 구분, 운용 및 유지보수, 프로세스.
@@ -1583,6 +1687,8 @@ Favorite: No
 연관 설명: 002, 003, 004, 005.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 개발 방법론의 기초가 되는 프레임워크이다.
 - 프로젝트 비용 산정 및 인력 배치의 기준이 된다.
@@ -1769,6 +1875,8 @@ Favorite: No
 ## 002. 폭포수 모형 (Waterfall Model)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 한 단계가 완전히 끝나야만 다음 단계로 넘어갈 수 있는 선형 순차적 개발 모형이다.
 - 핵심 키워드: 선형 순차적, 고전적 생명 주기, 단계별 결과물 명확, 거슬러 올라가기 불가.
@@ -1778,6 +1886,8 @@ Favorite: No
 연관 설명: 001.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 고전적 생명 주기 모형이라고도 불리며 가장 오래된 방법론이다.
 - 적용 경험과 성공 사례가 많아 관리가 용이하다.
@@ -1787,6 +1897,8 @@ Favorite: No
 ## 003. 나선형 모형 (Spiral Model)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 폭포수와 프로토타입 모형의 장점에 위험 분석 기능을 추가하여 나선을 따라 돌듯 점진적으로 개발하는 모형이다.
 - 핵심 키워드: 보헴(Boehm), 위험 분석, 점진적 모형, 반복 개발.
@@ -1796,6 +1908,8 @@ Favorite: No
 연관 설명: 001, 002.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 보헴(Boehm)이 제안하였으며 소프트웨어 개발 중 발생할 수 있는 위험을 관리하는 것이 목적이다.
 - 점진적으로 개발 과정이 반복되므로 누락된 요구사항을 추가하기 용이하다.
@@ -1805,6 +1919,8 @@ Favorite: No
 ## 005. 애자일 모형 (Agile Model)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 고객의 요구사항 변화에 유연하게 대응할 수 있도록 일정한 주기를 반복하며 진행하는 개발 방법론 통칭이다.
 - 핵심 키워드: 민첩한, 유연성, 주기적 반복, 소통 중심.
@@ -1814,6 +1930,8 @@ Favorite: No
 연관 설명: 006, 007, 009.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 일정한 개발 주기를 반복하면서 변화하는 고객의 요구를 수용한다.
 - 폭포수 모형과 대조적으로 계획보다는 변화에 대한 반응을 중시한다.
@@ -1823,6 +1941,8 @@ Favorite: No
 ## 006. 애자일 개발 4가지 핵심 가치
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 애자일 방법론이 추구하는 근본적인 가치 체계로, 4가지 우선순위를 정의한다.
 - 핵심 키워드: 개인과 상호작용, 실행되는 SW, 고객과 협업, 변화에 반응.
@@ -1832,6 +1952,8 @@ Favorite: No
 연관 설명: 005.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스와 도구보다는 개인과 상호작용에 더 가치를 둔다.
 - 방대한 문서 기록보다는 실제 실행되는 소프트웨어에 집중한다.
@@ -1841,6 +1963,8 @@ Favorite: No
 ## 007. 스크럼 (Scrum)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 팀이 중심이 되어 단기 주기를 반복하면서 효율적으로 제품을 개발하는 애자일 방법론이다.
 - 핵심 키워드: 제품 책임자(PO), 스크럼 마스터(SM), 제품 백로그, 스프린트.
@@ -1850,6 +1974,8 @@ Favorite: No
 연관 설명: 005, 008.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제품 책임자(PO): 요구사항을 작성하고 우선순위를 갱신하는 주체이다.
 - 스크럼 마스터(SM): 스크럼을 잘 수행하도록 조언하고 장애 요소를 제거한다.
@@ -1859,6 +1985,8 @@ Favorite: No
 ## 008. 스크럼 개발 프로세스
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 스크럼 방법론을 따라 실제 개발이 진행되는 일련의 단계적 활동이다.
 - 핵심 키워드: 일일 스크럼 회의, 소멸 차트, 스프린트 검토 회의, 스프린트 회고.
@@ -1868,6 +1996,8 @@ Favorite: No
 연관 설명: 007.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 일일 스크럼 회의: 남은 작업 시간은 소멸 차트(Burn-down Chart)에 표시한다.
 - 스프린트 검토 회의(Review): 제품이 요구사항에 부합하는지 사용자 앞에서 테스팅한다.
@@ -1877,6 +2007,8 @@ Favorite: No
 ## 009. XP (eXtreme Programming)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 고객의 참여와 개발 과정의 반복을 극대화하여 개발 생산성을 높이는 애자일 방법론이다.
 - 핵심 키워드: 고객 참여, 짧은 릴리즈, 생산성 향상, 5가지 핵심 가치.
@@ -1886,6 +2018,8 @@ Favorite: No
 연관 설명: 005, 010.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 수시로 발생하는 고객의 요구사항에 유연하게 대응하는 것이 목표이다.
 - 릴리즈 기간을 짧게 반복하며 결과물에 대한 가시성을 높인다.
@@ -2307,6 +2441,8 @@ Favorite: No
 ## 010. XP의 주요 실천 방법 (Practice)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: XP 방법론을 실천하기 위해 개발자가 지켜야 하는 구체적인 행동 양식들이다.
 - 핵심 키워드: Pair Programming, TDD, Refactoring, Continuous Integration.
@@ -2316,6 +2452,8 @@ Favorite: No
 - 연관 설명: 009
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Pair Programming: 두 명의 개발자가 함께 프로그래밍하여 책임을 공동으로 분담한다. ( 2 People vs 1 PC )
 - Test-Driven Development(TDD): 자동화된 테스팅 도구를 사용하여 지속적으로 테스트한다.
@@ -2473,6 +2611,8 @@ Favorite: No
 ## 012. 운영체제 (OS; Operating System)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 컴퓨터 시스템의 자원들을 효율적으로 관리하며, 사용자에게 편리한 환경을 제공하는 인터페이스 소프트웨어이다.
 - 핵심 키워드: 자원 관리, 인터페이스, 가용성, 성능.
@@ -2482,6 +2622,8 @@ Favorite: No
 연관 설명: 282, 283.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스, 기억장치, 파일, 입출력 장치 등 모든 시스템 자원을 제어한다.
 - 종류: Windows, UNIX, Linux, Mac OS, iOS, Android 등.
@@ -2508,6 +2650,8 @@ Favorite: No
 ## 013. 데이터베이스 관리 시스템 (DBMS)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자와 데이터베이스 사이에서 사용자의 요구에 따라 정보를 생성하고 관리해주는 소프트웨어이다.
 - 핵심 키워드: 종속성 및 중복성 해결, 무결성 유지, 가용성, 성능.
@@ -2517,6 +2661,8 @@ Favorite: No
 연관 설명: 014, 089, 091.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터베이스의 구성, 접근 방법, 유지관리에 대한 모든 책임을 진다.
 - 정의 기능: 데이터 구조, 이용 방식, 제약 조건 등을 명시한다.
@@ -2598,6 +2744,8 @@ Favorite: No
 ## 015. 요구사항의 유형
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 소프트웨어가 해결해야 할 서비스 설명과 운영에 필요한 제약조건을 의미하며 기능과 비기능으로 나뉜다.
 - 핵심 키워드: 기능 요구사항, 비기능 요구사항, 사용자 요구사항, 제약사항.
@@ -2607,6 +2755,8 @@ Favorite: No
 연관 설명: 016, 018.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기능 요구사항: 시스템의 입력, 출력, 저장 데이터, 수행해야 할 연산 등을 포함한다.
 - 비기능 요구사항: 시스템 장비 구정 요구사항, 성능, 인터페이스, 데이터 구축, 테스트, 보안, 품질 요구사항, 제약사항, 프로젝트 관리 요구사항, 프로젝트 지원 요구사항 등이 포함된다.
@@ -2635,6 +2785,8 @@ Favorite: No
 ## 016. 요구사항 개발 프로세스
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 개발 대상에 대한 요구사항을 도출하고 분석한 후, 이를 명세서에 정리하고 확인 및 검증하는 구조화된 활동이다.
 - 핵심 키워드: 도출(Elicitation), 분석(Analysis), 명세(Specification), 확인(Validation).
@@ -2644,6 +2796,8 @@ Favorite: No
 연관 설명: 015, 017, 018
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 요구사항 도출: 시스템, 사용자, 개발자가 의견을 교환하여 요구사항이 어디에 있는지 식별하는 수집 단계이다.
 - 요구사항 분석: 요구사항 중 명확하지 않거나 모호한 부분을 발견하고 걸러내는 과정이다.
@@ -2703,6 +2857,8 @@ Favorite: No
 ## 017. 요구사항 명세 기법
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 분석된 요구사항을 문서화할 때 사용하는 방법으로 정형 명세 기법과 비정형 명세 기법으로 나뉜다.
 - 핵심 키워드: 정형 명세(수학적), 비정형 명세(자연어), VDM, Z, FSM.
@@ -2712,6 +2868,8 @@ Favorite: No
 연관 설명: 016, 020
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정형 명세 기법: 수학적 원리와 기호를 사용하여 일관성이 있고 완전성 검증이 가능하지만, 사용자가 이해하기 어렵다(VDM, Z, Petri-net).
 - 비정형 명세 기법: 자연어(일상 언어)나 다이어그램을 사용하여 의사소통이 용이하지만, 작성자에 따라 해석이 달라질 수 있다(ERD, State Chart).
@@ -2737,6 +2895,8 @@ Favorite: No
 ## 018. 요구사항 분석의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 소프트웨어 개발의 실제적인 첫 단계로 사용자의 요구를 이해하고 타당성을 조사하여 문서화하는 활동이다.
 - 핵심 키워드: 타당성 조사, 목표 설정, 문서화, 분석가.
@@ -2746,6 +2906,8 @@ Favorite: No
 연관 설명: 016, 019, 020, 023
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 분석가는 사용자의 요구를 정확히 추출하여 어떤 방식으로 해결할 것인지 결정한다.
 - 비용과 일정에 대한 제약을 설정하고 사용자 요구의 타당성을 조사한다.
@@ -2771,6 +2933,8 @@ Favorite: No
 ## 019. 자료 흐름도 (DFD; Data Flow Diagram)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 요구사항 분석에서 자료의 흐름 및 변환 과정과 기능을 도형 중심으로 기술하는 방법이다.
 - 핵심 키워드: 프로세스, 자료 흐름, 자료 저장소, 단말, 버블 차트.
@@ -2783,6 +2947,8 @@ Favorite: No
     
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스(Process): 자료를 변환시키는 부분으로 원이나 둥근 사각형으로 표시한다.
 - 자료 흐름(Data Flow): 자료의 이동을 화살표로 표시한다.
@@ -2794,6 +2960,8 @@ Favorite: No
 ## 020. 자료 사전 (DD; Data Dictionary)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 자료 흐름도(DFD)에 있는 자료를 더 자세히 정의하고 기록한 것으로, '데이터의 데이터'인 메타 데이터이다.
 - 핵심 키워드: 메타 데이터, 정의(=), 연결(+), 생략( ), 반복({ }), 선택([|]).
@@ -2803,6 +2971,8 @@ Favorite: No
 연관 설명: 019, 185
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `=`: 자료의 정의 (is composed of).
 - `+`: 자료의 연결 (and).
@@ -2814,6 +2984,8 @@ Favorite: No
 ## 021. 요구사항 분석을 위한 CASE (자동화 도구)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 요구사항을 자동으로 분석하고 요구사항 분석 명세서를 작성하도록 돕는 소프트웨어 도구이다.
 - 핵심 키워드: SADT, SREM, RSL/REVS.
@@ -2823,6 +2995,8 @@ Favorite: No
 연관 설명: 321
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SADT: SoftTech 사에서 개발한 시스템 정의 및 요구사항 분석용 구조적 분석 도구이다.
 - SREM: TRW 사에서 개발한 실시간 처리 시스템용 요구사항 기술 언어(RSL)와 검증 도구(REVS)를 포함한다.
@@ -2831,6 +3005,8 @@ Favorite: No
 ## 022. HIPO (Hierarchy plus Input-Process-Output)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시스템의 기능을 여러 개의 모듈로 분할하여 이들 간의 인터페이스를 계층 구조로 표현한 도표이다.
 - 핵심 키워드: 가시적 도표, 총체적 도표, 세부적 도표, 계층 구조.
@@ -2840,6 +3016,8 @@ Favorite: No
 연관 설명: 018
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 가시적 도표(Visual Table of Contents): 전체적인 흐름을 보여주는 트리 구조도이다.
 - 총체적 도표(Overview Diagram): 프로그램의 기능을 입력, 처리, 출력으로 기술한 개요 도표이다.
@@ -2849,6 +3027,8 @@ Favorite: No
 ## 023. UML (Unified Modeling Language)의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시스템 개발 과정에서 의사소통이 원활하게 이루어지도록 표준화한 객체지향 모델링 언어이다.
 - 핵심 키워드: 사물(Things), 관계(Relationships), 다이어그램(Diagram), OMG 표준.
@@ -2858,6 +3038,8 @@ Favorite: No
 연관 설명: 024, 025, 052
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - UML의 구성 요소는 사물, 관계, 다이어그램으로 나뉜다.
 - 구조 다이어그램(6개)과 행위 다이어그램(7개)을 통해 시스템을 가시화한다.
@@ -2866,6 +3048,8 @@ Favorite: No
 ## 024. UML - 관계 (Relationships)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: UML에서 사물과 사물 사이의 연관성을 표현하는 요소이다.
 - 핵심 키워드: 연관, 집합, 포함, 일반화, 의존, 실체화.
@@ -2875,6 +3059,8 @@ Favorite: No
 연관 설명: 023, 051
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 연관(Association): 2개 이상의 사물이 서로 관련되어 있음을 나타낸다.
 - 집합(Aggregation): 한 사물이 다른 사물에 포함되는 관계(부분-전체)이다.
@@ -2885,6 +3071,8 @@ Favorite: No
 ## 025. 다이어그램 (Diagram)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사물과 관계를 도형으로 표현하여 시스템의 뷰(View)를 제공하는 UML의 핵심 요소이다.
 - 핵심 키워드: 구조적 다이어그램, 행위 다이어그램, 정적 모델링, 동적 모델링.
@@ -2894,6 +3082,8 @@ Favorite: No
 연관 설명: 027, 028, 029
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 구조적 다이어그램: 클래스, 객체, 컴포넌트, 배치, 복합체 구조, 패키지 다이어그램이 포함된다.
 - 행위 다이어그램: 유스케이스, 순차, 커뮤니케이션, 상태, 활동, 상호작용 개요, 타이밍 다이어그램이 포함된다.
@@ -2902,6 +3092,8 @@ Favorite: No
 ## 026. 스테레오 타입 (Stereotype)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: UML의 기본 요소 외에 추가적인 기능을 표현하기 위해 확장하는 기법이다.
 - 핵심 키워드: 길러멧(<< >>), include, extend, interface.
@@ -2911,6 +3103,8 @@ Favorite: No
 연관 설명: 023, 027
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `<<include>>`: 포함 관계일 때 사용한다.
 - `<<extend>>`: 확장 관계일 때 사용한다.
@@ -2920,6 +3114,8 @@ Favorite: No
 ## 027. 유스케이스 (Use Case) 다이어그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자와 외부 시스템이 개발될 시스템을 통해 수행할 수 있는 기능을 사용자 관점에서 표현한 것이다.
 - 핵심 키워드: 시스템 범위, 액터(Actor), 유스케이스, 관계.
@@ -2929,6 +3125,8 @@ Favorite: No
 연관 설명: 025, 026, 029
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 액터(Actor): 시스템과 상호작용하는 모든 외부 요소이다.
     - **주액터 :** 시스템을 사용함으로써 이득을 얻는 대상으로, 주로 사람이 해당함
@@ -2940,6 +3138,8 @@ Favorite: No
 ## 028. 클래스 (Class) 다이어그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시스템을 구성하는 클래스들과 그들의 속성, 동작, 그리고 클래스 간의 관계를 표현한 것이다.
 - 핵심 키워드: 클래스, 속성(Attribute), 오퍼레이션(Operation), 제약조건.
@@ -2949,6 +3149,8 @@ Favorite: No
 연관 설명: 024, 025, 047
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 속성(Attribute): 클래스의 상태나 정보를 표현하는 변수이다.
 - 오퍼레이션(Operation): 클래스가 수행할 수 있는 동작으로 메소드(Method)라고도 한다.
@@ -2958,6 +3160,8 @@ Favorite: No
 ## 029. 순차 (Sequence) 다이어그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시스템이나 객체들이 메시지를 주고받으며 시간의 흐름에 따라 상호 작용하는 과정을 표현한 것이다.
 - 핵심 키워드: 액터, 객체, 생명선(Lifeline), 실행 상자, 메시지.
@@ -2967,6 +3171,8 @@ Favorite: No
 연관 설명: 025, 031
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 생명선(Lifeline): 객체가 메모리에 존재하는 기간을 나타내며 수직 점선으로 표시한다.
 - 실행 상자(Active Box): 객체가 실제 구동되고 있는 기간을 생명선 위의 직사각형으로 표시한다.
@@ -2981,6 +3187,8 @@ Favorite: No
 ## 030. 사용자 인터페이스 (UI; User Interface) 특징
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자와 컴퓨터 사이에서 의사소통이 원활하게 이루어지도록 돕는 매개체이자 상호작용 시스템이다.
 - 핵심 키워드: 사용자 만족도, 상호작용, 인터페이스, 사용성.
@@ -2990,6 +3198,8 @@ Favorite: No
 연관 설명: 031, 032, 033
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자가 소프트웨어를 얼마나 쉽고 효율적으로 사용할 수 있는지를 결정하는 사용성(Usability)이 가장 중요하다.
 - 단순히 예쁜 디자인보다는 사용자의 목적을 정확히 달성할 수 있도록 설계해야 한다.
@@ -2998,6 +3208,8 @@ Favorite: No
 ## 031. 사용자 인터페이스의 구분
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자가 기기를 조작하고 정보를 전달받는 방식에 따른 인터페이스의 기술적 분류이다.
 - 핵심 키워드: CLI, GUI, NUI, OUI, VOI
@@ -3007,6 +3219,8 @@ Favorite: No
 연관 설명: 030, 032
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CLI(Command Line Interface): 키보드로 명령어를 텍스트 형태로 입력하는 전통적인 방식이다.
 - GUI(Graphical User Interface): 마우스와 아이콘을 사용하여 시각적으로 조작하는 직관적인 방식이다.
@@ -3019,6 +3233,8 @@ Favorite: No
 ## 032. 사용자 인터페이스의 기본 원칙
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자 인터페이스 설계 시 지켜야 할 4가지 근본적인 원칙이다.
 - 핵심 키워드: 직관성, 유효성, 학습성, 유연성.
@@ -3028,6 +3244,8 @@ Favorite: No
 연관 설명: 033
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 직관성(Intuitiveness): 매뉴얼 없이도 누구나 기능과 사용법을 바로 파악할 수 있어야 함을 의미한다.
 - 유효성(Effectiveness): 사용자가 시스템을 통해 얻고자 하는 목적을 정확하고 완벽하게 달성해야 한다.
@@ -3037,6 +3255,8 @@ Favorite: No
 ## 033. 사용자 인터페이스의 설계 지침
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: UI 원칙을 실무에 적용하기 위해 설계자가 고려해야 할 구체적인 가이드라인이다.
 - 핵심 키워드: 심미성, 사용자 중심, 오류 발생 해결, 일관성.
@@ -3046,6 +3266,8 @@ Favorite: No
 연관 설명: 032, 034
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자 중심: 실사용자에 대한 이해를 바탕으로 누구나 이해하기 쉬운 환경을 제공해야 한다.
 - 심미성: 디자인적으로 완성도 높은 글꼴, 색상, 그래픽 요소를 배치하여 가독성을 높여야 한다.
@@ -3055,6 +3277,8 @@ Favorite: No
 ## 034. 사용자 인터페이스 개발 시스템의 기능
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자와의 상호작용을 안정적으로 지원하기 위해 시스템이 내부적으로 갖추어야 할 핵심 기능들이다.
 - 핵심 키워드: 입력 검증, 에러 메시지 표시, 도움말 제공, 프롬프트(Prompt).
@@ -3064,6 +3288,8 @@ Favorite: No
 연관 설명: 033
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 입력값이 유효한지 검증하여 잘못된 데이터가 시스템으로 들어가는 것을 막는다.
 - 발생한 에러에 대해 단순한 오류 코드가 아닌 사용자가 이해할 수 있는 상세 메시지를 보여주어야 한다.
@@ -3072,6 +3298,8 @@ Favorite: No
 ## 035. UI 설계 도구
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: UI 설계 단계에서 페이지 레이아웃이나 기능의 흐름을 시각적으로 표현하기 위해 사용하는 도구들이다.
 - 핵심 키워드: 와이어프레임(Wireframe), 목업(Mockup), 스토리보드(storyboard), 프로토타입(prototype)
@@ -3085,6 +3313,8 @@ Favorite: No
 - 
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 와이어프레임(Wireframe): 기획 초기 단계에서 페이지의 개략적인 레이아웃이나 UI 요소의 뼈대만을 설계한다.
     - Tool: 손그림, 파워포인트, 키노트,스케치, 일러스트, 포토샵, 등
@@ -3098,6 +3328,8 @@ Favorite: No
 ## 036. 품질 요구사항 (ISO/IEC 9126)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 소프트웨어의 품질을 객관적으로 측정하고 평가하기 위해 정의된 국제 표준 품질 특성이다.
 - 핵심 키워드: 기능성, 신뢰성, 사용성, 효율성, 유지 보수성, 이식성.
@@ -3107,6 +3339,8 @@ Favorite: No
 연관 설명: 015, 018
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기능성(Functionality): 사용자의 요구를 정확히 만족하는 기능을 제공하는지 여부이다.
 - 신뢰성(Reliability): 오류 없이 정확하고 일관되게 기능을 수행할 수 있는 정도이다.
@@ -3234,6 +3468,8 @@ Favorite: No
 ## 037. UI 요소
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자가 화면에서 데이터를 입력하거나 항목을 선택하기 위해 사용하는 시각적 도구들이다.
 - 핵심 키워드: 체크 박스, 라디오 버튼, 텍스트 박스, 콤보 상자.
@@ -3243,6 +3479,8 @@ Favorite: No
 - 연관 설명: 031
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 체크 박스(Check Box): 여러 개의 선택지 중 1개 이상의 값을 동시에 선택할 수 있다.
 - 라디오 버튼(Radio Button): 여러 항목이 나열된 경우 그중 반드시 하나만 선택해야 할 때 사용한다.
@@ -3409,6 +3647,8 @@ Favorite: No
 ## 038. 상위 설계와 하위 설계
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 소프트웨어 설계 단계를 시스템의 전체적인 구조를 정의하는 단계와 내부의 세부 기능을 정의하는 단계로 나눈 것이다.
 - 핵심 키워드: 아키텍처 설계, 모듈 설계, 예비 설계, 상세 설계.
@@ -3418,6 +3658,8 @@ Favorite: No
 연관 설명: 039, 041
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 상위 설계: 아키텍처 설계라고도 하며 시스템의 전체 구조, 데이터베이스, 인터페이스 등을 정의한다.
 - 하위 설계: 상세 설계라고도 하며 각 모듈 내부의 구체적인 자료 구조와 처리 알고리즘을 명세한다.
@@ -3450,6 +3692,8 @@ Favorite: No
 ## 039. 소프트웨어 아키텍처 설계의 기본 원리
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 복잡한 시스템을 효율적으로 구축하기 위해 설계 시 적용해야 하는 근본적인 설계 철학이자 방법론이다.
 - 핵심 키워드: 모듈화, 추상화, 단계적 분해, 정보 은닉.
@@ -3459,6 +3703,8 @@ Favorite: No
 연관 설명: 038, 047
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모듈화(Modularity): 시스템의 기능을 독립적인 단위인 모듈로 나누어 성능과 유지보수성을 높이는 기법이다.
     - 부품처럼 생각한(조립)
@@ -3539,6 +3785,8 @@ Favorite: No
 ## 040. 소프트웨어 아키텍처의 품질 속성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 설계된 아키텍처가 이해관계자들의 요구 수준을 만족하는지 확인하기 위해 분류해 놓은 품질 평가 지표이다.
 - 핵심 키워드: 시스템 측면, 비즈니스 측면, 아키텍처 측면.
@@ -3548,6 +3796,8 @@ Favorite: No
 연관 설명: 036, 041
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 시스템 측면: 성능, 보안, 가용성, 확장성, 기능성, 사용성, 변경용이성, 기타 속성 등 기술적인 품질을 다룬다.
 
@@ -3566,6 +3816,8 @@ Favorite: No
 ## 041. 소프트웨어 아키텍처의 설계 과정
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시스템 개발 방향을 설정하고 표준 아키텍처를 수립하여 최종적으로 검토하는 일련의 절차이다.
 - 핵심 키워드: 설계 목표 설정, 아키텍처 패턴, 서브시스템 구체화, 검토.
@@ -3575,6 +3827,8 @@ Favorite: No
 연관 설명: 038, 040
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 설계 목표 설정: 시스템의 개발 방향을 명확히 하기 위해 우선순위 등 요구사항을 분석한다.
 - 시스템 타입 결정: 전체 시스템과 하위 시스템의 타입을 결정하고 최적의 아키텍처 패턴을 선택한다.
@@ -3603,6 +3857,8 @@ Favorite: No
 ## 042. 협약(Contract)에 의한 설계
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 소프트웨어 컴포넌트 설계 시 클래스에 대한 여러 가정을 정확한 인터페이스로 명세하는 기법이다.
 - 핵심 키워드: 선행 조건(Precondition), 결과 조건(Postcondition), 불변 조건(Invariant).
@@ -3612,6 +3868,8 @@ Favorite: No
 연관 설명: 028, 031
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 선행 조건(Precondition): 특정 오퍼레이션이 호출되기 전에 반드시 참(True)이 되어야 할 조건이다.
 - 결과 조건(Postcondition): 오퍼레이션이 정상적으로 수행된 후 만족되어야 하는 결과이다.
@@ -3621,6 +3879,8 @@ Favorite: No
 ## 043. 파이프-필터 패턴 (Pipe-Filter Pattern)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 데이터 스트림의 각 단계를 필터 컴포넌트로 캡슐화하고 파이프를 통해 데이터를 전달하는 아키텍처 패턴이다.
 - 핵심 키워드: 데이터 스트림, 필터(Filter), 파이프(Pipe), 쉘(Shell).
@@ -3630,6 +3890,8 @@ Favorite: No
 연관 설명: 041, 044
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 필터 컴포넌트는 독립적이므로 재사용성이 높고, 새로운 필터를 추가하여 확장하기가 쉽다.
 - 필터들을 재배치하여 다양한 형태의 파이프라인을 유연하게 구축할 수 있다.
@@ -3675,6 +3937,8 @@ Favorite: No
 ## 044. 모델-뷰-컨트롤러 패턴 (Model-View-Controller Pattern)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시스템을 핵심 기능인 모델, 화면 표시인 뷰, 제어 로직인 컨트롤러의 3개 부분으로 구조화하는 패턴이다.
 - 핵심 키워드: 모델(Model), 뷰(View), 컨트롤러(Controller), 서브시스템 구조화.
@@ -3684,6 +3948,8 @@ Favorite: No
 연관 설명: 043, 045
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모델(Model): 데이터베이스와 연동되어 시스템의 핵심 기능과 원천 데이터를 보관하고 관리한다.
 - 뷰(View): 모델의 데이터를 사용자에게 시각적으로 표시하며, 정보 요청 결과를 보여주는 역할을 한다.
@@ -3792,6 +4058,10 @@ Favorite: No
 ## 046.객체 (Object)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần này tóm tắt dấu hiệu nhận biết và điều kiện áp dụng, làm cầu nối giữa phần giải thích dài và bước ôn nhanh.
+
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 데이터와 이를 처리하는 함수를 하나로 묶은 소프트웨어 구성 요소
 - **[2] 핵심 키워드**: 데이터, 함수, 상태, 행위
@@ -3800,6 +4070,10 @@ Favorite: No
 - **[5] 한 문장 설명**: 객체는 데이터와 행위를 함께 가지는 독립적인 단위이다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần này mở rộng nguyên nhân và hệ quả của ý vừa tóm tắt, để người mới hiểu trước khi quay lại ghi nhớ ngắn.
+
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 객체는 고유 식별자 보유: 자동차의 번호판
 - 상태는 시간에 따라 변화: 정지, 이동
@@ -3812,6 +4086,8 @@ Favorite: No
 ## 047.클래스 (Class)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 공통 속성과 연산을 갖는 객체들의 설계도
 - **[2] 핵심 키워드**: 속성, 메서드, 인스턴스
@@ -3820,6 +4096,8 @@ Favorite: No
 - **[5] 한 문장 설명**: 클래스는 객체 생성을 위한 추상적 정의이다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 객체는 클래스의 인스턴스
 - 속성과 연산 정의
@@ -3832,6 +4110,8 @@ Favorite: No
 ## 048.캡슐화 (Encapsulation)( đóng gói )
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 데이터와 함수를 하나로 묶고 내부 구현을 은닉하는 기법
 - **[2] 핵심 키워드**: 정보 은닉, 인터페이스, 접근 제한
@@ -3840,6 +4120,8 @@ Favorite: No
 - **[5] 한 문장 설명**: 캡슐화는 객체의 내부 구현을 외부로부터 보호한다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변경 영향 범위 축소
 - 객체 간 결합도 감소
@@ -3852,6 +4134,8 @@ Favorite: No
 ## 049.상속 (Inheritance)( kế thừa )
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 기존 클래스의 속성과 연산을 재사용하는 기법
 - **[2] 핵심 키워드**: 상위 클래스, 하위 클래스, 재사용
@@ -3860,6 +4144,8 @@ Favorite: No
 - **[5] 한 문장 설명**: 상속은 기존 클래스의 기능을 확장해 사용하는 기법이다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 하위 클래스는 상위 클래스 포함
 - 코드 중복 감소
@@ -3872,6 +4158,8 @@ Favorite: No
 ## 051.다형성 (Polymorphism)(đa hình)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 동일한 메시지에 대해 객체가 서로 다른 방식으로 응답하는 특성
 - **[2] 핵심 키워드**: 오버로딩, 오버라이딩, 동일 인터페이스
@@ -3880,6 +4168,8 @@ Favorite: No
 - **[5] 한 문장 설명**: 다형성은 같은 메시지를 다양한 방식으로 처리하는 능력이다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 오버로딩: 메서드 이름 동일, 매개변수 다름
 - 오버라이딩: 상속 관계에서 재정의
@@ -3888,6 +4178,8 @@ Favorite: No
 - 인터페이스 설계 핵심
 
 ## 052.연관성 (Relationship)(quan hệ)
+Phần “052.연관성 (Relationship)(quan hệ)” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 객체(또는 클래스) 간에 의미 있는 연결 관계를 표현하는 개념
 - **[2] 핵심 키워드**: 연관, 집단화, 일반화, 특수화
@@ -3896,6 +4188,8 @@ Favorite: No
 - **[5] 한 문장 설명**: 연관성은 객체들이 서로 어떤 의미로 연결되어 있는지를 나타낸다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - **Relationship = cách các object liên kết với nhau trong OOP**, gồm liên관, 분류, 집단, 상속.
 - 연관(Association): 객체 간 일반적인 연결
@@ -3910,6 +4204,8 @@ Favorite: No
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
+Phần này chốt các dấu hiệu cần nhớ cho đề thi, sau khi người học đã có bối cảnh và điều kiện áp dụng.
+
 - **[1] 개념**: 객체지향 시스템을 분석하기 위해 제안된 다양한 분석 접근 방법
 - **[2] 핵심 키워드**: Rumbaugh, Booch, Jacobson, Wirfs-Brock
 - **[3] 구조 / 관점 / 분류**: 분석 관점별 방법론
@@ -3917,6 +4213,8 @@ Favorite: No
 - **[5] 한 문장 설명**: 객체지향 분석 방법론은 시스템을 객체 중심으로 파악하기 위한 접근 방식이다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+
+Phần này bổ sung lý do và hệ quả của khái niệm, giúp đọc các tên riêng và mô hình như các mắt xích thay vì danh sách rời.
 
 - Rumbaugh: 객체·동적·기능 모델 중심
 - Booch: 설계와 구현까지 고려
@@ -3998,3 +4296,4 @@ Favorite: No
 ---
 
 ## 054. 객체지향 설계 원칙 (SOLID - Part 1)
+Phần này đặt các nguyên tắc SOLID vào một câu hỏi thực tế về trách nhiệm và phụ thuộc, rồi mới đi vào từng quy tắc cụ thể.

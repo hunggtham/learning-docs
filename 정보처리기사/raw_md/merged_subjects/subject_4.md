@@ -7,6 +7,8 @@
 # **159** 
 
 ##### 치기초 **C/JAVA의 자료형** 
+Phần “치기초 **C/JAVA의 자료형**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ��생일이�‘01/09/69’에서�‘10/22/73’�사이인�자료만�검색 
 
@@ -18,6 +20,8 @@
 156<br><!-- End of picture text -->
 
 ##### 치기초 **그룹 함수** 
+Phần “치기초 **그룹 함수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종류|C|JAVA|
 |---|---|---|
@@ -55,6 +59,8 @@
 - •INTERSECT :�두�조회�결과�중�공통된�행만�출력함 
 
 # 초 **161** 치기 **Python의 시퀀스 자료형** 
+Phần “초 **161** 치기 **Python의 시퀀스 자료형**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 리스트(List) :�필요에�따라�개수를�늘리거나�줄일�수�있음 
 
@@ -74,6 +80,8 @@
 # **162** 
 
 ##### 치기초 **변수명 작성 규칙** 
+Phần “치기초 **변수명 작성 규칙**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>영문자,�숫자,�_(under�bar)를�사용할�수�있다.</u> 
 
@@ -109,6 +117,8 @@
 167 치기초 조건 연산자<br><!-- End of picture text -->
 
 ###### <u>조건에�따라�서로�다른�수식을�수행한다.</u> 
+Phần “<u>조건에�따라�서로�다른�수식을�수행한다.</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - mx = a < b ? b : a; 
 
@@ -170,6 +180,8 @@
 초<br>166 치기<br><!-- End of picture text -->
 
 ##### **논리 연산자** 
+Phần “**논리 연산자**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •! (not) :�부정 
 
@@ -225,6 +237,8 @@
    - r의 값과 은(는) 소수를 출력한 후, 커서를 다음 줄의 처 음으로 옮긴다. 
 
 # **173** 치기초 **switch문** 
+Phần “**173** 치기초 **switch문**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>�조건에�따라�분기할�곳이�여러�곳인�경우�간단하게�처리</u> 할�수�있는�제어문이다. 
 
@@ -316,6 +330,8 @@ do i = i + 1; while (i <= 10);
 a[0][0] a[0][1] a[0][2]<br>11 22 33<br>배열 b<br>44 55 66<br>a[1][0] a[1][1] a[1][2]<br><!-- End of picture text -->
 
 # **179** 치기초 **배열 형태의 문자열 변수** 
+Phần “**179** 치기초 **배열 형태의 문자열 변수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - “ ” 
 
@@ -339,6 +355,8 @@ a[0][0] a[0][1] a[0][2]<br>11 22 33<br>배열 b<br>44 55 66<br>a[1][0] a[1][1] a
 치기초 **1차원 배열** 
 
 ###### 변수들을�일직선상의�개념으로�조합한�배열이다. 
+Phần “변수들을�일직선상의�개념으로�조합한�배열이다.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - char a[3] = {‘A’, ‘B’, ‘C’}; 
 
@@ -366,6 +384,8 @@ main( ) { int a = 50; ❶ int *b; ❷ b = &a; ❸ *b = *b+20; ❹ printf("%d, %d
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **182** 치기 **Python의 input( ) 함수** 
+Phần “초 **182** 치기 **Python의 input( ) 함수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - <u>키보드로�입력받아�변수에�저장하는�함수이다.</u> 
 
@@ -394,6 +414,8 @@ main( ) { int a = 50; ❶ int *b; ❷ b = &a; ❸ *b = *b+20; ❹ printf("%d, %d
 -  print(82, 24, sep = ‘-’, end = ‘,’) 
 
 # **181** 치기초 **포인터와 배열** 
+Phần “**181** 치기초 **포인터와 배열**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
       - 82와 24 사이에 분리문자 ‘-’가 출력되고, 마지막에 종료문 자 ‘,’가 출력된다. 
 
@@ -518,6 +540,8 @@ a[‘이름’] a[‘나이’] a[‘주소’] 결과 리스트 a ‘이순신�
 초<br>치기 Python의 for문<br><!-- End of picture text -->
 
 # **189** 
+Phần “**189**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>range를 이용하는 방식</u> 
 
@@ -528,6 +552,8 @@ a[‘이름’] a[‘나이’] a[‘주소’] 결과 리스트 a ‘이순신�
 **28** 
 
 ## 정보처리기사 핵심 요약 
+Phần “정보처리기사 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>리스트(List)를 이용하는 방식</u> 
 
@@ -600,6 +626,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
    - 결과 <mark>10</mark> 
 
 # **193** 치기초 **스크립트 언어의 종류** 
+Phần “**193** 치기초 **스크립트 언어의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자바스크립트 :�웹�페이지의�동작을�제어하는�데�사용되 는�클라이언트용�스크립트�언어 
 
@@ -618,12 +646,16 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 ## 정보처리기사 핵심 요약 
 
 # **194** 치기초 **쉘 스크립트에서 사용되는 제어문** 
+Phần “**194** 치기초 **쉘 스크립트에서 사용되는 제어문**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 선택형 :�if,�case 
 
 - 반복형 :�for,�while,�until 
 
 # **198** 치기초 **UNIX - 커널(Kernel)의 기능** 
+Phần “**198** 치기초 **UNIX - 커널(Kernel)의 기능**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스(CPU�스케줄링)�관리 
 
@@ -634,18 +666,24 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 - 입·출력�관리 
 
 # **195** 치기초 **라이브러리** 
+Phần “**195** 치기초 **라이브러리**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 표준 라이브러리 :�프로그래밍�언어에�기본적으로�포함 <u>되어�있는�라이브러리로,�여러�종류의�모듈이나�패키지</u> 로�구성됨 
 
 - 외부 라이브러리 :�개발자들이�필요한�기능들을�만들어� 인터넷�등에�공유해�놓은�것으로,�외부�라이브러리를� 다운받아�설치한�후�사용함 
 
 # 초 **199** 치기 **UNIX - 쉘(Shell)** 
+Phần “초 **199** 치기 **UNIX - 쉘(Shell)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �사용자의�명령어를�인식하여�프로그램을�호출하고�명령 을�수행하는�명령어�해석기이다. 
 
 - <u>시스템과�사용자�간의�인터페이스를�담당한다.</u> 
 
 # **200** 치기초 **기억장치의 배치 전략** 
+Phần “**200** 치기초 **기억장치의 배치 전략**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •최초 적합(First Fit) :�첫�번째�분할�영역에�배치 
 
@@ -690,6 +728,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 **30** 
 
 ## 정보처리기사 핵심 요약 
+Phần “정보처리기사 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  참조 페이지를 각 페이지 프레임에 차례로 적재시키되 이미 적재된 페이지는 해당 위치의 페이지 프레임을 사용한다. 
 
@@ -772,6 +812,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 - •평균 반환 시간 : (20+22+30)/3 = 24 
 
 # **206** 치기초 **UNIX의 주요 명령어** 
+Phần “**206** 치기초 **UNIX의 주요 명령어**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •fork :�새로운�프로세스를�생성함 
 
@@ -790,6 +832,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 # **207** 
 
 ##### 치기초 **인터넷 주소 체계 - IPv4** 
+Phần “치기초 **인터넷 주소 체계 - IPv4**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>8비트씩�4부분,�총�32비트로�구성되어�있다.</u> 
 
@@ -802,6 +846,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 ## 정보처리기사 핵심 요약 
 
 # **208** 치기초 **인터넷 주소 체계 - IPv6** 
+Phần “**208** 치기초 **인터넷 주소 체계 - IPv6**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>16비트씩�8부분,�총�128비트로�구성되어�있다.</u> 
 
@@ -810,6 +856,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 - �주소의�확장성, <u>융통성, 연동성이�뛰어나고,�품질�보장 이�용이하다.</u> 
 
 # 초 **OSI 7계층 - 세션 계층 212** 치기 **(Session Layer)** 
+Phần “초 **OSI 7계층 - 세션 계층 212** 치기 **(Session Layer)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - · 
 
@@ -1027,6 +1075,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 
 
 ###### 23.2, 21.3, 20.9 
+Phần “23.2, 21.3, 20.9” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**235**<br>핵심|JAVA의 데이터 타입 크기 및<br>기억 범위<br>400103|
 |---|---|
@@ -1061,6 +1111,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 - 변수는 저장하는 값에 따라 정수형, 실수형, 문자형, 포 인터형 등으로 구분한다. 
 
 ###### 변수명 작성 규칙 
+Phần “변수명 작성 규칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. 
 
@@ -1223,6 +1275,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 
 
 ### 핵심 **<mark>244</mark>** 조건 연산자 
+Phần “핵심 **<mark>244</mark>** 조건 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -1247,6 +1301,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 ###### • 형식 
 
 ###### 조건 ? 수식1 : 수식2; 
+Phần “조건 ? 수식1 : 수식2;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ‘조건’의 수식이 참이면 ‘수식1’을, 거짓이면 ‘수식2’를 실 행한다. 
 
@@ -1260,6 +1316,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 ### **<mark>245</mark>** 연산자 우선순위 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 개의 수식에 여러 개의 연산자가 사용되면 기본적으 로 아래 표의 순서대로 처리된다. 
 
@@ -1291,6 +1349,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 ### 정보처리기사 필기 핵심 요약 
 
 ###### 특징 
+Phần “특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 입력받을 데이터의 자료형, 자릿수 등을 지정할 수 있다. 
 
@@ -1303,6 +1363,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 -   printf("%-8.2f", 200.2); (∨는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -1398,6 +1460,8 @@ printf( ) 함수는 C언어의 표준 출력 함수로, 인수로 주어 진 값
 
 
 ### **<mark>250</mark>** JAVA에서의 표준 출력 
+Phần “**<mark>250</mark>** JAVA에서의 표준 출력” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - JAVA에서 값을 화면에 출력할 때는 System 클래스의 서브 클래스인 out 클래스의 메소드 print( ), println( ), printf( ) 등을 사용하여 출력한다. 
 
@@ -1412,10 +1476,14 @@ System.out.printf(서식 문자열, 변수)
 **73** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 -   System.out.printf(“%-8.2f”, 200.2); (V는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -1450,6 +1518,8 @@ System.out.println( )
 -  System.out.print(“abc123” + “def”); 
 
 ###### abc123def 
+Phần “abc123def” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 
 
@@ -1741,6 +1811,8 @@ while문은 조건이 참인 동안 실행할 문장을 반복 수행하 는 제
 거짓<br>참<br>조건 실행할 문장 다음 코드<br>while문의 동작 과정<br><!-- End of picture text -->
 
 ###### • 형식 
+Phần “• 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - while(조건) • while은 반복문에 사용되는 예약어로 그대로 입력 한다. 
 
@@ -1881,6 +1953,8 @@ switch문이나 반복문의 실행을 제어하기 위해 사용되는 예약�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C 언어에서 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주소를 지정하는 것과 같다. 
 
@@ -1916,6 +1990,8 @@ switch문이나 반복문의 실행을 제어하기 위해 사용되는 예약�
 #### 2차원 배열 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 2차원 배열은 변수들을 평면, 즉 행과 열로 조합한 배 열이다. 
 
@@ -1942,6 +2018,8 @@ b[0][2] : b는 배열의 이름이고, 0은 행 첨자, 2는 열 첨자로서 �
 ###### 예제 3행 4열의 배열에 다음과 같이 숫자 저장하기 
 
 #include <stdio.h> main( ) { 
+Phần “include <stdio.h> main( ) {” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다. 선언할 때는 사용할 개수를 선언하고, 사용할 때는 첨자를 0부터 사용하 므로 주의해야 한다. 
 
@@ -2029,6 +2107,8 @@ char 배열이름[크기] = “문자열”
 #### 배열의 초기화 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 배열 선언 시 초기값을 지정할 수 있다. 
 
@@ -2061,6 +2141,8 @@ a[0][0] a[0][1] a[0][2] a[0][3] 10 20 30 40 배열 a 50 60 70 80 a[1][0] a[1][1]
 > 예제 다음의 출력 결과를 확인하시오. 
 
 #include <stdio.h> main( ) { char a = 'A'; 문자형 변수 a에 문자 ‘A’를 저장한다. 문자 형 변수에는 한 글자만 저장되며, 저장될 때 는 아스키 코드값으로 변경되어 정수로 저 장된다. a가 저장하고 있는 값은 문자로 출 력하면 ‘A’가 출력되지만 숫자로 출력하면 ‘A’에 대한 아스키 코드 65가 출력된다. char b[9] = "SINAGONG"; 9개의 요소를 갖는 배열 b 를 선언하고 다음과 같이 초기화한다. 저장되는 글자 는 8자이지만 문자열의 끝 에 자동으로 저장되는 널 문자(‘\0’)를 고려하여 크기 를 9로 지정한 것이다. 배열 b S I N A G O N G \0 b[0] b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] char *c = "SINAGONG"; ❶ 포인터 변수 c에 “SINAGONG” 이라는 문자열이 저장된 곳의 주소를 저장한다. printf("%c\n", a); 변수 a의 값을 문자로 출력한다. printf("%s\n", b); 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주 소를 지정하는 것과 같으므로 배열 b의 첫 번째 요소가 가리키는 곳의 값을 문자 열로 출력한다. 
+Phần “include <stdio.h> main( ) { char a = 'A'; 문자형 변수 a에 문자 ‘A’를 저장한다. 문자 형 변수에는 한 글자만 저장되며, 저장될 때 는 아스키 코드값으로 변경되어 정수로 저 장된다. a가 저장하고 있는 값은 문자로 출 력하면 ‘A’가 출력되지만 숫자로 출력하면 ‘A’에 대한 아스키 코드 65가 출력된다. char b[9] = "SINAGONG"; 9개의 요소를 갖는 배열 b 를 선언하고 다음과 같이 초기화한다. 저장되는 글자 는 8자이지만 문자열의 끝 에 자동으로 저장되는 널 문자(‘\0’)를 고려하여 크기 를 9로 지정한 것이다. 배열 b S I N A G O N G \0 b[0] b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] char *c = "SINAGONG"; ❶ 포인터 변수 c에 “SINAGONG” 이라는 문자열이 저장된 곳의 주소를 저장한다. printf("%c\n", a); 변수 a의 값을 문자로 출력한다. printf("%s\n", b); 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주 소를 지정하는 것과 같으므로 배열 b의 첫 번째 요소가 가리키는 곳의 값을 문자 열로 출력한다.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 -   int a[5] = { 3, }; 또는 int a[5] = { 3 }; 
 
@@ -2160,6 +2242,8 @@ b = &a; ❸ 정수형 변수 a의 주소를 포인터 변수 b에 기 억시킨�
 printf(“%d, %d”, a, *b); ❺ 
 
 ###### 결과 <mark>70, 70</mark> 
+Phần “결과 <mark>70, 70</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❷와 같이 선언할 때 *는 해당 변수가 포인 터 변수라는 것을 의미한다. 
 
@@ -2277,6 +2361,8 @@ a[0] a[1] a[2] a[3] a[4] ← 배열 표기 방법 배열 a 첫 번째 두 번째
 401101<br><!-- End of picture text -->
 
 ### 핵심 **<mark>264</mark>** Python의 기본 문법 
+Phần “핵심 **<mark>264</mark>** Python의 기본 문법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수의 자료형에 대한 선언이 없다. 
 
@@ -2324,6 +2410,8 @@ a[0] a[1] a[2] a[3] a[4] ← 배열 표기 방법 배열 a 첫 번째 두 번째
 401102<br><!-- End of picture text -->
 
 ###### input( ) 함수 
+Phần “input( ) 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - input( ) 함수는 Python의 표준 입력 함수로, 키보드로 입력받아 변수에 저장하는 함수이다. 
 
@@ -2424,6 +2512,8 @@ a[0] a[1] a[2] 결과 리스트 a 10 mike 23.45 ※ 두 방법에 대한 결과�
 ### **<mark>267</mark>** 리스트(List) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C와 Java에서는 여러 요소들을 하나의 이름으로 처리 할 때 배열을 사용했는데 Python에서는 리스트를 사용 한다. 
 
@@ -2444,6 +2534,8 @@ a[0] a[1] a[2] 결과 리스트 a 10 mike 23.45 ※ 두 방법에 대한 결과�
 - 형식 
 
 ##### 딕셔너리명 = { 키1:값1, 키2:값2, … } 
+Phần “딕셔너리명 = { 키1:값1, 키2:값2, … }” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 딕셔너리명은 사용자가 임의로 지정하며, 딕셔너리를 의 미하는 중괄호 사이에 저장할 값들을 쉼표로 구분하여 입 력한다. 
 
@@ -2485,6 +2577,8 @@ a = 15 if a > 10:  ❶ a가 10보다 크면 ❷번 문장을 실행하고, 아�
 결과 5 
 
 ##### 객체명[초기위치:최종위치:증가값] 
+Phần “객체명[초기위치:최종위치:증가값]” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ‘초기위치’에서 ‘최종위치’-1까지 ‘증가값’만큼 증가하면서 해당 위치의 요소들을 가져온다. 
 
@@ -2568,6 +2662,8 @@ i += 1 ❸ i의 값을 1씩 증가시킨다. hap += i ❹ i의 값을 hap에 누
 ❻ print(hap, avg) 
 
 ###### 코드 해설 
+Phần “코드 해설” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |❶리스트 a를 선언하면서|초기값을 지정한다.|
 |---|---|
@@ -2620,6 +2716,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 ##### 실행할 문장 
 
 ##### def 메소드명(self, 인수): 
+Phần “def 메소드명(self, 인수):” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - def는 메소드를 정의하는 예약어로, 그대로 입력하고, 메소드명은 사 용자가 임의로 지정한다. 
 
@@ -2630,6 +2728,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 실행할 문장 
 
 #### return 값 
+Phần “return 값” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - return은 메소드를 호출한 위치로 값을 돌려주기 위해 사용하는 예약 어로, 그대로 입력한다. return 값이 없는 경우에는 생략할 수 있다. 
 
@@ -2644,6 +2744,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 - 객체의 선언 형식 
 
 ##### 변수명 = 클래스명( ) 
+Phần “변수명 = 클래스명( )” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수명은 사용자가 임의로 지정하고, 사전에 정의한 클래스명과 괄호( )를 적는다. 
 
@@ -2664,6 +2766,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 #### Python - While문 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식 
 
@@ -2708,6 +2812,8 @@ x, y = 10, 20 Cls 클래스의 변수(속성) x와 y를 선언하고, 각 각 10
 ### 정보처리기사 필기 핵심 요약 
 
 ###### 코드 해설 
+Phần “코드 해설” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Cls 클래스의 객체 a를 생성한다. 객체 a는 Cls의 속성 x, y와 메소드 chg( )를 갖 는다. 
 
@@ -2793,6 +2899,8 @@ a, b = 3, 12  ❶ 변수 a와 b에 3과 12를 저장한다. a = calc(a, b)  ❷<
 **87** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**2**<br>핵심|객체지향 프로그래밍 언어의<br>종류<br>401503<br>**76**|
 |---|---|
@@ -2989,6 +3097,8 @@ C언어는 라이브러리를 헤더 파일로 제공하는데, 각 헤더 파�
 ### **<mark>284</mark>** 운영체제의 기능 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세서(처리기, Processor), 기억장치(주기억장치, 보조기억장치), 입·출력장치, 파일 및 정보 등의 자원 을 관리한다. 
 
@@ -3038,6 +3148,8 @@ Single-User 컴퓨터 한 대를 한 사람만이 독점해서 사용함 시스�
 #### Windows 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Windows는 1990년대 마이크로소프트(Microsoft) 사 가 개발한 운영체제이다. 
 
@@ -3077,6 +3189,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ### 정보처리기사 필기 핵심 요약 
 
 ###### ※ 다중 사용자(Multi-User), 다중 작업(Multi-Tasking) 
+Phần “※ 다중 사용자(Multi-User), 다중 작업(Multi-Tasking)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 다중 사용자(Multi-User)는 여러 사용자가 동시 에 시스템을 사용하는 것이고, 다중 작업(MultiTasking)은 여러 개의 작업이나 프로그램을 동시에 수행하는 것을 의미한다. 
 
@@ -3113,6 +3227,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ###### 핵심 
 
 ###### 커널(Kernel) 
+Phần “커널(Kernel)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - UNIX의 가장 핵심적인 부분이다. 
 
@@ -3123,6 +3239,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 - 프로세스(CPU 스케줄링) 관리, 기억장치 관리, 파일 관 리, 입·출력 관리, 프로세스간 통신, 데이터 전송 및 변환 등 여러 가지 기능을 수행한다. 
 
 ###### 쉘(Shell) 
+Phần “쉘(Shell)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 명령어를 인식하여 프로그램을 호출하고 명 령을 수행하는 명령어 해석기이다. 
 
@@ -3157,6 +3275,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 - 공용 Shell(Bourne Shell, C Shell, Korn Shell)이나 사용자 자신이 만든 Shell을 사용할 수 있다. 
 
 ###### Utility Program 
+Phần “Utility Program” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 일반 사용자가 작성한 응용 프로그램을 처리하는 데 사 용한다. 
 
@@ -3193,6 +3313,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ### 세그먼테이션 **291** (Segmentation) 기법 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 세그먼테이션 기법은 가상기억장치에 보관되어 있는 프로그램을 다양한 크기의 논리적인 단위로 나눈 후 주 기억장치에 적재시켜 실행시키는 기법이다. 
 
@@ -3251,6 +3373,8 @@ SCR(Second 가장 오랫동안 주기억장치에 있던 페이지 중 자주 Ch
 ### **<mark>293</mark>** 
 
 ###### 페이지 크기가 작을 경우 
+Phần “페이지 크기가 작을 경우” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이지 단편화가 감소되고, 한 개의 페이지를 주기억장 치로 이동하는 시간이 줄어든다. 
 
@@ -3263,6 +3387,8 @@ SCR(Second 가장 오랫동안 주기억장치에 있던 페이지 중 자주 Ch
 - 디스크 접근 횟수가 많아져서 전체적인 입·출력 시간 은 늘어난다. 
 
 ###### 페이지 크기가 클 경우 
+Phần “페이지 크기가 클 경우” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이지 정보를 갖는 페이지 맵 테이블의 크기가 작아지 고, 매핑 속도가 빨라진다. 
 
@@ -3499,6 +3625,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스의 일부 특성을 갖고 있기 때문에 경량(Light Weight) 프로세스라고도 한다. 
 
@@ -3507,6 +3635,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 - 동일 프로세스 환경에서 서로 독립적인 다중 수행이 가 능하다. 
 
 ###### • 스레드의 분류 
+Phần “• 스레드의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사용자 수준의<br>스레드|• 사용자가 만든 라이브러리를 사용하여 스레드를<br>운용함<br>•속도는 빠르지만 구현이 어려움|
 |---|---|
@@ -3516,6 +3646,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 
 
 ###### • 스레드 사용의 장점 
+Phần “• 스레드 사용의 장점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 하나의 프로세스를 여러 개의 스레드로 생성하여 병 행성을 증진시킬 수 있다. 
 
@@ -3610,6 +3742,8 @@ FCFS는 준비상태 큐(대기 큐, 준비 완료 리스트, 작업준 비 큐,
 ###### 23.7, 23.5, 22.7, 21.3, 20.8 
 
 ### 핵심 **<mark>304</mark>** UNIX / LINUX 기본 명령어 
+Phần “핵심 **<mark>304</mark>** UNIX / LINUX 기본 명령어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |명령어|기능|
 |---|---|
@@ -3708,6 +3842,8 @@ IP 주소는 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위�
 #### IPv6의 구성 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 16비트씩 8부분, 총 128비트로 구성되어 있다. 
 
@@ -3818,6 +3954,8 @@ IP 주소는 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위�
 ### **<mark>311</mark>** 응용 계층의 주요 프로토콜 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |FTP<br>(File Transfer<br>Protocol)|컴퓨터와 컴퓨터 또는 컴퓨터와 인터넷 사이<br>에서 파일을 주고받을 수 있도록 하는 원격<br>파일 전송 프로토콜|
 |---|---|
@@ -3864,6 +4002,8 @@ IP 주소는 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위�
 ###### 23.7, 22.4, 21.8, 21.5, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>312</mark>** 전송 계층의 주요 프로토콜 
+Phần “핵심 **<mark>312</mark>** 전송 계층의 주요 프로토콜” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 양방향 연결(Full Duplex Connection)형 서 비스를 제공함 
 
@@ -3932,6 +4072,8 @@ www.sinagong.co.kr
 
 
 ###### • 소프트웨어의 특징 
+Phần “• 소프트웨어의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |상품성|개발된소프트웨어는상품화되어판매됨|
 |---|---|
@@ -3950,6 +4092,8 @@ www.sinagong.co.kr
 - 피드백(Feedback) : 출력된 결과가 예정된 목표를 만족 시키지 못할 경우 목표 달성을 위해 반복 처리하는 것 
 
 ###### 소프트웨어 위기(Crisis) 
+Phần “소프트웨어 위기(Crisis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 여러 가지 원인에 의해 소프트웨어 개발 속도가 하드 웨어 개발 속도를 따라가지 못해 소프트웨어에 대한 사용자들의 요구사항을 처리할 수 없는 문제가 발생한 것을 의미한다. 
 
@@ -4024,6 +4168,8 @@ www.sinagong.co.kr
 핵심 07.5, 06.5, 04.3, 03.8, 03.3, 02.3, 01.9, 99.8, 99.4 
 
 ## **<mark>169</mark>** 일반적인 소프트웨어 생명 주기 
+Phần “**<mark>169</mark>** 일반적인 소프트웨어 생명 주기” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정의 단계 : ‘무엇(What)’을 처리하는 소프트웨어를 개 발할 것인지 정의하는 단계로, 관리자와 사용자가 가 장 많이 참여하는 단계 
 
@@ -4048,6 +4194,8 @@ www.sinagong.co.kr
 핵심 13.6, 09.5, 07.9, 06.9, 05.3, 03.8, 03.5, 03.3, 02.9, 02.5, 01.9, 01.6, 01.3, 00.10, 99.8, 99.4 
 
 ## **<mark>170</mark>** 소프트웨어 생명 주기 모형 - 폭포수 모형 
+Phần “**<mark>170</mark>** 소프트웨어 생명 주기 모형 - 폭포수 모형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 폭포수 모형(Waterfall Model)은 소프트웨어 개발 각 단계를 확실히 매듭짓고 그 결과를 철저하게 검토 하여 승인 과정을 거친 후에 다음 단계를 진행하며 이 전 단계로 되돌아갈 수 없는 방식이다. 
 
@@ -4058,6 +4206,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어의 일부가 될 매뉴얼을 작성해야 한다. 
 
@@ -4074,6 +4224,8 @@ www.sinagong.co.kr
    - •�개발된�프로그램을�업무에�운용할�때�검출되지�않은� 오류로�인하여�사용자들이�큰�인내심을�가져야�함 
 
 ## 00.10, 00.7, 00.3, 99.10, 99.8 핵심 13.8, 12.5, 10.9, 09.3, 08.5, 08.3, 07.9, 07.3, 06.9, 06.5, 06.3, 05.9, 05.4, 05.3, 04.9, 04.3, 03.3, 01.9, 01.6, 01.3, **<mark>171</mark>** 소프트웨어 생명 주기 모형 - 프로토타입 모형 
+Phần “00.10, 00.7, 00.3, 99.10, 99.8 핵심 13.8, 12.5, 10.9, 09.3, 08.5, 08.3, 07.9, 07.3, 06.9, 06.5, 06.3, 05.9, 05.4, 05.3, 04.9, 04.3, 03.3, 01.9, 01.6, 01.3, **<mark>171</mark>** 소프트웨어 생명 주기 모형 - 프로토타입 모형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로토타입 모형(Prototype Model)은 사용자의 요구 사항을 정확히 파악하기 위해 실제 개발될 소프트웨어 에 대한 견본(시제)품(Prototype)을 만들어 최종 결과 물을 예측하는 모형이다. 
 
@@ -4132,6 +4284,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 효과적인 프로젝트 관리를 위한 3P(3대 요소) 
 
@@ -4211,6 +4365,8 @@ www.sinagong.co.kr
 ~~시험에~~ 나오는 것만 ~~공부한다! 시나공~~ <u>시리즈</u> 
 
 ###### 프로젝트 비용 결정 요소 
+Phần “프로젝트 비용 결정 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |프로젝트 요소|제품의복잡도,시스템의크기,요구되는신뢰도|
 |---|---|
@@ -4222,6 +4378,8 @@ www.sinagong.co.kr
 핵심 14.8, 14.3, 13.6, 11.8, 10.9, 09.3, 08.9, 08.5, 08.3, 06.3, 04.3, 02.5, 01.6, 01.3 
 
 ## **<mark>175</mark>** 비용 산정 기법 - LOC 기법 
+Phần “**<mark>175</mark>** 비용 산정 기법 - LOC 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - LOC(원시 코드 라인 수) 기법은 소프트웨어 각 기능의 원시 코드 라인 수의 비관치, 낙관치, 기대치를 측정하 여 예측치를 구하고 이를 이용하여 비용을 산정하는 기법이다. 
 
@@ -4246,6 +4404,8 @@ www.sinagong.co.kr
 핵심 11.3, 09.5, 04.9, 04.3, 03.5, 03.3, 01.9, 01.3. 99.10 
 
 ## **<mark>176</mark>** 비용 산정 기법 - COCOMO 
+Phần “**<mark>176</mark>** 비용 산정 기법 - COCOMO” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Boehm이 제안한 것으로 원시 프로그램의 규모(LOC) 에 의한 비용 산정 기법이다. 
 
@@ -4258,6 +4418,8 @@ www.sinagong.co.kr
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
 
 ###### • 소프트웨어 개발 유형 
+Phần “• 소프트웨어 개발 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�기관�내부에서�개발된�중·소규모의�소프트웨어로� 일괄�자료�처리나�과학�기술�계산용,�비즈니스�자 
 
@@ -4278,6 +4440,8 @@ www.sinagong.co.kr
 - 내장형 제�등의�30만(300KDSI)�라인�이상의�소프트웨어 (Embedded 를�개발하는�유형 Mode) •�신호기�제어�시스템,�미사일�유도�시스템,�실시간� 처리�시스템�등의�시스템�프로그램�개발에�적합함 
 
 ## 핵심 05.5, 04.5, 02.3, 00.10, 00.7, 00.3, 99.10 **<mark>177</mark>** COCOMO 모형의 종류 
+Phần “핵심 05.5, 04.5, 02.3, 00.10, 00.7, 00.3, 99.10 **<mark>177</mark>** COCOMO 모형의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 비용 산정 단계 및 적용 변수의 구체화 정도에 따라 기 본(Basic), 중간(Intermediate), 발전(Detailed)형으 로 구분할 수 있다. 
 
@@ -4312,6 +4476,8 @@ www.sinagong.co.kr
 
 
 ###### PERT/CPM 
+Phần “PERT/CPM” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로젝트의 지연을 방지하고 계획대로 진행되게 하기 위한 일정을 계획하는 것으로, 대단위 계획의 조직적인 추진을 위해 자원의 제약하에 비용을 적게 사용하면서 최단시간 내 계획 완성을 위한 프로젝트 일정 방법이다. 
 
@@ -4350,6 +4516,8 @@ www.sinagong.co.kr
    - •�경영층의�과학적인�의사�결정을�지원하며,�효과적인�프 로젝트의�통제를�가능하게�해�줌 
 
 ## 핵심 12.5, 10.5, 08.9, 06.3, 05.9, 99.8a **<mark>180</mark>** 프로젝트 팀 구성 
+Phần “핵심 12.5, 10.5, 08.9, 06.3, 05.9, 99.8a **<mark>180</mark>** 프로젝트 팀 구성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�팀원�모두가�의사�결정에�참여하는�비이기적인�구성�방식 (민주주의식�팀) 
 
@@ -4378,6 +4546,8 @@ www.sinagong.co.kr
 핵심 12.5, 10.5, 08.9, 06.3, 05.9, 99.8 
 
 ## **<mark>179</mark>** 간트 차트(Gantt Chart) 
+Phần “**<mark>179</mark>** 간트 차트(Gantt Chart)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로젝트의 각 작업들이 언제 시작하고 종료되는지에 대한 작업 일정을 막대 도표를 이용하여 표시하는 프로 젝트 일정표로, 시간선(Time-Line) 차트라고도 한다. 
 
@@ -4414,10 +4584,14 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>181</mark>** 품질 표준 
+Phần “**<mark>181</mark>** 품질 표준” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 명확하게 정의된 소프트웨어의 특성을 의미하며, 소프 트웨어의 품질을 평가하는 기준 항목이다. 
 
 ###### • 종류 
+Phần “• 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종 류|의  미|
 |---|---|
@@ -4496,6 +4670,8 @@ www.sinagong.co.kr
 핵심 14.5, 13.6, 12.8, 11.3, 10.3, 09.8, 07.5, 07.3, 06.5, 05.4, 04.9, 04.5, 03.5, 02.5, 02.3, 00.7 
 
 ## **<mark>183</mark>** 위험 관리(Risk Analysis) 
+Phần “**<mark>183</mark>** 위험 관리(Risk Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로젝트 추진 과정에서 예상되는 각종 돌발 상황(위험) 을 미리 예상하고 이에 대한 적절한 대책을 수립하는 일 련의 활동이다. 
 
@@ -4518,6 +4694,8 @@ www.sinagong.co.kr
 
 
 ###### • 위험 관리의 절차 
+Phần “• 위험 관리의 절차” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |위험 식별|알려지거나예측가능한위험요소를파악하는작업|
 |---|---|
@@ -4533,6 +4711,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>184</mark>** 형상 관리(SCM) 
+Phần “**<mark>184</mark>** 형상 관리(SCM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 개발 과정에서 소프트웨어의 생산물을 확 인하고 소프트웨어 통제, 변경 상태를 기록하고 보관 하는 일련의 관리 작업이다. 
 
@@ -4559,6 +4739,8 @@ www.sinagong.co.kr
 - 소프트웨어 분석가에 의해 요구사항 분석이 수행되며, 이 작업 단계를 요구사항 분석 단계라고 한다. 
 
 ###### 요구사항 분석 작업 
+Phần “요구사항 분석 작업” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |문제 인식|사용자와의면담,설문조사및협조,각종문서검<br>토등을통하여사용자의요구사항을찾아냄|
 |---|---|
@@ -4569,6 +4751,8 @@ www.sinagong.co.kr
 
 
 ###### 요구사항 분석의 어려움 
+Phần “요구사항 분석의 어려움” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |대화 장벽|사용자와개발자의지식배경의다양화,용어<br>불일치등으로의사소통곤란|
 |---|---|
@@ -4579,6 +4763,8 @@ www.sinagong.co.kr
 
 
 ###### 요구사항 분석가의 자질 
+Phần “요구사항 분석가의 자질” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 개발에 많은 경험을 가지고 있어야 한다. 
 
@@ -4613,6 +4799,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>186</mark>** 자료 흐름도(DFD) 
+Phần “**<mark>186</mark>** 자료 흐름도(DFD)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 요구사항 분석에서 자료의 흐름 및 변환 과정과 기능 을 도형 중심으로 기술하는 방법으로 버블(Bubble) 차 트라고도 한다. 
 
@@ -4639,6 +4827,8 @@ www.sinagong.co.kr
 핵심 14.8, 14.5, 13.3, 12.5, 11.8, 11.6, 10.3, 09.8, 09.5, 09.3, 08.9, 08.3, 07.9, 07.5, 06.9, 04.3, 02.9, 01.6, 99.4 
 
 ## **<mark>187</mark>** 자료 사전(DD) 
+Phần “**<mark>187</mark>** 자료 사전(DD)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자료 흐름도 상에 있는 자료를 더 자세히 정의하고 기 록한 것이며, 이처럼 데이터를 설명하는 데이터를 데이 터의 데이터 또는 메타 데이터(Meta Data)라고 한다. 
 
@@ -4660,6 +4850,8 @@ www.sinagong.co.kr
 핵심 06.9, 05.9, 04.9, 04.3, 02.9, 02.3, 01.3, 00.7 
 
 ## **<mark>188</mark>** HIPO 
+Phần “**<mark>188</mark>** HIPO” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 시스템의 분석 및 설계나 문서화할 때 사용되는 기법 으로 시스템 실행 과정인 입력, 처리, 출력의 기능을 나타낸다. 
 
@@ -4732,6 +4924,8 @@ www.sinagong.co.kr
 핵심 14.8, 13.8, 13.6, 13.3, 12.3, 11.8, 11.6, 10.3, 09.8, 09.5, 09.3, 08.9, 08.5, 08.3, 06.3, 04.5, 03.3, 02.9, 00.7, 00.3 
 
 ## **<mark>190</mark>** 바람직한 설계의 특징 
+Phần “**<mark>190</mark>** 바람직한 설계의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 설계는 소프트웨어 구조를 나타내야 한다. 
 
@@ -4748,6 +4942,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모듈 간과 외부 개체 간의 연결 복잡성을 줄이는 인터 페이스를 가져야 한다. 
 
@@ -4762,6 +4958,8 @@ www.sinagong.co.kr
 01.9, 01.6, 01.3 핵심 14.5, 14.3, 13.6, 12.5, 11.6, 11.3, 10.9, 10.5, 09.5, 08.9, 06.9, 06.5, 05.5, 05.4, 05.3, 04.9, 03.8, 03.5, 03.3, 02.9, 02.3, 
 
 ## **<mark>191</mark>** 결합도(Coupling) 
+Phần “**<mark>191</mark>** 결합도(Coupling)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 모듈 간에 상호 의존하는 정도를 나타낸다. 
 
@@ -4824,6 +5022,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>192</mark>** 응집도(Cohesion) 
+Phần “**<mark>192</mark>** 응집도(Cohesion)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정보 은닉 개념을 확장한 것으로 모듈 안의 요소들이 서로 관련되어 있는 정도, 즉 모듈이 독립적인 기능으 로 정의되어 있는 정도를 나타낸다. 
 
@@ -4850,6 +5050,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>193</mark>** 효과적인 모듈화 설계 방안 
+Phần “**<mark>193</mark>** 효과적인 모듈화 설계 방안” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 결합도는 줄이고 응집도는 높여서 모듈의 독립성을 높 인다. 
 
@@ -4868,6 +5070,8 @@ www.sinagong.co.kr
 - 인덱스 번호나 기능 코드들이 전반적인 처리 논리 구 조에 예기치 못한 영향을 끼치지 않도록 모듈 인터페 이스를 설계해야 한다. 
 
 ## 핵심 12.8, 09.5, 07.3, 05.5, 05.4, 03.8, 01.6, 00.7, 99.8 **<mark>194</mark>** N-S 차트(Nassi-Schneiderman Chart) 
+Phần “핵심 12.8, 09.5, 07.3, 05.5, 05.4, 03.8, 01.6, 00.7, 99.8 **<mark>194</mark>** N-S 차트(Nassi-Schneiderman Chart)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 논리의 기술에 중점을 둔 도형을 이용한 표현 방법(박 스 다이어그램, Chapin Chart)이다. 
 
@@ -4908,6 +5112,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |조건 검사<br>(Condition Testing)|프로그램모듈내에있는논리적조건을<br>검사하는검사사례설계기법|
 |---|---|
@@ -4918,10 +5124,14 @@ www.sinagong.co.kr
 
 
 ###### 구조적 프로그래밍 
+Phần “구조적 프로그래밍” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Dijkstra에 의해 제안된 것으로, 신뢰성 있는 소프트웨 어의 생산과 코딩의 표준화 등을 위해 개발된 방법이다. 
 
 ## 핵심 12.8, 10.9, 09.3, 08.9, 05.3, 04.5, 02.5 **<mark>197</mark>** 제어 흐름도 / 순환 복잡도 
+Phần “핵심 12.8, 10.9, 09.3, 08.9, 05.3, 04.5, 02.5 **<mark>197</mark>** 제어 흐름도 / 순환 복잡도” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 구조적 프로그래밍의 기본적인 제어 구조 
 
@@ -4935,6 +5145,8 @@ www.sinagong.co.kr
 핵심 14.8, 14.5, 13.6, 12.5, 12.3, 11.3, 10.9, 08.3, 07.9, 07.5, 06.9, 06.5, 06.3, 05.9, 05.4, 04.9, 03.3, 01.9, 00.7, 99.8 
 
 ## **<mark>196</mark>** 화이트 박스 테스트(White Box Test) 
+Phần “**<mark>196</mark>** 화이트 박스 테스트(White Box Test)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모듈의 원시 코드를 오픈시킨 상태에서 원시 코드의 논리적인 모든 경로를 검사하여 검사 사례를 설계하는 방법이다. 
 
@@ -4972,6 +5184,8 @@ www.sinagong.co.kr
 01.6, 01.3, 99.4 핵심 14.8, 14.3, 13.8, 13.3, 12.8, 11.8, 11.6, 10.9, 10.5, 10.3, 09.8, 08.9, 08.5, 07.9, 07.3, 05.5, 05.3, 04.5, 03.5, 02.9, 02.5, 
 
 ## **<mark>198</mark>** 블랙 박스 테스트 
+Phần “**<mark>198</mark>** 블랙 박스 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 인터페이스에서 실시되는 검사로, 소프트웨 어가 수행할 특정 기능을 알기 위해서 각 기능이 완전히 작동되는 것을 입증하는 검사로, 기능 검사라고도 한다. 
 
@@ -5009,18 +5223,24 @@ www.sinagong.co.kr
 00.3, 99.10<br>핵심 14.5, 13.8, 13.6, 13.3, 12.3, 11.6, 10.9, 10.5, 10.3, 09.8, 06.5, 05.9, 05.5, 05.3, 04.5, 04.3, 03.5, 03.3, 02.5, 02.3, 00.10,<br>199 검사 전략<br>시스템 공학 S<br>요구사항 R<br>설계 D<br>코드 C<br>U 단위 검사<br>I 통합 검사<br>V 검증 검사<br>ST 시스템 검사<br><!-- End of picture text -->
 
 ###### 단위 검사 
+Phần “단위 검사” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 코딩이 이루어진 후 소프트웨어 설계의 최소 단위인 모듈에 초점을 맞추어 검사하는 것이다. 
 
 - 화이트 박스 검사 기법을 사용하며, 인터페이스, 외부 적 I/O, 자료 구조, 경계 조건 등을 검사한다. 
 
 ###### 하향식 통합 검사 
+Phần “하향식 통합 검사” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하 면서 검사하는 기법이다. 
 
 - 일시적으로 필요한 조건만을 가지는 임시로 제공되는 시험용 모듈 스터브(Stub)가 필요하다. 
 
 ###### 상향식 통합 검사 
+Phần “상향식 통합 검사” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하 면서 검사하는 기법이다. 
 
@@ -5031,6 +5251,8 @@ www.sinagong.co.kr
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
 
 ###### 검증(확인, 인수) 검사 
+Phần “검증(확인, 인수) 검사” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어가 사용자의 요구사항을 충족시키는가에 중점을 두고 검사하는 방법이다. 
 
@@ -5048,6 +5270,8 @@ www.sinagong.co.kr
 
 
 ###### 시스템 검사(System Test) 
+Phần “시스템 검사(System Test)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발된 소프트웨어가 해당 컴퓨터 시스템에서 완벽하게 수행되는가를 검사하는 것이다. 
 
@@ -5086,6 +5310,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>200</mark>** 유지보수 
+Phần “**<mark>200</mark>** 유지보수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발된 소프트웨어의 품질을 항상 최상의 상태로 유지 하기 위한 것으로 소프트웨어 개발 단계 중 가장 많은 노력과 비용이 투입되는 단계이다. 
 
@@ -5106,6 +5332,8 @@ www.sinagong.co.kr
 핵심 04.9, 03.3, 01.9, 01.6 
 
 ## **<mark>201</mark>** 외계인 코드 
+Phần “**<mark>201</mark>** 외계인 코드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 아주 오래 전에 개발되어 유지보수 작업이 매우 어려 운 프로그램이다. 
 
@@ -5116,6 +5344,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>202</mark>** 객체지향 기법 
+Phần “**<mark>202</mark>** 객체지향 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 현실 세계의 개체(Entity)를 기계의 부품처럼 하나의 객체(Object)로 만들어, 기계적인 부품들을 조립하여 제품을 만들 듯이 소프트웨어를 개발할 때도 객체들을 조립해서 작성할 수 있도록 하는 기법이다. 
 
@@ -5142,6 +5372,8 @@ www.sinagong.co.kr
 핵심 14.5, 13.8, 13.6, 13.3, 12.8, 12.5, 12.3, 11.8, 11.6, 11.3, 10.5, 09.8, 09.5, 08.9, 08.5, 08.3, 07.9, 07.5, 06.9, 06.5, 06.3, 
 
 ## **<mark>203</mark>** 객체지향 기법의 주요 기본 원칙 
+Phần “**<mark>203</mark>** 객체지향 기법의 주요 기본 원칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||•데이터와데이터를처리하는함수를하나로묶<br>는것<br>•캡슐화된객체의세부내용이외부에은폐(정보<br>|
 |---|---|
@@ -5186,6 +5418,8 @@ www.sinagong.co.kr
 핵심 13.6, 12.8, 10.9, 10.3, 01.9, 00.7 
 
 ## **<mark>204</mark>** 객체지향 분석 
+Phần “**<mark>204</mark>** 객체지향 분석” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 요구사항을 분석하여 요구된 문제와 관련된 모든 클래스(객체), 이와 연관된 속성과 연산, 그들 간 의 관계 등을 정의하여 모델링하는 작업이다. 
 
@@ -5202,6 +5436,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Booch(부치) 방법 : 미시적(Micro) 개발 프로세스와 거 시적(Macro) 개발 프로세스를 모두 사용하는 분석 방 법으로, 클래스와 객체들을 분석 및 식별하고 클래스 의 속성과 연산을 정의함 
 
@@ -5214,6 +5450,8 @@ www.sinagong.co.kr
 07.3, 06.9, 06.5, 06.3, 05.9, 05.5, 05.4, 05.3, 04.9, 03.8, 03.3, 02.5, 02.3, 01.9 핵심 14.8, 14.5, 14.3, 13.8, 13.3, 12.8, 12.5, 12.3, 11.8, 11.6, 11.3, 10.9, 10.5, 10.3, 09.8, 09.5, 09.3, 08.9, 08.5, 08.3, 07.9, 07.5, 
 
 ## **<mark>205</mark>** 럼바우(Rumbaugh)의 분석 기법 
+Phần “**<mark>205</mark>** 럼바우(Rumbaugh)의 분석 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모든 소프트웨어 구성 요소를 그래픽 표기법을 이용하 여 모델링하는 기법이다. 
 
@@ -5228,6 +5466,8 @@ www.sinagong.co.kr
 핵심 14.5, 11.8, 09.5, 09.3, 04.5, 02.5, 01.3, 99.4 
 
 ## **<mark>206</mark>** 객체지향 설계 
+Phần “**<mark>206</mark>** 객체지향 설계” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 객체지향 분석(OOA)을 사용해서 생성한 여러 가지 분 석 모델을 설계 모델로 변환하는 작업으로, 시스템 설 계와 객체 설계를 수행한다. 
 
@@ -5264,6 +5504,8 @@ www.sinagong.co.kr
 핵심 05.4, 01.9 
 
 ## **<mark>207</mark>** 객체지향 프로그래밍 
+Phần “**<mark>207</mark>** 객체지향 프로그래밍” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 새로운 개념의 모듈 단위, 즉 객체라는 단위를 중심으 로 하여 프로그램을 개발하는 기법이다. 
 
@@ -5284,6 +5526,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>208</mark>** 소프트웨어의 재사용 
+Phần “**<mark>208</mark>** 소프트웨어의 재사용” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 이미 개발된 인정받은 소프트웨어의 전체 혹은 일부분 을 다른 소프트웨어 개발이나 유지에 사용하는 것이다. 
 
@@ -5334,6 +5578,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>209</mark>** 소프트웨어 재공학 
+Phần “**<mark>209</mark>** 소프트웨어 재공학” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기존에 있던 소프트웨어를 파기하지 않고 새로운 요구에 맞도록 기존 시스템을 이용하여 기존 소프트웨어를 수정 보완하거나 새로운 기능을 추가하여 소프트웨어 성능을 향상시키는 것으로, 예방 유지보수 측면에서 문제를 해결 하는 것이다. 
 
@@ -5346,6 +5592,8 @@ www.sinagong.co.kr
 - 소프트웨어 재공학도 자동화된 도구를 사용하여 소프트 웨어를 분석하고 수정하는 과정을 포함한다. 
 
 ###### 주요 활동 
+Phần “주요 활동” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 분석(Analysis) : 기존 소프트웨어의 명세서를 확인하여 소 프트웨어의 동작을 이해하고, 재공학 대상을 선정하는 것 
 
@@ -5370,6 +5618,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>210</mark>** CASE 
+Phần “**<mark>210</mark>** CASE” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소프트웨어 개발 과정에서 사용되는 요구 분석, 설계, 구현, 검사 및 디버깅 과정 전체 또는 일부를 컴퓨터와 전용 소프트웨어 도구를 사용하여 자동화하는 것이다. 
 
@@ -5486,6 +5736,8 @@ www.sinagong.co.kr
 
 
 # ⦁산술 연산자 
+Phần “⦁산술 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**연산자 종류**|**기호**|**설명**|
 |---|---|---|
@@ -5503,6 +5755,8 @@ www.sinagong.co.kr
 # ⦁증감 연산자 
 
 # ⦁관계 연산자 
+Phần “⦁관계 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**연산자 종류**|**기호**|**설명**|
 |---|---|---|
@@ -5531,6 +5785,8 @@ www.sinagong.co.kr
 # ⦁비트 연산자와 시프트 연산자 
 
 # ⦁대입 연산자 
+Phần “⦁대입 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**연산자 종류**<br>|**기호**|**설명**|
 |---|---|---|
@@ -5558,6 +5814,8 @@ www.sinagong.co.kr
 ⦁표준 입력 함수와 표준 출력 함수 
 
 ## **scanf(서식 문자열, 변수의 주소)** 
+Phần “**scanf(서식 문자열, 변수의 주소)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 서식 문자열: 입력받을 데이터의 자료형 
 
@@ -5571,6 +5829,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # ⦁서식 문자열 유형 
 
 # ⦁이스케이프 문자 
+Phần “⦁이스케이프 문자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**종류**<br>**의미**|**설명**|
 |---|---|
@@ -5589,6 +5849,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # **075 배열 및 포인터★★★** ⦁1, 2차원 배열 선언 방법 
+Phần “**075 배열 및 포인터★★★** ⦁1, 2차원 배열 선언 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |자료형 변수명[개수];|- 초깃값이 없는 경우<br>- 자료형: 배열에 저장할 자료의 형 지정<br>- 변수명: 사용할 배열의 이름으로 사용자가 임의로 지정|
 |---|---|
@@ -5604,6 +5866,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # **076 명령문(1) - 조건문★★★** 
 
 # ⦁C언어, JAVA if문 
+Phần “⦁C언어, JAVA if문” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |if(조건식){|if문의조건식이 참일 경우if안에 있는 문장1실행|
 |---|---|
@@ -5624,6 +5888,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # ⦁파이썬 if문 
 
 # ⦁C언어, JAVA if문의 삼항 연산자 표기법 
+Phần “⦁C언어, JAVA if문의 삼항 연산자 표기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**if문 사용**|**삼항 연산자 사용**|
 |---|---|
@@ -5636,6 +5902,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁파이썬에서 if문의 삼항 연사자 표기법 
+Phần “⦁파이썬에서 if문의 삼항 연사자 표기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**if문 사용**|**삼항 연산자 사용**|
 |---|---|
@@ -5673,6 +5941,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # ⦁while문 
 
 # ⦁C언어, JAVA에서 do~while문 
+Phần “⦁C언어, JAVA에서 do~while문” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |do{|참, 거짓과 관련 없이 무조건 한 번은 실행|
 |---|---|
@@ -5685,6 +5955,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # **078 사용자 정의 함수와 클래스★★** 
 
 # ⦁사용자 정의 함수 
+Phần “⦁사용자 정의 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**언어**|**사용법 예시**|**설명**|
 |---|---|---|
@@ -5710,6 +5982,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁클래스 
+Phần “⦁클래스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**언어**|**사용법 예시**|**설명**<br>|
 |---|---|---|
@@ -5744,6 +6018,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁스크립트 언어 
+Phần “⦁스크립트 언어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**언어**|**설명**|
 |---|---|
@@ -5810,6 +6086,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 - 예외 객체 종류<br>예외 객체 설명<br>- 모든 시스템 종료 외의 내장 예외<br>Exception<br>-  다른 예외는 해당 예외에서 파생됨<br>- 예외적인 산술 조건이 발생한 경우<br>ArithmeticException<br>- 0으로  나눈 경우<br>BufferOverflowException 버퍼의 제한에 도달한 경우<br>IndexOutOfBoundsException 배열, 문자열 등에서 인덱스  범위를 넘어간 경우<br>NullPointerException 존재하지 않는 객체를 참조하려고  하는 경우<br>RuntimeException 정상 작동 중에 발생할 수 있는 예외의 상위 클래스<br>FileNotFoundException 존재하지 않는 파일을 읽으려고  하는 경우<br>- 사용 방법<br>try:<br>    실행 코드<br>except 예외 객체 as 매개변수:<br>    (예외 발생 시 실행하는 코드<br>... except 여러 번 가능)<br>finally:<br>예외가 발생 여부에 상관없이 처리하는 코드<br>- 예외 객체 종류<br>Python<br>예외 객체 설명<br>- 모든 시스템 종료 외의 내장 예외<br>Exception<br>-  다른 예외는 해당 예외에서 파생됨<br>ImportError import  문이 모듈을 로드하는데 문제가 있는 경우<br>IndexError 시퀀스가 인덱스  범위를 벗어난 경우<br>KeyError 딕셔너리의 키가 존재하지 않는 경우<br>사용자가 인터럽트 키(Control-c나 delete 등)를 누른<br>KeyboardInterrupt<br>경우<br>MemoryError 메모리가 부족한 경우<br>NameError 지역 또는 전역 이름을 찾을 수 없는 경우<br>ZeroDivisionError 0으로  나눈경우<br><!-- End of picture text -->
 
 # **Chapter 3. 응용 SW 기초 기술 활용 082 운영체제 종류★★★** ⦁운영체제 기능 
+Phần “**Chapter 3. 응용 SW 기초 기술 활용 082 운영체제 종류★★★** ⦁운영체제 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**운영체제 기능**<br>**내용**|
 |---|
@@ -5835,6 +6113,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # ⦁쉘(Shell)과 커널(Kernel) 
 
 # ⦁운영체제의 종류 
+Phần “⦁운영체제의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**운영체제**|**특징**|
 |---|---|
@@ -5878,6 +6158,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # ⦁페이지 크기에 따른 현상 
 
 # ⦁페이지 교체 알고리즘 
+Phần “⦁페이지 교체 알고리즘” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**기법**|**설명**|
 |---|---|
@@ -5892,6 +6174,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁페이지 교체 관련 개념 
+Phần “⦁페이지 교체 관련 개념” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**개념**||**설명**|
 |---|---|---|
@@ -5913,6 +6197,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁세그멘테이션 주소 변환 
+Phần “⦁세그멘테이션 주소 변환” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**주소**<br>**설명**|
 |---|
@@ -5938,6 +6224,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁스레드의 분류 
+Phần “⦁스레드의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**스레드의 종류**|**설명**|
 |---|---|
@@ -5953,6 +6241,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 # **086 프로세스 스케줄링과 교착상태★★★** 
 
 # ⦁스케줄링 
+Phần “⦁스케줄링” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**스케줄링**|**개념**|
 |---|---|
@@ -5968,6 +6258,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 - 모든 프로세스에 대한 요구를 공정하게 처리할 수 있음<br>- 일괄처리방식에 적합함<br>비선점 스케줄링<br>- 중요한 짧은 작업이 긴 작업을 기다리는 비효율이 발생할 수 있음<br>-  응답 시간 예측이 용이함<br>⦁스케줄링 기법<br>구분 기법 설명<br>FCFS<br>먼저 들어온 프로세스를 먼저 처리함<br>(First Come First Service)<br>SJF<br>선점  처리시간이 짧은 프로세스부터 처리함<br>(Shortest  Job First)<br>스케줄링<br>우선순위가 높은 순서로 처리함<br>HRN<br>(Hightest Response-ratio Next) 우선순위 대기한시간 서비스를받을시간<br>서비스를받을시간<br>라운드 로빈 - 먼저 들어온 순서대로 일정 시간만큼 처리함<br>(Round Robin) -  시간 할당이 커지면 FCFS 스케줄링과 같아짐<br>SRT  - 남은 시간이 짧은 프로세스부터 처리함<br><!-- End of picture text -->
 
 # ⦁스케줄링 기법 
+Phần “⦁스케줄링 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**기법**|**설명**|
 |---|---|---|
@@ -5982,6 +6274,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁교착상태 필요 충분 조건 
+Phần “⦁교착상태 필요 충분 조건” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**필요 충분 조건**|**설명**|
 |---|---|
@@ -6006,6 +6300,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 
 
 # ⦁교착상태 해결 방법 
+Phần “⦁교착상태 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**해결 방법**|**설명**|
 |---|---|
@@ -6029,6 +6325,8 @@ printf(서식 문자열, 변수)<br>- 서식 문자열: 입력받을 데이터�
 ⦁환경변수 명령어 
 
 # ⦁쉘 스크립트 명령어 
+Phần “⦁쉘 스크립트 명령어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**운영체제**|**명령어**|**설명**|
 |---|---|---|
@@ -6061,6 +6359,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 ⦁IEEE 802 표준 규약 
 
 # ⦁네트워크 7계층(OSI; Open System Interconnection)-7 Layer 
+Phần “⦁네트워크 7계층(OSI; Open System Interconnection)-7 Layer” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**계층**|**설명**|
 |---|---|
@@ -6099,6 +6399,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # ⦁ TCP와 UDP 
+Phần “⦁ TCP와 UDP” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**프로토콜**|**설명**|
 |---|---|
@@ -6114,6 +6416,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # ⦁TCP의 헤더 
+Phần “⦁TCP의 헤더” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**필드**|**설명**|
 |---|---|
@@ -6137,6 +6441,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 # ⦁UDP의 헤더 
 
 # ⦁TCP의 흐름제어 기법 
+Phần “⦁TCP의 흐름제어 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**흐름제어 기법**|**설명**|
 |---|---|
@@ -6150,6 +6456,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # ⦁TCP의 오류제어 기법 
+Phần “⦁TCP의 오류제어 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**오류제어 기법(ARQ)**|**설명**|
 |---|---|
@@ -6164,6 +6472,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # **089 IP와 서브네팅★★★** 
+Phần “**089 IP와 서브네팅★★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ⦁ IP의 특징 
 
@@ -6185,6 +6495,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 - Bert Effort 원칙에 따른 전송 기능을 제공 
 
 # ⦁ IPv4의 헤더 필드 
+Phần “⦁ IPv4의 헤더 필드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**필드**|**설명**|
 |---|---|
@@ -6204,6 +6516,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # ⦁ IPv4의 Class 
+Phần “⦁ IPv4의 Class” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**CLASS**|**설명**|**중요 사설 IP주소**|
 |---|---|---|
@@ -6216,6 +6530,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # ⦁ IPv6의 기본 및 확장 헤더 필드 
+Phần “⦁ IPv6의 기본 및 확장 헤더 필드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**필드**|**설명**|
 |---|---|
@@ -6237,6 +6553,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 설명<br>- 4비트<br>- IPv4의 버전 4를 사용<br>- 8비트<br>- IPv4의 TOS와 유사하며 요구되는 서비스  품질<br>- 20비트<br>- 연결 지향적 프로토콜을 사용할 수 있게 우선권을 주기 위해 특정 트래픽에<br>대한 라벨링<br>- 16비트<br>- IPv4의 Total Packet Length와 유사함<br>-  확장헤더와 상위계층 데이터의 길이로  최대 65536을 가짐<br>- 16비트<br>-  기본 헤더 다음에 오는 확장 헤더의 종류를 나타냄<br>- 8비트<br>- IPv4의 TTL과 같이 패킷의 수명<br>- 32비트<br>-  출발지 IP  주소<br>- 32비트<br>-  목적지 IP  주소<br>선택적 옵션으로  가변길이<br><!-- End of picture text -->
 
 # ⦁ IPv4와 IPv6 차이점 
+Phần “⦁ IPv4와 IPv6 차이점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**차이점**|**설명**|
 |---|---|
@@ -6251,6 +6569,8 @@ cat 파일을 연결하거나 출력<br>cd 디렉토리의 위치를 변경<br>c
 
 
 # ⦁ 데이터 전송 방법 
+Phần “⦁ 데이터 전송 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**데이터 전송 방법**|**설명**|
 |---|---|
@@ -6274,6 +6594,8 @@ Favorite: No
 ## 232. 배치 프로그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자 개입 없이 대량의 데이터를 정해진 순서에 따라 일괄적으로 처리하는 방식
 - 핵심 키워드: 대용량 데이터, 자동화, 견고성, 안정성, 성능
@@ -6283,6 +6605,8 @@ Favorite: No
 - 연관 설명: 118, 119
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **견고성**: 잘못된 데이터 입력 시에도 중단 없이 처리를 지속하거나 기록을 남겨야 함
 - **자동화**: 야간 시간 등 사용자가 없는 상황에서도 스스로 동작해야 함
@@ -6291,6 +6615,8 @@ Favorite: No
 ## 233. C/C++의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C/C++ 언어에서 데이터를 저장하기 위해 사용하는 변수의 종류와 메모리 점유 크기
 - 핵심 키워드: char(1Byte), int(4Byte), float(4Byte), double(8Byte)
@@ -6300,6 +6626,8 @@ Favorite: No
 - 연관 설명: 235, 237
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **char**: 문자 하나를 저장하며 1바이트를 차지함
 - **정수형**: short(2B), int(4B), long(4B), long long(8B) 순으로 기억 범위가 넓어짐
@@ -6308,6 +6636,8 @@ Favorite: No
 ## 234. C언어의 구조체
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형
 - 핵심 키워드: struct, 자료의 혼용, 사용자 정의 자료형, 맴버 변수
@@ -6317,6 +6647,8 @@ Favorite: No
 - 연관 설명: 258
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 타입이 다른 이름, 직위, 급여 등을 하나의 '사원' 단위로 관리할 때 유용함
 - 구조체를 정의하는 것은 새로운 자료형(int, char 같은)을 하나 만드는 것과 같음
@@ -6324,6 +6656,8 @@ Favorite: No
 ## 235. JAVA의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: JAVA 언어에서 사용하는 표준 데이터 타입과 각 타입별 메모리 크기
 - 핵심 키워드: char(2Byte), byte(1Byte), long(8Byte), boolean(1Byte)
@@ -6333,6 +6667,8 @@ Favorite: No
 - 연관 설명: 233
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **byte**: 1바이트 정수형으로 작은 범위의 숫자 저장
 - **char**: 유니코드를 지원하기 위해 2바이트를 사용하여 전 세계 문자를 표현 가능
@@ -6341,6 +6677,8 @@ Favorite: No
 ## 236. Python의 시퀀스 자료형
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 여러 개의 값이 연속적으로 이어진 데이터 구조를 다루는 자료형
 - 핵심 키워드: 리스트(List), 튜플(Tuple), range, 문자열
@@ -6350,6 +6688,8 @@ Favorite: No
 - 연관 설명: 267, 268, 269
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **리스트**: 대괄호 `[]`를 사용하며 자유로운 수정이 가능함
 - **튜플**: 소괄호 `()`를 사용하며 읽기 전용 데이터 집합에 적합함
@@ -6358,6 +6698,8 @@ Favorite: No
 ## 237. 변수명 작성 규칙
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 프로그램에서 사용하는 변수의 이름을 지을 때 반드시 지켜야 하는 문법적 규칙
 - 핵심 키워드: 영문/숫자/_ 조합, 대소문자 구분, 예약어 사용 불가
@@ -6367,6 +6709,8 @@ Favorite: No
 - 연관 설명: 233, 235
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **헝가리안 표기법**: 변수명 앞에 데이터 타입을 명시하는 관습 (예: iAge, strName)
 - 언어에 따라 대소문자를 엄격히 구분하므로 주의해야 함
@@ -6374,6 +6718,8 @@ Favorite: No
 ## 238. 가비지 콜렉터 (Garbage Collector)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용되지 않고 메모리를 점유하고 있는 변수들을 강제로 해제하여 자원을 회수하는 모듈
 - 핵심 키워드: 메모리 관리, 자동 해제, 효율성 향상, 가비지 콜렉션
@@ -6383,6 +6729,8 @@ Favorite: No
 - 연관 설명: 153
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그래머가 명시적으로 메모리를 해제하지 않아도 시스템이 관리해줌
 - 자바(JAVA)와 같은 현대적 언어의 핵심적인 메모리 관리 기법임
@@ -6390,6 +6738,8 @@ Favorite: No
 ## 239. 산술 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 가감승제 및 나머지를 계산하기 위해 사용하는 연산자
 - 핵심 키워드: 사칙연산(+, -, *, /), 나머지(%), 증감 연산자(++, --)
@@ -6399,6 +6749,8 @@ Favorite: No
 - 연관 설명: 245
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **나머지(%)**: 정수 나눗셈 후 남은 값을 구함
 - **전치**: 값을 먼저 증가시킨 후 연산에 참여함
@@ -6407,6 +6759,8 @@ Favorite: No
 ## 240. 관계 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 두 피연산자의 크기를 비교하여 참(True) 또는 거짓(False)을 반환하는 연산자
 - 핵심 키워드: 같다(==), 같지 않다(!=), 크다(>), 작다(<)
@@ -6416,6 +6770,8 @@ Favorite: No
 - 연관 설명: 251, 255
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **!=**: '같지 않다'를 의미하며 언어마다 표기법이 다를 수 있음 (C/Java는 `!=`)
 - 결과값은 논리형 데이터로 활용됨
@@ -6423,6 +6779,8 @@ Favorite: No
 ## 241. 비트 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 데이터를 비트(0, 1) 단위로 논리 연산하거나 자릿수를 이동시키는 연산자
 - 핵심 키워드: AND(&), XOR(^), OR(|), NOT(~), Shift(<<, >>)
@@ -6432,6 +6790,8 @@ Favorite: No
 - 연관 설명: 233, 235
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Shift(<<, >>)**: 비트를 왼쪽이나 오른쪽으로 밀어 2의 거듭제곱을 곱하거나 나눈 효과를 냄
 - **~ (NOT)**: 모든 비트를 반전시킴 (0은 1로, 1은 0으로)
@@ -6439,6 +6799,8 @@ Favorite: No
 ## 242. 논리 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 두 개의 논리값(T/F)을 조합하여 복합적인 조건을 만드는 연산자
 - 핵심 키워드: NOT(!), AND(&&), OR(||)
@@ -6448,6 +6810,8 @@ Favorite: No
 - 연관 설명: 219, 245
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **&& (AND)**: 두 조건이 모두 참일 때만 참을 반환
 - **|| (OR)**: 두 조건 중 하나만 참이어도 참을 반환
@@ -6455,6 +6819,8 @@ Favorite: No
 ## 243. 대입 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 연산 결과를 변수에 저장하거나 산술 연산과 대입을 동시에 수행하는 연산자
 - 핵심 키워드: 할당(=), 복합 대입 연산자(+=, -=, *=, /=)
@@ -6464,18 +6830,24 @@ Favorite: No
 - 연관 설명: 237, 239
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 비트 연산자나 논리 연산자도 복합 대입 형태로 사용 가능함 (예: `&lt;&lt;=`, `&amp;=`)
 
 ## 244. 조건 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 조건의 참/거짓에 따라 서로 다른 값을 반환하는 삼항 연산자
 
 ## 232. 배치 프로그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자 개입 없이 대량의 데이터를 정해진 순서에 따라 일괄적으로 처리하는 방식
 - 핵심 키워드: 대용량 데이터, 자동화, 견고성, 안정성, 성능
@@ -6485,6 +6857,8 @@ Favorite: No
 - 연관 설명: 118, 119
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **견고성**: 잘못된 데이터 입력 시에도 중단 없이 처리를 지속하거나 기록을 남겨야 함
 - **자동화**: 야간 시간 등 사용자가 없는 상황에서도 스스로 동작해야 함
@@ -6493,6 +6867,8 @@ Favorite: No
 ## 233. C/C++의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C/C++ 언어에서 데이터를 저장하기 위해 사용하는 변수의 종류와 메모리 점유 크기
 - 핵심 키워드: char(1Byte), int(4Byte), float(4Byte), double(8Byte)
@@ -6502,6 +6878,8 @@ Favorite: No
 - 연관 설명: 235, 237
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **char**: 문자 하나를 저장하며 1바이트를 차지함
 - **정수형**: short(2B), int(4B), long(4B), long long(8B) 순으로 기억 범위가 넓어짐
@@ -6510,6 +6888,8 @@ Favorite: No
 ## 234. C언어의 구조체
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형
 - 핵심 키워드: struct, 자료의 혼용, 사용자 정의 자료형, 맴버 변수
@@ -6519,6 +6899,8 @@ Favorite: No
 - 연관 설명: 258
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 타입이 다른 이름, 직위, 급여 등을 하나의 '사원' 단위로 관리할 때 유용함
 - 구조체를 정의하는 것은 새로운 자료형(int, char 같은)을 하나 만드는 것과 같음
@@ -6526,6 +6908,8 @@ Favorite: No
 ## 235. JAVA의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: JAVA 언어에서 사용하는 표준 데이터 타입과 각 타입별 메모리 크기
 - 핵심 키워드: char(2Byte), byte(1Byte), long(8Byte), boolean(1Byte)
@@ -6535,6 +6919,8 @@ Favorite: No
 - 연관 설명: 233
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **byte**: 1바이트 정수형으로 작은 범위의 숫자 저장
 - **char**: 유니코드를 지원하기 위해 2바이트를 사용하여 전 세계 문자를 표현 가능
@@ -6543,6 +6929,8 @@ Favorite: No
 ## 236. Python의 시퀀스 자료형
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 여러 개의 값이 연속적으로 이어진 데이터 구조를 다루는 자료형
 - 핵심 키워드: 리스트(List), 튜플(Tuple), range, 문자열
@@ -6552,6 +6940,8 @@ Favorite: No
 - 연관 설명: 267, 268, 269
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **리스트**: 대괄호 `[]`를 사용하며 자유로운 수정이 가능함
 - **튜플**: 소괄호 `()`를 사용하며 요소의 추가, 삭제, 변경이 불가능함
@@ -6559,12 +6949,16 @@ Favorite: No
 ## 244. 조건 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 조건의 참/거짓에 따라 서로 다른 값을 반환하는 삼항 연산자
 
 ## 232. 배치 프로그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자 개입 없이 대량의 데이터를 정해진 순서에 따라 일괄적으로 처리하는 방식
 - 핵심 키워드: 대용량 데이터, 자동화, 견고성, 안정성, 성능
@@ -6574,6 +6968,8 @@ Favorite: No
 - 연관 설명: 118, 119
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **견고성**: 잘못된 데이터 입력 시에도 중단 없이 처리를 지속하거나 기록을 남겨야 함
 - **자동화**: 야간 시간 등 사용자가 없는 상황에서도 스스로 동작해야 함
@@ -6582,6 +6978,8 @@ Favorite: No
 ## 233. C/C++의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C/C++ 언어에서 데이터를 저장하기 위해 사용하는 변수의 종류와 메모리 점유 크기
 - 핵심 키워드: char(1Byte), int(4Byte), float(4Byte), double(8Byte)
@@ -6591,6 +6989,8 @@ Favorite: No
 - 연관 설명: 235, 237
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **char**: 문자 하나를 저장하며 1바이트를 차지함
 - **정수형**: short(2B), int(4B), long(4B), long long(8B) 순으로 기억 범위가 넓어짐
@@ -6599,6 +6999,8 @@ Favorite: No
 ## 234. C언어의 구조체
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형
 - 핵심 키워드: struct, 자료의 혼용, 사용자 정의 자료형, 맴버 변수
@@ -6608,6 +7010,8 @@ Favorite: No
 - 연관 설명: 258
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 타입이 다른 이름, 직위, 급여 등을 하나의 '사원' 단위로 관리할 때 유용함
 - 구조체를 정의하는 것은 새로운 자료형(int, char 같은)을 하나 만드는 것과 같음
@@ -6615,6 +7019,8 @@ Favorite: No
 ## 235. JAVA의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: JAVA 언어에서 사용하는 표준 데이터 타입과 각 타입별 메모리 크기
 - 핵심 키워드: char(2Byte), byte(1Byte), long(8Byte), boolean(1Byte)
@@ -6624,6 +7030,8 @@ Favorite: No
 - 연관 설명: 233
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **byte**: 1바이트 정수형으로 작은 범위의 숫자 저장
 - **char**: 유니코드를 지원하기 위해 2바이트를 사용하여 전 세계 문자를 표현 가능
@@ -6632,6 +7040,8 @@ Favorite: No
 ## 236. Python의 시퀀스 자료형
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 여러 개의 값이 연속적으로 이어진 데이터 구조를 다루는 자료형
 - 핵심 키워드: 리스트(List), 튜플(Tuple), range, 문자열
@@ -6641,6 +7051,8 @@ Favorite: No
 - 연관 설명: 267, 268, 269
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **리스트**: 대괄호 `[]`를 사용하며 자유로운 수정이 가능함
 - **튜플**: 소괄호 `()`를 사용하며 요소의 추가, 삭제, 변경이 불가능함
@@ -6648,12 +7060,16 @@ Favorite: No
 ## 244. 조건 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 조건의 참/거짓에 따라 서로 다른 값을 반환하는 삼항 연산자
 
 ## 232. 배치 프로그램
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자 개입 없이 대량의 데이터를 정해진 순서에 따라 일괄적으로 처리하는 방식
 - 핵심 키워드: 대용량 데이터, 자동화, 견고성, 안정성, 성능
@@ -6663,6 +7079,8 @@ Favorite: No
 - 연관 설명: 118, 119
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **견고성**: 잘못된 데이터 입력 시에도 중단 없이 처리를 지속하거나 기록을 남겨야 함
 - **자동화**: 야간 시간 등 사용자가 없는 상황에서도 스스로 동작해야 함
@@ -6671,6 +7089,8 @@ Favorite: No
 ## 233. C/C++의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C/C++ 언어에서 데이터를 저장하기 위해 사용하는 변수의 종류와 메모리 점유 크기
 - 핵심 키워드: char(1Byte), int(4Byte), float(4Byte), double(8Byte)
@@ -6680,6 +7100,8 @@ Favorite: No
 - 연관 설명: 235, 237
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **char**: 문자 하나를 저장하며 1바이트를 차지함
 - **정수형**: short(2B), int(4B), long(4B), long long(8B) 순으로 기억 범위가 넓어짐
@@ -6688,6 +7110,8 @@ Favorite: No
 ## 234. C언어의 구조체
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형
 - 핵심 키워드: struct, 자료의 혼용, 사용자 정의 자료형, 맴버 변수
@@ -6697,6 +7121,8 @@ Favorite: No
 - 연관 설명: 258
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 타입이 다른 이름, 직위, 급여 등을 하나의 '사원' 단위로 관리할 때 유용함
 - 구조체를 정의하는 것은 새로운 자료형(int, char 같은)을 하나 만드는 것과 같음
@@ -6704,6 +7130,8 @@ Favorite: No
 ## 235. JAVA의 데이터 타입 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: JAVA 언어에서 사용하는 표준 데이터 타입과 각 타입별 메모리 크기
 - 핵심 키워드: char(2Byte), byte(1Byte), long(8Byte), boolean(1Byte)
@@ -6713,6 +7141,8 @@ Favorite: No
 - 연관 설명: 233
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **byte**: 1바이트 정수형으로 작은 범위의 숫자 저장
 - **char**: 유니코드를 지원하기 위해 2바이트를 사용하여 전 세계 문자를 표현 가능
@@ -6721,6 +7151,8 @@ Favorite: No
 ## 236. Python의 시퀀스 자료형
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 여러 개의 값이 연속적으로 이어진 데이터 구조를 다루는 자료형
 - 핵심 키워드: 리스트(List), 튜플(Tuple), range, 문자열
@@ -6730,6 +7162,8 @@ Favorite: No
 - 연관 설명: 267, 268, 269
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **리스트**: 대괄호 `[]`를 사용하며 자유로운 수정이 가능함
 - **튜플**: 소괄호 `()`를 사용하며 읽기 전용 데이터 집합에 적합함
@@ -6738,6 +7172,8 @@ Favorite: No
 ## 237. 변수명 작성 규칙
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 프로그램에서 사용하는 변수의 이름을 지을 때 반드시 지켜야 하는 문법적 규칙
 - 핵심 키워드: 영문/숫자/_ 조합, 대소문자 구분, 예약어 사용 불가
@@ -6747,6 +7183,8 @@ Favorite: No
 - 연관 설명: 233, 235
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **헝가리안 표기법**: 변수명 앞에 데이터 타입을 명시하는 관습 (예: iAge, strName)
 - 언어에 따라 대소문자를 엄격히 구분하므로 주의해야 함
@@ -6754,6 +7192,8 @@ Favorite: No
 ## 238. 가비지 콜렉터 (Garbage Collector)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용되지 않고 메모리를 점유하고 있는 변수들을 강제로 해제하여 자원을 회수하는 모듈
 - 핵심 키워드: 메모리 관리, 자동 해제, 효율성 향상, 가비지 콜렉션
@@ -6763,6 +7203,8 @@ Favorite: No
 - 연관 설명: 153
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그래머가 명시적으로 메모리를 해제하지 않아도 시스템이 관리해줌
 - 자바(JAVA)와 같은 현대적 언어의 핵심적인 메모리 관리 기법임
@@ -6770,6 +7212,8 @@ Favorite: No
 ## 239. 산술 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 가감승제 및 나머지를 계산하기 위해 사용하는 연산자
 - 핵심 키워드: 사칙연산(+, -, *, /), 나머지(%), 증감 연산자(++, --)
@@ -6779,6 +7223,8 @@ Favorite: No
 - 연관 설명: 245
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **나머지(%)**: 정수 나눗셈 후 남은 값을 구함
 - **전치**: 값을 먼저 증가시킨 후 연산에 참여함
@@ -6787,6 +7233,8 @@ Favorite: No
 ## 240. 관계 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 두 피연산자의 크기를 비교하여 참(True) 또는 거짓(False)을 반환하는 연산자
 - 핵심 키워드: 같다(==), 같지 않다(!=), 크다(>), 작다(<)
@@ -6796,6 +7244,8 @@ Favorite: No
 - 연관 설명: 251, 255
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **!=**: '같지 않다'를 의미하며 언어마다 표기법이 다를 수 있음 (C/Java는 `!=`)
 - 결과값은 논리형 데이터로 활용됨
@@ -6803,6 +7253,8 @@ Favorite: No
 ## 241. 비트 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 데이터를 비트(0, 1) 단위로 논리 연산하거나 자릿수를 이동시키는 연산자
 - 핵심 키워드: AND(&), XOR(^), OR(|), NOT(~), Shift(<<, >>)
@@ -6812,6 +7264,8 @@ Favorite: No
 - 연관 설명: 233, 235
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Shift(<<, >>)**: 비트를 왼쪽이나 오른쪽으로 밀어 2의 거듭제곱을 곱하거나 나눈 효과를 냄
 - **~ (NOT)**: 모든 비트를 반전시킴 (0은 1로, 1은 0으로)
@@ -6819,6 +7273,8 @@ Favorite: No
 ## 242. 논리 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 두 개의 논리값(T/F)을 조합하여 복합적인 조건을 만드는 연산자
 - 핵심 키워드: NOT(!), AND(&&), OR(||)
@@ -6828,6 +7284,8 @@ Favorite: No
 - 연관 설명: 219, 245
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **&& (AND)**: 두 조건이 모두 참일 때만 참을 반환
 - **|| (OR)**: 두 조건 중 하나만 참이어도 참을 반환
@@ -6835,6 +7293,8 @@ Favorite: No
 ## 243. 대입 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 연산 결과를 변수에 저장하거나 산술 연산과 대입을 동시에 수행하는 연산자
 - 핵심 키워드: 할당(=), 복합 대입 연산자(+=, -=, *=, /=)
@@ -6844,12 +7304,16 @@ Favorite: No
 - 연관 설명: 237, 239
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 비트 연산자나 논리 연산자도 복합 대입 형태로 사용 가능함 (예: `<<=`, `&=`)
 
 ## 244. 조건 연산자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 조건의 참/거짓에 따라 서로 다른 수식을 수행하는 삼항(Ternary) 연산자
 - 핵심 키워드: 삼항 연산자, `? :`, 조건부 실행
@@ -6859,12 +7323,16 @@ Favorite: No
 - 연관 설명: 251
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - if~else 문을 대신하여 변수에 값을 할당할 때 자주 쓰임
 
 ## 245. 연산자 우선순위
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 하나의 수식에 여러 연산자가 있을 때 계산되는 순서
 - 핵심 키워드: 단항 > 산술 > 관계 > 논리 > 대입
@@ -6874,6 +7342,8 @@ Favorite: No
 - 연관 설명: 219, 239, 241, 242
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 같은 순위일 경우 결합 규칙(왼쪽에서 오른쪽, 또는 오른쪽에서 왼쪽)에 따름
 - 증감 연산자(++, --)나 NOT(!) 같은 단항 연산자가 이항 연산자보다 빠름
@@ -6881,6 +7351,8 @@ Favorite: No
 ## 246. scanf() 함수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C언어에서 키보드로 입력받은 데이터를 변수에 저장하는 표준 입력 함수
 - 핵심 키워드: 표준 입력, 서식 문자열, 주소 연산자(&)
@@ -6890,6 +7362,8 @@ Favorite: No
 - 연관 설명: 247, 248
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 번에 여러 개의 데이터를 입력받을 수 있으며 공백이나 엔터로 구분함
 - 서식 문자열과 변수의 자료형이 반드시 일치해야 함
@@ -6897,6 +7371,8 @@ Favorite: No
 ## 247. 서식 문자열
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 입·출력 함수에서 데이터의 자료형을 지정하기 위해 사용하는 기호
 - 핵심 키워드: %d(10진수), %f(실수), %c(문자), %s(문자열)
@@ -6906,6 +7382,8 @@ Favorite: No
 - 연관 설명: 246, 248
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **%u**: 부호 없는 10진수 정수
 - **%e**: 지수 형태의 실수 표현
@@ -6914,6 +7392,8 @@ Favorite: No
 ## 248. printf() 함수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C언어에서 인수로 주어진 값을 화면에 출력하는 표준 출력 함수
 - 핵심 키워드: 표준 출력, 서식 문자열, 자릿수 지정
@@ -6923,6 +7403,8 @@ Favorite: No
 - 연관 설명: 247, 249, 250
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `%8.2f`: 전체 8자리 중 소수점 이하 2자리를 출력하라는 의미
 - 기호를 사용하면 왼쪽 정렬이 가능함
@@ -6930,6 +7412,8 @@ Favorite: No
 ## 249. 주요 제어문자
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 출력 시 커서의 위치를 제어하거나 특수 기호를 표시하는 이스케이프 시퀀스
 - 핵심 키워드: \n(줄바꿈), \t(탭), \b(백스페이스), \0(널 문자)
@@ -6939,6 +7423,8 @@ Favorite: No
 - 연관 설명: 248, 261
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **\r**: 커서를 현재 줄의 맨 처음으로 이동시킴
 - **\**: 역슬래시 자체를 출력하고 싶을 때 사용
@@ -6947,6 +7433,8 @@ Favorite: No
 ## 250. JAVA에서의 표준 출력
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: JAVA 언어에서 System 클래스를 이용해 화면에 값을 출력하는 방식
 - 핵심 키워드: print(), println(), printf()
@@ -6956,6 +7444,8 @@ Favorite: No
 - 연관 설명: 248
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **print()**: 값이나 변수를 형식 없이 그대로 출력 (줄바꿈 없음)
 - **printf()**: C언어의 printf와 동일하게 서식 문자열을 사용함
@@ -6964,6 +7454,8 @@ Favorite: No
 ## 251. 단순 if문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 조건의 참(True) 또는 거짓(False)에 따라 실행할 문장을 결정하는 가장 기본적인 제어문
 - 핵심 키워드: **조건 판단**, **참(1)/거짓(0)**, **제어문**
@@ -6973,6 +7465,8 @@ Favorite: No
 - 연관 설명: 240, 244, 252
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **조건식**: 결과가 1(참) 또는 0(거짓)으로 산출되는 관계/논리 연산식이 주로 사용됨
 - **else 절**: if의 조건이 만족되지 않을 때 실행되는 블록으로, 단독으로 사용할 수 없음
@@ -6981,6 +7475,8 @@ Favorite: No
 ## 252. 다중 if문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 처리해야 할 조건이 여러 개일 때 `else if`를 사용하여 순차적으로 판단하는 제어문
 - 핵심 키워드: **else if**, **다중 조건**, **계층적 판단**
@@ -6990,6 +7486,8 @@ Favorite: No
 - 연관 설명: 251, 253
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 마지막에 사용되는 `else`는 앞의 모든 조건이 거짓일 때 수행되는 기본 경로임
 - 중첩(Nested) if문은 if문 안에 또 다른 if문을 넣어 보다 정교한 로직을 구현함
@@ -6998,6 +7496,8 @@ Favorite: No
 ## 253. switch문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 수식의 결과값에 따라 일치하는 **case** 레이블로 이동하여 문장을 실행하는 제어문
 - 핵심 키워드: **case**, **break**, **default**, **정수/문자 상수**
@@ -7007,6 +7507,8 @@ Favorite: No
 - 연관 설명: 252, 257
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **break**: 현재 실행 중인 case를 끝내고 switch 블록을 완전히 빠져나가게 함
 - **default**: 어떤 case와도 일치하지 않을 때 실행되는 선택적 블록임
@@ -7015,6 +7517,8 @@ Favorite: No
 ## 254. for문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 초기값, 최종값, 증가값을 사용하여 정해진 횟수만큼 반복하는 반복 제어문
 - 핵심 키워드: **초기화**, **조건 검사**, **증감식**, **루프**
@@ -7024,6 +7528,8 @@ Favorite: No
 - 연관 설명: 255, 256, 271
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 실행 순서: 초기값 → 조건문 → (참일 때) 실행 문장 → 증가값 → 조건문 반복
 - 주로 배열의 모든 요소를 순회할 때 가장 많이 사용됨
@@ -7032,6 +7538,8 @@ Favorite: No
 ## 255. while문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 조건이 참인 동안 실행 블록을 반복 수행하는 제어문
 - 핵심 키워드: **조건 반복**, **선행 판단**, **무한 루프**
@@ -7041,6 +7549,8 @@ Favorite: No
 - 연관 설명: 254, 256, 272
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 반복 횟수가 불명확하고 특정 조건 만족 시까지 지속해야 하는 경우에 유리함
 - `while(1)` 또는 `while(true)`는 명시적인 무한 루프를 만들 때 사용함
@@ -7049,6 +7559,8 @@ Favorite: No
 ## 256. do~while문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 실행할 문장을 먼저 수행한 후 조건을 판단하여 반복 여부를 결정하는 제어문
 - 핵심 키워드: **후행 판단**, **최소 1회 실행**, **조건 판별**
@@ -7058,6 +7570,8 @@ Favorite: No
 - 연관 설명: 255
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - while문과 달리 세미콜론(`;`)으로 문장이 끝남을 명시해야 함 (`while(조건);`)
 - 입력값을 먼저 받은 뒤 그 값이 유효한지 검사하는 로직에 자주 쓰임
@@ -7066,6 +7580,8 @@ Favorite: No
 ## 257. break / continue
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 반복문이나 switch문의 흐름을 강제로 제어하기 위해 사용하는 예약어
 - 핵심 키워드: **블록 탈출(break)**, **다음 반복 진행(continue)**, **제어 전이**
@@ -7075,6 +7591,8 @@ Favorite: No
 - 연관 설명: 253, 254, 255
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **break**: 무한 루프 내에서 특정 조건 달성 시 강제 종료를 위해 필수적임
 - **continue**: 특정 조건에 해당하는 데이터만 처리를 제외하고 싶을 때 사용함
@@ -7083,6 +7601,8 @@ Favorite: No
 ## 258. 배열 (Array)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 동일한 데이터 타입의 변수들을 하나의 이름으로 묶어 관리하는 연속적인 기억장소
 - 핵심 키워드: **동일 자료형**, **첨자(Index)**, **0부터 시작**
@@ -7092,6 +7612,8 @@ Favorite: No
 - 연관 설명: 073, 259, 263
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **첨자**: 배열 내 요소의 위치를 나타내며, `a`은 네 번째 요소를 뜻함
 - 메모리상에 **연속적으로 할당**되어 데이터 조회가 매우 빠름
@@ -7100,6 +7622,8 @@ Favorite: No
 ## 259. 2차원 배열
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 행(Row)과 열(Column)의 평면적 구조로 데이터를 조합하여 관리하는 배열
 - 핵심 키워드: **행/열**, **평면 구조**, **중첩 루프**
@@ -7109,6 +7633,8 @@ Favorite: No
 - 연관 설명: 258
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 물리적 메모리는 1차원이므로 2차원 배열도 내부적으로는 일직선으로 저장됨
 - **행 우선 순서**: C언어에서는 행 단위로 메모리에 데이터가 순차 할당됨
@@ -7117,6 +7643,8 @@ Favorite: No
 ## 260. 배열의 초기화
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 배열을 선언함과 동시에 각 요소에 시작 값을 저장하는 활동
 - 핵심 키워드: **초기값**, **크기 생략**, **0으로 자동 채움**
@@ -7126,6 +7654,8 @@ Favorite: No
 - 연관 설명: 258, 259
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `int a = {3};`은 첫 번째 요소만 3이고 나머지는 모두 0임
 - 2차원 배열 초기화 시 중괄호를 중첩하여 행 단위 구분이 가능함
@@ -7134,6 +7664,8 @@ Favorite: No
 ## 261. 배열 형태의 문자열 변수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C언어에서 문자열 전용 자료형 대신 `char`형 배열을 사용하여 문자의 집합을 저장하는 방식
 - 핵심 키워드: **큰따옴표**, **널 문자(\0)**, **char 배열**
@@ -7143,6 +7675,8 @@ Favorite: No
 - 연관 설명: 249, 258
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `char a = "love";`는 'l', 'o', 'v', 'e', '\0' 총 5개의 문자가 저장됨
 - `%s` 서식 지정자는 널 문자를 만날 때까지 배열의 내용을 출력함
@@ -7151,6 +7685,8 @@ Favorite: No
 ## 262. 포인터와 포인터 변수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 변수의 실제 메모리 주소값을 저장하는 특수한 변수
 - 핵심 키워드: 간접 연산자(*), 번지 연산자(&), 메모리 주소, 힙 영역
@@ -7160,6 +7696,8 @@ Favorite: No
 - 연관 설명: 263
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C언어에서 주소를 직접 제어할 수 있게 해주는 강력한 도구임
 - 포인터 변수 선언 시 자료형 앞에 를 붙임 (예: `int *b`)
@@ -7168,6 +7706,8 @@ Favorite: No
 ## 263. 포인터와 배열
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 포인터 변수를 사용하여 배열의 요소에 접근하고 조작하는 기법
 - 핵심 키워드: 배열 대표명(시작 주소), 주소 연산, 간접 참조
@@ -7177,6 +7717,8 @@ Favorite: No
 - 연관 설명: 258, 262
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `(p + i)`는 배열 `a[i]`와 동일한 의미를 가짐
 - 포인터에 정수를 더하면 해당 자료형의 크기만큼 주소가 건너뜀 (예: int면 4바이트씩)
@@ -7185,6 +7727,8 @@ Favorite: No
 ## 264. Python의 기본 문법
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 파이썬 프로그래밍 언어의 고유한 작성 규칙 및 문법적 특징
 - 핵심 키워드: 변수 선언 생략, 세미콜론 미사용, 콜론(:)과 여백, 들여쓰기
@@ -7194,6 +7738,8 @@ Favorite: No
 - 연관 설명: 267, 270, 271
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수 선언 시 자료형을 명시하지 않으며, 문장 끝에 세미콜론(;)을 붙이지 않아도 된다.
 - 변수에 연속하여 값을 저장하는 다중 할당(x, y = 10, 20)이 가능하다.
@@ -7204,6 +7750,8 @@ Favorite: No
 ## 265. Python의 데이터 입·출력 함수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자로부터 데이터를 입력받거나 화면에 결과를 표시하는 표준 함수
 - 핵심 키워드: input(), print(), sep(분리 문자), end(종료 문자)
@@ -7213,6 +7761,8 @@ Favorite: No
 - 연관 설명: 266
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **input()**: 괄호 안에 출력할 메시지를 넣을 수 있으며, 입력 후 엔터를 누르면 변수에 값이 할당된다.
 - **print()**: 여러 값을 쉼표로 구분하여 출력할 수 있고, 기본적으로 출력 후 줄바꿈을 수행한다.
@@ -7222,6 +7772,8 @@ Favorite: No
 ## 266. 입력 값의 형변환(Casting)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: input() 함수로 입력받은 문자열 데이터를 정수나 실수 등의 다른 자료형으로 바꾸는 작업
 - 핵심 키워드: int(), float(), map(), split()
@@ -7231,6 +7783,8 @@ Favorite: No
 - 연관 설명: 235, 265
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 단일 입력 시에는 `int(input())`과 같이 입력 함수 전체를 변환 함수로 감싸서 사용한다.
 - **split()**: 입력받은 문자열을 공백 등을 기준으로 나누어 리스트 형태로 만든다.
@@ -7240,6 +7794,8 @@ Favorite: No
 ## 267. 리스트(List)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 다양한 자료형의 값을 순차적으로 저장하며 크기 조절이 자유로운 파이썬의 대표 자료형
 - 핵심 키워드: 대괄호([]), 동적 배열, 인덱스 0 시작, 자료형 혼용
@@ -7249,6 +7805,8 @@ Favorite: No
 - 연관 설명: 236, 269
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C나 Java의 배열과 유사하지만, 선언 시 크기를 지정할 필요가 없고 데이터 추가/삭제가 매우 유연하다.
 - `list()` 함수를 사용하거나 직접 `[]` 안에 값을 나열하여 생성한다.
@@ -7258,6 +7816,8 @@ Favorite: No
 ## 268. 딕셔너리(Dictionary)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 키(Key)와 값(Value)이 한 쌍을 이루어 연관된 데이터를 저장하는 자료형
 - 핵심 키워드: 중괄호({}), Key-Value 쌍, 해시 맵, 사용자 지정 키
@@ -7267,6 +7827,8 @@ Favorite: No
 - 연관 설명: 267
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 연관된 의미를 가진 값들을 묶어서 관리할 때 매우 효율적이다.
 - 데이터를 추가하거나 수정할 때 `딕셔너리[키] = 값` 형식을 사용하여 직관적이다.
@@ -7276,6 +7838,8 @@ Favorite: No
 ## 269. 슬라이스(Slice)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 문자열이나 리스트와 같은 시퀀스 객체에서 특정 범위를 잘라내어 반환하는 기능
 - 핵심 키워드: 초기위치, 최종위치, 증가값, 콜론(:)
@@ -7285,6 +7849,8 @@ Favorite: No
 - 연관 설명: 236, 261, 267
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `객체[시작:끝:증가값]`의 형식을 가지며, 각 인수는 생략이 가능하다.
 - 인수를 생략하면 처음부터(`[:끝]`), 마지막까지(`[시작:]`), 혹은 전체(`[:]`)를 의미한다.
@@ -7294,6 +7860,8 @@ Favorite: No
 ## 270. Python - if문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 주어진 조건식의 참·거짓에 따라 실행 경로를 선택하는 제어문
 - 핵심 키워드: if, elif, else, 들여쓰기 블록
@@ -7303,6 +7871,8 @@ Favorite: No
 - 연관 설명: 251, 252
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 조건식의 괄호는 필수가 아니며, 조건문 끝에 반드시 콜론(:)을 기입해야 한다.
 - 여러 조건을 연결할 때 `elif`를 사용하여 다단계 분기를 구성할 수 있다.
@@ -7312,6 +7882,8 @@ Favorite: No
 ## 271. Python - for문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 리스트나 range 객체 등 반복 가능한 자료의 요소를 순차적으로 꺼내 실행하는 반복문
 - 핵심 키워드: for ~ in, range(), 시퀀스 순회
@@ -7321,6 +7893,8 @@ Favorite: No
 - 연관 설명: 254, 267
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - `range(최종값)`: 0부터 최종값-1까지의 정수 수열을 생성한다.
 - `for i in 리스트`: 리스트의 0번째 요소부터 마지막 요소까지 순서대로 변수 i에 저장하며 반복한다.
@@ -7330,6 +7904,8 @@ Favorite: No
 ## 272. Python - while문
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 설정된 조건식이 참인 동안 하위 코드 블록을 무한히 반복하는 제어문
 - 핵심 키워드: 조건 기반 반복, True/1 사용, 루프 탈출
@@ -7339,6 +7915,8 @@ Favorite: No
 - 연관 설명: 255, 271
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 반복 횟수가 정해지지 않고 특정 상태가 유지될 때까지 실행해야 하는 경우에 사용한다.
 - 조건식에 `True` 또는 `1`을 직접 입력하여 명시적인 무한 루프를 생성할 수 있다.
@@ -7348,6 +7926,8 @@ Favorite: No
 ## 273. Python - 클래스(Class)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 객체지향 프로그래밍을 위해 데이터(속성)와 기능(메소드)을 하나로 묶는 틀
 - 핵심 키워드: class, def, self, 메소드 호출
@@ -7357,6 +7937,8 @@ Favorite: No
 - 연관 설명: 046, 047, 274
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **def**: 클래스 내부에서 함수(메소드)를 정의할 때 사용하는 예약어이다.
 - **self**: 메소드가 호출될 때 자기 자신의 객체를 가리키는 변수로, 클래스 내 변수에 접근 시 필수적이다.
@@ -7366,6 +7948,8 @@ Favorite: No
 ## 274. 클래스 없는 메소드의 사용
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 클래스 구조에 묶이지 않고 독립적으로 정의하여 사용하는 사용자 정의 함수
 - 핵심 키워드: def, 함수 호출, 매개변수 전달, return
@@ -7375,6 +7959,8 @@ Favorite: No
 - 연관 설명: 273
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C언어의 사용자 정의 함수와 동일한 방식으로 동작한다.
 - 함수에 전달되는 인수는 정의부의 매개변수와 순서대로 매칭된다.
@@ -7384,6 +7970,8 @@ Favorite: No
 ## 275. 절차적 프로그래밍 언어의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 실행 순서에 따른 처리를 중시하며 함수나 프로시저를 중심으로 구성된 언어들
 - 핵심 키워드: COBOL, FORTRAN, C, ALGOL
@@ -7393,6 +7981,8 @@ Favorite: No
 - 연관 설명: 276, 278
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **COBOL**: 영어 문장 형식으로 구성되어 사무 처리용으로 널리 사용된 언어이다.
 - **FORTRAN**: 과학 기술 계산용 언어로 수학적 공식 표현이 용이하다.
@@ -7402,6 +7992,8 @@ Favorite: No
 ## 276. 객체지향 프로그래밍 언어의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 현실 세계의 개체를 객체로 모델링하여 데이터와 기능을 함께 관리하는 언어들
 - 핵심 키워드: JAVA, C++, Smalltalk, Python
@@ -7411,6 +8003,8 @@ Favorite: No
 - 연관 설명: 045, 275
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **JAVA**: 운영체제에 독립적인 JVM을 통해 실행되며 멀티스레드를 지원한다.
 - **C++**: C언어의 성능에 객체지향 개념을 결합한 대표적인 언어이다.
@@ -7420,6 +8014,8 @@ Favorite: No
 ## 278. 선언형 프로그래밍 언어 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 실행 방법(How)보다 무엇(What)을 할 것인지를 기술하는 데 중점을 둔 언어들
 - 핵심 키워드: LISP, PROLOG, XML, Haskell
@@ -7429,6 +8025,8 @@ Favorite: No
 - 연관 설명: 157, 275
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **LISP**: 연결 리스트 구조를 기본으로 하며 재귀 호출을 많이 사용하는 인공지능용 언어이다.
 - **PROLOG**: 논리학을 기초로 하여 추론 및 리스트 처리에 강점을 가진다.
@@ -7438,6 +8036,8 @@ Favorite: No
 ## 279. 라이브러리(Library)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 효율적 개발을 위해 자주 사용되는 함수나 데이터를 미리 만들어 모아 놓은 집합체
 - 핵심 키워드: 표준 라이브러리, 외부 라이브러리, 코드 재사용, 모듈
@@ -7447,6 +8047,8 @@ Favorite: No
 - 연관 설명: 060, 280
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개발 시간을 단축하고 검증된 코드를 사용하여 소프트웨어의 품질을 높인다.
 - **표준 라이브러리**: 언어 설치 시 함께 제공되는 필수 기능들의 패키지이다.
@@ -7456,6 +8058,8 @@ Favorite: No
 ## 280. C언어의 대표적인 표준 라이브러리
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: C언어에서 헤더 파일(.h) 형태로 제공되는 핵심 기능 함수들의 집합
 - 핵심 키워드: stdio.h(입출력), math.h(수학), string.h(문자열), stdlib.h(유틸리티)
@@ -7465,6 +8069,8 @@ Favorite: No
 - 연관 설명: 248, 279
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **stdio.h**: printf, scanf 등 기본적인 데이터 입출력을 담당한다.
 - **math.h**: sqrt(제곱근), pow(거듭제곱), abs(절대값) 등 수학 연산을 지원한다.
@@ -7477,6 +8083,8 @@ Favorite: No
 ## 281. SW 관련 용어
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 웹 서비스나 콘텐츠를 조합하여 새로운 서비스를 만드는 기술 및 서비스 단위 중심의 아키텍처임.
 - 핵심 키워드: 매시업(Mashup), SOA, 서비스 단위, 재사용.
@@ -7486,6 +8094,8 @@ Favorite: No
 - 연관 설명: 311, 317
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 매시업은 기존의 리소스를 융합하여 새로운 가치를 창출하는 기술임.
 - SOA(Service Oriented Architecture)는 정보시스템을 공유와 재사용이 가능한 서비스 단위로 구축하는 아키텍처임.
@@ -7495,6 +8105,8 @@ Favorite: No
 ## 282. 운영체제의 정의 및 목적
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 컴퓨터 시스템의 자원들을 효율적으로 관리하며 사용자에게 편리한 환경을 제공하는 소프트웨어이다.
 - 핵심 키워드: 자원 관리, 인터페이스 제공, 가용성 극대화, 신뢰도 향상.
@@ -7504,6 +8116,8 @@ Favorite: No
 - **: 연관 설명: 283, 286
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 하드웨어 자원인 프로세서, 기억장치, 입출력장치 등을 논리적으로 관리한다.
 - *처리량(Throughput)**은 일정 시간 내에 시스템이 처리하는 일의 양을 의미한다.
@@ -7513,6 +8127,8 @@ Favorite: No
 ## 283. 운영체제의 구성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 운영체제는 기능을 수행하는 주체에 따라 제어 프로그램과 처리 프로그램으로 나뉜다.
 - 핵심 키워드: 감시 프로그램, 작업 제어, 데이터 관리, 언어 번역.
@@ -7522,6 +8138,8 @@ Favorite: No
 - **: 연관 설명: 282
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **제어 프로그램**: 시스템의 상태를 감시하고 작업의 순서 및 데이터 전송을 제어한다.
 - **처리 프로그램**: 언어 번역(컴파일러 등)이나 서비스 프로그램(유틸리티) 등을 포함한다.
@@ -7530,6 +8148,8 @@ Favorite: No
 ## 286. UNIX의 개요 및 특징
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 시분할 시스템을 위해 설계된 대화식 운영체제로 대부분 C언어로 작성되어 있다.
 - 핵심 키워드: C언어, 다중 사용자, 다중 작업, 트리 파일 시스템.
@@ -7539,6 +8159,8 @@ Favorite: No
 - **: 연관 설명: 303, 304
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **커널(Kernel)**: UNIX의 핵심으로 하드웨어를 보호하고 프로세스와 메모리를 직접 관리한다.
 - **쉘(Shell)**: 사용자의 명령어를 해석하여 커널에 전달하는 명령 해석기 역할을 한다.
@@ -7547,6 +8169,8 @@ Favorite: No
 ## 288. 파일 디스크립터 (File Descriptor)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 운영체제가 관리하는 파일에 대한 중요 정보를 담고 있는 제어 블록이다.
 - 핵심 키워드: FCB, 파일 제어 블록, 메타데이터, 보조기억장치 저장.
@@ -7556,6 +8180,8 @@ Favorite: No
 - **: 연관 설명: 282, 304
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 파일 시스템이 보안, 수정 시간, 접근 권한 등을 관리하는 기준이 된다.
 - 모든 파일은 고유의 파일 디스크립터를 가지며 파일 삭제 시 함께 파괴된다.
@@ -7564,6 +8190,8 @@ Favorite: No
 ## 289. 기억장치 관리 - 배치(Placement) 전략
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 새로 들어오는 프로그램이나 데이터를 주기억장치의 어느 빈 공간에 넣을지 정하는 전략이다.
 - 핵심 키워드: 최초 적합, 최적 적합, 최악 적합.
@@ -7573,6 +8201,8 @@ Favorite: No
 - **: 연관 설명: 290, 291
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **최초 적합(First Fit)**: 가용한 첫 번째 영역에 바로 배치하여 결정 속도가 가장 빠르다.
 - **최적 적합(Best Fit)**: 단편화가 가장 작게 남는 공간을 찾아 기억 공간을 아낀다.
@@ -7581,6 +8211,8 @@ Favorite: No
 ## 290. 페이징(Paging) 기법
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 가상기억장치와 주기억장치를 동일한 고정 크기로 나눈 후 할당하는 기법이다.
 - 핵심 키워드: 페이지, 페이지 프레임, 내부 단편화, 페이지 맵 테이블.
@@ -7590,6 +8222,8 @@ Favorite: No
 - **: 연관 설명: 291, 293
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램을 나눈 단위는 페이지(Page), 메모리를 나눈 단위는 페이지 프레임(Page Frame)이다.
 - 각 페이지가 어느 위치에 있는지 관리하기 위해 **페이지 맵 테이블**이 필요하다.
@@ -7598,6 +8232,8 @@ Favorite: No
 ## 291. 세그먼테이션(Segmentation) 기법
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 프로그램을 함수나 배열 등 논리적인 가변 크기 단위로 나누어 관리하는 기법이다.
 - 핵심 키워드: 세그먼트, 가변 크기, 외부 단편화, 세그먼트 맵 테이블.
@@ -7607,6 +8243,8 @@ Favorite: No
 - **: 연관 설명: 290, 289
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 각 세그먼트(Segment)는 고유한 이름과 크기를 가지며 서로 다른 용도로 쓰인다.
 - **세그먼트 맵 테이블**에는 각 단위의 시작 주소와 한계값이 저장된다.
@@ -7615,6 +8253,8 @@ Favorite: No
 ## 293. 페이지 크기
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 페이징 기법에서 최소 할당 단위인 페이지의 용량 결정에 관한 원리이다.
 - 핵심 키워드: 내부 단편화, 매핑 속도, 맵 테이블 크기, 입출력 효율.
@@ -7624,6 +8264,8 @@ Favorite: No
 - **: 연관 설명: 290
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이지가 작으면 꼭 필요한 내용만 메모리에 적재할 수 있어 효율적이다.
 - 페이지가 크면 맵 테이블이 작아져 관리 비용은 줄지만 불필요한 데이터까지 메모리에 올라온다.
@@ -7632,6 +8274,8 @@ Favorite: No
 ## 296. 스래싱(Thrashing)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 페이지 교체 시간이 실제 실행 시간보다 많아져 CPU 이용률이 급격히 떨어지는 현상이다.
 - 핵심 키워드: 페이지 부재, 교체 시간 과다, CPU 이용률 저하.
@@ -7641,6 +8285,8 @@ Favorite: No
 - **: 연관 설명: 293, 290
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이지 부재(Page Fault)가 빈번해지면 운영체제는 데이터를 바꾸느라 바빠진다.
 - 이를 방지하기 위해 워킹 셋 기법이나 페이지 부재 빈도(PFF) 조절을 사용한다.
@@ -7649,6 +8295,8 @@ Favorite: No
 ## 297. 프로세스(Process)의 정의
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 프로세서에 의해 처리 중인 사용자 프로그램이나 시스템 프로그램, 즉 실행 중인 프로그램이다.
 - 핵심 키워드: PCB 소유, 동적 실체, 디스패치 가능 단위, 태스크.
@@ -7658,6 +8306,8 @@ Favorite: No
 - **: 연관 설명: 282, 299
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램이 정적인 코드 뭉치라면, 프로세스는 메모리에 올라와 살아 움직이는 상태이다.
 - 운영체제는 각 프로세스의 상태를 PCB에 기록하여 관리하고 스케줄링한다.
@@ -7666,6 +8316,8 @@ Favorite: No
 ## 299. 프로세스 상태 전이
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 프로세스가 생성되어 소멸할 때까지 시스템 내에서 거치는 상태 변화 과정이다.
 - 핵심 키워드: 준비(Ready), 실행(Run), 대기(Wait), 상태 전이도.
@@ -7675,6 +8327,8 @@ Favorite: No
 - **: 연관 설명: 297, 300
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **준비(Ready)**: CPU를 할당받기 위해 기다리는 상태로 실행 준비가 끝난 상태이다.
 - **실행(Run)**: 실제로 CPU를 점유하여 명령을 처리하고 있는 상태이다.
@@ -7683,6 +8337,8 @@ Favorite: No
 ## 300. 프로세스 상태 전이 관련 용어
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 프로세스의 상태를 한 단계에서 다른 단계로 변화시키는 동작들을 의미한다.
 - 핵심 키워드: Dispatch, Wake Up, Spooling, 시간 초과.
@@ -7692,6 +8348,8 @@ Favorite: No
 - **: 연관 설명: 299
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Wake Up**: 입출력 작업이 끝나 대기 상태의 프로세스가 다시 준비 상태로 가는 것이다.
 - **시간 초과(Time Run Out)**: 할당된 CPU 시간이 끝나 실행에서 다시 준비 상태로 내려오는 것이다.
@@ -7700,6 +8358,8 @@ Favorite: No
 ## 303. UNIX / LINUX의 주요 환경 변수
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 쉘이 실행되는 동안 시스템 환경 정보를 담고 있어 프로그램들이 참조하는 변수이다.
 - 핵심 키워드: $HOME, $PATH, $PWD, $USER, $LANG.
@@ -7709,6 +8369,8 @@ Favorite: No
 - **: 연관 설명: 286
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **$HOME**: 현재 사용자의 홈 디렉터리 경로를 저장한다.
 - **$PWD**: 현재 작업이 이루어지고 있는 디렉터리 위치를 나타낸다.
@@ -7717,6 +8379,8 @@ Favorite: No
 ## 304. UNIX / LINUX 기본 명령어
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 유닉스 시스템에서 파일, 프로세스, 사용자 등을 제어하기 위해 입력하는 텍스트 명령이다.
 - 핵심 키워드: chmod, fork, ls, cat, chown.
@@ -7726,6 +8390,8 @@ Favorite: No
 - **: 연관 설명: 286, 288
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **chmod**: 파일의 읽기, 쓰기, 실행 권한을 8진수나 문자로 설정한다.
 - **fork**: 현재 실행 중인 프로세스를 그대로 복제하여 새로운 자식 프로세스를 만든다.
@@ -7734,6 +8400,8 @@ Favorite: No
 ## 305. IP 주소 (IPv4)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위한 32비트 고유 주소임.
 - 핵심 키워드: 32비트, 8비트씩 4부분, 클래스(A~E), 네트워크/호스트 부분.
@@ -7743,6 +8411,8 @@ Favorite: No
 - 연관 설명: 306, 307
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - A Class는 국가나 대형 통신망에 사용되며 가장 많은 호스트(약 1,600만 개)를 수용함.
 - C Class는 소규모 통신망에 적합하며 최대 256개의 호스트를 가질 수 있음.
@@ -7752,6 +8422,8 @@ Favorite: No
 ## 306. IPv6의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: IPv4의 주소 부족 문제를 해결하기 위해 개발된 128비트 차세대 주소 체계임.
 - 핵심 키워드: 128비트, 주소 확장성, 보안성, 멀티미디어 기능.
@@ -7761,6 +8433,8 @@ Favorite: No
 - 연관 설명: 305, 307
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인증 및 보안 기능을 기본적으로 포함하여 IPv4보다 안전함.
 - 실시간 흐름 제어 기능을 통해 멀티미디어 서비스 품질을 보장함.
@@ -7770,6 +8444,8 @@ Favorite: No
 ## 307. IPv6의 구성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 16비트씩 8부분으로 구성되며, 각 부분을 콜론(:)으로 구분하여 16진수로 표현함.
 - 핵심 키워드: 128비트, 16진수 표현, 콜론(:) 구분, 주소 체계(3종).
@@ -7779,6 +8455,8 @@ Favorite: No
 - 연관 설명: 306
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 유니캐스트(Unicast)는 1대 1 개별 통신에 사용됨.
 - 멀티캐스트(Multicast)는 1대 다수 그룹 통신에 사용됨.
@@ -7788,6 +8466,8 @@ Favorite: No
 ## 307. IPv6(Internet Protocol version 6)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 현재 사용하고 있는 IPv4의 주소 부족 문제를 해결하기 위해 개발된 차세대 IP 주소 체계이다.
 - 핵심 키워드: 128비트 주소, 16진수 표현, 콜론(:) 구분, 보안 강화.
@@ -7797,6 +8477,8 @@ Favorite: No
 - **: 연관 설명: 308
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 패킷 크기에 제한이 없어 대용량 데이터 전송에 유리하다.
 - 인증 및 보안 기능을 프로토콜 내에 기본적으로 포함하고 있다.
@@ -7804,6 +8486,8 @@ Favorite: No
 ## 308. IPv6의 구성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: IPv6 주소 체계에서 데이터를 전송하는 세 가지 주요 통신 방식이다.
 - 핵심 키워드: 유니캐스트, 멀티캐스트, 애니캐스트.
@@ -7813,6 +8497,8 @@ Favorite: No
 - **: 연관 설명: 307
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **유니캐스트**: 단일 송신자와 단일 수신자 간의 1:1 통신 방식이다.
 - **애니캐스트**: 같은 주소를 가진 노드들 중 가장 가까운 노드 하나와 통신하는 방식이다.
@@ -7820,6 +8506,8 @@ Favorite: No
 ## 309. OSI 참조 모델
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 서로 다른 시스템 간의 원활한 통신을 위해 ISO에서 제안한 7단계의 국제 표준 프로토콜 계층이다.
 - 핵심 키워드: 물리, 데이터 링크, 네트워크, 전송, 세션, 표현, 응용 계층.
@@ -7829,6 +8517,8 @@ Favorite: No
 - **: 연관 설명: 314
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **전송 계층(Transport)**: 종단 시스템(End-to-End) 간에 투명하고 신뢰성 있는 데이터를 전송한다.
 - **표현 계층(Presentation)**: 데이터 암호화, 압축, 코드 변환 등 형식 변환을 담당한다.
@@ -7836,6 +8526,8 @@ Favorite: No
 ## 310. 네트워크 관련 장비
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 네트워크를 구성하고 서로 다른 망을 연결하기 위해 사용되는 물리적 장치들이다.
 - 핵심 키워드: 허브, 리피터, 브리지, 라우터, 게이트웨이.
@@ -7845,6 +8537,8 @@ Favorite: No
 - **: 연관 설명: 309
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **스위치(Switch)**: 브리지와 유사하게 LAN을 연결하며 하드웨어 기반으로 빠른 전송 속도를 제공한다.
 - **라우터(Router)**: 네트워크 간 최적의 경로를 결정하여 패킷을 전송한다.
@@ -7852,6 +8546,8 @@ Favorite: No
 ## 311. 응용 계층의 주요 프로토콜
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 사용자가 네트워크 서비스에 접근할 수 있도록 인터페이스를 제공하는 최상위 계층 프로토콜임.
 - 핵심 키워드: HTTP, FTP, SMTP, DNS, SNMP.
@@ -7861,6 +8557,8 @@ Favorite: No
 - 연관 설명: 314
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - FTP는 원격 컴퓨터 간 파일 전송을 위한 기본 프로토콜임.
 - SMTP는 인터넷에서 전자 우편(E-mail)을 전송할 때 사용됨.
@@ -7871,6 +8569,8 @@ Favorite: No
 ## 314. 네트워크 액세스 계층의 주요 프로토콜
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 물리적인 네트워크 매체를 통해 데이터를 전송하기 위한 하위 계층 프로토콜 규격임.
 - 핵심 키워드: Ethernet, IEEE 802.3, HDLC, X.25, RS-232C.
@@ -7880,6 +8580,8 @@ Favorite: No
 - 연관 설명: 311
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - Ethernet은 CSMA/CD 방식을 사용하는 가장 대중적인 LAN 규격임.
 - IEEE 802 위원회는 LAN을 위한 다양한 표준(802.1~802.11 등)을 정의함.
@@ -7889,6 +8591,8 @@ Favorite: No
 ## 301. 스레드 (Thread)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스 내에서의 작업 단위로서 시스템의 여러 자원을 할당받아 실행하는 프로그램의 단위이다.
 - * 핵심 키워드**: 작업 단위, 자원 공유, 멀티스레드, 병행성 증대.
@@ -7898,6 +8602,8 @@ Favorite: No
 - **: 연관 설명**: 297, 298.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 하나의 프로세스 내에 여러 스레드가 존재할 수 있으며, 이들은 프로세스의 자원과 상태를 공유한다.
 - 사용자 수준 스레드와 커널 수준 스레드로 구분되어 운영체제와 라이브러리에 의해 관리된다.
@@ -7908,6 +8614,8 @@ Favorite: No
 ## 302. 주요 스케줄링 알고리즘 (FCFS, SJF, HRN)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 준비상태 큐에 도착한 프로세스들에게 CPU를 할당하는 다양한 우선순위 결정 기법이다.
 - * 핵심 키워드**: FCFS(FIFO), SJF, HRN, 비선점 스케줄링.
@@ -7917,6 +8625,8 @@ Favorite: No
 - **: 연관 설명**: 299, 300.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - FCFS: 먼저 도착한 프로세스가 먼저 처리되는 가장 간단한 방식이나, 긴 작업이 앞서면 대기 시간이 길어진다.
 - SJF: 실행 시간이 가장 짧은 작업에 먼저 할당하며, 평균 대기 시간이 가장 적은 최적 알고리즘이다.
@@ -7926,6 +8636,8 @@ Favorite: No
 ## 312. 전송 계층의 주요 프로토콜 (TCP, UDP)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: OSI 7계층 중 전송 계층에서 종단 시스템 간의 신뢰성 있는 데이터 전송을 위해 사용되는 프로토콜이다.
 - * 핵심 키워드**: TCP(연결형), UDP(비연결형), 흐름 제어, 패킷 전송.
@@ -7935,6 +8647,8 @@ Favorite: No
 - **: 연관 설명**: 309, 311.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - TCP는 가상 회선 방식을 사용하며 순서 제어와 오류 제어 기능을 통해 데이터 무결성을 보장한다.
 - UDP는 오버헤드가 적어 스트리밍이나 게임과 같이 연속성이 중요한 서비스에 주로 사용된다.
@@ -7944,6 +8658,8 @@ Favorite: No
 ## 313. 인터넷 계층의 주요 프로토콜 (IP, ICMP, ARP)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 네트워크 계층에서 데이터 패킷의 경로 설정과 오류 보고, 주소 변환을 담당하는 프로토콜들이다.
 - * 핵심 키워드**: IP(경로 설정), ICMP(오류 제어), ARP(주소 분석), RARP.
@@ -7953,6 +8669,8 @@ Favorite: No
 - **: 연관 설명**: 305, 309.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - IP는 비연결형 데이터그램 방식을 사용하여 신뢰성보다는 효율적인 전송에 집중한다.
 - ICMP는 통신 중 발생하는 예기치 못한 상황(오류)을 송신측에 알리는 제어 메시지 역할을 한다.
@@ -7962,6 +8680,8 @@ Favorite: No
 ## 226. JDBC (Java DataBase Connectivity)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 자바(Java) 프로그램 내에서 데이터베이스에 접속하고 SQL 문을 실행하기 위해 사용하는 표준 응용 프로그램 인터페이스이다.
 - * 핵심 키워드**: Java API, 접속 기술, SQL 실행, 플랫폼 독립성.
@@ -7971,6 +8691,8 @@ Favorite: No
 -**: 연관 설명: 179, 227
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 분산 네트워크 환경에서 실행 가능하며 멀티스레드 기능을 지원하는 자바의 장점을 활용한다.
 - 데이터베이스 벤더에서 제공하는 별도의 드라이버를 통해 실제 DBMS와 통신한다.
@@ -7980,6 +8702,8 @@ Favorite: No
 ## 227. ODBC (Open DataBase Connectivity)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로그램 개발 언어에 관계없이 다양한 데이터베이스 관리 시스템(DBMS)에 접근할 수 있도록 만든 표준 API이다.
 - * 핵심 키워드**: 표준 API, 마이크로소프트, 언어 독립성, 드라이버 관리자.
@@ -7989,6 +8713,8 @@ Favorite: No
 -**: 연관 설명: 226
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 1992년 마이크로소프트에서 출시하여 데이터베이스 접속의 개방형 표준으로 자리 잡았다.
 - 접속하려는 DBMS에 맞는 드라이버가 필요하지만, 드라이버 관리자가 이를 중개하여 개발자의 편의를 돕는다.
@@ -7998,6 +8724,8 @@ Favorite: No
 ## 277. 스크립트 언어의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소스 코드를 컴파일하지 않고 인터프리터가 한 줄씩 즉시 해석하여 실행하는 프로그래밍 언어의 분류이다.
 - * 핵심 키워드**: 자바 스크립트, PHP, 파이썬, 쉘 스크립트.
@@ -8007,6 +8735,8 @@ Favorite: No
 -**: 연관 설명: 275, 276
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 자바 스크립트: 웹 브라우저 내에서 동작하며 입력 사항 확인 등 클라이언트 측 제어에 사용된다.
 - PHP: 서버용 스크립트로 C, Java와 문법이 유사하여 웹 페이지 제작에 많이 사용된다.
@@ -8017,6 +8747,8 @@ Favorite: No
 ## 284. Locality
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 실행되는 동안 주기억장치의 일부 페이지만을 집중적으로 참조하는 성질을 의미한다.
 - * 핵심 키워드**: 시간 구역성, 공간 구역성, 집중 참조, 워킹 셋 기반.
@@ -8026,6 +8758,8 @@ Favorite: No
 -**: 연관 설명: 295, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 시간 구역성: 한 번 참조된 페이지는 가까운 시간 내에 다시 참조될 가능성이 높음을 말한다.
 - 공간 구역성: 특정 페이지가 참조되면 그 인근 위치의 페이지가 계속 참조될 가능성이 높음을 말한다.
@@ -8036,6 +8770,8 @@ Favorite: No
 ## 285. 워킹 셋 (Working Set)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 원활한 수행을 위해 일정 시간 동안 자주 참조하는 페이지들의 집합이다.
 - * 핵심 키워드**: 데닝(Denning), Locality 활용, 페이지 부재 감소, 동적 변경.
@@ -8045,6 +8781,8 @@ Favorite: No
 -**: 연관 설명: 294, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 데닝(Denning)이 제안한 모델로, 프로그램의 국부성(Locality) 특징을 적극적으로 이용한다.
 - 워킹 셋은 시간에 따라 자주 참조하는 페이지가 달라지므로 지속적으로 변경된다.
@@ -8054,6 +8792,8 @@ Favorite: No
 ## 287. UNIX 시스템의 구성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: UNIX 운영체제를 이루는 핵심 요소인 커널, 쉘, 유틸리티 프로그램의 계층적 구조이다.
 - * 핵심 키워드**: 커널(Kernel), 쉘(Shell), 유틸리티(Utility), 계층 구조.
@@ -8063,6 +8803,8 @@ Favorite: No
 -**: 연관 설명: 286
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 커널: 하드웨어를 보호하고 프로세스, 기억장치, 파일, 입출력 관리 등 가장 핵심적인 기능을 수행한다.
 - 쉘: 사용자의 명령을 인식하여 프로그램을 호출하고 명령을 수행하는 명령어 해석기이다.
@@ -8072,6 +8814,8 @@ Favorite: No
 ## 292. 페이지 교체 알고리즘
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 페이지 부재 발생 시 주기억장치의 모든 프레임이 사용 중일 때 어떤 페이지를 교체할지 결정하는 기법이다.
 - * 핵심 키워드**: OPT, FIFO, LRU, LFU, NUR.
@@ -8081,6 +8825,8 @@ Favorite: No
 -**: 연관 설명: 290, 293
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - OPT(Optimal): 향후 가장 오랫동안 사용되지 않을 페이지를 교체하는 가장 이론적으로 효율적인 방식이다.
 - FIFO: 주기억장치에 가장 먼저 들어와서 오래 있었던 페이지를 순차적으로 교체한다.
@@ -8091,6 +8837,8 @@ Favorite: No
 ## 294. Locality
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 실행되는 동안 주기억장치를 참조할 때 특정 영역의 페이지만 집중적으로 참조하는 성질이다.
 - * 핵심 키워드**: 집중 참조, 시간 구역성, 공간 구역성, 스래싱 방지.
@@ -8100,6 +8848,8 @@ Favorite: No
 -**: 연관 설명: 295, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 시간 구역성: 한 번 참조된 메모리 위치는 조만간 다시 참조될 가능성이 매우 높다는 이론이다.
 - 공간 구역성: 특정 메모리 위치가 참조되면 그 인접한 위치들도 곧 참조될 가능성이 높음을 의미한다.
@@ -8110,6 +8860,8 @@ Favorite: No
 ## 295. 워킹 셋 (Working Set)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 일정 시간 동안 집중적으로 참조하여 주기억장치에 상주시켜야 하는 페이지들의 집합이다.
 - * 핵심 키워드**: 데닝(Denning), 집중 참조 집합, 페이지 부재 최소화, 안정적 실행.
@@ -8119,6 +8871,8 @@ Favorite: No
 -**: 연관 설명: 294, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - 프로그램의 Locality(국부성) 특징을 실제 프로세스 관리에 응용한 모델이다.
 - 자주 참조되는 페이지 묶음을 주기억장치에 고정시킴으로써 페이지 부재 발생 빈도를 낮춘다.
@@ -8128,6 +8882,8 @@ Favorite: No
 ## 298. PCB
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - * 개념**: 운영체제가 각 프로세스를 제어하고 관리하기 위해 필요한 정보를 저장해 두는 데이터 구조이다.
 - * 핵심 키워드**: 프로세스 제어 블록, 프로세스 상태, 고유 식별자, 스케줄링 우선순위.
@@ -8137,6 +8893,8 @@ Favorite: No
 -**: 연관 설명: 297, 299
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích và kết luận trước khi xem các dòng nguồn.
+
 
 - PCB에는 프로세스 식별자, 현재 상태(준비/실행/대기), CPU 레지스터 정보 등이 담겨 있다.
 - 부모 및 자식 프로세스에 대한 포인터와 할당된 자원 정보를 포함하여 복잡한 관리를 가능하게 한다.

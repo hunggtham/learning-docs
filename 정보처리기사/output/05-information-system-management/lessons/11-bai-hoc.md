@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **소프트웨어 프로세스 품질 �
 
 ## 소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)
 
-Sau khi đã đặt nền bằng **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, ta chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**. Đây là mắt xích 11/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, ta chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**. Đây là mắt xích 11/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 

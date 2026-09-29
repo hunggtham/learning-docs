@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **3. 프로젝트 관리 및 비용 산�
 
 ## 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
-Từ **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**, ta đã có điểm tựa để bước vào **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/61 trước khi đi vào chi tiết.
+Từ **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**, ta đã có điểm tựa để bước vào **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/86 trước khi đi vào chi tiết.
 
 Để đọc **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **336. 소프트웨어 개발 프레임워크 (Software Development Framewo
 ### 3.1 소프트웨어 프로젝트 관리 (Software Project Management)
 
 Các ý ngay dưới **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “3.1 소프트웨어 프로젝트 관리 (Software Project Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 주어진 기간 내에 최소의 비용으로 사용자를 만족시키는 시스템을 개발하기 위한 전반적인 활동.
 - **Tiếng Việt:** Hoạt động tổng thể để phát triển hệ thống làm hài lòng người dùng với chi phí tối thiểu trong thời gian quy định.
@@ -59,6 +61,8 @@ Với **LOC 기법 (Lines of Code)**, mục tiêu đọc là nhận ra đối t�
 
 Phần nguồn của **LOC 기법 (Lines of Code)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “LOC 기법 (Lines of Code)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 각 기능의 원시 코드 라인 수의 비관치, 낙관치, 기대치를 측정하여 예측.
 - **공식 (Formulas):**
   - 노력(인월, Person-Month) = 개발 기간 × 투입 인원 = LOC / 1인당 월평균 생산 코드 라인 수
@@ -75,6 +79,8 @@ Với **LOC 기법 (Lines of Code)**, hãy đọc các công thức như một c
 #### 수학적 산정 기법 (Mathematical Models)
 
 Các ý ngay dưới **수학적 산정 기법 (Mathematical Models)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “수학적 산정 기법 (Mathematical Models)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
@@ -93,6 +99,8 @@ Ta vừa chốt **수학적 산정 기법 (Mathematical Models)** bằng các đ
 
 Bây giờ ta đi vào nội dung của **3.3 일정 관리 (Schedule Management)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “3.3 일정 관리 (Schedule Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **PERT (프로그램 평가 및 검토 기술):** 낙관, 가능, 비관적인 경우로 나누어 종료 시기를 결정. 결정 경로와 임계 경로를 알 수 있음.
 - **CPM (임계 경로 기법):** 임계 경로는 프로젝트에서 가장 긴(최장) 경로를 의미한다.
 - **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
@@ -109,6 +117,8 @@ Với **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)**, mụ
 ### 3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)
 
 Phần nguồn của **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **위험 관리 (Risk Analysis):** 돌발 상황(위험)을 미리 예상하고 적절한 대책을 수립.
 - **방법론 테일러링 (Tailoring):** 프로젝트 상황에 맞게 방법론 절차나 기법을 수정/보완.

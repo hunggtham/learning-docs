@@ -23,6 +23,8 @@
 호스트의�IP�주소를�호스트와�연결된�네트워크�접속�장치 의�물리적�주소(MAC�Address)로�바꾼다. 
 
 # **220** 치기초 **정보공학 방법론** 
+Phần “**220** 치기초 **정보공학 방법론**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �정보�시스템의�개발을�위해�정형화된�기법들을�상호�연 관성�있게�통합�및�적용하는�자료(Data)�중심의�방법론 이다. 
 
@@ -53,6 +55,8 @@
 **222** 
 
 ##### **소프트웨어 재사용의 이점** 
+Phần “**소프트웨어 재사용의 이점**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>개발�시간과�비용�단축</u> 
 
@@ -67,6 +71,8 @@
 ## 정보처리기사 핵심 요약 
 
 # **223** 치기초 **소프트웨어 재사용 방법** 
+Phần “**223** 치기초 **소프트웨어 재사용 방법**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 합성 중심 :�전자�칩과�같은�소프트웨어�부품,�즉�블록 <u>(모듈)을�만들어서�끼워�맞추어�소프트웨어를�완성시키</u> 는�방법 
 
@@ -80,6 +86,8 @@
 치기초 **소프트웨어 재공학의 이점** 
 
 # **227** 치기초 **CASE의 원천 기술** 
+Phần “**227** 치기초 **CASE의 원천 기술**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 구조적�기법 
 
@@ -134,6 +142,8 @@
 - 이식(Migration) :�기존�소프트웨어를�다른�운영체제나�하 <u>드웨어�환경에서�사용할�수�있도록�변환하는�활동</u> 
 
 # **230** 치기초 **LOC 기법의 산정 공식** 
+Phần “**230** 치기초 **LOC 기법의 산정 공식**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 노력(인월) 
 
@@ -167,6 +177,8 @@
 - Putnam�모형 
 
 # **235** 치기초 **자동화 추정 도구 - SLIM** 
+Phần “**235** 치기초 **자동화 추정 도구 - SLIM**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>Rayleigh Norden�곡선과�Putnam�예측�모델을�기초로�</u> 하여�개발된�자동화�추정�도구이다. 
 
@@ -184,6 +196,8 @@
 - <u>�Rayleigh Norden�곡선의�노력�분포도를�기초로�한다.</u> 
 
 # 초 **기능 점수(FP) 모형 - 236** 치기 **가중치 증대 요인** 
+Phần “초 **기능 점수(FP) 모형 - 236** 치기 **가중치 증대 요인**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자료�입력(입력�양식) 
 
@@ -209,6 +223,8 @@
 - <u>�결정�경로, 작업에�대한�경계�시간,�작업�간의�상호�관 련성�등을�알�수�있다.</u> 
 
 # 초 **COCOMO의 소프트웨어 개발 234** 치기 **유형** 
+Phần “초 **COCOMO의 소프트웨어 개발 234** 치기 **유형**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - · 
 
@@ -268,6 +284,8 @@
 초 SPICE의 프로세스 수행 능력<br>치기 단계<br><!-- End of picture text -->
 
 # **245** 
+Phần “**245**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Level�0�-�불완전(Incomplete) 
 
@@ -278,6 +296,8 @@
 - Level�3�-�확립(Established) 
 
 # 초 **241** 치기 **위험 관리(Risk Analysis)** 
+Phần “초 **241** 치기 **위험 관리(Risk Analysis)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Level�4�-�예측(Predictable) 
 
@@ -303,10 +323,14 @@
 # 초 **소프트웨어 개발 방법론 247** 치기 **테일러링 고려사항** 
 
 ###### 내부적 기준 
+Phần “내부적 기준” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 목표 환경 :�시스템의�개발�환경과�유형 
 
 # 초 **CMMI의 소프트웨어 프로세스 243** 치기 **성숙도 5단계** 
+Phần “초 **CMMI의 소프트웨어 프로세스 243** 치기 **성숙도 5단계**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 초기(Initial) 
 
@@ -325,6 +349,8 @@
 - 보유 기술 :�프로세스,�개발�방법론,�산출물,�구성원의� 능력�등 
 
 ###### 외부적 기준 
+Phần “외부적 기준” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 법적 제약사항 :�프로젝트별로�적용될�IT�Compliance 
 
@@ -473,6 +499,8 @@ Wi-Fi에서�제정한�무선�랜(WLAN)�인증�및�암호화�관련
 <u>LAN의�물리적인�배치와�상관없이�논리적으로�분리하는� 기술로,�접속된�장비들의�성능�및�보안성을�향상시킬�수�</u> 있다. 
 
 # 초 **RIP(Routing Information 265** 치기 **Protocol)** 
+Phần “초 **RIP(Routing Information 265** 치기 **Protocol)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �IGP에�속하는�라우팅�프로토콜로,�거리�벡터�라우팅�프 <u>로토콜이라고도�불린다.</u> 
 
@@ -658,6 +686,8 @@ N개의�서로�다른�단말기에서�동일한�콘텐츠를�자유�
 트랜잭션들을�수행하는�도중�장애가�발생하여�데이터베이 스가�손상되었을�때�손상되기�이전의�정상�상태로�복구하 <u>는�작업이다.</u> 
 
 # 초 **즉각 갱신 기법 287** 치기 **(Immediate Update)** 
+Phần “초 **즉각 갱신 기법 287** 치기 **(Immediate Update)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �트랜잭션이�데이터를�갱신하면�트랜잭션이�부분�완료되 <u>기�전이라도�즉시�실제�데이터베이스에�반영하는�방법</u> 이다. 
 
@@ -776,6 +806,8 @@ N개의�서로�다른�단말기에서�동일한�콘텐츠를�자유�
 <u>할당된�메모리의�범위를�넘어선�위치에서�자료를�읽거나� 쓰려고�할�때�발생하는�보안�약점이다.</u> 
 
 # 초 **개인키 암호화(Private Key 302** 치기 **Encryption) 기법** 
+Phần “초 **개인키 암호화(Private Key 302** 치기 **Encryption) 기법**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>동일한�키로�데이터를�암호화하고�복호화한다.</u> 
 
@@ -899,10 +931,14 @@ Ping�명령을�전송할�때�ICMP�패킷의�크기를�인터넷�
 IP나�ICMP의�특성을�악용하여�엄청난�양의�데이터를�한� <u>사이트에�집중적으로�보냄으로써�네트워크를�불능�상태로�</u> 만드는�공격�방법이다. 
 
 # **314** 치기초 **블루투스(Bluetooth) 관련 공격** 
+Phần “**314** 치기초 **블루투스(Bluetooth) 관련 공격**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 블루버그(BlueBug) :�블루투스�장비�사이의�취약한�연결� <u>관리를�악용한�공격</u> 
 
 # 초 **DDoS(Distributed Denial of 310** 치기 **Service, 분산 서비스 거부) 공격** 
+Phần “초 **DDoS(Distributed Denial of 310** 치기 **Service, 분산 서비스 거부) 공격**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �여러�곳에�분산된�공격�지점에서�한�곳의�서버에�대해� <u>분산�서비스�공격을�수행하는�것이다.</u> 
 
@@ -936,6 +972,8 @@ IP나�ICMP의�특성을�악용하여�엄청난�양의�데이터를�
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 ###### • 인증의 유형 
+Phần “• 인증의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �-�지식 기반 인증�:�고정된�패스워드,�아이핀�등 
 
@@ -960,6 +998,8 @@ IP나�ICMP의�특성을�악용하여�엄청난�양의�데이터를�
 인터넷�사용자의�컴퓨터에�잠입해�내부�문서나�파일�등을� <u>암호화해�사용자가�열지�못하게�하는�프로그램으로,�암호�</u> 해독용�프로그램의�전달을�조건으로�사용자에게�돈을�요 구하기도�한다. 
 
 # **321** 치기초 **커널 로그의 종류** 
+Phần “**321** 치기초 **커널 로그의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •wtmp :�성공한�로그인/로그아웃과�시스템의�시작/종료� <u>시간에�대한�로그</u> 
 
@@ -984,6 +1024,8 @@ IP나�ICMP의�특성을�악용하여�엄청난�양의�데이터를�
 - 백도어 탐지 방법 :�무결성�검사,�열린�포트�확인,�로그� 분석,�SetUID�파일�검사�등 
 
 # 초 **침입 탐지 시스템(IDS; 322** 치기 **Intrusion Detection System)** 
+Phần “초 **침입 탐지 시스템(IDS; 322** 치기 **Intrusion Detection System)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �컴퓨터�시스템의�비정상적인�사용,�오용,�남용�등을�실 <u>시간으로�탐지하는�시스템이다.</u> 
 
@@ -1133,6 +1175,8 @@ IP나�ICMP의�특성을�악용하여�엄청난�양의�데이터를�
 **99** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 유지보수 생산성 향상을 통해 소프트웨어 위기를 해결 하는 방법이다. 
 
@@ -1330,6 +1374,8 @@ Putnam 모형은 소프트웨어 생명 주기의 전 과정 동안에 사용될
 ### 정보처리기사 필기 핵심 요약 
 
 ###### ※ 자동화 추정 도구 
+Phần “※ 자동화 추정 도구” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SLIM : Rayleigh-Norden 곡선과 Putnam 예측 모델 을 기초로 하여 개발된 자동화 추정 도구 
 
@@ -1557,6 +1603,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 
 
 ### 핵심 **<mark>337</mark>** 
+Phần “핵심 **<mark>337</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |모듈화<br>(Modularity)|프레임워크는 캡슐화를 통해 모듈화를 강화하고<br>설계 및 구현의 변경에 따른 영향을 최소화함으로<br>써 소프트웨어의 품질을 향상시킴<br>프레임워크는 개발표준에 의한 모듈화로 인해 유<br>지 보수가 용이함|
 |---|---|
@@ -1632,6 +1680,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 2417705<br><!-- End of picture text -->
 
 ### 23.7, 23.5, 23.2, 22.7, 22.4, 21.8 핵심 **<mark>339</mark>** 네트워크 관련 신기술 
+Phần “23.7, 23.5, 23.2, 22.7, 22.4, 21.8 핵심 **<mark>339</mark>** 네트워크 관련 신기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |네<br>**339**<br>핵심<br>IoT(Internet of<br>Things,<br>사물 인터넷)|트워크 관련 신기술<br>정보 통신 기술을 기반으로 실세계(Physical<br>World)와 가상 세계(Virtual World)의 다양한 사<br>물들을 인터넷으로 서로 연결하여 진보된 서<br>비스를 제공하기 위한 서비스 기반 기술|
 |---|---|
@@ -1743,6 +1793,8 @@ CSMA/CA는 무선 랜에서 데이터 전송 시 매체가 비어있 음을 확�
 - •RIP(Routing Information Protocol) 
 
 ###### 802.11의 버전 
+Phần “802.11의 버전” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |802.11<br>(초기 버전)|2.4GHz 대역 전파와 CSMA/CA 기술을 사용해 최고<br>2Mbps까지의 전송 속도를 지원함|
 |---|---|
@@ -1833,6 +1885,8 @@ CSMA/CA는 무선 랜에서 데이터 전송 시 매체가 비어있 음을 확�
 ### **<mark>346</mark>** SW 관련 용어 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |매시업(Mashup)|웹에서 제공하는 정보 및 서비스를 이용하여<br>새로운 소프트웨어나 서비스, 데이터베이스 등<br>을 만드는 기술이다. 즉 다수의 정보원이 제공<br>하는 콘텐츠를 조합하여 하나의 서비스로 제공<br>하는 웹 사이트 또는 애플리케이션을 말함|
 |---|---|
@@ -1892,6 +1946,8 @@ Python 기반의 웹 크롤링 프레임워크로, 코드 스크래피(Scrapy) �
 2459944<br><!-- End of picture text -->
 
 ### 23.7, 22.3, 21.5 핵심 **<mark>348</mark>** HW 관련 신기술 
+Phần “23.7, 22.3, 21.5 핵심 **<mark>348</mark>** HW 관련 신기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |고가용성<br>(HA; High<br>Availability)|• 긴 시간동안 안정적인 서비스 운영을 위해<br>장애 발생 시 즉시 다른 시스템으로 대체 가<br>능한 환경을 구축하는 메커니즘을 의미함<br>• 가용성(Availability)을 극대화하는 방법으로는<br>클러스터, 이중화 등이 있음|
 |---|---|
@@ -1971,6 +2027,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||오픈 소스 기반 분산 컴퓨팅 플랫폼인 아파치<br>|
 |---|---|
@@ -2062,6 +2120,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 
 
 ###### • 교착상태의 해결 방법 
+Phần “• 교착상태의 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |예방 기법<br>(Prevention)|• 교착상태가 발생하지 않도록 사전에 시스템을<br>제어하는 방법으로, 교착상태 발생의 네 가지<br>조건 중에서 어느 하나를 제거(부정)함으로써 수<br>행됨<br>•자원의 낭비가 가장 심한 기법|
 |---|---|
@@ -2216,6 +2276,8 @@ Secure SDLC는 보안상 안전한 소프트웨어를 개발하기 위해 SDLC�
 20.8 
 
 ### 핵심 **<mark>359</mark>** 보안 기능의 보안 약점 
+Phần “핵심 **<mark>359</mark>** 보안 기능의 보안 약점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |적절한 인증<br>없이 중요기능<br>허용|• 보안검사를 우회하여 인증과정 없이 중요한 정<br>보 또는 기능에 접근 및 변경이 가능함<br>• 중요정보나 기능을 수행하는 페이지에서는 재<br>인증 기능을 수행하도록 하여 방지할 수 있음|
 |---|---|
@@ -2237,6 +2299,8 @@ Secure SDLC는 보안상 안전한 소프트웨어를 개발하기 위해 SDLC�
 접근 지정자는 프로그래밍 언어에서 특정 개체를 선언할 때 외부로부터의 접근을 제한하기 위해 사용되는 예약어 이다 
 
 ###### (접근 가능 : ◯, 접근 불가능 : ×). 
+Phần “(접근 가능 : ◯, 접근 불가능 : ×).” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |한정자|클래스 내부|패키지 내부|하위 클래스|패키지 외부|
 |---|---|---|---|---|
@@ -2279,6 +2343,8 @@ Secure SDLC는 보안상 안전한 소프트웨어를 개발하기 위해 SDLC�
 ### **<mark>360</mark>** 스택 가드(Stack Guard) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 널 포인터 역참조와 같이 주소가 저장되는 스택에서 발 생하는 보안 약점을 막는 기술 중 하나이다. 
 
@@ -2402,6 +2468,8 @@ Secure SDLC는 보안상 안전한 소프트웨어를 개발하기 위해 SDLC�
 ###### 21.8 
 
 ### 핵심 **<mark>366</mark>** 솔트(Salt) 
+Phần “핵심 **<mark>366</mark>** 솔트(Salt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 둘 이상의 계정에 대해 패스워드를 ‘qwer1234’라고 지 정하고, 같은 암호화 알고리즘을 적용하게 되면 결과도 마찬가지로 동일하게 나타난다. 이 경우 공격자가 나타 난다면 하나의 암호만 해제해도 둘 이상의 계정을 얻게 되므로, 이를 방지하고자 암호화를 수행하기에 앞서 원 문에 무작위의 값을 덧붙이는 과정을 수행한다. 이때 덧붙이는 무작위의 값을 솔트(Salt)라고 한다. 
 
@@ -2494,6 +2562,8 @@ DDoS 공격은 여러 곳에 분산된 공격 지점에서 한 곳의 서 버에
 ### **<mark>370</mark>** 정보 보안 침해 공격 관련 용어 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |웜<br>(Worm)|네트워크를 통해 연속적으로 자신을 복제하여 시<br>스템의 부하를 높임으로써 결국 시스템을 다운시<br>키는 바이러스의 일종으로, 분산 서비스 거부 공<br>격, 버퍼 오버플로 공격, 슬래머 등이 웜 공격의<br>한 형태|
 |---|---|
@@ -2559,6 +2629,8 @@ DDoS 공격은 여러 곳에 분산된 공격 지점에서 한 곳의 서 버에
 22.3 
 
 ### 핵심 **<mark>373</mark>** 리눅스의 커널 로그 
+Phần “핵심 **<mark>373</mark>** 리눅스의 커널 로그” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |데몬|파일명|내용|
 |---|---|---|
@@ -2671,6 +2743,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 아날로그와 디지털 신호 전송에 모두 사용한다. 
 
@@ -2679,6 +2753,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 핵심 10.9, 02.5, 99.8 
 
 ## **<mark>211</mark>** 데이터 통신의 개요 
+Phần “**<mark>211</mark>** 데이터 통신의 개요” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 통신 : 컴퓨터의 발달을 배경으로 하여 생겨난 것 으로, 컴퓨터와 각종 통신기기 사이에서 디지털 형태로 표현된 2진 정보(0과 1)를 송·수신하는 것을 말한다. 
 
@@ -2687,6 +2763,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 - 정보 통신 : 컴퓨터와 통신 기술의 결합에 의해 통신 처 리 기능과 정보 처리 기능은 물론 정보의 변환, 저장 과 정이 추가된 형태의 통신이다. 
 
 ###### 정보 통신 = 전기 통신(정보 전송) + 컴퓨터(정보 처리) 
+Phần “정보 통신 = 전기 통신(정보 전송) + 컴퓨터(정보 처리)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통신의 3요소 : 정보원, 수신원, 전송 매체(=통신 회선) 
 
@@ -2803,6 +2881,8 @@ www.sinagong.co.kr
 호스트 컴퓨터와 단말기 사이에 고속 통신 회선으로 설 치되며, 통신 회선 및 단말기 제어, 메시지의 조립과 분 해, 전송 메시지 검사 등을 수행하므로, 컴퓨터의 부담이 적어진다. 
 
 ## 핵심 14.3, 06.3, 03.8, 99.8 **<mark>214</mark>** 주파수 / 대역폭 
+Phần “핵심 14.3, 06.3, 03.8, 99.8 **<mark>214</mark>** 주파수 / 대역폭” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 단위 시간(주로 1초) 내에 신호 파형이 반복되는 횟수를 의미하는 것으로, 단위는 Hz임 
 
@@ -2820,6 +2900,8 @@ www.sinagong.co.kr
 핵심 06.9, 02.3, 00.3 
 
 ## **<mark>215</mark>** 아날로그 / 디지털 전송 
+Phần “**<mark>215</mark>** 아날로그 / 디지털 전송” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 전송 매체를 통해 전달되는 신호가 아날로그 형태 인 것 
 
@@ -2838,6 +2920,8 @@ www.sinagong.co.kr
 핵심 14.3, 13.6, 12.5, 08.9, 08.5, 08.3, 04.5, 04.3, 03.3, 01.9, 01.3, 00.7, 99.10, 99.4 
 
 ## **<mark>216</mark>** 통신 방식 
+Phần “**<mark>216</mark>** 통신 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 단방향(Simplex) 통신 : 한쪽 방향으로만 전송이 가능한 방식  라디오, TV 
 
@@ -2850,6 +2934,8 @@ www.sinagong.co.kr
 ## 핵심 **<mark>217</mark>** 비동기식 전송 / 동기식 전송 
 
 ###### 비동기식 전송 
+Phần “비동기식 전송” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 문자를 나타내는 부호(문자 코드) 앞뒤에 Start Bit 와 Stop Bit를 붙여서 Byte와 Byte를 구별하여 전송 하는 방식이다. 
 
@@ -2874,6 +2960,8 @@ www.sinagong.co.kr
 - 문자마다 시작, 정지를 알리기 위한 비트가 2~3Bit씩 추가되므로, 전송 효율이 떨어진다. 
 
 ###### 동기식 전송 
+Phần “동기식 전송” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 미리 정해진 수만큼의 문자열을 한 블록(프레임)으로 만들어 일시에 전송하는 방식이다. 
 
@@ -2904,10 +2992,14 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 널(Null) 모뎀 : 모뎀을 사용하지 않고 RS-232C 커넥터 를 이용해 2대의 컴퓨터를 직접 접속해서 정보를 교환 할 수 있게 하는 것으로 실제로는 모뎀이 사용되지 않지 만 컴퓨터의 입장에서는 모뎀을 사용하는 것과 같으므 로 모뎀이라고 표현함 
 
 ## 핵심 09.8, 07.3, 02.9, 01.6, 00.10 **<mark>219</mark>** DSU(Digital Service Unit) 
+Phần “핵심 09.8, 07.3, 02.9, 01.6, 00.10 **<mark>219</mark>** DSU(Digital Service Unit)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 컴퓨터나 단말장치로부터 전송되는 디지털 데이터를 디지털 회선에 적합한 디지털 신호로 변환하는 과정과 그 반대의 과정을 수행한다. 
 
@@ -2922,6 +3014,8 @@ www.sinagong.co.kr
 핵심 14.5, 14.3, 12.8, 12.5, 10.9, 10.5, 09.8, 09.3, 08.9, 08.5, 08.3, 06.5, 05.9, 05.4, 05.3, 04.9, 04.3, 02.9, 00.7, 99.4 
 
 ## **<mark>220</mark>** 신호 변환 방식 - 디지털 변조(Keying) 
+Phần “**<mark>220</mark>** 신호 변환 방식 - 디지털 변조(Keying)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모뎀(MODEM)을 이용하여 디지털 데이터를 아날로 그 신호로 변조하는 방식이다. 
 
@@ -2934,6 +3028,8 @@ www.sinagong.co.kr
 핵심 06.5, 05.5, 01.6, 01.3 
 
 ## **<mark>218</mark>** 모뎀(MODEM) 
+Phần “**<mark>218</mark>** 모뎀(MODEM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 컴퓨터나 단말장치로부터 전송되는 디지털 데이터를 아날로그 회선에 적합한 아날로그 신호로 변환하는 변조(M O d u l a t i o n) 과정과 그 반대의 복조 (DEModulation) 과정을 수행한다. 
 
@@ -2990,6 +3086,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>221</mark>** 펄스 코드 변조(PCM) 
+Phần “**<mark>221</mark>** 펄스 코드 변조(PCM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 화상, 음성, 동영상 비디오, 가상 현실 등과 같이 연속 적인 시간과 진폭을 가진 아날로그 데이터를 디지털 신호로 변조하는 방식으로, CODEC을 이용한다. 
 
@@ -3030,6 +3128,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>222</mark>** 베이스밴드(Base Band) 전송 
+Phần “**<mark>222</mark>** 베이스밴드(Base Band) 전송” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 컴퓨터나 단말장치 등에서 처리된 디지털 데이터를 다 른 주파수 대역으로 변조하지 않고 직류 펄스의 형태 그대로 전송하는 것으로, 기저대역 전송이라고도 한다. 
 
@@ -3042,6 +3142,8 @@ www.sinagong.co.kr
 ###### 핵심 12.3, 11.6, 11.3, 10.9, 09.3, 08.3, 07.5, 05.9, 05.5, 03.5, 01.6, 01.3 
 
 ## **<mark>223</mark>** 다중화기(Multiplexer) 
+Phần “**<mark>223</mark>** 다중화기(Multiplexer)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 하나의 통신 회선에 여러 대의 단말기가 동시에 접속 하여 사용할 수 있도록 하는 장치이다. 
 
@@ -3080,6 +3182,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>224</mark>** 주파수 분할 다중화기(FDM) 
+Phần “**<mark>224</mark>** 주파수 분할 다중화기(FDM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통신 회선의 주파수를 여러 개로 분할하여 여러 대의 단말장치가 동시에 사용할 수 있도록 한 것이다. 
 
@@ -3100,6 +3204,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>225</mark>** 시분할 다중화기(TDM) 
+Phần “**<mark>225</mark>** 시분할 다중화기(TDM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통신 회선의 대역폭을 일정한 시간 폭(Time Slot)으 로 나누어 여러 대의 단말장치가 동시에 사용할 수 있 도록 한 것이다. 
 
@@ -3138,6 +3244,8 @@ www.sinagong.co.kr
 ###### 핵심 02.3, 00.10, 00.3 
 
 ## **<mark>226</mark>** 역 다중화기(Inverse Multiplexer) 
+Phần “**<mark>226</mark>** 역 다중화기(Inverse Multiplexer)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 광대역 회선 대신에 2개의 음성 대역 회선을 이용하여 데이터를 전송할 수 있도록 하는 장치이다. 
 
@@ -3148,6 +3256,8 @@ www.sinagong.co.kr
 - 여러 가지 변화에 대응해 다양한 전송 속도를 얻을 수 있다. 
 
 ## 핵심 06.9, 03.8, 01.6 **<mark>227</mark>** 집중화기(Concentrator) 
+Phần “핵심 06.9, 03.8, 01.6 **<mark>227</mark>** 집중화기(Concentrator)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 하나 또는 소수의 회선에 여러 대의 단말기를 접속하 여 사용할 수 있도록 하는 장치이다. 
 
@@ -3182,6 +3292,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>228</mark>** 통신 속도 
+Phần “**<mark>228</mark>** 통신 속도” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |변조 속도|• 1초 동안 몇 개의 신호 변화가 있었는가를 나타내는<br>것(단위 : Baud)<br>• 변조 속도(Baud) = 데이터 신호 속도(Bps) / 변조<br>시 상태 변화 수|
 |---|---|
@@ -3200,6 +3312,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>229</mark>** 전송 제어의 기본 
+Phần “**<mark>229</mark>** 전송 제어의 기본” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 전송 제어 : 데이터의 원활한 흐름을 위하여 입·출력 제어, 회선 제어, 동기 제어, 오류 제어, 흐름 제어 등 을 수행하는 것 
 
@@ -3246,6 +3360,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>231</mark>** HDLC(High-level Data Link Control)의 특징 
+Phần “**<mark>231</mark>** HDLC(High-level Data Link Control)의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 비트(Bit) 위주의 프로토콜로, 각 프레임에 데이터의 흐름을 제어하고 오류를 검출할 수 있는 비트 열을 삽 입하여 전송한다. 
 
@@ -3274,12 +3390,16 @@ www.sinagong.co.kr
 ~~핵심 요약~~ 
 
 ###### 잠깐만요 ! 비트 스터핑(Bit Stuffing) 
+Phần “잠깐만요 ! 비트 스터핑(Bit Stuffing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 플래그(Flag)를 제외한 모든 비트에 연속적으로 5개의 1이 입력 되면 그 다음 여섯 번째에는 0을 강제로 추가(Stuffing)하여 송신합 니다. 
 
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |비동기<br>균형(평형)<br>모드(ABM)|• 전이중 통신을 하는 포인트 투 포인트 균형<br>링크에서 사용<br>• 혼합국끼리 허가 없이 언제나 전송할 수 있도<br>록 설정|
 |---|---|
@@ -3310,6 +3430,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>232</mark>** HDLC의 프레임 및 전송 모드 
+Phần “**<mark>232</mark>** HDLC의 프레임 및 전송 모드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - HDLC의 프레임 종류 
 
@@ -3331,6 +3453,8 @@ www.sinagong.co.kr
 
 
 ## 핵심 13.6, 12.5, 11.8, 10.3, 08.9, 08.5, 07.9, 06.5, 04.3, 03.8, 02.9, 01.9, 01.6, 00.10, 00.3, 99.10 **<mark>233</mark>** 회선 제어 방식 
+Phần “핵심 13.6, 12.5, 11.8, 10.3, 08.9, 08.5, 07.9, 06.5, 04.3, 03.8, 02.9, 01.9, 01.6, 00.10, 00.3, 99.10 **<mark>233</mark>** 회선 제어 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |경쟁<br>|• 회선 접속을 위해서 서로 경쟁하는 방식<br>• 송신 요구를 먼저 한 쪽이 송신권을 가짐<br>• 포인트 투 포인트 방식에서 주로 사용|
 |---|---|
@@ -3343,6 +3467,8 @@ www.sinagong.co.kr
 ###### 핵심 14.5, 07.5, 06.3, 03.5, 03.3, 01.6, 00.3 
 
 ## **<mark>234</mark>** 오류의 발생 원인 
+Phần “**<mark>234</mark>** 오류의 발생 원인” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 감쇠 : 전송 신호 세력이 전송 매체를 통과하는 과정에 서 거리에 따라 약해지는 현상 
 
@@ -3414,6 +3540,8 @@ www.sinagong.co.kr
 14.3, 13.6, 13.3, 12.8, 12.3, 11.8, 11.6, 11.3, 10.9, 10.3, 09.5, 08.9, 08.5, 08.3, 07.5, 07.3, 05.9, 05.4, 05.3, 04.3, 03.5, 
 
 ## 핵심 **<mark>237</mark>** 오류 검출 방식 
+Phần “핵심 **<mark>237</mark>** 오류 검출 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 전송 비트에 1비트의 검사 비트인 패리티 비트 (Parity Bit)를 추가하여 오류 검출 
 
@@ -3435,6 +3563,8 @@ www.sinagong.co.kr
 핵심 14.5, 12.5, 12.3, 10.5, 10.3, 08.5, 08.3, 07.9, 07.3, 06.9, 05.4, 04.5, 04.3, 03.8, 03.3, 02.9, 01.9, 00.10, 00.7, 99.10 
 
 ## **<mark>238</mark>** 회선 교환 방식 
+Phần “**<mark>238</mark>** 회선 교환 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통신을 원하는 두 지점을 교환기를 이용하여 물리적으로 접속시키는 방식이다. 
 
@@ -3496,6 +3626,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 메시지를 일정한 길이의 패킷으로 잘라서 전송하는 방식 
 
@@ -3552,6 +3684,8 @@ www.sinagong.co.kr
 핵심 14.8, 11.3, 07.5, 03.8, 02.3 
 
 ## **<mark>241</mark>** 패킷 교환망의 기능 
+Phần “**<mark>241</mark>** 패킷 교환망의 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 패킷 다중화 : 동시에 다수의 상대 터미널과 통신을 수 행하도록 하는 기능 
 
@@ -3577,6 +3711,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>242</mark>** 경로 제어(Routing) 
+Phần “**<mark>242</mark>** 경로 제어(Routing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 송·수신 측 간의 전송 경로 중에서 최적의 패킷 교환 경로를 설정하는 기능이다. 
 
@@ -3662,6 +3798,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 전송 매체로 꼬임선, 동축 케이블, 광섬유 케이블 등을 사용한다. 
 
@@ -3696,6 +3834,8 @@ www.sinagong.co.kr
 핵심 14.5, 13.8, 12.8, 12.3, 11.6, 11.3, 09.5, 09.3, 08.5, 07.3, 06.9, 06.5, 06.3, 05.9, 03.8, 03.3, 02.3, 01.9, 01.6, 00.10 
 
 ## **<mark>245</mark>** LAN(근거리 통신망) 
+Phần “**<mark>245</mark>** LAN(근거리 통신망)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 광대역 통신망과는 달리 학교, 회사, 연구소 등 한 건물 이나 일정 지역 내에서 컴퓨터나 단말기들을 고속 전송 회선으로 연결하여 프로그램 파일 또는 주변장치를 공 유할 수 있도록 한 네트워크 형태이다. 
 
@@ -3706,6 +3846,8 @@ www.sinagong.co.kr
 - 경로 선택이 필요 없고, 오류 발생률이 낮다. 
 
 ###### • IEEE 802의 주요 표준 규격 
+Phần “• IEEE 802의 주요 표준 규격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |802.1|전체의 구성|802.5|토큰 링 방식|
 |---|---|---|---|
@@ -3718,6 +3860,8 @@ www.sinagong.co.kr
 핵심 14.3, 12.8, 12.5, 10.9, 10.5, 09.8, 07.9, 05.5, 04.9, 04.5, 03.5, 02.9, 02.3, 00.7, 00.3, 99.10 
 
 ## **<mark>246</mark>** CSMA/CD 방식 
+Phần “**<mark>246</mark>** CSMA/CD 방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 채널의 사용권을 서로 경쟁하여 확보하는 방식으로 노 드 간의 충돌을 허용하는 네트워크 접근 방식이다. 
 
@@ -3781,6 +3925,8 @@ www.sinagong.co.kr
 핵심 13.3, 12.8, 07.3, 06.5, 06.3, 05.5, 05.3, 04.9, 04.3, 03.5, 02.3, 01.9, 01.3, 00.3, 99.10 
 
 ## **<mark>247</mark>** VAN(부가 가치 통신망) 
+Phần “**<mark>247</mark>** VAN(부가 가치 통신망)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 공중 통신 사업자로부터 통신 회선을 임대하여 하나의 사설망을 구축하고 이를 통해 정보의 축적, 가공, 변환 처리 등 부가 가치를 첨가한 후 불특정 다수를 대상으 로 서비스를 제공하는 통신망이다. 
 
@@ -3793,6 +3939,8 @@ www.sinagong.co.kr
 핵심 06.9, 06.3, 01.3, 00.7 
 
 ## **<mark>248</mark>** ISDN(종합 정보 통신망) 
+Phần “**<mark>248</mark>** ISDN(종합 정보 통신망)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통신 방식 및 전송로가 모두 디지털 방식이다. 
 
@@ -3813,6 +3961,8 @@ www.sinagong.co.kr
 핵심 14.8, 13.8, 13.3, 12.3, 11.6, 10.3, 09.8, 09.3, 08.9, 08.5, 07.9, 04.9, 04.3, 03.8, 03.3, 02.9, 00.7 
 
 ## **<mark>249</mark>** 인터넷의 주소 체계 
+Phần “**<mark>249</mark>** 인터넷의 주소 체계” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - IP 주소 : 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위한 고유한 주소로, 숫자로 8비트씩 4부분, 총 32비트 로 구성되며, A ~ E 클래스까지 총 5단계로 구성된다. 
 
@@ -3862,6 +4012,8 @@ www.sinagong.co.kr
 핵심 12.5, 10.5, 08.5, 05.5, 05.4, 05.3, 04.5, 04.3, 03.5, 02.5, 01.9, 01.6, 01.3, 00.7, 00.3 
 
 ## **<mark>250</mark>** 네트워크 관련 장비 
+Phần “**<mark>250</mark>** 네트워크 관련 장비” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 허브(Hub) : 한 사무실이나 가까운 거리의 컴퓨터들을 연 결하는 장치로, 각 회선을 통합적으로 관리하며, 신호 재 생 기능을 하는 리피터의 역할도 포함함 
 
@@ -3874,12 +4026,16 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 게이트웨이(Gateway) : 프로토콜 구조가 전혀 다른 네트 워크의 연결을 수행하는 장비로, 세션 계층, 표현 계층, 응용 계층 간을 연결하여 데이터 형식 변환, 주소 변환, 프로토콜 변환 등을 수행함 
 
 핵심 12.8, 12.3, 09.8, 09.3, 06.9, 06.5, 06.3, 05.5, 05.4, 05.3, 04.5, 03.3, 01.6, 99.8 
 
 ## **<mark>251</mark>** 통신 프로토콜 
+Phần “**<mark>251</mark>** 통신 프로토콜” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정의 : 서로 다른 기기들 간의 데이터 교환을 원활하게 수행할 수 있도록 표준화시켜 놓은 통신 규약 
 
@@ -3890,6 +4046,8 @@ www.sinagong.co.kr
 06.5, 06.3, 05.9, 05.4, 05.3, 04.9, 04.5, 04.3, 03.8, 03.5, 02.9, 02.5, 01.9, 01.3 핵심 14.5, 14.3, 13.8, 13.3, 12.8, 12.5, 12.3, 11.8, 11.3, 10.9, 10.5, 10.3, 09.8, 09.3, 08.9, 08.5, 08.3, 07.9, 07.5, 07.3, 06.9, 
 
 ## **<mark>252</mark>** OSI 참조 모델 
+Phần “**<mark>252</mark>** OSI 참조 모델” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 다른 시스템 간의 원활한 통신을 위해 ISO(국제표준화 기구)에서 제안한 통신 규약(Protocol)이다. 
 
@@ -3941,6 +4099,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>254</mark>** TCP/IP 
+Phần “**<mark>254</mark>** TCP/IP” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터넷에 연결된 서로 다른 기종의 컴퓨터들이 데이터 를 주고받을 수 있도록 하는 표준 프로토콜이다. 
 
@@ -3960,6 +4120,8 @@ www.sinagong.co.kr
 핵심 14.5, 14.3, 13.8, 12.8, 12.5, 12.3, 11.8, 11.6, 10.9, 10.5, 10.3, 09.8, 09.5, 08.9, 07.3, 06.3, 05.4, 04.9, 04.5, 02.9, 99.8, 
 
 ## **<mark>253</mark>** X.25 
+Phần “**<mark>253</mark>** X.25” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 패킷 교환망을 통한 DCE와 DTE 간의 인터페이스를 제공한다. 
 
@@ -3990,6 +4152,8 @@ www.sinagong.co.kr
 x네트워크 액세스 계층을 물리 계층과 데이터 링크 계층으로 세분화 하여 물리 계층, 데이터 링크 계층, 인터넷 계층, 전송 계층, 응용 계 층 이렇게 5계층으로 구분하기도 합니다. 
 
 ###### • 주요 프로토콜 
+Phần “• 주요 프로토콜” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||• OSI 7계층의 트랜스포트(전송) 계층에 해당<br>• 신뢰성(안정성) 있는 연결형 서비스를 제공함|
 |---|---|
@@ -4091,6 +4255,8 @@ www.sinagong.co.kr
 소프트웨어 공학(SE; Software Engineering)은 소프트 웨어의 위기를 극복하기 위한 방안으로 연구된 학문이며 여러 가지 방법론과 도구, 관리 기법들을 통하여 소프트 웨어의 품질과 생산성 향상을 목적으로 한다. 
 
 ###### 소프트웨어 공학의 기본 원칙 
+Phần “소프트웨어 공학의 기본 원칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 현대적인 프로그래밍 기술을 계속적으로 적용해야 한다. 
 
@@ -4168,6 +4334,8 @@ www.sinagong.co.kr
 **4** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 애자일 모형은 기업 활동 전반에 걸쳐 사용된다. 
 
@@ -4192,12 +4360,16 @@ www.sinagong.co.kr
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### 스크럼 마스터(SM; Scrum Master) 
+Phần “스크럼 마스터(SM; Scrum Master)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 스크럼 팀이 스크럼을 잘 수행할 수 있도록 객관적인 시각에서 조언을 해주는 가이드 역할을 수행한다. 팀원 들을 통제하는 것이 목표가 아니다. 
 
 - 일일 스크럼 회의를 주관하여 진행 사항을 점검하고, 개 발 과정에서 발생된 장애 요소를 공론화하여 처리한다. 
 
 ###### 개발팀(DT; Development Team) 
+Phần “개발팀(DT; Development Team)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 제품 책임자와 스크럼 마스터를 제외한 모든 팀원으로, 개발자 외에도 디자이너, 테스터 등 제품 개발을 위해 참여하는 모든 사람이 대상이 된다. 
 
@@ -4246,6 +4418,8 @@ www.sinagong.co.kr
 2400202<br><!-- End of picture text -->
 
 ###### 22.3 
+Phần “22.3” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |제품 백로그<br>(Product Backlog)|제품 개발에 필요한 모든 요구사항(User<br>Story)을 우선순위에 따라 나열한 목록|
 |---|---|
@@ -4317,6 +4491,8 @@ XP(eXtreme Programming)는 수시로 발생하는 고객의 요구사항에 유�
 2400401<br><!-- End of picture text -->
 
 ### 21.3 핵심 **<mark>011</mark>** 현행 시스템 파악 
+Phần “21.3 핵심 **<mark>011</mark>** 현행 시스템 파악” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |단계|현행 시스템|내용|
 |---|---|---|
@@ -4435,6 +4611,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 요구사항은 소프트웨어가 어떤 문제를 해결하기 위해 제 공하는 서비스에 대한 설명과 정상적으로 운영되는데 필 요한 제약조건 등을 나타낸다. 
 
 ###### 요구사항의 유형 
+Phần “요구사항의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |유형|내용|
 |---|---|
@@ -4495,6 +4673,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 ### 핵심 **<mark>017</mark>** 
 
 ###### 요구사항 명세 기법 
+Phần “요구사항 명세 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |구분|정형 명세 기법|비정형 명세 기법|
 |---|---|---|
@@ -4620,6 +4800,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 요구사항 분석을 위한 자동화 도구는 요구사항을 자동으 로 분석하고, 요구사항 분석 명세서를 기술하도록 개발된 도구를 의미한다. 
 
 ###### 종류 
+Phần “종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SADT(Structured Analysis and Design Technique) 
 
@@ -4638,6 +4820,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - PSL/PSA 
 
@@ -4694,6 +4878,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 - 시스템의 기능을 여러 개의 고유 모듈들로 분할하여 이 들 간의 인터페이스를 계층 구조로 표현한 것을 HIPO Chart라고 한다. 
 
 ###### HIPO Chart의 종류 
+Phần “HIPO Chart의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 가시적 도표(도식 목차) : 시스템의 전체적인 기능과 흐름 을 보여주는 계층(Tree) 구조도 
 
@@ -4783,6 +4969,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • 행위(Behavioral) 다이어그램의 종류 
+Phần “• 행위(Behavioral) 다이어그램의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |유스케이스<br>다이어그램<br>(Use Case<br>Diagram)|• 사용자의 요구를 분석하는 것으로 기능 모<br>델링 작업에 사용함<br>• 사용자(Actor)와 사용 사례(Use Case)로 구<br>성되며, 사용 사례 간에는 여러 형태의 관<br>계로 이루어짐|
 |---|---|
@@ -4925,6 +5113,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ###### 사용자 인터페이스(UI)의 특징 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 만족도에 가장 큰 영향을 미치는 중요한 요소 로, 소프트웨어 영역 중 변경이 가장 많이 발생한다. 
 
@@ -4958,6 +5148,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ###### 사용자 인터페이스의 구분 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CLI(Command Line Interface) : 명령과 출력이 텍스트 형 태로 이뤄지는 인터페이스 
 
@@ -4990,6 +5182,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 2401106<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 입력을 검증할 수 있어야 한다. 
 
@@ -5020,6 +5214,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ### 20.8, 20.6 핵심 **<mark>032</mark>** 사용자 인터페이스의 기본 원칙 
 
 ### **<mark>032</mark>** 
+Phần “**<mark>032</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 직관성 : 누구나 쉽게 이해하고 사용할 수 있어야 한다. 
 
@@ -5039,6 +5235,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ### **<mark>033</mark>** 
 
 ###### 사용자 인터페이스의 설계 지침 
+Phần “사용자 인터페이스의 설계 지침” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자 중심 : 사용자가 쉽게 이해하고 편리하게 사용할 수 있는 환경을 제공하며, 실사용자에 대한 이해가 바 탕이 되어야 한다. 
 
@@ -5075,6 +5273,8 @@ UI 설계 도구는 사용자의 요구사항에 맞게 UI의 화면 구 조나 
 - 스토리보드 툴 : 파워포인트, 키노트, 스케치, Axure 등 
 
 ###### 프로토타입(Prototype) 
+Phần “프로토타입(Prototype)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로토타입은 와이어프레임이나 스토리보드 등에 인터 랙션을 적용함으로써 실제 구현된 것처럼 테스트가 가 능한 동적인 형태의 모형이다. 
 
@@ -5142,6 +5342,8 @@ UI 설계 도구는 사용자의 요구사항에 맞게 UI의 화면 구 조나 
 ###### UI 요소 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 체크 박스(Check Box) : 여러 개의 선택 상황에서 1개 이 상의 값을 선택할 수 있는 버튼임 
 
@@ -5312,6 +5514,8 @@ Pipe1 Pipe2 Pipe3 SourceInput Filter1 Filter2 SinkInput
 ###### 21.8 
 
 ### 핵심 **<mark>045</mark>** 기타 패턴 
+Phần “핵심 **<mark>045</mark>** 기타 패턴” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 마스터 컴포넌트에서 슬레이브 컴포넌트로 작 
 
@@ -5360,6 +5564,8 @@ Pipe1 Pipe2 Pipe3 SourceInput Filter1 Filter2 SinkInput
 #### 정보처리기사 필기 핵심 요약 
 
 ###### • 객체의 특성 
+Phần “• 객체의 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 객체는 독립적으로 식별 가능한 이름을 가지고 있다. 
 
@@ -5633,6 +5839,8 @@ Pipe1 Pipe2 Pipe3 SourceInput Filter1 Filter2 SinkInput
 2402504<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 팬인은 어떤 모듈을 제어(호출)하는 모듈의 수를 나타 낸다. 
 
@@ -5745,6 +5953,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ### 22.3, 21.3, 20.9, 20.8 핵심 **<mark>061</mark>** 효과적인 모듈 설계 방안 
 
 ### **<mark>061</mark>** 
+Phần “**<mark>061</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 결합도는 줄이고 응집도는 높여서 모듈의 독립성과 재 사용성을 높인다. 
 
@@ -5857,6 +6067,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ###### 디자인 패턴 사용의 장·단점 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 범용적인 코딩 스타일로 인해 구조 파악이 용이하다. 
 
@@ -6054,6 +6266,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ### **<mark>069</mark>** 
 
 ###### 요구사항 검증 방법 
+Phần “요구사항 검증 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 요구사항 검토(Requirements Review) : 요구사항 명세서 의 오류 확인 및 표준 준수 여부 등의 결함 여부를 검토 담당자들이 수작업으로 분석하는 방법으로, 동료검토, 워크스루, 인스펙션 등이 있음 
 
@@ -6082,6 +6296,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ###### 21.3 
 
 ### 핵심 **<mark>070</mark>** 시스템 연계 기술 
+Phần “핵심 **<mark>070</mark>** 시스템 연계 기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |DB Link|DB에서 제공하는 DB Link 객체를 이용하는 방식|
 |---|---|
@@ -6180,6 +6396,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 #### 2 과목 
 
 ##### 소프트웨어 개발 
+Phần “소프트웨어 개발” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**073**<br>핵심<br>22.3, 21.8, 21.3|자료 구조의 분류|2403602|
 |---|---|---|
@@ -6397,6 +6615,8 @@ A
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### Inorder 운행법의 방문 순서 
+Phần “Inorder 운행법의 방문 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶ Inorder는 Left → Root → Right이므로 1A3이 된다. 
 
@@ -6424,6 +6644,8 @@ A<br>B C<br>D E F G<br>H I<br><!-- End of picture text -->
 - 방문 순서 : HDIBEAFCG 
 
 ###### Postorder 
+Phần “Postorder” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Postorder는 Left → Right → Root이므로 13A가 된다. 
 
@@ -6443,14 +6665,20 @@ A<br>B C<br>D E F G<br>H I<br><!-- End of picture text -->
 ###### 21.5, 21.3, 20.9 핵심 
 
 ### **<mark>080</mark>** 수식의 표기법 
+Phần “**<mark>080</mark>** 수식의 표기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - + 
 
 ###### A 
+Phần “A” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - B 
 
 ###### Preorder 운행법의 방문 순서 
+Phần “Preorder 운행법의 방문 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ※  서브 트리를 하나의 노드로 생각할 수 있도록 그림 과 같이 서브트리 단위로 묶는다. Preorder, Inorder, Postorder 모두 공통으로 사용한다. 
 
@@ -6496,6 +6724,8 @@ Postfix나 Prefix는 스택을 이용하여 처리하므로 Infix는 Postfix나 
 **27** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❸ 필요없는 괄호를 제거한다. 
 
@@ -6729,6 +6959,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 2403902<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제산법(Division) : 레코드 키(K)를 해시표(Hash Table) 의 크기보다 큰 수 중에서 가장 작은 소수(Prime, Q)로 나눈 나머지를 홈 주소로 삼는 방식, 즉 h(K) = K mod Q임 
 
@@ -6757,6 +6989,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 2404004<br><!-- End of picture text -->
 
 ### 핵심 **<mark>090</mark>** DBMS의 장·단점 
+Phần “핵심 **<mark>090</mark>** DBMS의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•데이터의 논리적, 물리적 독립성이 보장됨<br>•데이터의 중복을 피할 수 있어 기억 공간이 절약됨<br>•저장된 자료를 공동으로 이용할 수 있음<br>•데이터의 일관성을 유지할 수 있음<br>•데이터의 무결성을 유지할 수 있음<br>•보안을 유지할 수 있음<br>•데이터를 표준화할 수 있음<br>•데이터를 통합하여 관리할 수 있음<br>•항상 최신의 데이터를 유지함<br>•데이터의 실시간 처리가 가능함|
 |---|---|
@@ -6839,6 +7073,8 @@ DBMS란 사용자와 데이터베이스 사이에서 사용자의 요구 에 따
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • IPC의 대표 메소드 5가지 
+Phần “• IPC의 대표 메소드 5가지” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Shared<br>Memory|다수의 프로세스가 공유 가능한 메모리를 구성하<br>여 프로세스 간 통신을 수행|
 |---|---|
@@ -7054,6 +7290,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ###### 패키징 시 고려사항 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 시스템 환경, 즉 운영체제(OS), CPU, 메모리 등에 필요한 최소 환경을 정의한다. 
 
@@ -7141,6 +7379,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 2404803<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 클리어링 하우스(Clearing House) : 저작권에 대한 사용 권한, 라이선스 발급, 암호화된 키 관리, 사용량에 따른 결제 관리 등을 수행하는 곳 
 
@@ -7291,6 +7531,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ### 핵심 **<mark>110</mark>** 
 
 ###### 형상 관리의 중요성 
+Phần “형상 관리의 중요성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 지속적인 소프트웨어의 변경 사항을 체계적으로 추적 하고 통제할 수 있다. 
 
@@ -7320,6 +7562,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ###### 형상 관리 기능 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형상 식별 : 형상 관리 대상에 이름과 관리 번호를 부여 하고, 계층(Tree) 구조로 구분하여 수정 및 추적이 용이 하도록 하는 작업 
 
@@ -7379,6 +7623,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ###### 21.5, 20.8 
 
 ### 2405104 소프트웨어의 버전 등록 관련 핵심 **<mark>112</mark>** 주요 기능 
+Phần “2405104 소프트웨어의 버전 등록 관련 핵심 **<mark>112</mark>** 주요 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -7587,6 +7833,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ### 2405501 프로그램 실행 여부에 따른 핵심 **<mark>123</mark>** 테스트 
+Phần “2405501 프로그램 실행 여부에 따른 핵심 **<mark>123</mark>** 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -7604,6 +7852,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2405502<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |명세 기반<br>테스트|• 사용자의 요구사항에 대한 명세를 빠짐없이 테스트<br>케이스로 만들어 구현하고 있는지 확인하는 테스트<br>• 종류 : 동등 분할, 경계 값 분석 등|
 |---|---|
@@ -7640,6 +7890,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 21.8 
 
 ### 핵심 **<mark>126</mark>** 목적에 따른 테스트 
+Phần “핵심 **<mark>126</mark>** 목적에 따른 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |회복<br>(Recovery)<br>테스트|시스템에 여러 가지 결함을 주어 실패하도록 한<br>후 올바르게 복구되는지를 확인하는 테스트|
 |---|---|
@@ -7683,6 +7935,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 화이트박스 테스트의 종류 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 대표적인 화이트박스 테스트 기법 
 
@@ -7717,6 +7971,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 
 
 ### 핵심 **<mark>129</mark>** 
+Phần “핵심 **<mark>129</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |문장 검증 기준<br>(Statement<br>Coverage)|소스 코드의 모든 구문이 한 번 이상 수행되도록<br>테스트 케이스 설계|
 |---|---|
@@ -7755,6 +8011,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 21.5, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>131</mark>** 블랙박스 테스트의 종류 
+Phần “핵심 **<mark>131</mark>** 블랙박스 테스트의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |동치 분할 검사<br>(Equivalence<br>Partitioning<br>Testing,<br>동치 클래스<br>분해)|• 입력 자료에 초점을 맞춰 테스트 케이스(동치<br>클래스)를 만들고 검사하는 방법으로 동등 분<br>할 기법이라고도 함<br>• 프로그램의 입력 조건에 타당한 입력 자료와<br>타당하지 않은 입력 자료의 개수를 균등하게<br>하여 테스트 케이스를 정하고, 해당 입력 자료<br>에 맞는 결과가 출력되는지 확인하는 기법|
 |---|---|
@@ -8027,6 +8285,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 22.7 
 
 ### 핵심 **<mark>145</mark>** 테스트 오라클의 종류 
+Phần “핵심 **<mark>145</mark>** 테스트 오라클의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |참(True)<br>오라클|모든 테스트 케이스의 입력 값에 대해 기대하는 결<br>과를 제공하는 오라클로, 발생된 모든 오류를 검출<br>할 수 있음|
 |---|---|
@@ -8052,6 +8312,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 테스트 자동화는 사람이 반복적으로 수행하던 테스트 절 차를 스크립트 형태로 구현하는 자동화 도구를 적용함으로 써 쉽고 효율적으로 테스트를 수행할 수 있도록 한 것이다. 
 
 ###### 테스트 자동화 도구의 유형 
+Phần “테스트 자동화 도구의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |정적 분석 도구<br>(Static Analysis<br>Tools)|프로그램을 실행하지 않고 분석하는 도구로, 소<br>스 코드에 대한 코딩 표준, 코딩 스타일, 코드<br>복잡도 및 남은 결함 등을 발견하기 위해 사용<br>된다.|
 |---|---|
@@ -8088,6 +8350,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2406131<br><!-- End of picture text -->
 
 ### 핵심 **<mark>147</mark>** 
+Phần “핵심 **<mark>147</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테스트 드라이버(Test Driver) : 테스트 대상의 하위 모듈 을 호출하고, 매개변수(Parameter)를 전달하고, 모듈 테스트 수행 후의 결과를 도출하는 도구 
 
@@ -8397,6 +8661,8 @@ JSON은 속성-값 쌍(Attribute-Value Pairs)으로 이루 어진 데이터 객�
 ###### 데이터 무결성 검사 도구 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 무결성 검사 도구는 시스템 파일의 변경 유무를 확인하고, 파일이 변경되었을 경우 이를 관리자에게 알 려주는 도구로, 인터페이스 보안 취약점을 분석하는데 사용된다. 
 
@@ -8431,6 +8697,8 @@ JSON은 속성-값 쌍(Attribute-Value Pairs)으로 이루 어진 데이터 객�
 ### 22.7, 21.5, 20.9, 20.8 핵심 **<mark>161</mark>** 인터페이스 구현 검증 도구 
 
 ### **<mark>161</mark>** 
+Phần “**<mark>161</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터페이스 구현을 검증하기 위해서는 인터페이스 단 위 기능과 시나리오 등을 기반으로 하는 통합 테스트가 필요하다. 
 
@@ -8483,6 +8751,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 2407603<br><!-- End of picture text -->
 
 ### 핵심 **<mark>163</mark>** 데이터베이스 설계 순서 
+Phần “핵심 **<mark>163</mark>** 데이터베이스 설계 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |요구 조건 분석<br>개념적 설계<br>논리적 설계|요구 조건 명세서 작성<br>개념 스키마, 트랜잭션 모델링, E-R 모델<br>목표 DBMS에 맞는 논리 스키마 설계, 트랜잭션<br>인터페이스 설계|
 |---|---|
@@ -8569,6 +8839,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 데이터 모델은 현실 세계의 정보들을 컴퓨터에 표현하기 위해서 단순화, 추상화하여 체계적으로 표현한 개념적 모 형이다. 
 
 ###### 데이터 모델의 구성 요소 
+Phần “데이터 모델의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |개체<br>(Entity)|데이터베이스에 표현하려는 것으로, 사람이 생각<br>하는 개념이나 정보 단위 같은 현실 세계의 대상체|
 |---|---|
@@ -8585,6 +8857,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 #### 정보처리기사 필기 핵심 요약 
 
 ###### 데이터 모델에 표시할 요소 
+Phần “데이터 모델에 표시할 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |구조<br>(Structure)|논리적으로 표현된 개체 타입들 간의 관계로서 데이<br>터 구조 및 정적 성질을 표현함|
 |---|---|
@@ -8680,6 +8954,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 #### 정보처리기사 필기 핵심 요약 
 
 ###### 튜플(Tuple) 
+Phần “튜플(Tuple)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 튜플은 릴레이션을 구성하는 각각의 행을 말한다. 
 
@@ -8742,6 +9018,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ### **<mark>172</mark>** 
 
 ###### 릴레이션의 특징 
+Phần “릴레이션의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 릴레이션에는 똑같은 튜플이 포함될 수 없으므로 릴 레이션에 포함된 튜플들은 모두 상이하다. 
 
@@ -8778,6 +9056,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 **50** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 릴레이션 내에 있는 속성들의 집합으로 구성된 키로서 릴레이션을 구성하는 모든 튜플들 중 슈퍼 
 
@@ -8886,6 +9166,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ###### 21.8, 21.5 
 
 ### 핵심 **<mark>177</mark>** 일반 집합 연산자 
+Phần “핵심 **<mark>177</mark>** 일반 집합 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |연산자|기능 및 수학적 표현|카디널리티|
 |---|---|---|
@@ -8963,6 +9245,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ### **<mark>180</mark>** 
 
 ###### 정규화의 목적 
+Phần “정규화의 목적” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 구조의 안정성 및 무결성을 유지한다. 
 
@@ -9085,6 +9369,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 ### 핵심 **<mark>185</mark>** 
 
 ###### 반정규화 방법 
+Phần “반정규화 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 두 개의 테이블이 조인(Join)되는 경우가 많아 하나의 테이블로 합쳐 사용하는 것이 성능 향상에 도움이 
 
@@ -9177,6 +9463,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 ### **<mark>188</mark>** 
 
 ###### 트랜잭션의 상태 
+Phần “트랜잭션의 상태” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 활동(Active) : 트랜잭션이 실행 중인 상태 
 
@@ -9204,6 +9492,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 22.7, 22.4, 21.8, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>189</mark>** 트랜잭션의 특성 
+Phần “핵심 **<mark>189</mark>** 트랜잭션의 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 트랜잭션의 연산은 데이터베이스에 모두 반영되 도록 완료(Commit)되든지 아니면 전혀 반영되지 않도록 복구(Rollback)되어야 함 
 
@@ -9269,6 +9559,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 > 핵심 **<mark>192</mark>** 
 
 ###### 인덱스의 종류 
+Phần “인덱스의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |트리 기반<br>인덱스|인덱스를 저장하는 블록들이 트리 구조를 이루고 있<br>는 것으로, 상용 DBMS에서는 트리 구조 기반의 B+<br>트리 인덱스를 주로 활용함|
 |---|---|
@@ -9299,6 +9591,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 뷰는 데이터 보정 작업, 처리 과정 시험 등 임시적인 작 업을 위한 용도로 활용된다. 
 
 ###### 뷰(View)의 특징 
+Phần “뷰(View)의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 뷰는 기본 테이블로부터 유도된 테이블이기 때문에 기 본 테이블과 같은 형태의 구조를 사용하며, 조작도 기 본 테이블과 거의 같다. 
 
@@ -9317,6 +9611,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 뷰를 정의할 때는 CREATE문, 제거할 때는 DROP문을 사용한다. 
 
 ###### 뷰(View)의 장·단점 
+Phần “뷰(View)의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•논리적 데이터 독립성을 제공함<br>• 동일 데이터에 대해 동시에 여러 사용자의 상이한 응용<br>이나 요구를 지원해 줌<br>•사용자의 데이터 관리를 간단하게 해줌<br>•접근 제어를 통한 자동 보안이 제공됨|
 |---|---|
@@ -9338,6 +9634,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 대용량 DB의 경우 중요한 몇 개의 테이블에만 집중되 어 데이터가 증가되므로, 이런 테이블들을 작은 단위로 나눠 분산시키면 성능 저하를 방지할 뿐만 아니라 데이 터 관리도 쉬워진다. 
 
 ###### 파티션의 종류 
+Phần “파티션의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |범위 분할<br>(Range<br>Partitioning)|지정한 열의 값을 기준으로 범위를 지정하여 분할<br>함<br>일별, 월별, 분기별 등|
 |---|---|
@@ -9366,6 +9664,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 #### 정보처리기사 필기 핵심 요약 
 
 ###### • 분산 데이터베이스의 구성 요소 
+Phần “• 분산 데이터베이스의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |분산 처리기|자체적으로 처리 능력을 가지며, 지리적으로 분산<br>되어 있는 컴퓨터 시스템|
 |---|---|
@@ -9405,6 +9705,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 ###### 분산 데이터베이스의 목표 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 위치 투명성(Location Transparency) : 액세스하려는 데 이터베이스의 실제 위치를 알 필요 없이 단지 데이터베 이스의 논리적인 명칭만으로 액세스할 수 있음 
 
@@ -9424,6 +9726,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 ### **<mark>197</mark>** 분산 데이터베이스의 장·단점 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•지역 자치성이 높음<br>•자료의 공유성이 향상됨<br>•분산 제어가 가능함<br>•시스템 성능이 향상됨<br>• 중앙 컴퓨터의 장애가 전체 시스템에 영향을 끼치지 않음<br>•효용성과 융통성이 높음<br>•신뢰성 및 가용성이 높음<br>•점진적 시스템 용량 확장이 용이함|
 |---|---|
@@ -9538,6 +9842,8 @@ DAS는 서버와 저장장치를 전용 케이블로 직접 연결하는 방식�
 2410231<br><!-- End of picture text -->
 
 ###### 벨 라파듈라 모델(Bell-LaPadula Model) 
+Phần “벨 라파듈라 모델(Bell-LaPadula Model)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 군대의 보안 레벨처럼 정보의 기밀성에 따라 상하 관계 가 구분된 정보를 보호하기 위해 사용한다. 
 
@@ -9561,6 +9867,8 @@ DAS는 서버와 저장장치를 전용 케이블로 직접 연결하는 방식�
 ### **<mark>202</mark>** 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - NAS는 서버와 저장장치를 네트워크를 통해 연결하는 방식이다. 
 
@@ -9753,6 +10061,8 @@ ALTER TABLE 테이블명 ADD 속성명 데이터_타입  [DEFAULT ‘기 본값�
 > 예제 2 <학생> 테이블의 ‘학번’ 필드의 데이터 타입과 크기 를 VARCHAR(10)으로 하고 NULL 값이 입력되지 않도 록 변경하시오. 
 
 ###### ALTER TABLE 학생 ALTER 학번 VARCHAR(10) NOT NULL; 
+Phần “ALTER TABLE 학생 ALTER 학번 VARCHAR(10) NOT NULL;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - FOREIGN KEY ~ REFERENCES ~ 
 
@@ -9884,6 +10194,8 @@ DCL(데이터 제어어)는 데이터의 보안, 무결성, 회복, 병 행 제�
 > 예제 2 사용자 ID가 “STAR”인 사람에게 단순히 데이터베 이스에 있는 정보를 검색할 수 있는 권한을 부여하는 SQL 문을 작성하시오. 
 
 ###### GRANT CONNECT TO STAR; 
+Phần “GRANT CONNECT TO STAR;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테이블 및 속성에 대한 권한 부여 및 취소 
 
@@ -9930,6 +10242,8 @@ INSERT INTO 테이블명([속성명1, 속성명2,…]) VALUES (데이터1, 데�
 - SELECT문을 사용하여 다른 테이블의 검색 결과를 삽 입할 수 있다. 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -9971,12 +10285,16 @@ INSERT INTO 테이블명([속성명1, 속성명2,…]) VALUES (데이터1, 데�
 ###### 일반 형식 
 
 ###### DELETE FROM 테이블명 [WHERE 조건]; 
+Phần “DELETE FROM 테이블명 [WHERE 조건];” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모든 레코드를 삭제할 때는 WHERE절을 생략한다. 
 
 - 모든 레코드를 삭제하더라도 테이블 구조는 남아 있기 때문에 디스크에서 테이블을 완전히 제거하는 DROP과 는 다르다. 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -10029,6 +10347,8 @@ INSERT INTO 편집부원(이름, 생일, 주소, 기본급) SELECT 이름, 생�
 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE 조건]; 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -10087,6 +10407,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 ### **<mark>217</mark>** 
 
 ### 핵심 **<mark>217</mark>** 데이터 조작문의 네 가지 유형 
+Phần “핵심 **<mark>217</mark>** 데이터 조작문의 네 가지 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SELECT(검색) : SELECT~ FROM~ WHERE~ 
 
@@ -10116,6 +10438,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 ###### <사원> 
 
 ###### <여가활동> 
+Phần “<여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -10135,6 +10459,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 SELECT DISTINCT 주소 FROM 사원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |주소<br>대흥동<br>망원동|
 |---|
@@ -10150,6 +10476,8 @@ SELECT DISTINCT 주소 FROM 사원;
 SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름<br>성춘향|부서<br>기획|생일<br>02/20/64|주소<br> 대흥동|기본급<br>100|
 |---|---|---|---|---|
@@ -10177,6 +10505,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 ###### 조건 연산자 
 
 ###### • 비교 연산자 
+Phần “• 비교 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |연산자||의미|
 |---|---|---|
@@ -10202,6 +10532,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 
 
 ###### 연산자 우선순위 
+Phần “연산자 우선순위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종류|연산자||우선순위|
 |---|---|---|---|
@@ -10220,6 +10552,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 ###### <사원> 
 
 ###### <여가활동> 
+Phần “<여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -10239,6 +10573,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 SELECT * FROM 사원 WHERE 이름 LIKE “김%”; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -10262,6 +10598,8 @@ SELECT * FROM 사원 WHERE 이름 LIKE “김%”;
 하위 질의는 조건절에 주어진 질의를 먼저 수행하여 그 검 색 결과를 조건절의 피연산자로 사용한다. 
 
 ###### <사원> <여가활동> 
+Phần “<사원> <여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -10290,6 +10628,8 @@ SELECT 이름, 주소 FROM 사원
 WHERE 이름 =  (SELECT 이름 FROM 여가활동 WHERE 취미 = ‘나이트댄스’) ; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름<br>성춘향|주소<br>대흥동|
 |---|---|
@@ -10303,6 +10643,8 @@ SELECT 부서 FROM 사원
 WHERE EXISTS  (SELECT 이름 FROM 여가활동 WHERE 여가활 동.이름 = 사원.이름); 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서<br>인터넷<br>편집<br>기획<br>기획|
 |---|
@@ -10337,6 +10679,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 그룹함수 : GROUP BY절에 지정된 그룹별로 속성의 값 을 집계할 함수를 기술함 
 
@@ -10376,6 +10720,8 @@ GROUP BY절에 지정된 그룹별로 속성의 값을 집계할 때 사용된�
 - VARIANCE(속성명) : 그룹별 분산을 구하는 함수 
 
 ###### <상여금> 
+Phần “<상여금>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서|이름|상여내역|상여금|
 |---|---|---|---|
@@ -10399,6 +10745,8 @@ GROUP BY절에 지정된 그룹별로 속성의 값을 집계할 때 사용된�
 SELECT 부서, COUNT(*) AS 사원수 FROM 상여금 WHERE 상여금 >= 100 GROUP BY 부서 HAVING COUNT(*) >= 2; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서<br>사원수<br>기획<br>3|
 |---|
@@ -10437,6 +10785,8 @@ SELECT 속성명1, 속성명2, … FROM 테이블명 UNION | UNION ALL | INTERSE
 ###### <사원> 
 
 ###### <직원> 
+Phần “<직원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|사원|직급|
 |---|---|---|---|
@@ -10476,6 +10826,8 @@ INNER JOIN은 일반적으로 EQUI JOIN과 NON-EQUI JOIN으로 구분된다.
 SELECT * FROM 사원 UNION SELECT * FROM 직원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|
 |---|---|
@@ -10493,6 +10845,8 @@ SELECT * FROM 사원 UNION SELECT * FROM 직원;
 SELECT * FROM 사원 INTERSECT SELECT * FROM 직원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|
 |---|---|
@@ -10531,6 +10885,8 @@ SELECT [테이블명1.]속성명, [테이블명2.]속성명, … FROM 테이블�
 **67** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SELECT 학번, 이름, 학생.학과코드, 학과명 FROM 학생, 학과 WHERE 학생.학과코드 = 학과.학과코드; 
 
@@ -10539,6 +10895,8 @@ SELECT [테이블명1.]속성명, [테이블명2.]속성명, … FROM 테이블�
 - SELECT 학번, 이름, 학생.학과코드, 학과명 FROM 학생 JOIN 학과 USING(학과코드); 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |학번|이름|학과코드|학과명|
 |---|---|---|---|
@@ -10576,6 +10934,8 @@ ODBC(Open DataBase Connectivity)
 - ODBC도 접속하려는 DBMS에 맞는 드라이버가 필요하 지만, 접속하려는 DBMS의 인터페이스를 알지 못하더 라도 ODBC 문장을 사용하여 SQL을 작성하면 ODBC에 포함된 드라이버 관리자가 해당 DBMS의 인터페이스에 맞게 연결해 주므로 DBMS의 종류를 몰라도 된다. 
 
 ###### MyBatis 
+Phần “MyBatis” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - MyBatis는 JDBC 코드를 단순화하여 사용할 수 있는 SQL Mapping 기반 오픈 소스 접속 프레임워크이다. 
 
@@ -10704,6 +11064,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 오류 데이터 정제는 오류 관리 목록의 각 항목을 분석하여 원천 데이터를 정제하거나 전환 프로그램을 수정하는 것 이다. 
 
 ###### 오류 데이터 분석 
+Phần “오류 데이터 분석” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 오류 관리 목록의 오류 데이터를 분석하여 오류 상태, 심각도, 해결 방안을 확인 및 기재한다. 
 
@@ -10804,6 +11166,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 틀린 문제만 모아 오답 노트를 만들고 싶다고요? 까먹기 전에 다시 한 번 복습하고 싶다고요? 지금 당장 QR 코드를 스캔해 보세요. 
 
 ###### 20.8 
+Phần “20.8” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**233**<br>핵심|C/C++의 데이터<br>기억 범위|타입 크기|및|<br>400102|
 |---|---|---|---|---|
@@ -10887,6 +11251,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 - 변수는 저장하는 값에 따라 정수형, 실수형, 문자형, 포 인터형 등으로 구분한다. 
 
 ###### 변수명 작성 규칙 
+Phần “변수명 작성 규칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. 
 
@@ -10921,6 +11287,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 ### 가비지 콜렉터 **<mark>238</mark>** (Garbage Collector) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수를 선언만 하고 사용하지 않으면 이 변수들이 점유 한 메모리 공간은 다른 프로그램들이 사용할 수 없게 된다. 
 
@@ -11078,6 +11446,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 400408<br><!-- End of picture text -->
 
 ### 22.3, 21.8, 21.5 핵심 **<mark>245</mark>** 연산자 우선순위 
+Phần “22.3, 21.8, 21.5 핵심 **<mark>245</mark>** 연산자 우선순위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 개의 수식에 여러 개의 연산자가 사용되면 기본적으 로 아래 표의 순서대로 처리된다. 
 
@@ -11088,6 +11458,8 @@ RBO(Rule Based Optimizer)는 규칙 기반 옵티마이저이 고, CBO(Cost Base
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |대분류|중분류|연산자<br>결합규칙|우선 순위|
 |---|---|---|---|
@@ -11123,6 +11495,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 
 
 ###### 특징 
+Phần “특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 입력받을 데이터의 자료형, 자릿수 등을 지정할 수 있다. 
 
@@ -11138,6 +11512,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 2459933<br><!-- End of picture text -->
 
 ### 핵심 **<mark>247</mark>** 서식 문자열 
+Phần “핵심 **<mark>247</mark>** 서식 문자열” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |서식 문자열|의미|
 |---|---|
@@ -11193,10 +11569,14 @@ printf( ) 함수는 C언어의 표준 출력 함수로, 인수로 주어 진 값
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 -   printf("%-8.2f", 200.2); (∨는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -11222,6 +11602,8 @@ printf( ) 함수는 C언어의 표준 출력 함수로, 인수로 주어 진 값
 ###### JAVA에서의 표준 출력 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - JAVA에서 값을 화면에 출력할 때는 System 클래스의 서브 클래스인 out 클래스의 메소드 print( ), println( ), printf( ) 등을 사용하여 출력한다. 
 
@@ -11236,6 +11618,8 @@ System.out.printf(서식 문자열, 변수)
 -   System.out.printf(“%-8.2f”, 200.2); (V는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -11284,6 +11668,8 @@ System.out.print( )
 -  System.out.print(“abc123” + “def”); 
 
 ###### <mark>abc123def</mark> 
+Phần “<mark>abc123def</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식 3 : 값이나 변수의 내용을 형식없이 출력한 후 커 서를 다음 줄의 처음으로 이동함 
 
@@ -11490,6 +11876,8 @@ switch문은 조건에 따라 분기할 곳이 여러 곳인 경우 간 단하�
 실행할 문장3; 
 
 ###### } ❺ 
+Phần “} ❺” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - case문의 레이블에는 한 개의 상수만 지정할 수 있으 며, int, char, enum형의 상수만 가능하다. 
 
@@ -11602,6 +11990,8 @@ while문은 조건이 참인 동안 실행할 문장을 반복 수행하 는 제
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • 형식 
+Phần “• 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - while(조건) • while은 반복문에 사용되는 예약어로 그대로 입력 한다. 
 
@@ -11726,6 +12116,8 @@ main( ) { int a = 0, hap = 0; while(1) ❶ 조건이 참(1)이므로 무한 반�
 **79** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C 언어에서 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주소를 지정하는 것과 같다. 
 
@@ -11770,6 +12162,8 @@ main( ) { int a = 0, hap = 0; while(1) ❶ 조건이 참(1)이므로 무한 반�
 ###### 2차원 배열 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 2차원 배열은 변수들을 평면, 즉 행과 열로 조합한 배 열이다. 
 
@@ -11792,6 +12186,8 @@ b[0][2] : b는 배열의 이름이고, 0은 행 첨자, 2는 열 첨자로서 �
 > 예제 3행 4열의 배열에 다음과 같이 숫자 저장하기 
 
 #include <stdio.h> main( ) { 
+Phần “include <stdio.h> main( ) {” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다. 선언할 때는 사용할 개수를 선언하고, 사용할 때는 첨자를 0부터 사용하 므로 주의해야 한다. 
 
@@ -11849,6 +12245,8 @@ for (j = 0; j < 4; j++) ❸
 **80** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - { ❹ ❹~❼이 ❸번 반복문의 반복 범위이다. 
 
@@ -11877,6 +12275,8 @@ C언어에서는 큰따옴표(“ ”)로 묶인 글자는 글자 수에 관계 
 - 형식 
 
 ###### char 배열이름[크기] = “문자열” 
+Phần “char 배열이름[크기] = “문자열”” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 배열에 문자열을 저장하면 문자열의 끝을 알리기 위한 널 문자(‘\0’)가 문자열 끝에 자동으로 삽입된다. 
 
@@ -11890,6 +12290,8 @@ C언어에서는 큰따옴표(“ ”)로 묶인 글자는 글자 수에 관계 
 ### 20.6 핵심 **<mark>260</mark>** 배열의 초기화 
 
 ### **<mark>260</mark>** 
+Phần “**<mark>260</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 배열 선언 시 초기값을 지정할 수 있다. 
 
@@ -12086,6 +12488,8 @@ main( ) { int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다.
 **83** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||주소<br>0000<br>⋮<br>||메모<br>|리<br>|||
 |---|---|---|---|---|---|---|
@@ -12139,6 +12543,8 @@ main( ) { int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다.
 ###### Python의 기본 문법 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수의 자료형에 대한 선언이 없다. 
 
@@ -12162,6 +12568,8 @@ main( ) { int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다.
 401102<br><!-- End of picture text -->
 
 ###### input( ) 함수 
+Phần “input( ) 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - input( ) 함수는 Python의 표준 입력 함수로, 키보드로 입력받아 변수에 저장하는 함수이다. 
 
@@ -12178,6 +12586,8 @@ main( ) { int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다.
 -   a = input('입력하세요.' ) 화면에 입력하세요.가 출력 되고 그 뒤에서 커서가 깜빡거리며 입력을 기다린다. 키보드로 값을 입력하면 변수 a에 저장된다. 
 
 ###### print( ) 함수 
+Phần “print( ) 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식1 
 
@@ -12254,6 +12664,8 @@ input( ) 함수는 입력되는 값을 무조건 문자열로 저장하므 로, 
 ### 핵심 **<mark>268</mark>** 
 
 ###### 딕셔너리(Dictionary) 
+Phần “딕셔너리(Dictionary)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 딕셔너리는 연관된 값을 묶어서 저장하는 용도로 사용 한다. 
 
@@ -12273,6 +12685,8 @@ input( ) 함수는 입력되는 값을 무조건 문자열로 저장하므 로, 
 ###### 리스트(List) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C와 Java에서는 여러 요소들을 하나의 이름으로 처리 할 때 배열을 사용했는데 Python에서는 리스트를 사용 한다. 
 
@@ -12293,6 +12707,8 @@ input( ) 함수는 입력되는 값을 무조건 문자열로 저장하므 로, 
 - 형식 
 
 ###### 딕셔너리명 = { 키1:값1, 키2:값2, … } 
+Phần “딕셔너리명 = { 키1:값1, 키2:값2, … }” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 딕셔너리명은 사용자가 임의로 지정하며, 딕셔너리를 의 미하는 중괄호 사이에 저장할 값들을 쉼표로 구분하여 입 력한다. 
 
@@ -12372,6 +12788,8 @@ a = 15 if a > 10:  ❶ a가 10보다 크면 ❷번 문장을 실행하고, 아�
 ###### Python - for문 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식1 : range를 이용하는 방식이다. 
 
@@ -12404,6 +12822,8 @@ for 변수 in range(최종값): 0에서 ‘최종값’-1까지 연속 된 숫�
 ###### Python - if문 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식 
 
@@ -12455,6 +12875,8 @@ i += 1 ❸ i의 값을 1씩 증가시킨다. hap += i ❹ i의 값을 hap에 누
 ###### • 정의 형식 
 
 ###### 코드 해설 
+Phần “코드 해설” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  리스트 a를 선언하면서 초기값을 지정한다. 
 
@@ -12497,6 +12919,8 @@ def 메소드명(self, 인수):
 실행할 문장 
 
 ###### return 값 
+Phần “return 값” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - return은 메소드를 호출한 위치로 값을 돌려주기 위해 사용하는 예약 어로, 그대로 입력한다. return 값이 없는 경우에는 생략할 수 있다. 
 
@@ -12509,6 +12933,8 @@ def 메소드명(self, 인수):
 - ❺ hap을 리스트 a의 요소 수로 나눈 후 결과를 avg에 저장한다. 
 
 ###### • 객체의 선언 형식 
+Phần “• 객체의 선언 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - len(리스트) : 리스트의 요소 수를 구한다. len(a)는 5다. 
 
@@ -12526,6 +12952,8 @@ def 메소드명(self, 인수):
 ###### Python - While문 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식 
 
@@ -12542,6 +12970,8 @@ while 조건:
 i, hap = 0, 0 ❶ i와 hap을 0으로 초기화한다. while i < 5: ❷ i가 5보다 작은 동안 ❸, ❹번 문장을 반복하 여 수행한다. 
 
 ###### 변수명 = 클래스명( ) 
+Phần “변수명 = 클래스명( )” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수명은 사용자가 임의로 지정하고, 사전에 정의한 클래스명과 괄호( )를 적는다. 
 
@@ -12574,6 +13004,8 @@ x, y = 10, 20 Cls 클래스의 변수(속성) x와 y를 선언하고, 각 각 10
 #### 정보처리기사 필기 핵심 요약 
 
 ###### 코드 해설 
+Phần “코드 해설” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Cls 클래스의 객체 a를 생성한다. 객체 a는 Cls의 속성 x, y와 메소드 chg( )를 갖 는다. 
 
@@ -12686,6 +13118,8 @@ a, b = 3, 12  ❶ 변수 a와 b에 3과 12를 저장한다. a = calc(a, b)  ❷<
 401604<br><!-- End of picture text -->
 
 ### 21.8, 21.5, 20.8, 20.6 핵심 **<mark>277</mark>** 스크립트 언어의 종류 
+Phần “21.8, 21.5, 20.8, 20.6 핵심 **<mark>277</mark>** 스크립트 언어의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |자바 스크립트<br>(JAVA Script)|• 웹 페이지의 동작을 제어하는 데 사용되는 클라<br>이언트용 스크립트 언어로, 클래스가 존재하지<br>않으며 변수 선언도 필요 없음<br>• 서버에서 데이터를 전송할 때 아이디, 비밀번호,<br>수량 등의 입력 사항을 확인하기 위한 용도로<br>많이 사용됨|
 |---|---|
@@ -12865,6 +13299,8 @@ C언어는 라이브러리를 헤더 파일로 제공하는데, 각 헤더 파�
 2414904<br><!-- End of picture text -->
 
 ### 20.8 핵심 **<mark>284</mark>** 운영체제의 기능 
+Phần “20.8 핵심 **<mark>284</mark>** 운영체제의 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세서(처리기, Processor), 기억장치(주기억장치, 보조기억장치), 입·출력장치, 파일 및 정보 등의 자원 을 관리한다. 
 
@@ -12913,6 +13349,8 @@ C언어는 라이브러리를 헤더 파일로 제공하는데, 각 헤더 파�
 ###### Windows 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Windows는 1990년대 마이크로소프트(Microsoft) 사 가 개발한 운영체제이다. 
 
@@ -12952,6 +13390,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 #### 정보처리기사 필기 핵심 요약 
 
 ###### ※ 다중 사용자(Multi-User), 다중 작업(Multi-Tasking) 
+Phần “※ 다중 사용자(Multi-User), 다중 작업(Multi-Tasking)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 다중 사용자(Multi-User)는 여러 사용자가 동시 에 시스템을 사용하는 것이고, 다중 작업(MultiTasking)은 여러 개의 작업이나 프로그램을 동시에 수행하는 것을 의미한다. 
 
@@ -12990,6 +13430,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ###### 핵심 
 
 ###### 커널(Kernel) 
+Phần “커널(Kernel)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - UNIX의 가장 핵심적인 부분이다. 
 
@@ -13000,6 +13442,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 - 프로세스(CPU 스케줄링) 관리, 기억장치 관리, 파일 관 리, 입·출력 관리, 프로세스간 통신, 데이터 전송 및 변환 등 여러 가지 기능을 수행한다. 
 
 ###### 쉘(Shell) 
+Phần “쉘(Shell)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 명령어를 인식하여 프로그램을 호출하고 명 령을 수행하는 명령어 해석기이다. 
 
@@ -13034,6 +13478,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 - 공용 Shell(Bourne Shell, C Shell, Korn Shell)이나 사용자 자신이 만든 Shell을 사용할 수 있다. 
 
 ###### Utility Program 
+Phần “Utility Program” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 일반 사용자가 작성한 응용 프로그램을 처리하는 데 사 용한다. 
 
@@ -13051,6 +13497,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ###### 21.3 
 
 ### 핵심 **<mark>290</mark>** 
+Phần “핵심 **<mark>290</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이징 기법은 가상기억장치에 보관되어 있는 프로그 램과 주기억장치의 영역을 동일한 크기로 나눈 후 나눠 진 프로그램(페이지)을 동일하게 나눠진 주기억장치의 영역(페이지 프레임)에 적재시켜 실행하는 기법이다. 
 
@@ -13074,6 +13522,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 2415403<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 세그먼테이션 기법은 가상기억장치에 보관되어 있는 프로그램을 다양한 크기의 논리적인 단위로 나눈 후 주 기억장치에 적재시켜 실행시키는 기법이다. 
 
@@ -13385,6 +13835,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 ### 핵심 **<mark>300</mark>** 
 
 ###### 프로세스 상태 전이 관련 용어 
+Phần “프로세스 상태 전이 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Dispatch|준비 상태에서 대기하고 있는 프로세스 중 하나가<br>프로세서를 할당받아 실행 상태로 전이되는 과정|
 |---|---|
@@ -13515,6 +13967,8 @@ UNIX나 LINUX에서 환경 변수를 명령어나 스크립트에서 사용하�
 **96** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |$TERM|로긴 터미널 타입|
 |---|---|
@@ -13532,6 +13986,8 @@ UNIX나 LINUX에서 환경 변수를 명령어나 스크립트에서 사용하�
 ###### 22.7, 21.3, 20.8 
 
 ### **<mark>304</mark>** UNIX / LINUX 기본 명령어 
+Phần “**<mark>304</mark>** UNIX / LINUX 기본 명령어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |핵심|
 |---|
@@ -13645,6 +14101,8 @@ IPv6은 현재 사용하고 있는 IP 주소 체계인 IPv4의 주소 부족 문
 ###### IPv6의 구성 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 16비트씩 8부분, 총 128비트로 구성되어 있다. 
 
@@ -13735,6 +14193,8 @@ IPv6은 현재 사용하고 있는 IP 주소 체계인 IPv4의 주소 부족 문
 
 
 ### 핵심 **<mark>310</mark>** 
+Phần “핵심 **<mark>310</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |네트워크 인터<br>페이스 카드<br>(NIC; Network<br>Interface Card)|컴퓨터와 컴퓨터 또는 컴퓨터와 네트워크를 연결<br>하는 장치로, 정보 전송 시 정보가 케이블을 통해<br>전송될 수 있도록 정보 형태를 변경함|
 |---|---|
@@ -13780,6 +14240,8 @@ FTP 컴퓨터와 컴퓨터 또는 컴퓨터와 인터넷 사이 (File Transfer �
 22.4, 21.8, 21.5, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>312</mark>** 전송 계층의 주요 프로토콜 
+Phần “핵심 **<mark>312</mark>** 전송 계층의 주요 프로토콜” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 양방향 연결(Full Duplex Connection)형 서 비스를 제공함 
 
@@ -13818,6 +14280,8 @@ FTP 컴퓨터와 컴퓨터 또는 컴퓨터와 인터넷 사이 (File Transfer �
 ###### 22.7, 22.3, 20.9, 20.6 
 
 ### 핵심 **<mark>313</mark>** 인터넷 계층의 주요 프로토콜 
+Phần “핵심 **<mark>313</mark>** 인터넷 계층의 주요 프로토콜” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 전송할 데이터에 주소를 지정하고, 경 로를 설정하는 기능을 함 
 
@@ -13837,6 +14301,8 @@ IP(Internet Protocol) • 비연결형인 데이터그램 방식을 사용하 �
 2416506<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Ethernet<br>(IEEE 802.3)|CSMA/CD 방식의 LAN|
 |---|---|
@@ -14087,6 +14553,8 @@ LOC 기법은 소프트웨어 각 기능의 원시 코드 라인 수의 비관�
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • 산정 공식 
+Phần “• 산정 공식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 노력(인월) = 개발 기간 × 투입 인원 
 
@@ -14152,6 +14620,8 @@ COCOMO(COnstructive COst MOdel) 모형은 보헴 (Boehm)이 제안한 것으로,
 2417103<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |조직형<br>(Organic<br>Mode)|• 기관 내부에서 개발된 중·소 규모의 소프트웨어<br>로 일괄 자료 처리나 과학 기술 계산용, 비즈니스<br>자료 처리용으로 5만(50KDSI) 라인 이하의 소프트<br>웨어를 개발하는 유형<br>• 사무 처리용, 업무용, 과학용 응용 소프트웨어 개<br>발에 적합함|
 |---|---|
@@ -14192,6 +14662,8 @@ COCOMO(COnstructive COst MOdel) 모형은 보헴 (Boehm)이 제안한 것으로,
 - 필요한 외부 루틴과의 인터페이스 
 
 ###### ※ 자동화 추정 도구 
+Phần “※ 자동화 추정 도구” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SLIM : Rayleigh-Norden 곡선과 Putnam 예측 모델 을 기초로 하여 개발된 자동화 추정 도구 
 
@@ -14464,6 +14936,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 법적 제약사항 : 프로젝트별로 적용될 IT Compliance가 
 
@@ -14503,6 +14977,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 ###### 22.4, 21.8, 20.9, 20.6 
 
 ### 핵심 **<mark>337</mark>** 프레임워크의 특성 
+Phần “핵심 **<mark>337</mark>** 프레임워크의 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |모듈화<br>(Modularity)|프레임워크는 캡슐화를 통해 모듈화를 강화하고<br>설계 및 구현의 변경에 따른 영향을 최소화함으로<br>써 소프트웨어의 품질을 향상시킴<br>프레임워크는 개발표준에 의한 모듈화로 인해 유<br>지 보수가 용이함|
 |---|---|
@@ -14528,6 +15004,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 소프트웨어 정의 기술은 네트워크, 데이터 센터 등에서 소유한 자원을 가상화하여 개별 사용자에게 제공하고, 중 앙에서는 통합적으로 제어가 가능한 기술이다. 
 
 ###### • 관련 용어 
+Phần “• 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |용어|의미|
 |---|---|
@@ -14545,6 +15023,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 2417705<br><!-- End of picture text -->
 
 ### 22.7, 22.4, 21.8 핵심 **<mark>339</mark>** 네트워크 관련 신기술 
+Phần “22.7, 22.4, 21.8 핵심 **<mark>339</mark>** 네트워크 관련 신기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |IoT(Internet of<br>Things,<br>사물 인터넷)|정보 통신 기술을 기반으로 실세계(Physical<br>World)와 가상 세계(Virtual World)의 다양한 사<br>물들을 인터넷으로 서로 연결하여 진보된 서<br>비스를 제공하기 위한 서비스 기반 기술|
 |---|---|
@@ -14559,6 +15039,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |파장 분할 다중화<br>(WDM,<br>Wavelength<br>Division<br>Multiplexing)|• 광섬유를 이용한 통신 기술의 하나로, 파<br>장이 서로 다른 복수의 신호를 보냄으로써<br>여러 대의 단말기가 동시에 통신 회선을<br>사용할 수 있도록 하는 것<br>• 파장이 다른 광선끼리는 서로 간섭을 일으<br>키지 않는 성질을 이용한 기술|
 |---|---|
@@ -14584,6 +15066,8 @@ SPICE(소프트웨어 처리 개선 및 능력 평가 기준)는 정보 시스�
 21.3, 20.8 
 
 ### 핵심 **<mark>340</mark>** 네트워크(Network) 설치 구조 
+Phần “핵심 **<mark>340</mark>** 네트워크(Network) 설치 구조” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |성형<br>(Star, 중앙 집중형)|• 중앙에 중앙 컴퓨터가 있고, 이를 중심으로<br>단말장치들이 연결되는 중앙 집중식의 네<br>트워크 구성 형태<br>• 포인트 투 포인트(Point-to-Point) 방식으로<br>회선을 연결함|
 |---|---|
@@ -14642,6 +15126,8 @@ IEEE 802 위원회에서 지정한 LAN의 표준 규격은 다음과 같다.
 
 
 ###### 802.11의 버전 
+Phần “802.11의 버전” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |802.11<br>(초기 버전)|2.4GHz 대역 전파와 CSMA/CA 기술을 사용해 최고<br>2Mbps까지의 전송 속도를 지원함|
 |---|---|
@@ -14763,6 +15249,8 @@ CSMA/CA는 무선 랜에서 데이터 전송 시 매체가 비어있 음을 확�
 
 
 ### **<mark>346</mark>** SW 관련 용어 
+Phần “**<mark>346</mark>** SW 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |매시업(Mashup)|웹에서 제공하는 정보 및 서비스를 이용하여<br>새로운 소프트웨어나 서비스, 데이터베이스 등<br>을 만드는 기술이다. 즉 다수의 정보원이 제공<br>하는 콘텐츠를 조합하여 하나의 서비스로 제공<br>하는 웹 사이트 또는 애플리케이션을 말함|
 |---|---|
@@ -14817,6 +15305,8 @@ CSMA/CA는 무선 랜에서 데이터 전송 시 매체가 비어있 음을 확�
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |허니팟<br>(Honeypot)|• 비정상적인 접근을 탐지하기 위해 설치해 둔 시<br>스템<br>• 침입자를 속여 실제 공격을 당하는 것처럼 보여<br>줌으로써 추적 및 공격기법에 대한 정보를 수집<br>함|
 |---|---|
@@ -14855,6 +15345,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 ###### 22.3, 21.5 
 
 ### 핵심 **<mark>348</mark>** HW 관련 신기술 
+Phần “핵심 **<mark>348</mark>** HW 관련 신기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 긴 시간동안 안정적인 서비스 운영을 위해 
 
@@ -14913,6 +15405,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 ###### DB 관련 신기술 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||• 오픈 소스를 기반으로 한 분산 컴퓨팅 플랫폼|
 |---|---|
@@ -14937,6 +15431,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • 회복 기법 
+Phần “• 회복 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |연기 갱신 기법<br>(Deferred<br>Update)|• 트랜잭션이 성공적으로 완료될 때까지 데이터<br>베이스에 대한 실질적인 갱신을 연기하는 방법<br>• 트랜잭션이 수행되는 동안 갱신된 내용은 일단<br>Log에 보관됨<br>• 트랜잭션의 부분 완료(성공적인 완료 직전) 시점<br>에 Log에 보관한 갱신 내용을 실제 데이터베이<br>스에 기록함<br>• 트랜잭션이 부분 완료되기 전에 장애가 발생하<br>여 트랜잭션이 Rollback되면 트랜잭션이 실제<br>데이터베이스에 영향을 미치지 않았기 때문에<br>어떠한 갱신 내용도 취소(Undo)시킬 필요 없이<br>무시하면 됨<br>•Redo 작업만 가능함|
 |---|---|
@@ -14965,6 +15461,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 ### **<mark>352</mark>** 
 
 ###### 회복(Recovery) 
+Phần “회복(Recovery)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 회복은 트랜잭션들을 수행하는 도중 장애가 발생하여 데이터베이스가 손상되었을 때 손상되기 이전의 정상 상태로 복구하는 작업이다. 
 
@@ -14982,6 +15480,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 #### 정보처리기사 필기 핵심 요약 
 
 ###### • 병행제어 기법의 종류 
+Phần “• 병행제어 기법의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||• 주요 데이터의 액세스를 상호 배타적으로 하는 것|
 |---|---|
@@ -15025,6 +15525,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 교착상태(Dead Lock)는 상호 배제에 의해 나타나는 문제 점으로, 둘 이상의 프로세스들이 자원을 점유한 상태에서 서로 다른 프로세스가 점유하고 있는 자원을 요구하며 무 한정 기다리는 현상을 의미한다. 
 
 ###### • 교착상태 발생의 필요 충분 조건 
+Phần “• 교착상태 발생의 필요 충분 조건” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |상호 배제<br>(Mutual<br>Exclusion)|한 번에 한 개의 프로세스만이 공유 자원을 사용<br>할 수 있어야 함|
 |---|---|
@@ -15037,6 +15539,8 @@ Secure OS는 기존의 운영체제(OS)에 내재된 보안 취약점 을 해소
 
 
 ###### • 교착상태의 해결 방법 
+Phần “• 교착상태의 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||• 교착상태가 발생하지 않도록 사전에 시스템을|
 |---|---|
@@ -15290,6 +15794,8 @@ Secure SDLC는 보안상 안전한 소프트웨어를 개발하기 위해 SDLC�
 **115** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 2001년 미국 표준 기술 연구소(NIST)에서 발표한 
 
@@ -15332,6 +15838,8 @@ Secure SDLC는 보안상 안전한 소프트웨어를 개발하기 위해 SDLC�
 ###### 솔트(Salt) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 둘 이상의 계정에 대해 패스워드를 ‘qwer1234’라고 지 정하고, 같은 암호화 알고리즘을 적용하게 되면 결과도 마찬가지로 동일하게 나타난다. 이 경우 공격자가 나타 난다면 하나의 암호만 해제해도 둘 이상의 계정을 얻게 되므로, 이를 방지하고자 암호화를 수행하기에 앞서 원 문에 무작위의 값을 덧붙이는 과정을 수행한다. 이때 덧붙이는 무작위의 값을 솔트(Salt)라고 한다. 
 
@@ -15403,6 +15911,8 @@ DDoS 공격은 여러 곳에 분산된 공격 지점에서 한 곳의 서 버에
 22.4, 22.3, 21.8, 21.3, 20.6 
 
 ### 핵심 **<mark>368</mark>** 네트워크 침해 공격 관련 용어 
+Phần “핵심 **<mark>368</mark>** 네트워크 침해 공격 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Ping of Death<br>(죽음의 핑)|Ping 명령을 전송할 때 패킷의 크기를 인터넷 프<br>로토콜 허용 범위 이상으로 전송하여 공격 대상의<br>네트워크를 마비시키는 서비스 거부 공격 방법|
 |---|---|
@@ -15421,6 +15931,8 @@ DDoS 공격은 여러 곳에 분산된 공격 지점에서 한 곳의 서 버에
 2459951<br><!-- End of picture text -->
 
 ### 22.3 핵심 **<mark>369</mark>** 블루투스(Bluetooth) 관련 공격 
+Phần “22.3 핵심 **<mark>369</mark>** 블루투스(Bluetooth) 관련 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |블루버그<br>(BlueBug)|블루투스 장비 사이의 취약한 연결 관리를 악용한<br>공격으로, 휴대폰을 원격 조정하거나 통화를 감청할<br>수 있음|
 |---|---|
@@ -15445,6 +15957,8 @@ DDoS 공격은 여러 곳에 분산된 공격 지점에서 한 곳의 서 버에
 ###### 22.7, 22.4, 21.8, 20.6 
 
 ### 핵심 **<mark>370</mark>** 정보 보안 침해 공격 관련 용어 
+Phần “핵심 **<mark>370</mark>** 정보 보안 침해 공격 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||네트워크를 통해 연속적으로 자신을 복제하여 시|
 |---|---|
@@ -15556,6 +16070,8 @@ DDoS 공격은 여러 곳에 분산된 공격 지점에서 한 곳의 서 버에
 2420403<br><!-- End of picture text -->
 
 ### 22.3 핵심 **<mark>373</mark>** 리눅스의 커널 로그 
+Phần “22.3 핵심 **<mark>373</mark>** 리눅스의 커널 로그” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - NIDS(Network-Based Intrusion Detection System) 
 
@@ -15643,6 +16159,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 **⦁** 소프트웨어 생명주기(SDLC; Software Life Cycle): 시스템의 요구분석부터 유지보수까지의 소프트웨 어 개발 전체 과정을 체계적으로 정리하여 표준화한 것 
 
 # ⦁소프트웨어 생명주기 모델 종류 
+Phần “⦁소프트웨어 생명주기 모델 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**종류**|**설명**|
 |---|---|
@@ -15656,6 +16174,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 
 
 # **091 소프트웨어 개발 방법론★★** 
+Phần “**091 소프트웨어 개발 방법론★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 소프트웨어 개발 방법론: 소프트웨어의 생산성과 품질 향상을 위하여, 개발 전 과정에서 지속적으로 적용할 수 있는 방법 
 
@@ -15665,6 +16185,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 설명<br>방식의 방법론<br>(Divide and Conquer) 원리 적용<br>징을 나타냄<br>- 나씨-슈나이더만(NS-Chart; Nassi-Shneidrman) 차트 사용<br>⦁나씨-슈나이더만(NS-Chart; Nassi-Shneidrman) 차트<br>- 논리의 기술에 중점을 두고 도형을 이용한 표현 방법<br>- 연속, 선택, 반복 등의 제어 논리 구조 표현<br>- 이해하기 쉽고 코드 변환이 용이<br>- 조건이 복합되어 있는 곳의 처리를 시각적으로  명확히<br><!-- End of picture text -->
 
 # **⦁** 소프트웨어 개발 방법론 종류 
+Phần “**⦁** 소프트웨어 개발 방법론 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**종류**|**설명**|
 |---|---|
@@ -15686,6 +16208,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 **⦁** 소프트웨어 비용 산정: 소프트웨어 개발에 소요되는 인원, 자원, 기간 등을 파악하여 실행 가능한 계획 을 수립하기 위해 비용을 산정하는 기법이다. 
 
 # ⦁비용 산정 기법 종류 
+Phần “⦁비용 산정 기법 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 하향식 비용 산정 기법: 전문가를 통해 비용 산정 
 
@@ -15776,6 +16300,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 
 
 # **095 소프트웨어 개발 프레임워크★** 
+Phần “**095 소프트웨어 개발 프레임워크★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 소프트웨어 개발 프레임워크: 소프트웨어 개발에 공통적으로 사용되는 구성요소와 아키텍처를 손쉽게 구현할 수 있도록 여러 가지 기능을 제공해주는 반제품 상태의 개발 소프트웨어 
 
@@ -15822,6 +16348,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 
 
 # **097 네트워크 장비★** 
+Phần “**097 네트워크 장비★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 네트워크 설치 구조(Topology): 통신망을 구성하는 장치들을 배치하는 방법 
 
@@ -15840,6 +16368,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 단말장치에 영향을 주지 않음<br>- 모든 단말장치가 하나의 링에 순차적으로, 포인트 투 포인트(Point-to-Point) 방식으<br>로 연결된 형태<br>링(Ring)형 구조<br>- 데이터는 단방향, 양방향 전송 모두 가능하나, 단방향 링의 경우, 단말장치가 하나라<br>도 고장나면 전체 통신망 정지<br>- 하나의 네트워크에 여러 대의 단말장치가 연결된 형태<br>버스(Bus)형 구조<br>-  단말장치가 고장나더라도  네트워크  전체에 영향을 주지 않음<br>- 각 단말장치가 계층적으로 연결되어 있는 구성<br>트리(Tree)형 구조<br>-  분산처리 시스템을 구성하는 방식<br>네트워크 장비: 서로 통신을 할 수 있는 컴퓨터, 스위치, 라우터, 광전송 장비<br>장비 종류 설명<br>- LAN과 LAN을 연결하여 더 큰 LAN을 만드는 장치<br>스위치 장비<br>- OSI 7계층의 2계층에서 사용<br>- 스위치를 서로 연결하여 송수신 전송 경로중 최적화된 경로를 설정하고, 설정된 경로를 따<br>라 트래픽을 전달하는 장치<br>- OSI 7계층의 3계층에서 사용<br>프로토콜 설명<br>- 거리 벡터 라우팅 프로토콜<br>RIP<br>- 소규모 네트워크 환경에 적합<br>(Routing Information<br>- 최대 홉 카운트를 15홉 이하 제한<br>라우터 장비 Protocol) - 최단경로탐색 시, Bellman-Ford 알고리즘 사용<br>OSPF - 대규모 네트워크 환경에 적합<br>(Open Shorter Path  - 홉 카운트에 제한 없음<br>First) - 최단경로탐색 시, Dijkstra 알고리즘 사용<br>BGP<br>- 자율 시스템(AS)간 라우팅에 경로 정보를 교환하기 위한 라<br>(Border Gateway<br>우팅 프로토콜<br>Protocol)<br>광케이블을 이용하여 스위칭 노드를 묶어주는 시스템<br>기술 설명<br>SONET<br>광전송 장비<br>(Synchronous  - 고속 디지털 통신을 위한 광전송 시스템 표준 규격<br>Optical Network)<br>WDM - 광섬유를 이용한 통신 기술<br><!-- End of picture text -->
 
 # **⦁** 네트워크 장비: 서로 통신을 할 수 있는 컴퓨터, 스위치, 라우터, 광전송 장비 
+Phần “**⦁** 네트워크 장비: 서로 통신을 할 수 있는 컴퓨터, 스위치, 라우터, 광전송 장비” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||- 파장이 서로 다른 복수의 광신호를 동시에 이용하는 것으로,|
 |---|---|
@@ -15905,6 +16435,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 # **100 하드웨어 관련 신기술★★★** 
 
 # **⦁** 하드웨어 관련 신기술 
+Phần “**⦁** 하드웨어 관련 신기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**기술**|**설명**|
 |---|---|
@@ -15923,6 +16455,8 @@ SSH는 다른 컴퓨터에 로그인, 원격 명령 실행, 파일 복사 등을
 (Kubernetes) 공하는 오픈소스  기반의 관리 시스템<br>고가용성 솔루션<br>(HACMP; High<br>두 개 이상의 시스템을 클러스터로 구성하여, 하나의 시스템에 장애 발생 시, 즉시 다른<br>Availability<br>시스템으로 대체 작동(Fail Over)하는 기술<br>Clustering Multi<br>Processing)<br>- N개의 서로 다른 단말기에서 동일한 콘텐츠를 자유롭게 이용할 수 있는 기술<br>N-Screen<br>- PC, TV, 휴대폰에서 원하는 콘텐츠를 끊김없이 자유롭게 이용할 수 있는 서비스<br>101 하드웨어 장비 운영★<br>저장장치(스토리지 시스템): 정보 시스템 구축 및 운영을 위해서 대용량 데이터를 저장하기 위한 장치<br>- 저장장치의 종류<br>저장장치 설명<br>DAS<br>- 하드디스크와 같은 데이터 저장장치를 호스트 버스 어댑터에 직접 연결하는 방식<br>(Direct Attached<br>- 저장장치와 호스트 기기 사이에 네트워크 디바이스 없이 직접 연결하는 방식으로 구성<br>Storage)<br>NAS<br>(Network Attached  서버와 저장장치를 네트워크로 연결하는 방식으로 구성된 스토리지 시스템<br>Storage)<br>- 각기 다른 운영체제를 가진 여러 기종이 네트워크상에서 동일 저장장치의 데이터를 공<br>SAN<br>유하게 함으로써, 여러 개의 저장장치나 백업 장비를 단일화시킨 시스템<br>(Storage Area<br>- 네트워크상에 광 채널 스위치의 이점인 고속 전송과 장거리 연결 및 멀티 프로토콜 기<br>Network)<br>능 활용<br><!-- End of picture text -->
 
 # **101 하드웨어 장비 운영★** 
+Phần “**101 하드웨어 장비 운영★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **⦁** 저장장치(스토리지 시스템): 정보 시스템 구축 및 운영을 위해서 대용량 데이터를 저장하기 위한 장치 - 저장장치의 종류 
 
@@ -15956,6 +16490,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 
 
 # **Chapter 3. 시스템 보안 구축 103 SW 개발 보안 3요소★★** 
+Phần “**Chapter 3. 시스템 보안 구축 103 SW 개발 보안 3요소★★**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**요소**|**설명**|
 |---|---|
@@ -15971,6 +16507,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 # **104 Secure SDLC와 Secure Coding★★** 
 
 # **⦁Secure SDLC(Software Development Life Cycle)** 
+Phần “**⦁Secure SDLC(Software Development Life Cycle)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 보안상 안전한 소프트웨어를 개발하기 위해 소프트웨어 개발 생명주기(SDLC; Software Development Life Cycle)에 **보안 강화** 를 위한 프로세스 
 
@@ -15992,6 +16530,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 # **105 보안 점검 항목★★★** 
 
 # ⦁입력 데이터 검증 및 표현 
+Phần “⦁입력 데이터 검증 및 표현” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -16012,6 +16552,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 
 
 # ⦁보안 기능 
+Phần “⦁보안 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -16026,6 +16568,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 
 
 # ⦁에러 처리 
+Phần “⦁에러 처리” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -16051,6 +16595,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 
 
 # ⦁코드 오류 
+Phần “⦁코드 오류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -16081,6 +16627,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 # **106 암호 알고리즘★★★** 
 
 # ⦁암호 알고리즘 관련 용어 
+Phần “⦁암호 알고리즘 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**용어**|**설명**|
 |---|---|
@@ -16096,6 +16644,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 
 
 # ⦁양방향 암호화 알고리즘 – 대칭키/비대칭 키 암호 방식 비교 
+Phần “⦁양방향 암호화 알고리즘 – 대칭키/비대칭 키 암호 방식 비교” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**대칭 키 암호 방식**|**비대칭 키 암호 방식**|
 |---|---|---|
@@ -16113,6 +16663,8 @@ DAS NAS SAN<br>(Direct Attached Storage) (Network Attached Storage) (Storage Are
 # **107 서비스 공격 기법★★** 
 
 # ⦁서비스 공격 유형과 공격도구/탐지 기법 
+Phần “⦁서비스 공격 유형과 공격도구/탐지 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**공격기법**|**설명**|
 |---|---|---|
@@ -16218,6 +16770,8 @@ DAC MAC RBAC<br>구분 (Discretionary Access (Mandatory Access  (Role Based Acce
 **110 시스템 보안 구현 ★★** ⦁리눅스(LINUX)의 커널 로그 
 
 # ⦁네트워크 보안 솔루션 
+Phần “⦁네트워크 보안 솔루션” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**솔루션**|**설명**|
 |---|---|
@@ -16250,6 +16804,8 @@ Favorite: No
 ## 318. 소프트웨어 재사용 (Software Reuse)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 이미 개발되어 검증된 소프트웨어의 전체나 일부를 다른 소프트웨어 개발 시 다시 사용하는 활동이다.
 - * 핵심 키워드**: 비용 절감, 품질 향상, 생산성 증대, 지식 공유.
@@ -16259,6 +16815,8 @@ Favorite: No
 - **: 연관 설명**: 319, 320.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 재사용을 통해 프로젝트 실패 위험을 줄이고 개발 과정의 시행착오를 최소화할 수 있다.
 - 코드뿐만 아니라 요구사항 명세서, 설계서 등 모든 개발 산출물이 재사용 대상이 된다.
@@ -16268,6 +16826,8 @@ Favorite: No
 ## 319. 소프트웨어 재사용 방법 (합성 vs 생성)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어를 어떤 방식으로 재조립하거나 만들어내느냐에 따른 기술적 접근 분류이다.
 - * 핵심 키워드**: 합성 중심(블록), 생성 중심(패턴), 부품 조립.
@@ -16277,6 +16837,8 @@ Favorite: No
 - **: 연관 설명**: 318, 317.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 합성 중심(Composition-Based): 전자 칩과 같은 소프트웨어 블록을 만들어 끼워 맞추는 방식으로 블록 구성 방법이라고도 한다.
 - 생성 중심(Generation-Based): 추상화된 명세를 바탕으로 자동화 도구 등을 사용하여 코드를 생성하는 패턴 구성 방법이다.
@@ -16285,6 +16847,8 @@ Favorite: No
 ## 323. 수학적 산정 기법 (COCOMO, Putnam, FP)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 과거의 유사한 프로젝트 경험과 통계적 데이터를 공식에 대입하여 개발 비용을 예측하는 상향식 산정 기법이다.
 - * 핵심 키워드**: 경험적 추정, COCOMO, Putnam, 기능 점수(FP).
@@ -16294,6 +16858,8 @@ Favorite: No
 - **: 연관 설명**: 322, 324, 326.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - COCOMO: 보헴이 제안했으며, 소프트웨어의 규모(LOC)와 성격에 따라 비용을 산정하는 방식이다.
 - Putnam: Rayleigh-Norden 곡선을 기초로 하며, 시간에 따른 인력 배치를 예측하는 생명 주기 예측 모형이다.
@@ -16303,6 +16869,8 @@ Favorite: No
 ## 336. 소프트웨어 개발 프레임워크
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어 개발에 공통적으로 사용되는 구성 요소와 아키텍처를 일반화하여 제공하는 기반 구조이다.
 - * 핵심 키워드**: 스프링, 닷넷, 모듈화, 제어의 역흐름(IoC).
@@ -16312,6 +16880,8 @@ Favorite: No
 - **: 연관 설명**: 179, 337.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모듈화: 캡슐화를 통해 변경의 영향을 최소화하고 품질과 유지보수성을 높인다.
 - 재사용성: 이미 검증된 모듈을 제공하여 개발 예산을 절감하고 신뢰성을 확보한다.

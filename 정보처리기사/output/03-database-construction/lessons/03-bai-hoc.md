@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **103. 물리적 설계 (Physical Design
 
 ## 103. 물리적 설계 (Physical Design)
 
-Từ **102. 논리적 설계 (Logical Design / Data Modeling)**, ta đã có điểm tựa để bước vào **103. 물리적 설계 (Physical Design)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/56 trước khi đi vào chi tiết.
+Từ **102. 논리적 설계 (Logical Design / Data Modeling)**, ta đã có điểm tựa để bước vào **103. 물리적 설계 (Physical Design)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/54 trước khi đi vào chi tiết.
 
 Để đọc **103. 물리적 설계 (Physical Design)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “103. 물리적 설계 (Physical Design)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 논리적 구조로 표현된 데이터를 물리적 구조의 데이터로 변환하는 과정이다.
 - 데이터베이스 파일의 저장 구조 및 액세스 경로를 결정한다.

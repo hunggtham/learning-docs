@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **21. 외계인 코드 (Alien Code)** nh
 
 ## 21. 외계인 코드 (Alien Code)
 
-Từ **19. 클린 코드 작성 원칙 (Clean Code Principles)**, ta đã có điểm tựa để bước vào **21. 외계인 코드 (Alien Code)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/95 trước khi đi vào chi tiết.
+Từ **19. 클린 코드 작성 원칙 (Clean Code Principles)**, ta đã có điểm tựa để bước vào **21. 외계인 코드 (Alien Code)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/101 trước khi đi vào chi tiết.
 
 Để đọc **21. 외계인 코드 (Alien Code)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “21. 외계인 코드 (Alien Code)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * 아주 오래되거나 참고문서/개발자가 없어 유지보수 작업이 어려운 코드.
 * **VI (Vietnamese) (Tiếng Việt):** Alien Code là mã nguồn quá cũ, không có tài liệu hoặc người phát triển gốc, rất khó bảo trì.

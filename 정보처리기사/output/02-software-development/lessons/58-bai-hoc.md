@@ -1,18 +1,18 @@
-# 097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)
+# 43. 테스트 분류 방식 (Test Classification)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **43. 테스트 분류 방식 (Test Classification)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **105: 시각에 따른 테스트 (Verification vs Validation)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **43. 테스트 분류 방식 (Test Classification)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-테스트, 프로세스
+테스트, 분류, 방식
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **핵심 044: 테스트 자동화 도구 (Test Automation Tools)**에서 만든 기준을 이어받아 **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**에서 만든 기준을 이어받아 **43. 테스트 분류 방식 (Test Classification)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,26 +22,36 @@ Mục đích của bài này là hiểu **097-2: 테스트 프로세스 (Test Pr
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** và nối nó với **105: 시각에 따른 테스트 (Verification vs Validation)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **43. 테스트 분류 방식 (Test Classification)** và nối nó với **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)
+## 43. 테스트 분류 방식 (Test Classification)
 
-Ở bước 58/95, **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** xuất hiện như phần tiếp nối của **핵심 044: 테스트 자동화 도구 (Test Automation Tools)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 58/101, **43. 테스트 분류 방식 (Test Classification)** xuất hiện như phần tiếp nối của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **43. 테스트 분류 방식 (Test Classification)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **실행 여부에 따른 분류**, **정적 테스트 (Static)**, **동적 테스트 (Dynamic)**, **기반(Bases)에 따른 분류** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-**Quy trình 5 bước (5 단계):**
-1. **계획 및 제어 (Planning & Control):** Lập kế hoạch, mục tiêu, chi phí.
-2. **분석 및 설계 (Analysis & Design):** Viết Kịch bản (Test Scenario) và Ca kiểm thử (**Test Case**).
-3. **구현 및 실현 (Implementation & Execution):** Viết Thủ tục test (**Test Procedure** - Trình tự chạy các case) và Thực thi test.
-4. **평가 (Evaluation):** Đánh giá kết quả xem đạt chưa.
-5. **완료 (Completion):** Lưu trữ hồ sơ, bàn giao.
+Phần “43. 테스트 분류 방식 (Test Classification)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-- **Vietnamese Explanation:** Test Case là danh sách các món ăn cần nấu (Ví dụ: Trứng rán). Test Procedure là công thức nấu (Bước 1 bật bếp, bước 2 đập trứng). Phải có món (Case) rồi mới ghi công thức (Procedure) được.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Kế hoạch -> Phân tích (Ra Test Case) -> Thực hiện (Ra Test Procedure) -> Đánh giá -> Hoàn thành. (Kế Phân Thực Đánh Hoàn (Kế hoạch - Phân tích - Thực hiện - Đánh giá - Hoàn thành)).
+* **실행 여부에 따른 분류**:
+  * **정적 테스트 (Static)**: 프로그램 실행 없이 분석. (워크스루, 인스펙션, 코드 검사).
+  * **동적 테스트 (Dynamic)**: 프로그램을 직접 실행하며 테스트. (블랙박스, 화이트박스).
+* **기반(Bases)에 따른 분류**:
+  * **명세 기반 (Specification)**: 요구사항 명세서를 빠짐없이 테스트. (동등 분할, 경계값).
+  * **구조 기반 (Structure)**: 내부 논리 흐름(코드)에 따라 테스트. (구문, 결정, 조건 기반).
+  * **경험 기반 (Experience)**: 테스터의 경험 직관에 의존. (에러 추정, 탐색적 테스팅).
+* **목적에 따른 분류**:
+  * **회복 (Recovery)**: 일부러 실패하게 한 후 복구되는지 확인.
+  * **안전 (Security)**: 불법 침입으로부터 보호 확인.
+  * **강도 (Stress)**: 과부하(Overload) 상태에서 정상 동작하는지.
+  * **성능 (Performance)**: 응답 시간, 처리량 등 효율성 진단.
+  * **회귀 (Regression)**: 코드를 수정한 후 **새로운 결함**이 발생하지 않았는지 확인.
+  * **병행 (Parallel)**: 변경된 시스템과 기존 시스템에 동일 데이터 입력 후 결과 비교.
+* **VI (Vietnamese) (Tiếng Việt):** Phân loại kiểm thử.
+  * Theo thực thi: Tĩnh (không chạy code - Review) và Động (chạy code).
+  * Theo cơ sở: Dựa trên Đặc tả (Spec), Cấu trúc (Code), Kinh nghiệm.
+  * Theo mục đích: Phục hồi (Recovery), Áp lực (Stress - quá tải), Hồi quy (Regression - test lại sau khi sửa code), Song song (Parallel).
+* **Example**: 버그를 고치고 나서 다른 곳에 문제가 안 생겼는지 다시 테스트하는 것이 '회귀 테스트'입니다. (Kiểm tra lại sau khi sửa lỗi là Regression Test).
 
----
-
-Như vậy, **097-2: 테스트 프로세스 (Test Process - Quy trình kiểm thử)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **105: 시각에 따른 테스트 (Verification vs Validation)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **43. 테스트 분류 방식 (Test Classification)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **44. 화이트박스 테스트 검증 기준 (White Box Test Coverage Criteria)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

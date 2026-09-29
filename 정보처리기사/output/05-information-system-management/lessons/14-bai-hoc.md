@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **3. 다중화 및 전송 제어 (Đa h�
 
 ## 3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)
 
-Sau khi đã đặt nền bằng **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, ta chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**. Đây là mắt xích 14/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, ta chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**. Đây là mắt xích 14/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **3.1 다중화기 (Multiplexer)**. Hã
 ### 3.1 다중화기 (Multiplexer)
 
 Phần nguồn của **3.1 다중화기 (Multiplexer)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “3.1 다중화기 (Multiplexer)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 여러 단말기가 하나의 통신 회선을 공유.
 - **FDM (주파수 분할 다중화):** 주파수를 분할. 보호 대역(Guard Band) 필요(대역폭 낭비). 아날로그, 비동기식.
@@ -59,6 +61,8 @@ Ta vừa chốt **3.1 다중화기 (Multiplexer)** bằng các điều kiện v�
 
 Các ý ngay dưới **3.2 통신 속도 (Speed Metrics)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “3.2 통신 속도 (Speed Metrics)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **변조 속도 (Baud):** 1초 동안 신호 변화 횟수. (Baud = Bps / 상태 변화 수).
 - **신호 속도 (Bps):** 1초 동안 전송 비트 수.
 - **상태 변화 수:** Mono(1), Di(2), Tri(3), Quad(4) bit.
@@ -72,6 +76,8 @@ Sau khi đọc **3.2 통신 속도 (Speed Metrics)**, đừng bắt đầu lại
 ### 3.3 전송 제어 (Transmission Control)
 
 Bây giờ ta đi vào nội dung của **3.3 전송 제어 (Transmission Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “3.3 전송 제어 (Transmission Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **5단계 절차:** 회선 접속 → 링크 설정 → 메시지 전송 → 링크 해제 → 회선 절단.
 - **전송 제어 문자:**
@@ -90,6 +96,8 @@ Với **3.4 HDLC 프로토콜 (High-level Data Link Control)**, mục tiêu đ�
 ### 3.4 HDLC 프로토콜 (High-level Data Link Control)
 
 Phần nguồn của **3.4 HDLC 프로토콜 (High-level Data Link Control)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “3.4 HDLC 프로토콜 (High-level Data Link Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **비트(Bit) 위주**의 프로토콜. 전이중/반이중 지원, 동기식 전송.
 - **비트 투과성 (Bit Stuffing):** 연속된 '1'이 5개면 강제로 '0' 추가 (플래그 `01111110`과 구분).

@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **스크립트 및 운영체제 (Script 
 
 ## 스크립트 및 운영체제 (Script Languages & Operating Systems)
 
-Sau khi đã đặt nền bằng **279 - 280. 라이브러리 (Library)**, ta chuyển sang **스크립트 및 운영체제 (Script Languages & Operating Systems)**. Đây là mắt xích 32/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **279 - 280. 라이브러리 (Library)**, ta chuyển sang **스크립트 및 운영체제 (Script Languages & Operating Systems)**. Đây là mắt xích 32/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **스크립트 및 운영체제 (Script Languages & Operating Systems)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **자바스크립트 (JavaScript)**, **PHP**, **파이썬 (Python)**, **쉘 스크립트 (Shell Script)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **193. 스크립트 언어의 종류 (T
 ### 193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)
 
 Phần nguồn của **193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “193. 스크립트 언어의 종류 (Types of Scripting Languages / Các loại ngôn ngữ kịch bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **자바스크립트 (JavaScript)**: 클라이언트용 웹 동작 제어 (Phía client, điều khiển hành vi web).
 - **PHP**: 서버용 스크립트 언어 (Phía server, dùng trên Linux, Unix, Windows).
@@ -54,6 +56,8 @@ Ta vừa chốt **193. 스크립트 언어의 종류 (Types of Scripting Languag
 
 Các ý ngay dưới **194. 쉘 스크립트 제어문 (Shell Script Control Statements)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “194. 쉘 스크립트 제어문 (Shell Script Control Statements)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **선택형 (Điều kiện)**: `if`, `case`
 - **반복형 (Vòng lặp)**: `for`, `while`, `until`
 
@@ -65,6 +69,8 @@ Sau khi đọc **194. 쉘 스크립트 제어문 (Shell Script Control Statement
 ### 195. 라이브러리 (Libraries / Thư viện)
 
 Bây giờ ta đi vào nội dung của **195. 라이브러리 (Libraries / Thư viện)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “195. 라이브러리 (Libraries / Thư viện)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **표준 (Standard)**: 기본적으로 포함된 모듈 (Tích hợp sẵn trong ngôn ngữ).
 - **외부 (External)**: 다운받아 설치한 후 사용 (Phải tải và cài đặt từ bên ngoài).
@@ -79,6 +85,8 @@ Với **196. C언어의 stdlib.h (Standard Library in C)**, mục tiêu đọc l
 
 Phần nguồn của **196. C언어의 stdlib.h (Standard Library in C)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “196. C언어의 stdlib.h (Standard Library in C)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 자료형 변환, 난수 발생, 메모리 할당 기능을 제공한다. (Cung cấp chức năng ép kiểu, tạo số ngẫu nhiên, cấp phát bộ nhớ).
 - 주요 함수 (Các hàm chính): `atoi`, `atof`, `srand`, `rand`, `malloc`, `free`.
 
@@ -91,43 +99,20 @@ Ta vừa chốt **196. C언어의 stdlib.h (Standard Library in C)** bằng các
 
 Các ý ngay dưới **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
-- 대부분 C 언어로 작성 (Viết chủ yếu bằng C -> tính di động cao).
-- 다중 사용자 (Multi User), 다중 작업 (Multi Tasking) 지원 (Hỗ trợ đa người dùng, đa nhiệm).
-- 트리 구조의 파일 시스템 (Hệ thống tập tin cấu trúc cây).
-  - 💡 *Mẹo ghi nhớ*: UNIX = C + Cây (Tree) + Đa nhiệm/Đa người dùng.
+Phần “197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-Với **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+---
 
-Sau khi đọc **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)**, đừng bắt đầu lại từ số không. **198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Phần **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
 
-### 198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)
-
-Bây giờ ta đi vào nội dung của **198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- 프로세스, 기억장치, 파일 시스템, 입출력 관리 (Quản lý tiến trình, bộ nhớ, hệ thống tập tin, I/O).
-  - 💡 *Mẹo ghi nhớ*: Kernel là "Trái tim" làm mọi công việc cốt lõi phần cứng.
-
-Các bullet của **198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-**198. UNIX - 커널(Kernel)의 기능 (Functions of Kernel / Chức năng hạt nhân)** vừa cho ta cách đặt câu hỏi. Bây giờ **199. UNIX - 쉘(Shell)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **199. UNIX - 쉘(Shell)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
-### 199. UNIX - 쉘(Shell)
-
-Phần nguồn của **199. UNIX - 쉘(Shell)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- 명령어 해석기, 시스템과 사용자 간의 인터페이스 담당. (Trình biên dịch dòng lệnh, giao diện giữa người dùng và HĐH).
-  - 💡 *Mẹo ghi nhớ*: Shell là "Vỏ bọc" giao tiếp với Kernel.
-
-Các bullet của **199. UNIX - 쉘(Shell)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **199. UNIX - 쉘(Shell)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Sau khi đọc **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)**, đừng bắt đầu lại từ số không. **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)
 
-Các ý ngay dưới **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - `fork`: 새로운 프로세스 생성 (Tạo tiến trình mới).
 - `uname`: 시스템 정보 표시 (Hiển thị thông tin hệ thống).
@@ -140,6 +125,6 @@ Các ý ngay dưới **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNI
 
 Các bullet của **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Điểm chốt của **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+Như vậy, **206. UNIX의 주요 명령어 (UNIX Commands / Lệnh UNIX)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
 Ta có thể khép mục **스크립트 및 운영체제 (Script Languages & Operating Systems)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

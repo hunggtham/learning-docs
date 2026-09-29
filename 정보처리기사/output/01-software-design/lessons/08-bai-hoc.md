@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **3. 요구사항 분석기법 및 자�
 
 ## 3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)
 
-Sau khi đã đặt nền bằng **2. 요구사항 정의 (Requirements Definition)**, ta chuyển sang **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**. Đây là mắt xích 8/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **2. 요구사항 정의 (Requirements Definition)**, ta chuyển sang **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**. Đây là mắt xích 8/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô. Trong khối này, **자료 흐름도 (DFD - Data Flow Diagram)**, **자료 사전 (DD - Data Dictionary)**, **CASE 도구 (CASE Tools)**, **HIPO (Hierarchical Input Process Output)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **자료 흐름도 (DFD - Data Flow Diagram)**:
   - 프로세스 (Process - Tròn), 자료 흐름 (Data Flow - Mũi tên), 자료 저장소 (Data Store - Đường thẳng), 단말 (Terminator - Vuông).

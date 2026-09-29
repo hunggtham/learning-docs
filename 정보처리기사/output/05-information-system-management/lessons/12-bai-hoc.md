@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **1. 데이터 통신 개요 (Tổng qua
 
 ## 1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)
 
-Từ **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**, ta đã có điểm tựa để bước vào **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/61 trước khi đi vào chi tiết.
+Từ **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**, ta đã có điểm tựa để bước vào **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/86 trước khi đi vào chi tiết.
 
 Để đọc **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Matur
 ### 1.1 데이터 통신 및 주요 발전
 
 Các ý ngay dưới **1.1 데이터 통신 및 주요 발전** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “1.1 데이터 통신 및 주요 발전” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **데이터 통신:** 컴퓨터와 통신기기 사이에서 디지털(0과 1) 정보를 송수신. (데이터 통신 = 데이터 전송 기술 + 데이터 처리 기술).
 - **정보 통신:** 전기 통신 + 컴퓨터 (정보 처리). 통신의 3요소: 정보원, 수신원, 전송 매체.
@@ -56,6 +58,8 @@ Ta vừa chốt **1.1 데이터 통신 및 주요 발전** bằng các điều k
 
 Bây giờ ta đi vào nội dung của **1.2 통신 회선 및 매체 (Transmission Media)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “1.2 통신 회선 및 매체 (Transmission Media)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **꼬임선 (Twisted Pair):** 저렴하고 설치 간편, 간섭에 취약.
 - **동축 케이블 (Coaxial Cable):** 대역폭이 넓고 누화 적음, 중계기 필요.
 - **광섬유 케이블 (Optical Fiber):** 빛의 반사 원리. 가장 빠르고 대역폭 큼. 도청 어려워 보안성 우수. 무유도, 무누화.
@@ -74,6 +78,8 @@ Với **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)**, mục tiêu đọc
 ### 1.3 통신 제어장치 (CCU) & 전처리기 (FEP)
 
 Phần nguồn của **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “1.3 통신 제어장치 (CCU) & 전처리기 (FEP)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **CCU:** 데이터 신호의 직·병렬 변환 등 전반적인 제어.
 - **FEP (Front-End Processor):** 호스트와 단말기 사이에 위치해 통신 제어를 전담하여 메인 컴퓨터의 부하를 줄임.

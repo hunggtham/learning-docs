@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **네트워크 및 정보 침해 공격 
 
 ## 네트워크 및 정보 침해 공격 (Network & Info Security Attacks)
 
-Từ **네트워크 구조 및 기술 (Network Structures & Technologies)**, ta đã có điểm tựa để bước vào **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/61 trước khi đi vào chi tiết.
+Từ **네트워크 구조 및 기술 (Network Structures & Technologies)**, ta đã có điểm tựa để bước vào **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/86 trước khi đi vào chi tiết.
 
 Để đọc **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **DDoS (분산 서비스 거부 공격)**, **스머핑 (SMURFING)**, **세션 하이재킹 (Session Hijacking)**, **스위치 재밍 (Switch Jamming)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **네트워크 구조 및 기술 (Network Structures & Technologies)**, ta 
 ### 1. 네트워크 공격
 
 Các ý ngay dưới **1. 네트워크 공격** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “1. 네트워크 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **DDoS (분산 서비스 거부 공격)**: 여러 대의 PC(Agent/Zombie)를 이용해 특정 서버에 대량의 트래픽을 보내 마비시킴. (툴: Trin00, TFN, TFN2K, Stacheldraht).
 - **스머핑 (SMURFING)**: IP/ICMP 특성을 악용해 한 사이트에 엄청난 데이터를 집중시키는 공격.
@@ -52,6 +54,8 @@ Ta vừa chốt **1. 네트워크 공격** bằng các điều kiện và điể
 
 Bây giờ ta đi vào nội dung của **2. 블루투스 공격**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “2. 블루투스 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **블루버그 (BlueBug)**: 원격 조종 및 통화 감청.
 - **블루스나프 (BlueSnarf)**: 장비 파일에 접근해 정보 탈취.
 - **블루재킹 (BlueJacking)**: 스팸 메시지를 익명으로 퍼뜨림.
@@ -64,6 +68,8 @@ Với **3. 시스템 및 소프트웨어 공격**, mục tiêu đọc là nhận
 ### 3. 시스템 및 소프트웨어 공격
 
 Phần nguồn của **3. 시스템 및 소프트웨어 공격** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “3. 시스템 및 소프트웨어 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **제로 데이 공격 (Zero Day Attack)**: 보안 취약점이 공표되기 전, 혹은 패치가 나오기 전에 신속하게 이루어지는 공격.
 - **랜섬웨어 (Ransomware)**: 파일을 암호화하고 돈(Ransom)을 요구하는 악성 프로그램.

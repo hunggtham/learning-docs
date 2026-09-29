@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **5과목 추가: 소프트웨어 재사
 
 ## 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
 
-Ở bước 4/61, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** xuất hiện như phần tiếp nối của **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 4/86, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** xuất hiện như phần tiếp nối của **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 

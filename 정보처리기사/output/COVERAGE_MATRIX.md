@@ -9,8 +9,8 @@
 
 
 ## Quality gates
-Phần “Quality gates” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
+Các cổng chất lượng này cho biết output đã được kiểm tra ở những điểm nào trước khi người học sử dụng.
 
 - Link nội bộ được kiểm tra bởi `scripts/audit_learning_output.py`.
 - Output được regenerate từ `raw_md/final/` bằng `scripts/build_learning_output.py`.

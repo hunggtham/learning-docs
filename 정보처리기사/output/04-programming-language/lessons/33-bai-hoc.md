@@ -4,7 +4,7 @@
 
 Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **운영체제 (Operating Systems)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **082. 운영체제 기능 및 종류 (Operating System OS)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -22,13 +22,13 @@ Mục đích của bài này là hiểu **운영체제 - 메모리 및 프로세
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** và nối nó với **운영체제 (Operating Systems)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** và nối nó với **082. 운영체제 기능 및 종류 (Operating System OS)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)
 
-Từ **스크립트 및 운영체제 (Script Languages & Operating Systems)**, ta đã có điểm tựa để bước vào **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/78 trước khi đi vào chi tiết.
+Từ **스크립트 및 운영체제 (Script Languages & Operating Systems)**, ta đã có điểm tựa để bước vào **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/91 trước khi đi vào chi tiết.
 
 Để đọc **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **최초 적합 (First Fit)**, **최적 적합 (Best Fit)**, **최악 적합 (Worst Fit)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **스크립트 및 운영체제 (Script Languages & Operating Systems)**, t
 ### 200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)
 
 Các ý ngay dưới **200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **최초 적합 (First Fit)**: 첫 번째 분할 영역에 배치 (Vị trí trống đầu tiên đủ lớn).
 - **최적 적합 (Best Fit)**: 단편화가 가장 작은 영역 (Vị trí trống vừa vặn nhất, để lại ít rác nhất).
@@ -52,6 +54,8 @@ Ta vừa chốt **200. 기억장치의 배치 전략 (Memory Placement Strategie
 
 Bây giờ ta đi vào nội dung của **201. 페이지 교체 알고리즘 - FIFO (Page Replacement - FIFO / Thuật toán thay thế trang)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “201. 페이지 교체 알고리즘 - FIFO (Page Replacement - FIFO / Thuật toán thay thế trang)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 가장 먼저 들어와서 가장 오래 있었던 페이지를 교체 (Thay thế trang vào bộ nhớ sớm nhất - First In First Out).
 
 Các bullet của **201. 페이지 교체 알고리즘 - FIFO (Page Replacement - FIFO / Thuật toán thay thế trang)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
@@ -62,6 +66,8 @@ Với **202. 스래싱 (Thrashing)**, mục tiêu đọc là nhận ra đối t�
 ### 202. 스래싱 (Thrashing)
 
 Phần nguồn của **202. 스래싱 (Thrashing)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “202. 스래싱 (Thrashing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 프로세스 처리 시간보다 페이지 교체 시간이 더 많아지는 현상 (Hiện tượng mất nhiều thời gian cho việc tráo đổi trang bộ nhớ hơn là thực thi tiến trình).
   - 💡 *Mẹo ghi nhớ*: Thrashing = Kẹt xe bộ nhớ (quá tải).
@@ -75,6 +81,8 @@ Với **202. 스래싱 (Thrashing)**, hãy đọc các công thức như một c
 
 Các ý ngay dưới **203. 프로세스 상태 (Process States / Trạng thái tiến trình)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
+Phần “203. 프로세스 상태 (Process States / Trạng thái tiến trình)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 제출(Submit) → 접수(Hold) → 준비(Ready) → 실행(Run) → 대기(Wait/Block) → 종료(Exit).
   - 💡 *Mẹo ghi nhớ*: Nộp -> Nhận -> Chờ chạy -> Chạy -> (Tạm dừng nếu cần) -> Xong.
 
@@ -87,6 +95,8 @@ Ta vừa chốt **203. 프로세스 상태 (Process States / Trạng thái tiế
 
 Bây giờ ta đi vào nội dung của **204. 스케줄링 - SJF (Shortest Job First / Việc ngắn làm trước)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “204. 스케줄링 - SJF (Shortest Job First / Việc ngắn làm trước)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 실행 시간이 가장 짧은 프로세스에게 먼저 CPU 할당 (Ưu tiên tiến trình có thời gian thực thi ngắn nhất).
 
 Các bullet của **204. 스케줄링 - SJF (Shortest Job First / Việc ngắn làm trước)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
@@ -98,6 +108,8 @@ Với **205. 스케줄링 - HRN (Highest Response-ratio Next)**, mục tiêu đ�
 
 Phần nguồn của **205. 스케줄링 - HRN (Highest Response-ratio Next)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “205. 스케줄링 - HRN (Highest Response-ratio Next)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 우선순위 = `(대기 시간 + 서비스 시간) / 서비스 시간`
 - (Priority = (Wait time + Service time) / Service time).
   - *Example / Ví dụ*: Đợi 10, Chạy 5 => `(10+5)/5 = 3`.
@@ -107,4 +119,4 @@ Với **205. 스케줄링 - HRN (Highest Response-ratio Next)**, hãy đọc cá
 
 Như vậy, **205. 스케줄링 - HRN (Highest Response-ratio Next)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Điểm chốt của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **운영체제 (Operating Systems)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Điểm chốt của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **082. 운영체제 기능 및 종류 (Operating System OS)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

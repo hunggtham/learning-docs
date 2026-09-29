@@ -28,9 +28,11 @@ UML, 심화
 
 ## 7. UML 심화 (Advanced UML)
 
-Từ **5. UML 구성요소 상세 (UML Components Detail)**, ta đã có điểm tựa để bước vào **7. UML 심화 (Advanced UML)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/57 trước khi đi vào chi tiết.
+Từ **5. UML 구성요소 상세 (UML Components Detail)**, ta đã có điểm tựa để bước vào **7. UML 심화 (Advanced UML)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/69 trước khi đi vào chi tiết.
 
 Để đọc **7. UML 심화 (Advanced UML)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **다이어그램 (Diagrams)**, **스테레오 타입 (Stereotype)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “7. UML 심화 (Advanced UML)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - Do OMG chuẩn hóa từ phương pháp của Rumbaugh, Booch, Jacobson.
 - **다이어그램 (Diagrams)**:

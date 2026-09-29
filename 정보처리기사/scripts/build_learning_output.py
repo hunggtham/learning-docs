@@ -499,6 +499,7 @@ def main() -> None:
         if folder == "01-software-design":
             readme += (
                 "\n## Bài học bổ sung / Deep Dive\n\n"
+                "Phần này mở rộng một chủ đề đã có trong lesson chính; hãy dùng nó để kiểm tra cơ chế và trường hợp biên sau khi đã nắm khung cơ bản.\n\n"
                 "- [Vòng đời và phương pháp phát triển phần mềm](01-vong-doi-va-phuong-phap-phat-trien.md)\n"
             )
         (target / "README.md").write_text(readme, encoding="utf-8")
@@ -526,6 +527,7 @@ def main() -> None:
         "|---|---:|---|---|\n"
         + "\n".join(coverage_rows)
         + "\n\n## Quality gates\n\n"
+        "Các cổng chất lượng này cho biết output đã được kiểm tra ở những điểm nào trước khi người học sử dụng.\n\n"
         "- Link nội bộ được kiểm tra bởi `scripts/audit_learning_output.py`.\n"
         "- Output được regenerate từ `raw_md/final/` bằng `scripts/build_learning_output.py`.\n"
         "- `실기` không nằm trong phạm vi hoàn tất của output này.\n",
@@ -536,8 +538,10 @@ def main() -> None:
         "이 문서는 시험 범위의 canonical source와 기술 사실 확인에 사용한 1차/공식 자료를 구분한다.\n\n"
         "> **Mạch nối:** Đọc register này khi cần kiểm tra claim trong guide hoặc lesson; sau khi xác minh nguồn, quay lại đúng topic để nối evidence với cơ chế và bẫy đề.\n\n"
         "## 시험 범위\n\n"
+        "Phần này xác định phạm vi chính thức để người học phân biệt nội dung cần ôn với tài liệu tham khảo mở rộng.\n\n"
         "- [Q-Net 정보처리기사 출제기준(2023.1.1~2025.12.31)](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602) — 시험 범위 baseline.\n\n"
         "## 기술 사실 확인\n\n"
+        "Phần này nối phạm vi thi với các nguồn kỹ thuật chính thức, để mỗi claim có thể được kiểm tra trước khi quay lại giải thích trong lesson.\n\n"
         "- [RFC 8200 IPv6 Specification](https://www.rfc-editor.org/rfc/rfc8200) — 128-bit addressing, anycast, header/MTU semantics.\n"
         "- [Oracle Java Language Specification](https://docs.oracle.com/javase/specs/jls/se26/html/jls-4.html) — primitive types, `char`, `boolean` and numeric widths.\n\n"
         "- [PostgreSQL SELECT documentation](https://www.postgresql.org/docs/17/queries-order.html) — `WHERE`/`GROUP BY`/`HAVING`/`ORDER BY` reasoning and result ordering.\n"

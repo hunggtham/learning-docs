@@ -12,7 +12,7 @@ Mục đích của bài này là hiểu **29. 큐 (Queue)** như một khái ni�
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **2. 스택 (Stack) 및 응용 (Applications)**에서 만든 기준을 이어받아 **29. 큐 (Queue)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)**에서 만든 기준을 이어받아 **29. 큐 (Queue)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **29. 큐 (Queue)** như một khái ni�
 
 ## 29. 큐 (Queue)
 
-Ở bước 4/95, **29. 큐 (Queue)** xuất hiện như phần tiếp nối của **2. 스택 (Stack) 및 응용 (Applications)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 4/101, **29. 큐 (Queue)** xuất hiện như phần tiếp nối của **075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **29. 큐 (Queue)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “29. 큐 (Queue)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * 삽입은 한쪽 끝에서, 삭제는 반대쪽 끝에서 이루어지는 자료 구조.
 * 선입선출(**FIFO**, First-In First-Out) 방식.

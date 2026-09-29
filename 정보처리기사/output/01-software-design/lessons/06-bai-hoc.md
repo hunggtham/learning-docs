@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **10. 요구사항 심화 (Yêu cầu ch
 
 ## 10. 요구사항 심화 (Yêu cầu chuyên sâu)
 
-Từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**, ta đã có điểm tựa để bước vào **10. 요구사항 심화 (Yêu cầu chuyên sâu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/57 trước khi đi vào chi tiết.
+Từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**, ta đã có điểm tựa để bước vào **10. 요구사항 심화 (Yêu cầu chuyên sâu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/69 trước khi đi vào chi tiết.
 
 Để đọc **10. 요구사항 심화 (Yêu cầu chuyên sâu)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thố
 ### 요구사항의 유형 (Các loại yêu cầu)
 
 Các ý ngay dưới **요구사항의 유형 (Các loại yêu cầu)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “요구사항의 유형 (Các loại yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **기능 요구사항 (Functional Requirements):** 시스템이 무엇을 하는지, 어떤 기능을 하는지에 대한 사항. (Hệ thống làm gì, chức năng nào. Ví dụ: Phải có nút Lưu, phải tính toán được thuế).
 - **비기능 요구사항 (Non-functional Requirements):** 성능 (Hiệu năng), 인터페이스 (Giao diện), 데이터 (Dữ liệu), 테스트 (Kiểm thử), 보안 (Bảo mật), 품질 (Chất lượng), 제약사항 (Ràng buộc), 프로젝트 관리/지원 (Quản lý dự án/Hỗ trợ). (Là các yêu cầu không trực tiếp là chức năng nhưng quyết định chất lượng hệ thống).
@@ -51,6 +53,8 @@ Ta vừa chốt **요구사항의 유형 (Các loại yêu cầu)** bằng các 
 
 Bây giờ ta đi vào nội dung của **요구사항 도출 (Requirement Elicitation / Thu thập yêu cầu)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “요구사항 도출 (Requirement Elicitation / Thu thập yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 기법 (Kỹ thuật): 청취와 인터뷰 (Lắng nghe & Phỏng vấn), 설문 (Khảo sát), 브레인스토밍 (Brainstorming), 워크샵 (Workshop), 프로토타이핑 (Prototyping), 유스케이스 (Use Case).
 
 Các bullet của **요구사항 도출 (Requirement Elicitation / Thu thập yêu cầu)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
@@ -61,6 +65,8 @@ Với **요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)**, mụ
 ### 요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)
 
 Phần nguồn của **요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **정형 명세 기법 (Formal Specification):** 수학적 기호, 정형화된 표기법 사용 (Dùng ký hiệu toán học). 정확하고 간결, 일관성 있음, 하지만 표기법이 어려워 사용자가 이해하기 어려움. (Chính xác, nhất quán nhưng khó hiểu với user). 종류: VDM, Z, Petri-net, CSP.
 - **비정형 명세 기법 (Informal Specification):** 일반 명사, 동사 등의 자연어를 기반으로 서술 또는 다이어그램 작성. (Dùng ngôn ngữ tự nhiên/biểu đồ). 의사소통이 용이하지만 작성자에 따라 해석이 달라질 수 있음. (Dễ giao tiếp nhưng dễ gây hiểu nhầm). 종류: FSM, Decision Table, ER모델링, State Chart.
@@ -74,6 +80,8 @@ Với **요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)**, hãy
 ### 요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)
 
 Các ý ngay dưới **요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **SADT:** SoftTech사 개발, 구조적 분석 및 설계 도구. (Công cụ phân tích cấu trúc của SoftTech).
 - **SREM (RSL/REVS):** TRW사 개발, 실시간 처리 소프트웨어 요구사항 기술. (Công cụ cho hệ thống thời gian thực, dùng RSL và REVS).

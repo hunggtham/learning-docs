@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **14. 파레토 법칙 (Pareto Principle
 
 ## 14. 파레토 법칙 (Pareto Principle)
 
-Từ **9. 스키마 3계층 (Three-Schema Architecture)**, ta đã có điểm tựa để bước vào **14. 파레토 법칙 (Pareto Principle)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/95 trước khi đi vào chi tiết.
+Từ **9. 스키마 3계층 (Three-Schema Architecture)**, ta đã có điểm tựa để bước vào **14. 파레토 법칙 (Pareto Principle)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/101 trước khi đi vào chi tiết.
 
 Để đọc **14. 파레토 법칙 (Pareto Principle)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “14. 파레토 법칙 (Pareto Principle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * 소프트웨어 테스트에서 오류의 80%는 전체 모듈의 20% 내에서 발견된다는 법칙.
 * **VI (Vietnamese) (Tiếng Việt):** Nguyên lý 80/20. 80% lỗi nằm trong 20% module cốt lõi.

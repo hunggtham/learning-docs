@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **4. 이진 트리의 운행법 (Binary 
 
 ## 4. 이진 트리의 운행법 (Binary Tree Traversal)
 
-Từ **3. 트리 (Tree)**, ta đã có điểm tựa để bước vào **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/95 trước khi đi vào chi tiết.
+Từ **3. 트리 (Tree)**, ta đã có điểm tựa để bước vào **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/101 trước khi đi vào chi tiết.
 
 Để đọc **4. 이진 트리의 운행법 (Binary Tree Traversal)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **Preorder (전위)**, **Inorder (중위)**, **Postorder (후위)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “4. 이진 트리의 운행법 (Binary Tree Traversal)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **Preorder (전위)**: Root → Left → Right
 * **Inorder (중위)**: Left → Root → Right

@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **3. 트리 (Tree)** như một khái ni
 
 ## 3. 트리 (Tree)
 
-Sau khi đã đặt nền bằng **29. 큐 (Queue)**, ta chuyển sang **3. 트리 (Tree)**. Đây là mắt xích 5/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **29. 큐 (Queue)**, ta chuyển sang **3. 트리 (Tree)**. Đây là mắt xích 5/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **3. 트리 (Tree)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **디그리 (Degree, 차수)**, **단말 노드 (Terminal Node) = 잎 노드 (Leaf Node)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “3. 트리 (Tree)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * 정점(Node)과 선분(Branch)을 이용하여 사이클을 이루지 않도록 구성한 그래프의 특수한 형태.
 * **디그리 (Degree, 차수)**: 각 노드에서 뻗어 나온 가지의 수.

@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **336. 소프트웨어 개발 프레임�
 
 ## 336. 소프트웨어 개발 프레임워크 (Software Development Framework)
 
-Sau khi đã đặt nền bằng **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크**, ta chuyển sang **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**. Đây là mắt xích 5/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크**, ta chuyển sang **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**. Đây là mắt xích 5/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **개념**, **특성**, **Tiếng Việt** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “336. 소프트웨어 개발 프레임워크 (Software Development Framework)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **개념**: 개발에 공통 사용되는 구조를 제공하여 생산성을 높이는 기반.
 - **특성**: 모듈화, 재사용성, 확장성, **제어의 역흐름(IoC)**.
@@ -41,6 +43,8 @@ Ta bắt đầu phần nội dung bằng **자주 혼동하는 판별 포인트*
 ### 자주 혼동하는 판별 포인트
 
 Phần nguồn của **자주 혼동하는 판별 포인트** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “자주 혼동하는 판별 포인트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - COCOMO의 고전 유형은 **Organic / Semi-Detached / Embedded**이며 Sequential은 유형명이 아니다.
 - RIP는 거리 벡터 방식이고 최대 15홉을 사용한다. OSPF는 링크 상태 방식, BGP는 AS 간 경로 제어다.

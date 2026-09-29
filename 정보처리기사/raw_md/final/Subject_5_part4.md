@@ -1,4 +1,6 @@
 ## 포인터와 배열 (Pointer and Array)
+Phần “포인터와 배열 (Pointer and Array)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: C언어에서 배열을 포인터(Pointer/Con trỏ) 변수에 저장한 후 포인터를 이용해 배열의 요소에 접근할 수 있습니다.
 - **특징**:
   - 배열 위치를 나타내는 첨자를 생략하고 배열의 대표명만 지정하면 배열의 첫 번째 요소의 주소를 지정하는 것과 같습니다. (예: `b = a;` 는 `b = &a[0];` 와 동일)
@@ -21,6 +23,8 @@ printf("%d", *(p+1)); // 출력/Output: 11
 
 
 ## Python의 기본 문법 (Python Basic Syntax)
+Phần “Python의 기본 문법 (Python Basic Syntax)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **특징**:
   - 변수의 자료형(Data Type/Kiểu dữ liệu)에 대한 선언이 없습니다.
   - 문장의 끝을 의미하는 세미콜론(`;`)을 사용할 필요가 없습니다.
@@ -45,10 +49,14 @@ if x < y:
 ## Python 데이터 입·출력 함수 (Python Input/Output Functions)
 
 ### 1. input( ) 함수
+Phần “1. input( ) 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Python의 표준 입력 함수로, 키보드로 입력받아 변수에 문자열(String) 형태로 저장합니다.
 - **형식**: `변수 = input('출력문자')`
 
 ### 2. print( ) 함수
+Phần “2. print( ) 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **형식**: `print(출력값1, 출력값2, ..., sep='분리문자', end='종료문자')`
   - `sep`: 여러 값을 출력할 때 값 사이를 구분하는 문자 (기본값: 공백 한 칸)
   - `end`: 맨 마지막에 표시할 문자 (기본값: 줄 바꿈 `\n`)
@@ -64,6 +72,8 @@ print(82, 24, sep='-', end=',')
 
 
 ## 입력 값의 형변환 (Type Casting)
+Phần “입력 값의 형변환 (Type Casting)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `input()` 함수는 입력되는 값을 무조건 문자열(String)로 저장하므로, 숫자로 사용하기 위해서는 형(Type)을 변환해야 합니다.
 - **변환할 데이터가 1개일 때**: `int()`, `float()` 사용
 - **변환할 데이터가 2개 이상일 때**: `map()`과 `split()` 사용
@@ -85,11 +95,15 @@ a, b = map(int, input("Nhập 2 số: ").split())
 ## Python 자료구조 (Data Structures): 리스트(List)와 딕셔너리(Dictionary)
 
 ### 1. 리스트 (List / Danh sách)
+Phần “1. 리스트 (List / Danh sách)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - C/Java의 배열(Array)과 달리 크기를 지정하지 않으며, 정수/실수/문자열 등 다양한 자료형을 섞어서 저장할 수 있습니다.
 - 위치(Index)는 0부터 시작합니다.
 - **형식**: `리스트명 = [값1, 값2, ...]` 또는 `list([값1, 값2, ...])`
 
 ### 2. 딕셔너리 (Dictionary / Từ điển)
+Phần “2. 딕셔너리 (Dictionary / Từ điển)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 연관된 값을 묶어서 저장하는 용도로, 인덱스 대신 사용자가 원하는 값을 키(Key)로 지정해 사용합니다. 키-값 쌍(Key-Value pairs) 형태로 저장합니다.
 - **형식**: `딕셔너리명 = {키1:값1, 키2:값2, ...}` 또는 `dict(...)`
 
@@ -111,6 +125,8 @@ my_dict["주소"] = "서울" # Thêm phần tử
 
 
 ## 슬라이스 (Slice)
+Phần “슬라이스 (Slice)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 문자열이나 리스트와 같은 순차형 객체에서 일부를 잘라(Slicing) 반환하는 기능입니다.
 - **형식**: `객체명[초기위치:최종위치:증가값]`
   - `초기위치`에서 `최종위치 - 1` 까지의 요소들을 가져옵니다.
@@ -131,6 +147,8 @@ print(a[::-1])   # Lật ngược list (âm là đi lùi)
 ## Python 제어문 (Control Statements): if문, for문
 
 ### 1. if문 (if Statement / Câu lệnh điều kiện)
+Phần “1. if문 (if Statement / Câu lệnh điều kiện)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **형식**:
   ```python
   if 조건:
@@ -139,6 +157,8 @@ print(a[::-1])   # Lật ngược list (âm là đi lùi)
 - 조건 뒤에 콜론(`:`)을 붙이고, 실행할 문장은 반드시 여백(Indentation)을 주어야 합니다.
 
 ### 2. for문 (for Statement / Vòng lặp for)
+Phần “2. for문 (for Statement / Vòng lặp for)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **형식 1 (range 이용)**:
   ```python
   for 변수 in range(초기값, 최종값, 증가값):
@@ -165,6 +185,8 @@ print(sum) # Output: 10 (1+2+3+4)
 
 
 ## Python 클래스 (Class) - 기초 (Cơ bản)
+Phần “Python 클래스 (Class) - 기초 (Cơ bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **정의 형식**:
   ```python
   class 클래스명:
@@ -181,6 +203,8 @@ print(sum) # Output: 10 (1+2+3+4)
 ## Python 클래스와 함수 (Class and Functions)
 
 ### 1. 객체 생성 및 메소드 (Objects and Methods)
+Phần “1. 객체 생성 및 메소드 (Objects and Methods)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **클래스 기반 객체 생성**: `변수명 = 클래스명()`
   - 예: `a = Cls()` (Cls 클래스의 객체 a를 생성)
   - 객체의 속성(변수)이나 메소드(함수)에 접근할 때는 마침표(`.`)를 사용합니다. (예: `a.x`, `a.chg()`)
@@ -200,6 +224,8 @@ a = calc(3, 4) # a = 12
 
 
 ## Python 제어문: while문 (While Loop)
+Phần “Python 제어문: while문 (While Loop)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **형식**:
   ```python
   while 조건:
@@ -218,17 +244,23 @@ while i < 5:
 ## 프로그래밍 언어의 분류 (Classification of Programming Languages)
 
 ### 1. 절차적 프로그래밍 언어 (Procedural)
+Phần “1. 절차적 프로그래밍 언어 (Procedural)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **C**: UNIX의 일부를 구현한 언어. 시스템 프로그래밍에 적합하며 포인터(Pointer) 제공.
 - **ALGOL**: 과학 기술 계산용. PASCAL과 C의 모체.
 - **COBOL**: 사무 처리용. 영어 문장 형식 (4개의 DIVISION).
 - **FORTRAN**: 수학과 공학 등 과학 기술 계산용.
 
 ### 2. 객체지향 프로그래밍 언어 (Object-Oriented)
+Phần “2. 객체지향 프로그래밍 언어 (Object-Oriented)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **JAVA**: 분산 네트워크 환경 적합, 멀티스레드(Multi-thread) 지원, 이식성 강함.
 - **C++**: C언어에 객체지향 개념을 추가.
 - **Smalltalk**: 1세대 순수 객체지향 언어로, 최초로 GUI를 제공.
 
 ### 3. 스크립트 언어 (Scripting)
+Phần “3. 스크립트 언어 (Scripting)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **클라이언트 측 (Client-side)**:
   - **JavaScript**: 웹 페이지 동작 제어.
   - **VBScript**: Microsoft 애플리케이션 제어 (Active X).
@@ -239,6 +271,8 @@ while i < 5:
 - **기타**: Python(대화형 인터프리터, 플랫폼 독립적), Shell Script(유닉스/리눅스 명령어 조합).
 
 ### 4. 선언형 프로그래밍 언어 (Declarative)
+Phần “4. 선언형 프로그래밍 언어 (Declarative)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **HTML**: 하이퍼텍스트 웹 표준 문서 생성.
 - **LISP**: 인공지능 분야. 연결 리스트(Linked List) 및 재귀(Recursion) 호출 사용.
 - **PROLOG**: 논리학 기초, 인공지능 논리 추론.
@@ -253,6 +287,8 @@ while i < 5:
 ## 라이브러리 및 예외 처리 (Libraries and Exception Handling)
 
 ### 1. 라이브러리 (Library)
+Phần “1. 라이브러리 (Library)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 자주 사용하는 함수나 데이터들을 미리 만들어 모아 놓은 집합체 (표준 라이브러리, 외부 라이브러리).
 - **C언어 대표 표준 라이브러리**:
   - `stdio.h`: 입출력 (`printf`, `scanf`)
@@ -262,6 +298,8 @@ while i < 5:
   - `time.h`: 시간 처리 (`time`)
 
 ### 2. 예외 처리 (Exception Handling)
+Phần “2. 예외 처리 (Exception Handling)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로그램의 정상적인 실행을 방해하는 조건이나 상태를 예외(Exception)라고 합니다.
 - 예외 발생 시 비정상 종료를 막고 대비해 놓은 처리 루틴을 수행하는 것을 의미합니다.
 
@@ -272,6 +310,8 @@ while i < 5:
 ## 운영체제 (OS: Operating System) 기초
 
 ### 1. 정의 및 목적
+Phần “1. 정의 및 목적” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 하드웨어를 제어하고 사용자가 편리하게 컴퓨터를 사용할 수 있도록 돕는 시스템 소프트웨어.
 - **성능 평가 4가지 기준**:
   1. **처리 능력 (Throughput)**: 일정 시간 내에 시스템이 처리하는 일의 양. (높을수록 좋음)
@@ -280,6 +320,8 @@ while i < 5:
   4. **신뢰도 (Reliability)**: 시스템이 문제를 정확하게 해결하는 정도. (높을수록 좋음)
 
 ### 2. 운영체제의 구성
+Phần “2. 운영체제의 구성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **제어 프로그램 (Control Program)**:
   - 감시 프로그램 (Supervisor): 자원 할당 및 작동 감시 (가장 핵심).
   - 작업 관리 (Job Management): 작업 순서 및 방법 관리.
@@ -296,6 +338,8 @@ while i < 5:
 ## Windows와 UNIX 운영체제 (Windows & UNIX)
 
 ### 1. Windows 주요 특징
+Phần “1. Windows 주요 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **GUI (Graphic User Interface)**: 마우스 기반 그래픽 환경.
 - **선점형 멀티태스킹 (Preemptive Multi-Tasking)**: 응용 프로그램 문제 시 OS가 강제 종료시켜 자원 반환.
 - **PnP (Plug and Play)**: 하드웨어 설치 시 OS가 자동 감지 및 환경 구성.
@@ -303,15 +347,21 @@ while i < 5:
 - **긴 파일명**: 최대 255자 지정 가능 (VFAT 이용).
 
 ### 2. UNIX 주요 특징
+Phần “2. UNIX 주요 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 대화식 시분할 시스템 (Time Sharing System) 및 개방형 시스템 (Open System).
 - 주로 **C언어**로 작성되어 이식성이 높고 파일 시스템은 트리(Tree) 구조를 가짐.
 - **다중 사용자 (Multi-User)** 및 **다중 작업 (Multi-Tasking)** 지원.
 
 ### 3. 파일 디스크립터 (File Descriptor)
+Phần “3. 파일 디스크립터 (File Descriptor)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 파일 제어 블록(FCB; File Control Block)이라고도 하며, 시스템(OS)이 필요로 하는 파일에 대한 정보를 가진 제어 블록.
 - 파일마다 독립적으로 존재하며 보통 보조기억장치에 있다가 파일이 열릴(Open) 때 주기억장치로 옮겨집니다.
 
 ### 4. UNIX 시스템 구조: 커널 (Kernel)
+Phần “4. UNIX 시스템 구조: 커널 (Kernel)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - UNIX의 가장 **핵심적인 부분**. 프로그램과 하드웨어 간의 인터페이스 역할을 담당하며 프로세스, 메모리, 입출력 관리 등을 수행합니다.
 
 > **Vietnamese Explanation**: 
@@ -320,12 +370,16 @@ while i < 5:
 ## UNIX 주요 구성요소 (UNIX Components)
 
 ### 1. 쉘 (Shell)
+Phần “1. 쉘 (Shell)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 사용자의 명령어를 인식하여 프로그램을 호출하고 명령을 수행하는 **명령어 해석기**입니다.
 - 주기억장치에 상주하지 않고 명령어가 포함된 파일 형태로 존재합니다.
 - 파이프라인 기능을 지원하며 입·출력 재지정(Redirection)이 가능합니다.
 - 예: Bourne Shell, C Shell, Korn Shell 등
 
 ### 2. 유틸리티 프로그램 (Utility Program)
+Phần “2. 유틸리티 프로그램 (Utility Program)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 일반 사용자가 작성한 응용 프로그램을 처리하는 데 사용됩니다. (에디터, 컴파일러, 디버거 등)
 
 > **Vietnamese Explanation**: 
@@ -341,6 +395,8 @@ while i < 5:
 - **최악 적합 (Worst Fit)**: 단편화를 가장 많이 남기는 분할 영역에 배치.
 
 ### 2. 가상기억장치 구현 기법 (Virtual Memory Techniques)
+Phần “2. 가상기억장치 구현 기법 (Virtual Memory Techniques)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **페이징(Paging) 기법**: 가상기억장치와 주기억장치를 **동일한 크기**로 나누어 적재. (프로그램 단위: 페이지, 주기억장치 단위: 페이지 프레임)
   - 외부 단편화는 발생하지 않으나, **내부 단편화**는 발생 가능.
 - **세그먼테이션(Segmentation) 기법**: 프로그램을 배열이나 함수 등 **다양한 크기의 논리적인 단위(세그먼트)**로 나누어 적재.
@@ -363,6 +419,8 @@ while i < 5:
 - **SCR (Second Chance Replacement)**: FIFO의 단점을 보완하여 자주 사용되는 페이지는 한 번 더 기회를 줌.
 
 ### 2. 페이지 크기 (Page Size)
+Phần “2. 페이지 크기 (Page Size)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **크기가 작을 경우**: 페이지 단편화 감소, 워킹 셋 효율 증가, Locality 일치로 기억장치 효율 상승. 단, 페이지 맵 테이블 크기가 커지고 매핑 속도가 느려지며 디스크 입출력 횟수가 증가.
 - **크기가 클 경우**: 페이지 맵 테이블 크기 감소, 매핑 속도 상승, 디스크 입출력 횟수 감소. 단, 불필요한 내용까지 적재될 수 있고 페이지 단편화가 증가.
 
@@ -388,10 +446,14 @@ while i < 5:
 ## 프로세스와 스레드 (Process and Thread)
 
 ### 1. 프로세스 (Process)
+Phần “1. 프로세스 (Process)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - CPU에 의해 처리되는 실행 중인 프로그램 (작업/Job, 태스크/Task).
 - **PCB(Process Control Block)**: 운영체제가 프로세스에 대한 중요한 정보를 저장하는 곳. (현재 상태, 포인터, 고유 식별자, 스케줄링 우선순위 등). 프로세스 생성 시 만들어지고 완료 시 제거됨.
 
 ### 2. 프로세스 상태 전이 (Process State Transition)
+Phần “2. 프로세스 상태 전이 (Process State Transition)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **제출(Submit) -> 접수(Hold) -> 준비(Ready) -> 실행(Run) -> 대기(Wait/Block) -> 종료(Exit)**
 - **주요 용어**:
   - **Dispatch (디스패치)**: 준비 상태 -> 실행 상태로 전이 (CPU 할당).
@@ -399,6 +461,8 @@ while i < 5:
   - **Spooling (스풀링)**: 디스크를 버퍼처럼 활용해 느린 입출력 장치와 CPU 간 속도 차이를 보완.
 
 ### 3. 스레드 (Thread)
+Phần “3. 스레드 (Thread)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로세스 내에서의 작업 단위 (경량 프로세스/Light Weight Process).
 - 동일 프로세스 환경에서 서로 독립적인 다중 수행이 가능하여 응답 시간을 단축하고 기억장소 낭비를 줄입니다.
 
@@ -429,6 +493,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - `$USER`: 사용자의 이름
 
 ### 2. 기본 명령어 (Basic Commands)
+Phần “2. 기본 명령어 (Basic Commands)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `cat`: 파일 내용 화면 표시
 - `chmod`: 파일 보호 모드 설정 (사용 허가 지정)
 - `chown`: 파일 소유자 변경
@@ -445,6 +511,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## IP 주소 및 서브네팅 (IP Address & Subnetting)
 
 ### 1. IPv4 주소 (Internet Protocol version 4)
+Phần “1. IPv4 주소 (Internet Protocol version 4)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 8비트씩 4부분, 총 **32비트**로 구성됩니다.
 - 네트워크 크기에 따라 A~E 클래스로 나뉩니다.
   - **A Class**: 국가/대형 망 (0~127)
@@ -457,6 +525,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 할당된 네트워크 주소를 다시 여러 개의 작은 네트워크로 나누어 사용하는 기법입니다. (서브넷 마스크 활용).
 
 ### 3. IPv6 주소 (Internet Protocol version 6)
+Phần “3. IPv6 주소 (Internet Protocol version 6)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - IPv4의 주소 부족 문제를 해결하기 위해 개발되었습니다.
 - 16비트씩 8부분, 총 **128비트**로 구성되며 콜론(`:`)으로 구분합니다.
 - 인증성, 기밀성, 무결성을 지원하여 보안이 뛰어나고, 주소 확장성과 호환성이 좋습니다.
@@ -485,6 +555,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 
 ## 네트워크 관련 장비 (Network Equipment)
+Phần “네트워크 관련 장비 (Network Equipment)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **NIC (Network Interface Card)**: 컴퓨터와 네트워크 연결 (랜카드).
 - **허브 (Hub)**: 여러 컴퓨터 연결 및 회선 통합 관리 (리피터 역할 포함).
 - **리피터 (Repeater)**: 약해진 신호를 증폭/재생하여 다시 전송.
@@ -503,31 +575,43 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 계층별 주요 프로토콜 (Major Protocols by Layer)
 
 ### 1. 응용 계층 (Application)
+Phần “1. 응용 계층 (Application)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **FTP**: 파일 전송 / **SMTP**: 이메일 송신 / **HTTP**: 웹 문서 송수신
 - **TELNET**: 원격 접속 가상 터미널 / **DNS**: 도메인 네임을 IP 주소로 변환
 
 ### 2. 전송 계층 (Transport)
+Phần “2. 전송 계층 (Transport)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **TCP**: 연결 지향, 양방향, 신뢰성 보장, 스트림 위주 전달, 흐름 및 순서 제어 기능 제공.
 - **UDP**: 비연결형, 빠른 전송 속도 (실시간 전송 유리, 오버헤드 적음).
 
 ### 3. 인터넷 계층 (Internet / Network)
+Phần “3. 인터넷 계층 (Internet / Network)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IP**: 데이터 주소 지정 및 경로 설정.
 - **ICMP**: 제어 메시지 및 오류 처리 관리.
 - **ARP**: IP 주소 -> MAC 주소 (물리적 주소)로 변환.
 - **RARP**: MAC 주소 -> IP 주소로 변환.
 
 ### 4. 네트워크 액세스 계층 (Data Link & Physical)
+Phần “4. 네트워크 액세스 계층 (Data Link & Physical)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **Ethernet (IEEE 802.3)**, **HDLC**, **X.25**, **RS-232C** 등.
 
 
 ## 5과목 정보시스템 구축 관리 (Information System Construction Management)
 
 ### 소프트웨어 개발 방법론 (Software Development Methodologies)
+Phần “소프트웨어 개발 방법론 (Software Development Methodologies)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **구조적 방법론 (Structured)**: 처리(Process) 중심. 분할과 정복(Divide and Conquer) 원리 적용.
 - **정보공학 방법론 (Information Engineering)**: 자료(Data) 중심. 대규모 정보 시스템 구축에 적합.
 - **컴포넌트 기반 방법론 (CBD)**: 기존 컴포넌트를 조합하여 새로운 애플리케이션 생성. 재사용성(Reusability)과 확장성이 높고 유지보수 비용 최소화.
 
 ### 소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)
+Phần “소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **소프트웨어 재사용 (Reuse)**: 이미 검증된 소프트웨어를 새로운 개발에 사용하여 개발 시간 및 비용 단축, 품질 향상.
 - **소프트웨어 재공학 (Reengineering)**: 기존 시스템을 유지보수 관점에서 개조 및 개선하여 새로운 기능을 추가하고 성능을 높이는 기술 (예방 유지보수 측면).
 
@@ -539,6 +623,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)
 
 ### 1. 재사용 방법 (Reuse Methods)
+Phần “1. 재사용 방법 (Reuse Methods)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **합성 중심 (Composition-Based)**: 소프트웨어 부품(블록)을 만들어 끼워 맞추어 완성시키는 방법. (블록 구성 방법)
 - **생성 중심 (Generation-Based)**: 추상화 형태의 명세를 구체화하여 프로그램을 만드는 방법. (패턴 구성 방법)
 
@@ -551,6 +637,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 
 ## CASE (Computer Aided Software Engineering)
+Phần “CASE (Computer Aided Software Engineering)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 개발 생명 주기(요구 분석, 설계, 구현, 검사 등) 전체 또는 일부를 **컴퓨터와 전용 도구를 사용해 자동화**하는 기법.
 - 개발의 표준화를 지향하며 생산성 및 품질을 향상시킵니다.
 
@@ -558,6 +646,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 소프트웨어 비용 산정 기법 (Software Cost Estimation)
 
 ### 1. LOC (Line Of Code) 기법
+Phần “1. LOC (Line Of Code) 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 원시 코드(Source Code) 라인 수의 낙관치, 비관치, 기대치를 측정해 예측치를 구하여 비용을 산정.
 - **공식**:
   - 노력(인월, Man-Month) = `LOC / 1인당 월평균 생산 코드 라인 수` = `개발 기간 × 투입 인원`
@@ -626,6 +716,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 프레임워크 특징 및 SW 신기술 (Framework & SW Tech)
 
 ### 1. 프레임워크의 특성 (Characteristics of Framework)
+Phần “1. 프레임워크의 특성 (Characteristics of Framework)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **모듈화 (Modularity)**: 캡슐화로 모듈화를 강화하여 변경 영향을 최소화.
 - **재사용성 (Reusability)**: 재사용 가능한 모듈 제공으로 생산성 향상.
 - **확장성 (Extensibility)**: 다형성을 통한 인터페이스 확장.
@@ -638,6 +730,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **SDS**: 소프트웨어 정의 스토리지 (스토리지 가상화)
 
 ### 3. 주요 SW 및 관련 용어
+Phần “3. 주요 SW 및 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **SOA (Service Oriented Architecture)**: 서비스나 컴포넌트 중심으로 구축하는 아키텍처.
 - **디지털 트윈 (Digital Twin)**: 물리적 자산을 소프트웨어로 가상화(복제)하여 효율성을 높이는 기술.
 - **텐서플로 (TensorFlow)**: 구글이 만든 딥러닝/데이터 흐름용 오픈소스 라이브러리.
@@ -647,6 +741,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 네트워크 구조 및 기술 (Network Structures & Technologies)
 
 ### 1. 네트워크 설치 구조 (Network Topologies)
+Phần “1. 네트워크 설치 구조 (Network Topologies)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **성형 (Star, 중앙 집중형)**: 중앙 컴퓨터를 중심으로 단말기가 연결 (Point-to-Point).
 - **링형 (Ring, 루프형)**: 이웃하는 장치끼리 연결. 단방향 시 하나만 고장나도 전체 마비.
 - **버스형 (Bus)**: 한 개의 통신 회선에 여러 장치 연결 (단말기 추가/제거 용이).
@@ -654,11 +750,15 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **망형 (Mesh)**: 모든 지점을 연결. 통신량이 많을 때 유리하며 회선이 가장 많이 필요함 (`n(n-1)/2` 개).
 
 ### 2. 근거리 통신망 (LAN) 표준 및 기술
+Phần “2. 근거리 통신망 (LAN) 표준 및 기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IEEE 802 규격**: 802.3(CSMA/CD), 802.4(토큰 버스), 802.5(토큰 링), 802.11(무선 LAN).
 - **VLAN**: 물리적 배치와 상관없이 논리적으로 분리하는 기술.
 - **CSMA/CA**: 무선 LAN(802.11)에서 매체가 비어있음을 확인 후 충돌 회피(Avoidance)를 위해 기다렸다가 전송하는 방식.
 
 ### 3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)
+Phần “3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IGP (내부 게이트웨이 프로토콜)**: AS 내에서 사용. **RIP**(거리 벡터, 최대 15홉 제한)와 **OSPF**(링크 상태, 대규모 망)가 있음.
 - **EGP / BGP**: AS(자율 시스템) 간의 라우팅 프로토콜.
 - **흐름 제어**: **정지-대기(Stop-and-Wait)** (수신 확인 후 다음 패킷 전송) / **슬라이딩 윈도우(Sliding Window)** (수신 확인 없이 윈도우 크기만큼 연속 전송).
@@ -673,12 +773,16 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 정보 보안 및 하드웨어 신기술 (Security & HW Tech)
 
 ### 1. 보안 용어 및 Secure OS
+Phần “1. 보안 용어 및 Secure OS” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **BaaS (Blockchain as a Service)**: 클라우드 기반 블록체인 개발 환경 제공.
 - **OWASP**: 웹 취약점을 연구하는 비영리 단체 (10대 취약점 발표).
 - **허니팟 (Honeypot)**: 침입자를 속여 정보를 수집하기 위해 설치해 둔 시스템 (미끼).
 - **Secure OS**: 기존 OS에 보안 기능 커널을 이식한 운영체제. 암호적, 논리적, 시간적, 물리적 분리 방법을 통해 보호하며 식별, 인증, 접근통제(MAC, DAC) 기능을 제공합니다.
 
 ### 2. 하드웨어 신기술
+Phần “2. 하드웨어 신기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **HA (High Availability, 고가용성)**: 장애 발생 시 즉시 다른 시스템으로 대체 가능한 이중화 환경.
 - **RAID**: 여러 개의 하드디스크에 데이터를 분산 저장하여 속도와 안정성을 향상시키는 기술.
 - **트러스트존 (TrustZone)**: 프로세서 내에 일반 구역과 보안 구역을 분할하는 ARM의 하드웨어 보안 기술.
@@ -687,6 +791,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 데이터베이스 신기술 (DB New Technologies)
 
 ### 1. 빅데이터 및 분석 기술
+Phần “1. 빅데이터 및 분석 기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **하둡 (Hadoop)**: 대용량 데이터를 병렬로 처리하기 위한 자바 소프트웨어 프레임워크 (오픈소스).
 - **맵리듀스 (MapReduce)**: 하둡 기반 분산 처리 프로그래밍 모델 (Map으로 분류, Reduce로 추출).
 - **데이터 마이닝 (Data Mining)**: 대량의 데이터에서 패턴을 규명하여 유용한 정보를 추출하는 기법.
@@ -723,6 +829,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **환형 대기 (Circular Wait)**: 대기하는 프로세스들이 원형(Cycle)을 이룸.
 
 ### 2. 교착상태 해결 방법
+Phần “2. 교착상태 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **예방 (Prevention)**: 4가지 조건 중 하나를 제거 (자원 낭비가 가장 심함).
 - **회피 (Avoidance)**: 발생 가능성을 인정하고 적절히 피해감 (**은행원 알고리즘 / Banker's Algorithm**).
 - **발견 (Detection)**: 발생 여부를 점검 (자원 할당 그래프 등).
@@ -735,6 +843,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 소프트웨어 보안 (Software Security)
 
 ### 1. 보안 3대 요소 (CIA Triad)
+Phần “1. 보안 3대 요소 (CIA Triad)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **기밀성 (Confidentiality)**: 인가된 사용자만 접근 가능 (암호화).
 - **무결성 (Integrity)**: 인가된 사용자만 수정 가능 (변조 방지).
 - **가용성 (Availability)**: 인가된 사용자는 언제든 사용 가능.
@@ -745,6 +855,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 - **방법론**: CLASP(초기 단계 중심), SDL(MS사 개발), Seven Touchpoints(각 단계별 모범사례 적용).
 
 ### 3. 주요 보안 약점 및 방어
+Phần “3. 주요 보안 약점 및 방어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **SQL 삽입 (SQL Injection)**: 입력 폼에 SQL 명령어를 넣어 DB를 조작. (방어: 입력값 필터링 및 매개변수화).
 - **XSS (크로스사이트 스크립팅)**: 웹페이지에 악성 스크립트를 삽입해 사용자 정보 탈취. (방어: `<, >, &` 등 특수문자 치환).
 - **메모리 버퍼 오버플로**: 할당된 메모리 범위를 넘어서 기록하여 오동작 유발.
@@ -759,18 +871,24 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 암호화 기법 (Encryption Techniques)
 
 ### 1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)
+Phần “1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 암호화와 복호화에 **동일한 키(비밀키)**를 사용합니다.
 - 장점: 속도가 빠름 / 단점: 키 분배가 어렵고 키 개수가 많아짐.
 - 필요한 키의 개수: `n(n-1) / 2`
 - **종류**: DES, 3DES, AES, SEED(국내), ARIA(국내).
 
 ### 2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)
+Phần “2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 암호화할 때는 공개키(Public Key), 복호화할 때는 비밀키(Private Key)를 사용합니다.
 - 장점: 키 분배 용이, 키 개수 적음 / 단점: 암복호화 속도가 느림.
 - 필요한 키의 개수: `2n`
 - **종류**: RSA.
 
 ### 3. 해시(Hash)와 솔트(Salt)
+Phần “3. 해시(Hash)와 솔트(Salt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **해시 (Hash)**: 임의의 길이 데이터를 고정된 길이의 값으로 변환(단방향). 무결성 검증 및 패스워드 암호화에 사용 (예: SHA-256, MD5).
 - **솔트 (Salt)**: 암호화 전 원문에 덧붙이는 무작위 값. 동일한 패스워드라도 솔트가 다르면 해시값이 달라져 레인보우 테이블 공격을 방어합니다.
 
@@ -783,17 +901,23 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 네트워크 및 정보 침해 공격 (Network & Info Security Attacks)
 
 ### 1. 네트워크 공격
+Phần “1. 네트워크 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **DDoS (분산 서비스 거부 공격)**: 여러 대의 PC(Agent/Zombie)를 이용해 특정 서버에 대량의 트래픽을 보내 마비시킴. (툴: Trin00, TFN, TFN2K, Stacheldraht).
 - **스머핑 (SMURFING)**: IP/ICMP 특성을 악용해 한 사이트에 엄청난 데이터를 집중시키는 공격.
 - **세션 하이재킹 (Session Hijacking)**: 클라이언트 세션을 가로채어 정상적인 사용자인 척하는 공격.
 - **스위치 재밍 (Switch Jamming)**: 위조된 MAC 주소를 대량으로 보내 스위치를 더미 허브처럼 작동하게 만듦.
 
 ### 2. 블루투스 공격
+Phần “2. 블루투스 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **블루버그 (BlueBug)**: 원격 조종 및 통화 감청.
 - **블루스나프 (BlueSnarf)**: 장비 파일에 접근해 정보 탈취.
 - **블루재킹 (BlueJacking)**: 스팸 메시지를 익명으로 퍼뜨림.
 
 ### 3. 시스템 및 소프트웨어 공격
+Phần “3. 시스템 및 소프트웨어 공격” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **제로 데이 공격 (Zero Day Attack)**: 보안 취약점이 공표되기 전, 혹은 패치가 나오기 전에 신속하게 이루어지는 공격.
 - **랜섬웨어 (Ransomware)**: 파일을 암호화하고 돈(Ransom)을 요구하는 악성 프로그램.
 - **백도어 (Back Door)**: 관리자 편의를 위해 만들어 놓은 비밀 통로를 악용.
@@ -807,12 +931,16 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 ## 인증 및 보안 체계 (Authentication & Security System)
 
 ### 1. 인증 수단 4가지
+Phần “1. 인증 수단 4가지” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **지식 기반 (Something You Know)**: 패스워드, PIN (머릿속 기억).
 - **소유 기반 (Something You Have)**: 신분증, 스마트카드, OTP.
 - **생체 기반 (Something You Are)**: 지문, 홍채, 정맥 인식.
 - **위치 기반 (Somewhere You Are)**: 접속 IP 위치, GPS.
 
 ### 2. 보안 체계 3영역
+Phần “2. 보안 체계 3영역” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **관리적 보안**: 정보보호 정책, 조직, 교육 등 사람 중심.
 - **물리적 보안**: 출입 통제, 전산실 관리 등 물리적 보호.
 - **기술적 보안**: 사용자 인증, 암호화, 접근 제어 등 IT 기술 보호.
@@ -826,6 +954,8 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
   - **NIDS (Network-Based)**: 외부로부터의 네트워크 트래픽 감시 (Snort 등).
 
 ## 리눅스의 커널 로그 (Linux Kernel Logs)
+Phần “리눅스의 커널 로그 (Linux Kernel Logs)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `/var/log/wtmp`: 성공한 로그인/로그아웃 및 시스템 시작/종료 시간 기록.
 - `/var/run/utmp`: 현재 로그인한 사용자의 상태 기록.
 - `/var/log/btmp`: 실패한 로그인 기록.
@@ -833,11 +963,15 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 
 ## 네트워크 보안 기술 (Network Security Tech)
+Phần “네트워크 보안 기술 (Network Security Tech)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **VPN (가상 사설 통신망)**: 공중 네트워크를 전용 회선처럼 사용할 수 있게 해주는 암호화 보안 솔루션.
 - **SSH (시큐어 셸)**: 원격 로그인, 파일 복사 등을 안전하게 수행하는 프로토콜 (포트 22번 사용, 데이터 암호화 지원).
 
 
 ## 소프트웨어 생명주기 모델 (SDLC Models)
+Phần “소프트웨어 생명주기 모델 (SDLC Models)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **폭포수 모델 (Waterfall)**: 각 단계를 명확히 마무리한 후 다음 단계로 넘어가는 선형 순차적 모델 (요구사항 변경 어려움).
 - **프로토타입 모델 (Prototyping)**: 시제품(Prototype)을 만들어 최종 결과물을 예측.
 - **나선형 모델 (Spiral)**: 점진적으로 개발하며 **위험 분석(Risk Analysis)** 기능을 추가한 대형 프로젝트용 모델.
@@ -863,8 +997,9 @@ SJF의 단점(긴 작업 불리)을 보완하여 대기 시간과 실행 시간�
 
 
 ## 소프트웨어 개발 보안 관련 법규
+Phần “소프트웨어 개발 보안 관련 법규” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개인정보 보호법**: 개인정보 처리 및 보호에 관한 전반적 사항.
 - **정보통신망법**: 정보통신망을 통한 개인정보 수집/이용 보호.
 - **신용정보법**: 개인의 신용정보 취급 보호.
 - **위치정보법**: 개인 위치정보 수집 및 제공 보호.
-

@@ -1,18 +1,18 @@
-# 42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)
+# 100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **43. 테스트 분류 방식 (Test Classification)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **10. 빌드 자동화 도구 (Build Automation Tools)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-애플리케이션, 테스트, 원리, 관련, 용어
+패키징, 고려사항, 순서
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **35. 테스트 케이스 (Test Case)**에서 만든 기준을 이어받아 **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **099: 소프트웨어 패키징 (Software Packaging)**에서 만든 기준을 이어받아 **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,26 +22,51 @@ Mục đích của bài này là hiểu **42. 애플리케이션 테스트 원�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** và nối nó với **43. 테스트 분류 방식 (Test Classification)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** và nối nó với **10. 빌드 자동화 도구 (Build Automation Tools)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)
+## 100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)
 
-Từ **35. 테스트 케이스 (Test Case)**, ta đã có điểm tựa để bước vào **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/95 trước khi đi vào chi tiết.
+Từ **099: 소프트웨어 패키징 (Software Packaging)**, ta đã có điểm tựa để bước vào **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/101 trước khi đi vào chi tiết.
 
-Để đọc **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **결함 집중 (Defect Clustering) & 파레토 법칙**, **살충제 패러독스 (Pesticide Paradox)**, **오류-부재의 궤변 (Absence of Errors Fallacy)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-* **결함 집중 (Defect Clustering) & 파레토 법칙**: 오류의 80%는 20%의 모듈에 집중됨.
-* **살충제 패러독스 (Pesticide Paradox)**: 동일한 테스트 케이스로 반복 테스트하면 더 이상 새로운 결함을 찾을 수 없음. 주기적인 테스트 케이스 개선 필요.
-* **오류-부재의 궤변 (Absence of Errors Fallacy)**: 결함이 0이더라도 사용자의 요구사항을 만족시키지 못하면 품질이 높다고 할 수 없음.
-* **확인 (Validation)** vs **검증 (Verification)**:
-  * 확인(Validation): **사용자** 입장에서 요구사항에 맞는지 테스트.
-  * 검증(Verification): **개발자** 입장에서 명세서(스펙)에 맞는지 테스트.
-* **VI (Vietnamese) (Tiếng Việt):** Nguyên lý kiểm thử:
-  * Pesticide Paradox (Nghịch lý thuốc trừ sâu): Dùng mãi 1 kịch bản thì không bắt được lỗi mới.
-  * Absence of Errors Fallacy: Không có lỗi không có nghĩa là phần mềm tốt nếu sai yêu cầu của khách hàng.
-  * Validation: Đúng yêu cầu người dùng (Build the right product). Verification: Làm đúng kỹ thuật/tài liệu (Build the product right).
-* **Example**: 로그인 버튼을 예쁘게 만들었지만(결함 없음), 고객이 원한 건 지문 인식 로그인이라면 이는 '오류-부재의 궤변'입니다.
+Để không đọc **패키징 시 고려사항** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
-Điểm chốt của **42. 애플리케이션 테스트 원리 및 관련 용어 (Test Principles & Terms)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **43. 테스트 분류 방식 (Test Classification)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+### 패키징 시 고려사항
+
+Các ý ngay dưới **패키징 시 고려사항** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “패키징 시 고려사항” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 최소 환경 정의 (OS/CPU/RAM). (Phải ghi rõ cấu hình tối thiểu để chạy app).
+- UI와 매뉴얼 일치. (Hình ảnh UI trong thực tế và trong tài liệu phải giống nhau).
+- 보안 및 암호화, DRM 연동 고려. (Bảo mật, mã hóa, tích hợp chống copy).
+
+Các bullet của **패키징 시 고려사항** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **패키징 시 고려사항** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **소프트웨어 패키징 순서 (Trình tự đóng gói)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **소프트웨어 패키징 순서 (Trình tự đóng gói)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 소프트웨어 패키징 순서 (Trình tự đóng gói)
+
+Bây giờ ta đi vào nội dung của **소프트웨어 패키징 순서 (Trình tự đóng gói)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+1. **기능 식별 (Xác định chức năng)**
+2. **모듈화 (Module hóa)**
+3. **빌드 진행 (Build - Dịch ra file chạy)**
+4. **사용자 환경 분석 (Phân tích môi trường người dùng - OS/CPU)**
+5. **패키징 및 적용 시험 (Đóng gói & Test thử)**
+6. **패키징 변경 개선 (Sửa lỗi nếu có)**
+7. **배포 (Deployment - Phát hành)**
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Nhận-Mô-Build-Môi-Gói-Cải-Phân (Nhận diện - Module - Build - Môi trường - Đóng gói - Cải tiến - Phân phối).
+
+---
+
+Các bullet của **소프트웨어 패키징 순서 (Trình tự đóng gói)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **소프트웨어 패키징 순서 (Trình tự đóng gói)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Điểm chốt của **100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **10. 빌드 자동화 도구 (Build Automation Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

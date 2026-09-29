@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **187-189. 트랜잭션의 상태와 특
 
 ## 187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)
 
-Sau khi đã đặt nền bằng **130-132. 트랜잭션 (Transaction)**, ta chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**. Đây là mắt xích 23/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **130-132. 트랜잭션 (Transaction)**, ta chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**. Đây là mắt xích 23/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **상태 (188):** 활동(Active) -> [부분 완료(Partially Committed) -> 완료(Committed)] 또는 [실패(Failed) -> 철회(Aborted/Rollback)].
 - **특성 (189):** 원자성(Atomicity - 전부 또는 전무), 일관성(Consistency), 독립성(Isolation - 병행 중 간섭 불가), 영속성(Durability).

@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **1. 소프트웨어 공학 및 개발 �
 
 ## 1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)
 
-Từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**, ta đã có điểm tựa để bước vào **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/57 trước khi đi vào chi tiết.
+Từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**, ta đã có điểm tựa để bước vào **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/69 trước khi đi vào chi tiết.
 
 Để đọc **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** như một bài học cho người mới, hãy giữ câu hỏi: **một dự án đi qua những giai đoạn nào, mỗi mô hình phân bổ công việc và rủi ro ra sao?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 ### 001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)
 
 Các ý ngay dưới **001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 현대적인 프로그래밍 기술을 계속적으로 적용해야 한다. (Phải liên tục áp dụng các kỹ thuật lập trình hiện đại.)
 - 개발된 소프트웨어의 품질이 유지되도록 지속적으로 검증해야 한다. (Phải liên tục xác minh để duy trì chất lượng phần mềm đã phát triển.)
@@ -53,6 +55,8 @@ Ta vừa chốt **001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc c�
 
 Bây giờ ta đi vào nội dung của **002. 폭포수 모형 (Waterfall Model / Mô hình thác nước)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “002. 폭포수 모형 (Waterfall Model / Mô hình thác nước)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 이전 단계로 돌아갈 수 없다는 전제하에 각 단계를 확실히 매듭짓고 다음 단계를 진행하는 개발 방법론이다. (Là phương pháp phát triển với tiền đề không thể quay lại giai đoạn trước, hoàn thành dứt điểm từng giai đoạn rồi mới tiến sang giai đoạn tiếp theo.)
 - 고전적 생명 주기 모형이다. 보헴(Boehm)은 나선형 모형(Spiral Model)을 제안했다. (Là mô hình vòng đời cổ điển. Boehm là người đề xuất mô hình xoắn ốc.)
 - 요구사항을 반영하기 어렵다. (Khó phản ánh/thay đổi yêu cầu.)
@@ -68,6 +72,8 @@ Với **003. 나선형 모형 (Spiral Model / Mô hình xoắn ốc)**, mục ti
 
 Phần nguồn của **003. 나선형 모형 (Spiral Model / Mô hình xoắn ốc)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “003. 나선형 모형 (Spiral Model / Mô hình xoắn ốc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 나선을 따라 돌듯이 점진적으로 완벽한 최종 소프트웨어를 개발하는 것이다. (Phát triển phần mềm cuối cùng hoàn hảo một cách tuần tự giống như quay theo hình xoắn ốc.)
 - '계획 수립 → 위험 분석 → 개발 및 검증 → 고객 평가' 과정이 반복적으로 수행된다. (Quá trình 'Lập kế hoạch → Phân tích rủi ro → Phát triển & Kiểm chứng → Khách hàng đánh giá' được lặp đi lặp lại.)
 - **Ví dụ (Example):** Phát triển một game lớn, ban đầu làm bản demo (1 vòng xoắn), đánh giá rủi ro, rồi mới phát triển thêm tính năng (vòng xoắn tiếp theo).
@@ -81,6 +87,8 @@ Các ý về **003. 나선형 모형 (Spiral Model / Mô hình xoắn ốc)** đ
 ### 004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)
 
 Các ý ngay dưới **004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 스크럼 (Scrum)
 - XP (eXtreme Programming)
@@ -99,6 +107,8 @@ Ta vừa chốt **004. 애자일 모형의 주요 방법론 (Các phương pháp
 
 Bây giờ ta đi vào nội dung của **005. 애자일 개발 4가지 핵심 가치 (4 Giá trị cốt lõi của phát triển Agile)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “005. 애자일 개발 4가지 핵심 가치 (4 Giá trị cốt lõi của phát triển Agile)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로세스와 도구보다는 개인과 상호작용에 더 가치를 둔다. (Coi trọng cá nhân và sự tương tác hơn là quy trình và công cụ.)
 - 방대한 문서보다는 실행되는 SW에 더 가치를 둔다. (Coi trọng phần mềm chạy được hơn là tài liệu đồ sộ.)
 - 계약 협상보다는 고객과 협업에 더 가치를 둔다. (Coi trọng sự cộng tác với khách hàng hơn là đàm phán hợp đồng.)
@@ -114,6 +124,8 @@ Với **006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme Progr
 ### 006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme Programming)
 
 Phần nguồn của **006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme Programming)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme Programming)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 의사소통 (Communication - Giao tiếp)
 - 단순성 (Simplicity - Sự đơn giản)

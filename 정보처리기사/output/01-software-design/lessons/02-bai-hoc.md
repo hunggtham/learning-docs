@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **1. 소프트웨어 생명 주기 (SDLC
 
 ## 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 
-Sau khi đã đặt nền bằng **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, ta chuyển sang **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**. Đây là mắt xích 2/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, ta chuyển sang **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**. Đây là mắt xích 2/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** như một bài học cho người mới, hãy giữ câu hỏi: **một dự án đi qua những giai đoạn nào, mỗi mô hình phân bổ công việc và rủi ro ra sao?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **개념**, **폭포수 모형 (Waterfall Model)**, **나선형 모형 (Spiral Model)**, **프로토타입 모형 (Prototype Model)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **개념**: Toàn bộ quá trình phát triển (Yêu cầu -> Thiết kế -> Code -> Test -> Bảo trì). Là tiêu chuẩn để quản lý dự án, chi phí, nhân lực.
 - **폭포수 모형 (Waterfall Model)**:

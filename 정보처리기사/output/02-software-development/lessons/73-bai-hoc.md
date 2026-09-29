@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **18. 최악의 시간 복잡도 (Worst-
 
 ## 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
 
-Ở bước 73/95, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** xuất hiện như phần tiếp nối của **14. 파레토 법칙 (Pareto Principle)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 73/101, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** xuất hiện như phần tiếp nối của **14. 파레토 법칙 (Pareto Principle)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **O(1)**, **O(n log n)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “18. 최악의 시간 복잡도 (Worst-case Time Complexity)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 * **O(1)**: 입력값 크기에 관계 없이 일정. (스택 삽입/삭제).
 * **O(n log n)**: n log n번 수행. (힙 정렬, 병합 정렬).

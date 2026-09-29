@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **10. 트랜잭션 관리 기법 및 제
 
 ## 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
-Ở bước 25/56, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** xuất hiện như phần tiếp nối của **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 25/54, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** xuất hiện như phần tiếp nối của **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **병행제어 기법 (Concurrency Control - Kiểm so
 ### 병행제어 기법 (Concurrency Control - Kiểm soát đồng thời)
 
 Bây giờ ta đi vào nội dung của **병행제어 기법 (Concurrency Control - Kiểm soát đồng thời)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “병행제어 기법 (Concurrency Control - Kiểm soát đồng thời)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **로킹 (Locking):** Khóa tài nguyên để đảm bảo giao dịch chạy tuần tự (직렬화).
   - *Đơn vị khóa (Locking Unit):* Càng lớn (DB, Bảng) -> Ít Lock, Overhead nhỏ, Tính đồng thời giảm. Càng nhỏ (Bản ghi, Trường) -> Nhiều Lock, Overhead lớn, Tính đồng thời cao.
@@ -53,6 +55,8 @@ Với **트랜잭션 상태 (Trạng thái giao dịch)**, mục tiêu đọc l�
 
 Phần nguồn của **트랜잭션 상태 (Trạng thái giao dịch)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “트랜잭션 상태 (Trạng thái giao dịch)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **활동 (Active):** Đang chạy.
 - **부분 완료 (Partially Committed):** Đã chạy lệnh xong, chuẩn bị COMMIT nhưng chưa ghi lên đĩa.
 - **완료 (Committed):** Thành công và lưu vĩnh viễn.
@@ -67,6 +71,8 @@ Sau khi đọc **트랜잭션 상태 (Trạng thái giao dịch)**, đừng bắ
 ### 데이터 사전 (Data Dictionary / System Catalog / Metadata)
 
 Các ý ngay dưới **데이터 사전 (Data Dictionary / System Catalog / Metadata)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “데이터 사전 (Data Dictionary / System Catalog / Metadata)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - Lưu thông tin về các đối tượng (bảng, view, index...).
 - DBMS tự động cập nhật, người dùng **chỉ được Read Only (조회만 가능)**.

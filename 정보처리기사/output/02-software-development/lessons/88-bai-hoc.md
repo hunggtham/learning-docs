@@ -1,18 +1,18 @@
-# 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
+# 핵심 118: 가상 기억장치 (Virtual Memory)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **핵심 118: 가상 기억장치 (Virtual Memory)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **핵심 118: 가상 기억장치 (Virtual Memory)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-핵심, 재사용, 기법
+핵심, 가상, 기억장치
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**에서 만든 기준을 이어받아 **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **핵심 117: 캐시 메모리 (Cache Memory)**에서 만든 기준을 이어받아 **핵심 118: 가상 기억장치 (Virtual Memory)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,28 +22,29 @@ Mục đích của bài này là hiểu **핵심 034: 재사용 기법 (Reuse Te
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** và nối nó với **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 118: 가상 기억장치 (Virtual Memory)** và nối nó với **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
+## 핵심 118: 가상 기억장치 (Virtual Memory)
 
-Ở bước 88/95, **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** xuất hiện như phần tiếp nối của **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 88/101, **핵심 118: 가상 기억장치 (Virtual Memory)** xuất hiện như phần tiếp nối của **핵심 117: 캐시 메모리 (Cache Memory)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **핵심 118: 가상 기억장치 (Virtual Memory)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
-- **Phân loại theo kỹ thuật:**
-  - **분석 (Analysis):** Hiểu code cũ để chọn cái cần tái sử dụng.
-  - **재구조 (Restructuring):** Đổi cấu trúc, không đổi chức năng.
-  - **역공학 (Reverse Engineering):** Dịch ngược từ code ra bản thiết kế.
-  - **이식 (Migration):** Chuyển sang môi trường / phần cứng mới.
-  - **재개발 (Re-Development):** Đập đi xây lại có tham khảo cái cũ.
-- **Phân loại theo phạm vi:**
-  - Hàm & Đối tượng (Function/Class), Component, Ứng dụng (Application).
+Phần “핵심 118: 가상 기억장치 (Virtual Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
+- 기억 용량이 작은 주기억장치를 마치 큰 용량을 가진 것처럼 사용할 수 있도록 하는 운영체제의 메모리 운영 기법. (Lấy một phần ổ cứng ảo hóa thành RAM, giúp máy tính chạy được các chương trình nặng hơn dung lượng RAM thực tế.)
+- 보조기억장치는 디스크 같은 DASD 장치이어야 한다. (Bắt buộc dùng đĩa từ / HDD / SSD - DASD, không dùng băng từ được.)
+- **주소의 사용 (Địa chỉ):**
+  - **가상 주소 (Virtual Address):** Địa chỉ ảo trên ổ cứng. Đơn vị thay thế là Page (Trang).
+  - **실기억 주소 (Physical Address):** Địa chỉ thực trên RAM. Đơn vị thay thế là Block / Frame.
+- **페이지 부재 (Page Fault):** 가상 페이지가 주기억장치에 없는 경우. 프로그램 수행이 중단된다. (Khi dữ liệu cần tìm không có trong RAM mà nằm trên đĩa, CPU phải tạm dừng để lấy vào.)
+- **주소 매핑 (Address Mapping):** 가상주소를 실기억주소로 변환하는 작업이다. 사상함수가 사용된다. (Đổi địa chỉ Ảo thành địa chỉ Thực qua hàm ánh xạ.)
+
+- **Vietnamese Explanation:** Khi RAM 4GB nhưng game nặng 10GB, HĐH dùng ổ cứng làm RAM ảo. RAM ảo chia thành các "Trang" (Page). Khi CPU cần 1 trang mà nó chưa nằm trong RAM thực, nó bị "Page Fault", máy sẽ hơi khựng lại để tải từ ổ cứng lên.
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Virtual = Đĩa cứng đóng giả làm RAM. Page Fault (Lỗi trang) = Trang chưa nạp, phải đợi.
 
 ---
 
-Như vậy, **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **핵심 118: 가상 기억장치 (Virtual Memory)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

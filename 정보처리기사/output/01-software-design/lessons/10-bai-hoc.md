@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **12. 요구사항 (Requirements)** như
 
 ## 12. 요구사항 (Requirements)
 
-Ở bước 10/57, **12. 요구사항 (Requirements)** xuất hiện như phần tiếp nối của **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 10/69, **12. 요구사항 (Requirements)** xuất hiện như phần tiếp nối của **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **12. 요구사항 (Requirements)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **요구사항 분석 (Requirements Analysis)** vào c
 ### 요구사항 분석 (Requirements Analysis)
 
 Bây giờ ta đi vào nội dung của **요구사항 분석 (Requirements Analysis)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “요구사항 분석 (Requirements Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 *   **분류 (Phân loại):** 기능적(Functional) / 비기능적(Non-functional)으로 조직화.
 *   **절차 (Quy trình 5 bước):** 선별(목록 작성) -> 자료 준비 -> 분류(기능/비기능) -> 분석 및 수정 -> 전달 (Lọc -> Chuẩn bị -> Phân loại -> Phân tích/Sửa -> Truyền đạt).

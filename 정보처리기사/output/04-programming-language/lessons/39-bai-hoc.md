@@ -1,18 +1,18 @@
-# 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
+# 085. 프로세스 및 스레드 (Process & Thread)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **085. 프로세스 및 스레드 (Process & Thread)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프로세스 관리 (Process Management)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **085. 프로세스 및 스레드 (Process & Thread)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **086. 프로세스 스케줄링 (Process Scheduling)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-메모리, 관리, 가상, 기억장치
+프로세스, 스레드
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**에서 만든 기준을 이어받아 **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**에서 만든 기준을 이어받아 **085. 프로세스 및 스레드 (Process & Thread)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,27 +22,35 @@ Mục đích của bài này là hiểu **289 - 296. 메모리 관리 및 가상
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** và nối nó với **프로세스 관리 (Process Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **085. 프로세스 및 스레드 (Process & Thread)** và nối nó với **086. 프로세스 스케줄링 (Process Scheduling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
+## 085. 프로세스 및 스레드 (Process & Thread)
 
-Từ **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**, ta đã có điểm tựa để bước vào **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/78 trước khi đi vào chi tiết.
+Từ **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**, ta đã có điểm tựa để bước vào **085. 프로세스 및 스레드 (Process & Thread)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/91 trước khi đi vào chi tiết.
 
-Để đọc **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **배치 전략 (Placement)**, **페이징(Paging)**, **세그먼테이션(Segmentation)**, **페이지 크기** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **085. 프로세스 및 스레드 (Process & Thread)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **프로세스 상태 (Process States)**, **상태 전이 (State Transitions)**, **Dispatch**, **Timeout (Timer Runout)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **배치 전략 (Placement)**: 최초 적합(First Fit, 빠름), 최적 적합(Best Fit, 단편화 최소), 최악 적합(Worst Fit, 큰 공간 남김).
-- **페이징(Paging)**: 메모리를 **동일한 고정 크기**로 나눔. **내부 단편화** 발생 (빈 공간이 남아버림).
-- **세그먼테이션(Segmentation)**: 논리적 의미(함수 등)에 따라 **가변 크기**로 나눔. **외부 단편화** 발생 (공간이 작아서 못 들어감).
-- **페이지 크기**: 페이지가 작으면 내부 단편화는 줄지만, 맵 테이블이 커져 매핑 속도가 느려짐.
-- **스래싱 (Thrashing)**: 빈번한 페이지 교체로 인해 시스템 처리량보다 교체 시간이 더 많아져 CPU 이용률이 급감하는 마비 상태.
+Phần “085. 프로세스 및 스레드 (Process & Thread)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **프로세스 상태 (Process States)**: 생성(Create) -> 준비(Ready) -> 실행(Running) -> 대기(Wait/Block) -> 종료(Exit).
+- **상태 전이 (State Transitions)**:
+  - **Dispatch**: 준비 -> 실행 (CPU 할당받음, 문맥교환 발생).
+  - **Timeout (Timer Runout)**: 실행 -> 준비 (할당된 시간 초과).
+  - **Block**: 실행 -> 대기 (I/O 작업 요청).
+  - **Wake Up**: 대기 -> 준비 (I/O 작업 완료).
+- **PCB (Process Control Block)**: OS가 프로세스를 관리하기 위해 유지하는 정보 블록 (상태, 식별자, 스택 정보 등).
+- **문맥 교환 (Context Switch)**: CPU가 프로세스를 바꿀 때 현재 상태를 PCB에 저장하고 새 프로세스 상태를 불러오는 작업.
+- **스레드 (Thread)**: 커널 수준(느리지만 안정적), 사용자 수준(빠르지만 불안정).
 
 **Giải thích (Vietnamese):**
-- Paging (Phân trang): Cắt bánh thành các miếng bằng nhau. Điểm yếu: Ăn không hết 1 miếng sẽ dư thừa (Nội phân mảnh).
-- Segmentation (Phân đoạn): Cắt bánh theo sức ăn của mỗi người (to nhỏ khác nhau). Điểm yếu: Chừa lại các khoảng trống lắt nhắt không ai nhét vừa (Ngoại phân mảnh).
-- Thrashing: Máy quá tải, giật lag do mải lấy dữ liệu từ ổ cứng đắp vào RAM.
+Process là một chương trình đang chạy.
+Khi Process A đang chạy, hết thời gian (Timeout), OS sẽ cất trạng thái của A vào tờ giấy nhớ gọi là "PCB", sau đó gọi Process B lên chạy. Việc chuyển đổi này gọi là "Context Switch" (Chuyển đổi ngữ cảnh). Chuyển đổi càng nhiều máy càng chậm.
+
+**💡 Mẹo ghi nhớ (Mnemonics):**
+**디타블웨** (Dispatch, Timeout, Block, WakeUp): Chu trình chuyển trạng thái của Process.
 
 ---
 
-Điểm chốt của **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **프로세스 관리 (Process Management)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Điểm chốt của **085. 프로세스 및 스레드 (Process & Thread)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **086. 프로세스 스케줄링 (Process Scheduling)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

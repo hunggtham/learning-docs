@@ -1,18 +1,18 @@
-# 120-1: 소프트웨어의 분류 (Software Classification)
+# 091: 스키마 (Schema)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **120-1: 소프트웨어의 분류 (Software Classification)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **091: 스키마 (Schema)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **120-1: 소프트웨어의 분류 (Software Classification)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **phần tổng hợp của môn** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **091: 스키마 (Schema)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **091-1: 절차형 SQL (Procedural SQL)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어의, 분류
+스키마
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**에서 만든 기준을 이어받아 **120-1: 소프트웨어의 분류 (Software Classification)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **090-1: 데이터의 독립성 (Data Independence)**에서 만든 기준을 이어받아 **091: 스키마 (Schema)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,19 +22,23 @@ Mục đích của bài này là hiểu **120-1: 소프트웨어의 분류 (Soft
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **120-1: 소프트웨어의 분류 (Software Classification)** và nối nó với **phần tổng hợp của môn**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **091: 스키마 (Schema)** và nối nó với **091-1: 절차형 SQL (Procedural SQL)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 120-1: 소프트웨어의 분류 (Software Classification)
+## 091: 스키마 (Schema)
 
-Sau khi đã đặt nền bằng **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**, ta chuyển sang **120-1: 소프트웨어의 분류 (Software Classification)**. Đây là mắt xích 95/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **090-1: 데이터의 독립성 (Data Independence)**, ta chuyển sang **091: 스키마 (Schema)**. Đây là mắt xích 95/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **120-1: 소프트웨어의 분류 (Software Classification)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **091: 스키마 (Schema)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **상용 소프트웨어 (Commercial):** Bán lấy tiền (Product). VD: Windows, Office, Game.
-- **서비스 제공 소프트웨어 (Service Provision / SI):** Làm theo đơn đặt hàng của 1 tổ chức (Dự án nội bộ). VD: Hệ thống ngân hàng.
+스키마 là bộ khung (Cấu trúc, ràng buộc) của Database. Có 3 góc nhìn:
+- **외부 스키마 (External Schema):** User view. (User nhìn thấy gì, vd: Màn hình nhân viên chỉ thấy Lương của mình).
+- **개념 스키마 (Conceptual Schema):** DB Admin view. (Toàn bộ logic, cấu trúc của doanh nghiệp. Thường gọi tắt là "Schema").
+- **내부 스키마 (Internal Schema):** System view. (Cấu trúc vật lý, lưu trên đĩa như thế nào).
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Ngoại (User/App) - Khái niệm (Toàn cục/Admin) - Nội (Máy móc/Ổ cứng).
 
 ---
 
-Khép lại **120-1: 소프트웨어의 분류 (Software Classification)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+Ta có thể khép mục **091: 스키마 (Schema)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **091-1: 절차형 SQL (Procedural SQL)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

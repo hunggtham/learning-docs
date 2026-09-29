@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **9. 인덱스와 트랜잭션 (Index v�
 
 ## 9. 인덱스와 트랜잭션 (Index và Giao dịch)
 
-Từ **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**, ta đã có điểm tựa để bước vào **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/56 trước khi đi vào chi tiết.
+Từ **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**, ta đã có điểm tựa để bước vào **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/54 trước khi đi vào chi tiết.
 
 Để đọc **9. 인덱스와 트랜잭션 (Index và Giao dịch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -52,6 +52,8 @@ Ta vừa chốt **인덱스 (Index - Chỉ mục)** bằng các điều kiện v
 ### 트랜잭션 (Transaction - Giao dịch) - ACID
 
 Bây giờ ta đi vào nội dung của **트랜잭션 (Transaction - Giao dịch) - ACID**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “트랜잭션 (Transaction - Giao dịch) - ACID” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 | 특징 (Đặc tính) | 설명 (Mô tả) | Ý nghĩa (VN) |
 |---|---|---|

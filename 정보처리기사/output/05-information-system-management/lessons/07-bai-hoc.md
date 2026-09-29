@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **프로젝트 일정 관리 (Project Sc
 
 ## 프로젝트 일정 관리 (Project Schedule Management)
 
-Ở bước 7/61, **프로젝트 일정 관리 (Project Schedule Management)** xuất hiện như phần tiếp nối của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 7/86, **프로젝트 일정 관리 (Project Schedule Management)** xuất hiện như phần tiếp nối của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **프로젝트 일정 관리 (Project Schedule Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 

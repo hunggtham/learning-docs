@@ -1,18 +1,18 @@
-# 085. 프로세스 및 스레드 (Process & Thread)
+# 086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **085. 프로세스 및 스레드 (Process & Thread)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **085. 프로세스 및 스레드 (Process & Thread)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **086. 프로세스 스케줄링 (Process Scheduling)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로세스, 스레드
+프로세스, 스케줄링과, 교착상태
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **프로세스 관리 (Process Management)**에서 만든 기준을 이어받아 **085. 프로세스 및 스레드 (Process & Thread)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **086. 프로세스 스케줄링 (Process Scheduling)**에서 만든 기준을 이어받아 **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,33 +22,39 @@ Mục đích của bài này là hiểu **085. 프로세스 및 스레드 (Proce
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **085. 프로세스 및 스레드 (Process & Thread)** và nối nó với **086. 프로세스 스케줄링 (Process Scheduling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** và nối nó với **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 085. 프로세스 및 스레드 (Process & Thread)
+## 086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속
 
-Sau khi đã đặt nền bằng **프로세스 관리 (Process Management)**, ta chuyển sang **085. 프로세스 및 스레드 (Process & Thread)**. Đây là mắt xích 41/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **086. 프로세스 스케줄링 (Process Scheduling)**, ta chuyển sang **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**. Đây là mắt xích 41/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **085. 프로세스 및 스레드 (Process & Thread)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **프로세스 상태 (Process States)**, **상태 전이 (State Transitions)**, **Dispatch**, **Timeout (Timer Runout)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **교착상태(Deadlock) 4가지 필요충분조건**, **교착상태 해결 방법 (Handling Deadlocks)**, **예방 (Prevention)**, **회피 (Avoidance)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **프로세스 상태 (Process States)**: 생성(Create) -> 준비(Ready) -> 실행(Running) -> 대기(Wait/Block) -> 종료(Exit).
-- **상태 전이 (State Transitions)**:
-  - **Dispatch**: 준비 -> 실행 (CPU 할당받음, 문맥교환 발생).
-  - **Timeout (Timer Runout)**: 실행 -> 준비 (할당된 시간 초과).
-  - **Block**: 실행 -> 대기 (I/O 작업 요청).
-  - **Wake Up**: 대기 -> 준비 (I/O 작업 완료).
-- **PCB (Process Control Block)**: OS가 프로세스를 관리하기 위해 유지하는 정보 블록 (상태, 식별자, 스택 정보 등).
-- **문맥 교환 (Context Switch)**: CPU가 프로세스를 바꿀 때 현재 상태를 PCB에 저장하고 새 프로세스 상태를 불러오는 작업.
-- **스레드 (Thread)**: 커널 수준(느리지만 안정적), 사용자 수준(빠르지만 불안정).
+Phần “086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **교착상태(Deadlock) 4가지 필요충분조건**:
+  1. **상호배제 (Mutual Exclusion)**: 한 번에 한 프로세스만 자원 사용.
+  2. **점유와 대기 (Hold and Wait)**: 자원을 가진 채로 다른 자원을 기다림.
+  3. **비선점 (Non-Preemption)**: 남의 자원을 강제로 뺏을 수 없음.
+  4. **환형 대기 (Circular Wait)**: 꼬리에 꼬리를 물고 서로의 자원을 기다림.
+- **교착상태 해결 방법 (Handling Deadlocks)**:
+  - **예방 (Prevention)**: 4가지 조건 중 하나를 부정 (자원 낭비 심함).
+  - **회피 (Avoidance)**: 발생 가능성을 피해 자원 할당 (예: **은행원 알고리즘**, 자원 할당 그래프).
+  - **발견 (Detection)**: 발생을 허용하고 나중에 감시하여 발견.
+  - **복구 (Recovery)**: 발견 후 프로세스를 종료하여 자원 회복 (기아 상태 주의).
 
 **Giải thích (Vietnamese):**
-Process là một chương trình đang chạy.
-Khi Process A đang chạy, hết thời gian (Timeout), OS sẽ cất trạng thái của A vào tờ giấy nhớ gọi là "PCB", sau đó gọi Process B lên chạy. Việc chuyển đổi này gọi là "Context Switch" (Chuyển đổi ngữ cảnh). Chuyển đổi càng nhiều máy càng chậm.
+Deadlock (Bế tắc) giống như kẹt xe ở ngã tư. Ai cũng tiến lên một chút (Chiếm giữ), không ai chịu lùi (Không thể cướp quyền), và chờ người kia nhường đường (Vòng tròn chờ đợi).
+- Phòng ngừa (Prevention): Xây cầu vượt để không bao giờ kẹt xe (Tốn kém).
+- Né tránh (Avoidance): Xem Google Maps, thấy đường đỏ (nguy cơ kẹt) thì không đi vào (Thuật toán Banker).
+- Phục hồi (Recovery): Kẹt rồi thì gọi công an đến cẩu bớt 1 xe đi để thông đường.
 
 **💡 Mẹo ghi nhớ (Mnemonics):**
-**디타블웨** (Dispatch, Timeout, Block, WakeUp): Chu trình chuyển trạng thái của Process.
+Điều kiện: **상점비환** (Tương - Chiếm - Phi - Hoàn)
+Giải quyết: **예회발복** (Dự - Tị - Phát - Phục).
 
 ---
 
-Ta có thể khép mục **085. 프로세스 및 스레드 (Process & Thread)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **086. 프로세스 스케줄링 (Process Scheduling)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

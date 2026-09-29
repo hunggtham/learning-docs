@@ -1,18 +1,18 @@
-# 인증 및 보안 체계 (Authentication & Security System)
+# 소프트웨어 개발 보안 관련 법규
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **인증 및 보안 체계 (Authentication & Security System)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **소프트웨어 개발 보안 관련 법규**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **인증 및 보안 체계 (Authentication & Security System)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **소프트웨어 개발 보안 관련 법규** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **소프트웨어 개발 보안 관련 법규** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-인증, 보안, 체계
+소프트웨어, 개발, 보안, 관련, 법규
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **소프트웨어 보안 (Software Security)**에서 만든 기준을 이어받아 **인증 및 보안 체계 (Authentication & Security System)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **인증 및 보안 체계 (Authentication & Security System)**에서 만든 기준을 이어받아 **소프트웨어 개발 보안 관련 법규**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,42 +22,21 @@ Mục đích của bài này là hiểu **인증 및 보안 체계 (Authenticati
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **인증 및 보안 체계 (Authentication & Security System)** và nối nó với **소프트웨어 개발 보안 관련 법규**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **소프트웨어 개발 보안 관련 법규** và nối nó với **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 인증 및 보안 체계 (Authentication & Security System)
+## 소프트웨어 개발 보안 관련 법규
 
-Ở bước 31/61, **인증 및 보안 체계 (Authentication & Security System)** xuất hiện như phần tiếp nối của **소프트웨어 보안 (Software Security)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 31/86, **소프트웨어 개발 보안 관련 법규** xuất hiện như phần tiếp nối của **인증 및 보안 체계 (Authentication & Security System)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **인증 및 보안 체계 (Authentication & Security System)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **지식 기반 (Something You Know)**, **소유 기반 (Something You Have)**, **생체 기반 (Something You Are)**, **위치 기반 (Somewhere You Are)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **소프트웨어 개발 보안 관련 법규** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **개인정보 보호법**, **정보통신망법**, **신용정보법**, **위치정보법** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **1. 인증 수단 4가지** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. 인증 수단 4가지** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Phần “소프트웨어 개발 보안 관련 법규” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-### 1. 인증 수단 4가지
+- **개인정보 보호법**: 개인정보 처리 및 보호에 관한 전반적 사항.
+- **정보통신망법**: 정보통신망을 통한 개인정보 수집/이용 보호.
+- **신용정보법**: 개인의 신용정보 취급 보호.
+- **위치정보법**: 개인 위치정보 수집 및 제공 보호.
 
-Bây giờ ta đi vào nội dung của **1. 인증 수단 4가지**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- **지식 기반 (Something You Know)**: 패스워드, PIN (머릿속 기억).
-- **소유 기반 (Something You Have)**: 신분증, 스마트카드, OTP.
-- **생체 기반 (Something You Are)**: 지문, 홍채, 정맥 인식.
-- **위치 기반 (Somewhere You Are)**: 접속 IP 위치, GPS.
-
-Các bullet của **1. 인증 수단 4가지** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **1. 인증 수단 4가지** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 보안 체계 3영역** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **2. 보안 체계 3영역**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
-### 2. 보안 체계 3영역
-
-Phần nguồn của **2. 보안 체계 3영역** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- **관리적 보안**: 정보보호 정책, 조직, 교육 등 사람 중심.
-- **물리적 보안**: 출입 통제, 전산실 관리 등 물리적 보호.
-- **기술적 보안**: 사용자 인증, 암호화, 접근 제어 등 IT 기술 보호.
-
-Các bullet của **2. 보안 체계 3영역** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Điểm chốt của **2. 보안 체계 3영역** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
-
-Như vậy, **인증 및 보안 체계 (Authentication & Security System)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 개발 보안 관련 법규**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **소프트웨어 개발 보안 관련 법규** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

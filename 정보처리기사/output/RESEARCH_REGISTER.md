@@ -5,14 +5,14 @@
 > **Mạch nối:** Đọc register này khi cần kiểm tra claim trong guide hoặc lesson; sau khi xác minh nguồn, quay lại đúng topic để nối evidence với cơ chế và bẫy đề.
 
 ## 시험 범위
-Phần “시험 범위” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
+Phần này xác định phạm vi chính thức để người học phân biệt nội dung cần ôn với tài liệu tham khảo mở rộng.
 
 - [Q-Net 정보처리기사 출제기준(2023.1.1~2025.12.31)](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602) — 시험 범위 baseline.
 
 ## 기술 사실 확인
-Phần “기술 사실 확인” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
+Phần này nối phạm vi thi với các nguồn kỹ thuật chính thức, để mỗi claim có thể được kiểm tra trước khi quay lại giải thích trong lesson.
 
 - [RFC 8200 IPv6 Specification](https://www.rfc-editor.org/rfc/rfc8200) — 128-bit addressing, anycast, header/MTU semantics.
 - [Oracle Java Language Specification](https://docs.oracle.com/javase/specs/jls/se26/html/jls-4.html) — primitive types, `char`, `boolean` and numeric widths.

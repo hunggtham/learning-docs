@@ -1,18 +1,18 @@
-# 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
+# 200. 유지보수 (Maintenance / Bảo trì phần mềm)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **200. 유지보수 (Maintenance / Bảo trì phần mềm)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **232. 배치 프로그램 (Batch Program)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **200. 유지보수 (Maintenance / Bảo trì phần mềm)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-추가, 응용, 기초, 기술
+유지보수
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**에서 만든 기준을 이어받아 **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**에서 만든 기준을 이어받아 **200. 유지보수 (Maintenance / Bảo trì phần mềm)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,95 +22,34 @@ Mục đích của bài này là hiểu **추가: 응용 SW 기초 기술 (4과�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** và nối nó với **232. 배치 프로그램 (Batch Program)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **200. 유지보수 (Maintenance / Bảo trì phần mềm)** và nối nó với **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
+## 200. 유지보수 (Maintenance / Bảo trì phần mềm)
 
-Sau khi đã đặt nền bằng **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**, ta chuyển sang **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**. Đây là mắt xích 62/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**, ta chuyển sang **200. 유지보수 (Maintenance / Bảo trì phần mềm)**. Đây là mắt xích 62/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận. Trong khối này, **필수 요소 5가지**, **C/C++**, **JAVA** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **200. 유지보수 (Maintenance / Bảo trì phần mềm)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **232. 배치 프로그램 (Batch Program)**. Hãy xác định **232. 배치 프로그램 (Batch Program)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Phần “200. 유지보수 (Maintenance / Bảo trì phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-### 232. 배치 프로그램 (Batch Program)
-
-Phần nguồn của **232. 배치 프로그램 (Batch Program)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- 대량의 데이터를 사용자 개입 없이 정해진 순서에 따라 **일괄적으로 처리**하는 방식.
-- 야간 시간대 등 자원 소모가 적은 시간에 실행됨.
-- **필수 요소 5가지**: 대용량, 자동화, 견고성, 안정성, 성능.
-
-**Giải thích (Vietnamese):**
-Chương trình Batch (xử lý hàng loạt) là loại phần mềm tự động chạy ngầm, thường vào ban đêm. Ví dụ: Cuối ngày ngân hàng tổng hợp lại toàn bộ giao dịch trong ngày, xử lý một lúc hàng triệu giao dịch mà không cần người bấm nút.
-
-Các ý về **232. 배치 프로그램 (Batch Program)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
-
-Ta vừa chốt **232. 배치 프로그램 (Batch Program)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
-### 233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)
-
-Các ý ngay dưới **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- **C/C++**: `char`(1바이트), `short`(2바이트), `int`(4바이트), `float`(4바이트), `double`(8바이트).
-- **JAVA**: `byte`(1바이트), **`char`(2바이트, 유니코드 지원)**, `int`(4바이트), `boolean`(1바이트).
+- 개발 중 가장 많은 노력과 비용이 투입됨.
+- **유형 (Phân loại)**:
+  1. **수정(Corrective) 보수 (하자 보수)**: 검사 단계에서 못 찾은 '오류(버그) 수정'.
+  2. **적응(Adaptive) 보수 (환경 적응)**: OS 변경, 하드웨어 변경 등 '환경 변화에 적응'하기 위한 수정.
+  3. **완전화(Perfective) 보수 (기능 개선)**: 새로운 기능 추가, 성능 개선 (유지보수 중 가장 큰 비용 차지).
+  4. **예방(Preventive) 보수**: 장래의 오류 발생에 대비하여 미리 예방.
 
 **Giải thích (Vietnamese):**
-Lưu ý quan trọng: Trong C, `char` (kí tự) chiếm 1 byte. Nhưng trong Java, `char` chiếm 2 byte vì Java dùng bảng mã Unicode để hỗ trợ mọi ngôn ngữ trên thế giới (kể cả tiếng Hàn, tiếng Việt).
+- Corrective (Sửa lỗi): App bị crash, bạn phải vá lỗi.
+- Adaptive (Thích ứng): Apple ra iOS mới, bạn update app để không bị lỗi màn hình tai thỏ.
+- Perfective (Hoàn thiện): Thêm tính năng "Chat" vào app, cải tiến tốc độ tải (Chiếm nhiều ngân sách nhất).
+- Preventive (Phòng ngừa): Refactor code để sau này dễ nâng cấp.
 
-Các bullet của **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+**💡 Mẹo ghi nhớ (Mnemonics):**
+**수적완예** (Tu - Thích - Hoàn - Dự): **수**정, **적**응, **완**전, **예**방.
 
-Sau khi đọc **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)**, đừng bắt đầu lại từ số không. **234. C언어의 구조체 (struct)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **234. C언어의 구조체 (struct)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+---
 
-### 234. C언어의 구조체 (struct)
-
-Bây giờ ta đi vào nội dung của **234. C언어의 구조체 (struct)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- 서로 다른 데이터 타입을 하나로 묶어 관리하는 사용자 정의 자료형. 배열(동일 타입)과의 차이점.
-- (Ví dụ: Một `struct SinhVien` có thể chứa Tên(string), Tuổi(int), Điểm(float)).
-
-Các ý về **234. C언어의 구조체 (struct)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
-
-**234. C언어의 구조체 (struct)** vừa cho ta cách đặt câu hỏi. Bây giờ **236. Python 시퀀스 자료형** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **236. Python 시퀀스 자료형**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
-### 236. Python 시퀀스 자료형
-
-Phần nguồn của **236. Python 시퀀스 자료형** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- 리스트(List): `[]` 변경 가능.
-- 튜플(Tuple): `()` **변경 불가능(Immutable)**.
-- (Ví dụ: Tuple dùng để lưu toạ độ GPS không bao giờ đổi).
-
-Các ý về **236. Python 시퀀스 자료형** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
-
-Ta vừa chốt **236. Python 시퀀스 자료형** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **238. 가비지 콜렉터 (Garbage Collector)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **238. 가비지 콜렉터 (Garbage Collector)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
-### 238. 가비지 콜렉터 (Garbage Collector)
-
-Các ý ngay dưới **238. 가비지 콜렉터 (Garbage Collector)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- 사용되지 않는 메모리를 자동으로 해제해주는 기능 (메모리 누수 방지). Java 등 현대 언어의 핵심.
-
-Các bullet của **238. 가비지 콜렉터 (Garbage Collector)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Sau khi đọc **238. 가비지 콜렉터 (Garbage Collector)**, đừng bắt đầu lại từ số không. **239 - 244. 각종 연산자** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **239 - 244. 각종 연산자**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
-### 239 - 244. 각종 연산자
-
-Bây giờ ta đi vào nội dung của **239 - 244. 각종 연산자**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- 산술(`%`, `++`), 관계(`==`, `!=`), 비트(`&`, `|`, `^`, `<<`), 논리(`&&`, `||`), 대입(`+=`), 조건 삼항연산자.
-- `a += 1`은 `a = a + 1`과 같다.
-- 비트 XOR(`^`): 두 비트가 다를 때만 1을 반환.
-
-Với **239 - 244. 각종 연산자**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Như vậy, **239 - 244. 각종 연산자** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
-
-Ta có thể khép mục **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **232. 배치 프로그램 (Batch Program)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **200. 유지보수 (Maintenance / Bảo trì phần mềm)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

@@ -1,18 +1,18 @@
-# 47. 테스트 오라클의 종류 (Types of Test Oracles)
+# 11. DRM (디지털 저작권 관리, Digital Rights Management)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **47. 테스트 오라클의 종류 (Types of Test Oracles)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **11. DRM (디지털 저작권 관리, Digital Rights Management)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **47. 테스트 오라클의 종류 (Types of Test Oracles)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **48. 테스트 자동화 도구 (Test Automation Tools)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **11. DRM (디지털 저작권 관리, Digital Rights Management)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-테스트, 오라클의, 종류
+DRM
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **46. 애플리케이션 테스트 프로세스 (Test Process)**에서 만든 기준을 이어받아 **47. 테스트 오라클의 종류 (Types of Test Oracles)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**에서 만든 기준을 이어받아 **11. DRM (디지털 저작권 관리, Digital Rights Management)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,20 +22,22 @@ Mục đích của bài này là hiểu **47. 테스트 오라클의 종류 (Typ
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **47. 테스트 오라클의 종류 (Types of Test Oracles)** và nối nó với **48. 테스트 자동화 도구 (Test Automation Tools)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **11. DRM (디지털 저작권 관리, Digital Rights Management)** và nối nó với **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 47. 테스트 오라클의 종류 (Types of Test Oracles)
+## 11. DRM (디지털 저작권 관리, Digital Rights Management)
 
-Sau khi đã đặt nền bằng **46. 애플리케이션 테스트 프로세스 (Test Process)**, ta chuyển sang **47. 테스트 오라클의 종류 (Types of Test Oracles)**. Đây là mắt xích 50/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)**, ta chuyển sang **11. DRM (디지털 저작권 관리, Digital Rights Management)**. Đây là mắt xích 50/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **47. 테스트 오라클의 종류 (Types of Test Oracles)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **참(True) 오라클**, **샘플링(Sampling) 오라클**, **추정(Heuristic) 오라클**, **일관성 검사(Consistent) 오라클** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **11. DRM (디지털 저작권 관리, Digital Rights Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **구성 요소 (Components)**, **기술 요소 (Technologies)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-* **참(True) 오라클**: 모든 입력값에 대해 결과를 제공 (모든 오류 검출).
-* **샘플링(Sampling) 오라클**: 특정한 몇몇 입력값에 대해서만 결과 제공.
-* **추정(Heuristic) 오라클**: 샘플링 + 나머지 값들은 추정(직관)으로 처리.
-* **일관성 검사(Consistent) 오라클**: 변경 전후의 결과값이 동일한지 확인.
-* **VI (Vietnamese) (Tiếng Việt):** Các loại Test Oracle: Chân lý (True - biết hết kết quả), Lấy mẫu (Sampling - biết vài cái), Ước lượng (Heuristic - kết hợp lấy mẫu và đoán), Nhất quán (Consistent - trước sau như một).
+Phần “11. DRM (디지털 저작권 관리, Digital Rights Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-Ta có thể khép mục **47. 테스트 오라클의 종류 (Types of Test Oracles)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **48. 테스트 자동화 도구 (Test Automation Tools)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+* **구성 요소 (Components)**: 클리어링 하우스 (Clearing House - 권한/결제 관리), 콘텐츠 제공자 (Contents Provider), 패키저 (Packager - 암호화), 콘텐츠 분배자 (Distributor), DRM 컨트롤러 (Controller - 이용 권한 통제).
+* **기술 요소 (Technologies)**: 암호화 및 키 관리, 식별체계 표현, 라이선스 발급, 정책 관리, 크랙 방지.
+* **VI (Vietnamese) (Tiếng Việt):** Quản lý bản quyền kỹ thuật số. Clearing House xử lý thanh toán/cấp phép. Packager mã hóa nội dung.
+* **Example**: 넷플릭스 영상이 녹화가 안 되거나 불법 복제가 안 되는 것이 DRM 기술 덕분입니다.
+* 💡 **Mẹo ghi nhớ**: Clearing House = Ngân hàng/Trung tâm kiểm duyệt. Packager = Người đóng gói/Mã hóa.
+
+Ta có thể khép mục **11. DRM (디지털 저작권 관리, Digital Rights Management)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **2. 데이터 전송 방식 및 변조 
 
 ## 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
-Ở bước 13/61, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** xuất hiện như phần tiếp nối của **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 13/86, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** xuất hiện như phần tiếp nối của **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Trước hết, ta đặt **2.1 통신 방식 및 전송 동기 (Transmission Mo
 ### 2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)
 
 Bây giờ ta đi vào nội dung của **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **방향에 따른 분류:** 단방향 (Simplex), 반이중 (Half-Duplex, 무전기), 전이중 (Full-Duplex, 전화).
 - **비동기식 (Asynchronous):** 문자마다 Start Bit / Stop Bit를 붙여 전송. 저속 단거리, 오버헤드 큼.
@@ -54,6 +56,8 @@ Với **2.2 신호 변환 장치 (MODEM & DSU)**, mục tiêu đọc là nhận 
 
 Phần nguồn của **2.2 신호 변환 장치 (MODEM & DSU)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “2.2 신호 변환 장치 (MODEM & DSU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **모뎀 (MODEM):** 디지털 ↔ 아날로그 변환.
 - **DSU (Digital Service Unit):** 디지털 ↔ 디지털 (단극성 ↔ 양극성 변환). 디지털 전용선에 사용.
 - **Tiếng Việt:** MODEM (Chuyển đổi Số <-> Tương tự). DSU (Chuyển đổi Số <-> Số).
@@ -67,6 +71,8 @@ Sau khi đọc **2.2 신호 변환 장치 (MODEM & DSU)**, đừng bắt đầu 
 ### 2.3 디지털 변조 (Digital Modulation - Keying)
 
 Các ý ngay dưới **2.3 디지털 변조 (Digital Modulation - Keying)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “2.3 디지털 변조 (Digital Modulation - Keying)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **ASK (진폭 편이):** 진폭 변화.
 - **FSK (주파수 편이):** 주파수 변화 (1,200bps 이하).
@@ -82,6 +88,8 @@ Các bullet của **2.3 디지털 변조 (Digital Modulation - Keying)** đang n
 ### 2.4 PCM (Pulse Code Modulation)
 
 Bây giờ ta đi vào nội dung của **2.4 PCM (Pulse Code Modulation)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “2.4 PCM (Pulse Code Modulation)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 아날로그 데이터를 디지털 신호로 변환. CODEC 이용.
 - **과정:** 표본화(Sampling) → 양자화(Quantizing) → 부호화(Encoding) → 복호화(Decoding) → 여파화(Filtering).

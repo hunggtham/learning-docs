@@ -1,18 +1,18 @@
-# 정보 보안 및 하드웨어 신기술 (Security & HW Tech)
+# 소프트웨어 보안 (Software Security)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **소프트웨어 보안 (Software Security)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **소프트웨어 보안 (Software Security)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **소프트웨어 보안 (Software Security)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **인증 및 보안 체계 (Authentication & Security System)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-정보, 보안, 하드웨어, 신기술
+소프트웨어, 보안
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**에서 만든 기준을 이어받아 **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**에서 만든 기준을 이어받아 **소프트웨어 보안 (Software Security)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,42 +22,64 @@ Mục đích của bài này là hiểu **정보 보안 및 하드웨어 신기�
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** và nối nó với **소프트웨어 보안 (Software Security)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **소프트웨어 보안 (Software Security)** và nối nó với **인증 및 보안 체계 (Authentication & Security System)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 정보 보안 및 하드웨어 신기술 (Security & HW Tech)
+## 소프트웨어 보안 (Software Security)
 
-Sau khi đã đặt nền bằng **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, ta chuyển sang **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**. Đây là mắt xích 29/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**, ta chuyển sang **소프트웨어 보안 (Software Security)**. Đây là mắt xích 29/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **BaaS (Blockchain as a Service)**, **OWASP**, **허니팟 (Honeypot)**, **Secure OS** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **소프트웨어 보안 (Software Security)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **기밀성 (Confidentiality)**, **무결성 (Integrity)**, **가용성 (Availability)**, **방법론** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **1. 보안 용어 및 Secure OS**. Hãy xác định **1. 보안 용어 및 Secure OS** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Ta bắt đầu phần nội dung bằng **1. 보안 3대 요소 (CIA Triad)**. Hãy xác định **1. 보안 3대 요소 (CIA Triad)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
-### 1. 보안 용어 및 Secure OS
+### 1. 보안 3대 요소 (CIA Triad)
 
-Phần nguồn của **1. 보안 용어 및 Secure OS** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Phần nguồn của **1. 보안 3대 요소 (CIA Triad)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
-- **BaaS (Blockchain as a Service)**: 클라우드 기반 블록체인 개발 환경 제공.
-- **OWASP**: 웹 취약점을 연구하는 비영리 단체 (10대 취약점 발표).
-- **허니팟 (Honeypot)**: 침입자를 속여 정보를 수집하기 위해 설치해 둔 시스템 (미끼).
-- **Secure OS**: 기존 OS에 보안 기능 커널을 이식한 운영체제. 암호적, 논리적, 시간적, 물리적 분리 방법을 통해 보호하며 식별, 인증, 접근통제(MAC, DAC) 기능을 제공합니다.
+Phần “1. 보안 3대 요소 (CIA Triad)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-Các bullet của **1. 보안 용어 및 Secure OS** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+- **기밀성 (Confidentiality)**: 인가된 사용자만 접근 가능 (암호화).
+- **무결성 (Integrity)**: 인가된 사용자만 수정 가능 (변조 방지).
+- **가용성 (Availability)**: 인가된 사용자는 언제든 사용 가능.
+- 기타: 인증(Authentication), 부인 방지(Non-Repudiation).
 
-Ta vừa chốt **1. 보안 용어 및 Secure OS** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 하드웨어 신기술** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **2. 하드웨어 신기술** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Các bullet của **1. 보안 3대 요소 (CIA Triad)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-### 2. 하드웨어 신기술
+Ta vừa chốt **1. 보안 3대 요소 (CIA Triad)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. Secure SDLC** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **2. Secure SDLC** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
-Các ý ngay dưới **2. 하드웨어 신기술** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+### 2. Secure SDLC
 
-- **HA (High Availability, 고가용성)**: 장애 발생 시 즉시 다른 시스템으로 대체 가능한 이중화 환경.
-- **RAID**: 여러 개의 하드디스크에 데이터를 분산 저장하여 속도와 안정성을 향상시키는 기술.
-- **트러스트존 (TrustZone)**: 프로세서 내에 일반 구역과 보안 구역을 분할하는 ARM의 하드웨어 보안 기술.
+Các ý ngay dưới **2. Secure SDLC** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
-Các bullet của **2. 하드웨어 신기술** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+보안상 안전한 SW 개발을 위해 SDLC(생명주기)에 보안 활동을 추가한 것.
+- **방법론**: CLASP(초기 단계 중심), SDL(MS사 개발), Seven Touchpoints(각 단계별 모범사례 적용).
 
-Điểm chốt của **2. 하드웨어 신기술** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+Các bullet của **2. Secure SDLC** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Ta có thể khép mục **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **소프트웨어 보안 (Software Security)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Sau khi đọc **2. Secure SDLC**, đừng bắt đầu lại từ số không. **3. 주요 보안 약점 및 방어** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **3. 주요 보안 약점 및 방어**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 3. 주요 보안 약점 및 방어
+
+Bây giờ ta đi vào nội dung của **3. 주요 보안 약점 및 방어**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “3. 주요 보안 약점 및 방어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **SQL 삽입 (SQL Injection)**: 입력 폼에 SQL 명령어를 넣어 DB를 조작. (방어: 입력값 필터링 및 매개변수화).
+- **XSS (크로스사이트 스크립팅)**: 웹페이지에 악성 스크립트를 삽입해 사용자 정보 탈취. (방어: `<, >, &` 등 특수문자 치환).
+- **메모리 버퍼 오버플로**: 할당된 메모리 범위를 넘어서 기록하여 오동작 유발.
+  - **스택 가드 (Stack Guard)**: 복귀 주소와 변수 사이에 특정 값을 넣어 오버플로를 탐지하는 기술.
+- **접근 지정자 (Access Modifier)**: `Public`(모두 접근), `Protected`(패키지+상속), `Default`(같은 패키지), `Private`(클래스 내부만).
+
+💡 **Mẹo ghi nhớ (Mnemonics):**
+- 보안 3요소: **C.I.A** (Confidentiality - Integrity - Availability).
+- 접근 한정자: **P.P.D.P** (Public - Protected - Default - Private).
+
+Các bullet của **3. 주요 보안 약점 및 방어** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. 주요 보안 약점 및 방어** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Ta có thể khép mục **소프트웨어 보안 (Software Security)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **인증 및 보안 체계 (Authentication & Security System)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **⦁ 코드 오류 및 API 오용 (Lỗ
 
 ## ⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)
 
-Ở bước 16/61, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** xuất hiện như phần tiếp nối của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 16/86, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** xuất hiện như phần tiếp nối của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 

@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **11. 모델링 및 다이어그램 심�
 
 ## 11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)
 
-Từ **3. 모델링 및 UML (Mô hình hóa và UML)**, ta đã có điểm tựa để bước vào **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/57 trước khi đi vào chi tiết.
+Từ **3. 모델링 및 UML (Mô hình hóa và UML)**, ta đã có điểm tựa để bước vào **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/69 trước khi đi vào chi tiết.
 
 Để đọc **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Từ **3. 모델링 및 UML (Mô hình hóa và UML)**, ta đã có điểm tự
 ### 웹 애플리케이션 서버 (WAS - Web Application Server)
 
 Các ý ngay dưới **웹 애플리케이션 서버 (WAS - Web Application Server)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “웹 애플리케이션 서버 (WAS - Web Application Server)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 동적인 콘텐츠를 처리하기 위해 사용되는 미들웨어. (Middleware xử lý các nội dung web động thay vì web tĩnh).
 - 종류: Tomcat, GlassFish, JBoss, Jetty, JEUS, Resin, WebLogic, WebSphere.
@@ -50,6 +52,8 @@ Ta vừa chốt **웹 애플리케이션 서버 (WAS - Web Application Server)**
 
 Bây giờ ta đi vào nội dung của **자료 흐름도 (DFD) 표기법 차이 (Khác biệt ký hiệu DFD)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “자료 흐름도 (DFD) 표기법 차이 (Khác biệt ký hiệu DFD)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **Yourdon/DeMarco:** 프로세스를 원(원형)으로 표시. (Process là hình tròn).
 - **Gane/Sarson:** 프로세스를 둥근 사각형으로 표시. (Process là hình chữ nhật bo góc).
 
@@ -61,6 +65,8 @@ Với **HIPO Chart의 종류 (Các loại biểu đồ HIPO)**, mục tiêu đ�
 ### HIPO Chart의 종류 (Các loại biểu đồ HIPO)
 
 Phần nguồn của **HIPO Chart의 종류 (Các loại biểu đồ HIPO)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “HIPO Chart의 종류 (Các loại biểu đồ HIPO)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **가시적 도표 (Visual Table of Contents):** 시스템의 전체적인 기능과 흐름을 보여주는 계층(Tree) 구조도. (Cấu trúc cây tổng thể).
 - **총체적 도표 (Overview Diagram):** 입력, 처리, 출력에 대한 전반적인 정보를 제공. (Cung cấp thông tin tổng quan I-P-O).
@@ -75,6 +81,8 @@ Các bullet của **HIPO Chart의 종류 (Các loại biểu đồ HIPO)** đang
 ### 클래스 다이어그램 심화 (Class Diagram chi tiết)
 
 Các ý ngay dưới **클래스 다이어그램 심화 (Class Diagram chi tiết)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “클래스 다이어그램 심화 (Class Diagram chi tiết)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **클래스 (Class):** 3개의 구획으로 나뉨 (Chia làm 3 phần). 이름 (Tên class), 속성 (Attribute/Biến), 오퍼레이션 (Operation/Hàm, Phương thức).
 - **관계 (Relationships) 심화:**
@@ -91,6 +99,8 @@ Ta vừa chốt **클래스 다이어그램 심화 (Class Diagram chi tiết)** 
 
 Bây giờ ta đi vào nội dung của **스테레오 타입 (Stereotype) 추가**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
+Phần “스테레오 타입 (Stereotype) 추가” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `<<include>>`: 연결된 다른 UML 요소에 대해 포함 관계. (Quan hệ Bắt buộc phải có - Bắt buộc thực hiện Use case kia).
 - `<<extend>>`: 확장 관계. (Quan hệ Tùy chọn/Mở rộng - Có thể thực hiện hoặc không).
 - `<<interface>>`: 인터페이스 정의. (Định nghĩa Interface).
@@ -106,6 +116,8 @@ Với **순차 다이어그램 심화 (Sequence Diagram chi tiết)**, mục ti�
 
 Phần nguồn của **순차 다이어그램 심화 (Sequence Diagram chi tiết)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
+Phần “순차 다이어그램 심화 (Sequence Diagram chi tiết)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **생명선 (Lifeline):** 객체가 메모리에 존재하는 기간 (Đường nét đứt sổ dọc xuống).
 - **실행 상자 (Active Box):** 객체가 메시지를 주고받으며 구동되고 있음을 표현 (Hình chữ nhật nằm trên đường sinh mệnh).
 
@@ -117,6 +129,8 @@ Các bullet của **순차 다이어그램 심화 (Sequence Diagram chi tiết)*
 ### 사용자 인터페이스(UI) 특성 (Đặc tính của UI)
 
 Các ý ngay dưới **사용자 인터페이스(UI) 특성 (Đặc tính của UI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “사용자 인터페이스(UI) 특성 (Đặc tính của UI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 소프트웨어 영역 중 변경이 가장 많이 발생한다. (Là phần thường xuyên bị thay đổi nhất trong phần mềm).
 - 최소한의 노력으로 원하는 결과를 얻을 수 있게 한다. (Giúp user đạt kết quả mong muốn với nỗ lực ít nhất).

@@ -1,18 +1,18 @@
-# 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
+# 5. 보안 및 암호화 (Security & Encryption)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **5. 보안 및 암호화 (Security & Encryption)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **5. 보안 및 암호화 (Security & Encryption)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **6. 분산 데이터베이스 (Distributed Database)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-스크럼, 추가, 개념
+보안, 암호화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**에서 만든 기준을 이어받아 **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **4. 병행 제어 (Concurrency Control)**에서 만든 기준을 이어받아 **5. 보안 및 암호화 (Security & Encryption)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,23 +22,20 @@ Mục đích của bài này là hiểu **2. 스크럼 및 XP 추가 개념 (Adv
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** và nối nó với **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **5. 보안 및 암호화 (Security & Encryption)** và nối nó với **6. 분산 데이터베이스 (Distributed Database)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
+## 5. 보안 및 암호화 (Security & Encryption)
 
-Từ **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**, ta đã có điểm tựa để bước vào **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/57 trước khi đi vào chi tiết.
+Từ **4. 병행 제어 (Concurrency Control)**, ta đã có điểm tựa để bước vào **5. 보안 및 암호화 (Security & Encryption)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/69 trước khi đi vào chi tiết.
 
-Để đọc **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **스크럼 프로세스 (Scrum Process)**, **일일 스크럼 (Daily Scrum)**, **스프린트 검토 (Sprint Review)**, **스프린트 회고 (Sprint Retrospective)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **5. 보안 및 암호화 (Security & Encryption)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개인키 암호 방식 (Private Key / Secret Key)**, **공개키 암호 방식 (Public Key)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **스크럼 프로세스 (Scrum Process)**:
-  - **일일 스크럼 (Daily Scrum)**: Họp đứng 15 phút. Cập nhật tiến độ lên Burn-down Chart (Biểu đồ tiêu hao).
-  - **스프린트 검토 (Sprint Review)**: Demo sản phẩm cho khách hàng xem có đúng ý không.
-  - **스프린트 회고 (Sprint Retrospective)**: Nội bộ team họp để rút kinh nghiệm, cải tiến quy trình.
-- **XP 기법 상세 (XP Details)**:
-  - **사용자 스토리 (User Story)**: Kịch bản do khách hàng viết (đơn vị chức năng), có thể chứa Test Case.
-  - **릴리즈 계획 (Release Planning)**: Kế hoạch phát hành từng phần sản phẩm (v1.0, v1.1).
-  - **스파이크 (Spike)**: Chương trình nhỏ, code thử nghiệm nhanh để kiểm tra tính khả thi của công nghệ nhằm giảm rủi ro (기술적 위험 감소). Code này có thể bị vứt đi sau khi test.
+Phần “5. 보안 및 암호화 (Security & Encryption)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-Điểm chốt của **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+- **개인키 암호 방식 (Private Key / Secret Key)**: Mã hóa đối xứng (대칭). Dùng cùng 1 khóa (DES). Nhanh, nhưng khó quản lý nhiều khóa.
+- **공개키 암호 방식 (Public Key)**: Mã hóa bất đối xứng (비대칭). Khóa 공개키 (công khai) để mã hóa, khóa 비밀키 (bí mật) để giải mã (RSA). Quản lý khóa dễ, nhưng chậm.
+- 💡 **Mẹo ghi nhớ**: 개인키 = 빠름, 키많음 (Private = Fast, Many keys). 공개키 = 느림, 키적음 (Public = Slow, Few keys).
+
+Điểm chốt của **5. 보안 및 암호화 (Security & Encryption)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **6. 분산 데이터베이스 (Distributed Database)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

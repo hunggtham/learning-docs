@@ -28,9 +28,11 @@ Mục đích của bài này là hiểu **1. 현행 시스템 분석 (Current Sy
 
 ## 1. 현행 시스템 분석 (Current System Analysis)
 
-Từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, ta đã có điểm tựa để bước vào **1. 현행 시스템 분석 (Current System Analysis)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/57 trước khi đi vào chi tiết.
+Từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, ta đã có điểm tựa để bước vào **1. 현행 시스템 분석 (Current System Analysis)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/69 trước khi đi vào chi tiết.
 
 Để đọc **1. 현행 시스템 분석 (Current System Analysis)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **플랫폼 성능 (Platform Performance)**, **운영체제 및 DBMS 고려사항 (OS & DBMS Considerations)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “1. 현행 시스템 분석 (Current System Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - **플랫폼 성능 (Platform Performance)**:
   - 가용성 (Availability), 경과 시간 (Turnaround Time), 응답 시간 (Response Time), 사용률 (Utilization).

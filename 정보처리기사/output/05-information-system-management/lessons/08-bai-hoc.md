@@ -28,7 +28,7 @@ Mục đích của bài này là hiểu **소프트웨어 비용 산정 기법 (
 
 ## 소프트웨어 비용 산정 기법 (Software Cost Estimation)
 
-Sau khi đã đặt nền bằng **프로젝트 일정 관리 (Project Schedule Management)**, ta chuyển sang **소프트웨어 비용 산정 기법 (Software Cost Estimation)**. Đây là mắt xích 8/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **프로젝트 일정 관리 (Project Schedule Management)**, ta chuyển sang **소프트웨어 비용 산정 기법 (Software Cost Estimation)**. Đây là mắt xích 8/86 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **소프트웨어 비용 산정 기법 (Software Cost Estimation)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **공식**, **COCOMO 모형 (Boehm 제안)**, **Putnam 모형 (생명 주기 예측 모형)**, **FP (Function Point, 기능 점수) 모형** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -37,6 +37,8 @@ Ta bắt đầu phần nội dung bằng **1. LOC (Line Of Code) 기법**. Hãy 
 ### 1. LOC (Line Of Code) 기법
 
 Phần nguồn của **1. LOC (Line Of Code) 기법** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “1. LOC (Line Of Code) 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
 - 원시 코드(Source Code) 라인 수의 낙관치, 비관치, 기대치를 측정해 예측치를 구하여 비용을 산정.
 - **공식**:

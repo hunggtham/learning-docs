@@ -1,18 +1,18 @@
-# 15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)
+# 116 & 117: 형상 관리 도구 (SVN vs Git)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **116 & 117: 형상 관리 도구 (SVN vs Git)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **16. 소프트웨어 테스트 단계 (Software Testing Phases)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **116 & 117: 형상 관리 도구 (SVN vs Git)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-화이트박스, 블랙박스, 테스트
+형상, 관리, 도구
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**에서 만든 기준을 이어받아 **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**에서 만든 기준을 이어받아 **116 & 117: 형상 관리 도구 (SVN vs Git)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,24 +22,50 @@ Mục đích của bài này là hiểu **15. 화이트박스 vs 블랙박스 �
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** và nối nó với **16. 소프트웨어 테스트 단계 (Software Testing Phases)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **116 & 117: 형상 관리 도구 (SVN vs Git)** và nối nó với **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)
+## 116 & 117: 형상 관리 도구 (SVN vs Git)
 
-Ở bước 40/95, **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** xuất hiện như phần tiếp nối của **100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 40/101, **116 & 117: 형상 관리 도구 (SVN vs Git)** xuất hiện như phần tiếp nối của **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **화이트박스 테스트**, **종류**, **블랙박스 테스트**, **종류** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **116 & 117: 형상 관리 도구 (SVN vs Git)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-* **화이트박스 테스트**: 원시 코드를 오픈시킨 상태에서 논리적 경로(제어 구조)를 테스트.
-  * **종류**: 기초 경로 검사 (Base Path), 제어 구조 검사 (조건, 루프, 데이터 흐름).
-* **블랙박스 테스트**: 기능이 제대로 작동하는지 외부에서 테스트 (내부 구조 안 봄).
-  * **종류**: 동치 분할 (Equivalence Partitioning), 경계값 분석 (Boundary Value), 원인-효과 그래프 (Cause-Effect), 오류 예측 (Error Guessing), 비교 검사 (Comparison).
-* **VI (Vietnamese) (Tiếng Việt):**
-  * White-box: Nhìn thấy code bên trong (kiểm tra đường dẫn, vòng lặp).
-  * Black-box: Không nhìn thấy code, chỉ kiểm tra đầu vào/đầu ra (kiểm tra tính năng).
-* **Example**: 화이트박스는 코드의 `if-else` 모든 경로를 실행해보는 것이고, 블랙박스는 로그인 창에 ID/PW를 넣어보는 것입니다.
-* 💡 **Mẹo ghi nhớ**: White = Nhìn xuyên thấu (Code). Black = Hộp đen không thấy ruột (Chức năng).
+Trước hết, ta đặt **Subversion (SVN)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **Subversion (SVN)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
-Như vậy, **15. 화이트박스 vs 블랙박스 테스트 (White-box vs Black-box Testing)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **16. 소프트웨어 테스트 단계 (Software Testing Phases)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+### Subversion (SVN)
+
+Bây giờ ta đi vào nội dung của **Subversion (SVN)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “Subversion (SVN)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 클라이언트/서버 구조 (Cấu trúc Client/Server tập trung).
+- **Trunk:** Thư mục chính (Main).
+- **Branches:** Th nhánh để làm tính năng riêng.
+- **Revision:** Mỗi lần Commit thành công, số Revision tăng lên 1.
+
+Các bullet của **Subversion (SVN)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **Subversion (SVN)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **Git (깃)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **Git (깃)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### Git (깃)
+
+Phần nguồn của **Git (깃)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “Git (깃)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 분산 저장소 방식 (Lưu trữ phân tán). Phát minh bởi Linus Torvalds.
+- **Snapshot (스냅샷):** Lưu lại toàn bộ trạng thái file tại một thời điểm rất nhanh chóng.
+- **로컬 저장소 (Local Repo) vs 원격 저장소 (Remote Repo):** Internet đứt vẫn làm việc bình thường ở Local.
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** SVN = Trunk (Thân cây), Revision tăng dần. Git = Snapshot, Phân tán (Phân tán (Distributed)).
+
+---
+
+Với **Git (깃)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Điểm chốt của **Git (깃)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Như vậy, **116 & 117: 형상 관리 도구 (SVN vs Git)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **12. 소프트웨어 패키징 및 설치 매뉴얼 (Software Packaging & Manual)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

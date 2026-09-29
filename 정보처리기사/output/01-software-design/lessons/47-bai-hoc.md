@@ -1,18 +1,18 @@
-# 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
+# 4. 병행 제어 (Concurrency Control)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **4. 병행 제어 (Concurrency Control)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **4. 병행 제어 (Concurrency Control)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **5. 보안 및 암호화 (Security & Encryption)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-스크럼
+병행, 제어
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **6. 애자일 방법론 (Agile Methodology)**에서 만든 기준을 이어받아 **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **3. 트랜잭션의 상태 (Transaction States)**에서 만든 기준을 이어받아 **4. 병행 제어 (Concurrency Control)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,24 +22,29 @@ Mục đích của bài này là hiểu **7. 스크럼(Scrum) 및 XP(eXtreme Pro
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** và nối nó với **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 병행 제어 (Concurrency Control)** và nối nó với **5. 보안 및 암호화 (Security & Encryption)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
+## 4. 병행 제어 (Concurrency Control)
 
-Sau khi đã đặt nền bằng **6. 애자일 방법론 (Agile Methodology)**, ta chuyển sang **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**. Đây là mắt xích 47/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **3. 트랜잭션의 상태 (Transaction States)**, ta chuyển sang **4. 병행 제어 (Concurrency Control)**. Đây là mắt xích 47/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **스크럼 (Scrum)**, **용어**, **프로세스**, **XP (eXtreme Programming)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **4. 병행 제어 (Concurrency Control)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념 (Concept)**, **문제점 (Problems)**, **갱신 분실 (Lost Update)**, **비완료 의존성 (Uncommitted Dependency)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **스크럼 (Scrum)**: Quản lý dự án Agile theo nhóm.
-  - **용어**: 제품 백로그 (Product Backlog - Yêu cầu tổng), 스프린트 (Sprint - Chu kỳ 2-4 tuần), 속도 (Velocity), 번 다운 차트 (Burn Down Chart - Biểu đồ tiến độ), PO (Product Owner), SM (Scrum Master).
-  - **프로세스**: Backlog -> Sprint Planning -> Sprint Execution (Daily Scrum) -> Sprint Review (Đánh giá) -> Sprint Retrospective (Hồi tưởng/Cải tiến).
-- **XP (eXtreme Programming)**: Tối ưu hóa phát triển phần mềm cùng khách hàng.
-  - **핵심 가치 (5 Core Values)**: 의사소통 (Communication), 단순성 (Simplicity), 용기 (Courage), 존중 (Respect), 피드백 (Feedback).
-  - 💡 **Mẹo ghi nhớ**: Y/Đ/D/T/P -> **Ý Định Dũng Tướng Phàm**
-  - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
+Phần “4. 병행 제어 (Concurrency Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
----
+- **개념 (Concept)**: Điều khiển sự tương tác giữa các giao dịch chạy đồng thời để bảo vệ tính 일관성 (nhất quán).
+- **문제점 (Problems)**:
+  - **갱신 분실 (Lost Update)**: Mất bản cập nhật.
+  - **비완료 의존성 (Uncommitted Dependency)**: Phụ thuộc vào giao dịch chưa commit (Dirty Read).
+  - **모순성 (Inconsistency)**: Mâu thuẫn dữ liệu.
+  - **연쇄 복귀 (Cascading Rollback)**: Phải rollback dây chuyền.
+- **로킹 (Locking)**: Khóa dữ liệu để sử dụng 상호 배타적 (độc quyền - Mutual Exclusion).
+  - **로킹 단위 (Locking Granularity)**: Đơn vị khóa.
+    - Đơn vị 크면 (lớn) -> ít khóa, dễ quản lý, nhưng mức đồng thời thấp (낮은 병행성).
+    - Đơn vị 작으면 (nhỏ) -> ngược lại.
+- **Ví dụ**: Hai người cùng rút tiền từ một tài khoản, Locking giúp chỉ 1 người được rút tại 1 thời điểm.
+- 💡 **Mẹo ghi nhớ**: Vấn đề đồng thời: L/U/I/C (Lost, Uncommitted, Inconsistency, Cascading) -> **Làm Út In Cười**
 
-Ta có thể khép mục **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **4. 병행 제어 (Concurrency Control)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 보안 및 암호화 (Security & Encryption)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

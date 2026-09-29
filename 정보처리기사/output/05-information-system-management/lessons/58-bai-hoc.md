@@ -1,18 +1,18 @@
-# 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
+# UNIX 주요 구성요소 (UNIX Components)
 
 ## 학습 목표 (Mục tiêu)
 
-Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **UNIX 주요 구성요소 (UNIX Components)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **1. 인증 기술 (Authentication Types)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **UNIX 주요 구성요소 (UNIX Components)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **메모리 관리 (Memory Management)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-서버, 인증, 접근, 제어
+UNIX, 주요, 구성요소
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**에서 만든 기준을 이어받아 **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **Windows와 UNIX 운영체제 (Windows & UNIX)**에서 만든 기준을 이어받아 **UNIX 주요 구성요소 (UNIX Components)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -22,14 +22,47 @@ Mục đích của bài này là hiểu **108 서버 인증 & 109 접근 제어 
 
 > **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** và nối nó với **1. 인증 기술 (Authentication Types)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **UNIX 주요 구성요소 (UNIX Components)** và nối nó với **메모리 관리 (Memory Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
+## UNIX 주요 구성요소 (UNIX Components)
 
-Ở bước 58/61, **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** xuất hiện như phần tiếp nối của **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 58/86, **UNIX 주요 구성요소 (UNIX Components)** xuất hiện như phần tiếp nối của **Windows와 UNIX 운영체제 (Windows & UNIX)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **UNIX 주요 구성요소 (UNIX Components)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Như vậy, **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **1. 인증 기술 (Authentication Types)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Trước hết, ta đặt **1. 쉘 (Shell)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. 쉘 (Shell)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. 쉘 (Shell)
+
+Bây giờ ta đi vào nội dung của **1. 쉘 (Shell)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “1. 쉘 (Shell)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 사용자의 명령어를 인식하여 프로그램을 호출하고 명령을 수행하는 **명령어 해석기**입니다.
+- 주기억장치에 상주하지 않고 명령어가 포함된 파일 형태로 존재합니다.
+- 파이프라인 기능을 지원하며 입·출력 재지정(Redirection)이 가능합니다.
+- 예: Bourne Shell, C Shell, Korn Shell 등
+
+Các bullet của **1. 쉘 (Shell)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 쉘 (Shell)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 유틸리티 프로그램 (Utility Program)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. 유틸리티 프로그램 (Utility Program)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. 유틸리티 프로그램 (Utility Program)
+
+Phần nguồn của **2. 유틸리티 프로그램 (Utility Program)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “2. 유틸리티 프로그램 (Utility Program)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 일반 사용자가 작성한 응용 프로그램을 처리하는 데 사용됩니다. (에디터, 컴파일러, 디버거 등)
+
+> **Vietnamese Explanation**:
+> Shell trong UNIX đóng vai trò như người phiên dịch, nhận lệnh từ người dùng và giao cho hệ thống xử lý. Chương trình tiện ích (Utility) là các công cụ hỗ trợ người dùng như trình soạn thảo, trình biên dịch.
+
+Các bullet của **2. 유틸리티 프로그램 (Utility Program)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 유틸리티 프로그램 (Utility Program)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Như vậy, **UNIX 주요 구성요소 (UNIX Components)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **메모리 관리 (Memory Management)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

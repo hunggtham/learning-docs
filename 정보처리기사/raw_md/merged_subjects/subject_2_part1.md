@@ -17,6 +17,8 @@
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **방향/무방향 그래프의 060** 치기 **최대 간선 수** 
+Phần “초 **방향/무방향 그래프의 060** 치기 **최대 간선 수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 무방향 그래프의 최대 간선 수 :�n(n-1)/2 
 
@@ -96,6 +98,8 @@ A<br>1 3<br>B C<br>2<br>D E F G<br>H I<br><!-- End of picture text -->
 ## 정보처리기사 핵심 요약 
 
 ###### Preorder 운행법의 방문 순서 
+Phần “Preorder 운행법의 방문 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ①�Preorder는�Root�→�Left�→�Right이므로�A13이�된다. 
 
@@ -208,6 +212,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **066** 치기초 **삽입 정렬(Insertion Sort)** 
 
 ###### 예제 8, 5, 6, 2, 4를 삽입 정렬로 정렬하시오. 
+Phần “예제 8, 5, 6, 2, 4를 삽입 정렬로 정렬하시오.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -229,6 +235,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **068** 치기초 **버블 정렬(Bubble Sort)** 
 
 ###### 예제 8, 5, 6, 2, 4를 버블 정렬로 정렬하시오. 
+Phần “예제 8, 5, 6, 2, 4를 버블 정렬로 정렬하시오.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •초기 상태 : 8 5 6 2 4 
 
@@ -249,6 +257,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **069** 
 
 ##### 치기초 **이분 검색(이진 검색)** 
+Phần “치기초 **이분 검색(이진 검색)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 검색할�데이터가�정렬되어�있어야�한다. 
 
@@ -266,6 +276,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 067 치기초 선택 정렬(Selection Sort)<br><!-- End of picture text -->
 
 ###### 예제 8, 5, 6, 2, 4를 선택 정렬로 정렬하시오. 
+Phần “예제 8, 5, 6, 2, 4를 선택 정렬로 정렬하시오.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •초기 상태 : 8 5 6 2 4 
 
@@ -274,6 +286,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - •2회전 : 2 6 8 5 4 2 5 8 6 4 2 4 8 6 5 •3회전 : 2 4 6 8 5 2 4 5 8 6 •4회전 : 2 4 5 6 8 
 
 # **070** 치기초 **주요 해싱 함수** 
+Phần “**070** 치기초 **주요 해싱 함수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제산법(Division) :�레코드�키�값(K)을� <u>해시표(Hash� Table)의�크기보다�큰�수�중에서�가장�작은�소수 (Prime,�Q)로�나눈�나머지를�홈�주소로�삼는�방식</u> 
 
@@ -288,6 +302,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ## 정보처리기사 핵심 요약 
 
 # **071** 치기초 **스키마 3계층** 
+Phần “**071** 치기초 **스키마 3계층**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 외부 스키마 :�사용자나�응용�프로그래머가�각�개인의�입 장에서�필요로�하는�데이터베이스의�논리적�구조를�정 <u>의한�것</u> 
 
@@ -301,6 +317,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **DRM(디지털 저작권 관리)의 075** 치기 **구성 요소** 
+Phần “초 **DRM(디지털 저작권 관리)의 075** 치기 **구성 요소**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •클리어링 하우스(Clearing House) :�저작권에�대한�사용�권 한,�라이선스�발급,�사용량에�따른�결제�관리�등을�수행 하는�곳 
 
@@ -326,6 +344,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - •Gradle :�Groovy를�기반으로�한�오픈�소스�형태의�빌드� 자동화�도구 
 
 # 초 **DRM(디지털 저작권 관리)의 076** 치기 **기술 요소** 
+Phần “초 **DRM(디지털 저작권 관리)의 076** 치기 **기술 요소**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 콘텐츠�암호화�및�키�관리 
 
@@ -351,6 +371,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 # **077** 
 
 ##### 치기초 **소프트웨어 설치 매뉴얼** 
+Phần “치기초 **소프트웨어 설치 매뉴얼**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 설치�매뉴얼은�사용자를�기준으로�작성한다. 
 
@@ -389,6 +411,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # **082** 치기초 **화이트박스 테스트의 종류** 
+Phần “**082** 치기초 **화이트박스 테스트의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기초�경로�검사 
 
@@ -403,6 +427,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - ※  기초 경로(Base Path = Basis Path) :�수행�가능한�모든�경 <u>로를�의미함</u> 
 
 # 초 **소프트웨어의 버전 등록 관련 079** 치기 **주요 기능** 
+Phần “초 **소프트웨어의 버전 등록 관련 079** 치기 **주요 기능**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 체크아웃(Check-Out) :�프로그램을�수정하기�위해�저장 <u>소에서�파일을�받아옴</u> 
 
@@ -427,6 +453,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 - �프로그램의�제어�구조에�따라�선택,�반복�등의�분기점� 부분들을�수행함으로써�논리적�경로를�제어한다. 
 
 # **083** 치기초 **블랙박스 테스트 종류** 
+Phần “**083** 치기초 **블랙박스 테스트 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 동치�분할�검사 
 
@@ -443,6 +471,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 코딩�직후�소프트웨어�설계의�최소�단위인�모듈이나�컴포 <u>넌트에�초점을�맞춰�테스트하는�것이다.</u> 
 
 # 초 **단위 테스트로 발견 가능한 085** 치기 **오류** 
+Phần “초 **단위 테스트로 발견 가능한 085** 치기 **오류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 알고리즘�오류에�따른�원치�않는�결과 
 
@@ -457,12 +487,16 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ## 정보처리기사 핵심 요약 
 
 # **086** 치기초 **인수 테스트의 종류** 
+Phần “**086** 치기초 **인수 테스트의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 알파 테스트 :�개발자의�장소에서�사용자가�개발자�앞에 서�행하는�테스트�기법 
 
 - 베타 테스트 :�선정된�최종� <u>사용자가�여러�명의�사용 자�앞에서�행하는�테스트�기법으로,�필드�테스팅(Field�</u> Testing)이라고도�불림 
 
 # **090** 치기초 **테스트 오라클(Test Oracle)** 
+Phần “**090** 치기초 **테스트 오라클(Test Oracle)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �테스트�결과가�올바른지�판단하기�위해�사전에�정의된� <u>참�값을�대입하여�비교하는�기법�및�활동이다.</u> 
 
@@ -509,6 +543,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 **089** 치기초 **테스트 스텁(Test Stub)** 
 
 # **093** 치기초 **외계인 코드(Alien Code)** 
+Phần “**093** 치기초 **외계인 코드(Alien Code)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �일시적으로�필요한�조건만을�가지고�있는�시험용�모듈 이다. 
 
@@ -521,6 +557,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ## 정보처리기사 핵심 요약 
 
 # 초 **소스 코드 품질 분석 도구 - 094** 치기 **정적 분석 도구** 
+Phần “초 **소스 코드 품질 분석 도구 - 094** 치기 **정적 분석 도구**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>�하드웨어�또는�소프트웨어적인�방법으로�코드�분석이�</u> 가능하다. 
 
@@ -541,6 +579,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **인터페이스 보안 기능 적용 - 098** 치기 **네트워크 영역** 
+Phần “초 **인터페이스 보안 기능 적용 - 098** 치기 **네트워크 영역**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 네트워크�트래픽에�대한�암호화를�설정한다. 
 
@@ -612,6 +652,8 @@ A�/�(B�-�C)�+�D�*�(E�+�F)
 ### 핵심 **<mark>073</mark>** 
 
 #### 자료 구조의 분류 
+Phần “자료 구조의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||배열(Array)|연속 리스트|
 |---|---|---|
@@ -878,6 +920,8 @@ Postfix나 Prefix는 스택을 이용하여 처리하므로 Infix는 Postfix나 
 > 예제 1 다음과 같이 Infix로 표기된 수식을 Prefix와 Postfix로 변 환하시오. 
 
 ###### X = A / B * (C + D) + E 
+Phần “X = A / B * (C + D) + E” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Prefix로 변환하기 
 
@@ -898,6 +942,8 @@ Postfix나 Prefix는 스택을 이용하여 처리하므로 Infix는 Postfix나 
 - 방문 순서 : HDIBEAFCG 
 
 ###### Postorder 
+Phần “Postorder” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Postorder는 Left → Right → Root이므로 13A가 된다. 
 
@@ -1097,6 +1143,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 2403902<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제산법(Division) : 레코드 키(K)를 해시표(Hash Table) 의 크기보다 큰 수 중에서 가장 작은 소수(Prime, Q)로 나눈 나머지를 홈 주소로 삼는 방식, 즉 h(K) = K mod Q임 
 
@@ -1129,6 +1177,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 대수적 코딩법(Algebraic Coding) : 키 값을 이루고 있는 각 자리의 비트 수를 한 다항식의 계수로 간주하고, 이 다항식을 해시표의 크기에 의해 정의된 다항식으로 나 누어 얻은 나머지 다항식의 계수를 홈 주소로 삼는 방식 
 
@@ -1174,6 +1224,8 @@ DBMS란 사용자와 데이터베이스 사이에서 사용자의 요구 에 따
 2404004<br><!-- End of picture text -->
 
 ### 핵심 **<mark>090</mark>** DBMS의 장·단점 
+Phần “핵심 **<mark>090</mark>** DBMS의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •데이터의 논리적, 물리적 독립성이 보장됨 
 
@@ -1399,6 +1451,8 @@ Ant와 동일한 아파치 소프트웨어 재단에서 개발된 것으 Maven �
 2404602<br><!-- End of picture text -->
 
 ### **<mark>100</mark>** 
+Phần “**<mark>100</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 시스템 환경, 즉 운영체제(OS), CPU, 메모리 등에 필요한 최소 환경을 정의한다. 
 
@@ -1656,6 +1710,8 @@ Ant와 동일한 아파치 소프트웨어 재단에서 개발된 것으 Maven �
 ### 핵심 **<mark>111</mark>** 
 
 #### 형상 관리 기능 
+Phần “형상 관리 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 형상 식별 : 형상 관리 대상에 이름과 관리 번호를 부여 하고, 계층(Tree) 구조로 구분하여 수정 및 추적이 용이 하도록 하는 작업 
 
@@ -1683,6 +1739,8 @@ Ant와 동일한 아파치 소프트웨어 재단에서 개발된 것으 Maven �
 
 
 ### **<mark>110</mark>** 형상 관리의 중요성 
+Phần “**<mark>110</mark>** 형상 관리의 중요성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 지속적인 소프트웨어의 변경 사항을 체계적으로 추적 하고 통제할 수 있다. 
 
@@ -1928,6 +1986,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2405501<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |정적<br>테스트|• 프로그램을 실행하지 않고 명세서나 소스 코드를 대상<br>으로 분석하는 테스트<br>• 소프트웨어 개발 초기에 결함을 발견할 수 있어 소프<br>트웨어의 개발 비용을 낮추는데 도움이 됨<br>• 종류 : 워크스루, 인스펙션, 코드 검사 등|
 |---|---|
@@ -1943,6 +2003,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2405502<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |명세 기반<br>테스트|• 사용자의 요구사항에 대한 명세를 빠짐없이 테스트<br>케이스로 만들어 구현하고 있는지 확인하는 테스트<br>• 종류 : 동등 분할, 경계 값 분석 등|
 |---|---|
@@ -1991,6 +2053,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ### **<mark>125</mark>** 시각에 따른 테스트 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |검증<br>|개발자의 시각에서 제품의 생산 과정을 테스트하|
 |---|---|
@@ -2365,6 +2429,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 테스트 자동화는 사람이 반복적으로 수행하던 테스트 절 차를 스크립트 형태로 구현하는 자동화 도구를 적용함으로 써 쉽고 효율적으로 테스트를 수행할 수 있도록 한 것이다. 
 
 ###### 테스트 자동화 도구의 유형 
+Phần “테스트 자동화 도구의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |23.2, 22.4, 20.9|2406005|
 |---|---|
@@ -2393,6 +2459,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||• 스크립트 언어를 사용하여 테스트를 실행하는<br>방법으로, 테스트 데이터와 테스트 수행 방법<br>등이 포함된 스크립트를 작성한 후 실행함|
 |---|---|
@@ -2447,6 +2515,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2406131<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 테스트 드라이버(Test Driver) : 테스트 대상의 하위 모듈 을 호출하고, 매개변수(Parameter)를 전달하고, 모듈 테스트 수행 후의 결과를 도출하는 도구 
 
@@ -2484,6 +2554,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |O(1)|입력값(n)에 관계 없이 일정하게 문제 해결에 하나의<br>단계만을 거침<br>스택의 삽입(Push), 삭제(Pop)|
 |---|---|
@@ -2566,6 +2638,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 **44** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 비교적 애플리케이션 개발 초기의 결함을 찾는데 사 용되고, 개발 완료 시점에서는 개발된 소스 코드의 품질을 검증하는 차원에서 사용된다. 
 
@@ -2612,6 +2686,8 @@ ESB는 애플리케이션 간 연계, 데이터 변환, 웹 서비스 지 원 �
 2459911<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - EAI는 기업 내 각종 애플리케이션 및 플랫폼 간의 정보 전달, 연계, 통합 등 상호 연동이 가능하게 해주는 솔루 션이다. 
 
@@ -2682,6 +2758,8 @@ XML은 특수한 목적을 갖는 마크업 언어를 만드는 데 사 용되�
 ### **<mark>160</mark>** 데이터 무결성 검사 도구 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 무결성 검사 도구는 시스템 파일의 변경 유무를 확인하고, 파일이 변경되었을 경우 이를 관리자에게 알 려주는 도구로, 인터페이스 보안 취약점을 분석하는데 사용된다. 
 
@@ -2736,6 +2814,8 @@ AJAX는 자바 스크립트(JavaScript) 등을 이용하여 클라 이언트와 
 2407402<br><!-- End of picture text -->
 
 ### **<mark>160</mark>** 인터페이스 구현 검증 도구 
+Phần “**<mark>160</mark>** 인터페이스 구현 검증 도구” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터페이스 구현을 검증하기 위해서는 인터페이스 단 위 기능과 시나리오 등을 기반으로 하는 통합 테스트가 필요하다. 
 
@@ -2751,6 +2831,8 @@ AJAX는 자바 스크립트(JavaScript) 등을 이용하여 클라 이언트와 
 **46** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |FitNesse|웹 기반 테스트케이스 설계, 실행, 결과 확인 등을 지원<br>하는 테스트 프레임워크|
 |---|---|
@@ -2793,6 +2875,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 핵심 02.9, 02.5 
 
 ## **<mark>062</mark>** 불대수의 기본 공식 
+Phần “**<mark>062</mark>** 불대수의 기본 공식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 교환법칙 :�A+B�=�B+A,�A·B�=�B·A 
 
@@ -2813,6 +2897,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 핵심 12.8, 12.5, 11.8, 11.3, 10.5, 10.3, 08.9, 08.5, 02.5, 99.4 **<mark>063</mark>** 논리식의 간소화 
 
 ###### 불 대수의 기본 공식 이용하기 
+Phần “불 대수의 기본 공식 이용하기” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶��합의�곱((A+B)(C+D))�표현을�곱의�합(AC+AD+� BC+BD)�표현으로�변환한다. 
 
@@ -2823,6 +2909,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 - 카르노�맵은�변수(입력선)의�개수에�따라�표의�크기가� 달라지며�칸의�위치에�따라서�각�칸의�불�함수가�정해 진다. 
 
 ###### <변수가 두 개일 때> 
+Phần “<변수가 두 개일 때>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A<br>B<br>0<br>(B)|1<br>(B)|
 |---|---|
@@ -2832,6 +2920,8 @@ APM은 애플리케이션의 성능 관리를 위해 접속자, 자원 현황, �
 
 
 ###### <변수가 세 개일 때> 
+Phần “<변수가 세 개일 때>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A는 1 B는 0 C는 0이므로|0(A)<br>A<br>BC|000:0<br>00<br>(BC)|001:1<br>01<br>(BC)|011:3<br>11<br>(BC)|010:2<br>10<br>(BC)|
 |---|---|---|---|---|---|
@@ -2955,6 +3045,8 @@ A A<br>➊ B ➍<br>B<br>B<br>➋ C C<br>A<br>➌<br>C<br><!-- End of picture te
 자리올림�수(C�i)를�포함하여�1Bit�크기의�2진수�3자리를�더 하여�합(Sum)과�자리올림�수(Carry)를�구하는�회로이다. 
 
 ###### 진리표 
+Phần “진리표” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A||B|Ci|Sum|Ci+1|
 |---|---|---|---|---|---|
@@ -2970,6 +3062,8 @@ A A<br>➊ B ➍<br>B<br>B<br>➋ C C<br>A<br>➌<br>C<br><!-- End of picture te
 
 
 ###### 논리식 
+Phần “논리식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •합계(Sum)�=�(A`⊕```B)�⊕�C�i 
 
@@ -2989,6 +3083,8 @@ A A<br>➊ B ➍<br>B<br>B<br>➋ C C<br>A<br>➌<br>C<br><!-- End of picture te
 1Bit짜리�2진수�2개를�덧셈한�합(S)과�자리올림�수(C)를� 구하는�회로이다. 
 
 ###### 진리표 
+Phần “진리표” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |A||B||Sum|Carry|
 |---|---|---|---|---|---|
@@ -3025,6 +3121,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>068</mark>** 디코더(Decoder) 
+Phần “**<mark>068</mark>** 디코더(Decoder)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - n�Bit의�Code화된�정보를�그�Code의�각�Bit�조합에� 따라�2�n개의�출력으로�번역하는�회로이다. 
 
@@ -3045,6 +3143,8 @@ D0<br>D1<br>D2<br>D3<br><!-- End of picture text -->
 핵심 14.8, 14.5, 12.8, 12.3, 11.3, 10.5, 10.3, 08.9, 08.3, 06.5, 06.3, 05.5, 04.9, 03.5, 02.9, 02.5, 00.7, 99.4 
 
 ## **<mark>069</mark>** 플립플롭 
+Phần “**<mark>069</mark>** 플립플롭” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 플립플롭은�전원이�공급되고�있는�한,�상태의�변화를� 위한�신호가�발생할�때까지�현재의�상태를�그대로�유지 하는�논리회로이다. 
 
@@ -3065,6 +3165,8 @@ D0<br>D1<br>D2<br>D3<br><!-- End of picture text -->
 ###### <RS 플립플롭> 
 
 ###### <JK 플립플롭> 
+Phần “<JK 플립플롭>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |S|R|Q(T+1)|암기|J|K|Q(T+1)|암기|
 |---|---|---|---|---|---|---|---|
@@ -3097,6 +3199,8 @@ D0<br>D1<br>D2<br>D3<br><!-- End of picture text -->
 
 
 ## 핵심 11.6, 10.9, 08.3, 07.5, 01.9, 00.10 **<mark>070</mark>** 자료 구성의 단위 
+Phần “핵심 11.6, 10.9, 08.3, 07.5, 01.9, 00.10 **<mark>070</mark>** 자료 구성의 단위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |비트(Bit,<br>Binary Digit)|•자료(정보)표현의최소단위<br>•2가지상태(0과1)를표시하는2진수1자리<br>•nBit를이용하여2<br>n가지를표현할수있음|
 |---|---|
@@ -3156,6 +3260,8 @@ www.sinagong.co.kr
 
 
 ###### 2진수, 8진수, 16진수 상호 변환 
+Phần “2진수, 8진수, 16진수 상호 변환” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |2진수|8진수|16진수|
 |---|---|---|
@@ -3170,6 +3276,8 @@ www.sinagong.co.kr
 
 
 ###### <소수 부분> 
+Phần “<소수 부분>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |2진수|8진수|16진수|
 |---|---|---|
@@ -3240,6 +3348,8 @@ www.sinagong.co.kr
 부호화�2의�보수법 양수�표현에�대하여� 한�가지�형태의�0만� (Signed�2's� 2의�보수를�취함 존재(+0) Complement) 
 
 ###### 표현 범위 
+Phần “표현 범위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종 류|범 위|n=8|n=16|n=32|
 |---|---|---|---|---|
@@ -3251,6 +3361,8 @@ www.sinagong.co.kr
 
 
 ###### 잠깐만요 ! 2의 보수 표현법이 널리 사용되는 이유 
+Phần “잠깐만요 ! 2의 보수 표현법이 널리 사용되는 이유” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�2의�보수�표현법은�1의�보수�표현법에�비해�음수�표현�시�숫자�1개 를�더�표현할�수�있습니다. 
 
@@ -3267,6 +3379,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>073</mark>** 2진 연산 
+Phần “**<mark>073</mark>** 2진 연산” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 정수값을�2진수로�변환하여�표현하는�방식이다. 
 
@@ -3354,6 +3468,8 @@ www.sinagong.co.kr
 - ➎�가수의�나눗셈을�한다. 
 
 ## 핵심 13.8, 12.3, 08.5, 08.3 **<mark>076</mark>** 해밍 코드의 오류 검출 
+Phần “핵심 13.8, 12.3, 08.5, 08.3 **<mark>076</mark>** 해밍 코드의 오류 검출” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 해밍�코드�중��1,�2,�4,�8,�16�……�2�<sup>n</sup> �번째�비트는�오류� 검출을�위한�패리티�비트이다. 
 
@@ -3364,6 +3480,8 @@ www.sinagong.co.kr
       - <mark>패리티�비트</mark> 
 
 ## 핵심 14.3, 11.6, 03.5, 02.3, 01.9, 99.10 **<mark>075</mark>** 자료 표현 코드 
+Phần “핵심 14.3, 11.6, 03.5, 02.3, 01.9, 99.10 **<mark>075</mark>** 자료 표현 코드” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |BCD 코드|•10진수1자리의수를2진수4Bit로표현함<br>•4Bit의2진수각Bit가8(2<br>3),4(2<br>2),2(2<br>1),1(2<br>0)의자리<br>값을가지므로8421코드라고도함<br>•대표적인가중치코드<br>•문자코드인BCD에서Zone부분을생략한형태임<br>•10진수입·출력이간편함|
 |---|---|
@@ -3437,6 +3555,8 @@ Gray Code를 2진수로 변환하는 방법
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
 
 ## 핵심 14.8, 12.8, 12.5, 12.3, 11.6, 07.5, 07.3, 04.5, 04.3, 02.9, 02.5, 00.7, 00.3 **<mark>078</mark>** 중앙처리장치의 구성 요소 
+Phần “핵심 14.8, 12.8, 12.5, 12.3, 11.6, 07.5, 07.3, 04.5, 04.3, 02.9, 02.5, 00.7, 00.3 **<mark>078</mark>** 중앙처리장치의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�컴퓨터에�있는�모든�장치들의�동작을�지시하고�제어하는� 장치 
 
@@ -3505,6 +3625,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>079</mark>** 주요 레지스터 
+Phần “**<mark>079</mark>** 주요 레지스터” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |레지스터|기 능|
 |---|---|
@@ -3524,6 +3646,8 @@ www.sinagong.co.kr
 핵심 04.5, 00.10 
 
 ## **<mark>080</mark>** 버스 
+Phần “**<mark>080</mark>** 버스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CPU,�메모리,�I/O�장치�등과�상호�필요한�정보를�교환 하기�위해�연결하는�공동의�전송선이다. 
 
@@ -3534,6 +3658,8 @@ www.sinagong.co.kr
 ##### ~~핵심 요약~~ 
 
 ###### • 버스의 종류 
+Phần “• 버스의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 번지 버스(Address Bus) :�CPU가�메모리나� 입·출력�기기의�번지를�지정할�때�사용하는� 단방향�전송선 
 
@@ -3550,6 +3676,8 @@ www.sinagong.co.kr
 핵심 12.5, 11.3, 10.9, 10.5, 10.3, 09.8, 08.9, 08.3, 07.9, 07.5, 06.3, 05.9, 05.3, 04.5, 03.8, 03.5, 03.3, 02.3, 00.7 
 
 ## **<mark>081</mark>** 명령어의 구성 
+Phần “**<mark>081</mark>** 명령어의 구성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Operation Code, 연산자부|모드(Mode)부|Operand, 자료부|
 |---|---|---|
@@ -3603,6 +3731,8 @@ www.sinagong.co.kr
 13.8, 10.9, 10.3, 07.3, 06.2, 05.4, 05.3, 04.4, 04.2, 03.3, 03.1, 02.4, 02.3, 02.2, 02.1, 01.1, 00.3, 00.2, 97.3 
 
 ## 핵심 **<mark>082</mark>** 연산자(Operation Code)의 기능 
+Phần “핵심 **<mark>082</mark>** 연산자(Operation Code)의 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 
 
@@ -3625,6 +3755,8 @@ NOT�A처럼�피연산자가�1개만�필요한�연산자를�단항�
 단항 연산자 NOT,�COMPLEMENT,�SHIFT,�ROTATE,� (Unary Operator) MOVE,�CLEAR�등 이항 연산자 사칙�연산,�AND,�OR,�XOR,�XNOR (Binary Operator) 
 
 ## 핵심 14.3, 13.6, 12.5, 10.5, 08.9, 08.5, 05.9, 05.5, 05.3, 04.3, 03.3, 00.3, 99.4 **<mark>084</mark>** 연산 
+Phần “핵심 14.3, 13.6, 12.5, 10.5, 08.9, 08.5, 05.9, 05.5, 05.3, 04.3, 03.3, 00.3, 99.4 **<mark>084</mark>** 연산” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�2개의�데이터를�비교하거나�특정�비트를�반전시킬� 
 
@@ -3703,6 +3835,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 1�1�0�1�0�1�0�1��→��1�0�1�0�1�0�1�0 잃어버리는�비트 부호�비트 Padding�비트 
 
 ## 03.5, 03.3, 02.9, 02.5 핵심 14.5, 14.3, 13.8, 12.5, 11.8, 11.6, 10.9, 09.8, 09.3, 07.9, 07.5, 07.3, 06.9, 06.5, 06.3, 05.9, 05.5, 05.3, 04.5, 04.3, 03.8, **<mark>086</mark>** 명령어 형식 
+Phần “03.5, 03.3, 02.9, 02.5 핵심 14.5, 14.3, 13.8, 12.5, 11.8, 11.6, 10.9, 09.8, 09.3, 07.9, 07.5, 07.3, 06.9, 06.5, 06.3, 05.9, 05.5, 05.3, 04.5, 04.3, 03.8, **<mark>086</mark>** 명령어 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�Operand부가�3개로�구성되는�명령어�형식으로�여러� 개의�범용�레지스터(GPR)를�가진�컴퓨터에서�사용함 
 
@@ -3725,6 +3859,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |2 번지<br>명령어|•단점<br>-연산의결과는주로Operand1에저장되므로<br>Operand1에있던원래의자료가파괴됨<br>-전체프로그램의길이가길어짐|
 |---|---|
@@ -3735,6 +3871,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 
 
 ## 핵심 14.8, 14.3, 05.9, 05.5, 00.7, 99.8 **<mark>087</mark>** 주소 설계 시 고려 사항 
+Phần “핵심 14.8, 14.3, 05.9, 05.5, 00.7, 99.8 **<mark>087</mark>** 주소 설계 시 고려 사항” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 표현의 효율성 : 빠르게�접근하고�주소�지정에�적은�비트 수를�사용할�수�있도록�다양한�어드레스�모드를�사용할� 수�있어야�함 
 
@@ -3747,6 +3885,8 @@ Shift에서�자리를�이동한�후�생기는�왼쪽이나�오른쪽
 - �- 기억공간�:�주기억장치�내의�실제�기억공간 
 
 ## 00.1 핵심 14.8, 13.8, 12.8, 12.5, 10.9, 10.5, 09.5, 08.9, 08.5, 07.5, 06.9, 06.3, 05.9, 05.3, 04.9, 03.8, 03.5, 02.5, 01.9, 01.6, 01.3, **<mark>088</mark>** 주소지정방식의 종류 
+Phần “00.1 핵심 14.8, 13.8, 12.8, 12.5, 10.9, 10.5, 09.5, 08.9, 08.5, 07.5, 06.9, 06.3, 05.9, 05.3, 04.9, 03.8, 03.5, 02.5, 01.9, 01.6, 01.3, **<mark>088</mark>** 주소지정방식의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |암시적 주소<br>지정방식<br>(Implied<br>Mode)|•명령실행에필요한데이터의위치를지정하지<br>않고누산기나스택의데이터를묵시적으로지<br>정하여사용함<br>•오퍼랜드가없는명령이나‘PUSHR1’처럼오퍼<br>랜드가1개인명령어형식에사용됨|
 |---|---|
@@ -3795,6 +3935,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>089</mark>** 마이크로 오퍼레이션(Micro Operation)의 정의 
+Phần “**<mark>089</mark>** 마이크로 오퍼레이션(Micro Operation)의 정의” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Instruction을�수행하기�위해�CPU�내의�레지스터와� 플래그가�의미�있는�상태�변환을�하도록�하는�동작이다. 
 
@@ -3807,6 +3949,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 마이크로�오퍼레이션의�순서를�결정하기�위하여�제어 장치가�발생하는�신호를�제어신호라고�한다. 
 
@@ -3864,12 +4008,16 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>091</mark>** 메이저 스테이트 
+Phần “**<mark>091</mark>** 메이저 스테이트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 현재�CPU가�무엇을�하고�있는가를�나타내는�상태로서� Fetch,�Indirect,�Execute,�Interrupt�이렇게�4개 의�상태가�있다. 
 
 - CPU는�메이저�스테이트의�4가지�단계를�반복적으로� 거치면서�동작을�수행한다. 
 
 ###### • 동작 순서 
+Phần “• 동작 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Micro Operation|의 미|
 |---|---|
@@ -3892,6 +4040,8 @@ www.sinagong.co.kr
 핵심 10.9, 10.3, 09.8, 09.3, 07.5, 06.9, 05.4, 05.3, 03.8, 99.10 
 
 ## **<mark>093</mark>** 간접 단계(Indirect Cycle) 
+Phần “**<mark>093</mark>** 간접 단계(Indirect Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Fetch�단계에서�해석된�명령의�주소부가�간접주소인� 경우�수행된다. 
 
@@ -3906,6 +4056,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>092</mark>** 인출 단계(Fetch Cycle) 
+Phần “**<mark>092</mark>** 인출 단계(Fetch Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 명령어를�주기억장치에서�중앙처리장치의�명령�레지스 터로�가져와�해독하는�단계이다. 
 
@@ -3929,6 +4081,8 @@ www.sinagong.co.kr
 핵심 12.8, 12.5, 11.8, 10.9, 09.5, 08.9, 05.4, 05.3, 04.5, 03.5, 02.9,  01.9, 01.6, 01.3, 00.3, 99.10 
 
 ## **<mark>094</mark>** 인터럽트 단계(Interrept Cycle) 
+Phần “**<mark>094</mark>** 인터럽트 단계(Interrept Cycle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 인터럽트�발생�시�복귀주소(PC)를�저장시키고,�제어순 서를�인터럽트�처리�프로그램의�첫�번째�명령으로�옮기 는�단계이다. 
 
@@ -3996,5 +4150,3 @@ STA(Store to AC) :�M[AD]�←�AC
 |MAR←MBR[AD]|MBR에있는명령어의번지부분을MAR에<br>전송함|
 |MBR←AC|AC의값을MBR에전송함|
 |M(MAR)←MBR|MBR의값을메모리의MAR이지정하는<br>위치에전송함|
-
-
