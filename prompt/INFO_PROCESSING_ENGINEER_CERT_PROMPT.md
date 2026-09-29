@@ -92,6 +92,8 @@ Khung câu tham khảo (phải thay bằng nội dung thật, không sao chép n
 
 Ưu tiên các quan hệ thường gặp trong đề thi: dùng **kế thừa** khi lesson sau sử dụng cùng mô hình hoặc thuật ngữ của lesson trước; dùng **đối chiếu** khi cần phân biệt hai đáp án gần nhau; dùng **áp dụng** khi chuyển từ quy tắc sang đoạn mã, công thức hoặc tình huống; dùng **nguyên nhân–hệ quả** khi giải thích trạng thái, lỗi, 이상 현상 hoặc kết quả đầu ra. Câu nối phải nêu tiêu chí giúp người học chọn đúng đáp án, không chỉ nói rằng hai lesson “có liên quan”.
 
+Trong lesson 정보처리기사, câu nối quanh từng dạng nội dung phải phục vụ việc làm bài: trước bảng/ danh sách hãy nói tiêu chí nhận diện đáp án; sau bảng hãy chốt khác biệt quyết định; trước công thức hoặc mã hãy nêu biến/trạng thái cần theo dõi; sau ví dụ hãy chỉ ra vì sao kết quả đó đúng và bẫy nào bị loại. Link về README, full guide hoặc lesson owner phải nói rõ phần đó dùng để ôn nền tảng, tra cứu hay đào sâu, không chỉ đặt link cạnh tiêu đề.
+
 Khi review, bỏ qua một câu nối nếu câu đó không gọi tên ít nhất một khái niệm/điều kiện thật của lesson, không nêu quan hệ giữa hai phần, hoặc có thể dán nguyên xi vào mọi lesson. Nếu nguồn không đủ thông tin để chỉ tên phần sau, hãy bàn giao theo nhu cầu học tập được suy ra từ lesson và ghi rõ giới hạn thay vì bịa topic.
 
 Áp dụng mạch này theo cấp heading trong lesson: tiêu đề `#` định vị topic và câu hỏi trung tâm; `##` nối topic với mục tiêu, từ khóa và kiến thức liên kết; `###`/`####` giải thích một khái niệm, cơ chế hoặc bẫy cụ thể rồi trả kết luận về `##` cha. Một heading con có bullet, bảng, công thức hoặc mã vẫn phải có câu hỏi cục bộ và câu nối với heading cha; không được coi cấp heading thấp là phần ghi chú rời.

@@ -60,6 +60,18 @@ Chọn động từ nối theo quan hệ thật của nội dung, thay vì dùng
 
 Mỗi section chỉ cần quan hệ phù hợp, nhưng phải nói rõ ít nhất một thuật ngữ ở hai đầu quan hệ và một lý do chuyển tiếp. Không ghép các động từ trên thành danh sách trang trí nếu SOURCE không chứng minh quan hệ đó.
 
+## Câu nối quanh khối nội dung
+
+Liên kết không chỉ nằm giữa hai heading; nó còn phải bao quanh mọi khối làm người mới dễ mất mạch:
+
+- **Danh sách:** câu dẫn nêu tiêu chí đọc hoặc thứ tự; câu sau danh sách gom các mục thành một kết luận, không lặp lại từng dòng.
+- **Bảng:** câu dẫn nói bảng đang đối chiếu những đối tượng nào; câu tổng hợp chỉ ra hàng/cột nào quyết định điểm phân biệt hoặc cách chọn.
+- **Công thức/mã:** câu dẫn nêu đại lượng, trạng thái hoặc câu hỏi cần quan sát; câu sau giải thích kết quả và điều kiện giới hạn, không chỉ chép output.
+- **Ví dụ/bẫy:** nói rõ ví dụ đang minh họa quy tắc, áp dụng quy tắc hay phản ví dụ; sau đó quay lại quy tắc để người học biết điều cần giữ lại.
+- **Link/owner:** trước link phải nói vì sao cần đi tới tài liệu đó; sau link hoặc tại điểm quay lại phải nói người học sẽ tìm thấy phần giải thích nào.
+
+Mỗi khối chỉ cần câu nối ngắn nhưng phải có chủ thể, quan hệ và kết quả cụ thể. Không dùng cùng một câu “dưới đây là…” cho mọi loại khối.
+
 Không dùng riêng các câu “tiếp theo”, “xem tiếp”, “như trên”, “phần này trình bày…” nếu chúng không nêu khái niệm trước, câu hỏi hiện tại hoặc nhu cầu kế tiếp. Không bịa quan hệ chỉ để đủ mẫu; nếu SOURCE không cho biết section kế tiếp, hãy bàn giao theo nhu cầu học tập được chứng minh trong chính section đó và đánh dấu phần chưa chắc chắn khi cần. Khi review, phải đọc câu nối cùng đoạn nội dung mà nó nối: một câu chung chung đặt trước header không được tính là liên kết.
 
 ## Áp dụng cho mọi cấp heading

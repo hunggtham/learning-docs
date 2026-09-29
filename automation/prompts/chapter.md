@@ -27,6 +27,8 @@ Nếu chưa biết tên phần kế tiếp, hãy bàn giao bằng nhu cầu họ
 
 Hãy chọn một kiểu quan hệ phù hợp và viết thành câu hoàn chỉnh: **kế thừa** (dùng lại khái niệm nền để mở rộng phạm vi), **đối chiếu** (cùng mục tiêu nhưng khác tiêu chí), **áp dụng** (đưa quy tắc vào trường hợp cụ thể) hoặc **nguyên nhân–hệ quả** (điều kiện tạo ra kết quả). Câu nối phải gọi tên hai đầu của quan hệ và giải thích vì sao người học cần chuyển sang phần kế tiếp; không liệt kê nhãn quan hệ thay cho prose.
 
+Với từng khối bên trong section, hãy thêm đúng loại câu nối cần thiết: danh sách cần tiêu chí đọc và câu tổng hợp; bảng cần nêu đối tượng/cột quyết định; công thức hoặc mã cần nêu đại lượng/trạng thái cần theo dõi và ý nghĩa kết quả; ví dụ cần nói nó minh họa, áp dụng hay phản bác quy tắc; link cần nói lý do đi tới owner. Không để raw block tự đứng giữa hai đoạn văn và không dùng một câu dẫn giống nhau cho mọi loại khối.
+
 ### Mức liên kết theo cấp heading
 
 Áp dụng contract cho mọi heading có nội dung, không bỏ qua `###`/`####` vì chúng là mục con:

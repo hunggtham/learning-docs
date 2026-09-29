@@ -25,6 +25,8 @@ Kiểm tra thêm theo cấp heading: `#` phải có phạm vi và câu hỏi tru
 
 Đối chiếu động từ trong câu nối với nội dung thực tế: `kế thừa` phải có khái niệm nền được dùng lại, `đối chiếu` phải có ít nhất hai đối tượng và tiêu chí phân biệt, `áp dụng` phải có quy tắc cùng trường hợp dùng, còn `nguyên nhân–hệ quả` phải có điều kiện và kết quả. Nếu nhãn quan hệ không khớp evidence, ghi issue `medium` hoặc `high` tùy mức làm sai mental model.
 
+Audit riêng các khối không phải prose: danh sách có tiêu chí đọc và câu tổng hợp; bảng có đối tượng so sánh và kết luận chọn; công thức/mã có biến hoặc trạng thái, kết quả và giới hạn; ví dụ có vai trò minh họa/áp dụng/phản ví dụ và quay lại quy tắc; link có lý do đi tới owner. Đánh `high` khi raw block đứng độc lập hoặc kết luận làm sai cách hiểu; đánh `medium` khi có câu dẫn nhưng thiếu câu tổng hợp hoặc thiếu lý do sử dụng.
+
 Tiêu chí nội dung:
 - Không bỏ mất nhóm kiến thức lớn hoặc mã 핵심 trong evidence.
 - Không có fact trái nguồn; phần không chắc chắn phải có `[CẦN KIỂM TRA]`.
