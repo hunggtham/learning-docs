@@ -1,40 +1,40 @@
-# World Geography — Root Coverage Audit
+# Địa lý thế giới — điểm vào kiểm toán phạm vi
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `world_geography/`
+**Ngày rà soát:** 2026-09-29  
+**Root chuẩn gốc:** `world_geography/`
 
-The detailed geography coverage audit already exists at:
+Bản kiểm toán chi tiết đã tồn tại tại:
 
 - [`CORE_COVERAGE_AUDIT.md`](./CORE_COVERAGE_AUDIT.md)
 
-This root file is the stable governance entrypoint expected by repository tooling. Do not duplicate the detailed audit here.
+Tệp root này chỉ là **điểm vào governance ổn định** cho tooling cấp repository; không lặp lại nội dung audit chi tiết.
 
-## Root contract
+## Hợp đồng cấp root
 
-The domain should preserve its central model:
-
-```text
-pattern
-+ process
-+ network/flow
-+ scale
-+ evidence
-```
-
-Regional/country material should explain causal structure rather than become an encyclopedia of facts:
+Domain cần giữ mô hình trung tâm:
 
 ```text
-physical constraints/resources
-→ settlement
-→ production/economy
-→ transport/network
-→ cities/trade
-→ institutions/history interaction
-→ hazards/transformation
+mẫu không gian
++ quá trình
++ mạng / dòng
++ quy mô
++ bằng chứng
 ```
 
-Geography must not be written as geographic determinism. History, institutions and technology can alter or reverse spatial constraints.
+Chapter vùng/quốc gia phải giải thích cấu trúc nhân quả thay vì trở thành encyclopedia dữ kiện:
 
-## Review rule
+```text
+ràng buộc vật lý / tài nguyên
+→ phân bố dân cư
+→ sản xuất / kinh tế
+→ hành lang vận chuyển / mạng
+→ đô thị / thương mại
+→ tương tác với thể chế và lịch sử
+→ rủi ro / biến đổi
+```
 
-Update [`CORE_COVERAGE_AUDIT.md`](./CORE_COVERAGE_AUDIT.md) when core coverage status changes. Keep this root file only as the canonical pointer unless the detailed audit location changes.
+Không dùng địa lý như thuyết định mệnh. Lịch sử, công nghệ và thể chế có thể làm yếu, khuếch đại hoặc đảo chiều tác động của constraint không gian.
+
+## Quy tắc review và bàn giao
+
+Khi trạng thái core coverage thay đổi, cập nhật [`CORE_COVERAGE_AUDIT.md`](./CORE_COVERAGE_AUDIT.md). Chỉ sửa tệp root này nếu vị trí audit hoặc canonical owner thay đổi.
