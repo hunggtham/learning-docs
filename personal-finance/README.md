@@ -1,10 +1,12 @@
 # Thư viện Kiến thức Tài chính Cá nhân (Personal Finance Knowledge Library)
 
-`personal-finance/` là thư viện chuẩn gốc (canonical / 정본) cho các quyết định tài chính ở cấp cá nhân và hộ gia đình: kiếm tiền, giữ tiền, thanh toán, vay nợ, bảo vệ trước rủi ro, thuế, nhà ở, phương tiện, quỹ dự phòng và chuẩn bị cho tuổi nghỉ hưu. Nó được tách khỏi [Investing](../investing/README.md) vì **quản lý tài chính cá nhân (personal finance / 개인 재무) không đồng nghĩa đầu tư (investing / 투자)**.
+`personal-finance/` là thư viện chuẩn gốc (canonical / 정본) cho các quyết định tài chính ở cấp cá nhân và hộ gia đình: kiếm tiền, giữ tiền, thanh toán, vay nợ, bảo vệ trước rủi ro, thuế, nhà ở, phương tiện, quỹ dự phòng, chuẩn bị cho tuổi nghỉ hưu, khả năng chống chịu tài chính và các vấn đề xuyên biên giới. Nó được tách khỏi [Investing](../investing/README.md) vì **quản lý tài chính cá nhân (personal finance / 개인 재무) không đồng nghĩa đầu tư (investing / 투자)**.
 
-Theo OECD, hiểu biết tài chính (financial literacy / 금융 이해력) bao gồm kiến thức về khái niệm và rủi ro tài chính, cùng kỹ năng và thái độ để áp dụng kiến thức đó vào những quyết định thực tế. Vì vậy library này không được viết như một danh sách “mua gì để sinh lời”; câu hỏi trung tâm là: **một người biến thu nhập, nghĩa vụ, rủi ro và mục tiêu qua thời gian thành một hệ thống tài chính có khả năng chống chịu như thế nào?**
+Theo OECD, hiểu biết tài chính (financial literacy / 금융 이해력) không chỉ là biết một sản phẩm đầu tư mà còn gồm kiến thức, kỹ năng, thái độ và hành vi giúp cá nhân ra quyết định tài chính, duy trì khả năng chống chịu tài chính (financial resilience / 금융 회복탄력성) và cải thiện well-being. Vì vậy library này không được viết như một danh sách “mua gì để sinh lời”; câu hỏi trung tâm là: **một người biến thu nhập, nghĩa vụ, rủi ro và mục tiêu qua thời gian thành một hệ thống tài chính có khả năng hoạt động cả khi điều kiện bình thường bị phá vỡ như thế nào?**
 
-> Phạm vi của tài liệu là giáo dục. Lãi suất, thuế, bảo hiểm, tín dụng, hưu trí và quyền người tiêu dùng phụ thuộc quốc gia, thời điểm và hợp đồng cụ thể; trước quyết định thực tế phải kiểm tra quy định và điều khoản hiện hành tại nơi áp dụng.
+> Phạm vi của tài liệu là giáo dục. Lãi suất, thuế, bảo hiểm, tín dụng, hưu trí, quyền người tiêu dùng và thủ tục xuyên biên giới phụ thuộc quốc gia, thời điểm và hợp đồng cụ thể; trước quyết định thực tế phải kiểm tra quy định và điều khoản hiện hành tại nơi áp dụng.
+
+Để kiểm tra phần nào đã đủ core, phần nào time-sensitive và phần nào không nên tiếp tục mở rộng chỉ để tăng số file, xem [Coverage & Depth Audit](./COVERAGE_AUDIT.md).
 
 ## Ranh giới với Economics và Investing
 
@@ -12,7 +14,7 @@ Ba domain nối nhau nhưng sở hữu các câu hỏi khác nhau:
 
 ```text
 Personal Finance
-  cá nhân/hộ gia đình quản lý tiền, nghĩa vụ và rủi ro
+  cá nhân/hộ gia đình quản lý tiền, nghĩa vụ, liquidity và resilience
         ↓
 Economics
   giải thích cơ chế giá, lạm phát, lãi suất, thị trường và chính sách
@@ -25,11 +27,23 @@ Stocks      Forex
 
 Nếu câu hỏi là “lạm phát hình thành và truyền qua nền kinh tế thế nào?”, owner là [Economics](../economics/README.md). Nếu câu hỏi là “lạm phát làm sức mua của tiền tiết kiệm và khoản vay thay đổi thế nào?”, owner là chapter [04 — Inflation](./04-inflation.md). Nếu câu hỏi là “môi trường lạm phát ảnh hưởng định giá cổ phiếu, trái phiếu hay vị thế ngoại hối thế nào?”, owner là [Investing](../investing/README.md).
 
-Tương tự, library này giải thích quỹ dự phòng (emergency fund / 비상자금), cấu trúc nợ (debt structure / 부채 구조), bảo hiểm (insurance / 보험), bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표) và chi phí sở hữu nhà/xe. Khi tiền đã thực sự có thể được phân bổ cho mục tiêu đầu tư và người học cần risk/return, asset allocation, valuation hay trading, hãy chuyển sang Investing thay vì lặp lại nội dung ở đây.
+Tương tự, library này giải thích quỹ dự phòng (emergency fund / 비상자금), cấu trúc nợ (debt structure / 부채 구조), bảo hiểm (insurance / 보험), bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표), khả năng chống chịu tài chính (financial resilience / 금융 회복탄력성) và household FX exposure. Khi tiền đã thực sự trở thành investable surplus và người học cần asset allocation, valuation, portfolio risk hay trading, hãy chuyển sang Investing thay vì lặp lại nội dung ở đây.
+
+## Ranh giới với Korea Law, Civic & Everyday Life
+
+`personal-finance/` giữ **decision framework** dùng chung. Các thủ tục pháp lý và hành chính cụ thể tại Hàn Quốc đã có canonical owner tại [Korea Law, Civic & Everyday Life](../korea_law_civic_life/README.md), đặc biệt:
+
+- [Housing — 월세, 전세, 보증금](../korea_law_civic_life/06_housing_wolse_jeonse_deposit_and_registration.md)
+- [Taxes, social insurance, welfare & healthcare](../korea_law_civic_life/07_taxes_social_insurance_welfare_healthcare.md)
+- [Banking, credit & financial consumer protection](../korea_law_civic_life/08_banking_credit_and_financial_consumer.md)
+
+[16 — Korea–Vietnam Practical Map](./16-korea-vietnam-practical-map.md) giải thích cách đi từ concept sang jurisdiction-specific owner/source mà không duplicate các file này.
 
 ## Lộ trình học
 
-Lộ trình mặc định đi từ “tiền là gì trong đời sống cá nhân” đến “toàn bộ tài sản và nghĩa vụ được nhìn như một hệ thống”:
+### Core route
+
+Lộ trình mặc định đi từ “tiền là gì trong đời sống cá nhân” đến “toàn bộ hệ thống có chịu được shock hay không”:
 
 ```text
 01 Money
@@ -46,9 +60,22 @@ Lộ trình mặc định đi từ “tiền là gì trong đời sống cá nh�
 → 12 Emergency Fund
 → 13 Financial Scams
 → 14 Personal Balance Sheet
+→ 15 Financial Resilience
 ```
 
-Các chapter có thể đọc riêng, nhưng phụ thuộc quan trọng vẫn nên giữ: hiểu lãi suất (interest / 이자) trước khi phân tích tín dụng (credit / 신용) và khoản vay (loan / 대출); hiểu dòng tiền (cash flow / 현금흐름), thanh khoản (liquidity / 유동성) và nợ trước khi bàn về nhà ở hay xe; hiểu bảng cân đối cá nhân trước khi đánh giá một quyết định “có làm mình giàu hơn không”.
+Các chapter có thể đọc riêng, nhưng dependency quan trọng vẫn nên giữ: hiểu lãi suất trước credit/debt; hiểu cash flow, liquidity và debt trước housing/car; hiểu balance sheet trước khi stress-test resilience; chỉ sau resilience gate mới xác định phần vốn nào thực sự là investable surplus.
+
+### Practical extensions
+
+Nếu cần áp dụng vào đời sống Hàn Quốc/Việt Nam hoặc có asset/obligation ở nhiều nước:
+
+```text
+15 Financial Resilience
+→ 16 Korea–Vietnam Practical Map
+→ 17 Cross-Border Personal Finance
+```
+
+Chapter 16 không phải legal handbook; nó định tuyến sang owner/source. Chapter 17 không phải Forex course; nó xử lý household currency mismatch, remittance friction, transferability và cross-border liquidity.
 
 ## Mục lục
 
@@ -65,28 +92,69 @@ Các chapter có thể đọc riêng, nhưng phụ thuộc quan trọng vẫn n�
 11. [Retirement](./11-retirement.md) — hệ thống hưu trí, defined benefit/defined contribution, compounding, longevity và sequence risk.
 12. [Emergency Fund](./12-emergency-fund.md) — vai trò của buffer thanh khoản, cách ước lượng quy mô và phân tầng tiền mặt.
 13. [Financial Scams](./13-financial-scams.md) — phishing, impersonation, advance-fee, investment scam, account takeover và quy trình ứng phó.
-14. [Personal Balance Sheet](./14-personal-balance-sheet.md) — assets, liabilities, net worth, liquid net worth, cash flow và các tỷ lệ để nhìn hệ thống tài chính cá nhân.
+14. [Personal Balance Sheet](./14-personal-balance-sheet.md) — assets, liabilities, net worth, liquid net worth, cash flow và các tỷ lệ để quan sát hệ thống tài chính cá nhân.
+15. [Financial Resilience](./15-financial-resilience.md) — income/expense/rate/FX/operational shocks, cash-flow margin, liquidity runway, stress test và resilience gate trước Investing.
+16. [Korea–Vietnam Practical Map](./16-korea-vietnam-practical-map.md) — concept-to-jurisdiction routing cho banking, credit, housing, tax, pension, insurance và scam; giữ luật/procedure ở canonical owner.
+17. [Cross-Border Personal Finance](./17-cross-border-personal-finance.md) — functional currency, household FX exposure, remittance total cost, transferability, tax-residency boundary, pension portability và multi-country emergency planning.
 
 ## Mô hình tư duy xuyên suốt
 
-Một quyết định tài chính cá nhân tốt không chỉ tối đa hóa lợi nhuận kỳ vọng (expected return / 기대수익률). Nó phải cân bằng ít nhất năm biến: **dòng tiền (cash flow / 현금흐름), thanh khoản (liquidity / 유동성), khả năng trả nợ (solvency / 지급능력), rủi ro (risk / 위험) và thời hạn (time horizon / 투자기간)**. Hai lựa chọn có cùng “lợi nhuận” có thể rất khác nếu một lựa chọn khóa tiền 10 năm, tạo nghĩa vụ trả nợ cố định hoặc khiến hộ gia đình không còn tiền dự phòng.
+Một quyết định tài chính cá nhân tốt không chỉ tối đa hóa lợi nhuận kỳ vọng (expected return / 기대수익률). Nó phải cân bằng ít nhất sáu biến: **dòng tiền (cash flow / 현금흐름), thanh khoản (liquidity / 유동성), khả năng trả nợ (solvency / 지급능력), rủi ro (risk / 위험), thời hạn (time horizon / 투자기간) và khả năng chống chịu tài chính (financial resilience / 금융 회복탄력성)**.
+
+Hai lựa chọn có cùng expected return có thể rất khác nếu một lựa chọn khóa tiền 10 năm, tạo nghĩa vụ trả nợ cố định, phụ thuộc một currency khác hoặc khiến household không còn emergency liquidity.
 
 Vì vậy câu hỏi thực hành xuyên suốt library là:
 
 ```text
-Quyết định này thay đổi dòng tiền tháng như thế nào?
-→ thay đổi tài sản/nợ trên bảng cân đối ra sao?
-→ làm thanh khoản tốt hơn hay xấu đi?
-→ tạo rủi ro đuôi hoặc nghĩa vụ cố định nào?
-→ kết quả có còn hợp lý khi thu nhập, lãi suất hoặc giá cả thay đổi?
+Quyết định này thay đổi monthly cash flow thế nào?
+→ thay đổi assets/liabilities trên balance sheet ra sao?
+→ làm liquidity tốt hơn hay xấu đi?
+→ tạo fixed obligation hoặc tail risk nào?
+→ nếu income/rate/price/FX thay đổi, hệ thống có còn hoạt động không?
+→ phần vốn còn lại có thật sự chịu được investment horizon không?
 ```
 
-Khi năm câu hỏi này đã được trả lời, quyết định mới sẵn sàng được nối sang Economics để hiểu môi trường bên ngoài hoặc sang Investing để đánh giá phân bổ vốn.
+Khi chuỗi này đã được trả lời, quyết định mới sẵn sàng được nối sang Economics để hiểu external environment hoặc sang Investing để đánh giá allocation/risk-return.
+
+## Bản đồ ownership ngắn
+
+```text
+Money / Banking / Debt / Insurance / Housing / Retirement
+→ Personal Finance
+
+Inflation formation / monetary policy / labor / growth
+→ Economics
+
+Stocks / bonds / funds / valuation / portfolio / Forex
+→ Investing
+
+Korean housing / tax / social insurance / credit procedures
+→ Korea Law, Civic & Everyday Life
+```
+
+Một chủ đề có thể được nhắc ở nhiều domain nhưng chỉ nên có **một canonical owner cho phần giải thích sâu**. Domain còn lại cross-link và chỉ giữ application layer cần thiết.
+
+## Chính sách với dữ liệu time-sensitive
+
+Các chapter không hard-code tax rate, deposit-insurance limit, credit threshold, pension refund list, social-insurance eligibility, mortgage regulation hoặc filing deadline như rule vĩnh viễn. Khi cần số hiện hành phải ghi rõ:
+
+```text
+jurisdiction
++ source chính thức
++ effective date
++ population/product scope
++ last reviewed
+```
+
+Nếu chưa có đủ metadata, ưu tiên giải thích mechanism và chỉ đường tới official source. Xem [Coverage Audit](./COVERAGE_AUDIT.md) để biết các nhóm dữ liệu cần xử lý theo policy này.
 
 ## Nguồn nền
 
 - OECD, *PISA 2022 Financial Literacy Framework*: https://www.oecd.org/en/publications/pisa-2022-assessment-and-analytical-framework_dfe0bf9c-en/full-report/component-4.html
+- OECD, Financial Education: https://www.oecd.org/en/topics/financial-education.html
+- OECD, *OECD/INFE Toolkit for Measuring Financial Literacy and Financial Inclusion 2026*.
+- OECD, *Consumer Finance Risk Monitor 2026*.
 - Khan Academy, *Financial Literacy*: https://www.khanacademy.org/college-careers-more/financial-literacy
 - Consumer Financial Protection Bureau, consumer tools: https://www.consumerfinance.gov/consumer-tools/
 
-Các nguồn theo quốc gia được dùng để minh họa cơ chế chứ không mặc định áp dụng pháp lý toàn cầu. Chapter nào đụng tới thuế, bảo hiểm tiền gửi, credit reporting hay hưu trí phải nói rõ jurisdiction boundary thay vì biến quy định của một nước thành “quy tắc chung”.
+Các nguồn theo quốc gia được dùng để minh họa cơ chế hoặc định tuyến kiểm tra, không mặc định áp dụng pháp lý toàn cầu. Chapter nào đụng tới thuế, bảo hiểm tiền gửi, credit reporting, housing law, social insurance hay hưu trí phải nói rõ jurisdiction boundary thay vì biến quy định của một nước thành “quy tắc chung”.
