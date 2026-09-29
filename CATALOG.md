@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-25
+last_reviewed: 2026-09-29
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -109,9 +109,9 @@ domains:
     title: Native Mobile Development
     group: Computing
     path: 11_native/
-    entrypoint: 11_native/00_INDEX.md
+    entrypoint: 11_native/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-09-29
     scope: Swift/iOS and Kotlin/Android from language foundations through platform and production engineering.
     prerequisites: [computer_science, frontend]
     related: [backend, frontend]
@@ -272,9 +272,9 @@ domains:
     title: 정보처리기사
     group: Certifications
     path: 정보처리기사/
-    entrypoint: 정보처리기사/output/README.md
+    entrypoint: 정보처리기사/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-09-29
     scope: Korean Information Processing Engineer certification subjects and structured study outputs.
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
@@ -282,9 +282,9 @@ domains:
     title: SQLD / SQL
     group: Certifications
     path: sql/
-    entrypoint: sql/output/README.md
+    entrypoint: sql/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-09-29
     scope: Data modeling, SQL fundamentals, query patterns, normalization, and database reasoning.
     prerequisites: [computer_science]
     related: [data_engineering, investing]
@@ -421,22 +421,15 @@ electrical_engineering/
 ├── control_systems
 ├── embedded_systems
 ├── power_electronics
-└── hardware_software_interfaces
+├── hardware_software_interface
+├── 90_connections
+└── advanced
 ```
 
-Bridge kiến thức chủ đích:
+Electrical Engineering sở hữu **design and implementation reasoning**; Physics giữ physical law/field/material explanation; Computer Science giữ algorithms/systems/software; embedded/controls đóng vai trò bridge.
 
-```text
-Physics
-→ Electronics
-→ Digital logic
-→ Computer Architecture
-→ Embedded
-→ Software
-```
+## 11. P3 — Practical Research Methods
 
-Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
+Repository đã có statistics trong Mathematics, econometrics trong Economics, Psychology có experimental reasoning và Philosophy có epistemology. Khoảng trống còn lại là **workflow nghiên cứu dùng chung**: biến câu hỏi thành design, measurement, sampling, evidence synthesis và reproducible output.
 
-## Domain entrypoints
-
-Các link entrypoint đầy đủ nằm trong YAML ở đầu file để máy đọc được; README root chỉ là phần giới thiệu ngắn. Đây là catalog cấp repository, không thay thế README chuyên sâu của từng library.
+Vì vậy đã thêm [`research_methods/`](research_methods/README.md) làm methodology owner. Domain này không sở hữu estimator chuyên sâu; khi cần OLS/IV/DiD/RDD/panel/time series, quay về Economics/Econometrics; khi cần probability/statistics foundation, quay về Mathematics.
