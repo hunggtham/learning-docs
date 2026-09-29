@@ -1,12 +1,12 @@
-# 정보처리기사 — Coverage Audit
+# 정보처리기사 — kiểm toán phạm vi học tập
 
-> **Mạch đọc:** [README](./README.md) là entrypoint cấp domain; learning output chuẩn hóa nằm trong [`output/`](./output/README.md). Audit này dùng để kiểm tra độ phủ kỳ thi và ranh giới giữa certification material với canonical Computer Science/Backend/SQL content.
+> **Mạch đọc:** Đọc audit này sau [README](./README.md). `README.md` định vị domain; learning output chuẩn hóa nằm trong [`output/`](./output/README.md). Audit này trả lời: **phần thi viết (필기) đã phủ đủ để giải thích–phân biệt–giải bài hay chưa, đâu là dữ kiện phải kiểm lại theo năm, và khi nào cần bàn giao sang Computer Science/Backend/SQL để hiểu sâu hơn?**
 
-Cập nhật: **2026-09-29**. `main` là nguồn chuẩn (source of truth / 정본) sau khi thay đổi được merge.
+**Ngày rà soát:** 2026-09-29. `main` là nguồn chuẩn (source of truth / 정본) sau khi thay đổi được merge.
 
-## Phạm vi và nguồn chuẩn
+## 1. Phạm vi và nguồn chuẩn
 
-Domain hiện tập trung vào **정보처리기사 필기**. Learning spine 2026 được tổ chức quanh 5 môn, master guide, deep-dive track, procedural workbook, confusion atlas, scenario labs, active recall và full mocks.
+Domain hiện tập trung vào **kỳ thi viết (필기 / written exam)** của 정보처리기사. Learning spine 2026 được tổ chức quanh 5 môn, master guide, deep-dive track, procedural workbook, confusion atlas, scenario labs, active recall và full mock.
 
 ```text
 필기
@@ -17,53 +17,75 @@ Domain hiện tập trung vào **정보처리기사 필기**. Learning spine 202
 └── 5. 정보시스템 구축 관리
 ```
 
-Nguồn chuẩn cho cấu trúc thi, tiêu chuẩn đỗ và 출제기준 là **Q-Net / 한국산업인력공단**. Nội dung exam-specific có thời hạn; khi năm/phạm vi thi thay đổi phải kiểm tra lại nguồn chính thức trước khi sửa material.
+Nguồn chuẩn cho phạm vi thi, tiêu chuẩn đỗ và **tiêu chuẩn ra đề (출제기준 / exam criteria)** là Q-Net / 한국산업인력공단. Nội dung exam-specific có thể thay đổi theo năm, vì vậy phải kiểm nguồn chính thức trước khi sửa các fact về cấu trúc kỳ thi hoặc phạm vi môn.
 
-`raw/` và `raw_md/` là material nguồn/chuyển đổi. `output/` mới là learning output chuẩn hóa. [`output/COVERAGE_MATRIX.md`](./output/COVERAGE_MATRIX.md) giữ ma trận độ phủ chi tiết và [`output/RESEARCH_REGISTER.md`](./output/RESEARCH_REGISTER.md) giữ provenance nguồn khi file này tồn tại trong learning output.
+`raw/` và `raw_md/` là material nguồn/chuyển đổi. `output/` mới là learning output chuẩn hóa. [`output/COVERAGE_MATRIX.md`](./output/COVERAGE_MATRIX.md) theo dõi độ phủ chi tiết; [`output/RESEARCH_REGISTER.md`](./output/RESEARCH_REGISTER.md) giữ provenance cho các nguồn đã xác minh.
 
-## Trạng thái coverage
+## 2. Coverage hiện đã mạnh
 
-| Vùng | Coverage hiện có | Trạng thái |
-|---|---|---|
-| 2026 written-exam map | master guide + 21 chapter coverage | Strong |
-| 5 môn 필기 | deep-dive theo subject | Strong |
-| Procedural reasoning | SQL, code trace, scheduling, page replacement, subnetting, transaction, PERT/CPM | Strong |
-| Confusion handling | high-risk concept pairs / distractor boundaries | Strong |
-| Scenario transfer | subject labs + cross-subject mega-labs | Strong |
-| Korean terminology bridge | Korean → English → Vietnamese → mechanism | Strong |
-| Recall / remediation | active recall + error remediation | Strong |
-| Full-exam practice | 2 mock sets 100 questions | Strong |
-| 실기 | chưa phải completed scope | Gap / out of current scope |
+Phần 필기 hiện có coverage mạnh ở cả 5 môn, procedural reasoning như SQL/code trace/scheduling/page replacement/subnetting/transaction/PERT-CPM, confusion pairs, scenario transfer, Korean terminology bridge, active recall, remediation và full mock.
 
-## Bất biến cần giữ
-
-Mục tiêu không phải tăng số lesson mà phải giữ đủ ba năng lực:
+Tuy nhiên, completion không nên đo bằng số file hoặc số câu. Một concept chỉ thật sự “được phủ” khi người học làm được ba việc:
 
 ```text
-Explain → Distinguish → Solve
+Giải thích (Explain)
+→ Phân biệt (Distinguish)
+→ Giải bài / áp dụng (Solve)
 ```
 
-Một concept chỉ được coi là covered khi người học có thể giải thích cơ chế, phân biệt với concept gần và xử lý scenario/procedure tương ứng. Các file trùng nguồn hoặc OCR không làm coverage tăng nếu không bổ sung năng lực này.
+Ví dụ, biết định nghĩa deadlock nhưng không phân biệt được deadlock với starvation hoặc không giải được wait-for/resource-allocation scenario thì coverage vẫn chưa hoàn chỉnh.
 
-Certification material cũng không thay canonical knowledge library. Khi cần hiểu sâu transaction, OS, network, software architecture, security hoặc algorithms ngoài phạm vi thi, phải handoff về `computer_science/`, `10_backend/`, `sql/` hoặc domain owner tương ứng.
+## 3. Ranh giới với canonical knowledge libraries
 
-## Gaps còn lại
+Tài liệu chứng chỉ tối ưu cho phạm vi thi, wording và distractor. Nó không thay thế knowledge library chuẩn gốc.
 
-1. **실기:** chưa được xem là completed scope; nếu mở rộng phải có learning spine và audit riêng thay vì pha vào 필기.
-2. **Annual exam drift:** mỗi năm phải đối chiếu 출제기준 mới, ghi ngày kiểm tra và xác định chapter nào thay đổi.
-3. **Weak-area evidence:** coverage rộng không đủ; các vùng có error rate cao cần remediation dựa trên mock/recall evidence.
-4. **Source provenance:** generated/OCR/merged material chỉ được promoted khi mapping về subject/chapter và source rõ.
-5. **Cross-domain transfer:** sau khi thi, nên handoff các concept quan trọng sang canonical Computer Science/Backend/SQL routes để kiến thức không dừng ở exam recognition.
+Khi câu hỏi cần hiểu sâu transaction, OS, network, software architecture, security hoặc algorithm ngoài mức exam, phải bàn giao sang [`computer_science/`](../computer_science/README.md), [`10_backend/`](../10_backend/README.md) hoặc [`sql/`](../sql/README.md). Cách này giúp người học vừa thi được vừa không mắc kẹt ở mức nhận diện đáp án.
 
-## Review protocol
+## 4. Khoảng trống ưu tiên
 
-Mỗi lần cập nhật lớn:
+### P1 — Phần thực hành (실기 / practical exam) là scope riêng
 
-1. kiểm tra Q-Net/출제기준 và ghi ngày;
-2. cập nhật `COVERAGE_MATRIX.md` nếu subject/chapter coverage thay đổi;
-3. không dùng số file hoặc số câu làm completion criterion;
-4. với câu sai, phân loại lỗi thành knowledge gap, distinction gap, procedural gap hoặc Korean-wording gap;
-5. kiểm tra internal links giữa master guide, deep-dive, workbook, recall và remediation;
-6. giữ ranh giới `필기` / `실기` rõ ràng.
+`실기` chưa được coi là completed scope. Nếu mở rộng, cần learning spine, source map, practice model và audit riêng; không trộn thêm vài file vào 필기 rồi gọi là đã phủ 실기.
 
-> **Bàn giao:** Nếu đang chuẩn bị thi, bắt đầu tại [root README](./README.md) rồi đi vào [output learning map](./output/README.md). Audit này chỉ quyết định coverage/gap; nó không thay thế tài liệu học.
+### P1 — Trôi phạm vi theo năm
+
+Mỗi năm cần kiểm tra `출제기준`, ngày hiệu lực và thay đổi subject/chapter. Nếu một fact đổi, phải xác định chapter, mock, recall bank và confusion note nào bị ảnh hưởng thay vì chỉ sửa một dòng trong master guide.
+
+### P1 — Remediation dựa trên lỗi thật
+
+Coverage rộng chưa nói được người học yếu ở đâu. Khi có mock/recall evidence, nên phân lỗi thành:
+
+```text
+knowledge gap
+→ distinction gap
+→ procedural gap
+→ Korean wording gap
+```
+
+Bốn loại lỗi cần cách sửa khác nhau. Học lại cả chapter khi lỗi chỉ do wording Hàn thường kém hiệu quả.
+
+### P1 — Provenance của material sinh tự động/OCR
+
+Generated/OCR/merged material chỉ được promote khi mapping rõ về subject/chapter và source. Một file dài hơn không tự làm tài liệu đáng tin hơn.
+
+### P2 — Handoff sau kỳ thi
+
+Các concept có giá trị lâu dài nên link sang canonical owner để người học tiếp tục từ “nhớ để thi” sang “hiểu để dùng”. Đây là bước nối chứng chỉ với knowledge library chung của repository.
+
+## 5. Quy trình review
+
+Khi cập nhật lớn:
+
+1. kiểm Q-Net/출제기준 và ghi ngày;
+2. cập nhật `COVERAGE_MATRIX.md` nếu coverage thay đổi;
+3. không dùng số file/số câu làm completion criterion;
+4. với câu sai, phân loại lỗi theo knowledge/distinction/procedural/Korean-wording;
+5. kiểm internal links giữa master guide, deep dive, workbook, recall và remediation;
+6. giữ ranh giới 필기/실기 rõ ràng;
+7. với nội dung cần hiểu sâu hơn mức thi, thêm handoff sang canonical owner.
+
+## 6. Kết luận và bàn giao
+
+Coverage 필기 hiện **mạnh**; gap lớn nhất là governance theo năm, remediation dựa trên evidence và việc tách riêng 실기 nếu mở rộng sau này.
+
+Nếu đang ôn thi, bắt đầu tại [root README](./README.md) rồi vào [output learning map](./output/README.md). Khi một concept khó vì chưa hiểu cơ chế, dùng internal link sang Computer Science/Backend/SQL rồi quay lại practice thay vì cố học thuộc wording.
