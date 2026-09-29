@@ -11,6 +11,20 @@ Mạch giảng bắt buộc của từng section:
 
 Không được đạt contract bằng cách đặt cùng một câu mở và cùng một câu kết quanh mọi header. Hãy đọc cả khối nội dung dưới header: nếu khối là bullet, bảng, công thức hoặc ví dụ, phải có prose giải thích cách đọc khối đó, các ý liên hệ theo quan hệ nào và kết luận nào được rút ra. Người mới phải hiểu vì sao các ý nằm cùng một section trước khi ghi nhớ từng thuật ngữ.
 
+### Câu nối phải có nội dung thật
+
+Mỗi section phải làm rõ ba vế trong mạch liên kết: **(a)** phần trước để lại khái niệm/điều kiện/câu hỏi nào, **(b)** section hiện tại dùng điểm tựa đó để giải quyết câu hỏi gì và các ý bên trong liên hệ ra sao, **(c)** insight hoặc ranh giới nào được bàn giao cho section/chunk kế tiếp. Hãy gọi tên thuật ngữ thật của SOURCE/TRANSLATION; không tính những câu chỉ nói “tiếp theo”, “xem thêm” hoặc “phần này trình bày”.
+
+Trước khi trả output, tự kiểm tra từng section bằng các câu hỏi sau:
+
+- Câu mở có nhắc một điểm tựa trước đó hoặc nêu rõ vì sao đây là điểm bắt đầu không?
+- Câu hỏi hiện tại có cụ thể đến mức người mới biết mình cần hiểu điều gì không?
+- Prose quanh bullet/bảng/công thức có nói các ý liên hệ theo tiêu chí nào và dẫn tới hệ quả gì không?
+- Câu kết có chốt mental model/boundary và nêu section, nhu cầu hoặc owner tiếp theo không?
+- Câu nối có được viết riêng cho topic này, hay chỉ là boilerplate có thể dán vào mọi header?
+
+Nếu chưa biết tên phần kế tiếp, hãy bàn giao bằng nhu cầu học tập có căn cứ trong chunk; tuyệt đối không tự bịa tên topic hoặc quan hệ không có trong nguồn.
+
 Quy tắc bắt buộc:
 - Chỉ dùng các facts có trong nguồn (source / 소스) và TRANSLATION. Có thể sửa lỗi diễn đạt/OCR rõ ràng, nhưng nếu không đủ căn cứ phải ghi `[CẦN KIỂM TRA]`.
 - Được đổi thứ tự, gộp và nối các đoạn để mạch học đi từ nền tảng đến nâng cao.

@@ -11,6 +11,16 @@ Không được đặt `pass: true` nếu bất kỳ section giảng dạy nào,
 
 Đặc biệt, không chấp nhận một header chỉ được bao quanh bằng các câu boilerplate giống nhau. Nếu nội dung dưới header là bullet, bảng, công thức hoặc ví dụ, CHAPTER phải có prose giải thích cách các ý đó liên kết và kết luận nào được rút ra cho người mới. Header là nhãn điều hướng; đối tượng QA là toàn bộ mạch suy luận của khối nội dung.
 
+### Audit câu liên kết
+
+Kiểm tra từng section theo ba điểm, không chỉ đếm xem có câu mở hoặc câu kết hay chưa:
+
+1. Câu vào có gọi tên điểm tựa từ section trước hoặc giải thích rõ vì sao section này bắt đầu ở đây không?
+2. Câu trong section có nối các ý với nhau bằng một quan hệ có nghĩa (kế thừa, mở rộng, đối chiếu, áp dụng, nguyên nhân–hệ quả) và dẫn tới câu hỏi hiện tại không?
+3. Câu ra có chốt insight/boundary rồi bàn giao một nhu cầu, section, chunk hoặc owner cụ thể không?
+
+Đánh `high` nếu section nhảy cóc, câu nối chỉ là “xem tiếp/tiếp theo”, không gọi tên khái niệm cần nối, hoặc kết thúc mà không cho biết kết luận được dùng ở đâu. Đánh `medium` nếu có đủ mở và kết nhưng quan hệ vẫn chung chung, không giải thích được vì sao bullet/bảng/công thức thuộc cùng section. Đánh `low` cho wording còn cứng nhưng quan hệ học tập đã đúng. Một câu giống hệt lặp quanh nhiều header là bằng chứng của boilerplate, không phải bằng chứng đạt contract.
+
 Tiêu chí nội dung:
 - Không bỏ mất nhóm kiến thức lớn hoặc mã 핵심 trong evidence.
 - Không có fact trái nguồn; phần không chắc chắn phải có `[CẦN KIỂM TRA]`.

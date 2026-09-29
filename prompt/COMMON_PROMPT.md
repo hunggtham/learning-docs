@@ -37,6 +37,22 @@ Mỗi header chỉ là nhãn điều hướng; không được giải thích hea
 
 Glossary, index, checklist và bảng tra cứu thuần tham chiếu có thể ngắn hơn, nhưng vẫn phải nói rõ cách dùng, owner của khái niệm và đường quay lại phần giảng giải; không được dùng ngoại lệ này cho section đang dạy kiến thức.
 
+## Câu liên kết bắt buộc giữa các phần
+
+Câu liên kết phải giúp người mới hiểu hướng suy luận, không chỉ báo rằng tài liệu đang chuyển sang header khác. Vì vậy, mỗi section giảng dạy phải có đủ ba mối nối sau:
+
+1. **Mối nối đi vào:** nhắc đúng khái niệm, điều kiện hoặc câu hỏi từ phần trước (nếu có), rồi nói section hiện tại dùng điểm tựa đó để giải quyết câu hỏi nào.
+2. **Mối nối trong section:** giải thích vì sao các định nghĩa, bullet, bảng, công thức hoặc ví dụ được đặt cạnh nhau; phải chỉ ra quan hệ như kế thừa, mở rộng, đối chiếu, áp dụng hoặc nguyên nhân–hệ quả.
+3. **Mối nối đi ra:** chốt insight và boundary của section, rồi nói rõ kết luận đó sẽ được dùng, mở rộng hoặc kiểm tra ở section/chunk/owner nào tiếp theo.
+
+Có thể dùng các khung câu sau rồi thay bằng thuật ngữ thật của topic:
+
+- “Từ **[điểm tựa ở phần trước]**, ta có tiêu chí **[X]**; phần này dùng tiêu chí đó để giải quyết **[câu hỏi cụ thể]**.”
+- “Các ý dưới đây không phải danh sách rời: hãy đọc chúng theo **[tiêu chí/quan hệ]**, vì điều đó giải thích **[hệ quả hoặc điểm phân biệt]**.”
+- “Điểm chốt là **[invariant/mental model]**; vì **[ranh giới hoặc ngoại lệ]**, phần tiếp theo cần xem **[tên hoặc nhu cầu cụ thể]**.”
+
+Không dùng riêng các câu “tiếp theo”, “xem tiếp”, “như trên”, “phần này trình bày…” nếu chúng không nêu khái niệm trước, câu hỏi hiện tại hoặc nhu cầu kế tiếp. Không bịa quan hệ chỉ để đủ mẫu; nếu SOURCE không cho biết section kế tiếp, hãy bàn giao theo nhu cầu học tập được chứng minh trong chính section đó và đánh dấu phần chưa chắc chắn khi cần. Khi review, phải đọc câu nối cùng đoạn nội dung mà nó nối: một câu chung chung đặt trước header không được tính là liên kết.
+
 Khi retrofit tài liệu cũ, ưu tiên các điểm gãy: mở đầu nhảy thẳng vào chi tiết mà không có prerequisite; section kết thúc đột ngột; concept được nhắc lại nhưng không chỉ ra quan hệ; link chỉ tồn tại ở mục lục mà không có lý do học tập để đi theo link. Với output generate, sửa source hoặc generator rồi regenerate thay vì sửa tay từng file.
 
 ## Branch & Git workflow

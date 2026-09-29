@@ -82,6 +82,16 @@ Mỗi lesson phải giúp người học biết mình đang đứng ở đâu tr
 - phần giải thích đi theo `định nghĩa → cơ chế/quy tắc → điều kiện/ngoại lệ → ví dụ hoặc bẫy đề` khi phù hợp;
 - phần kết thúc chốt điểm phân biệt và nói rõ lesson sau sẽ dùng, mở rộng hoặc đối chiếu điều gì.
 
+Để câu nối có giá trị giảng dạy, mỗi lesson phải thể hiện đủ ba vế bằng thuật ngữ của chính topic:
+
+1. **Từ đâu:** gọi tên kiến thức nền, điều kiện hoặc câu hỏi mà `선행·연결 개념` đã chuẩn bị; lesson đầu tiên phải nói rõ phạm vi và lý do bắt đầu từ đây.
+2. **Đang giải quyết gì:** nêu câu hỏi trung tâm của lesson, rồi giải thích vì sao các bullet, bảng, công thức, đoạn mã hoặc ví dụ bên dưới cùng trả lời câu hỏi đó.
+3. **Dùng đi đâu:** chốt mental model và điểm dễ nhầm, sau đó bàn giao sang lesson/subject/README cụ thể bằng quan hệ `kế thừa`, `mở rộng`, `đối chiếu`, `áp dụng` hoặc `nguyên nhân–hệ quả` khi nguồn cho phép.
+
+Khung câu tham khảo (phải thay bằng nội dung thật, không sao chép nguyên mẫu): “Từ **[khái niệm nền]**, ta cần phân biệt **[câu hỏi/điểm thi]**; vì vậy lesson này dùng **[cơ chế hoặc tiêu chí]** để giải thích **[hệ quả]**. Khi đã nắm **[insight/boundary]**, người học có thể chuyển sang **[lesson hoặc nhu cầu kế tiếp]** để **[mục đích]**.” Với README, checklist và bảng tra cứu, câu nối phải chỉ rõ owner của khái niệm và đường quay lại lesson giảng giải; không dùng “xem tiếp” như một liên kết độc lập.
+
+Khi review, bỏ qua một câu nối nếu câu đó không gọi tên ít nhất một khái niệm/điều kiện thật của lesson, không nêu quan hệ giữa hai phần, hoặc có thể dán nguyên xi vào mọi lesson. Nếu nguồn không đủ thông tin để chỉ tên phần sau, hãy bàn giao theo nhu cầu học tập được suy ra từ lesson và ghi rõ giới hạn thay vì bịa topic.
+
 Không bản sao (copy / 복사) một câu “tiếp theo là…” cho mọi bài. Với `README`, bảng tra cứu hoặc checklist, câu nối phải hướng người đọc về lesson/subject đơn vị sở hữu (owner / 오너) cụ thể; với đầu ra (output / 출력) được generate, sửa generator/nguồn (source / 소스) rồi regenerate thay vì sửa tay từng tệp (file / 파일).
 
 ## 4. Quy tắc thuật ngữ và ngôn ngữ
