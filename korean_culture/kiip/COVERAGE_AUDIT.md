@@ -1,40 +1,42 @@
-# KIIP / Korean Society — Root Coverage Audit
+# KIIP / 한국사회 이해 — điểm vào kiểm toán phạm vi
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `korean_culture/kiip/`
+**Ngày rà soát:** 2026-09-29  
+**Root chuẩn gốc:** `korean_culture/kiip/`
 
-The detailed exam-coverage audit already exists at:
+Bản kiểm toán chi tiết về coverage kỳ thi đã tồn tại tại:
 
 - [`16_coverage_audit.md`](./16_coverage_audit.md)
 
-This root file is the predictable governance entrypoint used by repository-level tooling.
+Tệp root này chỉ tạo **điểm vào governance ổn định** cho tooling cấp repository.
 
-## Root contract
+## Hợp đồng cấp root
 
-KIIP owns exam-oriented recall, distinction and speaking/writing practice. It should not replace the deeper Korean Culture, Korean History or Korea Law/Civic libraries.
+KIIP sở hữu lớp ôn thi: ghi nhớ đúng facts, phân biệt khái niệm dễ nhầm, luyện viết/nói và luyện đề. Nó không thay thế các thư viện sâu hơn về Korean Culture, Korean History hoặc Korea Law/Civic Life.
 
-Scope tags must remain explicit:
+Các nhãn phạm vi phải giữ rõ:
 
-- `공통`;
-- `귀화용 심화`;
-- `현재 확인` for facts/laws/policies that may change.
+- `공통` — nền dùng chung;
+- `귀화용 심화` — phần mở rộng cho mục tiêu nhập quốc tịch;
+- `현재 확인` — fact, luật hoặc chính sách có thể thay đổi và cần kiểm lại nguồn hiện hành.
 
-The durable workflow is:
+Workflow bền vững là:
 
 ```text
-exam scope
-→ current-fact corrections
-→ 8 subject domains / 50 lessons
-→ high-yield distinctions
+phạm vi thi
+→ correction cho facts hiện hành
+→ 8 lĩnh vực / 50 bài
+→ cặp dễ nhầm và high-yield facts
 → active recall
-→ speaking/writing
-→ mock exams
-→ error-pattern review
-→ coverage/current-fact recheck
+→ viết / nói
+→ mock exam
+→ review pattern sai
+→ kiểm lại coverage và current facts
 ```
 
-Current legal/political/economic figures should be treated as reviewable exam facts rather than timeless statements and should point to current official evidence where needed.
+Các con số pháp luật, chính trị, kinh tế hiện hành phải được coi là **facts cần rà soát theo thời điểm**, không phải chân lý cố định; khi cần, chúng phải dẫn về nguồn chính thức hiện tại.
 
-## Review rule
+## Quy tắc review và bàn giao
 
-Update [`16_coverage_audit.md`](./16_coverage_audit.md) when exam coverage, high-yield gaps or current-fact verification status changes. Keep this root file as the stable pointer.
+Khi coverage kỳ thi, high-yield gap hoặc trạng thái xác minh fact thay đổi, cập nhật [`16_coverage_audit.md`](./16_coverage_audit.md). Chỉ sửa tệp root này khi owner hoặc vị trí audit chi tiết thay đổi.
+
+Khi người học cần hiểu sâu “vì sao” thay vì chỉ nhớ để thi, bàn giao sang [Korean Culture](../README.md), [Korean History](../../korean_history/README.md) hoặc [Korea Law/Civic Life](../../korea_law_civic_life/README.md) tùy chủ đề.
