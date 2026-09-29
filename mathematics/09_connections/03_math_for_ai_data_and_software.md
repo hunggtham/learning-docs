@@ -511,6 +511,8 @@ correct mathematics
 
 ## 28. Một forward pass nhìn bằng nhiều branches của math
 
+Forward pass là ví dụ tốt để gom nhiều nhánh toán: linear algebra tạo biến đổi, calculus mô tả gradient, probability diễn giải output và optimization cập nhật tham số. Đọc theo chuỗi này giúp hiểu model như một hệ tính toán chứ không phải hộp đen.
+
 ```math
 z=Wx+b,
 \qquad

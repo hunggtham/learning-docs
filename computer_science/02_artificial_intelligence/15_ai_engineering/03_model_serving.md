@@ -6,6 +6,8 @@ Serving không chỉ là `model.predict()`. Một production service còn phải
 
 ## Đường đi của Serving
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Client
   ↓
@@ -179,6 +181,8 @@ KV cache lưu key/value của token trước đó để tránh tính lại toàn
 Deployment là đưa artifact và configuration vào environment. Serving là hành vi runtime khi nhận và xử lý inference request. MLOps bao phủ rộng hơn: lifecycle, versioning, monitoring và governance.
 
 ## Mô hình tư duy
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Serving = mô hình + runtime + tài nguyên + queue + API + observability + failure policy

@@ -177,6 +177,8 @@ Self-loop cũng cần cạnh ID; trong đồ thị vô hướng nó góp 2 vào 
 
 ## 14. JavaScript cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```js
 function eulerUndirected(n, edges, start) {
   const g = Array.from({ length: n }, () => []);

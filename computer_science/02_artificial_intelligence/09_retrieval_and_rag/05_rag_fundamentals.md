@@ -4,6 +4,8 @@
 
 ## Core Architecture
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart LR
     U[User Query] --> Q[Query Processing]
@@ -48,6 +50,8 @@ RAG có hai pipelines khác nhau.
 
 ### Ingestion
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 source documents
 → parse
@@ -58,6 +62,8 @@ source documents
 ```
 
 ### Query
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 user query
@@ -233,6 +239,8 @@ RAG synthesizes answer. Traditional search returns documents. Generation is usef
 For legal/audit contexts, UI may show answer + source excerpts + direct links so user can verify.
 
 ## Minimal RAG Pseudocode
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```python
 query = rewrite(user_query, history)

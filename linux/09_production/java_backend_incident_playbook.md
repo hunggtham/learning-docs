@@ -27,6 +27,8 @@ Timestamp rất quan trọng vì log, metrics và deployment event phải đư�
 
 ## Bước 1: systemd nghĩ service đang ở trạng thái nào?
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 systemctl status app --no-pager
 systemctl show app -p MainPID -p User -p Group -p ExecStart -p ActiveEnterTimestamp
@@ -38,6 +40,8 @@ Ba command này cho biết service manager nhìn thấy process nào, chạy b�
 Nếu service `failed`, đừng restart ngay nếu có thể lấy thêm evidence trước.
 
 ## Bước 2: xác định đúng JVM
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 pgrep -af 'java.*app'
@@ -208,6 +212,8 @@ sudo lsof -p "$PID" | head -100
 Nếu count tăng liên tục, có thể là file/socket/resource leak. Tăng limit chỉ kéo dài thời gian trước failure nếu lifecycle bug vẫn còn.
 
 ## Thread count tăng
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 ps -p "$PID" -o pid,nlwp,cmd
@@ -387,6 +393,8 @@ df -h
 Không phải incident nào cũng cần tất cả. Chọn evidence theo symptom và tránh command nặng khi server đang critical.
 
 ## Sau restart phải verify gì?
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 systemctl status app --no-pager

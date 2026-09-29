@@ -437,6 +437,8 @@ Nếu closure chỉ snapshot `"idle"`, output đã là `"idle"`. Nhưng nó đ�
 Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy state mới nếu binding bị mutate; nhưng một hệ thống render tạo **binding mới cho mỗi render/call** có thể khiến callback giữ binding cũ, tạo stale closure.
 
 ## Mỗi factory call có một private environment khác nhau
+Phần này nối mạch bài học với “Mỗi factory call có một private environment khác nhau”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function createCounter() {
@@ -572,6 +574,8 @@ loggedAdd(1, 2);
 `withLogging` là Higher-Order Function vì nó nhận function và trả function.
 
 ### Programming pattern — decorator-like wrapper
+Phần này nối mạch bài học với “Programming pattern — decorator-like wrapper”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function withTiming(fn) {
@@ -664,6 +668,8 @@ Khi nhìn một normal function, hãy xác định `this` bằng call expression
 Arrow function là exception lớn vì không tạo own dynamic `this`; nó dùng lexical `this` của surrounding context.
 
 ### Implicit receiver là expression ngay trước dấu `.`/`[]`
+Phần này nối mạch bài học với “Implicit receiver là expression ngay trước dấu `.`/`[]`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const account = {
@@ -690,6 +696,8 @@ account["owner"].show();
 receiver vẫn là owner object.
 
 ### Detached method làm mất receiver
+Phần này nối mạch bài học với “Detached method làm mất receiver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const show = account.owner.show;
@@ -710,6 +718,8 @@ button.addEventListener("click", handleClick);
 ```
 
 ### `this` và lexical variables là hai cơ chế khác nhau
+Phần này nối mạch bài học với “`this` và lexical variables là hai cơ chế khác nhau”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const name = "outer";
@@ -727,6 +737,8 @@ const user = {
 `name` được resolve qua lexical scope. `this.name` bắt đầu từ runtime receiver rồi property lookup. Nếu trộn hai mental models, `this` sẽ luôn cảm giác “bí ẩn”.
 
 ### Class không thay đổi quy tắc cốt lõi của detached method
+Phần này nối mạch bài học với “Class không thay đổi quy tắc cốt lõi của detached method”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class User {
@@ -808,6 +820,8 @@ element.addEventListener(
 ```
 
 ### Partial application
+Phần này nối mạch bài học với “Partial application”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function multiply(a, b) {
@@ -983,6 +997,8 @@ User.prototype
 Sau đó function được gọi với receiver `user`, nên bên trong method `this` vẫn là `user`, **không phải `User.prototype`**. Đây là chỗ `this` và prototype chain giao nhau: prototype quyết định **tìm function ở đâu**; call-site quyết định **receiver là ai**.
 
 ## Shadowing inherited property
+Phần này nối mạch bài học với “Shadowing inherited property”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const proto = {
@@ -1009,6 +1025,8 @@ Object.getPrototypeOf(account);
 Accessor descriptors có thể làm assignment semantics phức tạp hơn, vì inherited setter có thể được gọi. Chương Property Descriptors giải thích cơ chế đó.
 
 ## `instanceof` kiểm tra prototype relationship
+Phần này nối mạch bài học với “`instanceof` kiểm tra prototype relationship”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 user instanceof User;
@@ -1019,6 +1037,8 @@ user instanceof User;
 Vì thế prototype mutation có thể thay đổi result, và cross-realm objects có thể làm `instanceof Array`/`instanceof Error` không hoạt động như bạn kỳ vọng. Với arrays, `Array.isArray()` thường robust hơn cross-realm.
 
 ## Prototype mutation là global-ish behavior change cho descendants
+Phần này nối mạch bài học với “Prototype mutation là global-ish behavior change cho descendants”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 User.prototype.greet = function () {
@@ -1037,6 +1057,8 @@ Array.prototype.last = function () {
 Bạn đã thay behavior của mọi array trong realm và có nguy cơ conflict với library/standard tương lai.
 
 ## Class syntax không xóa prototype model
+Phần này nối mạch bài học với “Class syntax không xóa prototype model”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class User {
@@ -1137,6 +1159,8 @@ class Counter {
 ---
 
 # Chương 12 — Inheritance và composition over inheritance
+Phần này nối mạch bài học với “Chương 12 — Inheritance và composition over inheritance”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class Employee extends User {
@@ -1533,6 +1557,8 @@ return Promise/thenable
 ```
 
 ## `.then()` không sửa Promise cũ
+Phần này nối mạch bài học với “`.then()` không sửa Promise cũ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const p1 = Promise.resolve(10);
@@ -1542,6 +1568,8 @@ const p2 = p1.then((value) => value * 2);
 `p1` và `p2` là hai Promise khác nhau. Đây là nền tảng của chaining. Mỗi `.then()` tạo một continuation và một Promise cho kết quả continuation đó.
 
 ## Promise handlers luôn asynchronous so với current synchronous stack
+Phần này nối mạch bài học với “Promise handlers luôn asynchronous so với current synchronous stack”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 console.log("A");
@@ -1633,6 +1661,8 @@ const [profile, settings] = await Promise.all([
 ```
 
 ## `await` tạm dừng function, không tạm dừng thread
+Phần này nối mạch bài học với “`await` tạm dừng function, không tạm dừng thread”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function load() {
@@ -1659,6 +1689,8 @@ resume function later with result
 ```
 
 ## Async function luôn wrap return value thành Promise outcome
+Phần này nối mạch bài học với “Async function luôn wrap return value thành Promise outcome”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function getNumber() {
@@ -1693,6 +1725,8 @@ async function fail() {
 caller nhận rejected Promise.
 
 ## `try/catch` chỉ bắt rejection của phần bạn thật sự `await`
+Phần này nối mạch bài học với “`try/catch` chỉ bắt rejection của phần bạn thật sự `await`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function run() {
@@ -1749,6 +1783,8 @@ const [profile, settings] = await Promise.all([
 Senior concern ở đây là **dependency graph**, không phải “await chậm”. Sequential là đúng khi operation B cần result A; concurrent là đúng khi chúng độc lập và concurrency level hợp lý.
 
 ### Async `forEach` trap
+Phần này nối mạch bài học với “Async `forEach` trap”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 items.forEach(async (item) => {
@@ -1858,6 +1894,8 @@ loop();
 Đây là code pathological; browser không có cơ hội bình thường để tiến tới task/rendering tiếp theo.
 
 ## Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling
+Phần này nối mạch bài học với “Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 console.log("A");
@@ -1906,6 +1944,8 @@ requestAnimationFrame(() => {
 Trong background tab, rendering/rAF có thể throttled hoặc pause tùy browser. Vì vậy đừng dùng rAF làm business clock.
 
 ## Trace một ví dụ đầy đủ
+Phần này nối mạch bài học với “Trace một ví dụ đầy đủ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 console.log("script start");
@@ -2246,6 +2286,8 @@ Pure function dễ test vì output chỉ phụ thuộc input.
 Side effects như network/storage/DOM vẫn cần, nhưng nên explicit ở boundary.
 
 ### Programming pattern — Functional Core / Imperative Shell
+Phần này nối mạch bài học với “Programming pattern — Functional Core / Imperative Shell”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 read input
@@ -2405,6 +2447,8 @@ Benefits: ít listeners hơn, dynamic children vẫn được handle.
 ---
 
 # Chương 36 — DOM lifecycle: init và cleanup
+Phần này nối mạch bài học với “Chương 36 — DOM lifecycle: init và cleanup”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function init() {
@@ -2690,6 +2734,8 @@ error → loading
 ```
 
 ### Programming pattern — explicit state machine lite
+Phần này nối mạch bài học với “Programming pattern — explicit state machine lite”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const STATUS = {
@@ -2785,6 +2831,8 @@ Event bus giảm coupling trực tiếp nhưng tạo hidden dependency. Event na
 ---
 
 # Chương 45 — Strategy Pattern bằng function
+Phần này nối mạch bài học với “Chương 45 — Strategy Pattern bằng function”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const discountStrategies = {
@@ -3178,6 +3226,8 @@ Project này kết hợp closure, cancellation, service, state modeling, error h
 ---
 
 # Chương 58 — Mini Project: Event-driven Store
+Phần này nối mạch bài học với “Chương 58 — Mini Project: Event-driven Store”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function createStore(

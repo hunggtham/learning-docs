@@ -162,6 +162,8 @@ Xem thêm: [[../06_applied/02_hci_ai_and_human_decision_support]], [[06_open_sci
 
 ### Nguồn nghiên cứu định hướng
 
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
+
 - Shiffman, Stone & Hufford (2008), *đánh giá tức thời trong môi trường tự nhiên* — nền tảng EMA, recall bias và tính hiệu lực sinh thái. PMID `18509902`.
 - tổng quan hệ thống (systematic review) 2022 về độ giá trị của mobile EMA, PMID `35719870`.
 - tổng quan hệ thống 2024 về naturalistic assessment of inhibitory control, PMID `39395771`.

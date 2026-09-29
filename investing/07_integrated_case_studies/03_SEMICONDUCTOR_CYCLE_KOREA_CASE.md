@@ -260,6 +260,8 @@ Nên dùng lợi nhuận chuẩn hóa, biên lợi nhuận giữa chu kỳ, đ�
 
 ### Cơ sở
 
+Kịch bản cơ sở mô tả con đường có xác suất trung tâm: nhu cầu tiếp tục tốt nhưng chu kỳ vẫn dần bình thường hóa. Nó là mốc so sánh để đo xem dữ liệu mới đang nghiêng sang tích cực hay tiêu cực.
+
 ```text
 Nhu cầu AI/HBM mạnh
 Bộ nhớ phổ thông phục hồi dần
@@ -270,6 +272,8 @@ Biên lợi nhuận trở về mức bình thường
 
 ### Tích cực
 
+Kịch bản tích cực cần một cơ chế cụ thể làm lợi nhuận vượt mốc cơ sở, chẳng hạn nhu cầu HBM vượt công suất hoặc thị phần cải thiện. Không nên biến nó thành danh sách mong muốn không gắn với driver.
+
 ```text
 Nhu cầu HBM vượt công suất
 Doanh nghiệp tăng thị phần / được chứng nhận tốt hơn
@@ -279,6 +283,8 @@ Nút thắt thiết bị kéo dài quyền định giá
 ```
 
 ### Tiêu cực
+
+Kịch bản tiêu cực kiểm tra điều gì xảy ra nếu nhu cầu chậm lại trong khi công suất mới vẫn đi vào. Việc viết trước các biến này giúp tránh chỉ nhìn thấy rủi ro sau khi ASP và biên lợi nhuận đã giảm.
 
 ```text
 Capex hyperscaler chậm lại
@@ -292,6 +298,8 @@ Phần bù HBM co lại
 Mỗi kịch bản phải được chuyển thành doanh thu, biên lợi nhuận, capex, FCF và định giá.
 
 ## 23. Nhà sản xuất và nhà cung cấp hưởng lợi ở giai đoạn khác nhau
+
+Chu kỳ bán dẫn truyền qua chuỗi cung ứng theo độ trễ khác nhau. Phân biệt các mắt xích giúp ta không dùng đỉnh lợi nhuận của nhà sản xuất để suy ra mọi nhà cung cấp đã ở cùng một pha.
 
 ```text
 Phục hồi sớm → Nhà sản xuất / Giá bán
@@ -423,6 +431,8 @@ Sau earnings, cần tách doanh thu, ASP, bit shipment, cơ cấu sản phẩm, 
 Doanh nghiệp có thể vượt EPS nhưng giá vẫn giảm nếu hướng dẫn HBM/capex tương lai thấp hơn kỳ vọng rất cao của thị trường.
 
 ## 38. Mẫu nghiên cứu dùng lại
+
+Mẫu dưới đây biến một câu chuyện chu kỳ thành chuỗi biến có thể kiểm tra và cập nhật. Hãy đi từ nhu cầu cuối đến dòng tiền, rồi mới nối sang định giá và quy mô vị thế.
 
 ```text
 Nhu cầu cuối

@@ -4,6 +4,8 @@ File này mô tả **dependency về khái niệm**, không phải thứ tự h�
 
 ## 1. Trục khoa học nền
 
+Trục này dựng nền từ psychology as science, measurement và inference. Hãy đọc nó trước để mọi domain sau đều có cùng cách phân biệt observation, mechanism, evidence và limitation.
+
 ```mermaid
 graph TD
     A[Psychology as Science] --> B[Research Methods]
@@ -23,6 +25,8 @@ graph TD
 
 ## 2. Brain & Mind
 
+Nhóm Brain & Mind nối neural systems, perception, attention và consciousness. Mục tiêu là đi từ substrate tới trải nghiệm mà không rút gọn hiện tượng tâm lý thành một tín hiệu đơn lẻ.
+
 ```mermaid
 graph TD
     A[Nervous System & Brain] --> B[Sensation]
@@ -41,6 +45,8 @@ graph TD
 Neuroscience là một level of analysis, không phải “final explanation” cho mọi psychological construct.
 
 ## 3. Learning & Cognition
+
+Nhóm này giải thích cách hệ thống tiếp nhận, lưu, biến đổi và sử dụng thông tin. Các chapter nối memory, language, decision và expertise với điều kiện môi trường và giới hạn tài nguyên.
 
 ```mermaid
 graph TD
@@ -71,6 +77,8 @@ Vì vậy applied education phải dựa vào memory/transfer evidence, không c
 
 ## 4. Development, self và social world
 
+Trục phát triển đặt cá nhân trong thời gian, quan hệ và bối cảnh xã hội. Hãy theo dõi feedback giữa biology, learning, attachment, identity và institution thay vì xem development như một đường thẳng cố định.
+
 ```mermaid
 graph TD
     A[Lifespan Development] --> B[Attachment]
@@ -93,6 +101,8 @@ Attachment không nên dùng như internet personality label. Identity, culture 
 
 ## 5. Stress, emotion và regulation
 
+Nhóm này nối threat, emotion, allostasis và coping với hành vi quan sát được. Câu hỏi trung tâm là khi nào một đáp ứng ngắn hạn trở thành pattern duy trì hoặc gây chi phí.
+
 ```mermaid
 graph TD
     A[Stress / Allostasis] --> B[Appraisal]
@@ -114,6 +124,8 @@ Applied regulation content phải giữ boundary giữa:
 
 ## 6. Mental Health
 
+Mental health được đọc qua symptom, impairment, context, risk và protective factors. Phần này giữ ranh giới giữa mô tả lâm sàng, chẩn đoán và hỗ trợ đời sống.
+
 ```mermaid
 graph TD
     A[Psychopathology Framework] --> B[Assessment & Diagnosis]
@@ -132,6 +144,8 @@ graph TD
 Diagnosis là classification/inference tool, không phải identity sentence. Treatment evidence phải được tách khỏi theoretical truth của trường phái.
 
 ## 7. Historical Schools
+
+Các trường phái lịch sử được đặt trong bối cảnh ra đời và giới hạn bằng chứng của chúng. Mục tiêu là học cách một theory tạo câu hỏi, đồng thời biết phần nào đã được thay thế hoặc kiểm tra lại.
 
 ```mermaid
 graph TD
@@ -156,6 +170,8 @@ Modern scientific validation
 Freud, Adler và Jung phải được đọc qua [[EVIDENCE_STATUS_GUIDE]] và [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
 ## 8. Applied Psychology
+
+Ứng dụng chuyển mental model thành quyết định trong work, health, education, relationship và technology. Hãy kiểm tra external validity và trade-off trước khi biến một finding thành lời khuyên chung.
 
 ```mermaid
 graph TD
@@ -187,6 +203,8 @@ Historical theory
 Một chapter có thể chứa nhiều mức đồng thời. Status phải gắn vào **claim**, không gắn cứng vào toàn bộ topic.
 
 ## 10. Core navigation
+
+Phần điều hướng này bàn giao dependency giữa các domain và chỉ ra các đường đọc thay thế. Chọn route theo câu hỏi hiện tại, rồi quay lại foundation khi một thuật ngữ hoặc bằng chứng chưa rõ.
 
 - Scientific reasoning: [[00_foundations/00_psychology_as_science]] → [[00_foundations/02_research_methods]] → [[00_foundations/03_measurement_statistics]] → [[00_foundations/05_psychometrics_and_test_interpretation]] → [[00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 - Brain/mind: [[01_brain_and_mind/00_nervous_system_and_brain]] → [[01_brain_and_mind/01_sensation_and_perception]] → [[01_brain_and_mind/07_attention_consciousness_and_awareness]] → [[01_brain_and_mind/09_consciousness_theories_and_evidence]].

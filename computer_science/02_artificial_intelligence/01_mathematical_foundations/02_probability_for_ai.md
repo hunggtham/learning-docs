@@ -474,6 +474,8 @@ Dù mechanisms khác nhau, probability là language chung để mô tả generat
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Distribution      = những outcome nào có thể xảy ra và mức belief tương đối
 Conditional P     = belief sau khi biết context

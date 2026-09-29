@@ -684,6 +684,8 @@ Compiler upgrade không được che mất schema migration risk.
 ---
 
 # 20. Android version axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp
+Phần này nối mạch Android vừa học với “20. Android version axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 minSdk
@@ -1236,6 +1238,8 @@ Compiler flag bỏ check chỉ nên là diagnostic/temporary escape hatch khi hi
 ---
 
 # 43. Lỗi JVM target mismatch — playbook điều tra
+Phần này nối mạch Android vừa học với “43. Lỗi JVM target mismatch — playbook điều tra”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 1. xem Java targetCompatibility
@@ -1408,6 +1412,8 @@ Không kết luận tốt/xấu chỉ từ release note “compiler nhanh hơn�
 ---
 
 # 51. Build performance cũng phải được đo clean và incremental riêng
+Phần này nối mạch Android vừa học với “51. Build performance cũng phải được đo clean và incremental riêng”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 clean build

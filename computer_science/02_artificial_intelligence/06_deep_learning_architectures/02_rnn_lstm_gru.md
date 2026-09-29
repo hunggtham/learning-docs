@@ -121,6 +121,8 @@ LSTM không “giải quyết hoàn toàn” long dependency, nhưng cải thi�
 
 ## Gate interpretation
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - forget gate: bao nhiêu old memory giữ lại;
 - input gate: bao nhiêu new candidate viết vào memory;
 - output gate: bao nhiêu cell state expose ra hidden.
@@ -223,6 +225,8 @@ Adding attention was the key bridge to modern architecture.
 Xem [Encoder–Decoder Models](./03_encoder_decoder_models.md) và [Attention](./04_attention.md).
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 RNN  = continuously update compressed state

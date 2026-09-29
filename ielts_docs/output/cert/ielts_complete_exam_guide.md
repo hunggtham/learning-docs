@@ -22,6 +22,8 @@ IELTS không phải bài thi “grammar multiple choice”. Grammar và vocabula
 
 # 2. Các loại IELTS
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Loại | Dùng cho | Listening | Reading | Writing | Speaking |
 |---|---|---|---|---|---|
 | **IELTS Academic** | Đại học, sau đại học, professional registration | Chung | Academic | Academic | Chung |
@@ -52,6 +54,8 @@ IELTS công bố ngày **5 March 2026** rằng từ **mid-2026**, IELTS sẽ ng�
 
 # 4. Format tổng thể
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 | Skill | Thời gian | Questions / Tasks | Điểm |
 |---|---:|---:|---|
 | Listening | ~30 phút | 40 câu / 4 parts | Band 0–9 |
@@ -69,6 +73,8 @@ Reading và Writing khác nhau.
 
 ## Cấu trúc
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 | Part | Context | Speakers | Mức độ |
 |---:|---|---|---|
 | 1 | Everyday/social situation | 2 | Dễ hơn |
@@ -83,6 +89,8 @@ Reading và Writing khác nhau.
 ---
 
 # 6. Listening question types
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Dạng | Bạn phải làm gì | Kỹ năng | Bẫy |
 |---|---|---|---|
@@ -138,6 +146,8 @@ Answer có thể là:
 
 # 8. Listening common mistakes
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Lỗi | Cách sửa |
 |---|---|
 | Đợi nghe chính xác từ trong question | Học paraphrase |
@@ -155,6 +165,8 @@ Answer có thể là:
 
 ## Format
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 - **60 phút**
 - **3 sections**
 - **40 questions**
@@ -166,6 +178,8 @@ Answer có thể là:
 ---
 
 # 10. Reading General Training
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 - **60 phút**
 - **3 sections**
@@ -183,6 +197,8 @@ General Training và Academic dùng **cùng band scale**, nhưng raw-score requi
 ---
 
 # 11. Reading question types
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Dạng | Ý nghĩa | Chiến thuật chính |
 |---|---|---|
@@ -202,6 +218,8 @@ General Training và Academic dùng **cùng band scale**, nhưng raw-score requi
 ---
 
 # 12. True / False / Not Given — bản chất
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Label | Nghĩa |
 |---|---|
@@ -265,6 +283,8 @@ Reading **không có thêm transfer time**.
 ---
 
 # 15. Writing — tổng thể
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 - **60 phút**
 - **2 tasks**
@@ -400,6 +420,8 @@ Nguyên tắc:
 
 # 21. Speaking format
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 | Part | Thời gian | Nội dung |
 |---:|---:|---|
 | **Part 1** | 4–5 phút | Familiar topics: home, study, work, hobbies... |
@@ -411,6 +433,8 @@ Speaking là **face-to-face interview với examiner** và được recorded.
 ---
 
 # 22. Speaking scoring criteria
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Criterion | Examiner đánh giá |
 |---|---|
@@ -502,6 +526,8 @@ IELTS sử dụng whole/half bands.
 
 ### Rounding
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - Average kết thúc **.25** → round lên **.5**
 - Average kết thúc **.75** → round lên **whole band**
 
@@ -516,6 +542,8 @@ Ví dụ:
 ---
 
 # 27. Ý nghĩa band
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Band | Official skill label / ý nghĩa ngắn |
 |---:|---|
@@ -562,6 +590,8 @@ IELTS công bố các **average marks** sau; exact conversion có thể thay đ�
 
 # 29. Academic Reading raw score → band tham khảo
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Correct / 40 | Approx band |
 |---:|---:|
 | 15 | 5 |
@@ -572,6 +602,8 @@ IELTS công bố các **average marks** sau; exact conversion có thể thay đ�
 ---
 
 # 30. General Training Reading raw score → band tham khảo
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Correct / 40 | Approx band |
 |---:|---:|
@@ -585,6 +617,8 @@ Academic và General dùng cùng band scale nhưng raw score requirement khác v
 ---
 
 # 31. Grammar cần học theo band
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Target | Grammar |
 |---:|---|
@@ -630,6 +664,8 @@ Ví dụ topic **education**:
 | Argument phrases | educational inequality, academic performance |
 
 ### Topics nên ưu tiên
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - Education
 - Technology
@@ -701,6 +737,8 @@ Ví dụ tự nhiên:
 
 # 35. Common IELTS Writing mistakes
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Lỗi | Ảnh hưởng |
 |---|---|
 | Không answer đúng question | Task Response giảm mạnh |
@@ -722,6 +760,8 @@ Ví dụ tự nhiên:
 
 # 36. Common IELTS Speaking mistakes
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Lỗi | Cách sửa |
 |---|---|
 | Trả lời quá ngắn | Add reason/example |
@@ -739,6 +779,8 @@ Ví dụ tự nhiên:
 
 # 37. Reading mistakes
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Lỗi | Fix |
 |---|---|
 | Đọc toàn passage rồi mới xem câu hỏi | Chọn strategy theo question type |
@@ -754,6 +796,8 @@ Ví dụ tự nhiên:
 ---
 
 # 38. Listening mistakes
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Lỗi | Fix |
 |---|---|
@@ -810,6 +854,8 @@ Học:
 
 ## Stage 3 — Skill building
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - Listening dictation + transcript analysis
 - Reading paraphrase + timed passage
 - Writing paragraph development
@@ -829,6 +875,8 @@ Phải hỏi:
 - Pronunciation?
 
 ## Stage 5 — Full test
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - 4 skills timed
 - track band trend
@@ -898,6 +946,8 @@ Nút thắt thường là:
 
 # 42. Kết nối với bộ English Grammar series
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 | IELTS stage | File grammar nên dùng |
 |---|---|
 | Foundation | Beginner |
@@ -922,6 +972,8 @@ không phải số lượng grammar pattern hiếm.
 ---
 
 # 43. Study week mẫu
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Ngày | Nội dung |
 |---|---|
@@ -1002,6 +1054,32 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 
 ## Listening
 
+Phần này chuyển mục tiêu Listening thành kỹ năng nghe, dự đoán đáp án và kiểm tra distractor. Hãy luyện theo lỗi cụ thể thay vì chỉ tăng số audio.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 - [ ] Biết toàn bộ question types
 - [ ] Không vượt word limit
 - [ ] Spelling ổn
@@ -1010,6 +1088,8 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 
 ## Reading
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 - [ ] Phân biệt TFNG
 - [ ] Phân biệt YNNG
 - [ ] Matching Headings không match keyword
@@ -1017,6 +1097,8 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 - [ ] Có paraphrase notebook
 
 ## Writing
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 - [ ] Phân tích đúng task
 - [ ] Task 1 có overview
@@ -1029,6 +1111,8 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 
 ## Speaking
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 - [ ] P1 answer developed
 - [ ] P2 nói gần 2 phút
 - [ ] P3 biết compare/explain/speculate
@@ -1040,6 +1124,8 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 ---
 
 # 49. Official facts cần nhớ
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - IELTS có **4 skills**
 - Overall scale: **0–9**
@@ -1061,6 +1147,8 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 
 # 50A. IELTS — bản đồ năng lực theo 4 kỹ năng
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Skill | Band thấp thường vướng | Band 6+ cần | Band 7+ cần | Band 8+ cần |
 |---|---|---|---|---|
 | Listening | mất âm, spelling, không predict | theo được paraphrase + detail | distractor/change-of-mind tốt | near-complete comprehension |
@@ -1071,6 +1159,8 @@ IELTS khuyến nghị kết quả được xem là thể hiện năng lực tron
 ---
 
 # 51. IELTS Test-Type Decision Guide
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Bạn cần IELTS cho... | Loại cần kiểm tra đầu tiên |
 |---|---|
@@ -1096,6 +1186,8 @@ Thường là everyday transaction/social conversation.
 
 ### Micro-skills
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - names
 - phone numbers
 - dates
@@ -1105,6 +1197,8 @@ Thường là everyday transaction/social conversation.
 - simple factual details
 
 ### Drill bắt buộc
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - alphabet/spelling names;
 - `thirteen/thirty`, `fifteen/fifty`;
@@ -1201,6 +1295,8 @@ Audio nhắc bus/train/taxi cùng đoạn; question hỏi phương tiện **cu�
 
 # 55. Map / Plan Labelling — vocabulary bank
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 | Function | Language |
 |---|---|
 | Đi thẳng | go straight ahead, continue along |
@@ -1221,6 +1317,8 @@ Drill: tự vẽ map đơn giản và mô tả route bằng tiếng Anh.
 ---
 
 # 56. Listening — một recording học như thế nào
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Pass | Việc làm |
 |---:|---|
@@ -1415,6 +1513,8 @@ Useful language:
 
 # 61. Task 1 — Trend Language by precision
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 | Change | Verb | Noun |
 |---|---|---|
 | tăng nhẹ | rise slightly | a slight rise |
@@ -1494,6 +1594,8 @@ Band không tăng vì paragraph dài; tăng vì **idea được phát triển lo
 
 # 65. Task 2 — từng dạng đề
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 | Dạng | Thesis cần làm gì | Body strategy |
 |---|---|---|
 | Agree/Disagree | nêu extent rõ | 2 reasons support position hoặc balanced-but-clear |
@@ -1546,6 +1648,8 @@ Nếu bài còn `people is`, `many information`, `although...but`, đừng ưu t
 # 68. Writing — self-check 5 phút cuối
 
 ## Task 2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - [ ] Tôi có trả lời **đúng instruction**?
 - [ ] Position có consistent từ intro → conclusion?
@@ -1615,6 +1719,8 @@ Nếu hết cue-card bullet sớm, mở rộng bằng:
 
 # 71. Speaking Part 3 — 6 reasoning moves
 
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
+
 | Move | Language |
 |---|---|
 | Cause | `One reason is that...` |
@@ -1649,6 +1755,8 @@ Ví dụ quên `stapler`:
 
 # 73. Pronunciation — tự luyện theo 5 tầng
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 | Tầng | Mục tiêu |
 |---|---|
 | Sounds | âm cuối, /θ/, /ð/, /r/, /l/... |
@@ -1662,6 +1770,8 @@ Mục tiêu IELTS là **intelligibility**, không phải biến accent thành Br
 ---
 
 # 74. Speaking Error Codes
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
 
 | Code | Meaning |
 |---|---|
@@ -1705,6 +1815,8 @@ Thường cần đồng thời:
 ---
 
 # 76. Band-oriented Speaking Diagnosis
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
 
 | Symptom | Training |
 |---|---|
@@ -1761,6 +1873,8 @@ Ví dụ **environment**:
 
 # 79. Paraphrase Transformation Toolkit
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 | Technique | Original | Paraphrase |
 |---|---|---|
 | Word family | `people consume more` | `higher consumption` |
@@ -1775,6 +1889,8 @@ Rule: paraphrase phải **giữ meaning + tự nhiên + grammar đúng**.
 ---
 
 # 80. 12-week IELTS 6.5-oriented roadmap
+
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
 
 | Week | Listening/Reading | Writing | Speaking |
 |---:|---|---|---|
@@ -1810,6 +1926,8 @@ Bổ sung sau nền 6.5:
 
 # 82. Daily plan 90 phút
 
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
+
 - 20m vocabulary/paraphrase
 - 25m Listening hoặc Reading timed
 - 20m deep review
@@ -1817,6 +1935,8 @@ Bổ sung sau nền 6.5:
 - 10m grammar/error notebook
 
 # 83. Daily plan 3 giờ
+
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
 
 - 30m vocabulary
 - 45m Listening deep work
@@ -1829,6 +1949,8 @@ Luân phiên ngày Writing-heavy và Speaking-heavy để tránh quá tải.
 ---
 
 # 84. Weekly Scoreboard
+
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
 
 | Metric | Week 1 | Week 2 | ... |
 |---|---:|---:|---:|
@@ -1904,12 +2026,16 @@ Nếu nơi thi hỗ trợ Writing on Paper và bạn chọn hình thức đó, h
 
 ### Before
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 - same start time as planned exam if possible;
 - clear desk;
 - no phone;
 - water/toilet beforehand.
 
 ### During
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 - exact time;
 - no pause;
@@ -1932,11 +2058,15 @@ Không review ngay tất cả nếu quá mệt. Chia:
 
 ## Listening
 
+Phần này chuyển mục tiêu Listening thành kỹ năng nghe, dự đoán đáp án và kiểm tra distractor. Hãy luyện theo lỗi cụ thể thay vì chỉ tăng số audio.
+
 - [ ] Raw score thường quanh vùng mid/high-20s hoặc tốt hơn trong official-style practice
 - [ ] Spelling/plural không còn là lỗi lớn
 - [ ] P3/P4 theo được paraphrase
 
 ## Reading Academic
+
+Reading Academic cần nối dạng câu hỏi với vị trí thông tin, paraphrase và bằng chứng trong passage. Hãy đọc chiến lược cùng giới hạn thời gian và lỗi suy luận.
 
 - [ ] Không còn đoán TFNG bằng common sense
 - [ ] Passage 3 vẫn còn thời gian
@@ -1945,6 +2075,8 @@ Không review ngay tất cả nếu quá mệt. Chia:
 
 ## Writing
 
+Writing được luyện từ task response, organization, vocabulary tới grammar accuracy. Mỗi bài cần có vòng lập kế hoạch, viết, tự kiểm tra và sửa theo tiêu chí chấm.
+
 - [ ] Không off-topic
 - [ ] Task 1 có overview
 - [ ] Task 2 position rõ
@@ -1952,6 +2084,8 @@ Không review ngay tất cả nếu quá mệt. Chia:
 - [ ] Basic grammar errors không dày đặc
 
 ## Speaking
+
+Speaking cần biến ý tưởng thành câu trả lời có phát triển, liên kết và phát âm dễ hiểu. Hãy luyện theo prompt, ghi âm, nhận diện lỗi và thử lại trong điều kiện thời gian.
 
 - [ ] P1 phát triển 2–4 câu tự nhiên
 - [ ] P2 nói gần 2 phút
@@ -1965,6 +2099,8 @@ Không review ngay tất cả nếu quá mệt. Chia:
 
 # 90. Target 7.0 Checklist
 
+Checklist này gom các tiêu chí Band 7 thành hành vi có thể quan sát trong từng kỹ năng. Hãy dùng nó sau một vòng luyện để chọn lỗi có tác động lớn nhất cần sửa trước.
+
 - [ ] Listening/Academic Reading thường tiến gần hoặc đạt khoảng 30/40 trong official-style practice.
 - [ ] Writing không còn systematic sentence-level errors nghiêm trọng.
 - [ ] Complex sentences được dùng vì meaning, không phải để “show grammar”.
@@ -1977,6 +2113,8 @@ Không review ngay tất cả nếu quá mệt. Chia:
 ---
 
 # 91. Bộ Grammar Series → IELTS cụ thể
+
+Phần này nối các series grammar với dạng lỗi và task IELTS tương ứng. Mục tiêu là học cấu trúc để diễn đạt chính xác hơn, không học ngữ pháp tách khỏi nhu cầu nói và viết.
 
 | File | Dùng mạnh nhất cho IELTS |
 |---|---|
@@ -1996,6 +2134,8 @@ Nếu Band 7+ và cần precision/academic stance → Advanced chọn lọc.
 ---
 
 # 92. Không nên học IELTS theo cách này
+
+Các cảnh báo dưới đây giải thích vì sao một số thói quen tạo cảm giác bận rộn nhưng không cải thiện điểm. Hãy thay mỗi thói quen bằng một vòng luyện có mục tiêu, bằng chứng và phản hồi.
 
 - học thuộc 50 introductions;
 - học “Band 9 vocabulary list” không context;

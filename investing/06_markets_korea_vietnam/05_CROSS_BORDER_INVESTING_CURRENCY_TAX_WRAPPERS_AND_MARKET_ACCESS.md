@@ -8,11 +8,15 @@
 
 ## 1. Đồng tiền giao dịch
 
+Ta bắt đầu bằng đồng tiền xuất hiện trên màn hình giao dịch, vì đây là nơi người mới dễ nhầm nhất. Tuy nhiên, đồng tiền báo giá chỉ là lớp vận hành đầu tiên; các lớp kinh tế phía sau mới quyết định rủi ro thực.
+
 **Đồng tiền giao dịch (trading currency)** là đồng tiền dùng để báo giá và mua bán sản phẩm.
 
 Ví dụ, một ETF niêm yết tại Hàn Quốc có thể giao dịch bằng KRW.
 
 ## 2. Đồng tiền kinh tế của tài sản cơ sở
+
+Sau đồng tiền giao dịch, cần hỏi tài sản thực sự tạo doanh thu và dòng tiền bằng đồng nào. Bước này giải thích vì sao một sản phẩm giao dịch bằng KRW vẫn có thể chịu biến động lớn từ USD.
 
 **Đồng tiền kinh tế của tài sản cơ sở (underlying economic currency)** là đồng tiền gắn với dòng tiền hoặc mức phơi nhiễm kinh tế của tài sản.
 
@@ -20,11 +24,15 @@ Một ETF giao dịch bằng KRW nhưng theo S&P 500 vẫn có mức phơi nhi�
 
 ## 3. Đồng tiền báo cáo hoặc đồng tiền gốc
 
+Tiếp theo, ta quy đổi kết quả về đồng tiền mà nhà đầu tư dùng để đo tài sản và lập kế hoạch. Nếu không xác định đồng tiền gốc, cùng một khoản đầu tư có thể được đánh giá là lời hoặc lỗ tùy cách ghi sổ.
+
 **Đồng tiền báo cáo (reporting currency)** là đồng tiền nhà đầu tư dùng để đo giá trị tài sản và kết quả.
 
 Với người sống và chi tiêu chủ yếu tại Hàn Quốc, KRW thường là đồng tiền gốc trong nhiều bài toán tài chính cá nhân.
 
 ## 4. Đồng tiền của nghĩa vụ
+
+Cuối cùng, danh mục phải gắn với các khoản chi trong tương lai. Tách đồng tiền nghĩa vụ ra khỏi đồng tiền đầu tư giúp ta biết phần nào cần ổn định và phần nào có thể chấp nhận biến động.
 
 **Đồng tiền nghĩa vụ (liability currency)** là đồng tiền gắn với các khoản phải chi trong tương lai như:
 
@@ -39,6 +47,8 @@ Phân bổ tiền tệ nên liên hệ với nghĩa vụ, không chỉ với k�
 # Phần II — Phân rã lợi suất theo tỷ giá
 
 ## 5. Công thức lợi suất theo đồng tiền gốc
+
+Bốn lớp tiền tệ chỉ hữu ích khi được đưa vào phép tính kết quả. Công thức sau cho thấy lợi suất tài sản và lợi suất tỷ giá kết hợp với nhau, nên không thể đánh giá một khoản đầu tư xuyên biên giới chỉ bằng giá tài sản địa phương.
 
 ```text
 Lợi suất theo đồng tiền gốc
@@ -57,6 +67,8 @@ Mua một ETF toàn cầu bằng KRW không tự động loại rủi ro USD. C�
 
 ## 7. Phòng vệ tự nhiên
 
+Trước khi dùng hợp đồng phái sinh, hãy kiểm tra xem bản thân tài sản và nghĩa vụ đã tự bù trừ cho nhau chưa. Đây là cách đơn giản nhất để giảm lệch tiền tệ mà không tạo thêm giao dịch.
+
 **Phòng vệ tự nhiên (natural hedge)** xuất hiện khi tài sản và nghĩa vụ có cùng đồng tiền.
 
 Ví dụ, nếu tương lai chắc chắn cần chi bằng USD thì sở hữu một phần tài sản USD có thể giảm lệch tiền tệ.
@@ -69,9 +81,13 @@ Thu nhập lao động cũng là một dạng mức phơi nhiễm kinh tế. Ng�
 
 ## 9. Phòng vệ chiến lược
 
+Khi phòng vệ tự nhiên chưa đủ, ta có thể đặt một tỷ lệ phòng vệ dài hạn. Mục tiêu của lớp chiến lược là kiểm soát biến động phù hợp với nghĩa vụ, không biến danh mục thành một vụ đặt cược ngắn hạn vào tỷ giá.
+
 **Phòng vệ chiến lược (strategic hedge)** là tỷ lệ phòng vệ dài hạn tương đối ổn định. Mục tiêu thường là giảm biến động hoặc giảm lệch giữa tài sản và nghĩa vụ, không phải dự báo tỷ giá ngắn hạn.
 
 ## 10. Phòng vệ động
+
+Phòng vệ động điều chỉnh theo dữ liệu mới nên có vẻ linh hoạt hơn, nhưng sự linh hoạt đó kéo theo rủi ro timing và chi phí. Cần hiểu rõ quy tắc thay đổi tỷ lệ trước khi áp dụng.
 
 **Phòng vệ động (dynamic hedge)** thay tỷ lệ phòng vệ theo định giá, chênh lệch lãi suất, biến động hoặc chế độ kinh tế.
 
@@ -100,6 +116,8 @@ Giá ngoại hối kỳ hạn phản ánh chênh lệch lãi suất giữa hai �
 Phòng vệ một đồng tiền có lãi suất cao hoặc thấp có thể tạo lợi suất nắm giữ khác nhau.
 
 ## 14. Cơ sở hoán đổi tiền tệ
+
+Điểm kỳ hạn chưa giải thích hết chi phí vốn ngoại tệ trong lúc thị trường căng thẳng. Cơ sở hoán đổi cho thấy áp lực cung–cầu nguồn vốn có thể làm chi phí phòng vệ lệch khỏi trực giác từ chênh lệch lãi suất.
 
 **Cơ sở hoán đổi tiền tệ (cross-currency basis)** phản ánh mất cân bằng nhu cầu nguồn vốn giữa các đồng tiền trong thị trường hoán đổi.
 
@@ -139,11 +157,15 @@ Ngoài mức phơi nhiễm thị trường, người nắm còn chịu rủi ro 
 
 ## 18. Chứng chỉ lưu ký
 
+Chứng chỉ lưu ký minh họa rõ việc một mức phơi nhiễm có thể đi qua thêm một lớp trung gian pháp lý. Vì vậy cần xem cả quyền đối với cổ phiếu gốc, thanh khoản của chứng chỉ và trách nhiệm của tổ chức lưu ký.
+
 **Chứng chỉ lưu ký (depositary receipt)** đại diện quyền lợi liên quan tới cổ phiếu ở thị trường khác nhưng thêm một lớp tổ chức lưu ký và có thể có thanh khoản khác tài sản gốc.
 
 # Phần VII — Nơi thành lập pháp lý của quỹ
 
 ## 19. Nơi thành lập quỹ có thể ảnh hưởng kết quả
+
+Hai quỹ có thể cùng theo một chỉ số nhưng cho kết quả ròng khác nhau vì được thành lập ở các khu vực pháp lý khác nhau. Do đó nơi thành lập phải được kiểm tra cùng thuế, quyền pháp lý và nghĩa vụ báo cáo.
 
 **Nơi thành lập pháp lý (fund domicile)** có thể ảnh hưởng:
 
@@ -164,6 +186,8 @@ Sở hữu trực tiếp tài sản nước ngoài có thể cho khả năng ti�
 # Phần VIII — Lưu ký và quyền sở hữu hưởng lợi
 
 ## 21. Tổ chức lưu ký
+
+Sau khi hiểu wrapper, ta cần biết tài sản được giữ và ghi nhận bởi ai. Lớp lưu ký quyết định cách tách biệt tài sản khách hàng, xử lý hành động doanh nghiệp và chuyển quyền khi có sự cố.
 
 **Tổ chức lưu ký (custodian)** giữ hoặc ghi nhận chứng khoán theo cấu trúc pháp lý của thị trường.
 
@@ -250,6 +274,8 @@ Không phải mọi đồng tiền đều có mức tự do chuyển đổi gi�
 
 ## 38. Chuyển lợi nhuận và vốn về nơi cần sử dụng
 
+Khả năng kiếm lời chỉ hoàn chỉnh khi tiền có thể quay về nơi cần chi tiêu. Phần này nối lợi nhuận trên tài khoản với quy trình pháp lý, chứng từ và thời điểm chuyển tiền thực tế.
+
 **Chuyển tiền về (repatriation)** là khả năng đưa vốn hoặc lợi nhuận từ thị trường đầu tư về nơi nhà đầu tư cần sử dụng.
 
 Lợi nhuận trên giấy không đủ nếu tiền không thể chuyển về đúng lúc hoặc đúng mục đích trong khuôn khổ pháp lý.
@@ -283,6 +309,8 @@ Quy định thuế thay đổi. Với quyết định thật, cần xác minh ng
 # Phần XV — Tổng chi phí sở hữu
 
 ## 45. Chi phí không chỉ là phí giao dịch
+
+Khi so sánh hai cách tiếp cận thị trường, hãy tính toàn bộ chi phí sở hữu thay vì chỉ nhìn hoa hồng. Các khoản nhỏ ở từng lớp có thể cộng dồn và làm thay đổi đáng kể lợi suất ròng dài hạn.
 
 ```text
 Phí giao dịch
@@ -328,6 +356,8 @@ Mức phơi nhiễm có thể gồm:
 
 ## 50. Nhìn xuyên cấu trúc sản phẩm
 
+Sau khi kiểm kê từng wrapper, ta phải gộp các mức phơi nhiễm để thấy danh mục thực sự đang sở hữu gì. Phân tích xuyên lớp là bước nối giữa thiết kế sản phẩm và quản trị rủi ro toàn danh mục.
+
 **Phân tích xuyên lớp (look-through)** giúp phát hiện trường hợp mua nhiều ETF hoặc quỹ nhưng thực chất lặp lại cùng một nhân tố hoặc cùng tài sản cơ sở.
 
 # Phần XVII — Phân bổ gắn với nghĩa vụ
@@ -367,6 +397,8 @@ Thanh khoản thị trường ↓
 Phải tính cả biến động tài sản và biến động tỷ giá.
 
 ## 56. Kiểm thử ngược
+
+Kịch bản thuận cho biết danh mục mất bao nhiêu trong một cú sốc giả định; kiểm thử ngược đi xa hơn bằng cách hỏi điểm gãy vận hành nằm ở đâu. Câu hỏi này đặc biệt quan trọng khi rủi ro không chỉ là giá giảm mà còn là không thể giao dịch hoặc chuyển tiền.
 
 **Kiểm thử căng thẳng ngược (reverse stress test)** hỏi:
 

@@ -56,6 +56,8 @@ Overflow may happen at language arithmetic layer; `NullPointerException` before 
 
 ## End-to-end diagram
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[Java source semantics] --> B[javac parser/type checker]
@@ -80,6 +82,8 @@ Optimization becomes evidence-driven instead of “rewrite loop syntax”.
 > Source code is a **semantic description** transformed through compiler/runtime/ISA into machine state transitions. Each layer preserves a contract while introducing its own costs and failure modes.
 
 ## Cross-references
+
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
 
 - [Language semantics](../04_programming_languages/00_language_semantics_and_execution_models.md)
 - [Compiler, VM và JIT](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md)

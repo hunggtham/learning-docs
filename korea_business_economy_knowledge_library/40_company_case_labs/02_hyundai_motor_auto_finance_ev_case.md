@@ -226,6 +226,8 @@ Sau đó kiểm tra CFO, tồn kho, khoản phải thu hoặc tài sản tài ch
 
 ### Kịch bản cơ cấu sản phẩm mạnh
 
+Kịch bản này kiểm tra trường hợp mix xe, giá bán và tài chính khách hàng cùng cải thiện. Đừng chỉ nhìn sản lượng; hãy nối mix với biên lợi nhuận, tín dụng và dòng tiền.
+
 ```text
 Số xe đi ngang
 Tỷ trọng SUV / Genesis / hybrid ↑

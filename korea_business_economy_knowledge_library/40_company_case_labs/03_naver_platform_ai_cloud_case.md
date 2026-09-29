@@ -203,6 +203,8 @@ Phân tích phải chỉ rõ quy định đang tác động vào cỗ máy kinh 
 
 ### Đầu tư AI nhưng chưa kiếm tiền tương xứng
 
+Kịch bản này tách tăng chi phí hạ tầng khỏi doanh thu AI thực tế. Mục tiêu là nhận ra khi narrative công nghệ chưa chuyển thành margin, retention hoặc free cash flow.
+
 ```text
 Chi phí tính toán AI +40%
 Mức tương tác tìm kiếm +5%
@@ -214,6 +216,8 @@ Doanh thu AI doanh nghiệp tăng nhưng từ nền thấp
 Câu hỏi là phần lợi nhuận gộp tăng thêm từ quảng cáo, thương mại và doanh nghiệp có đủ bù chi phí tính toán và R&D hay không.
 
 ### Khả năng kiếm tiền của nền tảng cải thiện
+
+Kịch bản tích cực cần bằng chứng về pricing, quảng cáo, cloud utilization hoặc dịch vụ mới. Hãy kiểm tra liệu doanh thu tăng có đi cùng unit economics và chi phí vốn hay không.
 
 ```text
 Số người dùng đi ngang

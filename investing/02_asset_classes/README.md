@@ -2,6 +2,8 @@
 
 Lĩnh vực này giải thích từng nhóm tài sản theo bản chất kinh tế, nguồn lợi suất, rủi ro và cách chúng phản ứng trong các chế độ kinh tế khác nhau. Mục tiêu không phải thuộc tên sản phẩm, mà hiểu mình đang sở hữu quyền vốn chủ, khoản nợ, tài sản thực, công cụ gần tiền mặt, tài sản tư nhân hay cấu trúc có tính chất phái sinh nào; đồng thời hiểu lớp triển khai có thể làm lợi suất thực tế khác với mức phơi nhiễm lý thuyết.
 
+Nếu mục tiêu chính là cổ phiếu, hãy đọc [lộ trình Cổ phiếu và Forex](../START_HERE_STOCKS_AND_FOREX.md) trước để có trực giác và ví dụ số rồi quay lại các chapter bên dưới.
+
 ## Thứ tự đọc
 
 [01_STOCKS_ETF_AND_FUNDS.md](./01_STOCKS_ETF_AND_FUNDS.md) giải thích cổ phiếu từ quyền lợi còn lại của cổ đông, số cổ phiếu pha loãng, cổ tức, mua lại cổ phiếu và các hành động doanh nghiệp tới quyền biểu quyết, quản trị, mức tập trung chỉ số, NAV/iNAV, cơ chế tạo–mua lại ETF, thanh khoản khi căng thẳng, sai lệch bám chỉ số, mô phỏng vật lý/tổng hợp, phòng vệ ngoại hối, ETF đòn bẩy/nghịch đảo, Active Share, đầu tư trực tiếp theo chỉ số và tổng chi phí sở hữu.

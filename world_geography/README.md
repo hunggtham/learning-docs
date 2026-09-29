@@ -30,6 +30,8 @@ World Atlas là **application layer**, không phải tiêu chí completion. Mộ
 
 ## Dependency graph
 
+Sơ đồ dưới đây cho thấy thứ tự phụ thuộc của thư viện: tư duy địa lý và dữ liệu làm nền, Earth systems tạo process, rồi các lớp dân cư–kinh tế–vùng nối thành global systems. Hãy dùng nó để chọn prerequisite trước khi mở một atlas profile.
+
 ```mermaid
 graph TD
   A[Geographical thinking] --> B[Coordinates / Maps / GIS]

@@ -73,6 +73,10 @@ Nhưng composition của transformations sau này không nhất thiết commutat
 
 ## 4. Scalar multiplication là scale direction
 
+Scalar multiplication thay đổi độ lớn vector và có thể đảo hướng khi scalar âm, nhưng không tạo hướng mới ngoài span ban đầu. Đây là bước nền để hiểu linear combination và vector space.
+
+Scalar multiplication thay đổi độ lớn vector và có thể đảo hướng khi scalar âm, nhưng không tạo hướng mới ngoài span ban đầu. Đây là bước nền để hiểu linear combination và vector space.
+
 ```math
 kv
 ```

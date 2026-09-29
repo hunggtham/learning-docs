@@ -4,6 +4,8 @@ Folder này trả lời câu hỏi: **làm sao biết một AI system thực s�
 
 ## Reading order
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```text
 00_evaluation_foundations.md
 01_metrics_benchmarks_and_test_design.md
@@ -16,6 +18,8 @@ Folder này trả lời câu hỏi: **làm sao biết một AI system thực s�
 ```
 
 ## Dependency map
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```mermaid
 flowchart TD
@@ -34,6 +38,8 @@ flowchart TD
 
 ## Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Define contract
 → design representative tests
@@ -45,6 +51,8 @@ Define contract
 ```
 
 ## Distinctions cần giữ
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Accuracy             ≠ Calibration

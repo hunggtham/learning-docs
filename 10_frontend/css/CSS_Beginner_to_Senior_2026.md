@@ -199,6 +199,8 @@ Selector có match không?
 
 ## 1.1 Rule cơ bản
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .card {
   color: #222;
@@ -225,11 +227,15 @@ Nếu một khai báo (declaration) sai, browser thường bỏ khai báo (decla
 
 ### External stylesheet — nên dùng production
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```html
 <link rel="stylesheet" href="/styles/app.css">
 ```
 
 ### Internal CSS
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```html
 <style>
@@ -238,6 +244,8 @@ Nếu một khai báo (declaration) sai, browser thường bỏ khai báo (decla
 ```
 
 ### Inline style
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```html
 <div style="color: red">...</div>
@@ -250,6 +258,8 @@ Inline style có độ đặc hiệu (specificity) cao và khó maintain. Chỉ 
 
 ## 1.3 Comment
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 /* Comment */
 ```
@@ -257,6 +267,8 @@ Inline style có độ đặc hiệu (specificity) cao và khó maintain. Chỉ 
 CSS không hỗ trợ `//` như JavaScript/SCSS.
 
 ## 1.4 Shorthand và longhand
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 margin: 10px 20px;
@@ -272,6 +284,8 @@ margin-left: 20px;
 ```
 
 ### Quy tắc 1–4 giá trị
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 margin: 10px;             /* all */
@@ -298,6 +312,8 @@ margin: 10px 20px 30px 40px; /* top | right | bottom | left */
 ## Pattern notes — các bộ chọn (selectors)
 
 ### CSS Idiom — trạng thái (state) bằng attribute thay vì class tạm
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .tabs [aria-selected="true"] {
@@ -369,6 +385,8 @@ bộ chọn (selector) tốt thường:
 
 # 2.1 Universal bộ chọn (selector)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 * {
   box-sizing: border-box;
@@ -389,6 +407,8 @@ Thường dùng trong reset:
 
 # 2.2 Type bộ chọn (selector)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 button {}
 p {}
@@ -399,6 +419,8 @@ article {}
 
 # 2.3 Class bộ chọn (selector)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .card {}
 .btn-primary {}
@@ -408,8 +430,12 @@ article {}
 
 # 2.4 ID bộ chọn (selector)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 #header {}
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
 ID có độ đặc hiệu (specificity) rất cao.
@@ -417,6 +443,8 @@ ID có độ đặc hiệu (specificity) rất cao.
 **Senior rule:** tránh dùng ID cho styling reusable.
 
 # 2.5 Attribute các bộ chọn (selectors)
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 input[type="text"] {}
@@ -456,6 +484,8 @@ a[href$=".PDF" i] {}
 
 ## Descendant
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .card p {}
 ```
@@ -463,6 +493,8 @@ a[href$=".PDF" i] {}
 Match `p` ở bất kỳ depth nào trong `.card`.
 
 ## Child `>`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .card > p {}
@@ -472,6 +504,8 @@ Chỉ match con trực tiếp.
 
 ## Adjacent sibling `+`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 label + input {}
 ```
@@ -479,6 +513,8 @@ label + input {}
 Match `input` ngay sau `label`.
 
 ## General sibling `~`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 h2 ~ p {}
@@ -506,6 +542,8 @@ Nên:
 
 ## 4.1 Interaction các trạng thái (states)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 a:hover {}
 button:active {}
@@ -514,6 +552,8 @@ input:focus-visible {}
 ```
 
 ### `:focus` vs `:focus-visible`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 - `:focus`: element đang focus.
 - `:focus-visible`: browser xác định cần hiện chỉ báo tiêu điểm (focus indicator), thường khi keyboard navigation.
@@ -539,6 +579,8 @@ vì phá keyboard khả năng tiếp cận (accessibility).
 
 ## 4.2 Form các trạng thái (states)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 input:checked {}
 input:disabled {}
@@ -560,6 +602,8 @@ input:invalid:not(:placeholder-shown) {
 ```
 
 ## 4.3 Structural các bộ chọn (selectors)
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 :first-child
@@ -592,6 +636,8 @@ n+4     → từ phần tử 4 trở đi
 ```
 
 ## 4.4 `:not()`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 button:not([disabled]) {}
@@ -671,6 +717,8 @@ Checkbox control parent:
 
 # 5. các phần tử giả (pseudo-elements) [CORE]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 ::before
 ::after
@@ -707,6 +755,8 @@ Không dùng phần tử giả (pseudo-element) cho content quan trọng về ng
 
 ## `::marker`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 li::marker {
   color: tomato;
@@ -715,6 +765,8 @@ li::marker {
 ```
 
 ## `::selection`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 ::selection {
@@ -753,6 +805,8 @@ nếu có thể sửa kiến trúc:
 
 ### mẫu lập trình (coding pattern) — Default → biến thể (variant) → trạng thái (state)
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 .button {
   /* default */
@@ -772,6 +826,8 @@ nếu có thể sửa kiến trúc:
 ```
 
 ### mẫu thiết kế (design pattern) — Layered cơ chế phân tầng (cascade)
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 reset
@@ -822,6 +878,8 @@ Ví dụ:
 
 ```css
 #app .card p {}
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
 cao hơn:
@@ -840,6 +898,8 @@ Nếu độ đặc hiệu (specificity) bằng nhau, rule viết sau thắng:
 ```
 
 ## 6.3 `!important`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 color: red !important;
@@ -879,6 +939,8 @@ button {
 Về initial giá trị (value) theo specification.
 
 ### `unset`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 - thuộc tính (property) có inherit → behave như `inherit`;
 - không inherit → behave như `initial`.
@@ -985,6 +1047,8 @@ Con thường tự kế thừa.
 
 ## Absolute
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 px
 cm
@@ -998,6 +1062,8 @@ Web UI gần như chủ yếu dùng `px`.
 
 ## Font-relative
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 em   → dựa trên font-size hiện tại/parent tùy property
 rem  → dựa trên root font-size
@@ -1008,6 +1074,8 @@ rlh  → root line-height
 ```
 
 ### `rem`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .card {
@@ -1032,6 +1100,8 @@ Hữu ích khi component cần scale theo font:
 
 ## vùng nhìn (viewport) units
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 vw, vh
 vmin, vmax
@@ -1055,6 +1125,8 @@ Mobile full-screen:
 Thường tốt hơn `100vh` trên mobile browser có thanh address thay đổi kích thước.
 
 ## truy vấn vùng chứa (container query) units
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 cqw, cqh
@@ -1096,17 +1168,23 @@ Percentage padding truyền thống resolve theo inline size của khối chứa
 
 ## `calc()`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 width: calc(100% - 2rem);
 ```
 
 ## `min()`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 width: min(100%, 70rem);
 ```
 
 ## `max()`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 padding-inline: max(1rem, 5vw);
@@ -1134,6 +1212,8 @@ Rất hữu ích cho:
 
 ### CSS Idiom — phương án dự phòng (fallback) token
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .card {
   color: var(--card-color, var(--color-text));
@@ -1141,6 +1221,8 @@ Rất hữu ích cho:
 ```
 
 ### mẫu lập trình (coding pattern) — Token pipeline
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 :root {
@@ -1163,6 +1245,8 @@ Primitive token
 ```
 
 ### mẫu thiết kế (design pattern) — Theme by token override
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 :root {
@@ -1210,6 +1294,8 @@ color: var(--text-color, #222);
 
 ## Custom thuộc tính (property) có cơ chế phân tầng (cascade) + inherit
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .theme-dark {
   --surface: #111;
@@ -1218,6 +1304,8 @@ color: var(--text-color, #222);
 ```
 
 ## giao diện thành phần (component API)
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .avatar {
@@ -1276,6 +1364,8 @@ Descriptors:
 
 ### CSS Idiom — Universal border-box
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 *,
 *::before,
@@ -1285,6 +1375,8 @@ Descriptors:
 ```
 
 ### mẫu lập trình (coding pattern) — Section + inner wrapper
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .section {
@@ -1339,6 +1431,8 @@ Rendered width = 244px.
 
 ### `border-box`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 box-sizing: border-box;
 ```
@@ -1363,11 +1457,15 @@ Global best practice:
 
 ### CSS Idiom — Fluid + capped width
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 width: min(100%, 42rem);
 ```
 
 ### CSS Idiom — Prevent intrinsic overflow
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 min-width: 0;
@@ -1377,6 +1475,8 @@ min-height: 0;
 Đặc biệt quan trọng trong Flex/Grid.
 
 ### mẫu lập trình (coding pattern) — Intrinsic card width
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .card {
@@ -1415,6 +1515,8 @@ max-height
 
 ## Common các giá trị (values)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 width: auto;
 width: 100%;
@@ -1447,6 +1549,8 @@ Thực tế:
 
 ## `aspect-ratio`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .video {
   aspect-ratio: 16 / 9;
@@ -1465,6 +1569,8 @@ Avatar:
 ---
 
 # 16. Margin [CORE]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 margin-top
@@ -1505,6 +1611,8 @@ Không collapse trong nhiều trường hợp như:
 
 # 17. Padding [CORE]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 padding
 padding-top
@@ -1518,6 +1626,8 @@ Không nhận negative giá trị (value).
 ---
 
 # 18. Borders [CORE]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 border
@@ -1567,6 +1677,8 @@ border-bottom-left-radius
 
 # 19. Outline [CORE]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 outline: 2px solid currentColor;
 outline-offset: 3px;
@@ -1584,6 +1696,8 @@ Khác border:
 
 ### CSS Idiom — `flow-root` để isolate block flow
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .component {
   display: flow-root;
@@ -1591,6 +1705,8 @@ Khác border:
 ```
 
 ### mẫu lập trình (coding pattern) — Layout primitives
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .stack {
@@ -1644,10 +1760,14 @@ list-item
 
 ## `display: block`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 - thường chiếm available inline width.
 - bắt đầu dòng mới.
 
 ## `display: inline`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 - flow cùng text.
 - width/height không hoạt động như block.
@@ -1685,6 +1805,8 @@ Box của element biến mất nhưng children vẫn participate layout.
 
 ## `visibility`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 visibility: visible;
 visibility: hidden;
@@ -1693,6 +1815,8 @@ visibility: hidden;
 `hidden`: giữ layout space nhưng không paint.
 
 ## `opacity`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 opacity: 0;
@@ -1727,6 +1851,8 @@ Senior phải hiểu "default behavior" trước khi override.
 
 ### CSS Idiom — Full inset overlay
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .overlay {
   position: absolute;
@@ -1735,6 +1861,8 @@ Senior phải hiểu "default behavior" trước khi override.
 ```
 
 ### CSS Idiom — Center absolute element
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .centered {
@@ -1755,6 +1883,8 @@ Nếu chỉ cần layout center, ưu tiên:
 
 ### mẫu lập trình (coding pattern) — Positioning context
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 .card {
   position: relative;
@@ -1768,6 +1898,8 @@ Nếu chỉ cần layout center, ưu tiên:
 ```
 
 ### mẫu thiết kế (design pattern) — Overlay ownership
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 local overlay → relative + absolute
@@ -1891,6 +2023,8 @@ gỡ lỗi (debug) absolute/fixed lỗi phải hỏi:
 
 ### CSS Idiom — Local stacking cô lập (isolation)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .component {
   isolation: isolate;
@@ -1898,6 +2032,8 @@ gỡ lỗi (debug) absolute/fixed lỗi phải hỏi:
 ```
 
 ### mẫu lập trình (coding pattern) — mang tính ngữ nghĩa (semantic) z-index scale
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 :root {
@@ -1970,6 +2106,8 @@ Không dùng random `999999`.
 ---
 
 # 26. Overflow [CORE]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 overflow
@@ -2046,6 +2184,8 @@ Dùng cẩn thận vì có thể thay sizing/positioning behavior.
 
 ## `content-visibility`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .article-section {
   content-visibility: auto;
@@ -2070,6 +2210,8 @@ contain-intrinsic-size: auto 500px;
 
 ### CSS Idiom — Cluster
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .cluster {
   display: flex;
@@ -2087,6 +2229,8 @@ Dùng cho:
 
 ### CSS Idiom — Push one item to edge
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .actions {
   margin-inline-start: auto;
@@ -2094,6 +2238,8 @@ Dùng cho:
 ```
 
 ### mẫu lập trình (coding pattern) — Media Object
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .media {
@@ -2143,6 +2289,8 @@ Flexbox là layout **1 chiều**: row hoặc column.
 
 ### `flex-direction`
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```text
 row
 row-reverse
@@ -2158,6 +2306,8 @@ column-reverse
 ```
 
 ### `flex-wrap`
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 nowrap
@@ -2232,6 +2382,8 @@ space-evenly
 
 ### `gap`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 gap: 1rem;
 row-gap: 1rem;
@@ -2246,6 +2398,8 @@ column-gap: 2rem;
 
 ## `flex-grow`
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .item {
   flex-grow: 1;
@@ -2255,6 +2409,8 @@ column-gap: 2rem;
 Phân chia **positive không gian dư (free space)** theo tỉ lệ.
 
 ## `flex-shrink`
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .item {
@@ -2303,6 +2459,8 @@ Override `align-items` cho một item.
 
 ## `order`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 order: 2;
 ```
@@ -2344,6 +2502,8 @@ Tương tự vertical flex:
 
 ## Center
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .center {
   display: flex;
@@ -2353,6 +2513,8 @@ Tương tự vertical flex:
 ```
 
 ## Navbar
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .nav {
@@ -2367,6 +2529,8 @@ Tương tự vertical flex:
 ```
 
 ## Equal cards
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .cards {
@@ -2388,6 +2552,8 @@ Tương tự vertical flex:
 
 ### CSS Idiom — Responsive auto grid
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .grid {
   display: grid;
@@ -2399,6 +2565,8 @@ Tương tự vertical flex:
 
 ### CSS Idiom — Safe fractional track
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 grid-template-columns: minmax(0, 1fr);
 ```
@@ -2406,6 +2574,8 @@ grid-template-columns: minmax(0, 1fr);
 Thường an toàn hơn plain `1fr` khi child có intrinsic width lớn.
 
 ### mẫu lập trình (coding pattern) — Sidebar layout
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .layout {
@@ -2441,6 +2611,8 @@ Grid là layout **2 chiều**.
 
 ## 32.1 các dải lưới (grid tracks)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 grid-template-columns: 1fr 1fr 1fr;
 ```
@@ -2457,11 +2629,15 @@ Sidebar + content.
 
 ## `repeat()`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 grid-template-columns: repeat(3, 1fr);
 ```
 
 ## `minmax()`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2471,12 +2647,16 @@ grid-template-columns: repeat(3, minmax(0, 1fr));
 
 ## Responsive grid không truy vấn môi trường (media query)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 grid-template-columns:
   repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
 ```
 
 ### `auto-fit` vs `auto-fill`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 - `auto-fill`: giữ các hypothetical empty tracks.
 - `auto-fit`: collapse empty tracks để existing items stretch.
@@ -2518,6 +2698,8 @@ Span:
 ---
 
 # 34. Named Grid Areas
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .layout {
@@ -2610,6 +2792,8 @@ column dense
 
 ### CSS Idiom — Aligned card internals
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .cards {
   display: grid;
@@ -2675,6 +2859,8 @@ Senior không hỏi "Grid hay Flex cái nào tốt hơn", mà hỏi:
 
 # 39. Float [LEGACY nhưng cần biết]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 img {
   float: left;
@@ -2695,6 +2881,8 @@ clear: both;
 ---
 
 # 40. Multi-column Layout [ADV]
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .article {
@@ -2727,6 +2915,8 @@ Useful cho newspaper/text-heavy layouts.
 
 ### CSS Idiom — Unitless line-height
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 body {
   line-height: 1.5;
@@ -2735,6 +2925,8 @@ body {
 
 ### CSS Idiom — Readable measure
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .prose {
   max-inline-size: 65ch;
@@ -2742,6 +2934,8 @@ body {
 ```
 
 ### mẫu lập trình (coding pattern) — Fluid type scale
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 :root {
@@ -2766,6 +2960,8 @@ Không chọn từng font-size ngẫu nhiên.
 
 ## `font-family`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 body {
   font-family:
@@ -2789,6 +2985,8 @@ Generic families:
 
 ## `font-size`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 font-size: 1rem;
 ```
@@ -2801,6 +2999,8 @@ font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
 
 ## `font-weight`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 normal ≈ 400
 bold ≈ 700
@@ -2811,6 +3011,8 @@ biến (variable) font có thể hỗ trợ range.
 
 ## `font-style`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 normal
 italic
@@ -2818,6 +3020,8 @@ oblique
 ```
 
 ## `line-height`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 body {
@@ -2837,6 +3041,8 @@ h1 {
 
 ## `font` shorthand
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 font: italic 600 1rem/1.5 Inter, sans-serif;
 ```
@@ -2848,6 +3054,8 @@ font: italic 600 1rem/1.5 Inter, sans-serif;
 # 42. Text các thuộc tính (properties) [CORE]
 
 ## `text-align`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 start
@@ -2861,6 +3069,8 @@ justify
 Ưu tiên `start/end` cho internationalization.
 
 ## `text-decoration`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 a {
@@ -2878,6 +3088,8 @@ Sub-properties:
 
 ## `text-transform`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 none
 uppercase
@@ -2888,6 +3100,8 @@ capitalize
 Không dùng CSS uppercase thay cho dữ liệu nếu ngữ nghĩa (semantics)/copy thực sự cần uppercase.
 
 ## `letter-spacing`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .title {
@@ -2934,6 +3148,8 @@ Giữ whitespace/newline nhưng cho wrap.
 
 ## `overflow-wrap`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 overflow-wrap: anywhere;
 ```
@@ -2941,6 +3157,8 @@ overflow-wrap: anywhere;
 Cho phép break long URL/token.
 
 ## `word-break`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 normal
@@ -2952,6 +3170,8 @@ Cẩn thận `break-all` vì có thể break rất xấu.
 
 ## `hyphens`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 p {
   hyphens: auto;
@@ -2961,6 +3181,8 @@ p {
 Cần `lang` đúng trong HTML để browser hyphenate tốt.
 
 ## `text-overflow`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 text-overflow: ellipsis;
@@ -2999,6 +3221,8 @@ p {
 
 # 44. Web Fonts `@font-face` [CORE/ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 @font-face {
   font-family: "MyFont";
@@ -3034,6 +3258,8 @@ hiệu năng (performance): ưu tiên WOFF2, subset khi cần, không load quá 
 
 ### CSS Idiom — `currentColor`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .icon {
   fill: currentColor;
@@ -3042,6 +3268,8 @@ hiệu năng (performance): ưu tiên WOFF2, subset khi cần, không load quá 
 
 ### mẫu lập trình (coding pattern) — mang tính ngữ nghĩa (semantic) color tokens
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 --color-action: #2563eb;
 --color-danger: #dc2626;
@@ -3049,6 +3277,8 @@ hiệu năng (performance): ưu tiên WOFF2, subset khi cần, không load quá 
 ```
 
 ### mẫu thiết kế (design pattern) — Primitive → mang tính ngữ nghĩa (semantic) → Component
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 blue-600
@@ -3062,6 +3292,8 @@ Oklch phù hợp khi cần tạo palette có lightness dễ kiểm soát hơn HS
 
 
 ## Keywords
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 color: red;
@@ -3079,10 +3311,14 @@ color: currentColor;
 
 ## Hex
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 #ff0000
 #f00
 #ff000080 /* alpha */
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
 ## `rgb()`
@@ -3095,11 +3331,15 @@ color: rgb(255 0 0 / 80%);
 
 ## `hsl()`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 color: hsl(220 90% 56%);
 ```
 
 ## `oklch()` [MODERN]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 color: oklch(62% 0.2 250);
@@ -3115,12 +3355,16 @@ Oklch hữu ích cho hệ thống thiết kế (design system) vì lightness g�
 
 ## Relative colors [MODERN]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 --brand-hover:
   oklch(from var(--brand) calc(l - 0.08) c h);
 ```
 
 ## `color-mix()`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 background:
@@ -3170,6 +3414,8 @@ Example:
 
 ## `background-size`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 auto
 cover
@@ -3187,6 +3433,8 @@ contain
 
 ## Linear
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 background:
   linear-gradient(135deg, #2563eb, #7c3aed);
@@ -3194,12 +3442,16 @@ background:
 
 ## Radial
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 background:
   radial-gradient(circle at top, white, #ddd);
 ```
 
 ## Conic
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 background:
@@ -3216,6 +3468,8 @@ Useful:
 # 48. Shadows [CORE]
 
 ## `box-shadow`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
@@ -3237,6 +3491,8 @@ box-shadow:
 
 ## `text-shadow`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 text-shadow: 0 1px 2px rgb(0 0 0 / .3);
 ```
@@ -3246,6 +3502,8 @@ text-shadow: 0 1px 2px rgb(0 0 0 / .3);
 # 49. Object sizing: images/video [CORE]
 
 ## `object-fit`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 fill
@@ -3264,6 +3522,8 @@ scale-down
 ```
 
 ## `object-position`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 object-position: center top;
@@ -3285,6 +3545,8 @@ pixelated
 ---
 
 # 51. Filters [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 filter: blur(4px);
@@ -3308,6 +3570,8 @@ các hàm (functions):
 
 ## `backdrop-filter`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .glass {
   background: rgb(255 255 255 / 70%);
@@ -3320,6 +3584,8 @@ Có cost rendering; test hiệu năng (performance).
 ---
 
 # 52. Blend Modes [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 mix-blend-mode: multiply;
@@ -3343,11 +3609,15 @@ Common blend modes:
 
 ### CSS Idiom — Inline centering
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 margin-inline: auto;
 ```
 
 ### CSS Idiom — Writing-mode-safe spacing
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 padding-inline: 1rem;
@@ -3355,6 +3625,8 @@ padding-block: .75rem;
 ```
 
 ### mẫu lập trình (coding pattern) — International-ready component
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 margin-inline-start: auto;
@@ -3413,6 +3685,8 @@ Example:
 
 # 54. Writing Modes [ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
@@ -3440,6 +3714,8 @@ Không chọn điểm ngắt (breakpoint) vì tên thiết bị. Chọn tại đ
 
 ### mẫu lập trình (coding pattern) — Fluid first, query second
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```text
 1. intrinsic sizing
 2. flex/grid wrapping
@@ -3448,6 +3724,8 @@ Không chọn điểm ngắt (breakpoint) vì tên thiết bị. Chọn tại đ
 ```
 
 ### mẫu thiết kế (design pattern) — Responsive component
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .widget-shell {
@@ -3477,6 +3755,8 @@ Senior approach:
 
 # 56. các truy vấn môi trường (media queries) [CORE]
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 @media (min-width: 768px) {
   .layout {
@@ -3498,6 +3778,8 @@ Có thể:
 ```
 
 ## Media features quan trọng
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 width
@@ -3543,6 +3825,8 @@ Không bắt buộc mọi project phải mobile-first, nhưng thường giúp c�
 
 ## Dark mode
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 @media (prefers-color-scheme: dark) {
   :root {
@@ -3553,6 +3837,8 @@ Không bắt buộc mọi project phải mobile-first, nhưng thường giúp c�
 ```
 
 ## giảm chuyển động (reduced motion)
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -3570,6 +3856,8 @@ Không bắt buộc mọi project phải mobile-first, nhưng thường giúp c�
 Trong production có thể viết targeted hơn thay vì kill toàn bộ motion.
 
 ## Pointer
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 @media (pointer: coarse) {
@@ -3589,6 +3877,8 @@ Trong production có thể viết targeted hơn thay vì kill toàn bộ motion.
 
 ### CSS Idiom — Named container contract
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .panel {
   container: panel / inline-size;
@@ -3596,6 +3886,8 @@ Trong production có thể viết targeted hơn thay vì kill toàn bộ motion.
 ```
 
 ### mẫu lập trình (coding pattern) — Component mode switch
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 @container panel (width < 24rem) {
@@ -3716,6 +4008,8 @@ Container:
 
 # 62. CSS Transforms [CORE]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 transform: translateX(10px);
 transform: translate(10px, 20px);
@@ -3734,6 +4028,8 @@ transform: translateY(-2px) scale(1.02);
 
 ## Individual transform các thuộc tính (properties)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 translate: 10px 0;
 rotate: 5deg;
@@ -3742,12 +4038,16 @@ scale: 1.05;
 
 ## `transform-origin`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 transform-origin: center;
 transform-origin: top left;
 ```
 
 ## 3D
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 perspective: 1000px;
@@ -3764,6 +4064,8 @@ backface-visibility: hidden;
 
 ### CSS Idiom — Animate explicit các thuộc tính (properties)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 transition:
   opacity 150ms ease,
@@ -3771,6 +4073,8 @@ transition:
 ```
 
 ### mẫu lập trình (coding pattern) — trạng thái (state) transition
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .menu {
@@ -3824,6 +4128,8 @@ steps(...)
 
 ### Không nên
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 transition: all .3s;
 ```
@@ -3847,6 +4153,8 @@ transition: opacity 150ms ease, transform 150ms ease;
 
 ### CSS Idiom — Reduced-motion override
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   .decorative-motion {
@@ -3857,6 +4165,8 @@ transition: opacity 150ms ease, transform 150ms ease;
 
 ### mẫu lập trình (coding pattern) — Enter / Open / Leave trạng thái (state)
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 .toast[data-state="entering"] {}
 .toast[data-state="open"] {}
@@ -3864,6 +4174,8 @@ transition: opacity 150ms ease, transform 150ms ease;
 ```
 
 ### mẫu thiết kế (design pattern) — Separate behavior from presentation
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 Application state → data/aria attribute
@@ -3901,6 +4213,8 @@ animation
 
 ## `animation-iteration-count`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 1
 2
@@ -3908,6 +4222,8 @@ infinite
 ```
 
 ## `animation-direction`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 normal
@@ -3918,6 +4234,8 @@ alternate-reverse
 
 ## `animation-fill-mode`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 none
 forwards
@@ -3926,6 +4244,8 @@ both
 ```
 
 ## `animation-play-state`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 running
@@ -3951,6 +4271,8 @@ Nhưng đừng biến "transform always fast" thành luật tuyệt đối; prof
 
 ## `will-change`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .card:hover {
   will-change: transform;
@@ -3962,6 +4284,8 @@ Nhưng đừng biến "transform always fast" thành luật tuyệt đối; prof
 ---
 
 # 66. Scroll Behavior [CORE]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 html {
@@ -4186,6 +4510,8 @@ Rule thực tế: 1–3 levels là đủ trong đa số component.
 
 ### CSS Idiom — Scoped typography
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 @scope (.article) {
   h2 {}
@@ -4230,6 +4556,8 @@ Use case:
 
 # 73. `@supports` — các truy vấn hỗ trợ tính năng (feature queries) [ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 @supports (display: grid) {
   .layout {
@@ -4272,6 +4600,8 @@ cải tiến lũy tiến (progressive enhancement):
 ---
 
 # 74. `@media`, `@container`, `@supports` — khác nhau
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 | At-rule | Hỏi điều gì? | Use case |
 |---|---|---|
@@ -4366,6 +4696,8 @@ Responsive table thường cần wrapper:
 
 ## `appearance`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 input,
 button,
@@ -4387,6 +4719,8 @@ select {
 
 ## `accent-color`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 :root {
   accent-color: var(--brand);
@@ -4401,6 +4735,8 @@ Style native:
 
 ## `caret-color`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 input {
   caret-color: var(--brand);
@@ -4408,6 +4744,8 @@ input {
 ```
 
 ## `resize`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 textarea {
@@ -4451,6 +4789,8 @@ crosshair
 
 ## `pointer-events`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .overlay-decoration {
   pointer-events: none;
@@ -4465,6 +4805,8 @@ các giá trị (values) web UI thường:
 
 ## `user-select`
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .user-select-none {
   user-select: none;
@@ -4476,6 +4818,8 @@ Chỉ dùng khi selection gây hại UX; text content thường nên select đư
 ---
 
 # 79. Generated Content [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 content
@@ -4500,6 +4844,8 @@ Không nhét information quan trọng chỉ trong CSS-generated content.
 # 80. Shapes, Clip & Mask [ADV/MODERN]
 
 ## `clip-path`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .avatar {
@@ -4532,6 +4878,8 @@ Useful cho icons/effects.
 ---
 
 # 81. `isolation`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .component {
@@ -4583,6 +4931,8 @@ text-align: start;
 
 ## [CORE]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 @media
 @supports
@@ -4591,6 +4941,8 @@ text-align: start;
 ```
 
 ## [ADV/MODERN]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 @layer
@@ -4608,6 +4960,8 @@ text-align: start;
 ---
 
 # 85. `@import`
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 @import url("./theme.css");
@@ -4663,6 +5017,8 @@ trong các mức hỗ trợ trình duyệt (browser support) phù hợp.
 
 ### CSS Idiom — One responsibility per layer
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 tokens      → values
 base        → element defaults
@@ -4673,6 +5029,8 @@ utilities   → atomic helpers
 
 ### mẫu lập trình (coding pattern) — Composition over overrides
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```html
 <div class="stack card">...</div>
 ```
@@ -4680,6 +5038,8 @@ utilities   → atomic helpers
 thay vì tạo nhiều component biến thể (variant) chỉ để đổi spacing.
 
 ### mẫu thiết kế (design pattern) — CUBE-like thinking
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 Composition
@@ -4735,6 +5095,8 @@ build output
 
 ## BEM
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .card {}
 .card__title {}
@@ -4752,6 +5114,8 @@ Nhược:
 
 ## ưu tiên tiện ích (utility-first)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```html
 <div class="flex items-center gap-4">
 ```
@@ -4766,6 +5130,8 @@ Nhược:
 - cần convention/tooling.
 
 ## CSS Modules
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .title {}
@@ -4784,6 +5150,8 @@ Có nhiều thời gian chạy (runtime)/build-time approach. Không nên coi đ
 ---
 
 # 90. Recommended Layer kiến trúc (architecture)
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 @layer reset, tokens, base, layout, components, utilities, overrides;
@@ -4809,12 +5177,16 @@ overrides   → rare integration overrides
 
 ### CSS Idiom — mang tính ngữ nghĩa (semantic) alias
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 --gray-700: #374151;
 --color-text-default: var(--gray-700);
 ```
 
 ### mẫu lập trình (coding pattern) — phân cấp token (token hierarchy)
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 Foundation token
@@ -4861,6 +5233,8 @@ Senior distinction:
 
 # 92. Theme kiến trúc (architecture)
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 :root {
   --surface: #fff;
@@ -4888,6 +5262,8 @@ body {
 
 ### CSS Idiom — Attribute-driven trạng thái (state)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .accordion[data-state="open"] {}
 .tabs [aria-selected="true"] {}
@@ -4895,6 +5271,8 @@ body {
 ```
 
 ### mẫu lập trình (coding pattern) — trạng thái (state) matrix
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 variant: primary | secondary | danger
@@ -5018,6 +5396,8 @@ Không blindly copy reset từ internet; hiểu từng line.
 
 ### CSS Idiom — Focus-visible ring
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 :focus-visible {
   outline: 3px solid currentColor;
@@ -5026,6 +5406,8 @@ Không blindly copy reset từ internet; hiểu từng line.
 ```
 
 ### mẫu lập trình (coding pattern) — Accessible hidden text
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .visually-hidden {
@@ -5150,6 +5532,8 @@ Cho content dành cho screen reader nhưng không muốn hiển thị visual:
 
 # 98. màu cưỡng bức (forced colors) / độ tương phản cao (high contrast) [ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 @media (forced-colors: active) {
   .custom-control {
@@ -5167,6 +5551,8 @@ Không assume colors/shadows luôn được render như design.
 ## Pattern notes — hiệu năng (performance)
 
 ### CSS Idiom — Skip off-screen rendering khi phù hợp
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .long-section {
@@ -5276,6 +5662,8 @@ Checklist:
 
 ### mẫu lập trình (coding pattern) — Constraint tracing
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```text
 computed width
 → max/min constraints
@@ -5286,6 +5674,8 @@ computed width
 ```
 
 ### mẫu lập trình (coding pattern) — cơ chế phân tầng (cascade) tracing
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 matched selector?
@@ -5364,6 +5754,8 @@ Test:
 
 # 104. gỡ lỗi (debug) Helpers
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 * {
   outline: 1px solid rgb(255 0 0 / .1);
@@ -5402,6 +5794,8 @@ Fix thường:
 ```
 
 ## Bug 3 — Vertical flex scroll không chạy
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .panel {
@@ -5461,6 +5855,8 @@ khối chứa tham chiếu (containing block) không phải ancestor bạn nghĩ
 
 ## Fluid container
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .container {
   width: min(100% - 2rem, 72rem);
@@ -5469,6 +5865,8 @@ khối chứa tham chiếu (containing block) không phải ancestor bạn nghĩ
 ```
 
 ## Auto-responsive cards
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .cards {
@@ -5480,6 +5878,8 @@ khối chứa tham chiếu (containing block) không phải ancestor bạn nghĩ
 ```
 
 ## Sidebar
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .layout {
@@ -5493,6 +5893,8 @@ khối chứa tham chiếu (containing block) không phải ancestor bạn nghĩ
 
 ## Sticky sidebar
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .sidebar {
   align-self: start;
@@ -5504,6 +5906,8 @@ khối chứa tham chiếu (containing block) không phải ancestor bạn nghĩ
 ---
 
 # 107. Modal Recipe
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .modal-backdrop {
@@ -5595,6 +5999,8 @@ my-component::part(button) {}
 
 # 111. Print CSS [ADV]
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 @media print {
   nav,
@@ -5617,6 +6023,8 @@ my-component::part(button) {}
 
 ## Layout/math
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```text
 calc()
 min()
@@ -5629,6 +6037,8 @@ fit-content()
 
 ## các biến (variables)/environment
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```text
 var()
 env()
@@ -5636,6 +6046,8 @@ attr()
 ```
 
 ## Color
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 rgb()
@@ -5652,6 +6064,8 @@ light-dark()
 
 ## Images
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 linear-gradient()
 radial-gradient()
@@ -5660,6 +6074,8 @@ image-set()
 ```
 
 ## Transform
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 translate()
@@ -5670,6 +6086,8 @@ perspective()
 ```
 
 ## Filters
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 blur()
@@ -5685,6 +6103,8 @@ sepia()
 
 ## Shapes
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 circle()
 ellipse()
@@ -5696,6 +6116,8 @@ path()
 ---
 
 # 113. CSS Global Keywords — phải nhớ
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 inherit
@@ -5714,6 +6136,8 @@ Ngoài ra CSS-wide keyword thường có `initial`, `inherit`, `unset`, `revert`
 Đây chỉ là appendix để tra cứu sau khi đã hiểu mô hình tư duy (mental model) ở các phần trước. Không dùng section này như learning path và không học thuộc thuộc tính (property) theo kiểu danh sách.
 
 ## Layout / Box
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 display
@@ -5742,6 +6166,8 @@ contain-intrinsic-size
 
 ## Position / stacking
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 position
 top
@@ -5754,6 +6180,8 @@ isolation
 ```
 
 ## Flexbox
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 flex
@@ -5774,6 +6202,8 @@ column-gap
 ```
 
 ## Grid
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 grid
@@ -5804,6 +6234,8 @@ gap
 ```
 
 ## Typography
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 font
@@ -5839,6 +6271,8 @@ vertical-align
 
 ## Color / background
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 color
 background
@@ -5855,6 +6289,8 @@ accent-color
 ```
 
 ## Border / visual
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 border
@@ -5877,6 +6313,8 @@ background-blend-mode
 
 ## Images / replaced content
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 object-fit
 object-position
@@ -5885,6 +6323,8 @@ aspect-ratio
 ```
 
 ## Transform / animation
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 transform
@@ -5918,6 +6358,8 @@ will-change
 
 ## Scroll
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 scroll-behavior
 scroll-snap-type
@@ -5932,6 +6374,8 @@ scrollbar-width
 
 ## UI
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 appearance
 cursor
@@ -5943,6 +6387,8 @@ touch-action
 ```
 
 ## danh sách (list) / counters
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 list-style
@@ -5958,6 +6404,8 @@ quotes
 
 ## Table
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 border-collapse
 border-spacing
@@ -5967,6 +6415,8 @@ empty-cells
 ```
 
 ## Columns / fragmentation
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 columns
@@ -5981,6 +6431,8 @@ break-inside
 ```
 
 ## thuộc tính logic (logical properties)
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 inline-size
@@ -6001,6 +6453,8 @@ border-block
 
 ## Writing / direction
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 writing-mode
 direction
@@ -6009,6 +6463,8 @@ text-orientation
 ```
 
 ## Shape / clipping / mask
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```text
 clip-path
@@ -6023,6 +6479,8 @@ mask-repeat
 
 ## Modern component/responsive
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```text
 container
 container-name
@@ -6035,6 +6493,8 @@ view-transition-name
 ---
 
 # 115. bộ chọn (selector) Index cần thành thạo
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```text
 *
@@ -6089,6 +6549,8 @@ A ~ B
 
 # 116. At-rule Index cần thành thạo
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 @media
 @supports
@@ -6111,6 +6573,8 @@ A ~ B
 
 ## Correctness
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 - bộ chọn (selector) có quá rộng không?
 - Có dựa vào DOM lồng cú pháp (nesting) fragile không?
 - Có độ đặc hiệu (specificity) escalation không?
@@ -6120,6 +6584,8 @@ A ~ B
 - Loading trạng thái (state)/empty trạng thái (state)/error trạng thái (state) ổn không?
 
 ## Responsive
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 - 320px-ish narrow layout?
 - Tablet?
@@ -6131,6 +6597,8 @@ A ~ B
 
 ## khả năng tiếp cận (accessibility)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 - focus visible?
 - keyboard?
 - giảm chuyển động (reduced motion)?
@@ -6140,6 +6608,8 @@ A ~ B
 
 ## hiệu năng (performance)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 - animation thuộc tính (property) hợp lý?
 - có giant shadow/filter/backdrop blur trên vùng lớn?
 - unused CSS?
@@ -6147,6 +6617,8 @@ A ~ B
 - image dimensions reserved?
 
 ## kiến trúc (architecture)
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 - dùng token thay hard-code khi mang tính ngữ nghĩa (semantic)?
 - component trạng thái (state) API rõ?
@@ -6172,6 +6644,8 @@ Hãy sửa cơ chế phân tầng (cascade) kiến trúc (architecture).
 
 ## 2. Magic z-index
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 z-index: 999999999;
 ```
@@ -6179,6 +6653,8 @@ z-index: 999999999;
 Không sửa được ngữ cảnh xếp chồng (stacking context) cha.
 
 ## 3. Fixed pixel everything
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 width: 1200px;
@@ -6188,6 +6664,8 @@ height: 600px;
 Dễ phá responsive/zoom/content.
 
 ## 4. DOM-coupled bộ chọn (selector)
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 main > div > div:nth-child(2) span {}
@@ -6201,6 +6679,8 @@ Animate unintended changes.
 
 ## 6. Remove focus outline
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 outline: none;
 ```
@@ -6212,6 +6692,8 @@ mà không replacement.
 Dùng Grid/Flex trước.
 
 ## 8. truy vấn môi trường (media query) theo device names
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 @media (...) /* iPhone 14 */
@@ -6502,6 +6984,8 @@ Nếu chưa giải thích được các câu này, hãy quay lại phần tươn
 
 # 123. Tài liệu tham khảo chuẩn nên bookmark
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 - MDN CSS Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 - MDN CSS Guides: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides
 - web.dev Learn CSS: https://web.dev/learn/css/
@@ -6513,6 +6997,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ---
 
 # 124. Appendix — syntax recap cực ngắn
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 /* Reset */
@@ -6606,6 +7092,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.1 Fluid centered container
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .container {
   width: min(100% - 2rem, 72rem);
@@ -6614,6 +7102,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.2 Stack
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .stack {
@@ -6624,6 +7114,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.3 Cluster
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .cluster {
@@ -6636,6 +7128,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.4 Center
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .center {
   display: grid;
@@ -6644,6 +7138,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.5 Cover vùng nhìn (viewport)
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .cover {
@@ -6654,6 +7150,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.6 Sidebar
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .with-sidebar {
@@ -6667,6 +7165,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.7 Auto grid
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .auto-grid {
   display: grid;
@@ -6678,6 +7178,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.8 Media object
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .media {
   display: grid;
@@ -6688,6 +7190,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.9 Push action right
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .actions {
   margin-inline-start: auto;
@@ -6696,6 +7200,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.10 Safe flex text
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .flex-child {
   min-width: 0;
@@ -6703,6 +7209,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.11 Safe vertical flex scroll
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .panel {
@@ -6719,6 +7227,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.12 Single-line truncate
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .truncate {
   min-width: 0;
@@ -6729,6 +7239,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.13 Ratio media
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```css
 .media-frame {
@@ -6745,6 +7257,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.14 Sticky region
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .sticky {
   position: sticky;
@@ -6754,6 +7268,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.15 Local overlay
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .wrapper {
@@ -6768,6 +7284,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.16 Modal shell
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .modal-shell {
   position: fixed;
@@ -6780,6 +7298,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.17 Intrinsic button
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .button {
   inline-size: fit-content;
@@ -6790,6 +7310,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.18 Fluid font
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .title {
   font-size: clamp(1.75rem, 1rem + 3vw, 4rem);
@@ -6797,6 +7319,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.19 Readable prose
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 .prose {
@@ -6807,6 +7331,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.20 Theme token consumption
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .component {
   background: var(--surface);
@@ -6816,17 +7342,23 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 
 ## 125.21 trạng thái (state) via data attribute
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .panel[data-state="open"] {}
 ```
 
 ## 125.22 mang tính ngữ nghĩa (semantic) trạng thái (state) via ARIA
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```css
 .tab[aria-selected="true"] {}
 ```
 
 ## 125.23 Focus ring
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 :focus-visible {
@@ -6836,6 +7368,8 @@ Khi dùng feature hiện đại, luôn kiểm tra **browser targets của projec
 ```
 
 ## 125.24 giảm chuyển động (reduced motion)
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -6893,6 +7427,8 @@ CSS → presentation
 
 ## 126.3 Slot Pattern
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```html
 <div class="card">
   <div data-slot="header">...</div>
@@ -6908,6 +7444,8 @@ Useful khi muốn expose mang tính ngữ nghĩa (semantic) component slots.
 
 ## 126.4 biến thể (variant) Pattern
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 .button[data-variant="primary"] {}
 .button[data-variant="secondary"] {}
@@ -6916,6 +7454,8 @@ Useful khi muốn expose mang tính ngữ nghĩa (semantic) component slots.
 
 ## 126.5 Size biến thể (variant) Pattern
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 .button[data-size="sm"] {}
 .button[data-size="md"] {}
@@ -6923,6 +7463,8 @@ Useful khi muốn expose mang tính ngữ nghĩa (semantic) component slots.
 ```
 
 ## 126.6 Token Override Pattern
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .button {
@@ -6939,6 +7481,8 @@ Override token thường ổn hơn override nhiều internals.
 
 ## 126.7 Layout Wrapper Pattern
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```html
 <section class="section">
   <div class="container">
@@ -6952,6 +7496,8 @@ Responsibility:
 - `container`: horizontal constraint.
 
 ## 126.8 cải tiến lũy tiến (progressive enhancement) Pattern
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .card {
@@ -6967,6 +7513,8 @@ Responsibility:
 
 ## 126.9 Container-responsive mẫu thành phần (component pattern)
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```css
 .component-shell {
   container-type: inline-size;
@@ -6980,6 +7528,8 @@ Responsibility:
 ```
 
 ## 126.10 trạng thái (state) + Transition Pattern
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```css
 .popover {
@@ -7009,6 +7559,8 @@ Không expose internal DOM depth như API.
 
 ## 127.1 Layered cơ chế phân tầng (cascade) Pattern
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```text
 reset
 tokens
@@ -7022,6 +7574,8 @@ overrides
 Implement tốt bằng `@layer`.
 
 ## 127.2 phân cấp token (token hierarchy) Pattern
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 Foundation
@@ -7085,6 +7639,8 @@ Không duplicate thành `.special-card-special`.
 
 ## 127.6 Theme-by-contract Pattern
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```css
 [data-theme="dark"] {
   --surface-default: #111;
@@ -7096,6 +7652,8 @@ Components consume mang tính ngữ nghĩa (semantic) tokens.
 
 ## 127.7 quyền sở hữu hành vi đáp ứng (responsive ownership) Pattern
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```text
 Page-level layout        → @media
 Component-level layout   → @container
@@ -7104,6 +7662,8 @@ Feature availability     → @supports
 ```
 
 ## 127.8 Overlay Ownership Pattern
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 local decoration → absolute
@@ -7151,6 +7711,8 @@ CSS hiện đại (`min`, `max`, `clamp`, Grid, truy vấn vùng chứa (contain
 
 ## Ellipsis
 
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
 ```text
 min-width: 0
 + overflow: hidden
@@ -7159,6 +7721,8 @@ min-width: 0
 ```
 
 ## Responsive image
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
 
 ```text
 width/max-width
@@ -7169,6 +7733,8 @@ width/max-width
 
 ## Sticky
 
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
 ```text
 position: sticky
 + top/inset
@@ -7178,6 +7744,8 @@ position: sticky
 
 ## Absolute overlay
 
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
 ```text
 parent position:relative
 + child position:absolute
@@ -7186,6 +7754,8 @@ parent position:relative
 ```
 
 ## Modal
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
 
 ```text
 fixed/top-layer
@@ -7197,6 +7767,8 @@ fixed/top-layer
 
 ## Flexible text row
 
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
 ```text
 display:flex/grid
 + minmax(0,1fr) hoặc min-width:0
@@ -7204,6 +7776,8 @@ display:flex/grid
 ```
 
 ## Accessible interactive control
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
 
 ```text
 minimum target size
@@ -7216,6 +7790,8 @@ minimum target size
 
 ## Theme
 
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
 ```text
 custom properties
 + semantic tokens
@@ -7225,6 +7801,8 @@ custom properties
 
 ## Animation
 
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
 ```text
 state attribute
 + transform/opacity
@@ -7233,6 +7811,8 @@ state attribute
 ```
 
 ## Component responsive
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
 
 ```text
 container-type

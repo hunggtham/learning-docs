@@ -371,6 +371,8 @@ loop();
 Một chain microtasks không kết thúc có thể **starve** browser khỏi cơ hội xử lý task khác hoặc render. Vì vậy “microtask chạy sớm hơn” không có nghĩa “microtask luôn tốt hơn”.
 
 ### `await` nằm ở đâu?
+Phần này nối mạch bài học với “`await` nằm ở đâu?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function run() {
@@ -920,6 +922,8 @@ OS / native WebView container
 Điều này đặc biệt quan trọng với hybrid app. Chrome desktop mới nhất support một Web API không có nghĩa Android WebView mà app đang ship cũng support. Và iOS WKWebView version bị gắn với hệ điều hành/engine distribution khác Chrome.
 
 ### Compatibility matrix nên là project artifact
+Phần này nối mạch bài học với “Compatibility matrix nên là project artifact”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 feature
@@ -973,6 +977,8 @@ Source maps là production observability tool: chúng map generated/minified sta
 Enterprise systems thường chứa nhiều thế hệ JavaScript cùng lúc. Senior developer không nên nhìn legacy syntax rồi kết luận “code xấu” trước khi hiểu runtime/tooling constraints lúc nó được viết.
 
 ## IIFE thay module scope
+Phần này nối mạch bài học với “IIFE thay module scope”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 (function () {
@@ -1417,6 +1423,8 @@ Mục tiêu không phải ghi nhớ như trivia. Khi gặp một behavior lạ, 
 ---
 
 # 34. Coverage matrix sau audit
+Phần này nối mạch bài học với “34. Coverage matrix sau audit”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | Nhóm kiến thức | Canonical level chính | Trạng thái sau audit |
 | --- | --- | --- |

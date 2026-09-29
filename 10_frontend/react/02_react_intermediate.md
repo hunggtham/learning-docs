@@ -69,6 +69,8 @@ Không truyền dependency array nghĩa Effect có thể chạy sau mỗi commit
 Trước Hooks, lifecycle methods là cách chính để chạy logic theo các giai đoạn của Class Component. Khi bảo trì code cũ, đừng chỉ nhớ tên method; cần hiểu method thuộc render phase hay commit phase và vì sao một số lifecycle bị đánh dấu `UNSAFE_`.
 
 ### Mount lifecycle
+Phần này nối mạch bài học với “Mount lifecycle”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class ChatRoom extends React.Component {
@@ -122,6 +124,8 @@ useEffect(() => {
 Đây là lý do không nên nghĩ `useEffect(..., [])` đơn giản là bản thay thế `componentDidMount`.
 
 ### Update lifecycle: `componentDidUpdate`
+Phần này nối mạch bài học với “Update lifecycle: `componentDidUpdate`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 componentDidUpdate(prevProps) {
@@ -144,6 +148,8 @@ componentDidUpdate(prevProps) {
 Class developer phải tự so sánh previous/current props. Effect dependency hiện đại biểu đạt intent đồng bộ theo `roomId` trực tiếp hơn.
 
 ### `shouldComponentUpdate`
+Phần này nối mạch bài học với “`shouldComponentUpdate`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 shouldComponentUpdate(
@@ -199,6 +205,8 @@ componentDidUpdate(
 Không có Hook một-một hoàn toàn tương đương mọi chi tiết lifecycle này. Tùy mục tiêu có thể dùng `useLayoutEffect`, refs hoặc thay đổi data model.
 
 ### `static getDerivedStateFromProps`
+Phần này nối mạch bài học với “`static getDerivedStateFromProps`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 static getDerivedStateFromProps(
@@ -368,6 +376,8 @@ function start() {
 Ref phù hợp với timer ID, DOM node, instance thư viện, observer, mutable technical value. Không dùng ref thay state nếu UI cần phản ánh giá trị đó.
 
 ## 7. DOM ref và imperative escape hatch
+Phần này nối mạch bài học với “7. DOM ref và imperative escape hatch”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function SearchBox() {
@@ -417,6 +427,8 @@ Không xóa `forwardRef` tùy tiện trong library hỗ trợ React 18.
 Refs thay đổi nhiều qua lịch sử React.
 
 ### String refs — legacy và đã bị remove
+Phần này nối mạch bài học với “String refs — legacy và đã bị remove”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class Search extends React.Component {
@@ -433,6 +445,8 @@ class Search extends React.Component {
 React lưu node vào `this.refs.input`. String refs có hạn chế về owner, static analysis và composition; bị deprecate từ React 16.3 và remove trong React 19.
 
 ### Callback refs
+Phần này nối mạch bài học với “Callback refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class Search extends React.Component {
@@ -455,6 +469,8 @@ class Search extends React.Component {
 Callback refs vẫn là API hợp lệ và rất linh hoạt.
 
 ### `React.createRef` — React 16.3+
+Phần này nối mạch bài học với “`React.createRef` — React 16.3+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class Search extends React.Component {
@@ -475,6 +491,8 @@ class Search extends React.Component {
 `createRef` thường dùng cho Class Component; mỗi lần gọi tạo object mới nên thường khởi tạo một lần.
 
 ### `useRef` — React 16.8+
+Phần này nối mạch bài học với “`useRef` — React 16.8+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function Search() {
@@ -493,6 +511,8 @@ function Search() {
 ```
 
 ### `forwardRef` — React 16.3+
+Phần này nối mạch bài học với “`forwardRef` — React 16.3+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const MyInput = forwardRef(
@@ -838,6 +858,8 @@ const OnlineUser =
 HOC từng rất phổ biến trong Redux, routing và analytics. Nhược điểm thường gặp là wrapper hell, prop collision và dependency khó truy vết.
 
 ### Render Props
+Phần này nối mạch bài học với “Render Props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <MousePosition>
@@ -853,6 +875,8 @@ HOC từng rất phổ biến trong Redux, routing và analytics. Nhược đi�
 Component sở hữu logic nhưng giao quyền render cho consumer qua function prop.
 
 ### Custom Hook thay đổi điều gì?
+Phần này nối mạch bài học với “Custom Hook thay đổi điều gì?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function Tooltip() {
@@ -948,6 +972,8 @@ useLayoutEffect(() => {
 Chỉ dùng khi thật sự cần measurement hoặc tránh visual flicker. Nó có thể block paint; `useEffect` vẫn là mặc định.
 
 ## 16. Portals
+Phần này nối mạch bài học với “16. Portals”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 import { createPortal } from "react-dom";
@@ -991,6 +1017,8 @@ class ErrorBoundary extends React.Component {
 Error Boundary không thay `try/catch` cho event handler hoặc async operation tự gọi.
 
 ## 18. `lazy` và Suspense cơ bản
+Phần này nối mạch bài học với “18. `lazy` và Suspense cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 import { lazy, Suspense } from "react";
@@ -1170,6 +1198,8 @@ src/
 Không đưa code vào `shared` quá sớm. Generalize sau khi nhu cầu tái sử dụng thật sự xuất hiện.
 
 ## 25. Kiến trúc feature điển hình
+Phần này nối mạch bài học với “25. Kiến trúc feature điển hình”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 UI component

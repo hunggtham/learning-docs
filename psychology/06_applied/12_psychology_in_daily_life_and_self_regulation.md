@@ -246,6 +246,8 @@ Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading
 
 ## 23. Chọn strategy theo mechanism
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 | Mechanism chính | Nhóm strategy có thể phù hợp | Boundary |
 |---|---|---|
 | interpretation biased | reappraisal / behavioral test | không phủ nhận objective harm |

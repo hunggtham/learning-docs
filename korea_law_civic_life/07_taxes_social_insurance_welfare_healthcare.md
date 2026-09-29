@@ -143,6 +143,8 @@ Trong trường hợp cấp cứu, 119 là số cứu hỏa/cấp cứu. Đây k
 
 ## 10. Workflow kiểm tra bảng lương
 
+Bảng lương là nơi nhiều hệ thống cùng xuất hiện: thuế, bảo hiểm, khấu trừ và tiền thực nhận. Workflow này giúp tách từng dòng, nối nó với căn cứ và phát hiện sai lệch trước khi liên hệ cơ quan.
+
 ```text
 급여명세서
 → tổng gross
@@ -157,6 +159,8 @@ Trong trường hợp cấp cứu, 119 là số cứu hỏa/cấp cứu. Đây k
 Nếu một khoản không rõ, hỏi HR tên chính xác bằng tiếng Hàn rồi kiểm tra cơ quan phụ trách.
 
 ## 11. Nguồn chính thức
+
+Các cổng dưới đây dùng cho thuế, bảo hiểm, phúc lợi và y tế; mỗi cổng có phạm vi dữ liệu khác nhau. Hãy bắt đầu từ loại khoản mục đang kiểm tra rồi chọn đúng cơ quan thay vì gửi cùng một câu hỏi cho mọi nơi.
 
 - 국세청: https://www.nts.go.kr/
 - 홈택스: https://www.hometax.go.kr/

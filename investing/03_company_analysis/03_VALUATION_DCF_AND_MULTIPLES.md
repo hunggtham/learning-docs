@@ -4,6 +4,8 @@
 
 ## 1. Giá thị trường và giá trị nội tại
 
+Trước khi mở bảng tính, cần phân biệt hai câu hỏi: thị trường đang trả giá bao nhiêu và lợi ích kinh tế tương lai có thể đáng giá bao nhiêu. Khoảng cách giữa hai câu hỏi là nơi định giá tạo ra giả thuyết, không phải một đáp án chắc chắn.
+
 **Giá thị trường (market price)** là mức giá đang được giao dịch. **Giá trị nội tại (intrinsic value)** là giá trị hiện tại ước tính của những lợi ích kinh tế mà người sở hữu tài sản có thể nhận được trong tương lai.
 
 Hai con số này có thể khác nhau vì giá thị trường còn chịu ảnh hưởng của kỳ vọng, thanh khoản, dòng tiền giao dịch, tâm lý và mức bù rủi ro. Ngược lại, giá trị nội tại cũng không phải con số chắc chắn vì dòng tiền tương lai luôn chứa bất định.
@@ -73,6 +75,8 @@ Do đó không nên chỉ cộng lạm phát vào tăng trưởng doanh thu rồ
 
 ## 6. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
+Sau khi hiểu giá trị hiện tại và kỳ vọng, ta cần xác định giá trị đó thuộc về ai trong cấu trúc vốn. EV nhìn toàn bộ hoạt động dành cho các bên cung cấp vốn; Equity Value là phần còn lại của cổ đông thường sau các điều chỉnh ưu tiên.
+
 **Giá trị doanh nghiệp (Enterprise Value, EV)** phản ánh giá trị hoạt động kinh doanh dành cho các bên cung cấp vốn. **Giá trị vốn chủ sở hữu (Equity Value)** là phần thuộc cổ đông thường sau khi điều chỉnh các nghĩa vụ ưu tiên hơn.
 
 Một cầu nối đơn giản:
@@ -109,6 +113,8 @@ Tài sản đầu tư ngoài hoạt động
 ```
 
 ## 8. Dòng tiền tự do cho doanh nghiệp — FCFF
+
+FCFF là cầu nối từ hoạt động kinh doanh tới giá trị dành cho cả chủ nợ và cổ đông. Hãy đọc công thức theo thứ tự EBIT sau thuế → tái đầu tư → thay đổi vốn lưu động, rồi kiểm tra xem từng biến có driver vận hành hay không.
 
 ```text
 FCFF = EBIT(1-T) + D&A - Capex - ΔNWC
@@ -327,6 +333,8 @@ Nên đối chiếu phương pháp Gordon với bội số thoát (exit multiple
 
 ## 26. WACC
 
+WACC gom chi phí của các nguồn vốn theo cơ cấu vốn bền vững. Nó chỉ có ý nghĩa khi nhất quán với tiền tệ, lạm phát, đòn bẩy và rủi ro kinh doanh của dòng tiền được chiết khấu.
+
 ```text
 WACC
 = w_e × Cost of Equity
@@ -458,6 +466,8 @@ Sau đó mới chuyển các cơ chế này thành doanh thu, biên lợi nhuậ
 
 ## 35. Định giá theo xác suất
 
+Khi một doanh nghiệp có nhiều đường đi hợp lý, không nên ép tất cả vào một forecast duy nhất. Định giá theo xác suất buộc người phân tích nói rõ khả năng, giá trị và mức thiệt hại của từng kịch bản.
+
 ```text
 Expected Value = Σ p_i × Value_i
 ```
@@ -473,6 +483,8 @@ Monte Carlo lấy mẫu nhiều biến không chắc chắn từ các phân ph�
 Nó hữu ích để hình dung độ bất định, nhưng không tự biến một mô hình yếu thành mô hình tốt. Nếu phân phối đầu vào được đoán sai, đầu ra chỉ tạo cảm giác chính xác giả.
 
 ## 37. Reverse DCF
+
+Sau khi xây DCF xuôi, ta đảo chiều từ giá thị trường để đọc kỳ vọng đang được nhúng trong giá. Cách này hữu ích vì nó biến câu hỏi “giá đúng là bao nhiêu?” thành “thị trường đang yêu cầu doanh nghiệp đạt điều gì?”.
 
 **DCF ngược (reverse DCF)** bắt đầu từ giá hiện tại rồi giải xem thị trường đang cần những giả định nào để mức giá đó hợp lý.
 
@@ -515,6 +527,8 @@ P/E kết hợp nhiều yếu tố:
 P/E thấp có thể phản ánh đỉnh lợi nhuận chu kỳ hoặc rủi ro cao. P/E cao có thể hợp lý nếu ROIC và tăng trưởng cao có thể duy trì lâu.
 
 ## 40. PEG
+
+PEG là phép tham khảo nhanh nối P/E với tốc độ tăng trưởng, nhưng không thể thay thế chất lượng tăng trưởng, ROIC, rủi ro và thời gian duy trì. Hãy dùng nó để mở câu hỏi, không dùng làm kết luận.
 
 ```text
 PEG = P/E / Growth
@@ -570,6 +584,8 @@ Nếu ROE thấp hơn chi phí vốn kéo dài, chiết khấu P/B có thể h�
 
 ## 45. FCF Yield
 
+FCF yield đặt dòng tiền tự do cạnh giá trị vốn chủ sở hữu hoặc EV. Trước khi so sánh, phải chuẩn hóa FCF và loại các khoản giải phóng vốn lưu động hoặc cắt capex chỉ xảy ra một lần.
+
 ```text
 FCF Yield = FCF / Equity Value
 ```
@@ -615,6 +631,8 @@ Khoảng bội số lịch sử là dữ liệu tham khảo, không phải luậ
 Lãi suất, mức trưởng thành, lợi thế cạnh tranh và cơ cấu ngành có thể thay đổi. Một doanh nghiệp suy yếu về moat có thể xứng đáng bội số thấp hơn quá khứ dù P/E hiện tại đã dưới trung bình 10 năm.
 
 ## 49. Định giá từng phần — SOTP
+
+SOTP phù hợp khi doanh nghiệp có các mảng với economics và bội số khác nhau. Bài toán không dừng ở cộng giá trị từng mảng; phải điều chỉnh nợ, thuế, chi phí tập đoàn, minority interest và chiết khấu holding.
 
 **Tổng giá trị từng phần (sum-of-the-parts, SOTP)** định giá từng mảng rồi điều chỉnh:
 
@@ -762,6 +780,8 @@ Một cổ phiếu “rẻ” có thể tiếp tục rẻ nếu:
 Do đó mức bội số thấp không phải luận điểm đầu tư tự thân.
 
 ## 61. Biên an toàn
+
+Biên an toàn là phần đệm cho sai số mô hình và rủi ro thực thi, không chỉ là khoảng cách số học giữa giá trị nội tại và giá thị trường. Mô hình càng nhạy và dòng tiền càng khó dự báo thì phần đệm cần càng lớn.
 
 **Biên an toàn (margin of safety)** không chỉ là lấy giá trị nội tại trừ giá thị trường.
 

@@ -142,6 +142,8 @@ Cách tốt nhất để model Likert data, tiêu chuẩn fit tối ưu, mức i
 
 ## 16. Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → cách áp dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi nội dung chapter.
+
 ```text
 Construct
    ↓
@@ -165,6 +167,8 @@ Statistical sophistication ở phần giữa không thể cứu một construct 
 Đọc tiếp [[05_psychometrics_and_test_interpretation]], [[09_replication_meta_analysis_and_bayesian_reasoning]], [[02_research_methods]], [[06_open_science_and_evidence_evaluation]] và [[08_causal_inference_and_psychological_evidence]].
 
 ### Nguồn định hướng
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - *Standards for Educational and Psychological Testing* (AERA, APA, NCME): validity được hiểu là evidence và theory hỗ trợ interpretation score cho proposed use.
 - Các guideline hiện đại về phát triển thang đo tâm lý nhấn mạnh construct definition, content coverage, structural evidence, reliability, validity và cross-group evaluation thay vì chỉ báo Cronbach's alpha.

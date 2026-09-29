@@ -15,6 +15,8 @@ Môi trường chạy thực tế có thể tối ưu bằng **phân tích thoá
 
 ## 2. C: con trỏ và địa chỉ bộ nhớ
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 int *a = malloc(100 * sizeof(int));
 if (!a) return 1;
@@ -31,6 +33,8 @@ C cho quyền kiểm soát cách biểu diễn rất trực tiếp, nhưng đổ
 
 ## 3. Quyền sở hữu trong cấu trúc liên kết bằng C
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 struct Node {
     int value;
@@ -43,6 +47,8 @@ Nếu mỗi nút được `malloc` riêng, khi hủy danh sách ta phải lưu `
 Do đó API C nên ghi rõ ai sở hữu vùng nhớ và ai chịu trách nhiệm giải phóng. Hợp đồng quyền sở hữu là một phần của tính đúng đắn, không phải chi tiết phụ của thuật toán.
 
 ## 4. Bí danh bộ nhớ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 int x = 10;
@@ -57,6 +63,8 @@ printf("%d", *p); // 20
 Aliasing làm việc suy luận khó hơn vì một hàm có thể thay đổi vùng nhớ mà nơi gọi vẫn giữ tham chiếu tới đó. Trong cấu trúc dữ liệu, chia sẻ nút giữa nhiều cấu trúc mà không có mô hình quyền sở hữu rõ ràng dễ gây lỗi thay đổi ngoài ý muốn hoặc giải phóng hai lần.
 
 ## 5. Cấp phát liên tiếp trong C
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 int *a = malloc(n * sizeof *a);
@@ -90,6 +98,8 @@ Không nên tối ưu vi mô khi chưa cần, nhưng khi đánh giá bộ nhớ 
 
 ## 7. Java: tham chiếu và thu gom rác
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 Node a = new Node(10);
 Node b = a;
@@ -104,6 +114,8 @@ Bộ thu gom rác (Garbage Collector – GC) có thể thu hồi đối tượng
 GC loại bỏ nhiều lỗi use-after-free và double-free, nhưng quản lý bộ nhớ không trở thành miễn phí. Cấp phát, đánh dấu, sao chép, nén heap và các khoảng dừng GC đều có chi phí.
 
 ## 8. Java vẫn có rò rỉ bộ nhớ ở cấp logic
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```java
 static final Map<String, Object> CACHE = new HashMap<>();
@@ -136,6 +148,8 @@ right[]
 có thể có tính cục bộ tốt hơn cách mỗi nút là một object độc lập. Đây là một ví dụ của **thiết kế hướng dữ liệu (data-oriented design)**: cách bố trí được chọn theo mẫu truy cập thay vì chỉ theo mô hình object.
 
 ## 11. JavaScript và định danh đối tượng
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```js
 const a = { value: 10 };
@@ -244,6 +258,8 @@ C truyền giá trị con trỏ. Java luôn truyền tham số theo giá trị; 
 Vì vậy, cách nói “pass by reference” dễ gây hiểu sai nếu không phân biệt cơ chế truyền tham số với việc nhiều biến cùng truy cập một object.
 
 ## 20. Sao chép nông và sao chép sâu
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```js
 const a = [{ x: 1 }];

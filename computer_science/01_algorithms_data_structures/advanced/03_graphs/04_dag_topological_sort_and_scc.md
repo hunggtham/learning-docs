@@ -46,6 +46,8 @@ Kahn's thuật toán:
 
 ### JavaScript cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```js
 function topoSort(n, g) {
   const indeg = Array(n).fill(0);
@@ -293,6 +295,8 @@ Trong Tarjan SCC, giá trị low-link biểu diễn chỉ số khám phá nhỏ 
 Không nên copy công thức giữa hai các thuật toán mà không hiểu bất biến (invariant).
 
 ## Java skeleton cho Tarjan SCC
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```java
 int timer = 0;

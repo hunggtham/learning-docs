@@ -38,6 +38,8 @@ Vì vậy câu “LinkedList chèn O(1)” chỉ đúng khi đã có vị trí n
 
 ## ArrayDeque cho stack, queue và deque
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```java
 Deque<Integer> dq = new ArrayDeque<>();
 dq.push(10);
@@ -135,6 +137,8 @@ Không sửa trường dùng để so sánh của object đang nằm trong queue
 
 ## Mảng primitive thường tốt hơn collection đóng hộp trong DSA
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```java
 int[] parent;
 long[] dist;
@@ -175,6 +179,8 @@ record Cell(int r, int c, int mask) {}
 Tuy nhiên, record chỉ làm các reference thành phần không thể được gán lại. Nếu thành phần là một `List` có thể thay đổi thì nội dung bên trong vẫn mutable. Khóa băm cần mức bất biến đủ sâu để `equals/hashCode` không thay đổi trong thời gian khóa nằm trong map.
 
 ## computeIfAbsent, merge và miền khóa
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```java
 Map<String, List<String>> g = new HashMap<>();
@@ -340,6 +346,8 @@ Collection chuẩn của JDK chủ yếu là mutable. Cấu trúc immutable/pers
 Persistent tree có thể sao chép chỉ đường cập nhật rồi chia sẻ các nhánh không đổi. Đổi lại, nó tạo thêm object và có mô hình chi phí khác collection mutable.
 
 ## Bảng chọn nhanh
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 | Nhu cầu | Lựa chọn thường phù hợp |
 |---|---|

@@ -391,6 +391,8 @@ Không nên chỉ đo CPU throughput mà bỏ qua state growth và recovery cost
 
 ## 24. Kiến trúc khái niệm
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Event Stream
    ↓

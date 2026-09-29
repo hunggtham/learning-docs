@@ -6,6 +6,8 @@ Library này được tổ chức theo **conceptual dependency** thay vì Beginn
 
 ## Reading Graph
 
+Đồ thị đọc này cho biết AI đi từ biểu diễn và tối ưu tới mô hình, dữ liệu, hệ thống và an toàn. Hãy dùng nó để nhận ra chapter hiện tại đang dựa trên lớp nào và kết quả của nó được dùng ở đâu.
+
 ```mermaid
 flowchart TD
     F[00 Foundations] --> M[01 Mathematics]
@@ -35,6 +37,8 @@ flowchart TD
 
 ## Mental model xuyên suốt
 
+Sau bản đồ dependency, phần này nén toàn bộ layer thành một chuỗi suy luận. Mục tiêu là nối dữ liệu, objective, model, evaluation và deployment thành một vòng lặp thay vì học từng thuật toán riêng lẻ.
+
 ```text
 Environment / Problem
         ↓
@@ -56,6 +60,8 @@ Feedback
 Modern AI application thường thêm external retrieval, tools, memory, verification và observability quanh model. Vì vậy library phân biệt rõ **model** và **system**.
 
 ## Current Structure
+
+Cấu trúc hiện tại đi từ foundations và mathematics tới model, retrieval, agents, engineering, operations và safety. Mỗi layer kế thừa assumption của layer trước, nên hãy kiểm tra dependency trước khi nhảy vào một công cụ cụ thể.
 
 ```text
 02_artificial_intelligence/
@@ -84,6 +90,8 @@ Modern AI application thường thêm external retrieval, tools, memory, verific
 ```
 
 ## Những distinction quan trọng
+
+Các phân biệt dưới đây ngăn những từ gần nhau bị dùng lẫn: model với system, retrieval với reasoning, automation với agency và benchmark với reliability. Đọc từng cặp như một ranh giới thiết kế có hệ quả thực tế.
 
 ```text
 AI                  ≠ Machine Learning

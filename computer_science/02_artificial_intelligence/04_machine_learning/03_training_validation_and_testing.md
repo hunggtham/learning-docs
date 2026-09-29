@@ -479,6 +479,8 @@ But repeated API submissions still leak information through scores. Limit submis
 
 ## Evaluation-driven development loop
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart LR
     P[Problem] --> T[Train]
@@ -495,6 +497,8 @@ flowchart LR
 The test is not the everyday feedback loop; validation is.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Train      = learn parameters

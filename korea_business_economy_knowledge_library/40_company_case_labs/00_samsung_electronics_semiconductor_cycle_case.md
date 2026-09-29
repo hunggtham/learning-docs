@@ -250,6 +250,8 @@ Một bài tập đơn giản:
 
 ### Kịch bản xấu
 
+Kịch bản xấu kiểm tra điều gì xảy ra khi nhu cầu, ASP và công suất cùng đảo chiều. Hãy dùng nó để stress-test doanh thu, biên lợi nhuận, capex và bảng cân đối thay vì chỉ giảm một hệ số định giá.
+
 ```text
 ASP bộ nhớ giảm mạnh
 + tỷ lệ sử dụng công suất giảm
@@ -262,6 +264,8 @@ ASP bộ nhớ giảm mạnh
 
 ### Kịch bản cơ sở
 
+Kịch bản cơ sở là mốc xác suất trung tâm để so sánh dữ liệu mới. Nó cần nối nhu cầu, tồn kho, mix sản phẩm và capex với lợi nhuận chuẩn hóa.
+
 ```text
 ASP ổn định
 + lượng bit tăng vừa phải
@@ -271,6 +275,8 @@ ASP ổn định
 ```
 
 ### Kịch bản tốt
+
+Kịch bản tốt chỉ có ý nghĩa khi có driver cụ thể làm kết quả vượt cơ sở, chẳng hạn HBM, thị phần hoặc giá bán cải thiện. Hãy ghi rõ bằng chứng nào có thể xác nhận nó.
 
 ```text
 Nhu cầu AI mạnh

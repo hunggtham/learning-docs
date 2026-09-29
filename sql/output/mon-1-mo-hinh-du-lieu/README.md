@@ -2,6 +2,10 @@
 
 Nên học theo thứ tự từ mô hình hóa cơ bản đến chuẩn hóa và các khái niệm SQL biểu diễn trong mô hình.
 
+## Mạch bài giảng
+
+Mỗi bài mở bằng mục đích và câu hỏi cần giải quyết, đi qua các section nguồn bằng câu nối, rồi chốt quan hệ giữa đầu vào, điều kiện xử lý và kết quả trước khi bàn giao sang bài kế tiếp.
+
 ## Danh sách bài học
 
 1. [Nền tảng mô hình hóa dữ liệu](01-nen-tang-mo-hinh-du-lieu.md) — Khái niệm, mục tiêu, đặc điểm, góc nhìn, ba cấp độ và tính độc lập dữ liệu.

@@ -8,6 +8,8 @@
 
 # 1. Navigation — Di chuyển trong server
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `pwd` | In ra **absolute path** của working directory hiện tại. Dùng để xác nhận mình đang đứng ở đâu trước khi copy/xoá/chỉnh file. | `pwd` | Trước `rm -rf`, `chmod -R`, `chown -R` nên chạy `pwd && ls -la` để tránh thao tác nhầm thư mục production. |
@@ -30,6 +32,8 @@
 ---
 
 # 2. File & Folder — Tạo / xoá / copy / move
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -60,6 +64,8 @@
 
 # 3. Xem nội dung file
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `cat file` | In toàn bộ nội dung file ra stdout. Phù hợp file nhỏ. | `cat application.yml` | Tránh `cat` file log vài GB vì terminal sẽ bị flood. |
@@ -79,6 +85,8 @@
 ---
 
 # 4. Edit file — vi / vim / nano
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Command / Key | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -109,6 +117,8 @@
 
 # 5. Search file / folder — find
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `find . -name "name"` | Search từ current directory theo tên **case-sensitive**. | `find . -name "app.log"` | `.` nghĩa là bắt đầu từ current directory. |
@@ -129,6 +139,8 @@
 
 ### Ví dụ senior
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 find /var/log -type f -name "*.log" -size +500M -printf '%TY-%Tm-%Td %TH:%TM %10s %p\n'
 ```
@@ -138,6 +150,8 @@ Tìm file log >500MB và in timestamp, size, path.
 ---
 
 # 6. Search text — grep
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -161,6 +175,8 @@ Tìm file log >500MB và in timestamp, size, path.
 
 ### Combo production
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 grep -Ein -C 10 "ERROR|WARN|Exception|Caused by" app.log
 ```
@@ -174,6 +190,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 ---
 
 # 7. Log — thao tác thường dùng
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -194,6 +212,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 ---
 
 # 8. Permission / Owner
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -216,6 +236,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 
 # 9. User / sudo
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `whoami` | In effective username. | `whoami` | Khi SSH qua account chung/sudo, luôn biết mình đang là ai. |
@@ -231,6 +253,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 ---
 
 # 10. Process
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -253,6 +277,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 
 # 11. Background jobs / nohup
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `cmd &` | Chạy process background của current shell. | `sleep 300 &` | Process vẫn có thể chịu SIGHUP khi SSH đóng tùy shell/config. |
@@ -267,6 +293,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 ---
 
 # 12. systemd / service
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -289,6 +317,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 
 # 13. Disk / Storage
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `df -h` | Filesystem usage; `-h` hiển thị size dễ đọc. | `df -h` | Check `%Use` của mount point, không chỉ tổng server. |
@@ -305,6 +335,8 @@ tail -F app.log | grep --line-buffered -E "ERROR|Exception|timeout"
 
 ### Drill-down disk usage
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 sudo du -xhd1 / 2>/dev/null | sort -hr
 ```
@@ -314,6 +346,8 @@ Sau đó đi vào folder lớn và lặp lại.
 ---
 
 # 14. Memory / CPU / System
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -333,6 +367,8 @@ Sau đó đi vào folder lớn và lặp lại.
 ---
 
 # 15. Network
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -363,6 +399,8 @@ Sau đó đi vào folder lớn và lặp lại.
 
 # 16. Archive / Compress
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `tar -cvf x.tar dir/` | `c` create, `v` verbose, `f` archive filename. Không compress. | `tar -cvf backup.tar config/` | `v` có thể quá nhiều output với archive lớn. |
@@ -378,6 +416,8 @@ Sau đó đi vào folder lớn và lặp lại.
 ---
 
 # 17. SSH
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -396,6 +436,8 @@ Sau đó đi vào folder lớn và lặp lại.
 
 # 18. SCP / rsync
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `scp file user@host:/path/` | Copy local file lên remote qua SSH. | `scp app.jar app@server:/tmp/` | Với file lớn/đồng bộ lặp lại, `rsync` thường tốt hơn. |
@@ -412,6 +454,8 @@ Sau đó đi vào folder lớn và lặp lại.
 ---
 
 # 19. Text processing — wc / sort / cut / awk / sed
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -448,6 +492,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 20. Pipe / Redirect
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Syntax | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `cmd1 \| cmd2` | Pipe stdout của cmd1 thành stdin của cmd2. | `ps -ef | grep java` | Đây là nền tảng để ghép Linux commands nhỏ thành workflow mạnh. |
@@ -464,6 +510,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 ---
 
 # 21. History / Shell shortcuts
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command / Key | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -484,6 +532,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 22. Environment variables
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `env` | In environment của process shell hiện tại. | `env | sort` | Có thể chứa secret/token; cẩn thận khi paste log. |
@@ -497,6 +547,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 ---
 
 # 23. Java / JVM server
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -517,6 +569,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 24. Package manager
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `apt update` | Refresh package index, không upgrade package. | `sudo apt update` | Nên chạy trước `apt install` trên Ubuntu/Debian nếu metadata cũ. |
@@ -532,6 +586,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 25. Date / Time
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `date` | In server local date/time. | `date` | Luôn check timezone khi đối chiếu log giữa nhiều system. |
@@ -543,6 +599,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 ---
 
 # 26. Cron
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -557,6 +615,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 27. Open files / file descriptors
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `lsof` | List open files; Linux coi socket/device cũng là file-like object. | `sudo lsof | head` | Output rất lớn; nên filter. |
@@ -570,6 +630,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 28. xargs
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `xargs cmd` | Chuyển stdin thành arguments cho command. | `printf '%s\n' a b | xargs echo` | Hữu ích khi command không đọc stdin trực tiếp. |
@@ -580,6 +642,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 ---
 
 # 29. Compare / checksum
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -593,6 +657,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 30. Encoding / binary inspection
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
 | `file file` | Guess file type. | `file script.sh` | Có thể báo “with CRLF line terminators” khi script Windows lỗi trên Linux. |
@@ -604,6 +670,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 ---
 
 # 31. Advanced process / performance
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Command | Ý nghĩa / Option | Ví dụ | Thực tế / Senior tips |
 |---|---|---|---|
@@ -620,6 +688,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 32. Network troubleshooting flow
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Step | Command | Ví dụ | Senior note |
 |---|---|---|---|
 | DNS | `dig` | `dig +short api.example.com` | Nếu IP sai, chưa cần debug app. |
@@ -635,6 +705,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 # 33. Server troubleshooting flow
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 | Step | Command | Ví dụ | Senior note |
 |---|---|---|---|
 | 1. Service state | `systemctl status` | `systemctl status app` | Xem exit code/MainPID/recent logs. |
@@ -649,6 +721,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 ---
 
 # 34. Commands nên thuộc lòng
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 | Nhóm | Command | Ví dụ | Senior note |
 |---|---|---|---|
@@ -669,6 +743,8 @@ awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
 
 ### 35.1 Tìm đúng Java process, tránh grep tự match
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 pgrep -af 'java.*app-name'
 ```
@@ -680,6 +756,8 @@ ps -ef | grep '[j]ava'
 ```
 
 ### 35.2 Xem process nào listen port 8080
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 sudo ss -lntp | grep ':8080'
@@ -693,11 +771,15 @@ sudo lsof -nP -iTCP:8080 -sTCP:LISTEN
 
 ### 35.3 Xem 500 dòng gần nhất rồi realtime
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 tail -n 500 -F app.log
 ```
 
 ### 35.4 Follow log nhưng chỉ giữ lỗi
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 tail -F app.log | grep --line-buffered -E 'ERROR|Exception|Caused by|timeout'
@@ -705,11 +787,15 @@ tail -F app.log | grep --line-buffered -E 'ERROR|Exception|Caused by|timeout'
 
 ### 35.5 Search error kèm 10 dòng context
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 grep -Ein -C 10 'ERROR|WARN|Exception|Caused by' app.log
 ```
 
 ### 35.6 Tìm file vừa bị thay đổi trong 30 phút
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 find /opt/app -type f -mmin -30 -ls
@@ -717,11 +803,15 @@ find /opt/app -type f -mmin -30 -ls
 
 ### 35.7 Tìm folder chiếm disk lớn nhất
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 sudo du -xhd1 /var 2>/dev/null | sort -hr
 ```
 
 ### 35.8 Khi `df -h` đầy nhưng `du` không thấy
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 sudo lsof +L1
@@ -729,11 +819,15 @@ sudo lsof +L1
 
 ### 35.9 Test app local trước khi đổ lỗi network/LB
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 curl -fsS -v http://127.0.0.1:8080/health
 ```
 
 ### 35.10 Xem connection state của port
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 sudo ss -antp | grep ':8080'
@@ -750,11 +844,15 @@ Các state quan trọng:
 
 ### 35.11 Backup config có timestamp trước sửa
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 cp -a application.yml "application.yml.$(date +%F_%H%M%S).bak"
 ```
 
 ### 35.12 Compare config trước/sau
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 diff -u application.yml.bak application.yml
@@ -762,17 +860,23 @@ diff -u application.yml.bak application.yml
 
 ### 35.13 Validate nginx trước reload
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 sudo nginx -t && sudo systemctl reload nginx
 ```
 
 ### 35.14 Restart và xem log ngay
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 sudo systemctl restart app && sudo journalctl -u app -n 100 -f
 ```
 
 ### 35.15 Dry-run rsync trước khi mirror/delete
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 rsync -avhn --delete ./build/ app@server:/opt/app/
@@ -786,11 +890,15 @@ rsync -avh --delete ./build/ app@server:/opt/app/
 
 ### 35.16 Tìm process high memory
 
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
+
 ```bash
 ps aux --sort=-%mem | head -20
 ```
 
 ### 35.17 Tìm process high CPU
+
+Đây là mục tra cứu thao tác. Hãy đọc câu hỏi vận hành trước, chọn lệnh phù hợp, rồi kiểm tra output và tác động phụ trước khi áp dụng trên server thật.
 
 ```bash
 ps aux --sort=-%cpu | head -20
@@ -798,17 +906,23 @@ ps aux --sort=-%cpu | head -20
 
 ### 35.18 Xem resource của một PID
 
+Mục này dùng để kiểm tra resource mà một PID đang giữ. Hãy xác định PID đúng trước, rồi đối chiếu giới hạn, file mở và mức sử dụng với triệu chứng đang điều tra.
+
 ```bash
 ps -p 12345 -o pid,ppid,user,%cpu,%mem,rss,vsz,nlwp,etime,lstart,cmd
 ```
 
 ### 35.19 Check process resource limits
 
+Resource limit giải thích vì sao một process có thể bị chặn dù host còn tài nguyên. Hãy đọc limit cùng workload và error log thay vì kết luận từ một con số đơn lẻ.
+
 ```bash
 cat /proc/12345/limits
 ```
 
 ### 35.20 Check OOM killer
+
+OOM killer là bằng chứng hệ thống đã không thể cấp phát memory theo yêu cầu. Kiểm tra log, cgroup và process bị chọn để phân biệt thiếu RAM, leak và giới hạn cấu hình.
 
 ```bash
 sudo dmesg -T | grep -i -E 'out of memory|oom|killed process'
@@ -823,6 +937,8 @@ sudo journalctl -k | grep -i -E 'oom|killed process'
 ---
 
 # 36. Shell operators cần hiểu
+
+Các operator thay đổi cách shell nối lệnh, truyền stream và xử lý lỗi. Hãy đọc chúng theo exit status và thứ tự đánh giá trước khi ghép thành script production.
 
 | Ký hiệu | Ý nghĩa | Ví dụ | Senior note |
 |---|---|---|---|
@@ -846,6 +962,8 @@ sudo journalctl -k | grep -i -E 'oom|killed process'
 
 # 37. Safety checklist production
 
+Checklist này là cổng kiểm tra trước thao tác có thể làm thay đổi server. Hãy xác định scope, backup, dry-run, rollback và bằng chứng sau lệnh trước khi thực thi.
+
 | Trước khi... | Check | Ví dụ | Senior note |
 |---|---|---|---|
 | Xoá recursive | path + content | `pwd; ls -la "$DIR"` | Validate biến không rỗng trước `rm -rf`. |
@@ -859,6 +977,8 @@ sudo journalctl -k | grep -i -E 'oom|killed process'
 ---
 
 # 38. Learning order
+
+Thứ tự học này đi từ filesystem, process và network tới production troubleshooting. Đi theo dependency giúp mỗi lệnh tra cứu có một mental model để giải thích output.
 
 | Level | Học | Mục tiêu |
 |---|---|---|
@@ -880,6 +1000,8 @@ sudo journalctl -k | grep -i -E 'oom|killed process'
 ---
 
 # 39. Quick Cheat Sheet — nên thuộc lòng
+
+Cheat sheet chỉ nên dùng sau khi đã hiểu cơ chế và rủi ro của lệnh. Hãy chọn lệnh theo câu hỏi, kiểm tra target và tránh chạy chuỗi không hiểu trên máy thật.
 
 | Tình huống | Command | Ví dụ | Senior note |
 |---|---|---|---|
@@ -906,6 +1028,8 @@ sudo journalctl -k | grep -i -E 'oom|killed process'
 ---
 
 # 40. Checklist debug nhanh cho Java/Web server
+
+Checklist debug bắt đầu từ process, port, log và dependency rồi mới kiểm tra JVM hoặc web layer. Mục tiêu là khoanh boundary bằng evidence, không thử lệnh ngẫu nhiên.
 
 ```bash
 # 1) Service có chạy không?
@@ -944,6 +1068,8 @@ diff -u application.yml.bak application.yml
 ---
 
 ## Ghi nhớ quan trọng
+
+Phần chốt nhắc lại nguyên tắc an toàn khi dùng tài liệu tra cứu: hiểu mục tiêu, xác nhận target, giữ bằng chứng và có đường rollback. Đó là điều biến một danh sách lệnh thành kỹ năng vận hành.
 
 - Không cần “học thuộc mọi option” của Linux command. Hãy học **option phổ biến + biết đọc `man`/`--help`**.
 - Khi không nhớ option:

@@ -4,18 +4,20 @@
 
 이 단원을 읽은 뒤 **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
+Mục đích của bài này là hiểu **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **184-185. 반정규화 (Denormalization)** khi chuyển sang phần tiếp theo.
+
 ## 핵심 키워드 (Từ khóa)
 
 정규화와, 이상, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **123-125. 정규화 (Normalization)**에서 만든 기준을 이어받아 **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
@@ -23,6 +25,11 @@
 ---
 
 ## 179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)
+
+Từ **123-125. 정규화 (Normalization)**, ta đã có điểm tựa để bước vào **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/55 trước khi đi vào chi tiết.
+
+Để đọc **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
 - **정규화 목적 (180):** 데이터 중복 배제, 무결성 유지, 이상 발생 방지. 논리적 설계 단계 수행.
 - **이상 (Anomaly - 181):**
   - 삽입 이상 (Insertion Anomaly): 원하지 않는 값까지 삽입해야 하는 현상.
@@ -33,3 +40,5 @@
   - Dị thường: Thêm (phải thêm dữ liệu không cần thiết), Xóa (bị mất dữ liệu liên quan), Sửa (cập nhật không đồng bộ gây mâu thuẫn).
   - Quy tắc ghi nhớ các chuẩn: Do-Bu-I-Gyeol-Da-Jo (Nguyên tử - Phần - Bắc cầu - Định thức - Đa trị - Kết nối).
 - **Example:** 학번만 지우려다 이름과 학과 정보까지 다 지워지는 것이 '삭제 이상'. / Định xóa mã SV nhưng vô tình xóa luôn tên và khoa là 'Dị thường xóa'.
+
+Điểm chốt của **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **184-185. 반정규화 (Denormalization)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

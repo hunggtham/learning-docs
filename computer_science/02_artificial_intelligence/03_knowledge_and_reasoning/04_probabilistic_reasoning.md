@@ -471,6 +471,8 @@ Reranking, citations and source validation reduce uncertainty at different stage
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Logic         → what must follow if premises true
 Probability   → how belief is distributed under uncertainty

@@ -5,6 +5,8 @@ danh sách liên kết tách **thứ tự logic** khỏi **vị trí vật lý t
 
 ## 1. danh sách liên kết đơn
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef struct Node {
     int value;
@@ -122,6 +124,8 @@ Nó phù hợp lập lịch luân phiên, cyclic các bộ đệm logic, Josephu
 Nhưng traversal không thể dùng `while (p != NULL)`. Termination điều kiện phải dựa vào quay lại start hoặc số bước. cách biểu diễn thay đổi bất biến vòng lặp.
 
 ## 8. Reverse danh sách liên kết và bất biến vòng lặp
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 Node *reverse(Node *head) {

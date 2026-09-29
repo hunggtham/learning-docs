@@ -1,6 +1,10 @@
 # Môn 2 – SQL 기본 및 활용
 
-Nên học JOIN trước, sau đó đến Subquery/Group Function rồi các kỹ thuật truy vấn nâng cao.
+Nên học JOIN trước, sau đó đến Subquery/Group Function và các kỹ thuật truy vấn nâng cao; kết thúc bằng SQL Style Guide để áp dụng các quy ước vào model trong pipeline.
+
+## Mạch bài giảng
+
+Mỗi bài mở bằng mục đích và câu hỏi cần giải quyết, đi qua các section nguồn bằng câu nối, rồi chốt quan hệ giữa đầu vào, điều kiện xử lý và kết quả trước khi bàn giao sang bài kế tiếp.
 
 ## Danh sách bài học
 
@@ -18,3 +22,4 @@ Nên học JOIN trước, sau đó đến Subquery/Group Function rồi các k�
 12. [Constraints, View và các đối tượng hỗ trợ](11-constraints-view-va-doi-tuong.md) — PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.
 13. [DCL, quyền và Role](12-dcl-quyen-va-role.md) — GRANT, REVOKE, ROLE, WITH GRANT OPTION và WITH ADMIN OPTION.
 14. [PIVOT, UNPIVOT và Regular Expression](13-pivot-unpivot-va-regexp.md) — Chuyển đổi cấu trúc dữ liệu và regex Oracle.
+15. [SQL Style Guide và SQL dễ đọc cho pipeline AI](14-sql-style-guide.md) — Quy ước đặt tên, căn lề, tính portable, thiết kế schema và checklist review SQL trong pipeline.

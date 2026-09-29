@@ -46,6 +46,8 @@ Phân bổ bền vững không phụ thuộc hoàn toàn vào một dự báo du
 
 ## 4. Rủi ro thời hạn tồn tại ở nhiều nhóm tài sản
 
+Sau khi phân loại chế độ kinh tế, ta cần nhìn độ nhạy với tỷ lệ chiết khấu xuyên nhiều asset class. Duration không chỉ là nhãn của trái phiếu; nó mô tả khoảng cách tới dòng tiền và cách một cú sốc lãi suất truyền vào giá.
+
 **Rủi ro thời hạn (duration risk)** không chỉ thuộc trái phiếu. Cổ phiếu tăng trưởng có phần lớn dòng tiền ở tương lai xa cũng nhạy với tỷ lệ chiết khấu.
 
 Danh mục chứa trái phiếu Kho bạc dài hạn và cổ phiếu tăng trưởng đắt có thể trông đa dạng nhưng cùng chịu tổn thất khi lợi suất thực tăng mạnh.
@@ -77,6 +79,8 @@ ETF niêm yết bằng KRW không có nghĩa tài sản USD bên trong đã mấ
 
 ## 8. Phân rã lợi suất ngoại tệ
 
+Khi tài sản và nhà đầu tư dùng hai đồng tiền khác nhau, kết quả phải được tách thành lợi suất tài sản địa phương và lợi suất tỷ giá. Công thức dưới đây giúp thấy khi nào FX khuếch đại, bù trừ hoặc che khuất hiệu quả tài sản cơ sở.
+
 ```text
 Lợi suất theo đồng tiền gốc
 = (1 + lợi suất tài sản địa phương)
@@ -107,9 +111,13 @@ Không phòng vệ cũng không luôn “rủi ro hơn”, vì tiền tệ nư�
 
 ## 11. Điểm kỳ hạn và cơ sở hoán đổi
 
+Phần này giải thích vì sao chi phí hedge không thể lấy đơn giản từ chênh lệch lãi suất niêm yết. Forward points và cross-currency basis phản ánh cả nhu cầu vốn, thanh khoản và giới hạn bảng cân đối của trung gian.
+
 **Điểm kỳ hạn (forward points)** phản ánh chênh lệch lãi suất theo logic không chênh lệch giá. **Cơ sở hoán đổi tiền tệ (cross-currency basis)** có thể lệch khỏi quan hệ lý thuyết do nhu cầu nguồn vốn và giới hạn bảng cân đối của trung gian.
 
 Do đó chi phí phòng vệ không phải một khoản phí cố định.
+
+Kết luận này dẫn tới câu hỏi tiếp theo: nếu chi phí và mục tiêu bảo vệ thay đổi, tỷ lệ hedge nên được đặt theo quy tắc nào?
 
 ## 12. Tỷ lệ phòng vệ
 
@@ -127,9 +135,13 @@ Nghĩa vụ ngắn hạn bằng KRW thường cần mức khớp tiền tệ cao
 
 ## 13. Phòng vệ chiến lược và phòng vệ động
 
+Trước khi chọn hedge cố định hay thay đổi theo thị trường, cần hiểu trade-off giữa sự ổn định và rủi ro mô hình/timing. Phần này đặt hai cách tiếp cận vào cùng một khung quyết định.
+
 **Phòng vệ chiến lược (strategic hedge)** giữ tỷ lệ tương đối ổn định. **Phòng vệ động (dynamic hedge)** thay tỷ lệ theo định giá, biến động hoặc quan điểm vĩ mô.
 
 Phòng vệ động thêm rủi ro mô hình, chi phí giao dịch và rủi ro chọn sai thời điểm. Nếu không có lợi thế rõ, quy tắc đơn giản thường dễ duy trì hơn.
+
+Khi quy tắc đã rõ, ta mới có thể đo hedge có thực sự giảm rủi ro cần bảo vệ hay chỉ tạo một exposure mới.
 
 ## 14. Phòng vệ beta bằng hợp đồng tương lai
 
@@ -164,15 +176,23 @@ Không nên đánh giá công cụ phòng vệ chỉ bằng lãi/lỗ riêng c�
 
 ## 17. Hiệu quả phòng vệ
 
+Hiệu quả phòng vệ không được đo bằng lãi/lỗ riêng của hedge. Câu hỏi đúng là công cụ có làm phân phối kết quả của toàn danh mục bớt xấu trong trạng thái cần bảo vệ hay không.
+
 **Hiệu quả phòng vệ (hedge effectiveness)** đo mức công cụ phòng vệ thật sự giảm biến động hoặc tổn thất của rủi ro cần bảo vệ.
 
 Một công cụ có tương quan cao trong thời bình nhưng mất tương quan khi khủng hoảng có thể không bảo vệ được lúc cần nhất.
 
+Vì vậy, hedge effectiveness phải được kiểm tra theo regime và stress, không chỉ theo tương quan trung bình.
+
 ## 18. Bảo vệ rủi ro đuôi
+
+Tail hedge là lớp bảo hiểm cho các trạng thái hiếm nhưng gây tổn thất lớn. Nó thường có carry âm trong ngày bình thường, nên cần được đánh giá bằng khả năng giảm bán cưỡng bức và bảo vệ mục tiêu chứ không bằng P/L riêng từng tháng.
 
 **Phòng vệ đuôi (tail hedge)** được thiết kế để chi trả lớn trong sự kiện cực đoan nhưng thường tốn phí trong giai đoạn bình thường.
 
 Giá trị của nó nằm ở khả năng giảm bán cưỡng bức, yêu cầu bổ sung ký quỹ và sai lầm hành vi khi thị trường giảm sâu.
+
+Sau khi phân biệt hedge thường xuyên và hedge đuôi, ta quay lại câu hỏi vai trò của risk parity và các phương pháp phân bổ theo đóng góp rủi ro.
 
 ## 19. Phòng vệ lạm phát phải xác định loại lạm phát
 
@@ -226,15 +246,23 @@ Bài học không phải “60/40 đã chết”, mà là tương quan phụ thu
 
 ## 25. Phân bổ ngang bằng rủi ro
 
+Risk parity thay đổi góc nhìn từ tỷ trọng vốn sang phần rủi ro mỗi nhóm đóng góp. Điều này có thể làm danh mục dùng đòn bẩy để nâng nhóm biến động thấp, nên phải đọc cùng margin và stress lãi suất.
+
 **Phân bổ ngang bằng rủi ro (risk parity)** phân bổ theo đóng góp rủi ro thay vì tỷ trọng vốn. Vì trái phiếu thường có độ biến động thấp hơn cổ phiếu, chiến lược có thể dùng đòn bẩy để nâng đóng góp của rủi ro lãi suất.
 
 Điểm yếu xuất hiện khi tương quan cổ phiếu–trái phiếu chuyển sang dương hoặc lợi suất tăng mạnh cùng lúc.
 
+Để hiểu vì sao một vị thế nhỏ vẫn có thể làm rủi ro tăng nhiều, ta dùng marginal contribution to risk.
+
 ## 26. Đóng góp rủi ro biên
+
+MCTR là phép hỏi cận biên: thêm một lượng rất nhỏ tài sản này vào danh mục làm volatility hoặc risk budget thay đổi bao nhiêu. Nó giúp phân biệt tỷ trọng nhìn thấy với rủi ro thực sự được thêm vào.
 
 **Đóng góp rủi ro biên (Marginal Contribution to Risk, MCTR)** hỏi nếu tăng rất nhỏ một vị thế thì rủi ro danh mục tăng bao nhiêu.
 
 Từ đó có thể tính đóng góp rủi ro của từng tài sản hoặc từng nhân tố thay vì chỉ nhìn tỷ trọng vốn.
+
+Khi đã biết đóng góp cận biên, ta có thể điều chỉnh quy mô theo volatility mục tiêu nhưng phải đặt giới hạn để tránh mua cao/bán thấp theo cơ học.
 
 ## 27. Tỷ lệ đa dạng hóa
 
@@ -250,19 +278,27 @@ Tỷ lệ cao hơn có thể cho thấy lợi ích đa dạng hóa lớn hơn, n
 
 ## 28. Phân bổ theo độ biến động mục tiêu
 
+Volatility targeting điều chỉnh exposure theo mức biến động quan sát được. Ưu điểm là giảm quy mô khi rủi ro tăng; nhược điểm là có thể phản ứng muộn và tạo giao dịch thuận chu kỳ.
+
 **Nhắm mục tiêu độ biến động (volatility targeting)** điều chỉnh quy mô danh mục để giữ mức rủi ro gần mục tiêu.
 
 Ưu điểm là giảm phơi nhiễm khi biến động tăng. Nhược điểm là có thể tạo tính thuận chu kỳ: tăng đòn bẩy khi thị trường yên và bán giảm vị thế sau cú sốc.
 
 Cần giới hạn đòn bẩy, mức sàn/trần và kiểm thử căng thẳng.
 
+Carry và trend là hai nguồn lợi suất khác nhau; phần kế tiếp đặt chúng cạnh nhau để thấy điều kiện thuận lợi và điểm dễ đảo chiều.
+
 ## 29. Carry và trend
+
+Carry kiếm lợi từ cấu trúc lợi suất hiện tại, còn trend dựa vào sự tiếp diễn của chuyển động giá. Cả hai cần được đọc cùng chi phí, thanh khoản và regime vì không có nguồn lợi suất nào miễn phí.
 
 **Lợi suất nắm giữ (carry)** và **xu hướng (trend)** là hai nguồn lợi suất thường được nghiên cứu xuyên nhiều nhóm tài sản.
 
 Carry kiếm lợi từ việc nắm tài sản có cấu trúc lợi suất thuận lợi nhưng thường dễ tổn thương khi chế độ đảo chiều mạnh. Trend cố khai thác xu hướng kéo dài nhưng có thể thua trong thị trường đảo chiều liên tục.
 
 Hai chiến lược không nên được coi là “lợi suất miễn phí”.
+
+Sau khi phân biệt nguồn lợi suất, hãy kiểm tra tương quan của chúng có ổn định hay cùng tăng trong khủng hoảng hay không.
 
 ## 30. Tương quan không ổn định
 
@@ -359,6 +395,8 @@ Danh mục đầu tư không tồn tại tách khỏi lương, nhà ở, nợ v�
 Người làm việc trong ngành công nghệ đã có vốn con người nhạy với công nghệ. Nếu đồng thời nắm quá nhiều cổ phiếu công nghệ, mức tập trung kinh tế lớn hơn tỷ trọng tài khoản cho thấy.
 
 ## 41. Kiểm thử ngược
+
+Sau các stress test thuận chiều, reverse stress test đảo câu hỏi: không phải “nếu cú sốc X xảy ra thì lỗ bao nhiêu?”, mà là “tổ hợp nào khiến mục tiêu vi phạm hoặc buộc phải bán?”. Đây là bước tìm ngưỡng thất bại trước khi tối ưu danh mục.
 
 **Kiểm thử căng thẳng ngược (reverse stress test)** hỏi: điều gì phải xảy ra để danh mục vi phạm mục tiêu hoặc buộc phải bán tài sản?
 

@@ -79,6 +79,8 @@ Không phải dịch vụ nào cũng hỗ trợ reload. `systemctl reload app` k
 
 ## `enable` khác `start`
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 systemctl is-active app
 systemctl is-enabled app

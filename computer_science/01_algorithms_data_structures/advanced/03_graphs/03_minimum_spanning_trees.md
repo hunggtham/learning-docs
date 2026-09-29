@@ -71,6 +71,8 @@ DSU trả lời connectivity nhanh; chứng minh optimality vẫn đến từ cu
 
 ### Java sketch
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 record Edge(int u, int v, long w) {}
 

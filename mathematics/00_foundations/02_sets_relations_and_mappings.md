@@ -199,6 +199,8 @@ Graph directed cũng có thể nhìn như relation trên vertices: edge `(u,v)` 
 
 ### Reflexive
 
+Reflexive hỏi mỗi phần tử có quan hệ với chính nó hay không. Tính chất này là một điều kiện cục bộ, nhưng nó giúp phân biệt các loại relation trước khi xét chúng tạo cấu trúc gì.
+
 ```math
 aRa
 ```
@@ -207,11 +209,15 @@ cho mọi `a`.
 
 ### Symmetric
 
+Symmetric kiểm tra chiều của quan hệ: nếu A liên hệ B thì B có liên hệ A không. Hãy dùng nó để nhận ra khi nào relation mô tả liên kết hai chiều và khi nào cần giữ hướng.
+
 ```math
 aRb\Rightarrow bRa.
 ```
 
 ### Antisymmetric
+
+Antisymmetric không có nghĩa là “không đối xứng” hoàn toàn; nó cấm hai phần tử khác nhau cùng liên hệ hai chiều. Đây là điều kiện nền cho thứ tự bộ phận.
 
 ```math
 aRb\land bRa\Rightarrow a=b.
@@ -220,6 +226,8 @@ aRb\land bRa\Rightarrow a=b.
 Antisymmetric không có nghĩa “không symmetric”; nó nói mutual relation giữa distinct elements bị cấm.
 
 ### Transitive
+
+Transitive hỏi liệu quan hệ có truyền qua một phần tử trung gian hay không. Nó giúp nén chuỗi quan hệ và là cầu nối tới equivalence relation và order.
 
 ```math
 aRb\land bRc\Rightarrow aRc.

@@ -4,18 +4,20 @@
 
 이 단원을 읽은 뒤 **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
+Mục đích của bài này là hiểu **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** khi chuyển sang phần tiếp theo.
+
 ## 핵심 키워드 (Từ khóa)
 
 개발, 단계에, 따른, 애플리케이션, 테스트
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **130 & 131: 블랙박스 테스트 (Black Box Test)**에서 만든 기준을 이어받아 **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
@@ -23,6 +25,10 @@
 ---
 
 ## 132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)
+
+Từ **130 & 131: 블랙박스 테스트 (Black Box Test)**, ta đã có điểm tựa để bước vào **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/95 trước khi đi vào chi tiết.
+
+Để đọc **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
@@ -36,6 +42,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Đơn vị (Unit) -> Tích hợp (Integration) -> Hệ thống (System) -> Nghiệm thu (Acceptance). Alpha = Nội bộ, Beta = Ở nhà.
 
 # 136-1. 통합 테스트 (Integration Test - Kiểm thử tích hợp)
+
+Phần **136-1. 통합 테스트 (Integration Test - Kiểm thử tích hợp)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 개념 (Khái niệm):** 단위 테스트가 끝난 모듈을 통합하는 과정에서 발생하는 오류 및 결함을 찾는 테스트 기법.
 *(Kiểm thử tích hợp là quá trình kết hợp các module đã qua kiểm thử đơn vị lại với nhau để tìm lỗi và khiếm khuyết phát sinh trong quá trình tương tác.)*
@@ -69,6 +77,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 137 & 138. 하향식 / 상향식 통합 테스트 (Top Down & Bottom Up Integration Test)
 
+Phần **137 & 138. 하향식 / 상향식 통합 테스트 (Top Down & Bottom Up Integration Test)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):**
 - **하향식 (Top-down):** 프로그램의 상위 모듈에서 하위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ module cấp cao nhất (chính) xuống các module cấp thấp (phụ).)*
 - **상향식 (Bottom-up):** 프로그램의 하위 모듈에서 상위 모듈 방향으로 통합하며 테스트. *(Kiểm thử từ các module cấp thấp (cơ sở) dần lên module cấp cao.)*
@@ -97,6 +107,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 139. 테스트 드라이버와 테스트 스텁 (Test Driver vs Test Stub)
 
+Phần **139. 테스트 드라이버와 테스트 스텁 (Test Driver vs Test Stub)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 결합 테스트 시 미구현된 모듈을 대체하거나 구동하기 위한 가짜(Dummy) 모듈.
 *(Module giả lập được dùng thay thế cho các module chưa hoàn thiện trong quá trình kiểm thử tích hợp.)*
 
@@ -109,6 +121,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 ---
 
 # 140. 회귀 테스팅 (Regression Testing - Kiểm thử hồi quy)
+
+Phần **140. 회귀 테스팅 (Regression Testing - Kiểm thử hồi quy)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 개념 (Khái niệm):** 수정된 모듈이나 컴포넌트가 다른 부분에 영향을 미치는지 확인하기 위해 테스트를 반복하는 것.
 *(Kiểm tra lại toàn bộ hoặc một phần hệ thống sau khi đã sửa lỗi hoặc thêm tính năng mới, để đảm bảo việc sửa chữa này không làm hỏng các tính năng cũ đang hoạt động tốt.)*
@@ -127,6 +141,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 ---
 
 # 140-1 ~ 143-1. 테스트 계획, 프로세스, 케이스 및 시나리오 (Test Process, Case & Scenario)
+
+Phần **140-1 ~ 143-1. 테스트 계획, 프로세스, 케이스 및 시나리오 (Test Process, Case & Scenario)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 테스트 프로세스 (Test Process - Quy trình kiểm thử):**
 - 계획(Plan) $\rightarrow$ 분석(Analysis) $\rightarrow$ 설계(Design) $\rightarrow$ 수행(Execution) $\rightarrow$ 평가(Evaluation) $\rightarrow$ 관리(Management).
@@ -149,6 +165,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 144 & 145. 테스트 오라클과 그 종류 (Test Oracle & Types)
 
+Phần **144 & 145. 테스트 오라클과 그 종류 (Test Oracle & Types)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 테스트 결과가 올바른지 판단하기 위해 사전에 정의된 참(True) 값을 대입하여 비교하는 기법.
 *(Cơ chế so sánh kết quả thực tế của phần mềm với kết quả mong đợi (đáp án chuẩn) để xác định xem phần mềm chạy đúng hay sai).*
 
@@ -170,6 +188,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 ---
 
 # 146 & 146-1. 테스트 자동화 도구 (Test Automation Tools)
+
+Phần **146 & 146-1. 테스트 자동화 도구 (Test Automation Tools)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 개념 (Khái niệm):** 반복적인 테스트 활동을 스크립트나 자동화 소프트웨어로 기계가 대신 수행하게 하는 것.
 *(Sử dụng công cụ phần mềm để chạy các bài test một cách tự động, thay vì con người bấm tay).*
@@ -196,6 +216,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 147. 테스트 하네스 (Test Harness)
 
+Phần **147. 테스트 하네스 (Test Harness)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 시스템이나 모듈을 테스트하기 위해 생성된 코드와 데이터의 집합 (환경).
 *(Môi trường bao gồm các đoạn code giả lập, dữ liệu và công cụ để thực thi test).*
 
@@ -209,6 +231,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 148. 결함 (Fault / Defect)
 
+Phần **148. 결함 (Fault / Defect)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 소프트웨어가 개발자의 설계와 다르게 동작하거나 잘못된 결과를 발생시키는 현상 (Bug).
 *(Bất kỳ lỗi, thiếu sót nào khiến phần mềm chạy không đúng với tài liệu đặc tả yêu cầu).*
 
@@ -218,6 +242,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 ---
 
 # 149 ~ 151. 성능 분석, 빅오 표기법, 순환 복잡도 (Performance Analysis, Big-O, Cyclomatic Complexity)
+
+Phần **149 ~ 151. 성능 분석, 빅오 표기법, 순환 복잡도 (Performance Analysis, Big-O, Cyclomatic Complexity)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 애플리케이션 성능 지표 (Chỉ số hiệu năng):**
 - **처리량 (Throughput):** 일정 시간 동안 처리하는 작업의 양 (Số lượng task xử lý được trong một khoảng thời gian).
@@ -246,6 +272,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 152 & 153. 소스 코드 최적화 및 품질 분석 (Source Code Optimization & Quality Analysis)
 
+Phần **152 & 153. 소스 코드 최적화 및 품질 분석 (Source Code Optimization & Quality Analysis)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 최적화 개념 (Khái niệm tối ưu hóa):**
 - 나쁜 코드(Bad Code / Spaghetti Code / Alien Code)를 배제하고, **클린 코드(Clean Code)**로 작성하여 가독성(Readability)과 유지보수성 향상.
 *(Viết code sạch sẽ, rõ ràng, dễ hiểu, tránh viết code rối như tơ vò (Spaghetti) hoặc code không ai hiểu được (Alien).*
@@ -260,6 +288,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 ---
 
 # 154 & 155. 시스템 연계: EAI와 ESB (System Integration: EAI & ESB)
+
+Phần **154 & 155. 시스템 연계: EAI와 ESB (System Integration: EAI & ESB)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] EAI (Enterprise Application Integration):**
 - 기업 내 각종 애플리케이션 및 플랫폼 간의 정보 전달을 위한 통합 솔루션. *(Giải pháp tích hợp các ứng dụng trong doanh nghiệp để chúng có thể chia sẻ dữ liệu với nhau).*
@@ -281,6 +311,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 ---
 
 # 156. JSON (JavaScript Object Notation)
+
+Phần **156. JSON (JavaScript Object Notation)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 개념 (Khái niệm):** 속성-값 쌍(Attribute-Value)으로 이루어진 데이터 객체를 전달하는 텍스트 포맷.
 *(Định dạng trao đổi dữ liệu dạng văn bản nhẹ, bao gồm các cặp Thuộc tính - Giá trị).*
@@ -304,6 +336,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 157. XML (eXtensible Markup Language)
 
+Phần **157. XML (eXtensible Markup Language)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 특수한 목적을 갖는 마크업 언어를 만드는 데 사용되는 다목적 마크업 언어.
 *(Ngôn ngữ đánh dấu đa mục đích, được sử dụng để tạo ra các ngôn ngữ đánh dấu khác phục vụ mục đích đặc thù).*
 
@@ -325,6 +359,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 158. AJAX (Asynchronous JavaScript and XML)
 
+Phần **158. AJAX (Asynchronous JavaScript and XML)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 자바스크립트를 이용해 클라이언트와 서버 간에 데이터를 주고받는 비동기 통신 기술.
 *(Công nghệ giao tiếp bất đồng bộ giữa Client và Server sử dụng JavaScript).*
 
@@ -341,6 +377,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 159. 인터페이스 보안 기능 적용 (Interface Security Application)
 
+Phần **159. 인터페이스 보안 기능 적용 (Interface Security Application)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 인터페이스 송·수신 시 데이터 탈취 및 변조를 방지하기 위해 각 영역에 보안 설정을 적용하는 활동.
 *(Áp dụng các biện pháp bảo mật vào các khu vực khác nhau để ngăn chặn đánh cắp hoặc thay đổi dữ liệu trong quá trình truyền tải).*
 
@@ -356,6 +394,8 @@ Thực hiện theo mô hình V (V-Model), từ nhỏ đến lớn:
 
 # 160. 데이터 무결성 검사 도구 (Data Integrity Check Tools)
 
+Phần **160. 데이터 무결성 검사 도구 (Data Integrity Check Tools)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 시스템 파일의 변경 유무를 확인하고 파일 변동 시 관리자에게 알려주는 보안 도구.
 *(Công cụ bảo mật kiểm tra xem tệp hệ thống có bị thay đổi trái phép không và cảnh báo cho quản trị viên).*
 
@@ -370,6 +410,8 @@ ightarrow$ Phát chuông cảnh báo.
 
 # 161. 인터페이스 구현 검증 도구 (Interface Implementation Verification Tools)
 
+Phần **161. 인터페이스 구현 검증 도구 (Interface Implementation Verification Tools)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 **[1] 개념 (Khái niệm):** 구현된 인터페이스가 정상적으로 작동하는지 확인하기 위해 사용되는 테스트 자동화 프레임워크.
 *(Khung tự động hóa kiểm thử để xác minh giao diện kết nối hoạt động bình thường).*
 
@@ -382,6 +424,8 @@ ightarrow$ Phát chuông cảnh báo.
 ---
 
 # 162. APM (Application Performance Management)
+
+Phần **162. APM (Application Performance Management)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 *(Gộp chung hai nội dung lặp ở bản gốc)*
 
@@ -400,6 +444,8 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 # 💡 통합 비유 (Mẹo ghi nhớ tổng hợp)
 
+Phần **💡 통합 비유 (Mẹo ghi nhớ tổng hợp)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
 - **알고리즘 비유 (Thuật toán):**
   - **빅오(Big-O):** Mua balo, luôn nghĩ tới lúc đựng nặng nhất xem có rách không (Worst case).
   - **순환 복잡도(McCabe):** Tính xem tòa nhà có bao nhiêu ngã rẽ để khi cháy bảo vệ phải đi kiểm tra từng ngóc ngách ít nhất bao nhiêu lần.
@@ -413,6 +459,8 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 ---
 
 # 115. 분산 저장소 방식 (Distributed Repository System)
+
+Phần **115. 분산 저장소 방식 (Distributed Repository System)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
 
 **[1] 개념 (Khái niệm):** 버전 관리 자료가 하나의 원격 저장소와 분산된 개발자 PC의 로컬 저장소에 함께 저장되어 관리되는 방식.
 *(Hệ thống quản lý phiên bản mã nguồn, trong đó dữ liệu được lưu ở cả Server từ xa và máy tính cá nhân của mỗi lập trình viên).*
@@ -429,3 +477,5 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 
 > 💡 **Mẹo ghi nhớ (Mnemonics):** 
 > - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
+
+Điểm chốt của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

@@ -17,6 +17,8 @@ Bắt đầu bằng [Mathematics for AI](./00_mathematics_for_ai.md) để có b
 
 ## Dependency map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     M[00 Mathematics Map] --> LA[01 Linear Algebra]
@@ -37,6 +39,8 @@ flowchart TD
 Không cần đọc theo một đường duy nhất. Nếu đang học Transformer, Linear Algebra + Calculus + Optimization + Numerical Computation có priority cao. Nếu đang học evaluation, Statistics + Probability quan trọng hơn. Nếu đang học language modeling, Probability + Information Theory là dependency trực tiếp.
 
 ## Mental model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Linear Algebra      → biểu diễn và biến đổi

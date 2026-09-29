@@ -16,6 +16,8 @@ Bộ tài liệu này không được tổ chức theo kiểu “chỉ học Rea
 Khi một API đã lỗi thời, tài liệu vẫn giải thích cú pháp và cách hoạt động của nó nếu API đó đủ phổ biến để còn xuất hiện trong project thực tế. Sau phần giải thích sẽ có trạng thái như `Legacy`, `Deprecated` hoặc `Removed`, version liên quan và cách chuyển sang API hiện đại. Cách trình bày này có chủ đích: bạn học React theo một mental model liên tục, nhưng vẫn đọc được code được viết ở nhiều thế hệ.
 
 ### Bản đồ lịch sử React nên nhớ
+Phần này nối mạch bài học với “Bản đồ lịch sử React nên nhớ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | Thời kỳ | Những thứ thường gặp trong code |
 |---|---|

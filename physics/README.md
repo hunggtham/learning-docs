@@ -8,6 +8,8 @@ Thư viện hiện có **88 file Markdown**, bao phủ nền tảng Vật lý đ
 
 ## Quan hệ phụ thuộc tổng quát
 
+Sơ đồ này mô tả cách Physics đi từ measurement và conservation tới các mô hình cơ học, trường, vật chất và vũ trụ. Mỗi nhánh giữ lại câu hỏi về scale, approximation và evidence để công thức không bị tách khỏi hiện tượng.
+
 ```mermaid
 graph TD
     A[Physical thinking & measurement] --> B[Math / PDE / tensors]
@@ -41,7 +43,11 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 
 # Mục lục
 
+Mục lục dưới đây là một tuyến giảng từ ngôn ngữ vật lý tới các domain chuyên sâu. Hãy chọn chapter theo prerequisite của câu hỏi, rồi quay lại knowledge graph khi cần nối các mô hình ở scale khác.
+
 ## 00 — Nền tảng và ngôn ngữ
+
+Nhóm này dựng measurement, vector, đơn vị và conservation trước khi đi vào mô hình chuyên sâu. Hãy dùng nó như vocabulary chung cho mọi chapter phía sau.
 - [Tư duy Vật lý và First-Principles Thinking](00_foundations/00_physical_thinking.md)
 - [Đại lượng, đơn vị, thứ nguyên và bất định đo lường](00_foundations/01_measurement_units_uncertainty.md)
 - [Không gian, thời gian, vector và hệ quy chiếu](00_foundations/02_space_time_vectors_frames.md)
@@ -50,6 +56,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [PDE, boundary conditions, Green function và tensor](00_foundations/05_pde_boundary_green_tensors.md)
 
 ## 01 — Cơ học
+
+Cơ học bắt đầu từ chuyển động và lực rồi mở rộng sang năng lượng, động lượng, quay và hệ nhiều vật. Các chapter nối phương trình với constraint và quan sát được.
 - [Động học](01_mechanics/00_kinematics.md)
 - [Định luật Newton và động lực học](01_mechanics/01_newton_laws_dynamics.md)
 - [Các lực thường gặp](01_mechanics/02_common_forces.md)
@@ -64,11 +72,15 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Hệ quy chiếu phi quán tính, Coriolis và rotating frames](01_mechanics/11_non_inertial_frames_rotating_systems.md)
 
 ## 02 — Dao động và sóng
+
+Nhóm này giải thích cách năng lượng và thông tin truyền qua dao động, cộng hưởng và môi trường. Nó là cầu nối tự nhiên tới âm thanh, quang học và hệ liên tục.
 - [Dao động, damping, driven systems và resonance](02_oscillations_waves/00_oscillations_resonance.md)
 - [Sóng, wave equation, Fourier và âm thanh](02_oscillations_waves/01_waves_fourier_sound.md)
 - [Coupled oscillators và normal modes](02_oscillations_waves/02_coupled_oscillators_normal_modes.md)
 
 ## 03 — Môi trường liên tục và transport
+
+Phần này chuyển từ hạt riêng lẻ sang trường, dòng và gradient. Hãy theo dõi conservation law cùng điều kiện biên để hiểu diffusion, fluid và heat transport.
 - [Cơ học chất lưu](03_continuum/00_fluids.md)
 - [Sức căng bề mặt, wetting và mao dẫn](03_continuum/01_surface_tension_capillarity.md)
 - [Khuếch tán, dẫn nhiệt và transport](03_continuum/02_transport_diffusion_heat.md)
@@ -76,6 +88,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Continuum mechanics, stress tensor và strain tensor](03_continuum/04_continuum_mechanics_stress_tensor.md)
 
 ## 04 — Nhiệt động lực học và Statistical Physics
+
+Nhiệt động lực học nối vi trạng thái với đại lượng vĩ mô, entropy và mũi tên thời gian. Statistical Physics giải thích vì sao các quy luật trung bình xuất hiện từ nhiều degrees of freedom.
 - [Nhiệt động lực học](04_thermal_statistical/00_thermodynamics.md)
 - [Entropy và cơ học thống kê](04_thermal_statistical/01_entropy_statistical_mechanics.md)
 - [Chuyển pha và truyền nhiệt](04_thermal_statistical/02_phase_transitions_heat_transfer.md)
@@ -86,6 +100,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Linear response và fluctuation–dissipation](04_thermal_statistical/07_linear_response_fluctuation_dissipation.md)
 
 ## 05 — Điện từ học
+
+Điện từ học thống nhất điện tích, dòng, trường và sóng. Đọc theo Maxwell giúp thấy mối liên hệ giữa nguồn, boundary và năng lượng truyền trong field.
 - [Điện tĩnh học](05_electromagnetism/00_electrostatics.md)
 - [Mạch DC](05_electromagnetism/01_dc_circuits.md)
 - [Mạch AC, phasor và RLC](05_electromagnetism/02_ac_rlc_circuits.md)
@@ -99,6 +115,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Boundary-value electrostatics, method of images và multipoles](05_electromagnetism/10_boundary_value_image_multipoles.md)
 
 ## 06 — Quang học
+
+Quang học đi từ ray và wave tới giao thoa, nhiễu xạ và hệ imaging. Mỗi approximation chỉ đúng trong một scale, nên cần giữ rõ khi nào dùng geometric hay wave optics.
 - [Quang hình học](06_optics/00_geometric_optics.md)
 - [Quang học sóng](06_optics/01_wave_optics.md)
 - [Photon, laser và coherence](06_optics/02_photons_lasers_coherence.md)
@@ -106,10 +124,14 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Fourier optics và imaging systems](06_optics/04_fourier_imaging_instrumentation.md)
 
 ## 07 — Thuyết tương đối
+
+Relativity thay đổi cách hiểu không gian, thời gian và năng lượng khi vận tốc hoặc gravity đáng kể. Hãy bắt đầu từ invariant rồi mới diễn giải các hiệu ứng quan sát được.
 - [Thuyết tương đối hẹp](07_relativity/00_special_relativity.md)
 - [Thuyết tương đối rộng](07_relativity/01_general_relativity.md)
 
 ## 08 — Vật lý lượng tử
+
+Quantum Physics mô tả trạng thái, phép đo và xác suất ở scale vi mô. Các chapter nối formalism với giới hạn đo lường và công nghệ quantum.
 - [Nền tảng lượng tử](08_quantum/00_quantum_foundations.md)
 - [Các hệ lượng tử mẫu](08_quantum/01_quantum_systems.md)
 - [Angular momentum và spin](08_quantum/02_angular_momentum_spin.md)
@@ -120,6 +142,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Symmetry, generators, commutators và path integral](08_quantum/07_symmetry_operator_path_integral.md)
 
 ## 09 — Nguyên tử, phân tử, hạt nhân và hạt cơ bản
+
+Nhóm này áp dụng quantum và field vào cấu trúc vật chất từ nguyên tử tới hạt nhân và particle. Hãy đọc nó như chuỗi scale, không như danh sách hạt rời.
 - [Vật lý nguyên tử](09_atomic_nuclear_particle/00_atomic_physics.md)
 - [Vật lý hạt nhân](09_atomic_nuclear_particle/01_nuclear_physics.md)
 - [Bức xạ ion hóa và detector](09_atomic_nuclear_particle/02_radiation_detection.md)
@@ -128,6 +152,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Quantum fields, gauge symmetry và interactions](09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md)
 
 ## 10 — Condensed Matter, bán dẫn, plasma và quantum fluids
+
+Đây là nơi microscopic law trở thành tính chất vật liệu và thiết bị. Các chapter nối symmetry, excitations, transport và phase với công nghệ thực.
 - [Crystal lattice, bands, Fermi level và phonons](10_condensed_matter_devices/00_crystals_bands.md)
 - [Bán dẫn, P–N junction, diode, MOSFET và CMOS](10_condensed_matter_devices/01_semiconductors_devices.md)
 - [Transport, Hall effect, magnetism và superconductivity](10_condensed_matter_devices/02_transport_magnetism_superconductivity.md)
@@ -137,6 +163,8 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Berry phase, Quantum Hall và topology](10_condensed_matter_devices/06_berry_phase_quantum_hall_topology.md)
 
 ## 11 — Thiên văn vật lý và vũ trụ học
+
+Astrophysics dùng các mô hình Physics để suy luận từ tín hiệu xa về cấu trúc, tiến hóa sao và vũ trụ. Evidence và uncertainty đặc biệt quan trọng vì không thể thí nghiệm trực tiếp trên đối tượng.
 - [Vật lý sao và compact objects](11_astrophysics_cosmology/00_stars_compact_objects.md)
 - [Thiên hà và vũ trụ học](11_astrophysics_cosmology/01_galaxies_cosmology.md)
 - [Observational astrophysics và radiative transfer](11_astrophysics_cosmology/02_observational_astrophysics_radiative_transfer.md)
@@ -144,12 +172,16 @@ Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và
 - [Gravitational instability và structure formation](11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md)
 
 ## 12 — Thực nghiệm, tín hiệu, tính toán và inference
+
+Nhóm này dạy cách biến phép đo nhiễu thành kết luận có kiểm định. Nó nối thiết kế thí nghiệm, signal processing, numerical methods và uncertainty quantification.
 - [Vật lý thực nghiệm, calibration và uncertainty](12_experimental_computational/00_measurement_experiment.md)
 - [Signal, noise, sampling, PSD và ADC](12_experimental_computational/01_signals_sampling_noise.md)
 - [Vật lý tính toán và numerical methods](12_experimental_computational/02_computational_physics.md)
 - [Data inference, model fitting và inverse problems](12_experimental_computational/03_data_inference_inverse_problems.md)
 
 ## 13 — Knowledge graph, navigation và quality audit
+
+Phần cuối giúp kiểm tra dependency, đường đọc và chất lượng giải thích của toàn thư viện. Hãy dùng nó sau mỗi depth pass để phát hiện gap thay vì chỉ tăng số file.
 - [Knowledge Connections](13_connections/00_knowledge_connections.md)
 - [Glossary Việt – English – 한국어 và navigation](13_connections/01_glossary_navigation.md)
 - [Coverage Audit](13_connections/02_coverage_audit.md)

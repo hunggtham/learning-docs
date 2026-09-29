@@ -572,6 +572,8 @@ Provenance should reflect actual process, not fabricated explanation.
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Deduction  = premises guarantee conclusion
 Induction  = examples suggest general pattern

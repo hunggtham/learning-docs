@@ -273,6 +273,8 @@ Flux qua oriented surface:
 
 ## 14. Divergence theorem: local source → global flux
 
+Divergence theorem đổi tổng nguồn cục bộ trong volume thành flux qua boundary. Đây là cầu nối giữa field bên trong và điều quan sát được trên mặt bao quanh.
+
 ```math
 \iiint_V \nabla\cdot F\,dV
 =
@@ -300,6 +302,8 @@ Nếu density giảm tại point, mass/charge/probability phải flow ra; nếu 
 Đây là một trong các equations sâu nhất nối divergence với Physics.
 
 ## 16. Stokes' theorem: local curl → boundary circulation
+
+Stokes theorem nối curl trên surface với circulation dọc boundary. Hãy đọc nó như một quy tắc đổi giữa mô tả cục bộ và tích lũy dọc biên.
 
 ```math
 \iint_S (\nabla\times F)\cdot n\,dS
@@ -438,6 +442,8 @@ surface area `4\pi R^2`, nên total flux:
 Nó independent of `R`. Source behavior concentrated at excluded origin cho thấy vì sao domain/singularity matter khi dùng divergence theorem.
 
 ## Knowledge Connection
+
+Phần kết nối đặt gradient, divergence và curl cạnh electromagnetism, fluid và PDE. Mỗi toán tử trả lời một câu hỏi hình học khác nhau về field.
 
 ```text
 multivariable derivative

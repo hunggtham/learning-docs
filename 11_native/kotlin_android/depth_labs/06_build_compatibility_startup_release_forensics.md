@@ -322,6 +322,8 @@ Dependency locking/version pinning giúp forensic và supply-chain control.
 ---
 
 ## 19. `minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau
+Phần này nối mạch Android vừa học với “19. `minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 minSdk -> device cũ nhất app hỗ trợ
@@ -381,6 +383,8 @@ Dùng toggle như diagnostic/migration aid, không phải production long-term b
 ---
 
 ## 23. API guard bảo vệ class loading/runtime access
+Phần này nối mạch Android vừa học với “23. API guard bảo vệ class loading/runtime access”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 if (Build.VERSION.SDK_INT >= 33) {
@@ -617,6 +621,8 @@ proguard mapping?
 ---
 
 ## 40. Variant-only bug checklist
+Phần này nối mạch Android vừa học với “40. Variant-only bug checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 sourceSet override?
@@ -722,6 +728,8 @@ Source test pass chưa chứng minh final artifact đúng.
 ---
 
 ## 46. Build/compatibility checklist
+Phần này nối mạch Android vừa học với “46. Build/compatibility checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Evidence |
 |---|---|

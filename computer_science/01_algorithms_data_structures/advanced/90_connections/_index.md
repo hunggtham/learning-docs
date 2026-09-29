@@ -4,11 +4,15 @@ Nhóm này nối các khái niệm DSA riêng lẻ thành quyết định thiế
 
 ## Các chương tổng hợp
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - [Chọn cấu trúc dữ liệu phù hợp](./00_choose_the_right_data_structure.md) — chuyển workload thành tiêu chí lựa chọn representation, invariant và cost model.
 - [DSA trong cơ sở dữ liệu, mạng và hệ thống](./01_dsa_in_databases_networks_and_systems.md) — cách B+Tree, Hash Table, Heap, Graph, Trie và sketch xuất hiện trong hệ thống thực tế.
 - [Workflow giải bài và thiết kế thuật toán](./02_problem_solving_workflow.md) — specification → modeling → invariant → baseline → optimization → proof → testing → production hardening.
 
 ## Case study xuyên nhiều chapter
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 - [Database Indexing](./03_case_study_database_indexing.md) — Hash Index, B+Tree, Buffer Pool, Bloom Filter, LSM, Join và crash consistency.
 - [Autocomplete & Search Suggestions](./04_case_study_autocomplete_search.md) — Trie/FST, Top-K Heap, ranking, Unicode, fuzzy search, cache và distributed merge.

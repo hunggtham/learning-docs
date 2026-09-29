@@ -20,6 +20,8 @@ Việc dịch địa chỉ qua bảng trang có chi phí, vì vậy CPU có **TL
 
 ## `free -h` và `available`
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 free -h
 ```
@@ -91,6 +93,8 @@ Xem [Linux và container](../09_production/linux_containers.md) để hiểu m�
 Với JVM, có thể cần heap dump, histogram đối tượng hoặc metrics GC. `RSS` ở tầng Linux chỉ cho thấy triệu chứng bộ nhớ của tiến trình, không chỉ ra đối tượng Java nào đang giữ bộ nhớ.
 
 ## `vmstat`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 vmstat 1 10

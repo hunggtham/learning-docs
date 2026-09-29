@@ -413,6 +413,8 @@ Trải nghiệm ở lớp trên phụ thuộc độ tin cậy của lớp dướ
 
 ## Mô hình hành trình: khả năng tiếp cận là tính chất của toàn chuỗi
 
+Một dịch vụ có thể nhanh ở bước cuối nhưng vẫn khó tiếp cận nếu đăng ký, thanh toán, giao nhận hoặc hỗ trợ gặp friction. Mô hình dưới đây nối toàn bộ hành trình để tìm đúng điểm làm người dùng bị loại.
+
 ```text
 nhà
 → lối đi

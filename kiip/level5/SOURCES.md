@@ -1,6 +1,10 @@
 # Sources & Provenance
 
+File này giải thích tài liệu KIIP được hình thành từ nguồn nào và nên tin mỗi nguồn đến mức nào. Hãy đọc nó như phần hướng dẫn sử dụng nguồn: trước tiên xác định nguồn gốc, sau đó kiểm tra thời điểm và cuối cùng mới đưa fact vào phần ôn thi.
+
 ## Uploaded KIIP study summaries
+
+Bộ note cơ bản được dựng trực tiếp từ các file người dùng cung cấp. Những file này xác định phạm vi và cách sắp xếp chapter, nhưng không tự động bảo đảm rằng mọi con số vẫn còn hiện hành.
 
 Bộ note cơ bản được dựng từ các file người dùng cung cấp:
 
@@ -15,7 +19,11 @@ Bộ note cơ bản được dựng từ các file người dùng cung cấp:
 
 File DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài liệu, không chứa syllabus substantive nên không dùng làm nguồn học thuật.
 
+Vì vậy, khi một fact trong PDF mâu thuẫn với quy định mới, hãy giữ PDF như nguồn giải thích cấu trúc bài học và dùng nguồn chính thức bên dưới để kiểm tra hiện trạng.
+
 ## Official / current references
+
+Các liên kết sau dùng để đối chiếu track kỳ thi, nội dung 심화 và những fact có khả năng thay đổi. Mỗi khi cập nhật một con số, hãy ghi thêm ngày kiểm tra vào note tương ứng để người học biết kết luận đó có thời hạn.
 
 - 법무부 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
 - 사회통합정보망: https://www.socinet.go.kr/
@@ -24,7 +32,11 @@ File DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài li
 - 법정 최고금리 20%: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 - 예금보호한도 1억원: https://www.fsc.go.kr/no010101/85200
 
+Đây là lớp nguồn dùng để sửa hoặc xác nhận fact; nó không thay thế phần giải thích dành cho người mới trong các chapter KIIP.
+
 ## Version policy
+
+Chính sách phiên bản giúp giữ cho tài liệu vừa dễ học vừa không giả vờ rằng dữ liệu luôn bất biến. Fact thay đổi cần có timestamp hoặc phải được dẫn về file corrections để người học biết cần kiểm tra lại ở đâu.
 
 Các fact có thể đổi được ghi timestamp hoặc đưa vào `00_current_facts_and_corrections.md`.
 
@@ -33,3 +45,5 @@ Tài liệu ôn thi phải luôn ưu tiên:
 2. nguồn chính thức;
 3. note này;
 4. tài liệu thương mại/community chỉ để tham khảo thêm.
+
+Khi có xung đột giữa các nguồn, hãy ghi nhận xung đột, ưu tiên thông báo chính thức mới nhất và không âm thầm xóa dấu vết của phiên bản cũ. Cách làm này giúp người học hiểu vì sao đáp án thay đổi và tránh lặp lại lỗi trong các bản tóm tắt sau.

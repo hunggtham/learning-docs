@@ -4,6 +4,8 @@ Folder này giải thích Neural Networks (신경망 / mạng nơ-ron) như mộ
 
 ## Dependency map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[00 From Linear Models to Neural Networks] --> B[01 Neuron, Perceptron & MLP]
@@ -45,6 +47,8 @@ flowchart TD
 **[09 — Training Dynamics](./09_deep_learning_training_dynamics.md)** tổng hợp learning curves, update/gradient/activation diagnostics, curriculum/data mixture, catastrophic forgetting, checkpointing, distributed batch và systematic debugging.
 
 ## Mental model của toàn layer
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Input representation

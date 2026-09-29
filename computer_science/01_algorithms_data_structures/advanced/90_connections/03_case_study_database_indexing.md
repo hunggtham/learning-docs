@@ -411,6 +411,8 @@ concurrency
 
 ## 18. Chuỗi suy luận hoàn chỉnh
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Yêu cầu nghiệp vụ
     ↓

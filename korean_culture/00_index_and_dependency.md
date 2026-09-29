@@ -16,6 +16,8 @@ Biểu thức này không phải công thức xã hội học dùng để “tí
 
 ## Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)
 
+Văn hoá được học như một hệ giao thức xã hội: lịch sử, thiết chế và ràng buộc vật chất tạo điều kiện cho hành vi, rồi công nghệ và phản hồi làm khuôn mẫu thay đổi. Sơ đồ dưới đây giúp người học biết nên nối chủ đề nào trước khi đưa ra một khái quát về xã hội Hàn Quốc.
+
 ```mermaid
 graph TD
     A[Địa lý + lịch sử bán đảo] --> A2[Các lớp lịch sử cổ đại → hiện đại]
@@ -78,6 +80,8 @@ Không bắt buộc đọc theo số file. Nếu muốn xây mô hình từ nề
 `16_connections_mental_models_misconceptions.md` nên đọc lại nhiều lần sau các nhóm chương lớn. Nó đóng vai trò như một **đồ thị kiến thức (knowledge graph)** bằng văn xuôi, không phải bản tóm tắt cuối sách.
 
 ## Cấu trúc thư mục
+
+Sau khi hiểu dependency, bảng thư mục cho biết mỗi file đảm nhiệm lớp câu hỏi nào. Dùng nó để chọn chapter theo hiện tượng cần giải thích và để quay lại nguồn nền khi một ví dụ vượt quá phạm vi file hiện tại.
 
 | File | Nội dung trung tâm |
 |---|---|

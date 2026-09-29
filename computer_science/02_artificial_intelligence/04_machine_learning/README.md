@@ -4,6 +4,8 @@ Folder này xây Machine Learning (ML / 기계학습 / học máy) từ learning
 
 ## Dependency map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[00 What is Machine Learning] --> B[01 Learning Problem & Inductive Bias]
@@ -75,6 +77,8 @@ flowchart TD
 **[15 — Model Evaluation](./15_model_evaluation.md)** tổng hợp confusion matrix, ROC/PR, calibration, regression/ranking metrics, confidence intervals, subgroup evaluation, online/offline evaluation và cost-sensitive decision making.
 
 ## Mental model của toàn layer
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Problem & deployment environment

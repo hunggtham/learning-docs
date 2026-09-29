@@ -4,6 +4,8 @@ Folder này giải thích Retrieval-Augmented Generation từ nền Information 
 
 ## Dependency Map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     IR[IR Foundations] --> SD[Sparse & Dense Retrieval]
@@ -20,6 +22,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```text
 00_information_retrieval_foundations.md
 01_sparse_and_dense_retrieval.md
@@ -34,6 +38,8 @@ flowchart TD
 ```
 
 ## Full Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Source of Truth
@@ -60,6 +66,8 @@ Evaluation + Monitoring
 ```
 
 ## Important Distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 retrieval relevance    ≠ factual truth

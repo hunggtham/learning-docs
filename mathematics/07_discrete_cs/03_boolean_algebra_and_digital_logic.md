@@ -83,6 +83,8 @@ Nhưng cost tăng exponential theo `n`, nên truth tables không scale cho logic
 
 ## 4. De Morgan's laws từ viewpoint complement
 
+De Morgan biến complement của AND thành OR của các complement và ngược lại. Đọc nó như một quy tắc đổi cấu trúc giúp đơn giản hóa logic, mạch số và điều kiện trong code.
+
 ```math
 \neg(P\land Q)
 \equiv

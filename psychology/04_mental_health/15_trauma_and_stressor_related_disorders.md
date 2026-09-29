@@ -143,6 +143,8 @@ Xem [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../90_connection
 
 ## 18. Mô hình tư duy
 
+Phần này chốt mô hình stressor–response–recovery thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn chẩn đoán tự động.
+
 ```text
 traumatic event
 → threat learning + memory + appraisal
@@ -154,6 +156,8 @@ traumatic event
 Recovery có thể đi qua new learning, meaning update, restored functioning, social support và treatment khi cần.
 
 ## Evidence anchors
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - VA/DoD Clinical Practice Guideline for PTSD and Acute Stress Disorder, 2023.
 - NICE NG116: Post-traumatic stress disorder.

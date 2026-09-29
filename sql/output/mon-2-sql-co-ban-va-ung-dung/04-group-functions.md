@@ -14,7 +14,124 @@ Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **đ
 
 ---
 
+Để học **Group Functions** như một mạch suy luận, trước hết hãy giữ câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Mục đích của bài là biến **Aggregate, GROUP BY, ROLLUP, CUBE, GROUPING và GROUPING SETS** thành cách đọc có thể áp dụng.
+
+```text
+상관/연관 서브쿼리
+Correlated Subquery
+```
+
+Ta bắt đầu **⭐ Inline View** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### ⭐ Inline View
+
+Phần này nối mạch SQL với “⭐ Inline View”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+FROM (
+    SELECT ...
+)
+```
+
+→ hãy tưởng tượng subquery **tạo ra một table tạm logic**.
+
+Khi gom phần **⭐ Inline View** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⭐ Inline View**. Bây giờ chuyển sang **⭐ EXISTS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⭐ EXISTS** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### ⭐ EXISTS
+
+Phần này nối mạch SQL với “⭐ EXISTS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+EXISTS
+→ Có ít nhất 1 row?
+
+NOT EXISTS
+→ Không có row nào?
+```
+
+Khi gom phần **⭐ EXISTS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⭐ EXISTS**. Bây giờ chuyển sang **⭐ Set Operators**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⭐ Set Operators** bằng câu hỏi: **ta đang hợp, giao hay trừ các tập kết quả, và điều kiện để hai tập có thể kết hợp là gì?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### ⭐ Set Operators
+
+Phần này nối mạch SQL với “⭐ Set Operators”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+UNION
+= A + B
+= remove duplicates
+
+UNION ALL
+= A + B
+= keep duplicates
+
+INTERSECT
+= A ∩ B
+
+MINUS
+= A - B
+```
+
+Khi gom phần **⭐ Set Operators** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⭐ Set Operators**. Bây giờ chuyển sang **⭐ Cạm bẫy cực hay thi**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⭐ Cạm bẫy cực hay thi** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### ⭐ Cạm bẫy cực hay thi
+
+Phần này nối mạch SQL với “⭐ Cạm bẫy cực hay thi”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+UNION     ≠ UNION ALL
+ANY       ≠ ALL
+IN        ≠ EXISTS về cơ chế/ý nghĩa
+A MINUS B ≠ B MINUS A
+
+Scalar Subquery ≠ Inline View
+Correlated ≠ Uncorrelated
+```
+
+Và đặc biệt:
+
+```text
+Scalar / Inline / Nested
+```
+
+là cách nhìn chủ yếu theo **vị trí/cách sử dụng**;
+
+trong khi:
+
+```text
+Correlated / Uncorrelated
+```
+
+là cách nhìn theo **mức độ phụ thuộc vào main query**.
+
+Hai khái niệm này có thể **chồng lên nhau**, không phải hai nhóm đối lập.
+
+Tiếp tục theo đúng format học SQLD trước đó: **bám sát nội dung trong ảnh → mỗi ý tiếng Hàn đi kèm giải thích tiếng Việt → giải thích keyword → sau đó mở rộng phần dễ nhầm và trọng tâm thi.**
+
+Khi gom phần **⭐ Cạm bẫy cực hay thi** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⭐ Cạm bẫy cực hay thi**. Bây giờ chuyển sang **제3절 그룹 함수 — Group Function**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **제3절 그룹 함수 — Group Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 제3절 그룹 함수 — Group Function
+
+Khi gom phần **제3절 그룹 함수 — Group Function** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **제3절 그룹 함수 — Group Function**. Bây giờ chuyển sang **1. Ba nhóm hàm phân tích dữ liệu trong SQL**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **1. Ba nhóm hàm phân tích dữ liệu trong SQL** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 1. Ba nhóm hàm phân tích dữ liệu trong SQL
 
@@ -51,6 +168,12 @@ vẫn giữ từng nhân viên.
 
 ---
 
+Khi gom phần **1. Ba nhóm hàm phân tích dữ liệu trong SQL** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **1. Ba nhóm hàm phân tích dữ liệu trong SQL**. Bây giờ chuyển sang **2. 집계 함수 — Aggregate Function**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2. 집계 함수 — Aggregate Function** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 2. 집계 함수 — Aggregate Function
 
 Điểm quan trọng nhất của phần này:
@@ -61,6 +184,12 @@ vẫn giữ từng nhân viên.
 Đây là kiến thức rất dễ xuất hiện trong SQLD.
 
 ---
+
+Khi gom phần **2. 집계 함수 — Aggregate Function** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2. 집계 함수 — Aggregate Function**. Bây giờ chuyển sang **2.1 COUNT**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2.1 COUNT** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.1 COUNT
 
@@ -74,6 +203,12 @@ COUNT(*)
 COUNT(SAL)
 COUNT(EMPNO)
 ```
+
+Khi gom phần **2.1 COUNT** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2.1 COUNT**. Bây giờ chuyển sang **`COUNT(*)`**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **`COUNT(*)`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### `COUNT(*)`
 
@@ -96,6 +231,12 @@ COUNT(*)
 
 ---
 
+Khi gom phần **`COUNT(*)`** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **`COUNT(*)`**. Bây giờ chuyển sang **`COUNT(SAL)`**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **`COUNT(SAL)`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### `COUNT(SAL)`
 
 **KR:** `COUNT(컬럼)`은 해당 컬럼에서 NULL이 아닌 값만 계산한다.
@@ -108,6 +249,12 @@ COUNT(SAL)
 → `2`
 
 Do SAL của nhân viên 2 là NULL.
+
+Khi gom phần **`COUNT(SAL)`** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **`COUNT(SAL)`**. Bây giờ chuyển sang **Mẹo SQLD**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Mẹo SQLD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### Mẹo SQLD
 
@@ -126,6 +273,12 @@ COUNT(EMPNO)
 vì PK không thể NULL.
 
 ---
+
+Khi gom phần **Mẹo SQLD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Mẹo SQLD**. Bây giờ chuyển sang **3. SUM**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **3. SUM** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 3. SUM
 
@@ -158,6 +311,12 @@ NULL bị bỏ qua.
 `SUM` về cơ bản dùng cho dữ liệu numeric.
 
 ---
+
+Khi gom phần **3. SUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **3. SUM**. Bây giờ chuyển sang **4. AVG — phần rất dễ ra đề**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4. AVG — phần rất dễ ra đề** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 4. AVG — phần rất dễ ra đề
 
@@ -195,6 +354,12 @@ mà là:
 ```
 
 ---
+
+Khi gom phần **4. AVG — phần rất dễ ra đề** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4. AVG — phần rất dễ ra đề**. Bây giờ chuyển sang **AVG(SAL) khác AVG(NVL(SAL,0))**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **AVG(SAL) khác AVG(NVL(SAL,0))** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### AVG(SAL) khác AVG(NVL(SAL,0))
 
@@ -239,6 +404,12 @@ AVG(NVL(SAL, 0))  = 75
 
 ---
 
+Khi gom phần **AVG(SAL) khác AVG(NVL(SAL,0))** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **AVG(SAL) khác AVG(NVL(SAL,0))**. Bây giờ chuyển sang **Một quan hệ rất đáng nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Một quan hệ rất đáng nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Một quan hệ rất đáng nhớ
 
 Nếu `EMPNO` là PK:
@@ -277,6 +448,12 @@ AVG(NVL(SAL,0))
 
 ---
 
+Khi gom phần **Một quan hệ rất đáng nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Một quan hệ rất đáng nhớ**. Bây giờ chuyển sang **5. MIN / MAX**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **5. MIN / MAX** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 5. MIN / MAX
 
 **KR:** `MIN`, `MAX`는 각각 최솟값과 최댓값을 반환한다.
@@ -306,6 +483,12 @@ MIN(HIREDATE)
 
 ---
 
+Khi gom phần **5. MIN / MAX** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **5. MIN / MAX**. Bây giờ chuyển sang **6. VARIANCE / STDDEV**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **6. VARIANCE / STDDEV** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 6. VARIANCE / STDDEV
 
 **KR:** `VARIANCE`는 분산을, `STDDEV`는 표준편차를 계산한다.
@@ -320,6 +503,12 @@ STDDEV ≈ √VARIANCE
 SQLD chủ yếu yêu cầu hiểu ý nghĩa, thường không cần tự tính toán thống kê phức tạp.
 
 ---
+
+Khi gom phần **6. VARIANCE / STDDEV** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **6. VARIANCE / STDDEV**. Bây giờ chuyển sang **7. GROUP BY cơ bản**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **7. GROUP BY cơ bản** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 7. GROUP BY cơ bản
 
@@ -366,6 +555,12 @@ Không phải:
 
 ---
 
+Khi gom phần **7. GROUP BY cơ bản** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **7. GROUP BY cơ bản**. Bây giờ chuyển sang **8. GROUP BY không tự ORDER BY**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **8. GROUP BY không tự ORDER BY** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 8. GROUP BY không tự ORDER BY
 
 **KR:** GROUP BY를 사용한다고 해서 결과가 자동으로 정렬되는 것은 아니다.
@@ -385,6 +580,12 @@ Phải nhớ:
 Không được coi chúng là một.
 
 ---
+
+Khi gom phần **8. GROUP BY không tự ORDER BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **8. GROUP BY không tự ORDER BY**. Bây giờ chuyển sang **9. ROLLUP ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **9. ROLLUP ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 9. ROLLUP ⭐⭐⭐
 
@@ -409,6 +610,12 @@ GROUPING SETS (
 Đây là công thức cực quan trọng.
 
 ---
+
+Khi gom phần **9. ROLLUP ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **9. ROLLUP ⭐⭐⭐**. Bây giờ chuyển sang **9.1 ROLLUP(A,B)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **9.1 ROLLUP(A,B)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 9.1 ROLLUP(A,B)
 
@@ -462,6 +669,12 @@ NULL   NULL      29025  ← Grand Total
 
 ---
 
+Khi gom phần **9.1 ROLLUP(A,B)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **9.1 ROLLUP(A,B)**. Bây giờ chuyển sang **10. Tại sao ROLLUP(A,B) có N+1 level?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **10. Tại sao ROLLUP(A,B) có N+1 level?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 10. Tại sao ROLLUP(A,B) có N+1 level?
 
 **KR:** ROLLUP에서 그룹핑 컬럼의 수가 N개이면 N+1개의 집계 Level이 생성된다.
@@ -511,6 +724,12 @@ ROLLUP(A,B,C)
 
 4 level.
 
+Khi gom phần **10. Tại sao ROLLUP(A,B) có N+1 level?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **10. Tại sao ROLLUP(A,B) có N+1 level?**. Bây giờ chuyển sang **Công thức nhớ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Công thức nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Công thức nhớ
 
 > **ROLLUP = xóa dần từ bên phải.**
@@ -530,6 +749,12 @@ A
 Cách này dễ nhớ hơn học thuộc định nghĩa.
 
 ---
+
+Khi gom phần **Công thức nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Công thức nhớ**. Bây giờ chuyển sang **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐
 
@@ -585,6 +810,12 @@ Do đó:
 
 ---
 
+Khi gom phần **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **11. Thứ tự ROLLUP cực kỳ quan trọng ⭐⭐⭐**. Bây giờ chuyển sang **12. ROLLUP với composite column**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **12. ROLLUP với composite column** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 12. ROLLUP với composite column
 
 Ảnh có:
@@ -636,9 +867,23 @@ hay:
 
 ---
 
+Khi gom phần **12. ROLLUP với composite column** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **12. ROLLUP với composite column**. Bây giờ chuyển sang **So sánh rất quan trọng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **So sánh rất quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### So sánh rất quan trọng
 
+Khi gom phần **So sánh rất quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **So sánh rất quan trọng**. Bây giờ chuyển sang **Không có ngoặc**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Không có ngoặc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Không có ngoặc
+
+Phần này nối mạch SQL với “Không có ngoặc”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 ROLLUP(DNAME, JOB, MGR)
@@ -653,7 +898,15 @@ ROLLUP(DNAME, JOB, MGR)
 ()
 ```
 
+Khi gom phần **Không có ngoặc** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Không có ngoặc**. Bây giờ chuyển sang **Có composite column**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Có composite column** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Có composite column
+
+Phần này nối mạch SQL với “Có composite column”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 ROLLUP(DNAME, (JOB,MGR))
@@ -670,6 +923,12 @@ ROLLUP(DNAME, (JOB,MGR))
 `JOB + MGR` được coi như **một package**.
 
 ---
+
+Khi gom phần **Có composite column** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Có composite column**. Bây giờ chuyển sang **13. GROUPING() ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **13. GROUPING() ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 13. GROUPING() ⭐⭐⭐
 
@@ -691,6 +950,12 @@ Làm sao phân biệt?
 → `GROUPING()`.
 
 ---
+
+Khi gom phần **13. GROUPING() ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **13. GROUPING() ⭐⭐⭐**. Bây giờ chuyển sang **Quy tắc**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Quy tắc** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Quy tắc
 
@@ -716,6 +981,12 @@ GROUPING(column) = 0
 ```
 
 ---
+
+Khi gom phần **Quy tắc** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Quy tắc**. Bây giờ chuyển sang **14. Dùng GROUPING thay NVL**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **14. Dùng GROUPING thay NVL** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 14. Dùng GROUPING thay NVL
 
@@ -767,11 +1038,25 @@ Vì vậy:
 
 ---
 
+Khi gom phần **14. Dùng GROUPING thay NVL** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **14. Dùng GROUPING thay NVL**. Bây giờ chuyển sang **15. CASE và DECODE đều dùng được**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **15. CASE và DECODE đều dùng được** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 15. CASE và DECODE đều dùng được
 
 Ảnh cho hai cách.
 
+Khi gom phần **15. CASE và DECODE đều dùng được** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **15. CASE và DECODE đều dùng được**. Bây giờ chuyển sang **CASE**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**CASE** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### CASE
+
+Phần này nối mạch SQL với “CASE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 CASE
@@ -781,7 +1066,15 @@ CASE
 END
 ```
 
+Khi gom phần **CASE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **CASE**. Bây giờ chuyển sang **Oracle DECODE**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Oracle DECODE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Oracle DECODE
+
+Phần này nối mạch SQL với “Oracle DECODE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 DECODE(
@@ -796,6 +1089,12 @@ Hai cách nhằm mục đích tương tự.
 Trong Oracle, `DECODE` rất hay xuất hiện trong đề SQLD.
 
 ---
+
+Khi gom phần **Oracle DECODE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Oracle DECODE**. Bây giờ chuyển sang **16. CUBE ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **16. CUBE ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 16. CUBE ⭐⭐⭐
 
@@ -825,9 +1124,23 @@ GROUPING SETS (
 
 ---
 
+Khi gom phần **16. CUBE ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **16. CUBE ⭐⭐⭐**. Bây giờ chuyển sang **17. ROLLUP vs CUBE**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **17. ROLLUP vs CUBE** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 17. ROLLUP vs CUBE
 
+Khi gom phần **17. ROLLUP vs CUBE** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **17. ROLLUP vs CUBE**. Bây giờ chuyển sang **ROLLUP**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**ROLLUP** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### ROLLUP
+
+Phần này nối mạch SQL với “ROLLUP”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 ROLLUP(A,B)
@@ -841,7 +1154,15 @@ ROLLUP(A,B)
 ()
 ```
 
+Khi gom phần **ROLLUP** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ROLLUP**. Bây giờ chuyển sang **CUBE**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**CUBE** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### CUBE
+
+Phần này nối mạch SQL với “CUBE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 CUBE(A,B)
@@ -868,7 +1189,15 @@ ROLLUP không có.
 
 ---
 
+Khi gom phần **CUBE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **CUBE**. Bây giờ chuyển sang **Ví dụ từ ảnh**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Ví dụ từ ảnh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Ví dụ từ ảnh
+
+Phần này nối mạch SQL với “Ví dụ từ ảnh”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 CUBE(DNAME, JOB)
@@ -907,6 +1236,12 @@ GRAND TOTAL = 29025
 ```
 
 ---
+
+Khi gom phần **Ví dụ từ ảnh** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Ví dụ từ ảnh**. Bây giờ chuyển sang **18. Thứ tự CUBE khác ROLLUP**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **18. Thứ tự CUBE khác ROLLUP** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 18. Thứ tự CUBE khác ROLLUP
 
@@ -963,7 +1298,15 @@ ROLLUP(B,A)
 
 subtotal thay đổi.
 
+Khi gom phần **18. Thứ tự CUBE khác ROLLUP** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **18. Thứ tự CUBE khác ROLLUP**. Bây giờ chuyển sang **Nhớ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Nhớ
+
+Phần này nối mạch SQL với “Nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 ROLLUP → hierarchy → ORDER MATTERS
@@ -974,17 +1317,39 @@ Lưu ý: "order doesn't matter" ở đây nói về **các grouping set được
 
 ---
 
+Khi gom phần **Nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **19. Tại sao CUBE nặng hơn ROLLUP?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **19. Tại sao CUBE nặng hơn ROLLUP?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 19. Tại sao CUBE nặng hơn ROLLUP?
 
 Với N column:
 
+Khi gom phần **19. Tại sao CUBE nặng hơn ROLLUP?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **19. Tại sao CUBE nặng hơn ROLLUP?**. Bây giờ chuyển sang **ROLLUP**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**ROLLUP** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### ROLLUP
+
+Phần này nối mạch SQL với “ROLLUP”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 N + 1 grouping levels
 ```
 
+Khi gom phần **ROLLUP** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ROLLUP**. Bây giờ chuyển sang **CUBE**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**CUBE** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### CUBE
+
+Phần này nối mạch SQL với “CUBE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 2^N grouping combinations
@@ -1035,6 +1400,12 @@ Vì thế:
 
 ---
 
+Khi gom phần **CUBE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **CUBE**. Bây giờ chuyển sang **20. GROUPING SETS ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **20. GROUPING SETS ⭐⭐⭐** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 20. GROUPING SETS ⭐⭐⭐
 
 Đây là cách linh hoạt nhất.
@@ -1066,7 +1437,15 @@ và cũng không tự có:
 
 ---
 
+Khi gom phần **20. GROUPING SETS ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **20. GROUPING SETS ⭐⭐⭐**. Bây giờ chuyển sang **Đây là chỗ rất dễ nhầm**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Đây là chỗ rất dễ nhầm** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Đây là chỗ rất dễ nhầm
+
+Phần này nối mạch SQL với “Đây là chỗ rất dễ nhầm”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 GROUP BY DNAME, JOB
@@ -1094,6 +1473,12 @@ nghĩa là:
 Hai câu **hoàn toàn khác nhau**.
 
 ---
+
+Khi gom phần **Đây là chỗ rất dễ nhầm** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Đây là chỗ rất dễ nhầm**. Bây giờ chuyển sang **21. GROUPING SETS không tự sinh Grand Total**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **21. GROUPING SETS không tự sinh Grand Total** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 21. GROUPING SETS không tự sinh Grand Total
 
@@ -1131,6 +1516,12 @@ GROUP BY GROUPING SETS (
 
 ---
 
+Khi gom phần **21. GROUPING SETS không tự sinh Grand Total** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **21. GROUPING SETS không tự sinh Grand Total**. Bây giờ chuyển sang **22. GROUPING SETS tương đương UNION ALL**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **22. GROUPING SETS tương đương UNION ALL** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 22. GROUPING SETS tương đương UNION ALL
 
 Ví dụ:
@@ -1157,7 +1548,15 @@ GROUP BY JOB;
 
 ---
 
+Khi gom phần **22. GROUPING SETS tương đương UNION ALL** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **22. GROUPING SETS tương đương UNION ALL**. Bây giờ chuyển sang **23. GROUPING SETS không phụ thuộc thứ tự**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **23. GROUPING SETS không phụ thuộc thứ tự** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 23. GROUPING SETS không phụ thuộc thứ tự
+
+Phần này nối mạch SQL với “23. GROUPING SETS không phụ thuộc thứ tự”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 GROUPING SETS(A,B)
@@ -1179,6 +1578,12 @@ GROUPING SETS(B,A)
 Vì vậy tương tự CUBE, **thứ tự đối số không làm thay đổi tập grouping được yêu cầu**.
 
 ---
+
+Khi gom phần **23. GROUPING SETS không phụ thuộc thứ tự** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **23. GROUPING SETS không phụ thuộc thứ tự**. Bây giờ chuyển sang **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 24. Có thể biểu diễn ROLLUP bằng GROUPING SETS
 
@@ -1214,7 +1619,15 @@ Hai câu mô tả cùng các grouping set.
 
 ---
 
+Khi gom phần **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **24. Có thể biểu diễn ROLLUP bằng GROUPING SETS**. Bây giờ chuyển sang **25. Biểu diễn CUBE bằng GROUPING SETS**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **25. Biểu diễn CUBE bằng GROUPING SETS** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 25. Biểu diễn CUBE bằng GROUPING SETS
+
+Phần này nối mạch SQL với “25. Biểu diễn CUBE bằng GROUPING SETS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 CUBE(DEPTNO, JOB)
@@ -1244,7 +1657,15 @@ GROUP BY GROUPING SETS (
 
 ---
 
+Khi gom phần **25. Biểu diễn CUBE bằng GROUPING SETS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **25. Biểu diễn CUBE bằng GROUPING SETS**. Bây giờ chuyển sang **26. Bảng so sánh phải thuộc trước khi thi**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **26. Bảng so sánh phải thuộc trước khi thi** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 26. Bảng so sánh phải thuộc trước khi thi
+
+Phần này nối mạch SQL với “26. Bảng so sánh phải thuộc trước khi thi”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Expression                  | Grouping sets thực tế |
 | --------------------------- | --------------------- |
@@ -1256,6 +1677,12 @@ GROUP BY GROUPING SETS (
 | `GROUPING SETS((A,B),A,())` | `(A,B), (A), ()`      |
 
 ---
+
+Khi gom phần **26. Bảng so sánh phải thuộc trước khi thi** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **26. Bảng so sánh phải thuộc trước khi thi**. Bây giờ chuyển sang **27. Cách suy luận nhanh khi gặp đề SQLD**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **27. Cách suy luận nhanh khi gặp đề SQLD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 27. Cách suy luận nhanh khi gặp đề SQLD
 
@@ -1309,6 +1736,12 @@ Xong. Sau đó nhìn grouping nào cần tính.
 
 ---
 
+Khi gom phần **27. Cách suy luận nhanh khi gặp đề SQLD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **27. Cách suy luận nhanh khi gặp đề SQLD**. Bây giờ chuyển sang **28. Một bẫy đặc biệt: NULL trong kết quả**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **28. Một bẫy đặc biệt: NULL trong kết quả** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 28. Một bẫy đặc biệt: NULL trong kết quả
 
 Giả sử:
@@ -1351,6 +1784,12 @@ GROUPING(JOB)=0
 
 ---
 
+Khi gom phần **28. Một bẫy đặc biệt: NULL trong kết quả** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **28. Một bẫy đặc biệt: NULL trong kết quả**. Bây giờ chuyển sang **29. Sơ đồ tổng hợp cực dễ nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **29. Sơ đồ tổng hợp cực dễ nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 29. Sơ đồ tổng hợp cực dễ nhớ
 
 Hãy lấy:
@@ -1360,7 +1799,15 @@ A = Department
 B = Job
 ```
 
+Khi gom phần **29. Sơ đồ tổng hợp cực dễ nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **29. Sơ đồ tổng hợp cực dễ nhớ**. Bây giờ chuyển sang **GROUP BY**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**GROUP BY** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### GROUP BY
+
+Phần này nối mạch SQL với “GROUP BY”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 GROUP BY A,B
@@ -1368,7 +1815,15 @@ GROUP BY A,B
 A+B
 ```
 
+Khi gom phần **GROUP BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **GROUP BY**. Bây giờ chuyển sang **ROLLUP**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**ROLLUP** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### ROLLUP
+
+Phần này nối mạch SQL với “ROLLUP”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 ROLLUP(A,B)
@@ -1380,7 +1835,15 @@ A+B
 TOTAL
 ```
 
+Khi gom phần **ROLLUP** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ROLLUP**. Bây giờ chuyển sang **CUBE**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**CUBE** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### CUBE
+
+Phần này nối mạch SQL với “CUBE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 CUBE(A,B)
@@ -1392,7 +1855,15 @@ CUBE(A,B)
      TOTAL
 ```
 
+Khi gom phần **CUBE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **CUBE**. Bây giờ chuyển sang **GROUPING SETS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**GROUPING SETS** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### GROUPING SETS
+
+Phần này nối mạch SQL với “GROUPING SETS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 GROUPING SETS(A,B)
@@ -1403,6 +1874,12 @@ A       B
 Bạn **chỉ lấy đúng những group mình chỉ định**.
 
 ---
+
+Khi gom phần **GROUPING SETS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **GROUPING SETS**. Bây giờ chuyển sang **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ
 
@@ -1449,7 +1926,15 @@ Bạn **chỉ lấy đúng những group mình chỉ định**.
 
 14. Cả `ROLLUP` và `CUBE` đều có thể biểu diễn bằng `GROUPING SETS`.
 
+Khi gom phần **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ**. Bây giờ chuyển sang **Công thức nhớ 10 giây trước khi vào thi**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Công thức nhớ 10 giây trước khi vào thi** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Công thức nhớ 10 giây trước khi vào thi
+
+Phần này nối mạch SQL với “Công thức nhớ 10 giây trước khi vào thi”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 ROLLUP(A,B)
@@ -1467,3 +1952,7 @@ Và câu quyết định:
 > **ROLLUP = 계층 / hierarchy**
 > **CUBE = 모든 조합 / all combinations**
 > **GROUPING SETS = 내가 지정 / exactly what I specify**
+
+Khi gom phần **Công thức nhớ 10 giây trước khi vào thi** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Như vậy, **Công thức nhớ 10 giây trước khi vào thi** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.

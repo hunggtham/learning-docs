@@ -50,6 +50,8 @@ Xem [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
 ## Cấu trúc
 
+Cấu trúc này đi từ scientific foundations và brain/mind tới cognition, development, social context, mental health và ứng dụng. Mỗi tuyến chỉ là một cách đi qua cùng hệ thống; phần giải thích của chapter phải chỉ rõ concept trước đó được dùng ở đâu.
+
 ```text
 psychology/
 ├── 00_foundations/
@@ -67,6 +69,8 @@ psychology/
 ```
 
 ## Ba file điều phối library
+
+Ba file này giữ cho việc học không bị tách thành các chapter rời: dependency cho biết học gì trước, coverage audit cho biết còn gap nào, còn evidence guide cho biết nên tin claim ở mức nào. Hãy dùng chúng để điều hướng và kiểm tra sau mỗi reading path.
 
 - [[CONCEPTUAL_DEPENDENCIES]]: prerequisite và connection giữa các domain.
 - [[COVERAGE_AUDIT]]: coverage, depth, language, evidence-status và conceptual gap.

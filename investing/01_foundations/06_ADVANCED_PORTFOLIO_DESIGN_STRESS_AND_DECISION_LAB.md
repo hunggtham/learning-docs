@@ -151,6 +151,8 @@ Hai kịch bản đều có cổ phiếu giảm nhưng phần phòng vệ phù h
 
 ## 10. Kiểm thử ngược
 
+Sau khi đã chạy stress theo các cú sốc cụ thể, ta đảo câu hỏi để tìm điều kiện làm kế hoạch thất bại. Đây là bước kiểm tra ngưỡng sống còn trước khi tối ưu lợi suất.
+
 **Kiểm thử ngược (reverse stress test)** không hỏi “nếu X xảy ra thì lỗ bao nhiêu?”, mà hỏi:
 
 > Điều gì phải xảy ra để kế hoạch tài chính thất bại?
@@ -285,6 +287,8 @@ Sau đó:
 Nếu hoàn thành được bài tập này, người đọc đã chuyển từ “biết sản phẩm” sang **thiết kế một hệ thống đầu tư có mục tiêu**.
 
 ## 19. Liên kết đọc tiếp
+
+Phần này là điểm bàn giao từ lab thiết kế danh mục sang các chapter đo lường, attribution, hedge và case study. Chọn link theo lỗ hổng còn lại, rồi quay lại lab để cập nhật giả định và quy tắc.
 
 - [Đo lường rủi ro và phân tích danh mục](./04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md)
 - [Phân rã kết quả, phí, thuế và hành vi](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md)

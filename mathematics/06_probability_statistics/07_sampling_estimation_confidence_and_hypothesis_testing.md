@@ -756,6 +756,8 @@ Claim là associational hay causal?
 
 ## Knowledge Connection
 
+Phần kết nối đặt sampling và uncertainty cạnh experiment, regression và decision. Hãy phân biệt uncertainty do mẫu với bias do thiết kế trước khi diễn giải khoảng tin cậy.
+
 ```text
 probability
 → LLN / CLT

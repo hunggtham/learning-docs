@@ -231,6 +231,8 @@ Một application tốt không nhất thiết “không bao giờ dùng null”,
 
 # 8. `final` và tư duy immutable
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 final int maxRetry = 3;
 ```
@@ -632,6 +634,8 @@ connect(host, DEFAULT_TIMEOUT)
 
 # 18. Varargs
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 void log(String... messages) {
 }
@@ -652,6 +656,8 @@ Generic varargs có type-erasure/heap-pollution concerns; Intermediate sẽ gi�
 ---
 
 # 19. Arrays
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 int[] numbers = {1, 2, 3};
@@ -743,6 +749,8 @@ rất hữu ích cho SQL/JSON snippets.
 ---
 
 # 21. String concatenation và StringBuilder
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 String full = first + " " + last;
@@ -990,6 +998,8 @@ Static không xấu. Constants, pure utilities và factory methods rất hữu �
 ---
 
 # 29. Inheritance
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 class Dog extends Animal {
@@ -1395,6 +1405,8 @@ Set correctness phụ thuộc `equals/hashCode` hoặc ordering comparator. Muta
 
 # 43. `Map`
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 Map<Long, User> users =
     new HashMap<>();
@@ -1445,6 +1457,8 @@ counts.merge(word, 1, Integer::sum);
 ---
 
 # 45. Immutable collection factory methods từ Java 9
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 List<String> names =
@@ -1519,6 +1533,8 @@ Beginner chỉ cần hiểu `T` là compile-time type parameter. Type erasure, w
 ---
 
 # 47. Diamond Operator
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 Map<String, List<User>> users =
@@ -1610,6 +1626,8 @@ Khi lambda phức tạp nhiều lines/conditions, named method hoặc named stra
 ---
 
 # 50. Method References
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 users.stream()
@@ -1765,6 +1783,8 @@ Optional hữu ích cho return semantics. Không cần dùng `Optional` cho mọ
 
 # 56. `orElse` vs `orElseGet`
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 optional.orElse(
     expensiveFallback());
@@ -1875,6 +1895,8 @@ Period oneMonth =
 ---
 
 # 60. DateTimeFormatter
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 DateTimeFormatter formatter =
@@ -2517,6 +2539,8 @@ return List.of();
 
 # 79. Anti-pattern: `double` cho Money
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 double total = 0.1 + 0.2;
 ```
@@ -2540,6 +2564,8 @@ Extract methods/classes theo meaningful behavior, không theo arbitrary line cou
 ---
 
 # 81. Anti-pattern: Mutable Static Global State
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 public static Map<String, User>

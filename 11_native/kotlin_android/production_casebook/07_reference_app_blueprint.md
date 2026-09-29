@@ -47,6 +47,8 @@ Một cấu trúc có thể là:
 Trong app nhỏ, nhiều module trên có thể chỉ là package. Đừng module hóa để đạt “kiến trúc chuẩn”. Tách module khi cần ownership/build/API boundary.
 
 ## 3. Dependency direction
+Phần này nối mạch Android vừa học với “3. Dependency direction”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 feature UI
@@ -63,6 +65,8 @@ Không để `core:database` import Composable. Không để `core:network` navi
 `:app` là composition root: kết nối DI graph, top-level navigation và application configuration.
 
 ## 4. Domain model
+Phần này nối mạch Android vừa học với “4. Domain model”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 data class Article(
@@ -80,6 +84,8 @@ value class ArticleId(val value: String)
 Value class có thể giảm nhầm ID giữa entity khác nhau mà runtime overhead thấp trong nhiều case. Tuy nhiên interop/serialization/boxing cần hiểu trước khi dùng public API rộng.
 
 ## 5. Network DTO
+Phần này nối mạch Android vừa học với “5. Network DTO”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Serializable
@@ -94,6 +100,8 @@ data class ArticleDto(
 DTO phản ánh server contract, không expose thẳng lên UI.
 
 ## 6. Database Entity
+Phần này nối mạch Android vừa học với “6. Database Entity”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Entity(tableName = "articles")
@@ -110,6 +118,8 @@ data class ArticleEntity(
 Entity phản ánh local storage. Local-only metadata không cần xuất hiện trong DTO/domain nếu không có ý nghĩa ở đó.
 
 ## 7. Repository contract
+Phần này nối mạch Android vừa học với “7. Repository contract”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 interface ArticlesRepository {
@@ -139,6 +149,8 @@ network response
 Network fail nhưng DB có cache: UI vẫn render cache + refresh error indicator.
 
 ## 9. UI state
+Phần này nối mạch Android vừa học với “9. UI state”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 sealed interface FeedUiState {
@@ -158,6 +170,8 @@ sealed interface FeedUiState {
 Không bắt buộc sealed class; data class tổng hợp cũng được. Chọn representation làm invalid state khó biểu diễn.
 
 ## 10. ViewModel
+Phần này nối mạch Android vừa học với “10. ViewModel”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 class FeedViewModel(
@@ -190,6 +204,8 @@ class FeedViewModel(
 Thực tế refresh state/error cần kết hợp rõ hơn; snippet chỉ minh họa direction.
 
 ## 11. Compose Route
+Phần này nối mạch Android vừa học với “11. Compose Route”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Composable
@@ -210,6 +226,8 @@ fun FeedRoute(
 `FeedScreen` pure hơn route và không giữ NavController/repository.
 
 ## 12. Navigation contract
+Phần này nối mạch Android vừa học với “12. Navigation contract”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Serializable data object FeedRoute
@@ -236,6 +254,8 @@ Feed list | Article detail pane
 Business state vẫn là selected article ID. Presentation khác theo window configuration.
 
 ## 14. Session graph
+Phần này nối mạch Android vừa học với “14. Session graph”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 AppStart
@@ -251,6 +271,8 @@ AuthGraph      MainGraph
 Root UI observe SessionRepository. Protected repository vẫn dựa backend authorization; navigation chỉ điều khiển UX.
 
 ## 15. Token layer
+Phần này nối mạch Android vừa học với “15. Token layer”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 TokenStore
@@ -265,6 +287,8 @@ Repositories
 Không feature nào tự implement refresh token.
 
 ## 16. Error hierarchy
+Phần này nối mạch Android vừa học với “16. Error hierarchy”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 sealed interface AppError {
@@ -376,6 +400,8 @@ interface SettingsRepository {
 Compose root collect settings và apply theme. UI con không tự đọc DataStore.
 
 ## 22. Analytics boundary
+Phần này nối mạch Android vừa học với “22. Analytics boundary”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 interface Analytics {
@@ -417,6 +443,8 @@ ViewModel/state holder
 Đừng singleton object chỉ vì “Hilt tiện”. Scope theo lifetime và mutable state.
 
 ## 25. Dispatcher injection
+Phần này nối mạch Android vừa học với “25. Dispatcher injection”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Qualifier
@@ -477,6 +505,8 @@ Release:
 - migration test all supported schema path.
 
 ## 28. CI pipeline
+Phần này nối mạch Android vừa học với “28. CI pipeline”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 PR
@@ -496,6 +526,8 @@ main/release
 ```
 
 ## 29. Build variant
+Phần này nối mạch Android vừa học với “29. Build variant”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 debug

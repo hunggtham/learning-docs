@@ -88,6 +88,8 @@ Ta reuse hierarchy của borders.
 
 ### Java cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 static int[] prefixFunction(String s) {
     int n = s.length();
@@ -143,6 +145,8 @@ O(m)
 \]
 
 ### JavaScript cách triển khai
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```js
 function prefixFunction(s) {
@@ -446,6 +450,8 @@ có thể tạo nhiều các lần cấp phát/copies. `StringBuilder` phù hợ
 `Intl.Segmenter` có thể hữu ích cho phân đoạn theo cách người dùng nhìn thấy trong UI/domain cần graphemes; đó là tầng khác với classic DSA string matching.
 
 ## Choosing the right string technique
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 | Nhu cầu | Structure/thuật toán tự nhiên |
 |---|---|

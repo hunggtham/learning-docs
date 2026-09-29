@@ -164,6 +164,8 @@ H(X,Y)=H(X)+H(Y|X).
 
 ## 8. Mutual information: biết Y giảm uncertainty về X bao nhiêu?
 
+Mutual information đo lượng bất định về X được giảm khi quan sát Y. Nó không yêu cầu quan hệ tuyến tính, nhưng vẫn phụ thuộc cách mô hình hóa phân phối và dữ liệu.
+
 ```math
 I(X;Y)=H(X)-H(X|Y).
 ```
@@ -221,6 +223,8 @@ L=-\log q(y_{true}).
 Confident wrong predictions bị phạt mạnh vì `-log q` tăng lớn khi `q→0`.
 
 ## 11. KL divergence là extra coding/log-loss cost
+
+KL divergence có thể đọc như chi phí thêm khi dùng Q thay cho P để mã hóa hoặc dự đoán. Hướng P‖Q rất quan trọng vì đổi hướng sẽ đổi ý nghĩa.
 
 ```math
 D_{KL}(p\|q)
@@ -432,6 +436,8 @@ Finite-sample bias có thể lớn.
 Entropy depends on chosen random variable/representation.
 
 ## Knowledge Connection
+
+Phần kết nối nối entropy, mutual information và KL với machine learning, compression, privacy và decision theory. Hãy phân biệt đo thông tin với tối ưu loss trong từng context.
 
 ```text
 Probability → uncertainty

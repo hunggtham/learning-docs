@@ -412,6 +412,8 @@ Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiế
 
 ## Dữ liệu và nguồn cần ghi mốc thời gian
 
+Dân số, di cư và nền tảng số đều là dữ liệu động. Phần này nhắc người đọc ghi rõ năm, định nghĩa mẫu và nguồn để không biến một snapshot thành quy luật dài hạn.
+
 - `2025 고령자 통계`: người 65+ chiếm 20,3% dân số năm 2025; tỷ lệ dùng Internet của nhóm 65+ năm 2024 là 76,9%. Nguồn: 국가데이터처/Statistics Korea, `2025 고령자 통계`.
 - `2025 출생·사망통계(잠정)`, công bố 25/02/2026: TFR 2025 sơ bộ khoảng 0,80. Nguồn: 국가데이터처/Statistics Korea.
 - `2024년 이주배경인구 통계`, công bố 08/12/2025: dân số có nền tảng di cư chiếm 5,2% tổng dân số năm 2024. Nguồn: 국가데이터처/Statistics Korea.

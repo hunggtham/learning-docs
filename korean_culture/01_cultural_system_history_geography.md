@@ -503,6 +503,8 @@ Nguyên tắc **tiết kiệm lời giải thích (parsimony)** là: dùng cơ c
 
 ## Đọc tiếp
 
+Các liên kết sau mở rộng những mắt xích mà chapter này mới đặt nền: quan hệ, không gian, thiết chế và thay đổi hiện đại. Chọn đường đọc theo câu hỏi còn bỏ ngỏ thay vì đọc thêm theo số thứ tự.
+
 - [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md) — các lớp lịch sử chi tiết hơn.
 - [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md) — khác biệt vùng.
 - [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md) — biến đổi dân số.

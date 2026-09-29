@@ -432,6 +432,8 @@ Sau đó hỏi ba câu:
 
 ## Liên kết tiếp theo
 
+Các tài liệu liên kết giúp kiểm tra cấu trúc sở hữu, kế toán, định giá và phản ứng thị trường quanh corporate action. Đọc tiếp để nối sự kiện pháp lý với cash flow và quyền cổ đông.
+
 - [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md)
 - [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md)
 - [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md)

@@ -52,6 +52,8 @@ Concurrency API không thay kiến trúc tốt. Trước tiên giảm work, trá
 Concurrent rendering không thay identity rules; nó thay cách render work được schedule. React có thể bắt đầu, pause, restart hoặc abandon render trước commit, nên render phải pure. Reconciliation trả lời tree nào là cùng identity và cần thay gì; scheduling trả lời work nào ưu tiên và có thể ngắt. External store cần snapshot nhất quán với concurrency, là lý do React 18 có `useSyncExternalStore` thay cho subscription Effect tự chế dễ tearing.
 
 ## 5. `useTransition` và `startTransition`
+Phần này nối mạch bài học với “5. `useTransition` và `startTransition`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [isPending, startTransition] = useTransition();
@@ -69,6 +71,8 @@ function handleChange(event) {
 Transition không phải debounce. Debounce trì hoãn theo thời gian; transition biểu đạt priority. `startTransition` standalone dùng khi không cần pending state tại caller.
 
 ## 6. `useDeferredValue`
+Phần này nối mạch bài học với “6. `useDeferredValue`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const deferredQuery = useDeferredValue(query);
@@ -88,6 +92,8 @@ Input cập nhật ngay theo `query`, subtree nặng có thể dùng value cũ t
 Ví dụ search box có thể cập nhật text ngay, defer render danh sách lớn để typing mượt, đồng thời debounce network request để giảm traffic. Nếu chỉ debounce toàn bộ state input, UI có thể cảm giác lag; nếu chỉ transition request, bạn vẫn có thể gửi quá nhiều HTTP calls. Senior design phải tách **responsiveness**, **render priority** và **I/O rate limiting**.
 
 ## 7. Suspense nâng cao
+Phần này nối mạch bài học với “7. Suspense nâng cao”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <Suspense fallback={<Skeleton />}>
@@ -130,6 +136,8 @@ React 19 mở rộng async mutation qua Actions. Trong môi trường hỗ trợ
 Không phải cứ viết `"use server"` trong Vite SPA là có server runtime. Server Actions/Functions cần RSC/framework integration.
 
 ## 10. `useActionState`
+Phần này nối mạch bài học với “10. `useActionState`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [state, submitAction, isPending] =
@@ -168,6 +176,8 @@ function SubmitButton() {
 Component đọc status phải nằm trong form context đúng cấu trúc.
 
 ## 12. `useOptimistic`
+Phần này nối mạch bài học với “12. `useOptimistic`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [optimisticMessages, addOptimisticMessage] =
@@ -228,6 +238,8 @@ Animation không thay thế loading architecture.
 Fragment refs cho phép làm việc với tập host children mà không bắt buộc thêm wrapper DOM chỉ để có ref. Điều này hữu ích cho focus management, measurement và DOM integration mà vẫn giữ semantic/layout. Vì API rất mới, library cần minimum peer version rõ.
 
 ## 17. External store và `useSyncExternalStore`
+Phần này nối mạch bài học với “17. External store và `useSyncExternalStore`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const snapshot = useSyncExternalStore(
@@ -248,6 +260,8 @@ API này cung cấp contract để React đọc store ngoài React nhất quán 
 > `useSyncExternalStore` và `useInsertionEffect` được giới thiệu cùng React 18 chủ yếu để external store và CSS-in-JS library tương thích tốt với concurrent rendering. Application code bình thường hiếm khi cần tự dùng `useInsertionEffect`, còn `useSyncExternalStore` thường nằm phía dưới các state-management libraries.
 
 ## 19. `useImperativeHandle`
+Phần này nối mạch bài học với “19. `useImperativeHandle`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function MyInput({ ref }) {
@@ -659,6 +673,8 @@ Không nên nhìn cột “thay thế” như một bảng search-and-replace. V
 Giả sử cần subscribe một room theo `roomId`.
 
 ### React Class Component
+Phần này nối mạch bài học với “React Class Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class ChatRoom extends React.Component {
@@ -706,6 +722,8 @@ class ChatRoom extends React.Component {
 ```
 
 ### Function Component với Hooks
+Phần này nối mạch bài học với “Function Component với Hooks”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function ChatRoom({

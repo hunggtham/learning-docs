@@ -338,12 +338,16 @@ Nếu blank lớn hoặc biến thiên, độ tin cậy giảm dù cân rất ch
 
 ## Điểm mạnh
 
+Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability và độ đúng với thời gian, lượng mẫu và độ chọn lọc cần thiết. Các điểm mạnh sau giải thích vì sao phương pháp vẫn hữu ích dù chậm.
+
 - neo trực tiếp vào khối lượng và hóa lượng;
 - ít phụ thuộc đường hiệu chuẩn thiết bị;
 - có thể đạt độ đúng cao;
 - quy trình hóa học minh bạch, dễ kiểm tra mass balance.
 
 ## Giới hạn
+
+Chính các bước thủ công tạo nên những giới hạn của gravimetry. Khi analyte quá ít hoặc đồng kết tủa khó kiểm soát, phương pháp có thể mất ưu thế so với kỹ thuật instrumental.
 
 - thường chậm;
 - cần lượng analyte đủ lớn;

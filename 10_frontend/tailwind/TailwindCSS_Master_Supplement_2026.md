@@ -206,6 +206,8 @@ Bạn có thể xác định base path:
 ---
 
 ## 8. `@source not` và việc loại bỏ source không cần thiết
+Phần này nối mạch bài học với “8. `@source not` và việc loại bỏ source không cần thiết”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @source not "../src/legacy";
@@ -641,6 +643,8 @@ Một custom tiện ích (utility) tên `dashboard-card-primary` chứa layout, 
 ---
 
 ## 23. Functional tiện ích (utility)
+Phần này nối mạch bài học với “23. Functional tiện ích (utility)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @utility tab-* {
@@ -695,6 +699,8 @@ map khóa–giá trị (map) tới theme token.
 ---
 
 ## 25. Bare giá trị (value) resolver
+Phần này nối mạch bài học với “25. Bare giá trị (value) resolver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 --value(integer)
@@ -715,6 +721,8 @@ Bare các giá trị (values) nên được giới hạn theo CSS/thuộc tính 
 ---
 
 ## 26. giá trị tùy ý (arbitrary value) resolver
+Phần này nối mạch bài học với “26. giá trị tùy ý (arbitrary value) resolver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 --value([integer])
@@ -736,6 +744,8 @@ Typed giá trị tùy ý (arbitrary value) giúp parser biết bạn muốn gì 
 ---
 
 ## 27. Nhiều resolver trong cùng tiện ích (utility)
+Phần này nối mạch bài học với “27. Nhiều resolver trong cùng tiện ích (utility)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @utility tab-* {
@@ -859,6 +869,8 @@ Một biến thể (variant) vì vậy có thể được hiểu như **hàm (fu
 ---
 
 ## 34. biến thể (variant) stacking
+Phần này nối mạch bài học với “34. biến thể (variant) stacking”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 dark:md:hover:bg-blue-600
@@ -952,6 +964,8 @@ V4.3 nâng cấp stacked/compound `@variant`, nên Tailwind biến thể (varian
 # PHẦN VI — cơ chế phân tầng (cascade) VÀ CONFLICT Ở MỨC MASTER
 
 ## 38. Vì sao class order trong HTML không đảm bảo winner?
+Phần này nối mạch bài học với “38. Vì sao class order trong HTML không đảm bảo winner?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="px-2 px-4">
@@ -1185,6 +1199,8 @@ Class remains static, giá trị (value) thời gian chạy (runtime).
 ---
 
 ## 51. thời gian chạy (runtime) color
+Phần này nối mạch bài học với “51. thời gian chạy (runtime) color”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <div
@@ -1237,6 +1253,8 @@ Tailwind không bypass Content Security Policy.
 # PHẦN IX — DARK MODE VÀ MULTI-THEME Ở SCALE LỚN
 
 ## 54. Utility-pair dark mode
+Phần này nối mạch bài học với “54. Utility-pair dark mode”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -1308,6 +1326,8 @@ Tailwind generated CSS không thể tự quyết định persisted app preferenc
 # PHẦN X — ARIA, DATA, GROUP, PEER, HAS Ở MỨC kiến trúc (architecture)
 
 ## 57. ARIA là mang tính ngữ nghĩa (semantic) contract
+Phần này nối mạch bài học với “57. ARIA là mang tính ngữ nghĩa (semantic) contract”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 aria-expanded
@@ -1324,6 +1344,8 @@ Nếu trạng thái (state) chỉ là “loading skeleton visible”, dùng `dat
 ---
 
 ## 58. Data attribute là presentation/application trạng thái (state) hook
+Phần này nối mạch bài học với “58. Data attribute là presentation/application trạng thái (state) hook”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -1414,6 +1436,8 @@ Không dùng `:has()` để suy business trạng thái (state) không được b
 # PHẦN XI — THIRD-PARTY INTEGRATION
 
 ## 63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ
+Phần này nối mạch bài học với “63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 [&_.vendor-item]:p-2
@@ -1450,6 +1474,8 @@ và viết normal CSS hoặc `@apply` targeted.
 ---
 
 ## 65. `@apply` ở integration layer
+Phần này nối mạch bài học với “65. `@apply` ở integration layer”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 .vendor-dropdown {
@@ -1736,6 +1762,8 @@ Nếu product còn hỗ trợ browser cũ, upgrade có thể là product decisio
 ---
 
 ## 84. `@config` như chuyển đổi (migration) bridge
+Phần này nối mạch bài học với “84. `@config` như chuyển đổi (migration) bridge”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @config "../../tailwind.config.js";
@@ -1804,6 +1832,8 @@ V4 được tối ưu mạnh cho incremental generation, nhưng monorepo/file-wa
 ---
 
 ## 89. Unique các giá trị tùy ý (arbitrary values)
+Phần này nối mạch bài học với “89. Unique các giá trị tùy ý (arbitrary values)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 top-[117px]

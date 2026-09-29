@@ -304,6 +304,8 @@ thì scope chuyển sang DNS, TLS, proxy, firewall hoặc route.
 
 ## Packet capture như bằng chứng cuối cùng
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 sudo tcpdump -ni any port 8080
 ```

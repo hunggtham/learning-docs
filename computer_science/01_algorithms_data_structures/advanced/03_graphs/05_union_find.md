@@ -337,6 +337,8 @@ Union/find khi đó thường `O(log n)` trường hợp xấu nhất do union-b
 
 ### Change stack idea
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 union(ra, rb):
     record (rb, oldParent, ra, oldSizeRa)
@@ -380,6 +382,8 @@ Kỹ thuật này dùng cùng lập luận nhân đôi để chặn số lần m
 Cùng chứng minh mẫu không đồng nghĩa cùng cấu trúc dữ liệu.
 
 ## Java cách triển khai đầy đủ cơ bản
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```java
 final class DSU {
@@ -444,6 +448,8 @@ final class DSU {
 ```
 
 ## JavaScript cách triển khai
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```js
 class DSU {

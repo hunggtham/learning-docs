@@ -381,6 +381,10 @@ Ta thấy fast carrier được modulate bởi slow envelope. Beat phenomenon kh
 
 ## Knowledge Connection
 
+Phần này nối lượng giác với rotation, complex numbers, Fourier và dao động. Hãy giữ identity như biểu hiện của cấu trúc chu kỳ thay vì học thuộc từng công thức.
+
+Phần kết nối đặt lượng giác cạnh rotation, complex numbers, Fourier và dao động. Mục tiêu là thấy identity và harmonic không phải công thức rời mà là cùng một cấu trúc chu kỳ.
+
 ```text
 unit circle
 → rotation matrix

@@ -4,6 +4,8 @@ Transformer architecture phù hợp multimodal AI vì attention cho phép tokens
 
 ## Pattern 1: Separate Encoders + Late Fusion
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 image → vision encoder → embedding
 text → text encoder → embedding

@@ -231,6 +231,8 @@ Interpolation assumes values are treated as exact enough that matching them exac
 
 ## 13. Lagrange interpolation
 
+Lagrange interpolation dựng đa thức đi qua các điểm đã biết. Nó hữu ích khi cần giá trị giữa mẫu, nhưng độ ổn định và việc chọn node quyết định sai số ngoài dữ liệu quan sát.
+
 ```math
 P(x)
 =
@@ -396,6 +398,8 @@ Pivoting is numerical stability strategy, not a change to mathematical solution.
 
 ## 24. LU factorization
 
+LU factorization tách ma trận thành lower và upper triangular để giải nhiều hệ với cùng matrix hiệu quả hơn. Pivoting và conditioning quyết định lời giải có ổn định hay không.
+
 ```math
 A=LU
 ```
@@ -415,6 +419,8 @@ Ux=y.
 If many right-hand sides share same `A`, factorization reused, making solves cheaper.
 
 ## 25. QR factorization
+
+QR factorization biểu diễn ma trận qua basis trực giao và phần tam giác. Nó thường ổn định hơn normal equations trong least squares, nên là cầu nối giữa hình học chiếu và tính toán số.
 
 ```math
 A=QR,

@@ -274,6 +274,8 @@ Property-based testing rất phù hợp vì lỗi heap thường chỉ xuất hi
 
 ## 20. Chọn heap theo tải công việc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Tải công việc | Ứng viên thường hợp lý |
 |---|---|
 | General insert/extract | Binary Heap |

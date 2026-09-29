@@ -127,6 +127,8 @@ Coefficient không xuất hiện magic; nó đếm số ways tạo cùng monomia
 
 ## 7. Pascal identity
 
+Pascal identity cho thấy tổ hợp có thể được xây đệ quy từ hai trường hợp nhỏ hơn. Nó là cầu nối giữa counting, recurrence và hệ số trong khai triển nhị thức.
+
 ```math
 \binom nk
 =

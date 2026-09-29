@@ -111,6 +111,8 @@ pH\approx pK_a
 
 ## pH tại điểm tương đương không luôn bằng 7
 
+Điểm tương đương chỉ nói về tỷ lượng phản ứng, không tự nói dung dịch sau phản ứng là trung tính. Ta cần xét acid/base liên hợp và thủy phân để chọn chỉ thị đúng vùng nhảy pH.
+
 - acid mạnh + base mạnh: gần 7 ở 25 °C trong hệ lý tưởng;
 - acid yếu + base mạnh: thường >7 vì base liên hợp thủy phân;
 - base yếu + acid mạnh: thường <7 vì acid liên hợp thủy phân.

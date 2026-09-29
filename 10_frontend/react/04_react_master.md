@@ -535,6 +535,8 @@ Callback tồn tại trong class API cũ nhưng Hook setter không có callback 
 Yêu cầu component re-render dù React không được báo state change thông thường. Đây là escape hatch. Nếu app cần `forceUpdate` thường xuyên, có thể data source nằm ngoài React mà không có subscription đúng. Với external store hiện đại, `useSyncExternalStore` là abstraction phù hợp hơn.
 
 ### Class lifecycle reference
+Phần này nối mạch bài học với “Class lifecycle reference”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 constructor
@@ -575,6 +577,8 @@ Các tên không có `UNSAFE_` từng tồn tại trong code cũ và dần bị 
 `createFactory` và old DOM factories là legacy/removed như đã giải thích.
 
 ### Ref APIs theo thời đại
+Phần này nối mạch bài học với “Ref APIs theo thời đại”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 string ref
@@ -588,6 +592,8 @@ string ref
 Không phải bước sau luôn “xóa” bước trước. Callback ref vẫn hữu ích; `createRef` vẫn phù hợp class; `forwardRef` vẫn quan trọng cho React 18 compatibility; ref-as-prop là API mới cho Function Component React 19.
 
 ### ReactDOM legacy root APIs
+Phần này nối mạch bài học với “ReactDOM legacy root APIs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 ReactDOM.render(element, container);
@@ -599,6 +605,8 @@ ReactDOM.findDOMNode(component);
 Các API này là dấu hiệu rõ nhất của codebase pre-modern root. React 18 deprecate root legacy APIs và React 19 remove chúng. Migration target là `createRoot`, `hydrateRoot`, `root.unmount` và explicit refs.
 
 ### Legacy Context
+Phần này nối mạch bài học với “Legacy Context”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 childContextTypes
@@ -819,6 +827,8 @@ useEffect(() => {
 Thường nên gọi `save()` từ event/action.
 
 ### Mirrored props
+Phần này nối mạch bài học với “Mirrored props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [value, setValue] = useState(propValue);
@@ -827,6 +837,8 @@ const [value, setValue] = useState(propValue);
 mà không có semantics local draft rõ.
 
 ### Global mutable singleton
+Phần này nối mạch bài học với “Global mutable singleton”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 export const state = {};
@@ -915,6 +927,8 @@ Performance engineer nên học browser rendering, Core Web Vitals, Performance 
 React Native cần học host environment riêng; DOM knowledge không áp dụng nguyên xi.
 
 ## 41. Bản đồ API quan trọng
+Phần này nối mạch bài học với “41. Bản đồ API quan trọng”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | Nhóm | API / thành phần | Vai trò |
 |---|---|---|

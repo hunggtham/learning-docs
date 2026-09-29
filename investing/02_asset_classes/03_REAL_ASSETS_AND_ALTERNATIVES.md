@@ -30,6 +30,8 @@ NOI là nền để định giá tài sản bất động sản tạo thu nhập
 
 ## 4. Cap Rate
 
+Sau khi xác định NOI, ta cần một cầu nối từ dòng tiền sang giá trị tài sản. Cap rate đóng vai trò như tỷ lệ vốn hóa; đọc nó cùng lãi suất, tăng trưởng thuê và rủi ro giúp tránh kết luận đơn giản rằng lạm phát luôn tốt cho bất động sản.
+
 ```text
 Cap Rate ≈ NOI / Property Value
 ```
@@ -310,6 +312,8 @@ Phần bù kém thanh khoản không phải lợi nhuận miễn phí. Nó chỉ
 Nếu nhà đầu tư trả giá quá cao cho tài sản tư nhân, phần bù này có thể biến mất.
 
 ## 40. Checklist tài sản thay thế
+
+Checklist này gom các câu hỏi cần trả lời trước khi thêm tài sản thay thế vào danh mục. Hãy đi từ quyền pháp lý và dòng tiền tới thanh khoản, định giá, phí và nghĩa vụ vốn để biết phần bù kém thanh khoản có thực sự xứng đáng hay không.
 
 ```text
 Quyền lợi pháp lý

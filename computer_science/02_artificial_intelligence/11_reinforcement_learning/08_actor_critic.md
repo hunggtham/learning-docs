@@ -138,6 +138,8 @@ RLHF with PPO conceptually has policy actor and learned reward/value components.
 
 ## Failure Modes
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - critic divergence;
 - actor exploits critic errors;
 - insufficient exploration;

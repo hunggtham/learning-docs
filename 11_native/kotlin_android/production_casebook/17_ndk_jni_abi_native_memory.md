@@ -392,6 +392,8 @@ Không dùng NDK chỉ để:
 Managed code thường an toàn, maintainable và portable hơn.
 
 ## 34. Boundary design mẫu
+Phần này nối mạch Android vừa học với “34. Boundary design mẫu”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 interface ImageEngine {
@@ -428,6 +430,8 @@ Trước release app có native code, verify:
 10. third-party native library inventory/CVE/license.
 
 ## 36. Official references
+Phần này nối mạch Android vừa học với “36. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android NDK guides: https://developer.android.com/ndk/guides
 - NDK API reference: https://developer.android.com/ndk/reference

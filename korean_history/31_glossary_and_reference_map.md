@@ -2,6 +2,8 @@
 
 ## Thuật ngữ lịch sử
 
+Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa các chapter. Hãy đọc cột giải thích cùng ví dụ và kiểm tra cách dùng trước khi áp dụng vào một trường hợp mới.
+
 | 한국어 | English | Tiếng Việt |
 |---|---|---|
 | 고조선 | Gojoseon | Cổ Triều Tiên |
@@ -44,6 +46,8 @@
 
 ### National Institute of Korean History — 국사편찬위원회
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.history.go.kr/
 - https://contents.history.go.kr/
 - *A History of Korea* — Korean History Database / NIKH.
@@ -52,11 +56,15 @@
 
 ### Korean History Database — 한국사데이터베이스
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://db.history.go.kr/
 
 Cho phép đi từ textbook narrative xuống primary/edited historical records. Khi cần kiểm tra một claim cụ thể, nên tìm document chứ không chỉ đọc summary page.
 
 ### Academy of Korean Studies — 한국학중앙연구원
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.aks.ac.kr/
 - https://encykorea.aks.ac.kr/
@@ -65,11 +73,15 @@ Cho phép đi từ textbook narrative xuống primary/edited historical records.
 
 ### National Museum of Korea — 국립중앙박물관
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.museum.go.kr/
 
 Hữu ích để nối political chronology với artifact/material culture: stone tools, pottery, Buddhist art, metalwork, celadon, painting và documentary heritage.
 
 ### National Archives of Korea — 국가기록원
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.archives.go.kr/
 
@@ -85,6 +97,8 @@ Khi một vấn đề liên quan colonial responsibility, wartime violence, auth
 
 ## Bản đồ tra cứu theo câu hỏi
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | Nếu câu hỏi bắt đầu bằng… | Đọc trước | Sau đó nối sang |
 |---|---|---|
 | “Một nhà nước lấy lương thực và lao động ở đâu?” | `35_economy_society_everyday_life_by_period.md` | `27_economic_history_land_industry_chaebol.md`, chapter giai đoạn tương ứng |
@@ -97,6 +111,8 @@ Khi một vấn đề liên quan colonial responsibility, wartime violence, auth
 Bảng này là đường quay lại kiến thức giải thích, không phải danh sách link độc lập. Mỗi thuật ngữ chỉ nên được tra ở đây sau khi người học đã biết nó xuất hiện trong câu hỏi lịch sử nào.
 
 ## Bảng tên riêng lịch sử và địa danh chuẩn hoá
+
+Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa các chapter. Hãy đọc cột giải thích cùng ví dụ và kiểm tra cách dùng trước khi áp dụng vào một trường hợp mới.
 
 | Tiếng Việt | English / Romanization | 한국어 원문 | Ghi chú |
 |---|---|---|---|

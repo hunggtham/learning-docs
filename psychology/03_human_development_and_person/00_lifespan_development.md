@@ -376,6 +376,8 @@ No. Cognitive domains change differently.
 
 ## 38. Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Biology
  + prior state
@@ -399,6 +401,8 @@ Development is path-dependent but not fate.
 Đọc cùng [[01_attachment_and_relationships]], [[02_motivation_and_emotion]], [[09_self_concept_identity_and_self_regulation]], [[14_parenting_caregiving_and_family_development]], [[16_acculturation_migration_and_bicultural_identity]], [[11_aging_cognitive_health_and_late_life]], [[../01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]] và [[../04_mental_health/00_mental_health_and_psychopathology]].
 
 ### Nguồn định hướng
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - Developmental science reviews on sensitive periods and timing hypotheses.
 - Recent work emphasizes matching theory, measurement frequency and statistical model to developmental timescale.

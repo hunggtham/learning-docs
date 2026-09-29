@@ -340,12 +340,16 @@ Hệ thống thực tế thường ghép nhiều structure.
 
 ### LRU Cache
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 HashMap       -> tìm node theo key
 Doubly List   -> recency order
 ```
 
 ### Dijkstra
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 adjacency list
@@ -355,6 +359,8 @@ adjacency list
 
 ### Database Query Engine
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 B+Tree / Hash Index
 + Buffer Pool
@@ -363,6 +369,8 @@ B+Tree / Hash Index
 ```
 
 ### Autocomplete
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Trie/Radix index
@@ -381,6 +389,8 @@ Mỗi secondary index, cache hoặc metadata tăng tốc query nhưng đồng th
 Một structure phụ chỉ đáng có nếu lợi ích query lớn hơn cost update, memory và complexity vận hành.
 
 ## 24. Một decision matrix thực dụng
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 | Câu hỏi | Nếu “có”, hãy nghĩ tới |
 |---|---|
@@ -468,6 +478,8 @@ Nếu array + sort một lần đủ, không cần custom balanced tree. Nếu `
 “Chỉ cần chọn một data structure cho cả hệ thống” — hệ thống thật thường là composition.
 
 ## 30. Workflow chọn cấu trúc
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 1. Viết chính xác operation set.

@@ -7,6 +7,8 @@
 
 # 1. Version matrix dành cho Master
 
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
+
 | Generation | Spring Boot | Spring Framework | Java baseline | Web/Jakarta generation | Vai trò |
 |---|---|---|---|---|---|
 | Legacy | 2.7.x | 5.3.x | Java 8+ | `javax.*` | maintain code cũ |
@@ -337,6 +339,8 @@ Tại thời điểm cập nhật này, baseline stable của bộ note là Boot
 
 # 45. Source-reading roadmap
 
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
+
 ```text
 1. DefaultListableBeanFactory / AbstractBeanFactory
 2. AbstractAutowireCapableBeanFactory
@@ -377,6 +381,8 @@ Dùng `@NullMarked` ở package, `@Nullable` cho generic element/return và stat
 Sample phải có MVC, JPA, Security, Flyway và tests. Upgrade, ghi lại starter names, Jackson custom code, test dependencies, Security changes, nullability warnings và third-party compatibility. Đây là bài tập versioning thực tế hơn việc học changelog.
 
 # 51. Version snapshot — 2026-09-21
+
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
 
 ```text
 Stable current:

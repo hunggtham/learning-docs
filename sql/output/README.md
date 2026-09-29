@@ -1,6 +1,6 @@
 # SQLD – Tài liệu học đã chuẩn hóa
 
-Tài liệu được chia theo hai môn của kỳ thi SQLD. Mỗi file là một bài học độc lập, giữ lại toàn bộ giải thích và ví dụ SQL từ nguồn, đồng thời có tiêu đề và mục tiêu học tập thống nhất.
+Tài liệu được chia theo hai môn của kỳ thi SQLD. Mỗi file là một bài học độc lập, giữ lại toàn bộ giải thích và ví dụ SQL từ nguồn, đồng thời có tiêu đề, mục tiêu học tập và mạch giảng mở đầu → giải thích → bàn giao → kết thúc.
 
 ## Môn 1 – 데이터 모델링의 이해 / Mô hình dữ liệu
 
@@ -25,9 +25,12 @@ Tài liệu được chia theo hai môn của kỳ thi SQLD. Mỗi file là mộ
 11. Constraints, View và các đối tượng hỗ trợ
 12. DCL, quyền và Role
 13. PIVOT, UNPIVOT và Regular Expression
+14. SQL Style Guide và SQL dễ đọc cho pipeline AI
 
 ## Phạm vi nguồn
 
-- Đã dùng: `1.md`, `2.md`, `3.md`, `join.md` và phần trang 85–103 của `2024개정판_SQLD_개념정리(1).pdf`.
+Phần này giải thích phạm vi và giới hạn của bộ tài liệu, để người học biết các bài dưới đây được chọn từ đâu trước khi dùng chúng làm mạch ôn tập.
+
+- Đã dùng: `1.md`, `2.md`, `3.md`, `join.md`, `sql-style-guide.md` và phần trang 85–103 của `2024개정판_SQLD_개념정리(1).pdf`.
 - Không xuất: `temp.md` vì là bản sao của phần Transaction/NULL/Identifier trong `2.md`; `4.md` vì rỗng.
 - Các tiêu đề tiếng Hàn được giữ lại để hỗ trợ đối chiếu thuật ngữ SQLD; phần giải thích chính vẫn bằng tiếng Việt.

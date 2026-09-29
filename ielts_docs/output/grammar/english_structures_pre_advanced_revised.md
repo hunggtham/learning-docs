@@ -6,6 +6,8 @@
 
 ## Quy ước
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 - **S** = Subject
 - **V** = Verb nguyên mẫu
 - **V2** = Past Simple
@@ -17,6 +19,8 @@
 - **Clause** = Mệnh đề
 
 ## Vị trí trong lộ trình
+
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
 
 | Level | Phạm vi |
 |---|---|
@@ -34,6 +38,8 @@
 > **Integrated mastery tracks:** Tenses & Aspect • Verb Complementation • Prepositions & Collocations • Phrasal Verbs • Speaking Patterns • Common Grammar Mistakes • Transformation / Paraphrasing.
 
 ## 01. Advanced Conditionals & Conditional Inversion
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Should + S + V | `Should + S + V, main clause` | Dạng đảo của `If + S + should + V`, dùng trang trọng cho điều kiện có khả năng xảy ra. | **Should you need any help, please contact me.** | Nếu bạn cần bất kỳ sự trợ giúp nào, hãy liên hệ với tôi. | `If you should need...` ít trang trọng hơn. | — | Hay gặp trong email/formal English. |
@@ -48,6 +54,8 @@
 | 10 | Only if | `Only if + clause + inversion/main clause` | Chỉ khi. | **Only if demand increases will the company expand.** | Chỉ khi nhu cầu tăng thì công ty mới mở rộng. | `if` trung tính hơn. | — | Nếu `Only if` đứng đầu, mệnh đề chính thường đảo ở văn phong formal. |
 
 ## 02. Inversion & Emphasis
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Never + inversion | `Never + auxiliary + S + V` | Đảo ngữ sau trạng từ phủ định đầu câu để nhấn mạnh. | **Never have I seen such a crowded station.** | Tôi chưa bao giờ thấy ga đông như vậy. | `I have never seen...` trung tính hơn. | — | — |
@@ -64,6 +72,8 @@
 | 12 | Such + be + noun + that | `Such + be + N + that...` | Nhấn mạnh một danh từ/tình huống. | **Such was the demand that the product sold out in hours.** | Nhu cầu lớn đến mức sản phẩm bán hết trong vài giờ. | `There was such high demand that...` tự nhiên hơn. | — | — |
 
 ## 03. Cleft Sentences & Focus
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | It-cleft – subject focus | `It is/was + focus + who/that + clause` | Nhấn mạnh người/vật/thời điểm. | **It was my manager who suggested the change.** | Chính quản lý của tôi là người đề xuất thay đổi. | Câu thường: `My manager suggested the change.` | — | — |
@@ -76,6 +86,8 @@
 | 8 | The way + clause | `the way + S + V` | Cách mà ai đó làm gì. | **I like the way she explains complex ideas.** | Tôi thích cách cô ấy giải thích ý phức tạp. | `how she explains...` gần nghĩa. | — | — |
 
 ## 04. Reduced Relative & Participle Clauses
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Present participle relative reduction | `N + V-ing...` | Rút gọn relative clause chủ động. | **People living in large cities often face higher costs.** | Những người sống ở thành phố lớn thường chịu chi phí cao hơn. | `People who live...` đầy đủ hơn. | — | — |
@@ -89,6 +101,8 @@
 | 9 | Adjective phrase clause reduction | `Adj phrase, S + V` | Dùng tính từ đầu câu để mô tả trạng thái của chủ ngữ. | **Tired after the trip, I went straight to bed.** | Mệt sau chuyến đi, tôi đi ngủ ngay. | `Because I was tired...` rõ nghĩa nguyên nhân hơn. | — | — |
 
 ## 05. Reporting Structures & Advanced Passive
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | It is believed that | `It + be + believed + that + clause` | Báo cáo quan điểm một cách khách quan. | **It is believed that demand will increase.** | Người ta tin rằng nhu cầu sẽ tăng. | `People believe that...` chủ động hơn. | — | — |
@@ -103,6 +117,8 @@
 | 10 | Have/get something done – unexpected event | `S + have/get + O + V3` | Ngoài nghĩa thuê ai làm, còn có thể nói trải nghiệm không mong muốn. | **He had his wallet stolen.** | Anh ấy bị mất trộm ví. | — | — | Ngữ cảnh quyết định là causative hay sự việc xảy đến. |
 
 ## 06. Modal Meaning & Nuance
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Would – past habit | `S + would + V` | Thói quen lặp lại trong quá khứ, không dùng tốt với state verbs. | **Every summer, we would visit my grandparents.** | Mỗi mùa hè chúng tôi thường thăm ông bà. | `used to` dùng được cả thói quen và trạng thái. | — | — |
@@ -117,6 +133,8 @@
 | 10 | Might as well | `S + might as well + V` | Đằng nào cũng vậy thì nên làm. | **We might as well leave now.** | Đằng nào cũng vậy thì chúng ta đi luôn đi. | Không giống `might` về khả năng. | — | — |
 
 ## 07. Gerund, Infinitive & Complementation B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Be accustomed to | `be accustomed to + N/V-ing` | Quen với; formal hơn `be used to`. | **She is accustomed to working under pressure.** | Cô ấy quen làm việc dưới áp lực. | `be used to` tự nhiên hơn. | — | — |
@@ -134,6 +152,8 @@
 | 13 | Would prefer + O + to V | `would prefer + O + to V` | Muốn người khác làm gì. | **I'd prefer you to send the file by email.** | Tôi muốn bạn gửi file qua email. | `would rather + S + Past Simple` gần nghĩa nhưng cấu trúc khác. | — | — |
 
 ## 08. Degree, Comparison & Intensifiers
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Considerably + comparative | `considerably + comparative` | Hơn đáng kể. | **The new version is considerably faster.** | Phiên bản mới nhanh hơn đáng kể. | `slightly` = hơi. | — | — |
@@ -147,6 +167,8 @@
 | 9 | The sooner..., the better | `The sooner + clause, the better` | Càng sớm càng tốt. | **The sooner we decide, the better.** | Chúng ta quyết định càng sớm càng tốt. | — | — | — |
 
 ## 09. Hedging & Cautious Language
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | It seems that | `It seems that + clause` | Làm mềm khẳng định. | **It seems that demand is falling.** | Có vẻ nhu cầu đang giảm. | `Demand is falling` chắc chắn hơn. | — | — |
@@ -162,6 +184,8 @@
 | 11 | Apparently | `Apparently, + clause` | Theo thông tin có được/có vẻ như. | **Apparently, the company is planning a merger.** | Có vẻ công ty đang lên kế hoạch sáp nhập. | — | — | — |
 
 ## 10. Nominalisation & Formal Style
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Verb → noun | `V → noun` | Chuyển động từ thành danh từ để viết formal/academic hơn. | **The company decided to expand. → The company's decision to expand...** | Công ty quyết định mở rộng. → Quyết định mở rộng của công ty... | — | — | Không lạm dụng vì có thể làm câu nặng. |
@@ -176,6 +200,8 @@
 | 10 | Play a role in | `play a role in + N/V-ing` | Đóng vai trò trong. | **Sleep plays an important role in memory.** | Giấc ngủ đóng vai trò quan trọng đối với trí nhớ. | — | — | — |
 
 ## 11. Formal Linking & Discourse Markers
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Furthermore | `Furthermore, + clause` | Hơn nữa, formal. | **The plan is cheaper. Furthermore, it is easier to implement.** | Kế hoạch rẻ hơn. Hơn nữa, dễ triển khai hơn. | `Moreover` gần nghĩa. | — | — |
@@ -191,6 +217,8 @@
 | 11 | With respect to | `With respect to + N` | Về/đối với; formal. | **With respect to safety, further testing is required.** | Về an toàn, cần kiểm thử thêm. | `regarding` phổ biến hơn. | — | — |
 
 ## 12. Cause, Result & Purpose
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Owing to | `owing to + N` | Do/bởi vì, formal. | **The flight was delayed owing to heavy snow.** | Chuyến bay bị hoãn do tuyết lớn. | `because of` thân mật hơn. | — | — |
@@ -203,6 +231,8 @@
 | 8 | For the purpose of | `for the purpose of + V-ing/N` | Với mục đích. | **The data was collected for the purpose of improving the service.** | Dữ liệu được thu thập nhằm cải thiện dịch vụ. | — | — | Formal. |
 
 ## 13. Concession & Contrast
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Much as | `Much as + clause, clause` | Mặc dù rất..., formal. | **Much as I respect him, I disagree with his decision.** | Dù rất tôn trọng anh ấy, tôi không đồng ý với quyết định. | `Although` đơn giản hơn. | — | — |
@@ -213,6 +243,8 @@
 | 6 | Regardless of | `regardless of + N` | Bất kể. | **The rule applies regardless of age.** | Quy định áp dụng bất kể tuổi. | — | — | — |
 
 ## 14. Noun Clauses & Clause Patterns B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | The extent to which | `the extent to which + clause` | Mức độ mà. | **The extent to which technology affects learning is still debated.** | Mức độ công nghệ ảnh hưởng đến việc học vẫn còn được tranh luận. | — | — | Academic writing. |
@@ -225,6 +257,8 @@
 | 8 | There is no doubt that | `There is no doubt that + clause` | Không nghi ngờ rằng. | **There is no doubt that technology has changed communication.** | Không nghi ngờ công nghệ đã thay đổi giao tiếp. | — | — | Dùng vừa phải trong academic writing vì rất tuyệt đối. |
 
 ## 15. Advanced Prepositions & Collocations
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | In response to | `in response to + N` | Đáp lại/phản ứng với. | **The company changed the policy in response to feedback.** | Công ty thay đổi chính sách để phản hồi ý kiến. | — | — | — |
@@ -238,6 +272,8 @@
 | 9 | At the expense of | `at the expense of + N` | Đánh đổi bằng việc gây thiệt hại cho. | **Growth should not come at the expense of quality.** | Tăng trưởng không nên đánh đổi bằng chất lượng. | — | — | — |
 
 ## 16. Phrasal Verbs B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Bring about | `bring about + change/result` | Gây ra. | **The new policy brought about major changes.** | Chính sách mới gây ra thay đổi lớn. | `cause` đơn giản hơn. | — | — |
@@ -258,6 +294,8 @@
 | 16 | Set out | `set out + aim/plan / set out to V` | Trình bày; bắt đầu với mục tiêu làm. | **The report sets out the main recommendations.** | Báo cáo trình bày các khuyến nghị chính. | — | — | — |
 
 ## 17. Workplace & Professional English
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Be required to | `S + be required to + V` | Được yêu cầu phải làm. | **Employees are required to complete the training.** | Nhân viên được yêu cầu hoàn thành đào tạo. | `must` trực tiếp hơn. | — | — |
@@ -273,6 +311,8 @@
 | 11 | Be expected of | `X + be expected of + person` | Điều gì được kỳ vọng ở ai. | **Professional behavior is expected of all employees.** | Mọi nhân viên đều được kỳ vọng hành xử chuyên nghiệp. | — | — | — |
 
 ## 18. Argumentation & Academic Structures
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | There is a tendency for | `There is a tendency for + N + to V` | Có xu hướng là. | **There is a tendency for younger people to change jobs more often.** | Có xu hướng người trẻ đổi việc thường xuyên hơn. | `tend to` gọn hơn. | — | — |
@@ -288,6 +328,8 @@
 | 11 | This can be attributed to | `This can be attributed to + N` | Điều này có thể được quy cho. | **The decline can be attributed to weaker demand.** | Sự suy giảm có thể được quy cho nhu cầu yếu hơn. | — | — | Formal/academic. |
 
 ## 19. Ellipsis & Substitution
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | So + auxiliary + S | `So + aux + S` | Tôi/cũng vậy. | **She has finished, and so have I.** | Cô ấy đã xong và tôi cũng vậy. | `Me too` thân mật hơn. | — | — |
@@ -299,6 +341,8 @@
 | 7 | That of / Those of | `that of / those of` | Thay danh từ đã nhắc trong so sánh formal. | **The cost of living in Seoul is higher than that of Busan.** | Chi phí sinh hoạt ở Seoul cao hơn Busan. | `the one in Busan` thân mật hơn. | — | — |
 
 ## 20. Time, Aspect & Sequence B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | By + future time + Future Perfect | `By + time, S + will have + V3` | Đến một mốc tương lai, việc sẽ hoàn tất. | **By Friday, we will have completed the migration.** | Đến thứ Sáu chúng tôi sẽ hoàn tất migration. | — | — | — |
@@ -311,6 +355,8 @@
 | 8 | In the meantime | `In the meantime, + clause` | Trong thời gian chờ/đồng thời. | **The build is running. In the meantime, let's review the logs.** | Build đang chạy. Trong lúc đó hãy xem log. | `meanwhile` gần nghĩa. | — | — |
 
 ## 21. Register, Formality & Nuance
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Be keen to | `be keen to + V` | Rất muốn/hứng thú làm gì; phổ biến Anh-Anh. | **I'm keen to learn more about the role.** | Tôi rất muốn tìm hiểu thêm về vị trí. | `want to` trực tiếp hơn. | — | — |
@@ -323,6 +369,8 @@
 | 8 | Be prone to | `be prone to + N/V-ing` | Dễ có xu hướng gặp điều tiêu cực. | **Older systems are prone to security issues.** | Hệ thống cũ dễ gặp vấn đề bảo mật. | — | — | — |
 
 ## 22. Speaking Structures B2
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | To be fair | `To be fair, + clause` | Công bằng mà nói. | **To be fair, he did warn us about the risk.** | Công bằng mà nói, anh ấy đã cảnh báo chúng ta về rủi ro. | — | — | — |
@@ -339,6 +387,8 @@
 
 
 ## 23. Tenses & Aspect Mastery – B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Aspect over tense | `simple / continuous / perfect / perfect continuous` | Ở B2, chọn không chỉ theo thời gian mà theo góc nhìn: sự kiện, quá trình, kết quả hay thời lượng. | **I've worked here for years, but I've been working from home this month.** | Tôi làm ở đây nhiều năm, nhưng tháng này đang làm ở nhà. | — | — | — |
@@ -351,6 +401,8 @@
 | 8 | Would for future-in-the-past | `S + knew/thought + S + would + V` | Tương lai nhìn từ một mốc quá khứ. | **I knew the decision would cause problems.** | Tôi biết quyết định sẽ gây vấn đề. | — | — | — |
 
 ## 24. Verb Patterns & Complementation Mastery – B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Verb + that-clause | `admit/deny/claim/insist + that + clause` | Một số động từ phát biểu nhận mệnh đề `that`. | **He denied that he had leaked the data.** | Anh ấy phủ nhận đã làm rò dữ liệu. | — | — | — |
@@ -363,6 +415,8 @@
 | 8 | For + O + to V | `for + person + to V` | Đưa chủ thể riêng cho infinitive. | **It's unusual for him to be late.** | Việc anh ấy muộn là bất thường. | — | — | — |
 
 ## 25. Prepositions & Collocations Mastery – B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Be associated with | `be associated with + N` | Có liên quan với. | **High stress is associated with poor sleep.** | Stress cao có liên quan giấc ngủ kém. | — | — | — |
@@ -375,6 +429,8 @@
 | 8 | At the expense of | `at the expense of + N` | Đạt cái này nhưng làm tổn hại cái khác. | **Speed should not come at the expense of accuracy.** | Tốc độ không nên đánh đổi độ chính xác. | — | — | — |
 
 ## 26. Phrasal Verbs Mastery – B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Phase out | `phase out + N` | Loại bỏ dần. | **The company plans to phase out the old system.** | Công ty định loại bỏ dần hệ thống cũ. | `phase in` = đưa vào dần. | `phase in`. | — |
@@ -387,6 +443,8 @@
 | 8 | Come down to | `come down to + N/wh-clause` | Cuối cùng quy về/phụ thuộc vào. | **It comes down to cost.** | Cuối cùng vẫn là vấn đề chi phí. | — | — | — |
 
 ## 27. Speaking Patterns Mastery – B2
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | I take your point, but... | `I take your point, but + clause` | Công nhận điểm hợp lý rồi phản biện. | **I take your point, but we also need to consider reliability.** | Tôi hiểu ý bạn, nhưng cũng cần xét độ tin cậy. | — | — | — |
@@ -399,6 +457,8 @@
 | 8 | I'd be inclined to... | `I'd be inclined to + V` | Đưa lựa chọn có tính dè dặt. | **I'd be inclined to wait for more data.** | Tôi nghiêng về chờ thêm dữ liệu. | — | — | — |
 
 ## 28. Common Grammar Mistakes – B2
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Dangling participle | `Participle clause must share logical subject` | Mệnh đề rút gọn phải có chủ thể logic trùng với mệnh đề chính. | **Driving home, I saw an accident.** | Khi lái xe về, tôi thấy tai nạn. | — | — | `Driving home, the rain started` ❌. |
@@ -413,6 +473,8 @@
 | 10 | Overusing inversion | `Use inversion only when register/focus requires it` | Đảo ngữ B2 đúng nhưng dùng quá nhiều sẽ thiếu tự nhiên. | **Rarely do we see this pattern in ordinary conversation.** | Hiếm khi ta thấy mẫu này trong hội thoại thường. | — | — | — |
 
 ## 29. Grammar Transformation & Paraphrasing – B2
+
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | If-clause ↔ conditional inversion | `If you should need... ↔ Should you need...` | Chuyển conditional formal. | **If you should need help, call me. → Should you need help, call me.** | Nếu cần giúp, hãy gọi tôi. | — | — | — |

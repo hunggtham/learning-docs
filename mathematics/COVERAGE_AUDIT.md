@@ -28,6 +28,8 @@ File [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md) là chuẩn biên soạn
 
 ## Domain-depth audit hiện tại
 
+Audit này đánh giá độ sâu theo centrality và dependency, không theo số file. Mỗi dòng cho biết concept nào đã đủ làm nền, gap nào còn ảnh hưởng nhiều chapter và nên ưu tiên rewrite ở đâu.
+
 | Domain | Depth hiện tại | Audit learning dependency |
 |---|---|---|
 | Mathematical thinking | Mạnh | `00_foundations/00_mathematical_thinking.md` đã đủ vai trò entry point: modeling, abstraction, invariants, dimensions, approximation và first-principles reasoning. |
@@ -195,6 +197,8 @@ Priority nên tiếp tục dựa trên **dependency centrality trước file cou
 
 ### Path cho AI/Data
 
+Path này nối algebra và functions với linear algebra, calculus, probability và optimization để người học hiểu pipeline mô hình hóa AI từ biểu diễn tới học tham số.
+
 ```text
 ratio / logarithm
 → functions
@@ -211,6 +215,8 @@ ratio / logarithm
 
 ### Path cho Physics/Engineering
 
+Path này bắt đầu từ geometry và vectors rồi đi qua calculus, PDE, Fourier và control. Mỗi bước thêm một cách mô tả field, thay đổi hoặc truyền tín hiệu.
+
 ```text
 geometry / trigonometry
 → vectors / linear transformations
@@ -225,6 +231,8 @@ geometry / trigonometry
 
 ### Path cho Computer Science
 
+Path này chuyển logic và sets thành structures, graph, complexity và probability. Nó phù hợp khi cần reasoning rời rạc và phân tích thuật toán.
+
 ```text
 logic / proof
 → sets / relations / mappings
@@ -238,6 +246,8 @@ logic / proof
 ```
 
 ### Path cho Finance
+
+Path này nối compounding và tỷ lệ với probability, covariance, statistics và optimization. Hãy dùng nó để kiểm tra một mô hình tài chính có đang bỏ qua bất định hay không.
 
 ```text
 ratio / percentage / compounding

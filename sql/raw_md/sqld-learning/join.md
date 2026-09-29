@@ -12,6 +12,8 @@ Trong SQLD/Oracle, phần dễ nhầm nhất là: **INNER JOIN, LEFT/RIGHT/FULL 
 Giả sử database có 2 bảng.
 
 ### EMPLOYEES
+Phần này nối mạch SQL với “EMPLOYEES”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 | EMP_ID | NAME  | DEPT_ID |
 | -----: | ----- | ------: |
@@ -21,6 +23,8 @@ Giả sử database có 2 bảng.
 |      4 | Dũng  |    NULL |
 
 ### DEPARTMENTS
+Phần này nối mạch SQL với “DEPARTMENTS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 | DEPT_ID | DEPT_NAME |
 | ------: | --------- |
@@ -104,6 +108,8 @@ Kết quả:
 Phòng SALES cũng không xuất hiện vì không có employee tương ứng.
 
 ### Hình dung
+Phần này nối mạch SQL với “Hình dung”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 EMPLOYEES              DEPARTMENTS
@@ -220,6 +226,8 @@ Dũng vẫn tồn tại
 Đây chính là khác biệt lớn với INNER JOIN.
 
 ### Cách nhớ
+Phần này nối mạch SQL với “Cách nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 LEFT JOIN
@@ -359,6 +367,8 @@ Kết quả đại khái:
 | NULL  |     NULL |      40 | SALES     |
 
 ### Cách nhớ
+Phần này nối mạch SQL với “Cách nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 INNER = chỉ MATCH
@@ -523,6 +533,8 @@ Nó có nghĩa:
 Ví dụ bảng:
 
 ### EMPLOYEES
+Phần này nối mạch SQL với “EMPLOYEES”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 | EMP_ID | NAME | MANAGER_ID |
 | -----: | ---- | ---------: |
@@ -743,6 +755,8 @@ Có bảng nhân viên:
 và bảng mức lương:
 
 ### SALARY_GRADE
+Phần này nối mạch SQL với “SALARY_GRADE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 | GRADE | MIN_SAL | MAX_SAL |
 | ----: | ------: | ------: |
@@ -807,6 +821,8 @@ Kết quả:
 | Cường |   7000 |     3 |
 
 ### Nhớ
+Phần này nối mạch SQL với “Nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 EQUI JOIN
@@ -1173,6 +1189,8 @@ Vì vậy `WHERE` có thể khiến kết quả LEFT JOIN trông giống INNER J
 So sánh:
 
 ### Query A
+Phần này nối mạch SQL với “Query A”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```sql
 SELECT *
@@ -1185,6 +1203,8 @@ LEFT JOIN departments d
 với:
 
 ### Query B
+Phần này nối mạch SQL với “Query B”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```sql
 SELECT *
@@ -1236,6 +1256,8 @@ như 7 thứ hoàn toàn ngang hàng.
 Thực ra chúng đang mô tả **các khía cạnh khác nhau**.
 
 ### Phân loại theo "giữ dòng nào?"
+Phần này nối mạch SQL với “Phân loại theo "giữ dòng nào?"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 JOIN
@@ -1249,6 +1271,8 @@ JOIN
 ```
 
 ### Phân loại theo "điều kiện JOIN?"
+Phần này nối mạch SQL với “Phân loại theo "điều kiện JOIN?"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 JOIN condition
@@ -1261,6 +1285,8 @@ JOIN condition
 ```
 
 ### Phân loại theo "JOIN với bảng nào?"
+Phần này nối mạch SQL với “Phân loại theo "JOIN với bảng nào?"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 SELF JOIN
@@ -1268,6 +1294,8 @@ SELF JOIN
 ```
 
 ### Không dùng điều kiện match
+Phần này nối mạch SQL với “Không dùng điều kiện match”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 CROSS JOIN
@@ -1381,6 +1409,8 @@ Hãy hỏi:
 Ví dụ:
 
 ### "Chỉ lấy employee có department"
+Phần này nối mạch SQL với “"Chỉ lấy employee có department"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```text
 Không cần giữ employee không có department
@@ -1421,18 +1451,24 @@ LEFT JOIN employees e
 ```
 
 ### "Lấy tất cả employee và tất cả department, kể cả hai bên không match"
+Phần này nối mạch SQL với “"Lấy tất cả employee và tất cả department, kể cả hai bên không match"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```sql
 FULL OUTER JOIN
 ```
 
 ### "Tạo tất cả tổ hợp employee × department"
+Phần này nối mạch SQL với “"Tạo tất cả tổ hợp employee × department"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```sql
 CROSS JOIN
 ```
 
 ### "Tìm manager của employee trong cùng bảng"
+Phần này nối mạch SQL với “"Tìm manager của employee trong cùng bảng"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```sql
 SELF JOIN
@@ -1441,6 +1477,8 @@ SELF JOIN
 ---
 
 # 25. Bảng tổng kết cuối bài
+Phần này nối mạch SQL với “25. Bảng tổng kết cuối bài”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 | Loại                | Ý nghĩa dễ nhớ                       | Không match           |
 | ------------------- | ------------------------------------ | --------------------- |

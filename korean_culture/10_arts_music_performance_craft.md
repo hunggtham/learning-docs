@@ -411,6 +411,8 @@ Kỹ năng thủ công không phải “bí quyết cảm tính” đối lập 
 
 ## Nguồn tham khảo
 
+Nguồn tham khảo giúp đối chiếu thuật ngữ, niên đại, chất liệu và thực hành nghệ thuật. Chúng bổ sung bằng chứng cho lập luận, không thay thế việc giải thích cơ chế truyền thừa và biến đổi.
+
 - UNESCO Intangible Cultural Heritage, danh sách của Republic of Korea.
 - UNESCO: Pansori epic chant; Arirang; Nongak; Talchum; nghi lễ tổ tiên hoàng gia Jongmyo và âm nhạc.
 - `국가유산청` / Korea Heritage Service và `국가유산진흥원`: di sản, bảo tồn và truyền thừa.

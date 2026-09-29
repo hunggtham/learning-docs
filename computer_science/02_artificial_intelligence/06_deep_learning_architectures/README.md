@@ -6,6 +6,8 @@ Lý do là **inductive bias + computational structure**. Mỗi architecture tổ
 
 ## Dependency map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     NN[05 Neural Networks foundations] --> CNN[00 CNN]
@@ -45,6 +47,8 @@ flowchart TD
 **[09 — Diffusion Models](./09_diffusion_models.md)** derivation forward noising/reverse denoising, noise prediction, guidance, U-Net/DiT, samplers, latent diffusion và text conditioning.
 
 ## Mental model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 CNN         → exploit spatial locality + weight sharing

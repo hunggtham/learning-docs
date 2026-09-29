@@ -190,6 +190,8 @@ Probability quality quan trọng vì confidence sai sẽ dẫn tới decision sa
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Prediction nói model nghĩ điều gì sẽ xảy ra.
 Calibration nói mức confidence mà model đưa ra có đáng tin hay không.

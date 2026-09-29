@@ -247,6 +247,8 @@ Dự án bất động sản
 
 ## 15. Thứ tự đọc DART cho nhà thầu
 
+Nhà thầu cần được đọc từ dự án, tiến độ và hợp đồng tới công nợ, PF, bảo lãnh và dòng tiền. Thứ tự DART dưới đây giúp phát hiện rủi ro bảng cân đối trước khi nhìn lợi nhuận kế toán.
+
 ```text
 1. Doanh thu theo mảng / backlog
 2. Danh sách dự án lớn
@@ -297,6 +299,8 @@ Cũng sai. Bảo lãnh là nghĩa vụ có điều kiện; phải đọc điều
 Sai vì bất động sản mang tính địa phương rất cao.
 
 ## 18. Bài tập nghiên cứu
+
+Bài tập này yêu cầu dựng một hồ sơ nhà thầu có timeline dự án, nghĩa vụ bảo lãnh và kịch bản tái cấp vốn. Mục tiêu là nối pháp lý và tiến độ với khả năng sống sót của bảng cân đối.
 
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|

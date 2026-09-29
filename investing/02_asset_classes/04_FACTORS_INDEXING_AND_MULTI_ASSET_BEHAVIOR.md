@@ -302,6 +302,8 @@ Exposure có trùng danh mục hiện tại không?
 
 ## 37. Mô hình tư duy cuối cùng
 
+Phần cuối chuyển kiến thức về factor thành một quy trình kiểm tra sản phẩm cụ thể. Bắt đầu từ nhãn và phương pháp chỉ số, ta lần lượt truy tới exposure thực, chi phí, rủi ro crowded trade và vai trò trong danh mục.
+
 ```text
 Nhãn sản phẩm
 → Phương pháp chỉ số

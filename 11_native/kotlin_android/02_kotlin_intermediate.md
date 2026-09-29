@@ -62,6 +62,8 @@ user?.let(::send)
 Không chain scope function chỉ để giảm số dòng. Code rõ ràng bằng `if` hoặc local variable thường tốt hơn một chain khó đọc.
 
 # 2. Scope functions: `let`, `run`, `with`, `apply`, `also`
+Phần này nối mạch Android vừa học với “2. Scope functions: `let`, `run`, `with`, `apply`, `also`”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Function | Receiver | Trả về | Dùng tốt khi |
 |---|---|---|---|
@@ -216,6 +218,8 @@ Nếu tạo `CoroutineScope(SupervisorJob() + Dispatchers.IO)` tùy ý trong rep
 
 ## 8.2 `launch`, `async`, `withContext` khác nhau về contract
 
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
+
 ```kotlin
 scope.launch { ... }       // Job, side-effect/lifecycle work
 scope.async { ... }        // Deferred<T>, concurrent result
@@ -347,6 +351,8 @@ fun observeUsers(): Flow<List<User>> = dao.observeUsers()
 Một cold Flow không phải “background task tự chạy”. Nếu không collect, phần lớn upstream cold flow không thực thi.
 
 ## 10.1 Operator là semantic, không chỉ syntax chain
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```kotlin
 flow
@@ -765,6 +771,8 @@ Không nên `lifecycleScope.launch { flow.collect { ... } }` vô hạn cho UI st
 
 ## 20.1 Lifetime matrix cần thuộc bằng reasoning
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```text
 Recomposition
 < Composition entry
@@ -882,6 +890,8 @@ Modern stack không tự động tạo architecture tốt. Migration cần test/
 <!-- end merged variant -->
 
 # 27. Project architecture mẫu
+
+Mục này nối khái niệm với một cấu trúc có thể kiểm tra trong project. Hãy đọc code theo ownership, failure mode và bằng chứng runtime, rồi đối chiếu xem nó giải quyết câu hỏi kiến trúc nào.
 
 ```text
 app/
@@ -1155,6 +1165,8 @@ refresh = fetch external source rồi update source of truth
 Nếu UI observe network response trực tiếp trong khi Room cũng emit cùng entity, bạn có hai nguồn state cạnh tranh.
 
 ## 39.1 Mapper tồn tại để bảo vệ boundary
+
+Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
 
 ```text
 DTO

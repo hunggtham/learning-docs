@@ -738,6 +738,8 @@ Không nên dùng “probabilistic” như một từ thay thế chung cho “kh
 
 ## Chọn cấu trúc theo câu hỏi
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Câu hỏi | Cấu trúc thường đáng cân nhắc |
 |---|---|
 | Key có thể đã tồn tại? | Bloom/Cuckoo/XOR Filter |

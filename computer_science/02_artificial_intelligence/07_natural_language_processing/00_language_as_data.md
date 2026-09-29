@@ -111,6 +111,8 @@ Universal subword models trade linguistic purity for scalable data-driven segmen
 
 ### Syntactic ambiguity
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 I saw the man with the telescope.
 ```
@@ -118,6 +120,8 @@ I saw the man with the telescope.
 Ai có telescope?
 
 ### Referential ambiguity
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 John told Mike that he was late.
@@ -237,6 +241,8 @@ Text describes world but is not world itself. A language model learns patterns i
 This distinction becomes critical for hallucination.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 World / human intent

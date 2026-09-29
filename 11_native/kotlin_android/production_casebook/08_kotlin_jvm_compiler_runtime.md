@@ -70,6 +70,8 @@ resume -> state 2 -> combine -> return
 Điều này giải thích tại sao stack trace coroutine có hình dạng khác synchronous call và tại sao local variable cần survive suspension.
 
 ## 5. Suspend không làm blocking code thành non-blocking
+Phần này nối mạch Android vừa học với “5. Suspend không làm blocking code thành non-blocking”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 suspend fun bad() {
@@ -225,6 +227,8 @@ fun Dog.sound() = "dog"
 Extension được resolve theo compile-time receiver type, không polymorphic virtual dispatch. Nếu behavior cần override, dùng member/interface.
 
 ## 20. Sequence vs Collection
+Phần này nối mạch Android vừa học với “20. Sequence vs Collection”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 items.map(...).filter(...).take(10)
@@ -247,6 +251,8 @@ val list: List<Int>  // elements boxed trên JVM
 Trong UI/business code bình thường không đáng lo. Trong loop cực nóng/large numeric data, allocation/boxing có thể hiện trên profiler.
 
 ## 22. Value class và boxing
+Phần này nối mạch Android vừa học với “22. Value class và boxing”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @JvmInline
@@ -258,6 +264,8 @@ Value class thường tránh allocation wrapper trong nhiều context, nhưng c�
 Đừng hứa “zero allocation”. Dùng value class trước hết cho type safety/domain modeling; performance là secondary và cần đo.
 
 ## 23. Lambda capture
+Phần này nối mạch Android vừa học với “23. Lambda capture”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 fun screen(activity: Activity): () -> Unit = {

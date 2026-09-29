@@ -425,6 +425,8 @@ Trước release, hỏi:
 - startup crash/ANR metrics segment theo version/device chưa.
 
 ## 35. Official references
+Phần này nối mạch Android vừa học với “35. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - App startup time: https://developer.android.com/topic/performance/vitals/launch-time
 - Baseline Profiles: https://developer.android.com/topic/performance/baselineprofiles/overview

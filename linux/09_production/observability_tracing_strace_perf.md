@@ -39,6 +39,8 @@ Do đó nên filter.
 
 ### Theo dõi file-related calls
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 strace -e trace=file cat /etc/hosts
 ```
@@ -51,6 +53,8 @@ strace -e openat,read,write,close cat /etc/hosts
 
 ### Theo dõi network
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 strace -e trace=network curl -s https://example.com >/dev/null
 ```
@@ -58,6 +62,8 @@ strace -e trace=network curl -s https://example.com >/dev/null
 Có thể thấy `socket()`, `connect()`, `sendto()`, `recvfrom()` hoặc calls liên quan.
 
 ## Attach vào tiến trình đang chạy
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 sudo strace -p 1234
@@ -83,6 +89,8 @@ sudo timeout 10s strace -tt -T -p 1234 -e trace=network -o /tmp/strace-net.txt
 `-tt` thêm timestamp chi tiết. `-T` cho thời gian syscall. `timeout` giới hạn tracing 10 giây.
 
 ## `-f` và multi-thread/process
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 strace -f command
@@ -184,6 +192,8 @@ Không nên bắt đầu bằng tool phức tạp nhất.
 
 ## `pidstat`: bridge giữa metrics và tracing
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 pidstat -p 1234 1
 pidstat -t -p 1234 1
@@ -215,6 +225,8 @@ Có thể thấy:
 Đây là cách nối process model với filesystem/network model.
 
 ## `ss`: trạng thái socket
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 sudo ss -antp

@@ -26,6 +26,8 @@ Policy improvement theorem cho biết policy mới không tệ hơn policy cũ.
 
 ## Policy Iteration
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 initialize π
 repeat:
@@ -104,6 +106,8 @@ Deterministic shortest-path algorithms có related recursive structure. Bellman-
 Classical planning search enumerates trajectories; DP reuses state values across many possible trajectories. Khi nhiều paths merge vào same state, value reuse rất powerful.
 
 ## Limitations
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 - cần known model;
 - state enumeration;

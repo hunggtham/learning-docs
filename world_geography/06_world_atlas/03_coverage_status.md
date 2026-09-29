@@ -31,9 +31,13 @@ Malaysia vừa được promote từ compact reference. Ba ASEAN profiles Singap
 
 ### South Asia
 
+South Asia được giữ như một case về monsoon, dân số, đô thị và Indian Ocean; phần này chỉ cần một profile đại diện đủ sâu để minh họa cơ chế chung.
+
 - **India** — monsoon–population–urban/manufacturing/service–Indian Ocean system.
 
 ### Americas
+
+Ở Americas, các profile được chọn để đối chiếu quy mô lục địa, basin, frontier và corridor hàng hóa, không phải để hoàn thành danh sách quốc gia.
 
 - **United States** — continental market/resource/transport network;
 - **Brazil** — Amazon basin + Atlantic metropolitan belt + interior commodity/resource corridors.
@@ -51,6 +55,8 @@ Các comparative learning profiles đã có chiều sâu gồm:
 - **Netherlands**.
 
 ### Oceania
+
+Oceania minh họa cách một lãnh thổ khô rộng lớn tổ chức dân cư ven biển và nối tài nguyên nội địa với các cảng hướng sang châu Á.
 
 - **Australia** — dry continental interior + coastal metropolitan system + mine/agriculture-to-port corridors + Asian trade network.
 

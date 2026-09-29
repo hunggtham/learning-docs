@@ -6,6 +6,8 @@ Audit này theo dõi **coverage, độ sâu, trạng thái bằng chứng, ngôn
 
 ## Trạng thái
 
+Các nhãn dưới đây mô tả chất lượng giải thích và độ chắc của bằng chứng, không phải thứ hạng “đúng/sai” tuyệt đối. Đọc chúng cùng evidence taxonomy để biết claim nào cần refresh và claim nào đang ở bối cảnh lịch sử.
+
 - **Strong**: đủ depth, mechanism, evidence boundary, limitation và connection.
 - **Strong / fast-moving**: đủ chất lượng hiện tại nhưng cần periodic evidence refresh vì literature thay đổi nhanh.
 - **Bridge**: compatibility/navigation file sau khi canonical content đã tách.

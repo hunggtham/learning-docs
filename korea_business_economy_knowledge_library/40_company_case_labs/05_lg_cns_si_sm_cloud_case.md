@@ -251,6 +251,8 @@ chi phí/giờ ↑
 
 ### Kịch bản cơ cấu tích cực
 
+Kịch bản này xem xét khi mix dịch vụ có giá trị cao và cloud/AI delivery cải thiện. Cần nối backlog với tỷ lệ chuyển thành doanh thu, margin và nhu cầu vốn lưu động.
+
 ```text
 nền SM định kỳ ổn định
 tỷ trọng cloud managed service ↑

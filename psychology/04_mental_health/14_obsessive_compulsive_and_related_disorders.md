@@ -125,6 +125,8 @@ Cultural/religious context phải được hiểu trước khi label belief “o
 
 ## 18. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 intrusive event
 → meaning / responsibility / threat
@@ -135,6 +137,8 @@ intrusive event
 ```
 
 ## Evidence anchors
+
+Các evidence anchors dưới đây nối mô hình obsession–compulsion với dữ liệu lâm sàng và giới hạn chẩn đoán. Hãy dùng chúng để kiểm tra claim, không để tự gắn nhãn từ một triệu chứng riêng lẻ.
 
 - NICE CG31: Obsessive-compulsive disorder and body dysmorphic disorder.
 - Treatment evidence should be interpreted with individual impairment, comorbidity and preference.

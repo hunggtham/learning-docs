@@ -25,6 +25,8 @@ Nếu thiếu một thành phần, ta có thể không tái lập được mô h
 
 ## Vòng đời ML
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 định nghĩa bài toán
 → thu thập dữ liệu
@@ -97,6 +99,8 @@ Việc thăng cấp (promotion) nên dựa trên các cổng kiểm soát (gate)
 
 ## CI, CD và CT
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - **CI**: kiểm tra mã nguồn, schema, test và hợp đồng dữ liệu.
 - **CD**: triển khai mô hình hoặc ứng dụng một cách an toàn.
 - **CT — Continuous Training**: huấn luyện lại theo lịch hoặc khi điều kiện phù hợp.
@@ -143,6 +147,8 @@ Không cần xây nền tảng phức tạp ngay từ ngày đầu; nên giải 
 Công cụ MLOps có thể hỗ trợ theo dõi, điều phối, registry và triển khai. Nhưng công cụ không tự định nghĩa hợp đồng dữ liệu, cổng chất lượng hoặc chính sách rollback cho tổ chức.
 
 ## Mô hình tư duy
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 MLOps = làm cho hành vi đã học có thể truy vết, tái lập, triển khai và quản trị

@@ -62,6 +62,8 @@ flowchart TD
 
 ## Cấu trúc canonical hiện tại
 
+Danh sách dưới đây biến dependency flow thành các chapter có thể mở và học được. Mỗi thư mục tiếp nhận kết quả của phần trước, vì vậy nên đọc phần mô hình nền trước khi nhảy vào công thức chuyên đề.
+
 ```text
 chemistry/
 ├── README.md

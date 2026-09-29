@@ -17,6 +17,8 @@ Một mental model hữu ích là chia state theo thời gian sống.
 Phân loại đúng lifetime quan trọng hơn thuộc tên API.
 
 ## 2. `remember` không phải persistence
+Phần này nối mạch Android vừa học với “2. `remember` không phải persistence”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 var expanded by remember { mutableStateOf(false) }
@@ -250,6 +252,8 @@ lifecycleScope.launch {
 Không dùng `launchWhenStarted` như một cargo-cult nếu semantics suspension/resource upstream không phù hợp. Hiểu lifecycle của producer/collector mới quan trọng.
 
 ## 18. `LaunchedEffect` và lifecycle của effect
+Phần này nối mạch Android vừa học với “18. `LaunchedEffect` và lifecycle của effect”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 LaunchedEffect(articleId) {

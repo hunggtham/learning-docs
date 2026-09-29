@@ -149,6 +149,8 @@ Tình trạng cư trú có deadline nghiêm ngặt. Một 민원 chung không ch
 
 ## 13. Nguồn chính thức
 
+Xuất nhập cảnh là lĩnh vực có deadline và điều kiện thay đổi theo loại tư cách lưu trú. Hãy dùng các nguồn chính thức sau để kiểm tra route, hồ sơ và ngày hiệu lực thay vì suy luận từ trường hợp của người khác.
+
 - Hi Korea: https://www.hikorea.go.kr/
 - 출입국·외국인정책본부: https://www.immigration.go.kr/
 - 국가법령정보센터: https://www.law.go.kr/

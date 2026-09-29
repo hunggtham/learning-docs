@@ -27,6 +27,8 @@ Hardware có thể AND/OR/XOR cả machine word trong một instruction, nên t�
 
 ## Các phép cơ bản
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 &   AND
 |   OR
@@ -40,6 +42,8 @@ Với mặt nạ bit `1 << k`:
 
 ### Kiểm tra bit
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 if (x & (1u << k)) {
     // bit k đang bật
@@ -48,17 +52,23 @@ if (x & (1u << k)) {
 
 ### Set bit
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 x |= (1u << k);
 ```
 
 ### Clear bit
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 x &= ~(1u << k);
 ```
 
 ### Toggle bit
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 x ^= (1u << k);
@@ -144,6 +154,8 @@ cây Fenwick (Fenwick Tree) dùng giá trị này làm block size.
 Mental reason: `-x` giữ bit 1 thấp nhất của `x` và đảo mẫu phía trên theo two's-complement carry, nên AND chỉ còn bit đó.
 
 ## Xóa bit 1 thấp nhất
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 x & (x - 1)

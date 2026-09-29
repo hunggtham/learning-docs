@@ -60,6 +60,8 @@ các lũy thừa của hai không phải magic; chúng tạo hierarchy có số 
 
 ## Java construction cho RMQ
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 final class SparseMin {
     private final int[][] st;

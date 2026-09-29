@@ -4,6 +4,8 @@ Mục tiêu của file này là kiểm tra **đã cover gì, phần nào là sou
 
 ## 1. Coverage theo 8 PDF
 
+Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nội dung KIIP. Hãy ghi rõ tài liệu nào là nền, nội dung nào cần cập nhật và điểm nào phải tra nguồn chính thức.
+
 | Domain | Bài | File | Nội dung chính đã cover | Trạng thái |
 |---|---:|---|---|---|
 | 사회 | 1~8 | `01_사회.md` | 국가상징, 가족, 직장, 주거, 도시·농촌, 교통·통신, 사회보험, 외국인 지원·안전 | ✅ core covered |
@@ -47,6 +49,8 @@ Các nhóm không được học cứng từ infographic cũ:
 Tất cả được route qua `00_current_facts_and_corrections.md`.
 
 ## 4. Layer học tập đã có
+
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
 
 ```text
 Source understanding   → 01~08

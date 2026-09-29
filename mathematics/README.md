@@ -12,7 +12,11 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ## Table of Contents
 
+Mục lục được sắp theo dependency: ngôn ngữ và đại số làm nền, hàm và hình học mở rộng biểu diễn, calculus và probability xử lý thay đổi và bất định, rồi các connection đưa chúng vào khoa học máy tính và mô hình hóa. Đọc theo nhánh phù hợp sẽ giữ được câu hỏi mà mỗi nhóm đang giải quyết.
+
 ### 00 — Foundations
+
+Phần nền dựng ngôn ngữ, logic, tập hợp, số và cách đo trước khi dùng công thức. Hãy coi đây là lớp giúp kiểm tra giả định của mọi mô hình phía sau.
 
 - [Tư duy toán học và First Principles](./00_foundations/00_mathematical_thinking.md)
 - [Logic và chứng minh](./00_foundations/01_logic_and_proof.md)
@@ -22,6 +26,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 - [Mô hình toán học, phân tích thứ nguyên và scaling](./00_foundations/05_mathematical_modeling_dimensional_analysis_and_scaling.md)
 
 ### 01 — Algebra
+
+Đại số biến quantities và quan hệ thành biểu thức có thể biến đổi. Nó là cầu nối từ số và tỷ lệ tới hàm, mô hình tăng trưởng và tối ưu.
 
 - [Ngôn ngữ đại số: biến, biểu thức và phép biến đổi](./01_algebra/00_algebraic_language.md)
 - [Phương trình và bất phương trình](./01_algebra/01_equations_and_inequalities.md)
@@ -33,6 +39,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ### 02 — Functions
 
+Hàm mô tả cách input được biến thành output. Các chapter này nối biểu diễn đại số với thay đổi theo thời gian, composition và recurrence.
+
 - [Hàm số: quy tắc biến input thành output](./02_functions/00_function_concept.md)
 - [Mô hình tuyến tính và bậc hai](./02_functions/01_linear_and_quadratic_models.md)
 - [Hàm mũ và logarithmic models](./02_functions/02_exponential_and_logarithmic_models.md)
@@ -41,6 +49,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 - [Quan hệ ẩn, tham số và tọa độ cực](./02_functions/05_parametric_polar_and_implicit_relations.md)
 
 ### 03 — Geometry & Trigonometry
+
+Hình học và lượng giác đưa cấu trúc không gian, góc, khoảng cách và dao động vào cùng một ngôn ngữ. Đây là nền cho vectors, physics và signal.
 
 - [Hình học Euclid: điểm, đường, góc và cấu trúc không gian](./03_geometry_trigonometry/00_euclidean_geometry.md)
 - [Hình học tọa độ: biến không gian thành algebra](./03_geometry_trigonometry/01_coordinate_geometry.md)
@@ -54,6 +64,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ### 04 — Vectors & Linear Algebra
 
+Đại số tuyến tính mở rộng từ một biến sang nhiều chiều, nơi basis, projection và transformation trở thành công cụ mô hình hóa dữ liệu và hệ vật lý.
+
 - [Vector: đại lượng có nhiều thành phần và hướng](./04_vectors_linear_algebra/00_vectors.md)
 - [Ma trận và hệ phương trình tuyến tính](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md)
 - [Phép biến đổi tuyến tính](./04_vectors_linear_algebra/02_linear_transformations.md)
@@ -66,6 +78,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 - [Matrix calculus, Jacobian, Hessian và automatic differentiation](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md)
 
 ### 05 — Calculus & Analysis
+
+Calculus nghiên cứu giới hạn, tốc độ thay đổi và tích lũy; analysis làm rõ điều kiện để các phép đó hợp lệ. Hãy giữ quan hệ giữa local approximation và global behavior.
 
 - [Giới hạn và tính liên tục](./05_calculus/00_limits_and_continuity.md)
 - [Đạo hàm: tốc độ thay đổi cục bộ](./05_calculus/01_derivatives.md)
@@ -83,6 +97,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ### 06 — Probability & Statistics
 
+Probability mô hình hóa bất định, còn statistics suy luận từ dữ liệu hữu hạn. Các chapter nối sample, distribution, estimation và decision để tránh nhầm tương quan với bằng chứng nhân quả.
+
 - [Đếm và tổ hợp](./06_probability_statistics/00_counting_and_combinatorics.md)
 - [Nền tảng xác suất: mô hình hóa bất định](./06_probability_statistics/01_probability_foundations.md)
 - [Xác suất có điều kiện và định lý Bayes](./06_probability_statistics/02_conditional_probability_and_bayes.md)
@@ -99,6 +115,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ### 07 — Discrete Mathematics & Theoretical CS
 
+Nhánh rời rạc cung cấp ngôn ngữ cho logic, đồ thị, recurrence, information và computation. Nó giúp chuyển từ reasoning liên tục sang cấu trúc hữu hạn và thuật toán.
+
 - [Lý thuyết đồ thị: toán học của mạng lưới và quan hệ](./07_discrete_cs/00_graph_theory.md)
 - [Độ phức tạp thuật toán và ý nghĩa của logarithm](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md)
 - [Recurrence, induction và đệ quy trong thuật toán](./07_discrete_cs/02_recurrence_and_induction_in_algorithms.md)
@@ -111,6 +129,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ### 08 — Optimization & Numerical Mathematics
 
+Optimization chọn quyết định tốt dưới mục tiêu và ràng buộc; numerical mathematics kiểm tra sai số khi máy tính xấp xỉ. Hai lớp phải được đọc cùng conditioning và stability.
+
 - [Tối ưu hóa: mục tiêu, ràng buộc và trade-off](./08_optimization_numerical/00_optimization.md)
 - [Gradient descent, learning rate và geometry của optimization](./08_optimization_numerical/01_gradient_descent_and_convexity.md)
 - [Toán số: approximation, conditioning và stability](./08_optimization_numerical/02_numerical_methods_and_error.md)
@@ -120,6 +140,8 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 - [Dynamic programming, Bellman equation và optimal control](./08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md)
 
 ### 09 — Knowledge Connections
+
+Các connection chapter đưa cùng một pattern toán học sang tốc độ, thông tin, AI, finance và tín hiệu. Hãy dùng chúng để kiểm tra khả năng chuyển mental model giữa domain.
 
 - [Knowledge Connection — Rate, Change và Accumulation](./09_connections/00_rate_change_and_accumulation.md)
 - [Knowledge Connection — Distance, Similarity và Projection](./09_connections/01_distance_similarity_and_projection.md)
@@ -131,10 +153,14 @@ Không bắt buộc đọc tuần tự toàn bộ. Khi gặp concept chưa chắ
 
 ### Reference
 
+Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã học theo route. Nó hỗ trợ navigation, không thay thế chuỗi giải thích của chapter.
+
 - [Glossary Việt / English / 한국어](./10_glossary.md)
 - [Coverage Audit](./COVERAGE_AUDIT.md)
 
 ## Knowledge Dependency
+
+Đồ thị dependency dưới đây tóm tắt prerequisite và downstream use. Khi một công thức chưa rõ, lần theo mũi tên ngược để tìm khái niệm cần dựng lại.
 
 ```mermaid
 graph TD

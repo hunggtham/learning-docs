@@ -14,6 +14,8 @@ Trước khi một yêu cầu HTTP tới được máy chủ đích, máy khách
 
 ## Giao diện mạng và địa chỉ IP
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 ip addr
 ```
@@ -81,6 +83,8 @@ Vì vậy câu "cổng 8080 đang mở" vẫn thiếu chính xác nếu không n
 
 ## Các trạng thái kết nối TCP
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 sudo ss -antp | grep ':8080'
 ```
@@ -104,6 +108,8 @@ Nhiều `CLOSE-WAIT` kéo dài có thể gợi ý vấn đề vòng đời tài 
 
 ## `nc` để kiểm tra tầng TCP
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 nc -vz 10.0.0.20 443
 ```
@@ -111,6 +117,8 @@ nc -vz 10.0.0.20 443
 `-z` chỉ thử kết nối mà không gửi dữ liệu ứng dụng; `-v` hiển thị chi tiết hơn. Nếu TCP kết nối thành công nhưng `curl` vẫn thất bại, phạm vi điều tra chuyển lên TLS hoặc HTTP.
 
 ## `curl` để kiểm tra đường đi ở tầng ứng dụng
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 curl -fsS -v https://api.example.com/health

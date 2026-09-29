@@ -345,6 +345,8 @@ Nếu 99.99% thời gian graph không thay đổi, một cấu trúc static tố
 
 ## 24. Decision Framework
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Tình huống | Hướng tiếp cận |
 |---|---|
 | Chỉ thêm cạnh, hỏi connectivity | DSU |

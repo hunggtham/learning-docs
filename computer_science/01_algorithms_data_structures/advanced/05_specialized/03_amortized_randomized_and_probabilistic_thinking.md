@@ -432,6 +432,8 @@ Không có một loại guarantee luôn tốt nhất; phải khớp với SLA v�
 
 ## 33. Bảng phân biệt nhanh
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Loại bảo đảm | Câu hỏi chính |
 |---|---|
 | Worst-case | một thao tác/lần chạy tệ nhất có thể đắt tới đâu? |

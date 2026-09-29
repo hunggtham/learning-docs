@@ -404,6 +404,8 @@ Một factor `10` về power tương ứng +10 dB.
 
 ### pH
 
+pH là ví dụ cho logarithm biến một range nồng độ rất rộng thành thang đo dễ đọc. Hãy giữ dấu âm, base và ý nghĩa hóa học của đại lượng trước khi áp dụng công thức.
+
 ```math
 pH=-\log_{10}[H^+].
 ```

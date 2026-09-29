@@ -360,6 +360,8 @@ Rủi ro pha loãng
 
 ## Biosimilar
 
+Biosimilar cần được đọc qua ba lớp: bằng chứng tương đương, quy định phê duyệt và economics hoàn trả. Doanh thu tiềm năng chỉ trở thành lợi nhuận khi sản xuất, bác sĩ và payer cùng chấp nhận.
+
 ```text
 Phê duyệt
 Thời điểm ra mắt
@@ -370,6 +372,8 @@ Chi phí sản xuất
 ```
 
 ## CDMO
+
+CDMO biến năng lực quy trình và compliance thành doanh thu theo hợp đồng. Hãy theo dõi capacity, yield, khách hàng, thời gian qualification và rủi ro tập trung.
 
 ```text
 Công suất
@@ -382,6 +386,8 @@ Lịch sử chất lượng / thanh tra
 
 ## Thiết bị / chẩn đoán
 
+Thiết bị và chẩn đoán có chu kỳ mua sắm, validation và reimbursement khác dược phẩm. Phân tích cần nối công nghệ với workflow bệnh viện và khả năng thanh toán.
+
 ```text
 Nền thiết bị đã lắp
 Doanh thu vật tư / thuốc thử
@@ -391,6 +397,8 @@ Biên dịch vụ
 ```
 
 ## Thương hiệu mỹ phẩm
+
+Thương hiệu mỹ phẩm phụ thuộc product cycle, kênh phân phối, marketing và niềm tin người dùng. Tăng doanh thu chỉ bền vững khi repeat purchase và unit economics cải thiện.
 
 ```text
 Mức tập trung SKU
@@ -402,6 +410,8 @@ Sell-through
 ```
 
 ## ODM mỹ phẩm
+
+ODM đứng sau nhiều thương hiệu nên driver nằm ở khách hàng, công suất, đổi mới công thức và chất lượng. Cần phân biệt backlog thật với đơn hàng ngắn hạn do trend.
 
 ```text
 Mức tập trung khách hàng
@@ -512,6 +522,8 @@ Dòng tiền
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`33_logistics_ports_and_distribution_networks.md`](./33_logistics_ports_and_distribution_networks.md).
 
 ### Nguồn nền
+
+Nguồn nền giúp kiểm tra quy định, dữ liệu ngành và thuật ngữ y sinh–mỹ phẩm. Hãy ghi ngày truy cập vì phê duyệt và chính sách reimbursement có thể thay đổi.
 
 - Korea Health Industry Development Institute (KHIDI), kết quả xuất khẩu Biohealth 2025 công bố năm 2026: https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
 - Tài liệu triển vọng ngành/xuất khẩu của KHIDI.

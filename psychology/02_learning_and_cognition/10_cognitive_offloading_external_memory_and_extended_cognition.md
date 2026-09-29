@@ -86,6 +86,8 @@ Một checklist tốt không cố externalize toàn bộ expertise; nó bảo v�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 năng lực nội tại
  + độ khó task
@@ -106,6 +108,8 @@ năng lực nội tại
 Xem [[01_memory]], [[04_cognitive_biases_and_metacognition]], [[09_learning_transfer_forgetting_and_durable_knowledge]], [[12_temporal_cognition_prospective_memory_and_time]], [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
 ## Nguồn đọc nền
+
+Nguồn đọc nền đặt cognitive offloading và extended cognition trong bằng chứng về task, tool và context. Hãy kiểm tra khi nào công cụ thực sự mở rộng năng lực và khi nào chỉ chuyển chi phí sang nơi khác.
 
 - Burnett LK, Richmond LL. *Meta-analytic investigations of the effect of cognitive offloading on memory-based task performance and interindividual variability*. Memory & Cognition, 2026. PMID: 40500483.
 - Ngai C, Gilbert SJ. *Metacognitive training facilitates optimal cognitive offloading*. Cognitive Research: Principles and Implications, 2026. PMID: 41817942.

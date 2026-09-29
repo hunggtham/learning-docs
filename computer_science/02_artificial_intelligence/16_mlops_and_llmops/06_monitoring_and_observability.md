@@ -8,6 +8,8 @@ AI production cần quan sát đồng thời **hành vi hệ thống (system beh
 
 ## Bốn nhóm tín hiệu chính
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. Hạ tầng / Hệ thống
 2. Dữ liệu / Đầu vào
@@ -16,6 +18,8 @@ AI production cần quan sát đồng thời **hành vi hệ thống (system beh
 ```
 
 ### Chỉ số hệ thống
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 - tốc độ request;
 - tỷ lệ lỗi;
@@ -28,6 +32,8 @@ AI production cần quan sát đồng thời **hành vi hệ thống (system beh
 
 ### Chỉ số dữ liệu
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - vi phạm schema;
 - tỷ lệ null/thiếu;
 - tần suất category;
@@ -38,6 +44,8 @@ AI production cần quan sát đồng thời **hành vi hệ thống (system beh
 
 ### Chỉ số mô hình
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - phân phối score hoặc prediction;
 - confidence/calibration;
 - cân bằng class;
@@ -46,6 +54,8 @@ AI production cần quan sát đồng thời **hành vi hệ thống (system beh
 - tính hợp lệ của output có cấu trúc.
 
 ### Chỉ số kết quả
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 - thiệt hại gian lận thực tế;
 - conversion;
@@ -186,6 +196,8 @@ timeout có khiến hệ thống fallback không?
 Khả năng quan sát cho phép lần theo chuỗi nguyên nhân thay vì đoán mò.
 
 ## Mô hình tư duy
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Giám sát cho biết có gì đó đang sai.

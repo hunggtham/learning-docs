@@ -179,6 +179,8 @@ Các chapter LLM sau sẽ mở rộng distinction này.
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Observed sample
    ↓ learning algorithm + inductive bias

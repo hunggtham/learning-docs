@@ -80,6 +80,8 @@ Shrink cũng cần hysteresis. Nếu grow khi 100% full và shrink ngay khi usag
 
 ## 4. C cách triển khai và transactional sự thay đổi dữ liệu
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```c
 typedef struct {
     int *data;

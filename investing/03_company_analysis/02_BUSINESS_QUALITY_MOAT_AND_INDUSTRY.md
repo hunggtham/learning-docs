@@ -92,6 +92,8 @@ Nếu cohort cũ tiếp tục chi tiêu hoặc duy trì thuê bao tốt, tăng t
 
 ## 9. ROIC
 
+Sau khi hiểu driver ngành và economics của khách hàng, ta cần đo xem doanh nghiệp biến vốn sử dụng thành lợi nhuận hoạt động hiệu quả đến đâu. ROIC là điểm nối giữa chất lượng kinh doanh, tái đầu tư và khả năng tạo giá trị.
+
 ```text
 ROIC = NOPAT / Invested Capital
 ```

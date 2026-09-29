@@ -587,6 +587,8 @@ For social/high-impact AI, utility model, fairness constraints and governance ar
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Probability = what may happen?
 Utility     = how much do outcomes matter?

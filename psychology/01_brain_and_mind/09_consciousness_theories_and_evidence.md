@@ -176,6 +176,8 @@ Một theory mới vẫn phải operationalize claim, tạo prediction riêng v�
 
 ## Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Subjective phenomenon
       ↓
@@ -199,6 +201,8 @@ Consciousness là ví dụ lý tưởng cho cách đọc science hiện đại: 
 Xem [[07_attention_consciousness_and_awareness]], [[01_sensation_and_perception]], [[08_sleep_circadian_and_recovery]], [[../00_foundations/02_research_methods]], [[../00_foundations/06_open_science_and_evidence_evaluation]], [[../00_foundations/08_causal_inference_and_psychological_evidence]] và [[../EVIDENCE_STATUS_GUIDE]].
 
 ## Nguồn nền nên đọc
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - Seth & Bayne (2022), *Theories of consciousness*, Nature Reviews Neuroscience.
 - Cogitate Consortium et al. (2025), *Adversarial testing of global neuronal workspace and integrated information theories of consciousness*, Nature.

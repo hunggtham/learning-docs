@@ -12,6 +12,8 @@ Ba ngôn ngữ trong thư viện có vai trò khác nhau. **C** làm lộ bố t
 
 ## Vị trí trong thư viện Khoa học máy tính
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 computer_science/
 └── 01_algorithms_data_structures/
@@ -31,6 +33,8 @@ computer_science/
 Từ **nâng cao (advanced)** mô tả vị trí của thư viện so với lớp nền tảng. Bên trong vẫn không tổ chức cứng theo Beginner → Intermediate → Advanced; các chương được chia theo quan hệ phụ thuộc kiến thức và ranh giới khái niệm.
 
 ## Cấu trúc đầy đủ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 advanced/
@@ -107,6 +111,8 @@ advanced/
 Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, GitHub và GitHub Pages.
 
 ## Quan hệ phụ thuộc kiến thức
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```mermaid
 flowchart TD

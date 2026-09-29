@@ -10,6 +10,8 @@ Các tên có thể mang nhiều convention khác nhau trong tiếng Việt sẽ
 
 ## Bản đồ toàn bộ thư viện
 
+Bản đồ này đặt chronology, social/economic history, geography và memory studies trong cùng một hệ. Hãy đọc các nhánh như những câu hỏi bổ sung cho cùng một giai đoạn, không như các danh sách sự kiện độc lập.
+
 ```text
 01 Cách đọc lịch sử
    ↓
@@ -119,6 +121,8 @@ Ta cần biết Tam Quốc trước khi hiểu vì sao Goryeo tự đặt mình 
 Đây là dependency về **causal context (bối cảnh nhân quả / 인과적 맥락)**, không phải difficulty level.
 
 ## Mermaid knowledge graph
+
+Sau bản đồ tuyến tính, sơ đồ mạng cho thấy một chapter có thể nối tới nhiều giai đoạn và nhiều loại bằng chứng. Đây là điểm chuyển từ học theo thời gian sang suy luận theo dependency và cơ chế.
 
 ```mermaid
 graph TD

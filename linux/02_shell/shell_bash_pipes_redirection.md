@@ -108,6 +108,8 @@ Lệnh phía sau `||` chỉ chạy nếu `curl` thất bại. Đây là **luồn
 
 ## Pipe và trạng thái của pipeline
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 producer | filter | consumer
 ```
@@ -169,6 +171,8 @@ NAME=app ./run.sh
 Điều này giải thích một lỗi kinh điển: chạy ứng dụng thủ công thì hoạt động nhưng dịch vụ systemd lại thất bại vì môi trường của shell tương tác không tự động được truyền vào trình quản lý dịch vụ.
 
 ## Thay thế kết quả câu lệnh
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 backup="app.$(date +%F_%H%M%S).bak"

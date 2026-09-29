@@ -350,6 +350,8 @@ Khi review thay đổi build, hãy hỏi: thay đổi áp dụng variant nào; c
 Build system là production code. Một lỗi build configuration có thể không xuất hiện trong unit test nhưng vẫn thay permission, signing, resource, shrinker hoặc artifact được ship tới hàng triệu device.
 
 ## 23. Official references
+Phần này nối mạch Android vừa học với “23. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android build overview: https://developer.android.com/build
 - Build variants and source sets: https://developer.android.com/build/build-variants

@@ -66,6 +66,8 @@ Xóa một đường dẫn là thay đổi mục thư mục. Vì vậy khả nă
 
 ## Chủ sở hữu
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 chown app:app application.yml
 ```

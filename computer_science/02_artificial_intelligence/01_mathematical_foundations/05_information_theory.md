@@ -470,6 +470,8 @@ Nhưng “compress tốt = intelligent” không phải equivalence universal. C
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Surprisal          = event hiếm mang nhiều information
 Entropy            = expected uncertainty/surprise

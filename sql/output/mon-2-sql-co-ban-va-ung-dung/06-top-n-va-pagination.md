@@ -14,6 +14,68 @@ Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **đ
 
 ---
 
+Để học **TOP-N và Pagination** như một mạch suy luận, trước hết hãy giữ câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Mục đích của bài là biến **ROWNUM, ROW_NUMBER/RANK/DENSE_RANK, FETCH/OFFSET, TOP và WITH TIES** thành cách đọc có thể áp dụng.
+
+```
+
+Range:
+
+```text
+0 < x ≤ 1
+```
+
+Row cuối → `1`.
+
+Ta bắt đầu **⑫ RATIO_TO_REPORT** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### ⑫ RATIO_TO_REPORT
+
+Phần này nối mạch SQL với “⑫ RATIO_TO_REPORT”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+current value
+-------------
+partition SUM
+```
+
+Tổng ratio ≈ `1`.
+
+---
+
+Khi gom phần **⑫ RATIO_TO_REPORT** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⑫ RATIO_TO_REPORT**. Bây giờ chuyển sang **🧠 Một dòng để nhớ toàn bộ chương**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **🧠 Một dòng để nhớ toàn bộ chương** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+### 🧠 Một dòng để nhớ toàn bộ chương
+
+Phần này nối mạch SQL với “🧠 Một dòng để nhớ toàn bộ chương”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
+```text
+PARTITION BY = chia nhóm nhưng giữ row
+ORDER BY     = xác định thứ tự tính
+ROWS         = tính theo từng row
+RANGE        = tính theo giá trị/peer
+LAG          = trước
+LEAD         = sau
+FIRST_VALUE  = đầu frame
+LAST_VALUE   = cuối frame
+NTILE        = chia N nhóm
+RATIO        = giá trị / tổng
+PERCENT_RANK = vị trí xếp hạng %
+CUME_DIST    = tỷ lệ tích lũy
+```
+
+**Đặc biệt nếu đề SQLD cho `SUM(...) OVER(ORDER BY ...)` có giá trị ORDER BY trùng nhau, hoặc cho `LAST_VALUE(...)`, đừng tính ngay. Việc đầu tiên phải làm là xác định `ROWS/RANGE` và window frame trước.** Đây là hai bẫy lớn nhất trong nhóm kiến thức ở các trang này.
+Tiếp tục **제5절 TOP N 쿼리 — TOP-N Query**. Phần này nhìn có vẻ đơn giản nhưng SQLD rất thích hỏi bẫy về **`ROWNUM` + `ORDER BY`**, **vì sao `ROWNUM > 1` không chạy**, và sự khác nhau giữa **ROWNUM / RANK / FETCH / TOP**.
+
+Khi gom phần **🧠 Một dòng để nhớ toàn bộ chương** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **🧠 Một dòng để nhớ toàn bộ chương**. Bây giờ chuyển sang **1. TOP-N Query là gì?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **1. TOP-N Query là gì?** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 1. TOP-N Query là gì?
 
 **KR:** TOP-N 쿼리는 전체 결과에서 상위 N개의 행을 추출하는 쿼리이다.
@@ -39,6 +101,12 @@ Page 3 → row 21~30
 
 ---
 
+Khi gom phần **1. TOP-N Query là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **1. TOP-N Query là gì?**. Bây giờ chuyển sang **2. Các cách làm TOP-N trong phần này**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2. Các cách làm TOP-N trong phần này** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 2. Các cách làm TOP-N trong phần này
 
 Trong ảnh có 4 cách chính:
@@ -51,6 +119,12 @@ Trong ảnh có 4 cách chính:
 ```
 
 Trước hết phải hiểu `ROWNUM`, vì đây là phần dễ nhầm nhất.
+
+Khi gom phần **2. Các cách làm TOP-N trong phần này** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2. Các cách làm TOP-N trong phần này**. Bây giờ chuyển sang **3. ROWNUM là gì? ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **3. ROWNUM là gì? ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 3. ROWNUM là gì? ⭐⭐⭐
 
@@ -97,6 +171,12 @@ pseudo column
 
 ---
 
+Khi gom phần **3. ROWNUM là gì? ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **3. ROWNUM là gì? ⭐⭐⭐**. Bây giờ chuyển sang **4. ROWNUM không phải số thứ tự cố định**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4. ROWNUM không phải số thứ tự cố định** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 4. ROWNUM không phải số thứ tự cố định
 
 **KR:** ROWNUM은 절대적인 행 번호가 아니다.
@@ -125,6 +205,12 @@ PK
 ```
 
 vốn là giá trị dữ liệu thật.
+
+Khi gom phần **4. ROWNUM không phải số thứ tự cố định** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4. ROWNUM không phải số thứ tự cố định**. Bây giờ chuyển sang **5. Bẫy lớn nhất: ROWNUM + ORDER BY ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **5. Bẫy lớn nhất: ROWNUM + ORDER BY ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 5. Bẫy lớn nhất: ROWNUM + ORDER BY ⭐⭐⭐
 
@@ -165,6 +251,12 @@ mà là:
 
 ---
 
+Khi gom phần **5. Bẫy lớn nhất: ROWNUM + ORDER BY ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **5. Bẫy lớn nhất: ROWNUM + ORDER BY ⭐⭐⭐**. Bây giờ chuyển sang **6. Vì sao?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **6. Vì sao?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 6. Vì sao?
 
 Theo logic liên quan đến query này:
@@ -195,6 +287,12 @@ WHERE ROWNUM <= 3
 **VI:** `WHERE` được xử lý trước `ORDER BY`.
 
 ---
+
+Khi gom phần **6. Vì sao?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **6. Vì sao?**. Bây giờ chuyển sang **7. Cách đúng: sort trước bằng Inline View ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **7. Cách đúng: sort trước bằng Inline View ⭐⭐⭐** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 7. Cách đúng: sort trước bằng Inline View ⭐⭐⭐
 
@@ -240,7 +338,15 @@ FORD
 
 ---
 
+Khi gom phần **7. Cách đúng: sort trước bằng Inline View ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **7. Cách đúng: sort trước bằng Inline View ⭐⭐⭐**. Bây giờ chuyển sang **8. Inline View là gì?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **8. Inline View là gì?** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 8. Inline View là gì?
+
+Phần này nối mạch SQL với “8. Inline View là gì?”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 FROM (
@@ -270,6 +376,12 @@ ROWNUM <= 3
 
 ---
 
+Khi gom phần **8. Inline View là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **8. Inline View là gì?**. Bây giờ chuyển sang **9. Tại sao `ROWNUM <= N` được nhưng `ROWNUM > N` có vấn đề? ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **9. Tại sao `ROWNUM <= N` được nhưng `ROWNUM > N` có vấn đề? ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 9. Tại sao `ROWNUM <= N` được nhưng `ROWNUM > N` có vấn đề? ⭐⭐⭐
 
 Đây là bẫy SQLD cực hay hỏi.
@@ -297,6 +409,12 @@ WHERE ROWNUM > 3;
 Tại sao?
 
 ---
+
+Khi gom phần **9. Tại sao `ROWNUM <= N` được nhưng `ROWNUM > N` có vấn đề? ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **9. Tại sao `ROWNUM <= N` được nhưng `ROWNUM > N` có vấn đề? ⭐⭐⭐**. Bây giờ chuyển sang **10. Cơ chế gán ROWNUM**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **10. Cơ chế gán ROWNUM** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 10. Cơ chế gán ROWNUM
 
@@ -345,6 +463,12 @@ ROWNUM = 4
 
 ---
 
+Khi gom phần **10. Cơ chế gán ROWNUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **10. Cơ chế gán ROWNUM**. Bây giờ chuyển sang **11. Quy tắc nhớ cực quan trọng**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **11. Quy tắc nhớ cực quan trọng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 11. Quy tắc nhớ cực quan trọng
 
 Các điều kiện dạng:
@@ -369,7 +493,15 @@ không hoạt động theo cách bạn kỳ vọng nếu áp dụng trực tiế
 
 ---
 
+Khi gom phần **11. Quy tắc nhớ cực quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **11. Quy tắc nhớ cực quan trọng**. Bây giờ chuyển sang **12. Ví dụ sai: lấy rank 4~6**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **12. Ví dụ sai: lấy rank 4~6** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 12. Ví dụ sai: lấy rank 4~6
+
+Phần này nối mạch SQL với “12. Ví dụ sai: lấy rank 4~6”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT ENAME, SAL
@@ -406,6 +538,12 @@ false.
 Và lại mắc vào vấn đề như trên.
 
 ---
+
+Khi gom phần **12. Ví dụ sai: lấy rank 4~6** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **12. Ví dụ sai: lấy rank 4~6**. Bây giờ chuyển sang **13. Cách đúng để lấy row 4~6 bằng ROWNUM**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **13. Cách đúng để lấy row 4~6 bằng ROWNUM** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 13. Cách đúng để lấy row 4~6 bằng ROWNUM
 
@@ -459,6 +597,12 @@ RN >= 4
 
 ---
 
+Khi gom phần **13. Cách đúng để lấy row 4~6 bằng ROWNUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **13. Cách đúng để lấy row 4~6 bằng ROWNUM**. Bây giờ chuyển sang **14. Tại sao alias RN giải quyết được?**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **14. Tại sao alias RN giải quyết được?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 14. Tại sao alias RN giải quyết được?
 
 Trong:
@@ -479,9 +623,21 @@ Lúc này không còn đang filter trực tiếp pseudocolumn `ROWNUM` trong cù
 
 Đây là điểm bản chất.
 
+Khi gom phần **14. Tại sao alias RN giải quyết được?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **14. Tại sao alias RN giải quyết được?**. Bây giờ chuyển sang **15. ROWNUM và ROW_NUMBER() khác nhau ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **15. ROWNUM và ROW_NUMBER() khác nhau ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 15. ROWNUM và ROW_NUMBER() khác nhau ⭐⭐⭐
 
 Rất dễ nhầm tên.
+
+Khi gom phần **15. ROWNUM và ROW_NUMBER() khác nhau ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **15. ROWNUM và ROW_NUMBER() khác nhau ⭐⭐⭐**. Bây giờ chuyển sang **ROWNUM**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**ROWNUM** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
 
 ### ROWNUM
 
@@ -495,6 +651,12 @@ ROWNUM
 * được gán trong quá trình query
 * phụ thuộc query execution
 * thường dùng legacy TOP-N/paging
+
+Khi gom phần **ROWNUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ROWNUM**. Bây giờ chuyển sang **ROW_NUMBER()**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **ROW_NUMBER()** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### ROW_NUMBER()
 
@@ -528,6 +690,12 @@ JONES  2975   4
 ```
 
 Đừng bao giờ coi hai cái giống nhau.
+
+Khi gom phần **ROW_NUMBER()** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ROW_NUMBER()**. Bây giờ chuyển sang **16. RANK() ⭐⭐⭐**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **16. RANK() ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 16. RANK() ⭐⭐⭐
 
@@ -563,7 +731,15 @@ Không có rank 3.
 
 ---
 
+Khi gom phần **16. RANK() ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **16. RANK() ⭐⭐⭐**. Bây giờ chuyển sang **17. Dùng RANK để lấy thứ hạng**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **17. Dùng RANK để lấy thứ hạng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 17. Dùng RANK để lấy thứ hạng
+
+Phần này nối mạch SQL với “17. Dùng RANK để lấy thứ hạng”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT ENAME, SAL
@@ -581,6 +757,12 @@ WHERE RN BETWEEN 4 AND 6;
 `RN` ở đây là ranking logic theo `SAL`, không phải vị trí row tùy thời điểm.
 
 ---
+
+Khi gom phần **17. Dùng RANK để lấy thứ hạng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **17. Dùng RANK để lấy thứ hạng**. Bây giờ chuyển sang **18. Nhưng RANK có thể trả nhiều hơn N row**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **18. Nhưng RANK có thể trả nhiều hơn N row** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 18. Nhưng RANK có thể trả nhiều hơn N row
 
@@ -620,6 +802,12 @@ vì rank 2 có hai người.
 
 ---
 
+Khi gom phần **18. Nhưng RANK có thể trả nhiều hơn N row** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **18. Nhưng RANK có thể trả nhiều hơn N row**. Bây giờ chuyển sang **19. RANK vs ROW_NUMBER vs DENSE_RANK**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **19. RANK vs ROW_NUMBER vs DENSE_RANK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 19. RANK vs ROW_NUMBER vs DENSE_RANK
 
 Mặc dù ảnh chỉ nhắc `RANK`, nên mở rộng chỗ này vì SQLD thường hỏi chung.
@@ -634,7 +822,15 @@ SAL
 2975
 ```
 
+Khi gom phần **19. RANK vs ROW_NUMBER vs DENSE_RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **19. RANK vs ROW_NUMBER vs DENSE_RANK**. Bây giờ chuyển sang **ROW_NUMBER**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**ROW_NUMBER** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### ROW_NUMBER
+
+Phần này nối mạch SQL với “ROW_NUMBER”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 1
@@ -645,7 +841,15 @@ SAL
 
 Không quan tâm tie, mỗi row một số.
 
+Khi gom phần **ROW_NUMBER** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ROW_NUMBER**. Bây giờ chuyển sang **RANK**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**RANK** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### RANK
+
+Phần này nối mạch SQL với “RANK”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 1
@@ -656,7 +860,15 @@ Không quan tâm tie, mỗi row một số.
 
 Có tie → nhảy hạng.
 
+Khi gom phần **RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **RANK**. Bây giờ chuyển sang **DENSE_RANK**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**DENSE_RANK** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### DENSE_RANK
+
+Phần này nối mạch SQL với “DENSE_RANK”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 1
@@ -677,6 +889,12 @@ RANK       → cùng giá trị cùng hạng + có gap
 DENSE_RANK → cùng giá trị cùng hạng + không gap
 ```
 
+Khi gom phần **DENSE_RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **DENSE_RANK**. Bây giờ chuyển sang **20. FETCH — cách hiện đại hơn ⭐⭐⭐**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **20. FETCH — cách hiện đại hơn ⭐⭐⭐** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 20. FETCH — cách hiện đại hơn ⭐⭐⭐
 
 Từ Oracle 12c trở lên có thể dùng Row Limiting Clause:
@@ -695,6 +913,12 @@ Nghĩa là:
 Rất dễ đọc.
 
 ---
+
+Khi gom phần **20. FETCH — cách hiện đại hơn ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **20. FETCH — cách hiện đại hơn ⭐⭐⭐**. Bây giờ chuyển sang **21. Cấu trúc FETCH/OFFSET**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **21. Cấu trúc FETCH/OFFSET** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 21. Cấu trúc FETCH/OFFSET
 
@@ -729,7 +953,15 @@ FETCH
 
 ---
 
+Khi gom phần **21. Cấu trúc FETCH/OFFSET** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **21. Cấu trúc FETCH/OFFSET**. Bây giờ chuyển sang **22. OFFSET**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **22. OFFSET** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 22. OFFSET
+
+Phần này nối mạch SQL với “22. OFFSET”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 OFFSET 3 ROWS
@@ -770,6 +1002,12 @@ bắt đầu từ:
 
 ---
 
+Khi gom phần **22. OFFSET** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **22. OFFSET**. Bây giờ chuyển sang **23. OFFSET + FETCH**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **23. OFFSET + FETCH** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 23. OFFSET + FETCH
 
 Ảnh có:
@@ -804,6 +1042,12 @@ Lưu ý ở đây nói vị trí row sau sort, chưa chắc là `RANK()` 4,5,6 n
 
 ---
 
+Khi gom phần **23. OFFSET + FETCH** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **23. OFFSET + FETCH**. Bây giờ chuyển sang **24. FIRST và NEXT trong FETCH**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **24. FIRST và NEXT trong FETCH** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 24. FIRST và NEXT trong FETCH
 
 Có thể gặp:
@@ -834,6 +1078,12 @@ rất tự nhiên cho pagination.
 
 ---
 
+Khi gom phần **24. FIRST và NEXT trong FETCH** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **24. FIRST và NEXT trong FETCH**. Bây giờ chuyển sang **25. ROW và ROWS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **25. ROW và ROWS** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 25. ROW và ROWS
 
 Có thể gặp:
@@ -859,11 +1109,25 @@ Về ý nghĩa, `ROW/ROWS` chỉ khác số ít/số nhiều về cách viết.
 
 ---
 
+Khi gom phần **25. ROW và ROWS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **25. ROW và ROWS**. Bây giờ chuyển sang **26. Pagination bằng OFFSET/FETCH**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **26. Pagination bằng OFFSET/FETCH** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 26. Pagination bằng OFFSET/FETCH
 
 Ví dụ page size = 10.
 
+Khi gom phần **26. Pagination bằng OFFSET/FETCH** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **26. Pagination bằng OFFSET/FETCH**. Bây giờ chuyển sang **Page 1**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Page 1** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Page 1
+
+Phần này nối mạch SQL với “Page 1”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 OFFSET 0 ROWS
@@ -872,7 +1136,15 @@ FETCH NEXT 10 ROWS ONLY
 
 → row 1~10.
 
+Khi gom phần **Page 1** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Page 1**. Bây giờ chuyển sang **Page 2**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Page 2** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Page 2
+
+Phần này nối mạch SQL với “Page 2”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 OFFSET 10 ROWS
@@ -881,7 +1153,15 @@ FETCH NEXT 10 ROWS ONLY
 
 → row 11~20.
 
+Khi gom phần **Page 2** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Page 2**. Bây giờ chuyển sang **Page 3**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Page 3** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Page 3
+
+Phần này nối mạch SQL với “Page 3”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 OFFSET 20 ROWS
@@ -910,6 +1190,12 @@ sau đó:
 FETCH NEXT 20 ROWS ONLY
 ```
 
+Khi gom phần **Page 3** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Page 3**. Bây giờ chuyển sang **27. FETCH vẫn nên có ORDER BY**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **27. FETCH vẫn nên có ORDER BY** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 27. FETCH vẫn nên có ORDER BY
 
 Nếu bạn viết:
@@ -935,6 +1221,12 @@ FETCH FIRST 5 ROWS ONLY
 
 Không `ORDER BY` thì khái niệm "top" không có tiêu chí xác định.
 
+Khi gom phần **27. FETCH vẫn nên có ORDER BY** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **27. FETCH vẫn nên có ORDER BY**. Bây giờ chuyển sang **28. SQL Server TOP N**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **28. SQL Server TOP N** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 28. SQL Server TOP N
 
 Trong SQL Server:
@@ -957,6 +1249,12 @@ SCOTT  3000
 ```
 
 ---
+
+Khi gom phần **28. SQL Server TOP N** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **28. SQL Server TOP N**. Bây giờ chuyển sang **29. TOP đặt ở đâu?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **29. TOP đặt ở đâu?** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 29. TOP đặt ở đâu?
 
@@ -986,6 +1284,12 @@ FETCH → sau ORDER BY
 ```
 
 ---
+
+Khi gom phần **29. TOP đặt ở đâu?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **29. TOP đặt ở đâu?**. Bây giờ chuyển sang **30. TOP N WITH TIES ⭐⭐⭐**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **30. TOP N WITH TIES ⭐⭐⭐** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 30. TOP N WITH TIES ⭐⭐⭐
 
@@ -1049,6 +1353,12 @@ Tức:
 
 ---
 
+Khi gom phần **30. TOP N WITH TIES ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **30. TOP N WITH TIES ⭐⭐⭐**. Bây giờ chuyển sang **31. WITH TIES giống tư duy RANK**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **31. WITH TIES giống tư duy RANK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 31. WITH TIES giống tư duy RANK
 
 Ví dụ:
@@ -1069,7 +1379,15 @@ nên trả 3 row.
 
 ---
 
+Khi gom phần **31. WITH TIES giống tư duy RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **31. WITH TIES giống tư duy RANK**. Bây giờ chuyển sang **32. Một bẫy: TOP N không đảm bảo N row nếu WITH TIES**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **32. Một bẫy: TOP N không đảm bảo N row nếu WITH TIES** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 32. Một bẫy: TOP N không đảm bảo N row nếu WITH TIES
+
+Phần này nối mạch SQL với “32. Một bẫy: TOP N không đảm bảo N row nếu WITH TIES”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 TOP 2
@@ -1094,7 +1412,15 @@ có thể:
 
 tùy tie tại vị trí thứ N.
 
+Khi gom phần **32. Một bẫy: TOP N không đảm bảo N row nếu WITH TIES** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **32. Một bẫy: TOP N không đảm bảo N row nếu WITH TIES**. Bây giờ chuyển sang **33. So sánh 4 phương pháp**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **33. So sánh 4 phương pháp** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 33. So sánh 4 phương pháp
+
+Phần này nối mạch SQL với “33. So sánh 4 phương pháp”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Phương pháp    | DB/đặc điểm                     |                Tie |            Paging |
 | -------------- | ------------------------------- | -----------------: | ----------------: |
@@ -1104,6 +1430,12 @@ tùy tie tại vị trí thứ N.
 | `TOP N`        | SQL Server                      | `WITH TIES` hỗ trợ |       chủ yếu top |
 
 ---
+
+Khi gom phần **33. So sánh 4 phương pháp** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **33. So sánh 4 phương pháp**. Bây giờ chuyển sang **34. TOP 3 rows vs TOP 3 ranks**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **34. TOP 3 rows vs TOP 3 ranks** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 34. TOP 3 rows vs TOP 3 ranks
 
@@ -1118,6 +1450,12 @@ SAL
 2975
 2850
 ```
+
+Khi gom phần **34. TOP 3 rows vs TOP 3 ranks** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **34. TOP 3 rows vs TOP 3 ranks**. Bây giờ chuyển sang **Top 3 rows**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Top 3 rows** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Top 3 rows
 
@@ -1138,6 +1476,12 @@ FETCH FIRST 3 ROWS ONLY
 chính xác 3 row.
 
 ---
+
+Khi gom phần **Top 3 rows** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Top 3 rows**. Bây giờ chuyển sang **Top 3 ranks**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Top 3 ranks** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Top 3 ranks
 
@@ -1193,6 +1537,12 @@ Vì vậy trước khi chọn hàm, phải hỏi:
 
 > muốn **N row** hay **N mức giá trị/rank**?
 
+Khi gom phần **Top 3 ranks** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Top 3 ranks**. Bây giờ chuyển sang **35. Bẫy tie khi ORDER BY không deterministic**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **35. Bẫy tie khi ORDER BY không deterministic** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 35. Bẫy tie khi ORDER BY không deterministic
 
 Giả sử:
@@ -1228,6 +1578,12 @@ nếu bằng nhau → EMPNO
 
 ---
 
+Khi gom phần **35. Bẫy tie khi ORDER BY không deterministic** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **35. Bẫy tie khi ORDER BY không deterministic**. Bây giờ chuyển sang **36. Vì sao pagination cần ORDER BY ổn định?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **36. Vì sao pagination cần ORDER BY ổn định?** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 36. Vì sao pagination cần ORDER BY ổn định?
 
 Giả sử page 1:
@@ -1258,6 +1614,12 @@ ORDER BY SAL DESC, EMPNO
 ```
 
 để tạo total ordering.
+
+Khi gom phần **36. Vì sao pagination cần ORDER BY ổn định?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **36. Vì sao pagination cần ORDER BY ổn định?**. Bây giờ chuyển sang **37. Cách đọc đề SQLD nhanh**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **37. Cách đọc đề SQLD nhanh** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 37. Cách đọc đề SQLD nhanh
 
@@ -1343,7 +1705,19 @@ take 3
 → position 4~6
 ```
 
+Khi gom phần **37. Cách đọc đề SQLD nhanh** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **37. Cách đọc đề SQLD nhanh**. Bây giờ chuyển sang **38. So sánh các ví dụ tương đương**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **38. So sánh các ví dụ tương đương** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 38. So sánh các ví dụ tương đương
+
+Khi gom phần **38. So sánh các ví dụ tương đương** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **38. So sánh các ví dụ tương đương**. Bây giờ chuyển sang **Oracle cổ điển**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Oracle cổ điển** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Oracle cổ điển
 
@@ -1361,7 +1735,15 @@ WHERE ROWNUM <= 3;
 
 ---
 
+Khi gom phần **Oracle cổ điển** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Oracle cổ điển**. Bây giờ chuyển sang **Oracle hiện đại**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Oracle hiện đại** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Oracle hiện đại
+
+Phần này nối mạch SQL với “Oracle hiện đại”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT ENAME, SAL
@@ -1374,7 +1756,15 @@ Dễ đọc hơn rất nhiều.
 
 ---
 
+Khi gom phần **Oracle hiện đại** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Oracle hiện đại**. Bây giờ chuyển sang **SQL Server**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **SQL Server** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### SQL Server
+
+Phần này nối mạch SQL với “SQL Server”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT TOP 3
@@ -1386,7 +1776,15 @@ ORDER BY SAL DESC;
 
 ---
 
+Khi gom phần **SQL Server** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **SQL Server**. Bây giờ chuyển sang **Window Function**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Window Function** bằng câu hỏi: **ta đang gom các hàng thành nhóm hay giữ từng hàng để tính trong một cửa sổ, và ranh giới tính toán nằm ở đâu?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### Window Function
+
+Phần này nối mạch SQL với “Window Function”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT ENAME, SAL
@@ -1401,7 +1799,19 @@ WHERE RN <= 3;
 
 Cả 4 đều nhằm mục đích lấy 3 row theo thứ tự, nhưng mechanism khác nhau.
 
+Khi gom phần **Window Function** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Window Function**. Bây giờ chuyển sang **🔥 SQLD NOTE — 반드시 암기**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 🔥 SQLD NOTE — 반드시 암기
+
+Khi gom phần **🔥 SQLD NOTE — 반드시 암기** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **🔥 SQLD NOTE — 반드시 암기**. Bây giờ chuyển sang **① TOP-N**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **① TOP-N** bằng câu hỏi: **ta chọn đúng đoạn kết quả nào, theo thứ tự nào, và làm sao không nhầm giữa giới hạn hàng với thứ tự xử lý?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### ① TOP-N
 
@@ -1410,7 +1820,15 @@ Cả 4 đều nhằm mục đích lấy 3 row theo thứ tự, nhưng mechanism 
 
 ---
 
+Khi gom phần **① TOP-N** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **① TOP-N**. Bây giờ chuyển sang **② ROWNUM**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **② ROWNUM** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### ② ROWNUM
+
+Phần này nối mạch SQL với “② ROWNUM”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 Oracle pseudocolumn
@@ -1422,7 +1840,15 @@ Oracle pseudocolumn
 
 ---
 
+Khi gom phần **② ROWNUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **② ROWNUM**. Bây giờ chuyển sang **③ Bẫy lớn nhất**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **③ Bẫy lớn nhất** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### ③ Bẫy lớn nhất
+
+Phần này nối mạch SQL với “③ Bẫy lớn nhất”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 WHERE ROWNUM <= 3
@@ -1440,7 +1866,15 @@ ORDER BY sau
 
 ---
 
+Khi gom phần **③ Bẫy lớn nhất** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **③ Bẫy lớn nhất**. Bây giờ chuyển sang **④ Cách đúng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **④ Cách đúng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### ④ Cách đúng
+
+Phần này nối mạch SQL với “④ Cách đúng”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT *
@@ -1459,7 +1893,15 @@ Câu nhớ:
 
 ---
 
+Khi gom phần **④ Cách đúng** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **④ Cách đúng**. Bây giờ chuyển sang **⑤ `ROWNUM > 1` trực tiếp không hoạt động**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⑤ `ROWNUM > 1` trực tiếp không hoạt động** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### ⑤ `ROWNUM > 1` trực tiếp không hoạt động
+
+Phần này nối mạch SQL với “⑤ `ROWNUM > 1` trực tiếp không hoạt động”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 row đầu tiên luôn thử ROWNUM=1
@@ -1472,6 +1914,12 @@ row tiếp theo lại là candidate ROWNUM=1
 nên không lên được 2.
 
 ---
+
+Khi gom phần **⑤ `ROWNUM > 1` trực tiếp không hoạt động** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⑤ `ROWNUM > 1` trực tiếp không hoạt động**. Bây giờ chuyển sang **⑥ Paging với ROWNUM**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⑥ Paging với ROWNUM** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### ⑥ Paging với ROWNUM
 
@@ -1487,7 +1935,15 @@ WHERE RN BETWEEN ...
 
 ---
 
+Khi gom phần **⑥ Paging với ROWNUM** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⑥ Paging với ROWNUM**. Bây giờ chuyển sang **⑦ RANK**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⑦ RANK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### ⑦ RANK
+
+Phần này nối mạch SQL với “⑦ RANK”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 5000 → 1
@@ -1500,92 +1956,16 @@ Tie cùng hạng, rank sau bị skip.
 
 ---
 
+Khi gom phần **⑦ RANK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **⑦ RANK**. Bây giờ chuyển sang **⑧ FETCH**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **⑧ FETCH** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### ⑧ FETCH
 
-```sql
-ORDER BY ...
-OFFSET N ROWS
-FETCH NEXT M ROWS ONLY
-```
+Phần này nối mạch SQL với “⑧ FETCH”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
-nhớ:
+Khi gom phần **⑧ FETCH** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
-```text
-OFFSET = bỏ N row
-FETCH = lấy M row
-```
-
----
-
-### ⑨ Ví dụ 4~6
-
-```sql
-OFFSET 3 ROWS
-FETCH NEXT 3 ROWS ONLY
-```
-
-→ row vị trí:
-
-```text
-4, 5, 6
-```
-
----
-
-### ⑩ SQL Server TOP
-
-```sql
-SELECT TOP 2 ...
-ORDER BY ...
-```
-
----
-
-### ⑪ WITH TIES
-
-```sql
-TOP 2 WITH TIES
-```
-
-Nếu vị trí thứ 2 bị đồng hạng:
-
-```text
-2 rows có thể biến thành 3+ rows
-```
-
----
-
-## 🧠 Công thức nhớ 10 giây
-
-```text
-ROWNUM
-= Oracle số row giả
-= limit trước ORDER BY nếu cùng query level
-
-Top N đúng với ROWNUM
-= ORDER BY trong subquery
-→ ROWNUM ở ngoài
-
-RANK
-= tie cùng hạng + skip rank
-
-OFFSET N
-= bỏ N row
-
-FETCH M
-= lấy M row
-
-TOP N
-= SQL Server
-
-WITH TIES
-= lấy thêm những row bằng boundary value
-```
-
-Và câu quan trọng nhất của cả chương:
-
-> **TOP-N 문제에서 먼저 판단할 것: "N개의 행"을 원하는가, 아니면 "N개의 순위"를 원하는가?**
-> Khi gặp bài TOP-N, trước tiên phải xác định: **muốn N row hay muốn N thứ hạng**.
-
-Hai yêu cầu này nhìn giống nhau nhưng khi có **동점/tie**, kết quả có thể hoàn toàn khác.
-Tiếp tục **제6절 계층형 질의와 셀프 조인 — Hierarchical Query & Self Join**. Phần ảnh này tập trung gần như toàn bộ vào **Hierarchical Query của Oracle**, đặc biệt là `START WITH`, `CONNECT BY PRIOR`, `LEVEL`, `NOCYCLE`, `CONNECT_BY_ROOT`, `SYS_CONNECT_BY_PATH`, `CONNECT_BY_ISLEAF`, `CONNECT_BY_ISCYCLE`.
+Như vậy, **⑧ FETCH** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.

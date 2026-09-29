@@ -357,6 +357,8 @@ Before accepting adaptation claim, ask:
 
 ## 35. Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Genetic variation
       ↕
@@ -383,6 +385,8 @@ These questions connect but need separate evidence.
 Đọc cùng [[00_nervous_system_and_brain]], [[05_neuroplasticity_brain_change_and_learning]], [[../03_human_development_and_person/00_lifespan_development]], [[../03_human_development_and_person/03_personality]], [[../03_human_development_and_person/04_social_and_cultural_psychology]] và [[../02_learning_and_cognition/03_intelligence_and_cognitive_differences]].
 
 ### Nguồn định hướng
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - Reviews 2024 on gene–environment interactions emphasize joint genetic/environmental modeling and reporting heterogeneity.
 - Methodological work 2024 reiterates that within-group heritability does not explain between-group differences.

@@ -437,6 +437,8 @@ Người tiêu dùng đưa quyết định bằng cả hai. Một sản phẩm v
 
 ## Nguồn tham khảo
 
+Nguồn dưới đây giúp kiểm tra lịch sử món ăn, kỹ thuật lên men và dữ liệu chuỗi cung ứng. Hãy dùng chúng để kiểm chứng ví dụ, còn phần giải thích chính vẫn phải giữ mạch vật chất–lao động–nghi lễ–thị trường.
+
 - UNESCO Intangible Cultural Heritage: Kimjang (2013); tri thức và thực hành làm jang (2024).
 - Korea.net: tư liệu về `소반` và lịch sử phép tắc trên bàn ăn.
 - Với an toàn thực phẩm, ghi nhãn, xuất xứ và quy định hiện hành, ưu tiên Ministry of Food and Drug Safety (`식품의약품안전처`) và các nguồn chính thức thay vì học cứng từ ví dụ văn hoá.

@@ -89,6 +89,8 @@ Generated code là một phần build architecture. Khi upgrade Kotlin/AGP mà l
 
 ## 6.1 Suspension không đồng nghĩa background
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 suspend fun parseHugeJson(text: String): Model {
     return parser.parse(text) // vẫn CPU/blocking trên thread hiện tại nếu parser sync
@@ -141,6 +143,8 @@ Với `coroutineScope`, child failure thường cancel siblings/parent scope. `s
 `launch` và `async` khác mục đích: `launch` cho fire-and-join side effect trong scope; `async` tạo value cần `await`. Dùng `async` mà không `await` thường là smell.
 
 ## 7.1 Concurrent start không phải always faster
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```kotlin
 coroutineScope {
@@ -260,6 +264,8 @@ Không ép mọi screen thành sealed state nếu UX cần cached content + refr
 
 ## 9.3 Command, state và event phải phân biệt
 
+Khối minh họa dưới đây đặt command, state và event vào cùng một state machine. Hãy theo dõi ai tạo tín hiệu, ai sở hữu state và event nào được phát ra để không trộn lẫn yêu cầu, trạng thái hiện tại và lịch sử đã xảy ra.
+
 ```text
 Command
 = yêu cầu làm việc: Refresh, Submit, Retry
@@ -344,6 +350,8 @@ Key phải biểu diễn identity bền vững, không phải index nếu index 
 
 ## 10.2 `remember` thuộc Composition, không thuộc business object
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```kotlin
 val state = remember(key) { expensiveInitialization(key) }
 ```
@@ -414,6 +422,8 @@ Key sai có thể khiến text-field state/animation của item A nhảy sang B 
 
 <!-- merge: preserve both canonical variants -->
 ## 10.2 Route vs screen
+
+Khối minh họa dưới đây tách route khỏi screen và đặt ViewModel ở đúng state owner. Hãy theo dõi data flow từ lifecycle-aware state tới UI event để biết navigation boundary không biến thành business logic.
 
 ```kotlin
 @Composable
@@ -660,6 +670,8 @@ Mobile client là môi trường người dùng kiểm soát. Attacker có thể
 
 ## 21.1 Trust boundary
 
+Khối minh họa dưới đây làm rõ trust boundary giữa client và hệ thống có quyền. Hãy phân biệt điều gì chỉ giúp UX, điều gì phải được server kiểm chứng và giới hạn nào không thể giao cho client.
+
 ```text
 client-side role check
 = UX optimization
@@ -884,6 +896,8 @@ recomposition
 Configuration change recreate Activity/Fragment instance nhưng ViewModel có thể sống qua recreation. Process death giết toàn bộ in-memory state: ViewModel, singleton, coroutine scope, object cache đều biến mất.
 
 ## 13.1 State placement theo khả năng phục hồi
+
+Khối minh họa dưới đây so sánh các vị trí lưu state theo khả năng phục hồi. Hãy đọc từ state tạm đến dữ liệu bền vững để biết boundary nào phù hợp với từng loại mất mát.
 
 ```text
 render-local ephemeral state

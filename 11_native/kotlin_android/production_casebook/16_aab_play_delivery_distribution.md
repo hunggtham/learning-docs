@@ -330,6 +330,8 @@ release version
 Crash symbolication và R8 deobfuscation cần mapping file đúng version. Native crash cần symbols tương ứng binary. Nếu artifact metadata bị mất, incident response khó hơn nhiều.
 
 ## 27. Official references
+Phần này nối mạch Android vừa học với “27. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android App Bundle: https://developer.android.com/guide/app-bundle
 - Play Feature Delivery: https://developer.android.com/guide/playcore/feature-delivery

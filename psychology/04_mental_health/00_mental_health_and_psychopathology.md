@@ -287,5 +287,7 @@ Xem [[01_assessment_and_diagnosis]], [[./12_developmental_psychopathology_risk_a
 
 ## Nguồn định hướng
 
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
+
 - World Health Organization, *Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders* (2024).
 - American Psychiatric Association, *DSM-5-TR* và các bản cập nhật criteria/text công bố đến 2025.

@@ -261,6 +261,8 @@ Xem [[09_self_concept_identity_and_self_regulation]].
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 culture nguồn + culture mới
      + language + status + network

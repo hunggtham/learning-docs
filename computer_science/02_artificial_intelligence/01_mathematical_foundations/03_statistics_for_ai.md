@@ -411,6 +411,8 @@ Khi feasible, report multiple runs, variation và experimental protocol. Seed gi
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Probability  → mô hình hóa uncertainty
 Statistics   → học điều đáng tin về population từ finite sample

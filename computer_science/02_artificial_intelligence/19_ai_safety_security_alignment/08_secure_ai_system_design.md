@@ -389,6 +389,8 @@ unknown permission
 
 ## Defense in Depth: ví dụ Agent gửi email
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 User request
 → authenticate
@@ -406,6 +408,8 @@ User request
 Nếu LLM bị prompt injection, các lớp sau vẫn giới hạn impact.
 
 ## Defense in Depth: ví dụ RAG doanh nghiệp
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 User
@@ -435,6 +439,8 @@ Security control có chi phí:
 Mục tiêu không phải “khóa mọi thứ”, mà đặt control tương xứng với impact của failure.
 
 ## Failure mode của security architecture
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 - authorization chỉ kiểm ở UI;
 - model được truyền credential raw;

@@ -556,6 +556,8 @@ Case study tích hợp phải giữ **company-specific risk** độc lập với
 
 ## 24. Invalidation theo từng tầng
 
+Một case tích hợp không thể chỉ có một điều kiện vô hiệu hóa chung. Ta cần kiểm tra riêng macro, rates, liquidity, industry và company để biết chính xác tầng nào đã hỏng và tầng nào vẫn còn đứng vững.
+
 ```text
 Macro invalidation:
 Lạm phát dịch vụ giảm nhanh, labor cooling mạnh
@@ -634,6 +636,8 @@ Tạo một note gồm:
 ```
 
 ## 28. Liên kết học tiếp
+
+Các tài liệu sau mở rộng từng tầng của worked case theo đúng thứ tự đã thực hành. Đọc tiếp theo nhu cầu còn yếu sẽ hiệu quả hơn việc quay lại toàn bộ thư viện một cách rời rạc.
 
 - [Macro Transmission Lab](../04_economics/07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md)
 - [Bonds, Rates and Credit](../02_asset_classes/02_BONDS_RATES_AND_CREDIT.md)

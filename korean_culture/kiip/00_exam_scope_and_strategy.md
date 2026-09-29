@@ -12,6 +12,8 @@ Nguồn current structure: `법무부 사회통합프로그램` — https://www.
 
 ## Phạm vi cơ bản từ bộ PDF
 
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+
 ```text
 사회 1~8
 교육 9~12
@@ -28,6 +30,8 @@ Nguồn current structure: `법무부 사회통합프로그램` — https://www.
 Đây là xương sống 50 bài trong 8 PDF người học cung cấp. Người ôn 영주 học toàn bộ khối này. Người ôn 귀화 cũng học cùng khối, sau đó đọc thêm các section `귀화용 심화` ngay trong từng domain.
 
 ## Phần 심화 được gộp vào đâu?
+
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
 
 | Trục 심화 | File chính |
 |---|---|

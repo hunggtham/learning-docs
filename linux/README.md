@@ -8,6 +8,8 @@ Một số miền có hai lớp tài liệu: **chapter nền tảng** cung cấp
 
 ## Bản đồ đọc và quan hệ phụ thuộc
 
+Linux nên được học như một hệ thống nhiều lớp: kernel tạo primitive, filesystem và process tổ chức tài nguyên, shell và networking đưa chúng vào thao tác, còn production kiểm tra hành vi dưới tải và lỗi. Sơ đồ dưới đây cho thấy thứ tự chuyển từ khái niệm tới vận hành.
+
 ```mermaid
 graph TD
     A[Linux và mô hình Unix] --> B[Kernel, user space và system calls]
@@ -109,12 +111,16 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 
 ### Nền tảng hệ điều hành
 
+Nhóm này dựng mô hình process, syscall, filesystem và resource trước khi đi vào thao tác cụ thể. Hãy đọc nó như nền ngữ nghĩa cho các lệnh ở những nhóm sau.
+
 - [`00_foundations/linux_and_unix_model.md`](./00_foundations/linux_and_unix_model.md) — Linux là gì, triết lý Unix (Unix philosophy) và các lớp trừu tượng (abstraction) nền tảng.
 - [`00_foundations/kernel_userspace_syscalls.md`](./00_foundations/kernel_userspace_syscalls.md) — không gian hạt nhân (kernel space), không gian người dùng (user space), lời gọi hệ thống (system call) và ranh giới đặc quyền (privilege boundary).
 - [`00_foundations/proc_sysfs_kernel_interfaces.md`](./00_foundations/proc_sysfs_kernel_interfaces.md) — `/proc`, `/sys`, `/dev`, `sysctl`, trạng thái tiến trình, kernel object và cách các công cụ user-space quan sát hệ thống.
 - [`00_foundations/interrupts_softirq_device_model.md`](./00_foundations/interrupts_softirq_device_model.md) — interrupt, softirq, `ksoftirqd`, NAPI, IRQ affinity, RSS/RPS, DMA, driver, `/sys`, `/dev`, udev và cách kernel nhận/xử lý sự kiện phần cứng.
 
 ### Hệ thống tệp và I/O
+
+Sau kernel model, ta theo dữ liệu từ tên đường dẫn tới descriptor, page cache và storage. Nhóm này giải thích vì sao một lệnh file đơn giản có thể chịu ảnh hưởng của nhiều lớp I/O.
 
 - [`01_filesystem/filesystem_paths_inodes_links.md`](./01_filesystem/filesystem_paths_inodes_links.md) — đường dẫn, thư mục, `inode`, liên kết cứng (hard link), liên kết tượng trưng (symbolic link) và cấu trúc phân cấp của hệ thống tệp.
 - [`01_filesystem/files_streams_descriptors.md`](./01_filesystem/files_streams_descriptors.md) — bộ mô tả tệp (file descriptor), `stdin`/`stdout`/`stderr` và mô hình vào/ra (I/O).
@@ -123,11 +129,15 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 
 ### Shell và tự động hóa cấp lệnh
 
+Shell biến các primitive của hệ điều hành thành pipeline có thể lặp lại. Phần này nối cú pháp với exit status, stream và failure handling để script không chỉ “chạy được” mà còn kiểm chứng được.
+
 - [`02_shell/shell_bash_pipes_redirection.md`](./02_shell/shell_bash_pipes_redirection.md) — cách shell phân tích lệnh, mở rộng biểu thức (expansion), pipe, chuyển hướng (redirection), mã thoát (exit status) và cách ghép câu lệnh.
 - [`02_shell/text_processing.md`](./02_shell/text_processing.md) — `grep`, `find`, `sed`, `awk` và tư duy xử lý luồng văn bản.
 - [`02_shell/bash_scripting_reliability.md`](./02_shell/bash_scripting_reliability.md) — viết Bash script đáng tin cậy với validation, quoting, exit status, `trap`, temporary file, idempotency, locking và atomic update.
 
 ### Danh tính, quyền, tiến trình và IPC
+
+Nhóm này giải thích ai được phép làm gì, process giao tiếp ra sao và kernel kiểm soát identity thế nào. Đây là nền cho debugging permission, signal và service.
 
 - [`03_identity/users_groups_permissions.md`](./03_identity/users_groups_permissions.md) — `UID`/`GID`, quyền truy cập (permission), `sudo`, ACL và đặc quyền.
 - [`03_identity/credentials_capabilities_acl_mac.md`](./03_identity/credentials_capabilities_acl_mac.md) — real/effective UID, supplementary groups, ACL mask/default ACL, setuid/setgid, Linux capabilities, user namespace, SELinux/AppArmor, seccomp và cách kernel đưa ra quyết định allow/deny.
@@ -135,6 +145,8 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 - [`04_process/interprocess_communication.md`](./04_process/interprocess_communication.md) — pipe, FIFO, Unix socket, TCP socket, signal, shared memory, semaphore, `mmap`, `epoll`, non-blocking I/O và backpressure.
 
 ### Khởi động, dịch vụ, log và thời gian
+
+Các chapter nối boot chain, systemd, log và clock thành một đường vận hành. Hãy đọc theo thứ tự từ state khởi động tới bằng chứng khi service lỗi.
 
 - [`05_system/boot_kernel_initramfs.md`](./05_system/boot_kernel_initramfs.md) — firmware → bootloader → kernel → initramfs → root filesystem → PID 1, kernel command line, recovery và boot failure reasoning.
 - [`05_system/systemd_boot_services.md`](./05_system/systemd_boot_services.md) — `PID 1`, đơn vị systemd (unit), quan hệ phụ thuộc và vòng đời dịch vụ.
@@ -145,6 +157,8 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 
 ### CPU, memory, storage và hiệu năng
 
+Nhóm này biến triệu chứng “chậm” thành các câu hỏi về scheduling, memory pressure, I/O và capacity. Mỗi công cụ quan sát phải gắn với một giả thuyết cụ thể.
+
 - [`06_resources/storage_filesystems.md`](./06_resources/storage_filesystems.md) — thiết bị khối (block device), phân vùng, hệ thống tệp, điểm gắn kết (mount), `inode` và dung lượng.
 - [`06_resources/memory_virtual_memory.md`](./06_resources/memory_virtual_memory.md) — bộ nhớ ảo, trang nhớ (page), bộ nhớ đệm (cache), swap và OOM.
 - [`06_resources/virtual_memory_page_fault_reclaim_allocator.md`](./06_resources/virtual_memory_page_fault_reclaim_allocator.md) — VMA/page table/TLB, minor/major page fault, COW, anonymous/file-backed memory, buddy/SLUB allocator, reclaim, PSI, swap/thrashing, global/cgroup OOM, NUMA và JVM native memory.
@@ -154,6 +168,8 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 - [`06_resources/block_layer_io_scheduler.md`](./06_resources/block_layer_io_scheduler.md) — block layer, blk-mq, queue depth, I/O scheduler, `iostat`, dirty throttling, direct/async I/O, `io_uring`, NVMe và cgroup I/O.
 
 ### Networking và truy cập từ xa
+
+Networking đi từ interface và routing tới DNS, TCP, TLS, reverse proxy và SSH. Hãy theo packet path để biết lỗi nằm ở network, service hay identity.
 
 - [`07_networking/networking_dns_sockets_ports.md`](./07_networking/networking_dns_sockets_ports.md) — giao diện mạng, định tuyến (routing), DNS, socket, cổng (port) và xử lý sự cố mạng.
 - [`07_networking/ip_routing_nat_conntrack.md`](./07_networking/ip_routing_nat_conntrack.md) — routing table, policy routing, ARP/neighbor, NAT, conntrack, ephemeral port, network namespace, veth, MTU và packet path.
@@ -166,6 +182,8 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 
 ### Vận hành, phần mềm và khả năng phục hồi
 
+Phần này nối package lifecycle, deployment, backup, linking và recovery. Mục tiêu là hiểu thay đổi vận hành ảnh hưởng dependency và khả năng khôi phục thế nào.
+
 - [`08_operations/packages_software_libraries.md`](./08_operations/packages_software_libraries.md) — trình quản lý gói (package manager), phụ thuộc phần mềm và thư viện dùng chung (shared library).
 - [`08_operations/package_repositories_updates_supply_chain.md`](./08_operations/package_repositories_updates_supply_chain.md) — package database, repository metadata/signing, candidate version, pin/hold, package scripts/config, patch lifecycle, runtime restart/reboot, snapshot repository, SBOM và software supply chain.
 - [`08_operations/elf_dynamic_linking.md`](./08_operations/elf_dynamic_linking.md) — ELF, `execve`, shebang, dynamic linker, shared library resolution, symbol/ABI, PIE/ASLR và cách chẩn đoán binary tồn tại nhưng không chạy.
@@ -176,6 +194,8 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 
 ### Production, container và xử lý sự cố
 
+Production deep dive dùng các mô hình trước để xử lý incident, capacity và rollback. Hãy bắt đầu từ symptom, thu thập evidence, khoanh boundary rồi mới thay đổi hệ thống.
+
 - [`09_production/production_troubleshooting.md`](./09_production/production_troubleshooting.md) — phương pháp khoanh vùng sự cố (incident) từ triệu chứng tới nguyên nhân gốc (root cause).
 - [`09_production/java_backend_incident_playbook.md`](./09_production/java_backend_incident_playbook.md) — playbook thực tế cho Java/Spring backend: systemd → JVM → thread/heap/FD → CPU/memory/I/O/network → dependency → recovery và RCA.
 - [`09_production/observability_tracing_strace_perf.md`](./09_production/observability_tracing_strace_perf.md) — quan sát sâu bằng `/proc`, `pidstat`, `lsof`, `strace`, `perf`, flame graph và eBPF; phân biệt CPU time với off-CPU waiting.
@@ -185,6 +205,8 @@ Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật 
 - [`09_production/sre_slo_error_budget_incident_engineering.md`](./09_production/sre_slo_error_budget_incident_engineering.md) — SLI/SLO/SLA, error budget, burn rate, alert strategy, incident roles/timeline, load shedding, retry/circuit breaker, postmortem, toil, runbook và cách nối user impact với Linux evidence.
 
 ### Kết nối kiến thức và tra cứu
+
+Các tài liệu cuối cùng dùng để nối Linux với backend, database, networking và production. Hãy quay lại đây sau khi đã có một vấn đề thực tế cần phân tích.
 
 - [`90_connections/linux_system_mental_models.md`](./90_connections/linux_system_mental_models.md) — kết nối các lớp trừu tượng thành mô hình tư duy (mental model) thống nhất về Linux.
 - [`reference/putty_ssh_linux_server_commands.md`](./reference/putty_ssh_linux_server_commands.md) — bảng câu lệnh, tùy chọn, ví dụ và ghi chú thực tế để tra cứu nhanh.

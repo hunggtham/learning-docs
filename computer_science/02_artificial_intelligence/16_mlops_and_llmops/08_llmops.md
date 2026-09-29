@@ -390,6 +390,8 @@ Mục tiêu là tăng mức kiểm soát theo risk và complexity của applicat
 
 ## Failure Modes phổ biến
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - prompt thay đổi nhưng không version;
 - model provider update âm thầm;
 - index mới build từ corpus thiếu dữ liệu;
@@ -402,6 +404,8 @@ Mục tiêu là tăng mức kiểm soát theo risk và complexity của applicat
 - rollback chỉ đổi model nhưng không đổi prompt/index.
 
 ## Mô hình triển khai LLMOps
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Git / config registry

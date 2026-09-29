@@ -166,6 +166,8 @@ Sở hữu phức tạp + rủi ro đại diện + tập trung kinh tế
 
 ## Nguồn và liên kết
 
+Các nguồn này giúp kiểm tra sở hữu, công bố, quy định cạnh tranh và cấu trúc tập đoàn. Chúng là bằng chứng để kiểm tra mental model, không chỉ là danh sách đọc thêm.
+
 - Korea Fair Trade Commission, chính sách về nhóm doanh nghiệp lớn.
 - KDI, nghiên cứu về tập đoàn doanh nghiệp, mức độ tập trung và đa dạng hóa.
 - KDI, nghiên cứu về tính năng động kinh tế và mức độ tập trung của các tập đoàn.

@@ -84,6 +84,8 @@ Nếu toàn bộ application là one giant agent loop, blast radius lớn hơn.
 
 ## When to Prefer Workflow
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - compliance-heavy process;
 - exact financial calculation;
 - fixed approval chain;
@@ -92,6 +94,8 @@ Nếu toàn bộ application là one giant agent loop, blast radius lớn hơn.
 - state transitions defined by business rules.
 
 ## When Agent Adds Value
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 - open-ended research;
 - debugging unknown codebase;

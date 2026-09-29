@@ -529,6 +529,8 @@ Trước publish:
 - artifact immutable/provenance trace được không.
 
 ## 46. Official references
+Phần này nối mạch Android vừa học với “46. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android library modules: https://developer.android.com/studio/projects/android-library
 - Publish your library: https://developer.android.com/build/publish-library

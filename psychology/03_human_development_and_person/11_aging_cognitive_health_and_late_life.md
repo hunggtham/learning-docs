@@ -189,6 +189,8 @@ Một lối sống đa thành phần thường hợp lý hơn claim rằng một
 
 ## Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 lão hóa sinh học
  + sức khỏe + giác quan

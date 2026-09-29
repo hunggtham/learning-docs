@@ -355,6 +355,8 @@ const enhanced = React.cloneElement(original, {
 `cloneElement` tạo element mới dựa trên element cũ và merge props. API vẫn tồn tại nhưng thường làm data flow khó theo dõi hơn composition/context/render prop, nên code mới chỉ dùng khi có lý do rõ.
 
 ### `React.createFactory` — legacy trước khi JSX phổ biến
+Phần này nối mạch bài học với “`React.createFactory` — legacy trước khi JSX phổ biến”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const Button = React.createFactory("button");
@@ -523,6 +525,8 @@ setUser(user => ({
 ```
 
 ### `React.PureComponent`
+Phần này nối mạch bài học với “`React.PureComponent`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class UserCard extends React.PureComponent {
@@ -769,6 +773,8 @@ const [count, setCount] = useState(0);
 `useState(initialState)` trả `[state, setter]`. Gọi setter không biến đổi biến state hiện tại ngay lập tức; nó yêu cầu React render với state mới.
 
 ### State là snapshot
+Phần này nối mạch bài học với “State là snapshot”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function handleClick() {
@@ -943,6 +949,8 @@ Khi length bằng `0`, React có thể render `0`. Viết rõ:
 Component có thể return `null` nếu không muốn render DOM output.
 
 ## 12. List và `key`
+Phần này nối mạch bài học với “12. List và `key`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <ul>
@@ -1037,6 +1045,8 @@ function Calculator() {
 Mỗi mẩu state quan trọng nên có một owner rõ ràng.
 
 ## 15. Composition và `children`
+Phần này nối mạch bài học với “15. Composition và `children`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function Card({ children }) {
@@ -1099,6 +1109,8 @@ Phân biệt bốn lớp lỗi: JavaScript runtime, React state/render, DOM/CSS 
 Khi debug state, log input và transition thay vì chỉ log state ngay sau setter.
 
 ## 19. Mini project Todo hoàn chỉnh
+Phần này nối mạch bài học với “19. Mini project Todo hoàn chỉnh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 import { useState } from "react";
@@ -1213,6 +1225,8 @@ const fullName = `${firstName} ${lastName}`.trim();
 ```
 
 ### Định nghĩa component bên trong component
+Phần này nối mạch bài học với “Định nghĩa component bên trong component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function App() {

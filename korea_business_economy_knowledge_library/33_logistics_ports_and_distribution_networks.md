@@ -401,6 +401,8 @@ Vì vậy không nên đưa chỉ số cước vào mô hình biên lợi nhuậ
 
 ## Hãng vận tải container
 
+Hãng vận tải là mắt xích điều phối capacity, lịch tàu, cước và độ tin cậy trên tuyến. Khi đọc case, hãy nối giá vận tải với utilization, fuel, cảng và hợp đồng khách hàng.
+
 ```text
 Cước
 Sản lượng
@@ -414,6 +416,8 @@ Nợ ròng
 
 ## Cảng / terminal
 
+Cảng không chỉ là một điểm bốc dỡ mà là node nối hinterland, customs, rail/road và kho. Phần này giúp đánh giá bottleneck và quyền định giá của terminal trong toàn mạng.
+
 ```text
 Lưu lượng hàng
 Tỷ trọng trung chuyển
@@ -424,6 +428,8 @@ Năng suất / thời gian quay vòng
 ```
 
 ## 3PL / fulfillment
+
+3PL biến đơn hàng phân tán thành hoạt động kho, pick-pack, vận chuyển và hoàn trả. Cần theo dõi density, SLA và chi phí trên đơn thay vì chỉ nhìn doanh thu logistics.
 
 ```text
 Mức tập trung khách hàng
@@ -436,6 +442,8 @@ Biên lợi nhuận hợp đồng
 
 ## Logistics thương mại điện tử
 
+E-commerce logistics chịu áp lực giao nhanh, reverse logistics và mùa cao điểm. Mô hình dưới đây nối trải nghiệm khách hàng với chi phí mạng lưới và khả năng mở rộng.
+
 ```text
 Số đơn/ngày
 Chi phí giao/đơn
@@ -446,6 +454,8 @@ Mật độ địa lý
 ```
 
 # Kiểm tra sức chịu đựng
+
+Stress test kiểm tra mạng logistics khi cước, sản lượng, thời gian giao hoặc năng lực cảng thay đổi cùng lúc. Hãy dùng nó để tìm điểm gãy và phương án thay thế trước khi thị trường căng thẳng.
 
 - cước vận tải giảm 40% sau khi tàu mới được giao;
 - nhiên liệu +30%;

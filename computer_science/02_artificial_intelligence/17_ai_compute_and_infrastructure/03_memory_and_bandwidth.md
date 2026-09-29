@@ -195,6 +195,8 @@ Long-running serving runtime có allocator và cache nên RSS hoặc VRAM có th
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Compute hỏi: cần bao nhiêu phép toán?
 Memory hỏi: dữ liệu ở đâu, phải di chuyển bao nhiêu byte và có thể reuse bao nhiêu lần?

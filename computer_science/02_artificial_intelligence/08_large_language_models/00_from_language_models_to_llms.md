@@ -176,6 +176,8 @@ Changing chat template can materially affect quality/safety.
 
 ## LLM stack như một system
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 User/Application
 ↓

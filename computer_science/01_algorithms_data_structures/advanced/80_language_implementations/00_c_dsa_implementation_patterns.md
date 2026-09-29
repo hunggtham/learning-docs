@@ -27,6 +27,8 @@ Một API tốt phải trả lời: ai tạo/hủy container, ai sở hữu ph�
 
 ## Mảng động
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef struct {
     int *data;
@@ -54,6 +56,8 @@ if (new_capacity > SIZE_MAX / sizeof *v->data) return false;
 
 ## realloc và mất hiệu lực của con trỏ
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 int *new_data = realloc(v->data, new_cap * sizeof *v->data);
 if (!new_data) return false;
@@ -80,6 +84,8 @@ sau đó giải phóng trạng thái cũ
 Ví dụ resize Hash Table: cấp phát bảng mới, rehash thành công, đổi con trỏ/capacity rồi mới giải phóng bảng cũ. Nếu cập nhật nửa chừng rồi cấp phát thất bại, cấu trúc có thể bị hỏng.
 
 ## Danh sách liên kết
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 typedef struct Node {
@@ -131,6 +137,8 @@ Có nhiều quy ước ring buffer như `head + size`, `head/tail + one-empty-sl
 
 ## Container tổng quát với void*
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef int (*compare_fn)(const void *, const void *);
 ```
@@ -158,6 +166,8 @@ thường an toàn hơn.
 `qsort` tiện dụng nhưng gọi comparator qua function pointer và API `void *`. Trong đường chạy số học rất nóng, sort chuyên biệt có thể nhanh hơn, nhưng chỉ nên thay thế sau khi đo.
 
 ## Padding, alignment và bố trí dữ liệu
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 typedef struct {
@@ -218,6 +228,8 @@ Stack tường minh trên heap cho phép kiểm soát dung lượng và xử lý
 
 ## const, restrict và aliasing
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 const Node *tree_find(const Tree *tree, int key);
 ```
@@ -252,6 +264,8 @@ Hàm khởi tạo nhiều tài nguyên phải cleanup đúng khi một bước g
 Destructor có thể đặt con trỏ về `NULL` và reset metadata sau `free`, nhưng điều đó không làm các alias khác tự biến mất. Dùng object sau khi destroy vẫn là lỗi ngữ nghĩa.
 
 ## Sao chép, clone và chuyển quyền sở hữu
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 Tree b = a;
@@ -288,6 +302,8 @@ int edges[m];
 
 ## Flexible Array Member
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef struct {
     size_t len;
@@ -304,6 +320,8 @@ malloc(sizeof(Block) + n * sizeof(int));
 Cách này giảm một lần gián tiếp qua con trỏ và giảm số cấp phát, nhưng phép tính kích thước phải chống overflow.
 
 ## Intrusive data structures
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```c
 typedef struct Task {
@@ -394,6 +412,8 @@ Thêm `_Atomic` vào con trỏ cũng không tự biến danh sách thành lock-f
 “Linked List chèn O(1) nên luôn nhanh hơn vector” — bỏ qua chi phí tìm vị trí, cấp phát và cache locality.
 
 ## Checklist triển khai
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Bất biến biểu diễn là gì?

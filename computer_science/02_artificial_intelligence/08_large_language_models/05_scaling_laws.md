@@ -93,6 +93,8 @@ Một model mạnh hơn có thể vừa hữu ích hơn vừa có failure modes 
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Scale ≠ chỉ parameters
 Scale = model capacity + data + compute + context + inference strategy

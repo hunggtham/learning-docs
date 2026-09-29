@@ -282,6 +282,8 @@ Do đó tính chất luôn có **ký ức của quá trình chế tạo**.
 
 # Đặc trưng vật liệu ở nhiều thang
 
+Sau khi nối quy trình chế tạo với vi cấu trúc, ta cần các phép đo ở nhiều thang để kiểm tra mô hình. Mỗi kỹ thuật nhìn một lớp khác nhau; kết luận đáng tin chỉ xuất hiện khi các lớp đó khớp nhau.
+
 - XRD nhận diện pha và cấu trúc tinh thể;
 - SEM quan sát hình thái, thường kết hợp EDS để xem thành phần nguyên tố;
 - TEM quan sát cấu trúc nano, lệch mạng và interface;

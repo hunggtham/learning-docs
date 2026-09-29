@@ -4,6 +4,8 @@ A lightweight GitHub Pages reader for the Markdown and PDF files stored in this 
 
 ## What it does
 
+Phần này định vị Study Library trước khi đi vào chi tiết: trình đọc lấy tài liệu đã kiểm tra, tạo chỉ mục tìm kiếm và giữ đường dẫn để người học quay lại bài giảng gốc.
+
 - Builds a searchable document catalogue from safe folder prefixes plus explicit `.md`/`.pdf` entries.
 - Renders Markdown in a clean reading layout with a table of contents.
 - Opens PDFs in the browser's native PDF reader.

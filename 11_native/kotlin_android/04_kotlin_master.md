@@ -226,6 +226,8 @@ Compose BOM alignment chỉ quản lý nhóm Compose libraries; BOM không thay 
 
 ## 1.4 Android version có bốn câu hỏi khác nhau
 
+Khối minh họa dưới đây tách bốn nghĩa khác nhau của “Android version”. Hãy đọc mỗi dòng như một contract riêng, rồi đối chiếu xem nó tác động tới build, install hay runtime ở đâu.
+
 ```text
 minSdk
 = Android thấp nhất app hỗ trợ runtime
@@ -517,6 +519,8 @@ kotlin {
 Đây là ba contract khác nhau. Compiler mới có thể hỗ trợ một số language level cũ trong migration window, nhưng support không tồn tại vô hạn. Không dùng `languageVersion` như chiến lược “đóng băng vĩnh viễn” để tránh xử lý technical debt.
 
 ## 2.5 `jvmTarget`, JDK và Android runtime cũng là ba lớp khác nhau
+
+Khối minh họa dưới đây tách toolchain, bytecode target và runtime. Hãy theo dõi boundary của từng lớp để biết lỗi compatibility phát sinh ở compiler, packaging hay thiết bị.
 
 ```text
 JDK toolchain

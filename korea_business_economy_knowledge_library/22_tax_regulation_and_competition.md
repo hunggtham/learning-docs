@@ -234,6 +234,8 @@ Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_a
 
 ## Cách lập bản đồ quy định của một công ty Hàn Quốc
 
+Quy định tác động lên doanh nghiệp qua nhiều lớp: luật, cơ quan thực thi, giấy phép, nghĩa vụ công bố và chi phí tuân thủ. Bảng sau giúp đi từ điều khoản đến sản phẩm, thị trường và dòng tiền bị ảnh hưởng.
+
 | Lớp | Câu hỏi |
 |---|---|
 | Thuế | thuế suất luật định/hiệu dụng/tiền mặt? ưu đãi? |
@@ -270,6 +272,8 @@ Sau đó xác định quy định nào thật sự đi thẳng vào dòng tiền
 Đọc [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md) cho quy định tập đoàn, [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho quyền lực nội bộ, [`23_foreign_invested_companies_and_korea_entry.md`](./23_foreign_invested_companies_and_korea_entry.md) cho thuế xuyên biên giới và [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md) cho quá trình hình thành chính sách.
 
 ### Nguồn hiện hành
+
+Vì quy định có thể thay đổi, phần nguồn phải được đọc như điểm xác minh tại thời điểm phân tích. Hãy đối chiếu ngày hiệu lực và cơ quan ban hành trước khi dùng một kết luận cho quyết định thực.
 
 - National Tax Service: thuế suất thuế thu nhập doanh nghiệp.
 - Korea Fair Trade Commission: chính sách về tập đoàn doanh nghiệp lớn.

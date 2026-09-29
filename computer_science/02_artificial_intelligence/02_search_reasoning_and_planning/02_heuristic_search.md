@@ -437,6 +437,8 @@ Common mental pattern is **avoid exhaustive enumeration by using structure/guida
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 g(n) = cost already paid
 h(n) = estimate cost still remaining

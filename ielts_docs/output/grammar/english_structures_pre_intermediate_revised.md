@@ -6,6 +6,8 @@
 
 ## Quy ước
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 - **S** = Subject
 - **V** = Verb nguyên mẫu
 - **V2** = Past Simple
@@ -16,6 +18,8 @@
 - **Clause** = mệnh đề
 
 ## Ranh giới với các level khác
+
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
 
 | Level | Trọng tâm |
 |---|---|
@@ -33,6 +37,8 @@
 > **Integrated mastery tracks:** Tenses • Verb Patterns • Prepositions & Collocations • Phrasal Verbs • Speaking Patterns • Common Grammar Mistakes • Grammar Transformation / Paraphrasing.
 
 ## 01. Mở rộng các thì cơ bản
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Present Simple – thói quen vs trạng thái | `S + V(s/es)` | Ôn và mở rộng cách dùng hiện tại đơn cho thói quen, lịch cố định, trạng thái và sự thật. | **The train leaves at 7 every morning.** | Tàu rời ga lúc 7 giờ mỗi sáng. | `Present Continuous` dùng cho việc đang xảy ra hoặc tạm thời. | `S + be + V-ing` trong ngữ cảnh đang diễn ra. | Các động từ trạng thái như `know, believe, love, need` thường không dùng ở tiếp diễn. |
@@ -52,6 +58,8 @@
 | 15 | Will be able to | `S + will be able to + V` | Nói khả năng trong tương lai. | **You will be able to use the system tomorrow.** | Ngày mai bạn sẽ có thể dùng hệ thống. | `can` không có dạng tương lai trực tiếp. | `won't be able to` = sẽ không thể. | — |
 
 ## 02. Present Perfect – Hiện tại hoàn thành
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Present Perfect – experience | `S + have/has + V3` | Nói kinh nghiệm đã từng có, không nêu thời điểm cụ thể. | **I have been to Japan twice.** | Tôi đã từng đến Nhật hai lần. | `Past Simple` dùng khi có thời gian quá khứ rõ: `I went in 2024.` | — | Dấu hiệu: `ever`, `never`, `before`. |
@@ -67,6 +75,8 @@
 | 11 | Been vs Gone | `have been to / have gone to` | `been to` = đã đi và đã về; `gone to` = đã đi và hiện chưa về. | **She has gone to the bank. / She has been to the bank.** | Cô ấy đã đi ngân hàng và chưa về. / Cô ấy đã từng/đã đi ngân hàng rồi về. | — | — | Cặp này rất hay gây nhầm. |
 
 ## 03. Modals – mở rộng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Could – polite request | `Could you + V...?` | Yêu cầu lịch sự hơn `Can you...?`. | **Could you send me the file?** | Bạn có thể gửi file cho tôi được không? | `Can you...?` thân mật hơn. | — | — |
@@ -81,6 +91,8 @@
 | 10 | Could have? – recognition only | `could have + V3` | Ở Pre-Intermediate chỉ nên nhận diện cơ bản một số mẫu khi gặp; học sâu ở Intermediate. | **I could have called you, but I forgot.** | Lẽ ra tôi đã có thể gọi cho bạn, nhưng tôi quên mất. | `could + V` = khả năng quá khứ chung. | — | Không cần đi sâu modal perfect ở level này. |
 
 ## 04. Conditionals cơ bản
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Zero Conditional | `If + Present Simple, Present Simple` | Nói sự thật, quy luật, kết quả luôn đúng. | **If you heat ice, it melts.** | Nếu bạn làm nóng đá, nó tan. | `First Conditional` cho tình huống tương lai có thể xảy ra. | — | — |
@@ -91,6 +103,8 @@
 | 6 | If I were you | `If I were you, I would + V` | Mẫu lời khuyên giả định rất thông dụng. | **If I were you, I would talk to the manager.** | Nếu tôi là bạn, tôi sẽ nói chuyện với quản lý. | `You should + V` trực tiếp hơn. | — | Đây là mẫu cố định, chưa cần học toàn bộ Second Conditional ngay. |
 
 ## 05. Gerund & Infinitive – mức Pre-Intermediate
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Enjoy + V-ing | `S + enjoy + V-ing` | `enjoy` theo sau bởi V-ing. | **I enjoy cooking at home.** | Tôi thích nấu ăn ở nhà. | `like + V-ing` gần nghĩa nhưng `enjoy` nhấn niềm vui. | `hate + V-ing`. | — |
@@ -111,6 +125,8 @@
 | 16 | Help + O + (to) V | `S + help + O + (to) V` | Giúp ai làm gì. | **She helped me fix the problem.** | Cô ấy giúp tôi sửa vấn đề. | `help + O + to V` cũng đúng. | — | — |
 
 ## 06. Câu hỏi mở rộng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Indirect question | `Could you tell me + wh-clause?` | Hỏi lịch sự bằng câu hỏi gián tiếp. | **Could you tell me where the station is?** | Bạn có thể cho tôi biết ga ở đâu không? | `Where is the station?` trực tiếp hơn. | — | Trong mệnh đề gián tiếp dùng trật tự câu khẳng định: `where the station is`. |
@@ -124,6 +140,8 @@
 | 9 | How soon | `How soon + will/can + S + V...?` | Hỏi bao lâu nữa một việc sẽ xảy ra. | **How soon can you finish this?** | Bạn có thể hoàn thành việc này trong bao lâu nữa? | `How long` hỏi tổng thời gian. | — | — |
 
 ## 07. Relative Clauses cơ bản
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Who | `person + who + V...` | Nối thêm thông tin về người. | **The woman who works here is very kind.** | Người phụ nữ làm việc ở đây rất tốt bụng. | `that` có thể thay `who` trong nhiều defining clauses. | — | — |
@@ -133,6 +151,8 @@
 | 5 | Relative pronoun omission | `N + (that/which/who) + S + V` | Có thể bỏ đại từ quan hệ khi nó làm tân ngữ. | **The movie (that) we watched was great.** | Bộ phim chúng tôi xem rất hay. | Không bỏ khi đại từ quan hệ làm chủ ngữ: `The man who lives here...` | — | — |
 
 ## 08. Passive Voice cơ bản
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Present Simple Passive | `S + am/is/are + V3` | Dùng khi quan tâm hành động/kết quả hơn người thực hiện. | **English is spoken in many countries.** | Tiếng Anh được nói ở nhiều quốc gia. | Chủ động: `People speak English in many countries.` | — | — |
@@ -143,6 +163,8 @@
 | 6 | Be called | `S + be called + name` | Nói tên gọi. | **This dish is called bibimbap.** | Món này được gọi là bibimbap. | `Its name is...` gần nghĩa. | — | — |
 
 ## 09. Reported Speech cơ bản
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Say + clause | `S + say(s)/said + (that) + clause` | Tường thuật lời nói mà không nêu người nghe trực tiếp. | **He said that he was tired.** | Anh ấy nói rằng anh ấy mệt. | `tell + O + clause` cần có tân ngữ. | — | — |
@@ -152,6 +174,8 @@
 | 5 | Reported negative command | `tell/ask + O + not to V` | Tường thuật yêu cầu không làm gì. | **He told me not to touch it.** | Anh ấy bảo tôi đừng chạm vào nó. | Trực tiếp: `Don't touch it.` | — | — |
 
 ## 10. So sánh mở rộng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Much/Far + comparative | `much/far + comparative` | Nhấn mạnh mức chênh lệch lớn. | **This laptop is much faster than mine.** | Laptop này nhanh hơn của tôi rất nhiều. | `a little + comparative` = hơn một chút. | — | — |
@@ -163,6 +187,8 @@
 | 7 | More and more | `comparative and comparative` | Diễn tả mức độ ngày càng tăng. | **English is becoming more and more important.** | Tiếng Anh đang ngày càng quan trọng. | `less and less` = ngày càng ít. | `less and less`. | — |
 
 ## 11. Quantifiers và Determiners mở rộng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Too much | `too much + uncountable N` | Quá nhiều danh từ không đếm được. | **I drink too much coffee.** | Tôi uống quá nhiều cà phê. | `too many + plural N`. | — | — |
@@ -178,6 +204,8 @@
 | 11 | Most of | `most of + determiner/pronoun + N` | Phần lớn của một nhóm cụ thể. | **Most of my friends live in Seoul.** | Phần lớn bạn tôi sống ở Seoul. | `most people` không có `of`. | — | — |
 
 ## 12. Trạng từ và cụm thời gian mở rộng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Still | `S + still + V / S + be + still` | Vẫn còn, tình trạng tiếp tục. | **I still live in the same apartment.** | Tôi vẫn sống ở cùng căn hộ. | `already` = đã xảy ra; `yet` = chưa/đã chưa. | `no longer` = không còn. | — |
@@ -191,6 +219,8 @@
 | 9 | While / During | `while + clause / during + N` | `while` đi với mệnh đề; `during` đi với danh từ. | **I slept during the flight. / I slept while we were flying.** | Tôi ngủ trong chuyến bay. / Tôi ngủ khi chúng tôi đang bay. | — | — | Rất hay nhầm. |
 
 ## 13. Prepositions & Collocations
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Interested in | `be interested in + N/V-ing` | Quan tâm/hứng thú với. | **I am interested in learning Korean history.** | Tôi hứng thú với việc học lịch sử Hàn Quốc. | `interested to V` chỉ dùng trong một số nghĩa đặc biệt. | `not interested in`. | — |
@@ -209,6 +239,8 @@
 | 14 | Pay for | `pay for + N` | Trả tiền cho thứ gì. | **I paid for dinner.** | Tôi trả tiền bữa tối. | `pay + person` = trả tiền cho ai. | — | — |
 
 ## 14. Phrasal Verbs cơ bản
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Wake up | `wake up` | Thức dậy. | **I wake up at seven.** | Tôi thức dậy lúc bảy giờ. | `get up` = ra khỏi giường. | `go to bed`. | — |
@@ -225,6 +257,8 @@
 | 12 | Run out of | `run out of + N` | Hết một thứ gì. | **We ran out of milk.** | Chúng tôi hết sữa. | `have plenty of` = có nhiều. | — | — |
 
 ## 15. Articles & Nouns mở rộng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | The + superlative | `the + superlative + N` | Dùng `the` với so sánh nhất. | **This is the best restaurant in the area.** | Đây là nhà hàng tốt nhất khu vực. | `a/an + comparative` không tương đương. | — | — |
@@ -236,6 +270,8 @@
 | 7 | One ... another ... | `one ..., another ...` | Nói một cái/người này và một cái/người khác. | **One student asked a question, and another answered it.** | Một học sinh hỏi, một học sinh khác trả lời. | `the other` khi chỉ còn đúng một cái còn lại. | — | — |
 
 ## 16. Linking Words – nối ý
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Although | `Although + clause, clause` | Mặc dù. | **Although I was tired, I kept working.** | Mặc dù mệt, tôi vẫn tiếp tục làm việc. | `but` nối hai mệnh đề độc lập trực tiếp hơn. | — | Không dùng `although ... but ...` cùng lúc. |
@@ -248,6 +284,8 @@
 | 8 | First / Then / After that / Finally | `First..., then..., after that..., finally...` | Sắp xếp trình tự khi kể hoặc hướng dẫn. | **First, open the file. Then, check the data.** | Đầu tiên mở file. Sau đó kiểm tra dữ liệu. | — | — | Rất hữu ích cho Speaking/Writing A2-B1. |
 
 ## 17. Cấu trúc chức năng mở rộng
+
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | It is + adjective + to V | `It + be + Adj + to V` | Đánh giá một hành động là dễ/khó/quan trọng... | **It is important to practice every day.** | Việc luyện tập mỗi ngày rất quan trọng. | `V-ing + be + Adj`: `Practicing every day is important.` | — | — |
@@ -263,6 +301,8 @@
 | 11 | Have something to do | `S + have + N + to V` | Có việc gì cần làm. | **I have some emails to answer.** | Tôi có vài email cần trả lời. | `need to + V` gần nghĩa nhưng cấu trúc khác. | — | — |
 
 ## 18. Experience & Life Events
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | This is the first time + Present Perfect | `This is the first time + S + have/has + V3` | Nói đây là lần đầu làm gì. | **This is the first time I have driven in Seoul.** | Đây là lần đầu tôi lái xe ở Seoul. | `I have never... before` gần nghĩa. | — | — |
@@ -272,6 +312,8 @@
 | 5 | Recently + Present Perfect | `S + have/has + V3 + recently` | Nói sự việc gần đây còn liên quan hiện tại. | **I have changed my routine recently.** | Gần đây tôi đã thay đổi thói quen. | `Past Simple` dùng nếu nêu thời điểm quá khứ rõ. | — | — |
 
 ## 19. Pronouns & Reference
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Someone / Anyone / No one / Everyone | `indefinite pronoun + singular verb` | Đại từ bất định chỉ người. | **Someone is waiting outside.** | Có ai đó đang đợi bên ngoài. | `anyone` trong câu hỏi/phủ định; `no one` = không ai. | — | Động từ thường chia số ít. |
@@ -281,6 +323,8 @@
 | 5 | Another / The other / Others | `another / the other / others` | Phân biệt một cái khác, cái còn lại, những cái khác. | **Some people stayed, but others left.** | Một số người ở lại, còn những người khác rời đi. | — | — | — |
 
 ## 20. Cấu trúc hội thoại Pre-Intermediate
+
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | I agree / I don't agree | `I agree (with + person/idea)` | Đồng ý/không đồng ý. | **I agree with you.** | Tôi đồng ý với bạn. | `I think so` đồng ý nhẹ về một nhận định. | `I disagree.` | — |
@@ -302,6 +346,8 @@
 
 
 ## 21. Tenses Mastery – A2/B1
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Present Perfect vs Past Simple | `have/has + V3 ↔ V2` | Present Perfect không gắn với thời gian quá khứ đã kết thúc; Past Simple có mốc quá khứ rõ. | **I've seen that movie. / I saw it last Friday.** | Tôi đã xem phim đó. / Tôi xem nó thứ Sáu trước. | — | — | — |
@@ -314,6 +360,8 @@
 | 8 | Been vs Gone | `have been to ↔ have gone to` | `been` = đã đi và về; `gone` = đã đi và chưa quay về. | **She's gone to the bank; I've been there before.** | Cô ấy đã đi ngân hàng; tôi từng đến đó rồi. | — | — | — |
 
 ## 22. Verb Patterns Mastery – A2/B1
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Verb + to V group | `decide/plan/hope/promise/refuse + to V` | Học theo nhóm động từ đi với `to-infinitive`. | **We decided to leave early.** | Chúng tôi quyết định rời đi sớm. | — | — | — |
@@ -326,6 +374,8 @@
 | 8 | It + Adj + to V | `It is + Adj + to V` | Đánh giá một hành động. | **It's useful to review your mistakes.** | Việc xem lại lỗi rất hữu ích. | — | — | — |
 
 ## 23. Prepositions & Collocations Mastery – A2/B1
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Interested in / good at / afraid of | `be + Adj + prep + N/V-ing` | Học adjective + preposition như một đơn vị. | **I'm interested in learning languages.** | Tôi hứng thú học ngôn ngữ. | — | — | — |
@@ -338,6 +388,8 @@
 | 8 | At first vs First | `at first = ban đầu / first = đầu tiên` | Một cái diễn tả trạng thái ban đầu, một cái thứ tự. | **At first I was nervous. First, I introduced myself.** | Ban đầu tôi lo. Đầu tiên tôi giới thiệu bản thân. | — | — | — |
 
 ## 24. Phrasal Verbs Mastery – Pre-Intermediate
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Look up | `look up + information/word` | Tra cứu. | **Look up the word in a dictionary.** | Tra từ trong từ điển. | — | — | — |
@@ -350,6 +402,8 @@
 | 8 | Show up | `show up` | Xuất hiện/đến. | **He didn't show up for the meeting.** | Anh ấy không đến cuộc họp. | `turn up` gần nghĩa. | — | — |
 
 ## 25. Speaking Patterns Mastery – Pre-Intermediate
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | What do you think about...? | `What do you think about + N/V-ing?` | Hỏi ý kiến. | **What do you think about working from home?** | Bạn nghĩ gì về làm việc ở nhà? | — | — | — |
@@ -362,6 +416,8 @@
 | 8 | Why don't we...? | `Why don't we + V?` | Đề xuất cùng làm. | **Why don't we take the subway?** | Sao chúng ta không đi tàu điện? | — | — | — |
 
 ## 26. Common Grammar Mistakes – Pre-Intermediate
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | ❌ I've seen him yesterday | `Past time → Past Simple` | Không dùng Present Perfect với `yesterday/last.../in 2024`. | **I saw him yesterday.** | Hôm qua tôi gặp anh ấy. | — | — | — |
@@ -376,6 +432,8 @@
 | 10 | ❌ He told that... | `tell + O + that-clause` | `tell` thường cần tân ngữ người. | **He told me that he was busy.** | Anh ấy nói với tôi rằng anh ấy bận. | — | — | — |
 
 ## 27. Grammar Transformation & Paraphrasing – A2/B1
+
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
 | # | Tên cấu trúc | Cấu trúc | Giải thích | Câu ví dụ | Dịch câu ví dụ | Cấu trúc tương tự & khác nhau | Cấu trúc trái nghĩa / đối lập | Note thêm |
 |---:|---|---|---|---|---|---|---|---|
 | 1 | Past Simple ↔ Used to | `S + V2 often ↔ S + used to + V` | Paraphrase thói quen quá khứ đã không còn. | **I played football every weekend as a child. → I used to play football every weekend.** | Hồi nhỏ tôi từng chơi bóng mỗi cuối tuần. | — | — | — |

@@ -17,6 +17,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — Reinforcement Learning Foundations](./00_reinforcement_learning_foundations.md)
 - [01 — Markov Decision Processes](./01_markov_decision_processes.md)
 - [02 — Value Functions and Bellman Equations](./02_value_functions_and_bellman_equations.md)
@@ -29,6 +31,8 @@ flowchart TD
 - [09 — Deep Reinforcement Learning](./09_deep_reinforcement_learning.md)
 
 ## Core distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Reward ≠ true goal
@@ -44,6 +48,8 @@ High reward ≠ safe behavior
 ```
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Agent policy

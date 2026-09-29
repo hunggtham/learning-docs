@@ -273,6 +273,8 @@ Sau này `08_large_language_models/14_llm_evaluation.md` sẽ mở rộng, nhưn
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Deployment goal
       ↓

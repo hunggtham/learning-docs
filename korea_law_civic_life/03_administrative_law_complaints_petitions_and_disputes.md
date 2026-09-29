@@ -60,6 +60,8 @@ Không phải mọi quyết định đều yêu cầu phải qua hành정심판 
 
 ## 5. Một mental model về “đường đi của vấn đề”
 
+Sau khi phân biệt dịch vụ, 민원 và tranh chấp, ta cần một đường đi để chọn đúng kênh. Sơ đồ này giúp người mới bắt đầu từ loại vấn đề rồi mới quyết định hỏi, nộp hồ sơ hay dùng cơ chế phản đối có thời hạn.
+
 ```text
 thắc mắc thủ tục
 → hỏi cơ quan / 정부24 / FAQ
@@ -118,6 +120,8 @@ Không kết luận ngay rằng “phạt sai” hay “phải nộp”. Hãy ki
 Sau đó mở luật trên `law.go.kr` và trang chính thức của cơ quan ban hành.
 
 ## 9. Nguồn chính thức
+
+Các nguồn dưới đây dùng để kiểm tra thủ tục, thời hạn và căn cứ hiện hành. Hãy mở nguồn tương ứng với loại vấn đề trước khi viết 민원 hoặc đánh giá một 처분 cụ thể.
 
 - 정부24: https://www.gov.kr/
 - 국민신문고: https://www.epeople.go.kr/

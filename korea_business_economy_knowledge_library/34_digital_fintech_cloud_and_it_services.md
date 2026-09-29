@@ -363,6 +363,8 @@ Năng suất
 
 ### Nguồn nền và chính sách hiện hành
 
+Nguồn nền giúp kiểm tra quy định dữ liệu, cloud, fintech và cấp phép dịch vụ. Vì công nghệ thay đổi nhanh, cần ghi mốc thời gian và phạm vi áp dụng của từng nguồn.
+
 - Ministry of Science and ICT, *Cloud Strategy for the AI Era — 4th Basic Plan for Cloud Computing 2025–2027*: https://www.msit.go.kr/eng/bbs/view.do?bbsSeqNo=42&mId=4&mPid=2&nttSeqNo=1039&sCode=eng
 - Ministry of Science and ICT, các kế hoạch về hạ tầng tính toán AI và chuyển đổi AI: https://www.msit.go.kr/eng/
 - Financial Services Commission, cải cách năm 2026 cho phép mở rộng sử dụng SaaS trên mạng nội bộ của công ty tài chính theo các điều kiện an ninh: https://www.fsc.go.kr/no010101/86745

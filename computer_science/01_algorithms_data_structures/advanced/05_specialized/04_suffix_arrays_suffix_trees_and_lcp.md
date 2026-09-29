@@ -379,6 +379,8 @@ Xây SAM cho `A`, rồi quét `B`. Duy trì state hiện tại và độ dài ma
 
 ## 26. SA, Suffix Tree hay SAM?
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Nhu cầu | Cấu trúc thường phù hợp |
 |---|---|
 | text tĩnh, memory gọn, binary search/RMQ | Suffix Array + LCP |

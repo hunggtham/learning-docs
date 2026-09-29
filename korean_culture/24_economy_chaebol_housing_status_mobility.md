@@ -412,6 +412,8 @@ Cảm nhận về khả năng đi lên quan trọng vì nó ảnh hưởng nỗ 
 
 ## Lợi thế tích luỹ: lợi thế nhỏ có thể nhân lên
 
+Sau khi nối doanh nghiệp, nhà ở và thị trường lao động, ta cần giải thích vì sao chênh lệch ban đầu có thể mở rộng theo thời gian. Mô hình này theo dõi feedback giữa tài sản, credential, mạng quan hệ và chi phí cơ hội.
+
 ```text
 nguồn lực gia đình tốt hơn
 → vị trí / khả năng tiếp cận giáo dục tốt hơn

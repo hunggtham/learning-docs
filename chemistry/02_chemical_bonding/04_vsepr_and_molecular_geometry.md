@@ -19,6 +19,8 @@ Các domains sắp xếp sao cho giảm repulsion hiệu dụng.
 
 # Các hình học miền electron cơ bản
 
+Sau khi đếm miền electron và hiểu lực đẩy, ta có thể dùng các hình học chuẩn làm mốc dự đoán. Bảng này là reference geometry; phân tử thực tế sẽ lệch khi lone pair, liên kết bội hoặc nhóm thế làm thay đổi phân bố electron.
+
 | Số miền | Hình học miền electron | Góc lý tưởng |
 |---:|---|---:|
 | 2 | thẳng (linear) | 180° |

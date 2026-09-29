@@ -89,6 +89,8 @@ Vì thời hạn tranh chấp quan trọng, khi nhận thông báo sa thải c�
 
 ## 6. Từ chức (사직), chấm dứt hợp đồng và sa thải khác nhau
 
+Sau khi đọc quy tắc sa thải, ta cần phân loại đúng cách quan hệ lao động kết thúc. Tên gọi trong hệ thống HR có thể khác sự kiện thực tế, nên phần này đặt các khả năng cạnh nhau để biết chứng cứ nào cần giữ.
+
 - `사직`: người lao động xin nghỉ;
 - `권고사직`: công ty đề nghị người lao động nghỉ, nhưng bản chất pháp lý phụ thuộc cách hai bên đồng ý;
 - `해고`: người sử dụng lao động đơn phương chấm dứt;
@@ -123,6 +125,8 @@ Với E-9 và H-2 còn có các bảo hiểm chuyên biệt của hệ thống c
 
 ## 9. Workflow tự tra cứu tranh chấp lao động
 
+Khi đã xác định loại tranh chấp, hãy chuyển từ cảm giác “bị xử lý sai” sang một hồ sơ có thể kiểm tra. Workflow dưới đây đi từ chứng cứ và timeline tới luật, cơ quan có thẩm quyền và deadline.
+
 ```text
 1. xác định loại tranh chấp
 2. chụp/lưu hợp đồng và bảng lương
@@ -135,6 +139,8 @@ Với E-9 và H-2 còn có các bảo hiểm chuyên biệt của hệ thống c
 ```
 
 ## 10. Nguồn chính thức
+
+Các nguồn này là điểm kiểm tra cuối cho luật, thủ tục và hướng dẫn lao động hiện hành. Hãy dùng chúng để xác minh trước khi thương lượng kéo dài hoặc bỏ qua thời hạn khiếu nại.
 
 - 고용노동부: https://www.moel.go.kr/
 - 고용노동부 고객상담센터 1350: https://1350.moel.go.kr/

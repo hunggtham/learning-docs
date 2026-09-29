@@ -12,6 +12,43 @@ Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một file qu
 
 Quy tắc ngôn ngữ của toàn thư viện cũng nằm ở đây: phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc khi cần tra cứu.
 
+## Nếu mục tiêu chính là cổ phiếu và Forex
+
+Bắt đầu với [START_HERE_STOCKS_AND_FOREX.md](./START_HERE_STOCKS_AND_FOREX.md). Đây là lộ trình giải thích theo lớp: trực giác → mô hình → ví dụ số → rủi ro → bài tập. Sau đó quay lại các chapter chuyên sâu tương ứng, thay vì đọc toàn bộ thư viện theo thứ tự.
+
+Tra nhanh thuật ngữ tại [Từ điển dễ hiểu — Cổ phiếu và Forex](./STOCK_FOREX_PLAIN_LANGUAGE_GLOSSARY.md).
+
+Phần quản trị rủi ro thực hành nằm trong [Sổ tay quản trị rủi ro — Cổ phiếu và Forex](./STOCK_FOREX_RISK_PLAYBOOK.md).
+
+Quy trình ghi nguồn, thời điểm công bố và kiểm tra dữ liệu nằm trong [Quy trình dữ liệu và nghiên cứu — Cổ phiếu / Forex](./STOCK_FOREX_DATA_RESEARCH_WORKFLOW.md).
+
+### Bản đồ sở hữu nội dung
+
+Các file gần đây là **lớp cầu nối cho người học**, không phải các nguồn mới thay thế chapter chuyên sâu. Khi nội dung trùng nhau, dùng nguồn chính trong bảng này:
+
+| Câu hỏi | Nguồn giải thích dễ hiểu | Nguồn chuyên sâu / đầu ra |
+|---|---|---|
+| Tôi đang sở hữu gì và lợi suất đến từ đâu? | [Bắt đầu từ đây](./START_HERE_STOCKS_AND_FOREX.md) | [00 — Quy ước và công thức](./00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md) |
+| Cổ phiếu, ETF và quyền lợi cổ đông hoạt động thế nào? | [Bắt đầu từ đây](./START_HERE_STOCKS_AND_FOREX.md) + [Từ điển dễ hiểu](./STOCK_FOREX_PLAIN_LANGUAGE_GLOSSARY.md) | [Cổ phiếu, ETF và quỹ](./02_asset_classes/01_STOCKS_ETF_AND_FUNDS.md) |
+| Doanh nghiệp tạo EPS/FCF và được định giá ra sao? | [Hồ sơ mẫu đã điền](./STOCK_FOREX_WORKED_EXAMPLE.md) | [Mô hình doanh nghiệp tích hợp](./03_company_analysis/07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md) |
+| Cặp tiền, pip, margin và sizing là gì? | [Bắt đầu từ đây](./START_HERE_STOCKS_AND_FOREX.md) + [Từ điển dễ hiểu](./STOCK_FOREX_PLAIN_LANGUAGE_GLOSSARY.md) | [Bản đồ Trading/Forex](./05_trading_derivatives/00_MASTER_TRADING_FOREX_RISK.md) |
+| Làm sao giới hạn lỗ và stress test? | [Sổ tay quản trị rủi ro](./STOCK_FOREX_RISK_PLAYBOOK.md) | [Portfolio Lab](./01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md) và [Trading System Lab](./05_trading_derivatives/06_TRADING_SYSTEM_DESIGN_RISK_AND_EXECUTION_LAB.md) |
+| Lấy và ghi dữ liệu như thế nào? | [Quy trình dữ liệu và nghiên cứu](./STOCK_FOREX_DATA_RESEARCH_WORKFLOW.md) | [Market Research Workflow](./06_markets_korea_vietnam/04_MARKET_RESEARCH_WORKFLOW_DATA_SOURCES_AND_SECTOR_MAPS.md) và [Systematic Research](./05_trading_derivatives/02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md) |
+| Viết hồ sơ và theo dõi luận điểm ra sao? | [Mẫu ghi chú nghiên cứu](./STOCK_FOREX_RESEARCH_TEMPLATE.md) | [Full Investment Process](./07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md) |
+
+Quy tắc đọc: **mỗi chủ đề chỉ có một nguồn chính**; file cầu nối dùng để hiểu và chuẩn bị đầu ra, không cần đọc lặp lại toàn bộ phần giải thích ở nhiều nơi.
+
+Lộ trình rút gọn:
+
+```text
+START_HERE_STOCKS_AND_FOREX
+→ Foundations: tiền, rủi ro, danh mục
+→ Stocks: quyền sở hữu, báo cáo, chất lượng, định giá
+→ Macro: lãi suất, thanh khoản, FX và regime
+→ Forex: cặp tiền, sizing, thực thi, backtest
+→ Integrated cases: kiểm tra toàn bộ chuỗi nguyên nhân–kết quả
+```
+
 ## Cấu trúc lĩnh vực
 
 ### 01 — Nền tảng đầu tư (Foundations)
@@ -103,6 +140,10 @@ Cuối cùng, dùng phần 07 như bài kiểm tra tích hợp: trước khi đ�
 
 ## Mẫu ghi chú nghiên cứu chuẩn
 
+Nếu học riêng cổ phiếu và Forex, dùng [Mẫu ghi chú nghiên cứu — Cổ phiếu / Forex](./STOCK_FOREX_RESEARCH_TEMPLATE.md) trước. Mẫu này là phiên bản thực hành có ô điền cho dữ kiện, kịch bản, sizing, hedge và nhật ký review.
+
+Bạn có thể xem [Hồ sơ mẫu đã điền](./STOCK_FOREX_WORKED_EXAMPLE.md) trước để thấy cách dùng mẫu từ đầu đến cuối.
+
 Một ghi chú hoàn chỉnh nên trả lời tối thiểu:
 
 ```text
@@ -121,6 +162,8 @@ Một ghi chú hoàn chỉnh nên trả lời tối thiểu:
 ```
 
 ## Mô hình tư duy toàn thư viện
+
+Sơ đồ này là mental model để nối các domain trong toàn thư viện. Hãy đọc từ trên xuống dưới như một chuỗi quyết định: quyền lợi pháp lý đặt nền, hệ thống tài chính truyền dẫn, asset class và doanh nghiệp tạo exposure, còn risk/execution/review kiểm tra kết quả.
 
 ```text
 Quyền lợi pháp lý

@@ -14,6 +14,8 @@ Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **đ
 
 ---
 
+Để học **JOIN** như một mạch suy luận, trước hết hãy giữ câu hỏi: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?** Mục đích của bài là biến **INNER/OUTER/CROSS/SELF JOIN, NATURAL/USING, ANSI join và các bẫy điều kiện** thành cách đọc có thể áp dụng.
+
 Để JOIN **thực sự dễ nhớ**, đừng bắt đầu bằng cú pháp. Hãy nhớ một ý duy nhất:
 
 > **JOIN = ghép các dòng của nhiều bảng dựa trên một điều kiện liên quan.**
@@ -22,11 +24,21 @@ Trong SQLD/Oracle, phần dễ nhầm nhất là: **INNER JOIN, LEFT/RIGHT/FULL 
 
 ---
 
+Ta bắt đầu **1. Tại sao cần JOIN?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 1. Tại sao cần JOIN?
 
 Giả sử database có 2 bảng.
 
+Khi gom phần **1. Tại sao cần JOIN?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **1. Tại sao cần JOIN?**. Bây giờ chuyển sang **EMPLOYEES**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**EMPLOYEES** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### EMPLOYEES
+
+Phần này nối mạch SQL với “EMPLOYEES”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | EMP_ID | NAME  | DEPT_ID |
 | -----: | ----- | ------: |
@@ -35,7 +47,15 @@ Giả sử database có 2 bảng.
 |      3 | Cường |      30 |
 |      4 | Dũng  |    NULL |
 
+Khi gom phần **EMPLOYEES** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **EMPLOYEES**. Bây giờ chuyển sang **DEPARTMENTS**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**DEPARTMENTS** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### DEPARTMENTS
+
+Phần này nối mạch SQL với “DEPARTMENTS”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | DEPT_ID | DEPT_NAME |
 | ------: | --------- |
@@ -81,7 +101,19 @@ Nhưng vấn đề quan trọng là:
 
 ---
 
+Khi gom phần **DEPARTMENTS** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **DEPARTMENTS**. Bây giờ chuyển sang **2. INNER JOIN — chỉ lấy những dòng "match"**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2. INNER JOIN — chỉ lấy những dòng "match"** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 2. INNER JOIN — chỉ lấy những dòng "match"
+
+Khi gom phần **2. INNER JOIN — chỉ lấy những dòng "match"** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2. INNER JOIN — chỉ lấy những dòng "match"**. Bây giờ chuyển sang **핵심**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đây là đoạn rút quy tắc từ ví dụ vừa đọc. Với **핵심**, câu hỏi là: **quy tắc nào là bất biến của khái niệm vừa học, và dấu hiệu nào cho biết truy vấn đang áp dụng đúng quy tắc đó?** Phần bên dưới phải được dùng để kiểm tra lại các dòng dữ liệu, không chỉ để nhắc lại khẩu hiệu.
 
 ### 핵심
 
@@ -118,7 +150,15 @@ Kết quả:
 
 Phòng SALES cũng không xuất hiện vì không có employee tương ứng.
 
+Khi gom phần **핵심** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **핵심**. Bây giờ chuyển sang **Hình dung**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đoạn **Hình dung** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
+
 #### Hình dung
+
+Phần này nối mạch SQL với “Hình dung”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 EMPLOYEES              DEPARTMENTS
@@ -131,6 +171,12 @@ Dũng   NULL
 
 Chỉ hai đường nối thành công được giữ.
 
+Khi gom phần **Hình dung** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Hình dung**. Bây giờ chuyển sang **Cách nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đoạn **Cách nhớ** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
+
 #### Cách nhớ
 
 > **INNER = MATCH ONLY**
@@ -142,6 +188,12 @@ A ∩ B
 ```
 
 ---
+
+Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **3. JOIN và INNER JOIN có khác nhau không?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **3. JOIN và INNER JOIN có khác nhau không?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 3. JOIN và INNER JOIN có khác nhau không?
 
@@ -177,9 +229,21 @@ INNER JOIN
 
 ---
 
+Khi gom phần **3. JOIN và INNER JOIN có khác nhau không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **3. JOIN và INNER JOIN có khác nhau không?**. Bây giờ chuyển sang **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái
 
 Đây là JOIN cực kỳ quan trọng.
+
+Khi gom phần **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4. LEFT OUTER JOIN — giữ toàn bộ bảng bên trái**. Bây giờ chuyển sang **핵심**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đây là đoạn rút quy tắc từ ví dụ vừa đọc. Với **핵심**, câu hỏi là: **quy tắc nào là bất biến của khái niệm vừa học, và dấu hiệu nào cho biết truy vấn đang áp dụng đúng quy tắc đó?** Phần bên dưới phải được dùng để kiểm tra lại các dòng dữ liệu, không chỉ để nhắc lại khẩu hiệu.
 
 ### 핵심
 
@@ -234,7 +298,15 @@ Dũng vẫn tồn tại
 
 Đây chính là khác biệt lớn với INNER JOIN.
 
+Khi gom phần **핵심** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **핵심**. Bây giờ chuyển sang **Cách nhớ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đoạn **Cách nhớ** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
+
 #### Cách nhớ
+
+Phần này nối mạch SQL với “Cách nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 LEFT JOIN
@@ -247,6 +319,12 @@ Hay:
 > **LEFT JOIN = bên trái là VIP → không được phép mất dòng.**
 
 ---
+
+Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải
 
@@ -302,6 +380,12 @@ NAME = NULL
 
 ---
 
+Khi gom phần **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **5. RIGHT OUTER JOIN — giữ toàn bộ bảng bên phải**. Bây giờ chuyển sang **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau
 
 Ví dụ:
@@ -333,7 +417,19 @@ và ít dùng RIGHT JOIN, vì có thể đảo thứ tự bảng để đọc d�
 
 ---
 
+Khi gom phần **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **6. LEFT JOIN và RIGHT JOIN thực chất có thể đổi cho nhau**. Bây giờ chuyển sang **7. FULL OUTER JOIN — không bỏ ai cả**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **7. FULL OUTER JOIN — không bỏ ai cả** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 7. FULL OUTER JOIN — không bỏ ai cả
+
+Khi gom phần **7. FULL OUTER JOIN — không bỏ ai cả** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **7. FULL OUTER JOIN — không bỏ ai cả**. Bây giờ chuyển sang **핵심**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đây là đoạn rút quy tắc từ ví dụ vừa đọc. Với **핵심**, câu hỏi là: **quy tắc nào là bất biến của khái niệm vừa học, và dấu hiệu nào cho biết truy vấn đang áp dụng đúng quy tắc đó?** Phần bên dưới phải được dùng để kiểm tra lại các dòng dữ liệu, không chỉ để nhắc lại khẩu hiệu.
 
 ### 핵심
 
@@ -373,7 +469,15 @@ Kết quả đại khái:
 | Dũng  |     NULL |    NULL | NULL      |
 | NULL  |     NULL |      40 | SALES     |
 
+Khi gom phần **핵심** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **핵심**. Bây giờ chuyển sang **Cách nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đoạn **Cách nhớ** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
+
 #### Cách nhớ
+
+Phần này nối mạch SQL với “Cách nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 INNER = chỉ MATCH
@@ -385,6 +489,12 @@ FULL  = MATCH + LEFT dư + RIGHT dư
 Đây là công thức nên nhớ nhất.
 
 ---
+
+Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **8. So sánh 4 loại JOIN quan trọng nhất**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **8. So sánh 4 loại JOIN quan trọng nhất** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 8. So sánh 4 loại JOIN quan trọng nhất
 
@@ -405,6 +515,12 @@ B = bảng bên phải
 Chỉ cần nhớ bảng này là xử lý được phần lớn câu hỏi JOIN.
 
 ---
+
+Khi gom phần **8. So sánh 4 loại JOIN quan trọng nhất** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **8. So sánh 4 loại JOIN quan trọng nhất**. Bây giờ chuyển sang **9. CROSS JOIN — tất cả kết hợp với tất cả**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **9. CROSS JOIN — tất cả kết hợp với tất cả** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 9. CROSS JOIN — tất cả kết hợp với tất cả
 
@@ -491,11 +607,23 @@ thì:
 
 **카티션 곱 (Cartesian Product) — tích Descartes.**
 
+Khi gom phần **9. CROSS JOIN — tất cả kết hợp với tất cả** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **9. CROSS JOIN — tất cả kết hợp với tất cả**. Bây giờ chuyển sang **Cách nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đoạn **Cách nhớ** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
+
 #### Cách nhớ
 
 > **CROSS JOIN = A × B**
 
 ---
+
+Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN
 
@@ -527,6 +655,12 @@ DEPARTMENT 20 rows
 
 ---
 
+Khi gom phần **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **10. CROSS JOIN rất quan trọng để hiểu lỗi JOIN**. Bây giờ chuyển sang **11. SELF JOIN — bảng JOIN với chính nó**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **11. SELF JOIN — bảng JOIN với chính nó** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 11. SELF JOIN — bảng JOIN với chính nó
 
 SELF JOIN không phải một thuật toán JOIN hoàn toàn mới.
@@ -537,7 +671,15 @@ Nó có nghĩa:
 
 Ví dụ bảng:
 
+Khi gom phần **11. SELF JOIN — bảng JOIN với chính nó** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **11. SELF JOIN — bảng JOIN với chính nó**. Bây giờ chuyển sang **EMPLOYEES**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**EMPLOYEES** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### EMPLOYEES
+
+Phần này nối mạch SQL với “EMPLOYEES”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | EMP_ID | NAME | MANAGER_ID |
 | -----: | ---- | ---------: |
@@ -613,6 +755,12 @@ Kết quả:
 | Park     | Kim     |
 | Choi     | Lee     |
 
+Khi gom phần **EMPLOYEES** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **EMPLOYEES**. Bây giờ chuyển sang **Keyword**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Keyword** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Keyword
 
 **셀프 조인 (Self Join)**
@@ -622,6 +770,12 @@ Kết quả:
 = JOIN một bảng với chính nó.
 
 ---
+
+Khi gom phần **Keyword** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Keyword**. Bây giờ chuyển sang **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 12. SELF JOIN vẫn có thể là INNER/LEFT JOIN
 
@@ -683,6 +837,12 @@ Kim | NULL
 
 ---
 
+Khi gom phần **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **12. SELF JOIN vẫn có thể là INNER/LEFT JOIN**. Bây giờ chuyển sang **13. EQUI JOIN — điều kiện JOIN dùng dấu `=`**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **13. EQUI JOIN — điều kiện JOIN dùng dấu `=`** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 13. EQUI JOIN — điều kiện JOIN dùng dấu `=`
 
 **등가 조인 (Equi Join)** nghĩa là điều kiện JOIN sử dụng phép bằng:
@@ -730,6 +890,12 @@ ON e.department_id = d.department_id
 
 ---
 
+Khi gom phần **13. EQUI JOIN — điều kiện JOIN dùng dấu `=`** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **13. EQUI JOIN — điều kiện JOIN dùng dấu `=`**. Bây giờ chuyển sang **14. NON-EQUI JOIN — không JOIN bằng `=`**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **14. NON-EQUI JOIN — không JOIN bằng `=`** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 14. NON-EQUI JOIN — không JOIN bằng `=`
 
 **비등가 조인 (Non-Equi Join)**
@@ -757,7 +923,15 @@ Có bảng nhân viên:
 
 và bảng mức lương:
 
+Khi gom phần **14. NON-EQUI JOIN — không JOIN bằng `=`** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **14. NON-EQUI JOIN — không JOIN bằng `=`**. Bây giờ chuyển sang **SALARY_GRADE**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**SALARY_GRADE** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
+
 #### SALARY_GRADE
+
+Phần này nối mạch SQL với “SALARY_GRADE”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | GRADE | MIN_SAL | MAX_SAL |
 | ----: | ------: | ------: |
@@ -821,7 +995,15 @@ Kết quả:
 | Bình  |   4500 |     2 |
 | Cường |   7000 |     3 |
 
+Khi gom phần **SALARY_GRADE** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **SALARY_GRADE**. Bây giờ chuyển sang **Nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Nhớ
+
+Phần này nối mạch SQL với “Nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 EQUI JOIN
@@ -834,6 +1016,12 @@ NON-EQUI JOIN
 ```
 
 ---
+
+Khi gom phần **Nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Nhớ**. Bây giờ chuyển sang **15. NATURAL JOIN**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **15. NATURAL JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 15. NATURAL JOIN
 
@@ -887,6 +1075,12 @@ JOIN departments d
 
 ---
 
+Khi gom phần **15. NATURAL JOIN** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **15. NATURAL JOIN**. Bây giờ chuyển sang **16. Tại sao NATURAL JOIN nguy hiểm?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **16. Tại sao NATURAL JOIN nguy hiểm?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 16. Tại sao NATURAL JOIN nguy hiểm?
 
 Giả sử ban đầu:
@@ -930,6 +1124,12 @@ Bây giờ NATURAL JOIN có thể tự JOIN dựa trên **cả các cột cùng 
 Vì thế trong code production, thường nên viết điều kiện JOIN rõ ràng hơn.
 
 ---
+
+Khi gom phần **16. Tại sao NATURAL JOIN nguy hiểm?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **16. Tại sao NATURAL JOIN nguy hiểm?**. Bây giờ chuyển sang **17. USING — khi hai bảng JOIN bằng column cùng tên**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **17. USING — khi hai bảng JOIN bằng column cùng tên** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 17. USING — khi hai bảng JOIN bằng column cùng tên
 
@@ -987,9 +1187,21 @@ ON
 
 ---
 
+Khi gom phần **17. USING — khi hai bảng JOIN bằng column cùng tên** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **17. USING — khi hai bảng JOIN bằng column cùng tên**. Bây giờ chuyển sang **18. ANSI JOIN và Oracle Old-Style JOIN**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **18. ANSI JOIN và Oracle Old-Style JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 18. ANSI JOIN và Oracle Old-Style JOIN
 
 Đây là phần rất quan trọng khi học Oracle/SQLD.
+
+Khi gom phần **18. ANSI JOIN và Oracle Old-Style JOIN** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **18. ANSI JOIN và Oracle Old-Style JOIN**. Bây giờ chuyển sang **ANSI JOIN**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+**ANSI JOIN** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
 
 ### ANSI JOIN
 
@@ -1006,6 +1218,12 @@ JOIN departments d
 Đây là cú pháp ANSI/ISO SQL.
 
 ---
+
+Khi gom phần **ANSI JOIN** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **ANSI JOIN**. Bây giờ chuyển sang **Oracle old-style**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Oracle old-style** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### Oracle old-style
 
@@ -1039,6 +1257,12 @@ WHERE A.id = B.id
 ```
 
 ---
+
+Khi gom phần **Oracle old-style** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Oracle old-style**. Bây giờ chuyển sang **19. Oracle `(+)` Outer Join**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **19. Oracle `(+)` Outer Join** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 19. Oracle `(+)` Outer Join
 
@@ -1085,6 +1309,12 @@ departments có thể không có
 
 → LEFT JOIN.
 
+Khi gom phần **19. Oracle `(+)` Outer Join** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **19. Oracle `(+)` Outer Join**. Bây giờ chuyển sang **Mẹo nhớ `(+)`**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Mẹo nhớ `(+)`** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Mẹo nhớ `(+)`
 
 Đừng nghĩ:
@@ -1128,6 +1358,12 @@ A RIGHT JOIN B
 ```
 
 ---
+
+Khi gom phần **Mẹo nhớ `(+)`** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Mẹo nhớ `(+)`**. Bây giờ chuyển sang **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE
 
@@ -1180,11 +1416,25 @@ Vì vậy `WHERE` có thể khiến kết quả LEFT JOIN trông giống INNER J
 
 ---
 
+Khi gom phần **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **20. Một lỗi cực kỳ quan trọng: LEFT JOIN + WHERE**. Bây giờ chuyển sang **21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?
 
 So sánh:
 
+Khi gom phần **21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **21. `ON` và `WHERE` khác nhau thế nào trong OUTER JOIN?**. Bây giờ chuyển sang **Query A**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Query A** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Query A
+
+Phần này nối mạch SQL với “Query A”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT *
@@ -1196,7 +1446,15 @@ LEFT JOIN departments d
 
 với:
 
+Khi gom phần **Query A** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Query A**. Bây giờ chuyển sang **Query B**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Query B** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Query B
+
+Phần này nối mạch SQL với “Query B”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT *
@@ -1229,6 +1487,12 @@ employee không có IT bị loại
 
 ---
 
+Khi gom phần **Query B** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Query B**. Bây giờ chuyển sang **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại
 
 Bạn không nên xem danh sách:
@@ -1247,7 +1511,15 @@ như 7 thứ hoàn toàn ngang hàng.
 
 Thực ra chúng đang mô tả **các khía cạnh khác nhau**.
 
+Khi gom phần **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **22. Một khái niệm rất dễ nhầm: loại JOIN có nhiều cách phân loại**. Bây giờ chuyển sang **Phân loại theo "giữ dòng nào?"**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Phân loại theo "giữ dòng nào?"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Phân loại theo "giữ dòng nào?"
+
+Phần này nối mạch SQL với “Phân loại theo "giữ dòng nào?"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 JOIN
@@ -1260,7 +1532,15 @@ JOIN
     └── FULL OUTER JOIN
 ```
 
+Khi gom phần **Phân loại theo "giữ dòng nào?"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Phân loại theo "giữ dòng nào?"**. Bây giờ chuyển sang **Phân loại theo "điều kiện JOIN?"**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Phân loại theo "điều kiện JOIN?"** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Phân loại theo "điều kiện JOIN?"
+
+Phần này nối mạch SQL với “Phân loại theo "điều kiện JOIN?"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 JOIN condition
@@ -1272,14 +1552,30 @@ JOIN condition
        < > <= >= BETWEEN ...
 ```
 
+Khi gom phần **Phân loại theo "điều kiện JOIN?"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Phân loại theo "điều kiện JOIN?"**. Bây giờ chuyển sang **Phân loại theo "JOIN với bảng nào?"**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Phân loại theo "JOIN với bảng nào?"** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Phân loại theo "JOIN với bảng nào?"
+
+Phần này nối mạch SQL với “Phân loại theo "JOIN với bảng nào?"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 SELF JOIN
 → table JOIN chính nó
 ```
 
+Khi gom phần **Phân loại theo "JOIN với bảng nào?"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Phân loại theo "JOIN với bảng nào?"**. Bây giờ chuyển sang **Không dùng điều kiện match**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Không dùng điều kiện match** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Không dùng điều kiện match
+
+Phần này nối mạch SQL với “Không dùng điều kiện match”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 CROSS JOIN
@@ -1322,6 +1618,12 @@ EQUI JOIN
 Đây là cách hiểu chính xác hơn thay vì học thuộc từng JOIN riêng biệt.
 
 ---
+
+Khi gom phần **Không dùng điều kiện match** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Không dùng điều kiện match**. Bây giờ chuyển sang **23. Sơ đồ tổng hợp để nhớ khi thi SQLD**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **23. Sơ đồ tổng hợp để nhớ khi thi SQLD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 23. Sơ đồ tổng hợp để nhớ khi thi SQLD
 
@@ -1380,6 +1682,12 @@ NATURAL
 
 ---
 
+Khi gom phần **23. Sơ đồ tổng hợp để nhớ khi thi SQLD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **23. Sơ đồ tổng hợp để nhớ khi thi SQLD**. Bây giờ chuyển sang **24. Cách chọn JOIN khi gặp bài thực tế**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **24. Cách chọn JOIN khi gặp bài thực tế** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 24. Cách chọn JOIN khi gặp bài thực tế
 
 Đừng hỏi:
@@ -1392,7 +1700,15 @@ Hãy hỏi:
 
 Ví dụ:
 
+Khi gom phần **24. Cách chọn JOIN khi gặp bài thực tế** lại, ta không cần nhớ các dòng như những mảnh rời: ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **24. Cách chọn JOIN khi gặp bài thực tế**. Bây giờ chuyển sang **"Chỉ lấy employee có department"**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **"Chỉ lấy employee có department"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### "Chỉ lấy employee có department"
+
+Phần này nối mạch SQL với “"Chỉ lấy employee có department"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 Không cần giữ employee không có department
@@ -1400,6 +1716,12 @@ Không cần giữ department không có employee
 
 → INNER JOIN
 ```
+
+Khi gom phần **"Chỉ lấy employee có department"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **"Chỉ lấy employee có department"**. Bây giờ chuyển sang **"Lấy TẤT CẢ employee và thông tin department nếu có"**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **"Lấy TẤT CẢ employee và thông tin department nếu có"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### "Lấy TẤT CẢ employee và thông tin department nếu có"
 
@@ -1415,6 +1737,12 @@ TẤT CẢ EMPLOYEE
 FROM employees e
 LEFT JOIN departments d
 ```
+
+Khi gom phần **"Lấy TẤT CẢ employee và thông tin department nếu có"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **"Lấy TẤT CẢ employee và thông tin department nếu có"**. Bây giờ chuyển sang **"Lấy TẤT CẢ department, kể cả department chưa có nhân viên"**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **"Lấy TẤT CẢ department, kể cả department chưa có nhân viên"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 #### "Lấy TẤT CẢ department, kể cả department chưa có nhân viên"
 
@@ -1432,19 +1760,43 @@ FROM departments d
 LEFT JOIN employees e
 ```
 
+Khi gom phần **"Lấy TẤT CẢ department, kể cả department chưa có nhân viên"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **"Lấy TẤT CẢ department, kể cả department chưa có nhân viên"**. Bây giờ chuyển sang **"Lấy tất cả employee và tất cả department, kể cả hai bên không match"**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **"Lấy tất cả employee và tất cả department, kể cả hai bên không match"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### "Lấy tất cả employee và tất cả department, kể cả hai bên không match"
+
+Phần này nối mạch SQL với “"Lấy tất cả employee và tất cả department, kể cả hai bên không match"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 FULL OUTER JOIN
 ```
 
+Khi gom phần **"Lấy tất cả employee và tất cả department, kể cả hai bên không match"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **"Lấy tất cả employee và tất cả department, kể cả hai bên không match"**. Bây giờ chuyển sang **"Tạo tất cả tổ hợp employee × department"**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **"Tạo tất cả tổ hợp employee × department"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### "Tạo tất cả tổ hợp employee × department"
+
+Phần này nối mạch SQL với “"Tạo tất cả tổ hợp employee × department"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 CROSS JOIN
 ```
 
+Khi gom phần **"Tạo tất cả tổ hợp employee × department"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **"Tạo tất cả tổ hợp employee × department"**. Bây giờ chuyển sang **"Tìm manager của employee trong cùng bảng"**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **"Tìm manager của employee trong cùng bảng"** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### "Tìm manager của employee trong cùng bảng"
+
+Phần này nối mạch SQL với “"Tìm manager của employee trong cùng bảng"”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELF JOIN
@@ -1452,7 +1804,15 @@ SELF JOIN
 
 ---
 
+Khi gom phần **"Tìm manager của employee trong cùng bảng"** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **"Tìm manager của employee trong cùng bảng"**. Bây giờ chuyển sang **25. Bảng tổng kết cuối bài**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **25. Bảng tổng kết cuối bài** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 25. Bảng tổng kết cuối bài
+
+Phần này nối mạch SQL với “25. Bảng tổng kết cuối bài”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Loại                | Ý nghĩa dễ nhớ                       | Không match           |
 | ------------------- | ------------------------------------ | --------------------- |
@@ -1466,6 +1826,12 @@ SELF JOIN
 | **NON-EQUI JOIN**   | JOIN bằng `< > BETWEEN...`           | phụ thuộc loại JOIN   |
 | **NATURAL JOIN**    | tự JOIN cột cùng tên                 | SQL tự xác định       |
 | **USING**           | JOIN bằng cột cùng tên được chỉ định | explicit hơn NATURAL  |
+
+Khi gom phần **25. Bảng tổng kết cuối bài** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **25. Bảng tổng kết cuối bài**. Bây giờ chuyển sang **🧠 NOTE NHỚ NHANH SQLD**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **🧠 NOTE NHỚ NHANH SQLD** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 🧠 NOTE NHỚ NHANH SQLD
 
@@ -1511,3 +1877,7 @@ A.id = B.id(+)
 ```
 
 Nếu trả lời được 5 câu này thì INNER/OUTER JOIN gần như không còn khó nữa.
+
+Khi gom phần **🧠 NOTE NHỚ NHANH SQLD** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Như vậy, **🧠 NOTE NHỚ NHANH SQLD** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.

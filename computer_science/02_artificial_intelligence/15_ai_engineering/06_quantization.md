@@ -129,6 +129,8 @@ Low-precision training khác với inference quantization. BF16/FP16 training th
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Quantization = nén cách biểu diễn số, không trực tiếp thay đổi cấu trúc ngữ nghĩa của model
 ```

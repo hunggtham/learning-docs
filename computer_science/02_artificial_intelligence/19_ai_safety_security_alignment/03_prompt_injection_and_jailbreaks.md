@@ -298,6 +298,8 @@ Refusal rate một mình không đủ.
 
 ## Failure mode phổ biến của defense
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - chỉ thêm keyword filter;
 - tin delimiter là security boundary;
 - cho model tự quyết permission;

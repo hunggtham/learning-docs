@@ -243,6 +243,8 @@ Một developer có NAV lớn vẫn có thể gặp vấn đề nếu tiền t�
 
 ## 16. Bank–property feedback loop
 
+Vòng lặp ngân hàng–bất động sản nối collateral, credit, refinancing, sales và NPL. Hãy đọc sơ đồ theo chiều phản hồi để xác định cú sốc ban đầu đang được khuếch đại ở balance sheet hay ở demand.
+
 ```text
 Property sales ↓
 → developer cash ↓
@@ -508,6 +510,8 @@ Research phải nối tới cách sở hữu tài sản thực tế.
 
 ## 34. Dashboard theo nhịp thời gian
 
+Dashboard cần chia theo tốc độ cập nhật để không trộn tín hiệu tần suất cao với dữ liệu chậm. Phần dưới đây là lịch quan sát từ daily tới quarterly, mỗi nhịp phục vụ một loại quyết định khác nhau.
+
 **Hàng ngày:**
 
 ```text
@@ -592,6 +596,8 @@ Theo:
 Mục tiêu là xác định rally đến từ liquidity hay fundamentals.
 
 ## 38. Liên kết đọc tiếp
+
+Đây là điểm bàn giao từ market thesis lab sang playbook Korea/Vietnam, market research workflow, cross-border access và integrated cases. Chọn tài liệu theo lỗ hổng trong country → sector → company → valuation → liquidity chain rồi quay lại lab để cập nhật thesis.
 
 - [Korea Market Playbook](./01_KOREA_MARKET_PLAYBOOK.md)
 - [Vietnam Market Playbook](./02_VIETNAM_MARKET_PLAYBOOK.md)

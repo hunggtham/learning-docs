@@ -4,18 +4,20 @@
 
 이 단원을 읽은 뒤 **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
+Mục đích của bài này là hiểu **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **9. 암호화 기술 (Công nghệ Mã hóa)** khi chuyển sang phần tiếp theo.
+
 ## 핵심 키워드 (Từ khóa)
 
 해킹, 보안, 위협
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**에서 만든 기준을 이어받아 **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
@@ -24,7 +26,16 @@
 
 ## 10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)
 
+Sau khi đã đặt nền bằng **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**, ta chuyển sang **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**. Đây là mắt xích 14/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **10.1 웹 및 애플리케이션 취약점**. Hãy xác định **10.1 웹 및 애플리케이션 취약점** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
 ### 10.1 웹 및 애플리케이션 취약점
+
+Phần nguồn của **10.1 웹 및 애플리케이션 취약점** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
 - **SQL 삽입 (SQL Injection):** SQL을 삽입하여 DB 유출/변조 및 인증 우회.
 - **크로스사이트 스크립팅 (XSS):** 악의적인 스크립트를 삽입하여 방문자 정보 탈취.
 - **경로 조작 및 자원 삽입:** 데이터 입출력 경로 조작으로 자원 삭제/수정.
@@ -32,7 +43,15 @@
 - **하드코드된 비밀번호:** 소스코드 내부에 비밀번호를 직접 입력하는 취약점.
 - **Tiếng Việt:** Các lỗ hổng web: SQL Injection (chèn lệnh SQL), XSS (chèn script độc hại), Buffer Overflow (tràn bộ đệm - phòng bằng Stack Guard).
 
+Các bullet của **10.1 웹 및 애플리케이션 취약점** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **10.1 웹 및 애플리케이션 취약점** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
 ### 10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)
+
+Các ý ngay dưới **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
 - **세션 하이재킹 (Session Hijacking):** 클라이언트의 세션 정보를 가로채는 공격.
 - **DDoS 공격:** 여러 분산된 지점에서 한 곳을 공격. (툴: Trin00, TFN, TFN2K, Stacheldraht).
 - **Ping of Death:** 허용 범위 이상의 큰 ICMP 패킷을 전송해 마비시킴.
@@ -44,7 +63,15 @@
   - Ping of Death: Gửi gói ICMP quá lớn.
   - SMURFING: Gửi lượng lớn dữ liệu tập trung.
 
+Các bullet của **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)**, đừng bắt đầu lại từ số không. **10.3 시스템 해킹 및 악성코드** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **10.3 시스템 해킹 및 악성코드**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
 ### 10.3 시스템 해킹 및 악성코드
+
+Bây giờ ta đi vào nội dung của **10.3 시스템 해킹 및 악성코드**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
 - **백도어 (Back Door):** 보안을 제거하고 만들어 놓은 비밀 통로 (탐지: 무결성 검사, 열린 포트 등).
 - **키로거 공격 (Key Logger):** 키보드 움직임을 탐지해 개인정보 탈취.
 - **랜섬웨어 (Ransomware):** 문서 암호화 후 돈(Ransom)을 요구.
@@ -53,7 +80,15 @@
 - **피싱 (Phishing):** 공공/금융 기관을 사칭해 개인정보 탈취.
 - **Tiếng Việt:** Backdoor (Cửa hậu), Key Logger (Ghi thao tác bàn phím), Ransomware (Mã độc tống tiền), Worm (Giun máy tính - tự nhân bản), Honeypot (Hệ thống mồi nhử).
 
+Các bullet của **10.3 시스템 해킹 및 악성코드** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+**10.3 시스템 해킹 및 악성코드** vừa cho ta cách đặt câu hỏi. Bây giờ **10.4 기타 네트워크 공격** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Với **10.4 기타 네트워크 공격**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
 ### 10.4 기타 네트워크 공격
+
+Phần nguồn của **10.4 기타 네트워크 공격** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
 - **스위치 재밍 (Switch Jamming):** 위조된 MAC 주소를 흘려보내 스위치를 더미 허브로 작동하게 만듦.
 - **블루투스 관련 공격:**
   - **블루버그 (BlueBug):** 취약한 연결 관리 악용.
@@ -62,3 +97,9 @@
   - **블루재킹 (BlueJacking):** 익명으로 스팸 메시지 퍼뜨림.
 - **Tiếng Việt:** Tấn công Switch Jamming (biến Switch thành Hub) và các tấn công Bluetooth (BlueBug, BlueSnarf, BlueJacking).
 - 💡 **Mẹo ghi nhớ:** Blue**Jacking** = **Spam message**. Blue**Snarf** = **Snatch files** (cướp file).
+
+Với **10.4 기타 네트워크 공격**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Với **10.4 기타 네트워크 공격**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+
+Ta có thể khép mục **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **9. 암호화 기술 (Công nghệ Mã hóa)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

@@ -286,6 +286,8 @@ Muốn phân tích một công ty tài chính, trước tiên xác định nó �
 
 ## Liên kết tiếp theo
 
+Đọc tiếp theo các liên kết giúp nối định chế tài chính với thị trường vốn, bảo hiểm, quản trị tài sản và rủi ro hệ thống. Hãy giữ câu hỏi về nguồn vốn và chuyển đổi thanh khoản khi chuyển chapter.
+
 - [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — cấu trúc thị trường và chứng khoán.
 - [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — tài trợ và đòn bẩy.
 - [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — PF.

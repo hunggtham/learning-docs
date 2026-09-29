@@ -38,6 +38,8 @@ Giải tích lượng giác có dạng tự nhiên khi góc đo bằng radian:
 
 ## Động học quay
 
+Sau khi mô tả vị trí và vận tốc tuyến tính, ta đổi sang góc, tốc độ góc và gia tốc góc. Phần này đặt các đại lượng quay cạnh đại lượng tịnh tiến để thấy phép tương tự và giới hạn của nó.
+
 ```math
 \omega=\frac{d\theta}{dt},
 ```

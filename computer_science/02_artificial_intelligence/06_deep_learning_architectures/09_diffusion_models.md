@@ -206,6 +206,8 @@ This separates semantic text control from geometric/spatial control.
 
 ## Diffusion vs VAE vs GAN
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Family | Training signal | Sampling | Typical trade-off |
 |---|---|---|---|
 | VAE | ELBO / reconstruction + KL | one decoder pass | smooth latent, likelihood framework, sometimes softer samples |
@@ -227,6 +229,8 @@ Generative model behavior reflects training distribution. Memorization can occur
 Safety filters can operate training data, prompt, latent/generation and output — system problem beyond diffusion math.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Training:

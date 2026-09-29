@@ -18,6 +18,8 @@ Có đủ tiền mặt và tài sản thanh khoản để sống tới khi tài 
 
 ## 2. Thanh khoản và khả năng thanh toán
 
+Sau khi đặt bối cảnh, ta cần phân biệt hai câu hỏi: tổ chức có đủ tiền ngay hay tổng tài sản có còn đủ giá trị? Tách hai lớp này giúp người học hiểu vì sao một cú sốc thanh khoản có thể tự biến thành khủng hoảng vốn.
+
 **Vấn đề thanh khoản (liquidity problem)** xảy ra khi tổ chức có tài sản có thể đủ giá trị trong dài hạn nhưng không có đủ tiền ngay để đáp ứng rút tiền, thanh toán hoặc yêu cầu bổ sung tài sản bảo đảm.
 
 **Vấn đề khả năng thanh toán (solvency problem)** xảy ra khi giá trị kinh tế của tài sản thấp hơn nghĩa vụ đủ lớn để vốn chủ sở hữu bị xóa mòn.
@@ -147,6 +149,8 @@ Chấp nhận tài sản thế chấp
 Nhưng hỗ trợ thanh khoản không xóa rủi ro tín dụng. Nếu người vay cuối cùng vỡ nợ, tổn thất kinh tế vẫn tồn tại.
 
 ## 12. Người cho vay cuối cùng và cứu trợ vốn
+
+Khi vòng xoáy đã hình thành, phản ứng chính sách cần được đọc theo đúng chức năng của từng công cụ. Người cho vay cuối cùng xử lý thời điểm thiếu tiền; tái cấp vốn xử lý phần vốn đã bị bào mòn.
 
 **Người cho vay cuối cùng (lender of last resort)** chủ yếu cung cấp thanh khoản tạm thời dựa trên tài sản thế chấp.
 
@@ -311,6 +315,8 @@ Một doanh nghiệp có thể rất yếu nhưng trái phiếu đã phản ánh
 
 ## 28. Dòng thời gian khủng hoảng
 
+Khủng hoảng không xảy ra trong một khoảnh khắc duy nhất mà tiến triển qua nhiều giai đoạn. Dòng thời gian dưới đây giúp nối nguyên nhân tích tụ với tác nhân kích hoạt, phản ứng thị trường và giai đoạn sửa chữa sau đó.
+
 ```text
 Giai đoạn 1: Tích tụ đòn bẩy / lệch kỳ hạn
 Giai đoạn 2: Tác nhân kích hoạt
@@ -338,6 +344,8 @@ Phản ứng chính sách có lớn hoặc nhanh hơn dự kiến không?
 ```
 
 ## 30. Checklist dùng lại
+
+Checklist này là điểm kết thúc của case và cũng là điểm bắt đầu cho một case mới. Hãy dùng nó để kiểm tra tuần tự nguồn vốn, tài sản thế chấp, vốn, chính sách và bên bán cưỡng bức trước khi kết luận về mức độ rủi ro.
 
 ```text
 Tác nhân kích hoạt

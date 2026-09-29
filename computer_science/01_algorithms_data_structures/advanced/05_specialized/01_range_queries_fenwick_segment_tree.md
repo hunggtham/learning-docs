@@ -556,6 +556,8 @@ Không có structure “mạnh hơn nên luôn tốt hơn”. Chọn theo các t
 
 ## truy vấn khoảng Decision Guide
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | khối lượng công việc | Structure phù hợp |
 |---|---|
 | tĩnh range sum | tổng tiền tố |

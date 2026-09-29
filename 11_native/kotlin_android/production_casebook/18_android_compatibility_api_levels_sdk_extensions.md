@@ -415,6 +415,8 @@ Hỏi:
 - rollback/hotfix path là gì.
 
 ## 34. Official references
+Phần này nối mạch Android vừa học với “34. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - App compatibility: https://developer.android.com/guide/app-compatibility
 - Platform behavior changes: https://developer.android.com/about/versions

@@ -1812,6 +1812,8 @@ Senior phải version interface và giới hạn privileges nếu plugin không 
 ---
 
 # Chương 59 — Feature Flags và lifecycle của flag
+Phần này nối mạch bài học với “Chương 59 — Feature Flags và lifecycle của flag”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 if (flags.newCheckout) {

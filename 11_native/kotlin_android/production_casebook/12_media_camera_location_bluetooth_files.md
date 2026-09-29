@@ -288,6 +288,8 @@ Nhưng long-lived media/camera session thường nên owner ở layer có lifecy
 # Error model
 
 ## 35. Device integration error không nên là string
+Phần này nối mạch Android vừa học với “35. Device integration error không nên là string”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 sealed interface DeviceError {

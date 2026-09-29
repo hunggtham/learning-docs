@@ -631,6 +631,8 @@ Tại Việt Nam, bất động sản, công ty chứng khoán và ngân hàng p
 
 ## 59. Mỗi ngành nên có
 
+Phần này gom một chuẩn chung để đọc mọi ngành: driver doanh thu, cấu trúc chi phí, bảng cân đối, chu kỳ, FX, policy, valuation và failure mode. Dùng nó như cầu nối từ các deep dive riêng lẻ sang một framework có thể so sánh.
+
 ```text
 Động cơ kinh tế
 Động lực nhu cầu

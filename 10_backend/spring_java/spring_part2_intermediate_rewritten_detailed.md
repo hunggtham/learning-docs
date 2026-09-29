@@ -1101,6 +1101,8 @@ Học Spring isolation mà không học database isolation là thiếu một n�
 
 # 46. `readOnly=true`
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 @Transactional(readOnly = true)
 ```
@@ -1209,6 +1211,8 @@ find User#1 again
 ---
 
 # 53. Dirty Checking
+
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
 
 ```java
 @Transactional

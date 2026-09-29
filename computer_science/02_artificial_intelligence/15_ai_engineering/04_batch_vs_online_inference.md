@@ -113,6 +113,8 @@ Failure có thể retry sau không?
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Batch  = tối ưu hiệu quả tài nguyên trên cả dataset
 Online = tối ưu thời gian phản hồi bị giới hạn cho từng request

@@ -356,6 +356,8 @@ Far-transfer evidence is limited.
 
 ### Established evidence
 
+Lớp này tóm tắt những kết quả có mức lặp lại và phạm vi áp dụng tương đối rõ. Hãy đọc cùng population, measurement và effect size để không biến một association thành bản chất cố định.
+
 - positive manifold;
 - hierarchical covariance structure;
 - measurement error/norm dependence;
@@ -365,6 +367,8 @@ Far-transfer evidence is limited.
 
 ### Current theories/models
 
+Các model hiện hành là những cách tổ chức bằng chứng và cơ chế, không phải nhãn thay thế cho dữ liệu. So sánh chúng theo dự đoán, boundary condition và khả năng kiểm tra.
+
 - g-as-causal factor interpretations;
 - CHC hierarchy;
 - process-overlap accounts;
@@ -372,12 +376,16 @@ Far-transfer evidence is limited.
 
 ### Hypotheses/debates
 
+Phần này giữ các giả thuyết và tranh luận còn mở ở đúng trạng thái của chúng. Hãy ghi rõ evidence nào đang ủng hộ, phản biện hoặc có thể làm thay đổi kết luận.
+
 - exact biological mechanism of g;
 - degree/context of differentiation across lifespan;
 - how much specific environmental interventions shift broad latent ability;
 - best fairness model for high-stakes assessment.
 
 ## 38. Mental model
+
+Mental model này nối capability quan sát được với task, context, strategy và measurement. Nó giúp tránh coi “intelligence” là một đặc tính đơn nhất không đổi giữa mọi nhiệm vụ.
 
 ```text
 Observed cognitive performance
@@ -397,6 +405,8 @@ Psychometric model summarizes patterns; causal explanation requires additional e
 Đọc cùng [[../00_foundations/03_measurement_statistics]], [[../00_foundations/05_psychometrics_and_test_interpretation]], [[01_memory]], [[04_cognitive_biases_and_metacognition]], [[06_expertise_creativity_and_problem_solving]], [[../01_brain_and_mind/03_evolution_genetics_and_behavior]] và [[../03_human_development_and_person/00_lifespan_development]].
 
 ### Nguồn định hướng
+
+Các nguồn này giúp kiểm tra claim về intelligence, test và cognitive differences theo bằng chứng hiện hành. Hãy ghi phạm vi mẫu và giới hạn diễn giải khi dùng chúng.
 
 - Modern reviews of intelligence genetics emphasize polygenicity and gene/environment contributions rather than deterministic genes.
 - Fairness literature stresses that cognitive assessment must be interpreted with equity, measurement validity and consequences of use.

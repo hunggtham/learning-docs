@@ -581,6 +581,8 @@ Scheduler quyết định **chia CPU như thế nào**, nhưng không thể tạ
 
 ## Xem thêm
 
+Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
+
 - [CPU, scheduling và performance](./cpu_scheduling_performance.md)
 - [Memory và virtual memory](./memory_virtual_memory.md)
 - [I/O performance](./io_performance.md)

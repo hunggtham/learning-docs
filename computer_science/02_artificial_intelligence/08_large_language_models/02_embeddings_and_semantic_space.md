@@ -98,6 +98,8 @@ Quantization of embeddings/index is separate from LLM weight quantization, thoug
 
 ## Semantic Search Pipeline
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Document
 → chunk
@@ -179,6 +181,8 @@ Knowledge graph stores explicit entities/relations; embeddings support fuzzy sem
 Explicit relation and dense similarity complement each other.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Token embedding      = initial learned code for token identity

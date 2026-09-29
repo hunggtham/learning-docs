@@ -132,6 +132,8 @@ Log của training hoặc CI không được làm lộ API key, credential hoặ
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 CI → chứng minh thay đổi nhất quán nội bộ
 CT → tạo artifact đã học mới

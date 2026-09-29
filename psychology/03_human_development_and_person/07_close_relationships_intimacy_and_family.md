@@ -216,6 +216,8 @@ Trong abuse, power asymmetry và safety cần được ưu tiên; couple communi
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 history + attachment + stress + expectation
                  ↓

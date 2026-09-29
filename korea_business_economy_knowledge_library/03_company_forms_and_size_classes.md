@@ -198,6 +198,8 @@ Công ty mẹ / tập đoàn / công ty con
 
 ## Nguồn và liên kết
 
+Nguồn cuối bài dùng để xác minh định nghĩa pháp lý, tiêu chí phân loại và chương trình hỗ trợ doanh nghiệp. Hãy đối chiếu ngày hiệu lực trước khi so sánh các công ty.
+
 - Invest KOREA: các hình thức doanh nghiệp và doanh nghiệp nước ngoài.
 - Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc: tiêu chí SME.
 - Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc: thống kê cơ bản SME năm 2024, công bố năm 2026.

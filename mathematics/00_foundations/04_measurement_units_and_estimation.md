@@ -268,6 +268,8 @@ Nếu errors ngẫu nhiên, độc lập và small, variance propagation thườ
 
 ### Worked example: area của rectangle
 
+Ví dụ này cho thấy cách chọn đơn vị, ghi precision và truyền uncertainty qua một phép tính đơn giản. Hãy theo từng bước để thấy measurement không chỉ là thay số vào công thức.
+
 ```math
 A=LW.
 ```

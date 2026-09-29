@@ -4,6 +4,8 @@ RAG là multi-stage system nên một final-answer score không đủ để bi�
 
 ## Evaluation Layers
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. corpus/index quality
 2. retrieval quality
@@ -226,6 +228,8 @@ ACL_ERROR
 Every production incident should map to layer where possible.
 
 ## Eval-Driven Improvement Loop
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 observe failure

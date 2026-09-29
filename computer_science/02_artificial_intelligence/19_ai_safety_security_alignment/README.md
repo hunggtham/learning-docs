@@ -34,6 +34,8 @@ Không nên đọc Security như một chủ đề tách khỏi architecture pro
 
 ## Thứ tự đọc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 00_ai_safety_foundations.md
 01_alignment_and_objective_specification.md
@@ -48,6 +50,8 @@ Không nên đọc Security như một chủ đề tách khỏi architecture pro
 ```
 
 ## Bản đồ phụ thuộc
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```mermaid
 flowchart TD
@@ -85,6 +89,8 @@ Nếu chỉ mô tả tên attack hoặc tên kỹ thuật mà không nối tới
 
 ## Mô hình tư duy xuyên suốt
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 xác định hazard / attacker / objective gap
 → xác định trust boundary
@@ -97,6 +103,8 @@ xác định hazard / attacker / objective gap
 ```
 
 ## Những phân biệt phải giữ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 An toàn                         ≠ Bảo mật

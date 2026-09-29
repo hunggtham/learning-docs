@@ -322,6 +322,8 @@ Giá đi ngược vài phiên không tự động làm luận điểm sai; cơ c
 
 ## 23. Mẫu dùng lại
 
+Mẫu này gom toàn bộ chuỗi truyền dẫn thành một thứ tự thao tác có thể lặp lại. Khi dùng cho dữ liệu mới, hãy đi từ bất ngờ ban đầu đến kết quả danh mục và ghi rõ mắt xích nào còn chưa được xác nhận.
+
 ```text
 1. Số thực tế so với đồng thuận
 2. Cấu phần

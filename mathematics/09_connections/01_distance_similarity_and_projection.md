@@ -129,6 +129,8 @@ Inner product không chỉ là multiplication trick. Nó tạo notion angle, ort
 
 ## 6. Cosine similarity bỏ magnitude
 
+Cosine similarity so sánh hướng của hai vector và bỏ qua độ lớn. Nó phù hợp khi pattern tương đối quan trọng hơn scale, nhưng cần thận trọng khi magnitude mang ý nghĩa thực.
+
 ```math
 \operatorname{cosSim}(x,y)
 =\frac{x^Ty}{\|x\|\|y\|}.
@@ -403,6 +405,8 @@ Nearest-neighbor geometry thay đổi mạnh.
 Projection discard components ngoài subspace.
 
 ## Knowledge Connection
+
+Phần kết nối đưa distance, similarity và projection vào geometry, embeddings, nearest neighbors và anomaly detection. Hãy chọn metric theo invariance mà bài toán thực sự cần.
 
 ```text
 Pythagoras → L2 norm

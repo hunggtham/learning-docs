@@ -107,6 +107,8 @@ Domestic margin liquidity
 
 ### Toàn cầu
 
+Trước khi so sánh hai quốc gia, ta cố định các biến chung của cú sốc USD funding. Đây là lớp tham chiếu để nhận ra cùng một thay đổi về lãi suất và USD được truyền khác nhau qua KRW và VND.
+
 ```text
 Fed path
 US 2Y / 10Y
@@ -118,6 +120,8 @@ Oil / commodity prices
 ```
 
 ### Hàn Quốc
+
+Các biến Hàn Quốc tập trung vào tỷ giá, xuất khẩu, dòng vốn và rủi ro tín dụng nội địa. Chúng cho biết cú sốc USD đi qua một nền kinh tế định hướng xuất khẩu như thế nào.
 
 ```text
 USD/KRW
@@ -131,6 +135,8 @@ Corporate funding spread
 ```
 
 ### Việt Nam
+
+Ở Việt Nam, cần đặt USD/VND cạnh thanh khoản tiền gửi, tín dụng, FDI và đáo hạn trái phiếu. Cách đọc này làm rõ phần nào là tác động ngoại tệ trực tiếp và phần nào là truyền dẫn qua thanh khoản nội địa.
 
 ```text
 USD/VND
@@ -538,6 +544,8 @@ Không dùng một rule cố định cho “USD up/down”.
 
 ### Global
 
+Bản đồ vô hiệu hóa toàn cầu xác định những bằng chứng cho thấy cú sốc funding đang đảo chiều. Chỉ khi các biến nền tảng cùng đổi hướng mới nên hạ mức tin cậy của luận điểm chung.
+
 ```text
 Fed path giảm nhanh
 DXY đảo chiều
@@ -546,6 +554,8 @@ Credit spread co
 
 ### Korea
 
+Với Hàn Quốc, luận điểm suy yếu khi điều chỉnh lợi nhuận, dòng vốn và stress KRW cải thiện đồng thời. Một phiên hồi giá riêng lẻ chưa đủ để kết luận như vậy.
+
 ```text
 Export revisions tăng
 Foreign flow ổn định
@@ -553,6 +563,8 @@ KRW stress giảm
 ```
 
 ### Vietnam
+
+Với Việt Nam, cần thấy sự cải thiện cùng lúc ở chi phí tiền gửi, truyền dẫn tín dụng, áp lực FX và doanh thu thị trường. Điều đó phân biệt hồi phục cơ bản với một đợt tăng do thanh khoản ngắn hạn.
 
 ```text
 Deposit rate giảm bền vững
@@ -595,6 +607,8 @@ Mục tiêu là thấy **USD chỉ là một driver**, không phải toàn bộ 
 
 ## 28. Đầu ra chuẩn
 
+Danh sách tệp này là sản phẩm cuối của bài thực hành, không phải mục lục trang trí. Mỗi tệp phải chứa dữ liệu, diễn giải và điều kiện vô hiệu hóa tương ứng để người khác có thể kiểm tra lại toàn bộ transmission map.
+
 ```text
 01_global_usd_map.md
 02_korea_transmission.md
@@ -609,6 +623,8 @@ Mục tiêu là thấy **USD chỉ là một driver**, không phải toàn bộ 
 ```
 
 ## 29. Liên kết học tiếp
+
+Các tài liệu liên kết giúp mở rộng cú sốc USD funding sang bản đồ thị trường, thiết kế hedge và quản trị danh mục. Hãy quay lại chúng khi cần thay một giả định hoặc kiểm tra một kênh truyền dẫn cụ thể.
 
 - [Cross-Market Global Shocks](../06_markets_korea_vietnam/03_CROSS_MARKET_GLOBAL_SHOCKS.md)
 - [Cross-Border Investing](../06_markets_korea_vietnam/05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md)

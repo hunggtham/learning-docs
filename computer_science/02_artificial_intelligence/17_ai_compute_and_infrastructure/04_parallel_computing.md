@@ -4,6 +4,8 @@ Deep Learning có thể scale lớn vì phần lớn tensor operation có thể 
 
 ## Parallelism ở nhiều cấp
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 instruction-level
 thread-level
@@ -161,6 +163,8 @@ Khi `N` lớn, serial section và communication overhead chi phối. Scale-out k
 Large AI thường weak-scale model hoặc data size thay vì chỉ dùng nhiều device để chạy cùng một job cũ nhanh hơn.
 
 ## Mô hình tư duy
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Parallelism đổi local work lấy coordination overhead.

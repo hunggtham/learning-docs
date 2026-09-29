@@ -78,6 +78,8 @@ Khi biến động hoặc lo ngại tín dụng tăng, haircut có thể tăng, 
 
 ## 13. Vòng xoáy ký quỹ và haircut
 
+Repo và haircut không chỉ là thuật ngữ thị trường tiền tệ; chúng giải thích cách thiếu thanh khoản khuếch đại thành bán tháo. Chuỗi dưới đây cho thấy một thay đổi nhỏ ở giá tài sản có thể làm nhu cầu tài sản thế chấp tăng theo vòng lặp.
+
 ```text
 Giá tài sản giảm
 → Haircut tăng
@@ -263,6 +265,8 @@ IRR nhạy với thời điểm dòng tiền; MOIC đo tổng bội số tiền.
 Một khoản thoái vốn sớm có thể làm IRR rất cao dù tổng số tiền tạo thêm không lớn. Vì vậy luôn xem cả hai.
 
 ## 40. TVPI, DPI và RVPI
+
+Ba chỉ số này tách tiền đã trả về khỏi giá trị còn nằm trên sổ sách. Đọc chúng theo thứ tự giúp người mới không nhầm một NAV chưa hiện thực hóa với tiền mặt thực sự đã thu được.
 
 ```text
 TVPI = DPI + RVPI

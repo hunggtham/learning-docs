@@ -338,6 +338,8 @@ No. Emotion supplies information/action tendency; regulation concerns relationsh
 
 ## 34. Mental model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Need / goal
  + expected value
@@ -368,6 +370,8 @@ Regulation / behavior
 Đọc cùng [[06_stress_coping_and_emotion_regulation]], [[09_self_concept_identity_and_self_regulation]], [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]], [[../02_learning_and_cognition/11_emotion_memory_and_affective_cognition]], [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 ### Nguồn định hướng
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - Meta-analysis gần đây về appraisal–emotion relations tổng hợp hàng nghìn effect sizes và hỗ trợ nhiều relation có hệ thống, nhưng không làm mọi appraisal theory trở nên identical.
 - Reviews comparing basic-emotion và constructed-emotion approaches nhấn mạnh rằng một phần tranh luận xuất phát từ việc theories target different aspects/levels of emotion.

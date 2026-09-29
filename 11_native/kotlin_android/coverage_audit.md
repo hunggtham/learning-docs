@@ -3,6 +3,8 @@
 Tài liệu này kiểm tra bộ note đã cover những lớp kiến thức nào và phần nào thuộc learning spine, deep-dive, production casebook hay depth lab. Đây không phải cheat sheet. Vai trò của nó là tránh hai lỗi khi library lớn dần: **bổ sung trùng lặp** và **bỏ sót một boundary/failure mode quan trọng**.
 
 ## 1. Kotlin language foundations
+Phần này nối mạch Android vừa học với “1. Kotlin language foundations”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -22,6 +24,8 @@ Tài liệu này kiểm tra bộ note đã cover những lớp kiến thức nà
 | Java interop/ABI/compiler plugin | Master | Advanced + Case 08 + Case 20 + Depth Lab 07 |
 
 ## 2. Coroutine và Flow
+Phần này nối mạch Android vừa học với “2. Coroutine và Flow”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -42,6 +46,8 @@ Tài liệu này kiểm tra bộ note đã cover những lớp kiến thức nà
 | native callback/thread crossing | Production/native | Case 17 + Depth Lab 07 |
 
 ## 3. Android runtime và component model
+Phần này nối mạch Android vừa học với “3. Android runtime và component model”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -59,6 +65,8 @@ Tài liệu này kiểm tra bộ note đã cover những lớp kiến thức nà
 | startup initialization critical path | Production sâu | Case 19 + Depth Lab 06 |
 
 ## 4. Jetpack Compose UI
+Phần này nối mạch Android vừa học với “4. Jetpack Compose UI”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -84,6 +92,8 @@ Tài liệu này kiểm tra bộ note đã cover những lớp kiến thức nà
 XML layout, View Binding, Fragment/View lifecycle, RecyclerView, Data Binding awareness và Compose/View interoperability được giữ từ Beginner/Intermediate. Case 06 mở rộng incremental migration Java/XML/Fragment/LiveData/Rx → Kotlin/coroutine/Flow/Compose. Case 11 cover `AndroidView`/`ComposeView` như interoperability boundary. Legacy API được phân loại thành deprecated/historical/still-valid thay vì gắn nhãn “sai” một cách máy móc.
 
 ## 6. Architecture và state management
+Phần này nối mạch Android vừa học với “6. Architecture và state management”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -121,6 +131,8 @@ Constructor injection, Hilt/DI concept, scope/lifetime và large-scale DI đã �
 WorkManager, foreground service/work, notification, exact-alarm awareness, coroutine lifetime và background restriction đã được cover. Deep Dive 03 có decision framework; Case 10 nối foreground execution với permission/system policy; Case 14 phân biệt Service/Receiver/WorkManager theo lifetime/durability; Case 18 đặt chúng vào target-SDK migration. Depth Lab 02 nhấn mạnh WorkManager là scheduler chứ không phải sync correctness engine.
 
 ## 12. Testing
+Phần này nối mạch Android vừa học với “12. Testing”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Tầng | Coverage |
 |---|---|

@@ -457,6 +457,8 @@ Precise accumulation của wrong rate law vẫn cho wrong result.
 
 ## Knowledge Connection
 
+Phần kết nối cho thấy rate và accumulation xuất hiện trong physics, finance, population và software metrics. Cùng một cặp derivative–integral có thể mô tả những hệ khác nhau nếu xác định đúng state và time scale.
+
 ```text
 Algebra      → finite difference
 Calculus     → derivative/integral

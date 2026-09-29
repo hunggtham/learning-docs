@@ -392,6 +392,8 @@ Tỷ trọng dịch vụ vòng đời
 
 ## Nhà cung cấp phân hệ
 
+Nhà cung cấp phân hệ tạo giá trị qua qualification, độ tin cậy và khả năng tích hợp chứ không chỉ qua sản lượng. Hãy đọc backlog cùng cycle nghiệm thu và yêu cầu bảo mật.
+
 ```text
 Mức tập trung nền tảng
 Quyền sở hữu IP
@@ -402,6 +404,8 @@ Giá trị linh kiện trên mỗi nền tảng
 
 ## Nhà cung cấp linh kiện hàng không
 
+Linh kiện hàng không chịu tiêu chuẩn an toàn và chu kỳ cấp phép dài. Vì vậy doanh thu tương lai phụ thuộc certification, fleet installed base và khả năng giao đúng hạn.
+
 ```text
 Mức tập trung Boeing/Airbus/khách hàng
 Tốc độ sản xuất nền tảng
@@ -411,6 +415,8 @@ Dịch vụ hậu mãi
 ```
 
 ## Công ty dữ liệu vũ trụ
+
+Dữ liệu vũ trụ chỉ có giá trị khi biến tín hiệu thành sản phẩm lặp lại được cho khách hàng. Cần tách chi phí phóng/vệ tinh, độ phủ dữ liệu, latency và khả năng kiếm tiền.
 
 ```text
 Quyền tiếp cận / chi phí vệ tinh

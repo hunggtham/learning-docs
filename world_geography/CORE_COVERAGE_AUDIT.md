@@ -12,6 +12,8 @@ Trạng thái dùng ở đây:
 
 ## Foundations
 
+Bảng Foundations trả lời câu hỏi: người học đã có đủ công cụ để đọc vị trí, quy mô, dữ liệu và hệ thống Trái Đất chưa? Các dòng dưới đây là bản đồ kiểm tra prerequisite trước khi chuyển sang process vật lý và ứng dụng vùng.
+
 | Nhóm | Trạng thái | Ghi chú |
 |---|---|---|
 | Geographic thinking / scale / location | **Deep** | Pattern→process, relational location, accessibility, scale–extent–resolution, network/flow, path dependence, uncertainty. |
@@ -21,6 +23,8 @@ Trạng thái dùng ở đây:
 | Earth systems | **Depth pass** | System boundary, stock–flow, residence time, coupled systems, threshold, cross-scale feedback, critical zone và coupled human–natural systems. |
 
 ## Physical Geography
+
+Sau nền tảng, audit chuyển sang các process vật lý tạo relief, khí hậu, nước, sinh thái và hazard. Đọc bảng theo chuỗi nguyên nhân này để thấy trạng thái của từng nhóm không phải những nhãn độc lập.
 
 | Nhóm | Trạng thái | Ghi chú |
 |---|---|---|
@@ -47,6 +51,8 @@ Mục tiêu của pass sau không phải tăng độ dài từng file mà làm p
 
 ## Human Geography
 
+Phần Human Geography kiểm tra cách các process tự nhiên đi vào dân cư, di chuyển, đô thị, sản xuất và bất bình đẳng. Mục tiêu của bảng là phát hiện những cầu nối còn thiếu giữa physical constraint và kết quả xã hội.
+
 | Nhóm | Trạng thái | Ghi chú |
 |---|---|---|
 | Population | **Deep** | Stock–flow, fertility/mortality, cohort/period, momentum, density, census/registry, projections. |
@@ -70,6 +76,8 @@ Pass tiếp theo nên kiểm tra trùng lặp, thêm quantitative examples khi t
 
 ## Regional Geography
 
+Các region chapter là nơi những khái niệm trước được đặt vào cùng một không gian. Bảng này cho biết region nào đã nối được physical base, settlement, economy, transport và role thay vì chỉ liệt kê quốc gia.
+
 | Region | Trạng thái | Ghi chú |
 |---|---|---|
 | East Asia | **Deep** | High interior–monsoon rivers–dense eastern lowlands–industrial maritime networks; Korea route mạnh. |
@@ -91,6 +99,8 @@ Regional chapters hiện đều phải dùng cùng chain:
 Không dùng regional chapter như country encyclopedia.
 
 ## Global Systems
+
+Global Systems vượt qua biên giới từng quốc gia để theo dõi dòng vật chất, năng lượng, vốn, khí hậu và mạng lưới đô thị. Vì vậy trạng thái ở đây được đánh giá theo khả năng giải thích quan hệ liên vùng và feedback hệ thống.
 
 | System | Trạng thái | Ghi chú |
 |---|---|---|

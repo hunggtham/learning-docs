@@ -12,6 +12,8 @@ Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn 
 
 ## Bảng tra nhanh
 
+Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa các chapter. Hãy đọc cột giải thích cùng ví dụ và kiểm tra cách dùng trước khi áp dụng vào một trường hợp mới.
+
 | Việt | 한국어 | English |
 |---|---|---|
 | Cổ Triều Tiên | 고조선 | Gojoseon |
@@ -56,6 +58,8 @@ Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn 
 | Làn sóng Hàn Quốc | 한류 | Hallyu / Korean Wave |
 
 ## Tên địa điểm và thiết chế trong các companion mới
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 | Cách ghi ưu tiên | 한국어 | English / ghi chú |
 |---|---|---|

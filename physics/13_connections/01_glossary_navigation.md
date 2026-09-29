@@ -4,6 +4,8 @@ Tệp này là bản đồ thuật ngữ để nhận ra cùng một khái niệ
 
 ## Thuật ngữ nền tảng
 
+Bảng thuật ngữ này là điểm tra cứu sau khi đã đọc các chapter theo dependency. Mỗi từ nên được hiểu qua hiện tượng, mô hình và điều kiện áp dụng, không chỉ qua bản dịch.
+
 | Tiếng Việt | English | 한국어 | Đọc sâu |
 |---|---|---|---|
 | Vật lý | Physics | 물리학 | `00_foundations` |

@@ -133,6 +133,8 @@ Có thể đo bằng tokens/joule hoặc inferences/watt. Ở datacenter scale, 
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 CPU = control linh hoạt + tính toán tổng quát
 GPU = massively parallel tensor throughput

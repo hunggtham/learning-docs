@@ -16,6 +16,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — Data as the Foundation of AI](./00_data_as_the_foundation_of_ai.md)
 - [01 — Data Collection](./01_data_collection.md)
 - [02 — Data Cleaning](./02_data_cleaning.md)
@@ -27,6 +29,8 @@ flowchart TD
 - [08 — Data Governance](./08_data_governance.md)
 
 ## Core distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Dataset ≠ Reality
@@ -42,6 +46,8 @@ Pseudonymization ≠ Anonymization
 ```
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Reality

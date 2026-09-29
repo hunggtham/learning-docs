@@ -78,6 +78,8 @@ Dependence có thể tồn tại ngay cả khi covariance bằng 0.
 
 ## 5. Covariance: signed co-movement quanh means
 
+Covariance giữ dấu của việc hai biến cùng lệch khỏi mean hay lệch ngược nhau. Độ lớn còn phụ thuộc scale, nên cần chuẩn hóa hoặc đặt trong ma trận covariance khi so sánh.
+
 ```math
 \operatorname{Cov}(X,Y)
 =
@@ -105,6 +107,8 @@ Scale `X` by 100:
 Do đó covariance magnitude không comparable trực tiếp across differently scaled variables.
 
 ## 7. Correlation chuẩn hóa covariance
+
+Correlation đưa covariance về khoảng chuẩn hóa để đọc mức liên hệ tuyến tính dễ hơn. Nó vẫn chỉ là summary của một khía cạnh dependence và có thể bỏ qua cấu trúc tail hoặc phi tuyến.
 
 ```math
 \rho_{XY}
@@ -232,6 +236,8 @@ Có ba structures chính:
 Quadratic exponent tạo ellipsoidal contours.
 
 ## 14. Mahalanobis distance
+
+Mahalanobis distance đo độ xa trong không gian đã tính tới covariance giữa các chiều. Vì vậy một lệch nhỏ theo hướng biến động thấp có thể đáng kể hơn một lệch lớn theo hướng biến động cao.
 
 ```math
 d_M(x,\mu)^2
@@ -427,6 +433,8 @@ Equal weights `w=(0.5,0.5)`:
 Covariance term quyết định diversification benefit; không thể tính portfolio risk bằng average volatilities.
 
 ## Knowledge Connection
+
+Phần kết nối đưa covariance, Gaussian và Mahalanobis vào PCA, anomaly detection, portfolio risk và multivariate inference. Hãy giữ covariance structure khi chuyển từ một biến sang nhiều biến.
 
 ```text
 probability

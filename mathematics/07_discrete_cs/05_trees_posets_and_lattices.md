@@ -469,6 +469,8 @@ Cùng sets nhưng order/analysis semantics quyết định meet/join nào releva
 
 ## Knowledge Connection
 
+Phần kết nối đặt tree, poset và lattice cạnh algorithms, scheduling, type systems và information order. Cấu trúc quan hệ quyết định phép duyệt và phép suy luận nào hợp lệ.
+
 ```text
 graph theory
 → trees / DAGs

@@ -44,6 +44,8 @@ Vì vậy quản lý khóa thực chất là một phần của **quản lý dan
 
 ## Gỡ lỗi quá trình xác thực
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 ssh -vvv user@host
 ```

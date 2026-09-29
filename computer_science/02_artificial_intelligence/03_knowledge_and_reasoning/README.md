@@ -15,6 +15,8 @@ Folder này xây lớp **knowledge + inference** nằm giữa problem solving c�
 
 ## Dependency map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     KR[00 Knowledge Representation] --> PL[01 Propositional Logic]
@@ -52,6 +54,8 @@ real-world validation
 ```
 
 ## Symbolic và probabilistic reasoning
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Logic

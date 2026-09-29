@@ -302,11 +302,15 @@ Ví dụ:
 
 ### Nồng độ cố định
 
+Điều kiện biên này mô tả một môi trường luôn được giữ ở giá trị nồng độ đã biết. Nó phù hợp khi bề mặt tiếp xúc với reservoir lớn và giúp giải bài toán khuếch tán bằng cách cố định state tại biên.
+
 ```math
 c|_{boundary}=c_b.
 ```
 
 ### Biên không thông lượng
+
+Biên không thông lượng nghĩa là không có dòng vật chất hoặc nhiệt đi qua mặt biên. Đây là mô hình hữu ích cho thành kín hoặc đối xứng, nhưng chỉ đúng khi cơ chế trao đổi bên ngoài thực sự bị chặn.
 
 ```math
 \mathbf J\cdot\hat n=0.

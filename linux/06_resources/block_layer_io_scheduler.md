@@ -138,6 +138,8 @@ Nếu workload nhạy latency, queue quá sâu có thể làm p99 xấu.
 
 ## Đọc `iostat` đúng hơn
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 iostat -x 1
 ```

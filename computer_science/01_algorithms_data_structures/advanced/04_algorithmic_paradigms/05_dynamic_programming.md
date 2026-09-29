@@ -616,6 +616,8 @@ Trước khi code, estimate:
 
 ```text
 #states * transition cost * bytes/state
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 ```
 
 DP feasibility là engineering calculation, không chỉ asymptotic label.

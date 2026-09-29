@@ -135,6 +135,8 @@ Nếu inference volume thấp và engineering complexity cao, compression có th
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Compression = giữ lại hàm hữu ích trong khi giảm chi phí vật lý để lưu trữ và thực thi nó
 ```

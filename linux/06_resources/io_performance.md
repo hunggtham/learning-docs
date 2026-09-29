@@ -107,6 +107,8 @@ Retry không kiểm soát có thể làm I/O bottleneck tệ hơn bằng cách t
 
 ## `vmstat` và I/O
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 vmstat 1 10
 ```

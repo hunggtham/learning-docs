@@ -202,6 +202,8 @@ Framework có thể provide abstractions, nhưng concepts bền vững là state
 
 ## Example: Enterprise document agent
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 upload event
 → parse worker

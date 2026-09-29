@@ -245,6 +245,8 @@ Rủi ro chất lượng còn ảnh hưởng danh tiếng, chứng nhận khách
 
 ### Kịch bản cơ sở
 
+Kịch bản cơ sở đặt nhu cầu pin, giá nguyên liệu và utilization ở mức bình thường hóa. Đây là mốc để đánh giá dữ liệu mới đang cải thiện hay xấu đi.
+
 ```text
 Nhu cầu EV tăng vừa phải
 → sản lượng giao +15%
@@ -257,6 +259,8 @@ Nhu cầu EV tăng vừa phải
 
 ### Kịch bản bất lợi
 
+Kịch bản bất lợi kiểm tra tác động của EV demand yếu, ASP giảm, tồn kho và capex dư thừa. Hãy theo dõi cả margin và nghĩa vụ vốn, không chỉ doanh thu.
+
 ```text
 OEM trì hoãn nền tảng EV
 → sản lượng giao chỉ +0~5%
@@ -268,6 +272,8 @@ OEM trì hoãn nền tảng EV
 ```
 
 ### Kịch bản thuận lợi
+
+Kịch bản thuận lợi cần một cơ chế rõ như hợp đồng khách hàng, công suất đạt yield hoặc chi phí nguyên liệu giảm. Không coi mọi tin EV tích cực là bằng chứng đủ mạnh.
 
 ```text
 Mẫu xe mới của khách hàng thành công

@@ -131,6 +131,8 @@ Pruning phù hợp khi mô hình overparameterized và runtime có sparse hoặc
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Pruning      → loại bỏ capacity ít cần thiết
 Distillation → huấn luyện mô hình nhỏ bắt chước hành vi hữu ích của mô hình lớn

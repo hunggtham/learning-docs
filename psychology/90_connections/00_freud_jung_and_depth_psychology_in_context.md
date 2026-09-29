@@ -201,6 +201,8 @@ Xem chapter riêng [[05_adler_individual_psychology_in_context]] và ma trận [
 
 ## Protocol khi đọc historical psychology
 
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
+
 ```text
 1. Tác giả đang mô tả phenomenon nào?
 2. Đây là metaphor, clinical observation hay causal claim?
@@ -234,6 +236,8 @@ Hãy đọc Freud và Jung như **bản đồ lịch sử của các câu hỏi 
 Giá trị lịch sử không cần được biến thành scientific consensus để đáng học.
 
 ## Kết nối
+
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
 
 - [[../EVIDENCE_STATUS_GUIDE]]
 - [[05_adler_individual_psychology_in_context]]

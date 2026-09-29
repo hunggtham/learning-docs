@@ -20,6 +20,8 @@ Phần giải thích dùng tiếng Việt làm ngôn ngữ chính; thuật ngữ
 
 ## Độ phủ hiện tại
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | File | Approx. words |
 |---|---:|
 | `00_foundations/00_dsa_as_problem_modeling.md` | ~4,800 |

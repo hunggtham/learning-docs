@@ -1,6 +1,8 @@
 # 영주용 기본 — Checklist 50과
 
-Đây là checklist theo đúng 8 chương trong bộ PDF được cung cấp.
+Đây là checklist theo đúng 8 chương trong bộ PDF được cung cấp. Hãy xem file như buổi định hướng đầu tiên: trước khi mở từng chapter, bạn cần biết chapter đó trả lời câu hỏi nào và nó đóng góp gì cho năng lực làm bài 영주용.
+
+Bảng đi từ phạm vi rộng đến tiêu chí hoàn thành. Vì vậy, đừng dùng nó để đánh dấu “đã đọc”; hãy dùng nó để kiểm tra xem mình đã chuyển được kiến thức từ keyword sang lời giải thích và câu trả lời thi hay chưa.
 
 | Chương | Bài | Trọng tâm |
 |---|---:|---|
@@ -13,9 +15,11 @@
 | 역사 | 38~44 | 고조선~대한민국, 독립운동, 역사 인물, 문화유산 |
 | 지리 | 45~50 | 사계절, 지형, 수도권·충청·전라·경상·강원·제주, 음식·축제·사투리 |
 
+Sau khi xác định phạm vi, ta cần một chuẩn chung để biết “học xong” nghĩa là gì. Chuẩn đó không phải là nhớ nguyên văn PDF, mà là có thể giải thích, phân biệt và sử dụng kiến thức trong một câu hỏi mới.
+
 ## 완료 기준
 
-Một chapter chỉ được coi là “đã học” khi bạn làm được ba việc:
+Một chapter chỉ được coi là “đã học” khi bạn làm được ba việc. Ba việc này lần lượt kiểm tra khả năng hiểu nghĩa, diễn đạt và chống bẫy đáp án; thiếu một bước thì việc ghi nhớ vẫn còn thụ động.
 
 - nhìn keyword Hàn và giải thích bằng tiếng Việt;
 - giải thích lại bằng 1~3 câu tiếng Hàn;
@@ -27,3 +31,5 @@ Ví dụ:
 `유치원` → 교육부 / 교육 중심
 
 Nếu chỉ nhớ hai từ đều là “mẫu giáo” thì chưa đủ để làm multiple choice.
+
+Hãy áp dụng cùng một phép thử cho mọi chapter trong bảng. Khi có thể đi từ keyword → chức năng hoặc bối cảnh → điểm khác biệt → câu trả lời, bạn đã biến checklist thành một vòng học có thể lặp lại.

@@ -156,6 +156,8 @@ Không nên chỉ gửi raw transcript.
 
 ## Example: Software Change
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Planner → identifies files/tests
 Implementer → edits code

@@ -8,6 +8,8 @@ Con người trải nghiệm thời gian liên tục, nhưng xã hội chia th�
 
 ### Mô hình tư duy
 
+Mô hình này giúp đọc lễ hội và nghi thức như một hệ gồm thời gian, người tham gia, vật thể và ký ức. Các thành phần không chỉ mô tả phong tục mà giải thích vì sao thực hành tiếp tục hoặc biến đổi.
+
 ```text
 ngày trên lịch
 → kỳ vọng chung

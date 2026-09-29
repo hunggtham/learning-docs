@@ -323,6 +323,8 @@ Graph ngẫu nhiên đồng đều không đại diện topology thật, vốn t
 
 ## 24. Pipeline hệ thống
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Topology events
     ↓

@@ -597,6 +597,8 @@ Vì vậy numerical rank là model/engineering judgment, không chỉ symbolic c
 
 ## Knowledge Connection
 
+Phần này nối determinant, rank và null space với khả năng đảo, số chiều thông tin và nghiệm của hệ tuyến tính. Hãy dùng các connection để kiểm tra một ma trận đang giữ, nén hay làm mất thông tin.
+
 ```text
 volume scaling → determinant
 reachable outputs → rank

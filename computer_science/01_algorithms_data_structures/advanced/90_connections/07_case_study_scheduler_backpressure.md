@@ -433,6 +433,8 @@ Average throughput tốt nhưng p99 rất xấu có thể không đáp ứng SLA
 
 ## 29. Pipeline khái niệm
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Incoming Work
    ↓

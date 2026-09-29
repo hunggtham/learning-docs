@@ -68,6 +68,8 @@ Cảm biến ghi năng lượng điện từ ở các dải bước sóng. Từ 
 
 ## Bốn loại độ phân giải
 
+Trước khi chọn sensor hoặc sản phẩm raster, cần xác định mình đang tối ưu cho kích thước không gian, tần suất thời gian, dải phổ hay độ nhạy tín hiệu. Bốn loại resolution trả lời bốn câu hỏi khác nhau và không thể thay thế lẫn nhau.
+
 - **Spatial resolution:** kích thước pixel.
 - **Temporal resolution:** tần suất quan sát lại.
 - **Spectral resolution:** số và độ hẹp dải phổ.

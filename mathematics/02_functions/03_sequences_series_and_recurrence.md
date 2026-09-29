@@ -521,6 +521,8 @@ Ta không cần exact sum; chỉ cần compare accumulation rate.
 
 ## 20. Ratio test nhìn multiplicative shrink
 
+Ratio test so sánh độ lớn các số hạng liên tiếp để đo tốc độ co theo cấp số nhân. Điều kiện hội tụ đến từ việc chuỗi bị chi phối bởi một geometric decay đủ nhanh.
+
 ```math
 L=
 \lim_{n\to\infty}

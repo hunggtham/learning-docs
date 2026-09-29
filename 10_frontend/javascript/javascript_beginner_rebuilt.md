@@ -37,6 +37,8 @@ Vì vậy khi một đoạn code không chạy, câu hỏi đầu tiên của de
 Tên chuẩn của lõi ngôn ngữ là ECMAScript. Khi tài liệu nhắc ES2015, ES2020 hay ES2025, đó là các phiên bản của chuẩn. Bạn không cần thuộc năm của từng feature, nhưng cần hiểu JavaScript hiện đại được bổ sung dần qua các phiên bản ECMAScript.
 
 ### Ví dụ đầu tiên
+Phần này nối mạch bài học với “Ví dụ đầu tiên”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const userName = "Kim";
@@ -195,6 +197,8 @@ Nhưng:
 `var` có function scope và hoisting semantics cũ. Bạn sẽ gặp nó trong code WebSquare/legacy JavaScript, nhưng không nên dùng cho code mới nếu không có lý do đặc biệt.
 
 ### Language idiom
+Phần này nối mạch bài học với “Language idiom”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const users = [];
@@ -1102,6 +1106,8 @@ const hasAdmin = users.some(
 `every` hỏi “tất cả đều đúng không?”. `includes` check value có tồn tại không.
 
 ### Language idiom
+Phần này nối mạch bài học với “Language idiom”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const activeNames = users
@@ -1550,6 +1556,8 @@ try {
 `finally` chạy cả success và failure, phù hợp cleanup/loading state.
 
 ### Anti-pattern
+Phần này nối mạch bài học với “Anti-pattern”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 try {
@@ -1564,6 +1572,8 @@ Swallowing error chỉ phù hợp nếu failure thật sự không quan trọng 
 ---
 
 # Chương 36 — Custom Error cơ bản
+Phần này nối mạch bài học với “Chương 36 — Custom Error cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class ValidationError extends Error {
@@ -1681,6 +1691,8 @@ list.append(li);
 ---
 
 # Chương 40 — `classList`, attributes và style
+Phần này nối mạch bài học với “Chương 40 — `classList`, attributes và style”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 element.classList.add("active");
@@ -1705,6 +1717,8 @@ Trong codebase lớn, state → CSS class thường dễ maintain hơn việc se
 ---
 
 # Chương 41 — Events và event object
+Phần này nối mạch bài học với “Chương 41 — Events và event object”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 button.addEventListener("click", (event) => {
@@ -1731,6 +1745,8 @@ Không dùng `stopPropagation()` như default habit vì event bubbling là cơ c
 ---
 
 # Chương 42 — Event listener lifecycle và cleanup
+Phần này nối mạch bài học với “Chương 42 — Event listener lifecycle và cleanup”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function handleClick() {
@@ -1755,6 +1771,8 @@ button.removeEventListener(
 Phải cùng function reference. Vì vậy nếu bạn viết anonymous callback trực tiếp, sau này cleanup khó hơn nếu không giữ reference.
 
 ### Programming pattern — lifecycle pair
+Phần này nối mạch bài học với “Programming pattern — lifecycle pair”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 addEventListener ↔ removeEventListener
@@ -1768,6 +1786,8 @@ Tư duy ownership này sẽ trở thành chủ đề lớn ở Senior.
 ---
 
 # Chương 43 — Form và FormData
+Phần này nối mạch bài học với “Chương 43 — Form và FormData”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const form = document.querySelector("form");
@@ -1966,6 +1986,8 @@ Beginner cần hiểu distinction, nhưng đừng chạy hàng nghìn task bằn
 ---
 
 # Chương 49 — `fetch` và HTTP căn bản
+Phần này nối mạch bài học với “Chương 49 — `fetch` và HTTP căn bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const response = await fetch("/api/users");
@@ -2091,6 +2113,8 @@ function saveUser(user) {
 Side effect không xấu. UI application bắt buộc cần DOM, network, storage. Vấn đề là nếu business calculations bị trộn với side effects, testing và reasoning khó hơn.
 
 ### Programming pattern — Functional Core / Imperative Shell
+Phần này nối mạch bài học với “Programming pattern — Functional Core / Imperative Shell”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 read input

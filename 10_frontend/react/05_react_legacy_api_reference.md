@@ -7,6 +7,8 @@
 Nếu gặp API lạ trong codebase cũ, hãy tìm ở đây để biết nó từng làm gì, version nào thường dùng, trạng thái hiện tại và hướng migrate. Việc một API được giữ trong tài liệu không có nghĩa API đó được khuyên dùng cho code mới.
 
 ## 1A. Old pattern → new pattern → reason → migration → khi còn gặp
+Phần này nối mạch bài học với “1A. Old pattern → new pattern → reason → migration → khi còn gặp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | Old | New/default | Reason và migration | Khi còn gặp |
 |---|---|---|---|
@@ -57,6 +59,8 @@ const Counter = React.createClass({
 Mixins copy một nhóm methods/lifecycle vào nhiều `createClass` components. Chúng dễ tạo name collision và hidden dependency. Về lịch sử, HOC/render props và sau đó Hooks là các cách composition rõ hơn.
 
 ### Higher-Order Component
+Phần này nối mạch bài học với “Higher-Order Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const Enhanced =
@@ -66,6 +70,8 @@ const Enhanced =
 HOC không bị remove. Đây là pattern vẫn có thể hợp lệ, đặc biệt khi library API được thiết kế từ thời pre-Hooks.
 
 ### Render props
+Phần này nối mạch bài học với “Render props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <DataProvider>
@@ -131,6 +137,8 @@ Thêm shallow comparison mặc định cho props/state.
 ## 5. Refs
 
 ### String refs
+Phần này nối mạch bài học với “String refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <input ref="input" />
@@ -139,6 +147,8 @@ Thêm shallow comparison mặc định cho props/state.
 Đọc qua `this.refs.input`. Deprecated 16.3, removed 19.
 
 ### Callback refs
+Phần này nối mạch bài học với “Callback refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <input
@@ -313,6 +323,8 @@ Legacy không đồng nghĩa phải rewrite. Class Component ổn định, có t
 Nên ưu tiên migrate khi old API đã bị remove ở target React, khi Strict/concurrent semantics phơi ra bug cleanup/purity, khi dependency cũ chặn security/framework upgrade, hoặc khi code thay đổi thường xuyên và abstraction hiện tại làm feature work ngày càng khó. Mục tiêu là giảm risk và complexity chứ không phải đạt “100% Function Component”.
 
 ## 15. Bảng version nhanh
+Phần này nối mạch bài học với “15. Bảng version nhanh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | API / khái niệm | Mốc version cần nhớ |
 |---|---|

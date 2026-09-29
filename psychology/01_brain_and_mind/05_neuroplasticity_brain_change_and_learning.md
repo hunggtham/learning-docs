@@ -96,6 +96,8 @@ context mới kiểm tra xem learning có generalize hay không
 
 ## Nguồn và hướng đọc thêm
 
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
+
 - Miller, J. A., & Constantinidis, C. (2024). *Timescales of learning in prefrontal cortex*. Nature Reviews Neuroscience, 25, 597–610. DOI `10.1038/s41583-024-00836-8`.
 - Cabrera, Y. và cộng sự (2024). *Overnight neuronal plasticity and adaptation to emotional distress*. Nature Reviews Neuroscience, 25, 253–271. DOI `10.1038/s41583-024-00799-w`.
 - Osso, L. A., & Hughes, E. G. (2024). *Dynamics of mature myelin*. Nature Neuroscience, 27, 1449–1461. DOI `10.1038/s41593-024-01642-2`.

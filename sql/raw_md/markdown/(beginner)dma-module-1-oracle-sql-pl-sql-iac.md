@@ -13,12 +13,16 @@
 **Bangladesh University of Engineering and Technology (BUET) Dhaka-1000, Bangaldesh.** 
 
 ###### **This tutorial is indented for –** 
+Phần này nối mạch SQL với “**This tutorial is indented for –**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Beginners who want to learn the basics of Oracle SQL and PL/SQL. 
 
 - Learning starting knowledge that can help one to start building Oracle SQL and PL/SQL applications. 
 
 ###### **This tutorial is not intended for –** 
+Phần này nối mạch SQL với “**This tutorial is not intended for –**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Experts who already have a good knowledge of Oracle SQL and PL/SQL. 
 
@@ -27,6 +31,8 @@
 **_A brief Introduction to Oracle SQL/PL-SQL_** 
 
 ### **Contents** 
+Phần này nối mạch SQL với “**Contents**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 |Chapter 1: Introduction ................................................................................................................................ 7|
 |---|
@@ -513,6 +519,8 @@ The basic data types used in Oracle are given in following table.
 
 
 ##### **Practice 2.1** 
+Phần này nối mạch SQL với “**Practice 2.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Write an SQL query to retrieve all country names. 
 
@@ -676,6 +684,8 @@ A common mistake is using equality (=) operator to retrieve records with NULL va
 SELECT LAST_NAME, SALARY FROM EMPLOYEES WHERE COMMISSION_PCT = NULL ; 
 
 ##### **Practice 2.2** 
+Phần này nối mạch SQL với “**Practice 2.2**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Select names of all employees who have joined before January 01, 1998. 
 
@@ -736,6 +746,8 @@ Page **21**
 **_A brief Introduction to Oracle SQL/PL-SQL_** 
 
 ##### **Practice 2.3** 
+Phần này nối mạch SQL với “**Practice 2.3**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Select names, salary, and commissions of all employees of job type 'AD_PRES'. Sort the result in ascending order of commission and then descending order of salary. 
 
@@ -842,6 +854,8 @@ SELECT CONCAT(FIRST_NAME, LAST_NAME) NAME, JOB_ID FROM EMPLOYEES WHERE INSTR( UP
 The first query retrieves name and job id of all employees whose job id field contains the word ‘CLERK’. The second query outputs the abbreviation of all employee names. The third query prints the last name and padded salary in 10 character width. 
 
 ##### **Practice 3.1** 
+Phần này nối mạch SQL với “**Practice 3.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Print the first three characters and last three characters of all country names. Print in capital letters. 
 
@@ -898,6 +912,8 @@ WHERE DEPARTMENT_ID = 80 ;
 SELECT LAST_NAME, TRUNC(SALARY/1000, 0) || ' thousands ' || TRUNC( MOD(SALARY,1000)/100, 0) || ' hundreds ' || MOD(SALARY,100) || ' taka only' FROM EMPLOYEES ; 
 
 ##### **Practice 3.2** 
+Phần này nối mạch SQL với “**Practice 3.2**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Print employee last name and number of days employed. Print the second information rounded up to 2 decimal places. 
 
@@ -984,6 +1000,8 @@ The following statements show the user of date manipulation functions.
 SELECT LAST_NAME, MONTHS_BETWEEN(SYSDATE, HIRE_DATE) MON_EMPLOYED FROM EMPLOYEES ; 
 
 ##### **Practice 3.3** 
+Phần này nối mạch SQL với “**Practice 3.3**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. For all employees, find the number of years employed. Print first names and number of years employed for each employee. 
 
@@ -1022,6 +1040,8 @@ SALARY*12*COMMMISSION_PCT would result in NULL whenever COMMISSION_PCT is NULL.
 SELECT LAST_NAME, (SALARY*12 + SALARY*12*NVL(COMMISSION_PCT, 0) ) ANNSAL FROM EMPLOYEES WHERE NVL(COMMISSION_PCT, -1) = -1 ; 
 
 ##### **Practice 3.4** 
+Phần này nối mạch SQL với “**Practice 3.4**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Print the commission_pct values of all employees whose commission is at least 20%. Use NVL function. 
 
@@ -1142,6 +1162,8 @@ Page **33**
 **_A brief Introduction to Oracle SQL/PL-SQL_** 
 
 ##### **Practice 3.5** 
+Phần này nối mạch SQL với “**Practice 3.5**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Print hire dates of all employees in the following formats: 
 
@@ -1254,6 +1276,8 @@ In a GROUP BY statement, ORDER BY clause can be used to sort the final group res
 SELECT JOB_ID, MAX(SALARY), MIN(SALARY) FROM EMPLOYEES WHERE DEPARTMENT_ID = 80 GROUP BY JOB_ID ORDER BY JOB_ID ASC ; 
 
 ##### **Practice 4.1** 
+Phần này nối mạch SQL với “**Practice 4.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. For all managers, find the number of employees he/she manages. Print the MANAGER_ID and total number of such employees. 
 
@@ -1300,6 +1324,8 @@ SELECT JOB_ID, MAX(SALARY), MIN(SALARY) FROM EMPLOYEES GROUP BY JOB_ID HAVING MA
 The first statement above outputs maximum and minimum salary for each job types. However, only those results are printed where group maximum is greater than 5000. The second query retrieves average salary of each job type. This time, only those group results are printed for which average salary is less than or equal to 5000. Results are sorted in descending order of average salary. 
 
 ##### **Practice 4.2** 
+Phần này nối mạch SQL với “**Practice 4.2**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Find for each department, the average salary of the department. Print only those 
 
@@ -1340,6 +1366,8 @@ Now, if we want to print job titles along with job id in the above query, we has
 SELECT JOB_ID, JOB_TITLE, COUNT(*) TOTAL FROM JOBS GROUP BY JOB_ID, JOB_TITLE ; 
 
 ##### **Practice 4.3** 
+Phần này nối mạch SQL với “**Practice 4.3**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Find number of employees in each salary group. Salary groups are considered as follows. Group 1: 0k to <5K, 5k to <10k, 10k to <15k, and so on. 
 
@@ -1454,6 +1482,8 @@ SELECT E1.LAST_NAME, COUNT(E2.EMPLOYEE_ID) TOTAL FROM EMPLOYEES E1 LEFT OUTER JO
 If you replace COUNT(E2.EMPLOYEE_ID) by COUNT(*) in the above query, then the query would not output correct results! Find the reason yourself! Morever, E1.LAST_NAME does not any effect on grouping. It was included in the grouping clause so that it can be selected in the output. 
 
 ##### **Practice 5.1** 
+Phần này nối mạch SQL với “**Practice 5.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. For each employee print last name, salary, and job title. 
 
@@ -1566,6 +1596,8 @@ Page **50**
 AND SALARY < ALL ( SELECT SALARY FROM EMPLOYEES WHERE JOB_ID = 'IT_PROG' )  ; 
 
 ##### **Practice 6.1** 
+Phần này nối mạch SQL với “**Practice 6.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Find the last names of all employees that work in the SALES department. 
 
@@ -1661,6 +1693,8 @@ Page **54**
 ( SELECT LAST_NAME, TO_CHAR(JOB_ID), SALARY FROM EMPLOYEES2 ) ; 
 
 ##### **Practice 7.1** 
+Phần này nối mạch SQL với “**Practice 7.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Find EMPLOYEE_ID of those employees who are not managers. Use minus operator to perform this. 
 
@@ -1829,6 +1863,8 @@ UPDATE EMPLOYEES SET
 JOB_ID = (SELECT JOB_ID FROM EMPLOYEES WHERE EMPLOYEE_ID = 205), SALARY = (SELECT SALARY FROM EMPLOYEES WHERE EMPLOYEE_ID = 205) WHERE EMPLOYEE_ID = 113 ; 
 
 ##### **Practice 8.2** 
+Phần này nối mạch SQL với “**Practice 8.2**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Update COMMISSION_PCT value to 0 for those employees who have NULL in that column. 
 
@@ -1875,6 +1911,8 @@ DELETE FROM EMPLOYEES WHERE DEPARTMENT_ID = ( SELECT DEPARTMENT_ID FROM DEPARTME
 Note that use of UPPER function in the above query. The UPPER function ensures that, the statement will work even in department names are stored in lower case or upper case letters. 
 
 ##### **Practice 8.3** 
+Phần này nối mạch SQL với “**Practice 8.3**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Delete those employees who earn less than 5k. 
 
@@ -2598,6 +2636,8 @@ The following table shows some Oracle pre-defined exception names.
 
 
 ##### **Practice 11.2** 
+Phần này nối mạch SQL với “**Practice 11.2**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Extend the above block by handing the following exception: TOO_MANY_ROWS. Print an appropriate message when such an exception occurs. 
 
@@ -2692,6 +2732,8 @@ Page **88**
 COUNTER := 0 ; FOR R IN (SELECT EMPLOYEE_ID, SALARY, HIRE_DATE FROM EMPLOYEES ) LOOP OLD_SAL := R.SALARY ; YEARS := (MONTHS_BETWEEN(SYSDATE, R.HIRE_DATE) / 12) ; IF YEARS >= 10 THEN UPDATE EMPLOYEES SET SALARY = SALARY * 1.15 WHERE EMPLOYEE_ID = R.EMPLOYEE_ID ; END IF ; SELECT SALARY INTO NEW_SAL FROM EMPLOYEES WHERE EMPLOYEE_ID = R.EMPLOYEE_ID ; DBMS_OUTPUT.PUT_LINE('Employee id:' || R.EMPLOYEE_ID || ' Salary: ' || OLD_SAL || ' -> ' || NEW_SAL) ; END  LOOP ; COMMIT; END ; / 
 
 ##### **Practice 11.1** 
+Phần này nối mạch SQL với “**Practice 11.1**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - a. Write a PL/SQL block that will print ‘Happy Anniversary  X’ for each employee X whose hiring date is today. Use cursor FOR loop for the task. 
 
@@ -2828,6 +2870,8 @@ procedure to output the message will be done by return statement. The following 
 CREATE OR REPLACE FUNCTION GET_SENIOR_EMPLOYEE(EID IN VARCHAR2) RETURN VARCHAR2 IS JDATE DATE ; YEARS NUMBER ; MSG VARCHAR2(100) ; BEGIN SELECT HIRE_DATE INTO JDATE FROM EMPLOYEES WHERE EMPLOYEE_ID = EID ; YEARS :=  (MONTHS_BETWEEN(SYSDATE, JDATE) / 12) ; IF YEARS >= 10 THEN MSG := 'The employee worked 10 years or more' ; ELSE MSG := 'The employee worked less than 10 years' ; END IF ; RETURN MSG ; --return the message EXCEPTION --you must return value from this section also WHEN NO_DATA_FOUND THEN RETURN 'No employee found.' ; WHEN TOO_MANY_ROWS THEN RETURN 'More than one employee found.' ; WHEN OTHERS THEN RETURN 'Some unknown error occurred.' ; END ; / 
 
 ###### Note the following: 
+Phần này nối mạch SQL với “Note the following:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - A function must return a value of  desired value from the BEGIN section 
 
@@ -2876,6 +2920,8 @@ Note the following:
 - In the modified function, exception handling is not required. Because this time number of employees is first checked before retrieving employee’s hiring date. If no such data is found, then the first SELECT COUNT(*) INTO ECOUNT query retrieves 0 into ECOUNT variable. So, no exception occurs and therefore exception handling is also not required. 
 
 ###### **Practice** 
+Phần này nối mạch SQL với “**Practice**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - In Oracle, there is a function TO_NUMBER that converts a VARCHAR2 value to a numeric value.  If the input to this function is not a valid number, then this function throws an exception. This is a problem in a SQL query because the whole query would not produce any result if one row generates an exception. So, your job is to write a PL/SQL function ISNUMBER that receives 
 
@@ -2990,6 +3036,8 @@ Trigger can be classified in following ways:
 LEVEL trigger may not get executed at all if the DML operation does not affect any row!!! 
 
 ###### **Practice** 
+Phần này nối mạch SQL với “**Practice**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Write a trigger HELLO_WORLD6 that will run after a deletion operation on the STUDENTS table. The trigger should be a ROW LEVEL trigger. 
 
@@ -3080,6 +3128,8 @@ Page **105**
 DBMS_OUTPUT.PUT_LINE(':OLD.CGPA = ' || :OLD.CGPA) ; DBMS_OUTPUT.PUT_LINE(':NEW.CGPA = ' || :NEW.CGPA) ; END ; / --Issue the following SQL statements and view the dbms outputs INSERT INTO STUDENTS VALUES ('SOUMIK SARKAR', 3.85); UPDATE STUDENTS SET CGPA = CGPA + 0.02 ; DELETE FROM STUDENTS WHERE CGPA < 3.90; 
 
 ###### **Practice** 
+Phần này nối mạch SQL với “**Practice**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Write a trigger that will save a student records in a table named LOW_CGPA_STUDENTS which contain only one column to store student’s names. The trigger will work before an update operation or an insert operation. Whenever the update operation results in a CGPA value less than 2.0, the trigger will be fired and the trigger will save the students name in the LOW_CGPA_STUDENTS table. Similarly, when an insert operation inserts a new row with CGPA less than 2.0, the corresponding row must be saved in the LOW_CGPA_STUDENTS table. 
 
@@ -3102,6 +3152,8 @@ INSERT INTO STUDENTS VALUES ('masum billah', 3.60);
 Note that the above trigger must be a BEFORE INSERT trigger. If you write an AFTER INSERT trigger, then it will not work. _Because in an AFTER INSERT trigger, you are not allowed to change values of the :NEW row._ 
 
 ###### **Practice** 
+Phần này nối mạch SQL với “**Practice**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Write down a PL/SQL trigger on STUDENTS table. The trigger will ensure that whenever a new row is inserted in the STUDENTS table, the name of the student contains only alphabetic characters. Name your trigger INVALID_NAME. If the name is valid, then insertion should be allowed. However, if the name is invalid, then insertion should be denied. To deny insertion, you can throw an exception from the trigger that would halt the insertion operation. 
 
@@ -3116,4 +3168,3 @@ DROP TRIGGER OLD_NEW_TEST ;
 _Author: Sukarna Barua_ 
 
 Page **107** 
-

@@ -75,9 +75,13 @@ Tên cổng dữ liệu hoặc quy định cụ thể có thể thay đổi, nê
 
 ## 6. Dữ kiện
 
+Trước khi diễn giải một thị trường, ta cần tách điều đã xảy ra khỏi điều đang được dự báo. Phần này đặt **dữ kiện** ở lớp nền để những bước ước tính và kết luận phía sau không bị trộn lẫn với cảm nhận.
+
 **Dữ kiện (fact)** là thông tin đã xảy ra và có thể xác minh, ví dụ doanh thu quý, lãi suất chính sách hoặc số cổ phiếu lưu hành.
 
 ## 7. Ước tính
+
+Khi đã có dữ kiện, bước tiếp theo là ghi rõ thị trường đang kỳ vọng điều gì. Tách riêng ước tính giúp ta nhận ra một thay đổi trong dự báo, chứ không nhầm nó với một kết quả đã được xác nhận.
 
 **Ước tính (estimate)** là dự báo của nhà phân tích, doanh nghiệp hoặc đồng thuận thị trường.
 
@@ -85,9 +89,13 @@ Tên cổng dữ liệu hoặc quy định cụ thể có thể thay đổi, nê
 
 ## 8. Ý kiến
 
+Sau dữ kiện và ước tính là lớp diễn giải: cùng một con số có thể dẫn tới các cách đọc khác nhau. Vì vậy người mới học cần thấy rõ đâu là bằng chứng, đâu là cách ta nối bằng chứng đó thành luận điểm.
+
 **Ý kiến (opinion)** là cách diễn giải dữ liệu. Một ghi chú nghiên cứu tốt không trình bày ý kiến như thể là dữ kiện.
 
 ## 9. Giả định
+
+Cuối cùng, mô hình luôn cần một số đầu vào chưa thể biết chắc. Gọi tên chúng là **giả định** giúp người đọc biết phần nào có thể thay đổi và biết phải kiểm tra điều gì khi thực tế đi lệch.
 
 **Giả định (assumption)** là đầu vào do người nghiên cứu tự đặt vào mô hình.
 
@@ -117,6 +125,8 @@ Nhu cầu cuối
 
 ## 11. Cây động lực ngân hàng
 
+Ngân hàng chuyển giá vốn và rủi ro tín dụng thành thu nhập, nên một thay đổi nhỏ ở tiền gửi có thể đi qua nhiều tầng trước khi xuất hiện trong ROE. Cây dưới đây giúp lần theo chuỗi đó thay vì chỉ nhìn lợi nhuận cuối cùng.
+
 ```text
 Chi phí tiền gửi / CASA
 → NIM
@@ -128,6 +138,8 @@ Chi phí tiền gửi / CASA
 ```
 
 ## 12. Cây động lực bất động sản
+
+Bất động sản thường bị chi phối đồng thời bởi pháp lý, dòng tiền và lịch trả nợ. Vì vậy ta theo dõi tiến trình từ quyền phát triển đến tiền thu và khả năng trả nợ để biết điểm nghẽn nằm ở đâu.
 
 ```text
 Tiến độ pháp lý
@@ -143,6 +155,8 @@ Tiến độ pháp lý
 
 ## 13. Chỉ báo sớm
 
+Để cập nhật luận điểm trước khi báo cáo tài chính xuất hiện, ta cần các tín hiệu đi trước kết quả. Chỉ báo sớm không phải lời tiên tri; nó là dấu hiệu cần được nối với một cơ chế kinh tế cụ thể.
+
 **Chỉ báo sớm (leading indicator)** thường thay đổi trước lợi nhuận hoặc hoạt động kinh tế.
 
 Ví dụ:
@@ -155,6 +169,8 @@ Ví dụ:
 - bán trước bất động sản.
 
 ## 14. Chỉ báo trễ
+
+Chỉ báo trễ đến sau nhưng có giá trị xác nhận. Đặt nó cạnh chỉ báo sớm giúp ta phân biệt một tín hiệu mới với một kết quả đã được phản ánh trong số liệu.
 
 **Chỉ báo trễ (lagging indicator)** thường xác nhận điều đã xảy ra.
 
@@ -203,6 +219,8 @@ USD/KRW
 
 ## 20. Ô tô và xe điện
 
+Với ô tô và xe điện, sản lượng không đủ để giải thích lợi nhuận; giá bán, ưu đãi, tỷ giá và chi phí pin cùng quyết định chất lượng doanh thu. Vì thế bản đồ ngành phải theo dõi cả nhu cầu lẫn kinh tế đơn vị.
+
 ```text
 Sản lượng bán toàn cầu
 Cơ cấu sản phẩm
@@ -214,6 +232,8 @@ Chi phí pin
 
 ## 21. Pin
 
+Ngành pin nhạy với công suất, nguyên liệu và hợp đồng khách hàng hơn là chỉ số xe điện tổng thể. Các biến dưới đây nối tăng trưởng nhu cầu với khả năng biến nó thành biên lợi nhuận.
+
 ```text
 Nhu cầu xe điện
 Tỷ lệ sử dụng công suất
@@ -224,6 +244,8 @@ Mở rộng công suất
 
 ## 22. Đóng tàu và công nghiệp
 
+Đóng tàu và công nghiệp có độ trễ dài giữa lúc ký đơn hàng và lúc ghi nhận lợi nhuận. Do đó cần theo dõi sổ đơn hàng cùng giá đầu vào, lịch giao hàng và tỷ giá để đọc đúng chu kỳ.
+
 ```text
 Sổ đơn hàng
 Giá tàu mới
@@ -233,6 +255,8 @@ Tỷ giá
 ```
 
 ## 23. Tài chính
+
+Trong tài chính, doanh thu có thể tăng nhưng rủi ro vốn và chất lượng tài sản cũng tăng theo. Bản đồ này đặt lợi nhuận, vốn, tín dụng và hoạt động môi giới trong cùng một khung để tránh nhìn một chiều.
 
 ```text
 NIM
@@ -250,6 +274,8 @@ Tùy ngành cần theo dõi mức sử dụng và khả năng kiếm tiền, dan
 
 ## 25. Ngân hàng
 
+Ở Việt Nam, ngân hàng là nút giao giữa tín dụng, bất động sản và sức khỏe tiền gửi. Vì vậy mỗi chỉ báo cần được đọc như một mắt xích của chuỗi từ tăng trưởng bảng cân đối đến dự phòng và vốn.
+
 ```text
 Tăng trưởng tín dụng
 NIM
@@ -262,6 +288,8 @@ Mức phơi nhiễm bất động sản
 
 ## 26. Bất động sản
 
+Đối với bất động sản, doanh số công bố chỉ có ý nghĩa khi đi cùng pháp lý, tiền thu và lịch đáo hạn. Trình tự dưới đây giúp kiểm tra liệu tăng trưởng bán hàng có thực sự chuyển thành tiền mặt hay không.
+
 ```text
 Pháp lý
 Bán trước
@@ -273,6 +301,8 @@ Bàn giao
 
 ## 27. Công ty chứng khoán
 
+Công ty chứng khoán chịu tác động kép từ thanh khoản thị trường và chi phí vốn. Theo dõi các biến cùng nhau giúp phân biệt tăng trưởng nhờ giao dịch bền vững với tăng trưởng do tự doanh hoặc đòn bẩy.
+
 ```text
 Giá trị giao dịch
 Cho vay ký quỹ
@@ -282,6 +312,8 @@ Ngân hàng đầu tư
 ```
 
 ## 28. Khu công nghiệp
+
+Khu công nghiệp biến dòng FDI và hạ tầng thành quỹ đất có thể cho thuê. Vì vậy cần nối tỷ lệ lấp đầy, giá thuê và tiến độ hạ tầng với thời điểm ghi nhận doanh thu.
 
 ```text
 FDI
@@ -293,6 +325,8 @@ Hạ tầng
 
 ## 29. Tiêu dùng
 
+Tiêu dùng phản ánh sức mua thực tế, không chỉ câu chuyện doanh thu. Lượng khách, giá trị hóa đơn, cửa hàng hiện hữu và tồn kho cho biết tăng trưởng đến từ nhu cầu thật hay từ mở rộng và khuyến mại.
+
 ```text
 Thu nhập
 Lượng khách
@@ -303,6 +337,8 @@ Biên lợi nhuận
 ```
 
 ## 30. Đầu tư công và vật liệu
+
+Đầu tư công chỉ tạo doanh thu cho doanh nghiệp khi ngân sách được giải ngân và dự án tiến triển. Vì thế phải đi từ nguồn vốn đến nhu cầu vật liệu rồi mới kết luận về lợi nhuận.
 
 ```text
 Ngân sách
@@ -427,9 +463,13 @@ Quy định phải ghi ngày hiệu lực và nguồn. Không dùng ghi chú cũ
 
 ## 41. Chất xúc tác
 
+Sau khi có luận điểm và dữ liệu theo dõi, ta cần chỉ rõ điều gì có thể làm kỳ vọng thay đổi. Chất xúc tác là điểm nối giữa nghiên cứu và hành động cập nhật, chứ không phải danh sách tin tức chung chung.
+
 **Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường thay đổi kỳ vọng.
 
 ## 42. Điều kiện vô hiệu hóa
+
+Một luận điểm trưởng thành phải có cả hướng thuận và hướng ngược. Điều kiện vô hiệu hóa giúp ta định trước bằng chứng nào sẽ buộc phải giảm vị thế hoặc viết lại cơ chế, thay vì bám vào câu chuyện cũ.
 
 **Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy cơ chế của luận điểm không còn đúng.
 
@@ -507,6 +547,8 @@ Logic xác định quy mô vị thế
 
 ## 51. Cấu trúc cho một chứng khoán
 
+Khi nghiên cứu đã đủ sâu, cần lưu nó theo cấu trúc để lần cập nhật sau không bắt đầu lại từ đầu. Các tệp dưới đây tách mô hình, động lực, định giá và lịch sử luận điểm thành những phần có thể kiểm tra chéo.
+
 ```text
 01_business.md
 02_sector_drivers.md
@@ -561,6 +603,8 @@ Một luận điểm rất tốt ở cổ phiếu kém thanh khoản vẫn có t
 
 ## 59. Ghi chú doanh nghiệp
 
+Mẫu ghi chú doanh nghiệp biến các phần nghiên cứu rời rạc thành một quyết định có thể xem lại. Hãy đi từ mô hình kinh doanh và động lực, qua chất lượng tài chính và định giá, rồi kết thúc bằng điều kiện hành động tiếp theo.
+
 ```text
 Mô hình kinh doanh:
 Động lực ngành:
@@ -576,6 +620,8 @@ Lần đánh giá tiếp theo:
 ```
 
 ## 60. Ghi chú quốc gia hoặc ngành
+
+Với một quốc gia hoặc ngành, đơn vị phân tích không còn là một công ty riêng lẻ mà là chế độ vĩ mô và các nhân tố chung. Mẫu này giữ mạch từ bối cảnh, truyền dẫn, định giá đến các kịch bản để so sánh qua thời gian.
 
 ```text
 Chế độ vĩ mô:

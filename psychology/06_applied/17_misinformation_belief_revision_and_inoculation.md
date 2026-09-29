@@ -155,6 +155,8 @@ Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **cali
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 memory + familiarity + identity
  + source cue + social reward

@@ -383,6 +383,8 @@ Nếu phần lớn kết quả đến từ beta thị trường, hãy thừa nh�
 
 ## 31. Vòng phản hồi hoàn chỉnh
 
+Vòng phản hồi là phần kết của attribution: ghi lại quyết định, đối chiếu kết quả, xác định sai ở đâu và chỉ thay đổi rule khi có bằng chứng. Mỗi mũi tên dưới đây là một bước cần để việc học không biến thành kể lại sau sự kiện.
+
 ```text
 Quyết định
 → Ghi lại dữ kiện và giả định

@@ -8,16 +8,22 @@ Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc,
 
 ### 국가법령정보센터
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.law.go.kr/
 - Mục đích: luật, 시행령, 시행규칙, 별표, 서식, lịch sử sửa đổi, ngày hiệu lực.
 - Dùng cho: Hiến pháp, 민법, 근로기준법, 주택임대차보호법, 출입국관리법, 국적법, 지방자치법, 금융소비자보호법 và các luật khác.
 
 ### 법제처
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.moleg.go.kr/
 - Mục đích: pháp chế, hệ thống luật, thống kê và tài liệu lập pháp.
 
 ### 찾기쉬운 생활법령정보
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.easylaw.go.kr/
 - Mục đích: giải thích pháp luật theo tình huống đời sống.
@@ -27,15 +33,21 @@ Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc,
 
 ### 대한민국 국회
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.assembly.go.kr/
 - Dùng để xem hoạt động lập pháp, ủy ban, dự luật, 입법예고.
 
 ### 정부조직관리정보시스템
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.org.go.kr/
 - Dùng để hiểu 중앙행정기관, cơ sở pháp lý của tổ chức Chính phủ và sơ đồ cơ quan.
 
 ### 지방자치법
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - tra trên https://www.law.go.kr/
 - Dùng để kiểm tra các loại chính quyền địa phương và cơ sở pháp lý hiện hành.
@@ -44,21 +56,29 @@ Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc,
 
 ### 대한민국 법원
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.scourt.go.kr/
 - Dùng cho: cơ cấu tòa, thủ tục, tra cứu vụ án, 판결, biểu mẫu.
 
 ### 법원 전자민원센터
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.scourt.go.kr/nm/main/
 - Dùng cho: thủ tục dân sự, hình sự, gia đình, hành chính, phá sản, thi hành án và form.
 
 ### 경찰청
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.police.go.kr/
 - 112: khẩn cấp cảnh sát.
 - 182: police civil service/call center theo thông tin của 경찰청.
 
 ### 대검찰청
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.spo.go.kr/
 - Dùng để tra cơ cấu và chức năng công tố.
@@ -67,15 +87,21 @@ Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc,
 
 ### 정부24
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.gov.kr/
 - Dùng để tìm, nộp, tra cứu và phát hành nhiều dịch vụ công.
 
 ### 국민신문고
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.epeople.go.kr/
 - Dùng cho 민원, phản ánh và kiến nghị.
 
 ### 국민권익위원회
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.acrc.go.kr/
 - Dùng để hiểu 고충민원, 국민신문고, hành정심판 và quyền lợi hành chính.
@@ -88,6 +114,8 @@ Nguồn đã kiểm tra:
 
 ### 고용노동부
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.moel.go.kr/
 - Hotline: 1350.
 - Dùng cho: hợp đồng lao động, lương, giờ làm, sa thải, workplace issues.
@@ -96,6 +124,8 @@ Nguồn đã kiểm tra:
 - FAQ `근로조건의 서면명시`: MOEL, xác nhận nghĩa vụ ghi bằng văn bản các điều kiện lao động chính.
 
 ### Work24
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.work24.go.kr/
 - Dùng cho: việc làm, 고용보험, hệ thống lao động nước ngoài, policy guides.
@@ -106,15 +136,21 @@ Nguồn đã kiểm tra:
 
 ### 중앙노동위원회
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.nlrc.go.kr/
 - Dùng cho các tranh chấp thuộc thẩm quyền như 부당해고.
 
 ### 근로복지공단
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.comwel.or.kr/
 - Dùng cho 산재보험 và nghiệp vụ bảo hiểm lao động.
 
 ### 근로기준법
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.law.go.kr/
 - Bản kiểm tra ngày 2026-09-21: luật có hiệu lực từ 2026-08-20.
@@ -127,6 +163,8 @@ Nguồn đã kiểm tra:
 
 ### 주택임대차보호법 / 시행령
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.law.go.kr/
 - Bản kiểm tra 2026-09-21:
   - 주택임대차보호법: hiệu lực từ 2026-01-02.
@@ -135,19 +173,27 @@ Nguồn đã kiểm tra:
 
 ### 찾기쉬운 생활법령정보 — 주택임대차
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.easylaw.go.kr/
 - Nội dung nhà ở được ghi ngày 2026-08-31 trong trang đã kiểm tra.
 
 ### 인터넷등기소
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.iros.go.kr/
 - Dùng để tra/phát hành thông tin đăng ký bất động sản.
 
 ### 국토교통부
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.molit.go.kr/
 
 ### HUG
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.khug.or.kr/
 - Dùng để kiểm tra sản phẩm 보증 liên quan thuê nhà tại thời điểm thực tế.
@@ -156,15 +202,21 @@ Nguồn đã kiểm tra:
 
 ### 국세청
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.nts.go.kr/
 - Dùng cho thuế thu nhập, 연말정산, 종합소득세, chứng từ thuế.
 
 ### 홈택스
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.hometax.go.kr/
 - Cổng điện tử thuế.
 
 ### 위택스
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.wetax.go.kr/
 - Dùng cho nhiều nghiệp vụ thuế địa phương.
@@ -172,6 +224,8 @@ Nguồn đã kiểm tra:
 ## 8. Bảo hiểm xã hội và phúc lợi
 
 ### 국민연금공단
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.nps.or.kr/
 - Nguồn đã kiểm tra:
@@ -181,22 +235,32 @@ Nguồn đã kiểm tra:
 
 ### 국민건강보험공단
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.nhis.or.kr/
 - Nguồn đã kiểm tra: 외국인민원센터, tư cách và kênh tư vấn người nước ngoài.
 
 ### Work24 / 고용보험
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.work24.go.kr/
 
 ### 근로복지공단 / 산재보험
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.comwel.or.kr/
 
 ### 4대사회보험 정보연계센터
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.4insure.or.kr/
 
 ### 복지로
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.bokjiro.go.kr/
 - Dùng để tìm chương trình phúc lợi hiện hành.
@@ -205,15 +269,21 @@ Nguồn đã kiểm tra:
 
 ### 한국소비자원
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.kca.go.kr/
 - 1372 소비자상담센터.
 - Nguồn 2026 đã kiểm tra nêu người tiêu dùng khi có 피해 nên chuẩn bị giao dịch và 증빙서류 để 상담/피해구제.
 
 ### 소비자24
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.consumer.go.kr/
 
 ### 공정거래위원회
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.ftc.go.kr/
 
@@ -221,22 +291,32 @@ Nguồn đã kiểm tra:
 
 ### 금융감독원
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.fss.or.kr/
 
 ### FINE
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://fine.fss.or.kr/
 
 ### Credit4U — 본인신용정보 열람서비스
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.credit4u.or.kr/
 - Nguồn đã kiểm tra 2026-09-21: 제공 các mục như 신용정보조회서, 등록현황, 채권자 변동정보, 대출채권소각정보, 보증금 미반환 임대인 정보 và nhiều nhóm dữ liệu khác.
 
 ### 금융위원회
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.fsc.go.kr/
 
 ### 금융소비자보호법
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.law.go.kr/
 - Bản kiểm tra: hiệu lực 2026-01-02 trong kết quả hiện hành.
@@ -245,30 +325,42 @@ Nguồn đã kiểm tra:
 
 ### Hi Korea
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.hikorea.go.kr/
 - Dùng cho e-민원, 예약, 체류 và hướng dẫn.
 
 ### 출입국·외국인정책본부
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.immigration.go.kr/
 - Dùng cho visa guides, policy notices, statistics, office info.
 
 ### 1345 Immigration Contact Center
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - Kênh tư vấn đa ngôn ngữ.
 
 ### 출입국관리법 / 시행령 / 시행규칙
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.law.go.kr/
 - `출입국관리법 시행규칙` đã kiểm tra có bản hiệu lực từ 2026-09-15.
 
 ### 국적법 / 시행령 / 시행규칙 / 국적업무처리지침
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 - https://www.law.go.kr/
 - `국적업무처리지침`: bản kiểm tra hiệu lực từ 2026-01-02.
 - Có sửa đổi 국적법 được công bố năm 2026 với mốc hiệu lực sau thời điểm kiểm tra; khi nộp hồ sơ phải chọn đúng bản **đang có hiệu lực tại ngày nộp**.
 
 ### Socinet
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.socinet.go.kr/
 - KIIP và chương trình hội nhập.

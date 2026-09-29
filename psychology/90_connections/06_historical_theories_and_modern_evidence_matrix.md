@@ -6,6 +6,8 @@ Xem quy ước chung tại [[../EVIDENCE_STATUS_GUIDE]].
 
 ## Ma trận tổng quan
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 | Claim hoặc concept | Trạng thái phù hợp | Cách đọc hiện đại |
 |---|---|---|
 | Tâm trí có quá trình ngoài awareness | **Established evidence** | Automatic processing, implicit learning, habit, priming, attention ngoài báo cáo có ý thức |

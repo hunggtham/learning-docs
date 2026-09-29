@@ -6,6 +6,8 @@ Vĩ mô không tác động mọi công ty cùng dấu. Cùng một lần KRW m�
 
 ## Khung cơ bản: một cú sốc phải đi qua nhiều tầng
 
+Một tin vĩ mô không trở thành kết luận đầu tư ngay lập tức. Phần này dựng chuỗi truyền dẫn từ cú sốc tới doanh thu, chi phí, vốn và định giá để người học biết phải kiểm tra tầng nào tiếp theo.
+
 ```mermaid
 graph LR
     M[Cú sốc vĩ mô] --> P[Giá / Lãi suất / FX / Nhu cầu]
@@ -233,6 +235,8 @@ Backlog lớn chưa đủ; biên lợi nhuận nằm trong backlog và tốc đ�
 
 ## Tác động bậc một, bậc hai và phản hồi
 
+Sau tác động trực tiếp, doanh nghiệp và thị trường có thể tạo ra tác động vòng hai hoặc phản hồi ngược. Phân biệt các bậc giúp tránh kết luận tuyến tính khi một cú sốc làm thay đổi hành vi của khách hàng, nhà cung cấp hoặc ngân hàng.
+
 - **Bậc một:** dầu tăng → chi phí nhiên liệu hàng không tăng.
 - **Bậc hai:** hãng tăng giá vé → cầu giảm.
 - **Phản hồi:** nhiều hãng cắt công suất → giá vé có thể tăng trở lại.
@@ -320,6 +324,8 @@ Mục tiêu không phải gán xác suất giả chính xác, mà là biết **b
 
 ## Ma trận độ nhạy
 
+Ma trận dưới đây biến transmission map thành công cụ so sánh doanh nghiệp. Hãy đọc theo hàng để thấy doanh thu, chi phí, vốn và định giá phản ứng khác nhau với cùng một cú sốc.
+
 | Cú sốc | Doanh thu | Chi phí | Bảng cân đối | Định giá |
 |---|---|---|---|---|
 | KRW yếu | tùy công ty | đầu vào nhập khẩu ↑ | nợ FX ↑ | hỗn hợp |
@@ -382,6 +388,8 @@ Mô hình EPS có thể đánh giá thấp rủi ro nếu không mô hình thanh
 Đây là lý do phải đọc [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cùng với vĩ mô.
 
 ## Bản đồ truyền dẫn theo mô hình doanh nghiệp
+
+Các mô hình doanh nghiệp khác nhau nhận cùng một cú sốc qua các kênh khác nhau. Phần này đối chiếu exporter, nền tảng, ngân hàng và công ty tài sản để chỉ ra biến nào cần ưu tiên theo dõi.
 
 - **Nhà sản xuất xuất khẩu:** cầu toàn cầu + FX + hàng hóa + quy tắc thương mại.
 - **Nhà bán lẻ nội địa:** thu nhập thực + nợ hộ gia đình + việc làm + tiền thuê.

@@ -170,6 +170,8 @@ Xác định pháp nhân
 
 # Các bài thực hành doanh nghiệp hiện có
 
+Bảng này là cầu nối từ kiến thức hệ thống sang thao tác phân tích một doanh nghiệp cụ thể. Mỗi bài thực hành phải nối bối cảnh kinh tế, cơ chế ngành, dữ liệu công ty, định giá và failure mode thay vì chỉ tóm tắt một thương hiệu.
+
 | Bài | Kỹ năng chính |
 |---|---|
 | [Samsung Electronics](./40_company_case_labs/00_samsung_electronics_semiconductor_cycle_case.md) | phân khúc DX/DS/SDC/Harman, chu kỳ bộ nhớ, foundry, CAPEX |
@@ -192,6 +194,8 @@ Các bài này không đưa ra kết luận mua/bán. Mục tiêu là biến câ
 
 ## Muốn hiểu Hàn Quốc từ gốc
 
+Route này đi từ lịch sử, thể chế và kinh tế vĩ mô tới doanh nghiệp. Hãy dùng nó để dựng bối cảnh trước khi đọc một case công ty riêng lẻ.
+
 ```text
 00_history/00 → 07
 → 00 mô hình kinh tế
@@ -204,6 +208,8 @@ Các bài này không đưa ra kết luận mua/bán. Mục tiêu là biến câ
 ```
 
 ## Muốn hiểu chaebol và doanh nghiệp Hàn Quốc
+
+Route này tập trung vào sở hữu, công ty con, phân bổ vốn, quản trị và chuỗi cung ứng. Mỗi bước bổ sung một lớp để đọc tập đoàn như một hệ thống thay vì một thương hiệu.
 
 ```text
 00_history/02 → 05
@@ -219,6 +225,8 @@ Các bài này không đưa ra kết luận mua/bán. Mục tiêu là biến câ
 
 ## Muốn phân tích cổ phiếu hoặc doanh nghiệp
 
+Route này chuyển từ dữ liệu và driver ngành tới mô hình, định giá, sizing và failure mode. Nó phù hợp khi mục tiêu là biến kiến thức doanh nghiệp thành một thesis có thể kiểm chứng.
+
 ```text
 09 DART/kế toán
 → 10 thị trường vốn
@@ -230,6 +238,8 @@ Các bài này không đưa ra kết luận mua/bán. Mục tiêu là biến câ
 ```
 
 ## Muốn hiểu môi trường làm việc tại công ty Hàn Quốc
+
+Route này nối pháp nhân, cơ cấu tổ chức, lao động, báo cáo, quyền quyết định và văn hóa công sở. Hãy đọc theo tình huống để thấy thiết chế biến thành hành vi vận hành thế nào.
 
 ```text
 03 loại hình doanh nghiệp

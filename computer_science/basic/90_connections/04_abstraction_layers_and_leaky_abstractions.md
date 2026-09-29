@@ -102,6 +102,8 @@ If business layer depends on storage-page details, coupling makes change hard. C
 
 ## Cross-references
 
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
+
 - [What Computer Science studies](../00_computation_information/00_what_computer_science_studies.md)
 - [Abstraction/modularity/API](../08_software_systems/00_abstraction_modularity_interfaces_and_apis.md)
 - [Source code → CPU](./00_source_code_to_cpu.md)

@@ -217,6 +217,8 @@ Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn �
 
 ### Kịch bản nhu cầu tăng nhưng thực thi bị giới hạn
 
+Backlog lớn chỉ tạo giá trị khi doanh nghiệp có thể giao hàng, giữ margin và thu tiền. Kịch bản này tách nhu cầu khỏi năng lực thực thi, chuỗi cung ứng và vốn lưu động.
+
 ```text
 Đơn hàng tăng nhanh
 → backlog tăng
@@ -229,6 +231,8 @@ Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn �
 
 ### Kịch bản bình thường hóa
 
+Kịch bản bình thường hóa hỏi kết quả sẽ ra sao khi đơn hàng và biên lợi nhuận quay về mức bền vững. Đây là cách tránh định giá doanh nghiệp bằng đỉnh chu kỳ.
+
 ```text
 Đơn hàng mới chậm lại
 → backlog hiện tại vẫn hỗ trợ giao hàng
@@ -238,6 +242,8 @@ Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn �
 ```
 
 ### Kịch bản rủi ro hợp đồng
+
+Kịch bản này kiểm tra việc thay đổi lịch giao, chi phí quốc phòng hoặc điều khoản hợp đồng truyền vào cash flow. Hãy xác định điểm vô hiệu hóa trước khi dùng backlog làm bằng chứng tăng trưởng.
 
 ```text
 Tài trợ của bên mua bị chậm
@@ -281,6 +287,8 @@ Sai. Chất lượng tín dụng quốc gia, quy trình ngân sách, tài trợ 
 Sai. Đơn hàng, hiệu lực hợp đồng, sản xuất, giao hàng, ghi nhận doanh thu và thu tiền là các bước khác nhau.
 
 ## 17. Bài tập nghiên cứu
+
+Bài tập dưới đây buộc người học thay các giả định bằng một bảng dữ liệu có thể kiểm tra. Hãy ghi rõ nguồn, thời điểm và cách mỗi biến đi vào mô hình doanh nghiệp.
 
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|

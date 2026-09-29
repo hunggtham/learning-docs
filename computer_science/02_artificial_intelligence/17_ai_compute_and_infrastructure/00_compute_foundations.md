@@ -166,6 +166,8 @@ Không nên đoán bottleneck. Cần profile end-to-end và ở cấp kernel tr�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Tính toán AI = số học bị ràng buộc bởi di chuyển dữ liệu, dung lượng bộ nhớ và giao tiếp
 ```

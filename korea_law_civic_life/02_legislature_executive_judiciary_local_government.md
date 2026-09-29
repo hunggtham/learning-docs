@@ -121,6 +121,8 @@ Không cần đánh giá “cơ quan nào tốt hơn” hoặc “chính sách n
 
 ## Nguồn chính thức
 
+Các nguồn sau giúp kiểm tra cơ quan nào có thẩm quyền và văn bản nào đang có hiệu lực. Đọc chúng sau phần mô hình quyền lực để nối khái niệm với nơi tra cứu thực tế.
+
 - 대한민국 국회: https://www.assembly.go.kr/
 - 정부조직관리정보시스템: https://www.org.go.kr/
 - 대한민국 법원: https://www.scourt.go.kr/

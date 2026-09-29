@@ -729,6 +729,8 @@ Khi một resource đạt giới hạn, queue/latency/error thường tăng trư
 
 ## Xem thêm
 
+Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
+
 - [Kernel scheduler deep dive](../06_resources/kernel_scheduler_deep_dive.md)
 - [Memory và virtual memory](../06_resources/memory_virtual_memory.md)
 - [I/O performance](../06_resources/io_performance.md)

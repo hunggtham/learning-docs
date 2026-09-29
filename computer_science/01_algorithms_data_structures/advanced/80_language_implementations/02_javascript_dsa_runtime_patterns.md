@@ -77,6 +77,8 @@ Các engine thường tối ưu tốt mảng dày đặc có kiểu phần tử 
 
 ## Mảng dày đặc, mảng thưa và lỗ trống
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```js
 const a = [];
 a[1_000_000] = 1;
@@ -170,6 +172,8 @@ Với bài toán DSA cần từ điển hoặc bảng ánh xạ tổng quát, `M
 
 ## Chuyển đổi khóa của `Object`
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```js
 const o = {};
 o[1] = 'a';
@@ -187,6 +191,8 @@ const dict = Object.create(null);
 nhưng `Map` vẫn thường là lựa chọn dễ hiểu hơn cho cấu trúc ánh xạ thuật toán.
 
 ## Định danh đối tượng trong `Map`
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```js
 const m = new Map();
@@ -661,6 +667,8 @@ Heap snapshot trong Chrome DevTools hoặc công cụ của Node.js có thể ch
 CPU profile giúp tìm vòng lặp nóng, hàm so sánh tốn kém, thao tác băm hoặc mã hóa chuỗi chiếm nhiều thời gian. Tối ưu nên dựa trên bằng chứng đo được.
 
 ## Danh sách kiểm tra cách biểu diễn
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 ID số nguyên dày đặc?        -> Array / TypedArray

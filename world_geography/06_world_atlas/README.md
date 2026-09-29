@@ -59,6 +59,8 @@ Các profile trọng tâm:
 
 ### Major continental/global cases
 
+Nhóm case lục địa và toàn cầu mở rộng route Korea–Vietnam bằng bốn scale khác nhau. Mỗi profile được dùng để so sánh một cơ chế không gian, nên hãy đọc cùng câu hỏi về resource, settlement, corridor và external network.
+
 - [India](./asia/southern_asia/IND_india.md)
 - [United States](./americas/northern_america/USA_united_states.md)
 - [Brazil](./americas/south_america/BRA_brazil.md)

@@ -107,6 +107,8 @@ Effect phải được đưa vào effect API với lifetime/key rõ ràng.
 ---
 
 ## 5. `LaunchedEffect` là lifecycle của coroutine theo composition key
+Phần này nối mạch Android vừa học với “5. `LaunchedEffect` là lifecycle của coroutine theo composition key”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 LaunchedEffect(userId) {
@@ -200,6 +202,8 @@ Mỗi effect API encode một lifetime khác nhau; chọn sai effect thường l
 ---
 
 ## 9. `remember` chỉ sống theo composition identity
+Phần này nối mạch Android vừa học với “9. `remember` chỉ sống theo composition identity”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 val controller = remember { Controller() }
@@ -711,6 +715,8 @@ Form production phải hoạt động khi keyboard resize, floating keyboard ho�
 ---
 
 ## 39. Pointer input có lifetime theo key
+Phần này nối mạch Android vừa học với “39. Pointer input có lifetime theo key”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 Modifier.pointerInput(key) {
@@ -836,6 +842,8 @@ Identity phải bắt đầu từ domain/model design, không chỉ thêm `key =
 ---
 
 ## 48. Compose correctness checklist
+Phần này nối mạch Android vừa học với “48. Compose correctness checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Ý nghĩa |
 |---|---|

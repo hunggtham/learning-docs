@@ -4,6 +4,8 @@
 
 ## Cách sử dụng
 
+File này là bản đồ chuyển từ đọc nền tảng sang làm lab có đầu ra. Hãy chọn một lab, mang theo một portfolio/doanh nghiệp/bộ dữ liệu cụ thể, rồi đi qua chuỗi concept → mechanism → data → interpretation → risk → failure mode → case. Không nên mở lab mới khi chưa có artifact để review từ lab trước.
+
 Không nên đọc các file Advanced Lab như sách tóm tắt. Với mỗi phần, hãy chọn một danh mục, doanh nghiệp, bộ dữ liệu vĩ mô hoặc chiến lược thật để làm bài tập đi kèm.
 
 Lộ trình khuyến nghị:
@@ -266,6 +268,8 @@ Capstone không được kết thúc bằng target price. Đầu ra cuối phả
 
 ## Ma trận audit chiều sâu toàn library
 
+Ma trận dưới đây là công cụ kiểm tra độ phủ, không phải tuyên bố rằng mọi domain đã hoàn thiện vĩnh viễn. Đọc mỗi hàng theo chiều ngang để hỏi concept đã có mechanism, data, risk và failure mode hay chưa; sau đó mở case hoặc workbook để kiểm chứng bằng đầu ra.
+
 | Domain | Concept | Mechanism | Data | Interpretation | Risk | Failure mode | Case / Practice |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Foundations | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Advanced Lab + Workbook |
@@ -279,6 +283,8 @@ Dấu ✓ không có nghĩa nội dung đã “xong vĩnh viễn”. Nó có ngh
 
 ## Chuẩn đầu ra sau mỗi Advanced Lab
 
+Các đầu ra này biến “đã đọc lab” thành artefact có thể xem lại. Mỗi mũi tên chỉ ra sản phẩm tối thiểu cần tạo trước khi chuyển sang domain tiếp theo.
+
 ```text
 Portfolio lab      → IPS + stress matrix + reverse stress test
 Asset lab          → asset comparison matrix + regime/failure map
@@ -291,6 +297,8 @@ Capstone           → complete investment dossier + attribution/post-mortem
 ```
 
 ## Quy tắc học sâu
+
+Phần này đặt điều kiện hoàn thành cho toàn bộ lộ trình. Đọc hiểu là điểm bắt đầu; bằng chứng hoàn thành phải là mô hình, bảng phân tích, case hoặc quy tắc vận hành có thể bị phản biện.
 
 Không chuyển sang lab tiếp theo nếu chỉ “đọc hiểu”. Hãy tự tạo ít nhất một mô hình, bảng phân tích hoặc case thực hành.
 
@@ -317,6 +325,8 @@ Có thể tự đánh giá theo năm mức:
 ```
 
 ## Kết luận
+
+Ba tầng dưới đây khép lại bản đồ bằng cách nối kiến thức domain với lab và deliberate practice. Hãy dùng chúng để chọn bước tiếp theo, rồi quay lại checkpoint và ghi điều kiện dừng/tiếp tục.
 
 Toàn bộ thư viện Investing hiện nên được dùng theo ba tầng:
 

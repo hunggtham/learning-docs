@@ -130,6 +130,8 @@ Xem [[../03_human_development_and_person/12_loneliness_social_connection_and_bel
 
 ## 17. Doomscrolling như threat-monitoring loop
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 uncertainty / threat
 → tìm thêm information
@@ -178,6 +180,8 @@ Các strategy rủi ro thấp có thể gồm tắt notification không cần th
 **Không được nói:** screen time một mình đo được harm, dopamine = addiction, social media gây depression theo một đường đơn, hoặc online relationship không thật.
 
 ## Mô hình tư duy
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
 
 ```text
 trạng thái người dùng

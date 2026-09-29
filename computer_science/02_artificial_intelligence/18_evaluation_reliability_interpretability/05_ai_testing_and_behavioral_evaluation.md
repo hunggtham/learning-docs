@@ -4,6 +4,8 @@ Traditional software testing kiểm tra deterministic contracts tương đối r
 
 ## Pyramid mở rộng cho AI
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 unit tests
 → data/schema tests
@@ -213,6 +215,8 @@ Do not copy raw production sensitive data into permanent test fixtures without g
 Tests/evals can define blocking vs informational gates. High-severity safety regressions should block release even if average quality improves.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Software tests validate code contracts.

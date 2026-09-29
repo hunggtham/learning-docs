@@ -612,6 +612,8 @@ Browser có thể gửi auditing requests khi navigation xảy ra. Vì có priva
 ---
 
 ## 37. `hreflang`, alternate resources và SEO
+Phần này nối mạch bài học với “37. `hreflang`, alternate resources và SEO”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <link
@@ -667,6 +669,8 @@ Browser chỉ hỗ trợ những directives cụ thể. Khi bạn kiểm soát s
 ---
 
 ## 41. `meta name="color-scheme"`
+Phần này nối mạch bài học với “41. `meta name="color-scheme"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <meta
@@ -735,6 +739,8 @@ Name trả lời “control là gì”; description cung cấp hướng dẫn b�
 ---
 
 ## 45. `aria-expanded` và `aria-controls`
+Phần này nối mạch bài học với “45. `aria-expanded` và `aria-controls`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <button
@@ -1035,6 +1041,8 @@ Mục tiêu là thấy source indentation không quyết định DOM.
 ---
 
 ## 68. Attribute/property state
+Phần này nối mạch bài học với “68. Attribute/property state”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <form id="f">

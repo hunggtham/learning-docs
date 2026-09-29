@@ -597,6 +597,8 @@ Nếu vòng phản hồi quá tập trung vào chỉ số ngắn hạn, hệ th�
 
 ## Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị
 
+Sau khi theo dõi nội dung, nền tảng và fandom, ta có thể xem Hallyu như nhiều protocol chồng lên nhau: sáng tạo, quyền, phân phối, dữ liệu và doanh thu. Sơ đồ này giúp nối các lớp thay vì quy mọi thành công về “nội dung hay”.
+
 ```text
 lớp sáng tạo: bài hát / câu chuyện / trò chơi
 lớp lao động: tác giả / biên kịch / vũ công / biên tập / dịch giả
@@ -638,6 +640,8 @@ Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá t
 “Dữ liệu sẽ cho biết chính xác nên sáng tạo gì” là sai; dữ liệu giảm một phần bất định nhưng không thay được thử nghiệm, phán đoán nghệ thuật và khả năng tạo nhu cầu mới.
 
 ## Nguồn tham khảo cập nhật
+
+Các nguồn này dùng để kiểm tra số liệu nền tảng, chính sách bản quyền và xu hướng thị trường theo thời điểm. Hãy ghi ngày truy cập vì dữ liệu Hallyu thay đổi nhanh.
 
 - Ministry of Culture, Sports and Tourism, 2025 Overseas Hallyu Survey, công bố 8/4/2025.
 - Ministry of Culture, Sports and Tourism, 2025 Global Hallyu Trend Analysis Report, công bố 25/2/2026.

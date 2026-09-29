@@ -216,6 +216,8 @@ Chỉ khi xác định được kênh truyền dẫn mới có thể đưa tác 
 
 ### Kịch bản tiêu cực (bear scenario)
 
+Kịch bản tiêu cực kiểm tra rủi ro nhu cầu AI chậm lại, yield thấp hoặc công suất mới tạo dư cung. Mỗi yếu tố phải được nối tới ASP, margin, capex và cash flow.
+
 ```text
 Tăng trưởng hạ tầng AI chậm lại
 Nguồn cung HBM tăng nhanh
@@ -237,6 +239,8 @@ ASP bình quân ↓
 ```
 
 ### Kịch bản lợi thế cấu trúc
+
+Kịch bản này hỏi lợi thế HBM và năng lực đóng gói có đủ bền để vượt một chu kỳ hay không. Hãy phân biệt moat công nghệ với tailwind nhu cầu tạm thời.
 
 ```text
 Lượng bộ nhớ AI trên mỗi hệ thống tiếp tục tăng

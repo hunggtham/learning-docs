@@ -211,6 +211,8 @@ Một unit có thời gian activate dài không nhất thiết là root cause c�
 
 ## Journal của boot hiện tại và boot trước
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 journalctl -b
 ```

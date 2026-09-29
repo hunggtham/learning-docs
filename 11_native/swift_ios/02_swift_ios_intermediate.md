@@ -12,6 +12,8 @@ Intermediate không cố biến mọi feature thành architecture nhiều layer.
 
 ## 1.1 Value semantics, reference semantics và copy-on-write
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 struct Profile {
     var name: String
@@ -28,6 +30,8 @@ Reference type có identity và shared mutable state. Khi nhiều owner cùng th
 
 ## 1.2 `Equatable`, `Hashable`, `Comparable`, `Identifiable`
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 struct Product: Identifiable, Hashable {
     let id: UUID
@@ -38,6 +42,8 @@ struct Product: Identifiable, Hashable {
 `Identifiable.id` phải đại diện stable identity của entity trong khoảng lifetime phù hợp. Nếu ID thay đổi theo vị trí array, diffing/navigation/state restoration có thể gắn state vào sai item.
 
 ## 1.3 Generic, `where` và capability-oriented API
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 func merge<C1: Collection, C2: Collection>(
@@ -52,6 +58,8 @@ where C1.Element == C2.Element {
 Chỉ yêu cầu capability thực sự cần. Nếu function chỉ iterate một lần, `Sequence` có thể phù hợp hơn `Array`; nếu cần random access, constraint mạnh hơn mới có ý nghĩa.
 
 ## 1.4 Associated type, `some` và `any`
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 protocol Repository {
@@ -87,6 +95,8 @@ let result: Result<User, APIError>
 ---
 
 # 3. Protocol extension và dispatch trap
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 protocol Named {
@@ -143,6 +153,8 @@ Nếu bốn trục này rõ, phần lớn compiler diagnostic Swift 6 trở nên
 
 ## 5.1 Structured concurrency với `async let`
 
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
+
 ```swift
 async let profile = api.profile()
 async let messages = api.messages()
@@ -153,6 +165,8 @@ let (p, m) = try await (profile, messages)
 Child task gắn lifetime với lexical scope. Scope không kết thúc hợp lệ khi child task còn bị bỏ quên; error/cancellation có quan hệ rõ hơn unstructured task.
 
 ## 5.2 Dynamic child task với TaskGroup
+
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
 
 ```swift
 let values = try await withThrowingTaskGroup(of: Int.self) { group in
@@ -173,6 +187,8 @@ let values = try await withThrowingTaskGroup(of: Int.self) { group in
 Task group phù hợp fan-out động. Đừng tạo vô hạn task chỉ vì API cho phép; concurrency cần bounded theo resource/backend constraints khi input lớn.
 
 ## 5.3 `Task {}` là unstructured task, không phải child scope tự động
+
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
 
 ```swift
 let task = Task {
@@ -364,6 +380,8 @@ Swift 6.4 tiếp tục tăng integration giữa Observation và async change str
 
 # 10. Continuation — bridge legacy callback có kỷ luật
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 func load() async throws -> Data {
     try await withCheckedThrowingContinuation { continuation in
@@ -398,6 +416,8 @@ Hãy phân loại:
 
 # 12. `@State` — storage gắn với view identity
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```swift
 struct SearchView: View {
     @State private var query = ""
@@ -415,6 +435,8 @@ Với Xcode 27, `State` implementation tiếp tục được hiện đại hóa;
 
 # 13. `@Binding` — capability mutate state của owner khác
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```swift
 struct NameField: View {
     @Binding var name: String
@@ -430,6 +452,8 @@ Binding không copy state và cũng không trở thành owner. Nó là getter/se
 ---
 
 # 14. Observation với `@Observable`
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 @Observable
@@ -468,6 +492,8 @@ struct ProfileEditor: View {
 ---
 
 # 16. Environment và dependency scope
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 @Environment(CartModel.self) private var cart
@@ -538,6 +564,8 @@ List/ForEach identity cũng phải là domain-stable ID, không phải index n�
 
 # 20. `.task` và task lifetime theo view
 
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
+
 ```swift
 .task {
     await model.load()
@@ -567,6 +595,8 @@ Custom `Layout` hữu ích khi parent cần đo/place nhiều child theo thuật
 ---
 
 # 22. Navigation là state
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 enum Route: Hashable {
@@ -639,6 +669,8 @@ Token refresh phải tránh refresh storm. Nếu 10 request cùng nhận 401, th
 
 # 25. Codable và tolerant boundary
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 let decoder = JSONDecoder()
 decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -688,6 +720,8 @@ Repository/store abstraction chỉ có giá trị nếu nó che data-source/doma
 ---
 
 # 28. Dependency injection và composition root
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 final class ProductService {
@@ -752,6 +786,8 @@ Cell reuse yêu cầu cancel/reset async image/task và mọi visual state khôn
 ---
 
 # 31. SwiftUI ↔ UIKit interoperability trung cấp
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 struct CameraView: UIViewControllerRepresentable {
@@ -864,6 +900,8 @@ Một module khỏe mạnh có cohesion rõ, public API nhỏ, dependency direct
 ---
 
 # 38. Availability và conditional compilation
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 #if DEBUG

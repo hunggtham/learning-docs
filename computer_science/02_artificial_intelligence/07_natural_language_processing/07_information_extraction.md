@@ -88,6 +88,8 @@ Event extraction needs role assignment and sometimes cross-sentence context.
 
 ## Coreference Resolution
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Alice joined Acme. She became CTO.
 ```

@@ -370,6 +370,8 @@ Trade-off là cần xử lý queue/backpressure/shutdown rõ ràng.
 ---
 
 ## 14. Cold Flow là recipe, không phải running stream
+Phần này nối mạch Android vừa học với “14. Cold Flow là recipe, không phải running stream”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 val flow = flow {
@@ -470,6 +472,8 @@ Không dùng `collectLatest` cho operation không được phép cancel giữa c
 ---
 
 ## 19. `flatMapLatest` bảo vệ stale-request race
+Phần này nối mạch Android vừa học với “19. `flatMapLatest` bảo vệ stale-request race”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 query
@@ -637,6 +641,8 @@ Concurrency operator không thay thế data merge policy.
 ---
 
 ## 28. Race giữa logout và in-flight request
+Phần này nối mạch Android vừa học với “28. Race giữa logout và in-flight request”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 T0 account A request start
@@ -663,6 +669,8 @@ State nên đi qua lifecycle-aware owner; callback registration cleanup theo lif
 ---
 
 ## 30. Timeout cần ở boundary đúng
+Phần này nối mạch Android vừa học với “30. Timeout cần ở boundary đúng”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 withTimeout(5_000) {
@@ -686,6 +694,8 @@ Một timeout global dễ cancel operation ở điểm không an toàn.
 ---
 
 ## 31. Retry trong Flow cần phân loại error
+Phần này nối mạch Android vừa học với “31. Retry trong Flow cần phân loại error”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 flow.retry(3)
@@ -839,6 +849,8 @@ Ownership graph thường giải thích bug nhanh hơn thread dump đơn thuần
 ---
 
 ## 38. Concurrency design checklist
+Phần này nối mạch Android vừa học với “38. Concurrency design checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Ý nghĩa |
 |---|---|

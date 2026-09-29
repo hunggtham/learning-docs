@@ -280,6 +280,8 @@ Không có một mẹo duy nhất; mục tiêu là tìm **thông tin nào giúp 
 
 ## 17. Khi recursion exponential, thử gì?
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 có overlapping states không?        -> memoization / DP
 có branch vô ích nhận ra sớm không? -> pruning
@@ -373,6 +375,8 @@ Numeric semantics là một phần của specification.
 
 ### C
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 bounds
 ownership
@@ -384,6 +388,8 @@ pointer invalidation
 
 ### Java
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```text
 boxing
 equals/hashCode
@@ -394,6 +400,8 @@ GC/allocation
 ```
 
 ### JavaScript
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```text
 Number safe integer
@@ -589,6 +597,8 @@ Phân loại đúng giúp tránh lặp lại cùng kiểu lỗi ở bài khác.
 
 ## 37. Một quy trình 12 bước
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. Viết lại specification.
 2. Xác định mọi constraint và parameter.
@@ -605,6 +615,8 @@ Phân loại đúng giúp tránh lặp lại cùng kiểu lỗi ở bài khác.
 ```
 
 ## 38. Checklist trước khi nộp hoặc merge
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Output semantics có đúng mọi case không?

@@ -8,6 +8,8 @@ Một quốc gia hiện đại cần chương trình giáo dục chung, ngôn ng
 
 ### Mô hình tư duy
 
+Để hiểu bản sắc vùng miền, hãy nối địa hình, lịch sử, kinh tế, di chuyển và ký ức địa phương trước khi gán một tính cách chung. Sơ đồ sau là khung so sánh giữa các nơi, không phải nhãn cố định cho cư dân.
+
 ```text
 vùng miền
 = sinh thái
@@ -491,6 +493,8 @@ Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khá
 Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) và [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
 
 ## Nguồn tham khảo
+
+Các nguồn sau dùng để kiểm tra địa danh, lịch sử và dữ liệu vùng miền. Hãy đọc chúng cùng phần phân tích để phân biệt fact, diễn giải và ký ức địa phương.
 
 - UNESCO Intangible Cultural Heritage: Culture of Jeju Haenyeo; Arirang inscriptions; traditional wrestling heritage.
 - `국립국어원` / National Institute of Korean Language: thuật ngữ về ngôn ngữ chuẩn và phương ngữ.

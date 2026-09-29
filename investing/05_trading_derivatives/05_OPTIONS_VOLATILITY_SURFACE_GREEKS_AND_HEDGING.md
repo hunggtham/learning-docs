@@ -17,6 +17,8 @@ Giá kỳ hạn chịu ảnh hưởng bởi:
 
 ## 2. Lợi ích hoặc chi phí nắm giữ
 
+Trước khi đọc option price, cần tách hướng giá khỏi lợi ích/chi phí của việc giữ exposure theo thời gian. Carry có thể làm payoff thực tế khác với biểu đồ spot đơn giản.
+
 **Carry** là lợi ích hoặc chi phí kinh tế phát sinh khi giữ mức phơi nhiễm qua thời gian.
 
 Với chỉ số cổ phiếu, lãi suất và cổ tức ảnh hưởng giá kỳ hạn. Với hàng hóa, chi phí lưu kho và **lợi ích tiện ích (convenience yield)** cũng quan trọng.
@@ -40,11 +42,15 @@ Tính phi tuyến này tạo **độ lồi (convexity)**.
 
 ## 5. Biến động hàm ý
 
+IV là biến được suy ra từ giá option, không phải một dự báo chắc chắn. Hãy đọc nó như giá thị trường của bất định và risk premium, rồi so với realized volatility cùng kỳ vọng sự kiện.
+
 **Biến động hàm ý (implied volatility, IV)** là mức biến động khiến mô hình định giá khớp với giá quyền chọn trên thị trường.
 
 IV không phải dự báo chắc chắn về biến động tương lai; nó là một đầu vào ngược suy ra từ giá.
 
 ## 6. Biến động thực hiện
+
+Realized volatility đo những gì đã xảy ra trong đường giá. So sánh nó với IV giúp đánh giá premium tương đối, nhưng cần giữ nhất quán horizon, sampling và regime.
 
 **Biến động thực hiện (realized volatility)** là biến động thật xảy ra trong đường giá.
 
@@ -133,11 +139,15 @@ Chỉ số cổ phiếu thường có IV của quyền chọn bán ngoài tiền
 
 ## 19. Chênh lệch biến động mua–bán
 
+Risk reversal đặt IV của call và put tương ứng cạnh nhau để đọc skew theo hướng bảo hiểm hoặc đầu cơ. Chênh lệch này phản ánh nhu cầu một phía, không phải xác suất trực tiếp của một mức giá.
+
 **Risk reversal** so sánh IV của quyền chọn mua và quyền chọn bán có độ gần tiền tương ứng.
 
 Chỉ số này giúp đọc sự bất đối xứng trong nhu cầu và nhận thức về rủi ro đuôi.
 
 ## 20. Độ cong cánh quyền chọn
+
+Curvature/butterfly cho biết bề mặt IV cong thế nào quanh vùng near-the-money và hai cánh. Nó giúp phát hiện nhu cầu tail insurance hoặc pricing bất thường mà một risk reversal không cho thấy.
 
 **Độ cong (curvature/butterfly)** cho biết các quyền chọn rất xa tiền đắt hay rẻ so với vùng gần tiền, qua đó phản ánh nhu cầu bảo hiểm đuôi và hình dạng phân phối mà thị trường đang định giá.
 
@@ -157,6 +167,8 @@ Sau sự kiện, phần IV liên quan bất định đó thường giảm nhanh.
 
 ## 23. Chênh lệch lịch
 
+Calendar spread tách rủi ro kỳ hạn bằng cách mua/bán option có expiry khác nhau. Nó nhạy với term structure, event timing và thay đổi IV chứ không chỉ với hướng giá.
+
 **Chênh lệch lịch (calendar spread)** dùng quyền chọn cùng hoặc gần cùng giá thực hiện nhưng khác kỳ hạn.
 
 Lãi/lỗ phụ thuộc cấu trúc kỳ hạn, đường đi của giá và tương quan Vega/Theta giữa hai chân.
@@ -164,6 +176,8 @@ Lãi/lỗ phụ thuộc cấu trúc kỳ hạn, đường đi của giá và tư
 # Phần VII — Bề mặt biến động
 
 ## 24. Bề mặt biến động là gì?
+
+Volatility surface là bản đồ IV theo strike/moneyness và expiry. Đọc toàn bề mặt giúp tránh dùng một IV ATM như thể mọi strike và kỳ hạn có cùng risk premium.
 
 **Bề mặt biến động (volatility surface)** mô tả IV theo hai chiều chính:
 
@@ -177,11 +191,15 @@ Bề mặt thay đổi liên tục khi giá, dòng lệnh và nhận thức rủ
 
 ## 25. Hai cách mô tả chuyển động bề mặt
 
+Sticky strike và sticky delta là hai xấp xỉ để dự báo surface di chuyển khi spot đổi. Không cách nào đúng trong mọi regime, nên hedge và scenario phải kiểm tra cả hai giả định.
+
 **Bám giá thực hiện (sticky strike)** và **bám Delta (sticky delta)** là hai cách gần đúng để mô tả IV thay đổi khi giá cơ sở di chuyển.
 
 Đây chỉ là mô hình gần đúng; hành vi thật có thể thay đổi theo chế độ.
 
 ## 26. Biến động của chính biến động
+
+Vol-of-vol đo độ bất ổn của chính IV. Nó quan trọng với option dài hạn, tail hedge và các vị thế short convexity vì IV có thể tăng cùng lúc với giá cơ sở giảm.
 
 **Biến động của biến động (vol-of-vol)** đo mức IV bản thân nó biến động mạnh tới đâu.
 
@@ -281,6 +299,8 @@ Thời gian: hôm nay / sau một tuần / gần đáo hạn
 
 ## 37. Lưới kịch bản
 
+Scenario grid đặt giá, IV, thời gian và các biến liên quan vào cùng một bảng để lộ payoff phi tuyến. Nó giúp kiểm tra các tổ hợp mà một Greek tại một điểm không thể mô tả.
+
 **Lưới kịch bản (scenario grid)** cho thấy tính phi tuyến rõ hơn một Greek duy nhất.
 
 ## 38. Rủi ro tương quan
@@ -290,6 +310,8 @@ Danh mục quyền chọn nhiều tài sản còn chịu rủi ro tương quan g
 # Phần XIII — Phòng vệ rủi ro đuôi
 
 ## 39. Mục tiêu của phòng vệ đuôi
+
+Tail hedge được thiết kế để giảm phân phối lỗ cực đoan và nguy cơ bán cưỡng bức. Chi phí carry thường xuyên cần được đánh giá cùng lợi ích bảo vệ trong nhiều năm và nhiều regime.
 
 **Phòng vệ đuôi (tail hedge)** nhằm giảm tổn thất trong trạng thái cực đoan, không nhất thiết tạo lợi nhuận mỗi tháng.
 
@@ -303,9 +325,13 @@ Có thể định trước tỷ lệ phí quyền chọn hằng năm dành cho b
 
 ## 42. Chênh lệch quyền chọn bán
 
+Put spread đổi một phần vùng bảo vệ sâu lấy premium thấp hơn. Người dùng phải ghi rõ strike bảo vệ, strike bán và mức lỗ còn lại dưới vùng đó.
+
 **Put spread** giảm phí bằng cách bán một quyền chọn bán có giá thực hiện thấp hơn, nhưng mức bảo vệ bị giới hạn khi thị trường giảm cực sâu.
 
 ## 43. Collar
+
+Collar kết hợp long put với short call để tài trợ hedge, vì vậy nó giới hạn cả downside và upside. Thiết kế cần khớp với mục tiêu, thời hạn và mức giá chấp nhận bỏ qua.
 
 **Collar** bán quyền chọn mua để tài trợ một phần quyền chọn bán, đổi lại giới hạn mức tăng giá phía trên.
 
@@ -394,6 +420,8 @@ Báo giá lỗi có thể tạo IV vô lý. Cần lọc dữ liệu và kiểm t
 
 ## 55. Phòng vệ đúng nhân tố
 
+Hedge đúng nhân tố nghĩa là công cụ giảm đúng beta, duration, FX, credit, volatility hoặc liquidity risk đang gây tổn thất. Sơ đồ này giúp tránh hedge một exposure dễ đo nhưng bỏ qua nguồn rủi ro chính.
+
 ```text
 Beta cổ phiếu
 → futures chỉ số / quyền chọn bán
@@ -409,6 +437,8 @@ Rủi ro biến động
 ```
 
 ## 56. Rủi ro cơ sở
+
+Basis risk xuất hiện khi công cụ hedge và tài sản cần bảo vệ không di chuyển giống nhau. Nó phải được stress theo regime, maturity, liquidity và event thay vì giả định correlation cố định.
 
 **Rủi ro cơ sở (basis risk)** xuất hiện khi công cụ phòng vệ không trùng hoàn toàn với tài sản cần bảo vệ.
 

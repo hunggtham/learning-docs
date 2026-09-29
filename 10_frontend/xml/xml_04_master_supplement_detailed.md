@@ -886,6 +886,8 @@ Canonicalization có ordering rule riêng chỉ để tạo deterministic repres
 ---
 
 ## 56. Empty element lexical form
+Phần này nối mạch bài học với “56. Empty element lexical form”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <a/>

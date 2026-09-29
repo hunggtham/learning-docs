@@ -244,6 +244,8 @@ không cần independence.
 
 ## Variance: spread quanh expectation
 
+Variance đo độ phân tán quanh expectation bằng bình phương độ lệch. Nó nhấn mạnh các giá trị xa trung tâm và là nền cho standard deviation, risk và uncertainty propagation.
+
 ```math
 Var(X)=E[(X-E[X])^2].
 ```
@@ -329,6 +331,8 @@ Joint → marginal → conditional là core dependency cho statistics và Bayesi
 
 ## Covariance và correlation chỉ tóm tắt một phần dependence
 
+Covariance và correlation nén quan hệ hai biến thành một con số, nhưng không mô tả hết phi tuyến, tail dependence hay causality. Hãy đọc chúng cùng scatterplot và mô hình sinh dữ liệu.
+
 ```math
 Cov(X,Y)
 =
@@ -399,6 +403,8 @@ Negative log-likelihood training depends on assumed output distribution. Squared
 Loss function và probability model are linked.
 
 ## Distribution choice là assumption package
+
+Chọn distribution đồng nghĩa chọn một gói giả định về support, tail, symmetry và dependence. Vì vậy cần kiểm tra dữ liệu và mục đích suy luận trước khi chọn tên phân phối quen thuộc.
 
 - Binomial: fixed trials, binary outcome, often independence/constant `p`.
 - Poisson: event-count mechanism with approximately stable independent increments.

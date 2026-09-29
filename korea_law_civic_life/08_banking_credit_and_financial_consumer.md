@@ -137,6 +137,8 @@ Chúng không thay thế nhau.
 
 ## 10. Nguồn chính thức
 
+Tài chính cá nhân cần nguồn cập nhật vì sản phẩm, cảnh báo lừa đảo và quy tắc bảo vệ người tiêu dùng thay đổi theo thời gian. Các nguồn này giúp nối giao dịch cụ thể với cơ quan giám sát và kênh xử lý phù hợp.
+
 - 금융감독원: https://www.fss.or.kr/
 - 금융소비자정보포털 FINE: https://fine.fss.or.kr/
 - 본인신용정보 열람 Credit4U: https://www.credit4u.or.kr/

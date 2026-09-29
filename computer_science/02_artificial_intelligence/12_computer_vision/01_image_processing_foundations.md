@@ -167,6 +167,8 @@ Một deep model có thể replace vài stage nhưng preprocessing vẫn hữu �
 
 ## When Classical Processing Still Wins
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - deterministic industrial inspection;
 - tiny compute budget;
 - obvious geometric rule;

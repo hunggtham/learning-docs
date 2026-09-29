@@ -55,6 +55,8 @@ Không xóa file chỉ vì có overlap từ khóa. Overlap có chủ đích gi�
 Khi học canonical, có thể mở file này theo nhu cầu; khi làm migration thực tế, đọc thêm `production_casebook/18_android_compatibility_api_levels_sdk_extensions.md` và `depth_labs/08_version_compatibility_migration_forensics.md`.
 
 ## Deep dives theo từng level
+Phần này nối mạch Android vừa học với “Deep dives theo từng level”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - [`deep_dive/01_beginner_completion.md`](deep_dive/01_beginner_completion.md) — package/import, equality, range/array, collection transformation, nested/inner class, precondition, data-class identity, Context/Intent/Uri, Compose layout và testing căn bản.
 - [`deep_dive/02_intermediate_completion.md`](deep_dive/02_intermediate_completion.md) — CoroutineContext/Job hierarchy, supervision, Flow cold/hot/context, `stateIn`/`shareIn`, `callbackFlow`, resource lifetime, network error model, Room source-of-truth, Compose effect/state, coroutine testing, DI scope và navigation contract.
@@ -104,6 +106,8 @@ Sau level Master, đọc [`production_casebook/README.md`](production_casebook/R
 20. [`production_casebook/20_android_library_sdk_authoring.md`](production_casebook/20_android_library_sdk_authoring.md) — AAR/library/SDK authoring, public API/ABI, Java/Kotlin interop, resource/manifest contract, consumer R8 rules, lint, publishing, SemVer và migration compatibility.
 
 ## Baseline version
+Phần này nối mạch Android vừa học với “Baseline version”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Kotlin: **2.4.20** stable (2026-09-07).
 - Android Studio: **Quail 4 / 2026.1.4 Patch 1** stable.

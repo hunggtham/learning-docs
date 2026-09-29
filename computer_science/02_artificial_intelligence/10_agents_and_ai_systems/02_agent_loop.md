@@ -224,6 +224,8 @@ Nếu step 4 phát hiện thiếu pricing, agent cần loop retrieval thay vì g
 
 ## Example: coding agent
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 inspect issue
 → search relevant code

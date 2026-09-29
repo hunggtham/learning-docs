@@ -170,6 +170,8 @@ Xem chapter prevention-only [[14_suicide_self_harm_risk_and_prevention]].
 
 ## 16. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 trait vulnerability
    + sleep/circadian regulation

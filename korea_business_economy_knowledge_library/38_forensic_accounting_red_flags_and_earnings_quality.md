@@ -567,6 +567,8 @@ Nếu một mắt xích lệch nhau, đừng kết luận vội; hãy tìm lời
 
 ## Liên kết tiếp theo
 
+Những liên kết sau mở rộng việc đọc disclosure, chất lượng lợi nhuận và governance. Hãy dùng chúng để biến red flag thành câu hỏi kiểm chứng thay vì kết luận gian lận ngay lập tức.
+
 - [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md)
 - [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md)
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md)

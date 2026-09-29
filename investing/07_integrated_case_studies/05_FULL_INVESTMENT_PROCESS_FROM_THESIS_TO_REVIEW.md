@@ -143,6 +143,8 @@ Một công ty có ít nợ vẫn có thể chịu shock lớn nếu khách hàn
 
 ## 8. Xây cây ngành
 
+Sau khi xác định câu hỏi và dữ liệu, ta cần mô tả cơ chế của ngành trước khi chọn một mã cụ thể. Cây ngành biến headline thành chuỗi driver, giúp biết biến nào dẫn dắt và biến nào chỉ xác nhận sau đó.
+
 ```text
 Demand
 → inventory
@@ -158,6 +160,8 @@ Với từng ngành, thay các biến phù hợp. Điều quan trọng là xác 
 Không dùng một headline ngành thay cho driver tree.
 
 ## 9. Xây cây doanh nghiệp
+
+Từ cây ngành, ta đi xuống cách một doanh nghiệp biến sản lượng, giá và cơ cấu thành doanh thu rồi thành lợi nhuận và dòng tiền. Đây là bước nối bối cảnh bên ngoài với con số mà mô hình định giá thực sự sử dụng.
 
 ```text
 Volume
@@ -269,6 +273,8 @@ One-off recurring item
 Một lợi nhuận “beat” nhưng cash conversion xấu có thể làm thesis khác hoàn toàn.
 
 ## 15. Xây ba kịch bản từ driver
+
+Ba kịch bản phải khác nhau ở các driver kinh tế chứ không chỉ khác một hệ số P/E. Viết chúng từ cùng một cây driver giúp mỗi thay đổi về nhu cầu, giá, công suất hay vốn đều có đường truyền rõ ràng vào định giá.
 
 ```text
 Bull:
@@ -691,6 +697,8 @@ Chọn một doanh nghiệp hoặc tài sản thực tế và tạo bộ hồ s�
 Mỗi file phải liên kết với dữ liệu và giả định cụ thể.
 
 ## 40. Liên kết tới Advanced Labs và worked cases
+
+Khi quy trình chính đã hoàn tất, các liên kết sau đưa người học tới những phòng thực hành tương ứng với từng mắt xích. Hãy dùng chúng để kiểm tra lại mô hình, stress test và kế hoạch thực thi thay vì chỉ đọc thêm lý thuyết.
 
 - [Thiết kế danh mục nâng cao](../01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md)
 - [Định giá tài sản và cấu trúc kỳ hạn](../02_asset_classes/07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md)

@@ -10,6 +10,8 @@ Trái chủ khác cổ đông: trái chủ có quyền đòi theo hợp đồng 
 
 ## 2. Giá trái phiếu là giá trị hiện tại của dòng tiền
 
+Trước khi học duration, spread hay các loại trái phiếu, cần đặt nền bằng câu hỏi: giá hôm nay là bao nhiêu khi các coupon và tiền gốc trong tương lai được chiết khấu về hiện tại? Công thức dưới đây trả lời câu hỏi đó.
+
 ```text
 Bond Price = Σ Coupon_t / (1 + y)^t + Face Value / (1 + y)^T
 ```
@@ -212,6 +214,8 @@ Tín dụng khuếch đại chu kỳ kinh doanh vì tiêu chuẩn cho vay thay �
 
 ## 25. Fallen Angels và Rising Stars
 
+Xếp hạng tín dụng thay đổi có thể tạo dòng lệnh kỹ thuật từ quỹ và chỉ số, đồng thời phản ánh thay đổi trong rủi ro tín dụng. Phần này nối sự kiện rating với giá, spread và thanh khoản chứ không chỉ với nhãn investment grade/high yield.
+
 **Fallen angel** là tổ chức phát hành bị hạ từ investment grade xuống high yield. Việc bị loại khỏi chỉ số/quỹ có giới hạn xếp hạng có thể tạo bán kỹ thuật.
 
 **Rising star** là tổ chức được nâng từ high yield lên investment grade. Dòng vốn kỹ thuật có thể đi hướng ngược lại.
@@ -270,6 +274,8 @@ Cần xem spread, AUM, chất lượng tài sản, duration và thanh khoản t�
 
 ## 34. Thang đáo hạn, bullet và barbell
 
+Sau khi hiểu duration và đường cong, ta chuyển sang cách sắp xếp các ngày đáo hạn để đáp ứng nghĩa vụ và kiểm soát tái đầu tư. Ba cấu trúc dưới đây khác nhau ở dòng tiền, độ nhạy và rủi ro tập trung thời điểm.
+
 **Bond ladder** trải kỳ hạn để tạo dòng tiền gốc đều.
 
 **Bullet** tập trung kỳ hạn quanh một mốc để khớp nghĩa vụ.
@@ -304,6 +310,8 @@ Trong cú sốc lạm phát, cổ phiếu và trái phiếu dài hạn có thể
 
 ## 39. Phân rã lợi suất thu nhập cố định
 
+Phân rã lợi suất giúp tách coupon/carry, thay đổi yield, credit spread, roll-down, FX, default và chi phí. Mục tiêu là biết phần lợi nhuận nào đến từ exposure chủ động và phần nào chỉ là bù rủi ro đã nhận.
+
 ```text
 Tổng lợi suất
 = Thu nhập / Carry
@@ -320,6 +328,8 @@ Tổng lợi suất
 Phân rã này giúp biết lợi nhuận đến từ nhận coupon, cược duration hay chấp nhận tín dụng.
 
 ## 40. Checklist trái phiếu hoặc ETF trái phiếu
+
+Checklist cuối cùng chuyển toàn bộ chapter thành quy trình trước khi mua. Hãy đi từ dòng tiền và duration tới tín dụng, thanh khoản, ETF mechanics, chi phí và kịch bản stress; nếu thiếu một lớp, kết luận về yield có thể sai.
 
 ```text
 Tổ chức phát hành

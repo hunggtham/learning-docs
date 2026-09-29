@@ -498,6 +498,8 @@ FFT only computes DFT efficiently.
 
 ## Knowledge Connection
 
+Phần kết nối đặt Fourier cạnh linear algebra, complex numbers, convolution, filtering và PDE. Hãy xem frequency domain như một phép đổi biểu diễn để tách pattern, không phải một thế giới công thức riêng.
+
 ```text
 Trigonometry → sine/cosine
 Complex numbers → phase/exponential

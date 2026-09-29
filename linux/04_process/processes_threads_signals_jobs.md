@@ -103,6 +103,8 @@ Mã tác vụ như `%1` là khái niệm cục bộ của shell, không phải `
 
 ## `nohup` giải quyết gì và không giải quyết gì?
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 nohup java -jar app.jar >app.log 2>&1 &
 ```

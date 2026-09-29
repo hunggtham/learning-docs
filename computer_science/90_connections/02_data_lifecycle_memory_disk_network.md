@@ -81,6 +81,8 @@ Deleting logical record may remove index/reference but copies survive in WAL, re
 
 ## Cross-references
 
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
+
 - [Information/encoding](../00_computation_information/01_information_bits_and_encoding.md)
 - [Memory hierarchy](../02_computer_architecture/02_memory_hierarchy_and_cache.md)
 - [Virtual memory](../03_operating_systems/03_virtual_memory_and_address_spaces.md)

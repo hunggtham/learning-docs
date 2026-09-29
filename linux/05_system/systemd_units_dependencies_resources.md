@@ -266,6 +266,8 @@ Nhưng secret management cần cẩn thận: environment có thể lộ qua debu
 
 ## Working directory
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```ini
 WorkingDirectory=/opt/app
 ```
@@ -275,6 +277,8 @@ Nếu ứng dụng dùng relative path mà không khai báo working directory, s
 Tốt hơn nữa là application dùng absolute/configured paths cho dữ liệu quan trọng.
 
 ## `User=` và `Group=`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```ini
 User=app
@@ -402,6 +406,8 @@ Ví dụ JVM nhận SIGTERM không nhất thiết luôn trả 143 tùy wrapper/r
 
 ## Timeout khi start/stop
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```ini
 TimeoutStartSec=60
 TimeoutStopSec=30
@@ -527,6 +533,8 @@ Nhưng process đang chạy chưa tự thay đổi.
 Sau đó tùy thay đổi có thể cần restart/reload service.
 
 ## Mask
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 sudo systemctl mask app.service

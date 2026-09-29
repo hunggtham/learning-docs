@@ -216,6 +216,8 @@ Nếu std tăng exponential qua depth → exploding signal. Nếu collapse gần
 
 ## Mental Model
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Initialization = chọn starting scale để network bắt đầu ở vùng trainable
 Normalization  = liên tục giữ intermediate scale/statistics trong vùng dễ optimize

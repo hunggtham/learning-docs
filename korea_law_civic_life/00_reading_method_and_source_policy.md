@@ -111,6 +111,8 @@ Mỗi lần tra một vấn đề, nên ghi theo mẫu:
 ...
 
 ## Luật gốc
+
+Đây là điểm bắt đầu để phân biệt luật, nghị định, hướng dẫn và nội dung giải thích đời sống. Hãy dùng lớp nguồn này làm mốc trước khi suy luận từ bài đăng cộng đồng hoặc mẫu cũ.
 - tên luật:
 - điều khoản:
 - 시행일:

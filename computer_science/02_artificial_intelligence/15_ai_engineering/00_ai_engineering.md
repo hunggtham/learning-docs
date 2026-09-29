@@ -213,6 +213,8 @@ Metric không đi cùng trace khiến việc tìm root cause trở nên khó kh�
 
 ## Failure Mode đặc thù của AI
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - distribution shift;
 - model unavailable;
 - tokenizer mismatch;

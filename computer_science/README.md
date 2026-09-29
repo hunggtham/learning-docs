@@ -11,6 +11,8 @@ Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện
 
 ## Bản đồ Nền tảng → Nâng cao
 
+Bảng này giải thích cách hai lớp của thư viện nối với nhau: nền tảng dựng mô hình chung, còn phần nâng cao mở rộng cơ chế, failure mode và trade-off. Hãy dùng nó để chọn đúng prerequisite thay vì coi “advanced” là một danh sách rời.
+
 | Lĩnh vực | Nền tảng | Nâng cao |
 |---|---|---|
 | Tính toán & Thông tin (Computation & Information) | [`basic/00_computation_information`](./basic/00_computation_information/) | [`00_computation_information/advanced`](./00_computation_information/advanced/README.md) |
@@ -42,6 +44,8 @@ Không cần học hết phần nền tảng rồi mới đọc phần nâng cao
 
 ### Learning route 1 — từ phần cứng đến application
 
+Route này đi từ nguyên nhân ở tầng thấp tới biểu hiện ở application. Mỗi mũi tên là một điểm cần kiểm tra khi hiệu năng hoặc hành vi chương trình không thể giải thích chỉ bằng code bề mặt.
+
 ```text
 CPU / cache / memory hierarchy
 ↓
@@ -60,6 +64,8 @@ Route này phù hợp khi muốn hiểu vì sao cùng một đoạn code có th�
 
 ### Learning route 2 — durability và consistency
 
+Route này theo dõi một thay đổi dữ liệu từ transaction tới device và replica. Nó giúp người học hiểu commit ở một tầng chưa chắc đồng nghĩa dữ liệu đã bền vững ở mọi tầng.
+
 ```text
 application transaction
 ↓
@@ -75,6 +81,8 @@ cache / event / replica visibility
 Route này dùng cho backend/database engineering. Bắt đầu từ nền tảng transaction rồi đọc Database Advanced, OS filesystem/I/O, Distributed Systems và chapter [durability xuyên tầng](./90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
 ### Learning route 3 — concurrency và ordering
+
+Đường đọc này nối các nghĩa khác nhau của “thứ tự” từ memory model tới distributed system. Hãy giữ câu hỏi dữ liệu có thể quan sát ở thời điểm nào trước khi chọn cơ chế đồng bộ.
 
 ```text
 language memory model
@@ -93,6 +101,8 @@ distributed causality / consensus
 Route này giúp phân biệt data race, logical race, thread scheduling, memory reordering và distributed ordering. Không nên dùng từ “concurrent” như một khái niệm duy nhất cho mọi tầng.
 
 ### Learning route 4 — reliability và security boundary
+
+Route cuối đặt security và reliability trên cùng một chuỗi boundary–dependency. Một control có thể giảm rủi ro tấn công nhưng đồng thời tạo dependency availability, nên cần đọc cả hai chiều.
 
 ```text
 identity / authorization

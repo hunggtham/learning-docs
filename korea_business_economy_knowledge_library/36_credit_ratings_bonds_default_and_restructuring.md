@@ -419,6 +419,8 @@ Mục tiêu không phải dự đoán chính xác khủng hoảng mà tìm ngư�
 
 ## 33. Quy trình phân tích tín dụng
 
+Phân tích tín dụng bắt đầu từ khả năng tạo tiền và lịch nghĩa vụ, rồi mới dùng rating và tài sản bảo đảm để kiểm tra. Workflow sau nối business risk với liquidity, covenant và recovery value.
+
 ```text
 1. Độ ổn định kinh doanh
 2. Tính chu kỳ của lợi nhuận
@@ -463,6 +465,8 @@ Một doanh nghiệp kinh doanh tốt nhưng cấu trúc vốn xấu vẫn có t
 **“Tập đoàn mẹ lớn sẽ luôn cứu công ty con.”** Không thể mặc định nếu không có động lực pháp lý hoặc kinh tế rõ ràng.
 
 ## Liên kết tiếp theo
+
+Các liên kết sau mở rộng từng lớp của quy trình: công bố, bảng cân đối, thị trường trái phiếu và tái cấu trúc. Chọn tài liệu theo điểm rủi ro còn chưa rõ trong case.
 
 - [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) — đọc nghĩa vụ và thuyết minh.
 - [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — bối cảnh thị trường trái phiếu/cổ phiếu.

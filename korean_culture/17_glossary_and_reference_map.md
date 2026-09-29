@@ -4,6 +4,8 @@
 
 ## Quan hệ và giao tiếp
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | 한국어 | English | Tiếng Việt | Chương chính |
 |---|---|---|---|
 | 유교 | Confucianism | Nho giáo | 02, 09 |
@@ -26,6 +28,8 @@
 | 관계주의 | Relationalism | Cách nhìn nhấn mạnh quyết định phụ thuộc vào quan hệ cụ thể | 02 |
 
 ## Gia đình, chăm sóc và vòng đời
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
@@ -58,6 +62,8 @@
 | 돌봄망 | Care network | Mạng lưới người và thiết chế cùng tham gia chăm sóc | 29, 15 |
 
 ## Giáo dục, campus và công việc
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
@@ -112,6 +118,8 @@
 
 ## Ăn uống, nhà ở và khu dân cư
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
 | 밥 | Rice/meal | Cơm; cũng có thể chỉ bữa ăn | 07 |
@@ -147,6 +155,8 @@
 
 ## Tôn giáo, nghệ thuật và di sản
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
 | 무속 | Korean shamanism | Tín ngưỡng shaman Hàn | 09 |
@@ -174,6 +184,8 @@
 | 독립공간 | Independent art space | Không gian nghệ thuật độc lập | 10 |
 
 ## Lễ hội, thành phố, mùa và đời sống số
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
@@ -208,6 +220,8 @@
 
 ## Dịch vụ, tiêu dùng và danh tiếng trực tuyến
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
 | 서비스 | Service/free extra in colloquial use | Dịch vụ; trong khẩu ngữ cũng có thể chỉ đồ tặng thêm | 33 |
@@ -231,6 +245,8 @@
 
 ## Hallyu và biến đổi xã hội
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
 | 한류 | Korean Wave | Làn sóng Hàn Quốc | 13 |
@@ -253,6 +269,8 @@
 
 ## Thuật ngữ vùng miền
 
+Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa các chapter. Hãy đọc cột giải thích cùng ví dụ và kiểm tra cách dùng trước khi áp dụng vào một trường hợp mới.
+
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
 | 방언 | Dialect | Phương ngữ | 14 |
@@ -263,6 +281,8 @@
 | 지역주의 | Regionalism | Chủ nghĩa hoặc xu hướng vùng miền | 14 |
 
 ## Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng
+
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
@@ -320,6 +340,8 @@
 
 ## Các khái niệm phân tích xuyên chương
 
+Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
+
 | Khái niệm | English | Ý nghĩa sử dụng trong bộ sách | Chương tiêu biểu |
 |---|---|---|---|
 | vòng phản hồi | Feedback loop | Đầu ra quay lại làm thay đổi điều kiện tạo đầu ra tiếp theo | 05, 12, 13, 16 |
@@ -349,6 +371,8 @@
 ## Bản đồ nguồn: nên dùng gì khi mở rộng
 
 ### Nguồn chính thức và dữ liệu
+
+Mục này là điểm tra cứu nguồn cho chủ đề vừa học. Hãy dùng nó để kiểm tra cơ quan, phạm vi, ngày hiệu lực và loại dữ liệu mà nguồn có thể xác nhận.
 
 - `국가데이터처` / Statistics Korea: dân số, hộ gia đình, già hoá, lao động và chỉ số xã hội.
 - Ministry of Culture, Sports and Tourism (`문화체육관광부`, MCST): Hallyu, chính sách văn hoá và khảo sát ngành văn hoá.

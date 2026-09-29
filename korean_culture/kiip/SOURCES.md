@@ -17,6 +17,8 @@ File DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài li
 
 ## Official / current references
 
+Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nội dung KIIP. Hãy ghi rõ tài liệu nào là nền, nội dung nào cần cập nhật và điểm nào phải tra nguồn chính thức.
+
 - 법무부 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
 - 사회통합정보망: https://www.socinet.go.kr/
 - KIIP 평가: https://www.kiiptest.org/
@@ -51,6 +53,8 @@ Không sửa âm thầm source cũ. Ví dụ:
 Cả hai được giữ để người học hiểu vì sao tài liệu cũ và thông tin hiện tại khác nhau.
 
 ## Scope tag policy
+
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
 
 - Nội dung lấy từ 8 PDF cơ bản được gắn `공통` vì đó là xương sống của 영주용 và cũng là nền tảng cho 귀화용.
 - Nội dung thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.

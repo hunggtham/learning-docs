@@ -133,6 +133,8 @@ Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 ## 17. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 cue / uncertainty
       ↓
@@ -150,6 +152,8 @@ learning loop maintained
 ```
 
 ## Evidence anchors
+
+Các evidence anchors giúp kiểm tra mô hình sợ hãi, né tránh và điều hòa theo nghiên cứu hiện hành. Hãy tách bằng chứng về mechanism khỏi kết luận điều trị cho từng cá nhân.
 
 - NICE CG113: Generalised anxiety disorder and panic disorder in adults.
 - NICE guidance for social anxiety and digitally enabled anxiety therapies.

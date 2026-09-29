@@ -109,6 +109,8 @@ Nó không optimal. Goal tìm đầu tiên phụ thuộc successor ordering.
 
 ### Khi DFS useful?
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - memory constrained;
 - solution expected deep;
 - chỉ cần any solution;
@@ -394,6 +396,8 @@ Weighted A* và iterative improvement methods can have anytime variants.
 
 ## Choosing an uninformed strategy
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Situation | Strategy intuition |
 |---|---|
 | Unit cost, shallow solution | BFS |
@@ -405,6 +409,8 @@ Weighted A* và iterative improvement methods can have anytime variants.
 Table này là starting heuristic, không substitute analysis of actual graph size, cycles, constraints và memory representation.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 BFS   = optimize depth

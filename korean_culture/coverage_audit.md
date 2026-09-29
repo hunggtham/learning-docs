@@ -24,6 +24,8 @@ Các chapter nền tảng còn bổ sung **đo lường** và **phản thực t�
 
 ### Đánh giá hiện tại
 
+Bảng này cho biết mỗi chapter đã giải thích được concept, mechanism, variation, evidence và cross-link đến mức nào. Đọc theo các cột để tìm điểm cần bổ sung, thay vì dùng nhãn trạng thái như một kết luận thay cho việc học.
+
 | Tiêu chí | Trạng thái | Nhận xét |
 |---|---|---|
 | Phạm vi kiến thức | Rất tốt | Không còn thiếu một mảng đời sống lớn cần tách thành chapter mới |
@@ -237,6 +239,8 @@ Khi một quy tắc thực tế có thể thay đổi, tài liệu nên hướng
 
 ## 8. Chính sách độ mới của dữ liệu
 
+Các số liệu dân số, hành vi nền tảng và quy định có thể thay đổi nhanh hơn phần giải thích khái niệm. Phần này đặt quy tắc ghi năm và nguồn để người đọc biết kết luận nào cần được kiểm tra lại.
+
 - số liệu dân số phải có **năm dữ liệu**;
 - khảo sát phải có **định nghĩa quần thể/mẫu** khi điều đó ảnh hưởng diễn giải;
 - dự báo phải ghi rõ là **dự báo (projection)**;
@@ -249,6 +253,8 @@ Khi một quy tắc thực tế có thể thay đổi, tài liệu nên hướng
 - quy tắc rác, trường học, căn hộ, childcare và dịch vụ phải phân biệt cấp quốc gia, cấp địa phương, quy tắc tổ chức và chuẩn mực không chính thức.
 
 ## 9. Liên kết chéo cần giữ ổn định
+
+Cross-link chỉ hữu ích khi nó có lý do học tập rõ ràng. Hãy kiểm tra mỗi liên kết có đưa người đọc tới prerequisite, ví dụ đối chiếu hay ứng dụng tiếp theo hay không.
 
 ```text
 01 Phương pháp ↔ 16 Mô hình tư duy ↔ 17 Thuật ngữ/nguồn

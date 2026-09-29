@@ -8,6 +8,8 @@ Nên đọc [Agent Systems](../10_agents_and_ai_systems/README.md), [AI System D
 
 ## Phân biệt Safety, Security, Alignment và Governance
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 An toàn (safety)
 → hệ thống có thể gây hậu quả nguy hiểm bằng cách nào?

@@ -247,6 +247,8 @@ Thu nhập thực hộ gia đình giảm
 
 ### Kịch bản cải thiện mật độ
 
+Kịch bản này xem xét liệu đơn hàng trên mỗi tuyến, kho và người dùng có đủ tăng để cải thiện unit economics. Doanh thu tăng chưa đủ nếu chi phí giao hàng và khuyến mại tăng nhanh hơn.
+
 ```text
 Khách hàng hoạt động +8%
 Số đơn mỗi khách +10%
@@ -258,6 +260,8 @@ FCF cải thiện
 ```
 
 ### Kịch bản tăng trưởng nhưng kinh tế không cải thiện
+
+Kịch bản này cảnh báo tăng trưởng GMV có thể che lỗ vận hành và chi phí thu hút khách hàng. Hãy nối volume với contribution margin, cash burn và năng lực logistics.
 
 ```text
 GMV +20%
@@ -308,6 +312,8 @@ Chỉ đúng nếu lợi ích về sẵn sàng chi trả hoặc giữ chân khá
 Sai vì hội viên tạo nghĩa vụ dịch vụ và làm thay đổi chi phí phục vụ khách hàng.
 
 ## 18. Bài tập nghiên cứu
+
+Bài tập biến câu chuyện thương mại điện tử thành các biến kiểm chứng được. Hãy tách growth, density, take rate, margin và capex trước khi kết luận về chất lượng mô hình.
 
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|

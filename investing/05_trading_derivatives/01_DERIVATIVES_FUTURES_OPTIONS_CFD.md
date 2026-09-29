@@ -37,6 +37,8 @@ Tên sản phẩm giống nhau không bảo đảm thông số giống nhau.
 
 ## 3. Giá trị danh nghĩa
 
+Trước khi tính margin hay P/L, cần biết vị thế đang kiểm soát bao nhiêu giá trị kinh tế. Notional là quy mô phơi nhiễm, không phải số tiền đã trả hoặc mức lỗ tối đa.
+
 **Giá trị danh nghĩa (notional)** là quy mô kinh tế của mức phơi nhiễm.
 
 Với hợp đồng tương lai:
@@ -52,17 +54,23 @@ Tiền ký quỹ chỉ là tài sản bảo đảm, không phải giá trị dan
 
 ## 4. Hợp đồng kỳ hạn
 
+Forward bắt đầu từ thỏa thuận song phương và rủi ro đối tác. Hãy đọc giá, ngày giao hàng, tài sản cơ sở và collateral trước khi so nó với futures niêm yết.
+
 **Hợp đồng kỳ hạn (forward)** là thỏa thuận hai bên mua hoặc bán tài sản trong tương lai theo mức giá đã định trước.
 
 Forward thường giao dịch ngoài sở (OTC), vì vậy rủi ro đối tác, tài sản bảo đảm và điều khoản đóng vị thế rất quan trọng.
 
 ## 5. Hợp đồng tương lai
 
+Futures chuẩn hóa các điều khoản và thêm clearing, margin, expiry và settlement. Điều này giảm một số rủi ro đối tác trực tiếp nhưng tạo yêu cầu ký quỹ và roll cần quản lý.
+
 **Hợp đồng tương lai (futures)** được chuẩn hóa và thường giao dịch trên sở với cơ chế bù trừ tập trung.
 
 Chuẩn hóa giúp thanh khoản tốt hơn nhưng nhà giao dịch phải tuân thủ hệ số hợp đồng, ngày đáo hạn, ký quỹ và quy tắc thanh toán của từng sản phẩm.
 
 ## 6. Ký quỹ ban đầu và ký quỹ duy trì
+
+Margin là cơ chế giữ cho hợp đồng có đủ collateral khi giá thay đổi. Phân biệt initial và maintenance margin giúp người mới hiểu vì sao một vị thế có thể bị gọi bổ sung vốn trước khi thesis dài hạn sai.
 
 **Ký quỹ ban đầu (initial margin)** là tài sản bảo đảm cần khi mở vị thế.
 
@@ -84,6 +92,8 @@ Vì vậy quản lý thanh khoản rất quan trọng ngay cả khi luận đi�
 
 ## 8. Cơ sở giá
 
+Basis nối giá futures với giá spot và chi phí/benefit nắm giữ tài sản. Basis thay đổi theo funding, storage, dividend, convenience yield và cung cầu hợp đồng, nên không phải một hằng số.
+
 **Cơ sở giá (basis)** là chênh lệch giữa giá hợp đồng tương lai và giá giao ngay theo quy ước của từng thị trường.
 
 Nó chịu ảnh hưởng của:
@@ -102,6 +112,8 @@ Gần đáo hạn, giá hợp đồng tương lai và giá giao ngay thường h
 Nếu không hiểu cơ chế thanh toán, nhà giao dịch có thể vô tình giữ hợp đồng tới giai đoạn không mong muốn.
 
 ## 10. Contango và backwardation
+
+Đường cong futures ảnh hưởng lợi suất roll bên cạnh biến động spot. Vì vậy, contango/backwardation cần được đọc như một phần của tổng lợi suất và chi phí chuyển kỳ.
 
 **Contango** thường mô tả cấu trúc trong đó giá kỳ hạn xa cao hơn giá gần hoặc giá giao ngay. **Backwardation** mô tả trường hợp ngược lại.
 
@@ -151,6 +163,8 @@ Người mua trả phí để có quyền; người bán nhận phí nhưng gán
 
 ## 15. Phí quyền chọn
 
+Premium là giá phải trả cho payoff không đối xứng. Người mua cần tách intrinsic value khỏi time value và hiểu IV, thời gian, lãi suất cùng dividend có thể làm premium thay đổi.
+
 **Phí quyền chọn (premium)** không chỉ gồm giá trị nội tại. Trước đáo hạn, giá còn phụ thuộc:
 
 - thời gian;
@@ -162,6 +176,8 @@ Người mua trả phí để có quyền; người bán nhận phí nhưng gán
 
 ## 16. Giá trị nội tại và giá trị thời gian
 
+Phần này tách hai lớp tạo nên premium trước đáo hạn. Intrinsic value nói về trạng thái hiện tại so với strike; time value phản ánh cơ hội và bất định còn lại cho tới expiry.
+
 ```text
 Giá quyền chọn
 = Giá trị nội tại
@@ -171,6 +187,8 @@ Giá quyền chọn
 Giá trị thời gian thường giảm khi đáo hạn tới gần nhưng tốc độ giảm không tuyến tính.
 
 ## 17. Độ gần tiền
+
+Moneyness đặt option vào quan hệ giữa spot và strike, từ đó quyết định payoff, delta gần đúng và phần premium là intrinsic hay time value.
 
 **Độ gần tiền (moneyness)** thường được mô tả bằng:
 
@@ -208,6 +226,8 @@ Rho đo độ nhạy với lãi suất. Với quyền chọn ngắn hạn tác �
 
 ## 23. IV không phải dự báo chắc chắn
 
+IV là mức biến động được suy ra từ giá option hiện tại, không phải lời tiên tri về realized volatility. Hãy đọc nó cùng risk premium, skew, term structure và thanh khoản.
+
 **Biến động hàm ý (implied volatility, IV)** là mức biến động làm mô hình phù hợp với giá quyền chọn đang giao dịch.
 
 Nó phản ánh đồng thời:
@@ -218,6 +238,8 @@ Nó phản ánh đồng thời:
 - nhu cầu phòng vệ.
 
 ## 24. Biến động thực hiện và biến động hàm ý
+
+So sánh realized với implied giúp kiểm tra option đang đắt/rẻ tương đối theo một giả định, nhưng cần cẩn thận với horizon, sampling và thay đổi regime.
 
 **Biến động thực hiện (realized volatility)** là biến động thật đã xảy ra. **Biến động hàm ý** là mức được suy ra từ giá quyền chọn.
 
@@ -233,17 +255,25 @@ Do đó mua quyền chọn trước sự kiện cần đúng không chỉ hướ
 
 ## 26. Quyền chọn bán bảo vệ
 
+Protective put đổi một phần premium lấy giới hạn rủi ro giảm. Câu hỏi đúng là chi phí bảo hiểm có phù hợp với mục tiêu, thời hạn và khả năng chịu drawdown của danh mục không.
+
 **Protective put** là nắm tài sản cơ sở và mua quyền chọn bán để giới hạn phần giảm dưới một vùng nhất định. Chi phí là phí quyền chọn lặp lại.
 
 ## 27. Covered call
+
+Covered call tạo thu nhập premium bằng cách bán một phần upside và convexity. Nó phù hợp với một số mục tiêu income nhưng không phải hedge giảm hoàn chỉnh.
 
 **Covered call** là nắm tài sản cơ sở và bán quyền chọn mua. Nhà đầu tư thu phí nhưng đổi lại giới hạn một phần mức tăng và đang bán độ lồi.
 
 ## 28. Chênh lệch dọc
 
+Vertical spread dùng hai strike để đổi giới hạn chi phí lấy giới hạn payoff. Phần này cần được đọc như một bài toán trade-off giữa premium, xác suất và mức chi trả tối đa.
+
 **Vertical spread** dùng hai quyền chọn cùng kỳ hạn nhưng khác giá thực hiện để giới hạn cả chi phí lẫn khoản chi trả.
 
 ## 29. Collar
+
+Collar kết hợp bảo vệ downside với việc bán upside để giảm chi phí. Thiết kế tốt phải nói rõ vùng bảo vệ, vùng bị giới hạn và điều kiện thoát.
 
 **Collar** kết hợp tài sản cơ sở, quyền chọn bán và quyền chọn mua bán ra để giảm chi phí bảo vệ nhưng giới hạn phần tăng.
 
@@ -264,9 +294,13 @@ Tỷ lệ thắng cao
 
 ## 32. Bán quyền chọn mua không có tài sản bảo đảm
 
+Naked call tạo exposure short convexity với rủi ro tăng rất lớn. Trước khi nhìn premium nhận được, hãy stress giá cơ sở, margin và gap.
+
 **Naked call** có mức lỗ lý thuyết rất lớn khi tài sản cơ sở tăng mạnh.
 
 ## 33. Bán quyền chọn bán
+
+Short put gần với cam kết mua tài sản ở strike nếu giá giảm. Premium không xóa rủi ro tail; cần tính collateral, assignment và khả năng thanh toán khi thị trường gap.
 
 **Short put** gần với cam kết mua tài sản ở giá thực hiện khi thị trường giảm. Cần tính yêu cầu ký quỹ và rủi ro nhảy giá.
 
@@ -292,21 +326,29 @@ Gần đáo hạn, giá cơ sở quanh giá thực hiện có thể làm trạng
 
 ## 37. Hoán đổi lãi suất
 
+Interest-rate swap tách rủi ro lãi suất khỏi tài sản cơ sở bằng cách đổi dòng fixed/floating. Hãy xác định notional, reset dates, curve tham chiếu và collateral trước khi đánh giá hedge.
+
 **Hoán đổi lãi suất (interest-rate swap)** thường đổi dòng thanh toán lãi cố định lấy lãi thả nổi hoặc ngược lại.
 
 Nó cho phép thay đổi mức phơi nhiễm lãi suất mà không cần mua bán toàn bộ danh mục trái phiếu.
 
 ## 38. OIS
 
+OIS dùng lãi suất qua đêm để phản ánh đường đi policy và discounting trong nhiều thị trường. Nó là cầu nối giữa kỳ vọng lãi suất ngắn hạn và định giá hợp đồng.
+
 **Hoán đổi chỉ số qua đêm (Overnight Index Swap, OIS)** dùng lãi suất qua đêm làm tham chiếu và thường được dùng để suy ra đường đi lãi suất chính sách kỳ vọng.
 
 ## 39. Hoán đổi chéo tiền tệ
+
+Cross-currency swap kết hợp rủi ro lãi suất với rủi ro FX và funding. Việc trao đổi gốc và dòng coupon tạo exposure khác với một forward đơn lẻ.
 
 **Hoán đổi chéo tiền tệ (cross-currency swap)** trao đổi dòng tiền giữa hai đồng tiền và có thể kèm trao đổi gốc.
 
 Nó liên quan chi phí nguồn vốn và cơ sở hoán đổi tiền tệ.
 
 ## 40. Hoán đổi tổng lợi suất
+
+TRS chuyển lợi suất kinh tế của asset hoặc index mà không nhất thiết chuyển quyền sở hữu trực tiếp. Người dùng phải đọc cùng collateral, counterparty và financing.
 
 **Hoán đổi tổng lợi suất (Total Return Swap, TRS)** chuyển toàn bộ lợi suất kinh tế của tài sản hoặc chỉ số giữa hai bên mà không cần chuyển quyền sở hữu trực tiếp.
 
@@ -315,6 +357,8 @@ Cấu trúc này tạo rủi ro đối tác và rủi ro tài sản bảo đảm
 # Phần X — Phái sinh tín dụng
 
 ## 41. CDS
+
+CDS chuyển một phần rủi ro credit theo hợp đồng premium–protection. Spread CDS phản ánh xác suất, recovery, liquidity và risk premium chứ không phải xác suất default thuần.
 
 **Hoán đổi rủi ro tín dụng (Credit Default Swap, CDS)** chuyển rủi ro vỡ nợ theo hợp đồng.
 
@@ -330,6 +374,8 @@ CDX, iTraxx và chỉ số tương tự gom nhiều tên tín dụng để giao 
 
 ## 43. Hoán đổi phương sai
 
+Variance swap tạo exposure trực tiếp với realized variance, nên payoff khác option thông thường và nhạy với jump, sampling, corridor và settlement.
+
 **Hoán đổi phương sai (variance swap)** tạo mức phơi nhiễm trực tiếp hơn với phương sai thực hiện so với quyền chọn thông thường.
 
 Điểm cần hiểu là biến động cũng có thể được giao dịch như một dạng rủi ro kinh tế riêng.
@@ -337,6 +383,8 @@ CDX, iTraxx và chỉ số tương tự gom nhiều tên tín dụng để giao 
 # Phần XII — CFD
 
 ## 44. CFD là gì?
+
+CFD là hợp đồng song phương nên kết quả phụ thuộc giá cơ sở, spread, financing, margin, stop-out và pháp nhân broker. Không nên đồng nhất CFD với quyền sở hữu tài sản cơ sở.
 
 **Hợp đồng chênh lệch (Contract for Difference, CFD)** là hợp đồng song phương với nhà môi giới dựa trên thay đổi giá của tài sản cơ sở.
 
@@ -373,11 +421,15 @@ Yêu cầu tài sản bảo đảm tăng trong căng thẳng có thể buộc nh
 
 ## 49. Bù trừ nghĩa vụ
 
+Netting giảm gross exposure giữa nhiều giao dịch khi điều khoản pháp lý cho phép. Giá trị của nó phụ thuộc enforceability, close-out và cấu trúc đối tác, không chỉ vào phép cộng số dư.
+
 **Bù trừ pháp lý (netting)** cho phép bù các mức phơi nhiễm giữa nhiều giao dịch cùng đối tác theo điều kiện hợp đồng.
 
 Khả năng giảm rủi ro phụ thuộc hiệu lực pháp lý của thỏa thuận.
 
 ## 50. Rủi ro sai chiều đối tác
+
+Wrong-way risk xảy ra khi đối tác yếu đi đúng lúc exposure với họ tăng. Đây là rủi ro kết hợp giữa chất lượng đối tác và trạng thái thị trường, nên cần stress chung thay vì tách riêng.
 
 **Rủi ro sai chiều (wrong-way risk)** xảy ra khi đối tác yếu đi đúng lúc mức phơi nhiễm với họ tăng.
 
@@ -386,6 +438,8 @@ Ví dụ dùng một đối tác có sức khỏe phụ thuộc cùng loại tí
 # Phần XIV — Tỷ lệ phòng vệ
 
 ## 51. Công cụ phòng vệ phải khớp loại rủi ro
+
+Trước khi chọn công cụ, hãy xác định rủi ro cần giảm là delta, duration, FX, credit, volatility, liquidity hay funding. Sơ đồ này là điểm chốt để tránh dùng một hedge đúng tên nhưng sai exposure.
 
 ```text
 Rủi ro lãi suất

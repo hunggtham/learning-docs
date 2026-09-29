@@ -4,6 +4,8 @@ Folder này giải thích **nền tảng vật lý (physical substrate)** của 
 
 ## Thứ tự đọc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 00_compute_foundations.md
 01_cpu_gpu_tpu_and_accelerators.md
@@ -17,6 +19,8 @@ Folder này giải thích **nền tảng vật lý (physical substrate)** của 
 ```
 
 ## Bản đồ phụ thuộc
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```mermaid
 flowchart TD
@@ -33,6 +37,8 @@ flowchart TD
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Toán học của mô hình
 → phép toán tensor
@@ -45,6 +51,8 @@ Toán học của mô hình
 ```
 
 ## Những phân biệt cần giữ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Dung lượng (capacity)             ≠ băng thông (bandwidth)

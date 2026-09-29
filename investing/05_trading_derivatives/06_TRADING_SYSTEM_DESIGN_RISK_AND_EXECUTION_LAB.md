@@ -51,6 +51,8 @@ Sau đó mọi giao dịch được chuẩn hóa theo R-multiple. Điều này c
 
 ## 4. Expectancy phải tách win rate và payoff
 
+Sau khi đặc tả signal và rule vào/ra, ta cần kiểm tra phân phối kết quả chứ không chỉ tỷ lệ thắng. Expectancy phải tách win rate, average win/loss, cost và tail để biết edge có thực sự dương hay không.
+
 ```text
 Expectancy
 = P(win) × AvgWin
@@ -501,6 +503,8 @@ Chọn một ý tưởng và hoàn thành:
 Nếu thiếu một bước, hệ thống chưa sẵn sàng để tăng quy mô.
 
 ## 37. Liên kết đọc tiếp
+
+Phần này bàn giao từ thiết kế hệ thống sang các chapter về derivatives, backtest, execution, robustness và case study. Hãy chọn link theo lỗ hổng trong chuỗi strategy → sizing → execution → monitoring, rồi quay lại lab để cập nhật specification.
 
 - [Phái sinh: futures, options, swaps và CFD](./01_DERIVATIVES_FUTURES_OPTIONS_CFD.md)
 - [Backtest và rủi ro hệ thống](./02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md)

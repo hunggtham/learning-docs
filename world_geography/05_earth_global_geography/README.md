@@ -47,6 +47,8 @@ Khi đọc một country profile, không nên bắt đầu từ thủ đô hay G
 
 ## Mô hình tổng hợp
 
+Sau khi nối Earth science với World Atlas, ta có thể nhìn toàn bộ thư viện như một chuỗi từ hình học và chuyển động của Địa cầu tới network xã hội. Sơ đồ này là điểm chốt để chuyển từ từng chapter sang cách đọc hệ thống.
+
 ```mermaid
 graph TD
   A[Earth shape + gravity] --> B[Geodesy + reference frame]

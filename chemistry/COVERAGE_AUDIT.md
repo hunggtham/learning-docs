@@ -16,6 +16,8 @@ feat/chemistry-knowledge-library
 
 ## Thứ tự ưu tiên audit
 
+Audit bắt đầu từ những dependency có thể làm sai nhiều chapter phía sau. Đọc các bước theo thứ tự này để hiểu vì sao một gap về nguyên tử, năng lượng hoặc cân bằng được ưu tiên trước một chủ đề ứng dụng hẹp.
+
 ```text
 1. file rỗng / skeleton
 2. chapter quá sơ sài so với phạm vi
@@ -401,6 +403,8 @@ Các khái niệm calibration/uncertainty xuất hiện ở nhiều nơi là cro
 
 ## Các overlap có chủ ý khác
 
+Những overlap dưới đây không phải nội dung trùng lặp cần xóa. Chúng là các khái niệm được định nghĩa ở một chapter rồi dùng lại trong domain khác, nên người học cần theo mũi tên để biết phần nào là nền và phần nào là ứng dụng.
+
 - activity: thermodynamics định nghĩa; acid–base/electrochemistry áp dụng;
 - diffusion: matter giải thích vật lý; kinetics/electrochemistry/environment dùng như transport limit;
 - spectroscopy: atomic structure giải thích quantum origin; analytical chemistry giải thích measurement/inference;
@@ -444,6 +448,8 @@ Không kéo dài file đã có reasoning đầy đủ chỉ để tăng số dò
 Hiện cây canonical, dependency graph, learning path và liên kết tới `COVERAGE_AUDIT.md` vẫn phản ánh đúng cấu trúc. Không chỉnh README chỉ để tạo commit.
 
 # Trạng thái pre-merge cuối
+
+Đây là bước chốt trước khi hợp nhất branch: các tiêu chí cấu trúc, ngôn ngữ, prerequisite, ví dụ và liên kết phải được kiểm tra cùng nhau. Bảng dưới đây ghi trạng thái kiểm chứng, không thay thế việc đọc các gap còn lại.
 
 ```text
 không có file rỗng/skeleton quan trọng       ✓

@@ -44,6 +44,8 @@ Một số đường dẫn quan trọng:
 
 ### `/proc/<PID>/status`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 cat /proc/1234/status
 ```
@@ -53,6 +55,8 @@ Tệp này cho thấy các trường như tên tiến trình, trạng thái, UID
 Nó hữu ích khi cần xác minh **trạng thái hiệu lực (effective state)** thay vì tin vào cấu hình mong muốn.
 
 ### `/proc/<PID>/cmdline`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 tr '\0' ' ' < /proc/1234/cmdline
@@ -64,6 +68,8 @@ Command line trong procfs dùng ký tự NUL để phân tách arguments, vì v�
 
 ### `/proc/<PID>/environ`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 tr '\0' '\n' < /proc/1234/environ
 ```
@@ -73,6 +79,8 @@ Cho phép quan sát biến môi trường (environment variables) của tiến t
 Cần đặc biệt cẩn thận vì môi trường có thể chứa token, mật khẩu hoặc secret. Không nên sao chép toàn bộ output vào ticket/chat/log nếu chưa kiểm tra dữ liệu nhạy cảm.
 
 ### `/proc/<PID>/fd`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 ls -l /proc/1234/fd
@@ -114,6 +122,8 @@ less /proc/1234/maps
 
 ## `/proc/meminfo`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 cat /proc/meminfo
 ```
@@ -125,6 +135,8 @@ Không nên tự tạo kết luận chỉ từ một trường. Ví dụ `Cached
 Xem thêm: [Bộ nhớ và bộ nhớ ảo](../06_resources/memory_virtual_memory.md).
 
 ## `/proc/loadavg`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 cat /proc/loadavg
@@ -157,6 +169,8 @@ sysctl net.ipv4.ip_forward
 `sysctl` cung cấp giao diện thân thiện hơn.
 
 ### Thay đổi tạm thời
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 sudo sysctl -w net.ipv4.ip_forward=1
@@ -195,6 +209,8 @@ ls /sys/devices
 
 ### Network interface
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 cat /sys/class/net/eth0/mtu
 cat /sys/class/net/eth0/operstate
@@ -203,6 +219,8 @@ cat /sys/class/net/eth0/operstate
 Có thể nhìn trạng thái và thuộc tính interface.
 
 ### Block device
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 ls /sys/block/sda

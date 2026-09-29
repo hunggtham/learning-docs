@@ -304,6 +304,8 @@ Transformer success is architecture + data + compute + optimization + systems co
 
 ## Limitations
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - quadratic attention at long sequences;
 - autoregressive decoding latency;
 - huge memory/compute requirements;
@@ -314,6 +316,8 @@ Transformer success is architecture + data + compute + optimization + systems co
 These motivate efficient attention, state-space models, RAG, tools and system-level verification.
 
 ## Transformer vs RNN
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 | Property | RNN/LSTM | Transformer |
 |---|---|---|
@@ -332,6 +336,8 @@ CNN hardcodes locality/translation structure. Transformer can learn global pairw
 Vision architectures increasingly mix both ideas.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Residual stream holds token representations

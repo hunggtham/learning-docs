@@ -25,6 +25,8 @@ TOEIC **không phải chỉ có một bài thi duy nhất**.
 
 # 2. TOEIC Listening & Reading — format tổng thể
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 | Section | Part | Dạng | Số câu | Thời gian |
 |---|---:|---|---:|---:|
 | Listening | Part 1 | Photographs | 6 | |
@@ -45,6 +47,8 @@ Ngoài thời gian làm bài chính, nên tính tổng khoảng **2.5–3 giờ*
 # 3. Listening — cấu trúc chi tiết
 
 ## Part 1 — Photographs
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Nội dung | Giải thích |
 |---|---|
@@ -72,6 +76,8 @@ Ngoài thời gian làm bài chính, nên tính tổng khoảng **2.5–3 giờ*
 
 ## Part 2 — Question–Response
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nội dung | Giải thích |
 |---|---|
 | **Số câu** | 25 |
@@ -94,6 +100,8 @@ Ngoài thời gian làm bài chính, nên tính tổng khoảng **2.5–3 giờ*
 
 ### Những kiểu indirect response rất quan trọng
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 | Câu hỏi | Response tự nhiên |
 |---|---|
 | Where is John? | I think he went to lunch. |
@@ -107,6 +115,8 @@ TOEIC Part 2 kiểm tra **nghĩa trong hội thoại**, không chỉ grammar.
 
 ## Part 3 — Conversations
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nội dung | Giải thích |
 |---|---|
 | **Số câu** | 39 |
@@ -117,6 +127,8 @@ TOEIC Part 2 kiểm tra **nghĩa trong hội thoại**, không chỉ grammar.
 | **Cách làm** | Đọc nhanh 3 câu hỏi trước → dự đoán chủ đề → nghe theo keyword + paraphrase |
 
 ### Dạng câu hỏi thường gặp
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Dạng | Ví dụ |
 |---|---|
@@ -133,6 +145,8 @@ TOEIC Part 2 kiểm tra **nghĩa trong hội thoại**, không chỉ grammar.
 
 ## Part 4 — Talks
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nội dung | Giải thích |
 |---|---|
 | **Số câu** | 30 |
@@ -144,6 +158,8 @@ TOEIC Part 2 kiểm tra **nghĩa trong hội thoại**, không chỉ grammar.
 | **Chiến thuật** | Đọc câu hỏi trước, xác định information slots cần nghe |
 
 ### Signals cần quen
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - `I'd like to remind you...`
 - `Please be advised that...`
@@ -159,6 +175,8 @@ TOEIC Part 2 kiểm tra **nghĩa trong hội thoại**, không chỉ grammar.
 
 ## Part 5 — Incomplete Sentences
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nội dung | Giải thích |
 |---|---|
 | **Số câu** | 30 |
@@ -168,6 +186,8 @@ TOEIC Part 2 kiểm tra **nghĩa trong hội thoại**, không chỉ grammar.
 | **Ưu tiên** | Câu grammar xử lý nhanh; không dịch toàn câu nếu không cần |
 
 ### Các nhóm grammar Part 5 phải học
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Category | Nội dung |
 |---|---|
@@ -200,6 +220,8 @@ Sau `highly` và trước noun `candidate` → cần **adjective**.
 
 ## Part 6 — Text Completion
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nội dung | Giải thích |
 |---|---|
 | **Số câu** | 16 |
@@ -221,6 +243,8 @@ Sau `highly` và trước noun `candidate` → cần **adjective**.
 
 ## Part 7 — Reading Comprehension
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nội dung | Giải thích |
 |---|---|
 | **Số câu** | 54 |
@@ -231,6 +255,8 @@ Sau `highly` và trước noun `candidate` → cần **adjective**.
 | **Mục tiêu thời gian gợi ý** | Khoảng 53–57 phút còn lại |
 
 ### Dạng câu hỏi Part 7
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Dạng | Cách xử lý |
 |---|---|
@@ -270,6 +296,8 @@ Nếu sau khoảng 30–40 giây vẫn không xác định được:
 # 6. TOEIC Scoring
 
 ## Listening & Reading
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 - Listening: **5–495**
 - Reading: **5–495**
@@ -313,6 +341,8 @@ Bảng sau là **cách chia mục tiêu học thực dụng**, không phải ph�
 
 ## Format
 
+Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
+
 | Questions | Task | Thời gian chính | Kiểm tra |
 |---|---|---|---|
 | 1–2 | Read a text aloud | 45s chuẩn bị + 45s nói/câu | Pronunciation, intonation, stress |
@@ -337,6 +367,8 @@ Không cần cấu trúc quá “advanced”; cần **clear + complete + intelli
 
 # 9. TOEIC Writing
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Questions | Task | Nội dung |
 |---|---|---|
 | 1–5 | Write a sentence based on a picture | Dùng 2 từ/cụm bắt buộc |
@@ -357,6 +389,8 @@ Không cần cấu trúc quá “advanced”; cần **clear + complete + intelli
 
 # 10. Grammar cần học cho TOEIC theo độ ưu tiên
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Priority | Grammar | Parts ảnh hưởng |
 |---:|---|---|
 | 1 | Parts of speech / word forms | P5, P6 |
@@ -376,6 +410,8 @@ Không cần cấu trúc quá “advanced”; cần **clear + complete + intelli
 | 15 | Reduced clauses | P5–P7 |
 
 ### Liên kết với bộ grammar đã tạo
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | TOEIC target | Grammar series nên chắc |
 |---|---|
@@ -425,6 +461,8 @@ Nên học:
 
 # 12. Listening skills cần luyện
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Skill | Cách luyện |
 |---|---|
 | Sound recognition | nghe nối âm/reduction |
@@ -440,6 +478,8 @@ Nên học:
 ---
 
 # 13. Reading skills cần luyện
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Skill | Giải thích |
 |---|---|
@@ -457,6 +497,8 @@ Nên học:
 ---
 
 # 14. Common TOEIC traps
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Trap | Vì sao sai |
 |---|---|
@@ -508,12 +550,16 @@ Nếu 40% lỗi là `V`, làm thêm mock test không giải quyết gốc vấn 
 
 ## Phase 1 — Foundation
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - Grammar Beginner → Pre-Intermediate
 - 1,000–2,000 từ/collocation phổ biến
 - Pronunciation cơ bản
 - Làm từng Part riêng
 
 ## Phase 2 — Part mastery
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 - P1/P2: phản xạ nghe
 - P3/P4: đọc trước câu hỏi + paraphrase
@@ -523,11 +569,15 @@ Nếu 40% lỗi là `V`, làm thêm mock test không giải quyết gốc vấn 
 
 ## Phase 3 — Timed sections
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - Listening 100 câu nguyên section
 - Reading 75 phút nguyên section
 - Phân tích timing
 
 ## Phase 4 — Full mock
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - 200 câu
 - Không pause
@@ -537,6 +587,8 @@ Nếu 40% lỗi là `V`, làm thêm mock test không giải quyết gốc vấn 
 
 ## Phase 5 — Score optimization
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - Tập trung 2–3 error categories lớn nhất
 - Re-do câu sai
 - Vocabulary từ chính đề đã làm
@@ -545,6 +597,8 @@ Nếu 40% lỗi là `V`, làm thêm mock test không giải quyết gốc vấn 
 ---
 
 # 17. Một tuần học mẫu
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Ngày | Nội dung |
 |---|---|
@@ -559,6 +613,8 @@ Nếu 40% lỗi là `V`, làm thêm mock test không giải quyết gốc vấn 
 ---
 
 # 18. TOEIC Speaking/Writing vs L&R
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Nếu mục tiêu là... | Ưu tiên |
 |---|---|
@@ -579,6 +635,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 
 # 20. Official facts cần nhớ
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - TOEIC L&R: **200 questions**
 - Listening: **100 questions / ~45 min**
 - Reading: **100 questions / 75 min**
@@ -593,6 +651,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 ---
 
 # 21. Checklist trước khi thi TOEIC
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 - [ ] Biết chính xác format P1–P7
 - [ ] Không còn lỗi grammar Beginner
@@ -612,6 +672,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 <!-- DEEP-DIVE EXPANSION 2026 -->
 
 # 22A. TOEIC L&R — bản đồ năng lực theo từng Part
+
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
 
 | Part | Bạn thực sự phải làm được | Kiến thức nền | Kỹ năng tốc độ | Dấu hiệu đã “master” |
 |---|---|---|---|---|
@@ -639,6 +701,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 
 ## 23.2 Nhóm động từ Part 1 nên phản xạ ngay
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Nhóm | Cụm thường gặp | Ví dụ |
 |---|---|---|
 | Di chuyển | walk, cross, approach, enter, leave | `A woman is approaching the entrance.` |
@@ -649,6 +713,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 | Trạng thái bị động | be parked, be displayed, be attached | `Bicycles are parked near the building.` |
 
 ## 23.3 6 bẫy hình ảnh
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Bẫy | Ví dụ |
 |---|---|
@@ -661,6 +727,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 
 ## 23.4 Drill
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 - 20 ảnh/ngày.
 - Trước khi nghe: tự nói **3 câu mô tả đúng + 2 câu sai có chủ đích**.
 - Sau khi nghe: ghi lại verb/preposition mới.
@@ -671,6 +739,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 # 24. Part 2 Deep Dive — Question–Response
 
 ## 24.1 Phân loại câu hỏi trong 0.5–1 giây đầu
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Opening | Loại đáp án cần tìm | Ví dụ response |
 |---|---|---|
@@ -687,6 +757,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 | Statement | Reaction/next action | `I'll take a look.` |
 
 ## 24.2 Indirect responses cần học như một “ngôn ngữ” riêng
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Question | Direct response | TOEIC-style indirect response |
 |---|---|---|
@@ -705,6 +777,8 @@ ETS cho biết TOEIC scores có thể được **validated trong tối đa 2 nă
 5. **Wrong speaker logic:** câu trả lời đúng grammar nhưng người nghe không thể biết thông tin đó.
 
 ## 24.4 Drill 25 câu
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 - Lần 1: thi thật, không pause.
 - Lần 2: chỉ nghe **opening 1–2 seconds**, pause và ghi loại question.
@@ -729,6 +803,8 @@ Bạn không cần nhớ nguyên câu; chỉ cần nhớ:
 
 ## 25.2 Question type → signal words
 
+Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
+
 | Type | Signals trong audio |
 |---|---|
 | Purpose | `I'm calling about...`, `I'd like to...`, `The reason I'm calling...` |
@@ -741,6 +817,8 @@ Bạn không cần nhớ nguyên câu; chỉ cần nhớ:
 | Inference | tone + contextual evidence, thường không có exact wording |
 
 ## 25.3 Paraphrase mapping examples
+
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
 
 | Audio | Answer choice có thể viết |
 |---|---|
@@ -815,6 +893,8 @@ Ví dụ audio: `Let's take the train that leaves after 2 but arrives before 5.`
 
 ## 26.2 Suffix map
 
+Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
+
 | Loại từ | Suffix thường gặp | Ví dụ |
 |---|---|---|
 | Noun | -tion, -ment, -ness, -ity, -ance, -er | application, payment, reliability |
@@ -823,6 +903,8 @@ Ví dụ audio: `Let's take the train that leaves after 2 but arrives before 5.`
 | Verb | -ize, -ify, -en | finalize, simplify, strengthen |
 
 ## 26.3 Connector vs preposition vs conjunctive adverb
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 | Form | Sau nó | Ví dụ |
 |---|---|---|
@@ -847,6 +929,8 @@ Khi blank là verb:
 
 ## 27.1 4 tầng xử lý
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 | Tầng | Câu hỏi |
 |---|---|
 | Grammar | Blank cần form gì? |
@@ -869,6 +953,8 @@ Kiểm tra 5 dấu hiệu:
 # 28. Part 7 Deep Dive — Reading Comprehension
 
 ## 28.1 Document type → nơi thường chứa thông tin
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 | Document | Nơi cần chú ý |
 |---|---|
@@ -932,6 +1018,8 @@ Ví dụ `apply`:
 
 ## 29.2 40 collocations nền nên phản xạ
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 | Topic | Collocations |
 |---|---|
 | Hiring | apply for a position; meet the qualifications; job opening; prospective employee |
@@ -949,6 +1037,8 @@ Ví dụ `apply`:
 
 # 30. Listening Training Protocol — 1 đoạn audio học 5 lần
 
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
+
 | Lượt | Việc làm | Mục tiêu |
 |---:|---|---|
 | 1 | Nghe như thi thật | Đo accuracy hiện tại |
@@ -959,6 +1049,8 @@ Ví dụ `apply`:
 
 ### Không nên
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 - nghe 10 lần nhưng không biết mình sai vì gì;
 - chỉ đọc transcript;
 - shadow đoạn quá dài ngay từ đầu.
@@ -968,6 +1060,8 @@ Ví dụ `apply`:
 # 31. Reading Training Protocol
 
 ## Part 5 set 30 câu
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
 
 - timed: 12 phút;
 - review: phân loại từng lỗi;
@@ -986,6 +1080,8 @@ Sau khi làm:
 ---
 
 # 32. Error Taxonomy TOEIC — dùng mã thống nhất
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 | Code | Meaning | Ví dụ |
 |---|---|---|
@@ -1024,6 +1120,8 @@ Mỗi tuần đếm số lỗi theo code → **học theo bottleneck lớn nhấ
 
 # 34. Kế hoạch 12 tuần — TOEIC L&R
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 | Tuần | Listening | Reading | Output |
 |---:|---|---|---|
 | 1 | P1/P2 diagnostic | P5 diagnostic | Error baseline |
@@ -1045,12 +1143,16 @@ Mỗi tuần đếm số lỗi theo code → **học theo bottleneck lớn nhấ
 
 ## Nếu có 60 phút/ngày
 
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
+
 - 15m vocab/collocation
 - 20m Listening
 - 20m Reading/grammar
 - 5m error review
 
 ## Nếu có 120 phút/ngày
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 - 20m Anki/collocation
 - 35m Listening + transcript
@@ -1059,6 +1161,8 @@ Mỗi tuần đếm số lỗi theo code → **học theo bottleneck lớn nhấ
 - 10m redo old errors
 
 ## Nếu có 180 phút/ngày
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 - 30m vocab
 - 50m Listening deep review
@@ -1069,6 +1173,8 @@ Mỗi tuần đếm số lỗi theo code → **học theo bottleneck lớn nhấ
 ---
 
 # 36. TOEIC Speaking — từng task cần nói gì
+
+Phần này nối dạng bài với kỹ năng cần thể hiện và cách tự kiểm tra. Hãy đọc chiến lược cùng ví dụ, lỗi thường gặp và tiêu chí chấm tương ứng.
 
 | Q | Minimum useful structure |
 |---:|---|
@@ -1151,6 +1257,8 @@ Không kết luận “Reading yếu”. Kết luận cụ thể:
 
 ## Target 700
 
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
+
 - [ ] Beginner + Pre-Intermediate grammar chắc
 - [ ] P2 nhận ngay WH type
 - [ ] P5 ≤15 phút
@@ -1159,6 +1267,8 @@ Không kết luận “Reading yếu”. Kết luận cụ thể:
 - [ ] Finish ≥90% Reading section
 
 ## Target 850
+
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
 
 - [ ] P5 ≤12 phút
 - [ ] P6 ≤10 phút
@@ -1170,6 +1280,8 @@ Không kết luận “Reading yếu”. Kết luận cụ thể:
 
 ## Target 900+
 
+Mục này biến mục tiêu điểm số thành kế hoạch luyện tập có thể theo dõi. Hãy xác định kỹ năng, bằng chứng tiến bộ, lỗi lặp lại và bước điều chỉnh trước khi dùng checklist.
+
 - [ ] Không còn systematic grammar errors
 - [ ] Listening mất câu chủ yếu do nuance, không do sound basic
 - [ ] P7 inference/cross-text accuracy cao
@@ -1179,6 +1291,8 @@ Không kết luận “Reading yếu”. Kết luận cụ thể:
 ---
 
 # 40. TOEIC — học gì từ bộ Grammar Series đã tạo
+
+Phần này chuyển kiến thức ngôn ngữ thành quy trình luyện thi có thể lặp lại. Hãy hiểu mục đích của bảng hoặc ví dụ trước khi ghi nhớ mẫu câu.
 
 | Grammar file | TOEIC dùng trực tiếp ở đâu |
 |---|---|

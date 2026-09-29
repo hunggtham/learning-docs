@@ -123,6 +123,8 @@ Active Share cao chỉ nói danh mục khác chỉ số nhiều. Muốn biết s
 
 ## 14. Sharpe Ratio
 
+Sharpe là bước đầu để so lợi suất vượt risk-free với volatility, nhưng không phải kết luận đầy đủ về chất lượng chiến lược. Trước khi dùng công thức, hãy xác định mẫu lợi suất, tần suất và các đuôi rủi ro có thể bị che khuất.
+
 ```text
 Sharpe = (Rp - Rf) / σp
 ```
@@ -310,6 +312,8 @@ Kịch bản stress
 Mục tiêu là nhìn thấy rủi ro chung giữa các vị thế.
 
 ## 34. Mental model cuối cùng
+
+Sơ đồ này nối đo lường với quyết định: lợi suất tạo ra phân phối, phân phối tương tác qua correlation/factor, rồi thanh khoản, leverage và stress quyết định ngưỡng hành động. Hãy đọc nó như chuỗi review chứ không như danh sách thuật ngữ.
 
 ```text
 Lợi suất → Phân phối → Tương quan → Nhân tố → Thanh khoản → Đòn bẩy

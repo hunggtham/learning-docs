@@ -4,18 +4,20 @@
 
 이 단원을 읽은 뒤 **연산자 심화 (Operators - Advanced)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
 
+Mục đích của bài này là hiểu **연산자 심화 (Operators - Advanced)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **239 - 243. 연산자 (Operators)** khi chuyển sang phần tiếp theo.
+
 ## 핵심 키워드 (Từ khóa)
 
 연산자, 심화
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞 단원의 정의를 바탕으로 절차와 비교 기준을 확장한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **연산자 (Operators)**에서 만든 기준을 이어받아 **연산자 심화 (Operators - Advanced)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
 > **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
@@ -23,14 +25,38 @@
 ---
 
 ## 연산자 심화 (Operators - Advanced)
+
+Từ **연산자 (Operators)**, ta đã có điểm tựa để bước vào **연산자 심화 (Operators - Advanced)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/77 trước khi đi vào chi tiết.
+
+Để đọc **연산자 심화 (Operators - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
 ### 240. 관계 연산자 (Relational Operators / Toán tử quan hệ)
+
+Các ý ngay dưới **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
 - 두 수의 관계를 비교하여 참(1) 또는 거짓(0)을 결과로 얻는다. (So sánh hai số trả về 1 (Đúng) hoặc 0 (Sai)).
 - `==` (Bằng), `!=` (Khác), `>`, `>=`, `<`, `<=`.
   - 💡 *Mẹo ghi nhớ*: Trong C, 0 là Sai, mọi số khác 0 đều được coi là Đúng (Thường dùng 1).
 
+Các bullet của **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **243. 대입 연산자 (Assignment Operators / Toán tử gán)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **243. 대입 연산자 (Assignment Operators / Toán tử gán)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
 ### 243. 대입 연산자 (Assignment Operators / Toán tử gán)
+
+Bây giờ ta đi vào nội dung của **243. 대입 연산자 (Assignment Operators / Toán tử gán)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
 - 연산 후 결과를 대입한다. (Thực hiện phép tính xong rồi gán kết quả lại cho biến).
 - `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`.
   - *Example / Ví dụ*: `a += 1` tương đương `a = a + 1`.
 
 *(Lưu ý: Các toán tử 산술 (Số học), 비트 (Bit), 논리 (Logic), 조건 (Điều kiện), ưu tiên 연산자 우선순위 đã được trình bày ở phần trước).*
+
+Với **243. 대입 연산자 (Assignment Operators / Toán tử gán)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Điểm chốt của **243. 대입 연산자 (Assignment Operators / Toán tử gán)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Điểm chốt của **연산자 심화 (Operators - Advanced)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **239 - 243. 연산자 (Operators)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

@@ -834,6 +834,8 @@ public class PaymentClient {
 
 # 22. `@ConfigurationProperties`: cách cấu hình nên học sớm
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 @ConfigurationProperties("payment")
 public record PaymentProperties(
@@ -937,6 +939,8 @@ Browser / Mobile / Client
 
 # 26. Viết REST Controller đầu tiên
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 @RestController
 @RequestMapping("/users")
@@ -996,6 +1000,8 @@ public List<UserResponse> find(
 ---
 
 # 28. `@RequestHeader`
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 @GetMapping("/me")
@@ -1798,6 +1804,8 @@ Không có lý do load Spring context nếu test chỉ cần plain Java behavior
 ---
 
 # 55. `@SpringBootTest`
+
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
 
 ```java
 @SpringBootTest

@@ -400,6 +400,8 @@ Một legacy app đơn module không tự động cần 50 Gradle modules, 200 u
 Đo compile time, ownership conflict, test isolation và dependency graph trước/sau.
 
 ## 33. Migration roadmap mẫu
+Phần này nối mạch Android vừa học với “33. Migration roadmap mẫu”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 Phase 0: inventory + metrics + critical characterization tests

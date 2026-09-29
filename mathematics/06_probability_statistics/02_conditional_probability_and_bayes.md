@@ -700,6 +700,10 @@ Causal or only associational claim?
 
 ## Knowledge Connection
 
+Phần kết nối đưa Bayes vào diagnostic testing, causal reasoning và machine learning. Luôn ghi rõ prior, evidence và posterior để không đảo sai denominator.
+
+Phần kết nối đặt conditional probability và Bayes vào inference, diagnostic testing và causal reasoning. Hãy kiểm tra rõ information nào đã biết trước khi đổi denominator.
+
 ```text
 conditional probability
 → product/chain rule

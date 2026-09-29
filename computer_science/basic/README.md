@@ -8,6 +8,8 @@ Triết lý xuyên suốt là **Hiểu > Ghi nhớ**, **Suy luận > Học quy t
 
 ## Cấu trúc thư viện
 
+Cấu trúc nền tảng đi từ computation và hardware tới OS, data, network, security, software và AI. Mỗi nhóm dưới đây là một lớp prerequisite; đọc phần mô tả trước khi mở danh sách chapter để biết câu hỏi chung của lớp đó.
+
 ```text
 computer_science/
 └── basic/
@@ -66,6 +68,8 @@ Nếu mục tiêu là kỹ thuật backend hoặc hệ thống, có thể ưu ti
 
 ## 00 — Tính toán và thông tin
 
+Nhóm này giải thích computation, representation, state và information trước khi nói tới máy cụ thể. Đây là nền để hiểu dữ liệu được biến đổi và đo lường thế nào.
+
 - [Khoa học máy tính thực sự nghiên cứu gì?](./00_computation_information/00_what_computer_science_studies.md)
 - [Thông tin, bit, mã hóa và biểu diễn](./00_computation_information/01_information_bits_and_encoding.md)
 - [Hệ số, số nguyên, số dấu phẩy động và dữ liệu trong bộ nhớ](./00_computation_information/02_numbers_and_machine_representation.md)
@@ -91,6 +95,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 02 — Kiến trúc máy tính
 
+Kiến trúc nối logic, CPU, memory hierarchy, storage và I/O với performance. Hãy theo data path để hiểu vì sao cùng một thuật toán có thể có chi phí khác nhau trên phần cứng.
+
 - [Logic số, cổng logic và mạch tuần tự](./02_computer_architecture/00_digital_logic_and_circuits.md)
 - [CPU, ISA và chu kỳ lệnh](./02_computer_architecture/01_cpu_isa_and_instruction_cycle.md)
 - [Phân cấp bộ nhớ, bộ nhớ đệm và tính cục bộ](./02_computer_architecture/02_memory_hierarchy_and_cache.md)
@@ -102,6 +108,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 03 — Hệ điều hành
 
+OS quản lý process, memory, filesystem, device và syscall như một lớp trung gian có policy. Các chapter giúp nối API lập trình với tài nguyên thực mà kernel kiểm soát.
+
 - [Nhân hệ điều hành, lời gọi hệ thống và các lớp trừu tượng OS](./03_operating_systems/00_kernel_syscalls_and_os_abstractions.md)
 - [Tiến trình, luồng và lập lịch](./03_operating_systems/01_processes_threads_and_scheduling.md)
 - [Đồng thời, đồng bộ hóa và bế tắc](./03_operating_systems/02_concurrency_synchronization_and_deadlock.md)
@@ -112,6 +120,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 - [Khởi động, trình điều khiển thiết bị và I/O bất đồng bộ](./03_operating_systems/07_boot_device_drivers_and_async_io.md)
 
 ## 04 — Ngôn ngữ lập trình và môi trường thực thi
+
+Nhóm này đi từ syntax và semantics tới runtime, type, memory, concurrency và compilation. Mục tiêu là giải thích code chạy ra sao, không chỉ cách viết cú pháp.
 
 - [Ngữ nghĩa ngôn ngữ lập trình và mô hình thực thi](./04_programming_languages/00_language_semantics_and_execution_models.md)
 - [Kiểu, giá trị, tham chiếu và quản lý bộ nhớ](./04_programming_languages/01_types_values_references_and_memory.md)
@@ -125,6 +135,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 05 — Dữ liệu và cơ sở dữ liệu
 
+Dữ liệu cần model, storage, query, transaction và integrity trước khi tối ưu. Hãy đọc theo đường từ schema tới workload và consistency.
+
 - [Mô hình dữ liệu và hệ quản trị cơ sở dữ liệu](./05_data_databases/00_data_models_and_database_systems.md)
 - [Mô hình quan hệ, khóa và chuẩn hóa](./05_data_databases/01_relational_model_keys_and_normalization.md)
 - [Giao dịch, ACID và điều khiển đồng thời](./05_data_databases/02_transactions_acid_and_concurrency_control.md)
@@ -135,6 +147,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 - [NoSQL, cơ sở dữ liệu phân tán và phân tích](./05_data_databases/07_nosql_distributed_and_analytical_databases.md)
 
 ## 06 — Mạng và hệ thống phân tán
+
+Nhóm này mở rộng một máy thành nhiều node qua packet, protocol, latency, failure và coordination. Các chapter luôn phải chỉ rõ assumption nào bị phá khi network không đáng tin.
 
 - [Các tầng mạng, gói tin và đóng gói](./06_networks_distributed_systems/00_network_layers_packets_and_encapsulation.md)
 - [Ethernet, IP, chia subnet và định tuyến](./06_networks_distributed_systems/01_ethernet_ip_subnetting_and_routing.md)
@@ -148,6 +162,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 07 — Bảo mật và độ tin cậy
 
+Security và reliability cùng bắt đầu từ boundary, failure mode và blast radius. Hãy đọc control cùng chi phí, observability và recovery thay vì xem chúng là checklist công nghệ.
+
 - [Mô hình đe dọa và nguyên tắc bảo mật](./07_security_reliability/00_threat_models_and_security_principles.md)
 - [Hàm băm, MAC, mật mã đối xứng và khóa công khai](./07_security_reliability/01_cryptography_foundations.md)
 - [Danh tính, xác thực và phân quyền](./07_security_reliability/02_identity_authentication_and_authorization.md)
@@ -160,6 +176,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 08 — Hệ thống phần mềm
 
+Software systems nối abstraction, modularity, state, time, serialization, performance và scalability. Đây là lớp giải thích vì sao component riêng lẻ tương tác thành hành vi toàn hệ thống.
+
 - [Trừu tượng hóa, mô-đun, giao diện và hợp đồng API](./08_software_systems/00_abstraction_modularity_interfaces_and_apis.md)
 - [Quản lý phiên bản, xây dựng, liên kết và phụ thuộc gói](./08_software_systems/01_version_control_build_link_and_packages.md)
 - [Độ trễ, thông lượng, dung lượng và khả năng mở rộng](./08_software_systems/02_performance_capacity_and_scalability.md)
@@ -171,6 +189,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 09 — Kỹ nghệ phần mềm
 
+Software engineering biến yêu cầu và thay đổi thành quy trình thiết kế, kiểm thử, phát hành và bảo trì. Các chapter nối quyết định kỹ thuật với rủi ro và feedback từ production.
+
 - [Yêu cầu, đặc tả và quy trình kỹ nghệ](./09_software_engineering/00_requirements_specification_and_engineering_process.md)
 - [Kiến trúc phần mềm và suy luận thiết kế](./09_software_engineering/01_software_architecture_and_design_reasoning.md)
 - [Kiểm thử, chất lượng và chiến lược kiểm chứng](./09_software_engineering/02_testing_quality_and_verification_strategy.md)
@@ -178,6 +198,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 - [Bảo trì, tiến hóa và nợ kỹ thuật](./09_software_engineering/04_maintenance_evolution_and_technical_debt.md)
 
 ## 10 — Nền tảng trí tuệ nhân tạo
+
+AI foundations đặt bài toán, representation, search, learning và evaluation trên nền computation và probability. Hãy giữ rõ sự khác nhau giữa model, data và system.
 
 - [Mô hình hóa bài toán AI, tìm kiếm và tác tử](./10_ai_foundations/00_ai_problem_formulation_search_and_agents.md)
 - [Biểu diễn tri thức, suy luận và suy luận xác suất](./10_ai_foundations/01_knowledge_reasoning_and_probabilistic_inference.md)
@@ -187,6 +209,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 11 — Tương tác người–máy và đồ họa máy tính
 
+HCI và graphics nối perception, input, rendering, timing và accessibility với trải nghiệm người dùng. Đúng về mặt kỹ thuật chưa đủ nếu sai về thời điểm hoặc khả năng tiếp cận.
+
 - [HCI, yếu tố con người và mô hình tương tác](./11_hci_graphics/00_hci_human_factors_and_interaction_models.md)
 - [Thiết kế giao diện, khả năng tiếp cận và tính dễ sử dụng](./11_hci_graphics/01_interface_design_accessibility_and_usability.md)
 - [Đường ống đồ họa máy tính và hình học](./11_hci_graphics/02_computer_graphics_pipeline_and_geometry.md)
@@ -195,12 +219,16 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 
 ## 12 — Công nghệ tính toán, xã hội, đạo đức và nghề nghiệp
 
+Nhóm này đặt systems trong bối cảnh con người, tổ chức, quyền riêng tư, fairness và trách nhiệm nghề nghiệp. Nó giúp kiểm tra externality mà mô hình kỹ thuật thuần túy dễ bỏ qua.
+
 - [Đạo đức công nghệ, quyền riêng tư và trách nhiệm nghề nghiệp](./12_society_ethics_profession/00_computing_ethics_privacy_and_professional_responsibility.md)
 - [Quản trị dữ liệu, thiên lệch và tác động thuật toán](./12_society_ethics_profession/01_data_governance_bias_and_algorithmic_impact.md)
 - [Luật phần mềm, giấy phép và sở hữu trí tuệ](./12_society_ethics_profession/02_software_law_licenses_and_intellectual_property.md)
 - [Tính bền vững, khả năng tiếp cận và hạ tầng xã hội số](./12_society_ethics_profession/03_sustainability_accessibility_and_social_infrastructure.md)
 
 ## 90 — Kết nối kiến thức
+
+Các connection chapter nối nhiều tầng bằng symptom và failure thực tế. Hãy dùng chúng sau khi học domain riêng để luyện chuyển mental model giữa các lớp.
 
 - [Từ mã nguồn đến CPU](./90_connections/00_source_code_to_cpu.md)
 - [Từ yêu cầu trình duyệt đến cơ sở dữ liệu và quay về](./90_connections/01_browser_to_database_request.md)
@@ -209,6 +237,8 @@ Nhóm này giữ phần DSA cần thiết làm nền cho toàn bộ Khoa học m
 - [Các tầng trừu tượng và sự rò rỉ trừu tượng](./90_connections/04_abstraction_layers_and_leaky_abstractions.md)
 
 ## Tài liệu tham chiếu
+
+Reference hỗ trợ tra thuật ngữ, quy ước và nguồn sau khi đã có mô hình nền. Nó không thay thế route học nhưng giúp giữ tên gọi và liên kết nhất quán.
 
 - [Bảng thuật ngữ Việt / Anh / Hàn](./99_glossary.md)
 - [Kiểm tra phạm vi kiến thức](./COVERAGE_AUDIT.md)

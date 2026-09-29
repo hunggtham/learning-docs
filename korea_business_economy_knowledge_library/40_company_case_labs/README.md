@@ -29,6 +29,8 @@ Các file sử dụng ba loại dữ liệu. **Sự thật cấu trúc (structur
 
 ## Bản đồ các bài thực hành
 
+Bản đồ này cho biết mỗi case luyện một cơ chế khác nhau: chu kỳ bán dẫn, nền tảng, tài chính, logistics hoặc PF. Hãy chọn case theo kỹ năng còn yếu và đọc nó như một bài lab có giả thuyết, dữ liệu và post-mortem.
+
 | Bài thực hành | Cơ chế kinh tế trung tâm | Kỹ năng chính |
 |---|---|---|
 | [Samsung Electronics](./00_samsung_electronics_semiconductor_cycle_case.md) | Điện tử đa phân khúc + bán dẫn | tách phân khúc, chu kỳ, chi tiêu vốn (CAPEX) |
@@ -74,6 +76,8 @@ Xây dựng/PF
 
 ## Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu
 
+Route này bắt đầu từ chu kỳ công nghiệp và đi qua capex, backlog, nguyên liệu, tỷ giá và vốn lưu động. Nó phù hợp khi muốn hiểu cách một shock toàn cầu đi vào doanh nghiệp Hàn Quốc.
+
 ```text
 Samsung Electronics
 → SK hynix
@@ -86,6 +90,8 @@ Lộ trình này cho thấy sản xuất Hàn Quốc không phải một khu v�
 
 ## Lộ trình 2 — Kinh tế số và dịch vụ
 
+Route này tập trung vào network effect, cloud/AI, density và monetization. Hãy chú ý sự khác nhau giữa tăng người dùng, tăng doanh thu và tạo cash flow.
+
 ```text
 NAVER
 → Coupang
@@ -95,6 +101,8 @@ NAVER
 NAVER giúp hiểu cách một nền tảng số chuyển quy mô người dùng thành doanh thu, đồng thời vẫn phải đầu tư CAPEX cho AI và đám mây. Coupang cho thấy một công ty số có thể đồng thời là một mạng lưới logistics vật lý rất lớn. LG CNS cho thấy doanh nghiệp CNTT cho khách hàng doanh nghiệp lại phụ thuộc mạnh vào tỷ lệ sử dụng nhân lực, hợp đồng dự án và dịch vụ quản lý có tính lặp lại.
 
 ## Lộ trình 3 — Hệ thống tài chính và đòn bẩy
+
+Route này dùng credit, collateral, PF và tái cấp vốn để luyện cách đọc rủi ro bảng cân đối. Mục tiêu là nhận ra liquidity stress trước khi nó thành solvency problem.
 
 ```text
 Shinhan Financial Group

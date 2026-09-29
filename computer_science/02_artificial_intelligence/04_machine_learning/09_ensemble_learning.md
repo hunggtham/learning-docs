@@ -116,6 +116,8 @@ Quá nhiều boosting rounds có thể overfit, dù tree boosting thường over
 
 ## Bagging vs Boosting
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Aspect | Bagging | Boosting |
 |---|---|---|
 | Primary goal | giảm variance | giảm bias, tiếp tục sửa error |
@@ -151,6 +153,8 @@ Trên nhiều structured/tabular tasks với dataset vừa phải, Gradient Boos
 Inductive bias của trees rất hợp threshold, heterogeneous scale và feature interaction trong tabular data.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Bagging  = nhiều góc nhìn độc lập + average → ổn định hơn

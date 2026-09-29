@@ -64,6 +64,8 @@ Prompt không phải security boundary.
 
 ## RAG, Fine-Tuning và Tooling giải quyết bài toán khác nhau
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 RAG       → kiến thức ngoài model hoặc cần cập nhật
 Fine-tune → điều chỉnh behavior, style hoặc task distribution
@@ -222,6 +224,8 @@ Downstream call phải nhận deadline còn lại. Timeout 10 giây ở một de
 
 ## Fallback và Graceful Degradation
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 preferred model
 → fallback model
@@ -263,6 +267,8 @@ User query
 Failure có thể đến từ parser, index stale, ACL filter, retrieval miss, context truncation hoặc unsupported claim. Vì vậy cần component evaluation riêng, xem [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md).
 
 ## Agent Architecture
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Goal
@@ -382,6 +388,8 @@ provider lock-in risk
 ```
 
 ## Failure Modes xuyên suốt hệ thống
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 retrieval stale

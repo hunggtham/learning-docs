@@ -106,6 +106,8 @@ Three primitive path structures matter.
 
 ### Chain
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 X → Z → Y
 ```
@@ -118,6 +120,8 @@ X\perp Y\mid Z
 
 ### Fork
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 X ← Z → Y
 ```
@@ -129,6 +133,8 @@ X\perp Y\mid Z
 \]
 
 ### Collider
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 X → Z ← Y
@@ -405,6 +411,8 @@ LLM explains with sources
 Graph encodes uncertainty/structure; LLM handles language interface/explanation.
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Node      = random variable

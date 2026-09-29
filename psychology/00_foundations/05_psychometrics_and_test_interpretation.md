@@ -168,6 +168,8 @@ Xem [[09_replication_meta_analysis_and_bayesian_reasoning]].
 
 ### Established evidence
 
+Phần này gom các nguyên tắc đo lường đã có nền tảng tương đối chắc: reliability, validity, norms và measurement error. Hãy đọc chúng như điều kiện để diễn giải score, không như bảo đảm test luôn đúng.
+
 - observed score luôn cần được hiểu qua measurement error;
 - reliability không đồng nghĩa validity;
 - validity support phải gắn interpretation/use;
@@ -194,6 +196,8 @@ Cutoff “reliability đủ tốt”, fit-index thresholds, mức invariance t�
 
 ## 18. Mental model
 
+Mental model này đi từ construct tới item, score, uncertainty và quyết định. Nó giúp người đọc hỏi đúng: test đang đo gì, sai số ở đâu và kết luận nào vượt quá dữ liệu.
+
 ```text
 Construct definition
       ↓
@@ -219,6 +223,8 @@ Một score chỉ mạnh bằng weakest link trong inference chain.
 Đọc cùng [[03_measurement_statistics]], [[06_open_science_and_evidence_evaluation]], [[09_replication_meta_analysis_and_bayesian_reasoning]], [[../02_learning_and_cognition/03_intelligence_and_cognitive_differences]], [[../03_human_development_and_person/03_personality]] và [[../04_mental_health/01_assessment_and_diagnosis]].
 
 ### Nguồn định hướng
+
+Các nguồn định hướng giúp đối chiếu psychometric claim, fairness và cách diễn giải test. Hãy ưu tiên tài liệu nêu rõ population, reliability và validity evidence.
 
 - *Standards for Educational and Psychological Testing* — AERA, APA, NCME.
 - Best-practice guidelines hiện đại về scale development/validation trong psychological và behavioral sciences.

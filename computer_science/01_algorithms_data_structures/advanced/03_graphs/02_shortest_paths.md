@@ -98,6 +98,8 @@ Do đó khi pop một trạng thái (state) non-stale tốt nhất, khoảng cá
 
 ### Java với stale-entry mẫu
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 record Edge(int to, long w) {}
 record State(int node, long dist) {}
@@ -425,6 +427,8 @@ MST                -> tối ưu total infrastructure cost
 Đừng chọn thuật toán chỉ vì cả hai “trông như chọn cạnh nhỏ”.
 
 ## Decision table
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 | trọng số / structure | thuật toán tự nhiên |
 |---|---|

@@ -128,6 +128,8 @@ Time inverse-proportional với workers. Real teams violate assumptions vì comm
 
 ## Percentage chỉ là ratio trên base 100
 
+Phần trăm là một ratio có mẫu chuẩn bằng 100. Đọc nó theo base giúp phân biệt phần trăm, percentage point và thay đổi tương đối trong các bài toán thực tế.
+
 ```math
 15\%=\frac{15}{100}=0.15.
 ```

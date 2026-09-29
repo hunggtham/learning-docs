@@ -631,6 +631,8 @@ Series convergence biến thành engineering question: bao nhiêu terms đủ?
 
 ## Knowledge Connection
 
+Phần kết nối đặt hội tụ và power series cạnh approximation, probability, differential equations và numerical computation. Hãy xem điều kiện hội tụ như ranh giới an toàn của phép biến đổi.
+
 ```text
 sequence limits
 → partial sums

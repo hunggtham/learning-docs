@@ -262,6 +262,8 @@ Collection type nên nói intent của domain. Nếu business invariant là “k
 
 # 10. `ArrayList.remove()` overload trap
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 List<Integer> values =
     new ArrayList<>(
@@ -302,6 +304,8 @@ remove() không tìm thấy object
 ---
 
 # 12. Mutable keys là lỗi nguy hiểm
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 final class UserKey {
@@ -466,6 +470,8 @@ Comparator phải consistent enough với ordering contract: antisymmetry/transi
 
 # 18. Immutable, Unmodifiable và Defensive Copy khác nhau
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 List<String> original =
     new ArrayList<>();
@@ -499,6 +505,8 @@ Nhưng nếu elements mutable, shallow copy không deep-copy elements. Ownership
 ---
 
 # 19. Stream là lazy pipeline
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 Stream<User> stream =
@@ -613,6 +621,8 @@ Collectors giúp biến stream thành aggregated data structures.
 
 # 22. `toMap` duplicate key trap
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 users.stream()
      .collect(
@@ -660,6 +670,8 @@ Dùng specialized collectors/methods khi dễ đọc hơn. Không biến mọi a
 
 # 24. Primitive Streams
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 int totalAge =
     users.stream()
@@ -674,6 +686,8 @@ Hot data-processing code có thể benefit, nhưng clarity trước. Đừng dù
 ---
 
 # 25. Parallel Stream
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 users.parallelStream()
@@ -771,6 +785,8 @@ Không expose raw SQL exception cho REST client.
 ---
 
 # 29. Try-with-resources và suppressed exceptions
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 try (Resource a = openA();
@@ -1128,6 +1144,8 @@ Critical section nên chỉ chứa state operations cần bảo vệ. Đừng gi
 
 # 42. `volatile`
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 private volatile boolean running = true;
 ```
@@ -1157,6 +1175,8 @@ Volatile không phải “lightweight synchronized replacement”; nó giải co
 ---
 
 # 43. Atomic Classes
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 AtomicInteger counter =
@@ -1209,6 +1229,8 @@ Chọn semantics trước throughput.
 ---
 
 # 45. `ReentrantLock`
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 lock.lock();
@@ -1315,6 +1337,8 @@ Không chọn policy mà không biết business consequence của rejected task.
 ---
 
 # 50. Future
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 Future<Result> future =
@@ -1428,6 +1452,8 @@ Concurrency collection name không tự nghĩa “better list”.
 
 # 54. BlockingQueue và Producer/Consumer
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 BlockingQueue<Job> queue =
     new ArrayBlockingQueue<>(1000);
@@ -1483,6 +1509,8 @@ future.thenCompose(
 
 # 56. Combine independent futures
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 CompletableFuture<User> user =
     loadUser();
@@ -1519,6 +1547,8 @@ Hidden common pool là hidden capacity.
 ---
 
 # 58. CompletableFuture errors
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 future.exceptionally(
@@ -1683,6 +1713,8 @@ Useful cho nested-like local recovery nhưng complexity tăng. Đừng dùng sav
 ---
 
 # 65. JDBC Batch
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 statement.addBatch();
@@ -1903,6 +1935,8 @@ chủ yếu hữu ích khi cần annotations trên lambda params.
 
 # 74. Standard HTTP Client Java 11
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 HttpClient client =
     HttpClient.newBuilder()
@@ -2018,6 +2052,8 @@ Dùng khi decision là data-oriented closed variants. Nếu mỗi subtype có be
 ---
 
 # 78. Record Patterns Java 21
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 record Point(int x, int y) {

@@ -451,6 +451,8 @@ Cần theo dõi chuẩn kiểm tra, phân bố tín hiệu và sai số dự đo
 
 # Một workflow thẩm định hợp lý
 
+Thẩm định không phải một phép thử đơn lẻ mà là chuỗi chứng minh phương pháp phù hợp với mục đích đo. Workflow dưới đây đi từ measurand và mẫu tới độ đúng, độ không đảm bảo và xác nhận độc lập.
+
 ```text
 xác định mục đích
 → định nghĩa measurand

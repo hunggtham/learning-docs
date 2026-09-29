@@ -10,6 +10,8 @@ Vòng đời phần mềm (Software Life Cycle) là nền tảng của phương 
 - Hình thức biểu diễn vòng đời phần mềm được gọi là mô hình vòng đời phần mềm (Software Life Cycle Model), và cũng được gọi là mô hình quy trình phần mềm (Software Process Model) hoặc mô hình kỹ nghệ phần mềm (Software Engineering Paradigm). 
 ### **<mark>002</mark>** Kỹ nghệ Phần mềm (Software Engineering)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Mô hình thác nước (Waterfall Model) là mô hình vòng đời phần mềm (Software Life Cycle Model) truyền thống lâu đời nhất và được sử dụng rộng rãi nhất trong kỹ nghệ phần mềm (Software Engineering), còn được gọi là mô hình vòng đời cổ điển (Classic Life Cycle Model). 
 - Đây là mô hình tuần tự tuyến tính (Linear Sequential Model), trong đó một giai đoạn của quá trình phát triển phần mềm phải kết thúc thì mới có thể chuyển sang giai đoạn tiếp theo. 
 - Có nhiều kinh nghiệm và trường hợp thành công áp dụng mô hình này. 
@@ -17,6 +19,8 @@ Vòng đời phần mềm (Software Life Cycle) là nền tảng của phương 
 ###### Khái niệm về Kỹ nghệ Phần mềm (Software Engineering)
 Kỹ nghệ phần mềm (SE; Software Engineering) là một ngành học được nghiên cứu như một giải pháp nhằm vượt qua khủng hoảng phần mềm (Software Crisis), hướng tới mục tiêu nâng cao chất lượng (Quality) và năng suất (Productivity) của phần mềm thông qua nhiều phương pháp luận (Methodology), công cụ (Tools) và kỹ thuật quản lý (Management Techniques). 
 ###### Các nguyên tắc cơ bản của Kỹ nghệ Phần mềm (Software Engineering)
+Phần “Các nguyên tắc cơ bản của Kỹ nghệ Phần mềm (Software Engineering)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Phải liên tục áp dụng các kỹ thuật lập trình (Programming Techniques) hiện đại. 
 - Phải liên tục kiểm chứng (Verification) để đảm bảo chất lượng của phần mềm được phát triển luôn được duy trì. 
 - Phải duy trì hồ sơ ghi chép rõ ràng về các vấn đề và kết quả liên quan đến phát triển phần mềm. 
@@ -83,6 +87,8 @@ XP (eXtreme Programming) là phương pháp nâng cao năng suất phát triển
 |Bước 3|Nắm bắt cấu trúc phần cứng (Hardware Structure)|Ghi rõ thông số kỹ thuật chính và số lượng máy chủ (Server) mà các hệ thống nghiệp vụ đơn vị vận hành, cũng như việc áp dụng cơ chế dự phòng/nhân bản (Redundancy/Dualization) của máy chủ|
 ||Nắm bắt cấu trúc mạng (Network Structure)|Lập sơ đồ cấu trúc mạng (Network Diagram) thể hiện vị trí máy chủ và phương thức kết nối mạng giữa các máy chủ|
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Các phương pháp<br>(Practice)<br>**010**<br>Cốt lõi|thực hành chính của XP<br>(XP Practices)<br>2400331|
 |---|---|
 |Pair Programming<br>(Lập trình cặp)|Tạo môi trường chia sẻ chung trách nhiệm phát triển bằng cách thực hiện lập trình cùng với người khác|
@@ -116,6 +122,8 @@ DBMS (DataBase Management System) là phần mềm (Software) quản lý cơ s�
 ### **<mark>015</mark>** Định nghĩa yêu cầu (Requirement Definition)
 Yêu cầu (Requirement) thể hiện mô tả về các dịch vụ mà phần mềm (Software) cung cấp để giải quyết một vấn đề nào đó và các điều kiện ràng buộc (Constraint) cần thiết để hệ thống vận hành bình thường. 
 ###### Phân loại yêu cầu (Requirement Types)
+Phần “Phân loại yêu cầu (Requirement Types)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Phân loại|Nội dung|
 |---|---|
 |Yêu cầu<br>chức năng<br>(Functional<br>requirements)|• Các vấn đề về việc hệ thống (System) làm gì, thực hiện chức năng (Function) nào<br>• Các vấn đề về những gì phải bao gồm trong đầu vào (Input) hoặc đầu ra (Output) của hệ thống, dữ liệu nào hệ thống phải lưu trữ hoặc thực hiện phép toán (Computation)<br>• Chức năng mà hệ thống bắt buộc phải thực hiện<br>• Chức năng mà người dùng muốn nhận được thông qua hệ thống|
@@ -184,6 +192,8 @@ Từ điển dữ liệu (DD; Data Dictionary) định nghĩa và ghi lại chi 
 ### CASE dành cho Phân tích yêu cầu **021** (Công cụ tự động hóa)
 Công cụ tự động hóa cho việc phân tích yêu cầu (CASE tools) là các công cụ được phát triển để tự động phân tích các yêu cầu và mô tả tài liệu đặc tả phân tích yêu cầu. 
 ###### Phân loại
+Phần “Phân loại” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - SADT (Structured Analysis and Design Technique) 
 - Do công ty SoftTech phát triển, là công cụ phân tích và thiết kế có cấu trúc được sử dụng rộng rãi cho định nghĩa hệ thống, phân tích yêu cầu phần mềm, và thiết kế hệ thống/phần mềm. 
 - SREM (Software Requirements Engineering Methodology) = RSL/REVS 
@@ -209,6 +219,8 @@ HIPO (Hierarchy Input Process Output - Sơ đồ phân cấp đầu vào, xử l
 - Dễ dàng thay đổi và bảo trì (Maintenance). 
 - Việc chia nhỏ các chức năng của hệ thống thành nhiều mô-đun (Module) riêng biệt và biểu diễn giao diện (Interface) giữa chúng dưới dạng cấu trúc phân cấp (Hierarchy structure) được gọi là HIPO Chart (Biểu đồ HIPO). 
 ###### Các loại HIPO Chart
+Phần “Các loại HIPO Chart” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Sơ đồ trực quan (Mục lục sơ đồ) (Visual Table of Contents): Sơ đồ cấu trúc cây (Tree structure) thể hiện tổng thể chức năng và luồng (Flow) của hệ thống. 
 - Sơ đồ tổng thể (Sơ đồ tổng quát, Sơ đồ khái quát) (Overview Diagram): Biểu đồ mô tả các chức năng cấu thành chương trình, cung cấp thông tin tổng quan về đầu vào (Input), xử lý (Process) và đầu ra (Output). 
 - Sơ đồ chi tiết (Detailed Diagram): Biểu đồ mô tả chi tiết các yếu tố cơ bản cấu thành nên chức năng được hiển thị trong sơ đồ tổng thể. 
@@ -234,6 +246,8 @@ Biểu đồ (Diagram) là sự biểu diễn các sự vật (Things) và mối
 - Giúp ích cho việc giao tiếp bằng cách cung cấp các góc nhìn (View) trực quan hóa hệ thống từ nhiều góc độ khác nhau. 
 - Trong mô hình hóa tĩnh (Static modeling), sơ đồ cấu trúc (Structural diagram) thường được sử dụng, còn trong mô hình hóa động (Dynamic modeling), sơ đồ hành vi (Behavioral diagram) chủ yếu được sử dụng. 
 ###### • Các loại sơ đồ hành vi (Behavioral Diagram)
+Phần “• Các loại sơ đồ hành vi (Behavioral Diagram)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 | Sơ đồ Use Case<br>(Use Case<br>Diagram)                        | • Phân tích yêu cầu của người dùng, được sử dụng trong công việc mô hình hóa chức năng (Functional modeling)<br>• Bao gồm tác nhân (Actor) và trường hợp sử dụng (Use Case), giữa các trường hợp sử dụng được tạo thành từ nhiều dạng mối quan hệ khác nhau                |
 | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sơ đồ tuần tự<br>(Sequence<br>Diagram)                         | Biểu diễn các thông điệp (Message) được trao đổi giữa các hệ thống hoặc đối tượng (Object) tương tác với nhau                                                                                                                                                              |
@@ -243,6 +257,8 @@ Biểu đồ (Diagram) là sự biểu diễn các sự vật (Things) và mối
 | Sơ đồ tổng quan tương tác<br>(Interaction<br>Overview Diagram) | Biểu diễn luồng điều khiển (Control flow) giữa các sơ đồ tương tác (Interaction diagram)                                                                                                                                                                                   |
 | Sơ đồ thời gian<br>(Timing Diagram)                            | Biểu diễn một cách rõ ràng sự thay đổi trạng thái của đối tượng và các ràng buộc thời gian (Time constraints)                                                                                                                                                              |
 ###### • Các loại sơ đồ cấu trúc (Structural Diagram)
+Phần “• Các loại sơ đồ cấu trúc (Structural Diagram)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 ||• Biểu diễn các lớp (Class), thuộc tính (Attribute) của lớp|
 |---|---|
 |Sơ đồ lớp<br>(Class Diagram)|và mối quan hệ giữa các lớp<br>• Có thể nắm bắt cấu trúc hệ thống và đưa ra các vấn đề về mặt cấu trúc|
@@ -252,6 +268,8 @@ Biểu đồ (Diagram) là sự biểu diễn các sự vật (Things) và mối
 |Sơ đồ cấu trúc phức hợp<br>(Composite<br>Structure Diagram)|Biểu diễn cấu trúc bên trong khi một lớp (Class) hoặc thành phần (Component) có cấu trúc phức hợp|
 |Sơ đồ gói<br>(Package Diagram)|Biểu diễn mối quan hệ giữa các gói (Package) gom nhóm các phần tử mô hình (Model element) như Use Case hoặc lớp (Class)|
 ### **<mark>026</mark>** Kiểu mẫu (Stereotype)
+Phần “**<mark>026</mark>** Kiểu mẫu (Stereotype)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |23.7, 22.7, 20.6|
 |---|
 Kiểu mẫu (Stereotype) được sử dụng để biểu diễn các chức năng bổ sung ngoài các chức năng cơ bản được thể hiện trong UML (Unified Modeling Language). 
@@ -296,6 +314,8 @@ Các thành phần cấu tạo của Biểu đồ Trình tự (Sequence Diagram)
 #### Đặc trưng của Giao diện người dùng (UI - User Interface)
 ### **<mark>030</mark>**
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Là yếu tố quan trọng ảnh hưởng lớn nhất đến độ hài lòng của người dùng, và là phần phát sinh nhiều thay đổi nhất trong lĩnh vực phần mềm (Software). 
 - Bằng cách nâng cao tính tiện lợi và khả năng dễ đọc của người dùng, nó giúp rút ngắn thời gian làm việc và tăng mức độ hiểu biết đối với công việc. 
 - Giúp đạt được kết quả mong muốn với nỗ lực tối thiểu. 
@@ -306,10 +326,14 @@ Chỉ học những phần có trong đề thi!
 - Đóng vai trò trung gian giữa bên cung cấp thông tin và người tiêu dùng thông tin. 
 - Để thiết kế giao diện người dùng (UI - User Interface), nhất định phải nắm vững kiến trúc phần mềm (Software Architecture). 
 ### **<mark>033</mark>** Hướng dẫn thiết kế Giao diện người dùng (UI Design Guidelines)
+Phần “**<mark>033</mark>** Hướng dẫn thiết kế Giao diện người dùng (UI Design Guidelines)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Lấy người dùng làm trung tâm (User-Centered) : Cung cấp môi trường mà người dùng có thể dễ dàng hiểu và sử dụng tiện lợi, dựa trên sự hiểu biết về người dùng thực tế. 
 - Khả năng sử dụng (Usability) : Nói đến việc người dùng có thể hiểu phần mềm (Software) nhanh chóng và dễ dàng đến mức nào, sử dụng tiện lợi và hiệu quả đến đâu; đây là yếu tố phải được xem xét ưu tiên hàng đầu khi thiết kế giao diện người dùng (UI). 
 ### **<mark>031</mark>** Phân loại Giao diện người dùng (UI Classification)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - CLI (Command Line Interface - Giao diện dòng lệnh) : Giao diện trong đó lệnh và đầu ra được thực hiện dưới dạng văn bản (Text). 
 - GUI (Graphical User Interface - Giao diện đồ họa người dùng) : Giao diện môi trường đồ họa thực hiện thao tác bằng cách chọn biểu tượng (Icon) hoặc thực đơn (Menu) bằng chuột. 
 - NUI (Natural User Interface - Giao diện người dùng tự nhiên) : Giao diện điều khiển thiết bị bằng cử chỉ hoặc lời nói của người dùng. 
@@ -320,6 +344,8 @@ Chỉ học những phần có trong đề thi!
 #### Tính năng của Hệ thống phát triển Giao diện người dùng (User Interface Development System)
 ### **034**
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Phải có khả năng kiểm tra tính hợp lệ (Validation) đối với đầu vào của người dùng. 
 - Phải có khả năng xử lý lỗi (Error Handling) và hiển thị các thông báo lỗi (Error Message) liên quan. 
 - Phải cung cấp trợ giúp (Help) và lời nhắc (Prompt). 
@@ -327,11 +353,15 @@ Chỉ học những phần có trong đề thi!
 ###### Công cụ thiết kế UI (UI Design Tools)
 Công cụ thiết kế UI (UI Design Tool) là các công cụ được sử dụng khi thiết kế cấu trúc màn hình hoặc bố cục màn hình của UI (User Interface) sao cho phù hợp với yêu cầu của người dùng, bao gồm các loại như Khung dây (Wireframe), Mô hình tĩnh (Mockup), Bảng kịch bản (Story Board), Mẫu thử (Prototype), Trường hợp sử dụng (Use Case), v.v. 
 ### **<mark>032</mark>** Các nguyên tắc cơ bản của Giao diện người dùng (User Interface)
+Phần “**<mark>032</mark>** Các nguyên tắc cơ bản của Giao diện người dùng (User Interface)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Tính trực quan (Intuitiveness) : Bất kỳ ai cũng phải có thể dễ dàng hiểu và sử dụng 
 - Tính hiệu lực (Validity) : Phải đạt được mục đích của người dùng một cách chính xác và hoàn hảo 
 - Tính dễ học (Learnability) : Bất kỳ ai cũng phải có thể dễ dàng học hỏi và làm quen 
 - Tính linh hoạt (Flexibility) : Phải đáp ứng tối đa các yêu cầu của người dùng và giảm thiểu sai sót 
 ###### Khung dây (Wireframe)
+Phần “Khung dây (Wireframe)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Khung dây (Wireframe) được tạo ra ở giai đoạn đầu của bước lập kế hoạch, là giai đoạn thiết kế khung xương cho bố cục sơ bộ hoặc các thành phần UI (UI Elements) của trang. 
 - Các nhà phát triển (Developer) hoặc nhà thiết kế (Designer) sử dụng khung dây (Wireframe) để thảo luận về bố cục hoặc chia sẻ trạng thái tiến độ hiện tại. 
 - Công cụ Khung dây (Wireframe Tools) : Vẽ tay, PowerPoint, Keynote, Sketch, Illustrator, Photoshop, v.v. 
@@ -367,6 +397,8 @@ Chất lượng phần mềm (Software Quality) là tổng thể các đặc tí
 |Tính bảo trì<br>(Maintainability)|• Cho biết mức độ có thể cải tiến hoặc mở rộng phần mềm khi có sự thay đổi về môi trường hoặc phát sinh các yêu cầu mới<br>• Đặc tính con : Tính khả năng phân tích (Analyzability), Tính khả năng thay đổi (Changeability), Tính ổn định (Stability), Tính khả năng kiểm thử (Testability)|
 |Tính di động<br>(Portability)|• Cho biết mức độ phần mềm có thể áp dụng dễ dàng như thế nào trong các môi trường khác<br>• Đặc tính con : Tính thích ứng (Adaptability), Tính khả năng cài đặt (Installability), Tính khả năng thay thế (Replaceability), Tính chung sống (Co-existence)|
 ### **<mark>037</mark>** Thành phần UI (UI Elements)
+Phần “**<mark>037</mark>** Thành phần UI (UI Elements)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Hộp kiểm (Check Box) : Là nút có thể chọn từ 1 giá trị trở lên trong nhiều tình huống lựa chọn 
 - Nút chọn một (Radio Button) : Là nút chỉ có thể chọn 1 trong nhiều mục 
 - Hộp văn bản (Text Box) : Là hộp mà người dùng có thể nhập và chỉnh sửa dữ liệu
@@ -382,6 +414,8 @@ Giai đoạn thiết kế trong phát triển phần mềm (Software) có thể 
 |Danh mục<br>chi tiết|Cấu trúc, Cơ sở dữ liệu (DB), Giao diện (Interface)|Thành phần (Component), Cấu trúc dữ liệu (Data Structure), Thuật toán (Algorithm)|
 ######
 ### **039** Nguyên lý cơ bản của thiết kế kiến trúc phần mềm
+Phần “**039** Nguyên lý cơ bản của thiết kế kiến trúc phần mềm” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tính mô-đun<br>(Modularity)|Tính mô-đun (Modularity) có nghĩa là việc chia các chức năng của hệ thống (System) thành các đơn vị mô-đun (Module) để cải thiện hiệu suất phần mềm (Software) hoặc giúp việc chỉnh sửa, tái sử dụng (Reuse), bảo trì (Maintenance) hệ thống trở nên dễ dàng hơn.|
 |---|---|
 |Tính trừu tượng<br>(Abstraction)|• Tính trừu tượng (Abstraction) là việc thiết kế khái niệm tổng thể và bao quát của vấn đề, sau đó lần lượt chia nhỏ và cụ thể hóa dần<br>• Các loại trừu tượng: Trừu tượng hóa quy trình (Procedural Abstraction), Trừu tượng hóa dữ liệu (Data Abstraction), Trừu tượng hóa điều khiển (Control Abstraction)|
@@ -398,6 +432,8 @@ Thuộc tính chất lượng (Quality Attribute) của kiến trúc phần mề
 - Khía cạnh kinh doanh : Thời điểm ra thị trường (Time to Market), Chi phí và lợi ích (Cost and Benefit), Tuổi thọ hệ thống dự kiến (Target Lifetime of System), v.v. 
 - Khía cạnh kiến trúc : Tính toàn vẹn khái niệm (Conceptual Integrity), Tính chính xác (Correctness), Tính hoàn chỉnh (Completeness), Tính khả thi xây dựng (Buildability), v.v. 
 ### **041** Quy trình thiết kế kiến trúc phần mềm
+Phần “**041** Quy trình thiết kế kiến trúc phần mềm” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - ❶  Thiết lập mục tiêu thiết kế : Phân tích các yêu cầu (Requirement) như mục tiêu kinh doanh, độ ưu tiên tác động đến thiết kế để làm rõ hướng phát triển hệ thống, từ đó thiết lập mục tiêu thiết kế cho toàn bộ hệ thống (System) 
 - ❷  Quyết định loại hệ thống : Quyết định loại hệ thống (System) và hệ thống con (Subsystem), đồng thời cân nhắc cùng với mục tiêu thiết kế để lựa chọn mẫu kiến trúc (Architecture Pattern) 
 - ❸  Áp dụng mẫu kiến trúc : Tham chiếu mẫu kiến trúc (Architecture Pattern) để thiết kế kiến trúc chuẩn của hệ thống (System) 
@@ -444,6 +480,8 @@ Mẫu Mô hình - Chế độ xem - Bộ điều khiển (Model - View - Control
 - Các đối tượng (Object) đã đóng gói rất dễ tái sử dụng (Reuse). 
 - Khi trao đổi tin nhắn (Message) giữa các đối tượng, không cần phải biết nội dung chi tiết của đối tượng đối phương, do đó giao diện (Interface) trở nên đơn giản hơn và độ gắn kết/độ phụ thuộc (Coupling) giữa các đối tượng giảm xuống. 
 ###### • Đặc tính của Đối tượng (Object)
+Phần “• Đặc tính của Đối tượng (Object)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Đối tượng (Object) có tên có thể định danh (Identify) độc lập. 
 - Điều kiện mà đối tượng (Object) có thể có được gọi là trạng thái (State), và nhìn chung trạng thái thay đổi theo thời gian. 
 - Giữa đối tượng với đối tượng hình thành mối quan hệ dựa trên sự liên quan lẫn nhau. 
@@ -470,6 +508,8 @@ Tính đa hình (Polymorphism) là khả năng mà khi một đối tượng (L�
 - Ví dụ 3: Đối với chức năng ghi đè (Overriding, định nghĩa lại phương thức), tên phương thức (Method) giống với phương thức đã định nghĩa ở lớp cha (Parent Class), nhưng có thể định nghĩa lại mã thực thi (Execution Code) bên trong phương thức để sử dụng trong lớp con (Child Class). 
 ### **<mark>051</mark>** Mối quan hệ (Relationship)
 ###### (Core)
+Phần “(Core)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Phương pháp Jacobson: Phương pháp phân tích chú trọng sử dụng trường hợp sử dụng (Use Case)
 - Phương pháp Coad và Yourdon: Kỹ thuật sử dụng sơ đồ E-R (E-R Diagram) để mô hình hóa hành vi của đối tượng (Object), bao gồm các quá trình như xác định đối tượng, xác định cấu trúc, định nghĩa chủ đề, định nghĩa liên kết thuộc tính và thể hiện (Instance), định nghĩa liên kết thao tác và thông điệp (Message)
 - Phương pháp Wirfs-Brock: Kỹ thuật không có sự phân chia ranh giới giữa phân tích và thiết kế, đánh giá tài liệu mô tả yêu cầu của khách hàng để thực hiện liên tục cho đến công đoạn thiết kế 
@@ -552,6 +592,8 @@ Tái sử dụng (Reuse) là công việc nắm bắt và tái cấu trúc các 
 ######
 ### **<mark>061</mark>**
 #### Phương án thiết kế mô-đun (Module Design) hiệu quả
+Phần “Phương án thiết kế mô-đun (Module Design) hiệu quả” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Giảm độ ghép nối (Coupling) và tăng độ kết nối (Cohesion) để nâng cao tính độc lập và tính tái sử dụng (Reusability) của mô-đun (Module). 
 - Duy trì phạm vi ảnh hưởng (Scope of Effect) của mô-đun đó trong phạm vi điều khiển (Scope of Control) của mô-đun. 
 - Giảm độ phức tạp (Complexity) và sự trùng lặp (Redundancy), đồng thời duy trì tính nhất quán (Consistency). 
@@ -587,6 +629,8 @@ Mẫu thiết kế (Design Pattern) là một giải pháp mẫu hoặc ví dụ
 - Như câu nói 'Đừng phát minh lại bánh xe (Don't reinvent the wheel)', khi phát sinh vấn đề trong quá trình phát triển, việc tham khảo và áp dụng mẫu thiết kế tương ứng với vấn đề đó sẽ hiệu quả hơn là tự nghĩ ra giải pháp mới. 
 - Mẫu thiết kế của GoF (Gang of Four) gồm tổng cộng 23 mẫu được chia theo loại: 5 mẫu khởi tạo (Creational Pattern), 7 mẫu cấu trúc (Structural Pattern) và 11 mẫu hành vi (Behavioral Pattern). 
 ### **<mark>065</mark>** Ưu·Nhược điểm của việc sử dụng Mẫu thiết kế (Design Pattern)
+Phần “**<mark>065</mark>** Ưu·Nhược điểm của việc sử dụng Mẫu thiết kế (Design Pattern)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
    - Nhà máy 
    - trừu tượng 
    - (Abstract 
@@ -658,6 +702,8 @@ Mẫu hành vi (Behavioral Pattern) là các mẫu định nghĩa cách thức c
 ### **<mark>069</mark>**
 #### Phương pháp xác minh yêu cầu (Requirements Verification Method)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Đánh giá yêu cầu (Requirements Review) : Là phương pháp các bên chịu trách nhiệm đánh giá kiểm tra thủ công các sai sót như kiểm tra lỗi trong bản tả yêu cầu kỹ thuật (Requirements Specification) và việc tuân thủ tiêu chuẩn, bao gồm Đánh giá đồng nghiệp (Peer Review), Duyệt lại (Walkthrough), Kiểm tra chuyên sâu (Inspection), v.v. 
 Đánh giá đồng nghiệp (Peer Review) Phương pháp đánh giá theo hình thức người viết bản tả yêu cầu kỹ thuật trực tiếp giải thích nội dung bản tả và các đồng nghiệp lắng nghe để phát hiện lỗi  Duyệt lại (Walkthrough) Phương pháp đánh giá theo hình thức phân phát trước bản tả yêu cầu kỹ thuật trước cuộc họp đánh giá để xem xét trước, sau đó phát hiện lỗi thông qua cuộc họp đánh giá ngắn Kiểm tra chuyên sâu (Inspection) Phương pháp đánh giá theo hình thức các chuyên gia đánh giá khác (ngoại trừ người viết bản tả yêu cầu kỹ thuật) kiểm tra bản tả yêu cầu kỹ thuật để phát hiện lỗi
 - Tạo bản mẫu (Prototyping) : Tạo bản mẫu (Prototype) cho phần mềm thực tế sẽ được phát triển để dự đoán sản phẩm cuối cùng nhằm nắm bắt chính xác yêu cầu của người dùng 
@@ -669,6 +715,8 @@ Mẫu hành vi (Behavioral Pattern) là các mẫu định nghĩa cách thức c
 |---|
 ### **<mark>070</mark>** Kỹ thuật liên kết hệ thống (System Integration Technology)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |DB Link|Phương thức sử dụng đối tượng DB Link do cơ sở dữ liệu (DB) cung cấp|
 |---|---|
 |API/<br>Open API|Chương trình giao diện lập trình ứng dụng (Application Programming Interface) đọc và cung cấp dữ liệu từ cơ sở dữ liệu (DB) của hệ thống gửi|
@@ -677,6 +725,8 @@ Mẫu hành vi (Behavioral Pattern) là các mẫu định nghĩa cách thức c
 |Socket|và kết nối với máy khách (Client) để truyền thông khi có yêu cầu truyền thông từ máy khách|
 |Web<br>Service|Dịch vụ liên kết trong dịch vụ web (Web Service) bằng cách sử dụng các giao thức WSDL, UDDI và SOAP|
 ### **<mark>071</mark>** Thành phần cơ chế liên kết (Linkage Mechanism)
+Phần “**<mark>071</mark>** Thành phần cơ chế liên kết (Linkage Mechanism)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Hệ thống gửi (Sending System) : Hệ thống chuyển đổi dữ liệu được tạo ra từ chương trình liên kết (Linkage Program) thành bảng giao diện (Interface Table) hoặc tệp (xml, csv, text, v.v.) phù hợp với định dạng truyền rồi mới gửi đi 
 - Hệ thống nhận (Receiving System) : Hệ thống chuyển đổi bảng giao diện (Interface Table) hoặc tệp đã nhận thành định dạng mà chương trình liên kết (Linkage Program) có thể xử lý, sau đó phản ánh vào chương trình liên결 
 - Máy chủ liên kết (Linkage Server) : Nằm giữa hệ thống gửi và nhận, thực hiện vai trò giám sát (Monitoring) tình trạng gửi và nhận dữ liệu 
@@ -693,6 +743,8 @@ Phần mềm trung gian (Middleware) là từ ghép giữa Middle (Trung gian) v
 ### Môn 2: Phát triển phần mềm (Software Development)
 ### **<mark>073</mark>**
 #### Phân loại cấu trúc dữ liệu (Data Structure)
+Phần “Phân loại cấu trúc dữ liệu (Data Structure)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 ||Mảng (Array)|Danh sách liên tục|
 |---|---|---|
 | Cấu trúc tuyến tính<br>(Linear<br>Structure) | ~~Danh sách~~ tuyến tính (Linear List)<br>~~Ngăn~~ xếp (Stack)<br>~~Hàng~~ đợi (Queue) | (Contiguous List)<br>Danh sách liên kết<br>(Linked List) |
@@ -736,6 +788,8 @@ Cây (Tree) là một dạng đặc biệt của đồ thị (Graph) được c�
 ❹ 3 là CFG nên sẽ thành ABDHIECFG. 
 - Thứ tự truy cập (Visiting Order) : ABDHIECFG 
 ###### Thứ tự truy cập của phương pháp duyệt trung thứ tự (Inorder Traversal)
+Phần “Thứ tự truy cập của phương pháp duyệt trung thứ tự (Inorder Traversal)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Ký hiệu tiền tố (Prefix Notation) : Toán tử (Operator) → Left → Right, +AB 
 - Ký hiệu trung tố (Infix Notation) : Left → Toán tử (Operator) → Right, A+B 
 - Ký hiệu hậu tố (Postfix Notation) : Left → Right → Toán tử (Operator), AB+ 
@@ -743,6 +797,8 @@ Cây (Tree) là một dạng đặc biệt của đồ thị (Graph) được c�
 Do hậu tố (Postfix) hoặc tiền tố (Prefix) được xử lý bằng cách sử dụng ngăn xếp (Stack), nên ký hiệu trung tố (Infix) sẽ được chuyển đổi sang hậu tố (Postfix) hoặc tiền tố (Prefix) để xử lý. 
 > Ví dụ 1 Hãy chuyển đổi biểu thức được biểu diễn bằng ký hiệu trung tố (Infix) sau đây sang tiền tố (Prefix) và hậu tố (Postfix). 
 ###### X = A / B * (C + D) + E
+Phần “X = A / B * (C + D) + E” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Chuyển đổi sang tiền tố (Prefix) 
 - ❶ Đóng ngoặc theo độ ưu tiên của toán tử (Operator Precedence). 
 ( X = ( ( (A / B) * (C + D) ) + E ) ) 
@@ -753,6 +809,8 @@ Do hậu tố (Postfix) hoặc tiền tố (Prefix) được xử lý bằng cá
 - ❹ 3 là FCG nên trở thành HDIBEAFCG. 
 - Thứ tự duyệt (Traversal Order) : HDIBEAFCG 
 ###### Duyệt hậu thứ tự (Postorder)
+Phần “Duyệt hậu thứ tự (Postorder)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - ❶  Vì duyệt hậu thứ tự (Postorder) là Left → Right → Root nên trở thành 13A. 
 ❷ 1 là 2EB nên trở thành 2EB3A. 
 - X  =  (  (  (A  /  B) *  (C + D)  ) + E  )  ) = ( X + ( * ( / (AB) + (CD) ) E) ) 
@@ -817,6 +875,8 @@ Sắp xếp nhanh (Quick Sort) là phương pháp sắp xếp bằng cách loạ
 ######
 ### Hàm băm **088** (Hashing Function)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Phương pháp chia (Division Method) : Phương pháp lấy phần dư của Khóa bản ghi (K) chia cho số nguyên tố (Prime, Q) nhỏ nhất trong các số lớn hơn kích thước Bảng băm (Hash Table) làm địa chỉ gốc (Home Address), tức là h(K) = K mod Q 
 ### **<mark>085</mark>** Sắp xếp vun đống (Heap Sort)
 Sắp xếp vun đống (Heap Sort) là phương pháp sắp xếp sử dụng Cây nhị phân hoàn chỉnh (Complete Binary Tree). 
@@ -841,6 +901,8 @@ DBMS là phần mềm (Software) nằm giữa người dùng và cơ sở dữ l
 |Chức năng thao tác (Manipulation Function)|Chức năng cung cấp phương tiện giao diện (Interface) giữa người dùng và cơ sở dữ liệu (Database) để xử lý một cách có hệ thống các thao tác tìm kiếm, cập nhật, chèn, xóa dữ liệu, v.v.|
 |Chức năng điều khiển (Control Function)|Phải điều khiển để các thao tác cập nhật, chèn, xóa truy cập vào cơ sở dữ liệu (Database) được thực hiện một cách chính xác, nhằm duy trì tính toàn vẹn (Integrity) của dữ liệu|
 ### **<mark>090</mark>** Ưu điểm và nhược điểm của DBMS (Database Management System)
+Phần “**<mark>090</mark>** Ưu điểm và nhược điểm của DBMS (Database Management System)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - • Tính độc lập logic (Logical Data Independence) và độc lập vật lý (Physical Data Independence) của dữ liệu được đảm bảo 
 - • Tránh được sự trùng lặp dữ liệu (Data Redundancy) nên tiết kiệm được dung lượng bộ nhớ (Storage) • Có thể chia sẻ và sử dụng chung dữ liệu đã lưu trữ 
 ||• Có thể duy trì tính nhất quán (Consistency) của dữ liệu|
@@ -927,6 +989,8 @@ Maven: Được phát triển bởi cùng Tổ chức Phần mềm Apache như A
 Gradle: Công cụ biên dựng (Build Tool) được phát triển nhằm bổ sung cho Ant và Maven hiện có, được Hans Dockter cùng 6 nhà phát triển khác hợp tác phát triển. 
 ### **<mark>100</mark>** Những lưu ý khi đóng gói (Packaging)
 ### **<mark>100</mark>**
+Phần “**<mark>100</mark>**” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Xác định môi trường tối thiểu cần thiết cho môi trường hệ thống (System Environment) của người dùng, tức là hệ điều hành (OS - Operating System), CPU, bộ nhớ (Memory), v.v. 
 - Đóng gói Giao diện người dùng (UI - User Interface) đi kèm với tài liệu trực quan để người dùng có thể trực tiếp xác nhận bằng mắt và đồng bộ nhất quán với tài liệu hướng dẫn (Manual). 
 - Phần mềm (Software) không chỉ dừng lại ở việc đóng gói và phân phối, mà nên được cung cấp dưới dạng Dịch vụ được quản lý (Managed Service) để có thể quản lý cùng với phần cứng (Hardware). 
@@ -947,6 +1011,8 @@ Quản lý bản quyền kỹ thuật số (DRM - Digital Rights Management) là
 - Khi thực hiện đóng gói, nội dung sẽ bao gồm chữ ký số (Digital Signature) đã được mã hóa của chủ bản quyền và thông tin giấy phép (License Information) do chủ bản quyền thiết lập sẽ được đăng ký trên Trung tâm cấp phép (Clearing House). 
 - Để người dùng có thể sử dụng nội dung, họ phải thông qua thông tin giấy phép (License Information) đã đăng ký trên Trung tâm cấp phép (Clearing House) để thực hiện xác thực người dùng (User Authentication) và xác nhận quyền sở hữu cấp phép sử dụng nội dung.
 ### Các lưu ý khi lập ghi chú phát hành (Release Notes) phiên bản ban đầu (Initial Version) **102**
+Phần “Các lưu ý khi lập ghi chú phát hành (Release Notes) phiên bản ban đầu (Initial Version) **102**” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Đối với phần mềm (Software) áp dụng phương thức tính phí theo mức sử dụng (Metered Rate System), lượng sử dụng thực tế của dịch vụ sẽ được đo lường thông qua trung tâm thanh toán (Clearing House) để tính phí theo đúng mức đã sử dụng. 
 Phiên bản ban đầu (Initial Version) của ghi chú phát hành (Release Notes) được lập dựa trên việc cân nhắc các điều sau. 
 - Ghi chú phát hành (Release Notes) phải được đội ngũ phát triển (Development Team) trực tiếp viết ở thì hiện tại (Present Tense) dựa trên thông tin chính xác và đầy đủ. 
@@ -964,6 +1030,8 @@ Phiên bản ban đầu (Initial Version) của ghi chú phát hành (Release No
 - Điều khoản miễn trừ trách nhiệm (Disclaimer) 
 - Thông tin liên hệ (Contact Information) 
 ### Các thành phần (Components) cấu tạo **104** của Quản lý bản quyền kỹ thuật số (DRM - Digital Rights Management)
+Phần “Các thành phần (Components) cấu tạo **104** của Quản lý bản quyền kỹ thuật số (DRM - Digital Rights Management)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Trung tâm thanh toán (Clearing House): Nơi thực hiện cấp quyền sử dụng đối với bản quyền, cấp phát giấy phép (License), quản lý khóa mã hóa (Encrypted Key), quản lý thanh toán theo mức sử dụng, v.v. 
 - Nhà cung cấp nội dung (Contents Provider): Chủ sở hữu bản quyền cung cấp nội dung 
 - Công cụ đóng gói (Packager): Chương trình đóng gói và mã hóa nội dung cùng với siêu dữ liệu (Metadata) thành hình thức có thể phân phối 
@@ -973,12 +1041,16 @@ Phiên bản ban đầu (Initial Version) của ghi chú phát hành (Release No
 - Container bảo mật (Security Container): Thiết bị bảo mật điện tử nhằm phân phối an toàn nội dung gốc 
 ######
 ### Các yếu tố kỹ thuật (Technical Elements) **105** của Quản lý bản quyền kỹ thuật số (DRM - Digital Rights Management)
+Phần “Các yếu tố kỹ thuật (Technical Elements) **105** của Quản lý bản quyền kỹ thuật số (DRM - Digital Rights Management)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Mã hóa (Encryption): Kỹ thuật mã hóa nội dung và giấy phép (License), đồng thời có thể thực hiện chữ ký điện tử (Digital Signature) 
 - Quản lý khóa (Key Management): Kỹ thuật lưu trữ và phân phối đối với khóa đã mã hóa nội dung 
 - Tạo tệp mã hóa (Packager): Kỹ thuật để tạo nội dung thành nội dung đã được mã hóa 
 - Kỹ thuật định danh (Identification): Kỹ thuật biểu diễn hệ thống định danh cho nội dung 
 - Biểu diễn bản quyền (Right Expression): Kỹ thuật biểu diễn nội dung của giấy phép (License) 
 ### Các điều khoản cơ bản (Basic Items) **107** của Hướng dẫn cài đặt phần mềm (Software Installation Manual)
+Phần “Các điều khoản cơ bản (Basic Items) **107** của Hướng dẫn cài đặt phần mềm (Software Installation Manual)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tổng quan phần mềm (Software Overview)|• Giải thích các chức năng chính và giao diện người dùng (UI - User Interface) của phần mềm (Software)<br>• Giải thích bằng hình ảnh về giao diện người dùng (UI), các nút bấm, khung (Frame) trên màn hình|
 |---|---|
 |Các tệp liên quan đến cài đặt|• Giải thích các tệp cần thiết để cài đặt phần mềm (Software)<br>• Giải thích các tệp như exe, ini, log, v.v.|
@@ -1012,6 +1084,8 @@ Quản lý cấu hình (SCM; Software Configuration Management) là một chuỗ
 - Các mục quản lý không chỉ bao gồm mã nguồn (Source Code) mà còn bao gồm các tài liệu định nghĩa (Specification), hướng dẫn (Guideline), tài liệu phân tích (Analysis Document), v.v. 
 ### **<mark>111</mark>**
 #### Chức năng quản lý cấu hình (Configuration Management)
+Phần “Chức năng quản lý cấu hình (Configuration Management)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
    - Nhận diện cấu hình (Configuration Identification): Công việc gán tên và số quản lý cho đối tượng quản lý cấu hình, phân chia theo cấu trúc cây (Tree) để dễ dàng chỉnh sửa và truy vết (Traceability). 
    - Kiểm soát phiên bản (Version Control): Công việc quản lý các mục cấu hình (Configuration Item) thuộc các phiên bản khác nhau được tạo ra trong quá trình nâng cấp (Upgrade) hoặc bảo trì (Maintenance) phần mềm, kết hợp các quy trình và công cụ (Tool) cụ thể cho mục đích này. 
    - Kiểm soát cấu hình (형상 통제) (Quản lý thay đổi - Change Management): Công việc xem xét các yêu cầu thay đổi đối với các mục cấu hình (Configuration Item) đã được nhận diện, điều chỉnh để phản ánh tốt đường cơ sở (Baseline) hiện tại. 
@@ -1023,6 +1097,8 @@ Quản lý cấu hình (SCM; Software Configuration Management) là một chuỗ
 |---|
 |Trọng tâm|
 ### **<mark>110</mark>** Tầm quan trọng của Quản lý cấu hình (Configuration Management)
+Phần “**<mark>110</mark>** Tầm quan trọng của Quản lý cấu hình (Configuration Management)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Có thể theo dõi (Track) và kiểm soát (Control) các thay đổi liên tục của phần mềm (Software) một cách có hệ thống. 
 - Có thể ngăn chặn sự thay đổi bừa bãi đối với phần mềm thương phẩm (Software Product). 
 - Có thể truy vết (Trace) các lỗi (Bug) hoặc các điểm sửa đổi được phát hiện trong phần mềm thương phẩm (Software Product). 
@@ -1101,11 +1177,15 @@ Nghịch lý thuốc trừ sâu (Pesticide Paradox)  Là hiện tượng nếu l
 Ngụy biện về sự vắng mặt của lỗi (Absence of Errors Fallacy)  Điều này có nghĩa là ngay cả khi đã loại bỏ toàn bộ khiếm khuyết của phần mềm, nhưng nếu phần mềm không đáp ứng được yêu cầu của người dùng thì không thể nói phần mềm đó có chất lượng cao.
 ### 프로그램 실행 여부에 따른 **123** Kiểm thử theo việc có chạy chương trình hay không
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Kiểm thử tĩnh<br>(Static Test)|• Kiểm thử bằng cách phân tích bản đặc tả (Specification) hoặc mã nguồn (Source Code) mà không cần chạy chương trình.<br>• Giúp phát hiện khiếm khuyết ở giai đoạn đầu phát triển phần mềm, từ đó giảm chi phí phát triển.<br>• Các loại: Walkthrough, Inspection, Code Review, v.v.|
 |---|---|
 |Kiểm thử động<br>(Dynamic Test)|• Kiểm thử bằng cách chạy phần mềm để tìm lỗi (Error), có thể thực hiện ở mọi giai đoạn phát triển phần mềm.<br>• Các loại: Kiểm thử hộp đen (Black Box Test), Kiểm thử hộp trắng (White Box Test).|
 ### 테스트 기반(Test Bases)에 **124** Kiểm thử theo cơ sở kiểm thử (Test Bases)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Kiểm thử dựa trên đặc tả<br>(Specification-based Test)|• Đảm bảo tạo ra các Test Case đầy đủ dựa trên bản đặc tả yêu cầu của người dùng để xác nhận xem chúng đã được triển khai hay chưa.<br>• Các loại: Phân vùng tương đương (Equivalence Partitioning), Phân tích giá trị biên (Boundary Value Analysis), v.v.|
 |---|---|
 |Kiểm thử dựa trên cấu trúc<br>(Structure-based Test)|• Viết và xác nhận Test Case dựa trên luồng logic (Logical Flow) bên trong phần mềm.<br>• Các loại: Dựa trên cú pháp (Statement), Dựa trên quyết định (Decision), Dựa trên điều kiện (Condition), v.v.|
@@ -1122,6 +1202,8 @@ Ngụy biện về sự vắng mặt của lỗi (Absence of Errors Fallacy)  Đ
 |Kiểm thử song song<br>(Parallel Test)|Nhập cùng một dữ liệu vào cả phần mềm đã được thay đổi và phần mềm cũ, sau đó so sánh kết quả.|
 ### **<mark>125</mark>** Kiểm thử theo góc nhìn (Perspective)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Kiểm thử xác minh<br>(Verification Test)|Kiểm tra quá trình sản xuất sản phẩm từ góc nhìn của nhà phát triển (Developer), để xác minh xem sản phẩm đã hoàn thiện đúng như bản đặc tả (Specification) hay chưa.|
 |---|---|
 |Kiểm thử xác nhận<br>(Validation Test)|Kiểm tra kết quả của sản phẩm được sản xuất từ góc nhìn của người dùng (User), để xác nhận xem sản phẩm có hoàn thiện như yêu cầu của người dùng hay không và nó có hoạt động bình thường không.|
@@ -1132,6 +1214,8 @@ Kiểm thử hộp trắng (White Box Test) là phương pháp thiết kế Test
 - Thực thi ít nhất một lần mọi câu lệnh (Statement) của mã nguồn gốc (mô-đun).
 - Kiểm soát đường dẫn logic bằng cách thực thi các điểm rẽ nhánh (Branching Point) như chọn lựa (Selection), lặp lại (Loop), v.v. theo cấu trúc điều khiển của chương trình.
 ### **<mark>128</mark>** Các loại kiểm thử hộp trắng (White Box Test)
+Phần “**<mark>128</mark>** Các loại kiểm thử hộp trắng (White Box Test)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Các kỹ thuật kiểm thử hộp trắng tiêu biểu Kiểm tra đường dẫn cơ sở (Base Path Testing) • Là kỹ thuật kiểm thử cho phép người thiết kế Test Case đo lường mức độ phức tạp logic (Logical Complexity) của thiết kế thủ tục (Procedural Design). Kết quả đo lường này được dùng làm hướng dẫn để xác định nền tảng (Base) của đường dẫn thực thi.
 - Kiểm tra điều kiện (Condition Testing) : Kỹ thuật thiết kế Test Case tập trung kiểm tra các điều kiện logic bên trong mô-đun chương trình.
 - Kiểm tra cấu trúc điều khiển (Control Structure Testing) • Kiểm tra vòng lặp (Loop Testing) : Kỹ thuật thiết kế Test Case tập trung vào cấu trúc lặp lại của chương trình.
@@ -1201,6 +1285,8 @@ Kiểm thử tích hợp từ dưới lên là kỹ thuật kiểm thử theo h�
 - Vì quá trình tích hợp và kiểm thử bắt đầu từ mô-đun ở cấp thấp nhất nên không cần sử dụng Stub (Mô-đun giả). Tuy nhiên, phương pháp này đòi hỏi cần có các Cụm (Cluster) - là các nhóm mô-đun phụ thuộc (Dependent Modules) liên kết với một mô-đun điều khiển chính.
 ######
 ### 테스트 드라이버와 **139** Sự khác biệt giữa Test Driver và Test Stub
+Phần “테스트 드라이버와 **139** Sự khác biệt giữa Test Driver và Test Stub” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Phân loại|Driver (Trình điều khiển)|Stub (Mô-đun giả)|
 |---|---|---|
 |Khái niệm|Là công cụ gọi các mô-đun cấp thấp của đối tượng kiểm thử. Nó truyền các tham số (Parameter) và trích xuất kết quả sau khi thực hiện kiểm thử mô-đun.|Là công cụ chỉ đơn thuần thực hiện các chức năng của mô-đun khác mà mô-đun điều khiển gọi đến. Đây là mô-đun dùng để kiểm tra tạm thời, chỉ chứa các điều kiện cần thiết trong một lúc.|
@@ -1244,6 +1330,8 @@ Kịch bản kiểm thử (Test Scenario) là tập hợp của nhiều Test Cas
 ###### Khái niệm về tự động hóa kiểm thử
 Tự động hóa kiểm thử (Test Automation) là việc ứng dụng các công cụ tự động hóa để triển khai quy trình kiểm thử (trước đây do con người thực hiện lặp đi lặp lại) dưới dạng tập lệnh (Script), từ đó giúp việc kiểm thử được diễn ra một cách dễ dàng và hiệu quả.
 ###### Các loại công cụ tự động hóa kiểm thử
+Phần “Các loại công cụ tự động hóa kiểm thử” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |23.2, 22.4, 20.9|2406005|
 |---|---|
 ### **<mark>144</mark>** Oracle kiểm thử (Test Oracle)
@@ -1270,6 +1358,8 @@ Hiệu năng ứng dụng (Application Performance) thể hiện mức độ x�
 - Các chỉ số đo lường hiệu năng ứng dụng
 ### Các thành phần cấu tạo của Test Harness **147**
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Trình điều khiển kiểm thử (Test Driver): Là công cụ gọi các mô-đun cấp thấp của đối tượng kiểm thử, truyền các tham số (Parameter) và trích xuất kết quả sau khi thực hiện kiểm thử mô-đun.
 |Thông lượng<br>(Throughput)|Khối lượng công việc mà ứng dụng xử lý được trong một khoảng thời gian nhất định.|
 |---|---|
@@ -1328,6 +1418,8 @@ ESB là một giải pháp cung cấp các giao diện dựa trên tiêu chuẩn
 ######
 ### EAI(Enterprise Application **154** Integration)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - EAI (Tích hợp Ứng dụng Doanh nghiệp) là giải pháp cho phép các ứng dụng và nền tảng (Platform) khác nhau trong doanh nghiệp có thể tương tác với nhau như truyền tải, liên kết và tích hợp thông tin.
 - EAI gia tăng tính tích hợp và liên kết giữa các nghiệp vụ, qua đó nâng cao hiệu quả và tính tất định (Determinacy) giữa các hệ thống.
 - Các hình thức xây dựng EAI như sau:
@@ -1349,10 +1441,14 @@ XML là ngôn ngữ đánh dấu đa mục đích (Multi-purpose Markup Language
 ######
 ### **<mark>160</mark>** Công cụ kiểm tra tính toàn vẹn dữ liệu (Data Integrity Checking Tool)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Công cụ kiểm tra tính toàn vẹn dữ liệu là công cụ xác nhận xem có sự thay đổi nào đối với các tệp tin hệ thống hay không, và nếu có tệp bị thay đổi, nó sẽ thông báo cho quản trị viên. Công cụ này được dùng để phân tích điểm yếu bảo mật giao diện.
 - Khi tin tặc (Cracker) hoặc người dùng nội bộ không được phép xâm nhập vào hệ thống, họ thường tạo Backdoor (Cửa sau) hoặc sửa đổi tệp hệ thống để che giấu dấu vết của mình. Ta có thể phát hiện điều này bằng cách sử dụng công cụ kiểm tra tính toàn vẹn.
 - Bằng cách sử dụng hàm băm (Hash Function), trạng thái hiện tại của tệp và thư mục được lưu vào DB (Cơ sở dữ liệu) rồi giám sát. Nếu trạng thái hiện tại khác với trạng thái trong DB, công cụ sẽ thông báo việc thay đổi này cho quản trị viên.
 ### AJAX(Asynchronous **158** JavaScript and XML)
+Phần “AJAX(Asynchronous **158** JavaScript and XML)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Các công cụ kiểm tra tính toàn vẹn dữ liệu tiêu biểu bao gồm Tripwire, AIDE, Samhain, Claymore, Slipwire, Fcheck, v.v.
 AJAX mang ý nghĩa là công nghệ truyền thông bất đồng bộ (Asynchronous Communication), trao đổi và kiểm soát dữ liệu XML giữa Client (Máy khách) và Server (Máy chủ) bằng cách sử dụng JavaScript, v.v., qua đó cho phép người dùng tự do tương tác (Interact) với trang web.
 |22.7, 21.5, 20.9, 20.8, 20.6<br>2407203|
@@ -1366,6 +1462,8 @@ Chức năng bảo mật giao diện thông thường được áp dụng ở c�
 - ※ IPsec (IP Security): Là giao thức cung cấp tính năng ngăn chặn làm sai lệch và che giấu dữ liệu theo đơn vị Gói tin IP (IP Packet) ở tầng Mạng (Network Layer), hỗ trợ mã hóa hai chiều khi thực hiện mã hóa.
 ### **<mark>160</mark>** Công cụ xác minh triển khai giao diện
 ### **<mark>160</mark>** Công cụ xác minh triển khai giao diện
+Phần “**<mark>160</mark>** Công cụ xác minh triển khai giao diện” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Để xác minh việc triển khai giao diện (Interface Implementation), ta cần thực hiện kiểm thử tích hợp (Integration Test) dựa trên chức năng đơn vị của giao diện và các kịch bản, v.v.
 - Có thể thực hiện kiểm thử tích hợp một cách hiệu quả nếu sử dụng các công cụ tự động hóa kiểm thử (Test Automation Tools) sau đây:
 |Công cụ|Chức năng|
@@ -1382,6 +1480,8 @@ APM (Quản lý/Giám sát hiệu suất ứng dụng) là công cụ cung cấp
 - Phương thức tài nguyên: Nagios, Zabbix, Cacti, v.v.
 - Phương thức End-to-End: VisualVM, Jennifer, Scouter, v.v.
 ### Môn 3: Xây dựng Cơ sở dữ liệu (Database Construction)
+Phần “Môn 3: Xây dựng Cơ sở dữ liệu (Database Construction)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |**163**<br>핵심|Trình tự thiết kế cơ sở dữ liệu<br>2407603|
 |---|---|
 |Phân tích yêu cầu (Requirements Analysis)<br>Thiết kế khái niệm (Conceptual Design)|Lập bản đặc tả yêu cầu<br>Lược đồ khái niệm (Conceptual Schema), Mô hình hóa giao dịch (Transaction Modeling), Mô hình E-R|
@@ -1399,6 +1499,8 @@ Giai đoạn thiết kế logic (Logical Design) là quá trình ánh xạ (Mapp
 - Nếu thiết kế khái niệm là giai đoạn thiết kế lược đồ khái niệm (Conceptual Schema), thì thiết kế logic là giai đoạn đánh giá, tinh chỉnh lược đồ khái niệm và thiết kế các lược đồ logic (Logical Schema) khác nhau tùy theo DBMS.
 - Thiết kế giao diện của giao dịch (Transaction Interface).
 ###### Các yếu tố cần biểu thị trong Mô hình dữ liệu
+Phần “Các yếu tố cần biểu thị trong Mô hình dữ liệu” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Cấu trúc<br>(Structure)|Là mối quan hệ giữa các kiểu thực thể (Entity Types) được biểu diễn một cách logic, thể hiện cấu trúc dữ liệu và tính chất tĩnh (Static Properties).|
 |---|---|
 |Phép toán<br>(Operation)|Bản đặc tả về các công việc xử lý dữ liệu thực tế được lưu trong cơ sở dữ liệu. Là công cụ cơ bản để thao tác với cơ sở dữ liệu.|
@@ -1413,6 +1515,8 @@ Thiết kế vật lý (Physical Design) là quá trình chuyển đổi dữ li
 |---|
 Mô hình dữ liệu là một mô hình khái niệm được biểu diễn một cách có hệ thống, thông qua việc trừu tượng hóa và đơn giản hóa các thông tin ở thế giới thực để biểu diễn vào máy tính.
 ###### Các thành phần cấu tạo Mô hình dữ liệu
+Phần “Các thành phần cấu tạo Mô hình dữ liệu” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Thực thể<br>(Entity)|Thứ mà ta muốn biểu diễn trong cơ sở dữ liệu, là một đối tượng ở thế giới thực (Real-world Object) mang thông tin hoặc khái niệm mà con người có thể nghĩ tới.|
 |---|---|
 | Thuộc tính<br>(Attribute) | Là đơn vị logic nhỏ nhất của dữ liệu, tương ứng với trường dữ liệu (Data Field) hoặc hạng mục dữ liệu (Data Item)<br>trong cấu trúc tệp (File Structure). |
@@ -1443,20 +1547,28 @@ Mô hình dữ liệu quan hệ là mô hình dữ liệu được sử dụng p
 - Ngôn ngữ tiêu biểu cho Mô hình quan hệ là SQL.
 - Có thể biểu diễn tự do các mối quan hệ 1:1, 1:N, N:M.
 ###### Tuple (Bộ / Bản ghi)
+Phần “Tuple (Bộ / Bản ghi)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Tuple là từng hàng (Row) tạo nên Relation (Quan hệ).
 - Tuple bao gồm một tập hợp các thuộc tính (Attribute).
 - Mang cùng ý nghĩa với Bản ghi (Record) trong Cấu trúc tệp (File Structure).
 - Số lượng Tuple được gọi là Cardinality (Lực lượng) hoặc Cơ số (Radix), Độ đối ứng.
 ###### Thuộc tính (Attribute)
+Phần “Thuộc tính (Attribute)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Thuộc tính là đơn vị logic nhỏ nhất tạo nên cơ sở dữ liệu.
 - Tương ứng với Hạng mục dữ liệu (Data Item) hoặc Trường dữ liệu (Data Field) trong Cấu trúc tệp.
 - Thuộc tính miêu tả các đặc điểm (Đặc tính) của Thực thể (Entity).
 - Số lượng Thuộc tính được gọi là Degree (Bậc) hoặc Số chiều.
 ###### Miền giá trị (Domain)
+Phần “Miền giá trị (Domain)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Domain là tập hợp các giá trị Nguyên tử (Atomic) có cùng một kiểu dữ liệu mà một Attribute có thể lấy.
 - Domain được Hệ thống sử dụng để kiểm tra tính hợp pháp của một giá trị Attribute khi nó thực sự xuất hiện.
 - Ví dụ: Domain của Attribute 'Giới tính' là 'Nam' và 'Nữ', ngoài ra không thể nhập giá trị nào khác.
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |**171**<br>핵심|Cấu trúc Cơ<br>Relati|sở dữ liệu<br>on|Quan hệ<br>2408402|
 |---|---|---|---|---|
 |Relation là biểu diễn<br>thể hiện cấu trúc, và<br>Quan hệ <Sinh viên><br>Mã SV|dữ liệu<br>Lược đồ<br>Instance<br>Tên|dưới dạng<br>Relation<br>(Thể hiện<br>Năm học|bảng (<br>(Schema)<br>Relation)<br>Chiều cao|Table), bao gồm Lược đồ Relation<br>cùng các giá trị thực tế là<br>Khoa<br>Schema<br>|
@@ -1469,6 +1581,8 @@ Relation là sự biểu diễn các dữ liệu dưới dạng Bảng (Table), 
 ### **<mark>172</mark>**
 ### **<mark>172</mark>**
 #### Đặc điểm của Relation (Quan hệ / Bảng)
+Phần “Đặc điểm của Relation (Quan hệ / Bảng)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Do không thể có cùng một Tuple (Bản ghi) trong một Relation, nên tất cả các Tuple bao hàm trong Relation đó phải khác biệt nhau.
 - Ví dụ: Bản ghi Kim Ye So tạo nên Relation <Học sinh> thể hiện các thông tin học bạ về Kim Ye So, và nó là duy nhất (Unique) trong Relation <Học sinh>.
 - Không có thứ tự giữa các Tuple (Bản ghi) nằm trong một Relation.
@@ -1522,6 +1636,8 @@ Khóa (Key) là thuộc tính đóng vai trò làm tiêu chuẩn để tìm ki�
   - CARTESIAN PRODUCT (Tích Descartes)
 ### **<mark>176</mark>**
 #### Toán tử quan hệ thuần túy
+Phần “Toán tử quan hệ thuần túy” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 | Select | Là phép toán tạo ra một Relation mới bằng cách tìm một tập hợp con các Tuple (Bản ghi) thỏa mãn điều kiện lựa chọn trong số các Tuple tồn tại trong Relation.<br>• Còn được gọi là phép toán ngang (Horizontal Operation) vì nó tìm kiếm các Tuple tương ứng với các hàng (ngang) của Relation.<br>• Ký hiệu của toán tử là ký tự Hy Lạp Sigma (σ). |
 |---|---|
 | Project | Là phép toán tạo ra một Relation mới bằng cách chỉ trích xuất các giá trị thuộc tính được chỉ định trong danh sách thuộc tính (Attribute List) từ một Relation cho trước. Tuy nhiên, nếu kết quả của phép toán bị trùng lặp, sự trùng lặp đó sẽ bị loại bỏ.<br>• Còn được gọi là phép toán dọc (Vertical Operator) vì nó trích xuất các Attribute tương ứng với các cột (dọc) của Relation.<br>• Ký hiệu của toán tử là ký tự Hy Lạp Pi (π). |
@@ -1555,6 +1671,8 @@ Giải tích quan hệ được Edgar F. Codd, người đề xuất ra mô hìn
 ### **<mark>180</mark>**
 #### Mục đích của Chuẩn hóa
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Duy trì tính ổn định (Stability) và tính toàn vẹn (Integrity) của cấu trúc dữ liệu.
 - Giúp mọi Relation đều có thể được biểu diễn trong Cơ sở dữ liệu.
 - Có thể tạo ra các thuật toán tìm kiếm hiệu quả.
@@ -1588,6 +1706,8 @@ Mối quan hệ Phụ thuộc bắc cầu (Transitive Dependency) Khi A → B v�
 Phụ thuộc hàm (Functional Dependency)
 ######
 ### **<mark>185</mark>** Phương pháp Giải chuẩn hóa (Phản chuẩn hóa)
+Phần “**<mark>185</mark>** Phương pháp Giải chuẩn hóa (Phản chuẩn hóa)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tích hợp Bảng (Table Integration)|• Được thực hiện khi hai Bảng (Table) thường xuyên được Join (Kết hợp) và việc gộp chúng thành một Bảng duy nhất giúp cải thiện hiệu suất.<br>• Cân nhắc tích hợp Bảng khi các quy trình phát sinh ở hai Bảng thường xuyên được xử lý giống nhau, hoặc khi việc tra cứu luôn được thực hiện bằng cách sử dụng cả hai Bảng.|
 |---|---|
 |Phân chia Bảng (Table Partitioning)|• Là việc chia Bảng theo chiều dọc (Vertical) hoặc chiều ngang (Horizontal).<br>• Phân chia theo chiều ngang (Horizontal Partitioning): Chia Bảng dựa trên các Record (Bản ghi).<br>• Phân chia theo chiều dọc (Vertical Partitioning): Chia Bảng dựa trên các Thuộc tính khi một Bảng có quá nhiều thuộc tính.|
@@ -1612,12 +1732,16 @@ Hệ thống danh mục (System Catalog) là một cơ sở dữ liệu hệ th�
 - Catalog được tự bản thân DBMS sinh ra và duy trì.
 - Cập nhật Catalog: Khi người dùng thực thi lệnh SQL làm thay đổi Bảng gốc (Base Table), View, Index, v.v., hệ thống sẽ tự động cập nhật.
 ###### ※ Thư mục dữ liệu (Data Directory)
+Phần “※ Thư mục dữ liệu (Data Directory)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Là hệ thống duy trì và quản lý các thông tin cần thiết để thực sự truy cập vào các dữ liệu được ghi trong Từ điển dữ liệu (Data Dictionary).
 - System Catalog có thể được truy cập bởi cả người dùng và hệ thống, nhưng Data Directory chỉ cho phép hệ thống truy cập.
 ### **<mark>187</mark>** Giao dịch (Transaction)
 ### **<mark>187</mark>** Giao dịch (Transaction)
 Giao dịch (Transaction) là đơn vị công việc thực hiện một chức năng logic nhằm thay đổi trạng thái của cơ sở dữ liệu, hoặc mang ý nghĩa là một chuỗi các phép toán cần được thực hiện hoàn tất cùng một lúc.
 ### **<mark>189</mark>** Đặc tính của Giao dịch (Transaction Properties - ACID)
+Phần “**<mark>189</mark>** Đặc tính của Giao dịch (Transaction Properties - ACID)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tính nguyên tử (Atomicity)|• Các phép toán của giao dịch hoặc phải được phản ánh hoàn toàn vào cơ sở dữ liệu (Commit), hoặc không được phản ánh chút nào (Rollback).<br>• Tất cả các lệnh trong một giao dịch phải được thực thi hoàn hảo. Nếu không được thực thi hoàn hảo toàn bộ và có bất kỳ lỗi nào xảy ra dù chỉ một thao tác, toàn bộ giao dịch phải bị hủy bỏ.|
 |---|---|
 |Tính nhất quán (Consistency)|• Khi một giao dịch hoàn thành việc thực thi thành công, nó luôn luôn phải chuyển đổi cơ sở dữ liệu về trạng thái nhất quán.<br>• Trạng thái của các yếu tố cố định mà hệ thống sở hữu phải giống nhau ở cả thời điểm trước khi thực hiện giao dịch và sau khi giao dịch hoàn tất.|
@@ -1630,6 +1754,8 @@ Giao dịch (Transaction) là đơn vị công việc thực hiện một chức
 ### **<mark>188</mark>**
 #### Trạng thái của Giao dịch
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Đang hoạt động (Active): Trạng thái Giao dịch đang được thực thi.
 - Thất bại (Failed): Trạng thái Giao dịch bị tạm dừng do xảy ra lỗi trong quá trình thực thi.
 - Hủy bỏ (Aborted): Trạng thái Giao dịch bị kết thúc bất thường và đã thực hiện thao tác Rollback (Hoàn tác).
@@ -1649,6 +1775,8 @@ View là một bảng ảo (Virtual Table) có tên, được suy ra từ một 
 - View không tồn tại về mặt vật lý trong thiết bị lưu trữ, nhưng với người dùng thì nó được coi như là có tồn tại.
 - View được sử dụng cho mục đích thực hiện các công việc tạm thời như hiệu chỉnh dữ liệu (Data Correction) hay thử nghiệm quá trình xử lý, v.v.
 ###### Đặc điểm của Khung nhìn (View)
+Phần “Đặc điểm của Khung nhìn (View)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Do View là bảng được suy ra từ các Bảng gốc (Base Table), nó có cấu trúc tương tự Bảng gốc và các thao tác (Operation) của nó cũng gần như y hệt.
 - Do View là Bảng ảo nên nó không được triển khai (Implemented) về mặt vật lý.
 - Có thể mang lại tính độc lập dữ liệu vật lý (Physical Data Independence).
@@ -1657,6 +1785,8 @@ View là một bảng ảo (Virtual Table) có tên, được suy ra từ một 
 - Các phép toán thêm (Insert), xóa (Delete), cập nhật (Update) chỉ có thể thực hiện nếu View được cấu tạo bằng tập hợp các thuộc tính (cột) bao gồm Khóa chính của bảng gốc.
 - Khi một View đã được định nghĩa, nó có thể làm cơ sở định nghĩa cho các View khác.
 ### **<mark>192</mark>** Các loại Chỉ mục (Index)
+Phần “**<mark>192</mark>** Các loại Chỉ mục (Index)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Index dựa trên cây (Tree-based Index)|Các Block (Khối) lưu trữ Index tạo thành một cấu trúc cây (Tree). Trong các DBMS thương mại, B+ Tree Index dựa trên cấu trúc cây được ứng dụng nhiều nhất.|
 |---|---|
 |Bitmap Index|Phương pháp biến đổi dữ liệu của Cột Index (Index Column) thành giá trị Bit (0 hoặc 1) và sử dụng làm Khóa Index (Index Key).|
@@ -1665,6 +1795,8 @@ View là một bảng ảo (Virtual Table) có tên, được suy ra từ một 
 |Domain Index|Người phát triển trực tiếp tạo ra loại Index cần thiết để sử dụng, còn được gọi là Extensible Index (Index mở rộng).|
 - Sử dụng câu lệnh CREATE để định nghĩa View, dùng câu lệnh DROP để loại bỏ.
 ###### Ưu nhược điểm của Khung nhìn (View)
+Phần “Ưu nhược điểm của Khung nhìn (View)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Ưu điểm|• Cung cấp tính độc lập logic của dữ liệu (Logical Data Independence).<br>• Hỗ trợ đáp ứng nhu cầu ứng dụng khác nhau của nhiều người dùng trên cùng một dữ liệu trong cùng một thời điểm.<br>• Giúp người dùng quản lý dữ liệu đơn giản hơn.<br>• Cung cấp khả năng bảo mật tự động thông qua tính năng điều khiển truy cập (Access Control).|
 |---|---|
 |Nhược điểm|• Không thể có Index độc lập.<br>• Không thể thay đổi định nghĩa của View (Alter View).<br>• Gặp hạn chế khi sử dụng các thao tác thêm (Insert), xóa (Delete), cập nhật (Update) trên nội dung cấu tạo từ View.|
@@ -1672,11 +1804,15 @@ View là một bảng ảo (Virtual Table) có tên, được suy ra từ một 
 Trong cơ sở dữ liệu, Phân vùng (Partition) là việc chia các bảng (Table) hoặc các Index dung lượng lớn thành các đơn vị logic nhỏ gọi là Partition.
 - Trong cơ sở dữ liệu dung lượng lớn, do dữ liệu thường tăng tập trung ở một số bảng quan trọng, việc phân chia các bảng này ra các đơn vị nhỏ để phân tán không chỉ ngăn chặn tình trạng suy giảm hiệu suất mà còn làm cho việc quản lý dữ liệu dễ dàng hơn.
 ###### • Các thành phần cấu tạo Cơ sở dữ liệu phân tán (Distributed Database)
+Phần “• Các thành phần cấu tạo Cơ sở dữ liệu phân tán (Distributed Database)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Bộ xử lý phân tán (Distributed Processor)|Các hệ thống máy tính tự thân sở hữu khả năng xử lý, phân tán ở các khu vực địa lý khác nhau.|
 |---|---|
 |Cơ sở dữ liệu phân tán (Distributed Database)|Là các cơ sở dữ liệu phân tán về mặt địa lý, được cấu hình phù hợp với đặc điểm của từng khu vực.|
 |Mạng truyền thông (Communication Network)|Mạng truyền thông kết nối các bộ xử lý phân tán lại với nhau để có thể vận hành về mặt logic như một hệ thống thống nhất.|
 ###### Các loại Phân vùng (Partition)
+Phần “Các loại Phân vùng (Partition)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Phân vùng theo phạm vi (Range Partitioning)|Chỉ định phạm vi dựa trên giá trị cột được cài đặt rồi chia nhỏ.<br>Ví dụ: Theo ngày, theo tháng, theo quý, v.v.|
 |---|---|
 |Phân vùng băm (Hash Partitioning)|• Dữ liệu được phân chia theo giá trị kết quả sau khi áp dụng Hàm băm (Hash Function).<br>• Phương pháp này bù đắp yếu điểm của Phân vùng theo phạm vi (khi dữ liệu dễ tập trung vào một phân vùng), nó hữu ích khi muốn phân tán dữ liệu đồng đều.<br>• Không thể phán đoán dữ liệu cụ thể đang nằm ở đâu.<br>• Có hiệu quả với các cột có dữ liệu đồng đều như Mã số khách hàng (Customer Number), Số an sinh xã hội, v.v.|
@@ -1688,6 +1824,8 @@ Cơ sở dữ liệu phân tán là cơ sở dữ liệu tuy thuộc về cùng 
 ######
 ### **<mark>196</mark>** Mục tiêu của Cơ sở dữ liệu phân tán
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Tính trong suốt về vị trí (Location Transparency) : Không cần biết vị trí thực tế của cơ sở dữ liệu muốn truy cập, có thể truy cập chỉ thông qua danh xưng logic của cơ sở dữ liệu đó.
 - Tính trong suốt về sự lặp (Replication Transparency) : Ngay cả khi dữ liệu giống nhau bị lặp (Replicate) ở nhiều vị trí, đối với người dùng, nó được coi như là có một bản duy nhất. Hệ thống sẽ tự động thực hiện các thao tác đối với các dữ liệu này.
 - Tính trong suốt về tính tương tranh (Concurrency Transparency) : Dù có nhiều giao dịch (Transaction) liên quan tới cơ sở dữ liệu phân tán chạy cùng lúc (Concurrent), kết quả của các giao dịch vẫn không bị ảnh hưởng.
@@ -1758,6 +1896,8 @@ DAS là hình thức kết nối trực tiếp máy chủ và thiết bị lưu 
 ######
 ### NAS **202** (Network Attached Storage)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - NAS là phương thức kết nối máy chủ và thiết bị lưu trữ thông qua mạng lưới (Network).
 - Một hệ thống lưu trữ NAS có tính năng quản lý tệp (File Management) độc lập sẽ trực tiếp quản lý thiết bị lưu trữ được tích hợp bên trong.
 - Thông qua mạng Ethernet (Ethernet Switch), các máy chủ khác có thể truy cập vào lưu trữ (Storage), qua đó cho phép chia sẻ tệp (File Sharing) và người dùng có thể dễ dàng tiếp cận thiết bị lưu trữ bất kể vị trí địa lý.
@@ -1789,6 +1929,8 @@ DML là ngôn ngữ được sử dụng để người dùng cơ sở dữ li�
 ######
 CREATE TABLE là câu lệnh định nghĩa cấu trúc của Bảng. Cấu trúc cơ bản:
 ###### CREATE TABLE Tên_bảng
+Phần “CREATE TABLE Tên_bảng” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |(Tên_thuộc_tính Kiểu_dữ_liệu [DEFAULT Giá_trị_mặc_định] [NOT NULL], …|
 |---|
 |[,PRIMARY KEY(Tên_thuộc_tính_Khóa_chính, …)]|
@@ -1851,6 +1993,8 @@ DROP SCHEMA Tên_schema [CASCADE | RESTRICT];  DROP DOMAIN Tên_domain [CASCADE 
 ###### GRANT RESOURCE TO NABI;
 > Ví dụ 2: Viết câu lệnh SQL để cấp quyền đơn thuần chỉ là tìm kiếm các thông tin tồn tại trong Cơ sở dữ liệu cho người có ID là "STAR".
 ###### GRANT CONNECT TO STAR;
+Phần “GRANT CONNECT TO STAR;” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - CASCADE: Xóa luôn tất cả các Khách thể (Objects) khác đang tham chiếu đến yếu tố cần xóa. Nói cách khác, khi xóa dữ liệu của Bảng chính, thao tác này được sử dụng để thiết lập ràng buộc Toàn vẹn tham chiếu (Referential Integrity Constraint) nhằm mục đích loại bỏ toàn bộ dữ liệu có quan hệ khóa ngoại (Foreign Key) tương ứng.
 - RESTRICT: Lệnh xóa sẽ bị hủy bỏ (Từ chối) nếu có một Khách thể khác đang tham chiếu đến yếu tố cần xóa.
 - Cấp và Hủy quyền đối với Bảng (Table) và Thuộc tính (Attribute)
@@ -1877,6 +2021,8 @@ INSERT INTO Tên_bảng([Tên_thuộc_tính1, Tên_thuộc_tính2,…]) VALUES (
 - Nếu sử dụng tất cả các thuộc tính của bảng gốc, ta có thể bỏ qua phần tên thuộc tính.
 - Có thể sử dụng lệnh SELECT để chèn kết quả tra cứu của một bảng khác.
 ###### <Nhân viên>
+Phần “<Nhân viên>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|
 |---|---|---|---|---|
 |Hong Gil Dong|Kế hoạch|04/05/61|Mangwon-dong|120|
@@ -1898,6 +2044,8 @@ DELETE FROM Tên_bảng [WHERE Điều_kiện];
 - Khi muốn xóa mọi Bản ghi (Record), hãy bỏ qua mệnh đề WHERE.
 - Ngay cả khi xóa mọi Bản ghi, cấu trúc của bảng (Table Structure) vẫn còn được giữ lại. Vì vậy, câu lệnh này hoàn toàn khác với lệnh DROP (Lệnh xóa bỏ hoàn toàn bảng khỏi đĩa từ).
 ###### <Nhân viên>
+Phần “<Nhân viên>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|
 |---|---|---|---|---|
 |Hong Gil Dong|Kế hoạch|04/05/61|Mangwon-dong|120|
@@ -1914,6 +2062,8 @@ Câu lệnh Cập nhật (Update) được sử dụng để thay đổi nội d
 ###### Cấu trúc cơ bản
 UPDATE Tên_bảng SET Tên_thuộc_tính = Dữ_liệu[, Tên_thuộc_tính=Dữ_liệu, …] [WHERE Điều_kiện]; 
 ###### <Nhân viên>
+Phần “<Nhân viên>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|
 |---|---|---|---|---|
 |Hong Gil Dong|Kế hoạch|04/05/61|Mangwon-dong|120|
@@ -1927,6 +2077,8 @@ UPDATE Tên_bảng SET Tên_thuộc_tính = Dữ_liệu[, Tên_thuộc_tính=D�
 > Ví dụ: Đổi 'Bộ phận' của “Hwang Jin Yi” trong bảng <Nhân viên> thành “Kế hoạch” và tăng 'Lương cơ bản' thêm 50 ngàn Won.
 UPDATE Nhân viên SET Bộ phận = ‘Kế hoạch’, Lương cơ bản = Lương cơ bản + 5 WHERE Tên = ‘Hwang Jin Yi’;  DELETE FROM Nhân viên WHERE Tên = ‘Im Kkeok Jeong’;
 ### **<mark>217</mark>** Bốn loại của Câu lệnh thao tác dữ liệu
+Phần “**<mark>217</mark>** Bốn loại của Câu lệnh thao tác dữ liệu” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - SELECT (Tìm kiếm) : SELECT~ FROM~ WHERE~ 
 - INSERT (Chèn) : INSERT INTO~ VALUES~ 
 - DELETE (Xóa) : DELETE~ FROM~ WHERE~ 
@@ -1947,6 +2099,8 @@ SELECT [PREDICATE] [Tên_bảng.]Tên_thuộc_tính [AS Bí_danh][, [Tên_bảng
 - Mệnh đề ORDER BY: Sử dụng để tìm kiếm có sắp xếp dữ liệu dựa trên một thuộc tính cụ thể làm tiêu chuẩn.
 ###### <Nhân viên>
 ###### <Hoạt động giải trí>
+Phần “<Hoạt động giải trí>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|Tên|Sở thích|Kinh nghiệm|
 |---|---|---|---|---|---|---|---|
 |Hong Gil Dong|Kế hoạch|04/05/61|Mangwon-dong|120|Kim Seon Dal|Bida|10|
@@ -1968,6 +2122,8 @@ SELECT DISTINCT Địa chỉ FROM Nhân viên;
 > Ví dụ 2: Từ bảng <Nhân viên>, hãy tìm Tuple của người đang làm việc ở bộ phận “Kế hoạch” và sống ở “Daeheung-dong”.
 SELECT * FROM Nhân viên WHERE Bộ phận = ‘Kế hoạch’ AND Địa chỉ = ‘Daeheung-dong’; 
 ###### <Kết quả>
+Phần “<Kết quả>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên<br>Seong Chun Hyang|Bộ phận<br>Kế hoạch|Ngày sinh<br>02/20/64|Địa chỉ<br>Daeheung-dong|Lương cơ bản<br>100|
 |---|---|---|---|---|
 - Tên_thuộc_tính: Nêu tên thuộc tính làm tiêu chuẩn (Cơ sở) để sắp xếp.
@@ -1975,6 +2131,8 @@ SELECT * FROM Nhân viên WHERE Bộ phận = ‘Kế hoạch’ AND Địa ch�
 ### **<mark>219</mark>** Toán tử điều kiện (Conditional Operator) / Thứ tự ưu tiên toán tử
 ###### Toán tử điều kiện
 ###### • Toán tử so sánh (Relational Operator)
+Phần “• Toán tử so sánh (Relational Operator)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Toán tử||Ý nghĩa|
 |---|---|---|
 |=|Bằng||
@@ -1985,6 +2143,8 @@ SELECT * FROM Nhân viên WHERE Bộ phận = ‘Kế hoạch’ AND Địa ch�
 |< =|Nhỏ hơn hoặc bằng||
 ###### <Nhân viên>
 ###### <Hoạt động giải trí>
+Phần “<Hoạt động giải trí>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|Tên|Sở thích|Kinh nghiệm|
 |---|---|---|---|---|---|---|---|
 |Hong Gil Dong|Kế hoạch|04/05/61|Mangwon-dong|120|Kim Seon Dal|Bida|10|
@@ -1998,6 +2158,8 @@ SELECT * FROM Nhân viên WHERE Bộ phận = ‘Kế hoạch’ AND Địa ch�
 > Ví dụ: Tìm Tuple của người có họ là ‘Kim’ trong bảng <Nhân viên>.
 SELECT * FROM Nhân viên WHERE Tên LIKE “Kim%”; 
 ###### <Kết quả>
+Phần “<Kết quả>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|
 |---|---|---|---|---|
 |Kim Seon Dal|Biên tập|10/22/73|Mangwon-dong|90|
@@ -2009,6 +2171,8 @@ SELECT * FROM Nhân viên WHERE Tên LIKE “Kim%”;
 |_|Đại diện cho một ký tự duy nhất||
 |#|Đại diện cho một chữ số duy nhất||
 ###### Thứ tự ưu tiên toán tử
+Phần “Thứ tự ưu tiên toán tử” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Phân loại|Toán tử|Thứ tự ưu tiên|
 |---|---|---|
 |Toán tử số học|×, /, +, -|Giảm dần từ trái sang phải|
@@ -2018,6 +2182,8 @@ SELECT * FROM Nhân viên WHERE Tên LIKE “Kim%”;
 ### **<mark>220</mark>** Truy vấn con (Subquery)
 Truy vấn con thực thi câu truy vấn cho sẵn trong Mệnh đề điều kiện (Condition Clause) trước, sau đó sử dụng kết quả tìm kiếm làm toán hạng (Operand) của Mệnh đề điều kiện.
 ###### <Nhân viên> <Hoạt động giải trí>
+Phần “<Nhân viên> <Hoạt động giải trí>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tên|Bộ phận|Ngày sinh|Địa chỉ|Lương cơ bản|Tên|Sở thích|Kinh nghiệm|
 |---|---|---|---|---|---|---|---|
 |Hong Gil Dong|Kế hoạch|04/05/61|Mangwon-dong|120|Kim Seon Dal|Bida|10|
@@ -2035,6 +2201,8 @@ Tên Địa chỉ Seong Chun Hyang Daeheung-dong
 > Ví dụ 2: Tìm Bộ phận của những nhân viên có tham gia hoạt động giải trí (Sở thích).
 SELECT Bộ phận FROM Nhân viên  WHERE EXISTS  (SELECT Tên FROM Hoạt động giải trí WHERE Hoạt động giải trí.Tên = Nhân viên.Tên);
 ###### <Kết quả>
+Phần “<Kết quả>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Bộ phận<br>Internet|
 |---|
 |Biên tập|
@@ -2048,6 +2216,8 @@ SELECT  [PREDICATE] [Tên_bảng.]Tên_thuộc_tính [AS Bí_danh][, [Tên_bản
 - Mệnh đề GROUP BY: Được sử dụng để phân nhóm rồi tìm kiếm dựa trên một thuộc tính cụ thể. Thông thường, Mệnh đề GROUP BY được sử dụng kết hợp với Hàm nhóm.
 - Mệnh đề HAVING: Được sử dụng cùng với GROUP BY, dùng để chỉ định điều kiện dành cho nhóm.
 ###### <Tiền thưởng>
+Phần “<Tiền thưởng>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Bộ phận|Tên|Nội dung thưởng|Tiền thưởng|
 |---|---|---|---|
 |Kế hoạch|Hong Gil Dong|Làm thêm giờ|100|
@@ -2066,6 +2236,8 @@ SELECT  [PREDICATE] [Tên_bảng.]Tên_thuộc_tính [AS Bí_danh][, [Tên_bản
 SELECT Bộ phận, COUNT(*) AS Số_lượng_nhân_viên FROM Tiền thưởng WHERE Tiền thưởng >= 100 GROUP BY Bộ phận HAVING COUNT(*) >= 2;  [, Hàm_nhóm(Tên_thuộc_tính) [AS Bí_danh]] [, Hàm_WINDOW OVER (PARTITION BY Tên_thuộc_tính_1, Tên_thuộc_tính_2, … ORDER BY Tên_thuộc_tính_3, Tên_thuộc_tính_4, …) [AS Bí_danh] ] FROM Tên_bảng[, Tên_bảng, …] [WHERE Điều_kiện]
 - [GROUP BY Tên_thuộc_tính, Tên_thuộc_tính, …] 
 ###### <Kết quả>
+Phần “<Kết quả>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Bộ phận<br>Số_lượng_nhân_viên<br>Kế hoạch<br>3|
 |---|
 [HAVING Điều_kiện]  [ORDER BY Tên_thuộc_tính [ASC | DESC]];
@@ -2080,6 +2252,8 @@ SELECT Bộ phận, COUNT(*) AS Số_lượng_nhân_viên FROM Tiền thưởng 
 - VARIANCE(Tên_thuộc_tính): Hàm tính Phương sai (Variance) theo nhóm.
 ###### <Nhân viên>
 ###### <Nhân viên văn phòng>
+Phần “<Nhân viên văn phòng>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Nhân viên|Chức vụ|Nhân viên|Chức vụ|
 |---|---|---|---|
 |Kim Hyeong Seok|Trợ lý|Shin Won Seop|Giám đốc|
@@ -2112,6 +2286,8 @@ UNION | UNION ALL | INTERSECT | EXCEPT SELECT Tên_thuộc_tính_1, Tên_thuộc
 > Ví dụ 2: Viết câu lệnh truy vấn chỉ hợp nhất những Bản ghi tồn tại chung trong cả bảng <Nhân viên> và bảng <Nhân viên văn phòng>.
 SELECT * FROM Nhân viên INTERSECT SELECT * FROM Nhân viên văn phòng; 
 ###### <Kết quả>
+Phần “<Kết quả>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Nhân viên|Chức vụ|
 |---|---|
 |Ryu Gi Seon|Trưởng bộ phận|
@@ -2125,6 +2301,8 @@ INNER JOIN thông thường được chia thành EQUI JOIN và NON-EQUI JOIN.
 - SELECT Mã_số_sinh_viên, Tên, Học_sinh.Mã_ngành, Tên_ngành FROM Học_sinh, Ngành WHERE Học_sinh.Mã_ngành = Ngành.Mã_ngành; • SELECT Mã_số_sinh_viên, Tên, Học_sinh.Mã_ngành, Tên_ngành FROM Học_sinh NATURAL JOIN Ngành; 
 - SELECT Mã_số_sinh_viên, Tên, Học_sinh.Mã_ngành, Tên_ngành FROM Học_sinh JOIN Ngành USING(Mã_ngành); 
 ###### <Kết quả>
+Phần “<Kết quả>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Mã_số_sinh_viên|Tên|Mã_ngành|Tên_ngành|
 |---|---|---|---|
 |15|Go Gil Dong|com|Máy tính|
@@ -2160,6 +2338,8 @@ ODBC (Open DataBase Connectivity)
 - Microsoft đã cho ra mắt ODBC vào tháng 9 năm 1992.
 - ODBC cũng cần một Trình điều khiển tương thích với DBMS sẽ kết nối. Tuy nhiên, dù không biết Giao diện (Interface) của DBMS đó, chỉ cần viết lệnh SQL bằng ODBC, Trình quản lý điều khiển (Driver Manager) trong ODBC sẽ liên kết hệ thống sao cho phù hợp với Giao diện của DBMS tương ứng, nhờ đó ta không cần biết loại DBMS cũng dùng được.
 ###### MyBatis
+Phần “MyBatis” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - MyBatis là Khung kết nối (Connection Framework) mã nguồn mở dựa trên SQL Mapping (Ánh xạ), có thể dùng để tinh giản mã JDBC.
 - Để truy cập cơ sở dữ liệu bằng JDBC, ta phải gọi và giải phóng rất nhiều Method khác nhau, còn MyBatis đã làm đơn giản hóa bước này và tăng cường thêm tính năng kết nối.
 - MyBatis tách biệt (phân tách) câu lệnh SQL để tạo tệp XML, và thực thi SQL thông qua Mapping.
@@ -2231,6 +2411,8 @@ Kiểu dữ liệu Chuỗi (Sequence Type) là kiểu dữ liệu có các giá 
 struct sawon { char name[10]; char position[10]; int pay; } 
 ######
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |**235**<br>핵심|Kích thước Kiểu dữ liệu và<br>Phạm vi lưu trữ của JAVA<br>400103|
 |---|---|
 |Phân loại|Kiểu dữ liệu<br>Kích thước|
@@ -2243,6 +2425,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 Biến (Variable) là không gian dùng để lưu trữ một giá trị phát sinh trong quá trình máy tính xử lý lệnh, và mang ý nghĩa là một giá trị có thể thay đổi được.
 - Tùy theo giá trị lưu trữ, Biến được phân loại thành Kiểu số nguyên (Integer), Kiểu số thực (Float), Kiểu ký tự (Character), Kiểu con trỏ (Pointer), v.v.
 ###### Quy tắc đặt tên biến
+Phần “Quy tắc đặt tên biến” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Có thể sử dụng chữ cái tiếng Anh, số, và dấu gạch dưới _ (under bar).
 - Chữ cái đầu tiên phải bắt đầu bằng chữ cái tiếng Anh hoặc dấu _ (under bar), không thể bắt đầu bằng số.
 - Không giới hạn số lượng chữ cái.
@@ -2252,6 +2436,8 @@ Biến (Variable) là không gian dùng để lưu trữ một giá trị phát 
 - Khi khai báo biến, bắt buộc phải thêm dấu chấm phẩy (;) vào cuối câu.
 - Việc nêu rõ Kiểu dữ liệu (Data Type) trong tên biến khi khai báo biến được gọi là Ký pháp Hungary (Hungarian Notation).
 ### Bộ thu gom rác **238** (Garbage Collector)
+Phần “Bộ thu gom rác **238** (Garbage Collector)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Nếu ta chỉ khai báo biến (Variable Declaration) mà không sử dụng, các chương trình khác sẽ không thể sử dụng không gian bộ nhớ mà những biến này đang chiếm giữ.
 - Việc cưỡng chế giải phóng không gian bộ nhớ bị chiếm giữ bởi các biến "chỉ được khai báo mà không sử dụng" để các chương trình khác có thể sử dụng không gian đó được gọi là Thu gom rác (Garbage Collection), và Module thực thi tính năng này được gọi là Bộ thu gom rác (Garbage Collector).
 ### **<mark>240</mark>** Toán tử quan hệ (Relational Operator)
@@ -2306,6 +2492,8 @@ Toán tử gán được cung cấp để giúp người dùng nhập ngắn g�
 |<<=|a <<= 1|a = a << 1||
 |>>=|a >>= 1|a = a >> 1||
 ### **<mark>244</mark>** Toán tử điều kiện (Conditional Operator)
+Phần “**<mark>244</mark>** Toán tử điều kiện (Conditional Operator)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Phân loại Lớn|Phân loại Vừa|Toán tử<br>Quy tắc kết hợp|Thứ tự ưu tiên|
 |---|---|---|---|
 |Toán tử<br>Một ngôi|Toán tử<br>Một ngôi|!(Logic not)~(Bit not)++(Tăng)<br>- -(Giảm)sizeof(Khác)|Cao|
@@ -2322,9 +2510,13 @@ Toán tử gán được cung cấp để giúp người dùng nhập ngắn g�
 Toán tử điều kiện sẽ thực thi các biểu thức toán học (수식) khác nhau tùy theo từng điều kiện.
 ###### • Cấu trúc (Định dạng)
 ###### Điều_kiện ? Biểu_thức_1 : Biểu_thức_2;
+Phần “Điều_kiện ? Biểu_thức_1 : Biểu_thức_2;” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Nếu biểu thức của 'Điều kiện' đúng (True), sẽ chạy 'Biểu thức 1', nếu sai (False), sẽ chạy 'Biểu thức 2'.
 ### **<mark>245</mark>** Thứ tự ưu tiên toán tử (Operator Precedence)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Khi có nhiều toán tử được sử dụng chung trong một biểu thức, về cơ bản chúng sẽ được xử lý theo trình tự trong bảng dưới đây.
 - Trong bảng dưới đây, những toán tử được liệt kê theo hàng ngang trên cùng một dòng sẽ có mức độ ưu tiên ngang nhau, do vậy sẽ được tính toán theo quy tắc kết hợp: ← là tính từ toán tử nằm bên phải trước, → là tính lần lượt từ toán tử nằm bên trái trước.
 ### **<mark>246</mark>** Hàm scanf( )
@@ -2336,12 +2528,16 @@ Hàm scanf() là hàm nhập tiêu chuẩn của ngôn ngữ C, dùng để nh�
 - d : Nhập dưới dạng Hệ thập phân (Cơ số 10)
 - &a : Lưu dữ liệu đã nhập vào địa chỉ của biến a
 ###### Đặc điểm
+Phần “Đặc điểm” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Có thể chỉ định kiểu dữ liệu, số lượng chữ số, v.v. của dữ liệu sẽ nhập.
 - Có thể nhập nhiều dữ liệu cùng lúc.
 - Kiểu dữ liệu của Chuỗi định dạng (Format String) và Biến phải khớp với nhau.
 -    scanf("%d  %f", &i, &j); → ‘%d’ và i, “%f” và j phải khớp nhau về Kiểu dữ liệu.
 -   printf("%-8.2f", 200.2); (∨ có nghĩa là khoảng trắng) 
 ###### <mark>200.20V V</mark>
+Phần “<mark>200.20V V</mark>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - % : Chỉ định đây là Ký tự định dạng
 - 
 - ▶ : In ra màn hình từ bên trái
@@ -2371,6 +2567,8 @@ Hàm scanf() là hàm nhập tiêu chuẩn của ngôn ngữ C, dùng để nh�
 Hàm printf( ) là hàm xuất tiêu chuẩn của ngôn ngữ C, dùng để in ra màn hình các giá trị được gán (truyền) vào thông qua Đối số (Argument).
 ###### Cấu trúc
 ### **<mark>249</mark>** Các ký tự điều khiển (Control Character) chủ yếu
+Phần “**<mark>249</mark>** Các ký tự điều khiển (Control Character) chủ yếu” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Ký tự|Ý nghĩa|Tính năng (Chức năng)|
 |---|---|---|
 | new line (Dòng mới) | Di chuyển con trỏ (Cursor) tới đầu dòng tiếp theo |
@@ -2384,11 +2582,15 @@ Hàm printf( ) là hàm xuất tiêu chuẩn của ngôn ngữ C, dùng để in
 |---|
 21.3, 20.9 핵심 
 ### **<mark>250</mark>** In chuẩn (Standard Output) trong JAVA
+Phần “**<mark>250</mark>** In chuẩn (Standard Output) trong JAVA” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Khi in (xuất) một giá trị ra màn hình trong JAVA, ta sẽ sử dụng các Method của Lớp out (Lớp con của Lớp System) như print( ), println( ), printf( ), v.v.
 - Định dạng 1: In nội dung của biến ra màn hình cho khớp với chuỗi định dạng • Chuỗi định dạng : Nhập chuỗi định dạng khớp với kiểu dữ liệu của biến printf(Chuỗi định dạng, • Biến : Viết biến cần in ra theo đúng thứ tự Biến) với chuỗi định dạng. Khác với hàm scanf(), ở đây không gắn toán tử địa chỉ & System.out.printf(Chuỗi định dạng, Biến)
 - Cách sử dụng của Method printf() hoàn toàn giống với Hàm printf() trong C.
 -   System.out.printf(“%-8.2f”, 200.2); (V có nghĩa là khoảng trắng) 
 ###### <mark>200.20V V</mark>
+Phần “<mark>200.20V V</mark>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - % : Chỉ định đây là Ký tự định dạng
 - 
 - ▶ : In ra màn hình từ bên trái
@@ -2403,6 +2605,8 @@ Hàm printf( ) là hàm xuất tiêu chuẩn của ngôn ngữ C, dùng để in
 - Cách sử dụng của Method println( ) hoàn toàn giống với Method print( ), chỉ ngoại trừ việc sau khi in xong nó sẽ nhảy xuống dòng tiếp theo.
 -  System.out.print(“abc123” + “def”); 
 ###### abc123def
+Phần “abc123def” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 | 
 ###### Vị trí của con trỏ (Cursor)
 ### **<mark>251</mark>**
@@ -2508,6 +2712,8 @@ Câu lệnh while là lệnh điều khiển giúp lặp lại câu lệnh thự
 - Lệnh while sẽ lặp đi lặp lại việc chạy câu lệnh thực thi chừng nào điều kiện vẫn còn Đúng, và nếu điều kiện Sai (False), nó sẽ kết thúc lệnh while rồi chạy phần mã (code) tiếp theo.
 - Lệnh while sẽ không thực thi dù chỉ một lần nếu điều kiện ban đầu đã Sai.
 ###### • Định dạng
+Phần “• Định dạng” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - while(Điều_kiện) • while là từ dành riêng sử dụng trong vòng lặp nên cứ nhập y nguyên như vậy.
 - • (Điều_kiện) : Nhập biểu thức (có kết quả cho ra Đúng hoặc Sai) vào 'Điều_kiện'. Ta cũng có thể nhập trực tiếp Đúng(1) vào.
 Lệnh_thực_thi; Nhập các câu lệnh sẽ được chạy trong khoảng thời gian điều kiện là Đúng. Nếu có từ hai câu lệnh trở lên, hãy nhập { } và viết các lệnh xử lý vào giữa đó.
@@ -2561,6 +2767,8 @@ Mảng 1 chiều (One-Dimensional Array)
 ### **<mark>259</mark>**
 #### Mảng 2 chiều (Two-Dimensional Array)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Mảng 2 chiều là mảng cấu thành bằng cách ghép nối các biến trên mặt phẳng, tức là dùng "Hàng" (Row) và "Cột" (Column).
 - Định dạng 
 |Kiểu_dữ_liệu Tên_biến<br>[Số_lượng_hàng][Số_lượng_cột]|•Kiểu_dữ_liệu : Chỉ định Kiểu dữ liệu sẽ lưu trữ trong mảng<br>• Tên_biến : Tên mảng muốn dùng, do người dùng<br>tùy ý cài đặt<br>•Số_lượng_hàng : Chỉ định kích thước hàng của mảng|
@@ -2575,6 +2783,8 @@ Mảng 1 chiều (One-Dimensional Array)
 b[0][2] : b là tên mảng, 0 là chỉ số hàng, 2 là chỉ số cột dùng để biểu thị vị trí (tọa độ) trong mảng b.
 ###### Ví dụ: Lưu trữ số liệu sau đây vào mảng 3 hàng 4 cột
 #include <stdio.h> main( ) { 
+Phần “include <stdio.h> main( ) {” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - int a[5]; Khai báo mảng a kiểu số nguyên gồm 5 phần tử. Lúc khai báo, ta khai báo "số lượng sẽ dùng", còn lúc lấy ra sử dụng thì bắt đầu tính từ "chỉ số 0", vì vậy cần hết sức lưu ý.
 Mảng a 
 |1|2|3|4|
@@ -2600,6 +2810,8 @@ Trong ngôn ngữ C, những từ được bao bọc bởi dấu nháy kép (“
 ### **<mark>260</mark>**
 #### Khởi tạo mảng (Array Initialization)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Khi khai báo mảng, ta có thể chỉ định giá trị khởi tạo.
 - Trong trường hợp không nêu kích thước của mảng khi khai báo, bắt buộc phải chỉ định (điền) giá trị khởi tạo, khi đó hệ thống sẽ đếm xem người dùng điền bao nhiêu số thì nó mới thiết lập một mảng có đúng số lượng phần tử bấy nhiêu.
 -   Khởi tạo mảng 1 chiều 
@@ -2641,6 +2853,8 @@ b = &a; ❸ Ghi nhớ địa chỉ của biến a kiểu số nguyên vào biế
 *b = *b+20; ❹ Cộng thêm 20 vào giá trị tại vị trí mà b đang chỉ tới. Vì vị trí mà b đang trỏ tới chính là a, nên chung quy lại giá trị của a cũng sẽ thay đổi theo.
 printf(“%d, %d”, a, *b); ❺ 
 ###### Kết quả <mark>70, 70</mark>
+Phần “Kết quả <mark>70, 70</mark>” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Khi khai báo như ở câu ❷, dấu * mang ý nghĩa báo hiệu rằng biến này là một biến con trỏ.
 - Khi sử dụng như ở câu ❹ và ❺, nếu gắn thêm dấu * thì nó có nghĩa là "Giá trị tại nơi mà biến con trỏ đó đang trỏ tới".
 #### }
@@ -2667,6 +2881,8 @@ a[0] a[1] a[2] a[3] a[4] ← Cách biểu thị Mảng Mảng a Thứ nhất Th�
 - Ta có thể khai báo một Mảng dạng Con trỏ (Pointer Array) mà phần tử của nó là Con trỏ.
 - ❹  Giá trị được lưu trong p là địa chỉ bắt đầu của mảng số nguyên. Việc tăng giá trị của p thêm 1 có nghĩa là tăng địa chỉ mà p đang trỏ tới (từ địa chỉ dữ liệu số nguyên hiện tại) để chuyển sang địa chỉ của dữ liệu số nguyên tiếp theo. Kích thước của dữ liệu kiểu số nguyên là 4Byte, vì vậy địa chỉ bộ nhớ vật lý tiếp theo sẽ chỉ vào vị trí đã tăng thêm 4Byte. Nếu dùng hình ảnh để biểu diễn việc tăng 1 địa chỉ, tức là tăng 4Byte tính từ địa chỉ bắt đầu của mảng được lưu trong p thì ta sẽ có sơ đồ sau.
 ### **<mark>264</mark>** Ngữ pháp cơ bản của Python
+Phần “**<mark>264</mark>** Ngữ pháp cơ bản của Python” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Không có phần khai báo Kiểu dữ liệu cho biến.
 - Không cần dùng Dấu chấm phẩy (;) để kết thúc một câu lệnh.
 - Có khả năng lưu các giá trị vào biến một cách liên tục (liên tiếp).
@@ -2687,6 +2903,8 @@ Bộ nhớ
 - ⋮ 
 ### Hàm Nhập/Xuất Dữ liệu **265** trong Python
 ###### Hàm input( )
+Phần “Hàm input( )” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Hàm input( ) là hàm nhập tiêu chuẩn của Python, dùng để nhận giá trị nhập vào từ bàn phím và lưu vào biến.
 - Định dạng  Biến = input(Chuỗi_hiển_thị) • ‘Chuỗi hiển thị’ có thể giản lược bỏ qua, và ‘Biến’ có thể do người dùng tùy ý quy định. • Khi nhập xong giá trị và nhấn phím Enter (J), giá trị đã nhập sẽ được lưu vào ‘Biến’.
 - → 
@@ -2712,10 +2930,14 @@ Do hàm input() có cơ chế tự động lưu mọi giá trị nhận vào th�
 ######
 ######
 ### **<mark>268</mark>** Dictionary (Từ điển)
+Phần “**<mark>268</mark>** Dictionary (Từ điển)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Dictionary được dùng với mục đích gói gọn các giá trị có tính liên quan với nhau lại và lưu trữ.
 - Khác với List - nơi dùng các chữ số như 0, 1, 2 v.v. tương ứng với từng vị trí để làm 'Key' truy cập vào các phần tử được lưu trữ, Dictionary cho phép người dùng tự do chỉ định các giá trị mà họ mong muốn làm 'Key'.
 ### **<mark>267</mark>** List (Danh sách)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Trong C và Java, khi muốn gom các phần tử lại xử lý chung dưới một cái tên, ta dùng Array (Mảng). Còn trong Python, ta dùng List (Danh sách).
 - Vì List có khả năng kéo giãn hoặc thu hẹp số lượng phần tử một cách linh hoạt tùy theo nhu cầu, nên khi khai báo List, ta không cần ghi kích thước của nó.
 - Khác với Mảng, List có thể lưu trữ "thập cẩm" nhiều loại Kiểu dữ liệu khác nhau vào chung một List, chẳng hạn như số nguyên, số thực, chuỗi ký tự, v.v.
@@ -2725,6 +2947,8 @@ Tên_List = list([ Giá_trị_1, Giá_trị_2, … ])
 - Để truy cập vào Dictionary, ta gắn thêm dấu ngoặc vuông ([ ]) vào phía sau Dictionary, và điền Key (Khóa) vào bên trong ngoặc vuông ([ ]).
 - Định dạng 
 ##### Tên_Dictionary = { Key_1:Giá_trị_1, Key_2:Giá_trị_2, … }
+Phần “Tên_Dictionary = { Key_1:Giá_trị_1, Key_2:Giá_trị_2, … }” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Tên Dictionary do người dùng tự đặt tùy ý. Viết các giá trị muốn lưu trữ vào giữa cặp dấu ngoặc nhọn (đại diện cho Dictionary), cách nhau bởi dấu phẩy (,).
 - Tên_Dictionary = dict({ Key_1:Giá_trị_1, Key_2:Giá_trị_2, … }) 
 - VD 1 Cách 1 : a = {‘Tên’:‘Hong Gildong’, ‘Tuổi’:25, ‘Địa chỉ’:‘Seoul’} Cách 2 : a = dict({‘Tên’:‘Hong Gildong’, ‘Tuổi’:25, ‘Địa chỉ’: ‘Seoul’})  a[‘Tên’] a[‘Tuổi’] a[‘Địa chỉ’] Kết quả List a ‘Hong Gildong’ 25 ‘Seoul’
@@ -2736,6 +2960,8 @@ Slice là tính năng cắt (slicing) lấy ra một phần từ bên trong các
 a = 15 if a > 10:  ❶ Nếu a lớn hơn 10 thì chạy câu ❷, nếu không thì nhảy xuống câu ❸ và tiếp tục thực thi. a = a - 10  ❷ Câu lệnh sẽ chạy khi biểu thức ❶ là Đúng. a sẽ thành 5. print(a)  ❸ Ở đây không có lệnh nào để chạy cho trường hợp biểu thức ❶ là Sai cả. Khi thoát khỏi lệnh if thì mặc định (vô điều kiện) nhảy tới câu ❸.
 Kết quả 5 
 ##### Tên_đối_tượng[Vị_trí_đầu:Vị_trí_cuối:Bước_nhảy (Giá trị tăng)]
+Phần “Tên_đối_tượng[Vị_trí_đầu:Vị_trí_cuối:Bước_nhảy (Giá trị tăng)]” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Trích xuất các phần tử từ 'Vị trí đầu' đến 'Vị trí cuối - 1', bước đi mỗi lần tăng thêm 'Bước nhảy' tương ứng.
 - Nếu 'Bước nhảy' mang số âm, nó sẽ trích xuất các phần tử theo chiều ngược lại (giảm dần) từ 'Vị trí đầu' đến 'Vị trí cuối + 1', bước đi mỗi lần giảm theo đúng 'Bước nhảy'.
 - Slice cho phép người dùng lược bỏ (bỏ trống) một số Đối số (Argument) khi sử dụng.
@@ -2745,6 +2971,8 @@ Tên_đối_tượng[:] Hoặc Tên_đối_tượng[::] Trả về toàn bộ ph
 - VD 1 for  i in range(10): → • Lưu lần lượt các số từ 0 đến 9 vào i, đồng thời lặp lại việc chạy 'Lệnh thực thi'. sum += i 
 ######
 ### **<mark>270</mark>** Python - Câu lệnh if
+Phần “**<mark>270</mark>** Python - Câu lệnh if” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
       - Cộng dồn giá trị của i vào sum. Từ đó sum sẽ chứa tổng của các số từ 0 đến 9, bằng 45.
    - VD 2 for  i in range(11, 20): → • Lưu lần lượt các số từ 11 đến 19 vào i, đồng thời lặp lại việc chạy 'Lệnh thực thi'. sum += i 
       - Cộng dồn giá trị của i vào sum. Từ đó sum sẽ chứa tổng của các số từ 11 đến 19, bằng 135.
@@ -2758,6 +2986,8 @@ Tên_đối_tượng[:] Hoặc Tên_đối_tượng[::] Trả về toàn bộ ph
 - ❹     hap += i 
 - ❺ avg = hap / len(a)  ❻ print(hap, avg)
 ###### Giải thích Code
+Phần “Giải thích Code” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |❶ Vừa khai báo List a vừa đồng thời|chỉ định giá trị khởi tạo.|
 |---|---|
 |a[0]|a[1]<br>a[2]<br>a[3]<br>a[4]|
@@ -2782,11 +3012,15 @@ class Tên_class:
 class là từ dành riêng, hãy nhập nguyên xi nó. Còn 'Tên class' do người dùng tự đặt.
 ##### Lệnh_thực_thi
 ##### def Tên_method(self, Đối_số):
+Phần “def Tên_method(self, Đối_số):” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - def là từ dành riêng dùng định nghĩa Method, hãy nhập nguyên xi nó. Còn 'Tên Method' do người dùng tự đặt.
 - self là danh xưng sử dụng khi muốn truy cập vào biến thuộc về chính class của mình từ bên trong Method. Thường thì mọi người dùng self nhưng người dùng tự đổi tên cũng chẳng sao.
 - 'Đối số' (Argument) là biến dùng để lưu giá trị truyền đến từ nơi gọi Method. Do người dùng tùy ý đặt tên.
 Lệnh_thực_thi 
 #### return Giá_trị
+Phần “return Giá_trị” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
    - return là từ dành riêng dùng để trả (đưa) giá trị về lại vị trí đã gọi Method ra. Nếu không có giá trị nào để trả về thì có thể bỏ qua lệnh return.
    - Vị trí 'Giá_trị' có thể là biến, đối tượng, biểu thức toán học, v.v.
 - ❺ Lấy hap chia cho số lượng phần tử của List a, sau đó lưu kết quả vào biến avg.
@@ -2794,10 +3028,14 @@ Lệnh_thực_thi
 ❻ Kết quả 284 56.8 
 - Định dạng Khai báo Đối tượng (Object)
 ##### Tên_biến = Tên_class( )
+Phần “Tên_biến = Tên_class( )” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Tên biến do người dùng tự đặt, sau đó viết Tên class đã được định nghĩa từ trước kèm theo cặp ngoặc đơn ( ).
 ### **<mark>272</mark>**
 #### Python - Câu lệnh While
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Định dạng  while Điều_kiện:
 - while là từ dành riêng, cứ nhập nguyên xi.
 - Nhập biểu thức có kết quả cho ra Đúng hoặc Sai vào vị trí 'Điều_kiện'. Cũng có thể nhập thẳng chữ Đúng (1 hoặc True) vào đây.
@@ -2810,6 +3048,8 @@ x, y = 10, 20 Khai báo biến (thuộc tính) x và y của Class Cls, đồng 
 > ❹ def chg(self): 
 ❺    temp = self.x  ❻    self.x = self.y ❼    self.y = temp ❶ a = Cls( ) ❷ print(a.x, a.y) ❸ a.chg( ) ❽ print(a.x, a.y)
 ###### Giải thích Code
+Phần “Giải thích Code” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - ❶  Khởi tạo Object (Đối tượng) a thuộc Class Cls. Object a này sẽ sở hữu hai thuộc tính x, y cùng Method chg( ) của Cls.
 - a : Biến do người dùng định nghĩa, có thể đặt tên tùy ý.
 - Cls( ) : Tên của Class. Gắn thêm ngoặc đơn ( ) vào sau tên và viết y nguyên.
@@ -2912,6 +3152,8 @@ Chương trình Biên dịch (Ngôn ngữ) Là việc biến đổi Mã nguồn 
 • Là chương trình được tạo ra nhằm giúp cho người dùng Chương trình Dịch vụ sử dụng máy tính hiệu quả hơn • Điển hình là Chương trình tiện ích (Utility Program), Sắp xếp/Trộn (Sort/Merge) v.v.
 ### **<mark>284</mark>** Tính năng của Hệ điều hành
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Quản lý các tài nguyên như Bộ xử lý (Processor), Thiết bị nhớ (Bộ nhớ chính, Bộ nhớ phụ), Thiết bị Nhập/Xuất, File, và Thông tin v.v.
 Chế độ Đa nhiệm ưu tiên Là phương thức mà Hệ điều hành sẽ kiểm soát thời gian sử dụng CPU của từng công việc trong lúc chạy Multi-Tasking (Đa nhiệm) - tức thực thi nhiều chương trình cùng lúc. Nếu phát sinh sự cố trong lúc chạy ứng dụng, nó sẽ ép (강제) ứng dụng đó đóng lại rồi thu hồi toàn bộ Tài nguyên Hệ thống.
 (Preemptive Multi-Tasking) Tính năng PnP (Cắm và Chạy) Tính năng hệ điều hành tự động cấu hình (cài đặt) môi trường hệ thống cần thiết để sử dụng Phần cứng (ví dụ: Sound Card, Máy in v.v.) ngay khi vừa lắp (kết nối) chúng vào hệ thống máy tính.
@@ -2932,6 +3174,8 @@ Hệ thống Single-User Cho phép một người duy nhất được độc chi
 ### **<mark>285</mark>**
 #### Windows
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Windows là Hệ điều hành (OS) được công ty Microsoft phát triển vào thập niên 1990.
 - Các đặc điểm chính của Windows  Giao diện người dùng Đồ họa Là phương thức mà ở đó người dùng không cần phải trực tiếp gõ câu lệnh bằng bàn phím, thay vào đó có thể thực hiện mọi thao tác bằng cách dùng Chuột (Mouse) chọn vào các Menu hay Biểu tượng (Icon).
 (GUI; Graphic User Interface) 
@@ -2946,6 +3190,8 @@ UNIX là Hệ điều hành (OS) được phát triển dưới sự hợp tác 
 - Thuận lợi trong việc phát triển chương trình mang tính chuyên môn.
 - Tồn tại đa dạng các Chương trình Tiện ích (Utility Program).
 ###### ※ Đa người dùng (Multi-User), Đa nhiệm (Multi-Tasking)
+Phần “※ Đa người dùng (Multi-User), Đa nhiệm (Multi-Tasking)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Đa người dùng (Multi-User) nghĩa là nhiều người có thể dùng Hệ thống cùng lúc. Đa nhiệm (Multi-Tasking) nghĩa là tiến hành (thực thi) nhiều chương trình hoặc công việc cùng lúc.
 - Do tiến hành thực thi một hoặc nhiều công việc chạy ẩn (Background) nên nó có thể xử lý đa tác vụ cùng lúc.
 ######
@@ -2957,11 +3203,15 @@ Mang ý nghĩa là một Khối điều khiển (Control Block) chứa đựng t
 #### Cấu tạo của Hệ thống UNIX
 ######
 ###### Kernel (Hạt nhân)
+Phần “Kernel (Hạt nhân)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Là phần cốt lõi nhất của Hệ điều hành UNIX.
 - Khi máy tính khởi động, nó sẽ được nạp (tải) lên Bộ nhớ chính (Main memory) rồi luôn luôn thường trú ở đó và liên tục hoạt động (thực thi).
 - Đóng vai trò là Interface (Giao diện kết nối) giữa Phần cứng và Chương trình, đồng thời bảo vệ Phần cứng.
 - Thực thi vô số tính năng đa dạng như Quản lý Bộ nhớ (Memory), Quản lý File, Quản lý Tiến trình (Lập lịch CPU), Quản lý Nhập/Xuất (I/O), Truyền tải và Biến đổi Dữ liệu, Giao tiếp giữa các Tiến trình.
 ###### Shell (Vỏ)
+Phần “Shell (Vỏ)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Là trình thông dịch (diễn dịch) Câu lệnh, có tác dụng gọi (khởi chạy) Chương trình và thi hành Mệnh lệnh bằng cách nhận diện Câu lệnh của người dùng.
 - Vì Bộ mô tả file do Hệ thống file quản lý, nên Người dùng không thể trực tiếp tham chiếu (Reference) tới nó.
 ### Quản lý Bộ nhớ - **289** Chiến lược bố trí (Placement Strategy)
@@ -2976,10 +3226,14 @@ Chiến lược bố trí là chiến lược nhằm đưa ra quyết định xe
 - Có thể thay đổi hướng Dữ liệu vào (Input) và Dữ liệu ra (Output) thông qua tính năng Điều hướng lại Nhập/Xuất (I/O Redirection), và hỗ trợ tính năng Pipeline.
 - Có thể sử dụng Shell do người dùng tự tạo ra, hoặc các Shell dùng chung (Bourne Shell, C Shell, Korn Shell).
 ###### Chương trình Tiện ích (Utility Program)
+Phần “Chương trình Tiện ích (Utility Program)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Dùng để xử lý các chương trình ứng dụng (Application Program) do người dùng thông thường tạo ra.
 - Tương đương với Mệnh lệnh ngoại trú (External Command) trong DOS.
 - Các chương trình Tiện ích bao gồm: Trình biên dịch (Compiler), Trình gỡ lỗi (Debugger), Trình soạn thảo (Editor), Trình thông dịch (Interpreter) v.v.
 ### **<mark>290</mark>** Kỹ thuật Phân trang (Paging)
+Phần “**<mark>290</mark>** Kỹ thuật Phân trang (Paging)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Kỹ thuật Phân trang (Paging) là kỹ thuật chia Vùng của Bộ nhớ chính và Chương trình đang được lưu ở Bộ nhớ ảo thành các kích thước bằng nhau, sau đó mang các phần chương trình đã chia nhỏ (gọi là Page - Trang) nạp vào trong các vùng đã chia của Bộ nhớ chính (gọi là Page Frame - Khung trang) để thực thi.
 - Đơn vị chia đều kích thước của một Chương trình được gọi là Trang (Page), còn đơn vị chia đều Bộ nhớ chính theo đúng kích thước Trang thì được gọi là Khung Trang (Page Frame).
 - Kỹ thuật này có khả năng phát sinh Phân mảnh nội (Internal Fragmentation), nhưng KHÔNG phát sinh Phân mảnh ngoại (External Fragmentation).
@@ -2987,6 +3241,8 @@ Chiến lược bố trí là chiến lược nhằm đưa ra quyết định xe
 ######
 ### Kỹ thuật Phân đoạn **291** (Segmentation)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Kỹ thuật Phân đoạn (Segmentation) là kỹ thuật chia Chương trình (hiện đang được lưu ở Bộ nhớ ảo) thành nhiều đơn vị Logic (Logical Unit) có kích thước đa dạng (khác nhau), sau đó mang nạp vào Bộ nhớ chính để thực thi.
 - Đơn vị chia chương trình theo một kích thước mang tính logic (chẳng hạn như Hàm, Mảng v.v.) được gọi là Đoạn (Segment). Mỗi Đoạn đều sở hữu Kích thước và Tên gọi riêng biệt (duy nhất).
 - Để biến đổi (chuyển đổi) Địa chỉ, ta cần phải có Bảng ánh xạ Đoạn (Segment Map Table) - thứ chứa thông tin vị trí tồn tại của các Segment.
@@ -3009,12 +3265,16 @@ Chance  Replacement, Thay thế cơ hội thứ 2)
 ### **<mark>293</mark>** Kích thước Trang (Page Size)
 ### **<mark>293</mark>**
 ###### Trường hợp Kích thước trang Nhỏ
+Phần “Trường hợp Kích thước trang Nhỏ” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Giảm thiểu được sự Phân mảnh Trang (Page Fragmentation), và rút ngắn thời gian di chuyển (chuyển dịch) một Trang vào Bộ nhớ chính.
 - Tỉ lệ nạp dính những nội dung dư thừa (không cần thiết) vào Bộ nhớ chính sẽ ít hơn, vì thế có thể duy trì được một Working Set (Tập làm việc) thật hiệu quả.
 - Do có thể khớp (đồng nhất) hơn với Locality (Tính cục bộ), nên tính hiệu quả của thiết bị nhớ sẽ tăng lên.
 - Tốc độ Mapping (Ánh xạ) sẽ chậm đi, và kích thước của Bảng ánh xạ Trang (nơi chứa thông tin về Trang) sẽ bị phình to ra.
 - Tổng thời gian I/O (Nhập/Xuất) sẽ bị kéo dài thêm do Số lần truy cập (tiếp cận) Đĩa tăng lên.
 ###### Trường hợp Kích thước trang Lớn
+Phần “Trường hợp Kích thước trang Lớn” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Tốc độ Mapping (Ánh xạ) sẽ nhanh lên, và kích thước của Bảng ánh xạ Trang (nơi chứa thông tin về Trang) sẽ bị thu nhỏ lại.
 - Tính hiệu quả của toàn bộ quá trình I/O (Nhập/Xuất) sẽ gia tăng nhờ vào việc Số lần truy cập Đĩa đã giảm xuống.
 - Kéo dài thời gian di chuyển (chuyển dịch) một Trang vào Bộ nhớ chính, đồng thời gia tăng sự Phân mảnh Trang.
@@ -3083,6 +3343,8 @@ Process nói chung mang ý nghĩa là chương trình Dành cho Người dùng (
 |---|
 ### **<mark>299</mark>** Sự chuyển đổi Trạng thái của Process
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |21.8<br>**300**<br>핵심|Các thuật ngữ liên quan đến Chuyển đổi Trạng thái Process<br>2415604|
 |---|---|
 |Dispatch|Quá trình một Process trong số các Process đang đứng đợi ở Trạng thái Sẵn sàng (Ready) được cấp phát Processor (CPU) rồi chuyển sang Trạng thái Chạy (Run).|
@@ -3098,11 +3360,15 @@ Luồng (Thread) là Đơn vị Công việc nằm BÊN TRONG Process, đồng t
 - Tại Hệ thống dùng Thread làm nền tảng, Thread đóng vai trò như một Process dưới tư cách là Đơn vị nhỏ nhất của quá trình Lập lịch (Scheduling) mang tính độc lập.
 - Nó có khả năng thực thi Đa nhiệm một cách độc lập với nhau trong Môi trường của CÙNG MỘT Process.
 ###### • Phân loại Thread
+Phần “• Phân loại Thread” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Thread Cấp độ<br>Người dùng|• Vận hành Thread bằng cách dùng Thư viện do Người dùng (User) tạo ra.<br>• Tốc độ nhanh nhưng khó triển khai (cài đặt).|
 |---|---|
 |Thread Cấp độ|• Vận hành Thread dựa vào Kernel (Hạt nhân) của Hệ điều hành.|
 |Kernel|• Dễ triển khai nhưng Tốc độ chậm.|
 ###### • Ưu điểm khi sử dụng Thread
+Phần “• Ưu điểm khi sử dụng Thread” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Bằng cách tạo ra nhiều Thread cho MỘT Process duy nhất, ta có thể gia tăng Tính song song (Concurrency).
 - Có thể cải thiện được Hiệu suất của Phần cứng, Hệ điều hành cũng như Tỉ lệ Xử lý (Throughput) của các Chương trình ứng dụng.
 - Có thể rút ngắn Thời gian Phản hồi (Response Time) của các Chương trình ứng dụng.
@@ -3139,6 +3405,8 @@ FCFS(First Come First Service, Đến trước Phục vụ trước) = FIFO(Firs
 |$PATH|Đường dẫn tìm kiếm File Thực thi (Execution File)|
 ######
 ### **<mark>304</mark>** Các Câu lệnh UNIX / LINUX Cơ bản
+Phần “**<mark>304</mark>** Các Câu lệnh UNIX / LINUX Cơ bản” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Câu lệnh|Tính năng|
 |---|---|
 | cat<br>chdir<br>chmod<br>chown<br>cp<br>exec<br>find<br>fork<br>fsck<br>getpid<br>getppid<br>ls<br>mount/unmount<br>rm<br>wait | Hiển thị nội dung File lên màn hình<br>Thay đổi vị trí của Thư mục hiện tại đang dùng<br>Thiết lập (chỉ định) Quyền sử dụng File bằng cách cấu hình Chế độ Bảo vệ File<br>Thay đổi Người sở hữu (Owner)<br>Copy (Sao chép) File<br>Thực thi (Chạy) một Process mới<br>Tìm kiếm File<br>Tạo ra (Sinh ra) một Process mới (Lệnh gọi Process con, Nhân bản Process)<br>Kiểm tra và Sửa chữa Hệ thống File<br>Lấy ID Process của bản thân (chính mình)<br>Lấy ID Process Cha (Parent Process)<br>Kiểm tra Danh sách File trong Thư mục hiện tại<br>Gắn (Mount) / Gỡ (Unmount) Hệ thống File<br>Xóa File<br>Đứng chờ một Event (Sự kiện) như Process con bị đóng... (dành cho Process cha của Process được thực thi bởi exec sau khi fork) |
@@ -3167,12 +3435,16 @@ IPv6 được phát triển nhằm mục đích giải quyết vấn đề thi�
 ### **<mark>308</mark>**
 #### Cấu tạo của IPv6
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Cấu tạo bởi 8 phần (mỗi phần 16 Bit), tổng cộng 128 Bit.
 - Biểu diễn từng phần bằng số Thập lục phân (Hệ 16) và được phân cách với nhau bằng dấu Hai chấm ( : ).
 - IPv6 được chia ra làm ba loại Hệ thống Địa chỉ như sau.
 Unicast (Đơn hướng) Giao tiếp (Thông tin) giữa MỘT Người gửi duy nhất và MỘT Người nhận duy nhất (Dùng cho Giao tiếp 1-1) Multicast (Đa hướng) Giao tiếp (Thông tin) giữa MỘT Người gửi duy nhất và NHIỀU Người nhận (Dùng cho Giao tiếp 1-Nhiều) Anycast (Bất kỳ) Giao tiếp (Thông tin) giữa MỘT Người gửi duy nhất và MỘT Người nhận duy nhất đang ở CỰ LY GẦN NHẤT (Dùng cho Giao tiếp 1-1) 
 ### **<mark>309</mark>** Mô hình Tham chiếu OSI (OSI Reference Model)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
    - Bằng cách cung cấp dịch vụ Truyền tải dữ liệu đồng nhất và Ổn định về mặt Logic, nó cho phép Truyền tải Dữ liệu một cách minh bạch (xuyên suốt) 
    - Lớp Giao vận giữa các Hệ thống Đầu cuối (End-to-End).
    - (Transport • Đảm nhận tính năng Thiết lập kết nối Truyền tải, Layer) Truyền tải Dữ liệu và Ngắt kết nối giữa các Hệ thống Đầu cuối.
@@ -3209,6 +3481,8 @@ Cũng mang tính năng giống Bridge là Kết nối LAN với LAN, tuy nhiên 
 - Gateway • Đóng vai trò là Lối ra vào (Cửa ngõ) dùng để (Cổng Giao tiếp) gửi Dữ liệu từ LAN sang các Network khác, hoặc dùng để Tiếp nhận Dữ liệu từ các Network khác mang về.
 ### **<mark>311</mark>** Các Giao thức (Protocol) Chủ yếu của Lớp Ứng dụng
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |FTP<br>(File Transfer<br>Protocol)|Giao thức truyền File từ xa, giúp cho việc gửi và nhận File có thể diễn ra giữa Máy tính với Máy tính, hoặc giữa Máy tính với Internet.|
 |---|---|
 |SMTP(Simple Mail<br>Transfer Protocol)|Dịch vụ Trao đổi Thư điện tử (Email).|
@@ -3232,6 +3506,8 @@ Cũng mang tính năng giống Bridge là Kết nối LAN với LAN, tuy nhiên 
 |RARP(Reverse<br>Address<br>Resolution Protocol)|Ngược lại với ARP, tính năng của nó là Đổi Địa chỉ Vật lý thành Địa chỉ IP.|
 ######
 ### **<mark>312</mark>** Các Giao thức (Protocol) Chủ yếu của Lớp Giao vận (Transport Layer)
+Phần “**<mark>312</mark>** Các Giao thức (Protocol) Chủ yếu của Lớp Giao vận (Transport Layer)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
    - Cung cấp Dịch vụ dạng Kết nối Hai chiều (Full Duplex Connection).
    - Việc Truyền đạt được thực hiện chủ yếu theo dạng Stream (Từng gói Packet một).
 - Thiết lập Lộ trình (Đường đi) mang Độ tin 
@@ -3240,6 +3516,8 @@ Cũng mang tính năng giống Bridge là Kết nối LAN với LAN, tuy nhiên 
    - Thực thi tính năng Kiểm soát Trình tự, Kiểm soát Lỗi, Kiểm soát Lưu lượng.
    - Về cơ bản, Header của Giao thức TCP có thể sử dụng từ 20Byte đến 60Byte. Tuy nhiên nó có thể lắp bổ sung thêm 40Byte (tùy chọn), do vậy kích thước có thể nở rộng tới TỐI ĐA 100Byte.
 ### Các Giao thức Chủ yếu **314** của Lớp Truy cập Mạng (Network Access Layer)
+Phần “Các Giao thức Chủ yếu **314** của Lớp Truy cập Mạng (Network Access Layer)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Ethernet<br>(IEEE 802.3)|Mạng LAN theo phương thức CSMA/CD|
 |---|---|
 |IEEE 802|Giao thức tiêu chuẩn dành cho mạng LAN|
@@ -3346,6 +3624,8 @@ Mô hình Điểm Chức năng (Function Point) do Albrecht đề xuất. Là k�
 - File Dữ liệu 
 - Giao diện kết nối với các Tuyến (Routine) Ngoại vi cần thiết 
 ###### ※ Các Công cụ Ước lượng Tự động
+Phần “※ Các Công cụ Ước lượng Tự động” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - SLIM : Là Công cụ Ước lượng Tự động được phát triển dựa trên nền tảng của Mô hình Dự đoán Putnam và Đường cong Rayleigh-Norden.
 - ESTIMACS : Là Công cụ Ước lượng Tự động được phát triển dựa trên nền tảng của Mô hình FP, với mục đích dung nạp (tiếp nhận) được yếu tố riêng của Từng Cá nhân và Đa dạng các Dự án.
 ### **<mark>329</mark>** CPM
@@ -3417,6 +3697,8 @@ Tinh chỉnh (Tailoring) Phương pháp luận Phát triển Phần mềm là C�
 - Tiêu chuẩn NHAU thì Cần phải Tinh chỉnh.
 - Bên Trong • Quy mô Dự án : Nếu Quy mô của Dự án (ví dụ như Chi phí, Nhân lực, Kỳ hạn...) CÓ SỰ KHÁC BIỆT thì Cần phải Tinh chỉnh.
 ### **<mark>337</mark>**
+Phần “**<mark>337</mark>**” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Mô đun hóa<br>(Modularity)|Framework Nâng cao Chất lượng của Phần mềm thông qua việc Giảm thiểu Tác động nảy sinh khi Thay đổi Triển khai & Thiết kế, đồng thời Tăng cường (Củng cố) việc Mô đun hóa (Modularity) thông qua tính Đóng gói (Encapsulation).<br>Nhờ sự Mô đun hóa dựa theo Tiêu chuẩn phát triển nên Framework rất dễ Bảo trì (Maintain).|
 |---|---|
 |Khả năng Tái sử dụng<br>(Reusability)|Nhờ vào việc cung cấp các Module có khả năng Tái sử dụng, Framework có thể Đảm bảo Chất lượng, Nâng cao Năng suất, Tiết kiệm Ngân sách.|
@@ -3446,6 +3728,8 @@ Công nghệ Định nghĩa bằng Phần mềm là công nghệ Áo hóa (Virtu
 | SDDC(Software<br>Defined Data<br>Center, Trung<br>tâm Dữ liệu định<br>nghĩa bằng PM) | Trung tâm Dữ liệu được Ảo hóa Toàn bộ Tài nguyên, nó được Quản lý và Kiểm soát CHỈ BẰNG THAO TÁC Phần mềm MÀ KHÔNG CẦN sự can thiệp của Nhân lực |
 |SDS(Software-<br>Defined Storage,<br>Lưu trữ định<br>nghĩa bằng PM)|Công nghệ Ảo hóa Data Storage (Lưu trữ Dữ liệu) Vật lý, giúp ta có thể quản lý Nhiều Storage GỘP CHUNG như thể chúng là MỘT Storage, HOẶC CHIA NHỎ Một Storage thành Nhiều Storage để sử dụng|
 ### **<mark>339</mark>** Công nghệ Mới liên quan đến Network
+Phần “**<mark>339</mark>** Công nghệ Mới liên quan đến Network” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Công nghệ<br>Mới liên<br>quan đến<br>Network| |
 |---|---|
 |IoT(Internet of<br>Things,<br>Internet Vạn vật)|Dịch vụ nền tảng nhằm Cung cấp các Dịch vụ Tiên tiến thông qua việc Kết nối vạn vật đa dạng (của Thế giới Ảo - Virtual World và Thế giới Thực - Physical World) lại với nhau bằng Internet dựa trên nền tảng Công nghệ Viễn thông Thông tin.|
@@ -3482,9 +3766,13 @@ Các Quy cách Tiêu chuẩn Chủ yếu của IEEE 802  Quy cách Tiêu chuẩn
 CSMA/CA là phương pháp (dùng trong Mạng LAN Không dây): Khi Truyền dữ liệu, đầu tiên phải KIỂM TRA xem Phương tiện (Đường truyền) có ĐANG TRỐNG hay không, sau đó Chờ một khoảng thời gian nhất định (nhằm Tránh Va chạm) rồi MỚI Truyền dữ liệu.
 - Ngay cả trong trường hợp Không sử dụng Đường truyền, nó vẫn Gửi Tín hiệu Xác nhận nhằm Phòng tránh tình trạng Va chạm do việc Truyền Tải Đồng Thời gây ra.
 ### Giao thức Kiểm soát Lộ trình **344** (Routing Protocol)
+Phần “Giao thức Kiểm soát Lộ trình **344** (Routing Protocol)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Giao thức được sử dụng để Định tuyến (Routing) BÊN TRONG MỘT Hệ thống Tự trị (AS - Autonomous System) duy nhất.
 - •RIP(Routing Information Protocol) 
 ###### Các Phiên bản của 802.11
+Phần “Các Phiên bản của 802.11” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |802.11<br>(Phiên bản<br>Đầu)|Sử dụng Sóng điện từ Băng tần 2.4GHz và Công nghệ CSMA/CA, hỗ trợ Tốc độ truyền tải Tối đa 2Mbps.|
 |---|---|
 |802.11a|Sử dụng Sóng điện từ Băng tần 5GHz và Công nghệ OFDM, hỗ trợ Tốc độ truyền tải Tối đa 54Mbps.|
@@ -3521,6 +3809,8 @@ Kiểm soát Lưu lượng (Dòng chảy) là tính năng Điều tiết (Quy đ
 |Xác nhận Tích cực (ACK) cho Packet vừa nhận được thì Window Size TĂNG LÊN; Ngược lại, nếu Bên nhận Truyền Tín hiệu Xác nhận Phủ định (NAK) cho Packet vừa nhận được thì Window Size GIẢM XUỐNG.|
 ### **<mark>346</mark>** Thuật ngữ liên quan đến Phần mềm
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Mashup|Là công nghệ Tạo ra các CSDL, Dịch vụ, hoặc Phần mềm MỚI bằng cách Sử dụng Thông tin & Dịch vụ MÀ WEB CUNG CẤP. Nói cách khác, đây là các Ứng dụng hoặc Website Cung cấp một Dịch vụ Duy nhất thông qua việc Tổ hợp (Kết hợp) các Content (Nội dung) do Rất Nhiều Nguồn Thông tin cung cấp.|
 |---|---|
 |SOA(Service<br>Oriented<br>Architecture,<br>Kiến trúc<br>Hướng Dịch vụ)|• Kiến trúc Công nghệ Thông tin giúp Xây dựng nên Hệ thống Thông tin (vốn là Hạ tầng Phần mềm của Doanh nghiệp) BẰNG CÁCH Tập trung vào các Component hoặc Đơn vị Dịch vụ có Khả năng Tái sử dụng & Chia sẻ.<br>• Phân lớp Cấu thành Ứng dụng dựa trên SOA: Lớp Trình diễn (Presentation), Lớp Quy trình Nghiệp vụ (Biz-Process), Lớp Dịch vụ Trung gian (Service Intermediary), Lớp Ứng dụng (Application), Lớp Lưu trữ Dữ liệu (Persistency).|
@@ -3541,6 +3831,8 @@ Scrapy(스크래피) Framework Web Crawling (Thu thập Dữ liệu Web) dựa t
 |Honeypot<br>(Hũ Mật)|• Hệ thống được Lắp đặt (Dàn dựng) sẵn nhằm mục đích Dò tìm (Phát hiện) sự Tiếp cận Bất thường.<br>• Thu thập thông tin về Kỹ thuật Tấn công & Theo dấu vết bằng cách Lừa Kẻ xâm nhập rẳng Bọn Chúng Đang Tấn công Một Hệ Thống Thật Sự.|
 |DPI(Deep<br>Packet<br>Inspection)|Công nghệ Phân tích Packet nhằm mục đích Điều chỉnh Lưu lượng (Traffic), Dò tìm Hacking, Cố gắng Xâm nhập... thông qua việc Nắm Bắt Content (Nội dung) Bên trong Packet & Giao thức của TẤT CẢ Lớp (7 Layer) OSI.|
 ### **<mark>348</mark>** Công nghệ Mới liên quan đến Phần cứng (HW)
+Phần “**<mark>348</mark>** Công nghệ Mới liên quan đến Phần cứng (HW)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Tính Sẵn sàng<br>Cao (HA; High<br>Availability)|• Cơ chế (Mechanism) Thiết lập một Môi trường Có Khả năng Thay Thế Bằng Hệ thống Khác NGAY LẬP TỨC khi phát sinh Sự cố, nhằm mục đích Vận hành Dịch vụ Ổn định trong thời gian Dài.<br>• Các phương pháp Tối đa hóa Tính Sẵn sàng (Availability) bao gồm Cụm (Cluster), Dự phòng (Song song/Đôi)...|
 |---|---|
 |RAID(Redundant<br>Array of<br>Inexpensive<br>Disk)|Công nghệ giúp Tăng Đáng Kể tốc độ của Ổ đĩa bằng cách: Cấu tạo nên một Mảng Đĩa (Disk Array) gồm Nhiều Ổ cứng HDD ➔ Phân tán và Lưu trữ các Data Block (Khối dữ liệu) của một File vào Nhiều Ổ Đĩa Khác Nhau ➔ Vì vậy, ta có thể ĐỒNG THỜI Đọc hoặc Ghi các Block đó trên Nhiều Ổ đĩa.|
@@ -3577,6 +3869,8 @@ Secure OS (Hệ điều hành Bảo mật) mang ý nghĩa là một Hệ điều
 |Data Mining<br>(Khai phá Dữ liệu)|• Kỹ thuật nhằm Khám phá (Tìm ra) các Thông tin Khả thi và Hữu ích CHIỀU THEO Yêu cầu của Người dùng TỪ TRONG Tập hợp Dữ liệu được lưu trữ tại Kho Dữ liệu.<br>• Thông qua việc Phân tích lượng Dữ liệu Lớn, ta có thể Định hình (Mô hình hóa) và Làm sáng tỏ (Quy minh) Mối tương quan Giữa các Biến số Ẩn sâu Trong Dữ liệu, TỪ ĐÓ có thể Trích xuất Dữ liệu một cách Hiệu quả.|
 |OLAP(Online<br>Analytical<br>Processing,<br>Xử lý Phân tích<br>Trực tuyến)|• Phương thức Phân tích các Thông tin Tóm tắt Mang tính Thống kê (Rút ra từ Khối Dữ liệu Đa Chiều) để Vận dụng vào việc Ra Quyết Định.<br>• Các Thao tác của OLAP : Roll-up, Drill-down, Drill-through, Drill-across, Pivoting, Slicing, Dicing|
 ### **<mark>352</mark>** Phục hồi (Recovery)
+Phần “**<mark>352</mark>** Phục hồi (Recovery)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - Phục hồi (Recovery) là Thao tác Khôi phục (Phục hồi) lại Trạng thái Bình thường NHƯ TRƯỚC KHI Bị Tổn Hại (Hư hỏng) Dữ Liệu do Sự cố (Lỗi) Phát sinh TRONG QUÁ TRÌNH Thực thi các Transaction (Giao dịch).
 - Các Kỹ thuật Phục hồi 
    - Phương pháp TRÌ HOÃN Việc Cập nhật Thực tế vào Cơ sở Dữ liệu CHO ĐẾN KHI Transaction đã Được Hoàn Tất Thành Công.
@@ -3613,6 +3907,8 @@ Bế tắc (Dead Lock, Khóa cứng) là một Vấn đề (Rắc rối) Xảy r
 |Không Chiếm đoạt<br>(Non-<br>preemption)|Tài nguyên Đã Cấp phát cho Process Này thì KHÔNG THỂ Cưỡng chế Cướp Đoạt (Giật lại) CHO ĐẾN KHI Sử dụng Xong.|
 |Chờ đợi Vòng tròn<br>(Circular Wait)|Các Process (Đang đứng chờ để Sử dụng Tài nguyên Chia sẻ) VÀ Tài nguyên Chia sẻ ĐƯỢC Cấu tạo Thành VÒNG TRÒN (Mạch Vòng). ➔ Bản Thân Chúng VỪA Chiếm Giữ Tài nguyên Của Mình ➔ LẠI VỪA Yêu Cầu Tài nguyên Của Process Đứng Trước (Hoặc Sau) Mình.|
 ###### • Cách Giải quyết Bế tắc (Dead Lock)
+Phần “• Cách Giải quyết Bế tắc (Dead Lock)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Kỹ thuật Phòng ngừa<br>(Prevention)|• Phương pháp Kiểm soát (Điều khiển) Hệ thống TỪ TRƯỚC Nhằm NGĂN CHẶN Sự Cố Bế Tắc Xảy Ra. Nó được Thực thi Bằng Cách LOẠI BỎ (Phủ Định) MỘT TRONG BỐN Điều kiện Gây ra Bế tắc.<br>• Là Kỹ thuật Gây Lãng Phí Tài nguyên NGHIÊM TRỌNG NHẤT.|
 |---|---|
 | Kỹ thuật Né tránh<br><br>(Avoidance) | • Phương pháp KHÔNG BÀI TRỪ (Loại Trừ) Khả năng Xảy ra Bế tắc, NHƯNG Nếu Xảy ra Bế tắc, Nó Sẽ TRÁNH NÉ Một cách Hợp Lý. Thường Sử Dụng Thuật Toán Nhân Viên Ngân Hàng (Banker's Algorithm).<br><br>• Banker’s Algorithm : Do E. J. Dijkstra đề xuất. Là Kỹ thuật Có Nguồn Gốc từ việc Cấp phát Tiền Mặt tại Ngân hàng ĐỂ SAO CHO Thỏa Mãn Được Yêu cầu Của TẤT CẢ Khách hàng. |
@@ -3643,6 +3939,8 @@ Yếu tố Bảo mật Mang ý nghĩa là Yêu Cầu VÀ Yếu tố CẦN PHẢI
 Cướp Phiên (Session Hijacking) là Kỹ thuật Tấn công ĂN CẮP (Chiếm đoạt) Thông tin Session Của Các Client ĐANG KẾT NỐI VỚI Server. Người ta còn gọi là Đánh Cắp Phiên.
 - Đây là Phương thức: Chấm Dứt (Đóng) Một Kết Nối Đang Bình Thường THÔNG QUA Packet RST(Reset) ➔ SAU ĐÓ KHI Kết Nối Lại, NÓ SẼ KẾT NỐI VỚI KẺ TẤN CÔNG (Chứ Không Phải Là Nạn Nhân).
 ### Lỗ hổng Bảo mật Của Biểu Diễn **358** & Kiểm Chứng Dữ Liệu Đầu Vào
+Phần “Lỗ hổng Bảo mật Của Biểu Diễn **358** & Kiểm Chứng Dữ Liệu Đầu Vào” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
    - Lỗ Hổng Bảo Mật Giúp Kẻ Tấn Công CHÈN (SQL Injection) Mã SQL VÀO TRONG Ứng Dụng Web ĐỂ Thay Đổi & Làm Lộ Lọt Dữ Liệu Của Máy Chủ Cơ Sở Dữ Liệu (DB) Nội Bộ, ĐỒNG THỜI Đi Đường Vòng (Lách/Bypass) Qua Xác Thực Của Quản Trị Viên. 
    - Chèn SQL (SQL Injection) • CÓ THỂ PHÒNG TRÁNH Bằng Cách Cấu Hình Lọc (Filter) SAO CHO Dữ liệu Đầu vào (Được Sử dụng Trong Truy Vấn Động / Dynamic Query) KHÔNG BỊ NHẬP (Chứa) Ký tự Đặc biệt & Từ Khóa Dành Riêng (Reserved Word). 
    - • Lỗ Hổng Bảo Mật Giúp Kẻ Tấn Công Xóa Bỏ / Sửa Đổi Tài Nguyên Của Server BẰNG CÁCH Thao Túng Đường Dẫn Xuất / Nhập Dữ Liệu. 
@@ -3664,6 +3962,8 @@ Cướp Phiên (Session Hijacking) là Kỹ thuật Tấn công ĂN CẮP (Chi�
 - Kẻ Tấn Công Sẽ Tận Dụng (Sử Dụng) Số Sequence (Số Tuần Tự) Đã Được Đồng Bộ Hóa Giữa Kẻ Đó VỚI Server ĐỂ Trái Phép Truy Cập Vào Thông Tin Quan Trọng HOẶC Trái Phép Sử Dụng Tính Năng Của Hệ Thống. 
 - Các Phương pháp Dò Tìm (Phát hiện) Bao Gồm: Dò Tìm Đóng Kết Nối (Reset) Của Cuộc Gọi Không Mong Muốn, Dò Tìm Thất Thoát Packet, Dò Tìm ACK Storm, Dò Tìm Trạng Thái Bất Đồng Bộ. 
 ### **<mark>359</mark>** Lỗ hổng Bảo mật của Tính năng Bảo mật
+Phần “**<mark>359</mark>** Lỗ hổng Bảo mật của Tính năng Bảo mật” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Cho phép Chức<br>năng Quan<br>trọng MÀ<br>KHÔNG CẦN<br>Xác thực|• CÓ THỂ Đi Đường Vòng (Lách/Bypass) Qua Việc Kiểm Tra Bảo Mật ĐỂ Truy cập & Sửa đổi Các Chức năng HOẶC Thông tin Quan trọng MÀ KHÔNG CẦN Trải Qua Quá Trình Xác Thực.<br>• CÓ THỂ PHÒNG TRÁNH Bằng Cách Yêu cầu Chạy Chức năng Tái Xác Thực (Re-authentication) Ở Những Trang Thực Thi Các Chức Năng HOẶC Thông Tin Quan Trọng.|
 |---|---|
 |Cấp Quyền<br>Không Hợp Lệ|• CÓ THỂ Chiếm Đoạt Quyền Hạn HOẶC Thông Tin THÔNG QUA Đường Dẫn Thực Thi MÀ Ở Đó Không Có Tính Năng Kiểm Soát Truy Cập.<br>• CÓ THỂ PHÒNG TRÁNH Bằng Cách Kiểm Tra Kiểm Soát Truy Cập ĐỐI VỚI Toàn Bộ Các Đường Dẫn Thực Thi, VÀ CHỈ Cấp Phát Cho Người Dùng NHỮNG Quyền Hạn Truy Cập Thực Sự Cần Thiết.|
@@ -3675,6 +3975,8 @@ Cướp Phiên (Session Hijacking) là Kỹ thuật Tấn công ĂN CẮP (Chi�
 ### **<mark>361</mark>** Modifier (Bộ Bổ Nghĩa / Bộ Điều Khiển Truy Cập)
 Modifier (Bộ Bổ Nghĩa / Access Modifier / Access Specifier) là Từ khóa Được Dành Riêng (Reserved Word) SỬ DỤNG VỚI Mục Đích GIỚI HẠN Sự Truy Cập Từ Bên Ngoài KHI Khai Báo (Declare) Một Object Cụ thể TRONG Ngôn Ngữ Lập Trình. 
 ###### (Có Thể Truy Cập : ◯, Không Thể Truy Cập : ×).
+Phần “(Có Thể Truy Cập : ◯, Không Thể Truy Cập : ×).” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Qualifier<br>(Từ Chỉ Định)|Bên Trong<br>Class|Bên Trong<br>Package|Class Con<br>(Sub Class)|Bên Ngoài<br>Package|
 |---|---|---|---|---|
 |Public|◯|◯|◯|◯|
@@ -3688,6 +3990,8 @@ Kỹ thuật Mã hóa Khóa Cá nhân LÀ Kỹ Thuật Sử Dụng CÙNG MỘT K
 - Dụng SẼ LÀ n(n-1) / 2. 
 ### **<mark>360</mark>** Stack Guard (Bảo vệ Stack)
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - LÀ Một Trong Số Các Công Nghệ Giúp NGĂN CHẶN Lỗ Hổng Bảo Mật (Xảy Ra Ở Bộ Nhớ Stack Nơi Lưu Trữ Địa Chỉ) NHƯ Lỗi Trỏ Ngược Con Trỏ Null (Null Pointer Dereference).
 - LÀ Công nghệ NGĂN CHẶN Việc Gọi (Call) Các Địa Chỉ Trả Về (Return Address) Sai Lệch BẰNG CÁCH Dừng Thực Thi Chương Trình (Bởi Việc Đánh Giá Đó Là Trạng Thái Overflow - Tràn Bộ Nhớ) NẾU Giá Trị Đó Bị Thay Đổi ➔ SAU KHI ĐÃ Lưu Trữ Một Giá Trị Cụ Thể VÀO GIỮA Địa Chỉ Trả Về Và Biến (Variable) TRÊN Bộ Nhớ.
 - Kỹ thuật Mã hóa Khóa Cá nhân CÒN Được Gọi Là Kỹ thuật Mật Mã Đối Xứng (Symmetric-key Algorithm) HOẶC Kỹ thuật Mã Hóa Đơn Khóa (Single-key Encryption).
@@ -3732,6 +4036,8 @@ Các Thuật Toán Mã Hóa Chính ĐƯỢC SỬ DỤNG Trong Cả Phương Phá
 |SNEFRU|• Hàm Hash Do R.C.Merkle Công Bố Năm 1990.<br>• Được Phát Triển VỚI Mục Đích Giúp Cho Việc Triển Khai (Thực Thi) TRÊN Processor 32 Bit Dễ Dàng Hơn.<br>• Kích Thước Khối Là 512 Bit, VÀ Được Phân Loại Thành 128 Và 256 TÙY THEO Chiều Dài Của Khóa.|
 ######
 ### **<mark>366</mark>** Salt (Muối)
+Phần “**<mark>366</mark>** Salt (Muối)” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 - ĐỐI VỚI Hai Hoặc Nhiều Tài Khoản, NẾU Ta Đặt (Chỉ Định) Mật Khẩu LÀ 'qwer1234' VÀ CÙNG ÁP DỤNG Cùng Một Thuật Toán Mã Hóa ➔ THÌ Kết Quả SẼ Giống Hệt Nhau. TRONG TRƯỜNG HỢP NÀY, NẾU Có Một Kẻ Tấn Công Xuất Hiện ➔ Kẻ Đó CHỈ CẦN Giải Mã ĐƯỢC Một Mật Khẩu THÌ Cũng SẼ Đánh Cắp ĐƯỢC Hai (Hoặc Nhiều) Tài Khoản Khác. ĐỂ PHÒNG TRÁNH Điều Này, TRƯỚC KHI Thực Hiện Mã Hóa ➔ Ta Sẽ Tiến Hành Thêm Quá Trình "NÊM" (Đính Kèm) THÊM MỘT GIÁ TRỊ NGẪU NHIÊN VÀO Văn Bản Gốc. TẠI THỜI ĐIỂM ĐÓ, Giá Trị Ngẫu Nhiên Được Nêm Vào Đó ĐƯỢC GỌI LÀ Salt (Muối).
 - NẾU SỬ DỤNG Salt (Muối) ➔ THÌ CHO DÙ Ta Tiến Hành Mã Hóa ĐỐI VỚI Cùng Một Mật Khẩu ➔ Kết Quả Trả Về SẼ LÀ KHÁC NHAU. ➔ TỪ ĐÓ, Ta CÓ THỂ Quản Lý Các Dữ Liệu (Đã Được Mã Hóa) MỘT CÁCH An Toàn Hơn.
 ######
@@ -3762,6 +4068,8 @@ LÀ Chương Trình Được Thiết Kế ĐỂ THỰC THI Vai Trò LÀ Agent (T
 |BlueJacking|Cuộc Tấn Công GỬI Tán Phát (Truyền Bá) Ẩn Danh Các Tin Nhắn Giống Y Hệt Tin Rác (Spam) ➔ BẰNG CÁCH SỬ DỤNG Bluetooth.|
 ### **<mark>370</mark>** Thuật Ngữ Liên Quan Đến Tấn Công Xâm Nhập Bảo Mật Thông Tin
 ######
+Phần “đoạn nội dung này” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Worm<br>(Giun)|Một Loại Virus. LÀ Phương Pháp ĐÁNH SẬP HỆ THỐNG TỚI CÙNG ➔ BẰNG CÁCH Liên Tục Tự Nhân Bản (Nhân Tái Tạo) Chính Bản Thân Mình THÔNG QUA Mạng ➔ ĐỂ Nâng Cao Áp Lực (Phụ Tải) Của Hệ Thống. Các Cuộc Tấn Công Từ Chối Dịch Vụ Phân Tán (DDoS), Tấn Công Tràn Bộ Đệm (Buffer Overflow), Slammer CHÍNH LÀ Các Hình Thái Của Tấn Công Worm.|
 |---|---|
 |Zero Day<br>Attack<br>(Tấn Công<br>Zero Day)|Cuộc Tấn Công Bảo Mật ĐƯỢC THỰC THI (Tiến Hành) THÔNG QUA Lỗ Hổng Đó ➔ NGAY KHI Lỗ Hổng Bảo Mật NÀY VỪA ĐƯỢC PHÁT HIỆN ➔ THẬM CHÍ KHI Mà Bản Thân Sự Tồn Tại Của Lỗ Hổng ĐÓ CÒN CHƯA KỊP ĐƯỢC CÔNG BỐ RỘNG RÃI (Công Khai). THUẬT NGỮ Này Mang Ý Nghĩa LÀ "Tốc Độ Của Cuộc Tấn Công Rất Chớp Nhoáng (Tức Thời)".|
@@ -3784,6 +4092,8 @@ Xác Thực (Authentication) LÀ Thủ Tục (Quy Trình) Bảo Mật GIÚP Ki�
 |Bảo Mật Vật Lý|Định Nghĩa (Thiết Lập) Các Chi Tiết Về: Quy Chế (Chỉ Nam) Kiểm Soát Ra/Vào Văn Phòng Hay Tòa Nhà, Quy Chế (Chỉ Nam) Quản Lý Phòng Điện Toán, Quy Chế (Chỉ Nam) Quản Lý Và Lắp Đặt Trang Thiết Bị Bảo Vệ Hệ Thống Thông Tin, Vận Hành Trung Tâm Phục Hồi Thảm Họa (Disaster Recovery Center) V.v.|
 |Bảo Mật Kỹ Thuật|Định Nghĩa (Thiết Lập) Các Quy Chế (Chỉ Nam) Bảo Mật Về: Xác Thực Người Dùng, Kiểm Soát Truy Cập, Mạng (Network), Máy Chủ (Server), PC, Cơ Sở Dữ Liệu (DB), Ứng Dụng (Application) V.v.|
 ### **<mark>373</mark>** Kernel Log (Nhật Ký Hạt Nhân) Của Linux
+Phần “**<mark>373</mark>** Kernel Log (Nhật Ký Hạt Nhân) Của Linux” nối ý trước với nội dung sắp đọc, giúp người mới biết mục đích, tiêu chí theo dõi và kết quả cần rút ra trước khi xem danh sách hoặc ví dụ.
+
 |Daemon|Tên File|Nội Dung|
 |---|---|---|
 | /dev/console<br>kernel<br>var/run/utmp<br>var/log/btmp<br>var/log/lastlog | THỂ HIỆN (Hiển Thị) Cho Người Quản Trị Hệ Thống Biết Các Nội Dung Liên Quan Đến Kernel BẰNG CÁCH HIỂN THỊ Ra Một Thiết Bị Được Chỉ Định Sẵn MÀ KHÔNG CẦN Lưu Trữ Lại Thành Một File.<br>var/log/wtmp<br>Ghi Nhớ Lại (Ghi Log) TÌNH TRẠNG HIỆN TẠI Của User ĐANG LOG IN.<br>Ghi Nhớ Lại (Ghi Log) MỌI Lần Đăng Nhập BỊ THẤT BẠI Của User.<br>Ghi Nhớ Lại (Ghi Log) LẦN Đăng Nhập THÀNH CÔNG GẦN ĐÂY NHẤT (Mới Nhất) Của User. | • Ghi Nhớ Lại (Ghi Log) MỌI Lần Đăng Nhập / Đăng Xuất THÀNH CÔNG Của User.<br>• Ghi Nhớ Lại (Ghi Log) CẢ Thời Thời Gian Bắt Đầu / Kết Thúc Khởi Động Của Hệ Thống. |

@@ -695,6 +695,8 @@ Complex analysis explains convergence limits that real graph alone does not reve
 
 ## Knowledge Connection
 
+Taylor series nối đạo hàm cục bộ với mô hình xấp xỉ và sai số toàn cục. Nó cho biết khi nào một biểu diễn đơn giản đủ tốt và khi nào remainder trở thành rủi ro.
+
 ```text
 derivatives
 → local polynomial model

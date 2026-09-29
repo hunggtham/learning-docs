@@ -113,6 +113,8 @@ cách biểu diễn (representation) detail này ảnh hưởng trực tiếp t�
 
 ## 9. Java core cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 void dfs(int u, int parentEdge) {
     seen[u] = true;

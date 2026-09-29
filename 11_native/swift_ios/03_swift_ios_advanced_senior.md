@@ -14,6 +14,8 @@ ARC chỉ quản lý lifetime của reference-counted object. Nó không quản 
 
 ## 1.1 Ownership graph thay vì quy tắc `weak self`
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 final class Downloader {
     var onFinish: (() -> Void)?
@@ -339,6 +341,8 @@ Callback UIKit có thể đến trên queue/framework-defined context. Nếu c�
 ---
 
 # 15. UIKit → SwiftUI với UIHostingController
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 let host = UIHostingController(rootView: ProfileView(model: model))

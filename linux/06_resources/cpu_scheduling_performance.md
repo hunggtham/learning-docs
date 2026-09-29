@@ -48,6 +48,8 @@ Nếu `r` liên tục lớn hơn số CPU khả dụng và mức sử dụng CPU
 
 ## CPU ở mức tiến trình và mức luồng
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 ps aux --sort=-%cpu | head -20
 ```

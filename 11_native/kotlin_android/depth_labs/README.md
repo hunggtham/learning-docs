@@ -66,6 +66,8 @@ artifact hoặc metadata nào thật sự khác trước?
 Nếu chỉ biết tên API nhưng không trả lời được các câu trên, kiến thức vẫn đang ở mức implementation chứ chưa tới mức engineering reasoning.
 
 ## Mental model chung
+Phần này nối mạch Android vừa học với “Mental model chung”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 Requirement

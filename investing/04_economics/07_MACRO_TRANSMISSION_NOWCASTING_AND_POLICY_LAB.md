@@ -39,6 +39,8 @@ Sau dữ liệu, không chỉ nhìn con số mà nhìn **mức tái định giá
 
 ## 3. Nowcasting khác forecasting dài hạn
 
+Trước khi chọn mô hình, cần phân biệt câu hỏi “nền kinh tế đang ở đâu ngay bây giờ?” với câu hỏi “nền kinh tế sẽ đi đâu trong nhiều năm?”. Nowcasting dùng dữ liệu tần suất cao và thông tin chưa hoàn chỉnh để cập nhật trạng thái hiện tại, còn forecasting dài hạn tập trung vào xu hướng và cấu trúc.
+
 **Nowcasting** là ước lượng trạng thái kinh tế hiện tại trước khi số liệu chính thức hoàn chỉnh.
 
 Có thể dùng các nhóm:
@@ -97,6 +99,8 @@ Thị trường lao động chặt
 Nhưng năng suất tăng có thể hấp thụ một phần tiền lương. Vì vậy nên theo **chi phí lao động trên một đơn vị sản lượng (unit labor cost)** thay vì chỉ lương danh nghĩa.
 
 ## 7. Phân biệt disinflation và deflation
+
+Hai khái niệm này khác nhau về hướng thay đổi của mức giá. Phân biệt đúng giúp tránh dự báo sai policy: disinflation vẫn là giá tăng chậm hơn, còn deflation là mức giá giảm.
 
 **Giảm tốc lạm phát (disinflation):** giá vẫn tăng nhưng chậm hơn.
 
@@ -428,6 +432,8 @@ CPI
 Sau đó ghi điểm nào trong chuỗi có thể không xảy ra. Đây là cách tránh tư duy cơ học.
 
 ## 30. Liên kết đọc tiếp
+
+Phần này bàn giao lab nowcasting sang các chapter nền tảng, monetary/liquidity, regime và case study. Hãy chọn link theo lỗ hổng trong chuỗi dữ liệu → surprise → policy → transmission, rồi quay lại lab để cập nhật dashboard và kịch bản.
 
 - [Kinh tế vi mô và vĩ mô nâng cao](./01_MICRO_MACRO_ADVANCED.md)
 - [Kinh tế toàn cầu, dòng vốn và khủng hoảng](./02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md)

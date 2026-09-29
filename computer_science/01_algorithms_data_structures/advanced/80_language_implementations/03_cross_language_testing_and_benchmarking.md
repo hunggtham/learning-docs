@@ -697,6 +697,8 @@ C cần xét chiến lược cấp phát, bố trí `struct` và cờ compiler. 
 
 ## 48. Các lỗi benchmark phổ biến
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 đo bản dựng debug rồi suy ra production
 vô tình đo cả bước chuẩn bị dữ liệu

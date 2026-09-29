@@ -63,6 +63,8 @@ O(\log n)
 
 ### JavaScript cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```js
 class MinHeap {
   constructor(compare = (a, b) => a - b) {

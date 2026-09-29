@@ -130,6 +130,8 @@ Nếu huấn luyện hoặc đánh giá dùng cách lắp ráp context khác pro
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Mô hình nhìn thấy biểu diễn, không nhìn trực tiếp thực tại.
 Tính nhất quán của biểu diễn là một hợp đồng production.

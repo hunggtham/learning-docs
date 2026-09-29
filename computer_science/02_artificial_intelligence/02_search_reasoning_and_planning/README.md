@@ -16,6 +16,8 @@ Các ideas ở đây không bị Machine Learning thay thế. Modern AI thườn
 
 ## Dependency map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     F[Problem Representation] --> S[00 State Space & Search]
@@ -33,6 +35,8 @@ flowchart TD
 ```
 
 ## Một mental model chung
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Representation

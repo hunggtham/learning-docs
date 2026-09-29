@@ -19,6 +19,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — Images as Data](./00_images_as_data.md)
 - [01 — Image Processing Foundations](./01_image_processing_foundations.md)
 - [02 — Feature Representation](./02_feature_representation.md)
@@ -30,6 +32,8 @@ flowchart TD
 - [08 — Modern Visual Representation](./08_modern_visual_representation.md)
 
 ## Core distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Image ≠ world itself
@@ -45,6 +49,8 @@ Foundation Model ≠ Domain Validation No Longer Needed
 ```
 
 ## Mental Model
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Physical scene

@@ -78,6 +78,8 @@ Không nên sửa `chmod` trước khi biết chính xác thao tác nào đang b
 
 ## Tiến trình tồn tại nhưng API không hoạt động
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 pgrep -af 'java.*app'
 sudo ss -lntp | grep ':8080'
@@ -87,6 +89,8 @@ curl -fsS -v http://127.0.0.1:8080/health
 Nếu không có listener, hãy kiểm tra nhật ký khởi động, cấu hình và địa chỉ bind. Nếu listener tồn tại nhưng `curl` bị treo, các giả thuyết có thể là cạn thread pool, deadlock, phụ thuộc bên ngoài hoặc trạng thái ứng dụng. Nếu `curl` cục bộ thành công, chuyển sang định tuyến, firewall, load balancer và DNS.
 
 ## CPU cao
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 uptime
@@ -102,6 +106,8 @@ Không nên tăng CPU ngay nếu CPU cao chỉ là hệ quả của một cơn b
 
 ## Bộ nhớ tăng hoặc tiến trình bị kết thúc
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 free -h
 ps -p <PID> -o pid,%mem,rss,vsz,etime,cmd
@@ -113,6 +119,8 @@ Nếu ứng dụng chạy trong container, cần kiểm tra giới hạn bộ nh
 Rò rỉ bộ nhớ cần xu hướng theo thời gian và bằng chứng ở runtime; một ảnh chụp RSS không thể chỉ ra đối tượng Java nào đang bị giữ lại.
 
 ## Hệ thống tệp hết dung lượng
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 df -h
@@ -187,6 +195,8 @@ So với một máy khỏe mạnh thường giúp thu hẹp không gian tìm ki�
 Một phân tích sau sự cố tốt nên hỏi: yếu tố kích hoạt là gì? điều kiện tiềm ẩn nào cho phép lỗi lan rộng? hệ thống phát hiện và phục hồi ra sao? thay đổi nào làm giảm khả năng tái diễn?
 
 ## Chọn công cụ theo câu hỏi
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 | Câu hỏi | Công cụ quan sát phù hợp |
 |---|---|

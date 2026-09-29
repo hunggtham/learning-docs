@@ -206,6 +206,8 @@ Cách này giảm thao tác không cần thiết và giữ thư mục làm việ
 
 ## `tee`: vừa quan sát vừa lưu bằng chứng
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 curl -v https://service.example 2>&1 | tee curl-debug.txt
 ```

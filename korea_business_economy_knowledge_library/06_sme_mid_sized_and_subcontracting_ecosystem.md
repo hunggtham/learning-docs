@@ -216,6 +216,8 @@ Mở rộng quy mô
 
 ## Nguồn và liên kết
 
+Nguồn chính thức giúp đối chiếu tiêu chí SME, quan hệ thầu phụ và chính sách hỗ trợ. Hãy tách dữ liệu thống kê khỏi cách diễn giải về vị thế của doanh nghiệp nhỏ.
+
 - Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc: thống kê cơ bản SME năm 2024, công bố năm 2026.
 - KDI, nghiên cứu về cải tổ chính sách hỗ trợ mở rộng quy mô doanh nghiệp.
 - KDI, nghiên cứu về phát triển SME tại Hàn Quốc.

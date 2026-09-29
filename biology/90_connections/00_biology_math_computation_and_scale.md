@@ -387,6 +387,8 @@ Ví dụ:
 
 ## 32. Một motif thứ hai: biến dị (variation) → chọn lọc (selection)/filter → memory
 
+Sau motif dòng chảy và feedback, ta chuyển sang motif thông tin được lọc rồi lưu lại. Ví dụ ở tiến hóa, miễn dịch, thần kinh và CRISPR khác nhau về vật chất nhưng cùng cho thấy cách hệ thống giữ lại trạng thái có ích.
+
 - đột biến (mutation)/tái tổ hợp (recombination) → chọn lọc tự nhiên (natural selection) → alen-frequency memory;
 - B-tế bào receptor diversity → kháng nguyên (antigen) chọn lọc → trí nhớ miễn dịch (immune memory);
 - neural synaptic variation/hoạt động (activity) → plasticity selection → memory trace;

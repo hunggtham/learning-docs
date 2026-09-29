@@ -463,6 +463,8 @@ Khi debug, hãy hỏi packet đang biến mất hoặc bị thay đổi ở bư�
 
 ## Xem thêm
 
+Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
+
 - [Networking, DNS, socket và port](./networking_dns_sockets_ports.md)
 - [TCP, HTTP và TLS](./tcp_http_tls.md)
 - [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md)

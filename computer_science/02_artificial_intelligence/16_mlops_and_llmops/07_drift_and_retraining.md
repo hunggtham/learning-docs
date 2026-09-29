@@ -150,6 +150,8 @@ Artifact đã lưu trữ vẫn cần chính sách retention phù hợp với gov
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Drift là bằng chứng rằng thế giới hoặc pipeline đã thay đổi.
 Huấn luyện lại chỉ là một trong nhiều phản ứng có thể có.

@@ -13,6 +13,8 @@
 Vòng đời phần mềm (Software Development Life Cycle, SDLC, vòng đời phát triển phần mềm) là cách chia toàn bộ công việc làm phần mềm thành những giai đoạn có mục đích rõ ràng: xác định cần làm gì, thiết kế cách làm, xây dựng, kiểm thử, vận hành và bảo trì. Cụm “단계별로 나눈다” (chia theo từng giai đoạn) không có nghĩa mọi dự án luôn đi một chiều; nó nói rằng mỗi công việc phải có vị trí, đầu vào và đầu ra để đội dự án quản lý được.
 
 ### Keyword cần nhớ
+Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giúp người mới hiểu mục đích, tiêu chí áp dụng và điểm dễ nhầm trước khi đọc các ý chi tiết.
+
 
 - **정의 (definition, xác định/định nghĩa):** làm rõ vấn đề và yêu cầu mà hệ thống phải giải quyết.
 - **운용 (operation, vận hành):** đưa phần mềm vào môi trường sử dụng thực tế và theo dõi nó hoạt động.
@@ -26,6 +28,8 @@ SDLC là khung quản lý, không phải tên của một phương pháp cụ th
 Ví dụ: ứng dụng đặt hàng bắt đầu bằng yêu cầu “khách được đặt nhiều món”. Sau đó thiết kế tạo đơn hàng và chi tiết đơn hàng, lập trình hiện thực các chức năng, kiểm thử luồng đặt hàng, rồi vận hành thực tế. Nếu sau vận hành phát hiện cần hỗ trợ hoàn tiền, đó là bảo trì/thích nghi; thay đổi này có thể quay lại yêu cầu và thiết kế.
 
 ### Điểm dễ nhầm trong đề
+Phần này nối khái niệm vừa học với “Điểm dễ nhầm trong đề”, giúp người mới hiểu mục đích, tiêu chí áp dụng và điểm dễ nhầm trước khi đọc các ý chi tiết.
+
 
 - **생명 주기 = 개발 방법론** (vòng đời = phương pháp phát triển) là sai. SDLC là khung các giai đoạn; Waterfall, Spiral, Agile là các mô hình/phương pháp tổ chức hoặc thực hiện các giai đoạn đó.
 - **생명 주기 = chỉ coding** là sai. Coding (구현, implementation) chỉ là một phần; yêu cầu, kiểm thử và bảo trì cũng thuộc vòng đời.
@@ -41,6 +45,8 @@ Mô hình thác nước (Waterfall Model, mô hình phát triển tuần tự tu
 Mỗi giai đoạn phải có sản phẩm bàn giao rõ ràng trước khi sang giai đoạn tiếp theo. Chẳng hạn tài liệu yêu cầu được chốt trước khi đội thiết kế; điều này giúp kiểm soát phạm vi và trách nhiệm, nhưng khiến việc thay đổi muộn tốn kém vì phải sửa các sản phẩm đã hoàn thành phía sau.
 
 ### Keyword cần nhớ
+Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giúp người mới hiểu mục đích, tiêu chí áp dụng và điểm dễ nhầm trước khi đọc các ý chi tiết.
+
 
 - **선형 순차적 (linear sequential, tuyến tính tuần tự):** đi theo thứ tự giai đoạn đã định.
 - **고전적 생명 주기 (classic life cycle, vòng đời cổ điển):** tên gọi thường gặp của Waterfall.
@@ -61,6 +67,8 @@ Mô hình xoắn ốc (Spiral Model, mô hình phát triển lặp có trọng t
 Mỗi vòng gồm: lập kế hoạch (계획 수립, planning), phân tích rủi ro (위험 분석, risk analysis), phát triển và xác minh (개발 및 검증, development and verification), rồi để khách hàng đánh giá (고객 평가, customer evaluation). Phản hồi ở bước cuối quyết định nội dung vòng tiếp theo. Vì thế Spiral phù hợp với dự án lớn, phức tạp hoặc có rủi ro kỹ thuật/chi phí cao.
 
 ### Keyword cần nhớ
+Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giúp người mới hiểu mục đích, tiêu chí áp dụng và điểm dễ nhầm trước khi đọc các ý chi tiết.
+
 
 - **보헴 (Boehm):** Barry Boehm, người đề xuất mô hình Spiral.
 - **위험 분석 (risk analysis, phân tích rủi ro):** nhận diện điều chưa chắc chắn, ước lượng tác động và chọn cách giảm rủi ro.
@@ -94,6 +102,8 @@ Agile không phủ nhận kế hoạch. Ý này có nghĩa khi thực tế thay 
 Scrum (Scrum framework, khung Scrum) cụ thể hóa tư duy Agile bằng vai trò, danh sách công việc và các sự kiện định kỳ. Mục tiêu là biến yêu cầu còn nhiều thay đổi thành những đợt làm việc ngắn, có kết quả kiểm tra được. Scrum không phải người quản lý ra lệnh làm gì; nó tạo khung để nhóm tự tổ chức và minh bạch tiến độ.
 
 ### Vai trò và tạo tác
+Phần này nối khái niệm vừa học với “Vai trò và tạo tác”, giúp người mới hiểu mục đích, tiêu chí áp dụng và điểm dễ nhầm trước khi đọc các ý chi tiết.
+
 
 - **제품 책임자, PO (Product Owner, chủ sở hữu sản phẩm):** quản lý và sắp thứ tự ưu tiên của **제품 백로그 (Product Backlog, danh sách toàn bộ yêu cầu/công việc sản phẩm)** theo giá trị sản phẩm.
 - **스크럼 마스터, SM (Scrum Master, người hỗ trợ Scrum):** giúp đội áp dụng Scrum, loại bỏ cản trở; không phải cấp trên giám sát hay giao việc cho lập trình viên.

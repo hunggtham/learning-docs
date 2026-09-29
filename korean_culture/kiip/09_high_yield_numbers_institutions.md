@@ -4,6 +4,8 @@
 
 ## Con số nên thuộc
 
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+
 | Fact | Số |
 |---|---:|
 | 대통령 임기 | 5년 |
@@ -27,6 +29,8 @@
 `국민건강보험 · 고용보험 · 국민연금 · 산업재해보상보험`
 
 ## Cơ quan dễ nhầm
+
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
 
 | Cơ quan | Chức năng |
 |---|---|

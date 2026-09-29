@@ -126,6 +126,8 @@ Metadata registry → URI / hash của artifact bất biến
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Thí nghiệm tạo artifact
 Registry gán danh tính + bằng chứng + trạng thái vòng đời

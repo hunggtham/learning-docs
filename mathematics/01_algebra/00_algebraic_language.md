@@ -248,6 +248,8 @@ Những laws này giải thích tại sao symbolic transformations hợp lệ. A
 
 ## 7. Distributive law: bridge giữa multiplication và addition
 
+Distributive law giải thích vì sao có thể mở ngoặc và phân phối một phép nhân qua phép cộng. Đây không chỉ là mẹo biến đổi; nó bảo toàn cùng một quantity khi đổi cách biểu diễn.
+
 ```math
 a(b+c)=ab+ac.
 ```

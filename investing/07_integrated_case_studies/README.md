@@ -41,6 +41,8 @@ Trước khi làm capstone cuối, hoàn thành ít nhất một vòng trong [Ad
 
 ## Coverage map của case study
 
+Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng nào của hệ thống nghiên cứu. Hãy đọc nó như bản đồ điều hướng: dấu ✓ chỉ có giá trị khi bên trong case có cơ chế, dữ liệu, cách diễn giải và failure mode tương ứng.
+
 | Case | Macro | Rates | Liquidity/Credit | Industry | Company | Valuation | Portfolio | Korea/Vietnam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 01 CPI Shock | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -66,6 +68,8 @@ Không đọc như một câu chuyện để ghi nhớ hướng giá. Hãy dừn
 Sau đó mới đọc phần tiếp theo.
 
 ## Ghi chú nên tạo sau mỗi tình huống
+
+Sau khi đọc hoặc tự chạy một case, hãy chuyển hiểu biết thành một ghi chú ngắn có thể xem lại. Việc ghi theo cùng một cấu trúc giúp so sánh các cú sốc khác nhau và phát hiện phần nào trong quy trình của mình còn bỏ trống.
 
 ```text
 Giả thuyết ban đầu

@@ -6,6 +6,8 @@
 
 ## 1. Regime là gì?
 
+Trước khi đọc lịch sử khủng hoảng, cần có một khung phân loại trạng thái hiện tại. Regime không phải nhãn cố định; nó là cách gom tăng trưởng, lạm phát, policy và credit để dự đoán kênh truyền dẫn nào đang mạnh hơn.
+
 **Chế độ vĩ mô (macro regime)** là một trạng thái tương đối bền của tăng trưởng, lạm phát, policy và credit.
 
 Một bản đồ đơn giản dùng hai trục:
@@ -19,6 +21,8 @@ Từ đó có thể hình thành bốn trạng thái trực giác.
 
 ## 2. Goldilocks
 
+Goldilocks là điểm xuất phát thuận lợi khi tăng trưởng đủ tốt nhưng lạm phát và discount rate không gây áp lực lớn. Tuy nhiên, cần kiểm tra valuation và positioning trước khi biến mô tả regime thành kết luận đầu tư.
+
 ```text
 Growth ổn hoặc cải thiện
 Inflation giảm / ổn định
@@ -29,6 +33,8 @@ Trạng thái này thường dễ chịu cho tài sản rủi ro vì earnings c�
 Nhưng valuation và positioning vẫn quyết định kết quả thực tế.
 
 ## 3. Overheating
+
+Overheating đặt hai lực ngược nhau cạnh nhau: earnings có thể tăng nhờ cầu mạnh, nhưng lãi suất chiết khấu cũng tăng khi policy phải thắt chặt. Câu hỏi là lực nào đang chi phối giá tài sản.
 
 ```text
 Growth ↑
@@ -47,6 +53,8 @@ Discount Rate ↑
 
 ## 4. Stagflation
 
+Stagflation khó vì policy phải đánh đổi giữa hỗ trợ output và kiểm soát giá. Hãy đọc nó như một bài toán supply shock, expectations và credibility chứ không chỉ là tăng trưởng giảm/lạm phát tăng.
+
 ```text
 Growth ↓
 Inflation ↑
@@ -55,6 +63,8 @@ Inflation ↑
 Đây là trạng thái khó cho policy vì nới lỏng hỗ trợ tăng trưởng có thể làm inflation xấu hơn, trong khi tightening chống inflation làm growth yếu thêm.
 
 ## 5. Deflationary bust
+
+Deflationary bust là trạng thái mà deleveraging, demand destruction và credit contraction cùng làm suy yếu nominal income. Lãi suất thấp không đủ nếu bảng cân đối và collateral tiếp tục co lại.
 
 ```text
 Growth ↓ mạnh
@@ -198,6 +208,8 @@ Nhiều nền kinh tế có:
 
 ## 18. Trigger và feedback
 
+Sau khi xác định vulnerability trước khủng hoảng châu Á, phần này chỉ ra trigger và vòng phản hồi làm cú sốc tỷ giá chuyển thành khủng hoảng nợ USD và ngân hàng. Hãy đọc sơ đồ theo từng mũi tên để xác định điểm can thiệp.
+
 ```text
 Capital Outflow
 → FX Pressure
@@ -298,6 +310,8 @@ Các nước dùng cùng EUR nhưng không chia sẻ hoàn toàn fiscal balance 
 Điều này tạo rủi ro spread giữa sovereigns.
 
 ## 28. Sovereign–bank doom loop
+
+Doom loop nối rủi ro chủ quyền với vốn và funding của ngân hàng. Khi một phía suy yếu, phía kia mất giá trị hoặc khả năng cho vay, rồi feedback quay lại làm vị thế tài khóa xấu hơn.
 
 ```text
 Sovereign Risk ↑
@@ -462,6 +476,8 @@ Demand nội địa hay external?
 
 ## 48. Inflation
 
+Sau khi xác định growth regime, hãy tách inflation theo hàng hóa/dịch vụ, demand/supply và mức neo kỳ vọng. Cách phân rã này quyết định policy reaction và nhóm tài sản chịu ảnh hưởng.
+
 ```text
 Goods hay Services?
 Demand hay Supply?
@@ -469,6 +485,8 @@ Expectations anchored không?
 ```
 
 ## 49. Policy
+
+Policy cần được đọc ở cả mức hiện tại, đường đi kỳ vọng và reaction function. Một mức lãi suất giống nhau có thể mang ý nghĩa nới lỏng hoặc thắt chặt tùy output gap và lạm phát.
 
 ```text
 Policy level?
@@ -479,6 +497,8 @@ Fiscal impulse?
 
 ## 50. Credit
 
+Credit cho biết policy đã truyền vào hành vi cho vay và khả năng tái cấp vốn chưa. Theo dõi loan growth, standards, spread và delinquency để biết rủi ro đang tích tụ ở đâu.
+
 ```text
 Loan Growth
 Lending Standards
@@ -487,6 +507,8 @@ Default / Delinquency
 ```
 
 ## 51. Liquidity
+
+Liquidity là lớp thường biến một cú sốc định giá thành forced selling. Funding, collateral, market depth, dealer capacity và USD funding cần được đọc cùng nhau vì thiếu một mắt xích có thể làm spread và volatility tăng nhanh.
 
 ```text
 Funding Market
@@ -552,6 +574,8 @@ airline tăng giá vé
 
 ## 56. Bản đồ hiện tại
 
+Mẫu này buộc người phân tích đi qua toàn bộ lớp của regime hiện tại trước khi đặt tên cho nó. Hãy điền bằng dữ liệu có ngày tham chiếu, sau đó ghi kênh truyền dẫn chính và biến có thể bác bỏ đánh giá.
+
 ```text
 Growth:
 Inflation:
@@ -566,6 +590,8 @@ Commodity:
 ```
 
 ## 57. Kịch bản
+
+Ba kịch bản là phần kết nối regime với hành động. Base, bull và bear phải khác nhau ở cơ chế và điều kiện xảy ra, không chỉ ở con số giá; mỗi kịch bản cần có dấu hiệu xác nhận và điều kiện thất bại.
 
 ```text
 Base:

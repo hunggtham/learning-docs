@@ -841,6 +841,8 @@ Nếu Maven artifact bị incident, team phải reproduce và audit được.
 ---
 
 ## 50. SDK reliability checklist
+Phần này nối mạch Android vừa học với “50. SDK reliability checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
