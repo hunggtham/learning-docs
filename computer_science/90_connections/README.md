@@ -19,6 +19,15 @@ Phần [`advanced/`](./advanced/README.md) dùng các lĩnh vực (domain / 도�
 
 Connection route không thay thế chapter gốc. Khi một route nhắc tới scheduler, transaction, authorization, secret rotation, model evaluation hay data lineage, hãy dùng link trong route để quay về canonical owner nếu cần mechanism sâu hơn. Mục tiêu của thư mục này là luyện **composition reasoning**: cùng một failure hoặc quyết định có thể đi qua nhiều layer nhưng mỗi concept vẫn có một owner rõ ràng.
 
+Hai route `06` và `07` cố ý giữ boundary khác nhau:
+
+```text
+06: business fact → durable data → derived analytical meaning
+07: measured data → model/system evidence → production decision
+```
+
+Route `06` không biến Data Engineering thành database internals. Route `07` không biến AI Evaluation thành generic statistics/research methods. Mỗi route chỉ nối những owner đã tồn tại.
+
 Có thể chọn route theo câu hỏi:
 
 ```text
