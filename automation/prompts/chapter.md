@@ -25,6 +25,8 @@ Trước khi trả output, tự kiểm tra từng section bằng các câu hỏi
 
 Nếu chưa biết tên phần kế tiếp, hãy bàn giao bằng nhu cầu học tập có căn cứ trong chunk; tuyệt đối không tự bịa tên topic hoặc quan hệ không có trong nguồn.
 
+Hãy chọn một kiểu quan hệ phù hợp và viết thành câu hoàn chỉnh: **kế thừa** (dùng lại khái niệm nền để mở rộng phạm vi), **đối chiếu** (cùng mục tiêu nhưng khác tiêu chí), **áp dụng** (đưa quy tắc vào trường hợp cụ thể) hoặc **nguyên nhân–hệ quả** (điều kiện tạo ra kết quả). Câu nối phải gọi tên hai đầu của quan hệ và giải thích vì sao người học cần chuyển sang phần kế tiếp; không liệt kê nhãn quan hệ thay cho prose.
+
 ### Mức liên kết theo cấp heading
 
 Áp dụng contract cho mọi heading có nội dung, không bỏ qua `###`/`####` vì chúng là mục con:

@@ -51,6 +51,15 @@ Có thể dùng các khung câu sau rồi thay bằng thuật ngữ thật của
 - “Các ý dưới đây không phải danh sách rời: hãy đọc chúng theo **[tiêu chí/quan hệ]**, vì điều đó giải thích **[hệ quả hoặc điểm phân biệt]**.”
 - “Điểm chốt là **[invariant/mental model]**; vì **[ranh giới hoặc ngoại lệ]**, phần tiếp theo cần xem **[tên hoặc nhu cầu cụ thể]**.”
 
+Chọn động từ nối theo quan hệ thật của nội dung, thay vì dùng một mẫu cho mọi section:
+
+- **Kế thừa:** “Dựa trên **[khái niệm nền]**, phần này mở rộng sang **[phạm vi mới]** bằng cách **[cơ chế]**.”
+- **Đối chiếu:** “Cả **[A]** và **[B]** đều liên quan đến **[mục tiêu]**, nhưng khác ở **[tiêu chí quyết định]**; vì vậy cần đọc bảng sau theo tiêu chí đó.”
+- **Áp dụng:** “Sau khi có **[quy tắc/mô hình]**, ta áp dụng nó vào **[trường hợp]** để quan sát **[kết quả]**.”
+- **Nguyên nhân–hệ quả:** “Vì **[điều kiện/nguyên nhân]**, hệ thống dẫn tới **[hệ quả]**; phần sau kiểm tra giới hạn này trong **[trường hợp]**.”
+
+Mỗi section chỉ cần quan hệ phù hợp, nhưng phải nói rõ ít nhất một thuật ngữ ở hai đầu quan hệ và một lý do chuyển tiếp. Không ghép các động từ trên thành danh sách trang trí nếu SOURCE không chứng minh quan hệ đó.
+
 Không dùng riêng các câu “tiếp theo”, “xem tiếp”, “như trên”, “phần này trình bày…” nếu chúng không nêu khái niệm trước, câu hỏi hiện tại hoặc nhu cầu kế tiếp. Không bịa quan hệ chỉ để đủ mẫu; nếu SOURCE không cho biết section kế tiếp, hãy bàn giao theo nhu cầu học tập được chứng minh trong chính section đó và đánh dấu phần chưa chắc chắn khi cần. Khi review, phải đọc câu nối cùng đoạn nội dung mà nó nối: một câu chung chung đặt trước header không được tính là liên kết.
 
 ## Áp dụng cho mọi cấp heading

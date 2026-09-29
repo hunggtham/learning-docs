@@ -23,6 +23,8 @@ Kiểm tra từng section theo ba điểm, không chỉ đếm xem có câu mở
 
 Kiểm tra thêm theo cấp heading: `#` phải có phạm vi và câu hỏi trung tâm; `##` phải nối với mục tiêu của chapter và các section cùng cấp; `###`/`####` phải chỉ ra vai trò của mình trong heading cha và trả kết luận về cha hoặc sang mục con kế tiếp. Đánh `high` nếu mục con có nội dung nhưng bị bỏ qua chỉ vì cấp heading thấp; đánh `medium` nếu câu nối có đủ hình thức nhưng không nêu được quan hệ cha–con. Heading thuần tham chiếu được miễn mạch giảng đầy đủ chỉ khi có câu hướng dẫn cách dùng và owner rõ ràng.
 
+Đối chiếu động từ trong câu nối với nội dung thực tế: `kế thừa` phải có khái niệm nền được dùng lại, `đối chiếu` phải có ít nhất hai đối tượng và tiêu chí phân biệt, `áp dụng` phải có quy tắc cùng trường hợp dùng, còn `nguyên nhân–hệ quả` phải có điều kiện và kết quả. Nếu nhãn quan hệ không khớp evidence, ghi issue `medium` hoặc `high` tùy mức làm sai mental model.
+
 Tiêu chí nội dung:
 - Không bỏ mất nhóm kiến thức lớn hoặc mã 핵심 trong evidence.
 - Không có fact trái nguồn; phần không chắc chắn phải có `[CẦN KIỂM TRA]`.
