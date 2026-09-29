@@ -92,6 +92,8 @@ Khung câu tham khảo (phải thay bằng nội dung thật, không sao chép n
 
 Khi review, bỏ qua một câu nối nếu câu đó không gọi tên ít nhất một khái niệm/điều kiện thật của lesson, không nêu quan hệ giữa hai phần, hoặc có thể dán nguyên xi vào mọi lesson. Nếu nguồn không đủ thông tin để chỉ tên phần sau, hãy bàn giao theo nhu cầu học tập được suy ra từ lesson và ghi rõ giới hạn thay vì bịa topic.
 
+Áp dụng mạch này theo cấp heading trong lesson: tiêu đề `#` định vị topic và câu hỏi trung tâm; `##` nối topic với mục tiêu, từ khóa và kiến thức liên kết; `###`/`####` giải thích một khái niệm, cơ chế hoặc bẫy cụ thể rồi trả kết luận về `##` cha. Một heading con có bullet, bảng, công thức hoặc mã vẫn phải có câu hỏi cục bộ và câu nối với heading cha; không được coi cấp heading thấp là phần ghi chú rời.
+
 Không bản sao (copy / 복사) một câu “tiếp theo là…” cho mọi bài. Với `README`, bảng tra cứu hoặc checklist, câu nối phải hướng người đọc về lesson/subject đơn vị sở hữu (owner / 오너) cụ thể; với đầu ra (output / 출력) được generate, sửa generator/nguồn (source / 소스) rồi regenerate thay vì sửa tay từng tệp (file / 파일).
 
 ## 4. Quy tắc thuật ngữ và ngôn ngữ

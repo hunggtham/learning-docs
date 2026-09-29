@@ -21,6 +21,8 @@ Kiểm tra từng section theo ba điểm, không chỉ đếm xem có câu mở
 
 Đánh `high` nếu section nhảy cóc, câu nối chỉ là “xem tiếp/tiếp theo”, không gọi tên khái niệm cần nối, hoặc kết thúc mà không cho biết kết luận được dùng ở đâu. Đánh `medium` nếu có đủ mở và kết nhưng quan hệ vẫn chung chung, không giải thích được vì sao bullet/bảng/công thức thuộc cùng section. Đánh `low` cho wording còn cứng nhưng quan hệ học tập đã đúng. Một câu giống hệt lặp quanh nhiều header là bằng chứng của boilerplate, không phải bằng chứng đạt contract.
 
+Kiểm tra thêm theo cấp heading: `#` phải có phạm vi và câu hỏi trung tâm; `##` phải nối với mục tiêu của chapter và các section cùng cấp; `###`/`####` phải chỉ ra vai trò của mình trong heading cha và trả kết luận về cha hoặc sang mục con kế tiếp. Đánh `high` nếu mục con có nội dung nhưng bị bỏ qua chỉ vì cấp heading thấp; đánh `medium` nếu câu nối có đủ hình thức nhưng không nêu được quan hệ cha–con. Heading thuần tham chiếu được miễn mạch giảng đầy đủ chỉ khi có câu hướng dẫn cách dùng và owner rõ ràng.
+
 Tiêu chí nội dung:
 - Không bỏ mất nhóm kiến thức lớn hoặc mã 핵심 trong evidence.
 - Không có fact trái nguồn; phần không chắc chắn phải có `[CẦN KIỂM TRA]`.

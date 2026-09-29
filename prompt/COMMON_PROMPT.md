@@ -53,6 +53,16 @@ Có thể dùng các khung câu sau rồi thay bằng thuật ngữ thật của
 
 Không dùng riêng các câu “tiếp theo”, “xem tiếp”, “như trên”, “phần này trình bày…” nếu chúng không nêu khái niệm trước, câu hỏi hiện tại hoặc nhu cầu kế tiếp. Không bịa quan hệ chỉ để đủ mẫu; nếu SOURCE không cho biết section kế tiếp, hãy bàn giao theo nhu cầu học tập được chứng minh trong chính section đó và đánh dấu phần chưa chắc chắn khi cần. Khi review, phải đọc câu nối cùng đoạn nội dung mà nó nối: một câu chung chung đặt trước header không được tính là liên kết.
 
+## Áp dụng cho mọi cấp heading
+
+Mọi heading có nội dung giảng dạy, từ `#` đến `####`, đều cần một mạch riêng phù hợp với phạm vi của nó; không được xem `###` hoặc `####` là ngoại lệ chỉ vì chúng ngắn hơn:
+
+- `#` định vị cả file/chapter: người học đang học phạm vi nào, câu hỏi trung tâm là gì và kết quả sẽ phục vụ phần nào.
+- `##` nối chủ đề lớn với câu hỏi đã mở ở `#` hoặc section `##` trước, sau đó bàn giao kết luận về lại mục tiêu của chapter hoặc sang `##` kế tiếp.
+- `###`/`####` phải nêu vai trò cục bộ của mình trong `##` cha: khái niệm này bổ sung, đối chiếu hay áp dụng điều gì; câu kết phải chỉ ra nó làm thay đổi cách hiểu hoặc cách đọc phần cha ra sao.
+
+Với heading chỉ làm nhãn nhóm cho một danh sách tham chiếu, không bịa thêm bài giảng; hãy viết một câu hướng dẫn cách dùng và owner/đường quay lại phần giải thích. Với heading có nội dung, câu mở và câu kết phải dùng thuật ngữ của chính khối đó. Không lặp nguyên một câu giữa các cấp heading, vì quan hệ của `#` với `##` khác quan hệ của `##` với `###`.
+
 Khi retrofit tài liệu cũ, ưu tiên các điểm gãy: mở đầu nhảy thẳng vào chi tiết mà không có prerequisite; section kết thúc đột ngột; concept được nhắc lại nhưng không chỉ ra quan hệ; link chỉ tồn tại ở mục lục mà không có lý do học tập để đi theo link. Với output generate, sửa source hoặc generator rồi regenerate thay vì sửa tay từng file.
 
 ## Branch & Git workflow

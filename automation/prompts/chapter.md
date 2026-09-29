@@ -25,6 +25,16 @@ Trước khi trả output, tự kiểm tra từng section bằng các câu hỏi
 
 Nếu chưa biết tên phần kế tiếp, hãy bàn giao bằng nhu cầu học tập có căn cứ trong chunk; tuyệt đối không tự bịa tên topic hoặc quan hệ không có trong nguồn.
 
+### Mức liên kết theo cấp heading
+
+Áp dụng contract cho mọi heading có nội dung, không bỏ qua `###`/`####` vì chúng là mục con:
+
+- `#` phải định vị phạm vi chunk/phần và câu hỏi trung tâm.
+- `##` phải nối topic với mục tiêu của `#` và section `##` trước hoặc sau.
+- `###`/`####` phải nói rõ nó đang bổ sung, đối chiếu hay áp dụng ý nào của heading cha; câu kết phải trả kết luận về heading cha hoặc mở nhu cầu cho mục con kế tiếp.
+
+Nếu heading chỉ là nhãn của bảng tra cứu hoặc nhóm tham chiếu, viết câu hướng dẫn sử dụng và owner thay vì giả tạo một đoạn giảng. Nếu heading có prose/bullet/bảng/công thức, bắt buộc có câu hỏi cục bộ, quan hệ với heading cha và câu chốt cục bộ. Không dùng cùng một câu nối cho tất cả các cấp heading.
+
 Quy tắc bắt buộc:
 - Chỉ dùng các facts có trong nguồn (source / 소스) và TRANSLATION. Có thể sửa lỗi diễn đạt/OCR rõ ràng, nhưng nếu không đủ căn cứ phải ghi `[CẦN KIỂM TRA]`.
 - Được đổi thứ tự, gộp và nối các đoạn để mạch học đi từ nền tảng đến nâng cao.
