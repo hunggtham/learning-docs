@@ -1,12 +1,12 @@
-# SQLD / SQL — Coverage Audit
+# SQLD / SQL — kiểm toán phạm vi
 
-> **Mạch đọc:** [README](./README.md) là entrypoint cấp domain; learning output nằm trong [`output/`](./output/README.md). Audit này phân biệt rõ phần **SQLD/certification** với database internals và data engineering để tránh duplicate.
+> **Mạch đọc:** Đọc audit này sau [README](./README.md). `README.md` là entrypoint cấp domain, còn learning output nằm trong [`output/`](./output/README.md). Audit này trả lời: **SQLD cần sở hữu phần nào để phục vụ thi và reasoning truy vấn, còn phần nào phải bàn giao sang Database Internals hoặc Data Engineering để tránh biến `sql/` thành textbook database thứ hai?**
 
-Cập nhật: **2026-09-29**. `main` là nguồn chuẩn (source of truth / 정본) sau khi thay đổi được merge.
+**Ngày rà soát:** 2026-09-29. `main` là nguồn chuẩn (source of truth / 정본) sau khi thay đổi được merge.
 
-## Phạm vi và canonical owner
+## 1. Phạm vi sở hữu
 
-`sql/` sở hữu learning material hướng SQLD: mô hình dữ liệu, relational/database terminology cần cho kỳ thi, SQL semantics/patterns và procedural familiarity với truy vấn.
+`sql/` sở hữu tài liệu học SQLD: mô hình dữ liệu, terminology quan hệ/cơ sở dữ liệu cần cho kỳ thi, ngữ nghĩa SQL và pattern truy vấn ở mức người học phải **giải thích được vì sao kết quả đúng**.
 
 ```text
 SQLD
@@ -14,54 +14,67 @@ SQLD
 └── Môn 2 — SQL 기본 및 활용
 ```
 
-`sql/output/` là material để học. `raw/`, `raw_md/` và `scripts/` là nguồn/chuyển đổi hỗ trợ, không phải canonical prose để đọc tuần tự.
+`sql/output/` là learning output. `raw/`, `raw_md/` và `scripts/` là provenance/chuyển đổi hỗ trợ, không phải prose chuẩn để đọc tuần tự.
 
-Ranh giới owner:
+Nội tại database như optimizer, MVCC, WAL, concurrency control và recovery sâu thuộc [`computer_science/05_data_databases/`](../computer_science/05_data_databases/README.md). Pipeline, warehouse, semantic layer và analytical correctness thuộc [`data_engineering/`](../data_engineering/README.md).
 
-- database internals như optimizer, MVCC, WAL, concurrency control và recovery sâu thuộc `computer_science/05_data_databases/`;
-- pipeline, warehouse, semantic layer và analytical correctness thuộc `data_engineering/`;
-- `sql/` giữ SQLD exam-oriented interpretation và SQL practice.
+## 2. Coverage hiện đã mạnh
 
-## Trạng thái coverage
+Các vùng chính của SQLD đã có: entity/attribute/relationship/identifier/ERD; normalization; `SELECT`, filtering, grouping, ordering; join, subquery, set operator; group/window/TOP-N/pagination; hierarchical query; DML/TCL/transaction; DDL/constraint/view; DCL/role/privilege; và các pattern nâng cao như `PIVOT`, `UNPIVOT`, regex.
 
-| Vùng | Coverage hiện có | Trạng thái |
-|---|---|---|
-| Data modeling foundations | entity, attribute, relationship, identifier, ERD | Strong |
-| Normalization / performance-oriented modeling | normalization và modeling trade-off ở mức SQLD | Strong |
-| SELECT / filtering / grouping / ordering | SQL foundation | Strong |
-| Join / subquery / set operators | query composition | Strong |
-| Group / window / TOP-N / pagination | analytical SQL patterns | Strong |
-| Hierarchical query | certification-specific SQL pattern | Covered |
-| DML / TCL / transaction | manipulation và transaction semantics ở mức exam | Strong |
-| DDL / constraint / view / object | schema-definition layer | Strong |
-| DCL / role / privilege | access-control basics | Covered |
-| PIVOT / UNPIVOT / regex | advanced SQLD patterns | Covered |
+Điểm quan trọng là coverage không nên đo bằng số syntax. Query chỉ đáng học khi người đọc hiểu **độ hạt của dòng (row grain / 행 단위)**, **lực lượng kết hợp (join cardinality / 조인 카디널리티)**, **ngữ nghĩa NULL (NULL semantics / NULL 의미론)**, **ranh giới tổng hợp (aggregation boundary / 집계 경계)**, **ngữ nghĩa thứ tự/cửa sổ (ordering/window semantics / 정렬·윈도우 의미론)** và **ranh giới giao dịch (transaction boundary / 트랜잭션 경계)**.
 
-## Bất biến cần giữ
+Nếu chỉ nhớ mẫu câu lệnh mà không dự đoán được intermediate relation hoặc duplicate row, người học chưa thật sự hiểu SQL.
 
-SQL query không chỉ cần chạy mà phải giữ đúng **row grain**, **join cardinality**, **NULL semantics**, **aggregation boundary**, **ordering/window semantics** và **transaction boundary**. Một lời giải SQLD nên giải thích được vì sao kết quả đúng, không chỉ ghi syntax cần nhớ.
+## 3. Ranh giới với Database và Data Engineering
 
-Không dùng material chứng chỉ để thay thế database engineering. Khi câu hỏi chuyển từ “query này cho kết quả gì?” sang “engine thực thi, khóa, log hoặc recover như thế nào?”, phải handoff sang Computer Science Databases.
+SQLD hỏi “query này trả kết quả gì?” hoặc “mô hình dữ liệu này đúng nguyên tắc nào?”. Khi câu hỏi chuyển thành “engine chọn plan nào, khóa/log/recovery hoạt động ra sao?” thì phải bàn giao sang Computer Science Databases.
 
-## Gaps còn lại
+Tương tự, SQLD có thể dạy aggregation/window nhưng khi câu hỏi chuyển sang pipeline, late data, semantic metric, grain qua nhiều nguồn hoặc analytical serving, owner là Data Engineering.
 
-Gap lớn nhất không phải thêm nhiều syntax mà là tăng practice có reasoning:
+Ranh giới này giữ SQLD tập trung vào exam + query reasoning mà không duplicate hệ thống dữ liệu sâu hơn.
 
-1. query tracing với intermediate relation thay vì chỉ nhìn đáp án;
-2. cardinality/NULL/window edge cases dễ tạo distractor;
-3. transaction scenario nối exam semantics với canonical database model;
-4. cross-link từ SQLD sang route `query → transaction → pipeline → analytical serving` để người học thấy giới hạn của SQLD sau kỳ thi.
+## 4. Khoảng trống ưu tiên
 
-Không mở rộng `sql/` thành database textbook thứ hai.
+### P1 — Tracing query bằng intermediate relation
 
-## Review protocol
+Cần tăng bài tập theo kiểu:
 
-Khi cập nhật:
+```text
+FROM/JOIN tạo tập dòng nào
+→ WHERE loại dòng nào
+→ GROUP BY thay grain thế nào
+→ HAVING lọc group nào
+→ window function nhìn partition/order nào
+→ SELECT cuối cùng biểu diễn gì
+```
 
-1. kiểm tra phạm vi/outline chứng chỉ hiện hành trước khi thêm phần exam-specific;
-2. giữ `output/README.md` là map chi tiết cho learning output;
-3. source/OCR/generated material chỉ được promoted khi đã kiểm tra format và meaning;
+Cách này có giá trị hơn học thuộc logical processing order vì nó buộc người học theo dõi dữ liệu thật qua từng bước.
+
+### P1 — Edge case về cardinality, NULL và window
+
+Các distractor khó thường sinh từ duplicate row sau join, `NULL` trong so sánh/tổng hợp, tie trong ranking hoặc window frame. Nên tăng case nhỏ nhưng có reasoning rõ, thay vì chỉ tăng số câu trắc nghiệm.
+
+### P1 — Transaction scenario
+
+Cần nối exam semantics với mô hình canonical: transaction boundary, commit/rollback, visibility/isolation consequence. Không đi sâu implementation MVCC/WAL ở đây; chỉ đủ để người học hiểu câu SQL thay đổi trạng thái gì và khi nào trạng thái đó trở nên durable/visible theo contract.
+
+### P2 — Handoff sau SQLD
+
+Nên link rõ từ SQLD sang tuyến [`query → transaction → pipeline → analytical serving`](../computer_science/90_connections/06_query_transaction_pipeline_and_analytical_serving.md) để người học thấy SQLD là nền, không phải điểm kết thúc của database/data reasoning.
+
+## 5. Quy trình review
+
+Khi cập nhật domain:
+
+1. kiểm phạm vi/outline chứng chỉ hiện hành trước khi thêm nội dung exam-specific;
+2. giữ [`output/README.md`](./output/README.md) là learning map chi tiết;
+3. chỉ promote OCR/generated material sau khi kiểm format và meaning;
 4. ví dụ SQL phải nêu row set/grain hoặc transaction effect khi đó là điểm học chính;
-5. link các cơ chế sâu về canonical owner thay vì copy.
+5. link cơ chế sâu sang canonical owner thay vì copy.
 
-> **Bàn giao:** Đọc từ [SQLD output](./output/README.md). Khi cần database mechanism sâu hơn, chuyển sang [`computer_science/05_data_databases/`](../computer_science/05_data_databases/README.md); khi cần analytical pipeline/semantic correctness, chuyển sang [`data_engineering/`](../data_engineering/README.md).
+## 6. Kết luận và bàn giao
+
+Coverage SQLD hiện **mạnh**; gap lớn nhất là tăng reasoning qua intermediate relation, edge case và transaction scenario. Không cần mở rộng `sql/` thành database textbook thứ hai.
+
+Bắt đầu học tại [SQLD output](./output/README.md). Khi cần cơ chế database sâu hơn, chuyển sang [Computer Science Databases](../computer_science/05_data_databases/README.md); khi cần analytical pipeline và semantic correctness, chuyển sang [Data Engineering](../data_engineering/README.md).
