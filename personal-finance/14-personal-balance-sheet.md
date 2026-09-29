@@ -2,9 +2,9 @@
 
 ## Định vị
 
-Các chapter trước nhìn từng thành phần: tiền, tài khoản, lãi suất, lạm phát, tín dụng, nợ, bảo hiểm, thuế, nhà, xe, hưu trí, quỹ dự phòng và scam. Chapter cuối gom chúng vào hai báo cáo khái niệm: **bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표)** cho biết mình sở hữu và nợ gì tại một thời điểm; **báo cáo dòng tiền cá nhân (personal cash-flow statement / 개인 현금흐름표)** cho biết tiền đi vào và ra trong một khoảng thời gian.
+Các chapter trước nhìn từng thành phần: tiền, tài khoản, lãi suất, lạm phát, tín dụng, nợ, bảo hiểm, thuế, nhà, xe, hưu trí, quỹ dự phòng và scam. Chapter này gom chúng vào hai báo cáo khái niệm: **bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표)** cho biết mình sở hữu và nợ gì tại một thời điểm; **báo cáo dòng tiền cá nhân (personal cash-flow statement / 개인 현금흐름표)** cho biết tiền đi vào và ra trong một khoảng thời gian.
 
-Mục tiêu không phải tạo accounting phức tạp mà có một dashboard đủ tốt để trả lời: hệ thống tài chính đang mạnh lên hay chỉ có thu nhập/giá tài sản tăng tạm thời?
+Mục tiêu không phải tạo accounting phức tạp mà có một dashboard đủ tốt để trả lời: hệ thống tài chính đang mạnh lên hay chỉ có thu nhập/giá tài sản tăng tạm thời? Sau khi dựng được snapshot này, [15 — Financial Resilience](./15-financial-resilience.md) sẽ stress-test nó dưới income, expense, rate, FX và operational shocks.
 
 ## Phương trình cơ bản
 
@@ -37,7 +37,7 @@ Con số 135 không có nghĩa có 135 cash. Phần lớn có thể bị khóa t
 
 ## Asset classification theo chức năng
 
-Một bảng tốt không chỉ liệt kê value; nên phân loại theo khả năng sử dụng:
+Một bảng tốt không chỉ liệt kê value; nên phân loại theo khả năng sử dụng.
 
 ### Liquid assets
 
@@ -201,9 +201,9 @@ Net worth hữu ích để theo dõi chính mình qua thời gian, nhưng không
 
 Mục tiêu của personal finance là **khả năng đáp ứng nghĩa vụ, hấp thụ shock và tài trợ mục tiêu**, không phải tối đa hóa một con số duy nhất bằng mọi giá.
 
-## Kết luận: nối Personal Finance → Economics → Investing
+## Từ balance sheet sang resilience rồi mới sang Investing
 
-Toàn library có thể rút về một chuỗi:
+Phần core có thể rút về một chuỗi:
 
 ```text
 Income
@@ -211,12 +211,15 @@ Income
 → liquidity
 → debt & insurance
 → taxes and major life assets
-→ emergency resilience
+→ emergency resources
 → long-term retirement resources
 → balance sheet
+→ resilience stress test
 → investable surplus
 ```
 
-Khi đã có investable surplus, [Economics](../economics/README.md) giúp hiểu môi trường lãi suất, inflation, growth và policy; [Investing](../investing/README.md) giúp quyết định asset allocation, security analysis và risk/return. Forex nằm ở [`investing/05_trading_derivatives/forex/`](../investing/05_trading_derivatives/forex/README.md); cổ phiếu và các asset classes nằm trong [`investing/02_asset_classes/`](../investing/02_asset_classes/README.md).
+Balance sheet trả lời **mình đang đứng ở đâu**. Nó chưa trả lời cấu trúc đó có sống sót khi income giảm, rate tăng, FX đi bất lợi hoặc account bị gián đoạn hay không. Vì vậy bước tiếp theo là [15 — Financial Resilience](./15-financial-resilience.md).
 
-Điểm kết thúc của personal finance vì vậy không phải “hãy đầu tư”. Nó là: **biết rõ phần vốn nào thực sự có thể đầu tư mà không phá vỡ dòng tiền, thanh khoản và khả năng chịu rủi ro của cuộc sống**.
+Sau resilience gate, [Economics](../economics/README.md) giúp hiểu môi trường lãi suất, inflation, growth và policy; [Investing](../investing/README.md) giúp quyết định asset allocation, security analysis và risk/return. Forex nằm ở [`investing/05_trading_derivatives/forex/`](../investing/05_trading_derivatives/forex/README.md); cổ phiếu và các asset classes nằm trong [`investing/02_asset_classes/`](../investing/02_asset_classes/README.md).
+
+Điểm bàn giao của chapter này vì vậy không phải “net worth cao thì hãy đầu tư”, mà là: **đã có đủ dữ liệu để kiểm tra phần vốn nào vẫn tồn tại như investable surplus sau khi household chịu stress hay chưa**.
