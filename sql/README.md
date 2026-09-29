@@ -10,7 +10,9 @@ Bộ SQLD giúp luyện cú pháp, dạng bài và thuật ngữ kỳ thi. Khi c
 
 Khi cần hiểu dữ liệu sau database đi qua ingestion, transformation, warehouse và semantic layer như thế nào, đọc [query → transaction → pipeline → analytical serving](../computer_science/90_connections/06_query_transaction_pipeline_and_analytical_serving.md) và [Data Engineering](../data_engineering/README.md).
 
-## Ranh giới thư mục
+## Coverage và ranh giới thư mục
+
+Trạng thái độ phủ, ranh giới với database engineering và các gap practice còn lại được ghi tại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).
 
 ```text
 sql/output/   = learning output chuẩn hóa
@@ -21,4 +23,4 @@ sql/scripts/  = tooling xử lý nội dung
 
 Không dùng số lượng file raw làm thước đo coverage. Learning flow và canonical explanation phải đi qua `output/` hoặc các owner liên quan trong Computer Science/Data Engineering.
 
-> **Bàn giao:** Bắt đầu tại [output/README.md](./output/README.md). Nếu một bài SQL yêu cầu hiểu “vì sao database làm như vậy”, chuyển sang [Computer Science Databases](../computer_science/05_data_databases/README.md) thay vì chỉ học thêm syntax.
+> **Bàn giao:** Bắt đầu tại [output/README.md](./output/README.md). Nếu một bài SQL yêu cầu hiểu “vì sao database làm như vậy”, chuyển sang [Computer Science Databases](../computer_science/05_data_databases/README.md) thay vì chỉ học thêm syntax. Dùng [coverage audit](./COVERAGE_AUDIT.md) để quyết định phần SQLD nào còn cần tăng độ sâu.
