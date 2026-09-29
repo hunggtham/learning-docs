@@ -1,576 +1,328 @@
-# Tài chính cá nhân trước khi đầu tư: dòng tiền → bộ đệm → nợ → bảo hiểm → mục tiêu → đầu tư
+# Tài chính cá nhân trước khi đầu tư: dòng tiền → thanh khoản → nợ → bảo hiểm → mục tiêu → đầu tư
 
-> **Mạch đọc:** Chapter này bổ sung lớp **tài chính cá nhân (personal finance / 개인 재무)** còn thiếu giữa đời sống hàng ngày và thư viện đầu tư. Nó không thay thế các chapter về portfolio, asset class hay valuation. Câu hỏi trung tâm ở đây là: **trước khi hỏi nên mua tài sản nào, làm thế nào biến thu nhập, nghĩa vụ, rủi ro đời sống và mục tiêu tương lai thành một hệ thống tài chính có khả năng sống sót?**
+> **Mạch đọc:** Chapter này nằm giữa đời sống tài chính hàng ngày và thư viện đầu tư. Nó không trả lời “nên mua tài sản nào?”, mà trả lời câu hỏi nền hơn: **trước khi đầu tư, làm thế nào biến thu nhập, nghĩa vụ, rủi ro đời sống và mục tiêu tương lai thành một hệ thống tài chính có khả năng sống sót qua biến cố?** Nếu cần hiểu hành vi khiến kế hoạch tài chính bị phá vỡ, đọc song song [Tâm lý tiền bạc và quyết định tài chính cá nhân](../../psychology/06_applied/18_financial_psychology_and_personal_decision_making.md). Sau chapter này mới nên đi tiếp sang [rủi ro danh mục, phân bổ và hành vi](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md).
 
-Nếu muốn hiểu hành vi khiến kế hoạch tài chính bị phá vỡ, đọc song song [Tâm lý tiền bạc và quyết định tài chính cá nhân](../../psychology/06_applied/18_financial_psychology_and_personal_decision_making.md). Nếu muốn đi sâu từ tài chính cá nhân sang thiết kế danh mục, đọc tiếp [Rủi ro danh mục, phân bổ và hành vi](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md) và [Lifecycle allocation, rebalancing and investment operations](./03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md).
+Tài chính cá nhân (personal finance / 개인 재무) không bắt đầu bằng cổ phiếu. Nó bắt đầu bằng **khả năng tồn tại tài chính (financial survivability / 재무 생존 가능성)**: nếu thu nhập giảm, chi phí bất ngờ xuất hiện hoặc một nghĩa vụ lớn đến hạn, hệ thống có đủ tiền mặt và đủ quyền lựa chọn để tránh bị ép bán tài sản, vay đắt hoặc phá vỡ mục tiêu dài hạn hay không?
 
-Tài chính cá nhân không bắt đầu bằng cổ phiếu. Nó bắt đầu bằng một identity đơn giản:
+Một mô hình tối giản là:
 
 ```text
-resources today
-- obligations today
-+ future earning capacity
-- future obligations
-= economic room for choice
+nguồn lực hiện tại
+- nghĩa vụ hiện tại
++ khả năng tạo thu nhập tương lai
+- nghĩa vụ tương lai
+= khoảng tự do để lựa chọn
 ```
 
-Một người có danh mục sinh lời tốt nhưng không có thanh khoản để trả chi phí bắt buộc vẫn có thể bị buộc bán tài sản ở thời điểm xấu. Vì vậy **khả năng sống sót (survivability / 생존 가능성)** phải đứng trước tối ưu hóa lợi suất.
+Từ đây, chapter đi theo thứ tự **dòng tiền → bảng cân đối → thanh khoản → nợ → bảo hiểm → mục tiêu → đầu tư**. Thứ tự này quan trọng vì tối ưu lợi suất chỉ có ý nghĩa sau khi hệ thống đủ bền để không bị một cú sốc ngắn hạn phá vỡ.
 
-## 1. Tách dòng tiền, bảng cân đối và danh mục đầu tư
+## 1. Tách ba lớp: dòng tiền, bảng cân đối và danh mục đầu tư
 
-Ba object thường bị trộn với nhau:
-
-**Dòng tiền (cash flow / 현금흐름)** cho biết tiền đi vào và đi ra trong một khoảng thời gian.
+**Dòng tiền (cash flow / 현금흐름)** cho biết tiền đi vào và đi ra trong một khoảng thời gian:
 
 ```text
-net cash flow = income - mandatory spending - discretionary spending
+dòng tiền ròng = thu nhập - chi tiêu bắt buộc - chi tiêu tùy chọn
 ```
 
-**Bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표)** cho biết những gì đang sở hữu và những nghĩa vụ phải trả tại một thời điểm.
+**Bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표)** mô tả trạng thái tài chính tại một thời điểm:
 
 ```text
-net worth = assets - liabilities
+tài sản ròng = tài sản - nợ phải trả
 ```
 
-**Danh mục đầu tư (investment portfolio / 투자 포트폴리오)** chỉ là phần tài sản được phân bổ để phục vụ các mục tiêu đầu tư.
+**Danh mục đầu tư (investment portfolio / 투자 포트폴리오)** chỉ là phần tài sản được phân bổ để phục vụ mục tiêu dài hạn.
 
-Một lỗi phổ biến là nhìn net worth tăng nhưng bỏ qua cash flow đang âm. Ví dụ giá căn hộ tăng làm tài sản ròng tăng trên giấy, nhưng khoản vay, phí sinh hoạt và thu nhập không ổn định vẫn có thể tạo stress thanh khoản hàng tháng.
+Ba lớp này có thể cho tín hiệu khác nhau. Một người có thể có tài sản ròng cao nhờ bất động sản tăng giá nhưng vẫn gặp căng thẳng thanh khoản vì tiền mặt ít, khoản vay lớn và dòng tiền hàng tháng yếu. Ngược lại, một người có tài sản ròng chưa lớn nhưng dòng tiền ổn định, nợ thấp và nhiều tài sản thanh khoản có thể có khả năng chịu cú sốc tốt hơn.
 
-> **Chuyển mạch:** Bảng cân đối nói bạn có gì; dòng tiền nói bạn có thể tiếp tục vận hành bao lâu.
+Vì vậy câu “tôi có bao nhiêu tài sản?” phải đi cùng hai câu khác: **tài sản đó có chuyển thành tiền khi cần không?** và **mỗi tháng hệ thống tạo hay tiêu hao bao nhiêu tiền mặt?**
 
-## 2. Phân loại chi phí theo mức bắt buộc thay vì theo cảm giác
+> **Chuyển mạch:** Bảng cân đối cho biết đang có gì; dòng tiền cho biết hệ thống còn vận hành được bao lâu. Từ đây cần phân biệt nghĩa vụ nào thực sự cứng và phần nào có thể co lại khi thu nhập thay đổi.
 
-Một ngân sách hữu ích không chỉ chia “cần” và “muốn”. Nó nên tách theo khả năng trì hoãn và khả năng cắt giảm:
+## 2. Phân loại chi phí theo độ cứng, không theo cảm giác đạo đức
+
+Một ngân sách hữu ích không nên chỉ chia “cần” và “muốn”, vì nhiều chi phí nằm giữa hai cực. Thay vào đó, hãy nhìn **độ cứng của chi phí (expense rigidity / 지출 경직성)**: nếu thu nhập giảm đột ngột, khoản đó có thể giảm nhanh đến đâu?
+
+Có thể chia thành ba lớp:
 
 ```text
-Tier 1 — nghĩa vụ không thể trì hoãn ngắn hạn
-nhà ở, điện nước cơ bản, thực phẩm thiết yếu, bảo hiểm bắt buộc, debt minimum
+Lớp 1 — nghĩa vụ khó trì hoãn ngắn hạn
+nhà ở, điện nước cơ bản, thực phẩm thiết yếu, bảo hiểm bắt buộc,
+khoản trả nợ tối thiểu, nghĩa vụ pháp lý hoặc gia đình bắt buộc
 
-Tier 2 — chi phí quan trọng nhưng có thể điều chỉnh
-transport, communication, education, family support
+Lớp 2 — quan trọng nhưng có thể điều chỉnh
+đi lại, viễn thông, giáo dục, hỗ trợ gia đình, dịch vụ định kỳ
 
-Tier 3 — discretionary spending
-entertainment, upgrade, travel, optional subscription
+Lớp 3 — tùy chọn
+nâng cấp thiết bị, giải trí, du lịch, subscription không thiết yếu
 ```
 
-Điểm quan trọng không phải tạo guilt với Tier 3. Mục tiêu là biết **cash-flow elasticity**: nếu thu nhập giảm 20–30%, phần nào có thể co lại và nhanh đến đâu?
+Mục tiêu không phải tạo cảm giác tội lỗi với lớp 3. Mục tiêu là biết **độ co giãn của dòng tiền (cash-flow elasticity / 현금흐름 탄력성)**. Hai người cùng chi 3 triệu won mỗi tháng có thể có độ bền rất khác nếu một người có 2,5 triệu nghĩa vụ cứng còn người kia chỉ có 1,5 triệu nghĩa vụ cứng.
 
-Hai người cùng chi 3 triệu won mỗi tháng có thể có resilience hoàn toàn khác nhau nếu một người có 2 triệu nghĩa vụ cố định còn người kia có 1 triệu nghĩa vụ cố định và phần còn lại linh hoạt.
+Tỷ lệ chi phí cố định cao làm hệ thống ít quyền lựa chọn hơn. Khi thu nhập bị sốc, người có nhiều chi phí linh hoạt có thể tự điều chỉnh; người có nhiều nghĩa vụ cố định thường phải dùng quỹ dự phòng, vay hoặc bán tài sản.
 
-## 3. Savings rate chỉ có ý nghĩa khi hiểu denominator
+## 3. Tỷ lệ tiết kiệm chỉ có nghĩa khi định nghĩa mẫu số rõ
 
-Một tỷ lệ tiết kiệm thường được viết:
+**Tỷ lệ tiết kiệm (savings rate / 저축률)** thường được viết:
 
 ```text
-savings rate = amount saved / after-tax income
+tỷ lệ tiết kiệm = số tiền dành lại / thu nhập sau thuế
 ```
 
-Nhưng một con số đơn lẻ không tự nói kế hoạch tốt hay xấu. Người đang trả debt lãi cao có thể chuyển nhiều cash flow sang giảm liability thay vì tăng financial assets. Người có pension bắt buộc hoặc employer contribution cũng cần biết khoản đó được tính ở đâu.
+Nhưng con số này chỉ có ý nghĩa khi định nghĩa nhất quán. Khoản trả nợ gốc có tính là tiết kiệm không? Pension bắt buộc có tính không? Employer contribution có tính không? Nếu mỗi tháng dùng một định nghĩa khác, biểu đồ đẹp nhưng không đo được gì.
 
-Vì vậy khi so sánh, phải giữ definition nhất quán. Mục tiêu của savings rate là theo dõi **khả năng chuyển thu nhập hiện tại thành future optionality**, không phải thi đua một tỷ lệ phổ quát.
+Điểm cốt lõi của tỷ lệ tiết kiệm không phải đạt một “con số chuẩn” cho mọi người. Nó đo khả năng chuyển thu nhập hiện tại thành **quyền lựa chọn trong tương lai (future optionality / 미래 선택권)**.
 
-## 4. Bộ đệm khẩn cấp là tài sản thanh khoản, không phải portfolio tối ưu
+Với người có nợ lãi cao, giảm nợ có thể tạo giá trị chắc chắn hơn tăng tài sản đầu tư. Với người có nghĩa vụ ngắn hạn lớn, tăng thanh khoản có thể quan trọng hơn mua tài sản biến động. Vì vậy cùng một mức tiết kiệm nhưng cách phân bổ khác nhau có thể hợp lý tùy cấu trúc nghĩa vụ.
 
-**Quỹ dự phòng (emergency fund / 비상 자금)** tồn tại để hấp thụ shock mà không phải vay đắt hoặc bán investment ở thời điểm bất lợi.
+## 4. Quỹ dự phòng tồn tại để tránh bị ép hành động
 
-Shock có thể là:
+**Quỹ dự phòng (emergency fund / 비상자금)** không phải phần danh mục để tối ưu lợi suất. Chức năng của nó là hấp thụ cú sốc mà không phải vay đắt hoặc bán tài sản dài hạn vào thời điểm bất lợi.
 
-```text
-mất việc
-thu nhập bị chậm
-chi phí y tế bất ngờ
-vé máy bay hoặc family emergency
-sửa nhà / xe cần thiết
-visa / relocation cost
-```
+Các cú sốc điển hình gồm mất việc, trả lương chậm, chi phí y tế, di chuyển khẩn cấp, sửa chữa thiết yếu, thay đổi visa/cư trú, hỗ trợ người thân hoặc chi phí phát sinh do chuyển nhà.
 
-Số tháng chi phí cần giữ không có một con số đúng cho mọi người. Nó phụ thuộc vào:
+Không có số tháng quỹ dự phòng đúng cho tất cả mọi người. Mức cần thiết phụ thuộc vào:
 
 ```text
-độ ổn định của income
-số nguồn income độc lập
-mandatory monthly expenses
+độ ổn định của thu nhập
+số nguồn thu độc lập
+chi phí bắt buộc hàng tháng
 khả năng nhận trợ cấp / bảo hiểm
-family obligations
-liquidity của tài sản khác
-thời gian dự kiến để tìm lại income
+số người phụ thuộc
+thanh khoản của tài sản khác
+thời gian dự kiến để tạo lại thu nhập
+ràng buộc visa / cư trú / việc làm nếu có
 ```
 
-Một người có việc làm rất ổn định, hai nguồn thu và nghĩa vụ thấp có thể cần buffer nhỏ hơn người có thu nhập biến động, người phụ thuộc tài chính và visa gắn với employment.
+Một người có hai nguồn thu ổn định và nghĩa vụ thấp có thể cần bộ đệm nhỏ hơn người làm việc theo dự án, có người phụ thuộc và visa gắn với việc làm.
 
-Quỹ dự phòng ưu tiên **liquidity, capital preservation và access**, không tối đa expected return. Nếu vì muốn thêm 2–3% lợi suất mà tài sản phải chịu drawdown 20% đúng lúc thất nghiệp, nó không còn hoàn thành chức năng của emergency fund.
+Quỹ dự phòng ưu tiên **thanh khoản (liquidity / 유동성)**, **bảo toàn vốn (capital preservation / 원금 보전)** và **khả năng tiếp cận (accessibility / 접근성)**. Nếu tài sản có thể giảm 20% đúng lúc cần dùng, nó không còn làm tốt vai trò quỹ khẩn cấp dù lợi suất kỳ vọng cao hơn.
 
-## 5. Liquidity ladder tốt hơn một con số duy nhất
+> **Chuyển mạch:** Một con số quỹ dự phòng vẫn còn thô. Trong thực tế, nghĩa vụ đến ở các thời điểm khác nhau, nên cần nhìn thanh khoản theo tầng.
 
-Thay vì chỉ hỏi “có bao nhiêu tháng emergency fund?”, có thể thiết kế các tầng thanh khoản:
+## 5. Bậc thang thanh khoản tốt hơn một con số duy nhất
+
+Một **bậc thang thanh khoản (liquidity ladder / 유동성 사다리)** có thể được hình dung như sau:
 
 ```text
-Layer 0: tiền dùng cho bill vài tuần tới
-Layer 1: cash / deposit truy cập gần như ngay lập tức
-Layer 2: tài sản thanh khoản cao, volatility thấp, dùng cho shock dài hơn
-Layer 3: long-term investment assets
-Layer 4: illiquid assets như bất động sản / private assets
+Tầng 0 — tiền dùng cho hóa đơn vài tuần tới
+Tầng 1 — tiền gửi / tiền mặt có thể truy cập gần như ngay
+Tầng 2 — tài sản biến động thấp, thanh khoản cao cho cú sốc dài hơn
+Tầng 3 — tài sản đầu tư dài hạn
+Tầng 4 — tài sản kém thanh khoản như bất động sản hoặc tài sản tư nhân
 ```
 
-Mục tiêu là tránh tình huống toàn bộ net worth nằm ở Layer 3–4 nhưng nghĩa vụ xảy ra ở Layer 0–1.
+Vấn đề không phải người ta có “nhiều tài sản” hay không mà là nghĩa vụ ở tầng nào và tài sản nằm ở tầng nào. Nếu phần lớn tài sản ở tầng 3–4 nhưng nghĩa vụ xảy ra ở tầng 0–1, hệ thống vẫn có rủi ro thanh khoản.
 
-## 6. Nợ là một hợp đồng dòng tiền, không chỉ là số dư
+Khái niệm này cũng giải thích tại sao không nên đẩy toàn bộ tiền nhàn rỗi vào đầu tư chỉ vì “để tiền mặt mất giá”. Một phần thanh khoản có chi phí cơ hội, nhưng chi phí đó mua quyền không bị ép bán khi thị trường xấu.
 
-Để đánh giá debt, cần ít nhất:
+## 6. Nợ là hợp đồng dòng tiền, không chỉ là số dư
+
+**Nợ (debt / 부채)** phải được nhìn qua ít nhất năm chiều:
 
 ```text
-principal
-interest rate / effective APR
-fixed hay floating
-minimum payment
-maturity
-prepayment rule
-collateral
-penalty / delinquency consequence
-currency
+số dư gốc
+lãi suất
+cấu trúc cố định / thả nổi
+lịch trả nợ
+điều kiện phạt / bảo đảm / tái cấp vốn
 ```
 
-Hai khoản nợ cùng 20 triệu won có thể khác hoàn toàn nếu một khoản là fixed-rate low-cost loan dài hạn còn khoản kia là revolving consumer debt lãi cao.
+Hai khoản nợ cùng 100 triệu won có thể có rủi ro khác nhau nếu một khoản lãi cố định dài hạn còn khoản kia lãi thả nổi, đáo hạn sớm hoặc cần tái cấp vốn trong điều kiện thị trường bất lợi.
 
-Đừng chỉ hỏi “nợ bao nhiêu?”. Hãy hỏi **nợ tạo nghĩa vụ cash flow nào và điều gì xảy ra nếu income giảm?**
+Chi phí nợ không chỉ là lãi suất danh nghĩa. Cần nhìn **dòng tiền bắt buộc (required cash flow / 필수 현금흐름)** mà khoản nợ tạo ra. Một khoản vay “rẻ” nhưng làm nghĩa vụ hàng tháng quá lớn có thể giảm resilience mạnh.
 
-## 7. Trả nợ sớm là một quyết định return–risk
+### Lãi suất thực và lợi suất chắc chắn từ trả nợ
 
-Khi trả bớt khoản nợ có lãi suất `r`, về gần đúng bạn tránh được một chi phí chắc chắn tương ứng với `r`, điều chỉnh theo tax và contract nếu có.
+Nếu một khoản nợ có lãi suất cao và không có lợi ích thuế đặc biệt, trả bớt nợ tạo ra một mức “lợi suất” gần bằng chi phí lãi được tránh, với độ chắc chắn thường cao hơn lợi suất thị trường.
 
-So sánh trực tiếp với expected stock return có thể sai vì:
+Điều đó không có nghĩa luôn phải trả hết mọi nợ trước khi đầu tư. Cần so sánh:
+
+- lãi suất và tính chắc chắn của chi phí nợ;
+- nhu cầu thanh khoản;
+- điều khoản trả trước;
+- tax treatment nếu có;
+- employer matching hoặc quyền lợi mất đi nếu không đóng góp;
+- mục tiêu và thời hạn.
+
+Mục tiêu là hiểu đánh đổi, không áp dụng một khẩu hiệu “nợ luôn xấu” hoặc “đòn bẩy luôn tốt”.
+
+## 7. Ưu tiên nợ theo chi phí và rủi ro dòng tiền
+
+Một cách reasoning thực tế là xem đồng thời **lãi suất** và **mức đe dọa tới khả năng sống sót**.
+
+Nợ tiêu dùng lãi cao thường đáng ưu tiên vì vừa đắt vừa không tạo tài sản sinh dòng tiền. Nợ lãi thấp, lịch trả ổn định và gắn với tài sản hữu ích có thể ít khẩn cấp hơn, nhưng vẫn phải được tính vào future liabilities.
+
+Hai chiến lược phổ biến là trả khoản lãi cao nhất trước hoặc trả khoản nhỏ nhất trước để tạo động lực tâm lý. Về toán học, ưu tiên lãi cao thường giảm tổng chi phí tốt hơn; về hành vi, chiến lược dễ duy trì có thể quan trọng nếu người dùng thường bỏ kế hoạch giữa chừng. Đây là nơi tài chính cá nhân gặp tâm lý học hành vi.
+
+## 8. Bảo hiểm là chuyển giao rủi ro đuôi, không phải đầu tư lợi suất
+
+**Bảo hiểm (insurance / 보험)** tồn tại để chuyển một phần rủi ro có xác suất thấp nhưng hậu quả tài chính lớn từ cá nhân sang một pool.
+
+Một sự kiện nhỏ, xảy ra thường xuyên và tự chi trả được thường không cần bảo hiểm bằng mọi giá. Một sự kiện hiếm nhưng có thể phá hủy bảng cân đối — tử vong của người tạo thu nhập chính, mất khả năng lao động, trách nhiệm pháp lý lớn, chi phí y tế nghiêm trọng hoặc mất tài sản thiết yếu — phù hợp hơn với logic bảo hiểm.
+
+Mô hình nên là:
 
 ```text
-interest saving gần như contractual
-investment return là distribution bất định
+xác suất
+× mức thiệt hại nếu xảy ra
+× khả năng tự hấp thụ
+× mức độ tương quan với các rủi ro khác
+→ có cần chuyển giao rủi ro hay không
 ```
 
-Một expected return 8% không tương đương khoản lãi vay 8% phải trả chắc chắn. Ngoài ra debt reduction còn giảm mandatory cash flow và tăng resilience.
+Không đánh giá sản phẩm bảo hiểm chỉ bằng “có hoàn tiền không” hoặc “lợi suất bao nhiêu”. Cần tách phần **bảo vệ (protection / 보장)** khỏi phần tích lũy/đầu tư nếu sản phẩm kết hợp nhiều chức năng.
 
-Tuy nhiên không phải mọi debt đều phải trả nhanh nhất có thể. Một khoản fixed-rate rất thấp có thể có opportunity cost khác, đặc biệt khi trả sớm làm mất toàn bộ liquidity buffer. Bài toán đúng là:
+## 9. Vốn con người là tài sản nhưng không nằm trên bảng cân đối
+
+**Vốn con người (human capital / 인적자본)** là khả năng tạo thu nhập trong tương lai từ kỹ năng, sức khỏe, kinh nghiệm và quyền tiếp cận thị trường lao động.
+
+Một người trẻ có ít tài sản tài chính nhưng nghề nghiệp ổn định và thu nhập tương lai cao có thể có “tài sản kinh tế” lớn. Ngược lại, người có tài sản đầu tư nhiều nhưng thu nhập dễ mất hoặc sức khỏe hạn chế có cấu trúc rủi ro khác.
+
+Vốn con người ảnh hưởng tới:
+
+- kích thước quỹ dự phòng;
+- nhu cầu bảo hiểm mất khả năng lao động / nhân thọ;
+- mức nợ an toàn;
+- khả năng chịu biến động danh mục;
+- thời gian đầu tư;
+- quyết định đào tạo/chuyển nghề.
+
+Đây là lý do personal finance không nên tách khỏi career/health. Một quyết định nghề nghiệp có thể thay đổi future cash flow mạnh hơn nhiều năm tối ưu danh mục.
+
+## 10. Nghĩa vụ tương lai phải được ghi nhận trước khi đầu tư phần dư
+
+Một người có thể đang “dư tiền” trong tháng hiện tại nhưng thực ra đã có nghĩa vụ lớn trong vài năm tới: học phí, đặt cọc nhà, cưới hỏi, hỗ trợ cha mẹ, mua xe cần thiết, thuế, chuyển quốc gia, sinh con hoặc retirement contribution.
+
+Để tránh nhầm tiền tạm thời chưa dùng với tiền thật sự có thể đầu tư dài hạn, nên tách:
 
 ```text
-cost of debt
-+ default / refinancing risk
-+ liquidity effect
-+ tax / contract effect
-+ psychological burden
-vs
-alternative use of cash
+tiền cho vận hành ngắn hạn
++ bộ đệm khẩn cấp
++ tiền cho nghĩa vụ đã biết theo thời hạn
++ tiền cho rủi ro có thể chuyển giao / dự phòng
+= phần không nên đưa vào tài sản dài hạn biến động
 ```
 
-## 8. Avalanche và snowball giải quyết hai bài toán khác nhau
+Phần còn lại mới gần với **thặng dư có thể đầu tư (investable surplus / 투자 가능 잉여자금)**.
 
-**Debt avalanche** ưu tiên khoản có effective interest rate cao nhất, thường giảm tổng interest mathematically tốt hơn nếu mọi payment đều được thực hiện đúng.
+## 11. Mục tiêu cần có số tiền, thời hạn và độ linh hoạt
 
-**Debt snowball** ưu tiên số dư nhỏ để tạo progress và behavioral reinforcement.
-
-Không nên tranh luận hai phương pháp như một đúng một sai. Avalanche tối ưu arithmetic dưới assumptions nhất định; snowball có thể cải thiện adherence nếu motivation là bottleneck. Tâm lý của adherence được giải thích sâu hơn trong [Financial Psychology](../../psychology/06_applied/18_financial_psychology_and_personal_decision_making.md).
-
-## 9. Bảo hiểm là chuyển rủi ro đuôi, không phải loại bỏ mọi biến động
-
-**Bảo hiểm (insurance / 보험)** là cơ chế chuyển một phần financial consequence của sự kiện bất lợi sang insurer thông qua premium và contract.
-
-Bảo hiểm hữu ích nhất với những loss có đặc điểm:
+Một “mục tiêu” như “mua nhà” hoặc “nghỉ hưu” quá mơ hồ để thiết kế tài chính. Cần ít nhất:
 
 ```text
-xác suất tương đối thấp hoặc không chắc
-nhưng hậu quả tài chính rất lớn
-và cá nhân khó tự hấp thụ
+mục tiêu cần bao nhiêu nguồn lực?
+khoảng thời gian bao lâu?
+deadline cứng hay mềm?
+chi tiêu có thể giảm không?
+có nguồn thay thế không?
+thất bại nghĩa là gì?
 ```
 
-Vì vậy logic của insurance khác investment. Mua insurance không phải để “có lời kỳ vọng”; nó để giới hạn tail loss có thể phá hỏng balance sheet.
+Mục tiêu có deadline gần và cứng cần ít biến động hơn. Mục tiêu xa, linh hoạt và có khả năng điều chỉnh đóng góp có thể chịu rủi ro thị trường cao hơn.
 
-Một framework đọc contract:
+Đây là cầu nối trực tiếp từ tài chính cá nhân sang **phân bổ tài sản (asset allocation / 자산 배분)**. Asset allocation chỉ hợp lý khi biết tiền đó phục vụ mục tiêu nào và khi nào phải sử dụng.
+
+## 12. “Đầu tư được” không đồng nghĩa “nên đầu tư tối đa”
+
+Sau khi có dòng tiền dương, bộ đệm đủ, nợ được quản lý và rủi ro lớn đã có phương án, vẫn còn một câu hỏi: bao nhiêu phần dư nên đưa vào tài sản biến động?
+
+Cần xét:
+
+- thời hạn mục tiêu;
+- độ chắc chắn của thu nhập;
+- khả năng cần tiền sớm;
+- mức nợ và lãi suất;
+- mức bảo hiểm;
+- độ tương quan giữa công việc và tài sản đầu tư;
+- tax/account structure hiện hành;
+- khả năng chịu drawdown mà không phá kế hoạch.
+
+Một người làm trong ngành công nghệ và nhận nhiều thu nhập/cổ phiếu từ cùng ngành đã có exposure kinh tế vào công nghệ qua human capital. Portfolio tập trung thêm vào cùng sector có thể tăng rủi ro tổng thể dù nhìn riêng danh mục có vẻ hấp dẫn.
+
+## 13. Các tỷ lệ tài chính cá nhân chỉ là công cụ chẩn đoán
+
+Các chỉ số như debt-to-income, savings rate, emergency-fund months hoặc housing-cost ratio có ích để phát hiện vùng cần xem kỹ, nhưng không phải luật tự nhiên.
+
+Một ratio tốt phải trả lời câu hỏi cụ thể. Ví dụ debt-to-income giúp nhìn sức ép nghĩa vụ so với thu nhập, nhưng không nói được khoản nợ là lãi cố định hay thả nổi, có tài sản bảo đảm gì, deadline ra sao hoặc thu nhập ổn định tới mức nào.
+
+Không nên biến heuristic thành tiêu chuẩn đạo đức. Chỉ số là **tín hiệu (signal / 신호)**; quyết định phải quay lại cơ chế.
+
+## 14. Thuế, tài khoản ưu đãi và quy định là lớp động
+
+Thuế suất, hạn mức tài khoản, điều kiện pension, insurance contribution và quy định tại Hàn Quốc/Việt Nam có thể thay đổi. Chapter này chỉ giữ cơ chế chung:
 
 ```text
-what event is covered?
-what is excluded?
-deductible là bao nhiêu?
-coverage limit là bao nhiêu?
-waiting period?
-renewal / cancellation rule?
-claim evidence cần gì?
+thu nhập / lợi nhuận
+→ loại thuế hoặc contribution
+→ thời điểm ghi nhận
+→ account wrapper nếu có
+→ after-tax cash flow
 ```
 
-Tên marketing của sản phẩm ít quan trọng hơn contract economics.
+Khi áp dụng con số thực tế, phải kiểm nguồn chính thức hiện hành theo quốc gia và năm. Không ghi một mức thuế hoặc hạn mức như chân lý cố định trong chapter nền tảng.
 
-## 10. Self-insure phần nhỏ, transfer phần catastrophic
+## 15. Một workflow ra quyết định tài chính cá nhân
 
-Một nguyên tắc tư duy hữu ích là:
+Khi có một khoản tiền dư, thay vì hỏi ngay “mua gì?”, đi theo thứ tự:
 
 ```text
-loss nhỏ + thường xuyên → có thể tự hấp thụ bằng budget/buffer
-loss rất lớn + có thể phá hỏng tài chính → cân nhắc risk transfer
+1. Dòng tiền hiện tại có dương và bền không?
+2. Nghĩa vụ cứng trong vài tháng tới là gì?
+3. Bộ đệm thanh khoản có đủ cho shock hợp lý không?
+4. Có nợ lãi cao hoặc rủi ro tái cấp vốn không?
+5. Rủi ro đuôi nào cần bảo hiểm/chuyển giao?
+6. Nghĩa vụ lớn đã biết trong vài năm tới là gì?
+7. Vốn con người và độ ổn định thu nhập ra sao?
+8. Phần tiền nào thật sự có thể khóa dài hạn?
+9. Mục tiêu của phần tiền đó là gì?
+10. Sau đó mới thiết kế asset allocation và portfolio.
 ```
 
-Nếu deductible thấp đến mức insurer trả mọi chi phí nhỏ, premium thường phải phản ánh chi phí đó cộng administrative margin. Ngược lại deductible quá lớn có thể làm policy không giúp khi household không đủ cash để trả phần đầu tiên.
+Workflow này không tạo “đáp án đúng” cho mọi người; nó bảo đảm quyết định đầu tư không bỏ qua các constraint có thể ép hệ thống phá vỡ sau đó.
 
-Mục tiêu là khớp insurance design với **risk capacity**, không mua càng nhiều càng tốt.
+## 16. Những lỗi tư duy thường gặp
 
-## 11. Life insurance phải bắt đầu từ dependency
+**Nhầm tài sản ròng với thanh khoản:** căn hộ tăng giá không tự trả được hóa đơn tháng sau.
 
-Câu hỏi không phải “mỗi người có cần life insurance không?” mà là:
+**Đầu tư quỹ khẩn cấp:** tối ưu expected return nhưng làm mất khả năng truy cập khi shock xảy ra.
+
+**Chỉ nhìn lãi suất nợ:** bỏ qua lịch trả, refinancing risk và nghĩa vụ dòng tiền.
+
+**Coi bảo hiểm là sản phẩm sinh lời:** làm mờ chức năng chuyển giao rủi ro.
+
+**Bỏ qua human capital:** xem portfolio như toàn bộ tài sản kinh tế của một người.
+
+**Đầu tư tiền có deadline gần:** biến một mục tiêu ngắn hạn thành cược vào thời điểm thị trường.
+
+**Dùng một tỷ lệ “chuẩn” cho mọi người:** bỏ qua household structure, visa, income stability, country system và mục tiêu.
+
+## 17. Mô hình tổng hợp
+
+Có thể tóm cơ chế bằng một chuỗi:
 
 ```text
-nếu income của người này biến mất,
-ai mất nguồn tài trợ?
-nghĩa vụ nào còn lại?
-bao lâu?
-assets hiện có hấp thụ được bao nhiêu?
+thu nhập
+→ chi phí và nghĩa vụ
+→ dòng tiền ròng
+→ bộ đệm thanh khoản
+→ quản lý nợ
+→ chuyển giao rủi ro lớn bằng bảo hiểm
+→ ghi nhận nghĩa vụ tương lai
+→ xác định thặng dư có thể đầu tư
+→ gắn thặng dư với mục tiêu + thời hạn
+→ phân bổ tài sản
+→ danh mục
+→ review khi hoàn cảnh thay đổi
 ```
 
-Nếu không có financial dependent và không có nghĩa vụ lớn cần cover, nhu cầu khác đáng kể so với household có con nhỏ hoặc khoản vay phụ thuộc vào một income chính.
+Insight quan trọng là: **đầu tư là một lớp của tài chính cá nhân, không phải toàn bộ tài chính cá nhân**. Portfolio tốt nhưng nền thanh khoản yếu vẫn có thể dẫn tới quyết định cưỡng bức khi shock xảy ra.
 
-## 12. Disability và mất khả năng kiếm thu nhập thường bị đánh giá thấp
+## 18. Kết nối và bàn giao
 
-Với người còn nhiều năm làm việc, **vốn con người (human capital / 인적 자본)** — giá trị kinh tế của future earning capacity — có thể lớn hơn financial assets hiện tại.
+Nếu vấn đề chính là bias, impulse spending, status consumption hoặc cảm xúc khi tiền biến động, đọc [Tâm lý tiền bạc và quyết định tài chính cá nhân](../../psychology/06_applied/18_financial_psychology_and_personal_decision_making.md).
 
-Một rủi ro làm giảm khả năng kiếm thu nhập dài hạn có thể tác động balance sheet mạnh hơn một năm stock market giảm giá. Đây là lý do personal finance cần nhìn cả asset vô hình là future labor income.
+Nếu vấn đề là y tế, khả năng lao động hoặc cú sốc sức khỏe làm thay đổi dòng tiền và mục tiêu, đọc [Hiểu thông tin y tế và quyết định chung](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md).
 
-## 13. Mục tiêu tài chính là future liability
+Sau khi đã xác định được **thặng dư có thể đầu tư (investable surplus / 투자 가능 잉여자금)** và thời hạn của từng mục tiêu, bàn giao sang [Rủi ro danh mục, phân bổ và hành vi](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md), rồi tiếp tục tới [vòng đời phân bổ, tái cân bằng và vận hành đầu tư](./03_LIFECYCLE_ALLOCATION_REBALANCING_AND_INVESTMENT_OPERATIONS.md).
 
-Thay vì viết “muốn giàu”, hãy chuyển mục tiêu thành liability có:
-
-```text
-amount range
-currency
-time horizon
-flexibility
-priority
-probability / uncertainty
-```
-
-Ví dụ “học cao học trong 4 năm nữa” khác “retire sau 30 năm” vì horizon, flexibility và currency risk khác nhau.
-
-Khi mục tiêu trở thành liability, asset allocation trở nên rõ hơn:
-
-```text
-near-term fixed obligation → ưu tiên liquidity và capital stability cao hơn
-long-horizon flexible goal → có thể chịu volatility lớn hơn
-```
-
-Đây là cầu nối trực tiếp sang asset–liability matching trong [Portfolio Risk, Allocation and Behavior](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md).
-
-## 14. Time horizon không chỉ là ngày dự kiến dùng tiền
-
-Một mục tiêu 10 năm nữa chưa chắc có horizon 10 năm nếu việc thất bại ở năm thứ 8 là không chấp nhận được. Cần phân biệt:
-
-```text
-calendar horizon
-liquidity horizon
-risk-recovery horizon
-```
-
-Nếu tuition phải trả đúng một ngày cố định, khả năng chờ market phục hồi thấp hơn mục tiêu nghỉ hưu có thể điều chỉnh spending hoặc retirement date.
-
-## 15. Inflation biến nominal goal thành moving target
-
-Nếu chi phí hiện tại là `C0`, tăng với inflation `i` trong `t` năm:
-
-```text
-future cost ≈ C0 × (1 + i)^t
-```
-
-Một mục tiêu nominal không cập nhật inflation có thể tạo false comfort. Các chi phí khác nhau cũng không nhất thiết tăng bằng headline CPI; education, housing và healthcare có thể có dynamics riêng.
-
-## 16. Đầu tư chỉ là một engine trong hệ thống tài chính cá nhân
-
-Tài sản đầu tư giúp chuyển purchasing power hiện tại sang tương lai, nhưng nó không sửa được:
-
-```text
-cash flow âm kéo dài
-high-cost debt
-thiếu liquidity
-insurance gap catastrophic
-mục tiêu không xác định
-position size vượt risk capacity
-```
-
-Nếu các constraint này chưa rõ, việc tối ưu ETF hoặc stock selection có thể là local optimization của một system chưa ổn định.
-
-## 17. Sequence hợp lý không phải checklist cứng
-
-Một mental model thường hữu ích:
-
-```text
-stabilize cash flow
-→ build minimum liquidity
-→ capture critical employer/public benefits nếu phù hợp
-→ control destructive debt
-→ cover catastrophic risks
-→ define liabilities/goals
-→ invest long-term surplus
-→ review and rebalance
-```
-
-Nhưng đời sống có thể yêu cầu thực hiện nhiều bước song song. Ví dụ vừa trả high-rate debt vừa giữ một minimum emergency buffer để tránh phải vay lại khi shock nhỏ xảy ra.
-
-Mục tiêu là **system stability**, không phải tuân thủ một thứ tự máy móc.
-
-## 18. Retirement planning là liability dài hạn dưới bất định
-
-Retirement không chỉ là chọn một retirement number. Nó gồm:
-
-```text
-future spending
-inflation
-longevity
-pension / social insurance
-portfolio return distribution
-healthcare cost
-housing
-currency
-sequence-of-returns risk
-```
-
-Một projection duy nhất như “return 7% mỗi năm” che mất distribution. Cần scenario và stress test, đặc biệt giai đoạn gần retirement khi withdrawal bắt đầu.
-
-## 19. Pension và tax-advantaged account phải đọc theo luật cụ thể
-
-Retirement account, pension, tax deduction và withdrawal rule thay đổi theo jurisdiction và thời gian. Vì vậy chapter này chỉ đưa framework:
-
-```text
-contribution rule
-employer/public contribution
-vesting
-tax treatment when contributing
-investment restrictions
-fees
-withdrawal age / penalty
-tax treatment when withdrawing
-beneficiary rule
-```
-
-Không nên ghi nhớ một tỷ lệ thuế hoặc hạn mức từ tài liệu tĩnh rồi giả định còn đúng nhiều năm sau. Với nội dung Korea/Vietnam cụ thể, cần kiểm tra nguồn pháp lý hiện hành tại thời điểm quyết định.
-
-## 20. Housing: asset, consumption và leverage cùng tồn tại
-
-Nhà ở có thể đồng thời là:
-
-```text
-nơi tiêu dùng dịch vụ housing
-một asset có price risk
-một liability nếu dùng mortgage
-một nguồn concentration risk
-một hedge một phần với future housing cost
-```
-
-Do đó “rent hay buy?” không thể giải bằng việc so monthly rent với monthly mortgage payment.
-
-Cần thêm:
-
-```text
-down payment opportunity cost
-interest
-maintenance
-transaction tax/fee
-mobility value
-price uncertainty
-rent inflation
-leverage
-holding horizon
-```
-
-Nếu purchase làm liquidity về gần zero, household có thể trở nên fragile dù monthly payment nhìn có vẻ chịu được.
-
-## 21. Currency mismatch là một liability risk
-
-Nếu income, assets và future obligations ở các đồng tiền khác nhau, household có **rủi ro tiền tệ (currency risk / 환율 위험)**.
-
-Ví dụ income bằng KRW nhưng future obligation lớn bằng VND hoặc USD. Khi đó chỉ nhìn return của asset theo local currency chưa đủ; phải nhìn purchasing power trong currency của liability.
-
-Điều này giống asset–liability matching ở institutional finance nhưng xuất hiện ngay trong personal finance cross-border.
-
-## 22. Human capital và financial capital phải nhìn cùng nhau
-
-Một người làm việc trong ngành công nghệ và đồng thời nắm phần lớn portfolio ở cổ phiếu công nghệ có thể có concentration lớn hơn họ nghĩ:
-
-```text
-salary / bonus risk
-+ career risk
-+ equity portfolio risk
-= correlated household exposure
-```
-
-Nếu recession tech xảy ra, cả job market lẫn portfolio có thể xấu cùng lúc.
-
-Đa dạng hóa vì thế không chỉ diễn ra trong brokerage account. Nó phải tính cả source of income, housing và business ownership.
-
-## 23. Automation giảm lỗi nhưng cần guardrail
-
-Autopay, auto-saving và recurring investment giảm friction. Tuy nhiên automation có thể tạo lỗi nếu:
-
-```text
-cash buffer không đủ
-account bị thay đổi
-subscription tiếp tục sau khi không cần
-investment amount không cập nhật sau income shock
-```
-
-Mọi automation cần một review cadence. “Set and forget” chỉ phù hợp cho rule có monitoring.
-
-## 24. Financial dashboard nên nhỏ nhưng đủ để ra quyết định
-
-Một dashboard cá nhân không cần hàng chục metric. Một bộ tối thiểu có thể gồm:
-
-```text
-monthly net cash flow
-liquid months of mandatory spending
-high-cost debt balance / effective rate
-insurance critical gaps
-net worth by liquidity layer
-savings/investment contribution
-asset allocation
-upcoming major liabilities
-```
-
-Metric tồn tại để phát hiện state change, không để tạo cảm giác kiểm soát bằng số lượng chart.
-
-## 25. Review theo trigger tốt hơn chỉ review theo lịch
-
-Review hàng quý hoặc hàng năm hữu ích, nhưng một số event phải kích hoạt review ngay:
-
-```text
-mất hoặc đổi việc
-kết hôn / ly hôn
-có con / dependent mới
-mua nhà
-chuyển quốc gia
-thay đổi visa
-income tăng/giảm mạnh
-health event
-inheritance
-large debt payoff
-```
-
-Những event này thay liability, risk capacity hoặc legal/tax environment, nên old portfolio có thể không còn phù hợp dù market không thay đổi.
-
-## 26. Worked example: từ income tới investable surplus
-
-Giả sử một household có số liệu giả định:
-
-```text
-monthly after-tax income: 5,000
-mandatory spending: 2,400
-discretionary baseline: 900
-debt minimum: 300
-liquid reserve: 7,200
-high-rate debt: 6,000 at 14%
-long-term investment: 20,000
-```
-
-Net cash flow trước additional saving/debt payoff:
-
-```text
-5,000 - 2,400 - 900 - 300 = 1,400
-```
-
-Liquid reserve tương đương khoảng:
-
-```text
-7,200 / (2,400 + 300) ≈ 2.7 months
-```
-
-Nếu chỉ nhìn 20,000 investment và tiếp tục đầu tư toàn bộ 1,400 mỗi tháng, household vẫn giữ debt 14% và buffer chưa lớn.
-
-Một process tốt không nói ngay tỷ lệ bao nhiêu phải trả debt hay đầu tư. Nó đặt các câu hỏi:
-
-```text
-income ổn định đến đâu?
-reserve tối thiểu cần bao nhiêu với household này?
-debt có prepayment penalty không?
-14% có phải effective cost sau mọi benefit/tax không?
-có insurance gap catastrophic không?
-upcoming liability 6–12 tháng tới là gì?
-```
-
-Sau khi trả lời mới chia 1,400 giữa liquidity, debt reduction và investment.
-
-Điểm học ở đây là **investment contribution là residual decision sau constraints**, không phải con số tồn tại độc lập.
-
-## 27. Failure mode: tối ưu lợi suất nhưng phá liquidity
-
-Một người có thể bán toàn bộ cash để đầu tư vì expected return cao hơn deposit. Nếu market giảm 30% đúng lúc mất việc, họ vừa mất income vừa phải bán asset drawdown để trả bill.
-
-Sai lầm không nhất thiết nằm ở asset selection. Nó nằm ở việc cùng một asset bị yêu cầu phục vụ hai job không tương thích:
-
-```text
-emergency liquidity
-và
-long-term growth
-```
-
-## 28. Failure mode: debt thấp lãi nhưng cash flow quá cứng
-
-Một household có debt rate thấp nhưng monthly fixed obligations chiếm 85% income vẫn fragile. Interest rate không phải metric duy nhất; fixed-payment burden và refinancing risk cũng quan trọng.
-
-## 29. Failure mode: mua insurance theo product name
-
-Hai policy cùng được marketing là “health”, “life” hoặc “critical illness” có thể có exclusions và payout structure rất khác. Nếu không đọc covered event, limit, waiting period và renewal, người mua đang dựa vào label thay vì contract.
-
-## 30. Failure mode: dùng một return assumption cho mọi kế hoạch
-
-Một spreadsheet tăng portfolio đều 7% mỗi năm có thể bỏ qua sequence risk, inflation và return dispersion. Projection là model, không phải promise.
-
-Đọc [Probability → Calibration → Decision and Risk](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md) để hiểu vì sao expected value không mô tả đầy đủ outcome path.
-
-## 31. Failure mode: lifestyle upgrade biến raise thành liability
-
-Income tăng nhưng recurring fixed expense tăng gần tương ứng có thể làm net flexibility không đổi. Một raise chỉ thực sự tăng option value nếu ít nhất một phần được chuyển thành buffer, debt reduction, investment hoặc quality-of-life improvement có chủ ý thay vì obligation tự động.
-
-## 32. Ranh giới giữa personal finance và investment analysis
-
-Chapter này sở hữu các câu hỏi:
-
-```text
-cash flow có bền không?
-liquidity buffer có đủ không?
-liability là gì?
-risk nào cần transfer?
-debt có làm system fragile không?
-bao nhiêu surplus thực sự có thể đầu tư dài hạn?
-```
-
-Các chapter đầu tư khác sở hữu:
-
-```text
-asset nào có expected return/risk gì?
-portfolio allocation ra sao?
-valuation thế nào?
-execution, tax và attribution thế nào?
-```
-
-Tách boundary này giúp tránh việc một câu hỏi “tôi nên đầu tư gì?” che mất vấn đề thật là cash-flow hoặc liability management.
-
-## 33. Mô hình tư duy tổng hợp
-
-```text
-income + human capital
-        ↓
-cash-flow structure
-        ↓
-liquidity buffer
-        ↓
-debt / fixed obligations
-        ↓
-catastrophic risk transfer
-        ↓
-goals as liabilities
-        ↓
-investable long-term surplus
-        ↓
-portfolio design
-        ↓
-review after life + market changes
-```
-
-Đây không phải ladder để hoàn thành một lần. Nó là feedback loop. Job change có thể đưa bạn quay lại cash-flow và liquidity; health event có thể thay insurance/liability; marriage hoặc relocation có thể đổi currency và goal structure.
-
-## 34. Kết nối
-
-Để hiểu hành vi khi debt, scarcity và FOMO tác động quyết định, đọc [Financial Psychology](../../psychology/06_applied/18_financial_psychology_and_personal_decision_making.md). Để chuyển liability sang portfolio, đọc [Portfolio Risk, Allocation and Behavior](./02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md). Để tính compounding, inflation và uncertainty, xem [Math for Finance, Work and Daily Life](../../mathematics/09_connections/04_math_for_finance_work_and_daily_life.md) và [Probability → Calibration → Decision and Risk](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md).
-
-Healthcare cost và quyết định y tế có thể trở thành một trong những financial shock lớn nhất; vì vậy practical-life route tiếp theo là [Health literacy: screening, diagnosis, evidence and shared decisions](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md).
-
-> **Bàn giao:** Sau chapter này, người đọc nên có thể vẽ một personal balance sheet, cash-flow map, liquidity ladder, debt map, catastrophic-risk map và danh sách future liabilities trước khi thiết kế portfolio. Nếu chưa làm được, chưa nên coi asset allocation là bài toán đầu tiên.
+> **Bàn giao:** Điều cần giữ sau chapter này không phải một tỷ lệ tiết kiệm hay số tháng quỹ dự phòng cố định. Mô hình bền là: **bảo vệ khả năng lựa chọn trước, rồi mới tối ưu lợi suất**. Khi constraint đời sống thay đổi, quay lại từ dòng tiền và bảng cân đối trước khi sửa danh mục.
